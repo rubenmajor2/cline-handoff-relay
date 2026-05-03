@@ -32,6 +32,7 @@ See `96-cline-window-discipline.md` for the layered defense diagram. The critica
 | V8 hard cap (16 GB) | `--max-old-space-size=16384` arg on each ext-host | Real heap blowout — process dies cleanly. |
 | Heap-pressure early warning | `~/bin/cline-heap-pressure.sh` */1 min | RSS jumped >2 GB in 60s → alert email + log. |
 | CPU/RSS sustained renicer | `~/bin/exthost-watchdog.sh` | RSS sustained >12 GB OR CPU >70% → renice +15. |
+| **Kill-tier escalation** (added 2026-05-02 21:10 PT) | same script, v2 | If a PID stays bloated 10+ min AFTER renice, SIGTERM → SIGKILL after 30s. Rate-capped 3/hour. Logged to `/var/log/cline-watchdog-kills.log` with cmdline so the operator knows which window to reload. |
 | systemd cgroup MemoryMax | `code-server@emsuserver.service` drop-in | Whole code-server tree limited to 100 GB. |
 | Bloat preventer | `~/bin/cline-task-archiver.sh` */5 min | Moves any `ui_messages.json` >2 MB idle >10 min into `tasks-archive/`. |
 | Repeat-offender tagger | `~/bin/cline-oom-tagger.sh` */5 min | Detects OOM-killed PIDs and tags the originating task in DB. |
@@ -43,8 +44,10 @@ The archiver (`cline-task-archiver.sh`) is the actual root-cause mitigation. The
 - "My Cline window went dark / froze." → Ext-host for that window probably hit the 16 GB cap. Reload the window to spawn a fresh one. The task folder on disk is fine; Cline will reparse `api_conversation_history.json` (the smaller file) and resume cleanly. The chat bubbles up to the archive point are visible; new turns from there forward are recorded fresh.
 - "I got an email about a balloon." → Heap-pressure caught a fast jump. No action needed unless you also see the window go dark, in which case → reload that window.
 - "I got a STORM digest email." → 3+ ext-hosts ballooned in 5 min. Almost certainly synchronized parse-on-resume after a Mac reboot or WireGuard blip. Wait 5 min, reload the affected windows. See `96-cline-window-discipline.md` § W3.
-- "Cline-Tempe is unreachable." → Almost never the host itself. Check `ssh artemis "uptime"` first. If that works, the issue is Cline-side (one window's ext-host) not Artemis-side.
+- "Cline-Tempe is unreachable." → Two distinct failure modes:
+  - **Truly down** (rare). `ssh artemis "uptime"` fails or `systemctl is-active code-server@emsuserver` returns inactive. Operator must investigate.
+  - **Overloaded but up** (the common case). `ssh artemis "uptime"` works, code-server's process exists, but `curl http://127.0.0.1:8080/login` from Artemis itself times out. This means N ext-hosts are at 12-15 GB RSS each and starving the parent code-server. Pre-2026-05-02-21:10 the watchdog only reniced and never killed, so this state could persist for hours. **Post-21:10 the kill-tier escalates within 10 min.** While waiting, refresh the signin page; the new PHP error message will tell you "overloaded" vs "truly unreachable" so you don't have to guess.
 
 ## Last updated
 
-2026-05-02 — initial rule. Codified during the post-mortem of the Mac kernel panic + Artemis 12-PID balloon storm at 19:14-19:22 PT.
+2026-05-02 21:10 PT — added kill-tier escalation row to defense table after `#cline-tempe-signin-unreachable-2026-05-02` showed renice-only is insufficient when 6+ ext-hosts ride at 14-15 GB RSS for hours. Original rule from 19:14 PT post-mortem same day.

@@ -1,3 +1,30 @@
 # macOS AppleDouble metadata leaked from rsync/iCloud
 ._*
 .DS_Store
+
+# Per-machine state — sqlite DBs, ledger, patterns, alert files
+*.sqlite
+*.sqlite-journal
+cline_task_ledger.md
+cline_task_ledger.md.bak*
+cline_task_ledger.md.bak-*
+cline_task_ledger.md.bak_*
+*/patterns.json
+*/last_alert.json
+*/yolo_trips.sqlite
+*/violations.sqlite
+
+# Backups left from earlier sessions
+*.bak.*
+*.bak-*
+*.bak_*
+signature-fixed-*
+
+# Mac-only directories that don't make sense on Linux
+MCP/
+Hooks/
+Workflows/
+
+# transient
+transient/
+staging/

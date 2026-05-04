@@ -36,9 +36,11 @@ export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 # If we were called WITHOUT the lock held, re-exec ourselves under sync_lock.py.
 # This makes the lock cross-platform (no Linux-only flock(1) needed).
+# Note: pass /bin/bash + absolute path explicitly because $0 may be relative
+# (e.g. when invoked as `bash sync.sh`) and execvp doesn't resolve relative paths.
 if [ -z "${CLINE_RELAY_LOCKED:-}" ] ; then
   export CLINE_RELAY_LOCKED=1
-  exec /usr/bin/python3 "$CLINE/sync_lock.py" -w 60 -- "$0" "$@"
+  exec /usr/bin/python3 "$CLINE/sync_lock.py" -w 60 -- /bin/bash "$CLINE/sync.sh" "$@"
 fi
 
 echo "" >> "$LOG"

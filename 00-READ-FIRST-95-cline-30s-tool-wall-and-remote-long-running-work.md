@@ -3,7 +3,7 @@
 <!-- RULE_VIOLATION_COUNTERS:BEGIN -->
 > ## ⚠️ LIVE VIOLATION COUNTER — auto-updated every 30 min
 > 
-> **This rule is being violated.** Detector ran at 2026-05-03 11:57:41 PDT.
+> **This rule is being violated.** Detector ran at 2026-05-03 21:40:06 PDT.
 > 
 > - last 7 days: **0** violation(s)
 > - last 30 days: **0** violation(s)
@@ -19,8 +19,6 @@
 > Counters are stamped in by `~/Documents/Cline/rule_violations/write_rule.py`.
 > Edit anywhere outside the BEGIN/END markers; this block is regenerated.
 <!-- RULE_VIOLATION_COUNTERS:END -->
-
-
 ## The wall
 
 Every `execute_command` tool call has a hard 30-second wall. If a command hasn't returned by then, the Cline tool reports "Command execution timed out after 30 seconds" and Cline gets no output, no exit code, no tail. The actual remote process may still be running — Cline just can't see it. From there:

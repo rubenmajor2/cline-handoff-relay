@@ -3,14 +3,14 @@
 <!-- RULE_VIOLATION_COUNTERS:BEGIN -->
 > ## ⚠️ LIVE VIOLATION COUNTER — auto-updated every 30 min
 > 
-> **This rule is being violated.** Detector ran at 2026-05-03 21:10:06 PDT.
+> **This rule is being violated.** Detector ran at 2026-05-03 21:40:06 PDT.
 > 
-> - last 7 days: **1575** violation(s)
-> - last 30 days: **1575** violation(s)
-> - all-time: **1575** violation(s)
+> - last 7 days: **1580** violation(s)
+> - last 30 days: **1580** violation(s)
+> - all-time: **1580** violation(s)
 >
->   - explicit Ruben asks for subagent ignored (30d): **82**
->   - research/multi-step questions answered without subagent (30d): **1493**
+>   - explicit Ruben asks for subagent ignored (30d): **83**
+>   - research/multi-step questions answered without subagent (30d): **1497**
 >
 > If you (Cline) are reading this rule, you are part of the count. The detector
 > at `~/Documents/Cline/rule_violations/scan.py` looks at every Cline task on
@@ -20,7 +20,6 @@
 > Counters are stamped in by `~/Documents/Cline/rule_violations/write_rule.py`.
 > Edit anywhere outside the BEGIN/END markers; this block is regenerated.
 <!-- RULE_VIOLATION_COUNTERS:END -->
-
 ## v2 — 2026-05-03 21:35 PT — replaced "5 mandatory categories" with default-on gate (RE-APPLIED after rebase clobber)
 
 The previous version of this rule said "subagent use is MANDATORY for these 5 categories" and required me to judge whether the current task fit one of them. Counter ran at 1562 violations / 30d, then 1575 after my first v2 commit got clobbered by a rebase autostash that re-applied v1. The diagnosis post-mortem (rule 17 vs. rule 95): rule 95 self-corrects (the 30s tool wall kills the task in front of me, I feel the pain immediately). Rule 17 doesn't (I answer from my own context, ship something plausible, no immediate signal). Adding more "MANDATORY" prose doesn't move the needle — same trap rule 09's chat-AI guardrail post-mortem identified ("rule lives in prompt → AI ignores → re-confirm rule → next chat same thing").

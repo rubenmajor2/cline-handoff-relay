@@ -46,6 +46,14 @@ fi
 echo "" >> "$LOG"
 echo "--- $(ts) TICK ---" >> "$LOG"
 
+# Step 0: export Mac state.vscdb settings to Rules/cline_settings.json so
+# they travel with the rules sync. Source incident: 2026-05-05 #1777968053585.
+# Mac is authoritative for these keys.
+if [ -x "$CLINE/cline_settings_export.sh" ] ; then
+  bash "$CLINE/cline_settings_export.sh" >> "$LOG" 2>&1 || \
+    echo "$(ts) sync: cline_settings_export.sh failed (non-fatal)" >> "$LOG"
+fi
+
 # Step 1: commit any local stamps before doing anything network.
 # This includes counter stamps from rule_violations/write_rule.py and
 # yolo_learner/write_rule.py that may have run since the last sync.

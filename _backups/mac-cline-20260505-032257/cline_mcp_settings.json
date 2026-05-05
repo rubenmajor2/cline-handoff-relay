@@ -1,0 +1,77 @@
+{
+  "mcpServers": {
+    "emsu-operations": {
+      "timeout": 60,
+      "type": "streamableHttp",
+      "url": "http://localhost:7841/mcp"
+    },
+    "ruben-control": {
+      "timeout": 60,
+      "type": "streamableHttp",
+      "url": "http://localhost:7842/mcp"
+    },
+    "ruben-orchestrator": {
+      "timeout": 60,
+      "type": "streamableHttp",
+      "url": "http://localhost:7843/mcp"
+    },
+    "mysql": {
+      "timeout": 60,
+      "type": "streamableHttp",
+      "url": "http://localhost:7846/mcp"
+    },
+    "github": {
+      "timeout": 60,
+      "type": "streamableHttp",
+      "url": "http://localhost:7847/mcp"
+    },
+    "fetch": {
+      "timeout": 60,
+      "type": "streamableHttp",
+      "url": "http://localhost:7848/mcp"
+    },
+    "google-drive": {
+      "timeout": 60,
+      "type": "streamableHttp",
+      "url": "http://localhost:7844/mcp"
+    },
+    "imessage-reader": {
+      "timeout": 60,
+      "type": "streamableHttp",
+      "url": "http://localhost:7845/mcp"
+    },
+    "imessage": {
+      "timeout": 60,
+      "type": "streamableHttp",
+      "url": "http://localhost:7851/mcp",
+      "autoApprove": []
+    },
+    "context7": {
+      "timeout": 60,
+      "type": "streamableHttp",
+      "url": "http://localhost:7854/mcp"
+    },
+    "memory": {
+      "timeout": 60,
+      "type": "streamableHttp",
+      "url": "http://localhost:7852/mcp"
+    },
+    "sequential-thinking": {
+      "timeout": 60,
+      "type": "streamableHttp",
+      "url": "http://localhost:7853/mcp"
+    },
+    "brave-search": {
+      "timeout": 60,
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-brave-search"
+      ],
+      "env": {
+        "BRAVE_API_KEY": "BSA_Ndasmog_cNj5pEzVb5dFyRRAjLB"
+      }
+    }
+  }
+}

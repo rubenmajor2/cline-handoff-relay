@@ -189,18 +189,25 @@ case "$RESULT" in
     [[ -z "$FIRST_TOOL" ]] && FIRST_TOOL="(none)"
     MSG="cline rule 17 missed: you said 'use subagents' but cline dispatched $FIRST_TOOL instead. task #$TASK_ID. ping cline to redo."
     
-    echo "[$NOW] PAGING task=$TASK_ID first_tool=$FIRST_TOOL" >> "$LOG"
-    
-    # Try iMessage via osascript (always available on Mac)
-    /usr/bin/osascript <<APPLEEOF 2>>"$LOG"
+    echo "[$NOW] ALERT task=$TASK_ID first_tool=$FIRST_TOOL" >> "$LOG"
+    # Always log to alerts file
+    echo "[$NOW] task=$TASK_ID first_tool=$FIRST_TOOL msg=\"$MSG\"" >> "$ALERTS"
+
+    # Only send iMessage if recipient is explicitly configured.
+    # Default = log-only (silent). Set SUBAGENT_PAGER_RECIPIENT in
+    # ~/.subagent-pager.conf to re-enable SMS.
+    if [[ -n "$SUBAGENT_PAGER_RECIPIENT" ]]; then
+      /usr/bin/osascript <<APPLEEOF 2>>"$LOG"
 tell application "Messages"
     set targetService to 1st service whose service type = iMessage
-    set targetBuddy to buddy "+12196280702" of targetService
+    set targetBuddy to buddy "$SUBAGENT_PAGER_RECIPIENT" of targetService
     send "$MSG" to targetBuddy
 end tell
 APPLEEOF
-    
-    echo "[$NOW] paged" >> "$LOG"
+      echo "[$NOW] paged $SUBAGENT_PAGER_RECIPIENT" >> "$LOG"
+    else
+      echo "[$NOW] log-only (SUBAGENT_PAGER_RECIPIENT unset)" >> "$LOG"
+    fi
     ;;
 esac
 

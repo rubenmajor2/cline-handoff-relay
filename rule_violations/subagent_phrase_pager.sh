@@ -18,7 +18,14 @@
 set +e
 
 LOG=/tmp/subagent-pager.log
+ALERTS=/tmp/subagent-pager-alerts.log
 SEEN=/tmp/subagent-pager-seen.txt
+# Recipient gate. Default: log-only, no iMessage send.
+# To re-enable SMS, set SUBAGENT_PAGER_RECIPIENT to a phone/email in
+# ~/.subagent-pager.conf (e.g. SUBAGENT_PAGER_RECIPIENT="+1XXXXXXXXXX").
+# 2026-05-04: removed hardcoded +12196280702 (Jon's number) — wrong surface.
+SUBAGENT_PAGER_RECIPIENT=""
+[[ -f "$HOME/.subagent-pager.conf" ]] && source "$HOME/.subagent-pager.conf"
 TASKS_DIR="$HOME/Library/Application Support/Code/User/globalStorage/saoudrizwan.claude-dev/tasks"
 NOW=$(date -Iseconds)
 

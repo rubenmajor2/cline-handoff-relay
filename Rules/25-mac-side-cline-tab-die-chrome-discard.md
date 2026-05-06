@@ -196,10 +196,66 @@ Add 16-32 GB more swap immediately. Do NOT kill ext-hosts.
 - This gives the medium-bloat-many-hosts pattern enough room to ride
   out parse-on-resume bursts without thrashing.
 
-## Future watchdog improvement (idea, not yet shipped)
+## 2026-05-06 11:11 PT addendum — systemic fix shipped: cumulative-RSS watchdog + tightened archiver
 
-Rule 97's per-process threshold should be supplemented with a
-TOTAL-RSS-across-all-ext-hosts soft cap. When the sum exceeds e.g.
-70% of physical RAM, renice the OLDEST ext-hosts first (they're most
-likely to be parked tabs). Files this as orchestrator idea
-`exthost-cumulative-rss-watchdog` for future build.
+After three failures stacked in 75 minutes (Mac discard at 09:56,
+swap thrash at 10:05, watchdog reboot at 11:05), Ruben's directive at
+11:10 PT was: *"That's cool and everything but does not address the
+fact that Cline kills Artemis way too quickly."* Fair. Adding swap was
+treating the symptom. The actual problem is the medium-bloat-many-hosts
+pattern that the per-process rule 97 watchdog can't see.
+
+**Shipped same session:**
+
+1. **`/home/emsuserver/bin/exthost-cumulative-watchdog.sh`** — runs every
+   minute via cron. Sums RSS across all `extensionHost` processes. When
+   the sum exceeds **SOFT_CAP_GB=70** (56% of 125 GB phys RAM), renices
+   the 2 OLDEST ext-hosts to nice +15. When it exceeds **HARD_CAP_GB=85**
+   (68% of phys), renices the 4 OLDEST. **Renice-only, never SIGKILL** —
+   honors Ruben's "don't kill my active windows" directive. Renice has
+   no user-visible effect on a tab actually being used; for parked tabs
+   it stops them from competing for memory bandwidth during page-faults.
+   Per-PID 10-min cooldown so the same host doesn't get reniced repeatedly.
+   Heartbeat at `/var/tmp/cline-watchdog-cumulative-heartbeat`,
+   log at `/var/log/cline-watchdog-cumulative.log`.
+
+2. **Tightened archiver thresholds** in `~/bin/cline-task-archiver.sh`:
+   - `SIZE_THRESHOLD_MB`: 2 MB → 1 MB (more aggressive eviction)
+   - `IDLE_MIN`: 10 min → 5 min (evicts bloat faster after task goes idle)
+   - Backup at `~/bin/cline-task-archiver.sh.bak-2026-05-06`
+
+3. **Did NOT touch the V8 heap ceiling** (currently 24 GB base / 16 GB
+   multi-instance). Lowering it requires `systemctl restart code-server`
+   per instance which kills all active windows on that instance. That's a
+   destructive change and goes against the "don't kill my active windows"
+   directive. Logged for a future maintenance window when Ruben is OK
+   with a clean restart cycle.
+
+**Why this stops the failure class:**
+
+The 11:05 PT reboot was triggered by 7 ext-hosts at 2-3 GB each summing
+to ~22 GB working set + swap. With the new watchdog:
+- At 70 GB cumulative → 2 oldest hosts get reniced. Their 2-3 GB pages
+  start drifting to swap (kernel deprioritizes them in the LRU sense).
+- At 85 GB → 4 oldest get reniced. The active hosts get sched priority.
+- Pressure stall stays below 50%. The artemis-stall-watchdog never has
+  a reason to fire a reboot.
+
+The tightened archiver also feeds back: a 1 MB / 5-min ui_messages.json
+gets archived sooner, so when a tab reloads, parse-on-resume finds a
+trimmed file instead of a 30 MB one. Lower V8 working set per host =
+fewer hosts crossing the 2-3 GB band.
+
+**Verified live:** first cron run at 11:12:01 PT saw 6 ext-hosts at
+1 GB total, tier=ok. Box load 0.54, pressure 0%. Cumulative watchdog
+will fire silently when needed; you'll see CUMULATIVE_RENICE entries
+in `/var/log/cline-watchdog-cumulative.log` if the pattern recurs.
+
+**What's NOT covered (deliberately deferred):**
+
+- V8 heap ceiling tuning (8 GB cap per host) — requires destructive restart
+- Cline 3.82 lazy-load patch upstream — multi-week effort, tracked as
+  orchestrator idea #1371
+- A "soft TERM at 12 GB single-host" companion to the cumulative watchdog
+  — would catch genuinely runaway single hosts; for now relying on rule
+  97's existing renice-then-kill tier

@@ -34,6 +34,18 @@ PLAYBOOK = {
         "If it's a MySQL/Moodle query, add LIMIT, check indexes, or ask RUBEN MCP for a pre-built tool that wraps it.",
         "Never retry a timed-out command 3 times in a row — that's an automatic YOLO trip.",
     ],
+    "fpm-reload: sudoers blocks systemctl, use kill -USR2 wrapper": [
+        "**Root cause:** WOPR sudoers explicitly DENIES `sudo systemctl reload php8.3-fpm` and `restart php8.3-fpm`. The negation rules in `/etc/sudoers.d/emsuserver` block these by design.",
+        "**Symptom:** any code calling `sudo systemctl reload php8.3-fpm` returns rc=1 with `Sorry, user emsuserver is not allowed to execute ...`. Often misclassifies as `timeout` if SSH stalls before the error returns, or as `permission denied`.",
+        "**Common offender:** the emsu-operations MCP `safe_deploy_file` (ssh.ts) used to call this directly — patched 2026-05-05 to use SIGUSR2.",
+        "**Correct ways to reload FPM (pick one):**",
+        "  1. MCP tool `reload_php_fpm` — already uses `kill -USR2 $(cat /var/run/php/php8.3-fpm.pid)`.",
+        "  2. `/usr/local/bin/emsu-safe-phpfpm-restart.sh <reason>` — rate-limited (45s cooldown), writes state file, recommended for crons.",
+        "  3. `/usr/local/bin/emsu-fpm-guard reload <reason>` — guard with cooldown + audit log.",
+        "  4. Raw: `sudo kill -USR2 $(cat /var/run/php/php8.3-fpm.pid)` — only if you really need bypass.",
+        "**NEVER:** `sudo systemctl reload php8.3-fpm` or `sudo systemctl restart php8.3-fpm`. They will always fail.",
+        "**If you just hit this once:** do NOT retry the same systemctl call — switch to one of the wrappers above.",
+    ],
     "permission denied (wrote to server path locally?)": [
         "Classic mistake: tried to `write_to_file` to a `/var/www/...` path — that's a SERVER path, not local.",
         "Local writes must go to `/Users/rubenmajor/...`, `/tmp/...`, or a git clone on Desktop.",

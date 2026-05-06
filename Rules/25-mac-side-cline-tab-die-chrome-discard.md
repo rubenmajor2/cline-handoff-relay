@@ -259,3 +259,34 @@ in `/var/log/cline-watchdog-cumulative.log` if the pattern recurs.
 - A "soft TERM at 12 GB single-host" companion to the cumulative watchdog
   — would catch genuinely runaway single hosts; for now relying on rule
   97's existing renice-then-kill tier
+
+
+## 2026-05-06 14:00 PT addendum — ACTUAL ROOT CAUSE was a Chrome user setting
+
+After 4+ hours of engineering today (Chrome extension v1.0.0 → v1.1.0, server-side cumulative-RSS watchdog v1 → v2, scheduled heap-cap rotation fired early, 56→88 GB swap), Ruben mentioned **Atlas browser does not have this problem with the same workload.** That's the one-line diagnostic I should have asked for at 09:56 PT.
+
+**Actual root cause:** Chrome 147's Memory Saver feature is enabled by default with "Moderate" aggressiveness. Atlas (Chromium-based) ships it disabled. The fix is a 30-second user-setting toggle at `chrome://settings/performance`.
+
+**Correct configuration (Ruben applied at 14:00 PT):**
+- Memory Saver: OFF — Chrome won't auto-discard inactive tabs at all
+- Energy Saver: OFF — no background CPU throttling (relevant for powerhouse desktops)
+- emsuniversity.com on "Always keep these sites active" list — belt+suspenders
+- Preload pages: OFF — no extra background memory pressure
+
+That replaces the entire extension layer I built. The extension still works as redundant protection but is no longer doing meaningful work.
+
+**Diagnostic lesson:** when a browser-specific issue appears, ask about OTHER browsers FIRST. A 30-second cross-browser test can save 4 hours of engineering.
+
+### NEW Step 0 — does it reproduce in another browser?
+
+Open the same tabs in Atlas (or Edge / Firefox / Safari). Wait 5 min for them to park. Trigger a memory-pressure event. If they survive in browser X but die in Chrome, the cause is a Chrome user setting — check `chrome://settings/performance` first. Only if it reproduces in MULTIPLE browsers do you proceed to Step 1 (server health check) and Step 2 (Mac swap pressure).
+
+**Why this matters:** Chrome 122+ shipped Memory Saver enabled by default. Most users have never seen the setting. The first move on any "tabs died" report should be cross-browser repro, NOT server diagnosis.
+
+## What's still genuinely useful from today's server-side work
+
+The cumulative-RSS watchdog v2 (with pressure-based trigger), 88 GB swap on `/etc/fstab`, tightened archiver, and 8 GB heap caps are all in place and DID prevent an Artemis auto-reboot at 13:37 PT today when pressure spiked to 87% (would have triggered stall-watchdog reboot at 10 min sustained — instead cleared in 1 tick after emergency renice + extra swap). Those defenses remain useful as a backup layer.
+
+## Extension cleanup (optional)
+
+`/Users/rubenmajor/Desktop/cline-tab-keepalive/` v1.1.0 is now redundant. Keep it (harmless defense-in-depth) or remove it (simpler) — both fine.

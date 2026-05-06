@@ -113,6 +113,16 @@ def classify(text: str) -> str | None:
     # filesystem
     if "enoent" in low or "no such file" in low or "file not found" in low:
         return "file/path does not exist"
+    # FPM reload sudoers wall — was hidden in 'permission denied' / 'timeout' before.
+    # This must come BEFORE the generic permission-denied + timeout branches.
+    # Source: WOPR sudoers explicitly negates `systemctl reload php8.3-fpm`.
+    # Fix: callers should use kill -USR2 or /usr/local/bin/emsu-safe-phpfpm-restart.sh.
+    if ("php8.3-fpm" in low or "php-fpm" in low) and (
+        "not allowed to execute" in low
+        or "systemctl reload php" in low
+        or ("reload_php_fpm" in low and ("timeout" in low or "timed out" in low or "failed" in low))
+    ):
+        return "fpm-reload: sudoers blocks systemctl, use kill -USR2 wrapper"
     if "eacces" in low or "permission denied" in low:
         return "permission denied (wrote to server path locally?)"
     # shell

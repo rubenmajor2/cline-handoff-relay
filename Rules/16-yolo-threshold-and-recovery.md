@@ -51,6 +51,56 @@ The threshold bump is the floor, not the ceiling. The actual behavior rules from
 - Rule 99: `99-yolo-prevention-learned.md` — auto-generated playbook per failure category, refreshed every 30 min by the YOLO learner.
 - Rule 98: `98-edit-discipline.md` — keeps the conversation small enough that recovery loops don't OOM the ext-host.
 
+## 2026-05-07 addendum — there are TWO `state.vscdb` paths to keep in sync
+
+The 3→10 bump per the original rule is per-machine **AND per-Cline-runtime**. On Artemis specifically, the same user account can have TWO Cline state databases:
+
+| Runtime | state.vscdb path | When used |
+|---|---|---|
+| **VS Code Remote-SSH** (you connect from a local Mac VS Code via SSH to artemis) | `~/.vscode-server/data/User/globalStorage/state.vscdb` | Local VS Code on Mac → ssh-remote+artemis workspace |
+| **code-server (browser)** | `~/.local/share/code-server/User/globalStorage/saoudrizwan.claude-dev/state/state.vscdb` | Chrome cline-tempe-N tab opening `https://emsuniversity.com/emtskills/cline-tempe*` |
+
+**They are independent databases.** Setting `maxConsecutiveMistakes=10` in one does not affect the other. A user can run BOTH runtimes in parallel — switching between local VS Code and Chrome tabs targeting the same Artemis box — and end up with the threshold applied in only one of the two paths.
+
+Symptom of this gap: a Cline session you opened via VS Code Remote-SSH yolos at the default 3 even though Mac and the Chrome cline-tempe tabs both have the bump. (This was the live failure on 2026-05-07.)
+
+### The fix is automated
+
+`/Users/rubenmajor/Documents/Cline/cline_settings_apply.sh` (the canonical settings importer that runs hourly via the cline-handoff-relay cron on Artemis) was patched on 2026-05-07 to:
+1. Try BOTH paths in priority order (`~/.vscode-server/...` first, `~/.local/share/code-server/...` fallback).
+2. Apply to ALL state.vscdb files that exist with an `ItemTable` (so both runtimes get the same settings).
+3. Use `INSERT OR REPLACE` instead of `UPDATE` (works even when the key never existed in this DB).
+4. Skip gracefully when `ItemTable` doesn't yet exist (Cline hasn't initialized that runtime — script logs and waits for next cron tick).
+
+The keys it propagates from `~/Documents/Cline/Rules/cline_settings.json`:
+- `maxConsecutiveMistakes` (currently `"10"`)
+- `useAutoCondense` (currently `"true"`)
+- `autoApprovalSettings` (auto-approve config blob)
+
+Mac is the authoritative source. The cron runs `git pull` first to get the latest cline_settings.json from Mac, then applies to whichever Artemis state.vscdb files exist.
+
+### Bootstrapping a fresh VS Code Remote-SSH connection on Artemis
+
+When you first open a VS Code Remote-SSH workspace on Artemis (after vscode-server is freshly installed), `~/.vscode-server/data/User/globalStorage/state.vscdb` is 0 bytes — Cline hasn't written its first global-state value yet, so `ItemTable` doesn't exist. The apply script correctly skips this DB until `ItemTable` is created. You don't need to manually bootstrap it; ItemTable gets created as soon as Cline performs its first state write (any tool call, any setting save). Within the next hourly cron run after that, the threshold gets bumped automatically.
+
+If you need it bumped RIGHT NOW (don't want to wait an hour for the cron):
+```sh
+ssh artemis "bash ~/Documents/Cline/cline_settings_apply.sh"
+```
+Re-run after Cline has initialized ItemTable.
+
+### When this rule does NOT apply
+
+- Pure Mac VS Code (no Remote-SSH). Single state.vscdb at `~/Library/Application Support/Code/User/globalStorage/state.vscdb`.
+- WOPR-side code (different box entirely; no Cline runtime on WOPR by design).
+- Any new Cline-runtime path that ships in the future. Append it to the table above + add it to `DB_CANDIDATES` in `cline_settings_apply.sh`.
+
+### Cross-reference
+
+- Rule 26 (`26-phantom-vscode-extension-manifest.md`) — the failure that exposed this dual-path gap was a phantom Remote-SSH manifest entry, which prevented VS Code from ever connecting to Artemis and creating the `~/.vscode-server/...` state.vscdb in the first place.
+
 ## Last updated
+
+2026-05-07 — added dual-state.vscdb-path addendum + cline_settings_apply.sh patch documentation. Source incident: VS Code Remote-SSH connection to Artemis, fresh state.vscdb 0 bytes, original apply script targeting only the legacy code-server path missed it entirely.
 
 2026-05-03 11:43 PT — initial rule. Source incident: 272 cumulative YOLO trips, top triple = `timeout > no-tool-use > no-tool-use` (97 hits). Threshold bumped 3→10 in Cline globalState.

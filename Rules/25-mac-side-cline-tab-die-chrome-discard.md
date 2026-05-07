@@ -290,3 +290,50 @@ The cumulative-RSS watchdog v2 (with pressure-based trigger), 88 GB swap on `/et
 ## Extension cleanup (optional)
 
 `/Users/rubenmajor/Desktop/cline-tab-keepalive/` v1.1.0 is now redundant. Keep it (harmless defense-in-depth) or remove it (simpler) — both fine.
+
+## 2026-05-07 00:05 PT addendum — DIFFERENT failure class: tab THROTTLING (not discard)
+
+After the 14:00 PT settings fix, a new symptom surfaced: **"Cline window stops working until I scroll/look at it."** This is NOT the same failure as the 09:56 PT batch-discard event. It's a separate Chrome behavior class that the existing rule 25 wording conflates with discard.
+
+### The two classes are distinct
+
+| Class | Trigger | Symptom | Renderer state | Fix |
+|---|---|---|---|---|
+| **Discard** | macOS memory pressure → Chrome Memory Saver picks inactive tabs in batch | All tabs go blank simultaneously, need reload to recover | Renderer process killed, WebSocket dropped | Memory Saver OFF (Chrome setting) + cline-tab-keepalive v1.0.0+ (autoDiscardable=false) |
+| **Throttling** | Chrome 122+ default behavior on ANY hidden tab — no Mac pressure required, no setting to disable | Tab "frozen" until you focus or scroll, then catches up instantly | Renderer alive, WebSocket alive, paint loop paused | cline-tab-keepal| **Throttling** | Chrome 122+ default behavior on ANY hidden tab — 2+)
+
+When a tab is hidden (other tab forward, window minimized, on another macOS Space, fully occluded by other windows), Chrome unconditionally:
+
+- **Pauses `requestAnimationFrame` entirely** — no rAF callbacks fire until visible. **This is the killer for Cline.** Cline's React webview render-commit loop rides on rAF, so paint freezes even though data is arriving.
+- Clamps `setTimeo- Clamps `setTimeo-  �- Clamps `setTimeo- Clamps `setTimeo-  �- Clamps `setTimeo- Clamps `setTimeo-  �- Clamps `setTimeo- Clamps `setTimeo-  �- Clamps `setTimeo- Clamps `setTimeo-  �- Clamps `setTimeo- Clamps `setTimeo-  �- Clamps `setTimeo- Clamps `setTimeo-  �- Clamps `setTimeo- Clamps `setTimeo-  �- Claable this. The `chrome://flags/` flag for cross-origin iframe throttling exists but doesn't cover top-level tab throttling. The fix is to make Chrome think the tab is "active" via one of the documented exemptions — playing audio is one.
+
+### Diagnosis algorithm — distinguishing throttle from discard
+
+When Ruben says "my cline tab stopped working":
+
+1. **Did all tabs die at once?** → discard class. Look at swap (`sysctl vm.swapusage`) + `chrome://discards/`. Fix is rule 25's existing playbook.
+2. **Did ONE tab freeze, recover when you scrolled or focused it?** → throttling class. Fix is the silent-audio loop.
+3. **Did the tab show a reload-needed banner / blank chrome:// page?** → discard.
+4. **Did the tab look 100% normal but messages were old, then catch up instantly when you looked?** → throttling.
+
+### The fix shipped 2026-05-07 — keep-alive extension v1.2.0
+
+`/Users/rubenmajor/Desktop/cline-tab-keepalive/` bumped from v1.1.0 to v1.2.0. content.js now plays a silent Web Audio loop while the tab is hidden:
+
+- 1-second buffer of zeros (literal silence) at 22050 Hz, looped
+- Routed through a 0-gain node (belt+suspenders against denormal sample drift)
+- Toggles on `visibilitychange`: starts when hidden, stops when visible
+- Require- Require- Require- Require- Require- Require- Require- Requirhrom- Require- Require- Require- Require- Require-e c- Require- Require- Require- Require- Require- Require- Require- Requirhrom- Require- Require- Require- Require- Require-e c- Require- Require- `chrome://extensions/` → Cline Tab Keep-Alive → refresh icon → confirm v1.2.0 → reload existing cline tabs once so the new content.js is injected.
+
+### What the v1.2.0 fix does NOT cover
+
+- **Tabs you'- **Tabs you'- **Tabs you'- **Tabs you'- **Tabs you'- **Tabs you'- **Tabs you'- **Tabs you'- **Tabs you'- **Tabs yore- **Tabs you'- **Tabs you'- **Tabs you'- **Tabs you'- **Tabs  ma- **Tabs you'- **Tabs you'- **Tabs you'- **Tabs you'- **Tabs you'- **Tabs you'- **Tabs you'- **Tabs you'- **Tabs you'- **Tabs yore- **Tabs you'- **o) - **Tn the same extension now and run independently.
+
+### What I ### What I ### What I ### What I ### What I ### What I ### What I ### What I rd### What I ### What I ### What I ### What I ### What I ### What I ### nt### What I ### What I ### What I ### What I ### What I ### What I ### What I ### What I rd### What I ### What I ### What I ### What I ### What I ### What I ### nt### What I ### What I ### What I ### What I ### What I ### What I ### What I ### What I rd### What I ### What I ### What I ### What I ### What I ### What I ### nt### What I ### What I ### What I ### What I ### What I ### What I ### What I ### What I rd### WhaDon### What I ### What I ### What I ### diation first.** Throttling is purely Mac-side / Chrome-side. Artemis health metrics will be clean.
+
+### Cross-references
+
+- `~/Desktop/cline-tab-keepalive/INSTALL.md` — install + v1.2.0 update guide
+- `~/Desktop/cline-tab-keepalive/content.js` — silent-audio implementation
+- Rule 24 — server-side tab distribution (5 per instance × 9 instances)
+- Rule 96 — Mac/Artemis storm pattern (companion failure mode)

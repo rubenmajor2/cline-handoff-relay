@@ -3,14 +3,14 @@
 <!-- RULE_VIOLATION_COUNTERS:BEGIN -->
 > ## ⚠️ LIVE VIOLATION COUNTER — auto-updated every 30 min
 > 
-> **This rule is being violated.** Detector ran at 2026-05-06 21:00:49 PDT.
+> **This rule is being violated.** Detector ran at 2026-05-06 22:00:50 PDT.
 > 
-> - last 7 days: **1769** violation(s)
-> - last 30 days: **1769** violation(s)
-> - all-time: **1769** violation(s)
+> - last 7 days: **1770** violation(s)
+> - last 30 days: **1770** violation(s)
+> - all-time: **1770** violation(s)
 >
 >   - explicit Ruben asks for subagent ignored (30d): **115**
->   - research/multi-step questions answered without subagent (30d): **1654**
+>   - research/multi-step questions answered without subagent (30d): **1655**
 >
 > If you (Cline) are reading this rule, you are part of the count. The detector
 > at `~/Documents/Cline/rule_violations/scan.py` looks at every Cline task on

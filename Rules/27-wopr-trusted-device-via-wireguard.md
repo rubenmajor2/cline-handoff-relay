@@ -178,3 +178,36 @@ In addition to the Mac WG peer:
 98.97.140.5 / Dovecot IMAP failures from stale Mail.app aliases. Fix:
 WG peering at 10.100.0.6 + ignoreip /24 backstop + SAFE_IPS prefix patch +
 launchd auto-start. Roster: wopr/Houston/Joshua/Artemis/Mac.
+
+## 2026-05-07 02:03 PT addendum — auto-whitelist from auth_audit (the dynamic layer)
+
+Static IP whitelisting (Layer 2) has a half-life — Spectrum rotates IPs, T-Mobile mobile changes carrier exit nodes, staff travel. So Layer 2 alone is not durable.
+
+**Layer 2.5 — auto-whitelist cron** shipped 2026-05-07 02:03 PT.
+
+`/usr/local/bin/staff_ip_autowhitelist.sh` runs every 15 min via root crontab. It:
+
+1. Queries `admin_portal.auth_audit` for successful logins (event IN sms_login, login_success, 2fa_pass, password_login, sso_login) by users with role IN (MasterAdmin, ExecAdmin, ITAdmin, Admin, PD, SiteLead, CustomerService, Assistant, Instructor) AND is_active=1 in the last 72h.
+2. Aggregates IPs to /24 prefix.
+3. For each NEW /24 not already in fail2ban ignoreip OR wopr_auto_blocker SAFE_IPS, adds it to both with a comment naming the user(s) who logged in from it.
+4. Reloads fail2ban only when something changed.
+4. Reloads fail2ban only when something changed.
+eip OR wopr_auto_blocker SAFE_IPS, adds i918 (1eip OR wopr_auto_blocker SAFE_IPS, adds i918 (1eip OR wopr_auto_blocker SAFE_IPS, add`-aeip OR wopr_auto_blocker SAFE_IPS, adds i918 (1eip OR wopr_auto_blocker SAFE_IPS, adds i918 (1eip OR wopr_auto_blocker SAFE_IPS, add`-aeip OR wopr_auto_blocelist.sh >> /var/log/staff_ip_autowhitelist.log 2>&1
+```
+
+### When NEW staff is added to the EMSU op team
+
+No script change needed. Once the new staff member has tNo script change needed. Once the new staff member has tNo script change needed. Once the new staff member has tNo script change needed. Once the new staff member has tNo script change needed. Once the new staff member has tNo script change needed. Once the new staff member has tOLNo scristant at the top of `/usr/No script change needed. Once the new staff member has tNo script change needed. Once the new staff member has tNo script change needed. Once the new staff /No script change needed. Once the new staff memail2ban + SAFE_IPS state already populated stays in place.
+
+### Source incident
+
+2026-05-07 — Ruben recidive-banned from Spectrum 98.97.140.5; current Spectrum /24 wasn't in any whitelist. Static manual whitelisting per user (the original Layer 2 approach earlier this session) doesn't survive carrier rotations. Dynamic auto-whitelist from auth_audit makes Layer 2 self-healing.
+
+### Cross-referen### Cross-referen### Cross-referen### Crosst.sh` — the cron script
+- `/var/log/staff_ip_autowhitelist.log` — runtime log
+- `/etc/fail2ban/jail.local` — auto-modified, backup created on each change
+- `/var/www/emtskills/scripts/wopr_auto_blocker.sh` — SAFE_IPS array auto-extended
+
+## Last updated
+
+2026-05-07 02:03 PT — added auto-whitelist cron from auth_audit. This is the dynamic counterpart to the static Layer 2 work earlier this evening. Initial run added 19 fail2ban CIDRs + 18 SAFE_IPS prefixes from the last 72h of staff logins (12 unique staff users covered).

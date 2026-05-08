@@ -11,10 +11,12 @@ Permanent rule. Workspace-scoped. Two source incidents, same day:
    own typed-by-hand reply minutes earlier.
 
 2. **Ops chat 55, 2026-05-07 14:21 PT** — Vicky sent a screenshot (image
-   attachment, no text body) flagging a telephony issue. The fix likely
-   already shipped elsewhere (RUBEN / Cline in another window). But the
-   chat 55 thread itself got nothing back. Vicky has no idea the issue
-   was seen, let alone fixed.
+   attachment, no text body) flagging telephony issues that needed
+   ADDITIONAL repair. RUBEN never replied. Not "the fix shipped
+   elsewhere and we forgot to ack" — RUBEN literally ignored a staff
+   report. Vicky was flagging new work; RUBEN treated it as nothing.
+   That's worse than the chat-84 case: chat 84 was bad context, this
+   was no response at all to a staff member raising a system issue.
 
 ## The bright-line rule
 

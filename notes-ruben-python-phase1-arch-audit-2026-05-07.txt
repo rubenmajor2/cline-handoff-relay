@@ -1,0 +1,8 @@
+=== START 2026-05-07T20:21:02-07:00 ===
+
+=== Intel-only mach-o files (x86_64-only, no arm64) ===
+
+=== Architecture distribution of all mach-o files ===
+  78 x86_64 arm64
+
+=== ALL DONE 2026-05-07T20:21:13-07:00 ===

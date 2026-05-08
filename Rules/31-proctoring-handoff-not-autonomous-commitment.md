@@ -90,10 +90,57 @@ requests) should follow the same pattern:
 4. Don't promise timing the AI doesn't own.
 5. SLA-breach escalation adds visibility without bypassing.
 
+## Where this is enforced (code-level, not just prompt-level)
+
+Per `.clinerules/09` and `.clinerules/15`: prompt-level rules can be
+ignored at runtime. The actual enforcement for proctoring handoffs is in
+PHP code, not just the AI prompt:
+
+1. **`ai_compiled_rules` id=233** (prompt layer) — mandates handoff
+   framing in the AI's reply text. `source_correction_ids` includes
+   `clinerules:proctoring-handoff-not-commitment-2026-05-07` so the
+   nightly recompiler protects it.
+2. **`cron/cron_email_responder.php` proctoring-handoff branch**
+   (~line 1357, deployed 2026-05-07) — runs INDEPENDENTLY of whether the
+   AI prompt fires rule 233. Detects the intent by regex on subject +
+   body, then:
+   - Auto-creates `tickets` row assigned to Vicky (user_id 2),
+     priority High, category Administrative, prefix
+     `[Proctoring scheduling]`. Dedupes per student email.
+   - Adds `vyu@emsuniversity.com` to the outbound BCC list.
+     `sendEmail()` in `lib/mailer.php` has no CC parameter (only BCC),
+     so BCC is the closest channel for email-level visibility.
+3. **48h SLA-escalation cron** — proposed but NOT yet built. Should
+   check for `[Proctoring scheduling]` tickets open without action
+   48+ hours and send a single SLA-breach notification CCing Jon +
+   Cori. Tracked as orchestrator idea
+   `proctoring-sla-48h-escalation-cron-2026-05-07`.
+
+Detection regex (PHP, runs against `strtolower($subject . "\n" . $body)`):
+
+```php
+preg_match('/\b(proctoring|proctored|proctor)\b.*\b(slot|session|schedul|book|availab|retake|final)/i', $combined)
+|| preg_match('/\b(schedul|book)\w*\b.*\b(retake|final\s*exam|proctor|zoom\s*session)/i', $combined)
+|| preg_match('/\b(no|0|zero)\s+(available|open)\s+(slot|session|date|time)/i', $combined)
+|| preg_match('/\bnothing\s+available\b.*\b(proctor|schedul|retake|final)/i', $combined)
+|| preg_match('/\b(retak|retake|retaking)\b.*\b(my\s+)?final\b/i', $combined)
+```
+
+Verified against 10 test cases (positive: "retaking my final", "Re:
+retaking my final", "scheduling my retake for my final", "0 available
+session", "no available proctoring slots", "I need to book my final
+exam", "schedule a zoom session for my retake"; negative: "tuition
+refund question", "what is the cost of the course", "where can I find
+the syllabus"). All pass.
+
 ## Cross-references
 
-- `ai_compiled_rules` id=233 (proctoring_no_slots) — the runtime
+- `ai_compiled_rules` id=233 (proctoring_no_slots) — the prompt-level
   enforcement, rewritten 2026-05-07 with this rule's framing.
+- `cron/cron_email_responder.php` proctoring-handoff branch — the
+  code-level enforcement (Vicky BCC + auto-ticket).
+- `lib/mailer.php` `sendEmail()` — note: BCC only, no CC parameter.
+  Future improvement: add `$cc` param so handoffs can be true CC.
 - `.clinerules/10-staff-ticket-escalations-plain-language.md` — the
   staff-facing tone for Vicky/Jon-bound handoffs.
 - `.clinerules/13-signed-affiliation-agreement-vicky-jon-cc.md` —

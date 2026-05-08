@@ -211,3 +211,33 @@ No script change needed. Once the new staff member has tNo script change needed.
 ## Last updated
 
 2026-05-07 02:03 PT — added auto-whitelist cron from auth_audit. This is the dynamic counterpart to the static Layer 2 work earlier this evening. Initial run added 19 fail2ban CIDRs + 18 SAFE_IPS prefixes from the last 72h of staff logins (12 unique staff users covered).
+
+## 2026-05-07 20:06 PT addendum — macOS bash 3.2 vs wg-quick bash 4+ (the silent failure that kept WG dead)
+
+When the launchd plist or `wg-bootstrap-mac.sh` calls `/opt/homebrew/bin/wg-quick` directly, wg-quick exits immediately with:
+```
+wg-quick: Version mismatch: bash 3 detected, when bash 4+ required
+```
+Root cause: wg-quick's shebang is `#!/usr/bin/env bash`, and on macOS `/usr/bin/env bash` resolves to `/bin/bash` (3.2.57) NOT `/opt/homebrew/bin/bash` (5.x). Even though Homebrew bash 5 is installed, wg-quick refuses to run because the kernel-resolved interpreter is system bash 3.2.
+
+This was the silent-failure story for 2026-05-07: Mac WG had been "broken" since ~14:54 PT (handshake stale 2h 53min). The launchd plist was firing immediately on schedule but exiting non-zero with the bash version error. RunAtLoad + KeepAlive=false meant launchd silently gave up. utun was never assigned `inet 10.100.0.6`. ping / SSH via 10.100.0.1 silently fell back to wopr:2222 ProxyJump path. Worked but slower (1.2s vs 0.4s SSH RTT) and the failure was invisible.
+
+### The fix (deployed 2026-05-07 20:05 PT)
+
+A 3-line wrapper at `/usr/local/bin/wg-up-wg0`:
+```bash
+#!/opt/homebrew/bin/bash
+exec /opt/homebrew/bin/bash /opt/homebrew/bin/wg-quick "$@" /opt/homebrew/etc/wireguard/wg0.conf
+```
+The launchd plist `/Library/LaunchDaemons/com.ruben.wireguard.wg0.plist` now points at the wrapper instead of wg-quick directly. Backup at `*.bak-20260507-200511-cline-bash5-fix`. Persistence script saved at `/tmp/wg_fix_persistent.sh` (re-runnable).
+
+### Detection for next agent
+
+If Mac WG appears dead (utun has no `inet 10.100.0.6`, ping 10.100.0.1 timeouts):
+1. Try `/opt/homebrew/bin/bash /opt/homebrew/bin/wg-quick up /opt/homebrew/etc/wireguard/wg0.conf` — if this works but plain `wg-quick` does not, bash-version trap is in play.
+2. Check `/usr/local/bin/wg-up-wg0` exists. If yes, run it via osascript admin to bring up.
+3. Check launchd plist points at the wrapper (NOT at wg-quick directly). If wrong, re-run `/tmp/wg_fix_persistent.sh`.
+
+### Last updated for this addendum
+
+2026-05-07 20:06 PT — bash-4+ root cause + fix. Source: WG dead Mac-side since 14:54 PT, silent launchd plist failure on bash version mismatch. Verified live: utun7=10.100.0.6, ssh artemis via WG 392ms RTT.

@@ -99,7 +99,36 @@ Re-run after Cline has initialized ItemTable.
 
 - Rule 26 (`26-phantom-vscode-extension-manifest.md`) — the failure that exposed this dual-path gap was a phantom Remote-SSH manifest entry, which prevented VS Code from ever connecting to Artemis and creating the `~/.vscode-server/...` state.vscdb in the first place.
 
+## 2026-05-08 addendum — Artemis runs 9 code-server instances, each with its own state.vscdb
+
+The 2026-05-07 dual-path patch covered VS Code Remote-SSH (`~/.vscode-server/...`) and the legacy code-server path (`~/.local/share/code-server/...`). It missed a third class: **the 8 code-server-multi@N instances** (services `code-server-multi@1` through `@8`) that Artemis runs in parallel for tab distribution per rule 24.
+
+Each multi-instance has its own user-data-dir at `~/.local/share/code-server-N/`. Each instance's Cline state lives at:
+
+```
+~/.local/share/code-server-N/User/globalStorage/saoudrizwan.claude-dev/state/state.vscdb
+```
+
+These are NOT shared with the main instance — only the `tasks/` directory is symlinked to `~/.local/share/cline-tasks-shared` (so task history is unified). The settings DB is per-instance.
+
+**Symptom of the gap:** open a tab on `https://emsuniversity.com/emtskills/cline-tempe-N/` (any N=1..8) and Cline runs with the **default `maxConsecutiveMistakes=3`** because `state.vscdb` doesn't exist for that instance and the apply script never targeted it. Per rule 24, your tabs are round-robin'd across all 9 instances → 8 out of 9 tabs run at threshold 3. Result: dominant `no-tool-use > no-tool-use > no-tool-use` triple, ~80% of recent YOLO trips on Artemis.
+
+**The fix shipped 2026-05-08:**
+1. Bootstrapped each missing multi-instance `state.vscdb` by `cp`-ing the canonical main-instance file (size 12288 bytes, has ItemTable with the three keys).
+2. Patched `cline_settings_apply.sh::DB_CANDIDATES` to include all 8 multi-instance paths so the hourly cron keeps them in sync going forward.
+3. Verified: re-running the apply script now reports `unchanged` for all 9 DBs (settings already correct on disk).
+
+**Detection for next agent:** when Mac says threshold=10 but Artemis is still YOLO-tripping, run:
+```sh
+ssh artemis 'for i in "" 1 2 3 4 5 6 7 8; do f=~/.local/share/code-server${i:+-$i}/User/globalStorage/saoudrizwan.claude-dev/state/state.vscdb; if [ -f "$f" ]; then val=$(sqlite3 "$f" "SELECT value FROM ItemTable WHERE key=\"maxConsecutiveMistakes\";" 2>/dev/null); echo "inst ${i:-main}: maxConsecutiveMistakes=$val"; else echo "inst ${i:-main}: MISSING"; fi; done'
+```
+If ANY instance shows MISSING or a value other than 10, that instance needs the bootstrap.
+
+**When a new code-server-multi@N instance is added** (e.g. scaling past 9), append its `state.vscdb` path to `DB_CANDIDATES` in `~/Documents/Cline/cline_settings_apply.sh` AND bootstrap the file by copying from the main instance.
+
 ## Last updated
+
+2026-05-08 — multi-instance addendum (code-server-multi@1..8). Source incident: 8 of 9 Artemis instances running with default threshold=3, dominant `no-tool-use` triple, "lots of YOLOs on Cline Artemis." Bootstrapped all 8 missing state.vscdb files + patched cline_settings_apply.sh to keep them synced.
 
 2026-05-07 — added dual-state.vscdb-path addendum + cline_settings_apply.sh patch documentation. Source incident: VS Code Remote-SSH connection to Artemis, fresh state.vscdb 0 bytes, original apply script targeting only the legacy code-server path missed it entirely.
 

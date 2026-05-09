@@ -113,7 +113,60 @@ def classify(text: str) -> str | None:
     # filesystem
     if "enoent" in low or "no such file" in low or "file not found" in low:
         return "file/path does not exist"
+    # ===== KAIZEN-ported categories (2026-05-09) =====
+    # Lessons learned from KAIZEN's ruben_executor catalog (28 active recipes).
+    # These categories show up in Cline task history but were previously
+    # falling through to generic "tool: generic execution error" or "timeout".
+    # See .clinerules/23-kaizen-mcp-failure-classifier.md for the policy layer.
+
+    # safe-deploy sha drift — file changed between plan and execution.
+    # KAIZEN: gate_refused_safe_deploy, 156 fires/7d on RUBEN. Same pattern when
+    # Cline uses emsu-operations safe_deploy_file. Fix: re-read + recompute sha256.
+    if "safe-deploy rc=30" in low or "safe_deploy gate" in low \
+            or ("expected-sha256" in low and ("mismatch" in low or "did not match" in low)) \
+            or "sha mismatch" in low:
+        return "safe-deploy: sha drift, re-read file before retry"
+    # safe-deploy flag whitelist violation. KAIZEN: destructive_step_failed.
+    # Valid flags: --target --content --expected-sha256 --check --force.
+    # NOT --src --source --srcfile --from --in.
+    if "safe-deploy" in low and ("unknown arg" in low or "unrecognized option" in low
+            or "--src" in low or "--source" in low or "--srcfile" in low):
+        return "safe-deploy: invalid flag (use --target/--content/--expected-sha256)"
+    # SQL unknown column — wrote columns that don't exist on target table.
+    # KAIZEN: cross_table_column_pollution + sql_schema_mismatch.
+    if "unknown column" in low or "doesn't exist" in low or "does not exist" in low \
+            and ("column" in low or "table" in low):
+        if "unknown column" in low or ("column" in low and "doesn't exist" in low):
+            return "sql: unknown column (DESCRIBE target table first)"
+    # PHP syntax error before deploy. KAIZEN: php_syntax_error. Fix: php -l first.
+    if "php parse error" in low or "php syntax error" in low \
+            or ("syntax error" in low and ("unexpected" in low or "expected expression" in low)) \
+            or "strict_types declaration must be" in low:
+        return "php: syntax error (run php -l before deploy)"
+    # Plan with no terminal action — all read-only steps, nothing shipped.
+    # KAIZEN: plan_shape_invalid (443 fires/7d, top RUBEN failure). The Cline
+    # equivalent is "investigated forever, never wrote/shipped/sent anything."
+    if "plan_shape_invalid" in low or "no terminal action" in low \
+            or "zero steps" in low or "_salvaged" in low:
+        return "plan: no terminal action (must include safe_deploy/sql_execute/write/send)"
+    # Placeholder content left in step args. KAIZEN: step_content_placeholder.
+    if "<derived_from_step" in low or "<full file content from step" in low \
+            or "placeholder_content_not_resolved" in low:
+        return "step: placeholder content not resolved"
+    # Worker silent death (true OOM, not API error). KAIZEN: worker_silent_death.
+    # Cline equivalent: ext-host OOM mid-task (rule 97). Fix: shorter plan,
+    # delegate exploration, avoid reading large files into context.
+    if "worker silently died" in low or "ext-host crashed" in low \
+            or ("javascript heap out of memory" in low):
+        return "worker: silent death / ext-host OOM (shorten plan, see rule 97)"
+    # Anthropic credit exhausted — distinct from rate limit, NO retry.
+    # KAIZEN: anthropic_credit_exhausted, escalate_no_retry.
+    if "credit balance" in low or " 402" in low or "insufficient credit" in low:
+        return "api: credit exhausted (escalate, no retry)"
+    # ===== end KAIZEN-ported =====
+
     # FPM reload sudoers wall — was hidden in 'permission denied' / 'timeout' before.
+
     # This must come BEFORE the generic permission-denied + timeout branches.
     # Source: WOPR sudoers explicitly negates `systemctl reload php8.3-fpm`.
     # Fix: callers should use kill -USR2 or /usr/local/bin/emsu-safe-phpfpm-restart.sh.

@@ -102,7 +102,59 @@ PLAYBOOK = {
     "tool: not allowed": [
         "Permission/config issue. Do not retry — fix the underlying access problem first.",
     ],
+    # ===== KAIZEN-ported entries (2026-05-09) =====
+    # Lessons distilled from KAIZEN's ruben_executor catalog. See
+    # .clinerules/23-kaizen-mcp-failure-classifier.md for the policy layer.
+    "safe-deploy: sha drift, re-read file before retry": [
+        "**Root cause:** the file changed on disk between when you computed expected-sha256 and when safe-deploy ran. Retrying with the same hash will fail forever.",
+        "**Fix:** before re-emitting safe_deploy, READ the current file via `read_file` or `cat`, compute its actual sha256 (`sha256sum <path>`), then call safe_deploy with `--expected-sha256` set to the LIVE value.",
+        "Do NOT retry with the prior expected-sha256. Do NOT skip the read step.",
+        "Valid safe-deploy flags: `--target` `--content` `--expected-sha256` `--check` `--force`. NOT `--src` `--source` `--srcfile` `--from`.",
+    ],
+    "safe-deploy: invalid flag (use --target/--content/--expected-sha256)": [
+        "**Root cause:** you used a flag safe-deploy doesn't accept. Common offenders: `--src`, `--source`, `--srcfile`, `--from`, `--in`.",
+        "**Valid flags only:** `--target FILE` `--content \"string\"` `--expected-sha256 HASH` `--check` (validate-only) `--force` (bypass).",
+        "If unsure, run `safe-deploy --help` first as a read-only step. Don't guess.",
+    ],
+    "sql: unknown column (DESCRIBE target table first)": [
+        "**Root cause:** you wrote columns that don't exist on the target table — usually borrowed from a sibling/rules table that has similar column names.",
+        "**Fix:** before any INSERT/UPDATE/DELETE, run `DESCRIBE table_name` (or `SHOW CREATE TABLE`). Match column names character-for-character.",
+        "Common pollution: writing `rule_key`/`rule_body`/`rule_source` to `ai_compiled_rules` — those live on `lazy_agent_rulesets`. The actual `ai_compiled_rules` columns are `category`, `trigger_pattern`, `rule_text`, `channel`, `avg_confidence`, `occurrence_count`, `source_correction_ids`, `status`.",
+        "If a column name in your draft doesn't appear in DESCRIBE output, REMOVE IT before the write.",
+    ],
+    "php: syntax error (run php -l before deploy)": [
+        "**Root cause:** PHP syntax error in code you were about to deploy or just deployed.",
+        "**Fix:** before any safe_deploy of PHP, write the candidate to `/tmp/temp_check_<name>.php` and run `php -l` on it. Verify exit code 0.",
+        "Common errors in this codebase: missing semicolon after `}` of class/function/use; mismatched curly braces in nested arrays; bad heredoc EOF tokens; `<?php` opening tag inside a require/include.",
+        "Special case: `strict_types declaration must be the first statement` — move `declare(strict_types=1);` to immediately after the opening `<?php` tag.",
+    ],
+    "plan: no terminal action (must include safe_deploy/sql_execute/write/send)": [
+        "**Root cause:** your plan only had read-only steps (check/show/select/describe/lookup/fetch/get) and shipped nothing. KAIZEN's #1 RUBEN failure (443 hits/7d).",
+        "**Fix:** every plan MUST contain at least one TERMINAL ACTION step. Terminal actions: `safe_deploy`, `sql_execute`, `write_file`, `send_email`, `send_sms`, `post_imessage`, `deploy_route`, `install_cron`, `modify_table`, `insert_data`.",
+        "If you genuinely cannot decide what to ship, emit `steps:[]` with a one-sentence `notes_to_reviewer` requesting a split. That IS the correct answer; investigation-only is not.",
+        "Self-check: would a fresh agent looking at the steps array be able to tell what changed in the world? If no, the plan has no terminal action.",
+    ],
+    "step: placeholder content not resolved": [
+        "**Root cause:** a step's `args.content` / `args.sql` / `args.command` contains a template marker like `<DERIVED_FROM_STEP_Y>` or `<FULL FILE CONTENT FROM STEP X>` that was never substituted.",
+        "**Fix:** every step's content MUST be the LITERAL final value. If you need to derive content from a prior step, either compute it inline before emitting the plan, or split into multiple plan turns.",
+        "Never emit a write_local_file or safe_deploy with a placeholder content value.",
+    ],
+    "worker: silent death / ext-host OOM (shorten plan, see rule 97)": [
+        "**Root cause:** the agent process died mid-execution with no API error — true OOM/kill/ext-host crash. NOT a rate-limit, NOT a transport error (those are separate).",
+        "**Fix:** retry with a SHORTER plan (≤ 4 steps).",
+        "Avoid reading large files into context — use `plan_delegate_exploration` instead of multiple `plan_read_file` calls.",
+        "For files > 100KB, prefer `shell_command` + sed/python over reading the whole file.",
+        "If this is a high-token chain (>50K input tokens), break into two chains.",
+        "See `.clinerules/97-extension-host-oom.md` and `.clinerules/98-edit-discipline.md` for the prevention layer.",
+    ],
+    "api: credit exhausted (escalate, no retry)": [
+        "**Root cause:** Anthropic credit balance exhausted (HTTP 402). DIFFERENT from rate-limit — retrying will not succeed.",
+        "**Fix:** STOP. Do NOT retry. Escalate to Ruben immediately.",
+        "Surface a one-line status: \"Anthropic credit exhausted, paused\" and idle.",
+    ],
+    # ===== end KAIZEN-ported =====
 }
+
 
 HEADER = """# YOLO Prevention — Learned from Actual Trips
 
@@ -191,7 +243,30 @@ def main() -> int:
         seen.add(cat)
         out.append(section_for(cat))
 
+    # KAIZEN-ported preventive lessons. Always render even if the category
+    # hasn't fired in Cline yet — these are forward-looking lessons borrowed
+    # from KAIZEN's ruben_executor catalog where the same failure mode has
+    # already cost RUBEN executor cycles. See .clinerules/23.
+    KAIZEN_PORTED = [
+        "safe-deploy: sha drift, re-read file before retry",
+        "safe-deploy: invalid flag (use --target/--content/--expected-sha256)",
+        "sql: unknown column (DESCRIBE target table first)",
+        "php: syntax error (run php -l before deploy)",
+        "plan: no terminal action (must include safe_deploy/sql_execute/write/send)",
+        "step: placeholder content not resolved",
+        "worker: silent death / ext-host OOM (shorten plan, see rule 97)",
+        "api: credit exhausted (escalate, no retry)",
+    ]
+    unrendered_kaizen = [k for k in KAIZEN_PORTED if k not in seen]
+    if unrendered_kaizen:
+        out.append("## Preventive lessons ported from KAIZEN (forward-looking)\n")
+        out.append("These categories have not yet fired in Cline task history but have repeatedly bitten the RUBEN executor. KAIZEN's recipe table is the source. Listed here so Cline avoids them on first encounter rather than learning by tripping.\n")
+        for cat in unrendered_kaizen:
+            seen.add(cat)
+            out.append(section_for(cat))
+
     out.append("## What's auto-updated\n")
+
     out.append(f"- Last update: {now}")
     out.append(f"- Trips tracked total: {data['total_trips_in_db']}")
     out.append(f"- New trips this scan: {data['scanned_new_trips']}")

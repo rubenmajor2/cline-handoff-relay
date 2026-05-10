@@ -170,10 +170,21 @@ def classify(text: str) -> str | None:
     # This must come BEFORE the generic permission-denied + timeout branches.
     # Source: WOPR sudoers explicitly negates `systemctl reload php8.3-fpm`.
     # Fix: callers should use kill -USR2 or /usr/local/bin/emsu-safe-phpfpm-restart.sh.
+    #
+    # 2026-05-09 TIGHTENED (cline #fpm-yolo-classifier-falsepositive-2026-05-09):
+    # The previous version matched ANY message containing "systemctl reload php"
+    # near "php-fpm". That caught .clinerules/99-yolo-prevention-learned.md itself
+    # (which DOCUMENTS the forbidden command) plus this scan.py file plus
+    # write_rule.py — every time the bubble-loader pushed those into a Cline task
+    # context, scan.py mislabeled unrelated YOLOs as "fpm-reload".
+    # The MCP SIGUSR2 fix shipped 2026-05-05 and is working; the trips since then
+    # are noise. Now require an actual rejection signal:
+    #   "Sorry, user emsuserver is not allowed to execute" — sudoers verbatim
+    #   "is not in the sudoers file"                       — alt sudoers msg
+    # Both phrases only ever appear in real tool-call failure output, never docs.
     if ("php8.3-fpm" in low or "php-fpm" in low) and (
-        "not allowed to execute" in low
-        or "systemctl reload php" in low
-        or ("reload_php_fpm" in low and ("timeout" in low or "timed out" in low or "failed" in low))
+        ("not allowed to execute" in low and "emsuserver" in low)
+        or "is not in the sudoers" in low
     ):
         return "fpm-reload: sudoers blocks systemctl, use kill -USR2 wrapper"
     if "eacces" in low or "permission denied" in low:

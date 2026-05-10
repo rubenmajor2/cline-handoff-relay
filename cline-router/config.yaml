@@ -14,20 +14,20 @@
 model_list:
 
   # ----- Real Anthropic (hard turns, hard-floor matches, fallback target) -----
+  # NOTE: no api_key set — LiteLLM passes through the inbound x-api-key header
+  # from Cline's request to Anthropic. Means we never store/decrypt Cline's
+  # SecretStorage-held key on our side. Each Cline window's own key is used.
   - model_name: claude-sonnet-4-6
     litellm_params:
       model: anthropic/claude-sonnet-4-6
-      api_key: os.environ/ANTHROPIC_API_KEY
 
   - model_name: claude-opus-4-7
     litellm_params:
       model: anthropic/claude-opus-4-7
-      api_key: os.environ/ANTHROPIC_API_KEY
 
   - model_name: claude-haiku-4-5
     litellm_params:
       model: anthropic/claude-haiku-4-5
-      api_key: os.environ/ANTHROPIC_API_KEY
 
   # ----- Local Ollama (routine turns) -----
   # WOPR is the primary location for the LoRA model when Phase 3 lands.
@@ -82,7 +82,8 @@ litellm_settings:
 # Proxy-level settings (port, host, telemetry).
 # ---------------------------------------------------------------------------
 general_settings:
-  master_key: os.environ/CLINE_ROUTER_MASTER_KEY  # blank = no auth, fine for localhost only
+  # No master_key on the proxy itself — Cline's x-api-key is forwarded to Anthropic.
+  # Localhost-only listening, so no auth gap at the proxy boundary.
   database_url: null   # no DB, audit log lives in our own SQLite
   alerting: []
   background_health_checks: false

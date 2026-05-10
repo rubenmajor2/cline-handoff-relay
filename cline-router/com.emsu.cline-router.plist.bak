@@ -39,10 +39,10 @@
   <integer>10</integer>
 
   <key>StandardOutPath</key>
-  <string>/Users/rubenmajor/Documents/Cline/cline-router/logs/cline-router.log</string>
+  <string>/tmp/cline-router.log</string>
 
   <key>StandardErrorPath</key>
-  <string>/Users/rubenmajor/Documents/Cline/cline-router/logs/cline-router.log</string>
+  <string>/tmp/cline-router.log</string>
 
   <key>ProcessType</key>
   <string>Background</string>

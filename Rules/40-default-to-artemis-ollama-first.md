@@ -1,69 +1,121 @@
-# 40 — Default to Artemis/WOPR Ollama first; fall back to Sonnet/Opus/Haiku only for hard floors
+# 40 — Default to Artemis/WOPR Ollama as ANALYSIS BASELINE; surface a CHOICE when another provider is measurably better
 
-Permanent rule. Workspace-scoped. Source incident: 2026-05-10
-#opus-train-ollama-replace-sonnet, Ruben directive 13:24 PT:
-*"Can you put this in the MCP and once we are done as well as cline rules so
-we are always analyzing our own Artemis LLM first, instead of defaulting to
-Opus/Sonnet/Haiku always?"*
+Permanent rule. Workspace-scoped. Source: 2026-05-10 Ruben directive
+13:24 PT → refined 14:02 PT: *"Default to Artemis LLM which will be LoRA soon
+as an analysis, but if quality is better elsewhere needs stating. Don't just
+be blind about it. Give choices when that occurs."*
 
-This rule is the policy layer for "before you reach for Anthropic, see if
-local Ollama can do it." It pairs with .clinerules/35 (Artemis local LLM
-cost-savings clause) and .clinerules/32 (prefer dedicated MCP wrappers).
+Pairs with .clinerules/35 (Artemis local LLM cost-savings clause), .clinerules/32
+(prefer dedicated MCP wrappers), .clinerules/37 (sink-or-swim, no dry-run).
 
-## The bright-line rule
+## The bright-line rule (refined)
 
 **For any new agent surface or prompt-call site that EMSU code is about to
-ship — emails, ticket replies, classifications, plan summaries,
-embeddings, idea scoring, summaries, file extracts, ad-hoc reasoning —
-the DEFAULT first-try provider is Artemis or WOPR Ollama, NOT Anthropic.**
-Anthropic is the fall-back when Ollama either (a) lacks the capability,
-(b) fails parity in backtest, or (c) is on the hard-floor list below.
+ship — emails, ticket replies, classifications, plan summaries, embeddings,
+idea scoring, summaries, file extracts, ad-hoc reasoning — start your
+analysis by trying Artemis or WOPR Ollama FIRST. This is the analysis
+baseline.**
 
-## The hard-floor list (Anthropic always)
+**BUT: never blindly ship Ollama if it's measurably worse.** When Ollama
+output falls below the surface's quality bar (or backtest evidence shows
+Anthropic clearly wins for this surface), surface a CHOICE to the user with:
 
-These stay on Anthropic Sonnet/Opus regardless of Ollama capability:
+1. The measured quality delta (Ollama X% vs Anthropic Y% on N=...)
+2. The cost delta (Ollama $0 vs Anthropic $Z/call)
+3. The latency delta (Ollama Xms vs Anthropic Yms)
+4. The recommendation with reasoning
 
-1. **Student-facing email/SMS composition** — voice fidelity matters
-   per .clinerules/02 (no apologies) + 15 (no internal-reasoning narration)
-2. **Regulator filings** — counsel-grade posture per .clinerules/08
-3. **Money-touching decisions** — refunds, charges, payment_suspensions per
-   .clinerules/29 (irreversibility tier)
-4. **Code patches >100 lines** — code_patch_large surface (Sonnet 4.6 stays)
-5. **Grievance responses to students/regulators** — legal exposure
-6. **Anything Ruben explicitly tags as "use Sonnet"**
+Then let Ruben (or .clinerules-defined policy) make the call. Don't blind-default
+to Ollama if it's a 30% solution; don't blind-default to Anthropic if it's a
+98% solution where Ollama gives 97% at 1/100 the cost.
 
-## How to default to Ollama
+## The hard-floor list (Anthropic always — quality bar can't be measured cheaply enough to risk a miss)
+
+These ALWAYS stay on Anthropic Sonnet/Opus regardless of Ollama capability:
+
+1. **Student-facing email/SMS composition** — voice fidelity matters per
+   .clinerules/02 (no apologies) + 15 (no internal-reasoning narration);
+   a single off-tone email creates legal/PR exposure that dwarfs years of
+   Ollama savings.
+2. **Regulator filings** — counsel-grade posture per .clinerules/08.
+3. **Money-touching decisions** — refunds, charges, payment_suspensions
+   per .clinerules/29 (irreversibility tier).
+4. **Code patches >100 lines** — code_patch_large surface; Sonnet 4.6 stays.
+5. **Grievance responses** to students/regulators — legal exposure.
+6. **Anything Ruben explicitly tags "use Sonnet"**.
+
+## The "soft-floor" measurement protocol (when to default Ollama vs surface choice)
+
+For everything NOT on the hard-floor list:
+
+**Phase A — Analysis baseline (default).** Fire Ollama first. Capture:
+- Output text
+- Latency
+- Cost ($0 vs Anthropic call cost)
+
+**Phase B — Quality check (per surface).** Either:
+- (a) **Backtest exists**: read shadow_log + ab_grader history. If Ollama
+  ≥ Anthropic on agreement-vs-truth for this surface, ship Ollama. If
+  Ollama < Anthropic by ≥10 points, surface the choice.
+- (b) **No backtest yet**: shadow-fire Anthropic in parallel, log to
+  `orchestrator_llm_shadow_log` for 7-30 days, then re-evaluate. Ship
+  Ollama immediately ONLY if the surface is low-stakes (internal
+  ticket categorization, idea scoring, embeddings) — i.e. wrong answer
+  is recoverable by Cline or staff.
+
+**Phase C — Surface the choice (when Ollama falls short).** In the
+attempt_completion or HANDOFF or staff comm:
+- "Ollama qwen-14b: 30% agreement vs Haiku on ab_grader (N=50)"
+- "Anthropic Haiku: ground truth"
+- "Cost: Anthropic $125/mo for 60k grades, Ollama $0"
+- "Latency: Anthropic ~2s/grade, Ollama ~1.6s/grade"
+- "Recommendation: KEEP on Haiku until Phase 3 LoRA closes the gap. The
+  $125/mo isn't worth a 70-pt quality drop on a metric we use to grade
+  every other LLM call."
+
+Then let Ruben/policy decide.
+
+## Post-LoRA reset
+
+Once Phase 3 LoRA ships (qwen2.5-coder:14b-or-32b-emsu-lora adapter), this
+rule's "Phase A baseline" model becomes the LoRA-tuned EMSU model, not
+the base. Expectation: LoRA-tuned Ollama clears 85-95% parity on the
+non-hard-floor surfaces, at which point most surfaces flip to "default ship".
+The choice-surfacing step still applies for any surface where post-LoRA
+backtest stays below the surface's quality bar.
+
+## How to default to Ollama (when allowed)
 
 For every NEW LLM call site, the implementer must:
 
-1. **Check `lib/llm_router.php` for the right method.** Use:
-   - `LlmRouter::fireOllamaChat($model, $messages, $system, ...)` — plain Ollama
-   - `LlmRouter::fireOllamaChatWithRag($model, $messages, $system, $ragQuery, $topK, ...)` — Ollama with EMSU-corpus k-NN injection (Phase 2 of #opus-train-ollama-replace-sonnet)
+1. **Check `lib/llm_router.php` for the right method:**
+   - `LlmRouter::fireOllamaChat($model, $messages, $system, ...)` — plain
+   - `LlmRouter::fireOllamaChatWithRag($model, $messages, $system, $ragQuery, $topK, ...)` — RAG-augmented (after Phase 2 ships)
 2. **Read the model from `orchestrator_config`** — never hardcode. Default
-   model selection should consult `$.ollama_default_model_for_<surface>`
-   (e.g. `$.ollama_default_model_for_classify` = `qwen2.5-coder:14b` or
-   `mistral-small:22b`).
-3. **Wrap the call with a fallback path** to Sonnet/Haiku ONLY when:
+   model selection consults `$.ollama_default_model_for_<surface>` (e.g.
+   `$.ollama_default_model_for_classify` = `qwen2.5-coder:14b-emsu-lora`
+   once Phase 3 lands; base `qwen2.5-coder:14b` before that).
+3. **Wrap with fallback path** to Anthropic ONLY when:
    - Ollama returns `ok=false` (transport or HTTP 5xx)
-   - JSON parse fails on the response (use `LlmRouter::extractJsonCandidate`)
-   - The surface is on the hard-floor list AND the call is the user-facing
-     compose stage (vs the pre-bake/classify stage)
+   - JSON parse fails (use `LlmRouter::extractJsonCandidate`)
+   - The surface is on the hard-floor list AND the call is user-facing compose
 4. **Audit row** in `llm_call_log` with `provider='ollama'` and `surface`
-   tag. The cost rollup in `routes/llm_cost_dashboard.php` will show how
-   much Anthropic spend each surface dodged.
+   tag. Cost rollup in `routes/llm_cost_dashboard.php` shows how much
+   Anthropic spend each surface dodged.
 
 ## Where Ollama lives
 
-| Box | GPU | Ollama Models |
-|---|---|---|
-| **WOPR** (10.100.0.1) | NVIDIA RTX PRO 2000 Blackwell 16 GB GDDR7 ECC, CUDA 13.1, FP4/FP6 Tensor cores | qwen2.5-coder:14b (loaded since 2026-05-06); LoRA training box |
-| **Artemis** (10.100.0.5) | 2× Intel Arc Pro B70 Battlemage 64 GB GDDR6 ECC total | mistral-small:22b, qwen2.5-coder:32b, llama3.1:8b, nomic-embed-text |
+| Box | GPU | Role | Ollama Models |
+|---|---|---|---|
+| **WOPR** (10.100.0.1) | NVIDIA RTX PRO 2000 Blackwell 16 GB GDDR7 ECC, CUDA 13.1 | Training (LoRA via PyTorch+CUDA+peft) + small-model inference | qwen2.5-coder:14b, mistral-small:22b |
+| **Artemis** (10.100.0.5) | 2× Intel Arc Pro B70 = 64 GB GDDR6 ECC | Inference fleet at scale | qwen2.5-coder:32b, mistral-small:22b, llama3.1:8b, nomic-embed-text |
 
-For inference: prefer **WOPR localhost** (zero network hop to MySQL+PHP) for
-small models (≤14B), or **Artemis** for larger (22B-32B+) where the 64 GB
-VRAM matters. The `emsu_rag_ollama_endpoint` config flag controls which.
+For inference: prefer **WOPR localhost** (zero network hop, MySQL+PHP
+co-located) for surfaces ≤14b model. Use **Artemis B70 fleet** when model
+≥22b or scale demands the 64 GB VRAM headroom. The
+`emsu_rag_ollama_endpoint` config flag controls which.
 
-## When the default-Ollama call fails: graceful fallback
+## When the default-Ollama call fails OR returns measurably worse output
 
 ```php
 $resp = LlmRouter::fireOllamaChatWithRag(
@@ -76,9 +128,15 @@ $resp = LlmRouter::fireOllamaChatWithRag(
     /*timeoutSec*/ 30
 );
 if (empty($resp['ok']) || (LlmRouter::extractJsonCandidate($resp['text']??'') === null)) {
-    // Fall back to Anthropic Sonnet/Haiku
-    error_log('[my_surface] Ollama failed, falling back to Sonnet');
+    // Failure mode — fall back to Anthropic
+    error_log('[my_surface] Ollama call failed, falling back to Sonnet');
     $resp = $myAnthropicCallFn($model='claude-sonnet-4-6', ...);
+} elseif (/* quality check fails — e.g. confidence too low, or shadow_log shows >10pt gap on this surface */) {
+    // Surface the choice in handoff/log — see Phase C above
+    error_log('[my_surface] Ollama returned below-bar output; surfacing choice');
+    $resp = $myAnthropicCallFn($model='claude-sonnet-4-6', ...);
+    // record both for future calibration:
+    log_to_shadow($resp_ollama, $resp_anthropic, $surface_name);
 }
 ```
 
@@ -87,30 +145,47 @@ if (empty($resp['ok']) || (LlmRouter::extractJsonCandidate($resp['text']??'') ==
 Before adding a new `curl https://api.anthropic.com/...` line OR a new
 ad-hoc Anthropic SDK call, ask:
 
-1. *"Does this surface fit a hard-floor?"* If no → Ollama default.
-2. *"Have I tried Ollama in shadow mode at least once?"* If no →
-   add a shadow_log entry, run 7-30 day shadow, then ship Ollama-first.
-3. *"What's my fallback-to-Anthropic trigger?"* If unclear → don't ship
-   yet. Define when Ollama is allowed to "give up" on this surface.
+1. *"Is this on the hard-floor list?"* If yes → Anthropic, done.
+2. *"Do I have backtest evidence for this surface comparing Ollama to
+   Anthropic?"* If yes → ship the better one; if Ollama is within 5
+   points, ship Ollama. If 5-15 points gap → log the choice + reasoning
+   in HANDOFF + surface to Ruben. If >15 points gap → ship Anthropic +
+   note that LoRA may close the gap.
+3. *"No backtest?"* → shadow-fire both for 7-30 days OR if low-stakes
+   ship Ollama immediately with shadow-fire enabled.
+4. *"What's my fallback trigger for Ollama failure mode?"* If unclear,
+   don't ship yet.
+
+## What this rule does NOT do
+
+- Does not say "always Ollama." Says "Ollama is the analysis baseline."
+- Does not silently ship Ollama if it's worse. Says "surface the choice
+  with evidence."
+- Does not skip cost+latency reporting. Says "include both in the choice
+  panel."
 
 ## Cross-references
 
-- `.clinerules/35` — Artemis LLM cost-savings clause (this rule extends it)
-- `.clinerules/22` — executor self-supervision loops (recipes can include
-  "fall back to Sonnet" as a retry strategy)
-- `.clinerules/32` — prefer dedicated MCP wrappers (similar default-first
-  shape for tool selection)
+- `.clinerules/35` — Artemis LLM cost-savings clause (this rule extends)
+- `.clinerules/22` — executor self-supervision loops (recipes include
+  "fall back to Sonnet" as retry_strategy)
+- `.clinerules/32` — prefer dedicated MCP wrappers (default-first shape)
+- `.clinerules/37` — sink-or-swim, no dry-run
 - `lib/llm_router.php::fireOllamaChat()`, `fireOllamaChatWithRag()`
 - `lib/EmsuRagRetriever.php` — k-NN over emsu_preference_corpus
 - `orchestrator_config.config_json` flags: `ollama_endpoint`,
-  `emsu_rag_ollama_endpoint`, `emsu_rag_enabled`,
-  `emsu_rag_generation_model`, `ollama_prebuilder_model`,
-  `ab_grader_provider`, `ruben_executor_provider` (post-LoRA)
+  `emsu_rag_ollama_endpoint`, `emsu_rag_enabled`, `emsu_rag_generation_model`,
+  `ollama_prebuilder_model`, `ab_grader_provider`, `ruben_executor_provider`
 
 ## Last updated
 
-2026-05-10 — initial. Source: Ruben directive after RTX PRO 2000 (WOPR) +
-Intel Arc Pro B70 dual-GPU (Artemis) hardware reality came online during
-#opus-train-ollama-replace-sonnet-2026-05-10. Phase 1+2 RAG infra shipped
-that day; this rule locks in the policy posture for every future LLM call
-site.
+2026-05-10 — initial then refined same day per Ruben's correction:
+"Default Artemis as analysis, but if quality is better elsewhere needs
+stating. Don't just be blind about it. Give choices when that occurs."
+
+Source incident: 4 successive Ollama backtests on ab_grader surface
+(llama3.1:8b 20%, mistral-22b 22%, qwen-14b 30%, qwen-14b+RAG 21.1%)
+ALL came in 55+ points below Haiku ground truth. Blind default-Ollama
+would have shipped a 30% solution. Surface-the-choice posture correctly
+kept ab_grader on Haiku and routed Ollama to the OllamaPreBuilder
+surface (where Sonnet veto at 0.50-0.85 catches the quality gap).

@@ -1,0 +1,92 @@
+# LiteLLM Proxy config — Cline-Router Phase 5
+# Pinned to litellm[proxy]==1.83.14
+# Docs: docs.litellm.ai/docs/proxy/configs + docs.litellm.ai/docs/proxy/call_hooks
+
+# ---------------------------------------------------------------------------
+# Model list — what Cline can route to.
+# ---------------------------------------------------------------------------
+# When a Cline request lands, our classifier hook (emsu_classifier_hook.py)
+# rewrites the `model` field on the fly. Cline asks for `claude-sonnet-4-6`,
+# the hook either:
+#   - Leaves it alone (classified hard) → Anthropic
+#   - Rewrites to `ollama-qwen-14b` (classified routine) → Ollama via LiteLLM
+# Both paths come back in Anthropic shape because LiteLLM auto-translates.
+model_list:
+
+  # ----- Real Anthropic (hard turns, hard-floor matches, fallback target) -----
+  - model_name: claude-sonnet-4-6
+    litellm_params:
+      model: anthropic/claude-sonnet-4-6
+      api_key: os.environ/ANTHROPIC_API_KEY
+
+  - model_name: claude-opus-4-7
+    litellm_params:
+      model: anthropic/claude-opus-4-7
+      api_key: os.environ/ANTHROPIC_API_KEY
+
+  - model_name: claude-haiku-4-5
+    litellm_params:
+      model: anthropic/claude-haiku-4-5
+      api_key: os.environ/ANTHROPIC_API_KEY
+
+  # ----- Local Ollama (routine turns) -----
+  # WOPR is the primary location for the LoRA model when Phase 3 lands.
+  # Artemis fleet is the fallback / scale-out.
+  # Note: WOPR ollama doesn't expose 11434 over WG — must add Ollama
+  # OLLAMA_HOST=0.0.0.0 binding on WOPR before primary path works. Until
+  # then, ARTEMIS is the active local endpoint.
+  - model_name: ollama-qwen-14b
+    litellm_params:
+      model: ollama_chat/qwen2.5-coder:14b
+      api_base: os.environ/OLLAMA_BASE_URL   # default http://10.100.0.5:11434 (Artemis)
+      stream: true
+
+  - model_name: ollama-qwen-32b
+    litellm_params:
+      model: ollama_chat/qwen2.5-coder:32b
+      api_base: os.environ/OLLAMA_BASE_URL
+      stream: true
+
+  # Phase 3 LoRA target — currently emsu-qwen:7b-lora (downsized from 14b for WOPR 16GB).
+  # Hook will prefer this when ollama list contains it.
+  - model_name: ollama-qwen-emsu-lora
+    litellm_params:
+      model: ollama_chat/emsu-qwen:7b-lora
+      api_base: os.environ/OLLAMA_BASE_URL
+      stream: true
+
+  # ----- Tier-2 tiny classifier model -----
+  # llama3.2:1b chosen per subagent research — best routine-vs-hard binary
+  # classification accuracy at the 1-3B size band, 15-30ms TTFT warm on Arc.
+  # Warm-load at boot via OLLAMA_KEEP_ALIVE=24h.
+  - model_name: ollama-classifier
+    litellm_params:
+      model: ollama_chat/llama3.2:1b
+      api_base: os.environ/OLLAMA_BASE_URL
+      stream: false
+      temperature: 0
+      max_tokens: 20
+
+# ---------------------------------------------------------------------------
+# Custom callback hook — runs on every request (pre-call) and response
+# (post-call). This is where the routing decision + R1-R9 fail-safe lives.
+# ---------------------------------------------------------------------------
+litellm_settings:
+  # File path is relative to LiteLLM's working dir at startup. Use absolute.
+  callbacks: ["emsu_classifier_hook.emsu_router_instance"]
+  drop_params: false   # preserve all Anthropic params for hook inspection
+  set_verbose: false
+  json_logs: false
+
+# ---------------------------------------------------------------------------
+# Proxy-level settings (port, host, telemetry).
+# ---------------------------------------------------------------------------
+general_settings:
+  master_key: os.environ/CLINE_ROUTER_MASTER_KEY  # blank = no auth, fine for localhost only
+  database_url: null   # no DB, audit log lives in our own SQLite
+  alerting: []
+  background_health_checks: false
+
+# Logging (separate from audit log)
+litellm_logging_config:
+  set_verbose: false

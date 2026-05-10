@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.emsu.cline-router</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/rubenmajor/.local/bin/litellm</string>
+    <string>--config</string>
+    <string>/Users/rubenmajor/Documents/Cline/cline-router/config.yaml</string>
+    <string>--port</string>
+    <string>8787</string>
+    <string>--host</string>
+    <string>127.0.0.1</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/rubenmajor/Documents/Cline/cline-router</string>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+    <key>OLLAMA_BASE_URL</key>
+    <string>http://10.100.0.5:11434</string>
+    <key>CLINE_ROUTER_MODE</key>
+    <string>live</string>
+    <key>PYTHONPATH</key>
+    <string>/Users/rubenmajor/Documents/Cline/cline-router</string>
+    <key>PYTHONUNBUFFERED</key>
+    <string>1</string>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>KeepAlive</key>
+  <true/>
+
+  <key>ThrottleInterval</key>
+  <integer>10</integer>
+
+  <key>StandardOutPath</key>
+  <string>/tmp/cline-router.log</string>
+
+  <key>StandardErrorPath</key>
+  <string>/tmp/cline-router.log</string>
+
+  <key>ProcessType</key>
+  <string>Background</string>
+</dict>
+</plist>

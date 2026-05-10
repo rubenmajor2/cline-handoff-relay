@@ -13,6 +13,20 @@ LOG=/tmp/cline-lora-watcher.log
 HB=/tmp/cline-lora-watcher.heartbeat
 PIDFILE=/tmp/cline-lora-watcher.pid
 STATE=/tmp/cline-lora-watcher.state
+SMS_TO="+17605250530"
+
+# Send SMS to Ruben on milestone via AppleScript Messages.app
+sms_ruben() {
+  local msg="$1"
+  echo "[$(date -Iseconds)] SMS: $msg" >> "$LOG"
+  osascript <<APPLE 2>/dev/null
+tell application "Messages"
+  set targetService to first service whose service type = iMessage
+  set targetBuddy to buddy "${SMS_TO}" of targetService
+  send "${msg}" to targetBuddy
+end tell
+APPLE
+}
 
 # pidfile-based lock (macOS-friendly)
 if [ -f "$PIDFILE" ]; then
@@ -37,15 +51,17 @@ while true; do
   WOPR_TRAIN_DONE=$(ssh -o ConnectTimeout=10 -o BatchMode=yes wopr 'tail -200 /opt/emsu-lora/train_qwen14b.log 2>/dev/null | grep -c "=== END TRAIN ==="' 2>/dev/null || echo 0)
   if [ "${WOPR_TRAIN_DONE:-0}" -ge 1 ] && [ "$(get_state wopr_deploy_done)" != "1" ]; then
     echo "[$(date -Iseconds)] WOPR train END detected. Running deploy_adapter_to_ollama.sh..." >> "$LOG"
+    sms_ruben "LoRA TRAINING DONE on WOPR. Starting deploy_adapter_to_ollama.sh now (merge + gguf + ollama create, ~20 min). Will SMS when ready for reshadow."
     ssh -o ConnectTimeout=10 wopr 'nohup bash /opt/emsu-lora/deploy_adapter_to_ollama.sh </dev/null >/dev/null 2>&1 & disown' >> "$LOG" 2>&1
     set_state wopr_deploy_done 1
   fi
 
   # Check if deploy created emsu-qwen:7b-lora in ollama (downsized from 14b to fit 16GB VRAM)
   LORA_AVAILABLE=$(ssh -o ConnectTimeout=10 -o BatchMode=yes wopr 'ollama list 2>/dev/null | grep -cE "emsu-qwen:(7b|14b)-lora"' 2>/dev/null || echo 0)
-  if [ "${LORA_AVAILABLE:-0}" -ge 1 ] && [ "$(get_state reshadow_done)" != "1" ]; then
-    echo "[$(date -Iseconds)] emsu-qwen:14b-lora available; launching re-shadow N=200" >> "$LOG"
+  if [ "${LORA_AVAILABLE:-0}" -ge 1 ] && [ "$(get_state reshadow_done)" != "1" ] && [ "$(get_state reshadow_launched)" != "1" ]; then
+    echo "[$(date -Iseconds)] emsu-qwen:*-lora available; launching re-shadow N=200" >> "$LOG"
     LORA_NAME=$(ssh -o ConnectTimeout=10 -o BatchMode=yes wopr 'ollama list 2>/dev/null | grep -oE "emsu-qwen:(7b|14b)-lora" | head -1')
+    sms_ruben "Deploy complete. Model $LORA_NAME now in ollama. Launching reshadow backtest N=200 vs Sonnet now. Will SMS verdict (~5-15 min)."
     ssh -o ConnectTimeout=10 wopr "cd /var/www/emtskills && nohup php scripts/backtest_ab_grader_ollama_vs_haiku.php --n=200 --model=$LORA_NAME </dev/null > /tmp/cline-reshadow.log 2>&1 & disown"
     set_state lora_model_name "$LORA_NAME"
     set_state reshadow_launched 1
@@ -60,11 +76,13 @@ while true; do
         echo "[$(date -Iseconds)] re-shadow PASSED at $PCT% — flipping provider=ollama_lora" >> "$LOG"
         LORA_NAME=$(get_state lora_model_name)
         ssh -o ConnectTimeout=10 wopr "mysql -u adminportal -p'iV84o80^y' admin_portal -e \"UPDATE orchestrator_config SET config_json = JSON_SET(config_json,'\\\$.ruben_executor_provider','ollama_lora','\\\$.ollama_default_model_for_classify','$LORA_NAME') WHERE id=1\"" >> "$LOG" 2>&1
+        sms_ruben "LoRA reshadow PASSED at $PCT% (>=95% gate). FLIPPED ruben_executor_provider=ollama_lora + model=$LORA_NAME. Saving ~\$13-18K/mo on top of existing Phase 0 + Q5 savings."
         set_state flipped 1
         set_state flipped_at "$(date -Iseconds)"
         set_state flipped_pct "$PCT"
       elif [ -n "$PCT" ]; then
         echo "[$(date -Iseconds)] re-shadow FAILED at $PCT% < 95% — not flipping; investigate" >> "$LOG"
+        sms_ruben "LoRA reshadow FAILED at $PCT% (need >=95%). NOT flipping. Either retrain with more epochs or accept fallback to base qwen. See /tmp/cline-reshadow.log on wopr."
         set_state reshadow_done 1
         set_state reshadow_failed_pct "$PCT"
       fi

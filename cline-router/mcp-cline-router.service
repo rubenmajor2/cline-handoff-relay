@@ -1,0 +1,56 @@
+# Artemis systemd unit — Cline-Router proxy serving all 9 code-server instances
+# at localhost:8787. Phase 5 REVISION 1 Q3=NO scope.
+#
+# Install:
+#   scp mcp-cline-router.service artemis:/tmp/
+#   ssh artemis 'sudo mv /tmp/mcp-cline-router.service /etc/systemd/system/ \
+#       && sudo systemctl daemon-reload \
+#       && sudo systemctl enable --now mcp-cline-router'
+#
+# Reversal:
+#   ssh artemis 'sudo systemctl disable --now mcp-cline-router'
+
+[Unit]
+Description=Cline-Router LiteLLM Proxy (Anthropic /v1/messages → Ollama routing)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=emsuserver
+Group=emsuserver
+WorkingDirectory=/home/emsuserver/cline-router
+
+# Environment — keys come from /etc/cline-router/env (root-owned, mode 600)
+EnvironmentFile=/etc/cline-router/env
+Environment=PATH=/home/emsuserver/.local/bin:/usr/local/bin:/usr/bin:/bin
+Environment=PYTHONPATH=/home/emsuserver/cline-router
+Environment=PYTHONUNBUFFERED=1
+Environment=OLLAMA_BASE_URL=http://10.100.0.5:11434
+Environment=CLINE_ROUTER_MODE=live
+Environment=CLINE_ROUTER_OLLAMA_MODEL=ollama-qwen-14b
+
+ExecStart=/home/emsuserver/.local/bin/litellm --config /home/emsuserver/cline-router/config.yaml --port 8787 --host 127.0.0.1
+
+Restart=always
+RestartSec=10
+StartLimitIntervalSec=120
+StartLimitBurst=5
+
+# Logging — separate from journald so it doesn't drown out other services
+StandardOutput=append:/var/log/cline-router.log
+StandardError=append:/var/log/cline-router.log
+
+# Resource caps — proxy is light; this is just defense in depth
+MemoryMax=2G
+TasksMax=256
+LimitNOFILE=4096
+
+# Hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/emsuserver/cline-router /var/lib/cline-router /var/log
+
+[Install]
+WantedBy=multi-user.target

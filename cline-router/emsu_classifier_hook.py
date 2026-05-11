@@ -175,6 +175,91 @@ SSH_HARD_REGEX = re.compile(
     r"docker\s+(rm|kill|stop)|kubectl\s+(delete|apply))\b",
     re.I)
 
+# -----------------------------------------------------------------------------
+# Intent-based classifier (2026-05-10 fix — closes first-turn $7.54 leak).
+#
+# Root cause: classify_pure_heuristic only routes "routine" when it can see a
+# prior assistant tool_use block. On the FIRST turn of a new task Cline hasn't
+# called any tool yet — the user is asking, Cline will decide AFTER the LLM
+# replies. So last_tool=None → ambiguous → tier-2 → tier-2 defaults "hard"
+# → forwarded to Opus 4.7 at full context = ~$5-8 per "read me /etc/hosts"
+# request.
+#
+# Fix: look at the user's actual ask. If they're explicitly asking for a
+# routine read/list/show/check/grep with a short request, classify routine
+# BEFORE the model picks a tool. This is the classic "intent-based" routing
+# the spec calls for.
+#
+# Bounds:
+#   - User text <= 800 chars (long asks = likely multi-step reasoning)
+#   - No question marks chained with conjunctions ("AND THEN", "OR ALSO")
+#   - No "compose", "draft", "write" verbs (those are HARD)
+#   - Hard-floor regex still beats this (already runs upstream)
+# -----------------------------------------------------------------------------
+INTENT_ROUTINE_RE = re.compile(
+    r"(?:^|\b)("
+    # read/show/display
+    r"read\s+(?:me\s+|out\s+|the\s+|some\s+|this\s+|that\s+)?(?:contents?\s+of\s+)?|"
+    r"show\s+(?:me\s+|us\s+|the\s+|some\s+|this\s+|that\s+|what['s]*\s+(?:in|is))|"
+    r"display\s+(?:the\s+|contents?\s+of\s+|me\s+)|"
+    r"print\s+(?:the\s+|contents?\s+of\s+|out\s+)|"
+    r"cat\s+/|head\s+(?:-n\s+\d+\s+|of\s+)?/|tail\s+(?:-n\s+\d+\s+|of\s+)?/|"
+    # list/enumerate
+    r"list\s+(?:the\s+|all\s+|every\s+|files?\s+in\s+|directories\s+in\s+|contents?\s+of\s+)|"
+    r"ls\s+(?:-[lah]+\s+)?[/~]|"
+    r"enumerate\s+(?:the\s+|all\s+)|"
+    # check/lookup/find/get
+    r"check\s+(?:the\s+|if\s+|whether\s+|on\s+|for\s+)|"
+    r"look\s*(?:up|at)\s+(?:the\s+|this\s+|that\s+|student\s+|ticket\s+|order\s+|user\s+)|"
+    r"find\s+(?:me\s+|the\s+|all\s+|files?\s+|every\s+)|"
+    r"get\s+(?:me\s+|the\s+|current\s+|recent\s+|latest\s+)|"
+    r"fetch\s+(?:the\s+|me\s+)|"
+    # query/search
+    r"grep\s+(?:-[rni]+\s+)?[\"']?|"
+    r"search\s+(?:for\s+|the\s+|files?\s+)|"
+    r"query\s+(?:the\s+|for\s+)|"
+    # status/info
+    r"(?:what(?:'s|\s+is)\s+(?:the\s+|in\s+|inside\s+|contents?\s+of\s+))|"
+    r"(?:tell\s+me\s+(?:what['s]*\s+in\s+|the\s+contents?\s+of\s+))|"
+    r"status\s+of\s+|"
+    r"how\s+(?:big|large|many)\s+(?:is\s+|are\s+)|"
+    # describe (sql/schema)
+    r"describe\s+(?:the\s+|table\s+)|"
+    r"show\s+(?:tables|columns|schema|create)|"
+    r"select\s+(?:\*|count|id|name)\s+from\b"
+    r")",
+    re.I,
+)
+
+# Hard-veto verbs — even if INTENT_ROUTINE_RE matched, these escalate back to HARD.
+INTENT_HARD_VETO_RE = re.compile(
+    r"\b("
+    r"compose|draft|write\s+(?:the\s+|a\s+|me\s+|an\s+)|reply\s+to|"
+    r"refactor|redesign|rewrite|migrate\s+|deploy\s+|"
+    r"explain\s+why|reason\s+about|think\s+through|plan\s+|architect\s+|design\s+"
+    r")\b",
+    re.I,
+)
+
+
+def classify_intent_from_user_text(last_user: str) -> Optional[tuple[str, float, str]]:
+    """Return (label, conf, reason) if the user's text looks like an explicit
+    routine read/list/check/query, otherwise None. Runs AFTER hard-floor regex
+    so safety-critical surfaces are still preserved.
+    """
+    if not last_user:
+        return None
+    text = last_user.strip()
+    if len(text) > 800:
+        return None  # long asks tend to be multi-step
+    if INTENT_HARD_VETO_RE.search(text):
+        return None
+    m = INTENT_ROUTINE_RE.search(text)
+    if not m:
+        return None
+    return ("routine", TIER1_ROUTINE_CONF, f"intent:{m.group(1).strip().lower()[:30]}")
+
+
 
 # ===========================================================================
 # Audit DB
@@ -225,6 +310,19 @@ def _audit_db_init():
         db.commit()
 
 _audit_db_init()
+
+
+def _safe_size(obj) -> int:
+    """json.dumps an arbitrary object for size measurement, returning 0 on
+    failure (e.g. circular refs in LiteLLM internal objects). The point is
+    audit logging — never let it raise."""
+    try:
+        return len(json.dumps(obj, default=str))
+    except Exception:
+        try:
+            return len(str(obj))
+        except Exception:
+            return 0
 
 
 def _audit_write(row: dict):
@@ -341,8 +439,18 @@ def classify_pure_heuristic(req: dict) -> tuple[str, float, str]:
         if pat.search(combined):
             return ("hard", 1.0, f"hard_floor:{label}")
 
+    # ----- Intent-based routing (2026-05-10 fix) -----
+    # First-turn requests have no prior assistant tool_use yet (last_tool=None).
+    # Look at the user's explicit ask to classify routine reads/lists/checks
+    # before falling into the "ambiguous → tier-2 defaults hard" trap that was
+    # silently costing $5-8 per "read me /etc/hosts"-shape request on Opus.
+    intent_decision = classify_intent_from_user_text(last_user)
+    if intent_decision is not None:
+        return intent_decision
+
     # ----- Tool-name based routing (REVISION 1 §2) -----
     if last_tool:
+
         # Hard-tool blacklist beats routine whitelist
         if last_tool in HARD_TOOL_NAMES:
             return ("hard", 0.95, f"hard_tool:{last_tool}")
@@ -567,8 +675,15 @@ class EmsuRouterHook(CustomLogger):
     async def async_pre_call_hook(self, user_api_key_dict, cache, data, call_type):
         """Called before any model call. We can mutate `data` to rewrite model.
         Per LiteLLM docs/proxy/call_hooks for 1.83.14.
+
+        2026-05-10: added "anthropic_messages" to the allow-list. Cline ships
+        /v1/messages (Anthropic-native) not /v1/chat/completions, and LiteLLM
+        1.83.14 routes /v1/messages through ProxyBaseLLMRequestProcessing
+        which fires this hook with call_type="anthropic_messages". Without
+        this, every Cline turn skipped classification and went straight to
+        Anthropic at full price (0 audit rows since proxy went live).
         """
-        if call_type not in ("completion", "acompletion"):
+        if call_type not in ("completion", "acompletion", "anthropic_messages"):
             return data
 
         # Don't classify our own tier-2 calls (recursion guard)
@@ -583,7 +698,26 @@ class EmsuRouterHook(CustomLogger):
             label, conf, reason, tier = "hard", 1.0, f"classifier_crash:{type(e).__name__}", 0
 
         classify_ms = int((time.time() - t0) * 1000)
-        req_hash = hashlib.sha256(json.dumps(data, sort_keys=True, default=str).encode()).hexdigest()[:16]
+        # 2026-05-10: defensive hash. LiteLLM 1.83.x passes objects with
+        # circular references (e.g. LiteLLM_Verification_token + internal
+        # client refs) into the pre-call hook. json.dumps blows up with
+        # "Circular reference detected" → 500 to Cline → hook gate that
+        # was the point of this whole patch never gets to run on the
+        # request. Hash only the stable subset of fields we actually care
+        # about. Falls back to time-based unique if even that fails.
+        try:
+            hash_seed = {
+                "model": data.get("model"),
+                "max_tokens": data.get("max_tokens"),
+                "n_messages": len(data.get("messages") or []),
+                "first_user": _last_user_text(data.get("messages") or [])[:200],
+                "t": time.time(),
+            }
+            req_hash = hashlib.sha256(
+                json.dumps(hash_seed, sort_keys=True, default=str).encode()
+            ).hexdigest()[:16]
+        except Exception:
+            req_hash = hashlib.sha256(f"{time.time()}-{id(data)}".encode()).hexdigest()[:16]
         self.request_state[req_hash] = {
             "label": label, "conf": conf, "reason": reason, "tier": tier,
             "classify_ms": classify_ms, "original_model": data.get("model"),
@@ -678,8 +812,8 @@ class EmsuRouterHook(CustomLogger):
             "total_latency_ms": total_ms,
             "estimated_cost_saved_usd": round(cost_saved, 6),
             "estimated_cost_paid_usd": round(cost_paid, 6),
-            "request_size_bytes": len(json.dumps(data, default=str)),
-            "response_size_bytes": len(json.dumps(resp_dict, default=str)),
+            "request_size_bytes": _safe_size(data),
+            "response_size_bytes": _safe_size(resp_dict),
             "rollout_mode": ROLLOUT_MODE,
         })
 
@@ -724,7 +858,7 @@ class EmsuRouterHook(CustomLogger):
                 "total_latency_ms": int((time.time() - state["t_start"]) * 1000),
                 "estimated_cost_saved_usd": 0,
                 "estimated_cost_paid_usd": 0,
-                "request_size_bytes": len(json.dumps(request_data, default=str)),
+                "request_size_bytes": _safe_size(request_data),
                 "response_size_bytes": 0,
                 "rollout_mode": ROLLOUT_MODE,
             })

@@ -13,6 +13,16 @@ Verified 2026-05-11 against `https://api.openai.com/v1/models`: gpt-5.5
 (released 2026-04-23) and gpt-5.5-pro are both live. Use **gpt-5.5** as the
 primary failover target. gpt-5.4 is the secondary if gpt-5.5 is unavailable.
 
+Server-side RUBEN executor cascade (orchestrator_config.ruben_fallback_chain):
+1. openai/gpt-5.5  (primary fallback when Anthropic is down)
+2. openai/gpt-5.4  (secondary if gpt-5.5 also down)
+3. ollama/qwen2.5-coder:14b  (tertiary — local Artemis LLM, no token cost,
+   text-only)
+4. openrouter/auto  (final tier, routes via Anthropic Sonnet through OpenRouter
+   in case OpenAI is also down but their OpenRouter pipe still works)
+
+For Cline (the editor) there's no auto-failover — use the manual switch below.
+
 ## The bright-line rule
 
 **When a Cline tool call returns an Anthropic error that matches the outage

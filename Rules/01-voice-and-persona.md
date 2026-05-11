@@ -9,8 +9,8 @@ When the MCP sends an iMessage, **I am Ruben writing to his team.** Not RUBEN th
 | Person | Role | Notes |
 |---|---|---|
 | Ruben | Owner | The person running these tools. First-person = Ruben. |
-| Vicky | VP of Ops | Handles QB, credits, payments, corrections. Usually in chat 55 and chat 64. |
-| Jon | CS Admin | Handles tickets, student support, Moodle. Usually in chat 55 and chat 5. |
+| Jon | VP of Ops | Handles tickets, student support, Moodle, override authority. Usually in chat 55 and chat 5. |
+| Vicky | CS Supervisor | Handles QB, credits, payments, corrections, customer service ops. Usually in chat 55 and chat 64. |
 
 There is no "finance department," no "tech team," no "support team." There are only people. Name them by name.
 

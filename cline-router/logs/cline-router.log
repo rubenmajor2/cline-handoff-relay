@@ -1559,3 +1559,47 @@ INFO:     127.0.0.1:54539 - "GET /health/liveliness HTTP/1.1" 200 OK
 [cline-router] fallback call failed: litellm.AuthenticationError: Missing Anthropic API Key - A call is being made to anthropic but no key is set either in the environment variables or via params. Please set `ANTHROPIC_API_KEY` or `ANTHROPIC_AUTH_TOKEN` in your environment vars
 [cline-router] fallback call failed: litellm.AuthenticationError: Missing Anthropic API Key - A call is being made to anthropic but no key is set either in the environment variables or via params. Please set `ANTHROPIC_API_KEY` or `ANTHROPIC_AUTH_TOKEN` in your environment vars
 [cline-router] fallback call failed: litellm.AuthenticationError: Missing Anthropic API Key - A call is being made to anthropic but no key is set either in the environment variables or via params. Please set `ANTHROPIC_API_KEY` or `ANTHROPIC_AUTH_TOKEN` in your environment vars
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [58129]
+INFO:     Started server process [68956]
+INFO:     Waiting for application startup.
+
+   ██╗     ██╗████████╗███████╗██╗     ██╗     ███╗   ███╗
+   ██║     ██║╚══██╔══╝██╔════╝██║     ██║     ████╗ ████║
+   ██║     ██║   ██║   █████╗  ██║     ██║     ██╔████╔██║
+   ██║     ██║   ██║   ██╔══╝  ██║     ██║     ██║╚██╔╝██║
+   ███████╗██║   ██║   ███████╗███████╗███████╗██║ ╚═╝ ██║
+   ╚══════╝╚═╝   ╚═╝   ╚══════╝╚══════╝╚══════╝╚═╝     ╚═╝
+
+
+[1;37m#------------------------------------------------------------#[0m
+[1;37m#                                                            #[0m
+[1;37m#            'The thing I wish you improved is...'            #[0m
+[1;37m#        https://github.com/BerriAI/litellm/issues/new        #[0m
+[1;37m#                                                            #[0m
+[1;37m#------------------------------------------------------------#[0m
+
+ Thank you for using LiteLLM! - Krrish & Ishaan
+
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+
+
+[92m22:02:03 - LiteLLM Proxy:CRITICAL[0m: proxy_server.py:3520 - LITELLM_MASTER_KEY is not set! All requests will be treated as INTERNAL_USER with no admin access. Set LITELLM_MASTER_KEY for production use.
+[32mLiteLLM: Proxy initialized with Config, Set models:[0m
+[32m    claude-sonnet-4-6[0m
+[32m    claude-opus-4-7[0m
+[32m    claude-haiku-4-5[0m
+[32m    ollama-qwen-14b[0m
+[32m    ollama-qwen-32b[0m
+[32m    ollama-qwen-emsu-lora[0m
+[32m    emsu-qwen3-coder-30b-lora[0m
+[32m    ollama-classifier[0m
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8787 (Press CTRL+C to quit)
+INFO:     127.0.0.1:53383 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53413 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53661 - "GET /v1/models HTTP/1.1" 200 OK

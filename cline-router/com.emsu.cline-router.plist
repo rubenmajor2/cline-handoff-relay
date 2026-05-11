@@ -2,49 +2,40 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-  <key>Label</key>
-  <string>com.emsu.cline-router</string>
-
-  <key>ProgramArguments</key>
-  <array>
-    <string>/bin/bash</string>
-    <string>-lc</string>
-    <string>cd /Users/rubenmajor/Documents/Cline/cline-router &amp;&amp; exec /Users/rubenmajor/.local/bin/litellm --config /Users/rubenmajor/Documents/Cline/cline-router/config.yaml --port 8787 --host 127.0.0.1</string>
-  </array>
-
-  <key>WorkingDirectory</key>
-  <string>/Users/rubenmajor/Documents/Cline/cline-router</string>
-
-  <key>EnvironmentVariables</key>
-  <dict>
-    <key>PATH</key>
-    <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
-    <key>OLLAMA_BASE_URL</key>
-    <string>http://10.100.0.5:11434</string>
-    <key>CLINE_ROUTER_MODE</key>
-    <string>live</string>
-    <key>PYTHONPATH</key>
-    <string>/Users/rubenmajor/Documents/Cline/cline-router</string>
-    <key>PYTHONUNBUFFERED</key>
-    <string>1</string>
-  </dict>
-
-  <key>RunAtLoad</key>
-  <true/>
-
-  <key>KeepAlive</key>
-  <true/>
-
-  <key>ThrottleInterval</key>
-  <integer>10</integer>
-
-  <key>StandardOutPath</key>
-  <string>/Users/rubenmajor/Documents/Cline/cline-router/logs/cline-router.log</string>
-
-  <key>StandardErrorPath</key>
-  <string>/Users/rubenmajor/Documents/Cline/cline-router/logs/cline-router.log</string>
-
-  <key>ProcessType</key>
-  <string>Background</string>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>CLINE_ROUTER_MODE</key>
+		<string>live</string>
+		<key>CLINE_ROUTER_OLLAMA_MODEL</key>
+		<string>ollama-qwen-14b</string>
+		<key>OLLAMA_BASE_URL</key>
+		<string>http://10.100.0.5:11434</string>
+		<key>PATH</key>
+		<string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+		<key>PYTHONPATH</key>
+		<string>/Users/rubenmajor/Library/Application Support/cline-router</string>
+		<key>PYTHONUNBUFFERED</key>
+		<string>1</string>
+	</dict>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Label</key>
+	<string>com.emsu.cline-router</string>
+	<key>ProcessType</key>
+	<string>Background</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/rubenmajor/Library/Application Support/cline-router/launch.sh</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/Users/rubenmajor/Library/Logs/cline-router.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/rubenmajor/Library/Logs/cline-router.log</string>
+	<key>ThrottleInterval</key>
+	<integer>10</integer>
+	<key>WorkingDirectory</key>
+	<string>/Users/rubenmajor/Library/Application Support/cline-router</string>
 </dict>
 </plist>

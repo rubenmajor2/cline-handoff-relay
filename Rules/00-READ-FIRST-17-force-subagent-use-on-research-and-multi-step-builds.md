@@ -3,13 +3,13 @@
 <!-- RULE_VIOLATION_COUNTERS:BEGIN -->
 > ## ⚠️ LIVE VIOLATION COUNTER — auto-updated every 30 min
 > 
-> **This rule is being violated.** Detector ran at 2026-05-11 07:12:20 PDT.
+> **This rule is being violated.** Detector ran at 2026-05-11 08:12:37 PDT.
 > 
-> - last 7 days: **462** violation(s)
-> - last 30 days: **2055** violation(s)
-> - all-time: **2055** violation(s)
+> - last 7 days: **463** violation(s)
+> - last 30 days: **2056** violation(s)
+> - all-time: **2056** violation(s)
 >
->   - explicit Ruben asks for subagent ignored (30d): **161**
+>   - explicit Ruben asks for subagent ignored (30d): **162**
 >   - research/multi-step questions answered without subagent (30d): **1894**
 >
 > If you (Cline) are reading this rule, you are part of the count. The detector

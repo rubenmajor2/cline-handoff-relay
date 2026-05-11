@@ -1,4 +1,4 @@
-# 44 — When Anthropic 402s/5xxs mid-task, switch Cline to OpenAI gpt-5.4 instead of waiting
+# 44 — When Anthropic 402s/5xxs mid-task, switch Cline to OpenAI gpt-5.5 instead of waiting
 
 Permanent rule. Workspace-scoped. Source: 2026-05-11 ~12:00 PT Anthropic credit
 balance went to zero mid-day. Three RubenExecutor chains died with
@@ -9,13 +9,14 @@ tasks don't get interrupted with API errors so what you're gonna do is make a
 cline rule that automatically moves the LLM over to chatgpt OpenAI 5.5 if
 anthropic goes down."*
 
-Note: OpenAI's latest model as of 2026-05-11 is **gpt-5.4** (not gpt-5.5 —
-gpt-5.5 does not exist on OpenAI). Use gpt-5.4 or gpt-5.4-mini.
+Verified 2026-05-11 against `https://api.openai.com/v1/models`: gpt-5.5
+(released 2026-04-23) and gpt-5.5-pro are both live. Use **gpt-5.5** as the
+primary failover target. gpt-5.4 is the secondary if gpt-5.5 is unavailable.
 
 ## The bright-line rule
 
 **When a Cline tool call returns an Anthropic error that matches the outage
-fingerprint, immediately switch the Cline API provider to OpenAI gpt-5.4 and
+fingerprint, immediately switch the Cline API provider to OpenAI gpt-5.5 and
 reload the window. Don't wait it out, don't burn the consecutive-mistakes
 budget on retries.**
 
@@ -43,8 +44,8 @@ Cline 3.82 does not have built-in failover. The switch is a settings change:
    constant `OPENAI_API_KEY` (Ruben's prod key — same one EMSU uses for
    gpt-5.4 calls server-side). On the Mac it's also at
    `~/.config/openai/api_key` if Ruben has it there.
-4. Model ID: **`gpt-5.4`** (or `gpt-5.4-mini` for routine work; reach for
-   `gpt-5.4` when tool-use reasoning matters)
+4. Model ID: **`gpt-5.5`** (or `gpt-5.4` as a fallback; both verified live
+   against /v1/models on 2026-05-11)
 5. Cmd+Shift+P → "Developer: Reload Window"
 6. Resume the task with: `pick up task #<task_id> from where we left off`
 
@@ -52,7 +53,7 @@ Total wall-clock: ~30 sec. Recovers without losing the task on disk.
 
 ## When Anthropic recovers, switch back
 
-OpenAI gpt-5.4 is fine for tool-use but Sonnet 4.6 / Opus 4.7 are still better
+OpenAI gpt-5.5 is fine for tool-use but Sonnet 4.6 / Opus 4.7 are still better
 at the .clinerules-heavy multi-step planning EMSU work requires. When Ruben
 confirms Anthropic billing is back (or `curl
 https://api.anthropic.com/v1/messages -H "x-api-key: $key" -d '{...minimal...}'`
@@ -65,7 +66,7 @@ returns a 200), flip the Cline API provider back to Anthropic and reload.
   we can ship from a clinerules file.
 - Does not cover the server-side RUBEN executor — that has its own failover
   cascade in `lib/RubenExecutor.php::maybeFailover` (fixed 2026-05-11 to use
-  gpt-5.4 with correct `max_completion_tokens` param). See HANDOFF_NOTES.md
+  gpt-5.5 with correct `max_completion_tokens` param). See HANDOFF_NOTES.md
   2026-05-11 12:26 PT entry.
 - Does not apply to anything except mid-task Anthropic-API errors. Don't
   switch providers because of a model-quality complaint or a single 429.

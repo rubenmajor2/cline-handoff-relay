@@ -441,17 +441,26 @@ def classify_pure_heuristic(req: dict) -> tuple[str, float, str]:
     msgs = req.get("messages", []) or []
     last_user = _last_user_text(msgs)
     last_tool = _last_tool_name(msgs)
-    combined = (system + "\n" + last_user).lower()
+    # 2026-05-11: hard-floor regex must NOT scan the full message history.
+    # In a long Cline conversation, words like "refund" or "payment" appear
+    # somewhere in history naturally → every turn would lock to hard_floor.
+    # Scope hard-floor scan to system prompt + last user ask only. Truncate
+    # system to first 6KB (Cline's static system prompt content) to avoid
+    # accidental matches in retrieved RAG context appended to system later.
+    hard_floor_scan_text = (system[:6000] + "\n" + last_user).lower()
 
     # ----- Force-fallback signals -----
-    if _has_thinking_blocks(msgs):
-        return ("hard", 1.0, "thinking_blocks_present")
+    # 2026-05-11: thinking_blocks no longer auto-HARDs the turn. The pre-call
+    # hook strips thinking blocks before forwarding to Ollama (Anthropic-only
+    # feature). Classifier proceeds on the underlying message text. This lets
+    # users keep Adaptive Thinking=Medium for Anthropic-bound (hard) turns
+    # AND get free 7B routing for routine turns.
     if _has_unknown_content_blocks(msgs):
         return ("hard", 1.0, "unknown_content_blocks")
 
     # ----- Hard-floor regex (.clinerules/40 v2) -----
     for pat, label in HARD_FLOOR_PATTERNS:
-        if pat.search(combined):
+        if pat.search(hard_floor_scan_text):
             return ("hard", 1.0, f"hard_floor:{label}")
 
     # ----- Intent-based routing (2026-05-10 fix) -----
@@ -533,7 +542,24 @@ async def classify(req: dict) -> tuple[str, float, str, int]:
     if label != "ambiguous":
         return (label, conf, reason, 1)
 
-    label2, conf2, reason2 = await classify_tiny_model(req)
+    # 2026-05-11: tier-2 in-process LiteLLM call has been throwing
+    # BadRequestError for weeks (see audit rows 13-17, 22). When tier-2
+    # crashes, the original logic defaulted ambiguous→HARD → every Cline
+    # turn went to Opus at $4 each. Instead: if the user's ask is short
+    # (<800 chars) and didn't hit any hard-floor, treat as routine.
+    # R3/R4 post-call fallback will catch bad 7B responses. Net effect:
+    # short user asks go to 7B for free, big complex asks (long text →
+    # length>800) go to Anthropic. Easy reversal: restore the tier-2
+    # call below by reverting this block.
+    last_user = _last_user_text(req.get("messages", []) or [])
+    if last_user and len(last_user.strip()) < 800:
+        return ("routine", 0.7, "ambiguous_short_user→route_routine", 1)
+
+    # Big asks → still try tier-2 (in case it ever works), else default hard.
+    try:
+        label2, conf2, reason2 = await classify_tiny_model(req)
+    except Exception as e:
+        return ("hard", 0.6, f"tier2:exc:{type(e).__name__}", 2)
     if label2 == "routine" and conf2 >= TIER2_ROUTINE_CONF:
         return ("routine", conf2, reason2, 2)
     return ("hard", max(conf2, 0.6), f"tier2_default:{reason2}", 2)
@@ -675,7 +701,11 @@ def run_fail_safe(resp: dict, request: dict, latency_ms: int, label: str) -> Opt
 # ===========================================================================
 
 def estimate_cost_usd(model: str, in_tok: int, out_tok: int) -> float:
-    price = COST_USD_PER_M.get(model)
+    # 2026-05-12 fix: LiteLLM stores the model as "anthropic/claude-sonnet-4-6"
+    # but COST_USD_PER_M keys are "claude-sonnet-4-6". Strip the provider prefix
+    # so the lookup succeeds and dollars_saved / dollars_paid stop showing $0.00.
+    model_key = (model or "").split("/")[-1]
+    price = COST_USD_PER_M.get(model_key) or COST_USD_PER_M.get(model or "")
     if not price:
         return 0.0
     return (in_tok / 1_000_000.0) * price["in"] + (out_tok / 1_000_000.0) * price["out"]
@@ -758,6 +788,27 @@ class EmsuRouterHook(CustomLogger):
             data["model"] = DEFAULT_OLLAMA_MODEL
             # Keep an audit field so post-call hook knows
             self.request_state[req_hash]["routed_to"] = DEFAULT_OLLAMA_MODEL
+
+            # 2026-05-11 (late): strip Anthropic-only fields before forwarding
+            # to Ollama. Cline's Adaptive Thinking shipsthinking content blocks
+            # + a top-level `thinking` request param. Ollama returns
+            # `"emsu-qwen2.5-coder:7b-lora" does not support thinking` 500 on
+            # both. We strip them only when routing to Ollama; the original
+            # Anthropic-bound (hard) path is unchanged.
+            try:
+                # Strip top-level `thinking` request param
+                if "thinking" in data:
+                    data.pop("thinking", None)
+                # Strip `thinking` content blocks from every message
+                msgs = data.get("messages", []) or []
+                for m in msgs:
+                    c = m.get("content")
+                    if isinstance(c, list):
+                        m["content"] = [b for b in c if not (
+                            isinstance(b, dict) and b.get("type") == "thinking"
+                        )]
+            except Exception as e:
+                print(f"[cline-router] thinking-strip failed: {type(e).__name__}: {e}")
 
             # 2026-05-11 cline-rag-2026-05-11: prepend EMSU corpus context to
             # the system prompt for LoRA turns. Hits WOPR /emtskills/api/rag_context.php
@@ -847,17 +898,28 @@ class EmsuRouterHook(CustomLogger):
                 # SILENT FALLBACK: call Anthropic with the original request
                 fallback_called = True
                 try:
-                    fb_data = dict(data)
+                    # 2026-05-12 fix: strip LiteLLM-internal fields (Deployment
+                    # objects, litellm_logging_obj, litellm_call_id, etc.) that
+                    # cause "Object of type Deployment is not JSON serializable"
+                    # when dict(data) is passed back into acompletion. Only send
+                    # the actual API params the model needs.
+                    _FB_SAFE = frozenset({
+                        "messages", "system", "max_tokens", "temperature",
+                        "stream", "tools", "tool_choice",
+                    })
+                    fb_data = {k: data[k] for k in _FB_SAFE if k in data}
                     fb_data["model"] = state.get("original_model") or "claude-sonnet-4-6"
-                    fb_data.pop("_emsu_request_hash", None)
                     fallback_resp = await litellm.acompletion(**fb_data)
                 except Exception as e:
-                    print(f"[cline-router] fallback call failed: {e}")
+                    print(f"[cline-router] fallback call failed: {type(e).__name__}: {e}")
 
         # Audit log
         usage = resp_dict.get("usage", {}) or {}
-        in_tok = usage.get("prompt_tokens", 0) or 0
-        out_tok = usage.get("completion_tokens", 0) or 0
+        # 2026-05-12 fix: LiteLLM normalizes to OpenAI keys but Anthropic-native
+        # responses sometimes preserve input_tokens/output_tokens. Accept either
+        # so cost estimation doesn't stay at $0.00 for Anthropic-bound turns.
+        in_tok = (usage.get("prompt_tokens") or usage.get("input_tokens") or 0)
+        out_tok = (usage.get("completion_tokens") or usage.get("output_tokens") or 0)
         cost_paid = 0.0
         cost_saved = 0.0
         if ollama_called and not fallback_called:
@@ -898,11 +960,51 @@ class EmsuRouterHook(CustomLogger):
 
     async def async_post_call_streaming_iterator_hook(self, user_api_key_dict, response, request_data):
         """For SSE streaming responses, we can't replay easily. Pass through
-        and log on stream end. R1-R9 will run on the assembled output
-        in a future iteration.
+        and write a minimal audit row at stream-end. R1-R9 doesn't run on
+        streams yet (TODO Phase 5B). 2026-05-11: at least log the routing
+        decision so the audit DB reflects what happened.
         """
         async for chunk in response:
             yield chunk
+        # Stream-end: write audit row based on pre-call state so we can see
+        # routing decisions on streamed turns too.
+        req_hash = request_data.get("_emsu_request_hash")
+        state = self.request_state.pop(req_hash, None)
+        if not state:
+            return
+        try:
+            total_ms = int((time.time() - state["t_start"]) * 1000)
+            routed = state.get("routed_to", "") or ""
+            ollama_called = (routed.startswith("ollama-") or routed.startswith("emsu-"))
+            # Cost note: streaming responses don't easily expose final token counts in this hook
+            # signature; we record 0 and let the actual upstream provider's billing be the source
+            # of truth. Cost-saved estimate is approximate (small message). This is just a routing
+            # visibility row.
+            _audit_write({
+                "ts": int(time.time()),
+                "request_hash": req_hash,
+                "classifier_label": state["label"],
+                "classifier_confidence": state["conf"],
+                "classifier_reason": state["reason"],
+                "classifier_tier": state["tier"],
+                "ollama_called": int(ollama_called),
+                "ollama_model": state.get("routed_to") if ollama_called else None,
+                "ollama_latency_ms": total_ms,
+                "ollama_input_tokens": 0,
+                "ollama_output_tokens": 0,
+                "fail_reason": "streaming:no_r_rules" if ollama_called else None,
+                "fallback_called": 0,
+                "fallback_model": None,
+                "fallback_latency_ms": 0,
+                "total_latency_ms": total_ms,
+                "estimated_cost_saved_usd": 0,
+                "estimated_cost_paid_usd": 0,
+                "request_size_bytes": _safe_size(request_data),
+                "response_size_bytes": 0,
+                "rollout_mode": ROLLOUT_MODE,
+            })
+        except Exception:
+            pass
         # TODO Phase 5B: assemble streamed chunks into full response and run R2-R9.
 
     # ---------- Failure hook ----------
@@ -921,7 +1023,7 @@ class EmsuRouterHook(CustomLogger):
                 "classifier_confidence": state["conf"],
                 "classifier_reason": state["reason"],
                 "classifier_tier": state["tier"],
-                "ollama_called": 1 if state.get("routed_to", "").startswith("ollama-") else 0,
+                "ollama_called": 1 if (state.get("routed_to") or "").startswith(("ollama-", "emsu-")) else 0,
                 "ollama_model": state.get("routed_to"),
                 "ollama_latency_ms": int((time.time() - state["t_start"]) * 1000),
                 "ollama_input_tokens": 0,

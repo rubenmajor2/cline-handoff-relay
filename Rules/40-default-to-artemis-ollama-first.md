@@ -189,3 +189,66 @@ ALL came in 55+ points below Haiku ground truth. Blind default-Ollama
 would have shipped a 30% solution. Surface-the-choice posture correctly
 kept ab_grader on Haiku and routed Ollama to the OllamaPreBuilder
 surface (where Sonnet veto at 0.50-0.85 catches the quality gap).
+
+## 2026-05-12 addendum — call_ollama MCP tool is now live; use it from Cline sessions
+
+The `call_ollama` and `call_ollama_chat` tools are now part of the emsu-operations
+MCP (shipped 2026-05-12, idea #3340). The 7B-LoRA (`emsu-qwen2.5-coder:7b-lora`)
+lives on Artemis at `http://10.100.0.5:11434`. WOPR only has base models.
+
+### When to call call_ollama automatically in a Cline session
+
+Call `call_ollama(model="emsu-qwen2.5-coder:7b-lora", ...)` as the FIRST step when:
+
+1. **EMSU-specific policy lookup** — the question is about EMSU procedures, rules,
+   student policies, externship process, exam policy, proctoring, etc. The 7B is
+   fine-tuned on EMSU data. Call it before going to Anthropic. Free.
+
+2. **Task/ticket classification** — routing a new ticket, classifying intent,
+   categorizing a student inquiry. 7B is fast and free for classification.
+
+3. **Pre-screening before an expensive Anthropic call** — when you're not sure if
+   the question needs Anthropic or can be answered locally, call 7B first. If the
+   answer is good enough (check rule 40's quality-bar guidance), stop there.
+
+4. **Combined with RAG context (rule 50)** — the RAG pipeline already retrieves
+   EMSU corpus hits. Pass those as system context to call_ollama for grounded
+   EMSU-specific answers without paying Anthropic.
+
+5. **Routing/meta-decisions** — "should this go to Vicky or Jon?", "what category
+   is this ticket?", "is this an externship question or a payment question?" These
+   are cheap classification tasks the 7B handles well.
+
+### When NOT to call call_ollama (stay on Anthropic)
+
+- Student-facing email composition (hard-floor per this rule's § hard-floor list)
+- Regulator filings (rule 08)
+- Complex multi-step architectural reasoning across many files
+- Anything where the 7B's 30% ab_grader score on general tasks matters
+  (check the backtest before relying on it for a new surface)
+
+### The call pattern
+
+```
+call_ollama(
+  model="emsu-qwen2.5-coder:7b-lora",
+  prompt="<your question>",
+  system="<optional EMSU context from RAG>"
+)
+```
+
+Or for multi-turn:
+```
+call_ollama_chat(
+  model="emsu-qwen2.5-coder:7b-lora",
+  messages=[{"role":"user","content":"<question>"}],
+  system="<EMSU policy context>"
+)
+```
+
+### Why this is NOT possible via use_subagents
+
+`use_subagents` calls Anthropic's API directly and does not honor the cline-router.
+`prompt_N_model="emsu-qwen2.5-coder:7b-lora"` fails with "model not found."
+The 7B is main-agent-only via call_ollama MCP. Subagents (Haiku/Sonnet/Opus)
+inspect/research the 7B system but cannot call it. See .clinerules/53 limitations.

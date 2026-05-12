@@ -146,9 +146,26 @@ mistakes that motivated the additions above:
 - ~/Documents/Cline/Rules/subagent-model-picker.md — model-cost guide for picking `prompt_N_model`
 - Cline 3.82.0 bundle patch from 2026-05-12 that added `prompt_N_model` to `use_subagents`
 
+## 2026-05-12 addendum — Opus selection: 5 binary signals (synthesized by Opus 4.7)
+
+Before dispatching Haiku on any subagent, run this checklist. Any "yes" = Opus:
+
+1. **Cross-system test:** Does answering require holding 2+ of {WOPR DB schema, Artemis GPU/router, Cline extension internals, CAPCE regulator rules, RUBEN executor logic} in the same reasoning simultaneously — not just mentioning them, but trading them off?
+2. **Irreversibility test:** Will this output be acted on without a human re-reading it line-by-line? (Draft to CAPCE, SQL UPDATE plan, .clinerules edit, grievance rationale.) A Haiku hallucination here costs more than $50 of cleanup or one regulator-credibility hit.
+3. **Tradeoff-density test:** Does the answer require choosing between 3+ options where each has non-obvious second-order consequences? Haiku picks option 1 confidently. Opus actually weighs them.
+4. **"Why didn't it work" test:** Is this subagent being dispatched because something already failed? (Rule isn't sticking, same bug recurred, prior fix didn't hold.) Haiku gives a surface-level answer. Opus diagnoses the second-order cause.
+5. **Ruben-will-quote-this test:** Will Ruben paste this output into an email, regulator filing, student letter, or a .clinerules rule? If the words matter beyond this session, it's Opus.
+
+**The EMSU-specific Haiku trap (top 3 mis-classified task types):**
+- "Analyze why this RUBEN executor keeps silent-ghosting" — looks like a read, is actually cross-system tradeoff analysis. Opus.
+- "Design the insertion strategy for this 150KB TypeScript file" — looks like a code read, is architectural judgment. Sonnet minimum.
+- "Write the .clinerules paragraph for this behavioral rule" — looks like text generation, is policy synthesis. Haiku produces vague platitudes. Opus produces the specific language that actually changes behavior.
+
 ## Last updated
 
 2026-05-12 — initial rule. Source: cline-7b-phase3-analysis session
 (task #1778607736240). Ruben caught me running 4 serial SSH probes when
 they should have been one parallel fan-out, AND I wasn't narrating which
 model was doing what when I did dispatch.
+
+2026-05-12 (same day, second session) — added Opus binary signals addendum from Opus 4.7 dispatch in subagent-rules conversation. The 5 signals and EMSU-specific Haiku trap were synthesized by Opus, not Haiku or Sonnet.

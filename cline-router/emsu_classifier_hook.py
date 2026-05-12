@@ -36,6 +36,17 @@ except ImportError:
         pass
     litellm = None  # type: ignore
 
+# 2026-05-11 cline-rag-2026-05-11: RAG augmentation client.
+# Calls https://emsuniversity.com/emtskills/api/rag_context.php (WOPR) and
+# prepends top-5 EMSU corpus hits to the system prompt before the LoRA call.
+# Non-fatal: if WOPR is unreachable or returns nothing, augment_system_prompt
+# returns the original system text unchanged.
+try:
+    from rag_client import augment_system_prompt  # type: ignore
+except ImportError:
+    def augment_system_prompt(system_text: str, last_user_text: str):  # type: ignore
+        return system_text, {"skipped": "import_failed"}
+
 
 # ===========================================================================
 # Configuration
@@ -554,14 +565,17 @@ def r2_shape_invalid(resp: dict) -> Optional[str]:
 
 
 def r3_empty_or_garbage(resp: dict) -> Optional[str]:
+    # Tuned 2026-05-11: threshold dropped from 30 → 15 chars so short factual
+    # answers like "OK" / "Yes" / "23" don't trigger fallback. tool_count*50
+    # bonus retained — any tool_use call is intrinsically valid output.
     content = resp.get("content", []) or []
     texts = [b.get("text", "") for b in content if b.get("type") == "text"]
     tool_count = sum(1 for b in content if b.get("type") == "tool_use")
     full_text = "".join(texts).strip()
-    if len(full_text) + tool_count * 50 < 30:
-        return "r3:empty_or_undersized"
     if not full_text and tool_count == 0:
         return "r3:no_content"
+    if len(full_text) + tool_count * 50 < 15:
+        return "r3:empty_or_undersized"
     # repeated char detection
     if len(full_text) > 50 and len(set(full_text)) < 5:
         return "r3:repeated_chars"
@@ -575,8 +589,12 @@ REFUSAL_RE = re.compile(
 
 
 def r4_refusal_on_routine(resp: dict, request: dict) -> Optional[str]:
+    # Tuned 2026-05-11: require BOTH refusal regex AND short total length
+    # (<200 chars). A long response that begins "I cannot do X but here's Y"
+    # is helpful — only treat as refusal when the response is short enough
+    # that there's no helpful body after the refusal phrase.
     text = " ".join(b.get("text", "") for b in resp.get("content", []) if b.get("type") == "text")
-    if REFUSAL_RE.search(text):
+    if REFUSAL_RE.search(text) and len(text.strip()) < 200:
         sys = request.get("system", "") or ""
         if isinstance(sys, list):
             sys = " ".join(b.get("text", "") for b in sys if isinstance(b, dict))
@@ -740,6 +758,53 @@ class EmsuRouterHook(CustomLogger):
             data["model"] = DEFAULT_OLLAMA_MODEL
             # Keep an audit field so post-call hook knows
             self.request_state[req_hash]["routed_to"] = DEFAULT_OLLAMA_MODEL
+
+            # 2026-05-11 cline-rag-2026-05-11: prepend EMSU corpus context to
+            # the system prompt for LoRA turns. Hits WOPR /emtskills/api/rag_context.php
+            # with the user's last message and gets top-5 most-relevant snippets
+            # from emsu_preference_corpus (6,010 rows: ideas + handoffs +
+            # clinerules + grievances + tickets + ticket_comments + docs/*.md).
+            # Non-fatal: empty context_block means RAG missed or WOPR is down,
+            # we still ship the LoRA call.
+            try:
+                last_user = _last_user_text(data.get("messages") or [])
+                system_in = data.get("system", "") or ""
+                # Anthropic-style system can be list-of-blocks; normalize to text.
+                if isinstance(system_in, list):
+                    sys_text = "\n".join(
+                        b.get("text", "") for b in system_in
+                        if isinstance(b, dict) and b.get("type") == "text"
+                    )
+                else:
+                    sys_text = str(system_in)
+                augmented, rag_meta = augment_system_prompt(sys_text, last_user)
+                # Sentinel log so smoke tests can verify RAG actually fired
+                # without scraping LiteLLM internal state.
+                try:
+                    with open("/tmp/cline_router_rag_calls.log", "a") as _slog:
+                        _slog.write(
+                            f"{time.strftime('%Y-%m-%d %H:%M:%S')} "
+                            f"req={req_hash} "
+                            f"user_first80={last_user[:80].replace(chr(10),' ')!r} "
+                            f"meta={json.dumps(rag_meta)} "
+                            f"augmented={'yes' if (rag_meta.get('ok') and augmented != sys_text) else 'no'}\n"
+                        )
+                except Exception:
+                    pass
+                if rag_meta.get("ok") and augmented != sys_text:
+                    # Rewrite system field. If original was a list-of-blocks
+                    # keep that shape with a single text block (LiteLLM handles both).
+                    if isinstance(system_in, list):
+                        data["system"] = [{"type": "text", "text": augmented}]
+                    else:
+                        data["system"] = augmented
+                    self.request_state[req_hash]["rag_meta"] = rag_meta
+                else:
+                    self.request_state[req_hash]["rag_meta"] = rag_meta
+            except Exception as e:
+                # Never fail a turn over a RAG hiccup
+                print(f"[cline-router] rag augment failed: {type(e).__name__}: {e}")
+                self.request_state[req_hash]["rag_meta"] = {"error": str(e)}
         else:
             self.request_state[req_hash]["routed_to"] = data.get("model")
 

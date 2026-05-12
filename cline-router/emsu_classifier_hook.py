@@ -53,9 +53,13 @@ ROLLOUT_MODE = os.environ.get("CLINE_ROUTER_MODE", "live")
 
 FORCE_ANTHROPIC = os.environ.get("CLINE_ROUTER_FORCE_ANTHROPIC") in ("1", "true", "yes")
 
-# Default Ollama route model. Overridden by hook based on availability:
-# emsu-qwen:7b-lora > qwen2.5-coder:14b > qwen2.5-coder:32b
-DEFAULT_OLLAMA_MODEL = os.environ.get("CLINE_ROUTER_OLLAMA_MODEL", "ollama-qwen-14b")
+# Default Ollama route model. 2026-05-11 16:38 PT: flipped to 7B EMSU-LoRA
+# per Ruben directive ("flip it and test it as it works test it live") after
+# the +121% EMSU-flavor lift vs base Qwen on the held-out backtest (N=10,
+# 8/10 wins, 31 vs 14 EMSU terms). R1-R9 fail-safe still catches any drift
+# and silently falls back to Sonnet. Reversal: set
+# CLINE_ROUTER_OLLAMA_MODEL=ollama-qwen-14b or CLINE_ROUTER_FORCE_ANTHROPIC=1.
+DEFAULT_OLLAMA_MODEL = os.environ.get("CLINE_ROUTER_OLLAMA_MODEL", "emsu-qwen2.5-coder-7b-lora")
 
 # Classifier tunables (calibrated via Phase F backtest, then frozen)
 TIER1_ROUTINE_CONF = 0.85
@@ -750,7 +754,13 @@ class EmsuRouterHook(CustomLogger):
             return response
 
         total_ms = int((time.time() - state["t_start"]) * 1000)
-        ollama_called = state.get("routed_to", "").startswith("ollama-")
+        # 2026-05-11: also count emsu-* LoRA targets as "ollama_called" since
+        # they route through the same ollama backend. Previously this only
+        # matched "ollama-" prefix which broke audit accounting + R1-R9 gating
+        # when DEFAULT_OLLAMA_MODEL was flipped to emsu-qwen2.5-coder-7b-lora.
+        routed = state.get("routed_to", "") or ""
+        ollama_called = routed.startswith("ollama-") or routed.startswith("emsu-")
+
         fallback_called = False
         fail_reason = None
         fallback_resp = response

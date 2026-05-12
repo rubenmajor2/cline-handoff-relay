@@ -80,9 +80,58 @@ If you only have one subagent in the dispatch, the narration is still required: 
 |---|---|---|
 | Reads, status checks, grep, list, simple data extraction | `claude-haiku-4-5` | $0.80/$4 per MTok, fast |
 | Code patches <100 lines, single-file edits, plan composition | `claude-sonnet-4-6` | $3/$15, good reasoning |
-| Architectural synthesis, regulator-grade writing, complex tradeoffs | `claude-opus-4-7` | $15/$75, only when it matters |
-| EMSU policy/operational questions | `emsu-qwen2.5-coder-7b-lora` via router | Free on Artemis |
-| Cline router unfamiliar to subagent → leave model unset → parent model used | (default) | Same as parent |
+| Reading minified bundles, multi-file code analysis, locating injection sites in obfuscated code | `claude-sonnet-4-6` | NOT Haiku — this is code analysis, not a cheap read |
+| Architectural synthesis, regulator-grade writing, complex tradeoffs, designing a 2+ phase patch | `claude-opus-4-7` | $15/$75, only when it matters |
+| Anthropic models only — subagents use the Anthropic API directly | (any of the above) | See limitation below |
+
+## Subagent limitations on Cline 3.82 (KNOWN)
+
+Two hard limitations on `use_subagents` in Cline 3.82 — both forced by the
+dispatcher implementation:
+
+1. **`use_subagents` calls the Anthropic API directly.** It does NOT route
+   through `http://127.0.0.1:8787` (the LiteLLM cline-router). `prompt_N_model`
+   accepts only Anthropic IDs (`claude-haiku-4-5`, `claude-sonnet-4-6`,
+   `claude-opus-4-7`, plus future Anthropic releases). Passing
+   `"emsu-qwen2.5-coder-7b-lora"` or any router-only model ID will fail with
+   "model not found." Until a future Cline patch makes the subagent dispatcher
+   honor `OPENAI_API_BASE`-style overrides, the 7B-LoRA and other router-only
+   models cannot be used as subagents.
+
+2. **Subagents do NOT have MCP access.** They have local shell + filesystem
+   only. Anything that needs the `emsu-operations`, `mysql`, `ruben-orchestrator`,
+   `imessage`, `kaizen`, `google-drive`, or any other MCP tool MUST stay on the
+   main agent. Per rule 32 (prefer dedicated MCP wrappers), this means: any
+   task that needs to query EMSU database, read server files, send iMessages,
+   check tickets, or anything else MCP-routed is main-agent-only, not
+   subagent-dispatchable. Subagents can still do local `grep`, `cat`, `python3`,
+   etc. on the Mac filesystem.
+
+**Practical implication:** for EMSU ops tasks, subagents are usually limited
+to research that's local to the Mac (reading bundles, scanning local repos,
+re-reading prior task JSON, parsing logs in /tmp). MCP/SSH/DB work stays on
+the main agent. Don't dispatch a subagent for "go check the ticket queue" —
+that's an MCP-only task.
+
+## Lessons from the 2026-05-12 self-counter-example session
+
+In the session that wrote this rule (task #1778607736240), I made these
+mistakes that motivated the additions above:
+
+- **Defaulted Haiku for 4 dispatches** even though 2 of them (locating the
+  React renderer in 13MB of minified code, planning the 2-phase badge patch)
+  were genuine architectural reasoning that warranted Sonnet or Opus. The
+  "default cheap" instinct is the same anti-pattern rule 53 was meant to stop.
+  Watch for: "this looks like a cheap read" — if the deliverable requires
+  judgment about WHERE to put a patch or HOW to design something, it's not
+  a cheap read.
+- **Dispatched a subagent to call `read_server_file` via emsu-operations MCP.**
+  The subagent reported back that the MCP isn't available in its environment.
+  Wasted one round trip. Always check the limitations table above first.
+- **Clustered dispatches at task start, then went serial for execution.** When
+  the bundle patch turned out to need 2 phases (parser + renderer), I should
+  have re-dispatched parallel subagents to locate the renderer in parallel
+  with verifying the parser patch. Instead I serialized.
 
 ## What this rule does NOT do
 

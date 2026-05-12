@@ -25,6 +25,28 @@ model_list:
     litellm_params:
       model: anthropic/claude-opus-4-7
 
+  # 2026-05-11 — Cline 3.82 may send any of these names. Add aliases so the
+  # router accepts everything Cline emits. Hook still classifies + rewrites.
+  - model_name: claude-opus-4-6
+    litellm_params:
+      model: anthropic/claude-opus-4-6
+
+  - model_name: claude-opus-4-6:1m
+    litellm_params:
+      model: anthropic/claude-opus-4-6
+
+  - model_name: claude-opus-4-7:1m
+    litellm_params:
+      model: anthropic/claude-opus-4-7
+
+  - model_name: claude-sonnet-4-5
+    litellm_params:
+      model: anthropic/claude-sonnet-4-5
+
+  - model_name: claude-sonnet-4-6:1m
+    litellm_params:
+      model: anthropic/claude-sonnet-4-6
+
   - model_name: claude-haiku-4-5
     litellm_params:
       model: anthropic/claude-haiku-4-5
@@ -76,7 +98,12 @@ model_list:
     litellm_params:
       model: ollama_chat/emsu-qwen2.5-coder:7b-lora
       api_base: http://10.100.0.5:11434
-      stream: true
+      # 2026-05-12 fix: stream: false so ALL 7B responses go through
+      # async_post_call_success_hook → R1-R9 quality gate. With stream:true,
+      # responses went through the streaming iterator hook which has NO quality
+      # checks (TODO Phase 5B). Empty/refusal responses were reaching Cline
+      # unchecked. Now bad responses → R3/R4 → clean Anthropic fallback.
+      stream: false
 
   # ----- Tier-2 tiny classifier model -----
   # llama3.2:1b chosen per subagent research — best routine-vs-hard binary

@@ -84,7 +84,21 @@ else
         python3 /Users/rubenmajor/Documents/Cline/bundle_patches/patch_subagent_renderer.py >> "$LOG" 2>&1 || \
             log "patch4 re-apply FAILED"
     else
-        log "patch4 re-apply script /Users/rubenmajor/Documents/Cline/bundle_patches/patch_subagent_renderer.py not found"
+        log "patch4 re-apply script not found"
+    fi
+fi
+
+# ── PATCH 5: subagent_provider_aware (dist/extension.js) ────────
+# Marker: /*SAP26*/ — enables router: prefix on prompt_N_model for 7B-LoRA
+if grep -q "SAP26" "$DIST" 2>/dev/null; then
+    log "patch5 (provider_aware): present"
+else
+    log "patch5 (provider_aware): MISSING — re-applying..."
+    if [[ -f /Users/rubenmajor/Documents/Cline/bundle_patches/patch_subagent_provider_aware.py ]]; then
+        python3 /Users/rubenmajor/Documents/Cline/bundle_patches/patch_subagent_provider_aware.py >> "$LOG" 2>&1 || \
+            log "patch5 re-apply FAILED"
+    else
+        log "patch5 re-apply script not found"
     fi
 fi
 

@@ -273,8 +273,27 @@ and the offer-to-spin protocol routes through `mint_pod` directly.
 
 Filed as orchestrator idea slug `runpod-mcp-wrapper-2026-05-11`.
 
+## Specifically: regulator-issue triggers stay Q-card, NEVER autonomous
+
+Added 2026-05-11 22:00 PT per Ruben directive: "I think cline rule would just need to offer that to me on regulator issues is better."
+
+When a regulator NOI / complaint / investigation lands and a compliance regression sweep could help (e.g. running the new ai_compiled_rules against 90d of past outbound to verify the issue isn't lurking elsewhere), the right move is:
+
+1. **DON'T spin up autonomously**, even if the spend would fit under the maintenance budget cap.
+2. **OFFER the spin-up via rule 05 question-card format** with concrete cost estimate, what the sweep would check, what the deliverable looks like.
+3. **Ruben approves the explicit spend** before any pod is minted.
+4. **Per .clinerules/08 NOI response posture** + .clinerules/29 irreversibility tier — regulator surfaces are counsel-grade. Always Q-card.
+
+Why this stays Q-card even though it could be high-value:
+- Per-incident spend variance is wide ($30 sweep up to $150+ for multi-NOI cross-check)
+- Output of a sweep can influence what EMSU says (or doesn't say) to the regulator — that's irreversible-class downstream impact
+- Counsel review of sweep findings needs Ruben in the loop anyway
+
+So even after idea #3222 (RUBEN autonomous cloud-GPU budget) ships, regulator triggers are OUT of the autonomous whitelist by design. Always offer, never act.
+
 ## Last updated
 
+2026-05-11 22:00 PT — added regulator-issue Q-card-only section per Ruben directive 21:53 PT.
 2026-05-11 21:25 PT — initial rule. Source incident: 10-pod parallel fleet
 mint (30B v17 retrain + 7B+14B B200 LoRA training + W3 H100 replay + W4-W11
 + W19 measurement workstreams). Total fleet burn ~$45/hr. Ruben directive

@@ -1,17 +1,30 @@
-# 62 — When the user reports a visual/UI bug, launch the browser FIRST. Not curl, not grep, not theory.
+# 62 — Visual UI bug: browser-verify is mandatory before declaring fixed, even if curl found something
 
 Permanent rule. Workspace-scoped. Source: 2026-05-13 cline_reports-403-fix burned
 ~$75 of Opus tokens over 6+ failed iterations because I kept "diagnosing" reports.php
-via `curl -o /dev/null -w '%{http_code}'`, file grep, and PHP-FPM error log
-tailing — when the actual bug was a **rendered HTML payload Ruben could see in
-his browser** that I had never once looked at.
+via curl/grep/static-scan and shipping fixes without ever looking at the page.
+Updated 2026-05-13 PM after Ruben softened the original rule: curl is sometimes
+genuinely faster, but the browser is NON-NEGOTIABLE as a verification step
+before claiming "fixed."
 
-## The bright-line rule
+## The bright-line rule (revised)
 
-**When the user reports any of these symptoms, my FIRST tool call after reading
-the message MUST be `browser_action` (or building the session-bridge endpoint
-from rule 63 if the page is auth-gated):**
+**When you report a visual UI bug, browser_action is not always my FIRST move —
+sometimes curl/grep is genuinely faster (e.g. I can see the 500 in the log
+immediately, or the HTTP code is the diagnostic). BUT the browser is
+NON-NEGOTIABLE in these two cases:**
 
+1. **First-tool fallback**: If my initial curl/grep/file-read pass finds nothing
+   that matches your described symptom, my NEXT tool call MUST be
+   `browser_action`. I do not get to conclude "the page must be fine" or "must
+   be your cache" — that's me dismissing your eyes-on report without evidence.
+
+2. **Pre-completion verification**: Before declaring "fixed" / completing the
+   task, I MUST `browser_action launch` (with session bridge per rule 63 if
+   auth-gated) and see the page rendering correctly. HTTP 200 / 401 is NOT
+   verification of a visual bug fix.
+
+The trigger phrases for visual bugs are unchanged:
 - "the page is broken"
 - "the page doesn't show X"
 - "cards are missing"
@@ -19,68 +32,39 @@ from rule 63 if the page is auth-gated):**
 - "looks weird"
 - "the page is the same"
 - "nothing changed"
-- "[some part of UI] isn't rendering"
-- "I see [specific text] but [other thing]"
-- screenshots, page text quotes, anything visual
+- screenshots or pasted page text from the user
 
-**The user is describing what their eyes see. Curl returning HTTP 200 or 401 does
-not answer their question. PHP `-l` syntax-clean does not answer their question.
-A scanner showing "0 dangerous files" does not answer their question. Only
-seeing what they see answers their question.**
+## What I MUST NOT do (still the same)
 
-## What I MUST NOT do as the first move
+1. ❌ Conclude "must be a cache issue" without browser verification
+2. ❌ Conclude "must be a hallucination" / "I don't see the issue" without
+   browser verification
+3. ❌ Use HTTP code (200, 401, 403) as proof that a visual bug is fixed
+4. ❌ Ship a fix and immediately call attempt_completion without re-launching
+   the browser to see the change rendered
+5. ❌ "It passes php -l, so it must work" — syntax-clean doesn't mean
+   visually-correct
 
-Banned first moves on visual-UI bug reports:
+## What changed from the original (overly strict) rule
 
-1. ❌ `curl -s -o /dev/null -w '%{http_code}' <url>` — tells you nothing about rendered content
-2. ❌ `php -l <file>` — only proves it parses, not that it renders right
-3. ❌ Custom scanner that scans 90+ files for static patterns — proves nothing about runtime
-4. ❌ Tailing PHP-FPM log NOTICE lines — those are FPM lifecycle, not errors
-5. ❌ Reading 300 lines of source code trying to deduce what would render
-6. ❌ "It returned 401, which means it would have rendered fine when logged in" — assumption, not evidence
+The first version of this rule said browser MUST be the first tool call,
+period. Ruben softened it after one debug round where curl was genuinely the
+right first move (he could tell me the exact HTTP code, php-fpm log already
+showed the fatal, etc.). The lesson is:
 
-## What I MUST do first
+- Curl/grep CAN be the first move when they're genuinely faster — e.g. you
+  give me a specific PHP error message in the URL bar, and I can find the file
+  in 5 seconds via grep.
+- But the browser MUST run if those first moves don't surface a cause matching
+  your description. The user reporting a visual symptom is evidence. The
+  absence of a hit in grep/curl is NOT counter-evidence — it's just a miss.
+- And the browser MUST run before completion. Always.
 
-1. **If the page is public**: `browser_action launch <url>` immediately. Look at the screenshot. Match what I see to what the user described.
-2. **If the page is auth-gated**: build the session-bridge endpoint per rule 63 (one-time, ~5 min), then `browser_action launch <bridge_url>`. Same eyes-on diagnosis.
-3. **Either way**: scroll through the page (`browser_action scroll_down`) to verify the FULL extent of the bug, not just the first viewport.
+## The cost calculus (still applies)
 
-Only AFTER I have seen what the user sees do I form a hypothesis and start grepping/curling for the cause.
-
-## What changed from how I was operating before
-
-Old (broken) loop:
-- User: "cards aren't showing"
-- Me: scan files for patterns that LOOK suspicious
-- Me: ship a fix based on a static-analysis hunch
-- Me: curl → returns 401 → "fix verified, page returns correct status code"
-- User: "nothing changed"
-- Me: scan more files, ship more fixes
-- User: "nothing changed"
-- (repeat 4 more times)
-
-New (correct) loop:
-- User: "cards aren't showing"
-- Me: open browser with session, look at the page
-- Me: see EXACTLY which point the page stops rendering
-- Me: grep ONLY for the specific 403/500/exit message I can see in the screenshot
-- Me: ship a fix targeting that one specific cause
-- Me: re-open browser, verify the fix made the page render further down
-- (repeat only if more bugs are downstream)
-
-## Cost calculus
-
-Each browser_action call costs ~$0.01-0.05 (Puppeteer rendering + Anthropic vision tokens). 
-Each "theorize from grep" iteration that ships a wrong fix costs 5-10x that AND
-burns a YOLO consecutive-mistake slot AND erodes user trust. 
-
-The browser is the cheapest tool on the board for visual bugs. Use it first.
-
-## What this rule does NOT do
-
-- Doesn't apply to backend-only bugs (cron didn't fire, DB row didn't update, email didn't send) — those legitimately need DB/log/code inspection.
-- Doesn't apply when the user explicitly says "don't bother launching the browser, just fix X" — honor that.
-- Doesn't apply when I'm shipping a known-narrow fix the user already verified visually (e.g. "change the button color to blue").
+- `browser_action` ≈ $0.02-0.05 per call
+- A wrong fix that ships because I didn't verify ≈ $5-20 in tokens + your time
+- Ratio: ~100:1. The math says always verify.
 
 ## Companion rules
 
@@ -89,7 +73,8 @@ The browser is the cheapest tool on the board for visual bugs. Use it first.
 
 ## Last updated
 
-2026-05-13 — initial. Source: cline_reports-403-fix-2026-05-13 cost ~$75 of Opus
-tokens because I would not stop curling and start looking. Ruben directive after
-the fix finally landed: "Some of my having to convince you regarding the browser
-issue was annoying."
+2026-05-13 (PM update) — softened from "browser MUST be first move" to
+"browser MUST be the fallback if curl found nothing AND must run before
+completion." Source incident still cline_reports-403-fix-2026-05-13 (where the
+overly strict version was originally written + Ruben's same-day pushback that
+curl is sometimes faster).

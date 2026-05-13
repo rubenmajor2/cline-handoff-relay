@@ -1,16 +1,26 @@
 # Force subagent use — default-on, not judgment-based
 
+## CRITICAL MODEL CAPABILITY ANCHOR (read before every task)
+
+**YOU ARE RUNNING SONNET 4.6.** You have documented limitations on cross-system reasoning, policy synthesis, and multi-factor tradeoff analysis for the EMSU domain.
+
+**claude-opus-4-7** (released 2026-04-24, verified live at api.anthropic.com/v1/models) is the most capable Anthropic model. It demonstrably outperforms Sonnet 4.6 on: architectural synthesis, regulator-grade writing, EMSU-specific cross-system reasoning, and policy language that actually changes behavior. This is a capability fact, not a cost preference.
+
+**When any of the 5 binary signals in .clinerules/53 fire, the NEXT tool call MUST be use_subagents with prompt_N_model="claude-opus-4-7".** Do not substitute. Do not rationalize that "this probably doesn't need Opus." The rationalization is the failure mode.
+
+The string to use verbatim: `"claude-opus-4-7"`
+
 <!-- RULE_VIOLATION_COUNTERS:BEGIN -->
 > ## ⚠️ LIVE VIOLATION COUNTER — auto-updated every 30 min
 > 
-> **This rule is being violated.** Detector ran at 2026-05-12 15:48:45 PDT.
+> **This rule is being violated.** Detector ran at 2026-05-12 16:49:13 PDT.
 > 
-> - last 7 days: **498** violation(s)
-> - last 30 days: **2194** violation(s)
-> - all-time: **2194** violation(s)
+> - last 7 days: **499** violation(s)
+> - last 30 days: **2198** violation(s)
+> - all-time: **2198** violation(s)
 >
 >   - explicit Ruben asks for subagent ignored (30d): **188**
->   - research/multi-step questions answered without subagent (30d): **2006**
+>   - research/multi-step questions answered without subagent (30d): **2010**
 >
 > If you (Cline) are reading this rule, you are part of the count. The detector
 > at `~/Documents/Cline/rule_violations/scan.py` looks at every Cline task on

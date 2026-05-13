@@ -169,3 +169,17 @@ they should have been one parallel fan-out, AND I wasn't narrating which
 model was doing what when I did dispatch.
 
 2026-05-12 (same day, second session) — added Opus binary signals addendum from Opus 4.7 dispatch in subagent-rules conversation. The 5 signals and EMSU-specific Haiku trap were synthesized by Opus, not Haiku or Sonnet.
+
+## Critical: Sonnet may not have training signal on claude-opus-4-7
+
+**claude-opus-4-7 was released 2026-04-24.** Sonnet 4.6's training cutoff may predate this. This means when Sonnet (as main agent) decides whether to dispatch Opus, it may not have strong internal knowledge that claude-opus-4-7 is meaningfully more capable. It will rationalize not paying the premium.
+
+**Hard rule:** when any of the 5 binary signals above fire, the next use_subagents call MUST include `prompt_N_model="claude-opus-4-7"` — use that exact string. Do not substitute a different model. Do not reason that "this probably doesn't need Opus." The whole point of the binary signals is to remove the rationalization step.
+
+claude-opus-4-7 facts (from verified live API, 2026-05-12):
+- Confirmed live at api.anthropic.com/v1/models
+- Most capable Anthropic model available
+- $15 input / $75 output per MTok
+- Meaningfully outperforms Sonnet on cross-system reasoning, policy synthesis, tradeoff analysis
+
+If Option B (Sonnet as main + Opus dispatch) isn't producing Opus dispatches, the permanent fix is to switch the main Cline model to claude-opus-4-7 in Cline settings. That requires the UI — Settings gear → API Provider → change model. Sonnet as main will structurally under-dispatch Opus because it's asking a model to demote itself.

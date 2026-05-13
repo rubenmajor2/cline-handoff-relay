@@ -19,6 +19,7 @@ if [ "$(uname -s)" = "Darwin" ] ; then
   /bin/bash "$HOME/Documents/Cline/yolo_learner/push_to_ruben.sh"  >> /tmp/yolo_learner.log 2>&1
   /bin/bash "$HOME/Documents/Cline/yolo_learner/push_ledger.sh"    >> /tmp/yolo_learner.log 2>&1
 fi
+/bin/bash "$HOME/Documents/Cline/yolo_learner/push_patterns_to_ruben.sh"
 /bin/bash "$HOME/Documents/Cline/yolo_learner/check_burst.sh"      >> /tmp/yolo_learner.log 2>&1
 
 exit 0

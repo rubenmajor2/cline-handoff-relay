@@ -858,6 +858,35 @@ class EmsuRouterHook(CustomLogger):
                 self.request_state[req_hash]["rag_meta"] = {"error": str(e)}
         else:
             self.request_state[req_hash]["routed_to"] = data.get("model")
+            # Payment tool injection for money hard-floor turns (rule 70 / Option 1).
+            # When HARD_FLOOR_PATTERNS fires for "money" class, inject a just-in-time
+            # reminder of the Authnet MCP tools so Sonnet calls them instead of
+            # pattern-matching to training data about payment processors.
+            # Non-fatal: any exception silently skips injection; the hard-path call
+            # still fires normally.
+            if reason and reason.startswith("hard_floor:money"):
+                PAYMENT_TOOL_CONTEXT = (
+                    "\n\n=== EMSU PAYMENT TOOLS — CALL THESE BEFORE ANY PAYMENT CONCLUSION ===\n"
+                    "EMSU uses Authorize.net on ALL sites (emsuniversity.com, tucsoncpr.com, "
+                    "dallascpr.org, houstonemt.com). There is NO Stripe, Square, or PayPal.\n"
+                    "Required search order before concluding a payment does/doesn't exist:\n"
+                    "1. find_authnet_by_email — use student email, days_back=120 minimum, NO amount filter on first pass\n"
+                    "2. find_authnet_by_name  — first+last name (catches billing name mismatch), then last name alone\n"
+                    "3. check_authnet_transaction — only if you have a specific trans_id\n"
+                    "4. check_qb_invoices — for EMT program tuition invoices\n"
+                    "Do NOT name an alternate processor. Do NOT write 'no payment found' until all 4 are exhausted.\n"
+                    "If all 4 are empty: document which searches ran and instruct Vicky to check the WPForms entry in WP admin.\n"
+                    "=== END PAYMENT TOOLS ===\n"
+                )
+                try:
+                    system_in = data.get("system", "") or ""
+                    if isinstance(system_in, list):
+                        data["system"] = list(system_in) + [{"type": "text", "text": PAYMENT_TOOL_CONTEXT.strip()}]
+                    else:
+                        data["system"] = str(system_in) + PAYMENT_TOOL_CONTEXT
+                    self.request_state[req_hash]["payment_ctx_injected"] = True
+                except Exception as e:
+                    print(f"[cline-router] payment_ctx_inject failed: {type(e).__name__}: {e}")
 
         return data
 

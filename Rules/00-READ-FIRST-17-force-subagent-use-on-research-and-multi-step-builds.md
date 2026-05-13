@@ -13,14 +13,14 @@ The string to use verbatim: `"claude-opus-4-7"`
 <!-- RULE_VIOLATION_COUNTERS:BEGIN -->
 > ## ⚠️ LIVE VIOLATION COUNTER — auto-updated every 30 min
 > 
-> **This rule is being violated.** Detector ran at 2026-05-12 16:49:13 PDT.
+> **This rule is being violated.** Detector ran at 2026-05-12 17:49:30 PDT.
 > 
-> - last 7 days: **499** violation(s)
-> - last 30 days: **2198** violation(s)
-> - all-time: **2198** violation(s)
+> - last 7 days: **501** violation(s)
+> - last 30 days: **2202** violation(s)
+> - all-time: **2202** violation(s)
 >
->   - explicit Ruben asks for subagent ignored (30d): **188**
->   - research/multi-step questions answered without subagent (30d): **2010**
+>   - explicit Ruben asks for subagent ignored (30d): **189**
+>   - research/multi-step questions answered without subagent (30d): **2013**
 >
 > If you (Cline) are reading this rule, you are part of the count. The detector
 > at `~/Documents/Cline/rule_violations/scan.py` looks at every Cline task on
@@ -103,3 +103,57 @@ Before I call any non-`use_subagents` tool early in a task, ask: *"Is this task 
 ## Last updated
 
 2026-05-03 21:35 PT — v2 re-applied after rebase clobber. Original v2 ship was 19:30 PT same day.
+
+## 2026-05-12 addendum — MCP-dependent tasks still require policy-research subagents
+
+Source incident: Lydia Seldner CPR reschedule task. The entire task required MySQL MCP queries (bls_students, bls_scheduled_classes, bls_class_types, bls_class_enrollments, tickets) — operations subagents cannot perform per .clinerules/53. The main agent did all work serially without dispatching any subagents. This was a rule 17 violation.
+
+**The gap this addendum closes:** When primary task work is MCP-dependent (DB queries, ticket creation, iMessage sends), the "subagents can't do MCP" fact does NOT exempt the task from subagent use. There is almost always a parallel policy-research component that IS greppable from local files (.clinerules, HANDOFF_NOTES, local repo) and should run in a subagent while the main agent handles MCP calls.
+
+**The rule:** For any EMSU operational task that re**The rule:** For any EMSU operational task that re**The rule:** For any EMSU operational task that re**The rule:** For anyity determin**The rule:** For any EMSU operational task that re**The rule:** F say?)
+
+→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→ Dispatch a→  + what action the AI is authorized to take autonomously vs. what requires Vicky/Jon.
+```
+
+This costs $0.001-0.005 and runs in parallel. It ensures the policy determination is evidence-based (from .clinerules text) rather than recalled from training, and it surfaces edge cases the main agent might miss while focused on DB queries.
+
+**What NOT to do:** Skip subagents entirely because "all I need to do is run**What NOT to do:** Skip subagents entirely because "all I need to do is run**What NOT to do:** Skip subagents entirely because "all I need to do is run**What NOT to do:** Skip subagents entirely because "all I need to do is run**What NOT to do:** Skip sk):**
+**What NOT to do:** Skip subagents entirely because "all I need to do is run**What NOT to do:** Skip subagents entirely because "all I need to do is run**What NOT to do:** Skip subagents entirely because "all I need to do is run**What NOT to do:** Skip subagents entirely because "all I need to do is run**What NOT to do:** Skip sk):**
+start; if passed → Vicky." That policy clarity would have guided which DB fields to check first (class_datestart; if passed → Vicky." That policy clarity would have guided which DB fields to check first (class_datestart; if passed → Vicky." That policy clarity would have guided which DB fields to check first (class_datestart; if passed policy-research component eligible for parallel subagent execution. Ruben directive: "also make corrective action to cline rules to ensure proper subagent usage."
+
+
+## 2026-05-12 addendum — MCP-dependent tasks still require policy-research subagents
+
+Source incident: Lydia Seldner CPR reschedule task. The entire task required MySQL MCP queries (bls_students, bls_scheduled_classes, bls_class_types, bls_class_enrollments, tickets) — operations subagents cannot perform per .clinerules/53. The main agent did all work serially without dispatching any subagents. This was a rule 17 violation.
+
+**The gap this addendum closes:** When primary task work is MCP-dependent (DB queries, ticket creation, iMessage sends), the "subagents can't do MCP" fact does NOT exempt the task from subagent use. There is almost always a parallel policy-research component that IS greppable from local files (.clinerules, HANDOFF_NOTES, local repo) and should run in a subagent while the main agent handles MCP calls.
+
+**The rule:** For any EMSU operational task that requires BOTH:
+1. MCP operations (main agent only — DB queries, ticket operations, student lookups), AND
+2. Policy/eligibility determination (is this AHA? what's the reschedule window? what does rule X say?)
+
+→ Dispatch at least 1 subagent (`claude-haiku-4-5`) to grep .clinerules + verify the policy at the SAME TIME the main agent starts its first MCP call. The subagent prompt shape:
+
+```
+Read /Users/rubenmajor/Documents/Cline/Rules/ for any rules about [topic].
+Specifically check: [rule numbers that might apply].
+Return: the exact policy + any edge cases + what action the AI is authorized to take autonomously vs. what requires Vicky/Jon.
+```
+
+This costs $0.001-0.005 and runs in parallel. It ensures the policy determination is evidence-based (from .clinerules text) rather than recalled from training, and it surfaces edge cases the main agent might miss while focused on DB queries.
+
+**What NOT to do:** Skip subagents entirely because "all I need to do is run some SQL queries." SQL queries are the mechanism; the policy decision is the point. The policy decision is always subagent-eligible because .clinerules files are on the local Mac filesystem.
+
+**Applied example (what should have happened on the Lydia task):**
+
+```
+Dispatching Haiku 4.5 for prompt 1 (grep .clinerules for CPR/BLS/AHA reschedule policy,
+what actions AI can take autonomously vs. routes to Vicky),
+while main agent queries bls_students + bls_class_enrollments + bls_class_types.
+```
+
+The subagent would have immediately confirmed: "non-AHA class = free reschedule IF before class start; if passed → Vicky." That policy clarity would have guided which DB fields to check first (class_date vs. class_type) rather than discovering them sequentially.
+
+## Last updated (rule 17)
+
+2026-05-12 — addendum added. Source: Lydia Seldner CPR reschedule incident. Rule 17 violation: no subagents dispatched on an EMSU ops task despite a clear policy-research component eligible for parallel subagent execution. Ruben directive: "also make corrective action to cline rules to ensure proper subagent usage."

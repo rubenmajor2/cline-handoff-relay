@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/bash
+###!/opt/homebrew/bin/bash
 # runpod_14b_post_train.sh — runs after 14B LoRA training completes
 # Steps: merge LoRA on pod -> GGUF convert -> Q4 quantize -> rsync to WOPR (16GB GPU)
 #        -> ollama create on WOPR -> terminate pod -> notify

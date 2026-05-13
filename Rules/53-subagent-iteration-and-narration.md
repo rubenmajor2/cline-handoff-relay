@@ -183,3 +183,17 @@ claude-opus-4-7 facts (from verified live API, 2026-05-12):
 - Meaningfully outperforms Sonnet on cross-system reasoning, policy synthesis, tradeoff analysis
 
 If Option B (Sonnet as main + Opus dispatch) isn't producing Opus dispatches, the permanent fix is to switch the main Cline model to claude-opus-4-7 in Cline settings. That requires the UI — Settings gear → API Provider → change model. Sonnet as main will structurally under-dispatch Opus because it's asking a model to demote itself.
+
+## 2026-05-12 addendum — 4 confirmed under-dispatched Opus patterns (Ruben approved)
+
+These four patterns have been historically under-dispatched to Opus. Treat each as a hard dispatch trigger, not a judgment call.
+
+**1. New .clinerules rule composition (Signal 5).** Dispatch Opus whenever a new .clinerules file is being authored or a major addendum (more than a few lines of durable policy) is being added to an existing rule. Self-generating this content in-context produces vague platitudes and recycled scaffolding; Cline must call Opus and synthesize the rule from its output. Ruben quotes this to every future agent permanently — there are no exceptions for "small" rules.
+
+**2. RUBEN executor silent ghost / why-didn't-it-work root cause (Signal 4).** Dispatch Opus when the RUBEN executor has gone silent, is looping, or a chain has failed two or more times and second-order diagnosis (not just re-running) is required. Inline Sonnet reasoning consistently misses the actual mechanism and produces plausible-but-wrong causes that waste another iteration.
+
+**3. Cross-system architectural tradeoffs spanning 3+ EMSU subsystems (Signal 1).** Dispatch Opus when a decision simultaneously touches three or more of: WOPR DB schema, Artemis GPU/router config, RUBEN executor logic, CAPCE/regulator compliance posture, LoRA training strategy, or ab_grader routing. Sonnet holds the names of these systems in context but does not reliably reason about their interactions — it will pick a locally-optimal answer that creates second-order problems in the systems it didn't fully model.
+
+**4. ab_grader model routing flip decisions (Signal 3).** Dispatch Opus when accumulated win-rate evidence is being used to decide whether to switch a surface from one provider or model to another. This is a 3+ option decision (keep current, switch primary, adjust shadow pool) with non-obvious second-order consequences on student-facing quality, per-call cost, and regulator exposure. Sonnet will pick the highest win-rate option without weighing the full tradeoff surface.
+
+**Default rule:** when genuinely unsure between Sonnet and Opus for an EMSU task, pick Opus if the output will be read by Ruben, cited by future agents, or shapes a permanent system decision.

@@ -1,9 +1,9 @@
 {
-  "autoApprovalSettings": "{\"version\": 1, \"enabled\": true, \"favorites\": [], \"maxRequests\": 200, \"actions\": {\"readFiles\": true, \"readFilesExternally\": true, \"editFiles\": true, \"editFilesExternally\": true, \"executeSafeCommands\": true, \"executeAllCommands\": true, \"useBrowser\": true, \"useMcp\": true}}",
+  "autoApprovalSettings": "{\"version\":1,\"enabled\":true,\"favorites\":[],\"maxRequests\":500,\"actions\":{\"readFiles\":true,\"readFilesExternally\":true,\"editFiles\":true,\"editFilesExternally\":true,\"executeSafeCommands\":true,\"executeAllCommands\":true,\"useBrowser\":true,\"useMcp\":true}}",
   "maxConsecutiveMistakes": "10",
   "useAutoCondense": "true",
   "_meta": {
-    "exported_at": "2026-05-05T03:27:47-07:00",
+    "exported_at": "2026-05-13T17:05:31-07:00",
     "source": "Rubens-MacBook-Pro",
     "authoritative": true
   }

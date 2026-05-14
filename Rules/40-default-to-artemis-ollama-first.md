@@ -375,3 +375,62 @@ If I'm halfway through writing an answer to an EMSU question and I never called 
 2026-05-14 — Ruben caught me explaining a $0.27 spend on 3 Haiku subagents. His verbatim: "I see, but what was the 27 cents for then? I'm confused there. Also, we do have an mcp so it should be looking at information of in the mcp or the MCP should be repaired if there's some type of an issue where it can't do this because that was the whole entire reason why we included the MCP."
 
 The MCP was built so Cline can use the 7B-LoRA. Cline (this main agent) was not defaulting to it. This v2 addendum fixes that with the same emphatic default-on framing rule 17 uses for subagents.
+
+
+## 2026-05-14 v2 addendum — call_ollama is DEFAULT-ON for EMSU lookups, same emphasis as rule 17
+
+Same shape as rule 17 (default-on subagent dispatch). Default is "use call_ollama." The exceptions are a short, mechanical list of "obviously not EMSU" cases. False positives (one extra call_ollama call) cost zero dollars and ~1 second. False negatives (paying Anthropic when 7B-LoRA could have answered) cost real Anthropic tokens AND keep 7B traffic at zero, which means no fresh shadow data, which means we can never measure if 7B is improving.
+
+### The default
+
+**At the start of every Cline task that involves an EMSU-domain lookup, my default first move is `call_ollama(model="emsu-qwen2.5-coder:7b-lora", prompt=...)`.** Not "consider it." Not "if it's clearly EMSU-bounded." The default — the thing I do unless an exception below clearly applies.
+
+This is main-agent only. `use_subagents` cannot call call_ollama (Anthropic SDK only). So this rule fires on ME, the main agent.
+
+### The exception list (skip call_ollama only if the task is one of these)
+
+Skip call_ollama ONLY when the task is in one of these clearly-not-EMSU categories:
+
+1. **Pure code question that's framework/library/runtime knowledge** — "what's the right Python import for X?" The 7B is fine-tuned on EMSU, not on every Python library.
+2. **Hard-floor EMSU surface** — student-facing email composition (rule 02/15), regulator filings (rule 08), grievance responses. These stay on Anthropic Sonnet/Opus.
+3. **Cross-system architectural reasoning** — designing a multi-file patch across PHP + Python + JS. 7B is not strong here.
+4. **Single-file bounded read** — `read_file` is the right tool, not call_ollama. (call_ollama is for reasoning, not for fetching bytes.)
+5. **Lookup against a deterministic source** — DB row, file content, MCP tool result. Use the tool, don't ask the 7B to make it up.
+6. **Already-dispatched** — I already got a 7B answer earlier in this turn and the new question is downstream of that answer.
+
+That's the entire exception list. **Six categories of "skip OK." Anything else → call_ollama first.**
+
+The bar for "obviously not EMSU" is genuinely high. If I find myself thinking "this is probably general-knowledge enough" — that's the signal to call_ollama first and see. If the 7B answer is junk, I fall back to Haiku subagent or Anthropic inline. But I check the cheap-and-free option first.
+
+### Specifically: when Ruben asks an EMSU operational question
+
+If Ruben asks "what does our policy say about X" or "should this ticket go to Vicky or Jon" or "is this an externship issue or a payment issue" or "what's the canonical reply for Y" or "categorize this email" — my FIRST move is call_ollama with the question + relevant context. Anthropic comes second, only if 7B is clearly wrong or refuses.
+
+### Cost asymmetry (same shape as rule 17)
+
+- call_ollama: $0, ~1-3 sec
+- Wrong default (Anthropic Sonnet inline): ~$0.05-0.40 per call, ~3-5 sec
+- Wrong default (Haiku subagent): ~$0.05-0.15 per call, ~10-30 sec
+
+False positive cost (called 7B when Anthropic would have been better): $0 + 2 sec wasted.
+False negative cost (skipped 7B when it would have answered): real Anthropic tokens + 7B never sees the traffic + we lose the chance to measure 7B quality on this surface.
+
+The asymmetry says always try 7B first on anything EMSU-flavored.
+
+### The MCP exists FOR THIS PURPOSE
+
+The whole reason `call_ollama` exists as an emsu-operations MCP tool is so Cline (this main agent) can route EMSU reasoning to the 7B-LoRA on Artemis. If I'm not using it, the MCP investment is wasted AND 7B traffic stays at zero, which prevents measurement, which prevents iteration.
+
+If call_ollama returns a transport error or refuses, that's an MCP repair task — escalate to Ruben, don't silently fall back to paid Anthropic.
+
+### Self-check before any EMSU-flavored inference
+
+Before any inline Sonnet/Opus answer to an EMSU operational question, ask: *"Did I try call_ollama on this turn?"* If no, dispatch call_ollama first. If 7B answers well, stop there. If 7B is junk, fall back.
+
+If I'm halfway through writing an answer to an EMSU question and I never called call_ollama — abandon, dispatch call_ollama, see the result, then continue.
+
+### Source incident (verbatim)
+
+2026-05-14 — Ruben caught me explaining a $0.27 spend on 3 Haiku subagents. His verbatim: "I see, but what was the 27 cents for then? I'm confused there. Also, we do have an mcp so it should be looking at information of in the mcp or the MCP should be repaired if there's some type of an issue where it can't do this because that was the whole entire reason why we included the MCP."
+
+The MCP was built so Cline can use the 7B-LoRA. Cline (this main agent) was not defaulting to it. This v2 addendum fixes that with the same emphatic default-on framing rule 17 uses for subagents.

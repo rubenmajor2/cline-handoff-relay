@@ -937,7 +937,20 @@ class EmsuRouterHook(CustomLogger):
                         "stream", "tools", "tool_choice",
                     })
                     fb_data = {k: data[k] for k in _FB_SAFE if k in data}
-                    fb_data["model"] = state.get("original_model") or "claude-sonnet-4-6"
+                    # 2026-05-14 fix (.clinerules/55): the fallback path was
+                    # passing `original_model` verbatim to litellm.acompletion.
+                    # When a Cline user pins their model to a LoRA (e.g.
+                    # `emsu-qwen2.5-coder:7b-lora` or `emsu-qwen3-coder-30b-lora`)
+                    # original_model is that LoRA name with no provider prefix,
+                    # and LiteLLM throws "LLM Provider NOT provided" — defeating
+                    # the whole point of the silent fallback. Two-line fix:
+                    # if original_model isn't an Anthropic ID, fall back to
+                    # claude-sonnet-4-6 (the documented safe-fallback target).
+                    orig = state.get("original_model") or ""
+                    if orig.startswith("claude-"):
+                        fb_data["model"] = orig
+                    else:
+                        fb_data["model"] = "claude-sonnet-4-6"
                     fallback_resp = await litellm.acompletion(**fb_data)
                 except Exception as e:
                     print(f"[cline-router] fallback call failed: {type(e).__name__}: {e}")

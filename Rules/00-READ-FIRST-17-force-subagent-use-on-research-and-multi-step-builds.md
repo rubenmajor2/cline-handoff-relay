@@ -13,13 +13,13 @@ The string to use verbatim: `"claude-opus-4-7"`
 <!-- RULE_VIOLATION_COUNTERS:BEGIN -->
 > ## ⚠️ LIVE VIOLATION COUNTER — auto-updated every 30 min
 > 
-> **This rule is being violated.** Detector ran at 2026-05-13 20:35:05 PDT.
+> **This rule is being violated.** Detector ran at 2026-05-13 21:35:05 PDT.
 > 
 > - last 7 days: **551** violation(s)
-> - last 30 days: **2320** violation(s)
-> - all-time: **2320** violation(s)
+> - last 30 days: **2321** violation(s)
+> - all-time: **2321** violation(s)
 >
->   - explicit Ruben asks for subagent ignored (30d): **195**
+>   - explicit Ruben asks for subagent ignored (30d): **196**
 >   - research/multi-step questions answered without subagent (30d): **2125**
 >
 > If you (Cline) are reading this rule, you are part of the count. The detector

@@ -13,14 +13,14 @@ The string to use verbatim: `"claude-opus-4-7"`
 <!-- RULE_VIOLATION_COUNTERS:BEGIN -->
 > ## ⚠️ LIVE VIOLATION COUNTER — auto-updated every 30 min
 > 
-> **This rule is being violated.** Detector ran at 2026-05-13 22:35:07 PDT.
+> **This rule is being violated.** Detector ran at 2026-05-13 23:35:12 PDT.
 > 
-> - last 7 days: **556** violation(s)
-> - last 30 days: **2326** violation(s)
-> - all-time: **2326** violation(s)
+> - last 7 days: **563** violation(s)
+> - last 30 days: **2337** violation(s)
+> - all-time: **2337** violation(s)
 >
->   - explicit Ruben asks for subagent ignored (30d): **198**
->   - research/multi-step questions answered without subagent (30d): **2128**
+>   - explicit Ruben asks for subagent ignored (30d): **202**
+>   - research/multi-step questions answered without subagent (30d): **2135**
 >
 > If you (Cline) are reading this rule, you are part of the count. The detector
 > at `~/Documents/Cline/rule_violations/scan.py` looks at every Cline task on

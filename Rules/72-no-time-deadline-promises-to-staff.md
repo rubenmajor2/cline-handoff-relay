@@ -136,3 +136,40 @@ else will" is not fine — that second clause is invented.
 general rules to do this so maybe a part of cline rules unless
 specifically stated"). Pair-shipped with the Ezekiel Rodriguez
 proctoring scheduling incident (TKT-20260513-BB35044A).
+
+## 2026-05-14 addendum — runtime violation found in ai_compiled_rules #324
+
+Source: Dylan Hamilton (26512BC-06) document review + Taryn Dougherty (TKT-419DC4EA) same session.
+
+ai_compiled_rules #324 (`vaccination_prereq_not_accepted`) had hardcoded
+"within 4 business hours" in both its guidance and its sample student-facing
+response. The AI sent this promise to Taryn Dougherty on Vicky's behalf
+with no CC to Vicky and no basis for the timeline.
+
+**What this shows:** This rule violation was NOT in a Cline output — it was in
+a deployed `ai_compiled_rules` row in the database. The rule survived the
+nightly recompiler because it was seeded automatically from the learning
+queue, not as a hand-curated rule. This means the runtime AI rules can
+independently generate and perpetuate timeline-promise violations even after
+this `.clinerules` rule was written.
+
+**The fix applied (2026-05-14):**
+- Rule #324 updated: removed ALL "4 business hours" / "X hours" language.
+  `source_correction_ids` now includes `clinerules:72-no-timeline-promises-to-staff`.
+- Rule #324 is now protected from nightly recompiler (clinerules: prefix).
+- New idea #4007 filed + approved: systemic audit of all active
+  `ai_compiled_rules` for any remaining timeline-promise language + post-compose
+  scanner in `lib/EmailAIResponder.php` to block violations before send.
+
+**Self-check added:** Before any INSERT or UPDATE to `ai_compiled_rules`, grep
+the `rule_text` for these patterns — if found, remove before saving:
+- `within \d+ (business )?hours?`
+- `you will hear back (within|in)`
+- `by (end of day|tomorrow|[A-Za-z]+day)`
+- `(24|48|72)-hour (response|turnaround|window)`
+- `respond(ing)? within`
+
+Ruben directive verbatim: "I see the email that you sent out promising four
+hours. That's definitely never been something that we promise. You don't
+promise timelines. So I don't know why you're doing that. That should be a
+cline rule also."

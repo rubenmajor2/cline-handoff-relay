@@ -1,5 +1,27 @@
 # Force subagent use — default-on, not judgment-based
 
+<!-- RULE_VIOLATION_COUNTERS:BEGIN -->
+> ## ⚠️ LIVE VIOLATION COUNTER — auto-updated every 30 min
+> 
+> **This rule is being violated.** Detector ran at 2026-05-14 14:35:42 PDT.
+> 
+> - last 7 days: **599** violation(s)
+> - last 30 days: **2416** violation(s)
+> - all-time: **2416** violation(s)
+>
+>   - explicit Ruben asks for subagent ignored (30d): **225**
+>   - research/multi-step questions answered without subagent (30d): **2191**
+>
+> If you (Cline) are reading this rule, you are part of the count. The detector
+> at `~/Documents/Cline/rule_violations/scan.py` looks at every Cline task on
+> this Mac and flags should-have-but-didn't cases. Ruben gets a text when the
+> burst rate jumps. **Don't add to the count.**
+>
+> Counters are stamped in by `~/Documents/Cline/rule_violations/write_rule.py`.
+> Edit anywhere outside the BEGIN/END markers; this block is regenerated.
+<!-- RULE_VIOLATION_COUNTERS:END -->
+
+
 ## v2 — 2026-05-14 — replaced "5 mandatory categories" with default-on gate
 
 The previous version of this rule (v1, 2026-05-03) said "subagent use is MANDATORY for these 5 categories" and required me to judge whether the current task fit one of them. **That judgment step is the failure mode.** v1 had Ruben restating the rule three times before it stuck. v2 of the same rule (originally written 2026-05-03, then evidently regressed in some form) said the same thing and shipped to .clinerules but the runtime model kept treating it as "consider" instead of "default-on."

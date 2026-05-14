@@ -13,9 +13,9 @@ The string to use verbatim: `"claude-opus-4-7"`
 <!-- RULE_VIOLATION_COUNTERS:BEGIN -->
 > ## ⚠️ LIVE VIOLATION COUNTER — auto-updated every 30 min
 > 
-> **This rule is being violated.** Detector ran at 2026-05-14 10:35:28 PDT.
+> **This rule is being violated.** Detector ran at 2026-05-14 11:35:30 PDT.
 > 
-> - last 7 days: **593** violation(s)
+> - last 7 days: **583** violation(s)
 > - last 30 days: **2394** violation(s)
 > - all-time: **2394** violation(s)
 >

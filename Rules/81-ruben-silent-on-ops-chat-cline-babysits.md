@@ -144,6 +144,8 @@ If any answer is no, the incident is not closed.
 - Rule 46 — every agent correction loops back to RUBEN + KAIZEN
 - Rule 49 — offer to act when implied (chat 55 reply draft for Ruben)
 - Rule 57 — NEVER send to staff iMessage without explicit Ruben request
+  (Rule 57 governs Cline's behavior; this rule governs RUBEN's behavior —
+  they are complementary, not conflicting. Clarified 2026-05-15.)
 - Rule 67 — agents act autonomously before human escalation
 - Rule 68 — agents exhaust tools + surface capability gaps
 - Rule 72 — no time deadline promises on staff's behalf

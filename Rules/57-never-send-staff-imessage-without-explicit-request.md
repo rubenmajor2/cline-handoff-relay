@@ -9,6 +9,25 @@ Permanent rule. Workspace-scoped. Source: 2026-05-12 — Ruben directive verbati
 
 It is fine — encouraged, even — to OFFER to send and ask Ruben yes/no. It is not fine to send unprompted.
 
+## Case A vs Case B (clarified 2026-05-15)
+
+This rule governs **Cline** (the AI agent in the side window). It does NOT govern **RUBEN** (the autonomous orchestrator on WOPR running `cron_ruben_staff_chat_triage` and friends). Two cases must not be conflated:
+
+**CASE A — Cline narrating its own internal work into staff chats unprompted → PROHIBITED.**
+Cline fixed something inside a Cline session, Vicky/Jon never asked, Cline messages them anyway to "let them know what was done." This is the rule's whole purpose. Don't do it. The fix lives in HANDOFF_NOTES / attempt_completion / orchestrator_event_log — not in a staff iMessage.
+
+**CASE B — RUBEN orchestrator responding to a staff inbound in chat 55 → REQUIRED (per .clinerules/81).**
+When Vicky or Jon report a system issue in chat 55, the RUBEN orchestrator (via `cron_ruben_staff_chat_triage` + the scanner pipeline) IS expected to acknowledge and engage. That is the orchestrator doing its job, NOT Cline messaging staff unprompted. Vicky and Jon expect RUBEN to respond to their inbounds — that's what the scanner exists for.
+
+**Cline's role during a CASE B incident** (rule 81 babysit):
+- Cline does NOT send to chat 55 directly — that would still violate rule 57.
+- Cline surfaces the silent-scanner state to Ruben in the Cline side window.
+- Ruben (the human) replies to Vicky in chat 55 himself.
+- Cline repairs the scanner-gap (cron, sender map, classifier) in parallel.
+- Rule 81 does NOT override rule 57 for Cline. The two rules are complementary, not conflicting.
+
+Ruben directive 2026-05-15 verbatim: *"a clean rule was supposed to be that if I fix an issue in cline and cline is the one who fixes the issue, especially if it's technical there should be no SMS message sent out unless I authorize it. But as far as the situation like this where Ruben is actually supposed to follow through that's a totally different story altogether. The problem was when cline would reply to vicky on something that we did here or Jon on something that we did here in cline and it was not related to any task or anything that they had ever asked about."*
+
 ## What changes from prior rules
 
 This rule supersedes the "act on confidence" interpretation in .clinerules/29 that previously authorized me to fire iMessages as a "report after acting" step for green-tier actions. It also overrides the implication in .clinerules/30 that staff-chat acknowledgments are part of triage completeness. The new posture: **acknowledgment + reporting to staff over iMessage requires explicit Ruben directive every time**.

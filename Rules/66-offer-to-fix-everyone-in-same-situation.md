@@ -38,18 +38,45 @@ ORDER BY cl.sent_at DESC
 
 **2026-05-15 generalization (Sara Barrett EMD-student incident):** when the fix
 involves the ThirdPartyDetector "is this person enrolled" check, query across
-EVERY EMSU enrollment program, not just the one Ruben mentioned. As of v3
+EVERY EMSU enrollment program, not just the one Ruben mentioned. As of v4
 (2026-05-15), `ThirdPartyDetector::ENROLLMENT_REGISTRY` is the canonical
-registry of programs:
+two-axis registry of programs. Each row carries TWO flags that matter
+independently:
 
-- EMT      → `Students.email`
-- BLS/CPR  → `bls_students.email`
-- EMD      → `emd_simulation_attempts.student_email`
-- CE/Refresh → `ce_students.email`
+| Program | Recognition table | `vocational` flag |
+|---|---|---|
+| EMT      | `Students.email`                       | **true** — fires lecture |
+| EMD      | `emd_simulation_attempts.student_email`| **true** — fires lecture |
+| BLS/CPR  | `bls_students.email`                   | **false** — no lecture, normal CS |
+| CE/Refresh | `ce_students.email`                  | **false** — no lecture, normal CS |
+| (future) CNA / RN / Paramedic / Adv Provider | TBD | **true** — vocational |
+| (future) ACLS / PALS / PHTLS / Tactical Paramedic | TBD | **false** — non-vocational |
 
-When ANY new EMSU program ships (Paramedic, Advanced Provider, etc.), add it
-to that registry in `lib/ThirdPartyDetector.php` — do NOT add a new branch in
-`isThirdParty()`. Discovery query for affected students across the registry:
+**The vocational flag IS the policy.** Ruben directive 2026-05-15: the
+third-party self-advocacy lecture only applies to regulated vocational
+programs because those programs (EMT, EMD, future CNA/RN/Paramedic) are
+under state EMS bureau / nursing board / similar regulators that require
+adult-learner self-advocacy. Non-vocational programs (BLS, CE, Refresher)
+are continuing-education / certification cards — a parent calling about
+their BLS-student son gets normal CS handling, NOT the lecture.
+
+Recognition (axis 1) → still works for ALL programs because the lecture
+would have been wrong for any recognized enrolled student.
+Lecture firing (axis 2) → gated by the `vocational` flag.
+
+When ANY new EMSU program ships, add it to ENROLLMENT_REGISTRY in
+`lib/ThirdPartyDetector.php` with the right `vocational` flag — do NOT add
+a new branch in `isThirdParty()`. Use these rules for the flag:
+
+- **vocational = true:**  regulated by a state EMS bureau / nursing board /
+  similar; requires adult-learner self-advocacy per program SOPs.
+  Examples: EMT, EMD, CNA, RN, Paramedic, Advanced Provider.
+- **vocational = false:** continuing-education or certification cards;
+  not under state-vocational regulatory regime.
+  Examples: BLS/CPR, First Aid, ACLS, PALS, PHTLS, Refresher, CE,
+  Tactical Paramedic (cert).
+
+Discovery query for affected students across the registry:
 
 ```sql
 -- Find any enrolled non-EMT student who got the third-party redirect lecture

@@ -36,6 +36,35 @@ WHERE cl.type = 'ai_auto_response'
 ORDER BY cl.sent_at DESC
 ```
 
+**2026-05-15 generalization (Sara Barrett EMD-student incident):** when the fix
+involves the ThirdPartyDetector "is this person enrolled" check, query across
+EVERY EMSU enrollment program, not just the one Ruben mentioned. As of v3
+(2026-05-15), `ThirdPartyDetector::ENROLLMENT_REGISTRY` is the canonical
+registry of programs:
+
+- EMT      → `Students.email`
+- BLS/CPR  → `bls_students.email`
+- EMD      → `emd_simulation_attempts.student_email`
+- CE/Refresh → `ce_students.email`
+
+When ANY new EMSU program ships (Paramedic, Advanced Provider, etc.), add it
+to that registry in `lib/ThirdPartyDetector.php` — do NOT add a new branch in
+`isThirdParty()`. Discovery query for affected students across the registry:
+
+```sql
+-- Find any enrolled non-EMT student who got the third-party redirect lecture
+-- (run separately per program table — UNION fails on collation mismatches)
+SELECT eil.id, eil.from_email, eil.subject, eil.processed_at
+FROM email_inbound_log eil
+WHERE eil.ai_response_sent=1
+  AND eil.ai_response_text LIKE '%EMSU does not discuss enrollment matters%'
+  AND eil.from_email COLLATE utf8mb4_general_ci IN (
+      SELECT DISTINCT student_email COLLATE utf8mb4_general_ci
+      FROM emd_simulation_attempts WHERE student_email IS NOT NULL
+  );
+-- Repeat with bls_students.email, ce_students.email, etc.
+```
+
 ### Step 3: Surface the finding with a recommendation
 
 In `attempt_completion` (or mid-task if it's a large class), report:

@@ -72,6 +72,30 @@ FORCE_ANTHROPIC = os.environ.get("CLINE_ROUTER_FORCE_ANTHROPIC") in ("1", "true"
 # CLINE_ROUTER_OLLAMA_MODEL=ollama-qwen-14b or CLINE_ROUTER_FORCE_ANTHROPIC=1.
 DEFAULT_OLLAMA_MODEL = os.environ.get("CLINE_ROUTER_OLLAMA_MODEL", "emsu-qwen2.5-coder-7b-lora")
 
+# 2026-05-14: pre-call tripwire injection for subagent + call_ollama drift.
+# When enabled, prepends a system instruction on `hard` (Anthropic-bound)
+# turns reminding the model to use call_ollama and use_subagents per
+# .clinerules/40 v3 + .clinerules/74 addendum. Default OFF — flip with
+# CLINE_ROUTER_TRIPWIRE_INJECT=1 once validated on a non-critical turn.
+TRIPWIRE_INJECT = os.environ.get("CLINE_ROUTER_TRIPWIRE_INJECT", "0") in ("1", "true", "yes")
+
+# 2026-05-14: tripwire system message. Short, high-priority, mirrors
+# .clinerules/40 v3 + .clinerules/74 addendum language.
+TRIPWIRE_SYSTEM_MSG = (
+    "ROUTER TRIPWIRE (enforced 2026-05-14, see .clinerules/40 v3 + 74 addendum):\n"
+    "1. EMSU policy / routing / classification question -> your FIRST tool call "
+    "MUST be `call_ollama` with model='emsu-qwen2.5-coder:7b-lora'. The 7B-LoRA "
+    "is fine-tuned on EMSU corpus and free. Skip ONLY if: pure framework code "
+    "question, hard-floor surface, single-file bounded read, deterministic "
+    "lookup, or already-dispatched this turn.\n"
+    "2. About to fire a 2nd READ tool call (read_file, list_files, search_files, "
+    "MCP fetch, ssh-grep) on this turn before any state-mutating call? "
+    "STOP. Fan out as `use_subagents` with parallel Haiku prompts instead. "
+    "Skip ONLY if: 2nd read's args literally depend on 1st read's result, "
+    "or already inside a subagent.\n"
+    "These are TRIPWIRES (measurable events), not defaults."
+)
+
 # Classifier tunables (calibrated via Phase F backtest, then frozen)
 TIER1_ROUTINE_CONF = 0.85
 TIER2_ROUTINE_CONF = 0.80
@@ -858,6 +882,30 @@ class EmsuRouterHook(CustomLogger):
                 self.request_state[req_hash]["rag_meta"] = {"error": str(e)}
         else:
             self.request_state[req_hash]["routed_to"] = data.get("model")
+            # 2026-05-14 tripwire: on `hard` turns going to Anthropic,
+            # prepend a brief system instruction reminding the model to use
+            # call_ollama + use_subagents where appropriate. Env-gated;
+            # default OFF. See .clinerules/40 v3 + .clinerules/74 addendum.
+            if TRIPWIRE_INJECT:
+                try:
+                    system_in = data.get("system", "") or ""
+                    if isinstance(system_in, list):
+                        data["system"] = [{"type": "text", "text": TRIPWIRE_SYSTEM_MSG}] + list(system_in)
+                    elif isinstance(system_in, str):
+                        data["system"] = TRIPWIRE_SYSTEM_MSG + "\n\n" + system_in
+                    self.request_state[req_hash]["tripwire_injected"] = True
+                    try:
+                        with open("/tmp/cline_router_tripwire.log", "a") as _tlog:
+                            _tlog.write(
+                                f"{time.strftime('%Y-%m-%d %H:%M:%S')} "
+                                f"req={req_hash} model={data.get('model')} "
+                                f"label={label} injected=yes\n"
+                            )
+                    except Exception:
+                        pass
+                except Exception as e:
+                    # Never fail a turn over the tripwire
+                    print(f"[cline-router] tripwire inject failed: {type(e).__name__}: {e}")
 
         return data
 

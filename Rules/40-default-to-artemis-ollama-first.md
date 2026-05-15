@@ -376,6 +376,54 @@ If I'm halfway through writing an answer to an EMSU question and I never called 
 
 The MCP was built so Cline can use the 7B-LoRA. Cline (this main agent) was not defaulting to it. This v2 addendum fixes that with the same emphatic default-on framing rule 17 uses for subagents.
 
+## 2026-05-14 v3 addendum — the EMSU-flavored-question tripwire
+
+Source: Ruben asked "what about the subagents and calling up the LLM MCP?" right after I shipped the rule 74 tripwire, noticing the same drift pattern applies here. Same shape as rule 74's 2nd-read tripwire and rule 41's "Deployed." tripwire — default-on framing alone doesn't hold; need a measurable trigger.
+
+**Tripwire (hard rule, not a default):**
+
+Before I emit my FIRST tool call on a turn where Ruben's message contains an EMSU-flavored question — policy lookup, "what does X say", "should this route to Y", "categorize this", "what's our canonical answer for Z", any operational question that could be answered from the EMSU corpus — STOP and ask: *"Did I call `call_ollama` on this turn?"*
+
+If no, my first tool call MUST be `call_ollama` with `model="emsu-qwen2.5-coder:7b-lora"`. Not Anthropic inline. Not a Haiku subagent. The 7B-LoRA first. If the 7B returns junk, then fall back to Haiku subagent. If THAT is junk, then Anthropic inline.
+
+**EMSU-flavored signal phrases (any one = tripwire fires):**
+- "what does [our policy/rule/document] say"
+- "what's the canonical answer for"
+- "categorize this [ticket/email/message/student]"
+- "should this go to [Vicky/Jon/Cori/instructor]"
+- "is this an [externship/payment/exam/integrity] issue"
+- "what's our [process/SOP/procedure] for"
+- "score [this/relevance/severity] of"
+- "what's the policy on"
+- Any reference to AI rule N (rule lookup)
+- Any reference to a chat/email/SMS auto-response routing decision
+
+**Why a tripwire instead of a default:** rule 40 v2 already said "default-on." Defaults rationalize ("this one's borderline, just use Sonnet inline"). The tripwire fires on a measurable event (Ruben's question matches an EMSU-flavored signal phrase) and doesn't depend on judgment about "is this EMSU enough."
+
+**Cost asymmetry (re-stated for emphasis):**
+- call_ollama: $0, ~1-3 sec, 7B EMSU-tuned
+- Wrong default (Anthropic inline): $0.05-0.40, no traffic to 7B = no measurement = no iteration
+
+**Exception list (skip the tripwire only if):**
+1. The question is pure code/framework knowledge unrelated to EMSU operations.
+2. The question is on the hard-floor list (student-facing email composition, regulator filings, grievance responses).
+3. Ruben directly said "use Sonnet for this" or "skip the 7B."
+4. Already-dispatched call_ollama earlier this turn.
+5. The 7B is verifiably unreachable (Artemis Ollama down) — fall back to Haiku subagent.
+
+Anything else → call_ollama first.
+
+**Companion subagent rule:** when I DO need to fan out (rule 74's tripwire), the FIRST subagent in the fan-out should — where possible — research what call_ollama would have answered + cross-check. That keeps the 7B in the loop even on subagent-heavy turns.
+
+### Self-check before any inline Anthropic answer
+
+Ask: *"Did Ruben's message contain an EMSU-flavored question?"*
+
+If yes AND I haven't called call_ollama this turn → call_ollama first, period. Not after one quick read. Not after one subagent dispatch. FIRST.
+
+If I find myself drafting an Anthropic-inline answer to an EMSU operational question without having called call_ollama → abandon the draft, dispatch call_ollama, restructure around its result.
+
+
 
 ## 2026-05-14 v2 addendum — call_ollama is DEFAULT-ON for EMSU lookups, same emphasis as rule 17
 

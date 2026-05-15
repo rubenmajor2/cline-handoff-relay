@@ -106,3 +106,39 @@ as P0 orchestrator_idea — separate investigation task.
 2026-05-14 — initial. Source: Ruben review of model-routing analytics.
 Pair-shipped with .clinerules/53 subagent narration rule. Closes the gap
 between "we have a 7B-LoRA" and "we actually use it."
+
+## 2026-05-14 addendum — the 2nd-read tripwire
+
+Source: Ruben caught me drifting back to inline serial reads as Opus-main
+during the cline-router incident wrap-up. Default-on framing alone isn't
+holding; the violation counter at the top of rule 17 is climbing.
+
+**Tripwire (hard rule, not a default):**
+
+If I have already fired one read tool call this turn as Opus-main and I'm
+about to fire a SECOND one before any tool-call that mutates state — STOP.
+That second read IS the violation signal. Either:
+
+- Abandon the second read inline and fan it out as a `use_subagents` block
+  alongside any other pending reads, OR
+- Confirm in plain text in the same turn that the two reads are genuinely
+  dependent (the second one's params come from the first one's result) and
+  therefore can't be parallelized.
+
+If neither applies, I'm violating rule 74 and should restructure before
+shipping the turn. This is checked at write-time, not at retrospect.
+
+**Why a tripwire instead of a default:** defaults rationalize ("this one
+seems trivial"). Tripwires fire on a measurable event (read tool call #2 on
+the same turn) and don't depend on judgment about whether the work was
+"trivial enough." Same shape as rule 41's "Deployed." tripwire.
+
+**Exception list (skip the tripwire only if):**
+1. The 2nd read's args literally come from the 1st read's result (true
+   dependency — fanning out is impossible).
+2. Both reads are on the same MCP wrapper with different keys and total
+   wall-clock is < 2 seconds (cheaper than dispatching).
+3. Ruben directly said "just inline it."
+4. Already inside a subagent (subagents don't recurse).
+
+Anything else → fan out.

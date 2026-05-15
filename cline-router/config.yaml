@@ -127,6 +127,31 @@ litellm_settings:
   drop_params: false   # preserve all Anthropic params for hook inspection
   set_verbose: false
   json_logs: false
+  # 2026-05-14 — Anthropic overloaded_error (529) on the 1M-context tier was
+  # propagating straight to Cline because the proxy did zero retries. Retry
+  # transient overload/rate-limit errors with exponential backoff before
+  # giving up. LiteLLM retries on RateLimitError, ServiceUnavailableError,
+  # APIConnectionError, Timeout, InternalServerError automatically.
+  num_retries: 4
+  request_timeout: 600
+
+# ---------------------------------------------------------------------------
+# Router-level fallbacks — when the 1M-context Anthropic tier is overloaded
+# (much more common than the 200k tier), automatically retry the same request
+# against the non-1M alias. Same model family, separate capacity pool.
+# 2026-05-14: added in response to req_011Cb3QnKYtxeMQU8yaELwZg overload spam.
+# ---------------------------------------------------------------------------
+router_settings:
+  num_retries: 4
+  retry_after: 5
+  allowed_fails: 3
+  cooldown_time: 30
+  fallbacks:
+    - claude-sonnet-4-6:1m: ["claude-sonnet-4-6"]
+    - claude-opus-4-7:1m: ["claude-opus-4-7"]
+    - claude-opus-4-6:1m: ["claude-opus-4-6"]
+    - claude-sonnet-4-6: ["claude-sonnet-4-5", "claude-haiku-4-5"]
+    - claude-opus-4-7: ["claude-opus-4-6", "claude-sonnet-4-6"]
 
 # ---------------------------------------------------------------------------
 # Proxy-level settings (port, host, telemetry).

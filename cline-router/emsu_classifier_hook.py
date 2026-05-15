@@ -858,35 +858,6 @@ class EmsuRouterHook(CustomLogger):
                 self.request_state[req_hash]["rag_meta"] = {"error": str(e)}
         else:
             self.request_state[req_hash]["routed_to"] = data.get("model")
-            # Payment tool injection for money hard-floor turns (rule 70 / Option 1).
-            # When HARD_FLOOR_PATTERNS fires for "money" class, inject a just-in-time
-            # reminder of the Authnet MCP tools so Sonnet calls them instead of
-            # pattern-matching to training data about payment processors.
-            # Non-fatal: any exception silently skips injection; the hard-path call
-            # still fires normally.
-            if reason and reason.startswith("hard_floor:money"):
-                PAYMENT_TOOL_CONTEXT = (
-                    "\n\n=== EMSU PAYMENT TOOLS — CALL THESE BEFORE ANY PAYMENT CONCLUSION ===\n"
-                    "EMSU uses Authorize.net on ALL sites (emsuniversity.com, tucsoncpr.com, "
-                    "dallascpr.org, houstonemt.com). There is NO Stripe, Square, or PayPal.\n"
-                    "Required search order before concluding a payment does/doesn't exist:\n"
-                    "1. find_authnet_by_email — use student email, days_back=120 minimum, NO amount filter on first pass\n"
-                    "2. find_authnet_by_name  — first+last name (catches billing name mismatch), then last name alone\n"
-                    "3. check_authnet_transaction — only if you have a specific trans_id\n"
-                    "4. check_qb_invoices — for EMT program tuition invoices\n"
-                    "Do NOT name an alternate processor. Do NOT write 'no payment found' until all 4 are exhausted.\n"
-                    "If all 4 are empty: document which searches ran and instruct Vicky to check the WPForms entry in WP admin.\n"
-                    "=== END PAYMENT TOOLS ===\n"
-                )
-                try:
-                    system_in = data.get("system", "") or ""
-                    if isinstance(system_in, list):
-                        data["system"] = list(system_in) + [{"type": "text", "text": PAYMENT_TOOL_CONTEXT.strip()}]
-                    else:
-                        data["system"] = str(system_in) + PAYMENT_TOOL_CONTEXT
-                    self.request_state[req_hash]["payment_ctx_injected"] = True
-                except Exception as e:
-                    print(f"[cline-router] payment_ctx_inject failed: {type(e).__name__}: {e}")
 
         return data
 
@@ -937,20 +908,28 @@ class EmsuRouterHook(CustomLogger):
                         "stream", "tools", "tool_choice",
                     })
                     fb_data = {k: data[k] for k in _FB_SAFE if k in data}
-                    # 2026-05-14 fix (.clinerules/55): the fallback path was
-                    # passing `original_model` verbatim to litellm.acompletion.
-                    # When a Cline user pins their model to a LoRA (e.g.
-                    # `emsu-qwen2.5-coder:7b-lora` or `emsu-qwen3-coder-30b-lora`)
-                    # original_model is that LoRA name with no provider prefix,
-                    # and LiteLLM throws "LLM Provider NOT provided" — defeating
-                    # the whole point of the silent fallback. Two-line fix:
-                    # if original_model isn't an Anthropic ID, fall back to
-                    # claude-sonnet-4-6 (the documented safe-fallback target).
-                    orig = state.get("original_model") or ""
-                    if orig.startswith("claude-"):
-                        fb_data["model"] = orig
+                    # 2026-05-14 fix: state["original_model"] is the alias
+                    # Cline sent (e.g. "claude-sonnet-4-6:1m" or sometimes the
+                    # local LoRA name when Cline's model picker was set there).
+                    # litellm.acompletion() called directly bypasses the proxy
+                    # router's model_list, so it needs a real provider/model
+                    # string. Without a prefix it errors:
+                    #   "LLM Provider NOT provided. You passed model=..."
+                    # which is what was spamming the log + causing the bad-7B
+                    # response to leak through to Cline unhealed. Map the alias
+                    # back to a known-good Anthropic target.
+                    _orig = (state.get("original_model") or "").strip()
+                    if _orig.startswith(("anthropic/", "openai/", "ollama_chat/", "ollama/", "openrouter/")):
+                        fb_model = _orig
+                    elif _orig.startswith("claude-"):
+                        # strip ":1m" / ":200k" / etc. context-tier suffix
+                        _base = _orig.split(":", 1)[0]
+                        fb_model = f"anthropic/{_base}"
                     else:
-                        fb_data["model"] = "claude-sonnet-4-6"
+                        # LoRA name or unknown alias → safe Anthropic default
+                        fb_model = "anthropic/claude-sonnet-4-6"
+                    fb_data["model"] = fb_model
+                    fb_data["num_retries"] = 3
                     fallback_resp = await litellm.acompletion(**fb_data)
                 except Exception as e:
                     print(f"[cline-router] fallback call failed: {type(e).__name__}: {e}")

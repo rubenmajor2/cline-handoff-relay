@@ -3,7 +3,7 @@
 <!-- RULE_VIOLATION_COUNTERS:BEGIN -->
 > ## ⚠️ LIVE VIOLATION COUNTER — auto-updated every 30 min
 > 
-> **This rule is being violated.** Detector ran at 2026-05-14 20:37:53 PDT.
+> **This rule is being violated.** Detector ran at 2026-05-14 21:37:54 PDT.
 > 
 > - last 7 days: **0** violation(s)
 > - last 30 days: **0** violation(s)

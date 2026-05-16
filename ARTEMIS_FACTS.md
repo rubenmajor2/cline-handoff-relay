@@ -1,3 +1,4 @@
+
 # ARTEMIS FACTS — instant-recall reference
 
 **Living document.** Lives at `/Users/rubenmajor/Documents/Cline/ARTEMIS_FACTS.md`.
@@ -192,7 +193,96 @@ This is consistent with: router was set up at some point with access-control = b
 
 ## Open follow-ups (file as ideas if not already)
 
-- **Idea #4671** (approved autonomous): VNC over WG once Artemis is back online.
-- **Idea #4672** (proposed): mirror this file to WOPR as `artemis_host_facts` (markdown or DB table) so server-side agents can read it via the emsu-operations `read_handoff_notes` style tool.
-- **Idea #4673** (proposed): Bug Hunter watcher for the Tempe UPS — once it's on-network, alert if battery <50%, mains lost, or temperature high.
-- **Manual TODO**: when Artemis is back, run `ip -o link` + `ip -o addr` and record MAC + LAN IP here. Also browser-login to the Nighthawk and screenshot/save the real "attached devices full view" + LAN setup pages so we can curl them in future via a saved session cookie.
+- **Idea #4671** (approved P2): VNC over WG once Artemis is back online.
+- **Idea #4672** (approved P1): mirror this file to WOPR — **phase 1 SHIPPED** 2026-05-16 12:52 PT (/var/www/emtskills/docs/host_facts/artemis.md). Phase 2 = auto-sync via cline-handoff-relay.
+- **Idea #4673** (approved P1): Bug Hunter watcher for the Tempe UPS — once it's on-network, alert if battery <50%, mains lost, or temperature high.
+- **Manual TODO**: when Artemis is back, run `ip -o link` + `ip -o addr` and record MAC + LAN IP here.
+
+---
+
+## Tempe site shopping list (added 2026-05-16 13:11 PT)
+
+### KVM-over-IP for full BIOS/console access
+- **GL.iNet Comet GL-RM1** — ~$70 at Microcenter (https://www.microcenter.com/product/700545/glinet-comet-(gl-rm1)-remote-kvm-control-over-internet)
+- **In the box**: HDMI A-A cable, USB-A↔USB-C HID cable, USB-C↔USB-C cable, Ethernet Cat5e, USB-C 5V/2A power adapter
+- **Need to BUY SEPARATELY**: 1× **Active DisplayPort 1.4 male → HDMI 2.0 male cable, 6ft** (~$15, look for "Cable Matters Active DP to HDMI 4K@60"). The Arc Pro B70 has NO HDMI output — only DisplayPort. Passive DP→HDMI adapters won't reliably do 4K with HDCP.
+- LAN-only via WireGuard works fine (no GL.iNet cloud account needed for our use case)
+- Power-button method: USB HID emulation (no ATX header wiring required)
+- Limitations vs JetKVM: similar feature set, GL.iNet is locally-purchasable at Microcenter today
+
+### Cables + accessories for local display
+- **Arc Pro B70 outputs (per card)**: 1× HDMI 2.1 + 3× DisplayPort 2.1 (full-size, NOT Mini-DP, NOT USB-C). With dual cards = 8 total outputs.
+- **Basic monitor + cable**: any HDMI monitor (1080p is fine, GPU happily drives whatever). **Amazon Basics High-Speed HDMI 6ft (~$7)** for the basic case.
+- **If dual monitor**: 1× HDMI + 1× DisplayPort cable for simplicity. **Cable Matters DP 1.4 cable 6ft (~$10)** for the DP side.
+- **Keyboard + mouse**: USB-A wired or Logitech wireless (single nano-receiver). Cheapest path: any USB-A keyboard+mouse combo, ~$25.
+- **Cable run length**: 6ft is the default; if server is in a rack, 10ft is the safer buy (~$2 more, no quality penalty for HDMI 2.0 below 25ft).
+- **Headless-server dummy plug**: if running X11 without a real monitor, get a **Plugable HDMI Display Emulator (~$10)** — tricks the GPU into believing a monitor is connected so X starts cleanly. NOT needed if Artemis is normal headless console-only mode.
+
+### Smart-UPS validation (idea #4673 phase 1)
+When someone is at Tempe, before plugging the UPS ethernet in, check the UPS LCD for a "Network" or "Configuration → Network" menu. If yes → smart UPS, full restart capability available. If only "Battery test / Load test / Silence alarm" → dumb UPS, replace with a cheap WeMo Plug or TP-Link Kasa smart outlet (~$15).
+
+---
+
+## "What if Artemis genuinely crashes" — auto-recovery layers (added 2026-05-16 13:11 PT)
+
+This is what would have saved today's outage. Multiple layers, all configurable on Ubuntu 24.04:
+
+### Layer 1: Per-service systemd auto-restart
+For Ollama, code-server, wireguard:
+```ini
+# /etc/systemd/system/ollama.service.d/restart.conf
+[Service]
+Restart=always
+RestartSec=5
+StartLimitBurst=0          # never rate-limit retries
+OOMScoreAdjust=-500        # less likely to be OOM-killed first
+```
+If Ollama crashes, systemd restarts it in 5s. Same for code-server. No human needed.
+
+### Layer 2: Kernel hung-task + softlockup watchdog
+Ubuntu 24.04 detects but does NOT auto-reboot on kernel softlockups. Enable auto-reboot via `/etc/sysctl.d/90-watchdog.conf`:
+```
+kernel.softlockup_panic = 1
+kernel.hung_task_panic = 1
+kernel.hung_task_timeout_secs = 120
+kernel.panic = 10              # reboot 10s after panic
+kernel.panic_on_oops = 1
+```
+After this, if a kernel task hangs for 120s, the box panics and reboots automatically.
+
+### Layer 3: Hardware watchdog (Intel TCO)
+Most server motherboards have an Intel TCO watchdog chip. `sudo apt install watchdog`, then in `/etc/watchdog.conf`:
+```
+watchdog-device = /dev/watchdog
+watchdog-timeout = 30
+max-load-1 = 24
+ping = 192.168.1.1
+interface = eth0
+```
+If the OS becomes unresponsive (process can't write to /dev/watchdog every 30s) OR network is dead, the hardware watchdog triggers a hard reset. This catches "kernel didn't panic but won't respond" — the worst case.
+
+### Layer 4: Network-unreachability auto-reboot
+A small cron script that pings the gateway every minute, force-reboots after 5 consecutive fails. With a 30-min grace period after boot (so a reboot doesn't immediately fail-and-loop):
+```bash
+# /usr/local/bin/network-watchdog.sh
+#!/bin/bash
+[ $(awk '{print int($1)}' /proc/uptime) -lt 1800 ] && exit 0   # 30-min grace
+FAIL=$(cat /var/lib/network-watchdog/fail 2>/dev/null || echo 0)
+if ping -c1 -W2 192.168.1.1 >/dev/null; then echo 0 > /var/lib/network-watchdog/fail
+else
+  FAIL=$((FAIL+1)); echo $FAIL > /var/lib/network-watchdog/fail
+  [ $FAIL -ge 5 ] && /sbin/reboot -f
+fi
+```
+Cron every minute. Self-arming.
+
+### Layer 5: Smart UPS remote outlet cycle (idea #4673)
+If the UPS is on-network with managed outlets, configure it to cycle Artemis's outlet if it stops hearing the host's SNMP heartbeat for N minutes. APC NMC cards (AP9630/AP9631) and CyberPower RMCARD205 both support this. Final fallback when EVERY OS-level layer has failed.
+
+### Layer 6: KVM-over-IP (GL.iNet Comet, ~$70)
+You can see what's happening AND hit the reset button remotely, from anywhere on the internet. The diagnostic + recovery tool of last resort.
+
+**Today's outage class** (power LED on, no SSH/WG): Layer 4 (network watchdog) would have caught this in 5 minutes. Layer 5 (UPS outlet cycle) is the belt-and-suspenders fallback for when even Layer 4's reboot wedges. Layer 6 (Comet KVM) is how we'd diagnose root cause AFTER. All three should be shipped — that's effectively idea #4673 (UPS) + a new idea for the network watchdog + the Microcenter Comet purchase.
+
+**New idea to file**: network-watchdog + watchdog daemon + sysctl hardening as a single Ansible/script bundle for Artemis once it's back. Probably P1.
+

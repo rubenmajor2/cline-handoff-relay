@@ -109,6 +109,52 @@ Before I tell Ruben that something he named doesn't exist, ask:
 
 If any answer is uncomfortable, do the verification before sending.
 
+## Reddit is a first-tier source for Linux / hardware / driver configs
+
+Per Ruben directive 2026-05-15 23:18 PT in cline task #fleet-agent-status-2026-05-15:
+*"Check Reddit also on these drivers for whatever reason reddit seems to have the latest information. In fact you might want to commit to memory that this is where a lot of cool configs are found"*
+
+For ANY of these topics, Reddit is the primary source — ahead of training-data recall and often ahead of official vendor docs (which lag by months):
+
+- Linux GPU drivers (`xe`, `i915`, NVIDIA proprietary, AMDGPU)
+- Intel Arc Battlemage / Alchemist / discrete graphics on Linux
+- Thunderbolt / USB4 / eGPU on Linux (resizable BAR, IOMMU, bridge windows)
+- Ubuntu/Debian kernel boot params for hardware compatibility
+- Distro-specific package issues (apt holds, dkms, mesa versions)
+- LLM inference stack (Ollama, llama.cpp, vLLM, IPEX-LLM, SYCL backends)
+- BIOS-specific Resizable BAR / Above 4G / IOMMU configs by motherboard model
+- AMD Threadripper / consumer chipset PCIe quirks
+- Power supply sizing for GPU clusters, server PSU compatibility
+
+**Subreddits worth searching first**, in rough priority order for Linux/hardware/AI:
+- r/IntelArc, r/IntelGraphics — Intel Arc driver/firmware/Linux issues
+- r/eGPU — anything Thunderbolt eGPU on any OS, definitive community
+- r/LocalLLaMA — running LLMs locally, hardware sizing, Ollama configs
+- r/linuxhardware, r/Ubuntu, r/archlinux — distro-specific configs
+- r/hardware, r/buildapc — general PC hardware compatibility
+- r/AMDHelp, r/Amd — Threadripper / Ryzen PCIe quirks
+- r/MachineLearning, r/StableDiffusion — training rigs, GPU setups
+- r/sysadmin — for the server-side ops perspective
+
+**When to fold Reddit into the verification chain (default-on):**
+
+Any time the question involves a recent hardware product, a kernel param,
+a BIOS option, a Linux driver issue, or an LLM inference setup — search Reddit
+BEFORE answering from training. The cline_router/brave-search MCP supports
+`site:reddit.com <topic>` queries; chain with `fetch` MCP to read the actual
+thread when one looks promising.
+
+Specifically: if my training-data cutoff predates the hardware/kernel in
+question (likely true for anything 2025+ class), Reddit will have the most
+current real-world working configs. The user community typically beats
+vendor documentation by 3-6 months on Linux hardware setup.
+
+**Self-check addendum:**
+Before any hardware/driver/kernel/eGPU/Ollama answer, ask:
+- "Did I search Reddit + the relevant subreddits?"
+- If no, dispatch a subagent to do it via brave-search + fetch MCP first.
+- Cite the URL when relevant; future-me reading the thread will appreciate it.
+
 ## Source incident
 
 2026-05-11 12:53 PT: Ruben said to use "OpenAI 5.5" in the failover chain. I

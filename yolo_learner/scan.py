@@ -20,6 +20,8 @@ import re
 import sqlite3
 import sys
 import time
+import urllib.request
+import urllib.error
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -67,6 +69,7 @@ def db_connect() -> sqlite3.Connection:
             resumed INTEGER DEFAULT 0,
             turns_since_user INTEGER DEFAULT -1,
             last_user_msg_start TEXT,
+            task_running_log_snapshot TEXT,
             PRIMARY KEY (task_id, trip_index)
         )
     """)
@@ -75,6 +78,7 @@ def db_connect() -> sqlite3.Connection:
         ("resumed", "ALTER TABLE trips ADD COLUMN resumed INTEGER DEFAULT 0"),
         ("turns_since_user", "ALTER TABLE trips ADD COLUMN turns_since_user INTEGER DEFAULT -1"),
         ("last_user_msg_start", "ALTER TABLE trips ADD COLUMN last_user_msg_start TEXT"),
+        ("task_running_log_snapshot", "ALTER TABLE trips ADD COLUMN task_running_log_snapshot TEXT"),
     ]:
         try:
             conn.execute(ddl)
@@ -245,6 +249,52 @@ FILE_RE = re.compile(r'(/[A-Za-z0-9_./-]+\.(?:php|py|js|ts|tsx|md|json|html|css|
 RESUME_MARKERS = ("[task resumption]", "task was interrupted", "pick up task")
 
 
+# Rule 81 integration: fetch running-log context for newly-detected trips via
+# the emsu-operations HTTP bridge at 127.0.0.1:7831. Best-effort — if the
+# bridge is down or returns an error, the scanner still records the trip
+# without the snapshot. Adds ~150-300ms per NEW trip (idempotency check
+# means re-scans don't re-fetch).
+BRIDGE_URL = "http://127.0.0.1:7831/api/tools/get_task_running_log"
+BRIDGE_KEY = "emsu-mcp-2026-a4b7c9d2e1f6"
+
+
+def fetch_running_log_snapshot(task_id: str) -> str | None:
+    """Return JSON string of the last ~10 milestones for this task, or None.
+    Task id is normalized lowercase + no leading #.
+    """
+    tid_norm = task_id.lstrip('#').lower()
+    # Defensive: bridge requires alphanum + dash/underscore
+    if not re.match(r'^[a-z0-9_-]+$', tid_norm):
+        return None
+    try:
+        req = urllib.request.Request(
+            BRIDGE_URL,
+            data=json.dumps({"task_id": tid_norm, "limit": 10}).encode(),
+            headers={
+                "Content-Type": "application/json",
+                "X-Emsu-Mcp-Key": BRIDGE_KEY,
+            },
+            method="POST",
+        )
+        with urllib.request.urlopen(req, timeout=5) as r:
+            body = r.read().decode(errors='replace')
+            parsed = json.loads(body)
+            if parsed.get('success') and parsed.get('result'):
+                # Compact: strip the verbose header, keep the rows
+                txt = parsed['result']
+                # remove the "=== RUNNING LOG ===" line
+                lines = [ln for ln in txt.splitlines() if not ln.startswith("===")]
+                snippet = "\n".join(lines).strip()
+                if snippet and "id\tmilestone_type" not in snippet[:20]:
+                    # No data rows (just header missing means empty result)
+                    return None
+                # Truncate at 2KB to keep sqlite happy
+                return snippet[:2048] if snippet else None
+    except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, OSError, json.JSONDecodeError):
+        return None
+    return None
+
+
 def scan_trip(data: list, i: int) -> dict:
     errs: list[str] = []
     tool_hint = None
@@ -332,18 +382,21 @@ def scan_task(conn: sqlite3.Connection, task_id: str) -> int:
             cats = info["cats"]
             cats = cats + [None] * (3 - len(cats))
             triple = " > ".join([c or "(none)" for c in cats[:3]])
+            # Rule 81: fetch running-log snapshot for this task (best-effort)
+            snapshot = fetch_running_log_snapshot(task_id)
             conn.execute("""
                 INSERT OR REPLACE INTO trips
                   (task_id, trip_index, detected_at, cat_1, cat_2, cat_3,
                    file_hint, tool_hint, triple, resumed, turns_since_user,
-                   last_user_msg_start)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                   last_user_msg_start, task_running_log_snapshot)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (task_id, trip_idx, int(time.time()),
                   cats[0], cats[1], cats[2],
                   info["file"], info["tool"], triple,
                   info.get("resumed", 0),
                   info.get("turns_since_user", -1),
-                  info.get("last_user_msg_start", "")))
+                  info.get("last_user_msg_start", ""),
+                  snapshot))
             inserted += 1
     conn.commit()
     return inserted

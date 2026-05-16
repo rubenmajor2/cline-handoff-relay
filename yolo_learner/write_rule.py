@@ -22,6 +22,14 @@ RULE_FILE = HOME / "Documents/Cline/Rules/99-yolo-prevention-learned.md"
 # Static "how to avoid" playbook per category. Living reference; the scanner
 # decides which ones to surface based on frequency.
 PLAYBOOK = {
+    "no-tool-use: model typed prose instead of calling a tool": [
+        "**Root cause:** after a tool result comes back, the model emits an assistant turn containing ONLY prose (e.g. `Deployed. Now reload FPM:`, `Updated. Confirming with a SELECT:`, `Saved. Next I'll patch the route:`) with NO tool_use block. Cline re-prompts \"use a tool,\" model re-narrates, third no-tool-use strike trips YOLO. This is the #1 failure mode in the trip database — ~45% of all trips and ~85% of `no-tool-use > no-tool-use > no-tool-use` triples follow this exact shape (see rule 41).",
+        "**Fix (bright-line, rule 41):** after ANY successful destructive tool result (safe_deploy_file, sql_execute INSERT/UPDATE, write_to_file, send_email, post_imessage, etc.), the NEXT assistant turn MUST contain at least one tool_use block. Words like \"Deployed. Now reload FPM\" or \"Updated. Now update HANDOFF\" are status descriptions — the model is announcing the next step but not executing it. Either emit the tool call in the SAME turn as the narration, OR call `attempt_completion` if the work is genuinely done. Never close a post-deploy turn with words alone.",
+        "**Stop rule:** if you find yourself typing `Deployed.`, `Updated.`, `Inserted.`, `Patched.`, `Saved.`, `Posted.`, or `Sent.` as the FIRST word of an assistant turn after a successful destructive tool result — STOP. Continue with one of: (a) the next tool call (preferred), (b) `attempt_completion` (if done). Never with words alone. Never with a colon-terminated \"Next step:\" clause.",
+        "**Mid-task narration trap:** announcing what you're about to do without doing it is the symptom. \"Let me check the cron logs:\" with no tool call is identical from Cline's perspective to forgetting to call a tool. Just call it.",
+        "**Two prose turns in a row = YOLO incoming:** if you emit one assistant turn with no tool_use and Cline re-prompts, the THIRD turn must contain a tool_use OR `attempt_completion`. Re-narrating the same intent in different words is the death spiral. Switch from prose to tool action.",
+        "**Capability-gap variant (rule 73):** if you genuinely don't have the right tool to do what you described, emit `attempt_completion` with a status of \"blocked — need tool X\" instead of re-narrating. Don't loop trying to describe the action; ship the blocker as a completion.",
+    ],
     "api: overloaded/rate-limit": [
         "Anthropic is overloaded, not a logic problem.",
         "Wait 30-60 seconds and retry ONCE. If the next call also fails, STOP.",

@@ -3,7 +3,18 @@
 Lives at `/Users/rubenmajor/Documents/Cline/HANDOFF_NOTES.md`. Mac-only operational notes
 that don't belong in the WOPR-side server `HANDOFF_NOTES.md`. Newest at top.
 
+**Instant-recall reference: `/Users/rubenmajor/Documents/Cline/ARTEMIS_FACTS.md`** — read FIRST before any Artemis-related diagnosis. Contains WG IP, ProxyJump path, Cox router model/creds, login mechanism caveats, out-of-band path priority, UPS clarification, common failure modes.
+
 ---
+
+## 2026-05-16 12:25 PT — Artemis WG-down + Cox router enumeration + ARTEMIS_FACTS.md created (task #1778916427107)
+
+Artemis has been off WG since ~01:56 PT. Cox router (Netgear Nighthawk RS300 at https://68.227.47.137, admin/qefru3-cocnyf-xuxnoP) IS reachable. `DEV_show_device.htm` basic view shows 9 devices, none labeled Artemis — but that view is incomplete (no static reservations / VLAN-tagged / aggregation-LAN hosts). The router uses a JS-form login (NOT HTTP Basic), so `curl -u admin:pw` returns the login form for every page. Real enumeration requires browser-login + cookie capture. Ledger row at 11:53 PT corrected (12:20 PT) to reflect this limitation. Until Artemis is back, idea #4671 (VNC over WG, approved autonomous) is the durable console-level path queued to ship.
+
+UPS at Tempe: Ruben asked if it can serve as a KVM. Answer in ARTEMIS_FACTS.md "UPS at Tempe" section. Short version: NOT a KVM (no video/keyboard passthrough), but if the UPS is "smart" with managed outlets AND we plug its ethernet in, we get remote outlet cycling — that IS valuable for "Artemis is hung" recovery without anyone physically there. Real KVM-over-IP options: PiKVM (~$200, DIY) or JetKVM (~$70).
+
+---
+
 
 ## 2026-05-06 12:53 PT — Bug-hunter LaunchAgent alerts: BOTH PLISTS UNLOADED, hot-fix below
 

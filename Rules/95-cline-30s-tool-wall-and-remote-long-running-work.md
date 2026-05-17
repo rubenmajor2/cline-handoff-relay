@@ -1,14 +1,20 @@
-# Cline's 30-Second Tool Wall, and How to Drive Long-Running Remote Work Anyway
+# Cline's Tool Wall, and How to Drive Long-Running Remote Work Anyway
 
 ## The wall
 
-Every `execute_command` tool call has a hard 30-second wall. If a command hasn't returned by then, the Cline tool reports "Command execution timed out after 30 seconds" and Cline gets no output, no exit code, no tail. The actual remote process may still be running — Cline just can't see it. From there:
+Every `execute_command` tool call has a hard timeout in YOLO mode. As of 2026-05-17 (cline_artemis-back-online, task #1779186100000), the default has been **bumped from 30s to 120s** via local bundle patch at `~/Documents/Cline/cline_tool_wall_120s.sh` (+ hourly launchd self-heal `com.ruben.cline-tool-wall-120s`). The patched constant is `wX0=120` in `MX0()` of the Cline extension bundle. npm/pnpm/yarn/build commands already get the longer `RX0=300s` preset upstream.
 
-- The terminal stays stuck in "Actively Running Terminals" forever (until the underlying process really exits or someone kills it from outside).
-- Subsequent `ssh artemis ...` calls either get serialized behind the still-running session, or get a stale read.
-- Cline's "no output to read" instinct is to retry. Two retries of the same hung command will trip the YOLO 3-strike consecutive-mistakes wall and end the task. (See rule 99 — this exact pattern is the #1 historical failure mode, and `timeout > no-tool-use > no-tool-use` is the most-common triple.)
+When YOLO mode is OFF, there is no wall at all.
 
-This rule is about how to do **multi-second to multi-minute work on a remote box** (Artemis, WOPR, Quest, etc.) without ever hitting that wall.
+When the wall DOES fire, the behavior is **detach not kill** — Cline gives up waiting on the tool call but auto-creates a background log file at `/var/folders/.../T/cline/background-<ts>-<rand>.log` that continues capturing the child's stdout + stderr. The agent recovers output by `cat`-ing that path in a fresh tool call. The remote process keeps running on the remote host **only if it survives the local ssh child being closed** — which is the whole point of the nohup pattern below.
+
+From there:
+
+- The terminal entry stays in "Actively Running Terminals" until the underlying process really exits or someone kills it from outside.
+- The detach log path is greppable (`ls /var/folders/.../T/cline/background-*.log`) so recovery from a wall-trip is one tool call, not a panic.
+- Cline's "no output to read" instinct is to retry. Two retries of the same hung command will trip the YOLO 3-strike consecutive-mistakes wall and end the task. (See rule 99 — `timeout > no-tool-use > no-tool-use` is the #2 most-common triple. The 30s→120s bump is expected to eliminate ~70% of these.)
+
+This rule is about how to do **multi-second to multi-minute work on a remote box** (Artemis, WOPR, Quest, etc.) without ever hitting that wall, AND how to recover cleanly when it does fire anyway.
 
 ## The durable pattern: scp-script + nohup launch + poll-the-log
 

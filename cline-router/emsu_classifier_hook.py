@@ -1292,14 +1292,75 @@ class EmsuRouterHook(CustomLogger):
 
     async def async_post_call_streaming_iterator_hook(self, user_api_key_dict, response, request_data):
         """For SSE streaming responses, we can't replay easily. Pass through
-        and write a minimal audit row at stream-end. R1-R9 doesn't run on
-        streams yet (TODO Phase 5B). 2026-05-11: at least log the routing
-        decision so the audit DB reflects what happened.
+        chunks unchanged BUT inspect each one to extract:
+          - Anthropic message_start event → captures response.id + initial usage
+          - message_delta event → captures final usage (cumulative)
+          - Anthropic-specific diagnostics field (when beta header present)
+        Then at stream-end:
+          1. Write the standard audit row (legacy behavior, kept intact).
+          2. NEW 2026-05-18: write the cache_diag row using the captured id/usage.
+
+        Why this matters: Cline 3.82 ALWAYS streams /v1/messages. LiteLLM's
+        non-streaming async_post_call_success_hook NEVER fires for Cline turns.
+        Without this method capturing cache-diagnostics data, the Anthropic
+        Console's "Cache miss reasons" panel stays empty even though the beta
+        header lands. See the 2026-05-18 babysit window finding (44 POSTs in
+        30 min → 1 cache_diag row from non-streaming smoke test only).
+
+        Per-chunk inspection is cheap: we look at .choices[0].delta.message_start
+        and .delta.usage / .delta.cache_* fields. LiteLLM normalizes Anthropic
+        message_start to a chunk with extras under `_hidden_params` or a
+        provider_specific_fields block. We probe both shapes defensively.
         """
+        # 2026-05-18: capture streaming-event metadata as chunks flow through.
+        msg_id_captured = None
+        diagnostics_captured = None
+        usage_final = {}
+
         async for chunk in response:
+            # Pass through immediately so we don't add latency.
             yield chunk
-        # Stream-end: write audit row based on pre-call state so we can see
-        # routing decisions on streamed turns too.
+            # Best-effort capture. NEVER raise — a parsing error here would
+            # truncate the stream to Cline. All probes wrapped + swallowed.
+            try:
+                chunk_dict = chunk.model_dump() if hasattr(chunk, "model_dump") else dict(chunk) if isinstance(chunk, dict) else None
+                if not chunk_dict:
+                    continue
+                # Anthropic message_start event carries the canonical message.id
+                # and the initial usage payload. LiteLLM may surface this two ways:
+                #  (a) top-level `id` set on first chunk
+                #  (b) anthropic-shape preserved under `_hidden_params.message_id`
+                if not msg_id_captured:
+                    candidate = (
+                        chunk_dict.get("id")
+                        or chunk_dict.get("response_id")
+                        or (chunk_dict.get("_hidden_params") or {}).get("response_id")
+                        or (chunk_dict.get("_hidden_params") or {}).get("message_id")
+                    )
+                    # Anthropic ids start with "msg_" — filter out chatcmpl-* (OpenAI shape).
+                    if candidate and isinstance(candidate, str) and candidate.startswith("msg_"):
+                        msg_id_captured = candidate
+                # Diagnostics field: only present when our beta header is honored.
+                # LiteLLM tends to stash provider-extra fields in _hidden_params.
+                if diagnostics_captured is None:
+                    diag_probe = (
+                        chunk_dict.get("diagnostics")
+                        or (chunk_dict.get("_hidden_params") or {}).get("diagnostics")
+                    )
+                    if isinstance(diag_probe, dict):
+                        diagnostics_captured = diag_probe
+                # Usage: Anthropic message_delta carries cumulative usage at end.
+                # LiteLLM may put it under chunk.usage on final chunk, or under
+                # _hidden_params.usage on Anthropic-passthrough paths. Always overwrite
+                # — last-seen usage wins because Anthropic message_delta is final.
+                u = chunk_dict.get("usage") or (chunk_dict.get("_hidden_params") or {}).get("usage")
+                if isinstance(u, dict) and u:
+                    usage_final = u
+            except Exception:
+                # Defensive: don't ever break the stream to the user
+                pass
+
+        # ----- Stream-end: write audit row + (new) cache_diag row -----
         req_hash = request_data.get("_emsu_request_hash")
         state = self.request_state.pop(req_hash, None)
         if not state:
@@ -1308,10 +1369,32 @@ class EmsuRouterHook(CustomLogger):
             total_ms = int((time.time() - state["t_start"]) * 1000)
             routed = state.get("routed_to", "") or ""
             ollama_called = (routed.startswith("ollama-") or routed.startswith("emsu-"))
-            # Cost note: streaming responses don't easily expose final token counts in this hook
-            # signature; we record 0 and let the actual upstream provider's billing be the source
-            # of truth. Cost-saved estimate is approximate (small message). This is just a routing
-            # visibility row.
+
+            # Pull final token counts from the streaming usage we captured.
+            # Accept both OpenAI-key (prompt/completion) and Anthropic-key (input/output) names.
+            in_tok = int(
+                usage_final.get("prompt_tokens")
+                or usage_final.get("input_tokens")
+                or 0
+            )
+            out_tok = int(
+                usage_final.get("completion_tokens")
+                or usage_final.get("output_tokens")
+                or 0
+            )
+
+            # Cost calc using the same logic as the non-streaming hook so the
+            # dashboards see consistent numbers.
+            cost_saved = 0.0
+            cost_paid = 0.0
+            if ollama_called:
+                cost_saved = estimate_cost_usd("claude-sonnet-4-6", in_tok, out_tok)
+            else:
+                cost_paid = estimate_cost_usd(
+                    state.get("original_model") or "claude-sonnet-4-6",
+                    in_tok, out_tok
+                )
+
             _audit_write({
                 "ts": int(time.time()),
                 "request_hash": req_hash,
@@ -1322,21 +1405,84 @@ class EmsuRouterHook(CustomLogger):
                 "ollama_called": int(ollama_called),
                 "ollama_model": state.get("routed_to") if ollama_called else None,
                 "ollama_latency_ms": total_ms,
-                "ollama_input_tokens": 0,
-                "ollama_output_tokens": 0,
+                "ollama_input_tokens": in_tok if ollama_called else 0,
+                "ollama_output_tokens": out_tok if ollama_called else 0,
+                # streaming path doesn't run R1-R9 yet (that's still a Phase 5B item)
+                # — keep the "streaming:no_r_rules" marker for ollama turns, leave
+                # NULL for Anthropic turns now that we ARE capturing real data.
                 "fail_reason": "streaming:no_r_rules" if ollama_called else None,
                 "fallback_called": 0,
                 "fallback_model": None,
                 "fallback_latency_ms": 0,
                 "total_latency_ms": total_ms,
-                "estimated_cost_saved_usd": 0,
-                "estimated_cost_paid_usd": 0,
+                "estimated_cost_saved_usd": round(cost_saved, 6),
+                "estimated_cost_paid_usd": round(cost_paid, 6),
                 "request_size_bytes": _safe_size(request_data),
-                "response_size_bytes": 0,
+                "response_size_bytes": 0,   # streamed; no single final blob to size
                 "rollout_mode": ROLLOUT_MODE,
             })
-        except Exception:
-            pass
+        except Exception as e:
+            print(f"[cline-router] streaming audit write failed: "
+                  f"{type(e).__name__}: {e}")
+
+        # 2026-05-18 cache-diagnosis on streaming path. Only fires on
+        # Anthropic-bound (non-Ollama) turns where we recorded a cache_diag_window
+        # in the pre-call hook AND captured an Anthropic msg_id from the stream.
+        if CACHE_DIAG_ENABLED and not (state.get("routed_to") or "").startswith(("ollama-", "emsu-")) \
+                and "cache_diag_window" in state and msg_id_captured:
+            try:
+                window_key = state["cache_diag_window"]
+                prev_id_sent = state.get("cache_diag_prev_id_sent")
+
+                # Roll the message_id forward for the next turn's diff anchor.
+                CACHE_DIAG_PREV_ID[window_key] = {
+                    "prev_id": msg_id_captured,
+                    "ts": time.time(),
+                }
+
+                # Pull cache_read + cache_creation from usage. Anthropic-native
+                # streaming usage uses cache_read_input_tokens + cache_creation_input_tokens.
+                cache_read = int(
+                    usage_final.get("cache_read_input_tokens")
+                    or (usage_final.get("prompt_tokens_details") or {}).get("cached_tokens")
+                    or 0
+                )
+                cache_creation = int(
+                    usage_final.get("cache_creation_input_tokens")
+                    or 0
+                )
+
+                # Parse miss reason out of diagnostics if present.
+                miss_reason = None
+                diag_json = None
+                if isinstance(diagnostics_captured, dict):
+                    miss_reason = diagnostics_captured.get("cache_miss_reason")
+                    try:
+                        diag_json = json.dumps(diagnostics_captured)
+                    except Exception:
+                        diag_json = None
+
+                _cache_diag_write({
+                    "ts": int(time.time()),
+                    "request_hash": req_hash,
+                    "window_key": window_key,
+                    "model": state.get("original_model"),
+                    "message_id": msg_id_captured,
+                    "previous_message_id_sent": prev_id_sent,
+                    "diagnostics_json": diag_json,
+                    "cache_miss_reason": miss_reason,
+                    "usage_input_tokens": int(usage_final.get("prompt_tokens") or usage_final.get("input_tokens") or 0),
+                    "usage_cache_read": cache_read,
+                    "usage_cache_creation": cache_creation,
+                    "usage_output_tokens": int(usage_final.get("completion_tokens") or usage_final.get("output_tokens") or 0),
+                })
+                _cache_diag_evict_stale()
+            except Exception as e:
+                # Stream already finished by this point — even errors here are
+                # invisible to the user. Log so we can debug, never raise.
+                print(f"[cline-router] streaming cache-diag write failed: "
+                      f"{type(e).__name__}: {e}")
+
         # TODO Phase 5B: assemble streamed chunks into full response and run R2-R9.
 
     # ---------- Failure hook ----------

@@ -136,3 +136,80 @@ the same overload class returns.
 storm requiring Ruben to fall back to a stock VS Code window for the fix.
 Resolved 17:38, validated 17:55. Zero recurrences in the post-restart log
 slice. Three live `:1m` test requests succeeded with normal latency.
+
+## 2026-05-18 addendum — Mac-side SSH tunnel for the router
+
+Source incident: `:1m` overloaded_error storm on new Cline windows, 2026-05-18 15:00 PT.
+Mac VS Code Cline windows had `anthropicBaseUrl: http://127.0.0.1:8787` stored
+in apiConfiguration but no router was running on Mac. Requests connection-refused,
+fell back to direct api.anthropic.com, hit Anthropic's `:1m` (1M-context) tier
+which is over-subscribed and capacity-limited separately from regular Opus.
+
+### Per-host requirement
+
+**Any client box (Mac, secondary developer machines) that has
+`anthropicBaseUrl: http://127.0.0.1:8787` in its Cline apiConfiguration MUST
+also have an SSH tunnel forwarding that port to Artemis where the actual
+cline-router runs.** Without the tunnel, the request connection-refuses locally,
+Cline falls back to direct Anthropic, and the router's fallback chain (which
+catches `:1m → base` overload rewrites) never gets a chance to fire.
+
+### Canonical tunnel via launchd (Mac)
+
+Lives at `~/Library/LaunchAgents/com.ruben.cline-router-tunnel.plist`. Runs
+`ssh -N -L 127.0.0.1:8787:127.0.0.1:8787 artemis` with KeepAlive=true,
+RunAtLoad=true, ServerAliveInterval=30, ExitOnForwardFailure=yes. Log at
+`/tmp/cline-router-tunnel.log`.
+
+Load: `launchctl load ~/Library/LaunchAgents/com.ruben.cline-router-tunnel.plist`
+Verify: `curl -sS http://127.0.0.1:8787/health/readiness` returns
+`{"status":"healthy"...}`.
+
+KeepAlive auto-restarts on connection drop. RunAtLoad fires at Mac boot.
+ServerAliveInterval=30 keeps the SSH session warm through NAT/idle timeouts.
+ExitOnForwardFailure=yes refuses to silently fall back to a non-forwarded ssh.
+
+### Health-monitor cron (belt-and-suspenders)
+
+`~/Library/LaunchAgents/com.ruben.cline-router-tunnel-healthcheck.plist`:
+fires every 5 minutes, curls 127.0.0.1:8787/health/readiness, if it fails
+kicks the tunnel via `launchctl kickstart -k gui/$UID/com.ruben.cline-router-tunnel`.
+Log at `/tmp/cline-router-tunnel-health.log`. Different layer than KeepAlive
+(catches local listener failure, not just dropped SSH).
+
+### Detection algorithm — extend Step 4 of original rule 77
+
+Step 4 (router-not-up class) now has two sub-cases:
+
+4a. **Router not running on Artemis** — `ssh artemis "systemctl is-active mcp-cline-router"`. If inactive, restart it.
+
+4b. **Router running on Artemis but tunnel down on the client box** — from the
+client (Mac), `curl -sS --max-time 3 http://127.0.0.1:8787/health/readiness`
+returns connection-refused or hangs, but `ssh artemis "curl -sS --max-time 3
+http://127.0.0.1:8787/health/readiness"` works fine. Tunnel needs to be
+reloaded: `launchctl unload ...; launchctl load ...` OR the healthcheck cron
+will catch it within 5 min.
+
+### Why `:1m` overloads separately from base
+
+The `:1m` suffix selects Anthropic's 1-million-context Opus tier. Internally
+it's a different deployment with smaller capacity than regular 200k Opus —
+Anthropic provisions 1M-context separately because each request consumes much
+more compute. When organic traffic spikes (especially during business hours
+US time), `:1m` saturates while base Opus has plenty of headroom. This is why
+Anthropic's status page shows "All Systems Operational" but `:1m` calls return
+overloaded — the status page tracks the aggregate, not the premium tier
+specifically.
+
+The fallback `:1m → base` is the right behavior because the conversation
+context is server-side on the conversation history, not on Anthropic's side.
+You don't lose context for one retry call, you just temporarily downgrade
+to 200k window for the next response.
+
+## Last updated
+
+2026-05-18 — added Mac-side SSH tunnel section, healthcheck cron, and `:1m`
+capacity explanation. Source incident: new Cline windows on Mac getting
+overloaded_error because anthropicBaseUrl pointed at a nonexistent local proxy.
+Tunnel deployed via launchd, fallback chain re-shipped on Artemis router,
+`:1m` workflows now seamlessly fall back to base Opus on overload.

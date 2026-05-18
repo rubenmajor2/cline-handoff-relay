@@ -79,6 +79,41 @@ DEFAULT_OLLAMA_MODEL = os.environ.get("CLINE_ROUTER_OLLAMA_MODEL", "emsu-qwen2.5
 # CLINE_ROUTER_TRIPWIRE_INJECT=1 once validated on a non-critical turn.
 TRIPWIRE_INJECT = os.environ.get("CLINE_ROUTER_TRIPWIRE_INJECT", "0") in ("1", "true", "yes")
 
+# 2026-05-18: Anthropic prompt-cache diagnostics. When enabled, every
+# Anthropic-bound (`hard`) turn carries the beta header that asks Anthropic
+# to compute cache-miss reasons + diff this request against the prior one.
+# Anthropic surfaces the results in the Console "Cache Diagnostics" panel
+# (data appears within ~1h) and ALSO returns a `diagnostics` field on each
+# response which we log to ~/.cline-router/audit.sqlite (table cache_diag)
+# for offline analysis.
+#
+# To work, this needs TWO things:
+#   1. anthropic-beta header on the request  (one-liner via extra_headers)
+#   2. diagnostics: {previous_message_id: <id>} body field, where <id> is
+#      the response.id from the prior Anthropic call in this Cline window.
+# Without (2), Anthropic has nothing to diff against and the panel stays
+# empty even though the header is present.
+#
+# Key for "this Cline window": (n_messages, first_user[:200], original_model)
+# tracked in a process-local dict CACHE_DIAG_PREV_ID. Survives until the
+# router restarts; one launchd kickstart resets all windows' chains which
+# is fine — the first turn after restart writes a NEW prev_id and the
+# diff resumes on turn 2.
+#
+# Verified header value 2026-05-18: `cache-diagnosis-2026-04-07` (note
+# SINGULAR `diagnosis`). The plural variant is silently ignored by
+# Anthropic — Ruben's other LLM had this wrong. See .clinerules/45.
+#
+# Reversal: set CLINE_ROUTER_CACHE_DIAG=0 to disable. Or revert the file
+# from the backup .bak-2026-05-18-pre-cache-diag.
+CACHE_DIAG_ENABLED = os.environ.get("CLINE_ROUTER_CACHE_DIAG", "1") not in ("0", "false", "no")
+CACHE_DIAG_BETA = "cache-diagnosis-2026-04-07"
+CACHE_DIAG_PREV_ID: dict[str, dict] = {}   # window_key -> {"prev_id": str, "ts": epoch}
+# Window-keys older than this are evicted (prevents unbounded growth from
+# transient one-off Cline windows). 24h is generous for normal usage.
+CACHE_DIAG_TTL_SEC = 24 * 3600
+
+
 # 2026-05-14: tripwire system message. Short, high-priority, mirrors
 # .clinerules/40 v3 + .clinerules/74 addendum language.
 TRIPWIRE_SYSTEM_MSG = (
@@ -333,6 +368,30 @@ def _audit_db_init():
         );
         CREATE INDEX IF NOT EXISTS idx_turns_ts ON turns(ts);
         CREATE INDEX IF NOT EXISTS idx_turns_fail ON turns(fail_reason);
+
+        -- 2026-05-18 cache-diagnosis: one row per Anthropic-bound response,
+        -- captures Anthropic's diagnostics payload + the message_id we tracked
+        -- for the next-turn diff. NULL diagnostics is normal (first turn of a
+        -- window, or no divergence). Operator queries this offline to find
+        -- which specific cache prefix change caused each miss.
+        CREATE TABLE IF NOT EXISTS cache_diag (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          ts INTEGER NOT NULL,
+          request_hash TEXT NOT NULL,
+          window_key TEXT NOT NULL,
+          model TEXT,
+          message_id TEXT,
+          previous_message_id_sent TEXT,
+          diagnostics_json TEXT,
+          cache_miss_reason TEXT,
+          usage_input_tokens INTEGER,
+          usage_cache_read INTEGER,
+          usage_cache_creation INTEGER,
+          usage_output_tokens INTEGER
+        );
+        CREATE INDEX IF NOT EXISTS idx_cache_diag_ts ON cache_diag(ts);
+        CREATE INDEX IF NOT EXISTS idx_cache_diag_window ON cache_diag(window_key);
+        CREATE INDEX IF NOT EXISTS idx_cache_diag_miss ON cache_diag(cache_miss_reason);
         CREATE VIEW IF NOT EXISTS v_daily_rollup AS
         SELECT
           date(ts, 'unixepoch', 'localtime') AS day,
@@ -374,6 +433,73 @@ def _audit_write(row: dict):
     except Exception as e:
         # Audit must never break the proxy. Log and continue.
         print(f"[cline-router] audit write failed: {e}")
+
+
+# ===========================================================================
+# Cache diagnostics helpers (2026-05-18)
+# ===========================================================================
+
+def _cache_diag_window_key(data: dict) -> str:
+    """Stable identifier for "this Cline window" used to chain
+    previous_message_id across turns.
+
+    Cline doesn't expose a session-id; we synthesize one from the (model,
+    n_messages>=2, first_user_chars[:200], original_model). Two simultaneous
+    Cline windows on the same model whose first user-turn texts diverge in
+    the first 200 chars will be tracked separately, which is the right
+    behavior. Identical first-200-char first turns will share a key — fine,
+    they're in the same conversation arc.
+
+    Falls back to a per-process-uniq tag on hash failure so we still log.
+    """
+    try:
+        msgs = data.get("messages") or []
+        # Use only the FIRST user message in the conversation as the anchor.
+        first_user = ""
+        for m in msgs:
+            if m.get("role") == "user":
+                c = m.get("content")
+                if isinstance(c, str):
+                    first_user = c
+                elif isinstance(c, list):
+                    first_user = "\n".join(
+                        b.get("text", "") for b in c
+                        if isinstance(b, dict) and b.get("type") == "text"
+                    )
+                break
+        seed = {
+            "model": data.get("model"),
+            "first_user_200": first_user[:200],
+        }
+        return hashlib.sha256(
+            json.dumps(seed, sort_keys=True, default=str).encode()
+        ).hexdigest()[:16]
+    except Exception:
+        return f"unkeyed:{os.getpid()}"
+
+
+def _cache_diag_evict_stale():
+    """Drop window-key entries older than CACHE_DIAG_TTL_SEC. Called from the
+    post-call hook so it amortizes naturally."""
+    try:
+        now = time.time()
+        stale = [k for k, v in CACHE_DIAG_PREV_ID.items()
+                 if now - v.get("ts", 0) > CACHE_DIAG_TTL_SEC]
+        for k in stale:
+            CACHE_DIAG_PREV_ID.pop(k, None)
+    except Exception:
+        pass
+
+
+def _cache_diag_write(row: dict):
+    cols = ",".join(row.keys())
+    qs = ",".join("?" for _ in row)
+    try:
+        with sqlite3.connect(AUDIT_DB_PATH) as db:
+            db.execute(f"INSERT INTO cache_diag ({cols}) VALUES ({qs})", tuple(row.values()))
+            db.commit()
+    except Exception as e:
+        print(f"[cline-router] cache_diag write failed: {e}")
 
 
 # ===========================================================================
@@ -882,6 +1008,61 @@ class EmsuRouterHook(CustomLogger):
                 self.request_state[req_hash]["rag_meta"] = {"error": str(e)}
         else:
             self.request_state[req_hash]["routed_to"] = data.get("model")
+
+            # 2026-05-18 cache-diagnosis injection. On Anthropic-bound (hard)
+            # turns ONLY, attach the beta header + diagnostics body so the
+            # Console "Cache Diagnostics" panel populates. Stash a window key
+            # in request_state so the post-call hook knows where to save the
+            # response.id for next turn's diff anchor.
+            if CACHE_DIAG_ENABLED:
+                try:
+                    window_key = _cache_diag_window_key(data)
+                    self.request_state[req_hash]["cache_diag_window"] = window_key
+
+                    # Add the beta header via extra_headers (LiteLLM passes
+                    # this dict straight through to Anthropic).
+                    existing_headers = data.get("extra_headers") or {}
+                    if not isinstance(existing_headers, dict):
+                        existing_headers = {}
+                    # Anthropic concatenates multiple anthropic-beta values
+                    # with commas; preserve any existing value (e.g. prompt-
+                    # caching-2024-07-31 added by Cline itself).
+                    prev_beta = existing_headers.get("anthropic-beta", "")
+                    if CACHE_DIAG_BETA in prev_beta:
+                        merged_beta = prev_beta
+                    elif prev_beta:
+                        merged_beta = prev_beta + "," + CACHE_DIAG_BETA
+                    else:
+                        merged_beta = CACHE_DIAG_BETA
+                    existing_headers["anthropic-beta"] = merged_beta
+                    data["extra_headers"] = existing_headers
+
+                    # Look up the previous_message_id for this Cline window.
+                    # First turn in a window → no prev_id → send
+                    # `diagnostics: {"previous_message_id": null}` per
+                    # Anthropic's opt-in spec.
+                    prev_entry = CACHE_DIAG_PREV_ID.get(window_key)
+                    prev_id = prev_entry.get("prev_id") if prev_entry else None
+                    data["diagnostics"] = {"previous_message_id": prev_id}
+                    self.request_state[req_hash]["cache_diag_prev_id_sent"] = prev_id
+
+                    # Sentinel log so smoke tests can verify it fires.
+                    try:
+                        with open("/tmp/cline_router_cache_diag.log", "a") as _dlog:
+                            _dlog.write(
+                                f"{time.strftime('%Y-%m-%d %H:%M:%S')} "
+                                f"req={req_hash} window={window_key} "
+                                f"model={data.get('model')} "
+                                f"prev_id={prev_id or 'NULL_FIRST_TURN'} "
+                                f"beta='{merged_beta}'\n"
+                            )
+                    except Exception:
+                        pass
+                except Exception as e:
+                    # Cache diagnostics must NEVER fail a real Anthropic call.
+                    print(f"[cline-router] cache-diag inject failed: "
+                          f"{type(e).__name__}: {e}")
+
             # 2026-05-14 tripwire: on `hard` turns going to Anthropic,
             # prepend a brief system instruction reminding the model to use
             # call_ollama + use_subagents where appropriate. Env-gated;
@@ -998,6 +1179,88 @@ class EmsuRouterHook(CustomLogger):
             cost_paid = estimate_cost_usd(state.get("original_model") or "claude-sonnet-4-6", in_tok, out_tok)
         else:
             cost_paid = estimate_cost_usd(state.get("original_model") or "claude-sonnet-4-6", in_tok, out_tok)
+
+        # 2026-05-18 cache-diagnosis: capture Anthropic's response.id +
+        # diagnostics payload. Skip on Ollama-routed turns (no Anthropic ID)
+        # and on the silent-fallback path (the fallback call would already
+        # have been logged by its own pre/post hook cycle if we were chained,
+        # which we aren't — fallback calls bypass the hook entirely. The
+        # primary call we're post-processing here IS the Anthropic call when
+        # the label was `hard`).
+        if CACHE_DIAG_ENABLED and not ollama_called and "cache_diag_window" in state:
+            try:
+                window_key = state["cache_diag_window"]
+                prev_id_sent = state.get("cache_diag_prev_id_sent")
+
+                # Anthropic-native response shape preserves top-level `id` and
+                # `diagnostics`. LiteLLM may store them under `_hidden_params`
+                # or alongside `choices`. Cover both.
+                msg_id = (
+                    resp_dict.get("id")
+                    or resp_dict.get("response_id")
+                    or (resp_dict.get("_hidden_params") or {}).get("response_id")
+                    or ""
+                )
+                diagnostics = (
+                    resp_dict.get("diagnostics")
+                    or (resp_dict.get("_hidden_params") or {}).get("diagnostics")
+                )
+
+                # Roll the new message_id forward into CACHE_DIAG_PREV_ID
+                # for this window so the NEXT turn sends it as prev_id.
+                if msg_id:
+                    CACHE_DIAG_PREV_ID[window_key] = {
+                        "prev_id": msg_id,
+                        "ts": time.time(),
+                    }
+
+                # Anthropic's usage payload on cache-aware responses includes
+                # cache_read_input_tokens + cache_creation_input_tokens. Pull
+                # them from wherever LiteLLM left them.
+                an_usage = (
+                    resp_dict.get("usage")
+                    or (resp_dict.get("_hidden_params") or {}).get("usage")
+                    or {}
+                )
+                cache_read = (
+                    an_usage.get("cache_read_input_tokens")
+                    or an_usage.get("prompt_tokens_details", {}).get("cached_tokens")
+                    or 0
+                )
+                cache_creation = an_usage.get("cache_creation_input_tokens") or 0
+
+                # Parse cache_miss_reason out of diagnostics, with the four-
+                # state schema Anthropic documents (absent / null / {miss:null}
+                # / {miss:<reason>}).
+                miss_reason = None
+                diag_json = None
+                if isinstance(diagnostics, dict):
+                    miss_reason = diagnostics.get("cache_miss_reason")
+                    try:
+                        diag_json = json.dumps(diagnostics)
+                    except Exception:
+                        diag_json = None
+
+                _cache_diag_write({
+                    "ts": int(time.time()),
+                    "request_hash": req_hash,
+                    "window_key": window_key,
+                    "model": state.get("original_model"),
+                    "message_id": msg_id or None,
+                    "previous_message_id_sent": prev_id_sent,
+                    "diagnostics_json": diag_json,
+                    "cache_miss_reason": miss_reason,
+                    "usage_input_tokens": in_tok,
+                    "usage_cache_read": cache_read,
+                    "usage_cache_creation": cache_creation,
+                    "usage_output_tokens": out_tok,
+                })
+
+                # Amortized eviction so the in-memory dict stays bounded.
+                _cache_diag_evict_stale()
+            except Exception as e:
+                print(f"[cline-router] cache-diag post-call log failed: "
+                      f"{type(e).__name__}: {e}")
 
         _audit_write({
             "ts": int(time.time()),

@@ -79,6 +79,144 @@ DEFAULT_OLLAMA_MODEL = os.environ.get("CLINE_ROUTER_OLLAMA_MODEL", "emsu-qwen2.5
 # CLINE_ROUTER_TRIPWIRE_INJECT=1 once validated on a non-critical turn.
 TRIPWIRE_INJECT = os.environ.get("CLINE_ROUTER_TRIPWIRE_INJECT", "0") in ("1", "true", "yes")
 
+# 2026-05-18 cline-smart-router-2026-05-18: Hard-tier picker.
+# Even when the classifier returns "hard" (don't route to Ollama), we
+# should NOT always honor whatever Anthropic tier Cline asked for. Most
+# Cline windows have the dropdown pinned to claude-opus-4-7:1m, which
+# pays Opus prices for reads, status checks, and small patches that
+# Sonnet or Haiku would handle just fine. This picker downgrades the
+# hard-branch model based on turn shape:
+#   - hard_floor regulator/money/student-comm → keep Opus (correctness)
+#   - short read/grep/status (last_tool routine-ish, msg < 200 chars) → Haiku
+#   - single-file edit / small patch / safe_deploy → Sonnet
+#   - explicit Opus signals (rule 53 binary signals in message) → Opus
+#   - default → Sonnet (the safe middle, never Opus by default)
+#
+# Reversal: set CLINE_ROUTER_HARD_TIER_PICKER=0 to disable. The hard branch
+# then passes through whatever model Cline asked for (legacy behavior).
+HARD_TIER_PICKER_ENABLED = os.environ.get("CLINE_ROUTER_HARD_TIER_PICKER", "1") in ("1", "true", "yes")
+
+# Map provider-prefixed and bare model names to canonical Anthropic IDs.
+# Used by pick_hard_tier when downgrading.
+HARD_TIER_HAIKU  = "claude-haiku-4-5"
+HARD_TIER_SONNET = "claude-sonnet-4-6"
+HARD_TIER_OPUS   = "claude-opus-4-7"
+
+# Patterns that force keeping Opus regardless of turn shape. These are
+# correctness-critical surfaces where Haiku/Sonnet drift costs more than
+# the saved tokens. Match hard_floor labels from classify_pure_heuristic.
+_KEEP_OPUS_HARD_FLOOR_LABELS = frozenset({
+    "money", "refund", "payment", "regulator", "noi", "grievance",
+    "student_email_compose", "regulator_filing", "irreversible",
+})
+
+# Explicit Opus signals (rule 53 binary signals — cross-system synthesis,
+# multi-system tradeoffs, "why didn't it work", regulator-grade writing,
+# "Ruben will quote this"). When present in the user's last message, even
+# in a `hard` classification, keep Opus.
+_OPUS_SIGNAL_RE = re.compile(
+    r"\b(architect|architectur|design (the|a) (system|pipeline|flow)|"
+    r"cross[- ]system|tradeoffs?|root[- ]cause|why did|why hasn'?t|"
+    r"regulator|grievance|noi response|compliance posture|"
+    r"audit (this|the)|synthes(ize|is)|deep dive|"
+    r"what'?s missing|capability gap|propose (a|the) (plan|architecture))",
+    re.I,
+)
+
+# Patch / single-file-edit signals → Sonnet (good middle).
+_SONNET_PATCH_RE = re.compile(
+    r"\b(fix|patch|edit|add|update|change|modify|deploy|ship|implement|"
+    r"refactor|rewrite|write (a|the|this) (function|class|cron|script)|"
+    r"safe[-_ ]deploy)\b",
+    re.I,
+)
+
+# Routine read/grep/status signals → Haiku.
+_HAIKU_READ_RE = re.compile(
+    r"\b(what'?s|whats|what is|what are|where is|where are|"
+    r"check|show me|tail|grep |list |status|ps |uptime|did |does |do you |"
+    r"is .* running|is .* up|how many|count |last \d+|head |cat |"
+    r"describe |show columns|ls |find |confirm |verify |"
+    r"tell me|give me|read )",
+    re.I,
+)
+
+
+def pick_hard_tier(req: dict, original_model: str, hard_reason: str) -> tuple[str, str]:
+    """When classifier returned 'hard', pick the right Anthropic tier
+    instead of always honoring Cline's dropdown choice.
+
+    Returns (chosen_model, reason).
+
+    Honors override headers:
+      X-EMSU-Force-Model: <model_id>   → force exact model
+      X-EMSU-Force-Tier: opus|sonnet|haiku  → force tier
+
+    Per .clinerules/53 binary signals + .clinerules/74 Haiku-default-on
+    for short reads.
+    """
+    if not HARD_TIER_PICKER_ENABLED:
+        return (original_model, "picker_disabled")
+
+    # Strip :1m / :200k / etc. suffix when reasoning about tier — these
+    # are capacity-pool variants, not different tiers. We'll restore the
+    # suffix on the chosen model if the original had it.
+    orig_lower = (original_model or "").lower()
+    suffix = ""
+    if ":1m" in orig_lower:
+        suffix = ":1m"
+    elif ":fast" in orig_lower:
+        suffix = ":fast"
+    elif ":200k" in orig_lower:
+        suffix = ":200k"
+
+    # Header overrides (highest priority) ----------------------------------
+    headers = req.get("_emsu_headers") or {}
+    if isinstance(headers, dict):
+        force_model = headers.get("x-emsu-force-model") or headers.get("X-EMSU-Force-Model")
+        if force_model:
+            return (str(force_model), f"header_force_model:{force_model}")
+        force_tier = (headers.get("x-emsu-force-tier") or headers.get("X-EMSU-Force-Tier") or "").lower()
+        if force_tier == "opus":
+            return (HARD_TIER_OPUS + suffix, "header_force_tier:opus")
+        if force_tier == "sonnet":
+            return (HARD_TIER_SONNET + suffix, "header_force_tier:sonnet")
+        if force_tier in ("haiku", "cheap"):
+            return (HARD_TIER_HAIKU, "header_force_tier:haiku")
+
+    # If already Haiku → leave alone (already cheapest)
+    if "haiku" in orig_lower:
+        return (original_model, "already_haiku")
+
+    # Correctness-critical hard_floor → keep Opus -------------------------
+    # hard_reason looks like "hard_floor:regulator" or "hard_floor:refund"
+    if hard_reason.startswith("hard_floor:"):
+        label = hard_reason.split(":", 1)[1].strip().lower()
+        if any(k in label for k in _KEEP_OPUS_HARD_FLOOR_LABELS):
+            return (HARD_TIER_OPUS + suffix, f"keep_opus_correctness:{label}")
+
+    # Explicit Opus signals in user message → keep Opus -------------------
+    msgs = req.get("messages", []) or []
+    last_user = _last_user_text(msgs)
+    if _OPUS_SIGNAL_RE.search(last_user):
+        return (HARD_TIER_OPUS + suffix, "opus_signal_in_message")
+
+    # Short read/grep/status → Haiku --------------------------------------
+    last_tool = _last_tool_name(msgs)
+    user_len = len(last_user.strip())
+    if user_len < 200 and (
+        _HAIKU_READ_RE.search(last_user)
+        or (last_tool in ROUTINE_TOOL_NAMES and "ssh" not in (last_tool or ""))
+    ):
+        return (HARD_TIER_HAIKU, f"short_read:tool={last_tool}:len={user_len}")
+
+    # Code patch / single-file edit / small write → Sonnet ----------------
+    if _SONNET_PATCH_RE.search(last_user) and user_len < 3000:
+        return (HARD_TIER_SONNET + suffix, "patch_keyword")
+
+    # Default: Sonnet (the safe middle, never Opus by default) ------------
+    return (HARD_TIER_SONNET + suffix, "default_sonnet")
+
 # 2026-05-18: Anthropic prompt-cache diagnostics. When enabled, every
 # Anthropic-bound (`hard`) turn carries the beta header that asks Anthropic
 # to compute cache-miss reasons + diff this request against the prior one.
@@ -893,14 +1031,24 @@ class EmsuRouterHook(CustomLogger):
             return data
 
         t0 = time.time()
-        try:
-            label, conf, reason, tier = await classify(data)
-        except Exception as e:
-            print(f"[cline-router] classifier crash: {e}\n{traceback.format_exc()}")
-            label, conf, reason, tier = "hard", 1.0, f"classifier_crash:{type(e).__name__}", 0
+        # PATCH_1M_HARD_FLOOR 2026-05-18 task #1779186100000:
+        # Extended-context tier suffixes (:1m / :200k / :fast) are explicit
+        # operator/dropdown signals that this turn needs Anthropic's premium
+        # context window — don't downgrade to local Ollama even if the prompt
+        # looks routine. This guarantees :1m pass-through stays at ~1-2s.
+        _req_model = (data.get("model") or "").lower()
+        if ":1m" in _req_model or ":200k" in _req_model or ":fast" in _req_model:
+            label, conf, reason, tier = "hard", 1.0, f"context_tier_suffix:{_req_model.split(':',1)[1] if ':' in _req_model else 'unknown'}", 0
+            classify_ms = int((time.time() - t0) * 1000)
+        else:
+            try:
+                label, conf, reason, tier = await classify(data)
+            except Exception as e:
+                print(f"[cline-router] classifier crash: {e}\n{traceback.format_exc()}")
+                label, conf, reason, tier = "hard", 1.0, f"classifier_crash:{type(e).__name__}", 0
+            classify_ms = int((time.time() - t0) * 1000)
 
-        classify_ms = int((time.time() - t0) * 1000)
-        # 2026-05-10: defensive hash. LiteLLM 1.83.x passes objects with
+        # classify_ms set above. 2026-05-10: defensive hash. LiteLLM 1.83.x passes objects with
         # circular references (e.g. LiteLLM_Verification_token + internal
         # client refs) into the pre-call hook. json.dumps blows up with
         # "Circular reference detected" → 500 to Cline → hook gate that
@@ -1007,6 +1155,35 @@ class EmsuRouterHook(CustomLogger):
                 print(f"[cline-router] rag augment failed: {type(e).__name__}: {e}")
                 self.request_state[req_hash]["rag_meta"] = {"error": str(e)}
         else:
+            # 2026-05-18 cline-smart-router: downgrade hard-branch model from
+            # whatever Cline asked for (usually Opus pinned in the dropdown)
+            # to the right Anthropic tier based on turn shape. Honors
+            # X-EMSU-Force-Model / X-EMSU-Force-Tier headers, keeps Opus for
+            # correctness-critical hard_floor + explicit Opus signals,
+            # downgrades short reads to Haiku, patches to Sonnet, otherwise
+            # defaults to Sonnet. See pick_hard_tier() docstring.
+            original_model = data.get("model")
+            try:
+                chosen, tier_reason = pick_hard_tier(data, original_model, reason)
+                if chosen != original_model:
+                    data["model"] = chosen
+                    self.request_state[req_hash]["tier_picker"] = tier_reason
+                    self.request_state[req_hash]["tier_picker_original"] = original_model
+                    # Sentinel log so smoke tests can verify downgrades fire
+                    try:
+                        with open("/tmp/cline_router_tier_picker.log", "a") as _tlog:
+                            _tlog.write(
+                                f"{time.strftime('%Y-%m-%d %H:%M:%S')} "
+                                f"req={req_hash} "
+                                f"orig={original_model} -> chosen={chosen} "
+                                f"reason={tier_reason}\n"
+                            )
+                    except Exception:
+                        pass
+            except Exception as e:
+                # Never fail a turn over the tier picker
+                print(f"[cline-router] tier-picker failed: {type(e).__name__}: {e}")
+
             self.request_state[req_hash]["routed_to"] = data.get("model")
 
             # 2026-05-18 cache-diagnosis injection. On Anthropic-bound (hard)
@@ -1317,45 +1494,130 @@ class EmsuRouterHook(CustomLogger):
         diagnostics_captured = None
         usage_final = {}
 
+        # 2026-05-18 v2: env-gated debug dump for the FIRST chunk of each stream.
+        # Set CLINE_ROUTER_CHUNK_DEBUG=1 in the launchd plist to enable. Writes
+        # the raw shape of the first chunk to /tmp/cline_router_chunk_debug.log
+        # so we can confirm where LiteLLM puts the Anthropic message_id.
+        chunk_debug = os.environ.get("CLINE_ROUTER_CHUNK_DEBUG", "0") in ("1","true","yes")
+        chunk_idx = 0
+
         async for chunk in response:
             # Pass through immediately so we don't add latency.
             yield chunk
             # Best-effort capture. NEVER raise — a parsing error here would
             # truncate the stream to Cline. All probes wrapped + swallowed.
             try:
-                chunk_dict = chunk.model_dump() if hasattr(chunk, "model_dump") else dict(chunk) if isinstance(chunk, dict) else None
-                if not chunk_dict:
+                # Try multiple coerce strategies — LiteLLM 1.83 returns objects
+                # that may be Pydantic, dataclass, or raw bytes/str (SSE line).
+                # 2026-05-18 v3: a single bytes/str chunk often contains
+                # MULTIPLE `data:` events concatenated. We must scan every
+                # event for msg_id, not just keep the LAST one. chunk_dicts is
+                # a list of every JSON event extracted from this chunk.
+                chunk_dicts = []
+                if hasattr(chunk, "model_dump"):
+                    chunk_dicts.append(chunk.model_dump())
+                elif hasattr(chunk, "__dict__"):
+                    chunk_dicts.append(dict(chunk.__dict__))
+                elif isinstance(chunk, dict):
+                    chunk_dicts.append(chunk)
+                elif isinstance(chunk, (bytes, str)):
+                    raw = chunk.decode() if isinstance(chunk, bytes) else chunk
+                    for line in raw.splitlines():
+                        line = line.strip()
+                        if line.startswith("data:"):
+                            payload = line[5:].strip()
+                            if payload and payload != "[DONE]":
+                                try:
+                                    chunk_dicts.append(json.loads(payload))
+                                except Exception:
+                                    pass
+
+                # Use the LAST parsed event for usage-final (Anthropic's
+                # message_delta is always last and carries cumulative usage).
+                chunk_dict = chunk_dicts[-1] if chunk_dicts else None
+
+                # First-chunk debug dump (gated). One-shot per stream.
+                if chunk_debug and chunk_idx == 0:
+                    try:
+                        with open("/tmp/cline_router_chunk_debug.log", "a") as _f:
+                            _f.write(f"\n--- {time.strftime('%H:%M:%S')} chunk0 ---\n")
+                            _f.write(f"type={type(chunk).__name__}\n")
+                            _f.write(f"dict_keys={list(chunk_dict.keys()) if isinstance(chunk_dict, dict) else 'NONE'}\n")
+                            try:
+                                _f.write(f"dump_short={json.dumps(chunk_dict, default=str)[:1500]}\n")
+                            except Exception:
+                                _f.write(f"repr_short={repr(chunk)[:1500]}\n")
+                    except Exception:
+                        pass
+                chunk_idx += 1
+
+                if not isinstance(chunk_dict, dict):
                     continue
-                # Anthropic message_start event carries the canonical message.id
-                # and the initial usage payload. LiteLLM may surface this two ways:
-                #  (a) top-level `id` set on first chunk
-                #  (b) anthropic-shape preserved under `_hidden_params.message_id`
+
+                # Probe for the Anthropic msg_* id across every shape LiteLLM
+                # uses for /v1/messages streaming. The id lives at one of:
+                #   a) chunk.id (rare; only on Anthropic-native single-shot)
+                #   b) chunk.message.id (Anthropic SSE event passthrough)
+                #   c) chunk.choices[0].delta.message_start.message.id (OpenAI-translated)
+                #   d) chunk._hidden_params.response_id or .message_id
+                #   e) chunk.response_id (LiteLLM internal)
                 if not msg_id_captured:
-                    candidate = (
-                        chunk_dict.get("id")
-                        or chunk_dict.get("response_id")
-                        or (chunk_dict.get("_hidden_params") or {}).get("response_id")
-                        or (chunk_dict.get("_hidden_params") or {}).get("message_id")
-                    )
-                    # Anthropic ids start with "msg_" — filter out chatcmpl-* (OpenAI shape).
-                    if candidate and isinstance(candidate, str) and candidate.startswith("msg_"):
-                        msg_id_captured = candidate
-                # Diagnostics field: only present when our beta header is honored.
-                # LiteLLM tends to stash provider-extra fields in _hidden_params.
+                    candidates = []
+                    candidates.append(chunk_dict.get("id"))
+                    candidates.append(chunk_dict.get("response_id"))
+                    # Anthropic message_start passthrough: {"type":"message_start","message":{"id":"msg_..."}}
+                    msg = chunk_dict.get("message")
+                    if isinstance(msg, dict):
+                        candidates.append(msg.get("id"))
+                    # OpenAI-translated streaming chunk: choices[0].delta.message_start.message.id
+                    choices = chunk_dict.get("choices")
+                    if isinstance(choices, list) and choices:
+                        c0 = choices[0]
+                        if isinstance(c0, dict):
+                            delta = c0.get("delta") or {}
+                            if isinstance(delta, dict):
+                                ms = delta.get("message_start") or {}
+                                if isinstance(ms, dict):
+                                    m_inner = ms.get("message") or {}
+                                    if isinstance(m_inner, dict):
+                                        candidates.append(m_inner.get("id"))
+                                    candidates.append(ms.get("id"))
+                    hp = chunk_dict.get("_hidden_params") or {}
+                    if isinstance(hp, dict):
+                        candidates.append(hp.get("response_id"))
+                        candidates.append(hp.get("message_id"))
+                    # Pick the first Anthropic-shaped id we find.
+                    for cand in candidates:
+                        if isinstance(cand, str) and cand.startswith("msg_"):
+                            msg_id_captured = cand
+                            break
+
+                # Diagnostics field — Anthropic streams it on message_start or
+                # as a separate event. Probe both locations.
                 if diagnostics_captured is None:
                     diag_probe = (
                         chunk_dict.get("diagnostics")
+                        or (chunk_dict.get("message") or {}).get("diagnostics")
                         or (chunk_dict.get("_hidden_params") or {}).get("diagnostics")
                     )
                     if isinstance(diag_probe, dict):
                         diagnostics_captured = diag_probe
-                # Usage: Anthropic message_delta carries cumulative usage at end.
-                # LiteLLM may put it under chunk.usage on final chunk, or under
-                # _hidden_params.usage on Anthropic-passthrough paths. Always overwrite
-                # — last-seen usage wins because Anthropic message_delta is final.
-                u = chunk_dict.get("usage") or (chunk_dict.get("_hidden_params") or {}).get("usage")
-                if isinstance(u, dict) and u:
-                    usage_final = u
+
+                # Usage capture: Anthropic message_delta has final cumulative usage.
+                #   a) chunk.usage (LiteLLM-normalized)
+                #   b) chunk.message.usage (Anthropic message_start initial)
+                #   c) chunk.delta.usage (Anthropic message_delta final)
+                #   d) chunk._hidden_params.usage
+                u_candidates = []
+                u_candidates.append(chunk_dict.get("usage"))
+                if isinstance(chunk_dict.get("message"), dict):
+                    u_candidates.append(chunk_dict["message"].get("usage"))
+                if isinstance(chunk_dict.get("delta"), dict):
+                    u_candidates.append(chunk_dict["delta"].get("usage"))
+                u_candidates.append((chunk_dict.get("_hidden_params") or {}).get("usage"))
+                for u in u_candidates:
+                    if isinstance(u, dict) and u:
+                        usage_final = u  # last write wins; message_delta is final
             except Exception:
                 # Defensive: don't ever break the stream to the user
                 pass

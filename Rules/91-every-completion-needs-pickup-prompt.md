@@ -1,0 +1,107 @@
+# 91 — Every attempt_completion must end with a copy-paste-ready PICKUP PROMPT for a new Cline window
+
+Permanent rule. Workspace-scoped. Source: 2026-05-19 Ruben directive verbatim:
+
+> *"cline rule, in every single task completed window need a pickup prompt to continue that task in a new window. Give a pickup prompt to continue this task in a new window"*
+
+## The bright-line rule
+
+**Every `attempt_completion.result` MUST end with a clearly-labeled, copy-paste-ready "PICKUP PROMPT" block** so Ruben (or a future agent) can paste it into a fresh Cline window and continue the task without re-reading the full conversation.
+
+This rule supersedes the "TO RESUME THIS TASK LATER" one-liner in .clinerules/03 (Resume Kit). The Resume Kit was producing thin one-liners like *"pick up task #X from where we left off"* that didn't carry enough context. The new requirement: a full self-contained prompt block with the task ID, the latest state, the next moves, and any reference IDs the new agent will need.
+
+## Required shape
+
+The block at the END of every attempt_completion.result:
+
+```
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #<task_id> — <short topic in Ruben voice>.
+
+Where we left off (verified <timestamp PT>):
+- <1-3 bullets of the current state, with IDs>
+- <key resource: ticket #N, idea #M, file path, etc.>
+
+Open threads to drive next:
+1. <next thing to do, with the MCP tool / SQL / file path needed>
+2. <next thing>
+3. <next thing>
+
+Reference IDs:
+- Ticket: <ticket_number / id>
+- Ideas filed: <#id1, #id2, ...>
+- Files touched: <path1, path2, ...>
+- Source: <inbound id, voice_call_log id, etc.>
+
+Cross-refs:
+- .clinerules/<relevant rules>
+- HANDOFF entry: <date PT — slug>
+- Ledger entry: cline_task_ledger.md row dated <date PT>
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+```
+
+The double-line divider (═══) at start and end is mandatory so Ruben can spot the block instantly when scrolling.
+
+## What goes in each section
+
+### "Where we left off"
+- One line per resource: ticket status + assignee, idea status, drain count, current % complete, etc.
+- Include actual IDs and exact field values from MCP queries, not vague descriptions
+- Latest verification timestamp PT
+
+### "Open threads to drive next"
+- Numbered 1-N with specific actionable items
+- Each item names the exact MCP tool, SQL, file path, or URL needed
+- Order by priority — the next agent reads top-down
+
+### "Reference IDs"
+- Tickets (number + status)
+- Orchestrator ideas (id + priority + status)
+- Files touched (absolute paths, both Mac-side and WOPR-side)
+- Source incident IDs (email_inbound_log, voice_call_log, ExternshipFormSubmission, etc.)
+- Any other database row that's relevant
+
+### "Cross-refs"
+- .clinerules/ rules invoked or to invoke
+- HANDOFF_NOTES.md entry (if one was written)
+- cline_task_ledger.md row (with date)
+- Related Q-cards / `ruben_questions` entries
+- Related session_handoffs chains
+
+### Final instruction
+- Always include the line about appending to cline_task_ledger.md per .clinerules/07
+- Always include the order-66 reference for clean wrap-up per .clinerules/EXECUTE_ORDER_66
+- If the task involves any specific posture (regulator, refund, etc.) cite the .clinerules/ rule for that posture
+
+## What this rule does NOT do
+
+- Does NOT replace .clinerules/03 (the Resume Kit format). The full attempt_completion.result still has the WHAT/CURRENT STATE/etc. sections. This rule adds the PICKUP PROMPT block AT THE END.
+- Does NOT require a pickup prompt for pure Q&A / read-only diagnostics where nothing in the world changed. Single-line completions are fine.
+- Does NOT require a pickup prompt when the task is fully closed (abandoned by user, all open threads resolved, ledger says `done` with no follow-ups). In those cases the block can read "No further pickup needed — task fully closed."
+
+## Anti-patterns that violate this rule
+
+- ❌ Wrap-up that ends with "TO RESUME THIS TASK LATER" + a one-line slug. That's the .clinerules/03 minimum; this rule requires more.
+- ❌ Vague pickup ("check on the progress"). Be specific: which ticket, which idea, which SQL.
+- ❌ Hiding the pickup prompt in the middle of the body — it MUST be at the END, after all other sections, with the divider.
+- ❌ Skipping the divider lines so the block doesn't stand out in scroll.
+- ❌ Pickup prompt without the reference IDs — the new window can't grep without them.
+
+## Self-check before any attempt_completion
+
+Ask: *"If I paste my completion message into a fresh Cline window right now, can the new agent take meaningful action within 30 seconds without scrolling the previous task history?"*
+
+If no, the pickup prompt isn't ready. Rewrite.
+
+## Source incident
+
+2026-05-19 — End of cline_calderon_2nd_externship_recovery_2026_05_17 chain (after ~3 rounds of Ruben follow-up directives). Ruben asked: *"in every single task completed window need a pickup prompt to continue that task in a new window. Give a pickup prompt to continue this task in a new window."*
+
+## Last updated
+
+2026-05-19 — initial rule per Ruben directive in the Calderon recovery chain.

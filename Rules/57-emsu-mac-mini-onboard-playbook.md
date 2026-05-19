@@ -207,3 +207,112 @@ section as well?"*
 Lives in: ~/Documents/Cline/Rules/ (canonical, git-tracked via
 cline-handoff-relay), synced hourly to Artemis ~/Documents/Cline/Rules/
 so every Cline session anywhere has it.
+
+
+## 2026-05-19 addendum — smart-loop pipeline (writeback + RAG enrichment + LoRA retrain)
+
+The Mac-mini compute pool is no longer just "distributed grinding." It's the
+front-end of the EMSU LLM smart-loop. Adding a mini doesn't just add throughput,
+it makes the production AI smarter every week.
+
+### The pipeline (4 stages, all automated)
+
+Stage 1 (produce): Mini worker or Linux worker claims a job from the pool API,
+executes it (curl / tesseract / ollama depending on capability), POSTs the
+result back to the API.
+
+Stage 2 (writeback): `cron_mini_pool_writeback.php` runs every 5 min, reads
+rows from `emsu_compute_jobs` WHERE `status='done'` AND `writeback_processed_at IS NULL`,
+and routes each result by workload:
+
+- `cross_judge_backfill` -> `orchestrator_llm_shadow_log.cross_judge_grade`
+  + `cross_judge_reason` + `cross_judge_at`, AND seeds `emsu_preference_corpus`
+  with the winning text under `source_kind='cross_judge_preferred'`.
+- `communication_quality_scan` -> new table `email_quality_scores`. If
+  `total < 6/10`, the email body also gets seeded into
+  `emsu_preference_corpus` as `source_kind='negative_example'` so the next
+  LoRA retrain learns to avoid that style.
+- `pdf_ocr` -> new table `pdf_ocr_text` (with source_kind enum:
+  grievance / vaccination / cert / student_doc / other), AND seeds extracted
+  text into `emsu_preference_corpus` as `source_kind='student_document'`
+  so RAG can retrieve it.
+- `link_probe` -> new table `link_health` (url_hash unique, ok_count,
+  fail_count, flagged_at). If a broken link appears in `email_outbound_log`
+  body in the last 30 days, the row gets `flagged_at=NOW()` and an
+  `orchestrator_event_log` row is filed at severity=warning.
+
+After writeback, each job's `writeback_processed_at` is stamped so the next
+run skips it. Idempotent — re-running is safe.
+
+Stage 3 (RAG enrichment): the existing OpenAI embedding cron picks up new
+`emsu_preference_corpus` rows where `embedded_at IS NULL`, computes
+embeddings, and stores them in `embedding_blob`. RAG retrieval gets richer
+automatically — zero new code needed for stage 3.
+
+Stage 4 (weekly LoRA retrain): idea #5229 (P1, approved). Sunday Artemis cron
+queries the last-7d corpus rows, runs a LoRA training pass on Artemis B70
+GPUs, smoke-tests the new adapter, and on pass deploys via `ollama create
+emsu-qwen2.5-coder:7b-lora-YYYY-MM-DD`. Updates `orchestrator_llm_routes`
+to point production at the new adapter. Monday morning email to Ruben with
+the week-over-week win-rate delta.
+
+### What this gives the production AI
+
+- Every cross-judge result = one more preferred-completion training pair
+- Every low-quality email = one more "avoid this style" negative example
+- Every OCR'd grievance / vax form = one more RAG-retrievable document
+- Every broken link in outbound email = one more flag for Vicky review
+
+Corpus grows roughly 1000-5000 rows/week per active mini. With 4 minis live
+that's 4K-20K rows/week — meaningful weekly LoRA improvement.
+
+### Schema reference
+
+| Table | Purpose |
+|---|---|
+| `admin_portal.emsu_compute_jobs` | Job queue (workload, payload_json, status, result_json, writeback_processed_at — added 2026-05-19) |
+| `admin_portal.emsu_compute_workloads` | Workload registry + capability flags (needs_ollama / needs_tesseract / needs_whisper) |
+| `admin_portal.email_quality_scores` | Target for communication_quality_scan |
+| `admin_portal.pdf_ocr_text` | Target for pdf_ocr |
+| `admin_portal.link_health` | Target for link_probe (with flagged_at for ticket review) |
+| `admin_portal.emsu_preference_corpus` | RAG + LoRA training corpus (writeback uses meta_tagged_by='mini_pool_writeback') |
+
+### Cron stack (www-data crontab)
+
+```
+*/5 * * * * /usr/bin/php /var/www/emtskills/cron/cron_mini_pool_refill.php > /dev/null 2>&1
+*/5 * * * * /usr/bin/php /var/www/emtskills/cron/cron_mini_pool_writeback.php >> /var/log/cron_mini_pool_writeback.log 2>&1
+```
+
+Refill scans the EMSU stack for new jobs; writeback drains completed jobs
+into the smart-loop tables.
+
+### Dashboard
+
+https://emsuniversity.com/emtskills/routes/lora_fleet.php?tab=minis now shows
+(2026-05-19 patch by cline_pool_widget_2026_05_19):
+
+- Live queue depth, in-flight count, done-24h, written-back-24h, live-workers (last 10 min)
+- Per-workload table: queued / claimed / done-24h / written-back-24h / failed / done-total
+- Active workers table: worker name, jobs/24h, throughput (jobs/hr), last-seen, live/idle status
+
+That's the visibility layer for the smart-loop. Refresh the page anytime to
+see what the pool just produced.
+
+### When does this rule fire for next Cline?
+
+- **Adding a new mini**: still `curl -fsSL emsuniversity.com/m | bash` per the
+  main rule. The /m installer wires the worker via launchd. Nothing else to do.
+- **Adding a new workload class**: INSERT row into `emsu_compute_workloads`
+  with needs_ollama / needs_tesseract / needs_whisper flags; the worker auto-
+  detects caps and only claims jobs it can handle. Then add a writeback handler
+  in `cron_mini_pool_writeback.php` to route results to the right smart-loop table.
+- **Adding a Linux worker** (Joshua / Houston / future): see idea #5230 for
+  the SSH key bootstrap that unblocks the apt-install + systemd-unit playbook.
+- **Tuning LoRA retrain**: see idea #5229.
+
+### Cross-references (smart-loop)
+
+- orchestrator_idea #5178 — original compute pool architecture (P0, approved)
+- orchestrator_idea #5229 — weekly LoRA retrain pipeline (P1, approved)
+- orchestrator_idea #5230 — Joshua / Houston SSH key bootstrap (P1, approved)

@@ -8,15 +8,39 @@ LaRon escalated to a formal-letter inbound with a 3-business-day deadline. The s
 
 This rule codifies the policy treatment Ruben confirmed on the LaRon case so that future Cline sessions (and downstream automation) handle these consistently.
 
-## Recognition criteria — when this rule applies
+## §0 — Bucket precedence check (REQUIRED FIRST, added 2026-05-19)
+
+**Before applying this rule, run the .clinerules/103 TECHNICAL_FAIL trigger first.**
+If the student completed paperwork past the time window (>60 days after
+`scheduled_didactic_completion_date` OR >30 days after `course_end_date`),
+they belong in TECHNICAL_FAIL (default = student fault) — NOT in this rule.
+Only fall through to rule 18 if rule 103 does not fire.
+
+Materially, the LaRon Tarkington source incident from 2026-05-04 would
+have classified as TECHNICAL_FAIL under the new framework: 25 forms all
+submitted same-day on 3/19/26, 95 days past didactic and 64 days past
+course_end_date. He was treated as rule-18 EMSU-fault because his forms
+were UNGRADED at the time of contact. The grading-vs-submission timing
+matters but does not change the fault attribution: if the student
+submitted late on their own initiative, the comms-log scan (rule 103)
+decides whether EMSU implied an extension. Absent that, late
+self-submission = student fault.
+
+Per Ruben directive 2026-05-19: "He is a technical fail because he
+completed more than 60 days after the didactic end date, 30 days after
+the course end date, this needs to be in a different bucket / rule 18
+needs modification."
+
+## Recognition criteria — when this rule applies (after §0 precedence check)
 
 A student is in the EMSU-fault externship-paperwork-stuck class if ALL of these are true:
 
 - `Students.course_end_date < CURDATE()`
 - `Students.drop_date IS NULL` AND `fail_date IS NULL` AND `transfer_date IS NULL` AND `nremt_cleared_date IS NULL` AND `is_duplicate = 0`
-- ≥5 rows in `ExternshipFormSubmission` with `grade_status = 'ungraded'`
+- ≥5 rows in `ExternshipFormSubmission` with `grade_status = 'ungraded'` **at the time of EMSU contact** (this is the key distinction from rule 103 — under rule 18, EMSU is on the hook because we sat on grading)
 - 0 rows in `ExternshipPlacement` for that `student_id`
 - 0 active rows in `ExternshipRequest` (status IN pending/assigned/confirmed)
+- **AND** rule 103 (TECHNICAL_FAIL) did NOT fire — i.e. the late-submission window threshold was not breached, OR it was breached but the comms-log scan flipped the case to EMSU-fault
 
 The canonical SELECT lives in HANDOFF_NOTES under "2026-05-04 02:39 PT — LaRon Tarkington case closed".
 

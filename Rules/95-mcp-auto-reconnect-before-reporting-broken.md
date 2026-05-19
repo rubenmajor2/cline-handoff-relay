@@ -165,7 +165,69 @@ reconnect sequence before declaring the MCP broken.
 - Rule 100 — pty-host saturation fingerprint (related diagnostic
   algorithm for "things look broken but tunnel is the cause")
 
+## 2026-05-18 19:00 PT addendum — when tunnel is healthy but MCP still times out
+
+If steps 1-4 above show the tunnel is healthy (probe returns HTTP 200 fast)
+but Cline still emits `-32001 Request timed out`, the bug is **server-side
+in the MCP stdio child, not in the tunnel**. Three causes seen on EMSU:
+
+1. **Node ESM import without `.js` extension** in the MCP server's compiled
+   `build/index.js`. The child crashes instantly with `ERR_MODULE_NOT_FOUND`.
+   supergateway holds the HTTP connection open forever instead of returning
+   a JSON-RPC error (see upstream issue: https://github.com/supercorp-ai/supergateway/issues/139).
+   - Detection: `ssh wopr "sudo journalctl -u mcp-<name>.service -n 50 --no-pager | grep -iE 'ERR_MODULE|Error \['"`
+   - Fix: add `.js` suffix to the offending `import` line in both
+     `build/index.js` (immediate) and `src/index.ts` (regression-proof).
+
+2. **systemd `TasksMax` budget exhausted** by Cline's retry storm crashing
+   the child repeatedly. Errors switch from the real cause to
+   `pthread_create: Resource temporarily unavailable`.
+   - Detection: `ssh wopr "sudo journalctl -u mcp-<name>.service -n 50 | grep -iE 'pthread_create|EAGAIN'"`
+   - Fix: bump TasksMax in `/etc/systemd/system/mcp-<name>.service.d/limits.conf`
+     from default 400 → 2000, then `daemon-reload + reset-failed + restart`.
+
+3. **Service in `activating (auto-restart)` crash-loop**. `systemctl is-active`
+   reports `activating` not `active`. Means systemd is restarting the child
+   every few seconds but it can't stay up.
+   - Detection: `ssh wopr "systemctl is-active mcp-<name>.service"`
+   - Fix: read the journalctl, fix the real bug, then `systemctl restart`.
+
+**Mandatory diagnostic order** when Cline shows persistent `-32001` and the
+tunnel probe is healthy:
+
+```bash
+# 1. Service state
+ssh wopr "systemctl is-active mcp-<name>.service"
+# 2. Recent crash log
+ssh wopr "sudo journalctl -u mcp-<name>.service -n 50 --no-pager | tail -30"
+# 3. TasksMax + current
+ssh wopr "sudo systemctl show mcp-<name>.service -p TasksCurrent -p TasksMax"
+```
+
+Three commands, ~5 seconds total. Do this BEFORE anything else when the
+tunnel is healthy but Cline times out. Saves hours.
+
+## Source incident addendum (2026-05-18)
+
+Today's incident burned ~3 hours chasing the tunnel layer when the real
+bug was a missing `.js` extension in
+`/var/www/emtskills/mcp-servers/emsu-operations/build/index.js` line 18
+(`import './tools/moodle_unstick'` — should be `./tools/moodle_unstick.js`).
+The TS source `src/index.ts` line 28 had the same bug.
+
+Compounded by TasksMax=400 being too low for Cline 3.83's retry-storm
+behavior (stateless streamableHttp = one node spawn per retry).
+
+Fix shipped: extension added in both files, TasksMax bumped 400 → 2000,
+upstream issue #139 filed against supercorp-ai/supergateway.
+
+**Lesson for future Cline:** the diagnostic order above (journalctl FIRST
+when tunnel is healthy) is the durable lesson. The supergateway upstream
+fix would also surface this immediately, but until that ships, journalctl
+is the single source of truth.
+
 ## Last updated
 
-2026-05-18 17:55 PT — initial rule per Ruben directive in the
-emsu-operations MCP wedge incident.
+2026-05-18 19:00 PT — added "tunnel healthy but MCP times out" diagnostic
+order + source incident addendum. Source: emsu-operations crash-loop from
+missing `.js` ESM extension + TasksMax thread exhaustion.

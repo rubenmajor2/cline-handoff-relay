@@ -3,14 +3,14 @@
 <!-- RULE_VIOLATION_COUNTERS:BEGIN -->
 > ## ⚠️ LIVE VIOLATION COUNTER — auto-updated every 30 min
 > 
-> **This rule is being violated.** Detector ran at 2026-05-19 21:20:37 PDT.
+> **This rule is being violated.** Detector ran at 2026-05-19 22:20:44 PDT.
 > 
-> - last 7 days: **806** violation(s)
-> - last 30 days: **3030** violation(s)
-> - all-time: **3030** violation(s)
+> - last 7 days: **808** violation(s)
+> - last 30 days: **3046** violation(s)
+> - all-time: **3046** violation(s)
 >
->   - explicit Ruben asks for subagent ignored (30d): **300**
->   - research/multi-step questions answered without subagent (30d): **2730**
+>   - explicit Ruben asks for subagent ignored (30d): **303**
+>   - research/multi-step questions answered without subagent (30d): **2743**
 >
 > If you (Cline) are reading this rule, you are part of the count. The detector
 > at `~/Documents/Cline/rule_violations/scan.py` looks at every Cline task on
@@ -67,6 +67,8 @@ Subagent plan: skip, exception #<1-5> (<name>) — <one-line why this task genui
 ```
 
 That's it. One line. Same shape and same forcing function as rule 53's "Dispatching X for prompt N" narration which already works reliably.
+
+**CRITICAL: the plan line is NOT a substitute for a tool call.** It is a PREFIX to one. The same response that contains the plan line MUST also contain a `<use_subagents>` or other tool block. If you emit the plan line WITHOUT a tool block, Cline injects `[ERROR] You did not use a tool!` and the next response that ALSO has only the plan line trips the same error, then YOLO fires on the 3rd no-tool-use strike. Observed 2 fresh tasks die this way on 2026-05-19 (tasks 1779253360281, 1779252924920) — both emitted "Subagent plan: skip, exception #N — first move is X" as prose with no actual tool call attached. The fix: emit the plan line AND the tool that executes "first move is X" in the SAME response. If the plan says "skip", the next thing in the SAME response must be the actual operational tool (execute_command, read_file, MCP wrapper, etc.) — not a description of it.
 
 **Why this works where the v2 default doesn't:**
 

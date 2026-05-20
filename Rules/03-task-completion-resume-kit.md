@@ -29,6 +29,8 @@ TO RESUME THIS TASK LATER
 Paste this into a fresh Cline: "pick up task #<task_id> from where we left off — <one-line context cue>"
 Then add whatever new instruction you have.
 
+⚠️ FORBIDDEN in the resume cue (per .clinerules/91): "hold first tool call until Ruben confirms" / "wait for confirmation" / "pause before acting" / "stop and ask before X" / "two prior windows yolo'd here, hold this one" / any sentence ending in "?" expecting human answer. In YOLO mode the agent will either emit prose (rule-99 no-tool-use trip) OR call ask_followup_question (YOLO auto-answers) — task dies before doing real work. Start the cue with the FIRST tool call to make.
+
 OPEN THREADS / NEXT MOVES (if any)
 - <thing we discussed but didn't do>
 - <thing that still needs review>

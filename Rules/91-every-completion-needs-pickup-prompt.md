@@ -91,6 +91,30 @@ The double-line divider (═══) at start and end is mandatory so Ruben can s
 - ❌ Hiding the pickup prompt in the middle of the body — it MUST be at the END, after all other sections, with the divider.
 - ❌ Skipping the divider lines so the block doesn't stand out in scroll.
 - ❌ Pickup prompt without the reference IDs — the new window can't grep without them.
+- ❌ **NEVER write "hold first tool call until Ruben confirms" / "wait for confirmation" / "pause before acting" / "stop and ask before X"** anywhere in the pickup prompt. In YOLO mode this is a contradiction in terms — the agent either emits prose (rule-99 no-tool-use trip) OR calls `ask_followup_question` (YOLO auto-answers it instantly). Either way the task dies before doing real work. See "Forbidden phrases" below.
+
+## Forbidden phrases in pickup prompts (added 2026-05-19 after 2× auto_respond_q YOLO trips)
+
+Any pickup prompt containing these phrases will kill a fresh YOLO-mode window before it can take a single action:
+
+- "hold first tool call until [X]" / "hold off until [X]"
+- "wait for [Ruben/me/confirmation] before acting"
+- "pause before [action]" / "stop and confirm before [action]"
+- "confirm before proceeding" / "verify [X] is no longer in effect"
+- "ask first if [condition]"
+- "two prior windows yolo'd here, hold this one" — recursive bug
+- Any sentence ending with "?" that's intended to be answered by the human
+
+The agent that picks up the prompt has authority to act. Opening the window IS the confirmation. Pickup prompts must START with the FIRST tool call to make, not with a wait-state.
+
+### Right shape
+
+```
+First tool call: `cv30BN0mcp0server_status` to confirm WOPR is up.
+Then: `cv30BN0mcp0check_student student_id=8150598` to verify the patch landed.
+```
+
+NOT: "Hold first tool call until Ruben confirms it's safe to proceed. Then run server_status."
 
 ## Self-check before any attempt_completion
 

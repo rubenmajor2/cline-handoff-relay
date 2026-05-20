@@ -125,3 +125,42 @@ Before running anything that touches a remote shell:
 ## Last updated
 
 2026-05-02 — initial rule. Source incident: cline-handoff-relay-bootstrap on Artemis. The first synchronous SSH heredoc hung at the 30s wall on a git credential prompt; switching to scp-script + nohup launch + sleep+tail polling completed the same work cleanly in ~25 seconds.
+
+## 2026-05-19 17:47 PT addendum — MCP MISSING from the Cline session roster (client-side startup race)
+
+Different failure class from the tunnel-wedged / supergateway-crash / .js-ESM cases above. This one is:
+
+- Server-side MCP is healthy (HTTP 200 on /mcp initialize)
+- Tunnel is healthy (lsof shows ssh listening on the right ports)
+- settings.json correctly lists the server
+- BUT the Cline session's function roster (the `<functions>` block in the system prompt at session start) does NOT include the expected `cvXXXX0mcp0*` (or whichever prefix) tools
+
+Symptom: one Cline window has the tools, another window opened minutes later does not. The "missing" window will silently fall back to SSH/raw SQL workarounds for every operation that should have used an MCP wrapper, which violates .clinerules/32 + 40 and burns tokens for no reason.
+
+### Required first move when this is detected
+
+If at session start I check my available tools and a CRITICAL MCP (emsu-operations, ruben-orchestrator, mysql, etc.) is missing from the function roster:
+
+1. **STOP. Do not start SSH-grinding workarounds.**
+2. **Tell Ruben which MCP is missing**, in plain English: "emsu-operations MCP isn't registered in this session — recommend Cmd+Shift+P → Developer: Reload Window."
+3. **Wait for Ruben's call.** If he reloads or moves the work to a healthy window, resume. If he says "ship it anyway via SSH" — that's explicit Y per rule 38, OK to fall back.
+4. **Do NOT** silently work around it for the rest of the session. SSH-grinding tools that should be MCP calls is a rule-32 violation. Token waste + audit-trail gap + agent-training regression (per .clinerules/40, the 7B-LoRA never sees what it should be learning).
+
+### When this rule does NOT fire
+
+- Optional MCPs that aren't needed for the current task (e.g. context7 missing on an EMSU-ops task doesn't matter).
+- MCPs that are exposed but their individual tools are erroring (different problem — that's a per-tool failure, fall back per rule 99 retry ladder).
+- One-off tasks where Ruben explicitly says "just SSH, don't bother with MCP".
+
+### How to self-check at session start
+
+When the user gives a non-trivial first message, before any tool call ask:
+*"Does this task touch a domain that requires a specific MCP (emsu-operations for EMSU lookups, ruben-orchestrator for ideas/decisions, mysql for ad-hoc DB, etc.)?"* If yes, scan the available tool prefixes in the function list. If the expected MCP is missing, surface to Ruben FIRST.
+
+### Source incident
+
+2026-05-19 cline_pickup hayden-kelleher-fast-track-2026-05-18 session. Opened a window to pick up the EMT registration webhook bug. My function roster had ruben-control, ruben-orchestrator, mysql, github, fetch, google-drive, imessage, kaizen, context7, memory, sequentialthinking, brave-search — but NOT emsu-operations (cv30BN0mcp0*). The MCP server was healthy (verified HTTP 200 in 139ms on direct POST). Ruben's other window at the same time DID have emsu-operations. So this was a client-side startup race in Cline 3.83.
+
+What I did wrong: kept using `ssh wopr "mysql ..."` and `ssh wopr "sudo cat ..."` for everything, including operations like check_student / search_tickets / safe_deploy_file that the MCP has dedicated tools for. Ruben caught it: *"You already have access to tucsonemt.com - it's in the MCP"* — meaning I should have noticed the missing MCP at session start and reloaded, not SSH-ground around it for 45 minutes.
+
+The right move was: at first sign of "I need emsu-operations and it's not in my tool list" — tell Ruben, recommend window reload, wait. ~5 seconds to fix vs. 45 min of token-wasting workarounds.

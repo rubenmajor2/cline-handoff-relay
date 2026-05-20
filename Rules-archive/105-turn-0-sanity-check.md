@@ -101,3 +101,32 @@ Ask: *"Did I run the turn-0 sanity check this session?"* If no, do it now. If I'
 ## Last updated
 
 2026-05-19 — initial rule. Source: 27% turn-0 YOLO trip rate from cline_learner_report.php. Filed at status=approved per .clinerules/38 + 93.
+
+## 2026-05-20 addendum — MCP loading lag warmup
+
+Cline 3.84 establishes streamableHttp sessions to all ~15 registered MCPs SEQUENTIALLY on window open. This takes 30-45 seconds during which any tool call BLOCKS on the in-progress handshake (no error, just stalls). Per session start:
+
+**Mandatory first tool call before doing real work**: fire a single fast read-only MCP call to warm up the panel. Recommended:
+
+```
+cv30BN0mcp0server_status
+```
+
+This (a) confirms emsu-operations is responsive, (b) gives the other MCPs ~5s of parallel time to finish their handshakes, and (c) is harmless if the panel is already warm. If `server_status` returns in <2s the panel is warm; if it takes 20-40s, that's a normal cold-load.
+
+**Expected MCP roster post-2026-05-20** (per cline_mcp_settings.json):
+- clinerules (port 7860)
+- emsu-operations (7841)
+- ruben-control (7842)
+- ruben-orchestrator (7843)
+- google-drive (7844)
+- imessage-reader (7845)
+- mysql (7846)
+- github (7847)
+- fetch (7848)
+- imessage (7851)
+- memory (7852)
+- sequential-thinking (7853)
+- context7 (7854)
+- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaiz- kaicident dated 2026-05-20.
+

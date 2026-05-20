@@ -125,6 +125,7 @@ of injected rules instead of ~1.2MB.
 | 104 | artemis-freshness-self-check | Verify learner pipeline before non-trivial work |
 | 105 | turn-0-sanity-check | MCP roster, call_ollama, tunnel checks |
 | 106 | ruben-runtime-quickref | Agents/crons/tables/kill switches |
+| 107 | emsu-payment-architecture-canonical-map | Authnet/QB/Affirm/attribution pipeline + canonical files, tables, MCP wrappers — READ FIRST for any payment-related task |
 
 ### Compliance + regulatory
 | 08 | regulator-noi-response-posture | NOI response 15 postures + anti-patterns |

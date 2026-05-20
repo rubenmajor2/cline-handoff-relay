@@ -248,15 +248,41 @@ function reindex(db, verbose = false) {
     };
 }
 // ─── Bootstrap ─────────────────────────────────────────────────────────────
+// 2026-05-19 v3 fix: install error handlers BEFORE doing anything else.
+// supergateway 3.4.3 stateless mode synthesizes one initialize per non-init
+// request, which fills stdio buffers and triggers EPIPE/ECONNRESET in the
+// child. Without these handlers the node child dies with "Pipe.onStreamRead"
+// trace and Cline windows go yellow.
+process.stdin.on("error", (e) => {
+    console.error(`[clinerules-mcp] stdin error (swallowed): ${e?.code || e?.message}`);
+});
+process.stdout.on("error", (e) => {
+    console.error(`[clinerules-mcp] stdout error (swallowed): ${e?.code || e?.message}`);
+});
+process.on("uncaughtException", (e) => {
+    console.error(`[clinerules-mcp] uncaughtException (swallowed): ${e?.message || e}`);
+});
+process.on("unhandledRejection", (e) => {
+    console.error(`[clinerules-mcp] unhandledRejection (swallowed): ${e?.message || e}`);
+});
 const db = new better_sqlite3_1.default(DB_PATH);
 db.pragma("journal_mode = WAL");
 initSchema(db);
-const stats = reindex(db, true);
 // CLI mode: `node build/index.js --reindex-only`
 if (process.argv.includes("--reindex-only")) {
+    const stats = reindex(db, true);
     console.error(JSON.stringify({ ok: true, ...stats }, null, 2));
     process.exit(0);
 }
+// Phase 3 fix (2026-05-19): defer reindex until AFTER connect(), so the
+// MCP child accepts incoming initialize requests from supergateway without
+// the 200ms+ startup stall that piles up backlog from multiple Cline
+// windows hammering port 7860. The first lookup will already have a
+// cached index from any prior run; the deferred reindex catches new rules
+// on a 50ms idle delay.
+let stats = {
+    count: 0, total_bytes: 0, total_tokens: 0, hardfloor_count: 0,
+};
 // ─── MCP server ────────────────────────────────────────────────────────────
 const server = new mcp_js_1.McpServer({
     name: "clinerules-mcp",
@@ -458,5 +484,30 @@ server.tool("clinerules_stats", "Quick stats on the rules corpus + recent lookup
 (async () => {
     const transport = new stdio_js_1.StdioServerTransport();
     await server.connect(transport);
-    console.error(`[clinerules-mcp] v${VERSION} ready · ${stats.count} rules indexed · DB ${DB_PATH}`);
+    // 2026-05-19 v2 fix (Phase 3 follow-up): do NOT reindex at startup.
+    // The SQLite index from the previous run is already populated. Any stale
+    // entry will be fixed on the next `clinerules_reindex` tool call or by
+    // the background interval below. Cline's MCP initialize timeout is short
+    // and any startup work (even 200ms) was racing it.
+    const initialCount = db.prepare(`SELECT COUNT(*) AS n FROM rules`).get()?.n ?? 0;
+    console.error(`[clinerules-mcp] v${VERSION} stdio connected · ${initialCount} rules from cached index · ready to serve`);
+    // Background reindex every 5 min picks up any new/edited rule.
+    setInterval(() => {
+        try {
+            stats = reindex(db, false);
+        }
+        catch (e) {
+            console.error(`[clinerules-mcp] background reindex failed: ${e?.message}`);
+        }
+    }, 5 * 60 * 1000);
+    // Also do one reindex 10s after startup, so a fresh install is up-to-date
+    // soon after first launch (but well after any init handshake is done).
+    setTimeout(() => {
+        try {
+            stats = reindex(db, true);
+        }
+        catch (e) {
+            console.error(`[clinerules-mcp] post-startup reindex failed: ${e?.message}`);
+        }
+    }, 10_000);
 })();

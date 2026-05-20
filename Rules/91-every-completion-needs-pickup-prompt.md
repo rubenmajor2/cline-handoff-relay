@@ -126,6 +126,22 @@ If no, the pickup prompt isn't ready. Rewrite.
 
 2026-05-19 — End of cline_calderon_2nd_externship_recovery_2026_05_17 chain (after ~3 rounds of Ruben follow-up directives). Ruben asked: *"in every single task completed window need a pickup prompt to continue that task in a new window. Give a pickup prompt to continue this task in a new window."*
 
+## Budget-watchdog tier mandate (added 2026-05-20, idea #5354 Layer 2)
+
+The Mac-side `cline_budget_watchdog` (launchd `com.emsu.cline-budget-watchdog`, every 60s) writes `/tmp/cline_budget_status.json` with the current task's context_size + tier (GREEN <500K, YELLOW 500K-800K, RED 800K-900K, IMMINENT >900K).
+
+**Mandatory durable-artifact behavior by tier:**
+
+- **GREEN** — normal operation. No special action.
+- **YELLOW** — before the next risky/long tool call (subagent dispatch, large read, multi-file build), write a durable artifact: append a row to `cline_task_ledger.md`, OR a HANDOFF_NOTES entry, OR an `orchestrator_ideas` row capturing current state. The window may not survive to attempt_completion.
+- **RED** — STOP non-essential work. Immediately write a pickup-prompt-shaped HANDOFF entry + ledger row + (if applicable) a status comment on the active idea. THEN consider whether to attempt_completion early rather than push deeper.
+- **IMMINENT** (>900K) — call `attempt_completion` next. The pickup prompt IS the durable artifact. Do not start any new tool chain.
+
+**Self-check on every tool call past YELLOW:** "If this window dies right now, did I leave a row somewhere that lets the next window pick up?" If no → write the artifact before the next risky call.
+
+The watchdog also fires an osascript notification at RED/IMMINENT so Ruben sees the same signal in real time.
+
 ## Last updated
 
 2026-05-19 — initial rule per Ruben directive in the Calderon recovery chain.
+2026-05-20 — added budget-watchdog tier mandate (Layer 2 of idea #5354).

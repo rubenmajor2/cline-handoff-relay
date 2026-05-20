@@ -213,3 +213,43 @@ silent-dropout class.
 clean (no EMSU-implied extension found across voice, email, chat,
 livechat, SMS, iMessage, Discord, staff-chat, ticket-comments,
 ai_learning_queue). He's the canonical TECHNICAL_FAIL clean case.
+
+## 2026-05-19 16:21 PT addendum — every rule 103 disposition reply MUST CC Vicky + Jon + info@
+
+Per Ruben directive in cline_jesus-ortiz-stuck-2026-05-19 wrap-up: *"Vicky should be
+getting copies, so should info and Jon. So probably if those replies are hitting,
+then that needs to occur as rule."*
+
+Any auto-fired rule 103 disposition outbound (whether clean student-fault path
+OR EMSU-fault flipped path) MUST include on CC:
+
+- `vyu@emsuniversity.com` (Vicky — CS Supervisor, owns the disposition queue)
+- `jthompson@emsuniversity.com` (Jon — VP Ops, visibility on academic-class cases)
+- `info@emsuniversity.com` (institutional inbox, audit trail)
+
+This applies regardless of which disposition path fires. Rationale:
+
+1. **EMSU-fault flipped path**: Vicky already owns the follow-through (refresher
+   enrollment at $0, Moodle reactivation), but Jon and info@ get visibility so
+   the class is tracked at exec + institutional level.
+2. **Clean student-fault path** (no comms-log flip): Vicky/Jon/info@ still need
+   to know a TECHNICAL_FAIL student wrote in. Two reasons: (a) it's a small,
+   regulator-tracked class where staff awareness matters, (b) if the student
+   replies challenging the disposition, Vicky needs the prior thread already
+   in her inbox to respond quickly.
+
+Companion to .clinerules/96 (promise-of-staff-followup CC staff). The 96 rule
+fires when the body contains "Vicky will follow up" language — this rule 103
+addendum is stricter: CC happens on EVERY rule 103 outbound, regardless of
+whether the body names a staff member.
+
+When idea #5291 ships the autonomous scan service, the CC injection MUST be
+coded into the outbound mailer call. Acceptance: every auto-fired rule 103
+disposition reply has all three addresses on CC at send time.
+
+Until #5291 ships and Cline/Email-Agent fires the disposition manually, the
+human composer (Cline included) must add the CC at draft time.
+
+## Last updated
+
+2026-05-19 — 16:21 PT addendum added per Ruben directive in same session.

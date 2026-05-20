@@ -108,3 +108,82 @@ Ruben directive verbatim: *"if we will spend 10K in 30days and it tries to sprea
 ## Last updated
 
 2026-05-17 11:40 PT — initial rule per Ruben directive in #fleet-agent-runaway-2026-05-17. Pair-shipped with idea #4815 for the executable code change.
+
+## 2026-05-19 17:30 PT addendum — Fleet Agent autonomous BUILD authority for RAG/backtest validation work
+
+Source incident: 2026-05-19 cline_ship_5010 session. Ruben directive verbatim:
+> *"these open threads all Fleet Agent should be able to built 1-4 approved autonomous - please update Fleet Agent rules properly"*
+
+Today's pattern (which should have been Fleet-autonomous, end-to-end):
+1. Corpus rebuild ships (#5009) → Fleet should AUTO-fire $4 validation backtest (#5010) within 1 cron tick
+2. Backtest output lands → Fleet should AUTO-parse per-intent W+T and act per .clinerules/29
+3. Enrollment intent shows 50% (inconclusive_middle) → Fleet should AUTO-queue n=200 confirmation backtest ($8)
+4. If confirmation crosses 55% → Fleet should AUTO-flip orchestrator_llm_routes entry for that intent (reversible per-row UPDATE)
+5. If aggregate W+T < 45% → Fleet should AUTO-file follow-up improvement idea (e.g. RAG-v3 truncation #5310) AT APPROVED TIER and ship it
+
+NONE of this is "irreversibility hard-floor" per .clinerules/29. Every step is single-row reversible:
+- Backtest = read-only CLI run, $4 cost, output to /tmp
+- Route flip = one UPDATE on orchestrator_llm_routes
+- Idea file = one INSERT at approved tier
+- RAG-v3 code change = `EmsuRagRetriever.php` truncation, safe-deploy bak chain
+
+### Fleet's autonomous-BUILD authority is HEREBY EXPANDED to cover
+
+When `fleet_maintenance_eval_enabled=true` AND `fleet_segment_action_enabled=true` (both currently true), Fleet Agent has standing autonomous authority to:
+
+**(a) Auto-fire ANY sub-$50 validation/measurement job** triggered by:
+- An orchestrator_ideas row transitioning to status=deployed AND title regex matching `(rebuild|retrain|reembed|new_corpus|schema_change|weight_change|truncate|cap)`
+- A new RAG/A-B output file landing under `/tmp/backtest_*` or `/tmp/phase2b_*`
+- A new corpus row insert event in emsu_preference_corpus (post-rebuild signal)
+
+**(b) Auto-execute APPROVED-tier ideas tagged for Fleet** when:
+- `status='approved'` AND `priority IN ('P0','P1')` AND `estimated_action_cost_usd <= 50` AND `dev_stage IN ('ready_for_review','idle')` AND title/description contains `fleet_auto_eligible:true` OR matches the regex above
+- Per .clinerules/38: Ruben-asked tier (approved+autonomous) = ship without further nudge
+- This includes single-file code edits (e.g. RAG-v3 truncation) IF they ship via safe-deploy CAS with a bak rollback file
+
+**(c) Auto-act on per-intent W+T segments from latest backtest output** per .clinerules/29 thresholds, when n>=10 per segment:
+- W+T ≥ 55% → auto-flip surface+intent in orchestrator_llm_routes (autonomous tier, reversible)
+- W+T 45-55% → auto-queue n=200 confirmation backtest on that intent (sub-$50)
+- W+T < 45% AND delta_vs_baseline ≤ -10pp → auto-file P0 investigation idea + flag stuck
+- W+T < 45% otherwise → archive, no action
+
+**(d) Auto-build follow-up improvement ideas at APPROVED tier** when a backtest fails the 55% threshold and the fix is a known pattern (e.g. snippet truncation, weight retuning, source-kind exclusion). Cap: 1 new auto-build idea per parent-idea, per 24h, capped at $50 estimated_action_cost_usd.
+
+### Fleet still must NOT do (irreversibility hard-floor preserved)
+
+- Flip `student_ai_rag_enabled=true` on a customer-facing surface aggregate (always requires per-intent W+T ≥55% per (c), never on aggregate alone)
+- Spend > $50 per single action without surfacing
+- Touch any forbidden_patterns list item (refund, billing, student records, Moodle grades, WOPR production PHP, etc per `ruben_autonomous_forbidden_patterns`)
+- Send external comms to students/staff/regulators
+- Disable the fleet_maintenance_eval or fleet_segment_action kill switches themselves
+
+### Required implementation in cron_fleet_agent.php (next coding session)
+
+1. New scanner: every cron tick, scan `orchestrator_ideas` WHERE `status='approved' AND priority IN ('P0','P1') AND dev_stage IN ('ready_for_review','idle') AND estimated_action_cost_usd <= 50 AND created_by_agent NOT LIKE 'fleet_%' AND auto_act_quarantined=0` — pick eligible, fire build via existing act-mint or local cron paths
+2. New scanner: every cron tick, glob `/tmp/backtest_*_n*.json` last 24h, parse summary.topics, act per (c) above with one fleet_decision_log row per acted segment
+3. Idempotency: Fleet's own auto-fired actions tag `created_by_agent='fleet_segment_action'` or `fleet_maintenance_eval`, prevents self-loop on rescan
+4. Audit: every action logs to `fleet_decision_log` with action_type, target_idea_id, target_intent, action_cost_usd, reversal_command
+
+### Acceptance test
+
+After Fleet code ships:
+- File a test idea: title="Test corpus reweighting auto-trigger", status=approved, priority=P1, estimated_action_cost_usd=5, dev_stage=ready_for_review
+- Within 5 min (next tick), Fleet should fire the matching action and log to fleet_decision_log
+- Reversal: `UPDATE orchestrator_config SET config_json=JSON_SET(config_json,'$.fleet_maintenance_eval_enabled',false) WHERE id=1` (kill switch already exists)
+
+### Why this clinerule update matters
+
+This rule has the operational language Fleet's code path needs to reference (the regex triggers, the per-tier thresholds, the irreversibility carve-outs). Without an explicit rule grant, Cline keeps defaulting to "file an approved idea and walk away" instead of "Fleet is authorized to build this autonomously."
+
+Companion ideas (filed 2026-05-19):
+- **#5221** (existing, approved P1) — Fleet auto-approve sub-$50 maintenance jobs (this rule's (a) clause)
+- **#5309** (new, approved P1) — Fleet acts on per-intent W+T from backtest output (this rule's (c) clause)
+- **#5310** (new, approved P1) — RAG-v3 800-char snippet cap (an example of (d), and tagged for Fleet to auto-build)
+- **#4987** (deployed) — Segment A/B before aggregate decision (foundational for (c))
+- **#4811** (deployed) — Fleet auto-executes $0/free approved ideas (foundational for (b))
+
+When #5221 + #5309 ship code, this entire pattern becomes zero-touch from operator perspective.
+
+### Last updated (addendum)
+
+2026-05-19 17:30 PT — autonomous-build authority addendum. Source: cline_ship_5010 follow-up + Ruben directive "these open threads all Fleet Agent should be able to built 1-4 approved autonomous".

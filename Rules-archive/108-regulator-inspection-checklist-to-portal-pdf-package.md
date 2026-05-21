@@ -161,6 +161,71 @@ When verifying portal renders for Ruben, ALWAYS use the session-bridge token pat
 
 This was used 2026-05-21 to confirm the BPPE card was actually rendering when Ruben said "I can't see it" — and it WAS rendering, but the timeline was collapsed under unclear UI. The fix was the "Click here" header text rewrite above, not a data fix.
 
+## Lessons learned from BPPE 2026-05-21 (post-inspection)
+
+### Less is more on first production
+The 2026-05-21 auto-assembler pulled the entire credential dossier for each instructor (20+ documents per person: I-9 ack, W-4, DE-4, direct deposit, void check, bank info, intent-to-hire, media release, COI disclosure, EMSU teach-back assessment, etc) and the entire HR folder for the CAO. Ruben had to manually strip most of it before sending to the inspector.
+
+The BPPE Student and Faculty File Reference Guide explicitly lists what Faculty Files require: (a) hire date documentation, (b) education / experience documentation, (c) transcripts/certificates IF APPLICABLE, (d) Continuing Education IF APPLICABLE. Four items. NOT the entire HR folder.
+
+NEW RULE: when assembling a regulator inspection package, filter strictly by the regulator's own reference guide. Do not over-produce. Over-production gives the inspector more pages to flip through and more chances to find anomalies in unrelated documents (e.g. a stale W-4).
+
+Code: the auto-assembly script for any regulator inspection must NOT default to LIKE '%LastName%' on personnel_employee_documents. It must filter by document_type_id matching the regulator's required categories.
+
+### Cooperative co-investigation framing (Ruben's better instinct vs Cline's legal-defensive default)
+Cline's initial supervisor-escalation draft was legal-defensive: "ensure the production timeline as it actually unfolded is reflected in any inspection report or further bureau correspondence." Reads like a lawyer wrote it.
+
+Ruben's actual sent version was co-investigation framing: "I'd like to highlight some of the operational issues that it caused which made it extremely difficult... I just think as a matter of practice, it may need some slight revision or correction. Hopefully, the information below will demonstrate the need to make a few adjustments." Plus "I do understand how busy things can get. Thank you for your valuable time. Have a good rest of the week. :)" closing.
+
+This frame turns a defensive response into a soft co-investigation request. The supervisor cannot attack EMSU as defensive or uncooperative. They get an internal exit ramp: "this institution raised valid operational concerns, let me discuss with the inspector before signing off on his report."
+
+NEW RULE: when escalating to a regulator supervisor, draft the cover email as helpful operational feedback on the Bureau's own procedures, NOT as a defense against the inspector. Acknowledge the policy framework. Note specific operational issues without naming-and-shaming the inspector. Offer continued cooperation. Close warmly.
+
+When Cline drafts these, default to Ruben's frame, not the legal-defensive frame.
+
+### Reserve evidence: only spent at the Notice-to-Comply stage
+EMSU has high-bite evidence (security camera arrival + exit timestamps, phone log screenshots, FlightAware data on inspector's return flight). None of it was attached to the first inspector reply or the supervisor forward. All held INTERNAL on the portal as compliance_investigation_responses internal_note rows.
+
+NEW RULE: never spend your strongest evidence on the first volley. The first reply establishes the timeline narrative. The supervisor forward establishes that the supervisor has the file. The reserved evidence comes out ONLY at the Notice-to-Comply stage, addressed to the BPPE enforcement bureau / chief, structured as factual exhibits not allegations.
+
+### Administrative ceiling, not Bureau Chief informal escalation
+Ruben directive 2026-05-21: EMSU will NOT informally escalate to the BPPE Bureau Chief. EMSU deals with BPPE administratively (normal correspondence channels) and only escalates to Superior Court if administrative process exhausts and a substantive legal challenge is required.
+
+The escalation ladder is: Inspector → Supervisor → Enforcement Bureau attorney (NTC response stage) → Superior Court. No skipping levels mid-process.
+
+NEW RULE: when Cline suggests escalation, propose the next single rung of the ladder, never "let's write the Chief" until administrative process is genuinely exhausted.
+
+### Anti-pattern: auto-pulled credential dossier dump
+DON'T let auto-assembly concatenate every google_drive_id matching a name pattern. The 12:13 PM CAO bundle on 2026-05-21 was 44MB because LIKE 'Major%' pulled Ruben Jr + Marlie Major's docs in. Required manual cleanup.
+
+DON'T include I-9 / W-4 / bank info / void check / direct deposit / payroll forms in any regulator inspection bundle even if filtered by employee. These are payroll/HR forms with no regulatory relevance to BPPE Faculty Files.
+
+Filter: only documents matching the regulator's named categories (education, experience, license, transcript, CE) belong in the file.
+
+### Updated assembly script template
+Per BPPE Reference Guide, the SQL filter for instructor file assembly is:
+```sql
+SELECT id, original_filename, google_drive_id FROM personnel_employee_documents
+WHERE google_drive_id IS NOT NULL
+  AND (original_filename LIKE '<LastName>__<FirstName>-%EMS_Instructor%' 
+       OR original_filename LIKE '<LastName>__<FirstName>-%paramedic%license%' 
+       OR original_filename LIKE '<LastName>__<FirstName>-%NREMT%' 
+       OR original_filename LIKE '<LastName>__<FirstName>-%BLS%' 
+       OR original_filename LIKE '<LastName>__<FirstName>-%ACLS%' 
+       OR original_filename LIKE '<LastName>__<FirstName>-%PALS%' 
+       OR original_filename LIKE '<LastName>__<FirstName>-%transcript%' 
+       OR original_filename LIKE '<LastName>__<FirstName>-%offer_of_employment%' 
+       OR original_filename LIKE '<LastName>__<FirstName>-%resume%')
+ORDER BY id
+```
+NOT a broad `LIKE 'LastName%'`.
+
+For CAO file: same shape, restricted to ONE specific candidate ID (not name LIKE).
+
+For Self-Monitoring Procedures: workshop attendance certs + BPPE email subscription proof. Two items, not the entire workshop archive.
+
 ## Last updated
 
 2026-05-21 — initial rule. Source: BPPE unannounced compliance inspection at EMSU SD campus + Ruben directives ("this is what I need" + "remember this stuff for future audits" + "just say click here or whatever"). Header-text fix landed same session.
+
+2026-05-21 (post-inspection) — Added Lessons-Learned sections: less-is-more on first production, cooperative co-investigation framing (Ruben's frame supersedes Cline's legal-defensive default), reserve evidence for NTC stage, administrative ceiling (no Bureau Chief informal escalation), anti-pattern auto-pulled credential dossier dump, updated SQL assembly template per BPPE Reference Guide.

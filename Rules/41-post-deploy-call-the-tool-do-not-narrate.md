@@ -156,3 +156,72 @@ After timeout on a single MCP call:
 - `.clinerules/95` — Cline 30s tool wall + scp+nohup remote pattern (the PREVENTION layer — most timeouts shouldn't happen if you use the pattern correctly)
 - `.clinerules/99` — YOLO prevention playbook (the `timeout` entry has the per-class recovery, and `no-tool-use` entry has the prose-trap rule that pairs with this one)
 - `.clinerules/16` — maxConsecutiveMistakes threshold (after the 2026-05-19 bump to 15, this addendum has more headroom but doesn't eliminate the triple)
+
+## 2026-05-22 addendum — generalized post-ERROR pivot (extends timeout addendum to all error classes)
+
+Source: scan 2026-05-22 of `~/Documents/Cline/yolo_learner/yolo_trips.sqlite`. Last 7 days = 73 trips. Top `cat_1` distribution: `no-tool-use` 36, `timeout` 10, `mysql query failed` 4, `api: overloaded` 4, `sql: unknown column` 2, `shell: command not found` 2, `file/path does not exist` 2, `browser_action: failed` 2, `ssh: connect/timeout` 1, `safe-deploy: invalid flag` 1, `php: syntax error` 1, `permission denied` 1, `tool: generic execution error` 1. The pattern is identical to the timeout addendum above: an unavoidable first-tool error, then TWO narration turns ate strikes 2 and 3 = YOLO. The first error is fine. The two prose turns after it are the bug.
+
+### The bright-line rule (generalized to ALL error classes)
+
+**The assistant turn IMMEDIATELY AFTER any failed-tool result MUST contain a tool_use block.** Not just timeouts. Not just post-deploy. ALL error results — api overload, mysql failure, safe-deploy bad-flag, file not found, ssh timeout, shell command not found, php syntax error, browser action failed, permission denied, generic tool error.
+
+Concrete: if a tool returns an error / non-200 / `Error:` prefix / `PHP Fatal error` / `MySQL query failed` / `Unknown column` / `connect timeout` / `does not exist` / `command not found` / `Permission denied`, the next assistant turn does exactly ONE of:
+
+1. **A DIFFERENT tool call** (different command, different MCP wrapper, different path, different SQL, different flag). Not the same call again, even with minor edits — that's the death-spiral entry point.
+2. **`attempt_completion`** with a status of "blocked, <one line why>". Surface the dead-end as a clean completion, don't loop.
+3. **`attempt_completion`** reporting the partial work that did land. The window closes cleanly; Ruben picks up in a fresh window.
+
+NEVER: a prose-only assistant turn explaining the error, planning the next try, or hoping the issue is transient. The error text is already on the user's screen. Adding prose burns one of the 3 consecutive-mistakes strikes for zero benefit.
+
+### Per-class pivot table (what to call instead of narrating)
+
+| Error class | Wrong move | Right move (next tool) |
+|---|---|---|
+| `api: overloaded/rate-limit` | "Let me wait then retry" | `attempt_completion` "Anthropic overloaded, pausing, re-prompt me in 60s" |
+| `mysql: unknown column` | "Let me try a different column name" | `describe_table` MCP, then re-emit the query with the real column |
+| `mysql: query failed` | "Let me check the syntax" | `list_tables` / `describe_table` MCP, or a shorter LIMIT-1 SELECT to inspect shape |
+| `safe-deploy: invalid flag` | "Let me check the help" | Re-emit with the correct `--target` `--content` `--expected-sha256` flags (rule 99) |
+| `safe-deploy: sha drift` | Retry with the old hash | `read_file` to get fresh content + `sha256sum` to compute fresh hash, then safe-deploy |
+| `file/path does not exist` | "Let me check the path" | `list_files` on parent dir, or `execute_command ls -la <parent>` |
+| `permission denied (server path written locally)` | Retry `write_to_file` | `ssh_command` with `cat > path <<EOF` heredoc — server path needs server tool |
+| `ssh: connect/timeout` | "Let me retry SSH" | `server_status` MCP first, or `attempt_completion` "WOPR SSH down, pausing" |
+| `shell: command not found` | "Let me try a different command" | `execute_command which <cmd>` to verify path, or a known-good alternative |
+| `php: syntax error` | Retry safe-deploy with same content | `write_to_file /tmp/check.php` + `execute_command php -l /tmp/check.php`, fix offline, then deploy |
+| `browser_action: failed` | Repeat the same click | `browser_action close` then relaunch, or pivot off browser entirely |
+| `tool: generic execution error` | Blind retry | Re-read the error text, pick a tool that addresses what it actually said |
+
+### The "WOPR is down" special case (cross-ref rules 77, 95)
+
+If two SSH/emsu-operations MCP calls fail in a row → the WireGuard tunnel is wedged. Do NOT keep firing MCP calls hoping the third succeeds. Either:
+- `attempt_completion` with status "WOPR SSH unreachable, paused, needs tunnel kick" (rule 77)
+- Or pivot to local-only work (Mac filesystem, .clinerules, ledger) until Ruben restarts the tunnel
+
+### Self-check on every tool-error result
+
+Before composing the next turn, ask:
+
+1. *"Will the next turn I emit contain a tool_use block?"* If no, STOP and rewrite.
+2. *"Is my next tool call the SAME shape as the one that just failed?"* If yes, STOP and change tools per the table above. Two of the same failure in a row is the death-spiral entry.
+3. *"Have I already had 2 errors this task?"* If yes, next turn MUST be `attempt_completion`. The 3rd strike is YOLO; don't roll the dice on a 3rd retry.
+
+### Forbidden first-words after a tool error (extended from the timeout list)
+
+If the next assistant turn starts with any of these AND has no paired tool_use block in the same turn, it is the trap:
+
+- "Let me check..." / "Let me try..." / "Let me see..." / "Let me wait..."
+- "Hmm" / "Looks like" / "Seems" / "Apparently" / "It seems"
+- "The query failed because..." / "The server appears to be..."
+- "I'll try a different approach"
+- "That didn't work, so..."
+
+Each is fine PREFIXED to a tool block in the same turn. None are fine alone. Binary test: does this assistant turn contain a `<tool_use>` block? If no, the turn is broken, rewrite it.
+
+### Source incidents (2026-05-22)
+
+- task 1779466420483 (2026-05-22 09:37): api overload → 2 narrate turns → YOLO. Should have hit `attempt_completion` after the 1st overload.
+- task 1779420001388 (2026-05-21 20:43): mysql `Unknown column 'ticket_number'` → narrate → WOPR SSH dropped (tunnel wedged) → narrate → YOLO. Should have hit `attempt_completion` at the SSH drop per rule 77.
+- task 1779418656169 (2026-05-21 20:13): safe-deploy `--src` bad flag → narrate → narrate → YOLO. Should have re-emitted with `--target/--content/--expected-sha256` immediately.
+- task 1779410470852 (2026-05-21 18:22): shell command not found → narrate → narrate → YOLO. Should have used `which` to verify path first.
+- task 1779267773315 (2026-05-20 02:22): file not found → narrate → narrate → YOLO. Should have `list_files` on parent before retrying.
+
+All 5 would have been saved by the pivot rule above.

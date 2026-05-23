@@ -96,7 +96,72 @@ Continue with one of:
 Never with words alone. Never with a colon-terminated "Next step:"
 clause. Never with a list of upcoming actions narrated as prose.
 
+## 2026-05-22 addendum — the colon-trailed announcement is the #1 living trip class (48% of last 7d)
+
+Source: yolo_trips.sqlite scan 2026-05-22 20:04 PT. Last 7 days = 73 trips, **35 (48%) are pure prose→prose→YOLO with NO preceding tool error**. Top triple this week: `no-tool-use > no-tool-use > (none)` (19) + `no-tool-use > no-tool-use > no-tool-use` (16) = 35 of 73. These are NOT timeouts or API overloads — they are the model successfully completing a tool call, then writing the NEXT step as prose and never emitting it.
+
+### Three fresh source incidents (all 2026-05-22, all the same shape)
+
+1. **task #1779466924466, 19:23 PT** — after a successful `ssh_command` confirming PHP lint passed, model wrote: *"Panel wired. Now reload FPM and verify, then tackle #5792."* No tool block. Re-prompt × 2. YOLO.
+2. **task #1779466420483, 19:23 PT** — after a successful MCP tool call returned `MCP error -32000: Connection closed`, model wrote: *"MCP tunnel hiccup. Retry:"* No tool block (just the colon). Re-prompt × 2. YOLO.
+3. **task #1779494742877, 19:23 PT** — after a successful `replace_in_file` to `_INDEX.md`, model wrote: *"Reindexing the MCP and stamping a ledger row."* No tool block. Re-prompt × 2. YOLO.
+
+All three were mid-task, all three had **dozens** of successful tool calls before, all three died on a single trailing-colon announcement.
+
+### The new hard test (use this as a binary check before closing any turn)
+
+**If the last non-whitespace character of your assistant turn is `:` AND the turn has no tool_use block, the turn is broken. Period.** Don't ship it.
+
+The colon at end of turn is the linguistic tell. It says "the next thing is the tool" — but if no tool follows in the same turn, the model is announcing instead of acting. Cline injects `[ERROR] You did not use a tool` and the strike clock starts.
+
+Same broken-turn shape, just different surface forms:
+- `"Now reload FPM and verify:"` → no tool → broken
+- `"Retry:"` → no tool → broken
+- `"Reindexing the MCP and stamping a ledger row."` → no tool → broken (period instead of colon, but still announcement-without-action)
+- `"Next I'll patch the route and reload."` → no tool → broken
+- `"Stamping the ledger row now."` → no tool → broken
+
+### The mid-task "Now X" trap (extends rule 41's original post-deploy version)
+
+Rule 41 originally targeted post-deploy. The 2026-05-22 data shows the trap fires EVERYWHERE in a task, not just after deploys. Every tool result is a potential trap site:
+- after `read_file` → model says "Now I'll edit it:" without the edit tool
+- after `write_to_file` → "Now reindexing:" without the reindex call
+- after `replace_in_file` → "Now updating the related file:" without the next replace_in_file
+- after an MCP tool result → "Now confirming:" without the verify call
+
+The fix is the same in every case: **the announcement and the tool must be in the SAME assistant turn, or skip the announcement entirely.**
+
+### Recovery: the `[ERROR] You did not use a tool` re-prompt is a FREE STRIKE — use it
+
+When Cline injects `[ERROR] You did not use a tool in your previous response!`, that's strike 1 of 3. The next two turns are the danger zone. Recovery is:
+
+1. **DO NOT** re-narrate what you were about to do. The user already sees the error.
+2. **DO NOT** explain why you didn't call a tool. Just call it.
+3. The very next turn MUST contain a tool_use block — the one you should have called, OR `attempt_completion` if you genuinely have nothing to do.
+4. Two consecutive `[ERROR]` re-prompts = strike 3 = YOLO. So the FIRST error must produce a tool, not more prose.
+
+Specifically forbidden first-words after `[ERROR] You did not use a tool`:
+- "You're right, let me..."
+- "Calling the tool now:"
+- "Apologies, here:"
+- "Let me try again with:"
+- Any sentence at all that doesn't have a tool block following it in the SAME turn
+
+The correct response to that error is silent action — emit the tool, no narration.
+
+### Self-check (revised, ship before any non-tool turn)
+
+Before pressing send on any assistant turn, scan the bottom 3 lines:
+
+1. *Does this turn contain a `<tool_use>` block?* If yes → ship. If no → continue.
+2. *Is this turn `attempt_completion`?* If yes → ship. If no → continue.
+3. *Did the turn just emit only words?* → **The turn is broken. Rewrite to include the tool, or to be `attempt_completion`.**
+
+The binary test takes 2 seconds. Doing it kills the 48%-of-trips class.
+
 ## Last updated
+
+2026-05-22 — colon-trailed announcement addendum. Source: 3 fresh YOLOs in a single 24h window all matching the same shape, all mid-task, all post-successful-tool-result. The original rule 41 body covered this in spirit but the trips kept happening — needed the explicit binary colon test + the "free strike" recovery framing.
 
 2026-05-11 — initial rule. Source incident: task #1778517762383,
 "Deployed. Reload FPM (no opcache stale) and update HANDOFF:" prose

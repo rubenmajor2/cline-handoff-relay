@@ -49,6 +49,8 @@ of injected rules instead of ~1.2MB.
 | 72 | no-time-deadline-promises-to-staff | No "Vicky will reach out within 24h" |
 | 96 | promise-of-staff-followup-cc-staff | If body says "X will follow up", X is CC'd |
 | 101 | no-cline-self-reference-or-internal-jargon-in-staff-comms | Strip Cline/clinerules/Opus from staff emails |
+| 108 | staff-chat-burst-and-restatement-cap | 3 outbound msgs / 30 min hold, no restatement within 60 min |
+| 109 | every-deliverable-needs-disposition-status | Every idea/ticket/file/Q-card in attempt_completion gets [shipped]/[approved (autonomous)]/[proposed]/[pending (q-card)]/[deferred]/[blocked]/[abandoned] token |
 
 ### Agent behavior + escalation
 | 12 | cross-chain-policy-questions-go-on-ruben-questions | Q-card portal vs inline |

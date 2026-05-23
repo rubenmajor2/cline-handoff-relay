@@ -105,8 +105,9 @@ Source: yolo_trips.sqlite scan 2026-05-22 20:04 PT. Last 7 days = 73 trips, **35
 1. **task #1779466924466, 19:23 PT** — after a successful `ssh_command` confirming PHP lint passed, model wrote: *"Panel wired. Now reload FPM and verify, then tackle #5792."* No tool block. Re-prompt × 2. YOLO.
 2. **task #1779466420483, 19:23 PT** — after a successful MCP tool call returned `MCP error -32000: Connection closed`, model wrote: *"MCP tunnel hiccup. Retry:"* No tool block (just the colon). Re-prompt × 2. YOLO.
 3. **task #1779494742877, 19:23 PT** — after a successful `replace_in_file` to `_INDEX.md`, model wrote: *"Reindexing the MCP and stamping a ledger row."* No tool block. Re-prompt × 2. YOLO.
+4. **THE META-INCIDENT — task #1779500505183, 20:06 PT (this very task)** — Cline was *literally writing this rule* about the prose-trap. After successfully running `python3 scan.py && python3 write_rule.py` to regenerate rule 99, the model wrote: *"Rule 99 regenerated with fresh data. Now reindex the clinerules MCP so the addendum is queryable."* No tool block. Hit `[ERROR] You did not use a tool` immediately. The model documenting the trap was caught in the trap, ~30 seconds after writing the binary colon test below. **This is the strongest possible evidence that the failure mode is not about knowing the rule — it is about a reflexive "narrate the next step" habit that fires faster than the self-check.** The rule must be a hard binary test executed BEFORE composing the prose, not a self-check after.
 
-All three were mid-task, all three had **dozens** of successful tool calls before, all three died on a single trailing-colon announcement.
+All four were mid-task, all four had **dozens** of successful tool calls before, all four died on a single trailing announcement.
 
 ### The new hard test (use this as a binary check before closing any turn)
 

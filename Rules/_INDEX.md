@@ -52,6 +52,7 @@ of injected rules instead of ~1.2MB.
 | 108 | staff-chat-burst-and-restatement-cap | 3 outbound msgs / 30 min hold, no restatement within 60 min |
 | 109 | every-deliverable-needs-disposition-status | Every idea/ticket/file/Q-card in attempt_completion gets [shipped]/[approved (autonomous)]/[proposed]/[pending (q-card)]/[deferred]/[blocked]/[abandoned] token |
 | 110 | debug-sessions-root-cause-not-bandaid | Intense debug sessions: trace root cause + grep for spread + check upstream/downstream + propose multi-deploy fix + PREVENTION section (invariant/smoke/KAIZEN/drift) — never bandaid |
+| 111 | email-cta-button-only-no-inline-url | Outbound student emails: button-only CTA, "Tap here" verb, brand #1e5cab, no `<a href>X</a>` raw URLs, no "if button doesn't work copy and paste", no word-break:break-all fallback blocks |
 
 ### Agent behavior + escalation
 | 12 | cross-chain-policy-questions-go-on-ruben-questions | Q-card portal vs inline |

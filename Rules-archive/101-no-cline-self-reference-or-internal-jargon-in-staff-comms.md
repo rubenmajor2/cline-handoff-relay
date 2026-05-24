@@ -51,9 +51,9 @@ iMessage to chats 5/55/64/84/88) MUST NOT contain ANY of the following:**
    "high-confidence + reversible + small blast", "confidence tier", "autonomous
    tier", "approved tier" — all internal-only.
 9. **Agent / orchestrator names** — RUBEN, KAIZEN, Bug Hunter, Fleet Agent,
-   Ticket Agent (when used as a NOUN routing to a human reader — fine inside
+   Ticket Agent, **Daystrom / Daystrom Council / Daystrom session / daystrom-XXXXX session slugs** (when used as a NOUN routing to a human reader — fine inside
    an internal ticket comment audited by engineers, never to Vicky / Jon /
-   Cori).
+   Cori). Vicky/Jon do not know what Daystrom is and the name carries no useful information for them — it's the internal AI multi-agent council that meets nightly. Strip it.
 10. **"AI-side" technical narration** — "Opus produced only a sign-off",
     "the response was stripped by the sanitizer", "the post-compose scanner
     didn't fire", "the leak log shows" — all of this is engineering-side
@@ -164,6 +164,9 @@ will read, scan the draft for ALL of these and strip:
 7. "tier" / "confidence" / "autonomous" / "irreversibility" / "blast radius"
 8. Agent names (RUBEN, KAIZEN, Bug Hunter, Fleet Agent) when writing TO a
    non-engineer
+9. **"Daystrom" / "Daystrom Council" / any `daystrom-*` session slug** — the
+   nightly AI council. Vicky/Jon don't know what it is and don't need to.
+   Strip it.
 
 If ANY appear, rewrite. If unsure about a specific term, ask: "would Vicky
 recognize this from her day-to-day work?" If no, strip it.
@@ -200,3 +203,5 @@ sanitizeAIResponseForEmail + "Opus" + "— Cline" signature + idea/P0
 references. Ruben caught it: *"nobody does the programming except for me
 and you and our Agents, so why did you tell her the cline rules, etc...
 and your name?"*
+
+2026-05-24 11:38 PT — added "Daystrom" / "Daystrom Council" / daystrom-* session slugs to the forbidden-jargon list (items 9 + self-check #9). Source: Ruben directive verbatim: *"Vicky doesn't know what Daystrom is. I removed that reference."* Daystrom is the internal nightly AI multi-agent council infrastructure — name carries no information for non-engineer staff and reads like jargon. Any draft to vyu@/jthompson@/cfrench@/chats 5/55/64/84/88 that contains the word "Daystrom" must rewrite around it (e.g. "the overnight review process flagged this" or just describe the outcome).

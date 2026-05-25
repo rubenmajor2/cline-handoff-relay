@@ -26,7 +26,28 @@ Add a new section to the attempt_completion Resume Kit (between OPEN THREADS and
 OPEN Y/N DECISIONS (answer in this thread to unlock next moves)
 ```
 
-Each Q-card in this section follows the .clinerules/05 5-field format:
+## Two valid formats — pick per question complexity
+
+### Format A — SIMPLE INLINE (default for 1-line questions)
+
+Use when the decision is a single-axis pick (which-box, ship-now-vs-wait, A-vs-B). 1-2 lines per Q. This is the format Ruben asks for "Y/N simple and recommended" — keep it phone-readable.
+
+```
+**Q1. Cline router target box?** SMS-Mac vs Artemis vs RunPod. **Rec: SMS-Mac** (already 24/7, M1 Max headroom, Artemis tunnel-wedged).
+**Q2. Ship FPM reload now?** **Rec: No** (Sonnet flip already live without it, FPM corrupts this window).
+**Q3. Flavor A for prebuilder?** **Rec: Yes** (already filed #6513 approved, gates only on backtest signal).
+```
+
+Each Q-card in Format A MUST have:
+- Short title (≤8 words)
+- Concrete options (the two-or-three things being chosen between)
+- **Rec:** [yes | no | option-name] + one parenthetical reason
+
+This is enough — don't expand to 5 fields if 1 line suffices. Phone-readable wins.
+
+### Format B — FULL 5-FIELD (for policy/irreversible/cross-chain)
+
+Use when the decision IS irreversible / touches money or regulator / sets policy across chains. Pair with `ruben_questions` portal row per rule 12.
 
 ```
 **QN. [5-8 word policy name]**
@@ -40,17 +61,19 @@ Each Q-card in this section follows the .clinerules/05 5-field format:
 **Yes/No:** [actual question, under 20 words]
 ```
 
-The **Recommendation** field is mandatory under this rule (rule 05 lists it as optional inline; rule 113 makes it required). It must include the verdict + a one-line reason.
+The **Recommendation** field is mandatory in BOTH formats (rule 05 lists it as optional inline; rule 113 makes it required).
 
-## Pair with `ruben_questions` portal row when cross-chain
+## When to pick A vs B
 
-If the decision is cross-chain / policy-grade / will recur (see .clinerules/12 criteria), ALSO file a `ruben_questions` row at status='pending' with the same Q-card body, so the portal queue has it. Reference the new q-card row id in the inline section: `(also filed as ruben_questions #NNNNN per .clinerules/12)`.
-
-If the decision is single-task / one-shot / won't recur, inline-only is sufficient — DO NOT pollute `ruben_questions`.
+- Question is 1 line, no policy implications, decided in 5 seconds → **Format A**
+- Question affects 2+ chains or irreversible (money/regulator/student-email) → **Format B + ruben_questions row per rule 12**
+- Mixed batch (some simple, some policy) → mix freely; group all Format A's first, then Format B's
 
 ## The 3-card cap (carries from rule 05)
 
 Maximum 3 Q-cards in a single attempt_completion. If more, the task wasn't decomposed enough — either (a) split into multiple completions, or (b) merge related questions into a single broader policy Q-card.
+
+**EXCEPTION:** when the cap is exceeded because Ruben himself raised multiple questions in one feedback message (e.g. 5 yes-decisions in one paragraph), surface ALL of them as Format-A (since each is presumably simple), no cap.
 
 ## Recommendation field — how to write it
 
@@ -58,6 +81,12 @@ The recommendation must:
 1. Pick a side (yes / no / option-A / option-B). NOT "depends" or "either is fine."
 2. Cite the evidence in one line ("per .clinerules/29 reversible+small-blast = ship", "QB invoice already pushed and customer email validated", "deadline is Sunday so wait risks default").
 3. Be a defensible "if Ruben doesn't answer, I default to this" call. The recommendation IS the default if silence.
+
+## Pair with `ruben_questions` portal row when cross-chain
+
+If the decision is cross-chain / policy-grade / will recur (see .clinerules/12 criteria), ALSO file a `ruben_questions` row at status='pending' with the same Q-card body (use Format B). Reference the new q-card row id in the inline section: `(also filed as ruben_questions #NNNNN per .clinerules/12)`.
+
+If the decision is single-task / one-shot / won't recur, inline-only is sufficient — DO NOT pollute `ruben_questions`.
 
 ## What this rule does NOT do
 
@@ -71,12 +100,14 @@ Ask: *"If Ruben reads this completion on his phone in 15 seconds, can he yes/no 
 
 If no, the Q-card section isn't ready. Rewrite.
 
-## Source incident
+## Source incidents
 
-2026-05-23 20:54 PT — End of register_prospect_handler v5 ship (idea #6161 P0). I shipped 3 ACTION functions (send_payment_link / invoice_anyway / send_clarification) that are CLI-callable today but irreversible-when-executed (real QB API calls + real outbound emails). The completion listed them with dispositions (rule 109 compliant) but did NOT surface the real Y/N decision — "Run Vicky's 3 live sends NOW?" — as an inline Q-card. Ruben caught it: "Give Q cards here if any with Y/N simple and recommended. Need that per cline rules. Need that put in cline rules."
+**2026-05-23 20:54 PT** — End of register_prospect_handler v5 ship (idea #6161 P0). I shipped 3 ACTION functions (send_payment_link / invoice_anyway / send_clarification) that are CLI-callable today but irreversible-when-executed (real QB API calls + real outbound emails). The completion listed them with dispositions (rule 109 compliant) but did NOT surface the real Y/N decision — "Run Vicky's 3 live sends NOW?" — as an inline Q-card. Ruben caught it.
 
-The decision was real, time-sensitive (Tayden 5/25 deadline = 48 hours), had a clear yes/no shape, and would have been easy to answer on a phone — but the prior wrap-up forced him to mentally translate "shipped + Vicky-clickable" into "do I want this fired tonight?"
+**2026-05-24 16:08 PT** — End of cline_llm-cost-local-llm-workstream-2026-05-24 iter10. Cline surfaced 4-5 Q-cards as bullet lines under "STILL OPEN Q-CARDS" but missed the explicit **Rec:** verdict on each. Ruben re-flagged: *"Give any outstanding Q Cards here Y/N simple recommended per cline rules, update cline rules to ensure when asking Q that this info is automatically given."* The original rule already required Recommendation — but the FORMAT was ambiguous (5-field card felt heavy for 1-line questions, so Cline collapsed to bullet lines without the Rec). Fix: add explicit **Format A SIMPLE INLINE** with mandatory `Rec:` token, so 1-line questions stay phone-readable but still carry the recommendation.
 
 ## Last updated
+
+2026-05-24 16:08 PT — Format A SIMPLE INLINE added (this iter). Format B retained for policy/irreversible questions. Source: iter10 Ruben re-flag during cline_llm-cost-local-llm-workstream session.
 
 2026-05-23 20:55 PT — initial. Rule 113. Filed during the same task that surfaced the gap, per rule 38 (Ruben-asked = autonomous-or-shipped, codified as a rule fix here because the directive was meta about how Cline should ALWAYS communicate).

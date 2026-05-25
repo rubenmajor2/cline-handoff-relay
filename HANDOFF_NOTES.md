@@ -92,3 +92,41 @@ on WOPR — `$VOICE_PATTERNS` refreshed with directive-style regexes; manual run
 - `~/.ruben-ai/bug_hunter.py` lines 1740-1930 — the two detectors that flagged this
 
 ---
+
+## 2026-05-25 01:13 PT — STARRED: grv-status-drift / wrap-up scanner
+
+Ruben said "star this task" at 01:13 PT but emsu-operations + ruben-orchestrator MCPs both returned "Not connected" / "fetch failed" twice in a row. WOPR tunnel wedged per rule 77. Could not INSERT into ruben_task_stars from this window.
+
+**For next window: STAR THIS first.** Run via MCP once tunnel is back:
+```
+INSERT INTO ruben_task_stars (task_id, task_topic, starred_at, starred_by, INSERT INTO ruben_task_stars (task_id, task_topic, starred_at, starred_by, INSERT INTO ruben_task_stars (task_id, task_topic, starred_at, starred_by, INSERT INTO ruben_task_stars (task_id, task_topic, starred_at, starred_by, INSERT INTO ruben_task_stars (task_id, task_topic, starred_at, starred_by, INSERT INTO ruben_task_stars (task_id, task_topic, starred_at, starred_by, INSERT INTO ruben_task_stars (task_id, task_topic, starred_at, starred_by, INSERT INTO ruben_task_stars (task_id, task_topic, starred_at, starred_by, INSERT INTO ruben_task_stars (task_empINSERT INTO ruben_task_stars (task_id, task_topic, sies same as rule 17.INSERT INTO ruben_task_stars (task_id, task_topic, starred_at, starred_by, INSERT INTO ruben_task_stars (task_id, task_topic, starred_at, starred_by, INSERT INTO ruben_task_stars (task_id, task_topic, starred_at, starred_by, INSERT INTO*AlINSERT INTO ruben_task_stars (task_id, task_topic, starred_at, starre status + disposition_decision both backfilled to 'approved'
+- Status_history + internal comments stamped
+- Both ideas filed and bumped to status=approved
+- Ledger rows: 12:03 (grievance fix), 12:06 (scanner investigation), 01:13 (star marker)
+
+**Not touched:** GRV-2026-0056 / Cannon Lammons (id 57) — genuine pending_review, separate triage for Vicky.
+
+**Full PICKUP PROMPT** is in the 12:06 PT attempt_completion message of this task.
+
+## 2026-05-25 01:13 PT — STARRED: grv-status-drift / wrap-up scanner
+
+Ruben said "star this task" at 01:13 PT but emsu-operations + ruben-orchestrator MCPs both returned "Not connected" / "fetch failed" twice in a row. WOPR tunnel wedged per rule 77. Could not INSERT into ruben_task_stars from this window.
+
+**For next window: STAR THIS first.** Run once tunnel is back:
+```
+INSERT INTO ruben_task_stars (task_id, task_topic, starred_at, starred_by, note) VALUES ("grv-status-drift-2026-05-24", "wrap-up scanner gap + grievance status enum drift", NOW(), "Ruben", "Ship idea #6440 first then #6435. Four consecutive thin Cline wrap-ups motivated the star.");
+```
+
+**Parent ideas (both status=approved autonomous):**
+- #6440 P0 technical — extend scan.py + write_rule.py to detect rule_91/109/38/order_66, stamp LIVE COUNTERs like rule 17.
+- #6435 P1 technical — patch applyAgentProposal in grievance_api.php to write canonical "approved" not "approval", plus drift watchdog.
+
+**Already shipped (do NOT redo):**
+- Grievance rows 43, 44 backfilled status + disposition_decision to "approved"
+- status_history + internal comments stamped
+- Both ideas filed and bumped to status=approved autonomous
+- Ledger rows 12:03, 12:06, 01:13
+
+**Not touched:** GRV-2026-0056 / Cannon Lammons (id 57) pending_review for Vicky.
+
+Full PICKUP PROMPT is in the 12:06 PT attempt_completion of this task.

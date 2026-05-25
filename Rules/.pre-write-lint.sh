@@ -55,6 +55,7 @@ HARDFLOOR_SLUGS=(
     "29-agents-act-on-confidence-tier"
     "38-ruben-asks-equals-autonomous-or-shipped"
     "41-post-deploy-call-the-tool-do-not-narrate"
+    "42-safe-deploy-already-reloads-fpm"
     "91-every-completion-needs-pickup-prompt"
     "92-work-at-the-core-not-bandaids"
     "99-yolo-prevention-learned"

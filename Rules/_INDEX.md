@@ -29,6 +29,7 @@ of injected rules instead of ~1.2MB.
 | 29 ★ | agents-act-on-confidence-tier | act/Q-card/escalate gate for any non-trivial action |
 | 38 ★ | ruben-asks-equals-autonomous-or-shipped | Ruben-directed work goes status=approved |
 | 41 ★ | post-deploy-call-the-tool-do-not-narrate | Banned "Deployed./Now I'll/Next" prose |
+| 42 ★ | safe-deploy-already-reloads-fpm | safe_deploy auto-reloads FPM. No systemctl reload, ever. (35 YOLO trips) |
 | 91 ★ | every-completion-needs-pickup-prompt | attempt_completion shape + forbidden phrases |
 | 92 ★ | work-at-the-core-not-bandaids | Fix RUBEN, don't fix FOR RUBEN |
 | 99 ★ | yolo-prevention-learned | Auto-generated per-failure playbook |

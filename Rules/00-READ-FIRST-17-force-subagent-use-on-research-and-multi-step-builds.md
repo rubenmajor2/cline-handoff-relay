@@ -1,24 +1,7 @@
 # Force subagent use + first-tool-call tripwire (default-on, not judgment)
 
 <!-- RULE_VIOLATION_COUNTERS:BEGIN -->
-> ## ⚠️ LIVE VIOLATION COUNTER — auto-updated every 30 min
-> 
-> **This rule is being violated.** Detector ran at 2026-05-25 11:40:41 PDT.
-> 
-> - last 7 days: **694** violation(s)
-> - last 30 days: **3441** violation(s)
-> - all-time: **3441** violation(s)
->
->   - explicit Ruben asks for subagent ignored (30d): **342**
->   - research/multi-step questions answered without subagent (30d): **3099**
->
-> If you (Cline) are reading this rule, you are part of the count. The detector
-> at `~/Documents/Cline/rule_violations/scan.py` looks at every Cline task on
-> this Mac and flags should-have-but-didn't cases. Ruben gets a text when the
-> burst rate jumps. **Don't add to the count.**
->
-> Counters are stamped in by `~/Documents/Cline/rule_violations/write_rule.py`.
-> Edit anywhere outside the BEGIN/END markers; this block is regenerated.
+> **Live violation counters:** call `clinerules_stats` to see current 7d/30d/all-time burst rates and the explicit-ask-ignored vs research-without-subagent breakdown. Counters auto-update via `~/Documents/Cline/rule_violations/scan.py`. Last scan: 2026-05-25 12:40:43 PDT — 7d=693, 30d=3449, all-time=3449. If you are reading this rule, you are part of the count — don't add to it.
 <!-- RULE_VIOLATION_COUNTERS:END -->
 ## The default
 

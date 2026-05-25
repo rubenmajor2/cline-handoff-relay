@@ -72,28 +72,18 @@ def block_for(rule_key: str, data: dict) -> str:
             f"  - remote commands without nohup/disown/scp-script (30d): **{unguarded}**"
         )
 
+    # 2026-05-25 context diet: live numbers moved out of the auto-loaded
+    # rule body to keep system-prompt tax low. Cline can fetch fresh counts
+    # on demand via `clinerules_stats`. The full kind breakdown still gets
+    # logged to /tmp/rule_violations_latest.json by scan.py.
     lines = [
         BEGIN,
-        f"> ## ⚠️ LIVE VIOLATION COUNTER — auto-updated every 30 min",
-        f"> ",
-        f"> **This rule is being violated.** Detector ran at {last_scan}.",
-        f"> ",
-        f"> - last 7 days: **{w7}** violation(s)",
-        f"> - last 30 days: **{w30}** violation(s)",
-        f"> - all-time: **{wall}** violation(s)",
-        ">",
-    ]
-    for kl in kind_lines:
-        lines.append(f"> {kl}")
-    lines += [
-        ">",
-        "> If you (Cline) are reading this rule, you are part of the count. The detector",
-        "> at `~/Documents/Cline/rule_violations/scan.py` looks at every Cline task on",
-        "> this Mac and flags should-have-but-didn't cases. Ruben gets a text when the",
-        "> burst rate jumps. **Don't add to the count.**",
-        ">",
-        "> Counters are stamped in by `~/Documents/Cline/rule_violations/write_rule.py`.",
-        "> Edit anywhere outside the BEGIN/END markers; this block is regenerated.",
+        f"> **Live violation counters:** call `clinerules_stats` to see current 7d/30d/all-time burst rates"
+        + (" and the explicit-ask-ignored vs research-without-subagent breakdown." if rule_key == "rule_17"
+           else " for this rule.")
+        + " Counters auto-update via `~/Documents/Cline/rule_violations/scan.py`."
+        + f" Last scan: {last_scan} — 7d={w7}, 30d={w30}, all-time={wall}."
+        + " If you are reading this rule, you are part of the count — don't add to it.",
         END,
         "",
     ]

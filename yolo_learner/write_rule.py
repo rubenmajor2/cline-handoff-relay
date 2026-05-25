@@ -241,20 +241,37 @@ def main() -> int:
         out.append(f"- `{pat}` — {n} time(s)")
     out.append("")
 
-    out.append("## Playbook per failure mode\n")
-    out.append("Sorted by how often each one has tripped YOLO. If you're about to retry something, find the matching section below and follow it instead.\n")
+    # 2026-05-25 context-diet pass: only render full playbook bodies for the
+    # top-N highest-frequency categories. Everything else gets a one-line
+    # pointer to clinerules_lookup so the full text is still queryable on
+    # demand via the clinerules MCP, but the in-prompt rule stays small.
+    TOP_N_INLINE = 5
+
+    top_cats = [c for c, _ in cats[:TOP_N_INLINE]]
+    out.append(f"## Playbook per failure mode (top {TOP_N_INLINE} inline)\n")
+    out.append(f"These are the {TOP_N_INLINE} highest-frequency YOLO triggers — together they account for the bulk of trips. If you're about to retry something, find the matching section below and follow it instead. For the rarer classes, see the pointer list further down and fetch via `clinerules_lookup` when needed.\n")
 
     seen = set()
-    for cat, _ in cats:
+    for cat in top_cats:
         if cat in seen:
             continue
         seen.add(cat)
         out.append(section_for(cat))
 
-    # KAIZEN-ported preventive lessons. Always render even if the category
-    # hasn't fired in Cline yet — these are forward-looking lessons borrowed
-    # from KAIZEN's ruben_executor catalog where the same failure mode has
-    # already cost RUBEN executor cycles. See .clinerules/23.
+    # Long-tail categories: one-line pointer each, no body. They're queryable
+    # via clinerules_lookup if the rare class actually fires.
+    long_tail = [(c, n) for c, n in cats[TOP_N_INLINE:] if c in PLAYBOOK]
+    if long_tail:
+        out.append("## Lower-frequency YOLO classes (lookup on demand)\n")
+        out.append("Each entry is a category that has tripped YOLO but at lower frequency. Full playbook lives in the auto-generated archive — fetch with `clinerules_lookup(rule_id=\"99-yolo-deep\")` or `clinerules_search(query=\"<category keyword>\")`.\n")
+        for cat, n in long_tail:
+            seen.add(cat)
+            out.append(f"- **{cat}** ({n} trips) — see `clinerules_search(\"{cat.split(':')[0].strip()}\")`")
+        out.append("")
+
+    # KAIZEN-ported preventive lessons. Also moved to pointer form per the
+    # 2026-05-25 context diet — these are forward-looking categories that
+    # have NOT yet fired in Cline, so a pointer is sufficient.
     KAIZEN_PORTED = [
         "safe-deploy: sha drift, re-read file before retry",
         "safe-deploy: invalid flag (use --target/--content/--expected-sha256)",
@@ -267,11 +284,13 @@ def main() -> int:
     ]
     unrendered_kaizen = [k for k in KAIZEN_PORTED if k not in seen]
     if unrendered_kaizen:
-        out.append("## Preventive lessons ported from KAIZEN (forward-looking)\n")
-        out.append("These categories have not yet fired in Cline task history but have repeatedly bitten the RUBEN executor. KAIZEN's recipe table is the source. Listed here so Cline avoids them on first encounter rather than learning by tripping.\n")
+        out.append("## KAIZEN preventive pointers (not yet fired in Cline)\n")
+        out.append("Forward-looking categories from KAIZEN's `ruben_executor` catalog. Fetch full text with `clinerules_search` when first encountered.\n")
         for cat in unrendered_kaizen:
             seen.add(cat)
-            out.append(section_for(cat))
+            short_key = cat.split(":")[0].strip() if ":" in cat else cat.split("(")[0].strip()
+            out.append(f"- **{cat}** — see `clinerules_search(\"{short_key}\")`")
+        out.append("")
 
     out.append("## What's auto-updated\n")
 

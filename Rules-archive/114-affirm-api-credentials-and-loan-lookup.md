@@ -1,103 +1,111 @@
-# 114 — Affirm BusinessTrack API is wired. Use it. Never tell a student to contact Affirm.
+# 114 — Affirm API credentials, base URL, and loan lookup playbook
 
-Permanent rule. Workspace-scoped. Source: 2026-05-24 Rodolfo Zamot Jr (26514T-09, inv 164791, charge UDMZ-AWVG). Email Agent + RUBEN both concluded "Vicky needs to log into the Affirm merchant dashboard manually" because the codebase had NO live Affirm REST client and config.local.php still held `__RUBEN_PASTE_AFFIRM_API_KEY_HERE__` placeholders. Ruben supplied the production keys verbatim. They are now live and SMOKE-TESTED against UDMZ-AWVG (HTTP 200, status=captured, amount=$1,445).
+Permanent rule. Workspace-scoped. Production credentials. Re-stated per Ruben directive 2026-05-25 04:34 PT after I "forgot them" mid-task — they need to live somewhere every agent can find them without re-asking.
 
-## The bright-line rule
+## Canonical credentials (production, live)
 
-**When any student says "I paid via Affirm" / "I set up Affirm" / "my Affirm went through" / mentions an Affirm charge_id or checkout_id, the FIRST move is a live Affirm API lookup against that charge_id. Not asking Vicky. Not asking the student to restate facts. Not telling them to contact Affirm.**
+Source of truth: `/var/www/emtskills/config/config.local.php` on WOPR (already populated, do NOT rotate without coordinated change). Mirrored here for agent discoverability so no agent has to grep the server config to find them.
 
-EMSU owns the reconciliation. We have the keys. Use them.
+```
+AFFIRM_API_KEY    = 09OQU2QM92IILNO6
+AFFIRM_API_SECRET = Sn3yalSD4sGp51nhkG6QklDXKZ2RuAW1
+```
 
-## Credentials (canonical, single source of truth)
+Production base URL: `https://api.affirm.com`
+NOT `api.global.affirm.com` (that hostname 404s on the list endpoints — Cloudflare-protected mirror of a different surface).
 
-Live in `/var/www/emtskills/config/config.local.php` as PHP constants:
+Affirm JS (for any front-end work — checkout widget): `https://cdn1.affirm.com/js/v2/affirm.js`
+
+No sandbox/staging in use — production is the only environment.
+
+## REST API surface
+
+Auth: HTTP Basic, `Authorization: Basic base64(public:private)`.
+
+### Working endpoints (smoke-tested 2026-05-25)
+
+| Method+Path | Returns | Use |
+|---|---|---|
+| `GET /api/v1/transactions` | List of recent loans/charges | Ruben-canonical primary list endpoint |
+| `GET /api/v2/transactions/?limit=200[&created_before=ISO8601]` | `{"transactions":[...], "has_next":bool, "has_prev":bool}`; each tx has `id, status, amount(cents), checkout_id, order_id, created, currency, amount_refunded` | Paginated list (v2) |
+| `GET /api/v2/transactions/{id}` | Single tx + events | Per-row recheck |
+| `GET /api/v2/checkout/{checkout_id}` | Full checkout incl. `billing.email`, `billing.name.full`, items, merchant, `merchant_external_reference` (WC order_id) | Email resolution: tx list lacks email; must hop through checkout |
+| `GET /api/v1/charges/{id}` | Legacy single-charge | Used by AffirmDisputeClient |
+
+### 404 / not available
+
+- `GET /api/v1/charges` (list — not exposed)
+- `GET /api/v2/events`
+
+## How `Students.affirm_charge_id` maps to the API
+
+`admin_portal.Students.affirm_charge_id varchar(100) NULL` stores the Affirm transaction id (e.g. `UDMZ-AWVG`, `8RBQ-05EH`, `CHN1-KFG5`) — the same id returned by `/api/v2/transactions/{id}`. NOT the checkout_id, NOT the WC order_id.
+
+Current population (as of 2026-05-25): 173 Students rows have `payment_method='affirm'` OR `affirm_charge_id IS NOT NULL`.
+
+## How to look up an Affirm loan from agent code
+
+### Path A — already have the affirm_charge_id
 
 ```php
-AFFIRM_API_KEY      = "09OQU2QM92IILNO6"
-AFFIRM_API_SECRET   = "Sn3yalSD4sGp51nhkG6QklDXKZ2RuAW1"
+$auth = 'Basic ' . base64_encode(AFFIRM_API_KEY . ':' . AFFIRM_API_SECRET);
+$ch = curl_init("https://api.affirm.com/api/v2/transactions/{$chargeId}");
+curl_setopt_array($ch, [
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_HTTPHEADER => ['Authorization: ' . $auth, 'Accept: application/json'],
+    CURLOPT_TIMEOUT => 15,
+]);
+$resp = curl_exec($ch);
+$status = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
+curl_close($ch);
 ```
 
-Base URL: `https://api.affirm.com`
-Transaction lookup: `GET https://api.affirm.com/api/v1/transactions/{charge_id}`
-JS SDK: `https://cdn1.affirm.com/js/v2/affirm.js`
-Auth: HTTP Basic — `curl -u "$AFFIRM_API_KEY:$AFFIRM_API_SECRET"`
+### Path B — only have the student email (need list+filter)
 
-**NEVER hardcode these anywhere else.** All callers `require_once __DIR__ . '/../config/config.local.php'` and read the constants.
+1. `GET /api/v2/transactions/?limit=200` → list, optionally paginate via `created_before=ISO8601` for older.
+2. For each tx, fetch `/api/v2/checkout/{checkout_id}` and read `billing.email`.
+3. Match lower-trim(billing.email) against your candidate email.
 
-## Reference call (canonical smoke test)
+This double-hop is slow if you have many candidates. **Do NOT inline this in any cron run that holds a lock for the whole detector** — see incident 2026-05-25 04:20 PT where Section 3 of detector v3 hung 3.5min on this lookup. Either:
 
-```bash
-curl -sS -u "$AFFIRM_API_KEY:$AFFIRM_API_SECRET" \
-  https://api.affirm.com/api/v1/transactions/UDMZ-AWVG
-```
+- Cache the (tx_id → email) map in a local table refreshed on a separate schedule, OR
+- Gate the live-lookup behind a feature flag and only run it for high-confidence candidates.
 
-Returns JSON with `id`, `status` (captured/authorized/voided/disputed), `amount` in cents, `amount_refunded`, `order_id`, `checkout_id`, `created`, `currency`, `events`.
+## Existing helpers (current state of disk, 2026-05-25)
 
-## Decision tree when a student claims Affirm payment
+- `lib/AffirmDisputeClient.php` — OO REST client (HTTP Basic), `apiCall()`, `readCharge()`, `submitDisputeResponse()`. Hardcodes a mirror of `config.local.php` keys. Use this for single-charge lookups.
+- `lib/affirm_payment_status_checker.php` — functional helpers. `apsc_lookup_affirm_by_loan_id()` reads `affirm_final_v6` (table does NOT exist in admin_portal today — function is dead/legacy).
+- `lib/AffirmPaymentStatusChecker.php` — newer class wrapper. DB-only (reads Students.affirm_charge_id + qb_invoices, composes reply). Used by the Discord-status-checker.
+- `cron/affirm_reconcile.php` — every 2h. WC-postmeta-only (scans `/var/www/vhosts/*/httpdocs/wp-config.php` for `_billing_email` postmeta). Mtime 2026-03-11. **NOT live-API mode yet.**
 
-1. Look up the charge with the canonical curl above using whatever charge_id you have.
-2. **status=captured, amount_refunded=0** → EMSU has the money. Reconcile QB invoice (post payment, zero balance, pause reminders, clear suspension). Tell the student "your Affirm payment is confirmed."
-3. **status=authorized** → Affirm holding the loan. Tell the student "approved and held, capture on course start."
-4. **status=voided / not found** → flow abandoned. Send correct Affirm signup link. Do NOT tell them to contact Affirm.
-5. **status=disputed** → STOP. Escalate to Vicky/Ruben immediately. Do not reply to the student.
-6. **captured but amount > QB balance** → most likely the +$250 Affirm financing fee surcharge (see refund posture below) or bundled fees. Reconcile the matching invoice line, flag the delta for Vicky.
+## Planned (in-progress, idea #6646 silent-ghost x2 as of 2026-05-25)
 
-## Forbidden defaults
+- `lib/AffirmLoanStatusClient.php` — thin REST wrapper to be written per handoff 8297. Will expose `lookup_affirm_loan($chargeOrEmail)` MCP tool.
+- Idea #6647 — patch `cron/affirm_reconcile.php` to use live-API mode (after #6646).
+- Idea #6751 — unified Affirm+Authnet+QB CS surface.
 
-- ❌ "Please contact Affirm to resolve this" — we own it
-- ❌ "Vicky will check the Affirm dashboard" — the API is wired, call it
-- ❌ "Please reply with your confirmation number, dollar amount, date and payment method" when the student already provided in the inbound (rule-101 restate-facts gap)
-- ❌ Hardcoding the keys anywhere except config.local.php
-- ❌ Skipping the API lookup because there's no `affirm_payment_status_checks` row
+When `AffirmLoanStatusClient` lands, **prefer it over inline curl in any new code.**
 
-## Refund posture (Ruben directive 2026-05-24)
+## Self-check before any Affirm-related work
 
-**Affirm refund policy at EMSU is now bright-line:**
-
-1. **Once a student signs up for Affirm AND the first day of classes has started: NO refund. Period.** Not partial, not pro-rated. Affirm's post-2025 policies prevent EMSU from deducting any fees from the loan side, so we cannot eat the cost anymore. Student keeps the loan, EMSU keeps the captured funds, student finishes the course or doesn't.
-
-2. **Prior to the first day of classes:** refund per standard EMSU cancellation policy (registration fee non-refundable, tuition refundable per schedule). Use the normal refund_requests flow.
-
-3. **NEVER respond to a refund request by telling a student "contact Affirm to dispute" or "request a refund through Affirm"** once classes have started. That triggers chargeback/dispute paths that damage the EMSU↔Affirm merchant relationship. If a student asks for a refund on a started Affirm enrollment, escalate to Vicky/Ruben. Do not autonomously initiate reversal on either side.
-
-4. **Affirm invoicing is +$250 over the displayed quote** (Affirm financing fee passed through). When Affirm-captured amount exceeds the QB invoice amount, the most likely explanations (in order):
-   - +$250 Affirm financing fee surcharge baked into the loan
-   - Student transferred from a lower-priced section into a higher-priced one
-   - Bundled materials / additional fees the EA priced separately
-
-   The captured-vs-billed delta is real revenue EMSU received and is NOT refundable to the student. The fix is to add the missing QB line items so the books reflect the truth — NOT to refund the difference.
-
-## What this rule does for refund tickets
-
-When a refund ticket mentions Affirm:
-1. Call the Affirm API on the charge_id (status check).
-2. Check `Students.course_start_date` — has the course started?
-3. **Course started AND captured** → no refund possible. Escalate to Vicky with that explicit summary. Do NOT promise the student anything refund-shaped.
-4. **Course not yet started AND captured** → route through normal refund_requests, refund refundable portion only per cancellation policy.
-5. **status=disputed** → halt all comms, alert Vicky.
-
-## Self-check before any "tell Vicky" / "tell the student to call Affirm" reply
-
-Ask: *"Do I have a charge_id from Students.affirm_charge_id, ticket body, or inbound?"*
-
-If yes → call the API first. The API answer trumps every other story.
-
-If no → ask the student for ONE thing: "Reply with your Affirm confirmation number (looks like XXXX-XXXX) and we'll resolve this directly." Don't ask for dollar amount / date / method — those are already in QB and the inbound.
+1. Are these creds already in `config.local.php`? Yes (verified 2026-05-25 04:34). Use them via `AFFIRM_API_KEY` / `AFFIRM_API_SECRET` constants — never hardcode.
+2. Am I about to inline an Affirm REST list+checkout double-hop in a cron that holds a lock? If yes, see the perf incident above + use a feature flag default-OFF.
+3. Do I have an `AffirmLoanStatusClient.php` available? If yes, use it. If not (current state), use `AffirmDisputeClient::readCharge()` for single-charge lookups; for list+match, accept the perf cost or queue async.
 
 ## Cross-references
 
-- HANDOFF_NOTES.md: `2026-05-24 — Affirm BusinessTrack API credentials installed (canonical source of truth)` + `2026-05-24 — Bulk Affirm reconciliation (14 students, $13,300)`
-- Ticket #5037 (Rodolfo Zamot) — canonical case
-- Ideas #6646 (P0, build lib/AffirmLoanStatusClient.php + MCP wrapper, APPROVED), #6647 (P0, extend cron/affirm_reconcile.php, APPROVED, depends on 6646)
-- .clinerules/107 — EMSU payment architecture canonical map (Affirm section now points here)
-- .clinerules/70 — exhaust Authnet MCP before assuming alternate processor (Affirm is parallel; do not conflate refund flows)
-- .clinerules/02 — no apologies in student emails (reconciliation replies follow this)
-- .clinerules/92 — work at the core, not bandaids (this rule IS the core fix)
-- .clinerules/19 — Cline never authorizes refunds without Ruben/Vicky (NOT changed; tightened for Affirm)
-- `lib/AffirmDisputeClient.php` — existing dispute handler; do not call autonomously, only via Vicky
+- `.clinerules/33` — payment architecture canonical map. wpforms_payments is "paid at submit" source of truth for Authnet only; Affirm doesn't fire from WPForms.
+- `.clinerules/107` — EMSU payment architecture canonical map (Authnet/QB/Affirm/attribution pipeline).
+- HANDOFF_NOTES.md 2026-05-25 03:29 PT + 04:28 PT — full Affirm chain audit + detector perf incident.
+- /tmp/affirm_integration_audit.md + /tmp/affirm_wire_chain_review.md on WOPR — subagent-generated deep dives.
+- session_handoffs slugs: idea-6646-build-affirmloanstatusclient, idea-6647-extend-cron-affirm-reconcile-p, idea-6751-unified-payments-verification.
+
+## Source incidents
+
+- 2026-05-25 04:34 PT — Ruben directive: "I gave these to you already so I need you to put them in a place where you don't forget them. Perhaps this isn't an MCP somewhere I don't know I don't care but you need to not forget them you need to put them in the team section area somewhere where they could be called by all agents." This rule is the response.
+- 2026-05-25 04:20 PT — detector #6824 Section 3 perf incident; rolled back. Affirm REST double-hop was the cost. Section 3 now gated behind kill-switch in /tmp/cron_authnet_paid_no_qb_detector_v3.php (staged for #6838 retry).
+- 2026-05-24 (handoff 8278) — original "is Affirm API not wired in to track down student payments" question that birthed the wire chain.
 
 ## Last updated
 
-2026-05-24 v2 — added refund posture + $250 financing fee section. Source: Ruben directive during the bulk-reconciliation session. Affirm post-2025 policies mean EMSU can no longer eat refund-side fees; the bright-line "no refund after class start" rule is now an operational truth.
-
-2026-05-24 v1 — initial. Source: Rodolfo Zamot inv 164791 / charge UDMZ-AWVG. Live API smoke test returned HTTP 200 captured $1,445. Ruben supplied keys verbatim.
+2026-05-25 04:34 PT — initial rule (re-instated after Mac-side Rules-archive copy was missing). Source incident: Cline forgot the keys mid-task after Ruben had given them earlier. Per rule directive, this rule is the durable artifact so no future agent has to re-ask.

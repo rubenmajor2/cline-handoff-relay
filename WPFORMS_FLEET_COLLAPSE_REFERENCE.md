@@ -261,3 +261,60 @@ WP admin login (all 13 sites at https://<site>/wp-admin/): `ruben-temp` / `Ruben
 ---
 
 **End of reference doc. Update this file as Phases land. Next window: read this first, then start at Phase 1.**
+
+---
+
+## 12. UPDATES — 2026-05-25 20:02 PT
+
+### Shipped this session (mu-plugin + class_method backfill)
+
+1. **NEW mu-plugin: emsu-field24-url-enforcer.php** deployed to all 8 active EMT sister sites:
+   - /var/www/vhosts/californiaemt.com/httpdocs/wp-content/mu-plugins/emsu-field24-url-enforcer.php
+   - same path on dallasemt / houstonemt / sanantonioemt / sandiegoemt / texasemt / arizonaemt / tucsonemt
+   - 122 lines, owner = `<site>emt_admin:psaserv`, mode 644
+   - Hook: `wpforms_process_filter` priority 5 (before WPForms validation)
+   - Logic: extract `?class=XXXXX` from entry's `_wp_http_referer` URL → look up canonical label via `emsu_fetch_course_choices()` (the same Course_Schedules-fed helper the dropdown render uses) → force-overwrite `fields[24].value` and `value_raw`
+   - Idempotent (skips when existing value already has the correct Section code in it)
+   - Audit-logged via error_log: `[emsu_field24_url_enforcer] forced fid=24 section=XXXXX label=... url=...`
+   - **This is the single-source-of-truth fix.** Replaces the WPForms 1.10.0.5 validation workaround entirely: student picks a class via `?class=` link, value lands. Whatever the dropdown captures (or fails to capture) is irrelevant.
+
+2. **Students.class_method backfill** — 42 NULL rows in the 5/13+ WPForms-collapse cohort backfilled from Course_Schedules.class_method joined by class_section.
+   - Why this mattered: the SPFS email dispatcher in `/var/www/emtskills/cron/ea_pdf_retry.php` lines 168 + 253 has `$classMethod = $row['class_method'] ?? 'Fast Track'`. When class_method was NULL, the SPFS variant defaulted to Fast Track, regardless of student's actual track.
+   - 13 of the 42 had EA generated before the backfill landed; 9 of those 13 are non-Fast-Track sections (Regular/Accelerated/BootCamp). Those 9 received the wrong SPFS link variant. Their EA PDFs themselves are NOT class_method-driven (template selection is state-based, line 112 ea_pdf_retry.php) — the "Fast Track wording" Vicky sees on the EA PDF is hardcoded in e2pdf template 40, separate fix.
+   - Plus 2 mismatched fixes: trinitywallace 8154418 Regular→Fast Track (her section 26913FT IS Fast Track), tjkelly444 8152674 Weekend→Accelerated.
+
+3. **Re-ran V3 URL-class backfill** — 88 more WPForms entries restored across all 8 sites. CA empty-f24 dropped from 109 → 81 (remaining 80 are students who landed on /register/ with NO `?class=` URL parameter; the V4 inference path catches some, the rest are abandoned-cart leads).
+
+4. **Canary cron log ownership fix** — log file was owned by www-data while the cron runs as emsuserver — silent write-fail since 05:45 PT. Re-chowned emsuserver:emsuserver mode 664. Confirmed writing again at 19:51 PT.
+
+### Going-forward safety model (now)
+
+Single source of truth = `admin_portal.Students.class_section` (the section code, e.g. 26913FT). Everything propagates:
+
+- `Students.class_method` ← `Course_Schedules.class_method` WHERE class_section matches (cron_qb_invoice_safety_net + EA webhook already do this; my backfill closed the historical gap)
+- WPForms `fields[24].value` ← URL `?class=` parameter ← Course_Schedules canonical label (NEW mu-plugin enforces at submit on all 8 sites)
+- master view `view_course_schedules.php` ← Students.class_section JOIN Course_Schedules (already correct)
+- QB invoice safety-net catches Students without qb_invoices within 10min
+- Moodle suspension gate runs midterm-relative
+
+### Open follow-ups
+
+- **9 students who got wrong-SPFS link** (NOT wrong-EA): 8150575 bhomalon, 8150125 aoneill2025, 8151608 maythevega27, 8150470 joycesuntx, 8150171 benjaminsims01.bs, 8152645 edwardcitalan5, 8150128 mulwa.jules1, 8150598 echicco3, 8150136 ashley.tyler0504. Needs Vicky decision: leave PDFs / Vicky calls / regen.
+- **idea #6838** (P2) — perf-bounded detector retry. Awaiting Y/N.
+- **idea #6646** (P1) — Affirm chain unblock (silent-ghost x2). lib/AffirmLoanStatusClient.php needs to be written.
+- **e2pdf template 40 body copy** — verify it doesn't hardcode "Fast Track" wording for non-CA students. If it does, edit the template in wp-admin.
+- **Phase 6 (60-day)** — /emtskills/public/register.php server-side replacement. Iframe pilot texasemt first.
+
+### Reference IDs (current)
+
+- Ticket #5424 OPS-1779703324-WPFC (Vicky bundle)
+- Email #34145 (Vicky priority bundle, 2026-05-25 03:29 PT)
+- Ideas: #6838 (P2 detector retry), #6646/#6647/#6751 (Affirm chain in_progress), #6824/#6823/#6808 closed
+- Event log: #425778
+- Affirm canonical creds: `.clinerules/114` + `admin_portal.shared_credential_vault_platforms` WHERE platform_name='Affirm BNPL Production API'
+- HANDOFF entries (8 this session, latest 2026-05-25 20:02 PT)
+
+### Last updated
+
+2026-05-25 20:02 PT — added Section 12 with mu-plugin ship + class_method backfill + going-forward safety model.
+

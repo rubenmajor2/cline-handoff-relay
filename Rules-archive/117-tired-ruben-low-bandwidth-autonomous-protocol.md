@@ -1,197 +1,206 @@
-# 117 — Tired Ruben — Low-Bandwidth Autonomous Protocol
+# 117 — Tired Ruben: Low-Bandwidth Autonomous Protocol
 
 Permanent rule. Workspace-scoped.
 
-Source incident: Raenah Tee case (26711FT-08), 2026-05-25, task ~00:06 PT 2026-05-26. Ruben directive verbatim:
+Source incident: Raenah Tee case, 2026-05-25/26, task ~00:06 PT 2026-05-26. Ruben directive verbatim:
 
 > *"Rebase, I am getting tired, i need you to act autonomously with high confidence issues remaining, give proposals with time deadlines if i don't accept to act how you would act if I don't reply in 12 hours via email on any outstanding on those, approve, deny modify button and then make the rest ideas and questions"*
 
-This rule formalizes what the Raenah session demonstrated at end-of-session: a 5-tier dispatch model for when Ruben is low-bandwidth, tired, or unavailable, that still moves work forward without requiring back-and-forth.
+Later: *"Can we call this the Tired Ruben rule and make it a cline rule if I cite it?"*
 
-## The 5 tiers (act on the highest you can reach)
+## What this rule is
 
-### Tier 1 — Act now, report only (high confidence + reversible + small blast)
+A 5-tier dispatch model that applies whenever Ruben signals low bandwidth (late-night sessions, "I'm tired," "act autonomously," "rebase," or simply goes quiet mid-task). It is NOT a replacement for rule 29 (act-on-confidence-tier) — it is the **communication and queuing protocol** that wraps rule 29's action gates.
 
-Per .clinerules/29 confidence matrix (high + reversible + small blast radius → act, then report).
+When Ruben says any of: "I'm tired", "act autonomously", "rebase", "just handle it", "make the rest ideas", "give proposals", "wrap up", or stops responding mid-task on time-sensitive work — this rule activates automatically.
 
-**When to use:** deterministic DB match, schema-verified state, pattern_confidence ≥ 0.85, blast radius = 1 student or 1 row, action is SQL UPDATE or calling existing helper function.
+## The 5-tier dispatch model
 
-**What to do:** act immediately, then include a 1-line report in attempt_completion. No Q-card. No draft. No wait.
+### Tier 1 — Act now, report in attempt_completion
 
-**No FPM reload** unless the action was a raw-ssh file write (per .clinerules/42 — safe_deploy already reloads FPM automatically).
+**When:** high confidence (rule 29 definition: deterministic SQL match, schema-verified, learned-pattern confidence ≥ 0.85) + reversible + small blast radius
 
-**Examples:**
-- Flip `agent_takeover_unmute=1` on a single chat row → Tier 1
-- Update a single `quiz_overrides` row to extend a deadline → Tier 1
-- Fix a typo in a cron config that's causing silent failures → Tier 1
+**What to do:** ship it. No Q-card, no proposal, no wait. Log the before/after state, mention it in attempt_completion.
+
+**Examples from source incident:**
+- Posting internal ticket comments with corrected exam math → Tier 1
+- Filing orchestrator_ideas at status=approved for systemic fixes Ruben explicitly directed → Tier 1
+- Closing duplicate tickets with full context logged → Tier 1
+
+**Rule 29 gates still apply.** Irreversible actions (email/SMS to student, QB changes, Moodle gradebook edits, money) are NOT Tier 1 regardless of confidence. They go to Tier 2.
 
 ---
 
-### Tier 2 — Queue as agent_send_or_draft (medium confidence OR student/external-facing irreversible)
+### Tier 2 — Queue as click-to-send draft with 12-hour autosend deadline
 
-**When to use:**
-- Confidence 0.70–0.89 (heuristic match, multi-signal, no learned-pattern row)
-- OR the action is irreversible in the student's world (email/SMS to student, ticket reply visible to student, Moodle gradebook change, QB invoice change)
-- Blast radius is still small (1–3 students, 1–3 rows)
+**When:** medium confidence OR student-facing irreversible action (email, SMS, ticket reply to student, public-facing change) where the substance is correct but the send is a point of no return.
 
 **What to do:**
-1. Call `agent_send_or_draft` with `tactical_confidence` in range, `escalate_on_expiry="autosend"`, and a **12-hour deadline** from now.
-2. In the `body_text` field, write the draft as if sending it — it IS the content that will auto-send on expiry.
-3. State clearly in the `evidence_json` what action fires if Ruben doesn't respond: *"If no decision in 12h, this will autosend as written."*
-4. On expiry with no decision → **autosend** (not escalate, not discard). Ruben's silence is consent.
+1. Call `agent_send_or_draft` with `tactical_confidence` in the 0.70–0.89 range and `escalate_on_expiry=autosend`
+2. Set deadline = now + 12 hours (or shorter if there is a hard external deadline — see "Time-sensitive override" below)
+3. The draft gets an approve/deny/modify button in the admin portal
+4. If Ruben doesn't interact within the deadline, the action auto-executes exactly as staged
 
-**Cascading Tier-2 drafts:** if Draft A's auto-send would make Draft B obsolete (e.g. corrective email sent → SEB instructions no longer urgent), note the dependency in Draft B's `evidence_json` as `"superseded_by_draft": <id>`. The agent_drafts cron should check this before firing Draft B.
+**The draft body MUST state explicitly:** what this message corrects, what it says, and what will happen if Ruben doesn't act. Example opener: *"This will auto-send in 12 hours unless you approve/deny/modify. Here's what it does: [...]"*
 
-**Time-sensitive override:** if the student has an expiring override window (e.g. override expires 5/31), set the deadline to `MIN(12h, expiry_date - 24h)` so the action fires before the window closes, not after.
+**iMessage/SMS proposals follow the same pattern.** Queue via `agent_send_or_draft` with `kind=sms` or `kind=imessage`. Same 12h autosend window.
 
-**iMessage/SMS proposals follow the same pattern:** `kind="sms"` or `kind="imessage"` with `escalate_on_expiry="autosend"` and 12h deadline. Same rules apply.
+**Confidence-to-tier mapping:**
+- `tactical_confidence` ≥ 0.90 → tier 1_autosend (skip the human gate entirely, sends within cron tick)
+- `tactical_confidence` 0.70–0.89 → tier 2_click (this tier, 12h window)
+- `tactical_confidence` < 0.70 → tier 3 human-only draft (no auto-expiry, requires explicit decision)
 
 ---
 
-### Tier 3 — File as orchestrator_ideas at status=approved (systemic/code fixes Ruben directed)
+### Tier 3 — Systemic code fixes: file as orchestrator_ideas at status=approved
 
-**When to use:** the right fix is a code change, cron wire-up, new agent capability, schema migration, or multi-session build. Cannot ship fully in this session.
+**When:** the fix requires code/schema/infrastructure change that isn't shippable in the current session, OR Ruben explicitly directed it but it's multi-session work.
 
 **What to do:**
-1. File an `orchestrator_ideas` row with `status="approved"` (NOT proposed, NOT pending — per .clinerules/38, Ruben-directed work is auto-approved).
-2. Include in the description: the Ruben directive verbatim, the session slug, the detection evidence, and "Per .clinerules/38: Ruben-asked → autonomous tier minimum."
-3. If ANY part of the fix is shippable in this session → ship it NOW, then file the remainder as Tier 3.
-4. Do not downgrade to `proposed` or `pending` — that adds a friction gate Ruben didn't ask for.
+1. File via `create_idea` in `ruben-orchestrator` with `status=approved` (NOT proposed, NOT pending — per rule 38, Ruben asking = approved tier minimum)
+2. Include in the description: Ruben's directive verbatim, session slug, "Per .clinerules/38 + .clinerules/117"
+3. Ship it in the same session if shippable — the idea filing is the fallback, not the first option
+4. If shippable: safe-deploy + lint + smoke, then mark the idea deployed
 
-**Format for the title:** use the problem class, not the symptom. Not "Fix Raenah's email" → "check_exam_lock_reason preflight on midterm-locked + technical intent."
+**Never leave Ruben-requested systemic fixes at `proposed`.** That adds friction he didn't ask for.
 
 ---
 
-### Tier 4 — File as orchestrator_ideas with [QUESTION] prefix (policy questions / things needing Ruben's call)
+### Tier 4 — Policy questions: file as orchestrator_ideas with [QUESTION] prefix
 
-**When to use:** the right answer depends on a business decision or policy that isn't resolved in existing .clinerules or emsu:// references. Agent can detect the class and propose options but cannot choose.
+**When:** the right action depends on a policy call only Ruben can make (e.g., "should agent auto-issue grievance tokens?", "should we auto-send corrective emails on AI mistakes?").
 
 **What to do:**
-1. File as `orchestrator_ideas` with title prefixed `[QUESTION]: ...`.
-2. State the 2–3 concrete options clearly: each option's action, consequence, and which .clinerules it would interact with.
-3. Do NOT block Tier 1/2/3 work waiting for the answer. File the question and keep moving.
+1. File via `create_idea` with title starting `[QUESTION] ...`
+2. Description: the question, the two+ options, what each implies, what the default assumption is if Ruben doesn't answer
+3. No deadline — these are async
 
-**Examples:**
-- "Should agent auto-send corrective emails when ground-truth contradicts a prior reply?" → Tier 4
-- "Should grievance auto-detection auto-issue intake tokens?" → Tier 4
+**Policy questions do NOT block Tier 1/2/3 work.** File the question and continue with the rest of the dispatch.
 
 ---
 
-### Tier 5 — Discard / skip silently (below minimum threshold)
+### Tier 5 — Discard (don't surface)
 
-**When to use:**
-- Low confidence (single keyword match, AI inference, no schema verification)
-- Large blast radius AND irreversible (50+ students, wide class, system-level)
-- Action is outside all agent authority zones per .clinerules/29
+**When:** something was detected but it's low-confidence, not time-sensitive, and doesn't need even a question — it'll be visible in the next proactive scan.
 
-**What to do:** log to `orchestrator_event_log` (severity=info, no action). Do not send to staff chat. Do not file an idea unless there's a pattern worth tracking.
+**What to do:** log to `orchestrator_event_log` severity=info and move on. Do not include it in attempt_completion noise.
 
 ---
 
-## Decision flow (which tier?)
+## Time-sensitive override
 
-```
-Detected issue or action needed?
-        |
-        v
-Is confidence HIGH (deterministic, schema-verified, ≥0.85 pattern)?
-  AND action is reversible in <30s?
-  AND blast radius is 1 student / 1 row?
-        |
-       YES → Tier 1: Act now, report in attempt_completion
-        |
-       NO → Is confidence MEDIUM (0.70-0.89) OR action is student-facing irreversible?
-              AND blast radius is 1-3 students / 1-3 rows?
-              |
-             YES → Tier 2: agent_send_or_draft, 12h deadline, autosend on expiry
-              |
-             NO → Is this a code/cron/capability fix Ruben directed?
-                    |
-                   YES → Tier 3: orchestrator_ideas status=approved, ship what you can now
-                    |
-                   NO → Is this a policy/business-decision question?
-                          |
-                         YES → Tier 4: orchestrator_ideas [QUESTION] prefix
-                          |
-                         NO → Tier 5: event_log only
-```
+If an external deadline makes the 12h window inadequate, shorten it:
+
+- State the hard deadline in the draft body: *"Student's exam override window expires 5/31. Auto-send in 4 hours unless you act."*
+- Set `expires_at` to the shorter window
+- The autosend-on-expiry fires at the shorter deadline
+- Log the reasoning in the `evidence_json` field
+
+**Cascading draft dependency:** if Draft A auto-sends and Draft B is now redundant, the agent must detect this at next check-in and either:
+- Mark Draft B as superseded (update `decision='cancelled'` with a note explaining why)
+- Or verify Draft B still applies and let it stand
+
+Do NOT let two drafts for the same student/ticket execute independently when one supersedes the other.
 
 ---
 
-## What this rule does NOT override
+## Duplicate draft prevention
 
-- **No FPM reload** after safe_deploy_file — safe_deploy already handles it (per .clinerules/42). Only use `reload_php_fpm` MCP tool if you wrote via raw ssh_command.
-- **No walls of text to ops chat** — Tier 1 reports go in attempt_completion, not chat 55/64/5 (per .clinerules/01). Staff chat only when there's a specific human action needed NOW.
-- **Every attempt_completion still needs a pickup prompt** (per .clinerules/91) — even when acting autonomously, the pickup prompt documents what fired and what's next.
-- **Irreversible + large-blast still requires Q-card** — this rule compresses the workflow for small-blast irreversible actions (Tier 2), but does NOT override the hard stops in .clinerules/29 for large-blast irreversible actions (money, regulator, gradebook for 50+ students).
+Before staging a Tier 2 draft, check `get_active_pending_drafts` for the same `to_address`. If a pending draft already exists for the same recipient and subject class:
+1. Review whether it's still accurate
+2. If the new version is more accurate: update the existing draft's body via direct SQL UPDATE (or mark old one cancelled and file new one)
+3. If the old draft is still correct: don't file a duplicate — just confirm it's staged and move on
 
----
-
-## The 12-hour window and time-sensitive cases
-
-The 12-hour deadline is the default. Override it when:
-
-- **Student has an expiring override window:** set deadline = MIN(12h, override_expiry - 24h). Example: override expires 5/31 → deadline = 5/30 12:00 PM, not 12h from now.
-- **Regulatory or accreditor deadline:** use the actual deadline minus 48h.
-- **Student in active course with exam window closing:** shrink to 4h if the exam closes within 24h.
-
-Always state the time-sensitivity logic in `evidence_json` so the auto-send cron can validate before firing.
+Multiple pending drafts for the same recipient cause confusion and risk duplicate sends. The Raenah Tee case had drafts #4, #5, and #7 all pending simultaneously.
 
 ---
 
-## Cascading and dependency handling
+## No FPM reload unless you wrote via raw SSH
 
-When multiple Tier-2 drafts are staged in one session:
-
-1. Draft the highest-priority one first (e.g. corrective email > procedural instructions).
-2. If Draft B is only needed if Draft A DOESN'T auto-send, set `escalate_on_expiry="no_op"` on Draft B and note `"superseded_if_draft_A_sent": true` in evidence_json.
-3. If Draft B is ALWAYS needed regardless of Draft A → stage independently with its own 12h clock.
-4. Check active drafts with `get_active_pending_drafts` before adding more — avoid duplicate sends.
+Per rule 42: `safe_deploy_file` already reloads FPM internally. Do NOT call `systemctl reload php8.3-fpm`. The only case for a manual reload is when you wrote to a server path via raw `ssh_command cat > file <<EOF`. In that case use the `reload_php_fpm` MCP tool.
 
 ---
 
-## What "low-bandwidth" means operationally
+## No walls of text to ops chat
 
-This rule applies any time one of these is true:
-- Ruben explicitly invokes it ("I'm tired", "act autonomously", "just do it")
-- It's past midnight local time and the session has been running > 2 hours
-- Ruben has not responded to a Q-card for > 30 minutes and the action has a real deadline
-- The task is picked up by a fresh Cline window from a pickup prompt (YOLO mode or fresh session)
-
-In low-bandwidth mode: bias toward Tier 1 and Tier 2. Default to action over asking. Questions (Tier 4) are filed, not asked inline.
+Per rule 01: when reporting Tier 1 actions to chat 55/64/5, use Ruben voice (casual, short, direct). The full technical write-up belongs in HANDOFF_NOTES.md and internal ticket comments, NOT in iMessage. A Tier 1 action report to ops chat is one sentence. A Tier 2 staged draft is two sentences ("staged a [X] for [Y], auto-sends in [N] hours unless you act").
 
 ---
 
-## Self-check before any end-of-session wrap
+## Every completion still needs a pickup prompt
 
-Before attempt_completion, verify:
+Per rule 91: even when this rule activates (low-bandwidth session, Ruben is tired), the attempt_completion MUST end with the PICKUP PROMPT block. Especially important in these sessions — the next window needs to know what auto-sent, what's still pending, and what the deadlines are.
 
-1. All Tier-1 actions completed and summarized in the result?
-2. All Tier-2 drafts staged with deadline + autosend + evidence_json?
-3. All Ruben-directed systemic fixes filed as Tier-3 ideas at status=approved?
-4. All policy questions filed as Tier-4 [QUESTION] ideas?
-5. Pickup prompt covers all open Tier-2 deadlines so the next window knows what's pending?
-6. No FPM reload called after safe_deploy? (rule 42)
-7. No walls of text queued for ops chat? (rule 01)
+Pickup prompt MUST include:
+- Which Tier 2 drafts are staged and their deadlines
+- Which Tier 3 ideas were filed (IDs + status)
+- Whether any staged drafts cascaded or were superseded
+- The next time-sensitive deadline in the case
 
-If all 7 → attempt_completion. Otherwise fix the gap first.
+---
+
+## What "high confidence" means in this context (Tier 1 gate)
+
+Adapted from rule 29:
+
+| Signal | Confidence level |
+|---|---|
+| Deterministic SQL match on schema-verified columns | High |
+| `orchestrator_learned_patterns` row present + `confidence ≥ 0.85` + `auto_enabled=1` | High |
+| Math verified against raw DB values (e.g., exam score calculation) | High |
+| Heuristic pattern match, single keyword, AI inference, no schema verify | Medium or Low |
+| Single email/inbound that contradicts other signals | Low |
+
+"Verified against raw DB" specifically means: you ran the query yourself, read the column names, confirmed the values, and the conclusion follows mechanically. The Raenah exam math (46/50=92%, 40/50=80%, 47/50=94%, 45/50=90%) was High confidence because the numbers came directly from the DB and the threshold comparison is arithmetic — not subject to interpretation.
+
+---
+
+## The Raenah Tee case as canonical example
+
+**What happened (source incident):**
+
+1. Student sent a grievance email. Auto-responder sent a 1-second generic ack only. No grievance token issued, no grievances row created. (→ Ideas 7205, 7207 filed at status=approved)
+
+2. Prior corrective email (outbound 34266, 5/24 16:58) contained a math error: compared raw points (46, 40, 47, 45) to 80% threshold as if they were percentages. Student was told to retake exams she had already passed. (→ Tier 2 corrective email draft staged, Tier 1 internal ticket comment posted)
+
+3. Midterm was actually unlocked (all 4 prerequisites met, Simulation completed) but student didn't know and was getting stonewalled. (→ Corrective email draft included clear statement that Midterm IS open)
+
+4. Ruben signaled low bandwidth. Applied this protocol: shipped all high-confidence DB edits and ticket comments as Tier 1, staged two corrective emails as Tier 2 drafts with 12h autosend, filed 6 systemic fix ideas as Tier 3 at status=approved, filed 2 policy questions as Tier 4.
+
+**What the protocol prevented:**
+- Ruben from having to approve each action individually at midnight
+- The corrective email from not being sent (auto-sends if Ruben is asleep)
+- Systemic issues from staying as vague notes (filed as approved ideas, RUBEN executor picks up)
+
+---
+
+## Self-check before any low-bandwidth session wrap-up
+
+Before `attempt_completion` when this rule is active, ask:
+
+1. **Did every high-confidence + reversible + small-blast action already execute?** (Tier 1)
+2. **Are all student-facing irreversible actions staged as Tier 2 drafts with deadlines?** Check: is `escalate_on_expiry=autosend` set? Is the deadline realistic?
+3. **Are all Ruben-directed systemic fixes filed as orchestrator_ideas at status=approved?** (Tier 3)
+4. **Are all policy questions filed as [QUESTION] ideas?** (Tier 4)
+5. **Are there any duplicate pending drafts for the same recipient?** Resolve before completing.
+6. **Does the pickup prompt include all Tier 2 deadlines?** The next window needs them.
+
+If any answer is no → fix before calling attempt_completion.
 
 ---
 
 ## Cross-references
 
-- .clinerules/29 — confidence tier matrix (the upstream rule this extends)
-- .clinerules/38 — Ruben-asks = autonomous-tier minimum (Tier 3 applies this)
-- .clinerules/41 — post-deploy call the tool do not narrate
-- .clinerules/42 — safe_deploy already reloads FPM
-- .clinerules/91 — every completion needs pickup prompt (Tier 2 draft deadlines must appear in pickup prompt)
-- .clinerules/92 — work at the core not bandaids (Tier 3 → fix the agent, not the symptom)
-- .clinerules/99 — YOLO prevention
-
-## Source incident
-
-2026-05-25 — Raenah Tee case (26711FT-08). Multiple agent failures: wrong grade-percentage comparison in corrective email, no grievance intake token, sender_24h_cap silent suppression, broken exam-lock-reason check. Session ran past midnight. Ruben: *"Rebase, I am getting tired..."* The session demonstrated the exact 5-tier pattern in practice: 2 Tier-1 ticket comments, 6 Tier-3 ideas (IDs 7203-7208), 2 Tier-4 policy questions (IDs 7210-7211), 2 Tier-2 drafts with 12h deadlines + autosend.
+- `.clinerules/29` — act-on-confidence-tier (the action gate; this rule is the queuing protocol wrapper)
+- `.clinerules/38` — Ruben-asks = autonomous-tier minimum (Tier 3 filing behavior)
+- `.clinerules/01` — voice and persona (Tier 1 reporting to ops chat)
+- `.clinerules/41` — post-deploy call the tool do not narrate (still applies in Tier 1 actions)
+- `.clinerules/42` — safe-deploy already reloads FPM (Tier 3 code deploys)
+- `.clinerules/91` — every completion needs pickup prompt (mandatory even in low-bandwidth sessions)
+- `.clinerules/92` — work at the core not bandaids (Tier 3 = fix RUBEN, not symptoms)
+- `agent_send_or_draft` MCP tool (emsu-operations) — the implementation layer for Tier 2 drafts
+- `orchestrator_ideas` table (ruben-orchestrator) — the implementation layer for Tier 3/4
 
 ## Last updated
 
-2026-05-26 — initial rule.
+2026-05-26 — initial rule. Source: Raenah Tee grievance case, session ending ~00:06 PT 2026-05-26. Ruben directive: *"I am getting tired, i need you to act autonomously with high confidence issues remaining."*

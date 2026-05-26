@@ -33,7 +33,7 @@ This file is the fail-safe TOC for the hardfloor rules + how to query the rest.
 The full archive (~125 rules) is in `~/Documents/Cline/Rules-archive/`. Don't try to memorize. Use the MCP. Common starting points:
 
 - **Voice / comms / staff escalation:** `clinerules_list_by_topic(topic="voice")` → rules 10, 13, 15, 19, 30, 47, 48, 57, 72, 96, 101, 108, 111
-- **Agent behavior / escalation tiers:** `clinerules_list_by_topic(topic="agent")` → rules 12, 22, 23, 36, 42, 46, 49, 53, 54, 56, 65, 66, 67, 68, 69, 73
+- **Agent behavior / escalation tiers:** `clinerules_list_by_topic(topic="agent")` → rules 12, 22, 23, 36, 42, 46, 49, 53, 54, 56, 65, 66, 67, 68, 69, 73, **117** (Tired Ruben — low-bandwidth autonomous protocol: 5-tier act/queue/file/question/discard model)
 - **Infrastructure / debugging / Mac+WOPR:** `clinerules_list_by_topic(topic="cline mac")` → rules 16, 20, 24, 25, 26, 27, 28, 29-mac, 34, 77, 95, 100, 102, 105
 - **Task hygiene / wrap-up:** `clinerules_list_by_topic(topic="task")` → rules 03, 04, 05, 06, 07, 09, 52, 109, 113
 - **Compliance / regulatory:** `clinerules_list_by_topic(topic="regulator")` → rules 08, 18, 60, 61, 103

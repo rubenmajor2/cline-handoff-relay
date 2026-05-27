@@ -144,6 +144,10 @@ def main():
     }
     with open(STATUS_FILE, "w") as f:
         json.dump(status, f, indent=2)
+    # P1 — idea #7377: also write per-task file so concurrent tasks don't clobber each other
+    per_task_file = f"/tmp/cline_budget_status_TASK{task_id}.json"
+    with open(per_task_file, "w") as f:
+        json.dump(status, f, indent=2)
 
     # Notification logic: only fire once per task per tier (RED, IMMINENT)
     if tier in ("RED", "IMMINENT"):

@@ -1,12 +1,32 @@
-# 120 — Cost-down + same-or-better quality is REQUIRED to even consider adding a candidate model, not just to flip it.
+# 120 — The All-Greens Rule (a.k.a. "3G"): Cheaper × Better-or-Equal Quality × Equal-or-Better Capacity. All three or no swap.
 
 Permanent rule. Workspace-scoped.
 
-## The 3 rules of EMSU model adoption (per Ruben, consolidated 2026-05-26 23:00 PT)
+## The name
 
-1. **45% W+T (adaptive) or better** vs whatever current production primary is on that surface
-2. **Same or better quality** at the model level (not just "tied or close")
-3. **Lower price** than the current primary (cost-down direction is hard-required, not optional)
+**Call it "The All-Greens Rule" or "3G Rule."** Three greens = Cost-green + Quality-green + Capacity-green. If any one is red or yellow, the candidate doesn't enter the pool, period.
+
+## The 3 greens of EMSU model adoption (per Ruben, named 2026-05-27 01:04 PT)
+
+1. **Cost-green (cheaper)** — strictly lower price per token than the current primary on the target surface. Not flat, not "comparable" — STRICTLY less.
+2. **Quality-green (45% W+T adaptive or better, AND at-least-equal to current)** — measured backtest or strong family-comparison evidence that the candidate will hold up.
+3. **Capacity-green (equal or better)** — throughput (TPS/RPS), context window, max output tokens, rate-limit headroom, latency. The candidate must not constrict the surface vs the current primary.
+
+**All three must be green together.** Not 2/3. Not "we'll check the third later." All three known-or-believed-true BEFORE the candidate even gets added to LiteLLM as a model_group.
+
+The 3G framing comes from Ruben's framing of "cost engine = considers quality AND capacity not just price." 3G = Cost + Quality + Capacity, all three measured at the moment of candidate consideration.
+
+## Why capacity is in the rule (the new dimension)
+
+A "cheaper + same quality" candidate can still be a bad swap if:
+- Its context window is smaller (e.g. 32K vs the 200K of Sonnet) → some prompts will get truncated → silent quality regression that won't show up in n=50 backtest
+- Its max output tokens are lower → some chains will hit completion limits → silent degradation
+- Its TPS / rate limit is lower → production traffic queues up → latency regression OR fallback to Sonnet anyway (so we eat the cost-down on FEWER calls than expected)
+- Its first-token latency is slower → user-facing surfaces feel slow even if W+T% holds
+
+**Capacity-green check** at pre-screen prevents shipping a candidate that wins on cost+quality but bottlenecks the surface.
+
+If you can't make a defensible cost-down + quality-not-worse + capacity-not-worse claim BEFORE adding the model_group, the model doesn't belong in the candidate pool.
 
 **All three must be true together.** Not 2/3, not "we'll check the third in a backtest later." All three known-or-believed-true BEFORE the candidate even gets added to LiteLLM as a model_group.
 

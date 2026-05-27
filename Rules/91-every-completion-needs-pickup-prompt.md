@@ -145,3 +145,9 @@ The watchdog also fires an osascript notification at RED/IMMINENT so Ruben sees 
 
 2026-05-19 — initial rule per Ruben directive in the Calderon recovery chain.
 2026-05-20 — added budget-watchdog tier mandate (Layer 2 of idea #5354).
+
+## 2026-05-26 addendum — per-task budget file + T5 periodic-compress trigger
+
+- **Idea #7377 (shipped):** per-task budget file naming pattern `/tmp/cline_budget_status_TASK<task_id>.json` to prevent sibling Cline tasks from clobbering each other's tier signal. Writer: `~/Documents/Cline/scripts/cline_budget_watchdog.py` lines 145-150 now writes both the legacy global file (`/tmp/cline_budget_status.json`) AND the per-task file. Readers/agents should prefer the per-task file when a task_id is known.
+
+- **Idea #7380 (shipped):** T5 periodic-compress trigger via the cline-compress MCP `should_compress_now` tool. Agent should poll every ~150K tokens of growth (or every N tool calls in a long-running task). Returns `{ should_compress, tier, context_size, growth_since_last, reason }` keyed on a caller-supplied `last_compress_size` argument and a `growth_threshold` (default 150000). When `should_compress=true` and ti- **Idea #7380 (shipped):** T5 periodic-compress trigger via the cline-compress MCP `should_compdia- **Idea #7380 (shipped):** T5 periodic-compress trigger via the cline-comprehdog tier mandate above.

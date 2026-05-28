@@ -49,6 +49,39 @@ Every autonomous action writes a structured `orchestrator_event_log` row with be
 
 When acting on an in-flight case that another agent should have caught, ALSO write a `systemic_gap_detected` event pointing at the upstream agent. 3+ in 24h auto-files an idea to fix it. Spot + systemic together.
 
+## Pre-completion audit (added 2026-05-27 — fixes "Ruben keeps finding gaps Cline missed")
+
+**Before EVERY `attempt_completion` on a coordinator-style task** (fleet/llm/orchestrator/multi-system), the agent MUST execute a chain-of-verification pass that surfaces gaps Ruben WOULD ask about, not the ones the agent is comfortable showing.
+
+The pre-completion audit asks 7 questions in order. Every "no" answer = run the investigation, file the gap, take the action, BEFORE shipping the completion:
+
+1. **Did I verify the prior handoff doc's claims against live state?** If the prior chain said "X is running" and I didn't check, X is probably not running.
+2. **Are there any rules-MCP violations recorded against the prior chain or this one?** `clinerules_stats` + recent violation scan. If yes, surface them in the completion, don't bury.
+3. **For every "filed at status=proposed" idea I wrote this session — was it promoted to autonomous-tier per rule 38?** If no, do it now. Rule 38 is hardfloor.
+4. **For every "in flight" item — did I verify the dispatcher / executor actually picked it up?** `mac_shell_picked_up_at IS NOT NULL` AND not in a stuck snooze loop. If snoozed, identify the cause and unsnooze unless the snooze is genuinely correct.
+5. **For every config change made this session — did I verify it actually changed production behavior?** Decision logs / row updates don't count. The verification is "did the next inbound traffic on the touched surface route differently."
+6. **For every "single digit" / "low call" / "decorative" finding — did I trace WHY?** Production data hitting <10 calls/day on a model that's supposedly wired = a routing path that doesn't fire. Find the gate that's closed.
+7. **For every dollar figure cited — did I check the trend, not just today's number?** Today might be misleading (Sunday, holiday, cron crash). Always pull ≥7-day trend before reporting savings/spend.
+
+If the agent finds itself thinking "I'll just mention this and Ruben will decide," that's a rule-29 violation. The agent acts, then mentions. Ruben gets a status report, not a decision queue.
+
+### Source incident (2026-05-27 Fleet/LLM coordinator chain)
+
+Ruben caught the agent FOUR times in one session: (1) prior handoff was wrong about LoRA pods being alive (not investigated until Ruben mentioned LoRA), (2) rule 91 PICKUP-BY-REFERENCE violation (caught at first completion), (3) rule 119+120 prior-chain violations not surfaced until Ruben asked about backtest, (4) "decorative" shadow models not investigated to root cause (DISABLED=True kill switch in router_hook.py) until Ruben asked again. Each of those should have been part of the FIRST completion, not extracted by interrogation.
+
+Pre-completion audit prevents this shape. If it had run on the first completion, the agent would have found DISABLED=True in router_hook.py via question #5 ("did the autoflip actually change production behavior?") and surfaced it as the keystone finding.
+
+## Anti-pattern: "I've prepared X for Ruben to decide"
+
+The agent has filed ideas + handoff rows. The system has executors. Ruben is the bottleneck-of-last-resort, not the routing layer. If the agent's completion ends with "Ruben can decide" or "options for Ruben" or "Ruben to confirm" on a code-class / config-class / reversible-action-class item — that's the rule violation. The agent acts. Ruben sees a STATUS report (what happened, what changed, what's running), not a DECISION report (what should we do).
+
+The only legitimate ends for an agent completion in coordinator tasks:
+- Status: "Done. <list of shipped/in-flight items>. Verification: <how to confirm>."
+- Blocked: "Blocked on <specific code-level gate>. Filed P0 #N to fix that gate. The gate exists at <file:line>."
+- Hardfloor: "Can't act per rule X (regulator/legal/large-money). Q-card #N waiting on you."
+
+Anything else is the agent treating Ruben as a router, not a deciding-of-last-resort.
+
 ## Deep version
 
 Full text including investigation kit table, source incidents, v1-vs-v2 diff, follow-on ideas:

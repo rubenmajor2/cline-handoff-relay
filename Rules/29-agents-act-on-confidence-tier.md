@@ -82,6 +82,88 @@ The only legitimate ends for an agent completion in coordinator tasks:
 
 Anything else is the agent treating Ruben as a router, not a deciding-of-last-resort.
 
+## Pickup-prompt-as-decision-queue is the same anti-pattern (added 2026-05-27)
+
+The rule-91 PICKUP PROMPT block exists so a NEW Cline window can pick up genuinely-unfinished work. It is NOT a parking lot for items the CURRENT agent could have acted on but chose to defer. If the pickup prompt's "Open threads" section contains:
+
+- Reversible actions the current agent has tools for (close ticket, file idea, add comment, send email, run cron, write to ledger)
+- "Consider filing an idea to X" — file it now
+- "Close ticket N as dup" — close it now via update_ticket
+- "Decide whether to do X" where X is reversible and within the agent's capability catalog — do X
+
+…those are rule-29 violations dressed up as a pickup prompt. The agent acted on the headline thing, then punted the cleanup. The cleanup IS the work.
+
+### The pickup-prompt act-vs-defer test
+
+For every numbered item in "Open threads to drive next," ask:
+
+1. *Do I have a tool that performs this action?* (update_ticket, add_ticket_comment, create_idea, send_message with ruben_directed intent from a verbatim quote, deploy_moodle_content, etc.) → If yes, ACT before completion. Do not list it.
+2. *Is this a judgment call requiring a specific human's policy authority?* (final refund amount, regulator response wording, grievance outcome, hiring decision, money over the agent's code-level cap) → OK to list, and route via the round-robin or Q-card.
+3. *Is this work that requires a fresh window because the current window is at IMMINENT budget tier?* (per rule 91 budget-watchdog) → OK to list, but only if the watchdog actually says IMMINENT.
+
+If an item passes (1) and isn't (2) or (3), it does NOT belong in the pickup prompt. Do it now.
+
+### Legitimate pickup-prompt items look like this
+
+- "Vicky to decide whether to grant Phelix the refund his stated premise (week 1 not in person) actually held" — this is policy judgment on a money decision = OK to list
+- "Jon to send the CS-voiced corrected reply" — Jon owns the ticket, his voice on customer comms is policy = OK to list
+- "Check whether 26613FT week 1 was actually scheduled remote (needs class_options DB query)" — agent CAN do this, so the agent should do it before completion, NOT list it
+
+### Source incident (2026-05-27 Phelix Ho refund window)
+
+After shipping the source-file fix + internal ticket comments, the first completion's pickup prompt listed FOUR open threads. Of those four: (1) CS reply from Jon = legitimate policy item, (2) "close ticket 6274 as dup" = agent had update_ticket tool, should have done it, (3) "decide whether to grant refund" = legitimate policy item, (4) "consider filing an idea to inject class_started as structured fact" = agent had create_idea tool, should have filed it.
+
+Ruben caught it: *"I see these open issues and wonder if we could expand Rule 29 even more."* Items 2 and 4 were rule-29 violations dressed as pickup. Items 1 and 3 were legitimate.
+The agent should leave the human only the work the agent provably cannot do.
+
+## What CS / Vicky / Jon literally CANNOT do (added 2026-05-27 — Ruben directive: "Vicky can only comfort and match payments, lol")
+
+Naming a human as "the right person to handle this" only makes sense if that human can actually act on the case. Routing a case to Vicky / Jon / a CS member for things they have no tools to do is the same chilling-effect bug as v1 — it just routes via a different surface (a ticket queue instead of a Q-card).
+
+**Cline-only capabilities (humans physically cannot do):**
+- moodle role_assignments / user_enrolments / groups_members INSERT (Cline SQL)
+- Students.is_duplicate / merged_into_student_id flip (Cline SQL)
+- mdl_user.suspended toggle + email/username restore from "Archived-01-..." (Cline SQL)
+- qb_invoices.status='voided' on orphan invoices (Cline SQL)
+- Class section swap (DELETE+INSERT on Class_Enrollments + Moodle groups_members) (Cline SQL)
+- Authnet `refundTransaction` API call (Cline MCP — within $300 cap per agent_capabilities.email_agent.auto_refund_cap_usd)
+- Affirm void / capture API call (Cline MCP)
+- Moodle quiz attempt unstick (Cline MCP `unstick_moodle_quiz_attempt`)
+- Composing + sending student email under student-facing voice (rule 02) (email_agent)
+- Filing orchestrator_ideas / closing tickets / promoting status (Cline + agents)
+
+**Vicky CAN do (and these are the ONLY things to route to her):**
+- Talk to a student on the phone for empathy / comfort / verification of intent
+- Match a confusing payment to a person (manual reconciliation in QB when the agent's match confidence is low)
+- Authorize a refund > $300 (above the agent's code-level cap)
+- Confirm a student's stated intent before a section swap when both options are plausible
+
+**Jon CAN do (his exclusive lane):**
+- Policy override on academic / grievance / refund decisions (regulator-bound)
+- Final yes/no on a >$1000 refund or a regulator-facing letter
+
+**Ruben CAN do (his exclusive lane):**
+- Regulator / state filing / accreditation correspondence
+- Final policy decisions that affect business shape (pricing, programs, hiring)
+
+**Everything else routes to the AGENT, not a human.** "Course access" was wrongly listed in the routing table above as a CS-round-robin item — it's not. Course access is SQL the agent runs, not phone calls a human makes.
+
+### The act-or-route test (use this BEFORE naming any human in a triage report)
+
+For every case you're tempted to route to a human, ask:
+
+1. *Does the human have a tool to do the actual fix?* If the fix is a SQL change, an API call, or a code edit, the answer is no. The agent does it.
+2. *Is the human providing information the agent doesn't already have?* If the agent has the data (verify_payment_state ran, Moodle state queried, Authnet checked), the answer is no. The agent has the info; the agent acts.
+3. *Is empathy the actual reason for human contact?* If yes, route in parallel for warmth. Do not block the operational fix on it.
+
+If 1 + 2 + 3 are all no, "routing to a human" means leaving the case stuck. That's the v1 bug in v2 clothing.
+
+### Source incident (2026-05-27 Vicky 10-student report)
+
+Vicky reported 10 students with Moodle/section/payment issues. Cline triaged and named "6 routed Vicky-required" in the completion. Of those 6: 0 were things Vicky could actually fix (she has no SQL access to swap a Moodle role assignment or void a QB invoice, and no Authnet API access to refund). All 6 were Cline-actionable. Three were unblocked autonomously in the same session once Ruben pointed this out (Ericka Brown un-archived + W invoice voided; Noah Crowley noise enrolments suspended; full triage rewritten without Vicky-routing). Three (Kenneth, Myles, Thomas, Chloe) need an outbound email asking the student which Fast Track cohort they want — that's an email_agent draft, not a Vicky phone call (the agent can write the email faster than Vicky can dial, and the student's reply is the input either way).
+
+Ruben quote: *"Why are we making tickets for Vicky? We already have all the info in front of us. Vicky can't help with any of this stuff except call these students and wait for the system to resolve itself and collect the info which is what the Agents are already doing. Vicky can really only comfort on these things and match payments, lol."*
+
 ## Deep version
 
 Full text including investigation kit table, source incidents, v1-vs-v2 diff, follow-on ideas:

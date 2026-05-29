@@ -59,6 +59,9 @@ HARDFLOOR_SLUGS=(
     "91-every-completion-needs-pickup-prompt"
     "92-work-at-the-core-not-bandaids"
     "99-yolo-prevention-learned"
+    "118-litellm-restart-via-safe-wrapper"
+    "119-mandatory-context-compress"
+    "120-context-is-not-an-excuse"
 )
 
 # ─── G5 hardfloor (runs first; immediate block) ──────────────────────────

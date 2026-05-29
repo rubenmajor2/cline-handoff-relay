@@ -13,7 +13,22 @@ Justifying inaction means showing ALL three are true:
 
 If any fails, the agent acts.
 
+## "Defer to the system" is NOT acting (added 2026-05-28 — Artemis/3G session)
+
+A specific, sneaky form of inaction: the agent finds a clear act-condition (e.g. a routing surface scoring W/T ≥ 45%, well past the flip bar) and then **defers it to an automated system** — "the Fleet Agent will autoflip this," "the cron will pick it up," "the executor handles this class." That FEELS like action because a system is named. It is not. It is inaction dressed as delegation.
+
+**The test:** before saying "the system will do X," verify the system CAN do X right now. If there's a known wiring gap (e.g. #7630: autoflips write decision logs but never touch the live router_hook.py), then "defer to the system" = defer to nothing = the work doesn't happen. The agent must either (a) do X directly, or (b) fix the system's wiring so it does X, in THIS session. Per rule 92, fixing the broken system IS the work, not a follow-up.
+
+Source incident: 2026-05-28 — Cline found the `default` bucket at 58.3% W/T (n=2843, far above the 45% bar per rule 121) and parked the flip in a pickup prompt, reasoning "Fleet Agent autoflips." But #7630 proves that autoflip wiring is broken. Ruben: "Per rule 29 you were supposed to flip those." The flip was a green-tier reversible action the agent had tools for (UPDATE orchestrator_llm_routes / patch router_hook.py). Deferring it violated 29 + 38.
+
+## Unanswered Ruben questions are a hardfloor violation (added 2026-05-28)
+
+If Ruben asks a direct question in his message and the agent's completion does not answer it, that is a rule violation (compounds with rule 91's "no decision-queue pickup prompts"). The agent must answer EVERY question Ruben asked, inline, before completing. "I'll look into it" / "your call" / leaving it in a pickup prompt does not count. If answering requires investigation, do the investigation THEN answer — don't punt the question back.
+
+Source: 2026-05-28 — Ruben asked "why are these rules not being obeyed / are there conflicts?" across two turns; both completions ended without answering. Ruben: "I asked questions with no answers which means another rule was not obeyed."
+
 ## Before declaring "needs human"
+
 
 The agent MUST run the case-class investigation kit (full list in archive). "I ran one lookup and got null" is not investigated. Empty-without-kit-ran is a rule violation.
 

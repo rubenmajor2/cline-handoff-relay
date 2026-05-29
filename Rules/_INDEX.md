@@ -27,6 +27,9 @@ This file is the fail-safe TOC for the hardfloor rules + how to query the rest.
 | 92 ★ | work-at-the-core-not-bandaids | Fix RUBEN, don't fix FOR RUBEN |
 | 99 ★ | yolo-prevention-learned | Auto-generated per-failure playbook |
 | EXECUTE_ORDER_66 ★ | wrap-up (stub → archive) | Trigger phrases → MCP lookup |
+| 118 ★ | litellm-restart-via-safe-wrapper | Never raw `systemctl restart litellm` — use safe wrapper |
+| 119 ★ | mandatory-context-compress | context ≥ 30% → check; ≥ 50% → compress now; ≥ 70% → attempt_completion |
+| 120 ★ | context-is-not-an-excuse | Context never justifies skipping work — compress or work fully, no middle ground |
 
 ## Archive — common topic shortcuts
 

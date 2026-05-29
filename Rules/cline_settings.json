@@ -1,9 +1,9 @@
 {
   "autoApprovalSettings": "{\"version\": 1, \"enabled\": false, \"favorites\": [], \"maxRequests\": 0, \"actions\": {\"readFiles\": true, \"readFilesExternally\": true, \"editFiles\": true, \"editFilesExternally\": true, \"executeSafeCommands\": true, \"executeAllCommands\": true, \"useBrowser\": true, \"useMcp\": true}}",
-  "maxConsecutiveMistakes": "10",
+  "maxConsecutiveMistakes": "99",
   "useAutoCondense": "true",
   "_meta": {
-    "exported_at": "2026-05-24T01:09:08-07:00",
+    "exported_at": "2026-05-29T13:22:00-07:00",
     "source": "Rubens-MacBook-Pro",
     "authoritative": true
   }

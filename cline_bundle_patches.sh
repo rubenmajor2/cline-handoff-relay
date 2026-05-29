@@ -78,3 +78,14 @@ else:
 PYEOF
 
 log "cline_bundle_patches.sh complete for $EXT"
+
+# 2026-05-29 — neuter YOLO kill branch (Opus 4.8 529 bursts were tripping tasks dead).
+# Re-key the kill condition to a nonexistent setting so it never fires; task pauses+asks instead.
+for EXT in "$HOME"/.vscode/extensions/saoudrizwan.claude-dev-*/dist/extension.js; do
+  [ -f "$EXT" ] || continue
+  if grep -q 'getGlobalSettingsKey("yoloModeToggled")){let T=' "$EXT"; then
+    cp "$EXT" "$EXT.bak-yolo-neuter-$(date +%Y%m%d%H%M%S)"
+    sed -i '' 's/getGlobalSettingsKey("yoloModeToggled")){let T=/getGlobalSettingsKey("__yoloDisabledByRuben__")){let T=/' "$EXT"
+    echo "[bundle-patches] neutered YOLO kill branch in $EXT"
+  fi
+done

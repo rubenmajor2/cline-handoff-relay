@@ -1,42 +1,22 @@
-# 119 — Mandatory context compression at 30%+ (observable-trigger, hardfloor)
+# 119 — Mandatory context compression (token-count based, not percentage)
 
-Source: 2026-05-28 Ruben directive: "the rule has NEVER been obeyed"
+Source: 2026-05-28 Ruben directive — "LiteLLM router shows 100k+ on first call even though capacity is 1M, so percentage thresholds were meaningless."
 
-## Why this rule exists
+## The rule (two thresholds, that's it)
 
-Rule 91 said "agent should poll `should_compress_now` every ~150K tokens." The word "should" made it advisory. Agents never called it. High context became a silent excuse to shortcut: skip subagent dispatch, truncate investigation, cut tool calls. This rule replaces the aspiration with a binary, observable enforcement gate identical in strength to rule 00's tripwire.
+Check the raw token count in environment_details (`Context Window Usage: X / Y tokens used`). Use **X** (the absolute token count), not the percentage.
 
-## The observable trigger (no tool call required)
-
-**On EVERY assistant turn, environment_details shows:**
-
-```
-Context Window Usage: X / 1,000K tokens used (Y%)
-```
-
-This number is visible before any tool call fires. Read it. Act on it.
-
-## Mandatory thresholds — no judgment, no exceptions
-
-| Context % | Required action |
+| Token count | Required action |
 |---|---|
-| < 30% | Normal operation. No compress action needed. |
-| 30–49% | MUST call `should_compress_now` at least once before the next major tool call. If it returns `should_compress: true` → treat as 50–69% and compress now. |
-| 50–69% | MUST call `cline_compress_session` immediately, then `attempt_completion`. No deferral. Not after "one more thing." Now. |
-| ≥ 70% | MUST call `attempt_completion` immediately. Cline's built-in auto-condense fires at 75% — do not race it. |
+| < 300K | Normal operation. No compress action needed. |
+| 300K – 499K | MUST call `should_compress_now` at least once before the next major tool call. If it returns `should_compress: true` → compress now. |
+| 500K+ | MUST call `cline_compress_session` immediately, then `attempt_completion`. No deferral. |
 
 **"Major tool call"** = any call that is NOT `should_compress_now`, `cline_compress_session`, or `attempt_completion`.
 
-## The binary test (run before EVERY tool call when context ≥ 30%)
+## Why absolute tokens, not percentages
 
-Before composing any tool call, check environment_details:
-
-1. Context ≥ 70%? → call `attempt_completion` now. Nothing else.
-2. Context 50–69%? → call `cline_compress_session` now, then `attempt_completion`. Nothing else.
-3. Context 30–49%? → have I called `should_compress_now` this task? If no → that is the next call.
-4. Context < 30%? → proceed normally.
-
-The test takes 3 seconds. Skipping it is a hardfloor violation.
+The LiteLLM router reports a context ceiling (e.g. 200K) that does not reflect the model's actual capacity (1M tokens). At startup, the displayed usage is already 100K+ due to system prompt inflation — meaning percentage thresholds like "≥70% → stop" fire immediately and incorrectly on nearly every task. Token-count thresholds are stable regardless of what ceiling the router reports.
 
 ## Tool call arguments
 
@@ -50,8 +30,6 @@ The test takes 3 seconds. Skipping it is a hardfloor violation.
 }
 ```
 
-If task_id is unknown, omit it. The tool falls back to the global `/tmp/cline_budget_status.json`.
-
 ### `cline_compress_session`
 
 ```json
@@ -63,41 +41,34 @@ If task_id is unknown, omit it. The tool falls back to the global `/tmp/cline_bu
 }
 ```
 
-After `cline_compress_session` returns the `═══ SESSION MEMORY ═══` blob, call `attempt_completion` with that blob as the result. The next Cline window pastes it and picks up from there.
+After `cline_compress_session` returns the `═══ SESSION MEMORY ═══` blob, call `attempt_completion` with that blob as the result.
 
-## Why 30%/50%/70% specifically
+## Do not change behavior due to context size
 
-- **30% = 300K tokens**: early enough to compress cleanly, before context balloons
-- **50% = 500K tokens**: aligns with rule 91's YELLOW tier — the budget watchdog already flags this
-- **70% = 700K tokens**: 5% margin before Cline's built-in auto-condense fires at 75%
-
-The built-in `useAutoCondense=true` (Cline setting, already on) condenses at 75% using `claude-haiku-4-5`. Rule 119 fires at 50% using the structured MCP compressor — better quality, earlier, more context preserved.
+**Do NOT change your behavior — rushing, skipping steps, doing shallower work, or cutting corners — because the displayed context percentage looks high.** The percentage is unreliable (LiteLLM router reports a false ceiling). The only valid responses to context pressure are the two thresholds above: check at 300K, compress at 500K. Between 0 and 500K, work at full quality. "Context looks high, I'll be brief" is not a valid response. See rule 120 for the companion rule on this.
 
 ## Anti-patterns that violate this rule
 
-- "Just one more tool call then I'll compress" — no. 50% = compress now.
-- "The context isn't that high, I can finish" — read the number. Binary threshold.
-- "I'll note in the pickup prompt that context was high" — not a substitute. Compress.
-- "should_compress_now returned false, so I'm fine" — only valid if context < 50%. At 50%+, compress regardless.
-- Calling `should_compress_now` but ignoring a `should_compress: true` result.
+- Stopping work / calling `attempt_completion` solely because the displayed percentage looks high
+- Using percentage thresholds from environment_details instead of the raw token count X
+- "Just one more tool call then I'll compress" at 500K+ — no. Compress now.
+- Calling `should_compress_now` but ignoring a `should_compress: true` result at 300K-499K
+- **Rushing, skimping, or doing less thorough work because context percentage appears high** — this is a rule violation regardless of what the percentage shows
 
-## What this rule does NOT replace
+## Self-check before any tool call when token count ≥ 300K
 
-- **Rule 91** — pickup prompt shape is still required at every `attempt_completion`
-- **Rule 00** — subagent dispatch is still the default first move
-- **Cline's built-in auto-condense** — this is the 75% backstop if rule 119 is violated. It is not the target; rule 119 fires first.
+1. Count ≥ 500K? → call `cline_compress_session` now, then `attempt_completion`. Nothing else.
+2. Count 300K–499K? → have I called `should_compress_now` this task? If no → that is the next call.
+3. Count < 300K? → proceed normally.
 
-## Self-check before any tool call ≥ 30% context
+## Cross-references
 
-> "Is my next tool call `should_compress_now`, `cline_compress_session`, or `attempt_completion`?"
-> If no AND context ≥ 50% → that tool call is illegal under this rule. Rewrite it.
-
-## Source incident
-
-2026-05-28 — Ruben: *"The entire reason behind compressing/condensing automatically context was so you couldn't complain about it and take shortcuts because of it. Why are you not compressing/condensing automatically? How can this be resolved properly? I know we have a rule for it that has NEVER been obeyed."*
-
-Root cause: Rule 91 budget-watchdog section used "should" language ("agent should poll every ~150K tokens"). Agents skipped it entirely. `should_compress_now` was called zero times across hundreds of tasks. The word "should" is the bug. This rule replaces it with binary thresholds tied to an observable number in environment_details.
+- Rule 91 — pickup prompt shape required at every `attempt_completion`
+- Rule 00 — subagent dispatch is still the default first move
+- Rule 120 — context size is never an excuse to shortcut work
 
 ## Last updated
 
-2026-05-28 — initial. Cross-refs: rule 91 (budget-watchdog mandate, superseded by this rule's enforcement), rule 00 (tripwire pattern this rule follows), cline-compress MCP (`should_compress_now` + `cline_compress_session` tools).
+2026-05-28 — added "do not change behavior due to context size" section. Source: Ruben directive — "add to rule 119: do not change your behavior such as trying to rush because of context size."
+
+2026-05-28 — rewrite. Replaced percentage-based thresholds (broken due to LiteLLM router ceiling inflation) with absolute token-count thresholds: 300K–499K → `should_compress_now`, 500K+ → `cline_compress_session`. Removed the "≥70% → attempt_completion immediately" gate. Source: Ruben directive — LiteLLM shows 100K+ on first call even though actual model capacity is 1M, making percentage-based rules fire incorrectly on every task.

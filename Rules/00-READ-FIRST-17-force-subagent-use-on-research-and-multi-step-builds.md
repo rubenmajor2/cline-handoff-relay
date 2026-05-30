@@ -1,7 +1,7 @@
 # Force subagent use + first-tool-call tripwire (default-on, not judgment)
 
 <!-- RULE_VIOLATION_COUNTERS:BEGIN -->
-> **Live violation counters:** call `clinerules_stats` to see current 7d/30d/all-time burst rates and the explicit-ask-ignored vs research-without-subagent breakdown. Counters auto-update via `~/Documents/Cline/rule_violations/scan.py`. Last scan: 2026-05-30 14:05:54 MST — 7d=506, 30d=3788, all-time=3788. If you are reading this rule, you are part of the count — don't add to it.
+> **Live violation counters:** call `clinerules_stats` to see current 7d/30d/all-time burst rates and the explicit-ask-ignored vs research-without-subagent breakdown. Counters auto-update via `~/Documents/Cline/rule_violations/scan.py`. Last scan: 2026-05-30 15:05:59 MST — 7d=516, 30d=3803, all-time=3803. If you are reading this rule, you are part of the count — don't add to it.
 <!-- RULE_VIOLATION_COUNTERS:END -->
 ## The default
 

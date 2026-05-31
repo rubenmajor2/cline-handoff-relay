@@ -99,6 +99,14 @@ else
   echo "$(ts) sync: nothing to push" >> "$LOG"
 fi
 
+# Step 5: re-apply bundle patches (YOLO cap 99 + 500K auto-condense). Idempotent.
+# These live in the bundle (not settings) and get wiped on Cline ext updates,
+# so we re-apply every tick. Source: 2026-05-30 cross-machine alignment directive.
+if [ -x "$CLINE/cline_bundle_patch.sh" ] ; then
+  bash "$CLINE/cline_bundle_patch.sh" >> "$LOG" 2>&1 || \
+    echo "$(ts) sync: cline_bundle_patch.sh failed (non-fatal)" >> "$LOG"
+fi
+
 date '+%s' > "$HEARTBEAT"
 echo "$(ts) sync: tick complete" >> "$LOG"
 exit 0

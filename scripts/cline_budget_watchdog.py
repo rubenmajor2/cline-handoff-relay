@@ -31,8 +31,11 @@ LOG_FILE = os.path.join(HOME, "Library/Logs/cline_budget.log")
 NOTIFIED_FILE = "/tmp/cline_budget_notified.json"  # tracks which tasks already got RED/IMMINENT notice
 
 # Thresholds (input + cache_read + cache_write tokens summed for latest req)
+# 2026-05-30 cline (idea #8370): RED lowered 800K→700K so compress fires with
+# more headroom before context growth blows past the 1M Anthropic hard cap
+# (the "prompt is too long: N tokens > 1000000 maximum" 400 class).
 GREEN_MAX   = 500_000
-YELLOW_MAX  = 800_000
+YELLOW_MAX  = 700_000
 RED_MAX     = 900_000
 # > RED_MAX = IMMINENT
 
@@ -155,7 +158,7 @@ def main():
         key = f"{task_id}:{tier}"
         if key not in notified:
             if tier == "RED":
-                title = "Cline budget RED (>800K)"
+                title = "Cline budget RED (>700K)"
                 msg   = "Write current state to HANDOFF/ledger/idea before next risky tool. Condense risk approaching."
             else:
                 title = "Cline budget IMMINENT (>900K)"

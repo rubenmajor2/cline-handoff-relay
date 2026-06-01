@@ -1,10 +1,12 @@
 {
   "autoApprovalSettings": "{\"version\": 1, \"enabled\": false, \"favorites\": [], \"maxRequests\": 0, \"actions\": {\"readFiles\": true, \"readFilesExternally\": true, \"editFiles\": true, \"editFilesExternally\": true, \"executeSafeCommands\": true, \"executeAllCommands\": true, \"useBrowser\": true, \"useMcp\": true}}",
-  "maxConsecutiveMistakes": "99",
+  "maxConsecutiveMistakes": "10",
   "useAutoCondense": "true",
   "_meta": {
-    "exported_at": "2026-05-29T13:22:00-07:00",
+    "exported_at": "2026-06-01T06:35:00-07:00",
     "source": "Rubens-MacBook-Pro",
-    "authoritative": true
+    "authoritative": true,
+    "note": "maxConsecutiveMistakes RESTORED 3->10 on 2026-06-01. The 99->3 fail-fast on 2026-05-31 was a bandaid for a claude-haiku-4-5 cost-loop ($67.82). The active Cline model is now claude-opus-4-8:1m (strong, tool-calling). All 4 YOLO trips on 2026-05-30 were Opus tasks killed at turns_since_user=0 on a benign conversational opener (e.g. 'it appears you dont have access to all MCPs') after just 2 [ERROR] no-tool-use strikes -- threshold 3 gave zero recovery room. Per rule 16, premature task termination is far more expensive than a few recovery turns. 10 is the canonical rule-16 value. The note's own condition ('raise back ONLY after upgraded to Sonnet/Opus') is now satisfied."
   }
+
 }

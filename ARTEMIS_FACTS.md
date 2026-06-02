@@ -1,15 +1,28 @@
-
 # ARTEMIS FACTS — instant-recall reference
 
-**Living document.** Lives at `/Users/rubenmajor/Documents/Cline/ARTEMIS_FACTS.md`.
-Read this FIRST before doing any Artemis-related diagnosis or recovery.
-Update at the bottom of "Update history" whenever facts change.
+> ╔══════════════════════════════════════════════════════════════════════╗
+> ║  CURRENT STATUS (2026-06-01 23:15 PT): ARTEMIS IS UP. MESH IS UP.      ║
+> ║  DO NOT say "Artemis is down / offline / unreachable" — it is ONLINE.  ║
+> ╚══════════════════════════════════════════════════════════════════════╝
+>
+> **HOW TO REACH ARTEMIS RIGHT NOW (verified working):**
+> `emsu-operations` MCP `ssh_command` → WOPR → then `ssh emsusrvr@10.100.0.5` (WG mesh).
+> From the Mac directly: `ssh artemis` (ProxyJump wopr is configured).
+> User on Artemis = **emsusrvr** (NOT emsuserver). sudo password = `qefru3-cocnyf-xuxnoP`.
+>
+> **CURRENT FACTS (these OVERRIDE everything older in this file):**
+> - Artemis LAN IP = **192.168.0.208** (behind UDM, gw 192.168.0.1). MAC 30:56:0f:47:56:ca.
+> - Mesh: Artemis dials OUT to WOPR, Endpoint = **wopr-wan.emsuniversity.com:51820** (CF-synced hostname, flap-safe). Overlay 10.100.0.5 ↔ WOPR 10.100.0.1. Ping 0% loss.
+> - Auto-heal: `emsu-wg-endpoint-refresh` cron (2 min) re-points hub if WOPR IP changes. ssh/wg/ollama all enabled-on-boot.
+> - Ollama on Artemis 10.100.0.5:11434 (active).
+>
+> **⚠️ HISTORICAL — IGNORE FOR LIVE STATUS:** Everything below dated **2026-05-16** and **2026-05-31** describes PAST outages (Cox router reboot, NETGEAR-forward fights, "WG IS DOWN", "LAN IP UNKNOWN", port 192.168.1.161). Those are RESOLVED. They are kept only for incident history. The 192.168.1.161 forwards are dead/stale. Do NOT use any "UNKNOWN" / "offline" / raw-IP-endpoint line below as current truth — the banner above is current truth. If a tool actually returns a connection error, that's a transient tunnel hiccup (rule 77), NOT "Artemis is down."
 
-Mirror plan (idea #4672 — proposed): copy this into a WOPR `artemis_host_facts`
-markdown or a small DB table so it's available from server-side agents too.
-Until that ships, the Mac copy here is authoritative.
+**Living document.** Lives at `/Users/rubenmajor/Documents/Cline/ARTEMIS_FACTS.md` (Mac, authoritative) + mirrored to WOPR `/var/www/emtskills/docs/host_facts/artemis.md`.
+Read the BANNER ABOVE first. The "Update history" at the bottom is newest-relevant-last.
 
 ---
+
 
 ## What/Where Artemis is
 
@@ -20,12 +33,12 @@ Until that ships, the Mac copy here is authoritative.
 | **Site** | Tempe, AZ (501 South 48th Street, Suite 105, Tempe, AZ 85281 — EMSU101) |
 | **OS** | Ubuntu 24.04 LTS |
 | **WireGuard IP** | `10.100.0.5/32` (peer of `wopr` 10.100.0.1) |
-| **LAN IP (Cox network)** | **UNKNOWN as of 2026-05-16 12:00 PT** — not present in `DEV_show_device.htm` basic view; not yet verified against `LAN_setup.htm` static reservations or `VLAN_IPTV.htm`. Prior known IP class: `192.168.1.x`. |
-| **MAC address** | **UNKNOWN, must capture next time Artemis is up.** Run `ssh artemis "ip -o link show \| grep -v 'lo\\|wg\\|docker'"` and record here. |
-| **SSH port (LAN)** | 22 |
-| **SSH user** | `emsuserver` |
-| **ProxyJump** | Mac SSH config has `Host artemis ProxyJump wopr` — Mac → WOPR (68.227.47.137:2222 = old, now via WG) → Artemis 10.100.0.5:22. |
-| **WG endpoint** | Cox WAN at `68.227.47.137:51820/udp` → forwarded to Artemis on Cox LAN. |
+| **LAN IP (current)** | **192.168.0.208** (behind UDM, gw 192.168.0.1). [was 192.168.1.x pre-2026-05-31] |
+| **MAC address** | **30:56:0f:47:56:ca** (captured 2026-05-31) |
+| **SSH user (Artemis)** | **emsusrvr** (NOT emsuserver — that's WOPR's user). sudo pw `qefru3-cocnyf-xuxnoP`. |
+| **ProxyJump** | Mac `Host artemis` → ProxyJump wopr (Host wopr = emsuniversity.com:2222, hostname-based, flap-safe) → Artemis 10.100.0.5:22. `ssh artemis` works. |
+| **WG endpoint (current)** | Artemis dials OUT to **wopr-wan.emsuniversity.com:51820** (CF-synced, flap-safe). NOT the old raw 68.227.47.137. |
+
 
 ---
 

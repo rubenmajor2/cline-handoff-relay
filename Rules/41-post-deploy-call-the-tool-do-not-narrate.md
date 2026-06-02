@@ -291,3 +291,40 @@ Each is fine PREFIXED to a tool block in the same turn. None are fine alone. Bin
 - task 1779267773315 (2026-05-20 02:22): file not found → narrate → narrate → YOLO. Should have `list_files` on parent before retrying.
 
 All 5 would have been saved by the pivot rule above.
+
+## 2026-06-02 addendum — banned: blocking LOCAL commands that hang the terminal (live-reproduced trigger)
+
+Source: 2026-06-02 00:05-00:10 PT. Ruben reported live YOLOs across multiple windows and directed a rule-29 action. While investigating, **Cline reproduced the trigger in the same session, twice**: ran `sudo wg show` (interactive password prompt) and a raw local `ssh wopr` — both HUNG the terminal waiting on stdin/tunnel. The model got no tool output, emitted prose waiting on it, hit `[ERROR] You did not use a tool`, emitted prose again, and tripped. A wedged terminal then made every subsequent `execute_command` time out at 30s, compounding it. Verified NOT infra: LiteLLM returned http=200 in 1.5ms with an empty restart log, WOPR healthy via the emsu-operations MCP, maxConsecutiveMistakes correctly 10. The killer was the blocking LOCAL command every time.
+
+### The bright-line rule (blocking-local-command edition)
+
+**Never issue a local `execute_command` that can block on stdin or hang indefinitely.** Banned as local shell calls:
+
+- ❌ `sudo <anything>` that prompts for a password (`sudo wg show`, `sudo systemctl ...`) — the prompt hangs the terminal forever from the model's view
+- ❌ Bare `ssh wopr` / `ssh <host>` for WOPR work — if the WireGuard tunnel is slow it stalls past the 30s wall
+- ❌ Interactive REPL/pager without a non-interactive flag (`mysql` without `-e`, `less`, `vim`, `top` without `-b -n1`, `git` without `--no-pager`)
+- ❌ `ping` without a hard `-c N -t S` bound, `nc` without `-G`/`-w`
+
+### What to do instead — for WOPR, the MCP is the ONLY path
+
+WOPR work goes through the **emsu-operations MCP**, never raw local ssh/sudo: `server_status` (health), `ssh_command` (arbitrary remote — routes via port 2222 with keys, has its own timeout, CANNOT hang the local terminal), `check_server_logs`, `reload_php_fpm`. The MCP route returns instantly even when local `ssh wopr` times out. That asymmetry IS the lesson. Composes with rule 32 (MCP over raw shell) + rule 77 (tunnel-down handling).
+
+### If the local terminal is ALREADY wedged
+
+A hung blocking command poisons the terminal: subsequent `execute_command` calls time out at 30s each, and each timeout is a strike. The moment two `execute_command` calls time out in a row, STOP using `execute_command`. Switch to tools with a different I/O path: `read_file`, `write_to_file`, `replace_in_file`, `list_files`, or the MCPs. Those do not run through the stuck shell.
+
+### Recovery when a local command hangs
+
+1. Do NOT emit a prose turn waiting on it. The next assistant turn MUST be a different tool call — the MCP/file-tool equivalent.
+2. Do NOT re-run the same blocking command.
+3. If no alternative path exists, `attempt_completion` reporting the hang — don't narrate at it.
+
+### Self-check before any `execute_command`
+
+1. Can this prompt for a password or wait on stdin? → banned local; use MCP or a non-interactive flag.
+2. Is this `ssh`/`sudo` aimed at WOPR? → use emsu-operations MCP instead, always.
+3. Has the terminal already timed out once this task? → don't use `execute_command` again; use file tools or MCP.
+
+### Last updated (this addendum)
+
+2026-06-02 — Cline reproduced the blocking-local-command YOLO live during a Ruben-directed YOLO investigation. Per rule 29 (act, don't diagnose-and-defer) + rule 38 (Ruben-asked = ship now) + rule 92 (fix the core): the fix is this hardfloor clause banning the trigger. Single most reliable prevention: for WOPR, the emsu-operations MCP is the only allowed path; raw local ssh/sudo is banned, and a wedged terminal means switch to file/MCP tools immediately.

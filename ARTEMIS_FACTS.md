@@ -350,3 +350,13 @@ Claude-Chrome tested as rmajor@emsuniversity.com (Super Admin, no owner):
 - WAN bridge/passthrough: NOT offered in UDM UI (only DHCP/Static/PPPoE/IPv4-over-IPv6). Double-NAT can only be collapsed on the COX modem side (bridge the Cox gateway at ~192.168.1.1) or left alone.
 
 CONCLUSION: Nothing more to do. Mesh is up via Artemis dial-out (NAT-proof). The UDM even has the inbound 51820 forward already, so dial-IN would also work IF the NETGEAR edge forwarded 51820 to the UDM WAN (192.168.1.34) - but we do not need it. Owner involvement (third-party gmail) is NOT required for any forward management. Double-NAT cleanup is optional and lives on the Cox modem, not the UDM. UDM management question fully resolved.
+
+## Update 2026-06-01 b - DNS is CLOUDFLARE now (HE.net RETIRED)
+
+AUTHORITATIVE DNS for emsuniversity.com = CLOUDFLARE. NS = miki.ns.cloudflare.com + houston.ns.cloudflare.com. HE.net fully retired (no longer a slave). Public web served via Cloudflare TUNNEL (cloudflared on WOPR, tunnel cc237a4f-2cda-45f2-9d16-6adc4aed0722).
+
+WHY CF > HE: HE was a pull-based AXFR slave pinning WOPR master by IP; on a WOPR IP flap it froze on a stale serial. CF is authoritative anycast DNS + outbound tunnel for web = never needs WOPR IP, nothing to go stale, anycast = low latency.
+
+MESH DNS: Artemis Endpoint=emsuniversity.com:51820. Apex is CF grey-cloud (DNS-only), currently = 76.176.157.123 (WOPR live), TTL 300. Joshua-WAN bounce (separate ISP, ssh joshua-wan) is the EXISTING failover - already in place.
+
+REAL REMAINING SPOF (filed): emsu-ddns-sync.sh still updates PLESK (no longer authoritative) and still runs check_he_slaves() against retired ns1-5.he.net (REAL REMAINING SPOF (filed): emsu-ddns-sync.sh still updates PLESupdate, so Artemis would resolve a STALE IP. Fix = repoint ddns to PATCH the CF apex via CF API (token at /root/.cloudflared/cf_api_token; emsu-promote already has the zones/$ZONE/dns_records PATCH pattern). Idea filed.

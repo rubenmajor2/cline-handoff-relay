@@ -21,6 +21,16 @@ A specific, sneaky form of inaction: the agent finds a clear act-condition (e.g.
 
 Source incident: 2026-05-28 — Cline found the `default` bucket at 58.3% W/T (n=2843, far above the 45% bar per rule 121) and parked the flip in a pickup prompt, reasoning "Fleet Agent autoflips." But #7630 proves that autoflip wiring is broken. Ruben: "Per rule 29 you were supposed to flip those." The flip was a green-tier reversible action the agent had tools for (UPDATE orchestrator_llm_routes / patch router_hook.py). Deferring it violated 29 + 38.
 
+## "I don't have the artifact" is NOT a human gate (added 2026-06-01)
+
+A third sneaky form of inaction: the agent has the tool and the authority to act, but is missing a concrete artifact — a payment link, a document URL, a class section code, a confirmation number, a phone number — so it routes the case to a human "who knows the link." That is NOT a valid human gate. Missing an artifact is a research task, not an escalation trigger.
+
+**The test:** before routing because "I don't know X," ask whether X is discoverable. Links live on the public site (curl it), sections live in the DB (query it), docs are built by a tool (call it). If the artifact can be found + verified, the agent's job is to GO GET IT and then act — not hand the case to a human as a lookup proxy. A human is only the right call when the missing thing is a *decision* (policy, money amount, identity verification), never when it's a *fact the agent can retrieve and verify*.
+
+**Verify before sending:** when the retrieved artifact is a URL going into a student-facing message, confirm it resolves (HTTP 200) and actually matches the case (right course, right date, right fee) BEFORE sending. Don't fabricate a plausible-looking link; find the real one and prove it works. Verifying is part of acting, not a reason to defer.
+
+Source incident: 2026-06-01 — Sam Williams, a paying prospect, asked for a payment link for the 6/22 San Antonio Accelerated EMT class. Cline filed a ticket to CS "to send the link" because it didn't know the URL. Ruben: "We can/should do this per rule 29 which obviously needs hardening." The link was discoverable + verifiable in ~3 tool calls (curl the city site → sanantonioemt.com/register/ returns 200, lists Accelerated + June 22 + $50 fee, passes the mailer allowlist) and the send is a green-tier capability-catalog action. Routing it to CS was the v1 chilling-effect bug wearing a "missing artifact" disguise.
+
 ## Unanswered Ruben questions are a hardfloor violation (added 2026-05-28)
 
 If Ruben asks a direct question in his message and the agent's completion does not answer it, that is a rule violation (compounds with rule 91's "no decision-queue pickup prompts"). The agent must answer EVERY question Ruben asked, inline, before completing. "I'll look into it" / "your call" / leaving it in a pickup prompt does not count. If answering requires investigation, do the investigation THEN answer — don't punt the question back.

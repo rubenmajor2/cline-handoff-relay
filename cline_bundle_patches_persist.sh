@@ -102,5 +102,47 @@ else
     fi
 fi
 
+# ── PATCH 6: mistake-limit respects setting (dist/extension.js) ──
+# Root cause of the 2026-05-31 $67 YOLO burn: the bundle shipped (or a prior
+# patch left) a HARDCODED `consecutiveMistakeCount>=99` that ignored the user's
+# maxConsecutiveMistakes setting. A prose-without-tool loop then ran 99 strikes
+# (~$67) instead of obeying the =3 cap. This restores the setting-driven read so
+# cline_settings.json actually governs the limit. See cline_task_ledger 2026-05-31.
+SETTING_READ='consecutiveMistakeCount>=this.stateManager.getGlobalSettingsKey("maxConsecutiveMistakes")'
+if grep -qF "$SETTING_READ" "$DIST" 2>/dev/null; then
+    log "patch6 (mistake-limit-respects-setting): present"
+else
+    log "patch6 (mistake-limit-respects-setting): MISSING — re-applying..."
+    cp "$DIST" "$DIST.bak-pre-mistakelimit-$(date +%Y%m%d-%H%M%S)" 2>/dev/null || true
+    python3 - "$DIST" >> "$LOG" 2>&1 <<'PYEOF' || log "patch6 re-apply FAILED"
+import sys,re
+p=sys.argv[1]; s=open(p,encoding="utf-8").read()
+setting='consecutiveMistakeCount>=this.stateManager.getGlobalSettingsKey("maxConsecutiveMistakes")'
+# replace any hardcoded numeric threshold (e.g. >=99 or >=3) with the setting read
+s2=re.sub(r'consecutiveMistakeCount>=\d+', setting, s, count=1)
+if s2!=s and s2.count(setting)>=1:
+    open(p,"w",encoding="utf-8").write(s2); print("patch6 applied: hardcoded threshold -> setting-driven")
+else:
+    print("patch6: no hardcoded numeric threshold found (already setting-driven or shape changed)")
+PYEOF
+fi
+
+# ── PATCH 7: YOLO auto-recover (no hard "Task failed" death) ─────
+# Ruben 2026-05-31 "I just don't want any yolos" (without disabling auto-approve).
+# Converts the YOLO-mode mistake-limit KILL into a bounded auto-recovery: reset the
+# counter + inject a firm "emit a tool now" steer, up to 8 reprieves, then stop with a
+# cost-cap message. Transient no-tool blips self-recover (no YOLO shown); a hopeless
+# task still stops so it can't burn unbounded. Patcher: ~/.cline-tools/patch_yolo_autorecover.py
+if grep -qF "yoloReprieves" "$DIST" 2>/dev/null; then
+    log "patch7 (yolo-autorecover): present"
+else
+    log "patch7 (yolo-autorecover): MISSING — re-applying..."
+    if [[ -f /Users/rubenmajor/.cline-tools/patch_yolo_autorecover.py ]]; then
+        python3 /Users/rubenmajor/.cline-tools/patch_yolo_autorecover.py >> "$LOG" 2>&1 || log "patch7 re-apply FAILED"
+    else
+        log "patch7 re-apply script ~/.cline-tools/patch_yolo_autorecover.py not found"
+    fi
+fi
+
 log "done"
 exit 0

@@ -51,6 +51,11 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
             inputSchema: { type: "object", properties: {}, required: [] },
         },
         {
+            name: "failover_status",
+            description: "All-75 failover readiness snapshot. Returns writer lease (who is master), per-node replication (Joshua/Gemini IO+SQL+seconds_behind+last_error), serve-mode (proxy-primary vs serve-local), fence-timer state, vhost parity (WOPR vs Joshua + missing list), and the last per-site serve sweep (pass/fail counts). Read-only. Backed by api_fleet_inventory.php?action=failover which reads /etc/emsu/writer_lease + infrastructure_worker_heartbeat + data/failover_status.json (written by the emsu-failover-canary cron every 15 min).",
+            inputSchema: { type: "object", properties: {}, required: [] },
+        },
+        {
             name: "fleet_act",
             description: "Take an action on the fleet (logged to fleet_decision_log + orchestrator_event_log). Supported commands: mark_host_status (set host status to healthy/degraded/down/unknown), request_anthropic_burst (queue Fleet Agent to pivot to Anthropic), request_kv_evict (queue KV cache eviction signal).",
             inputSchema: {
@@ -85,6 +90,9 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
         else if (name === "fleet_now") {
             out = await call("now");
         }
+        else if (name === "failover_status") {
+            out = await call("failover");
+        }
         else if (name === "fleet_act") {
             out = await call("act", {
                 cmd: args.cmd ?? "",
@@ -105,6 +113,21 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
         };
     }
 });
+// ── Crash guards: keep the stdio process alive on transient errors so Cline
+// never sees a red dot that needs a manual refresh. (matches clinerules-mcp)
+process.stdin.on("error", (e) => {
+    console.error(`[fleet-state-mcp] stdin error (swallowed): ${e?.code || e?.message}`);
+});
+process.stdout.on("error", (e) => {
+    console.error(`[fleet-state-mcp] stdout error (swallowed): ${e?.code || e?.message}`);
+});
+process.on("uncaughtException", (e) => {
+    console.error(`[fleet-state-mcp] uncaughtException (swallowed): ${e?.message || e}`);
+});
+process.on("unhandledRejection", (e) => {
+    console.error(`[fleet-state-mcp] unhandledRejection (swallowed): ${e?.message || e}`);
+});
 const transport = new StdioServerTransport();
 await server.connect(transport);
 console.error("[fleet-state-mcp] ready");
+

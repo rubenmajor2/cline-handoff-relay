@@ -50,10 +50,17 @@ After `cline_compress_session` returns the `═══ SESSION MEMORY ═══` 
 ## Anti-patterns that violate this rule
 
 - Stopping work / calling `attempt_completion` solely because the displayed percentage looks high
-- Using percentage thresholds from environment_details instead of the raw token count X
+- **Using percentage thresholds from environment_details instead of the raw token count X** — THE PERCENTAGE IS ALWAYS WRONG. LiteLLM reports a false ceiling (e.g. 128K shown when actual model capacity is 1M). "145% of 128K" means "185K tokens used" which is well under 300K = normal operation. The percentage means nothing. Only X matters.
 - "Just one more tool call then I'll compress" at 500K+ — no. Compress now.
 - Calling `should_compress_now` but ignoring a `should_compress: true` result at 300K-499K
 - **Rushing, skimping, or doing less thorough work because context percentage appears high** — this is a rule violation regardless of what the percentage shows
+- **Closing a window or calling attempt_completion because percentage > 100%** — a percentage over 100% simply means the LiteLLM router reported a false ceiling. Read X directly. If X < 300K, work normally. There is no such thing as "over context limit" when X < 300K.
+
+## The percentage display is intentionally ignored
+
+When environment_details shows "X / Y tokens used (P%)" and P > 100%: this means LiteLLM's Y is wrong, not that X exceeds the model's capacity. The real model capacity on EMSU's LiteLLM is 1M tokens. Only X (the left number) matters for the thresholds below. P% is noise — never act on it.
+
+**Example:** "185,661 / 128K tokens used (145%)" → X = 185,661 → below 300K → normal operation, work fully.
 
 ## Self-check before any tool call when token count ≥ 300K
 

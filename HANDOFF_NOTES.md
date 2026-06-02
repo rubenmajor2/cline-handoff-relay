@@ -7,6 +7,26 @@ that don't belong in the WOPR-side server `HANDOFF_NOTES.md`. Newest at top.
 
 ---
 
+## 2026-06-01 — WINDOW S: Shift Lifecycle Implementation
+
+WINDOW S (shift lifecycle end-to-end) implementation complete per PROMPT 3.
+
+Changes made:
+- shift_detail.php: upgraded from metadata-only to operational page with site address, required certs, Zoom details, claim/approval status, clock-in eligibility, action buttons (Claim, Approve, Clock In, Request Correction)
+- timeclock_user.php: added unassigned clock-in flagging (is_unassigned_flag column in ct_time_punches)
+- ct_flagged_clock_ins_admin.php: new admin review page for flagged unassigned punches
+- my_timesheet.php: correction auto-apply fixed; now JOINs ct_shift_edit_requests and applies approved corrections to displayed hours
+- ct_payroll_admin.php: added correction approval section (Approve/Deny UI)
+- cs_payroll_weekly.php: added 3 validation gates before payroll export (all timesheets approved, no pending corrections, no unreviewed flags)
+
+WINDOW I (open-shift board) extended, not rebuilt.
+
+Per Cori's 2026-05-31 Builder Requirements §7, launch blocker #3.
+
+Ref: .clinerules/38 (Ruben-asks = autonomous), .clinerules/29 (act on confidence)
+
+---
+
 ## 2026-05-16 12:25 PT — Artemis WG-down + Cox router enumeration + ARTEMIS_FACTS.md created (task #1778916427107)
 
 Artemis has been off WG since ~01:56 PT. Cox router (Netgear Nighthawk RS300 at https://68.227.47.137, admin/qefru3-cocnyf-xuxnoP) IS reachable. `DEV_show_device.htm` basic view shows 9 devices, none labeled Artemis — but that view is incomplete (no static reservations / VLAN-tagged / aggregation-LAN hosts). The router uses a JS-form login (NOT HTTP Basic), so `curl -u admin:pw` returns the login form for every page. Real enumeration requires browser-login + cookie capture. Ledger row at 11:53 PT corrected (12:20 PT) to reflect this limitation. Until Artemis is back, idea #4671 (VNC over WG, approved autonomous) is the durable console-level path queued to ship.

@@ -1,0 +1,16 @@
+{
+  "title": "WINDOW S: Shift lifecycle end-to-end \u2014 post-launch monitoring + corrections audit",
+  "description": "Following WINDOW S implementation (shift_detail.php upgrade, unassigned clock-in flagging, correction auto-apply, payroll export gates): (1) Monitor ct_time_punches.is_unassigned_flag for actual unassigned clock-ins in first 2 weeks post-launch. (2) Audit ct_shift_edit_requests corrections vs timesheet impact. (3) Verify payroll export gates block correctly on first real payroll run. (4) Per Cori's Builder Requirements \u00a77. WINDOW I (open-shift board) is dependency \u2014 already complete.",
+  "domain": "operations",
+  "priority": "P1",
+  "estimated_impact": "Ensures shift lifecycle quality post-launch; prevents payroll errors from uncorrected punches",
+  "estimated_effort": "2h monitoring + 1h audit after first payroll run",
+  "status": "filed",
+  "approval_tier": "autonomous",
+  "created_at": "2026-06-01T00:30:10.336200",
+  "metadata": {
+    "related_window": "WINDOW S",
+    "launch_blocker": "#3",
+    "dependency": "WINDOW I (complete)"
+  }
+}

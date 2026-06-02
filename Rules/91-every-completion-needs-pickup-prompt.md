@@ -81,7 +81,7 @@ The double-line divider (═══) at start and end is mandatory so Ruben can s
 ## What this rule does NOT do
 
 - Does NOT replace .clinerules/03 (the Resume Kit format). The full attempt_completion.result still has the WHAT/CURRENT STATE/etc. sections. This rule adds the PICKUP PROMPT block AT THE END.
-- Does NOT require a pickup prompt for pure Q&A / read-only diagnostics where nothing in the world changed. Single-line completions are fine.
+- Does NOT require a pickup prompt for pure Q&A / read-only diagnostics where nothing in the world changed. Single-line completions are fine. **"Nothing changed" means zero system-state changes — no files written, no processes restarted, no servers rebuilt, no MCP connections fixed, no SQL executed, no deploys, no configs touched.** Infrastructure fix tasks (MCP restarts, server rebuilds, native module recompiles, service repairs) ALWAYS have system-state changes and are NEVER exempt from the pickup prompt, even when they feel "done" or "simple."
 - Does NOT require a pickup prompt when the task is fully closed (abandoned by user, all open threads resolved, ledger says `done` with no follow-ups). In those cases the block can read "No further pickup needed — task fully closed."
 
 ## Anti-patterns that violate this rule

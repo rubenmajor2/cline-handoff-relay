@@ -286,3 +286,35 @@ You can see what's happening AND hit the reset button remotely, from anywhere on
 
 **New idea to file**: network-watchdog + watchdog daemon + sysctl hardening as a single Ansible/script bundle for Artemis once it's back. Probably P1.
 
+
+---
+
+## Update 2026-05-31 15:38 PT — Artemis is BACK on a NEW UniFi network (captured from UDM)
+
+NETWORK CHANGED. Tempe is now behind a **UniFi Dream Machine SE "EMSU Phoenix"** (UDM SE, UniFi OS 5.1.12), which itself sits behind the old NETGEAR (double-NAT). Captured live from the UniFi controller:
+- **Artemis LAN IP = 192.168.0.208** (was 192.168.1.x). DHCP on the UDM "Default" network (10.4.57 / gateway 192.168.0.1).
+- **Artemis MAC = 30:56:0f:47:56:ca** (hostname `artemis`, Intel NUC D34010WYK, GbE, online, ~132MB/24h). THIS is the MAC that was "UNKNOWN" in this doc — now captured.
+- UDM "EMSU Phoenix": MAC 6C:63:F8:E2:39:3E, WAN/IPv4 192.168.1.34 (gets a private addr from the NETGEAR = double-NAT, "Upstream NAT detected on WAN1" warning in UI).
+- NETGEAR still the edge: Cox WAN 68.227.47.137, https admin still `uhttpd/1.0.0`.
+
+**WHY WG IS DOWN (verified 2026-05-31 19:00 PT):** Artemis is online on the UDM LAN (192.168.0.208) but its wg0 is not dialing out, AND WOPR cannot dial in. WOPR IS actively sending WG handshake packets out to 68.227.47.137:51820 (confirmed via tcpdump: `192.168.1.68.51820 > 68.227.47.137.51820`), but the NETGEAR has NO 51820 forward, so they die at the Cox edge. Artemis peer handshake age ~2.75 days stale.
+
+**TWO fix paths, both currently BLOCKED on the NETGEAR forward:**
+- **A. Dial-OUT from Artemis (preferred, double-NAT-proof):** set Endpoint=76.176.157.123:51820 + PersistentKeepalive=25 in Artemis wg0.conf, `wg-quick down wg0 && up wg0`. Outbound UDP traverses both NATs freely — needs NO inbound forward. BUT requires a one-time Artemis shell, which itself needs the inbound SSH forward to establish. WOPR hub is ready (51820/udp OPEN+LISTENING, endpoint pin cleared).
+- **B. Port-forward a shell in:** NETGEAR 22/2222 → 192.168.1.34 (UDM WAN), then UDM 22 → 192.168.0.208:22. Then `ssh emsuserver@68.227.47.137` lands on Artemis.
+
+**BLOCKER (2026-05-31 19:00 PT): the NETGEAR forward edit cannot be done programmatically OR via the headless browser.**
+- **curl path: DEAD.** The RS300 (uhttpd/1.0.0, fw V1.0.6.16) login works and the select-rule-for-edit step returns 200, but EVERY `forwarding_edit_range` / `forwarding_add_range` apply POST returns `400 Bad Request` ("server does not support the operation"). Tried 9+ variants: %20 vs literal-space timestamp, scraped-ETS vs fresh date-ms, with/without `internal_port`, `serv_type=pf`, `Apply=Apply` button param, edit vs custom-add flows. The firmware rejects all non-browser writes. Working login+scrape harness: `/tmp/ng_fix.sh` (cookies `/tmp/ng_cookies.txt`). The 400 is NOT a CSRF token (none present) — it's a uhttpd quirk that only accepts the real JS-driven multi-frame submit.
+- **browser path: BLOCKED by a fixed footer.** Logged into the RS300 UI fine (ADVANCED → Advanced Setup → Port Forwarding). The rules table + Edit/Add-Custom-Service buttons render at the very bottom, but a pinned "Help Center" footer bar covers them and the 900×600 Puppeteer viewport cannot scroll the inner content past it. Needs a real browser (taller window) OR someone on-site.
+- **UDM cloud API: DEAD (403).** api.ui.com proxy returns `forbidden: user is not the owner of this host`. EMSU-Phoenix host id `6C63F8E2393E00000000094B231C0000000009CB40C400000000687A7092:1140721566`, owner=False. Adoption is a Ruben-only tap in the UniFi app (idea #5878, parked human-required). API key `ox01QMxsupFeycXktNxAbmH6xlMltDkz` is read-only anyway.
+
+**WHAT ACTUALLY UNBLOCKS THIS (one of):**
+1. Ruben opens the NETGEAR UI in a real desktop browser (https://68.227.47.137, admin/qefru3-cocnyf-xuxnoP, Advanced Setup → Port Forwarding), edits "Artemis-SSH" dest 192.168.1.161→192.168.1.34, adds 51820/udp→.34. Then a follow-up Cline window SSHes in and sets Artemis WG dial-out.
+2. Ruben taps Adopt on EMSU-Phoenix in the UniFi app (rmajor@emsuniversity.com) → unblocks the api.ui.com write path → Cline scripts both forwards remotely.
+3. Someone on-site at Tempe sets Artemis wg0 dial-out directly (Endpoint=76.176.157.123:51820, PersistentKeepalive=25).
+
+**STALE NETGEAR RULES (both point at DEAD .161, harmless but should be repointed):**
+- `Artemis-Ollama TCP 11434→192.168.1.161`
+- `Artemis-SSH TCP/UDP 22→192.168.1.161`
+
+UNIFI ACCESS (from config.credentials.php on WOPR): Cloud rmajor@emsuniversity.com / `qefru3-cocnyf-xuxnoP`, MFA id 114fb9e1-a67d-4f6e-b542-3dbdb936fcde, read-only API key ox01QMxsupFeycXktNxAbmH6xlMltDkz. OTP emails land in /var/qmail/mailnames/emsuniversity.com/rmajor/Maildir (subj "MFA Login Authentication").

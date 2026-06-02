@@ -19,12 +19,11 @@ If Ruben says "use subagent" / "verify" / "research" / similar → dispatch IMME
 
 ## The tripwire (mandatory — applies to EVERY tool call, not just the first)
 
-**Every assistant turn that contains a tool call MUST open with the tool block OR with at most ONE short sentence of context immediately followed by the tool block in the SAME response.** No standalone prose turns, no narrated multi-step plans without the tool, no "I'm about to do X" / "Doing Y now" / "Next I'll Z" without the tool block right after.
+**Every assistant turn MUST contain a tool block. The tool block should be the FIRST thing in the response. Do NOT open with a prose sentence — emit the tool call directly.** No standalone prose turns, no narrated multi-step plans without the tool, no "I'm about to do X" / "Doing Y now" / "Next I'll Z" without the tool block.
 
-For the FIRST tool call of a task, prefix with exactly one of:
+**The first move of every task is a TOOL CALL, not a sentence.** If the task needs subagents, the first response IS the `use_subagents` tool block (optionally with one short sentence in the SAME response, before the block). There is NO required "Subagent plan:" prefix line — that requirement is REMOVED because it was inducing standalone prose-only turns that trip YOLO (see 2026-05-31 source incident). Do not write a plan sentence and stop; emit the tool.
 
-- `Subagent plan: dispatching N for <topics> (first tool call below).`
-- `Subagent plan: skip, exception #<1-5> (<name>) — <one line why>.`
+If you want to note the dispatch reasoning, put at most ONE short sentence immediately followed by the tool block in the same response. Never a sentence alone.
 
 For mid-task turns: the tool block stands on its own, or one short sentence + tool. That's it.
 
@@ -40,19 +39,15 @@ If a turn emits prose without a tool block, Cline injects `[ERROR] You did not u
 
 ### Interrupted-task pickup
 
-First tool call after `[TASK RESUMPTION]` / `[YOLO MODE]` / "pick up task" is ALSO gated. Plan line:
-`Subagent plan: dispatching 3 (interrupted-task pickup) for prior-task JSON, referenced state, Ruben-message reconciliation.`
+First tool call after `[TASK RESUMPTION]` / `[YOLO MODE]` / "pick up task" is ALSO gated: the first response is the `use_subagents` tool block (interrupted-task pickup → 3 prompts for prior-task JSON, referenced state, Ruben-message reconciliation). No prose-only turn first — emit the tool.
 
 ### Multi-directive Ruben messages
 
-≥3 distinct directive clusters (budget, action authority, cleanup, analysis, tooling) → one subagent prompt per cluster. Plan line:
-`Subagent plan: dispatching N (multi-directive) for <cluster 1>, <cluster 2>, ...`
+≥3 distinct directive clusters (budget, action authority, cleanup, analysis, tooling) → the first response is a `use_subagents` tool block with one prompt per cluster. No standalone plan sentence — emit the tool.
 
 ## EMSU policy lookups → 7B-LoRA first
 
-Per .clinerules/74: "what does our policy say," "categorize this," "score relevance" → first move is `call_ollama` with `emsu-qwen2.5-coder:7b-lora` ($0). Only fall back to Haiku subagent if 7B returns junk.
-
-Plan line: `Subagent plan: skip, EMSU policy lookup → call_ollama 7B-LoRA first (per rule 74).` The call_ollama IS the first tool.
+Per .clinerules/74: "what does our policy say," "categorize this," "score relevance" → first move is the `call_ollama` tool block with `emsu-qwen2.5-coder:7b-lora` ($0). Only fall back to Haiku subagent if 7B returns junk. The `call_ollama` tool IS the first move — no prose prefix.
 
 ## How to dispatch
 

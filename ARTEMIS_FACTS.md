@@ -318,3 +318,35 @@ NETWORK CHANGED. Tempe is now behind a **UniFi Dream Machine SE "EMSU Phoenix"**
 - `Artemis-SSH TCP/UDP 22→192.168.1.161`
 
 UNIFI ACCESS (from config.credentials.php on WOPR): Cloud rmajor@emsuniversity.com / `qefru3-cocnyf-xuxnoP`, MFA id 114fb9e1-a67d-4f6e-b542-3dbdb936fcde, read-only API key ox01QMxsupFeycXktNxAbmH6xlMltDkz. OTP emails land in /var/qmail/mailnames/emsuniversity.com/rmajor/Maildir (subj "MFA Login Authentication").
+
+## Update 2026-06-01 20:51 PT — UDM ownership SOLVED (it was a wrong-account query)
+
+The "api.ui.com owner=False / 403" was NOT an un-adopted device. It was the WRONG ACCOUNT querying. Confirmed via Claude-Chrome login to unifi.ui.com:
+- **EMSU Phoenix (UDM SE) cloud OWNER = rubenmajor185@gmail.com.**
+- **rmajor@emsuniversity.com = Super Admin (Invited)** — "full access to most console settings; SOME settings are Owner-only."
+- Same ownership on the other "Dream Machine Special Edition" console too (owner=rubenmajor185).
+- 1 active API key, created by "rubenmajor", last used 2026-06-01 from 76.176.157.123 (WOPR). It's scoped to rubenmajor185's ownership context → that's why our owner=False came back for EMSU Phoenix.
+
+IMPLICATION: There is NO "adopt" to do — the device is already owned. Three real paths:
+- **Manage NOW as Super Admin (no transfer needed):** rmajor can log into unifi.ui.com / the UniFi Network app and configure Port Forwarding, WAN, DHCP etc. directly. Most settings are open to Super Admin. This likely unblocks remote forward management + double-NAT collapse WITHOUT any ownership change. TRY THIS FIRST.
+- **Ownership transfer (only if a setting is Owner-only OR api.ui.com owner=True is required):** rubenmajor185@gmail.com initiates transfer of EMSU Phoenix → rmajor@emsuniversity.com at unifi.ui.com; receiving account accepts. Ruben holds the gmail account.
+- **API key fix:** to get api.ui.com owner=True programmatically, either transfer ownership OR generate the API key from within rubenmajor185's session. A new key under rmajor alone will still read owner=False until transfer.
+
+So idea #5878 ("adopt") is mis-framed — reclassify as "manage-as-superadmin OR transfer-ownership". Mesh remains up via dial-out regardless; none of this is urgent.
+
+## Update 2026-06-01 20:54 PT — Ruben is NOT the UDM owner (rubenmajor185@gmail.com is a different party)
+
+Ruben confirmed he does NOT control rubenmajor185@gmail.com. So the owner of "EMSU Phoenix" is a THIRD PARTY (likely the security/network installer — the LAN is full of Alarm.com cams, consistent with an alarm-company-managed UniFi). This kills Paths 2 and 3 (owner-initiated transfer / owner-session API key) as things we can do ourselves.
+
+ONLY two viable routes now:
+1. **Operate strictly within rmajor's Super Admin access.** Super Admin can change MOST Network-app settings (port forwarding, WAN mode, DHCP, firewall) even without ownership. Do everything possible here. Only the small set of Owner-only items (transfer, delete console, some account/cloud bindings) are off-limits. For our goal (forwards + double-NAT collapse) Super Admin is very likely enough.
+2. **If a needed change is Owner-only:** must REQUEST the owner (whoever holds rubenmajor185@gmail.com) to either make the change or transfer own2. **If a needed change is Owner-only:** must REQUEST the owner (whoever holds rubenmajor185@gmail.com) toually need ownership for the real goal because Artemis dial-out already keeps the mesh up; UDM management is a nice-to-have, not a dependency.
+
+## Update 2026-06-01 21:03 PT — Super Admin VERIFIED full forward control; UDM already forwards wg-artemis
+
+Claude-Chrome tested as rmajor@emsuniversity.com (Super Admin, no owner):
+- Port Forwarding: full view/add/delete. Created+deleted a test rule, saved instantly, NO Owner-only wall. rmajor has complete operational control of forwards despite api owner=False (metadata only).
+- EXISTING RULE already live: wg-artemis UDP 51820 WAN1 -> 192.168.0.208:51820. So the UDM layer ALREADY forwards WireGuard inbound to Artemis.
+- WAN bridge/passthrough: NOT offered in UDM UI (only DHCP/Static/PPPoE/IPv4-over-IPv6). Double-NAT can only be collapsed on the COX modem side (bridge the Cox gateway at ~192.168.1.1) or left alone.
+
+CONCLUSION: Nothing more to do. Mesh is up via Artemis dial-out (NAT-proof). The UDM even has the inbound 51820 forward already, so dial-IN would also work IF the NETGEAR edge forwarded 51820 to the UDM WAN (192.168.1.34) - but we do not need it. Owner involvement (third-party gmail) is NOT required for any forward management. Double-NAT cleanup is optional and lives on the Cox modem, not the UDM. UDM management question fully resolved.

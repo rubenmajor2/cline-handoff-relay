@@ -89,6 +89,20 @@ Without this section, the attempt_completion is incomplete per this rule.
   4. **Silent failure class:** state-level codes (AZ/CA/TX) intentionally NOT in `$shortCodeMap` because ambiguous (3 locations each) → 131 known failed registrations (74 SD + 48 DFW + others) sitting in /tmp/failed_regs.json before this debug session ever started
 - Ruben caught the bandaid pattern: *"identify the root cause rather than make bandaids for issues."* This rule encodes the corrective.
 
+## Root-cause TRACKING requirement (added 2026-06-01 — Ruben: "track and repair the root cause instead of putting on band aids")
+
+Finding the root cause is not enough — it must be TRACKED so it actually gets repaired and so the next agent sees it instead of re-bandaiding. Every debug session that identifies a root cause MUST, before completion:
+
+1. **Record the root cause in a durable, themed tracker** — the domain's master `.md` (e.g. Desktop `STUDENT_ACCESS_ISSUES_TRACKER.md`) as a numbered RC entry with: symptom, mechanism (file:line), spread, fix status (FIXED / staged / OPEN), and the prevention layer. Not just HANDOFF_NOTES (chronological) — the THEMED tracker so the class is greppable.
+2. **Distinguish bandaid vs root in the entry itself.** If a per-case spot-fix was applied to stop active harm, label it `SPOT-FIX (bandaid)` and pair it with the `ROOT (open)` line so it's unambiguous the core isn't fixed yet. A spot-fix logged as if it were the root is itself a rule-110 violation.
+3. **Surface the tracker from the canonical reference doc.** The themed `.md` must be linked/referenced from `routes/student_status_reference.php` (or the relevant canonical doc) so a human/agent finds it without knowing the Desktop path. Keep the reference doc and the `.md` in sync — update BOTH when a RC opens or closes.
+4. **A root cause left only as prose in an attempt_completion is not tracked.** It evaporates when the window closes (see rule 91). Tracked = a row in the themed `.md` + reference-doc pointer.
+
+Self-check addition: "Did I write the root cause into the themed tracker AND point the canonical reference doc at it, with bandaid vs root clearly labeled?" If no → completion incomplete.
+
 ## Last updated
 
+2026-06-01 — added root-cause TRACKING requirement (themed-tracker row + reference-doc pointer + bandaid-vs-root labeling). Source: Ruben during the student-access wave: "We should have a cline rule about root causes and bandaids. It's better to track and repair the root cause instead of putting on band aids... need to make sure you are updating the status reference document and the .md doc which should be on the status reference doc."
+
 2026-05-22 22:35 PT — initial.
+

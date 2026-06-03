@@ -62,6 +62,7 @@ HARDFLOOR_SLUGS=(
     "118-litellm-restart-via-safe-wrapper"
     "119-mandatory-context-compress"
     "120-context-is-not-an-excuse"
+    "135-student-lifecycle-service-sls"
 )
 
 # ─── G5 hardfloor (runs first; immediate block) ──────────────────────────

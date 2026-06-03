@@ -58,6 +58,9 @@ The double-line divider (═══) at start and end is mandatory so Ruben can s
 - Numbered 1-N with specific actionable items
 - Each item names the exact MCP tool, SQL, file path, or URL needed
 - Order by priority — the next agent reads top-down
+- **MANDATORY: every open-thread item MUST carry a filed idea number** (`#NNNN` from `orchestrator_ideas` / `create_idea`). An open thread is, by definition, deferred work — and per .clinerules/38 deferred Ruben-context work lands as a filed idea, not loose prose. Before writing the pickup prompt, FILE each open thread via `create_idea` (P2/P3 as appropriate, domain technical/etc), then cite the returned `#NNNN` inline on that item. A pickup-prompt "open threads" list containing items WITHOUT idea numbers is a rule violation — the agent is treating the pickup prompt as a parking lot instead of filing the work (the same anti-pattern .clinerules/29 bans). "Optional"/"future"/"nice-to-have" does NOT exempt an item: if it's worth listing, it's worth a number. The ONLY exception is an item that is a genuine human-policy decision (refund amount, regulator wording) already routed via a Q-card — cite the Q-card id instead.
+
+Source incident: 2026-06-02 cline_chat9222 Window 2 — the completion's pickup prompt listed 4 "open threads / optional hardening" items as prose with no idea numbers. Ruben: "these need idea numbers. You are being very resistent here." The fix was to file them (#9250-#9253) BEFORE completing. File first, then list with the number.
 
 ### "Reference IDs"
 - Tickets (number + status)

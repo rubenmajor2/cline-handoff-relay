@@ -10,11 +10,13 @@
     "start": "node build/index.js"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.12.1"
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "express": "^4.22.2"
   },
   "devDependencies": {
-    "typescript": "^5.8.3",
-    "@types/node": "^22.15.3"
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3"
   },
   "private": true
 }

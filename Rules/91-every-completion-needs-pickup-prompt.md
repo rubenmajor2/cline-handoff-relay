@@ -55,12 +55,38 @@ The double-line divider (═══) at start and end is mandatory so Ruben can s
 - Latest verification timestamp PT
 
 ### "Open threads to drive next"
+
+**Gate 0 (rule 29 act-or-defer test — run FIRST, before writing any open thread):**
+
+Before any candidate item goes into the open threads list, apply rule 29's act-or-defer test in order:
+
+1. **Do I have a tool that performs this action?** (update_ticket, add_ticket_comment, create_idea, ssh_command, fix_moodle_enrollment, send email/SMS via agent_send_or_draft, SQL write, safe_deploy, etc.) → **YES → ACT NOW. Do NOT list it as an open thread.** An item the current window can execute is NOT deferred work; it is undone work. Listing it instead of doing it is the rule 29 parking-lot anti-pattern.
+2. **Is this a judgment call requiring a specific human's policy authority?** (final refund amount, regulator response wording, grievance outcome, hiring decision, money over the agent's code-level cap) → OK to defer. Continue to Gate 1.
+3. **Is fresh-window budget the only reason?** (rule 91 budget-watchdog IMMINENT tier, or the current window's consecutive-mistake counter is at the limit) → OK to defer. Continue to Gate 1.
+
+If an item cannot clear Gate 0 (the agent has the tool AND is not at imminent budget AND it's not a human-authority decision), it MUST be done now, not listed. Listing it anyway is a rule 29 violation regardless of whether an idea number is attached.
+
+**Gate 1 (idea-number mandate — every surviving open thread MUST become a filed idea):**
+
 - Numbered 1-N with specific actionable items
 - Each item names the exact MCP tool, SQL, file path, or URL needed
 - Order by priority — the next agent reads top-down
-- **MANDATORY: every open-thread item MUST carry a filed idea number** (`#NNNN` from `orchestrator_ideas` / `create_idea`). An open thread is, by definition, deferred work — and per .clinerules/38 deferred Ruben-context work lands as a filed idea, not loose prose. Before writing the pickup prompt, FILE each open thread via `create_idea` (P2/P3 as appropriate, domain technical/etc), then cite the returned `#NNNN` inline on that item. A pickup-prompt "open threads" list containing items WITHOUT idea numbers is a rule violation — the agent is treating the pickup prompt as a parking lot instead of filing the work (the same anti-pattern .clinerules/29 bans). "Optional"/"future"/"nice-to-have" does NOT exempt an item: if it's worth listing, it's worth a number. The ONLY exception is an item that is a genuine human-policy decision (refund amount, regulator wording) already routed via a Q-card — cite the Q-card id instead.
+- **MANDATORY: every open-thread item MUST carry a filed idea number** (`#NNNN` from `orchestrator_ideas` / `create_idea`). An open thread is, by definition, deferred work — and per .clinerules/38 deferred Ruben-context work lands as a filed idea, not loose prose. Before writing the pickup prompt, FILE each open thread via `create_idea` (P2/P3 as appropriate, domain technical/etc), then cite the returned `#NNNN` inline on that item. A pickup-prompt "open threads" list containing items WITHOUT idea numbers is a rule violation — the agent is treating the pickup prompt as a parking lot instead of filing the work. "Optional"/"future"/"nice-to-have" does NOT exempt an item: if it's worth listing, it's worth a number. The ONLY exception is an item that is a genuine human-policy decision (refund amount, regulator wording) already routed via a Q-card — cite the Q-card id instead.
 
-Source incident: 2026-06-02 cline_chat9222 Window 2 — the completion's pickup prompt listed 4 "open threads / optional hardening" items as prose with no idea numbers. Ruben: "these need idea numbers. You are being very resistent here." The fix was to file them (#9250-#9253) BEFORE completing. File first, then list with the number.
+**The two-gate procedure (execute before writing the pickup prompt):**
+
+```
+For each candidate open thread:
+  → Gate 0: Can the current agent/window do this right now?
+      YES → DO IT. Remove from candidate list. Do not list.
+      NO  → Gate 1: File via create_idea. Get #NNNN. List with #NNNN.
+```
+
+An open thread with no idea number is always wrong: either (a) the agent should have done it and didn't (rule 29 violation) or (b) it's deferred work that wasn't filed (also rule 29 violation). There is no valid open thread without a #NNNN.
+
+Source incidents:
+- 2026-06-02 cline_chat9222 Window 2 — listed 4 "open threads / optional hardening" items as prose with no idea numbers. Ruben: "these need idea numbers. You are being very resistent here." Fix: file first (#9250-#9253), then list.
+- 2026-06-04 Ruben directive: "rule 91 Rebase use rule 29 open threads become ideas" — Gate 0 added to make rule 29's act-or-defer test the primary gate before the idea-number mandate fires.
 
 ### "Reference IDs"
 - Tickets (number + status)

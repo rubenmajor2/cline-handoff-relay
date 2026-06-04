@@ -106,9 +106,13 @@ model_list:
       stream: false
 
   # 2026-05-24 — SMS-Mac fallback for emsu-qwen2.5-coder:7b-lora (idea #6260).
+  # 2026-06-04 — IP CORRECTED 192.168.1.55 → 192.168.1.221. The live SMS-Mac
+  # (LocalHostName EMSU-SMS-Mac, ssh alias `smsmac`) is 192.168.1.221; .55 is
+  # dead (connection timeout, no ollama). Verified during Frankenstein 70B deploy.
   # Artemis is the primary (above). When Artemis ollama returns errors,
   # LiteLLM's router (allowed_fails:3 / cooldown_time:30) auto-fails over
-  # to this entry. SMS-Mac is 192.168.1.55 on LAN; Apple M1 Max + 48 GiB
+  # to this entry. SMS-Mac is 192.168.1.221 on LAN; Apple M1 Max + 48 GiB
+
   # Metal VRAM, Ollama 0.24.0 user-installed at ~/bin/ollama, launchd
   # KeepAlive=true. Same model name on disk after LoRA Modelfile build
   # (idea #6264). Until Modelfile lands, this endpoint will 404 on the
@@ -117,7 +121,7 @@ model_list:
   - model_name: emsu-qwen2.5-coder-7b-lora
     litellm_params:
       model: ollama_chat/emsu-qwen2.5-coder:7b-lora
-      api_base: http://192.168.1.55:11434
+      api_base: http://192.168.1.221:11434
       stream: false
 
   # Base qwen2.5-coder:7b on SMS-Mac (no LoRA). Useful for fallback when
@@ -126,7 +130,7 @@ model_list:
   - model_name: ollama-qwen-7b-base
     litellm_params:
       model: ollama_chat/qwen2.5-coder:7b
-      api_base: http://192.168.1.55:11434
+      api_base: http://192.168.1.221:11434
       stream: false
 
   # SMS-Mac llama3.3:70b (pre-existing, 42.5 GB on disk). 48 GiB Metal
@@ -135,7 +139,29 @@ model_list:
   - model_name: sms-llama-70b
     litellm_params:
       model: ollama_chat/llama3.3:latest
-      api_base: http://192.168.1.55:11434
+      api_base: http://192.168.1.221:11434
+      stream: false
+
+  # 2026-06-04 — Frankenstein 70B LoRA experts on SMS-Mac (idea #9687).
+  # Built from llama3.3-70B QLoRA adapters, Q4_K_M GGUF, ollama create on .221.
+  # student_email_reply / plan_summary / ticket_triage live; classify retraining.
+  # Tandem-with-Artemis load-balancing tracked in idea #9836.
+  - model_name: emsu-frank-70b-student-email
+    litellm_params:
+      model: ollama_chat/emsu-llama3.3-70b-student_email_reply-lora
+      api_base: http://192.168.1.221:11434
+      stream: false
+
+  - model_name: emsu-frank-70b-plan-summary
+    litellm_params:
+      model: ollama_chat/emsu-llama3.3-70b-plan_summary-lora
+      api_base: http://192.168.1.221:11434
+      stream: false
+
+  - model_name: emsu-frank-70b-ticket-triage
+    litellm_params:
+      model: ollama_chat/emsu-llama3.3-70b-ticket_triage-lora
+      api_base: http://192.168.1.221:11434
       stream: false
 
   # SMS-Mac mistral-small:22b (pre-existing, 12.6 GB on disk). Routine
@@ -143,8 +169,9 @@ model_list:
   - model_name: sms-mistral-22b
     litellm_params:
       model: ollama_chat/mistral-small:latest
-      api_base: http://192.168.1.55:11434
+      api_base: http://192.168.1.221:11434
       stream: false
+
 
 
   # ----- Tier-2 tiny classifier model -----

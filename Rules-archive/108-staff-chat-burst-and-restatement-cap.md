@@ -96,6 +96,17 @@ If I look back and see 3+ outbound on the same chat with no inbound between with
 
 2026-05-22 PT, chat 55 evening. Ruben caught the pattern reviewing his own outbound today (read-only by Cline, per rule 29 confidence-tier check — high confidence, reversible by codifying, small blast → ship). Pulled receipts above. Researched SMS conversation cadence norms (3-message threshold is consistent across Pew, Twilio, and SMS-etiquette literature). Numbers picked: cap=3, hold=30 min, restatement window=60 min, offer-variant window=4 hr. Filed per Ruben's explicit "just go ahead and implement" directive.
 
+## 2026-06-03 fix — burst cap now resets on inbound reply (was over-blocking)
+
+Source: 2026-06-03 Ruben feedback — *"This is way too far the other way. I need to be able to respond."*
+
+The implementation in `lib/rule108_burst_cap.php` did NOT match this spec. The spec (line "If Vicky replies, the count resets") means the cap is on outbound sent **without an inbound between them**. But `rule108_check_burst_cap()` was counting EVERY outbound (`is_from_me=1`) in the rolling 30-min window, ignoring whether the recipient had replied. Result: a normal back-and-forth where Vicky/Jon actively answered still tripped the cap and silently dropped Ruben's next reply. Measured impact: **1,673 `bubble_cap_enforced` blocks in 7 days** on chats 5/55/64/84/88.
+
+Fix deployed (`cline-rule108-reply-reset-20260603`, sha 24e757…): the burst counter now computes `effStart = MAX(window_start, last_inbound_reply)` and only counts outbound since `effStart`. Verified against a real 6/1 case: 5 outbound preceded Vicky's reply (old = blocked), counter resets to 2 after her reply (new = un-blocked). Backup at `lib/rule108_burst_cap.php.bak-20260603-180412-…`. Kill switch unchanged (`RULE108_ENABLED=false`).
+
+The restatement/echo-chamber gate (Rule B) was left intact — it correctly still blocks verbatim repeats like the "saw it, looking now" jaccard=1.0 string. Only the burst cap (Rule A) was over-firing.
+
 ## Last updated
 
+2026-06-03 — burst cap reset-on-reply fix (see above). Source: Ruben "way too far the other way, I need to be able to respond."
 2026-05-22 — initial rule. Source: Ruben directive after reviewing today's chat 55 receipts.

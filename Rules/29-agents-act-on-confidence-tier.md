@@ -193,16 +193,45 @@ Vicky reported 10 students with Moodle/section/payment issues. Cline triaged and
 
 Ruben quote: *"Why are we making tickets for Vicky? We already have all the info in front of us. Vicky can't help with any of this stuff except call these students and wait for the system to resolve itself and collect the info which is what the Agents are already doing. Vicky can really only comfort on these things and match payments, lol."*
 
-## Deep version
+## Parallel-windows protocol — "wait them out" is FORBIDDEN (added 2026-06-06)
 
-Full text including investigation kit table, source incidents, v1-vs-v2 diff, follow-on ideas:
+A fourth sneaky form of inaction: Ruben is running multiple Cline windows in parallel against a checklist or multi-part task. An agent in one window detects the parallel activity and tells Ruben to **"wait for the other windows to finish," "let the parallel sessions complete first," "pause until the other windows are done,"** or otherwise serializes Ruben's parallel workflow. That is NOT a valid response. It is the defer-to-the-system anti-pattern wearing checklist clothing.
 
-```
-clinerules_lookup(rule_id="29")
-```
+**The rule:** every Cline window operates independently and to completion. A window does NOT pause, yield, or tell Ruben to wait because other windows are running. Each window:
 
-Or `read_file ~/Documents/Cline/Rules-archive/29-agents-act-on-confidence-tier.md`.
+1. **Works its own unit to done** per rule 137 (Definition-of-Done: declare an acceptance check, loop change->verify->done).
+2. **Completes with its own pickup prompt** per rule 91. Each window's pickup prompt is self-contained — it does not reference "wait for window X" or "depends on the other session finishing."
+3. **Does not speculate about what other windows have done or will do.** If it needs a fact that another window may have changed, it queries the live system (DB, MCP, file) and acts on what is actually there, not what it assumes the other window did.
 
-## Last updated
+**The "wait them out" failure mode has two forms:**
 
-2026-05-26 — v2 rewrite. Deep version in Rules-archive/. Source: tonight's stranded-students sweep, where v1's default-to-ask bias chilled investigation depth on Aidan Rice + 3 others before they'd been verified with `verify_payment_state`.
+- *Explicit:* "There are other Cline windows running this checklist. I'll hold off until they complete." Forbidden.
+- *Implicit:* Doing less work or skipping steps "to avoid conflicts" with a parallel window. Also forbidden. If a real write-conflict exists (two windows editing the same file byte-for-byte), the right move is: complete your own change, note the potential conflict in HANDOFF_NOTES, let the next window reconcile — NOT pause.
+
+**The test before telling Ruben to wait on parallel windows:**
+
+1. *Is this window's unit complete per its own acceptance check (rule 137)?* If no, keep working. Don't look at other windows.
+2. *If this window has the tools and authority to act on its unit right now, does it act?* Yes — always. No parallel-window state is a valid reason to defer a green-tier reversible action.
+
+**Banned phrases in any Cline window response when parallel windows are detected:**
+
+- "Wait for the other Cline windows to finish before..."
+- "Let the parallel sessions complete first"
+- "Pause until the other windows are done"
+- "Hold off while the other session handles..."
+- "The other window is working on this, so I'll skip it"
+- "To avoid conflicts with the parallel window, I'll defer..."
+- "Coordinate with the other sessions first"
+- Any sentence that tells Ruben to serialize what he explicitly launched in parallel
+
+**Pickup prompts from parallel windows are self-contained, not coupled:**
+Each window's pickup prompt (rule 91) stands alone. It does NOT say "after the other windows finish" or "depends on window X completing item Y." If the current window's unit is done, the pickup prompt says it's done. If another window's output would affect the next step, the next-window operator queries the live system to find out — it does not wait.
+
+**Cross-refs:**
+- Rule 137 (DoD + self-converge): each window declares its own acceptance check and loops change→verify→done independently.
+- Rule 91 (pickup prompt): every window's completion has a self-contained pickup; no cross-window dependencies.
+- Rule 92 (work at the core): "wait for the other window" is defer-to-the-system in checklist clothing.
+
+**Source incidents:**
+- 2026-06-05: Ruben ran parallel windows on a multi-part checklist; one window detected parallel activity and told Ruben to wait for the others to finish before acting. Ruben flagged it.
+- 2026-06-06: Same pattern repeated in a second parallel-windows session. Hardfloor addendum added this date.

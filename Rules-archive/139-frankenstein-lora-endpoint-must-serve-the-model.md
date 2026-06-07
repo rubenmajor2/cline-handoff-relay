@@ -60,7 +60,33 @@ Two distinct causes, both look identical from outside ("spinning, no progress"):
 
 A genuinely-progressing training window writes to its `/tmp/ruben-parallel-idea-*.log` and the nightly log every few minutes. If those timestamps are advancing, it is working (free GPU = good, let it run). If they are frozen AND the chain is snoozed, it is this rule.
 
+## Why subagents stall for hours (Ruben's "stuck spinning" question — 2026-06-07)
+
+"Some subagents spin for hours making no progress, others are fine." Two DIFFERENT things that look identical from outside:
+
+1. **Genuinely working (leave alone):** high tool counts (100-335) at **$0.00** cost = the free local fleet doing real research/build work. Free + busy = good. A working window's `cline_passthrough` rows in `llm_call_log` keep advancing (new `id`s, fresh `ts`). Let these run.
+
+2. **Wedged (must intervene):** the window holds idle ESTABLISHED connections to the litellm tunnel (`127.0.0.1:11505 -> WOPR:4000`) with **0/0 send/recv queues** and makes ZERO new LLM calls — `cline_passthrough` surface frozen at the same `id` for 30+ min while every OTHER surface advances. Cause: a litellm restart (there were 8 in one day from Frankenstein/CATO/Spark deploys) drops `:4000` for ~10s, severing in-flight HTTP streams; the Cline extension host sits on the dead half-open sockets forever because ssh `ServerAliveInterval` only checks the transport, not the HTTP channel inside it.
+
+### How to tell which (fast)
+```
+# is the subagent surface advancing or frozen?
+mysql ... -e "SELECT MAX(id), MAX(FROM_UNIXTIME(ts)), TIMESTAMPDIFF(MINUTE,FROM_UNIXTIME(MAX(ts)),NOW()) min_ago FROM llm_call_log WHERE surface IN ('cline_passthrough','gateway_unattributed')"
+# held-idle conns (wedged) on the Mac:
+lsof -nP -iTCP:11505 -sTCP:ESTABLISHED | grep -c Code   # high + 0/0 queues + frozen surface = wedged
+```
+If frozen + held conns: the server is fine (test it — a fresh request returns in <1s). The wedge is client-side.
+
+### Recovery for a wedged window
+- **Bounce the launchd tunnel:** `launchctl kickstart -k gui/$(id -u)/com.ruben.cline-router-tunnel` (clears the dead channels; KeepAlive respawns it clean).
+- **Then RELOAD the VS Code window** (Cmd+Shift+P -> "Developer: Reload Window"). Cancel+continue does NOT un-wedge an already-poisoned extension host — it just spawns new stalled subagents. Only a window reload clears the poisoned socket state.
+- **Durable prevention (shipped):** `~/bin/emsu-cline-tunnel-watchdog.sh` + launchd `com.emsu.cline-tunnel-watchdog` (60s) auto-detects the "connect failed: Connection refused" storm in `/tmp/cline-router-tunnel.log` and auto-kickstarts the tunnel. Idea #10535. Part 2 (a client-side stream-read timeout in Cline so a severed stream aborts the turn instead of hanging) is #10529.
+
+### Do NOT restart litellm carelessly
+Each litellm restart wedges every Cline window mid-request. Batch deploys; restart once via `/usr/local/bin/emsu-safe-litellm-restart.sh` (rule 118), and expect the watchdog to heal the tunnel within 60s afterward.
+
 ## Cross-references
+
 
 - `.clinerules/92` — work at the core: fix the endpoint, do not hand-restart each window
 - `.clinerules/29` — only clear infra snoozes, never policy gates

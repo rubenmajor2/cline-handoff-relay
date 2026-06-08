@@ -1,4 +1,4 @@
-# 54 — Subagents CAN take destructive action under the same locking primitives the main agent uses
+# 54 — Subagents CAN take destructive action — but via LOCAL tools only (no MCP). MCP-routed actions stay on the main agent.
 
 Permanent rule. Workspace-scoped. Source: 2026-05-12 — Ruben directive verbatim:
 
@@ -6,15 +6,21 @@ Permanent rule. Workspace-scoped. Source: 2026-05-12 — Ruben directive verbati
 
 Replaces the cultural "subagents are read-only research" pattern with an explicit "subagents CAN write — under audit + locking." Pairs with `.clinerules/53` (which mandates iteration use + inline model narration).
 
+## 2026-06-07 CORRECTION — subagents have NO MCP access (live-verified)
+
+**The original v1 of this rule wrongly claimed subagents could call "MCP destructive tools (ticket comments, SQL writes, Moodle deploy_content)." They cannot.** This was live-tested on 2026-06-07: a dispatched subagent's complete toolset is exactly six LOCAL tools — `read_file`, `list_files`, `search_files`, `list_code_definition_names`, `execute_command`, `attempt_completion`. Zero MCP-server tools are wired into a subagent's schema (no `emsu-operations`, `fleet-state`, `mysql`, `imessage`, `ruben-orchestrator`, `memory`, `google-drive`, etc.). This matches `.clinerules/53` (lines 87-114) and `.clinerules/75` (lines 53-54), which both already state it correctly. The Ruben directive quoted above was reasonable intent, but the Cline subagent runtime never actually exposed MCP to subagents — so the capability was aspirational, not real. Dispatching a subagent for MCP/server work just burns tokens and returns "MCP not available" (the exact wasted-time failure this correction prevents).
+
 ## The bright-line rule
 
-**Subagents CAN perform destructive operations** — `safe_deploy_file`, `replace_in_file`, `write_to_file`, `execute_command` that mutates state, MCP destructive tools (ticket comments, SQL writes, ollama create/rm, Moodle deploy_content, etc.) — **provided ALL of the following are true:**
+**Subagents CAN perform destructive operations that go through LOCAL tools** — `replace_in_file`, `write_to_file`, and `execute_command` that mutates state (including `safe_deploy` invoked as a CLI command, local SQL via a CLI client, git operations, file moves) — **provided ALL of the following are true:**
 
 1. The destructive action uses the same **locking + audit primitives** the main agent uses.
 2. The main agent **prevents same-resource collisions** in its fan-out (see "Collision avoidance" below).
 3. The destructive action is **NOT on the irreversibility hard-floor list** from `.clinerules/29`.
+4. The destructive action does **NOT require an MCP-server tool**. Anything MCP-routed (ticket comments via `add_ticket_comment`, DB writes via `execute_query`, `reload_php_fpm`, `deploy_moodle_content`, iMessage/Discord sends, orchestrator decisions, etc.) is **MAIN-AGENT-ONLY** — subagents physically cannot call those tools. If the action needs an MCP tool, it is not subagent-dispatchable; run it inline in the main window.
 
-This is NOT a blanket permission. It's "yes, under the same discipline."
+This is NOT a blanket permission. It's "yes — for LOCAL destructive actions, under the same discipline. MCP actions stay on the main agent."
+
 
 ## Required locking + audit primitives
 
@@ -25,18 +31,20 @@ When a subagent does a destructive action, it MUST use these exactly as the main
 - **Backup file always created** (safe-deploy creates `.bak-*-<reason>` automatically).
 - Local file writes (Mac side): same shape — read first, check sha, write, leave a backup. `replace_in_file` SEARCH/REPLACE is its own CAS — two subagents won't both match the same SEARCH block.
 
-### Database writes
+### Database writes (only via a LOCAL CLI client, NOT the mysql MCP)
+- A subagent can run SQL **only** through `execute_command` invoking a local CLI (e.g. `mysql -h ... -e "..."` if credentials are wired locally). It CANNOT use the `mysql` MCP `execute_query` tool. If no local CLI path exists, the SQL stays on the main agent.
 - **Per-row primary key or unique constraint** prevents two subagents inserting the same row.
 - **`UPDATE ... WHERE id=N`** is naturally atomic.
 - For multi-row mutations, **`flock(/tmp/cline-subagent-<resource>.lock)`** at the start of the operation, release at end. Same primitive RUBEN executor uses.
 
-### MCP destructive tools
-- Same shape: each tool either is naturally idempotent (e.g. `add_ticket_comment` writes a new row) or has its own dedup logic.
-- Each call writes a row to `orchestrator_event_log` with `agent_name='subagent_N_of_<dispatch_id>'` and `source='cline_subagent'` so the audit trail is greppable.
+### MCP destructive tools — MAIN AGENT ONLY (subagents cannot reach them)
+- `add_ticket_comment`, `execute_query`, `reload_php_fpm`, `deploy_moodle_content`, iMessage/Discord sends, orchestrator decisions, and every other MCP-server tool are **not in a subagent's schema** (live-verified 2026-06-07). A subagent that tries to call one gets "tool not found / MCP not available."
+- Therefore any work that requires one of these tools is **not subagent-dispatchable**. The main agent does it inline. The audit row (`orchestrator_event_log`, `agent_name='cline_main'`) is written by the main agent.
 
 ### Cross-system operations
-- Same flock pattern: `flock /tmp/cline-subagent-<system>.lock` before the action.
-- E.g. two subagents both wanting to `reload_php_fpm` → flock prevents the second from firing within the rate-limit window.
+- Local cross-system work (touching multiple files / local services via `execute_command`) uses the same flock pattern: `flock /tmp/cline-subagent-<system>.lock` before the action.
+- Anything that reaches a system via an MCP tool (e.g. `reload_php_fpm`) is main-agent-only — a subagent has no way to call it, so the rate-limit/flock concern there belongs to the main agent.
+
 
 ## Collision avoidance (main agent's responsibility)
 
@@ -89,26 +97,21 @@ payload    = {
 
 So if a subagent does the wrong thing, the main agent (or Ruben) can find ALL of that dispatch's subagent actions with one query and reverse them.
 
-## Examples — what this enables
+## Examples — what this enables (LOCAL actions only)
 
-**Before this rule (research-only pattern):**
-- Main agent: "Find which 8 ai_compiled_rules rows mention 'Wonderlic'"
-- Subagent: returns list of 8 row IDs
-- Main agent: serially UPDATEs each row → 8 sequential SQL writes
+**Parallel LOCAL file edits (the canonical valid fan-out):**
+- Main agent: "These 8 local config files each need the same one-line patch."
+- Main agent: dispatches 8 subagents in parallel (one per file), each does its own `replace_in_file` / `write_to_file`. Different files = no collision. 8x wall-clock speedup.
 
-**After this rule:**
-- Main agent: dispatches 8 subagents in parallel (one per row ID), each does its own `UPDATE WHERE id=X`. Different rows = no collision. 8x wall-clock speedup.
+**Parallel LOCAL shell work:**
+- Main agent: "Regenerate 5 local report artifacts in /tmp, one per dataset."
+- Main agent: 5 subagents in parallel, each running its own `execute_command` (python/jq/sed) on its own file. flock per output path prevents clobber.
 
-**Before this rule:**
-- Main agent: "Check 5 Moodle courses for stale completion_state"
-- Subagent: returns 5 problem rows
-- Main agent: serially calls `purge_moodle_cache` for each
+**NOT subagent-dispatchable (MCP-routed — main agent only):**
+- "UPDATE 8 ai_compiled_rules rows via the mysql MCP `execute_query`" → main agent runs these (parallel tool calls in ONE response block is the speedup, not subagents).
+- "purge_moodle_cache for 5 courses" → `purge_moodle_cache` is an MCP tool → main agent only.
+- A subagent sending Vicky an SMS about a refund → rule 29 hard-floor AND MCP-routed. Main agent only, with Q-card. No exception.
 
-**After this rule:**
-- Main agent: 5 subagents in parallel, each calling `purge_moodle_cache(course_id=X)` for its own course. flock prevents Moodle cron interference.
-
-**Still NOT allowed (rule 29 hard-floor):**
-- Subagent sending Vicky an SMS about a refund. Main agent only, with Q-card. No exception.
 
 ## What this rule does NOT do
 
@@ -129,7 +132,10 @@ So if a subagent does the wrong thing, the main agent (or Ruben) can find ALL of
 
 ## Last updated
 
+2026-06-07 — CORRECTION. Removed the false "subagents can call MCP destructive tools" claim after a live test proved subagents have NO MCP access (toolset = read_file, list_files, search_files, list_code_definition_names, execute_command, attempt_completion only). Rescoped the rule to LOCAL destructive actions; MCP-routed actions are now explicitly main-agent-only. Source: Ruben asked why a subagent dispatched to use the fleet-state MCP returned "MCP not available" and wasted ~11K tokens / 0 tool calls. Root cause: this rule (v1) told agents to dispatch subagents for MCP work they categorically cannot do. Aligns 54 with `.clinerules/53` + `.clinerules/75`, which were already correct.
+
 2026-05-12 — initial rule. Source: cline-7b-phase3-analysis session
 (task #1778607736240). Ruben directive verbatim quoted at top. Pair-shipped
 with `.clinerules/53` so the iteration-use mandate and destructive-action
 permission land together.
+

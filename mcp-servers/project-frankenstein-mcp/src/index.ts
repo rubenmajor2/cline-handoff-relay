@@ -116,6 +116,50 @@ const ARCHITECTURE_SUMMARY = {
   ],
 };
 
+const TOOLING_FACTS = {
+  topic: "Roman (DGX Spark) gpt-oss-120b Tool-Calling Reality",
+  summary: "vLLM 0.10.1.1 /v1/chat/completions CANNOT emit tool_calls for gpt-oss/harmony. SAME build /v1/responses returns clean function_call (200). Fix: frankenstein-tools adapter translates chat+tools -> /v1/responses -> OpenAI tool_calls.",
+  source_doc: "/var/www/emtskills/docs/research/roman_gptoss_tooling_research_2026-06-07.md",
+  key_facts: {
+    vllm_version: "0.10.1.1 (NGC nvcr.io/nvidia/vllm:25.09-py3)",
+    chat_completions_problem: "gpt-oss uses OpenAI 'harmony' channel (analysis->reasoning_content, commentary->tool call, final->content). vLLM 0.10.1.1 raises NotImplementedError. Small max_tokens truncates to tool_calls=null (caused Cline loop). Large max_tokens -> HTTP 400 'Expected 2 output messages... got 3'.",
+    responses_endpoint_works: "SAME vLLM 0.10.1.1's /v1/responses returns clean structured function_call (200). output[] contains {type:'function_call', name, arguments, call_id}. The 120B CAN tool-call — different endpoint.",
+    adapter_fix: {
+      name: "frankenstein_tools_adapter",
+      what: "Stdlib-only HTTP sidecar translating OpenAI chat+tools -> /v1/responses -> OpenAI tool_calls. No-tool requests transparently proxied to chat/completions.",
+      service: "systemd frankenstein-tools.service on WOPR",
+      port: 11510,
+      source: "/usr/local/bin/frankenstein_tools_adapter.py",
+      local_source: "/Users/rubenmajor/Desktop/frankenstein_tools_adapter.py",
+      litemll_model: "frankenstein-tools (openai/frankenstein-tools -> 127.0.0.1:11510/v1)",
+      litemll_config: "supports_function_calling: true, max_input_tokens: 16384, request_timeout: 90s",
+      upstreams: "Cesar (127.0.0.1:11506) + Cato (127.0.0.1:11507), round-robined",
+      deps: "ZERO pip deps (http.server + urllib + json stdlib only)",
+      verified: true,
+      idea: "#10740",
+    },
+    native_upgrade_path: {
+      idea: "#10739",
+      description: "vLLM >=0.10.2 adds --tool-call-parser openai (PR #22386, merged 2025-09-05). Also adds --tool-call-parser gptoss for reasoning. 0.10.1.1 does NOT support openai parser (adding it KeyErrors and crash-loops).",
+      note: "The two-flag pattern: --enable-auto-tool-choice + --tool-call-parser <family>. llama3_json for 70B, openai for gpt-oss.",
+    },
+    harmony_litemll_gap: "LiteLLM has NO built-in harmony->tool_calls transform (hosted_vllm is thin passthrough). Cannot fix at proxy level.",
+    tool_call_max_tokens_note: "harmony emits reasoning preamble BEFORE tool call. Small max_tokens truncates to finish_reason=length with tool_calls=null. Always test tool calls with max_tokens>=512.",
+  },
+  romans_ssh: {
+    Cesar: "ssh -i /home/emsuserver/.ssh/id_ed25519 -p 2203 rubenmajor@127.0.0.1 (spark-3b41, :11506)",
+    Cato: "ssh -i /home/emsuserver/.ssh/id_ed25519 -p 2204 rubenmajor@127.0.0.1 (spark-2aa8, :11507)",
+    note: "Both run gpt-oss-120b on vLLM 0.10.1.1 (NGC 25.09). Via WOPR tunnels.",
+  },
+  cross_refs: [
+    ".clinerules/140 — verify LLM routing from live headers, not file-reads",
+    ".clinerules/141 — call project-frankenstein MCP first for architecture truth",
+    ".clinerules/92 — work at the core, not bandaids",
+    "idea #10739 — upgrade Romans to vLLM >=0.10.2 for native openai tool parser",
+    "idea #10740 — frankenstein-tools adapter (shipped 2026-06-07, VERIFIED)",
+  ],
+};
+
 const FAST_TRAIN_RUNBOOK = {
   source: "/var/www/emtskills/docs/FRANKENSTEIN_FAST_TRAIN_RUNBOOK.md",
   scope: "Applies to EVERY EMSU task_kind through frank_lora_train.sh (classify, student_email_reply, plan_summary, ticket_triage, cline_code_turn, code70b).",
@@ -153,13 +197,13 @@ const TOOLS = [
   {
     name: "frankenstein_verify_routing",
     description:
-      "Canonical header probe for a model_id: calls LiteLLM /v1/chat/completions with -D - headers and returns the REAL backend (x-litellm-model-api-base), cost (x-litellm-response-cost), and model id. This is the ground truth per rule 140 — config files and router_hook.py are HYPOTHESES. Use BEFORE stating what model serves a surface. STDIO, live call via fleet API, 10s bound.",
+      "Canonical header probe for a model_id: calls LiteLLM /v1/chat/completions with -D - headers and returns the REAL backend (x-litellm-model-api-base), cost (x-litellm-response-cost), and model id. This is the ground truth per rule 140 — config files and router_hook.py are HYPOTHESES. Use BEFORE stating what model serves a surface. Also probe 'frankenstein-tools' to verify the Roman gpt-oss adapter is live (should return 200 with openai/frankenstein-tools backend). STDIO, live call via fleet API, 10s bound.",
     inputSchema: {
       type: "object",
       properties: {
         model_id: {
           type: "string",
-          description: "The model id to probe (e.g. 'frankenstein-llm', 'emsu-executor-auto', 'claude-sonnet-4-6'). Default: 'frankenstein-llm'.",
+          description: "The model id to probe (e.g. 'frankenstein-llm', 'emsu-executor-auto', 'frankenstein-tools', 'claude-sonnet-4-6'). Default: 'frankenstein-llm'.",
         },
       },
       required: [],
@@ -175,6 +219,12 @@ const TOOLS = [
     name: "frankenstein_fast_train",
     description:
       "EMSU Fast LoRA Training runbook: the 4 levers (1 epoch first, packing=True, DDP one-replica-per-GPU, serve raw LoRA on vLLM) + the hardfloor (pull weights to durable storage BEFORE any gate/judge step). Call this BEFORE launching any frank_lora_train run. Backed by FRANKENSTEIN_FAST_TRAIN_RUNBOOK.md + .clinerules/138.",
+    inputSchema: { type: "object", properties: {}, required: [] },
+  },
+  {
+    name: "frankenstein_tooling",
+    description:
+      "Roman (DGX Spark) gpt-oss-120b tool-calling reality + frankenstein-tools adapter facts. Returns: vLLM 0.10.1.1 /v1/chat/completions CANNOT emit tool_calls for gpt-oss (harmony channel mismatch — small max_tokens -> tool_calls=null, large -> HTTP 400). SAME build /v1/responses returns clean function_call (200). Fix shipped 2026-06-07: frankenstein-tools adapter (systemd frankenstein-tools.service, WOPR :11510) translates chat+tools -> /v1/responses -> OpenAI tool_calls. LiteLLM model 'frankenstein-tools' verified working. Native upgrade path: vLLM >=0.10.2 --tool-call-parser openai (idea #10739). Call this BEFORE asking why tool calls fail on Romans.",
     inputSchema: { type: "object", properties: {}, required: [] },
   },
 ];
@@ -247,6 +297,8 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
           _fetched_at: new Date().toISOString(),
         };
       }
+    } else if (name === "frankenstein_tooling") {
+      out = TOOLING_FACTS;
     } else {
       out = { error: "unknown_tool", name };
     }

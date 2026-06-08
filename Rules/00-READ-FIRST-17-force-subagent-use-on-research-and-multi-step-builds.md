@@ -67,7 +67,12 @@ Canonical 5-prompt multi-step build pattern:
 4. Plan subsystem C
 5. Plan migration + rollback + smoke tests
 
+## Subagents have LOCAL tools ONLY — never dispatch them for MCP/server work
+
+Subagents have local shell + filesystem ONLY (`read_file`, `list_files`, `search_files`, `list_code_definition_names`, `execute_command`, `attempt_completion`). They CANNOT call MCP-server tools (`emsu-operations`, `fleet-state`, `mysql`, `imessage`, `ruben-orchestrator`, `memory`, `google-drive`, etc.). Live-verified 2026-06-07. Never dispatch a subagent for MCP/server/DB/ticket/iMessage work — it returns "MCP not available," 0 tool calls, wasted tokens. Those run INLINE in the main window (parallel tool calls in one response block is the speedup, not subagents). Subagents are for local file reads, grep/search, local-shell parsing, and synthesis. See `.clinerules/54` + `.clinerules/53` + `.clinerules/75`.
+
 ## Self-check
+
 
 Before any non-`use_subagents` tool early in a task: is this in one of the 5 exceptions? If no → dispatch. If halfway through `attempt_completion` on something I never dispatched a subagent for → abandon, dispatch.
 

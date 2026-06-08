@@ -82,6 +82,7 @@ trip database.
   it as a tool, don't write "I'll reload FPM" as prose)
 - Rule 99 — generic no-tool-use playbook (this rule is the post-deploy
   specialization)
+- Rule 143 — prose-loop circuit breaker. **If you have already hit 2 "did not use a tool" errors in this task, STOP trying to emit the tool — your NEXT response MUST be `attempt_completion` per rule 143.** This rule (41) tells you to emit a tool; rule 143 is the exit when emitting a tool keeps failing. They are not in conflict: 41 prevents the loop, 143 escapes it.
 
 ## Self-check before any "Deployed."-prefixed close
 

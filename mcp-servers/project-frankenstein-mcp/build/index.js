@@ -51,9 +51,21 @@ async function fleetApi(action, params = {}) {
 // Derived from the live PROJECT_FRANKENSTEIN.md (read via fleet API on boot,
 // static fallback baked in). The full doc is huge; the tool returns the
 // canonical structured summary + a pointer to the full doc.
+// CORE PRINCIPLES — pinned numbered block. Mirrors PROJECT_FRANKENSTEIN.md §0
+// (the numbered CORE PRINCIPLES block at the very top). Window 4 / idea #11261.
+// Any agent answering a Frankenstein question gets these FIRST.
+const CORE_PRINCIPLES = [
+    "1. ROUTE BY HEALTH, not by config. Machines flap. Failover uses real HTTP 200 probes (/v1/models, /api/tags), never lifecycle/config status. 'Warm' = a live 200, not desiredStatus=RUNNING.",
+    "2. PER-MODEL CONTEXT. Each served model has its OWN max_model_len/num_ctx (cesar=8192, cato=16384, 70B=8192...). Never a global magic number. The oversize guard uses the MINIMUM ctx of any member an entrypoint may dispatch to, so it never computes max_tokens<0 -> HTTP 400.",
+    "3. HEAD / BODY / STITCHES / DETACH-SYNTHESIZE. BODY (free local 7B/14B/32B/70B/120B) does the ~90% deterministic/templated work. HEAD (paid Sonnet/Opus) generates ONLY the genuinely-hard span. STITCHES (cheap 70B pass) smooths the seams. The head is sewn on, never asked to re-review the body.",
+    "4. GRACEFUL DEGRADATION (no dead-ends, rule 142). Every entrypoint has a static fallback baked in. A bad/new/missing piece (registry row, down Spark, cold pod) NEVER bricks serving — it degrades down the spill ladder to the next healthy tier, terminating at claude-sonnet.",
+    "5. ADD A MODEL = ONE REGISTRY ROW. The spill ladder, tiers, endpoints, and per-model context all DERIVE from /etc/litellm/frankenstein_registry.yaml. Adding/changing a model is one declarative row, no code edit. router_hook.py + this MCP + the fleet API all read the SAME registry, so architecture and live routing can never drift.",
+];
 const ARCHITECTURE_SUMMARY = {
     name: "Project Frankenstein — Head/Body/Stitches LLM Architecture",
+    CORE_PRINCIPLES,
     source_doc: "/var/www/emtskills/docs/PROJECT_FRANKENSTEIN.md",
+    registry: "/etc/litellm/frankenstein_registry.yaml (single source of truth — call frankenstein_registry tool for live state)",
     head_body_stitches: {
         BODY: {
             description: "Local/free models (~90% of tokens): 7B, 14B, 32B Qwen, 70B. Handles deterministic/templated/high-frequency boilerplate — standard policy language, canned explanations, structure.",
@@ -208,6 +220,11 @@ const TOOLS = [
         description: "Roman (DGX Spark) gpt-oss-120b tool-calling reality + frankenstein-tools adapter facts. Returns: vLLM 0.10.1.1 /v1/chat/completions CANNOT emit tool_calls for gpt-oss (harmony channel mismatch — small max_tokens -> tool_calls=null, large -> HTTP 400). SAME build /v1/responses returns clean function_call (200). Fix shipped 2026-06-07: frankenstein-tools adapter (systemd frankenstein-tools.service, WOPR :11510) translates chat+tools -> /v1/responses -> OpenAI tool_calls. LiteLLM model 'frankenstein-tools' verified working. Native upgrade path: vLLM >=0.10.2 --tool-call-parser openai (idea #10739). Call this BEFORE asking why tool calls fail on Romans.",
         inputSchema: { type: "object", properties: {}, required: [] },
     },
+    {
+        name: "frankenstein_registry",
+        description: "THE SINGLE SOURCE OF TRUTH for the spill ladder (idea #11261). Returns the live model registry (/etc/litellm/frankenstein_registry.yaml) AND the router's ACTUAL derived state (/tmp/emsu_router_registry_state.json — what router_hook.py loaded at last restart): tier_to_model, model_endpoint, tier_fallthrough, _120b_members, served_ctx, role_targets, plus the registry source (registry:... = live, static_fallback:... = the yaml failed and hardcoded defaults are in effect). router_hook.py + this MCP + the fleet API all read the SAME registry, so agent-facing architecture and live routing can never drift. Adding a model = ONE registry row, no code edit. Call this to answer 'what models exist / what is the ladder / did my new model load'. STDIO, live via fleet API, 10s bound.",
+        inputSchema: { type: "object", properties: {}, required: [] },
+    },
 ];
 // ─── Server ─────────────────────────────────────────────────────────────
 const server = new Server({ name: "project-frankenstein-mcp", version: "0.1.0" }, { capabilities: { tools: {} } });
@@ -283,6 +300,20 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
         }
         else if (name === "frankenstein_tooling") {
             out = TOOLING_FACTS;
+        }
+        else if (name === "frankenstein_registry") {
+            const res = await fleetApi("registry");
+            if (res.ok) {
+                out = res.data;
+            }
+            else {
+                out = {
+                    error: "fleet_api_unreachable",
+                    msg: res.error,
+                    note: "Could not reach the fleet API for the registry. The single source of truth lives at /etc/litellm/frankenstein_registry.yaml and the router's derived state at /tmp/emsu_router_registry_state.json on WOPR. Adding a model = one registry row + emsu-safe-litellm-restart.sh. Verify with: python3 /etc/litellm/frankenstein_registry.py --check",
+                    _fetched_at: new Date().toISOString(),
+                };
+            }
         }
         else {
             out = { error: "unknown_tool", name };

@@ -63,6 +63,11 @@ HARDFLOOR_SLUGS=(
     "119-mandatory-context-compress"
     "120-context-is-not-an-excuse"
     "135-student-lifecycle-service-sls"
+    "137-build-task-convergence-gate"
+    "140-verify-llm-routing-from-live-headers-not-files"
+    "141-frankenstein-mcp-verification-gate"
+    "142-no-dead-end-llm-entrypoints"
+    "143-prose-loop-circuit-breaker"
 )
 
 # ─── G5 hardfloor (runs first; immediate block) ──────────────────────────

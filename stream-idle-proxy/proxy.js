@@ -40,6 +40,11 @@ const UPSTREAM_HOST = process.env.UPSTREAM_HOST || '127.0.0.1';
 const UPSTREAM_PORT = parseInt(process.env.UPSTREAM_PORT || '4000', 10);
 const IDLE_MS       = parseInt(process.env.IDLE_MS       || '20000', 10);
 const CONNECT_MS    = parseInt(process.env.CONNECT_MS    || '15000', 10);
+// CAPTURE mode (debug): when CAPTURE=1, append each request's model + full
+// response body (de-SSE'd) to CAPTURE_FILE as JSONL. Off by default = no behavior change.
+const CAPTURE       = process.env.CAPTURE === '1';
+const CAPTURE_FILE  = process.env.CAPTURE_FILE || '/tmp/frank_capture.jsonl';
+const fs = require('fs');
 
 function log(...a) { console.log(new Date().toISOString(), ...a); }
 
@@ -48,6 +53,10 @@ const server = http.createServer((creq, cres) => {
   let idleTimer = null;
   let headersSent = false;
   let done = false;
+  let reqBody = '';
+  let respBody = '';
+  if (CAPTURE) { creq.on('data', (c) => { if (reqBody.length < 200000) reqBody += c.toString(); }); }
+
 
   const opts = {
     host: UPSTREAM_HOST,
@@ -99,10 +108,38 @@ const server = http.createServer((creq, cres) => {
 
     ures.on('data', (chunk) => {
       armIdle();              // reset on EVERY chunk — this is the whole mechanism
+      if (CAPTURE && respBody.length < 400000) respBody += chunk.toString();
       const ok = cres.write(chunk);
       if (!ok) { ures.pause(); cres.once('drain', () => ures.resume()); }
     });
-    ures.on('end',   () => { finish(); try { cres.end(); } catch (e) {} });
+    ures.on('end',   () => {
+      finish();
+      try { cres.end(); } catch (e) {}
+      if (CAPTURE) {
+        try {
+          let model = null, stop = null, hasTool = null, ctypes = null;
+          try { const rb = JSON.parse(reqBody); model = rb.model; } catch (e) {}
+          // de-SSE: pull the last data: line(s) and look for stop_reason / tool_use
+          const toolUse = /"type"\s*:\s*"tool_use"/.test(respBody) || /<(use_mcp_tool|execute_command|read_file|write_to_file|replace_in_file|attempt_completion|list_files|search_files|use_subagents)>/.test(respBody);
+          const sr = respBody.match(/"stop_reason"\s*:\s*"([^"]+)"/);
+          stop = sr ? sr[1] : null;
+          hasTool = toolUse;
+          const rec = {
+            t: new Date().toISOString(),
+            url: creq.url,
+            status: ures.statusCode,
+            req_model: model,
+            req_bytes: reqBody.length,
+            resp_bytes: respBody.length,
+            stop_reason: stop,
+            has_tool_call: hasTool,
+            resp_tail: respBody.slice(-1200),
+          };
+          fs.appendFileSync(CAPTURE_FILE, JSON.stringify(rec) + '\n');
+        } catch (e) {}
+      }
+    });
+
     ures.on('error', (e) => abort('upstream-stream-error:' + (e && e.code)));
   });
 

@@ -152,7 +152,35 @@ Ask: *"If I paste my completion message into a fresh Cline window right now, can
 
 If no, the pickup prompt isn't ready. Rewrite.
 
+## Surface idea #s in the completion BODY, not just the pickup prompt (added 2026-06-09)
+
+Source: 2026-06-09 Ruben directive — *"now you're not showing me ideas # like you used to, and you're not showing me idea #s really at all anymore... harden the cline rules to make sure you are doing that."*
+
+The idea-number mandate in the "Open threads" section only requires `#NNNN` inside the pickup-prompt block. But Ruben reads the **completion body** (the prose summary above the `═══` divider) — that's where he scans for what happened. If every idea I filed/approved/rejected this task is only cited deep in the pickup prompt, he can't see them at a glance. Both surfaces must carry them.
+
+**The rule: every `attempt_completion` that filed, approved, rejected, or acted on any `orchestrator_ideas` row MUST cite each idea by `#NNNN` in the completion BODY (the prose Ruben reads), with a one-line status.** Not only in the pickup prompt. Not "I filed a couple ideas" — the actual numbers.
+
+### Required shape — an "Ideas this task" line/block in the body
+
+Near the end of the completion prose (before the `═══` pickup divider), include an explicit, scannable list:
+
+```
+Ideas this task: #11304 (filed+approved — naming convention), #11295 (filed+approved — anti-revert block), #11294 (rejected — premise disproven), #11287 (record — wrong framing).
+```
+
+- ALWAYS include the `#` and the number. Never "an idea," "a P2," "a follow-up" without the number.
+- ALWAYS include the disposition: filed / approved / rejected / shipped / record / superseded.
+- If zero ideas were touched this task, say so explicitly: "Ideas this task: none." (so Ruben knows it wasn't an omission).
+- This is IN ADDITION to the pickup-prompt "Reference IDs" + per-open-thread `#NNNN` (which stay required).
+
+### Self-check before any attempt_completion
+
+Ask: *"Did I file/approve/reject/act on any idea this task? If yes, are all their #NNNN visible in the BODY Ruben reads, each with a disposition?"* If any idea number is only in the pickup prompt (or worse, not cited at all), the completion is not ready — add the "Ideas this task:" line to the body.
+
+This composes with rule 38 (Ruben-asked = autonomous/approved tier): when I bump an idea to approved per 38, that approval + its `#NNNN` is exactly the thing Ruben needs to see in the body.
+
 ## Source incident
+
 
 2026-05-19 — End of cline_calderon_2nd_externship_recovery_2026_05_17 chain (after ~3 rounds of Ruben follow-up directives). Ruben asked: *"in every single task completed window need a pickup prompt to continue that task in a new window. Give a pickup prompt to continue this task in a new window."*
 

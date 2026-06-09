@@ -61,8 +61,61 @@ const CORE_PRINCIPLES = [
     "4. GRACEFUL DEGRADATION (no dead-ends, rule 142). Every entrypoint has a static fallback baked in. A bad/new/missing piece (registry row, down Spark, cold pod) NEVER bricks serving — it degrades down the spill ladder to the next healthy tier, terminating at claude-sonnet.",
     "5. ADD A MODEL = ONE REGISTRY ROW. The spill ladder, tiers, endpoints, and per-model context all DERIVE from /etc/litellm/frankenstein_registry.yaml. Adding/changing a model is one declarative row, no code edit. router_hook.py + this MCP + the fleet API all read the SAME registry, so architecture and live routing can never drift.",
 ];
+// NOT_A_TRADITIONAL_ROUTER — the anti-revert block (idea #11302, 2026-06-09).
+// A fresh Cline window defaults to the "pick one model per request by context size"
+// mental model and (a) wastes tokens re-deriving it wrong, (b) reverts Ruben's
+// improvements back to the traditional design. This block is served FIRST so any
+// agent reasoning about Frankenstein starts from the correct model. Verified live
+// 2026-06-09 (rules 140/141) against llm_call_log + header probes.
+const NOT_A_TRADITIONAL_ROUTER = {
+    headline: "Frankenstein is NOT a traditional router. Do not reason about it as 'pick one model per request by context size'. It is a DECOMPOSE → DISTILL → SERVE-LOCAL → REASSEMBLE engine.",
+    what_it_is: [
+        "The router/executor holds the FULL conversation context (verified: a 1,038,433-token input was served at $0).",
+        "A RAG/distill pass (lib/EmsuRagInjector.php, idea #6711/#6719) extracts only the relevant slice (~5K chars) per sub-request.",
+        "That distilled slice is served on a FREE LOCAL model (frankenstein-llm → 120B body via the :11510 tools adapter), so window size is IRRELEVANT to cost.",
+        "Head/body/stitches: the paid frontier (Sonnet/Opus) only ever generates the genuinely-hard SPAN, never the whole response.",
+    ],
+    why_window_size_does_not_matter: "served_ctx (cesar=8192, cato=16384) is NOT the binding constraint, because distillation runs UPSTREAM of the model — the model never sees the raw 1M tokens. A 300K/400K/1M conversation is distilled to a small slice before it ever hits a local model. 'It can't fit 300K so it must go to cloud' is the TRADITIONAL-ROUTER fallacy and is WRONG here.",
+    interactive_cline_routing: "Interactive Cline (the VS Code client) rides the LiteLLM OpenAI path → frankenstein-llm → local 120B (distilled), NOT the Anthropic passthrough. It is NOT pinned to Claude. Verified live: last-3h llm_call_log shows big-window interactive traffic on executor/frankenstein-llm at $0, zero cline_passthrough rows.",
+    proven_dead_ends_do_not_resurrect: [
+        "Do NOT propose 'serve a local big-context model so oversize fits' — distillation already makes window size moot.",
+        "Do NOT propose 'route oversize to cloud DeepSeek/Claude because no local model fits' — that is the traditional-router revert.",
+        "Do NOT claim 'the decompose engine isn't built' — it IS (RubenExecutor.php + EmsuRagInjector.php), running 20K+ calls/4d at $0.",
+        "Do NOT claim 'DeepSeek emits raw DSML Cline can't parse' — DISPROVEN live: deepseek-v4-pro via LiteLLM OpenAI path returns clean OpenAI tool_calls.",
+        "Do NOT do whole-response draft→frontier-refine (measured +27% cost on Opus).",
+    ],
+    verify_before_you_revert: "Before recommending ANY routing change, run: (1) SELECT surface,model,COUNT(DISTINCT request_id),MAX(input_tokens),SUM(cost_usd) FROM llm_call_log WHERE ts>NOW()-INTERVAL 3 HOUR GROUP BY surface,model; (2) a rule-140 header probe (curl -D - .../v1/chat/completions with the real model id). Config files are HYPOTHESES; the call log + headers are truth.",
+    source: "Verified 2026-06-09 by Cline after Ruben corrected 4 successive traditional-router answers. llm_call_log evidence + rule-140 probes. lib/RubenExecutor.php, lib/EmsuRagInjector.php.",
+};
+// CANONICAL_NAMING — the 5-name vocabulary (idea #11296, Ruben directive 2026-06-09).
+// Three different things have "Frankenstein" in the name; Executor/Orchestrator/Cline
+// are SIBLING CLIENTS, not a stack. Saying "Frankenstein LLM" as an umbrella for all of
+// it is what costs tokens (a fresh window re-derives the boundaries wrong every time).
+// Resolve every Frankenstein/Executor/Orchestrator/Cline reference through THIS map.
+const CANONICAL_NAMING = {
+    rule: "There is ONE router (Frankenstein). Executor, Orchestrator, and Cline are CLIENTS that send their LLM calls THROUGH Frankenstein. They are siblings, not nested. 'Point Cline at Executor' is a category error.",
+    names: {
+        "Frankenstein": "The routing + distill + serving brain. = LiteLLM /etc/litellm/router_hook.py + /etc/litellm/frankenstein_registry.yaml + lib/EmsuRagInjector.php (distill) + the WHOLE model fleet. The entrypoint model id 'frankenstein-llm' rides the spill ladder across ALL models by health: 7B → 14B → 32B → 70B → 120B (Cesar/Cato) → RunPod pod → DeepSeek (cloud) → Sonnet → Opus. NOT just the 120B — that's only the most common landing tier.",
+        "Frankenstein MCP": "The READ-ONLY docs + verify tool (this project-frankenstein MCP server). Describes the system + runs rule-140 header probes. Does NOT route, run, or serve anything. NOT an umbrella name for the system.",
+        "the Executor": "lib/RubenExecutor.php — the autonomous plan-execution agent (generatePlan/executePlan/replan-shrink/self-heal). Runs approved ideas, deploys, fixes. A CLIENT of Frankenstein (surface=executor → frankenstein-llm, $0 local).",
+        "the Orchestrator": "The event/decision/idea triage brain (orchestrator_api.php + triage crons + orchestrator_event_log + ruben-orchestrator MCP). Decides WHAT to do, files ideas, makes decisions. A CLIENT of Frankenstein (surface=ruben_orchestrator). Distinct class from RubenExecutor.",
+        "Cline": "The interactive VS Code coding agent + .clinerules. A CLIENT of Frankenstein (OpenAI path → frankenstein-llm → local). Not pinned to Claude.",
+    },
+    umbrella_term: "'Project Frankenstein' = the WHOLE stack (the Frankenstein router + the model fleet + the three client agents Executor/Orchestrator/Cline + the Frankenstein MCP). This is the canonical umbrella name (Ruben directive 2026-06-09). Use 'Project Frankenstein' when you mean all of it; use a specific name below for a single layer. ('the Frankenstein stack' is an accepted synonym.)",
+    how_ruben_directs_updates: {
+        "update Project Frankenstein": "the whole stack — look across ALL layers below.",
+        "update Frankenstein": "router/serving/distill layer: router_hook.py, the registry, model serving, the spill ladder, EmsuRagInjector.",
+        "update the Frankenstein MCP": "this docs/verify tool (src/index.ts → npx tsc → needs Cline restart).",
+        "update the Executor": "lib/RubenExecutor.php.",
+        "update the Orchestrator": "orchestrator triage/decision code.",
+        "update Cline": "VS Code agent config + .clinerules.",
+    },
+    source: "Ruben naming directive 2026-06-09. Verified live: Executor (RubenExecutor.php) and Orchestrator (orchestrator_api.php) are distinct classes, both clients of LiteLLM. Cross-ref .clinerules/135 (SLS naming precedent: a name only sticks where it is written into a read-at-runtime surface).",
+};
 const ARCHITECTURE_SUMMARY = {
     name: "Project Frankenstein — Head/Body/Stitches LLM Architecture",
+    NOT_A_TRADITIONAL_ROUTER,
+    CANONICAL_NAMING,
     CORE_PRINCIPLES,
     source_doc: "/var/www/emtskills/docs/PROJECT_FRANKENSTEIN.md",
     registry: "/etc/litellm/frankenstein_registry.yaml (single source of truth — call frankenstein_registry tool for live state)",

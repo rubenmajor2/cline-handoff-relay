@@ -304,7 +304,27 @@ const TOOLS = [
       "THE SINGLE SOURCE OF TRUTH for the spill ladder (idea #11261). Returns the live model registry (/etc/litellm/frankenstein_registry.yaml) AND the router's ACTUAL derived state (/tmp/emsu_router_registry_state.json — what router_hook.py loaded at last restart): tier_to_model, model_endpoint, tier_fallthrough, _120b_members, served_ctx, role_targets, plus the registry source (registry:... = live, static_fallback:... = the yaml failed and hardcoded defaults are in effect). router_hook.py + this MCP + the fleet API all read the SAME registry, so agent-facing architecture and live routing can never drift. Adding a model = ONE registry row, no code edit. Call this to answer 'what models exist / what is the ladder / did my new model load'. STDIO, live via fleet API, 10s bound.",
     inputSchema: { type: "object", properties: {}, required: [] },
   },
+  {
+    name: "frankenstein_what_served",
+    description:
+      "BACKEND SELF-REPORT (idea #11316): answers 'what backends did THIS window actually route to?'. Because frankenstein-llm routing happens server-side AFTER dispatch, the model itself cannot self-introspect — this tool reads the router audit log (which the pre-call hook writes synchronously with a stable conversation_id + the routed `picked` backend on every turn) and returns DISTINCT served backends + per-backend turn counts + cost. Pass a conversation_id (from the audit log / your window) OR a minutes window. Use this at the END of a task to print e.g. 'This iteration routed to: cato-120b (8 turns, $0), deepseek-v4-pro (1 turn, $0.01)'. Local backends are $0. Cross-refs: rule 140 (live-verified), rule 141, rule 137. STDIO, live via fleet API, 10s bound.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        conversation_id: {
+          type: "string",
+          description: "The window's conversation id (e.g. 'conv_2da05b1835568296') as stamped in /tmp/emsu_router_audit.log. Omit to use a time window instead.",
+        },
+        minutes: {
+          type: "string",
+          description: "Look back this many minutes instead of (or in addition to) a conversation_id. Default 30 when no conversation_id is given.",
+        },
+      },
+      required: [],
+    },
+  },
 ];
+
 
 
 // ─── Server ─────────────────────────────────────────────────────────────
@@ -377,7 +397,27 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
       }
     } else if (name === "frankenstein_tooling") {
       out = TOOLING_FACTS;
+    } else if (name === "frankenstein_what_served") {
+      // Window C #11316: backend self-report. Reads the router audit log via the
+      // fleet API's what_served action (conversation_id + picked, written
+      // synchronously by the pre-call hook). Returns distinct backends + turn
+      // counts + cost; local backends are $0.
+      const params: Record<string, string> = {};
+      if (args.conversation_id) params.conversation_id = args.conversation_id;
+      if (args.minutes) params.minutes = args.minutes;
+      const res = await fleetApi("what_served", params);
+      if (res.ok) {
+        out = res.data;
+      } else {
+        out = {
+          error: "fleet_api_unreachable",
+          msg: res.error,
+          note: "Could not reach the fleet API for what_served. Fallback (rule 140): on WOPR run `php /var/www/emtskills/lib/frankenstein_what_served.php --conversation_id=<conv_id>` or `--minutes=30`. Source of truth is /tmp/emsu_router_audit.log (conversation_id + picked).",
+          _fetched_at: new Date().toISOString(),
+        };
+      }
     } else if (name === "frankenstein_registry") {
+
       const res = await fleetApi("registry");
       if (res.ok) {
         out = res.data;

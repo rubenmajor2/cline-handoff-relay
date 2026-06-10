@@ -428,6 +428,17 @@ process.on("uncaughtException", (e) => {
 process.on("unhandledRejection", (e) => {
     console.error(`[project-frankenstein-mcp] unhandledRejection (swallowed): ${e?.message || e}`);
 });
+// Startup self-cleanup: kill zombie processes from old Cline windows
+(function killZombies() {
+    try {
+        const { execSync } = require("node:child_process");
+        const myPid = process.pid;
+        const result = execSync(`ps aux | grep "project-frankenstein-mcp/build/index.js" | grep -v grep | awk '{print $2}'`, { encoding: "utf8", stdio: ["pipe", "pipe", "ignore"] });
+        const pids = result.trim().split("\n").map(Number).filter(p => p && p !== myPid);
+        for (const pid of pids) { try { process.kill(pid, "SIGTERM"); } catch {} }
+        if (pids.length > 0) { console.error(`[project-frankenstein-mcp] startup cleanup: killed ${pids.length} zombie(s): ${pids.join(", ")}`); }
+    } catch {}
+})();
 const transport = new StdioServerTransport();
 await server.connect(transport);
 console.error("[project-frankenstein-mcp] v0.1.0 connected over stdio (architecture static, tier-health/pod-status/verify-routing/autoscaler live via fleet API, 10s bound)");

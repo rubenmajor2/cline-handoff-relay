@@ -349,6 +349,32 @@ process.on("unhandledRejection", (e: unknown) => {
   console.error(`[fleet-state-stdio] unhandledRejection (swallowed): ${(e as Error)?.message || e}`);
 });
 
+// ── Startup self-cleanup (Issue #4 fix) ────────────────────────────────────
+// Cline spawns a new stdio.js per window but doesn't kill old ones when windows
+// close. With many competing processes, tool calls stall. On boot, kill any
+// OTHER stdio.js processes (same script path, different PID) to prevent accumulation.
+// This is safe: each Cline window gets its own fresh process; old ones are zombies.
+(function killZombieStdioProcesses() {
+  try {
+    const { execSync } = require("node:child_process");
+    const myPid = process.pid;
+    // Find other node processes running this same script
+    const result: string = execSync(
+      `ps aux | grep "fleet-state-mcp/build/stdio.js" | grep -v grep | awk '{print $2}'`,
+      { encoding: "utf8", stdio: ["pipe", "pipe", "ignore"] }
+    );
+    const pids = result.trim().split("\n").map(Number).filter((p: number) => p && p !== myPid);
+    for (const pid of pids) {
+      try { process.kill(pid, "SIGTERM"); } catch {}
+    }
+    if (pids.length > 0) {
+      console.error(`[fleet-state-stdio] startup cleanup: killed ${pids.length} zombie stdio.js process(es): ${pids.join(", ")}`);
+    }
+  } catch {
+    // Non-fatal — if cleanup fails, we still serve normally
+  }
+})();
+
 // On boot, if the snapshot looks cold, kick one self-heal (off the hot path).
 maybeSelfHeal();
 

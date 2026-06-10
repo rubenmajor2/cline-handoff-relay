@@ -184,6 +184,25 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   };
 });
 
+// ─── Startup self-cleanup (zombie process prevention) ─────────────────────────
+// Cline spawns a new process per window but doesn't kill old ones when windows
+// close. Kill any OTHER delegate-70b-mcp/index.js processes on boot.
+(function killZombies() {
+  try {
+    const { execSync } = require("node:child_process");
+    const myPid = process.pid;
+    const result = execSync(
+      `ps aux | grep "delegate-70b-mcp/index.js" | grep -v grep | awk '{print $2}'`,
+      { encoding: "utf8", stdio: ["pipe", "pipe", "ignore"] }
+    );
+    const pids = result.trim().split("\n").map(Number).filter(p => p && p !== myPid);
+    for (const pid of pids) { try { process.kill(pid, "SIGTERM"); } catch {} }
+    if (pids.length > 0) {
+      process.stderr.write(`[delegate-70b] startup cleanup: killed ${pids.length} zombie(s): ${pids.join(", ")}\n`);
+    }
+  } catch {}
+})();
+
 // ─── Start ─────────────────────────────────────────────────────────────────────
 const transport = new StdioServerTransport();
 await server.connect(transport);

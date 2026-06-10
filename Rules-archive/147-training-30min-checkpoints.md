@@ -26,7 +26,32 @@ save_steps ≈ floor( (30 * 60) / seconds_per_step )
 
 In TRL `SFTConfig`: `save_strategy="steps", save_steps=<N>, save_total_limit=4` (keep a few, don't fill the disk). Make `save_steps` overridable via an env var (`SAVE_STEPS`) so it can be tuned without editing the trainer.
 
+## CRITICAL (2026-06-09 #2): on a RECLAIMABLE spot pod, checkpoints on the pod disk DIE with the pod — you MUST pull them OFF continuously
+
+The 30-min `save_steps` cadence only protects you if the checkpoints SURVIVE the failure. On a RunPod **spot/secure pod that gets reclaimed, the disk is destroyed** — every `checkpoint-*` dir on `/workspace` is gone. A "pull the final adapter when ADAPTER_COMPLETE appears" watcher (the common pattern) saves NOTHING on a mid-run reclaim, because the final adapter never gets written.
+
+**Therefore, for any reclaimable pod, the durable-pull watcher MUST rsync the intermediate `checkpoint-*` dirs to WOPR as they are written — NOT just the final adapter.** The watcher loop must, every cycle:
+
+```bash
+# pull any NEW/updated checkpoint dirs off the pod (not just the final adapter)
+rsync -az -e "ssh -i $KEY -p $POD_PORT $SSHO" \
+  root@$POD_IP:/workspace/lora_120b_distill/checkpoint-*/ \
+  "$DEST/" 2>>"$LOG"
+```
+
+so that when the pod dies at step 54, WOPR already holds checkpoint-N and the re-mint resumes from it (restore the pulled checkpoints into the new pod's OUT dir, then `resume_from_checkpoint`). A final-adapter-only watcher is a rule-147 violation on a spot pod.
+
+### The first-checkpoint-before-the-reclaim-window trap (this actually bit us)
+
+2026-06-09: an H200 distill pod was reclaimed at **step 54**, and the first checkpoint was scheduled at **step 60**. Result: ZERO checkpoints existed, the whole run was lost, even though save_steps=60 was "≤30 min." The lesson: **the FIRST checkpoint must land EARLY (well before the first realistic reclaim), not at a full 30-min interval.** Set the first save early:
+
+- Use a small `save_steps` for the first checkpoint (e.g. save_steps=25-40 on a 120B so the first one lands in ~10-15 min), OR
+- Set `save_steps` low enough that even step-50ish is covered. Losing 15 min of redundant saves is cheap; losing the whole run because the first checkpoint was 6 minutes away is not.
+
+A reclaim can happen at ANY time, including minute 5. The cadence must assume the worst, not the average.
+
 ## Resume is mandatory, not optional
+
 
 The trainer MUST detect existing checkpoints and resume:
 

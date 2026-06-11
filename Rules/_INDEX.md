@@ -46,7 +46,7 @@ If after this order it's still ambiguous, that's a genuine rule defect: act on t
 | 140 ★ | verify-llm-routing-from-live-headers | Prove routing with a live header probe, never from file-reads |
 | 141 ★ | frankenstein-mcp-verification-gate | Call the project-frankenstein MCP before answering Frankenstein/LLM-routing |
 | 142 ★ | no-dead-end-llm-entrypoints | An entrypoint with a long timeout + no fallback is un-deployable |
-| 143 ★ | prose-loop-circuit-breaker | After 2 no-tool-use errors, the ONLY legal move is attempt_completion |
+| 143 ★ | prose-loop-circuit-breaker | v2: recover at strikes 1-3 (consecutive only, resets on success); bail to attempt_completion at 4 |
 
 ## Archive — common topic shortcuts
 

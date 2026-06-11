@@ -31,7 +31,7 @@ For mid-task turns: the tool block stands on its own, or one short sentence + to
 
 If a turn emits prose without a tool block, Cline injects `[ERROR] You did not use a tool!`. Next turn same shape = same error. 3rd no-tool-use strike = YOLO. Observed 3+ fresh tasks die this way on 2026-05-19. The fix: stop describing the action and emit it.
 
-**If you've already hit 2 "did not use a tool" errors in this task, STOP trying to emit a tool — call `attempt_completion` per rule 143.** The spiral where rules 00/41/99 say "emit a tool" and the model keeps failing is the exact failure mode rule 143's hard stop breaks.
+**If you're in a streak of CONSECUTIVE "did not use a tool" errors, follow rule 143 v2: recover with a (simpler) tool emission at strikes 1-3; only at 4 consecutive strikes is `attempt_completion` the mandated exit.** Any successful tool call resets the streak. The spiral where rules 00/41/99 say "emit a tool" and the model keeps failing is the failure mode rule 143's calibrated stop breaks.
 
 ### Banned phrases
 

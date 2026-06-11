@@ -8,7 +8,7 @@ This file is the fail-safe TOC for the hardfloor rules + how to query the rest.
 
 Conflicts among these rules are almost always *complementary* (one is the escape-hatch for the other), not contradictory. When two directives appear to clash, resolve in this fixed order:
 
-1. **Rule 143 (prose-loop circuit breaker) overrides everything.** If you have hit 2 "you did not use a tool" errors, or 2 MCP calls returned empty, the ONLY legal next move is `attempt_completion` — even if 00/41/99 say "emit a tool." 143 is the unconditional exit.
+1. **Rule 143 (prose-loop circuit breaker, v2) overrides everything — at its calibrated threshold.** Count only CONSECUTIVE "you did not use a tool" errors (any successful tool call resets the streak; API hiccups don't count). Strikes 1-3 = recover by emitting a (simpler) tool. At 4 consecutive strikes (or 3 empty MCP results in a row from the same server), the ONLY legal next move is `attempt_completion`. 143 is the exit when recovery keeps failing, not a 2-strike bail.
 2. **Lower-numbered hardfloor wins** when two hardfloor rules give conflicting *defaults* (e.g. a 29 "act" default vs a more specific later rule's gate). The lower number is the more foundational floor.
 3. **A more specific rule beats a general one** for the case it explicitly names (e.g. 42 "safe_deploy already reloads FPM" beats a general "reload after deploy" instinct).
 4. **Hardfloor (this dir) always beats archive.** If an archived rule contradicts a hardfloor rule, the hardfloor rule wins; the archived one is stale — flag it.

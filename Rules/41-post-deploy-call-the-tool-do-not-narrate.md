@@ -82,7 +82,7 @@ trip database.
   it as a tool, don't write "I'll reload FPM" as prose)
 - Rule 99 — generic no-tool-use playbook (this rule is the post-deploy
   specialization)
-- Rule 143 — prose-loop circuit breaker. **If you have already hit 2 "did not use a tool" errors in this task, STOP trying to emit the tool — your NEXT response MUST be `attempt_completion` per rule 143.** This rule (41) tells you to emit a tool; rule 143 is the exit when emitting a tool keeps failing. They are not in conflict: 41 prevents the loop, 143 escapes it.
+- Rule 143 — prose-loop circuit breaker (v2). **Streaks of CONSECUTIVE "did not use a tool" errors: recover with a (simpler) tool emission at strikes 1-3; only at 4 consecutive strikes is `attempt_completion` mandated. Any successful tool call resets the streak.** This rule (41) tells you HOW to recover; rule 143 is the exit when recovery keeps failing. They are not in conflict: 41 prevents the loop, 143 escapes it.
 
 ## Self-check before any "Deployed."-prefixed close
 
@@ -269,7 +269,7 @@ Before composing the next turn, ask:
 
 1. *"Will the next turn I emit contain a tool_use block?"* If no, STOP and rewrite.
 2. *"Is my next tool call the SAME shape as the one that just failed?"* If yes, STOP and change tools per the table above. Two of the same failure in a row is the death-spiral entry.
-3. *"Have I already had 2 errors this task?"* If yes, next turn MUST be `attempt_completion`. The 3rd strike is YOLO; don't roll the dice on a 3rd retry.
+3. *"What is my CONSECUTIVE error streak right now?"* (resets on any successful tool call). At 2+, my next call must be a DIFFERENT, simpler tool per the table above. At 4 consecutive, next turn MUST be `attempt_completion` per rule 143 v2. `maxConsecutiveMistakes` is 10, so there is recovery room — use it with pivots, not blind retries.
 
 ### Forbidden first-words after a tool error (extended from the timeout list)
 

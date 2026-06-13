@@ -146,13 +146,25 @@ the office WAN IP. Good for the case where you want browser access without stand
 |---|---|
 | WOPR public IP | 76.167.100.188 (DNS: 76.176.157.123) |
 | WOPR WG hub | 10.100.0.1 : 51820/udp |
-| Office UDM | EMSU Phoenix (UDM SE), https://192.168.1.1, gateway 192.168.1.1 |
+| Tempe office UDM | EMSU Phoenix (UDM SE), gateway 192.168.0.1 (client LAN), UDM SE admin at 192.168.1.1 |
+| Tempe WAN IP | 68.227.47.137 (Cox Business) |
 | UDM Super Admin | rmajor@emsuniversity.com / qefru3-cocnyf-xuxnoP (MFA: Apple passkey OR email OTP via Postmark) |
 | UDM cloud OWNER | rubenmajor185@gmail.com (third party — installer; not Ruben) |
+| Tempe LAN (post-UDM-swap 2026-06-06) | 192.168.0.0/24, gateway 192.168.0.1 |
+| Artemis (GPU box) Tempe LAN IP | **192.168.0.125** (new, moved from .208 after reboot 2026-06-11) |
+| Artemis WG IP | 10.100.0.5 |
+| Artemis reverse SSH tunnel to WOPR | **WOPR:2225** (moved from :2223 on 2026-06-13; :2223 reserved for SMS Mac) |
+| SMS Mac (M1 2021) Tempe LAN IP | **192.168.0.72** (new DHCP after reboot 2026-06-13, unconfirmed — only SSH host on scan) |
+| SMS Mac WOPR reverse SSH tunnel | **WOPR:2223** (plist: com.emsu.smsmac-remote-access-tunnel; NOT running — Mac at login screen, LaunchAgent blocked) |
+| SMS Mac WOPR Ollama tunnel | **WOPR:11455** (DOWN — same plist, not running) |
+| SMS Mac plist TODO | Update /Users/rubenmajor/Library/LaunchAgents/com.emsu.smsmac-remote-access-tunnel.plist: change :2223→:2201 to match SSH config. Needs physical login. |
+| M4 Mac (2024) reverse SSH tunnel | **WOPR:2224** (actual, plist correct; SSH config updated :2202→:2224 on 2026-06-13) |
+| M4 Mac location | Home network (WAN 72.217.67.108), NOT Tempe LAN |
+| WOPR authorized_keys SMS Mac | permitlisten :11455, :2201 (added), :2223, :5901 |
 | Last office WAN IP (blocked then whitelisted) | **72.196.171.155** (2026-06-06, after UDM swap) |
-| Office machines on WG | M1 2021, M4 2024, M5 2026, Cesar, Cato (onboard pending) |
 | Imunify360 | on WOPR (Plesk). `imunify360-agent whitelist ip add <ip>` |
 | UniFi OTP email subject | "MFA Login Authentication" |
+| UDM Cloud API siteId (Tempe) | 6a1b163ada9f7b6748c961e1 |
 
 ---
 

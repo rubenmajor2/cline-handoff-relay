@@ -133,7 +133,7 @@ const ROUTES_EVERY_LLM = {
     "Local Ollama small/mid: 7B-lora, 14B, 32B, qwen2.5/qwen3 coders 14B/30B/32B, gpt-oss-20B.",
     "70B fleet: sms-70b (ollama-llama3.3-70b), Joshua-70B (10.100.0.4), Artemis-70B q4/q5 (10.100.0.5).",
     "3× 120B: Cesar :11506, Cato :11507, Artemis-120B (10.100.0.5 gpt-oss:120b).",
-    "405B: frankenstein-405b = Augustus+Tiberius TP=2 over CX7 200GbE, :11512.",
+    "405B: frankenstein-405b = Augustus+Tiberius TP=2 over CX7 200GbE, :11512. ⚠️ TEACHER-ONLY — see FOUR_OH_FIVE_B_TEACHER_GUARD below. It is NOT on the interactive/executor spill ladder.",
     "RunPod pods: frank-serve-pod-120b, lora-120b-ckpt420.",
     "Cloud open-weight: DeepSeek-v4-pro/flash.",
     "Paid heads: claude-sonnet, claude-opus-real, claude-fable-5.",
@@ -146,9 +146,36 @@ const ROUTES_EVERY_LLM = {
   source: "Ruben directive 2026-06-12, ~20th restatement. Hardened into .clinerules/146 + PROJECT_FRANKENSTEIN.md top block + this MCP struct so it is never re-derived wrong.",
 };
 
+// FOUR_OH_FIVE_B_TEACHER_GUARD — Ruben directive 2026-06-13. A window (idea #12060)
+// tried to route executor PLANNER load to frankenstein-405b to escape a saturated 120B
+// pool. Ruben STOPPED it: the 405B is precision infrastructure with its own runbook that
+// MUST be consulted before any change to how it operates. The 405B is a TEACHER, not an
+// interactive/executor server. This block is the durable guard so no future window
+// repeats the mistake. Cross-ref .clinerules/147, 405B_WINDOW_4_teacher_explained.md,
+// 405B_CHECKPOINT.md, auto405.sh, 405B_RECOVERY_RESEARCH_2026-06-13.md.
+const FOUR_OH_FIVE_B_TEACHER_GUARD = {
+  headline: "The 405B (frankenstein-405b = Augustus 192.168.1.244 + Tiberius 192.168.1.32, TP=2 Ray, :11512) is a DISTILLATION TEACHER / quality-ceiling tier. It is NOT a daily-driver, NOT an interactive server, and NOT a spill-ladder target for Cline/Executor/Orchestrator traffic.",
+  why_teacher_only: [
+    "Served with `--max-num-seqs 1` — it handles exactly ONE request at a time. Pointing concurrent interactive/executor load at it (e.g. 240+ executor workers) WEDGES it instantly.",
+    "Served with `--max-model-len 1024` (ladder falls to 256 under memory pressure). It physically cannot accept a 24k-max_tokens planner request — the request errors / returns empty.",
+    "AWQ-INT4 (~102GB/box) on 128GB Sparks with util 0.90, enforce-eager, swap-space 1-4. It is memory-fragile by design (the NVFP4 110GB artifact was PROVEN unservable — do not retry it).",
+    "Doc verbatim (405B_WINDOW_4_teacher_explained.md): 'The 405B's job is NOT to answer your day-to-day prompts (too slow). Its job is to be the quality ceiling that pulls your fast models UP. You run it occasionally, in batch.' / 'The 405B is your TEACHER, not your daily driver. 120Bs = fast interactive workers. 405B = slow teacher.'",
+  ],
+  intended_uses_only: [
+    "1. DISTILLATION TEACHER (main use): batch-generate high-quality training data to fine-tune the fast 7B/14B/32B/70B/120B models UP.",
+    "2. HARD OFFLINE BATCH: occasional one-off hard problems where 30+ seconds latency is acceptable.",
+    "3. QUALITY ARBITER / JUDGE: score/rank the smaller models' outputs offline.",
+  ],
+  mandatory_before_any_change: "ANY change to how the 405B receives traffic, its serve flags, its quant, or its role REQUIRES reading the canonical runbook FIRST (it is precision infrastructure that relies on exact documented config). Canonical docs: 405B_WINDOW_4_teacher_explained.md (role), 405B_CHECKPOINT.md (FINAL VERIFIED CONFIG — AWQ-INT4, the proven serve args), auto405.sh (the authoritative serve command), 405B_RECOVERY_RESEARCH_2026-06-13.md (idea #11735 FINAL VERIFIED CONFIG + NVFP4-is-unservable post-mortem). Never change 405B operation from a config-read or an assumption.",
+  the_405b_serve_args_verbatim: "vllm serve /models/llama405b-awq --tensor-parallel-size 2 --max-model-len 1024 --gpu-memory-utilization 0.90 --enforce-eager --max-num-batched-tokens 1024 --max-num-seqs 1 --swap-space 1 --served-model-name llama405b --enable-auto-tool-choice --tool-call-parser llama3_json --host 0.0.0.0 --port 8000 --distributed-executor-backend ray (image nvcr.io/nvidia/vllm:25.09-py3, vLLM 0.10.1.1, BOTH containers --memory=100g, RAY_memory_monitor_refresh_ms=0).",
+  if_a_120b_pool_is_saturated: "The fix for a saturated interactive/executor 120B pool is the SATURATION-AWARE ROUTING + PER-BOX ADMISSION CAP (idea #12059, Window A), NOT borrowing the teacher. The army marches by spilling across the FREE INTERACTIVE fleet (7B/14B/32B/70B/other 120Bs/RunPod) then DeepSeek then Claude-last. The 405B is never a spill target.",
+  source: "Ruben directive 2026-06-13 (interrupted idea #12060 mid-flight to enforce this). Hardened into this MCP struct + PROJECT_FRANKENSTEIN.md + .clinerules/147.",
+};
+
 const ARCHITECTURE_SUMMARY = {
   name: "Project Frankenstein — Head/Body/Stitches LLM Architecture",
   ROUTES_EVERY_LLM,
+  FOUR_OH_FIVE_B_TEACHER_GUARD,
   NOT_A_TRADITIONAL_ROUTER,
   CANONICAL_NAMING,
   CORE_PRINCIPLES,

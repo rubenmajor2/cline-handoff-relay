@@ -96,11 +96,15 @@ which is NOT subject to the Imunify block) — this is why MFA can be completed 
 - Then complete login: `POST https://192.168.1.1/api/auth/login` with
   `{"username","password","token":"<OTP>"}` (UDM accepts the email OTP as the 2FA `token`).
 
-> **TOKEN LOCATION (fill in once, then this runbook is self-sufficient):**
-> Postmark server token used by EMSU send/inbound = `224f23be…` (full value in
-> `config.credentials.php` on WOPR, and broadcast token in `~/Desktop/config_local.txt`).
-> Record the EXACT server token + the inbound message-stream ID here on next successful use so no
-> future window has to re-derive it.
+> **TOKEN LOCATION (filled in 2026-06-13 — runbook is now self-sufficient):**
+> Postmark Broadcast server token = `224f23be-e3e0-4423-a67b-cf6a72815190`
+> (from `POSTMARK_BROADCAST_TOKEN` in `/var/www/emtskills/config/config.local.php` on WOPR).
+> UDM read-only API key (api.ui.com) = `ox01QMxsupFeycXktNxAbmH6xlMltDkz`
+> UDM MFA email-authenticator id = `114fb9e1-a67d-4f6e-b542-3dbdb936fcde`
+> (default_mfa for rmajor SSO; OTP subject "MFA Login Authentication").
+> OTP also lands in WOPR qmail: `/var/qmail/mailnames/emsuniversity.com/rmajor/Maildir`
+> (use Postmark inbound API OR this Maildir — whichever is reachable).
+
 
 ---
 

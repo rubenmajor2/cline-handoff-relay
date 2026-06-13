@@ -112,8 +112,30 @@ const CANONICAL_NAMING = {
     },
     source: "Ruben naming directive 2026-06-09. Verified live: Executor (RubenExecutor.php) and Orchestrator (orchestrator_api.php) are distinct classes, both clients of LiteLLM. Cross-ref .clinerules/135 (SLS naming precedent: a name only sticks where it is written into a read-at-runtime surface).",
 };
+// ROUTES_EVERY_LLM — Ruben directive 2026-06-12 (~20th restatement). A window kept
+// narrowing frankenstein-llm to "5 models / 2 boxes" and calling tunnel-probe failures
+// "boxes dead." This pinned block is the durable correction. Cross-ref .clinerules/146.
+const ROUTES_EVERY_LLM = {
+    headline: "frankenstein-llm is the ONE router for EVERY LLM we own. NOT the 5-member pool_members sub-list. NOT 'just the 120B'. If we own an LLM, it is under Project Frankenstein.",
+    the_full_fleet: [
+        "Local Ollama small/mid: 7B-lora, 14B, 32B, qwen2.5/qwen3 coders 14B/30B/32B, gpt-oss-20B.",
+        "70B fleet: sms-70b (ollama-llama3.3-70b), Joshua-70B (10.100.0.4), Artemis-70B q4/q5 (10.100.0.5).",
+        "3× 120B: Cesar :11506, Cato :11507, Artemis-120B (10.100.0.5 gpt-oss:120b).",
+        "405B: frankenstein-405b = Augustus+Tiberius TP=2 over CX7 200GbE, :11512.",
+        "RunPod pods: frank-serve-pod-120b, lora-120b-ckpt420.",
+        "Cloud open-weight: DeepSeek-v4-pro/flash.",
+        "Paid heads: claude-sonnet, claude-opus-real, claude-fable-5.",
+        "The Mac mini (the box Cline's :11505 tunnel rides) — it hosts models too.",
+    ],
+    cline_is_priority: "When Cline is working, Executor + Orchestrator traffic may be QUEUED behind it. Cline (interactive, NO buffer) spills to the ladder the instant a 120B is busy (FRANK_TOOLS_SAT_INTERACTIVE=1). Executor/Orchestrator (HAVE a buffer) queue on the free local boxes (FRANK_TOOLS_SAT_BATCH=6). Cline never waits behind batch.",
+    memory_is_not_the_limit: "A 120B KV cache holds ~486K tokens (num_gpu_blocks×block_size), ~20% used normally. The 131K in Cline settings is PER-CONVERSATION context, not a fleet limit. Do NOT shrink Cline context to 'save memory' — the load lever is spilling compute across the fleet sooner.",
+    free_can_beat_paid: "Free 120Bs/LoRAs that win ≥45% W/T head-to-heads vs Sonnet/Opus are PROMOTED above the paid model (rule 121 / KIND_TIER_PIN). Never assume paid > free by default — check the W/T scoreboard (llm_router_live.php).",
+    tunnel_probe_is_not_box_dead: "Augustus/Tiberius/405B probe via 127.0.0.1:11508/11509/11512 = reverse tunnels Spark→WOPR. HTTP 0 there = TUNNEL down, NOT box dead (rule 141). Ruben has seen the 405B serve. Fix = re-establish the tunnel; never report 'unprovisioned/dead' from one localhost probe.",
+    source: "Ruben directive 2026-06-12, ~20th restatement. Hardened into .clinerules/146 + PROJECT_FRANKENSTEIN.md top block + this MCP struct so it is never re-derived wrong.",
+};
 const ARCHITECTURE_SUMMARY = {
     name: "Project Frankenstein — Head/Body/Stitches LLM Architecture",
+    ROUTES_EVERY_LLM,
     NOT_A_TRADITIONAL_ROUTER,
     CANONICAL_NAMING,
     CORE_PRINCIPLES,
@@ -428,17 +450,6 @@ process.on("uncaughtException", (e) => {
 process.on("unhandledRejection", (e) => {
     console.error(`[project-frankenstein-mcp] unhandledRejection (swallowed): ${e?.message || e}`);
 });
-// Startup self-cleanup: kill zombie processes from old Cline windows
-(function killZombies() {
-    try {
-        const { execSync } = require("node:child_process");
-        const myPid = process.pid;
-        const result = execSync(`ps aux | grep "project-frankenstein-mcp/build/index.js" | grep -v grep | awk '{print $2}'`, { encoding: "utf8", stdio: ["pipe", "pipe", "ignore"] });
-        const pids = result.trim().split("\n").map(Number).filter(p => p && p !== myPid);
-        for (const pid of pids) { try { process.kill(pid, "SIGTERM"); } catch {} }
-        if (pids.length > 0) { console.error(`[project-frankenstein-mcp] startup cleanup: killed ${pids.length} zombie(s): ${pids.join(", ")}`); }
-    } catch {}
-})();
 const transport = new StdioServerTransport();
 await server.connect(transport);
 console.error("[project-frankenstein-mcp] v0.1.0 connected over stdio (architecture static, tier-health/pod-status/verify-routing/autoscaler live via fleet API, 10s bound)");

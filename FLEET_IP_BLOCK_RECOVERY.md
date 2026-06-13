@@ -145,7 +145,10 @@ the office WAN IP. Good for the case where you want browser access without stand
 | Item | Value |
 |---|---|
 | WOPR public IP | 76.167.100.188 (DNS: 76.176.157.123) |
+| WOPR LAN IP | **192.168.1.68** (Oceanside home network, eno1) |
 | WOPR WG hub | 10.100.0.1 : 51820/udp |
+| **Oceanside home LAN** | 192.168.1.0/24, gateway 192.168.1.1 (UDM). WOPR + M1 Mac + M4 Mac + Cesar + Cato DGX Sparks all here. |
+| Oceanside WAN IP | **72.217.67.108** (Macs appear as this IP to WOPR via hairpin NAT) |
 | Tempe office UDM | EMSU Phoenix (UDM SE), gateway 192.168.0.1 (client LAN), UDM SE admin at 192.168.1.1 |
 | Tempe WAN IP | 68.227.47.137 (Cox Business) |
 | UDM Super Admin | rmajor@emsuniversity.com / qefru3-cocnyf-xuxnoP (MFA: Apple passkey OR email OTP via Postmark) |
@@ -154,12 +157,16 @@ the office WAN IP. Good for the case where you want browser access without stand
 | Artemis (GPU box) Tempe LAN IP | **192.168.0.125** (new, moved from .208 after reboot 2026-06-11) |
 | Artemis WG IP | 10.100.0.5 |
 | Artemis reverse SSH tunnel to WOPR | **WOPR:2225** (moved from :2223 on 2026-06-13; :2223 reserved for SMS Mac) |
-| SMS Mac (M1 2021) Tempe LAN IP | **192.168.0.72** (new DHCP after reboot 2026-06-13, unconfirmed — only SSH host on scan) |
-| SMS Mac WOPR reverse SSH tunnel | **WOPR:2223** (plist: com.emsu.smsmac-remote-access-tunnel; NOT running — Mac at login screen, LaunchAgent blocked) |
-| SMS Mac WOPR Ollama tunnel | **WOPR:11455** (DOWN — same plist, not running) |
-| SMS Mac plist TODO | Update /Users/rubenmajor/Library/LaunchAgents/com.emsu.smsmac-remote-access-tunnel.plist: change :2223→:2201 to match SSH config. Needs physical login. |
-| M4 Mac (2024) reverse SSH tunnel | **WOPR:2224** (actual, plist correct; SSH config updated :2202→:2224 on 2026-06-13) |
-| M4 Mac location | Home network (WAN 72.217.67.108), NOT Tempe LAN |
+| **M1 Mac (SMS Mac 2021) Oceanside LAN IP** | **192.168.1.221** (known-good from 2026-06-04). 2026-06-13 P2 scan: NOT FOUND (offline or FileVault pre-boot screen). |
+| SMS Mac WOPR reverse SSH tunnel | **WOPR:2223** (plist: com.emsu.smsmac-remote-access-tunnel; DOWN — no tunnel in ss -tlnp as of 2026-06-13 07:00 PT) |
+| SMS Mac WOPR Ollama tunnel | **WOPR:11455** (DOWN — same plist, not running; config.yaml has WINDOW_O_DOWN at line 219) |
+| SMS Mac deploy TODO | Run ~/Desktop/mac-tunnel-deploy/deploy.sh on M1 Mac. Converts LaunchAgent→LaunchDaemon, adds WOPR key to authorized_keys, gets MAC for DHCP reservation. Needs physical login (FileVault unlocked). |
+| **M4 Mac (2024) Oceanside LAN IP** | **192.168.1.197** (SSH port 22 responsive from WOPR; reverse tunnel WOPR:2224 ACTIVE as of 2026-06-13) |
+| M4 Mac WOPR reverse SSH tunnel | **WOPR:2224** (ACTIVE — ss -tlnp confirms listening 2026-06-13 07:00 PT) |
+| M4 Mac WOPR Ollama tunnel | **WOPR:11505** (NOT in WOPR ss -tlnp — Ollama port NOT forwarded by current tunnel config) |
+| M4 Mac SSH auth blocker | mac2_to_thismac.pub and emsuserver@wopr key NOT in Mac's authorized_keys. Run deploy.sh (in ~/Desktop/mac-tunnel-deploy/) to fix. |
+| M4 Mac deploy TODO | Run ~/Desktop/mac-tunnel-deploy/deploy.sh on M4 Mac. Needs physical access or Ruben password to unlock auth. |
+| LaunchDaemon deploy assets | ~/Desktop/mac-tunnel-deploy/ — smsmac_launchdaemon.plist, 2024mac_launchdaemon.plist, deploy.sh (2026-06-13 P2) |
 | WOPR authorized_keys SMS Mac | permitlisten :11455, :2201 (added), :2223, :5901 |
 | Last office WAN IP (blocked then whitelisted) | **72.196.171.155** (2026-06-06, after UDM swap) |
 | Imunify360 | on WOPR (Plesk). `imunify360-agent whitelist ip add <ip>` |

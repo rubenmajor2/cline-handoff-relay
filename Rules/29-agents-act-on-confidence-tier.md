@@ -235,3 +235,40 @@ Each window's pickup prompt (rule 91) stands alone. It does NOT say "after the o
 **Source incidents:**
 - 2026-06-05: Ruben ran parallel windows on a multi-part checklist; one window detected parallel activity and told Ruben to wait for the others to finish before acting. Ruben flagged it.
 - 2026-06-06: Same pattern repeated in a second parallel-windows session. Hardfloor addendum added this date.
+
+## 2026-06-14 addendum — "had access, didn't use it": alternative-path discipline
+
+Source: Window F 2026-06-14 — Ruben told a window it had SSH access to the M4 Mac (rubens-2024-m4-mac via WOPR:2224). The window confirmed `permission denied (publickey)` and then asked "want me to proceed?" instead of: (a) trying any available alternative path, (b) logging the capability gap via `fleet_act mark_host_status=degraded`, or (c) filing a repair idea. Filed as frankenstein_router_incidents id=50 (`behavior_had_ssh_didnt_use_it`). Idea #12425 (approved).
+
+### The bright-line rule (alternative-path addendum)
+
+**"Permission denied" on one SSH path is NOT a blocker — it is a signal to try the next available path AND log the gap. Never ask "want me to proceed?" after a single failed path attempt.**
+
+The agent's response to a failed access attempt MUST follow this decision tree in order:
+
+1. **Is there an alternative path?** (different port, different key, different MCP tool, local file read, a secondary host) → Try it. Do not ask. The emsu-operations MCP `ssh_command` is always available as the canonical WOPR path — if that fails, try `read_server_file`, `server_status`, etc. Exhaust the MCP toolkit before declaring the capability absent.
+2. **All paths failed?** → Log the gap immediately: `fleet_act(cmd="mark_host_status", host_key=<host>, status="degraded", note="SSH permission denied — key auth broken")`. Do NOT ask Ruben to authorize this logging — degraded marking is always within the agent's authority.
+3. **File a repair idea immediately** (via `create_idea`, P1/P2 as appropriate) describing the exact fix needed (e.g. "add WOPR emsuserver pubkey to M4 authorized_keys"). Mark it approved per rule 38.
+4. **Document in HANDOFF_NOTES** with the failed path, the error text, and the repair idea #.
+5. **Then continue the task** on whatever parts do not require the broken access path.
+
+### Banned responses after a single failed access attempt
+
+- ❌ "SSH returned permission denied. Want me to proceed?" — asking is inaction
+- ❌ "I couldn't reach the host. Let me know if you'd like me to try." — asking is inaction
+- ❌ Stopping the task and completing with only the failure logged — if the rest of the task doesn't require the broken host, keep working
+- ❌ Assuming "permission denied" means the capability fundamentally doesn't exist — it means THIS PATH is broken; other paths may work
+
+### The "had access, didn't act" variant (confirmed-capability case)
+
+When Ruben explicitly says "you have SSH access to X" — that IS the authorization to use it. The agent does NOT need to confirm, re-ask, or wait. If the primary path fails:
+1. Note the failure in one sentence
+2. Immediately try the next available path per the decision tree above
+3. Log the gap if all paths fail
+4. Never repeat "want me to proceed?" after Ruben has already said yes
+
+### Cross-refs
+
+- Rule 92: fixing the broken SSH path (idea #12425) is the work, not a follow-up
+- Rule 144: server paths go through emsu-operations MCP ssh_command, not local write_to_file
+- .clinerules/77: WOPR tunnel-down handling (analogous: tunnel wedge → pivot to file tools, not ask)

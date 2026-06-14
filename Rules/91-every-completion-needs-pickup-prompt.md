@@ -209,3 +209,38 @@ The watchdog also fires an osascript notification at RED/IMMINENT so Ruben sees 
 - **Idea #7377 (shipped):** per-task budget file naming pattern `/tmp/cline_budget_status_TASK<task_id>.json` to prevent sibling Cline tasks from clobbering each other's tier signal. Writer: `~/Documents/Cline/scripts/cline_budget_watchdog.py` lines 145-150 now writes both the legacy global file (`/tmp/cline_budget_status.json`) AND the per-task file. Readers/agents should prefer the per-task file when a task_id is known.
 
 - **Idea #7380 (shipped):** T5 periodic-compress trigger via the cline-compress MCP `should_compress_now` tool. Agent should poll every ~150K tokens of growth (or every N tool calls in a long-running task). Returns `{ should_compress, tier, context_size, growth_since_last, reason }` keyed on a caller-supplied `last_compress_size` argument and a `growth_threshold` (default 150000). When `should_compress=true` and ti- **Idea #7380 (shipped):** T5 periodic-compress trigger via the cline-compress MCP `should_compdia- **Idea #7380 (shipped):** T5 periodic-compress trigger via the cline-comprehdog tier mandate above.
+
+## 2026-06-14 addendum — PICKUP PROMPT block is ONLY legal inside attempt_completion.result (never mid-task)
+
+Source: Window F 2026-06-14 — Ruben observed a frankenstein-llm Cline window emit the full `═══ PICKUP PROMPT ═══` block as a mid-task assistant content turn, then immediately keep iterating. Filed as frankenstein_router_incidents id=49 (`behavior_pickup_prompt_mid_task`). Idea #12424 (approved).
+
+### The bright-line rule (addendum)
+
+**The `═══ PICKUP PROMPT ═══` block (the divider + all content up to the closing `═══`) MUST ONLY appear as the final section of `attempt_completion.result`. It MUST NOT appear in any other context:**
+
+- ❌ Mid-task assistant turn (even if framed as "checkpoint" or "progress summary")
+- ❌ HANDOFF_NOTES.md entry
+- ❌ Any tool call output or inline prose that is not `attempt_completion`
+- ❌ A turn immediately before `attempt_completion` (must be IN it, not before it)
+
+### Why: the block is a signal, not just a format
+
+When a fresh Cline window sees the `═══` block, it interprets it as "the previous window called attempt_completion; here is the resume state." If the block appears mid-task in a window that then keeps running, the signal is false. It confuses Ruben (is the task done or not?) and can cause a fresh window to resume work that the original window was still doing.
+
+### What to use instead for mid-task checkpointing
+
+If a window needs to save progress mid-task (e.g. approaching context limits, window might die):
+
+1. **`update_handoff_notes` MCP** — append a HANDOFF_NOTES entry with current state + next steps. Uses the same structured content as the pickup prompt but without the `═══` delimiters.
+2. **`cline_task_ledger.md` row** — append a row per .clinerules/07 with date, task, status, key IDs.
+3. **`create_idea` + `agent_drafts` row** — if the remaining work is a discrete unit, file it as an idea.
+
+None of these use the `═══ PICKUP PROMPT ═══` wrapper. That wrapper is reserved for `attempt_completion`.
+
+### Companion to rule 41
+
+Emitting the pickup block mid-task then continuing is the task-level version of rule 41's "Deployed. Now reload FPM:" anti-pattern — announcing done-ness then not being done. The fix is the same: if the block appears, `attempt_completion` must be in the same response. If you're not ready to call `attempt_completion`, don't emit the `═══` block.
+
+### Self-check before emitting the ═══ block
+
+Ask: "Is the next thing I'm calling in this same response `attempt_completion`?" If no — do not emit the `═══` block. Use `update_handoff_notes` for mid-task state.

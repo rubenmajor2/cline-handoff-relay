@@ -480,6 +480,146 @@ server.tool("clinerules_stats", "Quick stats on the rules corpus + recent lookup
     ];
     return { content: [{ type: "text", text: lines.join("\n") }] };
 });
+// ─── #12285 Bidirectional sync tools ──────────────────────────────────────
+const https = __importStar(require("https"));
+const child_process_1 = require("child_process");
+/** POST JSON to the WOPR clinerules_sync_api.php */
+function woprSyncPost(action, body) {
+    return new Promise((resolve) => {
+        const payload = JSON.stringify({ action, ...body });
+        const opts = {
+            hostname: "emsuniversity.com",
+            port: 443,
+            path: "/emtskills/routes/clinerules_sync_api.php?action=" + action,
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Content-Length": Buffer.byteLength(payload),
+                "X-Clinerules-Key": process.env.EMSU_CLINERULES_KEY || "",
+            },
+        };
+        const req = https.request(opts, (res) => {
+            let data = "";
+            res.on("data", (chunk) => (data += chunk));
+            res.on("end", () => {
+                try {
+                    resolve(JSON.parse(data));
+                }
+                catch {
+                    resolve({ raw: data.slice(0, 500) });
+                }
+            });
+        });
+        req.on("error", (e) => resolve({ error: String(e.message) }));
+        req.setTimeout(8000, () => { req.destroy(); resolve({ error: "timeout" }); });
+        req.write(payload);
+        req.end();
+    });
+}
+server.tool("clinerules_push_rule", "Push a new or updated rule to the WOPR canonical store (#12285 sync bus). Writes file locally, pushes to WOPR via API, triggers DB upsert + steering cache bust + learner rebuild flag. Use when authoring a rule in Cline that should propagate everywhere.", {
+    slug: zod_1.z.string().describe("Rule slug (e.g. '147-my-new-rule'). Used as filename without .md."),
+    body: zod_1.z.string().describe("Full markdown body of the rule."),
+    is_hardfloor: zod_1.z.boolean().default(false).describe("True if this is a hardfloor rule (loads every task)."),
+    target_dir: zod_1.z.enum(["rules", "archive"]).default("archive").describe("'rules'=hardfloor dir, 'archive'=non-hardfloor dir."),
+    source_surface: zod_1.z.string().default("mac_rules").describe("Source surface identifier."),
+}, async ({ slug, body, is_hardfloor, target_dir, source_surface }) => {
+    const dir = target_dir === "rules"
+        ? path.join(HOME, "Documents/Cline/Rules")
+        : path.join(HOME, "Documents/Cline/Rules-archive");
+    const filePath = path.join(dir, slug + ".md");
+    // 1. Write file locally
+    try {
+        fs.mkdirSync(dir, { recursive: true });
+        fs.writeFileSync(filePath, body, "utf-8");
+    }
+    catch (e) {
+        return { content: [{ type: "text", text: `✗ Failed to write local file: ${e.message}` }] };
+    }
+    // 2. Reindex locally
+    const localStats = reindex(db, false);
+    // 3. Push to WOPR canonical store
+    const sha256 = require("crypto").createHash("sha256").update(body).digest("hex");
+    const woprResult = await woprSyncPost("push", {
+        slug, body, sha256, is_hardfloor, source_surface,
+        rules: [{ slug, body, sha256, is_hardfloor, source_surface }],
+    }).catch((e) => ({ error: String(e) }));
+    // 4. Trigger Mac sync script (best-effort, non-blocking)
+    try {
+        (0, child_process_1.execSync)("bash ~/Documents/Cline/scripts/sync_clinerules_to_wopr.sh &", {
+            env: { ...process.env, HOME },
+            shell: "/bin/bash",
+        });
+    }
+    catch { /* non-fatal */ }
+    const lines = [
+        `✓ Rule '${slug}' pushed.`,
+        `  Local file: ${filePath}`,
+        `  Local index: ${localStats.count} rules`,
+        `  WOPR API: ${woprResult.error ? "WARN: " + woprResult.error : JSON.stringify(woprResult.results?.[0] ?? woprResult)}`,
+        `  Steering cache will rebuild on next request (sentinel written by WOPR cron).`,
+        `  Learner regen flagged: next build_lora_training_set.php run will include this rule.`,
+    ];
+    return { content: [{ type: "text", text: lines.join("\n") }] };
+});
+server.tool("clinerules_sync_status", "Show sync status between Mac local index and WOPR canonical store. Reveals drift (rules on Mac but not WOPR, or vice versa). Use to verify #12285 bidirectional sync is healthy.", {}, async () => {
+    // Local Mac count
+    const localCount = db.prepare("SELECT COUNT(*) AS n FROM rules").get()?.n ?? 0;
+    const localRules = db.prepare("SELECT slug, mtime FROM rules ORDER BY slug").all();
+    // WOPR canonical status
+    const woprStatus = await woprSyncPost("status", {}).catch(() => null);
+    const lines = [`── Clinerules Sync Status (#12285) ──`];
+    lines.push(`Mac local index: ${localCount} rules`);
+    if (woprStatus && !woprStatus.error) {
+        lines.push(`WOPR canonical: ${woprStatus.canonical_count} rules (${woprStatus.hardfloor_count} hardfloor)`);
+        lines.push(`WOPR file count: ${woprStatus.wopr_file_count} files in /var/www/emtskills/clinerules/Rules/`);
+        lines.push(`Needs learner regen: ${woprStatus.needs_learner_regen} rules`);
+        lines.push(`Newest change: ${woprStatus.newest_change ?? "none"}`);
+        // Drift detection
+        const woprSlugs = new Set((woprStatus.recent_events ?? []).map((e) => e.slug));
+        lines.push(``);
+        if (woprStatus.canonical_count < localCount) {
+            lines.push(`⚠ DRIFT: Mac has ${localCount} rules, WOPR has ${woprStatus.canonical_count}. Run sync_clinerules_to_wopr.sh to push.`);
+        }
+        else {
+            lines.push(`✓ In sync: Mac ${localCount} == WOPR ${woprStatus.canonical_count}`);
+        }
+        if (woprStatus.recent_events?.length) {
+            lines.push(`\nRecent events:`);
+            for (const e of woprStatus.recent_events.slice(0, 5)) {
+                lines.push(`  ${e.created_at} ${e.action} ${e.slug} (${e.source_surface})`);
+            }
+        }
+        if (woprStatus.proposed?.length) {
+            lines.push(`\nProposed rules pending review: ${woprStatus.proposed.map((p) => `${p.status}:${p.n}`).join(", ")}`);
+        }
+    }
+    else {
+        lines.push(`WOPR API: ${woprStatus?.error ?? "unreachable"}`);
+        lines.push(`(Run: bash ~/Documents/Cline/scripts/sync_clinerules_to_wopr.sh to sync)`);
+    }
+    return { content: [{ type: "text", text: lines.join("\n") }] };
+});
+server.tool("clinerules_propose_rule", "Submit a proposed new clinerule to the WOPR pending-review queue (#12285 rule→behavior loop). Use when a pattern in yolo_trips or good-completions suggests a new rule is needed. Ruben reviews proposals at /routes/clinerules_sync_api.php?action=status.", {
+    slug: zod_1.z.string().describe("Proposed slug (e.g. 'proposed-147-foo-bar'). Will be prefixed with 'proposed-' if not already."),
+    title: zod_1.z.string().describe("Short title for the proposed rule."),
+    body: zod_1.z.string().describe("Full markdown body of the proposed rule."),
+    proposed_by: zod_1.z.enum(["learner_yolo_pattern", "learner_good_completion", "frankenstein_llm", "manual", "mcp_push"]).default("mcp_push"),
+    source_evidence: zod_1.z.string().default("").describe("Evidence for why this rule is needed (e.g. 'n=15 yolo_trips matching pattern X')."),
+}, async ({ slug, title, body, proposed_by, source_evidence }) => {
+    const finalSlug = slug.startsWith("proposed-") ? slug : "proposed-" + slug;
+    const result = await woprSyncPost("propose", {
+        slug: finalSlug, title, body, proposed_by, source_evidence,
+    }).catch((e) => ({ error: String(e) }));
+    if (result.error) {
+        return { content: [{ type: "text", text: `✗ Proposal failed: ${result.error}` }] };
+    }
+    return { content: [{ type: "text", text: [
+                    `✓ Rule proposed: '${finalSlug}' (id=${result.proposed_id})`,
+                    `  Status: ${result.status}`,
+                    `  Review at: https://www.emsuniversity.com/emtskills/routes/clinerules_sync_api.php?action=status`,
+                    `  When approved: it will be written to /var/www/emtskills/clinerules/Rules/ and synced to Mac.`,
+                ].join("\n") }] };
+});
 // ─── Run ───────────────────────────────────────────────────────────────────
 (async () => {
     const transport = new stdio_js_1.StdioServerTransport();

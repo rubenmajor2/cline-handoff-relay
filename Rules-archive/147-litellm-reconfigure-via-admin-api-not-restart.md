@@ -22,7 +22,18 @@ LiteLLM (proxy server) exposes admin routes (auth: `Authorization: Bearer $LITEL
 
 The autoscaler / `cron_fleet_router_hook_writer.php` / any warm-set manager should diff desired-vs-live rotation and apply the delta via these endpoints. A container restart is reserved ONLY for changes the admin API genuinely cannot do live (e.g. a LiteLLM version bump, a `router_settings` structural change, an env/secret change).
 
+## IMPORTANT NUANCE (2026-06-15): fallback-chain rotation CANNOT use the admin API
+
+The admin API (`/model/new`, `/model/delete`) only manages the **model_list** (which models exist). It does NOT hot-reload `router_settings` **fallback chains**. The EMSU autoscaler that drives most of the restart churn (`/usr/local/bin/emsu-frank-member-rotation.py`, "window-o member rotation") rotates *fallback-chain membership* by commenting/uncommenting chain lines in config.yaml — so it genuinely needs a restart to apply, and the admin API is the WRONG square peg there.
+
+For THAT class, the right lever is **reducing restart frequency via anti-flap hysteresis**, not the admin API:
+- The churn is almost always the SAME oscillating ollama 70B boxes (joshua, 7b-lora, llama3.3-70b-q5) transiently failing a probe under load, getting dropped, then readded minutes later.
+- `emsu-frank-member-rotation.py` has FLAP_MAX (readds-in-window before it HOLDS a member active instead of toggling) + FLAP_WINDOW_S. Tightening these (e.g. FLAP_MAX 2→1, FLAP_WINDOW_S 3600→7200) makes an oscillating-but-healthy box get held active instead of ping-ponging restarts. That + the executor http=0 retryable fix (idea #12503) is what actually kills the storm.
+
+So the rule is: **admin API for model_list add/remove; anti-flap hysteresis for fallback-chain rotation; restart only when neither applies.**
+
 ## When a restart IS still allowed
+
 
 - LiteLLM binary/image upgrade.
 - `general_settings` / `router_settings` / auth-key changes the admin API doesn't cover.

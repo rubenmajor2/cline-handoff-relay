@@ -189,3 +189,14 @@ blocked, and "all sites slow" was actually a client-IP block. The recovery (diag
 → WG-onboard so it never recurs, with UniFi MFA completed via the Postmark app) had to be re-derived from
 scattered docs. Ruben: "Why don't you remember these recovery procedures and stick them in the Fleet
 documentation." This file is that memory. Update §4 + the token line in §2 on every use.
+
+---
+
+## 2026-06-15 incident — Oceanside WAN 98.186.229.82 Imunify-blocked (resolved)
+
+- Symptom: all MCPs down from Oceanside; SYN to WOPR 76.176.157.123:2222/:443 silently dropped.
+- Confirmed site healthy via UniFi cloud API (api.ui.com, owner key) — WOPR San Diego UDM connected, WAN 16-20ms. Block was client-IP, not a dead site.
+- MFA-via-Postmark path was DEAD this time: emsuniversity.com MX = primary mx.emsuniversity.com (pri 5 = WOPR qmail) + backup inbound.postmarkapp.com (pri 10). WOPR up = OTP delivered to WOPR qmail (unreachable); Postmark backup had 0 inbound since 6/6. UniFi cloud API (even full-access owner key MFf7…) is inventory/metrics only — no controller proxy, no firewall write. UDM SSH is LAN-only.
+- FIX PATH THAT WORKED: switched Mac to a different ISP (Starlink, fresh IP 98.97.141.93, not blocked) → `ssh wopr` worked → cleared the block:
+  - `sudo imunify360-agent whitelist ip add 98.186.229.82 --co  - `sudo imunify360-agent whitelist ip add 98.186.229.82 --co  - `su - The LIVE bl  - `sudo imunify360-agent whitelist ip add 98.186.229.82 --co  - `sudo imunify3telist alone did NOT remove it. Had to delete it directly: `sudo iptables -D INPUT -s 98.186.229.82  - `sudo imunify360-agent whitelist ip add 98.186.229.82 --co  - `sudo imunify360-agent whitelist ip add 98.186.229.82 --co  - `su - The LIVE bl  - `s0. (iptables-save is slow due to the big country ruleset; dump-to-file + grep beats piping inline, which times out the 30s Cline wall.)
+- KEY LESSON: an Imunify whitelist add does NOT auto-remove an already-installed iptables DROP. Always also delete the live `-A INPUT -s <ip> -j DROP` rule.

@@ -327,6 +327,11 @@ const TOOLS = [
         inputSchema: { type: "object", properties: {}, required: [] },
     },
     {
+        name: "frankenstein_host_probe",
+        description: "Live per-host generation speed: tok_per_s + last_gen_ms measured from a REAL 8-token generation probe on each serving host (cesar-120b/cato-120b/artemis-120b/artemis-70b/joshua-70b/sms-70b/wopr-14b). Cache refreshed every ~60s by the emsu-host-gen-probe cron on WOPR. Use this BEFORE saying \'is Artemis serving at full speed?\' - it shows actual tok/s, not just /v1/models HTTP 200. A host with tok_per_s < 2.5 is excluded from _120b_member_available (speed gate, idea #12459 Window 5). This is the one-call answer to \'why is Artemis slow?\'",
+        inputSchema: { type: "object", properties: {}, required: [] },
+    },
+    {
         name: "frankenstein_what_served",
         description: "BACKEND SELF-REPORT (idea #11316): answers 'what backends did THIS window actually route to?'. Because frankenstein-llm routing happens server-side AFTER dispatch, the model itself cannot self-introspect — this tool reads the router audit log (which the pre-call hook writes synchronously with a stable conversation_id + the routed `picked` backend on every turn) and returns DISTINCT served backends + per-backend turn counts + cost. Pass a conversation_id (from the audit log / your window) OR a minutes window. Use this at the END of a task to print e.g. 'This iteration routed to: cato-120b (8 turns, $0), deepseek-v4-pro (1 turn, $0.01)'. Local backends are $0. Cross-refs: rule 140 (live-verified), rule 141, rule 137. STDIO, live via fleet API, 10s bound.",
         inputSchema: {
@@ -453,6 +458,22 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
                     error: "fleet_api_unreachable",
                     msg: res.error,
                     note: "Could not reach the fleet API for the registry. The single source of truth lives at /etc/litellm/frankenstein_registry.yaml and the router's derived state at /tmp/emsu_router_registry_state.json on WOPR. Adding a model = one registry row + emsu-safe-litellm-restart.sh. Verify with: python3 /etc/litellm/frankenstein_registry.py --check",
+                    _fetched_at: new Date().toISOString(),
+                };
+            }
+        }
+        else if (name === "frankenstein_host_probe") {
+            // idea #12459 Window 5: per-host generation speed (tok/s + ms) from the
+            // emsu-host-gen-probe cron cache. The one-call answer to "is Artemis fast?"
+            const res = await fleetApi("host_gen_probe");
+            if (res.ok) {
+                out = res.data;
+            }
+            else {
+                out = {
+                    error: "fleet_api_unreachable",
+                    msg: res.error,
+                    note: "Fallback: on WOPR run python3 /usr/local/bin/emsu-host-gen-probe.py then cat /tmp/emsu_host_gen_probe_cache.json",
                     _fetched_at: new Date().toISOString(),
                 };
             }

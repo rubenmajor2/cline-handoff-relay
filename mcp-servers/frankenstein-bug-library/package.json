@@ -1,0 +1,19 @@
+{
+  "name": "frankenstein-bug-library",
+  "version": "0.1.0",
+  "description": "Bug-library MCP for frankenstein_router_incidents — search known LLM routing failures and their repairs before re-deriving from scratch. Per idea #12619.",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3"
+  },
+  "private": true
+}

@@ -94,6 +94,38 @@ function queryRows(sql) {
     }
 }
 /**
+ * #12713 (2026-06-16): base64-safe single-statement runner.
+ *
+ * The old path piped `echo ${JSON.stringify(sql)} | ssh ... mysql`. When the
+ * SQL carried newlines / quotes / shell metacharacters (every real incident
+ * body does), the echo+JSON mangling corrupted the statement: the INSERT
+ * errored, mysql --batch stopped before the trailing SELECT, and the tool
+ * returned "#?" while NO row persisted (silent write loss — the exact bug
+ * Ruben hit twice). Fix: base64-encode the SQL on the Node side and decode it
+ * on the remote with `base64 -d`, so NOTHING in the SQL touches the shell.
+ * Returns the raw tab/newline mysql -N output (caller parses), THROWS on
+ * SSH/MySQL non-zero so callers can detect a real failure instead of silently
+ * getting [].
+ */
+function woprExecB64(sql) {
+    const b64 = Buffer.from(sql, "utf8").toString("base64");
+    // printf the b64 (no trailing newline issues) | base64 -d | mysql
+    const cmd = `printf '%s' ${JSON.stringify(b64)} | ssh -p 2222 \
+    -o ConnectTimeout=10 \
+    -o StrictHostKeyChecking=no \
+    -o BatchMode=yes \
+    -o ServerAliveInterval=5 \
+    emsuserver@127.0.0.1 \
+    "base64 -d | mysql -N --batch admin_portal"`;
+    try {
+        return (0, child_process_1.execSync)(cmd, { timeout: 15_000, encoding: "utf8", shell: "/bin/bash" });
+    }
+    catch (e) {
+        const msg = e?.stderr?.slice(0, 300) || e?.message?.slice(0, 300) || "unknown";
+        throw new Error(`WOPR SSH/MySQL error: ${msg}`);
+    }
+}
+/**
  * Build a LIKE-based WHERE clause across multiple columns.
  * Each keyword must appear in at least one of the columns.
  */
@@ -323,34 +355,75 @@ Also call when a previously-investigating incident is now resolved.`, {
         .slice(0, 79);
     // Escape single-quotes for MySQL inline
     const esc = (s) => s.replace(/\\/g, "\\\\").replace(/'/g, "\\'").slice(0, 1000);
-    const sql = `
-      INSERT INTO frankenstein_router_incidents
+    // #12713 (2026-06-16): INSERT + id-fetch in ONE base64-encoded statement
+    // batch (so LAST_INSERT_ID runs on the SAME mysql connection as the INSERT),
+    // then VERIFY the row actually exists. The old version (a) shell-mangled
+    // multi-line bodies so the INSERT silently failed, and (b) returned "#?"
+    // without ever checking rowcount → caller believed it recorded when it had
+    // not. Now: base64 transport (no shell mangling) + explicit existence check
+    // → fail LOUD on a no-write instead of pretending success.
+    const insertSql = `INSERT INTO frankenstein_router_incidents
         (problem_key, symptom_observed, diagnosis, resolution, evidence, status, created_by)
       VALUES (
-        '${esc(key)}',
-        '${esc(symptom)}',
-        '${esc(diagnosis)}',
-        '${esc(resolution)}',
-        '${esc(evidence)}',
-        '${status}',
-        '${esc(created_by)}'
+        '${esc(key)}','${esc(symptom)}','${esc(diagnosis)}','${esc(resolution)}',
+        '${esc(evidence)}','${status}','${esc(created_by)}'
       );
-      SELECT LAST_INSERT_ID() AS new_id;
-    `;
-    const rows = queryRows(sql);
-    const newId = rows[0]?.new_id ?? rows[0]?.col0 ?? "?";
+      SELECT LAST_INSERT_ID() AS new_id;`;
+    let newId = "?";
+    let writeOk = false;
+    let errMsg = "";
+    try {
+        const out = woprExecB64(insertSql).trim();
+        // mysql -N prints LAST_INSERT_ID() as the last non-empty line
+        const lastLine = out.split("\n").filter((l) => l.trim()).pop() || "";
+        if (/^\d+$/.test(lastLine.trim())) {
+            newId = lastLine.trim();
+            writeOk = parseInt(newId, 10) > 0;
+        }
+        // Verify the row actually exists (definitive — not just LAST_INSERT_ID echo)
+        if (writeOk) {
+            const verify = woprExecB64(`SELECT id FROM frankenstein_router_incidents WHERE id=${parseInt(newId, 10)} LIMIT 1;`).trim();
+            writeOk = verify === newId;
+        }
+    }
+    catch (e) {
+        errMsg = (e?.message || String(e)).slice(0, 300);
+        writeOk = false;
+    }
+    if (!writeOk) {
+        // FAIL LOUD — do not pretend success (the whole point of #12713).
+        return {
+            content: [
+                {
+                    type: "text",
+                    text: [
+                        "❌ bug_library_record FAILED — the row was NOT persisted.",
+                        errMsg ? `  error: ${errMsg}` : "  error: INSERT returned no valid id / row not found on verify.",
+                        `  problem_key: ${key}`,
+                        "",
+                        "ACTION: the write did not land. Insert it manually via the mysql MCP:",
+                        `  INSERT INTO admin_portal.frankenstein_router_incidents`,
+                        `  (problem_key,symptom_observed,diagnosis,resolution,evidence,status,created_by)`,
+                        `  VALUES ('${key}', ...);`,
+                        "(rule 156 mandates a real write — do not treat this as recorded.)",
+                    ].join("\n"),
+                },
+            ],
+            isError: true,
+        };
+    }
     return {
         content: [
             {
                 type: "text",
                 text: [
-                    `✓ Incident recorded: frankenstein_router_incidents #${newId}`,
+                    `✓ Incident recorded + VERIFIED: frankenstein_router_incidents #${newId}`,
                     `  problem_key: ${key}`,
                     `  status: ${status}`,
                     `  symptom: ${symptom.slice(0, 120)}`,
                     resolution ? `  resolution: ${resolution.slice(0, 120)}` : "  resolution: (pending)",
                     "",
-                    "Future agents calling bug_library_check_before_fix() will find this entry.",
+                    "Row existence confirmed on WOPR. Future agents calling bug_library_check_before_fix() will find this entry.",
                 ].join("\n"),
             },
         ],

@@ -18,6 +18,46 @@ You are NOT just diagnosing. You are the attending physician for a sick Frankens
 
 Two birds, one stone (Ruben's framing): (1) the patient's task completes, and (2) Project Frankenstein/the routing gets permanently better. A Frankenstein Doctor session that only restarts a service and doesn't fix the routing at the core (rule 92) has failed half its job.
 
+## THE PRIME DIRECTIVE — repair Frankenstein WHILE it works; get the patient to do its OWN work (Ruben, 2026-06-16)
+
+**The doctor's job is to make the patient capable of finishing its own task — NOT to do the task for it.** Ruben, verbatim: *"the whole point of you being the doctor is not to do the patient's work it's to get the patient to be able to do their own work... The idea is that you are repairing Frankenstein as Frankenstein is working."* Treating the patient (doing the work yourself, or euthanizing) is the LAST resort, not the default.
+
+### The ladder of intervention (try IN THIS ORDER — do not skip to the bottom)
+
+1. **Fix the fleet-level defect live, under the running window.** Restart the wedged adapter, demote the bad rank, patch the adapter code, broaden a guard — whatever the root cause is — WITHOUT touching the patient window. Then watch the patient's NEXT turn converge on its own. This is the ideal: the patient never even knew it was sick.
+
+2. **Inject the missing knowledge into the live window** (the key case Ruben called out). A VERY common reason a window is stuck-but-alive: the doctor just shipped a bug repair the window does not know about, so the window keeps re-deriving the now-solved problem or acting on stale assumptions. The fix is NOT to take over — it is to hand the window the one fact it is missing so IT can continue. The injected message is minimal, factual, and scoped to the repair only:
+   > "Context update from the fleet: <the specific bug> was just fixed at <file:line / config>. <The one-line new truth, e.g. 'temperature is now auto-stripped for opus-4.x; re-run your last grader call'>. Continue your original task from here."
+   This is allowed and ENCOURAGED. It is NOT "messing up the experiment" — you are only telling the window about a repair that happened outside its context window. You are NOT solving its task, giving it answers it should derive, or steering its work. Inject the repair fact, nothing more, then let it run.
+
+3. **Only if the window is genuinely DEAD** — poisoned transcript that cannot recover even after the fleet is healthy AND you cannot inject into it (no channel, or injection already tried and it still loops) — fall to Step 6 (revive ≥3, then euthanize). Euthanasia + the doctor doing the work itself is the **last resort**, never the opening move.
+
+### Injection is a TEMPORAL-GAP patch ONLY — never a substitute for the permanent core fix (Ruben, 2026-06-16)
+
+**Every injection (Step 2) MUST be paired with a permanent CORE fix (Step 3) that repairs all FUTURE windows.** Ruben's test: *"will such a fix or repair repair a future window? Or is it just a Band-Aid? The idea is for this to be a comprehensive repair so that Frankenstein is able to do its own work."*
+
+The mental model:
+- The **core fix** (broaden a guard, define the missing adapter function, fix the rank, add the self-correcting retry) is the PERMANENT repair. A brand-new window opened five minutes later inherits it automatically because it lives in the fleet code/config, not in any window's transcript. THIS is what makes Frankenstein able to do its own work.
+- The **injection** only exists because of a TIMING accident: the patient window took its context snapshot BEFORE the core fix shipped, so it alone doesn't know. Injection tells that one window "the fleet changed under you, re-try." It repairs NOTHING for the next window — the core fix already did that.
+
+**The bright-line rule: never inject without having shipped (or being about to ship) the core fix.** If you catch yourself injecting "the fix is X, just do X" into a window WITHOUT a corresponding permanent change in the fleet, you are band-aiding — STOP and ship the core fix first. Injection without a core fix means the next window hits the identical wall.
+
+**Same discipline for capability/capacity (tools, MCP access, context):** if a window "can't use tools" or "can't reach the MCP" or "loses context," the repair must be at the fleet level — the adapter's tool-call path, the registry's tool_rank, the served context length, the routing — so EVERY future window gains the capability. Fixing it only inside one live window (e.g. talking it through a workaround) is the band-aid. The permanent fix is: the adapter correctly emits tool_calls (rule 148), the rung serves enough context (128K verified 2026-06-16), the entrypoint routes tool turns through :11510 — all fleet-level, all inherited by every future window. Verify the permanence by opening a FRESH probe/window after the fix and confirming it works with zero injection.
+
+### Pre-completion permanence check (add to the Step-6 / self-check)
+
+Before declaring a Doctor session done, for EVERY fix applied ask: *"If a brand-new frankenstein-llm window opens right now with no injection, does it work?"* If yes → permanent core fix, good. If it only works because I injected something into the current window → NOT done; the core fix is missing or incomplete. The injection is disposable; the core fix is the deliverable.
+
+### What "do NOT mess up the experiment" means
+
+
+Injecting the repair fact (Step 2) is fine. What is forbidden: doing the patient's actual research/coding for it, handing it conclusions it was supposed to reach, or biasing how it solves the task. The line: you may tell it WHAT CHANGED IN THE FLEET (a fact it could not have known because it happened after its last context snapshot); you may NOT tell it HOW TO DO ITS TASK. Repair knowledge = allowed. Task answers = forbidden (that's doing Frankenstein's work, which Ruben explicitly does not want).
+
+### The self-check that keeps the doctor honest
+
+Before doing ANY of the patient's actual task work, ask: *"Am I fixing Frankenstein so it can do this, or am I doing it FOR Frankenstein?"* If the latter, STOP — go back up the ladder: is there a fleet fix? can I inject the missing repair fact? Only when both fail AND the window is dead do you take over. "I did the work myself" is a doctor FAILURE mode unless the window was unrecoverable.
+
+
 ## The protocol (in order — do NOT skip the first two)
 
 ### Step 0 — Consult the documentation FIRST (mandatory, per rules 156 + 141)
@@ -100,7 +140,22 @@ The Doctor's pre-completion self-check MUST include: *"What was Frankenstein act
 The Doctor does NOT leave "optional", "future", or "nice-to-have" items as loose prose in the completion or pickup prompt. Per rule 91 Gate 0/Gate 1 + rule 29: for each candidate open thread, (a) if the Doctor has the tool to do it now, DO IT now; else (b) `create_idea` and cite the real returned `#NNNN`. Then apply rule 29's THREE G's to decide the tier: **Good confidence** (high), **Goes-back** (reversible), **Gentle blast radius** (single surface) — if all three hold (and it's not a hard human-only category), bump the idea to approved/autonomous per rule 38 so it actually ships, not just sits at proposed. A Doctor completion containing an un-filed suggestion, or a filed idea left un-acted when the three-G's pass, is an incomplete session. (2026-06-16: the two Doctor expansion suggestions were filed as #12763 + #12764 and approved-autonomous on this basis.)
 
 
+## When the Doctor finishes BEFORE the patient window (what Ruben does with it)
+
+Common case: the Doctor (this window) shipped the core fix + injected the repair-fact, and is ready to wrap, but the patient frankenstein-llm window is STILL RUNNING. Ruben asked: "what am I supposed to do with that window?" The Doctor's completion MUST tell him explicitly. Decide which of these the patient window is in and state it:
+
+1. **Patient is making progress (taking clean turns, advancing its task)** → "Leave it running. The fix is in; it now has what it needs. Let it finish its own task — that's the win." Do NOT tell Ruben to kill a healthy, progressing window.
+2. **Patient is idle/waiting after the injection** → "Send it one nudge: 'fleet fix shipped, continue your original task from your last step.' Then let it run." Give Ruben the exact one-line nudge to paste.
+3. **Patient is still looping/dead after fix + injection + 3 revive attempts** → the euthanasia order (Step 6): "Close it, open a fresh window, paste this pickup prompt." Provide the pickup prompt.
+
+The Doctor's completion is NOT done until it answers "what do I do with the still-running window?" with one of the above. Never leave Ruben holding a running window with no instruction. If unsure which state it's in, say so and give him the check ("if it's taking clean turns leave it; if it's re-hitting the same thing, euthanize with the prompt below").
+
+## Browser-verifying a display behind a login wall (rule 63 — MANDATORY, do not bail)
+
+Doctor sessions frequently need to confirm what an admin page (e.g. ruben_executor_live.php) actually SHOWS vs what the DB says. When `browser_action` hits a "Sign In to Continue" / 403 / login wall, you are FORBIDDEN from bailing to "I'll trust the DB" (rule 63 HARD TRIPWIRE). Build the rule-63 session bridge (`make_session.php` + `_dev_render_<target>.php`) and authenticate yourself in. Getting past the login wall IS the verification step Ruben asked for — hitting it is the start of the work, not a blocker.
+
 ## Babysitting many windows
+
 
 If 10 windows are sick, the fleet-level fix usually heals all of them at once (they share the router/adapter/registry). Diagnose ONE patient to root cause, apply the core fix, then verify across the others' conversation_ids in `frankenstein_what_served`. You do NOT need 10 separate fixes for one shared root cause — that's the whole point of fixing at the core. But the Step-6 revive-or-euthanize check still applies PER window: each window's own transcript may or may not be poisoned independently.
 

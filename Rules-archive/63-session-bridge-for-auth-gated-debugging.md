@@ -5,6 +5,21 @@ Permanent rule. Workspace-scoped. Source: 2026-05-13 cline_reports-403-fix — w
 wall to actually SEE reports.php. Once I built the right two-script pattern, it
 took 30 seconds. Codifying so future-me builds it instantly.
 
+## HARD TRIPWIRE (read FIRST — 2026-06-16, Ruben: "you consistently disobey this")
+
+**The moment ANY `browser_action` against an `emsuniversity.com/emtskills/*` page returns a "Sign In to Continue" / "admin session expired" / login wall / 403 / `requireLogin()` redirect, you are FORBIDDEN from doing ANY of the following:**
+- ❌ Giving up and saying "I can't see the page / it's behind login, I'll trust the DB"
+- ❌ Closing the browser and concluding the verification is impossible
+- ❌ Telling Ruben "the page requires staff login so I can't verify"
+- ❌ Substituting a DB query for the visual check Ruben asked for and calling it done
+
+**Instead, the REQUIRED next action is to build the session-bridge below (the `make_session.php` + `_dev_render_<target>.php` two-file pattern) and re-launch Puppeteer against the `_dev_render` endpoint with a real admin SID.** This is a known, clean, ~30-second procedure. There is no excuse to stop at the login wall — getting in IS the task. If Ruben asked you to verify what a page shows, hitting the login wall is the START of the work, not a blocker that ends it.
+
+**Self-check the instant a browser_action shows a login/403 screen:** "Am I about to tell Ruben I can't see it? STOP — build the session bridge (rule 63) and get in." Authenticating yourself in via the session bridge is mandatory, not optional.
+
+This tripwire exists because the full pattern below is correct but lives in the archive, so a Doctor/debug window hits the login wall, forgets rule 63 exists, and bails. The bail is the violation. (2026-06-16: a Frankenstein Doctor window browser-checked ruben_executor_live.php, hit "Sign In to Continue," closed the browser, and fell back to "I'll trust the DB" — exactly the forbidden move. Ruben: "you need to use an authentication token to get yourself in... you consistently disobey it.")
+
+
 ## When to use
 
 Any time I need to use `browser_action` against a page on `emsuniversity.com/emtskills/*`

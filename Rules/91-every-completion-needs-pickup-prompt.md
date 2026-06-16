@@ -82,7 +82,9 @@ For each candidate open thread:
       NO  → Gate 1: File via create_idea. Get #NNNN. List with #NNNN.
 ```
 
-An open thread with no idea number is always wrong: either (a) the agent should have done it and didn't (rule 29 violation) or (b) it's deferred work that wasn't filed (also rule 29 violation). There is no valid open thread without a #NNNN.
+An open thread with no idea number is always wrong: either (a) the agent should have done it and didn't (rule 29 violation) or (b) it's deferred work that wasn't filed (also rule 29 violation). There is no valid open thread without a real idea number.
+
+**HARDFLOOR — `#NNNN` is a TEMPLATE TOKEN, never literal output.** NEVER emit the literal string `#NNNN` (or `#N`, `#XXXX`, `idea #TBD`, any placeholder) in a completion or pickup prompt. `#NNNN` everywhere in this rule means "the real integer id `create_idea` returned," e.g. `#12657`. If your draft contains a literal `#NNNN`/placeholder, you skipped the filing step: STOP, call `create_idea` for each item now, and substitute the real returned ids. A completion shipped with a literal `#NNNN` is a rule-91 + rule-29 violation. Source incident: 2026-06-15 — a Window-3 VAPI/housekeeping pickup prompt shipped 5 open threads all reading "#NNNN - File Idea to ..." with zero real ids; Ruben: "what's idea #NNNN - lots of those, lol - that's buggy."
 
 Source incidents:
 - 2026-06-02 cline_chat9222 Window 2 — listed 4 "open threads / optional hardening" items as prose with no idea numbers. Ruben: "these need idea numbers. You are being very resistent here." Fix: file first (#9250-#9253), then list.

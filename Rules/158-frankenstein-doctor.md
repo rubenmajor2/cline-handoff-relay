@@ -58,7 +58,34 @@ Injecting the repair fact (Step 2) is fine. What is forbidden: doing the patient
 Before doing ANY of the patient's actual task work, ask: *"Am I fixing Frankenstein so it can do this, or am I doing it FOR Frankenstein?"* If the latter, STOP — go back up the ladder: is there a fleet fix? can I inject the missing repair fact? Only when both fail AND the window is dead do you take over. "I did the work myself" is a doctor FAILURE mode unless the window was unrecoverable.
 
 
+## PRINCIPLE — guidelines + agentic behavior over hardcoding (Ruben, 2026-06-17)
+
+**frankenstein-llm IS the router. It makes the routing CHOICE at request time based on the LLM's capability and health under it. The Doctor's job is to fix the BEHAVIOR and GUIDELINES that govern that choice — NOT to hardcode model names, caps, or fallback lists.** Ruben, verbatim: *"frankenstein-llm is the router and makes the choice, so I don't know that hardcoding models is a good play... it's more about the LLM under its capability. I'm leaning towards guidelines and agentic behavior rather than hardcoding. If you see hardcoding on these — no bueno. Needs to be about behavior and guidelines."*
+
+### What "hardcoding — no bueno" means (the anti-patterns to REMOVE, not add to)
+
+- ❌ A static `FRANK_BOX_CAPACITY=11506=N` hand-tuned per box. The cap should be DERIVED at runtime from the engine's live `--max-num-seqs` MINUS a wedge-safety margin the box discovers from its own decode-health (the adapter already has `_observe_capacity` / WEDGE_DETECT — let THAT set the operating cap, not a human number that drifts every topology change).
+- ❌ A hand-maintained model list in `FRANK_TOOLS_UPSTREAMS` that goes stale on every CX7/TP merge. The upstream set should come from a capability+health registry (a box is in the tool rotation IFF it is reachable AND serves a clean tool_call within the SLO), so a merged/renamed box is picked up or dropped automatically.
+- ❌ A hardcoded fallback ladder that names specific models. The ladder should be ordered by MEASURED properties at request time: is-tool-capable, is-local ($0), live tok/s, current load — so a rung that starts 400ing on tools (joshua) or reasoning-leaking (deepseek on a tool turn) is DEMOTED by its own measured behavior, not by a human editing a list.
+
+### What to build INSTEAD (behavioral guidelines the router/doorman should encode)
+
+These are the GUIDELINES that should govern frankenstein-llm's choice — express them as runtime-measured rules, not constants:
+
+1. **Capability gate (is this rung usable for THIS turn?):** a box enters the candidate set for a tool turn ONLY if it has demonstrated a clean `tool_calls` response within the SLO recently. A box that 400s on tools (no tool-parser) or streams `reasoning_content` Cline can't parse is NOT tool-capable for that turn — auto-excluded by measured behavior, no hardcoded blocklist.
+2. **Health/capacity is self-discovered:** the safe concurrent cap per box = what its own decode-health sustains without WEDGE (watch generation-tokens forward-progress), re-derived after any topology change. The engine's `--max-num-seqs` is the CEILING, never the operating point.
+3. **Local-first by measured cost, not by name:** prefer rungs with measured cost=$0 (local) and acceptable live tok/s; only spill to paid when local is GENUINELY full (real waiting-queue past the SLO), never on a false-offline probe.
+4. **Keep capable local boxes WARM so they stay in the rotation:** a box that unloads its model (ollama idle-evict) flaps in/out of the candidate set. The guideline: keep-warm any box the router wants as standing capacity, so its membership is stable — capability persists rather than being re-discovered cold every spike.
+5. **The ladder ORDER is a policy (machines → runpods → deepseek → sonnet LAST), the MEMBERS are discovered.** Ruben sets the policy order once; which concrete box fills each tier is decided live by capability+health, so the policy survives every hardware change without a config edit.
+
+### The Doctor's bias when fixing
+
+When a Doctor session finds a routing problem, the durable fix is almost always a BEHAVIORAL one (a better health probe, a capability check, a self-derived cap, a keep-warm) — NOT a new hardcoded constant. If your fix is "I set FRANK_X=N", ask: *"will this drift the next time the topology changes? Could the system DISCOVER this value instead?"* If yes, the hardcode is a band-aid (rule 92) — file the agentic version as the real fix. Interim hardcodes to stop active bleeding are acceptable ONLY paired with a filed idea to replace them with measured behavior.
+
+(2026-06-17 source: during the CX7 stress test, the wedges traced to exactly the hardcoded constants above — a stale :11507 in FRANK_TOOLS_UPSTREAMS, a pre-merge FRANK_BOX_CAPACITY=2, a 2s load-probe timeout, a hardcoded joshua rung that 400s on tools. Each interim fix was a new constant; the DURABLE fixes — idea #13075 + the capability/health-discovery work — make the router choose by measured capability so the constants stop drifting.)
+
 ## The protocol (in order — do NOT skip the first two)
+
 
 ### Step 0 — Consult the documentation FIRST (mandatory, per rules 156 + 141)
 
@@ -100,9 +127,24 @@ Re-run the EXACT failing shape (stream + tools) end-to-end and confirm the previ
 
 ### Step 5 — Document + harden so it never recurs (kill the second bird)
 
-1. `bug_library_record(...)` — symptom, diagnosis, the exact resolution commands, live evidence, status=resolved. (rule 156) Catalogue EVERY distinct bug encountered in the session, not just the headline one — a single Doctor session often uncovers a stack (wedged adapter + routing rank + a code defect); each gets its own bug-library row.
-2. If the bug was a process/config that WILL drift again (e.g. an autosync or a rank that a future idea could re-raise), file an idea (rule 38, autonomous tier) or add a watchdog so the core self-heals. Changing the process IS the work, not a follow-up (rule 92).
+1. `bug_library_record(...)` — symptom, diagnosis, the exact resolution commands, live evidence, status. (rule 156) **Record EVERY distinct symptom AND its SOLUTION, not just the headline one.** A single Doctor session routinely uncovers a stack (wedged adapter + routing rank + load-probe timeout + dead rung); EACH gets its own row, and the `resolution` field MUST carry the exact commands/config/file:line + backup path that fixed it so the next agent applies it verbatim, not re-derives it. A symptom recorded WITHOUT its solution is half a row — go back and fill the resolution. If still in progress, record status=investigating WITH the proposed resolution, then flip to resolved when shipped. Ruben directive 2026-06-17: *"all stuff like this goes into bug library... make more reports to bug library and also about the solutions there too — needs to be referenced in the frankenstein doctor cline rule."*
+2. If the bug was a process/config that WILL drift again (e.g. an autosync, a rank, or a pre-merge capacity throttle a future idea could re-raise), file an idea (rule 38, autonomous tier) or add a watchdog so the core self-heals. Changing the process IS the work, not a follow-up (rule 92).
 3. HANDOFF_NOTES + ledger row per the wrap-up rules.
+
+### Known-resolution catalog — recurring frankenstein-llm routing/resilience bugs (run `bug_library_check_before_fix` FIRST; append every session)
+
+These problem_keys are the high-frequency hits — the bug library has the full symptom+resolution for each. Append new ones here AND to the library every Doctor session.
+
+- **`frankenstein_window_loop_raw_artemis_content_leak_2026_06_16`** — interactive tool turn hit a raw 120B (not the :11510 adapter), tool args leaked into message.content → loop. Fix: demote raw-120B `tool_rank` below the adapter rank (rule 148) + safe litellm restart.
+- **`frankenstein_tools_adapter_send_as_sse_undefined_2026_06_16`** — adapter streaming-tools path called an undefined helper → NameError → 502 → deepseek reasoning-leak → "empty/unparsable." Fix: define the helper; ast.parse; restart frankenstein-tools.
+- **`frankenstein_llm_cx7_cap2_throttle_plus_cato11507_separate_doorman503_openrouter_leak_2026_06_17`** — after Cato+Cesar merged into ONE CX7 TP=2 cluster (served via Cesar :11506 only), FRANK_TOOLS_UPSTREAMS still listed :11507 separately → :11507 http=000 → quarantined → doorman "no 120B ready" 503 → cloud spill. Fix: drop :11507 from FRANK_TOOLS_UPSTREAMS (CX7 = :11506 + Artemis :11434 only).
+- **`frankenstein_cx7_premerge_cap2_sat1_throttle_eager_spill_2026_06_17`** — pre-merge throttles (FRANK_BOX_CAPACITY=11506=2, FRANK_TOOLS_SAT_INTERACTIVE=1) left after the CX7 merge → doorman fast-failed at 2 concurrent though the engine handles `--max-num-seqs 16`. Fix: re-derive cap from live max-num-seqs (→10) + raise SAT_INTERACTIVE (→8) to QUEUE locally before spilling. **RULE: after ANY CX7/TP topology change, re-derive FRANK_BOX_CAPACITY from live `--max-num-seqs` and re-check SAT — never leave pre-merge throttles.** WEDGE-check after raising (rule 157; cap=3 wedged the PRE-merge single Cesar — merged capacity differs, verify).
+- **`frankenstein_adapter_load_probe_timeout_2s_false_offline_spill_2026_06_17`** — `_upstream_load()` probes vLLM /metrics with `timeout=2`; a healthy-busy CX7 box mid-prefill misses 2s → except → `LOAD_OFFLINE` → false "saturated" → cloud spill while the box is fine. Fix: raise probe timeout 2→5s AND on probe-Exception reuse last-known cached load (or light load=5.0) when the canary says NOT quarantined. (27 false-spills/2min → 0.)
+- **`frankenstein_artemis_ollama_120b_canary_quarantine_tok_s_zero_lost_local_rung_2026_06_17`** — Artemis ollama :11434 (gpt-oss:120b) UP (200) but canary marks tok_s=0/unhealthy → excluded → only Cesar serves → spill sooner. Fix (in progress): fix the canary ollama-path tok_s measurement so a healthy ollama box stays the 2nd local rung.
+- **`frankenstein_llm_spill_joshua_400_tools_deepseek_reasoning_leak_deadrung_2026_06_17`** — joshua-llama3.3-70b (vLLM-XPU) launched WITHOUT `--enable-auto-tool-choice --tool-call-parser` → 400 on every tool turn; next rung deepseek reasoning-leaks → spill wedges Cline. Fix: add the tool-parser flags to joshua, OR keep tool-capable rungs only. **Ruben 2026-06-17: do NOT shortcut the fallback to claude-sonnet — the order machines→runpods→deepseek→sonnet-LAST is correct; fix RESILIENCE (keep load local), don't demote to paid.**
+
+**Meta-lesson (Ruben 2026-06-17): the recurring failure class is EAGER CLOUD SPILL while a healthy local box could have served.** Before touching the fallback list, ask "is a local box being WRONGLY EXCLUDED (false-offline probe, stale pre-merge cap, false quarantine)?" — fix THAT (resilience: keep it local) rather than re-ordering the ladder. The doorman/Kaizon talent-agent should saturate the local CX7 + 70B/runpod rungs and only spill to deepseek (then sonnet LAST) when local is genuinely full.
+
 
 ## Step 6 — Revive Frankenstein (≥3 attempts), then euthanize cleanly — but NEVER leave the work undone
 

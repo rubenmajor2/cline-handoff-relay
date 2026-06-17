@@ -320,7 +320,10 @@ function buildInMemoryIndex() {
         };
         const rr = row;
         inMemBySlug.set(slug, rr);
-        inMemByRuleId.set(rule_id, rr);
+        // Preserve first rule_id winner so Rules/ hardfloor entries beat archive duplicates.
+        if (!inMemByRuleId.has(rule_id)) {
+            inMemByRuleId.set(rule_id, rr);
+        }
         inMemAll.push(rr);
     }
 }
@@ -346,6 +349,21 @@ catch (e) {
 }
 // CLI mode: `node build/index.js --reindex-only`
 if (process.argv.includes("--reindex-only")) {
+    if (dbMode !== "native" || !db) {
+        buildInMemoryIndex();
+        const bytes = inMemAll.reduce((sum, r) => sum + (r.size_bytes || 0), 0);
+        const tokens = inMemAll.reduce((sum, r) => sum + (r.size_tokens_est || 0), 0);
+        const hardfloor = inMemAll.reduce((sum, r) => sum + (r.is_hardfloor ? 1 : 0), 0);
+        console.error(JSON.stringify({
+            ok: true,
+            fallback: true,
+            count: inMemAll.length,
+            total_bytes: bytes,
+            total_tokens: tokens,
+            hardfloor_count: hardfloor,
+        }, null, 2));
+        process.exit(0);
+    }
     const stats = reindex(db, true);
     console.error(JSON.stringify({ ok: true, ...stats }, null, 2));
     process.exit(0);
@@ -475,11 +493,50 @@ server.tool("clinerules_search", "Full-text search across all .clinerules bodies
     limit: zod_1.z.number().int().min(1).max(20).default(5).describe("Max results (default 5)."),
     task_id: zod_1.z.string().optional().describe("Optional Cline task ID for audit telemetry."),
 }, async ({ query, limit, task_id }) => {
-    // Sanitize: FTS5 hates unmatched quotes and certain punctuation
     const safe = query.replace(/["']/g, " ").replace(/[^\w\s\-]/g, " ").trim();
     if (!safe) {
         return { content: [{ type: "text", text: `Empty/unsupported query: '${query}'.` }] };
     }
+    // Fallback mode: naive substring scoring, no db.prepare
+    if (dbMode !== "native" || !db) {
+        const q = safe.toLowerCase();
+        const toks = q.split(/\s+/).filter(Boolean).slice(0, 12);
+        const scored = inMemAll.map((r) => {
+            const hayTitle = r.title.toLowerCase();
+            const hayBody = r.body.toLowerCase();
+            let score = 0;
+            for (const t of toks) {
+                if (!t)
+                    continue;
+                if (hayTitle.includes(t))
+                    score += 6;
+                if (hayBody.includes(t))
+                    score += 2;
+            }
+            return { r, score };
+        }).filter((x) => x.score > 0)
+            .sort((a, b) => b.score - a.score)
+            .slice(0, limit);
+        logLookup(null, null, query, "search_fallback", task_id);
+        if (!scored.length) {
+            return { content: [{ type: "text", text: `No matches for '${query}'. Browse ~/Documents/Cline/Rules/_INDEX.md.` }] };
+        }
+        const out = [`🔎 ${scored.length} match(es) for '${query}':`, ""];
+        for (const { r } of scored) {
+            // snippet: first occurrence window
+            const lower = r.body.toLowerCase();
+            const idx = toks.length ? lower.indexOf(toks[0]) : -1;
+            const start = idx >= 0 ? Math.max(0, idx - 80) : 0;
+            const snippet = r.body.slice(start, start + 220).replace(/\s+/g, " ").trim();
+            out.push(`• Rule ${r.rule_id} — ${r.title}  (~${r.size_tokens_est} tokens${r.is_hardfloor ? ", hardfloor" : ""})`);
+            out.push(`  slug: ${r.slug}`);
+            out.push(`  ${snippet}${snippet.length >= 220 ? "…" : ""}`);
+            out.push("");
+        }
+        out.push("Use clinerules_lookup(rule_id='<id>') to fetch the full body.");
+        return { content: [{ type: "text", text: out.join("\n") }] };
+    }
+    // Native DB mode
     let rows;
     try {
         rows = db.prepare(`
@@ -514,6 +571,28 @@ server.tool("clinerules_list_by_topic", "List rules matching a topic keyword wit
     topic: zod_1.z.string().describe("Topic keyword. Matches rule titles, slugs, and first 500 chars of body."),
     limit: zod_1.z.number().int().min(1).max(50).default(15),
 }, async ({ topic, limit }) => {
+    if (dbMode !== "native" || !db) {
+        const needle = topic.toLowerCase();
+        const matches = inMemAll
+            .filter((r) => r.title.toLowerCase().includes(needle) ||
+            r.slug.toLowerCase().includes(needle) ||
+            r.body.toLowerCase().includes(needle))
+            .sort((a, b) => (b.is_hardfloor - a.is_hardfloor) || (a.rule_id.localeCompare(b.rule_id)))
+            .slice(0, limit);
+        if (!matches.length) {
+            return { content: [{ type: "text", text: `No rules matching topic '${topic}'.` }] };
+        }
+        const out = [`📚 ${matches.length} rule(s) matching topic '${topic}':`, ""];
+        for (const r of matches) {
+            const star = r.is_hardfloor ? "★" : " ";
+            const preview = r.body.replace(/\s+/g, " ").trim().slice(0, 120);
+            out.push(`${star} Rule ${r.rule_id} — ${r.title} (~${r.size_tokens_est}t)`);
+            out.push(`    ${preview}…`);
+        }
+        out.push("");
+        out.push("★ = hardfloor (always in system prompt). Use clinerules_lookup() for full body.");
+        return { content: [{ type: "text", text: out.join("\n") }] };
+    }
     const t = `%${topic.replace(/[%_]/g, "")}%`;
     const rows = db.prepare(`
       SELECT rule_id, slug, title, size_tokens_est, is_hardfloor,
@@ -542,6 +621,17 @@ server.tool("clinerules_record_violation", "Record an instance of a .clinerules 
     task_id: zod_1.z.string().describe("Cline task ID where the violation occurred."),
     evidence: zod_1.z.string().describe("Brief evidence text (1-2 sentences, what was violated + how)."),
 }, async ({ rule_id, task_id, evidence }) => {
+    if (dbMode !== "native" || !db) {
+        // fallback: don't crash, just acknowledge
+        const row = findRule(rule_id);
+        const resolvedId = row ? row.rule_id : rule_id;
+        return {
+            content: [{
+                    type: "text",
+                    text: `✓ Recorded violation (fallback/no-native-sqlite) of rule ${resolvedId} for task ${task_id}.`,
+                }],
+        };
+    }
     const row = findRule(rule_id);
     const resolvedId = row ? row.rule_id : rule_id;
     db.prepare(`INSERT INTO violations (rule_id, task_id, evidence) VALUES (?,?,?)`)
@@ -555,6 +645,16 @@ server.tool("clinerules_record_violation", "Record an instance of a .clinerules 
     };
 });
 server.tool("clinerules_reindex", "Rebuild the SQLite + FTS5 index from ~/Documents/Cline/Rules/. Call after editing a rule file. Idempotent.", {}, async () => {
+    if (dbMode !== "native" || !db) {
+        // fallback: rebuild in-memory index
+        buildInMemoryIndex();
+        return {
+            content: [{
+                    type: "text",
+                    text: `✓ Reindexed (fallback/in-memory): ${inMemAll.length} rules.`,
+                }],
+        };
+    }
     const s = reindex(db, false);
     return {
         content: [{
@@ -564,6 +664,14 @@ server.tool("clinerules_reindex", "Rebuild the SQLite + FTS5 index from ~/Docume
     };
 });
 server.tool("clinerules_stats", "Quick stats on the rules corpus + recent lookup activity. Used to verify the MCP is healthy and to track adoption.", {}, async () => {
+    if (dbMode !== "native" || !db) {
+        return {
+            content: [{
+                    type: "text",
+                    text: `clinerules-mcp v${VERSION}\nCorpus (fallback/in-memory): ${inMemAll.length} rules\nNative sqlite: unavailable`,
+                }],
+        };
+    }
     const corpus = db.prepare(`
       SELECT COUNT(*) AS n, SUM(size_bytes) AS bytes, SUM(size_tokens_est) AS tokens,
              SUM(is_hardfloor) AS hf, SUM(has_source_incident) AS with_src
@@ -736,14 +844,13 @@ server.tool("clinerules_propose_rule", "Submit a proposed new clinerule to the W
 (async () => {
     const transport = new stdio_js_1.StdioServerTransport();
     await server.connect(transport);
-    // 2026-05-19 v2 fix (Phase 3 follow-up): do NOT reindex at startup.
-    // The SQLite index from the previous run is already populated. Any stale
-    // entry will be fixed on the next `clinerules_reindex` tool call or by
-    // the background interval below. Cline's MCP initialize timeout is short
-    // and any startup work (even 200ms) was racing it.
+    if (dbMode !== "native" || !db) {
+        console.error(`[clinerules-mcp] v${VERSION} stdio connected · fallback in-memory index ready (${inMemAll.length} rules) · ready to serve`);
+        return;
+    }
+    // native DB mode
     const initialCount = db.prepare(`SELECT COUNT(*) AS n FROM rules`).get()?.n ?? 0;
     console.error(`[clinerules-mcp] v${VERSION} stdio connected · ${initialCount} rules from cached index · ready to serve`);
-    // Background reindex every 5 min picks up any new/edited rule.
     setInterval(() => {
         try {
             stats = reindex(db, false);
@@ -752,8 +859,6 @@ server.tool("clinerules_propose_rule", "Submit a proposed new clinerule to the W
             console.error(`[clinerules-mcp] background reindex failed: ${e?.message}`);
         }
     }, 5 * 60 * 1000);
-    // Also do one reindex 10s after startup, so a fresh install is up-to-date
-    // soon after first launch (but well after any init handshake is done).
     setTimeout(() => {
         try {
             stats = reindex(db, true);

@@ -54,14 +54,10 @@ var __importStar = (this && this.__importStar) || (function () {
         return result;
     };
 })();
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 const mcp_js_1 = require("@modelcontextprotocol/sdk/server/mcp.js");
 const stdio_js_1 = require("@modelcontextprotocol/sdk/server/stdio.js");
 const zod_1 = require("zod");
-const better_sqlite3_1 = __importDefault(require("better-sqlite3"));
 const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
 const os = __importStar(require("os"));
@@ -265,9 +261,89 @@ process.on("uncaughtException", (e) => {
 process.on("unhandledRejection", (e) => {
     console.error(`[clinerules-mcp] unhandledRejection (swallowed): ${e?.message || e}`);
 });
-const db = new better_sqlite3_1.default(DB_PATH);
-db.pragma("journal_mode = WAL");
-initSchema(db);
+let dbMode = "native";
+let db = null;
+let inMemBySlug = new Map();
+let inMemByRuleId = new Map();
+let inMemAll = [];
+function buildInMemoryIndex() {
+    const collected = [];
+    const walk = (dir) => {
+        if (!fs.existsSync(dir))
+            return;
+        for (const f of fs.readdirSync(dir).sort()) {
+            if (!f.endsWith(".md"))
+                continue;
+            collected.push({ full: path.join(dir, f), filename: f });
+        }
+    };
+    walk(RULES_DIR);
+    walk(ARCHIVE_DIR);
+    const seen = new Set();
+    const files = collected.filter((c) => {
+        const slug = c.filename.replace(/\.md$/, "");
+        if (seen.has(slug))
+            return false;
+        seen.add(slug);
+        return true;
+    });
+    inMemBySlug = new Map();
+    inMemByRuleId = new Map();
+    inMemAll = [];
+    for (const { full, filename: f } of files) {
+        const stat = fs.statSync(full);
+        const body = fs.readFileSync(full, "utf-8");
+        const slug = f.replace(/\.md$/, "");
+        const rule_id = parseRuleId(f);
+        const title = extractTitle(body, slug);
+        const refs = extractCrossRefs(body);
+        const sizeBytes = stat.size;
+        const sizeTokens = Math.ceil(body.length / 4);
+        const hasSrc = hasSourceIncident(body) ? 1 : 0;
+        const isHf = HARDFLOOR_SLUGS.has(slug) ? 1 : 0;
+        const lastUpdMatch = body.match(/##\s+(?:last\s+updated|Last\s+updated)\s*\n+\s*([\d-]+)/i);
+        const lastUpd = lastUpdMatch ? lastUpdMatch[1] : "";
+        const row = {
+            rule_id,
+            slug,
+            filename: f,
+            path: full,
+            title,
+            body,
+            size_bytes: sizeBytes,
+            size_tokens_est: sizeTokens,
+            cross_refs: JSON.stringify(refs),
+            last_updated: lastUpd,
+            has_source_incident: hasSrc,
+            is_hardfloor: isHf,
+            mtime: Math.floor(stat.mtimeMs),
+        };
+        const rr = row;
+        inMemBySlug.set(slug, rr);
+        inMemByRuleId.set(rule_id, rr);
+        inMemAll.push(rr);
+    }
+}
+try {
+    // native sqlite (better-sqlite3) path
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const NativeDB = require("better-sqlite3");
+    const NativeDatabase = NativeDB.default ?? NativeDB;
+    db = new NativeDatabase(DB_PATH);
+    db.pragma("journal_mode = WAL");
+    initSchema(db);
+}
+catch (e) {
+    dbMode = "fallback";
+    try {
+        buildInMemoryIndex();
+        console.error(`[clinerules-mcp] native better-sqlite3 unavailable, running fallback in-memory index. err=${e?.message || e}`);
+    }
+    catch (e2) {
+        console.error(`[clinerules-mcp] fallback in-memory index build failed: ${e2?.message || e2}`);
+        // still keep process alive; tools will return safe errors
+    }
+}
 // CLI mode: `node build/index.js --reindex-only`
 if (process.argv.includes("--reindex-only")) {
     const stats = reindex(db, true);
@@ -289,6 +365,8 @@ const server = new mcp_js_1.McpServer({
     version: VERSION,
 });
 function logLookup(rule_id, slug, query, via, task_id) {
+    if (dbMode !== "native" || !db)
+        return;
     try {
         db.prepare(`INSERT INTO lookups (rule_id, slug, query, via, task_id) VALUES (?,?,?,?,?)`)
             .run(rule_id, slug, query, via, task_id || null);
@@ -296,11 +374,45 @@ function logLookup(rule_id, slug, query, via, task_id) {
     catch { /* never fail a lookup on telemetry */ }
 }
 function violationCount(rule_id) {
+    if (dbMode !== "native" || !db)
+        return 0;
     const r = db.prepare(`SELECT COUNT(*) AS n FROM violations WHERE rule_id = ?`).get(rule_id);
     return r.n;
 }
 function findRule(query) {
     const q = query.trim();
+    if (dbMode !== "native" || !db) {
+        // in-memory exact slug
+        const bySlug = inMemBySlug.get(q);
+        if (bySlug)
+            return bySlug;
+        // exact rule_id
+        const byId = inMemByRuleId.get(q);
+        if (byId)
+            return byId;
+        // numeric variants: strip leading zeros, then prefix match
+        if (/^\d+$/.test(q)) {
+            const n = parseInt(q, 10);
+            const padded2 = n.toString().padStart(2, "0");
+            const direct = inMemByRuleId.get(n.toString());
+            if (direct)
+                return direct;
+            const prefix = `${padded2}-`;
+            const match = inMemAll.find((r) => r.slug.startsWith(prefix) || r.slug.startsWith(`${n}-`));
+            if (match)
+                return match;
+        }
+        // filename match (cheap scan)
+        const fnMatch = inMemAll.find((r) => r.filename === q);
+        if (fnMatch)
+            return fnMatch;
+        // slug prefix
+        const pref = inMemAll.find((r) => r.slug.startsWith(q));
+        if (pref)
+            return pref;
+        return null;
+    }
+    // native DB path
     // Try exact slug
     let r = db.prepare(`SELECT * FROM rules WHERE slug = ?`).get(q);
     if (r)

@@ -64,10 +64,26 @@ Paste into any window that has researched a lot and deployed nothing:
 
 Rule 00 makes `use_subagents` the opening research move to MAP the problem — that's fine as the first shot. This rule governs everything after: once you're building, you operate on Definition-of-Done + change→verify loops, and subagents are not a recurring "read more" habit. Rule 00 starts you; rule 137 makes you converge.
 
+## Completion Gate (added 2026-06-17 — forces the loop to actually FINISH)
+
+Declaring a Definition-of-Done (above) is the START gate. This is the STOP gate. A window that did the analysis + the easy edit can still call `attempt_completion` while the load-bearing change is unverified or missing. To make that impossible:
+
+**A deploy/build `attempt_completion` in a "done" framing is INVALID unless its final message PASTES the literal live-verify output proving each Definition-of-Done line passed.**
+
+1. **Pasted proof, not prose.** The completion must contain the actual command output (curl result, live re-pull count, concurrency p95) — never "I verified" / "should be working." No pasted pass = the completion is invalid; keep working.
+2. **One proof line PER SURFACE.** If the task touches multiple surfaces (local DB **and** an external API **and** live PHP **and** a config), each gets its OWN Definition-of-Done line with its OWN verify output. Editing the EASY surface does NOT satisfy a HARD-surface line. (e.g. "DB tools_json updated" is NOT proof for "live VAPI cloud: tools_with_fail_msg=104" — the cloud PATCH is a separate, separately-verified line.)
+3. **Partial = BLOCKED, not done.** If any line fails or is unverified, the window must EITHER keep working until it passes, OR call `attempt_completion` explicitly labeled **BLOCKED** naming the failing line. The silent "good enough, exit" path is prohibited. The only two legal completions are "verified done (proof pasted)" and "BLOCKED on <named line>."
+
+Why structural, not advisory: rules 137 (declare DoD) + 140/29-Q#5 (verify live) were ADVISORY and got skipped — a window about to stop short does not re-read a rule about not stopping short. Tying `attempt_completion` validity to pasted proof converts "I should verify" (ignorable) into "I cannot finish without the proof" (a checkable shape, same mechanism as rule 41's "last action is a tool call"). This does NOT guarantee 100% completion — a genuine blocker (tunnel down, missing credential, external API rejects) is fine; clause 3 handles it via an explicit BLOCKED disposition. The goal is: a window can no longer stop short SILENTLY.
+
+Full rationale + the source incident: queryable archive companion (verify-live rule = the detection half; this gate = the forcing half).
+
 ## Source incident
 
 2026-06-04 — 7 windows building EMSU Team Hub for hours, 0 deploys across 300 router prompts despite 119 execute_command + 62 ssh + 11 subagent dispatches; connecteam_schedules.php re-read 18×. Ruben rejected a read-count cap as a band-aid and directed a durable, productive fix. Research (Aider/SWE-agent/OpenHands/test-driven agent loops) converged on the same answer: subjective stop conditions cause infinite research; objective acceptance checks (verification-driven convergence) are the durable cure; scope caps are band-aids.
 
 ## Last updated
+
+2026-06-17 — added the **Completion Gate** (STOP gate): deploy/build `attempt_completion` is invalid without pasted live-verify output proving each Definition-of-Done line passed; one proof line per surface; partial = explicit BLOCKED, never a silent "done." Source: 2026-06-16 — VAPI windows did the analysis + the easy DB/string edit but skipped the load-bearing live VAPI cloud PATCH + the session_write_close PHP fix, then called done; only a human live re-check caught it twice. Structural fix for the "stops short silently" failure mode (the verify-live rule detects it; this gate forces it).
 
 2026-06-04 — v2 rewrite. Replaced the v1 "≤5 files before first write" cap (Ruben correctly called it a band-aid) with verification-driven convergence: declare a runnable Definition-of-Done first, then loop smallest-change→verify→done. The acceptance check is the terminating predicate that ends research-forever; decomposition into checked units is the parallel-window fix.

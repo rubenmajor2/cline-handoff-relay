@@ -32,7 +32,7 @@ const stdio_js_1 = require("@modelcontextprotocol/sdk/server/stdio.js");
 const zod_1 = require("zod");
 const child_process_1 = require("child_process");
 const crypto_1 = require("crypto");
-const VERSION = "0.2.0";
+const VERSION = "0.2.1";
 // ─── Error handlers ───────────────────────────────────────────────────────────
 process.stdin.on("error", (e) => {
     console.error(`[bug-library] stdin error (swallowed): ${e?.code || e?.message}`);
@@ -76,7 +76,7 @@ function woprQuery(sql) {
     -o BatchMode=yes \
     -o ServerAliveInterval=5 \
     emsuserver@emsuniversity.com \
-    "mysql -N --batch admin_portal"`;
+    "mysql --defaults-file=/home/emsuserver/.my.cnf -N --batch admin_portal"`;
     let raw;
     try {
         raw = (0, child_process_1.execSync)(cmd, { timeout: 15_000, encoding: "utf8", shell: "/bin/bash" });
@@ -128,7 +128,7 @@ function woprExecB64(sql) {
     -o BatchMode=yes \
     -o ServerAliveInterval=5 \
     emsuserver@emsuniversity.com \
-    "base64 -d | mysql -N --batch admin_portal"`;
+    "base64 -d | mysql --defaults-file=/home/emsuserver/.my.cnf -N --batch admin_portal"`;
     try {
         return (0, child_process_1.execSync)(cmd, { timeout: 15_000, encoding: "utf8", shell: "/bin/bash" });
     }

@@ -32,7 +32,7 @@ import { z } from "zod";
 import { execSync } from "child_process";
 import { randomBytes } from "crypto";
 
-const VERSION = "0.2.0";
+const VERSION = "0.2.1";
 
 // ─── Error handlers ───────────────────────────────────────────────────────────
 process.stdin.on("error", (e: any) => {
@@ -94,7 +94,7 @@ function woprQuery(sql: string): Record<string, string>[] {
     -o BatchMode=yes \
     -o ServerAliveInterval=5 \
     emsuserver@emsuniversity.com \
-    "mysql -N --batch admin_portal"`;
+    "mysql --defaults-file=/home/emsuserver/.my.cnf -N --batch admin_portal"`;
 
   let raw: string;
   try {
@@ -149,7 +149,7 @@ function woprExecB64(sql: string): string {
     -o BatchMode=yes \
     -o ServerAliveInterval=5 \
     emsuserver@emsuniversity.com \
-    "base64 -d | mysql -N --batch admin_portal"`;
+    "base64 -d | mysql --defaults-file=/home/emsuserver/.my.cnf -N --batch admin_portal"`;
   try {
     return execSync(cmd, { timeout: 15_000, encoding: "utf8", shell: "/bin/bash" });
   } catch (e: any) {

@@ -48,6 +48,40 @@ warn() { echo "WARN $SLUG: $*" >&2; glog "WARN: $*"; }
 fail() { echo "FAIL $SLUG: $*" >&2; glog "FAIL: $*"; exit 2; }
 ok()   { glog "OK"; }
 
+# ----------------------------------------------------------------------
+# Atomic next-number claim for Clinerule IDs
+# ----------------------------------------------------------------------
+# Thread-safe helper that returns the next available integer rule number.
+# Uses flock(1) on a hidden counter file so multiple concurrent Cline
+# windows cannot claim the same number at the same time.
+#
+# Usage:
+#   NEXT_NUM=$(get_next_rule_number)
+#   mv my-rule.md "${NEXT_NUM}-my-slug.md"
+get_next_rule_number() {
+    local COUNTER_FILE="${RULES_DIR}/.clinerule_counter"
+
+    # Initialise counter file at 0 if it does not exist yet
+    [ -f "$COUNTER_FILE" ] || echo "0" > "$COUNTER_FILE"
+
+    # Acquire an exclusive flock on a companion lock file
+    local LOCK_FD=200
+    exec 200>"${COUNTER_FILE}.lock"
+    flock ${LOCK_FD}
+
+    # Read -> increment -> write back atomically
+    local LAST_NUM NEXT_NUM
+    LAST_NUM=$(cat "$COUNTER_FILE")
+    NEXT_NUM=$(( LAST_NUM + 1 ))
+    echo "$NEXT_NUM" > "$COUNTER_FILE"
+
+    # Release the lock
+    flock -u ${LOCK_FD}
+
+    # Return the new number to the caller
+    echo "$NEXT_NUM"
+}
+
 HARDFLOOR_SLUGS=(
     "00-READ-FIRST-17-force-subagent-use-on-research-and-multi-step-builds"
     "01-voice-and-persona"
@@ -70,7 +104,7 @@ HARDFLOOR_SLUGS=(
     "143-prose-loop-circuit-breaker"
 )
 
-# ─── G5 hardfloor (runs first; immediate block) ──────────────────────────
+# --- G5 hardfloor (runs first; immediate block) --------------------------
 is_hardfloor=0
 for hf in "${HARDFLOOR_SLUGS[@]}"; do
     if [ "$SLUG" = "$hf" ]; then is_hardfloor=1; break; fi
@@ -82,7 +116,7 @@ if [ "$is_hardfloor" = "1" ] && [ "$OVERRIDE" != "--override" ]; then
     fail "G5 hardfloor: blocked. Hardfloor rules need explicit override flag."
 fi
 
-# ─── G2 section-length ────────────────────────────────────────────────────
+# --- G2 section-length ---------------------------------------------------
 BYTES=$(wc -c < "$FILE" | tr -d ' ')
 if [ "$BYTES" -gt 8192 ]; then
     warn "G2 section-length: file is $BYTES bytes (>8 KB). Consider splitting."
@@ -97,7 +131,7 @@ if [ -n "$MAX_SECTION" ] && [ "$MAX_SECTION" -gt 4096 ]; then
     warn "G2 section-length: largest section is $MAX_SECTION bytes (>4 KB)."
 fi
 
-# ─── G3 phrase-redundancy ─────────────────────────────────────────────────
+# --- G3 phrase-redundancy ------------------------------------------------
 for phrase in "this rule exists" "the bright-line rule" "the bright line rule" "self-check before"; do
     n=$(grep -c -i "$phrase" "$FILE" || true)
     if [ "$n" -gt 3 ]; then
@@ -105,14 +139,14 @@ for phrase in "this rule exists" "the bright-line rule" "the bright line rule" "
     fi
 done
 
-# ─── G4 source-incident (skip hardfloor; they don't need it) ─────────────
+# --- G4 source-incident (skip hardfloor; they don't need it) -------------
 if [ "$is_hardfloor" = "0" ]; then
     if ! grep -q -i -E "(source incident|## source|## last updated|^Source:)" "$FILE"; then
         warn "G4 source-incident: no 'Source incident' / '## Source' / '## Last updated' citation found."
     fi
 fi
 
-# ─── G1 embed-sim (Jaccard similarity over 4-grams of words) ─────────────
+# --- G1 embed-sim (Jaccard similarity over 4-grams of words) -------------
 # Cheap proxy for "did we just write something paraphrased of an existing rule?"
 # Block at >0.75, warn at >0.55. Skip self.
 python3 - "$FILE" "$RULES_DIR" "$SLUG" <<'PYEOF'
@@ -166,7 +200,7 @@ if [ "$G1_RC" = "2" ]; then
     exit 2
 fi
 
-# ─── Reindex the MCP so the change is queryable immediately ──────────────
+# --- Reindex the MCP so the change is queryable immediately --------------
 # (best-effort, non-fatal)
 node /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js --reindex-only > /dev/null 2>&1 &
 

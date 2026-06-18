@@ -1,4 +1,4 @@
-# 161 — Async deep-reasoning consult: fire-and-forget the 235B (or 405B teacher) in the background, never block the interactive window
+# 164 — Async deep-reasoning consult: fire-and-forget the 235B (or 405B teacher) in the background, never block the interactive window
 
 Source: 2026-06-16 Ruben directive — "make a cline rule: call the 235 for analysis but do it safely so it does not 000, and queue the task so it runs in the background while other work is being done, like a nohup. I don't really know when I'd use it TBH, would appreciate your opinion."
 

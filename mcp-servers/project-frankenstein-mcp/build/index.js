@@ -284,7 +284,7 @@ const TOOLS = [
     },
     {
         name: "frankenstein_tier_health",
-        description: "Live fleet tier health: which tiers are UP/DOWN, latency per tier, any recent flips or anomalies. Queries the fleet API live (bounded 10s fetch). Returns tier status map + staleness note if the API is unreachable. Use with frankenstein_architecture before any routing decision. STDIO, cannot hang.",
+        description: "Live fleet tier health + adapter decode-liveness (idea #13121): which tiers are UP/DOWN, latency per tier, recent flips. Now also includes adapter_canary_decode: per-upstream {healthy, decode_live, tok_s, quarantined} from frankenstein_canary_health.json — decode_live=False means an upstream passes HTTP but generates zero decode tokens. Queries the fleet API live (bounded 10s fetch). Returns tier status map + staleness note if the API is unreachable. Use with frankenstein_architecture before any routing decision. STDIO, cannot hang.",
         inputSchema: { type: "object", properties: {}, required: [] },
     },
     {
@@ -328,7 +328,7 @@ const TOOLS = [
     },
     {
         name: "frankenstein_host_probe",
-        description: "Live per-host generation speed: tok_per_s + last_gen_ms measured from a REAL 8-token generation probe on each serving host (cesar-120b/cato-120b/artemis-120b/artemis-70b/joshua-70b/sms-70b/wopr-14b). Cache refreshed every ~60s by the emsu-host-gen-probe cron on WOPR. Use this BEFORE saying \'is Artemis serving at full speed?\' - it shows actual tok/s, not just /v1/models HTTP 200. A host with tok_per_s < 2.5 is excluded from _120b_member_available (speed gate, idea #12459 Window 5). This is the one-call answer to \'why is Artemis slow?\'",
+        description: "Live per-host generation speed + decode-liveness (idea #13121): tok_per_s + last_gen_ms from a REAL 8-token probe; now also decode_live (True=probe generated real tokens=ALIVE, False=error or 0-tokens=DEAD) + kv_pct (vllm gpu_cache_usage_perc) + kv_doa (near-zero KV while serving=DOA). decode_live=False means box needs quarantine even if HTTP-200. See decode_live/kv_doa fields per host. measured from a REAL 8-token generation probe on each serving host (cesar-120b/cato-120b/artemis-120b/artemis-70b/joshua-70b/sms-70b/wopr-14b). Cache refreshed every ~60s by the emsu-host-gen-probe cron on WOPR. Use this BEFORE saying \'is Artemis serving at full speed?\' - it shows actual tok/s, not just /v1/models HTTP 200. A host with tok_per_s < 2.5 is excluded from _120b_member_available (speed gate, idea #12459 Window 5). This is the one-call answer to \'why is Artemis slow?\'",
         inputSchema: { type: "object", properties: {}, required: [] },
     },
     {

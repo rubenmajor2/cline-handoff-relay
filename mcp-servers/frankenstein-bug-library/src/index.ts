@@ -89,12 +89,68 @@ function esc(s: string, maxLen = 1000): string {
 
 function woprQuery(sql: string): Record<string, string>[] {
   const cmd = `echo ${JSON.stringify(sql)} | ssh -p 2222 \
+const cmd = `echo ${JSON.stringify(sql)} | ssh -p 2222 \
+const cmd = `echo ${JSON.stringify(sql)} | ssh -p 2222 \
+const cmd = `echo ${JSON.stringify(sql)} | ssh -p 2222 \
+const cmd = `echo ${JSON.stringify(sql)} | ssh -p 2222 \
+------ REPLACE
+const cmd = `echo ${JSON.stringify(sql)} | ssh -p 2222 \
+const cmd = `echo ${JSON.stringify(sql)} | ssh -p 2222 \
+const cmd = `echo ${JSON.stringify(sql)} | ssh -p 2222 \
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+<<<<<<< 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+>>>>>>> 
+------ REPLACE
+const cmd = `echo ${JSON.stringify(sql)} | ssh -p 2222 \
+      -o ConnectTimeout=10 \
+      -o StrictHostKeyChecking=no \
+      -o BatchMode=yes \
+      -o ServerAliveInterval=5 \
+      emsuserver@emsuniversity.com \
+      "mysql --skip-pager --defaults-file=/home/emsuserver/.my.cnf -N --batch admin_portal"`;
     -o ConnectTimeout=10 \
     -o StrictHostKeyChecking=no \
     -o BatchMode=yes \
     -o ServerAliveInterval=5 \
     emsuserver@emsuniversity.com \
-    "mysql --defaults-file=/home/emsuserver/.my.cnf -N --batch admin_portal"`;
+    "mysql --defaults-file=/home/emsuserver/.my.cnf -N --batch --skip-pager admin_portal"`;
 
   let raw: string;
   try {

@@ -76,7 +76,7 @@ function woprQuery(sql) {
     -o BatchMode=yes \
     -o ServerAliveInterval=5 \
     emsuserver@emsuniversity.com \
-    "mysql --defaults-file=/home/emsuserver/.my.cnf -N --batch --skip-pager admin_portal"`;
+    "mysql --skip-pager --defaults-file=/home/emsuserver/.my.cnf -N --batch admin_portal"`;
     let raw;
     try {
         raw = (0, child_process_1.execSync)(cmd, { timeout: 15_000, encoding: "utf8", shell: "/bin/bash" });

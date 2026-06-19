@@ -275,6 +275,27 @@ The registry can document a non-cline ladder (e.g. cesar→artemis→405b→josh
 ### D5 — "is it usable RIGHT NOW" is answered by a live stream+tools probe, not by log absence.
 To tell Ruben a window is safe to use: send a frankenstein-llm request WITH `tools` AND `stream`, and confirm `finish_reason=tool_calls` + a populated `tool_calls` array. NOTE: `content:null` WITH tool_calls is CORRECT (not the bug); the bug is content:null with NO tool_calls (empty). Do not declare "fixed" from "no errors in the log" alone — emit the real shape and read the result.
 
+## DIAGNOSIS DISCIPLINE — the cost-truth + design-truth lessons (added 2026-06-19)
+
+Source incident 2026-06-19: a Doctor/cost session gave Ruben THREE wrong answers before landing the truth. The errors were systemic, so they are now hard rules for every Doctor session:
+
+### D1 — admin_portal.llm_call_log does NOT capture LiteLLM gateway spend. NEVER cite it for frankenstein-llm cost.
+The first cost answer said "$12 total" from `llm_call_log` while the real bill was ~$700. `llm_call_log` only logs the PHP agent surfaces (sms_ai/ticket_ai/idea_miner/shadow_worker). Interactive frankenstein-llm / executor gateway traffic is NOT written there (~13 rows/day vs thousands of real picks). **The ONLY truth source for what frankenstein-llm served + cost is `/tmp/emsu_router_audit.log`** (fields: req, picked, total_chars, ctx_overflow_reroute, v3_reason, is_interactive) — count picks per backend there, and per rule 140 confirm with live response headers. A cost claim sourced from `llm_call_log` for a gateway surface is INVALID.
+
+### D2 — a 500K context reaching Sonnet is the HEAD (distiller) FAILING, never "a context limit." Reason FROM the architecture.
+The second answer described the bug as if it were the design ("no local box holds 500K, so it spills to Sonnet"). WRONG per rule 146: Project Frankenstein = DECOMPOSE→DISTILL→SERVE-LOCAL→REASSEMBLE. Context size must NEVER force a paid/cloud model. If a big context reaches Sonnet, the distiller no-op'd or a healthy local rung was wrongly excluded — find THAT, do not rationalize the spill as inevitable. The recurring failure class is EAGER CLOUD SPILL while a healthy free member could have served. Before blaming "limits," ask: did the distiller actually compress (check pathological_distill ratio<0.9, chunks>1)? Is a local rung being falsely excluded (stale probe, fail-open no-op, missing ladder member)?
+
+### D3 — separate the LOOPING bug from the COST bug. They are different fixes; don't conflate.
+- LOOPING (empty content:null / "did not use a tool" / unknown_tool retries) = the ADAPTER tool-call path (TTFB threshold, _send_as_sse, tool-parser). Fixing it makes windows COMPLETE.
+- COST (frank→paid sonnet/deepseek) = the DISTILLER + spill ladder (context compression, ladder membership/order). Fixing it makes windows CHEAP.
+- LoRA tool-call training improves tool-call QUALITY, it is NOT a cost fix. "Training will fix everything" is wrong. State which bug each fix addresses.
+
+### D4 — confirm the FULL registry ladder is actually implemented in code, not just documented.
+The registry can document a non-cline ladder (e.g. cesar→artemis→405b→joshua-70b→deepseek→sonnet→opus) while the HARDCODED spill function skips members (405b/235b were skipped). Per rule 140, verify the live spill function walks every documented rung; a member that only appears as `explicit_L4` by-name picks (never via the ladder) is NOT actually in the spill path. Registry text is a HYPOTHESIS; the code path + audit log are the truth.
+
+### D5 — "is it usable RIGHT NOW" is answered by a live stream+tools probe, not by log absence.
+To tell Ruben a window is safe to use: send a frankenstein-llm request WITH `tools` AND `stream`, and confirm `finish_reason=tool_calls` + a populated `tool_calls` array. NOTE: `content:null` WITH tool_calls is CORRECT (not the bug); the bug is content:null with NO tool_calls (empty). Do not declare "fixed" from "no errors in the log" alone — emit the real shape and read the result.
+
 ## Self-check before declaring a Doctor session done
 
 1. Did I consult the bug library + project-frankenstein MCP BEFORE probing? (Step 0)
@@ -282,8 +303,7 @@ To tell Ruben a window is safe to use: send a frankenstein-llm request WITH `too
 3. Did I fix the CORE (router/adapter/registry/adapter-code), not just bounce a service? (rule 92)
 4. Did I VERIFY by re-running the failing shape and watching it converge? (rule 29 Q#5)
 5. Did I record EVERY bug encountered in the bug library AND harden the process so it can't drift back? (rules 156, 38)
-6. Did I try to revive the patient window at least 3 times (different lever each time) before euthanizing? (Step 6)
-7. If euthanizing: did I give clear fresh-window instructions AND is Frankenstein's original work now (a) done by him, (b) done by me, or (c) filed as an idea that will do it? (Step 6 hard rule)
+6. Did I try to revive the patient window at least 3 times (different lever each time)
 8. For any COST claim: did I source it from /tmp/emsu_router_audit.log (+ live headers), NEVER from llm_call_log? (D1)
 9. Did I reason FROM the architecture (distiller-should-have-crushed-it), not rationalize a paid spill as a "context limit"? (D2)
 10. Did I state which bug each fix addresses (looping vs cost) and not conflate them or claim "LoRA fixes cost"? (D3)
@@ -312,3 +332,4 @@ To tell Ruben a window is safe to use: send a frankenstein-llm request WITH `too
 ## Last updated
 
 2026-06-16 — initial, + Step 6 (revive ≥3 / euthanize / never-abandon-work) per Ruben directive same day.
+2026-06-19 — added HARDENED CLAUSES A/B/C (knowledge-gap reversion prevention): Clause A mandatory pre-read ordering gate, Clause B no-blind-revert (cross-ref rule 160), Clause C freshness protection (inverse of rule 147). Added DIAGNOSIS DISCIPLINE D1-D5. Self-check items 8-12 added. loop-detector cron (cron_frank_loop_detector.php) deployed. FAILOVER-vs-CORRECTIVE_RETRY finding recorded in bug library as frankenstein_failover_path_not_malformed_args_2026_06_19.

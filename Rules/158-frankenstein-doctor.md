@@ -58,6 +58,52 @@ Injecting the repair fact (Step 2) is fine. What is forbidden: doing the patient
 Before doing ANY of the patient's actual task work, ask: *"Am I fixing Frankenstein so it can do this, or am I doing it FOR Frankenstein?"* If the latter, STOP — go back up the ladder: is there a fleet fix? can I inject the missing repair fact? Only when both fail AND the window is dead do you take over. "I did the work myself" is a doctor FAILURE mode unless the window was unrecoverable.
 
 
+## HARDENED CLAUSES — knowledge-gap reversion prevention (added 2026-06-19)
+
+Source: 2026-06-19 incident where a Doctor window reverted a fix that a sibling window had shipped intentionally 90 minutes earlier, because it skipped the pre-read gate and acted on stale file assumptions. Three clauses added to prevent repeat.
+
+### Clause A — MANDATORY PRE-READ ORDERING (hard gate before any action)
+
+The Doctor MUST call ALL THREE of the following in order BEFORE any teardown, revert, config change, registry edit, or service restart:
+
+1. `frankenstein_what_served` (timeline_last_50) — establish what backend actually served the patient's last N requests
+2. `frankenstein_registry` — read current registry state: tool_rank ladder, upstreams, active throttles
+3. `bug_library_check_before_fix(symptom="...")` — KNOWN_REPAIR → apply verbatim; NOVEL → continue
+
+**The gate:** if you have not called all three and read their outputs, you are NOT permitted to modify any config, revert any file, or restart any service. Skipping this ordering and acting on assumptions is a rule-92 bandaid violation — you will likely undo live sibling-window work.
+
+**Anti-pattern this prevents:** opening a Doctor window, seeing a config file that looks stale, and immediately reverting it without calling `frankenstein_what_served` first. The file may look stale but a sibling window may have updated it 10 minutes ago for valid reasons. The pre-read ordering is how you discover that.
+
+### Clause B — NO-BLIND-REVERT (protect sibling-window fixes, cross-ref rule 160)
+
+Before reverting ANY change (config file, registry row, adapter python code, rule text, SQL row, env variable), the Doctor MUST:
+
+1. Check the **backup timestamp** of the file/row — when was the last backup created?
+2. Read **HANDOFF_NOTES** (via `emsu-operations read_handoff_notes`) — is there an entry from a sibling Cline window documenting this exact change as an intentional fix in the current session?
+3. If a sibling window shipped it and it appears in HANDOFF_NOTES within the current session (< 4h), the Doctor MUST NOT revert — instead file an `orchestrator_ideas` row flagging the conflict for review
+
+**Why cross-ref rule 160:** rule 160 governs session-handoff fidelity. A Doctor that reverts a sibling fix defeats the rule-160 handoff contract — the next window inherits a broken state the previous window spent effort fixing. This is the Doctor becoming the source of new bugs.
+
+**The self-check:** before any revert, ask "did I ship this change?" — if no, and HANDOFF_NOTES says yes (within 4h), do not revert. Cross-check: does the bug_library show this as a known fix? If yes, it was intentional.
+
+### Clause C — FRESHNESS PROTECTION (fixes < 24h old require regression evidence before revert)
+
+**The Doctor MUST NOT revert any fix that is less than 24 hours old unless there is explicit bug-library evidence** — a `frankenstein_router_incidents` row with `status=open` AND a `problem_key` matching the fix as the CAUSE of a regression.
+
+Rationale (inverse of rule 147 freshness): rule 147 says fresh context is more reliable than stale. Applied to fixes: a fix shipped < 24h ago was shipped with fresh context about the problem. Reverting it without evidence of regression is destroying fresh work on a stale assumption. The burden of proof is on the reverter.
+
+**The test before reverting any recent fix:**
+- Is the fix < 24h old? (check file mtime or backup timestamp)
+- Does `bug_library_check_before_fix` return a row with `status=open` caused by THIS fix?
+- If both yes → revert is permitted
+- If only age yes (< 24h) but no regression row → do NOT revert; instead file an idea for review
+
+**Anti-patterns Clause C blocks:**
+- ❌ "The config looks different from what I expected so I'll revert it" — missing regression evidence
+- ❌ "A prior window reverted this so I'll revert again" — cascading reversion without evidence
+- ❌ "The file mtime is recent so a mistake probably happened" — recency ≠ error
+
+
 ## PRINCIPLE — guidelines + agentic behavior over hardcoding (Ruben, 2026-06-17)
 
 **frankenstein-llm IS the router. It makes the routing CHOICE at request time based on the LLM's capability and health under it. The Doctor's job is to fix the BEHAVIOR and GUIDELINES that govern that choice — NOT to hardcode model names, caps, or fallback lists.** Ruben, verbatim: *"frankenstein-llm is the router and makes the choice, so I don't know that hardcoding models is a good play... it's more about the LLM under its capability. I'm leaning towards guidelines and agentic behavior rather than hardcoding. If you see hardcoding on these — no bueno. Needs to be about behavior and guidelines."*

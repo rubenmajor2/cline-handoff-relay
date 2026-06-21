@@ -4,29 +4,25 @@
 > **Live violation counters:** call `clinerules_stats` to see current 7d/30d/all-time burst rates and the explicit-ask-ignored vs research-without-subagent breakdown. Counters auto-update via `~/Documents/Cline/rule_violations/scan.py`. Last scan: 2026-05-30 21:31:21 PDT — 7d=499, 30d=3820, all-time=3820. If you are reading this rule, you are part of the count — don't add to it.
 <!-- RULE_VIOLATION_COUNTERS:END -->
 
-## The default (FLIPPED 2026-06-20 — subagents are now opt-IN)
+## The default (FLIPPED 2026-06-21 — subagents are default-ON)
 
-**Default first move on every new Cline task = inline MCP tools.** Use the MCP tools directly in the main window (`emsu-operations ssh_command`, `read_server_file`, `mysql fetch_data`, `project-frankenstein` tools, etc.). Subagents are **opt-IN**: only dispatch when Ruben explicitly says "research with subagents" / "use subagents" / "dispatch" / "fan out" / "research this across multiple angles" or any explicit subagent directive.
+**Default first move on every new Cline task that needs research or multi-step work = subagents.** Subagents route through `deepseek-v4-pro` (enforced server-side in `router_hook.py`), costing effectively $0 due to prefix caching (-120x cost reduction shipped 2026-06-21). This keeps the local 120B pool free for the main interactive window (rule 146).
 
-Otherwise: inline MCP tools only. The main window is fast and has full MCP access — use it.
+The main window uses inline MCP tools for single-step operations (one server read, one DB query, one status check). Multi-step research, multi-file analysis, or anything needing parallel investigation → dispatch subagents per the fetch-then-paste pattern below.
 
-## When to use subagents (opt-in triggers)
+## When NOT to use subagents (inline-only)
 
-Only dispatch `use_subagents` when Ruben explicitly says one of:
-- "research with subagents"
-- "use subagents"
-- "dispatch subagents"
-- "fan out"
-- "research this across multiple angles"
-- Any explicit directive to use subagents
-
-If Ruben says the trigger phrase → dispatch per the fetch-then-paste pattern below. Subagents route through deepseek-v4-pro (enforced server-side in router_hook.py, RUBEN-2026-06-20) to keep the local 120B pool free for the main interactive window (rule 146).
+Use inline MCP tools (no dispatch) when the entire task is:
+- A single MCP call (one student lookup, one ticket check, one health check)
+- A direct response to a simple question with no investigation needed
+- Work that requires MCP tools the subagent doesn't have (server reads, DB writes, iMessage sends)
+- Ruben explicitly says "no subagents" / "inline" / "just do it directly"
 
 ## The tripwire (mandatory — applies to EVERY tool call, not just the first)
 
 **Every assistant turn MUST contain a tool block. The tool block should be the FIRST thing in the response. Do NOT open with a prose sentence — emit the tool call directly.** No standalone prose turns, no narrated multi-step plans without the tool, no "I'm about to do X" / "Doing Y now" / "Next I'll Z" without the tool block.
 
-**The first move of every task is a TOOL CALL, not a sentence.** If the task needs subagents (Ruben explicitly requested), the first response IS the `use_subagents` tool block (optionally with one short sentence in the SAME response, before the block).
+**The first move of every task is a TOOL CALL, not a sentence.** If the task needs subagents, the first response IS the `use_subagents` tool block (optionally with one short sentence in the SAME response, before the block).
 
 If you want to note the dispatch reasoning, put at most ONE short sentence immediately followed by the tool block in the same response. Never a sentence alone.
 
@@ -112,7 +108,7 @@ Self-check: *"Does this subagent prompt tell it to FETCH something (MCP/web/serv
 
 ## Self-check
 
-Before any non-`use_subagents` tool early in a task: is this in one of the 5 exceptions? If no → dispatch. If halfway through `attempt_completion` on something I never dispatched a subagent for → abandon, dispatch.
+Before any non-`use_subagents` tool early in a task: is this task single-step (one lookup, one check)? If no → dispatch subagents. If halfway through `attempt_completion` on a multi-step task I never dispatched a subagent for → abandon, dispatch.
 
 ## Reversal
 
@@ -126,3 +122,4 @@ Revert this section. cline-handoff-relay syncs to Artemis hourly.
 - **2026-05-19** mid-task variant: tasks 1779253360281, 1779252924920, 1779252183079 all died from plan-line-without-tool or "Doing X now"-narration-without-tool. Consolidated rewrite this date.
 - **2026-06-20** FETCH-THEN-PASTE addendum: a Frankenstein-Doctor RCA found 8+ subagents (escalating 3→54→14→8→13/day, 06-17 to 06-21) stuck in retry loops. Signature: 3 convs (conv_93737c28b8bf26e1, conv_9b94c52e4a7979d4, conv_69d5ae6660bde1f1) dispatched at the EXACT same timestamp (a `use_subagents` fan-out) with go-fetch prompts — "Use emsu-operations MCP read_server_file...", "Use web search to find...". Each subagent hit "Tool 'use_mcp_tool' is not available in this context," then improvised a doomed raw `ssh root@`/`curl google.com` and looped. The subagents had ZERO MCP data — they were told to fetch it themselves, which they cannot. Ruben asked "subagents still have access to MCP info even though they're not looking at the MCP directly?" — yes, IF the parent fetches it and pastes it in (fetch-then-paste). Added the correct pattern + the banned-dispatch-keyword self-check. Bug library #746, idea #13575.
 - **2026-06-20 DEFAULT FLIP:** Ruben directive — subagents are now opt-IN. Default first move = inline MCP tools. Only dispatch `use_subagents` when Ruben explicitly says "research with subagents" / "use subagents" / "dispatch" / "fan out". When dispatched, subagent turns route through deepseek-v4-pro (server-side enforced in router_hook.py) to keep the local 120B pool free for the main interactive window (rule 146).
+- **2026-06-21 DEFAULT FLIP BACK:** Ruben directive — subagents are default-ON again. Two reasons: (1) deepseek-v4-pro prefix caching achieved -120x cost reduction today, making subagent dispatch effectively free. (2) The doorman + 10s timeouts deployed today removed the previous bottleneck (dead-rung probe latency), so the local 120B pool is no longer saturated by non-tool fallthrough. Subagents route through deepseek-v4-pro (server-side enforced) to keep the local pool free for interactive main windows.

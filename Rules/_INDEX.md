@@ -25,48 +25,49 @@ If after this order it's still ambiguous, that's a genuine rule defect: act on t
 
 ## Hard-floor rules (always in system prompt — ★)
 
+These 8 rules govern pre-first-tool-call behavior and on-every-turn safety. They stay in the system prompt permanently.
+
 | ID | Slug | What it fires on |
 |---|---|---|
 | 00-READ-FIRST-17 ★ | force-subagent-use | Default first move every task; tripwire on every tool call |
-| 01 ★ | voice-and-persona | Ops chat voice — Ruben speaking, casual, no em-dash |
-| 02 ★ | no-apologies-in-student-emails | Student-facing email composition |
 | 29 ★ | agents-act-on-confidence-tier | act/Q-card/escalate gate |
-| 38 ★ | ruben-asks-equals-autonomous-or-shipped | Ruben-directed work → status=approved |
 | 41 ★ | post-deploy-call-the-tool-do-not-narrate | Banned "Deployed./Now I'll" prose |
-| 42 ★ | safe-deploy-already-reloads-fpm | safe_deploy auto-reloads FPM. No systemctl, ever. |
 | 91 ★ | every-completion-needs-pickup-prompt | attempt_completion shape |
-| 92 ★ | work-at-the-core-not-bandaids | Fix RUBEN, don't fix FOR RUBEN |
-| 99 ★ | yolo-prevention-learned | Auto-generated per-failure playbook |
-| EXECUTE_ORDER_66 ★ | wrap-up (stub → archive) | Trigger phrases → MCP lookup |
-| 118 ★ | litellm-restart-via-safe-wrapper | Never raw `systemctl restart litellm` — use safe wrapper |
 | 119 ★ | mandatory-context-compress | context ≥ 30% → check; ≥ 50% → compress now; ≥ 70% → attempt_completion |
 | 120 ★ | context-is-not-an-excuse | Context never justifies skipping work — compress or work fully, no middle ground |
-| 135 ★ | student-lifecycle-service-sls | Canonical name for the student lifecycle + payment brain (SLS) |
-| 137 ★ | build-task-convergence-gate | Declare a Definition-of-Done check first, then loop change→verify→done |
-| 140 ★ | verify-llm-routing-from-live-headers | Prove routing with a live header probe, never from file-reads |
-| 141 ★ | frankenstein-mcp-verification-gate | Call the project-frankenstein MCP before answering Frankenstein/LLM-routing |
-| 142 ★ | no-dead-end-llm-entrypoints | An entrypoint with a long timeout + no fallback is un-deployable |
 | 143 ★ | prose-loop-circuit-breaker | v2: recover at strikes 1-3 (consecutive only, resets on success); bail to attempt_completion at 4 |
+| 144 ★ | no-write-to-file-on-server-paths | Pre-write gate: server paths via emsu-operations MCP, never local write_to_file |
 
-## Archive — common topic shortcuts
+All other rules (including voice/persona, deploy safety, LLM routing, Frankenstein Doctor, payment handling, etc.) live in the archive and are reachable via the `_RULE_TREE.md` tripwire system — one `clinerules_lookup(rule_id=N)` or `clinerules_list_by_topic(topic="...")` call away.
 
-The full archive (~184 rules) is in `~/Documents/Cline/Rules-archive/`. Don't try to memorize. Use the MCP. Common starting points:
+## Rule Tree & Topic Shortcuts
 
-- **Voice / comms / staff escalation:** `clinerules_list_by_topic(topic="voice")` → rules 10, 13, 15, 19, 30, 47, 48, 57, 72, 96, 101, 108, 111
-- **Agent behavior / escalation tiers:** `clinerules_list_by_topic(topic="agent")` → rules 12, 22, 23, 36, 42, 46, 49, 53, 54, 56, 65, 66, 67, 68, 69, 73, **117** (Tired Ruben — low-bandwidth autonomous protocol: 5-tier act/queue/file/question/discard model)
-- **Infrastructure / debugging / Mac+WOPR:** `clinerules_list_by_topic(topic="cline mac")` → rules 16, 20, 24, 25, 26, 27, 28, 29-mac, 34, 77, 95, 100, 102, 105, **136 (Artemis Arc box access — emsu-operations MCP ssh_command, NEVER raw `ssh artemis` → causes YOLOs)**
+See `_RULE_TREE.md` (also always-loaded) for the full drill-down tree with trigger keywords for every domain:
+- **Communication & Voice** — writing student email, ops chat, iMessage, staff escalation
+- **Agent Behavior & Autonomy** — act/escalate decisions, self-supervision, routing to humans
+- **Infrastructure, Deploy & Debugging** — deploys, SSH, WOPR, Mac, LiteLLM, FPM
+- **Project Frankenstein & LLM Routing** — routing, bug library, Frankenstein Doctor, Kaison
+- **Task Hygiene & Context** — completion, context compression, ledger, wrap-up
+- **Payments, Refunds & Billing** — QB, Authnet, Affirm, refunds
+- **Student Lifecycle & Academics** — Moodle, exams, externship, compliance
+- **YOLO & Failure Recovery** — circuit breaker, per-class playbook, timeout handling
 
-- **Task hygiene / wrap-up:** `clinerules_list_by_topic(topic="task")` → rules 03, 04, 05, 06, 07, 09, 52, 109, 113
-- **Compliance / regulatory:** `clinerules_list_by_topic(topic="regulator")` → rules 08, 18, 60, 61, 103
-- **Payments / Authnet / QB / Affirm:** `clinerules_list_by_topic(topic="payment")` → rules 70, 107, 114
-- **YOLO recovery / extension host:** `clinerules_list_by_topic(topic="yolo")` → rules 16, 95, 97, 98, 99
+The full archive (~230 rules) is in `~/Documents/Cline/Rules-archive/`. Don't try to memorize. Use the tree triggers + MCP.
+
+Common fetch commands:
+- `clinerules_lookup(rule_id=146)` — get full rule text by number
+- `clinerules_list_by_topic(topic="voice")` — get all rules in a domain
+- `clinerules_search(query="...")` — FTS5 search across all rule bodies
 
 ## Adding a new rule
 
 Drop the .md in `~/Documents/Cline/Rules-archive/` (or `Rules/` if it's a new hardfloor — needs Ruben's call). The `.pre-write-lint.sh` gate enforces shape. Then:
 
-```
-node ~/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js --reindex-only
-```
+1. **Update the tree.** Follow `_RULE_TREE.md` §"Adding New Rules": classify the rule into a domain, add its number to the right sub-topic line. A rule not in the tree is invisible to future windows.
+2. **Reindex the MCP:**
+   ```
+   node ~/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js --reindex-only
+   ```
+3. **Cross-check MCP resources.** If the new rule references any `emsu://reference/` or `emsu://system/` resource, verify it's listed in the tree's Cross-Reference section.
 
-That's it. The MCP picks it up on next `lookup` / `search`. No manual TOC update required because the MCP IS the TOC.
+The MCP is the search engine. The tree is the navigation map. New rules need both.

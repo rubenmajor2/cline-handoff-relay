@@ -4,6 +4,45 @@
 
 ---
 
+## ⛔ RULE 146 — READ THIS FIRST. Frankenstein-LLM routes EVERY LLM we own. Free-local models ARE the primary. Never suggest Claude/Anthropic as the default.
+
+**THE RULE (blunt, can't miss it):**
+- `frankenstein-llm` is the ONE router for EVERY LLM: 7B/14B/32B/70B/120B/405B/235B, RunPods, DeepSeek, AND the paid heads (Sonnet, Opus, Fable-5). If we own it, Frankenstein routes it.
+- **Cline is PRIORITY.** Executor/Orchestrator QUEUE behind it. Never the reverse.
+- **Free-local-first IS the design.** A healthy free local box that can serve = serve from it. Only spill to paid when local is GENUINELY full (real saturation, not a false-offline probe).
+- **A failed health probe does NOT mean a box is dead.** Check `/tmp/emsu_router_audit.log` for recent `picked=<model>` before calling anything dead.
+- **NEVER suggest Claude/Anthropic/Sonnet/Opus as the model to use** unless Ruben explicitly asked. Anthropic models are LAST RESORT in the spill ladder. Suggesting them on an unrelated task is a rule violation.
+- Full rule: `clinerules_lookup(rule_id=146)`. Also cross-refs 140 (verify routing live), 141 (MCP first), 148 (never pin raw 120B).
+
+---
+
+## ⛔ COMPLETION COMPLIANCE — Rules 29 and 91 are NON-NEGOTIABLE on every `attempt_completion`
+
+**Before EVERY `attempt_completion`, these two hardfloor rules MUST be satisfied. No shortcuts. No lazy completions.**
+
+### Rule 91 — Pickup Prompt REQUIRED
+- Every `attempt_completion.result` MUST end with a `═══ PICKUP PROMPT ═══` block
+- Must contain: task ID, verified PT timestamp, 2-3 bullets of current state, numbered open threads with idea #s, reference IDs, cross-refs
+- No PICKUP-BY-REFERENCE ("see handoff file") — the block must be INLINE in result
+- No literal placeholders (`#NNNN`, `<timestamp PT>`, `#0000`) — every `#` is a real idea number
+- Open threads MUST have idea numbers (file via `create_idea` before listing)
+- Full rule: `clinerules_lookup(rule_id=91)`
+
+### Rule 29 — Act, Don't Defer
+- Default is ACTION. Inaction requires justification.
+- Before listing ANY open thread in the pickup prompt: Gate 0 test — "can I do this now?" If yes, DO it, don't list it.
+- "Pickup prompt as decision queue" is forbidden: reversible actions the agent can take go in the DONE column, not the open-threads list
+- Every unanswered Ruben question is a rule violation
+- Full rule: `clinerules_lookup(rule_id=29)`
+
+### Pre-completion self-check (run before pressing attempt_completion)
+1. Does my result end with `═══ PICKUP PROMPT ═══`? If no → add it.
+2. Are all `#NNNN` placeholders replaced with real idea numbers? If no → file ideas now.
+3. Did I answer every question Ruben asked in his last message? If no → answer them inline.
+4. Did I list anything as "open" that I could have done myself? If yes → do it now, remove from list.
+
+---
+
 ## 🗣️ Communication & Voice
 → Trigger: writing student email, ops chat, iMessage, staff escalation, CTA, CC/BCC, tone, apology
 → Fetch all: `clinerules_list_by_topic("voice")`
@@ -109,7 +148,7 @@
 2. **Fetch by topic.** Each domain has a `clinerules_list_by_topic(...)` command — one MCP call, all rules in that branch.
 3. **Key rules are inline.** The most commonly needed rules are listed with `R:` — fetch individually via `clinerules_lookup(rule_id=N)`.
 4. **MCP resources are separate.** EMSU operational policies (exam, payment, externship) live in `emsu-operations` MCP resources, not cline rules. Cross-reference both.
-5. **Hardfloor rules (★) are always loaded.** Rules 00,01,02,29,38,41,42,91,92,99,118,119,120,135,137,140,141,142,143,144,145,146,147,148,156,157,158,159,160,161,EXECUTE_ORDER_66 are in your system prompt — no lookup needed.
+5. **Hardfloor rules (★) are always loaded.** Rules 00,29,41,91,119,120,143,144 plus _INDEX.md and _RULE_TREE.md are in your system prompt. These govern pre-first-tool-call behavior and on-every-turn safety. All other rules (including the full text of 146, 140, 141, 142, etc.) are one `clinerules_lookup(rule_id=N)` away via the tree above.
 
 **Self-check before any major action:** "Does a trigger in this tree match what I'm about to do?" If yes → fetch that branch first.
 

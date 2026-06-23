@@ -35,11 +35,17 @@
 - Every unanswered Ruben question is a rule violation
 - Full rule: `clinerules_lookup(rule_id=29)`
 
-### Pre-completion self-check (run before pressing attempt_completion)
-1. Does my result end with `═══ PICKUP PROMPT ═══`? If no → add it.
-2. Are all `#NNNN` placeholders replaced with real idea numbers? If no → file ideas now.
-3. Did I answer every question Ruben asked in his last message? If no → answer them inline.
-4. Did I list anything as "open" that I could have done myself? If yes → do it now, remove from list.
+### Pre-completion BINARY GATE (run BEFORE calling the attempt_completion tool — same hard pattern as rule 41's colon test)
+
+**GATE 1 (rule 91 — HARD BINARY): scan the result text. If the string `═══ PICKUP PROMPT ═══` does NOT appear in `result`, the completion is BROKEN. Period. Do not ship it.** Add the pickup prompt block. This gate fires BEFORE any other consideration. No pickup prompt = no completion. This is the single most common rule-91 violation — agents complete with a summary and forget the divider block entirely. The binary string check makes it impossible to skip.
+
+**GATE 2 (placeholders):** scan for any literal `#NNNN`, `#0000`, `#XXXX`, `<task_id>`, `<timestamp PT>`, or angle-bracket token in the pickup prompt. If found → substitute the real value or remove the line. Placeholders are a rule-91 hardfloor violation.
+
+**GATE 3 (Ruben questions):** did I answer every question Ruben asked in his last message? If no → answer them inline before the pickup prompt.
+
+**GATE 4 (rule 29 open-threads):** did I list anything as "open" that I could have done myself? If yes → do it now, remove from list.
+
+**None of these gates are advisory. All four must PASS before calling `attempt_completion`.**
 
 ---
 

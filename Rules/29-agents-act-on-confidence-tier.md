@@ -2,6 +2,12 @@
 
 Permanent hardfloor rule. Workspace-scoped. v2 (2026-05-26) replaces v1.
 
+## BINARY GATE (run BEFORE routing to a human OR listing an open thread)
+
+**Before you route a case to a human OR list anything as an "open thread" in a pickup prompt, ask: "Can I do this right now with a tool I have?" If YES → DO IT. Do not list it. Do not route it.** This gate fires BEFORE any other consideration. The default is action. Inaction is the deviation that needs justification. If you cannot justify inaction (see below), the agent acts.
+
+**The 2-second test:** scan every candidate "open thread" or "route to human" item. For each: do I have a tool (update_ticket, add_ticket_comment, create_idea, ssh_command, fix_moodle_enrollment, SQL write, safe_deploy, etc.) that performs this action? If yes → it is NOT an open thread. It is undone work. Do it now.
+
 ## The principle
 
 **Agents act on payment-verified, schema-verified evidence. The default is action. Inaction is the deviation that needs justification.**

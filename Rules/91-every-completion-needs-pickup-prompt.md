@@ -4,6 +4,10 @@ Permanent rule. Workspace-scoped. Source: 2026-05-19 Ruben directive verbatim:
 
 > *"cline rule, in every single task completed window need a pickup prompt to continue that task in a new window. Give a pickup prompt to continue this task in a new window"*
 
+## BINARY GATE (run BEFORE attempt_completion)
+
+**Scan your `result` text. If the string `═══ PICKUP PROMPT ═══` does NOT appear in `result`, the completion is BROKEN. Period. Do not ship it.** Add the pickup prompt block. This gate fires BEFORE any other consideration — no pickup prompt, no completion.
+
 ## The bright-line rule
 
 **Every `attempt_completion.result` MUST end with a clearly-labeled, copy-paste-ready "PICKUP PROMPT" block** so Ruben (or a future agent) can paste it into a fresh Cline window and continue the task without re-reading the full conversation.

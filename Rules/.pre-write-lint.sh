@@ -102,6 +102,7 @@ HARDFLOOR_SLUGS=(
     "141-frankenstein-mcp-verification-gate"
     "142-no-dead-end-llm-entrypoints"
     "143-prose-loop-circuit-breaker"
+    "144-no-write-to-file-on-server-paths"
 )
 
 # --- G5 hardfloor (runs first; immediate block) --------------------------

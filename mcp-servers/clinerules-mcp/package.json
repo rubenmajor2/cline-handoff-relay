@@ -7,7 +7,8 @@
     "build": "tsc",
     "watch": "tsc --watch",
     "start": "node build/index.js",
-    "reindex": "node build/index.js --reindex-only"
+    "reindex": "node build/index.js --reindex-only",
+    "postinstall": "npm rebuild better-sqlite3 --build-from-source=true 2>/dev/null || npm rebuild better-sqlite3"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1",

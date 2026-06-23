@@ -219,7 +219,7 @@ The watchdog also fires an osascript notification at RED/IMMINENT so Ruben sees 
 
 - **Idea #7377 (shipped):** per-task budget file naming pattern `/tmp/cline_budget_status_TASK<task_id>.json` to prevent sibling Cline tasks from clobbering each other's tier signal. Writer: `~/Documents/Cline/scripts/cline_budget_watchdog.py` lines 145-150 now writes both the legacy global file (`/tmp/cline_budget_status.json`) AND the per-task file. Readers/agents should prefer the per-task file when a task_id is known.
 
-- **Idea #7380 (shipped):** T5 periodic-compress trigger via the cline-compress MCP `should_compress_now` tool. Agent should poll every ~150K tokens of growth (or every N tool calls in a long-running task). Returns `{ should_compress, tier, context_size, growth_since_last, reason }` keyed on a caller-supplied `last_compress_size` argument and a `growth_threshold` (default 150000). When `should_compress=true` and ti- **Idea #7380 (shipped):** T5 periodic-compress trigger via the cline-compress MCP `should_compdia- **Idea #7380 (shipped):** T5 periodic-compress trigger via the cline-comprehdog tier mandate above.
+- **Idea #7380 (shipped):** T5 periodic-compress trigger via the cline-compress MCP `should_compress_now` tool. Agent should poll every ~150K tokens of growth (or every N tool calls in a long-running task). Returns `{ should_compress, tier, context_size, growth_since_last, reason }` keyed on a caller-supplied `last_compress_size` argument and a `growth_threshold` (default 150000). When `should_compress=true` and tier is YELLOW or RED, call `cline_compress_session` per rule 119. See the budget-watchdog tier mandate above.
 
 ## 2026-06-14 addendum — PICKUP PROMPT block is ONLY legal inside attempt_completion.result (never mid-task)
 

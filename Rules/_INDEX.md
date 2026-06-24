@@ -2,7 +2,7 @@
 
 This file is the fail-safe TOC for the hardfloor rules + how to query the rest.
 
-**Layout:** the 19 hardfloor rules live in `~/Documents/Cline/Rules/` (auto-loaded every task). All other rules (~184) live in `~/Documents/Cline/Rules-archive/` and are queryable on demand via the `clinerules` MCP server. (Counts verified 2026-06-09.)
+**Layout:** the 20 hardfloor rules live in `~/Documents/Cline/Rules/` (auto-loaded every task). All other rules (~210) live in `~/Documents/Cline/Rules-archive/` and are queryable on demand via the `clinerules` MCP server. (Counts verified 2026-06-23 after non-hardfloor bloat cleanup.)
 
 ## Precedence — how to resolve two rules that seem to conflict
 

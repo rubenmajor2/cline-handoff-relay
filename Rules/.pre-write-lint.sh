@@ -117,6 +117,22 @@ if [ "$is_hardfloor" = "1" ] && [ "$OVERRIDE" != "--override" ]; then
     fail "G5 hardfloor: blocked. Hardfloor rules need explicit override flag."
 fi
 
+# --- G6 non-hardfloor-in-Rules-dir (idea #14205) -------------------------
+# Prevents non-hardfloor rules from accumulating in Rules/ and bloating every
+# window's system prompt. Only HARDFLOOR_SLUGS + meta files may live here.
+# Any other .md file in Rules/ is rejected — it belongs in Rules-archive/.
+# This is the durable fix for the 2026-06-23 bloat root cause (10 non-hardfloor
+# Frankenstein rules had piled into Rules/, diluting model attention on rules
+# 91/41/etc.). Bypass with --override only for a legitimate one-off.
+META_FILES=("_INDEX" "_RULE_TREE" "EXECUTE_ORDER_66")
+is_meta=0
+for mf in "${META_FILES[@]}"; do
+    if [ "$SLUG" = "$mf" ]; then is_meta=1; break; fi
+done
+if [ "$is_hardfloor" = "0" ] && [ "$is_meta" = "0" ] && [ "$OVERRIDE" != "--override" ]; then
+    fail "G6 non-hardfloor-in-Rules: '$SLUG' is not a hardfloor rule and not a meta file. Non-hardfloor rules belong in ~/Documents/Cline/Rules-archive/, not Rules/. Either (a) move the file to Rules-archive/, or (b) if this is a genuine new hardfloor rule, add '$SLUG' to HARDFLOOR_SLUGS above first (needs Ruben's call per _INDEX.md). Re-run with --override only for a intentional one-off bypass."
+fi
+
 # --- G2 section-length ---------------------------------------------------
 BYTES=$(wc -c < "$FILE" | tr -d ' ')
 if [ "$BYTES" -gt 8192 ]; then

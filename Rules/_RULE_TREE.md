@@ -97,7 +97,6 @@
 - **Context management** — R: 119 (compress thresholds), 120 (never shortcut due to context)
 - **Task tracking** — R: 03,04,05,06,07,09,52,109,113
 - **Build convergence** — R: 137 (Definition-of-Done first)
-- **On own error: repair or RCA+file** — R: 170 (any own-error class → repair, else file RCA+repair idea)
 - **Persisting corrections** — R: 46 (agent corrections → RUBEN/KAIZEN), 169 (knowledge-gap corrections → durable surfaces, don't re-learn)
 
 ---

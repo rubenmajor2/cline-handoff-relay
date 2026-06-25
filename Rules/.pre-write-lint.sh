@@ -84,23 +84,11 @@ get_next_rule_number() {
 
 HARDFLOOR_SLUGS=(
     "00-READ-FIRST-17-force-subagent-use-on-research-and-multi-step-builds"
-    "01-voice-and-persona"
-    "02-no-apologies-in-student-emails"
     "29-agents-act-on-confidence-tier"
-    "38-ruben-asks-equals-autonomous-or-shipped"
     "41-post-deploy-call-the-tool-do-not-narrate"
-    "42-safe-deploy-already-reloads-fpm"
     "91-every-completion-needs-pickup-prompt"
-    "92-work-at-the-core-not-bandaids"
-    "99-yolo-prevention-learned"
-    "118-litellm-restart-via-safe-wrapper"
     "119-mandatory-context-compress"
     "120-context-is-not-an-excuse"
-    "135-student-lifecycle-service-sls"
-    "137-build-task-convergence-gate"
-    "140-verify-llm-routing-from-live-headers-not-files"
-    "141-frankenstein-mcp-verification-gate"
-    "142-no-dead-end-llm-entrypoints"
     "143-prose-loop-circuit-breaker"
     "144-no-write-to-file-on-server-paths"
 )

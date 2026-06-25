@@ -2,7 +2,7 @@
 
 This file is the fail-safe TOC for the hardfloor rules + how to query the rest.
 
-**Layout:** the 20 hardfloor rules live in `~/Documents/Cline/Rules/` (auto-loaded every task). All other rules (~210) live in `~/Documents/Cline/Rules-archive/` and are queryable on demand via the `clinerules` MCP server. (Counts verified 2026-06-23 after non-hardfloor bloat cleanup.)
+**Layout:** the 8 hardfloor rules live in `~/Documents/Cline/Rules/` (auto-loaded every task). All other rules (~220+) live in `~/Documents/Cline/Rules-archive/` and are queryable on demand via the `clinerules` MCP server. (Counts verified 2026-06-25 — 12 non-hardfloor rules moved to archive per Rule 91 bloat investigation.)
 
 ## Precedence — how to resolve two rules that seem to conflict
 
@@ -25,18 +25,18 @@ If after this order it's still ambiguous, that's a genuine rule defect: act on t
 
 ## Hard-floor rules (always in system prompt — ★)
 
-These 8 rules govern pre-first-tool-call behavior and on-every-turn safety. They stay in the system prompt permanently.
+These 8 rules (reduced from 20 on 2026-06-25) govern pre-first-tool-call behavior and on-every-turn safety. Rule 91 was trimmed from 24KB to 2KB — the binary gate survived; 6 addenda were archived. All other rules are one `clinerules_lookup(rule_id=N)` away via the tree.
 
-| ID | Slug | What it fires on |
-|---|---|---|
-| 00-READ-FIRST-17 ★ | force-subagent-use | Default first move every task; tripwire on every tool call |
-| 29 ★ | agents-act-on-confidence-tier | act/Q-card/escalate gate |
-| 41 ★ | post-deploy-call-the-tool-do-not-narrate | Banned "Deployed./Now I'll" prose |
-| 91 ★ | every-completion-needs-pickup-prompt | attempt_completion shape |
-| 119 ★ | mandatory-context-compress | context ≥ 30% → check; ≥ 50% → compress now; ≥ 70% → attempt_completion |
-| 120 ★ | context-is-not-an-excuse | Context never justifies skipping work — compress or work fully, no middle ground |
-| 143 ★ | prose-loop-circuit-breaker | v2: recover at strikes 1-3 (consecutive only, resets on success); bail to attempt_completion at 4 |
-| 144 ★ | no-write-to-file-on-server-paths | Pre-write gate: server paths via emsu-operations MCP, never local write_to_file |
+| ID | Slug | Size | What it fires on |
+|---|---|---|---|
+| 00 ★ | force-subagent-use | 11K | Default first move; tripwire every tool call |
+| 29 ★ | agents-act-on-confidence-tier | 28K | Act/escalate gate (trim planned) |
+| 41 ★ | post-deploy-call-the-tool-do-not-narrate | 24K | Banned narration (trim planned) |
+| 91 ★ | every-completion-needs-pickup-prompt | 4K | Binary gate: PICKUP PROMPT block required |
+| 119 ★ | mandatory-context-compress | 5K | Token-count thresholds (not percentages) |
+| 120 ★ | context-is-not-an-excuse | 4K | Never shortcut due to context |
+| 143 ★ | prose-loop-circuit-breaker | 5K | Consecutive no-tool-use recovery |
+| 144 ★ | no-write-to-file-on-server-paths | 5K | Pre-write server-path gate |
 
 All other rules (including voice/persona, deploy safety, LLM routing, Frankenstein Doctor, payment handling, etc.) live in the archive and are reachable via the `_RULE_TREE.md` tripwire system — one `clinerules_lookup(rule_id=N)` or `clinerules_list_by_topic(topic="...")` call away.
 

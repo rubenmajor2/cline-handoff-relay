@@ -6,7 +6,26 @@ Permanent rule. Workspace-scoped. Source: 2026-05-19 Ruben directive verbatim:
 
 ## BINARY GATE (run BEFORE attempt_completion)
 
-**Scan your `result` text. If the string `═══ PICKUP PROMPT ═══` does NOT appear in `result`, the completion is BROKEN. Period. Do not ship it.** Add the pickup prompt block. This gate fires BEFORE any other consideration — no pickup prompt, no completion.
+**An `attempt_completion.result` in a "done" framing is INVALID unless its final section contains the `═══ PICKUP PROMPT ═══` block.** The pickup prompt block must be the LAST section of the result text — nothing below it. No pickup prompt = `attempt_completion` is malformed. The tool call WILL be rejected by the structural gate below.
+
+This gate fires BEFORE any exemption consideration. You do NOT get to self-classify as "Q&A / read-only" and skip it. Pickup-prompt presence is checked FIRST. Exemptions (below) are only evaluated after the gate confirms the block is present — or confirms it's absent AND exempt.
+
+### Structural invalidity (hard gate — same pattern as rule 137's Completion Gate)
+
+An `attempt_completion` VIOLATES the structural gate unless:
+
+1. **`═══ PICKUP PROMPT ═══` appears in `result` as the final section**, OR
+2. **The result explicitly labels itself as an exempt completion** with the exact string "Not a task completion — conversational/read-only only, no system-state changes" in the first 100 characters, AND the model has verified zero system-state changes (no files written, no SQL executed, no deploys, no configs touched, no processes restarted, no MCP connections fixed).
+
+If neither condition is met, the `attempt_completion` is INVALID — do not ship it. The model must add a pickup prompt block before calling `attempt_completion` again.
+
+### Why: "answering a question" is NOT an exemption from the gate
+
+The rule-91 binary gate gets skipped when the model enters "answering a question" mode — the model self-classifies the turn as conversational and ships `attempt_completion` without a pickup prompt. This is the #1 hardfloor violation across Cline windows.
+
+**"I was just answering Ruben's question" is not a valid defense.** If the turn calls `attempt_completion`, it is a completion, and it must satisfy rule 91. The task context (a build/deploy/investigation task) is not Q&A just because the model chose to format its summary as a conversational response. The binary gate fires on every `attempt_completion` call regardless of the model's perceived "mode."
+
+The structural invalidity above removes this escape hatch: the `attempt_completion` is malformed by construction, not just "recommended" to have a pickup prompt.
 
 ## The bright-line rule
 

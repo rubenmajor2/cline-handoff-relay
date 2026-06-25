@@ -97,6 +97,7 @@
 - **Context management** — R: 119 (compress thresholds), 120 (never shortcut due to context)
 - **Task tracking** — R: 03,04,05,06,07,09,52,109,113
 - **Build convergence** — R: 137 (Definition-of-Done first)
+- **Persisting corrections** — R: 46 (agent corrections → RUBEN/KAIZEN), 169 (knowledge-gap corrections → durable surfaces, don't re-learn)
 
 ---
 
@@ -114,6 +115,7 @@
 → Fetch all: `clinerules_list_by_topic("student")`
 - **Lifecycle state** — R: 135 (SLS) + `get_student_lifecycle_state()` (first move on any student issue)
 - **Exam enforcement** — R: `emsu://reference/exam-retake-policy` (SEB+proctor+72hr), `check_exam_enforcement()`
+- **NREMT under-18 policy** — R: `emsu://reference/nremt-under18-policy` (deadline extended to 18th birthday + 60-day refresher after 18; enforced in 4 crons; under-18 students are NOT past-deadline — never tell them to "test now")
 - **Externship** — R: `emsu://reference/externship-agent`, `lookup_paperwork_state()` (rule 31)
 - **Moodle enrollment repair** — R: `fix_moodle_enrollment()`, `unstick_moodle_quiz_attempt()`
 - **Compliance** — R: 08,18,60,61,103 + `emsu://reference/student-status`
@@ -140,6 +142,7 @@
 | `emsu://reference/quickbooks` | Payment rules, 50/50 split, finance fees, QB sync |
 | `emsu://reference/exam-enforcement` | Violation thresholds, SEB proctoring, excluded emails |
 | `emsu://reference/exam-retake-policy` | CANONICAL: Final Exam + retake REQUIRE SEB + proctored Zoom |
+| `emsu://reference/nremt-under18-policy` | CANONICAL: NREMT under-18 eligibility extension (deadline → 18th birthday) + 60-day refresher after 18. Read BEFORE any under-18 NREMT deadline/reminder question. |
 | `emsu://reference/telephony` | Phone system: Twilio + Vapi stack, numbers, NO third-party vendor |
 | `emsu://reference/externship-agent` | Externship scheduling: 11 files, agency profiles, self-service |
 | `emsu://reference/shift-architecture` | Shifts, Team Hub, pickup, Zoom routing architecture |
@@ -177,5 +180,7 @@
 - If unsure, default to Agent Behavior — most catch-all behavioral rules live there.
 
 ## Last updated
+
+2026-06-24 — added `emsu://reference/nremt-under18-policy` to cross-ref table + Student Lifecycle trigger line (NREMT under-18 policy MCP resource registered 2026-06-24 per Ruben directive "make agents aware + add to MCP").
 
 2026-06-22 — initial. Source: Ruben directive to build a drill-down tree for efficient rule discovery. 7 domains, 2 levels, ~3.5K tokens.

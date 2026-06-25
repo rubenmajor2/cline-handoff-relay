@@ -97,6 +97,7 @@
 - **Context management** — R: 119 (compress thresholds), 120 (never shortcut due to context)
 - **Task tracking** — R: 03,04,05,06,07,09,52,109,113
 - **Build convergence** — R: 137 (Definition-of-Done first)
+- **On own error: repair or RCA+file** — R: 170 (any own-error class → repair, else file RCA+repair idea)
 - **Persisting corrections** — R: 46 (agent corrections → RUBEN/KAIZEN), 169 (knowledge-gap corrections → durable surfaces, don't re-learn)
 
 ---
@@ -126,7 +127,7 @@
 → Trigger: YOLO mode, no-tool-use errors, timeouts, prose-loop, circuit breaker, tool failures
 → Fetch all: `clinerules_list_by_topic("yolo")`
 - **Circuit breaker** — R: 143 (consecutive-only, reset-on-success, bail at 4)
-- **Per-class playbook** — R: 99 (auto-generated: no-tool-use, timeout, ssh, replace_in_file, permission denied...)
+- **Per-class playbook** — R: 99 (auto-generated: no-tool-use, timeout, ssh, replace_in_file, permission denied...), 170 (own-error → repair or RCA+file)
 - **Extension host** — R: 16,97,98
 - **Remote commands** — R: 95 (scp+nohup for long-running, timeout prevention)
 
@@ -180,6 +181,8 @@
 - If unsure, default to Agent Behavior — most catch-all behavioral rules live there.
 
 ## Last updated
+
+2026-06-24 — added rule 170 (own-error RCA+repair-or-idea) to Task Hygiene + YOLO/Failure Recovery branches. General scope: all own-error classes, not just file tools (idea #14856).
 
 2026-06-24 — added `emsu://reference/nremt-under18-policy` to cross-ref table + Student Lifecycle trigger line (NREMT under-18 policy MCP resource registered 2026-06-24 per Ruben directive "make agents aware + add to MCP").
 

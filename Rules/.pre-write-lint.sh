@@ -123,10 +123,20 @@ if [ "$is_hardfloor" = "0" ] && [ "$is_meta" = "0" ] && [ "$OVERRIDE" != "--over
     fail "G6 non-hardfloor-in-Rules: '$SLUG' is not a hardfloor rule and not a meta file. Non-hardfloor rules belong in ~/Documents/Cline/Rules-archive/, not Rules/. Either (a) move the file to Rules-archive/, or (b) if this is a genuine new hardfloor rule, add '$SLUG' to HARDFLOOR_SLUGS above first (needs Ruben's call per _INDEX.md). Re-run with --override only for a intentional one-off bypass."
 fi
 
-# --- G2 section-length ---------------------------------------------------
+# --- G2 section-length + G7 hard size cap (2026-06-25) -------------------
+# G2 (existing): warn at >8KB. G7 (new): BLOCK at >12KB for hardfloor rules,
+# >20KB for meta files. This is the durable fix for the Rule 91 bloat root
+# cause — rules that metastasize through addenda creep now fail the lint
+# gate on write, forcing the trim-then-archive pattern. Per idea #15268.
 BYTES=$(wc -c < "$FILE" | tr -d ' ')
 if [ "$BYTES" -gt 8192 ]; then
     warn "G2 section-length: file is $BYTES bytes (>8 KB). Consider splitting."
+fi
+# G7 hard size cap (2026-06-25): hardfloor rules >12KB = block, meta >20KB = block
+if [ "$is_hardfloor" = "1" ] && [ "$BYTES" -gt 12288 ]; then
+    fail "G7 hard-size-cap: hardfloor rule $SLUG is $BYTES bytes (>12KB). Bloat root cause (2026-06-25 Rule 91 investigation). Trim the core gate + move addenda/case law to Rules-archive/<N>-case-law.md. See Rules-archive/29-case-law.md + 41-addenda.md for the trim pattern. Re-run with --override only for Ruben-approved one-off."
+elif [ "$is_meta" = "1" ] && [ "$BYTES" -gt 20480 ]; then
+    fail "G7 hard-size-cap: meta file $SLUG is $BYTES bytes (>20KB). Trim the navigation map."
 fi
 # Largest single section (## or ### heading to next heading)
 MAX_SECTION=$(awk '

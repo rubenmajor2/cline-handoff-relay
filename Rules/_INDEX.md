@@ -61,15 +61,42 @@ Common fetch commands:
 - `clinerules_list_by_topic(topic="voice")` — get all rules in a domain
 - `clinerules_search(query="...")` — FTS5 search across all rule bodies
 
-## Adding a new rule
+## Adding a new rule (durable constraints — read before adding)
 
-Drop the .md in `~/Documents/Cline/Rules-archive/` (or `Rules/` if it's a new hardfloor — needs Ruben's call). The `.pre-write-lint.sh` gate enforces shape. Then:
+**Default: new rules go in `~/Documents/Cline/Rules-archive/`, NOT `Rules/`.** Only add to `Rules/` if the rule must fire on every turn (pre-first-tool-call behavior or on-every-turn safety) AND Ruben approves it as hardfloor. The vast majority of rules belong in the archive, fetched on demand via the tree.
 
-1. **Update the tree.** Follow `_RULE_TREE.md` §"Adding New Rules": classify the rule into a domain, add its number to the right sub-topic line. A rule not in the tree is invisible to future windows.
-2. **Reindex the MCP:**
+### Hard caps (enforced by `.pre-write-lint.sh` + nightly audit cron)
+
+| Constraint | Limit | Enforced by |
+|---|---|---|
+| Hardfloor rules in `Rules/` | 10 (currently) + 3 meta = 13 files max | G6 gate (block) + nightly audit (alert) |
+| Single hardfloor rule size | 8KB warn / **12KB hard block** | G2 (warn) + **G7 (block)** + nightly audit |
+| Meta file size (`_INDEX`, `_RULE_TREE`) | 16KB warn / **20KB hard block** | G7 (block) + nightly audit |
+| Total `Rules/` directory | 180KB warn / **250KB alert** | Nightly audit |
+
+### The trim-then-archive pattern (when a hardfloor rule exceeds 8KB)
+
+Rules metastasize through addenda creep (source incidents, case law, per-class elaborations). When a hardfloor rule hits 8KB, trim it:
+
+1. **Extract the core gate** (the binary test the rule fires on — usually 1-2KB)
+2. **Move case law + addenda** to `Rules-archive/<N>-case-law.md` (see `29-case-law.md`, `41-addenda.md` for the pattern)
+3. **Add a cross-ref** in the trimmed rule: `Full case law + source incidents: Rules-archive/<N>-case-law.md`
+4. **Re-run `.pre-write-lint.sh`** to confirm G7 passes (<12KB)
+5. **Reindex the MCP**
+
+### Steps to add a new rule
+
+1. **Drop the .md in `~/Documents/Cline/Rules-archive/`** (default) or `Rules/` (only if hardfloor + Ruben-approved).
+2. **If adding to `Rules/`:** add the slug to `HARDFLOOR_SLUGS` in `.pre-write-lint.sh` FIRST, or G6 will block the write.
+3. **Update the tree.** Follow `_RULE_TREE.md` §"Adding New Rules": classify the rule into a domain, add its number to the right sub-topic line. A rule not in the tree is invisible to future windows.
+4. **Reindex the MCP:**
    ```
    node ~/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js --reindex-only
    ```
-3. **Cross-check MCP resources.** If the new rule references any `emsu://reference/` or `emsu://system/` resource, verify it's listed in the tree's Cross-Reference section.
+5. **Cross-check MCP resources.** If the new rule references any `emsu://reference/` or `emsu://system/` resource, verify it's listed in the tree's Cross-Reference section.
 
-The MCP is the search engine. The tree is the navigation map. New rules need both.
+### Nightly audit cron (self-healing bloat detection)
+
+`~/Documents/Cline/scripts/cline_rules_audit.sh` runs nightly at 3:15 AM PT via launchd (`com.emsu.cline-rules-audit`). It checks file count, per-rule size, total directory size, and HARDFLOOR_SLUGS drift — posting to ops chat 55 on any alert. This makes bloat self-healing instead of requiring a Ruben-initiated investigation. Manual run: `cline_rules_audit.sh --quiet` (log only, no chat post).
+
+The MCP is the search engine. The tree is the navigation map. The lint gate is the write filter. The audit cron is the drift detector. New rules need all four.

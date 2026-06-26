@@ -1,6 +1,47 @@
 # Rule Tree — Proactive Trigger Guide
 
-**How to use:** When you're about to do something in ANY of the trigger categories below, fetch that branch FIRST. Each domain has a `clinerules_list_by_topic(...)` command that returns the full rules. Key rule numbers are listed inline for instant lookup. **This file is auto-loaded into every Cline window. It takes ~3.5K tokens.**
+**How to use:** When you're about to do something in ANY of the trigger categories below, fetch that branch FIRST. Each domain has a `clinerules_list_by_topic(...)` command that returns the full rules. Key rule numbers are listed inline for instant lookup. **This file is auto-loaded into every Cline window.**
+
+---
+
+## ⛔⛔⛔ MANDATORY GATES — FAIL ANY = BROKEN. NO EXCEPTIONS. ⛔⛔⛔
+
+**Every hardfloor rule is a binary gate at a specific trigger point. Read the relevant gate BEFORE the action. No gate = no action.**
+
+### ⛔ PRE-FIRST-TOOL GATE (before your first tool call)
+
+1. **RULE 00 SUBAGENTS:** Is this task multi-step (>3 distinct MCP/server calls) OR multi-file investigation OR multi-system analysis? → **dispatch `use_subagents` FIRST.** Do NOT inline sequential MCP calls. Subagents are free (DeepSeek prefix caching). Inline is the slow path.
+2. **RULE 146 NEVER CLAUDE:** Am I about to suggest Claude/Anthropic/Sonnet/Opus as the model to use? → **STOP.** Never suggest paid models. Free-local IS the design.
+
+### ⛔ PRE-EVERY-TOOL GATE (before ANY tool call)
+
+3. **RULE 41 NO PROSE:** Does my turn end with `:` and have no `<tool_use>` block? → **BROKEN.** Add the tool. Never emit prose without a tool block. The tool call IS the response.
+4. **RULE 41 PROSE LOOP:** After ANY successful destructive tool result (deploy/write/SQL/send), the NEXT turn MUST contain a tool_use block. Not prose describing the next step. Not a narration. A tool.
+
+### ⛔ PRE-WRITE GATE (before write_to_file / replace_in_file)
+
+5. **RULE 144 SERVER PATHS:** Does path start with `/etc/` `/var/` `/usr/` `/opt/` `/root/` `/srv/`? → **STOP.** Use `emsu-operations ssh_command` with `sudo tee` heredoc. Local file tools can NEVER write to server paths.
+6. **RULE 42 SAFE DEPLOY:** For `/var/www/emtskills/` deploys → use `safe_deploy_file` MCP. It already reloads FPM. Do not deploy raw then separately reload.
+
+### ⛔ PRE-SEND GATE (before imessage send_message / ops chat / student email)
+
+7. **RULE 01 VOICE:** Would Ruben actually type this? No em dashes, no "the tech team," no "I've identified the root cause," no corporate speak. Talk TO the person IN the chat, not ABOUT them.
+8. **RULE 02 NO APOLOGIES:** Is this student-facing email with apology language ("I'm sorry," "we apologize," "I regret")? → **STRIP IT.** Neutral acknowledgement + concrete fix action only.
+
+### ⛔ PRE-COMPLETION GATE (before attempt_completion)
+
+9. **RULE 91 PICKUP PROMPT:** Does `result` end with `═══ PICKUP PROMPT ═══`? If NO → **BROKEN. DO NOT SHIP.** Add the block. **COPY THIS EXACT LINE:** `═══════════════════════════════════════════════` (39 equals signs — NOT hyphens, NOT dashes, NOT different unicode).
+10. **RULE 29 RUBEN QUESTIONS:** Did Ruben ask a direct question? → Answer it INLINE in `result`. "I'll look into it" does not count.
+11. **RULE 29 ACT, DON'T DEFER:** Did I list anything as "open thread" that I could do myself with a tool I have? → **DO IT NOW, don't list it.** Only genuine human-policy decisions (refund amounts, regulator wording) stay open.
+12. **RULE 91 NO PLACEHOLDERS:** Any literal `#NNNN`, `#0000`, `<task_id>`, `<timestamp PT>` in result? → **BROKEN.** Substitute real values or remove.
+
+### ⛔ CONTEXT GATES (check token count in environment_details)
+
+13. **RULE 119/120:** <300K tokens → work fully. 300K-499K → call `should_compress_now` once before next major tool call. ≥500K → call `cline_compress_session` NOW, then `attempt_completion`. Never shortcut work due to context size.
+
+### ⛔ RECOVERY GATE (if you see "[ERROR] You did not use a tool")
+
+14. **RULE 143:** Count CONSECUTIVE errors only (any successful tool resets streak). Strike 1-2: emit the tool silently. Strike 3: emit simpler tool or bail. Strike 4: `attempt_completion` only. API hiccups don't count.
 
 ---
 

@@ -10,6 +10,8 @@ The ONLY exemption: when the result's first 100 characters contain the exact str
 
 ## Required shape (copy this template)
 
+**COPY THIS EXACT DIVIDER LINE:** `═══════════════════════════════════════════════` (39 equals signs on the first and last line — NOT hyphens, NOT dashes, NOT different unicode characters). Then fill in the middle:
+
 ```
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
@@ -57,9 +59,12 @@ Every open-thread item MUST carry a filed idea number. An item without one is ei
 
 ## Self-check before attempt_completion
 
-1. Does `result` contain `═══ PICKUP PROMPT ═══` as the final section? If no → add it.
+**HARD BINARY GATE (run BEFORE calling the tool):** scan `result` text. If the exact string `═══ PICKUP PROMPT ═══` does NOT appear, the completion is BROKEN. Do not ship it. This is a binary test — the string is either present or absent. If absent, add the pickup prompt block before calling `attempt_completion`.
+
+1. Does `result` contain `═══ PICKUP PROMPT ═══` as the final section? If no → **DO NOT CALL attempt_completion yet. Add it first.**
 2. Scan for literal `#NNNN`/`#0000`/`<...>` placeholders. If found → substitute real values.
 3. Did I file/approve/reject any idea this task? If yes → all `#NNNN` are cited in the body with disposition.
+4. Did I answer every question Ruben asked? If no → answer them inline before the pickup prompt.
 
 ## Cross-refs
 - Rule 29 — act-or-defer test (Gate 0)

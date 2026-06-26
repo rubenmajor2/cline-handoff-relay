@@ -84,6 +84,8 @@ get_next_rule_number() {
 
 HARDFLOOR_SLUGS=(
     "00-READ-FIRST-17-force-subagent-use-on-research-and-multi-step-builds"
+    "01-voice-and-persona"
+    "02-no-apologies-in-student-emails"
     "29-agents-act-on-confidence-tier"
     "41-post-deploy-call-the-tool-do-not-narrate"
     "91-every-completion-needs-pickup-prompt"

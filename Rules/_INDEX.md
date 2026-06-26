@@ -2,7 +2,7 @@
 
 This file is the fail-safe TOC for the hardfloor rules + how to query the rest.
 
-**Layout:** the 8 hardfloor rules live in `~/Documents/Cline/Rules/` (auto-loaded every task). All other rules (~220+) live in `~/Documents/Cline/Rules-archive/` and are queryable on demand via the `clinerules` MCP server. (Counts verified 2026-06-25 — 12 non-hardfloor rules moved to archive per Rule 91 bloat investigation.)
+**Layout:** the 10 hardfloor rules live in `~/Documents/Cline/Rules/` (auto-loaded every task). All other rules (~220+) live in `~/Documents/Cline/Rules-archive/` and are queryable on demand via the `clinerules` MCP server. (Counts verified 2026-06-25 — bloat cleanup + voice rules restored.)
 
 ## Precedence — how to resolve two rules that seem to conflict
 
@@ -25,13 +25,15 @@ If after this order it's still ambiguous, that's a genuine rule defect: act on t
 
 ## Hard-floor rules (always in system prompt — ★)
 
-These 8 rules (reduced from 20 on 2026-06-25) govern pre-first-tool-call behavior and on-every-turn safety. Rule 91 was trimmed from 24KB to 2KB — the binary gate survived; 6 addenda were archived. All other rules are one `clinerules_lookup(rule_id=N)` away via the tree.
+These 10 rules govern pre-first-tool-call behavior and on-every-turn safety. Rules 29, 41, and 91 were trimmed 2026-06-25 (case law + addenda archived to `Rules-archive/29-case-law.md` + `41-addenda.md`). Voice rules 01+02 restored to hardfloor per Ruben directive. All other rules are one `clinerules_lookup(rule_id=N)` away via the tree.
 
 | ID | Slug | Size | What it fires on |
 |---|---|---|---|
 | 00 ★ | force-subagent-use | 11K | Default first move; tripwire every tool call |
-| 29 ★ | agents-act-on-confidence-tier | 28K | Act/escalate gate (trim planned) |
-| 41 ★ | post-deploy-call-the-tool-do-not-narrate | 24K | Banned narration (trim planned) |
+| 01 ★ | voice-and-persona | 4K | Ruben voice for iMessage/ops chat |
+| 02 ★ | no-apologies-in-student-emails | 4K | No apology language in student email |
+| 29 ★ | agents-act-on-confidence-tier | 6K | Act/escalate gate (v3 trimmed) |
+| 41 ★ | post-deploy-call-the-tool-do-not-narrate | 5K | Banned narration (v2 trimmed) |
 | 91 ★ | every-completion-needs-pickup-prompt | 4K | Binary gate: PICKUP PROMPT block required |
 | 119 ★ | mandatory-context-compress | 5K | Token-count thresholds (not percentages) |
 | 120 ★ | context-is-not-an-excuse | 4K | Never shortcut due to context |

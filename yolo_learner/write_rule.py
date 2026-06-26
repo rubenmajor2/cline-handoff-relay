@@ -17,7 +17,8 @@ from pathlib import Path
 
 HOME = Path(os.path.expanduser("~"))
 PATTERNS = HOME / "Documents/Cline/yolo_learner/patterns.json"
-RULE_FILE = HOME / "Documents/Cline/Rules/99-yolo-prevention-learned.md"
+RULE_FILE = HOME / "Documents/Cline/Rules-archive/99-yolo-prevention-learned.md"  # 2026-06-25: moved to archive (was bloating every system prompt)
+LEGACY_RULE_FILE = HOME / "Documents/Cline/Rules/99-yolo-prevention-learned.md"
 
 # Static "how to avoid" playbook per category. Living reference; the scanner
 # decides which ones to surface based on frequency.
@@ -307,6 +308,10 @@ def main() -> int:
     RULE_FILE.parent.mkdir(parents=True, exist_ok=True)
     RULE_FILE.write_text("\n".join(out))
     print(f"wrote {RULE_FILE}")
+    # Clean up legacy copy in Rules/ if it exists (bloat prevention)
+    if LEGACY_RULE_FILE.exists():
+        LEGACY_RULE_FILE.unlink()
+        print(f"removed legacy copy from Rules/: {LEGACY_RULE_FILE}")
     return 0
 
 

@@ -95,8 +95,13 @@ function upstreamWithRetry(opts, connectTimeoutMs, onConnect, onFail) {
       const code = e && e.code;
       log('UPSTREAM error', code, 'attempt', attempt, `/ ${delays.length}`);
 
-      // ECONNREFUSED = LiteLLM restarting, retryable
-      if (code === 'ECONNREFUSED' && attempt < delays.length) {
+      // Retryable errors = LiteLLM restarting or dropping connections:
+      //   ECONNREFUSED — port down (hard restart window)
+      //   ECONNRESET   — socket killed mid-connect (LiteLLM SIGKILL, docker stop)
+      //   EPIPE        — broken pipe (upstream closed during write)
+      //   ETIMEDOUT    — connect timeout (tunnel wedged momentarily)
+      const retryable = ['ECONNREFUSED', 'ECONNRESET', 'EPIPE', 'ETIMEDOUT'];
+      if (retryable.includes(code) && attempt < delays.length) {
         tryConnect();
         return;
       }

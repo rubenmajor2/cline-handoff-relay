@@ -137,6 +137,7 @@
 - **Completion shape** — R: 91 (pickup prompt required), EXECUTE_ORDER_66 (full wrap-up)
 - **Context management** — R: 119 (compress thresholds), 120 (never shortcut due to context)
 - **Task tracking** — R: 03,04,05,06,07,09,52,109,113
+- **Honest W/T eval method** — R: 171 (cross-family judge + position-swap + rubric + max_tokens room; required before any W/T number drives a flip)
 - **Build convergence** — R: 137 (Definition-of-Done first)
 - **Persisting corrections** — R: 46 (agent corrections → RUBEN/KAIZEN), 169 (knowledge-gap corrections → durable surfaces, don't re-learn)
 

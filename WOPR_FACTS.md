@@ -1,10 +1,11 @@
 # WOPR FACTS — instant-recall reference
 
 > ╔══════════════════════════════════════════════════════════════════════╗
-> ║  CURRENT STATUS (2026-06-29 21:18 PT): WOPR IS DOWN. GENUINELY         ║
-> ║  UNREACHABLE. UniFi UDM (which HAS internet) cannot reach WOPR.        ║
-> ║  This is NOT a local network issue and NOT a Cox outage (WOPR is on    ║
-> ║  Spectrum Enterprise, not Cox). WOPR needs physical/out-of-band check. ║
+> ║  CURRENT STATUS (2026-06-30 00:03 PT): WOPR IS UP. All services        ║
+> ║  healthy: nginx, PHP-FPM, LiteLLM (:4000=200), MariaDB (active).       ║
+> ║  Apex emsuniversity.com = 200, Moodle /emtskills/ = 302. Current       ║
+> ║  Spectrum WAN IP = 172.116.115.101 (Cloudflare DNS points to it).      ║
+> ║  /data freed to 23G after disk-full incident (see Outage 2026-06-29).  ║
 > ╚══════════════════════════════════════════════════════════════════════╝
 
 **Living document.** Lives at `/Users/rubenmajor/Documents/Cline/WOPR_FACTS.md` (Mac, authoritative).
@@ -20,7 +21,9 @@ Read the BANNER ABOVE first. Newest-relevant-last in the Update history at the b
 | **Location** | **San Diego, CA** (NOT Oceanside — corrected 2026-06-29) |
 | **Internet provider** | **Spectrum Enterprise** (business/enterprise fiber circuit, NOT residential Cox) |
 | **Hostname** | `wopr.emsuniversity.com` |
-| **Public IP (fleet inventory)** | `76.167.100.188` (Spectrum/Charter AS20001) |
+| **Public IP (CURRENT 2026-06-30)** | `172.116.115.101` (Spectrum WAN, Cloudflare DNS points here) |
+| **Public IP (prior / fleet inventory)** | `76.167.100.188`, `76.176.157.123` (Spectrum SD, now stale) |
+| **Static-lock target** | `76.80.184.194` (Spectrum acct 133-9544-9006, ticket #88619142, 1-866-863-6205) |
 | **WireGuard hub** | `10.100.0.1` : `51820/udp` OPEN + LISTENING |
 | **OS** | Ubuntu 24.04 LTS |
 | **Hardware** | Plesk + RTX PRO 2000 Blackwell 16GB |
@@ -68,6 +71,23 @@ Read the BANNER ABOVE first. Newest-relevant-last in the Update history at the b
   3. Verify services: nginx, PHP-FPM, LiteLLM, MariaDB writer lease
   4. Durable fix: rewrite `emsu-ddns-sync.sh` to PATCH CF API instead of Plesk
 
+### RESOLVED 2026-06-30 00:03 PT — actual root cause (two earlier diagnoses were WRONG)
+
+The circuit came back and `ssh wopr` worked again on the new Spectrum IP `172.116.115.101` (Cloudflare DNS already pointed to it). After SSH was restored the apex still served a DB error. **Two intermediate diagnoses were both wrong:**
+
+- ❌ "nginx was inactive / didn't auto-start after the circuit returned" — WRONG. `systemctl show nginx ActiveEnterTimestamp` = 2026-06-26 09:20, and `uptime -s` = 2026-06-26 09:19. **WOPR never rebooted during the outage and nginx ran continuously the whole time.** The box stayed up; only the Spectrum WAN dropped (unreachable ≠ down).
+- ❌ "MariaDB 1040 Too many connections from a post-outage traffic storm" — WRONG (symptom, not cause). The restart wedged and InnoDB recovery froze at "To recover: 4687 pages" with near-zero CPU.
+
+**TRUE ROOT CAUSE: `/data` filesystem hit 100% full (3.5T/3.7T, 0 bytes free).** MariaDB could not write its recovery binlog (`/data/mysql-binlogs/mysql-bin.~rec~`) → `errno 28 "No space left on device"` → recovery blocked indefinitely, server stuck `activating`, apex showed "Database connection failed." The earlier SIGKILL+restart didn't help because the disk was still full.
+
+**Fix applied:**
+1. Deleted two stale one-time reseed dumps in `/data`: `wopr_seed_20260530_0153.sql.gz` (11.4G) + `repl-dump-20260406.sql.gz` (3.5G) → freed ~15G → unblocked the recovery binlog write.
+2. systemd had already timed out the wedged start and auto-restarted mariadb; with space free, recovery completed in seconds → MariaDB `active`, socket present, `SELECT 1` = ok.
+3. `PURGE BINARY LOGS BEFORE DATE_SUB(NOW(), INTERVAL 3 DAY)` to enforce the already-configured `expire_logs_days=3` (binlogs from Jun 26 had piled up because the 3-day expiry never ran while the server was down/full) → binlog dir 127G→112G, /data now 23G free. No replicas were connected, so the purge was safe.
+4. Verified: apex `https://emsuniversity.com` = 200, Moodle `/emtskills/` = 302, LiteLLM :4000 = 200, PHP-FPM active, current IP 172.116.115.101.
+
+**Standing risk:** /data has only 23G headroom and binlogs churn ~37G/day, so it WILL refill within a day. Top consumers: `frank_adapters_cold` 1.9T, `backup` 458G, `cold-archives` 194G, `mysql-binlogs` 112G. A disk-usage monitor with auto-purge + alert on /data is needed (filed as idea — see ledger). The MariaDB binlog dir on a shared 100%-prone volume is the real systemic SPOF, not the WAN drop.
+
 ---
 
 ## What WOPR is NOT
@@ -90,3 +110,4 @@ Read the BANNER ABOVE first. Newest-relevant-last in the Update history at the b
 ## Update history
 
 - **2026-06-29 21:18 PT** — initial creation. Corrected facts after wrong Cox/Oceanside diagnosis. WOPR is San Diego / Spectrum Enterprise. UDM has internet but can't reach WOPR = WOPR genuinely down. Persisted to memory MCP (entities: WOPR, UniFi UDM, WOPR Outage 2026-06-29).
+- **2026-06-30 00:03 PT** — RESOLVED. WOPR back UP on new Spectrum IP 172.116.115.101. Banner → UP. Added current/static IPs. True root cause was `/data` 100% full blocking MariaDB recovery binlog (NOT nginx-down, NOT connection-storm — both earlier diagnoses corrected in the Outage section). Freed 15G stale dumps + purged binlogs to 3-day policy → 23G free. All services verified healthy. Standing risk: /data refills ~37G/day; disk monitor idea filed.

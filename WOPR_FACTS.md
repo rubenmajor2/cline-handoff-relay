@@ -111,3 +111,16 @@ The circuit came back and `ssh wopr` worked again on the new Spectrum IP `172.11
 
 - **2026-06-29 21:18 PT** — initial creation. Corrected facts after wrong Cox/Oceanside diagnosis. WOPR is San Diego / Spectrum Enterprise. UDM has internet but can't reach WOPR = WOPR genuinely down. Persisted to memory MCP (entities: WOPR, UniFi UDM, WOPR Outage 2026-06-29).
 - **2026-06-30 00:03 PT** — RESOLVED. WOPR back UP on new Spectrum IP 172.116.115.101. Banner → UP. Added current/static IPs. True root cause was `/data` 100% full blocking MariaDB recovery binlog (NOT nginx-down, NOT connection-storm — both earlier diagnoses corrected in the Outage section). Freed 15G stale dumps + purged binlogs to 3-day policy → 23G free. All services verified healthy. Standing risk: /data refills ~37G/day; disk monitor idea filed.
+
+## 2026-06-30 08:14 PT — EMAIL DOWN follow-on (same DNS-staleness class)
+
+After the Spectrum IP changed to 172.116.115.101, the **apex A record was updated but the MAIL subdomains were NOT** — `mail`, `mx`, `webmail`.emsuniversity.com still pointed at the old dead IP 76.176.157.123. Server-side mail (postfix+dovecot) was fully healthy the whole time (live logins in /var/log/maillog), but every staff mail client connects to `mail.emsuniversity.com` → dead IP → "can't connect / account down". NO account deletion was needed — pure DNS pointing.
+
+**Fix:** PATCH the 3 mail A records via Cloudflare API to the current IP:
+- Zone id: 8da61744f8817c5c29a007fd5e89f4e1 (emsuniversity.com)
+- Token: /root/.cloudflared/cf_api_token (on WOPR)
+- Records: mail (e30c16dd3a360d994f076cf9dd3f3520), mx (7f84267ce90f00d8244da66c60b9c67c), webmail (6968f02e4748d83af0405d2a42143391) — all `proxied=false`, ttl 120.
+- `curl -X PATCH https://api.cloudflare.com/- `curl -X PATCH https://api.cloudflare.com/- `curl -X PATCH rer- `curl -X PATCH https://api.cloudflare.com/- `curl -X PATCH http"ttl":120,"proxied":false}'`
+
+**DURABLE CHECKLIST — on ANY WOPR IP change, update ALL of these A records, not just the apex:**
+`emsuniversity.com`, `mail`, `mx`, `webmail` (and verify `ns1`/`mail`-related). The DDNS updater only touched the apex; the mail subdomains are the recurring miss. (smtp.emsuniversity.com → 69.64.94.101 is a 3rd-party relay, leave it.)

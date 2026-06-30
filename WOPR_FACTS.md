@@ -36,10 +36,13 @@ Read the BANNER ABOVE first. Newest-relevant-last in the Update history at the b
 
 ## How to reach WOPR (priority order)
 
-1. **Direct public IP** — `ssh emsuserver@76.167.100.188` (or whatever the current Spectrum Enterprise IP is). WOPR does NOT answer ICMP ping by design; use a TCP/TLS test, not ping.
-2. **Via DNS** — `ssh wopr` (resolves emsuniversity.com). Only works if Cloudflare DNS A record is current.
-3. **Via WireGuard mesh** — `ssh emsuserver@10.100.0.1` (requires local WG client up + WOPR WG service alive + Spectrum uplink up).
-4. **Via UniFi UDM** — UDM has internet; if WOPR is reachable from UDM but not from Mac, check Mac-side WG. If UDM also can't reach WOPR, WOPR itself is down.
+**SSH PORT IS 2222, NOT 22.** Mac `~/.ssh/config` has `Host wopr` → `emsuniversity.com:2222` as `emsuserver`, key `~/.ssh/id_ed25519`. `ssh wopr` is the canonical command. EVERY other fleet host (artemis, cesar, cato, the Macs) ProxyJumps through `wopr`, so if WOPR is down the entire fleet SSH graph is down with it. Test reachability with `nc -z -w5 <ip> 2222`, NOT ping (WOPR drops ICMP by design).
+
+1. **`ssh wopr`** — port 2222, emsuserver. Canonical path.
+2. **Direct IP:2222** — `ssh -p 2222 emsuserver@<current-IP>` (76.80.184.194 static / 76.176.157.123 dynamic).
+3. **WireGuard mesh** — `ssh emsuserver@10.100.0.1` (requires a WG client UP on the Mac — there is NONE installed as of 2026-06-29 — plus WOPR WG service + Spectrum uplink up).
+4. **Joshua WAN bounce** — Joshua (98.172.111.42) is a WG peer with WOPR; bounce through it to 10.100.0.1. During the 2026-06-29 outage Joshua WAN was Connection-refused on 2222 and timed out on 22, so this path was also dead.
+5. **UniFi UDM** — UDM has internet; if WOPR is reachable from UDM but not the Mac, fix Mac-side WG. If UDM ALSO can't reach WOPR (as on 2026-06-29), WOPR itself or its Spectrum uplink is down.
 
 ---
 

@@ -93,6 +93,7 @@ HARDFLOOR_SLUGS=(
     "120-context-is-not-an-excuse"
     "143-prose-loop-circuit-breaker"
     "144-no-write-to-file-on-server-paths"
+    "259-cline-tasks-stay-in-cline-not-chat55"
 )
 
 # --- G5 hardfloor (runs first; immediate block) --------------------------
@@ -114,7 +115,7 @@ fi
 # This is the durable fix for the 2026-06-23 bloat root cause (10 non-hardfloor
 # Frankenstein rules had piled into Rules/, diluting model attention on rules
 # 91/41/etc.). Bypass with --override only for a legitimate one-off.
-META_FILES=("_INDEX" "_RULE_TREE" "EXECUTE_ORDER_66")
+META_FILES=("_INDEX" "_RULE_TREE" "EXECUTE_ORDER_66" "99-yolo-prevention-learned")
 is_meta=0
 for mf in "${META_FILES[@]}"; do
     if [ "$SLUG" = "$mf" ]; then is_meta=1; break; fi

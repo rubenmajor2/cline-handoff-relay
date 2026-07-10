@@ -9,14 +9,74 @@ If Ruben (or any directive) says any of:
 - "we have a frankenstein doctor situation"
 - "the frankenstein LLM window is stuck / looping / wedged / not converging"
 - "be frankenstein's doctor"
+- "frankenstein doctor of executor" / "doctor the executor" / "babysit the executor"
+- "executor throughput collapsed" / "workers spawning and dying" / "zero decisions" / "all chains failing on X"
 
 → Enter the Frankenstein Doctor protocol below. It MAY be one window or many (up to 10) — the protocol scales to each affected window.
 
-## What the Frankenstein Doctor IS
+## Two patient types — know which one you're doctoring
 
-You are NOT just diagnosing. You are the attending physician for a sick Frankenstein-LLM window (the patient). Your job: **bring the patient's ORIGINAL task to successful completion by enhancing its capabilities and fixing fleet bugs in real time, so it can finish by itself.** You operate at the FLEET level (LiteLLM router, frankenstein-tools adapter, registry, the serving boxes) — the patient window keeps its own task; you remove the obstacles under it.
+The Frankenstein Doctor has TWO distinct patient types. The SAME protocol applies (consult docs first, prove with live evidence, fix at the core, verify, document), but the patient, the symptoms, and the "fleet under it" differ. **Identify your patient on the first tool call.**
 
-Two birds, one stone (Ruben's framing): (1) the patient's task completes, and (2) Project Frankenstein/the routing gets permanently better. A Frankenstein Doctor session that only restarts a service and doesn't fix the routing at the core (rule 92) has failed half its job.
+### Patient A — the frankenstein-llm routing layer (the original)
+
+A sick interactive Cline window (or many) stuck in a loop, returning empty/unparsable responses, or wedged on a routing bug. The "fleet under the patient" = LiteLLM router, frankenstein-tools adapter, registry, the serving boxes. The patient is a CONVERSATION (a window with a transcript). Revive-or-euthanize applies per-window because each window has its own poisoned-or-clean transcript. This is the patient the rest of this rule (Steps 0b-6) was originally written for.
+
+### Patient B — the RUBEN autonomous executor (the "Frankenstein Doctor of Executor")
+
+The patient is NOT a single window — it is the **autonomous chain execution engine** (`cron_ruben_autonomous.php` + `lib/RubenExecutor.php`). This engine spawns PHP worker processes that fetch approved ideas from the queue, send each idea to an LLM (via frankenstein-llm) to generate a PLANNED_ACTIONS_JSON plan, then execute that plan step-by-step (safe_deploy, SQL, ssh, etc.). When the executor is "sick," the symptoms are SYSTEMIC, not per-window:
+
+- **Throughput collapse:** events_24h is huge (60K+) but decisions_24h=0 — workers spawn but die before completing chains. Zero executed, zero deployed.
+- **Silent worker death:** workers complete LLM work but the PHP process is reaped (timeout/OOM) before `finalizeLog()` stamps `outcome=executed` — rows with `output_tokens>0` but `execution_ended_at=NULL`.
+- **Error-class storms:** every chain fails on the SAME error class (e.g. `plan_shape_invalid_no_tool_name`, `PLANNED_ACTIONS_JSON empty`, `system-param: empty assistant content`, `glm_5_2_reasoning_content_leak`). The execution_log fills with identical failures.
+- **Implementation health regression:** `error_watchdog` reports `failure_rate_pct` spiking (e.g. 66.7% — 6 failures, 3 deployments in a recent window).
+- **Stale pipeline crons:** `cron_ideas_promoter` or `cron_ruben_tier_auto_promote` going stale (>24h) — ideas stop flowing from proposed → approved → autonomous.
+
+**The "fleet under" the executor** is DIFFERENT from Patient A. It is:
+1. **The LLM spill ladder** (same frankenstein-llm routing, but the executor sends `frankenstein-llm` model requests, not interactive Cline shapes) — if the spill is broken, every planner call fails.
+2. **The planner config** (`executor_via_frankenstein`, `ruben_executor_planner_spill_models`, `ruben_executor_planner_timeout_sec`, `ruben_executor_planner_restart_retries`) — if OFF or misconfigured, the executor hits Anthropic passthrough directly (expensive + fragile).
+3. **The dispatcher spawn logic** (`ruben_parallel_chains`, `ruben_rate_cap_per_hour`, the cron interval) — if the headroom/cap calculation is wrong, only 1 worker spawns per tick despite parallel=50.
+4. **The cron fleet** (`cron_ruben_autonomous` firing every */1 or */2 min, `cron_ruben_writeback_watchdog` stamping reaped workers, `cron_ideas_promoter` advancing the pipeline).
+5. **The bug library + kaizen recipes** (`frankenstein_router_incidents` table, `failure_repair_recipes` table) — the executor's institutional memory so it self-heals instead of re-deriving.
+
+### What "Frankenstein Doctor of Executor" means concretely (Ruben, 2026-07-08)
+
+Source: Ruben directive — *"Do another Frankenstein Doctor of Executor Session — probably also update the rule to include more of what that means exactly when I'm asking for Executor to have the Doctor."*
+
+**The Doctor of Executor is the attending physician for the autonomous chain engine.** The job: bring the executor's THROUGHPUT back to healthy (executed chains per hour rising, failure_rate_pct falling) by fixing the planner config, spill ladder, dispatcher spawn logic, and error-class root causes IN REAL TIME, while the executor keeps running. Two birds (same framing as Patient A): (1) throughput recovers and the ideas pipeline flows, and (2) every error class encountered gets permanently cataloged in the bug library + seeded as a kaizen recipe so the executor self-heals the same class next time.
+
+**The key difference from Patient A:** there is no single window to euthanize. The patient is a cron+PHP process that respawns every minute. "Revive" = fix the config/code/cron so the NEXT cron tick's workers succeed. "Euthanasia" does not apply — you cannot kill a cron; you fix what the cron spawns. The ladder of intervention simplifies to: (1) fix the config/code live while the cron runs, (2) verify the NEXT tick's workers execute cleanly, (3) catalog the bug class so kaizen handles it next time. No poisoned-transcript problem — each worker is a fresh PHP process with no history.
+
+### Protocol adaptation for Patient B (executor)
+
+The Steps 0b-6 protocol below still applies, but swap these specifics:
+
+| Step | Patient A (routing) | Patient B (executor) |
+|---|---|---|
+| 0b Federation | `get_federation_status()`, `classify_lane()` for `frankenstein-llm` | Same — the executor sends `frankenstein-llm` model requests, so the Federation lane check is IDENTICAL |
+| 0 Bug library | `bug_library_check_before_fix(symptom=...)` | Same — plus check `frankenstein_router_incidents` for executor-specific problem_keys (`executor_*`) |
+| 1 Identify patient | `frankenstein_what_served` timeline, conversation_id loop | `orchestrator_status` (events_24h vs decisions_24h), `error_watchdog` (implementation_health.failure_rate_pct), `workflow_stats` (recent_failures) |
+| 2 Prove failure | STREAM+tools header probe through LiteLLM | Query `orchestrator_execution_log` for outcome distribution (executed vs failed vs aborted) in 30-min buckets; grep the failure_text for the dominant error class |
+| 3 Fix at core | Adapter restart, registry rank, adapter code patch | Planner config flip (`executor_via_frankenstein=ON`, spill_models, timeout), dispatcher spawn fix, cron interval, empty-content guard in RubenExecutor.php, writeback watchdog cron |
+| 4 Verify | Re-run STREAM+tools, watch conversation_id converge | Watch the NEXT 2-3 cron ticks: executed count rises, failure_rate_pct falls, the error class stops appearing in execution_log |
+| 5 Document | `bug_library_record` + harden | Same — EVERY error class gets a `frankenstein_router_incidents` row (created_by=frankenstein_doctor) + a `failure_repair_recipes` kaizen seed. Backfill historical execution_log rows with the new failure_category. |
+| 6 Revive/euthanize | ≥3 revive attempts per window, then euthanize | N/A — no window. Revive = watch the cron tick succeed. If it doesn't, fix the next layer (config → code → cron → spill). No euthanasia. |
+
+### The executor Doctor's "throughput is the patient" check
+
+Where the Patient A Doctor asks "is the window converging?", the Patient B Doctor asks **"is throughput recovering?"** — measured as executed chains per hour. A Doctor of Executor session that fixes a config but doesn't verify executed/hour rose has NOT verified (rule 140, rule 29 Q#5). The canonical metrics:
+- `events_24h` vs `decisions_24h` ratio (healthy: decisions flowing, not just events)
+- `implementation_health.failure_rate_pct` (healthy: <30%; sick: >50%)
+- `orchestrator_execution_log` outcome counts in 5-min buckets (healthy: executed rising, failed falling)
+- `cli_watchdog.failure_patterns.failures_24h` vs `deployments_24h` (healthy: deployments > failures)
+
+If after the fix these metrics don't improve within 2-3 cron ticks (2-3 minutes at */1), the fix didn't take — re-probe, don't declare done.
+
+## What the Frankenstein Doctor IS (applies to both patient types)
+
+You are NOT just diagnosing. You are the attending physician for a sick Frankenstein system. Your job: **bring the patient back to healthy operation by enhancing its capabilities and fixing fleet bugs in real time, so it can finish by itself.** You operate at the FLEET level (router, adapter, registry, executor config, cron, the serving boxes) — the patient keeps its own work; you remove the obstacles under it.
+
+Two birds, one stone (Ruben's framing): (1) the patient recovers and its work completes, and (2) Project Frankenstein/the routing/executor gets permanently better. A Frankenstein Doctor session that only restarts a service and doesn't fix the root cause at the core (rule 92) has failed half its job.
 
 ## THE PRIME DIRECTIVE — repair Frankenstein WHILE it works; get the patient to do its OWN work (Ruben, 2026-06-16)
 
@@ -130,16 +190,39 @@ When a Doctor session finds a routing problem, the durable fix is almost always 
 
 (2026-06-17 source: during the CX7 stress test, the wedges traced to exactly the hardcoded constants above — a stale :11507 in FRANK_TOOLS_UPSTREAMS, a pre-merge FRANK_BOX_CAPACITY=2, a 2s load-probe timeout, a hardcoded joshua rung that 400s on tools. Each interim fix was a new constant; the DURABLE fixes — idea #13075 + the capability/health-discovery work — make the router choose by measured capability so the constants stop drifting.)
 
-## The protocol (in order — do NOT skip the first two)
+## The protocol (in order — do NOT skip the first three)
 
 
-### Step 0 — Consult the documentation FIRST (mandatory, per rules 156 + 141)
+### Step 0b — Consult the Frankenstein Federation (mandatory, idea #16648 + #16714)
+
+**The Federation is the CANONICAL lane-based routing layer above the raw registry. The Doctor MUST consult it on EVERY session before touching the fleet.** The Federation was written AFTER this rule was originally authored — a Doctor session that skips the Federation is diagnosing from stale architecture. Source: Ruben directive 2026-07-07 — "the Frankenstein Doctor needs to consult the Frankenstein Federation."
+
+Before ANY probe, fix, or registry edit, call ALL of the following:
+
+1. **`get_federation_status()`** — which lanes are loaded, which are healthy, which are degraded/down. This is the Federation's own health dashboard. A lane marked healthy here means the Federation dispatcher considers it live; a lane marked degraded means it's been auto-demoted. Do NOT trust the raw registry ranks if the Federation has demoted a lane — the Federation's view IS the operational truth.
+
+2. **Trace `classify_lane()` for the patient's model** — confirm the lane assignment is CORRECT. Example: `frankenstein-llm` with tools should land in the `tools` lane (adapter `:11510`), NOT `frankenstein_120b` (raw 120B). A misclassification here is the #1 silent routing bug — the registry looks fine, but the Federation is sending tool turns to a raw box that leaks tool args into content (rule 148). For the patient's ACTUAL request shape (stream + tools, the real Cline shape), call `classify_lane(model=..., has_tools=True, stream=True)` and verify the returned lane.
+
+3. **Check `fallback_for_lane()` confirms local-first cascade** — the fallback order for each lane MUST be local-machines → runpods → deepseek → sonnet-LAST (the Ruben policy order). If `fallback_for_lane(tools_lane)` returns a cascade that jumps straight to paid/cloud (missing the local 120B rungs between adapter and cloud), the Federation config is miswired — fix THAT before touching the registry. A flat-cloud cascade is the Federation-level equivalent of the rule-148 raw-120B bypass.
+
+4. **Verify TOOL_TRACK has local raw-120B rungs between adapter and cloud** (the #16717 invariant) — the `TOOL_TRACK` lane MUST include local raw-120B boxes (Cesar CX7, Artemis ollama) BETWEEN the frankenstein-tools adapter and any cloud spill. If the track goes adapter → cloud with no local raw-120B rungs, a single adapter failure dumps ALL tool traffic to paid models. The #16717 invariant: `TOOL_TRACK = [adapter] → [local-raw-120b-1] → [local-raw-120b-2] → [deepseek] → [sonnet-LAST]`. Missing local rungs = file a P0 idea and add them.
+
+5. **Verify the Federation dispatcher's `async_pre_call_hook` is stamping `emsu_federation_lane` metadata** — check the audit log (`/tmp/emsu_router_audit.log` or the Federation's own telemetry) for recent requests. The field `emsu_federation_lane` MUST be populated on EVERY request that passed through the dispatcher. If it is NULL on recent rows, the Federation dispatcher is NOT running (or is bypassed) — the raw registry is handling routing directly, which means lanes, `fallback_for_lane`, and the TOOL_TRACK invariant are all dead code. NULL `emsu_federation_lane` = the Federation is a ghost — fix the dispatcher BEFORE any other Doctor work.
+
+6. **Use `llm_locate` (fleet-state MCP) for live probe, NEVER trust stale fleet heartbeats** (rule 252) — the Federation's lane health may reference boxes that `fleet_inventory.last_heartbeat` says are up but are actually down right now. For EVERY box in the patient's lane, call `llm_locate(model=...)` to live-probe its serving port. A box that fleet_inventory marks healthy but `llm_locate` can't reach → mark it degraded via `fleet_act(mark_host_status=degraded)` so the Federation demotes it. Rule 252: stale heartbeats have caused multiple Doctor misdiagnoses. Live-probe every box in the lane.
+
+**The Federation gate is BINARY:** if any of these 6 checks reveals a Federation-level defect (misclassification, flat cascade, missing TOOL_TRACK rungs, null metadata, phantom-healthy box), the Doctor MUST fix the Federation config FIRST — before touching the registry, the adapter, or any box. A Federation misconfiguration makes all downstream routing decisions wrong. Fix the dispatcher, THEN fix what's under it.
+
+
+### Step 0 — Consult the documentation + bug library (mandatory, per rules 156 + 141)
+
+**After the Federation check (Step 0b) confirms the routing layer is correctly configured**, consult the bug library and registry:
 
 Before ANY probe or fix:
 1. `bug_library_check_before_fix(symptom=...)` — KNOWN_REPAIR → apply it verbatim; NOVEL → continue. (rule 156)
 2. project-frankenstein MCP — `frankenstein_what_served` (loop signature), `frankenstein_registry` (the ladder + tool_track ranks), `frankenstein_host_probe` (which boxes are hot/wedged), and read PROJECT_FRANKENSTEIN.md §8 for any serving/spill question. (rule 141)
 
-These two come BEFORE you touch the fleet. They usually name the bug.
+These come BEFORE you touch the fleet. They usually name the bug.
 
 ### Step 1 — Identify the patient + the loop signature
 
@@ -275,29 +358,9 @@ The registry can document a non-cline ladder (e.g. cesar→artemis→405b→josh
 ### D5 — "is it usable RIGHT NOW" is answered by a live stream+tools probe, not by log absence.
 To tell Ruben a window is safe to use: send a frankenstein-llm request WITH `tools` AND `stream`, and confirm `finish_reason=tool_calls` + a populated `tool_calls` array. NOTE: `content:null` WITH tool_calls is CORRECT (not the bug); the bug is content:null with NO tool_calls (empty). Do not declare "fixed" from "no errors in the log" alone — emit the real shape and read the result.
 
-## DIAGNOSIS DISCIPLINE — the cost-truth + design-truth lessons (added 2026-06-19)
-
-Source incident 2026-06-19: a Doctor/cost session gave Ruben THREE wrong answers before landing the truth. The errors were systemic, so they are now hard rules for every Doctor session:
-
-### D1 — admin_portal.llm_call_log does NOT capture LiteLLM gateway spend. NEVER cite it for frankenstein-llm cost.
-The first cost answer said "$12 total" from `llm_call_log` while the real bill was ~$700. `llm_call_log` only logs the PHP agent surfaces (sms_ai/ticket_ai/idea_miner/shadow_worker). Interactive frankenstein-llm / executor gateway traffic is NOT written there (~13 rows/day vs thousands of real picks). **The ONLY truth source for what frankenstein-llm served + cost is `/tmp/emsu_router_audit.log`** (fields: req, picked, total_chars, ctx_overflow_reroute, v3_reason, is_interactive) — count picks per backend there, and per rule 140 confirm with live response headers. A cost claim sourced from `llm_call_log` for a gateway surface is INVALID.
-
-### D2 — a 500K context reaching Sonnet is the HEAD (distiller) FAILING, never "a context limit." Reason FROM the architecture.
-The second answer described the bug as if it were the design ("no local box holds 500K, so it spills to Sonnet"). WRONG per rule 146: Project Frankenstein = DECOMPOSE→DISTILL→SERVE-LOCAL→REASSEMBLE. Context size must NEVER force a paid/cloud model. If a big context reaches Sonnet, the distiller no-op'd or a healthy local rung was wrongly excluded — find THAT, do not rationalize the spill as inevitable. The recurring failure class is EAGER CLOUD SPILL while a healthy free member could have served. Before blaming "limits," ask: did the distiller actually compress (check pathological_distill ratio<0.9, chunks>1)? Is a local rung being falsely excluded (stale probe, fail-open no-op, missing ladder member)?
-
-### D3 — separate the LOOPING bug from the COST bug. They are different fixes; don't conflate.
-- LOOPING (empty content:null / "did not use a tool" / unknown_tool retries) = the ADAPTER tool-call path (TTFB threshold, _send_as_sse, tool-parser). Fixing it makes windows COMPLETE.
-- COST (frank→paid sonnet/deepseek) = the DISTILLER + spill ladder (context compression, ladder membership/order). Fixing it makes windows CHEAP.
-- LoRA tool-call training improves tool-call QUALITY, it is NOT a cost fix. "Training will fix everything" is wrong. State which bug each fix addresses.
-
-### D4 — confirm the FULL registry ladder is actually implemented in code, not just documented.
-The registry can document a non-cline ladder (e.g. cesar→artemis→405b→joshua-70b→deepseek→sonnet→opus) while the HARDCODED spill function skips members (405b/235b were skipped). Per rule 140, verify the live spill function walks every documented rung; a member that only appears as `explicit_L4` by-name picks (never via the ladder) is NOT actually in the spill path. Registry text is a HYPOTHESIS; the code path + audit log are the truth.
-
-### D5 — "is it usable RIGHT NOW" is answered by a live stream+tools probe, not by log absence.
-To tell Ruben a window is safe to use: send a frankenstein-llm request WITH `tools` AND `stream`, and confirm `finish_reason=tool_calls` + a populated `tool_calls` array. NOTE: `content:null` WITH tool_calls is CORRECT (not the bug); the bug is content:null with NO tool_calls (empty). Do not declare "fixed" from "no errors in the log" alone — emit the real shape and read the result.
-
 ## Self-check before declaring a Doctor session done
 
+0. **Did I consult the Frankenstein Federation?** (Step 0b — idea #16714) — ALL SIX checks: `get_federation_status()`, `classify_lane()` trace, `fallback_for_lane()` local-first confirm, TOOL_TRACK invariant (#16717), `emsu_federation_lane` metadata present, `llm_locate` live-probe (not stale heartbeats, rule 252). Any Federation defect → fix Federation config FIRST.
 1. Did I consult the bug library + project-frankenstein MCP BEFORE probing? (Step 0)
 2. Did I prove the cause with a LIVE header probe of the STREAM+tools shape, not a file-read and not only a non-stream probe? (rule 140, Step 2)
 3. Did I fix the CORE (router/adapter/registry/adapter-code), not just bounce a service? (rule 92)
@@ -312,6 +375,9 @@ To tell Ruben a window is safe to use: send a frankenstein-llm request WITH `too
 
 ## Cross-references
 
+- Idea #16648 / #16714 — Frankenstein Federation lane-based routing (Step 0b — consult FIRST)
+- Idea #16717 — TOOL_TRACK invariant: local raw-120B rungs between adapter and cloud
+- Rule 252 — live-probe via `llm_locate`, never trust stale fleet heartbeats (Step 0b check 6)
 - Rule 156 — bug_library_check_before_fix FIRST (Step 0)
 - Rule 141 — project-frankenstein MCP first; PROJECT_FRANKENSTEIN.md §8 for serving/spill
 - Rule 140 — prove routing from live headers, never files
@@ -333,3 +399,6 @@ To tell Ruben a window is safe to use: send a frankenstein-llm request WITH `too
 
 2026-06-16 — initial, + Step 6 (revive ≥3 / euthanize / never-abandon-work) per Ruben directive same day.
 2026-06-19 — added HARDENED CLAUSES A/B/C (knowledge-gap reversion prevention): Clause A mandatory pre-read ordering gate, Clause B no-blind-revert (cross-ref rule 160), Clause C freshness protection (inverse of rule 147). Added DIAGNOSIS DISCIPLINE D1-D5. Self-check items 8-12 added. loop-detector cron (cron_frank_loop_detector.php) deployed. FAILOVER-vs-CORRECTIVE_RETRY finding recorded in bug library as frankenstein_failover_path_not_malformed_args_2026_06_19.
+2026-07-07 — added Step 0b "Consult the Frankenstein Federation" (idea #16648 + #16714), mandated BEFORE Step 0's bug_library check. The Federation is the CANONICAL lane-based routing layer above the raw registry — it was written AFTER this rule was originally authored, so a Doctor session that skips it is diagnosing from stale architecture. Step 0b requires 6 checks: (1) `get_federation_status()` lane health, (2) `classify_lane()` trace to confirm correct lane assignment (tools lane, not raw 120B), (3) `fallback_for_lane()` local-first cascade confirmation, (4) TOOL_TRACK invariant #16717 (local raw-120B rungs between adapter and cloud), (5) `emsu_federation_lane` metadata present in audit log (null = dispatcher not running), (6) `llm_locate` live-probe per rule 252 (never trust stale fleet heartbeats). Self-check item 0 added. Cross-refs updated with #16648, #16714, #16717, rule 252. Source: Ruben directive 2026-07-07 — "the Frankenstein Doctor needs to consult the Frankenstein Federation."
+2026-07-07 (later) — TOOL_TRACK invariant #16717 DEPLOYED end-to-end. Root cause: `frankenstein_registry.yaml` had a YAML parse error (auto-enrolled entries appended after `version: 1` outside the `models:` list), causing `derive()` to fall back to the static fallback (`_STATIC_TOOL_TRACK`) which had only 3 rungs (frankenstein-tools → deepseek-v4-pro → glm-5.2) — NO local 120B rungs. Fix applied across 4 surfaces: (a) YAML repaired (removed orphan auto-enrolled entries + duplicate tier_order, verified 10 tool-track rungs with 7 local between adapter+cloud), (b) `frankenstein_registry.py` static fallback hardened (added artemis-gpt-oss-120b, cesar-120b, julia-120b, joshua-llama3.3-70b-vllm, cicero-235b between adapter and cloud), (c) `_router_core.py` hardcoded TOOL_TRACK added julia-120b at rank 18, (d) `emsu-litellm-router-hook-smoketest.py` now enforces the TOOL_TRACK invariant at startup (imports `_router_core` directly, requires ≥4 rungs + at least one local rung between rank 10 and 50, fails on gap → safe_deploy aborts). Verified live: `docker exec litellm python3 -c 'import _router_core; [print(e) for e in _router_core.TOOL_TRACK]'` shows 10 rungs with 7 local between adapter and deepseek.
+2026-07-08 — added Patient B "Frankenstein Doctor of Executor" variant (Ruben directive: "update the rule to include more of what that means exactly when I'm asking for Executor to have the Doctor"). The rule now covers TWO patient types: Patient A (frankenstein-llm routing layer, the original — a sick interactive Cline window) and Patient B (RUBEN autonomous executor — `cron_ruben_autonomous.php` + `RubenExecutor.php`, the autonomous chain engine). Patient B symptoms are SYSTEMIC (throughput collapse, silent worker death, error-class storms, implementation_health failure_rate regression, stale pipeline crons), not per-window. The "fleet under" the executor = planner config, spill ladder, dispatcher spawn logic, cron fleet, bug library + kaizen recipes. Key difference: no euthanasia (the patient is a cron that respawns every minute, not a window with a poisoned transcript) — "revive" = fix config/code so the NEXT cron tick succeeds. Added the protocol-adaptation table mapping Steps 0b-6 from Patient A to Patient B equivalents, and the "throughput is the patient" verification check (events_24h vs decisions_24h, failure_rate_pct, execution_log outcome counts in 5-min buckets). Trigger phrases expanded with executor-specific ones. Source: 2026-07-08 Frankenstein Doctor Phase 1-9 sessions (events_24h=68,161, decisions_24h=0 → throughput 0/hr → fixed via 4 error classes + config flips → throughput 480-564/hr).

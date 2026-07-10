@@ -12,25 +12,28 @@ Zero interaction. Safe to re-run whenever scan.py runs.
 """
 import json
 import os
+import subprocess
 import time
 from pathlib import Path
 
 HOME = Path(os.path.expanduser("~"))
 PATTERNS = HOME / "Documents/Cline/yolo_learner/patterns.json"
-RULE_FILE = HOME / "Documents/Cline/Rules-archive/99-yolo-prevention-learned.md"  # 2026-06-25: moved to archive (was bloating every system prompt)
-LEGACY_RULE_FILE = HOME / "Documents/Cline/Rules/99-yolo-prevention-learned.md"
+RULE_FILE = HOME / "Documents/Cline/Rules/99-yolo-prevention-learned.md"
+LINT_SCRIPT = HOME / "Documents/Cline/Rules/.pre-write-lint.sh"
 
 # Static "how to avoid" playbook per category. Living reference; the scanner
 # decides which ones to surface based on frequency.
 PLAYBOOK = {
+    # #1 all-time YOLO cause. Was an empty stub ("No specific playbook yet")
+    # until 2026-07-03 — the single most frequent trip had no guidance. Content
+    # mirrors hardfloor rules 41 (no-prose) + 143 (circuit breaker v2).
     "no-tool-use: model typed prose instead of calling a tool": [
-        "**Root cause:** after a tool result comes back, the model emits an assistant turn containing ONLY prose (e.g. `Deployed. Now reload FPM:`, `Updated. Confirming with a SELECT:`, `Saved. Next I'll patch the route:`) with NO tool_use block. Cline re-prompts \"use a tool,\" model re-narrates, third no-tool-use strike trips YOLO. This is the #1 failure mode in the trip database — ~45% of all trips and ~85% of `no-tool-use > no-tool-use > no-tool-use` triples follow this exact shape (see rule 41).",
-        "**Fix (bright-line, rule 41):** after ANY successful destructive tool result (safe_deploy_file, sql_execute INSERT/UPDATE, write_to_file, send_email, post_imessage, etc.), the NEXT assistant turn MUST contain at least one tool_use block. Words like \"Deployed. Now reload FPM\" or \"Updated. Now update HANDOFF\" are status descriptions — the model is announcing the next step but not executing it. Either emit the tool call in the SAME turn as the narration, OR call `attempt_completion` if the work is genuinely done. Never close a post-deploy turn with words alone.",
-        "**Stop rule:** if you find yourself typing `Deployed.`, `Updated.`, `Inserted.`, `Patched.`, `Saved.`, `Posted.`, or `Sent.` as the FIRST word of an assistant turn after a successful destructive tool result — STOP. Continue with one of: (a) the next tool call (preferred), (b) `attempt_completion` (if done). Never with words alone. Never with a colon-terminated \"Next step:\" clause.",
-        "**Mid-task narration trap:** announcing what you're about to do without doing it is the symptom. \"Let me check the cron logs:\" with no tool call is identical from Cline's perspective to forgetting to call a tool. Just call it.",
-        "**Two prose turns in a row = YOLO incoming:** if you emit one assistant turn with no tool_use and Cline re-prompts, the THIRD turn must contain a tool_use OR `attempt_completion`. Re-narrating the same intent in different words is the death spiral. Switch from prose to tool action.",
-        "**CIRCUIT BREAKER (rule 143 v2):** count only CONSECUTIVE \"did not use a tool\" errors (any successful tool call resets the streak; API hiccups like \"Failure: I did not provide a response\" do not count). Strikes 1-3 = recover by emitting a (simpler) tool, silently. Only at 4 consecutive strikes is `attempt_completion` the mandated next move. For MCP: 3 empty / \"result missing\" results in a row from the SAME server = transport wedged; pivot to a different tool path or `attempt_completion`. See `.clinerules/143`.",
-        "**Capability-gap variant (rule 73):** if you genuinely don't have the right tool to do what you described, emit `attempt_completion` with a status of \"blocked — need tool X\" instead of re-narrating. Don't loop trying to describe the action; ship the blocker as a completion.",
+        "**This is the #1 YOLO cause.** You typed prose (a sentence, a plan, a narration) instead of emitting a `<tool_use>` block. Cline re-prompts with `[ERROR] You did not use a tool!` — repeated prose-only turns trip YOLO.",
+        "**CEILING=10 (post-reload, as of 2026-07-04 v4 fix):** the task dies at strike 10. Rule 143 v4 says bail at strike (ceiling-1) = strike 9. You get EIGHT recovery chances (strikes 1-8), then you MUST exit. PRE-RELOAD: the running extension still uses ceiling=3 (bail at strike 2, one recovery chance) until VS Code reloads.",
+        "**Strikes 1-8 (RECOVER):** emit the intended tool block silently. No narration, no apology, no 'Let me...' / 'Now I'll...' / 'Doing X:'. The tool call IS the response.",
+        "**Strike 9 (BAIL):** your next response MUST be `attempt_completion` with a pickup prompt (rule 91). Do NOT attempt a tenth tool — strike 10 will kill the task with no pickup prompt. You are exiting to SAVE the task, not abandoning it.",
+        "**Banned shapes:** any turn ending with `:` and no tool block; 'Deployed. Now reload FPM:'; 'Next I'll patch X.' without the patch tool in the SAME turn.",
+        "**Root pattern:** the announcement and the tool must be in the SAME turn, or skip the announcement entirely. After ANY error, the next turn is a tool call or `attempt_completion` — never prose. See rule 41 (no-prose) + rule 143 v4 (circuit breaker, bail at ceiling-1).",
     ],
     "api: overloaded/rate-limit": [
         "Anthropic is overloaded, not a logic problem.",
@@ -112,59 +115,7 @@ PLAYBOOK = {
     "tool: not allowed": [
         "Permission/config issue. Do not retry — fix the underlying access problem first.",
     ],
-    # ===== KAIZEN-ported entries (2026-05-09) =====
-    # Lessons distilled from KAIZEN's ruben_executor catalog. See
-    # .clinerules/23-kaizen-mcp-failure-classifier.md for the policy layer.
-    "safe-deploy: sha drift, re-read file before retry": [
-        "**Root cause:** the file changed on disk between when you computed expected-sha256 and when safe-deploy ran. Retrying with the same hash will fail forever.",
-        "**Fix:** before re-emitting safe_deploy, READ the current file via `read_file` or `cat`, compute its actual sha256 (`sha256sum <path>`), then call safe_deploy with `--expected-sha256` set to the LIVE value.",
-        "Do NOT retry with the prior expected-sha256. Do NOT skip the read step.",
-        "Valid safe-deploy flags: `--target` `--content` `--expected-sha256` `--check` `--force`. NOT `--src` `--source` `--srcfile` `--from`.",
-    ],
-    "safe-deploy: invalid flag (use --target/--content/--expected-sha256)": [
-        "**Root cause:** you used a flag safe-deploy doesn't accept. Common offenders: `--src`, `--source`, `--srcfile`, `--from`, `--in`.",
-        "**Valid flags only:** `--target FILE` `--content \"string\"` `--expected-sha256 HASH` `--check` (validate-only) `--force` (bypass).",
-        "If unsure, run `safe-deploy --help` first as a read-only step. Don't guess.",
-    ],
-    "sql: unknown column (DESCRIBE target table first)": [
-        "**Root cause:** you wrote columns that don't exist on the target table — usually borrowed from a sibling/rules table that has similar column names.",
-        "**Fix:** before any INSERT/UPDATE/DELETE, run `DESCRIBE table_name` (or `SHOW CREATE TABLE`). Match column names character-for-character.",
-        "Common pollution: writing `rule_key`/`rule_body`/`rule_source` to `ai_compiled_rules` — those live on `lazy_agent_rulesets`. The actual `ai_compiled_rules` columns are `category`, `trigger_pattern`, `rule_text`, `channel`, `avg_confidence`, `occurrence_count`, `source_correction_ids`, `status`.",
-        "If a column name in your draft doesn't appear in DESCRIBE output, REMOVE IT before the write.",
-    ],
-    "php: syntax error (run php -l before deploy)": [
-        "**Root cause:** PHP syntax error in code you were about to deploy or just deployed.",
-        "**Fix:** before any safe_deploy of PHP, write the candidate to `/tmp/temp_check_<name>.php` and run `php -l` on it. Verify exit code 0.",
-        "Common errors in this codebase: missing semicolon after `}` of class/function/use; mismatched curly braces in nested arrays; bad heredoc EOF tokens; `<?php` opening tag inside a require/include.",
-        "Special case: `strict_types declaration must be the first statement` — move `declare(strict_types=1);` to immediately after the opening `<?php` tag.",
-    ],
-    "plan: no terminal action (must include safe_deploy/sql_execute/write/send)": [
-        "**Root cause:** your plan only had read-only steps (check/show/select/describe/lookup/fetch/get) and shipped nothing. KAIZEN's #1 RUBEN failure (443 hits/7d).",
-        "**Fix:** every plan MUST contain at least one TERMINAL ACTION step. Terminal actions: `safe_deploy`, `sql_execute`, `write_file`, `send_email`, `send_sms`, `post_imessage`, `deploy_route`, `install_cron`, `modify_table`, `insert_data`.",
-        "If you genuinely cannot decide what to ship, emit `steps:[]` with a one-sentence `notes_to_reviewer` requesting a split. That IS the correct answer; investigation-only is not.",
-        "Self-check: would a fresh agent looking at the steps array be able to tell what changed in the world? If no, the plan has no terminal action.",
-    ],
-    "step: placeholder content not resolved": [
-        "**Root cause:** a step's `args.content` / `args.sql` / `args.command` contains a template marker like `<DERIVED_FROM_STEP_Y>` or `<FULL FILE CONTENT FROM STEP X>` that was never substituted.",
-        "**Fix:** every step's content MUST be the LITERAL final value. If you need to derive content from a prior step, either compute it inline before emitting the plan, or split into multiple plan turns.",
-        "Never emit a write_local_file or safe_deploy with a placeholder content value.",
-    ],
-    "worker: silent death / ext-host OOM (shorten plan, see rule 97)": [
-        "**Root cause:** the agent process died mid-execution with no API error — true OOM/kill/ext-host crash. NOT a rate-limit, NOT a transport error (those are separate).",
-        "**Fix:** retry with a SHORTER plan (≤ 4 steps).",
-        "Avoid reading large files into context — use `plan_delegate_exploration` instead of multiple `plan_read_file` calls.",
-        "For files > 100KB, prefer `shell_command` + sed/python over reading the whole file.",
-        "If this is a high-token chain (>50K input tokens), break into two chains.",
-        "See `.clinerules/97-extension-host-oom.md` and `.clinerules/98-edit-discipline.md` for the prevention layer.",
-    ],
-    "api: credit exhausted (escalate, no retry)": [
-        "**Root cause:** Anthropic credit balance exhausted (HTTP 402). DIFFERENT from rate-limit — retrying will not succeed.",
-        "**Fix:** STOP. Do NOT retry. Escalate to Ruben immediately.",
-        "Surface a one-line status: \"Anthropic credit exhausted, paused\" and idle.",
-    ],
-    # ===== end KAIZEN-ported =====
 }
-
 
 HEADER = """# YOLO Prevention — Learned from Actual Trips
 
@@ -176,30 +127,43 @@ showed `{new_this_scan}` new "[YOLO MODE] Task failed: Too many consecutive mist
 trips this scan, against `{trips30}` cumulative in the last 30 days
 (`{trips7}` in the last 7 days). The cumulative number doesn't grow unless
 this scan's delta is non-zero — so a quiet day looks like "0 new this scan,
-268 cumulative", not a fresh flood. Each trip kills a task mid-work and
+{trips30} cumulative", not a fresh flood. Each trip kills a task mid-work and
 forces Ruben to restart. This rule is the accumulated
 playbook for avoiding the specific failure modes that caused them, ranked by
 how often they show up.
 
-## The one meta-rule
+## The one meta-rule (ceiling=10 post-reload — fixed 2026-07-04 v4)
 
-If the SAME tool call fails 2 times in a row, the 3rd attempt WILL trip YOLO
-and end the task. So:
+The live `maxConsecutiveMistakes` is **10** after VS Code reload (proven:
+source patched from {{default:3}} to {{default:10}} in dist/extension.js).
+Rule 143 v4 says: **bail at strike (ceiling-1) = strike 9.** You get EIGHT
+recovery chances (strikes 1-8), then you MUST exit via `attempt_completion`
+with a pickup prompt. Strike 10 = YOLO death with no pickup prompt.
 
-- **Two failures of the same kind = stop and change approach.** Do not attempt
-  a third retry of the same command/SEARCH/path/query. Either report to the
-  user, switch tools, re-read the file, or idle.
-- **Two API overloaded errors in a row = stop and idle.** Anthropic is
-  overloaded; the third call has ~0% chance of succeeding and 100% chance of
-  ending the session. Post a short "Anthropic is hiccuping, pausing" and wait
-  for the user.
+**PRE-RELOAD CAVEAT:** until VS Code reloads (Window: Reload), the running
+extension still uses ceiling=3. In that state: bail at strike 2, one recovery
+chance. After reload: bail at strike 9, eight recovery chances.
+
+- **Strikes 1-8 (RECOVER):** emit the intended tool block silently. No narration.
+- **Strike 9 (BAIL):** `attempt_completion` with a pickup prompt (rule 91). Do
+  NOT attempt a tenth tool — the task will die and lose everything.
+- **Two failures of the same kind = STOP.** Do not attempt a third retry of the
+  same command/SEARCH/path/query. Bail out or switch tools.
+- **Two API overloaded errors in a row = BAIL.** Anthropic is overloaded; the
+  third call has ~0% chance of succeeding and 100% chance of ending the
+  session. `attempt_completion` with "Anthropic overloaded, re-prompt in 60s."
+
+The formula is always `bail = ceiling - 1`. See rule 143 v4. Re-patch script:
+`~/Documents/Cline/scripts/patch_yolo_ceiling.sh` (handles extension updates).
 
 """
 
 
 def fmt_rank_line(i: int, cat: str, n: int, total: int) -> str:
+    # n counts OCCURRENCES across cat_1/cat_2/cat_3 (a trip can contribute to up
+    # to 3 categories), so pct can exceed 100% when a category dominates triples.
     pct = (100.0 * n / total) if total else 0.0
-    return f"{i}. **{cat}** — {n} trips ({pct:.0f}%)"
+    return f"{i}. **{cat}** — {n} occurrences ({pct:.0f}% of {total} trips)"
 
 
 def section_for(cat: str) -> str:
@@ -233,6 +197,7 @@ def main() -> int:
     )]
 
     out.append(f"## Top failure modes (all-time, {total} trips)\n")
+    out.append("_Counts are occurrences across the 3 failure slots per trip; a category can exceed the trip total when it dominates `fail > fail > fail` sequences._\n")
     for i, (cat, n) in enumerate(cats, 1):
         out.append(fmt_rank_line(i, cat, n, total))
     out.append("")
@@ -243,59 +208,28 @@ def main() -> int:
         out.append(f"- `{pat}` — {n} time(s)")
     out.append("")
 
-    # 2026-05-25 context-diet pass: only render full playbook bodies for the
-    # top-N highest-frequency categories. Everything else gets a one-line
-    # pointer to clinerules_lookup so the full text is still queryable on
-    # demand via the clinerules MCP, but the in-prompt rule stays small.
-    TOP_N_INLINE = 5
+    # 2026-07-04 (idea #16415): surface which LLMs trip most often. The user
+    # reported "numerous yolos across multiple llms" but the trips table had no
+    # model column until today. Now scan.py captures model_usage per task.
+    all_models = wall.get("models") or []
+    if all_models:
+        out.append("## Trips by LLM (which models trip most)\n")
+        out.append("_A task may use multiple LLMs (model swaps mid-task); each is counted. Blank = no model_usage in task metadata._\n")
+        for mname, n in all_models[:15]:
+            out.append(f"- `{mname}` — {n} trip(s)")
+        out.append("")
 
-    top_cats = [c for c, _ in cats[:TOP_N_INLINE]]
-    out.append(f"## Playbook per failure mode (top {TOP_N_INLINE} inline)\n")
-    out.append(f"These are the {TOP_N_INLINE} highest-frequency YOLO triggers — together they account for the bulk of trips. If you're about to retry something, find the matching section below and follow it instead. For the rarer classes, see the pointer list further down and fetch via `clinerules_lookup` when needed.\n")
+    out.append("## Playbook per failure mode\n")
+    out.append("Sorted by how often each one has tripped YOLO. If you're about to retry something, find the matching section below and follow it instead.\n")
 
     seen = set()
-    for cat in top_cats:
+    for cat, _ in cats:
         if cat in seen:
             continue
         seen.add(cat)
         out.append(section_for(cat))
 
-    # Long-tail categories: one-line pointer each, no body. They're queryable
-    # via clinerules_lookup if the rare class actually fires.
-    long_tail = [(c, n) for c, n in cats[TOP_N_INLINE:] if c in PLAYBOOK]
-    if long_tail:
-        out.append("## Lower-frequency YOLO classes (lookup on demand)\n")
-        out.append("Each entry is a category that has tripped YOLO but at lower frequency. Full playbook lives in the auto-generated archive — fetch with `clinerules_lookup(rule_id=\"99-yolo-deep\")` or `clinerules_search(query=\"<category keyword>\")`.\n")
-        for cat, n in long_tail:
-            seen.add(cat)
-            out.append(f"- **{cat}** ({n} trips) — see `clinerules_search(\"{cat.split(':')[0].strip()}\")`")
-        out.append("")
-
-    # KAIZEN-ported preventive lessons. Also moved to pointer form per the
-    # 2026-05-25 context diet — these are forward-looking categories that
-    # have NOT yet fired in Cline, so a pointer is sufficient.
-    KAIZEN_PORTED = [
-        "safe-deploy: sha drift, re-read file before retry",
-        "safe-deploy: invalid flag (use --target/--content/--expected-sha256)",
-        "sql: unknown column (DESCRIBE target table first)",
-        "php: syntax error (run php -l before deploy)",
-        "plan: no terminal action (must include safe_deploy/sql_execute/write/send)",
-        "step: placeholder content not resolved",
-        "worker: silent death / ext-host OOM (shorten plan, see rule 97)",
-        "api: credit exhausted (escalate, no retry)",
-    ]
-    unrendered_kaizen = [k for k in KAIZEN_PORTED if k not in seen]
-    if unrendered_kaizen:
-        out.append("## KAIZEN preventive pointers (not yet fired in Cline)\n")
-        out.append("Forward-looking categories from KAIZEN's `ruben_executor` catalog. Fetch full text with `clinerules_search` when first encountered.\n")
-        for cat in unrendered_kaizen:
-            seen.add(cat)
-            short_key = cat.split(":")[0].strip() if ":" in cat else cat.split("(")[0].strip()
-            out.append(f"- **{cat}** — see `clinerules_search(\"{short_key}\")`")
-        out.append("")
-
     out.append("## What's auto-updated\n")
-
     out.append(f"- Last update: {now}")
     out.append(f"- Trips tracked total: {data['total_trips_in_db']}")
     out.append(f"- New trips this scan: {data['scanned_new_trips']}")
@@ -308,10 +242,23 @@ def main() -> int:
     RULE_FILE.parent.mkdir(parents=True, exist_ok=True)
     RULE_FILE.write_text("\n".join(out))
     print(f"wrote {RULE_FILE}")
-    # Clean up legacy copy in Rules/ if it exists (bloat prevention)
-    if LEGACY_RULE_FILE.exists():
-        LEGACY_RULE_FILE.unlink()
-        print(f"removed legacy copy from Rules/: {LEGACY_RULE_FILE}")
+
+    # Self-lint: run the pre-write lint on the file we just wrote so the
+    # yolo_learner cron is itself rules-system-compliant. Closes the bypass
+    # that let rule 99 accumulate without passing G6 (it was neither in
+    # HARDFLOOR_SLUGS nor META_FILES until 2026-07-02). Non-fatal: lint
+    # warnings are logged, never block the write (rule 99 is auto-generated).
+    if LINT_SCRIPT.exists():
+        try:
+            subprocess.run(
+                ["/bin/bash", str(LINT_SCRIPT), str(RULE_FILE)],
+                check=False,
+                capture_output=True,
+                text=True,
+                timeout=30,
+            )
+        except Exception as exc:
+            print(f"lint skipped: {exc}")
     return 0
 
 

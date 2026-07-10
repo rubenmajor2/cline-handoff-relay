@@ -27,10 +27,27 @@
 
 7. **RULE 01 VOICE:** Would Ruben actually type this? No em dashes, no "the tech team," no "I've identified the root cause," no corporate speak. Talk TO the person IN the chat, not ABOUT them.
 8. **RULE 02 NO APOLOGIES:** Is this student-facing email with apology language ("I'm sorry," "we apologize," "I regret")? → **STRIP IT.** Neutral acknowledgement + concrete fix action only.
+9. **RULE 259 NO SPILLOVER:** Am I about to send to chat 55 (group chat)? → **GATE CHECK: does Jon or Vicky need this?** If the content is Cline technical work, infrastructure, code, LLM routing, bug analysis, SQL, deploy mechanics, clinerules, or system architecture → **FAILS. Do NOT send to group.** The default channel for Ruben-only Cline work is `attempt_completion`, not chat 55. Full rule: `clinerules_lookup(rule_id=259)`.
 
 ### ⛔ PRE-COMPLETION GATE (before attempt_completion)
 
-9. **RULE 91 PICKUP PROMPT:** Does `result` end with `═══ PICKUP PROMPT ═══`? If NO → **BROKEN. DO NOT SHIP.** Add the block. **COPY THIS EXACT LINE:** `═══════════════════════════════════════════════` (39 equals signs — NOT hyphens, NOT dashes, NOT different unicode).
+9. **RULE 91 PICKUP PROMPT — BINARY GATE:** Does `result` end with `═══ PICKUP PROMPT ═══`? If NO → **BROKEN. DO NOT SHIP.** Add the block.
+
+   **COPY-PASTE THIS DIVIDER (do NOT retype it — copy mechanically):**
+   ```
+   ═══════════════════════════════════════════════
+   ```
+   That is 47 characters of U+2550 (BOX DRAWINGS DOUBLE HORIZONTAL, ═). NOT ASCII equals. NOT hyphens. NOT dashes. COPY it mechanically — do not retype.
+
+   **The full required block shape (copy this template):**
+   ```
+   ═══════════════════════════════════════════════
+   PICKUP PROMPT (paste into a fresh Cline window)
+   ═══════════════════════════════════════════════
+
+   Pick up task #[real id] — [one-line topic].
+   ```
+   Both divider lines are the SAME 47-char U+2550 string. If they differ, the block is broken.
 10. **RULE 29 RUBEN QUESTIONS:** Did Ruben ask a direct question? → Answer it INLINE in `result`. "I'll look into it" does not count.
 11. **RULE 29 ACT, DON'T DEFER:** Did I list anything as "open thread" that I could do myself with a tool I have? → **DO IT NOW, don't list it.** Only genuine human-policy decisions (refund amounts, regulator wording) stay open.
 12. **RULE 91 NO PLACEHOLDERS:** Any literal `#NNNN`, `#0000`, `<task_id>`, `<timestamp PT>` in result? → **BROKEN.** Substitute real values or remove.
@@ -41,60 +58,46 @@
 
 ### ⛔ RECOVERY GATE (if you see "[ERROR] You did not use a tool")
 
-14. **RULE 143:** Count CONSECUTIVE errors only (any successful tool resets streak). Strike 1-2: emit the tool silently. Strike 3: emit simpler tool or bail. Strike 4: `attempt_completion` only. API hiccups don't count.
+14. **RULE 143 (v4, ceiling=10 post-reload):** Count CONSECUTIVE errors only (any successful tool resets streak). Strikes 1-8: recover by emitting a (simpler) tool silently. Strike 9: BAIL to `attempt_completion` with a pickup prompt — do NOT attempt a tenth tool. Strike 10 = YOLO death. ROOT CAUSE FIXED 2026-07-04: `maxConsecutiveMistakes` was hardcoded `{default:3}` in `dist/extension.js` (NOT exposed in UI). Patched to `{default:10}`. After VS Code reload, ceiling=10. Bail = ceiling - 1 = strike 9. Re-patch script: `~/Documents/Cline/scripts/patch_yolo_ceiling.sh`. Until reload, running extension still uses ceiling=3 (bail at strike 2).
+
+### ⛔ PRE-PIVOT GATE (before switching away from an MCP server or declaring it "wedged")
+
+15. **RULE 261 MCP FAILURE CLASSIFICATION:** Did an MCP tool call return empty, "No valid session ID", "result missing", or an error? → **STOP. Do NOT pivot yet. Do NOT declare "wedged."** Classify the failure into exactly one of 4 modes FIRST, then act:
+
+   | Mode | Symptom | Recovery |
+   |---|---|---|
+   | **A: Server down** | ECONNREFUSED, connection refused | Restart server. Do NOT retry same call. |
+   | **B: Session expired** | "No valid session ID", 401/403 | **Re-init connection, retry ONCE.** Server is HEALTHY — session token just expired. |
+   | **C: Transport error** | "result missing", empty body, 502 | Check NRestarts. Retry ONCE after 5s. |
+   | **D: Transient empty** | First call empty, second works | **Retry ONCE.** Was transient. Do NOT declare wedge. |
+
+   **ONE failure is NOT a wedge. TWO failures is NOT a wedge.** Run the 3-gate check (rule 258): (1) is result actually empty? (2) is it stale? (3) cross-source verify via different path (ssh, different MCP). All 3 must FAIL before declaring wedge. **"No valid session ID" = Mode B = re-init + retry, NOT a pivot.** Green in Cline settings ≠ valid session. Full rule: `clinerules_lookup(rule_id=261)`. See Issue #24 in `MCP_Troubleshooting.md` for the full RCA.
 
 ---
 
 ## ⛔ RULE 146 — READ THIS FIRST. Frankenstein-LLM routes EVERY LLM we own. Free-local models ARE the primary. Never suggest Claude/Anthropic as the default.
 
-**THE RULE (blunt, can't miss it):**
 - `frankenstein-llm` is the ONE router for EVERY LLM: 7B/14B/32B/70B/120B/405B/235B, RunPods, DeepSeek, AND the paid heads (Sonnet, Opus, Fable-5). If we own it, Frankenstein routes it.
 - **Cline is PRIORITY.** Executor/Orchestrator QUEUE behind it. Never the reverse.
 - **Free-local-first IS the design.** A healthy free local box that can serve = serve from it. Only spill to paid when local is GENUINELY full (real saturation, not a false-offline probe).
 - **A failed health probe does NOT mean a box is dead.** Check `/tmp/emsu_router_audit.log` for recent `picked=<model>` before calling anything dead.
 - **NEVER suggest Claude/Anthropic/Sonnet/Opus as the model to use** unless Ruben explicitly asked. Anthropic models are LAST RESORT in the spill ladder. Suggesting them on an unrelated task is a rule violation.
-- Full rule: `clinerules_lookup(rule_id=146)`. Also cross-refs 140 (verify routing live), 141 (MCP first), 148 (never pin raw 120B).
+- **CANONICAL CLINE ENDPOINT: `https://litellm.emsuniversity.com`** (Cloudflare tunnel → WOPR:4000). PERMANENT, reboot-surviving base URL. Do NOT use `http://127.0.0.1:4000` or localhost SSH tunnels — those die when the Mac→WOPR SSH tunnel drops. (Rule 250: never hand-edit `_FLAGSHIP_MEMBERS` for "box is down" — doorman + reactive quarantine handle liveness at runtime.)
+- Full rule: `clinerules_lookup(rule_id=146)`. Cross-refs: 140 (verify routing live), 141 (MCP first), 148 (never pin raw 120B), 250 (no hardcoded LLM statuses).
 
 ---
 
-## ⛔ COMPLETION COMPLIANCE — Rules 29 and 91 are NON-NEGOTIABLE on every `attempt_completion`
+## ⛔ COMPLETION COMPLIANCE — Rules 29 and 91 (details in PRE-COMPLETION GATE #9-12 above)
 
-**Before EVERY `attempt_completion`, these two hardfloor rules MUST be satisfied. No shortcuts. No lazy completions.**
-
-### Rule 91 — Pickup Prompt REQUIRED
-- Every `attempt_completion.result` MUST end with a `═══ PICKUP PROMPT ═══` block
-- Must contain: task ID, verified PT timestamp, 2-3 bullets of current state, numbered open threads with idea #s, reference IDs, cross-refs
-- No PICKUP-BY-REFERENCE ("see handoff file") — the block must be INLINE in result
-- No literal placeholders (`#NNNN`, `<timestamp PT>`, `#0000`) — every `#` is a real idea number
-- Open threads MUST have idea numbers (file via `create_idea` before listing)
-- Full rule: `clinerules_lookup(rule_id=91)`
-
-### Rule 29 — Act, Don't Defer
-- Default is ACTION. Inaction requires justification.
-- Before listing ANY open thread in the pickup prompt: Gate 0 test — "can I do this now?" If yes, DO it, don't list it.
-- "Pickup prompt as decision queue" is forbidden: reversible actions the agent can take go in the DONE column, not the open-threads list
-- Every unanswered Ruben question is a rule violation
-- Full rule: `clinerules_lookup(rule_id=29)`
-
-### Pre-completion BINARY GATE (run BEFORE calling the attempt_completion tool — same hard pattern as rule 41's colon test)
-
-**GATE 1 (rule 91 — HARD BINARY): scan the result text. If the string `═══ PICKUP PROMPT ═══` does NOT appear in `result`, the completion is BROKEN. Period. Do not ship it.** Add the pickup prompt block. This gate fires BEFORE any other consideration. No pickup prompt = no completion. This is the single most common rule-91 violation — agents complete with a summary and forget the divider block entirely. The binary string check makes it impossible to skip.
-
-**GATE 2 (placeholders):** scan for any literal `#NNNN`, `#0000`, `#XXXX`, `<task_id>`, `<timestamp PT>`, or angle-bracket token in the pickup prompt. If found → substitute the real value or remove the line. Placeholders are a rule-91 hardfloor violation.
-
-**GATE 3 (Ruben questions):** did I answer every question Ruben asked in his last message? If no → answer them inline before the pickup prompt.
-
-**GATE 4 (rule 29 open-threads):** did I list anything as "open" that I could have done myself? If yes → do it now, remove from list.
-
-**None of these gates are advisory. All four must PASS before calling `attempt_completion`.**
+**Before EVERY `attempt_completion`:** Rule 91 (pickup prompt block required, 47-char U+2550 dividers, real idea #s not placeholders) + Rule 29 (act don't defer — Gate 0 test: "can I do this now?" If yes, DO IT, don't list it as open thread). Full rules: `clinerules_lookup(rule_id=91)`, `clinerules_lookup(rule_id=29)`.
 
 ---
 
 ## 🗣️ Communication & Voice
 → Trigger: writing student email, ops chat, iMessage, staff escalation, CTA, CC/BCC, tone, apology
 → Fetch all: `clinerules_list_by_topic("voice")`
-- **Student-facing email** — R: 01,02,15,19,30,47,48,101
-- **Ops chat / iMessage to staff** — R: 01,09,10,30,57,72,96,108,111
+- **Student-facing email** — R: 01,02,15,19,30,35,47,48,101,127,182,203,205
+- **Ops chat / iMessage to staff** — R: 01,09,10,30,32,43,57,72,96,108,111,175,177,178,179,186,187,198,207,247,259
 - **Staff escalation (Vicky/Jon/Ruben)** — R: 10,13,15,19,48,117
 - **CTA / link formatting** — R: 47 (full URLs, no shortcuts)
 
@@ -103,40 +106,45 @@
 ## 🤖 Agent Behavior & Autonomy
 → Trigger: deciding whether to act or escalate, filing ideas, agent self-supervision, capability gaps, Q-cards, confidence tiers
 → Fetch all: `clinerules_list_by_topic("agent")`
-- **Act vs escalate gate** — R: 12,22,23,29,36,38,67,68,117
-- **Self-supervision & repair** — R: 46,49,53,54,56,65,66,73
+- **Act vs escalate gate** — R: 12,22,23,29,36,37,38,67,68,78,80,90,93,117,124,125,167,183,193,206,208,213,238
+- **Self-supervision & repair** — R: 46,49,53,54,55,56,64,65,66,73,81,82,85,92,94,110,112,129,130,131,133,134,162,163,166,168,169,176,180,194,209,214,225,240,244,258,261,263 (263=verify-before-claim: no stale inferences, no sycophantic agreement)
 - **Routing to humans** — R: 68,69 (Jon=policy only, Vicky=CS only)
-- **Parallel windows protocol** — R: 29 (§"wait them out" forbidden), 137
+- **Parallel windows protocol** — R: 29 (§"wait them out" forbidden), 137, 194, 209, 225
 
 ---
 
 ## 💻 Infrastructure, Deploy & Debugging
 → Trigger: deploying code, editing server files, restarting services, SSH, WOPR, Mac, tunnels, LiteLLM, FPM, safe_deploy
 → Fetch all: `clinerules_list_by_topic("infrastructure")`
-- **Safe deploy & FPM** — R: 41,42,118,144
-- **SSH & WOPR access** — R: 77,95,136 (Artemis=emsu-operations MCP, never raw ssh)
-- **Mac-side debugging** — R: 16,20,24,25,26,27,28,34,100,102,105
+- **Safe deploy & FPM** — R: 41,42,118,144,174
+- **SSH & WOPR access** — R: 71,77,95,136,235,245,248,249 (Artemis=emsu-operations MCP, never raw ssh; 245=verify host identity before declaring dead; 248=verify live state before declaring box/endpoint down — never trust stale canary/log; 249=MCP flapping/Cloudflare 502s → check supergateway --stateful + systemctl NRestarts FIRST, not the tunnel)
+- **Fleet serving constraints** — R: 251 (Roman CX7 TP=2 ONLY — no TP=1 on Cesar/Cato or Julia/Claudia), 252 (stale-info live-probe gate — probe serving ports before declaring any host down; never trust fleet_inventory heartbeat alone), 253 (LLM location citation discipline — live-probe via `llm_locate`, cite WOPR endpoint not box port, never declare Ray worker down for no listener), 254 (verify-before-kill on GPU boxes — ps identity + fleet_inventory role check + live-probe endpoint before ANY `kill -9`/`pkill`; 43GB VRAM by VLLM::EngineCore is normal, not a wedge), 255 (verify-then-report gate: live evidence required for material claims)
+- **Mac-side debugging** — R: 16,20,24,25,26,27,28,34,62,63,83,100,102,104,105,106,165,181,184,185,188,191,192,195,197,201,210,222,226,234
+- **Live-probe fleet state enforcement** — R: 260 (never trust error_watchdog for fleet health, always read LLM_FLEET_STATE.md + live-probe)
 - **URL→docroot mapping** — R: 159 (emsuniversity.com/ems = /var/www/moodle/ems, NOT /var/www/emtskills/ems)
+- **Connecteam is DEAD (decommissioned 2026-05-15)** — R: 246 (never recommend CT as a config surface; Team Hub is the replacement)
 
 ---
 
 ## 🔬 Project Frankenstein & LLM Routing
 → Trigger: LLM routing question, model serving, spill ladder, frankenstein-llm, adapter, RunPod, context windows, cost
 → Fetch all: `clinerules_list_by_topic("frankenstein")`
-- **Architecture & fleet** — R: 140,141,142,146,148,150
+- **Architecture & fleet** — R: 40,44,45,51,74,75,76,84,86,87,88,89,121,122,138,139,140,141,142,146,148,149,150,151,152,153,154,155,161,189,190,196,200,204,212,215,217,219,220,221,223,227,228,229,230,231,232,236,237,250
 - **Bug library (diagnose FIRST)** — R: 156 + `bug_library_check_before_fix()`
-- **Frankenstein Doctor (stuck window)** — R: 158,160
-- **Hardfloor don't-destroy** — R: 157 (never tear down TP=2 without permission), 145 (Fable 5 escalation)
-- **Kaison autonomous repair** — R: 147
+- **Frankenstein Doctor (stuck window)** — R: 158,160,239 (Step 0b: consult Federation BEFORE bug_library — #16648, #16714, #16717)
+- **Hardfloor don't-destroy** — R: 145,157 (never tear down TP=2 without permission)
+- **Doorman output-quality gate** — R: 256 (streaming output validation + XML translation; Doorman = health + output quality, not just health)
+- **The show must go on** — R: 257 (Doorman keeps bad LLMs out before they reach Cline; prose-no-tools gate, empty-content gate, capability gate)
+- **Kaison autonomous repair** — R: 147,233
 
 ---
 
 ## ✅ Task Hygiene & Context
 → Trigger: completing a task, pickup prompts, context compression, ledger, HANDOFF_NOTES, wrap-up, Order 66
 → Fetch all: `clinerules_list_by_topic("task")`
-- **Completion shape** — R: 91 (pickup prompt required), EXECUTE_ORDER_66 (full wrap-up)
-- **Context management** — R: 119 (compress thresholds), 120 (never shortcut due to context)
-- **Task tracking** — R: 03,04,05,06,07,09,52,109,113
+- **Completion shape** — R: 91 (pickup prompt required), EXECUTE_ORDER_66 (full wrap-up), 123, 126, 128, 180, 199, 211, 255 (verify-then-report gate: live evidence required for material claims), 263 (verify-before-claim: no factual claims without tool evidence)
+- **Context management** — R: 115, 116, 119 (compress thresholds), 120 (never shortcut due to context)
+- **Task tracking** — R: 03,04,05,06,07,09,52,109,113,218
 - **Honest W/T eval method** — R: 171 (cross-family judge + position-swap + rubric + max_tokens room; required before any W/T number drives a flip)
 - **Build convergence** — R: 137 (Definition-of-Done first)
 - **Persisting corrections** — R: 46 (agent corrections → RUBEN/KAIZEN), 169 (knowledge-gap corrections → durable surfaces, don't re-learn)
@@ -146,8 +154,8 @@
 ## 💰 Payments, Refunds & Billing
 → Trigger: payment verification, refund, QuickBooks, Authorize.net, Affirm, invoice, credit, balance
 → Fetch all: `clinerules_list_by_topic("payment")`
-- **Payment verification** — R: 70,107,114 + `verify_payment_state()` (Rule 33 aggregator)
-- **Refund handling** — R: 29 (§money cap), `find_authnet_by_email()`, `check_affirm_status()`
+- **Payment verification** — R: 70,107,114,195 + `verify_payment_state()` (Rule 33 aggregator)
+- **Refund handling** — R: 29 (§money cap), 124, `find_authnet_by_email()`, `check_affirm_status()`
 - **QB reconciliation** — R: `match_student_payment()` autonomous matcher
 
 ---
@@ -155,20 +163,23 @@
 ## 🎓 Student Lifecycle & Academics
 → Trigger: student status, enrollment, Moodle, exam, proctoring, externship, paperwork, integrity, grades, quiz
 → Fetch all: `clinerules_list_by_topic("student")`
-- **Lifecycle state** — R: 135 (SLS) + `get_student_lifecycle_state()` (first move on any student issue)
+- **Lifecycle state** — R: 79,125,128,135 (SLS) + `get_student_lifecycle_state()` (first move on any student issue)
 - **Exam enforcement** — R: `emsu://reference/exam-retake-policy` (SEB+proctor+72hr), `check_exam_enforcement()`
 - **NREMT under-18 policy** — R: `emsu://reference/nremt-under18-policy` (deadline extended to 18th birthday + 60-day refresher after 18; enforced in 4 crons; under-18 students are NOT past-deadline — never tell them to "test now")
 - **Externship** — R: `emsu://reference/externship-agent`, `lookup_paperwork_state()` (rule 31)
 - **Moodle enrollment repair** — R: `fix_moodle_enrollment()`, `unstick_moodle_quiz_attempt()`
 - **Compliance** — R: 08,18,60,61,103 + `emsu://reference/student-status`
+- **Grievance & exam-override** — R: 216 (grievance/override students populate for PD clearance)
 
 ---
 
 ## ⚡ YOLO & Failure Recovery
 → Trigger: YOLO mode, no-tool-use errors, timeouts, prose-loop, circuit breaker, tool failures
 → Fetch all: `clinerules_list_by_topic("yolo")`
-- **Circuit breaker** — R: 143 (consecutive-only, reset-on-success, bail at 4)
-- **Per-class playbook** — R: 99 (auto-generated: no-tool-use, timeout, ssh, replace_in_file, permission denied...), 170 (own-error → repair or RCA+file)
+- **Circuit breaker** — R: 143 (v4: ceiling=10 post-reload, bail at strike 9 = ceiling-1; pre-reload ceiling=3, bail at strike 2), 162 (self-loop breaker)
+- **MCP failure classification** — R: 261 (4 modes before declaring "wedge" — server-down/session-expired/transport-error/transient-empty; 3-gate check before pivot), 258 (stale/empty data truth gate), 249 (MCP flapping: check supergateway --stateful FIRST)
+- **Bug library + community search** — R: 262 (consult bug library + GitHub/Stack Overflow before recycling debugging approaches; 2-strike tripwire)
+- **Per-class playbook** — R: 99 (auto-generated: no-tool-use, timeout, ssh, replace_in_file, permission denied...), 165 (invalid JSON arg), 170 (own-error → repair or RCA+file)
 - **Extension host** — R: 16,97,98
 - **Remote commands** — R: 95 (scp+nohup for long-running, timeout prevention)
 
@@ -196,35 +207,29 @@
 ## 🔍 How To Use This Tree
 
 1. **Scan triggers before acting.** If your next action matches a domain trigger, fetch that domain's rules FIRST.
-2. **Fetch by topic.** Each domain has a `clinerules_list_by_topic(...)` command — one MCP call, all rules in that branch.
-3. **Key rules are inline.** The most commonly needed rules are listed with `R:` — fetch individually via `clinerules_lookup(rule_id=N)`.
-4. **MCP resources are separate.** EMSU operational policies (exam, payment, externship) live in `emsu-operations` MCP resources, not cline rules. Cross-reference both.
-5. **Hardfloor rules (★) are always loaded.** Rules 00,29,41,91,119,120,143,144 plus _INDEX.md and _RULE_TREE.md are in your system prompt. These govern pre-first-tool-call behavior and on-every-turn safety. All other rules (including the full text of 146, 140, 141, 142, etc.) are one `clinerules_lookup(rule_id=N)` away via the tree above.
+2. **Fetch by topic** via `clinerules_list_by_topic(...)`, or by number via `clinerules_lookup(rule_id=N)`.
+3. **Hardfloor rules (★) are always loaded** (00,29,41,91,119,120,143,144 + _INDEX.md + _RULE_TREE.md). All other rules are one lookup away.
+4. **MCP resources are separate** from cline rules — cross-reference both for operational policies (exam, payment, externship).
 
-**Self-check before any major action:** "Does a trigger in this tree match what I'm about to do?" If yes → fetch that branch first.
+**Self-check:** "Does a trigger in this tree match what I'm about to do?" If yes → fetch that branch first.
 
 ## 🌱 Adding New Rules — Keep The Tree Alive
 
-**When you create a new cline rule, you MUST also update this tree.** A rule not in the tree is invisible to future windows.
+**When you create a new cline rule, you MUST also update this tree.** A rule not in the tree is invisible to future windows. Steps: (1) classify into a domain, (2) add rule number to the relevant `R:` line, (3) reindex MCP (`node ~/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js --reindex-only`), (4) verify emsu:// resource cross-refs if any. Placement rules of thumb: specific tool/command → Infrastructure; specific agent behavior → Agent Behavior; specific workflow → Payments; general behavior → Task Hygiene or Agent Behavior (default).
 
-1. **Classify the rule into a domain.** Read the new rule's title + first 3 lines. Which of the 7 domains does it belong to? If none fit, ask: is this a genuinely new domain (8th), or does it fit under an existing sub-topic?
-2. **Place it at the right level.** Most new rules go under an existing sub-topic. Only create a new sub-topic if the rule covers something not already named (e.g., a new sub-system, a new workflow). Only create a new top-level domain if the rule covers an entirely new surface (e.g., "Security").
-3. **Add the rule number to the relevant line.** Format: `R: <existing list>, <new number>`. Keep the one-line sub-topic description.
-4. **If creating a new sub-topic**, add a new bullet under the domain: `- **<Sub-topic name>** — R: <numbers>`
-5. **Reindex the MCP** so it's queryable: `node ~/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js --reindex-only`
-6. **Check: does the new rule cross-reference any emsu:// MCP resources?** If yes, verify the resource is listed in the Cross-Reference section below.
+**Older changelog (2026-06-22 to 2026-07-06) archived.** Key additions in that window: rules 162, 165, 170, 174, 216, 218, 233, 239, 246, 248, 250, 253, 254, 255, 258. Full details in git history. Highlights:
+- 2026-06-22 — initial tree (7 domains, 2 levels).
+- 2026-07-01 — WINDOW 4: full rebuild, deduped archive, ~100+ rule numbers added across all 8 domains.
+- 2026-07-03 — rule 250 (no hardcoded LLM statuses) + canonical Cline endpoint documented.
+- 2026-07-05 — rule 255 (verify-then-report gate).
+- 2026-07-06 — rule 258 (MCP stale/empty data truth gate, 3-gate check).
 
-**Rule placement rules of thumb:**
-- A rule about a SPECIFIC tool/command (e.g., "how to use safe_deploy") → Infrastructure
-- A rule about a SPECIFIC agent behavior (e.g., "when to escalate to Jon") → Agent Behavior
-- A rule about a SPECIFIC workflow (e.g., "how to process a refund") → Payments
-- A rule about a GENERAL behavior (e.g., "always do X before Y") → Task Hygiene or Agent Behavior
-- If unsure, default to Agent Behavior — most catch-all behavioral rules live there.
+2026-07-07 — updated rule 239 (Frankenstein Doctor) Step 0b: consult Frankenstein Federation before bug_library. Source: Ruben directive.
 
-## Last updated
+2026-07-08 — added Rule 261 (MCP failure classification: 4 modes before declaring "wedge") as new MANDATORY GATE #15 (PRE-PIVOT GATE). Also added to YOLO & Failure Recovery > MCP failure classification (new sub-topic) + Agent Behavior > Self-supervision & repair. Fixed Rule 143 cross-ref formatting. Source: Issue #24 RCA — agents falsely declared "MCP is wedged" after 1-2 transient failures. Rule 261 provides 4-mode classification + 3-gate check (rule 258) before declaring wedge. Idea #16849.
 
-2026-06-24 — added rule 170 (own-error RCA+repair-or-idea) to Task Hygiene + YOLO/Failure Recovery branches. General scope: all own-error classes, not just file tools (idea #14856).
+2026-07-10 — added Rule 263 (verify-before-claim: no stale inferences, no sycophantic agreement) to Agent Behavior > Self-supervision & repair + Task Hygiene > Completion shape. Source: Frankenstein Doctor postmortem — Cline window on frankenstein-llm (120B+LoRA) fabricated a Google Sheets import pipeline from a vestigial DB column + legacy dir, wrong student count (9 vs 5), non-existent function, and responded to Ruben's correction with sycophantic agreement. Root cause: LoRA trained on contaminated distill corpus (69 google_sheet_row + 62 google-sheets-to-mysql-migration refs). Fixes: (1) stale-ref filter in build_distill_corpus.py, (2) VERIFY-BEFORE-CLAIM block in _router_core.py steering injection, (3) distill corpus rebuilt clean, (4) this rule. LoRA retraining filed as idea #16949. Bug library: distill_lora_stale_reference_contamination_2026_07_10.
 
-2026-06-24 — added `emsu://reference/nremt-under18-policy` to cross-ref table + Student Lifecycle trigger line (NREMT under-18 policy MCP resource registered 2026-06-24 per Ruben directive "make agents aware + add to MCP").
+2026-07-10 — added Rule 264 (The Foreman: persistent dual-window autonomous engineering pattern) to Agent Behavior > Self-supervision & repair. Source: Ruben directive — "have a different window that babysits the issues and fixes what it can continuously... use Frankenstein LLM in a cline window to drive this forward and not give up... call it 'The Foreman'." Pattern: Worker (free local Frankenstein-LLM) works nonstop, Supervisor (paid cloud GLM-5.2/Claude) checks every 30 min and course-corrects. Both windows don't close until task done or genuine error.
 
-2026-06-22 — initial. Source: Ruben directive to build a drill-down tree for efficient rule discovery. 7 domains, 2 levels, ~3.5K tokens.
+2026-07-10 — added Rule 265 (Spatial/Analogy Thinking Protocol: when stuck, reframe and think sideways) to Agent Behavior > Self-supervision & repair + Task Hygiene > Completion shape. Source: Ruben directive — "you need to think more spatially... if you can't resolve an issue head on, what other analogous things would resolve the problem... when you get stuck or really stuck, rather than giving up." 6-step protocol: (1) reframe spatially, (2) think analogously, (3) apply the analogy, (4) acquire info until you know, (5) persevere at the precipice, (6) think in parallel. Source incident: GLM-5.2 RoCE QP hang — after 4 linear attempts failed, spatial analysis revealed root cause (same subnet on different physical cables), fix was unique /30 per cable (postal zip code analogy).

@@ -1,8 +1,5 @@
 # Force subagent use + first-tool-call tripwire (default-on, not judgment)
 
-<!-- RULE_VIOLATION_COUNTERS:BEGIN -->
-> **Live violation counters:** call `clinerules_stats` to see current 7d/30d/all-time burst rates and the explicit-ask-ignored vs research-without-subagent breakdown. Counters auto-update via `~/Documents/Cline/rule_violations/scan.py`. Last scan: 2026-05-30 21:31:21 PDT — 7d=499, 30d=3820, all-time=3820. If you are reading this rule, you are part of the count — don't add to it.
-<!-- RULE_VIOLATION_COUNTERS:END -->
 
 ## The default (FLIPPED 2026-06-21 — subagents are default-ON)
 
@@ -40,6 +37,17 @@ If a turn emits prose without a tool block, Cline injects `[ERROR] You did not u
 - Any line ending with a colon implying "the tool block is the next thing" if the response then ends without a tool block
 - Plan line emitted as a standalone turn with no tool
 
+### No tool-discovery turns (idea #16673)
+
+The MCP tool list in your system prompt IS the complete tool catalog. Never emit a turn whose sole purpose is tool discovery. The tools you have are already listed above. Read them, then call one.
+
+Banned tool-discovery shapes:
+- Calling non-existent tools like `request_tool_descriptions` or `list_available_tools`
+- Emitting `attempt_completion` claiming tools "aren't visible" or "not loaded"
+- Asking Ruben "what MCP tools do I have?" instead of scanning the system prompt
+
+If you cannot find a tool that does X, that means no tool does X. Use the closest available tool, or state the gap inline in a tool-bearing turn. Do not spend a turn "discovering" what's already in front of you.
+
 ### Interrupted-task pickup
 
 First tool call after `[TASK RESUMPTION]` / `[YOLO MODE]` / "pick up task" is ALSO gated: the first response is the `use_subagents` tool block (interrupted-task pickup → 3 prompts for prior-task JSON, referenced state, Ruben-message reconciliation). No prose-only turn first — emit the tool.
@@ -55,6 +63,14 @@ Per .clinerules/74: "what does our policy say," "categorize this," "score releva
 ## How to dispatch
 
 `use_subagents` accepts up to 5 prompts in parallel. Each prompt: self-contained, specific deliverable, bounded scope, pointed at concrete sources.
+
+### Tool-call budget (soft cap — path 2 of idea #16849)
+
+Every subagent prompt MUST include this budget instruction (append to the end of each prompt):
+
+> **Budget: You have a maximum of 50 tool calls. At call #50, STOP and write your findings as your `attempt_completion` result — do not attempt a 51st call. If you hit a tool that fails repeatedly (3+ times), stop and report the failure in your completion instead of looping. Count every `read_file`, `search_files`, `list_files`, and `execute_command` toward your budget.**
+
+This is a soft cap — it relies on model obedience. It catches productive-but-long investigations. It does NOT catch stuck loops (see rule 00 fetch-then-paste + banned-dispatch-keywords self-check for that protection). The hard cap (path 1, extension patch to `SubagentRunner`) is the durable guarantee, tracked as #16849.
 
 Canonical 5-prompt research pattern:
 1. Official docs + vendor FAQs

@@ -5,8 +5,8 @@
   "_meta": {
     "exported_at": "2026-06-01T06:35:00-07:00",
     "source": "Rubens-MacBook-Pro",
-    "authoritative": true,
-    "note": "maxConsecutiveMistakes RESTORED 3->10 on 2026-06-01. The 99->3 fail-fast on 2026-05-31 was a bandaid for a claude-haiku-4-5 cost-loop ($67.82). The active Cline model is now claude-opus-4-8:1m (strong, tool-calling). All 4 YOLO trips on 2026-05-30 were Opus tasks killed at turns_since_user=0 on a benign conversational opener (e.g. 'it appears you dont have access to all MCPs') after just 2 [ERROR] no-tool-use strikes -- threshold 3 gave zero recovery room. Per rule 16, premature task termination is far more expensive than a few recovery turns. 10 is the canonical rule-16 value. The note's own condition ('raise back ONLY after upgraded to Sonnet/Opus') is now satisfied."
+    "authoritative": false,
+    "note": "FIXED 2026-07-04 11:28 PT (idea #16415, Rule 143 v4): ROOT CAUSE of the YOLO storm was that maxConsecutiveMistakes is NOT exposed in the Cline Settings UI or VS Code settings — it is HARDCODED in dist/extension.js as {default:3}. Ruben could not change it in the UI because the setting does not exist in the UI. The '10' in this file was a manual export template that Cline's runtime never read. FIX: direct source patch in the extension JS: maxConsecutiveMistakes:{default:3} -> {default:10}. Backup at extension.js.bak-pre-yolo-fix. Re-patching script at ~/Documents/Cline/scripts/patch_yolo_ceiling.sh handles extension updates. After VS Code reload (Window: Reload), the live ceiling will be 10. Rule 143 v4: bail at strike 9 (ceiling-1), recover strikes 1-8. Historical note: maxConsecutiveMistakes was RESTORED 3->10 on 2026-06-01 after a 99->3 fail-fast bandaid for a claude-haiku-4-5 cost-loop ($67.82), but that restore only edited this template file — the actual extension source still shipped {default:3}. The active Cline model is claude-opus-4-8:1m. Per rule 16, premature task termination is far more expensive than a few recovery turns; 10 is the canonical rule-16 value."
   }
 
 }

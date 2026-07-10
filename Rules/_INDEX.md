@@ -2,7 +2,7 @@
 
 This file is the fail-safe TOC for the hardfloor rules + how to query the rest.
 
-**Layout:** the 10 hardfloor rules live in `~/Documents/Cline/Rules/` (auto-loaded every task). All other rules (~220+) live in `~/Documents/Cline/Rules-archive/` and are queryable on demand via the `clinerules` MCP server. (Counts verified 2026-06-25 — bloat cleanup + voice rules restored.)
+**Layout:** the 10 hardfloor rules + `99-yolo-prevention-learned` (auto-generated meta) live in `~/Documents/Cline/Rules/` (auto-loaded every task). All other rules (~220+) live in `~/Documents/Cline/Rules-archive/` and are queryable on demand via the `clinerules` MCP server. (Counts verified 2026-07-02 — rule 99 added to META_FILES, audit cron + fswatch lint enforcement created, rule 245 collision resolved by renumbering burst rule to 247.)
 
 ## Precedence — how to resolve two rules that seem to conflict
 
@@ -26,6 +26,8 @@ If after this order it's still ambiguous, that's a genuine rule defect: act on t
 ## Hard-floor rules (always in system prompt — ★)
 
 These 10 rules govern pre-first-tool-call behavior and on-every-turn safety. Rules 29, 41, and 91 were trimmed 2026-06-25 (case law + addenda archived to `Rules-archive/29-case-law.md` + `41-addenda.md`). Voice rules 01+02 restored to hardfloor per Ruben directive. All other rules are one `clinerules_lookup(rule_id=N)` away via the tree.
+
+**`99-yolo-prevention-learned`** is NOT a hardfloor rule — it is an **auto-generated meta file** (regenerated every 30 min by `~/Documents/Cline/yolo_learner/write_rule.py` from the YOLO-trips database). It is always-loaded because the per-class failure playbook must be visible in every window (rule 99's whole purpose is pre-empting the exact `fail > fail > fail` triples that kill tasks). It is listed in `META_FILES` in `.pre-write-lint.sh` so G6 does not flag it. Size-capped at 20KB like the other meta files.
 
 | ID | Slug | Size | What it fires on |
 |---|---|---|---|
@@ -69,9 +71,9 @@ Common fetch commands:
 
 | Constraint | Limit | Enforced by |
 |---|---|---|
-| Hardfloor rules in `Rules/` | 10 (currently) + 3 meta = 13 files max | G6 gate (block) + nightly audit (alert) |
+| Hardfloor rules in `Rules/` | 10 (currently) + 4 meta = 14 files max | G6 gate (block) + nightly audit (alert) |
 | Single hardfloor rule size | 8KB warn / **12KB hard block** | G2 (warn) + **G7 (block)** + nightly audit |
-| Meta file size (`_INDEX`, `_RULE_TREE`) | 16KB warn / **20KB hard block** | G7 (block) + nightly audit |
+| Meta file size (`_INDEX`, `_RULE_TREE`, `EXECUTE_ORDER_66`, `99-yolo-prevention-learned`) | 16KB warn / **20KB hard block** | G7 (block) + nightly audit |
 | Total `Rules/` directory | 180KB warn / **250KB alert** | Nightly audit |
 
 ### The trim-then-archive pattern (when a hardfloor rule exceeds 8KB)
@@ -97,6 +99,10 @@ Rules metastasize through addenda creep (source incidents, case law, per-class e
 
 ### Nightly audit cron (self-healing bloat detection)
 
-`~/Documents/Cline/scripts/cline_rules_audit.sh` runs nightly at 3:15 AM PT via launchd (`com.emsu.cline-rules-audit`). It checks file count, per-rule size, total directory size, and HARDFLOOR_SLUGS drift — posting to ops chat 55 on any alert. This makes bloat self-healing instead of requiring a Ruben-initiated investigation. Manual run: `cline_rules_audit.sh --quiet` (log only, no chat post).
+`~/Documents/Cline/scripts/cline_rules_audit.sh` runs nightly at 3:15 AM PT via launchd (`com.emsu.cline-rules-audit`). It checks file count, per-rule size, total directory size, HARDFLOOR_SLUGS drift, rule-number collisions (duplicate `NNN-` prefixes), and `.clinerule_counter` vs highest-actual-rule-number drift — posting to ops chat 55 on any alert. This makes bloat + counter drift self-healing instead of requiring a Ruben-initiated investigation. Manual run: `cline_rules_audit.sh --quiet` (log only, no chat post). Created 2026-07-02 (was previously documented but missing — the self-healing detector itself had drifted away).
+
+### Pre-write lint enforcement (fswatch)
+
+`.pre-write-lint.sh` is invoked by an `fswatch` listener (`~/Library/LaunchAgents/com.emsu.cline-rules-audit.plist`, `WatchPaths` on `Rules/`) on every save under `Rules/`. This is the real-time gate that catches collisions, bloat, and counter drift the moment a file lands — before the nightly audit sees it. `fswatch` must be installed (`brew install fswatch`). The listener is loaded by the same launchd plist as the nightly audit. If `fswatch` is absent, the nightly audit still runs but real-time enforcement is lost.
 
 The MCP is the search engine. The tree is the navigation map. The lint gate is the write filter. The audit cron is the drift detector. New rules need all four.

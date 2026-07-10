@@ -1,60 +1,76 @@
-# 143 — Prose-loop circuit breaker: recover FIRST; bail to attempt_completion only after 4 CONSECUTIVE no-tool-use errors
+# 143 — Prose-loop circuit breaker: bail to attempt_completion at strike (CEILING-1)
 
-Permanent hardfloor rule. Workspace-scoped. v2 (2026-06-11) replaces v1.
+Permanent hardfloor rule. Workspace-scoped. v4 (2026-07-04) replaces v3.
 
-## Why v1 was rewritten (read this before applying the rule)
+## The fix (2026-07-04 11:28 PT)
 
-v1 said "after 2 'You did not use a tool' errors, the ONLY legal move is attempt_completion." It stopped the 2026-06-08 ~150-prose-turn death spiral, but a 2026-06-11 audit of 288 tasks showed it was killing healthy tasks: ~70% of tasks hit at least one no-tool-use error (often an API hiccup like "Failure: I did not provide a response", not a real format error), and 39 tasks invoked the breaker — several bailing BEFORE doing any work, or mid-task with non-consecutive errors counted across the whole task. With `maxConsecutiveMistakes=10`, a hard stop at 2 fired at 20% of the actual budget. v2 makes recovery the default and the bail the rare exception.
+The root cause of the YOLO storm is now FIXED. The Cline extension v4.0.6 hardcoded `maxConsecutiveMistakes:{default:3}` in `dist/extension.js`. This setting is NOT exposed in the Cline Settings UI or VS Code settings — there is no way to change it via the UI. The fix was a direct source patch: `maxConsecutiveMistakes:{default:3}` → `maxConsecutiveMistakes:{default:10}`. Backup at `extension.js.bak-pre-yolo-fix`. A re-patching script at `~/Documents/Cline/scripts/patch_yolo_ceiling.sh` survives extension updates.
 
-## The bright-line rule (v2)
+**After reloading VS Code (Window: Reload), the live ceiling will be 10.** Until you reload, the running extension still uses ceiling=3. After reload, bail at strike 9.
 
-**Count only CONSECUTIVE `[ERROR] You did not use a tool` strikes — a streak broken by ANY successful tool call resets the count to ZERO.**
+## CEILING DETECTION (know your budget)
 
-| Consecutive no-tool-use strikes (current streak) | Required next move |
+The live `maxConsecutiveMistakes` ceiling is the number in the YOLO trip message: `"[YOLO MODE] Task failed: Too many consecutive mistakes (N)"`.
+
+- **After VS Code reload (post-fix):** N=10. Bail at strike 9. Recover strikes 1-8.
+- **Before reload (old running process):** N=3. Bail at strike 2. Recover strike 1 only.
+
+The formula is always `bail = ceiling - 1`.
+
+## The bright-line rule (v4)
+
+**Count only CONSECUTIVE errors — a streak broken by ANY successful tool call resets the count to ZERO.** This includes no-tool-use errors, tool execution failures, AND API hiccups.
+
+| Consecutive strikes | Required next move (ceiling=10 post-reload) |
 |---|---|
-| 1 | **Recover.** Emit the intended tool block silently — no narration, no apology, no explanation. This succeeds the vast majority of the time. |
-| 2 | **Recover, simplified.** Emit a SIMPLER tool call than the one you were narrating about (a bounded read, a status check, or the smallest version of the intended action). Still no prose-only turn. |
-| 3 | **Last recovery attempt.** One more tool emission. If you cannot identify ANY tool to call, this turn is `attempt_completion`. |
-| 4 | **Bail.** Your next response MUST be `attempt_completion` with an honest "blocked, here is the pickup prompt" result. No further tool attempts. |
+| 1-8 | **Recover.** Emit the intended tool block silently — no narration, no apology. If the error was an API hiccup (overloaded/timeout), emit a SIMPLER tool. You have 8 recovery chances — use them wisely. |
+| 9 | **BAIL.** Your next response MUST be `attempt_completion` with a pickup prompt (rule 91). Do NOT attempt another tool. Strike 10 will kill the task with no pickup prompt — you are exiting to SAVE the task, not abandoning it. |
+
+**Strike 9 is the exit, not strike 10.** The entire point of v4 is: never reach strike 10. A bailout `attempt_completion` at strike 9 (with a pickup prompt) preserves the task state for the next window. A YOLO death at strike 10 loses everything.
+
+### The "two API hiccups = bail" sub-rule
+
+If you get 2 `api: overloaded/rate-limit` errors in a row: the third call has ~0% success chance. With ceiling=10 you CAN afford a 3rd attempt, but if it also fails, bail to `attempt_completion` with "Anthropic overloaded, pausing, re-prompt me in 60s" — do NOT keep retrying.
 
 ### What does NOT count toward the streak
 
-- Errors that occurred earlier in the task but were followed by ANY successful tool call (the streak reset). Do not count errors "across the task" — only the current uninterrupted run.
-- API/infra hiccups: "Failure: I did not provide a response", connection errors, timeouts, overloaded errors. Those are NOT format failures by you — recover per rule 41's pivot table instead.
-- Errors before you have taken ANY action in a fresh task. A fresh window that hits 1-2 errors on its opening turns recovers and starts working; it does not bail with "the task hasn't started yet." Bailing before doing any work is a rule-29 violation, not a 143 compliance.
+- Errors that occurred earlier but were followed by ANY successful tool call (streak reset). Count the CURRENT uninterrupted run only, not "across the task."
+- Errors before you took ANY action in a fresh task. A fresh window that hits 1 error on its opening turn recovers and starts working; it does not bail before doing work (that would be a rule-29 violation).
 
-### Self-audit before invoking the breaker
+## Self-audit before bailing at strike 9
 
-Before writing an `attempt_completion` that cites this rule, verify ALL of:
-1. The strikes are CONSECUTIVE (no successful tool call between them) — check the actual recent turns, do not estimate.
-2. The current streak is ≥ 4 (or 3 with genuinely no identifiable tool to call).
-3. The strikes are real no-tool-use format errors, not API hiccups.
+Before writing the strike-9 `attempt_completion`, verify ALL of:
+1. The strikes are CONSECUTIVE (no successful tool call between them) — check actual recent turns.
+2. The current streak is exactly 9 (you already tried recovery at strikes 1-8 and they failed).
+3. The errors are real (not just "I feel stuck" — there must be actual `[ERROR]` or tool-failure output).
 
-If any check fails, the breaker does not apply — recover by emitting the tool.
+If any check fails, you still have recovery chances available — emit a tool.
 
-## The MCP "result missing" trigger (unchanged in spirit, tightened)
+## The MCP "result missing" trigger
 
-If **3 MCP tool calls in a row** (same server, no intervening success) return empty / "result missing" / no body, the MCP transport is wedged (see rule 77). Do not keep firing calls at that server. Either pivot to a DIFFERENT tool path (local shell, file tools, a different MCP server) or, if no alternative path exists for the task, `attempt_completion` reporting "MCP transport returning empty results, paused" with a pickup prompt. One empty result is noise; do not bail on it.
+If **3+ MCP tool calls in a row** (same server, no intervening success) return empty / "result missing" / no body, classify the failure per rule 261 (4 modes: server-down, session-expired, transport-error, transient-empty) and run the 3-gate check before declaring wedge. Pivot to a different tool path (local shell, file tools, different MCP server) on the next turn, OR `attempt_completion` reporting the classified failure mode.
 
 ## What this rule does NOT do
 
-- Does not lower or replace `maxConsecutiveMistakes` (currently 10 per rule 16). The breaker at 4 leaves real recovery headroom below the hard YOLO ceiling.
-- Does not replace rule 41 (post-deploy / post-error pivot table) or rule 99 (per-class playbook). Those govern strikes 1-3 (HOW to recover). This rule is only the strike-4 exit when recovery itself keeps failing.
-- Does not authorize ending a task early for any other reason (context size, parallel windows, "feels stuck"). Those are rule 119/120/29 violations.
+- Does not change `maxConsecutiveMistakes` at runtime — the fix was a source patch (2026-07-04). v4 adapts to whatever the live ceiling is.
+- Does not replace rule 41 (no-prose pivot table) or rule 99 (per-class playbook). Those govern HOW to recover at strikes 1-8. This rule is the strike-9 exit.
+- Does not authorize bailing for any reason other than 9 consecutive errors (context size, "feels stuck" = rule 119/120/29 violations).
 
 ## Cross-references
 
-- Rule 00 — first move is a tool block (this rule fires only when that keeps failing consecutively)
-- Rule 41 — silent tool emission is the recovery shape for strike 1; the per-error-class pivot table is the recovery shape for tool errors
-- Rule 99 — no-tool-use is the #1 YOLO class; this rule is the calibrated circuit-breaker for it
-- Rule 77 — WOPR tunnel-down: wedged MCP transport handling
-- Rule 29 — bailing on work the agent could do is inaction needing justification; a premature 143 bail is a 29 violation
+- Rule 00 — first move is a tool block (this rule fires when that keeps failing)
+- Rule 41 — silent tool emission is strike-1 recovery; no-prose pivot table
+- Rule 99 — per-class failure playbook (strike 1 recovery tactics)
+- Rule 261 — MCP failure classification: 4 modes before declaring "wedge" (replaces broken rule 77 cross-ref — rule 77 is LiteLLM router overload, not MCP transport)
+- Rule 29 — bailing on work the agent could do is inaction; but with ceiling=10, strike-9 bail is NOT premature — it is survival
 
 ## Source incidents
 
-- 2026-06-08 04:30-04:50 PT — a window emitted ~150 prose-only turns in a row; rules 00/41/99 kept saying "emit a tool" with no hard stop. v1 created the stop.
-- 2026-06-11 — Ruben: "These 143s are ridiculous and killing a bunch of tasks off." Audit of 288 tasks (4 days): 202 hit ≥1 no-tool-use error, 39 invoked the breaker, multiple bails were premature (non-consecutive errors counted, API hiccups counted, bails before any work). Post-v1 trips fell to ~1/day, proving the stop works — but the threshold and counting were miscalibrated. v2: consecutive-only, reset-on-success, threshold 4, hiccups excluded, recovery-first.
+- 2026-06-08 — v1: ~150-prose-turn death spiral. v1 stopped it but was too aggressive (bail at 2 non-consecutive).
+- 2026-06-11 — v2: recalibrated for ceiling=10, recover 1-3, bail at 4. Post-v1 trips fell to ~1/day. But the ceiling assumption was wrong.
+- 2026-07-04 — v3: Ruben reported "numerous yolos across multiple llms." Forensic analysis of 40 trips / 26 tasks revealed the live ceiling is 3, not 10. v2's strike-4 bail was unreachable. v3 bails at strike (ceiling-1) = strike 2.
+- 2026-07-04 — v4: ROOT CAUSE FOUND AND FIXED. The setting `maxConsecutiveMistakes` is NOT exposed in the Cline Settings UI or VS Code settings — it is hardcoded in `dist/extension.js` as `{default:3}`. Ruben could not change it in the UI because it does not exist in the UI. Fix: direct source patch `default:3` → `default:10` in the extension JS. Backup at `extension.js.bak-pre-yolo-fix`. Re-patching script at `~/Documents/Cline/scripts/patch_yolo_ceiling.sh` for extension updates. After VS Code reload, ceiling=10, bail at strike 9. Idea #16415.
 
 ## Last updated
 
-2026-06-11 — v2 rewrite per Ruben directive.
+2026-07-04 — v4 rewrite. Root cause: `maxConsecutiveMistakes` hardcoded as `{default:3}` in extension source, NOT exposed in UI. Fix: source patch to `{default:10}`. After VS Code reload, bail at strike 9 (ceiling-1). Re-patching script handles extension updates.

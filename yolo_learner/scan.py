@@ -20,8 +20,6 @@ import re
 import sqlite3
 import sys
 import time
-import urllib.request
-import urllib.error
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -69,7 +67,7 @@ def db_connect() -> sqlite3.Connection:
             resumed INTEGER DEFAULT 0,
             turns_since_user INTEGER DEFAULT -1,
             last_user_msg_start TEXT,
-            task_running_log_snapshot TEXT,
+            models TEXT,
             PRIMARY KEY (task_id, trip_index)
         )
     """)
@@ -78,7 +76,11 @@ def db_connect() -> sqlite3.Connection:
         ("resumed", "ALTER TABLE trips ADD COLUMN resumed INTEGER DEFAULT 0"),
         ("turns_since_user", "ALTER TABLE trips ADD COLUMN turns_since_user INTEGER DEFAULT -1"),
         ("last_user_msg_start", "ALTER TABLE trips ADD COLUMN last_user_msg_start TEXT"),
-        ("task_running_log_snapshot", "ALTER TABLE trips ADD COLUMN task_running_log_snapshot TEXT"),
+        # 2026-07-04 (idea #16415): capture which LLM(s) were used in the task.
+        # The user reported "numerous yolos across multiple llms" but the trips
+        # table had no model column, making the cross-LLM pattern invisible.
+        # Populated from task_metadata.json's model_usage array (comma-joined).
+        ("models", "ALTER TABLE trips ADD COLUMN models TEXT"),
     ]:
         try:
             conn.execute(ddl)
@@ -111,11 +113,19 @@ def classify(text: str) -> str | None:
             or "could not find an exact match" in low \
             or ("tool execution failed" in low and "replace_in_file" in low):
         return "replace_in_file: SEARCH did not match file"
-    # tool args
-    if "did not provide a value" in low:
+    # tool args — "did not provide a value" (older Cline) OR "without value for
+    # required parameter 'X'" (current Cline, e.g. use_mcp_tool missing
+    # server_name — the smoking-gun trip on 2026-07-03 task 1783062376177).
+    if "did not provide a value" in low or "without value for required parameter" in low \
+            or "missing required parameter" in low:
         return "tool: missing required parameter"
-    # filesystem
-    if "enoent" in low or "no such file" in low or "file not found" in low:
+    # filesystem — must NOT swallow SQL "column/table does not exist" (those
+    # route to the SQL branch below). The pre-2026-07-03 version only matched
+    # enoent/no such file/file not found, so generic "does not exist"/"doesn't
+    # exist" errors fell through to None -> showed as "(none)" in triples.
+    if "enoent" in low or "no such file" in low or "file not found" in low \
+            or (("does not exist" in low or "doesn't exist" in low)
+                and "column" not in low and "table" not in low):
         return "file/path does not exist"
     # ===== KAIZEN-ported categories (2026-05-09) =====
     # Lessons learned from KAIZEN's ruben_executor catalog (28 active recipes).
@@ -138,10 +148,13 @@ def classify(text: str) -> str | None:
         return "safe-deploy: invalid flag (use --target/--content/--expected-sha256)"
     # SQL unknown column — wrote columns that don't exist on target table.
     # KAIZEN: cross_table_column_pollution + sql_schema_mismatch.
-    if "unknown column" in low or "doesn't exist" in low or "does not exist" in low \
-            and ("column" in low or "table" in low):
-        if "unknown column" in low or ("column" in low and "doesn't exist" in low):
-            return "sql: unknown column (DESCRIBE target table first)"
+    # FIX 2026-07-03: boolean-precedence bug — previously parsed as
+    #   "unknown column" OR "doesn't exist" OR ("does not exist" AND (...))
+    # so ANY "doesn't exist" message entered this branch. Now explicit grouping.
+    if "unknown column" in low \
+            or (("doesn't exist" in low or "does not exist" in low)
+                and ("column" in low or "table" in low)):
+        return "sql: unknown column (DESCRIBE target table first)"
     # PHP syntax error before deploy. KAIZEN: php_syntax_error. Fix: php -l first.
     if "php parse error" in low or "php syntax error" in low \
             or ("syntax error" in low and ("unexpected" in low or "expected expression" in low)) \
@@ -249,50 +262,41 @@ FILE_RE = re.compile(r'(/[A-Za-z0-9_./-]+\.(?:php|py|js|ts|tsx|md|json|html|css|
 RESUME_MARKERS = ("[task resumption]", "task was interrupted", "pick up task")
 
 
-# Rule 81 integration: fetch running-log context for newly-detected trips via
-# the emsu-operations HTTP bridge at 127.0.0.1:7831. Best-effort — if the
-# bridge is down or returns an error, the scanner still records the trip
-# without the snapshot. Adds ~150-300ms per NEW trip (idempotency check
-# means re-scans don't re-fetch).
-BRIDGE_URL = "http://127.0.0.1:7831/api/tools/get_task_running_log"
-BRIDGE_KEY = "emsu-mcp-2026-a4b7c9d2e1f6"
+def load_task_models(task_id: str) -> str:
+    """Read the model_usage array from task_metadata.json and return a
+    comma-joined string of distinct model names (in first-seen order).
 
-
-def fetch_running_log_snapshot(task_id: str) -> str | None:
-    """Return JSON string of the last ~10 milestones for this task, or None.
-    Task id is normalized lowercase + no leading #.
+    2026-07-04 (idea #16415): the user reported "numerous yolos across multiple
+    llms" but the trips table had no model column, making the cross-LLM pattern
+    invisible. task_metadata.json holds a model_usage array showing every model
+    used during the session. We capture it so patterns.json + rule 99 can show
+    which LLMs trip most often.
     """
-    tid_norm = task_id.lstrip('#').lower()
-    # Defensive: bridge requires alphanum + dash/underscore
-    if not re.match(r'^[a-z0-9_-]+$', tid_norm):
-        return None
+    p = TASKS / task_id / "task_metadata.json"
+    if not p.exists():
+        return ""
     try:
-        req = urllib.request.Request(
-            BRIDGE_URL,
-            data=json.dumps({"task_id": tid_norm, "limit": 10}).encode(),
-            headers={
-                "Content-Type": "application/json",
-                "X-Emsu-Mcp-Key": BRIDGE_KEY,
-            },
-            method="POST",
-        )
-        with urllib.request.urlopen(req, timeout=5) as r:
-            body = r.read().decode(errors='replace')
-            parsed = json.loads(body)
-            if parsed.get('success') and parsed.get('result'):
-                # Compact: strip the verbose header, keep the rows
-                txt = parsed['result']
-                # remove the "=== RUNNING LOG ===" line
-                lines = [ln for ln in txt.splitlines() if not ln.startswith("===")]
-                snippet = "\n".join(lines).strip()
-                if snippet and "id\tmilestone_type" not in snippet[:20]:
-                    # No data rows (just header missing means empty result)
-                    return None
-                # Truncate at 2KB to keep sqlite happy
-                return snippet[:2048] if snippet else None
-    except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, OSError, json.JSONDecodeError):
-        return None
-    return None
+        d = json.load(p.open())
+    except Exception:
+        return ""
+    mu = d.get("model_usage", [])
+    seen: list[str] = []
+    seen_set: set[str] = set()
+    if isinstance(mu, list):
+        for entry in mu:
+            name = None
+            if isinstance(entry, dict):
+                # Cline's task_metadata.json uses "model_id" (verified live
+                # 2026-07-04). Fall back to other common names for safety.
+                name = (entry.get("model_id") or entry.get("model")
+                        or entry.get("name") or entry.get("provider")
+                        or entry.get("id"))
+            elif isinstance(entry, str):
+                name = entry
+            if name and name not in seen_set:
+                seen.append(str(name))
+                seen_set.add(name)
+    return ",".join(seen)
 
 
 def scan_trip(data: list, i: int) -> dict:
@@ -382,13 +386,12 @@ def scan_task(conn: sqlite3.Connection, task_id: str) -> int:
             cats = info["cats"]
             cats = cats + [None] * (3 - len(cats))
             triple = " > ".join([c or "(none)" for c in cats[:3]])
-            # Rule 81: fetch running-log snapshot for this task (best-effort)
-            snapshot = fetch_running_log_snapshot(task_id)
+            models = load_task_models(task_id)
             conn.execute("""
                 INSERT OR REPLACE INTO trips
                   (task_id, trip_index, detected_at, cat_1, cat_2, cat_3,
                    file_hint, tool_hint, triple, resumed, turns_since_user,
-                   last_user_msg_start, task_running_log_snapshot)
+                   last_user_msg_start, models)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (task_id, trip_idx, int(time.time()),
                   cats[0], cats[1], cats[2],
@@ -396,10 +399,58 @@ def scan_task(conn: sqlite3.Connection, task_id: str) -> int:
                   info.get("resumed", 0),
                   info.get("turns_since_user", -1),
                   info.get("last_user_msg_start", ""),
-                  snapshot))
+                  models))
             inserted += 1
     conn.commit()
     return inserted
+
+
+def reclassify_existing(conn: sqlite3.Connection) -> int:
+    """Re-run classify() on every trip already in the DB, preserving detected_at.
+
+    Used after fixing classifier bugs (e.g. 2026-07-03 boolean-precedence fix +
+    missing-param gap) so historical triples reflect the corrected logic instead
+    of waiting for new trips to accumulate. Idempotent + safe: only touches
+    cat_1/cat_2/cat_3/triple/tool_hint/file_hint, never detected_at or task_id.
+    """
+    rows = conn.execute(
+        "SELECT task_id, trip_index, detected_at FROM trips"
+    ).fetchall()
+    updated = 0
+    for task_id, trip_index, detected_at in rows:
+        p = TASKS / task_id / "ui_messages.json"
+        if not p.exists():
+            continue
+        try:
+            data = json.load(p.open())
+        except Exception:
+            continue
+        # Re-locate the trip_index-th YOLO message and re-scan its predecessors.
+        trip_idx_seen = 0
+        info = None
+        for i, m in enumerate(data):
+            if m.get("type") == "say" and m.get("say") == "error" \
+                    and "YOLO MODE" in (m.get("text", "") or ""):
+                trip_idx_seen += 1
+                if trip_idx_seen == trip_index:
+                    info = scan_trip(data, i)
+                    break
+        if not info:
+            continue
+        cats = info["cats"] + [None] * (3 - len(info["cats"]))
+        triple = " > ".join([c or "(none)" for c in cats[:3]])
+        models = load_task_models(task_id)
+        conn.execute("""
+            UPDATE trips
+               SET cat_1=?, cat_2=?, cat_3=?, file_hint=?, tool_hint=?, triple=?,
+                   models=?
+             WHERE task_id=? AND trip_index=?
+        """, (cats[0], cats[1], cats[2], info["file"], info["tool"], triple,
+              models, task_id, trip_index))
+        updated += 1
+    conn.commit()
+    log(f"reclassify_existing: updated {updated}/{len(rows)} trip rows")
+    return updated
 
 
 def main() -> int:
@@ -407,6 +458,13 @@ def main() -> int:
         log(f"tasks dir not found: {TASKS}")
         return 1
     conn = db_connect()
+
+    # --reclassify: re-run classify() on existing rows (preserves detected_at),
+    # then fall through to emit a fresh patterns.json + rule 99. Use after
+    # fixing classifier bugs so historical triples + the generated rule reflect
+    # the corrected logic immediately.
+    if "--reclassify" in sys.argv:
+        reclassify_existing(conn)
     last_seen_row = conn.execute("SELECT v FROM scan_meta WHERE k='last_task_mtime'").fetchone()
     last_seen = float(last_seen_row[0]) if last_seen_row else 0.0
 
@@ -446,16 +504,17 @@ def main() -> int:
         triples = Counter()
         tools = Counter()
         files = Counter()
+        models = Counter()
         total = 0
         resumed_n = 0
         turn_bucket = Counter()
         for row in conn.execute("""
             SELECT cat_1, cat_2, cat_3, tool_hint, file_hint, triple,
-                   resumed, turns_since_user
+                   resumed, turns_since_user, models
               FROM trips
              WHERE detected_at >= ?
         """, (ts,)):
-            c1, c2, c3, tool, fhint, triple, resumed, tsu = row
+            c1, c2, c3, tool, fhint, triple, resumed, tsu, model_str = row
             for c in (c1, c2, c3):
                 if c: cats[c] += 1
             if triple: triples[triple] += 1
@@ -463,6 +522,11 @@ def main() -> int:
             if fhint:
                 ext = fhint.rsplit(".", 1)[-1] if "." in fhint else ""
                 if ext: files[ext] += 1
+            if model_str:
+                for mname in model_str.split(","):
+                    mname = mname.strip()
+                    if mname:
+                        models[mname] += 1
             total += 1
             if resumed: resumed_n += 1
             if tsu is not None and tsu >= 0:
@@ -473,6 +537,7 @@ def main() -> int:
             "triples": triples.most_common(15),
             "tools": tools.most_common(),
             "file_exts": files.most_common(),
+            "models": models.most_common(),
             "resumed_count": resumed_n,
             "resumed_pct": round(100 * resumed_n / total, 1) if total else 0,
             "turns_since_user_hist": sorted(turn_bucket.items()),

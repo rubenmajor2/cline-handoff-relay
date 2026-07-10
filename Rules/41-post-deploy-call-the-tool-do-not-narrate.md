@@ -47,7 +47,7 @@ NEVER: a prose-only assistant turn. The error/result text is already on the user
 | `timeout` | "Let me retry the same command" | Status-check tool (bounded), or scp+nohup per rule 95, or `attempt_completion` |
 | `tool: generic execution error` | Blind retry | Re-read error, pick a tool that addresses what it said |
 
-**Two of the same failure in a row = death-spiral entry.** Change tools per the table. At 4 consecutive errors, next turn MUST be `attempt_completion` per rule 143.
+**Two of the same failure in a row = death-spiral entry.** Change tools per the table. With ceiling=3, strike 2 (2 consecutive errors) = bail to `attempt_completion` per rule 143 v3. Strike 3 = death.
 
 ## Banned: blocking LOCAL commands that hang the terminal
 
@@ -64,7 +64,7 @@ If two `execute_command` calls time out in a row, STOP using `execute_command`. 
 1. **DO NOT** re-narrate what you were about to do. The user sees the error.
 2. **DO NOT** explain why. Just call the tool.
 3. The very next turn MUST contain a tool_use block OR `attempt_completion`.
-4. Two consecutive `[ERROR]` re-prompts = strike 3 = YOLO. The FIRST error must produce a tool, not more prose.
+4. **CEILING=3 (live):** the FIRST error must produce a tool (strike 1 recovery). A SECOND consecutive error = strike 2 = BAIL to `attempt_completion` with a pickup prompt (rule 143 v3). Strike 3 = YOLO death with no pickup prompt. There is no strike-3 recovery — the task dies at strike 3.
 
 Forbidden first-words after the error: "You're right, let me...", "Calling the tool now:", "Apologies, here:", "Let me try again with:". The correct response is silent action — emit the tool.
 
@@ -76,7 +76,7 @@ Forbidden first-words after the error: "You're right, let me...", "Calling the t
 
 ## Cross-refs
 
-- Rule 143 — prose-loop circuit breaker (v2): strikes 1-3 recover with a (simpler) tool; bail to `attempt_completion` at 4 consecutive
+- Rule 143 — prose-loop circuit breaker (v3, ceiling=3): strike 1 recover with a (simpler) tool; strike 2 bail to `attempt_completion`. Strike 3 = death.
 - Rule 99 — generic no-tool-use playbook (this rule is the post-deploy specialization)
 - Rule 144 — server paths via emsu-operations MCP, never local write_to_file
 - Rule 95 — scp+nohup for long-running remote commands (timeout prevention)

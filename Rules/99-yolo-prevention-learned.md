@@ -5,10 +5,10 @@
 
 This file exists because on 2026-07-10 13:00 PDT a scan of the last Cline task history
 showed `0` new "[YOLO MODE] Task failed: Too many consecutive mistakes (3)"
-trips this scan, against `76` cumulative in the last 30 days
-(`43` in the last 7 days). The cumulative number doesn't grow unless
+trips this scan, against `18` cumulative in the last 30 days
+(`0` in the last 7 days). The cumulative number doesn't grow unless
 this scan's delta is non-zero — so a quiet day looks like "0 new this scan,
-76 cumulative", not a fresh flood. Each trip kills a task mid-work and
+18 cumulative", not a fresh flood. Each trip kills a task mid-work and
 forces Ruben to restart. This rule is the accumulated
 playbook for avoiding the specific failure modes that caused them, ranked by
 how often they show up.
@@ -38,49 +38,37 @@ The formula is always `bail = ceiling - 1`. See rule 143 v4. Re-patch script:
 `~/Documents/Cline/scripts/patch_yolo_ceiling.sh` (handles extension updates).
 
 
-## Top failure modes (all-time, 76 trips)
+## Top failure modes (all-time, 195 trips)
 
 _Counts are occurrences across the 3 failure slots per trip; a category can exceed the trip total when it dominates `fail > fail > fail` sequences._
 
-1. **no-tool-use: model typed prose instead of calling a tool** — 90 occurrences (118% of 76 trips)
-2. **timeout** — 43 occurrences (57% of 76 trips)
-3. **tool: missing required parameter** — 36 occurrences (47% of 76 trips)
-4. **file/path does not exist** — 13 occurrences (17% of 76 trips)
-5. **sql: unknown column (DESCRIBE target table first)** — 11 occurrences (14% of 76 trips)
-6. **permission denied (wrote to server path locally?)** — 3 occurrences (4% of 76 trips)
-7. **mysql query failed** — 3 occurrences (4% of 76 trips)
-8. **ssh: connect/timeout** — 3 occurrences (4% of 76 trips)
-9. **api: overloaded/rate-limit** — 2 occurrences (3% of 76 trips)
-10. **api: credit exhausted (escalate, no retry)** — 1 occurrences (1% of 76 trips)
-11. **tool: generic execution error** — 1 occurrences (1% of 76 trips)
+1. **no-tool-use: model typed prose instead of calling a tool** — 506 occurrences (259% of 195 trips)
+2. **timeout** — 33 occurrences (17% of 195 trips)
+3. **ssh: connect/timeout** — 5 occurrences (3% of 195 trips)
+4. **replace_in_file: SEARCH did not match file** — 4 occurrences (2% of 195 trips)
+5. **permission denied (wrote to server path locally?)** — 4 occurrences (2% of 195 trips)
+6. **api: overloaded/rate-limit** — 2 occurrences (1% of 195 trips)
+7. **sql: unknown column (DESCRIBE target table first)** — 2 occurrences (1% of 195 trips)
+8. **tool: generic execution error** — 2 occurrences (1% of 195 trips)
+9. **safe-deploy: invalid flag (use --target/--content/--expected-sha256)** — 2 occurrences (1% of 195 trips)
+10. **php: syntax error (run php -l before deploy)** — 1 occurrences (1% of 195 trips)
+11. **api: credit exhausted (escalate, no retry)** — 1 occurrences (1% of 195 trips)
+12. **file/path does not exist** — 1 occurrences (1% of 195 trips)
 
 ## Most common triple-failure patterns
 
 These are the exact `fail > fail > fail` sequences that have ended tasks:
 
-- `no-tool-use: model typed prose instead of calling a tool > no-tool-use: model typed prose instead of calling a tool > no-tool-use: model typed prose instead of calling a tool` — 8 time(s)
-- `timeout > no-tool-use: model typed prose instead of calling a tool > no-tool-use: model typed prose instead of calling a tool` — 8 time(s)
-- `tool: missing required parameter > tool: missing required parameter > tool: missing required parameter` — 5 time(s)
-- `(none) > (none) > (none)` — 4 time(s)
-- `timeout > no-tool-use: model typed prose instead of calling a tool > timeout` — 4 time(s)
+- `no-tool-use: model typed prose instead of calling a tool > no-tool-use: model typed prose instead of calling a tool > no-tool-use: model typed prose instead of calling a tool` — 132 time(s)
+- `timeout > no-tool-use: model typed prose instead of calling a tool > no-tool-use: model typed prose instead of calling a tool` — 19 time(s)
+- `no-tool-use: model typed prose instead of calling a tool > no-tool-use: model typed prose instead of calling a tool > (none)` — 16 time(s)
+- `ssh: connect/timeout > no-tool-use: model typed prose instead of calling a tool > no-tool-use: model typed prose instead of calling a tool` — 4 time(s)
+- `permission denied (wrote to server path locally?) > no-tool-use: model typed prose instead of calling a tool > no-tool-use: model typed prose instead of calling a tool` — 4 time(s)
 - `timeout > timeout > timeout` — 4 time(s)
-- `permission denied (wrote to server path locally?) > no-tool-use: model typed prose instead of calling a tool > no-tool-use: model typed prose instead of calling a tool` — 3 time(s)
-- `tool: missing required parameter > timeout > tool: missing required parameter` — 3 time(s)
-- `no-tool-use: model typed prose instead of calling a tool > no-tool-use: model typed prose instead of calling a tool > tool: missing required parameter` — 3 time(s)
-- `tool: missing required parameter > no-tool-use: model typed prose instead of calling a tool > no-tool-use: model typed prose instead of calling a tool` — 2 time(s)
-
-## Trips by LLM (which models trip most)
-
-_A task may use multiple LLMs (model swaps mid-task); each is counted. Blank = no model_usage in task metadata._
-
-- `deepseek-v4-pro` — 48 trip(s)
-- `glm-5.2` — 46 trip(s)
-- `frankenstein-llm` — 41 trip(s)
-- `claude-sonnet-5:1m` — 19 trip(s)
-- `claude-opus-4-8:1m` — 8 trip(s)
-- `claude-fable-5:1m` — 8 trip(s)
-- `cline-pass/deepseek-v4-pro` — 1 trip(s)
-- `deepseek-chat` — 1 trip(s)
+- `api: overloaded/rate-limit > no-tool-use: model typed prose instead of calling a tool > no-tool-use: model typed prose instead of calling a tool` — 2 time(s)
+- `sql: unknown column (DESCRIBE target table first) > no-tool-use: model typed prose instead of calling a tool > no-tool-use: model typed prose instead of calling a tool` — 2 time(s)
+- `timeout > replace_in_file: SEARCH did not match file > replace_in_file: SEARCH did not match file` — 2 time(s)
+- `tool: generic execution error > no-tool-use: model typed prose instead of calling a tool > no-tool-use: model typed prose instead of calling a tool` — 2 time(s)
 
 ## Playbook per failure mode
 
@@ -102,20 +90,19 @@ Sorted by how often each one has tripped YOLO. If you're about to retry somethin
 - If it's a MySQL/Moodle query, add LIMIT, check indexes, or ask RUBEN MCP for a pre-built tool that wraps it.
 - Never retry a timed-out command 3 times in a row — that's an automatic YOLO trip.
 
-### tool: missing required parameter
+### ssh: connect/timeout
 
-- You called a tool without a required parameter. Re-read the tool signature before retrying.
-- Do not retry with the same missing param — check the tool's input schema first.
+- WOPR might be under load or dropping connections. Check `emsu-operations` `server_status` first.
+- If SSH is flaky, batch multiple commands into one ssh_command call instead of 3 separate ones.
 
-### file/path does not exist
+### replace_in_file: SEARCH did not match file
 
-- You typed a wrong path. Common: `/Desktop/...` vs `/Esktop/...` typos, or forgetting `/Users/rubenmajor/`.
-- Before any write/read to an unknown file, `list_files` its parent directory to confirm existence.
-- Stop retrying the same wrong path. Re-check with `ls` via `execute_command` or `list_files`.
-
-### sql: unknown column (DESCRIBE target table first)
-
-_No specific playbook yet. First fix: re-read the actual error text before retrying._
+- The SEARCH block didn't match the file byte-for-byte.
+- ALWAYS `read_file` immediately before `replace_in_file`. Never trust recall from more than 3 messages ago.
+- Do not include `read_file`'s `42 | ` line-number prefixes in SEARCH blocks — that's metadata.
+- Keep SEARCH blocks 3-8 lines, unique, copy-pasted from the read you just did.
+- For edits over ~10 lines, use `write_to_file` (whole-file overwrite) — no mismatch failure mode.
+- For server-side edits, prefer `ssh_command` with sed/heredoc over `replace_in_file` entirely.
 
 ### permission denied (wrote to server path locally?)
 
@@ -124,17 +111,6 @@ _No specific playbook yet. First fix: re-read the actual error text before retry
 - For server files, use `ssh_command` with `cat > /var/www/... <<'EOF' ... EOF` or `emsu-operations` MCP tools.
 - Before writing, sanity-check the path prefix: `/var/`, `/etc/`, `/opt/` = server, never local.
 
-### mysql query failed
-
-- Query syntax or schema issue. Don't retry identical query hoping for different result.
-- Read the actual error text. Usually: missing table, bad column name, quoting issue.
-- Use `emsu-operations` `describe_table` or `list_tables` before guessing.
-
-### ssh: connect/timeout
-
-- WOPR might be under load or dropping connections. Check `emsu-operations` `server_status` first.
-- If SSH is flaky, batch multiple commands into one ssh_command call instead of 3 separate ones.
-
 ### api: overloaded/rate-limit
 
 - Anthropic is overloaded, not a logic problem.
@@ -142,13 +118,31 @@ _No specific playbook yet. First fix: re-read the actual error text before retry
 - Do not fire 3 tool calls back-to-back hoping the API comes back — that burns the consecutive-mistakes budget.
 - If two overloaded errors hit in a row, write a one-line status to the user and idle until they prompt again.
 
-### api: credit exhausted (escalate, no retry)
+### sql: unknown column (DESCRIBE target table first)
 
 _No specific playbook yet. First fix: re-read the actual error text before retrying._
 
 ### tool: generic execution error
 
 - Read the actual error text instead of retrying. Usually the message tells you exactly what's wrong.
+
+### safe-deploy: invalid flag (use --target/--content/--expected-sha256)
+
+_No specific playbook yet. First fix: re-read the actual error text before retrying._
+
+### php: syntax error (run php -l before deploy)
+
+_No specific playbook yet. First fix: re-read the actual error text before retrying._
+
+### api: credit exhausted (escalate, no retry)
+
+_No specific playbook yet. First fix: re-read the actual error text before retrying._
+
+### file/path does not exist
+
+- You typed a wrong path. Common: `/Desktop/...` vs `/Esktop/...` typos, or forgetting `/Users/rubenmajor/`.
+- Before any write/read to an unknown file, `list_files` its parent directory to confirm existence.
+- Stop retrying the same wrong path. Re-check with `ls` via `execute_command` or `list_files`.
 
 ## What's auto-updated
 

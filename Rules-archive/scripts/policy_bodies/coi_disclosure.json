@@ -1,0 +1,35 @@
+{
+  "title": "Conflict of Interest / Disclosure Policy",
+  "subtitle": "Annual disclosure for faculty, program medical director, program committee, and executive leadership",
+  "intro": "EMS University requires every faculty member, the Program Medical Director, every voting member of the Program Committee, and every member of executive leadership to disclose, in writing, any potential conflict of interest that could reasonably be perceived as biasing their evaluation of educational content, faculty selection, equipment purchasing, vendor relationships, or program direction. Disclosure is renewed annually and on any material change in circumstance.",
+  "sections": [
+    {
+      "heading": "Scope",
+      "paragraphs": [
+        "This policy applies to all individuals named in the Program Committee Member List, all faculty (didactic and skills), the Program Medical Director, and the Chief Executive Officer."
+      ]
+    },
+    {
+      "heading": "Disclosure Requirements",
+      "bullets": [
+        "Financial relationships with manufacturers, distributors, or vendors of training equipment, software, certifications, or pharmaceuticals.",
+        "Ownership interest in any continuing-education provider or competing program.",
+        "Compensation from any external entity that touches EMSU curriculum, faculty selection, or equipment specification.",
+        "Familial relationships that could reasonably influence program decisions.",
+        "Any other relationship that a reasonable third party could perceive as a bias."
+      ]
+    },
+    {
+      "heading": "Recordkeeping",
+      "paragraphs": [
+        "Disclosures are collected on the EMSU Conflict of Interest Disclosure Form, signed and dated. Forms are retained at the program for the standard records-retention period and produced to a regulator on specific particularized request."
+      ]
+    },
+    {
+      "heading": "Recusal",
+      "paragraphs": [
+        "Any disclosed conflict that touches a specific Program Committee decision or curriculum item triggers recusal from that decision. Recusal is recorded in the meeting minutes."
+      ]
+    }
+  ]
+}

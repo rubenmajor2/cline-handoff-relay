@@ -1,0 +1,20 @@
+{
+  "name": "fleet-state-mcp",
+  "version": "0.1.0",
+  "description": "EMSU Fleet State MCP — idea #6825. Canonical inventory of WOPR/Joshua/SMS-Mac/Artemis/RunPod + live aggregates. Calls /var/www/emtskills/routes/api_fleet_inventory.php (inventory|now|act).",
+  "main": "build/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "@types/node": "^22.15.3"
+  },
+  "private": true
+}

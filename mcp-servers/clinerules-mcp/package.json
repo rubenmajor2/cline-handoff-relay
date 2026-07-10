@@ -1,0 +1,23 @@
+{
+  "name": "clinerules-mcp",
+  "version": "0.1.0",
+  "description": "On-demand .clinerules lookup MCP. Replaces 972KB system-prompt injection with per-task lookups. Saves ~$95/day at typical task volume.",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node build/index.js",
+    "reindex": "node build/index.js --reindex-only",
+    "postinstall": "bash $HOME/Documents/Cline/scripts/guard_node_version_mismatch.sh $(pwd) || true"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "better-sqlite3": "^11.10.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3"
+  },
+  "private": true
+}

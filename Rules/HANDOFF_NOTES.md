@@ -355,3 +355,16 @@ Current config (parallel=50, rate_cap=300/hr, cron */1, executor_via_frankenstei
 ### Ideas filed total: 7 (#16838, #16839, #16840, #16843, #16845, #16853, #16864)
 
 *Updated: 2026-07-08 21:33:00 PT via Frankenstein Doctor session (Phase 9)*
+
+## [2026-07-10 16:08 PT] Cicero 235B RESTORED to service + all merge items complete
+
+### 235B status: SERVING
+- Qwen3-235B-A22B-Thinking-2507 3bit-DWQ MLX on Cicero :11520 (launchd com.emsu.cicero, KeepAlive)
+- LoRA adapter cicero-reasoning-v0 mounted
+- Inference verified: reasoning trace + 46 tokens on test prompt
+- Fixes applied: HF cache dir created (~/.cache/huggingface/hub), model symlink (active-3bitdwq → archived-models/cicero-235b-qwen3)
+- WOPR reachability: reverse SSH tunnel (launchd com.emsu.cicero-235b-tunnel,- WOPR reachability: reverse SSH tunnel (launco
+- LiteLLM registry:- LiteLLM registry:- LiteLLM registry:- LiteLLM registry:- LiteLLM registry:- LiteLLMLEET_ST- LiteLLM registry:- LiteLLM registry:- LiteLLM registry:- LiteLLM registry:- LiteLLM registry:- LiteLLMLEET_ST- LiteLLM registry:- ecated):
+- LLM_FLEET_STATE- LLM_FLEro = "Ruben's workstation + 235B reasoning teache- LLM_FLEET_STATE- LLM_FLEro = "Ruben's workstation + 235B reasoning teache- LLM_FLEET_STATE- LLM_FLEro = "Ruben's woNOT- LLM_FLEET_STATE- LLM_FLEro = "Ruben's workstation + 235B reasoning teache- LLM_Fs: bidirectional merge, Cicero canonical (00-266), 69 stale PH dupes removed
+- Git: both machines share history (main @ latest), GitHub relay restored via deploy keys (bo- Git: both machinPH servers ported to Cicero (project-frankenste- Git: both machines share history (main @ latest), GitHub relay restored via deploy keys (bo- Git: both machinPH servers ported to C Learner report: cline_learner_report.php push loop wired on Cicero (wopr SSH alias added)
+- Auto-sync: cron on Cicero (:15/:45), sync.sh on PH (hourly), both push GitHub

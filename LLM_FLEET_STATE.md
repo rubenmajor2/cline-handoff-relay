@@ -1,6 +1,6 @@
 # EMSU LLM Fleet — CANONICAL LIVE STATE
 
-**Last updated:** 2026-07-08 14:04 PT
+**Last updated:** 2026-07-10 16:08 PT (235B restored)
 **Maintained by:** Cline agents + Ruben
 **Purpose:** Single source of truth for LLM fleet topology, spill order, and box roles. Every Cline agent MUST read this file before making any claim about fleet/model status. Do NOT trust error_watchdog summaries — always live-probe via `llm_locate` or HTTP check.
 
@@ -34,6 +34,13 @@
 - **Box:** Joshua (2x 60B GPUs)
 - **Endpoint:** via `litellm.emsuniversity.com` routing
 
+### 235B (Qwen3-235B-A22B, free, BATCH/distillation)
+- **Box:** Cicero (M5 Max 128GB, MLX 3bit-DWQ)
+- **Status:** SERVING (restored 2026-07-10). LoRA adapter `cicero-reasoning-v0` mounted.
+- **Endpoint:** WOPR `localhost:11520` via reverse SSH tunnel (launchd `com.emsu.cicero-235b-tunnel`)
+- **Role:** BATCH/non-interactive reasoning + distillation teacher. NOT a Cline spill rung (thinking model, ~22 tok/s@1).
+- **Concurrency:** 4 (swept 2026-06-17)
+
 ### 32B/14B/7B (free, local)
 - On-device local models
 - **Endpoint:** via `litellm.emsuniversity.com` routing
@@ -50,7 +57,7 @@
 | Tiberius | GLM-5.2 ring worker | Tetrarchy rank 1 |
 | Cesar | GLM-5.2 ring worker | Tetrarchy rank 2 |
 | Augustus | GLM-5.2 ring worker | Tetrarchy rank 3 |
-| **Cicero** | **Ruben's workstation** | **NOT available for fleet inference** |
+| **Cicero** | **Ruben's workstation + 235B reasoning teacher** | **Qwen3-235B-A22B 3bit-DWQ MLX serving on :11520 (restored 2026-07-10). Reverse SSH tunnel to WOPR. BATCH/distillation tier only.** |
 | SMS Mac | Ops terminal | iMessage bot host |
 
 ## DEPRECATED (do NOT reference)

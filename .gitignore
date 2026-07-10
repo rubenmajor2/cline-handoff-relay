@@ -34,4 +34,4 @@ archived-models/
 task-backups/
 Rules-archive-backups/
 cloudflared/
-*/node_modules/
+node_modules/

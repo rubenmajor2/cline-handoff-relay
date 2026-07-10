@@ -1,0 +1,16 @@
+{
+  "name": "delegate-70b-mcp",
+  "version": "0.1.0",
+  "description": "MCP server — offload bulk/cheap subtasks to local Llama-3.3-70B vLLM endpoint",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

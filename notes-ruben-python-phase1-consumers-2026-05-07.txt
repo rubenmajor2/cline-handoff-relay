@@ -1,0 +1,110 @@
+=== START 2026-05-07T20:24:25-07:00 ===
+
+=== /Applications/RUBEN.app launcher (python references) ===
+14:RUBEN_PYTHON="$RUBEN_DIR/Python3.framework/Resources/Python.app/Contents/MacOS/Python"
+15:if [[ ! -x "$RUBEN_PYTHON" ]]; then
+16:    RUBEN_PYTHON="/usr/bin/python3"
+24:    exec "$RUBEN_PYTHON" "$DASHBOARD_WINDOW"
+38:/usr/bin/python3 "$RUBEN_DIR/ruben_app.py" &
+45:exec "$RUBEN_PYTHON" "$DASHBOARD_WINDOW"
+
+=== /Applications/RUBEN AI.app launcher (python references) ===
+56:exec /usr/bin/python3 "$RUBEN_SCRIPT" >> "$LOG_DIR/stdout.log" 2>> "$LOG_DIR/stderr.log"
+
+=== ~/Library/LaunchAgents/*.plist that mention python or Python3.framework ===
+  /Users/rubenmajor/Library/LaunchAgents/com.emsu.cline-handoff-watcher.plist
+    9:        <string>/usr/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.emsu.cline-learner.plist
+    11:		<string>/usr/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.emsu.cline-ledger-disk-backfill.plist
+    9:        <string>/usr/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.emsu.cline-subagent-gate.plist
+    10:        <string>/usr/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.emsu.cline-weekly-report.plist
+    9:        <string>/usr/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.emsu.clinerules-learner-sync.plist
+    9:		<string>/usr/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.emsu.imessage-sync.plist
+    9:        <string>/usr/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.emsu.macbook-watchdog.plist
+    9:        <string>/usr/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.emsu.mcp-reaper.plist
+    10:        <string>/usr/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.emsu.mcp-watchdog.plist
+    9:        <string>/usr/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.emsu.meta-watchdog.plist
+    9:        <string>/usr/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.emsu.push-cline-sessions.plist
+    9:        <string>/usr/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.emsu.ruben-bug-hunter.plist
+    9:        <string>/usr/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.emsu.vscode-bridge.plist
+    20:    curl -s http://127.0.0.1:7863/health | python3 -m json.tool
+    29:        <string>/usr/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.ruben.ai.plist
+    10:        <string>/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.ruben.thinking-cleanup.plist
+    10:        <string>/usr/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.ruben.voicebrain-cancel-watcher.plist
+    9:        <string>/usr/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.ruben.watchdog.plist
+    9:        <string>/usr/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.rubenmajor.tastybot.plist
+    8:    <string>/Users/rubenmajor/Library/Application Support/TastyBot/repo/.venv/bin/python</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.sparkhelper.fixer.plist
+    9:        <string>/Users/rubenmajor/.spark-helper/venv/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.sparkhelper.idle.plist
+    9:        <string>/Users/rubenmajor/.spark-helper/venv/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.sparkhelper.menubar.plist
+    9:        <string>/Users/rubenmajor/.spark-helper/venv/bin/python3</string>
+  /Users/rubenmajor/Library/LaunchAgents/com.sparkhelper.outbox.plist
+    9:        <string>/Users/rubenmajor/.spark-helper/venv/bin/python3</string>
+
+=== Scripts/launchers under ~/.ruben-ai that hardcode the framework path ===
+(excluding the framework itself, __pycache__, .bak-* backups)
+/Users/rubenmajor/.ruben-ai/watchdog_status.json
+/Users/rubenmajor/.ruben-ai/stderr.log
+/Users/rubenmajor/.ruben-ai/ruben-launcher.sh
+/Users/rubenmajor/.ruben-ai/ruben_guardian.sh
+/Users/rubenmajor/.ruben-ai/ruben_watchdog.py
+/Users/rubenmajor/.ruben-ai/RubenApp.app/Contents/MacOS/RubenApp
+/Users/rubenmajor/.ruben-ai/dashboard_window.py
+/Users/rubenmajor/.ruben-ai/ruben_app.py
+/Users/rubenmajor/.ruben-ai/bridge_voice_scrubber_blocks.sh
+/Users/rubenmajor/.ruben-ai/ruben.log
+
+=== Active LaunchAgents ProgramArguments[0] (what's actually being run) ===
+  com.ruben.ai.plist
+    /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/bin/python3 /Users/rubenmajor/.ruben-ai/ruben_app.py
+  com.ruben.claude-daemon-digest.plist
+    /opt/homebrew/bin/node /Users/rubenmajor/.ruben-ai/claude-daemon/build/index.js
+  com.ruben.claude-daemon.plist
+    /opt/homebrew/bin/node /Users/rubenmajor/.ruben-ai/claude-daemon/build/index.js
+  com.ruben.cline-rules-sync.plist
+    /bin/bash /Users/rubenmajor/Documents/Cline/sync.sh
+  com.ruben.cline-subagent-pager.plist
+    /bin/bash /Users/rubenmajor/Documents/Cline/rule_violations/subagent_phrase_pager.sh
+  com.ruben.cline-vscode-quit-cleanup.plist
+    /bin/bash /Users/rubenmajor/bin/cline-vscode-quit-cleanup.sh
+  com.ruben.cline.mac-drip.plist
+    /bin/bash /Users/rubenmajor/Documents/Cline/mac_drip/run.sh
+  com.ruben.cline.rule-violations.plist
+    /bin/bash /Users/rubenmajor/Documents/Cline/rule_violations/run.sh
+  com.ruben.cline.yolo-learner.plist
+    /bin/bash /Users/rubenmajor/Documents/Cline/yolo_learner/run.sh
+  com.ruben.guardian.plist
+    /bin/bash /Users/rubenmajor/.ruben-ai/ruben_guardian.sh
+  com.ruben.opus47-poll.plist
+    /bin/bash /Users/rubenmajor/bin/check_opus47.sh
+  com.ruben.thinking-cleanup.plist
+    /usr/bin/python3 /Users/rubenmajor/.ruben-ai/ruben_thinking.py
+  com.ruben.voicebrain-cancel-watcher.plist
+    /usr/bin/python3 /Users/rubenmajor/.ruben-ai/voicebrain_cancel_watcher.py
+  com.ruben.watchdog.plist
+    /usr/bin/python3 /Users/rubenmajor/.ruben-ai/ruben_watchdog.py
+  com.emsu.ruben-bug-hunter.plist
+    /usr/bin/python3 /Users/rubenmajor/.ruben-ai/bug_hunter.py
+  com.emsu.ruben-imsg-scanner.plist
+    /bin/bash /Users/rubenmajor/.ruben-ai/run_imsg_scanner.sh
+
+=== ALL DONE 2026-05-07T20:24:27-07:00 ===

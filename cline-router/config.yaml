@@ -1,0 +1,237 @@
+# LiteLLM Proxy config — Cline-Router Phase 5
+# Pinned to litellm[proxy]==1.83.14
+# Docs: docs.litellm.ai/docs/proxy/configs + docs.litellm.ai/docs/proxy/call_hooks
+
+# ---------------------------------------------------------------------------
+# Model list — what Cline can route to.
+# ---------------------------------------------------------------------------
+# When a Cline request lands, our classifier hook (emsu_classifier_hook.py)
+# rewrites the `model` field on the fly. Cline asks for `claude-sonnet-4-6`,
+# the hook either:
+#   - Leaves it alone (classified hard) → Anthropic
+#   - Rewrites to `ollama-qwen-14b` (classified routine) → Ollama via LiteLLM
+# Both paths come back in Anthropic shape because LiteLLM auto-translates.
+model_list:
+
+  # ----- Real Anthropic (hard turns, hard-floor matches, fallback target) -----
+  # NOTE: no api_key set — LiteLLM passes through the inbound x-api-key header
+  # from Cline's request to Anthropic. Means we never store/decrypt Cline's
+  # SecretStorage-held key on our side. Each Cline window's own key is used.
+  - model_name: claude-sonnet-4-6
+    litellm_params:
+      model: anthropic/claude-sonnet-4-6
+
+  - model_name: claude-opus-4-7
+    litellm_params:
+      model: anthropic/claude-opus-4-7
+
+  # 2026-05-11 — Cline 3.82 may send any of these names. Add aliases so the
+  # router accepts everything Cline emits. Hook still classifies + rewrites.
+  - model_name: claude-opus-4-6
+    litellm_params:
+      model: anthropic/claude-opus-4-6
+
+  - model_name: claude-opus-4-6:1m
+    litellm_params:
+      model: anthropic/claude-opus-4-6
+
+  - model_name: claude-opus-4-7:1m
+    litellm_params:
+      model: anthropic/claude-opus-4-7
+
+  - model_name: claude-sonnet-4-5
+    litellm_params:
+      model: anthropic/claude-sonnet-4-5
+
+  - model_name: claude-sonnet-4-6:1m
+    litellm_params:
+      model: anthropic/claude-sonnet-4-6
+
+  - model_name: claude-haiku-4-5
+    litellm_params:
+      model: anthropic/claude-haiku-4-5
+
+  # ----- Local Ollama (routine turns) -----
+  # WOPR is the primary location for the LoRA model when Phase 3 lands.
+  # Artemis fleet is the fallback / scale-out.
+  # Note: WOPR ollama doesn't expose 11434 over WG — must add Ollama
+  # OLLAMA_HOST=0.0.0.0 binding on WOPR before primary path works. Until
+  # then, ARTEMIS is the active local endpoint.
+  - model_name: ollama-qwen-14b
+    litellm_params:
+      model: ollama_chat/qwen2.5-coder:14b
+      api_base: os.environ/OLLAMA_BASE_URL   # default http://10.100.0.5:11434 (Artemis)
+      stream: true
+
+  - model_name: ollama-qwen-32b
+    litellm_params:
+      model: ollama_chat/qwen2.5-coder:32b
+      api_base: os.environ/OLLAMA_BASE_URL
+      stream: true
+
+  # Phase 3 LoRA target — currently emsu-qwen:7b-lora (downsized from 14b for WOPR 16GB).
+  # Hook will prefer this when ollama list contains it.
+  - model_name: ollama-qwen-emsu-lora
+    litellm_params:
+      model: ollama_chat/emsu-qwen:7b-lora
+      api_base: os.environ/OLLAMA_BASE_URL
+      stream: true
+
+  # Phase 3 v6 — FSDP2 dual-Arc-Pro-B70 trained LoRA on Qwen3-Coder-30B-A3B.
+  # Built 2026-05-10 via /tmp/04_convert_to_gguf.sh on Artemis post-train.
+  # Plumbing-only entry per #opus-train-ollama-replace-sonnet-2026-05-10
+  # Phase 5. NOT promoted to tier1 — gated on idea #2871 24d live audit.
+  # Endpoint: Artemis ollama on WG IP 10.100.0.5:11434.
+  - model_name: emsu-qwen3-coder-30b-lora
+    litellm_params:
+      model: ollama_chat/emsu-qwen3-coder:30b-lora
+      api_base: http://10.100.0.5:11434
+      stream: true
+
+  # Phase 3.1 parallel 7B build (Qwen2.5-Coder-7B-Instruct + EMSU LoRA v1).
+  # Trained on Artemis xpu:1 in parallel with the 30B v17 run, 2026-05-11.
+  # Output dir on Artemis: /opt/lora-checkpoints/qwen2.5-coder-7b-lora/v1
+  # Ships first (step-400 ETA ~5:30 PT 2026-05-11). Plumbing-only entry —
+  # NOT promoted to tier1, gated on backtest vs Sonnet on shadow_log.
+  # Endpoint: Artemis ollama on WG IP 10.100.0.5:11434.
+  - model_name: emsu-qwen2.5-coder-7b-lora
+    litellm_params:
+      model: ollama_chat/emsu-qwen2.5-coder:7b-lora
+      api_base: http://10.100.0.5:11434
+      # 2026-05-12 fix: stream: false so ALL 7B responses go through
+      # async_post_call_success_hook → R1-R9 quality gate. With stream:true,
+      # responses went through the streaming iterator hook which has NO quality
+      # checks (TODO Phase 5B). Empty/refusal responses were reaching Cline
+      # unchecked. Now bad responses → R3/R4 → clean Anthropic fallback.
+      stream: false
+
+  # 2026-05-24 — SMS-Mac fallback for emsu-qwen2.5-coder:7b-lora (idea #6260).
+  # 2026-06-04 — IP CORRECTED 192.168.1.55 → 192.168.1.221. The live SMS-Mac
+  # (LocalHostName EMSU-SMS-Mac, ssh alias `smsmac`) is 192.168.1.221; .55 is
+  # dead (connection timeout, no ollama). Verified during Frankenstein 70B deploy.
+  # Artemis is the primary (above). When Artemis ollama returns errors,
+  # LiteLLM's router (allowed_fails:3 / cooldown_time:30) auto-fails over
+  # to this entry. SMS-Mac is 192.168.1.221 on LAN; Apple M1 Max + 48 GiB
+
+  # Metal VRAM, Ollama 0.24.0 user-installed at ~/bin/ollama, launchd
+  # KeepAlive=true. Same model name on disk after LoRA Modelfile build
+  # (idea #6264). Until Modelfile lands, this endpoint will 404 on the
+  # tagged name and the hook's R3 will fall back to Anthropic — which is
+  # still better than no fallback at all (current state with Artemis down).
+  - model_name: emsu-qwen2.5-coder-7b-lora
+    litellm_params:
+      model: ollama_chat/emsu-qwen2.5-coder:7b-lora
+      api_base: http://192.168.1.221:11434
+      stream: false
+
+  # Base qwen2.5-coder:7b on SMS-Mac (no LoRA). Useful for fallback when
+  # the LoRA Modelfile hasn't been built yet, or for ad-hoc base-model
+  # queries. Pull resumed 2026-05-24 00:17 PT after launchd consolidation.
+  - model_name: ollama-qwen-7b-base
+    litellm_params:
+      model: ollama_chat/qwen2.5-coder:7b
+      api_base: http://192.168.1.221:11434
+      stream: false
+
+  # SMS-Mac llama3.3:70b (pre-existing, 42.5 GB on disk). 48 GiB Metal
+  # VRAM is just enough to hold the Q4_K_M weights. Slow but viable as
+  # a heavy-lift fallback when Artemis 30B-LoRA is down.
+  - model_name: sms-llama-70b
+    litellm_params:
+      model: ollama_chat/llama3.3:latest
+      api_base: http://192.168.1.221:11434
+      stream: false
+
+  # 2026-06-04 — Frankenstein 70B LoRA experts on SMS-Mac (idea #9687).
+  # Built from llama3.3-70B QLoRA adapters, Q4_K_M GGUF, ollama create on .221.
+  # student_email_reply / plan_summary / ticket_triage live; classify retraining.
+  # Tandem-with-Artemis load-balancing tracked in idea #9836.
+  - model_name: emsu-frank-70b-student-email
+    litellm_params:
+      model: ollama_chat/emsu-llama3.3-70b-student_email_reply-lora
+      api_base: http://192.168.1.221:11434
+      stream: false
+
+  - model_name: emsu-frank-70b-plan-summary
+    litellm_params:
+      model: ollama_chat/emsu-llama3.3-70b-plan_summary-lora
+      api_base: http://192.168.1.221:11434
+      stream: false
+
+  - model_name: emsu-frank-70b-ticket-triage
+    litellm_params:
+      model: ollama_chat/emsu-llama3.3-70b-ticket_triage-lora
+      api_base: http://192.168.1.221:11434
+      stream: false
+
+  # SMS-Mac mistral-small:22b (pre-existing, 12.6 GB on disk). Routine
+  # fallback for the 14B/30B Artemis tier.
+  - model_name: sms-mistral-22b
+    litellm_params:
+      model: ollama_chat/mistral-small:latest
+      api_base: http://192.168.1.221:11434
+      stream: false
+
+
+
+  # ----- Tier-2 tiny classifier model -----
+  # llama3.2:1b chosen per subagent research — best routine-vs-hard binary
+  # classification accuracy at the 1-3B size band, 15-30ms TTFT warm on Arc.
+  # Warm-load at boot via OLLAMA_KEEP_ALIVE=24h.
+  - model_name: ollama-classifier
+    litellm_params:
+      model: ollama_chat/llama3.2:1b
+      api_base: os.environ/OLLAMA_BASE_URL
+      stream: false
+      temperature: 0
+      max_tokens: 20
+
+# ---------------------------------------------------------------------------
+# Custom callback hook — runs on every request (pre-call) and response
+# (post-call). This is where the routing decision + R1-R9 fail-safe lives.
+# ---------------------------------------------------------------------------
+litellm_settings:
+  # File path is relative to LiteLLM's working dir at startup. Use absolute.
+  callbacks: ["emsu_classifier_hook.emsu_router_instance"]
+  drop_params: false   # preserve all Anthropic params for hook inspection
+  set_verbose: false
+  json_logs: false
+  # 2026-05-14 — Anthropic overloaded_error (529) on the 1M-context tier was
+  # propagating straight to Cline because the proxy did zero retries. Retry
+  # transient overload/rate-limit errors with exponential backoff before
+  # giving up. LiteLLM retries on RateLimitError, ServiceUnavailableError,
+  # APIConnectionError, Timeout, InternalServerError automatically.
+  num_retries: 4
+  request_timeout: 600
+
+# ---------------------------------------------------------------------------
+# Router-level fallbacks — when the 1M-context Anthropic tier is overloaded
+# (much more common than the 200k tier), automatically retry the same request
+# against the non-1M alias. Same model family, separate capacity pool.
+# 2026-05-14: added in response to req_011Cb3QnKYtxeMQU8yaELwZg overload spam.
+# ---------------------------------------------------------------------------
+router_settings:
+  num_retries: 4
+  retry_after: 5
+  allowed_fails: 3
+  cooldown_time: 30
+  fallbacks:
+    - claude-sonnet-4-6:1m: ["claude-sonnet-4-6"]
+    - claude-opus-4-7:1m: ["claude-opus-4-7"]
+    - claude-opus-4-6:1m: ["claude-opus-4-6"]
+    - claude-sonnet-4-6: ["claude-sonnet-4-5", "claude-haiku-4-5"]
+    - claude-opus-4-7: ["claude-opus-4-6", "claude-sonnet-4-6"]
+
+# ---------------------------------------------------------------------------
+# Proxy-level settings (port, host, telemetry).
+# ---------------------------------------------------------------------------
+general_settings:
+  # No master_key on the proxy itself — Cline's x-api-key is forwarded to Anthropic.
+  # Localhost-only listening, so no auth gap at the proxy boundary.
+  database_url: null   # no DB, audit log lives in our own SQLite
+  alerting: []
+  background_health_checks: false
+
+# Logging (separate from audit log)
+litellm_logging_config:
+  set_verbose: false

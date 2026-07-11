@@ -1,4 +1,4 @@
-# 260 — Fleet SSH Access & Connection Reference (durable, never guess)
+# 268 — Fleet SSH Access & Connection Reference (durable, never guess)
 
 Source: 2026-07-08 Ruben directive (repeated 2+ dozen times): "I can't keep going back and forth with you about the LLMs and whether they are connected and hard rebooting boxes because you didn't look at the proper source. We need a durable solution for this."
 

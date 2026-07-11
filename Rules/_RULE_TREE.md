@@ -100,13 +100,15 @@
 - **Ops chat / iMessage to staff** — R: 01,09,10,30,32,43,57,72,96,108,111,175,177,178,179,186,187,198,207,247,259
 - **Staff escalation (Vicky/Jon/Ruben)** — R: 10,13,15,19,48,117
 - **CTA / link formatting** — R: 47 (full URLs, no shortcuts)
+- **CS-agent response-quality bug library** — R: 270 (consult before recycling wrong replies across Email/Chat/SMS/Ticket/Voice/To AI agents; 2-strike tripwire)
 
 ---
 
 ## 🤖 Agent Behavior & Autonomy
 → Trigger: deciding whether to act or escalate, filing ideas, agent self-supervision, capability gaps, Q-cards, confidence tiers
 → Fetch all: `clinerules_list_by_topic("agent")`
-- **Act vs escalate gate** — R: 12,22,23,29,36,37,38,67,68,78,80,90,93,117,124,125,167,183,193,206,208,213,238
+- **Act vs escalate gate** — R: 12,22,23,29,36,37,38,67,68,78,80,90,93,117,124,125,167,183,193,206,208,213,238,267 (267=orchestrator/executor mid-task offload + end-of-task reconcile — the ASYNC sibling to rule 00's sync subagents)
+
 - **Self-supervision & repair** — R: 46,49,53,54,55,56,64,65,66,73,81,82,85,92,94,110,112,129,130,131,133,134,162,163,166,168,169,176,180,194,209,214,225,240,244,258,261,263 (263=verify-before-claim: no stale inferences, no sycophantic agreement)
 - **Routing to humans** — R: 68,69 (Jon=policy only, Vicky=CS only)
 - **Agent-found-wrong** — R: 266 (fix the instrument that misled the agent, same session — RCA the tool/query, patch it, verify, record)
@@ -124,6 +126,7 @@
 - **Live-probe fleet state enforcement** — R: 260 (never trust error_watchdog for fleet health, always read LLM_FLEET_STATE.md + live-probe)
 - **URL→docroot mapping** — R: 159 (emsuniversity.com/ems = /var/www/moodle/ems, NOT /var/www/emtskills/ems)
 - **Connecteam is DEAD (decommissioned 2026-05-15)** — R: 246 (never recommend CT as a config surface; Team Hub is the replacement)
+- **Fleet SSH access reference** — R: 268 (canonical SSH matrix, ports, IPs, passwords, diagnostic decision tree — never guess SSH paths)
 
 ---
 
@@ -137,6 +140,7 @@
 - **Doorman output-quality gate** — R: 256 (streaming output validation + XML translation; Doorman = health + output quality, not just health)
 - **The show must go on** — R: 257 (Doorman keeps bad LLMs out before they reach Cline; prose-no-tools gate, empty-content gate, capability gate)
 - **Kaison autonomous repair** — R: 147,233
+- **Check latest software before LLM deploy** — R: 269 (check NCCL/vLLM/CUDA/OFED versions + known regressions BEFORE any multi-node deploy)
 
 ---
 
@@ -234,3 +238,8 @@
 2026-07-10 — added Rule 264 (The Foreman: persistent dual-window autonomous engineering pattern) to Agent Behavior > Self-supervision & repair. Source: Ruben directive — "have a different window that babysits the issues and fixes what it can continuously... use Frankenstein LLM in a cline window to drive this forward and not give up... call it 'The Foreman'." Pattern: Worker (free local Frankenstein-LLM) works nonstop, Supervisor (paid cloud GLM-5.2/Claude) checks every 30 min and course-corrects. Both windows don't close until task done or genuine error.
 
 2026-07-10 — added Rule 265 (Spatial/Analogy Thinking Protocol: when stuck, reframe and think sideways) to Agent Behavior > Self-supervision & repair + Task Hygiene > Completion shape. Source: Ruben directive — "you need to think more spatially... if you can't resolve an issue head on, what other analogous things would resolve the problem... when you get stuck or really stuck, rather than giving up." 6-step protocol: (1) reframe spatially, (2) think analogously, (3) apply the analogy, (4) acquire info until you know, (5) persevere at the precipice, (6) think in parallel. Source incident: GLM-5.2 RoCE QP hang — after 4 linear attempts failed, spatial analysis revealed root cause (same subnet on different physical cables), fix was unique /30 per cable (postal zip code analogy).
+
+2026-07-10 — added Rule 267 (Offload independent sub-work to RUBEN Orchestrator/Executor mid-task, then reconcile before completion) to Agent Behavior & Autonomy > Act vs escalate gate. Distinguishes from rule 00 (synchronous subagents): rule 267 is the ASYNC lever — file deferrable, independent sub-units to the Orchestrator (`create_idea`, autonomous tier) and continue the critical path, then run a mandatory reconciliation pass before `attempt_completion` (check every filed idea's status, fix stuck/failed ones inline, disposition-tag per rule 109). Source: Ruben directive — "All Cline Agents MUST leverage/use Orchestrator/Executor to speed up processing of tasks during iteration," with proposed add-on "come back at the end of the task to cleanup any tasks sent to orchestrator/executor."
+
+2026-07-10/11 — Fixed pre-existing rule-number collisions at 260 (2 files) and 266 (3 files) in Rules-archive. Renumbered orphan files: `260-fleet-ssh-access-reference.md` → 268, `266-check-latest-software-before-llm-deploy.md` → 269, `266-cs-agent-response-quality-bug-library.md` → 270. Canonical holders (`260-live-probe-fleet-state-enforcement.md`, `266-agent-found-wrong-fix-the-instrument.md`) unchanged. Counter bumped 267→270. Tree updated with new entries: 268 (Infrastructure > SSH & WOPR access), 269 (Frankenstein & LLM Routing > Kaison autonomous repair area), 270 (Communication & Voice). Source: Ruben directive "Yea fix all that."
+

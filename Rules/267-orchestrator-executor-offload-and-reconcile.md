@@ -2,33 +2,30 @@
 
 Permanent hardfloor rule. Workspace-scoped. Source: 2026-07-10 Ruben directive — "All Cline Agents MUST leverage/use Orchestrator/Executor to speed up processing of tasks during iteration," + "come back at the end of the task to cleanup any tasks sent to orchestrator/executor." Promoted to hardfloor + rewritten for obedience 2026-07-10.
 
-## The two gates (both are binary, both fire at mechanically-detectable moments)
+## GATE A — Offload gate (MID-TASK, fires when you're about to do 2+ similar inline operations)
 
-### GATE A — Offload gate (fires when you identify 2+ independent work units)
+**The 3-question offload test (run this EVERY TIME you're about to do 2+ similar operations inline):**
 
-**When a task contains 2+ independent units of work and at least one does NOT block your own next step, you MUST offload the deferrable unit(s) to the Orchestrator via `create_idea` (tier=autonomous per rule 38) and continue your critical path.** Do not serialize work the executor can absorb in parallel. Do not block/poll waiting on it.
+1. Am I about to do 2+ operations of the same type (SQL fixes, file edits, student lookups, ticket updates, etc.)?
+2. Are at least one of them independent of my own next step (I don't need the result back to continue)?
+3. Can the executor do them autonomously (no human-policy judgment needed)?
 
-This gate fires the moment you catch yourself about to do inline work that is (a) independent of your next step and (b) bulk/repetitive/deferrable. The trigger is detectable: if you are about to loop over N similar items inline and the executor could do them, offload instead.
+**If YES to all 3 → you MUST offload via `create_idea` (tier=autonomous per rule 38) and continue your critical path.** Do not serialize work the executor can absorb in parallel. Do not block/poll waiting on it.
 
-### GATE A2 — Active drive-to-execution (2026-07-11 addendum)
+**If NO to any → do it inline.** Don't offload trivial work (one SQL update) or human-gated decisions (money, regulator, student comms beyond rule-29 cap).
 
-**The filing window is not limited to file-and-wait-for-cron.** After `create_idea`, the same window MAY immediately drive the idea to execution instead of waiting on the executor's cron cadence:
+This gate fires at a mechanically-detectable moment: the instant you catch yourself about to loop over N similar items inline, or about to do a second operation of the same type when the first's result isn't needed for the second. That is the trigger. Offload, don't serialize.
 
-1. `idea_action(idea_id, action="approve")` — promotes the idea out of `proposed` immediately.
-2. `idea_action(idea_id, action="implement")` — triggers the auto-build pipeline synchronously, right now, in this window.
-3. For decisions (not ideas): `decision_action(decision_id, action="approve")` then `decision_action(decision_id, action="execute")` drives a pending/proposed decision straight to executed, instead of leaving it for the executor's own polling loop.
+### GATE A2 — Active drive-to-execution (optional, after `create_idea`)
 
-This is an ADDITIONAL option, not a replacement for Gate A's file-and-continue path. Use it when:
-- The work is genuinely autonomous-tier (rule 29/38 — no human-policy judgment required), AND
-- Immediate execution materially speeds up the task (the result is needed for this task's own completion, or queue pressure makes waiting for cron costly), AND
-- The agent has verified (not assumed) the idea/decision is in a state that accepts `approve`/`implement`/`execute` (check `get_idea_progress`/`list_decisions` first if unsure).
+After filing, you MAY immediately drive the idea to execution instead of waiting for the executor's cron:
 
-**Still human-gated tiers are never bypassed this way.** Money, regulator, student-facing comms beyond the rule-29 cap stay Q-card/pending — driving to `implement`/`execute` does NOT override that gate; it only accelerates work already inside the autonomous lane.
+1. `idea_action(idea_id, action="approve")` — promotes out of `proposed`.
+2. `idea_action(idea_id, action="implement")` — triggers the auto-build pipeline now.
 
-**Gate B reconciliation still applies even after actively driving to execution.** Triggering `implement`/`execute` is not itself the reconcile pass — you still call `get_idea_progress`/`list_decisions` afterward to confirm the drive actually completed (success/stuck/failed), same as the cron-driven path. Don't claim `[deployed]` just because you called `implement` — confirm it landed.
+Use when: the work is autonomous-tier AND immediate execution materially speeds up the task. **Read the RAW `ok`/`error` field of the MCP response** — the checkmark/prose wrapper can be misleading (idea #17130 documents `ok:false` returned with a checkmark). Still human-gated tiers are never bypassed this way.
 
-### GATE B — Reconcile gate (fires before attempt_completion, like rule 91)
-
+## GATE B — Reconcile gate (fires before `attempt_completion`, like rule 91)
 
 **Before calling `attempt_completion`, if this task filed 1+ ideas to the Orchestrator, you MUST call `list_decisions` or `get_idea_progress` for EVERY idea # you filed.** "I filed it, it's fine" is NOT a reconcile pass. A reconcile pass is a tool call that returns real status. Skipping this gate is the same class of violation as shipping an `attempt_completion` without the rule-91 pickup prompt.
 
@@ -39,19 +36,18 @@ Classify each filed idea: executed / in-progress / stuck / failed / still-queued
 
 Every filed idea # gets a rule-109 disposition tag in the result AND the rule-91 pickup prompt Reference IDs section.
 
+**Known tool gap:** `get_idea_progress` may return `{"error": "Unknown action"}` (server-side routing bug). If so, use `list_decisions` or `get_activity_feed`/`list_events` as the verification path instead. File an idea for the bug per rule 266 — don't silently work around it every time.
+
 ## The anti-abuse gate (do NOT offload these)
 
-Offloading is for *volume the executor's cron loop can absorb in parallel*, NOT for *avoiding the work your own completion must report*.
-
-**Never offload:**
-1. **The exact thing your `attempt_completion` needs to report as done.** If your completion says "X is [deployed]," X must be done inline or verified-executed, not just filed. Filing the fix for the ticket you're closing, then claiming the ticket resolved before the executor ran it, is a rule-29 violation in async clothing.
-2. **Human-only decisions** (money, regulator, student-facing comms beyond rule-29 cap) → Q-card/pending per rule 12, NOT autonomous.
+1. **The exact thing your `attempt_completion` needs to report as done.** If your completion says "X is [deployed]," X must be done inline or verified-executed, not just filed.
+2. **Human-only decisions** (money, regulator, student-facing comms beyond rule-29 cap) → Q-card/pending per rule 12.
 3. **Trivial work** where dispatch overhead exceeds doing it inline (one SQL update, one file read).
 4. **Exploratory/open-ended discovery** — "help me figure out what I even need to look at." See below.
 
 ## Exploratory discovery is inline-only — never offloaded
 
-The discovery/scoping phase (you don't yet know the table, query shape, or pattern) is NOT an independent sub-unit — it's the thing that DEFINES the sub-units. The executor runs a fire-and-forget chain against a FIXED plan with no channel back to you mid-chain. Filing "go figure out X" either sits stuck (plan step can't resolve to a concrete tool call) or the executor guesses a scope and silently does the wrong thing.
+The discovery/scoping phase (you don't yet know the table, query shape, or pattern) is NOT an independent sub-unit — it's the thing that DEFINES the sub-units. The executor runs a fire-and-forget chain against a FIXED plan with no channel back to you mid-chain.
 
 **The test:** before offloading, ask "do I already know the boundaries of this sub-unit (table, query shape, file, exact fix), or am I still forming the question?" Forming the question → keep inline, iterate fetch→read→refetch yourself. Boundaries known → offload. This mirrors rule 00's identical carve-out for synchronous subagents.
 
@@ -81,21 +77,6 @@ Use subagents when you need the result inline. Use Orchestrator/Executor when th
 
 Don't fire more offloaded ideas than you can reconcile. If you fire 40 ideas, you check all 40, not sample 3.
 
-## Addendum (2026-07-11) — 4 points from live investigation
-
-1. **Offloaded work is not instant.** Gate A work filed via `create_idea` (autonomous tier) runs on the executor's own cron cadence, not synchronously. When you reach Gate B, do not assume a filed idea has completed just because time has passed in your own window — always call the verifying tool (below) rather than inferring completion from elapsed wall-clock time.
-
-2. **Gate B verification must be a real tool call, not an assertion.** "I filed it, it's fine" — even if said confidently, even if the idea number is real — is NOT a reconcile pass unless `list_decisions` or `get_idea_progress` was actually called for that idea and returned status data. An agent that skips the tool call and asserts completion is committing the identical violation this gate exists to prevent, just with better prose.
-
-3. **Open item needing independent verification:** idea #17119 (efficiency_priority auto-flag gap) has not yet been independently re-verified this cycle. Treat it as an open reconcile item, not a closed one, until a future session runs `get_idea_progress(17119)` and confirms real status.
-
-4. **Staleness/drift safeguard for offloaded plans that touch files.** Before trusting a Gate A offloaded/queued plan, or before a Gate B reconcile auto-approves a decision that touches a file, verify the target file's content has not drifted since the plan was authored. This is not a new ask — a working precedent already exists and is live in production: `RubenExecutor::computeFileShasForPlan()` hashes every plan-referenced file at plan time into the `file_shas_at_plan_time` column, and `RubenExecutor::checkPlanFreshness()` re-hashes at approve/replay/reap time and diffs. It is wired into 3 call sites, all NON-DESTRUCTIVE by design (never hard-blocks, never silently overwrites):
-   - `api/ruben_executor.php::handleApprove()` — refuses approval and reports drift in the API response if any referenced file changed since plan time.
-   - `cron_ruben_autonomous.php::executeApprovedPlan()` — on detected drift, downgrades `outcome` to `rebase_required` (does not replay against stale state; next cycle re-plans against current file shas).
-   - `cron_ruben_autonomous.php::sweepOrphanedApprovals()` (Orphan Approval Reaper) — aborts orphaned approvals with a descriptive message on drift or missing snapshot, rather than blindly re-executing a stale approved plan.
-   Any NEW offload/reconcile pathway that touches files should follow this exact pattern: downgrade to `needs_verify`/`rebase_required`/supervised on drift — never hard-crash, never silently trust a stale queued plan.
-
-
 ## Cross-references
 
 - Rule 00 — force-subagent-use (SYNCHRONOUS sibling; use when you need the result back now)
@@ -103,7 +84,7 @@ Don't fire more offloaded ideas than you can reconcile. If you fire 40 ideas, yo
 - Rule 109 — every deliverable needs a disposition status (tagging format)
 - Rule 91 — every completion needs a pickup prompt (reconcile results feed Reference IDs)
 - Rule 29 — agents act on confidence tier (governs the cleanup pass — fix stuck items, don't just list them)
-- Full case law + source incidents: `Rules-archive/267-case-law.md`
+- Full case law + source incidents + addenda: `Rules-archive/267-case-law.md`
 
 ## Source
 
@@ -111,4 +92,4 @@ Don't fire more offloaded ideas than you can reconcile. If you fire 40 ideas, yo
 
 ## Last updated
 
-2026-07-10 — promoted to hardfloor + rewritten for obedience. Core gate trimmed from 9KB to <6KB; case law archived.
+2026-07-11 — compliance rewrite. Moved 2 addendums (tool-bug findings, drift safeguards) to case law to de-bloat the core gates. Added the 3-question offload test to make Gate A mechanically detectable. Condensed Gate A2 + known tool gaps into brief cross-refs. Core rule now ~5KB (under 8KB warn cap).

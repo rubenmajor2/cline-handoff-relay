@@ -48,6 +48,33 @@ The promotion trimmed the core to <6KB (under the 8KB warn / 12KB block caps), a
 
 2026-07-10 — Ruben directive in Cline: "All Cline Agents MUST leverage/use Orchestrator/Executor to speed up processing of tasks during iteration," proposed add-on "come back at the end of the task to cleanup any tasks sent to orchestrator/executor." This rule formalizes the offload-then-reconcile pattern as distinct from rule 00's synchronous subagent dispatch, and ties the "cleanup" step to the existing rule 109 disposition-tagging mechanism rather than inventing a new format.
 
+## Addendum material moved from hardfloor rule (2026-07-11 compliance rewrite)
+
+### 4 points from live investigation (2026-07-11)
+
+1. **Offloaded work is not instant.** Gate A work filed via `create_idea` (autonomous tier) runs on the executor's own cron cadence, not synchronously. When you reach Gate B, do not assume a filed idea has completed just because time has passed in your own window — always call the verifying tool rather than inferring completion from elapsed wall-clock time.
+
+2. **Gate B verification must be a real tool call, not an assertion.** "I filed it, it's fine" — even if said confidently, even if the idea number is real — is NOT a reconcile pass unless `list_decisions` or `get_idea_progress` was actually called for that idea and returned status data. An agent that skips the tool call and asserts completion is committing the identical violation this gate exists to prevent, just with better prose.
+
+3. **Open item needing independent verification:** idea #17119 (efficiency_priority auto-flag gap) has not yet been independently re-verified this cycle. Treat it as an open reconcile item, not a closed one, until a future session runs `get_idea_progress(17119)` and confirms real status.
+
+4. **Staleness/drift safeguard for offloaded plans that touch files.** Before trusting a Gate A offloaded/queued plan, or before a Gate B reconcile auto-approves a decision that touches a file, verify the target file's content has not drifted since the plan was authored. This is not a new ask — a working precedent already exists and is live in production: `RubenExecutor::computeFileShasForPlan()` hashes every plan-referenced file at plan time into the `file_shas_at_plan_time` column, and `RubenExecutor::checkPlanFreshness()` re-hashes at approve/replay/reap time and diffs. It is wired into 3 call sites, all NON-DESTRUCTIVE by design (never hard-blocks, never silently overwrites):
+   - `api/ruben_executor.php::handleApprove()` — refuses approval and reports drift in the API response if any referenced file changed since plan time.
+   - `cron_ruben_autonomous.php::executeApprovedPlan()` — on detected drift, downgrades `outcome` to `rebase_required` (does not replay against stale state; next cycle re-plans against current file shas).
+   - `cron_ruben_autonomous.php::sweepOrphanedApprovals()` (Orphan Approval Reaper) — aborts orphaned approvals with a descriptive message on drift or missing snapshot, rather than blindly re-executing a stale approved plan.
+   Any NEW offload/reconcile pathway that touches files should follow this exact pattern: downgrade to `needs_verify`/`rebase_required`/supervised on drift — never hard-crash, never silently trust a stale queued plan.
+
+### Live obedience audit findings (2026-07-11b)
+
+Ran a live test of Gate A2 this session: called `idea_action(idea_id=17122, action="approve")` — tool returned a checkmark AND a body of `{"ok": false, "error": "Invalid id or action"}` in the SAME response. The checkmark is misleading; `ok:false` is the real signal. **Never trust the checkmark/prose wrapper on an MCP tool response — always read the structured `ok`/`error` field.**
+
+Also discovered `get_idea_progress` (the tool Gate B and the 4-point addendum both prescribe for verification) currently returns `{"error": "Unknown action", "valid": [...]}` — i.e. **the verification tool itself is not wired correctly on the server side right now.** This means an agent following Gate B in good faith (calling the documented verification tool) cannot currently get a real status back for ideas via that path. Until this is fixed server-side:
+- Treat `get_idea_progress` failures with `"error":"Unknown action"` as a KNOWN TOOL GAP, not proof the idea is stuck/failed.
+- Prefer `list_decisions` or `get_activity_feed`/`list_events` (which DO return real structured data, confirmed working this session) as the Gate B verification path until `get_idea_progress` is fixed.
+- File an idea for the `get_idea_progress` action-routing bug rather than silently working around it every time (rule 29 — fix the instrument, don't just route around it, per rule 266).
+
+**Obedience gap this reveals:** Gate A2 and Gate B assume the verification tools return clean, trustworthy status. They currently do not always. Any agent using Gate A2 must read the RAW body of the tool response (not the summary checkmark) before tagging anything `[deployed]` or `[approved:autonomous]`.
+
 ## Last updated
 
-2026-07-10 — initial case-law archive. Content moved from the archive version of 267 during hardfloor promotion.
+2026-07-11 — added addendum material (4-point investigation + obedience audit) moved from hardfloor rule during compliance rewrite. Core gates in the hardfloor rule were trimmed; this archive holds the edge-case detail.

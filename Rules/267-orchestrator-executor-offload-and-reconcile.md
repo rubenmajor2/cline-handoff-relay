@@ -16,6 +16,10 @@ Permanent hardfloor rule. Workspace-scoped. Source: 2026-07-10 Ruben directive �
 
 This gate fires at a mechanically-detectable moment: the instant you catch yourself about to loop over N similar items inline, or about to do a second operation of the same type when the first's result isn't needed for the second. That is the trigger. Offload, don't serialize.
 
+### GATE A3 — Environment-blocker offload (Cline shell can't, executor's shell might)
+
+If a sub-task fails because a binary/tool isn't on PATH in Cline's non-interactive shell (`command -v brew`/`node`/etc. → not found) — **do NOT repeatedly retry the same failing command.** This is an environment mismatch, not a logic bug, and it's a valid Gate-A trigger on its own: the executor runs its own shell context (often with a full login PATH, different user, or root) and may resolve what Cline's shell cannot. Offload the blocked sub-task via `create_idea` rather than looping on `command not found`. Source: 2026-07-11 — a Cline session hit `brew`/`node` both missing from PATH mid-diagnostic; correctly offloaded to the executor instead of retrying.
+
 ### GATE A2 — Active drive-to-execution (optional, after `create_idea`)
 
 After filing, you MAY immediately drive the idea to execution instead of waiting for the executor's cron:

@@ -36,27 +36,11 @@
 
 ### ⛔ PRE-COMPLETION GATE (before attempt_completion)
 
-9. **RULE 91 PICKUP PROMPT — BINARY GATE:** Does `result` end with `═══ PICKUP PROMPT ═══`? If NO → **BROKEN. DO NOT SHIP.** Add the block.
-
-   **COPY-PASTE THIS DIVIDER (do NOT retype it — copy mechanically):**
-   ```
-   ═══════════════════════════════════════════════
-   ```
-   That is 47 characters of U+2550 (BOX DRAWINGS DOUBLE HORIZONTAL, ═). NOT ASCII equals. NOT hyphens. NOT dashes. COPY it mechanically — do not retype.
-
-   **The full required block shape (copy this template):**
-   ```
-   ═══════════════════════════════════════════════
-   PICKUP PROMPT (paste into a fresh Cline window)
-   ═══════════════════════════════════════════════
-
-   Pick up task #[real id] — [one-line topic].
-   ```
-   Both divider lines are the SAME 47-char U+2550 string. If they differ, the block is broken.
+9. **RULE 91 PICKUP PROMPT — BINARY GATE:** `result` MUST end with a 47-char U+2550 divider (COPY mechanically, do not retype: `═══════════════════════════════════════════════`), then `PICKUP PROMPT (paste into a fresh Cline window)`, then the SAME 47-char divider again, then `Pick up task #[real id] — [topic]`. If missing → BROKEN, do not ship.
 10. **RULE 29 RUBEN QUESTIONS:** Did Ruben ask a direct question? → Answer it INLINE in `result`. "I'll look into it" does not count.
-11. **RULE 29 ACT, DON'T DEFER:** Did I list anything as "open thread" that I could do myself with a tool I have? → **DO IT NOW, don't list it.** Only genuine human-policy decisions (refund amounts, regulator wording) stay open.
-12. **RULE 91 NO PLACEHOLDERS:** Any literal `#NNNN`, `#0000`, `<task_id>`, `<timestamp PT>` in result? → **BROKEN.** Substitute real values or remove.
-13. **RULE 267 RECONCILE (if you filed ideas this task):** Before `attempt_completion`, did you call `list_decisions`/`get_idea_progress` for EVERY idea # you filed to the Orchestrator? "I filed it, it's fine" is NOT a reconcile pass. A reconcile pass is a tool call returning real status. Classify each: executed/in-progress/stuck/failed. Stuck/failed → fix inline (rule 29) or re-file. Tag every filed idea with a rule-109 disposition in the result AND pickup prompt.
+11. **RULE 29 ACT, DON'T DEFER:** Did I list anything as "open thread" that I could do myself with a tool I have? → **DO IT NOW, don't list it.** Only genuine human-policy decisions stay open.
+12. **RULE 91 NO PLACEHOLDERS:** Any literal `#NNNN`, `#0000`, `<task_id>`, `<timestamp PT>` in result? → **BROKEN.** Substitute real values.
+13. **RULE 267 RECONCILE (if you filed ideas this task):** Before `attempt_completion`, call `list_decisions`/`list_ideas` for EVERY idea # filed. "I filed it, it's fine" is NOT a reconcile pass. Classify each: executed/in-progress/stuck/failed. Tag every filed idea with a disposition in result AND pickup prompt.
 
 ### ⛔ CONTEXT GATES (check token count in environment_details)
 
@@ -68,16 +52,7 @@
 
 ### ⛔ PRE-PIVOT GATE (before switching away from an MCP server or declaring it "wedged")
 
-15. **RULE 261 MCP FAILURE CLASSIFICATION:** Did an MCP tool call return empty, "No valid session ID", "result missing", or an error? → **STOP. Do NOT pivot yet. Do NOT declare "wedged."** Classify the failure into exactly one of 4 modes FIRST, then act:
-
-   | Mode | Symptom | Recovery |
-   |---|---|---|
-   | **A: Server down** | ECONNREFUSED, connection refused | Restart server. Do NOT retry same call. |
-   | **B: Session expired** | "No valid session ID", 401/403 | **Re-init connection, retry ONCE.** Server is HEALTHY — session token just expired. |
-   | **C: Transport error** | "result missing", empty body, 502 | Check NRestarts. Retry ONCE after 5s. |
-   | **D: Transient empty** | First call empty, second works | **Retry ONCE.** Was transient. Do NOT declare wedge. |
-
-   **ONE failure is NOT a wedge. TWO failures is NOT a wedge.** Run the 3-gate check (rule 258): (1) is result actually empty? (2) is it stale? (3) cross-source verify via different path (ssh, different MCP). All 3 must FAIL before declaring wedge. **"No valid session ID" = Mode B = re-init + retry, NOT a pivot.** Green in Cline settings ≠ valid session. Full rule: `clinerules_lookup(rule_id=261)`. See Issue #24 in `MCP_Troubleshooting.md` for the full RCA.
+15. **RULE 261 MCP FAILURE CLASSIFICATION:** Empty/error/"No valid session ID" from an MCP call → **STOP, do NOT declare "wedged" yet.** Classify: A=server down (ECONNREFUSED, restart don't retry), B=session expired ("No valid session ID"/401/403, re-init+retry ONCE, server is healthy), C=transport error (result missing/502, retry once after 5s), D=transient empty (retry once, don't declare wedge). ONE or TWO failures is NEVER a wedge — run the rule-258 3-gate check (empty? stale? cross-source verify?) first. Green in Cline settings ≠ valid session. Full rule: `clinerules_lookup(rule_id=261)`.
 
 ---
 
@@ -128,7 +103,7 @@
 - **Safe deploy & FPM** — R: 41,42,118,144,174
 - **SSH & WOPR access** — R: 71,77,95,136,235,245,248,249 (Artemis=emsu-operations MCP, never raw ssh; 245=verify host identity before declaring dead; 248=verify live state before declaring box/endpoint down — never trust stale canary/log; 249=MCP flapping/Cloudflare 502s → check supergateway --stateful + systemctl NRestarts FIRST, not the tunnel)
 - **Fleet serving constraints** — R: 251 (Roman CX7 TP=2 ONLY — no TP=1 on Cesar/Cato or Julia/Claudia), 252 (stale-info live-probe gate — probe serving ports before declaring any host down; never trust fleet_inventory heartbeat alone), 253 (LLM location citation discipline — live-probe via `llm_locate`, cite WOPR endpoint not box port, never declare Ray worker down for no listener), 254 (verify-before-kill on GPU boxes — ps identity + fleet_inventory role check + live-probe endpoint before ANY `kill -9`/`pkill`; 43GB VRAM by VLLM::EngineCore is normal, not a wedge), 255 (verify-then-report gate: live evidence required for material claims), 271 (verify-before-writing infra claims — no SSH to box = no claims about box; mechanical gate before writing infra state to durable surfaces)
-- **Mac-side debugging** — R: 16,20,24,25,26,27,28,34,62,63,83,100,102,104,105,106,165,181,184,185,188,191,192,195,197,201,210,222,226,234
+- **Mac-side debugging** — R: 16,20,24-28,34,62,63,83,100,102,104-106,165,181,184,185,188,191,192,195,197,201,210,222,226,234
 - **Live-probe fleet state enforcement** — R: 260 (never trust error_watchdog for fleet health, always read LLM_FLEET_STATE.md + live-probe)
 - **URL→docroot mapping** — R: 159 (emsuniversity.com/ems = /var/www/moodle/ems, NOT /var/www/emtskills/ems)
 - **Connecteam is DEAD (decommissioned 2026-05-15)** — R: 246 (never recommend CT as a config surface; Team Hub is the replacement)
@@ -139,7 +114,7 @@
 ## 🔬 Project Frankenstein & LLM Routing
 → Trigger: LLM routing question, model serving, spill ladder, frankenstein-llm, adapter, RunPod, context windows, cost
 → Fetch all: `clinerules_list_by_topic("frankenstein")`
-- **Architecture & fleet** — R: 40,44,45,51,74,75,76,84,86,87,88,89,121,122,138,139,140,141,142,146,148,149,150,151,152,153,154,155,161,189,190,196,200,204,212,215,217,219,220,221,223,227,228,229,230,231,232,236,237,250
+- **Architecture & fleet** — R: 40,44,45,51,74-76,84,86-89,121,122,138-142,146,148-155,161,189,190,196,200,204,212,215,217,219-221,223,227-232,236,237,250
 - **Bug library (diagnose FIRST)** — R: 156 + `bug_library_check_before_fix()`
 - **Frankenstein Doctor (stuck window)** — R: 158,160,239 (Step 0b: consult Federation BEFORE bug_library — #16648, #16714, #16717)
 - **Hardfloor don't-destroy** — R: 145,157 (never tear down TP=2 without permission)
@@ -228,29 +203,4 @@
 
 **When you create a new cline rule, you MUST also update this tree.** A rule not in the tree is invisible to future windows. Steps: (1) classify into a domain, (2) add rule number to the relevant `R:` line, (3) reindex MCP (`node ~/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js --reindex-only`), (4) verify emsu:// resource cross-refs if any. Placement rules of thumb: specific tool/command → Infrastructure; specific agent behavior → Agent Behavior; specific workflow → Payments; general behavior → Task Hygiene or Agent Behavior (default).
 
-**Older changelog (2026-06-22 to 2026-07-06) archived.** Key additions in that window: rules 162, 165, 170, 174, 216, 218, 233, 239, 246, 248, 250, 253, 254, 255, 258. Full details in git history. Highlights:
-- 2026-06-22 — initial tree (7 domains, 2 levels).
-- 2026-07-01 — WINDOW 4: full rebuild, deduped archive, ~100+ rule numbers added across all 8 domains.
-- 2026-07-03 — rule 250 (no hardcoded LLM statuses) + canonical Cline endpoint documented.
-- 2026-07-05 — rule 255 (verify-then-report gate).
-- 2026-07-06 — rule 258 (MCP stale/empty data truth gate, 3-gate check).
-
-2026-07-07 — updated rule 239 (Frankenstein Doctor) Step 0b: consult Frankenstein Federation before bug_library. Source: Ruben directive.
-
-2026-07-08 — added Rule 261 (MCP failure classification: 4 modes before declaring "wedge") as new MANDATORY GATE #15 (PRE-PIVOT GATE). Also added to YOLO & Failure Recovery > MCP failure classification (new sub-topic) + Agent Behavior > Self-supervision & repair. Fixed Rule 143 cross-ref formatting. Source: Issue #24 RCA — agents falsely declared "MCP is wedged" after 1-2 transient failures. Rule 261 provides 4-mode classification + 3-gate check (rule 258) before declaring wedge. Idea #16849.
-
-2026-07-10 — added Rule 263 (verify-before-claim: no stale inferences, no sycophantic agreement) to Agent Behavior > Self-supervision & repair + Task Hygiene > Completion shape. Source: Frankenstein Doctor postmortem — Cline window on frankenstein-llm (120B+LoRA) fabricated a Google Sheets import pipeline from a vestigial DB column + legacy dir, wrong student count (9 vs 5), non-existent function, and responded to Ruben's correction with sycophantic agreement. Root cause: LoRA trained on contaminated distill corpus (69 google_sheet_row + 62 google-sheets-to-mysql-migration refs). Fixes: (1) stale-ref filter in build_distill_corpus.py, (2) VERIFY-BEFORE-CLAIM block in _router_core.py steering injection, (3) distill corpus rebuilt clean, (4) this rule. LoRA retraining filed as idea #16949. Bug library: distill_lora_stale_reference_contamination_2026_07_10.
-
-2026-07-10 — added Rule 264 (The Foreman: persistent dual-window autonomous engineering pattern) to Agent Behavior > Self-supervision & repair. Source: Ruben directive — "have a different window that babysits the issues and fixes what it can continuously... use Frankenstein LLM in a cline window to drive this forward and not give up... call it 'The Foreman'." Pattern: Worker (free local Frankenstein-LLM) works nonstop, Supervisor (paid cloud GLM-5.2/Claude) checks every 30 min and course-corrects. Both windows don't close until task done or genuine error.
-
-2026-07-10 — added Rule 265 (Spatial/Analogy Thinking Protocol: when stuck, reframe and think sideways) to Agent Behavior > Self-supervision & repair + Task Hygiene > Completion shape. Source: Ruben directive — "you need to think more spatially... if you can't resolve an issue head on, what other analogous things would resolve the problem... when you get stuck or really stuck, rather than giving up." 6-step protocol: (1) reframe spatially, (2) think analogously, (3) apply the analogy, (4) acquire info until you know, (5) persevere at the precipice, (6) think in parallel. Source incident: GLM-5.2 RoCE QP hang — after 4 linear attempts failed, spatial analysis revealed root cause (same subnet on different physical cables), fix was unique /30 per cable (postal zip code analogy).
-
-2026-07-10 — added Rule 267 (Offload independent sub-work to RUBEN Orchestrator/Executor mid-task, then reconcile before completion) to Agent Behavior & Autonomy > Act vs escalate gate. Distinguishes from rule 00 (synchronous subagents): rule 267 is the ASYNC lever — file deferrable, independent sub-units to the Orchestrator (`create_idea`, autonomous tier) and continue the critical path, then run a mandatory reconciliation pass before `attempt_completion` (check every filed idea's status, fix stuck/failed ones inline, disposition-tag per rule 109). Source: Ruben directive — "All Cline Agents MUST leverage/use Orchestrator/Executor to speed up processing of tasks during iteration," with proposed add-on "come back at the end of the task to cleanup any tasks sent to orchestrator/executor."
-
-2026-07-10/11 — Fixed pre-existing rule-number collisions at 260 (2 files) and 266 (3 files) in Rules-archive. Renumbered orphan files: `260-fleet-ssh-access-reference.md` → 268, `266-check-latest-software-before-llm-deploy.md` → 269, `266-cs-agent-response-quality-bug-library.md` → 270. Canonical holders (`260-live-probe-fleet-state-enforcement.md`, `266-agent-found-wrong-fix-the-instrument.md`) unchanged. Counter bumped 267→270. Tree updated with new entries: 268 (Infrastructure > SSH & WOPR access), 269 (Frankenstein & LLM Routing > Kaison autonomous repair area), 270 (Communication & Voice). Source: Ruben directive "Yea fix all that."
-
-2026-07-10 (later) — Added matching "exploratory/open-ended discovery is inline-only" addendum to BOTH rule 00 (sync subagents) and rule 267 (async Orchestrator/Executor offload). Neither dispatch lever can drive open-ended "help me figure out what I even need to look at" work — subagents have no fetch tools to iterate on live data, and the Orchestrator/Executor runs a fixed fire-and-forget plan with no mid-chain feedback channel to redirect based on findings. Both rules now state: exploratory/scoping work stays inline and iterative (fetch→read→refetch) until it converges to a concrete bounded scope; only THEN is dispatch (sync or async) legal. Source: Ruben directive — "so then how would we modify the rule then to cover -> They don't cover 'help me figure out what I even need to look at' — that's still an inline, sequential job" — clarified to apply to rule 267, not rule 00 alone, so both got the addendum for consistency.
-
-2026-07-11 — Rule 267 compliance rewrite. Three changes for greater agent compliance: (1) Added new MANDATORY GATE "MID-TASK OFFLOAD GATE" (gate #3a) to _RULE_TREE.md — this is the structural trigger Gate A was missing; it fires when an agent is about to do 2+ similar inline operations, making the offload decision mechanically detectable instead of a judgment call. (2) Rewrote rule 267 with a concrete 3-question offload test (2+ similar ops? independent? executor can do?) replacing the vague "when you identify 2+ independent work units" trigger. (3) Moved 2 addendums (tool-bug findings, drift safeguards, ~25 lines) from the hardfloor rule to 267-case-law.md to de-bloat the core gates — the rule went from 126 lines to ~85 lines, making Gate A and Gate B more prominent. Source: Ruben directive — "i was looking for greater agent compliance and use of the rule."
-
-2026-07-11 — Added Rule 271 (verify-before-writing infra claims) as new MANDATORY GATE #6a (PRE-WRITE GATE) to _RULE_TREE.md. Also added to Infrastructure > Fleet serving constraints. Source: 2026-07-11 stale-info RCA — a Cline session wrote "Julia needs physical reboot" and "serve script does not exist" to HANDOFF_NOTES + pickup prompt + runbook WITHOUT any SSH verification. Julia was never frozen (16 days uptime, idle). Existing rules 248/252/263 say "verify before claiming" but are advisory — agents keep disregarding them because nothing mechanically blocks the write. Rule 271 closes the gap: verification is a PREREQUISITE for the write, not a recommendation. "No SSH to the box = no claims about the box." Ruben: "This needs to be bulletproof for even the simplest minded agent."
+Full dated changelog history: `Rules-archive/_RULE_TREE_CHANGELOG.md` (trimmed 2026-07-11, idea #17168, G7 compliance). 143-collision fix: CFA rule renumbered 272 (271 collided). Counter=272.

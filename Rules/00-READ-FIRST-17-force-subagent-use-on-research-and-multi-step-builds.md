@@ -122,7 +122,18 @@ Scan each subagent prompt. If it contains any of these, the dispatch is doomed �
 
 Self-check: *"Does this subagent prompt tell it to FETCH something (MCP/web/server), or to REASON over something I'm pasting in?"* If FETCH → wrong; fetch it myself first. If REASON-over-pasted-text or local-file-read/grep → correct.
 
+### Exploratory research is inline-only, never subagent-dispatched
+
+There's a phase subagents cannot help with: **when you don't yet know what you're looking for** — you're forming the question, not answering one. This is different from bounded research (rule 00's normal case), where the sources/scope are already known.
+
+If the task is "figure out what I even need to look at" — the shape is iterative: fetch → read → decide what to fetch next based on what you just read → repeat. Subagents have no fetch tools (see above), so telling one to "go figure out what's relevant" is an instant fetch-then-paste violation waiting to happen — it can't iterate on live data itself.
+
+**The test:** do you already know the bounded, fixed set of sources (specific URLs, specific files, specific query results)? If yes → fetch them yourself, paste in, dispatch subagents to synthesize/compare in parallel (the normal fetch-then-paste flow above). If no — you're still discovering what's even out there — that discovery phase MUST stay inline, sequential, in the parent window, until it converges to a concrete bounded scope. Only THEN does dispatch become legal.
+
+Same principle applies to the async Orchestrator/Executor lever (rule 267) — exploratory/open-ended discovery can't be offloaded there either, for the identical reason (no mid-chain feedback channel to redirect based on what was found).
+
 ## Self-check
+
 
 Before any non-`use_subagents` tool early in a task: is this task single-step (one lookup, one check)? If no → dispatch subagents. If halfway through `attempt_completion` on a multi-step task I never dispatched a subagent for → abandon, dispatch.
 

@@ -108,9 +108,13 @@ Every open-thread item MUST carry a filed idea number. An item without one is ei
 
 **MANUAL TAG-SCAN GATE (run before shipping — IF any idea was filed or mentioned):**
 
-1. Python one-liner: `python3 -c "import re,sys; t=sys.argv[1]; bare=re.findall(r'(?<!#)\d{4,6}(?!\s*\[)', t); print('BARE:', bare if bare else 'none')" "$(pbpaste)"`
-   This regex finds every 4-6 digit number that is NOT immediately followed by `[` — those are bare idea numbers. If ANY appear, STOP. Tag them before shipping.
-2. If you cannot run the one-liner, manually scan: find every `#NNNN` in `result`. For each: is there a `[disposition]` bracket within the same paragraph/bullet? If ANY are bare → DO NOT CALL `attempt_completion` yet. Tag them first.
+1. **PRIMARY GATE — context-scan (NO SUBPROCESS — works on all hosts, including Mac where python3/shell hang):**
+   The agent already has its `result` text in the context window. Scan it DIRECTLY:
+   - Find every `#NNNN` in `result`. For each: is there a `[disposition]` bracket within the same paragraph/bullet?
+   - If ANY `#NNNN` is bare (no `[deployed|executing|queued|blocked|proposed|rejected|superseded|deferred|approved:supervised]`) → DO NOT CALL `attempt_completion` yet. Tag them first.
+   - This is the PRIMARY gate because it requires zero subprocesses — it uses the text the agent already has in context. Python/shell subprocesses are unreliable on this host (Mac Ruben: python3, grep, awk ALL timeout — systemic FD issue, idea #17619 [deployed]).
+2. **OPTIONAL shortcut (only on hosts where python3 works):** `python3 -c "import re,sys; t=sys.argv[1]; bare=re.findall(r'(?<!#)\d{4,6}(?!\s*\[)', t); print('BARE:', bare if bare else 'none')" "$(pbpaste)"`
+   This regex finds every 4-6 digit number that is NOT immediately followed by `[` — but NEVER rely on it as the only gate. If it hangs (5s+), fall back to the context-scan above.
 3. For every tagged idea you filed or reconciled THIS session: is there a `(verified: <tool> returned ...)` parenthetical quoting the reconcile evidence? If not → run the reconcile call now. No parenthetical + this session = tag not verified.
 
 1. Does `result` end with a 47-char U+2550 divider, preceded by a `PICKUP PROMPT ...` header line, preceded by an opening 47-char divider? If no → **DO NOT CALL attempt_completion yet. Add the block first.**

@@ -40,29 +40,41 @@ Open threads to drive next:
 
 Reference IDs:
 - Ticket: <ticket_number>
-- Ideas filed: #<id1> [deployed], #<id2> [approved:autonomous]
-- Ideas closed: #<id3> [rejected], #<id4> [superseded]
+- Ideas filed: #<id1> [deployed], #<id2> [executing], #<id3> [queued]
+- Ideas closed: #<id4> [rejected], #<id5> [superseded]
+- Ideas blocked: #<id6> [blocked] — <one-line unblocker>
 - Files touched: <paths>
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66.
 ═══════════════════════════════════════════════
 ```
 
-### Disposition tags (required on EVERY idea mention)
+### Disposition tags (required on EVERY idea mention) — VERIFIED live executor state
 
-Every `#NNNN` in the pickup prompt MUST carry a disposition in brackets showing what happened to it after rule 29 was applied. Use one of:
+Every `#NNNN` in the pickup prompt MUST carry a disposition in brackets showing the idea's LIVE executor state — verified by a rule-267 GATE B reconcile tool call (`list_decisions` / `get_idea_progress`) run THIS session, not a filing-time memory. Ruben reads the tag to decide whether the thread can be closed or needs his hand. Use one of:
 
-| Tag | Meaning |
-|---|---|
-| `[deployed]` | Shipped to production this task |
-| `[approved:autonomous]` | Approved, executor will auto-implement |
-| `[approved:supervised]` | Approved, needs human review on deploy |
-| `[proposed]` | Filed but not yet approved (open thread) |
-| `[rejected]` | Closed — not a valid fix / superseded / moot |
-| `[superseded]` | Replaced by a newer idea |
-| `[deferred]` | Legit but intentionally left for later |
+**Verified live-state tags (the goal — what the executor is doing RIGHT NOW):**
 
-**Rule:** every `#NNNN` in the pickup prompt body AND the Reference IDs section gets a tag. No bare idea numbers. The disposition is the output of running the idea through rule 29's Gate 0 — what actually happened to it, not what the next window should do.
+| Tag | Meaning | Ruben reads this as |
+|---|---|---|
+| `[deployed]` | Shipped to production AND verified-executed this session | Done — thread closed |
+| `[executing]` | Executor is actively building it now (in_progress, dev stage) | Executor owns it — thread closed |
+| `[queued]` | Approved, waiting on executor cron (not yet picked up) | Will run on its own — thread closed, check back later |
+| `[blocked]` | Failed / stuck / impl_failed — needs a fix or re-file | ACT — fix inline (rule 29) or re-file |
+
+**Filing-tier tags (used when the idea is NOT yet in the executor's hands):**
+
+| Tag | Meaning | Ruben reads this as |
+|---|---|---|
+| `[proposed]` | Filed but not yet approved (no executor action yet) | ACT — approve/reject or promote to autonomous |
+| `[approved:supervised]` | Approved but human must review before deploy | Human gate — Ruben/Vicky reviews |
+| `[rejected]` | Closed — not a valid fix / superseded / moot | Thread closed — dismissed |
+| `[superseded]` | Replaced by a newer idea | Thread closed — see the successor |
+| `[deferred]` | Legit but intentionally left for later | Parked — not this cycle |
+
+**`[approved:autonomous]` is a MID-TASK-ONLY fallback.** You may use it transiently right after `idea_action(approve)` while the build pipeline spins up, but it MUST be replaced by a verified tag (`[executing]` / `[queued]` / `[deployed]` / `[blocked]`) before `attempt_completion`. Shipping `[approved:autonomous]` in a final pickup prompt is a rule-91 violation — it is ambiguous between "executor is working on it" and "it is sitting in a queue," and that ambiguity is exactly what this rule eliminates.
+
+**Rule:** every `#NNNN` in the pickup prompt body AND the Reference IDs section gets a verified tag. No bare idea numbers. The tag is the output of the rule-267 GATE B reconcile call mapped to the table above — what the executor is ACTUALLY doing, not what the next window should do.
 
 ## The two-gate procedure (execute before writing open threads)
 
@@ -93,8 +105,9 @@ Every open-thread item MUST carry a filed idea number. An item without one is ei
 1. Does `result` end with a 47-char U+2550 divider, preceded by a `PICKUP PROMPT ...` header line, preceded by an opening 47-char divider? If no → **DO NOT CALL attempt_completion yet. Add the block first.**
 2. Does the first content line after the header read `Pick up task #<numeric id> — <topic>`? If the `#<numeric id>` is missing → add the real Cline task id. (A line like `Pick up task — final-notice cleanup` with NO `#id` is a rule-91 violation.)
 3. Scan for literal `#NNNN`/`#0000`/`<...>` placeholders. If found → substitute real values.
-4. Did I file/approve/reject any idea this task? If yes → all `#NNNN` are cited in the body with disposition.
-5. Did I answer every question Ruben asked? If no → answer them inline before the pickup prompt.
+4. Did I file/approve/reject any idea this task? If yes → all `#NNNN` are cited in the body with a VERIFIED disposition tag (not `[approved:autonomous]`).
+5. For every idea I filed, did I run a rule-267 GATE B reconcile call (`list_decisions` / `get_idea_progress`) THIS session and map its return to the live-state tag? If no → run it now. `[approved:autonomous]` in a final prompt = FAIL.
+6. Did I answer every question Ruben asked? If no → answer them inline before the pickup prompt.
 
 ## Cross-refs
 - Rule 29 — act-or-defer test (Gate 0)

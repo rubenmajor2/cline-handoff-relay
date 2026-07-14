@@ -33,14 +33,25 @@ Use when: the work is autonomous-tier AND immediate execution materially speeds 
 
 **Before calling `attempt_completion`, if this task filed 1+ ideas to the Orchestrator, you MUST call `list_decisions` or `get_idea_progress` for EVERY idea # you filed.** "I filed it, it's fine" is NOT a reconcile pass. A reconcile pass is a tool call that returns real status. Skipping this gate is the same class of violation as shipping an `attempt_completion` without the rule-91 pickup prompt.
 
-Classify each filed idea: executed / in-progress / stuck / failed / still-queued.
-- Stuck or failed → fix inline now (rule 29) or re-file with corrected params. Do not leave it silently broken.
-- In-progress/queued at wrap time → tag `[approved:autonomous]` honestly. NOT "done."
-- Executed → tag `[deployed]` only if you verified it actually ran, else `[approved:autonomous]`.
+Classify each filed idea from the reconcile return, then map it VERBATIM to the rule-91 disposition tag:
 
-Every filed idea # gets a rule-109 disposition tag in the result AND the rule-91 pickup prompt Reference IDs section.
+| Reconcile return (live executor state) | Rule-91 tag | Ruben reads this as |
+|---|---|---|
+| executed + you verified it ran in prod | `[deployed]` | Done — thread closed |
+| in_progress / dev stage / build running | `[executing]` | Executor owns it — thread closed |
+| approved but not yet picked up by cron | `[queued]` | Will run on its own — thread closed, check later |
+| failed / impl_failed / stuck | `[blocked]` — name the unblocker | ACT — fix inline (rule 29) or re-file |
+| proposed / not yet approved | `[proposed]` | ACT — approve/reject or promote |
+| rejected | `[rejected]` | Thread closed — dismissed |
+| superseded by a newer idea | `[superseded]` | Thread closed — see successor |
+
+**The tag in the rule-91 pickup prompt MUST match the reconcile return.** Drift between the reconcile return and the pickup-prompt tag is a GATE B violation. If you cannot run the reconcile call (tool gap below) you may NOT fall back to `[approved:autonomous]` silently — tag it `[blocked:reconcile-unavailable]` with the reason so Ruben knows the state is unverified and the thread is NOT closeable.
+
+**`[approved:autonomous]` is banned in a final pickup prompt.** It is a mid-task-only fallback (right after `idea_action(approve)`, before the build pipeline reports back). Before `attempt_completion` it MUST be replaced by one of the verified tags above. The reason: `[approved:autonomous]` is ambiguous between `[executing]` and `[queued]`, and Ruben cannot tell from the tag whether the executor is actively working or just queued — which is the exact gap this gate closes (2026-07-13 Ruben directive, idea #17537).
 
 **Known tool gap:** `get_idea_progress` may return `{"error": "Unknown action"}` (server-side routing bug). If so, use `list_decisions` or `get_activity_feed`/`list_events` as the verification path instead. File an idea for the bug per rule 266 — don't silently work around it every time.
+
+**Ruben's closeout test (2026-07-13):** the whole point of this gate is that when Ruben reads `#17537 [executing]` in a pickup prompt, he can close the thread immediately because he knows the executor is actively working on it — no re-verification needed. If the tag were `[approved:autonomous]` he would have to open another tool to check whether anything is actually happening. The verified tag IS the verification.
 
 ## The anti-abuse gate (do NOT offload these)
 
@@ -74,8 +85,9 @@ Use subagents when you need the result inline. Use Orchestrator/Executor when th
 
 **Before `attempt_completion` (the reconcile pass — GATE B):**
 1. Did I file anything to the Orchestrator this task? If yes → did I call `list_decisions`/`get_idea_progress` for EACH (not "I filed it, it's fine")?
-2. Is every filed idea tagged with a rule-109 disposition in result AND pickup prompt?
-3. Is anything stuck/failed left unaddressed? If yes → fix now or flag `[blocked]` with the unblocker named.
+2. Is every filed idea tagged with a VERIFIED live-state disposition (`[deployed]`/`[executing]`/`[queued]`/`[blocked]`/`[proposed]`/`[rejected]`/`[superseded]`) in result AND pickup prompt — NOT `[approved:autonomous]`?
+3. Does each tag match the reconcile return (no drift)?
+4. Is anything stuck/failed left unaddressed? If yes → fix now or flag `[blocked]` with the unblocker named.
 
 ## Cap
 
@@ -95,5 +107,7 @@ Don't fire more offloaded ideas than you can reconcile. If you fire 40 ideas, yo
 2026-07-10 — Ruben directive: "All Cline Agents MUST leverage/use Orchestrator/Executor to speed up processing of tasks during iteration," + "come back at the end of the task to cleanup any tasks sent to orchestrator/executor." Promoted to hardfloor same date after obedience review found the archive version lacked a mechanically-detectable trigger and a structural reconcile gate.
 
 ## Last updated
+
+2026-07-13 — GATE B rewrite per Ruben directive (idea #17537): added the verbatim reconcile-return → rule-91-tag mapping table, banned `[approved:autonomous]` in final pickup prompts (ambiguous between executing and queued), added drift-forbidden clause + `[blocked:reconcile-unavailable]` fallback, added Ruben's closeout test. Goal: Ruben can close threads from the tag alone, no re-verification tool call needed.
 
 2026-07-11 — compliance rewrite. Moved 2 addendums (tool-bug findings, drift safeguards) to case law to de-bloat the core gates. Added the 3-question offload test to make Gate A mechanically detectable. Condensed Gate A2 + known tool gaps into brief cross-refs. Core rule now ~5KB (under 8KB warn cap).

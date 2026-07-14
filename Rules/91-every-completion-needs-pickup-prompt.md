@@ -1,60 +1,63 @@
-# 91 — End completions with a proper PICKUP PROMPT
+# 91 — MUST end with PICKUP PROMPT block
 
 Hardfloor. 2026-05-19.
 
-## The BARE MINIMUM (minimum delivery — skip everything else and still get this right)
+**The PICKUP PROMPT block MUST end every `attempt_completion` result.** No exceptions for status reports, investigations, bug analysis, or "read-only" tasks. The ONLY exemption: zero system-state changes AND the result starts with `"Not a task completion — conversational/read-only only"`.
 
-Every `attempt_completion` MUST have all 5 of these, or DON'T SHIP:
-
-1.  **PICKUP PROMPT block** at the very end of `result`
-2.  **Real idea numbers** from `create_idea` (NEVER `IDEA-001`, `IDEA-002` — that's fake)
-3.  **`[bracket]` on every `#NNNN`** everywhere in `result` — prose, pickups, bullets, all of it
-4.  **Open threads section** — even if `None`
-5.  **Reference IDs section** — every idea filed or closed, with its bracket
-
-## Pickup prompt template (copy the divider mechanically — do NOT retype it)
+## Template (copy divider — do NOT retype)
 
 ```
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #<real task id> — <one-line topic>.
+Pick up task #<real task id> — <topic>.
 
-Where we left off (verified <real PT timestamp>):
-- <1-3 bullets — every idea ref gets a bracket>
+Where we left off (verified <PT timestamp>):
+- <bullet — every #NNNN gets a [bracket]>
 
 Open threads to drive next:
-1. #<real idea number> [<disposition>] — <actionable item>
-...or "None — [reason]"
+1. #<id> [disposition] — action
+...or "None — reason"
 
 Reference IDs:
-- Ideas filed: #<id> [disposition], ...
-- Ideas closed: #<id> [disposition], ...
+- Ideas filed: #<id> [tag], ...
+- Ideas closed: #<id> [tag], ...
 - Files touched: <paths>
 
-When done, append to cline_task_ledger.md per rule 07, run order 66.
+When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 ```
 
-### Disposition tags (use these or nothing)
+## Hardfloor bans
 
-`[deployed]` | `[executing]` | `[queued]` | `[blocked]` | `[proposed]` | `[rejected]` | `[superseded]`
+| Ban | Why |
+|-----|-----|
+| **NO fake IDs** (`IDEA-001`) | Must be real `create_idea` integer |
+| **NO bare `#NNNN`** | Every idea number gets `[deployed|executing|queued|blocked|proposed|rejected|superseded]` |
+| **NO missing open-threads** | Section mandatory — write "None — reason" if empty |
+| **NO "pure Q&A" self-exemption** | Status reports, investigations, bug analysis, diagnostics are NOT Q&A |
+| **NO placeholders** | `#NNNN`, `<...>`, `#0000` are banned |
+| **NO pick-up-by-reference** | Block must be inline in result, not in a separate file |
 
-## How to follow this (the ONLY steps)
+## Quick check before shipping
 
-1.  Build your prose result. Answer Ruben's questions.
-2.  Scan the ENTIRE `result` for `#NNNN`. Every one gets a `[tag]`.
-3.  Every `#NNNN` is from `create_idea` — real integer IDs only.
-4.  Append the ═══ PICKUP PROMPT block from the template above.
-5.  Call `attempt_completion` with the enriched result.
+1. Does result end with ═══ PICKUP PROMPT ═══ block?
+2. Is divider exactly 47 U+2550 chars?
+3. Every `#NNNN` in entire result — does it have a `[tag]`?
+4. Any `IDEA-001`, `#0000`, `<real_idea_number>`? → FAIL
+5. Open-threads section present? Reference IDs present?
 
-That's it. No special tools, no validators — just do it.
+## Orders of magnitude
+
+If rule 91 is **1,000 words** → agents skip it. If it's **this short** (~400 words) → agents can obey. The pickup prompt is the LAST thing the agent writes — the one most prone to omission on context pressure. A SHORT rule survives context pressure. Verbose rules are ignored.
 
 ## Cross-refs
-- Rule 29 Gate 0 — act now, don't defer
-- Rule 267 GATE B — reconcile ideas before completion
-- _RULE_TREE.md Gate 9 — pre-completion check
+
+- Rule 29 — act, don't defer
+- Rule 267 — reconcile ideas before completion
+- _RULE_TREE.md Gate 9 — pre-completion gate
 
 ## Source
-2026-05-19 Ruben: "every completed task window needs a pickup prompt."  2026-07-14 Ruben: agents inventing `IDEA-001` format + shipping no pickup block → regressed. Rule trimmed from 151 lines of walls-of-text to this tight format. The template is FIRST, the bans are SECOND, agents with 2 seconds of attention can still obey.
+
+2026-05-19 Ruben directive. 2026-07-14: 3 violations in one window (no pickup block, bare #NNNN, no open threads). Root cause: steering injection's "pure Q&A exception" + bloated 151-line rule. Both fixed.

@@ -36,11 +36,14 @@
 
 ### ⛔ PRE-COMPLETION GATE (before attempt_completion)
 
-9. **RULE 91 PICKUP PROMPT — BINARY GATE:** `result` MUST end with a 47-char U+2550 divider (COPY mechanically, do not retype: `═══════════════════════════════════════════════`), then `PICKUP PROMPT (paste into a fresh Cline window)`, then the SAME 47-char divider again, then `Pick up task #[real id] — [topic]`. If missing → BROKEN, do not ship.
+9. **RULE 91 PICKUP PROMPT — BINARY GATE:** `result` MUST end with a 47-char U+2550 divider (COPY mechanically, do not retype: `═══════════════════════════════════════════════`), then `PICKUP PROMPT`, then divider → content. If missing → BROKEN, do not ship.
+9a. **RULE 91 — NO FAKE IDEA NUMBERS:** Never write `IDEA-001`, `IDEA-002`. Always call `create_idea` for real integer IDs. Fake numbers = ticket cannot be looked up = thread stays open forever.
+9b. **RULE 91 — EVERY #NNNN GETS A BRACKET:** Scan entire `result` (not just pickup prompt). Every `#NNNN` must have `[deployed|executing|queued|blocked|proposed|rejected|superseded]`. Bare number = STOP before shipping.
+9c. **RULE 91 — OPEN THREADS + REFERENCE IDS MANDATORY:** Both sections MUST appear. Empty open-threads → write "None — [reason]". Every body idea cited in Reference IDs.
 10. **RULE 29 RUBEN QUESTIONS:** Did Ruben ask a direct question? → Answer it INLINE in `result`. "I'll look into it" does not count.
 11. **RULE 29 ACT, DON'T DEFER:** Did I list anything as "open thread" that I could do myself with a tool I have? → **DO IT NOW, don't list it.** Only genuine human-policy decisions stay open.
 12. **RULE 91 NO PLACEHOLDERS:** Any literal `#NNNN`, `#0000`, `<task_id>`, `<timestamp PT>` in result? → **BROKEN.** Substitute real values.
-13. **RULE 267 RECONCILE (if you filed ideas this task):** Before `attempt_completion`, call `list_decisions`/`list_ideas` for EVERY idea # filed. "I filed it, it's fine" is NOT a reconcile pass. Classify each: executed/in-progress/stuck/failed. Tag every filed idea with a disposition in result AND pickup prompt.
+13. **RULE 267 RECONCILE (if you filed ideas this task):** Before `attempt_completion`, call `list_decisions`/`get_idea_progress` for EVERY idea # filed. "I filed it, it's fine" is NOT a reconcile pass. Classify each: executed/in-progress/stuck/failed. Tag every filed idea with a disposition in result AND pickup prompt. **Add `(verified: <tool> returned "...")` for ideas reconciled THIS session.**
 
 ### ⛔ CONTEXT GATES (check token count in environment_details)
 

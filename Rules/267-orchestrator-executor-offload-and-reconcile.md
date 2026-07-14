@@ -27,7 +27,7 @@ After filing, you MAY immediately drive the idea to execution instead of waiting
 1. `idea_action(idea_id, action="approve")` — promotes out of `proposed`.
 2. `idea_action(idea_id, action="implement")` — triggers the auto-build pipeline now.
 
-Use when: the work is autonomous-tier AND immediate execution materially speeds up the task. **Read the RAW `ok`/`error` field of the MCP response** — the checkmark/prose wrapper can be misleading (idea #17130 documents `ok:false` returned with a checkmark). Still human-gated tiers are never bypassed this way.
+Use when: the work is autonomous-tier AND immediate execution materially speeds up the task. **Read the RAW `ok`/`error` field of the MCP response** — the checkmark/prose wrapper can be misleading (idea #17130 [superseded] documents `ok:false` returned with a checkmark). Still human-gated tiers are never bypassed this way.
 
 ## GATE B — Reconcile gate (fires before `attempt_completion`, like rule 91)
 
@@ -47,7 +47,17 @@ Classify each filed idea from the reconcile return, then map it VERBATIM to the 
 
 **The tag in the rule-91 pickup prompt MUST match the reconcile return.** Drift between the reconcile return and the pickup-prompt tag is a GATE B violation. If you cannot run the reconcile call (tool gap below) you may NOT fall back to `[approved:autonomous]` silently — tag it `[blocked:reconcile-unavailable]` with the reason so Ruben knows the state is unverified and the thread is NOT closeable.
 
-**`[approved:autonomous]` is banned in a final pickup prompt.** It is a mid-task-only fallback (right after `idea_action(approve)`, before the build pipeline reports back). Before `attempt_completion` it MUST be replaced by one of the verified tags above. The reason: `[approved:autonomous]` is ambiguous between `[executing]` and `[queued]`, and Ruben cannot tell from the tag whether the executor is actively working or just queued — which is the exact gap this gate closes (2026-07-13 Ruben directive, idea #17537).
+### Reconcile evidence quoting (prevents fake tags — 2026-07-13 evening)
+
+Every idea reconciled this session MUST carry a `(verified: ...)` parenthetical in the pickup prompt next to its disposition tag, quoting what the reconcile tool actually returned. Format: `#17537 [rejected] (verified: decision_action returned "superseded by manual implementation")`. The parenthetical is the proof that a reconcile call actually ran and determined this state — it prevents agents from writing `[deployed]` or `[rejected]` as a guess without verifying.
+
+**The parenthetical is REQUIRED for ideas filed or reconciled this session.** For ideas carried forward from prior sessions (where the tag was produced by a prior reconcile and you are NOT re-reconciling), the parenthetical is optional but the tag still must appear.
+
+### Bare idea numbers are a self-fail
+
+If ANY field of the `result` (not just the pickup prompt block) mentions a `#NNNN` without a disposition bracket, GATE B is violated. This includes prose descriptions, "Where we left off" bullets, parentheticals, and cross-references. The rule-91 TAG-SCAN GATE is the mechanical enforcement for this. If the agent ships a bare idea number, it did not run the rule-29 pre-completion audit step 5, and the `attempt_completion` is invalid.
+
+**`[approved:autonomous]` is banned in a final pickup prompt.** It is a mid-task-only fallback (right after `idea_action(approve)`, before the build pipeline reports back). Before `attempt_completion` it MUST be replaced by one of the verified tags above. The reason: `[approved:autonomous]` is ambiguous between `[executing]` and `[queued]`, and Ruben cannot tell from the tag whether the executor is actively working or just queued — which is the exact gap this gate closes (2026-07-13 Ruben directive, idea #17537 [rejected]).
 
 **Known tool gap:** `get_idea_progress` may return `{"error": "Unknown action"}` (server-side routing bug). If so, use `list_decisions` or `get_activity_feed`/`list_events` as the verification path instead. File an idea for the bug per rule 266 — don't silently work around it every time.
 
@@ -87,7 +97,9 @@ Use subagents when you need the result inline. Use Orchestrator/Executor when th
 1. Did I file anything to the Orchestrator this task? If yes → did I call `list_decisions`/`get_idea_progress` for EACH (not "I filed it, it's fine")?
 2. Is every filed idea tagged with a VERIFIED live-state disposition (`[deployed]`/`[executing]`/`[queued]`/`[blocked]`/`[proposed]`/`[rejected]`/`[superseded]`) in result AND pickup prompt — NOT `[approved:autonomous]`?
 3. Does each tag match the reconcile return (no drift)?
-4. Is anything stuck/failed left unaddressed? If yes → fix now or flag `[blocked]` with the unblocker named.
+4. For every idea reconciled this session: is the reconcile evidence quoted in a `(verified: ...)` parenthetical next to the tag? If no → add it. If you cannot quote the return because you didn't run the reconcile call, that is itself a violation — run it now.
+5. Is anything stuck/failed left unaddressed? If yes → fix now or flag `[blocked]` with the unblocker named.
+6. **TAG-SCAN check:** does `result` contain ANY bare `#NNNN` without a disposition bracket? If yes → the reconcile pass is INVALID. Tag every bare number before shipping.
 
 ## Cap
 
@@ -98,7 +110,7 @@ Don't fire more offloaded ideas than you can reconcile. If you fire 40 ideas, yo
 - Rule 00 — force-subagent-use (SYNCHRONOUS sibling; use when you need the result back now)
 - Rule 38 — Ruben-asks = autonomous-tier minimum (filing-tier floor)
 - Rule 109 — every deliverable needs a disposition status (tagging format)
-- Rule 91 — every completion needs a pickup prompt (reconcile results feed Reference IDs)
+- Rule 91 — every completion needs a pickup prompt (reconcile results feed Reference IDs, bare-number TAG-SCAN GATE is the mechanical enforcer)
 - Rule 29 — agents act on confidence tier (governs the cleanup pass — fix stuck items, don't just list them)
 - Full case law + source incidents + addenda: `Rules-archive/267-case-law.md`
 
@@ -108,6 +120,8 @@ Don't fire more offloaded ideas than you can reconcile. If you fire 40 ideas, yo
 
 ## Last updated
 
-2026-07-13 — GATE B rewrite per Ruben directive (idea #17537): added the verbatim reconcile-return → rule-91-tag mapping table, banned `[approved:autonomous]` in final pickup prompts (ambiguous between executing and queued), added drift-forbidden clause + `[blocked:reconcile-unavailable]` fallback, added Ruben's closeout test. Goal: Ruben can close threads from the tag alone, no re-verification tool call needed.
+2026-07-13 (2nd pass) — Added reconcile evidence quoting subsection (prevents fake tags by requiring `(verified: ...)` parenthetical next to the disposition tag). Added bare-number=self-fail clause (any bare `#NNNN` in `result` invalidates GATE B). Added TAG-SCAN self-check item 6. Added cross-ref to rule 91 TAG-SCAN GATE. Tagged all idea references in the rule body with disposition brackets per rule-91. Source incident: this session's own first attempt shipped "idea #17537" bare in prose, which is exactly what these new clauses prevent.
+
+2026-07-13 — GATE B rewrite per Ruben directive (idea #17537 [rejected]): added the verbatim reconcile-return → rule-91-tag mapping table, banned `[approved:autonomous]` in final pickup prompts (ambiguous between executing and queued), added drift-forbidden clause + `[blocked:reconcile-unavailable]` fallback, added Ruben's closeout test. Goal: Ruben can close threads from the tag alone, no re-verification tool call needed.
 
 2026-07-11 — compliance rewrite. Moved 2 addendums (tool-bug findings, drift safeguards) to case law to de-bloat the core gates. Added the 3-question offload test to make Gate A mechanically detectable. Condensed Gate A2 + known tool gaps into brief cross-refs. Core rule now ~5KB (under 8KB warn cap).

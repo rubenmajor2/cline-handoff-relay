@@ -45,6 +45,7 @@ Before EVERY `attempt_completion` on fleet/llm/orchestrator/multi-system tasks, 
 3. All "filed at proposed" ideas promoted to autonomous tier per rule 38?
 4. All "in flight" items verified picked up (not snoozed) — via a rule-267 GATE B reconcile call (`list_decisions` / `get_idea_progress`) returning the LIVE executor state, NOT a filing-time memory?
 5. **Every filed idea's disposition tag in the rule-91 pickup prompt reflects the verified live executor state** (deployed / executing / queued / blocked) — NOT the filing action? `[approved:autonomous]` in a final prompt = audit FAIL (ambiguous between "executing" and "queued").
+5b. **TAG-SCAN audit:** does the ENTIRE `result` (not just the pickup prompt block) contain ANY bare `#NNNN` without a disposition bracket? If yes → audit FAIL — the agent shipped a raw idea number Ruben cannot interpret. Tag every bare number before shipping. The rule-91 Python one-liner `re.findall(r'(?<!#)\d{4,6}(?!\s*\[)', t)` catches these mechanically — run it before `attempt_completion`. A bare `#17537` in a "Where we left off" prose paragraph is exactly this violation.
 6. Config changes verified to change PRODUCTION behavior (re-run failing case end-to-end, not grep)?
 7. Low-call / decorative findings traced to WHY?
 8. Dollar figures checked against ≥7-day trend?

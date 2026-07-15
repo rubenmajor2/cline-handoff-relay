@@ -121,6 +121,7 @@
 - **Bug library (diagnose FIRST)** — R: 156 + `bug_library_check_before_fix()`
 - **Frankenstein Doctor (stuck window)** — R: 158,160,239 (Step 0b: consult Federation BEFORE bug_library — #16648, #16714, #16717)
 - **Hardfloor don't-destroy** — R: 145,157 (never tear down TP=2 without permission)
+- **GLM-5.2 Hexarchy PP=6 ring membership** — R: 273 (6 nodes: Cato/Aug/Pompey/Marcus/Tib/Cesar; Julia/Claudia NOT in ring; PP=6 ONLY never PP=5/PP=4)
 - **Doorman output-quality gate** — R: 256 (streaming output validation + XML translation; Doorman = health + output quality, not just health)
 - **The show must go on** — R: 257 (Doorman keeps bad LLMs out before they reach Cline; prose-no-tools gate, empty-content gate, capability gate)
 - **Kaison autonomous repair** — R: 147,233

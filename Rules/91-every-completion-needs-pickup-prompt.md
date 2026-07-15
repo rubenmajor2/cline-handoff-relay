@@ -35,6 +35,7 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 |-----|-----|
 | **NO fake IDs** (`IDEA-001`) | Must be real `create_idea` integer |
 | **NO bare `#NNNN`** | Every idea number gets `[deployed|executing|queued|blocked|proposed|rejected|superseded]` |
+| **NO unfiled open threads** | Every open-thread item MUST cite a real filed idea `#NNNN [tag]`, OR be explicitly marked `(human-only decision — no idea)`. A thread with no idea number is undone work: file it via `create_idea` BEFORE shipping (2026-07-15 violation: 5 open threads shipped with zero filed ideas — the bare-number scan passed trivially because no numbers existed) |
 | **NO missing open-threads** | Section mandatory — write "None — reason" if empty |
 | **NO "pure Q&A" self-exemption** | Status reports, investigations, bug analysis, diagnostics are NOT Q&A |
 | **NO placeholders** | `#NNNN`, `<...>`, `#0000` are banned |
@@ -47,6 +48,7 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 3. Every `#NNNN` in entire result — does it have a `[tag]`?
 4. Any `IDEA-001`, `#0000`, `<real_idea_number>`? → FAIL
 5. Open-threads section present? Reference IDs present?
+6. Does EVERY open-thread item have a filed idea `#NNNN [tag]` or `(human-only decision — no idea)` marker? If any item has neither → STOP, call `create_idea` first
 
 ## Orders of magnitude
 

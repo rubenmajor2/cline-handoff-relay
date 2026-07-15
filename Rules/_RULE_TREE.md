@@ -112,6 +112,7 @@
 - **Connecteam is DEAD (decommissioned 2026-05-15)** — R: 246 (never recommend CT as a config surface; Team Hub is the replacement)
 - **Fleet SSH access reference** — R: 268 (canonical SSH matrix, ports, IPs, passwords, diagnostic decision tree — never guess SSH paths)
 - **Parallel distributed file transfer** — R: 274 (multi-node rsync, tar pipes, xargs -P, nc pipe — 4-5x faster than single rsync for bulk data)
+- **System-wide parallelism mandate** — R: 275 (ALL AI agents, tools, data ops MUST use parallel streams — 3-question test before building ANY new agent/tool; complete inventory of 31 parallelism targets)
 
 ---
 

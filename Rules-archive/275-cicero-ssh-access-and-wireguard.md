@@ -28,15 +28,31 @@ Symptoms:
 - WOPR: `ssh rubenmajor@192.168.1.120` → "Connection timed out" (Cicero firewall blocks non-WG SSH from WOPR's subnet)
 - Mac: `ssh rubenmajor@192.168.1.120` → asks for password (key not authorized) or works if key was previously copied
 
+**MOST COMMON CAUSE: Stale WOPR endpoint IP in Cicero's wg0.conf.** WOPR's public IP changes periodically (Comcast dynamic). Cicero's WG config hardcodes the endpoint IP. When WOPR's IP changes, the WG tunnel dies and stays dead until Cicero's config is updated.
+
 ## Fix Procedure
+
+### Step 1: Check if WOPR's IP changed (the #1 cause)
+
+```bash
+# On WOPR, get current public IP:
+curl -s ifconfig.me
+
+# On Cicero, check what IP is in the WG config:
+grep Endpoint /opt/homebrew/etc/wireguard/wg0.conf
+
+# If they DON'T MATCH, update Cicero's config:
+sudo sed -i '' 's/OLD_IP/NEW_IP/' /opt/homebrew/etc/wireguard/wg0.conf
+sudo wg-quick down wg0
+sudo wg-quick up wg0
+sudo wg show  # look for "latest handshake"
+```
+
+### Step 2: If IP is correct but still no handshake
 
 1. **From Ruben's Mac** (192.168.1.178, same LAN as Cicero):
    ```bash
-   # If key not yet authorized (first time):
-   ssh-copy-id -i ~/.ssh/id_ed25519.pub rubenmajor@192.168.1.120
-   
-   # Then SSH in and restart WireGuard:
-   ssh rubenmajor@192.168.1.120 'sudo wg-quick up wg0'
+   ssh rubenmajor@192.168.1.120 'sudo wg-quick down wg0; sudo wg-quick up wg0; sudo wg show'
    ```
 
 2. **Verify from WOPR:**
@@ -50,6 +66,10 @@ Symptoms:
    ```bash
    ssh -i /home/emsuserver/.ssh/id_ed25519 rubenmajor@10.100.0.12 'launchctl list | grep cicero; ps aux | grep mlx | grep -v grep'
    ```
+
+### Step 3: Durable fix for stale IP (idea #17738)
+
+The durable fix is to use a DDNS hostname (e.g. `wopr-wg.emsuniversity.com`) in Cicero's WG config instead of a hardcoded IP. This way when WOPR's IP changes, the DNS record updates and WG automatically reconnects. This is part of idea #17738 (Cicero hardening).
 
 ## Why Cline Can't Auto-Fix This
 

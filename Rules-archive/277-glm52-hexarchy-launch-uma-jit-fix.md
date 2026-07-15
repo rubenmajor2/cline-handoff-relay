@@ -7,13 +7,14 @@ Slug: `glm52-hexarchy-launch-uma-jit-fix`
 **Before launching GLM-5.2 PP=6 on ANY Hexarchy node, ALL of the following MUST be true. Violating ANY of these causes SSH lockout requiring physical reboot.**
 
 1. `VLLM_ENGINE_READY_TIMEOUT_S=1800` MUST be set as a Docker env var (`-e`). Default is 600s (10 min). Cold-start FlashInfer JIT compilation of ~85 sm_121a CUTLASS kernels for 379GB MoE EXCEEDS 600s. Container exits silently. (GitHub vllm#48031)
-2. `gpu_memory_utilization` MUST be <= 0.50 on GB10 UMA nodes. GB10 is Unified Memory Architecture — CPU and GPU share physical RAM. Values > 0.65 starve OS/sshd. (GitHub vllm#48140)
-3. `--oom-kill-disable=true` MUST be on the Docker run command.
-4. sshd MUST be OOM-protected: `echo "-1000" > /proc/$(pgrep -x sshd)/oom_score_adj`
-5. `--restart=no` MUST be set (no restart policy — prevents OOM loops).
-6. NO `--rm` flag (keep containers after exit so logs are readable).
-7. Page cache MUST be dropped before launch: `echo 1 > /proc/sys/vm/drop_caches`
-8. ALL old containers MUST be killed before launch (`docker rm -f vllm_slot`).
+2. `gpu_memory_utilization=0.82` — PROVEN value from v9-fallback (102 tok/s). Do NOT lower it. The UMA OOM theory (#1754) was WRONG — Docker `--memory` limits added in v16-v20 were the actual cause of the freezes.
+3. NO Docker `--memory` limit, NO `--oom-kill-disable`, NO `--memory-swappiness`. These "safety" features (v16-v20) CAUSED the freezes. The v9-fallback script had NONE of these and worked perfectly.
+4. NO `--enforce-eager` — not needed with proven NCCL settings.
+5. NCCL_SOCKET_IFNAME must be 3-interface: `enp1s0f0np0,enp1s0f1np1,enP7s7` (NOT just `enP7s7`).
+6. NCCL_NET_CHANNEL_COUNT=4 (NOT 2), NCCL_MIN_NCHANNELS=4, NCCL_TIMEOUT=1200 (NOT 3600).
+7. Use `nohup` + `sleep infinity` pattern to keep container alive.
+8. Use `bash -lc` (login shell, NOT `bash -c`).
+9. ALL old containers MUST be killed before launch (`docker rm -f vllm_slot`).
 
 ## The canonical launch script
 

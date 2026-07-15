@@ -43,16 +43,20 @@ Before EVERY `attempt_completion` on fleet/llm/orchestrator/multi-system tasks, 
 1. Prior handoff claims checked against live state?
 2. Rule violations from this/ prior chain surfaced (not buried)?
 3. All "filed at proposed" ideas promoted to autonomous tier per rule 38?
-4. All "in flight" items verified picked up (not snoozed)?
-5. Config changes verified to change PRODUCTION behavior (re-run failing case end-to-end, not grep)?
-6. Low-call / decorative findings traced to WHY?
-7. Dollar figures checked against ≥7-day trend?
+4. All "in flight" items verified picked up (not snoozed) — via a rule-267 GATE B reconcile call (`list_decisions` / `get_idea_progress`) returning the LIVE executor state, NOT a filing-time memory?
+5. **Every filed idea's disposition tag in the rule-91 pickup prompt reflects the verified live executor state** (deployed / executing / queued / blocked) — NOT the filing action? `[approved:autonomous]` in a final prompt = audit FAIL (ambiguous between "executing" and "queued").
+5b. **TAG-SCAN audit:** does the ENTIRE `result` (not just the pickup prompt block) contain ANY bare `#NNNN` without a disposition bracket? If yes → audit FAIL — the agent shipped a raw idea number Ruben cannot interpret. Tag every bare number before shipping. The rule-91 context-scan (primary gate — scan result text directly in context, no subprocess) catches these mechanically — run it before `attempt_completion`. A bare `#17537` in a "Where we left off" prose paragraph is exactly this violation. Python/grep/awk subprocesses are unreliable on this host and should NOT be the primary check (systemic FD issue, idea #17619 [deployed]).
+6. Config changes verified to change PRODUCTION behavior (re-run failing case end-to-end, not grep)?
+7. Low-call / decorative findings traced to WHY?
+8. Dollar figures checked against ≥7-day trend?
 
 If thinking "I'll mention this and Ruben decides" → rule-29 violation. The agent acts, then mentions. Ruben gets a STATUS report, not a decision queue.
 
 ## Pickup-prompt-as-decision-queue is forbidden
 
 The rule-91 PICKUP PROMPT is NOT a parking lot. If an "open thread" item is a reversible action the agent has tools for → DO IT, don't list it. Only list genuine human-policy decisions (refund amount, regulator wording) or IMMINENT-budget-deferred work.
+
+**Ambiguous-disposition tags are also forbidden.** Ruben reads the tag to decide whether to close the thread or act. A tag like `[approved:autonomous]` is ambiguous between "the executor is building it right now" and "it is sitting in a queue" — both produce the same filing action but need opposite responses from Ruben. The reconcile call (rule 267 GATE B) returns the live state that disambiguates them; the rule-91 tag must carry that verified state. If you cannot map the reconcile return to a verified tag, the thread is NOT closeable — act on it (rule 29) or re-file.
 
 ## Alternative-path discipline (failed access = try next path, never ask)
 

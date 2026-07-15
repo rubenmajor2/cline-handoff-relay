@@ -1,4 +1,4 @@
-# 266 — Check latest software/patches BEFORE any multi-node LLM deploy
+# 269 — Check latest software/patches BEFORE any multi-node LLM deploy
 
 Permanent rule. Workspace-scoped. Source: 2026-07-10 Ruben directive — "Make a cline rule in LLM training to check for the latest software."
 

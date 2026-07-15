@@ -1,4 +1,4 @@
-# 266 -- CS-facing agent response-quality bug library: consult before recycling wrong replies
+# 270 -- CS-facing agent response-quality bug library: consult before recycling wrong replies
 
 Source: 2026-07-10 Ruben directive: "Customer Facing Agents -- our Email AI, To AI, chat widget AI, SMS AI, Vapi Customer Service AI -- I had mentioned making this a rule as well and I want it to be a rule." Idea #16975.
 

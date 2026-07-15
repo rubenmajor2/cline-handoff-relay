@@ -94,6 +94,7 @@ HARDFLOOR_SLUGS=(
     "143-prose-loop-circuit-breaker"
     "144-no-write-to-file-on-server-paths"
     "259-cline-tasks-stay-in-cline-not-chat55"
+    "267-orchestrator-executor-offload-and-reconcile"
 )
 
 # --- G5 hardfloor (runs first; immediate block) --------------------------

@@ -23,6 +23,13 @@
  * handshakes + interleaved requests on one long-lived connection. So: one
  * child per server, ZERO per-session forks, ZERO leak, state preserved.
  *
+ * AUTO-INITIALIZE (added 2026-07-14)
+ * ----------------------------------
+ * After spawning the child, the bridge sends an `initialize` request to warm
+ * up the child before accepting any forwarded requests. This prevents the race
+ * condition where a `tools/call` arrives before the child has registered its
+ * tools, which caused intermittent `-32601: Unknown tool` errors.
+ *
  * Client request ids are namespaced to an internal monotonic id before going
  * to the child, then translated back, so two Cline windows that both use id=1
  * never collide on the shared pipe.
@@ -52,6 +59,7 @@ const childArgv = CHILD_ARGS.length ? CHILD_ARGS.split(/\s+/) : [];
 let child = null;
 let childBuf = "";
 let internalSeq = 1;
+let childReady = false; // becomes true after initialize handshake completes
 // internalId -> { resolve, timer }   (only for requests that carry an id)
 const pending = new Map();
 
@@ -61,6 +69,7 @@ function log(msg) {
 
 function startChild() {
   log(`spawning shared child: ${CHILD_BIN} ${childArgv.join(" ")}`);
+  childReady = false;
   child = spawn(CHILD_BIN, childArgv, { stdio: ["pipe", "pipe", "pipe"] });
 
   child.stdout.on("data", (d) => {
@@ -92,12 +101,66 @@ function startChild() {
 
   child.on("exit", (code, sig) => {
     log(`child exited (code=${code} sig=${sig}); failing ${pending.size} pending, respawning in 1s`);
+    childReady = false;
     for (const [, p] of pending) { clearTimeout(p.timer); p.resolve(null); }
     pending.clear();
     childBuf = "";
     setTimeout(startChild, 1000);
   });
+
+  // Auto-initialize the child so it's ready to accept tools/call requests
+  // before any client request arrives. This prevents the race condition where
+  // a tools/call arrives before the child has registered its tools.
+  initializeChild();
 }
+
+/**
+ * Send an initialize request to the child MCP server and wait for it to
+ * respond. Sets childReady=true on success.
+ */
+async function initializeChild() {
+  const initId = `init-${internalSeq++}`;
+  const initRequest = {
+    jsonrpc: "2.0",
+    id: initId,
+    method: "initialize",
+    params: {
+      protocolVersion: "2024-11-05",
+      capabilities: {},
+      clientInfo: { name: "mcp-http-bridge", version: "1.0.0" },
+    },
+  };
+
+  const timer = setTimeout(() => {
+    if (pending.has(initId)) {
+      pending.delete(initId);
+      log("child initialize TIMEOUT — will proceed anyway");
+    }
+  }, 10000);
+
+  pending.set(initId, {
+    timer,
+    resolve: (childMsg) => {
+      if (childMsg && childMsg.result) {
+        log("child initialized successfully");
+        childReady = true;
+        // Send initialized notification (required by MCP protocol)
+        childWrite({ jsonrpc: "2.0", method: "notifications/initialized" });
+      } else {
+        log("child initialize failed — will proceed anyway (child may still work)");
+        childReady = true; // proceed anyway — some servers don't require init
+      }
+    },
+  });
+
+  if (!childWrite(initRequest)) {
+    clearTimeout(timer);
+    pending.delete(initId);
+    log("child initialize write failed — will proceed anyway");
+    childReady = true;
+  }
+}
+
 startChild();
 
 function childWrite(obj) {
@@ -107,32 +170,51 @@ function childWrite(obj) {
 
 // Forward a single JSON-RPC message. Requests (with id) resolve with the child
 // response; notifications (no id) resolve immediately after writing.
+// If the child is not yet ready, requests are held in a queue until initialize
+// completes (or times out).
 function forward(msg) {
   return new Promise((resolve) => {
     const hasId = msg.id !== undefined && msg.id !== null;
     if (!hasId) { childWrite(msg); return resolve(null); }
-    const internalId = `b${internalSeq++}`;
-    const originalId = msg.id;
-    const out = { ...msg, id: internalId };
-    const timer = setTimeout(() => {
-      if (pending.has(internalId)) {
-        pending.delete(internalId);
-        resolve({ jsonrpc: "2.0", id: originalId, error: { code: -32001, message: "child response timeout" } });
-      }
-    }, 24000);
-    pending.set(internalId, {
-      timer,
-      resolve: (childMsg) => {
-        if (!childMsg) return resolve({ jsonrpc: "2.0", id: originalId, error: { code: -32002, message: "child unavailable" } });
-        resolve({ ...childMsg, id: originalId }); // translate id back
-      },
-    });
-    if (!childWrite(out)) {
-      clearTimeout(timer);
-      pending.delete(internalId);
-      resolve({ jsonrpc: "2.0", id: originalId, error: { code: -32003, message: "child write failed" } });
+
+    // If child is not ready yet, wait briefly (up to 5s) for it to initialize
+    if (!childReady) {
+      const waitStart = Date.now();
+      const waitTimer = setInterval(() => {
+        if (childReady || Date.now() - waitStart > 5000) {
+          clearInterval(waitTimer);
+          doForward(msg, resolve);
+        }
+      }, 50);
+      return;
     }
+
+    doForward(msg, resolve);
   });
+}
+
+function doForward(msg, resolve) {
+  const internalId = `b${internalSeq++}`;
+  const originalId = msg.id;
+  const out = { ...msg, id: internalId };
+  const timer = setTimeout(() => {
+    if (pending.has(internalId)) {
+      pending.delete(internalId);
+      resolve({ jsonrpc: "2.0", id: originalId, error: { code: -32001, message: "child response timeout" } });
+    }
+  }, 24000);
+  pending.set(internalId, {
+    timer,
+    resolve: (childMsg) => {
+      if (!childMsg) return resolve({ jsonrpc: "2.0", id: originalId, error: { code: -32002, message: "child unavailable" } });
+      resolve({ ...childMsg, id: originalId }); // translate id back
+    },
+  });
+  if (!childWrite(out)) {
+    clearTimeout(timer);
+    pending.delete(internalId);
+    resolve({ jsonrpc: "2.0", id: originalId, error: { code: -32003, message: "child write failed" } });
+  }
 }
 
 // ── HTTP (stateless StreamableHTTP-compatible) ─────────────────────────────
@@ -140,7 +222,14 @@ const app = express();
 app.use(express.json({ limit: "8mb" }));
 
 app.get("/health", (_req, res) => {
-  res.json({ ok: true, name: NAME, transport: "shared-child-bridge", child_alive: !!(child && !child.killed), pending: pending.size });
+  res.json({
+    ok: true,
+    name: NAME,
+    transport: "shared-child-bridge",
+    child_alive: !!(child && !child.killed),
+    child_ready: childReady,
+    pending: pending.size,
+  });
 });
 
 // Cline's streamableHttp client POSTs one JSON-RPC message per request and

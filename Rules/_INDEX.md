@@ -2,7 +2,7 @@
 
 This file is the fail-safe TOC for the hardfloor rules + how to query the rest.
 
-**Layout:** the 10 hardfloor rules + `99-yolo-prevention-learned` (auto-generated meta) live in `~/Documents/Cline/Rules/` (auto-loaded every task). All other rules (~220+) live in `~/Documents/Cline/Rules-archive/` and are queryable on demand via the `clinerules` MCP server. (Counts verified 2026-07-02 — rule 99 added to META_FILES, audit cron + fswatch lint enforcement created, rule 245 collision resolved by renumbering burst rule to 247.)
+**Layout:** the 12 hardfloor rules + `99-yolo-prevention-learned` (auto-generated meta) live in `~/Documents/Cline/Rules/` (auto-loaded every task). All other rules (~220+) live in `~/Documents/Cline/Rules-archive/` and are queryable on demand via the `clinerules` MCP server. (Counts verified 2026-07-02 — rule 99 added to META_FILES, audit cron + fswatch lint enforcement created, rule 245 collision resolved by renumbering burst rule to 247.)
 
 ## Precedence — how to resolve two rules that seem to conflict
 
@@ -25,7 +25,7 @@ If after this order it's still ambiguous, that's a genuine rule defect: act on t
 
 ## Hard-floor rules (always in system prompt — ★)
 
-These 10 rules govern pre-first-tool-call behavior and on-every-turn safety. Rules 29, 41, and 91 were trimmed 2026-06-25 (case law + addenda archived to `Rules-archive/29-case-law.md` + `41-addenda.md`). Voice rules 01+02 restored to hardfloor per Ruben directive. All other rules are one `clinerules_lookup(rule_id=N)` away via the tree.
+These 12 rules govern pre-first-tool-call behavior and on-every-turn safety. Rules 29, 41, and 91 were trimmed 2026-06-25 (case law + addenda archived to `Rules-archive/29-case-law.md` + `41-addenda.md`). Voice rules 01+02 restored to hardfloor per Ruben directive. All other rules are one `clinerules_lookup(rule_id=N)` away via the tree.
 
 **`99-yolo-prevention-learned`** is NOT a hardfloor rule — it is an **auto-generated meta file** (regenerated every 30 min by `~/Documents/Cline/yolo_learner/write_rule.py` from the YOLO-trips database). It is always-loaded because the per-class failure playbook must be visible in every window (rule 99's whole purpose is pre-empting the exact `fail > fail > fail` triples that kill tasks). It is listed in `META_FILES` in `.pre-write-lint.sh` so G6 does not flag it. Size-capped at 20KB like the other meta files.
 
@@ -41,6 +41,8 @@ These 10 rules govern pre-first-tool-call behavior and on-every-turn safety. Rul
 | 120 ★ | context-is-not-an-excuse | 4K | Never shortcut due to context |
 | 143 ★ | prose-loop-circuit-breaker | 5K | Consecutive no-tool-use recovery |
 | 144 ★ | no-write-to-file-on-server-paths | 5K | Pre-write server-path gate |
+| 259 ★ | cline-tasks-stay-in-cline-not-chat55 | 4K | No spillover to group chat |
+| 267 ★ | orchestrator-executor-offload-and-reconcile | 6K | Offload gate + reconcile-before-completion gate |
 
 All other rules (including voice/persona, deploy safety, LLM routing, Frankenstein Doctor, payment handling, etc.) live in the archive and are reachable via the `_RULE_TREE.md` tripwire system — one `clinerules_lookup(rule_id=N)` or `clinerules_list_by_topic(topic="...")` call away.
 
@@ -71,7 +73,7 @@ Common fetch commands:
 
 | Constraint | Limit | Enforced by |
 |---|---|---|
-| Hardfloor rules in `Rules/` | 10 (currently) + 4 meta = 14 files max | G6 gate (block) + nightly audit (alert) |
+| Hardfloor rules in `Rules/` | 12 (currently) + 4 meta = 16 files max | G6 gate (block) + nightly audit (alert) |
 | Single hardfloor rule size | 8KB warn / **12KB hard block** | G2 (warn) + **G7 (block)** + nightly audit |
 | Meta file size (`_INDEX`, `_RULE_TREE`, `EXECUTE_ORDER_66`, `99-yolo-prevention-learned`) | 16KB warn / **20KB hard block** | G7 (block) + nightly audit |
 | Total `Rules/` directory | 180KB warn / **250KB alert** | Nightly audit |

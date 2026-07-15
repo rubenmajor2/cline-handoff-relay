@@ -29,6 +29,9 @@ Cline/Executor → LiteLLM (config.yaml deployments) → router_hook.py (Federat
 3. `hooks/tools.py` checks adapter upstream health BEFORE routing — fast-spills when all dead
 4. Canary health check requires `decode_live=True` OR `tok_s>0` (not just `healthy` flag)
 5. `frankenstein-llm` with tools → `tools` lane (NOT `glm52` or `frankenstein_120b`)
+6. Local adapter `request_timeout` MUST be <= 45s (Cloudflare kills at 100s)
+7. Adapter `FRANK_SLO_TOTAL_INTERACTIVE` MUST be <= 40s (must return 503 before LiteLLM timeout)
+8. DeepSeek cloud fallback deployments MUST exist for all frankenstein-* model_names
 
 ## Cross-references
 
@@ -38,7 +41,7 @@ Cline/Executor → LiteLLM (config.yaml deployments) → router_hook.py (Federat
 - Rule 156 — Bug library first (mandatory)
 - Rule 142 — Graceful degradation (no dead-ends)
 - Runbook: `/var/www/emtskills/docs/FRANKENSTEIN_FEDERATION_RUNBOOK.md`
-- Bug library incidents: #1710 (524 all upstreams dead), #1711 (glm52 bypasses 120B), #1712 (no cloud fallback), #1713 (tools hook no health check)
+- Bug library incidents: #1710 (524 all upstreams dead), #1711 (glm52 bypasses 120B), #1712 (no cloud fallback), #1713 (tools hook no health check), #1714 (timeout too long causes 524)
 - MCP tools: `frankenstein_tier_health`, `frankenstein_registry`, `frankenstein_host_probe`, `frankenstein_verify_routing`
 
 ## Source incident

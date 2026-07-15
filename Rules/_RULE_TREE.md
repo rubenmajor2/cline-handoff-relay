@@ -121,6 +121,7 @@
 → Fetch all: `clinerules_list_by_topic("frankenstein")`
 - **Architecture & fleet** — R: 40,44,45,51,74-76,84,86-89,121,122,138-142,146,148-155,161,189,190,196,200,204,212,215,217,219-221,223,227-232,236,237,250
 - **Bug library (diagnose FIRST)** — R: 156 + `bug_library_check_before_fix()`
+- **Federation/Doorman runbook** — R: 276 (consult runbook + bug library BEFORE diagnosing routing; 3-layer architecture, key invariants, diagnostic commands)
 - **Frankenstein Doctor (stuck window)** — R: 158,160,239 (Step 0b: consult Federation BEFORE bug_library — #16648, #16714, #16717)
 - **Hardfloor don't-destroy** — R: 145,157 (never tear down TP=2 without permission)
 - **GLM-5.2 Hexarchy PP=6 ring membership** — R: 273 (6 nodes: Cato/Aug/Pompey/Marcus/Tib/Cesar; Julia/Claudia NOT in ring; PP=6 ONLY never PP=5/PP=4)

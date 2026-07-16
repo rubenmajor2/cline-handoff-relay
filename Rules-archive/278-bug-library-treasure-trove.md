@@ -18,6 +18,15 @@ Failed ideas, rejected approaches, and resolved incidents are NOT waste. They ar
 
 5. **Every failure has a lesson.** The lesson may be "this path doesn't work" (eliminating a hypothesis), "this path works but needs a different parameter" (narrowing), or "this path reveals a deeper architecture issue" (insight). All three are treasure.
 
+## For less-sophisticated LLMs/agents: the plain-text digest
+
+Small models (7B/14B) and simple agents cannot reliably compose SQL or call the bug-library MCP. For them there is a pre-chewed plain-markdown digest, regenerated every 30 minutes by cron on WOPR:
+
+- **Path:** `/var/www/emtskills/docs/BUG_LIBRARY_DIGEST.md` (read with one file read, no SQL, no MCP)
+- **Contents:** ACTIVE ISSUES (open/investigating — do not re-derive these) + TOP PROVEN REPAIRS (resolved, most-seen first — apply the FIX line verbatim)
+- **Generator:** `/usr/local/bin/gen_bug_library_digest.sh` (cron `*/30`)
+- **Usage rule for ANY agent:** before debugging an LLM/fleet symptom, read the digest and keyword-scan it. If a matching problem_key or symptom is found, apply the listed FIX. Only fall back to SQL/MCP for the full record (`... WHERE id=<ID>`).
+
 ## The inventor's mindset
 
 Thomas Edison's perspective on the light bulb applies directly: "I have not failed. I've just found 10,000 ways that won't work." Each entry in the bug library is one of those 10,000 ways. The agent that consults the library stands on the shoulders of every prior failure and succeeds faster.

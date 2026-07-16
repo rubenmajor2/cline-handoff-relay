@@ -78,3 +78,16 @@ Also discovered `get_idea_progress` (the tool Gate B and the 4-point addendum bo
 ## Last updated
 
 2026-07-11 — added addendum material (4-point investigation + obedience audit) moved from hardfloor rule during compliance rewrite. Core gates in the hardfloor rule were trimmed; this archive holds the edge-case detail.
+
+## 2026-07-16 addendum — GATE A4: blocking poll-sleeps are a rule-267 violation
+
+Source incident: 2026-07-16 10:12 — while waiting on a GLM ring relaunch, the agent issued repeated `execute_command` calls of the shape `sleep 120; tail log` / `sleep 240; ...`. Each blocked the window ~30s (terminal timeout), produced no work, and did what the already-running watchers (medic/supervisor/WOPR cron) were built to do. Ruben: "is that you sleeping or just a command? shouldn't you be leveraging rule 267?"
+
+**The bright-line rule:** NEVER issue a blocking `sleep N` (N > 30) inside execute_command/ssh_command as a way to "wait for" an async process. That is inline serialization of watching — the exact anti-pattern Gate A kills.
+
+Legal waiting shapes:
+1. **A watcher already exists** (medic, supervisor, cron, systemd) → do OTHER work; check the log ONCE per natural break in that work. The watcher owns the waiting.
+2. **No watcher exists** → CREATE one (nohup script, cron, launchd) that writes state to a file/DB, then do other work. Creating the watcher IS the rule-267 offload.
+3. **Genuinely nothing else to do and the wait is short (<60s)** → end the turn with attempt_completion and let Ruben re-prompt, or check on the next natural tool call. Do not burn turns sleeping.
+
+Self-check before any `sleep`: "is a machine already watching this?" If yes → work on something else. If no → build the watcher, then work on something else.

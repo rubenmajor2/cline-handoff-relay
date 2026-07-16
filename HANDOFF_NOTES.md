@@ -368,3 +368,37 @@ Current config (parallel=50, rate_cap=300/hr, cron */1, executor_via_frankenstei
 - LLM_FLEET_STATE- LLM_FLEro = "Ruben's workstation + 235B reasoning teache- LLM_FLEET_STATE- LLM_FLEro = "Ruben's workstation + 235B reasoning teache- LLM_FLEET_STATE- LLM_FLEro = "Ruben's woNOT- LLM_FLEET_STATE- LLM_FLEro = "Ruben's workstation + 235B reasoning teache- LLM_Fs: bidirectional merge, Cicero canonical (00-266), 69 stale PH dupes removed
 - Git: both machines share history (main @ latest), GitHub relay restored via deploy keys (bo- Git: both machinPH servers ported to Cicero (project-frankenste- Git: both machines share history (main @ latest), GitHub relay restored via deploy keys (bo- Git: both machinPH servers ported to C Learner report: cline_learner_report.php push loop wired on Cicero (wopr SSH alias added)
 - Auto-sync: cron on Cicero (:15/:45), sync.sh on PH (hourly), both push GitHub
+
+---
+
+## [2026-07-15 08:10 PT] Rule-91 Obedience Fix + Three Ideas Deployed
+
+### Rule-91 Validator Log Corruption Fixed
+
+**Problem:** The rule-91 validator log (`/tmp/emsu_rule91_violations.log`) was filled with 1MB of null bytes (`\x00`), making all violation data unreadable since 2026-07-14.
+
+**Root cause:** The cron rotation script at `/etc/cron.d/emsu-rule91-logrotate` used `truncate -s 1M` which sets the file to exactly 1MB — but fills it with null bytes. Python's append mode (`"a"`) then writes AFTER 1MB of null bytes, making the log appear empty to any reader.
+
+**Fix applied:**
+- Changed cron from `truncate -s 1M` → `truncate -s 0` (proper truncation)
+- Backup saved at `/etc/cron.d/emsu-rule91-logrotate.bak-nullbyte-fix-20260715`
+- Corrupted log truncated to 0 bytes (now clean)
+- Validator (`_r91_check` in `/etc/litellm/_router_core.py`) is now properly logging
+
+### Three Deploy-Pending Ideas Resolved
+
+| Idea | Title | Statu| Idea | Title | Statu| Idea | Title | Statu| Idea | Title | Statu| Idea 5.2 last| Idea | Title | Statu| Idea | Title | Statu| Idea | Title | Statu|tor | Idea | Title | Statu| Idea | Title |  **#1| Idea | Title | Statu| Idea | Title | Statu| Idea | Title | Statu| Idea | Title | Statu| Idea 5.2 last| Idea | Title | Statu| Idea | Title | Statu| Idea | Title | Statu|toirstTopic fingerprint) | ✅ DEPLOYED — executor found live assertion |
+
+### Server Verification (all confirmed)
+- `spill_ladder_config.php` — syntax clean, DB table populated with 9 rungs (L0→L3)
+- `cron_ai_grader_self_heal.php` — syntax clean, connecting to `admin_portal` D- `cron_ai_grbefore), crontab entry active (`*/10 * * * *`)
+- `cron_ruben_staff_chat_triage.ph- `cron_ruben_staff_chat_triage.ph- `cron_ruben_staff_chat_triage.ph- `cron_ru
+################################################� ################################################� ############################ets to r###################################an (Henry Niko refund → Vicky/Jon, ticket #6164)
+- #17671, #17702, #17690, #17686, #17681 — in executor queue
+- #17737, #17729, #17714, #17683 — promoted to approved autonomous
+
+### Cline_Obedience.md Updated
+- Added Violation #11: cron logrotate null-byte bug (root cause of validator blindness)
+- Added deployment log for all three ideas
+- Document now tracks the fix and clean validator state
+

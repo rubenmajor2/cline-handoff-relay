@@ -33,6 +33,11 @@ Before calling ANY MCP tool via `use_mcp_tool`, verify:
 | `create_ticket` (emsu-operations) | Use `add_ticket_comment` on existing, or create via Orchestrator |
 | `search_emails` (emsu-operations) | `check_student_comms` (for student emails) |
 | `get_server_file` (emsu-operations) | `read_server_file` |
+| `update_idea` (ruben-orchestrator) | `idea_action` — `idea_id` (number) + `action` ("approve"/"deny"/"execute") |
+| `edit_idea` (ruben-orchestrator) | `idea_action` — same as `update_idea` |
+| `modify_idea` (ruben-orchestrator) | `idea_action` — same as `update_idea` |
+| `close_idea` (ruben-orchestrator) | `idea_action` with `action: "deny"` |
+| `resolve_idea` (ruben-orchestrator) | `idea_action` with `action: "approve"` |
 | `clinrerules_reindex` (clinerules) | `clinerules_reindex` |
 | `clinernules_lookup` (clinerules) | `clinerules_lookup` |
 

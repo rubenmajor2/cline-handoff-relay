@@ -63,6 +63,10 @@ If ANY field of the `result` (not just the pickup prompt block) mentions a `#NNN
 
 **Ruben's closeout test (2026-07-13):** the whole point of this gate is that when Ruben reads `#17537 [executing]` in a pickup prompt, he can close the thread immediately because he knows the executor is actively working on it — no re-verification needed. If the tag were `[approved:autonomous]` he would have to open another tool to check whether anything is actually happening. The verified tag IS the verification.
 
+## GATE C — Blocked-executor hand-ship (2026-07-16 Ruben directive)
+
+**If a reconcile pass (GATE B) finds a filed idea `impl_failed` / deploy-blocked (denylist, copycat cap, schema drift) AND the agent has the tools to do the work itself (safe deploy, SQL, ssh_command), the agent MUST ship it by hand in the same session — not re-file, not tag `[blocked]` and move on.** Re-queueing an impl_failed build is only legal ONCE; a second failure or a structural blocker (agent_core_denylist, copycat_churn_cap) means the executor cannot land it and the agent is the ship path. Tag the idea `[deployed]` with `(verified: hand-shipped, <evidence>)`. Canonical example: #18132 (2026-07-16) — executor triple-blocked (denylist on ai_ticket_agent.php, copycat cap, schema drift in generated SQL); Cline shipped by hand: function appended via safe path, cron rewritten against real schema, cron.d wired, live run verified. Ruben: "Just build it... the idea behind rule 267 was for you to come back on these ideas and you did not a lot of times."
+
 ## The anti-abuse gate (do NOT offload these)
 
 1. **The exact thing your `attempt_completion` needs to report as done.** If your completion says "X is [deployed]," X must be done inline or verified-executed, not just filed.

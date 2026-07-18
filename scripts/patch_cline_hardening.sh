@@ -3,7 +3,7 @@
 # patch_cline_hardening.sh — Re-apply ALL Cline extension hardening patches after updates
 #
 # SUPERSET of patch_yolo_ceiling.sh (which remains valid; rule 143 v4 references it).
-# Applies 5 patches to the LATEST saoudrizwan.claude-dev-*/dist/extension.js:
+# Applies 6 patches to the LATEST saoudrizwan.claude-dev-*/dist/extension.js:
 #
 #   P0  maxConsecutiveMistakes default:3 -> default:10   (rule 143 v4)
 #   P1  "result missing" sanitizer marker -> instructive transient-retry guidance
@@ -16,6 +16,11 @@
 #   P4  execute_command requires_approval required:!0 -> required:!1
 #       (missing param resolves falsy = safe path, instead of a hard error strike;
 #        eliminates the most common param-omission failure class)
+#   P5  toolUseIdMap-miss fallback "cline" -> r.id  (idea #18321, 2 occurrences)
+#       (parallel/native tool_use blocks carry their own id; on a map miss the
+#        result now lands as a proper tool_result with the exact tool_use_id the
+#        history sanitizer matches on, instead of a detached "cline" text block
+#        that forced "result missing" placeholder injection)
 #
 # Why: every Cline update ships a new version dir and wipes these patches.
 # Run this after each update (or from a watcher). Idempotent; --check for status.
@@ -80,6 +85,10 @@ PATCHES = [
     ("P4-requires-approval-optional",
      b'{name:"requires_approval",required:!0,instruction:"A boolean indicating',
      b'{name:"requires_approval",required:!1,instruction:"A boolean indicating'),
+    ("P5-map-miss-use-own-id",
+     b'a?.get(r.call_id||"")||"cline"',
+     b'a?.get(r.call_id||"")||r.id||"cline"',
+     2),
 ]
 
 data = open(EXT, "rb").read()
@@ -88,23 +97,25 @@ print(f"loaded {len(data)} bytes")
 new_data = data
 fails = 0
 applied = 0
-for name, old, new in PATCHES:
+for patch in PATCHES:
+    name, old, new = patch[0], patch[1], patch[2]
+    exp = patch[3] if len(patch) > 3 else 1
     n_old = new_data.count(old)
     n_new = new_data.count(new)
-    if n_new >= 1 and n_old == 0:
+    if n_new == exp and n_old == 0:
         print(f"SKIP {name}: already patched")
         continue
-    if n_old != 1:
-        print(f"FAIL {name}: anchor count={n_old} (expected exactly 1). NOT patched.")
+    if n_old != exp:
+        print(f"FAIL {name}: anchor count={n_old} (expected exactly {exp}). NOT patched.")
         fails += 1
         continue
     if CHECK_ONLY:
         print(f"NEEDS-PATCH {name}")
         applied += 1
         continue
-    new_data = new_data.replace(old, new, 1)
+    new_data = new_data.replace(old, new)
     applied += 1
-    print(f"OK   {name}: replaced 1 occurrence")
+    print(f"OK   {name}: replaced {exp} occurrence(s)")
 
 if fails:
     print(f"{fails} patch(es) failed anchor check - NOT writing file")

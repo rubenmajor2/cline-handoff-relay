@@ -96,6 +96,7 @@
 - **Self-supervision & repair** — R: 46,49,53,54,55,56,64,65,66,73,81,82,85,92,94,110,112,129,130,131,133,134,162,163,166,168,169,176,180,194,209,214,225,240,244,258,261,263 (263=verify-before-claim: no stale inferences, no sycophantic agreement)
 - **Routing to humans** — R: 68,69 (Jon=policy only, Vicky=CS only)
 - **Agent-found-wrong** — R: 266 (fix the instrument that misled the agent, same session — RCA the tool/query, patch it, verify, record)
+- **Cline noop idempotency gate** — R: 274 (call noop_check MCP BEFORE starting any task that might be a repeat; skip if should_skip=true; store after completion)
 - **Parallel windows protocol** — R: 29 (§"wait them out" forbidden), 137, 194, 209, 225
 
 ---

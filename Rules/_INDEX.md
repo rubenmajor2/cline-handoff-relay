@@ -43,6 +43,7 @@ These 12 rules govern pre-first-tool-call behavior and on-every-turn safety. Rul
 | 144 ★ | no-write-to-file-on-server-paths | 5K | Pre-write server-path gate |
 | 259 ★ | cline-tasks-stay-in-cline-not-chat55 | 4K | No spillover to group chat |
 | 267 ★ | orchestrator-executor-offload-and-reconcile | 6K | Offload gate + reconcile-before-completion gate |
+| 99 ★ | subagent-verify-before-claim | 3K | Subagent writes unverified until parent re-reads |
 
 All other rules (including voice/persona, deploy safety, LLM routing, Frankenstein Doctor, payment handling, etc.) live in the archive and are reachable via the `_RULE_TREE.md` tripwire system — one `clinerules_lookup(rule_id=N)` or `clinerules_list_by_topic(topic="...")` call away.
 

@@ -29,7 +29,7 @@ Slug: `glm52-hexarchy-launch-uma-jit-fix`
 | 0 (master) | Cato | 192.168.1.115 | Serving endpoint :8210 |
 | 1 | Augustus | 192.168.1.244 | |
 | 2 | Pompey | 192.168.1.21 | |
-| 3 | Marcus | 192.168.1.194 | = Claudia (same box) |
+| 3 | Marcus | 192.168.1.171 | spark-63ce; verified live 2026-07-20 |
 | 4 | Tiberius | 192.168.1.32 | |
 | 5 | Cesar | 192.168.1.56 | |
 

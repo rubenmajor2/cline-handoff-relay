@@ -95,6 +95,7 @@ HARDFLOOR_SLUGS=(
     "144-no-write-to-file-on-server-paths"
     "259-cline-tasks-stay-in-cline-not-chat55"
     "267-orchestrator-executor-offload-and-reconcile"
+    "99-subagent-verify-before-claim"
 )
 
 # --- G5 hardfloor (runs first; immediate block) --------------------------

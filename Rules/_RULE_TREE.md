@@ -93,7 +93,7 @@
 → Fetch all: `clinerules_list_by_topic("agent")`
 - **Act vs escalate gate** — R: 12,22,23,29,36,37,38,67,68,78,80,90,93,117,124,125,167,183,193,206,208,213,238,267,279 (267=orchestrator/executor mid-task offload + end-of-task reconcile — the ASYNC sibling to rule 00's sync subagents; 279=tool-grant IS a mandate to act — has-the-tool-but-escalated = rule-29 violation; "build a tool" asks imply wire + trigger + verified live invocation)
 
-- **Self-supervision & repair** — R: 46,49,53,54,55,56,64,65,66,73,81,82,85,92,94,110,112,129,130,131,133,134,162,163,166,168,169,176,180,194,209,214,225,240,244,258,261,263 (263=verify-before-claim: no stale inferences, no sycophantic agreement)
+- **Self-supervision & repair** — R: 46,49,53,54,55,56,64,65,66,73,81,82,85,92,94,99,110,112,129,130,131,133,134,162,163,166,168,169,176,180,194,209,214,225,240,244,258,261,263 (263=verify-before-claim: no stale inferences, no sycophantic agreement; 99=subagent writes unverified until parent re-reads — false-success guard)
 - **Routing to humans** — R: 68,69 (Jon=policy only, Vicky=CS only)
 - **Agent-found-wrong** — R: 266 (fix the instrument that misled the agent, same session — RCA the tool/query, patch it, verify, record)
 - **Cline noop idempotency gate** — R: 274 (call noop_check MCP BEFORE starting any task that might be a repeat; skip if should_skip=true; store after completion)

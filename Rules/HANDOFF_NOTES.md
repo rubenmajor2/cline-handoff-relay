@@ -1,5 +1,16 @@
 HANDOFF_NOTES appended below. Existing notes preserved.
 
+---
+## [2026-07-22 01:40 PT] GLM52 blind-probe fix (bug #1896 RESOLVED) + full ring relaunch in progress
+
+- ROOT CAUSE: medic v3 + overnight supervisor serving probes tested `/v1/models` ONLY — vLLM API server answers models from cache even with a dead PP rank. Augustus rank-1 container died ~01:03 (tonight's pattern: ONE box NVRM-OOMs ~+23-25 min post-launch, every cycle) and was removed; the chain declared "RING SERVING — medic done" at 00:45 and sat blind 36 min while completions hung.
+- FIX SHIPPED: both probes now truthful 1-token chat completions (`/v1/chat/completions`, model `glm-5.2-15pct`, max_tokens=1, grep '"choices"'). Supervisor real_completion_ok model id fixed (was `glm-5.2-local`, never existed). Backups: `glm52_medic_v2.sh.bak-probefix-20260722-0127`, `glm52_overnight_supervisor.sh.bak-probefix-20260722-0127` on Desktop.
+- LESSON: supervisor is launchd-managed (`com.emsu.glm52-supervisor`, KeepAlive). NEVER hand-nohup a second supervisor — duplicates double-restart the medic.
+- LIVE STATE 01:40: full clean 6-rank relaunch fired 01:35-01:36 at gpu_mem 0.70 (all 6 containers up 01:37, all 6 SSH-reachable). Warmup 5-25 min; tonight's death window = launch+25 min (~02:01). Medic (fixed probe) + launchd supervisor (fixed probe) + NVRM snapshotter on Cato (`/tmp/glm52_nvrm_snap.log`) all watching.
+- NEXT VERIFIER: confirm a REAL completion via `curl 192.168.1.115:8210/v1/chat/completions` (model glm-5.2-15pct) PAST ~02:05, then supervisor wire-in: registry glm-5.2-local → 127.0.0.1:8210 (glm52-tunnel-8210.service), `frankenstein_verify_routing glm-5.2-local` = $0 through router. Stale NCCL groups do NOT accept rejoining ranks — a dead rank means full relaunch (medic S4a does this automatically).
+- GPUMEM NOTE: v29/v30 lineage runs 0.70 (comment: live-proven 1.51M-token KV pool). Tonight's 5 crashes at 0.70 were single-box NVRM OOMs at +25 min, cause unproven (snapshotter armed). Rule 277's 0.82 mandate predates this lineage — flagged, not resolved.
+- 02:15 PT UPDATE: warmup VERIFIED — ring served REAL completions 01:42-02:01 (independent probes 01:47 + supervisor wire-in 01:43: registry → 8210 tunnel active, LiteLLM restarted, models list confirmed from WOPR loopback). Death window hit ~02:01 on schedule: ALL 6 containers mass-exited (one rank dies → NCCL hang → en-masse exit), NO medic reset (medic had exited; supervisor slow-watch caught it, restarted medic, relaunched 02:06:33). Cycle 7 VERIFIED SERVING 02:14:54 (real completion) + wired 02:13:28. Chain now self-heals every crash in ~5 min (~80% duty). MTBF ~25 min RCA filed: idea #18605 [proposed] P1 + bug #1897 (mass-exit loop, investigating). Forensics gap: v30 rm-before-capture loses dead-rank logs; NVRM snapshotter died without capturing. Router keyed chat-probe inconclusive (curl aborted mid-probe); transport-level wire verified.
+
 **Older entries archived 2026-07-11** (idea #17169, restoring reasonable size on this always-loaded file): `Rules-archive/HANDOFF_NOTES_ARCHIVE.md` — covers the 2026-07-08 Frankenstein Doctor session (Phases 1-9, RUBEN executor throughput fix 0/hr→480-564/hr) and the 2026-07-10 Cicero 235B restoration. This file now keeps only the most recent entry inline.
 
 ---

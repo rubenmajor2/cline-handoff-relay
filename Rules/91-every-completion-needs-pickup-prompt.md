@@ -41,16 +41,17 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 | **NO "pure Q&A" self-exemption** | Status reports, investigations, bug analysis, diagnostics are NOT Q&A |
 | **NO `[approved:autonomous]` tags** | Ambiguous between executing/queued. Banned in final pickup prompts — must be replaced by verified live-state tag from reconcile call per rule 267 GATE B |
 | **NO placeholders** | `#NNNN`, `<...>`, `#0000` are banned |
-| **NO pick-up-by-reference** | Block must be inline in result, not in a separate file |
+| **NO pick-up-by-reference** | Block must be inline in the `attempt_completion` **`result`** parameter string itself — not a separate file, and not `task_progress` or any other tool parameter (2026-07-22 violation #15: agent wrote a structurally-perfect block but put it in `task_progress`; `result` had zero rule-91 structure, so from Ruben's read it was "nowhere near a rule 91") |
 
 ## Quick check before shipping
 
-1. Does result end with ═══ PICKUP PROMPT ═══ block?
+1. Extract ONLY the `result` string in isolation (ignore `task_progress` and every other parameter) — does THAT string end with ═══ PICKUP PROMPT ═══ block?
 2. Is divider exactly 47 U+2550 chars?
-3. Every `#NNNN` in entire result — does it have a `[tag]`?
+3. Every `#NNNN` in entire `result` — does it have a `[tag]`?
 4. Any `IDEA-001`, `#0000`, `<real_idea_number>`? → FAIL
 5. Open-threads section present? Reference IDs present?
 6. Does EVERY open-thread item have a filed idea `#NNNN [tag]` or `(human-only decision — no idea)` marker? If any item has neither → STOP, call `create_idea` first
+
 
 ## Orders of magnitude
 
@@ -64,4 +65,5 @@ If rule 91 is **1,000 words** → agents skip it. If it's **this short** (~400 w
 
 ## Source
 
-2026-05-19 Ruben directive. 2026-07-14: 3 violations in one window (no pickup block, bare #NNNN, no open threads). Root cause: steering injection's "pure Q&A exception" + bloated 151-line rule. Both fixed.
+2026-05-19 Ruben directive. 2026-07-14: 3 violations in one window (no pickup block, bare #NNNN, no open threads). Root cause: steering injection's "pure Q&A exception" + bloated 151-line rule. Both fixed. 2026-07-22 violation #15 (per Cline_Obedience.md): agent shipped a structurally-correct PICKUP PROMPT block inside `task_progress` instead of `result` — added explicit ban + quick-check step 1 rewording to gate on `result` specifically.
+

@@ -1,6 +1,22 @@
 HANDOFF_NOTES appended below. Existing notes preserved.
 
 ---
+## [2026-07-23 14:15 PT] Window D closeout: alltastic agent-activity items a-f COMPLETE (item f = ticket_view digit-strip bug, fixed)
+
+- Context: pickup of task 1784836559542 (closed mid-work 13:13 PT, steps 5-6 undone). Items a-e were done in the prior window; item f investigated + fixed + deployed this window.
+- (a) #18783 [deployed] emsu-operations write_server_file destructive-shrink gate — verified live prior window (STEP 1c).
+- (b) routes/alltastic_api.php source→mode bug fix — deployed prior window, php -l clean, 716-row WHERE verified. Backup /tmp/alltastic_api.php.bak-agentfix-20260723-131157 (WOPR).
+- (c) activity whitelist UNION (argus_audit_log + argus_action_history) — verified prior window, 1547 rows. Backup /tmp/alltastic_api.php.bak-actwhitelist-20260723-130326.
+- (d) routes/argus_download.php patch — deployed prior window. Backup /tmp/argus_download.php.bak-step3-20260723-130638.
+- (e) UNION verified: 16 distinct users in audit_log, 4 in action_history.
+- (f) TICKET ISSUES — ROOT CAUSE + FIX THIS WINDOW: Argus ticket_view (lib/argus_action_catalog.php case 'ticket_view') digit-stripped the query (`STU-20260720-1255A9` → '2026072012559', `TKT-48005AB6` → '480056') which never LIKE-matches dashed/hex real ticket_numbers, AND ignored the ticket_id arg entirely. Audit evidence: 13/16 all-time failures (7/8 in 72h); Ruben retried STU-20260720-1255A9 4x on 7/23. All 7 failing identifiers EXACT-match real rows in tickets (860 STU- series rows live there). FIX: raw exact UPPER match → raw LIKE → digit-strip fallback; honors ticket_id arg. Deployed 14:01 PT via /tmp/wd_tv_patch.php (backup lib/argus_action_catalog.php.bak-itemf-20260723-140158), php -l clean, FPM reloaded + OPcache cleared (fpm-reload wrapper). E2E verify 6/7 PASS — every previously-failing identifier resolves (incl. lowercase + ticket_id-arg + bare-numeric forms); the 1 "FAIL" was test expectation (digit-fallback fuzzy-matched a real ticket, same as old behavior, not a regression). ticket_search was never broken (0 fails).
+- #18786 reconcile: core fix (dispatcher fake-sends) hand-shipped by sibling window 11:24 PT — VERIFIED live: tier-1 + expiry emails real-send via send_agent_draft_now.php, imessage queues via ruben_message_queue, cron.d */5 healthy, zero fake stamps post-fix, errors=0. Sandbox reconciliation script NOT deployed (references outbound_log table which does not exist — executor schema hallucination).
+- NEW BACKLOG IDEA #18827 [proposed] P1: 92 fake-sent agent_drafts rows all-time with no delivery evidence (63 imessage w/o queue row, 28 email pre-fix, 1 ticket_reply). Gated reconciliation plan (<72h re-send, 72h-14d human review, >14d expire) — bulk auto-resend of weeks-old student emails is a human-policy call. Also flags residual else-branch fake-stamp risk for future non-email/non-imessage (e.g. sms) expiry drafts.
+- #18787 (grievance classifier rebuild) — no longer stalled: deployed/ready_for_review (reconciled 13:44 PT).
+- Minor (non-blocking): frontend loadActivity "Gate" column expects rule29_gate but query returns "success" — display mismatch only.
+- Lesson: direct `ssh wopr` via execute_command + scp'd PHP harness scripts (lib/db.php + config.php, db('portal')) was the reliable verification path all session; MCP transport flaky earlier.
+
+---
 ## [2026-07-22 01:40 PT] GLM52 blind-probe fix (bug #1896 RESOLVED) + full ring relaunch in progress
 
 - ROOT CAUSE: medic v3 + overnight supervisor serving probes tested `/v1/models` ONLY — vLLM API server answers models from cache even with a dead PP rank. Augustus rank-1 container died ~01:03 (tonight's pattern: ONE box NVRM-OOMs ~+23-25 min post-launch, every cycle) and was removed; the chain declared "RING SERVING — medic done" at 00:45 and sat blind 36 min while completions hung.

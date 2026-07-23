@@ -83,6 +83,13 @@ _A task may use multiple LLMs (model swaps mid-task); each is counted. Blank = n
 - `deepseek-chat` — 1 trip(s)
 - `claude-sonnet-5` — 1 trip(s)
 
+## Trips by LLM (which models trip most)
+
+_A task may use multiple LLMs (model swaps mid-task); each is counted. Blank = no model_usage in task metadata._
+
+- `claude-fable-5` — 1 trip(s)
+- `claude-opus-4-8` — 1 trip(s)
+
 ## Playbook per failure mode
 
 Sorted by how often each one has tripped YOLO. If you're about to retry something, find the matching section below and follow it instead.

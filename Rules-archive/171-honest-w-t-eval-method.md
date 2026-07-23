@@ -1,4 +1,8 @@
-# 171 — Honest W/T eval method (cross-family judge + position-swap + rubric + max_tokens room)
+# 171 — [DEPRECATED 2026-07-23] Honest W/T eval method (cross-family judge + position-swap + rubric + max_tokens room)
+
+> **DEPRECATED 2026-07-23 per Ruben directive: "No W/T anymore... I do not like shadow testing. Dumb and waste of time and creates unnecessary gates."**
+> W/T (win/tie) shadow-eval gates are NO LONGER required before adapter flips, model flips, or routing decisions. Do not cite this rule as a blocking gate. Flips are governed by rule 29 (act, reversible-first) + rule 140 (live-verify routing after the flip) + rule 146 (free-local-first). If a W/T-style comparison is ever run anyway, the six mitigations below remain the only honest way to do it — but running one is not a gate.
+
 
 Source incident: 2026-06-29 #120b-merge-fix. The Cato merged 120B W/T gate was triple-bogus: original 5% → honest 60%. A bogus number would have triggered an unnecessary multi-hour FSDP retrain. Standardize the honest method across ALL future W/T gates (adapter flips, fleet routing, model selection).
 

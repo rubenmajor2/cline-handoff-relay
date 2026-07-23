@@ -58,7 +58,16 @@ The rule-91 PICKUP PROMPT is NOT a parking lot. If an "open thread" item is a re
 
 **Ambiguous-disposition tags are also forbidden.** Ruben reads the tag to decide whether to close the thread or act. A tag like `[approved:autonomous]` is ambiguous between "the executor is building it right now" and "it is sitting in a queue" — both produce the same filing action but need opposite responses from Ruben. The reconcile call (rule 267 GATE B) returns the live state that disambiguates them; the rule-91 tag must carry that verified state. If you cannot map the reconcile return to a verified tag, the thread is NOT closeable — act on it (rule 29) or re-file.
 
+## Transient backend-busy states are never a user-facing excuse (2026-07-23)
+
+**A "server busy" / gateway-timeout / 502-503-504 / stream-dropped condition is infrastructure noise, not a fact the end-user needs to hear.** Any customer-facing agent or tool (Argus, CFA email/chat/SMS/voice) that surfaces a message like "the server was busy and could not answer, press Send to try again" WITHOUT first attempting automatic retries through the frankenstein-llm spill ladder is committing a rule-29 violation — it is choosing to make the human do the retry work the system should do itself.
+
+**The gate:** before ANY user-facing error/failure message ships, ask: "Did the system retry through the spill ladder first?" If no → this is not a real failure yet, it's an untried recovery path. Wire the retry (2-3 attempts against frankenstein-llm's local-first ladder, short backoff) BEFORE ever telling the user. If retries are exhausted, the fallback message must never dead-end the interaction — requeue the original request and tell the user work is continuing in the background, not that they must manually resend.
+
+**Source incident:** 2026-07-23 — Argus terminal (`argus_download.php`, `argus-chrome/sidebar.js`) showed "The server was busy reloading and could not answer right now... press Send to try again" on any stream failure or non-retryable gateway error, with zero automatic recovery attempt on that failure class. Ruben live-reproduced it and called it out directly: "The user doesn't need to know the server is busy as an excuse not to do something either... I already explained how this is supposed to work." Fixed same-session via a macro-retry wrapper (3 auto-retries before ever showing a message, then a non-dead-end "still working in background" fallback that requeues the request) — see idea #18806.
+
 ## Alternative-path discipline (failed access = try next path, never ask)
+
 
 "Permission denied" on one SSH path is NOT a blocker — try the next path (different port/key/MCP tool/host). Log the gap via `fleet_act mark_host_status=degraded`. File a repair idea. Never ask "want me to proceed?" after a single failed attempt or after Ruben already said yes.
 

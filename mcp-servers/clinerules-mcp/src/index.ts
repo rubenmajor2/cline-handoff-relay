@@ -595,9 +595,31 @@ server.tool(
       const lastDiv = dividerIndices[dividerIndices.length - 1];
       pickupBlock = lines.slice(firstDiv, lastDiv + 1).join("\n");
     }
-    // Gate 4: literal placeholder tokens
-    if (/#NNNN|#0000|#XXXX|<task_id>|<timestamp\s*PT>/i.test(pickupBlock)) {
-      failures.push("PLACEHOLDER_DETECTED: literal placeholder token found in pickup prompt (#NNNN, #0000, #XXXX, <task_id>, etc.). Replace with real values.");
+    // Gate 4: literal placeholder tokens (including Unicode dash variants — Violation #17)
+    // Catches #NNNN, #0000, #XXXX, <task_id>, AND #— / #– / #― etc. (em-dash placeholders)
+    const _dashPlaceholder = /#(?:NNNN|0000|XXXX|<task_id>|<timestamp\s*PT>|(?:[\u2010-\u2015\u2212\u2E3A\u2E3B\-—–]))/i;
+    if (_dashPlaceholder.test(pickupBlock)) {
+      failures.push("PLACEHOLDER_DETECTED: literal placeholder token found in pickup prompt (#NNNN, #0000, #XXXX, #— em-dash, <task_id>, etc.). Replace with real values — call create_idea for real integer IDs.");
+    }
+    // Gate 4c (NEW 2026-07-24, Violation #17): open-thread items without real idea numbers
+    // Each numbered item under "Open threads" MUST have #<integer> [tag] OR (human-only decision — no idea) marker.
+    // Catches the pattern where agents list actionable items as "open threads" with fake/placeholder tags
+    // but never call create_idea (Violation #14 + #17 pattern).
+    if (pickupBlock) {
+      const otMatch = pickupBlock.match(/open\s+threads?\s+to\s+drive\s+next\s*:?\s*\n([\s\S]*?)(?:\n\s*reference\s+ids|\n\s*when\s+done|$)/i);
+      if (otMatch) {
+        const otSection = otMatch[1];
+        // Match numbered list items: "1. ...", "2. ...", etc.
+        const items = otSection.split(/\n(?=\d+\.\s)/).filter((s: string) => /^\s*\d+\.\s/.test(s));
+        for (const item of items) {
+          const hasRealIdea = /#\d{1,8}\s*\[/.test(item);  // #NNNN followed by [
+          const hasHumanOnlyMarker = /human-only\s+decision|no\s+idea\)/i.test(item);
+          if (!hasRealIdea && !hasHumanOnlyMarker) {
+            const firstLine = item.split("\n")[0].trim().slice(0, 80);
+            failures.push(`UNFILED_OPEN_THREAD: open-thread item lacks real idea number or human-only marker: "${firstLine}...". Either call create_idea for a real #NNNN [tag], or mark "(human-only decision — no idea)". Listing agent-doable work as an open thread without filing it is a rule-29 + rule-91 violation.`);
+          }
+        }
+      }
     }
     // Gate 4b (NEW 2026-07-03): missing task ID. Rule 91 requires "Pick up task #<real task id> — <topic>".
     // Prior validator only caught LITERAL placeholders (#NNNN), so a prompt that simply OMITTED the

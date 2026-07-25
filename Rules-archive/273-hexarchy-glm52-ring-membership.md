@@ -18,12 +18,12 @@ Permanent rule. Workspace-scoped. Source: Ruben directive 2026-07-14 — agents 
 | Box Name | Hardware | LAN IP | WG IP | Role | Model | Serve Port | Status |
 |---|---|---|---|---|---|---|---|
 | **Julia** | DGX Spark GB10 | 192.168.1.190 | 10.100.0.15 | 120B TP=2 HEAD | gpt-oss-120b | :11513 | ✅ LIVE |
-| **Claudia/Marcus** | DGX Spark GB10 | 192.168.1.194 | 10.100.0.16 | 120B TP=2 WORKER | gpt-oss-120b (Ray worker) | :11514 (do_not_probe) | ✅ LIVE |
+| **Claudia** | DGX Spark GB10 | 192.168.1.194 | 10.100.0.16 | 120B TP=2 WORKER | gpt-oss-120b (Ray worker) | :11514 (do_not_probe) | ✅ LIVE |
 | **Artemis** | Intel 4x Arc Battlemage | 192.168.1.x | 10.100.0.5 | 120B TP=4 | gpt-oss-120b | :8000 | ✅ LIVE |
 | **Cato** | DGX Spark GB10 | 192.168.1.115 | 10.100.0.14 | Hexarchy PP=6 rank 0 | GLM-5.2 | :8210/:8211 | 🔧 MAINTENANCE |
 | **Augustus** | DGX Spark GB10 | 192.168.1.244 | N/A | Hexarchy PP=6 rank 1 | GLM-5.2 | :8210/:8211 | 🔧 MAINTENANCE |
 | **Pompey** | DGX Spark GB10 | 192.168.1.21 | N/A | Hexarchy PP=6 rank 2 | GLM-5.2 | :8210/:8211 | 🔧 MAINTENANCE |
-| **Marcus/Claudia** | DGX Spark GB10 | 192.168.1.194 | 10.100.0.16 | Hexarchy PP=6 rank 3 (DUAL ROLE) | GLM-5.2 | :8210/:8211 | 🔧 MAINTENANCE |
+| **Marcus** | DGX Spark GB10 | 192.168.1.171 | N/A | Hexarchy PP=6 rank 3 | GLM-5.2 | :8210/:8211 | 🔧 MAINTENANCE |
 | **Tiberius** | DGX Spark GB10 | 192.168.1.32 | N/A | Hexarchy PP=6 rank 4 | GLM-5.2 | :8210/:8211 | 🔧 MAINTENANCE |
 | **Cesar** | DGX Spark GB10 | 192.168.1.56 | 10.100.0.13 | Hexarchy PP=6 rank 5 | GLM-5.2 | :8210/:8211 | 🔧 MAINTENANCE |
 | **Cicero** | M5 Mac 128GB | 192.168.1.120 | 10.100.0.12 | 235B reasoning | Qwen3-235B-A22B-Thinking | :11520 | ⚠️ WG DOWN |
@@ -32,7 +32,7 @@ Permanent rule. Workspace-scoped. Source: Ruben directive 2026-07-14 — agents 
 | **WOPR** | Server | 192.168.1.68 | 10.100.0.1 | Router + Ollama | 14B/32B | :11434, :4000 | ✅ LIVE |
 | **Ruben Mac** | M4 Mac Mini | 192.168.1.178 | N/A | 7B-LoRA + Cline | emsu-qwen2.5-coder:7b-lora | :11505 | ✅ LIVE |
 
-**DUAL ROLE NOTE:** Marcus/Claudia (spark-6d51, 192.168.1.194) serves as Claudia (120B TP=2 Ray worker for Julia) AND Marcus (Hexarchy PP=6 rank 3). Same physical box, different roles depending on which cluster is active. When 120B TP=2 is running, it's Claudia. When GLM-5.2 Hexarchy is running, it's Marcus. Both cannot run simultaneously.
+**MARCUS ≠ CLAUDIA (corrected 2026-07-25):** Marcus and Claudia are TWO SEPARATE physical boxes, each with its own IP. Marcus = spark-63ce @ 192.168.1.171 (Hexarchy rank 3, runs vllm_slot). Claudia = spark-6d51 @ 192.168.1.194 (120B TP=2 Ray worker for Julia, NOT in the ring). The old "dual-role box" claim was wrong — verified live 2026-07-25 via on-box hostname + IP + MAC check across all 8 Sparks. Per Ruben: each box has its own IP.
 
 ## The Hexarchy (GLM-5.2 PP=6 Ring)
 
@@ -43,7 +43,7 @@ The GLM-5.2 local ring is exactly 6 DGX Spark (GB10) nodes. No more, no less. PP
 | Cato | spark-2aa8 | 192.168.1.115 | 10.100.1.1 | 10.100.6.2 | 0 (master) | WOPR proxy :2204 | qefru3-cocnyf-xuxnoP |
 | Augustus | spark-e3b2 | 192.168.1.244 | 10.100.1.2 | 10.100.2.1 | 1 | ssh rubenmajor@192.168.1.244 | qefru3-cocnyf-xuxnoP |
 | Pompey | spark-50c0 | 192.168.1.21 | 10.100.2.2 | 10.100.3.1 | 2 | ssh rubenmajor@192.168.1.21 | qefru3-cocnyf-xuxnoP |
-| Marcus | spark-6d51 | 192.168.1.194 | 10.100.4.2 | 10.100.5.2 | 3 | ssh rubenmajor@192.168.1.194 | qefru3-cocnyf-xuxnoP |
+| Marcus | spark-63ce | 192.168.1.171 | 10.100.4.2 | 10.100.5.2 | 3 | ssh rubenmajor@192.168.1.171 | qefru3-cocnyf-xuxnoP |
 | Tiberius | spark-e9e0 | 192.168.1.32 | 10.100.4.2 | 10.100.5.1 | 4 | ssh rubenmajor@192.168.1.32 | qefru3-cocnyf-xuxnoP |
 | Cesar | spark-3b41 | 192.168.1.56 | 10.100.5.2 | 10.100.6.1 | 5 | WOPR proxy :2203 | qefru3-cocnyf-xuxnoP |
 
@@ -51,7 +51,7 @@ All nodes use the same SSH credentials: user `rubenmajor`, password `qefru3-cocn
 
 ## Julia/Claudia 120B TP=2 Cluster
 
-**Julia (spark-6ae6, 192.168.1.190) = HEAD. Claudia (spark-6d51, 192.168.1.194) = WORKER.**
+**Julia (spark-6ae6, 192.168.1.190) = HEAD. Claudia (spark-6d51, 192.168.1.194) = WORKER.** (Claudia is its own box — NOT the same hardware as Marcus; Marcus is spark-63ce @ 192.168.1.171 in the Hexarchy.)
 
 - Julia runs Ray head (`ray start --head --port=6379 --node-ip-address=192.168.100.2`) + vLLM serve
 - Claudia runs Ray worker (`ray start --address=192.168.100.2:6379 --node-ip-address=192.168.100.1`)
@@ -146,7 +146,7 @@ To reach Hexarchy nodes from WOPR:
 - Cesar: `ssh -p 2203 rubenmajor@127.0.0.1` (reverse tunnel)
 - Augustus: `ssh rubenmajor@192.168.1.244`
 - Pompey: `ssh rubenmajor@192.168.1.21`
-- Marcus: `ssh rubenmajor@192.168.1.194`
+- Marcus: `ssh rubenmajor@192.168.1.171`
 - Tiberius: `ssh rubenmajor@192.168.1.32`
 
 All use password `qefru3-cocnyf-xuxnoP` if key auth fails. Use `-o IdentitiesOnly=yes -o PubkeyAuthentication=no -o PreferredAuthentications=password` to force password auth if SSH offers too many keys.
@@ -169,6 +169,8 @@ All use password `qefru3-cocnyf-xuxnoP` if key auth fails. Use `-o IdentitiesOnl
 2026-07-14 (2nd update) — Ruben directive: "Cesar/Cato is not the 120B, it is part of the Hexarchy, your information is outdated. And dangerous."
 
 2026-07-14 (3rd update) — Ruben directive: "Make sure that you update rule 273 with the proper information. This needs to be some sort of an evergreen rule... whenever we are changing a box... this rule gets updated properly... all the LLMs need to be put in the same place." Added: canonical fleet inventory table, evergreen maintenance protocol, Cicero LAN IP (192.168.1.120), Julia/Claudia TP=2 launch details, parallelism analysis (TP=2 vs PP=6).
+
+2026-07-25 — Marcus/Claudia correction. Ruben: "Each box has it's own IP. I think this is wrong." Verified live via on-box hostname + IP + MAC on all 8 Sparks: Marcus = spark-63ce @ 192.168.1.171 (Hexarchy rank 3, vllm_slot running), Claudia = spark-6d51 @ 192.168.1.194 (separate TP=2 worker, NOT in ring). Removed the false "dual-role box" claim everywhere. Cross-ref bug #1962.
 
 ## Last updated
 

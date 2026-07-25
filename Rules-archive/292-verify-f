@@ -1,0 +1,50 @@
+# 292 — Verify fleet box IPs via ON-BOX ARP/MAC cross-check, never static tables alone
+
+Permanent rule. Workspace-scoped. Source: 2026-07-25 — Ruben asked for a durable clinerule after an agent trusted a stale static IP table (rule 273 said "Marcus/Claudia dual-role @ .194") instead of verifying on-box. Ruben: "Each box has it's own IP. I think this is wrong." On-box verification proved him right (Marcus = spark-63ce @ .171, Claudia = spark-6d51 @ .194, separate boxes). Bug library #1962 [resolved].
+
+## The bright-line rule
+
+**Before trusting ANY static IP table (rule 268 SSH matrix, rule 273 fleet inventory, fleet_inventory MCP, HANDOFF_NOTES, your own memory) for a Roman/Hexarchy/Spark box's IP or identity, verify on-box.** Static tables drift (DHCP re-assignment, box swaps, stale docs). The box itself is the only ground truth for "which hostname lives at which IP right now."
+
+## The verification procedure (works from the Mac, ~2 min for all boxes)
+
+1. **From Ruben's Mac (192.168.1.178, on the LAN), probe the LAN segment:**
+   ```bash
+   for ip in 115 244 21 171 194 32 56 190; do
+     ssh -o ConnectTimeout=5 -o BatchMode=yes rubenmajor@192.168.1.$ip \
+       'hostname; ip -4 addr show scope global | grep inet; cat /sys/class/net/enP*/address 2>/dev/null || cat /sys/class/net/e*/address' 2>/dev/null
+   done
+   ```
+   Password `qefru3-cocnyf-xuxnoP` on all Sparks if key auth fails (force with `-o PubkeyAuthentication=no -o PreferredAuthentications=password`).
+2. **Cross-check MAC-suffix ↔ hostname-suffix.** Every DGX Spark's hostname is `spark-<suffix>` and the suffix correlates with its NIC MAC. On any reachable box: `ip neigh` shows the ARP table (IP ↔ MAC) for neighbors it has talked to — use it to confirm a given IP's MAC matches the expected hostname suffix before declaring identity.
+3. **Only then update the static tables** (rule 273 + rule 268) so they stop lying to the next window.
+
+## Verified LAN map (2026-07-25, on-box verified — 8 Sparks)
+
+| Hostname | LAN IP | Role |
+|---|---|---|
+| spark-2aa8 (Cato) | 192.168.1.115 | Hexarchy rank 0 |
+| spark-e3b2 (Augustus) | 192.168.1.244 | Hexarchy rank 1 |
+| spark-50c0 (Pompey) | 192.168.1.21 | Hexarchy rank 2 |
+| spark-63ce (Marcus) | 192.168.1.171 | Hexarchy rank 3 (vllm_slot) |
+| spark-e9e0 (Tiberius) | 192.168.1.32 | Hexarchy rank 4 |
+| spark-3b41 (Cesar) | 192.168.1.56 | Hexarchy rank 5 |
+| spark-6ae6 (Julia) | 192.168.1.190 | 120B TP=2 HEAD |
+| spark-6d51 (Claudia) | 192.168.1.194 | 120B TP=2 WORKER (NOT in ring) |
+
+## Why the alternatives fail (do not waste turns on them)
+
+- **UniFi UDM API client-list endpoint:** never successfully located on this network. Do not burn turns hunting for it — go on-box instead.
+- **WOPR-executed ssh_command to 192.168.1.x:** WOPR cannot route to the 192.168.1.x LAN directly (WOPR reaches Cato/Cesar only via reverse tunnels on localhost :2203-:2206). Run LAN sweeps from Ruben's Mac via `execute_command`, not via the emsu-operations MCP.
+- **DHCP/ping sweeps with no hostname read:** an IP answering ping proves a device exists, not which box it is. Always read `hostname` + MAC on-box.
+
+## Cross-references
+
+- Rule 273 — canonical fleet inventory (the static table this rule verifies; corrected 2026-07-25)
+- Rule 268 — fleet SSH access reference (access paths; same staleness risk)
+- Rule 245 — verify host identity before declaring dead
+- Bug library #1962 [resolved] — false-alarm/IP-verification-method incident 2026-07-25
+
+## Last updated
+
+2026-07-25 — initial. Source: Ruben directive + bug #1962. Marcus/Claudia dual-role error in rule 273 was caught by Ruben and corrected this session.

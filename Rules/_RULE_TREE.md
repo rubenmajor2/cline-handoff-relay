@@ -111,7 +111,7 @@
 - **Live-probe fleet state enforcement** — R: 260 (never trust error_watchdog for fleet health, always read LLM_FLEET_STATE.md + live-probe), 280 (NO routing/LLM up-down claim without a live probe quoted `(verified: ...)` in the same message; litellm restarts ONLY via /usr/local/bin/litellm-safe-restart.sh — raw `systemctl restart litellm` banned)
 - **URL→docroot mapping** — R: 159 (emsuniversity.com/ems = /var/www/moodle/ems, NOT /var/www/emtskills/ems)
 - **Connecteam is DEAD (decommissioned 2026-05-15)** — R: 246 (never recommend CT as a config surface; Team Hub is the replacement)
-- **Fleet SSH access reference** — R: 268 (canonical SSH matrix, ports, IPs, passwords, diagnostic decision tree — never guess SSH paths)
+- **Fleet SSH access reference** — R: 268 (canonical SSH matrix, ports, IPs, passwords, diagnostic decision tree — never guess SSH paths), 292 (verify box IP/identity ON-BOX via hostname+MAC cross-check BEFORE trusting static IP tables incl. 268/273; WOPR can't route the LAN — sweep from the Mac; UDM API never located)
 - **Parallel distributed file transfer** — R: 274 (multi-node rsync, tar pipes, xargs -P, nc pipe — 4-5x faster than single rsync for bulk data)
 - **System-wide parallelism mandate** — R: 275 (ALL AI agents, tools, data ops MUST use parallel streams — 3-question test before building ANY new agent/tool; complete inventory of 31 parallelism targets)
 

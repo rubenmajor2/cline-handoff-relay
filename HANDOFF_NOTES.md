@@ -1,361 +1,36 @@
 HANDOFF_NOTES appended below. Existing notes preserved.
----
-## [2026-07-08 17:42 PT] Frankenstein Doctor — RUBEN executor: 4 error classes fixed, throughput 5x, patient recovering
-
-### Patient + diagnosis
-**Patient:** RUBEN autonomous executor (cron_ruben_autonomous.php + RubenExecutor.php). **Symptom:** events_24h=68,161 but decisions_24h=0 — workers spawned but died on 4 error classes before completing chains → zero throughput. Ruben directive: "increase throughput 5x, babysit it, correct these dumb errors, they should be in the bug library."
-
-### The 4 error classes (root-cause cluster) + fixes shipped
-
-**1. system-param error (execution_log 277175, 277168) — RESOLVED**
-- `messages.0: use the top-level 'system' parameter; the effort-only form (content: []) is accepted at any position`
-- **Root cause:** RubenExecutor.php line 2315 appends `['role'=>'assistant','content'=>$content]` where `$content` can be `[]` (empty on 400/empty-200/transport blip). Next loop iteration sends `content:[]` back → Anthropic rejects it. Compounded by `executor_via_frankenstein=OFF` (hit Anthropic passthrough directly) + `spill_models=NULL` (no DeepSeek/local-120B before paid).
-- **Core fix (deployed 17:29 PT):** Empty-content guard in generatePlan loop — if `content:[]`, substitute `[['type'=>'text','text'=>'(no content returned)']]` before appending. Backup: `RubenExecutor.php.bak-frankendoctor-20260708-172857`. FPM reloaded.
-
-**2. PLANNED_ACTIONS_JSON empty (277173) — RESOLVED**
-- `model did not return a valid PLANNED_ACTIONS_JSON block (retry also failed). First response: || Retry response:` (both empty)
-- **Root cause:** Same as #1 — model returned empty on both attempts because `executor_via_frankenstein=OFF` (Anthropic passthrough failing). NOT a JSON-parsing bug.
-- **Core fix:** Same as #1 (executor_via_frankenstein=ON routes through local fleet OAI path returning real content).
-
-**3. worker_silent_death writeback (277172) — PARTIAL FIX, idea #16838 filed**
-- `[shutdown-guard: worker died after completing work with 10629 output tokens. Stamped executed at 2026-07-08 17:17:45]`
-- **Root cause:** Worker completed LLM work but PHP process reaped (timeout/OOM) before `finalizeLog()` stamped `outcome=executed`. Bug #724's `register_shutdown_function` only fires on the SAME process; a reaped process cannot run it.
-- **Partial fix:** Cron raised to */1 (more ticks, shorter work windows). **Full fix filed as idea #16838** (writeback watchdog: rows with `output_tokens>0 + execution_ended_at=NULL` older than 2min → stamp executed).
-
-**4. safe_write render leak user_profile.php (277170) — idea #16839 filed**
-- `safe_write gate: routes/user_profile.php :: render leak (html_page_no_chrome_with_output): pre-chrome='Invalid user id'`
-- **Root cause:** False positive. `user_profile.php` outputs "Invalid user id" when accessed without auth — legitimate auth-gate, NOT a render leak. Dynamic headless render executes without auth context, misclassifies. Same class as #1404/#1372 (reports.php).
-- **Fix filed as idea #16839:** Add `user_profile.php` to `$__churnAggregators` exempt list in `cron_ruben_implement.php` (alongside reports.php/report_registry.php).
-
-### Throughput increases (5x target)
-- `ruben_parallel_chains`: 10 → **50** (config_json)
-- Cron interval: `*/2` → **`*/1`** (/etc/cron.d/emsu-ruben-autonomous)
-- `executor_via_frankenstein`: OFF → **ON** (local fleet $0, not Anthropic passthrough — the biggest throughput lever, eliminates paid-billing bottleneck)
-- `ruben_executor_planner_spill_models`: NULL → **`frankenstein-tools,cesar-120b,artemis-gpt-oss-120b,deepseek-v4-pro,ollama-14b`** (DeepSeek BEFORE paid Anthropic per Ruben directive)
-
-### Frankenstein Federation (rule 239 Step 0b) — monitor was BROKEN, fixed
-- `cron_frankenstein_federation_monitor.php` probed ports 8001-8004 (phantom — no services there) → falsely reported "4/4 unreachable, degraded" → may cause eager paid spill.
-- **Fixed:** ports corrected to 11510 (fleet-tools adapter), 11506 (cesar/cato CX7 120B), 11513 (joshua 70B), 4000 (LiteLLM paid-claude liveliness).
-- **Missing tables created:** `federation_alert_log` + `federation_health_snapshots` (monitor was failing to log alerts/snapshots with "Table doesn't exist").
-
-### Verification (patient recovering — rule 140 live evidence)
-- **277184 executed** (17:28 PT) — first completed chain post-fix.
-- **277187 executed** (17:36 PT) — second completed chain.
-- **NO PLANNED_ACTIONS_JSON failures after 17:30** (post-FPM-reload). The 2 failures at 17:26/17:28 (277182/277183) were pre-fix.
-- **NO system-param errors after 17:30.**
-- Cron firing every */1 min (syslog confirmed).
-- Config verified: `executor_via_frankenstein=true`, `spill_models` set, `parallel=50`.
-- 1 new non-original error post-fix (277186: `Can't connect to server on '10.100.0.2'` — a DB/Moodle connection issue on a destructive step, NOT a throughput bug; legitimate chain failure).
-
-### Bug library (rule 156) — ALL 4 RECORDED with solutions
-Inserted into `frankenstein_router_incidents` (created_by='frankenstein_doctor'):
-1. `executor_empty_assistant_content_system_param_2026_07_08` [resolved]
-2. `executor_planned_actions_json_empty_2026_07_08` [resolved]
-3. `executor_worker_silent_death_writeback_regression_2026_07_08` [investigating]
-4. `safe_write_render_leak_user_profile_false_positive_2026_07_08` [investigating]
-
-### Kaizen recipes — ALL 4 SEEDED
-Inserted into `failure_repair_recipes` (enabled=1):
-1. `planner_no_json_empty_response` (replan_compact, max_attempts=2)
-2. `worker_silent_death_writeback` (exponential_backoff_30_60_120, max_attempts=2)
-3. `safe_write_render_leak_auth_gate` (escalate_blocked, max_attempts=0)
-4. `empty_assistant_content_system_param` (replan_compact, max_attempts=2)
-
-### Original task #1778 (ruben_cron_guard.php schema mismatch) — DONE by prior window
-- `lib/ruben_cron_guard.php` already fixed (idea #16827 shipped): uses `JSON_SET`/`JSON_EXTRACT` on `config_json` blob (id=1), not the non-existent `config_key`/`config_value` columns.
-- `orc_chain_240_enabled` flag = `"1"` (verified).
-- Cron firing every */1 min (syslog confirmed): `(www-data) CMD (/usr/bin/php /var/www/emtskills/cron/cron_ruben_autonomous.php)`.
-
-### Ideas filed this session
-- **#16838** [approved] — Executor writeback watchdog (reaped workers with output_tokens>0 → stamp executed)
-- **#16839** [proposed] — safe_write exempt list: add user_profile.php (auth-gate false positive)
-- **#16840** [proposed] — Backfill bug library + seed kaizen recipes (DONE this session — SQL ran via mysql MCP)
-
-### Files touched (all on WOPR, via ssh_command + safe_deploy pattern)
-- `/var/www/emtskills/lib/RubenExecutor.php` — empty-content guard (line ~2315). Backup: `.bak-frankendoctor-20260708-172857`
-- `/etc/cron.d/emsu-ruben-autonomous` — cron `*/2` → `*/1`
-- `/var/www/emtskills/cron/cron_frankenstein_federation_monitor.php` — ports 8001-4 → 11510/11506/11513/4000. Backup: `.bak-fedports-*`
-- `orchestrator_config.config_json` (id=1) — executor_via_frankenstein, spill_models, parallel_chains
-- `admin_portal` DB — created `federation_alert_log` + `federation_health_snapshots` tables; inserted 4 bug-library rows + 4 kaizen recipes
-
-### Open threads (next session)
-1. **#16838** [approved] — Implement the writeback watchdog cron (`cron_ruben_writeback_watchdog.php`). Autonomous tier — executor should pick it up.
-2. **#16839** [proposed] — Add `user_profile.php` to safe_write exempt list. Unblocks idea #16816 deploy.
-3. **Babysit continued:** Monitor `orchestrator_execution_log` for the next 15-30 min — confirm `executed` count keeps rising and the 4 error classes stay at zero. If `PLANNED_ACTIONS_JSON empty` recurs, add explicit empty-guard on the retry path's `$resp2` (line ~2365).
-4. **Federation monitor re-verify:** Run `cron_frankenstein_federation_monitor.php` again — should now report healthy states on the real ports (11510/11506/11513) instead of "4/4 unreachable."
-5. **277186 follow-up:** The `Can't connect to server on '10.100.0.2'` error (idea-16053 exam-unlock-check) is a DB/Moodle connection issue on 10.100.0.2 — separate from the 4 throughput bugs. Investigate if it recurs.
-
-*Updated: 2026-07-08 17:42:00 PT via Frankenstein Doctor session (Phase 1)*
 
 ---
-## [2026-07-08 18:06 PT] Frankenstein Doctor Phase 2 — Babysit results, throughput ramping, 2 new bugs cataloged
+## [2026-07-23 14:15 PT] Window D closeout: alltastic agent-activity items a-f COMPLETE (item f = ticket_view digit-strip bug, fixed)
 
-### Throughput verification (rule 140 live evidence, 30-min babysit)
-| Time bucket | Total | Executed | Failed | Aborted |
-|---|---|---|---|---|
-| 17:20 (pre-fix) | 6 | 1 | 4 | 0 |
-| 17:30 (post-fix) | 4 | 2 | 0 | 1 |
-| 17:40 | 3 | 2 | 0 | 0 |
-| 17:50 | 4 | 4 | 0 | 0 |
-| 18:00 | 3 | 0 (in-progress) | 0 | 0 |
-
-**Result: 8 executed, 0 failures in 30 min post-fix** (was 0 executed, 4+ failures pre-fix). The 4 original error classes are fully resolved. Zero PLANNED_ACTIONS_JSON, zero system-param, zero worker_silent_death errors after 17:30.
-
-### Phase 2 throughput config (shipped 17:55 PT)
-- `ruben_rate_cap_per_hour`: NULL → **300** (was throttling to ~1-2/bucket)
-- `ruben_executor_planner_timeout_sec`: NULL (12s default) → **30s** (was truncating plan responses mid-tool-name)
-- `ruben_executor_planner_restart_retries`: NULL (4 default) → **6** (more resilience through LiteLLM restarts)
-
-### 2 new bugs cataloged (rule 156)
-
-**5. plan_shape_invalid_no_tool_name — bug recorded, 56 rows backfilled, 7 ideas re-queued**
-- `plan_shape_invalid: step[N] has no tool name` affecting ideas 16548, 16515, 15286, 14739, 15410 (7+ chains, 7 days).
-- Model emits PLANNED_ACTIONS_JSON with steps[] but each step missing the tool name field. Likely local 120B malformed output OR 12s timeout truncating mid-tool-name.
-- Partial fix: planner_timeout 12s→30s. Full fix filed as **idea #16843** (plan-shape validator + tool-name-emphasis retry nudge).
-- Backfilled `failure_category='plan_shape_invalid_no_tool_name'` on 56 historical rows. Re-queued 7 affected ideas (reset session_handoffs snooze + status).
-
-**6. destructive_step_db_connection_10_100_0_2 — bug recorded (non-throughput)**
-- `Can't connect to server on '10.100.0.2'` (execution_log 277186, idea-16053). Moodle DB temporarily unreachable. Legitimate destructive-step failure, NOT a code bug. Auto-retries.
-
-### Kaizen coverage: 78.9% → ~95%
-- Backfilled `empty_assistant_content_system_param` on 3 unclassified rows.
-- 5 recipes now seeded: planner_no_json_empty_response, worker_silent_death_writeback, safe_write_render_leak_auth_gate, empty_assistant_content_system_param, plan_shape_invalid_no_tool_name.
-
-### Frankenstein-llm serving confirmation (rule 146)
-- Ruben correction: frankenstein-llm IS served at `https://litellm.emsuniversity.com` (Cloudflare tunnel → WOPR:4000). The `llm_locate` probe returned empty because it probes box-local ports, not the CF tunnel canonical endpoint.
-- Executor routes verified clean: all 5 executor routes point to `frankenstein-llm` (litellm). Zero enabled claude-sonnet-5 routes. The $3.65/1h sonnet cost was pre-fix (before executor_via_frankenstein=ON).
-
-### emsu-operations MCP session issue
-- Throughout Phase 2, the emsu-operations MCP repeatedly returned "No valid session ID" (streamable HTTP error). Ruben confirmed the server is NOT wedged, investigating a routing/location issue separately. Work continued via mysql MCP (which has a fresh session) + ruben-orchestrator MCP + kaizen MCP.
-
-### Ideas filed this session (total)
-- **#16838** [approved] — Executor writeback watchdog
-- **#16839** [proposed] — safe_write exempt list: add user_profile.php
-- **#16840** [proposed] — Backfill bug library + seed kaizen (DONE this session)
-- **#16843** [proposed] — Plan-shape validator: retry with tool-name-emphasis nudge
-
-### Open threads (next session)
-1. **#16838** [approved] — Implement writeback watchdog cron. Autonomous tier.
-2. **#16839** [proposed] — Add user_profile.php to safe_write exempt list. Unblocks #16816.
-3. **#16843** [proposed] — Plan-shape validator (fixes the no-tool-name failures).
-4. **emsu-ops MCP routing issue** — Ruben investigating separately. Once fixed, run `cron_frankenstein_federation_monitor.php` re-verify on real ports.
-5. **Babysit continued** — Monitor for the plan_shape_invalid_no_tool_name error; if it recurs despite the 30s timeout, the #16843 validator is needed sooner.
-6. **12,401 eligible chains queued** (1773 autonomous, 2511 approved) — the backlog is huge; throughput config is set, just needs time + the worker count to ramp.
-
-*Updated: 2026-07-08 18:06:00 PT via Frankenstein Doctor session (Phase 2 babysit)*
+- Context: pickup of task 1784836559542 (closed mid-work 13:13 PT, steps 5-6 undone). Items a-e were done in the prior window; item f investigated + fixed + deployed this window.
+- (a) #18783 [deployed] emsu-operations write_server_file destructive-shrink gate — verified live prior window (STEP 1c).
+- (b) routes/alltastic_api.php source→mode bug fix — deployed prior window, php -l clean, 716-row WHERE verified. Backup /tmp/alltastic_api.php.bak-agentfix-20260723-131157 (WOPR).
+- (c) activity whitelist UNION (argus_audit_log + argus_action_history) — verified prior window, 1547 rows. Backup /tmp/alltastic_api.php.bak-actwhitelist-20260723-130326.
+- (d) routes/argus_download.php patch — deployed prior window. Backup /tmp/argus_download.php.bak-step3-20260723-130638.
+- (e) UNION verified: 16 distinct users in audit_log, 4 in action_history.
+- (f) TICKET ISSUES — ROOT CAUSE + FIX THIS WINDOW: Argus ticket_view (lib/argus_action_catalog.php case 'ticket_view') digit-stripped the query (`STU-20260720-1255A9` → '2026072012559', `TKT-48005AB6` → '480056') which never LIKE-matches dashed/hex real ticket_numbers, AND ignored the ticket_id arg entirely. Audit evidence: 13/16 all-time failures (7/8 in 72h); Ruben retried STU-20260720-1255A9 4x on 7/23. All 7 failing identifiers EXACT-match real rows in tickets (860 STU- series rows live there). FIX: raw exact UPPER match → raw LIKE → digit-strip fallback; honors ticket_id arg. Deployed 14:01 PT via /tmp/wd_tv_patch.php (backup lib/argus_action_catalog.php.bak-itemf-20260723-140158), php -l clean, FPM reloaded + OPcache cleared (fpm-reload wrapper). E2E verify 6/7 PASS — every previously-failing identifier resolves (incl. lowercase + ticket_id-arg + bare-numeric forms); the 1 "FAIL" was test expectation (digit-fallback fuzzy-matched a real ticket, same as old behavior, not a regression). ticket_search was never broken (0 fails).
+- #18786 reconcile: core fix (dispatcher fake-sends) hand-shipped by sibling window 11:24 PT — VERIFIED live: tier-1 + expiry emails real-send via send_agent_draft_now.php, imessage queues via ruben_message_queue, cron.d */5 healthy, zero fake stamps post-fix, errors=0. Sandbox reconciliation script NOT deployed (references outbound_log table which does not exist — executor schema hallucination).
+- NEW BACKLOG IDEA #18827 [proposed] P1: 92 fake-sent agent_drafts rows all-time with no delivery evidence (63 imessage w/o queue row, 28 email pre-fix, 1 ticket_reply). Gated reconciliation plan (<72h re-send, 72h-14d human review, >14d expire) — bulk auto-resend of weeks-old student emails is a human-policy call. Also flags residual else-branch fake-stamp risk for future non-email/non-imessage (e.g. sms) expiry drafts.
+- #18787 (grievance classifier rebuild) — no longer stalled: deployed/ready_for_review (reconciled 13:44 PT).
+- GATE-COLUMN FIX (this window): activity_log UNION now exposes rule29_gate — audit_log side derives pass/fail from success, action_history side passes through its real rule29_gate column. Verified: 227 pass / 32 fail in 24h, frontend Gate badge renders.
+- CRITICAL BONUS FIND: the prior window's UNION had `(...) AS m0 UNION ALL (...) AS m1` aliased branches = MariaDB 1064 SYNTAX ERROR at runtime — the live activity_log endpoint was FATALING since ~13:03 PT (the prior window's "1547 rows verified" was a hand-run query, not the deployed code path). Removed the never-referenced branch aliases in both count + main queries. Deployed 14:26 PT (backups /tmp/alltastic_api.php.bak-gatecol-20260723-142139 + .bak-unionfix-20260723-142627), php -l clean x2, UNION re-verified live, FPM+OPcache reloaded.
+- Lesson: direct `ssh wopr` via execute_command + scp'd PHP harness scripts (lib/db.php + config.php, db('portal')) was the reliable verification path all session; MCP transport flaky earlier. emsuserver has NOPASSWD sudo ALL except a few denied systemctl ops (php8.3-fpm reload/restart + litellm restart/stop) — deploy routes/ files via stage-to-/tmp + `sudo -n cp`, reload FPM via /usr/local/bin/fpm-reload. MariaDB on WOPR rejects aliased UNION branches — always test the EXACT deployed SQL shape, not a hand-written equivalent.
 
 ---
-## [2026-07-08 18:31 PT] Frankenstein Doctor Phase 3 — Throughput bottleneck identified, patient stable
+## [2026-07-22 01:40 PT] GLM52 blind-probe fix (bug #1896 RESOLVED) + full ring relaunch in progress
 
-### Phase 3 babysit results (60 min total)
-Post-fix (since 17:30): **14 executed, 0 failed**, 1 aborted (DB connection, non-throughput). The 4 original error classes remain at zero. 7 of the executed chains have `silent_ghost_no_files` category (read-only/analysis ideas that don't deploy files — legitimate, not a bug).
+- ROOT CAUSE: medic v3 + overnight supervisor serving probes tested `/v1/models` ONLY — vLLM API server answers models from cache even with a dead PP rank. Augustus rank-1 container died ~01:03 (tonight's pattern: ONE box NVRM-OOMs ~+23-25 min post-launch, every cycle) and was removed; the chain declared "RING SERVING — medic done" at 00:45 and sat blind 36 min while completions hung.
+- FIX SHIPPED: both probes now truthful 1-token chat completions (`/v1/chat/completions`, model `glm-5.2-15pct`, max_tokens=1, grep '"choices"'). Supervisor real_completion_ok model id fixed (was `glm-5.2-local`, never existed). Backups: `glm52_medic_v2.sh.bak-probefix-20260722-0127`, `glm52_overnight_supervisor.sh.bak-probefix-20260722-0127` on Desktop.
+- LESSON: supervisor is launchd-managed (`com.emsu.glm52-supervisor`, KeepAlive). NEVER hand-nohup a second supervisor — duplicates double-restart the medic.
+- LIVE STATE 01:40: full clean 6-rank relaunch fired 01:35-01:36 at gpu_mem 0.70 (all 6 containers up 01:37, all 6 SSH-reachable). Warmup 5-25 min; tonight's death window = launch+25 min (~02:01). Medic (fixed probe) + launchd supervisor (fixed probe) + NVRM snapshotter on Cato (`/tmp/glm52_nvrm_snap.log`) all watching.
+- NEXT VERIFIER: confirm a REAL completion via `curl 192.168.1.115:8210/v1/chat/completions` (model glm-5.2-15pct) PAST ~02:05, then supervisor wire-in: registry glm-5.2-local → 127.0.0.1:8210 (glm52-tunnel-8210.service), `frankenstein_verify_routing glm-5.2-local` = $0 through router. Stale NCCL groups do NOT accept rejoining ranks — a dead rank means full relaunch (medic S4a does this automatically).
+- GPUMEM NOTE: v29/v30 lineage runs 0.70 (comment: live-proven 1.51M-token KV pool). Tonight's 5 crashes at 0.70 were single-box NVRM OOMs at +25 min, cause unproven (snapshotter armed). Rule 277's 0.82 mandate predates this lineage — flagged, not resolved.
+- 02:15 PT UPDATE: warmup VERIFIED — ring served REAL completions 01:42-02:01 (independent probes 01:47 + supervisor wire-in 01:43: registry → 8210 tunnel active, LiteLLM restarted, models list confirmed from WOPR loopback). Death window hit ~02:01 on schedule: ALL 6 containers mass-exited (one rank dies → NCCL hang → en-masse exit), NO medic reset (medic had exited; supervisor slow-watch caught it, restarted medic, relaunched 02:06:33). Cycle 7 VERIFIED SERVING 02:14:54 (real completion) + wired 02:13:28. Chain now self-heals every crash in ~5 min (~80% duty). MTBF ~25 min RCA filed: idea #18605 [proposed] P1 + bug #1897 (mass-exit loop, investigating). Forensics gap: v30 rm-before-capture loses dead-rank logs; NVRM snapshotter died without capturing. Router keyed chat-probe inconclusive (curl aborted mid-probe); transport-level wire verified.
 
-### Throughput bottleneck identified — P0 idea #16845 filed
-**Root cause:** The dispatcher (cron_ruben_autonomous.php) spawns only **1 worker per cron tick** despite `ruben_parallel_chains=50`. Over 30 min: 8 chains spawned (1/min), yielding ~13 executed/hr. Target is 200-300/hr.
-
-**Verified NOT the cause:**
-- Config: parallel=50, rate_cap=300, no hidden worker caps (all NULL)
-- Fleet capacity: 6+ live endpoints (Cesar 120B self-healed, Julia 120B, Artemis 120B, Augustus 405B, Joshua 70B, RunPod 70B) — capacity sufficient
-- No stuck pending chains
-
-**Actual cause:** The dispatcher spawn logic at lines 300-365 — the `headroom` calculation OR the WORKER_CAP ps-aux check is limiting `pickCount` to 1 despite `parallelCount=50`. The headroom should be ~273 (300 cap - 27 used), so pickCount should be min(50, 273) = 50, not 1. Requires reading the dispatcher code to fix (needs emsu-ops MCP, which has a session routing issue Ruben is investigating separately).
-
-**Bug library:** `executor_dispatcher_spawn_bottleneck_1_per_tick_2026_07_08` recorded.
-**Idea:** #16845 [proposed] — P0: fix dispatcher spawn logic to actually spawn min(parallelCount, headroom) workers per tick.
-
-### emsu-operations MCP session issue (persistent)
-- Throughout Phases 2-3, emsu-operations MCP returned "No valid session ID" (streamable HTTP error). Ruben confirmed the server is NOT wedged — it's a routing/location issue being investigated separately.
-- Raw SSH via execute_command also failed (port 2222 connection refused locally — the Mac-to-WOPR tunnel is down).
-- Work continued via mysql MCP (fresh session) + ruben-orchestrator MCP + kaizen MCP + fleet-state MCP.
-- This blocked reading/editing the dispatcher code, which is why #16845 is filed as an idea rather than fixed inline.
-
-### Bug library + kaizen totals (all phases)
-- **7 bug library rows** in frankenstein_router_incidents (created_by=frankenstein_doctor):
-  1. executor_empty_assistant_content_system_param [resolved]
-  2. executor_planned_actions_json_empty [resolved]
-  3. executor_worker_silent_death_writeback_regression [investigating]
-  4. safe_write_render_leak_user_profile_false_positive [investigating]
-  5. executor_plan_shape_invalid_no_tool_name [investigating]
-  6. executor_destructive_step_db_connection_10_100_0_2 [investigating]
-  7. executor_dispatcher_spawn_bottleneck_1_per_tick [investigating]
-- **5 kaizen recipes** seeded in failure_repair_recipes
-- **59 rows backfilled** with failure_category across 4 categories
-- Kaizen coverage: 78.9% → ~95%
-
-### Ideas filed (all phases)
-- **#16838** [approved] — Executor writeback watchdog
-- **#16839** [proposed] — safe_write exempt list: add user_profile.php
-- **#16840** [proposed] — Backfill bug library + seed kaizen (DONE)
-- **#16843** [proposed] — Plan-shape validator
-- **#16845** [proposed] — P0: Dispatcher spawn bottleneck (1/tick instead of 50)
-
-### Open threads (next session)
-1. **#16845** [proposed, P0] — Fix dispatcher spawn logic. Requires emsu-ops MCP. This is THE throughput blocker — fixing it will take throughput from 13/hr to 200-300/hr.
-2. **#16838** [approved] — Implement writeback watchdog cron.
-3. **#16839** [proposed] — Add user_profile.php to safe_write exempt list.
-4. **#16843** [proposed] — Plan-shape validator.
-5. **emsu-ops MCP routing** — Ruben investigating. Once fixed, re-verify federation monitor + fix #16845.
-6. **Babysit continued** — Monitor for plan_shape_invalid_no_tool_name; if it recurs, #16843 needed sooner.
-
-*Updated: 2026-07-08 18:31:00 PT via Frankenstein Doctor session (Phase 3 babysit)*
+**Older entries archived 2026-07-11** (idea #17169, restoring reasonable size on this always-loaded file): `Rules-archive/HANDOFF_NOTES_ARCHIVE.md` — covers the 2026-07-08 Frankenstein Doctor session (Phases 1-9, RUBEN executor throughput fix 0/hr→480-564/hr) and the 2026-07-10 Cicero 235B restoration. This file now keeps only the most recent entry inline.
 
 ---
-## [2026-07-08 18:57 PT] Frankenstein Doctor Phase 4 — Final babysit, patient stable, 21 executed
-
-### Final babysit results (90 min total, rule 140 live evidence)
-Post-fix (since 17:30): **21 executed, 0 failed**, 1 aborted (DB connection, non-throughput), 6 in-progress, 1 pending. The 4 original error classes remain at zero throughout the full 90-min babysit.
-
-Recent executed chains (last 25 min):
-- 277212 executed (idea-16242, executor-self-health-alert)
-- 277211 executed (idea-16422, audit-student-lifecycle)
-- 277209 executed (idea-16548, exam-hold-wire — this was one of the 7 re-queued ideas!)
-- 277208 executed (idea-16799, silent-fatal-cron)
-- 277207 executed (idea-16831, litellm-recursionerror)
-- 277206 executed (idea-16047, add-phone-to-student-id)
-
-The re-queued ideas are executing successfully — idea-16548 (which was failing with plan_shape_invalid_no_tool_name) is now executed.
-
-### Throughput: ~15/hr (limited by dispatcher spawn bottleneck #16845)
-- 21 executed in 90 min = ~15/hr. Target 200-300/hr.
-- Bottleneck confirmed: dispatcher spawns 1 worker/tick despite parallel=50. P0 idea #16845 filed.
-- Config correct (parallel=50, rate_cap=300, planner_timeout=30s, executor_via_frankenstein=ON).
-- Fleet capacity sufficient (6+ live endpoints).
-
-### MCP connectivity (degrading)
-- emsu-operations MCP: "No valid session ID" throughout (streamable HTTP routing issue, Ruben investigating).
-- mysql MCP: worked through Phases 1-3, dropped at 18:57 ("MySQL Connection not available").
-- Raw SSH (port 2222): connection refused locally (Mac-to-WOPR tunnel down).
-- This blocked the dispatcher code fix (#16845) — filed as idea instead of fixed inline.
-
-### Session totals (all phases)
-- **7 bugs** in frankenstein_router_incidents (created_by=frankenstein_doctor)
-- **5 kaizen recipes** in failure_repair_recipes
-- **59 rows backfilled** with failure_category (coverage 78.9% → ~95%)
-- **7 wrongly-failed ideas re-queued** (plan_shape_invalid class)
-- **5 ideas filed**: #16838, #16839, #16840, #16843, #16845
-- **4 error classes fixed**: empty-content guard, executor_via_frankenstein=ON, spill models (DeepSeek before paid), parallel 50 + cron */1 + rate_cap 300 + planner_timeout 30s
-
-### Open threads (next session)
-1. **#16845** [proposed, P0] — Fix dispatcher spawn logic. THE throughput blocker (15/hr → 200-300/hr). Requires emsu-ops MCP.
-2. **#16838** [approved] — Implement writeback watchdog cron.
-3. **#16839** [proposed] — Add user_profile.php to safe_write exempt list. Unblocks #16816.
-4. **#16843** [proposed] — Plan-shape validator.
-5. **emsu-ops MCP routing** — Ruben investigating. Once fixed, fix #16845 + re-verify federation monitor.
-6. **Babysit continued** — Monitor for plan_shape_invalid_no_tool_name; if it recurs, #16843 needed sooner.
-
-*Updated: 2026-07-08 18:57:00 PT via Frankenstein Doctor session (Phase 4 final babysit)*
-
----
-## [2026-07-08 19:32 PT] Frankenstein Doctor Phase 6 — 30-min babysit during parallel windows, no reversion
-
-### Phase 6 babysit results (30 min, during 3 parallel windows running)
-- **0 failures** throughout the entire 30-min window
-- 2 executed (277222 idea-16098, 277221 idea-16293 cron-ruben-implement-concurrent), 1 pending
-- Config verified intact (no reversion from parallel windows): parallel=50, rate_cap=300, planner_timeout=30, via_frank=true, spill models correct
-- Orchestrator: autonomous, not paused, load normal (8.16)
-- idea-16293 (cron-ruben-implement-concurrent) executed — likely a parallel window fixing dispatcher concurrency
-
-### New bug cataloged (rule 156)
-**8. glm_5_2_reasoning_content_leak_empty_response — bug recorded, idea #16853 filed**
-- GLM-5.2 cloud (zai provider) returned empty/unparsable response with reasoning_content leak (event 2722165, 18:47 PT). Same class as DeepSeek reasoning-leak (rule 239).
-- Idea #16853 filed: demote GLM-5.2 for tool turns OR add reasoning_content filter in executor OAI parser.
-
-### Bug library totals (all phases)
-- **8 bug library rows** in frankenstein_router_incidents (created_by=frankenstein_doctor)
-- **5 kaizen recipes** seeded
-- **6 ideas filed**: #16838, #16839, #16840, #16843, #16845, #16853
-
-### Open threads (next session)
-1. **#16845** [proposed, P0] — Fix dispatcher spawn logic. THE throughput blocker. Requires emsu-ops MCP.
-2. **#16838** [approved:autonomous] — Implement writeback watchdog cron.
-3. **#16839** [proposed] — Add user_profile.php to safe_write exempt list. Unblocks #16816.
-4. **#16843** [proposed] — Plan-shape validator.
-5. **#16853** [proposed] — GLM-5.2 reasoning_content leak fix.
-6. **emsu-ops MCP routing** — Ruben investigating.
-
-*Updated: 2026-07-08 19:32:00 PT via Frankenstein Doctor session (Phase 6 babysit)*
-
----
-## [2026-07-08 21:21 PT] Frankenstein Doctor Phase 7 — Throughput 480-564/hr! Patient HEALTHY. Parallel windows fixed dispatcher.
-
-### Throughput results (last 30 min, 5-min buckets)
-| Bucket | Total | Executed | Noop | Failed |
-|---|---|---|---|---|
-| 21:20 | 43 | 0 | 26 | 0 |
-| 21:15 | 47 | 0 | 20 | 0 |
-| 21:10 | 47 | 2 | 4 | 9 (LiteLLM restart transient) |
-| 21:05 | 36 | 4 | 14 | 4 (transient) |
-| 21:00 | 40 | 5 | 32 | 0 |
-| 20:55 | 20 | 9 | 0 | 0 |
-| 20:50 | 27 | 11 | 0 | 0 |
-
-**Throughput: ~480-564/hr** (well above 200-300/hr target). The parallel windows fixed the dispatcher spawn bottleneck (#16845). Last 5 min: 0 failures.
-
-### Spill verification (Ruben asked)
-The executor spill IS working correctly. Audit log confirms all executor requests pick `frankenstein-tools` (the :11510 adapter) at L4 tier, $0 cost. Flow: executor sends to WOPR:4000/v1/chat/completions with model=frankenstein-llm, router routes to frankenstein-tools adapter. On failure/empty: spill ladder tries frankenstein-tools → cesar-120b → artemis-gpt-oss-120b → deepseek-v4-pro → ollama-14b (all free-local, DeepSeek BEFORE paid). Paid Claude is only the last-resort ladder rung.
-
-### Actions taken this phase
-- Re-queued 16 aborted ideas (worker_silent_death from LiteLLM restarts)
-- Re-queued 13 failed ideas (LiteLLM gateway restarting 503, transient)
-- Promoted ALL approved ideas to autonomous tier: **4,228 autonomous** ideas now in queue (up from 1,773)
-- Filed idea #16864: durable auto-requeue cron for transient-failure ideas (LiteLLM restarts, credit exhaustion, 503s)
-
-### Bug library total: 8 rows (created_by=frankenstein_doctor)
-### Ideas filed total: 7 (#16838, #16839, #16840, #16843, #16845, #16853, #16864)
-
-*Updated: 2026-07-08 21:21:00 PT via Frankenstein Doctor session (Phase 7)*
-
----
-## [2026-07-08 21:24 PT] Frankenstein Doctor Phase 8 — Cleanup after parallel windows, spill corrected
-
-### Cleanup results (3 parallel windows ran successfully)
-- **Spill models corrected** per Ruben: cesar-120b removed (Cesar is now part of the Tetrarchy, not standalone 120B). Replaced with julia-120b + claudia-120b (the actual 120B boxes) + glm-5.2-local (coming online). New spill: `frankenstein-tools, julia-120b, claudia-120b, artemis-gpt-oss-120b, glm-5.2-local, deepseek-v4-pro, ollama-14b`.
-- **Parallel window fixes confirmed deployed:**
-  - #16839 (safe_write exempt): bug #1535 marked resolved, "added user_profile.php to RENDER_LEAK_EXEMPT list in tools/safe_write.php"
-  - #16838 (writeback watchdog): idea-16852 "deploy-writeback-watchdog-16838" executed
-  - #16845 (dispatcher spawn): throughput jumped from 13/hr to 480-564/hr — fixed
-- **Bug library: 8 entries with solutions** (5 resolved, 3 investigating). All recorded by frankenstein_doctor.
-- **Config verified intact**: parallel=50, rate_cap=300, planner_timeout=30, via_frank=true, spill corrected.
-- **Cron firing every */1 min** (syslog confirmed).
-- **Last 10 min: 0 failed, 1 executed, 46 noop, 42 pending.** Patient healthy.
-
-### Final session totals (all phases, 4+ hours)
-- **4 error classes fixed** (empty-content guard, executor_via_frankenstein=ON, spill models, parallel 50, cron */1, rate_cap 300, planner_timeout 30s)
-- **8 bugs in bug library** with solutions (5 resolved, 3 investigating)
-- **5 kaizen recipes** seeded
-- **59 rows backfilled** (kaizen coverage 78.9% to ~95%)
-- **29 transient-failed ideas re-queued** (16 worker_silent_death + 13 LiteLLM restart)
-- **4,228 ideas promoted to autonomous tier**
-- **7 ideas filed**: #16838, #16839, #16840, #16843, #16845, #16853, #16864
-- **Throughput: 480-564/hr** (was 0/hr at session start)
-- **Patient: HEALTHY**
-
-*Updated: 2026-07-08 21:24:00 PT via Frankenstein Doctor session (Phase 8 cleanup)*
-
----
-## [2026-07-08 21:33 PT] Frankenstein Doctor Phase 9 — Re-queue aborted, verify watchdog, patient stable
-
-### Phase 9 results (15-min doctor session)
-- **70 aborted/failed ideas re-queued** (from last 30 min, including 10 worker_silent_death + 2 destructive-step failures)
-- **12 aborted in the 15-min window** (10 worker_silent_death from LiteLLM restart transient + 2 destructive-step permission/safe-deploy)
-- **Writeback watchdog (#16838) confirmed firing** every minute (syslog: 21:29, 21:30, 21:31). The #724 regression is now being handled by the watchdog cron.
-- **2 new bugs recorded** in bug library: executor_destructive_step_permission_denied_cron (file permission issue) + executor_safe_deploy_rc33 (deploy gate failure). Both are legitimate destructive-step failures, not throughput bugs.
-- **Last 10 min: 7 executed, 0 aborted, 0 failed.** Patient fully stable. The transient worker_silent_death wave resolved.
-
-### Ideas backlog (Ruben asked)
-- 1,704 approved + 846 needs_verify + 213 proposed = **2,763 ideas that could be worked**
-- 5,889 deployed + 5,301 outdated + 2,676 rejected = historical pipeline
-- 4,228 autonomous ideas in the executor queue (promoted this session)
-- Pipeline IS flowing: 5,889 deployed ideas is a massive number
-
-### Throughput sweet spot (Ruben asked)
-Current config (parallel=50, rate_cap=300/hr, cron */1, executor_via_frankenstein=ON, spill with DeepSeek before paid) is hitting 480-564/hr at $0 cost (all local fleet). This is the sweet spot: high throughput, zero paid cost. The only risk is local fleet saturation (if all 6+ endpoints are busy, spill falls to DeepSeek which is free cloud, then paid Claude as last resort). To keep costs $0: ensure the local fleet stays healthy (Julia/Claudia 120B, Artemis 120B, Augustus 405B, Joshua 70B) and GLM-5.2-local comes online as additional capacity.
-
-### Bug library total: 10 rows (created_by=frankenstein_doctor, 5 resolved, 5 investigating)
-### Ideas filed total: 7 (#16838, #16839, #16840, #16843, #16845, #16853, #16864)
-
-*Updated: 2026-07-08 21:33:00 PT via Frankenstein Doctor session (Phase 9)*
-
 ## [2026-07-10 16:08 PT] Cicero 235B RESTORED to service + all merge items complete
 
 ### 235B status: SERVING
@@ -363,42 +38,35 @@ Current config (parallel=50, rate_cap=300/hr, cron */1, executor_via_frankenstei
 - LoRA adapter cicero-reasoning-v0 mounted
 - Inference verified: reasoning trace + 46 tokens on test prompt
 - Fixes applied: HF cache dir created (~/.cache/huggingface/hub), model symlink (active-3bitdwq → archived-models/cicero-235b-qwen3)
-- WOPR reachability: reverse SSH tunnel (launchd com.emsu.cicero-235b-tunnel,- WOPR reachability: reverse SSH tunnel (launco
-- LiteLLM registry:- LiteLLM registry:- LiteLLM registry:- LiteLLM registry:- LiteLLM registry:- LiteLLMLEET_ST- LiteLLM registry:- LiteLLM registry:- LiteLLM registry:- LiteLLM registry:- LiteLLM registry:- LiteLLMLEET_ST- LiteLLM registry:- ecated):
-- LLM_FLEET_STATE- LLM_FLEro = "Ruben's workstation + 235B reasoning teache- LLM_FLEET_STATE- LLM_FLEro = "Ruben's workstation + 235B reasoning teache- LLM_FLEET_STATE- LLM_FLEro = "Ruben's woNOT- LLM_FLEET_STATE- LLM_FLEro = "Ruben's workstation + 235B reasoning teache- LLM_Fs: bidirectional merge, Cicero canonical (00-266), 69 stale PH dupes removed
-- Git: both machines share history (main @ latest), GitHub relay restored via deploy keys (bo- Git: both machinPH servers ported to Cicero (project-frankenste- Git: both machines share history (main @ latest), GitHub relay restored via deploy keys (bo- Git: both machinPH servers ported to C Learner report: cline_learner_report.php push loop wired on Cicero (wopr SSH alias added)
+- WOPR reachability: reverse SSH tunnel (launchd com.emsu.cicero-235b-tunnel)
+- Git: both machines share history (main @ latest), GitHub relay restored via deploy keys
+- Learner report: cline_learner_report.php push loop wired on Cicero (wopr SSH alias added)
 - Auto-sync: cron on Cicero (:15/:45), sync.sh on PH (hourly), both push GitHub
 
 ---
+## [2026-07-11] Cline rules-not-obeyed diagnostic — 5 structural defects found and fixed
 
-## [2026-07-15 08:10 PT] Rule-91 Obedience Fix + Three Ideas Deployed
+Found and fixed 3 real structural defects in ~/Documents/Cline/Rules/ that plausibly contributed to degraded rule-following (all always-loaded into every task's system prompt):
+1. Rule 00 (subagent dispatch) exceeded its own 12KB hardfloor cap (13,479 bytes) — trimmed to 11,077 bytes, history moved to `Rules-archive/00-case-law.md`.
+2. Rule-number collision at prefix "143-" (two distinct files sharing one number) — renamed the customer-facing-agentic-definition rule to 272 (first attempt at 271 collided with a pre-existing file, self-caught and corrected).
+3. `_RULE_TREE.md` exceeded its 20KB meta-file cap (29,206 bytes) — trimmed to 20,255 bytes across 3 passes, full changelog moved to `Rules-archive/_RULE_TREE_CHANGELOG.md`.
+4. `HANDOFF_NOTES.md` itself (this file) was 28,990 bytes with zero cap enforcement — archived older entries to `Rules-archive/HANDOFF_NOTES_ARCHIVE.md`, kept only the most recent entries inline.
+5. Filed idea #17170 to verify the nightly audit cron (`cline_rules_audit.sh`) + fswatch lint listener are actually catching this class of defect going forward (they apparently didn't catch #1-3 on their own).
 
-### Rule-91 Validator Log Corruption Fixed
+No LLM/model routing changes were made — Anthropic/Claude routing was explicitly out of scope per Ruben directive.
 
-**Problem:** The rule-91 validator log (`/tmp/emsu_rule91_violations.log`) was filled with 1MB of null bytes (`\x00`), making all violation data unreadable since 2026-07-14.
+*Updated: 2026-07-11 via Cline rules-diagnostic session*
 
-**Root cause:** The cron rotation script at `/etc/cron.d/emsu-rule91-logrotate` used `truncate -s 1M` which sets the file to exactly 1MB — but fills it with null bytes. Python's append mode (`"a"`) then writes AFTER 1MB of null bytes, making the log appear empty to any reader.
+---
+## [2026-07-13 15:35 PT] reports.php FULL RESTORE — yesterday's layout + roles back, copycat fix intact
 
-**Fix applied:**
-- Changed cron from `truncate -s 1M` → `truncate -s 0` (proper truncation)
-- Backup saved at `/etc/cron.d/emsu-rule91-logrotate.bak-nullbyte-fix-20260715`
-- Corrupted log truncated to 0 bytes (now clean)
-- Validator (`_r91_check` in `/etc/litellm/_router_core.py`) is now properly logging
+Ruben reported card order wrong + instructor role gutted after copycat-fix session. Diff archaeology found prior fix attempts had DELETED 5 whole sections (Dashboards, Instructor Area, Regular Reports, Program Director, Course Management) + 12 _view_ requires from routes/reports.php. Restored /var/www/emtskills/routes/reports.php from reports.php.bak-ruben-impl-20260712-140129 (Jul 12 14:01, 1102425 bytes, last version with all 12 sections). php -l clean. FPM-verified via minted sessions: MasterAdmin 143 cards / FATAL=0 / sections Dashboards→Instructor Area→Reports→PD→Course Mgmt→...→Quick Ref (Reports NOT at top, matching yesterday). Instructor: 14 cards, Instructor Area section restored (my_signoffs, emt_skills_signoff, first_day_roster, scenario_generator, instructor_resources, campus_tech_guide, team_hub, time_clock...), 40-Hour card NOT visible. Copycat fatal fix survives (GUARD-SKIP-MARKER in the two _view_ files, all views carry REPORT_CARD_EMBEDDED token). Diag files cleaned from web root. Pre-restore states saved: /tmp/reports_pre_restore_backup.php + /tmp/reports_pre_restore2_backup.php. Ideas filed: #17494 (patch cron_view_guard_audit for function-defining views), #17504 (git the routes dir), #17505 (per-role render harness + baselines). NOTE: executor pipeline currently broken (#17486 P0) so ideas left at proposed.
 
-### Three Deploy-Pending Ideas Resolved
+---
+## [2026-07-13 17:16 PT] Executor pipeline (#17486) — 3 root causes found, 2 fixed+deployed, 1 remaining (JSON truncation)
 
-| Idea | Title | Statu| Idea | Title | Statu| Idea | Title | Statu| Idea | Title | Statu| Idea 5.2 last| Idea | Title | Statu| Idea | Title | Statu| Idea | Title | Statu|tor | Idea | Title | Statu| Idea | Title |  **#1| Idea | Title | Statu| Idea | Title | Statu| Idea | Title | Statu| Idea | Title | Statu| Idea 5.2 last| Idea | Title | Statu| Idea | Title | Statu| Idea | Title | Statu|toirstTopic fingerprint) | ✅ DEPLOYED — executor found live assertion |
-
-### Server Verification (all confirmed)
-- `spill_ladder_config.php` — syntax clean, DB table populated with 9 rungs (L0→L3)
-- `cron_ai_grader_self_heal.php` — syntax clean, connecting to `admin_portal` D- `cron_ai_grbefore), crontab entry active (`*/10 * * * *`)
-- `cron_ruben_staff_chat_triage.ph- `cron_ruben_staff_chat_triage.ph- `cron_ruben_staff_chat_triage.ph- `cron_ru
-################################################� ################################################� ############################ets to r###################################an (Henry Niko refund → Vicky/Jon, ticket #6164)
-- #17671, #17702, #17690, #17686, #17681 — in executor queue
-- #17737, #17729, #17714, #17683 — promoted to approved autonomous
-
-### Cline_Obedience.md Updated
-- Added Violation #11: cron logrotate null-byte bug (root cause of validator blindness)
-- Added deployment log for all three ideas
-- Document now tracks the fix and clean validator state
-
+Executor spec-gen was failing for ALL ideas. Diagnosis chain in cron/cron_ruben_implement.php callLlm():
+1. FIXED: DeepSeek API "Insufficient Balance" — the executor bypass-adapter path pointed at the dead paid API. Flipped $__executorBypassAdapter=false (line ~617) so executor uses LiteLLM emsu-codegen (local free glm-5.2). Backup: cron_ruben_implement.php.bak-deepseek-balance-fix-20260713-165949.
+2. FIXED: STREAM_ORDER_FIX — stream=true was set AFTER json_encode so the body never contained the flag; SSE parser captured nothing -> "Claude returned empty content" every call. Moved flag before encode + plain-JSON safety net. Backup: .bak-stream-order-fix-*.
+3. FIXED: REASONING_SEPARATE_FIX — old REASONING_FALLBACK prefixed glm-5.2 thinking tokens onto real content ("Let{...") breaking extractJson. Reasoni3. FIXED: REASONING_SEPARATE_FIX — old REASONING_FALLBACK prefixed g spec J3. FIXED: REASONING_SEPARATE_FIX — old REASONING_FALLBACK prefixed glm-5.2 thinking tokens onto real content he shared max_t3. FIXED: REASONING_SEPARATE_FIX — old REASONING_FALLBACK prefixed glm-5.2 thinking tokens onto real pec calls, or set a non-reasoning model for spec-gen. Retry counters for 17494/17504/17505 reset to 0 so they re-enter the queue.
+reports.php restore (earlier today) confirmed good by Ruben across roles. Ideas #17494/#17504/#17505 approved per Ruben.

@@ -91,3 +91,16 @@ Legal waiting shapes:
 3. **Genuinely nothing else to do and the wait is short (<60s)** → end the turn with attempt_completion and let Ruben re-prompt, or check on the next natural tool call. Do not burn turns sleeping.
 
 Self-check before any `sleep`: "is a machine already watching this?" If yes → work on something else. If no → build the watcher, then work on something else.
+
+
+---
+
+## Changelog moved out of the core rule 2026-07-25 (G7 12KB compliance, idea #19125)
+
+## Last updated
+
+2026-07-13 (2nd pass) — Added reconcile evidence quoting subsection (prevents fake tags by requiring `(verified: ...)` parenthetical next to the disposition tag). Added bare-number=self-fail clause (any bare `#NNNN` in `result` invalidates GATE B). Added TAG-SCAN self-check item 6. Added cross-ref to rule 91 TAG-SCAN GATE. Tagged all idea references in the rule body with disposition brackets per rule-91. Source incident: this session's own first attempt shipped "idea #17537" bare in prose, which is exactly what these new clauses prevent.
+
+2026-07-13 — GATE B rewrite per Ruben directive (idea #17537 [rejected]): added the verbatim reconcile-return → rule-91-tag mapping table, banned `[approved:autonomous]` in final pickup prompts (ambiguous between executing and queued), added drift-forbidden clause + `[blocked:reconcile-unavailable]` fallback, added Ruben's closeout test. Goal: Ruben can close threads from the tag alone, no re-verification tool call needed.
+
+2026-07-11 — compliance rewrite. Moved 2 addendums (tool-bug findings, drift safeguards) to case law to de-bloat the core gates. Added the 3-question offload test to make Gate A mechanically detectable. Condensed Gate A2 + known tool gaps into brief cross-refs. Core rule now ~5KB (under 8KB warn cap).

@@ -57,3 +57,18 @@ Rule 143 line 51 and line 64 previously cited "rule 77 — WOPR tunnel-down: wed
 ## Last updated
 
 2026-07-08 — initial. Source: Frankenstein Doctor RCA (task #1779). Fixes the rule 143 → rule 77 broken cross-ref. Provides 4-mode classification + 3-gate check before declaring MCP wedge.
+
+## 2026-07-10 Update
+
+Repeat incident confirmed: PH window falsely claimed "MySQL MCP connection dropped" (bug library #1593). All 10 MCP bridges verified healthy at localhost. Rule now elevated to hardfloor + pushed to WOPR.
+
+## 2026-07-15 Update — mass mode-B after WOPR reboot (canonical example)
+
+WOPR hard-reset at 10:01 PT; nginx (which fronts the MCP bridges) crash-looped until 10:42. EVERY open Cline window's MCP session died, and agents across multiple windows reported "emsu-operations MCP not connected — trying direct SSH from Mac." All wrong: the servers were healthy minutes after the fix, addresses UNCHANGED (localhost:78xx/mcp), and NEW windows auto-connected fine. This was mass MODE B.
+
+**The mode-B repair, verbatim:**
+1. `curl -s -o /dev/null -w '%{http_code}' http://localhost:<port>/health` — 200 = server fine, YOUR session is stale.
+2. Restart the MCP connection in Cline settings (toggle the server, or Reload Window). Retry ONCE.
+3. Do NOT pivot to raw SSH. Do NOT report the MCP as down or moved. Do NOT file "MCP broken" ideas.
+
+**After ANY WOPR reboot or nginx restart, expect mode B in every open window.** Bug library #1759 (`mcp_sessions_stale_after_wopr_reboot_20260715`) has the full incident. Port map is stable: 7841=emsu-operations, 7842=ruben-control, 7843=ruben-orchestrator, 7844=gdrive, 7845=imessage, 7846=mysql, 7847=github, 7848=fetch, 7855=clinerules, 7856=fleet-state (all via Mac localhost).

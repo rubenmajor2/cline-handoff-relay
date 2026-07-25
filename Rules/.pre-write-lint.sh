@@ -166,6 +166,19 @@ if [ "$is_hardfloor" = "0" ]; then
     fi
 fi
 
+
+# --- G8 floor-total cap (2026-07-25, idea #19125) ---------------------------
+# The always-loaded Rules/ dir is injected into EVERY window's system prompt.
+# Cline's Xle() compacts a 200K model at 160,000 tokens, so an oversized floor
+# arms auto-condense on turn 1 and can never be disarmed (33-50% of Opus spend
+# went to writing summaries before this gate existed). Block growth past 150KB.
+FLOOR_BYTES=$(find "$RULES_DIR" -maxdepth 1 -name '*.md' -exec cat {} \; | wc -c | tr -d ' ')
+if [ "$FLOOR_BYTES" -gt 153600 ]; then
+    fail "G8 floor-total: Rules/ is $FLOOR_BYTES bytes (>150KB). This is the always-loaded system-prompt floor. Move non-hardfloor content to Rules-archive/ before adding more. See _INDEX.md 2026-07-25 floor trim."
+elif [ "$FLOOR_BYTES" -gt 131072 ]; then
+    warn "G8 floor-total: Rules/ is $FLOOR_BYTES bytes (>128KB warn). Trim soon."
+fi
+
 # --- G1 embed-sim (Jaccard similarity over 4-grams of words) -------------
 # Cheap proxy for "did we just write something paraphrased of an existing rule?"
 # Block at >0.75, warn at >0.55. Skip self.

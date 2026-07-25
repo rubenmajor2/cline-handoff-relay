@@ -18,6 +18,11 @@ import { CallToolRequestSchema, ListToolsRequestSchema, } from "@modelcontextpro
 const BASE = process.env.FRANKENSTEIN_API_BASE ?? "https://www.emsuniversity.com/emtskills/routes/api_fleet_inventory.php";
 const KEY = process.env.FLEET_MCP_KEY ?? "sk-fleet-717a125f0e92faf6a51c3ead2564d99cd4a4101b";
 const FETCH_TIMEOUT_MS = 10_000;
+// idea #18918 (2026-07-24): verify_routing's PHP probe has CURLOPT_TIMEOUT=25 (slow local
+// models can need it). MCP abort at 10s always fired first, returning an uninformative
+// "aborted" instead of the clean PHP JSON. verify_routing gets 40s (> PHP 25s); all other
+// actions keep the 10s STDIO no-hang bound.
+const VERIFY_ROUTING_TIMEOUT_MS = 40_000;
 // ─── Live API fetch (bounded, never hangs) ──────────────────────────────
 async function fleetApi(action, params = {}) {
     const url = new URL(BASE);
@@ -29,7 +34,7 @@ async function fleetApi(action, params = {}) {
             url.searchParams.set(k, v);
     }
     const ctrl = new AbortController();
-    const t = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT_MS);
+    const t = setTimeout(() => ctrl.abort(), action === "verify_routing" ? VERIFY_ROUTING_TIMEOUT_MS : FETCH_TIMEOUT_MS);
     try {
         const r = await fetch(url, { signal: ctrl.signal });
         const text = await r.text();
@@ -294,7 +299,7 @@ const TOOLS = [
     },
     {
         name: "frankenstein_verify_routing",
-        description: "Canonical header probe for a model_id: calls LiteLLM /v1/chat/completions with -D - headers and returns the REAL backend (x-litellm-model-api-base), cost (x-litellm-response-cost), and model id. This is the ground truth per rule 140 — config files and router_hook.py are HYPOTHESES. Use BEFORE stating what model serves a surface. Also probe 'frankenstein-tools' to verify the Roman gpt-oss adapter is live (should return 200 with openai/frankenstein-tools backend). STDIO, live call via fleet API, 10s bound.",
+        description: "Canonical header probe for a model_id: calls LiteLLM /v1/chat/completions with -D - headers and returns the REAL backend (x-litellm-model-api-base), cost (x-litellm-response-cost), and model id. This is the ground truth per rule 140 — config files and router_hook.py are HYPOTHESES. Use BEFORE stating what model serves a surface. Also probe 'frankenstein-tools' to verify the Roman gpt-oss adapter is live (should return 200 with openai/frankenstein-tools backend). STDIO, live call via fleet API, 40s bound for verify_routing (idea #18918 — slow local models exceed 10s).",
         inputSchema: {
             type: "object",
             properties: {
@@ -499,4 +504,4 @@ process.on("unhandledRejection", (e) => {
 });
 const transport = new StdioServerTransport();
 await server.connect(transport);
-console.error("[project-frankenstein-mcp] v0.1.0 connected over stdio (architecture static, tier-health/pod-status/verify-routing/autoscaler live via fleet API, 10s bound)");
+console.error("[project-frankenstein-mcp] v0.1.1 connected over stdio (architecture static, live via fleet API, 10s bound; verify_routing 40s per idea #18918)");

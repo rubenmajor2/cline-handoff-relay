@@ -488,10 +488,113 @@ server.tool("clinerules_reindex", "Rebuild the SQLite + FTS5 index from ~/Docume
             }],
     };
 });
+// ── FIX 2 of #19173: get_rule91_template ────────────────────────────────────
+// Source incident 2026-07-25: ALL 7 rule-91 gate failures in one window came
+// from the model RETYPING the 47-repetition U+2550 divider from memory. Small
+// and mid-size models cannot reproduce a long unicode box-drawing run reliably;
+// they emit ASCII dashes, short runs, or mixed glyphs. Rule 91 says "copy the
+// divider, do NOT retype" but there was nothing to copy FROM at generation time.
+// This tool hands back the exact glyphs, and optionally assembles the whole
+// block so the model never touches a divider at all.
+const R91_DIVIDER = String.fromCodePoint(0x2550).repeat(47);
+server.tool("get_rule91_template", "FIX 2 of #19173. Returns the EXACT rule-91 PICKUP PROMPT skeleton with real 47-char U+2550 divider glyphs, so you copy rather than retype (every observed rule-91 failure came from retyping the divider from memory). Call with no args to get the blank skeleton. Call WITH the field args to get a fully-assembled, gate-passing block you can paste straight into attempt_completion.", {
+    task_id: zod_1.z.string().optional().describe("Real numeric Cline task id or idea id (no placeholders). If omitted you get the blank skeleton."),
+    topic: zod_1.z.string().optional().describe("Short topic line, e.g. 'catch-all idea backlog drive'."),
+    where_we_left_off: zod_1.z.array(zod_1.z.string()).optional().describe("Bullets. Each should carry a #NNNN [disposition] where relevant."),
+    open_threads: zod_1.z.array(zod_1.z.string()).optional().describe("Numbered-item bodies. EACH must contain a real #NNNN [tag] or the literal '(human-only decision, no idea)' marker."),
+    ideas_filed: zod_1.z.array(zod_1.z.string()).optional().describe("e.g. ['#19175 [executing]', '#19176 [queued]']"),
+    files_touched: zod_1.z.array(zod_1.z.string()).optional().describe("Absolute or repo-relative paths, or ['none'] ."),
+    verified_ts: zod_1.z.string().optional().describe("Timestamp string, e.g. '2026-07-25 18:53 PT'."),
+}, async ({ task_id, topic, where_we_left_off, open_threads, ideas_filed, files_touched, verified_ts }) => {
+    if (!task_id) {
+        const skeleton = [
+            R91_DIVIDER,
+            "PICKUP PROMPT (paste into a fresh Cline window)",
+            R91_DIVIDER,
+            "",
+            "Pick up task #<REAL_NUMERIC_ID> - <topic>",
+            "",
+            "Where we left off (verified <TIMESTAMP> PT):",
+            "- <bullet, every #NNNN gets a [disposition]>",
+            "",
+            "Open threads to drive next:",
+            "1. #<id> [disposition] - <action>",
+            "   ...or the single line: None - <reason>",
+            "",
+            "Reference IDs:",
+            "- Ideas filed: #<id> [tag]",
+            "- Files touched: <paths, or none>",
+            "",
+            "When done, append to cline_task_ledger.md per rule 07, run order 66.",
+            R91_DIVIDER,
+        ].join("\n");
+        return {
+            content: [{
+                    type: "text",
+                    text: "RULE 91 SKELETON. Copy the dividers verbatim, they are 47 x U+2550.\n" +
+                        "Tip: call this tool again WITH the field args and it will assemble a gate-passing block for you.\n\n" +
+                        skeleton +
+                        "\n\nHARD BANS: no fake ids (IDEA-001), no bare #NNNN without [tag], no placeholders (#NNNN / <...>), " +
+                        "no em dashes in ops text, the block must live in the `result` parameter (never task_progress).",
+                }],
+        };
+    }
+    const cleanId = String(task_id).replace(/[^0-9]/g, "");
+    const bullets = (where_we_left_off && where_we_left_off.length)
+        ? where_we_left_off.map((b) => (b.trim().startsWith("-") ? b : `- ${b}`))
+        : ["- (no state bullets supplied)"];
+    const threads = (open_threads && open_threads.length)
+        ? open_threads.map((t, i) => `${i + 1}. ${t.replace(/^\d+\.\s*/, "")}`)
+        : ["None - nothing left open."];
+    const filed = (ideas_filed && ideas_filed.length) ? ideas_filed.join(", ") : "none";
+    const files = (files_touched && files_touched.length) ? files_touched.join(", ") : "none";
+    const ts = verified_ts || new Date().toISOString().replace("T", " ").slice(0, 16) + " UTC";
+    const assembled = [
+        R91_DIVIDER,
+        "PICKUP PROMPT (paste into a fresh Cline window)",
+        R91_DIVIDER,
+        "",
+        `Pick up task #${cleanId} - ${topic || "continuation"}`,
+        "",
+        `Where we left off (verified ${ts}):`,
+        ...bullets,
+        "",
+        "Open threads to drive next:",
+        ...threads,
+        "",
+        "Reference IDs:",
+        `- Ideas filed: ${filed}`,
+        `- Files touched: ${files}`,
+        "",
+        "When done, append to cline_task_ledger.md per rule 07, run order 66.",
+        R91_DIVIDER,
+    ].join("\n");
+    // Self-check the assembled block against the same em-dash gate the validator uses,
+    // so we never hand back a block that our own validator will reject.
+    const warn = [];
+    if (/\u2014|\u2015|\u2e3a|\u2e3b/.test(assembled)) {
+        warn.push("WARNING: your supplied text contains em dashes. Rule 01 bans them in ops text. Replace with commas or two sentences.");
+    }
+    const bareIds = [...assembled.matchAll(/#(\d{3,8})\b(\s*\[)?/g)]
+        .filter((mm) => !mm[2]).map((mm) => "#" + mm[1])
+        .filter((v, i, a) => a.indexOf(v) === i && v !== "#" + cleanId);
+    if (bareIds.length) {
+        warn.push(`WARNING: bare idea numbers with no [disposition]: ${bareIds.join(", ")}`);
+    }
+    return {
+        content: [{
+                type: "text",
+                text: (warn.length ? warn.join("\n") + "\n\n" : "") +
+                    "ASSEMBLED RULE 91 BLOCK (paste verbatim into the attempt_completion `result` parameter):\n\n" +
+                    assembled,
+            }],
+    };
+});
 server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224): Validates that a pending attempt_completion result complies with rule 91 (PICKUP PROMPT block required). Call BEFORE attempt_completion. Returns pass/fail with specific violations — if pass=false, fix the listed failures before shipping.", {
     result_text: zod_1.z.string().describe("The result text you plan to pass to attempt_completion."),
     task_id: zod_1.z.string().optional().describe("Optional Cline task ID for audit telemetry."),
-}, async ({ result_text, task_id }) => {
+    task_prompt: zod_1.z.string().optional().describe("FIX 5 of #19173 (coverage gate): the ORIGINAL task prompt text. When supplied, every #NNNN enumerated in the prompt must also appear in result_text, or the gate FAILS with the missing ids named. Escape hatch: a line matching 'EXCLUDED: #NNNN (reason)' counts as covered."),
+}, async ({ result_text, task_id, task_prompt }) => {
     const failures = [];
     const DIVIDER_LEN = 47;
     const DIVIDER_GLYPH = String.fromCodePoint(0x2550);
@@ -643,6 +746,57 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
         }
         if (/(?:I|we)\s+apologi[sz]e/i.test(result_text)) {
             failures.push("R02_APOLOGY: 'apologize' in student-facing text. Legal exposure — never apologize in writing.");
+        }
+    }
+    // ── FIX 5 of #19173: COVERAGE GATE ──────────────────────────────────────
+    // Source incident 2026-07-25: a catch-all window prompt enumerated 39 explicit
+    // idea ids. The first attempt_completion accounted for 7 of them and shipped.
+    // The existing bare-number scan asks "does every #NNNN in the RESULT have a tag"
+    // which passes TRIVIALLY if the agent simply omits most of the numbers. This is
+    // the read-side twin: does every #NNNN in the PROMPT appear in the result.
+    if (task_prompt && task_prompt.trim().length > 0) {
+        const idRe = /#(\d{3,8})\b/g;
+        const promptIds = new Set();
+        let m;
+        while ((m = idRe.exec(task_prompt)) !== null)
+            promptIds.add(m[1]);
+        const resultIds = new Set();
+        idRe.lastIndex = 0;
+        while ((m = idRe.exec(result_text)) !== null)
+            resultIds.add(m[1]);
+        // Explicit scope-cut escape hatch
+        const excludedIds = new Set();
+        const exRe = /EXCLUDED:\s*#(\d{3,8})/gi;
+        while ((m = exRe.exec(result_text)) !== null)
+            excludedIds.add(m[1]);
+        const missing = [...promptIds].filter((id) => !resultIds.has(id) && !excludedIds.has(id));
+        if (missing.length > 0) {
+            failures.push(`COVERAGE_GAP: the task prompt enumerated ${promptIds.size} idea id(s); the result covers ${promptIds.size - missing.length}. ` +
+                `Missing ${missing.length}: ${missing.map((i) => "#" + i).join(", ")}. ` +
+                `Tag every prompt-enumerated id with a rule-109 disposition, or write "EXCLUDED: #NNNN (reason)" for deliberate scope cuts.`);
+        }
+    }
+    // ── FIX 1 of #19173: BARE-NUMBER TAG SCAN (all failures at once) ────────
+    // Rule 91 hardfloor: every #NNNN in the ENTIRE result needs a [disposition].
+    // Reported as ONE aggregated failure listing every offender, not one-at-a-time,
+    // so the agent fixes them in a single round trip instead of N ping-pongs.
+    {
+        const VALID_TAGS = /^(deployed|executing|queued|blocked|proposed|rejected|superseded|approved|closed|done)$/i;
+        const bare = [];
+        const scanRe = /#(\d{3,8})\b(\s*\[([^\]]*)\])?/g;
+        let sm;
+        while ((sm = scanRe.exec(result_text)) !== null) {
+            const id = sm[1];
+            const tag = sm[3];
+            if (!tag || !VALID_TAGS.test(tag.trim())) {
+                if (!bare.includes(id))
+                    bare.push(id);
+            }
+        }
+        if (bare.length > 0) {
+            failures.push(`BARE_IDEA_NUMBERS: ${bare.length} idea number(s) in the result have no valid [disposition] bracket: ` +
+                `${bare.map((i) => "#" + i).join(", ")}. ` +
+                `Every #NNNN needs one of [deployed|executing|queued|blocked|proposed|rejected|superseded].`);
         }
     }
     const pass = failures.length === 0;

@@ -70,3 +70,10 @@ Executor spec-gen was failing for ALL ideas. Diagnosis chain in cron/cron_ruben_
 2. FIXED: STREAM_ORDER_FIX — stream=true was set AFTER json_encode so the body never contained the flag; SSE parser captured nothing -> "Claude returned empty content" every call. Moved flag before encode + plain-JSON safety net. Backup: .bak-stream-order-fix-*.
 3. FIXED: REASONING_SEPARATE_FIX — old REASONING_FALLBACK prefixed glm-5.2 thinking tokens onto real content ("Let{...") breaking extractJson. Reasoni3. FIXED: REASONING_SEPARATE_FIX — old REASONING_FALLBACK prefixed g spec J3. FIXED: REASONING_SEPARATE_FIX — old REASONING_FALLBACK prefixed glm-5.2 thinking tokens onto real content he shared max_t3. FIXED: REASONING_SEPARATE_FIX — old REASONING_FALLBACK prefixed glm-5.2 thinking tokens onto real pec calls, or set a non-reasoning model for spec-gen. Retry counters for 17494/17504/17505 reset to 0 so they re-enter the queue.
 reports.php restore (earlier today) confirmed good by Ruben across roles. Ideas #17494/#17504/#17505 approved per Ruben.
+[2026-07-26 06:50 PT] Argus terminal saturated-message FIX: routed terminal through GLM5.2 local instead of frankenstein-llm (shared 120B pool).
+
+- ROOT CAUSE: Argus terminal_query used frankenstein-llm ($ALLOWED_MODELS only had that one model). When 120B pool saturated/retried, the LLM unavailable fallback (alltastic_api.php:11181) returned 'model pool is saturated' after 3x retry across 240s timeout. GLM5.2 local on Cato was lightning fast but never routed to.
+- FIX: added 'glm-5.2-local' to ALLOWED_MODELS (line 254) and mapped terminal_query -> glm-5.2-local in autoModelMap (line 265). Non-terminal actions (chat, research, dossier, complaint_response) remain on frankenstein-llm.
+- VERIFIED: curl to litellm.emsuniversity.com/v1/chat/completions for model glm-5.2-local returns in <1s. ALLOWED_MODELS has the key so the config lookup succeeds.
+- GLM5.2 RING STATUS: 127.0.0.1:8210 bridge tunnel active, 19h uptime, serving model glm-5.2-15pct PP=6.
+- Backup: on server via cp alltastic_api.php.bak-glm52fix-*

@@ -66,6 +66,20 @@ Common fetch commands:
 - `clinerules_list_by_topic(topic="voice")` — get all rules in a domain
 - `clinerules_search(query="...")` — FTS5 search across all rule bodies
 
+
+## 2026-07-25 — floor trim (idea #19125)
+
+Measured root cause of Opus condense-thrash: Cline 4.0.7 `Xle()` sets `maxAllowedSize = contextWindow - 40000`, so a **200K model compacts at 160,000 tokens**. The measured always-loaded floor (system prompt + these rules + 20 MCP servers' tool schemas + task text, zero history) was **139K-169K tokens** — the floor ALONE exceeded the threshold on 3 of 4 live windows, arming compaction on turn 1 permanently. 33-50% of Opus spend went to writing summaries.
+
+Moved OUT of `Rules/` (207,818 -> 123,051 bytes):
+`cline_task_ledger.md` (52,880) + `HANDOFF_NOTES.md` (12,842) -> `Cline/`; rules 261, 291, 272, 273 -> `Rules-archive/`. Rule 267 trimmed 13,940 -> 11,480 (G7 pass).
+
+**Fetch the ledger/HANDOFF on demand** — they are no longer auto-loaded:
+`read_file /Users/rubenmajor/Documents/Cline/cline_task_ledger.md`
+`read_file /Users/rubenmajor/Documents/Cline/HANDOFF_NOTES.md` (or `emsu://docs/handoff-notes`)
+
+**Model guidance:** use `claude-opus-5:1m` for long ops windows. Proven natural experiment (task 1785012025445): pre-swap 200K = 34 summarize turns; post-swap 1M = ZERO. `Xle()` gives the 1M model a 960,000 threshold.
+
 ## Adding a new rule (durable constraints — read before adding)
 
 **Default: new rules go in `~/Documents/Cline/Rules-archive/`, NOT `Rules/`.** Only add to `Rules/` if the rule must fire on every turn (pre-first-tool-call behavior or on-every-turn safety) AND Ruben approves it as hardfloor. The vast majority of rules belong in the archive, fetched on demand via the tree.

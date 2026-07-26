@@ -18,7 +18,7 @@ This gate fires at a mechanically-detectable moment: the instant you catch yours
 
 ### GATE A3 — Environment-blocker offload (Cline shell can't, executor's shell might)
 
-If a sub-task fails because a binary/tool isn't on PATH in Cline's non-interactive shell (`command -v brew`/`node`/etc. → not found) — **do NOT repeatedly retry the same failing command.** This is an environment mismatch, not a logic bug, and it's a valid Gate-A trigger on its own: the executor runs its own shell context (often with a full login PATH, different user, or root) and may resolve what Cline's shell cannot. Offload the blocked sub-task via `create_idea` rather than looping on `command not found`. Source: 2026-07-11 — a Cline session hit `brew`/`node` both missing from PATH mid-diagnostic; correctly offloaded to the executor instead of retrying.
+If a sub-task fails because a binary/tool isn't on PATH in Cline's non-interactive shell (`command -v brew`/`node`/etc. → not found) — **do NOT repeatedly retry the same failing command.** This is an environment mismatch, not a logic bug, and it's a valid Gate-A trigger on its own: the executor runs its own shell context (often with a full login PATH, different user, or root) and may resolve what Cline's shell cannot. Offload the blocked sub-task via `create_idea` rather than looping on `command not found`.
 
 ### GATE A2 — Active drive-to-execution (optional, after `create_idea`)
 
@@ -59,13 +59,13 @@ If ANY field of the `result` (not just the pickup prompt block) mentions a `#NNN
 
 **`[approved:autonomous]` is banned in a final pickup prompt.** It is a mid-task-only fallback (right after `idea_action(approve)`, before the build pipeline reports back). Before `attempt_completion` it MUST be replaced by one of the verified tags above. The reason: `[approved:autonomous]` is ambiguous between `[executing]` and `[queued]`, and Ruben cannot tell from the tag whether the executor is actively working or just queued — which is the exact gap this gate closes (2026-07-13 Ruben directive, idea #17537 [rejected]).
 
-**Known tool gap:** `get_idea_progress` may return `{"error": "Unknown action"}` (server-side routing bug). If so, use `list_decisions` or `get_activity_feed`/`list_events` as the verification path instead. File an idea for the bug per rule 266 — don't silently work around it every time.
+**Known tool gap:** `get_idea_progress` may return `{"error": "Unknown action"}` (server-side routing bug). Use `list_decisions` or `get_activity_feed`/`list_events` instead. File an idea per rule 266.
 
-**Ruben's closeout test (2026-07-13):** the whole point of this gate is that when Ruben reads `#17537 [executing]` in a pickup prompt, he can close the thread immediately because he knows the executor is actively working on it — no re-verification needed. If the tag were `[approved:autonomous]` he would have to open another tool to check whether anything is actually happening. The verified tag IS the verification.
+**Ruben's closeout test:** reading `#17537 [rejected] [executing]`-style verified tags lets him close the thread with zero re-verification. `[approved:autonomous]` would force another tool call. The verified tag IS the verification.
 
-## GATE C — Blocked-executor hand-ship (2026-07-16 Ruben directive)
+## GATE C — Blocked-executor hand-ship
 
-**If a reconcile pass (GATE B) finds a filed idea `impl_failed` / deploy-blocked (denylist, copycat cap, schema drift) AND the agent has the tools to do the work itself (safe deploy, SQL, ssh_command), the agent MUST ship it by hand in the same session — not re-file, not tag `[blocked]` and move on.** Re-queueing an impl_failed build is only legal ONCE; a second failure or a structural blocker (agent_core_denylist, copycat_churn_cap) means the executor cannot land it and the agent is the ship path. Tag the idea `[deployed]` with `(verified: hand-shipped, <evidence>)`. Canonical example: #18132 (2026-07-16) — executor triple-blocked (denylist on ai_ticket_agent.php, copycat cap, schema drift in generated SQL); Cline shipped by hand: function appended via safe path, cron rewritten against real schema, cron.d wired, live run verified. Ruben: "Just build it... the idea behind rule 267 was for you to come back on these ideas and you did not a lot of times."
+**If a GATE B reconcile finds a filed idea `impl_failed` / deploy-blocked (denylist, copycat cap, schema drift) AND the agent has the tools to do the work itself (safe deploy, SQL, ssh_command), the agent MUST ship it by hand in the same session — not re-file, not tag `[blocked]` and move on.** Re-queueing an impl_failed build is legal ONCE; a second failure or a structural blocker (agent_core_denylist, copycat_churn_cap) means the executor cannot land it and the agent is the ship path. Tag `[deployed]` with `(verified: hand-shipped, <evidence>)`. Canonical case #18132 [deployed]: `Rules-archive/267-case-law.md`.
 
 ## The anti-abuse gate (do NOT offload these)
 
@@ -118,14 +118,6 @@ Don't fire more offloaded ideas than you can reconcile. If you fire 40 ideas, yo
 - Rule 29 — agents act on confidence tier (governs the cleanup pass — fix stuck items, don't just list them)
 - Full case law + source incidents + addenda: `Rules-archive/267-case-law.md`
 
-## Source
-
-2026-07-10 — Ruben directive: "All Cline Agents MUST leverage/use Orchestrator/Executor to speed up processing of tasks during iteration," + "come back at the end of the task to cleanup any tasks sent to orchestrator/executor." Promoted to hardfloor same date after obedience review found the archive version lacked a mechanically-detectable trigger and a structural reconcile gate.
-
 ## Last updated
 
-2026-07-13 (2nd pass) — Added reconcile evidence quoting subsection (prevents fake tags by requiring `(verified: ...)` parenthetical next to the disposition tag). Added bare-number=self-fail clause (any bare `#NNNN` in `result` invalidates GATE B). Added TAG-SCAN self-check item 6. Added cross-ref to rule 91 TAG-SCAN GATE. Tagged all idea references in the rule body with disposition brackets per rule-91. Source incident: this session's own first attempt shipped "idea #17537" bare in prose, which is exactly what these new clauses prevent.
-
-2026-07-13 — GATE B rewrite per Ruben directive (idea #17537 [rejected]): added the verbatim reconcile-return → rule-91-tag mapping table, banned `[approved:autonomous]` in final pickup prompts (ambiguous between executing and queued), added drift-forbidden clause + `[blocked:reconcile-unavailable]` fallback, added Ruben's closeout test. Goal: Ruben can close threads from the tag alone, no re-verification tool call needed.
-
-2026-07-11 — compliance rewrite. Moved 2 addendums (tool-bug findings, drift safeguards) to case law to de-bloat the core gates. Added the 3-question offload test to make Gate A mechanically detectable. Condensed Gate A2 + known tool gaps into brief cross-refs. Core rule now ~5KB (under 8KB warn cap).
+2026-07-25 — trimmed for G7 12KB hardfloor cap (idea #19125). Full dated changelog + case law: `Rules-archive/267-case-law.md`.

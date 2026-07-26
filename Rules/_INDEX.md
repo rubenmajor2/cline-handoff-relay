@@ -78,7 +78,7 @@ Moved OUT of `Rules/` (207,818 -> 123,051 bytes):
 `read_file /Users/rubenmajor/Documents/Cline/cline_task_ledger.md`
 `read_file /Users/rubenmajor/Documents/Cline/HANDOFF_NOTES.md` (or `emsu://docs/handoff-notes`)
 
-**Model guidance:** use `claude-opus-5:1m` for long ops windows. Proven natural experiment (task 1785012025445): pre-swap 200K = 34 summarize turns; post-swap 1M = ZERO. `Xle()` gives the 1M model a 960,000 threshold.
+**Cline IDE-side context-window guidance (NOT a routing change — rule 146 still governs all server LLM selection).** When Ruben is already running a paid Anthropic head in the Cline model picker, pick the **1M-context variant** rather than the 200K one: `Xle()` gives a 1M model a 960,000 compaction threshold vs 160,000 for a 200K model, so the floor no longer arms auto-condense on turn 1. Proven natural experiment (task 1785012025445, mid-task swap): pre-swap 200K = 34 summarize turns; post-swap 1M = ZERO. This is a per-window IDE dropdown choice ONLY. It is NOT permission to write an Anthropic model id into `config.yaml`, `router_hook.py`, the registry, or any PHP surface — `frankenstein-llm` remains the one router and free-local remains the primary (rules 146, 148, 250; idea #13840 bans direct `claude-*` hardcoding).
 
 ## Adding a new rule (durable constraints — read before adding)
 

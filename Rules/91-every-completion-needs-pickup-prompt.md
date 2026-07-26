@@ -4,11 +4,11 @@ Hardfloor. 2026-05-19.
 
 **The PICKUP PROMPT block MUST end every `attempt_completion` result.** No exceptions for status reports, investigations, bug analysis, or "read-only" tasks. The ONLY exemption: zero system-state changes AND the result starts with `"Not a task completion — conversational/read-only only"`.
 
-## Do NOT retype the divider. Call the tool.
+## Do NOT retype the divider. Use the template below.
 
-**First move when writing a pickup prompt: `get_rule91_template`** (clinerules MCP, shipped 2026-07-25 per #19173). Call it bare for the skeleton with real 47-char U+2550 glyphs, or call it WITH the field args and it assembles a gate-passing block for you. Every observed rule-91 failure came from a model retyping the divider from memory. Copy, do not reproduce.
+Copy the 47-char U+2550 divider from the template block below — do NOT retype it from memory. Every observed rule-91 failure came from a model retyping the divider and getting the glyphs wrong.
 
-**Then verify before shipping: `clinerules_validate_completion`** with BOTH `result_text` and `task_prompt`. Passing `task_prompt` turns on the coverage gate: every `#NNNN` enumerated in the original task must appear in the result, or the gate names the missing ids.
+**Then verify before shipping: call `clinerules_validate_completion`** with BOTH `result_text` and `task_prompt`. Passing `task_prompt` turns on the coverage gate: every `#NNNN` enumerated in the original task must appear in the result, or the gate names the missing ids.
 
 ## Template (copy divider — do NOT retype)
 

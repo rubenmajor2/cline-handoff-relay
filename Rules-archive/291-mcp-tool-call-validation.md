@@ -38,6 +38,7 @@ Before calling ANY MCP tool via `use_mcp_tool`, verify:
 | `modify_idea` (ruben-orchestrator) | `idea_action` — same as `update_idea` |
 | `close_idea` (ruben-orchestrator) | `idea_action` with `action: "deny"` |
 | `resolve_idea` (ruben-orchestrator) | `idea_action` with `action: "approve"` |
+| `get_rule91_template` (clinerules) | Use the template block copy-paste from Rule 91 directly | Referenced in Rule 91 body as "shipped 2026-07-25" but never deployed. The 47-char divider is in the rule body. |
 | `clinrerules_reindex` (clinerules) | `clinerules_reindex` |
 | `clinernules_lookup` (clinerules) | `clinerules_lookup` |
 

@@ -31,7 +31,9 @@ Use when: the work is autonomous-tier AND immediate execution materially speeds 
 
 ## GATE B — Reconcile gate (fires before `attempt_completion`, like rule 91)
 
-**Before calling `attempt_completion`, if this task filed 1+ ideas to the Orchestrator, you MUST call `list_decisions` or `get_idea_progress` for EVERY idea # you filed.** "I filed it, it's fine" is NOT a reconcile pass. A reconcile pass is a tool call that returns real status. Skipping this gate is the same class of violation as shipping an `attempt_completion` without the rule-91 pickup prompt.
+**Before calling `attempt_completion`, if this task filed 1+ ideas to the Orchestrator, you MUST reconcile EVERY idea # you filed.** "I filed it, it's fine" is NOT a reconcile pass. A reconcile pass is a tool call that returns real status. Skipping this gate is the same class of violation as shipping an `attempt_completion` without the rule-91 pickup prompt.
+
+**Use `reconcile_ideas(idea_ids: [...])`** (ruben-orchestrator MCP, shipped 2026-07-25 per #19173). ONE call over N ids, and it derives the rule-109 tag SERVER-SIDE from (status, dev_stage) so you never hand-derive a tag and get it wrong. Output is paste-ready for the pickup prompt. Do NOT loop `get_idea_progress` per idea: state goes stale between calls, and on 2026-07-25 that produced 6 wrong dispositions out of 39, including a P0 disk-migration idea reported live when it had already been rejected.
 
 Classify each filed idea from the reconcile return, then map it VERBATIM to the rule-91 disposition tag:
 

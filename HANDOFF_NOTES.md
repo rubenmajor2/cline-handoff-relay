@@ -77,3 +77,30 @@ reports.php restore (earlier today) confirmed good by Ruben across roles. Ideas 
 - VERIFIED: curl to litellm.emsuniversity.com/v1/chat/completions for model glm-5.2-local returns in <1s. ALLOWED_MODELS has the key so the config lookup succeeds.
 - GLM5.2 RING STATUS: 127.0.0.1:8210 bridge tunnel active, 19h uptime, serving model glm-5.2-15pct PP=6.
 - Backup: on server via cp alltastic_api.php.bak-glm52fix-*
+---
+## [2026-07-26 08:10 PT] Argus Terminal FIXED — root cause was the Cline-rules corpus contaminating the Argus system prompt
+
+**SUPERSEDES the 06:50 PT entry below.** That entry described routing terminal_query to glm-5.2-local. That change was FULLY REVERTED per Ruben directive ("Argus is supposed to work under frankenstein-llm"). It was also the wrong diagnosis. Ignore it.
+
+- SYMPTOMS (both were the same bug): "The model pool is saturated right now..." after ~25s, then "Unable to generate a response. Please try again."
+- NOT a saturation problem. frankenstein-llm was healthy the whole time (live probe answered fine in under a second).
+
+- PRIMARY ROOT CAUSE: routes/alltastic_api.php (was lines 4597-4604) injected getClineRulesText() — the Cline AGENT rules corpus — into the Argus terminal SYSTEM PROMPT. That corpus is written for Cline, a tool-calling coding agent, and contains hardfloor rules like "every assistant turn MUST contain a tool block" plus Cline XML tool syntax examples. gpt-oss-120b obeyed it.
+  - Probe A (corpus present, tools attached, "Show open tickets"): finish=stop, content=null, tool_calls=null, reasoning_content=384 chars saying "According to guidelines, every response must be a tool call. So use <get_open_tickets>".
+  - Probe B (tools off): content literally began `We need to produce tool call XML.` followed by a raw `<execute_command><command>psql -d emsdb -c "SELECT id, subject..."</command></execute_command>` block.
+  - The PHP parser saw zero content blocks and hit the dead-end branch. That is the whole bug.
+
+- FIX 1 (the actual fix) ARGUS_CLINERULES_DECONTAM_V1: removed the getClineRulesText injection from the Argus terminal prompt, replaced with a 7-point EMSU HOUSE STYLE block that keeps rule-01 voice + rule-02 no-apology + facts-only, and explicitly states "ALWAYS answer in plain prose, NEVER emit XML tags or pseudo-tool markup" and "You are NOT required to call a tool on every turn".
+  - A/B VERIFIED on the identical payload: AFTER = finish=tool_calls with a real structured call get_open_tickets{"limit":10}, reasoning_len=0.
+
+- FIX 2 (defense in depth) ARGUS_EMPTY_REPLY_RECOVERY_V1: the dead-end empty-blocks branch is gone. Ladder is now (a) argusSalvageReasoningText() pulls prose out of reasoning_content, (b) ONE bounded retry on the SAME frankenstein-llm route with tools off + max_tokens>=2000 + explicit plain-text instruction, (c) a non-dead-end final message. No Anthropic, no model swap.
+
+- FIX 3: /var/log/php8.3-fpm-errors.log was root-owned, so every PHP error_log() from www-data silently failed. chown www-data:adm + chmod 664. This is why nothing showed up in logs for weeks.
+
+- MODEL SELECTION UNCHANGED: Argus is 100% frankenstein-llm. Verified $ALLOWED_MODELS has only frankenstein-llm and the auto map has no glm entry. Zero Anthropic anywhere.
+
+- LEFT ALONE ON PURPOSE: api/orchestrator_api.php:3894 and :4101 also call getClineRulesText(). That IS an agent harness, so the injection is correct there.
+
+- Bug library #1999 (resolved). Idea #19339 [proposed] filed for the secondary adapter gap (frankenstein-tools returns tool_calls=null while reasoning shows clear intent to call).
+- Backups on WOPR: /tmp/alltastic_api.php.bak-decontam-20260726-080737, /tmp/alltastic_api.php.bak-recovery-20260726-080203. php -l clean on every write, FPM reloaded.
+- LESSON: never inject an agent-harness rules corpus into a product surface's system prompt. Rules that tell a model "always call a tool" will stop it from ever answering a human.

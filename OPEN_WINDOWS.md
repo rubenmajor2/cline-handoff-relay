@@ -6,16 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/26/2026, 9:55:08 PM PT | window: last 72h | 97 tasks | index total 2251 (parsed 2, cached 2249)
+Generated: 7/26/2026, 10:55:09 PM PT | window: last 72h | 97 tasks | index total 2251 (parsed 3, cached 2248)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785111226194` | 7/26/2026, 9:52:25 PM | 1003 | 8067KB | Take a look at these added Argus issues to resolve: |
+| `1785111226194` | 7/26/2026, 10:36:45 PM | 1085 | 8263KB | Take a look at these added Argus issues to resolve: |
+| `1785120544230` | 7/26/2026, 10:29:07 PM | 135 | 683KB | I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged |
+| `1785124596121` | 7/26/2026, 10:29:05 PM | 278 | 960KB | Context hit the rule-119 compress threshold, so I compressed and am handing off. Answering |
 | `1785121116590` | 7/26/2026, 9:47:26 PM | 134 | 394KB | # San Diego Inspection |
-| `1785124596121` | 7/26/2026, 9:17:28 PM | 164 | 677KB | Context hit the rule-119 compress threshold, so I compressed and am handing off. Answering |
 | `1785111313276` | 7/26/2026, 8:34:03 PM | 880 | 1530KB | #GLM |
 | `1785122479644` | 7/26/2026, 8:28:25 PM | 76 | 127KB | VEC/MCP needs to be aware that the "Matrix" is often referred to. it is usually the admin_ |
-| `1785120544230` | 7/26/2026, 8:21:56 PM | 134 | 679KB | I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged |
 | `1785023624102` | 7/26/2026, 8:03:09 PM | 562 | 1691KB | Not an EMSU task, sunriserescue.com pets are not the most current from petfinder. Can you  |
 | `1785032556412` | 7/26/2026, 7:12:26 PM | 238 | 634KB | See, analyze and explain what's happening with the email that Dan Taylor SF instructor sen |
 | `1785011242792` | 7/26/2026, 7:02:56 PM | 440 | 3339KB | #E |
@@ -112,7 +112,7 @@ Generated: 7/26/2026, 9:55:08 PM PT | window: last 72h | 97 tasks | index total 
 
 ## Per-window detail
 
-### `1785111226194` — 7/26/2026, 9:52:25 PM PT — 1003 turns
+### `1785111226194` — 7/26/2026, 10:36:45 PM PT — 1085 turns
 
 **Original task:**
 
@@ -126,7 +126,7 @@ Pick up: Argus Terminal troubleshooting. Ruben is driving the browser UI himself
 HARD CONSTRAINTS: DO NOT inject Anthropic (rule 146); deepseek-v4-pro is free/cached and is the standard non-Anthropic target. Writes under /var/www/emtskills REQUIRE sudo, and a non-sudo patch SILENTLY reports success while changing nothing, so ALWAYS grep -c your marker after patching (rule 99). No global FRANK_CHAT_EFFORT, EMSU_TIERED_EFFORT stays
 ```
 
-**Ideas referenced:** #0369, #10003, #10739, #155724, #16274, #16474, #178508, #18378, #18745, #18944 [deployed], #18946 [deployed], #18947 [deployed], #18948 [deployed], #18949 [deployed], #18950 [deployed], #18951 [deployed], #18973 [deployed], #19081, #19145 [executing], #19158 [executing], #19159 [executing], #19164 [executing], #19166, #19170 [executing], #19173, #19348 [proposed], #19364 [proposed], #19370 [blocked], #19371 [proposed], #19372 [proposed], #19373, #19379 [executing], #19385 [executing], #19386, #19403 [queued], #19407 [proposed], #19408 [proposed], #19409 [proposed], #19410 [proposed], #19411 [proposed], #19412 [proposed], #19413 [proposed], #19414 [proposed], #19415 [proposed], #19416 [proposed], #19419 [executing], #19424 [queued], #19430 [executing], #19431 [executing], #19432 [executing], #19434 [executing], #19436 [executing], #19437 [executing], #19438 [proposed], #19440 [executing], #19446 [executing], #19500 [executing], #19501 [executing], #19502 [proposed], #19503 [proposed], #19504 [proposed], #19505 [proposed], #19506 [proposed], #1974, #1975, #1976, #198754, #2003, #2004, #2005, #2006, #2007, #2008, #2009, #2016, #2017, #2018, #2020, #2021, #2022, #2023, #2024, #2027, #2029, #2030, #2031, #2041, #2042, #2043, #2085, #2086, #2322, #2490, #30363, #3038, #3039, #3042, #3043, #3044, #3045, #3046, #3047, #334155, #4338, #475569, #495057, #5627, #64748, #673148, #677757, #680643, #8212, #856404, #9191
+**Ideas referenced:** #0369, #10003, #10739, #155724, #16274, #16474, #178508, #18378, #18745, #18944 [deployed], #18946 [deployed], #18947 [deployed], #18948 [deployed], #18949 [deployed], #18950 [deployed], #18951 [deployed], #18973 [deployed], #19081, #19145 [executing], #19158 [executing], #19159 [executing], #19164 [executing], #19166, #19170 [executing], #19173, #19348 [proposed], #19364 [proposed], #19370 [blocked], #19371 [proposed], #19372 [proposed], #19373, #19379 [executing], #19385 [executing], #19386, #19403 [queued], #19407 [proposed], #19408 [proposed], #19409 [proposed], #19410 [proposed], #19411 [proposed], #19412 [proposed], #19413 [proposed], #19414 [proposed], #19415 [proposed], #19416 [proposed], #19419 [executing], #19424 [queued], #19430 [executing], #19431 [executing], #19432 [executing], #19434 [executing], #19436 [executing], #19437 [executing], #19438 [proposed], #19440 [executing], #19446 [executing], #19454 [executing], #19464 [proposed], #19465 [executing], #19500 [executing], #19501 [executing], #19502 [proposed], #19503 [proposed], #19504 [proposed], #19505 [proposed], #19506 [proposed], #1974, #1975, #1976, #198754, #2003, #2004, #2005, #2006, #2007, #2008, #2009, #2016, #2017, #2018, #2020, #2021, #2022, #2023, #2024, #2027, #2029, #2030, #2031, #2033, #2041, #2042, #2043, #2085, #2086, #21325, #2322, #2490, #30363, #3038, #3039, #3042, #3043, #3044, #3045, #3046, #3047, #334155, #4338, #475569, #495057, #5627, #64748, #673148, #677757, #680643, #8212, #856404, #9191
 
 **Last PICKUP PROMPT:**
 
@@ -160,6 +160,34 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
+
+### `1785120544230` — 7/26/2026, 10:29:07 PM PT — 135 turns
+
+**Original task:**
+
+```
+I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged Cline into the left side bar and destroyed the closed windows. Can you give me those windows I just closed, not already opened or group alike ideas into the same copy prompts for me to run? This would serve to be enormously helpful to me. Make sure they are very extensive copy prompts and also while you are at it execute any ideas you can in the process per rule 29 and leverage rule 267 to save time.
+```
+
+**Ideas referenced:** #11782, #16608, #16613, #17494, #1754, #1755, #178495, #178499, #178500, #178501, #178502, #178503, #178505, #178509, #178511, #178850, #182471, #18442 [queued], #18559 [queued], #18757 [queued], #18841 [executing], #18851 [queued], #18861 [queued], #18862 [proposed], #18867 [proposed], #18871 [proposed], #18880 [proposed], #18898 [proposed], #18903 [queued], #18912 [queued], #18913 [proposed], #18928 [proposed], #18930 [proposed], #18934 [proposed], #18935, #18937 [proposed], #18938 [proposed], #18941 [proposed], #18954 [proposed], #18959 [proposed], #18967 [proposed], #18969, #18974 [proposed], #18975 [proposed], #18977 [proposed], #18982 [proposed], #18983 [proposed], #18985 [proposed], #18998 [proposed], #19005 [queued], #19006 [queued], #19041, #19079 [queued], #19101 [queued], #19125, #19128 [queued], #19129 [proposed], #19173 [executing], #19175 [executing], #19176 [executing], #19177 [executing], #19178 [executing], #19179 [executing], #19186 [executing], #19187 [executing], #19188 [executing], #19189 [executing], #19194 [proposed], #19239 [rejected], #19259 [deployed], #19267 [deployed], #19288 [deployed], #19359 [proposed], #19360 [proposed], #19362 [proposed], #19363 [proposed], #19396 [approved], #19426 [deployed], #19435 [executing], #19439 [executing], #1985, #1992, #2026, #88922, #9086, #9168, #9339, #9831
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785124596121` — 7/26/2026, 10:29:05 PM PT — 278 turns
+
+**Original task:**
+
+```
+Context hit the rule-119 compress threshold, so I compressed and am handing off. Answering your four questions with what I verified, and being straight about the one I did not do.
+
+## What I did NOT do, and you were right to call it
+
+You asked me to open a browser with a token and see what you see. **I never did that.** I verified structurally (grep, lint, marker counts) and reported the page as fixed. That is not the same thing, and it is exactly why you keep having to push. The page is login-gated so curl returns 401, which means the only honest verification is a real logged-in browser sessi
+```
+
+**Ideas referenced:** #13418, #178501, #18339, #18343, #18349, #18356, #18366, #18367, #18390, #18391, #18393, #18394, #18397, #18398, #18407, #18408, #18417, #18519, #19230 [queued], #19258 [executing], #19266 [deployed], #19274 [blocked], #19321 [deployed], #19325 [queued], #19338 [queued], #19388 [deployed], #19390 [rejected], #19404 [executing], #19417 [deployed], #19423 [executing], #19425 [proposed], #19427 [executing], #19433 [executing], #19441 [executing], #19447 [proposed], #19448 [proposed], #19449 [executing], #19455 [executing], #19456 [executing], #19458 [executing], #19460 [executing], #1989, #1990, #2012, #2013, #2014, #2015, #2019, #2025, #2028, #2032, #6366, #65039, #9888
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785121116590` — 7/26/2026, 9:47:26 PM PT — 134 turns
 
@@ -227,22 +255,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Drafted warm reply with closers + fact-check flags (row 97, superseded)
 - [x] Analyzed "presents a problem" as a bur
 ```
-
-### `1785124596121` — 7/26/2026, 9:17:28 PM PT — 164 turns
-
-**Original task:**
-
-```
-Context hit the rule-119 compress threshold, so I compressed and am handing off. Answering your four questions with what I verified, and being straight about the one I did not do.
-
-## What I did NOT do, and you were right to call it
-
-You asked me to open a browser with a token and see what you see. **I never did that.** I verified structurally (grep, lint, marker counts) and reported the page as fixed. That is not the same thing, and it is exactly why you keep having to push. The page is login-gated so curl returns 401, which means the only honest verification is a real logged-in browser sessi
-```
-
-**Ideas referenced:** #13418, #178501, #19230 [queued], #19258 [executing], #19266 [deployed], #19274 [blocked], #19321 [deployed], #19325 [queued], #19338 [queued], #19388 [deployed], #19390 [rejected], #19404 [executing], #19417 [deployed], #19423 [executing], #19425 [proposed], #19427 [executing], #19433 [executing], #19441 [executing], #19447 [proposed], #19448 [proposed], #19449 [executing], #1989, #1990, #2012, #2013, #2014, #2015, #2019, #2025, #2028, #6366, #65039, #9888
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785111313276` — 7/26/2026, 8:34:03 PM PT — 880 turns
 
@@ -312,18 +324,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </task_progress>
 </attempt_completion>
 ```
-
-### `1785120544230` — 7/26/2026, 8:21:56 PM PT — 134 turns
-
-**Original task:**
-
-```
-I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged Cline into the left side bar and destroyed the closed windows. Can you give me those windows I just closed, not already opened or group alike ideas into the same copy prompts for me to run? This would serve to be enormously helpful to me. Make sure they are very extensive copy prompts and also while you are at it execute any ideas you can in the process per rule 29 and leverage rule 267 to save time.
-```
-
-**Ideas referenced:** #11782, #16608, #16613, #17494, #1754, #1755, #178495, #178499, #178500, #178501, #178502, #178503, #178505, #178509, #178511, #178850, #182471, #18442 [queued], #18559 [queued], #18757 [queued], #18841 [executing], #18851 [queued], #18861 [queued], #18862 [proposed], #18867 [proposed], #18871 [proposed], #18880 [proposed], #18898 [proposed], #18903 [queued], #18912 [queued], #18913 [proposed], #18928 [proposed], #18930 [proposed], #18934 [proposed], #18935, #18937 [proposed], #18938 [proposed], #18941 [proposed], #18954 [proposed], #18959 [proposed], #18967 [proposed], #18969, #18974 [proposed], #18975 [proposed], #18977 [proposed], #18982 [proposed], #18983 [proposed], #18985 [proposed], #18998 [proposed], #19005 [queued], #19006 [queued], #19041, #19079 [queued], #19101 [queued], #19125, #19128 [queued], #19129 [proposed], #19173 [executing], #19175 [executing], #19176 [executing], #19177 [executing], #19178 [executing], #19179 [executing], #19186 [executing], #19187 [executing], #19188 [executing], #19189 [executing], #19194 [proposed], #19239 [rejected], #19259 [deployed], #19267 [deployed], #19288 [deployed], #19359 [proposed], #19360 [proposed], #19362 [proposed], #19363 [proposed], #19396 [approved], #19426 [deployed], #19435 [executing], #19439 [executing], #1985, #1992, #2026, #88922, #9086, #9168, #9339, #9831
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785023624102` — 7/26/2026, 8:03:09 PM PT — 562 turns
 

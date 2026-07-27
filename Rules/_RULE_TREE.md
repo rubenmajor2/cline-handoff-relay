@@ -33,6 +33,7 @@
 7. **RULE 01 VOICE:** Would Ruben actually type this? No em dashes, no "the tech team," no "I've identified the root cause," no corporate speak. Talk TO the person IN the chat, not ABOUT them.
 8. **RULE 02 NO APOLOGIES:** Is this student-facing email with apology language ("I'm sorry," "we apologize," "I regret")? → **STRIP IT.** Neutral acknowledgement + concrete fix action only.
 9. **RULE 259 NO SPILLOVER:** Am I about to send to chat 55 (group chat)? → **GATE CHECK: does Jon or Vicky need this?** If the content is Cline technical work, infrastructure, code, LLM routing, bug analysis, SQL, deploy mechanics, clinerules, or system architecture → **FAILS. Do NOT send to group.** The default channel for Ruben-only Cline work is `attempt_completion`, not chat 55. Full rule: `clinerules_lookup(rule_id=259)`.
+10. **RULE 175 NO STAFF IMESSAGE:** Am I about to call `send_message` (iMessage/SMS) or `send_ops_message` (ruben-control) to ANY staff chat (5, 55, 64, 84, 88, 3750) or to ANY recipient other than Ruben himself? → **GATE CHECK: did Ruben explicitly ask me to send this?** Can I quote his words saying "send," "message," "tell," "ping," "let her know," "forward," or "loop in"? If NO → **FAILS. Do not send.** Offer it in `attempt_completion` instead: "Want me to ping <name> with: '<the message>'? Y/N." This gate supersedes all confidence-tier autonomy — even green-tier actions cannot authorize a staff iMessage send. Full rule: `clinerules_lookup(rule_id=175)`.
 
 ### ⛔ PRE-COMPLETION GATE (before attempt_completion)
 
@@ -91,7 +92,7 @@
 ## 🤖 Agent Behavior & Autonomy
 → Trigger: deciding whether to act or escalate, filing ideas, agent self-supervision, capability gaps, Q-cards, confidence tiers
 → Fetch all: `clinerules_list_by_topic("agent")`
-- **Act vs escalate gate** — R: 12,22,23,29,36,37,38,67,68,78,80,90,93,117,124,125,167,183,193,206,208,213,238,267,279,282,283 (267=async offload+reconcile; 279=tool-grant IS a mandate to act; 282=CFAs must resolve, not triage; 283=no human-only-research deferrals)
+- **Act vs escalate gate** — R: 12,22,23,29,36,37,38,67,68,78,80,90,93,117,124,125,167,183,193,206,208,213,238,267,279,282,283,295 (295=ship lane-clearing/regression fixes inline never queue; 267=async offload+reconcile; 279=tool-grant IS a mandate to act; 282=CFAs must resolve, not triage; 283=no human-only-research deferrals)
 - **Self-supervision & repair** — R: 46,49,53,54,55,56,64,65,66,73,81,82,85,92,94,99,110,112,129,130,131,133,134,162,163,166,168,169,176,180,194,209,214,225,240,244,258,261,263,281 (263=verify-before-claim; 99=subagent writes unverified until parent re-reads; 281=execute-the-real-function schema-truth gate)
 - **Routing to humans** — R: 68,69 (Jon=policy only, Vicky=CS only)
 - **Agent-found-wrong** — R: 266 (fix the instrument that misled the agent, same session)

@@ -6,14 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/26/2026, 7:55:08 PM PT | window: last 72h | 95 tasks | index total 2248 (parsed 4, cached 2244)
+Generated: 7/26/2026, 8:55:08 PM PT | window: last 72h | 96 tasks | index total 2250 (parsed 4, cached 2246)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785120544230` | 7/26/2026, 7:55:06 PM | 44 | 174KB | I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged |
-| `1785111226194` | 7/26/2026, 7:55:06 PM | 618 | 7204KB | Take a look at these added Argus issues to resolve: |
-| `1785023624102` | 7/26/2026, 7:54:51 PM | 532 | 1612KB | Not an EMSU task, sunriserescue.com pets are not the most current from petfinder. Can you  |
-| `1785111313276` | 7/26/2026, 7:54:46 PM | 738 | 1232KB | #GLM |
+| `1785111226194` | 7/26/2026, 8:55:05 PM | 918 | 7863KB | Take a look at these added Argus issues to resolve: |
+| `1785121116590` | 7/26/2026, 8:35:19 PM | 100 | 309KB | # San Diego Inspection |
+| `1785111313276` | 7/26/2026, 8:34:03 PM | 880 | 1530KB | #GLM |
+| `1785122479644` | 7/26/2026, 8:28:25 PM | 76 | 127KB | VEC/MCP needs to be aware that the "Matrix" is often referred to. it is usually the admin_ |
+| `1785120544230` | 7/26/2026, 8:21:56 PM | 134 | 679KB | I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged |
+| `1785023624102` | 7/26/2026, 8:03:09 PM | 562 | 1691KB | Not an EMSU task, sunriserescue.com pets are not the most current from petfinder. Can you  |
 | `1785032556412` | 7/26/2026, 7:12:26 PM | 238 | 634KB | See, analyze and explain what's happening with the email that Dan Taylor SF instructor sen |
 | `1785011242792` | 7/26/2026, 7:02:56 PM | 440 | 3339KB | #E |
 | `1785112523878` | 7/26/2026, 5:38:50 PM | 16 | 32KB | Another window says GLM 5.2 Local is down. Do you believe them? |
@@ -104,25 +106,12 @@ Generated: 7/26/2026, 7:55:08 PM PT | window: last 72h | 95 tasks | index total 
 | `1784907389801` | 7/24/2026, 8:46:54 AM | 70 | 98KB | why does isiah coleman still not have moodle access? |
 | `1784885446516` | 7/24/2026, 3:31:58 AM | 171 | 8535KB | Continue with this:  |
 | `1784878023153` | 7/24/2026, 2:28:50 AM | 51 | 19318KB | FYI, WOPR is going down in five minutes for maintenance |
-| `1784839160165` | 7/23/2026, 8:45:52 PM | 1983 | 27682KB | ## WINDOW F — CFAs (48h sweep verification + bank-statement pipeline) [merges old windows  |
 
 ---
 
 ## Per-window detail
 
-### `1785120544230` — 7/26/2026, 7:55:06 PM PT — 44 turns
-
-**Original task:**
-
-```
-I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged Cline into the left side bar and destroyed the closed windows. Can you give me those windows I just closed, not already opened or group alike ideas into the same copy prompts for me to run? This would serve to be enormously helpful to me. Make sure they are very extensive copy prompts and also while you are at it execute any ideas you can in the process per rule 29 and leverage rule 267 to save time.
-```
-
-**Ideas referenced:** #17494, #1754, #1755, #178500, #178501, #178850, #182471, #18442, #18559, #18757, #18841 [executing], #18851 [queued], #18861 [queued], #18862 [proposed], #18867 [proposed], #18871 [proposed], #18880 [proposed], #18898 [proposed], #18903 [queued], #18912 [queued], #18913 [proposed], #18928 [proposed], #18930 [proposed], #18934 [proposed], #18935, #18937 [proposed], #18938 [proposed], #18941 [proposed], #18954 [proposed], #18959 [proposed], #18967 [proposed], #18969, #18974 [proposed], #18975 [proposed], #18977 [proposed], #18982 [proposed], #18983 [proposed], #18985 [proposed], #18998 [proposed], #19005 [queued], #19006, #19041, #19079 [queued], #19101 [queued], #19128 [queued], #19129, #19173 [executing], #19175 [executing], #19176 [executing], #19177 [executing], #19178 [executing], #19179 [executing], #19186 [executing], #19187 [executing], #19188 [executing], #19189 [executing], #19194 [proposed], #19239 [rejected], #19259 [deployed], #19267 [deployed], #19288 [deployed], #19359 [proposed], #19360 [proposed], #19362 [proposed], #19363 [proposed], #19396 [approved], #19426, #1985, #1992, #88922
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785111226194` — 7/26/2026, 7:55:06 PM PT — 618 turns
+### `1785111226194` — 7/26/2026, 8:55:05 PM PT — 918 turns
 
 **Original task:**
 
@@ -136,7 +125,7 @@ Pick up: Argus Terminal troubleshooting. Ruben is driving the browser UI himself
 HARD CONSTRAINTS: DO NOT inject Anthropic (rule 146); deepseek-v4-pro is free/cached and is the standard non-Anthropic target. Writes under /var/www/emtskills REQUIRE sudo, and a non-sudo patch SILENTLY reports success while changing nothing, so ALWAYS grep -c your marker after patching (rule 99). No global FRANK_CHAT_EFFORT, EMSU_TIERED_EFFORT stays
 ```
 
-**Ideas referenced:** #0369, #10003, #10739, #155724, #16274, #16474, #178508, #18378, #18745, #18944 [deployed], #18946 [deployed], #18947 [deployed], #18948 [deployed], #18949 [deployed], #18950 [deployed], #18951 [deployed], #18973 [deployed], #19081, #19145 [executing], #19158 [executing], #19159 [executing], #19164 [executing], #19166, #19170 [executing], #19173, #19348 [proposed], #19364 [proposed], #19370 [blocked], #19371 [proposed], #19372 [proposed], #19373, #19379 [executing], #19385 [executing], #19386, #19403, #19407 [proposed], #19408 [proposed], #19409 [proposed], #19410 [proposed], #19411 [proposed], #19412 [proposed], #19413 [proposed], #19414 [proposed], #19415 [proposed], #19416 [proposed], #19419, #19500 [executing], #19501 [executing], #19502 [proposed], #19503 [proposed], #19504 [proposed], #19505 [proposed], #19506 [proposed], #1974, #1975, #1976, #198754, #2003, #2004, #2005, #2006, #2007, #2008, #2009, #2016, #2017, #2018, #2023, #2031, #2041, #2042, #2043, #2085, #2086, #2322, #2490, #30363, #3038, #3039, #3042, #3043, #3044, #3045, #3046, #3047, #334155, #4338, #475569, #495057, #5627, #64748, #673148, #677757, #680643, #8212, #856404
+**Ideas referenced:** #0369, #10003, #10739, #155724, #16274, #16474, #178508, #18378, #18745, #18944 [deployed], #18946 [deployed], #18947 [deployed], #18948 [deployed], #18949 [deployed], #18950 [deployed], #18951 [deployed], #18973 [deployed], #19081, #19145 [executing], #19158 [executing], #19159 [executing], #19164 [executing], #19166, #19170 [executing], #19173, #19348 [proposed], #19364 [proposed], #19370 [blocked], #19371 [proposed], #19372 [proposed], #19373, #19379 [executing], #19385 [executing], #19386, #19403 [queued], #19407 [proposed], #19408 [proposed], #19409 [proposed], #19410 [proposed], #19411 [proposed], #19412 [proposed], #19413 [proposed], #19414 [proposed], #19415 [proposed], #19416 [proposed], #19419 [executing], #19424 [queued], #19430 [executing], #19431 [executing], #19432 [executing], #19434 [executing], #19436 [executing], #19437 [executing], #19438 [proposed], #19440 [executing], #19500 [executing], #19501 [executing], #19502 [proposed], #19503 [proposed], #19504 [proposed], #19505 [proposed], #19506 [proposed], #1974, #1975, #1976, #198754, #2003, #2004, #2005, #2006, #2007, #2008, #2009, #2016, #2017, #2018, #2020, #2021, #2022, #2023, #2024, #2027, #2031, #2041, #2042, #2043, #2085, #2086, #2322, #2490, #30363, #3038, #3039, #3042, #3043, #3044, #3045, #3046, #3047, #334155, #4338, #475569, #495057, #5627, #64748, #673148, #677757, #680643, #8212, #856404, #9191
 
 **Last PICKUP PROMPT:**
 
@@ -171,57 +160,55 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785023624102` — 7/26/2026, 7:54:51 PM PT — 532 turns
+### `1785121116590` — 7/26/2026, 8:35:19 PM PT — 100 turns
 
 **Original task:**
 
 ```
-Not an EMSU task, sunriserescue.com pets are not the most current from petfinder. Can you fix that/update the website to show them properly? Petfinder might have updated their site so we may need to change that. You will want ot use a browser window to confirm.
+# San Diego Inspection
+
+See: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
+
+-- 
+San Diego requested 5 business days to review on Friday. I did not respond. It's Sunday night. What do i do here? This is somewhat unreasonable. 
+
+Research laws on this and advise. 
+
+See the email Brein sent me on Friday morning about it.
 ```
 
-**Ideas referenced:** #173248, #32373
+**Ideas referenced:** #0891, #1754, #1755, #178495, #178499, #178501, #178502, #178503, #178505, #178509, #178511, #18442 [queued], #18545, #18559 [queued], #18757 [queued], #18822 [queued], #18823 [queued], #18841 [queued], #18851 [queued], #18861 [queued], #18862 [rejected], #18867 [deployed], #18871 [queued], #18880 [queued], #18898 [queued], #18903 [queued], #18912 [queued], #18928 [queued], #18930 [queued], #18934 [queued], #18937 [queued], #18941 [queued], #18954 [queued], #18959 [queued], #18967 [queued], #18974 [queued], #18975 [deployed], #18977 [queued], #18982 [queued], #18985 [rejected], #18998 [queued], #19005 [rejected], #19006 [queued], #19041, #19079 [queued], #19101 [queued], #19125, #19128 [queued], #19129 [proposed], #19173 [queued], #19175 [queued], #19176 [queued], #19177 [queued], #19178 [queued], #19179 [queued], #19186 [queued], #19187 [queued], #19188 [queued], #19189 [queued], #19194 [rejected], #19239 [rejected], #19259 [deployed], #19267 [deployed], #19288 [deployed], #19359 [queued], #19360 [queued], #19362 [queued], #19363 [queued], #19396 [deployed], #19426 [deployed], #19435 [executing], #19439 [executing], #19442 [proposed], #1985, #1992, #2026, #2563
 
 **Last PICKUP PROMPT:**
 
 ```
- 8000
-}
-</use_mcp
+more time, she can ask for it.
 
-We need to output a final answer with attempt_completion and PICKUP PROMPT block. We have to summarize the current state, and present next steps. The user gave feedback "There’s now no pictures of the cats at sunriserescue.com". We have identified that images are blocked due to CloudFront hotlink, we added referrerpolicy in pet-enhancer.js and we need to ensure that the cache includes photos and that the frontend loads them.
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — San Diego EMS audit: Brein Friday 7/24 email response strategy.
 
-We need to incorporate final steps: reload updated pet-enhancer.js, ensure img-proxy maybe not needed because referrerpolicy. But need to upload a proper cache with photos. However current cache file shows photos empty. The early scraper with cloudfront URLs but photos empty? Actually petfinder-cache-server.json had photos empty? It shows "photos":[] for first cat. The original cache from earlier had URLs with cloudfront; but later caches lost them.
+Where we left off (verified 2026-07-26 20:27 PT):
+- Investigation #8 rows 56-91 fully mapped. Ruben's row 90 (7/23) offered "through the weekend."
+- Brein's Friday 7/24 email (rmajor@ inbox, not in EMSU email DB) responded by telling Ruben she needs 5 business days — extending past his offered window.
+- Title 22 verified: no statutory deadline for LEMSA review. Ruben owes no extension.
+- Recommended strategy: Monday AM polite pushback enforcing the original end-of-weekend deadline. Draft provided.
 
-Thus we need to use a scraper that extracts photos (maybe via __NEXT_DATA__) which includes photos URLs, but we need to ensure they are included. We can modify the scraper to include "photos" array from JSON path. But currently v3 scraper extracted 0 cats. The original scraper (v2) extracted 42 cats but photos empty. So probably __NEXT_DATA__ doesn't include photos. It might require separate request to fetch images. However we can use img-proxy? Actually the images exist at cloudfront but require referer. We fixed referrerpolicy. No need for proxy.
+Open threads:
+1. #19442 [proposed] — If Ruben chooses a different response, draft and send
+2. Watch for Brein's response to Monday's reply; log any follow-up as new compliance_investigation_responses on investigation #8
 
-But need to ensure photos URLs present in cache, and that pet-enhancer.js loads them. We could rewrite cache to include photo URLs matching cloudfront. The original cache earlier had URLs but not in current file. Perhaps we can fetch a sample photo URL from earlier data (we have it). Use that as placeholder? Better to extract from the original data we have: we have sample URLs from earlier (Carmello etc). We can update the cache file to include those photos for each cat.
-
-Simplify: Use the cache currently in /tmp/petfinder-data-cache.json which has 42 cats with no photos. We can manually add photo URLs from known cat entries (maybe from external source). But we don't have full list. Could just set a placeholder image for all cats; that would show something.
-
-But the user's request is to fix site to show proper pets and pictures. We need to implement solution: add referrerpolicy (already done) and modify pet-enhancer.js to use proxy if photos missing, or to display placeholder. Could also use img-proxy to fetch images but 403 on no referer. With referrerpolicy set, images should load if URLs present. Need to ensure cache includes photos. We can rewrite cache with URLs from earlier (we have at least 3 cats). For the rest, maybe leave empty.
-
-Let's create a new cache file with the photos we have (Carmello, Marzapan, Sergio) and possibly others.
-
-We'll write server file with updated cache with those photos and empty for others.
-
-Use write_server_file for petfinder-data-cache.json with content containing cats (use earlier cache from /tmp/petfinder-cache-server.json? That had no photos). But we can manually edit for first three entries.
-
-Simplify: write a new cache that includes the three cats from earlier with photos, and fill others with empty photos.
-
-We'll construct JSON from /tmp/petfinder-data-cache.json, but modify photos for first three entries.
-
-We'll read that file to get cats. Then modify.
-
-We'll use a python script to edit and write.
-
-We'll execute via ssh_command with sudo to write file.
-
-We'll need to ensure permission: root writing works.
-
-Let's do: sudo tee /var/www/.../pet
+Reference IDs:
+- DB rows: compliance_investigation_responses rows 56-91 on investigation #8
+- Legal: 22 CCR 100067.07, 100067.08, HSC 1797.109
+- Idea: #19442 [proposed]
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
-### `1785111313276` — 7/26/2026, 7:54:46 PM PT — 738 turns
+### `1785111313276` — 7/26/2026, 8:34:03 PM PT — 880 turns
 
 **Original task:**
 
@@ -237,9 +224,117 @@ Pick up task #1785012025445 (GLM-5.2). Reconciled live 2026-07-26 17:02 PT: 3 de
 HARD CONSTRAINTS: DO NOT inject Anthropic, free-local-first (rule 146). NEVER set enable_thinking:false on GLM; Ruben rejected it outright and #19239 [rejected] (verified: status=rejected dev_stage=impl_failed) exists specifically to stop it being resurrected, since the think block is the reason to run GLM over DeepSeek V4 pro. DO NOT quarantine glm-5.2-local
 ```
 
-**Ideas referenced:** #12363, #12430, #12657, #12672, #12689, #13418, #13832, #13874, #15367, #16265, #17300, #1754, #1755, #178501, #18360, #19079 [queued], #19101 [queued], #19128 [queued], #19129, #19227 [blocked], #19230 [queued], #19234 [queued], #19239 [rejected], #19258 [executing], #19259 [deployed], #19260 [queued], #19261 [queued], #19266 [proposed], #19267 [deployed], #19273 [queued], #19274 [executing], #19288 [deployed], #19321 [proposed], #19325 [queued], #19338 [proposed], #19388 [executing], #19390 [proposed], #19396 [approved], #19404 [executing], #19406, #19417 [executing], #19423 [executing], #19425, #1985, #1989, #1990, #1991, #1992, #1998, #2010, #2011, #2012, #2013, #2014, #2015, #2928, #339484, #339485, #339486, #339487, #339488, #339489, #339490, #339491, #339492, #339495, #339496, #339497, #339498, #339499, #339500, #4536, #5371, #7094, #7117, #7325, #7557, #8190, #8281, #8321, #8563, #8598, #9829
+**Ideas referenced:** #12363, #12430, #12657, #12672, #12689, #13418, #13832, #13874, #15367, #16265, #17300, #1754, #1755, #178501, #18360, #19079 [queued], #19101 [queued], #19128 [queued], #19129, #19227 [blocked], #19230 [queued], #19234 [queued], #19239 [rejected], #19258 [executing], #19259 [deployed], #19260 [queued], #19261 [queued], #19266 [proposed], #19267 [deployed], #19273 [queued], #19274 [executing], #19288 [deployed], #19321 [proposed], #19325 [queued], #19338 [proposed], #19388 [executing], #19390 [proposed], #19396 [approved], #19404 [executing], #19406, #19417 [executing], #19423 [executing], #19425 [proposed], #19427 [executing], #19433 [executing], #19441 [executing], #1985, #1989, #1990, #1991, #1992, #1998, #2010, #2011, #2012, #2013, #2014, #2015, #2019, #2025, #2928, #339484, #339485, #339486, #339487, #339488, #339489, #339490, #339491, #339492, #339495, #339496, #339497, #339498, #339499, #339500, #4536, #5371, #7094, #7117, #7325, #7557, #8190, #8281, #8321, #8563, #8598, #9829
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785122479644` — 7/26/2026, 8:28:25 PM PT — 76 turns
+
+**Original task:**
+
+```
+VEC/MCP needs to be aware that the "Matrix" is often referred to. it is usually the admin_profile.php page, but can be anything else in the pages https://emsuniverstiy.com/emtskills/ etc... it's slang for those places
+```
+
+**Ideas referenced:** #11383, #11387, #17169, #17170, #17486, #17494, #17504, #17505, #18329 [queued], #18605 [proposed], #18783 [deployed], #18786, #18787, #18827 [proposed], #1896, #1897, #19339 [proposed], #19443 [proposed], #1999, #377566
+
+**Last PICKUP PROMPT:**
+
+```
+rship mismatch with the lock).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up VEC "Matrix" slang definition task — "the Matrix" is now indexed in the Virtual EMSU Corpus.
+
+Where we left off (verified 2026-07-26 20:28 PT):
+- `/var/www/emtskills/docs/EMSU_SLANG_GLOSSARY.md` created with "Matrix" definition
+- Ingested into VEC corpus.db as chunk 3775667, FTS5 queryable
+- Idea #19443 [proposed] filed
+
+Open threads to drive next:
+1. (none — this task is complete; glossary file and corpus entry are live)
+
+Reference IDs:
+- Idea filed: #19443
+- Files touched: /var/www/emtskills/docs/EMSU_SLANG_GLOSSARY.md, /var/lib/emsu_corpus/corpus.db
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Read handoff notes & understand VEC architecture
+- [x] Find VEC corpus/index files
+- [x] Explore corpus.db schema
+- [x] Search for existing "Matrix" entry — found: unrelated Frank/SV/VR matrix hits
+- [x] Create EMSU_SLANG_GLOSSARY.md w/ "Matrix" definition
+- [x] Run the vec_indexer as www-data — 10340 new chunks indexed
+- [x] Rebuild FTS5 index as www-data
+- [x] Verify FTS5 queries resolve "Matrix" correctly
+- [x] Update HANDOFF_NOTES.md
+- [x] File idea #19443
+</task_progress>
+</attempt_completion>
+```
+
+### `1785120544230` — 7/26/2026, 8:21:56 PM PT — 134 turns
+
+**Original task:**
+
+```
+I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged Cline into the left side bar and destroyed the closed windows. Can you give me those windows I just closed, not already opened or group alike ideas into the same copy prompts for me to run? This would serve to be enormously helpful to me. Make sure they are very extensive copy prompts and also while you are at it execute any ideas you can in the process per rule 29 and leverage rule 267 to save time.
+```
+
+**Ideas referenced:** #11782, #16608, #16613, #17494, #1754, #1755, #178495, #178499, #178500, #178501, #178502, #178503, #178505, #178509, #178511, #178850, #182471, #18442 [queued], #18559 [queued], #18757 [queued], #18841 [executing], #18851 [queued], #18861 [queued], #18862 [proposed], #18867 [proposed], #18871 [proposed], #18880 [proposed], #18898 [proposed], #18903 [queued], #18912 [queued], #18913 [proposed], #18928 [proposed], #18930 [proposed], #18934 [proposed], #18935, #18937 [proposed], #18938 [proposed], #18941 [proposed], #18954 [proposed], #18959 [proposed], #18967 [proposed], #18969, #18974 [proposed], #18975 [proposed], #18977 [proposed], #18982 [proposed], #18983 [proposed], #18985 [proposed], #18998 [proposed], #19005 [queued], #19006 [queued], #19041, #19079 [queued], #19101 [queued], #19125, #19128 [queued], #19129 [proposed], #19173 [executing], #19175 [executing], #19176 [executing], #19177 [executing], #19178 [executing], #19179 [executing], #19186 [executing], #19187 [executing], #19188 [executing], #19189 [executing], #19194 [proposed], #19239 [rejected], #19259 [deployed], #19267 [deployed], #19288 [deployed], #19359 [proposed], #19360 [proposed], #19362 [proposed], #19363 [proposed], #19396 [approved], #19426 [deployed], #19435 [executing], #19439 [executing], #1985, #1992, #2026, #88922, #9086, #9168, #9339, #9831
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785023624102` — 7/26/2026, 8:03:09 PM PT — 562 turns
+
+**Original task:**
+
+```
+Not an EMSU task, sunriserescue.com pets are not the most current from petfinder. Can you fix that/update the website to show them properly? Petfinder might have updated their site so we may need to change that. You will want ot use a browser window to confirm.
+```
+
+**Ideas referenced:** #173248, #178511, #19429, #32373
+
+**Last PICKUP PROMPT:**
+
+```
+e intentional upload endpoint.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785113000000 — sunriserescue.com Petfinder integration.
+
+Where we left off (verified 2026-07-26 19:57 PT):
+- Petfinder's public API is dead (api.petfinder.com = NXDOMAIN); www.petfinder.com is behind Akamai and 403s all non-browser clients. Old petfinder-scraper.php cron was dead, cache frozen since 2026-04-14.
+- FIXED: new scraper at ~/sunrise-petfinder/refresh.js drives headless Chrome, reads props.pageProps.animalsFromOrg from __NEXT_DATA__, POSTs to https://www.sunriserescue.com/sr-cache-push.php which atomically writes petfinder-data-cache.json.
+- Live-verified: 18 cats + 24 recently adopted in cache; all 18 photo URLs HTTP 200; browser render shows 18 cards / 18 img tags / 0 broken.
+- launchd job com.sunriserescue.petfinder-refresh loaded, runs daily 8:00am, logs to ~/sunrise-petfinder/refresh.log.
+- CloudFront images have NO hotlink protection. Earlier "403" readings were a mis-transcribed URL on my side, not a Petfinder block. Do not re-add an image proxy.
+- Server scratch files removed: img-proxy.php, upload-cache.php, write-cache.php, build-cache.php, sunrise-test-token.php, cache_part_*.json. sr-cache-push.php intentionally kept.
+- NOTE: emsu-operations write_server_file does NOT land files in the sunriserescue docroot (writes silently vanish). Use ssh_command with `sudo tee` for that vhost.
+
+Open threads to drive next:
+1. (human-only decision — no idea) Whether to move the daily refresh off Ruben's Mac onto WOPR. Current launchd job only fires when the Mac is awake. Server-side would need Chrome/Chromium installed on WOPR for Puppeteer. Ruben's call on whether the Mac-based schedule is good enough.
+2. (human-only decision — no idea) Whether sr-cache-push.php should require a shared-secret header. It is currently an unauthenticated POST endpoint that overwrites the pet cache. Low risk (it validates JSON shape and only writes one file) but it is publicly reachable.
+
+Reference IDs:
+- Ideas filed: None — all work was done inline this session.
+- Files created (local): ~/sunrise-petfinder/refresh.js, ~/sunrise-petfinder/verify.js, ~/sunrise-petfinder/package.json, ~/Library/LaunchAgents/com.sunriserescue.petfinder-refresh.plist
+- Files changed (server): /var/www/vhosts/sunriserescue.com/httpdocs/pet-enhancer.js (added referrerpolicy="no-referrer" to gallery img tags), petfinder-data-cache.json (rebuilt, 18 cats), sr-cache-push.php (new upload endpoint)
+- Removed launchd: com.sunriserescue.petfinder-scraper.plist (superseded by -refresh)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<command>open https://www.sunriserescue.com/</command>
+</attempt_completion>
+```
 
 ### `1785032556412` — 7/26/2026, 7:12:26 PM PT — 238 turns
 
@@ -3923,43 +4018,4 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 - [x] Deliver recovery guidance to Ruben
 </task_progress>
 </attempt_completion>
-```
-
-### `1784839160165` — 7/23/2026, 8:45:52 PM PT — 1983 turns
-
-**Original task:**
-
-```
-## WINDOW F — CFAs (48h sweep verification + bank-statement pipeline) [merges old windows 9+10]
-
-```
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — CFA verification wrap: 48h sweep silence-fix verification + bank-statement auto-resolution follow-up. Do NOT inject Anthropic LLM. Merged from tasks 1784789944933 + 1784828207644.
-
-Where we left off (verified 2026-07-23 12:49 PT):
-- CFA silence fully diagnosed & repaired (LITELLM_BASE_URL bug → localhost:8210; CFA model frankenstein-llm 
-```
-
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #1241, #12425, #12459, #12477, #1248, #1249, #1252, #1258, #12618, #1264, #12824, #12872, #12878, #13085, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16254, #16265, #16304, #16338, #16448, #16452, #16463, #16464, #16588, #16613, #16621, #16662, #16778, #16802, #16803, #16839, #16844, #16851, #16856, #17246, #173050, #1740, #1741, #1742, #1744, #1765, #1779, #179077, #1798, #1828, #18312, #18326, #18750 [deployed], #18751 [deployed], #18752 [deployed], #18758 [deployed], #18759 [deployed], #18760 [deployed], #18790 [deployed], #18794 [deployed], #18795 [deployed], #18796 [deployed], #1926 [investigating], #20938, #2681, #7142, #7149, #8647, #9888
-
-**Last PICKUP PROMPT:**
-
-```
-tion idea(s) with real IDs and reconcile before completion; per rule 91 include PICKUP PROMPT.
-
-9. Required Files:
-   - zero_payment_outage_reachout_20260723.md (context on affected students + prior bug)
-</context>
-<task_progress>
-- [ ] Find source of "QuickBooks payment stopped, missing card token" error
-- [ ] Identify why card token is missing (JS tokenizer broken? Accept.js not loading? field mismatch from 7/23 patch?)
-- [ ] Fix across all affected sites (Ruben: "probably across all sites")
-- [ ] Physically test registration form end-to-end (browser test)
-- [ ] Strengthen pay-later canary (it passed 32/32 but missed this live failure)
-- [ ] File remediation ideas (rule 267) + reconcile + report with pickup prompt
-</task_progress>
-</summarize_task>
 ```

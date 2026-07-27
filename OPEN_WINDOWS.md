@@ -6,21 +6,22 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/27/2026, 12:50:38 PM PT | window: last 72h | 101 tasks | index total 2267 (parsed 11, cached 2256)
+Generated: 7/27/2026, 1:50:39 PM PT | window: last 72h | 98 tasks | index total 2268 (parsed 4, cached 2264)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785180988213` | 7/27/2026, 12:50:38 PM | 11 | 52KB | ## 8 — #SLS · student lifecycle state repair + backlog |
-| `1785180684278` | 7/27/2026, 12:50:38 PM | 22 | 72KB | ## 3 — #FORMS · durable fix for WPForms + its replacement |
-| `1785180665712` | 7/27/2026, 12:50:37 PM | 117 | 441KB | ## 2 — #EXEC · P0 · executor is failing builds silently |
-| `1785180947248` | 7/27/2026, 12:50:36 PM | 32 | 481KB | ## 7 — #ALERTS · text bombardment / monitoring hygiene |
-| `1785173739737` | 7/27/2026, 12:50:34 PM | 475 | 935KB | Tell me how many turns for each LLM occurred overnight / delve into frankenstein-tools and |
-| `1785180769250` | 7/27/2026, 12:50:34 PM | 25 | 85KB | ## 5 — #BUGS · user-facing bug queue |
-| `1785180724129` | 7/27/2026, 12:50:32 PM | 119 | 259KB | ## 4 — #GLM · GLM-5.2 ring |
-| `1785181049767` | 7/27/2026, 12:50:26 PM | 77 | 644KB | ## 11 — #EXT · externship system, grounded in Vicky's answers |
-| `1785180643044` | 7/27/2026, 12:49:30 PM | 52 | 197KB | ## 1 — #PAY · P0 money · RUN FIRST |
+| `1785183122795` | 7/27/2026, 1:50:36 PM | 172 | 430KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
+| `1785180769250` | 7/27/2026, 1:50:27 PM | 109 | 440KB | ## 5 — #BUGS · user-facing bug queue |
+| `1785180684278` | 7/27/2026, 1:50:23 PM | 125 | 482KB | ## 3 — #FORMS · durable fix for WPForms + its replacement |
+| `1785180643044` | 7/27/2026, 1:42:34 PM | 204 | 447KB | ## 1 — #PAY · P0 money · RUN FIRST |
+| `1785180724129` | 7/27/2026, 1:16:36 PM | 262 | 547KB | ## 4 — #GLM · GLM-5.2 ring |
+| `1785180947248` | 7/27/2026, 1:13:37 PM | 164 | 937KB | ## 7 — #ALERTS · text bombardment / monitoring hygiene |
+| `1785173739737` | 7/27/2026, 1:11:16 PM | 590 | 1104KB | Tell me how many turns for each LLM occurred overnight / delve into frankenstein-tools and |
+| `1785181029165` | 7/27/2026, 1:08:30 PM | 112 | 242KB | ## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti) |
+| `1785180988213` | 7/27/2026, 12:56:31 PM | 61 | 449KB | ## 8 — #SLS · student lifecycle state repair + backlog |
+| `1785180665712` | 7/27/2026, 12:55:02 PM | 146 | 507KB | ## 2 — #EXEC · P0 · executor is failing builds silently |
+| `1785181049767` | 7/27/2026, 12:54:02 PM | 96 | 692KB | ## 11 — #EXT · externship system, grounded in Vicky's answers |
 | `1785180925366` | 7/27/2026, 12:44:12 PM | 48 | 208KB | ## 6 — #INFRA · WOPR GPU / kernel / WireGuard |
-| `1785181029165` | 7/27/2026, 12:41:36 PM | 30 | 63KB | ## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti) |
 | `1785120544230` | 7/27/2026, 12:15:02 PM | 482 | 3105KB | I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged |
 | `1785173667267` | 7/27/2026, 12:10:46 PM | 340 | 1233KB | I need a copy of the signed and executed Medical Director Contract for Dr. Rodriguez as we |
 | `1785178593254` | 7/27/2026, 12:09:33 PM | 65 | 221KB | Context compressed at 983,257 / 1,000,000 tokens (98%), above the rule-119 COMPRESS thresh |
@@ -107,35 +108,46 @@ Generated: 7/27/2026, 12:50:38 PM PT | window: last 72h | 101 tasks | index tota
 | `1784857465252` | 7/24/2026, 2:53:43 PM | 568 | 3862KB | The copycat appears to be back. This is for the master admin role. Can you resolve that?:  |
 | `1784919802673` | 7/24/2026, 2:47:51 PM | 284 | 3142KB | continue investigating/resolving issues with Chat Widget (screenshot) |
 | `1784926480325` | 7/24/2026, 1:54:57 PM | 2 | 2KB | Wow, this window is garbage. See cline obedience.md rule:  |
-| `1784926174890` | 7/24/2026, 1:49:56 PM | 2 | 2KB | Play doctor of frankenstein LLM and resolve that. |
-| `1784925119408` | 7/24/2026, 1:32:16 PM | 3 | 21KB | what additional permissions do you think would be helpful to give exec admin and IT admin  |
-| `1784839077688` | 7/24/2026, 1:27:00 PM | 930 | 7846KB | ## WINDOW C — SLS ISSUES + ISAIAH COLEMAN (CFA/SLS access sweep) [old window 5] |
-| `1784913183055` | 7/24/2026, 1:11:14 PM | 638 | 4545KB | We recently removed CAPCE stuff from the Refresher websites, but people still need to be a |
 
 ---
 
 ## Per-window detail
 
-### `1785180988213` — 7/27/2026, 12:50:38 PM PT — 11 turns
+### `1785183122795` — 7/27/2026, 1:50:36 PM PT — 172 turns
 
 **Original task:**
 
 ```
-## 8 — #SLS · student lifecycle state repair + backlog
+Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue another 45 minutes:
 
-```
-#SLS — EMSU Student Lifecycle State. The tool itself is lying in two places; fix it, then work the queue it produces.
+-
+## Direct answer on Cesar
 
-RULES: DESCRIBE before SQL (Students has NO `status` column — use get_student_lifecycle_state / get_student_360). Moodle tables are UNPREFIXED in moodle_c_live (RC-5). Act rather than list. Server writes via ssh_command with sudo.
-
-BUG 1 — ARCHIVED-ACCOUNT INVERSION (#19439, P0, bug library #2026). The moodle_user gate reports the ARCHIVED account as canonical and the real one as "STALE," and hands back a moodle_url_r
+**I did nothing to Cesar. Three read-only commands, over its existing tunnel:** `ulimit -Sl/-Hl`, `grep memlock /etc/security/limits.d/`, and a `python3` version print. No writes, no restart, no config edit, no TP=2 launch attempted on it. Verified after the fact: ring `:8210` returns HTTP 200 with 12 concurrent requests and 211,399 generation tokens, Cesar at 96% GPU, **uptime 8 days 16:34** (proving it was never restarted), load climbing 1.76 → 3.10 = activ
 ```
 
-**Ideas referenced:** #14847, #16613, #19437, #19439, #19454, #19464, #19490, #19492, #19495, #19500, #19509, #19510, #2026, #2027, #2039, #2040, #2041, #2043, #9086, #9831
+**Ideas referenced:** #11261, #11741, #12266, #12285, #12403, #12584, #12645, #12689, #13453, #13470, #13874, #15369, #15370, #16602, #19506 [rejected], #19507 [executing], #19508 [executing], #19542 [proposed], #19543 [proposed], #19544 [proposed], #2042, #2045, #2048, #2049, #2051, #2052, #2053, #2054, #2055, #64748, #7490, #7513, #7554, #9706, #9910
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785180684278` — 7/27/2026, 12:50:38 PM PT — 22 turns
+### `1785180769250` — 7/27/2026, 1:50:27 PM PT — 109 turns
+
+**Original task:**
+
+```
+## 5 — #BUGS · user-facing bug queue
+
+```
+#BUGS — EMSU user-facing bugs. Scope: user-visible only. NOT GLM, NOT payments (#PAY), NOT forms (#FORMS), NOT executor plumbing (#EXEC).
+
+RULES: act rather than list — you have update_ticket, add_ticket_comment, fix_moodle_enrollment, unstick_moodle_quiz_attempt, regrade_quiz_attempt, ssh_command, safe_deploy_file, and direct SQL. A fixable bug parked as an "open thread" is a rule-29 violation. DESCRIBE before SQL (live example: a query died this week on `Students.status`, which does not exist — use get_student_lifecycle_state / get_student_360). Serv
+```
+
+**Ideas referenced:** #18898, #18928 [deployed], #18930, #18937, #18941 [deployed], #18974, #18975 [deployed], #19439, #19490, #2026, #2196, #2563, #3498, #475569, #64748, #7223
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785180684278` — 7/27/2026, 1:50:23 PM PT — 125 turns
 
 **Original task:**
 
@@ -151,156 +163,11 @@ FIXED, DO NOT REDO:
 A) AVS-not-on-charge → In
 ```
 
-**Ideas referenced:** #11782, #18841 [queued], #19079 [executing], #19101 [executing], #19128 [executing], #19435 [executing], #19490, #19503 [executing], #2036, #2563, #856404
+**Ideas referenced:** #000000, #008000, #0399, #11782, #14740, #15227, #16608, #18841 [queued], #19079 [executing], #19101 [executing], #19128 [executing], #19435 [executing], #19490, #19503 [executing], #2036, #2563, #5920, #856404
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785180665712` — 7/27/2026, 12:50:37 PM PT — 117 turns
-
-**Original task:**
-
-```
-## 2 — #EXEC · P0 · executor is failing builds silently
-
-```
-#EXEC — EMSU executor pipeline. The old "worker cap" theory is DEAD; here is the measured current failure.
-
-RULES: no claim without a tool call this session. Server writes via ssh_command with sudo. DESCRIBE before SQL. Act rather than list. MCP "result missing" = retry once.
-
-GROUND TRUTH FROM RUBEN — do not re-derive, do not contradict:
-"Executor has not been broken for 15 days. It has been working other things in 15 days. I've watched it do that. Plus we had way more than 150 ideas come through. I imagine those are the ones that j
-```
-
-**Ideas referenced:** #12430, #1617, #16242, #17712, #18357, #18442, #1850, #18559, #18757, #18851, #18861, #18871, #18880, #18903, #18912, #18934, #18954, #18959, #18977, #18998, #19173, #19175, #19176, #19177, #19178, #19179, #19186, #19187, #19188, #19189, #19325, #19359, #19437, #19454, #19464, #19490, #19500, #19509, #19510, #19519, #1996, #2027, #2039, #2040, #2041, #2043, #7181, #7925
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785180947248` — 7/27/2026, 12:50:36 PM PT — 32 turns
-
-**Original task:**
-
-```
-## 7 — #ALERTS · text bombardment / monitoring hygiene
-
-```
-#ALERTS — EMSU alert noise. Ruben: "I am getting bombarded with text messages. Some of these are stale or have false information that needs to be rectified at the source."
-
-His framing matters: he does not want alerts silenced, he wants the FALSE ones fixed at the source. A stale monitor firing 5,700 times is a broken monitor, not a noisy one. Do NOT add cooldowns or suppression — suppression is how you end up trusting nothing.
-
-ALREADY FIXED, DO NOT REPEAT:
-- LITELLM_BASE_URL "already defined" PHP warning: 3 bare `const` → guarded `d
-```
-
-**Ideas referenced:** #18977, #19359, #19360, #19362, #19363, #19490, #64748
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785173739737` — 7/27/2026, 12:50:34 PM PT — 475 turns
-
-**Original task:**
-
-```
-Tell me how many turns for each LLM occurred overnight / delve into frankenstein-tools and the big groupings and just give the individualLLMs rather than the groups and collate them. Whenever I ask for this, that's what I mean. Doe sthis need to be a cline rule?
-```
-
-**Ideas referenced:** #10108, #10740, #11316, #11319, #11741, #11781, #12335, #12459, #12463, #12477, #12584, #12618, #12680, #12688, #12689, #12824, #12872, #12878, #13121, #13202, #13329, #13840, #13962, #14133, #14141, #14142, #15823, #16163, #16265, #16304, #16648, #16715, #16844, #17078, #1754, #1755, #18312, #18326, #18868, #19227, #19230 [queued], #19234 [queued], #19266, #19321, #19325, #19338, #19373, #19388 [executing], #19390 [rejected], #19425, #19427, #19437, #19454, #19464, #19500, #19506 [proposed], #19507 [proposed], #19508 [proposed], #19509, #19510, #1998, #2007, #2008, #2010, #2011, #2012, #2014, #2015, #2016, #2017, #2019, #2027, #2039, #2040, #2041, #2042, #2043, #2045, #2048, #2049
-
-**Last PICKUP PROMPT:**
-
-```
-l than anything I fixed today.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — GLM ring correctness: measurement method, max_tokens truncation, and remaining paid-spill paths.
-
-Where we left off (verified 2026-07-27 12:22 PT):
-- OPERATOR GROUND TRUTH (authoritative, bug library #2048): GLM-5.2 via glm52-only is unequivocally fast enough for interactive Cline. Cicero-235B is fast enough when genuinely serving. Agent measurements contradicting this are measurement bugs until re-proven.
-- RETRACTED my claim that "Cicero served 0 of 5,233 turns, DeepSeek served all." frankenstein_verify_routing reports its OWN retry leg: call-id bc5842dd has row1 req=cicero-235b picked=cicero-235b surface="Cicero 235B" then row2 req=deepseek-v4-pro surface="DeepSeek Cloud", with fallbacks=0. Cicero spill is UNPROVEN pending a single-call trace.
-- cicero-235b has NO deepseek rung. Chain = [glm-5.2-local, glm-5.2]. Independently true: :11520 HTTP 000, llm_locate served_at=[], LAN 192.168.1.252 SSH timeout.
-- glm52-only verified clean: api-base 127.0.0.1:8210, cost 0.0, fallbacks=0, retries=0.
-- SHIPPED: 5 ring lanes max_output_tokens 16384 -> 32768; dead rung frankenstein-tools removed from glm-5.2-local + frankenstein-glm52-local; glm-5.2-local added as first rung to 5 chains incl. cicero's; EMSU_FLAGSHIP_SPEED_GATE_TPS 2.5 -> 0.5; glm52-health-monitor.timer enabled. All YAML-gated, sed-surgical (comments + WINDOW_O_DOWN markers preserved), litellm-safe-restart.sh, health 200.
-- Truncation improved but NOT solved: stop 177->199, length 3449->3541.
-
-Open threads to drive next:
-1. #19507 [executing] (verified: reconcile_ideas returned status=in_progress dev_stage=idle) — served-log post-call write + ban silent pre-call fallback + ATTRIBUTION_SUSPECT flag.
-2. #19508 [executing] (verified: reconcile_ideas returned status=in_progress dev_stage=idle) — restore dark pool members + zero-healthy-members alarm.
-3. admission_control_fast_fail diverting glm-5.2-local -> deepseek-v4-pro, reason sibling_cloud_after_stall_glm-5.2-local at prompt_tokens=32552. Likely the LARGEST remaining paid-spill path (human-only decision — no idea; needs Ruben's call on whether stall-detection thresholds should be retuned or disabled for the ring).
-4. Residual truncation: callers requesting small max_tokens directly. Audit callers of the ring lanes (human-only decision — no idea; scope call needed).
-5. Fix frankenstein_tools_adapter.py:837 tok_s = comp_tokens/wall_clock to mirror the correct ollama path at :800 (eval_dur_ns) (human-only decision — no idea; approach choice needed).
-6. Cicero physical wake — box unreachable, LaunchAgent com.emsu.cicero-235b-tunnel.plist, selfheal HEAL4 (human-only decision — no idea, RUBEN ACTION).
-
-Reference IDs:
-- Ideas filed: #19507 [executing], #19508 [executing]
-- Ideas closed: #19506 [rejected] (verified: idea_action returned new_status=rejected, superseded by #19508)
-- Bug library: #2042, #2045, #2048 (agent_speed_measurement_method_invalid_glm_cicero_20260727 — contains the MANDATORY measurement method)
-- Files touched: /etc/litellm/config.yaml (backups .bak-glm52local-primary-20260727-114947, .bak-cicerochain-*, .bak-ringmaxtok-*), /etc/systemd/system/litellm.service.d/20-glm-ring-speed-gate.conf (new), glm52-health-monitor.timer (enabled), /tmp/ring_direct_bench.py, /tmp/glm_lanes_audit.py, /tmp/fix_ring_maxtokens.py
-- Gate token: 5e56b11a10571658f5f78ec9
-
-When done, append to cline_task_ledger.md (rule 07), run 
-```
-
-### `1785180769250` — 7/27/2026, 12:50:34 PM PT — 25 turns
-
-**Original task:**
-
-```
-## 5 — #BUGS · user-facing bug queue
-
-```
-#BUGS — EMSU user-facing bugs. Scope: user-visible only. NOT GLM, NOT payments (#PAY), NOT forms (#FORMS), NOT executor plumbing (#EXEC).
-
-RULES: act rather than list — you have update_ticket, add_ticket_comment, fix_moodle_enrollment, unstick_moodle_quiz_attempt, regrade_quiz_attempt, ssh_command, safe_deploy_file, and direct SQL. A fixable bug parked as an "open thread" is a rule-29 violation. DESCRIBE before SQL (live example: a query died this week on `Students.status`, which does not exist — use get_student_lifecycle_state / get_student_360). Serv
-```
-
-**Ideas referenced:** #18898, #18928 [deployed], #18930, #18937, #18941, #18974, #18975 [deployed], #19439, #19490, #2026
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785180724129` — 7/27/2026, 12:50:32 PM PT — 119 turns
-
-**Original task:**
-
-```
-## 4 — #GLM · GLM-5.2 ring
-
-```
-#GLM — EMSU GLM-5.2 ring. Rebase live, then drive what is left.
-
-HARD CONSTRAINTS:
-- NEVER inject Anthropic. Free-local-first (rule 146); frankenstein-llm is the one router.
-- NEVER set enable_thinking:false on GLM. Ruben rejected it outright; #19239 [rejected] exists to stop it being resurrected — the think block is the entire reason to run GLM over DeepSeek V4 pro.
-- NEVER quarantine glm-5.2-local without Ruben. His rule is 30 minutes OF DEBRIS, not 30 minutes elapsed.
-- Rule 277: GPU_MEM 0.82, no --enforce-eager, no --no-async-scheduling, VLLM_ENGINE_READY_TI
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #1754, #1755, #18312, #18326, #19239 [rejected], #19259 [deployed], #19267 [deployed], #19288 [deployed], #19338, #19490, #1980, #1983, #1984, #1985, #1992, #1998, #2050
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785181049767` — 7/27/2026, 12:50:26 PM PT — 77 turns
-
-**Original task:**
-
-```
-## 11 — #EXT · externship system, grounded in Vicky's answers
-
-```
-#EXT — EMSU externship system. Dashboard: https://emsuniversity.com/emtskills/externship/dashboard.php
-Idea #19505 [executing]. Vicky answered six questions on 2026-07-27 and her answers INVALIDATE the previous framing. Read them before planning anything.
-
-RULES: no claim without a tool call this session. DESCRIBE before SQL (ExternshipRequest uses assigned_to_user_id, NOT assigned_to). Act rather than list. MCP "result missing" = retry once. No apology language in student/preceptor email (rule 02).
-
-LIVE NUMBERS (180d, verifie
-```
-
-**Ideas referenced:** #19437, #19454, #19464, #19465, #19500, #19504, #19505 [executing], #19509, #19510, #198754, #2027, #2029, #2033, #2039, #2040, #2041, #2043, #283593, #3498, #856404, #92400
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785180643044` — 7/27/2026, 12:49:30 PM PT — 52 turns
+### `1785180643044` — 7/27/2026, 1:42:34 PM PT — 204 turns
 
 **Original task:**
 
@@ -315,7 +182,7 @@ RULES: no claim without a tool call this session. Server writes via emsu-operati
 === ALREADY FIXED 2026-07-27, DO 
 ```
 
-**Ideas referenced:** #172007, #19437, #19454, #19464, #19465, #19492 [executing], #19495 [executing], #19500, #19504 [executing], #19509, #19510, #19511 [executing], #19517 [executing], #20142, #20149, #2027, #2029, #2030, #2031, #2033, #2036, #2039, #2040, #2041, #2043, #2044, #20882, #20883, #21033, #21529, #21558, #8869
+**Ideas referenced:** #15815, #16134, #16590, #16594, #16608, #16613, #16621, #16695, #172007, #17447, #19437, #19454, #19464, #19465, #19492 [executing], #19495 [executing], #19500, #19504 [executing], #19509, #19510, #19511 [executing], #19517 [executing], #19545 [proposed], #20142, #20149, #2027, #2029, #2030, #2031, #2033, #2036, #2039, #2040, #2041, #2043, #2044, #2056, #20882, #20883, #21033, #21529, #21558, #252532, #3078, #3079, #8211, #8869, #9086, #9306
 
 **Last PICKUP PROMPT:**
 
@@ -350,6 +217,322 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
+### `1785180724129` — 7/27/2026, 1:16:36 PM PT — 262 turns
+
+**Original task:**
+
+```
+## 4 — #GLM · GLM-5.2 ring
+
+```
+#GLM — EMSU GLM-5.2 ring. Rebase live, then drive what is left.
+
+HARD CONSTRAINTS:
+- NEVER inject Anthropic. Free-local-first (rule 146); frankenstein-llm is the one router.
+- NEVER set enable_thinking:false on GLM. Ruben rejected it outright; #19239 [rejected] exists to stop it being resurrected — the think block is the entire reason to run GLM over DeepSeek V4 pro.
+- NEVER quarantine glm-5.2-local without Ruben. His rule is 30 minutes OF DEBRIS, not 30 minutes elapsed.
+- Rule 277: GPU_MEM 0.82, no --enforce-eager, no --no-async-scheduling, VLLM_ENGINE_READY_TI
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12657, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #1754, #1755, #18312, #18326, #19239 [rejected], #19259 [deployed], #19267 [deployed], #19288 [deployed], #19338, #19490, #19531 [proposed], #19532 [proposed], #19533 [proposed], #19540 [proposed], #1980, #1983, #1984, #1985, #1992, #1998, #2050
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785180947248` — 7/27/2026, 1:13:37 PM PT — 164 turns
+
+**Original task:**
+
+```
+## 7 — #ALERTS · text bombardment / monitoring hygiene
+
+```
+#ALERTS — EMSU alert noise. Ruben: "I am getting bombarded with text messages. Some of these are stale or have false information that needs to be rectified at the source."
+
+His framing matters: he does not want alerts silenced, he wants the FALSE ones fixed at the source. A stale monitor firing 5,700 times is a broken monitor, not a noisy one. Do NOT add cooldowns or suppression — suppression is how you end up trusting nothing.
+
+ALREADY FIXED, DO NOT REPEAT:
+- LITELLM_BASE_URL "already defined" PHP warning: 3 bare `const` → guarded `d
+```
+
+**Ideas referenced:** #15637, #16402, #17671, #18977, #19070, #19250, #19345, #19359 [deployed], #19360 [deployed], #19362 [investigating], #19363 [undiagnosed], #19470, #19490 [in_progress], #19541 [proposed], #5316, #5322, #5339, #64748, #6837
+
+**Last PICKUP PROMPT:**
+
+```
+state and add protective guard
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #current — #ALERTS text bombardment: complete #19362 WOPR_SSH monitor fix + #19363 ckpt420 diagnosis.
+(current task — numeric task ID not available via MCP; reference by topic: "#ALERTS — text bombardment / monitoring hygiene")
+
+Where we left off (verified 2026-07-27 13:12 PT):
+- #19360 [deployed]: discord_scanner heartbeat → 'retired', alert eliminated
+- #19359 [deployed]: SMS_STUB_REMOVAL_V1 confirmed present at webhooks/twilio_sms_inbound.php, no stub code remains
+- #19362 [investigating]: 5,700+ false WOPR_SSH alerts, candidate files mapped (cron_fleet_agent_v23, cron_sms_mac_tunnel_watchdog, etc.) but exact counter not isolated yet. Filed #19541 for next investigator.
+- #19363 [undiagnosed]: ckpt420 pod disappearing every 5 min, processed=0, stale_decisions firing. Silent-ghost chains still auto-filing (19534, 19514, 19513). Needs rule 276 runbook.
+- DB: mysql -u adminportal -p'iV84o80^y' admin_portal; system_heartbeats has discord_scanner='retired', imessage_scanner='online'
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #19541 [proposed] — grep /var/www/emtskills/ for exact "EMSU DOWN: WOPR_SSH failed" string; locate the cron/lib PHP source, trace the SMS send path, find the counter that never resets, add recovery detection that zeros it on success + sanity gate for absurd values (>1000 fires self-check)
+2. #19363 [approved] — run Rule 276 Federation runbook: (a) `llm_locate` ckpt420 pod location, (b) `frankenstein_tier_health` to confirm gaps, (c) `frankenstein_what_served` to trace what model was invoked for decisions, (d) diagnose `processed=0` / pod disappearing root cause. Do NOT inject Anthropic. Do NOT quarantine GLM local.
+3. #19490 [in_progress] — verify #19359 is still 'deployed' on disk (not reverted again). Check `orchestrator_ideas` for recent status change history. Add protective note on #19359 if still reverted. Diagnose NULL impl_failed_reason in executor.
+4. (no idea yet) — query `ruben_imessage_issues` table for the 53-item backlog, auto-triage per rule 29 (anything an agent can do, do it; only policy calls go to Ruben). MCP SSH quoting for LIKE queries needs workaround — write PHP script on WOPR, execute via `php /tmp/script.php`.
+5. (no idea yet) — query `nremt_submissions` and `nremt_records` for pending counts; identify source of "NREMTpend:521" digest and verify if it's a real counter or stale. Workaround same as above.
+6. (no idea yet) — design auto-void canary alert; coordinate with #PAY. Gap: payment charges auto-void with no notification.
+
+Reference IDs:
+- Ticket: #ALERTS (Ruben text bombardment)
+- Ideas filed: #19541
+- Ideas checked: #19360 [deployed], #19359 [deployed], #19362 [approved], #19363 [approved], #19490 [in_progress]
+- Files touched: system_heartbeats.discord_scanner (status changed to 'retired'), webhooks/twilio_sms_inbound.php (verified)
+- Tables: system_heartbeats, orchestrator_ideas, ruben_system_events, twilio_outbound_messages
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785173739737` — 7/27/2026, 1:11:16 PM PT — 590 turns
+
+**Original task:**
+
+```
+Tell me how many turns for each LLM occurred overnight / delve into frankenstein-tools and the big groupings and just give the individualLLMs rather than the groups and collate them. Whenever I ask for this, that's what I mean. Doe sthis need to be a cline rule?
+```
+
+**Ideas referenced:** #10108, #10740, #11316, #11319, #11741, #11781, #12335, #12459, #12463, #12477, #12584, #12618, #12680, #12688, #12689, #12824, #12872, #12878, #13121, #13202, #13329, #13840, #13962, #14133, #14141, #14142, #15823, #16163, #16265, #16304, #16449, #16604, #16648, #16715, #16844, #17078, #1754, #1755, #18312, #18326, #18868, #19227, #19230 [queued], #19234 [queued], #19266, #19321, #19325, #19338, #19373, #19388 [executing], #19390 [rejected], #19425, #19427, #19437, #19454, #19464, #19500, #19506 [proposed], #19507 [proposed], #19508 [proposed], #19509, #19510, #1998, #2007, #2008, #2010, #2011, #2012, #2014, #2015, #2016, #2017, #2019, #2027, #2039, #2040, #2041, #2042, #2043, #2045, #2048, #2049, #2051, #2052, #2053, #2054, #21544
+
+**Last PICKUP PROMPT:**
+
+```
+health-monitor.timer` enabled.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — frankenstein-llm ladder correctness: dead-Cicero pin, Artemis wedge, Julia/Claudia RoCE.
+
+Where we left off (verified 2026-07-27 13:07 PT):
+- CESAR/CATO = LIVE GLM Hex ring, DO NOT TOUCH (rules 145/157/251). Cesar spark-3b41 .56 worker 96% GPU uptime 8d; Cato spark-2aa8 .115 head serving :8210. Ring verified healthy: 200, 12 concurrent, 211399 gen tokens. My Cesar contact was 3 READ-ONLY commands only (#2054).
+- ARTEMIS wedged not down: WG fresh, ping 0%/27ms, :22 OPEN, :8000+:11434 closed, SSH banner-exchange timeout. Babysitter restart 12:17:01 succeeded then all fail from 12:23:56.
+- JULIA spark-6ae6 .190 + CLAUDIA spark-6d51 .194: healthy, GPU 0%, no listening ports = free 120B dark. TP=2 blocked by IBV_WC_RETRY_EXC_ERR(12).
+- 45.9% of traffic pinned to dead cicero-235b (969/2113 turns, 191 convs, 721 interactive).
+- Live+verified in container: speed gate 0.5, 5 ring lanes max_output_tokens 32768, glm-5.2-local first rung in 5 chains, glm52-health-monitor.timer enabled.
+
+Open threads to drive next:
+1. #19507 [executing] (verified: reconcile_ideas returned status=in_progress dev_stage=idle) — served-log post-call write, ban silent pre-call fallback, ATTRIBUTION_SUSPECT flag.
+2. #19508 [executing] (verified: reconcile_ideas returned status=in_progress dev_stage=idle) — restore dark pool members + zero-healthy-members alarm.
+3. Widen frankenstein_registry.py:138 to include probe:vllm so MODEL_ENDPOINT covers cicero/glm-5.2-local/julia, then add EXPLICIT_DEADBOX_GUARD at _final_pick (_router_core.py ~6210). Audit MODEL_ENDPOINT consumers at 1042/1100/1268/2601 first (human-only decision — no idea; doorman-filtering blast radius needs Ruben's call).
+4. Artemis Wyze power cycle — Wyze app or physical in Tempe; no remote path exists (human-only decision — no idea, RUBEN/JON ACTION).
+5. Julia/Claudia RoCE fix per #2053: NCCL_DEBUG=INFO for HCA/GID/MTU, ibv_devinfo active_mtu both ends, GID index 3 RoCEv2 parity, mlnx_qos PFC parity; OR no-root workaround NCCL_IB_DISABLE=1 for TCP fallback (human-only decision — no idea; needs root, no passwordless sudo on either box).
+6. artemis_powercycle.sh + artemis_watchdog.sh: stop the 100%-failing 5-min loop, add wyze driver, document plug site (human-only decision — no idea; needs plug credentials).
+
+Reference IDs:
+- Ideas filed: #19507 [executing], #19508 [executing]
+- Ideas closed: #19506 [rejected] (verified: idea_action returned new_status=rejected, superseded by #19508)
+- Bug library: #2042, #2045, #2048, #2049, #2051, #2052, #2053, #2054
+- Files: /etc/litellm/config.yaml (+3 backups), /etc/systemd/system/litellm.service.d/10-frugal.conf (+backup, -e EMSU_FLAGSHIP_SPEED_GATE_TPS=0.5), /tmp/spark_identity.txt, /tmp/julia_preflight.txt, /tmp/cicero_spill_cost.py
+- Gate token: 5e56b11a10571658f5f78ec9
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785181029165` — 7/27/2026, 1:08:30 PM PT — 112 turns
+
+**Original task:**
+
+```
+## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti)
+
+```
+#STUDENT — EMSU instructor escalation. Dan Taylor (SF instructor) regarding Aahana Chakravartti, student 26613FT-18.
+
+ESTABLISHED (verified 2026-07-25 19:52 PT):
+- Inbound email 88922 from Dan Taylor (daleta@msn.com), 14 attachments. NO ticket created, student_id never extracted, classified "internal" — which is why it never became a ticket.
+- Outbound reply 182471 sent 19:09 from info@emsuniversity.com to daleta@msn.com. The HTML body was truncated in the DB read, so what we actually said is UNKNOWN.
+- Aahana: completed_nremt,
+```
+
+**Ideas referenced:** #12981, #18559, #19194 [rejected], #19437, #19439, #19454, #19464, #19500, #19509, #19510, #19535 [proposed], #19537 [proposed], #19538 [proposed], #19539 [proposed], #19560, #2026, #2027, #2039, #2040, #2041, #2043, #21544, #2322, #2490, #4929, #6106, #9086, #9168, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+#2322 and #2490 for 26613FT-18
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #9 - Dan Taylor / Aahana Chakravartti 26613FT-18 follow-through.
+
+Where we left off (verified 2026-07-27 13:05 PT):
+- Follow-up autosent to Dan Taylor (daleta@msn.com)
+- Ticket 21544 In Progress with full investigation comment
+- 2 escalated externship requests (#2322, #2490) - externship team needs to unblock
+- Ideas filed: #19535 (outbound body-loss), #19537 (classification bug), #19538 (ticket monitor), #19539 (externship monitor)
+
+Open threads to drive next:
+1. #19537 [proposed] - implement internal_staff vs internal_system classification split
+2. #19535 [proposed] - investigate and fix outbound body_preview CSS-only bug
+3. #19538 [proposed] - if Dan replies to ticket 21544, route to externship team; if no reply in 48h, close per R-CLOSE
+4. #19539 [proposed] - monitor externship requests #2322 and #2490 for placement; escalate to Vicky if still Pattern-B after 72h
+
+Reference IDs:
+- Ticket: 21544
+- Ideas filed: #19535, #19537, #19538, #19539
+- Files touched: HANDOFF_NOTES.md (entry added)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Read inbound email 88922 - 986 chars, 14 attachments
+- [x] Read outbound email 182471 - CSS only, content LOST
+- [x] Run student 360 - nremt_cleared, $2195 paid, 2 escalated externship requests
+- [x] Run student lifecycle state - certificate_readiness WARN
+- [x] Run externship check - 2 Pattern-B, 0/8 forms, no placement
+- [x] Run conversation history - 5 calls, 2 SMS, all externship
+- [x] Ticket 21544 commented with full investigation
+- [x] Email sent to Dan Taylor - Tier-1 autosend (confidence 0.92)
+- [x] Outbound body-loss bug filed as #19535
+- [x] Classification bug re-filed as #19537
+- [x] Monitor ideas filed: #19538, #19539
+- [x] Handoff notes updated
+- [x] Validated with clinerules_validate_completion - ALL PASSED
+- [x] Close with PICKUP PROMPT
+</task_progress>
+</attempt_completion>
+```
+
+### `1785180988213` — 7/27/2026, 12:56:31 PM PT — 61 turns
+
+**Original task:**
+
+```
+## 8 — #SLS · student lifecycle state repair + backlog
+
+```
+#SLS — EMSU Student Lifecycle State. The tool itself is lying in two places; fix it, then work the queue it produces.
+
+RULES: DESCRIBE before SQL (Students has NO `status` column — use get_student_lifecycle_state / get_student_360). Moodle tables are UNPREFIXED in moodle_c_live (RC-5). Act rather than list. Server writes via ssh_command with sudo.
+
+BUG 1 — ARCHIVED-ACCOUNT INVERSION (#19439, P0, bug library #2026). The moodle_user gate reports the ARCHIVED account as canonical and the real one as "STALE," and hands back a moodle_url_r
+```
+
+**Ideas referenced:** #11782, #12661, #13873, #13977, #14153, #14154, #14847, #15635, #15636, #15638, #16437, #16581, #16608, #16613, #16731, #16732, #16733, #17546, #17580, #17685, #17723, #18693, #18743, #18936, #19437, #19439, #19454, #19464, #19465, #19490, #19492, #19495, #19500, #19509, #19510, #2026, #2027, #2033, #2036, #2039, #2040, #2041, #2043, #71121, #9083, #9086, #9168, #9192, #9202, #9306, #9339, #9343, #9549, #9831
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785180665712` — 7/27/2026, 12:55:02 PM PT — 146 turns
+
+**Original task:**
+
+```
+## 2 — #EXEC · P0 · executor is failing builds silently
+
+```
+#EXEC — EMSU executor pipeline. The old "worker cap" theory is DEAD; here is the measured current failure.
+
+RULES: no claim without a tool call this session. Server writes via ssh_command with sudo. DESCRIBE before SQL. Act rather than list. MCP "result missing" = retry once.
+
+GROUND TRUTH FROM RUBEN — do not re-derive, do not contradict:
+"Executor has not been broken for 15 days. It has been working other things in 15 days. I've watched it do that. Plus we had way more than 150 ideas come through. I imagine those are the ones that j
+```
+
+**Ideas referenced:** #12430, #1617, #16242, #17712, #18357, #18442, #1850, #18559, #18757, #18851, #18861, #18871, #18880 [queued], #18903, #18912, #18934 [queued], #18954 [queued], #18959, #18977, #18998, #19173, #19175, #19176, #19177, #19178, #19179, #19186, #19187, #19188 [queued], #19189, #19325, #19359, #19437, #19454, #19464, #19490 [executing], #19500, #19509, #19510, #19519, #19527 [queued], #19530 [queued], #1996, #2027, #2039, #2040, #2041, #2043, #7181, #7925
+
+**Last PICKUP PROMPT:**
+
+```
+ #18977 DGX Spark remote power
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #19490 — Executor fix sweep: remaining GATE C + queued items.
+
+Where we left off (verified 2026-07-27 12:54 PT):
+- 4 code fixes deployed and verified: cli_watchdog, pipeline_liveness, silent_ghost_alert, wiring_gate
+- 188 legacy blank reasons backfilled (0 remaining)
+- #19359 re-deployed after silent_ghost fix
+- Obedience family #19173-19179 deployed, #19186-19189 requeued
+- HANDOFF_NOTES.md updated with full sweep results
+- All backups at .bak-reasonfix-20260727 and .bak-handshipfix-20260727
+
+Open threads to drive next:
+1. #19530 [queued] — GATE C hand-ships: #18903 haiku repoint, #18871 Connecteam sweep, #18998 view-guard chain. Handle each per GATE C — verify surface first, then decide
+2. #19527 [queued] — Connecteam dead-table sweep (#18871 blocking #18861)
+3. #19188 [queued] — Frankenstein Doctor sweep: run rule 276 Federation → rule 156 bug_library_check_before_fix → diagnose. You MUST run these tools BEFORE claiming anything about the fleet
+4. #19490 [executing] — Requeue 215 backlog. Do NOT requeue into silently-failing dispatcher: the 4 fixes above make failures diagnosable, so it's safe now. Combine manual requeue with `UPDATE orchestrator_ideas SET dev_stage='idle', status='approved' WHERE dev_stage='impl_failed' AND implementation_notes NOT LIKE '%[IMPL_RETRY] count=5%'`
+5. #18954 [queued] — Daystrom R1 batch-pull gate (P0), #18880 [queued] — Daystrom stale-enrollment routing (P0), #18934 [queued] — Outreach Specialist role
+
+Reference IDs:
+- Ticket: #19490
+- Ideas filed: #19519 (executor fix sweep parent), #19527 (Connecteam), #19530 (remaining GATE C)
+- Files touched: cron/cron_cli_watchdog.php, cron/cron_idea_pipeline_liveness.php, cron/cron_silent_ghost_alert.php, cron/cron_executor_wiring_gate.php
+
+DO NOT TOUCH (Frankenstein/GLM/Anthropic): 17921, 16853, 18926, 18852, 18803, 18717, 18765, 17311-17313, 17235, 17333, 17342, 18401, 18321
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785181049767` — 7/27/2026, 12:54:02 PM PT — 96 turns
+
+**Original task:**
+
+```
+## 11 — #EXT · externship system, grounded in Vicky's answers
+
+```
+#EXT — EMSU externship system. Dashboard: https://emsuniversity.com/emtskills/externship/dashboard.php
+Idea #19505 [executing]. Vicky answered six questions on 2026-07-27 and her answers INVALIDATE the previous framing. Read them before planning anything.
+
+RULES: no claim without a tool call this session. DESCRIBE before SQL (ExternshipRequest uses assigned_to_user_id, NOT assigned_to). Act rather than list. MCP "result missing" = retry once. No apology language in student/preceptor email (rule 02).
+
+LIVE NUMBERS (180d, verifie
+```
+
+**Ideas referenced:** #19437, #19454, #19464, #19465, #19500, #19504, #19505 [executing], #19509, #19510, #19528 [deployed], #19529 [deployed], #198754, #2027, #2029, #2033, #2039, #2040, #2041, #2043, #283593, #3498, #856404, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+n use? Does Vicky need access?
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Externship Q2/Q5/Q1 remaining items.
+
+Where we left off (verified 2026-07-27 12:53 PT):
+- Q6 deployed: agency_comms.php + dashboard link. Verified 21KB, lint clean, 401 gate.
+- Q3 deployed: dashboard sorts by date urgency. Verified ORDER BY with preferred_date_1 CURDATE logic, lint clean.
+- Vicky delivery doc written: /var/www/emtskills/externship/docs/vicky_externship_updates_2026-07-27.md (7.6KB) — NOT yet sent, needs Ruben review.
+
+Open threads to drive next:
+1. #19505 [executing] — Still stalled in auditing; pick up remaining Q2/Q5/Q1 items. Task spec above.
+2. #19528 [deployed] — Q6 unified agency communications page shipped
+3. #19529 [deployed] — Q3 dashboard course-end sort shipped
+
+Reference IDs:
+- Ticket: #19505 (Externship system redesign)
+- Ideas filed: #19528, #19529
+- Files touched: /var/www/emtskills/externship/agency_comms.php, /var/www/emtskills/externship/dashboard.php, /var/www/emtskills/externship/docs/vicky_externship_updates_2026-07-27.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
 ### `1785180925366` — 7/27/2026, 12:44:12 PM PT — 48 turns
 
 **Original task:**
@@ -368,34 +551,6 @@ VERIFY-BEFORE-CLAIM IS HARDFLOOR: no SSH to a box mea
 **Ideas referenced:** #18867 [deployed], #18967 [queued], #18977 [queued], #18982 [executing], #18985 [rejected], #19006 [executing], #19522 [proposed], #19523 [proposed], #19524 [proposed], #19525 [proposed], #19526 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785181029165` — 7/27/2026, 12:41:36 PM PT — 30 turns
-
-**Original task:**
-
-```
-## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti)
-
-```
-#STUDENT — EMSU instructor escalation. Dan Taylor (SF instructor) regarding Aahana Chakravartti, student 26613FT-18.
-
-ESTABLISHED (verified 2026-07-25 19:52 PT):
-- Inbound email 88922 from Dan Taylor (daleta@msn.com), 14 attachments. NO ticket created, student_id never extracted, classified "internal" — which is why it never became a ticket.
-- Outbound reply 182471 sent 19:09 from info@emsuniversity.com to daleta@msn.com. The HTML body was truncated in the DB read, so what we actually said is UNKNOWN.
-- Aahana: completed_nremt,
-```
-
-**Ideas referenced:** #18559, #19194 [rejected], #19437, #19439, #19454, #19464, #19500, #19509, #19510, #2026, #2027, #2039, #2040, #2041, #2043
-
-**Last PICKUP PROMPT:**
-
-```
-d (Rule 02: no apology language)
-- [ ] Create ticket if needed
-- [ ] Close with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
-```
 
 ### `1785120544230` — 7/27/2026, 12:15:02 PM PT — 482 turns
 
@@ -3715,97 +3870,3 @@ do not inject anthropic llm
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1784926174890` — 7/24/2026, 1:49:56 PM PT — 2 turns
-
-**Original task:**
-
-```
-Play doctor of frankenstein LLM and resolve that.
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1784925119408` — 7/24/2026, 1:32:16 PM PT — 3 turns
-
-**Original task:**
-
-```
-what additional permissions do you think would be helpful to give exec admin and IT admin to help them accomplish things according to my prefernces. Rule 29 etc...
-```
-
-**Ideas referenced:** #1896, #1925, #1935, #1937, #1938, #1939
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1784839077688` — 7/24/2026, 1:27:00 PM PT — 930 turns
-
-**Original task:**
-
-```
-## WINDOW C — SLS ISSUES + ISAIAH COLEMAN (CFA/SLS access sweep) [old window 5]
-
-```
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — CFA/SLS access sweep + Isaiah Coleman RC-3 + automation build. Was task 1784834708704.
-
-Where we left off (verified 2026-07-23 13:05 PT):
-- Isaiah Coleman (gap #180, ticket 12160): billing email isaiahcoleman787@gmail.com found via Authnet 81667223222; NO wpforms registration entry exists (root cause of missing Students row). Confirmation email drafted 
-```
-
-**Ideas referenced:** #0000, #12597, #152615, #1758, #17580, #176616, #17681, #178424, #178455, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273 [executing], #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #18395, #18435, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18693 [deployed], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #1880, #18808 [deployed], #18809 [executing], #18810 [executing], #18811, #18812, #18813, #18817 [executing], #18820, #1883, #18832 [proposed], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [queued], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18890 [proposed], #18904, #18905, #1894, #1896, #1897, #1912, #1927, #1928, #1929, #1930, #1931, #1932, #1933 [resolved], #21053, #250312, #2948, #2949, #389249, #4929, #7879, #8485, #8514, #8568, #8597, #8662, #8664, #8707, #9086
-
-**Last PICKUP PROMPT:**
-
-```
-prompt)** — every `attempt_completion` must end with the 47-char U+2550 divider PICKUP PROMPT block, real idea numbers with disposition tags, Open Threads + Reference IDs sections, no bare `#NNNN`.
-   - **Rule 143/41 (prose-loop circuit breaker / no-prose)** — recent turns hit "[ERROR] You did not use a tool" strikes; recovery requires silent tool calls, not narration. This summarize_task call is itself the required recovery action per the explicit_instructions received (context window was flagged as rapidly running out — the environment forced a summarize_task call after the compression round-trip).
-   - **2026-07-18 "pay-later skip bug"** (per cline_task_ledger.md, from `.clinerules` context, NOT this session's own work): a prior fix root-caused zero-EMT-payments due to a pay-later skip bug across 12 sites, first post-patch payment verified same day. This is a candidate REGRESSION explanation for today's low volume — needs to be checked for recurrence.
-
-3. Files and Code Sections:
-   No files have been read or modified in this session yet. All work has been via MCP tool calls (emsu-operations, attempted ssh_command, attempted mysql MCP). Candidate files/locations NOT yet examined:
-   - `/var/www/emtskills/lib/RegistrationSurfaceHealth.php` — underlying logic for the health check already run (probably not needed further; plugin-presence check already passed).
-   - WordPress `wp_options` table per site (candidate location for Authorize.net API login ID / transaction key / sandbox-vs-production environment flag used by the WPForms-QuickBooks-Payments plugin) — NOT yet located or queried.
-   - Any code implementing the 2026-07-18 "pay-later skip bug" fix — NOT yet re-inspected for regression.
-   - Candidate DB table `qb_invoice_payments_authnet_cache` (referenced only in MCP tool descriptions, e.g. `verify_payment_state`/`match_student_payment` docstrings as "Source of truth = qb_invoice_payments_authnet_cache settled mirror") — schema NOT yet verified via `describe_table`.
-
-4. Problem Solving:
-   **Findings so far (this session):**
-   - `check_registration_surface_health(domain="all")` — 9 sites checked: 8 PASS (arizonaemt.com, californiaemt.com, dallasemt.com, houstonemt.com, sanantonioemt.com, sandiegoemt.com, texasemt.com, tucsonemt.com), 1 FAIL (miamiemt.com — dropdown stale since 2022-09-13 due to missing Course_Schedules rows for Miami location; NOT payment/token related). **Critically: the payment plugin (wpforms-quickbooks-payments) is present and active on ALL 9 sites including Miami** — this rules out "plugin missing/corrupted" as an explanation for Ruben's concern. However this check does NOT validate whether the Authorize.net API token/credential itself is valid — a genuinely misconfigured or expired token would NOT be caught by this check.
-   - Raw `ssh_command` mysql query attempt (as `root@localhost`) — FAILED with `ERROR 1698 (28000): Access denied`. This path is a dead end; should use the `mysql` MCP server tools (`cj0_a30` prefix) instead, which have separately-configured working credentials.
-   - `verify_payment_state` called with a placeholder email — invalid methodology (no real student identified) and also hit a transport timeout. Should not be repeated with a placeholder; needs either a real student_id/email or should pivot to aggregate-level tools.
-   - `match_student_payment(days=14)` (no student_id, dry_run default) returned: `{"dry_run":true,"scanned":123,"applied":0,"created":0,"queued":0,"skipped":0,"no_settled":123}`. **All 123 candidate payment_enrollment_gaps rows over the last 14 day
-```
-
-### `1784913183055` — 7/24/2026, 1:11:14 PM PT — 638 turns
-
-**Original task:**
-
-```
-We recently removed CAPCE stuff from the Refresher websites, but people still need to be able to register and pay for classes. For example, this is not a registration form and it can't really be found easily: 
-https://emtrefresher.com/eb-courses/ 
-
-LITERALLY SHOULD JUST BE ABLE to click on the enroll button or the registration button and enroll or register for the class. Something is not right there he's resolution right away.
-```
-
-**Ideas referenced:** #000000, #003366, #004080, #059669, #0693, #11782, #14833, #14885, #16159, #162324, #18745, #18770, #18782, #18786 [deployed], #18788, #18791 [proposed], #18909, #1921, #1923, #1924, #1925, #32373, #334155, #3858, #64748, #819596, #8211
-
-**Last PICKUP PROMPT:**
-
-```
-y future deploy.
-   - Deliver final `attempt_completion` with mandatory rule-91 PICKUP PROMPT block (47-char U+2550 divider, no fake/bare idea numbers, correct disposition tags for any filed ideas, Open Threads section, Reference IDs section) once all above work is complete. Per rule 91, every open-thread item listed above needs a real `create_idea` filed number with a disposition bracket before shipping — none have been filed yet this session.
-
-6. Task Evolution:
-   - **Original Task:** "We recently removed CAPCE stuff from the Refresher websites, but people still need to be able to register and pay for classes. For example, this is not a registration form and it can't really be found easily: https://emtrefresher.com/eb-courses/ LITERALLY SHOULD JUST BE ABLE to click on the enroll button or the registration button and enroll or register for the class. Something is not right there he's resolution right away."
-   - **Task Modification 1:** "What in the world? You have SSH access. Why are you not resolving this?" — redirected from diagnosis-only reporting to actually applying fixes via SSH/DB access.
-   - **Task Modification 2 (most recent, currently active):** "Page is empty with no checkout showing / also worried on other Refresher payment pages. May need to verify with browser" — redirected task to require (a) genuine browser-based visual verification (Puppeteer screenshots) rather than curl/API checks, (b) confirming actual checkout/payment step works (not just listing page renders), and (c) proactively auditing sister "Refresher" branded sites for the same class of problem.
-   - **Current Active Task:** Listing-page portion of root cause #1 (Edwiser Bridge/Edwiser Bridge Pro deactivated) is fixed and browser-confirmed repeatedly. Root cause #2 has just been discovered this session: ALL WooCommerce payment gateway plugins are inactive, which is the direct, confirmed explanation for "Page is empty with no checkout showing." This has NOT yet been fixed. Remaining work: (1) reactivate the needed payment gateway plugin(s) via the proven active_plugins SQL-edit pattern, (2) verify via WP-CLI and one final browser attempt, (3) audit and fix four sister Refresher sites, (4) update HANDOFF_NOTES.md, (5) file a durable monitoring idea, (6) deliver final rule-91-compliant attempt_completion.
-   - **Context for Changes:** Ruben's own real-browser observation ("Page is empty with no checkout showing") is what surfaced the Edwiser Bridge bug in the first place and remains the yardstick for "done" — task is not complete until the checkout step itself has been verified working, and the newly-discovered payment-gateway-inactive finding is a direct, confirmed hit on exactly that complaint.
-
-7. Current Work:
-   Immediately before this summary request: ran two SSH/WP-CLI checks via `ssh_command` against emtrefresher.com. First check: `wp option get woocommerce_enable_guest_checkout --allow-root` (returned "yes") combined with `wp plugin list --allow-root --fields=name,status | grep -Ei "gateway|payment|affirm|authorize|qbms|stripe|klarna|woocommerce"` which revealed ALL WooCommerce payment gateway plugins are `inactive` (emsu-klarna-stripe-gateway, woocommerce-gateway-authorize-net-cim, woocommerce-gateway-affirm, woocommerce-integration, woocommerce-gateway-intuit-qbms, woocommerce-services, woocommerce-payments), with only `woocommerce` core and `wpforms-quickbooks-payments` shown active. Second check: attempted to grep each gateway's `_settings` option for `[enabled] =>` values (`woocommerce_authorize_net_cim_settings`, `woocomm
-```

@@ -6,22 +6,22 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/27/2026, 1:50:39 PM PT | window: last 72h | 98 tasks | index total 2268 (parsed 4, cached 2264)
+Generated: 7/27/2026, 2:50:39 PM PT | window: last 72h | 96 tasks | index total 2268 (parsed 8, cached 2260)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785183122795` | 7/27/2026, 1:50:36 PM | 172 | 430KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
-| `1785180769250` | 7/27/2026, 1:50:27 PM | 109 | 440KB | ## 5 — #BUGS · user-facing bug queue |
-| `1785180684278` | 7/27/2026, 1:50:23 PM | 125 | 482KB | ## 3 — #FORMS · durable fix for WPForms + its replacement |
-| `1785180643044` | 7/27/2026, 1:42:34 PM | 204 | 447KB | ## 1 — #PAY · P0 money · RUN FIRST |
+| `1785180925366` | 7/27/2026, 2:50:34 PM | 66 | 252KB | ## 6 — #INFRA · WOPR GPU / kernel / WireGuard |
+| `1785180684278` | 7/27/2026, 2:50:33 PM | 299 | 1212KB | ## 3 — #FORMS · durable fix for WPForms + its replacement |
+| `1785180947248` | 7/27/2026, 2:50:10 PM | 193 | 982KB | ## 7 — #ALERTS · text bombardment / monitoring hygiene |
+| `1785180769250` | 7/27/2026, 2:48:20 PM | 136 | 488KB | ## 5 — #BUGS · user-facing bug queue |
+| `1785181029165` | 7/27/2026, 2:47:17 PM | 120 | 265KB | ## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti) |
+| `1785183122795` | 7/27/2026, 2:45:24 PM | 323 | 748KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
+| `1785180643044` | 7/27/2026, 2:40:28 PM | 374 | 714KB | ## 1 — #PAY · P0 money · RUN FIRST |
+| `1785181049767` | 7/27/2026, 2:39:06 PM | 100 | 701KB | ## 11 — #EXT · externship system, grounded in Vicky's answers |
 | `1785180724129` | 7/27/2026, 1:16:36 PM | 262 | 547KB | ## 4 — #GLM · GLM-5.2 ring |
-| `1785180947248` | 7/27/2026, 1:13:37 PM | 164 | 937KB | ## 7 — #ALERTS · text bombardment / monitoring hygiene |
 | `1785173739737` | 7/27/2026, 1:11:16 PM | 590 | 1104KB | Tell me how many turns for each LLM occurred overnight / delve into frankenstein-tools and |
-| `1785181029165` | 7/27/2026, 1:08:30 PM | 112 | 242KB | ## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti) |
 | `1785180988213` | 7/27/2026, 12:56:31 PM | 61 | 449KB | ## 8 — #SLS · student lifecycle state repair + backlog |
 | `1785180665712` | 7/27/2026, 12:55:02 PM | 146 | 507KB | ## 2 — #EXEC · P0 · executor is failing builds silently |
-| `1785181049767` | 7/27/2026, 12:54:02 PM | 96 | 692KB | ## 11 — #EXT · externship system, grounded in Vicky's answers |
-| `1785180925366` | 7/27/2026, 12:44:12 PM | 48 | 208KB | ## 6 — #INFRA · WOPR GPU / kernel / WireGuard |
 | `1785120544230` | 7/27/2026, 12:15:02 PM | 482 | 3105KB | I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged |
 | `1785173667267` | 7/27/2026, 12:10:46 PM | 340 | 1233KB | I need a copy of the signed and executed Medical Director Contract for Dr. Rodriguez as we |
 | `1785178593254` | 7/27/2026, 12:09:33 PM | 65 | 221KB | Context compressed at 983,257 / 1,000,000 tokens (98%), above the rule-119 COMPRESS thresh |
@@ -106,48 +106,31 @@ Generated: 7/27/2026, 1:50:39 PM PT | window: last 72h | 98 tasks | index total 
 | `1784858983506` | 7/24/2026, 4:30:03 PM | 379 | 3723KB | Both follow-up directives are done. |
 | `1784926500782` | 7/24/2026, 3:57:55 PM | 199 | 1382KB | Wow, this window is garbage. See cline obedience.md rule:  |
 | `1784857465252` | 7/24/2026, 2:53:43 PM | 568 | 3862KB | The copycat appears to be back. This is for the master admin role. Can you resolve that?:  |
-| `1784919802673` | 7/24/2026, 2:47:51 PM | 284 | 3142KB | continue investigating/resolving issues with Chat Widget (screenshot) |
-| `1784926480325` | 7/24/2026, 1:54:57 PM | 2 | 2KB | Wow, this window is garbage. See cline obedience.md rule:  |
 
 ---
 
 ## Per-window detail
 
-### `1785183122795` — 7/27/2026, 1:50:36 PM PT — 172 turns
+### `1785180925366` — 7/27/2026, 2:50:34 PM PT — 66 turns
 
 **Original task:**
 
 ```
-Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue another 45 minutes:
+## 6 — #INFRA · WOPR GPU / kernel / WireGuard
 
--
-## Direct answer on Cesar
+```
+#INFRA — EMSU WOPR hardware and infrastructure.
 
-**I did nothing to Cesar. Three read-only commands, over its existing tunnel:** `ulimit -Sl/-Hl`, `grep memlock /etc/security/limits.d/`, and a `python3` version print. No writes, no restart, no config edit, no TP=2 launch attempted on it. Verified after the fact: ring `:8210` returns HTTP 200 with 12 concurrent requests and 211,399 generation tokens, Cesar at 96% GPU, **uptime 8 days 16:34** (proving it was never restarted), load climbing 1.76 → 3.10 = activ
+READ FIRST (rule 294): /var/www/emtskills/docs/WOPR_STATE.json is canonical live host state, regenerated every 5 min by /usr/local/bin/emsu_host_state.sh via /etc/cron.d/emsu-host-state. Confirm freshness under 10 minutes, then TRUST IT over anything written here. That machinery exists because the 4TB cutover invalidated a class of facts mid-flight while a sibling window kept asserting stale ones — Ruben called that "what i wanted to avoid."
+
+VERIFY-BEFORE-CLAIM IS HARDFLOOR: no SSH to a box mea
 ```
 
-**Ideas referenced:** #11261, #11741, #12266, #12285, #12403, #12584, #12645, #12689, #13453, #13470, #13874, #15369, #15370, #16602, #19506 [rejected], #19507 [executing], #19508 [executing], #19542 [proposed], #19543 [proposed], #19544 [proposed], #2042, #2045, #2048, #2049, #2051, #2052, #2053, #2054, #2055, #64748, #7490, #7513, #7554, #9706, #9910
+**Ideas referenced:** #18867 [deployed], #18967 [queued], #18977 [queued], #18982 [executing], #18985 [rejected], #19006 [executing], #19522 [proposed], #19523 [proposed], #19524 [proposed], #19525 [proposed], #19526 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785180769250` — 7/27/2026, 1:50:27 PM PT — 109 turns
-
-**Original task:**
-
-```
-## 5 — #BUGS · user-facing bug queue
-
-```
-#BUGS — EMSU user-facing bugs. Scope: user-visible only. NOT GLM, NOT payments (#PAY), NOT forms (#FORMS), NOT executor plumbing (#EXEC).
-
-RULES: act rather than list — you have update_ticket, add_ticket_comment, fix_moodle_enrollment, unstick_moodle_quiz_attempt, regrade_quiz_attempt, ssh_command, safe_deploy_file, and direct SQL. A fixable bug parked as an "open thread" is a rule-29 violation. DESCRIBE before SQL (live example: a query died this week on `Students.status`, which does not exist — use get_student_lifecycle_state / get_student_360). Serv
-```
-
-**Ideas referenced:** #18898, #18928 [deployed], #18930, #18937, #18941 [deployed], #18974, #18975 [deployed], #19439, #19490, #2026, #2196, #2563, #3498, #475569, #64748, #7223
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785180684278` — 7/27/2026, 1:50:23 PM PT — 125 turns
+### `1785180684278` — 7/27/2026, 2:50:33 PM PT — 299 turns
 
 **Original task:**
 
@@ -167,78 +150,7 @@ A) AVS-not-on-charge → In
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785180643044` — 7/27/2026, 1:42:34 PM PT — 204 turns
-
-**Original task:**
-
-```
-## 1 — #PAY · P0 money · RUN FIRST
-
-```
-#PAY — EMSU P0 revenue recovery. Payment declines were silently voiding and invoices were being marked paid anyway.
-
-RULES: no claim without a tool call this session. Server writes via emsu-operations ssh_command with sudo. DESCRIBE tables before SQL; cross-DB joins need COLLATE utf8mb4_general_ci on both sides. Act rather than list. MCP "result missing" = retry the same call once. NO apology language in student email (rule 02). Money movement over the rule-29 cap is human-gated → CS round-robin, never Vicky by default.
-
-=== ALREADY FIXED 2026-07-27, DO 
-```
-
-**Ideas referenced:** #15815, #16134, #16590, #16594, #16608, #16613, #16621, #16695, #172007, #17447, #19437, #19454, #19464, #19465, #19492 [executing], #19495 [executing], #19500, #19504 [executing], #19509, #19510, #19511 [executing], #19517 [executing], #19545 [proposed], #20142, #20149, #2027, #2029, #2030, #2031, #2033, #2036, #2039, #2040, #2041, #2043, #2044, #2056, #20882, #20883, #21033, #21529, #21558, #252532, #3078, #3079, #8211, #8869, #9086, #9306
-
-**Last PICKUP PROMPT:**
-
-```
- "EMSU vault capture skipped".
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #19517 — Payment vault: consent, key backup, 30-day destroy, live card watch.
-
-Where we left off (verified 2026-07-27 12:49 PT):
-- PaymentMethodVault.php updated with pmv_purge_30d() function
-- payment_vault_cli.php updated with destroy command (--preview/--apply)
-- /etc/cron.d/emsu-payment-vault-purge created (04:00 PT daily)
-- Encryption key sent to Ruben via iMessage
-- student_payment_methods has 0 rows — no live card vaulted yet
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #19517 [executing] — Watch php error log for "EMSU vault capture skipped" when next student pays; confirm Intuit customerId is present in charge context on all 32 sites
-2. #19517 [executing] — Key rotation procedure: if key is rotated, existing stored tokens become undecryptable. Document recovery plan.
-3. #19504 [executing] — Unpaid loop enforcement: 11 students need grace window + notification before suspension
-4. #19492 [executing] — Second auto-void (Pradeep/Nihar $1,445) on sandiegoemt: AVS patch IS installed, read the error_log diagnostic next
-
-Reference IDs:
-- Ideas filed: #19517, #19492, #19495, #19504, #19511
-- Files touched: /var/www/emtskills/lib/PaymentMethodVault.php, api/payment_vault_cli.php, /etc/cron.d/emsu-payment-vault-purge
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785180724129` — 7/27/2026, 1:16:36 PM PT — 262 turns
-
-**Original task:**
-
-```
-## 4 — #GLM · GLM-5.2 ring
-
-```
-#GLM — EMSU GLM-5.2 ring. Rebase live, then drive what is left.
-
-HARD CONSTRAINTS:
-- NEVER inject Anthropic. Free-local-first (rule 146); frankenstein-llm is the one router.
-- NEVER set enable_thinking:false on GLM. Ruben rejected it outright; #19239 [rejected] exists to stop it being resurrected — the think block is the entire reason to run GLM over DeepSeek V4 pro.
-- NEVER quarantine glm-5.2-local without Ruben. His rule is 30 minutes OF DEBRIS, not 30 minutes elapsed.
-- Rule 277: GPU_MEM 0.82, no --enforce-eager, no --no-async-scheduling, VLLM_ENGINE_READY_TI
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12657, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #1754, #1755, #18312, #18326, #19239 [rejected], #19259 [deployed], #19267 [deployed], #19288 [deployed], #19338, #19490, #19531 [proposed], #19532 [proposed], #19533 [proposed], #19540 [proposed], #1980, #1983, #1984, #1985, #1992, #1998, #2050
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785180947248` — 7/27/2026, 1:13:37 PM PT — 164 turns
+### `1785180947248` — 7/27/2026, 2:50:10 PM PT — 193 turns
 
 **Original task:**
 
@@ -254,7 +166,7 @@ ALREADY FIXED, DO NOT REPEAT:
 - LITELLM_BASE_URL "already defined" PHP warning: 3 bare `const` → guarded `d
 ```
 
-**Ideas referenced:** #15637, #16402, #17671, #18977, #19070, #19250, #19345, #19359 [deployed], #19360 [deployed], #19362 [investigating], #19363 [undiagnosed], #19470, #19490 [in_progress], #19541 [proposed], #5316, #5322, #5339, #64748, #6837
+**Ideas referenced:** #15637, #1573 [critical], #16402, #1641 [critical], #17671, #18977, #19070, #19250, #19345, #19359 [deployed], #19360 [deployed], #19362 [investigating], #19363 [undiagnosed], #19470, #19490 [in_progress], #19541 [proposed], #1996 [high], #2032 [critical], #2034 [critical], #2253 [critical], #2254 [critical], #2289 [high], #2477 [critical], #2731 [high], #2755 [critical], #2756 [critical], #2828 [critical], #2829 [critical], #2835 [high], #2932 [critical], #2986 [critical], #3076 [critical], #3077 [critical], #3081 [high], #5316, #5322, #5339, #64748, #6837
 
 **Last PICKUP PROMPT:**
 
@@ -294,6 +206,263 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
+
+### `1785180769250` — 7/27/2026, 2:48:20 PM PT — 136 turns
+
+**Original task:**
+
+```
+## 5 — #BUGS · user-facing bug queue
+
+```
+#BUGS — EMSU user-facing bugs. Scope: user-visible only. NOT GLM, NOT payments (#PAY), NOT forms (#FORMS), NOT executor plumbing (#EXEC).
+
+RULES: act rather than list — you have update_ticket, add_ticket_comment, fix_moodle_enrollment, unstick_moodle_quiz_attempt, regrade_quiz_attempt, ssh_command, safe_deploy_file, and direct SQL. A fixable bug parked as an "open thread" is a rule-29 violation. DESCRIBE before SQL (live example: a query died this week on `Students.status`, which does not exist — use get_student_lifecycle_state / get_student_360). Serv
+```
+
+**Ideas referenced:** #18898 [proposed], #18928 [deployed], #18930 [blocked], #18937 [proposed], #18941 [deployed], #18974 [proposed], #18975 [deployed], #19439, #19490, #2026, #2196, #2563, #3498, #475569, #64748, #7223, #7634
+
+**Last PICKUP PROMPT:**
+
+```
+ (top bar CSS — targeted)
+
+---
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up #BUGS queue — drive remaining to resolved.
+
+Where we left off (verified 2026-07-27 12:39 PT):
+- #18941 [resolved] — timeclock AJAX guard deployed and verified
+- #18928 [resolved] — Skillstastic status filter deployed and verified
+- #18937 [proposed] — EMS 210 gate code exists but bypass vector unknown; need Moodle enrollment verification for 5 flagged candidates
+- #18898 [proposed] — top bar CSS issue in cori_shell.css; need to read full CSS and dashboard render flow
+- #18930 [blocked] — Jon tickets: zero assigned to either Jon (ID 3 or 80); investigate filter/visibility scope
+- #18974 [proposed] — CS Auto-Agent (ID 124) orphans: zero today, can close
+
+Open threads to drive next:
+1. #18937 — SSH WOPR: check Moodle enrollment for 5 skip_ems210 candidates (IDs 3562, 3566, 3568, 3584, 3595). Query moodle_c_live database. If enrolled, trace the bypass path (reconciler cron, tools/create_moodle_account.php). If not enrolled, close ticket.
+2. #18898 — SSH WOPR: read full `/var/www/emtskills/public/css/cori_shell.css` + search for PHP warn/notices in `includes/team_hub_shell.php` + `includes/header.php`. Find the widget pushing the bar down.
+3. #18930 — SSH WOPR: grep for `my_tickets` or `view_tickets` in routes/, trace the SQL query for Jonathan's dashboard, check filter args (status, assignment, scope). Compare GET params.
+4. #18974 — update ticket to resolved with "verified zero orphans on 2026-07-27"
+
+Reference IDs:
+- Tickets: #18941, #18937, #18928, #18898, #18930, #18974
+- Files: routes/timeclock_user.php, skillstastic/api_import_class.php, personnel/lib/OnboardingService.php, personnel/api/update_candidate_status.php, public/css/cori_shell.css
+- DB: admin_portal.personnel_candidates (skip_ems210 column), moodle_c_live.user
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785181029165` — 7/27/2026, 2:47:17 PM PT — 120 turns
+
+**Original task:**
+
+```
+## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti)
+
+```
+#STUDENT — EMSU instructor escalation. Dan Taylor (SF instructor) regarding Aahana Chakravartti, student 26613FT-18.
+
+ESTABLISHED (verified 2026-07-25 19:52 PT):
+- Inbound email 88922 from Dan Taylor (daleta@msn.com), 14 attachments. NO ticket created, student_id never extracted, classified "internal" — which is why it never became a ticket.
+- Outbound reply 182471 sent 19:09 from info@emsuniversity.com to daleta@msn.com. The HTML body was truncated in the DB read, so what we actually said is UNKNOWN.
+- Aahana: completed_nremt,
+```
+
+**Ideas referenced:** #12981, #18559, #19194 [rejected], #19437, #19439, #19454, #19464, #19495, #19500, #19509, #19510, #19535 [proposed], #19537 [proposed], #19538 [proposed], #19539 [proposed], #19545, #19560, #2026, #2027, #2039, #2040, #2041, #2043, #21544, #2322, #2490, #4929, #6106, #9086, #9168, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+icky at 72h if still Pattern-B
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #9 - Dan Taylor / Aahana Chakravartti 26613FT-18 follow-through.
+
+Where we left off (verified 2026-07-27 14:45 PT):
+- Follow-up sent to Dan Taylor (daleta@msn.com)
+- Handoff email sent to Vicky (vyu@emsuniversity.com) with externship todo list
+- Ticket 21544 In Progress with full investigation comment
+- Ruben approved autonomous promotion of #19535, #19537, #19539
+
+Open threads to drive next:
+1. #19537 [proposed] - implement internal_staff vs internal_system classification split
+2. #19535 [proposed] - investigate and fix outbound body_preview CSS-only bug
+3. #19539 [proposed] - monitor externship requests #2322 and #2490 for placement; escalate to Vicky if still Pattern-B after 72h
+
+Reference IDs:
+- Ticket: 21544
+- Ideas filed: #19535, #19537, #19539
+- Files touched: HANDOFF_NOTES.md (entry added)
+- Emails sent: Dan Taylor (daleta@msn.com), Vicky (vyu@emsuniversity.com)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Read inbound email 88922
+- [x] Read outbound email 182471 - CSS only, content unrecoverable
+- [x] Run student 360 - nremt_cleared, paid $2195, 2 escalated externship requests
+- [x] Run student lifecycle state - certificate_readiness WARN
+- [x] Run externship check - 2 Pattern-B, 0/8 forms, no placement
+- [x] Run conversation history - 5 calls, 2 SMS, all externship
+- [x] Ticket 21544 commented with full investigation
+- [x] Follow-up sent to Dan Taylor
+- [x] Handoff email sent to Vicky with externship todo list
+- [x] Idea #19535 filed and approved (outbound body-loss)
+- [x] Idea #19537 filed and approved (classification bug)
+- [x] Idea #19539 filed and approved (externship monitor)
+- [x] Handoff notes updated
+- [x] Validated with clinerules_validate_completion - ALL PASSED
+- [x] Close with PICKUP PROMPT
+</task_progress>
+</attempt_completion>
+```
+
+### `1785183122795` — 7/27/2026, 2:45:24 PM PT — 323 turns
+
+**Original task:**
+
+```
+Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue another 45 minutes:
+
+-
+## Direct answer on Cesar
+
+**I did nothing to Cesar. Three read-only commands, over its existing tunnel:** `ulimit -Sl/-Hl`, `grep memlock /etc/security/limits.d/`, and a `python3` version print. No writes, no restart, no config edit, no TP=2 launch attempted on it. Verified after the fact: ring `:8210` returns HTTP 200 with 12 concurrent requests and 211,399 generation tokens, Cesar at 96% GPU, **uptime 8 days 16:34** (proving it was never restarted), load climbing 1.76 → 3.10 = activ
+```
+
+**Ideas referenced:** #11261, #11741, #12266, #12285, #12403, #12584, #12645, #12689, #13453, #13470, #13874, #15369, #15370, #16602, #19506 [rejected], #19507 [executing], #19508 [executing], #19542 [proposed], #19543 [proposed], #19544 [proposed], #19546 [executing], #19547 [executing], #19548 [executing], #19549 [executing], #2042, #2045, #2048, #2049, #2051, #2052, #2053, #2054, #2055, #2057, #2058, #2059, #64748, #7490, #7513, #7554, #9706, #9910
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785180643044` — 7/27/2026, 2:40:28 PM PT — 374 turns
+
+**Original task:**
+
+```
+## 1 — #PAY · P0 money · RUN FIRST
+
+```
+#PAY — EMSU P0 revenue recovery. Payment declines were silently voiding and invoices were being marked paid anyway.
+
+RULES: no claim without a tool call this session. Server writes via emsu-operations ssh_command with sudo. DESCRIBE tables before SQL; cross-DB joins need COLLATE utf8mb4_general_ci on both sides. Act rather than list. MCP "result missing" = retry the same call once. NO apology language in student email (rule 02). Money movement over the rule-29 cap is human-gated → CS round-robin, never Vicky by default.
+
+=== ALREADY FIXED 2026-07-27, DO 
+```
+
+**Ideas referenced:** #1379, #1458, #1459, #1460, #1461, #15815, #16134, #16590, #16594, #16608, #16613, #16621, #166462, #1666, #1667, #16695, #172007, #173077, #17447, #19437, #19454, #19464, #19465, #19492 [executing], #19495 [executing], #19500, #19504 [executing], #19509, #19510, #19511 [executing], #19517 [executing], #19545 [proposed], #20142, #20149, #2027, #2029, #2030, #2031, #2033, #2036, #2039, #2040, #2041, #2043, #2044, #2056, #20882, #20883, #21033, #21529, #21558, #252532, #3078, #3079, #3354, #8211, #8869, #9086, #9306
+
+**Last PICKUP PROMPT:**
+
+```
+ "EMSU vault capture skipped".
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #19517 — Payment vault: consent, key backup, 30-day destroy, live card watch.
+
+Where we left off (verified 2026-07-27 12:49 PT):
+- PaymentMethodVault.php updated with pmv_purge_30d() function
+- payment_vault_cli.php updated with destroy command (--preview/--apply)
+- /etc/cron.d/emsu-payment-vault-purge created (04:00 PT daily)
+- Encryption key sent to Ruben via iMessage
+- student_payment_methods has 0 rows — no live card vaulted yet
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #19517 [executing] — Watch php error log for "EMSU vault capture skipped" when next student pays; confirm Intuit customerId is present in charge context on all 32 sites
+2. #19517 [executing] — Key rotation procedure: if key is rotated, existing stored tokens become undecryptable. Document recovery plan.
+3. #19504 [executing] — Unpaid loop enforcement: 11 students need grace window + notification before suspension
+4. #19492 [executing] — Second auto-void (Pradeep/Nihar $1,445) on sandiegoemt: AVS patch IS installed, read the error_log diagnostic next
+
+Reference IDs:
+- Ideas filed: #19517, #19492, #19495, #19504, #19511
+- Files touched: /var/www/emtskills/lib/PaymentMethodVault.php, api/payment_vault_cli.php, /etc/cron.d/emsu-payment-vault-purge
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785181049767` — 7/27/2026, 2:39:06 PM PT — 100 turns
+
+**Original task:**
+
+```
+## 11 — #EXT · externship system, grounded in Vicky's answers
+
+```
+#EXT — EMSU externship system. Dashboard: https://emsuniversity.com/emtskills/externship/dashboard.php
+Idea #19505 [executing]. Vicky answered six questions on 2026-07-27 and her answers INVALIDATE the previous framing. Read them before planning anything.
+
+RULES: no claim without a tool call this session. DESCRIBE before SQL (ExternshipRequest uses assigned_to_user_id, NOT assigned_to). Act rather than list. MCP "result missing" = retry once. No apology language in student/preceptor email (rule 02).
+
+LIVE NUMBERS (180d, verifie
+```
+
+**Ideas referenced:** #19437, #19454, #19464, #19465, #19500, #19504, #19505 [executing], #19509, #19510, #19528 [deployed], #19529 [deployed], #19530 [deployed], #198754, #2027, #2029, #2033, #2039, #2040, #2041, #2043, #283593, #3498, #856404, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+ben for portal reconciliation)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Externship Q2/Q5/Q1 remaining items, once Vicky answers the follow-up questions.
+
+Where we left off (verified 2026-07-27 14:38 PT):
+- Q6 deployed: agency_comms.php + dashboard link
+- Q3 deployed: dashboard sorts by date urgency
+- Vicky delivery doc ready for Ruben review: /var/www/emtskills/externship/docs/vicky_externship_updates_2026-07-27.md
+- Follow-up questions file ready: /var/www/emtskills/externship/docs/vicky_followup_questions_2026-07-27.md
+
+Open threads to drive next:
+1. #19505 [executing] — Resume Q2 (eligibility gate), Q5 (rollover ladder), Q1 (spreadsheet reconciliation) after Vicky answers
+2. #19528 [deployed] — Q6 agency comms page
+3. #19529 [deployed] — Q3 dashboard sort
+4. #19530 [deployed] — Vicky follow-up questions document
+
+Reference IDs:
+- Ticket: #19505 (Externship system redesign)
+- Ideas filed: #19528, #19529, #19530
+- Files touched: agency_comms.php, dashboard.php, vicky_externship_updates_2026-07-27.md, vicky_followup_questions_2026-07-27.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785180724129` — 7/27/2026, 1:16:36 PM PT — 262 turns
+
+**Original task:**
+
+```
+## 4 — #GLM · GLM-5.2 ring
+
+```
+#GLM — EMSU GLM-5.2 ring. Rebase live, then drive what is left.
+
+HARD CONSTRAINTS:
+- NEVER inject Anthropic. Free-local-first (rule 146); frankenstein-llm is the one router.
+- NEVER set enable_thinking:false on GLM. Ruben rejected it outright; #19239 [rejected] exists to stop it being resurrected — the think block is the entire reason to run GLM over DeepSeek V4 pro.
+- NEVER quarantine glm-5.2-local without Ruben. His rule is 30 minutes OF DEBRIS, not 30 minutes elapsed.
+- Rule 277: GPU_MEM 0.82, no --enforce-eager, no --no-async-scheduling, VLLM_ENGINE_READY_TI
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12657, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #1754, #1755, #18312, #18326, #19239 [rejected], #19259 [deployed], #19267 [deployed], #19288 [deployed], #19338, #19490, #19531 [proposed], #19532 [proposed], #19533 [proposed], #19540 [proposed], #1980, #1983, #1984, #1985, #1992, #1998, #2050
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785173739737` — 7/27/2026, 1:11:16 PM PT — 590 turns
 
@@ -341,72 +510,6 @@ Reference IDs:
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1785181029165` — 7/27/2026, 1:08:30 PM PT — 112 turns
-
-**Original task:**
-
-```
-## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti)
-
-```
-#STUDENT — EMSU instructor escalation. Dan Taylor (SF instructor) regarding Aahana Chakravartti, student 26613FT-18.
-
-ESTABLISHED (verified 2026-07-25 19:52 PT):
-- Inbound email 88922 from Dan Taylor (daleta@msn.com), 14 attachments. NO ticket created, student_id never extracted, classified "internal" — which is why it never became a ticket.
-- Outbound reply 182471 sent 19:09 from info@emsuniversity.com to daleta@msn.com. The HTML body was truncated in the DB read, so what we actually said is UNKNOWN.
-- Aahana: completed_nremt,
-```
-
-**Ideas referenced:** #12981, #18559, #19194 [rejected], #19437, #19439, #19454, #19464, #19500, #19509, #19510, #19535 [proposed], #19537 [proposed], #19538 [proposed], #19539 [proposed], #19560, #2026, #2027, #2039, #2040, #2041, #2043, #21544, #2322, #2490, #4929, #6106, #9086, #9168, #9339
-
-**Last PICKUP PROMPT:**
-
-```
-#2322 and #2490 for 26613FT-18
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #9 - Dan Taylor / Aahana Chakravartti 26613FT-18 follow-through.
-
-Where we left off (verified 2026-07-27 13:05 PT):
-- Follow-up autosent to Dan Taylor (daleta@msn.com)
-- Ticket 21544 In Progress with full investigation comment
-- 2 escalated externship requests (#2322, #2490) - externship team needs to unblock
-- Ideas filed: #19535 (outbound body-loss), #19537 (classification bug), #19538 (ticket monitor), #19539 (externship monitor)
-
-Open threads to drive next:
-1. #19537 [proposed] - implement internal_staff vs internal_system classification split
-2. #19535 [proposed] - investigate and fix outbound body_preview CSS-only bug
-3. #19538 [proposed] - if Dan replies to ticket 21544, route to externship team; if no reply in 48h, close per R-CLOSE
-4. #19539 [proposed] - monitor externship requests #2322 and #2490 for placement; escalate to Vicky if still Pattern-B after 72h
-
-Reference IDs:
-- Ticket: 21544
-- Ideas filed: #19535, #19537, #19538, #19539
-- Files touched: HANDOFF_NOTES.md (entry added)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Read inbound email 88922 - 986 chars, 14 attachments
-- [x] Read outbound email 182471 - CSS only, content LOST
-- [x] Run student 360 - nremt_cleared, $2195 paid, 2 escalated externship requests
-- [x] Run student lifecycle state - certificate_readiness WARN
-- [x] Run externship check - 2 Pattern-B, 0/8 forms, no placement
-- [x] Run conversation history - 5 calls, 2 SMS, all externship
-- [x] Ticket 21544 commented with full investigation
-- [x] Email sent to Dan Taylor - Tier-1 autosend (confidence 0.92)
-- [x] Outbound body-loss bug filed as #19535
-- [x] Classification bug re-filed as #19537
-- [x] Monitor ideas filed: #19538, #19539
-- [x] Handoff notes updated
-- [x] Validated with clinerules_validate_completion - ALL PASSED
-- [x] Close with PICKUP PROMPT
-</task_progress>
 </attempt_completion>
 ```
 
@@ -484,73 +587,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1785181049767` — 7/27/2026, 12:54:02 PM PT — 96 turns
-
-**Original task:**
-
-```
-## 11 — #EXT · externship system, grounded in Vicky's answers
-
-```
-#EXT — EMSU externship system. Dashboard: https://emsuniversity.com/emtskills/externship/dashboard.php
-Idea #19505 [executing]. Vicky answered six questions on 2026-07-27 and her answers INVALIDATE the previous framing. Read them before planning anything.
-
-RULES: no claim without a tool call this session. DESCRIBE before SQL (ExternshipRequest uses assigned_to_user_id, NOT assigned_to). Act rather than list. MCP "result missing" = retry once. No apology language in student/preceptor email (rule 02).
-
-LIVE NUMBERS (180d, verifie
-```
-
-**Ideas referenced:** #19437, #19454, #19464, #19465, #19500, #19504, #19505 [executing], #19509, #19510, #19528 [deployed], #19529 [deployed], #198754, #2027, #2029, #2033, #2039, #2040, #2041, #2043, #283593, #3498, #856404, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-n use? Does Vicky need access?
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Externship Q2/Q5/Q1 remaining items.
-
-Where we left off (verified 2026-07-27 12:53 PT):
-- Q6 deployed: agency_comms.php + dashboard link. Verified 21KB, lint clean, 401 gate.
-- Q3 deployed: dashboard sorts by date urgency. Verified ORDER BY with preferred_date_1 CURDATE logic, lint clean.
-- Vicky delivery doc written: /var/www/emtskills/externship/docs/vicky_externship_updates_2026-07-27.md (7.6KB) — NOT yet sent, needs Ruben review.
-
-Open threads to drive next:
-1. #19505 [executing] — Still stalled in auditing; pick up remaining Q2/Q5/Q1 items. Task spec above.
-2. #19528 [deployed] — Q6 unified agency communications page shipped
-3. #19529 [deployed] — Q3 dashboard course-end sort shipped
-
-Reference IDs:
-- Ticket: #19505 (Externship system redesign)
-- Ideas filed: #19528, #19529
-- Files touched: /var/www/emtskills/externship/agency_comms.php, /var/www/emtskills/externship/dashboard.php, /var/www/emtskills/externship/docs/vicky_externship_updates_2026-07-27.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785180925366` — 7/27/2026, 12:44:12 PM PT — 48 turns
-
-**Original task:**
-
-```
-## 6 — #INFRA · WOPR GPU / kernel / WireGuard
-
-```
-#INFRA — EMSU WOPR hardware and infrastructure.
-
-READ FIRST (rule 294): /var/www/emtskills/docs/WOPR_STATE.json is canonical live host state, regenerated every 5 min by /usr/local/bin/emsu_host_state.sh via /etc/cron.d/emsu-host-state. Confirm freshness under 10 minutes, then TRUST IT over anything written here. That machinery exists because the 4TB cutover invalidated a class of facts mid-flight while a sibling window kept asserting stale ones — Ruben called that "what i wanted to avoid."
-
-VERIFY-BEFORE-CLAIM IS HARDFLOOR: no SSH to a box mea
-```
-
-**Ideas referenced:** #18867 [deployed], #18967 [queued], #18977 [queued], #18982 [executing], #18985 [rejected], #19006 [executing], #19522 [proposed], #19523 [proposed], #19524 [proposed], #19525 [proposed], #19526 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785120544230` — 7/27/2026, 12:15:02 PM PT — 482 turns
 
@@ -3814,59 +3850,3 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </task_progress>
 </attempt_completion>
 ```
-
-### `1784919802673` — 7/24/2026, 2:47:51 PM PT — 284 turns
-
-**Original task:**
-
-```
-continue investigating/resolving issues with Chat Widget (screenshot)
-
-Problem is that these students never got actual responses. Also, I"m very Worried on other CFAs to make sure these are not having issues also. Can you check other lines of communication to make sure workign properly? 
-
-Do not inject anthropic llm.
-```
-
-**Ideas referenced:** #18342, #18345 [executing], #18348, #18395, #18820, #18900 [executing], #18901 [executing], #18902 [executing], #18903 [executing], #21114, #2195, #260724, #2681, #2682, #7907, #817134, #8702, #8703, #8705, #8710, #8711, #9112
-
-**Last PICKUP PROMPT:**
-
-```
-IN (18900,18901,18902,18903)`.
-   - Rule 91 pickup prompt: result must end with PICKUP PROMPT block, 47-char U+2550 dividers (═══════════════════════════════════════════════), every #NNNN bracketed, Open threads + Reference IDs sections mandatory, no bare idea numbers anywhere in result.
-   - Rule 02: no apology language in student-facing email (draft written accordingly).
-   - Prior related ideas to reference in pickup prompt: #18345 [executing] (15 unanswered chat handoffs), #18348 (fake auto-resolve of handoff tickets), #18342 (16-person followup).
-
-3. Files and Code Sections:
-   - `/var/www/emtskills/api/chat_suggestions_api.php` — PATCHED + VERIFIED (prior window): was direct Anthropic claude-haiku-4-5; repointed to LiteLLM/frankenstein-llm. Backup `chat_suggestions_api.php.bak-anthfix-20260724`. 0 anthropic refs, php -l clean, FPM reloaded.
-   - `chat_portal_sites` row 14 = emsuniversity.com, db wordpress_2, ai_model 'frankenstein-llm'. Row 22 = miamiemtrefresher.com (home_http=500).
-   - `/var/www/emtskills/api/livechat/webhook.php` — verified LiteLLM-targeted; callOpenAIModel dead code.
-   - `/var/www/emtskills/lib/chat_llm_router.php` — callAnthropicModel dead code (no live callers).
-   - Remaining haiku surfaces (covered by idea #18903): `api/refund_proposal_override.php:172`, `api/telephony/classify_confirmatory.php:100`.
-
-4. Problem Solving:
-   - SOLVED: Chat widget root cause = MySQL wordpress_2 password drift → all DB connects failed 1045 → siteDb() null → canned fallback for ALL emsuniversity.com students, 7/20-7/24. Repaired via ALTER USER + FLUSH PRIVILEGES; verified healthy: PDO OK both hosts, wp-login 200, healthcheck site 14 healthy ai_reply_ok=1 recovery=1 at 2026-07-24 12:16:04 PT.
-   - SOLVED: chat_suggestions_api.php Anthropic repoint (verified).
-   - CFA SWEEP COMPLETE (all verified healthy): Chat widgets 34 healthy/8 skipped (only real issue = miamiemtrefresher.com home_http=500, site 22); Voice AI healthy (5 softphones heartbeating, 226 VAPI legs/6h avg 73.5s); Email outbound healthy (1,584/24h); AI ticket replies healthy (649/24h); SMS AI healthy (sms_ai_log 24h: 34 sent all with ai_response, 0 failed; sms_ai_response_log 0 rows = dead unused table, not an outage — NO SMS idea needed).
-   - DONE: internal comment added to Akash's open ticket id=21114 (VCL-20260724-2BFC5EF5, Open, High) — covers outage root cause + fix, Akash's 3 requests, 4 prior closed unanswered-handoff tickets (16411, 17908, 19417, 20629), needs human action.
-   - DONE: human-gated follow-up email draft to akyplans@gmail.com via agent_send_or_draft — confirmed: `{"action_taken": "draft_written tier=2_click", "tier": "2_click", "deadline": "2026-07-24 23:28:38", "confidence": 0.75}`. Subject "Your excused absence and extension request — EMS University", rule-02 compliant.
-   - DONE — ALL 4 IDEAS FILED AND ALL 4 APPROVED (each confirmed with real `{"ok": true, "new_status": "approved"}`):
-     - #18900 = WP-site DB password-drift canary + wordpress_2 1045 drift RCA, P1 technical — APPROVED (confirmed)
-     - #18901 = Chat outage 7/20-7/24 student followup sweep (7 conversations), P1 student_ops — APPROVED (confirmed)
-     - #18902 = miamiemtrefresher.com home_http=500 repair (site 22), P2 technical — APPROVED (confirmed this session: `✅ Idea 18902 → approve ... {"ok": true, "new_status": "approved"}`)
-     - #18903 = Repoint remaining claude-haiku surfaces (refund_proposal_override.php:172 + classify_confirmatory.php:100) to frankenstein-llm, P2 technical — APPROVED (confirmed this session: `✅ Idea 18903 → approve ... {
-```
-
-### `1784926480325` — 7/24/2026, 1:54:57 PM PT — 2 turns
-
-**Original task:**
-
-```
-Wow, this window is garbage. See cline obedience.md rule: 
-
-This is really bad. What's the issue with frankenstein-llm
-
-do not inject anthropic llm
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

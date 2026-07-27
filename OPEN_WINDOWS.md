@@ -6,12 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/26/2026, 8:55:08 PM PT | window: last 72h | 96 tasks | index total 2250 (parsed 4, cached 2246)
+Generated: 7/26/2026, 9:55:08 PM PT | window: last 72h | 97 tasks | index total 2251 (parsed 2, cached 2249)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785111226194` | 7/26/2026, 8:55:05 PM | 918 | 7863KB | Take a look at these added Argus issues to resolve: |
-| `1785121116590` | 7/26/2026, 8:35:19 PM | 100 | 309KB | # San Diego Inspection |
+| `1785111226194` | 7/26/2026, 9:52:25 PM | 1003 | 8067KB | Take a look at these added Argus issues to resolve: |
+| `1785121116590` | 7/26/2026, 9:47:26 PM | 134 | 394KB | # San Diego Inspection |
+| `1785124596121` | 7/26/2026, 9:17:28 PM | 164 | 677KB | Context hit the rule-119 compress threshold, so I compressed and am handing off. Answering |
 | `1785111313276` | 7/26/2026, 8:34:03 PM | 880 | 1530KB | #GLM |
 | `1785122479644` | 7/26/2026, 8:28:25 PM | 76 | 127KB | VEC/MCP needs to be aware that the "Matrix" is often referred to. it is usually the admin_ |
 | `1785120544230` | 7/26/2026, 8:21:56 PM | 134 | 679KB | I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged |
@@ -111,7 +112,7 @@ Generated: 7/26/2026, 8:55:08 PM PT | window: last 72h | 96 tasks | index total 
 
 ## Per-window detail
 
-### `1785111226194` — 7/26/2026, 8:55:05 PM PT — 918 turns
+### `1785111226194` — 7/26/2026, 9:52:25 PM PT — 1003 turns
 
 **Original task:**
 
@@ -125,7 +126,7 @@ Pick up: Argus Terminal troubleshooting. Ruben is driving the browser UI himself
 HARD CONSTRAINTS: DO NOT inject Anthropic (rule 146); deepseek-v4-pro is free/cached and is the standard non-Anthropic target. Writes under /var/www/emtskills REQUIRE sudo, and a non-sudo patch SILENTLY reports success while changing nothing, so ALWAYS grep -c your marker after patching (rule 99). No global FRANK_CHAT_EFFORT, EMSU_TIERED_EFFORT stays
 ```
 
-**Ideas referenced:** #0369, #10003, #10739, #155724, #16274, #16474, #178508, #18378, #18745, #18944 [deployed], #18946 [deployed], #18947 [deployed], #18948 [deployed], #18949 [deployed], #18950 [deployed], #18951 [deployed], #18973 [deployed], #19081, #19145 [executing], #19158 [executing], #19159 [executing], #19164 [executing], #19166, #19170 [executing], #19173, #19348 [proposed], #19364 [proposed], #19370 [blocked], #19371 [proposed], #19372 [proposed], #19373, #19379 [executing], #19385 [executing], #19386, #19403 [queued], #19407 [proposed], #19408 [proposed], #19409 [proposed], #19410 [proposed], #19411 [proposed], #19412 [proposed], #19413 [proposed], #19414 [proposed], #19415 [proposed], #19416 [proposed], #19419 [executing], #19424 [queued], #19430 [executing], #19431 [executing], #19432 [executing], #19434 [executing], #19436 [executing], #19437 [executing], #19438 [proposed], #19440 [executing], #19500 [executing], #19501 [executing], #19502 [proposed], #19503 [proposed], #19504 [proposed], #19505 [proposed], #19506 [proposed], #1974, #1975, #1976, #198754, #2003, #2004, #2005, #2006, #2007, #2008, #2009, #2016, #2017, #2018, #2020, #2021, #2022, #2023, #2024, #2027, #2031, #2041, #2042, #2043, #2085, #2086, #2322, #2490, #30363, #3038, #3039, #3042, #3043, #3044, #3045, #3046, #3047, #334155, #4338, #475569, #495057, #5627, #64748, #673148, #677757, #680643, #8212, #856404, #9191
+**Ideas referenced:** #0369, #10003, #10739, #155724, #16274, #16474, #178508, #18378, #18745, #18944 [deployed], #18946 [deployed], #18947 [deployed], #18948 [deployed], #18949 [deployed], #18950 [deployed], #18951 [deployed], #18973 [deployed], #19081, #19145 [executing], #19158 [executing], #19159 [executing], #19164 [executing], #19166, #19170 [executing], #19173, #19348 [proposed], #19364 [proposed], #19370 [blocked], #19371 [proposed], #19372 [proposed], #19373, #19379 [executing], #19385 [executing], #19386, #19403 [queued], #19407 [proposed], #19408 [proposed], #19409 [proposed], #19410 [proposed], #19411 [proposed], #19412 [proposed], #19413 [proposed], #19414 [proposed], #19415 [proposed], #19416 [proposed], #19419 [executing], #19424 [queued], #19430 [executing], #19431 [executing], #19432 [executing], #19434 [executing], #19436 [executing], #19437 [executing], #19438 [proposed], #19440 [executing], #19446 [executing], #19500 [executing], #19501 [executing], #19502 [proposed], #19503 [proposed], #19504 [proposed], #19505 [proposed], #19506 [proposed], #1974, #1975, #1976, #198754, #2003, #2004, #2005, #2006, #2007, #2008, #2009, #2016, #2017, #2018, #2020, #2021, #2022, #2023, #2024, #2027, #2029, #2030, #2031, #2041, #2042, #2043, #2085, #2086, #2322, #2490, #30363, #3038, #3039, #3042, #3043, #3044, #3045, #3046, #3047, #334155, #4338, #475569, #495057, #5627, #64748, #673148, #677757, #680643, #8212, #856404, #9191
 
 **Last PICKUP PROMPT:**
 
@@ -160,7 +161,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785121116590` — 7/26/2026, 8:35:19 PM PT — 100 turns
+### `1785121116590` — 7/26/2026, 9:47:26 PM PT — 134 turns
 
 **Original task:**
 
@@ -182,31 +183,66 @@ See the email Brein sent me on Friday morning about it.
 **Last PICKUP PROMPT:**
 
 ```
-more time, she can ask for it.
+out first and show their hand.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — San Diego EMS audit: Brein Friday 7/24 email response strategy.
 
-Where we left off (verified 2026-07-26 20:27 PT):
-- Investigation #8 rows 56-91 fully mapped. Ruben's row 90 (7/23) offered "through the weekend."
-- Brein's Friday 7/24 email (rmajor@ inbox, not in EMSU email DB) responded by telling Ruben she needs 5 business days — extending past his offered window.
-- Title 22 verified: no statutory deadline for LEMSA review. Ruben owes no extension.
-- Recommended strategy: Monday AM polite pushback enforcing the original end-of-weekend deadline. Draft provided.
+Pick up task, SD County EMS audit (investigation #8): post-audit watch, shut it off Fri 7/31 at 5pm PT.
 
-Open threads:
-1. #19442 [proposed] — If Ruben chooses a different response, draft and send
-2. Watch for Brein's response to Monday's reply; log any follow-up as new compliance_investigation_responses on investigation #8
+Where we left off (verified 2026-07-26 21:46 PT):
+- FINAL POSTURE per Ruben: NO REPLY to Brein 7/24. AND shut the file access off Friday 7/31 at 5pm PT. If the county needs anything after that point, they reach out first and show their hand. Stored as row 100.
+- Row 90 (sent 7/23 16:30) already closed the loop with completion stated plainly plus a standing "let me know if you need anything" offer. Her 7/24 is informational with a conditional ask, and a conditional is answered by silence. Row 98 has the full burden-shift analysis and remains VALID.
+- Rows 96 and 97 are SUPERSEDED. Row 99 (no response) and row 100 (shut it off Friday 5pm) are the operative decisions.
+- 22 CCR 100067.07(a)(b)(d), 100067.08, HSC 1797.109 verified: NO statutory review clock, NO duty to hold a window open. No legal exposure from shutting it off.
+- The "let me know if this presents a problem" invitation is BANKED and does not expire. If the county contacts EMSU after Friday 5pm, you already know what they want before responding.
+- Row 88 attendance grey area (80% reading vs Title 22 170-hr course floor; real DB floor 92.5%) stays HELD IN RESERVE per Ruben 7/23.
+- #19442 [rejected]
+- Brein's 7/24 email lives in Ruben's rmajor@ inbox only. Not in email_inbound or email_outbound_log.
+
+Open threads to drive next:
+1. Shut off the file access Friday 7/31 at 5pm PT. No prior notice to the county. (human-only decision, no idea)
+2. If the county reaches out BEFORE Friday 5pm, log it as a new kind=received row on investigation #8 and assess (human-only decision, no idea)
+3. If the county reaches out AFTER Friday 5pm, you already know what they want: access was their only ask. Log it, assess, and respond from a position of having their hand on the table (human-only decision, no idea)
+4. #18822 [queued] SD attendance audit card build, waiting on Ruben's deploy click
+5. #18823 [queued] investigation #8 portal-render verify build, waiting on Ruben's deploy click
+6. Confirm whether any published or filed EMSU doc states "80% attendance". Exposure if so, since 80% x 200 = 160 < 170 (human-only decision, no idea)
 
 Reference IDs:
-- DB rows: compliance_investigation_responses rows 56-91 on investigation #8
-- Legal: 22 CCR 100067.07, 100067.08, HSC 1797.109
-- Idea: #19442 [proposed]
+- Ideas: #19442 [rejected], #18822 [queued], #18823 [queued]
+- DB rows: compliance_investigation_responses rows 56-91, plus 96 (superseded), 97 (superseded), 98 (valid analysis), 99 (FINAL: no response), 100 (FINAL: shut it off Fri 7/31 5pm PT) on investigation #8
+- Legal: 22 CCR 100067.07(a)(b)(d), 22 CCR 100067.08, HSC 1797.109
+- Portal: /emtskills/personnel/institutional_compliance.php?tab=investigations&entity=san_diego_emsa
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
+<task_progress>
+- [x] Read institutional_compliance.php + investigation #8 full chain (rows 56-100)
+- [x] Established the real facts: Ruben offered "through the weekend" (row 90), Brein countered with 5 business days plus conditional
+- [x] Searched email_inbound + email_outbound_log for Brein's Friday email (zero rows)
+- [x] Legal research: 22 CCR 100067.07(a)(b)(d), 100067.08, HSC 1797.109. No statutory clock either direction
+- [x] Withdrew pushback recommendation (row 96, superseded)
+- [x] Drafted warm reply with closers + fact-check flags (row 97, superseded)
+- [x] Analyzed "presents a problem" as a bur
 ```
+
+### `1785124596121` — 7/26/2026, 9:17:28 PM PT — 164 turns
+
+**Original task:**
+
+```
+Context hit the rule-119 compress threshold, so I compressed and am handing off. Answering your four questions with what I verified, and being straight about the one I did not do.
+
+## What I did NOT do, and you were right to call it
+
+You asked me to open a browser with a token and see what you see. **I never did that.** I verified structurally (grep, lint, marker counts) and reported the page as fixed. That is not the same thing, and it is exactly why you keep having to push. The page is login-gated so curl returns 401, which means the only honest verification is a real logged-in browser sessi
+```
+
+**Ideas referenced:** #13418, #178501, #19230 [queued], #19258 [executing], #19266 [deployed], #19274 [blocked], #19321 [deployed], #19325 [queued], #19338 [queued], #19388 [deployed], #19390 [rejected], #19404 [executing], #19417 [deployed], #19423 [executing], #19425 [proposed], #19427 [executing], #19433 [executing], #19441 [executing], #19447 [proposed], #19448 [proposed], #19449 [executing], #1989, #1990, #2012, #2013, #2014, #2015, #2019, #2025, #2028, #6366, #65039, #9888
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785111313276` — 7/26/2026, 8:34:03 PM PT — 880 turns
 

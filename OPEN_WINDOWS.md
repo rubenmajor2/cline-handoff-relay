@@ -6,19 +6,24 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/27/2026, 2:50:39 PM PT | window: last 72h | 96 tasks | index total 2268 (parsed 8, cached 2260)
+Generated: 7/27/2026, 3:50:40 PM PT | window: last 72h | 100 tasks | index total 2273 (parsed 5, cached 2268)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785180925366` | 7/27/2026, 2:50:34 PM | 66 | 252KB | ## 6 — #INFRA · WOPR GPU / kernel / WireGuard |
-| `1785180684278` | 7/27/2026, 2:50:33 PM | 299 | 1212KB | ## 3 — #FORMS · durable fix for WPForms + its replacement |
-| `1785180947248` | 7/27/2026, 2:50:10 PM | 193 | 982KB | ## 7 — #ALERTS · text bombardment / monitoring hygiene |
-| `1785180769250` | 7/27/2026, 2:48:20 PM | 136 | 488KB | ## 5 — #BUGS · user-facing bug queue |
+| `1785189965992` | 7/27/2026, 3:50:37 PM | 177 | 4380KB | #Argus |
+| `1785191995112` | 7/27/2026, 3:50:15 PM | 5 | 19KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
+| `1785191816762` | 7/27/2026, 3:37:22 PM | 2 | 2KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
+| `1785190696126` | 7/27/2026, 3:37:11 PM | 62 | 136KB | Scan CFAs for any outstanding issues today and let me konw how things are going and if any |
+| `1785183122795` | 7/27/2026, 3:32:37 PM | 351 | 828KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
+| `1785180947248` | 7/27/2026, 3:18:16 PM | 258 | 1105KB | ## 7 — #ALERTS · text bombardment / monitoring hygiene |
+| `1785180769250` | 7/27/2026, 3:17:12 PM | 198 | 656KB | ## 5 — #BUGS · user-facing bug queue |
+| `1785189940243` | 7/27/2026, 3:06:17 PM | 2 | 3KB | #Argus |
+| `1785180925366` | 7/27/2026, 3:05:28 PM | 130 | 428KB | ## 6 — #INFRA · WOPR GPU / kernel / WireGuard |
+| `1785180724129` | 7/27/2026, 3:03:44 PM | 322 | 1098KB | ## 4 — #GLM · GLM-5.2 ring |
+| `1785180684278` | 7/27/2026, 2:51:26 PM | 300 | 1223KB | ## 3 — #FORMS · durable fix for WPForms + its replacement |
 | `1785181029165` | 7/27/2026, 2:47:17 PM | 120 | 265KB | ## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti) |
-| `1785183122795` | 7/27/2026, 2:45:24 PM | 323 | 748KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
 | `1785180643044` | 7/27/2026, 2:40:28 PM | 374 | 714KB | ## 1 — #PAY · P0 money · RUN FIRST |
 | `1785181049767` | 7/27/2026, 2:39:06 PM | 100 | 701KB | ## 11 — #EXT · externship system, grounded in Vicky's answers |
-| `1785180724129` | 7/27/2026, 1:16:36 PM | 262 | 547KB | ## 4 — #GLM · GLM-5.2 ring |
 | `1785173739737` | 7/27/2026, 1:11:16 PM | 590 | 1104KB | Tell me how many turns for each LLM occurred overnight / delve into frankenstein-tools and |
 | `1785180988213` | 7/27/2026, 12:56:31 PM | 61 | 449KB | ## 8 — #SLS · student lifecycle state repair + backlog |
 | `1785180665712` | 7/27/2026, 12:55:02 PM | 146 | 507KB | ## 2 — #EXEC · P0 · executor is failing builds silently |
@@ -105,13 +110,254 @@ Generated: 7/27/2026, 2:50:39 PM PT | window: last 72h | 96 tasks | index total 
 | `1784925386416` | 7/24/2026, 4:32:33 PM | 330 | 2522KB | skillstastic bulk forms are not populating properly for Manny |
 | `1784858983506` | 7/24/2026, 4:30:03 PM | 379 | 3723KB | Both follow-up directives are done. |
 | `1784926500782` | 7/24/2026, 3:57:55 PM | 199 | 1382KB | Wow, this window is garbage. See cline obedience.md rule:  |
-| `1784857465252` | 7/24/2026, 2:53:43 PM | 568 | 3862KB | The copycat appears to be back. This is for the master admin role. Can you resolve that?:  |
 
 ---
 
 ## Per-window detail
 
-### `1785180925366` — 7/27/2026, 2:50:34 PM PT — 66 turns
+### `1785189965992` — 7/27/2026, 3:50:37 PM PT — 177 turns
+
+**Original task:**
+
+```
+#Argus
+REf: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser 
+
+OPen up lanes so that Cori and all Exec Admin have permissions to perform these types of actions and then perform them. 
+
+ARGUS
+The short answer: the pipeline didn't record a rejection reason. The `blocked_reason` field is null — it was rejected on July 26 at 20:22 PT with no explanation logged.
+
+The most likely cause is that this idea touches three things that sit outside the build dispatcher's safe scope:
+
+1. Plesk/Roundcube email provisioning — creating an actual mailbox on WOPR's mail server isn't an in
+```
+
+**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #16213, #16263, #17537, #17619 [deployed], #18378, #18745, #18770, #18806, #18868, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19163, #19348, #19370, #19558, #2006, #2007, #2061, #21262, #274160, #30363, #334155, #4338, #64748, #6785, #69707, #8942, #9650, #9654, #9660, #9733, #9889
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785191995112` — 7/27/2026, 3:50:15 PM PT — 5 turns
+
+**Original task:**
+
+```
+Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
+
+Ava Kanthack - 26413FT. EMSU_1080261891.pdf on downloads folder on my mac as well as Ms. Richardson's email this afteroon.
+
+--
+See email: 
+Advise if is actually a new complaint and provide me with a summary of the situation, claims as well as a draft response. Track as new complaint if is a new complaint in the appropriate seciton. Please make sure you are organizing these properly so they are easy to navigate.
+
+Actually it appears this 
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785191816762` — 7/27/2026, 3:37:22 PM PT — 2 turns
+
+**Original task:**
+
+```
+Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
+
+--
+Advise if is actually a new complaint and provide me with a summary of the situation, claims as well as a draft response. Track as new complaint if is a new complaint in the appropriate seciton. Please make sure you are organizing these properly so they are easy to navigate.
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785190696126` — 7/27/2026, 3:37:11 PM PT — 62 turns
+
+**Original task:**
+
+```
+Scan CFAs for any outstanding issues today and let me konw how things are going and if any improvements need to be made / if any capabilities need to be increased and what's going on generally. How is customer satisfaction?
+
+Also is VAPI Sales Agent making calls and is our abandoned cart recovery working ?
+```
+
+**Ideas referenced:** #19559 [executing], #19560 [executing], #19561 [executing], #19562 [executing], #795636
+
+**Last PICKUP PROMPT:**
+
+```
+10-30K/day in abandoned carts.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — EMSU CFA Health Scan & Sales Recovery Audit complete.
+
+Where we left off (verified 2026-07-27 3:18 PM PT):
+- Full CFA scan completed: Chat Widget ✅, Voice AI ✅, SMS AI ✅, Email AI ✅, Ticket Auto-Reply ✅, Registration 8/9 ✅
+- Sales Recovery Agent active but 150 calls today = 100% no-answer (idea #19559 [executing])
+- MiamiEMT.com registration dropdown broken since 2022 (idea #19561 [executing])
+- 7 grievances pending review bottleneck (idea #19562 [executing])
+- Chat widget health sweep stale since July 24 (idea #19560 [executing])
+
+Open threads to drive next:
+1. #19559 [executing] — Investigate Sales Recovery Agent 100% no-answer rate: check VAPI outbound config, carrier blocking, number quality. Run a manual test call.
+2. #19561 [executing] — Fix MiamiEMT.com registration: check course_schedules by location='Miami', verify active_plugins integrity, restore full plugin set
+3. #19562 [executing] — Process grievance backlog: trigger review pipeline, notify Vicky, clear pending_review grievances
+4. #19560 [executing] — Run live chat_widget_healthcheck with action="run" to refresh sweep, check cron is active
+
+Reference IDs:
+- Ideas filed: #19559, #19560, #19561, #19562
+- Files touched: wc_cart_abandonment.php, agent_sales.php, vapi_sales_webhook.php, cron_voice_outage_recovery_dialer.php
+- Diagnostics: sales_webhook_2026-07.log (274KB active), telephony health, chat widget health, orchestrator status
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785183122795` — 7/27/2026, 3:32:37 PM PT — 351 turns
+
+**Original task:**
+
+```
+Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue another 45 minutes:
+
+-
+## Direct answer on Cesar
+
+**I did nothing to Cesar. Three read-only commands, over its existing tunnel:** `ulimit -Sl/-Hl`, `grep memlock /etc/security/limits.d/`, and a `python3` version print. No writes, no restart, no config edit, no TP=2 launch attempted on it. Verified after the fact: ring `:8210` returns HTTP 200 with 12 concurrent requests and 211,399 generation tokens, Cesar at 96% GPU, **uptime 8 days 16:34** (proving it was never restarted), load climbing 1.76 → 3.10 = activ
+```
+
+**Ideas referenced:** #11261, #11741, #12266, #12285, #12403, #12584, #12645, #12689, #13453, #13470, #13874, #15369, #15370, #16602, #19506 [rejected], #19507 [executing], #19508 [executing], #19542 [proposed], #19543 [proposed], #19544 [proposed], #19546 [executing], #19547 [executing], #19548 [executing], #19549 [executing], #19558 [executing], #2042, #2045, #2048, #2049, #2051, #2052, #2053, #2054, #2055, #2057, #2058, #2059, #2061, #64748, #7490, #7513, #7554, #9706, #9910
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785180947248` — 7/27/2026, 3:18:16 PM PT — 258 turns
+
+**Original task:**
+
+```
+## 7 — #ALERTS · text bombardment / monitoring hygiene
+
+```
+#ALERTS — EMSU alert noise. Ruben: "I am getting bombarded with text messages. Some of these are stale or have false information that needs to be rectified at the source."
+
+His framing matters: he does not want alerts silenced, he wants the FALSE ones fixed at the source. A stale monitor firing 5,700 times is a broken monitor, not a noisy one. Do NOT add cooldowns or suppression — suppression is how you end up trusting nothing.
+
+ALREADY FIXED, DO NOT REPEAT:
+- LITELLM_BASE_URL "already defined" PHP warning: 3 bare `const` → guarded `d
+```
+
+**Ideas referenced:** #15637, #1573 [critical], #16402, #1641 [critical], #17671, #18977, #19070, #19250, #19345, #19359 [deployed], #19360 [deployed], #19362 [investigating], #19363 [undiagnosed], #19470, #19490 [in_progress], #19541 [proposed], #19550 [queued], #19551 [queued], #19552 [queued], #19554 [queued], #19557 [queued], #1996 [high], #2032 [critical], #2034 [critical], #2253 [critical], #2254 [critical], #2289 [high], #2477 [critical], #2731 [high], #2755 [critical], #2756 [critical], #2828 [critical], #2829 [critical], #2835 [high], #2932 [critical], #2986 [critical], #3076 [critical], #3077 [critical], #3081 [high], #5316, #5322, #5339, #64748, #6837, #9055
+
+**Last PICKUP PROMPT:**
+
+```
++ stale Bug Hunter repeaters |
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #ALERTS — text bombardment / monitoring hygiene continuation.
+
+Where we left off (verified 2026-07-27 13:17 PT):
+- #19360 deployed: discord_scanner heartbeat updated to status='retired' (watchdog now skips)
+- #19359 verified: twilio_sms_inbound.php stub fix intact with SMS_STUB_REMOVAL_V1 marker
+- #19362, #19363, #19490 still approved/not deployed — need implementation
+- NREMT tables all empty (0 rows) — "NREMTpend:521" is a stale counter from unknown source
+- WOPR is UP — "EMSU DOWN: WOPR_SSH failed 5673 checks" alert source NOT in telephony_sms_log, sms_ai_log, or ruben_system_events — likely webhook/direct-IMessage path
+- 33 detected RUBEN issues: 3 fresh (#3081 QB, #3077 Voice, #3076 Registration), 27+ stale Bug Hunter repeaters dating to June 21
+
+Open threads to drive next:
+1. #19541 — Locate WOPR_SSH alert source: grep ALL cron files for "EMSU DOWN" output string, trace to SMS/webhook sender, verify counter reset mechanism
+2. #19554 — Find VR/NREMT digest cron: search systemd timers and every PHP/Python/Shell script for "NREMTpend" or "vr-c2c" output, verify against actual DB state
+3. #19551 — Auto-void canary design: check authnet_payment_transactions for voided + unnotified transactions, design monitoring
+4. #19557 — Triage 33 detected issues: dismiss 27+ stale Bug Hunter repeaters (set status→dismissed), escalate #3081, #3077, #3076 per rule 29
+5. #19362 [approved] — Implement WOPR_SSH recovery detection: add counter reset on success + sanity gate for absurd values
+6. #19363 [approved] — Diagnose stale_decisions gap: verify ckpt420 pod monitoring and frankenstein canary detection
+7. #19490 [in_progress] — Fix executor health watchdog to detect impl_failed_reason=NULL pattern
+
+Reference IDs:
+- Ticket: #ALERTS
+- Ideas filed: #19360, #19490, #19541, #19550, #19551, #19552, #19554, #19557
+- Files touched: system_heartbeats (discord_scanner row), /var/www/emtskills/webhooks/twilio_sms_inbound.php (verified)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785180769250` — 7/27/2026, 3:17:12 PM PT — 198 turns
+
+**Original task:**
+
+```
+## 5 — #BUGS · user-facing bug queue
+
+```
+#BUGS — EMSU user-facing bugs. Scope: user-visible only. NOT GLM, NOT payments (#PAY), NOT forms (#FORMS), NOT executor plumbing (#EXEC).
+
+RULES: act rather than list — you have update_ticket, add_ticket_comment, fix_moodle_enrollment, unstick_moodle_quiz_attempt, regrade_quiz_attempt, ssh_command, safe_deploy_file, and direct SQL. A fixable bug parked as an "open thread" is a rule-29 violation. DESCRIBE before SQL (live example: a query died this week on `Students.status`, which does not exist — use get_student_lifecycle_state / get_student_360). Serv
+```
+
+**Ideas referenced:** #12135, #12356, #18898 [proposed], #18928 [deployed], #18930 [blocked], #18937 [proposed], #18941 [deployed], #18950, #18974 [proposed], #18975 [deployed], #19439, #19490, #2026, #2196, #2563, #3498, #475569, #64748, #7223, #7634, #8203
+
+**Last PICKUP PROMPT:**
+
+```
+d for #18898 next session
+
+---
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up #BUGS — drive remaining: top bar (#18898) and Jon tickets (#18930).
+
+Where we left off (verified 2026-07-27 15:16 PT):
+- #18941 [resolved] — timeclock AJAX guard deployed and CLI-verified
+- #18928 [resolved] — Skillstastic status filter live on disk
+- #18937 [resolved] — EMS 210 defense-in-depth gate deployed to OnboardingService.php:404
+- #18974 [resolved] — AI-orphan scan: zero from user 124; flagged 47 Critical + 146 High unassigned
+- #18898 [proposed] — top bar CSS in cori_shell.css (topbar position:fixed at line 53); need full read + dashboard render trace
+- #18930 [proposed] — Jon IDs: 3 (ExecAdmin, jthompson@...) and 80 (Instructor, jonmoulton77@...) both show zero assigned tickets; need to trace SQL filters
+
+Open threads to drive next:
+1. #18898 — SSH WOPR: read full `/var/www/emtskills/public/css/cori_shell.css`. Check `/var/www/emtskills/includes/team_hub_shell.php` and `includes/header.php` for early output/whitespace before doctype. Grep for `.cori-topbar`, `.cori-sidebar`, `.cori-mobile-nav` in PHP and CSS. Check for PHP warnings in dashboard render.
+2. #18930 — SSH WOPR: read the ticket listing page SQL (grep for `my_tickets` in routes/), trace the filter logic checking `$user['id']` vs `assigned_owner`. Compare with #18950 who fixed counts.
+
+Reference IDs:
+- Tickets: #18941, #18937, #18928, #18898, #18930, #18974
+- Ideas filed: none (MCP create_idea unavailable)
+- Files touched: routes/timeclock_user.php, skillstastic/api_import_class.php, personnel/lib/OnboardingService.php, public/css/cori_shell.css
+- DB: admin_portal (personnel_candidates.skip_ems210), moodle_c_live (user_enrolments, course)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785189940243` — 7/27/2026, 3:06:17 PM PT — 2 turns
+
+**Original task:**
+
+```
+#Argus
+
+OPen up lanes so that Cori and all Exec Admin have permissions to perform these types of actions and then perform them. 
+
+ARGUS
+The short answer: the pipeline didn't record a rejection reason. The `blocked_reason` field is null — it was rejected on July 26 at 20:22 PT with no explanation logged.
+
+The most likely cause is that this idea touches three things that sit outside the build dispatcher's safe scope:
+
+1. Plesk/Roundcube email provisioning — creating an actual mailbox on WOPR's mail server isn't an in-app code change; it's a server admin action.
+2. JustCall phone line provisionin
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785180925366` — 7/27/2026, 3:05:28 PM PT — 130 turns
 
 **Original task:**
 
@@ -126,11 +372,32 @@ READ FIRST (rule 294): /var/www/emtskills/docs/WOPR_STATE.json is canonical live
 VERIFY-BEFORE-CLAIM IS HARDFLOOR: no SSH to a box mea
 ```
 
-**Ideas referenced:** #18867 [deployed], #18967 [queued], #18977 [queued], #18982 [executing], #18985 [rejected], #19006 [executing], #19522 [proposed], #19523 [proposed], #19524 [proposed], #19525 [proposed], #19526 [proposed]
+**Ideas referenced:** #18867 [deployed], #18967 [queued], #18977 [queued], #18982 [executing], #18985 [rejected], #19006 [executing], #19522 [proposed], #19523 [proposed], #19524 [proposed], #19525 [proposed], #19526 [proposed], #19553 [executing], #19556 [executing]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785180684278` — 7/27/2026, 2:50:33 PM PT — 299 turns
+### `1785180724129` — 7/27/2026, 3:03:44 PM PT — 322 turns
+
+**Original task:**
+
+```
+## 4 — #GLM · GLM-5.2 ring
+
+```
+#GLM — EMSU GLM-5.2 ring. Rebase live, then drive what is left.
+
+HARD CONSTRAINTS:
+- NEVER inject Anthropic. Free-local-first (rule 146); frankenstein-llm is the one router.
+- NEVER set enable_thinking:false on GLM. Ruben rejected it outright; #19239 [rejected] exists to stop it being resurrected — the think block is the entire reason to run GLM over DeepSeek V4 pro.
+- NEVER quarantine glm-5.2-local without Ruben. His rule is 30 minutes OF DEBRIS, not 30 minutes elapsed.
+- Rule 277: GPU_MEM 0.82, no --enforce-eager, no --no-async-scheduling, VLLM_ENGINE_READY_TI
+```
+
+**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11781, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12657, #12680, #12688, #12689, #12708, #12710, #12824, #12872, #12878, #12900, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16163, #16265, #16304, #16508, #16584, #16589, #16590, #16602, #16625, #16646, #16680, #16715, #16716, #16717, #16844, #17078, #17307, #1754, #1755, #17673, #1807, #18312, #18326, #18670, #18671, #19239 [rejected], #19259 [deployed], #19267 [deployed], #19288 [deployed], #19338, #19490, #19531 [proposed], #19532 [proposed], #19533 [proposed], #19540 [proposed], #19555 [proposed], #1980, #1983, #1984, #1985, #1992, #1998, #2050, #2060, #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785180684278` — 7/27/2026, 2:51:26 PM PT — 300 turns
 
 **Original task:**
 
@@ -148,115 +415,43 @@ A) AVS-not-on-charge → In
 
 **Ideas referenced:** #000000, #008000, #0399, #11782, #14740, #15227, #16608, #18841 [queued], #19079 [executing], #19101 [executing], #19128 [executing], #19435 [executing], #19490, #19503 [executing], #2036, #2563, #5920, #856404
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785180947248` — 7/27/2026, 2:50:10 PM PT — 193 turns
-
-**Original task:**
-
-```
-## 7 — #ALERTS · text bombardment / monitoring hygiene
-
-```
-#ALERTS — EMSU alert noise. Ruben: "I am getting bombarded with text messages. Some of these are stale or have false information that needs to be rectified at the source."
-
-His framing matters: he does not want alerts silenced, he wants the FALSE ones fixed at the source. A stale monitor firing 5,700 times is a broken monitor, not a noisy one. Do NOT add cooldowns or suppression — suppression is how you end up trusting nothing.
-
-ALREADY FIXED, DO NOT REPEAT:
-- LITELLM_BASE_URL "already defined" PHP warning: 3 bare `const` → guarded `d
-```
-
-**Ideas referenced:** #15637, #1573 [critical], #16402, #1641 [critical], #17671, #18977, #19070, #19250, #19345, #19359 [deployed], #19360 [deployed], #19362 [investigating], #19363 [undiagnosed], #19470, #19490 [in_progress], #19541 [proposed], #1996 [high], #2032 [critical], #2034 [critical], #2253 [critical], #2254 [critical], #2289 [high], #2477 [critical], #2731 [high], #2755 [critical], #2756 [critical], #2828 [critical], #2829 [critical], #2835 [high], #2932 [critical], #2986 [critical], #3076 [critical], #3077 [critical], #3081 [high], #5316, #5322, #5339, #64748, #6837
-
 **Last PICKUP PROMPT:**
 
 ```
-state and add protective guard
+w-only — needs promotion plan.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #current — #ALERTS text bombardment: complete #19362 WOPR_SSH monitor fix + #19363 ckpt420 diagnosis.
-(current task — numeric task ID not available via MCP; reference by topic: "#ALERTS — text bombardment / monitoring hygiene")
+Pick up task #3 — #FORMS durable fix continued.
 
-Where we left off (verified 2026-07-27 13:12 PT):
-- #19360 [deployed]: discord_scanner heartbeat → 'retired', alert eliminated
-- #19359 [deployed]: SMS_STUB_REMOVAL_V1 confirmed present at webhooks/twilio_sms_inbound.php, no stub code remains
-- #19362 [investigating]: 5,700+ false WOPR_SSH alerts, candidate files mapped (cron_fleet_agent_v23, cron_sms_mac_tunnel_watchdog, etc.) but exact counter not isolated yet. Filed #19541 for next investigator.
-- #19363 [undiagnosed]: ckpt420 pod disappearing every 5 min, processed=0, stale_decisions firing. Silent-ghost chains still auto-filing (19534, 19514, 19513). Needs rule 276 runbook.
-- DB: mysql -u adminportal -p'iV84o80^y' admin_portal; system_heartbeats has discord_scanner='retired', imessage_scanner='online'
+Where we left off (verified 2026-07-27 14:52 PT):
+- v1.0.2 forwarder deployed to 11 EMT vhosts; source at /var/www/emtskills/webhooks/wpforms-complete-data-forwarder.php
+- 19 CLASS A e2PDF rows need regeneration; script at /tmp/class_a_backfill.php (Mac), needs WOPR deploy
+- 4 sites MISSING forwarder entirely (phoenixemt.org, vancouveremt.ca + 2 more)
+- Shadow at 300/551 dates (54%) — needs backfill re-run after forwarder v1.0.2
+- Reconciled ideas: #19435[executing], #18841[queued], #19079[executing], #19503[executing], #19128[executing], #19101[executing]
 
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #19541 [proposed] — grep /var/www/emtskills/ for exact "EMSU DOWN: WOPR_SSH failed" string; locate the cron/lib PHP source, trace the SMS send path, find the counter that never resets, add recovery detection that zeros it on success + sanity gate for absurd values (>1000 fires self-check)
-2. #19363 [approved] — run Rule 276 Federation runbook: (a) `llm_locate` ckpt420 pod location, (b) `frankenstein_tier_health` to confirm gaps, (c) `frankenstein_what_served` to trace what model was invoked for decisions, (d) diagnose `processed=0` / pod disappearing root cause. Do NOT inject Anthropic. Do NOT quarantine GLM local.
-3. #19490 [in_progress] — verify #19359 is still 'deployed' on disk (not reverted again). Check `orchestrator_ideas` for recent status change history. Add protective note on #19359 if still reverted. Diagnose NULL impl_failed_reason in executor.
-4. (no idea yet) — query `ruben_imessage_issues` table for the 53-item backlog, auto-triage per rule 29 (anything an agent can do, do it; only policy calls go to Ruben). MCP SSH quoting for LIKE queries needs workaround — write PHP script on WOPR, execute via `php /tmp/script.php`.
-5. (no idea yet) — query `nremt_submissions` and `nremt_records` for pending counts; identify source of "NREMTpend:521" digest and verify if it's a real counter or stale. Workaround same as above.
-6. (no idea yet) — design auto-void canary alert; coordinate with #PAY. Gap: payment charges auto-void with no notification.
+Open threads to drive next (ALL need real idea #s — file via INSERT into orchestrator_ideas or create_idea MCP):
+1. Server-side class_time validation — add 422-reject in webhook receiver when all 3 fallbacks are empty. File: `/var/www/emtskills/webhooks/emt_registration_centralized.php.bak-*` or mu-plugins handler
+2. e2PDF CLASS A backfill — deploy /tmp/class_a_backfill.php to WOPR and run. Requires WP curl session
+3. e2PDF CLASS B dedup — verify siblings then DELETE 108 negative-entry_id dupes
+4. #19079 CLOSURE — install forwarder on phoenixemt.org and vancouveremt.ca (missing plugins dir = create it), then scan remaining vhosts for WordPress wpforms tables
+5. Shadow backfill — `php /tmp/backfill_shadow_v2.php` after forwarder v1.0.2 deployed everywhere
+6. #19128 — Elementor mu-plugin guard (grep theme-builder queries, strip include/product)
+7. e2PDF canary — SQL-based probe on ea_submissions
+8. Verify live submission — submit test to arizonaemt.com, confirm class_time not empty in webhook log
 
 Reference IDs:
-- Ticket: #ALERTS (Ruben text bombardment)
-- Ideas filed: #19541
-- Ideas checked: #19360 [deployed], #19359 [deployed], #19362 [approved], #19363 [approved], #19490 [in_progress]
-- Files touched: system_heartbeats.discord_scanner (status changed to 'retired'), webhooks/twilio_sms_inbound.php (verified)
-- Tables: system_heartbeats, orchestrator_ideas, ruben_system_events, twilio_outbound_messages
+- Ideas: #19435, #18841, #19079, #19503, #19128, #19101
+- Files: /var/www/emtskills/webhooks/wpforms-complete-data-forwarder.php (v1.0.2 canonical)
+- Files: /var/www/emtskills/routes/native_registration/form.php (native replacement form)
+- Files: /tmp/class_a_backfill.php (CLASS A backfill script, Mac local)
+- DB: admin_portal.ea_submissions (19 CLASS A gap, 108 CLASS B dupes)
+- DB: admin_portal.native_registration_shadow (551 entries, 300 with dates)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785180769250` — 7/27/2026, 2:48:20 PM PT — 136 turns
-
-**Original task:**
-
-```
-## 5 — #BUGS · user-facing bug queue
-
-```
-#BUGS — EMSU user-facing bugs. Scope: user-visible only. NOT GLM, NOT payments (#PAY), NOT forms (#FORMS), NOT executor plumbing (#EXEC).
-
-RULES: act rather than list — you have update_ticket, add_ticket_comment, fix_moodle_enrollment, unstick_moodle_quiz_attempt, regrade_quiz_attempt, ssh_command, safe_deploy_file, and direct SQL. A fixable bug parked as an "open thread" is a rule-29 violation. DESCRIBE before SQL (live example: a query died this week on `Students.status`, which does not exist — use get_student_lifecycle_state / get_student_360). Serv
-```
-
-**Ideas referenced:** #18898 [proposed], #18928 [deployed], #18930 [blocked], #18937 [proposed], #18941 [deployed], #18974 [proposed], #18975 [deployed], #19439, #19490, #2026, #2196, #2563, #3498, #475569, #64748, #7223, #7634
-
-**Last PICKUP PROMPT:**
-
-```
- (top bar CSS — targeted)
-
----
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up #BUGS queue — drive remaining to resolved.
-
-Where we left off (verified 2026-07-27 12:39 PT):
-- #18941 [resolved] — timeclock AJAX guard deployed and verified
-- #18928 [resolved] — Skillstastic status filter deployed and verified
-- #18937 [proposed] — EMS 210 gate code exists but bypass vector unknown; need Moodle enrollment verification for 5 flagged candidates
-- #18898 [proposed] — top bar CSS issue in cori_shell.css; need to read full CSS and dashboard render flow
-- #18930 [blocked] — Jon tickets: zero assigned to either Jon (ID 3 or 80); investigate filter/visibility scope
-- #18974 [proposed] — CS Auto-Agent (ID 124) orphans: zero today, can close
-
-Open threads to drive next:
-1. #18937 — SSH WOPR: check Moodle enrollment for 5 skip_ems210 candidates (IDs 3562, 3566, 3568, 3584, 3595). Query moodle_c_live database. If enrolled, trace the bypass path (reconciler cron, tools/create_moodle_account.php). If not enrolled, close ticket.
-2. #18898 — SSH WOPR: read full `/var/www/emtskills/public/css/cori_shell.css` + search for PHP warn/notices in `includes/team_hub_shell.php` + `includes/header.php`. Find the widget pushing the bar down.
-3. #18930 — SSH WOPR: grep for `my_tickets` or `view_tickets` in routes/, trace the SQL query for Jonathan's dashboard, check filter args (status, assignment, scope). Compare GET params.
-4. #18974 — update ticket to resolved with "verified zero orphans on 2026-07-27"
-
-Reference IDs:
-- Tickets: #18941, #18937, #18928, #18898, #18930, #18974
-- Files: routes/timeclock_user.php, skillstastic/api_import_class.php, personnel/lib/OnboardingService.php, personnel/api/update_candidate_status.php, public/css/cori_shell.css
-- DB: admin_portal.personnel_candidates (skip_ems210 column), moodle_c_live.user
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```
 
 ### `1785181029165` — 7/27/2026, 2:47:17 PM PT — 120 turns
@@ -325,23 +520,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </task_progress>
 </attempt_completion>
 ```
-
-### `1785183122795` — 7/27/2026, 2:45:24 PM PT — 323 turns
-
-**Original task:**
-
-```
-Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue another 45 minutes:
-
--
-## Direct answer on Cesar
-
-**I did nothing to Cesar. Three read-only commands, over its existing tunnel:** `ulimit -Sl/-Hl`, `grep memlock /etc/security/limits.d/`, and a `python3` version print. No writes, no restart, no config edit, no TP=2 launch attempted on it. Verified after the fact: ring `:8210` returns HTTP 200 with 12 concurrent requests and 211,399 generation tokens, Cesar at 96% GPU, **uptime 8 days 16:34** (proving it was never restarted), load climbing 1.76 → 3.10 = activ
-```
-
-**Ideas referenced:** #11261, #11741, #12266, #12285, #12403, #12584, #12645, #12689, #13453, #13470, #13874, #15369, #15370, #16602, #19506 [rejected], #19507 [executing], #19508 [executing], #19542 [proposed], #19543 [proposed], #19544 [proposed], #19546 [executing], #19547 [executing], #19548 [executing], #19549 [executing], #2042, #2045, #2048, #2049, #2051, #2052, #2053, #2054, #2055, #2057, #2058, #2059, #64748, #7490, #7513, #7554, #9706, #9910
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785180643044` — 7/27/2026, 2:40:28 PM PT — 374 turns
 
@@ -442,27 +620,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
-
-### `1785180724129` — 7/27/2026, 1:16:36 PM PT — 262 turns
-
-**Original task:**
-
-```
-## 4 — #GLM · GLM-5.2 ring
-
-```
-#GLM — EMSU GLM-5.2 ring. Rebase live, then drive what is left.
-
-HARD CONSTRAINTS:
-- NEVER inject Anthropic. Free-local-first (rule 146); frankenstein-llm is the one router.
-- NEVER set enable_thinking:false on GLM. Ruben rejected it outright; #19239 [rejected] exists to stop it being resurrected — the think block is the entire reason to run GLM over DeepSeek V4 pro.
-- NEVER quarantine glm-5.2-local without Ruben. His rule is 30 minutes OF DEBRIS, not 30 minutes elapsed.
-- Rule 277: GPU_MEM 0.82, no --enforce-eager, no --no-async-scheduling, VLLM_ENGINE_READY_TI
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12657, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #1754, #1755, #18312, #18326, #19239 [rejected], #19259 [deployed], #19267 [deployed], #19288 [deployed], #19338, #19490, #19531 [proposed], #19532 [proposed], #19533 [proposed], #19540 [proposed], #1980, #1983, #1984, #1985, #1992, #1998, #2050
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785173739737` — 7/27/2026, 1:11:16 PM PT — 590 turns
 
@@ -3794,59 +3951,4 @@ A/A2/B.
    Immediately before this summarize_task request, the following occurred in sequence:
    - Four `describe_table` calls (sms_send_log, sms_delivery_log, coverage_sms_log, telephony_sms_log) were dispatched in parallel — all returned "result missing (Mode D transient)" on first attempt, then succeeded on retry with full schema details (captured in section 3).
    - Three `execute_query` calls were dispatched in parallel: `sms_delivery_log` lookup by student_id/phone (returned EMPTY), `sms_send_log` lookup by phone (returned 30 delivery-confirmation rows, no content), `telephony_sms_
-```
-
-### `1784857465252` — 7/24/2026, 2:53:43 PM PT — 568 turns
-
-**Original task:**
-
-```
-The copycat appears to be back. This is for the master admin role. Can you resolve that?: https://emsuniversity.com/emtskills/routes/reports.php
-```
-
-**Ideas referenced:** #1000, #1001, #1002, #1003, #1004, #1005, #1006, #1007, #1008, #1009, #1010, #1011, #1012, #1013, #1014, #1015, #1016, #1017, #1018, #1019, #1020, #1021, #1022, #1023, #1024, #1025, #1026, #1027, #1028, #1029, #1030, #1031, #1032, #1033, #1034, #1035, #1036, #1037, #1038, #1039, #1040, #1041, #1042, #1043, #1044, #1045, #1046, #1047, #1048, #1049, #1050, #1051, #1052, #1053, #1054, #1055, #1056, #1057, #1058, #1059, #1060, #1061, #1062, #1063, #1064, #1065, #1066, #1067, #1068, #1069, #1070, #1071, #1072, #1073, #1074, #1075, #1076, #1077, #1078, #1079, #1080, #1081, #1082, #1083, #1084, #1085, #1086, #1087, #1088, #1089, #1090, #1091, #1092, #1093, #1094, #1095, #1096, #1097, #1098, #1099, #1100, #1101, #1102, #1103, #1104, #1105, #1106, #1107, #1108, #1109, #1110, #1111, #1112, #1113, #1114, #1115, #1116, #1117, #1118, #1119, #1120, #1121, #1122, #1123, #1124, #1125, #1126, #1127, #1128, #1129, #1130, #1131, #1132, #1133, #1134, #1135, #1136, #1137, #1138, #1139, #1140, #1141, #1142, #1143, #1144, #1145, #1146, #1147, #1148, #1149, #1150, #1151, #1152, #1153, #1154, #1155, #1156, #1157, #1158, #1159, #1160, #1161, #1162, #1163, #1164, #1165, #1166, #1167, #1168, #1169, #1170, #1171, #1172, #1173, #11735, #1174, #1175, #1176, #1177, #1178, #1179, #1180, #1181, #1182, #1183, #1184, #1185, #1186, #1187, #1188, #1189, #1190, #1191, #1192, #1193, #1194, #1195, #1196, #1197, #1198, #1199, #1200, #1201, #1202, #1203, #1204, #1205, #12059, #1206, #12060, #1207, #1208, #1209, #1210, #1211, #1212, #1213, #1214, #1215, #1216, #1217, #1218, #12184, #1219, #1220, #1221, #1222, #1223, #1224, #1225, #1226, #1227, #1228, #1229, #1230, #1231, #1232, #1233, #1234, #1235, #1236, #1237, #1238, #1239, #1240, #1241, #1242, #12425, #1243, #1244, #1245, #1246, #1247, #1248, #1249, #1250, #1251, #1252, #1253, #1254, #1255, #1256, #1257, #1258, #1259, #1260, #1261, #1262, #1263, #1264, #1265, #1266, #1267, #1268, #1269, #1270, #1271, #1272, #1273, #1274, #1275, #1276, #1277, #1278, #127891, #1279, #1280, #1281, #1282, #128274, #128295, #1283, #1284, #1285, #1286, #1287, #1288, #1289, #1290, #1291, #1292, #1293, #1294, #1295, #1296, #1297, #1298, #1299, #1300, #1301, #1302, #1303, #1304, #1305, #1306, #1307, #1308, #13085, #1309, #1310, #1311, #1312, #1313, #1314, #1315, #1316, #1317, #1318, #1319, #1320, #1321, #1322, #1323, #1324, #1325, #1326, #1327, #1328, #1329, #1330, #1331, #1332, #1333, #1334, #1335, #1336, #1337, #1338, #1339, #1340, #1341, #1342, #1343, #1344, #1345, #1346, #1347, #1348, #1349, #1350, #1351, #1352, #1353, #1354, #1355, #1356, #1357, #1358, #1359, #1360, #1361, #1362, #1363, #1364, #1365, #1366, #1367, #1368, #1369, #1370, #1371, #1372, #1373, #1374, #1375, #1376, #1377, #1378, #1379, #1380, #1381, #1382, #1383, #1384, #1385, #1386, #1387, #1388, #1389, #1390, #1391, #1392, #1393, #1394, #1395, #1396, #1397, #1398, #1399, #1400, #1401, #1402, #1403, #1404, #1405, #1406, #1407, #1408, #1409, #1410, #1411, #1412, #1413, #1414, #1415, #1416, #1417, #1418, #1419, #1420, #1421, #1422, #1423, #1424, #1425, #1426, #1427, #1428, #1429, #1430, #1431, #1432, #1433, #1434, #1435, #1436, #1437, #1438, #1439, #1440, #1441, #1442, #1443, #1444, #1445, #1446, #1447, #1448, #1449, #1450, #1451, #1452, #1453, #1454, #1455, #1456, #1457, #1458, #1459, #1460, #1461, #1462, #1463, #1464, #1465, #1466, #1467, #1468, #1469, #1470, #1471, #1472, #1473, #1474, #1475, #1476, #1477, #1478, #1479, #1480, #1481, #1482, #1483, #1484, #1485, #1486, #1487, #1488, #1489, #1490, #1491, #1492, #1493, #1494, #1495, #1496, #1497, #1498, #1499, #1500, #1501, #1502, #1503, #1504, #1505, #1506, #1507, #1508, #1509, #1510, #1511, #1512, #1513, #1514, #15144, #1515, #1516, #1517, #1518, #1519, #1520, #1521, #1522, #1523, #1524, #1525, #1526, #1527, #1528, #1529, #1530, #1531, #1532, #1533, #1534, #1535, #1536, #1537, #1538, #1539, #1540, #1541, #1542, #1543, #1544, #1545, #1546, #1547, #1548, #1549, #1550, #1551, #1552, #1553, #1554, #1555, #1556, #1557, #1558, #1559, #1560, #1561, #1562, #1563, #1564, #1565, #1566, #1567, #1568, #1569, #1570, #1571, #1572, #1573, #1574, #1575, #1576, #1577, #1578, #1579, #1580, #1581, #1582, #1583, #1584, #1585, #1586, #1587, #1588, #1589, #1590, #1591, #1592, #1593, #1594, #1595, #1596, #1597, #15979, #1598, #1599, #1600, #1601, #1602, #1603, #16032, #16033, #16036, #1604, #1605, #1606, #1607, #1608, #1609, #1610, #1611, #1612, #16122, #1613, #1614, #1615, #1616, #16163, #1617, #1618, #1619, #1620, #1621, #1622, #1623, #1624, #1625, #16254, #1626, #1627, #1628, #1629, #1630, #1631, #1632, #1633, #16338, #1634, #1635, #1636, #1637, #1638, #1639, #1640, #1641, #1642, #1643, #1644, #16448, #1645, #16452, #1646, #16463, #16464, #1647, #1648, #1649, #1650, #1651, #1652, #1653, #1654, #1655, #1656, #1657, #1658, #1659, #1660, #1661, #1662, #1663, #1664, #1665, #1666, #16662, #1667, #1668, #1669, #1670, #1671, #1672, #1673, #1674, #1675, #1676, #1677, #16778, #1678, #1679, #1680, #16802, #16803, #1681, #1682, #1683, #16839, #1684, #16844, #1685, #16851, #16856, #1686, #1687, #1688, #1689, #1690, #1691, #1692, #1693, #1694, #1695, #1696, #1697, #1698, #1699, #1700, #1701, #1702, #1703, #1704, #1705, #1706, #1707, #1708, #1709, #1710, #1711, #1712, #1713, #1714, #1715, #1716, #1717, #1718, #1719, #1720, #1721, #1722, #1723, #1724, #17246, #1725, #1726, #1727, #1728, #1729, #1730, #1731, #1732, #1733, #1734, #1735, #1736, #1737, #1738, #1739, #1740, #1741, #1742, #1743, #1744, #1745, #1746, #1747, #1748, #1749, #17494 [blocked], #1750, #17505, #1751, #1752, #1753, #1754, #1755, #17557, #1756, #1757, #1758, #1759, #1760, #1761, #1762, #1763, #1764, #1765, #1766, #1767, #1768, #1769, #1770, #1771, #1772, #1773, #1774, #1775, #1776, #1777, #1778, #1779, #1780, #1781, #1782, #1783, #1784, #178485, #1785, #1786, #1787, #1788, #1789, #1790, #1791, #1792, #1793, #1794, #1795, #1796, #1797, #1798, #1799, #1800, #1801, #1802, #1803, #1804, #1805, #1806, #1807, #1808, #1809, #1810, #1811, #1812, #1813, #1814, #1815, #1816, #18163, #1817, #1818, #1819, #1820, #1821, #1822, #1823, #1824, #1825, #1826, #1827, #1828, #1829, #1830, #1831, #1832, #1833, #1834, #1835, #1836, #1837, #1838, #1839, #1840, #1841, #1842, #1843, #18435, #1844, #1845, #1846, #1847, #1848, #1849, #1850, #1851, #1852, #1853, #1854, #1855, #1856, #1857, #1858, #1859, #1860, #1861, #1862, #1863, #1864, #1865, #1866, #1867, #1868, #1869, #1870, #1871, #1872, #1873, #1874, #18746 [deployed], #1875, #1876, #1877, #1878, #1879, #1880, #1881, #1882, #1883, #1884, #1885, #1886, #18860 [proposed], #1887, #1888, #1889, #1890, #1891, #18911 [queued or executing per reconcile], #18912 [same], #1892, #1893, #1894, #1895, #1896, #1897, #1898, #1899, #1900, #1901, #1902, #1903, #1904, #1905, #1906, #1907, #1908, #1909, #1910, #1911, #1912, #1913, #1914, #1915, #1916, #1917, #1918, #1919, #1920, #1921, #1922, #1923, #1924, #1925, #1926, #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1934, #1935, #1936, #1937, #1938, #1939, #1940, #1941, #1942, #1943, #1944, #1945, #1946, #1947, #1948, #1949, #1950, #1951, #1952, #1953, #1954, #1955, #1956, #1957, #1958, #1959, #1960, #1961, #1962, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #1971, #1972, #1973, #1974, #1975, #1976, #1977, #1978, #1979, #1980, #1981, #1982, #1983, #1984, #1985, #1986, #1987, #1988, #1989, #1990, #1991, #1992, #1993, #1994, #1995, #1996, #1997, #1998, #1999, #2000, #2001, #2002, #2003, #2004, #2005, #2006, #2007, #2008, #2009, #2010, #2011, #2012, #2013, #2014, #2015, #2016, #2017, #2018, #2019, #2020, #2021, #2022, #2023, #2024, #2025, #2026, #2027, #2028, #2029, #2030, #2031, #2032, #2033, #2034, #2035, #2036, #2037, #2038, #2039, #2040, #2041, #2042, #2043, #2044, #2045, #2046, #2047, #2048, #2049, #2050, #2051, #2052, #2053, #2054, #2055, #2056, #2057, #2058, #2059, #2060, #2061, #2062, #2063, #2064, #2065, #2066, #2067, #2068, #2069, #2070, #2071, #2072, #2073, #2074, #2075, #2076, #2077, #2078, #2079, #2080, #2081, #2082, #2083, #2084, #2085, #2086, #2087, #2088, #2089, #2090, #2091, #2092, #2093, #2094, #2095, #2096, #2097, #2098, #2099, #2100, #2101, #2102, #2103, #2104, #2105, #2106, #2107, #2108, #2109, #2110, #2111, #2112, #2113, #2114, #2115, #2116, #2117, #2118, #2119, #2120, #21204, #21205, #2121, #21214, #2122, #2123, #2124, #2125, #2126, #2127, #2128, #2129, #2130, #2131, #2132, #2133, #2134, #2135, #2136, #2137, #2138, #2139, #2140, #2141, #2142, #2143, #2144, #2145, #2146, #2147, #2148, #2149, #2150, #2151, #2152, #2153, #2154, #2155, #2156, #2157, #2158, #2159, #2160, #2161, #2162, #2163, #2164, #2165, #2166, #2167, #2168, #2169, #2170, #2171, #2172, #2173, #2174, #2175, #2176, #2177, #2178, #2179, #2180, #2181, #2182, #2183, #2184, #2185, #2186, #2187, #2188, #2189, #2190, #2191, #2192, #2193, #2194, #2195, #2196, #2197, #2198, #2199, #2200, #2201, #2202, #2203, #2204, #2205, #2206, #2207, #2208, #2209, #2210, #2211, #2212, #2213, #2214, #2215, #2216, #2217, #2218, #2219, #2220, #2221, #2222, #2223, #2224, #2225, #2226, #2227, #2228, #2229, #2230, #22304, #2231, #2232, #2233, #2234, #2235, #2236, #2237, #2238, #2239, #2240, #2241, #2242, #2243, #2244, #2245, #2246, #2247, #2248, #2249, #2250, #2251, #2252, #2253, #2254, #2255, #2256, #2257, #2258, #2259, #2260, #2261, #2262, #2263, #2264, #2265, #2266, #2267, #2268, #2269, #2270, #2271, #2272, #2273, #2274, #2275, #2276, #2277, #2278, #2279, #2280, #2281, #2282, #2283, #2284, #2285, #2286, #2287, #2288, #2289, #2290, #2291, #2292, #2293, #2294, #2295, #2296, #2297, #2298, #2299, #2300, #2301, #2302, #2303, #2304, #2305, #2306, #2307, #2308, #2309, #2310, #2311, #2312, #2313, #2314, #2315, #2316, #2317, #2318, #2319, #2320, #2321, #2322, #2323, #2324, #2325, #2326, #2327, #2328, #2329, #2330, #2331, #2332, #2333, #2334, #2335, #2336, #2337, #2338, #2339, #2340, #2341, #2342, #2343, #2344, #2345, #2346, #2347, #2348, #2349, #2350, #2351, #2352, #2353, #2354, #2355, #2356, #2357, #2358, #2359, #2360, #2361, #2362, #2363, #2364, #2365, #2366, #2367, #2368, #2369, #2370, #2371, #2372, #2373, #2374, #2375, #2376, #2377, #2378, #2379, #2380, #2381, #2382, #2383, #2384, #2385, #2386, #2387, #2388, #2389, #2390, #2391, #2392, #2393, #2394, #2395, #2396, #2397, #2398, #2399, #2400, #2401, #2402, #2403, #2404, #2405, #2406, #2407, #2408, #2409, #2410, #2411, #2412, #2413, #2414, #2415, #2416, #2417, #2418, #2419, #2420, #2421, #2422, #2423, #2424, #2425, #2426, #2427, #2428, #2429, #2430, #2431, #2432, #2433, #2434, #2435, #2436, #2437, #2438, #2439, #2440, #2441, #2442, #2443, #2444, #2445, #2446, #2447, #2448, #2449, #2450, #2451, #2452, #2453, #2454, #2455, #2456, #2457, #2458, #2459, #2460, #2461, #2462, #2463, #2464, #2465, #2466, #2467, #2468, #2469, #2470, #2471, #2472, #2473, #2474, #2475, #2476, #2477, #2478, #2479, #2480, #2481, #2482, #2483, #2484, #2485, #2486, #2487, #2488, #2489, #2490, #2491, #2492, #2493, #2494, #2495, #2496, #2497, #2498, #2499, #2500, #2501, #2502, #2503, #2504, #2505, #2506, #2507, #2508, #2509, #2510, #2511, #2512, #2513, #2514, #2515, #2516, #2517, #2518, #2519, #2520, #2521, #2522, #2523, #2524, #2525, #2526, #2527, #2528, #2529, #2530, #2531, #2532, #2533, #2534, #2535, #2536, #2537, #2538, #2539, #2540, #2541, #2542, #2543, #2544, #2545, #2546, #2547, #2548, #2549, #2550, #2551, #2552, #2553, #2554, #2555, #2556, #2557, #2558, #2559, #2560, #2561, #2562, #2563, #2564, #2565, #2566, #2567, #2568, #2569, #2570, #2571, #2572, #2573, #2574, #2575, #2576, #2577, #2578, #2579, #2580, #2581, #2582, #2583, #2584, #2585, #2586, #2587, #2588, #2589, #2590, #2591, #2592, #2593, #2594, #2595, #2596, #2597, #2598, #2599, #2600, #2601, #2602, #2603, #2604, #2605, #2606, #2607, #2608, #2609, #2610, #2611, #2612, #2613, #2614, #2615, #2616, #2617, #2618, #2619, #2620, #2621, #2622, #2623, #2624, #2625, #2626, #2627, #2628, #2629, #2630, #2631, #2632, #2633, #2634, #2635, #2636, #2637, #2638, #2639, #2640, #2641, #2642, #2643, #2644, #2645, #2646, #2647, #2648, #2649, #2650, #2651, #2652, #2653, #2654, #2655, #2656, #2657, #2658, #2659, #2660, #2661, #2662, #2663, #2664, #2665, #2666, #2667, #2668, #2669, #2670, #2671, #2672, #2673, #2674, #2675, #2676, #2677, #2678, #2679, #2680, #2681, #2682, #2683, #2684, #2685, #2686, #2687, #2688, #2689, #2690, #2691, #2692, #2693, #2694, #2695, #2696, #2697, #2698, #2699, #2700, #2701, #2702, #2703, #2704, #2705, #2706, #2707, #2708, #2921, #2923, #2924, #2926, #2928, #2929, #2933, #2934, #2936, #2941, #2942, #334155, #4236, #4237, #4238, #4239, #4240, #4241, #4242, #4243, #4244, #4245, #4246, #4247, #4248, #4249, #4250, #4251, #4252, #4253, #4254, #4255, #4256, #4257, #4258, #4259, #4260, #4261, #4262, #4263, #4264, #4265, #4266, #4267, #4268, #4269, #4270, #4271, #4272, #4273, #4274, #4275, #4276, #4277, #4278, #4279, #4280, #4281, #4282, #4283, #4284, #4285, #4286, #4287, #4288, #4289, #4290, #4291, #4292, #4293, #4294, #4295, #4296, #4297, #4298, #4299, #4300, #4301, #4302, #4303, #4304, #4305, #4306, #4307, #4308, #4309, #4310, #4311, #4312, #4313, #4314, #4315, #4316, #4317, #4318, #4319, #4320, #4321, #4322, #4323, #4324, #4325, #4326, #4327, #4328, #4329, #4330, #4331, #4332, #4333, #4334, #4335, #4336, #4337, #4338, #4339, #4340, #4341, #4342, #4343, #4344, #4345, #4346, #4347, #4348, #4349, #4350, #4351, #4352, #4353, #4354, #4355, #4356, #4357, #4358, #4359, #4360, #4361, #4362, #4363, #4364, #4365, #4366, #4367, #4368, #4369, #4370, #4371, #4372, #4373, #4374, #4375, #4376, #4377, #4378, #4379, #4380, #4381, #4382, #4383, #4384, #4385, #4386, #4387, #4388, #4389, #4390, #4391, #4392, #4393, #4394, #4395, #4396, #4397, #4398, #4399, #4400, #4401, #4402, #4403, #4404, #4405, #4406, #4407, #4408, #4409, #4410, #4411, #4412, #4413, #4414, #4415, #4416, #4417, #4418, #4419, #4420, #4421, #4422, #4423, #4424, #4425, #4426, #4427, #4428, #4429, #4430, #4431, #4432, #4433, #4434, #4435, #4436, #4437, #4438, #4439, #4440, #4441, #4442, #4443, #4444, #4445, #4446, #4447, #4448, #4449, #4450, #4451, #4452, #4453, #4454, #4455, #4456, #4457, #4458, #4459, #4460, #4461, #4462, #4463, #4464, #4465, #4466, #4467, #4468, #4469, #4470, #4471, #4472, #4473, #4474, #4475, #4476, #4477, #4478, #4479, #4480, #4481, #4482, #4483, #4484, #4485, #4486, #4487, #4488, #4489, #4490, #4491, #4492, #4493, #4494, #4495, #4496, #4497, #4498, #4499, #4500, #4501, #4502, #4503, #4504, #4505, #4506, #4507, #4508, #4509, #4510, #4511, #4512, #4513, #4514, #4515, #4516, #4517, #4518, #4519, #4520, #4521, #4522, #4523, #4524, #4525, #4526, #4527, #4528, #4529, #4530, #4531, #4532, #4533, #4534, #4535, #4536, #4537, #4538, #4539, #4540, #4541, #4542, #4543, #4544, #4545, #4546, #4547, #4548, #4549, #4550, #4551, #4552, #4553, #4554, #4555, #4556, #4557, #4558, #4559, #4560, #4561, #4562, #4563, #4564, #4565, #4566, #4567, #4568, #4569, #4570, #4571, #4572, #4573, #4574, #4575, #4576, #4577, #4578, #4579, #4580, #4581, #4582, #4583, #4584, #4585, #4586, #4587, #4588, #4589, #4590, #4591, #4592, #4593, #4594, #4595, #4596, #4597, #4598, #4599, #4600, #4601, #4602, #4603, #4604, #4605, #4606, #4607, #4608, #4609, #4610, #4611, #4612, #4613, #4614, #4615, #4616, #4617, #4618, #4619, #4620, #4621, #4622, #4623, #4624, #4625, #4626, #4627, #4628, #4629, #4630, #4631, #4632, #4633, #4634, #4635, #4636, #4637, #4638, #4639, #4640, #4641, #4642, #4643, #4644, #4645, #4646, #4647, #4648, #4649, #4650, #4651, #4652, #4653, #4654, #4655, #4656, #4657, #4658, #4659, #4660, #4661, #4662, #4663, #4664, #4665, #4666, #4667, #4668, #4669, #4670, #4671, #4672, #4673, #4674, #4675, #4676, #4677, #4678, #4679, #4680, #4681, #4682, #4683, #4684, #4685, #4686, #4687, #4688, #4689, #4690, #4691, #4692, #4693, #4694, #4695, #4696, #4697, #4698, #4699, #4700, #4701, #4702, #4703, #4704, #4705, #4706, #4707, #4708, #4709, #4710, #4711, #4712, #4713, #4714, #4715, #4716, #4717, #4718, #4719, #4720, #4721, #4722, #4723, #4724, #4725, #4726, #4727, #4728, #4729, #4730, #4731, #4732, #4733, #4734, #4735, #4736, #4737, #4738, #4739, #4740, #4741, #4742, #4743, #4744, #4745, #4746, #4747, #4748, #4749, #4750, #4751, #4752, #4753, #4754, #4755, #4756, #4757, #4758, #4759, #4760, #4761, #4762, #4763, #4764, #4765, #4766, #4767, #4768, #4769, #4770, #4771, #4772, #4773, #4774, #4775, #4776, #4777, #4778, #4779, #4780, #4781, #4782, #4783, #4784, #4785, #4786, #4787, #4788, #4789, #4790, #4791, #4792, #4793, #4794, #4795, #4796, #4797, #4798, #4799, #4800, #4801, #4802, #4803, #4804, #4805, #4806, #4807, #4808, #4809, #4810, #4811, #4812, #4813, #4814, #4815, #4816, #4817, #4818, #4819, #4820, #4821, #4822, #4823, #4824, #4825, #4826, #4827, #4828, #4829, #4830, #4831, #4832, #4833, #4834, #4835, #4836, #4837, #4838, #4839, #4840, #4841, #4842, #4843, #4844, #4845, #4846, #4847, #4848, #4849, #4850, #4851, #4852, #4853, #4854, #4855, #4856, #4857, #4858, #4859, #4860, #4861, #4862, #4863, #4864, #4865, #4866, #4867, #4868, #4869, #4870, #4871, #4872, #4873, #4874, #4875, #4876, #4877, #4878, #4879, #4880, #4881, #4882, #4883, #4884, #4885, #4886, #4887, #4888, #4889, #4890, #4891, #4892, #4893, #4894, #4895, #4896, #4897, #4898, #4899, #4900, #4901, #4902, #4903, #4904, #4905, #4906, #4907, #4908, #4909, #4910, #4911, #4912, #4913, #4914, #4915, #4916, #4917, #4918, #4919, #4920, #4921, #4922, #4923, #4924, #4925, #4926, #4927, #4928, #4929, #4930, #4931, #4932, #4933, #4934, #4935, #4936, #4937, #4938, #4939, #4940, #4941, #4942, #4943, #4944, #4945, #4946, #4947, #4948, #4949, #4950, #4951, #4952, #4953, #4954, #4955, #4956, #4957, #4958, #4959, #4960, #4961, #4962, #4963, #4964, #4965, #4966, #4967, #4968, #4969, #4970, #4971, #4972, #4973, #4974, #4975, #4976, #4977, #4978, #4979, #4980, #4981, #4982, #4983, #4984, #4985, #4986, #4987, #4988, #4989, #4990, #4991, #4992, #4993, #4994, #4995, #4996, #4997, #4998, #4999, #5000, #5001, #5002, #5003, #5004, #5005, #5006, #5007, #5008, #5009, #5010, #5011, #5012, #5013, #5014, #5015, #5016, #5017, #5018, #5019, #5020, #5021, #5022, #5023, #5024, #5025, #5026, #5027, #5028, #5029, #5030, #5031, #5032, #5033, #5034, #5035, #5036, #5037, #5038, #5039, #5040, #5041, #5042, #5043, #5044, #5045, #5046, #5047, #5048, #5049, #5050, #5051, #5052, #5053, #5054, #5055, #5056, #5057, #5058, #5059, #5060, #5061, #5062, #5063, #5064, #5065, #5066, #5067, #5068, #5069, #5070, #5071, #5072, #5073, #5074, #5075, #5076, #5077, #5078, #5079, #5080, #5081, #5082, #5083, #5084, #5085, #5086, #5087, #5088, #5089, #5090, #5091, #5092, #5093, #5094, #5095, #5096, #5097, #5098, #5099, #5100, #5101, #5102, #5103, #5104, #5105, #5106, #5107, #5108, #5109, #5110, #5111, #5112, #5113, #5114, #5115, #5116, #5117, #5118, #5119, #5120, #5121, #5122, #5123, #5124, #5125, #5126, #5127, #5128, #5129, #5130, #5131, #5132, #5133, #5134, #5135, #5136, #5137, #5138, #5139, #5140, #5141, #5142, #5143, #5144, #5145, #5146, #5147, #5148, #5149, #5150, #5151, #5152, #5153, #5154, #5155, #5156, #5157, #5158, #5159, #5160, #5161, #64748, #6711, #6719, #7142, #7149, #78350, #8594
-
-**Last PICKUP PROMPT:**
-
-```
-ed for implementation" 14:53).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — reports.php copycat/prechrome closeout follow-through.
-
-Where we left off (verified 2026-07-24 14:53 PT):
-- Prechrome patch LIVE + verified on /var/www/emtskills/routes/reports.php (lines 25 + 11450, gated ob_start/ob_end_clean, main dashboard only). Rollback: /tmp/reports.php.bak-prechrome-20260724-144008.
-- Tickets 21214/21204/21205 [deployed] all Resolved; internal comment posted on 21214.
-- #18911 [deployed] (verified: get_idea_progress status=deployed, ready_for_review — awaiting Ruben's Deploy click on the reports canary cron).
-- #18912 [executing] (verified: re-queued after impl_failed spec-gen; idea_action implement returned ok:true, status=in_progress, dev_stage=idle, 14:53:15).
-- #17494 [superseded] by #18912. #18746 [deployed].
-
-Open threads to drive next:
-1. #18912 [executing] — check get_idea_progress in ~30-60 min; if impl_failed a SECOND time, GATE C says hand-ship the function-defining-aware cron_view_guard_audit.php fix directly (executor cannot land it).
-2. #18911 [deployed] — (human-only decision — no idea) Ruben clicks Deploy or rejects the canary cron build.
-3. Pre-doctype ~55KB chrome on reports.php — pre-existing, invisible, note-only. No idea filed intentionally (cosmetic, human-priority call — no idea).
-
-Reference IDs:
-- Ideas reconciled: #18911 [deployed], #18912 [executing], #17494 [superseded], #18746 [deployed]
-- Files touched: /var/www/emtskills/routes/reports.php (WOPR), /tmp/reports.php.bak-prechrome-20260724-144008
-- Tickets: 21214, 21204, 21205 (all Resolved)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Front A phase 1: fatal copycat fix (earlier)
-- [x] Front B: Cori reports.php resolved
-- [x] Front C: Vicky Matrix resolved
-- [x] Prechrome card-flood patch applied + FPM reloaded
-- [x] Authenticated verification passed (200, cards discarded pre-header)
-- [x] Ticket 21214 internal comment posted
-- [x] GATE B reconcile #18911
-- [x] GATE B reconcile #18912 (impl_failed → re-queued, now executing)
-- [x] attempt_completion with rule-91 pickup prompt
-</task_progress>
-</attempt_completion>
 ```

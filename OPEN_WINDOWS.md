@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/27/2026, 6:36:17 AM PT | window: last 72h | 95 tasks | index total 2251 (parsed 0, cached 2251)
+Generated: 7/27/2026, 9:50:37 AM PT | window: last 72h | 94 tasks | index total 2251 (parsed 2, cached 2249)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1785124596121` | 7/27/2026, 9:50:35 AM | 279 | 960KB | Context hit the rule-119 compress threshold, so I compressed and am handing off. Answering |
+| `1785120544230` | 7/27/2026, 9:50:31 AM | 147 | 713KB | I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged |
 | `1785111226194` | 7/26/2026, 10:36:45 PM | 1085 | 8263KB | Take a look at these added Argus issues to resolve: |
-| `1785120544230` | 7/26/2026, 10:29:07 PM | 135 | 683KB | I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged |
-| `1785124596121` | 7/26/2026, 10:29:05 PM | 278 | 960KB | Context hit the rule-119 compress threshold, so I compressed and am handing off. Answering |
 | `1785121116590` | 7/26/2026, 9:47:26 PM | 134 | 394KB | # San Diego Inspection |
 | `1785111313276` | 7/26/2026, 8:34:03 PM | 880 | 1530KB | #GLM |
 | `1785122479644` | 7/26/2026, 8:28:25 PM | 76 | 127KB | VEC/MCP needs to be aware that the "Matrix" is often referred to. it is usually the admin_ |
@@ -104,11 +104,38 @@ Generated: 7/27/2026, 6:36:17 AM PT | window: last 72h | 95 tasks | index total 
 | `1784915473205` | 7/24/2026, 11:05:38 AM | 48 | 219KB | Frankenstein-llm began iterating garbage mid-task like this. Can you do an RCA and resolve |
 | `1784912695418` | 7/24/2026, 10:15:14 AM | 68 | 250KB | Continue |
 | `1784911395308` | 7/24/2026, 10:02:55 AM | 74 | 259KB | emsu-operations MCP is flapping. Can you fix that? |
-| `1784907389801` | 7/24/2026, 8:46:54 AM | 70 | 98KB | why does isiah coleman still not have moodle access? |
 
 ---
 
 ## Per-window detail
+
+### `1785124596121` — 7/27/2026, 9:50:35 AM PT — 279 turns
+
+**Original task:**
+
+```
+Context hit the rule-119 compress threshold, so I compressed and am handing off. Answering your four questions with what I verified, and being straight about the one I did not do.
+
+## What I did NOT do, and you were right to call it
+
+You asked me to open a browser with a token and see what you see. **I never did that.** I verified structurally (grep, lint, marker counts) and reported the page as fixed. That is not the same thing, and it is exactly why you keep having to push. The page is login-gated so curl returns 401, which means the only honest verification is a real logged-in browser sessi
+```
+
+**Ideas referenced:** #13418, #178501, #18339, #18343, #18349, #18356, #18366, #18367, #18390, #18391, #18393, #18394, #18397, #18398, #18407, #18408, #18417, #18519, #19230 [queued], #19258 [executing], #19266 [deployed], #19274 [blocked], #19321 [deployed], #19325 [queued], #19338 [queued], #19388 [deployed], #19390 [rejected], #19404 [executing], #19417 [deployed], #19423 [executing], #19425 [proposed], #19427 [executing], #19433 [executing], #19441 [executing], #19447 [proposed], #19448 [proposed], #19449 [executing], #19455 [executing], #19456 [executing], #19458 [executing], #19460 [executing], #1989, #1990, #2012, #2013, #2014, #2015, #2019, #2025, #2028, #2032, #6366, #65039, #9888
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785120544230` — 7/27/2026, 9:50:31 AM PT — 147 turns
+
+**Original task:**
+
+```
+I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged Cline into the left side bar and destroyed the closed windows. Can you give me those windows I just closed, not already opened or group alike ideas into the same copy prompts for me to run? This would serve to be enormously helpful to me. Make sure they are very extensive copy prompts and also while you are at it execute any ideas you can in the process per rule 29 and leverage rule 267 to save time.
+```
+
+**Ideas referenced:** #11782, #12778, #16608, #16613, #17494, #1754, #1755, #178495, #178499, #178500, #178501, #178502, #178503, #178505, #178509, #178511, #178850, #182471, #18442 [queued], #18559 [queued], #18757 [queued], #18841 [executing], #18851 [queued], #18861 [queued], #18862 [proposed], #18867 [proposed], #18871 [proposed], #18880 [proposed], #18898 [proposed], #18903 [queued], #18912 [queued], #18913 [proposed], #18928 [proposed], #18930 [proposed], #18934 [proposed], #18935, #18937 [proposed], #18938 [proposed], #18941 [proposed], #18954 [proposed], #18959 [proposed], #18967 [proposed], #18969, #18974 [proposed], #18975 [proposed], #18977 [proposed], #18982 [proposed], #18983 [proposed], #18985 [proposed], #18998 [proposed], #19005 [queued], #19006 [queued], #19041, #19079 [queued], #19101 [queued], #19125, #19128 [queued], #19129 [proposed], #19173 [executing], #19175 [executing], #19176 [executing], #19177 [executing], #19178 [executing], #19179 [executing], #19186 [executing], #19187 [executing], #19188 [executing], #19189 [executing], #19194 [proposed], #19239 [rejected], #19259 [deployed], #19267 [deployed], #19288 [deployed], #19359 [proposed], #19360 [proposed], #19362 [proposed], #19363 [proposed], #19396 [approved], #19426 [deployed], #19435 [executing], #19439 [executing], #1985, #1992, #2026, #88922, #9086, #9168, #9339, #9831
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785111226194` — 7/26/2026, 10:36:45 PM PT — 1085 turns
 
@@ -158,34 +185,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1785120544230` — 7/26/2026, 10:29:07 PM PT — 135 turns
-
-**Original task:**
-
-```
-I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged Cline into the left side bar and destroyed the closed windows. Can you give me those windows I just closed, not already opened or group alike ideas into the same copy prompts for me to run? This would serve to be enormously helpful to me. Make sure they are very extensive copy prompts and also while you are at it execute any ideas you can in the process per rule 29 and leverage rule 267 to save time.
-```
-
-**Ideas referenced:** #11782, #16608, #16613, #17494, #1754, #1755, #178495, #178499, #178500, #178501, #178502, #178503, #178505, #178509, #178511, #178850, #182471, #18442 [queued], #18559 [queued], #18757 [queued], #18841 [executing], #18851 [queued], #18861 [queued], #18862 [proposed], #18867 [proposed], #18871 [proposed], #18880 [proposed], #18898 [proposed], #18903 [queued], #18912 [queued], #18913 [proposed], #18928 [proposed], #18930 [proposed], #18934 [proposed], #18935, #18937 [proposed], #18938 [proposed], #18941 [proposed], #18954 [proposed], #18959 [proposed], #18967 [proposed], #18969, #18974 [proposed], #18975 [proposed], #18977 [proposed], #18982 [proposed], #18983 [proposed], #18985 [proposed], #18998 [proposed], #19005 [queued], #19006 [queued], #19041, #19079 [queued], #19101 [queued], #19125, #19128 [queued], #19129 [proposed], #19173 [executing], #19175 [executing], #19176 [executing], #19177 [executing], #19178 [executing], #19179 [executing], #19186 [executing], #19187 [executing], #19188 [executing], #19189 [executing], #19194 [proposed], #19239 [rejected], #19259 [deployed], #19267 [deployed], #19288 [deployed], #19359 [proposed], #19360 [proposed], #19362 [proposed], #19363 [proposed], #19396 [approved], #19426 [deployed], #19435 [executing], #19439 [executing], #1985, #1992, #2026, #88922, #9086, #9168, #9339, #9831
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785124596121` — 7/26/2026, 10:29:05 PM PT — 278 turns
-
-**Original task:**
-
-```
-Context hit the rule-119 compress threshold, so I compressed and am handing off. Answering your four questions with what I verified, and being straight about the one I did not do.
-
-## What I did NOT do, and you were right to call it
-
-You asked me to open a browser with a token and see what you see. **I never did that.** I verified structurally (grep, lint, marker counts) and reported the page as fixed. That is not the same thing, and it is exactly why you keep having to push. The page is login-gated so curl returns 401, which means the only honest verification is a real logged-in browser sessi
-```
-
-**Ideas referenced:** #13418, #178501, #18339, #18343, #18349, #18356, #18366, #18367, #18390, #18391, #18393, #18394, #18397, #18398, #18407, #18408, #18417, #18519, #19230 [queued], #19258 [executing], #19266 [deployed], #19274 [blocked], #19321 [deployed], #19325 [queued], #19338 [queued], #19388 [deployed], #19390 [rejected], #19404 [executing], #19417 [deployed], #19423 [executing], #19425 [proposed], #19427 [executing], #19433 [executing], #19441 [executing], #19447 [proposed], #19448 [proposed], #19449 [executing], #19455 [executing], #19456 [executing], #19458 [executing], #19460 [executing], #1989, #1990, #2012, #2013, #2014, #2015, #2019, #2025, #2028, #2032, #6366, #65039, #9888
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785121116590` — 7/26/2026, 9:47:26 PM PT — 134 turns
 
@@ -3914,47 +3913,4 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
-```
-
-### `1784907389801` — 7/24/2026, 8:46:54 AM PT — 70 turns
-
-**Original task:**
-
-```
-why does isiah coleman still not have moodle access?
-```
-
-**Ideas referenced:** #18890 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-
-<attempt_completion>
-<result>═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Isaiah Coleman enrollment gap: paid $2,195 via Authnet 6/24, no Students row, no WPForms entry, no Moodle access.
-
-Where we left off (verified 2026-07-24 08:46 PT):
-- Isaiah Coleman, isaiahcoleman787@gmail.com, paid $2,195 (Authnet txn 81667223222, card ending 4184) on 2026-06-24 17:16 UTC
-- payment_enrollment_gaps #180: gap_type=no_students_row, status=manual_review, 1 attempt, last attempt 2026-07-24 08:32 (SLS doctor retrying), never healed
-- No WPForms entry found in any of wp_xfyql/wp_tcjgw/wp_ot7y0/wp_ibz5h PNfs8_wpforms_entry_fields for 'isaiahcoleman787', 'isaaibusiness', or 'coleman787'
-- No invoice_number on the authnet payment (empty string), so enrollment pipeline couldn't determine class section
-- Students table: zero rows matching this email or name
-- Idea #18890 filed [proposed] — "Isaiah Coleman enrollment gap — no Students row, no WPForms entry, Authnet payment $2,195 unlinked"
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #18890 [proposed] — Determine class section: query course_sections for June 2026 sections priced at $2,195, check if isaiahcoleman787@gmail.com has any Moodle user (check mdl_user table), create Students row, trigger enrollment
-2. No WPForms entry found — could be a phone-registration or direct-link enrollment bypassing WPForms entirely; check if this was a Pay-By-Link or phone-order scenario. If so, the WPForms absence is expected — the fix is manual Students row creation then SLS enroll
-
-Reference IDs:
-- Idea filed: #18890
-- Gap ID: payment_enrollment_gaps #180
-- Authnet txn: 81667223222
-- Authnet cache row: id 50649, settle_amount $2,195.00, no invoice_number
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
 ```

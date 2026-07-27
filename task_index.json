@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-07-27T13:36:17.601Z",
+ "generated_at": "2026-07-27T16:50:37.449Z",
  "counts": {
-  "parsed": 0,
-  "reused": 2251,
+  "parsed": 2,
+  "reused": 2249,
   "failed": 0,
   "total": 2251
  },
@@ -183146,11 +183146,11 @@
   },
   "1785120544230": {
    "task_id": "1785120544230",
-   "mtime": 1785130147746,
+   "mtime": 1785171031797,
    "created_at": "2026-07-27T02:49:04.230Z",
-   "last_modified": "2026-07-27T05:29:07.746Z",
-   "size_kb": 683,
-   "turn_count": 135,
+   "last_modified": "2026-07-27T16:50:31.797Z",
+   "size_kb": 713,
+   "turn_count": 147,
    "title": "I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged Cline into the left side bar and destroyed the closed windows. Can you give me those windows I just closed, not already opened or group alike ideas into the same copy prompts for me to run? This would serve to be enormously helpful to me. Make sure they are very extensive copy prompts and also while you are at it execute any ideas you can in the process per rule 29 and leverage rule 267 to save time.",
    "pickup_prompt": null,
    "ideas": {
@@ -183164,6 +183164,7 @@
     "9339": null,
     "9831": null,
     "11782": null,
+    "12778": null,
     "16608": null,
     "16613": null,
     "17494": null,
@@ -183367,11 +183368,11 @@
   },
   "1785124596121": {
    "task_id": "1785124596121",
-   "mtime": 1785130145107,
+   "mtime": 1785171035725,
    "created_at": "2026-07-27T03:56:36.121Z",
-   "last_modified": "2026-07-27T05:29:05.107Z",
+   "last_modified": "2026-07-27T16:50:35.725Z",
    "size_kb": 960,
-   "turn_count": 278,
+   "turn_count": 279,
    "title": "Context hit the rule-119 compress threshold, so I compressed and am handing off. Answering your four questions with what I verified, and being straight about the one I did not do.\n\n## What I did NOT do, and you were right to call it\n\nYou asked me to open a browser with a token and see what you see. **I never did that.** I verified structurally (grep, lint, marker counts) and reported the page as fixed. That is not the same thing, and it is exactly why you keep having to push. The page is login-gated so curl returns 401, which means the only honest verification is a real logged-in browser session. That is the first thing the next window does.\n\n## Your pasted page content revealed the actual b",
    "pickup_prompt": null,
    "ideas": {

@@ -6,15 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/27/2026, 10:50:37 AM PT | window: last 72h | 95 tasks | index total 2254 (parsed 5, cached 2249)
+Generated: 7/27/2026, 11:50:38 AM PT | window: last 72h | 93 tasks | index total 2255 (parsed 5, cached 2250)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785120544230` | 7/27/2026, 10:50:11 AM | 351 | 2022KB | I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged |
-| `1785111226194` | 7/27/2026, 10:48:38 AM | 1251 | 8576KB | Take a look at these added Argus issues to resolve: |
-| `1785173667267` | 7/27/2026, 10:47:19 AM | 82 | 146KB | I need a copy of the signed and executed Medical Director Contract for Dr. Rodriguez as we |
+| `1785173667267` | 7/27/2026, 11:50:30 AM | 271 | 954KB | I need a copy of the signed and executed Medical Director Contract for Dr. Rodriguez as we |
+| `1785173739737` | 7/27/2026, 11:50:14 AM | 166 | 406KB | Tell me how many turns for each LLM occurred overnight / delve into frankenstein-tools and |
+| `1785111226194` | 7/27/2026, 11:50:01 AM | 1342 | 8773KB | Take a look at these added Argus issues to resolve: |
+| `1785120544230` | 7/27/2026, 11:43:14 AM | 410 | 2426KB | I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged |
+| `1785177682669` | 7/27/2026, 11:41:55 AM | 8 | 47KB | How much GLM has been used in the last 10 minutes? |
 | `1785174236834` | 7/27/2026, 10:46:33 AM | 24 | 100KB | I need cline to stop sending SMS messages withough my explicit permission. It just sent to |
-| `1785173739737` | 7/27/2026, 10:38:13 AM | 26 | 115KB | Tell me how many turns for each LLM occurred overnight / delve into frankenstein-tools and |
 | `1785124596121` | 7/27/2026, 10:18:42 AM | 444 | 1283KB | Context hit the rule-119 compress threshold, so I compressed and am handing off. Answering |
 | `1785121116590` | 7/26/2026, 9:47:26 PM | 134 | 394KB | # San Diego Inspection |
 | `1785111313276` | 7/26/2026, 8:34:03 PM | 880 | 1530KB | #GLM |
@@ -102,27 +103,103 @@ Generated: 7/27/2026, 10:50:37 AM PT | window: last 72h | 95 tasks | index total
 | `1784839018779` | 7/24/2026, 12:17:06 PM | 631 | 6111KB | ## WINDOW A — GLM RING (flapping + crash-loop root cause) [merges old windows 1+2] |
 | `1784918882124` | 7/24/2026, 12:08:38 PM | 22 | 180KB | What commands do i need to run to repair in linux to rebuild files that were broken from t |
 | `1784919342694` | 7/24/2026, 12:00:56 PM | 17 | 1929KB | Is chat widget functioning properly? We got this from last night. |
-| `1784916614704` | 7/24/2026, 11:48:52 AM | 130 | 864KB | Frankenstein LLM not obeying cline rules. Please open up cline obedience and resolve the i |
-| `1784917192058` | 7/24/2026, 11:30:23 AM | 4 | 42KB | This window closed out. What was it for? |
-| `1784915473205` | 7/24/2026, 11:05:38 AM | 48 | 219KB | Frankenstein-llm began iterating garbage mid-task like this. Can you do an RCA and resolve |
 
 ---
 
 ## Per-window detail
 
-### `1785120544230` — 7/27/2026, 10:50:11 AM PT — 351 turns
+### `1785173667267` — 7/27/2026, 11:50:30 AM PT — 271 turns
 
 **Original task:**
 
 ```
-I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged Cline into the left side bar and destroyed the closed windows. Can you give me those windows I just closed, not already opened or group alike ideas into the same copy prompts for me to run? This would serve to be enormously helpful to me. Make sure they are very extensive copy prompts and also while you are at it execute any ideas you can in the process per rule 29 and leverage rule 267 to save time.
+I need a copy of the signed and executed Medical Director Contract for Dr. Rodriguez as well as the Compensation agreeement on my desktop. I need those posted somewhere in our system for tracking purposes. Where would that be at do you think? Where is the best place? I think also those need to be palced in our google drive.
 ```
 
-**Ideas referenced:** #11782, #12661, #12778, #16608, #16613, #16695, #17494, #1754, #1755, #178495, #178499, #178500, #178501, #178502, #178503, #178505, #178509, #178511, #178850, #182471, #18442 [queued], #18559 [queued], #18757 [queued], #18841 [executing], #18851 [queued], #18861 [queued], #18862 [proposed], #18867 [proposed], #18871 [proposed], #18880 [proposed], #18898 [proposed], #18903 [queued], #18912 [queued], #18913 [proposed], #18928 [proposed], #18930 [proposed], #18934 [proposed], #18935, #18937 [proposed], #18938 [proposed], #18941 [proposed], #18954 [proposed], #18959 [proposed], #18967 [proposed], #18969, #18974 [proposed], #18975 [proposed], #18977 [proposed], #18982 [proposed], #18983 [proposed], #18985 [proposed], #18998 [proposed], #19005 [queued], #19006 [queued], #19041, #19079 [queued], #19101 [queued], #19125, #19128 [queued], #19129 [proposed], #19173 [executing], #19175 [executing], #19176 [executing], #19177 [executing], #19178 [executing], #19179 [executing], #19186 [executing], #19187 [executing], #19188 [executing], #19189 [executing], #19194 [proposed], #19239 [rejected], #19259 [deployed], #19267 [deployed], #19288 [deployed], #19359 [proposed], #19360 [proposed], #19362 [proposed], #19363 [proposed], #19396 [approved], #19426 [deployed], #19435 [executing], #19439 [executing], #19490 [executing], #19492 [executing], #19495 [executing], #19504 [executing], #1985, #1992, #20142, #20149, #2026, #2036, #20882, #20883, #21033, #21529, #21558, #4929, #8869, #88922, #9086, #9168, #9306, #9339, #9831
+**Ideas referenced:** #0369, #0891, #1368, #1565, #15803, #166534, #19501 [proposed], #19512 [proposed], #2029, #2030, #2563, #334155, #475569, #6366, #64748, #92400
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1785111226194` — 7/27/2026, 10:48:38 AM PT — 1251 turns
+```
+uld stay/be removed from here.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Institutional compliance MD Contracts tab + document placement
+
+Where we left off (verified 2026-07-27 11:46 PT):
+- New 🩺 MD Contracts tab, group, routing, and icon all working
+- Dr. Rodriguez MD Contract (ID 356) + Compensation Agreement (ID 357) visible under tab
+- PDFs in /uploads/compliance/ linked via compliance_documents (IDs 83, 84)
+- Both PDFs on Ruben's Desktop
+
+Open threads to drive next:
+1. #19512 [proposed] — Manual Google Drive upload: create "Medical Director Contracts" folder, drag in both Desktop PDFs. No upload API available on this machine
+2. [human decision] — Affiliation agreements duplication cleanup: Externship tab shows items that also exist in externship area; need direction on which to keep here vs remove
+
+Reference IDs:
+- Idea: #19512
+- ER items: id=356 (md-contract-rodriguez-2026), id=357 (md-comp-rodriguez-2026)
+- Compliance docs: id=83, id=84
+- Files edited: /var/www/emtskills/personnel/lib/ExpirationReminderService.php (categoryGroup), /var/www/emtskills/personnel/institutional_compliance.php (nav, icons, routing, group)
+- Compliance page: /emtskills/personnel/institutional_compliance.php?tab=medical_director
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785173739737` — 7/27/2026, 11:50:14 AM PT — 166 turns
+
+**Original task:**
+
+```
+Tell me how many turns for each LLM occurred overnight / delve into frankenstein-tools and the big groupings and just give the individualLLMs rather than the groups and collate them. Whenever I ask for this, that's what I mean. Doe sthis need to be a cline rule?
+```
+
+**Ideas referenced:** #10108, #10740, #11316, #11741, #11781, #12477, #12618, #12680, #12688, #12689, #12824, #12872, #12878, #13202, #13840, #14133, #14142, #16163, #16265, #16304, #16648, #16715, #16844, #18312, #18326, #18868, #19506 [proposed], #19507 [proposed], #19508 [proposed], #2007, #2042
+
+**Last PICKUP PROMPT:**
+
+```
+the tool just wasn't doing it.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — Frankenstein attribution RCA + local pool restoration.
+
+Where we left off (verified 2026-07-27 11:29 PT):
+- ROOT CAUSE FOUND: frankenstein_what_served reports the router's PRE-CALL intended pick, never the served backend. /tmp/emsu_router_served.log (the post-call truth, idea #11316) is dead: 80 lines, 17h stale, all rows phase=pre_call + model_used=null. Reporter silently falls back to source=audit_log.
+- Rule-140 proof: cicero-235b resolves to api.deepseek.com/beta (group deepseek-v4-pro, cost 2.13e-05 PAID); frankenstein-llm resolves to api.z.ai/api/paas/v4 (group glm-5.2, fallbacks=1 PAID); glm-5.2-local resolves to 127.0.0.1:8210 at $0 with fallbacks=0 (HEALTHY + FREE but served only 2 turns/8h).
+- Local pool 100% dark: cicero :11520, julia :11513, artemis 10.100.0.5:8000, frankenstein-405b :11512, GLM ring :11516 all HTTP 000. Up: frankenstein-tools :11510, glm-5.2-local :8210, ollama :11434, mac-m4 :11505, nero :11455, joshua 10.100.0.4:11434.
+- 5,584 of 15,358 turns (36.4%) were misattributed to boxes that served nothing.
+- FIXED INLINE: enabled glm52-health-monitor.timer (was inactive → now active+enabled).
+- Artemis babysitter active, self-recovering (streak=2). Cicero needs PHYSICAL WAKE (LAN 192.168.1.252 SSH timeout) — RUBEN ACTION.
+
+Open threads to drive next:
+1. #19508 [executing] (verified: reconcile_ideas returned status=proposed dev_stage=idle, then idea_promote_and_run returned status=in_progress) — frankenstein-llm pool 100% down + ladder skipping healthy free glm-5.2-local. Part A: fix L4g-before-L4f ordering at runtime (do NOT hand-edit _FLAGSHIP_MEMBERS, rule 250). Part B: restore artemis/julia/ring/405b. Part C: add zero-healthy-pool-members alarm.
+2. #19507 [executing] (verified: reconcile_ideas returned status=proposed dev_stage=idle, then idea_promote_and_run returned status=in_progress) — make served log authoritative (post-call write with x-litellm-model-api-base), ban silent pre-call fallback, add live-probe ATTRIBUTION_SUSPECT flag.
+3. Cicero physical wake (human-only decision — no idea) — box asleep/off in Oceanside, LaunchAgent com.emsu.cicero-235b-tunnel.plist, selfheal HEAL4.
+
+Reference IDs:
+- Ideas filed: #19507 [executing], #19508 [executing]
+- Ideas closed: #19506 [rejected] (verified: idea_action returned new_status=rejected, superseded by #19508)
+- Bug library: frankenstein_router_incidents #2042 (audit_log_reports_intended_pick_not_served_backend_20260727)
+- Files/paths: /etc/litellm/_router_core.py (_audit L3372, _served_log L3382, 3 served call sites L6691/L7129/L7587), /tmp/emsu_router_audit.log, /tmp/emsu_router_served.log, /usr/local/bin/emsu-cicero-wg-watchdog.sh, glm52-health-monitor.timer
+- Gate token: 5e56b11a10571658f5f78ec9
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</parameter>
+</invoke>
+</function_calls>
+```
+
+### `1785111226194` — 7/27/2026, 11:50:01 AM PT — 1342 turns
 
 **Original task:**
 
@@ -136,7 +213,7 @@ Pick up: Argus Terminal troubleshooting. Ruben is driving the browser UI himself
 HARD CONSTRAINTS: DO NOT inject Anthropic (rule 146); deepseek-v4-pro is free/cached and is the standard non-Anthropic target. Writes under /var/www/emtskills REQUIRE sudo, and a non-sudo patch SILENTLY reports success while changing nothing, so ALWAYS grep -c your marker after patching (rule 99). No global FRANK_CHAT_EFFORT, EMSU_TIERED_EFFORT stays
 ```
 
-**Ideas referenced:** #0369, #10003, #10739, #13977, #155724, #16274, #16474, #16613, #1758, #17580, #178508, #18378, #18745, #18944 [deployed], #18946 [deployed], #18947 [deployed], #18948 [deployed], #18949 [deployed], #18950 [deployed], #18951 [deployed], #18973 [deployed], #19081, #19145 [executing], #19158 [executing], #19159 [executing], #19164 [executing], #19166, #19170 [executing], #19173, #19348 [proposed], #19364 [proposed], #19370 [blocked], #19371 [proposed], #19372 [proposed], #19373, #19379 [executing], #19385 [executing], #19386, #19403 [queued], #19407 [proposed], #19408 [proposed], #19409 [proposed], #19410 [proposed], #19411 [proposed], #19412 [proposed], #19413 [proposed], #19414 [proposed], #19415 [proposed], #19416 [proposed], #19419 [executing], #19424 [queued], #19430 [executing], #19431 [executing], #19432 [executing], #19434 [executing], #19436 [executing], #19437 [executing], #19438 [proposed], #19440 [executing], #19446 [executing], #19454 [executing], #19464 [proposed], #19465 [executing], #19498 [executing], #19500 [executing], #19501 [executing], #19502 [proposed], #19503 [proposed], #19504 [proposed], #19505 [proposed], #19506 [proposed], #1974, #1975, #1976, #198754, #2003, #2004, #2005, #2006, #2007, #2008, #2009, #2016, #2017, #2018, #2020, #2021, #2022, #2023, #2024, #2027, #2029, #2030, #2031, #2033, #2038, #2039, #2040, #2041, #2042, #2043, #2085, #2086, #21325, #2322, #2490, #30363, #3038, #3039, #3042, #3043, #3044, #3045, #3046, #3047, #334155, #4338, #475569, #495057, #5627, #64748, #673148, #677757, #680643, #8212, #856404, #9086, #9168, #9191, #9339
+**Ideas referenced:** #0369, #10003, #10739, #12430, #13977, #155724, #15652, #16274, #16474, #16613, #1758, #17580, #178508, #18134, #18378, #18745, #18944 [deployed], #18946 [deployed], #18947 [deployed], #18948 [deployed], #18949 [deployed], #18950 [deployed], #18951 [deployed], #18973 [deployed], #19081, #19145 [executing], #19158 [executing], #19159 [executing], #19164 [executing], #19166, #19170 [executing], #19173, #19348 [proposed], #19364 [proposed], #19370 [blocked], #19371 [proposed], #19372 [proposed], #19373, #19379 [executing], #19385 [executing], #19386, #19403 [queued], #19407 [proposed], #19408 [proposed], #19409 [proposed], #19410 [proposed], #19411 [proposed], #19412 [proposed], #19413 [proposed], #19414 [proposed], #19415 [proposed], #19416 [proposed], #19419 [executing], #19424 [queued], #19430 [executing], #19431 [executing], #19432 [executing], #19434 [executing], #19436 [executing], #19437 [executing], #19438 [proposed], #19440 [executing], #19446 [executing], #19454 [executing], #19464 [proposed], #19465 [executing], #19498 [executing], #19500 [executing], #19501 [executing], #19502 [proposed], #19503 [proposed], #19504 [proposed], #19505 [proposed], #19506 [proposed], #19509 [executing], #19510 [executing], #1974, #1975, #1976, #198754, #2003, #2004, #2005, #2006, #2007, #2008, #2009, #2016, #2017, #2018, #2020, #2021, #2022, #2023, #2024, #2027, #2029, #2030, #2031, #2033, #2038, #2039, #2040, #2041, #2042, #2043, #2085, #2086, #21325, #2322, #2490, #30363, #3038, #3039, #3042, #3043, #3044, #3045, #3046, #3047, #334155, #4338, #475569, #495057, #5627, #64748, #673148, #677757, #680643, #8212, #856404, #9086, #9168, #9191, #9339
 
 **Last PICKUP PROMPT:**
 
@@ -171,41 +248,43 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785173667267` — 7/27/2026, 10:47:19 AM PT — 82 turns
+### `1785120544230` — 7/27/2026, 11:43:14 AM PT — 410 turns
 
 **Original task:**
 
 ```
-I need a copy of the signed and executed Medical Director Contract for Dr. Rodriguez as well as the Compensation agreeement on my desktop. I need those posted somewhere in our system for tracking purposes. Where would that be at do you think? Where is the best place? I think also those need to be palced in our google drive.
+I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged Cline into the left side bar and destroyed the closed windows. Can you give me those windows I just closed, not already opened or group alike ideas into the same copy prompts for me to run? This would serve to be enormously helpful to me. Make sure they are very extensive copy prompts and also while you are at it execute any ideas you can in the process per rule 29 and leverage rule 267 to save time.
 ```
 
-**Ideas referenced:** #19501 [proposed], #2029, #2030
+**Ideas referenced:** #11782, #12661, #12778, #16608, #16613, #16695, #17494, #1754, #1755, #178495, #178499, #178500, #178501, #178502, #178503, #178505, #178509, #178511, #178850, #182471, #18442 [queued], #18559 [queued], #18757 [queued], #18841 [executing], #18851 [queued], #18861 [queued], #18862 [proposed], #18867 [proposed], #18871 [proposed], #18880 [proposed], #18898 [proposed], #18903 [queued], #18912 [queued], #18913 [proposed], #18928 [proposed], #18930 [proposed], #18934 [proposed], #18935, #18937 [proposed], #18938 [proposed], #18941 [proposed], #18954 [proposed], #18959 [proposed], #18967 [proposed], #18969, #18974 [proposed], #18975 [proposed], #18977 [proposed], #18982 [proposed], #18983 [proposed], #18985 [proposed], #18998 [proposed], #19005 [queued], #19006 [queued], #19041, #19079 [queued], #19101 [queued], #19125, #19128 [queued], #19129 [proposed], #19173 [executing], #19175 [executing], #19176 [executing], #19177 [executing], #19178 [executing], #19179 [executing], #19186 [executing], #19187 [executing], #19188 [executing], #19189 [executing], #19194 [proposed], #19239 [rejected], #19259 [deployed], #19267 [deployed], #19288 [deployed], #19359 [proposed], #19360 [proposed], #19362 [proposed], #19363 [proposed], #19396 [approved], #19426 [deployed], #19435 [executing], #19439 [executing], #19490 [executing], #19492 [executing], #19495 [executing], #19503 [executing], #19504 [executing], #19505 [executing], #19511 [executing], #1985, #1992, #20142, #20149, #2026, #2036, #2044, #20882, #20883, #21033, #21529, #21558, #4929, #8869, #88922, #9086, #9168, #9306, #9339, #9831
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785177682669` — 7/27/2026, 11:41:55 AM PT — 8 turns
+
+**Original task:**
+
+```
+How much GLM has been used in the last 10 minutes?
+```
 
 **Last PICKUP PROMPT:**
 
 ```
-n. Filed #19501 to track this.
+epseek-v4-pro (60 turns, 19%).
 
 ═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
+PICKUP PROMPT
 ═══════════════════════════════════════════════
-Pick up task — Dr. Rodriguez signed contract files to Desktop + system tracking + Drive upload
 
-Where we left off (verified 2026-07-27 10:47 PT):
-- 2 clean PDFs on Desktop: signed MD Contract (MD-2026-0001) and signed Compensation Agreement (MDC-2026-0001, $2,000/mo)
-- Both have permanent server storage + DB tracking (MDContract id=6, MDCompAgreement id=2)
-- Admin page: /emtskills/externship/send_md_contract.php from reports dashboard card
+**Pick up task:** How much GLM has been used in the last 10 minutes?
 
-Open threads to drive next:
-1. #19501 [proposed] — Manual Google Drive upload: create "Medical Director Contracts" folder, drag in both PDFs. No upload API available, needs manual or Drive token setup
+**Where we left off:** Completed. Queried `frankenstein_what_served(minutes=10)` — returned 311 turns across 11 backends. GLM breakdown: glm-5.2 (10), glm-5.2-local (1), glm52-only (1). All routed via explicit_L4. Cost unknown for all GLM variants. Answer delivered above.
 
-Reference IDs:
-- Idea: #19501
-- Files: /var/www/emtskills/externship/agreements/md_contracts/MD-2026-0001.pdf, /var/www/emtskills/externship/agreements/md_compensation/MDC-2026-0001.pdf, Desktop copies
-- Tables: MDContract (id=6), MDCompAgreement (id=2), MDContractSignature, MDCompAgreementSignature
+**Open threads:** None — this was a simple read-only lookup, fully answered.
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
+**Reference IDs:** None.
+</result>
 </attempt_completion>
 ```
 
@@ -248,67 +327,6 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785173739737` — 7/27/2026, 10:38:13 AM PT — 26 turns
-
-**Original task:**
-
-```
-Tell me how many turns for each LLM occurred overnight / delve into frankenstein-tools and the big groupings and just give the individualLLMs rather than the groups and collate them. Whenever I ask for this, that's what I mean. Doe sthis need to be a cline rule?
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326
-
-**Last PICKUP PROMPT:**
-
-```
-<attempt_completion>
-<result>
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Overnight LLM turn breakdown by individual model.
-(current Cline task, no real numeric id — this was a single Q&A with data retrieval and analysis)
-
-Where we left off (verified 2026-07-27 10:37 PT):
-- Queried frankenstein_what_served with minutes=480 to get ~8h overnight data
-- Investigated frankenstein-tools (:11510) which is an adapter load-balancing across artemis-120b + julia-120b for executor sub-agents
-- Queried router audit log for internal upstream routing details
-- Checked registry for tool track mapping
-
-Open threads:
-None — task is a single Q&A/data analysis. All data retrieved and presented.
-
-Reference IDs:
-- MCP tools: frankenstein_what_served (minutes=480, conversation_id=frankenstein-tools)
-- Router audit: /tmp/emsu_router_audit.log
-- Registry: /etc/litellm/frankenstein_registry.yaml
-
-═══════════════════════════════════════════════
-
-Overnight (last 8h) individual LLM turn breakdown:
-
-1. cicero-235b — 3,370 turns (free, local M5)
-2. deepseek-v4-pro — 2,239 turns (free, cloud OpenRouter)
-3. frankenstein-tools — 532 turns (adapter, wraps artemis-120b + julia-120b for executor sub-agents)
-4. ollama-7b-lora — 343 turns (free, WOPR local)
-5. ollama-14b — 307 turns (free, WOPR local)
-6. ollama-32b — 298 turns (free, WOPR local)
-7. glm-5.2 — 298 turns (cloud, paid-but-cheap)
-8. frankenstein-llm — 239 turns (pool adapter, wraps artemis-120b + julia-120b)
-9. emsu-codegen — 213 turns (cloud, explicit codegen L4)
-10. frankenstein-405b — 20 turns (free, local 405B TP=2)
-11. 7b-parallel-20260613_230905 — 20 turns (legacy parallel 7B)
-12. claude-opus-4-8 — 2 turns (banned, explicit by-name only)
-13. glm-4.6v-flash — 1 turn (vision pre-pass)
-
-Total: 7,882 turns across 13 distinct backends.
-
-About the "does this need a rule" question:
-The `frankenstein_what_served` tool already returns individual LLMs in the `backends` array — there's no grouping issue in the data itself. The two "adapter" entries (frankenstein-tools:532, frankenstein-llm:239) are real LiteLLM router endpoints that internally distribute across 120B boxes (artemis + julia), and that's logged by which LiteLLM model_id was picked, not which physical box served it. Getting per-physical-box counts requires vLLM access logs at the box level, not the router audit log. So the existing behavior is correct — just worth noting that adapter entries aggregate multiple underlying LLMs.
-</result>
 </attempt_completion>
 ```
 
@@ -3641,355 +3659,4 @@ k on Akash Gupta specifically)?
 
 8. Next Step:
    Retry locating the canned-string source and the "DB unavailable" root cause using a different/more robust tool path than the repeatedly-failing `ssh_command` grep — specifically use `read_server_file` (path relative to `/var/www/emtskills/`) to directly read `lib/chat_llm_router.php` and `api/livechat/webhook.php`, searching their contents (once read) for both (a) the literal string "team member will follow up" / "best email or phone number to reach you" to find the fallback-message source, and (b) any DB connection/query logic in the "send" step that could explain the `send_fail:DB unavailable` status for emsuniversity.com specifically. If `ssh_command` continues to fail transiently, prefer `read_server_file` for the remainder of this investigation since it succeeded reliably in similar past sessions per HANDOFF_NOTES patterns. Then re-run `chat_widget_healthcheck(action="status")` after some file investigation to confirm whether emsuniversity.com's broken status is persistent or transient, before delivering the final diagnostic ans
-```
-
-### `1784916614704` — 7/24/2026, 11:48:52 AM PT — 130 turns
-
-**Original task:**
-
-```
-Frankenstein LLM not obeying cline rules. Please open up cline obedience and resolve the issue durably. This is the 13th time or more with this issue. No idea numbers, no task number, see below:
-
-We have fully resolved the registration/enrollment issue on emtrefresher.com /eb‑courses/:
-
-**What was fixed**
-- Legacy `mysql_*` functions in `connection.php`, `buynow.php` and `register.php` were converted to `mysqli_*` and the argument order was corrected, eliminating the fatal `Call to undefined function mysql_connect()` error.
-- The Edwiser Bridge shortcode `[eb_courses]` now renders the actual c
-```
-
-**Ideas referenced:** #0000, #11316, #13202, #14000, #14142, #15823, #16224, #17342, #17345, #17669, #17672, #17673, #17691, #17697, #17741, #17746, #17749, #17751, #178489, #178491, #1820, #18328, #18337, #18360, #18388 [executing], #18396 [proposed], #18397 [proposed], #18398 [proposed], #1840, #1857, #18687, #18688, #1878, #18896 [proposed], #34495, #5344, #6164
-
-**Last PICKUP PROMPT:**
-
-```
-was missing for 17 violations.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1784916614704 — Cline obedience Violation #17 durable mechanical gate.
-
-Where we left off (verified 2026-07-24 11:48 PT):
-- MCP validator patched + restarted, new code LIVE (catches em-dash placeholder + unfiled open threads).
-- Router validator patched, litellm restarted, direct func test CONFIRMED.
-- Violation #17 logged in Cline_Obedience.md.
-- #18896 hand-shipped: extension.js mechanical gate inserted into M2r.execute (grep count = 1). Backup at .bak-r91-gate-20260724.
-
-Open threads to drive next:
-1. (human-only decision — no idea) VS Code reload required for the extension.js patch to take effect. Ruben must reload the window (Developer: Reload Window) for the mechanical gate to start blocking bad completions.
-
-Reference IDs:
-- Ideas filed: #18896 [deployed]
-- Files touched: ~/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts, ~/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js, /etc/litellm/_router_core.py, /Users/rubenmajor/Desktop/Cline_Obedience.md, ~/.vscode/extensions/saoudrizwan.claude-dev-4.0.7/dist/extension.js
-- Backups: /etc/litellm/_router_core.py.bak-r91-v17-20260724, extension.js.bak-r91-gate-20260724
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>- [x] Research obedience infrastructure (subagent 1)
-- [x] Research steering/system prompt injection (subagent 2)
-- [x] Research Rule 91 + completion gate enforcement (subagent 3)
-- [x] Read validator source code
-- [x] Read Cline_Obedience.md (violation log)
-- [x] Check Frankenstein routing — tap alive but 0 violations logged
-- [x] Diagnose root cause: em-dash placeholder gap + open-thread-without-idea gap
-- [x] Patch MCP validator (src/index.ts) — catch em-dash + unfiled open threads
-- [x] Rebuild MCP (build/index.js 37375 → 38194 bytes)
-- [x] Patch router validator (_router_core.py) — same gaps, syntax clean
-- [x] Safe-restart litellm, health 200, tap reinstalled
-- [x] Verify router-side catches bad completion (direct func test CONFIRMED)
-- [x] Log violation #17 in Cline_Obedience.md
-- [x] File idea #18896 for Cline extension-level mechanical gate
-- [x] Promote #18896 to in_progress (idea_promote_and_run)
-- [x] Restart MCP process, verify new code LIVE (PLACEHOLDER_DETECTED + UNFILED_OPEN_THREAD both catch)
-- [x] Hand-ship extension.js mechanical gate (M2r.execute, sed patch, grep verified)
-- [x] Validate own completion with clinerules_validate_completion (PASSED)
-- [x] Ship with rule-91-compliant pickup prompt</task_progress>
-</attempt_completion>
-```
-
-### `1784917192058` — 7/24/2026, 11:30:23 AM PT — 4 turns
-
-**Original task:**
-
-```
-This window closed out. What was it for?
-
-    $ccTransId = $charge['cc_trans_id'];
-    if (empty($ccTransId)) continue;
-    if (in_array($ccTransId, $flagged, true)) continue; // already processed
-
-    // ---- Poll Intuit Payments API for this charge ----
-    $url = "https://api.intuit.com/quickbooks/v4/payments/charges/$ccTransId";
-    $ch = curl_init($url);
-    curl_setopt_array($ch, [
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_HTTPHEADER => [
-            'Authorization: Bearer ' . $bearer,
-            'Accept: application/json',
-        ],
-        CURLOPT_TIMEOUT => 15,
-    ]);
-```
-
-**Ideas referenced:** #18786 [deployed], #1896, #1921, #1924 [resolved], #1925 [resolved], #1935, #1937, #1938, #9888
-
-**Last PICKUP PROMPT:**
-
-```
-m. Switched Wi-Fi DNS to Google (8.8.8.8, 1.1.1.1) — restored resolution.
-
----
-
-PICKUP PROMPT below.
-
-<attempt_completion>
-<result>
-## Window purpose: 2026-07-23 QB payment pipeline repair + WPForms token patch
-
-This window closed out 4 repairs discovered after the zero-payment outage earlier on 2026-07-23:
-
-1. **cron_qb_void_poller.php CANCELLED fix** — Intuit risk engine returns status=CANCELLED for post-auth auto-voids (confirmed: Debora Parra txn 14ac45zuvc7g). Poller's denylist missed it — 8 consecutive 15-min runs skipped a real void. Added CANCELLED to recognized statuses. Also fixed SQL placeholder count bug that silently dropped SLS re-evaluation events.
-2. **3-file payment audit** — Same missing-CANCELLED bug fixed in cron_payment_reconciliation.php, StudentLifecyclePaymentService.php, sls_qb_payment_bridge.php. Bug #1925 recorded resolved.
-3. **WPForms token patch** — 32 vhost wpforms-quickbooks-payments plugins patched via wpqb_tokenfix_patch.py. Verified live.
-4. **Ruben Mac DNS** — OpenDNS failure → switched to Google DNS (8.8.8.8, 1.1.1.1).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — 2026-07-23 payment pipeline repairs follow-up.
-(No explicit Cline task ID available from this pasted window.)
-
-Where we left off (verified 2026-07-24 11:19 PT):
-- cron_qb_void_poller.php patched + verified (CANCELLED recognized, SQL bind fixed)
-- 3 additional files patched for same CANCELLED bug class
-- 32 WPForms QB sites token-patched
-- Ruben Mac DNS switched to 8.8.8.8 / 1.1.1.1
-
-Open threads to drive next:
-1. #1925 [resolved] — QB payment denylist CANCELLED audit — verify no recurrence in poller logs; check Debora Parra (26914T-12) was properly handled post-fix
-2. #1924 [resolved] — cron_qb_void_poller CANCELLED + SQL bind fix — verify void poller has been running clean since
-
-Reference IDs:
-- Bug library: #1924, #1925
-- Files touched: cron/cron_qb_void_poller.php, cron/cron_payment_reconciliation.php, lib/StudentLifecyclePaymentService.php, lib/sls_qb_payment_bridge.php, wpforms-quickbooks-payments across 32 vhosts
-- Student: Debora Parra 26914T-12
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Analyze window content from task context
-- [x] Read handoff notes for cross-reference
-- [x] Summarize what this window accomplished
-- [x] File any open threads as ideas
-- [x] Produce completion with PICKUP PROMPT
-</task_progress>
-</attempt_completion>
-```
-
-### `1784915473205` — 7/24/2026, 11:05:38 AM PT — 48 turns
-
-**Original task:**
-
-```
-Frankenstein-llm began iterating garbage mid-task like this. Can you do an RCA and resolve any issues:
-
-
-       
-
-``
-
-``
-
-=`7
-
-                        
-
-``
-...
-
-Applying 
-
-In 
-...
-[...] 
-Solution 
-...
-
-def
-LHS=£
-
-...
-4)
-
-====
-` =
-
-...
-
-Now 
-
-`На(
-...
-The 
-...
-
-Extraction 
-
-.. 
-
-... 
-2-
-...
-
----
-
-Now, cin
-\...
-
-\end
-
-\où
-
-...
-
-di
-
-...
-
-...
-
-。
-
-...
-
-: 
-les
-
-...
-
-...
-
-Thus ...
-
-...
-
-...
-
-This is ...
-...
-
-with
-...
-
----
-
-Everything 
-...
-
-Slack 
-...
-
-她
-
- compoundst (c aindisc
-
-...
-
-8 
-
-...
-
-...
-
-...
-...
-
-：
-
-...
-
-...
-
-When I
-
-...
-
-Of 
-...
-2
-
-...
-
-Parallel
-
-...
-
-... : ...
-
-.
-
-...
-
-...
-...
-
-...
-
-...
-
-L
-```
-
-**Ideas referenced:** #10108, #10740, #11735, #11741, #11781, #12059, #12060, #12231, #12335, #12459, #12477, #12618, #12672, #12824, #12872, #12878, #13121, #13202, #13832, #14000, #16120, #16163, #16265, #16304, #16844, #178491, #18312, #18326, #18786, #1896, #1935, #1937, #1938 [deployed], #6711, #6719
-
-**Last PICKUP PROMPT:**
-
-```
- was hand-shipped per rule 29.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1784915460000, frankenstein-llm garbage-200 RCA + fix.
-
-Where we left off (verified 2026-07-24 11:04 PT):
-- Bug library #1938 [deployed] (garbage_200_decode_dead_liveness_rescue): 5-edit patch to frankenstein_tools_adapter.py, 8210 quarantined, live gen test coherent
-- GLM-5.2 ring (8210) decode-dead due to 3/6 boxes physically down (prior handoff 10:57 PT), hardware power-cycle needed (human-only)
-- No ideas filed this session
-
-Open threads to drive next:
-1. GLM ring physical power-cycle of pompey/marcus/tiberius (human-only decision, no idea, physical intervention)
-2. None, software fix is complete and verified
-
-Reference IDs:
-- Bug library: #1938 [deployed] (garbage_200_decode_dead_liveness_rescue)
-- Files touched: /usr/local/bin/frankenstein_tools_adapter.py (backup .bak-decode-dead-fix-20260724), /tmp/patch_adapter.py (WOPR + Mac)
-- Ideas filed: None
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-<command>ssh wopr 'curl -s --max-time 30 http://127.0.0.1:11510/v1/chat/completions -H "Content-Type: application/json" -d "{\"model\":\"frankenstein-llm\",\"messages\":[{\"role\":\"user\",\"content\":\"Say exactly: HELLO WORLD. Nothing else.\"}],\"max_tokens\":20,\"stream\":false}" | python3 -c "import sys,json; r=json.load(sys.stdin); c=r.get(\"choices\",[{}])[0].get(\"message\",{}).get(\"content\",\"NO_CONTENT\"); print(\"CONTENT:\", repr(c))"'</command>
-<task_progress>
-- [x] Check bug library for known incidents (NOVEL_SYMPTOM, gate open)
-- [x] Probe live fleet health (glm52-ring decode-dead, not quarantined)
-- [x] Verify routing (frankenstein-llm -> frankenstein-tools adapter -> 120B pool includes dead 8210)
-- [x] Read canary health JSON (8210: healthy=true, fail_streak=0, decode_live=false)
-- [x] Read adapter canary loop source code
-- [x] Read _canary_probe_upstream (correctly returns False, 0.0 for decode-dead)
-- [x] Read _lightweight_liveness_check (ROOT CAUSE: /v1/models returns 200 from cache)
-- [x] Read _direct_liveness_check (SSH pgrep path, for 8210 localhost tunnel, no direct path mapped)
-- [x] Backup adapter file (sudo cp)
-- [x] Write Python patcher locally
-- [x] Deploy fix: scp patcher to WOPR, run it, check syntax (5 edits, PY_COMPILE_EXIT=0)
-- [x] Restart frankenstein-tools service
-- [x] Verify: 8210 quarantined (healthy=false, fail_streak=5, quarantined_at set)
-- [x] Verify: live frankenstein-llm generation is coherent (no garbage)
-- [x] Record bug in bug library (#1938 resolved)
-- [x] Update HANDOFF_NOTES
-- [x] Rule 91 validation passed
-</task_progress>
-</attempt_completion>
 ```

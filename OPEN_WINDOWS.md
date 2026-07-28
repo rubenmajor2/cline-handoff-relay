@@ -6,15 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/27/2026, 3:50:40 PM PT | window: last 72h | 100 tasks | index total 2273 (parsed 5, cached 2268)
+Generated: 7/27/2026, 4:50:40 PM PT | window: last 72h | 98 tasks | index total 2276 (parsed 4, cached 2272)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785189965992` | 7/27/2026, 3:50:37 PM | 177 | 4380KB | #Argus |
-| `1785191995112` | 7/27/2026, 3:50:15 PM | 5 | 19KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
+| `1785196068848` | 7/27/2026, 4:50:40 PM | 43 | 627KB | https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students |
+| `1785189965992` | 7/27/2026, 4:50:36 PM | 481 | 4746KB | #Argus |
+| `1785193714174` | 7/27/2026, 4:47:32 PM | 166 | 474KB | #Artemis |
+| `1785194061900` | 7/27/2026, 4:45:22 PM | 186 | 399KB | Jon connected the 2 mac minis that were on his home network to the Tempe UniFi UDM.  |
+| `1785183122795` | 7/27/2026, 4:00:14 PM | 377 | 886KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
+| `1785191995112` | 7/27/2026, 3:59:29 PM | 78 | 192KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
 | `1785191816762` | 7/27/2026, 3:37:22 PM | 2 | 2KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
 | `1785190696126` | 7/27/2026, 3:37:11 PM | 62 | 136KB | Scan CFAs for any outstanding issues today and let me konw how things are going and if any |
-| `1785183122795` | 7/27/2026, 3:32:37 PM | 351 | 828KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
 | `1785180947248` | 7/27/2026, 3:18:16 PM | 258 | 1105KB | ## 7 — #ALERTS · text bombardment / monitoring hygiene |
 | `1785180769250` | 7/27/2026, 3:17:12 PM | 198 | 656KB | ## 5 — #BUGS · user-facing bug queue |
 | `1785189940243` | 7/27/2026, 3:06:17 PM | 2 | 3KB | #Argus |
@@ -105,17 +108,26 @@ Generated: 7/27/2026, 3:50:40 PM PT | window: last 72h | 100 tasks | index total
 | `1784940268122` | 7/24/2026, 5:44:33 PM | 2 | 6KB | This window greyed out. Can you reconstruct it whatever it was for the entire window? The  |
 | `1784938924967` | 7/24/2026, 5:31:30 PM | 30 | 636KB | Supposedly, i was sent a consent email from the SBA today to rmajor@emsuniversity.com and  |
 | `1784926289165` | 7/24/2026, 5:16:23 PM | 452 | 7423KB | Please check CFAs and make sure they are working properly. |
-| `1784926194704` | 7/24/2026, 4:43:33 PM | 370 | 11912KB | Play doctor of frankenstein LLM for outstanding issues occurring |
-| `1784925150329` | 7/24/2026, 4:33:13 PM | 194 | 2506KB | In Argus what additional permissions do you think would be helpful to give exec admin and  |
-| `1784925386416` | 7/24/2026, 4:32:33 PM | 330 | 2522KB | skillstastic bulk forms are not populating properly for Manny |
-| `1784858983506` | 7/24/2026, 4:30:03 PM | 379 | 3723KB | Both follow-up directives are done. |
-| `1784926500782` | 7/24/2026, 3:57:55 PM | 199 | 1382KB | Wow, this window is garbage. See cline obedience.md rule:  |
 
 ---
 
 ## Per-window detail
 
-### `1785189965992` — 7/27/2026, 3:50:37 PM PT — 177 turns
+### `1785196068848` — 7/27/2026, 4:50:40 PM PT — 43 turns
+
+**Original task:**
+
+```
+https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students 
+
+for some reason exec admin lost access. Give it backa nd also ensure Admin, IT ADmin as well as Program Directors
+```
+
+**Ideas referenced:** #0056, #055160, #15887, #15999, #16000, #16015, #16016, #16312, #17665, #18587, #18657, #198754, #212529, #3109, #3122, #495057, #5387, #842029, #9191, #9313
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785189965992` — 7/27/2026, 4:50:36 PM PT — 481 turns
 
 **Original task:**
 
@@ -133,11 +145,100 @@ The most likely cause is that this idea touches three things that sit outside th
 1. Plesk/Roundcube email provisioning — creating an actual mailbox on WOPR's mail server isn't an in
 ```
 
-**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #16213, #16263, #17537, #17619 [deployed], #18378, #18745, #18770, #18806, #18868, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19163, #19348, #19370, #19558, #2006, #2007, #2061, #21262, #274160, #30363, #334155, #4338, #64748, #6785, #69707, #8942, #9650, #9654, #9660, #9733, #9889
+**Ideas referenced:** #10003, #10005, #10182, #10740, #12247, #12262, #12301, #12314, #12364, #12365, #12672, #12673, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13108, #13121, #16213, #16263, #16648, #17537, #17619 [deployed], #17680, #18378, #18745, #1876, #18770, #18786, #18806, #18868, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19163, #19338, #19348, #19370, #19558, #19563 [proposed], #1998, #2006, #2007, #2061, #2064, #2066, #21262, #274160, #30363, #334155, #4338, #64748, #6785, #69707, #8942, #9650, #9654, #9660, #9733, #9889
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785191995112` — 7/27/2026, 3:50:15 PM PT — 5 turns
+### `1785193714174` — 7/27/2026, 4:47:32 PM PT — 166 turns
+
+**Original task:**
+
+```
+#Artemis
+
+Jon is with Artemis now and Artemis gets wedged because it's being taken too far we think. 
+
+Ubuntu 24.04.4 LTS artemis tty1
+artemis login: {466.6646581 Out of memory: Killed process 6319 (ray: RayWorkerP) total-vm:8634249224kB, anon-rss:240kB, fIle-rss: 680kB, Shmem-rss:0kB, UID: pgtables: 13176kB com_score_adj:1000
+
+-- 
+So need something proactively ready to push the instant it's rebooted
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #13878, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #19567 [proposed], #2063, #2065, #7142, #7149
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785194061900` — 7/27/2026, 4:45:22 PM PT — 186 turns
+
+**Original task:**
+
+```
+Jon connected the 2 mac minis that were on his home network to the Tempe UniFi UDM. 
+
+There was one there from before that should also be aworker. 
+
+Can you confirm that those are online and working with running LLMs??
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18916, #19569 [proposed], #19570 [proposed], #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+ntil Jon or Austin adds a key.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — Tempe Mac minis (Austins-Mini + Austins-Mini-2) onboarding to the LLM fleet.
+
+Where we left off (verified 2026-07-27 16:44 PT):
+- Corrected a bad prior report. Site map now confirmed via UniFi Cloud API + on-box gateway MAC: EMSU Phoenix UDM `6c:63:f8:e2:39:48` = Tempe = 192.168.0.0/24; EMSU Oceanside UDM `58:d6:1f:8e:c0:a7` = 192.168.1.0/24 = where ALL DGX Sparks live. Never infer site from a 192.168.1.x address — two sites share that CIDR.
+- Artemis is the Tempe-site pivot box. Its IP was corrected in fleet_inventory from 192.168.0.208 (stale) to 192.168.0.125 (live-verified).
+- Tempe /24 sweep from Artemis: 4 macOS hosts. 192.168.0.10 Austins-Mini (1c:f6:4c:3e:55:80), 192.168.0.209 Austins-Mini-2 (1c:f6:4c:43:6b:b9), 192.168.0.124 (3e:f5:ef:9c:c0:53), 192.168.0.191 (86:ea:f0:cb:e6:19).
+- All 4 expose port 22 ONLY. Zero Ollama/vLLM/MLX. Online but serving nothing.
+- SSH blocked on all 4: `Permission denied (publickey,password,keyboard-interactive)` as rubenmajor. Likely account is `austin`.
+- HANDOFF_NOTES.md has a retraction entry at "2026-07-27 17:43 PT" superseding the earlier bogus "Tempe Fleet Scan" entry.
+
+Open threads to drive next:
+1. #19569 [proposed] — Tempe minis need SSH key + Ollama. BLOCKED ON HUMAN: ask Jon/Austin to add the WOPR ed25519 pubkey to `~/.ssh/authorized_keys` on 192.168.0.10 and .209, or give the local account name. Once unblocked the agent can finish autonomously: size the boxes (`sysctl -n hw.model` + `hw.memsize`), install Ollama with `OLLAMA_HOST=0.0.0.0` (the Joshua localhost-bind trap, bug library #537), pull qwen2.5-coder 7b/14b/32b + emsu-qwen2.5-coder:7b-lora, stand up reverse tunnels on fresh ports (2225 is occupied and dead-banners — use 2227+), add fleet_inventory rows with site=tempe, register in frankenstein_registry.
+2. #19570 [executing] — fleet_inventory has no site/gateway_mac/lan_cidr column, which is the structural root cause of the wrong-site report. Executor is building the schema migration + backfill + `fleet_site_map` MCP tool + cron_fleet_lan_drift gateway-MAC recording. Verify it landed.
+3. Identify 192.168.0.124 and 192.168.0.191 — randomized MACs, no PTR. One is probably the pre-existing Tempe mini. Needs the same SSH access as thread 1. (covered by #19569 [proposed])
+4. Consider a rule 292 case-law addendum: confirm SITE via default-gateway MAC, never infer from a 192.168.x.x range. (human-only decision — no idea)
+
+Reference IDs:
+- Ideas filed: #19569 [proposed], #19570 [executing]
+- Ideas closed: none
+- Files touched: HANDOFF_NOTES.md (retraction + corrected scan), fleet_inventory row `artemis` (ip_primary .208 → .125, site map recorded in notes)
+- Credentials: UNIFI_CLOUD_API_KEY in /var/www/emtskills/config.credentials.php — `curl https://api.ui.com/ea/devices -H 'X-API-KEY: ...'` returns all three consoles
+- Pivot command for Tempe LAN work: `ssh -i /home/emsuserver/.ssh/id_ed25519 emsuserver@10.100.0.5` (Artemis)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785183122795` — 7/27/2026, 4:00:14 PM PT — 377 turns
+
+**Original task:**
+
+```
+Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue another 45 minutes:
+
+-
+## Direct answer on Cesar
+
+**I did nothing to Cesar. Three read-only commands, over its existing tunnel:** `ulimit -Sl/-Hl`, `grep memlock /etc/security/limits.d/`, and a `python3` version print. No writes, no restart, no config edit, no TP=2 launch attempted on it. Verified after the fact: ring `:8210` returns HTTP 200 with 12 concurrent requests and 211,399 generation tokens, Cesar at 96% GPU, **uptime 8 days 16:34** (proving it was never restarted), load climbing 1.76 → 3.10 = activ
+```
+
+**Ideas referenced:** #11261, #11741, #12266, #12285, #12403, #12584, #12645, #12689, #13453, #13470, #13874, #15369, #15370, #16602, #19506 [rejected], #19507 [executing], #19508 [executing], #19542 [proposed], #19543 [proposed], #19544 [proposed], #19546 [executing], #19547 [executing], #19548 [executing], #19549 [executing], #19558 [executing], #19563 [unknown], #19564 [unknown], #2042, #2045, #2048, #2049, #2051, #2052, #2053, #2054, #2055, #2057, #2058, #2059, #2061, #2062, #64748, #7490, #7513, #7554, #9706, #9910
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785191995112` — 7/27/2026, 3:59:29 PM PT — 78 turns
 
 **Original task:**
 
@@ -153,7 +254,41 @@ Advise if is actually a new complaint and provide me with a summary of the situa
 Actually it appears this 
 ```
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Ideas referenced:** #13437, #152615, #176616, #18690, #26684, #600179, #623992
+
+**Last PICKUP PROMPT:**
+
+```
+complete, needs Ruben send** |
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #current — TDSHS investigation #7: complaint 1080261891 (Ava Kanthack) draft response review and send.
+
+Where we left off (verified 2026-07-27 15:59 PT):
+- Complaint 1080261891 received 7/27 from Sabrina Richardson re: Ava Kanthack (26413FT-17)
+- PDF uploaded to server, response round #100 + analysis note #101 filed
+- External complaint numbers updated on investigation #7
+- Draft response saved at uploads/tdshs/inspection-5196-2026/DRAFT_response_1080261891_Kanthack.md
+- Manual to-do: compose the cover email to sabrina.lee.richardson@dshs.texas.gov
+
+Open threads to drive next:
+1. #current [proposed] — Ruben reviews and approves the draft response before sending; fill in any missing details from Ava's current intern placement status
+2. #current [proposed] — Ruben sends the response email to sabrina.lee.richardson@dshs.texas.gov (response due 8/6/2026)
+3. In parallel: complete the 7/28 interim production (Window K reports bundle) for the earlier DSHS requests
+4. In parallel: complaint acks for 1080261810-1815 due 7/30
+
+Reference IDs:
+- Ticket: N/A (complaint letters, not ticket)
+- Ideas filed: none new
+- Files touched: compliance_investigations(id=7), compliance_investigation_responses(id=100-101), /var/www/emtskills/uploads/tdshs/inspection-5196-2026/EMSU_1080261891.pdf, DRAFT_response_1080261891_Kanthack.md
+- Server path: /var/www/emtskills/uploads/tdshs/inspection-5196-2026/
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
 
 ### `1785191816762` — 7/27/2026, 3:37:22 PM PT — 2 turns
 
@@ -212,23 +347,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
-
-### `1785183122795` — 7/27/2026, 3:32:37 PM PT — 351 turns
-
-**Original task:**
-
-```
-Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue another 45 minutes:
-
--
-## Direct answer on Cesar
-
-**I did nothing to Cesar. Three read-only commands, over its existing tunnel:** `ulimit -Sl/-Hl`, `grep memlock /etc/security/limits.d/`, and a `python3` version print. No writes, no restart, no config edit, no TP=2 launch attempted on it. Verified after the fact: ring `:8210` returns HTTP 200 with 12 concurrent requests and 211,399 generation tokens, Cesar at 96% GPU, **uptime 8 days 16:34** (proving it was never restarted), load climbing 1.76 → 3.10 = activ
-```
-
-**Ideas referenced:** #11261, #11741, #12266, #12285, #12403, #12584, #12645, #12689, #13453, #13470, #13874, #15369, #15370, #16602, #19506 [rejected], #19507 [executing], #19508 [executing], #19542 [proposed], #19543 [proposed], #19544 [proposed], #19546 [executing], #19547 [executing], #19548 [executing], #19549 [executing], #19558 [executing], #2042, #2045, #2048, #2049, #2051, #2052, #2053, #2054, #2055, #2057, #2058, #2059, #2061, #64748, #7490, #7513, #7554, #9706, #9910
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785180947248` — 7/27/2026, 3:18:16 PM PT — 258 turns
 
@@ -3752,203 +3870,4 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] HANDOFF updated + attempt_completion with honest answer to Ruben
 </task_progress>
 </attempt_completion>
-```
-
-### `1784926194704` — 7/24/2026, 4:43:33 PM PT — 370 turns
-
-**Original task:**
-
-```
-Play doctor of frankenstein LLM for outstanding issues occurring
-```
-
-**Ideas referenced:** #10108, #10739, #10740, #11261, #11296, #11302, #11316, #11735, #11741, #11781, #11850, #12059, #12060, #12299, #12459, #12477, #12618, #12824, #12872, #12878, #13121, #13202 [deployed], #15371, #15374, #16163, #16265, #16304, #16449, #16588, #16844, #1717, #1719, #1721, #17342, #17345, #1757, #1760, #17673, #17705, #1780, #17983, #18312, #18326, #1877 [resolved], #18786 [deployed], #18820, #18841 [executing], #18842 [executing], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18848 [deployed], #18849 [executing], #18850 [deployed], #18852, #18853 [proposed], #18893 [executing], #18894 [queued], #18915 [proposed], #18916 [queued], #18917 [proposed], #18918 [proposed], #1896, #1921, #1924, #1925, #1935, #1936, #1937, #1938, #1939, #1942 [resolved], #1943 [superseded], #1944 [resolved], #1948, #1949 [resolved], #22386, #6711, #6719
-
-**Last PICKUP PROMPT:**
-
-```
-ledger.md (confirmed line 55).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up the Frankenstein Doctor shift — GLM-5.2 ring + fleet housekeeping.
-
-Where we left off (verified 2026-07-24 16:43 PT):
-- #18916 [deployed] hand-shipped: augustus id10 is_alias=1 alias_of=12 (julia canonical = spark-6ae6, LAN .190, WG 10.100.0.15, tunnel 2205); registry yaml annotated; gen-probe wopr-14b 404 confirmed already-resolved (bug #1877 [resolved])
-- GLM ring state per 14:38 PT Doctor window: SERVING after julia 120B TP=2 eviction from augustus (bug #1942 [resolved]); julia-120b out of pool, reversible via augustus crontab backup /tmp/crontab.bak-frankdoc-20260724
-- #18918 [deployed] verify_routing abort fixed (sibling window, 16:21 PT): per-action timeout map in project-frankenstein-mcp, WOPR probe max_tokens=1
-- julia fleet_inventory status flaps to down via probe cron — expected, do not fight it (identity row, not a serving row)
-- note_provenance is an ENUM — never write annotations there; use the notes column
-
-Open threads to drive next:
-1. #18915 [proposed] — augustus GPU ownership confirmation (human-only decision — Ruben; option-a eviction already executed inline by 14:38 window)
-2. Old augustus .244 box — power-cycle orphan (human-only decision — physical access; rank-1 was rejoining from there per 14:38 window; supervisor table now targets augustus .190)
-3. Next GLM ring relaunch — verify rank-1 joins from augustus .190 not .244 (check supervisor relaunch log + ring membership)
-
-Reference IDs:
-- Ideas filed: none this window
-- Ideas closed: #18916 [deployed] (verified: SELECT status=deployed, dev_stage=ready_for_review)
-- Bugs: #1949 [resolved] alias-column recipe; #1942 [resolved] + #1877 [resolved] cross-referenced
-- Files touched: /etc/litellm/frankenstein_registry.yaml (backup .bak-18916-20260724), fleet_inventory rows augustus/julia, orchestrator_ideas #18916, HANDOFF_NOTES.md, ~/Documents/Cline/Rules/cline_task_ledger.md
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] #18916 hand-shipped per GATE C
-- [x] Item 1: fleet_inventory deduped (alias wired, IPs/roles/notes corrected, read-back verified)
-- [x] Item 2: registry yaml alias + eviction note (verified, YAML valid, backup made)
-- [x] Item 3: gen-probe wopr-14b verified already-resolved
-- [x] #18916 flipped deployed + SELECT verified
-- [x] Bug #1949 recorded resolved
-- [x] HANDOFF_NOTES updated + status-flap correction
-- [x] Ledger row confirmed (line 55)
-- [x] Completion with pickup prompt
-</task_progress>
-</attempt_completion>
-```
-
-### `1784925150329` — 7/24/2026, 4:33:13 PM PT — 194 turns
-
-**Original task:**
-
-```
-In Argus what additional permissions do you think would be helpful to give exec admin and IT admin to help them accomplish things according to my prefernces. Rule 29 etc...
-```
-
-**Ideas referenced:** #10234, #11570, #17767, #18136, #18378, #18438, #18442, #18470, #18472, #18473, #18474, #18475, #18476, #18559, #18579, #18586, #18601, #18745, #18757, #18775, #18777, #18830 [proposed], #18898, #18899, #18906 [proposed], #18908, #18910, #18913, #18914, #18917 [proposed], #18919, #18920, #268858, #268901, #334155, #4338, #475569, #4932, #495057, #64748, #6825, #6842, #7613, #7907, #8051, #8060, #8739, #9019, #9070
-
-**Last PICKUP PROMPT:**
-
-```
- #18908, #18906, #18830), then compliant `attempt_completion` with full Rule 91 PICKUP PROMPT block.
-
-6. Task Evolution:
-   - **Original Task (now complete, prior session)**: Argus ExecAdmin/ITAdmin permission recommendations (rule 29) + fix the Suggested Replies Haiku/connection-reset bug. STATUS: DONE, per prior session's claims (idea #18913/#18914 deployed) — not re-verified this session.
-   - **Task Modification (this feedback, verbatim)**: *"This issue needs resolution per rule 29 and also Argus needs updating so that Exec Admin and IT admin can resolve these things:"* followed by a full pasted Argus transcript covering (1) Georgia Sporrer/Sam Nelson/26715W section burned Final Exam attempts tied to a scheduling Matrix mixup, (2) a recurring `normalizePlainAnswerOutput()` null-argument bug, and (3) a separate EMT AI Grader/reopened-Assignment regrade issue for student 26213FT-16, with Ruben's explicit instructions embedded: *"at the very least clear those two, but let's run an actual search to check those other students, ALL OF THEM, we need to verify if the whole class section burned attempts, so look at the full student record the way that you need to do a deeper search"* and *"No this can be automatically resolved and not just for this student, all students with regrade"* and *"Feature request. Can you just build and ship this?"*
-   - **Current Active Task**: Fully investigate and resolve the 26715W burned-exam-attempt issue, fix the `normalizePlainAnswerOutput` bug (root cause located, fix written, lint PASSED, only PHP-FPM reload remains), verify/reconcile/build the Assignment-module reopened-item batch regrade tool AND the bulk quiz-reset tool ideas (7 total overlapping ideas), resolve 26213FT-16's 3 stuck items, and expand Argus's actual tool catalog + permissions so ExecAdmin/ITAdmin can do these fixes directly going forward — all per rule 29 (act, don't just recommend).
-   - **Context for Changes**: Ruben's feedback shows Argus repeatedly hitting capability walls — theorizing correctly about root causes but unable to execute fixes and dead-ending with "want me to file a request?" Argus DID file feature requests (7 total), but the executor pipeline is stalled, which is why Ruben is pushing for direct hand-build per rule 267 GATE C.
-
-7. Current Work:
-   Immediately before this summary request, multiple consecutive turns triggered "[ERROR] You did not use a tool" (rule 143 strikes). A prior turn had attempted a `use_subagents` dispatch as a (wrong) recovery move — subagents cannot do MCP calls and the task needs a direct deterministic MCP call, not research — which returned an unproductive nested summarize_task artifact instead of genuine findings. The `normalizePlainAnswerOutput()` fix has been (a) written to the live file, (b) backed up to `/tmp/alltastic_api.php.bak-normalizefix-20260724-145910`, (c) lint-verified clean via `php -l`. The ONLY remaining step to complete deployment of THIS specific bug fix is reloading PHP-FPM, which has been blocked for many turns by the no-tool-use error loop.
-
-8. Optional Next Step:
-   The very next assistant turn MUST be a single, simple, deterministic tool call — per rule 143 strike recovery, do NOT dispatch another subagent, do NOT lead with prose. The next tool call must be:
-   1. `reload_php_fpm` (emsu-operations MCP tool, no required args) — to reload PHP-FPM and clear OPcache, activating the `normalizePlainAnswerOutput()` fix in production.
-   2. After confirming reload success, proceed to the remaining pending tasks in order: verify the "burned Final Exam" pr
-```
-
-### `1784925386416` — 7/24/2026, 4:32:33 PM PT — 330 turns
-
-**Original task:**
-
-```
-skillstastic bulk forms are not populating properly for Manny
-```
-
-**Ideas referenced:** #000000, #1470 [proposed], #152615, #16523, #176616, #18681, #18690, #1896, #1925, #1935, #1937, #1938, #1939, #28241, #28242, #28243, #28244, #28245, #28246, #28247, #29772, #31743, #6785
-
-**Last PICKUP PROMPT:**
-
-```
-y a fix (not just report). Per Rule 91, any `attempt_completion` needs a proper PICKUP PROMPT block (47 `═` char divider exactly, real idea numbers only, no placeholders, every `#NNNN` bracketed with a disposition tag). Per Rule 267, offload independent sub-work and reconcile before completion.
-
-2. Key Technical Concepts:
-   - EMSU admin portal (`/var/www/emtskills/`) + WordPress (`emsuniversity.com` at `/var/www/vhosts/emsuniversity.com/httpdocs`) hybrid architecture for Skillstastic skill-form PDF generation.
-   - Full call chain (traced end-to-end across rounds, now fully confirmed with complete source read this round): WPForms submission → `emsu-skill-pdf-automation.php` plugin → `queue_pdf_job()` inserts into `admin_portal.infrastructure_job_queue` (job_type='skill_pdf_generation') → `/var/www/emtskills/cron/process_infrastructure_jobs.php` (runs every minute via cron, `cron_heartbeat_start('infrastructure_job_processor')`) dequeues up to 10 pending jobs per run (ordered by priority DESC, created_at ASC), marks each `processing`, dispatches by `job_type` to `processSkillPdfGeneration()` / `processEmailNotification()` / skills_alert ack, and on exception increments `attempts`, either marks `failed` (if `attempts >= max_attempts`) with the caught exception message in `error_message`, or reschedules with exponential backoff (`pow(2, newAttempts) * 60` seconds = 2/4/8 min) via `next_retry_at`.
-   - **CONFIRMED THIS ROUND — full function body of `processSkillPdfGeneration()`** (previously only lines 373-375 were confirmed; now the ENTIRE function has been read):
-     - Builds `$cmd` = `sudo /usr/local/bin/wp --path=/var/www/vhosts/emsuniversity.com/httpdocs eval-file /var/www/vhosts/emsuniversity.com/httpdocs/generate_skill_pdf.php $templateId $entryId --allow-root 2>/dev/null`
-     - `$output = shell_exec($cmd);`
-     - If `$output === null` or contains `'ERROR:'` → throws `Exception("PDF generation failed: " . substr($output ?? 'null output', 0, 200))` — this is the exact source of the "PDF generation failed: null output" error message seen in `infrastructure_job_queue.error_message`.
-     - Extracts base64 via regex `/PDF_START(.+)PDF_END/s`; if no match → throws `Exception("Could not find PDF data in output")`.
-     - Validates `substr($pdfData,0,4) === '%PDF'`; if not → throws `Exception("Invalid PDF data received")`.
-     - Saves PDF locally to `/tmp/skill_pdfs/entry_{$entryId}_{time()}.pdf`.
-     - **Uploads to Google Drive** via `uploadPdfToGoogleDrive()` using hardcoded OAuth refresh-token credentials (client_id `797607616321-1b93fhm0aeiptkja426ubbb6f9qva9bq.apps.googleusercontent.com`, drive_folder_id `0B1VwW3n8p_TpN2dQdENzV3kxSkE`) — **this Google Drive upload step is a NEW previously-unknown failure surface** (network to googleapis.com, OAuth token refresh, multipart upload, HTTP 200 check) that was NOT part of the three previously-analyzed failure modes (which only covered the WP-CLI/e2pdf/self-referential-HTTP layer). If Drive upload fails (`$httpCode !== 200` or no file ID in response), it throws `Exception("Drive upload HTTP {$httpCode}: ...")` or `"No file ID in Drive response"` — a 4th distinct failure mode not previously accounted for.
-     - After Drive upload succeeds, generates filename via `generatePdfFilename()` (different format for CE vs EMT students, includes " (California Only)" suffix for CA skill_type).
-     - Upserts into `Skills_Audit` (`ON DUPLICATE KEY UPDATE`), conditionally creates `Students`/`ce_students` rows via `INSERT IGNORE`, and updates the specific skill column in `NREMT_
-```
-
-### `1784858983506` — 7/24/2026, 4:30:03 PM PT — 379 turns
-
-**Original task:**
-
-```
-Both follow-up directives are done.
-
-**1. Gamez → EMSEducation@dshs.texas.gov send check: NOT verifiable server-side.** I swept every outbound surface (email_outbound_log including raw payloads, outbound_email_log, emsu_outbound_email_log, email_delivery_log, email_send_events, personnel_email_events, plus inbound) since 7/1 — ZERO mail to any dshs.texas.gov address and zero from agamez@. The only MD-related mail is the Rodriguez signing pipeline (contract/comp agreement to rodriguez.gabe@gmail.com + internal copies). So if Andrew sent the F01-13067 packet, it went from his own mailbox, which 
-```
-
-**Ideas referenced:** #059669, #10007, #152615, #166534, #176616, #178424, #178455, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676 [blocked], #18690 [blocked], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852, #18853 [proposed], #18858, #18861, #18862, #18863, #1894, #1896, #1897, #1912, #1927, #1928, #1929, #1930, #1931, #374151, #600179, #86613, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-as saved (with actual file size/verification evidence), including the mandatory PICKUP PROMPT block.
-
-5. Pending Tasks:
-   - Verify the regenerated SIGNED_PDF visually/programmatically (e.g. via `pdftoppm -png -f 4 -l 4 ... /tmp/page4check` rendering page 4 to a PNG and describing/inspecting it, or at minimum a `pdfinfo`/text-extraction sanity check) to confirm all 3 signature placements + correct dates are present and correctly positioned per rule 99.
-   - Provide Ruben a working link to view/download the finalized signed PDF (existing `?token=...&pdf=1` passthrough, either token works).
-   - Download/save a local copy of the finalized PDF to `/Users/rubenmajor/Desktop/` via `execute_command` + `curl` (e.g. `curl -sL -o "/Users/rubenmajor/Desktop/F01-13067_MD_Change_Rodriguez_SIGNED.pdf" "https://www.emsuniversity.com/emtskills/routes/sign_dshs_form.php?token=bb688565921465e3d1621ed80ecdcba10c197ff5d484f927e7e9e519f69a3d1d&pdf=1"`), then verify locally (`ls -la`, `file` command to confirm valid PDF not HTML error page).
-   - Update `tdshs-inspection-5196/PLAN_of_record_MD_transition.md` with an addendum documenting the bug/fix/delivery.
-   - Ship a rule-91-compliant `attempt_completion` reporting the fix, link, and Desktop-save confirmation, with the mandatory PICKUP PROMPT block (47-char U+2550 divider, no bare idea numbers, open threads section, reference IDs section).
-
-6. Task Evolution:
-   - Original Task: TDSHS 5196 rolling-supplement closeout (COMPLETE, out of scope now).
-   - Mod 1: "make it digitally signable by Andrew and Dr. Rodriguez, give a link" — BUILT + links delivered.
-   - Mod 2: "put an X where they will sign... andrew signs in 2 places..." — BUILT (marker overlay + dual-role composite) + deployed.
-   - Mod 3: "when they type their name, just want to make sure that's only for the website, not the webform itself..." — VERIFIED via code read (no PDF text-drawing of typed name found), reported to Ruben.
-   - **Mod 4 (CURRENT ACTIVE TASK, verbatim):** "So says was signed by both, but then when clicked, no signatures populated. Fix this and give me a link to the finalized doucment and upload to my desktop with all 3 signatures"
-   - Context for Change: Direct user feedback on the just-delivered Mod-3 completion. Both signers had actually completed their signatures live (confirmed via DB: Rodriguez signed 13:40:12, Gamez signed 13:57:55), but the resulting document showed no signatures. This session's investigation confirmed the direct cause (SIGNED_PDF never actually created due to www-data missing pypdf module) and has now FIXED both the root cause AND regenerated the SIGNED_PDF with all 3 signature placements. Remaining work is purely verification + delivery (link + Desktop copy), no further debugging expected.
-
-7. Current Work:
-   Immediately before this summarize_task request, I had just run the manual production-equivalent composite regeneration command as `www-data` via `ssh_command`:
-   ```
-   sudo -u www-data python3 /var/www/emtskills/scripts/dshs_sign_composite.py /var/www/emtskills/uploads/dshs/F01-13067_MD_Change_Rodriguez_FILLED.pdf /var/www/emtskills/uploads/dshs/F01-13067_MD_Change_Rodriguez_SIGNED.pdf "medical_director|/var/www/emtskills/uploads/dshs/sig_medical_director_1.png|07/24/2026" "program_coordinator|/var/www/emtskills/uploads/dshs/sig_program_coordinator_2.png|07/24/2026" 2>&1; echo "RC=$?"; ls -la /var/www/emtskills/uploads/dshs/F01-13067_MD_Change_Rodriguez_SIGNED.pdf
-   ```
-   This SUCCEEDED: output showed `Ignoring wrong pointing object 1562 0 (offset 0)` (benign warning)
-```
-
-### `1784926500782` — 7/24/2026, 3:57:55 PM PT — 199 turns
-
-**Original task:**
-
-```
-Wow, this window is garbage. See cline obedience.md rule: 
-
-This is really bad. What's the issue with frankenstein-llm
-
-do not inject anthropic llm
-
-Task #— [Unknown] — skillstastic bulk forms are not populating properly for<attempt_completion>
-<result>
-Task #— [Unknown] — skillstastic bulk forms are not populating properly for Manny.
-───────────────────────────────────────────────────────────────────────────────
-PICKUP PROMPT
-───────────────────────────────────────────────────────────────────────────────
-Pick up task #— (skillstastic bulk forms issue) – diagnose and resolve the bulk form popu
-```
-
-**Ideas referenced:** #0000, #11856, #1188, #1190, #13191, #13196, #13199, #1568, #16523, #177906, #1880, #18820, #18844, #18845, #18921 [queued], #1894, #1896, #1897, #1912, #1928, #1929, #1932, #1935, #1936, #19560, #4906, #4907, #6106, #6444, #6785, #9757
-
-**Last PICKUP PROMPT:**
-
-```
-A/A2/B.
-   - **Ship a corrected `attempt_completion`** with a rule-91-compliant PICKUP PROMPT block (47-char U+2550 divider — confirmed exact template pulled this round via `clinerules_lookup(rule_id=91)` — no bare idea numbers, every `#NNNN` bracketed, no placeholders, Open Threads + Reference IDs sections populated), directly and honestly answering all three of Ruben's questions:
-     1. Multiple students? — Answer based on whichever branch above applies.
-     2. What about those students? — Same.
-     3. Why would a dropped student show on this form? — Answer honestly: either (a) confirmed SMS-cron filtering gap if phone matches, with real scope numbers, or (b) admit the "skillstastic bulk forms" framing itself could never be substantiated as a real system after 5 distinct hypotheses were tested and ruled out/were false positives, and that the original claim needs the prior window's source (ticket #, screenshot, or exact form name) to investigate further.
-
-6. Task Evolution:
-   - **Original Task**: A prior Cline window produced a broken `attempt_completion` about "skillstastic bulk forms are not populating properly for Manny Gadduang (26808W-03)." Ruben opened this window criticizing that prior window as a rule-91 violation and separately asking about frankenstein-llm health.
-   - **Task Modification 1**: Ruben reframed the frankenstein-llm question as a quality/superficiality concern, which was investigated and resolved (closed, no pushback) in an earlier round.
-   - **Task Modification 2 (current, dominant)**: After a completion hand-waved Manny Gadduang's issue as "he's dropped, that may explain it," Ruben directly challenged this: **"So was this done with multiple other students? What about those students? Why would a dropped student even show on this form?"** This redirects all remaining work toward concretely investigating scope (multiple students?), impact (what's wrong for them), and root cause (why does a dropped student appear on an active bulk form — implying a real filtering bug).
-   - **Context for Changes**: Ruben's exact quote remains the driving directive for all remaining work: *"So was this done with multiple other students? What about those students? Why would a dropped student even show on this form?"* — he is rejecting unverified speculation and demanding evidence-based investigation. Prior rounds RULED OUT 4 hypotheses for "skillstastic bulk forms" while surfacing what appeared to be a solid 5th lead (SMS cron continuing post-drop). **This round's investigation has cast serious doubt on that 5th lead too** — the phone number +14084802398 appears, based on message content and tone, to more likely belong to the INSTRUCTOR Manny Gadduang rather than the STUDENT, mirroring the exact same name-collision false-positive pattern already found with the two support tickets earlier in the task. This must be conclusively resolved (via the Students table phone-number lookup) before any claim is made to Ruben.
-
-7. Current Work:
-   Immediately before this summarize_task request, the following occurred in sequence:
-   - Four `describe_table` calls (sms_send_log, sms_delivery_log, coverage_sms_log, telephony_sms_log) were dispatched in parallel — all returned "result missing (Mode D transient)" on first attempt, then succeeded on retry with full schema details (captured in section 3).
-   - Three `execute_query` calls were dispatched in parallel: `sms_delivery_log` lookup by student_id/phone (returned EMPTY), `sms_send_log` lookup by phone (returned 30 delivery-confirmation rows, no content), `telephony_sms_
 ```

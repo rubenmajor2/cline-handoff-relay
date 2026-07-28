@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/27/2026, 6:50:41 PM PT | window: last 72h | 92 tasks | index total 2276 (parsed 2, cached 2274)
+Generated: 7/27/2026, 7:50:41 PM PT | window: last 72h | 92 tasks | index total 2276 (parsed 3, cached 2273)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785193714174` | 7/27/2026, 6:50:40 PM | 504 | 985KB | #Artemis |
-| `1785191995112` | 7/27/2026, 6:50:17 PM | 478 | 2121KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
-| `1785189965992` | 7/27/2026, 6:14:14 PM | 833 | 5175KB | #Argus |
+| `1785191995112` | 7/27/2026, 7:50:36 PM | 623 | 2482KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
+| `1785193714174` | 7/27/2026, 7:50:21 PM | 584 | 1103KB | #Artemis |
+| `1785189965992` | 7/27/2026, 7:50:11 PM | 873 | 5249KB | #Argus |
 | `1785183122795` | 7/27/2026, 5:29:55 PM | 409 | 960KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
 | `1785194061900` | 7/27/2026, 5:28:41 PM | 222 | 443KB | Jon connected the 2 mac minis that were on his home network to the Tempe UniFi UDM.  |
 | `1785196068848` | 7/27/2026, 5:25:13 PM | 50 | 640KB | https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students |
@@ -107,27 +107,7 @@ Generated: 7/27/2026, 6:50:41 PM PT | window: last 72h | 92 tasks | index total 
 
 ## Per-window detail
 
-### `1785193714174` — 7/27/2026, 6:50:40 PM PT — 504 turns
-
-**Original task:**
-
-```
-#Artemis
-
-Jon is with Artemis now and Artemis gets wedged because it's being taken too far we think. 
-
-Ubuntu 24.04.4 LTS artemis tty1
-artemis login: {466.6646581 Out of memory: Killed process 6319 (ray: RayWorkerP) total-vm:8634249224kB, anon-rss:240kB, fIle-rss: 680kB, Shmem-rss:0kB, UID: pgtables: 13176kB com_score_adj:1000
-
--- 
-So need something proactively ready to push the instant it's rebooted
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #13878, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1731, #1732, #1734, #1737, #1739, #1744, #1746, #1747, #1779, #1798, #1828, #18314, #18320, #1834 [resolved], #1836 [resolved], #1837 [resolved], #1839 [resolved], #1842 [investigating], #1930 [resolved], #19567 [proposed], #2063, #2065, #2067, #2068, #37030, #46641, #7142, #7149
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785191995112` — 7/27/2026, 6:50:17 PM PT — 478 turns
+### `1785191995112` — 7/27/2026, 7:50:36 PM PT — 623 turns
 
 **Original task:**
 
@@ -143,7 +123,7 @@ Advise if is actually a new complaint and provide me with a summary of the situa
 Actually it appears this 
 ```
 
-**Ideas referenced:** #13437, #13441, #152615, #16390, #16464, #176616, #18690, #19403, #19572 [proposed], #19573 [proposed], #19574 [proposed], #19576 [executing], #19577 [executing], #19578 [executing], #19580 [executing], #19581 [executing], #19583 [executing], #19584 [executing], #19586 [executing], #19587 [executing], #19588 [executing], #19589 [executing], #19590 [executing], #19591 [executing], #19592 [executing], #21278, #21707, #21765, #26684, #3051, #3052, #3054, #3057, #3058, #3059, #3061, #3067, #3069, #3070, #3071, #3075, #3076, #3077, #600179, #6106, #623992, #6685, #8939
+**Ideas referenced:** #13437, #13441, #152615, #16390, #16464, #176616, #18690, #19403, #19572 [proposed], #19573 [proposed], #19574 [proposed], #19576 [executing], #19577 [executing], #19578 [executing], #19580 [executing], #19581 [executing], #19583 [executing], #19584 [executing], #19586 [executing], #19587 [executing], #19588 [executing], #19589 [executing], #19590 [executing], #19591 [executing], #19592 [executing], #19594 [executing], #19595 [executing], #19596 [executing], #19597 [executing], #19598 [executing], #19599 [executing], #19600 [executing], #19601 [executing], #19602 [executing], #19603 [executing], #21278, #21707, #21765, #26684, #3051, #3052, #3054, #3057, #3058, #3059, #3061, #3067, #3069, #3070, #3071, #3075, #3076, #3077, #600179, #6106, #623992, #6685, #8939
 
 **Last PICKUP PROMPT:**
 
@@ -180,7 +160,27 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785189965992` — 7/27/2026, 6:14:14 PM PT — 833 turns
+### `1785193714174` — 7/27/2026, 7:50:21 PM PT — 584 turns
+
+**Original task:**
+
+```
+#Artemis
+
+Jon is with Artemis now and Artemis gets wedged because it's being taken too far we think. 
+
+Ubuntu 24.04.4 LTS artemis tty1
+artemis login: {466.6646581 Out of memory: Killed process 6319 (ray: RayWorkerP) total-vm:8634249224kB, anon-rss:240kB, fIle-rss: 680kB, Shmem-rss:0kB, UID: pgtables: 13176kB com_score_adj:1000
+
+-- 
+So need something proactively ready to push the instant it's rebooted
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #13878, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1731, #1732, #1734, #1737, #1739, #1744, #1746, #1747, #1779, #1798, #1828, #18314, #18320, #1834 [resolved], #1836 [resolved], #1837 [resolved], #1839 [resolved], #1842 [investigating], #1930 [resolved], #19567 [proposed], #2063, #2065, #2067, #2068, #2069, #37030, #46641, #7142, #7149
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785189965992` — 7/27/2026, 7:50:11 PM PT — 873 turns
 
 **Original task:**
 
@@ -198,7 +198,7 @@ The most likely cause is that this idea touches three things that sit outside th
 1. Plesk/Roundcube email provisioning — creating an actual mailbox on WOPR's mail server isn't an in
 ```
 
-**Ideas referenced:** #10003, #10005, #10182, #10740, #11936, #11942, #12247, #12262, #12301, #12314, #12364, #12365, #12672, #12673, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13108, #13121, #13453, #13470, #16213, #16263, #16625, #16646, #16648, #16680, #17203, #17205, #17537, #17619 [deployed], #17680, #18378, #18745, #1876, #18770, #18786, #18806, #18820, #18868, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19163, #19338, #19348, #19370, #19558, #19563 [proposed], #19568 [proposed], #19571 [proposed], #19579 [executing], #19585 [executing], #1998, #2006, #2007, #2061, #2064, #2066, #21262, #274160, #30363, #334155, #4338, #64748, #6785, #69707, #8942, #9650, #9654, #9660, #9706, #9733, #9889
+**Ideas referenced:** #10003, #10005, #10182, #10740, #11936, #11942, #12247, #12262, #12301, #12314, #12364, #12365, #12672, #12673, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13108, #13121, #13453, #13470, #16213, #16263, #16625, #16646, #16648, #16680, #17203, #17205, #17537, #17619 [deployed], #17680, #18378, #18745, #1876, #18770, #18786, #18806, #18820, #18868, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19163, #19338, #19348, #19370, #19403 [executing], #19518 [executing], #19558, #19563 [proposed], #19568 [proposed], #19571 [proposed], #19579 [executing], #19585 [executing], #19604 [proposed], #1998, #2006, #2007, #2061, #2064, #2066, #21262, #274160, #30363, #334155, #4338, #64748, #6785, #69707, #8942, #9650, #9654, #9660, #9706, #9733, #9889
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 

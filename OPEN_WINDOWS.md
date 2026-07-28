@@ -6,11 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/28/2026, 9:20:19 AM PT | window: last 72h | 83 tasks | index total 226 (parsed 2, cached 224)
+Generated: 7/28/2026, 10:38:27 AM PT | window: last 72h | 89 tasks | index total 232 (parsed 4, cached 228)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785181029165` | 7/28/2026, 9:20:15 AM | 150 | 345KB | ## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti) |
+| `1785258471936` | 7/28/2026, 10:37:59 AM | 259 | 1339KB | Play doctor of frankenstein executor for 90 minutes to ensure ideas are being implemented  |
+| `1785258453183` | 7/28/2026, 10:33:22 AM | 168 | 1699KB | # Comprehensive |
+| `1785258502219` | 7/28/2026, 10:27:03 AM | 156 | 733KB | # TDSHS |
+| `1785258740211` | 7/28/2026, 10:18:54 AM | 48 | 173KB | some cline windows here are stalling for unknown reason. We are running only 4 windows now |
+| `1785258392171` | 7/28/2026, 10:06:54 AM | 6 | 9KB | Rebase and Pickup all tasks here and organize them into copy windows while executing what  |
+| `1785258281753` | 7/28/2026, 10:05:09 AM | 6 | 24KB | # TDSHS |
+| `1785181029165` | 7/28/2026, 9:22:43 AM | 152 | 353KB | ## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti) |
 | `1785180988213` | 7/28/2026, 8:52:06 AM | 116 | 590KB | ## 8 — #SLS · student lifecycle state repair + backlog |
 | `1785183122795` | 7/28/2026, 8:28:39 AM | 769 | 3927KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
 | `1785229461572` | 7/28/2026, 2:52:33 AM | 246 | 4959KB | Continue |
@@ -98,7 +104,274 @@ Generated: 7/28/2026, 9:20:19 AM PT | window: last 72h | 83 tasks | index total 
 
 ## Per-window detail
 
-### `1785181029165` — 7/28/2026, 9:20:15 AM PT — 150 turns
+### `1785258471936` — 7/28/2026, 10:37:59 AM PT — 259 turns
+
+**Original task:**
+
+```
+Play doctor of frankenstein executor for 90 minutes to ensure ideas are being implemented properly
+```
+
+**Ideas referenced:** #12430, #13202, #1468, #178501, #18395, #18935, #19177, #19188, #19338, #19403, #19458, #19490, #19491, #19503, #19509 [auditing], #19518, #19553 [auditing], #19558, #19571, #19585, #19592, #19594 [drafting], #19598 [auditing], #19604, #19611, #19646, #19647, #19657, #19661, #19690 [deployed], #19704 [auditing], #19714 [proposed], #19738, #19739, #19742, #19744, #19745, #19746, #19747, #19748, #19749, #19750, #19752 [proposed], #19753 [proposed], #19754, #2043, #2084, #2085, #2820, #3048, #3049, #4747, #4906, #53462, #53482, #53483, #5516, #7925, #815009, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+om 0 → pipeline flowing again)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Frankenstein Doctor executor audit continuation.
+
+Where we left off (verified 2026-07-28 10:26 PT):
+- 5 ideas rearmed and processing: #19509 [auditing], #19553 [auditing], #19594 [drafting], #19598 [auditing], #19704 [auditing]
+- INV4 bandaid #19752 [proposed] — 20 missing student_id slugs, collation fix needed
+- Pipeline noise guard #19753 [proposed] — SQL injection/XSS/fuzzing creating noise ideas
+- 3 crons dead: ideas_promoter, ollama_prebuilder (need supervisor config fix), artemis_health_watcher (intentional 1-byte stub)
+
+Open threads to drive next:
+1. #19752 [proposed] — Fix INV4 via direct MySQL: `UPDATE Students SET student_id = generate_student_id(first_name) WHERE ...` to avoid collation conflict, or fix the function's collation. SQL: `SELECT id, first_name, last_name FROM Students WHERE ea_completion_date IS NOT NULL AND (student_id IS NULL OR student_id='') ... LIMIT 20`
+2. #19753 [proposed] — Add input validation guard to the idea-filing pathway: reject SQL injection patterns (`DROP TABLE`, `'; SELECT`), XSS payloads (`<img src=x onerror=`), and fuzzing input (>500 repeated chars) → route to `security_log` instead of `orchestrator_ideas`
+3. Dead crons — Check `sudo supervisorctl status` or crontab entry for `cron_ideas_promoter`/`cron_ollama_prebuilder`, verify heartbeat table writing, determine why dispatched PID exited without updating `cron_heartbeat.last_run_at`
+
+Reference IDs:
+- Ideas: #19752 [proposed], #19753 [proposed]
+- Files touched: /var/www/emtskills/lib/report_registry.php, /tmp/ruben_sandbox_19704/e2pdf_health_check.php, /var/www/emtskills/docs/HANDOFF_NOTES.md
+- Tables modified: orchestrator_ideas (5 rows), copycat_gate_log (1 row), Students (5 rows INV1)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Load orchestrator status and activity feed
+- [x] Audit in_progress ideas — found 5 stuck, identified exact causes
+- [x] Check error watchdog — 9 critical, 14 high alerts processed
+- [x] Fix #19509 report_registry.php syntax — deployed to live
+- [x] Fix #19704 e2pdf_health_check.php — trailing `"` removed
+- [x] Clear retry caps — 3 ideas REGEXP_REPLACE'd, all 5 rearmed
+- [x] Re-open copycat gate — insert into copycat_gate_log
+- [x] Deploy to pipeline — implement cron spawned workers for all 5 ideas
+- [x] Fix INV1 bandaid — 5 students moodle_credentials_sent=1
+- [x] File #19752 (INV4 collation) and #19753 (pipeline noise guard)
+- [x] Update handoff notes with full session summary
+</task_progress>
+</attempt_completion>
+```
+
+### `1785258453183` — 7/28/2026, 10:33:22 AM PT — 168 turns
+
+**Original task:**
+
+```
+# Comprehensive
+
+Rebase and Pickup all tasks here and organize them into copy windows while executing what is oustanding or implementation failed/blocked by executor. Leverage Rule 267:
+
+https://docs.google.com/document/d/1qKgA18bcMRR9K0Ok3W6GR9uekmftn3XzIOclR40Q6ws/edit?tab=t.0#heading=h.jainx63k6q9x
+```
+
+**Ideas referenced:** #0000, #1281, #15652, #15887, #15999, #16000, #16015, #16016, #16312, #16578, #17130 [superseded], #17537 [rejected], #1754, #1755, #17665, #178496, #178501, #178511, #178518, #178519, #178560, #18132 [deployed], #18500, #18587, #18657, #18841, #18867, #18871, #18898, #18903, #18928, #18930, #18935, #18937, #18941, #18950, #1896, #18967, #18974, #18975, #18977, #18982, #18985, #19006, #19079, #19101, #19125, #19173, #19186, #19188, #19230, #19239 [rejected], #19258, #19338, #19359, #19360, #19362, #19363, #19379, #19403, #19404, #19423, #19430, #19431, #19432, #19433, #19435, #19437, #19438, #19439, #19441, #19447, #19448, #19449, #19454, #19455, #19456, #19458, #19460, #19464, #19465, #19466, #19490 [deployed], #19491 [deployed], #19498, #19500, #19503, #19504, #19505, #19507, #19508, #19509 [blocked], #19510, #19516, #19518, #19519, #19522, #19523, #19524, #19525, #19526, #19527, #19528, #19529, #19530, #19531, #19532, #19533, #19540, #19541, #19542, #19543, #19544, #19546, #19547, #19548, #19549, #19550, #19551, #19552, #19553 [blocked], #19554, #19555, #19556, #19557, #19558, #19559, #19560, #19561, #19562 [deployed], #19563, #19564, #19571, #19575, #19582, #19585, #19592, #19594 [executing], #19598 [blocked], #19604, #19611, #19621, #19630, #19632, #19643, #19645, #19646, #19647, #19648, #19651, #19652, #19654, #19657, #19658, #19659 [deployed], #19661, #19662, #19667, #19668, #19670, #19671, #19672, #19673, #19679, #19682, #19684, #19685, #19686 [queued], #19689 [queued], #19690 [deployed], #19695 [deployed], #19696 [proposed], #19697 [deployed], #19698, #19701 [queued], #19704 [blocked], #19705, #19706 [queued], #19714 [proposed], #19721 [proposed], #19722, #19724 [queued], #19743 [queued], #19751 [proposed], #19756 [proposed], #1986, #1988, #1989, #1991, #2014, #2027, #2029, #2030, #2031, #2033, #2035, #2038, #2039, #2040, #2041, #2043, #2046, #2050, #2060, #2061, #2062, #2071, #2072, #2073, #2075, #2076, #2077, #2078, #2079, #2080, #2082, #2083, #2084, #2085, #2086, #2932, #2986, #3048, #3049, #3076, #3077, #3081, #3109, #3122, #4536, #5387, #7925, #8281, #8321, #8563, #8598, #9313
+
+**Last PICKUP PROMPT:**
+
+```
+e hourly to all Cline windows.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — EMSU comprehensive rebase: 5 copy windows with concrete commands.
+
+Where we left off (verified 2026-07-28 10:33 PT via reconcile_ideas):
+- #19509 [executing] (verified: dev_stage=auditing) — report_registry.php card hand-shipped this session
+- #19704 [executing] (verified: dev_stage=auditing) — e2PDF REST plugin patched + backfill dry-run OK (33 rows)
+- #19553 [executing] (verified: dev_stage=auditing) — all 3 GPU questions answered live, mirror+GRUB done
+- #19594 [executing] (verified: dev_stage=drafting) — grievance manual-first, ZERO deployable code
+- #19598 [executing] (verified: dev_stage=auditing) — 72h auto-disposition going forward
+- #19689 [queued] (verified: approved/idle) — Julia+Claudia at WOPR:11513, needs bringup
+- #19686 [queued] (verified: approved/idle) — Argus has no config.yaml entry
+- #19562 [deployed] (verified: ready_for_review) — 7 grievances dashboard
+- #19695 [deployed] (verified: ready_for_review) — VAPI reporting fix
+- #19756 [deployed] (verified: approved+mirror regen OK) — GATE D + gate 9e shipped this session
+
+Open threads (each copy window is self-contained, markers for one-click copy):
+
+——[COPY]——
+# COPY WINDOW 1 — P0 Grievance Manual-First Pipeline
+
+Pick up task — Build grievance manual-first toggle + 72h auto-disposition engine.
+
+Step 1 — Read specs: idea_spec(19594) and idea_spec(19598)
+Step 2 — Check DB: ssh_command(mysql -u adminportal -pIV84o80^y admin_portal -e "SHOW COLUMNS FROM grievances WHERE Field LIKE '%manual%' OR Field LIKE '%auto%'")
+Step 3 — Add columns if missing: ALTER TABLE grievances ADD COLUMN manual_mode TINYINT(1) DEFAULT 1, ADD COLUMN auto_disposition_at DATETIME NULL, ADD COLUMN disposition_status ENUM('pending','recommended','auto_decided','manually_decided') DEFAULT 'pending'
+Step 4 — Read current: read_server_file("routes/grievance_manager.php", 400)
+Step 5 — Edit grievance_manager.php to add toggle + POST handler + AJAX poller
+Step 6 — Write cron: write_server_file("cron/cron_grievance_auto_disposition.php") — queries manual_mode=0 AND auto_disposition_at < NOW() AND disposition_status='pending', flips to auto_decided
+Step 7 — Verify: php -l on both files, sudo /usr/local/bin/emsu-fpm-guard reload, sql_query SELECT id,manual_mode,auto_disposition_at,disposition_status FROM grievances LIMIT 5
+——[/COPY]——
+
+——[COPY]——
+# COPY WINDOW 2 — P1 Infrastructure: 2nd 120B + Argus
+
+Pick up task — Restore Julia+Claudia as second 120B ring, integrate Argus into Frankenstein fleet.
+
+Step 1 — Probe: ssh_command(curl -s -m 5 http://127.0.0.1:11513/v1/models | head -15)
+Step 2 — If dead, check: ssh_command(docker ps | grep vllm) and ssh_command(docker logs vllm --tail 50 | tail -30)
+Step 3 — Read build ref: read_file("/Users/rubenmajor/Desktop/IDEAL_GLM52_HEX_BUILD.md")
+Step 4 — Add Julia+Claudia to config.yaml: sudo cp /etc/litellm/config.yaml /etc/litellm/config.yaml.bak-20260728, edit model_list to add artemis-2 entry with fallbacks=[artemis-120b, glm-5.2-local]
+Step 5 — Add Argus: edit /etc/litellm/config.yaml to add argus-chat model_list entry with fallbacks=[frankenstein-llm, glm-5.2-local], add to STEERING_MODELS array
+Step 6 — Add registry entry: edit /var/www/emtskills/docs/frankenstein_registry.json (model_id=argus-chat, surface=agent, tier=interactive)
+Step 7 — Restart LiteLLM: sudo systemctl restart litellm && sudo systemctl status litellm --no-pager | head -10
+Step 8 — Ve
+```
+
+### `1785258502219` — 7/28/2026, 10:27:03 AM PT — 156 turns
+
+**Original task:**
+
+```
+# TDSHS
+Pickutp TDSHS Issues
+
+https://docs.google.com/document/d/1noeGziqP3q-p85Rt__blTLKVQNaby3DQuR8owdal040/edit?tab=t.0
+```
+
+**Ideas referenced:** #0369, #0891, #1368, #1565, #15803, #166534, #1785, #178501, #178519, #18977, #19403, #19458, #19490, #19491, #19518, #19558, #19571, #19572, #19573, #19574, #19576, #19577, #19578, #19580, #19581 [executing], #19583 [executing], #19584 [executing], #19585, #19586 [executing], #19587 [executing], #19588 [executing], #19589 [executing], #19590 [executing], #19591 [executing], #19592 [executing], #19594 [executing], #19595 [executing], #19596 [executing], #19597 [executing], #19598, #19599, #19600 [executing], #19601 [executing], #19602 [executing], #19603 [executing], #19604, #19605 [blocked], #19606 [executing], #19607 [executing], #19611, #19690 [deployed], #19704, #19714 [proposed], #2084, #2085, #2563, #2732, #3048, #3049, #334155, #475569, #6366, #64748, #9029, #9030, #9031, #9034, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+ne 19 skills-day inconsistency
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1785XX — TDSHS production dkramer + Drive + statutes.
+
+Where we left off (verified 2026-07-28 10:25 PT):
+- dkramer@emsuniversity.com: 1418 mails found (1303 new + 115 cur), .Sent/Spam/Archive/Trash empty — password blocked by invalid Plesk license
+- Google Drive TDSHS folder has 5 due-date subfolders + 3 evidence copies — needs file population
+- Statute references: need to add `statutes` key to $investigationEntities in institutional_compliance.php
+- 7/28 production draft reviewed, v3 June 29 section confirmed — two blockers remain
+- No emails sent per Ruben's direction
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #19607 [executing] — Drive export pipeline for TDSHS PDFs (deploy after Drive write-auth resolved)
+2. #19605 [blocked] — Drive write auth (fold into #19606 or re-spec)
+3. #19602 [executing] — dkramer + agamez mailbox extraction (incl. copy-agreement search)
+4. #19581 [executing] — June 29 sweep + June 19 reconciliation (the two blockers)
+5. NEW — Add statute references (TAC 157, AAC R9 25, Cal Title 22, etc.) to compliance page investigation entities
+6. NEW — dkramer password workaround: Plesk license fix or Dovecot override in conf.d/ before Plesk block
+
+Reference IDs:
+- Ticket: Inspection 5196 / Complaints 1080261810-1815
+- Ideas: #19607 [executing], #19605 [blocked], #19602 [executing], #19581 [executing]
+- Files touched: /var/www/emtskills/personnel/institutional_compliance.php, /var/qmail/mailnames/emsuniversity.com/dkramer/Maildir/, /var/www/emtskills/uploads/tdshs/inspection-5196-2026/DR AFT_email_2026-07-28_production_and_entry.md, /etc/dovecot/conf.d/05-dkramer-passwd.conf, /etc/dovecot/dovecot.passwd
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785258740211` — 7/28/2026, 10:18:54 AM PT — 48 turns
+
+**Original task:**
+
+```
+some cline windows here are stalling for unknown reason. We are running only 4 windows now.
+```
+
+**Ideas referenced:** #178501, #178518, #178525, #19202, #19218, #19230 [executing], #19234, #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #19387 [executing], #19448 [queued], #19458 [rejected], #19490 [deployed], #19491 [deployed], #19704, #1986, #1987, #1988, #1989, #1990, #1991
+
+**Last PICKUP PROMPT:**
+
+```
+
+<attempt_completion>
+<result>
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785258740211 - debug Cline window stalls - infinite schedule_assistant_presentation loop
+
+Where we left off (verified 2026-07-28 10:18 PT):
+- Found real root cause: Cline 4.0.7 infinite loop in `schedule assistant presentation` debug log line
+- Three windows (3, 4, 10) all showed same symptom: endless repeating DEBUG [Task NNN] schedule assistant presentation (text, normal)
+- Window 3 (1.8KB log) and Window 4 both killed by VS Code renderer watchdog detecting frozen extension host
+- This window (window 10) now showing the same spam pattern in real time - confirms the cascade
+- Bug: Cline 4.0.7 enters tight spin loop in assistant presentation scheduling, consuming 100% CPU on extension host, causing VS Code watchdog to kill it
+- Not a macOS memory/resource issue - 128GB RAM, zero swap, fleet healthy
+- Bug library had no matching record - this is a new finding for Cline 4.0.7
+- The identical task IDs between crashed windows suggest possible shared-state corruption when same task is loaded across windows
+
+Open threads to drive next:
+1. #19490 [deployed] - SPEC_QUALITY_GATE_20260727 / DEPLOY_FAIL_CATEGORY_20260728 both shipped
+2. #19491 [deployed] - BUILD_OUTCOME_CHECK_20260728 shipped
+3. #19458 [rejected] - mismatched patch, needs re-spec
+4. #19261 [approved] - tiered effort design
+
+Reference IDs:
+- Ideas filed: #19490 [deployed], #19491 [deployed], #19458 [rejected]
+- Files touched: none (read-only investigation)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+
+Root cause confirmed: **Cline 4.0.7 infinite loop bug in scheduleAssistantPresentation**
+
+The Cline extension host enters an infinite tight loop calling `schedule assistant presentation (text, normal)` for a task. This consumes 100% CPU on the extension host process, prevents it from processing IPC messages, and VS Code's renderer watchdog detects the frozen host and kills it -- greying out the window.
+
+Evidence from 3 windows:
+- Window 3: 1.8KB log with no errors, just terminated by renderer at 10:02:52
+- Window 4: same task ID (1785258281753), infinite `schedule assistant presentation` repeating, killed at 10:08:32
+- This window (10): same loop pattern appearing now for task 1785258740211
+- No memory pressure (67GB free), no swap, no CPU contention from other processes
+
+This is NOT a window-count issue. It is a Cline 4.0.7 extension bug triggered by a specific task state -- likely when a task has queued presentation updates that fail to settle. Identical task IDs between crashed windows suggests shared-state corruption when the same task is loaded in multiple windows.
+</result>
+<task_progress>
+- [x] Mac system load and memory -- fine, 67GB free
+- [x] CPU-spinning process -- identified: Cline extension host at 101.3%
+- [x] Extension host kill pattern -- VS Code renderer watchdog kills frozen host
+- [x] Retract premature window-limit conclusion -- acknowledged
+- [x] Find actual Cline 4.0.7 bug -- found: infinite schedule_assistant_presentation loop
+- [x] Check Cline 4.0.7 extension host source for issues -- logs confirm the infinite loop
+- [x] Deliver actionable root cause
+</task_progress>
+</attempt_completion>
+```
+
+### `1785258392171` — 7/28/2026, 10:06:54 AM PT — 6 turns
+
+**Original task:**
+
+```
+Rebase and Pickup all tasks here and organize them into copy windows while executing what is oustanding or implementation failed/blocked by executor. Leverage Rule 267:
+
+https://docs.google.com/document/d/1qKgA18bcMRR9K0Ok3W6GR9uekmftn3XzIOclR40Q6ws/edit?tab=t.0#heading=h.jainx63k6q9x
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785258281753` — 7/28/2026, 10:05:09 AM PT — 6 turns
+
+**Original task:**
+
+```
+# TDSHS
+Pickutp TDSHS Issues
+
+https://docs.google.com/document/d/1noeGziqP3q-p85Rt__blTLKVQNaby3DQuR8owdal040/edit?tab=t.0
+```
+
+**Ideas referenced:** #17169, #17170, #17486, #17494, #17504, #17505, #18605 [proposed], #18783 [deployed], #18786, #18787, #18827 [proposed], #1896, #1897
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785181029165` — 7/28/2026, 9:22:43 AM PT — 152 turns
 
 **Original task:**
 
@@ -119,11 +392,43 @@ ESTABLISHED (verified 2026-07-25 19:52 PT):
 **Last PICKUP PROMPT:**
 
 ```
-externship requests #2322 and #2490
-- [ ] Ship all three ideas
-- [ ] Close with PICKUP PROMPT
+ Vicky has the full breakdown.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #9 — Dan Taylor escalation / 3 ideas ship.
+
+Where we left off (verified 2026-07-28 09:22 PT):
+- Dan escalation resolved, follow-up to Dan sent, handoff to Vicky sent
+- #19539 [shipped] — externship requests monitored, handed to Vicky
+- #19537 [partial] — INTERNAL_STAFF_SPLIT_V1 coded in EmailClassifier.php and cron exists
+- #19535 [not shipped] — root cause identified (non-mailer.php path writes CSS-only body_preview)
+
+Open threads:
+1. #19537 [proposed] — VERIFY cron_internal_staff_escalation_rescue.php is on crontab (check crontab -l on WOPR). If installed: promote to shipped. If not: add to crontab (cron/ file likely needs crontab entry).
+2. #19535 [proposed] — TRACE which code path wrote the CSS-only body_preview for outbound 182471. The sendEmail() in mailer.php strip_tags() would not pass raw CSS through. Check agent_send_or_draft, Postmark webhooks, and the specific send path that 182471 used (send_source = '' on that row).
+3. #19539 [shipped] — monitor if Vicky resolves #2322 and #2490 within 72h; if not, escalate per original plan.
+
+Reference IDs:
+- Ticket: 21544 (In Progress)
+- Ideas filed: #19535 (body-loss), #19537 (classification), #19539 (externship monitor)
+- Files touched: HANDOFF_NOTES.md
+- Emails sent: Dan Taylor (daleta@msn.com), Vicky (vyu@emsuniversity.com)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Student investigation complete (SLS, 360, externship, comms history)
+- [x] Tier-1 follow-up sent to Dan Taylor
+- [x] Tier-1 handoff sent to Vicky
+- [x] Ticket 21544 commented
+- [x] #19537 — INTERNAL_STAFF_SPLIT_V1 coded in EmailClassifier.php (constant, isHumanStaffSender logic)
+- [ ] #19537 — VERIFY cron_internal_staff_escalation_rescue.php is on crontab
+- [ ] #19535 — TRACE non-mailer.php code path that wrote CSS-only body_preview for outbound 182471
+- [x] #19539 — Externship requests #2322/#2490 confirmed in ExternshipRequest table, status=escalated, handed to Vicky
 </task_progress>
-</use_mcp_tool>
+</attempt_completion>
 ```
 
 ### `1785180988213` — 7/28/2026, 8:52:06 AM PT — 116 turns

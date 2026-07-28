@@ -6,11 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/28/2026, 8:20:18 AM PT | window: last 72h | 87 tasks | index total 226 (parsed 1, cached 225)
+Generated: 7/28/2026, 9:20:19 AM PT | window: last 72h | 83 tasks | index total 226 (parsed 2, cached 224)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785183122795` | 7/28/2026, 8:17:46 AM | 757 | 3570KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
+| `1785181029165` | 7/28/2026, 9:20:15 AM | 150 | 345KB | ## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti) |
+| `1785180988213` | 7/28/2026, 8:52:06 AM | 116 | 590KB | ## 8 — #SLS · student lifecycle state repair + backlog |
+| `1785183122795` | 7/28/2026, 8:28:39 AM | 769 | 3927KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
 | `1785229461572` | 7/28/2026, 2:52:33 AM | 246 | 4959KB | Continue |
 | `1785226952601` | 7/28/2026, 2:24:46 AM | 238 | 1004KB | Vicki has numerous open issues that she has brought up and screenshots that she has in cha |
 | `1785193714174` | 7/28/2026, 2:21:09 AM | 945 | 4028KB | #Artemis |
@@ -27,7 +29,6 @@ Generated: 7/28/2026, 8:20:18 AM PT | window: last 72h | 87 tasks | index total 
 | `1785218791688` | 7/27/2026, 11:06:31 PM | 1 | 2KB | My AVP will not connect to this Mac now after an update. I created a program callsed Fix A |
 | `1785180643044` | 7/27/2026, 9:37:32 PM | 693 | 1244KB | ## 1 — #PAY · P0 money · RUN FIRST |
 | `1785180665712` | 7/27/2026, 9:07:57 PM | 336 | 1041KB | ## 2 — #EXEC · P0 · executor is failing builds silently |
-| `1785181029165` | 7/27/2026, 9:07:09 PM | 127 | 276KB | ## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti) |
 | `1785191995112` | 7/27/2026, 9:04:36 PM | 796 | 2848KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
 | `1785209942258` | 7/27/2026, 8:46:39 PM | 46 | 137KB | Do not close my active cline windows, but grey windows keep coming in for some reason here |
 | `1785196068848` | 7/27/2026, 5:25:13 PM | 50 | 640KB | https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students |
@@ -40,7 +41,6 @@ Generated: 7/28/2026, 8:20:18 AM PT | window: last 72h | 87 tasks | index total 
 | `1785180684278` | 7/27/2026, 2:51:26 PM | 300 | 1223KB | ## 3 — #FORMS · durable fix for WPForms + its replacement |
 | `1785181049767` | 7/27/2026, 2:39:06 PM | 100 | 701KB | ## 11 — #EXT · externship system, grounded in Vicky's answers |
 | `1785173739737` | 7/27/2026, 1:11:16 PM | 590 | 1104KB | Tell me how many turns for each LLM occurred overnight / delve into frankenstein-tools and |
-| `1785180988213` | 7/27/2026, 12:56:31 PM | 61 | 449KB | ## 8 — #SLS · student lifecycle state repair + backlog |
 | `1785120544230` | 7/27/2026, 12:15:02 PM | 482 | 3105KB | I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged |
 | `1785173667267` | 7/27/2026, 12:10:46 PM | 340 | 1233KB | I need a copy of the signed and executed Medical Director Contract for Dr. Rodriguez as we |
 | `1785178593254` | 7/27/2026, 12:09:33 PM | 65 | 221KB | Context compressed at 983,257 / 1,000,000 tokens (98%), above the rule-119 COMPRESS thresh |
@@ -93,16 +93,93 @@ Generated: 7/28/2026, 8:20:18 AM PT | window: last 72h | 87 tasks | index total 
 | `1784995491954` | 7/25/2026, 12:54:05 PM | 62 | 302KB | QuickBooks/Payments drive window. Work these per rules 267 + 29 (act, don't defer; reconci |
 | `1785008084310` | 7/25/2026, 12:39:26 PM | 7 | 18KB | Hello GLM 5.2 only |
 | `1784957482914` | 7/25/2026, 12:21:04 PM | 1106 | 4883KB | Play doctor of Frankenstein and  Look at this ridiculous frankenstein-llm task completed w |
-| `1784958750924` | 7/25/2026, 9:05:28 AM | 390 | 1689KB | Pick up task — GLM52 ring flap-loop watch (KAIZEN autopsy loop already live). |
-| `1784995524781` | 7/25/2026, 9:05:25 AM | 1 | 4KB | Catch-all drive window: everything queued/pending/proposed that is NOT GLM-ring, NOT payme |
-| `1784954446916` | 7/25/2026, 9:04:56 AM | 152 | 1170KB | A bunch of cline windows just closed out and I need you to rebuild those windows for me wi |
-| `1784958776999` | 7/25/2026, 8:53:17 AM | 430 | 932KB | Pick up task — frankenstein-llm simplistic rule-91s RCA: durable mechanical gates shipped, |
 
 ---
 
 ## Per-window detail
 
-### `1785183122795` — 7/28/2026, 8:17:46 AM PT — 757 turns
+### `1785181029165` — 7/28/2026, 9:20:15 AM PT — 150 turns
+
+**Original task:**
+
+```
+## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti)
+
+```
+#STUDENT — EMSU instructor escalation. Dan Taylor (SF instructor) regarding Aahana Chakravartti, student 26613FT-18.
+
+ESTABLISHED (verified 2026-07-25 19:52 PT):
+- Inbound email 88922 from Dan Taylor (daleta@msn.com), 14 attachments. NO ticket created, student_id never extracted, classified "internal" — which is why it never became a ticket.
+- Outbound reply 182471 sent 19:09 from info@emsuniversity.com to daleta@msn.com. The HTML body was truncated in the DB read, so what we actually said is UNKNOWN.
+- Aahana: completed_nremt,
+```
+
+**Ideas referenced:** #12981, #18559, #19194 [rejected], #19437, #19439, #19454, #19464, #19495, #19500, #19509, #19510, #19535 [proposed], #19537 [proposed], #19538 [proposed], #19539 [proposed], #19545, #19560, #2023, #2026, #2027, #2039, #2040, #2041, #2043, #21544, #2322, #2490, #4929, #6106, #815007, #9086, #9168, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+externship requests #2322 and #2490
+- [ ] Ship all three ideas
+- [ ] Close with PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1785180988213` — 7/28/2026, 8:52:06 AM PT — 116 turns
+
+**Original task:**
+
+```
+## 8 — #SLS · student lifecycle state repair + backlog
+
+```
+#SLS — EMSU Student Lifecycle State. The tool itself is lying in two places; fix it, then work the queue it produces.
+
+RULES: DESCRIBE before SQL (Students has NO `status` column — use get_student_lifecycle_state / get_student_360). Moodle tables are UNPREFIXED in moodle_c_live (RC-5). Act rather than list. Server writes via ssh_command with sudo.
+
+BUG 1 — ARCHIVED-ACCOUNT INVERSION (#19439, P0, bug library #2026). The moodle_user gate reports the ARCHIVED account as canonical and the real one as "STALE," and hands back a moodle_url_r
+```
+
+**Ideas referenced:** #11782, #12661, #13873, #13977, #14153, #14154, #14847, #15635, #15636, #15638, #16437, #16581, #16608, #16613, #16731, #16732, #16733, #17546, #17580, #17685, #17723, #178501, #18693, #18743, #18936, #19437, #19439, #19454, #19458, #19464, #19465, #19486 [deployed], #19487 [deployed], #19488 [deployed], #19489 [deployed], #19490, #19491, #19492, #19495, #19500, #19509, #19510, #19704, #2026, #2027, #2033, #2036, #2039, #2040, #2041, #2043, #71121, #9083, #9086, #9168, #9192, #9202, #9306, #9339, #9343, #9549, #9831
+
+**Last PICKUP PROMPT:**
+
+```
+epair + cohort sweep complete"
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #SLS follow-up — archived inversion sweep + payment gate cross-check.
+
+Where we left off (verified 2026-07-28T08:51 PT):
+- pickCanonicalAccount fix deployed in StudentLifecycleState.php (backup .bak-archived-20260727), php -l clean, regression-verified on Erik Chavez (→54215) and Mark Kavai (→53050)
+- Payment false-pass fix verified live on 26720FT-11
+- Cohort scan complete (120 students, 14d), categories filed
+- Handoff entry written to HANDOFF_NOTES.md
+
+Open threads to drive next:
+1. Run full 103-student archived-inversion sweep: re-scan the 103 and confirm all now resolve to correct uid (human-only decision - no idea)
+2. Reverse any moodle_url_repoint already applied in the wrong direction: check orchestrator_event_log for repoint operations targeting the 103 archived accounts (human-only decision - no idea)
+3. Cross-check ~43 payment gate students against #PAY: some may be auto-void victims (our bug #19492), not non-payers — do NOT dun victims (human-only decision - no idea)
+4. 26120FT-01 Andrew Sanchez: section 26120FT missing from Classes table — add the section or this student can never get a Class_Enrollments row (human-only decision - no idea)
+5. CS round-robin for payment_plan_delinquent: 26520FT-09 and 26720FT-16 (human-only decision - no idea)
+6. 26920FT-17 Syeda Samreen Fatima: is_duplicate=1 / dropped, NOT a stale outlier — the stale_outlier category had zero hits in this cohort (human-only decision - no idea)
+
+Reference IDs:
+- Ticket: #SLS
+- Bug library: #2026 (archived inversion), #2036 (auto-void)
+- Ideas: #19439 (SLS archived fix — retry, shipped inline)
+- Files touched: /var/www/emtskills/lib/StudentLifecycleState.php, /var/www/emtskills/docs/HANDOFF_NOTES.md
+- Backups: .bak-archived-20260727, .bak-paygate-20260727
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785183122795` — 7/28/2026, 8:28:39 AM PT — 769 turns
 
 **Original task:**
 
@@ -120,38 +197,44 @@ Continue the frankenstein-llm doctor with currenlty open windows in progress. Co
 **Last PICKUP PROMPT:**
 
 ```
-cy ever becomes the priority).
+ up whatever's still spinning.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task — GLM-5.2 speed/max_num_seqs question CLOSED via ideal build reference; Desktop doc delivered.
+Pick up task — Mac sluggishness rescue: waiting on Ruben to run `sudo killall launchservicesd` in a terminal.
 
-Where we left off (verified 2026-07-28 01:59 PT):
-- DELIVERED: ~/Desktop/GLM52_IDEAL_BUILD_ANSWER_2026-07-28.md — the final answer, referenced against the canonical /var/www/emtskills/docs/GLM52_IDEAL_BUILD.md.
-- DECISION FINAL (do not re-litigate): leave max_num_seqs at 128 (set in the 07-27 rebuild, proven correct — ceiling never found, c=64 → 48.78 tok/s aggregate, KV 0.2-0.3%, scheduler never queued). Ruben's leave-it-alone call is right.
-- THREE OF MY EARLIER CLAIMS FORMALLY RETRACTED in the doc: (1) "max_num_seqs unset" — wrong, it's 128; (2) "set it to 16" — wrong, doctrine is more concurrency; (3) "N=8 sweet spot / N=128 collapse" — superseded by the ideal build's measured table (my sweep never completed).
-- SPEED RECONCILIATION CANONICAL: single-stream tok/s = PP=6 pipeline bubble, not hardware. Interactive feel = TTFB ~1.5s + streaming (verified live 01:22 PT). Ruben's days of fast windows are ground truth. Batch load ~60-70 tok/s aggregate (verified 07-26).
-- CANONICAL REFERENCE for all future GLM-5.2 questions: /var/www/emtskills/docs/GLM52_IDEAL_BUILD.md (read it FIRST before any ring claim, per rule 271/294).
+Where we left off (verified 2026-07-28 08:27 PT):
+- ROOT CAUSE: launchservicesd (PID 382, 4 days old) spinning 267-372% CPU in a SecTrustCopyAppleTrustAnchors loop. Load avg 134-250. WindowServer 98-199% is downstream (GUI event queue starvation). No zombies. Memory fine (75% free) — this is pure CPU starvation.
+- DONE: killed Reach Cicero applet (PID 95008, my build, didn't respawn), 9 user-level hogs (DictationIM, avconferenced, contactsd, contentlinkingd, callservicesd, sharingd, localspeechrecognition, speechrecognitiond, Messages Assistant Extension), z_ai MCP spinners 3x (keeps respawning from Cline windows — whack-a-mole, needs durable fix).
+- BLOCKED ON RUBEN: `sudo killall launchservicesd` in any terminal (VS Code integrated terminal Ctrl+` recommended). Backup at ~/Desktop/FIX_SLUGGISH_MAC.txt. GUI osascript password dialog failed twice (GUI too frozen to type).
+- CONSTRAINT: do NOT close any Cline windows (Ruben directive). All kills so far are user-level auto-restarting daemons only.
 
-Open threads to drive next (unchanged from prior completion except #3):
-1. DRAIN the 3,878 ready_for_review backlog — no drain policy exists. Not yet filed.
-2. EXECUTOR BUILD QUALITY — generates SQL failing syntax checks (tests_sql_syntax). Run failure_category histogram over 24h. Not yet filed.
-3. #19685 [executing] (verified: reconcile_ideas returned status=in_progress dev_stage=auditing) — BROADCAST canonical ring numbers. SCOPE UPDATE: the numbers now live in GLM52_IDEAL_BUILD.md; this idea reduces to pointing frankenstein_registry.yaml + frankenstein_architecture MCP at that doc. NO max_num_seqs change (decision: leave at 128).
-4. #19686 [executing] (verified: status=in_progress dev_stage=auditing) — Argus registry row + confirm Argus client requests model=argus-chat.
-5. #19558 [blocked] (verified: status=approved dev_stage=impl_failed) — surface-label truth fix. Hand-ship if it stays blocked.
-6. #19571 [proposed] (verified: status=proposed dev_stage=idle) — REWRITE around PP=6 + prefill; drop "decode wedge" framing entirely. NOTE: ideal build doc now covers most of this — consider closing as superseded by GLM52_IDEAL_BUILD.md.
-7. #19670 [deployed] (verified: status=deployed dev_stage=ready_for_review) — REVIEW.
-8. #19672 [deployed] (verified: status=deployed dev_stage=ready_for_review) — REVIEW knowledge gates. Acceptance: re-file duplicate of #19563 verbatim; must be REJECTED pointing at bug #2062.
-9. #19673 [deployed] (verified: status=deployed dev_stage=ready_for_review) — REVIEW prefill fix, re-measure ratio (was 57:1, target <10:1).
-10. Fix glm-5.2-local -> :8210 404 (ring serves only glm-5.2-15pct) so direct probes stop reading a healthy ring as dead.
-11. Re-reconcile the 11 previously-blocked ideas (#19542, #19543, #19544, #19546, #19547, #19548, #19549, #19564, #19575, #19507, #19508).
-12. Artemis physical recovery — still dead (human-only decision — no idea, RUBEN ACTION).
-13. Cicero MLX restart — paste at ~/Desktop/CICERO_PASTE_20260727.txt (human-only decision — no idea).
-14. Jon's Amcrest camera — tool live + verified; waiting on IP + credentials (human-only decision — no idea, JON ACTION).
+Open threads to drive next:
+1. VERIFY after Ruben runs the sudo command: launchservicesd PID 382 dead, load falling, GUI responsive. Then mop up coreaudiod (was 79%) and any remaining spinners.
+2. DURABLE FIX for z_ai MCP spin loop: `npm exec @z_ai/mcp-server` respawns from Cline windows and spins 45-72% CPU repeatedly. Restart or disable the z_ai MCP server in Cline settings (walk Ruben through it — do NOT close his windows).
+3. INVESTIGATE what triggered the launchservicesd SecTrust loop (unsigned applet checkins? VS Code helper churn?) so it doesn't recur after 4 days uptime. Consider scheduling a launchservicesd restart or an LS db health check.
+4. THEN resume the queued frankenstein-llm work from the compressed session memory (2026-07-28T15:10Z): glm-5.2-local :8210 404 fix (APPROVED by Ruben), verify glm-5.2-local in frankenstein-llm + frankenstein-tools, hand-ship #19558 [blocked] (verified: status=approved dev_stage=impl_failed), rewrite #19571 [proposed] (verified: status=proposed dev_stage=idle) around GLM52_IDEAL_BUILD.md.
+5. Cicero MLX still not serving on :11520 (Ruben ran the command via VS Code remote; .9/.155 alive but nothing listening). Check with him after the machine is usable.
+6. Artemis confirmed UP (:8000 HTTP 200 gpt-oss-120b) — no action needed.
 
-Refer
+Reference IDs:
+- Ideas: #19558 [blocked], #19571 [proposed], #19670 [deployed], #19672 [deployed], #19673 [deployed], #19685 [executing], #19686 [executing], #19563 [rejected]
+- Files: ~/Desktop/FIX_SLUGGISH_MAC.txt (new), ~/Desktop/GLM52_IDEAL_BUILD_ANSWER_2026-07-28.md, /var/www/emtskills/docs/GLM52_IDEAL_BUILD.md
+- Gate token: 372713ccc2c885a15fe019ef
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Snapshot CPU/mem/zombies/load — launchservicesd 300%+ is the culprit (SecTrust loop)
+- [x] Kill z_ai MCP spinners + Reach Cicero applet + 9 user-level CPU hogs (load 190 -> 126)
+- [x] GUI password dialog attempted twice — GUI too frozen for Ruben to type
+- [x] Give Ruben the one-line Terminal command (sudo killall launchservicesd) + backup file on Desktop
+- [ ] Verify load drops after he runs it, then mop up + durable z_ai fix
+</task_progress>
+</attempt_completion>
 ```
 
 ### `1785229461572` — 7/28/2026, 2:52:33 AM PT — 246 turns
@@ -917,34 +1000,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </attempt_completion>
 ```
 
-### `1785181029165` — 7/27/2026, 9:07:09 PM PT — 127 turns
-
-**Original task:**
-
-```
-## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti)
-
-```
-#STUDENT — EMSU instructor escalation. Dan Taylor (SF instructor) regarding Aahana Chakravartti, student 26613FT-18.
-
-ESTABLISHED (verified 2026-07-25 19:52 PT):
-- Inbound email 88922 from Dan Taylor (daleta@msn.com), 14 attachments. NO ticket created, student_id never extracted, classified "internal" — which is why it never became a ticket.
-- Outbound reply 182471 sent 19:09 from info@emsuniversity.com to daleta@msn.com. The HTML body was truncated in the DB read, so what we actually said is UNKNOWN.
-- Aahana: completed_nremt,
-```
-
-**Ideas referenced:** #12981, #18559, #19194 [rejected], #19437, #19439, #19454, #19464, #19495, #19500, #19509, #19510, #19535 [proposed], #19537 [proposed], #19538 [proposed], #19539 [proposed], #19545, #19560, #2026, #2027, #2039, #2040, #2041, #2043, #21544, #2322, #2490, #4929, #6106, #9086, #9168, #9339
-
-**Last PICKUP PROMPT:**
-
-```
-und email body_preview CSS-only bug
-- [ ] Ship all three ideas
-- [ ] Close with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
-```
-
 ### `1785191995112` — 7/27/2026, 9:04:36 PM PT — 796 turns
 
 **Original task:**
@@ -1413,25 +1468,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </result>
 </attempt_completion>
 ```
-
-### `1785180988213` — 7/27/2026, 12:56:31 PM PT — 61 turns
-
-**Original task:**
-
-```
-## 8 — #SLS · student lifecycle state repair + backlog
-
-```
-#SLS — EMSU Student Lifecycle State. The tool itself is lying in two places; fix it, then work the queue it produces.
-
-RULES: DESCRIBE before SQL (Students has NO `status` column — use get_student_lifecycle_state / get_student_360). Moodle tables are UNPREFIXED in moodle_c_live (RC-5). Act rather than list. Server writes via ssh_command with sudo.
-
-BUG 1 — ARCHIVED-ACCOUNT INVERSION (#19439, P0, bug library #2026). The moodle_user gate reports the ARCHIVED account as canonical and the real one as "STALE," and hands back a moodle_url_r
-```
-
-**Ideas referenced:** #11782, #12661, #13873, #13977, #14153, #14154, #14847, #15635, #15636, #15638, #16437, #16581, #16608, #16613, #16731, #16732, #16733, #17546, #17580, #17685, #17723, #18693, #18743, #18936, #19437, #19439, #19454, #19464, #19465, #19490, #19492, #19495, #19500, #19509, #19510, #2026, #2027, #2033, #2036, #2039, #2040, #2041, #2043, #71121, #9083, #9086, #9168, #9192, #9202, #9306, #9339, #9343, #9549, #9831
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785120544230` — 7/27/2026, 12:15:02 PM PT — 482 turns
 
@@ -3327,160 +3363,4 @@ ER35), GPU BAR1 verdict (BIOS human-only). Must end with 47-char U+2550 divider 
 - [ ] Rule-91 attempt_completion
 </task_progress>
 </summarize_task>
-```
-
-### `1784958750924` — 7/25/2026, 9:05:28 AM PT — 390 turns
-
-**Original task:**
-
-```
-Pick up task — GLM52 ring flap-loop watch (KAIZEN autopsy loop already live).
-
-Where we left off (verified 2026-07-24 20:51 PT):
-- Ring FLAPPING: EngineCore deaths every ~30-40 min since ~17:41 PT; supervisor auto-healing each (relaunches 17:41/18:11/19:12/20:15, self-recoveries 18:38/20:43). Last known state: EngineDeadError 20:51:10 PT, relaunch automatic.
-- Supervisor healthy (pid 3382246, correct pair list) — bug #1947 [resolved] stale-supervisor fix HELD.
-- Failure signature = bug #1935 [investigating] class: vLLM 0.23.1rc1 PP=6 EngineCore instability. Autonomous KAIZEN autopsy cron (cron
-```
-
-**Ideas referenced:** #11977, #1241, #1248, #1249, #1252, #1258, #12584, #15144, #16032, #16033, #16122, #16163, #16338, #16448, #16452, #16545, #16778, #16802, #16803, #16839, #16844, #1685, #16851, #1687, #1705, #1706, #17246, #1744, #1779, #178493, #1798, #17983, #18471, #1871, #18915 [proposed], #18926 [queued], #1896, #18972 [proposed], #18977 [proposed], #18981 [proposed], #18984 [proposed], #1935 [investigating], #1939 [investigating], #1947 [resolved], #1954 [investigating], #1956 [investigating], #1957 [investigating], #1958 [resolved], #1959, #1960 [investigating], #1962, #5878
-
-**Last PICKUP PROMPT:**
-
-```
-ference, idea #18984's updated disposition — all wrapped in a rule-91-compliant PICKUP PROMPT block (47-char U+2550 dividers, no bare `#NNNN` without disposition tags, Open Threads + Reference IDs sections present). No Anthropic/Claude model may be used anywhere in this process (explicit Ruben instruction + rule 146).
-   - Per rule 07/EXECUTE_ORDER_66 pattern (if wrap-up is triggered): append to cline_task_ledger.md.
-
-6. Task Evolution:
-   - **Original Task (already resolved, prior to summarized window):** GLM52 ring flap-loop watch — probe ring truthfully, check supervisor log + KAIZEN classifications, report duty cycle. Tiberius physical reboot recovery — COMPLETE, accepted by Ruben.
-   - **Task Modification 1:** ~2.5h later Ruben asked "where is it at now?" — agent reported ring flapping, naming host "pompey" (.244) as disconnecting, implying broad/complete down status. Ruben rejected: "No this is wrong."
-   - **Task Modification 2:** Ruben demanded full RCA: "also, Please investigate with an RCA as to why this window thought that all the units were completely down. Because they are not. I am literally able to get into you them right now via SSH. I can't have models just hallucinating stale information or whatever suits them as far as the LLM are concerned. This is no good. Do not inject anthropic." Agent performed RCA, concluded "no pompey in fleet_inventory," traced .244 to a stale gloo crash-log IP, and via direct SSH concluded "4/6 up, 2/6 down." Recorded bug #1959, updated HANDOFF_NOTES, filed idea #18984, shipped `attempt_completion` presenting this as corrected finding.
-   - **Task Modification 3:** Ruben rejected THIS "corrected" finding too: "oh this is so irritating even you were getting this wrong. The SSH from my computer locally here on the network that I usually use is the same as the Romans. You should be able to access it using the same exact same password for every single box same username. SSH. Then update your durable logic again. I believe that you should be able to see six rings all up and available." This indicated all 6 hosts ARE up, uniform SSH credentials were the likely fix, and rule 273 might contain "Pompey"/"Marcus" as legitimate ring terms contradicting the "fabricated identity" premise of bug #1959.
-   - **Current Active Task (in progress):** Following the pickup-prompt plan: (1) fetch rule 273 full text [DONE — full body successfully retrieved, resolving the Pompey/Marcus/Augustus-Tiberius-IP confusion], (2) fetch rule 268 full text [was already done earlier], (3) confirm port-22 reachability across all 6 hosts [DONE — all 6 open via local-Mac nc check], (4) re-SSH with correct uniform credentials into all 6 true ring hosts to check ACTUAL process state (docker ps / ps aux vllm / curl :8210) [IN PROGRESS, BLOCKED — WOPR-side ssh_command returned "no route to host" for all 6; local-Mac execute_command attempt failed due to missing `timeout` binary, not yet retried without it], (5) correct bug #1959 [NOT YET DONE], (6) correct HANDOFF_NOTES [NOT YET DONE], (7) re-scope idea #18984 [NOT YET DONE], (8) ship corrected final `attempt_completion` [NOT YET DONE].
-   - **Context for Changes:** Ruben's repeated rejections stem from the agent's own tool-based verification being unreliable/inconsistent (stale rule-268 data, wrong-rule-fetched-by-numeric-ID for rule 273, port-reachability-only conclusions). This session made concrete progress: rule 273 is now fully understood, and port-22 reachability across all 6 hosts is empirically confirmed via the local Mac — but a NEW discrepancy has eme
-```
-
-### `1784995524781` — 7/25/2026, 9:05:25 AM PT — 1 turns
-
-**Original task:**
-
-```
-Catch-all drive window: everything queued/pending/proposed that is NOT GLM-ring, NOT payments, NOT Argus. Work per rules 267 + 29 — triage, promote proposed→autonomous where Ruben-relevant, hand-ship stalls per GATE C. Mode-D MCP noise: real result arrives next message, don't re-fire.
-
-BUGS FIRST (user-facing): #18941 [proposed] Timeclock buttons network error; #18937 [proposed] EMS210 not-required still enrolled; #18928 [proposed] Skillstastic dropped-students roster; #18898 [proposed] static top bar; #18930 [proposed] Jon tickets regression; #18974 [proposed] AI-orphan tickets user 124.
-CHAI
-```
-
-**Ideas referenced:** #18442 [queued], #18559 [queued], #18717 [blocked], #18757 [queued], #18830 [queued], #18851 [queued], #18852 [queued], #18853 [deployed], #18861 [queued], #18862 [proposed], #18867 [proposed], #18871 [proposed], #18880 [proposed], #18887 [queued], #18895 [queued], #18898 [proposed], #18900 [queued], #18901 [queued], #18903 [queued], #18912 [queued], #18913 [proposed], #18915 [proposed], #18916 [deployed], #18917 [proposed], #18918 [deployed], #18920 [proposed], #18926 [proposed], #18928 [proposed], #18930 [proposed], #18932 [queued], #18934 [proposed], #18937 [proposed], #18938 [proposed], #18941 [proposed], #18954 [proposed], #18959 [proposed], #18967 [proposed], #18971 [proposed], #18972 [proposed], #18974 [proposed], #18975 [proposed], #18976 [queued], #18977 [proposed], #18983 [proposed], #18985 [proposed], #18998 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1784954446916` — 7/25/2026, 9:04:56 AM PT — 152 turns
-
-**Original task:**
-
-```
-A bunch of cline windows just closed out and I need you to rebuild those windows for me with a bunch of copy prompts to drive the open ideas remaining. While you are building these windows, work on the tasks too by leveraging rule 267 in accordance with rule 29
-```
-
-**Ideas referenced:** #12251, #15906, #16744, #16838, #17494, #18327, #18378, #18438, #18442, #18470, #18472, #18473, #18474, #18475, #18476, #18559, #18579, #18581 [proposed], #18593 [executing], #18595 [executing], #18601, #18605, #18668, #18669, #18679, #18694, #18699 [blocked], #18706, #18715, #18717, #18726, #18731, #18746, #18757, #18765, #18775, #18777, #18779, #18783, #18784, #18786, #18789, #18792, #18794, #18795, #18797, #18801 [executing], #18803, #18805, #18806, #18807, #18811, #18812, #18813, #18814, #18820, #18821, #18824, #18827, #18830, #18832, #18833 [executing], #18835, #18836, #18837, #18838, #18839, #18841 [executing], #18842, #18843, #18844, #18845, #18846, #18848, #18849, #18851 [approved], #18852, #18853, #18861 [approved], #18862, #18864 [executing], #18867, #18871, #18880, #18887, #18889 [executing], #18892 [executing], #18893, #18894, #18895, #18898, #18899 [ready_for_review awaiting deploy], #18900, #18901, #18903, #18909 [approved], #18912 [approved], #18913, #18914 [proposed], #18915, #18916, #18917, #18918, #18919, #18920, #18926 [approved], #18927 [executing], #18928, #18929, #18930 [proposed], #18932, #18934, #18935, #18937, #18938, #18939, #18940, #18941, #18942, #18944, #18945, #18946, #18947, #18948, #18949, #18950, #18951, #18952, #18954, #18956, #18959, #18961 [deployed], #18962 [executing], #18964 [proposed], #18965 [proposed], #18966 [deployed], #18967, #18968, #18969, #18971, #18972, #18974, #18975, #18976, #18977, #18978 [proposed], #18983, #18985, #18998, #19000 [proposed], #1931, #1935 [investigating], #1939 [investigating], #1947 [resolved], #1952 [recorded], #1953, #19873, #50255, #50267, #50270, #50274, #50277, #50309, #50378, #5222, #52560, #52647, #5771, #6067, #6751, #7557, #9263
-
-**Last PICKUP PROMPT:**
-
-```
-e verification).
-   4. Ship attempt_completion with the rebase report + rule-91 PICKUP PROMPT block (47-char U+2550 dividers, every #NNNN tagged with (verified: ...) parentheticals from the live SELECT).
-
-6. Task Evolution:
-   - Original: rebuild closed windows with copy prompts + drive ideas per rules 267/29.
-   - Mod 1: Argus de-branding, no Anthropic in Argus (DONE).
-   - Mod 2: "please leverage rule 267 as well" (DONE — 20 promotions/13 rejections).
-   - Mod 3: clarified deliverable = actual closed Cline windows from disk (DONE — 6 prompts delivered).
-   - Mod 4 (CURRENT, verbatim): "Rebase here and tell me what's left" — live reconcile + concise remaining-work report.
-
-7. Current Work:
-   Last action: shipped attempt_completion containing the 6 per-window rebuild prompts + full rule-91 block, and flipped #18969 to deployed (verified Rows affected: 1). Ruben responded with feedback "Rebase here and tell me what's left". Nothing has been done yet toward the rebase.
-
-8. Next Step:
-   Immediately run the mysql MCP fetch_data query from Pending Tasks item 1 (single combined SELECT is fine): 
-   SELECT id, status, dev_stage FROM orchestrator_ideas WHERE id IN (18962,18964,18965,18930,18581,18926,18961,18966,18967,18968,18470,18601,18945,18947,18946,18920,18472,18442,18941,18938,18934,18917,18830,18899,18898,18937,18757,18476,18559,18378,18824,18837) ORDER BY id;
-   Then classify and ship the "what's left" attempt_completion. Remember Mode-D noise: first tool response says "result missing" — the real result arrives in the following user message; do not re-fire.
-   Driving quote: "Rebase here and tell me what's left".
-
-9. Required Files:
-   - /tmp/cline_windows_report.txt (only if window prompt content needs re-reference)
-</context>
-<task_progress>
-- [x] Parse closed Cline task windows from disk (report generated, 271 lines)
-- [x] Read /tmp/cline_windows_report.txt (all 9 windows extracted)
-- [x] Flip #18969 to deployed via mysql MCP (Rows affected: 1)
-- [x] Build 6 per-window copy-paste rebuild prompts (Opus-5 x4 merged, live-state corrected)
-- [x] Ship completion with rule-91 pickup prompt
-- [ ] REBASE: live SELECT on all referenced idea IDs via mysql MCP
-- [ ] Classify what's left (human-only / proposed / executing / window-owned)
-- [ ] Ship "what's left" attempt_completion with rule-91 block
-</task_progress>
-</summarize_task>
-```
-
-### `1784958776999` — 7/25/2026, 8:53:17 AM PT — 430 turns
-
-**Original task:**
-
-```
-Pick up task — frankenstein-llm simplistic rule-91s RCA: durable mechanical gates shipped, verify they hold.
-
-Where we left off (verified 2026-07-24 ~21:20 PT):
-- Extension attempt_completion structural gate LIVE in dist/extension.js (backup extension.js.bak-r91-structural-gate-20260724): rejects missing U+2550 dividers / PICKUP PROMPT header / Open threads / Reference IDs / placeholder idea tokens. HOTFIX v4 21:16 PT removed the unpassable task-id leg (it caused a live completion-rejection loop — bug #1952 [investigating] recorded).
-- Rule-255 claimed-file existence check + TOOL ENVELOPE LEAK
-```
-
-**Ideas referenced:** #0000, #1130, #1131, #11316, #1241, #12425, #1248, #1249, #1252, #1258, #13202, #14000, #15144, #152615, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #1717, #1719, #1721, #17246, #17342, #17345, #1744, #1757, #1760, #176616, #17669, #17672, #17673, #17691, #17697, #17705, #17741, #17746, #17749, #17751, #1779, #1780, #178424, #178455, #1798, #17983, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #1828, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18328, #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18360, #18378, #18379, #18383, #18388 [executing], #1839, #18396 [proposed], #18397 [proposed], #18398 [proposed], #1840, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #1857, #18605, #18676, #18687, #18688, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #1878, #18781, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18893 [executing], #18894 [queued], #18896 [deployed], #18913, #18915 [proposed], #18916 [queued], #18918 [proposed], #18930 [proposed], #1894, #1896, #1897, #1912 [resolved], #1927, #1928, #1929 [resolved], #1930, #1931, #1932 [resolved], #1933, #1935 [investigating], #1936, #1942, #1944, #1948, #1949, #1952 [investigating], #1955 [resolved], #1961 [resolved], #34495, #389249, #6164, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-ash signature for further RCA.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — rule-91 gates verify (CLOSED) + vLLM durable flap fix (SHIPPED, verify next cycle).
-
-Where we left off (verified 2026-07-25 08:52 PT):
-- Rule-91 gates task FULLY COMPLETE: all extension gates LIVE + holding, router bright-lines live, zero anthropic injected, #18896 reconciled, Cline_Obedience.md synced, bug #1955 resolved. CLOSED.
-- vLLM durable flap fix SHIPPED: patched /tmp/glm52_v34_failfast.sh on ALL 6 ring boxes (cato/augustus/pompey/marcus/tiberius/cesar). NCCL_TIMEOUT 300 to 1800, VLLM_EXECUTE_MODEL_TIMEOUT 300 to 1800, persistent log mount, log copy before sleep. All 6 verified PATCHED_OK. Backups .bak-durable-20260725 on each box. Bug #1961 recorded resolved. NOT a version pin (async KeyError was already fixed — this is a different crash cause: NCCL timeout too short for transient gloo disconnects).
-- Patch takes effect on next supervisor relaunch. Ring was crash-looping every 25 min (relaunches 06:56 through 08:51). All 6 boxes LAN-reachable between crashes.
-- Ruben was separately checking box online status from another window.
-
-Open threads to drive next:
-1. None for rule-91 gates — closed. (human-only decision — no idea)
-2. Verify next ring relaunch uses patched script with NCCL_TIMEOUT=1800. If flap stops, durable fix is complete. If not, check /home/rubenmajor/glm52_logs/ on Cato for the captured crash signature (persistent logs now survive container rm -f). (human-only decision — no idea)
-
-Reference IDs:
-- Ideas reconciled: #18896 [deployed] (verified via SQL)
-- Ideas filed this session: none
-- Bugs recorded: #1955 [resolved] (rule91 gate tid loop), #1961 [resolved] (glm52 ring nccl timeout too short)
-- Bugs referenced (not touched): #1912 [resolved], #1932 [resolved], #1935 [investigating]
-- Files touched: cline_task_ledger.md (appended 3 rows), /home/emsuserver/glm52_durable_patch.sh on WOPR, /tmp/glm52_v34_failfast.sh on all 6 ring boxes (patched + backup)
-- Files verified-not-edited: dist/extension.js, /etc/litellm/_router_core.py, Cline_Obedience.md
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>- [x] Pin extension-gates idea ID (#18896 deployed, P0)
-- [x] Locate Cline extension dist/extension.js path
-- [x] Verify v4 structural gate is live (U+2550 / PICKUP PROMPT / Open threads / Reference IDs / no task-id leg)
-- [x] Verify claimed-file existence check + TOOL ENVELOPE LEAK guard present (diff-confirmed)
-- [x] Check for false-rejection evidence in recent Cline task history (bug #1952)
-- [x] Verify router bright-lines live on WOPR _router_core.py (STEERING FIDELITY + VERIFY BEFORE CLAIM)
-- [x] Confirm zero Anthropic injection
-- [x] Sync Cline_Obedience.md violations #19/#20 entries (already present, no edits needed)
-- [x] Reconcile #18896 + file final pickup prompt (recorded bug #1955, ledger row appended)
-- [x] Explain vLLM async KeyError durable flap fix open thread to Ruben
-- [x] Answer "are both open threads taken care of" — rule-91 gates YES (closed), vLLM flap NO (human-gated)
-- [x] vLLM ring flap task: probe ring live state (crash-looping every ~25 min)
-- [x] vLLM ring flap task: get crash signature from KAIZEN (glm52_host_unreachable, NOT async KeyError)
-- [x] vLLM ring flap task: verify all 6 boxes LAN-reachable (all UP)
-- [x] vLLM ring flap task: read launch script (v34: NCCL_TIMEOUT=300 too short, logs lo
 ```

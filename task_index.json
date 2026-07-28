@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-28T15:20:18.766Z",
+ "generated_at": "2026-07-28T16:38:27.366Z",
  "counts": {
   "parsed": 1,
   "reused": 225,
@@ -96215,13 +96215,13 @@
   },
   "1785180988213": {
    "task_id": "1785180988213",
-   "mtime": 1785182191926,
+   "mtime": 1785253926353,
    "created_at": "2026-07-27T19:36:28.213Z",
-   "last_modified": "2026-07-27T19:56:31.926Z",
-   "size_kb": 449,
-   "turn_count": 61,
+   "last_modified": "2026-07-28T15:52:06.353Z",
+   "size_kb": 590,
+   "turn_count": 116,
    "title": "## 8 — #SLS · student lifecycle state repair + backlog\n\n```\n#SLS — EMSU Student Lifecycle State. The tool itself is lying in two places; fix it, then work the queue it produces.\n\nRULES: DESCRIBE before SQL (Students has NO `status` column — use get_student_lifecycle_state / get_student_360). Moodle tables are UNPREFIXED in moodle_c_live (RC-5). Act rather than list. Server writes via ssh_command with sudo.\n\nBUG 1 — ARCHIVED-ACCOUNT INVERSION (#19439, P0, bug library #2026). The moodle_user gate reports the ARCHIVED account as canonical and the real one as \"STALE,\" and hands back a moodle_url_repoint repair that would point students at their archived uid. Two live proofs: Erik Chavez 26824T-0",
-   "pickup_prompt": null,
+   "pickup_prompt": "epair + cohort sweep complete\"\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #SLS follow-up — archived inversion sweep + payment gate cross-check.\n\nWhere we left off (verified 2026-07-28T08:51 PT):\n- pickCanonicalAccount fix deployed in StudentLifecycleState.php (backup .bak-archived-20260727), php -l clean, regression-verified on Erik Chavez (→54215) and Mark Kavai (→53050)\n- Payment false-pass fix verified live on 26720FT-11\n- Cohort scan complete (120 students, 14d), categories filed\n- Handoff entry written to HANDOFF_NOTES.md\n\nOpen threads to drive next:\n1. Run full 103-student archived-inversion sweep: re-scan the 103 and confirm all now resolve to correct uid (human-only decision - no idea)\n2. Reverse any moodle_url_repoint already applied in the wrong direction: check orchestrator_event_log for repoint operations targeting the 103 archived accounts (human-only decision - no idea)\n3. Cross-check ~43 payment gate students against #PAY: some may be auto-void victims (our bug #19492), not non-payers — do NOT dun victims (human-only decision - no idea)\n4. 26120FT-01 Andrew Sanchez: section 26120FT missing from Classes table — add the section or this student can never get a Class_Enrollments row (human-only decision - no idea)\n5. CS round-robin for payment_plan_delinquent: 26520FT-09 and 26720FT-16 (human-only decision - no idea)\n6. 26920FT-17 Syeda Samreen Fatima: is_duplicate=1 / dropped, NOT a stale outlier — the stale_outlier category had zero hits in this cohort (human-only decision - no idea)\n\nReference IDs:\n- Ticket: #SLS\n- Bug library: #2026 (archived inversion), #2036 (auto-void)\n- Ideas: #19439 (SLS archived fix — retry, shipped inline)\n- Files touched: /var/www/emtskills/lib/StudentLifecycleState.php, /var/www/emtskills/docs/HANDOFF_NOTES.md\n- Backups: .bak-archived-20260727, .bak-paygate-20260727\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
     "2026": null,
     "2027": null,
@@ -96268,27 +96268,36 @@
     "19437": null,
     "19439": null,
     "19454": null,
+    "19458": null,
     "19464": null,
     "19465": null,
+    "19486": "deployed",
+    "19487": "deployed",
+    "19488": "deployed",
+    "19489": "deployed",
     "19490": null,
+    "19491": null,
     "19492": null,
     "19495": null,
     "19500": null,
     "19509": null,
     "19510": null,
-    "71121": null
+    "19704": null,
+    "71121": null,
+    "178501": null
    }
   },
   "1785181029165": {
    "task_id": "1785181029165",
-   "mtime": 1785211629608,
+   "mtime": 1785255763034,
    "created_at": "2026-07-27T19:37:09.165Z",
-   "last_modified": "2026-07-28T04:07:09.608Z",
-   "size_kb": 276,
-   "turn_count": 127,
+   "last_modified": "2026-07-28T16:22:43.034Z",
+   "size_kb": 353,
+   "turn_count": 152,
    "title": "## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti)\n\n```\n#STUDENT — EMSU instructor escalation. Dan Taylor (SF instructor) regarding Aahana Chakravartti, student 26613FT-18.\n\nESTABLISHED (verified 2026-07-25 19:52 PT):\n- Inbound email 88922 from Dan Taylor (daleta@msn.com), 14 attachments. NO ticket created, student_id never extracted, classified \"internal\" — which is why it never became a ticket.\n- Outbound reply 182471 sent 19:09 from info@emsuniversity.com to daleta@msn.com. The HTML body was truncated in the DB read, so what we actually said is UNKNOWN.\n- Aahana: completed_nremt, graduated Jun 21, NREMT cleared Jul 6.\n- Two ProTransport NDA PDFs (Jun 26, Jul 20) point at an ext",
-   "pickup_prompt": "und email body_preview CSS-only bug\n- [ ] Ship all three ideas\n- [ ] Close with PICKUP PROMPT\n</task_progress>\n</use_mcp_tool>",
+   "pickup_prompt": " Vicky has the full breakdown.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #9 — Dan Taylor escalation / 3 ideas ship.\n\nWhere we left off (verified 2026-07-28 09:22 PT):\n- Dan escalation resolved, follow-up to Dan sent, handoff to Vicky sent\n- #19539 [shipped] — externship requests monitored, handed to Vicky\n- #19537 [partial] — INTERNAL_STAFF_SPLIT_V1 coded in EmailClassifier.php and cron exists\n- #19535 [not shipped] — root cause identified (non-mailer.php path writes CSS-only body_preview)\n\nOpen threads:\n1. #19537 [proposed] — VERIFY cron_internal_staff_escalation_rescue.php is on crontab (check crontab -l on WOPR). If installed: promote to shipped. If not: add to crontab (cron/ file likely needs crontab entry).\n2. #19535 [proposed] — TRACE which code path wrote the CSS-only body_preview for outbound 182471. The sendEmail() in mailer.php strip_tags() would not pass raw CSS through. Check agent_send_or_draft, Postmark webhooks, and the specific send path that 182471 used (send_source = '' on that row).\n3. #19539 [shipped] — monitor if Vicky resolves #2322 and #2490 within 72h; if not, escalate per original plan.\n\nReference IDs:\n- Ticket: 21544 (In Progress)\n- Ideas filed: #19535 (body-loss), #19537 (classification), #19539 (externship monitor)\n- Files touched: HANDOFF_NOTES.md\n- Emails sent: Dan Taylor (daleta@msn.com), Vicky (vyu@emsuniversity.com)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════</result>\n<task_progress>\n- [x] Student investigation complete (SLS, 360, externship, comms history)\n- [x] Tier-1 follow-up sent to Dan Taylor\n- [x] Tier-1 handoff sent to Vicky\n- [x] Ticket 21544 commented\n- [x] #19537 — INTERNAL_STAFF_SPLIT_V1 coded in EmailClassifier.php (constant, isHumanStaffSender logic)\n- [ ] #19537 — VERIFY cron_internal_staff_escalation_rescue.php is on crontab\n- [ ] #19535 — TRACE non-mailer.php code path that wrote CSS-only body_preview for outbound 182471\n- [x] #19539 — Externship requests #2322/#2490 confirmed in ExternshipRequest table, status=escalated, handed to Vicky\n</task_progress>\n</attempt_completion>",
    "ideas": {
+    "2023": null,
     "2026": null,
     "2027": null,
     "2039": null,
@@ -96319,7 +96328,8 @@
     "19539": "proposed",
     "19545": null,
     "19560": null,
-    "21544": null
+    "21544": null,
+    "815007": null
    }
   },
   "1785181049767": {
@@ -96360,13 +96370,13 @@
   },
   "1785183122795": {
    "task_id": "1785183122795",
-   "mtime": 1785251866637,
+   "mtime": 1785252519883,
    "created_at": "2026-07-27T20:12:02.795Z",
-   "last_modified": "2026-07-28T15:17:46.637Z",
-   "size_kb": 3570,
-   "turn_count": 757,
+   "last_modified": "2026-07-28T15:28:39.883Z",
+   "size_kb": 3927,
+   "turn_count": 769,
    "title": "Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue another 45 minutes:\n\n-\n## Direct answer on Cesar\n\n**I did nothing to Cesar. Three read-only commands, over its existing tunnel:** `ulimit -Sl/-Hl`, `grep memlock /etc/security/limits.d/`, and a `python3` version print. No writes, no restart, no config edit, no TP=2 launch attempted on it. Verified after the fact: ring `:8210` returns HTTP 200 with 12 concurrent requests and 211,399 generation tokens, Cesar at 96% GPU, **uptime 8 days 16:34** (proving it was never restarted), load climbing 1.76 → 3.10 = actively serving.\n\nMy wording \"including Cesar which works\" was sloppy and implied Cesar runs TP=2. It do",
-   "pickup_prompt": "cy ever becomes the priority).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task — GLM-5.2 speed/max_num_seqs question CLOSED via ideal build reference; Desktop doc delivered.\n\nWhere we left off (verified 2026-07-28 01:59 PT):\n- DELIVERED: ~/Desktop/GLM52_IDEAL_BUILD_ANSWER_2026-07-28.md — the final answer, referenced against the canonical /var/www/emtskills/docs/GLM52_IDEAL_BUILD.md.\n- DECISION FINAL (do not re-litigate): leave max_num_seqs at 128 (set in the 07-27 rebuild, proven correct — ceiling never found, c=64 → 48.78 tok/s aggregate, KV 0.2-0.3%, scheduler never queued). Ruben's leave-it-alone call is right.\n- THREE OF MY EARLIER CLAIMS FORMALLY RETRACTED in the doc: (1) \"max_num_seqs unset\" — wrong, it's 128; (2) \"set it to 16\" — wrong, doctrine is more concurrency; (3) \"N=8 sweet spot / N=128 collapse\" — superseded by the ideal build's measured table (my sweep never completed).\n- SPEED RECONCILIATION CANONICAL: single-stream tok/s = PP=6 pipeline bubble, not hardware. Interactive feel = TTFB ~1.5s + streaming (verified live 01:22 PT). Ruben's days of fast windows are ground truth. Batch load ~60-70 tok/s aggregate (verified 07-26).\n- CANONICAL REFERENCE for all future GLM-5.2 questions: /var/www/emtskills/docs/GLM52_IDEAL_BUILD.md (read it FIRST before any ring claim, per rule 271/294).\n\nOpen threads to drive next (unchanged from prior completion except #3):\n1. DRAIN the 3,878 ready_for_review backlog — no drain policy exists. Not yet filed.\n2. EXECUTOR BUILD QUALITY — generates SQL failing syntax checks (tests_sql_syntax). Run failure_category histogram over 24h. Not yet filed.\n3. #19685 [executing] (verified: reconcile_ideas returned status=in_progress dev_stage=auditing) — BROADCAST canonical ring numbers. SCOPE UPDATE: the numbers now live in GLM52_IDEAL_BUILD.md; this idea reduces to pointing frankenstein_registry.yaml + frankenstein_architecture MCP at that doc. NO max_num_seqs change (decision: leave at 128).\n4. #19686 [executing] (verified: status=in_progress dev_stage=auditing) — Argus registry row + confirm Argus client requests model=argus-chat.\n5. #19558 [blocked] (verified: status=approved dev_stage=impl_failed) — surface-label truth fix. Hand-ship if it stays blocked.\n6. #19571 [proposed] (verified: status=proposed dev_stage=idle) — REWRITE around PP=6 + prefill; drop \"decode wedge\" framing entirely. NOTE: ideal build doc now covers most of this — consider closing as superseded by GLM52_IDEAL_BUILD.md.\n7. #19670 [deployed] (verified: status=deployed dev_stage=ready_for_review) — REVIEW.\n8. #19672 [deployed] (verified: status=deployed dev_stage=ready_for_review) — REVIEW knowledge gates. Acceptance: re-file duplicate of #19563 verbatim; must be REJECTED pointing at bug #2062.\n9. #19673 [deployed] (verified: status=deployed dev_stage=ready_for_review) — REVIEW prefill fix, re-measure ratio (was 57:1, target <10:1).\n10. Fix glm-5.2-local -> :8210 404 (ring serves only glm-5.2-15pct) so direct probes stop reading a healthy ring as dead.\n11. Re-reconcile the 11 previously-blocked ideas (#19542, #19543, #19544, #19546, #19547, #19548, #19549, #19564, #19575, #19507, #19508).\n12. Artemis physical recovery — still dead (human-only decision — no idea, RUBEN ACTION).\n13. Cicero MLX restart — paste at ~/Desktop/CICERO_PASTE_20260727.txt (human-only decision — no idea).\n14. Jon's Amcrest camera — tool live + verified; waiting on IP + credentials (human-only decision — no idea, JON ACTION).\n\nRefer",
+   "pickup_prompt": " up whatever's still spinning.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task — Mac sluggishness rescue: waiting on Ruben to run `sudo killall launchservicesd` in a terminal.\n\nWhere we left off (verified 2026-07-28 08:27 PT):\n- ROOT CAUSE: launchservicesd (PID 382, 4 days old) spinning 267-372% CPU in a SecTrustCopyAppleTrustAnchors loop. Load avg 134-250. WindowServer 98-199% is downstream (GUI event queue starvation). No zombies. Memory fine (75% free) — this is pure CPU starvation.\n- DONE: killed Reach Cicero applet (PID 95008, my build, didn't respawn), 9 user-level hogs (DictationIM, avconferenced, contactsd, contentlinkingd, callservicesd, sharingd, localspeechrecognition, speechrecognitiond, Messages Assistant Extension), z_ai MCP spinners 3x (keeps respawning from Cline windows — whack-a-mole, needs durable fix).\n- BLOCKED ON RUBEN: `sudo killall launchservicesd` in any terminal (VS Code integrated terminal Ctrl+` recommended). Backup at ~/Desktop/FIX_SLUGGISH_MAC.txt. GUI osascript password dialog failed twice (GUI too frozen to type).\n- CONSTRAINT: do NOT close any Cline windows (Ruben directive). All kills so far are user-level auto-restarting daemons only.\n\nOpen threads to drive next:\n1. VERIFY after Ruben runs the sudo command: launchservicesd PID 382 dead, load falling, GUI responsive. Then mop up coreaudiod (was 79%) and any remaining spinners.\n2. DURABLE FIX for z_ai MCP spin loop: `npm exec @z_ai/mcp-server` respawns from Cline windows and spins 45-72% CPU repeatedly. Restart or disable the z_ai MCP server in Cline settings (walk Ruben through it — do NOT close his windows).\n3. INVESTIGATE what triggered the launchservicesd SecTrust loop (unsigned applet checkins? VS Code helper churn?) so it doesn't recur after 4 days uptime. Consider scheduling a launchservicesd restart or an LS db health check.\n4. THEN resume the queued frankenstein-llm work from the compressed session memory (2026-07-28T15:10Z): glm-5.2-local :8210 404 fix (APPROVED by Ruben), verify glm-5.2-local in frankenstein-llm + frankenstein-tools, hand-ship #19558 [blocked] (verified: status=approved dev_stage=impl_failed), rewrite #19571 [proposed] (verified: status=proposed dev_stage=idle) around GLM52_IDEAL_BUILD.md.\n5. Cicero MLX still not serving on :11520 (Ruben ran the command via VS Code remote; .9/.155 alive but nothing listening). Check with him after the machine is usable.\n6. Artemis confirmed UP (:8000 HTTP 200 gpt-oss-120b) — no action needed.\n\nReference IDs:\n- Ideas: #19558 [blocked], #19571 [proposed], #19670 [deployed], #19672 [deployed], #19673 [deployed], #19685 [executing], #19686 [executing], #19563 [rejected]\n- Files: ~/Desktop/FIX_SLUGGISH_MAC.txt (new), ~/Desktop/GLM52_IDEAL_BUILD_ANSWER_2026-07-28.md, /var/www/emtskills/docs/GLM52_IDEAL_BUILD.md\n- Gate token: 372713ccc2c885a15fe019ef\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] Snapshot CPU/mem/zombies/load — launchservicesd 300%+ is the culprit (SecTrust loop)\n- [x] Kill z_ai MCP spinners + Reach Cicero applet + 9 user-level CPU hogs (load 190 -> 126)\n- [x] GUI password dialog attempted twice — GUI too frozen for Ruben to type\n- [x] Give Ruben the one-line Terminal command (sudo killall launchservicesd) + backup file on Desktop\n- [ ] Verify load drops after he runs it, then mop up + durable z_ai fix\n</task_progress>\n</attempt_completion>",
    "ideas": {
     "1685": null,
     "1687": null,

@@ -6,16 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/28/2026, 2:52:43 PM PT | window: last 72h | 102 tasks | index total 257 (parsed 1, cached 256)
+Generated: 7/28/2026, 3:52:43 PM PT | window: last 72h | 101 tasks | index total 257 (parsed 2, cached 255)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785272558620` | 7/28/2026, 2:49:21 PM | 275 | 1023KB | Stopping here per your correction — noted that the schedule source is https://emsuniversit |
+| `1785267857397` | 7/28/2026, 3:52:42 PM | 460 | 1600KB | Link for instructor login on top right of emsuniversity.com does not go to the proper plac |
+| `1785272558620` | 7/28/2026, 3:25:01 PM | 307 | 1066KB | Stopping here per your correction — noted that the schedule source is https://emsuniversit |
+| `1785266982412` | 7/28/2026, 3:12:43 PM | 148 | 652KB | Do we have a page or tool that helps us to calculate the STRF quarterly reports? If so, ca |
 | `1785258502219` | 7/28/2026, 1:59:33 PM | 978 | 2936KB | # TDSHS |
 | `1785270520347` | 7/28/2026, 1:57:09 PM | 134 | 1950KB | I need a button on Telephony where i turn off AI from answering first in Admin areas Red b |
 | `1785267604245` | 7/28/2026, 1:56:41 PM | 118 | 701KB | Pick up task — Fix CFA Voice 52% short-leg rate and broken DEADMAN escalation pipeline. Tw |
-| `1785267857397` | 7/28/2026, 1:53:33 PM | 226 | 903KB | Link for instructor login on top right of emsuniversity.com does not go to the proper plac |
-| `1785266982412` | 7/28/2026, 1:49:14 PM | 124 | 623KB | Do we have a page or tool that helps us to calculate the STRF quarterly reports? If so, ca |
 | `1785266802256` | 7/28/2026, 1:40:18 PM | 136 | 607KB | It appears that I have Frankenstein LLM windows that are getting stalled out trying to use |
 | `1785266083468` | 7/28/2026, 1:14:06 PM | 162 | 485KB | Play Dr. of Frankenstein for 90 minutes and use time stamps to make sure that you were wor |
 | `1785267580861` | 7/28/2026, 12:52:17 PM | 94 | 310KB | Pick up task — Build the grievance manual-first toggle with visible auto/manual switch + A |
@@ -111,13 +111,53 @@ Generated: 7/28/2026, 2:52:43 PM PT | window: last 72h | 102 tasks | index total
 | `1785012025445` | 7/25/2026, 8:24:57 PM | 1650 | 5172KB | #GLM |
 | `1784995580054` | 7/25/2026, 7:34:23 PM | 316 | 1067KB | #C |
 | `1785014290076` | 7/25/2026, 6:25:21 PM | 697 | 3951KB | #Argus |
-| `1785019092215` | 7/25/2026, 3:41:43 PM | 24 | 47KB | I noticed here while running Claude opus that I have it at 200 K but it keeps making these |
 
 ---
 
 ## Per-window detail
 
-### `1785272558620` — 7/28/2026, 2:49:21 PM PT — 275 turns
+### `1785267857397` — 7/28/2026, 3:52:42 PM PT — 460 turns
+
+**Original task:**
+
+```
+Link for instructor login on top right of emsuniversity.com does not go to the proper place. Instesd it resolves to: https://emtrefresher.com/emtskills/  (which is 404) - /emtskills folder is at emsuniversity.com. What hallucination caused this? Also Vicky reports because of this matrix and all websites for EMT are down. I'm searching on this now. Fix and do an RCA
+```
+
+**Ideas referenced:** #11925, #128196, #128295, #1426, #15158, #15803, #162240, #16594, #166534, #178501, #19458, #19460, #19490, #19491, #19495, #19511, #19545, #19558, #19594, #19615, #19690 [deployed], #19704, #19714 [proposed], #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #198754, #2044, #2056, #2084, #2085, #2563, #334155, #374151, #64748, #8212, #8594, #9202, #92400, #9679
+
+**Last PICKUP PROMPT:**
+
+```
+t this kind of false referral.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1785012025445 — EMSU incident wrap-up: all fixes verified + QuickBooks email search complete.
+
+Where we left off (verified 2026-07-28 13:53 PT):
+- Instructor/Student Login links correct on live page ✅
+- Postfix mail queue flushed (374 messages delivered) ✅
+- Zero Intuit/QuickBooks emails TO rubenmajor found today
+- fresnoemt.com = agent hallucination (not an EMSU domain)
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #19791 [proposed] — Comprehensive mu-plugin audit for home_url() paths
+2. #19792 [proposed] — Shared-DB RCA: fix siteurl or define EMSU_SKILLS_BASE_URL
+3. #19794 [proposed] — fresnoemt.com false referral audit
+4. Have Intuit resend the QuickBooks document now that mail queue is clear
+
+Reference IDs:
+- Ideas filed: #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed]
+- Tracking document: /Users/rubenmajor/Desktop/EMSU_issues_tracker_2026-07-28.md
+- Files changed: emsu-modern-design.php, emsu-global-design.php (login links)
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785272558620` — 7/28/2026, 3:25:01 PM PT — 307 turns
 
 **Original task:**
 
@@ -137,6 +177,51 @@ Where we left off (verified 2026-07-28 13:59 PT):
 **Ideas referenced:** #11925, #15158, #1565, #178501, #19217, #19224, #19437, #19456, #19458, #19460, #19490, #19491, #19493, #19518, #19543, #19558, #19576, #19580, #19581, #19585, #19594, #19615, #19640, #19642, #19644, #19686, #19690 [deployed], #19704, #19714 [proposed], #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19779 [executing], #19780 [executing], #19781 [executing], #19786 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #1993, #2009, #2015, #2025, #2042, #2084, #2085, #334155, #34495, #401956, #401957, #64748
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785266982412` — 7/28/2026, 3:12:43 PM PT — 148 turns
+
+**Original task:**
+
+```
+Do we have a page or tool that helps us to calculate the STRF quarterly reports? If so, can you give me the link to that as well as the proposed numbers for the second 1:45 thousand 26 which should include the dates of April 1, 2026 through June 30 2026? See this document for referencehttps://drive.google.com/drive/search?q=raven
+```
+
+**Ideas referenced:** #0369, #0891, #1368, #1565, #15803, #166534, #2563, #334155, #475569, #50169, #5641, #60093, #6366, #64748, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+e-strf
+
+**Due:** July 31, 2026
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — STRF Q2 2026: review filled PDF, reconcile flagged students, file with BPPE.
+
+Where we left off (verified 2026-07-28 3:12 PM PT):
+- Filled PDF: https://emsuniversity.com/STRF_Q2_2026_FILLED_FORM.pdf (2 pages, all line items)
+- Admin portal: emsuniversity.com/personnel/institutional_compliance.php?tab=bppe-strf
+- Server artifacts in /var/www/emtskills/personnel/uploads/institutional_compliance/strf/2026-Q2/
+- Q2 numbers: A=505, B=505, C=419, D=$857,000, E=30, E-charges=$60,000, F=$0.00
+- 5 manual-review students flagged: 26613FT-49, 26813FT-21, 26814T-26, 26613FT-48, 26813FT-52
+
+Open threads to drive next:
+1. (human-only decision - no idea) — Reconcile 5 manual-review students (no QB record); check QuickBooks by name
+2. (human-only decision - no idea) — Upload filled PDF to Google Drive folder and share with Vicky
+3. (human-only decision - no idea) — File BPPE STRF by July 31 deadline
+
+Reference IDs:
+- PDF: https://emsuniversity.com/STRF_Q2_2026_FILLED_FORM.pdf
+- Raven Drive: 1LtNzcSVNzD-YbcTy7qDYVAMILfvq1xW1
+- Server: /var/www/emtskills/personnel/uploads/institutional_compliance/strf/2026-Q2/
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1785258502219` — 7/28/2026, 1:59:33 PM PT — 978 turns
 
@@ -294,91 +379,6 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [x] Step 5 — DEADMAN threshold lowered 72→48 in cron_deadman_ruben_pipeline.php plus full DEADMAN explanation
 - [x] File ideas, handoff notes, ship with pickup prompt
 </task_progress>
-</attempt_completion>
-```
-
-### `1785267857397` — 7/28/2026, 1:53:33 PM PT — 226 turns
-
-**Original task:**
-
-```
-Link for instructor login on top right of emsuniversity.com does not go to the proper place. Instesd it resolves to: https://emtrefresher.com/emtskills/  (which is 404) - /emtskills folder is at emsuniversity.com. What hallucination caused this? Also Vicky reports because of this matrix and all websites for EMT are down. I'm searching on this now. Fix and do an RCA
-```
-
-**Ideas referenced:** #11925, #128196, #1426, #15158, #15803, #162240, #178501, #19458, #19460, #19490, #19491, #19558, #19594, #19615, #19690 [deployed], #19704, #19714 [proposed], #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #2084, #2085, #2563, #334155, #64748, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-t this kind of false referral.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1785012025445 — EMSU incident wrap-up: all fixes verified + QuickBooks email search complete.
-
-Where we left off (verified 2026-07-28 13:53 PT):
-- Instructor/Student Login links correct on live page ✅
-- Postfix mail queue flushed (374 messages delivered) ✅
-- Zero Intuit/QuickBooks emails TO rubenmajor found today
-- fresnoemt.com = agent hallucination (not an EMSU domain)
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #19791 [proposed] — Comprehensive mu-plugin audit for home_url() paths
-2. #19792 [proposed] — Shared-DB RCA: fix siteurl or define EMSU_SKILLS_BASE_URL
-3. #19794 [proposed] — fresnoemt.com false referral audit
-4. Have Intuit resend the QuickBooks document now that mail queue is clear
-
-Reference IDs:
-- Ideas filed: #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed]
-- Tracking document: /Users/rubenmajor/Desktop/EMSU_issues_tracker_2026-07-28.md
-- Files changed: emsu-modern-design.php, emsu-global-design.php (login links)
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785266982412` — 7/28/2026, 1:49:14 PM PT — 124 turns
-
-**Original task:**
-
-```
-Do we have a page or tool that helps us to calculate the STRF quarterly reports? If so, can you give me the link to that as well as the proposed numbers for the second 1:45 thousand 26 which should include the dates of April 1, 2026 through June 30 2026? See this document for referencehttps://drive.google.com/drive/search?q=raven
-```
-
-**Ideas referenced:** #0369, #0891, #1368, #1565, #15803, #166534, #2563, #334155, #475569, #50169, #5641, #60093, #6366, #64748, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-ate: July 31, 2026** (3 days).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — STRF Q2 2026: review filled PDF, adjust field positions, or file with BPPE.
-
-Where we left off (verified 2026-07-28 1:48 PM PT):
-- Filled PDF at https://emsuniversity.com/personnel/uploads/institutional_compliance/strf/2026-Q2/STRF_Q2_2026_FILLED_FORM.pdf
-- Admin portal: emsuniversity.com/personnel/institutional_compliance.php?tab=bppe-strf
-- All server artifacts in /var/www/emtskills/personnel/uploads/institutional_compliance/strf/2026-Q2/
-- Q2 numbers: A=505, B=505, C=419, D=$857,000, E=30, F=$0.00
-- 5 manual-review students need QB reconciliation
-
-Open threads:
-1. (human-only decision - no idea) — Review the filled PDF: verify line positions and formatting
-2. (human-only decision - no idea) — Reconcile 5 manual-review students (no QB record) 
-3. (human-only decision - no idea) — Upload filled PDF to Google Drive and share link with Vicky
-4. (human-only decision - no idea) — File BPPE STRF by July 31 deadline
-
-Reference IDs:
-- Files: /var/www/emtskills/personnel/uploads/institutional_compliance/strf/2026-Q2/STRF_Q2_2026_FILLED_FORM.pdf
-- Raven: 1LtNzcSVNzD-YbcTy7qDYVAMILfvq1xW1
-- BPPE CSV: STRF_Q2_2026_for_BPPE.csv (same directory)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 
@@ -4286,13 +4286,3 @@ Got it, that helps. That `No-dead-end follow-up:` prefix is an internal Email AI
   - **`source /var/www/emtskills/.env` does NOT provide `LITELLM_API_KEY`** — a shell probe using `Bearer $LITELLM_API_KEY` produced `401 Unauthorized`. The key/base MUST come from PHP constants `LITELLM_API_KEY` / `LITELLM_BASE_URL` in `/var/www/emtskills/config.php`.
   - Repo-wide `grep -rn` unde
 ```
-
-### `1785019092215` — 7/25/2026, 3:41:43 PM PT — 24 turns
-
-**Original task:**
-
-```
-I noticed here while running Claude opus that I have it at 200 K but it keeps making these comments about needing the summarize the task very often. So it is compressing and summarizing and compressing and summarizing. I feel like it's wasting a lot of time doing that but at the same time I wanna make sure it's not losing any information that is important when it is compressing. Can you tell me what's going on with us in the best strategy for this? I do wanna make sure that we're cutting costs but at the same time I'm curious if we are losing context because we are compressing in Opus? Can you
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

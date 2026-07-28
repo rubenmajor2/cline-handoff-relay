@@ -6,17 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/28/2026, 1:52:42 PM PT | window: last 72h | 103 tasks | index total 256 (parsed 5, cached 251)
+Generated: 7/28/2026, 2:52:43 PM PT | window: last 72h | 102 tasks | index total 257 (parsed 1, cached 256)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785270520347` | 7/28/2026, 1:52:41 PM | 89 | 1890KB | I need a button on Telephony where i turn off AI from answering first in Admin areas Red b |
-| `1785267857397` | 7/28/2026, 1:52:37 PM | 217 | 888KB | Link for instructor login on top right of emsuniversity.com does not go to the proper plac |
-| `1785258502219` | 7/28/2026, 1:52:10 PM | 949 | 2866KB | # TDSHS |
+| `1785272558620` | 7/28/2026, 2:49:21 PM | 275 | 1023KB | Stopping here per your correction — noted that the schedule source is https://emsuniversit |
+| `1785258502219` | 7/28/2026, 1:59:33 PM | 978 | 2936KB | # TDSHS |
+| `1785270520347` | 7/28/2026, 1:57:09 PM | 134 | 1950KB | I need a button on Telephony where i turn off AI from answering first in Admin areas Red b |
+| `1785267604245` | 7/28/2026, 1:56:41 PM | 118 | 701KB | Pick up task — Fix CFA Voice 52% short-leg rate and broken DEADMAN escalation pipeline. Tw |
+| `1785267857397` | 7/28/2026, 1:53:33 PM | 226 | 903KB | Link for instructor login on top right of emsuniversity.com does not go to the proper plac |
 | `1785266982412` | 7/28/2026, 1:49:14 PM | 124 | 623KB | Do we have a page or tool that helps us to calculate the STRF quarterly reports? If so, ca |
 | `1785266802256` | 7/28/2026, 1:40:18 PM | 136 | 607KB | It appears that I have Frankenstein LLM windows that are getting stalled out trying to use |
 | `1785266083468` | 7/28/2026, 1:14:06 PM | 162 | 485KB | Play Dr. of Frankenstein for 90 minutes and use time stamps to make sure that you were wor |
-| `1785267604245` | 7/28/2026, 1:05:25 PM | 94 | 614KB | Pick up task — Fix CFA Voice 52% short-leg rate and broken DEADMAN escalation pipeline. Tw |
 | `1785267580861` | 7/28/2026, 12:52:17 PM | 94 | 310KB | Pick up task — Build the grievance manual-first toggle with visible auto/manual switch + A |
 | `1785267620046` | 7/28/2026, 12:49:46 PM | 76 | 180KB | Pick up task — Verify Argus gets clinerules steering injection via steering_builder.php, c |
 | `1785266096234` | 7/28/2026, 12:45:47 PM | 112 | 885KB | Play Dr. of Frankenstein EXECUTOR for 90 minutes and use time stamps to make sure that you |
@@ -111,64 +112,33 @@ Generated: 7/28/2026, 1:52:42 PM PT | window: last 72h | 103 tasks | index total
 | `1784995580054` | 7/25/2026, 7:34:23 PM | 316 | 1067KB | #C |
 | `1785014290076` | 7/25/2026, 6:25:21 PM | 697 | 3951KB | #Argus |
 | `1785019092215` | 7/25/2026, 3:41:43 PM | 24 | 47KB | I noticed here while running Claude opus that I have it at 200 K but it keeps making these |
-| `1785010751523` | 7/25/2026, 2:23:36 PM | 56 | 398KB | #NVDIA GPU / NVME Upgrade |
-| `1785008234643` | 7/25/2026, 2:09:47 PM | 144 | 408KB | Mysql MCP is flapping |
 
 ---
 
 ## Per-window detail
 
-### `1785270520347` — 7/28/2026, 1:52:41 PM PT — 89 turns
+### `1785272558620` — 7/28/2026, 2:49:21 PM PT — 275 turns
 
 **Original task:**
 
 ```
-I need a button on Telephony where i turn off AI from answering first in Admin areas Red button that only Master Admin can use that turns off VAPI from answering or can turn it back on. Only mmaster Admin. Test and make sure working -> https://www.emsuniversity.com/emtskills/routes/telephony_hub.php
-```
-
-**Ideas referenced:** #001018, #059669, #062017, #166534, #2563, #334155, #374151, #475569, #64748, #92400, #9733, #9734
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785267857397` — 7/28/2026, 1:52:37 PM PT — 217 turns
-
-**Original task:**
-
-```
-Link for instructor login on top right of emsuniversity.com does not go to the proper place. Instesd it resolves to: https://emtrefresher.com/emtskills/  (which is 404) - /emtskills folder is at emsuniversity.com. What hallucination caused this? Also Vicky reports because of this matrix and all websites for EMT are down. I'm searching on this now. Fix and do an RCA
-```
-
-**Ideas referenced:** #11925, #128196, #1426, #15158, #15803, #162240, #178501, #19458, #19460, #19490, #19491, #19558, #19594, #19615, #19690 [deployed], #19704, #19714 [proposed], #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #2084, #2085, #2563, #334155, #64748, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-w since the queue was flushed.
+Stopping here per your correction — noted that the schedule source is https://emsuniversity.com/emtskills/routes/view_class_schedule.php (a live webpage the students use), NOT a Google Sheets doc. I had wrongly pulled the Google Sheets link from Course_Schedules.googlesheeturl column instead. No further action taken this turn.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #1785012025445 — QuickBooks invoice email found + all fixes verified.
 
-Where we left off (verified 2026-07-28 13:48 PT):
-- Instructor/Student Login links correct on live page ✅
-- Postfix mail queue flushed (374 delivered) ✅
-- QuickBooks invoice email found in info@ mailbox ✅
+Pick up task — TDSHS: correct schedule source + remaining open items
 
-Open threads to drive next:
-1. #19791 [proposed] — Comprehensive mu-plugin audit for home_url() paths
-2. #19792 [proposed] — Shared-DB RCA: fix siteurl or define EMSU_SKILLS_BASE_URL
-3. QuickBooks invoice in info@ — from quickbooks@notification.intuit.com, sent to mr.toomuch1996@gmail.com, PDF attached asking for payment
-
-Reference IDs:
-- Ideas filed: #19791 [proposed], #19792 [proposed], #19793 [proposed]
-- Tracking doc: /Users/rubenmajor/Desktop/EMSU_issues_tracker_2026-07-28.md
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
+Where we left off (verified 2026-07-28 13:59 PT):
+- COR
 ```
 
-### `1785258502219` — 7/28/2026, 1:52:10 PM PT — 949 turns
+**Ideas referenced:** #11925, #15158, #1565, #178501, #19217, #19224, #19437, #19456, #19458, #19460, #19490, #19491, #19493, #19518, #19543, #19558, #19576, #19580, #19581, #19585, #19594, #19615, #19640, #19642, #19644, #19686, #19690 [deployed], #19704, #19714 [proposed], #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19779 [executing], #19780 [executing], #19781 [executing], #19786 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #1993, #2009, #2015, #2025, #2042, #2084, #2085, #334155, #34495, #401956, #401957, #64748
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785258502219` — 7/28/2026, 1:59:33 PM PT — 978 turns
 
 **Original task:**
 
@@ -226,6 +196,145 @@ When done, run order 66.
 - [ ] Add original TDSHS request emails to each due-date folder
 - [ ] Approve #19786 and implement KAIZEN rules
 </task_progress>
+</attempt_completion>
+```
+
+### `1785270520347` — 7/28/2026, 1:57:09 PM PT — 134 turns
+
+**Original task:**
+
+```
+I need a button on Telephony where i turn off AI from answering first in Admin areas Red button that only Master Admin can use that turns off VAPI from answering or can turn it back on. Only mmaster Admin. Test and make sure working -> https://www.emsuniversity.com/emtskills/routes/telephony_hub.php
+```
+
+**Ideas referenced:** #001018, #059669, #062017, #166534, #2563, #334155, #374151, #475569, #64748, #92400, #9733, #9734
+
+**Last PICKUP PROMPT:**
+
+```
+ Flip back on to restore VAPI.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — VAPI Master Admin toggle on Telephony Hub.
+
+Where we left off (verified 2026-07-28 13:56 PT):
+- Implemented: vapi_fallback_enabled added to config_api.php whitelist
+- Implemented: MasterAdmin-only VAPI AI toggle in telephony_hub.php Call Handling section
+- Routing files (twiml_inbound.php, call_status.php) already respect the config key
+
+Open threads to drive next:
+(None — toggle is live and tested. No pending items.)
+
+Reference IDs:
+- Ticket: N/A
+- Ideas filed: none for this task
+- Files touched: api/telephony/config_api.php, routes/telephony_hub.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785267604245` — 7/28/2026, 1:56:41 PM PT — 118 turns
+
+**Original task:**
+
+```
+Pick up task — Fix CFA Voice 52% short-leg rate and broken DEADMAN escalation pipeline. Two highest-impact CFA defects from today's audit.
+
+Context:
+- #19766 [proposed] — 52% of 384 VAPI calls <60s (only 148 healthy legs). Average VAPI call 88.2s vs human 261-779s.
+- #19767 [proposed] — Multiple DEADMAN tickets 77-200h stale (TKT-20260724-A3641222, TKT-20260724-19960097, TKT-20260720-D197BA0A, etc.)
+- #19769 [proposed] — CFA cross-channel session memory
+- #19772 [proposed] — CFA shared tool palette
+
+Step 1 — Investigate VAPI voice short-legs:
+  use_mcp_tool server_name=mysql, tool_name=execute
+```
+
+**Ideas referenced:** #11925, #12018, #12605, #12606, #13553, #15158, #15404, #15405, #15406, #15783, #16152, #16154, #16475, #16732, #1745, #178501, #18316, #19458, #19460, #19490, #19491, #19558, #19585, #19604, #19690 [deployed], #19704, #19714 [proposed], #19766 [proposed], #19767 [proposed], #19769 [proposed], #19772 [proposed], #19777 [proposed], #19778 [proposed], #19794 [proposed], #19795 [deployed], #2084, #2085, #6172, #9042, #9159, #9222, #9501
+
+**Last PICKUP PROMPT:**
+
+```
+ron_deadman_ruben_pipeline.php
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #19795 - CFA Voice & DEADMAN monitoring: verify short-leg rate drop + abusive_terminated reduction
+
+Where we left off (verified 2026-07-28 13:54 PT):
+- All 3 files deployed and verified on disk, PHP lint passed, FPM reloaded 2026-07-28 13:54 PT
+- #19766 [approved] — Raised abusive_terminated thresholds (FAST_CONF 0.65 to 0.80, BASE_CONF 0.80 to 0.90, FAST_SECONDS 120 to 240)
+- #19767 [approved] — DEADMAN pipeline audited; cron exists routing to Slack
+- #19794 [approved] — Deployed: $STALE_HOURS lowered 72 to 48 in cron_deadman_ruben_pipeline.php
+- #19795 [deployed] — Same fix as #19766, CFA Voice short-leg thresholds
+
+Open threads to drive next:
+1. #19795 [deployed] — Monitor 24h short-leg rate: goal under 30% (was 55%)
+2. #19795 [deployed] — Monitor 7-day abusive_terminated: goal under 200/week (was 488)
+3. #19794 [approved] — Verify cron fires at 48h: check Slack #supcall-requests
+
+Reference IDs:
+- Ideas filed: #19766 [approved], #19767 [approved], #19794 [approved], #19795 [deployed]
+- Files touched: /var/www/emtskills/lib/voice_call_duration_guard.php, /var/www/emtskills/config/voice_call_duration_guard.config.php, /var/www/emtskills/cron/cron_deadman_ruben_pipeline.php, /var/www/emtskills/docs/HANDOFF_NOTES.md
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Step 1 — Investigate VAPI short-leg hangup causes (55% short-leg rate; 488 abusive_terminated primary cause)
+- [x] Step 2 — Root cause found: lib uses OWN hardcoded constants (0.65/0.80/120s), config file different namespace
+- [x] Step 3 — Audit DEADMAN pipeline (crons exist, tickets at 19-45h, Slack at 72h)
+- [x] Step 4 — Fix short-legs deployed: lib thresholds raised (FAST_CONF 0.65→0.80, BASE_CONF 0.80→0.90, FAST_SECONDS 120→240)
+- [x] Step 5 — DEADMAN threshold lowered 72→48 in cron_deadman_ruben_pipeline.php plus full DEADMAN explanation
+- [x] File ideas, handoff notes, ship with pickup prompt
+</task_progress>
+</attempt_completion>
+```
+
+### `1785267857397` — 7/28/2026, 1:53:33 PM PT — 226 turns
+
+**Original task:**
+
+```
+Link for instructor login on top right of emsuniversity.com does not go to the proper place. Instesd it resolves to: https://emtrefresher.com/emtskills/  (which is 404) - /emtskills folder is at emsuniversity.com. What hallucination caused this? Also Vicky reports because of this matrix and all websites for EMT are down. I'm searching on this now. Fix and do an RCA
+```
+
+**Ideas referenced:** #11925, #128196, #1426, #15158, #15803, #162240, #178501, #19458, #19460, #19490, #19491, #19558, #19594, #19615, #19690 [deployed], #19704, #19714 [proposed], #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #2084, #2085, #2563, #334155, #64748, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+t this kind of false referral.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1785012025445 — EMSU incident wrap-up: all fixes verified + QuickBooks email search complete.
+
+Where we left off (verified 2026-07-28 13:53 PT):
+- Instructor/Student Login links correct on live page ✅
+- Postfix mail queue flushed (374 messages delivered) ✅
+- Zero Intuit/QuickBooks emails TO rubenmajor found today
+- fresnoemt.com = agent hallucination (not an EMSU domain)
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #19791 [proposed] — Comprehensive mu-plugin audit for home_url() paths
+2. #19792 [proposed] — Shared-DB RCA: fix siteurl or define EMSU_SKILLS_BASE_URL
+3. #19794 [proposed] — fresnoemt.com false referral audit
+4. Have Intuit resend the QuickBooks document now that mail queue is clear
+
+Reference IDs:
+- Ideas filed: #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed]
+- Tracking document: /Users/rubenmajor/Desktop/EMSU_issues_tracker_2026-07-28.md
+- Files changed: emsu-modern-design.php, emsu-global-design.php (login links)
+═══════════════════════════════════════════════
+</result>
 </attempt_completion>
 ```
 
@@ -375,63 +484,6 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1785267604245` — 7/28/2026, 1:05:25 PM PT — 94 turns
-
-**Original task:**
-
-```
-Pick up task — Fix CFA Voice 52% short-leg rate and broken DEADMAN escalation pipeline. Two highest-impact CFA defects from today's audit.
-
-Context:
-- #19766 [proposed] — 52% of 384 VAPI calls <60s (only 148 healthy legs). Average VAPI call 88.2s vs human 261-779s.
-- #19767 [proposed] — Multiple DEADMAN tickets 77-200h stale (TKT-20260724-A3641222, TKT-20260724-19960097, TKT-20260720-D197BA0A, etc.)
-- #19769 [proposed] — CFA cross-channel session memory
-- #19772 [proposed] — CFA shared tool palette
-
-Step 1 — Investigate VAPI voice short-legs:
-  use_mcp_tool server_name=mysql, tool_name=execute
-```
-
-**Ideas referenced:** #11925, #12018, #12605, #12606, #13553, #15158, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #1745, #178501, #18316, #19458, #19460, #19490, #19491, #19558, #19585, #19604, #19690 [deployed], #19704, #19714 [proposed], #19766 [proposed], #19767 [proposed], #19769 [proposed], #19772 [proposed], #19777 [proposed], #19778 [proposed], #19794 [proposed], #19795 [deployed], #2084, #2085, #6172, #9042, #9159, #9222, #9501
-
-**Last PICKUP PROMPT:**
-
-```
-ig.php, docs/HANDOFF_NOTES.md.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — CFA Voice & DEADMAN follow-up: monitor short-leg rate + apply DEADMAN threshold reduction.
-
-Where we left off (verified 2026-07-28 13:04 PT):
-- #19766 [approved] — Raised abusive_terminated thresholds in lib/voice_call_duration_guard.php (FAST_CONF 0.65→0.80, BASE_CONF 0.80→0.90, FAST_SECONDS 120→240)
-- #19767 [approved] — DEADMAN pipeline audited; cron exists routing to Slack at 72h
-- #19795 [deployed] — Same as #19766 fix (CFA Voice short-leg thresholds)
-- #19794 [proposed] — Lower DEADMAN $STALE_HOURS from 72→48 in cron_deadman_ruben_pipeline.php
-
-Open threads to drive next:
-1. #19794 [proposed] — Apply DEADMAN threshold sed: `sed -i.bak 's/\$STALE_HOURS = 72;/\$STALE_HOURS = 48;  \/\/ 2026-07-28: lowered per #19794/' /var/www/emtskills/cron/cron_deadman_ruben_pipeline.php` (cron dir has different permissions, may need sudo or write_server_file via MCP)
-2. Monitor short-leg rate: `mysql -u adminportal -piV84o80^y admin_portal -e "SELECT SUM(CASE WHEN duration_seconds < 60 THEN 1 ELSE 0 END) AS short, COUNT(*) as total, ROUND(100*SUM(CASE WHEN duration_seconds < 60 THEN 1 ELSE 0 END)/COUNT(*),1) as pct FROM voice_call_log WHERE created_at > NOW() - INTERVAL 24 HOUR AND duration_seconds > 0"` (goal: under 30% within 24h)
-3. Monitor abusive_terminated rate: check voice_call_log for outcome='abusive_terminated' in next 24h — should drop from 488/week to under 200/week
-
-Reference IDs:
-- Ideas filed: #19766 [approved], #19767 [approved], #19794 [proposed], #19795 [deployed]
-- Files touched: /var/www/emtskills/lib/voice_call_duration_guard.php, /var/www/emtskills/config/voice_call_duration_guard.config.php, /var/www/emtskills/docs/HANDOFF_NOTES.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Step 1 — Investigate VAPI short-leg hangup causes (55% short-leg rate; 488 abusive_terminated primary cause)
-- [x] Step 2 — Root cause found: lib uses OWN hardcoded constants (0.65/0.80/120s), config file different namespace
-- [x] Step 3 — Audit DEADMAN pipeline (crons exist, tickets at 19-45h, Slack at 72h)
-- [x] Step 4 — Fix short-legs deployed: lib thresholds raised (FAST_CONF 0.65→0.80, BASE_CONF 0.80→0.90, FAST_SECONDS 120→240)
-- [x] Step 5 — DEADMAN pipeline: cron exists, stale tickets within range. Idea #19794 filed to lower 72→48h
-- [x] File ideas, handoff notes, ship with pickup prompt
-</task_progress>
 </attempt_completion>
 ```
 
@@ -4244,112 +4296,3 @@ I noticed here while running Claude opus that I have it at 200 K but it keeps ma
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785010751523` — 7/25/2026, 2:23:36 PM PT — 56 turns
-
-**Original task:**
-
-```
-#NVDIA GPU / NVME Upgrade
-
-We are not rebooting until later tonight
-
-Live-verified the GPU on WOPR just now (per your feedback that the on-site tech says this is already done). Raw evidence, fresh this session:
-
-**MARKER40 (dmesg + nvidia-smi + lspci, run 12:08 PT):**
-- dmesg: `NVRM: BAR1 is 0M @ 0x0 (PCI:0000:81:00.0)` ... `The NVIDIA probe routine failed for 1 device(s)` — repeating right up to now
-- `nvidia-smi`: "has failed because it couldn't communicate with the NVIDIA driver"
-- `lspci -vv -s 81:00.0`: `Region 2: Memory at 0000000000000000 (64-bit, prefetchable)` and `Region 4: ... 00000
-```
-
-**Ideas referenced:** #0000, #13967, #16648, #16714, #16717, #17168, #1754, #1755, #178500, #18970 [deployed], #18971 [queued], #18982 [proposed], #18985 [rejected], #18991 [rejected], #19006 [blocked], #19025 [deployed]
-
-**Last PICKUP PROMPT:**
-
-```
- the split-brain answer intact (it was accepted), and end with the full rule-91 PICKUP PROMPT block.
-
-6. **Task Evolution:**
-- **Original Task:** WOPR 4TB cutover follow-up — verify GPU BAR1 after reboot (#19006), keep cutover state stable, no reboot.
-- **Modification 1:** Ruben: *"Another window still thinks this which is what i wanted to avoid. How do we prevent split brain stuff from happening or is that covered already?"* → deliverable became cross-window split-brain prevention machinery, with #18985 as the source incident. **DONE and accepted.**
-- **Modification 2 (current):** Ruben on the shipped completion: *"what is this? - > - #18982 [proposed] — WOPR HWE kernel meta packages removed, pinned to 6.17 GA. Must ship before the NVMe mirror cron is re-enabled. (verified: MARKER45 SQL status=proposed dev_stage=idle)"* → must explain #18982 substantively inline.
-- **Context for Changes:** The cutover invalidated a whole class of facts mid-flight; Ruben explicitly called it "what i wanted to avoid," so the deliverable was prevention machinery. Now he is auditing an under-explained line item in my own pickup prompt — a one-line title with no substance is not a usable open thread.
-
-7. **Current Work:**
-All split-brain deliverables are shipped and verified: (a) `/usr/local/bin/emsu_host_state.sh` + `/var/www/emtskills/docs/WOPR_STATE.json` + `/etc/cron.d/emsu-host-state` (*/5) generating live JSON; (b) rule 294 written to `Rules-archive/`, indexed in `Rules/_RULE_TREE.md`, counter 293→294, MCP reindexed (303 rules). #18985 rejected with MARKER42 evidence. Rule-267 GATE B reconcile done (MARKER45 SQL). Ledger row appended (verified). WOPR HANDOFF appended (MARKER46_DONE verified). `attempt_completion` was shipped and Ruben responded with the #18982 question — so the only remaining work is looking up #18982 and re-shipping the completion with that answered inline.
-
-8. **Next Step:**
-Run a single `ssh_command` on WOPR to pull idea #18982's full row from `admin_portal.orchestrator_ideas` (id, title, description, priority, domain, estimated_impact, status, created_at), appended with `; echo MARKER47_DONE`. Expect the Mode-D "result missing" response on the first attempt and retry the identical call once. Then immediately re-ship `attempt_completion` with (i) a plain-language answer to *"what is this?"* about #18982 including whether it truly gates the NVMe mirror cron, (ii) the previously-accepted split-brain verdict (partially covered; 271/248/252/263 are write-side/single-window only; read-side gap closed by WOPR_STATE.json + */5 cron + rule 294), and (iii) the rule-91 PICKUP PROMPT block — 47-char U+2550 dividers **copied not retyped** (`═══════════════════════════════════════════════`), every `#NNNN` carrying a verified bracket tag + `(verified: ...)` parenthetical from the MARKER45 list above, both "Open threads to drive next" and "Reference IDs" sections present, no placeholders, real task id `#1785008000000`, closing line "When done, append to cline_task_ledger.md (rule 07), run order 66."
-
-Files touched list for the Reference IDs section: `/usr/local/bin/emsu_host_state.sh` (WOPR, new), `/etc/cron.d/emsu-host-state` (WOPR, new), `/var/www/emtskills/docs/WOPR_STATE.json` (WOPR, generated), `/var/www/emtskills/docs/HANDOFF_NOTES.md` (WOPR, appended), `/Users/rubenmajor/Documents/Cline/Rules-archive/294-reprobe-inherited-infra-facts.md` (new), `/Users/rubenmajor/Documents/Cline/Rules/_RULE_TREE.md`, `/Users/rubenmajor/Documents/Cline/Rules/.clinerule_counter`, `/Users/rubenmajor/Desktop/cline_task_ledger.md`.
-
-9. **R
-```
-
-### `1785008234643` — 7/25/2026, 2:09:47 PM PT — 144 turns
-
-**Original task:**
-
-```
-Mysql MCP is flapping
-```
-
-**Ideas referenced:** #0000, #1593, #18600, #1895, #19055 [proposed], #9731
-
-**Last PICKUP PROMPT:**
-
-```
-ed]. HANDOFF_NOTES.md updated.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #19055 — Verify MCP flapping fix holds + monitor for regression.
-
-Where we left off (verified 2026-07-25 14:09 PDT):
-- All 11 WOPR MCP services migrated from supergateway --stateful to mcp-http-bridge
-- mcp-mysql churn: 668 events/min -> 0 (confirmed 2-min window)
-- mysql MCP tool call: SELECT COUNT(*) FROM Students = 7652 (WORKS)
-- All 11 health endpoints: shared-child-bridge child_alive:true
-- No supergateway processes running
-- Guards verified safe (prebuild_guard skips bridge.js units, sessiontimeout_guard no entries)
-- MCP_Troubleshooting.md fully updated: §4 status, §12 backlog CLOSED, new §13 section with migration script
-- Idea #19055 [deployed] (verified: SQL UPDATE status=deployed)
-- HANDOFF_NOTES.md updated
-
-Open threads to drive next:
-None — fix is deployed and verified. Monitor for regression over next 24h.
-
-Reference IDs:
-- Ideas filed: #19055 [deployed] (verified: SQL UPDATE status=deployed dev_stage=ready_for_review)
-- Ideas closed: none
-- Files touched: /etc/systemd/system/mcp-{mysql,context7,fetch,filesystem,github,google-drive,imessage-reader,kaizen,ruben-control,ruben-orchestrator}.service, /etc/systemd/system/mcp-*.service.d/exec-override.conf (moved to .bak), /Users/rubenmajor/Desktop/MCP_Troubleshooting.md
-- Host: WOPR (10.100.0.1)
-- Backups: .bak-supergateway-20260725 (service files), .bak-bridge-migration-20260725 (overrides)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result><task_progress>- [x] Verify MariaDB service status (active, healthy)
-- [x] Identify aborted connection storm from adminportal (downstream symptom, not root cause)
-- [x] Check all MCP bridge health (all healthy at /health endpoint)
-- [x] Read MCP_Troubleshooting.md (Rule 261, 3-gate check, §9 supergateway race)
-- [x] Check mysql MCP service logs - FOUND ROOT CAUSE: supergateway --stateful session churn
-- [x] Read emsu-operations service as template for mcp-http-bridge migration
-- [x] Identify ALL 10 MCPs with --stateful override
-- [x] Migrate mysql MCP to mcp-http-bridge (churn stopped: 668 -> 0)
-- [x] Read all 9 remaining service files to get env vars
-- [x] Migrate other 9 MCPs to mcp-http-bridge (all restarted successfully)
-- [x] Final health check: ALL 11 MCPs healthy with shared-child-bridge transport
-- [x] Test actual mysql MCP tool call (returned 7652 students - WORKS)
-- [x] Final verification - no supergateway running, 0 churn, load check
-- [x] Verify mcp_prebuild_guard.sh won't re-add --stateful (guard skips bridge.js units)
-- [x] Verify mcp_sessiontimeout_guard also skips bridge units
-- [x] Update MCP_Troubleshooting.md §4 status note
-- [x] Update MCP_Troubleshooting.md §12 backlog item (CLOSED)
-- [x] Add new §13 section with full fix documentation + reusable migration script
-- [x] Reconcile idea #19055 (hand-shipped, marked deployed via SQL)
-- [x] Update HANDOFF_NOTES.md
-- [x] Validate rule-91 pickup prompt compliance (ALL PASSED)
-</task_progress></attempt_completion>
-```

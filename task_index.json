@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-07-28T13:51:10.298Z",
+ "generated_at": "2026-07-28T15:20:18.766Z",
  "counts": {
-  "parsed": 0,
-  "reused": 226,
+  "parsed": 1,
+  "reused": 225,
   "failed": 0,
   "total": 226
  },
@@ -96360,11 +96360,11 @@
   },
   "1785183122795": {
    "task_id": "1785183122795",
-   "mtime": 1785229258814,
+   "mtime": 1785251866637,
    "created_at": "2026-07-27T20:12:02.795Z",
-   "last_modified": "2026-07-28T09:00:58.814Z",
-   "size_kb": 2491,
-   "turn_count": 721,
+   "last_modified": "2026-07-28T15:17:46.637Z",
+   "size_kb": 3570,
+   "turn_count": 757,
    "title": "Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue another 45 minutes:\n\n-\n## Direct answer on Cesar\n\n**I did nothing to Cesar. Three read-only commands, over its existing tunnel:** `ulimit -Sl/-Hl`, `grep memlock /etc/security/limits.d/`, and a `python3` version print. No writes, no restart, no config edit, no TP=2 launch attempted on it. Verified after the fact: ring `:8210` returns HTTP 200 with 12 concurrent requests and 211,399 generation tokens, Cesar at 96% GPU, **uptime 8 days 16:34** (proving it was never restarted), load climbing 1.76 → 3.10 = actively serving.\n\nMy wording \"including Cesar which works\" was sloppy and implied Cesar runs TP=2. It do",
    "pickup_prompt": "cy ever becomes the priority).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task — GLM-5.2 speed/max_num_seqs question CLOSED via ideal build reference; Desktop doc delivered.\n\nWhere we left off (verified 2026-07-28 01:59 PT):\n- DELIVERED: ~/Desktop/GLM52_IDEAL_BUILD_ANSWER_2026-07-28.md — the final answer, referenced against the canonical /var/www/emtskills/docs/GLM52_IDEAL_BUILD.md.\n- DECISION FINAL (do not re-litigate): leave max_num_seqs at 128 (set in the 07-27 rebuild, proven correct — ceiling never found, c=64 → 48.78 tok/s aggregate, KV 0.2-0.3%, scheduler never queued). Ruben's leave-it-alone call is right.\n- THREE OF MY EARLIER CLAIMS FORMALLY RETRACTED in the doc: (1) \"max_num_seqs unset\" — wrong, it's 128; (2) \"set it to 16\" — wrong, doctrine is more concurrency; (3) \"N=8 sweet spot / N=128 collapse\" — superseded by the ideal build's measured table (my sweep never completed).\n- SPEED RECONCILIATION CANONICAL: single-stream tok/s = PP=6 pipeline bubble, not hardware. Interactive feel = TTFB ~1.5s + streaming (verified live 01:22 PT). Ruben's days of fast windows are ground truth. Batch load ~60-70 tok/s aggregate (verified 07-26).\n- CANONICAL REFERENCE for all future GLM-5.2 questions: /var/www/emtskills/docs/GLM52_IDEAL_BUILD.md (read it FIRST before any ring claim, per rule 271/294).\n\nOpen threads to drive next (unchanged from prior completion except #3):\n1. DRAIN the 3,878 ready_for_review backlog — no drain policy exists. Not yet filed.\n2. EXECUTOR BUILD QUALITY — generates SQL failing syntax checks (tests_sql_syntax). Run failure_category histogram over 24h. Not yet filed.\n3. #19685 [executing] (verified: reconcile_ideas returned status=in_progress dev_stage=auditing) — BROADCAST canonical ring numbers. SCOPE UPDATE: the numbers now live in GLM52_IDEAL_BUILD.md; this idea reduces to pointing frankenstein_registry.yaml + frankenstein_architecture MCP at that doc. NO max_num_seqs change (decision: leave at 128).\n4. #19686 [executing] (verified: status=in_progress dev_stage=auditing) — Argus registry row + confirm Argus client requests model=argus-chat.\n5. #19558 [blocked] (verified: status=approved dev_stage=impl_failed) — surface-label truth fix. Hand-ship if it stays blocked.\n6. #19571 [proposed] (verified: status=proposed dev_stage=idle) — REWRITE around PP=6 + prefill; drop \"decode wedge\" framing entirely. NOTE: ideal build doc now covers most of this — consider closing as superseded by GLM52_IDEAL_BUILD.md.\n7. #19670 [deployed] (verified: status=deployed dev_stage=ready_for_review) — REVIEW.\n8. #19672 [deployed] (verified: status=deployed dev_stage=ready_for_review) — REVIEW knowledge gates. Acceptance: re-file duplicate of #19563 verbatim; must be REJECTED pointing at bug #2062.\n9. #19673 [deployed] (verified: status=deployed dev_stage=ready_for_review) — REVIEW prefill fix, re-measure ratio (was 57:1, target <10:1).\n10. Fix glm-5.2-local -> :8210 404 (ring serves only glm-5.2-15pct) so direct probes stop reading a healthy ring as dead.\n11. Re-reconcile the 11 previously-blocked ideas (#19542, #19543, #19544, #19546, #19547, #19548, #19549, #19564, #19575, #19507, #19508).\n12. Artemis physical recovery — still dead (human-only decision — no idea, RUBEN ACTION).\n13. Cicero MLX restart — paste at ~/Desktop/CICERO_PASTE_20260727.txt (human-only decision — no idea).\n14. Jon's Amcrest camera — tool live + verified; waiting on IP + credentials (human-only decision — no idea, JON ACTION).\n\nRefer",
    "ideas": {
@@ -96431,6 +96431,7 @@
     "16578": null,
     "16602": null,
     "17705": null,
+    "17983": null,
     "19239": "rejected",
     "19506": "rejected",
     "19507": "executing",
@@ -96453,6 +96454,8 @@
     "19673": "executing",
     "19685": "executing",
     "19686": "executing",
+    "48031": null,
+    "48140": null,
     "64748": null
    }
   },

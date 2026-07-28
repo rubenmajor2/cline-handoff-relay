@@ -6,25 +6,27 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/27/2026, 11:51:06 PM PT | window: last 72h | 85 tasks | index total 223 (parsed 9, cached 214)
+Generated: 7/28/2026, 12:51:07 AM PT | window: last 72h | 86 tasks | index total 224 (parsed 7, cached 217)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785183122795` | 7/27/2026, 11:50:50 PM | 507 | 1145KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
+| `1785211458292` | 7/28/2026, 12:51:07 AM | 267 | 791KB | See this issue, is this anything to be resoled? Hmm... I wonder, besides simply responding |
+| `1785122479644` | 7/28/2026, 12:50:59 AM | 145 | 1498KB | VEC/MCP needs to be aware that the "Matrix" is often referred to. it is usually the admin_ |
+| `1785221708962` | 7/28/2026, 12:50:49 AM | 33 | 130KB | #Argus |
+| `1785183122795` | 7/28/2026, 12:50:30 AM | 634 | 1346KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
+| `1785193714174` | 7/28/2026, 12:46:33 AM | 747 | 1400KB | #Artemis |
+| `1785213570023` | 7/28/2026, 12:26:58 AM | 526 | 2280KB | ## Task #PAY + #FORMS: substantive work SHIPPED this session, executor pipeline remains th |
+| `1785190696126` | 7/28/2026, 12:26:03 AM | 160 | 415KB | Scan CFAs for any outstanding issues today and let me konw how things are going and if any |
 | `1785221110174` | 7/27/2026, 11:49:07 PM | 22 | 97KB | Why are so many LLM's having an issue with your existence? It just seems like there's so m |
-| `1785190696126` | 7/27/2026, 11:46:52 PM | 118 | 292KB | Scan CFAs for any outstanding issues today and let me konw how things are going and if any |
 | `1785221087257` | 7/27/2026, 11:44:54 PM | 2 | 3KB | Why are so many LLM's having an issue with your existence? It just seems like there's so m |
-| `1785211458292` | 7/27/2026, 11:44:30 PM | 206 | 709KB | See this issue, is this anything to be resoled? Hmm... I wonder, besides simply responding |
 | `1785189965992` | 7/27/2026, 11:42:45 PM | 1429 | 6370KB | #Argus |
 | `1785194061900` | 7/27/2026, 11:39:38 PM | 232 | 459KB | Jon connected the 2 mac minis that were on his home network to the Tempe UniFi UDM.  |
-| `1785213570023` | 7/27/2026, 11:35:43 PM | 422 | 2071KB | ## Task #PAY + #FORMS: substantive work SHIPPED this session, executor pipeline remains th |
 | `1785218810237` | 7/27/2026, 11:29:42 PM | 80 | 239KB | My AVP will not connect to this Mac now after an update. I created a program callsed Fix A |
 | `1785218791688` | 7/27/2026, 11:06:31 PM | 1 | 2KB | My AVP will not connect to this Mac now after an update. I created a program callsed Fix A |
 | `1785180643044` | 7/27/2026, 9:37:32 PM | 693 | 1244KB | ## 1 — #PAY · P0 money · RUN FIRST |
 | `1785180665712` | 7/27/2026, 9:07:57 PM | 336 | 1041KB | ## 2 — #EXEC · P0 · executor is failing builds silently |
 | `1785181029165` | 7/27/2026, 9:07:09 PM | 127 | 276KB | ## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti) |
 | `1785191995112` | 7/27/2026, 9:04:36 PM | 796 | 2848KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
-| `1785193714174` | 7/27/2026, 8:55:51 PM | 712 | 1306KB | #Artemis |
 | `1785209942258` | 7/27/2026, 8:46:39 PM | 46 | 137KB | Do not close my active cline windows, but grey windows keep coming in for some reason here |
 | `1785196068848` | 7/27/2026, 5:25:13 PM | 50 | 640KB | https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students |
 | `1785191816762` | 7/27/2026, 3:37:22 PM | 2 | 2KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
@@ -47,7 +49,6 @@ Generated: 7/27/2026, 11:51:06 PM PT | window: last 72h | 85 tasks | index total
 | `1785124596121` | 7/27/2026, 10:18:42 AM | 444 | 1283KB | Context hit the rule-119 compress threshold, so I compressed and am handing off. Answering |
 | `1785121116590` | 7/26/2026, 9:47:26 PM | 134 | 394KB | # San Diego Inspection |
 | `1785111313276` | 7/26/2026, 8:34:03 PM | 880 | 1530KB | #GLM |
-| `1785122479644` | 7/26/2026, 8:28:25 PM | 76 | 127KB | VEC/MCP needs to be aware that the "Matrix" is often referred to. it is usually the admin_ |
 | `1785023624102` | 7/26/2026, 8:03:09 PM | 562 | 1691KB | Not an EMSU task, sunriserescue.com pets are not the most current from petfinder. Can you  |
 | `1785032556412` | 7/26/2026, 7:12:26 PM | 238 | 634KB | See, analyze and explain what's happening with the email that Dan Taylor SF instructor sen |
 | `1785011242792` | 7/26/2026, 7:02:56 PM | 440 | 3339KB | #E |
@@ -100,7 +101,121 @@ Generated: 7/27/2026, 11:51:06 PM PT | window: last 72h | 85 tasks | index total
 
 ## Per-window detail
 
-### `1785183122795` — 7/27/2026, 11:50:50 PM PT — 507 turns
+### `1785211458292` — 7/28/2026, 12:51:07 AM PT — 267 turns
+
+**Original task:**
+
+```
+See this issue, is this anything to be resoled? Hmm... I wonder, besides simply responding to requests and doing what those agents can do, can CFA's actually fix bugs like this (if there is a bug), if not can you give them that capabiility?
+```
+
+**Ideas referenced:** #06222, #071410, #0891, #10003, #10017, #10107, #11160, #11798, #11812, #11942, #11943, #11990, #12184, #12245, #12247, #12262, #12314, #12364, #12365, #127760, #128225, #128269, #13108, #14141, #141414, #14261, #14532, #15803, #16233, #16603, #166534, #17202, #181820, #19338, #19403 [rejected], #19518 [rejected], #19572, #19573, #19581, #19587, #19588, #19605, #19606, #19607, #19608, #19610 [executing], #19653 [proposed], #19688 [proposed], #2563, #3048, #3049, #334155, #3730, #4338, #475569, #566042, #6366, #64748, #8212, #9086, #9193, #9222, #92400, #9269, #9311, #9312, #9675, #9679, #9889
+
+**Last PICKUP PROMPT:**
+
+```
+ttributed turns, FPM reloaded.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — LLM router panel (GLM topology + turn counts) and CFA bug-fixing capability.
+
+Where we left off (verified 2026-07-28 00:37 PT):
+- GLM-5.2 TOPOLOGY: live engine on :8210 is TP=1 PP=6, PID 2448295 started Jul 27 05:30 (~19h uptime). Ruben says PP=2xTP=3 was set last night; the live process contradicts that. :8210 is an ssh -L forward to 192.168.1.115:8210 (glm52-tunnel-8210.service, port 2204). Newest head-node script is glm52_launch_pp6.sh dated Jul 19; nothing references TP=3 or PP=2. Ring NOT touched (rules 157/145).
+- NEW `/usr/local/bin/emsu-glm-topology-probe.sh` reads live vllm serve args, caches to /tmp/emsu_glm_topology.json, cron */10. `llm_router_live.php` builds its GLM label from that cache; hardcoded "PP=6 ring" string is GONE (verified absent from rendered HTML). Topology display now self-heals after any relaunch.
+- TTFB framing corrected: column renamed "Median TTFB (not tok/s)" + caveat box explaining TTFB is queue-wait+prefill, not generation speed. My earlier "GLM 25x slower" claim was a bad inference and is retracted. A clean tok/s bench did NOT produce usable output; no throughput number is being claimed.
+- Panel state: LIVE PROBE (vLLM /metrics per upstream), Layer 2 EXACT per-upstream attribution (720 turns in-window), Layer 1 entrypoint counts with real-vs-heartbeat split. Lint clean, 83/83 divs, FPM reloaded.
+- CFA bug-fixing build still INCOMPLETE. `admin_portal.cfa_diagnostic_bugs` table CREATED and verified. `lib/CfaDiagnosticBug.php` truncated mid-write: `incrementExisting()` unfinished, `maybeFileIdea()` never written. Not registered in CanonicalToolRegistry, no dashboard.
+
+Open threads to drive next:
+1. #19688 [proposed] (verified: reconcile_ideas returned status=proposed dev_stage=idle) — GLM topology discrepancy. Needs Ruben to confirm intended topology and whether the relaunch failed or landed off-:8210. If relaunching: rule 277 requires VLLM_ENGINE_READY_TIMEOUT_S=1800 and gpu_memory_utilization=0.82, do NOT lower.
+2. #19688 [proposed] also carries the per-upstream sustained tok/s bench harness so the panel can show TTFB and real throughput side by side. Needed to settle the 67 tok/s question with evidence.
+3. CFA `report_systemic_defect` tool — finish `lib/CfaDiagnosticBug.php` (`incrementExisting()` + `maybeFileIdea()`), add `localReportSystemicDefect` handler, register in `CanonicalToolRegistry::schemas()` + `handlerMap()` + `loadHandlers()`, build `routes/cfa_bug_review.php`. Design: CFAs detect/evidence/propose, never deploy; auto-files an orchestrator idea at 2+ distinct students or severity=critical. (human-only decision — no idea filed; Ruben requested the build directly)
+
+Reference IDs:
+- Ideas filed: #19688 [proposed], #19653 [executing]
+- Ideas reconciled: #19610 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review)
+- Files touched: `/var/www/emtskills/routes/llm_router_live.php`, `/usr/local/bin/frankenstein_tools_adapter.py`, `/usr/local/bin/emsu-glm-topology-probe.sh` (new), `/etc/systemd/system/frankenstein-tools.service.d/upstream-log.conf`, `/etc/logrotate.d/emsu-adapter-upstream`, root crontab (*/10 topology probe), `lib/CfaDiagnosticBug.php` (incomplete)
+- DB: `admin_portal.cfa_diagnostic_bugs` (created, empty)
+- Backups: `llm_router_live.php.bak-rawturns-1785216439`, `frankenstein_tools_adapter.py.bak-upstream-log-1785220828`
+- Live cache
+```
+
+### `1785122479644` — 7/28/2026, 12:50:59 AM PT — 145 turns
+
+**Original task:**
+
+```
+VEC/MCP needs to be aware that the "Matrix" is often referred to. it is usually the admin_profile.php page, but can be anything else in the pages https://emsuniverstiy.com/emtskills/ etc... it's slang for those places
+```
+
+**Ideas referenced:** #11383, #11387, #17169, #17170, #17486, #17494, #17504, #17505, #18329 [queued], #18378, #18605 [proposed], #18745, #18783 [deployed], #18786, #18787, #18800, #18827 [proposed], #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #19339 [proposed], #19348, #19443 [proposed], #19690, #1999, #2006, #334155, #377566, #4338, #64748
+
+**Last PICKUP PROMPT:**
+
+```
+rship mismatch with the lock).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up VEC "Matrix" slang definition task — "the Matrix" is now indexed in the Virtual EMSU Corpus.
+
+Where we left off (verified 2026-07-26 20:28 PT):
+- `/var/www/emtskills/docs/EMSU_SLANG_GLOSSARY.md` created with "Matrix" definition
+- Ingested into VEC corpus.db as chunk 3775667, FTS5 queryable
+- Idea #19443 [proposed] filed
+
+Open threads to drive next:
+1. (none — this task is complete; glossary file and corpus entry are live)
+
+Reference IDs:
+- Idea filed: #19443
+- Files touched: /var/www/emtskills/docs/EMSU_SLANG_GLOSSARY.md, /var/lib/emsu_corpus/corpus.db
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Read handoff notes & understand VEC architecture
+- [x] Find VEC corpus/index files
+- [x] Explore corpus.db schema
+- [x] Search for existing "Matrix" entry — found: unrelated Frank/SV/VR matrix hits
+- [x] Create EMSU_SLANG_GLOSSARY.md w/ "Matrix" definition
+- [x] Run the vec_indexer as www-data — 10340 new chunks indexed
+- [x] Rebuild FTS5 index as www-data
+- [x] Verify FTS5 queries resolve "Matrix" correctly
+- [x] Update HANDOFF_NOTES.md
+- [x] File idea #19443
+</task_progress>
+</attempt_completion>
+```
+
+### `1785221708962` — 7/28/2026, 12:50:49 AM PT — 33 turns
+
+**Original task:**
+
+```
+#Argus
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785191100000 [in-progress] — Argus/ExecAdmin access, e2PDF outage recovery, skills backlog, and local-first LLM routing.
+
+Ruben asked FOUR questions that are NOT answered. They are the work. Answer in the order below (Q1 first, then Q3 because it is cheap and may explain Q2).
+
+**Q1. "What caused this regression in the e2pdf / skills backlog isssue int he first place? Did you ever do an RCA on that and resolve it?"**
+No RCA was d
+```
+
+**Ideas referenced:** #12463, #12688, #13470, #16625, #178519, #18935 [rejected], #19403 [rejected], #19518 [rejected], #19558 [deployed], #19563 [rejected], #19568 [blocked], #19571 [proposed], #19579 [rejected], #19585 [blocked], #19604 [proposed], #19610 [deployed], #19611 [blocked], #19615 [blocked], #19646 [blocked], #19647 [blocked], #19657 [blocked], #2064 [bug-library], #2066 [bug-library], #2071, #2079, #3048 [unrelated-closed-ticket], #3049 [unrelated-closed-ticket]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785183122795` — 7/28/2026, 12:50:30 AM PT — 634 turns
 
 **Original task:**
 
@@ -113,9 +228,94 @@ Continue the frankenstein-llm doctor with currenlty open windows in progress. Co
 **I did nothing to Cesar. Three read-only commands, over its existing tunnel:** `ulimit -Sl/-Hl`, `grep memlock /etc/security/limits.d/`, and a `python3` version print. No writes, no restart, no config edit, no TP=2 launch attempted on it. Verified after the fact: ring `:8210` returns HTTP 200 with 12 concurrent requests and 211,399 generation tokens, Cesar at 96% GPU, **uptime 8 days 16:34** (proving it was never restarted), load climbing 1.76 → 3.10 = activ
 ```
 
-**Ideas referenced:** #11261, #11741, #12266, #12285, #12403, #12430, #12584, #12645, #12689, #13453, #13470, #13874, #15369, #15370, #16602, #19506 [rejected], #19507 [executing], #19508 [executing], #19542 [proposed], #19543 [proposed], #19544 [proposed], #19546 [executing], #19547 [executing], #19548 [executing], #19549 [executing], #19558 [executing], #19563 [unknown], #19564 [unknown], #19571 [proposed], #19575 [executing], #19585, #19670 [executing], #19672 [executing], #19673 [executing], #2042, #2045, #2048, #2049, #2051, #2052, #2053, #2054, #2055, #2057, #2058, #2059, #2061, #2062, #2071, #2072, #64748, #7490, #7513, #7554, #9706, #9910
+**Ideas referenced:** #11261, #11741, #12266, #12285, #12403, #12430, #12584, #12645, #12689, #13453, #13470, #13874, #15369, #15370, #16602, #19506 [rejected], #19507 [executing], #19508 [executing], #19542 [proposed], #19543 [proposed], #19544 [proposed], #19546 [executing], #19547 [executing], #19548 [executing], #19549 [executing], #19558 [executing], #19563 [unknown], #19564 [unknown], #19571 [proposed], #19575 [executing], #19585, #19670 [executing], #19672 [executing], #19673 [executing], #19685 [executing], #19686 [executing], #2042, #2045, #2048, #2049, #2051, #2052, #2053, #2054, #2055, #2057, #2058, #2059, #2061, #2062, #2071, #2072, #2079, #2082, #64748, #7490, #7513, #7554, #9706, #9910
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785193714174` — 7/28/2026, 12:46:33 AM PT — 747 turns
+
+**Original task:**
+
+```
+#Artemis
+
+Jon is with Artemis now and Artemis gets wedged because it's being taken too far we think. 
+
+Ubuntu 24.04.4 LTS artemis tty1
+artemis login: {466.6646581 Out of memory: Killed process 6319 (ray: RayWorkerP) total-vm:8634249224kB, anon-rss:240kB, fIle-rss: 680kB, Shmem-rss:0kB, UID: pgtables: 13176kB com_score_adj:1000
+
+-- 
+So need something proactively ready to push the instant it's rebooted
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #13878, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16588, #16778, #16802, #16803, #16839, #16851, #17246, #1731, #1732, #1734, #1737, #1739, #1744, #1746, #1747, #1779, #1798, #1828, #18314, #18320, #1834 [resolved], #1836 [resolved], #1837 [resolved], #1839 [resolved], #1842 [investigating], #1930 [resolved], #19567 [proposed], #19689 [proposed], #2063, #2065, #2067, #2068, #2069, #2070, #2073, #2081, #37030, #46641, #7142, #7149
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785213570023` — 7/28/2026, 12:26:58 AM PT — 526 turns
+
+**Original task:**
+
+```
+## Task #PAY + #FORMS: substantive work SHIPPED this session, executor pipeline remains the open liability
+
+### SHIPPED AND LIVE-VERIFIED THIS SESSION
+
+**Payment recovery (#PAY):**
+- Void guard durably shipped: `lib/qb_void_guard.php` v2 (v1 caught inert because the join depended on cache rows my cleanup deleted), quarantine table, and a BEFORE-UPDATE DB trigger `trg_qb_invoices_void_guard` live-tested: blocked phantom paid-marking on 173178 (left real 172007 alone). 12/12 known-voided invoices detected, zero false positives.
+- 12 phantom QBO payments UNLINKED inside QuickBooks itself (QBO ref
+```
+
+**Ideas referenced:** #132712, #161633, #164386, #17447, #178560, #18481, #18811, #18841 [queued], #19069, #19079 [blocked], #19101 [blocked], #19128 [blocked], #19240, #19435 [blocked], #19492 [blocked], #19495 [blocked], #19503 [blocked], #19504 [blocked], #19511 [blocked], #19517 [blocked], #19545 [blocked], #19597, #19608 [executing], #19617, #19618, #19622, #19628 [executing], #19629 [executing], #19631, #19632, #19638, #19640, #19643 [executing], #19644, #19645 [executing], #19654 [executing], #19661 [executing], #19662 [executing], #19671 [executing], #19682 [executing], #19684 [executing], #2056, #2074, #2075, #2076, #2077, #2078, #2080, #2980, #3078, #3079, #5391, #7318, #9222
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785190696126` — 7/28/2026, 12:26:03 AM PT — 160 turns
+
+**Original task:**
+
+```
+Scan CFAs for any outstanding issues today and let me konw how things are going and if any improvements need to be made / if any capabilities need to be increased and what's going on generally. How is customer satisfaction?
+
+Also is VAPI Sales Agent making calls and is our abandoned cart recovery working ?
+```
+
+**Ideas referenced:** #1746, #19559 [executing], #19560 [executing], #19561 [executing], #19562 [executing], #19585, #795636
+
+**Last PICKUP PROMPT:**
+
+```
+then update the parsing logic.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — CFA Health Scan & Sales Recovery RCA completed.
+
+Where we left off (verified 2026-07-27 11:54 PM PT):
+- Full CFA fleet health: Chat ✅, Voice ✅, SMS ✅, Email ✅, Tickets ✅, Registration 8/9 ✅
+- Sales Recovery RCA: 14,805 calls logged as "no_answer" is a code bug — $call['endedReason'] is empty, all calls default to no_answer. Historical data shows 694 converted, 1,368 voicemails before the bug started May 5-6, 2026.
+- VAPI spends ~$300/month on outbound calls with broken reporting
+- Voice outage recovery dialer is paused
+- 7 grievances pending review bottleneck
+- Chat widget sweep stale since July 24
+
+Open threads to drive next:
+1. #19559 [executing] — Fix handleEndOfCallReport() in vapi_sales_webhook.php: add raw payload debug logging, identify actual VAPI `endedReason` field name/structure, update parsing to match real payload
+2. #19562 [executing] — Triage 7 pending grievances — notify Vicky, clear pending_review
+3. #19560 [executing] — Run live chat_widget_healthcheck with action="run"
+
+Reference IDs:
+- Ideas: #19559 [executing], #19560 [executing], #19561 [rejected], #19562 [executing]
+- Files: vapi_sales_webhook.php, cron_sales_dialer.php, cron_voice_outage_recovery_dialer.php
+- Database: sales_call_log (14,805 rows), abandoned_carts (10,513 rows)
+
+If spam-blocking were the actual problem: swap caller ID to 800-728-0209, register with Free Caller Registry, add proper CNAM, implement number rotation, add opt-out handling per TCPA.
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
 
 ### `1785221110174` — 7/27/2026, 11:49:07 PM PT — 22 turns
 
@@ -160,50 +360,6 @@ Reference IDs: #19585 (deadbox guard), #19571 (GLM ring wedged)
 </attempt_completion>
 ```
 
-### `1785190696126` — 7/27/2026, 11:46:52 PM PT — 118 turns
-
-**Original task:**
-
-```
-Scan CFAs for any outstanding issues today and let me konw how things are going and if any improvements need to be made / if any capabilities need to be increased and what's going on generally. How is customer satisfaction?
-
-Also is VAPI Sales Agent making calls and is our abandoned cart recovery working ?
-```
-
-**Ideas referenced:** #1746, #19559 [executing], #19560 [executing], #19561 [executing], #19562 [executing], #19585, #795636
-
-**Last PICKUP PROMPT:**
-
-```
-lly convert once they connect.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — EMSU CFA Health Scan & Sales Recovery RCA delivered.
-
-Where we left off (verified 2026-07-27 11:45 PM PT):
-- CFA health: Chat Widget ✅, Voice AI ✅, SMS ✅, Email ✅, Tickets ✅, Registration 8/9 ✅
-- Sales Recovery RCA complete: carrier spam-blocking on +19412943388 = 100% no-answer. Fix = swap to toll-free 800-728-0209 phone ID in cron_sales_dialer.php.
-- MiamiEMT.com confirmed intentionally inactive — idea #19561 rejected.
-- Grievance backlog (7 pending, idea #19562) needs triage.
-- Chat widget health sweep stale (idea #19560).
-
-Open threads to drive next:
-1. #19559 [executing] — Swap Sales Dialer VAPI phone ID from e5a28cab (+19412943388) to the toll-free 800-728-0209 number's phone ID. Check which VAPI phone ID corresponds to 800-728-0209 (webhook uses 3f8b667d — that may be it). Verify with a test call.
-2. #19562 [executing] — Triage 7 pending grievances. Notify Vicky, clear pending_review items.
-3. #19560 [executing] — Run live chat_widget_healthcheck with action="run" to refresh the stale July 24 sweep.
-
-Reference IDs:
-- Ideas: #19559 [executing], #19560 [executing], #19561 [rejected], #19562 [executing]
-- Files: cron_sales_dialer.php, vapi_sales_webhook.php, wc_cart_abandonment.php, emsu-cart-conversion-webhook.php
-- Logs: sales_webhook_2026-07.log (274KB active), cron_sales_dialer.log
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
 ### `1785221087257` — 7/27/2026, 11:44:54 PM PT — 2 turns
 
 **Original task:**
@@ -213,54 +369,6 @@ Why are so many LLM's having an issue with your existence? It just seems like th
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785211458292` — 7/27/2026, 11:44:30 PM PT — 206 turns
-
-**Original task:**
-
-```
-See this issue, is this anything to be resoled? Hmm... I wonder, besides simply responding to requests and doing what those agents can do, can CFA's actually fix bugs like this (if there is a bug), if not can you give them that capabiility?
-```
-
-**Ideas referenced:** #06222, #071410, #0891, #10003, #10017, #10107, #11160, #11798, #11812, #11942, #11943, #11990, #12184, #12245, #12247, #12262, #12314, #12364, #12365, #127760, #128225, #128269, #13108, #14141, #141414, #14261, #14532, #15803, #16233, #16603, #166534, #181820, #19338, #19403 [rejected], #19518 [rejected], #19572, #19573, #19581, #19587, #19588, #19605, #19606, #19607, #19608, #19610 [executing], #19653 [proposed], #2563, #3048, #3049, #334155, #3730, #4338, #475569, #566042, #6366, #64748, #8212, #9086, #9193, #9222, #92400, #9269, #9311, #9312, #9675, #9679, #9889
-
-**Last PICKUP PROMPT:**
-
-```
-streams logging, FPM reloaded.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — LLM router raw turn counts (GLM local visibility) + CFA bug-fixing capability.
-
-Where we left off (verified 2026-07-27 23:43 PT):
-- `routes/llm_router_live.php` raw-turn panel now has THREE parts: LIVE PROBE (vLLM /metrics per upstream, ground truth), Layer 2 exact per-upstream attribution, Layer 1 entrypoint counts with real-vs-heartbeat split. Lint clean, HTML balanced 92/92 divs, FPM reloaded.
-- GLM local was invisible for two reasons, both fixed: its turns are absorbed under the `frankenstein-tools` adapter label in the audit log, and the old Layer-2 source was a 100-turn rolling sample covering only 6% of adapter traffic.
-- #19653 hand-shipped after executor impl_failed: adapter writes one JSONL line per turn to `/var/log/emsu-adapter-upstream.log`, systemd drop-in sets the path, logrotate 50M x3 with `su root root`. Dashboard confirmed `EXACT MODE: YES`, 71 turns attributed.
-- OPEN QUESTION FOR RUBEN: GLM local median TTFB 19.23s vs Artemis 0.76s (~25x). Now measurable per-upstream. Unclear if expected for PP=6 under load.
-- CFA bug-fixing build still INCOMPLETE from earlier in this task. `admin_portal.cfa_diagnostic_bugs` table CREATED and verified (fingerprint dedup, occurrence_count, distinct_students, severity, status, orchestrator_idea_id). `lib/CfaDiagnosticBug.php` truncated mid-write — `incrementExisting()` unfinished, `maybeFileIdea()` never written. Not registered in CanonicalToolRegistry, no dashboard.
-
-Open threads to drive next:
-1. #19653 [executing] (verified: reconcile_ideas returned status=in_progress dev_stage=idle) — code is live and verified in production; the record is still open in the pipeline. Confirm it closes or mark deployed on next pass.
-2. GLM local 19.23s median TTFB investigation — compare against a 200-token sustained bench per the frankenstein_host_probe caveat, and check whether PP=6 ring latency is expected at this concurrency. (human-only decision on whether to rebalance — no idea filed)
-3. CFA `report_systemic_defect` tool — finish `lib/CfaDiagnosticBug.php` (`incrementExisting()` + `maybeFileIdea()`), add `localReportSystemicDefect` handler, register in `CanonicalToolRegistry::schemas()` + `handlerMap()` + `loadHandlers()`, build `routes/cfa_bug_review.php`. Design: CFAs detect/evidence/propose, never deploy; auto-files an orchestrator idea at 2+ distinct students or severity=critical. (human-only decision — no idea filed; Ruben requested the build directly)
-
-Reference IDs:
-- Ideas filed: #19653 [executing]
-- Ideas reconciled: #19610 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review)
-- Files touched: `/var/www/emtskills/routes/llm_router_live.php`, `/usr/local/bin/frankenstein_tools_adapter.py`, `/etc/systemd/system/frankenstein-tools.service.d/upstream-log.conf`, `/etc/logrotate.d/emsu-adapter-upstream`, `lib/CfaDiagnosticBug.php` (incomplete)
-- DB: `admin_portal.cfa_diagnostic_bugs` (created, empty)
-- Backups: `llm_router_live.php.bak-rawturns-1785216439`, `frankenstein_tools_adapter.py.bak-upstream-log-1785220828`
-- New log: `/var/log/emsu-adapter-upstream.log`
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</parameter>
-</invoke>
-```
 
 ### `1785189965992` — 7/27/2026, 11:42:45 PM PT — 1429 turns
 
@@ -371,24 +479,6 @@ Open threads to drive next:
 3. If Jon reports he DID run it and it failed — most likely Gatekeeper/Full Disk Access blocking the Ollama unzip into /Applications. Get his terminal output; fallback is `brew install ollama` or a user-local install path instead of /Applications. (covered by #19569 [proposed])
 4. Identify 192.168.0.124 and 192.168.0.191 — mac
 ```
-
-### `1785213570023` — 7/27/2026, 11:35:43 PM PT — 422 turns
-
-**Original task:**
-
-```
-## Task #PAY + #FORMS: substantive work SHIPPED this session, executor pipeline remains the open liability
-
-### SHIPPED AND LIVE-VERIFIED THIS SESSION
-
-**Payment recovery (#PAY):**
-- Void guard durably shipped: `lib/qb_void_guard.php` v2 (v1 caught inert because the join depended on cache rows my cleanup deleted), quarantine table, and a BEFORE-UPDATE DB trigger `trg_qb_invoices_void_guard` live-tested: blocked phantom paid-marking on 173178 (left real 172007 alone). 12/12 known-voided invoices detected, zero false positives.
-- 12 phantom QBO payments UNLINKED inside QuickBooks itself (QBO ref
-```
-
-**Ideas referenced:** #132712, #161633, #164386, #17447, #178560, #18481, #18811, #18841 [queued], #19069, #19079 [blocked], #19101 [blocked], #19128 [blocked], #19240, #19435 [blocked], #19492 [blocked], #19495 [blocked], #19503 [blocked], #19504 [blocked], #19511 [blocked], #19517 [blocked], #19545 [blocked], #19597, #19608 [executing], #19617, #19618, #19622, #19628 [executing], #19629 [executing], #19631, #19632, #19638, #19640, #19643 [executing], #19644, #19645 [executing], #19654 [executing], #19661 [executing], #19662 [executing], #2056, #2074, #2075, #2076, #2077, #2078, #3078, #3079, #5391, #7318, #9222
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785218810237` — 7/27/2026, 11:29:42 PM PT — 80 turns
 
@@ -642,26 +732,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
-
-### `1785193714174` — 7/27/2026, 8:55:51 PM PT — 712 turns
-
-**Original task:**
-
-```
-#Artemis
-
-Jon is with Artemis now and Artemis gets wedged because it's being taken too far we think. 
-
-Ubuntu 24.04.4 LTS artemis tty1
-artemis login: {466.6646581 Out of memory: Killed process 6319 (ray: RayWorkerP) total-vm:8634249224kB, anon-rss:240kB, fIle-rss: 680kB, Shmem-rss:0kB, UID: pgtables: 13176kB com_score_adj:1000
-
--- 
-So need something proactively ready to push the instant it's rebooted
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #13878, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1731, #1732, #1734, #1737, #1739, #1744, #1746, #1747, #1779, #1798, #1828, #18314, #18320, #1834 [resolved], #1836 [resolved], #1837 [resolved], #1839 [resolved], #1842 [investigating], #1930 [resolved], #19567 [proposed], #2063, #2065, #2067, #2068, #2069, #2070, #2073, #37030, #46641, #7142, #7149
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785209942258` — 7/27/2026, 8:46:39 PM PT — 46 turns
 
@@ -1430,55 +1500,6 @@ HARD CONSTRAINTS: DO NOT inject Anthropic, free-local-first (rule 146). NEVER se
 **Ideas referenced:** #12363, #12430, #12657, #12672, #12689, #13418, #13832, #13874, #15367, #16265, #17300, #1754, #1755, #178501, #18360, #19079 [queued], #19101 [queued], #19128 [queued], #19129, #19227 [blocked], #19230 [queued], #19234 [queued], #19239 [rejected], #19258 [executing], #19259 [deployed], #19260 [queued], #19261 [queued], #19266 [proposed], #19267 [deployed], #19273 [queued], #19274 [executing], #19288 [deployed], #19321 [proposed], #19325 [queued], #19338 [proposed], #19388 [executing], #19390 [proposed], #19396 [approved], #19404 [executing], #19406, #19417 [executing], #19423 [executing], #19425 [proposed], #19427 [executing], #19433 [executing], #19441 [executing], #1985, #1989, #1990, #1991, #1992, #1998, #2010, #2011, #2012, #2013, #2014, #2015, #2019, #2025, #2928, #339484, #339485, #339486, #339487, #339488, #339489, #339490, #339491, #339492, #339495, #339496, #339497, #339498, #339499, #339500, #4536, #5371, #7094, #7117, #7325, #7557, #8190, #8281, #8321, #8563, #8598, #9829
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785122479644` — 7/26/2026, 8:28:25 PM PT — 76 turns
-
-**Original task:**
-
-```
-VEC/MCP needs to be aware that the "Matrix" is often referred to. it is usually the admin_profile.php page, but can be anything else in the pages https://emsuniverstiy.com/emtskills/ etc... it's slang for those places
-```
-
-**Ideas referenced:** #11383, #11387, #17169, #17170, #17486, #17494, #17504, #17505, #18329 [queued], #18605 [proposed], #18783 [deployed], #18786, #18787, #18827 [proposed], #1896, #1897, #19339 [proposed], #19443 [proposed], #1999, #377566
-
-**Last PICKUP PROMPT:**
-
-```
-rship mismatch with the lock).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up VEC "Matrix" slang definition task — "the Matrix" is now indexed in the Virtual EMSU Corpus.
-
-Where we left off (verified 2026-07-26 20:28 PT):
-- `/var/www/emtskills/docs/EMSU_SLANG_GLOSSARY.md` created with "Matrix" definition
-- Ingested into VEC corpus.db as chunk 3775667, FTS5 queryable
-- Idea #19443 [proposed] filed
-
-Open threads to drive next:
-1. (none — this task is complete; glossary file and corpus entry are live)
-
-Reference IDs:
-- Idea filed: #19443
-- Files touched: /var/www/emtskills/docs/EMSU_SLANG_GLOSSARY.md, /var/lib/emsu_corpus/corpus.db
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Read handoff notes & understand VEC architecture
-- [x] Find VEC corpus/index files
-- [x] Explore corpus.db schema
-- [x] Search for existing "Matrix" entry — found: unrelated Frank/SV/VR matrix hits
-- [x] Create EMSU_SLANG_GLOSSARY.md w/ "Matrix" definition
-- [x] Run the vec_indexer as www-data — 10340 new chunks indexed
-- [x] Rebuild FTS5 index as www-data
-- [x] Verify FTS5 queries resolve "Matrix" correctly
-- [x] Update HANDOFF_NOTES.md
-- [x] File idea #19443
-</task_progress>
-</attempt_completion>
-```
 
 ### `1785023624102` — 7/26/2026, 8:03:09 PM PT — 562 turns
 

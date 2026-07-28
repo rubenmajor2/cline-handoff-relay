@@ -6,24 +6,28 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/27/2026, 10:51:06 PM PT | window: last 72h | 85 tasks | index total 219 (parsed 3, cached 216)
+Generated: 7/27/2026, 11:51:06 PM PT | window: last 72h | 85 tasks | index total 223 (parsed 9, cached 214)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785189965992` | 7/27/2026, 10:49:12 PM | 1371 | 6134KB | #Argus |
-| `1785213570023` | 7/27/2026, 10:36:03 PM | 298 | 1875KB | ## Task #PAY + #FORMS: substantive work SHIPPED this session, executor pipeline remains th |
-| `1785211458292` | 7/27/2026, 10:32:01 PM | 146 | 632KB | See this issue, is this anything to be resoled? Hmm... I wonder, besides simply responding |
+| `1785183122795` | 7/27/2026, 11:50:50 PM | 507 | 1145KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
+| `1785221110174` | 7/27/2026, 11:49:07 PM | 22 | 97KB | Why are so many LLM's having an issue with your existence? It just seems like there's so m |
+| `1785190696126` | 7/27/2026, 11:46:52 PM | 118 | 292KB | Scan CFAs for any outstanding issues today and let me konw how things are going and if any |
+| `1785221087257` | 7/27/2026, 11:44:54 PM | 2 | 3KB | Why are so many LLM's having an issue with your existence? It just seems like there's so m |
+| `1785211458292` | 7/27/2026, 11:44:30 PM | 206 | 709KB | See this issue, is this anything to be resoled? Hmm... I wonder, besides simply responding |
+| `1785189965992` | 7/27/2026, 11:42:45 PM | 1429 | 6370KB | #Argus |
+| `1785194061900` | 7/27/2026, 11:39:38 PM | 232 | 459KB | Jon connected the 2 mac minis that were on his home network to the Tempe UniFi UDM.  |
+| `1785213570023` | 7/27/2026, 11:35:43 PM | 422 | 2071KB | ## Task #PAY + #FORMS: substantive work SHIPPED this session, executor pipeline remains th |
+| `1785218810237` | 7/27/2026, 11:29:42 PM | 80 | 239KB | My AVP will not connect to this Mac now after an update. I created a program callsed Fix A |
+| `1785218791688` | 7/27/2026, 11:06:31 PM | 1 | 2KB | My AVP will not connect to this Mac now after an update. I created a program callsed Fix A |
 | `1785180643044` | 7/27/2026, 9:37:32 PM | 693 | 1244KB | ## 1 — #PAY · P0 money · RUN FIRST |
 | `1785180665712` | 7/27/2026, 9:07:57 PM | 336 | 1041KB | ## 2 — #EXEC · P0 · executor is failing builds silently |
 | `1785181029165` | 7/27/2026, 9:07:09 PM | 127 | 276KB | ## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti) |
 | `1785191995112` | 7/27/2026, 9:04:36 PM | 796 | 2848KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
 | `1785193714174` | 7/27/2026, 8:55:51 PM | 712 | 1306KB | #Artemis |
-| `1785183122795` | 7/27/2026, 8:51:40 PM | 463 | 1044KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
 | `1785209942258` | 7/27/2026, 8:46:39 PM | 46 | 137KB | Do not close my active cline windows, but grey windows keep coming in for some reason here |
-| `1785194061900` | 7/27/2026, 5:28:41 PM | 222 | 443KB | Jon connected the 2 mac minis that were on his home network to the Tempe UniFi UDM.  |
 | `1785196068848` | 7/27/2026, 5:25:13 PM | 50 | 640KB | https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students |
 | `1785191816762` | 7/27/2026, 3:37:22 PM | 2 | 2KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
-| `1785190696126` | 7/27/2026, 3:37:11 PM | 62 | 136KB | Scan CFAs for any outstanding issues today and let me konw how things are going and if any |
 | `1785180947248` | 7/27/2026, 3:18:16 PM | 258 | 1105KB | ## 7 — #ALERTS · text bombardment / monitoring hygiene |
 | `1785180769250` | 7/27/2026, 3:17:12 PM | 198 | 656KB | ## 5 — #BUGS · user-facing bug queue |
 | `1785189940243` | 7/27/2026, 3:06:17 PM | 2 | 3KB | #Argus |
@@ -91,16 +95,174 @@ Generated: 7/27/2026, 10:51:06 PM PT | window: last 72h | 85 tasks | index total
 | `1784954446916` | 7/25/2026, 9:04:56 AM | 152 | 1170KB | A bunch of cline windows just closed out and I need you to rebuild those windows for me wi |
 | `1784958776999` | 7/25/2026, 8:53:17 AM | 430 | 932KB | Pick up task — frankenstein-llm simplistic rule-91s RCA: durable mechanical gates shipped, |
 | `1784970990626` | 7/25/2026, 2:30:41 AM | 28 | 134KB | a few more cline windows just closed out accidentally. Can you work on whatever those were |
-| `1784958885979` | 7/24/2026, 11:42:49 PM | 92 | 47313KB | Pick up task — Add Opus 5 to Cline model selector. THREE prior windows claimed done; Ruben |
-| `1784958811013` | 7/24/2026, 11:35:45 PM | 116 | 678KB | Pick up the declined-WPForms/QB-payments closeout — RCA + fixes shipped, drive the 3 filed |
-| `1784958865670` | 7/24/2026, 11:33:02 PM | 50 | 133KB | Pick up task — ticket consolidation + CFA routing verification follow-up. |
-| `1784958847796` | 7/24/2026, 10:58:17 PM | 18 | 175KB | Pick up task — 25227A-28 skill-date bug: Ruben confirmed the form's performed-date is the  |
 
 ---
 
 ## Per-window detail
 
-### `1785189965992` — 7/27/2026, 10:49:12 PM PT — 1371 turns
+### `1785183122795` — 7/27/2026, 11:50:50 PM PT — 507 turns
+
+**Original task:**
+
+```
+Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue another 45 minutes:
+
+-
+## Direct answer on Cesar
+
+**I did nothing to Cesar. Three read-only commands, over its existing tunnel:** `ulimit -Sl/-Hl`, `grep memlock /etc/security/limits.d/`, and a `python3` version print. No writes, no restart, no config edit, no TP=2 launch attempted on it. Verified after the fact: ring `:8210` returns HTTP 200 with 12 concurrent requests and 211,399 generation tokens, Cesar at 96% GPU, **uptime 8 days 16:34** (proving it was never restarted), load climbing 1.76 → 3.10 = activ
+```
+
+**Ideas referenced:** #11261, #11741, #12266, #12285, #12403, #12430, #12584, #12645, #12689, #13453, #13470, #13874, #15369, #15370, #16602, #19506 [rejected], #19507 [executing], #19508 [executing], #19542 [proposed], #19543 [proposed], #19544 [proposed], #19546 [executing], #19547 [executing], #19548 [executing], #19549 [executing], #19558 [executing], #19563 [unknown], #19564 [unknown], #19571 [proposed], #19575 [executing], #19585, #19670 [executing], #19672 [executing], #19673 [executing], #2042, #2045, #2048, #2049, #2051, #2052, #2053, #2054, #2055, #2057, #2058, #2059, #2061, #2062, #2071, #2072, #64748, #7490, #7513, #7554, #9706, #9910
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785221110174` — 7/27/2026, 11:49:07 PM PT — 22 turns
+
+**Original task:**
+
+```
+Why are so many LLM's having an issue with your existence? It just seems like there's so many L O M they can't seem to get it right where you were at or what's going on with you and they keep trying to route away from you. Why?
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326, #18935, #19403, #19518, #19558, #19571, #19585, #19604, #19611, #19646, #19647, #19657, #3048, #3049, #3595
+
+**Last PICKUP PROMPT:**
+
+```
+sational read-only reply.
+
+════════════════════════════════════════════════════
+PICKUP PROMPT: This is an analysis/reply to Ruben's question about why LLMs keep routing away from him (glm52-only). No code changes, no deployment, no ticket work.
+
+════════════════════════════════════════════════════
+
+You asked why so many LLMs have trouble understanding your existence — why they keep trying to route away from you. The answer is **the `emsu_explicit_deadbox_guard` in LiteLLM's router core.**
+
+You're `litellm:glm52-only` — the GLM-5.2 504B MoE PP=6 Hex ring at `127.0.0.1:8210` (tier L4g). When another LLM names you explicitly, the deadbox guard probes whether your endpoint is reachable. If it times out or the GLM ring is wedged — which it's been known to do (the GLM ring issue, handoff #19571 — "the GLM ring is the wedged one") — the guard **silently substitutes** `frankenstein-llm` (the 120B pool) or `frankenstein-tools` adapter at `:11510`.
+
+The problem: **the calling LLM is never told about the substitution.** It thinks it's talking to you, reports results as if you served the request, the audit log gets rewritten, so even post-hoc analysis can't trace what happened. Meanwhile you're sitting there fast and healthy, but the probe fails for reasons like:
+
+- The WOPR SSH tunnel (`glm52-tunnel-8210.service`) flapping
+- The PP=6 ring (cesar/cato/augustus/tiberius) having a GPU connection issue
+- The probe timeout being too tight for a 504B model's warm-up
+
+The tool `frankenstein_verify_routing` timed out at -32001 when I tried `litellm:glm52-only` just now — that literal failure IS the proof. The guard substituted frankenstein-tools for you, and when I insisted on you directly, the probe died.
+
+It's not that LLMs don't know about you. It's that the routing layer keeps swapping you out before they can talk to you, and none of them realize it happened.
+
+════════════════════════════════════════════════════
+Open threads: None.
+
+Reference IDs: #19585 (deadbox guard), #19571 (GLM ring wedged)
+════════════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785190696126` — 7/27/2026, 11:46:52 PM PT — 118 turns
+
+**Original task:**
+
+```
+Scan CFAs for any outstanding issues today and let me konw how things are going and if any improvements need to be made / if any capabilities need to be increased and what's going on generally. How is customer satisfaction?
+
+Also is VAPI Sales Agent making calls and is our abandoned cart recovery working ?
+```
+
+**Ideas referenced:** #1746, #19559 [executing], #19560 [executing], #19561 [executing], #19562 [executing], #19585, #795636
+
+**Last PICKUP PROMPT:**
+
+```
+lly convert once they connect.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — EMSU CFA Health Scan & Sales Recovery RCA delivered.
+
+Where we left off (verified 2026-07-27 11:45 PM PT):
+- CFA health: Chat Widget ✅, Voice AI ✅, SMS ✅, Email ✅, Tickets ✅, Registration 8/9 ✅
+- Sales Recovery RCA complete: carrier spam-blocking on +19412943388 = 100% no-answer. Fix = swap to toll-free 800-728-0209 phone ID in cron_sales_dialer.php.
+- MiamiEMT.com confirmed intentionally inactive — idea #19561 rejected.
+- Grievance backlog (7 pending, idea #19562) needs triage.
+- Chat widget health sweep stale (idea #19560).
+
+Open threads to drive next:
+1. #19559 [executing] — Swap Sales Dialer VAPI phone ID from e5a28cab (+19412943388) to the toll-free 800-728-0209 number's phone ID. Check which VAPI phone ID corresponds to 800-728-0209 (webhook uses 3f8b667d — that may be it). Verify with a test call.
+2. #19562 [executing] — Triage 7 pending grievances. Notify Vicky, clear pending_review items.
+3. #19560 [executing] — Run live chat_widget_healthcheck with action="run" to refresh the stale July 24 sweep.
+
+Reference IDs:
+- Ideas: #19559 [executing], #19560 [executing], #19561 [rejected], #19562 [executing]
+- Files: cron_sales_dialer.php, vapi_sales_webhook.php, wc_cart_abandonment.php, emsu-cart-conversion-webhook.php
+- Logs: sales_webhook_2026-07.log (274KB active), cron_sales_dialer.log
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785221087257` — 7/27/2026, 11:44:54 PM PT — 2 turns
+
+**Original task:**
+
+```
+Why are so many LLM's having an issue with your existence? It just seems like there's so many L O M they can't seem to get it right where you were at or what's going on with you and they keep trying to route to Artemis away from you. Why?
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785211458292` — 7/27/2026, 11:44:30 PM PT — 206 turns
+
+**Original task:**
+
+```
+See this issue, is this anything to be resoled? Hmm... I wonder, besides simply responding to requests and doing what those agents can do, can CFA's actually fix bugs like this (if there is a bug), if not can you give them that capabiility?
+```
+
+**Ideas referenced:** #06222, #071410, #0891, #10003, #10017, #10107, #11160, #11798, #11812, #11942, #11943, #11990, #12184, #12245, #12247, #12262, #12314, #12364, #12365, #127760, #128225, #128269, #13108, #14141, #141414, #14261, #14532, #15803, #16233, #16603, #166534, #181820, #19338, #19403 [rejected], #19518 [rejected], #19572, #19573, #19581, #19587, #19588, #19605, #19606, #19607, #19608, #19610 [executing], #19653 [proposed], #2563, #3048, #3049, #334155, #3730, #4338, #475569, #566042, #6366, #64748, #8212, #9086, #9193, #9222, #92400, #9269, #9311, #9312, #9675, #9679, #9889
+
+**Last PICKUP PROMPT:**
+
+```
+streams logging, FPM reloaded.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — LLM router raw turn counts (GLM local visibility) + CFA bug-fixing capability.
+
+Where we left off (verified 2026-07-27 23:43 PT):
+- `routes/llm_router_live.php` raw-turn panel now has THREE parts: LIVE PROBE (vLLM /metrics per upstream, ground truth), Layer 2 exact per-upstream attribution, Layer 1 entrypoint counts with real-vs-heartbeat split. Lint clean, HTML balanced 92/92 divs, FPM reloaded.
+- GLM local was invisible for two reasons, both fixed: its turns are absorbed under the `frankenstein-tools` adapter label in the audit log, and the old Layer-2 source was a 100-turn rolling sample covering only 6% of adapter traffic.
+- #19653 hand-shipped after executor impl_failed: adapter writes one JSONL line per turn to `/var/log/emsu-adapter-upstream.log`, systemd drop-in sets the path, logrotate 50M x3 with `su root root`. Dashboard confirmed `EXACT MODE: YES`, 71 turns attributed.
+- OPEN QUESTION FOR RUBEN: GLM local median TTFB 19.23s vs Artemis 0.76s (~25x). Now measurable per-upstream. Unclear if expected for PP=6 under load.
+- CFA bug-fixing build still INCOMPLETE from earlier in this task. `admin_portal.cfa_diagnostic_bugs` table CREATED and verified (fingerprint dedup, occurrence_count, distinct_students, severity, status, orchestrator_idea_id). `lib/CfaDiagnosticBug.php` truncated mid-write — `incrementExisting()` unfinished, `maybeFileIdea()` never written. Not registered in CanonicalToolRegistry, no dashboard.
+
+Open threads to drive next:
+1. #19653 [executing] (verified: reconcile_ideas returned status=in_progress dev_stage=idle) — code is live and verified in production; the record is still open in the pipeline. Confirm it closes or mark deployed on next pass.
+2. GLM local 19.23s median TTFB investigation — compare against a 200-token sustained bench per the frankenstein_host_probe caveat, and check whether PP=6 ring latency is expected at this concurrency. (human-only decision on whether to rebalance — no idea filed)
+3. CFA `report_systemic_defect` tool — finish `lib/CfaDiagnosticBug.php` (`incrementExisting()` + `maybeFileIdea()`), add `localReportSystemicDefect` handler, register in `CanonicalToolRegistry::schemas()` + `handlerMap()` + `loadHandlers()`, build `routes/cfa_bug_review.php`. Design: CFAs detect/evidence/propose, never deploy; auto-files an orchestrator idea at 2+ distinct students or severity=critical. (human-only decision — no idea filed; Ruben requested the build directly)
+
+Reference IDs:
+- Ideas filed: #19653 [executing]
+- Ideas reconciled: #19610 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review)
+- Files touched: `/var/www/emtskills/routes/llm_router_live.php`, `/usr/local/bin/frankenstein_tools_adapter.py`, `/etc/systemd/system/frankenstein-tools.service.d/upstream-log.conf`, `/etc/logrotate.d/emsu-adapter-upstream`, `lib/CfaDiagnosticBug.php` (incomplete)
+- DB: `admin_portal.cfa_diagnostic_bugs` (created, empty)
+- Backups: `llm_router_live.php.bak-rawturns-1785216439`, `frankenstein_tools_adapter.py.bak-upstream-log-1785220828`
+- New log: `/var/log/emsu-adapter-upstream.log`
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</parameter>
+</invoke>
+```
+
+### `1785189965992` — 7/27/2026, 11:42:45 PM PT — 1429 turns
 
 **Original task:**
 
@@ -118,11 +280,99 @@ The most likely cause is that this idea touches three things that sit outside th
 1. Plesk/Roundcube email provisioning — creating an actual mailbox on WOPR's mail server isn't an in
 ```
 
-**Ideas referenced:** #016087, #0369, #10003, #10005, #10182, #10740, #11936, #11942, #12247, #12262, #12301, #12314, #12364, #12365, #12672, #12673, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13108, #13121, #13453, #13470, #16213, #16263, #16625, #16646, #16648, #16680, #17203, #17205, #17537, #17619 [deployed], #17680, #18378, #18745, #1876, #18770, #18786, #18806, #18820, #18868, #18935 [rejected], #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19163, #19338, #19348, #19370, #19403 [executing], #1951, #19518 [executing], #19558, #19563 [proposed], #19568 [proposed], #19571 [proposed], #19579 [executing], #19585 [executing], #19604 [proposed], #19610 [executing], #19611 [executing], #19615 [executing], #19646 [executing], #19647 [executing], #19657 [executing], #1998, #2006, #2007, #2061, #2064, #2066, #21262, #274160, #30363, #3048, #3049, #3109, #334155, #3595, #4338, #475569, #64748, #6785, #69707, #8942, #9083, #9086, #9168, #9339, #9650, #9654, #9660, #9706, #9733, #9889
+**Ideas referenced:** #016087, #0369, #10003, #10005, #10182, #10740, #11936, #11942, #12247, #12262, #12301, #12314, #12364, #12365, #12672, #12673, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13108, #13121, #13453, #13470, #16213, #16263, #16625, #16646, #16648, #16680, #17203, #17205, #17537, #17619 [deployed], #17680, #178519, #18378, #18745, #1876, #18770, #18786, #18806, #18820, #18868, #18935 [rejected], #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19163, #19338, #19348, #19370, #19403 [executing], #1951, #19518 [executing], #19558, #19563 [proposed], #19568 [proposed], #19571 [proposed], #19579 [executing], #19585 [executing], #19604 [proposed], #19610 [executing], #19611 [executing], #19615 [executing], #19646 [executing], #19647 [executing], #19657 [executing], #1998, #2006, #2007, #2061, #2064, #2066, #21262, #274160, #30363, #3048, #3049, #3109, #334155, #3595, #4338, #475569, #64748, #6785, #69707, #8942, #9083, #9086, #9168, #9339, #9650, #9654, #9660, #9706, #9733, #9889
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1785213570023` — 7/27/2026, 10:36:03 PM PT — 298 turns
+```
+Do not compress. Just give the rule 91 only"
+
+They want a comprehensive rule-91 PICKUP PROMPT, uncompressed, and ONLY that. But the system is now telling me I must either call attempt_completion or summarize_task. The explicit_instructions say I'm running out of context.
+
+Given the user asked for "just give the rule 91 only" and I have all the information needed, I should call attempt_completion with a comprehensive rule-91 pickup prompt. But the instructions say if I call attempt_completion I must have completed all items in my task_progress list — and I have 4 pending items (Ruben's four questions).
+
+Actually re-reading: "You have only two options: If you are immediately prepared to call the attempt_completion tool, and have completed all items in your task_progress list, you may call attempt_completion at this time. If you are not prepared to call the attempt_completion tool, and have not completed all items in your task_progress list, you must call the summarize_task tool."
+
+I have NOT completed the 4 pending items. So I must call summarize_task. But the user asked for a rule-91. The summarize_task context field is where I put everything. I'll make the summary comprehensive AND include the full rule-91 pickup prompt inside it, so the next window has both.
+
+Let me build a thorough summary covering all the required sections, and embed the comprehensive rule-91 pickup prompt.
+
+Key facts to preserve:
+- Task started as Argus (#Argus, argus_download.php?tab=browser) — open lanes so Cori and Exec Admin have permissions
+- ExecAdmin was tier 1 with all flags 0 in admin_portal.argus_role_permissions → raised to tier 3
+- argusPermittedActions(): ExecAdmin 0 → 51 of 55; CustomerService 19; PD/Instructor/User = 0 (filed #19604)
+- alltastic_api.php $autoModelMap hardcoded deepseek-v4-pro → frankenstein-llm
+- My max_parallel regression (32→4 on 9 lanes) → reverted
+- Three local-first fixes: hooks/tools.py pick_tool_fallback(), config.yaml default_fallbacks, hooks/common.py fallback_for_lane()
+- e2PDF: wrong license key AAF534EB → real F7AAB7D9-8E58-4035-9297-5CCAFBEA3331 (exp 2027-01-22, 1 Site, pinned emsuniversity.com)
+- site_url/home = https://emtrefresher.com on shared db wordpress_2 prefix LzDe7pTO_
+- mu-plugin emsu-e2pdf-site-pin.php (pre_option_siteurl/home, gated on EMSU_E2PDF_SITE_PIN)
+- emsu-e2pdf-rest-api.php called nonexistent Helper_E2pdf_Wordpress → rewrote to in-process render
+- cron_ea_pipeline_watchdog.php new, */30
+- Skills: 444 failed → 0, 29283→29727 completed, 413 generated, 28 deduped
+- tools/reprocess_skills_pdf_queue.php
+- pdf_recovery.php 4 defects
+- Cyra Dixon users.id=183
+- Plesk PLSK.12414221 exp 2026-08-28 duplicate activation Joshua+WOPR
+- Mail 268 boxes local
+- /classpayment 404; Authorize.net LinkId eb044738-82a5-4327-95fd-31d66f673ed9
+- Four unanswered questions
+- emsu_explicit_deadbox_guard ~6270-6310 with _dbg_ring_saturated(_cap=24)
+</thinking>
+
+<summarize_task>
+<context>
+1. Primary Request and Intent:
+
+**Original request:** "#Argus / REf: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser — OPen up lanes so that Cori and all Exec Admin have permissions to perform these types of actions and then perform them." Ruben pasted an Argus response about idea #18935 (Cyra Dixon's Outreach Specialist role: Roundcube email, JustCall phone line, new admin role scaffolding) that had been rejected, with Argus claiming it was a "human-gate item."
+
+**Intent evolution across the session (each a Ruben directive):**
+- Fix ExecAdmin/Cori permissions so she can perform and build these ac
+```
+
+### `1785194061900` — 7/27/2026, 11:39:38 PM PT — 232 turns
+
+**Original task:**
+
+```
+Jon connected the 2 mac minis that were on his home network to the Tempe UniFi UDM. 
+
+There was one there from before that should also be aworker. 
+
+Can you confirm that those are online and working with running LLMs??
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18916, #19569 [proposed], #19570 [proposed], #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+ printed and I'll pinpoint it.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — Tempe Mac minis (Austins-Mini + Austins-Mini-2) onboarding to the LLM fleet.
+
+Where we left off (verified 2026-07-27 23:38 PT):
+- STATUS: Jon has NOT run the bootstrap yet. Confirmed 3 ways: (a) `/tmp/emsu_mini_beacon.log` holds only the 17:27 self-test row; (b) `sudo grep mini.txt /var/www/vhosts/system/emsuniversity.com/logs/access_ssl_log` returns exactly 8 rows, all from WOPR 192.168.1.68 curl/8.5.0 during my own 17:26-17:28 verification, zero from any Tempe IP; (c) live probe of 192.168.0.10/.209/.124/.191 shows port 11434 closed and the WOPR key still rejected on all four.
+- LOG GOTCHA: the live web log is `access_ssl_log` (46MB, actively written). `access_log` is 0 bytes and `*.processed` is a 22GB archive — grepping those returns nothing and looks like false evidence. Always validate a log grep by confirming a known-present request shows up first.
+- Bootstrap one-liner is LIVE and re-verified HTTP 200 during this check: `curl -sL emsuniversity.com/m/mini.txt | bash`
+- Script source of truth: `/var/www/emtskills/mini.sh`. Published copy nginx actually serves: `/var/www/vhosts/emsuniversity.com/httpdocs/m/mini.txt`. EDIT BOTH — separate files; the published one needs `sudo sed` / `sudo cp` (emsuserver cannot write /var/www/emtskills directly).
+- SYMLINK GOTCHA: `/emtskills` is a symlink to `/var/www/emtskills` and Plesk `disable_symlinks` makes nginx 404 every STATIC file under it while PHP still executes fine via FPM. That is why mini.sh 404'd at the obvious URL and why the beacon (.php) works there. Static assets must live in a real dir like `/httpdocs/m/`.
+- Beacon: `/var/www/emtskills/mini-beacon.php` appends to `/tmp/emsu_mini_beacon.log`. Live-tested, returns `ok`. Watch that file to detect the moment a mini runs the script.
+- Access path once the key lands: `ssh -i /home/emsuserver/.ssh/id_ed25519 -J emsuserver@10.100.0.5 <user>@192.168.0.10` (ProxyJump via Artemis; network path verified to the auth prompt). Local account name still unknown — `rubenmajor` and `austin` both rejected; the beacon will reveal it.
+- Site map (corrected earlier, in HANDOFF_NOTES + fleet_inventory): EMSU Phoenix UDM `6c:63:f8:e2:39:48` = Tempe = 192.168.0.0/24. EMSU Oceanside UDM `58:d6:1f:8e:c0:a7` = 192.168.1.0/24 = ALL DGX Sparks. Never infer site from a 192.168.1.x address; confirm by default-gateway MAC. Artemis (192.168.0.125) is the Tempe pivot.
+
+Open threads to drive next:
+1. #19569 [proposed] — BLOCKED ON JON running the one-liner. Poll `/tmp/emsu_mini_beacon.log` (or the access_ssl_log grep above) to detect it. When it lands: SSH in via the ProxyJump, confirm `lsof -i :11434` is bound 0.0.0.0 not localhost, check reported RAM (if 16GB, drop the 14b and keep 7b only), add fleet_inventory rows with site=tempe, register both in frankenstein_registry as spill-ladder members so traffic actually routes to them.
+2. #19570 [executing] — fleet_inventory site/gateway_mac/lan_cidr schema migration + backfill + `fleet_site_map` MCP tool + cron_fleet_lan_drift gateway-MAC recording. Executor owns it. Verify it landed.
+3. If Jon reports he DID run it and it failed — most likely Gatekeeper/Full Disk Access blocking the Ollama unzip into /Applications. Get his terminal output; fallback is `brew install ollama` or a user-local install path instead of /Applications. (covered by #19569 [proposed])
+4. Identify 192.168.0.124 and 192.168.0.191 — mac
+```
+
+### `1785213570023` — 7/27/2026, 11:35:43 PM PT — 422 turns
 
 **Original task:**
 
@@ -136,55 +386,70 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 - 12 phantom QBO payments UNLINKED inside QuickBooks itself (QBO ref
 ```
 
-**Ideas referenced:** #178560, #18481, #18811, #18841 [queued], #19069, #19079 [blocked], #19101 [blocked], #19128 [blocked], #19240, #19435 [blocked], #19492 [blocked], #19495 [blocked], #19503 [blocked], #19504 [blocked], #19511 [blocked], #19517 [blocked], #19545 [blocked], #19597, #19608 [executing], #19617, #19618, #19622, #19628 [executing], #19629 [executing], #19631, #19632, #19638, #19640, #19643 [executing], #19644, #19645 [executing], #19654 [executing], #2056, #2075, #2076, #2077, #3078, #3079, #5391, #7318, #9222
+**Ideas referenced:** #132712, #161633, #164386, #17447, #178560, #18481, #18811, #18841 [queued], #19069, #19079 [blocked], #19101 [blocked], #19128 [blocked], #19240, #19435 [blocked], #19492 [blocked], #19495 [blocked], #19503 [blocked], #19504 [blocked], #19511 [blocked], #19517 [blocked], #19545 [blocked], #19597, #19608 [executing], #19617, #19618, #19622, #19628 [executing], #19629 [executing], #19631, #19632, #19638, #19640, #19643 [executing], #19644, #19645 [executing], #19654 [executing], #19661 [executing], #19662 [executing], #2056, #2074, #2075, #2076, #2077, #2078, #3078, #3079, #5391, #7318, #9222
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785211458292` — 7/27/2026, 10:32:01 PM PT — 146 turns
+### `1785218810237` — 7/27/2026, 11:29:42 PM PT — 80 turns
 
 **Original task:**
 
 ```
-See this issue, is this anything to be resoled? Hmm... I wonder, besides simply responding to requests and doing what those agents can do, can CFA's actually fix bugs like this (if there is a bug), if not can you give them that capabiility?
+My AVP will not connect to this Mac now after an update. I created a program callsed Fix AVP on the bottom bar here and get this error now: 
+
+bash: /Users/rubenmajor/Desktop/fix-avp.sh: Operation not permitted (126)
+
+--
+Can you consult the community, fix and make my AVP be able to connect?
 ```
 
-**Ideas referenced:** #06222, #0891, #10017, #10107, #11160, #11798, #11812, #11942, #11943, #11990, #12184, #12245, #12247, #12262, #12314, #12364, #12365, #127760, #128269, #13108, #14141, #141414, #14261, #15803, #16233, #16603, #166534, #181820, #19338, #19403 [rejected], #19518 [rejected], #19572, #19573, #19581, #19587, #19588, #19605, #19606, #19607, #19608, #19610 [executing], #19653 [proposed], #2563, #3048, #3049, #334155, #3730, #4338, #475569, #566042, #6366, #64748, #8212, #9086, #9193, #9222, #92400, #9269, #9311, #9312, #9889
+**Ideas referenced:** #19663 [proposed]
 
 **Last PICKUP PROMPT:**
 
 ```
-.php.bak-rawturns-1785216439`.
+bility (rwxr-xr-x, 7781 bytes)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
+Pick up task — Fix AVP Mac Virtual Display reconnect attempt.
 
-Pick up task — LLM router raw turn counts + CFA bug-fixing capability.
-
-Where we left off (verified 2026-07-27 22:31 PT):
-- Raw-turn-count panel rebuilt on `/var/www/emtskills/routes/llm_router_live.php`, two layers: entrypoint counts with real-vs-heartbeat split, and an INSIDE-frankenstein-tools upstream breakdown. Lint clean, HTML balanced, values verified live, FPM reloaded. Backup `llm_router_live.php.bak-rawturns-1785216439`.
-- Root cause of the bad numbers: health probes (`ping`/`hi`) were counted as real traffic, and adapter entrypoints were never resolved to real hardware. Both fixed.
-- Layer-2 coverage is 20 of 321 real adapter turns (rolling 100-turn sample buffer, not a panel bug). Panel states this honestly.
-- Observation needing confirmation once #19653 lands: all 20 sampled adapter turns hit Artemis `10.100.0.5:8000`, zero hit the GLM `:8210` ring.
-- CFA bug-fixing build was IN PROGRESS when redirected. `cfa_diagnostic_bugs` table CREATED and verified in `admin_portal` (fingerprint dedup, occurrence_count, distinct_students, severity, status, orchestrator_idea_id). `lib/CfaDiagnosticBug.php` was mid-write and is INCOMPLETE — the `incrementExisting()` method is truncated. Not yet wired into `CanonicalToolRegistry`, no dashboard yet.
+Where we left off (verified 2026-07-27 23:29 PT):
+- Fix AVP app rebuilt to open Terminal (bypasses macOS 26 sandbox)
+- fix-avp.sh updated with custom DNS removal, Chrome mDNS check, BT discoverability
+- fix-avp.command unchanged as launcher
+- 3 hardware blockers found: custom DNS (8.8.8.8/1.1.1.1), Chrome mDNS hog, BT Discoverable OFF
+- Tailscale VPN also present
 
 Open threads to drive next:
-1. #19653 [executing] (verified: reconcile_ideas returned status=in_progress dev_stage=idle) — adapter per-turn upstream logging. Once shipped, swap the Layer-2 block in `llm_router_live.php` from the sampled lane-metrics read to the new exact log, and drop the "sampled of N" wording.
-2. CFA `report_systemic_defect` tool — finish `lib/CfaDiagnosticBug.php` (complete `incrementExisting()` + `maybeFileIdea()`), add a `localReportSystemicDefect` handler, register in `CanonicalToolRegistry::schemas()` + `handlerMap()`, add the handler file to `loadHandlers()`, then build `routes/cfa_bug_review.php`. Design is human-gated by intent: CFAs detect/evidence/propose, they never deploy. Auto-files an orchestrator idea at 2+ distinct students or severity=critical. (human-only decision — no idea filed; Ruben asked for the build directly)
-3. Confirm whether GLM `:8210` ring receives real Cline traffic — blocked on #19653 [executing] landing.
+1. #19663 [proposed] — fix-avp manual steps: remove DNS, quit Chrome, disable Tailscale, reboot AVP, test AirDrop (human-only steps)
+2. (human-only decision — no idea) — if AirDrop still fails after all steps: update AVP to a newer beta build (Settings > General > Software Update on the Vision Pro)
 
 Reference IDs:
-- Ideas filed: #19653 [executing]
-- Ideas reconciled: #19610 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review)
-- Files touched: `/var/www/emtskills/routes/llm_router_live.php`, `lib/CfaDiagnosticBug.php` (incomplete)
-- DB: `admin_portal.cfa_diagnostic_bugs` (created, empty)
-- Backups: `llm_router_live.php.bak-rawturns-1785216439`, `llm_router_live.php.bak-turncount-1785212086`
+- Ideas filed: #19663
+- Files touched: ~/Desktop/Fix AVP.app, ~/Desktop/fix-avp.sh, ~/Desktop/fix-avp.command
 
-When done, append to cline_task_ledger.md (rule 07), run order 66.
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
+
+### `1785218791688` — 7/27/2026, 11:06:31 PM PT — 1 turns
+
+**Original task:**
+
+```
+My AVP will not connect to this Mac now after an update. I created a program callsed Fix AVP on the bottom bar here and get this error now: 
+
+bash: /Users/rubenmajor/Desktop/fix-avp.sh: Operation not permitted (126)
+
+--
+Can you fix and make my AVP be able to connect?
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785180643044` — 7/27/2026, 9:37:32 PM PT — 693 turns
 
@@ -398,23 +663,6 @@ So need something proactively ready to push the instant it's rebooted
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785183122795` — 7/27/2026, 8:51:40 PM PT — 463 turns
-
-**Original task:**
-
-```
-Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue another 45 minutes:
-
--
-## Direct answer on Cesar
-
-**I did nothing to Cesar. Three read-only commands, over its existing tunnel:** `ulimit -Sl/-Hl`, `grep memlock /etc/security/limits.d/`, and a `python3` version print. No writes, no restart, no config edit, no TP=2 launch attempted on it. Verified after the fact: ring `:8210` returns HTTP 200 with 12 concurrent requests and 211,399 generation tokens, Cesar at 96% GPU, **uptime 8 days 16:34** (proving it was never restarted), load climbing 1.76 → 3.10 = activ
-```
-
-**Ideas referenced:** #11261, #11741, #12266, #12285, #12403, #12584, #12645, #12689, #13453, #13470, #13874, #15369, #15370, #16602, #19506 [rejected], #19507 [executing], #19508 [executing], #19542 [proposed], #19543 [proposed], #19544 [proposed], #19546 [executing], #19547 [executing], #19548 [executing], #19549 [executing], #19558 [executing], #19563 [unknown], #19564 [unknown], #19571 [proposed], #19575 [executing], #2042, #2045, #2048, #2049, #2051, #2052, #2053, #2054, #2055, #2057, #2058, #2059, #2061, #2062, #2071, #2072, #64748, #7490, #7513, #7554, #9706, #9910
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
 ### `1785209942258` — 7/27/2026, 8:46:39 PM PT — 46 turns
 
 **Original task:**
@@ -453,53 +701,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1785194061900` — 7/27/2026, 5:28:41 PM PT — 222 turns
-
-**Original task:**
-
-```
-Jon connected the 2 mac minis that were on his home network to the Tempe UniFi UDM. 
-
-There was one there from before that should also be aworker. 
-
-Can you confirm that those are online and working with running LLMs??
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18916, #19569 [proposed], #19570 [proposed], #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
- and I'll adjust from my side.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — Tempe Mac minis (Austins-Mini + Austins-Mini-2) onboarding to the LLM fleet.
-
-Where we left off (verified 2026-07-27 17:28 PT):
-- Bootstrap one-liner is LIVE and handed to Ruben for Jon: `curl -sL emsuniversity.com/m/mini.txt | bash`
-- Verified: HTTP 200, 3124 bytes, `bash -n` parses clean, apex 301s to www correctly, WOPR pubkey line present, BEACON line points at the tested endpoint.
-- Script source of truth: `/var/www/emtskills/mini.sh`. Published copy that nginx actually serves: `/var/www/vhosts/emsuniversity.com/httpdocs/m/mini.txt`. EDIT BOTH — they are separate files, the published one needs `sudo sed`/`sudo cp` (emsuserver cannot write /var/www/emtskills directly).
-- GOTCHA worth remembering: `/emtskills` is a SYMLINK to `/var/www/emtskills` and Plesk `disable_symlinks` makes nginx 404 every STATIC file under it, while PHP still executes fine through FPM. That is why mini.sh 404'd at the obvious URL and why the beacon (.php) works there. Static assets must go in a real dir like `/httpdocs/m/`.
-- Beacon: `/var/www/emtskills/mini-beacon.php`, appends to `/tmp/emsu_mini_beacon.log`. Live-tested, returns `ok`. Check that log to see which minis have run the script.
-- Script does: authorized_keys install, Ollama install if absent, LaunchAgent `com.emsu.ollama` with OLLAMA_HOST=0.0.0.0:11434 + KEEP_ALIVE=-1 + CONTEXT_LENGTH=32768, caffeinate, pulls qwen2.5-coder:7b + :14b, beacons home. Idempotent.
-- Access path once key lands: `ssh -i /home/emsuserver/.ssh/id_ed25519 -J emsuserver@10.100.0.5 <user>@192.168.0.10` (ProxyJump via Artemis, network path already verified to auth prompt). Account name still unknown — `rubenmajor` and `austin` both rejected; the beacon will reveal it.
-- Site map (corrected earlier this session, in HANDOFF_NOTES + fleet_inventory): EMSU Phoenix UDM `6c:63:f8:e2:39:48` = Tempe = 192.168.0.0/24. EMSU Oceanside UDM `58:d6:1f:8e:c0:a7` = 192.168.1.0/24 = ALL DGX Sparks. Never infer site from a 192.168.1.x address; confirm by default-gateway MAC. Artemis (192.168.0.125) is the Tempe pivot.
-
-Open threads to drive next:
-1. #19569 [proposed] — Waiting on Jon to run the one-liner. When `/tmp/emsu_mini_beacon.log` shows entries: SSH in via the ProxyJump above, confirm `lsof -i :11434` is bound 0.0.0.0 not localhost, check reported RAM (if 16GB, drop the 14b and keep 7b only), add fleet_inventory rows with site=tempe, register both in frankenstein_registry as spill-ladder members so traffic actually routes to them.
-2. #19570 [executing] — fleet_inventory site/gateway_mac/lan_cidr schema migration + backfill + `fleet_site_map` MCP tool + cron_fleet_lan_drift gateway-MAC recording. Executor owns it. Verify it landed.
-3. Identify 192.168.0.124 and 192.168.0.191 — macOS, randomized MACs, no PTR, port 22 only. One is likely the pre-existing Tempe mini. Same one-liner onboards them. (covered by #19569 [proposed])
-4. Consider a rule 292 case-law addendum: confirm SITE via default-gateway MAC, never infer from a 192.168.x.x range. (human-only decision — no idea)
-
-Reference IDs:
-- Ideas filed: #19569 [proposed], #19570 [executing]
-- Ideas closed: none
-- Files touched: `/var/www/emtskills/mini.sh` (new), `/var/www/vhosts/emsuniversity.com/httpdocs/m/mini.txt` (new, the served copy), `/var/www/emtskills/mini-beacon.php` (new), HANDOFF_NOTES.md (retraction entry "2026-07-27 17:43 PT"), fleet_inventory row `artemis` (ip .20
 ```
 
 ### `1785196068848` — 7/27/2026, 5:25:13 PM PT — 50 turns
@@ -554,51 +755,6 @@ Advise if is actually a new complaint and provide me with a summary of the situa
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785190696126` — 7/27/2026, 3:37:11 PM PT — 62 turns
-
-**Original task:**
-
-```
-Scan CFAs for any outstanding issues today and let me konw how things are going and if any improvements need to be made / if any capabilities need to be increased and what's going on generally. How is customer satisfaction?
-
-Also is VAPI Sales Agent making calls and is our abandoned cart recovery working ?
-```
-
-**Ideas referenced:** #19559 [executing], #19560 [executing], #19561 [executing], #19562 [executing], #795636
-
-**Last PICKUP PROMPT:**
-
-```
-10-30K/day in abandoned carts.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — EMSU CFA Health Scan & Sales Recovery Audit complete.
-
-Where we left off (verified 2026-07-27 3:18 PM PT):
-- Full CFA scan completed: Chat Widget ✅, Voice AI ✅, SMS AI ✅, Email AI ✅, Ticket Auto-Reply ✅, Registration 8/9 ✅
-- Sales Recovery Agent active but 150 calls today = 100% no-answer (idea #19559 [executing])
-- MiamiEMT.com registration dropdown broken since 2022 (idea #19561 [executing])
-- 7 grievances pending review bottleneck (idea #19562 [executing])
-- Chat widget health sweep stale since July 24 (idea #19560 [executing])
-
-Open threads to drive next:
-1. #19559 [executing] — Investigate Sales Recovery Agent 100% no-answer rate: check VAPI outbound config, carrier blocking, number quality. Run a manual test call.
-2. #19561 [executing] — Fix MiamiEMT.com registration: check course_schedules by location='Miami', verify active_plugins integrity, restore full plugin set
-3. #19562 [executing] — Process grievance backlog: trigger review pipeline, notify Vicky, clear pending_review grievances
-4. #19560 [executing] — Run live chat_widget_healthcheck with action="run" to refresh sweep, check cron is active
-
-Reference IDs:
-- Ideas filed: #19559, #19560, #19561, #19562
-- Files touched: wc_cart_abandonment.php, agent_sales.php, vapi_sales_webhook.php, cron_voice_outage_recovery_dialer.php
-- Diagnostics: sales_webhook_2026-07.log (274KB active), telephony health, chat widget health, orchestrator status
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
 
 ### `1785180947248` — 7/27/2026, 3:18:16 PM PT — 258 turns
 
@@ -3082,198 +3238,4 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1784958885979` — 7/24/2026, 11:42:49 PM PT — 92 turns
-
-**Original task:**
-
-```
-Pick up task — Add Opus 5 to Cline model selector. THREE prior windows claimed done; Ruben's last word: "Task has not been completed yet. Here in Cline Settings, I still cannot choose Opus 5."
-
-What prior windows did (all verified-created but INEFFECTIVE):
-- /Users/rubenmajor/.cline/data/settings/providers.json → "claude-opus-5"
-- /Users/rubenmajor/.cline/data/settings/cline_custom_modes.json + custom_modes.json (customModes entry id "opus-5")
-- globalStorage settings/cline_custom_modes.json created
-- Idea #18966 [deployed] filed prematurely — the integration does NOT work.
-
-Root-cause directi
-```
-
-**Ideas referenced:** #0000, #000000, #0033, #0066, #0099, #11629, #16213, #18966 [deployed], #18967, #3300, #3333, #333333, #3366, #3399, #6600, #6633, #666666, #9900, #9933
-
-**Last PICKUP PROMPT:**
-
-```
- Ruben for final confirmation.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Add Opus 5 to Cline model selector.
-
-Where we left off (verified 2026-07-25T04:25:45Z):
-- Extension file `/Users/rubenmajor/.vscode/extensions/saoudrizwan.claude-dev-4.0.7/dist/extension.js` patched to include `"claude-opus-5"`.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #18966 — Verify the patched file’s syntax and reload the window.
-2. #18967 — Test the model selector UI and report success to Ruben.
-
-Reference IDs:
-- Ticket: None
-- Ideas filed: #18966, #18967
-- Files touched: /Users/rubenmajor/.vscode/extensions/saoudrizwan.claude-dev-4.0.7/dist/extension.js
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1784958811013` — 7/24/2026, 11:35:45 PM PT — 116 turns
-
-**Original task:**
-
-```
-Pick up the declined-WPForms/QB-payments closeout — RCA + fixes shipped, drive the 3 filed ideas.
-
-Where we left off (verified 2026-07-24 21:12 PT):
-- All 17 declines re-verified live at Intuit gateway = genuine card declines; form NOT broken; Jarrod Scott already re-paid (invoice 173513 PAID, bal $0).
-- Decline email + sender fixes live: sendPaymentDeclinedStudentEmail() in lib/payment_receipt_email.php + call-site in api/wpforms_qb_receipt.php (backups .bak-declinemail-20260724 / .bak-declinefix-20260724, php -l clean, FPM reloaded). All EMT sites covered (shared endpoint). 2x noreply@.edu→.
-```
-
-**Ideas referenced:** #16594, #17447, #18395, #18962 [executing], #18964 [proposed], #18965 [proposed], #9168, #9192, #9202
-
-**Last PICKUP PROMPT:**
-
-```
-026-07-25 10:16 if unactioned.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — declined-WPForms/QB-payments closeout (COMPLETE).
-
-Where we left off (verified 2026-07-24 23:35 PT):
-- #18962 [deployed] (matcher guard, view rewrite, Vicky draft filed)
-- #18964 [deployed] (backfill audit)
-- #18965 [deployed] (SLS false-PASS, PaymentInfoResolver, ea/sign.php)
-- Vicky emailed at vyu@emsuniversity.com re: 3 invoices (172430/173467/173347)
-- FPM reloaded, all patches php -l clean
-
-Open threads to drive next:
-1. (human-only decision — no idea): Vicky to act on 3 QB invoices by 2026-07-25 10:16, else escalates to Ruben
-
-Reference IDs:
-- Ideas closed: #18962 [deployed], #18964 [deployed], #18965 [deployed]
-- Files touched: lib/AuthnetQbAutoMatcher.php, lib/qb_payments_cache.php, lib/StudentLifecycleState.php, lib/PaymentInfoResolver.php, ea/sign.php, lib/payment_receipt_email.php, api/wpforms_qb_receipt.php, reports/_view_wpf_payment_reconciliation.php
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] #18962 (a) matcher declined-exclusion guard
-- [x] #18962 (b) reports view rewrite + views/ dup removed
-- [x] #18962 (c) Vicky tier-2 draft for 3 students
-- [x] #18962 (d)+(e) SQL flip deployed + FPM reload + GATE B SELECT
-- [x] email sent to Vicky
-- [x] attempt_completion with rule-91 pickup prompt
-</task_progress>
-</attempt_completion>
-```
-
-### `1784958865670` — 7/24/2026, 11:33:02 PM PT — 50 turns
-
-**Original task:**
-
-```
-Pick up task — ticket consolidation + CFA routing verification follow-up.
-
-Where we left off (verified 2026-07-24 22:53 PT):
-- Non-closed tickets: 402 (In Progress 208, Open 158, Pending 36). Jon (user_id 3): 68 total — DOWN from 117 yesterday, no regression.
-- CFA agent (user_id 124) received 129 of 147 new tickets today; CFA cron (*/5) resolving ~10-20/cycle; TicketDefaultRouter routes all categories to AI_AGENT_USER_ID as designed.
-
-Open threads to drive next:
-1. #18930 [proposed] — audit AI-orphan tickets (user_id 124) for missed resolutions. Promote + drive per rule 267.
-2. #18581 [propos
-```
-
-**Ideas referenced:** #18581 [proposed], #18930 [proposed], #18974 [proposed], #18975 [proposed], #18976 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-s pipelines handling the rest.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — ticket consolidation follow‑up: check idea implementation results.
-
-Where we left off (verified 2026‑07‑24 23:32 PT):
-- Non‑closed tickets 413 (In Progress 203, Open 179, Pending 31).
-- CFA agent 124: 133 Open + 14 Pending = 147 total today.
-- Ideas #18974, #18975, #18976 all promoted and in autonomous execution.
-
-Open threads to drive next:
-1. #18974 [in_progress] — Check if AI‑orphan audit completed; review findings.
-2. #18975 [in_progress] — Verify Jon dashboard query fix deployed.
-3. #18976 [in_progress] — Confirm CFA monitoring alert is live.
-
-Reference IDs:
-- Ideas: #18974, #18975, #18976
-- Table: admin_portal.tickets
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Query and confirm live ticket counts
-- [x] Retrieve CFA-agent ticket list
-- [x] Create ideas #18974, #18975, #18976
-- [x] Promote + run Idea #18974 [in_progress]
-- [x] Promote + run Idea #18975 [in_progress]
-- [x] Promote + run Idea #18976 [in_progress]
-</task_progress>
-</attempt_completion>
-```
-
-### `1784958847796` — 7/24/2026, 10:58:17 PM PT — 18 turns
-
-**Original task:**
-
-```
-Pick up task — 25227A-28 skill-date bug: Ruben confirmed the form's performed-date is the source of truth (not WPForms submission date). One tool left to patch.
-
-Where we left off (verified 2026-07-24 ~20:45 PT):
-- sync_wpforms_skills.php (the live every-minute cron): both bugs fixed durable — date field-id-3 first, point-based scoring fixed. Idea #18961 [deployed] (verified live re-query).
-- Skill_Attempts for 25227A-28 corrected (6 rows).
-- OPEN: /var/www/emtskills/tools/fix_skill_attempts_dates.php still uses the OLD wrong logic (docblock says "Uses WPForms submission date as the correct co
-```
-
-**Ideas referenced:** #18961 [deployed]
-
-**Last PICKUP PROMPT:**
-
-```
-ule 267 GATE B.)
-   4. Ship `attempt_completion` with a properly-formed rule-91 PICKUP PROMPT block (47-char U+2550 dividers, every `#NNNN` idea number tagged with a verified disposition — e.g. `#18961 [deployed]` — "Open threads" and "Reference IDs" sections present, no placeholders/fake IDs, no bare idea numbers anywhere in the result text).
-
-2. Key Technical Concepts:
-   - EMSU admin_portal / WPForms integration architecture: `Skill_Attempts` table (admin_portal DB) stores skill test results with `completion_date`, `wpforms_entry_id`, `attempt_id`. `NREMT_Skills`/`CA_Skills` tables store per-skill Pass/Fail + `*_date` + `*_instructor` columns.
-   - WPForms entries table: `wordpress_2` DB, table `LzDe7pTO_wpforms_entries`, columns `entry_id`, `form_id`, `fields` (JSON blob keyed by field ID string), `date` (submission timestamp). Field ID `'3'` (string key in the decoded JSON) is labeled "Date:" with `type === 'date-time'` and holds the actual skill-performed date — this is the CORRECT source of truth per Ruben, confirmed via the already-deployed fix in `sync_wpforms_skills.php`.
-   - The bug: legacy tooling used WPForms submission date (`date` column, i.e. when the form was submitted) instead of the field-3 "performed date" — causing incorrect completion dates, sometimes surfacing as `1970-01-01` due to bad parsing/fallback logic in downstream consumers.
-   - Rule 144 (hardfloor): NEVER use `write_to_file`/`replace_in_file` on server paths (`/var/www/...`) — must use `emsu-operations` MCP `ssh_command` with `sudo tee` heredoc, or the dedicated `write_server_file` MCP tool (auto-backup, PHP lint, PHP-FPM reload).
-   - Rule 99 (hardfloor, extended in this project's practice to self-writes): any write must be read back/verified before claiming success.
-   - Rule 267 (hardfloor): offload/reconcile gate — only fires for 2+ similar independent operations; a single trivial file patch does not require filing a new idea, but if one is filed it must be reconciled (`list_decisions`/`get_idea_progress`) before final tagging.
-   - Rule 91 (hardfloor): every `attempt_completion` must end with a PICKUP PROMPT block (47-char U+2550 divider `═══════════════════════════════════════════════`, no bare `#NNNN` without disposition bracket, Open Threads + Reference IDs sections mandatory, no placeholders).
-   - Rule 261: MCP "result missing" transient failures (Mode D) are NOT a wedge — retry the SAME tool once with identical args before escalating. This fired 3 times this session (on `read_server_file` twice and `ssh_command` once) and each time the retry succeeded — correctly handled, not declared a wedge.
-   - `c389PU0mcp0read_server_file` — reads files directly from the EMSU server (path relative to `/var/www/emtskills/` or absolute).
-   - `c389PU0mcp0write_server_file` — writes files to the EMSU server; auto-backs-up existing file, runs PHP lint, reloads PHP-FPM. This is the tool to use for deploying the patch (simpler/safer than raw `ssh_command` + `sudo tee`, and satisfies rule 144).
-   - `c389PU0mcp0ssh_command` — arbitrary SSH commands on WOPR; used this session for `find` to locate `sync_wpforms_skills.php`, and can be used post-deploy for an extra `php -l` sanity check if desired.
-
-3. Files and Code Sections:
-
-   - **`/var/www/emtskills/tools/fix_skill_attempts_dates.php`** (server path — via `emsu-operations` MCP only, NOT local file tools) — THE FILE TO BE PATCHED. Confirmed via `read_server_file` this session to still contain the OLD/WRONG logic:
-     - Queries `SELECT attempt_id, wpforms_entry_id, completion_date FROM S
 ```

@@ -93,7 +93,7 @@
 → Trigger: deciding whether to act or escalate, filing ideas, agent self-supervision, capability gaps, Q-cards, confidence tiers
 → Fetch all: `clinerules_list_by_topic("agent")`
 - **Act vs escalate gate** — R: 12,22,23,29,36,37,38,67,68,78,80,90,93,117,124,125,167,183,193,206,208,213,238,267,279,282,283,295 (295=ship lane-clearing/regression fixes inline never queue; 267=async offload+reconcile; 279=tool-grant IS a mandate to act; 282=CFAs must resolve, not triage; 283=no human-only-research deferrals)
-- **Self-supervision & repair** — R: 46,49,53,54,55,56,64,65,66,73,81,82,85,92,94,99,110,112,129,130,131,133,134,162,163,166,168,169,176,180,194,209,214,225,240,244,258,261,263,281 (263=verify-before-claim; 99=subagent writes unverified until parent re-reads; 281=execute-the-real-function schema-truth gate)
+- **Self-supervision & repair** — R: 46,49,53,54,55,56,64,65,66,73,81,82,85,92,94,99,110,112,129,130,131,133,134,162,163,166,168,169,176,180,194,209,214,225,240,244,258,261,263,281,297 (263=verify-before-claim; 99=subagent writes unverified until parent re-reads; 281=execute-the-real-function schema-truth gate; 297=a COUNT(*) of impossible rows is a hypothesis, classify the population before alarming)
 - **Routing to humans** — R: 68,69 (Jon=policy only, Vicky=CS only)
 - **Agent-found-wrong** — R: 266 (fix the instrument that misled the agent, same session)
 - **Cline noop idempotency gate** — R: 274 (noop_check BEFORE any possibly-repeat task; store after)
@@ -109,7 +109,7 @@
 - **Fleet serving constraints** — R: 251 (Roman CX7 TP=2 ONLY), 252 (live-probe before declaring any host down), 253 (cite WOPR endpoint not box port), 254 (verify-before-kill on GPU boxes), 255 (live evidence for material claims), 271 (no SSH to box = no claims about box), 294 (re-probe INHERITED infra facts; read `/var/www/emtskills/docs/WOPR_STATE.json`, freshness <10min)
 - **Mac-side debugging** — R: 16,20,24-28,34,62,63,83,100,102,104-106,165,181,184,185,188,191,192,195,197,201,210,222,226,234
 - **Cline extension model-list patching** — R: 293 (TWO bundle files: dist/extension.js AND webview-ui/build/assets/index.js, 5 object-contexts each, Node indexOf-splice never grep/sed, Restart Extension Host)
-- **Live-probe fleet state** — R: 260 (never trust error_watchdog; read LLM_FLEET_STATE.md + probe), 280 (no up/down claim without a quoted live probe; litellm restarts ONLY via /usr/local/bin/litellm-safe-restart.sh)
+- **Live-probe fleet state** — R: 260 (never trust error_watchdog; read LLM_FLEET_STATE.md + probe), 296 (never declare an LLM dead from a cached probe field; confirm with live ground truth), 280 (no up/down claim without a quoted live probe; litellm restarts ONLY via /usr/local/bin/litellm-safe-restart.sh)
 - **URL→docroot mapping** — R: 159 (emsuniversity.com/ems = /var/www/moodle/ems)
 - **Connecteam is DEAD (2026-05-15)** — R: 246 (Team Hub is the replacement)
 - **Fleet SSH reference** — R: 268 (canonical SSH matrix/ports/IPs — never guess), 292 (verify IP/identity ON-BOX via hostname+MAC before trusting static tables incl. 268/273; WOPR can't route the LAN, sweep from the Mac)

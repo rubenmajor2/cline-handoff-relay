@@ -1,4 +1,4 @@
-# 295 — A COUNT(*) of "impossible" rows is a hypothesis, not a bug. Classify the population before you alarm.
+# 297 — A COUNT(*) of "impossible" rows is a hypothesis, not a bug. Classify the population before you alarm.
 
 Source incident: 2026-07-25. Cline ran `SELECT COUNT(*) FROM Students WHERE drop_date < course_start_date`, got **254**, and reported to Ruben that 254 paying students were wrongly locked out by a batch-write bug — filing it P0 and proposing a guard that would have **rejected the write**. Ruben pushed back ("Hmm first verify vs SLS as this seems odd"). Classifying the same 254 took four queries and destroyed the finding:
 

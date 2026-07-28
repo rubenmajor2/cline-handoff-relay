@@ -1,4 +1,4 @@
-# 295 — Never declare an LLM dead from a cached probe field. Confirm with live ground truth.
+# 296 — Never declare an LLM dead from a cached probe field. Confirm with live ground truth.
 
 Slug: `never-declare-an-llm-dead-from-a-cached-probe`
 

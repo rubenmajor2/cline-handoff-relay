@@ -94,7 +94,7 @@ function woprQuery(sql: string): Record<string, string>[] {
     -o BatchMode=yes \
     -o ServerAliveInterval=5 \
     emsuserver@emsuniversity.com \
-    "mysql --skip-pager --defaults-file=/home/emsuserver/.my.cnf -N --batch admin_portal"`;
+    "mysql --defaults-file=/home/emsuserver/.my.cnf --skip-pager -N --batch admin_portal"`;
 
   let raw: string;
   try {

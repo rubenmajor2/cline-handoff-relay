@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/28/2026, 2:51:08 AM PT | window: last 72h | 87 tasks | index total 226 (parsed 3, cached 223)
+Generated: 7/28/2026, 3:51:08 AM PT | window: last 72h | 87 tasks | index total 226 (parsed 0, cached 226)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785229461572` | 7/28/2026, 2:50:14 AM | 243 | 4928KB | Continue |
+| `1785229461572` | 7/28/2026, 2:52:33 AM | 246 | 4959KB | Continue |
 | `1785226952601` | 7/28/2026, 2:24:46 AM | 238 | 1004KB | Vicki has numerous open issues that she has brought up and screenshots that she has in cha |
 | `1785193714174` | 7/28/2026, 2:21:09 AM | 945 | 4028KB | #Artemis |
 | `1785190696126` | 7/28/2026, 2:21:01 AM | 244 | 619KB | Scan CFAs for any outstanding issues today and let me konw how things are going and if any |
@@ -102,7 +102,7 @@ Generated: 7/28/2026, 2:51:08 AM PT | window: last 72h | 87 tasks | index total 
 
 ## Per-window detail
 
-### `1785229461572` — 7/28/2026, 2:50:14 AM PT — 243 turns
+### `1785229461572` — 7/28/2026, 2:52:33 AM PT — 246 turns
 
 **Original task:**
 
@@ -123,10 +123,33 @@ You asked me to open a browser with a token and see what you see. **I never did 
 **Last PICKUP PROMPT:**
 
 ```
-ule 295 collision resolved.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1785012025445 (executor throughput + spec quality).\n\nWhere we left off (verified 2026-07-28 2:50 AM PST):\n- #19490 [deployed] hand-shipped both halves (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review).\n- #19491 [deployed] gate was hand-shipped by sibling window, row closed by me (verified: status=deployed dev_stage=n/a).\n- 168 retry-capped ideas resent under the gate (RESEND_UNDER_GATE_20260728), 19/168 progressing at 2:46 AM PST.\n\nOpen threads to drive next:\n1. #19448 [queued] — ready_for_review, awaiting Ruben deploy click (verified: status=approved dev_stage=ready_for_review).\n2. #19230 [queued] — PP-bubble decode, needs Ruben yes/no on TP reshape (human-only decision, rule 251; verified: status=approved dev_stage=idle).\n3. #19460 [blocked] — clustering Phase 2, manual SIM_THRESHOLD tuning first (verified: status=approved dev_stage=impl_failed).\n\nReference IDs:\n- Ideas closed this session: #19490 [deployed], #19491 [deployed], #19458 [rejected].\n- Carried: #19449 [blocked], #19456 [rejected], #19455 [queued], #19441 [queued], #19433 [queued], #19404 [queued], #19423 [queued], #19258 [deployed], #19447 [deployed].\n- Files: /var/www/emtskills/cron/cron_ruben_implement.php, /var/www/emtskills/cron/cron_orchestrator_executor_watchdog.php.\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════"
-}
-</arguments>
-</use_mcp_tool>
+dfloor promotion is your call.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785012025445 (executor throughput + spec quality).
+
+Where we left off (verified 2026-07-28 2:50 AM PST):
+- #19490 [deployed] hand-shipped both halves this window (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review): DEPLOY_FAIL_CATEGORY_20260728 in cron_ruben_implement.php (3 unclassified impl_failed paths now set failure_category; first auto-classified #19704 deploy_churn_cap) + BUILD_OUTCOME_CHECK_20260728 in cron_orchestrator_executor_watchdog.php (outcome health, live run failed_1h=3 built_1h=24 nullcat=0 OK). Backups: cron_ruben_implement.php.bak-deploycat-20260728, cron_orchestrator_executor_watchdog.php.bak-outcome-20260728.
+- #19491 [deployed] spec-quality gate was hand-shipped by a sibling window (SPEC_QUALITY_GATE_20260727 + SCHEMA_FP_FIX_20260728, verified live in sandboxTest); I closed the row (verified: status=deployed dev_stage=n/a).
+- RESEND_UNDER_GATE_20260728: 168 retry-capped (5-9) ideas reset to count=2; updated_at backdated 3h so the resend UPDATE itself doesn't false-trigger the new watchdog. At 2:46 AM PST: 14 drafting, 2 testing, 3 ready_for_review, 149 parked awaiting pickup. 70 needs_guidance rows deliberately left parked (human triage).
+- #19458 [rejected] mismatched patch, body verified good, needs re-spec under the gate (verified: status=rejected dev_stage=n/a).
+- Clinerules: 295 = ship-lane-clearing-fixes-inline-never-queue-them (kept), 296 = never-declare-an-llm-dead-from-a-cached-probe, 297 = population-anomaly-classify-before-alarming; _RULE_TREE updated, counter=297, MCP reindexed (304 rules).
+- Pipeline state: dispatcher alive (12 spawned/tick, inflight_skipped=0, ramp at 56). 24h: 80 built / 271 impl_failed (spec_gen outage 8:44-11:22 PM PST + pre-gate failures). Current hour healthy.
+
+Open threads to drive next:
+1. #19448 [queued] — executor live page dual-series chart, ready_for_review, awaiting Ruben deploy click (verified: status=approved dev_stage=ready_for_review).
+2. #19230 [queued] — PP-bubble decode is the main remaining hardware lever; TP reshape needs Ruben yes/no (human-only decision, rule 251, bug #1989; verified: status=approved dev_stage=idle).
+3. #19460 [blocked] — clustering Phase 2: hand-check all 46 clusters, tune SIM_THRESHOLD biased HIGH, review dryrun WOULD_SKIP lines BEFORE flipping enforce (verified: status=approved dev_stage=impl_failed; NOT in the resend — needs_guidance, retry-capped).
+4. #19449 [blocked] — re-measure capacity ramp; WAS included in the resend (count reset to 2, will auto-retry). Re-scope: ramp already auto-stepped to 56-64, so verify 64 is safe rather than unblock it (verified: status=approved dev_stage=impl_failed).
+
+Reference IDs:
+- Closed this session: #19490 [deployed], #19491 [deployed], #19458 [rejected].
+- Carried forward: #19455 [queued], #19441 [queued], #19433 [queued], #19404 [queued], #19423 [queued] (all idle, queue auto-retries; verified: status=approved dev_stage=idle), #19456 [rejected], #19258 [deployed], #19447 [deployed].
+- Bug library: merged into existing watchdog-outcome record (seen_count=2). Prior: #2035 (test gate).
+- Files: /var/www/emtskills/cron/cron_ruben_implement.php, /var/www/emtskills/cron/cron_orchestrator_executor_watchdog.php, /Users/rubenmajor/Documents/Cline/Rules-archive/295-ship-lane-clearing-fixes-inline-never-queue-them.md, /Users/rubenmajor/Documents/Cline/Rules-archive/296-never-
 ```
 
 ### `1785226952601` — 7/28/2026, 2:24:46 AM PT — 238 turns

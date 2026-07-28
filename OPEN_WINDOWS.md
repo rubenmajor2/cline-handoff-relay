@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/27/2026, 5:50:40 PM PT | window: last 72h | 95 tasks | index total 2276 (parsed 6, cached 2270)
+Generated: 7/27/2026, 6:50:41 PM PT | window: last 72h | 92 tasks | index total 2276 (parsed 2, cached 2274)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785189965992` | 7/27/2026, 5:50:40 PM | 659 | 4970KB | #Argus |
-| `1785191995112` | 7/27/2026, 5:43:44 PM | 296 | 574KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
-| `1785193714174` | 7/27/2026, 5:36:02 PM | 366 | 788KB | #Artemis |
+| `1785193714174` | 7/27/2026, 6:50:40 PM | 504 | 985KB | #Artemis |
+| `1785191995112` | 7/27/2026, 6:50:17 PM | 478 | 2121KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
+| `1785189965992` | 7/27/2026, 6:14:14 PM | 833 | 5175KB | #Argus |
 | `1785183122795` | 7/27/2026, 5:29:55 PM | 409 | 960KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
 | `1785194061900` | 7/27/2026, 5:28:41 PM | 222 | 443KB | Jon connected the 2 mac minis that were on his home network to the Tempe UniFi UDM.  |
 | `1785196068848` | 7/27/2026, 5:25:13 PM | 50 | 640KB | https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students |
@@ -102,37 +102,32 @@ Generated: 7/27/2026, 5:50:40 PM PT | window: last 72h | 95 tasks | index total 
 | `1784861116581` | 7/24/2026, 8:55:34 PM | 442 | 1534KB | https://emsuniversity.com/emtskills/tickets/  - are these tickets being consolidated by pe |
 | `1784951173470` | 7/24/2026, 8:52:45 PM | 24 | 72KB | this is not working still |
 | `1784948175274` | 7/24/2026, 8:39:12 PM | 38 | 849KB | Need to add Opus 5 here in cline |
-| `1784940825348` | 7/24/2026, 6:10:30 PM | 60 | 180KB | I'm having windows grey out. That needs to stop happening. Please look into it and resolve |
-| `1784940855498` | 7/24/2026, 5:59:15 PM | 12 | 111KB | Please reconstruct this pickup window completely like you are doing for the other greyed o |
-| `1784940289305` | 7/24/2026, 5:57:05 PM | 24 | 60KB | This window greyed out. Can you reconstruct it whatever it was for the entire window? The  |
 
 ---
 
 ## Per-window detail
 
-### `1785189965992` — 7/27/2026, 5:50:40 PM PT — 659 turns
+### `1785193714174` — 7/27/2026, 6:50:40 PM PT — 504 turns
 
 **Original task:**
 
 ```
-#Argus
-REf: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser 
+#Artemis
 
-OPen up lanes so that Cori and all Exec Admin have permissions to perform these types of actions and then perform them. 
+Jon is with Artemis now and Artemis gets wedged because it's being taken too far we think. 
 
-ARGUS
-The short answer: the pipeline didn't record a rejection reason. The `blocked_reason` field is null — it was rejected on July 26 at 20:22 PT with no explanation logged.
+Ubuntu 24.04.4 LTS artemis tty1
+artemis login: {466.6646581 Out of memory: Killed process 6319 (ray: RayWorkerP) total-vm:8634249224kB, anon-rss:240kB, fIle-rss: 680kB, Shmem-rss:0kB, UID: pgtables: 13176kB com_score_adj:1000
 
-The most likely cause is that this idea touches three things that sit outside the build dispatcher's safe scope:
-
-1. Plesk/Roundcube email provisioning — creating an actual mailbox on WOPR's mail server isn't an in
+-- 
+So need something proactively ready to push the instant it's rebooted
 ```
 
-**Ideas referenced:** #10003, #10005, #10182, #10740, #12247, #12262, #12301, #12314, #12364, #12365, #12672, #12673, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13108, #13121, #16213, #16263, #16648, #17203, #17205, #17537, #17619 [deployed], #17680, #18378, #18745, #1876, #18770, #18786, #18806, #18820, #18868, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19163, #19338, #19348, #19370, #19558, #19563 [proposed], #19568 [proposed], #19571 [proposed], #1998, #2006, #2007, #2061, #2064, #2066, #21262, #274160, #30363, #334155, #4338, #64748, #6785, #69707, #8942, #9650, #9654, #9660, #9733, #9889
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #13878, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1731, #1732, #1734, #1737, #1739, #1744, #1746, #1747, #1779, #1798, #1828, #18314, #18320, #1834 [resolved], #1836 [resolved], #1837 [resolved], #1839 [resolved], #1842 [investigating], #1930 [resolved], #19567 [proposed], #2063, #2065, #2067, #2068, #37030, #46641, #7142, #7149
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785191995112` — 7/27/2026, 5:43:44 PM PT — 296 turns
+### `1785191995112` — 7/27/2026, 6:50:17 PM PT — 478 turns
 
 **Original task:**
 
@@ -148,7 +143,7 @@ Advise if is actually a new complaint and provide me with a summary of the situa
 Actually it appears this 
 ```
 
-**Ideas referenced:** #13437, #13441, #152615, #16390, #16464, #176616, #18690, #19403, #19572 [proposed], #19573 [proposed], #19574 [proposed], #19576 [executing], #19577 [executing], #19578 [executing], #21278, #21707, #26684, #3051, #3052, #3054, #3057, #3058, #3059, #3061, #3067, #3069, #3070, #3071, #3075, #3076, #3077, #600179, #6106, #623992, #6685, #8939
+**Ideas referenced:** #13437, #13441, #152615, #16390, #16464, #176616, #18690, #19403, #19572 [proposed], #19573 [proposed], #19574 [proposed], #19576 [executing], #19577 [executing], #19578 [executing], #19580 [executing], #19581 [executing], #19583 [executing], #19584 [executing], #19586 [executing], #19587 [executing], #19588 [executing], #19589 [executing], #19590 [executing], #19591 [executing], #19592 [executing], #21278, #21707, #21765, #26684, #3051, #3052, #3054, #3057, #3058, #3059, #3061, #3067, #3069, #3070, #3071, #3075, #3076, #3077, #600179, #6106, #623992, #6685, #8939
 
 **Last PICKUP PROMPT:**
 
@@ -185,23 +180,25 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785193714174` — 7/27/2026, 5:36:02 PM PT — 366 turns
+### `1785189965992` — 7/27/2026, 6:14:14 PM PT — 833 turns
 
 **Original task:**
 
 ```
-#Artemis
+#Argus
+REf: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser 
 
-Jon is with Artemis now and Artemis gets wedged because it's being taken too far we think. 
+OPen up lanes so that Cori and all Exec Admin have permissions to perform these types of actions and then perform them. 
 
-Ubuntu 24.04.4 LTS artemis tty1
-artemis login: {466.6646581 Out of memory: Killed process 6319 (ray: RayWorkerP) total-vm:8634249224kB, anon-rss:240kB, fIle-rss: 680kB, Shmem-rss:0kB, UID: pgtables: 13176kB com_score_adj:1000
+ARGUS
+The short answer: the pipeline didn't record a rejection reason. The `blocked_reason` field is null — it was rejected on July 26 at 20:22 PT with no explanation logged.
 
--- 
-So need something proactively ready to push the instant it's rebooted
+The most likely cause is that this idea touches three things that sit outside the build dispatcher's safe scope:
+
+1. Plesk/Roundcube email provisioning — creating an actual mailbox on WOPR's mail server isn't an in
 ```
 
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #13878, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1731, #1732, #1734, #1737, #1739, #1744, #1746, #1747, #1779, #1798, #1828, #18314, #18320, #1834 [resolved], #1836 [resolved], #1837 [resolved], #1839 [resolved], #1842 [investigating], #1930 [resolved], #19567 [proposed], #2063, #2065, #2067, #37030, #46641, #7142, #7149
+**Ideas referenced:** #10003, #10005, #10182, #10740, #11936, #11942, #12247, #12262, #12301, #12314, #12364, #12365, #12672, #12673, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13108, #13121, #13453, #13470, #16213, #16263, #16625, #16646, #16648, #16680, #17203, #17205, #17537, #17619 [deployed], #17680, #18378, #18745, #1876, #18770, #18786, #18806, #18820, #18868, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19163, #19338, #19348, #19370, #19558, #19563 [proposed], #19568 [proposed], #19571 [proposed], #19579 [executing], #19585 [executing], #1998, #2006, #2007, #2061, #2064, #2066, #21262, #274160, #30363, #334155, #4338, #64748, #6785, #69707, #8942, #9650, #9654, #9660, #9706, #9733, #9889
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -3648,117 +3645,3 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </task_progress>
 </attempt_completion>
 ```
-
-### `1784940825348` — 7/24/2026, 6:10:30 PM PT — 60 turns
-
-**Original task:**
-
-```
-I'm having windows grey out. That needs to stop happening. Please look into it and resolve it. Becaue it's meesign things up here. There may be a background process running hiking up memory or it could be an issue with Zombies, but do not close my cline windows.
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #7142, #7149, #9086
-
-**Last PICKUP PROMPT:**
-
-```
-OOM, and stability is restored.
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-════════════════════════════════════════──────
-Pick up task #<none> — Resolve Cline window grey‑out caused by OOM.
-(There is no existing task ID; this is a new resolution.)
-
-Where we left off (verified 2026‑07‑24 18:09 PT):
-- [x] Read Rule 97 (Cline Extension Host OOM)
-- [x] Check system memory and process state
-- [x] Count VS Code renderer processes (28)
-- [x] Identified 425 ui_messages.json files > 2 MB idle > 10 min (≈ 3.6 GB)
-- [x] Created archiver script ~/bin/cline-task-archiver.sh
-- [ ] Make script executable and run it
-- [ ] Verify stability and optionally schedule cron
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #9086 — Set script permissions (`chmod +x ~/bin/cline-task-archiver.sh`) and execute it.
-2. #9086 — Optionally create a cron entry to run the script nightly.
-
-Reference IDs:
-- Ticket: none
-- Ideas filed: none
-- Files touched: /Users/rubenmajor/bin/cline-task-archiver.sh
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1784940855498` — 7/24/2026, 5:59:15 PM PT — 12 turns
-
-**Original task:**
-
-```
-Please reconstruct this pickup window completely like you are doing for the other greyed out window: 
-
-
-The default interactive shell is now zsh.
-To update your account to use zsh, please run `chsh -s /bin/zsh`.
-For more details, please visit https://support.apple.com/kb/HT208050.
-Rubens-MacBook-Pro-3:Desktop rubenmajor$ printf '| 2026-07-24 14:38 PT | Frankenstein Doctor shift | GLM ring SERVING (real completion 14:29 via WOPR:8210, canary un-quarantined) after evicting julia 120B TP=2 from augustus (VRAM conflict 0.55+0.82>128GB GB10; augustus crontab backed up /tmp/crontab.bak-frankdoc-2026
-```
-
-**Ideas referenced:** #11782, #13202, #14833, #14885, #178424, #178455, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690, #18694, #18695, #18696, #18697, #18698, #18699, #18706, #1871, #18717, #18718 [executing], #18719, #18720 [approved], #18726, #18733, #18743, #18744, #18745, #18748 [approved], #1876, #1877, #18770, #18771 [proposed], #18782, #18786 [deployed], #18788, #18791 [proposed], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #1883, #18915 [proposed], #18916 [queued], #18917, #18918 [proposed], #1894, #18943 [proposed], #1896, #1897, #1912, #1917, #1920, #1921, #1922, #1923, #1924, #1925, #1935, #1937, #1938, #1939, #1940, #1942, #1943, #1944, #1946, #1947, #1948, #1949
-
-**Last PICKUP PROMPT:**
-
-```
- to reconstruct the pickup prompt. Let me deliver the completed result with the PICKUP PROMPT block.
-
-<attempt_completion>
-<result>The reconstructed pickup prompt is ready for the Frankenstein Doctor shift window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Frankenstein Doctor shift: GLM ring SERVING, verify_routing abort fix, fleet housekeeping hand-shipped (2026-07-24).
-
-Where we left off (verified 2026-07-24 17:58 PT):
-- GLM52 ring SERVING 6/6 PP=6 at 0.82/131K on WOPR:8210 — real completions verified 14:29 PT (chatcmpl-a174a149ba90966f). Canary un-quarantined (healthy=true, fail_streak=0).
-- ROOT CAUSE of 13:45±14:16 warmup deaths: rank-1 assigned to augustus (spark-6ae6) = same box as julia 120B TP=2 (Ray TP=2, ~70GB VRAM). GLM rank-1 needs ~105GB → VRAM conflict → OOM-class WorkerProc init failed both cycles. julia TP=2 killed, crontab disabled (backup /tmp/crontab.bak-frankdoc-20260724), VRAM freed 14:23:58.
-- CONSEQUENCE: julia-120b OUT of frankenstein-llm pool (reversible — HANDOFF has reversal steps). Pool now: glm-5.2-local (UP) + artemis-120b (UP, 34 tok/s) + cloud fallbacks.
-- .244 orphan = augustus (was old rank-1, SSH-dark, alive on backend LAN). Rank-1 likely rejoining from .244. Supervisor pair table: 115=0 190=1 21=2 171=3 32=4 56=5. Next relaunch: augustus .190 should claim rank-1 since .244 is SSH-dark. Ruben power-cycle .244 at leisure.
-- NAMING CORRECTION: .244 = AUGUSTUS (original rank-1), .190 = spark-6ae6 = julia = NEW rank-1. TIBERIUS = spark-e9e0 = .32 = rank-4 IN the ring. Earlier "Tiberius" labels for .244 were WRONG.
-- RunPod: 4 watchdog crons silenced per Ruben directive (no RunPod).
-- fleet_inventory: julia down (probe-consistent, :11513 dark); augustus healthy (glm52_ring_rank1). Do NOT fight probe cron over julia status — row purpose is identity only.
-- #18918 [deployed] verify_routing abort FIXED TWO-SIDED: MCP per-action timeout map (verify_routing 40s > PHP 25s) in build+src; WOPR PHP probe max_tokens=1. MCP pid 2182 killed/respawned. Error path now surfaces real upstream 502 body, not 'aborted'.
-- #18916 [deployed] fleet housekeeping HAND-SHIPPED per GATE C: (1) fleet_inventory dedup (augustus id10 is_alias=1 alias_of=12), cross-wired IPs fixed, role corrected; (2) registry yaml annotated (backup .bak-18916-20260724, YAML_OK 44 models); (3) ollama-14b 404 artifact verified already-resolved (7/20 bug 1877, cache clean). Bug #1949 resolved.
-- #18915 [proposed] augustus GPU ownership DECISION — option-a executed inline, awaiting Ruben confirm, human-gated.
-- Bug #1942 (pkill bracket trick), #1943/#1944 (augustus VRAM conflict), #1948 (verify_routing abort), #1949 (ollama-14b artifact) all resolved with recipes.
-- Reg patch for #18916: bash /tmp/reg_patch_18916.sh was missing — hand-shipped instead.
-- Note: julia status corrected in HANDOFF (degraded → down, probe-consistent; do not fight).
-
-Open threads to drive next:
-1. #18915 [proposed] — augustus GPU ownership: Ruben to confirm option-a (GLM rank-1 on augustus) or revert julia TP=2. Reversal steps in HANDOFF.
-2. #18918 [deployed] — monitor verify_routing probe health; confirm no more 'aborted' responses post-patch.
-3. Power-cycle .244 orphan at leisure so rank-1 lands on augustus on next relaunch — non-urgent, ring serves 6/6 via backend LAN.
-
-Reference IDs:
-- Ideas filed: #18915 [proposed], #18916 [deployed], #18918 [deployed], #18943 [proposed] (this reconstruction)
-- Bugs resolved: #1942, #1943, #1944, #1948, #
-```
-
-### `1784940289305` — 7/24/2026, 5:57:05 PM PT — 24 turns
-
-**Original task:**
-
-```
-This window greyed out. Can you reconstruct it whatever it was for the entire window? The rule 91 pickup? 
-
-
-The default interactive shell is now zsh.
-To update your account to use zsh, please run `chsh -s /bin/zsh`.
-For more details, please visit https://support.apple.com/kb/HT208050.
-Rubens-MacBook-Pro-3:Desktop rubenmajor$ ssh wopr 'pgrep -f cfa_audit6.php >/dev/null && echo STILL_RUNNING || php /tmp/cfa_audit6.php > /tmp/cfa_audit6.out 2>&1; grep -vE "Warning" /tmp/cfa_audit6.out 2>/dev/null | grep -E "clean|HOLD|ERR|FAIL"' 2>&1 | tail -8
-STILL_RUNNING
-Rubens-MacBook-Pro-3:Desktop rubenmaj
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

@@ -6,16 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/27/2026, 4:50:40 PM PT | window: last 72h | 98 tasks | index total 2276 (parsed 4, cached 2272)
+Generated: 7/27/2026, 5:50:40 PM PT | window: last 72h | 95 tasks | index total 2276 (parsed 6, cached 2270)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785196068848` | 7/27/2026, 4:50:40 PM | 43 | 627KB | https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students |
-| `1785189965992` | 7/27/2026, 4:50:36 PM | 481 | 4746KB | #Argus |
-| `1785193714174` | 7/27/2026, 4:47:32 PM | 166 | 474KB | #Artemis |
-| `1785194061900` | 7/27/2026, 4:45:22 PM | 186 | 399KB | Jon connected the 2 mac minis that were on his home network to the Tempe UniFi UDM.  |
-| `1785183122795` | 7/27/2026, 4:00:14 PM | 377 | 886KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
-| `1785191995112` | 7/27/2026, 3:59:29 PM | 78 | 192KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
+| `1785189965992` | 7/27/2026, 5:50:40 PM | 659 | 4970KB | #Argus |
+| `1785191995112` | 7/27/2026, 5:43:44 PM | 296 | 574KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
+| `1785193714174` | 7/27/2026, 5:36:02 PM | 366 | 788KB | #Artemis |
+| `1785183122795` | 7/27/2026, 5:29:55 PM | 409 | 960KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
+| `1785194061900` | 7/27/2026, 5:28:41 PM | 222 | 443KB | Jon connected the 2 mac minis that were on his home network to the Tempe UniFi UDM.  |
+| `1785196068848` | 7/27/2026, 5:25:13 PM | 50 | 640KB | https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students |
 | `1785191816762` | 7/27/2026, 3:37:22 PM | 2 | 2KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
 | `1785190696126` | 7/27/2026, 3:37:11 PM | 62 | 136KB | Scan CFAs for any outstanding issues today and let me konw how things are going and if any |
 | `1785180947248` | 7/27/2026, 3:18:16 PM | 258 | 1105KB | ## 7 — #ALERTS · text bombardment / monitoring hygiene |
@@ -105,29 +105,12 @@ Generated: 7/27/2026, 4:50:40 PM PT | window: last 72h | 98 tasks | index total 
 | `1784940825348` | 7/24/2026, 6:10:30 PM | 60 | 180KB | I'm having windows grey out. That needs to stop happening. Please look into it and resolve |
 | `1784940855498` | 7/24/2026, 5:59:15 PM | 12 | 111KB | Please reconstruct this pickup window completely like you are doing for the other greyed o |
 | `1784940289305` | 7/24/2026, 5:57:05 PM | 24 | 60KB | This window greyed out. Can you reconstruct it whatever it was for the entire window? The  |
-| `1784940268122` | 7/24/2026, 5:44:33 PM | 2 | 6KB | This window greyed out. Can you reconstruct it whatever it was for the entire window? The  |
-| `1784938924967` | 7/24/2026, 5:31:30 PM | 30 | 636KB | Supposedly, i was sent a consent email from the SBA today to rmajor@emsuniversity.com and  |
-| `1784926289165` | 7/24/2026, 5:16:23 PM | 452 | 7423KB | Please check CFAs and make sure they are working properly. |
 
 ---
 
 ## Per-window detail
 
-### `1785196068848` — 7/27/2026, 4:50:40 PM PT — 43 turns
-
-**Original task:**
-
-```
-https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students 
-
-for some reason exec admin lost access. Give it backa nd also ensure Admin, IT ADmin as well as Program Directors
-```
-
-**Ideas referenced:** #0056, #055160, #15887, #15999, #16000, #16015, #16016, #16312, #17665, #18587, #18657, #198754, #212529, #3109, #3122, #495057, #5387, #842029, #9191, #9313
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785189965992` — 7/27/2026, 4:50:36 PM PT — 481 turns
+### `1785189965992` — 7/27/2026, 5:50:40 PM PT — 659 turns
 
 **Original task:**
 
@@ -145,11 +128,64 @@ The most likely cause is that this idea touches three things that sit outside th
 1. Plesk/Roundcube email provisioning — creating an actual mailbox on WOPR's mail server isn't an in
 ```
 
-**Ideas referenced:** #10003, #10005, #10182, #10740, #12247, #12262, #12301, #12314, #12364, #12365, #12672, #12673, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13108, #13121, #16213, #16263, #16648, #17537, #17619 [deployed], #17680, #18378, #18745, #1876, #18770, #18786, #18806, #18868, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19163, #19338, #19348, #19370, #19558, #19563 [proposed], #1998, #2006, #2007, #2061, #2064, #2066, #21262, #274160, #30363, #334155, #4338, #64748, #6785, #69707, #8942, #9650, #9654, #9660, #9733, #9889
+**Ideas referenced:** #10003, #10005, #10182, #10740, #12247, #12262, #12301, #12314, #12364, #12365, #12672, #12673, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13108, #13121, #16213, #16263, #16648, #17203, #17205, #17537, #17619 [deployed], #17680, #18378, #18745, #1876, #18770, #18786, #18806, #18820, #18868, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19163, #19338, #19348, #19370, #19558, #19563 [proposed], #19568 [proposed], #19571 [proposed], #1998, #2006, #2007, #2061, #2064, #2066, #21262, #274160, #30363, #334155, #4338, #64748, #6785, #69707, #8942, #9650, #9654, #9660, #9733, #9889
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785193714174` — 7/27/2026, 4:47:32 PM PT — 166 turns
+### `1785191995112` — 7/27/2026, 5:43:44 PM PT — 296 turns
+
+**Original task:**
+
+```
+Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
+
+Ava Kanthack - 26413FT. EMSU_1080261891.pdf on downloads folder on my mac as well as Ms. Richardson's email this afteroon.
+
+--
+See email: 
+Advise if is actually a new complaint and provide me with a summary of the situation, claims as well as a draft response. Track as new complaint if is a new complaint in the appropriate seciton. Please make sure you are organizing these properly so they are easy to navigate.
+
+Actually it appears this 
+```
+
+**Ideas referenced:** #13437, #13441, #152615, #16390, #16464, #176616, #18690, #19403, #19572 [proposed], #19573 [proposed], #19574 [proposed], #19576 [executing], #19577 [executing], #19578 [executing], #21278, #21707, #26684, #3051, #3052, #3054, #3057, #3058, #3059, #3061, #3067, #3069, #3070, #3071, #3075, #3076, #3077, #600179, #6106, #623992, #6685, #8939
+
+**Last PICKUP PROMPT:**
+
+```
+91 response | Draft complete |
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — TDSHS investigation #7: review draft responses for complaints 1080261887 (Sheets) and 1080261891 (Kanthack), and respond to grievance GRV-2026-0069.
+
+Where we left off (verified 2026-07-27 17:06 PT):
+- Two new complaints received today from Sabrina Richardson, both processed into investigation #7
+- Draft responses written but not yet approved or sent (due 8/6)
+- Investigation #7 now has 6 complaint numbers + 1 inspection + 1 suspension threat
+- Urgent: formal grievance GRV-2026-0069 (Kamdyn Sheets) has been completely unanswered since 7/23
+
+Open threads to drive next:
+1. #current [proposed] — Ruben reviews and approves BOTH draft responses, then sends to sabrina.lee.richardson@dshs.texas.gov
+2. #current [proposed] — Respond to grievance GRV-2026-0069 (Kamdyn Sheets, id=70) — this is SEPARATE from the DSHS response and has been unanswered for 4 days
+3. #current [proposed] — Complete the 7/28 interim production packet (26913FT reports bundle) for earlier DSHS requests
+4. #current [proposed] — Complaint acknowledgments for 1080261810-1815 due 7/30
+
+Reference IDs:
+- Ticket: #21707 (open chat handoff for Kamdyn Sheets — no human responded)
+- Investigation: #7 (tdshs-inspection-5196-emergency-suspension-2026-07)
+- Grievance: GRV-2026-0069 (id=70, Kamdyn Sheets — pending_review, 0 staff responses)
+- Response rows: #100-103 in compliance_investigation_responses
+- Draft files: DRAFT_response_1080261891_Kanthack.md, DRAFT_response_1080261887_Sheets.md
+- Server path: /var/www/emtskills/uploads/tdshs/inspection-5196-2026/
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785193714174` — 7/27/2026, 5:36:02 PM PT — 366 turns
 
 **Original task:**
 
@@ -165,11 +201,28 @@ artemis login: {466.6646581 Out of memory: Killed process 6319 (ray: RayWorkerP)
 So need something proactively ready to push the instant it's rebooted
 ```
 
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #13878, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #19567 [proposed], #2063, #2065, #7142, #7149
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #13878, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1731, #1732, #1734, #1737, #1739, #1744, #1746, #1747, #1779, #1798, #1828, #18314, #18320, #1834 [resolved], #1836 [resolved], #1837 [resolved], #1839 [resolved], #1842 [investigating], #1930 [resolved], #19567 [proposed], #2063, #2065, #2067, #37030, #46641, #7142, #7149
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785194061900` — 7/27/2026, 4:45:22 PM PT — 186 turns
+### `1785183122795` — 7/27/2026, 5:29:55 PM PT — 409 turns
+
+**Original task:**
+
+```
+Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue another 45 minutes:
+
+-
+## Direct answer on Cesar
+
+**I did nothing to Cesar. Three read-only commands, over its existing tunnel:** `ulimit -Sl/-Hl`, `grep memlock /etc/security/limits.d/`, and a `python3` version print. No writes, no restart, no config edit, no TP=2 launch attempted on it. Verified after the fact: ring `:8210` returns HTTP 200 with 12 concurrent requests and 211,399 generation tokens, Cesar at 96% GPU, **uptime 8 days 16:34** (proving it was never restarted), load climbing 1.76 → 3.10 = activ
+```
+
+**Ideas referenced:** #11261, #11741, #12266, #12285, #12403, #12584, #12645, #12689, #13453, #13470, #13874, #15369, #15370, #16602, #19506 [rejected], #19507 [executing], #19508 [executing], #19542 [proposed], #19543 [proposed], #19544 [proposed], #19546 [executing], #19547 [executing], #19548 [executing], #19549 [executing], #19558 [executing], #19563 [unknown], #19564 [unknown], #19575 [executing], #2042, #2045, #2048, #2049, #2051, #2052, #2053, #2054, #2055, #2057, #2058, #2059, #2061, #2062, #64748, #7490, #7513, #7554, #9706, #9910
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785194061900` — 7/27/2026, 5:28:41 PM PT — 222 turns
 
 **Original task:**
 
@@ -186,7 +239,7 @@ Can you confirm that those are online and working with running LLMs??
 **Last PICKUP PROMPT:**
 
 ```
-ntil Jon or Austin adds a key.
+ and I'll adjust from my side.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
@@ -194,96 +247,62 @@ PICKUP PROMPT (paste into a fresh Cline window)
 
 Pick up task — Tempe Mac minis (Austins-Mini + Austins-Mini-2) onboarding to the LLM fleet.
 
-Where we left off (verified 2026-07-27 16:44 PT):
-- Corrected a bad prior report. Site map now confirmed via UniFi Cloud API + on-box gateway MAC: EMSU Phoenix UDM `6c:63:f8:e2:39:48` = Tempe = 192.168.0.0/24; EMSU Oceanside UDM `58:d6:1f:8e:c0:a7` = 192.168.1.0/24 = where ALL DGX Sparks live. Never infer site from a 192.168.1.x address — two sites share that CIDR.
-- Artemis is the Tempe-site pivot box. Its IP was corrected in fleet_inventory from 192.168.0.208 (stale) to 192.168.0.125 (live-verified).
-- Tempe /24 sweep from Artemis: 4 macOS hosts. 192.168.0.10 Austins-Mini (1c:f6:4c:3e:55:80), 192.168.0.209 Austins-Mini-2 (1c:f6:4c:43:6b:b9), 192.168.0.124 (3e:f5:ef:9c:c0:53), 192.168.0.191 (86:ea:f0:cb:e6:19).
-- All 4 expose port 22 ONLY. Zero Ollama/vLLM/MLX. Online but serving nothing.
-- SSH blocked on all 4: `Permission denied (publickey,password,keyboard-interactive)` as rubenmajor. Likely account is `austin`.
-- HANDOFF_NOTES.md has a retraction entry at "2026-07-27 17:43 PT" superseding the earlier bogus "Tempe Fleet Scan" entry.
+Where we left off (verified 2026-07-27 17:28 PT):
+- Bootstrap one-liner is LIVE and handed to Ruben for Jon: `curl -sL emsuniversity.com/m/mini.txt | bash`
+- Verified: HTTP 200, 3124 bytes, `bash -n` parses clean, apex 301s to www correctly, WOPR pubkey line present, BEACON line points at the tested endpoint.
+- Script source of truth: `/var/www/emtskills/mini.sh`. Published copy that nginx actually serves: `/var/www/vhosts/emsuniversity.com/httpdocs/m/mini.txt`. EDIT BOTH — they are separate files, the published one needs `sudo sed`/`sudo cp` (emsuserver cannot write /var/www/emtskills directly).
+- GOTCHA worth remembering: `/emtskills` is a SYMLINK to `/var/www/emtskills` and Plesk `disable_symlinks` makes nginx 404 every STATIC file under it, while PHP still executes fine through FPM. That is why mini.sh 404'd at the obvious URL and why the beacon (.php) works there. Static assets must go in a real dir like `/httpdocs/m/`.
+- Beacon: `/var/www/emtskills/mini-beacon.php`, appends to `/tmp/emsu_mini_beacon.log`. Live-tested, returns `ok`. Check that log to see which minis have run the script.
+- Script does: authorized_keys install, Ollama install if absent, LaunchAgent `com.emsu.ollama` with OLLAMA_HOST=0.0.0.0:11434 + KEEP_ALIVE=-1 + CONTEXT_LENGTH=32768, caffeinate, pulls qwen2.5-coder:7b + :14b, beacons home. Idempotent.
+- Access path once key lands: `ssh -i /home/emsuserver/.ssh/id_ed25519 -J emsuserver@10.100.0.5 <user>@192.168.0.10` (ProxyJump via Artemis, network path already verified to auth prompt). Account name still unknown — `rubenmajor` and `austin` both rejected; the beacon will reveal it.
+- Site map (corrected earlier this session, in HANDOFF_NOTES + fleet_inventory): EMSU Phoenix UDM `6c:63:f8:e2:39:48` = Tempe = 192.168.0.0/24. EMSU Oceanside UDM `58:d6:1f:8e:c0:a7` = 192.168.1.0/24 = ALL DGX Sparks. Never infer site from a 192.168.1.x address; confirm by default-gateway MAC. Artemis (192.168.0.125) is the Tempe pivot.
 
 Open threads to drive next:
-1. #19569 [proposed] — Tempe minis need SSH key + Ollama. BLOCKED ON HUMAN: ask Jon/Austin to add the WOPR ed25519 pubkey to `~/.ssh/authorized_keys` on 192.168.0.10 and .209, or give the local account name. Once unblocked the agent can finish autonomously: size the boxes (`sysctl -n hw.model` + `hw.memsize`), install Ollama with `OLLAMA_HOST=0.0.0.0` (the Joshua localhost-bind trap, bug library #537), pull qwen2.5-coder 7b/14b/32b + emsu-qwen2.5-coder:7b-lora, stand up reverse tunnels on fresh ports (2225 is occupied and dead-banners — use 2227+), add fleet_inventory rows with site=tempe, register in frankenstein_registry.
-2. #19570 [executing] — fleet_inventory has no site/gateway_mac/lan_cidr column, which is the structural root cause of the wrong-site report. Executor is building the schema migration + backfill + `fleet_site_map` MCP tool + cron_fleet_lan_drift gateway-MAC recording. Verify it landed.
-3. Identify 192.168.0.124 and 192.168.0.191 — randomized MACs, no PTR. One is probably the pre-existing Tempe mini. Needs the same SSH access as thread 1. (covered by #19569 [proposed])
+1. #19569 [proposed] — Waiting on Jon to run the one-liner. When `/tmp/emsu_mini_beacon.log` shows entries: SSH in via the ProxyJump above, confirm `lsof -i :11434` is bound 0.0.0.0 not localhost, check reported RAM (if 16GB, drop the 14b and keep 7b only), add fleet_inventory rows with site=tempe, register both in frankenstein_registry as spill-ladder members so traffic actually routes to them.
+2. #19570 [executing] — fleet_inventory site/gateway_mac/lan_cidr schema migration + backfill + `fleet_site_map` MCP tool + cron_fleet_lan_drift gateway-MAC recording. Executor owns it. Verify it landed.
+3. Identify 192.168.0.124 and 192.168.0.191 — macOS, randomized MACs, no PTR, port 22 only. One is likely the pre-existing Tempe mini. Same one-liner onboards them. (covered by #19569 [proposed])
 4. Consider a rule 292 case-law addendum: confirm SITE via default-gateway MAC, never infer from a 192.168.x.x range. (human-only decision — no idea)
 
 Reference IDs:
 - Ideas filed: #19569 [proposed], #19570 [executing]
 - Ideas closed: none
-- Files touched: HANDOFF_NOTES.md (retraction + corrected scan), fleet_inventory row `artemis` (ip_primary .208 → .125, site map recorded in notes)
-- Credentials: UNIFI_CLOUD_API_KEY in /var/www/emtskills/config.credentials.php — `curl https://api.ui.com/ea/devices -H 'X-API-KEY: ...'` returns all three consoles
-- Pivot command for Tempe LAN work: `ssh -i /home/emsuserver/.ssh/id_ed25519 emsuserver@10.100.0.5` (Artemis)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
+- Files touched: `/var/www/emtskills/mini.sh` (new), `/var/www/vhosts/emsuniversity.com/httpdocs/m/mini.txt` (new, the served copy), `/var/www/emtskills/mini-beacon.php` (new), HANDOFF_NOTES.md (retraction entry "2026-07-27 17:43 PT"), fleet_inventory row `artemis` (ip .20
 ```
 
-### `1785183122795` — 7/27/2026, 4:00:14 PM PT — 377 turns
+### `1785196068848` — 7/27/2026, 5:25:13 PM PT — 50 turns
 
 **Original task:**
 
 ```
-Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue another 45 minutes:
+https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students 
 
--
-## Direct answer on Cesar
-
-**I did nothing to Cesar. Three read-only commands, over its existing tunnel:** `ulimit -Sl/-Hl`, `grep memlock /etc/security/limits.d/`, and a `python3` version print. No writes, no restart, no config edit, no TP=2 launch attempted on it. Verified after the fact: ring `:8210` returns HTTP 200 with 12 concurrent requests and 211,399 generation tokens, Cesar at 96% GPU, **uptime 8 days 16:34** (proving it was never restarted), load climbing 1.76 → 3.10 = activ
+for some reason exec admin lost access. Give it backa nd also ensure Admin, IT ADmin as well as Program Directors
 ```
 
-**Ideas referenced:** #11261, #11741, #12266, #12285, #12403, #12584, #12645, #12689, #13453, #13470, #13874, #15369, #15370, #16602, #19506 [rejected], #19507 [executing], #19508 [executing], #19542 [proposed], #19543 [proposed], #19544 [proposed], #19546 [executing], #19547 [executing], #19548 [executing], #19549 [executing], #19558 [executing], #19563 [unknown], #19564 [unknown], #2042, #2045, #2048, #2049, #2051, #2052, #2053, #2054, #2055, #2057, #2058, #2059, #2061, #2062, #64748, #7490, #7513, #7554, #9706, #9910
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785191995112` — 7/27/2026, 3:59:29 PM PT — 78 turns
-
-**Original task:**
-
-```
-Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
-
-Ava Kanthack - 26413FT. EMSU_1080261891.pdf on downloads folder on my mac as well as Ms. Richardson's email this afteroon.
-
---
-See email: 
-Advise if is actually a new complaint and provide me with a summary of the situation, claims as well as a draft response. Track as new complaint if is a new complaint in the appropriate seciton. Please make sure you are organizing these properly so they are easy to navigate.
-
-Actually it appears this 
-```
-
-**Ideas referenced:** #13437, #152615, #176616, #18690, #26684, #600179, #623992
+**Ideas referenced:** #0056, #055160, #15887, #15999, #16000, #16015, #16016, #16312, #17665, #18587, #18657, #198754, #212529, #3109, #3122, #495057, #5387, #842029, #9191, #9313
 
 **Last PICKUP PROMPT:**
 
 ```
-complete, needs Ruben send** |
+ files deployed (DB-only fix).
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #current — TDSHS investigation #7: complaint 1080261891 (Ava Kanthack) draft response review and send.
+Pick up task (pd_80_percent_students access fix: restored ExecAdmin/ITAdmin/PD to the report).
 
-Where we left off (verified 2026-07-27 15:59 PT):
-- Complaint 1080261891 received 7/27 from Sabrina Richardson re: Ava Kanthack (26413FT-17)
-- PDF uploaded to server, response round #100 + analysis note #101 filed
-- External complaint numbers updated on investigation #7
-- Draft response saved at uploads/tdshs/inspection-5196-2026/DRAFT_response_1080261891_Kanthack.md
-- Manual to-do: compose the cover email to sabrina.lee.richardson@dshs.texas.gov
+Where we left off (verified 2026-07-27 16:50 PT):
+- DB row admin_portal.report_access_control id 21532 now has allowed_roles = ["MasterAdmin","ExecAdmin","ITAdmin","Admin","PD"]
+- Registry default at /var/www/emtskills/lib/report_registry.php line 12872 matches the DB row
+- Report is accessible at https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students
+- HANDOFF_NOTES.md updated with the fix summary
 
 Open threads to drive next:
-1. #current [proposed] — Ruben reviews and approves the draft response before sending; fill in any missing details from Ava's current intern placement status
-2. #current [proposed] — Ruben sends the response email to sabrina.lee.richardson@dshs.texas.gov (response due 8/6/2026)
-3. In parallel: complete the 7/28 interim production (Window K reports bundle) for the earlier DSHS requests
-4. In parallel: complaint acks for 1080261810-1815 due 7/30
+(no open threads, fix is complete; if access issues persist for any role, check the canAccessReportFromRegistry chain which reads the DB cache)
 
 Reference IDs:
-- Ticket: N/A (complaint letters, not ticket)
-- Ideas filed: none new
-- Files touched: compliance_investigations(id=7), compliance_investigation_responses(id=100-101), /var/www/emtskills/uploads/tdshs/inspection-5196-2026/EMSU_1080261891.pdf, DRAFT_response_1080261891_Kanthack.md
-- Server path: /var/www/emtskills/uploads/tdshs/inspection-5196-2026/
+- DB row: report_access_control id 21532
+- Files touched: none (DB-only fix)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
@@ -3743,131 +3762,3 @@ Rubens-MacBook-Pro-3:Desktop rubenmaj
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1784940268122` — 7/24/2026, 5:44:33 PM PT — 2 turns
-
-**Original task:**
-
-```
-This window greyed out. Can you reconstruct it whatever it was for the entire window? The rule 91 pickup? 
-
-
-The default interactive shell is now zsh.
-To update your account to use zsh, please run `chsh -s /bin/zsh`.
-For more details, please visit https://support.apple.com/kb/HT208050.
-Rubens-MacBook-Pro-3:Desktop rubenmajor$ ssh wopr 'pgrep -f cfa_audit6.php >/dev/null && echo STILL_RUNNING || php /tmp/cfa_audit6.php > /tmp/cfa_audit6.out 2>&1; grep -vE "Warning" /tmp/cfa_audit6.out 2>/dev/null | grep -E "clean|HOLD|ERR|FAIL"' 2>&1 | tail -8
-STILL_RUNNING
-Rubens-MacBook-Pro-3:Desktop rubenmaj
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1784938924967` — 7/24/2026, 5:31:30 PM PT — 30 turns
-
-**Original task:**
-
-```
-Supposedly, i was sent a consent email from the SBA today to rmajor@emsuniversity.com and I can't find it. Did the server block it or spark or was it filed away in spam? It would have been around 1-4PM today PST
-```
-
-**Ideas referenced:** #13202, #18915 [proposed], #18916 [executing], #18917, #18918 [deployed], #1940, #1942, #1943, #1944, #1946, #1947, #1948
-
-**Last PICKUP PROMPT:**
-
-```
-to — that's the missing piece.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — SBA consent email investigation.
-
-Where we left off (verified 2026-07-24 17:31 PT):
-- Confirmed via /var/log/maillog: zero emails from sba.gov or @sba. domains to rmajor@emsuniversity.com today (full-day scan, not just 1-4 PM)
-- Confirmed no SMTP rejection/block/greylist of any SBA sender — the email never connected to the server
-- Confirmed email_inbound_log has no SBA/consent rows for rmajor today
-- Confirmed all 26 unique senders to rmajor@ between 1-4 PM PT — none is SBA (Zions Bancorp 1:37 PM = bank via Salesforce, not SBA; 12:42 GovDelivery = TDSHS)
-- Spark auth failures (98.186.229.82) are real but irrelevant — email would still be on server if it arrived; Maildir new/cur = 0 files (being actively polled by 65.23.155.126 = ruben-ai poller on WOPR)
-
-Open threads to drive next:
-1. Ruben to confirm with SBA which email address they sent the consent to (likely personal Gmail, not rmajor@emsuniversity.com) — (human-only decision — no idea)
-2. If Ruben confirms it was sent to rmajor@emsuniversity.com, ask SBA to resend / check their send logs — (human-only decision — no idea)
-
-Reference IDs:
-- Ideas filed: none this task
-- Ideas closed: none this task
-- Files touched: none (read-only investigation)
-- Logs checked: /var/log/maillog, /var/log/emsu_ruben_ai_poller.log, /etc/emsu/ruben_ai_poller.env, email_inbound_log table, email_outbound_log table
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Check HANDOFF_NOTES for rmajor@ blind-spot context
-- [x] Search server email logs for SBA/consent emails to rmajor@
-- [x] Check Ruben AI poller state for rmajor@ mailbox
-- [x] Query email_inbound_log and outbound_email_log for today
-- [x] Check if Spark or server-side spam filtering caught it
-- [x] Distinguish TDSHS GovDelivery (12:42 PM) from actual SBA email
-- [x] Enumerate ALL senders to rmajor@ in 1-4 PM PT window
-- [x] Report findings: SBA email never arrived at emsuniversity.com
-</task_progress>
-</attempt_completion>
-```
-
-### `1784926289165` — 7/24/2026, 5:16:23 PM PT — 452 turns
-
-**Original task:**
-
-```
-Please check CFAs and make sure they are working properly.
-```
-
-**Ideas referenced:** #0000, #12206, #16608, #16613, #16648, #16714, #16717, #17168, #1754, #1755, #17580, #177914, #18395, #18786 [deployed], #18917, #18918, #18924 [proposed], #18925 [proposed], #18927 [executing], #18933 [queued], #1896, #1921, #1924, #1925, #19281, #1935, #1937, #1938, #1939, #1940 [resolved], #1946 [resolved], #1947, #2999, #3572, #4929, #50724, #5305, #5447, #7317, #8060, #9086, #9168, #9339
-
-**Last PICKUP PROMPT:**
-
-```
-d hold-policy reconstruction).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — CFA payment auto-clear verification + midterm suspension loop fix.
-
-Where we left off (verified 2026-07-24 17:15 PT):
-- cron_cfa_payment_auto_clear.php v2.1 [deployed] — SLS-oracle payment check + multi-hold gate before Moodle unsuspend.
-- enforce_midterm_suspension.php v1.1 [deployed] — SLS payment-gate guard prevents suspending students with settled payments + stale QB invoice rows. Dry-run caught 55 wrongful suspensions queued for 6 AM; only 26607FT-06 ($2,145 genuinely owed) will suspend.
-- Backfill audit CLOSED: 447 clears, 0 re-suspensions needed, 6 audit-error students verified clean via direct SQL, 21 payment_plan flag-only → #18933 [queued].
-- Chen (26915W-06) [deployed] — cleared + resolution email sent.
-- Rule 282 [deployed] — CFA resolution mandate, in Rules/ + tree + MCP.
-- HANDOFF_NOTES.md updated with full session entry.
-
-Open threads to drive next:
-1. #18933 [queued] — executor reconciles 21 stale payment_plan gates vs settled payments; genuine unsigned-agreement cases route to Vicky.
-2. Watch tomorrow's 6 AM midterm run log (/var/log/emsu-midterm-suspend.log): expect ~55 SKIP lines + 1 suspend (26607FT-06). Any non-SKIP suspend beyond that = investigate.
-3. binlog_row_image=MINIMAL means point-in-time recovery of pre-clear Moodle states is impossible (human-only decision — no idea filed) — consider ROW_IMAGE=FULL if audit-trail depth matters.
-
-Reference IDs:
-- Ideas filed: #18933 [queued]
-- Files touched: /var/www/emtskills/cron/cron_cfa_payment_auto_clear.php (v2.1, backup .bak-v2-20260724), /var/www/emtskills/cron/enforce_midterm_suspension.php (v1.1, backup .bak-v1.0-20260724), ~/Documents/Cline/Rules/282-*.md, _RULE_TREE.md, HANDOFF_NOTES.md
-- Evidence: /tmp/midterm_dry.out (dry-run), /tmp/cfa_cleared_hold_audit.php + /tmp/cfa_audit_dry.out (audit)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Backfill complete: 447 cleared / 305 still-owed / 1 error; Chen cleared
-- [x] Rule 282 written + tree + MCP reindexed
-- [x] RUBEN CHALLENGE audit: 414 clean + 6 re-verified clean / 0 resuspend needed / 21 payment_plan flag-only
-- [x] Chen resolution email autosent (tier 1)
-- [x] Cron v2.1 deployed + live-verified (hold-gate before Moodle unsuspend)
-- [x] Midterm cron v1.1 deployed: SLS oracle guard; dry-run caught 55 wrongful suspensions scheduled for 6 AM
-- [x] 6 audit-error students re-verified clean via direct SQL
-- [x] Idea #18933 filed + approved (21 stale payment_plan gates)
-- [x] HANDOFF updated + attempt_completion with honest answer to Ruben
-</task_progress>
-</attempt_completion>
-```

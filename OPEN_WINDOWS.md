@@ -6,14 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/27/2026, 7:50:41 PM PT | window: last 72h | 92 tasks | index total 2276 (parsed 3, cached 2273)
+Generated: 7/27/2026, 8:50:43 PM PT | window: last 72h | 92 tasks | index total 217 (parsed 6, cached 211)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785191995112` | 7/27/2026, 7:50:36 PM | 623 | 2482KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
-| `1785193714174` | 7/27/2026, 7:50:21 PM | 584 | 1103KB | #Artemis |
-| `1785189965992` | 7/27/2026, 7:50:11 PM | 873 | 5249KB | #Argus |
-| `1785183122795` | 7/27/2026, 5:29:55 PM | 409 | 960KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
+| `1785191995112` | 7/27/2026, 8:50:36 PM | 739 | 2738KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
+| `1785193714174` | 7/27/2026, 8:50:33 PM | 695 | 1253KB | #Artemis |
+| `1785183122795` | 7/27/2026, 8:50:33 PM | 462 | 1032KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
+| `1785189965992` | 7/27/2026, 8:47:15 PM | 961 | 5430KB | #Argus |
+| `1785209942258` | 7/27/2026, 8:46:39 PM | 46 | 137KB | Do not close my active cline windows, but grey windows keep coming in for some reason here |
+| `1785180643044` | 7/27/2026, 8:40:41 PM | 452 | 845KB | ## 1 — #PAY · P0 money · RUN FIRST |
+| `1785180665712` | 7/27/2026, 8:20:03 PM | 230 | 861KB | ## 2 — #EXEC · P0 · executor is failing builds silently |
 | `1785194061900` | 7/27/2026, 5:28:41 PM | 222 | 443KB | Jon connected the 2 mac minis that were on his home network to the Tempe UniFi UDM.  |
 | `1785196068848` | 7/27/2026, 5:25:13 PM | 50 | 640KB | https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students |
 | `1785191816762` | 7/27/2026, 3:37:22 PM | 2 | 2KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
@@ -25,11 +28,9 @@ Generated: 7/27/2026, 7:50:41 PM PT | window: last 72h | 92 tasks | index total 
 | `1785180724129` | 7/27/2026, 3:03:44 PM | 322 | 1098KB | ## 4 — #GLM · GLM-5.2 ring |
 | `1785180684278` | 7/27/2026, 2:51:26 PM | 300 | 1223KB | ## 3 — #FORMS · durable fix for WPForms + its replacement |
 | `1785181029165` | 7/27/2026, 2:47:17 PM | 120 | 265KB | ## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti) |
-| `1785180643044` | 7/27/2026, 2:40:28 PM | 374 | 714KB | ## 1 — #PAY · P0 money · RUN FIRST |
 | `1785181049767` | 7/27/2026, 2:39:06 PM | 100 | 701KB | ## 11 — #EXT · externship system, grounded in Vicky's answers |
 | `1785173739737` | 7/27/2026, 1:11:16 PM | 590 | 1104KB | Tell me how many turns for each LLM occurred overnight / delve into frankenstein-tools and |
 | `1785180988213` | 7/27/2026, 12:56:31 PM | 61 | 449KB | ## 8 — #SLS · student lifecycle state repair + backlog |
-| `1785180665712` | 7/27/2026, 12:55:02 PM | 146 | 507KB | ## 2 — #EXEC · P0 · executor is failing builds silently |
 | `1785120544230` | 7/27/2026, 12:15:02 PM | 482 | 3105KB | I lost a bunch of windows just now. I got a grey one and then did some dumb thing, dragged |
 | `1785173667267` | 7/27/2026, 12:10:46 PM | 340 | 1233KB | I need a copy of the signed and executed Medical Director Contract for Dr. Rodriguez as we |
 | `1785178593254` | 7/27/2026, 12:09:33 PM | 65 | 221KB | Context compressed at 983,257 / 1,000,000 tokens (98%), above the rule-119 COMPRESS thresh |
@@ -101,13 +102,12 @@ Generated: 7/27/2026, 7:50:41 PM PT | window: last 72h | 92 tasks | index total 
 | `1784933972320` | 7/24/2026, 9:04:22 PM | 643 | 5139KB | See: What's the issue with this student? 26213FT-16 - PCR’s, Drug test, Externship time sh |
 | `1784861116581` | 7/24/2026, 8:55:34 PM | 442 | 1534KB | https://emsuniversity.com/emtskills/tickets/  - are these tickets being consolidated by pe |
 | `1784951173470` | 7/24/2026, 8:52:45 PM | 24 | 72KB | this is not working still |
-| `1784948175274` | 7/24/2026, 8:39:12 PM | 38 | 849KB | Need to add Opus 5 here in cline |
 
 ---
 
 ## Per-window detail
 
-### `1785191995112` — 7/27/2026, 7:50:36 PM PT — 623 turns
+### `1785191995112` — 7/27/2026, 8:50:36 PM PT — 739 turns
 
 **Original task:**
 
@@ -123,7 +123,7 @@ Advise if is actually a new complaint and provide me with a summary of the situa
 Actually it appears this 
 ```
 
-**Ideas referenced:** #13437, #13441, #152615, #16390, #16464, #176616, #18690, #19403, #19572 [proposed], #19573 [proposed], #19574 [proposed], #19576 [executing], #19577 [executing], #19578 [executing], #19580 [executing], #19581 [executing], #19583 [executing], #19584 [executing], #19586 [executing], #19587 [executing], #19588 [executing], #19589 [executing], #19590 [executing], #19591 [executing], #19592 [executing], #19594 [executing], #19595 [executing], #19596 [executing], #19597 [executing], #19598 [executing], #19599 [executing], #19600 [executing], #19601 [executing], #19602 [executing], #19603 [executing], #21278, #21707, #21765, #26684, #3051, #3052, #3054, #3057, #3058, #3059, #3061, #3067, #3069, #3070, #3071, #3075, #3076, #3077, #600179, #6106, #623992, #6685, #8939
+**Ideas referenced:** #13437, #13441, #152615, #16390, #16464, #176616, #18690, #19403, #19572 [proposed], #19573 [proposed], #19574 [proposed], #19576 [executing], #19577 [executing], #19578 [executing], #19580 [executing], #19581 [executing], #19583 [executing], #19584 [executing], #19586 [executing], #19587 [executing], #19588 [executing], #19589 [executing], #19590 [executing], #19591 [executing], #19592 [executing], #19594 [executing], #19595 [executing], #19596 [executing], #19597 [executing], #19598 [executing], #19599 [executing], #19600 [executing], #19601 [executing], #19602 [executing], #19603 [executing], #19605 [executing], #19606 [executing], #19607 [executing], #21278, #21707, #21765, #26684, #3051, #3052, #3054, #3057, #3058, #3059, #3061, #3067, #3069, #3070, #3071, #3075, #3076, #3077, #600179, #6106, #623992, #6685, #8939, #92400
 
 **Last PICKUP PROMPT:**
 
@@ -160,7 +160,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785193714174` — 7/27/2026, 7:50:21 PM PT — 584 turns
+### `1785193714174` — 7/27/2026, 8:50:33 PM PT — 695 turns
 
 **Original task:**
 
@@ -176,11 +176,28 @@ artemis login: {466.6646581 Out of memory: Killed process 6319 (ray: RayWorkerP)
 So need something proactively ready to push the instant it's rebooted
 ```
 
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #13878, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1731, #1732, #1734, #1737, #1739, #1744, #1746, #1747, #1779, #1798, #1828, #18314, #18320, #1834 [resolved], #1836 [resolved], #1837 [resolved], #1839 [resolved], #1842 [investigating], #1930 [resolved], #19567 [proposed], #2063, #2065, #2067, #2068, #2069, #37030, #46641, #7142, #7149
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #13878, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1731, #1732, #1734, #1737, #1739, #1744, #1746, #1747, #1779, #1798, #1828, #18314, #18320, #1834 [resolved], #1836 [resolved], #1837 [resolved], #1839 [resolved], #1842 [investigating], #1930 [resolved], #19567 [proposed], #2063, #2065, #2067, #2068, #2069, #2070, #37030, #46641, #7142, #7149
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785189965992` — 7/27/2026, 7:50:11 PM PT — 873 turns
+### `1785183122795` — 7/27/2026, 8:50:33 PM PT — 462 turns
+
+**Original task:**
+
+```
+Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue another 45 minutes:
+
+-
+## Direct answer on Cesar
+
+**I did nothing to Cesar. Three read-only commands, over its existing tunnel:** `ulimit -Sl/-Hl`, `grep memlock /etc/security/limits.d/`, and a `python3` version print. No writes, no restart, no config edit, no TP=2 launch attempted on it. Verified after the fact: ring `:8210` returns HTTP 200 with 12 concurrent requests and 211,399 generation tokens, Cesar at 96% GPU, **uptime 8 days 16:34** (proving it was never restarted), load climbing 1.76 → 3.10 = activ
+```
+
+**Ideas referenced:** #11261, #11741, #12266, #12285, #12403, #12584, #12645, #12689, #13453, #13470, #13874, #15369, #15370, #16602, #19506 [rejected], #19507 [executing], #19508 [executing], #19542 [proposed], #19543 [proposed], #19544 [proposed], #19546 [executing], #19547 [executing], #19548 [executing], #19549 [executing], #19558 [executing], #19563 [unknown], #19564 [unknown], #19571 [proposed], #19575 [executing], #2042, #2045, #2048, #2049, #2051, #2052, #2053, #2054, #2055, #2057, #2058, #2059, #2061, #2062, #2071, #2072, #64748, #7490, #7513, #7554, #9706, #9910
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785189965992` — 7/27/2026, 8:47:15 PM PT — 961 turns
 
 **Original task:**
 
@@ -198,26 +215,162 @@ The most likely cause is that this idea touches three things that sit outside th
 1. Plesk/Roundcube email provisioning — creating an actual mailbox on WOPR's mail server isn't an in
 ```
 
-**Ideas referenced:** #10003, #10005, #10182, #10740, #11936, #11942, #12247, #12262, #12301, #12314, #12364, #12365, #12672, #12673, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13108, #13121, #13453, #13470, #16213, #16263, #16625, #16646, #16648, #16680, #17203, #17205, #17537, #17619 [deployed], #17680, #18378, #18745, #1876, #18770, #18786, #18806, #18820, #18868, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19163, #19338, #19348, #19370, #19403 [executing], #19518 [executing], #19558, #19563 [proposed], #19568 [proposed], #19571 [proposed], #19579 [executing], #19585 [executing], #19604 [proposed], #1998, #2006, #2007, #2061, #2064, #2066, #21262, #274160, #30363, #334155, #4338, #64748, #6785, #69707, #8942, #9650, #9654, #9660, #9706, #9733, #9889
+**Ideas referenced:** #0369, #10003, #10005, #10182, #10740, #11936, #11942, #12247, #12262, #12301, #12314, #12364, #12365, #12672, #12673, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13108, #13121, #13453, #13470, #16213, #16263, #16625, #16646, #16648, #16680, #17203, #17205, #17537, #17619 [deployed], #17680, #18378, #18745, #1876, #18770, #18786, #18806, #18820, #18868, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19163, #19338, #19348, #19370, #19403 [executing], #1951, #19518 [executing], #19558, #19563 [proposed], #19568 [proposed], #19571 [proposed], #19579 [executing], #19585 [executing], #19604 [proposed], #19610 [executing], #19611 [executing], #1998, #2006, #2007, #2061, #2064, #2066, #21262, #274160, #30363, #3048, #3049, #334155, #4338, #475569, #64748, #6785, #69707, #8942, #9650, #9654, #9660, #9706, #9733, #9889
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785183122795` — 7/27/2026, 5:29:55 PM PT — 409 turns
+### `1785209942258` — 7/27/2026, 8:46:39 PM PT — 46 turns
 
 **Original task:**
 
 ```
-Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue another 45 minutes:
-
--
-## Direct answer on Cesar
-
-**I did nothing to Cesar. Three read-only commands, over its existing tunnel:** `ulimit -Sl/-Hl`, `grep memlock /etc/security/limits.d/`, and a `python3` version print. No writes, no restart, no config edit, no TP=2 launch attempted on it. Verified after the fact: ring `:8210` returns HTTP 200 with 12 concurrent requests and 211,399 generation tokens, Cesar at 96% GPU, **uptime 8 days 16:34** (proving it was never restarted), load climbing 1.76 → 3.10 = activ
+Do not close my active cline windows, but grey windows keep coming in for some reason here in the cline windows on the Cline section. Plesaer resolve without closing my cline windows
 ```
 
-**Ideas referenced:** #11261, #11741, #12266, #12285, #12403, #12584, #12645, #12689, #13453, #13470, #13874, #15369, #15370, #16602, #19506 [rejected], #19507 [executing], #19508 [executing], #19542 [proposed], #19543 [proposed], #19544 [proposed], #19546 [executing], #19547 [executing], #19548 [executing], #19549 [executing], #19558 [executing], #19563 [unknown], #19564 [unknown], #19575 [executing], #2042, #2045, #2048, #2049, #2051, #2052, #2053, #2054, #2055, #2057, #2058, #2059, #2061, #2062, #64748, #7490, #7513, #7554, #9706, #9910
+**Ideas referenced:** #19612 [proposed]
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+ed to restore a prior session.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #current — Cline grey-window cleanup verification + auto-cleanup cron setup
+(No numeric task id available for this window)
+
+Where we left off (verified 2026-07-27 8:46 PM PT):
+- 2,060 stale Cline task dirs archived to archived_tasks/stale_20260727.tar.gz (1.4GB)
+- taskHistory.json pruned 510→65 entries
+- Cleanup script at ~/Desktop/scripts/clean_cline_tasks.sh created
+- Idea #19612 [proposed] for weekly auto-cleanup
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #19612 [proposed] — Set up launchd plist to run clean_cline_tasks.sh weekly (Sundays 3AM PT)
+
+Reference IDs:
+- Idea: #19612
+- Files touched: ~/Desktop/scripts/clean_cline_tasks.sh, ~/Library/Application\ Support/Code/User/globalStorage/saoudrizwan.claude-dev/archived_tasks/stale_20260727.tar.gz, state/taskHistory.json
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785180643044` — 7/27/2026, 8:40:41 PM PT — 452 turns
+
+**Original task:**
+
+```
+## 1 — #PAY · P0 money · RUN FIRST
+
+```
+#PAY — EMSU P0 revenue recovery. Payment declines were silently voiding and invoices were being marked paid anyway.
+
+RULES: no claim without a tool call this session. Server writes via emsu-operations ssh_command with sudo. DESCRIBE tables before SQL; cross-DB joins need COLLATE utf8mb4_general_ci on both sides. Act rather than list. MCP "result missing" = retry the same call once. NO apology language in student email (rule 02). Money movement over the rule-29 cap is human-gated → CS round-robin, never Vicky by default.
+
+=== ALREADY FIXED 2026-07-27, DO 
+```
+
+**Ideas referenced:** #1379, #1458, #1459, #1460, #1461, #15815, #16134, #16590, #16594, #16608, #16613, #16621, #166462, #1666, #1667, #16695, #172007, #173077, #17447, #178560, #19437, #19454, #19464, #19465, #19492 [executing], #19495 [executing], #19500, #19504 [executing], #19509, #19510, #19511 [executing], #19517 [executing], #19545 [proposed], #19587, #19606, #19607, #19608 [executing], #20142, #20149, #2027, #2029, #2030, #2031, #2033, #2036, #2039, #2040, #2041, #2043, #2044, #2056, #20882, #20883, #21033, #21529, #21558, #252532, #3078, #3079, #3354, #6039, #6064, #8211, #8869, #9086, #9306
+
+**Last PICKUP PROMPT:**
+
+```
+ines is the remaining cleanup.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785600643000 (topic: #PAY revenue recovery + EA reminder spam).
+
+Where we left off (verified 2026-07-27 20:38 PT):
+- EA SPAM FIXED: paid_no_ea_no_invoice_repair.php cooldown 6h to 48h plus lifetime cap 3 (backup .bak-easpam-20260727, php -l clean, dry-run verified). Measured 9,586 sends to 819 students since 5/23, worst 87 to one student.
+- Earlier today: Intuit hosted invoice-pay page identified as the second auto-void path; 12 phantom QBO payments UNLINKED so invoice balances are true; corrected invoices sent to the 9 who owe; Akash invoice 172423 voided (he paid in full); Emily Nguyen flagged DISPUTED; Hannah Meiers $1,445 captured-but-unbooked backfilled; payment vault key/consent/30-day-destroy shipped.
+- The 5 payment ideas show impl_failed from the EXECUTOR, but their actual fixes were hand-shipped this session. The failure is in the build pipeline, not the repair.
+
+Open threads to drive next:
+1. #19608 [executing] (verified: reconcile_ideas status=in_progress dev_stage=idle) audit sibling auto-tier handlers for the same self-perpetuating shape; build shared agent_handler_send_guard($action,$entityId,$cooldownHours,$lifetimeCap); add monitor for any audit_log action exceeding N sends per entity_id
+2. #19545 [executing] (verified: reconcile_ideas status=in_progress dev_stage=idle) Intuit Merchant Services call re: hosted invoice page AVS NotAvailable, cite charge 10ac7hruh46e and void 16ac7hruha6s (human piece); also locate the /classpayment or WPForms-confirmation pay link Ruben asked about and swap it into the two patched surfaces
+3. #19492 [blocked] (verified: reconcile_ideas dev_stage=impl_failed) executor build failed; AVS work itself is deployed, needs re-file or close
+4. #19495 [blocked] (verified: reconcile_ideas dev_stage=impl_failed) executor build failed; phantom-revenue repair already hand-shipped, needs re-file or close
+5. #19504 [blocked] (verified: reconcile_ideas dev_stage=impl_failed) unpaid-loop grace window still genuinely undone, re-file
+6. #19511 [blocked] (verified: reconcile_ideas dev_stage=impl_failed) extract void guard to lib/qb_void_guard.php and deploy to the 10 files that set status=paid
+7. #19517 [blocked] (verified: reconcile_ideas dev_stage=impl_failed) vault shipped; watch php error log for EMSU vault capture skipped on first live capture
+8. Decide whether to notify the ~15 students who received 80+ EA emails (human-only decision, no idea; rule 02 applies, no apology language)
+
+Reference IDs:
+- Ideas: #19608 [executing], #19545 [executing], #19492 [blocked], #19495 [blocked], #19504 [blocked], #19511 [blocked], #19517 [blocked]
+- Bug library: #2056 (intuit_hosted_invoice_avs_autovoid_20260727)
+- Files touched: lib/agent_handlers/paid_no_ea_no_invoice_repair.php, lib/payment_receipt_email.php, api/livechat/chatbot_tools.php, lib/PaymentMethodVault.php, api/payment_vault_cli.php, /etc/cron.d/emsu-payment-vault-purge
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Payment vault: consent + key backup + 30-day destroy shipped
+- [x] P0 root cause: Intuit hosted invoice page drops AVS + auto-voids (#19545)
+- [x] $0.00 invoice emails fixed, updated invoices sent to the 9
+- [x] Revenue gap: Meiers $1,445 captured-not-booked backfilled
+- [x] EA spam root cause found: self-perpetuating handler, 9,586 
+```
+
+### `1785180665712` — 7/27/2026, 8:20:03 PM PT — 230 turns
+
+**Original task:**
+
+```
+## 2 — #EXEC · P0 · executor is failing builds silently
+
+```
+#EXEC — EMSU executor pipeline. The old "worker cap" theory is DEAD; here is the measured current failure.
+
+RULES: no claim without a tool call this session. Server writes via ssh_command with sudo. DESCRIBE before SQL. Act rather than list. MCP "result missing" = retry once.
+
+GROUND TRUTH FROM RUBEN — do not re-derive, do not contradict:
+"Executor has not been broken for 15 days. It has been working other things in 15 days. I've watched it do that. Plus we had way more than 150 ideas come through. I imagine those are the ones that j
+```
+
+**Ideas referenced:** #12430, #1617, #16242, #164750, #17712, #18357, #18442, #1850, #18559, #18757, #18851, #18861, #18871, #18880 [queued], #18903, #18912, #18934 [queued], #18954 [queued], #18959, #18977, #18998, #19173, #19175, #19176, #19177, #19178, #19179, #19186, #19187, #19188 [queued], #19189, #19325, #19359, #19437, #19454, #19464, #19490 [executing], #19500, #19509, #19510, #19519, #19527 [queued], #19530 [queued], #1996, #2027, #2039, #2040, #2041, #2043, #2675, #5387, #6044, #7181, #7925, #9202
+
+**Last PICKUP PROMPT:**
+
+```
+
+
+<attempt_completion>
+<result>
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up #19490 executor fix sweep — remaining items: GATE C decisions, #19188 Frankenstein Doctor, backlog requeue.
+
+Where we left off (verified 2026-07-27 20:19 PT):
+- 4 code fixes deployed: reason logging (cli_watchdog + pipeline_liveness), status-revert (silent_ghost_alert), wiring-gate (main() restored + kill switch fix). All verified on disk.
+- 188 legacy blank reasons backfilled (0 remaining)
+- #19359 re-deployed
+- Obedience #19173-19179 deployed, #19186-19189 requeued for pipeline
+- Handoff notes appended to HANDOFF_NOTES.md
+- P0 FIRE CHECK: Zero-balance invoice emails — could not find local PHP cron sending external invoices. These may be QuickBooks-side auto-emails (QB sends on invoice create/update). Check QB config for "auto-email payment reminders" or verify in QB Online.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #19530 [queued] — Execute remaining: GATE C decisions (#18903 haiku repoint, #18871 Connecteam sweep), #19188 Frankenstein Doctor, backlog requeue of 215 ideas
+2. #19527 [queued] — #18871 Connecteam dead-table sweep: decide whether to overrule outdated flag
+
+Reference IDs:
+- Ticket: #19490 (executor fix sweep), #19519 (parent idea)
+- Ideas filed: #19519, #19530, #19527
+- Files touched: cron/cron_cli_watchdog.php, cron/cron_idea_pipeline_liveness.php, cron/cron_silent_ghost_alert.php, cron/cron_executor_wiring_gate.php
+- Do NOT touch: 17921, 16853, 18926, 18852, 18803, 18717, 18765, 17311-17313, 17235, 17333, 17342, 18401, 18321
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1785194061900` — 7/27/2026, 5:28:41 PM PT — 222 turns
 
@@ -655,56 +808,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785180643044` — 7/27/2026, 2:40:28 PM PT — 374 turns
-
-**Original task:**
-
-```
-## 1 — #PAY · P0 money · RUN FIRST
-
-```
-#PAY — EMSU P0 revenue recovery. Payment declines were silently voiding and invoices were being marked paid anyway.
-
-RULES: no claim without a tool call this session. Server writes via emsu-operations ssh_command with sudo. DESCRIBE tables before SQL; cross-DB joins need COLLATE utf8mb4_general_ci on both sides. Act rather than list. MCP "result missing" = retry the same call once. NO apology language in student email (rule 02). Money movement over the rule-29 cap is human-gated → CS round-robin, never Vicky by default.
-
-=== ALREADY FIXED 2026-07-27, DO 
-```
-
-**Ideas referenced:** #1379, #1458, #1459, #1460, #1461, #15815, #16134, #16590, #16594, #16608, #16613, #16621, #166462, #1666, #1667, #16695, #172007, #173077, #17447, #19437, #19454, #19464, #19465, #19492 [executing], #19495 [executing], #19500, #19504 [executing], #19509, #19510, #19511 [executing], #19517 [executing], #19545 [proposed], #20142, #20149, #2027, #2029, #2030, #2031, #2033, #2036, #2039, #2040, #2041, #2043, #2044, #2056, #20882, #20883, #21033, #21529, #21558, #252532, #3078, #3079, #3354, #8211, #8869, #9086, #9306
-
-**Last PICKUP PROMPT:**
-
-```
- "EMSU vault capture skipped".
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #19517 — Payment vault: consent, key backup, 30-day destroy, live card watch.
-
-Where we left off (verified 2026-07-27 12:49 PT):
-- PaymentMethodVault.php updated with pmv_purge_30d() function
-- payment_vault_cli.php updated with destroy command (--preview/--apply)
-- /etc/cron.d/emsu-payment-vault-purge created (04:00 PT daily)
-- Encryption key sent to Ruben via iMessage
-- student_payment_methods has 0 rows — no live card vaulted yet
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #19517 [executing] — Watch php error log for "EMSU vault capture skipped" when next student pays; confirm Intuit customerId is present in charge context on all 32 sites
-2. #19517 [executing] — Key rotation procedure: if key is rotated, existing stored tokens become undecryptable. Document recovery plan.
-3. #19504 [executing] — Unpaid loop enforcement: 11 students need grace window + notification before suspension
-4. #19492 [executing] — Second auto-void (Pradeep/Nihar $1,445) on sandiegoemt: AVS patch IS installed, read the error_log diagnostic next
-
-Reference IDs:
-- Ideas filed: #19517, #19492, #19495, #19504, #19511
-- Files touched: /var/www/emtskills/lib/PaymentMethodVault.php, api/payment_vault_cli.php, /etc/cron.d/emsu-payment-vault-purge
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
 ### `1785181049767` — 7/27/2026, 2:39:06 PM PT — 100 turns
 
 **Original task:**
@@ -822,62 +925,6 @@ BUG 1 — ARCHIVED-ACCOUNT INVERSION (#19439, P0, bug library #2026). The moodle
 **Ideas referenced:** #11782, #12661, #13873, #13977, #14153, #14154, #14847, #15635, #15636, #15638, #16437, #16581, #16608, #16613, #16731, #16732, #16733, #17546, #17580, #17685, #17723, #18693, #18743, #18936, #19437, #19439, #19454, #19464, #19465, #19490, #19492, #19495, #19500, #19509, #19510, #2026, #2027, #2033, #2036, #2039, #2040, #2041, #2043, #71121, #9083, #9086, #9168, #9192, #9202, #9306, #9339, #9343, #9549, #9831
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785180665712` — 7/27/2026, 12:55:02 PM PT — 146 turns
-
-**Original task:**
-
-```
-## 2 — #EXEC · P0 · executor is failing builds silently
-
-```
-#EXEC — EMSU executor pipeline. The old "worker cap" theory is DEAD; here is the measured current failure.
-
-RULES: no claim without a tool call this session. Server writes via ssh_command with sudo. DESCRIBE before SQL. Act rather than list. MCP "result missing" = retry once.
-
-GROUND TRUTH FROM RUBEN — do not re-derive, do not contradict:
-"Executor has not been broken for 15 days. It has been working other things in 15 days. I've watched it do that. Plus we had way more than 150 ideas come through. I imagine those are the ones that j
-```
-
-**Ideas referenced:** #12430, #1617, #16242, #17712, #18357, #18442, #1850, #18559, #18757, #18851, #18861, #18871, #18880 [queued], #18903, #18912, #18934 [queued], #18954 [queued], #18959, #18977, #18998, #19173, #19175, #19176, #19177, #19178, #19179, #19186, #19187, #19188 [queued], #19189, #19325, #19359, #19437, #19454, #19464, #19490 [executing], #19500, #19509, #19510, #19519, #19527 [queued], #19530 [queued], #1996, #2027, #2039, #2040, #2041, #2043, #7181, #7925
-
-**Last PICKUP PROMPT:**
-
-```
- #18977 DGX Spark remote power
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #19490 — Executor fix sweep: remaining GATE C + queued items.
-
-Where we left off (verified 2026-07-27 12:54 PT):
-- 4 code fixes deployed and verified: cli_watchdog, pipeline_liveness, silent_ghost_alert, wiring_gate
-- 188 legacy blank reasons backfilled (0 remaining)
-- #19359 re-deployed after silent_ghost fix
-- Obedience family #19173-19179 deployed, #19186-19189 requeued
-- HANDOFF_NOTES.md updated with full sweep results
-- All backups at .bak-reasonfix-20260727 and .bak-handshipfix-20260727
-
-Open threads to drive next:
-1. #19530 [queued] — GATE C hand-ships: #18903 haiku repoint, #18871 Connecteam sweep, #18998 view-guard chain. Handle each per GATE C — verify surface first, then decide
-2. #19527 [queued] — Connecteam dead-table sweep (#18871 blocking #18861)
-3. #19188 [queued] — Frankenstein Doctor sweep: run rule 276 Federation → rule 156 bug_library_check_before_fix → diagnose. You MUST run these tools BEFORE claiming anything about the fleet
-4. #19490 [executing] — Requeue 215 backlog. Do NOT requeue into silently-failing dispatcher: the 4 fixes above make failures diagnosable, so it's safe now. Combine manual requeue with `UPDATE orchestrator_ideas SET dev_stage='idle', status='approved' WHERE dev_stage='impl_failed' AND implementation_notes NOT LIKE '%[IMPL_RETRY] count=5%'`
-5. #18954 [queued] — Daystrom R1 batch-pull gate (P0), #18880 [queued] — Daystrom stale-enrollment routing (P0), #18934 [queued] — Outreach Specialist role
-
-Reference IDs:
-- Ticket: #19490
-- Ideas filed: #19519 (executor fix sweep parent), #19527 (Connecteam), #19530 (remaining GATE C)
-- Files touched: cron/cron_cli_watchdog.php, cron/cron_idea_pipeline_liveness.php, cron/cron_silent_ghost_alert.php, cron/cron_executor_wiring_gate.php
-
-DO NOT TOUCH (Frankenstein/GLM/Anthropic): 17921, 16853, 18926, 18852, 18803, 18717, 18765, 17311-17313, 17235, 17333, 17342, 18401, 18321
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
 
 ### `1785120544230` — 7/27/2026, 12:15:02 PM PT — 482 turns
 
@@ -3605,43 +3652,3 @@ Reload the Cline extension (or restart VS Code) to see the new “Opus 5” 
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1784948175274` — 7/24/2026, 8:39:12 PM PT — 38 turns
-
-**Original task:**
-
-```
-Need to add Opus 5 here in cline
-```
-
-**Last PICKUP PROMPT:**
-
-```
-for the change to take effect.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Verify Opus 5 is working in Cline.
-
-Where we left off (verified 2026-07-24T20:17:44 PT):
-- Anthropic provider model changed from `claude-fable-5` to `claude-opus-5` in `/Users/rubenmajor/.cline/data/settings/providers.json`
-- Change confirmed on disk (line 22)
-
-Open threads to drive next:
-(human-only decision - no idea)
-
-Reference IDs:
-- Files touched: `/Users/rubenmajor/.cline/data/settings/providers.json`
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Locate Cline settings directory
-- [x] Identify providers file
-- [x] Update Anthropic model to claude-opus-5
-- [x] Verify change on disk
-</task_progress>
-</attempt_completion>
-```

@@ -6,14 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/27/2026, 9:51:06 PM PT | window: last 72h | 86 tasks | index total 219 (parsed 3, cached 216)
+Generated: 7/27/2026, 10:51:06 PM PT | window: last 72h | 85 tasks | index total 219 (parsed 3, cached 216)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785189965992` | 7/27/2026, 9:51:02 PM | 1129 | 5720KB | #Argus |
-| `1785213570023` | 7/27/2026, 9:50:48 PM | 111 | 194KB | ## Task #PAY + #FORMS: substantive work SHIPPED this session, executor pipeline remains th |
+| `1785189965992` | 7/27/2026, 10:49:12 PM | 1371 | 6134KB | #Argus |
+| `1785213570023` | 7/27/2026, 10:36:03 PM | 298 | 1875KB | ## Task #PAY + #FORMS: substantive work SHIPPED this session, executor pipeline remains th |
+| `1785211458292` | 7/27/2026, 10:32:01 PM | 146 | 632KB | See this issue, is this anything to be resoled? Hmm... I wonder, besides simply responding |
 | `1785180643044` | 7/27/2026, 9:37:32 PM | 693 | 1244KB | ## 1 — #PAY · P0 money · RUN FIRST |
-| `1785211458292` | 7/27/2026, 9:17:18 PM | 66 | 441KB | See this issue, is this anything to be resoled? Hmm... I wonder, besides simply responding |
 | `1785180665712` | 7/27/2026, 9:07:57 PM | 336 | 1041KB | ## 2 — #EXEC · P0 · executor is failing builds silently |
 | `1785181029165` | 7/27/2026, 9:07:09 PM | 127 | 276KB | ## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti) |
 | `1785191995112` | 7/27/2026, 9:04:36 PM | 796 | 2848KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
@@ -95,13 +95,12 @@ Generated: 7/27/2026, 9:51:06 PM PT | window: last 72h | 86 tasks | index total 
 | `1784958811013` | 7/24/2026, 11:35:45 PM | 116 | 678KB | Pick up the declined-WPForms/QB-payments closeout — RCA + fixes shipped, drive the 3 filed |
 | `1784958865670` | 7/24/2026, 11:33:02 PM | 50 | 133KB | Pick up task — ticket consolidation + CFA routing verification follow-up. |
 | `1784958847796` | 7/24/2026, 10:58:17 PM | 18 | 175KB | Pick up task — 25227A-28 skill-date bug: Ruben confirmed the form's performed-date is the  |
-| `1784956096807` | 7/24/2026, 10:28:44 PM | 40 | 137KB | I need the url, admin username and password to get into our Plesk |
 
 ---
 
 ## Per-window detail
 
-### `1785189965992` — 7/27/2026, 9:51:02 PM PT — 1129 turns
+### `1785189965992` — 7/27/2026, 10:49:12 PM PT — 1371 turns
 
 **Original task:**
 
@@ -119,11 +118,11 @@ The most likely cause is that this idea touches three things that sit outside th
 1. Plesk/Roundcube email provisioning — creating an actual mailbox on WOPR's mail server isn't an in
 ```
 
-**Ideas referenced:** #016087, #0369, #10003, #10005, #10182, #10740, #11936, #11942, #12247, #12262, #12301, #12314, #12364, #12365, #12672, #12673, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13108, #13121, #13453, #13470, #16213, #16263, #16625, #16646, #16648, #16680, #17203, #17205, #17537, #17619 [deployed], #17680, #18378, #18745, #1876, #18770, #18786, #18806, #18820, #18868, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19163, #19338, #19348, #19370, #19403 [executing], #1951, #19518 [executing], #19558, #19563 [proposed], #19568 [proposed], #19571 [proposed], #19579 [executing], #19585 [executing], #19604 [proposed], #19610 [executing], #19611 [executing], #19615 [executing], #1998, #2006, #2007, #2061, #2064, #2066, #21262, #274160, #30363, #3048, #3049, #334155, #4338, #475569, #64748, #6785, #69707, #8942, #9083, #9086, #9168, #9339, #9650, #9654, #9660, #9706, #9733, #9889
+**Ideas referenced:** #016087, #0369, #10003, #10005, #10182, #10740, #11936, #11942, #12247, #12262, #12301, #12314, #12364, #12365, #12672, #12673, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13108, #13121, #13453, #13470, #16213, #16263, #16625, #16646, #16648, #16680, #17203, #17205, #17537, #17619 [deployed], #17680, #18378, #18745, #1876, #18770, #18786, #18806, #18820, #18868, #18935 [rejected], #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19163, #19338, #19348, #19370, #19403 [executing], #1951, #19518 [executing], #19558, #19563 [proposed], #19568 [proposed], #19571 [proposed], #19579 [executing], #19585 [executing], #19604 [proposed], #19610 [executing], #19611 [executing], #19615 [executing], #19646 [executing], #19647 [executing], #19657 [executing], #1998, #2006, #2007, #2061, #2064, #2066, #21262, #274160, #30363, #3048, #3049, #3109, #334155, #3595, #4338, #475569, #64748, #6785, #69707, #8942, #9083, #9086, #9168, #9339, #9650, #9654, #9660, #9706, #9733, #9889
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785213570023` — 7/27/2026, 9:50:48 PM PT — 111 turns
+### `1785213570023` — 7/27/2026, 10:36:03 PM PT — 298 turns
 
 **Original task:**
 
@@ -137,9 +136,55 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 - 12 phantom QBO payments UNLINKED inside QuickBooks itself (QBO ref
 ```
 
-**Ideas referenced:** #178560, #18841 [queued], #19079 [blocked], #19101 [blocked], #19128 [blocked], #19435 [blocked], #19492 [blocked], #19495 [blocked], #19503 [blocked], #19504 [blocked], #19511 [blocked], #19517 [blocked], #19545 [blocked], #19608 [executing], #19628 [executing], #19629 [executing], #2056, #2075, #2076
+**Ideas referenced:** #178560, #18481, #18811, #18841 [queued], #19069, #19079 [blocked], #19101 [blocked], #19128 [blocked], #19240, #19435 [blocked], #19492 [blocked], #19495 [blocked], #19503 [blocked], #19504 [blocked], #19511 [blocked], #19517 [blocked], #19545 [blocked], #19597, #19608 [executing], #19617, #19618, #19622, #19628 [executing], #19629 [executing], #19631, #19632, #19638, #19640, #19643 [executing], #19644, #19645 [executing], #19654 [executing], #2056, #2075, #2076, #2077, #3078, #3079, #5391, #7318, #9222
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785211458292` — 7/27/2026, 10:32:01 PM PT — 146 turns
+
+**Original task:**
+
+```
+See this issue, is this anything to be resoled? Hmm... I wonder, besides simply responding to requests and doing what those agents can do, can CFA's actually fix bugs like this (if there is a bug), if not can you give them that capabiility?
+```
+
+**Ideas referenced:** #06222, #0891, #10017, #10107, #11160, #11798, #11812, #11942, #11943, #11990, #12184, #12245, #12247, #12262, #12314, #12364, #12365, #127760, #128269, #13108, #14141, #141414, #14261, #15803, #16233, #16603, #166534, #181820, #19338, #19403 [rejected], #19518 [rejected], #19572, #19573, #19581, #19587, #19588, #19605, #19606, #19607, #19608, #19610 [executing], #19653 [proposed], #2563, #3048, #3049, #334155, #3730, #4338, #475569, #566042, #6366, #64748, #8212, #9086, #9193, #9222, #92400, #9269, #9311, #9312, #9889
+
+**Last PICKUP PROMPT:**
+
+```
+.php.bak-rawturns-1785216439`.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — LLM router raw turn counts + CFA bug-fixing capability.
+
+Where we left off (verified 2026-07-27 22:31 PT):
+- Raw-turn-count panel rebuilt on `/var/www/emtskills/routes/llm_router_live.php`, two layers: entrypoint counts with real-vs-heartbeat split, and an INSIDE-frankenstein-tools upstream breakdown. Lint clean, HTML balanced, values verified live, FPM reloaded. Backup `llm_router_live.php.bak-rawturns-1785216439`.
+- Root cause of the bad numbers: health probes (`ping`/`hi`) were counted as real traffic, and adapter entrypoints were never resolved to real hardware. Both fixed.
+- Layer-2 coverage is 20 of 321 real adapter turns (rolling 100-turn sample buffer, not a panel bug). Panel states this honestly.
+- Observation needing confirmation once #19653 lands: all 20 sampled adapter turns hit Artemis `10.100.0.5:8000`, zero hit the GLM `:8210` ring.
+- CFA bug-fixing build was IN PROGRESS when redirected. `cfa_diagnostic_bugs` table CREATED and verified in `admin_portal` (fingerprint dedup, occurrence_count, distinct_students, severity, status, orchestrator_idea_id). `lib/CfaDiagnosticBug.php` was mid-write and is INCOMPLETE — the `incrementExisting()` method is truncated. Not yet wired into `CanonicalToolRegistry`, no dashboard yet.
+
+Open threads to drive next:
+1. #19653 [executing] (verified: reconcile_ideas returned status=in_progress dev_stage=idle) — adapter per-turn upstream logging. Once shipped, swap the Layer-2 block in `llm_router_live.php` from the sampled lane-metrics read to the new exact log, and drop the "sampled of N" wording.
+2. CFA `report_systemic_defect` tool — finish `lib/CfaDiagnosticBug.php` (complete `incrementExisting()` + `maybeFileIdea()`), add a `localReportSystemicDefect` handler, register in `CanonicalToolRegistry::schemas()` + `handlerMap()`, add the handler file to `loadHandlers()`, then build `routes/cfa_bug_review.php`. Design is human-gated by intent: CFAs detect/evidence/propose, they never deploy. Auto-files an orchestrator idea at 2+ distinct students or severity=critical. (human-only decision — no idea filed; Ruben asked for the build directly)
+3. Confirm whether GLM `:8210` ring receives real Cline traffic — blocked on #19653 [executing] landing.
+
+Reference IDs:
+- Ideas filed: #19653 [executing]
+- Ideas reconciled: #19610 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review)
+- Files touched: `/var/www/emtskills/routes/llm_router_live.php`, `lib/CfaDiagnosticBug.php` (incomplete)
+- DB: `admin_portal.cfa_diagnostic_bugs` (created, empty)
+- Backups: `llm_router_live.php.bak-rawturns-1785216439`, `llm_router_live.php.bak-turncount-1785212086`
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1785180643044` — 7/27/2026, 9:37:32 PM PT — 693 turns
 
@@ -194,48 +239,6 @@ Open threads to drive next (every #NNNN gets a [tag]):
 13. #19101 [blocked] (verified: reconcile_ideas dev_stage=impl_failed) WP get_block_asset_url canary
 14. Decide whether to notify the ~15 students who received 80+ EA emails (human-only decision, no idea; rule 02 no apology language)
 
-```
-
-### `1785211458292` — 7/27/2026, 9:17:18 PM PT — 66 turns
-
-**Original task:**
-
-```
-See this issue, is this anything to be resoled? Hmm... I wonder, besides simply responding to requests and doing what those agents can do, can CFA's actually fix bugs like this (if there is a bug), if not can you give them that capabiility?
-```
-
-**Ideas referenced:** #06222, #0891, #10017, #10107, #11160, #11798, #11812, #11942, #11943, #12184, #12245, #14141, #141414, #15803, #166534, #181820, #19403 [rejected], #19518 [rejected], #19572, #19573, #19581, #19587, #19588, #19605, #19606, #19607, #19608, #19610 [executing], #2563, #3048, #3049, #334155, #3730, #4338, #475569, #566042, #6366, #64748, #8212, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-FAs autonomous deployers.
-
----
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Turn-count panel deployed + CFA bug-fixing capability analysis.
-
-Where we left off (verified 9:16 PM PT 2026-07-27):
-- Turn-count panel deployed to `/var/www/emtskills/routes/llm_router_live.php` (line 248+, php -l clean, backup saved)
-- Panel queries `llm_call_log` for last 30 min, displays cards grid with bars and totals
-- CFA fleet CANNOT fix bugs today — would need MCP tool extensions
-
-Open threads to drive next:
-1. #19610 [executing] — Phantom EA PDFs from 07-20, 27 students, root cause still un-investigated
-2. CFA diagnostic tool: if desired, spec out a `file_diagnostic_bug` MCP tool for CFA agents that detects repeated failure patterns and files structured reports
-
-Reference IDs:
-- File touched: `/var/www/emtskills/routes/llm_router_live.php`
-- Backup: `llm_router_live.php.bak-turncount-1785212086`
-- Idea: #19610 (phantom EA PDFs)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```
 
 ### `1785180665712` — 7/27/2026, 9:07:57 PM PT — 336 turns
@@ -3273,49 +3276,4 @@ ule 267 GATE B.)
 
    - **`/var/www/emtskills/tools/fix_skill_attempts_dates.php`** (server path — via `emsu-operations` MCP only, NOT local file tools) — THE FILE TO BE PATCHED. Confirmed via `read_server_file` this session to still contain the OLD/WRONG logic:
      - Queries `SELECT attempt_id, wpforms_entry_id, completion_date FROM S
-```
-
-### `1784956096807` — 7/24/2026, 10:28:44 PM PT — 40 turns
-
-**Original task:**
-
-```
-I need the url, admin username and password to get into our Plesk
-```
-
-**Ideas referenced:** #13202, #16613, #17580, #18915 [proposed], #18916 [executing], #18917, #18918 [deployed], #18952, #18961, #1942, #1943, #1944, #1946, #1947, #1948
-
-**Last PICKUP PROMPT:**
-
-```
- on port 2222 (which is open).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task # — Retrieve and enable access to Plesk on WOPR.
-
-Where we left off (verified 2026‑07‑24 22:25 PT):
-- Internal IP `192.168.1.68:8443` bound but unreachable from outside the LAN.
-- Public IP `76.167.100.188` blocks port 8443 (firewall).
-- SSH tunnel (`-L 8443:127.0.0.1:8443`) confirmed as the simplest remote‑access method.
-- WireGuard VPN is a longer‑term solution.
-- Credentials and API key retained.
-
-Open threads to drive next:
-- None (task complete).
-
-Reference IDs:
-- Ticket: none
-- Ideas filed: none
-- Files touched: none
-═══════════════════════════════════════════════
-</result>
-<command></command>
-<task_progress>
-- [x] Identify accessible IP for Plesk service
-- [x] Retrieve admin username, password, and API key
-- [x] Provide remote‑access instructions (SSH tunnel or VPN)
-</task_progress>
-</attempt_completion>
 ```

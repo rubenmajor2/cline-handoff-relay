@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-07-29T07:53:17.061Z",
+ "generated_at": "2026-07-29T08:53:17.354Z",
  "counts": {
-  "parsed": 9,
-  "reused": 275,
+  "parsed": 7,
+  "reused": 284,
   "failed": 0,
-  "total": 284
+  "total": 291
  },
  "tasks": {
   "1784522296714": {
@@ -100602,13 +100602,13 @@
   },
   "1785295028411": {
    "task_id": "1785295028411",
-   "mtime": 1785311510181,
+   "mtime": 1785312268421,
    "created_at": "2026-07-29T03:17:08.411Z",
-   "last_modified": "2026-07-29T07:51:50.181Z",
-   "size_kb": 661,
-   "turn_count": 207,
+   "last_modified": "2026-07-29T08:04:28.421Z",
+   "size_kb": 683,
+   "turn_count": 214,
    "title": "What outstanding build issues exist for the Broser Extension for Argus? What else do you recommend? Can you do some work and testing on it to improve it more? Make sure it's wired into actual Argus as well:\n\nhttps://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome",
-   "pickup_prompt": "ncidents should be eliminated.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #7 — Argus Chrome Extension build issues (all items resolved).\n\nWhere we left\n\n[STOP]",
+   "pickup_prompt": "two prompts for the same task.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste\n",
    "ideas": {
     "1820": null,
     "1840": null,
@@ -100761,13 +100761,13 @@
   },
   "1785298450123": {
    "task_id": "1785298450123",
-   "mtime": 1785310645847,
+   "mtime": 1785312704766,
    "created_at": "2026-07-29T04:14:10.123Z",
-   "last_modified": "2026-07-29T07:37:25.847Z",
-   "size_kb": 1016,
-   "turn_count": 318,
+   "last_modified": "2026-07-29T08:11:44.766Z",
+   "size_kb": 1196,
+   "turn_count": 430,
    "title": "#Stripe/Klarna\n\nLook into this, plan and scope only, do deep analysis and consult SLS / MCP,, etc...\n\n--\nWhile you are on it, here remember that we have Stripe/Clarna and check API on that and i need to make sure that's properly wired into SLS, payment tracking, etc... and prevents users from being suspended if paid, knocks off the balance. if any for EMT payments, etc... Just verifying and so needs resolution if not across all EMT sites. Make sureit's activating properly, etc...|",
-   "pickup_prompt": "t than what I told you before.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #19897 [deployed] - Klarna now has Affirm parity across all 10 payment surfaces, EMT high-dollar checkout failure is the open question\n\nWhere we left off (verified 2026-07-29 00:35 PT):\n- AFFIRM PARITY AUDIT was the key insight: 48 Affirm surfaces vs 6 Klarna. Klarna was never broken, it was an unfinished migration from the 2026-07-09 swap. Now 10 of 10 core payment surfaces are Klarna-aware.\n- SHIPPED THIS SESSION: Student360 klarna_charge_id, PaymentVerifier lookupKlarna plus verdict key, CanonicalToolRegistry check_klarna_status (dispatch + schema), localCheckKlarnaStatus with three-state output (settled / started-not-completed / never-attempted).\n- SECURITY #19916 [deployed] hand-shipped per rule 267 GATE C. processKlarnaWebhook now FAILS CLOSED. Attack simulated: forged payment_intent.succeeded for $1,995 with no signature returned HTTP 400 and tagged zero students.\n- RUBEN CORRECTED my orphan detector: refresher courses are self-activating, student pays and Moodle auto-enrols with no Students row. VERIFIED IN MOODLE: lynnhoke@gmail.com paid 295.00 at 18:41 on 07-21, enrolled in course 12 at 18:43. Added isSelfActivatingSite plus verifySelfActivation. Zero false alarms.\n- FIXED MY OWN GAP: site and integration were NULL because WooCommerce stamps metadata on the Checkout Session not the PaymentIntent. Added enrichFromCheckoutSessions. All 22 rows now attributed.\n- SEGMENTED NUMBERS: EMT tuition 12 sessions 1 paid 20,045.00 abandoned. Refresher 8 sessions 1 paid 1,682.50 abandoned. The failure is specific to HIGH-DOLLAR EMT checkouts, likely a Klarna credit ceiling, not a code bug.\n- RULE 38 VIOLATION recorded and corrected: 14 ideas were parked at proposed because I reflexively treated payment-adjacent work as human-gated. Rule 29's money gate covers MOVING money, not read-only reconciliation. Zero proposed remain.\n- Backups: .bak-20260729-klarna-parity (Student360, PaymentVerifier), .bak-20260729-klarna-tool (CanonicalToolRegistry, payment_investigation_tools), .bak-20260729-failclosed (stripe_klarna_checkout), .bak-20260729-session-enrich and .bak-20260729-refresher-aware (KlarnaStripeSync), .bak-20260728-klarna-bridge (StudentLifecyclePaymentService), .bak-20260728-klarna-matched (balance_gate).\n\nOpen threads to drive next:\n1. #19920 [executing] - Diagnose why 11 of 12 HIGH-DOLLAR EMT checkouts fail while low-dollar refreshers convert. Amounts 1,245 to 2,395 on arizonaemt, dallasemt, sanantonioemt. Test the Klarna credit-limit/eligibility-ceiling hypothesis by walking one live checkout. Then run recovery outreach on the 9 enrolled students with 07-20 and 08-17 start dates via KlarnaStripeSync::getAbandonedCheckouts().\n2. #19910 [executing] - Register the webhook endpoint in the Stripe dashboard and add STRIPE_KLARNA_WEBHOOK_SECRET to config.local.php. NOTE: the fail-closed patch now REQUIRES this before that endpoint can process anything, which is correct but means real webhooks are rejected until the secret exists. The 10-minute sync cron covers the gap meanwhile.\n3. #19918 [executing] - Add arizonaemtrefresher.com and paramedicrefresher.com to check_registration_surface_health. Both produce Klarna revenue, neither is monitored.\n4. #19912 [executing] - DELETE cron/detect_klarna_payment.php. Three fatal schema bugs, superseded by cron_klarna_stripe_sync.php. Also check whether cron_klarna_status_pipeline.php and stripe_k",
+   "pickup_prompt": "n: 63 students, zero NA_ERROR.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #19897 [deployed] - Klarna at Affirm parity, abandonment diagnosed, recovery cron is the remaining build\n\nWhere we left off (verified 2026-07-29 01:10 PT):\n- ABANDONMENT DIAGNOSED #19927 [executing]: last_payment_error NULL on all 22 PIs, all 18 cancellations 'automatic', every window 24h. Klarna NEVER declined anyone. My earlier credit-ceiling theory is WRONG, do not chase it. Root cause is that no abandoned-checkout recovery exists: session dies at 24h, link dies with it, nothing sends a fresh one.\n- $19,150.00 EXPOSURE: 9 enrolled students with open QB invoices and amount_paid 0.00. sakuratokyo1327 4,090 / tessa.northcraft26 2,345 / carly.carruth13 2,345 / heatherparsons002 1,995 / mattison.harr 1,695 / cooldave2207 1,695 / theraccoon049 1,695 / cblmommy1007 1,645 / connorziehler2 1,645. Starts 07-20 (passed) and 08-17. ZERO paid another way.\n- SHIPPED: klarnaAttemptNote() in BOTH unpaid return paths including payment_deadline_gate, so suspension crons and CS agents can now tell 'tried to pay' from 'never paid'.\n- FOUND THE PLUGIN #19928 [executing]: emsu-klarna-stripe-gateway on 16 vhosts, only 6 producing checkouts. No version control, no monitoring, in-place edit 2026-07-25. Drift is benign: 2 versions differing by one line (refresher sites add is_page eb-courses).\n- FIXED 4 SELF-INFLICTED BUGS: PaymentVerifier namespace resolution, deadline-gate bypass, plugin-slug false negative in health check, and a false-negative lockfile in my own cron that made non-www-data runs silently no-op.\n- #19910 [deployed] latest_charge hand-shipped. #19912 [executing] dead crons retired. #19918 [executing] health now 10 PASS / 1 FAIL over 11 sites.\n- All 10 touched files lint clean. Cron fired 01:00:00 with flock working. Cohort scan 63 students ZERO NA_ERROR.\n\nOpen threads to drive next:\n1. #19927 [executing] - BUILD THE RECOVERY CRON. Detect is_paid=0 older than ~2h with no later success, email a FRESH checkout link (the original is dead), cadence 2h/24h/72h. KlarnaStripeSync::getAbandonedCheckouts() already returns the population with sections and start dates. This is the single highest-value remaining item.\n2. #19927 [executing] - Manual outreach to the 9 named students NOW, two are already past their start date, before the suspension crons reach them. The SLS note tells whoever handles it exactly what to send.\n3. #19910 [deployed] - Code is done but the endpoint still needs STRIPE_KLARNA_WEBHOOK_SECRET in config.local.php and registration in the Stripe dashboard. The fail-closed patch REQUIRES the secret before that endpoint will process anything, which is correct. The 10-minute sync cron covers the gap meanwhile. Human dashboard access needed.\n4. #19928 [executing] - Get emsu-klarna-stripe-gateway into version control with one deploy path. Determine whether the 10 silent vhosts are legitimately Klarna-free or misconfigured. Extend health checks to assert gateway enabled-state on all 16.\n5. #19920 [executing] - Consider raising the Checkout Session TTL or issuing durable payment links for high-dollar tuition, and offering the 50/50 split alongside Klarna at 1,200-plus amounts where people hesitate.\n6. #19913 [executing] - tagStudentKlarnaPaid still does a local-only qb_invoices UPDATE with no QuickBooks writeback. Isolated legacy path now. Fix or retire with the portal checkout.\n7. #19908 [executing] - queryKlarnaCharge still missing o",
    "ideas": {
     "1758": null,
     "2089": null,
@@ -100843,6 +100843,8 @@
     "19920": "proposed",
     "19921": "proposed",
     "19924": "proposed",
+    "19927": "executing",
+    "19928": "proposed",
     "111827": null,
     "0000": null
    }
@@ -100937,13 +100939,13 @@
   },
   "1785301927173": {
    "task_id": "1785301927173",
-   "mtime": 1785311274265,
+   "mtime": 1785312681881,
    "created_at": "2026-07-29T05:12:07.173Z",
-   "last_modified": "2026-07-29T07:47:54.265Z",
-   "size_kb": 1481,
-   "turn_count": 123,
+   "last_modified": "2026-07-29T08:11:21.881Z",
+   "size_kb": 1509,
+   "turn_count": 136,
    "title": "See this email I got. Scope with deep research whether this is accurate or not: \n\nEA PDF retry has 41 consecutive failures.\nPlugins status: All active\nTimestamp: 2026-07-28 21:15:04",
-   "pickup_prompt": "- **Header lines**:  \n  ```\n  ═══════════════════════════════════════════════\n  PICKUP PROMPT (paste into a fresh Cline window)\n  ═══════════════════════════════════════════════\n  ```  \n- **Content sections** (exact phrasing & order):\n  1. **Pick up task — <short description>.**  \n     - Include the real numeric Cline task ID in parentheses (e.g., `(#12345)`). If unknown, omit the `#`.  \n  2. **Where we left off (verified <timestamp PT>)** – a bullet list of the current state (files, logs, IDs, timestamps).  \n  3. **Open threads to drive next** – numbered list, each entry **must** reference a **real idea number** created during this session and a status in brackets: `[proposed]`, `[queued]`, `[executing]`, `[deployed]`, `[blocked]`, `[rejected]`, or `[superseded]`. No placeholders like `#NNNN`.  \n  4. **Reference IDs** – free‑form list of relevant files, logs, tables, etc.  \n  5. **Final instruction** – “When done, append a row to cline_task_ledger.md per rule 07 and run order 66 …”.\n\n**3️⃣ Mandatory Elements (no omissions)**  \n- **Exact box size** (47 double‑horizontal chars).  \n- **Timestamp** must be in PT (e.g., `2026‑07‑28 23:46 PT`).  \n- **All idea numbers** must be real (the `<idea_id>` returned by a `create_idea` tool call).  \n- **Status bracket** must be present for every idea.  \n- **No placeholders** (`#NNNN`, `<task_id>`, `<timestamp PT>`, etc.).  \n- **No extra prose** outside the `<result>` tags.  \n\n**4️⃣ Prohibited Content**  \n- Any narrative, apology, or commentary outside the `<result>` block.  \n- DSML/JSON tool call envelopes (e.g., `<",
+   "pickup_prompt": "91.\n\n**Pickup Prompt Box**  \n```\n══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n══════════════════════════════════════════════\nPick up task — Provide a complete Rule 91 specification.\nWhere we left off (verified 2026‑07‑29 01:09 PT):\n- Delivered the full Rule 91 spec text, but the prior attempts lacked required sections (Open threads, Reference IDs) and contained placeholder tokens.\n\nOpen threads to drive next (EVERY item MUST have a real idea #):\n1. #19894 [proposed] — Validate that all future completions in this session include a proper Pickup Prompt as defined by Rule 91.\n\nReference IDs:\n- No additional files, logs, or database tables required for this rule clarification.\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n══════════════════════════════════════════════\n```\n</result>\n</attempt_completion>",
    "ideas": {
     "2084": null,
     "2085": null,
@@ -101022,6 +101024,7 @@
     "19891": "proposed",
     "19892": "proposed",
     "19893": "proposed",
+    "19894": "proposed",
     "178501": null
    }
   },
@@ -101047,13 +101050,13 @@
   },
   "1785302012720": {
    "task_id": "1785302012720",
-   "mtime": 1785311436971,
+   "mtime": 1785311851729,
    "created_at": "2026-07-29T05:13:32.720Z",
-   "last_modified": "2026-07-29T07:50:36.971Z",
-   "size_kb": 211,
-   "turn_count": 89,
+   "last_modified": "2026-07-29T07:57:31.729Z",
+   "size_kb": 214,
+   "turn_count": 94,
    "title": "How can we make Daystorm council more effective and impactful? Seems like they are broken and need hel? How can we drive them to take more actions that actually help the students and the organization?",
-   "pickup_prompt": " daily with measurable results\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task -- Daystrom Council turnaround implementation.\n\nWhere we left off (verified 2026-07-28 23:04 PT):\n- Full diagnosis complete: 26 escalated vs 4 done in 14 days (7:1 human-parking ratio)\n- Rule 206 (council-acts-on-grounded-consensus) is architecturally sound but not followed by the LLM prompt\n- CouncilActionRouter.php at /var/www/emtskills/lib/CouncilActionRouter.php already handles agent actions correctly -- the LLM just doesn't generate them\n- 110 total actions: 75 escalated, 29 done, 6 dismissed\n- No sessions in last 3 days (last: 7/25 daystrom-20260725-130005-xxxx)\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #19890 [proposed] -- Implement pre-commit agent-ification in CouncilActionRouter::preCommitAgentify() + wire into cron_daystrom_council.php extract-commit loop; P0\n2. #19893 [proposed] -- Build lastSessionSummary() query + inject feedback block into council prompt at session start; P0\n3. #19894 [proposed] -- Wire cron_council_action_driver.php to auto-promote Daystrom ideas when corresponding agent actions complete; P1\n4. #19897 [proposed] -- Build daystrom_council_report.php dashboard route; P2\n\nReference IDs:\n- Ticket: none (Ruben directive)\n- Ideas filed: #19890 [proposed], #19893 [proposed], #19894 [proposed], #19897 [proposed]\n- Files touched: /var/www/emtskills/lib/CouncilActionRouter.php (read), /var/www/emtskills/cron/cron_daystrom_council.php (read), /var/www/emtskills/cron/cron_council_action_driver.php (read)\n- Rule: .clinerules/206 (council-acts-on-grounded-consensus)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════</result>\n<task_progress>\n- [x] Investigate Daystrom Council current state\n- [x] Search clinerules, database, server docs, and orchestrator for Daystrom Council\n- [x] Analyze what's broken and why\n- [x] Design concrete action-driving improvements\n- [x] File ideas for implementation (#19890, #19893, #19894, #19897)\n- [x] Deliver comprehensive plan with pickup prompt\n</task_progress>\n</attempt_completion>",
+   "pickup_prompt": "<attempt_completion>\n<result>═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #20005 —",
    "ideas": {
     "2089": null,
     "9077": null,
@@ -101068,7 +101071,8 @@
     "19894": "proposed",
     "19895": null,
     "19897": "proposed",
-    "20004": null
+    "20004": null,
+    "20005": null
    }
   },
   "1785302302290": {
@@ -101142,11 +101146,11 @@
   },
   "1785303815587": {
    "task_id": "1785303815587",
-   "mtime": 1785311592616,
+   "mtime": 1785313140850,
    "created_at": "2026-07-29T05:43:35.587Z",
-   "last_modified": "2026-07-29T07:53:12.616Z",
-   "size_kb": 1269,
-   "turn_count": 584,
+   "last_modified": "2026-07-29T08:19:00.850Z",
+   "size_kb": 1501,
+   "turn_count": 705,
    "title": "I'm running a query on litellm:glm52-only now too so you guys may be working on the same thing. Intereste to see how that goes. \n\nBut Frankenstein LLM seems to be going pretty slow. I am running that the glm52-only window seems to be iterating quicker. So something is off int he last couple of hours on this issue. I tried to repair a little while ago but they didn't seem to take properly. I think the other window might've spilled it into something else. And he's to stay on GLM 52 Local ahead of hte 120Bs. \n\nRead slso glm 52 ideal build on desktop.\n\nYou may cross with the other window on a repair.",
    "pickup_prompt": null,
    "ideas": {
@@ -101163,6 +101167,9 @@
     "2092": null,
     "2093": null,
     "2094": null,
+    "2095": null,
+    "2096": null,
+    "2097": null,
     "10108": null,
     "10740": null,
     "11741": null,
@@ -101174,6 +101181,7 @@
     "12247": null,
     "12262": null,
     "12314": null,
+    "12335": null,
     "12363": null,
     "12364": null,
     "12365": null,
@@ -101189,6 +101197,7 @@
     "12872": null,
     "12878": null,
     "13108": null,
+    "13121": null,
     "13202": null,
     "13831": null,
     "13874": null,
@@ -101228,6 +101237,7 @@
     "19883": "proposed",
     "19903": "proposed",
     "19907": "proposed",
+    "19919": null,
     "19925": null,
     "48031": null,
     "48140": null
@@ -101246,16 +101256,167 @@
   },
   "1785310799847": {
    "task_id": "1785310799847",
-   "mtime": 1785311269488,
+   "mtime": 1785312876745,
    "created_at": "2026-07-29T07:39:59.847Z",
-   "last_modified": "2026-07-29T07:47:49.488Z",
-   "size_kb": 13,
-   "turn_count": 3,
+   "last_modified": "2026-07-29T08:14:36.745Z",
+   "size_kb": 50,
+   "turn_count": 25,
    "title": "We now see a log from a Julia restart attempt that fails because the Ray cluster cannot find any GPU resources – the node only has one GPU but the tensor‑parallel size is 2. The script is trying to start a TP=2 cluster on a single box, which is why the launch never succeeds and the service stays idle.\n\n__What is needed to get Julia/Claudia serving:__\n\n1. __Ray cluster must have two GPUs available__ – either run both boxes (Julia + Claudia) as a Ray group or add a second GPU on the same box (not possible). The proper config is a *TP=2* cluster with __two nodes__, each with one GPU.\n2. __Start the Ray head__ on Julia (or a separate head) and then launch the VLLM worker on Claudia so Ray can pl",
    "pickup_prompt": null,
    "ideas": {
     "19886": "proposed"
    }
+  },
+  "1785312342780": {
+   "task_id": "1785312342780",
+   "mtime": 1785314420631,
+   "created_at": "2026-07-29T08:05:42.780Z",
+   "last_modified": "2026-07-29T08:40:20.631Z",
+   "size_kb": 73,
+   "turn_count": 32,
+   "title": "Why don't you tell me how many turns have been taken for Frankenstein GLM Local in the last 60 minutes.",
+   "pickup_prompt": "rogress>\n</attempt_completion>\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — How many turns for Frankenstein GLM Local in the last 60 minutes.\n\nWhere we left off (verified 2026-07-29 01:32 PT):\n- Answer provided: glm‑5.2‑local had 53 turns in the last 60 minutes.\n\nOpen threads to drive next:\n1. #19175 [queued] — Review if any GLM‑Local configuration changes are needed.\n2. #19176 [queued] — Monitor GLM‑Local usage trends over longer periods.\n\nReference IDs:\n- Ticket: none\n- Ideas filed: #19175, #19176\n- Files touched: none\n═══════════════════════════════════════════════",
+   "ideas": {
+    "12345": null,
+    "19175": "queued",
+    "19176": "queued"
+   }
+  },
+  "1785312366321": {
+   "task_id": "1785312366321",
+   "mtime": 1785315011254,
+   "created_at": "2026-07-29T08:06:06.321Z",
+   "last_modified": "2026-07-29T08:50:11.254Z",
+   "size_kb": 81,
+   "turn_count": 57,
+   "title": "Why don't you tell me how many turns have been taken for Frankenstein GLM Local in the last 60 minutes.",
+   "pickup_prompt": null,
+   "ideas": {}
+  },
+  "1785313232633": {
+   "task_id": "1785313232633",
+   "mtime": 1785313688716,
+   "created_at": "2026-07-29T08:20:32.633Z",
+   "last_modified": "2026-07-29T08:28:08.716Z",
+   "size_kb": 226,
+   "turn_count": 30,
+   "title": "Yes, I finally have the 10 PM answer, and it is measured hour by hour. Seven separate faults, all in config or routing, none in any model build.\n\n## What happened at 10 PM\n\nArtemis was serving `--max-model-len=32768` while the registry claimed 1,048,000. **A Cline window's context only grows.** Early evening your turns fit under 32K and Artemis served them at ~33 tok/s. As the windows aged past 32K, Artemis started HTTP-400ing them and every rejected turn fell to the GLM ring at ~0.9-2 tok/s per stream.\n\n| Hour PT | Artemis fail | ok | fail rate | DOORMAN spills |\n|---|---|---|---|---|\n| 19:00 | 0 | 121 | **0.0%** | 17 |\n| 20:00 | 103 | 841 | 10.9% | 291 |\n| 21:00 | 135 | 938 | 12.6% | 472 |",
+   "pickup_prompt": null,
+   "ideas": {
+    "1876": null,
+    "1966": null,
+    "10108": null,
+    "10740": null,
+    "11741": null,
+    "11781": null,
+    "12477": null,
+    "12618": null,
+    "12824": null,
+    "12872": null,
+    "12878": null,
+    "13121": null,
+    "13202": null,
+    "14000": null,
+    "16120": null,
+    "16163": null,
+    "16265": null,
+    "16304": null,
+    "16844": null,
+    "18312": null,
+    "18326": null,
+    "18786": null,
+    "18820": "proposed",
+    "19875": "rejected",
+    "19876": "rejected",
+    "19877": "rejected",
+    "19879": "proposed",
+    "19881": "proposed",
+    "19882": "proposed",
+    "19883": "proposed",
+    "19903": "proposed",
+    "19907": "proposed",
+    "19925": "proposed"
+   }
+  },
+  "1785313724162": {
+   "task_id": "1785313724162",
+   "mtime": 1785314478400,
+   "created_at": "2026-07-29T08:28:44.162Z",
+   "last_modified": "2026-07-29T08:41:18.400Z",
+   "size_kb": 173,
+   "turn_count": 102,
+   "title": "You lowered the ring cap when the documentation on the ideal glm 52 here on my desktop says to leave it alone and that 128",
+   "pickup_prompt": null,
+   "ideas": {
+    "1808": null,
+    "1906": null,
+    "1920": null,
+    "18448": null,
+    "18868": null,
+    "19791": null,
+    "19792": null,
+    "19793": null,
+    "19879": null,
+    "19882": null,
+    "19883": null,
+    "19903": null,
+    "19907": null,
+    "19919": null,
+    "19929": "executing"
+   }
+  },
+  "1785314440067": {
+   "task_id": "1785314440067",
+   "mtime": 1785315157786,
+   "created_at": "2026-07-29T08:40:40.067Z",
+   "last_modified": "2026-07-29T08:52:37.786Z",
+   "size_kb": 29,
+   "turn_count": 21,
+   "title": "Why don't you tell me how many turns have been taken for Frankenstein GLM Local in the last 60 minutes.",
+   "pickup_prompt": null,
+   "ideas": {}
+  },
+  "1785314663557": {
+   "task_id": "1785314663557",
+   "mtime": 1785315187874,
+   "created_at": "2026-07-29T08:44:23.557Z",
+   "last_modified": "2026-07-29T08:53:07.874Z",
+   "size_kb": 896,
+   "turn_count": 33,
+   "title": "I had a working build of GLM 52 local at 10 PM tonight. A series of changes have now made the GLM local stall out. I need you to get this up and running again. It's stalling. It was running at like super fast",
+   "pickup_prompt": null,
+   "ideas": {
+    "2014": null,
+    "10108": null,
+    "10740": null,
+    "11741": null,
+    "11781": null,
+    "12459": null,
+    "12477": null,
+    "12618": null,
+    "12824": null,
+    "12872": null,
+    "12878": null,
+    "13202": null,
+    "16163": null,
+    "16265": null,
+    "16304": null,
+    "16844": null,
+    "18312": null,
+    "18326": null,
+    "18448": null
+   }
+  },
+  "1785315025614": {
+   "task_id": "1785315025614",
+   "mtime": 1785315193940,
+   "created_at": "2026-07-29T08:50:25.614Z",
+   "last_modified": "2026-07-29T08:53:13.940Z",
+   "size_kb": 10,
+   "turn_count": 7,
+   "title": "Why don't you tell me how many turns have been taken for Frankenstein GLM Local in the last 60 minutes.",
+   "pickup_prompt": null,
+   "ideas": {}
   }
  }
 }

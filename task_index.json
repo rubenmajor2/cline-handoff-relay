@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-07-29T10:53:18.116Z",
+ "generated_at": "2026-07-29T11:53:18.516Z",
  "counts": {
-  "parsed": 6,
-  "reused": 297,
+  "parsed": 0,
+  "reused": 303,
   "failed": 0,
   "total": 303
  },
@@ -101378,11 +101378,11 @@
   },
   "1785314663557": {
    "task_id": "1785314663557",
-   "mtime": 1785322377581,
+   "mtime": 1785323987507,
    "created_at": "2026-07-29T08:44:23.557Z",
-   "last_modified": "2026-07-29T10:52:57.581Z",
-   "size_kb": 14793,
-   "turn_count": 811,
+   "last_modified": "2026-07-29T11:19:47.507Z",
+   "size_kb": 14936,
+   "turn_count": 903,
    "title": "I had a working build of GLM 52 local at 10 PM tonight. A series of changes have now made the GLM local stall out. I need you to get this up and running again. It's stalling. It was running at like super fast",
    "pickup_prompt": "re speed\",\n  \"pickup_prompt\": \"═══════════════════════════════════════════════\\nPICKUP PROMPT (paste into a fresh Cline window)\\n═══════════════════════════════════════════════\\n\\nPick up task #1785314663557 — GLM-5.2 local stall RCA + restore.\\n\\nWhere we left off (verified 2026-07-29 03:16 PT):\\n- Ring IDLE: 1 running / 0 waiting (was 34 running + 25 queued). Lane caps cut live in /etc/litellm/config.yaml: frankenstein-glm52-local 32→6, glm-5.2-local 32→6, deepseek-v4-pro-openrouter 32→4, glm-5.2-max 8→4 (mtime 03:11, loaded via litellm-safe-restart 03:12).\\n- Envelope exemplar LIVE in router_hook.py (14 envelope markers, mtime 02:56) — the 03:12 carrots Ruben saw were a pre-patch queued request.\\n- frankenstein-llm routing verified 03:16:09 → frankenstein-tools → adapter (cline lane TTFB 15s, queue_depth 3).\\n- decode_live patch live in frankenstein_tools_adapter.py (ring no longer canary-locked).\\n- MCP: 19/19 bridges healthy; emsu-operations fetch-failed was rule-261 Mode D transient.\\n\\nOpen threads to drive next:\\n1. #19936 [proposed] — vLLM --scheduling-policy=priority on the ring = the REAL Cline-priority mechanism; needs ring relaunch (Ruben's call, rule 145/157)\\n2. #19937 [proposed] — admission control: caps portion DEPLOYED tonight; remaining = verify actual max-num-seqs on ring head (192.168.1.115:8210, docs say 128, live behavior ~33-55) + fix doc drift\\n3. #19938 [approved] — Artemis 120B slowness deep-dive (Ruben-asked, autonomous tier)\\n4. #19887 [proposed] — 22:47 window's subagents-on-120B idea, still idle; the GLM-first change it spawned caused tonight's oversubscription\\n\\nReference IDs:\\n- Ideas filed: #19936 [proposed], #19937 [proposed], #19938 [approved]\\n- Bug library: #2098 [deployed], #1910 [deployed]\\n- Files touched: /etc/litellm/config.yaml, /etc/litellm/router_hook.py, frankenstein_tools_adapter.py, HANDOFF_NOTES.md\\n\\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\\n═══════════════════════════════════════════════\",\n  \"tool_rounds\": [\n    \"ssh_command(ring metrics) → 34 running + 25 waiting reason=capacity; KV only 10% → wall is prefill/batched-token budget not seq slots\",\n    \"read_file(glm52_overnight_supervisor.sh) → supervisor wire-in restarted litellm 01:38 + 02:32 (killed in-flight); medic v3 busy-grace working correctly tonight\",\n    \"execute_command(ps aux) → no vllm on Mac; ring head at 192.168.1.115:8210 via Mac sshd:2204 tunnel; medic restarted 03:07 (keepalive, benign)\",\n    \"create_idea ×3 → #19936 priority scheduling [proposed], #19937 admission control [proposed], #19938 Artemis deep-dive [approved]\",\n    \"ssh_command(python caps patch) → 4 GLM lane caps cut 32/32/32/8 → 6/6/4/4, backup config.yaml.bak-caps-20260729-0311\",\n    \"ssh_command(litellm-safe-restart + metrics) → LiteLLM active; ring drained 55→1 running, 0 waiting\",\n    \"ssh_command(mtime+grep) → NO reverter: exemplar live (14 markers mtime 02:56), caps live (2×6 confirmed), earlier grep-0 was wrong search string\",\n    \"execute_command(MCP health all 19 ports) → ALL healthy; emsu-operations fetch-failed = Mode D transient, retried OK\",\n    \"ssh_command(audit tail) → frankenstein-llm → picked frankenstein-tools 03:16:09 = Ruben's window routing again\"\n  ],\n  \"last_turns\": [\n    \"Ruben: 'Isn't client supposed to have priority? Also look at this that's getting emitted: <frankenstein_what_served>... Still those carrots'\",\n    \"Ruben: 'If you're gonna cut down the number of interactions why would you do that if it was working before. I feel like I have to keep repeating myself'\",\n    \"Ruben: '",
    "ideas": {
@@ -101408,6 +101408,7 @@
     "2092": null,
     "2096": null,
     "2098": "deployed",
+    "2099": null,
     "10108": null,
     "10740": null,
     "11741": null,
@@ -101482,6 +101483,8 @@
     "19936": "proposed",
     "19937": "proposed",
     "19938": "approved",
+    "19942": "proposed",
+    "19945": "proposed",
     "178531": null
    }
   },
@@ -101630,22 +101633,22 @@
   },
   "1785322147808": {
    "task_id": "1785322147808",
-   "mtime": 1785322148199,
+   "mtime": 1785322419218,
    "created_at": "2026-07-29T10:49:07.808Z",
-   "last_modified": "2026-07-29T10:49:08.199Z",
-   "size_kb": 2,
-   "turn_count": 1,
+   "last_modified": "2026-07-29T10:53:39.218Z",
+   "size_kb": 5,
+   "turn_count": 3,
    "title": "Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 26 hours",
    "pickup_prompt": null,
    "ideas": {}
   },
   "1785322364632": {
    "task_id": "1785322364632",
-   "mtime": 1785322365054,
+   "mtime": 1785322747140,
    "created_at": "2026-07-29T10:52:44.632Z",
-   "last_modified": "2026-07-29T10:52:45.054Z",
-   "size_kb": 2,
-   "turn_count": 1,
+   "last_modified": "2026-07-29T10:59:07.140Z",
+   "size_kb": 8,
+   "turn_count": 5,
    "title": "Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 26 hours",
    "pickup_prompt": null,
    "ideas": {}

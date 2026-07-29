@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/29/2026, 3:53:18 AM PT | window: last 72h | 136 tasks | index total 303 (parsed 6, cached 297)
+Generated: 7/29/2026, 4:53:18 AM PT | window: last 72h | 136 tasks | index total 303 (parsed 0, cached 303)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785314663557` | 7/29/2026, 3:52:57 AM | 811 | 14793KB | I had a working build of GLM 52 local at 10 PM tonight. A series of changes have now made  |
-| `1785322364632` | 7/29/2026, 3:52:45 AM | 1 | 2KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
-| `1785322147808` | 7/29/2026, 3:49:08 AM | 1 | 2KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
+| `1785314663557` | 7/29/2026, 4:19:47 AM | 903 | 14936KB | I had a working build of GLM 52 local at 10 PM tonight. A series of changes have now made  |
+| `1785322364632` | 7/29/2026, 3:59:07 AM | 5 | 8KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
+| `1785322147808` | 7/29/2026, 3:53:39 AM | 3 | 5KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
 | `1785321841013` | 7/29/2026, 3:44:01 AM | 1 | 2KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
 | `1785320859831` | 7/29/2026, 3:37:41 AM | 14 | 47KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
 | `1785320155032` | 7/29/2026, 3:37:13 AM | 22 | 97KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
@@ -151,7 +151,7 @@ Generated: 7/29/2026, 3:53:18 AM PT | window: last 72h | 136 tasks | index total
 
 ## Per-window detail
 
-### `1785314663557` — 7/29/2026, 3:52:57 AM PT — 811 turns
+### `1785314663557` — 7/29/2026, 4:19:47 AM PT — 903 turns
 
 **Original task:**
 
@@ -159,7 +159,7 @@ Generated: 7/29/2026, 3:53:18 AM PT | window: last 72h | 136 tasks | index total
 I had a working build of GLM 52 local at 10 PM tonight. A series of changes have now made the GLM local stall out. I need you to get this up and running again. It's stalling. It was running at like super fast
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11847, #11936, #11953, #12061, #12247, #12251, #12262, #12266, #12285, #12314, #12335, #12364, #12365, #12366, #12368, #12403, #12407, #12459, #12477, #12618, #12657, #12688, #12689, #12710, #12824, #12872, #12878, #13108, #13121, #13191, #13196, #13199, #13202, #13453, #13470, #13874, #1593, #16163, #16265, #16304, #16578, #16588, #16590, #16648, #16844, #17202, #17203, #17205, #17300, #17430, #1754, #1755, #178531, #1819, #18312, #18326, #18448, #1876, #18786, #1884, #18868, #1896, #1910 [deployed], #19135, #19338, #1934, #1965, #1966, #1967, #19686, #19879, #19881, #19882, #19883, #19887 [proposed], #19903, #19907, #19925, #19931 [proposed], #19932 [proposed], #19936 [proposed], #19937 [proposed], #19938 [approved], #2014, #2050, #2079, #2084, #2085, #2089, #2091 [deployed], #2092, #2096, #2098 [deployed]
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11847, #11936, #11953, #12061, #12247, #12251, #12262, #12266, #12285, #12314, #12335, #12364, #12365, #12366, #12368, #12403, #12407, #12459, #12477, #12618, #12657, #12688, #12689, #12710, #12824, #12872, #12878, #13108, #13121, #13191, #13196, #13199, #13202, #13453, #13470, #13874, #1593, #16163, #16265, #16304, #16578, #16588, #16590, #16648, #16844, #17202, #17203, #17205, #17300, #17430, #1754, #1755, #178531, #1819, #18312, #18326, #18448, #1876, #18786, #1884, #18868, #1896, #1910 [deployed], #19135, #19338, #1934, #1965, #1966, #1967, #19686, #19879, #19881, #19882, #19883, #19887 [proposed], #19903, #19907, #19925, #19931 [proposed], #19932 [proposed], #19936 [proposed], #19937 [proposed], #19938 [approved], #19942 [proposed], #19945 [proposed], #2014, #2050, #2079, #2084, #2085, #2089, #2091 [deployed], #2092, #2096, #2098 [deployed], #2099
 
 **Last PICKUP PROMPT:**
 
@@ -183,7 +183,7 @@ re speed",
     "Ruben: '
 ```
 
-### `1785322364632` — 7/29/2026, 3:52:45 AM PT — 1 turns
+### `1785322364632` — 7/29/2026, 3:59:07 AM PT — 5 turns
 
 **Original task:**
 
@@ -193,7 +193,7 @@ Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model 
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785322147808` — 7/29/2026, 3:49:08 AM PT — 1 turns
+### `1785322147808` — 7/29/2026, 3:53:39 AM PT — 3 turns
 
 **Original task:**
 

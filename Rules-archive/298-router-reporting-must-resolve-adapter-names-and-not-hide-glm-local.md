@@ -18,11 +18,22 @@ The documented spill ladder (registry YAML `tier_order`) lists glm-5.2-local (L4
 
 No tok/s-floor exclusion specific to :8210 exists inside `frankenstein_tools_adapter.py`'s `_upstream_load()` — the tok/s-as-load-proxy path only applies to `:11434` (raw ollama/Artemis). A SEPARATE speed-gate config exists in `admin_portal.fleet_registry_config` (keys `flagship_speed_gate_floor` / `_ceiling`, read via `lib/fleet_flagship_registry.php`), defaulting to **floor=10.0 tok/s, ceiling=100.0 tok/s** when the config row is absent (PDOException fallback) — NOT the "2.5 tok/s" figure referenced in some tool descriptions. This is a DIFFERENT gate than the adapter's own routing logic and applies to the "flagship" registry/reporting layer, not necessarily to whether glm-5.2-local gets picked live. Any claim about a tok/s exclusion penalizing glm-5.2-local must cite WHICH gate (adapter routing vs flagship registry reporting) and its actual configured value, not an assumed number.
 
-## Self-check before shipping any router/LLM-share report
+## Benchmark methodology pitfalls (added after live-testing the priority fix, 2026-07-28)
+
+Ad-hoc synthetic benchmarks of glm-5.2-local produced numbers that flatly contradicted Ruben's real-world "lightning fast" experience — the benchmarks were wrong, not his experience. Two specific mistakes to never repeat:
+
+1. **Reasoning-token conflation.** glm-5.2-local is a reasoning model — the adapter log shows `PROMOTED_PRE reasoning->content` on every completion. Dividing total `completion_tokens` (reasoning + content combined) by wall time measures "how fast does it emit its internal scratchpad," NOT how fast the user-visible answer appears. **Always measure TTFB (time-to-first-token) and/or time-to-final-content-token separately from raw completion_tokens/time** when comparing a reasoning model to a non-reasoning model. A single throughput number that mixes the two is not comparable across model types.
+2. **Synthetic concurrent load does not reflect real traffic and can trigger false degradation.** Firing N simultaneous requests at :8210 to "stress test" it produced a genuine `DECODE_STALL rate=0.00 tok/s` in the adapter's own log — a real stall, but one caused by the artificial load pattern, not representative of normal single/light-concurrency usage. **Never synthetically hammer a production upstream with concurrent load to "test" it — pull real recent traffic stats from `/var/log/emsu-adapter-upstream.log` instead.** That log already has genuine production TTFB/timing data; there is no need to manufacture synthetic load that can itself distort the box's live health (canary/DECODE_STALL detectors react to synthetic spikes the same as real ones).
+
+**Live-verified reconciliation (2026-07-28, real traffic, not synthetic):** glm-5.2-local averaged **4.25s TTFB** vs artemis-120b's **9.71s TTFB** over a real 5-minute production window — glm-5.2-local is genuinely faster to first token in normal use, consistent with Ruben's experience. Any future speed comparison for glm-5.2-local MUST use TTFB from real traffic in `/var/log/emsu-adapter-upstream.log`, not a synthetic completion_tokens/wall_time benchmark.
+
+## Self-check before shipping any router/LLM-share OR speed report
 
 1. Did I use `/var/log/emsu-adapter-upstream.log` (real upstream) instead of only `/tmp/emsu_router_audit.log` `picked=` aliases (adapter name) for any bucket that includes frankenstein-tools/frankenstein-llm/emsu-codegen?
 2. If I claim a model is "first pick" or "prioritized," did I verify that against the actual sort/selection code (`_least_loaded_order` or equivalent), not just the YAML doc?
 3. If I cite a tok/s gate value, did I quote the actual configured number from its real source (DB config or code constant), not a number from memory or a tool description?
+4. If I'm comparing SPEED between a reasoning model (glm-5.2-local) and a non-reasoning model, did I use TTFB or content-only tokens, not raw completion_tokens/wall_time (which includes reasoning tokens)?
+5. Did I pull speed numbers from REAL traffic in `/var/log/emsu-adapter-upstream.log`, instead of firing my own synthetic concurrent load at a live production upstream?
 
 ## Cross-references
 
@@ -36,4 +47,5 @@ No tok/s-floor exclusion specific to :8210 exists inside `frankenstein_tools_ada
 
 ## Last updated
 
-2026-07-28 — initial.
+2026-07-28 — added "Benchmark methodology pitfalls" section after live-testing the GLM-first priority fix: reasoning-token conflation and synthetic-concurrent-load artifacts caused a false "GLM is slow" reading that contradicted Ruben's real-world experience. Real-traffic TTFB (4.25s glm vs 9.71s artemis) confirmed Ruben was right.
+

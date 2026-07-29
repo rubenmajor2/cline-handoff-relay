@@ -94,7 +94,7 @@ function woprQuery(sql: string): Record<string, string>[] {
     -o BatchMode=yes \
     -o ServerAliveInterval=5 \
     emsuserver@emsuniversity.com \
-    "PAGER= mysql --defaults-file=/home/emsuserver/.my.cnf --skip-pager -N --batch admin_portal"`;
+    "PAGER= mysql --defaults-file=/home/emsuserver/.my.cnf --skip-pager -N --batch admin_portal 2>/dev/null | grep -v '^PAGER set'"`;
 
   let raw: string;
   try {
@@ -150,7 +150,7 @@ function woprExecB64(sql: string): string {
     -o BatchMode=yes \
     -o ServerAliveInterval=5 \
     emsuserver@emsuniversity.com \
-    "PAGER= base64 -d | mysql --defaults-file=/home/emsuserver/.my.cnf --skip-pager -N --batch admin_portal"`;
+    "PAGER= base64 -d | mysql --defaults-file=/home/emsuserver/.my.cnf --skip-pager -N --batch admin_portal 2>/dev/null | grep -v '^PAGER set'"`;
   try {
     return execSync(cmd, { timeout: 15_000, encoding: "utf8", shell: "/bin/bash" });
   } catch (e: any) {

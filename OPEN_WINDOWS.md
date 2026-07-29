@@ -6,24 +6,30 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/28/2026, 8:53:00 PM PT | window: last 72h | 114 tasks | index total 273 (parsed 11, cached 262)
+Generated: 7/28/2026, 9:53:16 PM PT | window: last 72h | 114 tasks | index total 275 (parsed 0, cached 275)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785296742883` | 7/28/2026, 8:53:00 PM | 50 | 127KB | We had a frankenstein doctor type window working and the window just crashed. |
-| `1785267620046` | 7/28/2026, 8:52:01 PM | 159 | 429KB | Pick up task — Verify Argus gets clinerules steering injection via steering_builder.php, c |
+| `1785266083468` | 7/28/2026, 9:18:02 PM | 201 | 659KB | Play Dr. of Frankenstein for 90 minutes and use time stamps to make sure that you were wor |
+| `1785298450123` | 7/28/2026, 9:17:55 PM | 7 | 75KB | #Stripe/Klarna |
+| `1785261275539` | 7/28/2026, 9:17:55 PM | 255 | 1525KB | Why was this occurrign? I'm not running anything in Cline here to restart the LitelLM? ->  |
+| `1785298633210` | 7/28/2026, 9:17:46 PM | 3 | 4KB | #Scope Oct GLM Build   |
+| `1785267620046` | 7/28/2026, 9:17:36 PM | 183 | 520KB | Pick up task — Verify Argus gets clinerules steering injection via steering_builder.php, c |
+| `1785293294377` | 7/28/2026, 9:17:33 PM | 231 | 1475KB | A metric ton of emails came in to email agent within the last hour or 2. I need you to go  |
+| `1785296742883` | 7/28/2026, 9:14:42 PM | 170 | 341KB | We had a frankenstein doctor type window working and the window just crashed. |
+| `1785266096234` | 7/28/2026, 9:14:12 PM | 132 | 993KB | Play Dr. of Frankenstein EXECUTOR for 90 minutes and use time stamps to make sure that you |
+| `1785267640895` | 7/28/2026, 9:12:15 PM | 288 | 763KB | Pick up task — Query frankenstein router audit log to produce a turn-count-per-model break |
+| `1785272558620` | 7/28/2026, 9:10:38 PM | 720 | 1973KB | Stopping here per your correction — noted that the schedule source is https://emsuniversit |
+| `1785261380940` | 7/28/2026, 9:04:14 PM | 66 | 326KB | #Comprehensive |
+| `1785293744959` | 7/28/2026, 8:56:07 PM | 232 | 2135KB | See frankenstein-llm task completion error - doctor of frankenstein resolve RCA resolve -> |
 | `1785286248280` | 7/28/2026, 8:51:10 PM | 206 | 933KB | pick up the Plesk login issue that closed for the second time here in cline irritating: |
-| `1785293744959` | 7/28/2026, 8:51:00 PM | 227 | 2122KB | See frankenstein-llm task completion error - doctor of frankenstein resolve RCA resolve -> |
 | `1785282386265` | 7/28/2026, 8:50:58 PM | 626 | 6993KB | pickup telephony task, have turned off the AI, VAPI agent, but button does not appear to b |
-| `1785293294377` | 7/28/2026, 8:50:55 PM | 197 | 1327KB | A metric ton of emails came in to email agent within the last hour or 2. I need you to go  |
 | `1785296704123` | 7/28/2026, 8:45:52 PM | 3 | 5KB | We had a frankenstein doctor type window working and the window just crashed. |
-| `1785272558620` | 7/28/2026, 8:42:24 PM | 700 | 1919KB | Stopping here per your correction — noted that the schedule source is https://emsuniversit |
 | `1785296318095` | 7/28/2026, 8:41:36 PM | 24 | 153KB | Waht caused frankenstein-llm to freeze just now? it's not responding. can you resolve it? |
 | `1785293198244` | 7/28/2026, 8:34:56 PM | 195 | 456KB | Comprehensive session handoff per Ruben's direction. This session spanned multiple workstr |
 | `1785295028411` | 7/28/2026, 8:32:52 PM | 102 | 386KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
 | `1785281506240` | 7/28/2026, 8:05:41 PM | 479 | 858KB | for what reason is Moodle running slowly? Didnt we jsut mvoe it over to the new 4TB NVME? |
 | `1785291839797` | 7/28/2026, 8:03:06 PM | 106 | 216KB | All external links on emsuniversity.com seem to be pointing to emtrefresher.com endpoints. |
-| `1785267640895` | 7/28/2026, 7:31:07 PM | 226 | 603KB | Pick up task — Query frankenstein router audit log to produce a turn-count-per-model break |
 | `1785266802256` | 7/28/2026, 7:24:10 PM | 178 | 975KB | It appears that I have Frankenstein LLM windows that are getting stalled out trying to use |
 | `1785267604245` | 7/28/2026, 7:20:34 PM | 246 | 3133KB | Pick up task — Fix CFA Voice 52% short-leg rate and broken DEADMAN escalation pipeline. Tw |
 | `1785284021265` | 7/28/2026, 7:20:11 PM | 557 | 1134KB | Pick up the QB task that was just closed out. where we were tyring to figure out to do wit |
@@ -35,12 +41,8 @@ Generated: 7/28/2026, 8:53:00 PM PT | window: last 72h | 114 tasks | index total
 | `1785267857397` | 7/28/2026, 3:55:58 PM | 480 | 1647KB | Link for instructor login on top right of emsuniversity.com does not go to the proper plac |
 | `1785266982412` | 7/28/2026, 3:12:43 PM | 148 | 652KB | Do we have a page or tool that helps us to calculate the STRF quarterly reports? If so, ca |
 | `1785258502219` | 7/28/2026, 1:59:33 PM | 978 | 2936KB | # TDSHS |
-| `1785266083468` | 7/28/2026, 1:14:06 PM | 162 | 485KB | Play Dr. of Frankenstein for 90 minutes and use time stamps to make sure that you were wor |
 | `1785267580861` | 7/28/2026, 12:52:17 PM | 94 | 310KB | Pick up task — Build the grievance manual-first toggle with visible auto/manual switch + A |
-| `1785266096234` | 7/28/2026, 12:45:47 PM | 112 | 885KB | Play Dr. of Frankenstein EXECUTOR for 90 minutes and use time stamps to make sure that you |
 | `1785267663329` | 7/28/2026, 12:43:25 PM | 20 | 49KB | Pick up task — Audit 3 silent-ghost blocker chains filed today, determine which are resolv |
-| `1785261275539` | 7/28/2026, 12:40:29 PM | 232 | 1493KB | Why was this occurrign? I'm not running anything in Cline here to restart the LitelLM? ->  |
-| `1785261380940` | 7/28/2026, 12:20:42 PM | 64 | 322KB | #Comprehensive |
 | `1785263696759` | 7/28/2026, 12:01:41 PM | 91 | 619KB | #Clustering |
 | `1785265297742` | 7/28/2026, 12:01:37 PM | 1 | 2KB | Give me the number of turns per LLM for the last 60 minutes and dive into Frankenstein LLM |
 | `1785262622415` | 7/28/2026, 12:01:34 PM | 183 | 909KB | Play doctor of frankenstein executor for 90 actual minutes. Use timestamps to make sure th |
@@ -122,28 +124,130 @@ Generated: 7/28/2026, 8:53:00 PM PT | window: last 72h | 114 tasks | index total
 | `1785045454032` | 7/25/2026, 11:06:45 PM | 14 | 84KB | Can you do a benchmark on GLM 5.2 in the last 5 min |
 | `1785045456484` | 7/25/2026, 11:03:53 PM | 46 | 211KB | Can you do a benchmark on GLM 5.2 in the last 5 min |
 | `1785045300511` | 7/25/2026, 10:56:23 PM | 9 | 55KB | Can you do a benchmark on GLM 5.2 in the last 5 min |
-| `1785040020369` | 7/25/2026, 9:42:05 PM | 10 | 37KB | Can you do a benchmark on GLM 5.2 in the last 5 min |
-| `1785019334706` | 7/25/2026, 9:25:21 PM | 40 | 130KB | Hey I'm just checking to see how you were doing and feeling today |
 
 ---
 
 ## Per-window detail
 
-### `1785296742883` — 7/28/2026, 8:53:00 PM PT — 50 turns
+### `1785266083468` — 7/28/2026, 9:18:02 PM PT — 201 turns
 
 **Original task:**
 
 ```
-We had a frankenstein doctor type window working and the window just crashed.
-
-Frankenstein LLM stalled. I had mentioned not to inject anthropic llm. I told you to consult the GLM 5.2 Ideal build document on the desktop becasue it seemed liek you were about to quarantiene GLM.
+Play Dr. of Frankenstein for 90 minutes and use time stamps to make sure that you were working for actually 90 minutes. Make improvements and increase capabilities based on needs and bugs found needing resolution, etc...
 ```
 
-**Ideas referenced:** #12672, #13832, #16265, #16578, #1754, #1755, #1896, #19239 [rejected], #1986, #1988, #1989, #1991, #2014, #2084, #2085
+**Ideas referenced:** #11925, #12299, #12619, #12713, #13082, #13202, #1468, #15158, #16588, #178501, #1850, #19177, #19188, #19403, #19458, #19460, #19490, #19491, #19518, #19558, #19571, #19585, #19604, #19611, #19615, #19690 [deployed], #19704, #19714 [proposed], #19777 [proposed], #19778 [proposed], #19796 [deployed], #19797 [deployed], #19798 [in_progress], #19799 [proposed], #2084, #2085, #2087 [resolved], #2088, #21910, #3048, #3049, #4948, #4962
+
+**Last PICKUP PROMPT:**
+
+```
+ned worker resets in last hour
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task Frankenstein Doctor session follow-up — fix remaining issues from 2026-07-28 session.
+
+Where we left off (verified 2026-07-28 13:13 PT):
+- Fleet healthy except: cesar DOWN (stale 5638m), claudia DOWN, julia DOWN. frankenstein-llm router resolved to 127.0.0.1:11510 OK.
+- Joshua 70B healthy (10.100.0.4:11434, 59ms)
+- 2 fixes deployed (bug library PAGER + voice handoff regex), 2 investigations handed off
+- Bug library MCP PID 1294 STILL on old build — restart needed for PAGER fix to take effect
+- Handoff note written to emsuserver /tmp: not yet persisted (record_handoff_note tool not found on emsu-operations server)
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #19798 [in_progress] — e2pdf admin tab: WP admin login → check if `e2pdf` menu visible in admin sidebar for Vicky's role (PD/Instructor). Check e2pdf caps vs user role (admin_portal.users → role). If caps mismatch, add `e2pdf` cap to matching role or set `e2pdf` capability on the user. Alternatively check if JS in e2pdf.backend.js is hiding the tab.
+2. #19799 [proposed] — 70B serve dead: find RunPod API key (likely in ~/Documents/Cline/MCP/* or an env file), check pod status at api.runpod.io/v2, re-mint dead pods. Verify 120B pod restores. Run frankenstein_tier_health after.
+3. **Bug library restart**: kill PID 1294 (`kill 1294`), Cline will auto-restart the MCP. Then call bug_library_stats to verify clean output (no "PAGER set to stdout").
+4. **Silence guard review**: check the unanswered email/chat/SMS queues — are they actual backlogs or false positives? Check event_id 4132054 (95 emails) and 4132056 (59 chat visitors).
+
+Reference IDs:
+- Tickets: 21910 (e2pdf), 19704 (churn cap), TKT-20260728-9F170918 (James McDonald)
+- Ideas filed: #19796 [deployed], #19797 [deployed], #19798 [in_progress], #19799 [proposed]
+- Bug library incidents: #2087 (voice regex fixed), #2088 (PAGER fix deployed, needs restart)
+- Files touched: /var/www/emtskills/cron/cron_voice_force_handoff_watchdog.php (deployed), /Users/rubenmajor/Documents/Cline/mcp-servers/frankenstein-bug-library/src/index.ts + build/index.js (rebuilt, needs MCP restart)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785298450123` — 7/28/2026, 9:17:55 PM PT — 7 turns
+
+**Original task:**
+
+```
+#Stripe/Klarna
+
+Look into this, plan and scope only, do deep analysis and consult SLS / MCP,, etc...
+
+--
+While you are on it, here remember that we have Stripe/Clarna and check API on that and i need to make sure that's properly wired into SLS, payment tracking, etc... and prevents users from being suspended if paid, knocks off the balance. if any for EMT payments, etc... Just verifying and so needs resolution if not across all EMT sites. Make sureit's activating properly, etc...|
+```
+
+**Ideas referenced:** #17580, #19522, #19573, #19583, #19584, #19585, #19645, #19646, #19803, #19807, #19810, #19811, #19818, #19820, #19827, #19830, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19840, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19872, #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #2089
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785267620046` — 7/28/2026, 8:52:01 PM PT — 159 turns
+### `1785261275539` — 7/28/2026, 9:17:55 PM PT — 255 turns
+
+**Original task:**
+
+```
+Why was this occurrign? I'm not running anything in Cline here to restart the LitelLM? -> {"message":"Failed to fetch LiteLLM model info: Bad Gateway","modelId":"frankenstein-llm","providerId":"litellm"}
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11990, #12477, #12584, #12618, #12824, #12872, #12878, #13202, #1593, #16163, #16265, #16304, #16578, #16588, #16844, #16849, #1754, #1755, #1759, #1779, #18312, #18326, #1876, #1896, #19239 [rejected], #19770 [proposed], #1986, #1988, #1989, #1991, #2006, #2014, #2084, #2085
+
+**Last PICKUP PROMPT:**
+
+```
+e and fix the invalid API key.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up Frankenstein Doctor — 120B pool recovery + LiteLLM hardening.
+
+Where we left off (verified 2026-07-28 11:27 PT):
+- julia-120b DOWN (HTTP 000 on :11513) — pool running on artemis alone
+- LiteLLM docker has RestartPolicy=no — won't survive daemon restart
+- 5 bugs cataloged in this session (see Doctor Report above)
+- Syslog: LineTooLong bug on :11510 tools adapter, glm-5.2 fallback name broken, 401 spam from 10.100.0.1
+
+Open threads to drive next:
+1. (human-only decision, no idea) — Restart julia-120b: SSH to julia (wg 10.100.0.15 or wopr:2205) and restart vLLM service
+2. (human-only decision, no idea) — `sudo docker update --restart=always litellm` on WOPR
+3. (human-only decision, no idea) — Fix glm-5.2 fallback name in /etc/litellm/config.yaml: change `model: glm-5.2` to `model: openai/glm-5.2`
+4. (human-only decision, no idea) — Investigate /v1/responses vs /v1/chat/completions routing mismatch on :11510 tools adapter
+5. (human-only decision, no idea) — Trace 10.100.0.1 401 auth source
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: none
+- Files touched: /etc/litellm/config.yaml (read), syslog (read), Docker events (read)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785298633210` — 7/28/2026, 9:17:46 PM PT — 3 turns
+
+**Original task:**
+
+```
+#Scope Oct GLM Build  
+
+Read Ideal GLM Build on desktop and let me know your thoughts on whether repurposing Julia and claudia TP=2 into the current GLM Hex would be better than having 2 separate systems
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785267620046` — 7/28/2026, 9:17:36 PM PT — 183 turns
 
 **Original task:**
 
@@ -159,36 +263,329 @@ Step 1 — Check steering_builder.php for argus-chat entry:
   use_mcp_tool ser
 ```
 
-**Ideas referenced:** #10108, #10182, #10740, #11741, #11781, #11925, #12266, #12285, #12477, #12584, #12597, #12618, #127891, #12824, #128274, #12872, #12878, #13202, #13470, #15158, #15333, #15652, #16163, #16213, #16265, #16304, #16844, #17759, #178501, #18312, #18326, #19338, #19458, #19460, #19490, #19491, #19594, #19615, #19686 [queued], #19704, #19714 [proposed], #19766, #19767, #19773 [proposed], #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19807, #19812, #19814, #19816, #19819, #2084, #2085, #30363, #6751, #7853, #8281, #8321
+**Ideas referenced:** #10108, #10182, #10740, #11741, #11781, #11925, #12266, #12285, #12477, #12584, #12597, #12618, #127891, #12824, #128274, #12872, #12878, #13202, #13470, #15158, #15333, #15652, #16163, #16213, #16265, #16304, #16578, #16844, #1754, #1755, #17759, #178501, #18312, #18326, #1896, #19239 [rejected], #19338, #19458, #19460, #19490, #19491, #19594, #19615, #19686 [queued], #19704, #19714 [proposed], #19766, #19767, #19773 [proposed], #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19807, #19812, #19814, #19816, #19819, #1986, #1988, #1989, #1991, #2014, #2084, #2085, #25227, #30363, #6751, #7853, #8281, #8321
 
 **Last PICKUP PROMPT:**
 
 ```
-nections" but not critical yet
+er accelerate at full cadence.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Argus terminal latency fix + build pipeline recovery
+Pick up task — Argus latency resolved + build pipeline state
 
-Where we left off (verified 2026-07-28 19:54 PT):
-- COPYCAT gate FIXED: /tmp/ruben_implement_routes_open recreated, gate confirmed open (spawned worker for #19812 at 16:54)
-- Build pipeline flowing: 420 approved ideas in backlog, implementer dispatching normally
-- `ruben_active = 0` in orchestrator_config — pipeline gate intentionally paused? undetermined
-- Argus analytics: 139 queries from Vicky, avg 24,875ms response, max 90,406ms
-- Bottleneck: All Argus actions route through frankenstein-llm → GLM ring (~2 tok/s). 120B pool (44-60 tok/s) idle and available
-- GLM ring: 8 requests running, 0 waiting. Artemis: 1 running, 0 waiting. Fleet not saturated
+Where we left off (verified 2026-07-28 21:06 PT):
+- Argus latency is model deliberation, not infrastructure — small queries avg 8.2s, heavy queries avg 34.8s at 4,828 tok/s
+- GLM-5.2 hex ring: healthy, 8 req running / 0 waiting, per IDEAL_GLM52_HEX_BUILD.md
+- Corrected: Cesar/Cato ARE ring members (not idle 120B servers), sockets-over-200GbE (not 1GbE)
+- COPYCAT gate FIXED — sentinel recreated, pipeline flowing
+- ruben_active = 0 in orchestrator_config — gates upstream promotion, not downstream execution
+- 420 approved ideas in backlog
 
 Open threads to drive next:
-1. (human-only decision, no idea) — Wire Argus chat/lookup to bypass GLM and use frankenstein-tools → 120B pool? Expected: 25s avg → sub-5s. Specific fix in alltastic_api.php: change chat/lookup model from frankenstein-llm to frankenstein-tools or add argus-terminal-lane config
-2. (human-only decision, no idea) — Is ruben_active=0 intentional? If not, setting it to 1 would let the promoter/accelerator pipeline run at full speed
+1. (human-only decision) — Set ruben_active = 1? Currently gating idea promotion pipeline. Backlog is 420 deep
+2. (no additional) — No capacity fixes needed. Argus ring is healthy and within spec
 
 Reference IDs:
-- Ideas touched: #19773 [rejected], #19686 [rejected]
-- Files touched: /tmp/ruben_implement_routes_open
-- Tables queried: argus_analytics, argus_browser_builds, argus_task_queue, orchestrator_ideas, orchestrator_config
+- Ideas: #19773 [rejected], #19686 [rejected]
+- Files: IDEAL_GLM52_HEX_BUILD.md
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785293294377` — 7/28/2026, 9:17:33 PM PT — 231 turns
+
+**Original task:**
+
+```
+A metric ton of emails came in to email agent within the last hour or 2. I need you to go over them for failures, do RCAs and build improvements into Email Agent / CFAs to be able to respond/act autonmously to resolve issues. Act on them and then give a status report / summary.
+```
+
+**Ideas referenced:** #111827, #1147, #1231, #1286, #1396, #1565, #166534, #1746, #1819, #19492, #19495, #19511, #19522, #19573, #19583, #19584, #19585, #19645, #19646, #19807, #19810, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830, #19831, #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19866 [proposed], #19867 [deployed], #19868 [proposed], #19870 [proposed], #334155, #374151, #406060, #406061, #406242, #414633, #414634, #414636, #414642, #414643, #414692, #414693, #414694, #4480, #4481, #475569, #5749, #64748, #78350, #9888, #9989
+
+**Last PICKUP PROMPT:**
+
+```
+d wastes staff time on triage.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #19867 follow-through — email agent ingestion pipeline backfill.
+
+Where we left off (verified 2026-07-28 20:11 PT):
+- Type-error cascade FIXED in lora_shadow_health.php + cron_orchestrator_triage.php
+- Triage now runs clean in LIVE mode
+- 297 emails still `processed_for_routing=0` in email_inbound_log (created within last 3h)
+- email_inbound_routing.php processPendingInboundEmails() has its own cron — verify it runs and clear the backlog
+- The correct cron is likely in /etc/cron.d/agent_reply_dispatcher (found: runs cron_agent_reply_dispatcher.php every minute)
+
+Open threads to drive next:
+1. #19867 [deployed] — Verify email backlog clears: run `sudo -u www-data php cron/cron_agent_reply_dispatcher.php` and check `SELECT COUNT(*) FROM email_inbound_log WHERE processed_for_routing=0`
+2. #19866 [proposed] — Implement chat handoff dedup in the handoff ticket-creation path (TicketConsolidator pattern exists at line 35, needs pre-creation call)
+3. #19868 [proposed] — Add urldefense.com + sentrylink.com to outbound URL allowlist (grep for unowned_url or url-guard logic in lib/)
+4. #19870 [proposed] — Check RunPod fleet health for 70B, verify API key or pod capacity
+
+Reference IDs:
+- Ideas filed: #19866 [proposed], #19867 [deployed], #19868 [proposed], #19870 [proposed]
+- Files touched: /var/www/emtskills/lib/lora_shadow_health.php, /var/www/emtskills/cron/cron_orchestrator_triage.php
+- Backups taken: lora_shadow_health.php.bak-20260728-pdo, cron_orchestrator_triage.php.bak-20260728-pdo
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Analyze recent email agent traffic and identify failure patterns
+- [x] Root-cause each failure class with evidence
+- [x] Fix type-error cascade critical bug (blocking orchestrator triage)
+- [x] File ideas for chat handoff dedup, blocked URLs, 70B dead
+- [ ] Backfill 297 unprocessed inbound emails (separate pipeline, needs next step)
+- [x] Deliver status report with summary
+</task_progress>
+</attempt_completion>
+```
+
+### `1785296742883` — 7/28/2026, 9:14:42 PM PT — 170 turns
+
+**Original task:**
+
+```
+We had a frankenstein doctor type window working and the window just crashed.
+
+Frankenstein LLM stalled. I had mentioned not to inject anthropic llm. I told you to consult the GLM 5.2 Ideal build document on the desktop becasue it seemed liek you were about to quarantiene GLM.
+```
+
+**Ideas referenced:** #12184, #12247, #12262, #12672, #13108, #13832, #16265, #16578, #1754, #1755, #1896, #19239 [rejected], #1986, #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #1988, #1989, #1991, #2014, #2084, #2085, #2089
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785266096234` — 7/28/2026, 9:14:12 PM PT — 132 turns
+
+**Original task:**
+
+```
+Play Dr. of Frankenstein EXECUTOR for 90 minutes and use time stamps to make sure that you were working for actually 90 minutes. Make improvements and increase capabilities based on needs and bugs found needing resolution, etc...
+```
+
+**Ideas referenced:** #0056, #055160, #10108, #10740, #11741, #11781, #11925, #12430, #12477, #12597, #12618, #1281, #12824, #12872, #12878, #1309, #1314, #13202, #15158, #15333, #15367, #15652, #16163, #16265, #16304, #16844, #17169, #17170, #17486, #17494, #17504, #17505, #178483, #17913, #18135, #18312, #18326, #18357, #18395, #18442, #1850, #18605 [proposed], #18783 [deployed], #18786, #18787, #18827 [proposed], #1896, #1897, #19079, #19325, #19338, #19375, #19433, #19435, #19439, #19458, #19460, #19490, #19491, #19494, #19503, #19504, #19505, #19509, #19548, #19558, #19564, #19575, #19616, #19617, #19618, #19619, #19622, #19623, #19629, #19630, #19632, #19638, #19640, #19642, #19643, #19644, #19648, #19651, #19652, #19653 [queued], #19658, #19661, #19670, #19671 [rejected], #19684, #19686 [queued], #19689 [queued], #19776 [executing], #19777 [proposed], #19778 [proposed], #19785 [deployed], #19788 [proposed], #19789 [proposed], #19820, #19833, #19837, #19840, #19849, #19854, #19859, #19862, #19865, #19869, #19875 [proposed], #198754, #19877 [proposed], #2014, #2043, #2075, #2076, #2077, #2078, #2089, #212529, #3541, #3953, #3957, #4536, #495057, #5029, #5034, #7137, #7552, #7925, #8281, #8321, #842029, #8563, #8598, #9191, #9222, #9235
+
+**Last PICKUP PROMPT:**
+
+```
+ring cron is also still wired.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1784836559542 — Frankenstein EXECUTOR: fleet health improvement continues.
+
+Where we left off (verified 2026-07-28 21:13 PT):
+- Silent-ghost cascade stopped (#19785 [deployed]) — executor skip filter still on disk, 0 blocker wrappers in queue
+- GLM 5.2 ideal build confirmed on desktop — ring is correct, no changes needed
+- #19689 [idle] NOT DONE: executor generated wrong patches (dashboard view instead of Julia+Claudia bringup). Needs human: SSH to boxes, restart vLLM TP=2, wire reverse tunnel.
+- #19686 [rejected] NOT DONE: was rejected 8h ago. Argus needs explicit model_list entry + fallbacks + STEERING_MODELS injection in litellm config.yaml. Executor can't touch litellm config.
+
+Open threads to drive next:
+1. #19689 [queued] — Rewrite spec to target actual Julia+Claudia vLLM bringup (NOT a dashboard card), then hand-ship: SSH julia, SSH claudia, launch vLLM TP=2, verify WOPR:11513 reachable
+2. #19686 [rejected] — Hand-ship Argus fleet integration: add `argus-chat` to /etc/litellm/config.yaml model_list with fallbacks chain (local tier → 120B → Cicero → paid spill), add to STEERING_MODELS, restart LiteLLM
+3. #19877 [proposed] P1 — Canary ABS_MIN_FLOOR=1.0 tok/s false-quarantines healthy GLM-5.2 ring (c=1 baseline is 0.85). Fix: per-upstream floor in frankenstein_tools_adapter.py
+4. #19875 [proposed] P1 — Warm-Set Manager pinning CPU-only 70B on Joshua causing fleet-wide ollama 503
+
+Reference IDs:
+- Ideas deployed: #19785 [deployed]
+- Ideas stalled: #19689 [idle], #19686 [rejected]
+- Files touched: cron_ruben_implement.php, cron_ticket_clustering.php, /etc/cron.d/emsu-crons, HANDOFF_NOTES.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785267640895` — 7/28/2026, 9:12:15 PM PT — 288 turns
+
+**Original task:**
+
+```
+Pick up task — Query frankenstein router audit log to produce a turn-count-per-model breakdown for the last 60 minutes. This was the last window Ruben opened before everything crashed.
+
+Context:
+- Audit log at /tmp/emsu_router_audit.log — 225MB, 1 line per routed request, JSONL format with "picked" field
+- v3.3.8-distill-final-trim-16715 format: each line has "req" (requested model), "picked" (routed model), "surface", "is_interactive"
+- No idea was filed before the crash — this is a fresh build
+
+Step 1 — Query the audit log for the last 60 minutes by model:
+  use_mcp_tool server_name=emsu-ope
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12314, #12365, #12366, #12368, #12459, #12477, #12618, #12824, #12872, #12878, #13108, #13202, #13874, #15330, #15367, #16163, #16265, #16304, #16844, #18312, #18326, #19338, #19458, #19491, #19787 [proposed], #19809 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ter-naming issue.
+   - Ship a corrected `attempt_completion` (per rule 91, with PICKUP PROMPT block, disposition tags for #19787/#19809, and — per rule 267 GATE B — reconciled live status for both filed ideas) that addresses ALL of Ruben's 2nd-round feedback points: (a) corrected/caveated glm-5.2-local numbers (floor of 2.1%, true share plausibly much higher, no current telemetry to pin exact number), (b) the confirmed finding that the LIVE adapter code does NOT implement "GLM-first" priority despite the YAML doc saying it should — glm-5.2-local and 120B pool are co-equal peers selected by load only, (c) findings/recommendation on the tok/s gate (needs the host_probe/tier_health data + locating the actual gate implementation, not yet done), (d) the concrete `.clinerules` rule number (not yet created).
+
+6. Task Evolution:
+   - Original Task: Query frankenstein router audit log for last 60 minutes, produce turn-count-per-model breakdown per 5 specified steps (model breakdown, surface breakdown, interactive split, total volume, error check).
+   - Task Modification 1: Ruben (after 1st attempt_completion) demanded adapter names be resolved to actual LLMs, window extended to 5 hours across all surfaces, AND a formal `.clinerules` rule be created with the rule number reported back. Quote: "frankenstein-tools needs to be broken down, so does cline main to the ACTUAL LLM, lol that's like you're hiding what is actually happening. No bueno Same with emsu-codegen. Those are no[t] actual LLMs. Update those again for today totals across all surfaces for the last 5 hours (argus, cline, executor, etc...) then upddate that rule and give me the cline rule number for it."
+   - Task Modification 2 (CURRENT): Ruben (after 2nd attempt_completion) questioned accuracy specifically around glm-5.2-local visibility, raised an architecture concern that glm-5.2-local should be the FIRST pick in the spill ladder before the 120Bs, and expressed skepticism about the tok/s measurement gate. Quote: "Is this accurate information? If not, that needs to be corrected so that frankenstein-llm can get accurate information here. My main concern on this analysis is that we don't see GLM 5.2 local and if you take a look at ideal GLM52 build, you will see why this is a problem for us. Local GLM Needs to be the first pick in the spill le[dd]er before the 120[B]s. It needs some sort of exemption as far as tok/sec measurement is concerned which I'm not entirely convinced as a good measurement anyways because GLM Local 5.2 is lightning fast."
+   - Current Active Task: Complete the investigation into (a) glm-5.2-local's true share/visibility, (b) whether the live adapter code honors the documented GLM-first spill-ladder ordering (found: it does NOT — they're co-equal load-balanced peers), (c) the tok/s gate's validity/effect on glm-5.2-local (not yet fully resolved — need to find the actual `_120b_member_available` gate implementation and call `frankenstein_host_probe`/`frankenstein_tier_health` for live numbers), AND still owes the `.clinerules` rule number from Modification 1 (never delivered).
+   - Context for Changes: Direct quotes captured above verbatim. Ruben's throughline concern is that EMSU's local GLM-5.2 investment (a free, high-capacity, allegedly very fast local resource) is not being properly credited/prioritized in either the reporting (audit log visibility) or possibly the actual routing logic, and he's skeptical the tok/s-based gating methodology is fair to it.
+
+7. Current Work:
+   Immediately before this summary was triggered, I was mid-investi
+```
+
+### `1785272558620` — 7/28/2026, 9:10:38 PM PT — 720 turns
+
+**Original task:**
+
+```
+Stopping here per your correction — noted that the schedule source is https://emsuniversity.com/emtskills/routes/view_class_schedule.php (a live webpage the students use), NOT a Google Sheets doc. I had wrongly pulled the Google Sheets link from Course_Schedules.googlesheeturl column instead. No further action taken this turn.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — TDSHS: correct schedule source + remaining open items
+
+Where we left off (verified 2026-07-28 13:59 PT):
+- COR
+```
+
+**Ideas referenced:** #11925, #15158, #1565, #16613, #1758, #17580, #178501, #18693, #19217, #19224, #19437, #19456, #19458, #19460, #19490, #19491, #19492, #19493, #19518, #19543, #19558, #19573 [executing], #19576, #19580, #19581, #19583 [executing], #19584 [executing], #19585 [executing], #19594, #19615, #19640, #19642, #19644, #19645 [executing], #19646 [executing], #19653 [deployed], #19686, #19690 [deployed], #19704, #19714 [proposed], #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19779 [executing], #19780 [executing], #19781 [executing], #19786 [proposed], #19790 [deployed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19803 [proposed], #19807 [proposed], #19808 [proposed], #19811 [proposed], #19827 [proposed], #19833 [executing], #19834 [proposed], #19872 [executing], #1993, #2009, #2015, #2025, #2036, #2042, #2084, #2085, #334155, #34495, #401956, #401957, #5229, #5230, #64748, #68437, #68450, #68493, #68494, #68496, #72073, #73291, #73292, #73293, #73294, #73295, #8212, #9083, #9086, #9168, #9339, #9831
+
+**Last PICKUP PROMPT:**
+
+```
+ IS DEAD. Opening a fresh one.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — Mac memory starvation diagnosis + keep Cline windows alive
+
+Where we left off (verified 2026-07-28 21:05 PT — last successful tool call):
+- Ran `top -l 1 -o mem -n 20` on the Mac. This window then went into a 9+ consecutive "did not use a tool" error loop and is bailing per rule 143 strike-9 escape.
+- PhysMem: 92GB used / 34GB unused. Load Avg: 11.12/13.98/15.05 (very high). 1004 processes, 8126 threads.
+- TOP 20 MEMORY CONSUMERS (full output above in the prior turn):
+  - WindowServer: 3110M (normal overhead for many open windows)
+  - Preview: 1862M (suspect a large PDF open — closable)
+  - Code Helpers (Cline windows): 1832M + 1028M + 991M + 936M + 690M + 673M = ~6.1GB across 6 renderers
+  - Chrome Helpers (browser tabs): 1755M + 1753M + 1564M + 793M + 736M + 488M = ~7GB
+  - Chrome main: 633M, Spark Desktop: 479M, Messages: 611M, Finder: 573M
+- NO launch services process in top 20 (earlier today's culprit may have self-corrected or was killed earlier).
+- Assessment: death by a thousand cuts — no single rogue process. The aggregate of Cline windows + Chrome tabs + Preview is ~15GB of the top 20. Total physical 92GB used suggests many smaller processes filling the rest. Load average 15 suggests swap thrashing (confirmed: 2,072,253 swapins).
+
+Open threads to drive next:
+1. (human-only decision — no idea) — Close Preview if a large PDF is open (1.8GB freed). Close unnecessary Chrome tabs (up to 7GB freed). Consider closing the oldest/least-essential Cline windows (~1GB each). If memory pressure drops immediately after closing Preview, that was the main contributor.
+2. (human-only decision — no idea) — Run `vm_stat` to check actual memory pressure (page faults, compressor activity, swap used). If swap is near exhaustion, more aggressive app closure needed.
+3. (human-only decision — no idea) — The earlier orphan adapter process issue (#19808) may contribute if frankenstein-tools adapter processes are leaking on the Mac side. Check `ps aux | grep -E "frankenstein|adapter" | grep -v grep` for stale adapter processes consuming memory.
+4. (human-only decision — no idea) — After memory is stable, re-check Cline window responsiveness. If a specific Cline window is consuming disproportionate memory (>2GB), that window may be the one with the largest context accumulation and should be the first Cline candidate to restart.
+5. (human-only decision — no idea) — Long-term: consider a periodic Cline window restart policy (~every 4-6 hours) to prevent context accumulation from eating 128GB of RAM. Or add a `purge` / `sync && sudo purge` if disk cache is bloated.
+
+Reference IDs:
+- #19808 [proposed] — adapter orphan process + upstream log dead
+- Prior session ideas: #19872 [executing] (P0 payment gate false-PASS), #19834 [executing] (EA cron filters shipped), #19833 [deployed] (grace policy), #19807 [executing], #19811 [executing], #19803 [executing], #19827 [deployed], #19646 [executing], #19583 [executing], #19584 [executing], #19573 [executing], #19645 [executing], #19585 [executing]
+- This window: 9+ consecutive tool errors since 21:05 PT, bailed at strike 9 per rule 143
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785261380940` — 7/28/2026, 9:04:14 PM PT — 66 turns
+
+**Original task:**
+
+```
+#Comprehensive
+
+Give this again, i was supposed to get actual copy prompts where I click on the copy prompt only, wehere I don't select text Just press the button and it copies to the clipboard. That's the cline rule I asked for:
+
+GATE D (9d) and COPY-WINDOW FORMAT (9e) both shipped to _RULE_TREE.md and CLINERULES_MIRROR.md (42 files, 339613 bytes). Mirrors regen every hour, every Cline window gets these gates.
+
+Below are 5 copy windows — each self-contained, with concrete commands, verified provenance, and `——[COPY]——` markers for one-click paste. The clinerule format requirement is now enfor
+```
+
+**Ideas referenced:** #0000, #11925, #13840, #15158, #16673, #17169, #17170, #17486, #17494, #17504, #17505, #18605 [proposed], #18783 [deployed], #18786, #18787, #18827 [proposed], #1896, #1897, #19125, #19339 [proposed], #19379, #19490 [deployed per prior session], #19491, #19509 [executing], #19553 [deployed], #19562 [deployed], #19592, #19594 [executing], #19598 [executing], #19667, #19668, #19679, #19682, #19686 [queued], #19689 [queued], #19701 [queued], #19704 [executing], #19706 [queued], #19707 [deployed], #19708 [deployed], #19724 [queued], #19740 [deployed], #19741 [deployed], #19743 [queued], #19756 [deployed], #19766 [proposed], #19767 [proposed], #19769 [proposed], #19770 [proposed], #19772 [proposed], #19773 [proposed], #19775 [deployed], #1999, #21672, #21676, #21704, #21736, #21737, #21738, #21739, #21740, #21741, #21784, #21785, #21786, #21787, #21793, #21805
+
+**Last PICKUP PROMPT:**
+
+```
+ick, no text selection needed.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — Closeout of copy-window format task. All work complete, all windows run.
+
+Where we left off (verified 2026-07-28 21:03 PT):
+- Gates 9d/9e [deployed] in _RULE_TREE.md
+- Rule 91-copy-window-format [deployed] in Rules-archive, reindexed
+- 6 rebased copy windows delivered and all run by Ruben
+- Mac crash RCA delivered: VS Code crash at 12:01 PT (4th crash today), 6 windows disconnected. Likely Cline JS heap exhaustion from too many concurrent windows. WOPR server healthy (up 3 days).
+
+Open threads to drive next:
+None — all windows completed, each filed their own ideas/actions in their respective windows.
+
+Reference IDs:
+- Ideas filed this session: none new (windows filed their own)
+- Files touched: ~/Documents/Cline/Rules/_RULE_TREE.md, ~/Documents/Cline/Rules-archive/91-copy-window-format.md
+- Prior work: #19594 [hand-shipped from sandbox in Window 1], #19770 [Julia+Claudia attempted in Window 2], CFA quality (#19766-#19772), Argus steering (#19773), turn-tracking (Window 5 query), silent-ghost triage (Window 6)
+
+When done, append to cline_task_ledger.md per rule 07 and run order 66 per EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785293744959` — 7/28/2026, 8:56:07 PM PT — 232 turns
+
+**Original task:**
+
+```
+See frankenstein-llm task completion error - doctor of frankenstein resolve RCA resolve -> Still 2 fixes left (#19840 ExecAdmin gate + hint text). SSH is flaky — sed/PHP inline both fail intermittently. `read_server_file` and `write_server_file` work reliably but `write_server_file` re-inlines the full file and we
+...[2660 chars trimmed to fit frankenstein-tools ctx]...
+</attempt_completion>
+```
+
+**Ideas referenced:** #001018, #059669, #062017, #10740, #11397, #1154, #11925, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12477, #12584, #12657, #12672, #12673, #12689, #12716, #13108, #13121, #13831, #13832, #13874, #13964, #14000, #14848, #15158, #16120, #16588, #16613, #166534, #16718, #16844, #1754, #1755, #17580, #17680, #178495, #178501, #18327, #18781, #18786, #18795, #18801 [deployed], #18807, #1883, #18833 [deployed], #18836 [deployed], #18837, #18864 [deployed], #18867, #18868, #18889 [deployed], #18892 [rejected], #18915 [proposed], #18926 [in_progress], #18929, #18935, #18944, #18949, #18950, #18951, #18952, #1896, #18961, #18966, #18967, #18970 [proposed], #18971 [executing], #18972 [proposed], #18977 [proposed], #18982, #18985 [rejected], #19007 [deployed], #19008 [proposed], #19040, #19055 [deployed], #19080, #19081, #19100 [executing], #19102 [executing], #19126 [rejected], #19134 [executing], #19135 [executing], #19143 [executing], #19144 [executing], #19145, #19158, #19159, #19160 [executing], #19161 [executing], #19163 [executing], #19166, #19167, #19168, #19169, #19170 [executing], #19173, #19194, #19227, #19230 [queued], #19234 [queued], #19266, #1932, #19321, #19325, #19338, #1935 [investigating], #19373, #19388 [executing], #1939 [investigating], #19390 [rejected], #19403 [rejected], #19407, #19415, #19416, #19419, #19425, #19427, #19430, #19434, #19437, #19446, #19454, #19458, #19460, #19464, #19465, #1947 [resolved], #19490, #19491, #19492, #19495, #19500, #19509, #19510, #19511, #19518 [rejected], #19522, #19523, #19524, #19525, #1953, #19535, #19537, #19539, #1954 [investigating], #19545, #19558, #1956 [resolved], #19563 [rejected], #19568 [executing], #1957 [investigating], #19571 [proposed], #19572, #19573, #19574, #19576, #19577, #19578, #19579 [executing], #1958 [resolved], #19580, #19581, #19583, #19584, #19585 [executing], #19586, #19587, #19588, #19589, #1959, #19590, #19591, #19592, #19594, #19595, #19596, #19597, #19598, #19599, #1960, #19600, #19601, #19602, #19603, #19604, #19605, #19606, #19607, #19608, #19610 [executing], #19611, #19615, #1962, #1963, #1964, #19645, #19646, #19647, #1965, #19653, #19657, #1966, #1967, #1968, #19686, #1969, #19690 [deployed], #1970, #19704, #1971, #19714 [proposed], #1972, #1973, #1975, #1976, #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19803, #19807, #19810, #19811, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830, #19831, #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19840 [approved], #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19863 [proposed], #19872, #19874 [proposed], #19875 [proposed], #1998, #2008, #2010, #2011, #2012, #2014, #2015, #2016, #2017, #2019, #2023, #2024, #2027, #2029, #2030, #2031, #2033, #2039, #2040, #2041, #2043, #2064, #2066, #2084, #2085, #21278, #21765, #2322, #2490, #2563, #3048, #3049, #334155, #3595, #374151, #475569, #623992, #64748, #92400, #9733, #9734
+
+**Last PICKUP PROMPT:**
+
+```
+er.py.bak-20260728-chateffort`
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — frankenstein-llm completion error resolved; investigate GLM-5.2 decode-stall.
+
+Where we left off (verified 2026-07-28 20:55 PT):
+- Fix #1 (reasoning_effort default="low") verified on disk at lines 2904 + 3024 of `/usr/local/bin/frankenstein_tools_adapter.py` [deployed]
+- Fix #2 (#19840 ExecAdmin gate) verified in `/var/www/emtskills/api/telephony/config_api.php` [deployed]
+- Adapter restarted via `sudo systemctl restart frankenstein-tools` — health 200 OK [deployed]
+- End-to-end test confirmed: content returns clean, reasoning_content=NONE [verified]
+- GLM-5.2 cluster (:8210) discovered decode-stalled: 0.139 tok/s, 7 running, streak=14 (filed as #19874)
+
+Open threads to drive next:
+1. #19874 [proposed] — Investigate GLM-5.2 local PP=6 cluster decode-stall (rate=0.139 tok/s, running=7, wedge-streak=14). Possible causes: model reload needed, PP head hung, or max_model_len overflow. Check `/metrics` on :8210 directly.
+2. #19875 [proposed] — Consider reducing GLM-5.2 priority back below 120B pool — the 2026-07-28 "hard priority tier" change routes ALL traffic to a stalled box. The `_least_loaded_order()` sort key `(0 if _is_glm(u) else 1)` forces GLM first regardless of health.
+
+Reference IDs:
+- Ideas filed: #19874 (GLM decode-stall investigation), #19875 (GLM routing priority reconsideration)
+- Ticket: frankenstein-llm task completion error (root cause resolved)
+- Files touched: `/usr/local/bin/frankenstein_tools_adapter.py`, `/var/www/emtskills/api/telephony/config_api.php`, `/var/www/emtskills/docs/HANDOFF_NOTES.md`
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
@@ -204,49 +601,6 @@ pick up the Plesk login issue that closed for the second time here in cline irri
 **Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18935, #19131 [deployed], #19567, #19827 [proposed], #19829 [executing], #19854 [proposed], #19865 [executing], #2063, #2065, #2073, #7142, #7149
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785293744959` — 7/28/2026, 8:51:00 PM PT — 227 turns
-
-**Original task:**
-
-```
-See frankenstein-llm task completion error - doctor of frankenstein resolve RCA resolve -> Still 2 fixes left (#19840 ExecAdmin gate + hint text). SSH is flaky — sed/PHP inline both fail intermittently. `read_server_file` and `write_server_file` work reliably but `write_server_file` re-inlines the full file and we
-...[2660 chars trimmed to fit frankenstein-tools ctx]...
-</attempt_completion>
-```
-
-**Ideas referenced:** #001018, #059669, #062017, #10740, #11397, #1154, #11925, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12477, #12584, #12657, #12672, #12673, #12689, #12716, #13108, #13121, #13831, #13832, #13874, #13964, #14000, #14848, #15158, #16120, #16588, #16613, #166534, #16718, #16844, #1754, #1755, #17580, #17680, #178495, #178501, #18327, #18781, #18786, #18795, #18801 [deployed], #18807, #1883, #18833 [deployed], #18836 [deployed], #18837, #18864 [deployed], #18867, #18868, #18889 [deployed], #18892 [rejected], #18915 [proposed], #18926 [in_progress], #18929, #18935, #18944, #18949, #18950, #18951, #18952, #1896, #18961, #18966, #18967, #18970 [proposed], #18971 [executing], #18972 [proposed], #18977 [proposed], #18982, #18985 [rejected], #19007 [deployed], #19008 [proposed], #19040, #19055 [deployed], #19080, #19081, #19100 [executing], #19102 [executing], #19126 [rejected], #19134 [executing], #19135 [executing], #19143 [executing], #19144 [executing], #19145, #19158, #19159, #19160 [executing], #19161 [executing], #19163 [executing], #19166, #19167, #19168, #19169, #19170 [executing], #19173, #19194, #19227, #19230 [queued], #19234 [queued], #19266, #1932, #19321, #19325, #19338, #1935 [investigating], #19373, #19388 [executing], #1939 [investigating], #19390 [rejected], #19403 [rejected], #19407, #19415, #19416, #19419, #19425, #19427, #19430, #19434, #19437, #19446, #19454, #19458, #19460, #19464, #19465, #1947 [resolved], #19490, #19491, #19492, #19495, #19500, #19509, #19510, #19511, #19518 [rejected], #19522, #19523, #19524, #19525, #1953, #19535, #19537, #19539, #1954 [investigating], #19545, #19558, #1956 [resolved], #19563 [rejected], #19568 [executing], #1957 [investigating], #19571 [proposed], #19572, #19573, #19574, #19576, #19577, #19578, #19579 [executing], #1958 [resolved], #19580, #19581, #19583, #19584, #19585 [executing], #19586, #19587, #19588, #19589, #1959, #19590, #19591, #19592, #19594, #19595, #19596, #19597, #19598, #19599, #1960, #19600, #19601, #19602, #19603, #19604, #19605, #19606, #19607, #19608, #19610 [executing], #19611, #19615, #1962, #1963, #1964, #19645, #19646, #19647, #1965, #19653, #19657, #1966, #1967, #1968, #19686, #1969, #19690 [deployed], #1970, #19704, #1971, #19714 [proposed], #1972, #1973, #1975, #1976, #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19803, #19807, #19810, #19811, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830, #19831, #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19840 [approved], #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19863 [proposed], #19872, #1998, #2008, #2010, #2011, #2012, #2014, #2015, #2016, #2017, #2019, #2023, #2024, #2027, #2029, #2030, #2031, #2033, #2039, #2040, #2041, #2043, #2064, #2066, #2084, #2085, #21278, #21765, #2322, #2490, #2563, #3048, #3049, #334155, #3595, #374151, #475569, #623992, #64748, #92400, #9733, #9734
-
-**Last PICKUP PROMPT:**
-
-```
- Backup at config_api.php.bak.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #19840 - Telephony ExecAdmin toggle permission fix
-
-Where we left off (verified 2026-07-28 20:06 PT):
-- Fixed backend permission gate in config_api.php: ExecAdmin can now save vapi_fallback_enabled and vapi_fallback_human_override_at keys (MasterAdmin still required for all other config keys). Idea #19840 [approved].
-- Frontend VAPI toggle hint already says 'Master Admin / ExecAdmin only' - no frontend change needed.
-- Idea #19863 [proposed] created for the frankenstein-llm completion error RCA follow-up (separate investigation needed).
-
-Open threads to drive next:
-1. #19863 [proposed] - Frankenstein-llm completion error RCA investigation. The error may be a spill-ladder issue, tool-call format regression, or context-window truncation. Route through rule 156 (probe frankenstein_verify_routing + tier_health first) then rule 158 (Frankenstein Doctor babysit).
-2. #19840 [approved] - Monitor for any ExecAdmin complaints that the VAPI toggle still doesn't work (possible session/cookie auth issue on the POST).
-
-Reference IDs:
-- Idea: #19840 [approved]
-- Ideas filed: #19840 [approved], #19863 [proposed]
-- Files touched: /var/www/emtskills/api/telephony/config_api.php
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
 
 ### `1785282386265` — 7/28/2026, 8:50:58 PM PT — 626 turns
 
@@ -306,58 +660,6 @@ Reference IDs:
 </attempt_completion>
 ```
 
-### `1785293294377` — 7/28/2026, 8:50:55 PM PT — 197 turns
-
-**Original task:**
-
-```
-A metric ton of emails came in to email agent within the last hour or 2. I need you to go over them for failures, do RCAs and build improvements into Email Agent / CFAs to be able to respond/act autonmously to resolve issues. Act on them and then give a status report / summary.
-```
-
-**Ideas referenced:** #111827, #1147, #1231, #1286, #1396, #1565, #166534, #1746, #1819, #19492, #19495, #19511, #19522, #19573, #19583, #19584, #19585, #19645, #19646, #19807, #19810, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830, #19831, #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19866 [proposed], #19867 [deployed], #19868 [proposed], #19870 [proposed], #334155, #374151, #406060, #406061, #406242, #414633, #414634, #414636, #414642, #414643, #414692, #414693, #414694, #475569, #5749, #64748, #78350, #9888, #9989
-
-**Last PICKUP PROMPT:**
-
-```
-d wastes staff time on triage.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #19867 follow-through — email agent ingestion pipeline backfill.
-
-Where we left off (verified 2026-07-28 20:11 PT):
-- Type-error cascade FIXED in lora_shadow_health.php + cron_orchestrator_triage.php
-- Triage now runs clean in LIVE mode
-- 297 emails still `processed_for_routing=0` in email_inbound_log (created within last 3h)
-- email_inbound_routing.php processPendingInboundEmails() has its own cron — verify it runs and clear the backlog
-- The correct cron is likely in /etc/cron.d/agent_reply_dispatcher (found: runs cron_agent_reply_dispatcher.php every minute)
-
-Open threads to drive next:
-1. #19867 [deployed] — Verify email backlog clears: run `sudo -u www-data php cron/cron_agent_reply_dispatcher.php` and check `SELECT COUNT(*) FROM email_inbound_log WHERE processed_for_routing=0`
-2. #19866 [proposed] — Implement chat handoff dedup in the handoff ticket-creation path (TicketConsolidator pattern exists at line 35, needs pre-creation call)
-3. #19868 [proposed] — Add urldefense.com + sentrylink.com to outbound URL allowlist (grep for unowned_url or url-guard logic in lib/)
-4. #19870 [proposed] — Check RunPod fleet health for 70B, verify API key or pod capacity
-
-Reference IDs:
-- Ideas filed: #19866 [proposed], #19867 [deployed], #19868 [proposed], #19870 [proposed]
-- Files touched: /var/www/emtskills/lib/lora_shadow_health.php, /var/www/emtskills/cron/cron_orchestrator_triage.php
-- Backups taken: lora_shadow_health.php.bak-20260728-pdo, cron_orchestrator_triage.php.bak-20260728-pdo
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Analyze recent email agent traffic and identify failure patterns
-- [x] Root-cause each failure class with evidence
-- [x] Fix type-error cascade critical bug (blocking orchestrator triage)
-- [x] File ideas for chat handoff dedup, blocked URLs, 70B dead
-- [ ] Backfill 297 unprocessed inbound emails (separate pipeline, needs next step)
-- [x] Deliver status report with summary
-</task_progress>
-</attempt_completion>
-```
-
 ### `1785296704123` — 7/28/2026, 8:45:52 PM PT — 3 turns
 
 **Original task:**
@@ -369,63 +671,6 @@ Frankenstein LLM stalled. I had mentioned not to inject anthropic llm. I told yo
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785272558620` — 7/28/2026, 8:42:24 PM PT — 700 turns
-
-**Original task:**
-
-```
-Stopping here per your correction — noted that the schedule source is https://emsuniversity.com/emtskills/routes/view_class_schedule.php (a live webpage the students use), NOT a Google Sheets doc. I had wrongly pulled the Google Sheets link from Course_Schedules.googlesheeturl column instead. No further action taken this turn.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — TDSHS: correct schedule source + remaining open items
-
-Where we left off (verified 2026-07-28 13:59 PT):
-- COR
-```
-
-**Ideas referenced:** #11925, #15158, #1565, #16613, #1758, #17580, #178501, #18693, #19217, #19224, #19437, #19456, #19458, #19460, #19490, #19491, #19492, #19493, #19518, #19543, #19558, #19573 [executing], #19576, #19580, #19581, #19583 [executing], #19584 [executing], #19585 [executing], #19594, #19615, #19640, #19642, #19644, #19645 [executing], #19646 [executing], #19686, #19690 [deployed], #19704, #19714 [proposed], #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19779 [executing], #19780 [executing], #19781 [executing], #19786 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19803 [proposed], #19807 [proposed], #19811 [proposed], #19827 [proposed], #19833 [executing], #19834 [proposed], #19872 [executing], #1993, #2009, #2015, #2025, #2036, #2042, #2084, #2085, #334155, #34495, #401956, #401957, #5229, #5230, #64748, #68437, #68450, #68493, #68494, #68496, #72073, #73291, #73292, #73293, #73294, #73295, #8212, #9083, #9086, #9168, #9339, #9831
-
-**Last PICKUP PROMPT:**
-
-```
-The task needs a fresh window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — URGENT: Mac memory starvation killing Cline windows (same launch-services root cause as earlier today)
-
-Where we left off (verified 2026-07-28 20:33 PT — last real tool call):
-- This Cline window went into a no-tool-emission loop 9 consecutive times over ~8 minutes, unable to produce any tool call. Bailing per rule 143 strike-9 escape hatch before YOLO death at strike 10.
-- PRIOR STABLE WORK (all shipped, all saved): #19872 P0 filed + promoted (SLS payment gate false-PASS on zero-invoice students + EA cron targets wrong population), #19834 filters shipped (cron_ea_suspension_emails.php now has full safety guards + staleness bound + batch cap 15, backup .bak-20260728-safety-filters), #19807 body corrected + promoted, #19811/#19803 promoted, HANDOFF_NOTES updated, 13 ideas reconciled. NOTHING WAS SENT to students.
-- NEW URGENT DIRECTIVE from Ruben: "Need to interrupt this thread. We have a window in cline that is not responding. Grey windows are likely to come soon. WE want to get ahead of those. Can you make sure my cline windows stay open? Earlier this morning we had a similar issue and it was from launch services. Run top command here on this mac and figure out what's starving memory. And keep cline windows safe"
-
-Open threads to drive next:
-1. (human-only decision — no idea) — RUN `top -o MEM -l 1` or `ps aux --sort=-%mem | head -20` on the Mac to identify the memory-hogging process. Earlier today the culprit was launch services (likely `lssave` or `lsd` runaway). Check if the same process is back.
-2. (human-only decision — no idea) — If launch services is the culprit: kill/restart it (`killall -HUP lsd` or `launchctl kickstart -k system/com.apple.launchservicesd`), verify memory pressure drops.
-3. (human-only decision — no idea) — Check VS Code / Cline extension memory usage: `ps aux | grep -i "visual studio code\|code-\|claude\|cline\|electron" | grep -v grep | sort -rk4 | head -10`. VS Code extension hosts can leak, especially with large context windows.
-4. (human-only decision — no idea) — Check available swap and memory pressure: `vm_stat` and `sysctl vm.swapusage`. If swap is exhausted, Cline windows will grey out.
-5. (human-only decision — no idea) — Keep Cline windows open: if memory pressure is critical, consider closing non-Cline VS Code windows, browser tabs, or other Electron apps to free RAM. Do NOT close Cline windows themselves.
-6. (human-only decision — no idea) — After memory is stabilized, resume the EA-cron / payment-gate work per #19872 and the longer list of 13 executing ideas.
-
-Reference IDs:
-- #19872 [executing] (verified last reconcile: status=in_progress dev_stage=idle) — P0 payment gate false-PASS + re-point EA ladder
-- #19834 [executing] (filters shipped, executor closing)
-- #19833 [deployed] — grace policy (needs review per #19872)
-- #19807 [executing], #19811 [executing], #19803 [executing], #19827 [deployed], #19646 [executing], #19583 [executing], #19584 [executing], #19573 [executing], #19645 [executing], #19585 [executing]
-- Files touched: cron/cron_ea_suspension_emails.php (+2 backups), HANDOFF_NOTES.md
-- This window: ~8 min non-responsive, 9 consecutive tool errors, context 73%
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
 
 ### `1785296318095` — 7/28/2026, 8:41:36 PM PT — 24 turns
 
@@ -575,41 +820,6 @@ Reference IDs:
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
-```
-
-### `1785267640895` — 7/28/2026, 7:31:07 PM PT — 226 turns
-
-**Original task:**
-
-```
-Pick up task — Query frankenstein router audit log to produce a turn-count-per-model breakdown for the last 60 minutes. This was the last window Ruben opened before everything crashed.
-
-Context:
-- Audit log at /tmp/emsu_router_audit.log — 225MB, 1 line per routed request, JSONL format with "picked" field
-- v3.3.8-distill-final-trim-16715 format: each line has "req" (requested model), "picked" (routed model), "surface", "is_interactive"
-- No idea was filed before the crash — this is a fresh build
-
-Step 1 — Query the audit log for the last 60 minutes by model:
-  use_mcp_tool server_name=emsu-ope
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12314, #12365, #12366, #12368, #12459, #12477, #12618, #12824, #12872, #12878, #13108, #13202, #13874, #16163, #16265, #16304, #16844, #18312, #18326, #19787 [proposed], #19809 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-ter-naming issue.
-   - Ship a corrected `attempt_completion` (per rule 91, with PICKUP PROMPT block, disposition tags for #19787/#19809, and — per rule 267 GATE B — reconciled live status for both filed ideas) that addresses ALL of Ruben's 2nd-round feedback points: (a) corrected/caveated glm-5.2-local numbers (floor of 2.1%, true share plausibly much higher, no current telemetry to pin exact number), (b) the confirmed finding that the LIVE adapter code does NOT implement "GLM-first" priority despite the YAML doc saying it should — glm-5.2-local and 120B pool are co-equal peers selected by load only, (c) findings/recommendation on the tok/s gate (needs the host_probe/tier_health data + locating the actual gate implementation, not yet done), (d) the concrete `.clinerules` rule number (not yet created).
-
-6. Task Evolution:
-   - Original Task: Query frankenstein router audit log for last 60 minutes, produce turn-count-per-model breakdown per 5 specified steps (model breakdown, surface breakdown, interactive split, total volume, error check).
-   - Task Modification 1: Ruben (after 1st attempt_completion) demanded adapter names be resolved to actual LLMs, window extended to 5 hours across all surfaces, AND a formal `.clinerules` rule be created with the rule number reported back. Quote: "frankenstein-tools needs to be broken down, so does cline main to the ACTUAL LLM, lol that's like you're hiding what is actually happening. No bueno Same with emsu-codegen. Those are no[t] actual LLMs. Update those again for today totals across all surfaces for the last 5 hours (argus, cline, executor, etc...) then upddate that rule and give me the cline rule number for it."
-   - Task Modification 2 (CURRENT): Ruben (after 2nd attempt_completion) questioned accuracy specifically around glm-5.2-local visibility, raised an architecture concern that glm-5.2-local should be the FIRST pick in the spill ladder before the 120Bs, and expressed skepticism about the tok/s measurement gate. Quote: "Is this accurate information? If not, that needs to be corrected so that frankenstein-llm can get accurate information here. My main concern on this analysis is that we don't see GLM 5.2 local and if you take a look at ideal GLM52 build, you will see why this is a problem for us. Local GLM Needs to be the first pick in the spill le[dd]er before the 120[B]s. It needs some sort of exemption as far as tok/sec measurement is concerned which I'm not entirely convinced as a good measurement anyways because GLM Local 5.2 is lightning fast."
-   - Current Active Task: Complete the investigation into (a) glm-5.2-local's true share/visibility, (b) whether the live adapter code honors the documented GLM-first spill-ladder ordering (found: it does NOT — they're co-equal load-balanced peers), (c) the tok/s gate's validity/effect on glm-5.2-local (not yet fully resolved — need to find the actual `_120b_member_available` gate implementation and call `frankenstein_host_probe`/`frankenstein_tier_health` for live numbers), AND still owes the `.clinerules` rule number from Modification 1 (never delivered).
-   - Context for Changes: Direct quotes captured above verbatim. Ruben's throughline concern is that EMSU's local GLM-5.2 investment (a free, high-capacity, allegedly very fast local resource) is not being properly credited/prioritized in either the reporting (audit log visibility) or possibly the actual routing logic, and he's skeptical the tok/s-based gating methodology is fair to it.
-
-7. Current Work:
-   Immediately before this summary was triggered, I was mid-investi
 ```
 
 ### `1785266802256` — 7/28/2026, 7:24:10 PM PT — 178 turns
@@ -1099,51 +1309,6 @@ When done, run order 66.
 </attempt_completion>
 ```
 
-### `1785266083468` — 7/28/2026, 1:14:06 PM PT — 162 turns
-
-**Original task:**
-
-```
-Play Dr. of Frankenstein for 90 minutes and use time stamps to make sure that you were working for actually 90 minutes. Make improvements and increase capabilities based on needs and bugs found needing resolution, etc...
-```
-
-**Ideas referenced:** #11925, #12299, #12619, #12713, #13082, #13202, #1468, #15158, #16588, #178501, #1850, #19177, #19188, #19403, #19458, #19460, #19490, #19491, #19518, #19558, #19571, #19585, #19604, #19611, #19615, #19690 [deployed], #19704, #19714 [proposed], #19777 [proposed], #19778 [proposed], #19796 [deployed], #19797 [deployed], #19798 [in_progress], #19799 [proposed], #2084, #2085, #2087 [resolved], #2088, #21910, #3048, #3049, #4948, #4962
-
-**Last PICKUP PROMPT:**
-
-```
-ned worker resets in last hour
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task Frankenstein Doctor session follow-up — fix remaining issues from 2026-07-28 session.
-
-Where we left off (verified 2026-07-28 13:13 PT):
-- Fleet healthy except: cesar DOWN (stale 5638m), claudia DOWN, julia DOWN. frankenstein-llm router resolved to 127.0.0.1:11510 OK.
-- Joshua 70B healthy (10.100.0.4:11434, 59ms)
-- 2 fixes deployed (bug library PAGER + voice handoff regex), 2 investigations handed off
-- Bug library MCP PID 1294 STILL on old build — restart needed for PAGER fix to take effect
-- Handoff note written to emsuserver /tmp: not yet persisted (record_handoff_note tool not found on emsu-operations server)
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #19798 [in_progress] — e2pdf admin tab: WP admin login → check if `e2pdf` menu visible in admin sidebar for Vicky's role (PD/Instructor). Check e2pdf caps vs user role (admin_portal.users → role). If caps mismatch, add `e2pdf` cap to matching role or set `e2pdf` capability on the user. Alternatively check if JS in e2pdf.backend.js is hiding the tab.
-2. #19799 [proposed] — 70B serve dead: find RunPod API key (likely in ~/Documents/Cline/MCP/* or an env file), check pod status at api.runpod.io/v2, re-mint dead pods. Verify 120B pod restores. Run frankenstein_tier_health after.
-3. **Bug library restart**: kill PID 1294 (`kill 1294`), Cline will auto-restart the MCP. Then call bug_library_stats to verify clean output (no "PAGER set to stdout").
-4. **Silence guard review**: check the unanswered email/chat/SMS queues — are they actual backlogs or false positives? Check event_id 4132054 (95 emails) and 4132056 (59 chat visitors).
-
-Reference IDs:
-- Tickets: 21910 (e2pdf), 19704 (churn cap), TKT-20260728-9F170918 (James McDonald)
-- Ideas filed: #19796 [deployed], #19797 [deployed], #19798 [in_progress], #19799 [proposed]
-- Bug library incidents: #2087 (voice regex fixed), #2088 (PAGER fix deployed, needs restart)
-- Files touched: /var/www/emtskills/cron/cron_voice_force_handoff_watchdog.php (deployed), /Users/rubenmajor/Documents/Cline/mcp-servers/frankenstein-bug-library/src/index.ts + build/index.js (rebuilt, needs MCP restart)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
 ### `1785267580861` — 7/28/2026, 12:52:17 PM PT — 94 turns
 
 **Original task:**
@@ -1186,53 +1351,6 @@ Reference IDs:
 - Files touched: /var/www/emtskills/lib/grievance_completeness.php, /var/www/emtskills/cron/cron_grievance_completeness_review.php, /var/www/emtskills/api/grievance_completeness_api.php, /var/www/emtskills/views/_view_grievance_completeness.php, /var/www/emtskills/routes/grievance_manager.php, /var/www/emtskills/lib/report_registry.php
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785266096234` — 7/28/2026, 12:45:47 PM PT — 112 turns
-
-**Original task:**
-
-```
-Play Dr. of Frankenstein EXECUTOR for 90 minutes and use time stamps to make sure that you were working for actually 90 minutes. Make improvements and increase capabilities based on needs and bugs found needing resolution, etc...
-```
-
-**Ideas referenced:** #0056, #055160, #11925, #12430, #1281, #1309, #1314, #15158, #15333, #15367, #15652, #17169, #17170, #17486, #17494, #17504, #17505, #178483, #17913, #18135, #18357, #18395, #18442, #1850, #18605 [proposed], #18783 [deployed], #18786, #18787, #18827 [proposed], #1896, #1897, #19079, #19325, #19338, #19375, #19433, #19435, #19439, #19458, #19460, #19490, #19491, #19494, #19503, #19504, #19505, #19509, #19548, #19558, #19564, #19575, #19616, #19617, #19618, #19619, #19622, #19623, #19629, #19630, #19632, #19638, #19640, #19642, #19643, #19644, #19648, #19651, #19652, #19653 [queued], #19658, #19661, #19670, #19671 [rejected], #19684, #19686 [queued], #19689 [queued], #19776 [executing], #19777 [proposed], #19778 [proposed], #19785 [deployed], #19788 [proposed], #19789 [proposed], #198754, #2043, #2075, #2076, #2077, #2078, #212529, #3541, #3953, #3957, #4536, #495057, #5029, #5034, #7137, #7552, #7925, #8281, #8321, #842029, #8563, #8598, #9191, #9222, #9235
-
-**Last PICKUP PROMPT:**
-
-```
-
-<attempt_completion>
-<result>
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1784836559542 — Frankenstein EXECUTOR: continue improvements post-cascade fix.
-(task_id was the auto-assigned session ID. If missing, roll with "Frankenstein EXECUTOR after-cascade session".)
-
-Where we left off (verified 2026-07-28 12:45 PT):
-- SILENT-GHOST CASCADE STOPPED: executor pick query (cron_ruben_implement.php lines 2739, 3331) now filters out "Blocker auto-filed:%" wrapper ideas. Backup at /tmp/cron_ruben_implement.php.bak-silentghost-fix-20260728-1230.
-- 213 stale blocker ideas mass-demoted to rejected → 0 remaining
-- Ticket clustering cron bug-fixed (missing PDO arg) + wired into crontab (*/5 * * * *)
-- Fleet health: Artemis 120B UP, Cicero 235B DOWN, GLM 5.2 ring healthy, ollama quarantined (2 fail streak)
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #19788 [proposed] — Verify executor picked REAL ideas (not wrappers) — check cron_ruben_implement log
-2. #19789 [proposed] P1 — Create lib/codec_trace_clustering.php (does NOT exist on disk) + wire cron
-3. #19689 [queued] — Restore second 120B rung: investigate Julia+Claudia bringup
-4. #19686 [queued] — Argus fleet integration: add to litellm config.yaml model_list + fallbacks
-5. #19671 [rejected] — Re-file spec-shape contract fix with correct patches (DO NOT revert failure_category)
-
-Reference IDs:
-- Ideas filed: #19785 [deployed], #19788 [proposed], #19789 [proposed]
-- Ideas rejected: #19671 [rejected]
-- Files touched: /var/www/emtskills/cron/cron_ruben_implement.php, /var/www/emtskills/cron/cron_ticket_clustering.php, /etc/cron.d/emsu-crons
-- Handoff notes: /Users/rubenmajor/Documents/Cline/HANDOFF_NOTES.md (appended)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
@@ -1297,101 +1415,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 - [x] Final verification via reconcile_ideas
 - [x] Completion
 </task_progress>
-</attempt_completion>
-```
-
-### `1785261275539` — 7/28/2026, 12:40:29 PM PT — 232 turns
-
-**Original task:**
-
-```
-Why was this occurrign? I'm not running anything in Cline here to restart the LitelLM? -> {"message":"Failed to fetch LiteLLM model info: Bad Gateway","modelId":"frankenstein-llm","providerId":"litellm"}
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11990, #12477, #12584, #12618, #12824, #12872, #12878, #13202, #1593, #16163, #16265, #16304, #16578, #16588, #16844, #16849, #1754, #1755, #1759, #1779, #18312, #18326, #1876, #1896, #19239 [rejected], #19770 [proposed], #1986, #1988, #1989, #1991, #2006, #2014, #2084, #2085
-
-**Last PICKUP PROMPT:**
-
-```
-e and fix the invalid API key.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up Frankenstein Doctor — 120B pool recovery + LiteLLM hardening.
-
-Where we left off (verified 2026-07-28 11:27 PT):
-- julia-120b DOWN (HTTP 000 on :11513) — pool running on artemis alone
-- LiteLLM docker has RestartPolicy=no — won't survive daemon restart
-- 5 bugs cataloged in this session (see Doctor Report above)
-- Syslog: LineTooLong bug on :11510 tools adapter, glm-5.2 fallback name broken, 401 spam from 10.100.0.1
-
-Open threads to drive next:
-1. (human-only decision, no idea) — Restart julia-120b: SSH to julia (wg 10.100.0.15 or wopr:2205) and restart vLLM service
-2. (human-only decision, no idea) — `sudo docker update --restart=always litellm` on WOPR
-3. (human-only decision, no idea) — Fix glm-5.2 fallback name in /etc/litellm/config.yaml: change `model: glm-5.2` to `model: openai/glm-5.2`
-4. (human-only decision, no idea) — Investigate /v1/responses vs /v1/chat/completions routing mismatch on :11510 tools adapter
-5. (human-only decision, no idea) — Trace 10.100.0.1 401 auth source
-
-Reference IDs:
-- Ticket: none
-- Ideas filed: none
-- Files touched: /etc/litellm/config.yaml (read), syslog (read), Docker events (read)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785261380940` — 7/28/2026, 12:20:42 PM PT — 64 turns
-
-**Original task:**
-
-```
-#Comprehensive
-
-Give this again, i was supposed to get actual copy prompts where I click on the copy prompt only, wehere I don't select text Just press the button and it copies to the clipboard. That's the cline rule I asked for:
-
-GATE D (9d) and COPY-WINDOW FORMAT (9e) both shipped to _RULE_TREE.md and CLINERULES_MIRROR.md (42 files, 339613 bytes). Mirrors regen every hour, every Cline window gets these gates.
-
-Below are 5 copy windows — each self-contained, with concrete commands, verified provenance, and `——[COPY]——` markers for one-click paste. The clinerule format requirement is now enfor
-```
-
-**Ideas referenced:** #0000, #11925, #13840, #15158, #16673, #17169, #17170, #17486, #17494, #17504, #17505, #18605 [proposed], #18783 [deployed], #18786, #18787, #18827 [proposed], #1896, #1897, #19125, #19339 [proposed], #19379, #19490 [deployed per prior session], #19491, #19509 [executing], #19553 [deployed], #19562 [deployed], #19592, #19594 [executing], #19598 [executing], #19667, #19668, #19679, #19682, #19686 [queued], #19689 [queued], #19701 [queued], #19704 [executing], #19706 [queued], #19707 [deployed], #19708 [deployed], #19724 [queued], #19740 [deployed], #19741 [deployed], #19743 [queued], #19756 [deployed], #19766 [proposed], #19767 [proposed], #19769 [proposed], #19770 [proposed], #19772 [proposed], #19773 [proposed], #19775 [deployed], #1999, #21672, #21676, #21704, #21736, #21737, #21738, #21739, #21740, #21741, #21784, #21785, #21786, #21787, #21793, #21805
-
-**Last PICKUP PROMPT:**
-
-```
- order 66 per EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — Rebase and deliver 6 copy windows after Mac crash killed all Cline windows at 12:04 PT.
-
-Where we left off (verified 2026-07-28 12:18 PT):
-- VS Code crashed 12:01 PT (4th crash today). macOS rebooted at 09:37 and 10:52. WOPR server healthy (up 3 days).
-- 6 Cline windows died at 12:04. All orchestrator work for prior 5 windows + new Argus/CFA/turn-tracking windows was lost.
-- #19594 [impl_failed] — executor failed on hallucinated schema, 12/15 tests passed, sandbox files at /tmp/ruben_sandbox_19594_1785256622 are valid PHP
-- #19770 [proposed] — Julia+Claudia 120B TP=2 relaunch needed (Ray head died during pkill)
-- CFA ideas filed: #19766-19772 all proposed
-- Argus steering: #19773 proposed (config.yaml entry exists, needs verification)
-- Turn-tracking window: no idea filed, was mid-build at crash
-- Grievance completeness files exist in sandbox /tmp/ruben_sandbox_19594_1785256622/ — 4 new files + 3 modified files, all PHP-lint-clean
-
-Open threads to drive next:
-1. (human-only decision — no idea) — Ruben picks which of the 6 copy windows above to dispatch. All are self-contained, parallel-safe, run-to-completion.
-2. (human-only decision — no idea) — Long-term RCA fix for VS Code crashes: cap concurrent Cline windows at 4-5 max to prevent JS heap exhaustion. Cline extension has no concurrency governor.
-
-Reference IDs:
-- Ideas filed: none new this session
-- Prior windows: #19594 [impl_failed], #19770 [proposed], #19773 [proposed], #19766-#19772 [all proposed], #19704 [deployed], #19775 [deployed], #19509 [executing]
-- Files touched: ~/Documents/Cline/Rules/_RULE_TREE.md, ~/Documents/Cline/Rules-archive/91-copy-window-format.md
-
-When done, append to cline_task_ledger.md per rule 07 and run order 66 per EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 
@@ -4603,83 +4626,4 @@ no queue, decode_live=true.\n\n════════════════�
 }
 </arguments>
 </use_mcp_tool>
-```
-
-### `1785040020369` — 7/25/2026, 9:42:05 PM PT — 10 turns
-
-**Original task:**
-
-```
-Can you do a benchmark on GLM 5.2 in the last 5 min
-```
-
-**Ideas referenced:** #16588
-
-**Last PICKUP PROMPT:**
-
-```
-red over the desired interval.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #⟨task‑id⟩ — Benchmark GLM 5.2.
-
-Where we left off (verified 2026‑07‑25 21:39 PDT):
-- GLM 5.2 is currently inactive; no live endpoint was located.
-- Host `augustus` heartbeat is stale; live‑probe required before any claim.
-
-Open threads to drive next:
-1. #⟨idea‑id‑1⟩ [proposed] — Restart or redeploy the `augustus` host to activate GLM 5.2.
-2. #⟨idea‑id‑2⟩ [proposed] — After activation, run `llm_locate` and `frankenstein_what_served` to collect latency, tok/s, and cost metrics for a 5‑minute window.
-
-Reference IDs:
-- Ideas filed: #⟨idea‑id‑1⟩ [proposed], #⟨idea‑id‑2⟩ [proposed]
-- Files touched: none
-
-When done, append to `cline_task_ledger.md` (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785019334706` — 7/25/2026, 9:25:21 PM PT — 40 turns
-
-**Original task:**
-
-```
-Hey I'm just checking to see how you were doing and feeling today
-```
-
-**Ideas referenced:** #0000, #12459
-
-**Last PICKUP PROMPT:**
-
-```
-red "fast" in the present moment.
-
-════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-════════════════════════════════════════════
-
-Pick up task #1 — GLM 5.2 speed question.
-
-Where we left off (verified 2026-07-25 22:25:09):
-- Explained why the situation feels funny and gave an EMT analogy.
-- Added a cat-dog hybrid perspective.
-- Answered the user's question about speed, noting the lack of concrete measurement and typical throughput ranges.
-
-Open threads to drive next:
-None — no further actions requested.
-
-Reference IDs:
-- Ideas filed: none
-- Ideas closed: none
-- Files touched: none
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```

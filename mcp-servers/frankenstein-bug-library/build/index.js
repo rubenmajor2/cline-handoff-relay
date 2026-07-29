@@ -76,7 +76,7 @@ function woprQuery(sql) {
     -o BatchMode=yes \
     -o ServerAliveInterval=5 \
     emsuserver@emsuniversity.com \
-    "PAGER= mysql --defaults-file=/home/emsuserver/.my.cnf --skip-pager -N --batch admin_portal"`;
+    "PAGER= mysql --defaults-file=/home/emsuserver/.my.cnf --skip-pager -N --batch admin_portal 2>/dev/null | grep -v '^PAGER set'"`;
     let raw;
     try {
         raw = (0, child_process_1.execSync)(cmd, { timeout: 15_000, encoding: "utf8", shell: "/bin/bash" });
@@ -128,7 +128,7 @@ function woprExecB64(sql) {
     -o BatchMode=yes \
     -o ServerAliveInterval=5 \
     emsuserver@emsuniversity.com \
-    "PAGER= base64 -d | mysql --defaults-file=/home/emsuserver/.my.cnf --skip-pager -N --batch admin_portal"`;
+    "PAGER= base64 -d | mysql --defaults-file=/home/emsuserver/.my.cnf --skip-pager -N --batch admin_portal 2>/dev/null | grep -v '^PAGER set'"`;
     try {
         return (0, child_process_1.execSync)(cmd, { timeout: 15_000, encoding: "utf8", shell: "/bin/bash" });
     }

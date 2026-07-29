@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/29/2026, 7:53:19 AM PT | window: last 72h | 139 tasks | index total 310 (parsed 0, cached 310)
+Generated: 7/29/2026, 8:53:20 AM PT | window: last 72h | 135 tasks | index total 310 (parsed 0, cached 310)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -145,10 +145,6 @@ Generated: 7/29/2026, 7:53:19 AM PT | window: last 72h | 139 tasks | index total
 | `1785098597876` | 7/26/2026, 1:49:56 PM | 56 | 167KB | do an RCA on this - see MCP troubleshooting document on descktop and resolve these:  |
 | `1785098066129` | 7/26/2026, 1:42:45 PM | 70 | 214KB | why does the email  subject say "Deadman" sent to a student?  |
 | `1785095167228` | 7/26/2026, 1:05:04 PM | 120 | 310KB | I am getting bombarded with text messages. Some of these are stale or have false informati |
-| `1785071868790` | 7/26/2026, 8:12:43 AM | 330 | 713KB | Argus showing this and I know it's inaccurate. This is after 25 sec. |
-| `1785078097518` | 7/26/2026, 8:02:28 AM | 8 | 54KB | How fast is GLM Max vs high? |
-| `1785078021344` | 7/26/2026, 8:01:09 AM | 12 | 74KB | How fast is GLM Max vs high? |
-| `1785077964853` | 7/26/2026, 8:00:39 AM | 14 | 75KB | How fast is GLM Max vs high? |
 
 ---
 
@@ -5154,138 +5150,3 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
-
-### `1785071868790` — 7/26/2026, 8:12:43 AM PT — 330 turns
-
-**Original task:**
-
-```
-Argus showing this and I know it's inaccurate. This is after 25 sec.
-
-Something is off. We are still training GLM5.2 local and it's lightening fast. Fix this -> Argus Terminal · MasterAdmin
-Test as:
-
-MasterAdmin
-Dashboard
-Argus
-New chat started. Saves automatically after your first message.
-You
-Show open tickets
-Argus
-Work trace (3 steps) - click to expand
-Argus
-Still working on this one. The model pool is saturated right now, so your request is queued and I am continuing in the background. Nothing was lost and you do not need to resend it.
-
-https://emsuniversity.com/emtskills/routes/argus_dow
-```
-
-**Ideas referenced:** #10182, #11570, #12301, #12584, #16213, #16263, #1668, #17169, #18605 [proposed], #18783 [deployed], #18786, #18787, #18827 [proposed], #1896, #1897, #19339 [proposed], #1999 [deployed], #274160, #30363, #69707
-
-**Last PICKUP PROMPT:**
-
-```
-ask "Show open tickets" again.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — Argus Terminal post-fix verification.
-
-Where we left off (verified 2026-07-26 08:12 PT):
-- Argus terminal dead-end root-caused and fixed. Cline-rules corpus was contaminating the Argus system prompt, teaching gpt-oss-120b to emit Cline XML tool blocks instead of answering. Removed, replaced with an EMSU house-style block.
-- A/B verified on identical payloads: BEFORE finish=stop/content=null/tool_calls=null; AFTER finish=tool_calls with real structured get_open_tickets{"limit":10}.
-- Recovery ladder deployed as defense in depth (reasoning salvage, one bounded same-model retry, no dead-end fallback). No Anthropic, no model swap.
-- Argus confirmed 100% on frankenstein-llm. The earlier glm-5.2-local routing attempt is fully reverted.
-- php8.3-fpm-errors.log ownership fixed so AllTastic diagnostics are observable again.
-- Bug library #1999 [deployed] (verified: bug_library_record returned "Incident recorded + VERIFIED: frankenstein_router_incidents #1999", row existence confirmed on WOPR).
-
-Open threads to drive next:
-1. #19339 [proposed] (verified: reconcile_ideas returned "status=proposed dev_stage=idle") — frankenstein-tools adapter returns tool_calls=null while reasoning shows clear intent to call. Secondary robustness gap, not blocking Argus. Approve + implement, or run idea_promote_and_run.
-2. Ruben to confirm the terminal answers end-to-end in the browser (needs an authenticated session, which cannot be driven from here). If it still misbehaves, pull the fresh AllTastic lines now landing in /var/log/php8.3-fpm-errors.log — they were invisible before this session.
-
-Reference IDs:
-- Ideas filed: #19339 [proposed]
-- Bug library: #1999 [deployed]
-- Files touched: /var/www/emtskills/routes/alltastic_api.php (decontam block at ~4597, recovery ladder at ~11275, helper argusSalvageReasoningText at ~1519)
-- Backups on WOPR: /tmp/alltastic_api.php.bak-decontam-20260726-080737, /tmp/alltastic_api.php.bak-recovery-20260726-080203
-- HANDOFF_NOTES.md appended (08:10 PT entry, supersedes the stale 06:50 PT glm-5.2 entry)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Revert GLM5.2 routing — Argus stays on frankenstein-llm (no Anthropic)
-- [x] Fix broken PHP error_log ownership so failures are observable
-- [x] ROOT CAUSE found + A/B proven: Cline-rules corpus contaminating Argus system prompt
-- [x] Deploy decontamination (ARGUS_CLINERULES_DECONTAM_V1)
-- [x] Deploy recovery ladder (ARGUS_EMPTY_REPLY_RECOVERY_V1)
-- [x] Verify: after fix, same model returns real structured tool_calls
-- [x] Record bug library #1999 + file idea #19339 + rule-267 reconcile
-- [x] Append corrected HANDOFF entry
-</task_progress>
-</attempt_completion>
-```
-
-### `1785078097518` — 7/26/2026, 8:02:28 AM PT — 8 turns
-
-**Original task:**
-
-```
-How fast is GLM Max vs high?
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326
-
-**Last PICKUP PROMPT:**
-
-```
-ring based on live probe data.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — GLM Max vs High speed comparison.
-
-Where we left off (verified 2026-07-26T08:01:46-07:00):
-- frankenstein_host_probe returned glm52-ring at 0.86 tok/s (slow_by_design, decode_live=true)
-- frankenstein_registry shows two GLM-5.2 variants: local (L4g, free, PP=6 Hex ring) and cloud (L3, paid, Zhipu API)
-- Question answered: local is ~0.86 tok/s, cloud is 50-100x faster
-
-Open threads to drive next:
-- None — single-turn factual Q&A complete. Speed comparison delivered.
-
-Reference IDs:
-- Tools used: frankenstein_host_probe, frankenstein_registry (both project-frankenstein MCP)
-- Registry entries: glm-5.2-local (L4g), glm-5.2 (L3)
-- ladder tier_fallthrough confirmed: L4g → L3
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785078021344` — 7/26/2026, 8:01:09 AM PT — 12 turns
-
-**Original task:**
-
-```
-How fast is GLM Max vs high?
-```
-
-**Ideas referenced:** #10108, #10740, #11735, #11741, #11781, #12059, #12060, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326, #6711, #6719
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785077964853` — 7/26/2026, 8:00:39 AM PT — 14 turns
-
-**Original task:**
-
-```
-How fast is GLM Max vs high?
-```
-
-**Ideas referenced:** #10108, #10740, #11735, #11741, #11781, #12059, #12060, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326, #6711, #6719
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

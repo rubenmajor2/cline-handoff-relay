@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-07-29T16:53:20.421Z",
+ "generated_at": "2026-07-29T17:53:20.699Z",
  "counts": {
-  "parsed": 0,
+  "parsed": 1,
   "reused": 310,
   "failed": 0,
-  "total": 310
+  "total": 311
  },
  "tasks": {
   "1784522296714": {
@@ -101886,6 +101886,34 @@
     "19567": null,
     "21970": null,
     "21997": null
+   }
+  },
+  "1785347179098": {
+   "task_id": "1785347179098",
+   "mtime": 1785347590797,
+   "created_at": "2026-07-29T17:46:19.098Z",
+   "last_modified": "2026-07-29T17:53:10.797Z",
+   "size_kb": 166,
+   "turn_count": 33,
+   "title": "How many turns of each individual LLM,, not groups, but what's inside of each group in the last 2 hours. For example not frankenstsitn-tools, but what's inside of it",
+   "pickup_prompt": null,
+   "ideas": {
+    "10108": null,
+    "10740": null,
+    "11741": null,
+    "11781": null,
+    "12477": null,
+    "12618": null,
+    "12824": null,
+    "12872": null,
+    "12878": null,
+    "13202": null,
+    "16163": null,
+    "16265": null,
+    "16304": null,
+    "16844": null,
+    "18312": null,
+    "18326": null
    }
   }
  }

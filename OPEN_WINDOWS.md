@@ -6,12 +6,19 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/29/2026, 4:53:18 AM PT | window: last 72h | 136 tasks | index total 303 (parsed 0, cached 303)
+Generated: 7/29/2026, 5:53:18 AM PT | window: last 72h | 143 tasks | index total 310 (parsed 7, cached 303)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785314663557` | 7/29/2026, 4:19:47 AM | 903 | 14936KB | I had a working build of GLM 52 local at 10 PM tonight. A series of changes have now made  |
-| `1785322364632` | 7/29/2026, 3:59:07 AM | 5 | 8KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
+| `1785329338571` | 7/29/2026, 5:53:17 AM | 15 | 52KB | Tell me about all the open tickets right now |
+| `1785329349404` | 7/29/2026, 5:52:19 AM | 8 | 30KB | Tell me about all the open tickets right now |
+| `1785314663557` | 7/29/2026, 5:52:09 AM | 1161 | 15413KB | I had a working build of GLM 52 local at 10 PM tonight. A series of changes have now made  |
+| `1785328586617` | 7/29/2026, 5:47:20 AM | 30 | 334KB | WE ARE HAVING RESOURCE issues here in cline. Please do not kill my cline windows. |
+| `1785328677828` | 7/29/2026, 5:47:18 AM | 44 | 141KB | what's goin gon with flm52-only? |
+| `1785327510520` | 7/29/2026, 5:35:05 AM | 40 | 93KB | I'd like to see a different comparison to the various CFA's and your thoughts on how well  |
+| `1785328241690` | 7/29/2026, 5:34:48 AM | 17 | 469KB | I'd like to see a different comparison to the various CFA's and your thoughts on how well  |
+| `1785326871798` | 7/29/2026, 5:17:54 AM | 16 | 120KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
+| `1785322364632` | 7/29/2026, 5:13:46 AM | 10 | 16KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
 | `1785322147808` | 7/29/2026, 3:53:39 AM | 3 | 5KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
 | `1785321841013` | 7/29/2026, 3:44:01 AM | 1 | 2KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
 | `1785320859831` | 7/29/2026, 3:37:41 AM | 14 | 47KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
@@ -151,7 +158,85 @@ Generated: 7/29/2026, 4:53:18 AM PT | window: last 72h | 136 tasks | index total
 
 ## Per-window detail
 
-### `1785314663557` — 7/29/2026, 4:19:47 AM PT — 903 turns
+### `1785329338571` — 7/29/2026, 5:53:17 AM PT — 15 turns
+
+**Original task:**
+
+```
+Tell me about all the open tickets right now
+```
+
+**Last PICKUP PROMPT:**
+
+```
+ttempt_completion>
+<result>
+═══════════════════════════════════════════════════
+PICKUP PROMPT — Open Tickets Status
+═══════════════════════════════════════════════════
+
+**Task:** Pulled all open tickets for Ruben's morning check. Queried via `search_tickets(unfiltered, 50)` then `search_tickets(status=open, 50)`. Compiled group summary. Pure read-only — no actions taken.
+
+═══ Where we left off ═══
+- Read full ticket dump → built priority-grouped summary
+- 63 active: ~28 high, ~20 medium, ~15 low
+- Biggest cluster: 17 unanswered chat handoffs (agent 124)
+- 3 urgent NREMT tickets for Leea Waterman
+- 2 refund/cancel (Erika Carpenter, Nicole)
+- 3 pending Vicky tech issues (e2pdf, Matrix login, exam reopen)
+- 11 voice repeat callers AI couldn't resolve
+
+═══ Open threads ═══
+- None — Ruben asked for a readout, got the readout. No action requested.
+
+═══ Reference IDs ═══
+- No ideas filed, no artifacts created, no files touched.
+</result>
+</attempt_completion>
+```
+
+### `1785329349404` — 7/29/2026, 5:52:19 AM PT — 8 turns
+
+**Original task:**
+
+```
+Tell me about all the open tickets right now
+```
+
+**Ideas referenced:** #21970, #21997
+
+**Last PICKUP PROMPT:**
+
+```
+igned) holds 35 of 49 tickets.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT
+═══════════════════════════════════════════════
+
+**Where we left off:**
+- Listed all 49 open tickets with breakdown by priority, pattern, and age
+- No changes made — read-only inquiry
+
+**Open threads:**
+
+1. **10 chat handoff unanswered tickets in ~2 days** — chat widget AI may need health check or threshold tuning. See `chat_widget_healthcheck(action="run")`
+2. **Leea Waterman has 3 duplicate NREMT verification tickets** (21994, 21998, 21999) — consolidate or close duplicates
+3. **6 outbound email blocked (urldefense.com/sendgrid/sentrylink)** — likely needs URL domain whitelist update in outbound email config
+4. **Externship backlog:** 21743 (no communication since 7/8), 22006 (submitted 7/19), 22005 (Bao-Khanh Pham), 21769 (Lakshmi Vemula), 22029 (Meir Ross clarification) — check `get_externship_pending_queue()` for full picture
+5. **Erika Carpenter refund/cancel (#21970)** — needs payment review with `verify_payment_state()`
+6. **Jason Pan Moodle suspended despite payment proof (#21997)** — needs `verify_payment_state()` + `fix_moodle_enrollment(dry_run=true)` to diagnose
+
+**Reference IDs:** None filed (read-only inquiry)
+
+**Files touched:** none
+
+**Verified:** 2026-07-29 05:49 PT
+</result>
+</attempt_completion>
+```
+
+### `1785314663557` — 7/29/2026, 5:52:09 AM PT — 1161 turns
 
 **Original task:**
 
@@ -159,7 +244,7 @@ Generated: 7/29/2026, 4:53:18 AM PT | window: last 72h | 136 tasks | index total
 I had a working build of GLM 52 local at 10 PM tonight. A series of changes have now made the GLM local stall out. I need you to get this up and running again. It's stalling. It was running at like super fast
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11847, #11936, #11953, #12061, #12247, #12251, #12262, #12266, #12285, #12314, #12335, #12364, #12365, #12366, #12368, #12403, #12407, #12459, #12477, #12618, #12657, #12688, #12689, #12710, #12824, #12872, #12878, #13108, #13121, #13191, #13196, #13199, #13202, #13453, #13470, #13874, #1593, #16163, #16265, #16304, #16578, #16588, #16590, #16648, #16844, #17202, #17203, #17205, #17300, #17430, #1754, #1755, #178531, #1819, #18312, #18326, #18448, #1876, #18786, #1884, #18868, #1896, #1910 [deployed], #19135, #19338, #1934, #1965, #1966, #1967, #19686, #19879, #19881, #19882, #19883, #19887 [proposed], #19903, #19907, #19925, #19931 [proposed], #19932 [proposed], #19936 [proposed], #19937 [proposed], #19938 [approved], #19942 [proposed], #19945 [proposed], #2014, #2050, #2079, #2084, #2085, #2089, #2091 [deployed], #2092, #2096, #2098 [deployed], #2099
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11847, #11936, #11953, #12061, #12247, #12251, #12262, #12266, #12285, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #12403, #12407, #12459, #12477, #12506, #12618, #12657, #12688, #12689, #12710, #12761, #12763, #12764, #12824, #12872, #12878, #13075, #13108, #13121, #13191, #13196, #13199, #13202, #13453, #13470, #13874, #1593, #16163, #16265, #16304, #16578, #16588, #16590, #16648, #16714, #16717, #16718, #16844, #17202, #17203, #17205, #17300, #17430, #1754, #1755, #178531, #1819, #18312, #18326, #18448, #1876, #18786, #1884 [deployed], #18868, #1896, #1910 [deployed], #19135, #19338, #1934, #1965, #1966, #1967, #19686, #19879, #19881, #19882, #19883, #19887 [proposed], #19903, #19907, #19925, #19931 [proposed], #19932 [proposed], #19936 [proposed], #19937 [proposed], #19938 [approved], #19942 [proposed], #19945 [proposed], #19948, #19949, #2014, #2050, #2079, #2084, #2085, #2089 [deployed], #2091 [deployed], #2092, #2096, #2098 [deployed], #2099 [deployed], #2100 [deployed], #48031, #48140
 
 **Last PICKUP PROMPT:**
 
@@ -183,7 +268,193 @@ re speed",
     "Ruben: '
 ```
 
-### `1785322364632` — 7/29/2026, 3:59:07 AM PT — 5 turns
+### `1785328586617` — 7/29/2026, 5:47:20 AM PT — 30 turns
+
+**Original task:**
+
+```
+WE ARE HAVING RESOURCE issues here in cline. Please do not kill my cline windows.
+```
+
+**Ideas referenced:** #19173 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+uch your active Cline windows.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task Cline resource crisis (Rule 28) — system diagnostics and mitigation.
+
+Where we left off (verified 2026-07-29 05:40 PT):
+- Identified root cause: argv.json js-flags=8192 causing 50 Plugin procs × 8 GB heap ceiling
+- 117 renderers, 50 Plugin procs, ~132 GB VS Code RSS, 92% swap, load avg 11-16
+- argv.json path: /Users/rubenmajor/.vscode/argv.json
+- Rule 28 documentation confirms this is the known trap pattern
+
+Open threads to drive next:
+1. #19173 [proposed] — Identify stale/idle windows for safe closure (task age/staleness check)
+2. #19173 [proposed] — Create Cline-Artemis VS Code Profile per Rule 28 recommendations
+3. (human-only decision, no idea) — Whether to adjust argv.json js-flags from 8192 to 4096 or remove
+
+Reference IDs:
+- Files touched: /Users/rubenmajor/.vscode/argv.json
+- Rule: 28 (Mac VS Code argv.json js-flags amplifier)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Check system resource usage (memory, CPU, Cline processes)
+- [x] Identify resource bottlenecks (Rule 28 trap confirmed)
+- [x] Check argv.json configuration (js-flags=8192 active)
+- [x] Provide analysis and actionable recommendations
+</task_progress>
+</attempt_completion>
+```
+
+### `1785328677828` — 7/29/2026, 5:47:18 AM PT — 44 turns
+
+**Original task:**
+
+```
+what's goin gon with flm52-only?
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16588, #16844, #18312, #18326, #18820, #18868, #1910, #1967, #19887, #19903, #19907, #19910, #19918, #19925, #19927, #19928, #2098
+
+**Last PICKUP PROMPT:**
+
+```
+<result>
+Not a task completion
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task # — glm52-only health check, read-only diagnostic
+
+Where we left off (verified 2026-07-29 05:46 PT):
+- glm52-only returning HTTP 500, route hits 127.0.0.1:8210 to tunnel to spark-2aa8:8210
+- vLLM alive (PID 683053, PP=6 rank-0) but HTTP refusing connections, ring not fully formed
+- 6-node ring may be missing 1-2 nodes (cesar, julia, claudia = down in fleet inventory)
+- Artemis 120B spill path healthy at 27.09 tok/s, fleet is operational
+- Last night's LiteLLM WINDOW_O_DOWN fix holding, ring config OK, just node availability
+
+Open threads to drive next:
+1. (human-only decision, no idea)
+
+Reference IDs:
+- Ideas filed: none
+- Files touched: none
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+
+Summary: glm52-only is routing to the GLM-5.2 PP=6 Hex ring at spark-2aa8:8210. The vLLM process is alive but the HTTP endpoint is refusing connections because the ring requires all 6 PP nodes to handshake before serving, and fleet inventory shows 3 hosts down (cesar, julia, claudia). The fleet IS operational via the Artemis 120B spill path. This is a ring-node availability issue, not a config or routing bug.
+</result>
+<task_progress>
+- [x] Check fleet state and GLM-5.2 routing status
+- [x] Investigate GLM-5.2-only mode/configuration
+- [x] Report findings to Ruben
+</task_progress>
+</attempt_completion>
+```
+
+### `1785327510520` — 7/29/2026, 5:35:05 AM PT — 40 turns
+
+**Original task:**
+
+```
+I'd like to see a different comparison to the various CFA's and your thoughts on how well each one is performing in relation to the others
+```
+
+**Ideas referenced:** #19950 [proposed], #19951 [proposed], #19952 [proposed], #19953 [proposed], #19954 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ dividends with modest effort.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task -- CFA Fleet Comparative Analysis with 5 concrete ideas filed
+
+Where we left off (verified 2026-07-29 05:34 PT):
+- Full analysis of all 5 CFAs compiled with live data -- Chat Widget 32/42 healthy, Voice AI 729 calls/48h with 51% short legs, Email AI 1,663 vol
+- 5 orchestrator ideas filed covering the biggest gaps found
+
+Open threads to drive next:
+1. #19950 [proposed] -- Fix urldefense.com allowlist in MailerUrlAllowlist (Email AI false positive, ~15 min fix)
+2. #19951 [proposed] -- Chat Widget handoff-unanswered alerting at 30min threshold + Discord #supcall-requests fallback
+3. #19952 [proposed] -- Voice AI repeat-caller auto-escalation counter (3+ calls/24h from same number) + prompt audit
+4. #19953 [proposed] -- Audit Email AI + Chat Widget SLS-grounding: are they checking student state before replying?
+5. #19954 [proposed] -- SLA pre-breach alert at 70% threshold (4+ breaches in 48h, one at 125h)
+
+Reference IDs:
+- Ideas filed: #19950 [proposed], #19951 [proposed], #19952 [proposed], #19953 [proposed], #19954 [proposed]
+- Files touched: none (analysis only, ideas filed via orchestrator)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785328241690` — 7/29/2026, 5:34:48 AM PT — 17 turns
+
+**Original task:**
+
+```
+I'd like to see a different comparison to the various CFA's and your thoughts on how well each one is performing in relation to the others
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785326871798` — 7/29/2026, 5:17:54 AM PT — 16 turns
+
+**Original task:**
+
+```
+Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 26 hours
+```
+
+**Ideas referenced:** #19947 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ng the 11:52-11:54 UTC window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #19947 — Frankenstein GLM local model usage metrics query (answered).
+
+Where we left off (verified 2026-07-29 05:17 PT):
+- Queried frankenstein_what_served for 1440-min and 1560-min windows
+- glm-5.2-local = 85 turns in both windows (tool caps at 1440 min)
+- Answer delivered to user with full breakdown
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #19947 [proposed] — no further action needed; this was a Q&A metrics query
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: #19947
+- Files touched: none
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785322364632` — 7/29/2026, 5:13:46 AM PT — 10 turns
 
 **Original task:**
 

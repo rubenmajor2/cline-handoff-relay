@@ -6,13 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/28/2026, 4:52:43 PM PT | window: last 72h | 105 tasks | index total 261 (parsed 7, cached 254)
+Generated: 7/28/2026, 5:52:44 PM PT | window: last 72h | 109 tasks | index total 265 (parsed 4, cached 261)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785279405884` | 7/28/2026, 4:52:35 PM | 234 | 816KB | # Full Session Summary — All Issues Covered |
-| `1785267620046` | 7/28/2026, 4:52:33 PM | 115 | 306KB | Pick up task — Verify Argus gets clinerules steering injection via steering_builder.php, c |
-| `1785282386265` | 7/28/2026, 4:52:12 PM | 41 | 177KB | pickup telephony task, have turned off the AI, VAPI agent, but button does not appear to b |
+| `1785286248280` | 7/28/2026, 5:52:37 PM | 19 | 583KB | pick up the Plesk login issue that closed for the second time here in cline irritating: |
+| `1785284021265` | 7/28/2026, 5:52:36 PM | 246 | 576KB | Pick up the QB task that was just closed out. where we were tyring to figure out to do wit |
+| `1785285698105` | 7/28/2026, 5:49:02 PM | 62 | 104KB | We need to resolve the Plesk license issue that was recovered. Can you please resolve that |
+| `1785282386265` | 7/28/2026, 5:40:47 PM | 174 | 1360KB | pickup telephony task, have turned off the AI, VAPI agent, but button does not appear to b |
+| `1785279405884` | 7/28/2026, 5:11:26 PM | 330 | 1012KB | # Full Session Summary — All Issues Covered |
+| `1785283734874` | 7/28/2026, 5:10:20 PM | 11 | 33KB | Quickbooks seems to be blocking their own Invoice Payments filled out from their own syste |
+| `1785267620046` | 7/28/2026, 4:55:04 PM | 128 | 330KB | Pick up task — Verify Argus gets clinerules steering injection via steering_builder.php, c |
 | `1785281710410` | 7/28/2026, 4:51:57 PM | 118 | 737KB | for this image on my desktop, compress and upload it here: https://www.emsuniversity.com/i |
 | `1785281506240` | 7/28/2026, 4:49:58 PM | 122 | 232KB | for what reason is Moodle running slowly? Didnt we jsut mvoe it over to the new 4TB NVME? |
 | `1785272558620` | 7/28/2026, 4:41:13 PM | 530 | 1530KB | Stopping here per your correction — noted that the schedule source is https://emsuniversit |
@@ -120,112 +124,72 @@ Generated: 7/28/2026, 4:52:43 PM PT | window: last 72h | 105 tasks | index total
 
 ## Per-window detail
 
-### `1785279405884` — 7/28/2026, 4:52:35 PM PT — 234 turns
+### `1785286248280` — 7/28/2026, 5:52:37 PM PT — 19 turns
 
 **Original task:**
 
 ```
-# Full Session Summary — All Issues Covered
-
-This thread covered multiple dovetailing issues starting from a WordPress link bug and ending in a QuickBooks payment/suspension investigation. Full recap below.
-
-## 1. Instructor Login Link (FIXED)
-- Root cause: emsuniversity.com + emtrefresher.com share one WordPress DB (`wordpress_2`, prefix `LzDe7pTO_`) with `siteurl`/`home` = emtrefresher.com. Any `home_url()` call building `/emtskills/` links resolved to the wrong domain (404).
-- Fixed in `emsu-modern-design.php` + `emsu-global-design.php`: hardcoded to `https://www.emsuniversity.com/emtskills
+pick up the Plesk login issue that closed for the second time here in cline irritating:
 ```
 
-**Ideas referenced:** #10739, #11925, #12184, #15158, #160482, #161818, #16523, #16613, #178501, #178519, #18713, #18971, #19205, #19206 [approved], #19209 [approved], #19258, #19460, #19506, #19507, #19508 [approved], #19511, #1953, #19558, #19594, #19615, #19686, #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19786 [deployed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19812 [executing], #19813 [rejected], #19814 [executing], #19816 [rejected], #1998, #2000, #2001, #2007, #2042, #9202
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18935, #19567, #2063, #2065, #2073, #7142, #7149
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785284021265` — 7/28/2026, 5:52:36 PM PT — 246 turns
+
+**Original task:**
+
+```
+Pick up the QB task that was just closed out. where we were tyring to figure out to do witht he Auto Void due to Risk Decline:
+
+Also we did save their payment info on those students denied from today with a key so we could run again and possibly yesterday. Can you give me that payment info for htose students so we can run that manually in a file on my desktop / with a password?
+```
+
+**Ideas referenced:** #11925, #15158, #16134, #16555 [queued], #16590 [queued], #178501, #19458, #19460, #19490, #19491, #19492 [rejected], #19495 [rejected], #19511 [rejected], #19558, #19594, #19615, #19686, #19690 [deployed], #19704, #19714 [proposed], #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19807, #19810, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #2036, #2044, #2084, #2085, #5821, #5962, #6112, #9086, #9168, #9339
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785285698105` — 7/28/2026, 5:49:02 PM PT — 62 turns
+
+**Original task:**
+
+```
+We need to resolve the Plesk license issue that was recovered. Can you please resolve that so that we don't have a problem with the license??
+```
+
+**Ideas referenced:** #13487, #19492, #19495, #19511, #19594, #19615, #19766, #19767, #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19807, #19810, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed]
 
 **Last PICKUP PROMPT:**
 
 ```
-oodle_c_live.user_enrolments`.
+th the full context and steps.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
+Pick up task - Plesk license fix needed (human-gated)
 
-Pick up task #1785012025445 — EMSU wrongful-suspension repair + email-pipeline RCA.
-
-Where we left off (verified 2026-07-28 16:44 PT):
-- Jason Pan (26820FT-40) fully restored: PS 6348 unsuspended, Moodle uid 53916 suspended=0, enrolments 55983+55989 active, caches 40/41 rebuilt, invoice 173178 marked paid, 1-week exam extension emailed per Ruben.
-- Root cause: qb_invoices header never flipped to paid despite a $2,295 qb_invoice_payments row; cron_qb_void_poller reads the header, not payments.
-- Systemic scan closed the whole class: 4 invoices total (173178, 161818, 166181, 166683) all corrected.
-- Diego Rivera (26110FT-01) unsuspended earlier (PS 6276); his refund request is still an open human money-cap decision.
-- Email-pipeline RCA filed as #19812 [executing] — 292 unanswered legitimate emails in 7d, entity extraction never running, OCR never running, no exam-urgency bypass.
-- Tool defects filed as #19814 [executing] — send idempotency + fix_moodle_enrollment false-negative + adminportal GRANT.
-- frankenstein-llm: no repair was needed this session; #19786 [deployed] already covers the capability gaps from the parent thread.
+Where we left off (verified 2026-07-28 17:44 PT):
+- Confirmed WOPR Plesk license EXT.12414222.0005 is INVALID (already activated on another server) - verified live via `sudo plesk bin license -c` exit 1
+- Identified fix path: deactivate old activation via platform360.io, run `sudo plesk bin license --install <code>` on WOPR
+- Filed idea #19827 [proposed] for tracking
+- Updated HANDOFF_NOTES.md with context + repair steps
 
 Open threads to drive next:
-1. #19812 [executing] — verify the executor actually lands all 6 sub-fixes (drain worker, email→student resolver, tesseract OCR, payments-aware void poller, header reconciler, exam-urgency bypass). The 292-email backlog needs a one-time backfill drain, not just a forward-looking cron.
-2. #19814 [executing] — verify send idempotency ships before the next transport retry double-sends another student.
-3. #19508 [queued] — frankenstein-llm pool health fix, approved but executor has not picked it up.
-4. Diego Rivera refund decision (human-only decision, no idea) — money-cap per rule 29, needs Vicky/CS.
+1. #19827 [proposed] - Ruben must log into https://platform360.io/, deactivate EXT.12414222.0005 from the stale machine, retrieve the activation code, then run `sudo plesk bin license --install <code>` on WOPR
 
 Reference IDs:
-- Ideas filed: #19812 [executing], #19814 [executing]
-- Ideas closed: #19813 [rejected] (transport-retry dupe of 19812), #19816 [rejected] (transport-retry dupe of 19814)
-- Ideas carried: #19786 [deployed], #19508 [queued]
-- Suspensions: PS 6348 (Jason, unsuspended), PS 6276 (Diego, unsuspended)
-- Invoices corrected: 173178, 161818, 166181, 166683
-- Outbound: email_outbound_log 187215 + 187219 (duplicate pair, evidence for #19814)
+- Ideas filed: #19827 [proposed]
+- Files touched: /var/www/emtskills/docs/HANDOFF_NOTES.md
 
-When done, append to cline_task_ledger.md (rule 07), run order 66.
+When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
 
-### `1785267620046` — 7/28/2026, 4:52:33 PM PT — 115 turns
-
-**Original task:**
-
-```
-Pick up task — Verify Argus gets clinerules steering injection via steering_builder.php, confirm it's routing through frankenstein-llm correctly, and close #19773 / #19686.
-
-Context:
-- #19773 [proposed] — config.yaml ALREADY has argus-chat entry (api_base http://127.0.0.1:8210/v1 = GLM ring). Need to verify steering injection.
-- #19686 [queued] — Argus was missing from fleet, now listed but unverified
-- Previous fix: routes/alltastic_api.php decontaminated (ARGUS_CLINERULES_DECONTAM_V1, ARGUS_EMPTY_REPLY_RECOVERY_V1)
-
-Step 1 — Check steering_builder.php for argus-chat entry:
-  use_mcp_tool ser
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11925, #12266, #12285, #12477, #12597, #12618, #127891, #12824, #128274, #12872, #12878, #13202, #13470, #15158, #15333, #15652, #16163, #16265, #16304, #16844, #178501, #18312, #18326, #19338, #19458, #19460, #19490, #19491, #19594, #19615, #19686 [queued], #19704, #19714 [proposed], #19766, #19767, #19773 [proposed], #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19807, #19812, #19814, #19816, #19819, #2084, #2085, #6751, #7853, #8281, #8321
-
-**Last PICKUP PROMPT:**
-
-```
-ix)
-- HANDOFF_NOTES.md updated
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task # - Argus steering injection & routing verification — close #19773 / #19686
-
-Where we left off (verified 2026-07-28 12:49 PT):
-- Verified _router_core.py STEERING_MODELS line 227 includes 'argus-chat' and 'argus' — steering injection CONFIRMED
-- Verified config.yaml argus-chat lane (line 944): model glm-5.2-15pct via GLM ring :8210, fallbacks glm-5.2-local -> frankenstein-tools -> deepseek
-- GLM ring live at :8210 serving glm-5.2-15pct
-- Idea #19773 [rejected] — steering injection verified by code audit
-- Idea #19686 [rejected] — routing fix already deployed; registy entry unnecessary (routes via config.yaml model_name)
-- HANDOFF_NOTES.md updated 2026-07-28 12:49 PT
-
-Open threads to drive next:
-1. (none — both ideas closed)
-
-Reference IDs:
-- Ideas filed: #19773 [rejected], #19686 [rejected]
-- Files touched: HANDOFF_NOTES.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785282386265` — 7/28/2026, 4:52:12 PM PT — 41 turns
+### `1785282386265` — 7/28/2026, 5:40:47 PM PT — 174 turns
 
 **Original task:**
 
@@ -251,7 +215,164 @@ Why did you hallucinate this button working?
 Can you resolve that and make sure it doesn't happen again, do an
 ```
 
+**Ideas referenced:** #001018, #059669, #062017, #166534, #2563, #334155, #374151, #475569, #64748, #8899, #92400, #9733, #9734
+
+**Last PICKUP PROMPT:**
+
+```
+pecting override. No JS spill.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up telephony toggle RCA + barge-in (final wrap).
+
+Where we left off (verified 2026-07-28T17:40 PT):
+- Toggle RCA: repair cron fought human OFF every 5 min. Fixed with `vapi_fallback_human_override_at` guard.
+- JS spill on telephony hub: raw JS after `</script>`. Fixed with `<script>` wrapper.
+- Barge-in: VAPI now joins conference. Live monitoring UI built with role hierarchy.
+- All 7 files lint-clean, PHP-FPM reloaded, cron verified.
+- Role hierarchy: higher ranks can join lower-rank calls. CS cannot join Admin. Everyone can join VAPI-only.
+
+Open threads to drive next:
+(No open threads — task complete.)
+
+Reference IDs:
+- Files: telephony_hub.php, config_api.php, cron_twilio_vapi_fallback_dial_repair.php, vapi_fallback_worker.php, twiml_vapi_conference.php, live_conference_api.php, twilio_vapi_fallback_dial_repair.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785279405884` — 7/28/2026, 5:11:26 PM PT — 330 turns
+
+**Original task:**
+
+```
+# Full Session Summary — All Issues Covered
+
+This thread covered multiple dovetailing issues starting from a WordPress link bug and ending in a QuickBooks payment/suspension investigation. Full recap below.
+
+## 1. Instructor Login Link (FIXED)
+- Root cause: emsuniversity.com + emtrefresher.com share one WordPress DB (`wordpress_2`, prefix `LzDe7pTO_`) with `siteurl`/`home` = emtrefresher.com. Any `home_url()` call building `/emtskills/` links resolved to the wrong domain (404).
+- Fixed in `emsu-modern-design.php` + `emsu-global-design.php`: hardcoded to `https://www.emsuniversity.com/emtskills
+```
+
+**Ideas referenced:** #10739, #11925, #12184, #15158, #160482, #161818, #16523, #16613, #178501, #178519, #18713, #18971, #19205, #19206 [approved], #19209 [approved], #19258, #19460, #19506, #19507, #19508 [approved], #19511, #1953, #19558, #19594, #19615, #19686, #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19786 [deployed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19812 [executing], #19813 [rejected], #19814 [executing], #19816 [rejected], #19821 [proposed], #19822 [rejected], #19823 [rejected], #1998, #2000, #2001, #2007, #2042, #9202
+
+**Last PICKUP PROMPT:**
+
+```
+mentation of a solved problem.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785012025445 — EMSU email-pipeline RCA + MCP tool-defect fixes.
+
+Where we left off (verified 2026-07-28 17:11 PT):
+- GRANT APPLIED + VERIFIED: adminportal now has INSERT/UPDATE/DELETE on moodle_c_live.user_enrolments, groups_members, role_assignments. Applied via `sudo mysql` (socket auth) after the plesk-admin path timed out twice. Proven with live writes as adminportal: ENROL_WRITE_OK + GROUPS_WRITE_OK, no ERROR 1142.
+- fix_moodle_enrollment end-to-end verified: on a user with enrolment status=1 it now returns both issues and both repair actions. Detection fix (TSV parser + contradiction assertion) shipped earlier this session.
+- create_idea dedup guard SHIPPED + LIVE-PROVEN: canary retry returned DEDUP_NOOP_IDEA instead of creating a duplicate. Same guard shape as #19814's agent_send_or_draft fix.
+- Jason Pan (26820FT-40) remains fully restored with 1-week exam extension sent.
+
+Open threads to drive next:
+1. #19821 [proposed] — body says "BLOCKED needs root" but the GRANT is now applied and verified. Close it or reject it as stale; do NOT re-run the GRANT.
+2. #19812 [executing] — now at dev_stage=testing. Verify it lands all 6 sub-fixes, especially SCHEDULING the two existing drain crons (cron_email_deferred_send.php, cron_email_deferred_repair_sweep.php — neither is in crontab) and backfilling the 292-email deferred backlog. Do not let it ship a brand-new drain worker while the existing two stay unwired.
+3. #19508 [queued] — frankenstein-llm pool health fix, approved but executor has not picked it up.
+4. Auto-void exposure list — a scan of qb_invoices vs qb_invoice_payments surfaced many rows marked paid with zero/partial payment rows recorded. That list was pulled but NOT yet triaged or acted on. Needs its own pass to separate genuine Intuit auto-voids from legacy pre-sync invoices before any dunning.
+5. Diego Rivera refund decision (human-only decision, no idea) — money-cap per rule 29, needs Vicky/CS.
+
+Reference IDs:
+- Ideas: #19821 [proposed], #19814 [deployed], #19812 [executing], #19823 [rejected], #19508 [queued], #19786 [deployed]
+- Files touched: mcp-servers/emsu-operations/src/index.ts + build/index.js; mcp-servers/ruben-orchestrator/src/index.ts + build/index.js. Backups: src/index.ts.bak-suspendparse-*, .bak-idem-*, .bak-ideadedup-*
+- Services restarted: mcp-emsu-operations, mcp-ruben-orchestrator (both active)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785283734874` — 7/28/2026, 5:10:20 PM PT — 11 turns
+
+**Original task:**
+
+```
+Quickbooks seems to be blocking their own Invoice Payments filled out from their own system. Can you check this against quickbooks API, the Voided payments int he last 2 months (supposedly those over 1000)
+
+See: transactions-20260728 (1) and transactions-20260728
+
+I think our API, registration form and siteurl/costs/ for EMT class pages. 
+
+that page BTW needs to be better decorated with what was there before and more info about what they are paying and how the page works, etc... Is this properly wired in? 
+
+Also if this is the case I wonder what is the point of using their invoicing system if 
+```
+
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785267620046` — 7/28/2026, 4:55:04 PM PT — 128 turns
+
+**Original task:**
+
+```
+Pick up task — Verify Argus gets clinerules steering injection via steering_builder.php, confirm it's routing through frankenstein-llm correctly, and close #19773 / #19686.
+
+Context:
+- #19773 [proposed] — config.yaml ALREADY has argus-chat entry (api_base http://127.0.0.1:8210/v1 = GLM ring). Need to verify steering injection.
+- #19686 [queued] — Argus was missing from fleet, now listed but unverified
+- Previous fix: routes/alltastic_api.php decontaminated (ARGUS_CLINERULES_DECONTAM_V1, ARGUS_EMPTY_REPLY_RECOVERY_V1)
+
+Step 1 — Check steering_builder.php for argus-chat entry:
+  use_mcp_tool ser
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11925, #12266, #12285, #12477, #12597, #12618, #127891, #12824, #128274, #12872, #12878, #13202, #13470, #15158, #15333, #15652, #16163, #16265, #16304, #16844, #178501, #18312, #18326, #19338, #19458, #19460, #19490, #19491, #19594, #19615, #19686 [queued], #19704, #19714 [proposed], #19766, #19767, #19773 [proposed], #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19807, #19812, #19814, #19816, #19819, #2084, #2085, #6751, #7853, #8281, #8321
+
+**Last PICKUP PROMPT:**
+
+```
+as the pipeline ramps back up.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus capacity & build pipeline recovery
+
+Where we left off (verified 2026-07-28 16:54 PT):
+- COPYCAT gate sentinel `/tmp/ruben_implement_routes_open` recreated — gate confirmed open at 16:54 PT (spawned worker #19812)
+- Build pipeline flowing again after hours of 0-eligible-worker ticks
+- 340 approved ideas in backlog, 20 stuck >100 days
+- Argus: 3 tasks total (all done), zero contention, GLM ring 2 req running / 0 waiting — capacity is NOT the problem
+- `ruben_active = 0` in orchestrator_config — undetermined if intentional
+- MySQL connections peaked at 537/1000 — monitoring needed as pipeline ramps
+
+Open threads to drive next:
+1. (human-only decision, no idea) — Should `ruben_active` be set to 1? It was 0 during gate outage; unclear if intentional
+2. Proposed: watch next 3 cron cycles (16:57, 17:00, 17:03) to verify pipeline sustained dispatch, not one-tick fluke
+
+Reference IDs:
+- Ideas filed: none new (COPYCAT gate fix was operational, not idea-driven)
+- Files touched: `/tmp/ruben_implement_routes_open`
+- Sentinels: gate OPEN, db_open=yes
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Step 1: Read latest context from handoff
+- [x] Step 2: Scan Argus usage patterns (recent interactions, queue depth, wait times)
+- [x] Step 3: Check Argus task worker queue (cron_argus_task_worker)
+- [x] Step 4: Check build pipeline status (pending decisions, ideas queued)
+- [x] Step 5: Assess capacity gaps and propose fixes
+- [x] Step 6: Apply capacity increases where needed (COPYCAT gate opened — main bottleneck)
+- [x] Step 7: Reconcile ideas and document
+</task_progress>
+</attempt_completion>
+```
 
 ### `1785281710410` — 7/28/2026, 4:51:57 PM PT — 118 turns
 

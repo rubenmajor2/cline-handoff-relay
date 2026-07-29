@@ -6,12 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/29/2026, 12:41:18 PM PT | window: last 72h | 136 tasks | index total 311 (parsed 0, cached 311)
+Generated: 7/29/2026, 1:41:18 PM PT | window: last 72h | 138 tasks | index total 314 (parsed 4, cached 310)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785347179098` | 7/29/2026, 10:56:13 AM | 44 | 225KB | How many turns of each individual LLM,, not groups, but what's inside of each group in the |
-| `1785314663557` | 7/29/2026, 6:31:56 AM | 1275 | 15687KB | I had a working build of GLM 52 local at 10 PM tonight. A series of changes have now made  |
+| `1785356710391` | 7/29/2026, 1:41:11 PM | 85 | 728KB | Yet again, we have ZERO payments on our webformes today for EMT. That's likely another err |
+| `1785355259217` | 7/29/2026, 1:41:07 PM | 201 | 466KB | i ahve been told this form is not populating PDF forms properly downstream. Can you check  |
+| `1785356305049` | 7/29/2026, 1:41:00 PM | 116 | 374KB | #GLM |
+| `1785314663557` | 7/29/2026, 1:14:52 PM | 1311 | 15798KB | I had a working build of GLM 52 local at 10 PM tonight. A series of changes have now made  |
+| `1785347179098` | 7/29/2026, 12:59:10 PM | 62 | 336KB | How many turns of each individual LLM,, not groups, but what's inside of each group in the |
 | `1785329338571` | 7/29/2026, 6:14:29 AM | 114 | 1215KB | Tell me about all the open tickets right now |
 | `1785329349404` | 7/29/2026, 6:02:08 AM | 34 | 495KB | Tell me about all the open tickets right now |
 | `1785328586617` | 7/29/2026, 5:47:20 AM | 30 | 334KB | WE ARE HAVING RESOURCE issues here in cline. Please do not kill my cline windows. |
@@ -145,54 +148,56 @@ Generated: 7/29/2026, 12:41:18 PM PT | window: last 72h | 136 tasks | index tota
 | `1785051395290` | 7/26/2026, 5:17:38 PM | 1104 | 1886KB | #GLM |
 | `1785098597876` | 7/26/2026, 1:49:56 PM | 56 | 167KB | do an RCA on this - see MCP troubleshooting document on descktop and resolve these:  |
 | `1785098066129` | 7/26/2026, 1:42:45 PM | 70 | 214KB | why does the email  subject say "Deadman" sent to a student?  |
-| `1785095167228` | 7/26/2026, 1:05:04 PM | 120 | 310KB | I am getting bombarded with text messages. Some of these are stale or have false informati |
 
 ---
 
 ## Per-window detail
 
-### `1785347179098` — 7/29/2026, 10:56:13 AM PT — 44 turns
+### `1785356710391` — 7/29/2026, 1:41:11 PM PT — 85 turns
 
 **Original task:**
 
 ```
-How many turns of each individual LLM,, not groups, but what's inside of each group in the last 2 hours. For example not frankenstsitn-tools, but what's inside of it
+Yet again, we have ZERO payments on our webformes today for EMT. That's likely another error
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326
+**Ideas referenced:** #18868, #1910, #19887, #19903, #19907, #19910, #19918, #19925, #19927, #19928, #2098, #5387, #6824
 
-**Last PICKUP PROMPT:**
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785355259217` — 7/29/2026, 1:41:07 PM PT — 201 turns
+
+**Original task:**
 
 ```
-e audit log at the turn grain.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task # - per-individual-LLM turn counts, last 2 hours
-
-Where we left off (verified 2026-07-29 10:55 PT):
-- frankenstein_what_served reported 3,024 total turns across 12 backends (audit log as-of 2026-07-29 10:54 PT)
-- llm_call_log, llm_router_audit_log, frankenstein_tool_call_log probed per-box dispatch inside pool adapters (frankenstein-tools/llm) is not tracked at the turn grain; adapter-level is the finest logged grain
-- Registry confirms: frankenstein-tools (:11510) load-balances across 120B pool members (artemis-gpt-oss-120b, julia-120b, glm-5.2-local), all serving gpt-oss-120b; frankenstein-llm pool = same boxes + cicero-235b fallback; frankenstein-405b pool (augustus+tiberius) both DISABLED since GLM-5.2 Hex repurpose
-- Atomic models (no pooling): ollama-7b-lora, ollama-14b, ollama-32b, deepseek-v4-pro, glm-5.2, emsu-codegen, 7b-parallel-20260613_230905, ollama-llama3.3-70b, glm-4.6v-flash
-
-Open threads to drive next:
-1. (human-only decision, no idea) - frankenstein-tools adapter per-box dispatch logging gap: add box_resolved column to llm_call_log for adapter-dispatched turns
-2. (human-only decision, no idea) - frankenstein-405b shows 7 turns but both pool members disabled; anomaly to investigate
-
-Reference IDs:
-- Ideas filed: none (informational query)
-- Files touched: none
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
+i ahve been told this form is not populating PDF forms properly downstream. Can you check on this? -> https://emsuniversity.com/emtskills/skillstastic/
 ```
 
-### `1785314663557` — 7/29/2026, 6:31:56 AM PT — 1275 turns
+**Ideas referenced:** #18868, #1910, #19615, #19887, #19903, #19907, #19910, #19918, #19925, #19927, #19928, #2098, #2835
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785356305049` — 7/29/2026, 1:41:00 PM PT — 116 turns
+
+**Original task:**
+
+```
+#GLM
+
+Let's get GLM 5.2 local up and running in front of the 120Bs on frankenstein-llm, frankenstein-tools, etc... ASAP
+
+Read Cline_Obedience.md and repaired my own violations first, then rebuilt the handoff mechanically.
+
+## The obedience repair
+
+Cline_Obedience.md's most recent entry (violation #22) is about rule 91 dividers being retyped from memory instead of copied. That is exactly the trap I was in. My repair: I called get_rule91_template to have the block assembled server-side with real 47-char U+2550 dividers rather than typing them, then ran clinerules_validate_completion before shipp
+```
+
+**Ideas referenced:** #17202, #1754, #1755, #178531, #1880 [deployed], #19186, #19273, #19338, #1965, #1966, #1967 [deployed], #1980, #1993 [deployed], #1995, #19957 [proposed], #19958 [proposed], #19962 [proposed], #1997, #20004 [proposed], #20005 [proposed], #20008 [proposed], #48031, #48140
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785314663557` — 7/29/2026, 1:14:52 PM PT — 1311 turns
 
 **Original task:**
 
@@ -200,7 +205,7 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 I had a working build of GLM 52 local at 10 PM tonight. A series of changes have now made the GLM local stall out. I need you to get this up and running again. It's stalling. It was running at like super fast
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11847, #11936, #11953, #12061, #12247, #12251, #12262, #12266, #12285, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #12403, #12407, #12459, #12477, #12506, #12618, #12657, #12688, #12689, #12710, #12761, #12763, #12764, #12824, #12872, #12878, #13075, #13108, #13121, #13191, #13196, #13199, #13202, #13453, #13470, #13874, #1593, #16163, #16265, #16304, #16578, #16588, #16590, #16648, #16714, #16717, #16718, #16844, #17202, #17203, #17205, #17300, #17430, #1754, #1755, #178531, #1819, #18312, #18326, #18448, #1876, #18786, #1884 [deployed], #18868, #1896, #1910 [deployed], #19135, #19338, #1934, #1965, #1966, #1967, #19686, #19879, #19881, #19882, #19883, #19887 [proposed], #19903, #19907, #19925, #1993 [deployed], #19931 [proposed], #19932 [proposed], #19936 [proposed], #19937 [proposed], #19938 [approved], #19942 [proposed], #19945 [proposed], #19948, #19949, #19957 [proposed], #19958 [proposed], #19962 [proposed], #2014, #2050, #2079, #2084, #2085, #2089 [deployed], #2091 [deployed], #2092, #2096, #2098 [deployed], #2099 [deployed], #2100 [deployed], #48031, #48140
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11847, #11936, #11953, #12061, #12247, #12251, #12262, #12266, #12285, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #12403, #12407, #12459, #12477, #12506, #12618, #12657, #12688, #12689, #12710, #12761, #12763, #12764, #12824, #12872, #12878, #13075, #13108, #13121, #13191, #13196, #13199, #13202, #13453, #13470, #13874, #1593, #16163, #16265, #16304, #16578, #16588, #16590, #16648, #16714, #16717, #16718, #16844, #17202, #17203, #17205, #17300, #17430, #1754, #1755, #178531, #1819, #18312, #18326, #18448, #1876, #18786, #1880 [deployed], #1884 [deployed], #18868, #1896, #1910 [deployed], #19135, #19338, #1934, #1965, #1966, #1967 [deployed], #19686, #19879, #19881, #19882, #19883, #19887 [proposed], #19903, #19907, #19919 [proposed], #19925, #1993 [deployed], #19931 [proposed], #19932 [proposed], #19936 [proposed], #19937 [proposed], #19938 [approved], #19942 [proposed], #19945 [proposed], #19948, #19949, #19957 [proposed], #19958 [proposed], #19962 [proposed], #2014, #2050, #2079, #2084, #2085, #2089 [deployed], #2091 [deployed], #2092, #2096, #2098 [deployed], #2099 [deployed], #2100 [deployed], #48031, #48140
 
 **Last PICKUP PROMPT:**
 
@@ -222,6 +227,48 @@ re speed",
     "Ruben: 'Isn't client supposed to have priority? Also look at this that's getting emitted: <frankenstein_what_served>... Still those carrots'",
     "Ruben: 'If you're gonna cut down the number of interactions why would you do that if it was working before. I feel like I have to keep repeating myself'",
     "Ruben: '
+```
+
+### `1785347179098` — 7/29/2026, 12:59:10 PM PT — 62 turns
+
+**Original task:**
+
+```
+How many turns of each individual LLM,, not groups, but what's inside of each group in the last 2 hours. For example not frankenstsitn-tools, but what's inside of it
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326, #1967
+
+**Last PICKUP PROMPT:**
+
+```
+isible at the audit log grain.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — glm-5.2-local turn count investigation
+
+Where we left off (verified 2026-07-29 12:58 PM PT):
+- what_served confirms 6 glm-5.2-local direct-label turns, 93 frankenstein-llm, 2,045 frankenstein-tools
+- glm-5.2-local lives inside frankenstein-llm pool at L4g; turns served via pool show as frankenstein-llm, not glm-5.2-local
+- Host probe shows glm52-ring degraded: Connection reset by peer (bug #1967), slow_by_design, v1/models alive=False
+- Julia-120b also down; artemis-120b is sole healthy 120B at 26.08 tok/s
+- The 6 turns are real: low direct-label usage because the ring is reporting unhealthy and the router prefers artemis
+
+Open threads to drive next:
+1. (human-only decision, no idea) — Fix glm-5.2-local Hex ring bug #1967 (connection reset, /v1/models alive=False) to restore it as a viable pool member
+2. (human-only decision, no idea) — Julia-120b down with Connection reset by peer: restart CX7 TP=2 cluster
+3. (human-only decision, no idea) — Add per-pool-member dispatch logging to frankenstein-tools/llm so turns inside adapters show which physical box served each request
+
+Reference IDs:
+- Ideas filed: none (informational investigation)
+- Files touched: none
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
 ### `1785329338571` — 7/29/2026, 6:14:29 AM PT — 114 turns
@@ -5137,56 +5184,6 @@ Reference IDs:
 - Ticket: TKT-21325, TKT-21261
 - Ideas filed: #19372
 - Files touched: none (investigation only)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785095167228` — 7/26/2026, 1:05:04 PM PT — 120 turns
-
-**Original task:**
-
-```
-I am getting bombarded with text messages. Some of these are stale or have false information that needs to be rectified at the source. Can you take a look and advise?
-
-🚨 EMSU DOWN: WOPR_SSH (76.167.100.188:2222) failed 5673 checks in a row. Check infrastructure.
-VR 30% (25/83) Next:vr-c2c-fix-compile-errors | NREMTpend:521 | portal
-EMSU AI Watchdog
-- Recurring PHP warnings detected (last 1hr):
-  [23 x] PHP Warning:Constant LITELLM_BASE_URL already defined in /var/www/emtskills/config.php on
-  [11 x] PHP Warning:require_once(path/to/sms_classifier.php): Failed to open stream: No such file
-
-- D
-```
-
-**Ideas referenced:** #13202, #19081, #19100, #19102, #19126 [rejected], #19134, #19135, #19143, #19144, #19160, #19161, #19163, #19166, #19167, #19168, #19169, #19170 [executing], #19359 [proposed], #19360 [proposed], #19362 [proposed], #19363 [proposed], #1965, #1968, #1970, #1973, #1975, #1976, #401938, #401954, #401956, #401957, #401958
-
-**Last PICKUP PROMPT:**
-
-```
-vents not generating decisions
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — text alert bombardment — fix remaining real bugs (#19359, #19360, #19362, #19363).
-
-Where we left off (verified 2026-07-26 13:04 PT):
-- LITELLM define warning FIXED and VERIFIED (3 bare const -> guarded define, zero warnings since 13:01)
-- Investigation of 7 alert types complete: 4 stale monitoring, 3 real bugs
-- WOPR confirmed UP (server_status: load ~10, all services active)
-
-Open threads to drive next:
-1. #19359 [proposed] — Fix twilio_sms_inbound.php: remove dead auto-reply block (lines 104-111) with placeholder stub path
-2. #19360 [proposed] — Update AI Watchdog to stop monitoring retired discord_scanner.php.disabled-20260414
-3. #19362 [proposed] — Fix WOPR_SSH heartbeat monitor: add recovery-detection resetting failure counter on success
-4. #19363 [proposed] — Investigate orchestrator triage gap: gpt-oss-120b-ckpt420 pod gone every 5 min, processed=0
-
-Reference IDs:
-- Ideas filed: #19359 [proposed], #19360 [proposed], #19362 [proposed], #19363 [proposed]
-- Fixed this session: /var/www/emtskills/config.php (lines 60-62: const -> guarded define)
-- Backup: /var/www/emtskills/config.php.bak-litelldefine-20260726
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>

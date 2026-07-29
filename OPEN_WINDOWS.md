@@ -6,23 +6,28 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/28/2026, 7:52:59 PM PT | window: last 72h | 110 tasks | index total 268 (parsed 8, cached 260)
+Generated: 7/28/2026, 8:53:00 PM PT | window: last 72h | 114 tasks | index total 273 (parsed 11, cached 262)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785282386265` | 7/28/2026, 7:52:56 PM | 453 | 3486KB | pickup telephony task, have turned off the AI, VAPI agent, but button does not appear to b |
-| `1785286248280` | 7/28/2026, 7:52:53 PM | 113 | 764KB | pick up the Plesk login issue that closed for the second time here in cline irritating: |
-| `1785293198244` | 7/28/2026, 7:52:40 PM | 63 | 149KB | Comprehensive session handoff per Ruben's direction. This session spanned multiple workstr |
-| `1785293294377` | 7/28/2026, 7:51:00 PM | 18 | 87KB | A metric ton of emails came in to email agent within the last hour or 2. I need you to go  |
-| `1785281506240` | 7/28/2026, 7:48:25 PM | 405 | 729KB | for what reason is Moodle running slowly? Didnt we jsut mvoe it over to the new 4TB NVME? |
-| `1785291839797` | 7/28/2026, 7:35:20 PM | 78 | 168KB | All external links on emsuniversity.com seem to be pointing to emtrefresher.com endpoints. |
+| `1785296742883` | 7/28/2026, 8:53:00 PM | 50 | 127KB | We had a frankenstein doctor type window working and the window just crashed. |
+| `1785267620046` | 7/28/2026, 8:52:01 PM | 159 | 429KB | Pick up task — Verify Argus gets clinerules steering injection via steering_builder.php, c |
+| `1785286248280` | 7/28/2026, 8:51:10 PM | 206 | 933KB | pick up the Plesk login issue that closed for the second time here in cline irritating: |
+| `1785293744959` | 7/28/2026, 8:51:00 PM | 227 | 2122KB | See frankenstein-llm task completion error - doctor of frankenstein resolve RCA resolve -> |
+| `1785282386265` | 7/28/2026, 8:50:58 PM | 626 | 6993KB | pickup telephony task, have turned off the AI, VAPI agent, but button does not appear to b |
+| `1785293294377` | 7/28/2026, 8:50:55 PM | 197 | 1327KB | A metric ton of emails came in to email agent within the last hour or 2. I need you to go  |
+| `1785296704123` | 7/28/2026, 8:45:52 PM | 3 | 5KB | We had a frankenstein doctor type window working and the window just crashed. |
+| `1785272558620` | 7/28/2026, 8:42:24 PM | 700 | 1919KB | Stopping here per your correction — noted that the schedule source is https://emsuniversit |
+| `1785296318095` | 7/28/2026, 8:41:36 PM | 24 | 153KB | Waht caused frankenstein-llm to freeze just now? it's not responding. can you resolve it? |
+| `1785293198244` | 7/28/2026, 8:34:56 PM | 195 | 456KB | Comprehensive session handoff per Ruben's direction. This session spanned multiple workstr |
+| `1785295028411` | 7/28/2026, 8:32:52 PM | 102 | 386KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
+| `1785281506240` | 7/28/2026, 8:05:41 PM | 479 | 858KB | for what reason is Moodle running slowly? Didnt we jsut mvoe it over to the new 4TB NVME? |
+| `1785291839797` | 7/28/2026, 8:03:06 PM | 106 | 216KB | All external links on emsuniversity.com seem to be pointing to emtrefresher.com endpoints. |
 | `1785267640895` | 7/28/2026, 7:31:07 PM | 226 | 603KB | Pick up task — Query frankenstein router audit log to produce a turn-count-per-model break |
 | `1785266802256` | 7/28/2026, 7:24:10 PM | 178 | 975KB | It appears that I have Frankenstein LLM windows that are getting stalled out trying to use |
 | `1785267604245` | 7/28/2026, 7:20:34 PM | 246 | 3133KB | Pick up task — Fix CFA Voice 52% short-leg rate and broken DEADMAN escalation pipeline. Tw |
 | `1785284021265` | 7/28/2026, 7:20:11 PM | 557 | 1134KB | Pick up the QB task that was just closed out. where we were tyring to figure out to do wit |
 | `1785281710410` | 7/28/2026, 6:42:22 PM | 218 | 920KB | for this image on my desktop, compress and upload it here: https://www.emsuniversity.com/i |
-| `1785272558620` | 7/28/2026, 6:29:43 PM | 622 | 1768KB | Stopping here per your correction — noted that the schedule source is https://emsuniversit |
-| `1785267620046` | 7/28/2026, 6:04:18 PM | 153 | 415KB | Pick up task — Verify Argus gets clinerules steering injection via steering_builder.php, c |
 | `1785285698105` | 7/28/2026, 5:49:02 PM | 62 | 104KB | We need to resolve the Plesk license issue that was recovered. Can you please resolve that |
 | `1785279405884` | 7/28/2026, 5:11:26 PM | 330 | 1012KB | # Full Session Summary — All Issues Covered |
 | `1785283734874` | 7/28/2026, 5:10:20 PM | 11 | 33KB | Quickbooks seems to be blocking their own Invoice Payments filled out from their own syste |
@@ -119,13 +124,131 @@ Generated: 7/28/2026, 7:52:59 PM PT | window: last 72h | 110 tasks | index total
 | `1785045300511` | 7/25/2026, 10:56:23 PM | 9 | 55KB | Can you do a benchmark on GLM 5.2 in the last 5 min |
 | `1785040020369` | 7/25/2026, 9:42:05 PM | 10 | 37KB | Can you do a benchmark on GLM 5.2 in the last 5 min |
 | `1785019334706` | 7/25/2026, 9:25:21 PM | 40 | 130KB | Hey I'm just checking to see how you were doing and feeling today |
-| `1785012025445` | 7/25/2026, 8:24:57 PM | 1650 | 5172KB | #GLM |
 
 ---
 
 ## Per-window detail
 
-### `1785282386265` — 7/28/2026, 7:52:56 PM PT — 453 turns
+### `1785296742883` — 7/28/2026, 8:53:00 PM PT — 50 turns
+
+**Original task:**
+
+```
+We had a frankenstein doctor type window working and the window just crashed.
+
+Frankenstein LLM stalled. I had mentioned not to inject anthropic llm. I told you to consult the GLM 5.2 Ideal build document on the desktop becasue it seemed liek you were about to quarantiene GLM.
+```
+
+**Ideas referenced:** #12672, #13832, #16265, #16578, #1754, #1755, #1896, #19239 [rejected], #1986, #1988, #1989, #1991, #2014, #2084, #2085
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785267620046` — 7/28/2026, 8:52:01 PM PT — 159 turns
+
+**Original task:**
+
+```
+Pick up task — Verify Argus gets clinerules steering injection via steering_builder.php, confirm it's routing through frankenstein-llm correctly, and close #19773 / #19686.
+
+Context:
+- #19773 [proposed] — config.yaml ALREADY has argus-chat entry (api_base http://127.0.0.1:8210/v1 = GLM ring). Need to verify steering injection.
+- #19686 [queued] — Argus was missing from fleet, now listed but unverified
+- Previous fix: routes/alltastic_api.php decontaminated (ARGUS_CLINERULES_DECONTAM_V1, ARGUS_EMPTY_REPLY_RECOVERY_V1)
+
+Step 1 — Check steering_builder.php for argus-chat entry:
+  use_mcp_tool ser
+```
+
+**Ideas referenced:** #10108, #10182, #10740, #11741, #11781, #11925, #12266, #12285, #12477, #12584, #12597, #12618, #127891, #12824, #128274, #12872, #12878, #13202, #13470, #15158, #15333, #15652, #16163, #16213, #16265, #16304, #16844, #17759, #178501, #18312, #18326, #19338, #19458, #19460, #19490, #19491, #19594, #19615, #19686 [queued], #19704, #19714 [proposed], #19766, #19767, #19773 [proposed], #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19807, #19812, #19814, #19816, #19819, #2084, #2085, #30363, #6751, #7853, #8281, #8321
+
+**Last PICKUP PROMPT:**
+
+```
+nections" but not critical yet
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus terminal latency fix + build pipeline recovery
+
+Where we left off (verified 2026-07-28 19:54 PT):
+- COPYCAT gate FIXED: /tmp/ruben_implement_routes_open recreated, gate confirmed open (spawned worker for #19812 at 16:54)
+- Build pipeline flowing: 420 approved ideas in backlog, implementer dispatching normally
+- `ruben_active = 0` in orchestrator_config — pipeline gate intentionally paused? undetermined
+- Argus analytics: 139 queries from Vicky, avg 24,875ms response, max 90,406ms
+- Bottleneck: All Argus actions route through frankenstein-llm → GLM ring (~2 tok/s). 120B pool (44-60 tok/s) idle and available
+- GLM ring: 8 requests running, 0 waiting. Artemis: 1 running, 0 waiting. Fleet not saturated
+
+Open threads to drive next:
+1. (human-only decision, no idea) — Wire Argus chat/lookup to bypass GLM and use frankenstein-tools → 120B pool? Expected: 25s avg → sub-5s. Specific fix in alltastic_api.php: change chat/lookup model from frankenstein-llm to frankenstein-tools or add argus-terminal-lane config
+2. (human-only decision, no idea) — Is ruben_active=0 intentional? If not, setting it to 1 would let the promoter/accelerator pipeline run at full speed
+
+Reference IDs:
+- Ideas touched: #19773 [rejected], #19686 [rejected]
+- Files touched: /tmp/ruben_implement_routes_open
+- Tables queried: argus_analytics, argus_browser_builds, argus_task_queue, orchestrator_ideas, orchestrator_config
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785286248280` — 7/28/2026, 8:51:10 PM PT — 206 turns
+
+**Original task:**
+
+```
+pick up the Plesk login issue that closed for the second time here in cline irritating:
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18935, #19131 [deployed], #19567, #19827 [proposed], #19829 [executing], #19854 [proposed], #19865 [executing], #2063, #2065, #2073, #7142, #7149
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785293744959` — 7/28/2026, 8:51:00 PM PT — 227 turns
+
+**Original task:**
+
+```
+See frankenstein-llm task completion error - doctor of frankenstein resolve RCA resolve -> Still 2 fixes left (#19840 ExecAdmin gate + hint text). SSH is flaky — sed/PHP inline both fail intermittently. `read_server_file` and `write_server_file` work reliably but `write_server_file` re-inlines the full file and we
+...[2660 chars trimmed to fit frankenstein-tools ctx]...
+</attempt_completion>
+```
+
+**Ideas referenced:** #001018, #059669, #062017, #10740, #11397, #1154, #11925, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12477, #12584, #12657, #12672, #12673, #12689, #12716, #13108, #13121, #13831, #13832, #13874, #13964, #14000, #14848, #15158, #16120, #16588, #16613, #166534, #16718, #16844, #1754, #1755, #17580, #17680, #178495, #178501, #18327, #18781, #18786, #18795, #18801 [deployed], #18807, #1883, #18833 [deployed], #18836 [deployed], #18837, #18864 [deployed], #18867, #18868, #18889 [deployed], #18892 [rejected], #18915 [proposed], #18926 [in_progress], #18929, #18935, #18944, #18949, #18950, #18951, #18952, #1896, #18961, #18966, #18967, #18970 [proposed], #18971 [executing], #18972 [proposed], #18977 [proposed], #18982, #18985 [rejected], #19007 [deployed], #19008 [proposed], #19040, #19055 [deployed], #19080, #19081, #19100 [executing], #19102 [executing], #19126 [rejected], #19134 [executing], #19135 [executing], #19143 [executing], #19144 [executing], #19145, #19158, #19159, #19160 [executing], #19161 [executing], #19163 [executing], #19166, #19167, #19168, #19169, #19170 [executing], #19173, #19194, #19227, #19230 [queued], #19234 [queued], #19266, #1932, #19321, #19325, #19338, #1935 [investigating], #19373, #19388 [executing], #1939 [investigating], #19390 [rejected], #19403 [rejected], #19407, #19415, #19416, #19419, #19425, #19427, #19430, #19434, #19437, #19446, #19454, #19458, #19460, #19464, #19465, #1947 [resolved], #19490, #19491, #19492, #19495, #19500, #19509, #19510, #19511, #19518 [rejected], #19522, #19523, #19524, #19525, #1953, #19535, #19537, #19539, #1954 [investigating], #19545, #19558, #1956 [resolved], #19563 [rejected], #19568 [executing], #1957 [investigating], #19571 [proposed], #19572, #19573, #19574, #19576, #19577, #19578, #19579 [executing], #1958 [resolved], #19580, #19581, #19583, #19584, #19585 [executing], #19586, #19587, #19588, #19589, #1959, #19590, #19591, #19592, #19594, #19595, #19596, #19597, #19598, #19599, #1960, #19600, #19601, #19602, #19603, #19604, #19605, #19606, #19607, #19608, #19610 [executing], #19611, #19615, #1962, #1963, #1964, #19645, #19646, #19647, #1965, #19653, #19657, #1966, #1967, #1968, #19686, #1969, #19690 [deployed], #1970, #19704, #1971, #19714 [proposed], #1972, #1973, #1975, #1976, #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19803, #19807, #19810, #19811, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830, #19831, #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19840 [approved], #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19863 [proposed], #19872, #1998, #2008, #2010, #2011, #2012, #2014, #2015, #2016, #2017, #2019, #2023, #2024, #2027, #2029, #2030, #2031, #2033, #2039, #2040, #2041, #2043, #2064, #2066, #2084, #2085, #21278, #21765, #2322, #2490, #2563, #3048, #3049, #334155, #3595, #374151, #475569, #623992, #64748, #92400, #9733, #9734
+
+**Last PICKUP PROMPT:**
+
+```
+ Backup at config_api.php.bak.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #19840 - Telephony ExecAdmin toggle permission fix
+
+Where we left off (verified 2026-07-28 20:06 PT):
+- Fixed backend permission gate in config_api.php: ExecAdmin can now save vapi_fallback_enabled and vapi_fallback_human_override_at keys (MasterAdmin still required for all other config keys). Idea #19840 [approved].
+- Frontend VAPI toggle hint already says 'Master Admin / ExecAdmin only' - no frontend change needed.
+- Idea #19863 [proposed] created for the frankenstein-llm completion error RCA follow-up (separate investigation needed).
+
+Open threads to drive next:
+1. #19863 [proposed] - Frankenstein-llm completion error RCA investigation. The error may be a spill-ladder issue, tool-call format regression, or context-window truncation. Route through rule 156 (probe frankenstein_verify_routing + tier_health first) then rule 158 (Frankenstein Doctor babysit).
+2. #19840 [approved] - Monitor for any ExecAdmin complaints that the VAPI toggle still doesn't work (possible session/cookie auth issue on the POST).
+
+Reference IDs:
+- Idea: #19840 [approved]
+- Ideas filed: #19840 [approved], #19863 [proposed]
+- Files touched: /var/www/emtskills/api/telephony/config_api.php
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785282386265` — 7/28/2026, 8:50:58 PM PT — 626 turns
 
 **Original task:**
 
@@ -156,50 +279,169 @@ Can you resolve that and make sure it doesn't happen again, do an
 **Last PICKUP PROMPT:**
 
 ```
-api_fallback_dial_repair.php ✅
+to build them now?
+
+═══════════════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════════════
+Pick up task Telephony Feature Completion — Build #19843 Hand Back to VAPI + #19844 Audit Log.
+
+Where we left off (verified 7:28/2026 8:03 PM PT):
+- all files lint-clean and PHP-FPM reloaded
+- ExecAdmin toggle gate deployed ✅
+- VAPI validation cron deployed ✅
+- "Incoming" → "Unassigned" label fix deployed ✅
+- 2 remaining approved ideas: #19843 handback_vapi, #19844 audit log
+
+Open threads to drive next:
+1. #19843 [proposed] — Add handBackToVapi() to telephony_live_calls.js (function that calls POST action=handback_vapi), add handback_vapi case to live_conference_api.php that unmutes VAPI participant + plays "<Say>Agent has finished the call, I'm back to assist you</Say>" TwiML via Twilio REST API, add Hand Back button in telephony_hub.php render loop next to Take Over when vapi_muted=true
+2. #19844 [proposed] — Add $db->prepare INSERT INTO telephony_barge_in_log after every action handler in live_conference_api.php (join, mute_vapi, announce, handback_vapi). Table already exists from earlier schema deploy. Columns: conference_sid, action, agent_email, caller_phone, created_at.
+
+Reference IDs:
+- Ticket: (none)
+- Ideas filed: #19840, #19841, #19842, #19843, #19844, #19845
+- Files touched: telephony_hub.php, telephony_live_calls.js, live_conference_api.php, cron_vapi_phone_validation.php, cron_twilio_vapi_fallback_dial_repair.php, vapi_fallback_worker.php
+═══════════════════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785293294377` — 7/28/2026, 8:50:55 PM PT — 197 turns
+
+**Original task:**
+
+```
+A metric ton of emails came in to email agent within the last hour or 2. I need you to go over them for failures, do RCAs and build improvements into Email Agent / CFAs to be able to respond/act autonmously to resolve issues. Act on them and then give a status report / summary.
+```
+
+**Ideas referenced:** #111827, #1147, #1231, #1286, #1396, #1565, #166534, #1746, #1819, #19492, #19495, #19511, #19522, #19573, #19583, #19584, #19585, #19645, #19646, #19807, #19810, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830, #19831, #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19866 [proposed], #19867 [deployed], #19868 [proposed], #19870 [proposed], #334155, #374151, #406060, #406061, #406242, #414633, #414634, #414636, #414642, #414643, #414692, #414693, #414694, #475569, #5749, #64748, #78350, #9888, #9989
+
+**Last PICKUP PROMPT:**
+
+```
+d wastes staff time on triage.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up telephony barge-in features — #19841 tab notification + #19842 takeover button built.
+Pick up task #19867 follow-through — email agent ingestion pipeline backfill.
 
-Where we left off (verified 2026-07-28T19:23 PT):
-- #19842 takeOverConference() built into telephony_live_calls.js + telephony_hub.php render + live_conference_api.php announce action — all deployed and lint-clean
-- #19841 notifyLiveCall() built with tab title flash (🔴 Live Call) + Web Audio API chime — deployed in telephony_live_calls.js
-- REQUIREMENT_IDEA_AUTO_FILE.md rule created — any recommendation mid-task auto-filed as idea
-- 22/22 test suite passed earlier — toggle override, cron guard, role hierarchy, conference API all verified
+Where we left off (verified 2026-07-28 20:11 PT):
+- Type-error cascade FIXED in lora_shadow_health.php + cron_orchestrator_triage.php
+- Triage now runs clean in LIVE mode
+- 297 emails still `processed_for_routing=0` in email_inbound_log (created within last 3h)
+- email_inbound_routing.php processPendingInboundEmails() has its own cron — verify it runs and clear the backlog
+- The correct cron is likely in /etc/cron.d/agent_reply_dispatcher (found: runs cron_agent_reply_dispatcher.php every minute)
 
 Open threads to drive next:
-1. #19842 [deployed] — Take Over button delivered and verified on disk
-2. #19841 [deployed] — Tab flash + chime notification delivered
-3. #19840 [proposed] — ExecAdmin VAPI toggle (2-line change, not yet approved)
-4. #19843 [proposed] — Hand back to VAPI button (warm transfer)
-5. #19844 [proposed] — Barge-in audit log table exists, front-end log viewer TBD
-6. #19845 [proposed] — VAPI phone number validation cron
+1. #19867 [deployed] — Verify email backlog clears: run `sudo -u www-data php cron/cron_agent_reply_dispatcher.php` and check `SELECT COUNT(*) FROM email_inbound_log WHERE processed_for_routing=0`
+2. #19866 [proposed] — Implement chat handoff dedup in the handoff ticket-creation path (TicketConsolidator pattern exists at line 35, needs pre-creation call)
+3. #19868 [proposed] — Add urldefense.com + sentrylink.com to outbound URL allowlist (grep for unowned_url or url-guard logic in lib/)
+4. #19870 [proposed] — Check RunPod fleet health for 70B, verify API key or pod capacity
 
 Reference IDs:
-- Ideas: #19840, #19841, #19842, #19843, #19844, #19845
-- Files: telephony_hub.php, live_conference_api.php, telephony_live_calls.js, REQUIREMENT_IDEA_AUTO_FILE.md
+- Ideas filed: #19866 [proposed], #19867 [deployed], #19868 [proposed], #19870 [proposed]
+- Files touched: /var/www/emtskills/lib/lora_shadow_health.php, /var/www/emtskills/cron/cron_orchestrator_triage.php
+- Backups taken: lora_shadow_health.php.bak-20260728-pdo, cron_orchestrator_triage.php.bak-20260728-pdo
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Analyze recent email agent traffic and identify failure patterns
+- [x] Root-cause each failure class with evidence
+- [x] Fix type-error cascade critical bug (blocking orchestrator triage)
+- [x] File ideas for chat handoff dedup, blocked URLs, 70B dead
+- [ ] Backfill 297 unprocessed inbound emails (separate pipeline, needs next step)
+- [x] Deliver status report with summary
+</task_progress>
+</attempt_completion>
+```
+
+### `1785296704123` — 7/28/2026, 8:45:52 PM PT — 3 turns
+
+**Original task:**
+
+```
+We had a frankenstein doctor type window working and the window just crashed.
+
+Frankenstein LLM stalled. I had mentioned not to inject anthropic llm. I told you to consult the GLM 5.2 Ideal build document on the desktop becasue it seemed liek you were about to quarantiene GLM.
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785272558620` — 7/28/2026, 8:42:24 PM PT — 700 turns
+
+**Original task:**
+
+```
+Stopping here per your correction — noted that the schedule source is https://emsuniversity.com/emtskills/routes/view_class_schedule.php (a live webpage the students use), NOT a Google Sheets doc. I had wrongly pulled the Google Sheets link from Course_Schedules.googlesheeturl column instead. No further action taken this turn.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — TDSHS: correct schedule source + remaining open items
+
+Where we left off (verified 2026-07-28 13:59 PT):
+- COR
+```
+
+**Ideas referenced:** #11925, #15158, #1565, #16613, #1758, #17580, #178501, #18693, #19217, #19224, #19437, #19456, #19458, #19460, #19490, #19491, #19492, #19493, #19518, #19543, #19558, #19573 [executing], #19576, #19580, #19581, #19583 [executing], #19584 [executing], #19585 [executing], #19594, #19615, #19640, #19642, #19644, #19645 [executing], #19646 [executing], #19686, #19690 [deployed], #19704, #19714 [proposed], #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19779 [executing], #19780 [executing], #19781 [executing], #19786 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19803 [proposed], #19807 [proposed], #19811 [proposed], #19827 [proposed], #19833 [executing], #19834 [proposed], #19872 [executing], #1993, #2009, #2015, #2025, #2036, #2042, #2084, #2085, #334155, #34495, #401956, #401957, #5229, #5230, #64748, #68437, #68450, #68493, #68494, #68496, #72073, #73291, #73292, #73293, #73294, #73295, #8212, #9083, #9086, #9168, #9339, #9831
+
+**Last PICKUP PROMPT:**
+
+```
+The task needs a fresh window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — URGENT: Mac memory starvation killing Cline windows (same launch-services root cause as earlier today)
+
+Where we left off (verified 2026-07-28 20:33 PT — last real tool call):
+- This Cline window went into a no-tool-emission loop 9 consecutive times over ~8 minutes, unable to produce any tool call. Bailing per rule 143 strike-9 escape hatch before YOLO death at strike 10.
+- PRIOR STABLE WORK (all shipped, all saved): #19872 P0 filed + promoted (SLS payment gate false-PASS on zero-invoice students + EA cron targets wrong population), #19834 filters shipped (cron_ea_suspension_emails.php now has full safety guards + staleness bound + batch cap 15, backup .bak-20260728-safety-filters), #19807 body corrected + promoted, #19811/#19803 promoted, HANDOFF_NOTES updated, 13 ideas reconciled. NOTHING WAS SENT to students.
+- NEW URGENT DIRECTIVE from Ruben: "Need to interrupt this thread. We have a window in cline that is not responding. Grey windows are likely to come soon. WE want to get ahead of those. Can you make sure my cline windows stay open? Earlier this morning we had a similar issue and it was from launch services. Run top command here on this mac and figure out what's starving memory. And keep cline windows safe"
+
+Open threads to drive next:
+1. (human-only decision — no idea) — RUN `top -o MEM -l 1` or `ps aux --sort=-%mem | head -20` on the Mac to identify the memory-hogging process. Earlier today the culprit was launch services (likely `lssave` or `lsd` runaway). Check if the same process is back.
+2. (human-only decision — no idea) — If launch services is the culprit: kill/restart it (`killall -HUP lsd` or `launchctl kickstart -k system/com.apple.launchservicesd`), verify memory pressure drops.
+3. (human-only decision — no idea) — Check VS Code / Cline extension memory usage: `ps aux | grep -i "visual studio code\|code-\|claude\|cline\|electron" | grep -v grep | sort -rk4 | head -10`. VS Code extension hosts can leak, especially with large context windows.
+4. (human-only decision — no idea) — Check available swap and memory pressure: `vm_stat` and `sysctl vm.swapusage`. If swap is exhausted, Cline windows will grey out.
+5. (human-only decision — no idea) — Keep Cline windows open: if memory pressure is critical, consider closing non-Cline VS Code windows, browser tabs, or other Electron apps to free RAM. Do NOT close Cline windows themselves.
+6. (human-only decision — no idea) — After memory is stabilized, resume the EA-cron / payment-gate work per #19872 and the longer list of 13 executing ideas.
+
+Reference IDs:
+- #19872 [executing] (verified last reconcile: status=in_progress dev_stage=idle) — P0 payment gate false-PASS + re-point EA ladder
+- #19834 [executing] (filters shipped, executor closing)
+- #19833 [deployed] — grace policy (needs review per #19872)
+- #19807 [executing], #19811 [executing], #19803 [executing], #19827 [deployed], #19646 [executing], #19583 [executing], #19584 [executing], #19573 [executing], #19645 [executing], #19585 [executing]
+- Files touched: cron/cron_ea_suspension_emails.php (+2 backups), HANDOFF_NOTES.md
+- This window: ~8 min non-responsive, 9 consecutive tool errors, context 73%
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
 
-### `1785286248280` — 7/28/2026, 7:52:53 PM PT — 113 turns
+### `1785296318095` — 7/28/2026, 8:41:36 PM PT — 24 turns
 
 **Original task:**
 
 ```
-pick up the Plesk login issue that closed for the second time here in cline irritating:
+Waht caused frankenstein-llm to freeze just now? it's not responding. can you resolve it?
+
+Do not inject anthropic.
 ```
 
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18935, #19131 [deployed], #19567, #19827 [proposed], #19829 [executing], #19854 [proposed], #2063, #2065, #2073, #7142, #7149
+**Ideas referenced:** #1238, #12506, #12761, #12763, #12764, #13075, #14848, #16648, #16714, #16717, #18720, #2014
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785293198244` — 7/28/2026, 7:52:40 PM PT — 63 turns
+### `1785293198244` — 7/28/2026, 8:34:56 PM PT — 195 turns
 
 **Original task:**
 
@@ -211,23 +453,57 @@ The QB auto-void fix (#19387) has been deployed. The remaining work on that thre
 The WOPR reboot was executed (#19848), BAR0 is now assigned but BAR1 is still blocked by an unprogrammed bridge prefetchable window. The BIOS ask
 ```
 
-**Ideas referenced:** #19387 [deployed], #19403, #19495, #19511, #19545, #19835 [rejected], #19836 [proposed], #19837 [proposed], #19838 [proposed], #19846 [rejected], #19847 [rejected], #19848 [executed], #19849 [proposed], #19853 [queued], #2044, #2056, #3067, #3069, #3070, #3071, #3075, #3076, #3077, #3078, #3079, #3172, #3174, #3202, #3206
+**Ideas referenced:** #12004, #16613, #16621, #19387 [deployed], #19403, #19495, #19511, #19545, #19820 [proposed], #19835 [rejected], #19836 [proposed], #19837 [proposed], #19838 [proposed], #19846 [rejected], #19847 [rejected], #19848 [executed], #19849 [proposed], #19853 [queued], #19859 [proposed], #19860 [proposed], #19861 [proposed], #19862 [proposed], #19869 [executing], #2044, #2056, #3067, #3069, #3070, #3071, #3075, #3076, #3077, #3078, #3079, #3172, #3174, #3202, #3206
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785293294377` — 7/28/2026, 7:51:00 PM PT — 18 turns
+### `1785295028411` — 7/28/2026, 8:32:52 PM PT — 102 turns
 
 **Original task:**
 
 ```
-A metric ton of emails came in to email agent within the last hour or 2. I need you to go over them for failures, do RCAs and build improvements into Email Agent / CFAs to be able to respond/act autonmously to resolve issues. Act on them and then give a status report / summary.
+What outstanding build issues exist for the Broser Extension for Argus? What else do you recommend? Can you do some work and testing on it to improve it more? Make sure it's wired into actual Argus as well:
+
+https://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome
 ```
 
-**Ideas referenced:** #19492, #19495, #19511, #19522, #19573, #19583, #19584, #19585, #19645, #19646, #19807, #19810, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830, #19831, #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #406060, #406061, #406242
+**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #16213, #16263, #18745, #18770, #19370, #19407, #21262, #238636, #274160, #30363, #69707, #8942, #9650, #9654, #9660, #9733, #9889
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1785281506240` — 7/28/2026, 7:48:25 PM PT — 405 turns
+```
+about the autopilot capability
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #7 — Argus Chrome Extension build issues and fixes.
+
+Where we left off (verified 2026-07-28 20:32 PT):
+- Web download page: emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome
+- Canonical source: /var/www/emtskills/public/argus-extension/ (v2.0.0)
+- Canonical ZIP: /var/www/emtskills/public/argus-extension.zip (rebuilt, 37KB)
+- Build script: /var/www/emtskills/scripts/argus_rebuild_extension_zip.sh (rwx)
+- Report card: /var/www/emtskills/routes/_view_argus_ai_extension_report_card.php
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. Wire `action.default_icon` into manifest.json (currently missing — sidePanel needs an action icon to show in toolbar)
+2. Fix content.js and verify ARGUS_DO extract works with latest DOM on EMSU portal pages
+3. Add manifest keyboard shortcut for faster panel open
+4. Create auto-rebuild cron if ZIP is older than source
+
+Reference IDs:
+- Ticket: N/A (ad-hoc task)
+- Ideas filed: none this session
+- Files touched: extension_version.txt, service-worker.js, _view_argus_ai_extension_report_card.php, argus-extension.zip, argus_rebuild_extension_zip.sh
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785281506240` — 7/28/2026, 8:05:41 PM PT — 479 turns
 
 **Original task:**
 
@@ -264,7 +540,7 @@ Reference IDs:
 </attempt_completion>
 ```
 
-### `1785291839797` — 7/28/2026, 7:35:20 PM PT — 78 turns
+### `1785291839797` — 7/28/2026, 8:03:06 PM PT — 106 turns
 
 **Original task:**
 
@@ -272,30 +548,29 @@ Reference IDs:
 All external links on emsuniversity.com seem to be pointing to emtrefresher.com endpoints. Not appropriate. rEsolve
 ```
 
-**Ideas referenced:** #19855 [deployed]
+**Ideas referenced:** #19855 [deployed], #19864 [deployed], #2563
 
 **Last PICKUP PROMPT:**
 
 ```
-[deployed] filed for tracking.
+ployed] filed for audit trail.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #19855 - emsuniversity external links fix (emtrefresher.com bleeding)
+Pick up task #19864 [deployed] - emsuniversity external links fix: other sites audit
 
-Where we left off (verified 2026-07-28 19:33 PT):
-- #19855 [deployed] -- WP_HOME/WP_SITEURL override in both emsuniversity.com + emtrefresher.com wp-config.php
-- Shared DB architecture: wordpress_2, prefix LzDe7pTO_ -- two docroots, one DB
-- Verified REST API returns correct per-domain url/home values
+Where we left off (verified 2026-07-28 20:02 PT):
+- #19855 [deployed] -- WP_HOME/WP_SITEURL override on emsuniversity.com + emtrefresher.com
+- #19864 [deployed] -- Full audit confirmed no other sites affected (all have independent DBs)
 
 Open threads to drive next:
-1. #19855 [deployed] -- Monitor for broken links; DB scan wp_posts for residual hardcoded emtrefresher.com in post_content
+1. #19855 [deployed] -- Monitor for broken links from the domain change
 
 Reference IDs:
-- Ideas filed: #19855 [deployed]
-- Files touched: /var/www/vhosts/emsuniversity.com/httpdocs/wp-config.php, /var/www/vhosts/emtrefresher.com/httpdocs/wp-config.php
+- #19855 [deployed]
+- #19864 [deployed]
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
@@ -530,86 +805,6 @@ for this image on my desktop, compress and upload it here: https://www.emsuniver
 **Ideas referenced:** #19835 [proposed], #19846 [rejected], #19847 [rejected], #600179
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785272558620` — 7/28/2026, 6:29:43 PM PT — 622 turns
-
-**Original task:**
-
-```
-Stopping here per your correction — noted that the schedule source is https://emsuniversity.com/emtskills/routes/view_class_schedule.php (a live webpage the students use), NOT a Google Sheets doc. I had wrongly pulled the Google Sheets link from Course_Schedules.googlesheeturl column instead. No further action taken this turn.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — TDSHS: correct schedule source + remaining open items
-
-Where we left off (verified 2026-07-28 13:59 PT):
-- COR
-```
-
-**Ideas referenced:** #11925, #15158, #1565, #178501, #18693, #19217, #19224, #19437, #19456, #19458, #19460, #19490, #19491, #19492, #19493, #19518, #19543, #19558, #19573 [executing], #19576, #19580, #19581, #19583 [executing], #19584 [executing], #19585 [executing], #19594, #19615, #19640, #19642, #19644, #19645 [executing], #19646 [executing], #19686, #19690 [deployed], #19704, #19714 [proposed], #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19779 [executing], #19780 [executing], #19781 [executing], #19786 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19803 [proposed], #19807 [proposed], #19811 [proposed], #19827 [proposed], #19833 [executing], #19834 [proposed], #1993, #2009, #2015, #2025, #2036, #2042, #2084, #2085, #334155, #34495, #401956, #401957, #5229, #5230, #64748, #68437, #68450, #68493, #68494, #68496, #72073, #73291, #73292, #73293, #73294, #73295, #8212, #9083, #9086, #9168, #9339, #9831
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785267620046` — 7/28/2026, 6:04:18 PM PT — 153 turns
-
-**Original task:**
-
-```
-Pick up task — Verify Argus gets clinerules steering injection via steering_builder.php, confirm it's routing through frankenstein-llm correctly, and close #19773 / #19686.
-
-Context:
-- #19773 [proposed] — config.yaml ALREADY has argus-chat entry (api_base http://127.0.0.1:8210/v1 = GLM ring). Need to verify steering injection.
-- #19686 [queued] — Argus was missing from fleet, now listed but unverified
-- Previous fix: routes/alltastic_api.php decontaminated (ARGUS_CLINERULES_DECONTAM_V1, ARGUS_EMPTY_REPLY_RECOVERY_V1)
-
-Step 1 — Check steering_builder.php for argus-chat entry:
-  use_mcp_tool ser
-```
-
-**Ideas referenced:** #10108, #10182, #10740, #11741, #11781, #11925, #12266, #12285, #12477, #12584, #12597, #12618, #127891, #12824, #128274, #12872, #12878, #13202, #13470, #15158, #15333, #15652, #16163, #16213, #16265, #16304, #16844, #17759, #178501, #18312, #18326, #19338, #19458, #19460, #19490, #19491, #19594, #19615, #19686 [queued], #19704, #19714 [proposed], #19766, #19767, #19773 [proposed], #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19807, #19812, #19814, #19816, #19819, #2084, #2085, #30363, #6751, #7853, #8281, #8321
-
-**Last PICKUP PROMPT:**
-
-```
-as the pipeline ramps back up.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus capacity & build pipeline recovery
-
-Where we left off (verified 2026-07-28 16:54 PT):
-- COPYCAT gate sentinel `/tmp/ruben_implement_routes_open` recreated — gate confirmed open at 16:54 PT (spawned worker #19812)
-- Build pipeline flowing again after hours of 0-eligible-worker ticks
-- 340 approved ideas in backlog, 20 stuck >100 days
-- Argus: 3 tasks total (all done), zero contention, GLM ring 2 req running / 0 waiting — capacity is NOT the problem
-- `ruben_active = 0` in orchestrator_config — undetermined if intentional
-- MySQL connections peaked at 537/1000 — monitoring needed as pipeline ramps
-
-Open threads to drive next:
-1. (human-only decision, no idea) — Should `ruben_active` be set to 1? It was 0 during gate outage; unclear if intentional
-2. Proposed: watch next 3 cron cycles (16:57, 17:00, 17:03) to verify pipeline sustained dispatch, not one-tick fluke
-
-Reference IDs:
-- Ideas filed: none new (COPYCAT gate fix was operational, not idea-driven)
-- Files touched: `/tmp/ruben_implement_routes_open`
-- Sentinels: gate OPEN, db_open=yes
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Step 1: Read latest context from handoff
-- [x] Step 2: Scan Argus usage patterns (recent interactions, queue depth, wait times)
-- [x] Step 3: Check Argus task worker queue (cron_argus_task_worker)
-- [x] Step 4: Check build pipeline status (pending decisions, ideas queued)
-- [x] Step 5: Assess capacity gaps and propose fixes
-- [x] Step 6: Apply capacity increases where needed (COPYCAT gate opened — main bottleneck)
-- [x] Step 7: Reconcile ideas and document
-</task_progress>
-</attempt_completion>
-```
 
 ### `1785285698105` — 7/28/2026, 5:49:02 PM PT — 62 turns
 
@@ -4487,61 +4682,4 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 ════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1785012025445` — 7/25/2026, 8:24:57 PM PT — 1650 turns
-
-**Original task:**
-
-```
-#GLM
-
-Is this serving now? 
-DO NOT INJECT ANTHROPIC
-
-Tried glm52-only and erorrs: {"message":"Failed to fetch LiteLLM model info: <none>","modelId":"glm52-only","providerId":"litellm"}
-
-
-Also frankenstein-llm incredibly slow and errors too: {"message":"502 status code (no body)","status":502,"modelId":"frankenstein-llm","providerId":"litellm"}
-
-Works, but is extremely slow stil.
-
-
-not sure the issue or what. Bu you may also need to play doctor of frankenstein and check also the executor on these isssues. 
-
---
-
-GLM-5.2 Hexarchy ring crash-loop root-caused and FIXED. Ring is SERVING. glm52-only 
-```
-
-**Ideas referenced:** #11335, #11945, #12247, #12262, #12403, #12459, #12473, #12477, #12584, #13121, #13202, #15330, #15371, #15374, #16648, #17203, #17205, #17300, #17494, #1754, #1755, #17717, #17738, #178501, #1820, #18329 [queued], #18471, #18716, #1877, #18795 [queued], #18800, #18820 [deployed], #1883, #18851 [proposed], #18853, #18861, #18862 [queued], #18867 [proposed], #18868, #18871 [queued], #18880 [proposed], #18887, #18895, #18898 [executing], #18900, #18901, #18903, #18912, #18913 [proposed], #18917 [proposed], #18918 [deployed], #18920 [proposed], #18928 [executing], #18929 [rejected], #18930 [queued], #18932, #18934 [proposed], #18937 [executing], #18938 [proposed], #18940, #18941 [blocked], #18954 [proposed], #18959 [proposed], #1896, #18966 [rejected], #18967 [proposed], #18974 [queued], #18975 [proposed], #18976, #18977 [proposed], #18983 [queued], #18985 [proposed], #18998 [executing], #19005, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19127, #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19173, #19177, #19178, #19184, #19185, #19186, #19190, #19192 [rejected], #19193, #19198, #19202, #1942, #1963, #1964 [resolved], #1965 [deployed], #1966 [deployed], #1967 [deployed], #1968, #1969 [deployed], #1970, #1971 [deployed], #1972 [deployed], #1973, #1974, #1975, #1976, #1977 [blocked], #1978 [blocked], #1979, #1980, #1981, #1982, #1983, #1984, #1985, #41685, #4747, #48031, #48140, #6826, #7717
-
-**Last PICKUP PROMPT:**
-
-```
-a).
-   - Update HANDOFF_NOTES; append to `cline_task_ledger.md`; ship a rule-91 PICKUP PROMPT block inside the `attempt_completion` **`result`** parameter (47-char U+2550 dividers, no bare `#NNNN`, every open thread backed by a real filed idea or marked `(human-only decision — no idea)`).
-   - Carry forward human-only decisions: retire the Mac medic permanently vs update it to v35 before re-enabling; gpu_mem 0.82→0.50 rule-277 call (bug #1963) — deprioritize, evidence favors the medic fix.
-
-6. Task Evolution:
-   - Original Task: Ruben's single message, quoted verbatim in §1.
-   - Task Modifications: None. Ruben has sent exactly one message; no redirection.
-   - Current Active Task: Same as original — diagnose and fix the two LiteLLM model failures while proving the GLM ring is serving $0 local, plus a Frankenstein-Doctor sweep including the executor.
-   - Context for Changes: N/A (no evolution).
-
-7. Current Work:
-
-   I closed the second leg of the dual proxy probe and pivoted into the hang RCA. Three facts landed in this window:
-   (i) **`/tmp/rc_fr.txt` → `HTTP=000 T=170.002648`** — frankenstein-llm hangs through LiteLLM exactly like glm52-only (`HTTP=000 T=170.002155`), both with zero headers and zero body. Two unrelated backends, identical stall ⇒ the fault is inside the proxy.
-   (ii) **`router_hook.py` (412 lines) is largely exonerated** — targeted grep found no `time.sleep`, no `asyncio.sleep`, no unbounded `httpx`/`requests`; the only network call is a **0.35s-bounded** `_vec_urlreq.urlopen(req, timeout=0.35)` at line 250. The real hook is `async def async_pre_call_hook(...)` at line 313 (lines 300-412 not yet fully read).
-   (iii) **The discriminator probe:** `/health/liveliness` = **200 in 0.139s**, authenticated `/v1/models` = **200 in 0.018s**, while `/v1/chat/completions` hangs 170s. The event loop is not globally frozen — only the completion path (which touches spend-logging/cost-tracking) stalls. Filtered docker logs show a sustained apscheduler pileup: `update_spend` (0:00:10/0:00:12/0:00:15) and `ProxyConfig.add_deployment` / `ProxyConfig.get_credentials` (0:00:30) all repeatedly "skipped: maximum number of running instances reached (1)", plus recurring `user_api_key_auth(): Exception occured - No api key passed in. Requester IP Address:172.116.115.101`. Since completions returned 200 right after the 13:56 PT restart and degraded to a hang by 15:12 PT, the working hypothesis is **Prisma/Postgres connection-pool exhaustion driven by the stuck spend-logging coroutines**.
-   (iv) Incidental gotcha learned: the litellm container's `ps` is BusyBox — `pcpu` is rejected; use `ps -eo pid,etime,stat,args`.
-
-   Cumulative verified state: ring SERVING (pp6 token proof 15:05, `:8210/v1/models` 200 at 15:15:42), supervisor guarding it as pid 460259 with the corrected rank table, PP-blind medic killed on all 6 boxes, config.yaml line 468 patched + backed up + LiteLLM safe-restarted, dead `:11506` DB rung deleted. No Anthropic anywhere.
-
-8. Next Step:
-
-   Run ONE fast `ssh_command` on WOPR (expect a rule-261 Mode D retry) to test the pool-exhaustion hypothesis before touching anything:
-   ```bash
-   echo ---PGCONN---; sudo -u postgres psql -A -F"|" -t -c "select state, count(*) from pg_stat_activity where datname='litellm_db' group by state;"; sudo -u postgres psql -A -F"|" -t -c "show max_connections;"; echo ---PS---; sudo docker exec litellm sh -c "ps -eo pid,etime,stat,args" 2>&1 | head -10 | cut -c1-140; echo ---CFG---; grep -nE "disable_spend_logs|general_settings:|database_url|store_model_in_db" /etc/litellm
 ```

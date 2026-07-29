@@ -6,21 +6,23 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/28/2026, 11:53:16 PM PT | window: last 72h | 118 tasks | index total 282 (parsed 7, cached 275)
+Generated: 7/29/2026, 12:53:17 AM PT | window: last 72h | 117 tasks | index total 284 (parsed 9, cached 275)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785303815587` | 7/28/2026, 11:53:09 PM | 296 | 671KB | I'm running a query on litellm:glm52-only now too so you guys may be working on the same t |
-| `1785298450123` | 7/28/2026, 11:50:10 PM | 204 | 735KB | #Stripe/Klarna |
-| `1785298633210` | 7/28/2026, 11:47:55 PM | 63 | 250KB | #Scope Oct GLM Build   |
-| `1785302012720` | 7/28/2026, 11:47:54 PM | 71 | 178KB | How can we make Daystorm council more effective and impactful? Seems like they are broken  |
-| `1785301927173` | 7/28/2026, 11:46:09 PM | 103 | 1306KB | See this email I got. Scope with deep research whether this is accurate or not:  |
-| `1785301964731` | 7/28/2026, 11:45:32 PM | 71 | 140KB | Tell me Are CFA's actually learning? I thought we had a learning system setup. It seels li |
-| `1785295028411` | 7/28/2026, 11:45:10 PM | 187 | 614KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
+| `1785303815587` | 7/29/2026, 12:53:12 AM | 584 | 1269KB | I'm running a query on litellm:glm52-only now too so you guys may be working on the same t |
+| `1785295028411` | 7/29/2026, 12:51:50 AM | 207 | 661KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
+| `1785302012720` | 7/29/2026, 12:50:36 AM | 89 | 211KB | How can we make Daystorm council more effective and impactful? Seems like they are broken  |
+| `1785301964731` | 7/29/2026, 12:47:56 AM | 82 | 189KB | Tell me Are CFA's actually learning? I thought we had a learning system setup. It seels li |
+| `1785301927173` | 7/29/2026, 12:47:54 AM | 123 | 1481KB | See this email I got. Scope with deep research whether this is accurate or not:  |
+| `1785310799847` | 7/29/2026, 12:47:49 AM | 3 | 13KB | We now see a log from a Julia restart attempt that fails because the Ray cluster cannot fi |
+| `1785298633210` | 7/29/2026, 12:39:08 AM | 92 | 303KB | #Scope Oct GLM Build   |
+| `1785298450123` | 7/29/2026, 12:37:25 AM | 318 | 1016KB | #Stripe/Klarna |
+| `1785302302290` | 7/29/2026, 12:34:19 AM | 70 | 199KB | Why do subagents completely fail in frankenstein-llm? |
+| `1785308873330` | 7/29/2026, 12:09:20 AM | 3 | 5KB | Go ahead and make a comparison to me about interdimensional space and Moad's in relation t |
 | `1785293294377` | 7/28/2026, 11:09:11 PM | 300 | 1631KB | A metric ton of emails came in to email agent within the last hour or 2. I need you to go  |
 | `1785282386265` | 7/28/2026, 10:56:05 PM | 662 | 7552KB | pickup telephony task, have turned off the AI, VAPI agent, but button does not appear to b |
 | `1785303393404` | 7/28/2026, 10:48:42 PM | 28 | 107KB | How fast are you today? |
-| `1785302302290` | 7/28/2026, 10:44:22 PM | 34 | 154KB | Why do subagents completely fail in frankenstein-llm? |
 | `1785303526321` | 7/28/2026, 10:39:36 PM | 12 | 29KB | check rules 298, plus read ideal GLM Build on desktop. Something is not working right with |
 | `1785296742883` | 7/28/2026, 10:34:49 PM | 218 | 482KB | We had a frankenstein doctor type window working and the window just crashed. |
 | `1785266083468` | 7/28/2026, 9:18:02 PM | 201 | 659KB | Play Dr. of Frankenstein for 90 minutes and use time stamps to make sure that you were wor |
@@ -125,15 +127,12 @@ Generated: 7/28/2026, 11:53:16 PM PT | window: last 72h | 118 tasks | index tota
 | `1785071438937` | 7/26/2026, 6:10:52 AM | 6 | 62KB | tell me how many turns of glm5.2 local have occurren int he last 10 minutes? |
 | `1785071145080` | 7/26/2026, 6:08:05 AM | 10 | 38KB | tell me how many turns of glm5.2 local have occurren int he last 10 minutes? |
 | `1785071081866` | 7/26/2026, 6:05:33 AM | 14 | 42KB | tell me how many turns of glm5.2 local have occurren int he last 10 minutes? |
-| `1785036492220` | 7/26/2026, 12:35:36 AM | 1055 | 1780KB | #GLM |
-| `1785050078893` | 7/26/2026, 12:15:54 AM | 5 | 31KB | tell me how many turns of glm5.2 local have occurren int he last 10 minutes? |
-| `1785050077563` | 7/26/2026, 12:15:36 AM | 6 | 32KB | tell me how many turns of glm5.2 local have occurren int he last 10 minutes? |
 
 ---
 
 ## Per-window detail
 
-### `1785303815587` — 7/28/2026, 11:53:09 PM PT — 296 turns
+### `1785303815587` — 7/29/2026, 12:53:12 AM PT — 584 turns
 
 **Original task:**
 
@@ -147,102 +146,38 @@ Read slso glm 52 ideal build on desktop.
 You may cross with the other window on a repa
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11936, #11942, #11944, #11953, #12247, #12262, #12314, #12363, #12364, #12365, #12366, #12368, #1238, #12477, #12618, #12657, #12673, #12689, #12824, #12872, #12878, #13108, #13202, #1378, #13831, #13874, #13964, #14000, #14848, #16120, #16163, #16265, #16304, #16648, #16844, #17202, #17203, #17205, #17300, #1754, #1755, #17680, #18312, #18326, #18720, #18820, #18868, #19338, #19653, #19840, #19874 [proposed], #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #19881 [proposed], #19882 [proposed], #19883 [proposed], #19903 [proposed], #19907 [proposed], #2014, #2050, #2065, #2090, #2091, #48031, #48140
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11936, #11942, #11944, #11953, #12247, #12262, #12314, #12363, #12364, #12365, #12366, #12368, #1238, #12477, #12618, #12657, #12672, #12673, #12689, #12824, #12872, #12878, #13108, #13202, #1378, #13831, #13874, #13964, #14000, #14848, #16120, #16163, #16265, #16304, #16417, #16448, #16449, #16604, #16648, #16844, #17202, #17203, #17205, #17300, #1754, #1755, #17680, #18312, #18326, #18720, #18820, #18868, #19338, #19653, #19840, #19874 [proposed], #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #19881 [proposed], #19882 [proposed], #19883 [proposed], #19903 [proposed], #19907 [proposed], #19925, #2014, #2050, #2065, #2085, #2090, #2091, #2092, #2093, #2094, #48031, #48140
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785298450123` — 7/28/2026, 11:50:10 PM PT — 204 turns
+### `1785295028411` — 7/29/2026, 12:51:50 AM PT — 207 turns
 
 **Original task:**
 
 ```
-#Stripe/Klarna
+What outstanding build issues exist for the Broser Extension for Argus? What else do you recommend? Can you do some work and testing on it to improve it more? Make sure it's wired into actual Argus as well:
 
-Look into this, plan and scope only, do deep analysis and consult SLS / MCP,, etc...
-
---
-While you are on it, here remember that we have Stripe/Clarna and check API on that and i need to make sure that's properly wired into SLS, payment tracking, etc... and prevents users from being suspended if paid, knocks off the balance. if any for EMT payments, etc... Just verifying and so needs resolution if not across all EMT sites. Make sureit's activating properly, etc...|
+https://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome
 ```
 
-**Ideas referenced:** #0000, #111827, #16224, #16610, #16613, #16958 [deployed], #16959, #1758, #17580, #19173, #19175 [executing], #19176 [queued], #19522, #19573, #19583, #19584, #19585, #19645, #19646, #19803, #19807, #19810, #19811, #19818, #19820, #19827, #19830, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19840, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19872 [deployed], #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #19897 [proposed], #19898 [proposed], #19899 [proposed], #19900 [proposed], #19901 [proposed], #19902 [proposed], #19903 [proposed], #19904 [proposed], #19908 [proposed], #19909 [proposed], #19910 [proposed], #19911 [proposed], #19912 [proposed], #19913 [proposed], #19914 [proposed], #19915 [proposed], #19916 [proposed], #19917 [proposed], #19918 [proposed], #19920 [proposed], #19921 [proposed], #2089, #5344, #7317, #9086, #9311, #9312, #9339
+**Ideas referenced:** #0000, #10003, #10005, #10182, #11316, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13202, #14000, #16213, #16263, #17342, #17345, #17669, #17672, #17673, #17691, #17697, #17741, #17746, #17749, #17751, #1820, #18328, #18337, #18360, #18388 [executing], #18396 [proposed], #18397 [proposed], #18398 [proposed], #1840, #1857, #18687, #18688, #18745, #18770, #1878, #18930 [proposed], #19370, #19407, #1952, #19896 [proposed], #19898 [proposed], #19899 [proposed], #19900 [proposed], #19901 [proposed], #19919 [proposed], #19999 [approved], #21262, #238636, #274160, #30363, #34495, #6164, #69707, #8942, #9650, #9654, #9660, #9733, #9889
 
 **Last PICKUP PROMPT:**
 
 ```
- pick the architecture option.
+ncidents should be eliminated.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
+Pick up task #7 — Argus Chrome Extension build issues (all items resolved).
 
-Pick up task #19897 [proposed] - Klarna is LIVE on 6 WordPress sites with 10 percent conversion, and SLS reads the wrong table
+Where we left
 
-Where we left off (verified 2026-07-28 23:48 PT, live Stripe API acct_18d2efGup709uA0I):
-- CORRECTION: my earlier claim that Klarna was invisible with n=1 was WRONG. I had only queried local mirror tables, never Stripe. Ruben was right.
-- TWO parallel integrations. EMSU_WC_Klarna (WooCommerce, 6 sites, all real revenue) vs EMS_Admin_Portal (emtskills lib, 2 smoke tests ever). Every SLS hook reads the portal table, which real payments never touch. #19921 [proposed].
-- REVENUE: 22 sessions, 2 paid $1,990.00, 18 expired unpaid $21,927.50, 2 still open $2,595.00. 10 percent conversion. #19920 [proposed].
-- 9 ENROLLED STUDENTS in the abandoned set with payment_method NULL and class dates 07-20 or 08-17: connorziehler2, theraccoon049, carly.carruth13, sakuratokyo1327, tessa.northcraft26, cblmommy1007, cooldave2207, mattison.harr, heatherparsons002. At suspension risk right now.
-- lynnhoke@gmail.com PAID 295.00 on 07-21 and has NO Students row.
-- Sites: arizonaemtrefresher 6, arizonaemt 5, dallasemt 4, sanantonioemt 2, paramedicrefresher 2, sandiegoemt 1. arizonaemtrefresher and paramedicrefresher are NOT monitored by check_registration_surface_health.
-- RULE 91 FIX SHIPPED: api/orchestrator/idea_exists.php on WOPR (lint OK, FPM reloaded, live-tested), clinerules-mcp EXISTENCE + IDENTITY GATE (tsc clean), rule 91 amended (lint OK 6243 bytes, 307 rules reindexed). #19915 [proposed]. Activates on next MCP restart.
-
-Open threads to drive next:
-1. #19921 [proposed] - NEEDS RUBEN DECISION on the architecture fork: consolidate on WooCommerce, consolidate on portal, or bridge via a Stripe-API reconciliation cron. Recommendation is bridge then consolidate on WooCommerce. Evaluate cron/detect_klarna_payment.php first, it is already the bridge in draft form.
-2. #19920 [proposed] - Diagnose the 90 percent abandonment (Klarna decline, broken return URL, session expiry, or UX). stark@cowboystateops.com retried twice in minutes on 07-18, which suggests hard failure not hesitation. Then recover the 9 enrolled students before their class dates and before the suspension crons touch them.
-3. #19916 [proposed] - SECURITY. Make processKlarnaWebhook fail CLOSED on an empty secret, then add STRIPE_KLARNA_WEBHOOK_SECRET and register the endpoint.
-4. #19909 [proposed] - Add Klarna to checkPaymentStatus, but RESCOPED per 19921. It must read real Klarna payments, not stripe_klarna_sessions which holds only smoke tests.
-5. #19912 [proposed] - Schema-verify klarna_last_checked_at and klarna_status_log, then evaluate detect_klarna_payment.php as the bridge and schedule it.
-6. #19911 [proposed] - Set klarna_matched in balance_gate::getBalances, ideally by collapsing the three duplicate implementations per rule 92.
-7. #19908 [proposed] - Build queryKlarnaCharge on PaymentEvidenceMatcher and fix the zero-arg constructor call at line 178 against the PDO-requiring ctor at line 23.
-8. #19917 [proposed] - Register check_klarna_status in CanonicalToolRegistry, gated on 19908.
-9. #19913 [proposed] - tagStudentKlarnaPaid does a local-only invoice UPDATE with no QuickBooks writeback. student_db_id DOES exist and joins cleanly, original premise corrected.
-10. #19910 [proposed] - Patch the stale charges-array shape to latest_charge, which is why kraahauge has a pi
+[STOP]
 ```
 
-### `1785298633210` — 7/28/2026, 11:47:55 PM PT — 63 turns
-
-**Original task:**
-
-```
-#Scope Oct GLM Build  
-
-Read Ideal GLM Build on desktop and let me know your thoughts on whether repurposing Julia and claudia TP=2 into the current GLM Hex would be better than having 2 separate systems
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16578, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #17580, #1766 [investigating], #1779, #17825 [blocked], #17826 [blocked], #17831 [blocked], #17833 [blocked], #17834 [proposed], #17844 [proposed], #17845 [proposed], #1798, #1828, #18448, #1896, #19239 [rejected], #19567, #19803, #19807, #19811, #19833, #19834, #1986, #19872, #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #1988 [blocked], #19881 [proposed], #19882 [proposed], #19883 [proposed], #19886 [proposed], #1989 [blocked], #19903, #19907, #1991, #2014, #2050, #2063, #2065, #2073, #2084, #2085, #2089, #2090, #2091, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-ge for 120B traffic continues.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task: Restore Julia+Claudia TP=2 gpt-oss-120b cluster (see idea #19886 [proposed])
-
-Where we left off (verified 2026-07-28 23:22 PT):
-- Julia (spark-6ae6, WG 10.100.0.15, SSH tunnel :2205) HEALTHY, GPU 0%, no Docker containers running
-- Claudia (spark-6d51, WG 10.100.0.16, SSH tunnel :2206) HEALTHY, GPU 0%, no Docker containers running
-- 46.3% Cline traffic spilling to paid cloud with no active 120B cluster
-- emsu_distill LoRA weights on Julia at ~/models/emsu_distill_lora
-- Unified worker scripts from 2026-07-15 restore on WOPR /tmp/
-- GLM Hex PP=6 ring: DO NOT TOUCH (rule 157, ideal build section 9)
-
-Open threads to drive next:
-1. #19886 [proposed]: SSH into Julia (:2205) and Claudia (:2206), launch gpt-oss-120b TP=2 cluster with emsu_distill LoRA, register in frankenstein_registry.yaml, verify serving, re-enable 120B routing
-
-Reference IDs:
-- Idea filed: #19886 [proposed]
-- Files touched: IDEAL_GLM52_HEX_BUILD.md, GLM52_HEX_SSH_ACCESS.md, GLM52_6NODE_HYBRID_APPROACH_ANALYSIS.md, GLM52_PICKUP.md, GLM52_IDEAL_BUILD_ANSWER_2026-07-28.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785302012720` — 7/28/2026, 11:47:54 PM PT — 71 turns
+### `1785302012720` — 7/29/2026, 12:50:36 AM PT — 89 turns
 
 **Original task:**
 
@@ -294,69 +229,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785301927173` — 7/28/2026, 11:46:09 PM PT — 103 turns
-
-**Original task:**
-
-```
-See this email I got. Scope with deep research whether this is accurate or not: 
-
-EA PDF retry has 41 consecutive failures.
-Plugins status: All active
-Timestamp: 2026-07-28 21:15:04
-```
-
-**Ideas referenced:** #11925, #13976, #15158, #15227, #17580, #178501, #19458, #19460, #19490, #19491, #19492, #19495, #19511, #19522, #19558, #19573, #19583, #19584, #19585, #19594, #19615, #19645, #19646, #19686, #19690 [deployed], #19704, #19714 [proposed], #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19803, #19807, #19810, #19811, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830, #19831, #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19840, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19872, #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #19891 [proposed], #2084, #2085, #2089, #2998, #7817
-
-**Last PICKUP PROMPT:**
-
-```
-h, not in plugin availability.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — EA PDF retry cron fix: replace dead admin-scrape path with REST endpoint.
-
-Where we left off (verified 2026-07-28 22:55 PT):
-- 56 consecutive batch failures in ea_pdf_retry.log, 280 individual failures, ZERO successes
-- Root cause: cron/ea_pdf_retry.php uses local fetchEAPDFWithNonce() (old admin-scrape nonce path) instead of lib/EaPdfFetcher.php (fixed REST path)
-- 5 stuck students with IDs 2800-2804, all from today
-- Null monitor cron_ea_pdf_null_monitor.php also missing from disk
-- REST endpoint live but returns HTTP 401 (app_password not configured for retry cron)
-
-Open threads to drive next:
-1. #19891 [proposed] — Replace fetchEAPDFWithNonce in cron/ea_pdf_retry.php with REST call to wp-json/emsu/v1/export-ea OR import EaPdfFetcher.php directly
-2. #19891 [proposed] — Restore or recreate cron/cron_ea_pdf_null_monitor.php (missing from disk, cron fails every 30 min)
-3. #19891 [proposed] — Add app_password to the retry cron's config so the REST call authenticates
-
-Reference IDs:
-- Idea filed: #19891
-- Retry cron: /var/www/emtskills/cron/ea_pdf_retry.php
-- Fixed library: /var/www/emtskills/lib/EaPdfFetcher.php
-- Retry log: /var/www/emtskills/logs/ea_pdf_retry.log
-- Intake backfill log: /var/www/emtskills/logs/ea_intake_backfill.log
-- REST endpoint: GET /wp-json/emsu/v1/export-ea?template=X&dataset=Y (Application Password auth)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Read HANDOFF_NOTES for EA PDF context
-- [x] Found EA retry log files and analyzed contents
-- [x] Counted exact failures: 56 batches, 280 individual, 0 successes
-- [x] Identified root cause: dead admin-scrape path in retry cron
-- [x] Verified EaPdfFetcher.php fix exists but was never wired into the retry cron
-- [x] Checked null monitor: file missing from disk
-- [x] Verified REST endpoint status (HTTP 401, auth gap)
-- [x] Identified 5 stuck students
-- [x] Filed idea #19891
-- [x] Compiled comprehensive report with evidence
-</task_progress>
-</attempt_completion>
-```
-
-### `1785301964731` — 7/28/2026, 11:45:32 PM PT — 71 turns
+### `1785301964731` — 7/29/2026, 12:47:56 AM PT — 82 turns
 
 **Original task:**
 
@@ -369,125 +242,259 @@ Tell me Are CFA's actually learning? I thought we had a learning system setup. I
 **Last PICKUP PROMPT:**
 
 ```
-
-The previous completion was interrupted mid-PICKUP PROMPT. Re-delivering the complete synthesis now.
-
-<attempt_completion>
-<result>
-## CFA Learning System Investigation: Are CFAs Actually Learning?
-
-**No. The learning system has a working detection layer but a completely broken feedback loop.** Here is the evidence gathered live:
-
-### What works (detection)
-
-KAIZEN detects CFA failures. 7-day coverage:
-
-| Surface | Failures | Classified % |
-|---|---|---|
-| Email AI (ai_ticket_agent) | 81 | 28.4% |
-| SMS AI (sms_ai) | 19 | 0% |
-| Voice AI (voice_call) | 919 | 47.8% |
-| Chat Widget (livechat_ai) | 0 | N/A |
-
-### What is broken (feedback loop)
-
-**1. ZERO CFA repair recipes.** 252 active `failure_repair_recipes` in the DB, but NONE for any CFA surface. All recipes target `ruben_executor` (3), `argus_audit` (5), `glm52` (5), or NULL target_slug (239). The system detects failures but has no repair recipes to feed back into the agents.
-
-**2. 825 corrections trapped in limbo.** `ai_learned_corrections` table: 151 `pending_review`, ZERO approved, 3 rejected. All have EMPTY `channel_applicability` — no correction is mapped to any CFA channel (voice, livechat, email, sms). The system collects but never approves or applies.
-
-**3. Auto-approve pipeline never deployed.** Idea #11216 was fully specified and sandbox-tested (PASSED), but zero files exist on disk. No `lib/ai_learning_auto_approve.php`, no `cron/cron_ai_learning_auto_approve.php`, no cron entry. The sole learning file is `cron_harvest_cline_corrections.php` — a collector with no approval stage.
-
-**4. No learning pipeline crons.** Crontab has zero entries for `learn`, `kaizen`, `harvest`, or `auto_approve`.
-
-### Why it feels like regression
-
-CFAs are not getting dumber — they are making the same mistakes repeatedly because there is no learning feedback loop. Every failure is observed, logged, and then ignored. No recipe is ever created, no correction is ever approved, and nothing is ever fed back into the agent prompts.
-
-### Top unclassified patterns (ready for recipe seeding)
-
-- **Email AI:** `first_touch_clarify_sent: intent=general` (34), `stuck_quiz_attempt: no attempt_id parsed` (13)
-- **SMS AI:** `All AI models failed` (19/19 identical)
-- **Voice AI:** Empty transcript/greeting-only calls (480+ across 10 patterns)
-
-### Next steps (both approved)
-
-- **#19892 [approved]** — Seed KAIZEN repair recipes for all 5 CFA surfaces from top unclassified patterns
-- **#19895 [approved]** — Deploy auto-approve pipeline (idea #11216) from sandbox to server, wire 15-min cron, clear 151 pending backlog
-
-These two steps close the loop: classify failures → recipes → approve corrections → feed back into agent prompts.
+actually learning? (completed)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task # - CFA learning system investigation -- learning detection works, output stage broken
+Pick up task #19895 [approved] — CFA learning system – full loop built and decision to extend to Chat Widget AI and Voice AI
 
-Where we left off (verified 2026-07-28 22:58 PT):
-- KAIZEN detection works across CFA surfaces: ai_ticket_agent 81 failures/7d (28.4% classified), sms_ai 19/7d (0%), voice_call 919/7d (47.8%), livechat_ai 0
-- ZERO CFA repair recipes: 252 active recipes, NONE for any CFA surface -- all for ruben_executor (3), argus_audit (5), glm52 (5), NULL (239)
-- ai_learned_corrections: 825 total, 151 pending_review, 0 approved, 3 rejected -- all with EMPTY channel_applicability
-- Auto-approve pipeline (#11216) spec exists, sandbox-tested PASSED, but NEVER deployed -- zero PHP files on disk, no cron
-- Onl
+Where we left off (verified 2026-07-29 00:39 PT):
+- Auto‑approve pipeline files deployed and cron entries added
+- Email‑AI learning pipeline deployed
+- KAIZEN recipes seeded for ai_ticket_agent, sms_ai, voice_call
+- Recipes for livechat_ai and voice_learning not yet created (decision to extend)
+- Crontab contains both auto‑approve and email‑learning entries
+- `ai_learned_corrections` backlog cleared; new email‑draft corrections captured
+- Ideas #19892, #19895, #183 approved
+- Files touched: lib/ai_learning_auto_approve.php, cron/cron_ai_learning_auto_approve.php, api/ai_learning_auto_approve_status.php, lib/email_ai_learning.php, cron/cron_email_ai_learning.php, api/email_ai_learning_status.php
+
+Open threads to drive next:
+1. #19892 [approved] — Monitor KAIZEN recipes for any CFA surfaces and seed new ones as needed
+2. #19895 [approved] — Verify auto‑approve pipeline operation
+3. #183 [approved] — Track Email AI learning pipeline performance
+4. (human-only decision, no idea) — Decision to extend learning pipeline to Chat Widget AI and Voice AI
+
+Reference IDs:
+- Ideas filed: #19892 [approved], #19895 [approved], #183 [approved]
+- Files touched: lib/ai_learning_auto_approve.php, cron/cron_ai_learning_auto_approve.php, api/ai_learning_auto_approve_status.php, lib/email_ai_learning.php, cron/cron_email_ai_learning.php, api/email_ai_learning_status.php
+- Cron entries: */15 * * * * php /var/www/emtskills/cron/cron_ai_learning_auto_approve.php, */15 * * * * php /var/www/emtskills/cron/cron_email_ai_learning.php
+- Database: ai_learned_corrections (approved backlog), failure_repair_recipes (active CFA recipes)
+
+When done, append to cline_task_ledger.md per rule 07 and run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
-### `1785295028411` — 7/28/2026, 11:45:10 PM PT — 187 turns
+### `1785301927173` — 7/29/2026, 12:47:54 AM PT — 123 turns
 
 **Original task:**
 
 ```
-What outstanding build issues exist for the Broser Extension for Argus? What else do you recommend? Can you do some work and testing on it to improve it more? Make sure it's wired into actual Argus as well:
+See this email I got. Scope with deep research whether this is accurate or not: 
 
-https://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome
+EA PDF retry has 41 consecutive failures.
+Plugins status: All active
+Timestamp: 2026-07-28 21:15:04
 ```
 
-**Ideas referenced:** #0000, #10003, #10005, #10182, #11316, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13202, #14000, #16213, #16263, #17342, #17345, #17669, #17672, #17673, #17691, #17697, #17741, #17746, #17749, #17751, #1820, #18328, #18337, #18360, #18388 [executing], #18396 [proposed], #18397 [proposed], #18398 [proposed], #1840, #1857, #18687, #18688, #18745, #18770, #1878, #18930 [proposed], #19370, #19407, #1952, #19896 [proposed], #19898 [proposed], #19899 [proposed], #19900 [proposed], #19901 [proposed], #19919 [proposed], #21262, #238636, #274160, #30363, #34495, #6164, #69707, #8942, #9650, #9654, #9660, #9733, #9889
+**Ideas referenced:** #11925, #12345, #13976, #15158, #15227, #17580, #178501, #19458, #19460, #19490, #19491, #19492, #19495, #19511, #19522, #19558, #19573, #19583, #19584, #19585, #19594, #19615, #19645, #19646, #19686, #19690 [deployed], #19704, #19714 [proposed], #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19803, #19807, #19810, #19811, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830, #19831, #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19840, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19872, #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #19891 [proposed], #19892 [proposed], #19893 [proposed], #2084, #2085, #2089, #2998, #7817
 
 **Last PICKUP PROMPT:**
 
 ```
-hipped `attempt_completion` with divider lines of 3 U+2550 chars:
-   ```
-   ═══ PICKUP PROMPT ═══
-   ```
-   instead of the required 47-char runs:
-   ```
-   ═══════════════════════════════════════════════
-   ```
+- **Header lines**:  
+  ```
+  ═══════════════════════════════════════════════
+  PICKUP PROMPT (paste into a fresh Cline window)
+  ═══════════════════════════════════════════════
+  ```  
+- **Content sections** (exact phrasing & order):
+  1. **Pick up task — <short description>.**  
+     - Include the real numeric Cline task ID in parentheses (e.g., `(#12345)`). If unknown, omit the `#`.  
+  2. **Where we left off (verified <timestamp PT>)** – a bullet list of the current state (files, logs, IDs, timestamps).  
+  3. **Open threads to drive next** – numbered list, each entry **must** reference a **real idea number** created during this session and a status in brackets: `[proposed]`, `[queued]`, `[executing]`, `[deployed]`, `[blocked]`, `[rejected]`, or `[superseded]`. No placeholders like `#NNNN`.  
+  4. **Reference IDs** – free‑form list of relevant files, logs, tables, etc.  
+  5. **Final instruction** – “When done, append a row to cline_task_ledger.md per rule 07 and run order 66 …”.
 
-2. The extension-level structural gate (deployed 2026-07-24, documented in Cline_Obedience.md lines 859-878) rejected the completion because it requires 2+ U+2550 runs of 20+ chars — the 3-char runs failed the gate.
+**3️⃣ Mandatory Elements (no omissions)**  
+- **Exact box size** (47 double‑horizontal chars).  
+- **Timestamp** must be in PT (e.g., `2026‑07‑28 23:46 PT`).  
+- **All idea numbers** must be real (the `<idea_id>` returned by a `create_idea` tool call).  
+- **Status bracket** must be present for every idea.  
+- **No placeholders** (`#NNNN`, `<task_id>`, `<timestamp PT>`, etc.).  
+- **No extra prose** outside the `<result>` tags.  
 
-3. The extension surface forced a tool-call retry: it returned `Wr.toolError` with the specific missing pieces. The model then re-emitted `attempt_completion` with the correct 47-char dividers, which passed the gate.
-
-4. From the user's perspective, this appeared as two pickup prompts for one task — the first was the failed attempt (still visible as a tool error in the conversation history), and the second was the successful one.
-
-**Why the short dividers happened:**
-
-- I wrote the dividers from memory ("═══") — three characters is the visual shorthand the human eye reads, and I did not check the 47-char requirement before shipping.
-- The steering injection mandate says "47 U+2550 chars (BOX DRAWINGS DOUBLE HORIZONTAL, not ASCII equals). Copy mechanically, do not retype." — I retyped instead of copying from the template.
-- The extension gate correctly enforced the requirement, but the enforcement itself produced the duplicate visibility issue (rejection + retry creates two visible completion turns).
-
-## Is the extension gate wrong?
-
-No. The gate is correct — it enforced the structural requirement. The side effect (visible duplicate) is inherent to any structural gate that forces a retry: the failed attempt is visible in the conversation, and the user sees the failed + successful pair.
-
-**Mitigation, not elimination:** The only way to zero visible duplicates is for the model to ALWAYS copy the 47-char divider from the steering injection template instead of retyping from memory. The gate can only reject — it cannot hide the rejected attempt.
-
-## Durable fix
-
-Add a Rule 91 quick-check item specifically about divider character count before shipping attempt_completion:
-
-> "Count U+2550 chars in each divider line. A valid pickup block has exactly 3 divider lines, each 47 chars of U+2550. If any is shorter than 47, you have not copied from the template — go back and COPY."
-
-This gives the model a mechanical check it can run before calling attempt_completion, reducing rejection-then-retry cycles.
-
-## Corrective actions
-
-1. Filed #19901 [proposed] — Add divider-length quick-check to Rule 91 steering injection
-2. Updated Cline_Obedience.md with this RCA (Violation #22 — duplicate completion from gate rejection)
-3. This RCA file archived on desktop for future agent reference
-</content>
-</write_to_file>
+**4️⃣ Prohibited Content**  
+- Any narrative, apology, or commentary outside the `<result>` block.  
+- DSML/JSON tool call envelopes (e.g., `<
 ```
+
+### `1785310799847` — 7/29/2026, 12:47:49 AM PT — 3 turns
+
+**Original task:**
+
+```
+We now see a log from a Julia restart attempt that fails because the Ray cluster cannot find any GPU resources – the node only has one GPU but the tensor‑parallel size is 2. The script is trying to start a TP=2 cluster on a single box, which is why the launch never succeeds and the service stays idle.
+
+__What is needed to get Julia/Claudia serving:__
+
+1. __Ray cluster must have two GPUs available__ – either run both boxes (Julia + Claudia) as a Ray group or add a second GPU on the same box (not possible). The proper config is a *TP=2* cluster with __two nodes__, each with one GPU.
+2. __Start t
+```
+
+**Ideas referenced:** #19886 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785298633210` — 7/29/2026, 12:39:08 AM PT — 92 turns
+
+**Original task:**
+
+```
+#Scope Oct GLM Build  
+
+Read Ideal GLM Build on desktop and let me know your thoughts on whether repurposing Julia and claudia TP=2 into the current GLM Hex would be better than having 2 separate systems
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16578, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #17580, #1766 [investigating], #1779, #17825 [blocked], #17826 [blocked], #17831 [blocked], #17833 [blocked], #17834 [proposed], #17844 [proposed], #17845 [proposed], #1798, #1828, #18448, #1896, #19239 [rejected], #19567, #19803, #19807, #19811, #19833, #19834, #1986, #19872, #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #1988 [blocked], #19881 [proposed], #19882 [proposed], #19883 [proposed], #19886 [proposed], #1989 [blocked], #19903, #19907, #1991, #2014, #2050, #2063, #2065, #2073, #2084, #2085, #2089, #2090, #2091, #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+ge for 120B traffic continues.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task: Restore Julia+Claudia TP=2 gpt-oss-120b cluster (see idea #19886 [proposed])
+
+Where we left off (verified 2026-07-28 23:22 PT):
+- Julia (spark-6ae6, WG 10.100.0.15, SSH tunnel :2205) HEALTHY, GPU 0%, no Docker containers running
+- Claudia (spark-6d51, WG 10.100.0.16, SSH tunnel :2206) HEALTHY, GPU 0%, no Docker containers running
+- 46.3% Cline traffic spilling to paid cloud with no active 120B cluster
+- emsu_distill LoRA weights on Julia at ~/models/emsu_distill_lora
+- Unified worker scripts from 2026-07-15 restore on WOPR /tmp/
+- GLM Hex PP=6 ring: DO NOT TOUCH (rule 157, ideal build section 9)
+
+Open threads to drive next:
+1. #19886 [proposed]: SSH into Julia (:2205) and Claudia (:2206), launch gpt-oss-120b TP=2 cluster with emsu_distill LoRA, register in frankenstein_registry.yaml, verify serving, re-enable 120B routing
+
+Reference IDs:
+- Idea filed: #19886 [proposed]
+- Files touched: IDEAL_GLM52_HEX_BUILD.md, GLM52_HEX_SSH_ACCESS.md, GLM52_6NODE_HYBRID_APPROACH_ANALYSIS.md, GLM52_PICKUP.md, GLM52_IDEAL_BUILD_ANSWER_2026-07-28.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785298450123` — 7/29/2026, 12:37:25 AM PT — 318 turns
+
+**Original task:**
+
+```
+#Stripe/Klarna
+
+Look into this, plan and scope only, do deep analysis and consult SLS / MCP,, etc...
+
+--
+While you are on it, here remember that we have Stripe/Clarna and check API on that and i need to make sure that's properly wired into SLS, payment tracking, etc... and prevents users from being suspended if paid, knocks off the balance. if any for EMT payments, etc... Just verifying and so needs resolution if not across all EMT sites. Make sureit's activating properly, etc...|
+```
+
+**Ideas referenced:** #0000, #111827, #11990, #16224, #16610, #16613, #16958 [deployed], #16959, #1758, #17580, #19173, #19175 [executing], #19176 [queued], #19522, #19573, #19583, #19584, #19585, #19645, #19646, #19803, #19807, #19810, #19811, #19818, #19820, #19827, #19830, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19840, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19872 [deployed], #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #19897 [proposed], #19898 [proposed], #19899 [proposed], #19900 [proposed], #19901 [proposed], #19902 [proposed], #19903 [proposed], #19904 [proposed], #19908 [proposed], #19909 [proposed], #19910 [proposed], #19911 [proposed], #19912 [proposed], #19913 [proposed], #19914 [proposed], #19915 [proposed], #19916 [proposed], #19917 [proposed], #19918 [proposed], #19920 [proposed], #19921 [proposed], #19924 [proposed], #2089, #5344, #7317, #9086, #9168, #9311, #9312, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+t than what I told you before.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #19897 [deployed] - Klarna now has Affirm parity across all 10 payment surfaces, EMT high-dollar checkout failure is the open question
+
+Where we left off (verified 2026-07-29 00:35 PT):
+- AFFIRM PARITY AUDIT was the key insight: 48 Affirm surfaces vs 6 Klarna. Klarna was never broken, it was an unfinished migration from the 2026-07-09 swap. Now 10 of 10 core payment surfaces are Klarna-aware.
+- SHIPPED THIS SESSION: Student360 klarna_charge_id, PaymentVerifier lookupKlarna plus verdict key, CanonicalToolRegistry check_klarna_status (dispatch + schema), localCheckKlarnaStatus with three-state output (settled / started-not-completed / never-attempted).
+- SECURITY #19916 [deployed] hand-shipped per rule 267 GATE C. processKlarnaWebhook now FAILS CLOSED. Attack simulated: forged payment_intent.succeeded for $1,995 with no signature returned HTTP 400 and tagged zero students.
+- RUBEN CORRECTED my orphan detector: refresher courses are self-activating, student pays and Moodle auto-enrols with no Students row. VERIFIED IN MOODLE: lynnhoke@gmail.com paid 295.00 at 18:41 on 07-21, enrolled in course 12 at 18:43. Added isSelfActivatingSite plus verifySelfActivation. Zero false alarms.
+- FIXED MY OWN GAP: site and integration were NULL because WooCommerce stamps metadata on the Checkout Session not the PaymentIntent. Added enrichFromCheckoutSessions. All 22 rows now attributed.
+- SEGMENTED NUMBERS: EMT tuition 12 sessions 1 paid 20,045.00 abandoned. Refresher 8 sessions 1 paid 1,682.50 abandoned. The failure is specific to HIGH-DOLLAR EMT checkouts, likely a Klarna credit ceiling, not a code bug.
+- RULE 38 VIOLATION recorded and corrected: 14 ideas were parked at proposed because I reflexively treated payment-adjacent work as human-gated. Rule 29's money gate covers MOVING money, not read-only reconciliation. Zero proposed remain.
+- Backups: .bak-20260729-klarna-parity (Student360, PaymentVerifier), .bak-20260729-klarna-tool (CanonicalToolRegistry, payment_investigation_tools), .bak-20260729-failclosed (stripe_klarna_checkout), .bak-20260729-session-enrich and .bak-20260729-refresher-aware (KlarnaStripeSync), .bak-20260728-klarna-bridge (StudentLifecyclePaymentService), .bak-20260728-klarna-matched (balance_gate).
+
+Open threads to drive next:
+1. #19920 [executing] - Diagnose why 11 of 12 HIGH-DOLLAR EMT checkouts fail while low-dollar refreshers convert. Amounts 1,245 to 2,395 on arizonaemt, dallasemt, sanantonioemt. Test the Klarna credit-limit/eligibility-ceiling hypothesis by walking one live checkout. Then run recovery outreach on the 9 enrolled students with 07-20 and 08-17 start dates via KlarnaStripeSync::getAbandonedCheckouts().
+2. #19910 [executing] - Register the webhook endpoint in the Stripe dashboard and add STRIPE_KLARNA_WEBHOOK_SECRET to config.local.php. NOTE: the fail-closed patch now REQUIRES this before that endpoint can process anything, which is correct but means real webhooks are rejected until the secret exists. The 10-minute sync cron covers the gap meanwhile.
+3. #19918 [executing] - Add arizonaemtrefresher.com and paramedicrefresher.com to check_registration_surface_health. Both produce Klarna revenue, neither is monitored.
+4. #19912 [executing] - DELETE cron/detect_klarna_payment.php. Three fatal schema bugs, superseded by cron_klarna_stripe_sync.php. Also check whether cron_klarna_status_pipeline.php and stripe_k
+```
+
+### `1785302302290` — 7/29/2026, 12:34:19 AM PT — 70 turns
+
+**Original task:**
+
+```
+Why do subagents completely fail in frankenstein-llm?
+```
+
+**Ideas referenced:** #10108, #10739, #10740, #11741, #11781, #11944, #11953, #12366, #12368, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #13831, #13832, #13874, #16163, #16265, #16304, #16844, #18312, #18326, #18781, #1967, #19887 [proposed], #22386
+
+**Last PICKUP PROMPT:**
+
+```
+arger prompts for other tools.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #19887 — Subagents fail in frankenstein-llm: final response
+
+Where we left
+
+[truncated]
+Failure: I did not provide a response.<attempt_completion>
+<result>
+**What “increase adapter context limit” means**
+
+The Frankenstein‑tools adapter caps the request size at roughly **16 K tokens** (≈131 k characters) – this is the `served_ctx` value shown in `frankenstein_registry.yaml` and the hard‑coded limit in `frankenstein_tools_adapter.py`. Raising the limit would involve:
+
+1. **Edit the adapter source** – open `/usr/local/bin/frankenstein_tools_adapter.py` (or the copy at `/Users/rubenmajor/Desktop/frankenstein_tools_adapter.py`) and locate the constant that defines the maximum token count (e.g. `MAX_TOKENS = 16384`). Increase it to a larger value, such as `32768` or `65536`, depending on server memory constraints.
+2. **Reload the service** – restart the sidecar:  
+   ```bash
+   sudo systemd restart frankenstein-tools.service
+   ```  
+   The new limit will be applied immediately.
+3. **Optional registry update** – if you want the router to advertise the larger context, edit the entry for `frankenstein-tools` in `/etc/litellm/frankenstein_registry.yaml` and change the `served_ctx` field to match the new token ceiling.
+
+These steps are **purely internal**; they don’t require any paid model licenses or external services. They can be applied right now on the host that runs the adapter.
+
+**Feasibility** – The source file is already on the Mac (you have read/write access), and restarting the service is a quick operation. The only trade‑off is higher memory usage and possibly slightly slower latency for very large prompts.
+
+**Subagents – wiring them properly**
+
+The root cause of subagents failing is threefold:
+
+1. **Context‑size limit** – the current 16 K token ceiling often truncates the `use_subagents` payload (five parallel prompt strings), so the model never sees the full tool schema.
+2. **Schema incompatibility** – the free gpt‑oss‑120b model isn’t trained on Cline’s `use_subagents` tool definition. It frequently hallucinates the tool name, garbles arguments, or emits placeholder values. The adapter’s safety layer then drops the call, returning plain text instead of a tool‑call.
+3. **Pool health** – only Artemis‑120b is alive; the other 120 B boxes (julia, cesar, cato) are down or repurposed. This forces spills to paid tiers, which also lack the `use_subagents` schema.
+
+**What’s most beneficial?**
+
+- **Short‑term:** Route `use_subagents` turns to a paid model that supports complex Cline tools (e.g. Kimi‑K3, which has `tool_rank=70` and `supports_tools=true`). This gives reliable subagent execution without needing to overhaul the free pool.
+- **Medium‑term:** If you prefer to keep everything free, restore Julia‑120b (currently down) and consider adding additional 120 B boxes. Even then, the schema mismatch would remain, so you’d still need to train or fine‑tune a model to understand `use_subagents`.
+- **Long‑term:** Upgrade the free pool to a vLLM version that supports the OpenAI `tool_calls` parser (vLLM ≥ 0.10.2). That would let the free 120 B models emit proper tool calls, eliminating the need for a paid tier for subagents.
+
+**Recommendation:**  
+1. Implement the immediate routing change to Kimi‑K3 for `use_subagents` (can be done via a Tiny‑rule or orchestrator decision).  
+2. Optionally increase the adapter context limit as described 
+```
+
+### `1785308873330` — 7/29/2026, 12:09:20 AM PT — 3 turns
+
+**Original task:**
+
+```
+Go ahead and make a comparison to me about interdimensional space and Moad's in relation to our LLM's
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785293294377` — 7/28/2026, 11:09:11 PM PT — 300 turns
 
@@ -605,59 +612,6 @@ How fast are you today?
 **Ideas referenced:** #12459, #1967, #2014
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785302302290` — 7/28/2026, 10:44:22 PM PT — 34 turns
-
-**Original task:**
-
-```
-Why do subagents completely fail in frankenstein-llm?
-```
-
-**Ideas referenced:** #10108, #10739, #10740, #11741, #11781, #11944, #11953, #12366, #12368, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #13831, #13832, #13874, #16163, #16265, #16304, #16844, #18312, #18326, #18781, #1967, #19887 [proposed], #22386
-
-**Last PICKUP PROMPT:**
-
-```
-20b to increase pool capacity.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #19887 — Subagents fail in frankenstein-llm: root cause analysis.
-
-Where we left off (verified 2026-07-28 22:43 PT):
-- Diagnosed why use_subagents fails through frankenstein-llm (3 compounding causes)
-- Verified frankenstein-tools adapter routing (HTTP 200, :11510, 7.6s)
-- Verified host probe: julia-120b DOWN, only artemis-120b UP at 21 tok/s
-- Verified adapter log: zero subagent entries ever
-- Filed idea #19887 [proposed]
-
-Open threads to drive next:
-1. #19887 [proposed] — Implement fix: either route complex-tool (use_subagents) turns to paid tier (kimi-k3 at tool_rank 70) or increase adapter context limit
-2. (human-only decision, no idea) — Restore julia-120b (currently DOWN, connection reset) to increase 120B pool capacity and reduce saturation spill
-3. (human-only decision, no idea) — Consider whether use_subagents should bypass the 120B tool track entirely and go straight to a paid model that handles Cline-native tool schemas
-
-Reference IDs:
-- Ideas filed: #19887 [proposed]
-- Files touched: /usr/local/bin/frankenstein_tools_adapter.py (read, not modified), frankenstein_registry.yaml (read)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Check Frankenstein bug library for known subagent failures
-- [x] Check Frankenstein tooling docs (gpt-oss tool-calling gap documented)
-- [x] Check Frankenstein registry (tool_track, frankenstein-tools at rank 10)
-- [x] Verify frankenstein-tools adapter routing (HTTP 200, :11510)
-- [x] Check host probe (julia DOWN, artemis UP 21 tok/s, only 1 active 120B)
-- [x] Read upstreams config
-- [x] Check adapter logs for subagent failures (zero matches)
-- [x] Provide root cause and fix (3 causes: context cap, schema incompatibility, single-pool-failure)
-</task_progress>
-</attempt_completion>
-```
 
 ### `1785303526321` — 7/28/2026, 10:39:36 PM PT — 12 turns
 
@@ -4816,55 +4770,6 @@ None filed this session.
 ```
 
 ### `1785071081866` — 7/26/2026, 6:05:33 AM PT — 14 turns
-
-**Original task:**
-
-```
-tell me how many turns of glm5.2 local have occurren int he last 10 minutes?
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785036492220` — 7/26/2026, 12:35:36 AM PT — 1055 turns
-
-**Original task:**
-
-```
-#GLM
-
-Let's take this to serving!
-
-Saved, and keyed on serials rather than IPs exactly as you flagged. DHCP leases can move, the serial suffix and MAC prefix cannot.
-
-## Canonical topology, now stored
-
-`/var/www/emtskills/docs/GLM52_RING_TOPOLOGY.md` records a **true closed 6-node ring**, 6 cables, every port populated:
-
-```
-Pompey 50c0 → Marcus 63ce → Tiberius e9e0 → Cesar 3b41 → Cato 2aa8 → Augustus e3b2 → (back to Pompey)
-```
-
-| Serial | Box | Hostname | MAC prefix | IP (2026-07-25) |
-|---|---|---|---|---|
-| `50c0` | Pompey | spark-50c0 | `4c:bb:47:e8:50:c*` | .21 |
-| `63ce` | Marcus | spar
-```
-
-**Ideas referenced:** #11945, #16265, #1754, #1755, #178501, #19184 [approved:autonomous], #19185 [proposed], #19190 [rejected], #19192 [rejected], #19193 [rejected], #19198 [rejected], #19202 [approved:autonomous], #19218 [proposed], #19227 [proposed], #19230 [proposed], #19234 [proposed], #19239 [proposed], #19257 [executing], #19258 [executing], #19259 [executing], #19260 [executing], #19261 [approved], #19266, #1965 [deployed], #1966 [deployed], #1967 [deployed], #1969 [deployed], #1971 [deployed], #1972 [deployed], #1979 [resolved], #1980 [resolved], #1981 [resolved], #1982, #1983, #1984, #1985 [resolved], #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #1990, #1991, #1992, #6826
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785050078893` — 7/26/2026, 12:15:54 AM PT — 5 turns
-
-**Original task:**
-
-```
-tell me how many turns of glm5.2 local have occurren int he last 10 minutes?
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785050077563` — 7/26/2026, 12:15:36 AM PT — 6 turns
 
 **Original task:**
 

@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-07-29T17:53:20.699Z",
+ "generated_at": "2026-07-29T19:41:18.284Z",
  "counts": {
-  "parsed": 1,
-  "reused": 310,
+  "parsed": 0,
+  "reused": 311,
   "failed": 0,
   "total": 311
  },
@@ -101890,13 +101890,13 @@
   },
   "1785347179098": {
    "task_id": "1785347179098",
-   "mtime": 1785347590797,
+   "mtime": 1785347773824,
    "created_at": "2026-07-29T17:46:19.098Z",
-   "last_modified": "2026-07-29T17:53:10.797Z",
-   "size_kb": 166,
-   "turn_count": 33,
+   "last_modified": "2026-07-29T17:56:13.824Z",
+   "size_kb": 225,
+   "turn_count": 44,
    "title": "How many turns of each individual LLM,, not groups, but what's inside of each group in the last 2 hours. For example not frankenstsitn-tools, but what's inside of it",
-   "pickup_prompt": null,
+   "pickup_prompt": "e audit log at the turn grain.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task # - per-individual-LLM turn counts, last 2 hours\n\nWhere we left off (verified 2026-07-29 10:55 PT):\n- frankenstein_what_served reported 3,024 total turns across 12 backends (audit log as-of 2026-07-29 10:54 PT)\n- llm_call_log, llm_router_audit_log, frankenstein_tool_call_log probed per-box dispatch inside pool adapters (frankenstein-tools/llm) is not tracked at the turn grain; adapter-level is the finest logged grain\n- Registry confirms: frankenstein-tools (:11510) load-balances across 120B pool members (artemis-gpt-oss-120b, julia-120b, glm-5.2-local), all serving gpt-oss-120b; frankenstein-llm pool = same boxes + cicero-235b fallback; frankenstein-405b pool (augustus+tiberius) both DISABLED since GLM-5.2 Hex repurpose\n- Atomic models (no pooling): ollama-7b-lora, ollama-14b, ollama-32b, deepseek-v4-pro, glm-5.2, emsu-codegen, 7b-parallel-20260613_230905, ollama-llama3.3-70b, glm-4.6v-flash\n\nOpen threads to drive next:\n1. (human-only decision, no idea) - frankenstein-tools adapter per-box dispatch logging gap: add box_resolved column to llm_call_log for adapter-dispatched turns\n2. (human-only decision, no idea) - frankenstein-405b shows 7 turns but both pool members disabled; anomaly to investigate\n\nReference IDs:\n- Ideas filed: none (informational query)\n- Files touched: none\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "10108": null,
     "10740": null,

@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/29/2026, 10:53:20 AM PT | window: last 72h | 136 tasks | index total 311 (parsed 1, cached 310)
+Generated: 7/29/2026, 12:41:18 PM PT | window: last 72h | 136 tasks | index total 311 (parsed 0, cached 311)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785347179098` | 7/29/2026, 10:53:10 AM | 33 | 166KB | How many turns of each individual LLM,, not groups, but what's inside of each group in the |
+| `1785347179098` | 7/29/2026, 10:56:13 AM | 44 | 225KB | How many turns of each individual LLM,, not groups, but what's inside of each group in the |
 | `1785314663557` | 7/29/2026, 6:31:56 AM | 1275 | 15687KB | I had a working build of GLM 52 local at 10 PM tonight. A series of changes have now made  |
 | `1785329338571` | 7/29/2026, 6:14:29 AM | 114 | 1215KB | Tell me about all the open tickets right now |
 | `1785329349404` | 7/29/2026, 6:02:08 AM | 34 | 495KB | Tell me about all the open tickets right now |
@@ -151,7 +151,7 @@ Generated: 7/29/2026, 10:53:20 AM PT | window: last 72h | 136 tasks | index tota
 
 ## Per-window detail
 
-### `1785347179098` — 7/29/2026, 10:53:10 AM PT — 33 turns
+### `1785347179098` — 7/29/2026, 10:56:13 AM PT — 44 turns
 
 **Original task:**
 
@@ -161,7 +161,36 @@ How many turns of each individual LLM,, not groups, but what's inside of each gr
 
 **Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+e audit log at the turn grain.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task # - per-individual-LLM turn counts, last 2 hours
+
+Where we left off (verified 2026-07-29 10:55 PT):
+- frankenstein_what_served reported 3,024 total turns across 12 backends (audit log as-of 2026-07-29 10:54 PT)
+- llm_call_log, llm_router_audit_log, frankenstein_tool_call_log probed per-box dispatch inside pool adapters (frankenstein-tools/llm) is not tracked at the turn grain; adapter-level is the finest logged grain
+- Registry confirms: frankenstein-tools (:11510) load-balances across 120B pool members (artemis-gpt-oss-120b, julia-120b, glm-5.2-local), all serving gpt-oss-120b; frankenstein-llm pool = same boxes + cicero-235b fallback; frankenstein-405b pool (augustus+tiberius) both DISABLED since GLM-5.2 Hex repurpose
+- Atomic models (no pooling): ollama-7b-lora, ollama-14b, ollama-32b, deepseek-v4-pro, glm-5.2, emsu-codegen, 7b-parallel-20260613_230905, ollama-llama3.3-70b, glm-4.6v-flash
+
+Open threads to drive next:
+1. (human-only decision, no idea) - frankenstein-tools adapter per-box dispatch logging gap: add box_resolved column to llm_call_log for adapter-dispatched turns
+2. (human-only decision, no idea) - frankenstein-405b shows 7 turns but both pool members disabled; anomaly to investigate
+
+Reference IDs:
+- Ideas filed: none (informational query)
+- Files touched: none
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1785314663557` — 7/29/2026, 6:31:56 AM PT — 1275 turns
 

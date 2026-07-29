@@ -6,12 +6,19 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/29/2026, 2:53:17 AM PT | window: last 72h | 129 tasks | index total 296 (parsed 5, cached 291)
+Generated: 7/29/2026, 3:53:18 AM PT | window: last 72h | 136 tasks | index total 303 (parsed 6, cached 297)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785314663557` | 7/29/2026, 2:53:05 AM | 339 | 8213KB | I had a working build of GLM 52 local at 10 PM tonight. A series of changes have now made  |
-| `1785318405465` | 7/29/2026, 2:52:25 AM | 7 | 15KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
+| `1785314663557` | 7/29/2026, 3:52:57 AM | 811 | 14793KB | I had a working build of GLM 52 local at 10 PM tonight. A series of changes have now made  |
+| `1785322364632` | 7/29/2026, 3:52:45 AM | 1 | 2KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
+| `1785322147808` | 7/29/2026, 3:49:08 AM | 1 | 2KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
+| `1785321841013` | 7/29/2026, 3:44:01 AM | 1 | 2KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
+| `1785320859831` | 7/29/2026, 3:37:41 AM | 14 | 47KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
+| `1785320155032` | 7/29/2026, 3:37:13 AM | 22 | 97KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
+| `1785319773045` | 7/29/2026, 3:13:10 AM | 5 | 8KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
+| `1785319108441` | 7/29/2026, 3:11:59 AM | 17 | 24KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
+| `1785318405465` | 7/29/2026, 2:54:51 AM | 11 | 23KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
 | `1785317618090` | 7/29/2026, 2:42:56 AM | 15 | 48KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
 | `1785317169556` | 7/29/2026, 2:35:47 AM | 14 | 19KB | Why don't you tell me a little bit about the DNA project that we are working on. You know  |
 | `1785316908477` | 7/29/2026, 2:29:43 AM | 16 | 52KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
@@ -144,7 +151,7 @@ Generated: 7/29/2026, 2:53:17 AM PT | window: last 72h | 129 tasks | index total
 
 ## Per-window detail
 
-### `1785314663557` — 7/29/2026, 2:53:05 AM PT — 339 turns
+### `1785314663557` — 7/29/2026, 3:52:57 AM PT — 811 turns
 
 **Original task:**
 
@@ -152,49 +159,149 @@ Generated: 7/29/2026, 2:53:17 AM PT | window: last 72h | 129 tasks | index total
 I had a working build of GLM 52 local at 10 PM tonight. A series of changes have now made the GLM local stall out. I need you to get this up and running again. It's stalling. It was running at like super fast
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11847, #11953, #12061, #12247, #12251, #12262, #12266, #12285, #12314, #12335, #12364, #12365, #12366, #12368, #12407, #12459, #12477, #12618, #12657, #12824, #12872, #12878, #13108, #13191, #13196, #13199, #13202, #13470, #16163, #16265, #16304, #16578, #16590, #16844, #17202, #17203, #17205, #17300, #1754, #1755, #18312, #18326, #18448, #18868, #1896, #1910 [deployed], #19338, #1965, #1966, #1967, #19686, #19879, #19881, #19882, #19883, #19887 [proposed], #19903, #19907, #19925, #19931 [proposed], #19932 [proposed], #2014, #2050, #2084, #2085, #2091 [deployed], #2092, #2096
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11847, #11936, #11953, #12061, #12247, #12251, #12262, #12266, #12285, #12314, #12335, #12364, #12365, #12366, #12368, #12403, #12407, #12459, #12477, #12618, #12657, #12688, #12689, #12710, #12824, #12872, #12878, #13108, #13121, #13191, #13196, #13199, #13202, #13453, #13470, #13874, #1593, #16163, #16265, #16304, #16578, #16588, #16590, #16648, #16844, #17202, #17203, #17205, #17300, #17430, #1754, #1755, #178531, #1819, #18312, #18326, #18448, #1876, #18786, #1884, #18868, #1896, #1910 [deployed], #19135, #19338, #1934, #1965, #1966, #1967, #19686, #19879, #19881, #19882, #19883, #19887 [proposed], #19903, #19907, #19925, #19931 [proposed], #19932 [proposed], #19936 [proposed], #19937 [proposed], #19938 [approved], #2014, #2050, #2079, #2084, #2085, #2089, #2091 [deployed], #2092, #2096, #2098 [deployed]
 
 **Last PICKUP PROMPT:**
 
 ```
-[proposed], #19932 [proposed].
+re speed",
+  "pickup_prompt": "═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1785314663557 — GLM-5.2 local stall RCA + restore.\n\nWhere we left off (verified 2026-07-29 03:16 PT):\n- Ring IDLE: 1 running / 0 waiting (was 34 running + 25 queued). Lane caps cut live in /etc/litellm/config.yaml: frankenstein-glm52-local 32→6, glm-5.2-local 32→6, deepseek-v4-pro-openrouter 32→4, glm-5.2-max 8→4 (mtime 03:11, loaded via litellm-safe-restart 03:12).\n- Envelope exemplar LIVE in router_hook.py (14 envelope markers, mtime 02:56) — the 03:12 carrots Ruben saw were a pre-patch queued request.\n- frankenstein-llm routing verified 03:16:09 → frankenstein-tools → adapter (cline lane TTFB 15s, queue_depth 3).\n- decode_live patch live in frankenstein_tools_adapter.py (ring no longer canary-locked).\n- MCP: 19/19 bridges healthy; emsu-operations fetch-failed was rule-261 Mode D transient.\n\nOpen threads to drive next:\n1. #19936 [proposed] — vLLM --scheduling-policy=priority on the ring = the REAL Cline-priority mechanism; needs ring relaunch (Ruben's call, rule 145/157)\n2. #19937 [proposed] — admission control: caps portion DEPLOYED tonight; remaining = verify actual max-num-seqs on ring head (192.168.1.115:8210, docs say 128, live behavior ~33-55) + fix doc drift\n3. #19938 [approved] — Artemis 120B slowness deep-dive (Ruben-asked, autonomous tier)\n4. #19887 [proposed] — 22:47 window's subagents-on-120B idea, still idle; the GLM-first change it spawned caused tonight's oversubscription\n\nReference IDs:\n- Ideas filed: #19936 [proposed], #19937 [proposed], #19938 [approved]\n- Bug library: #2098 [deployed], #1910 [deployed]\n- Files touched: /etc/litellm/config.yaml, /etc/litellm/router_hook.py, frankenstein_tools_adapter.py, HANDOFF_NOTES.md\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════",
+  "tool_rounds": [
+    "ssh_command(ring metrics) → 34 running + 25 waiting reason=capacity; KV only 10% → wall is prefill/batched-token budget not seq slots",
+    "read_file(glm52_overnight_supervisor.sh) → supervisor wire-in restarted litellm 01:38 + 02:32 (killed in-flight); medic v3 busy-grace working correctly tonight",
+    "execute_command(ps aux) → no vllm on Mac; ring head at 192.168.1.115:8210 via Mac sshd:2204 tunnel; medic restarted 03:07 (keepalive, benign)",
+    "create_idea ×3 → #19936 priority scheduling [proposed], #19937 admission control [proposed], #19938 Artemis deep-dive [approved]",
+    "ssh_command(python caps patch) → 4 GLM lane caps cut 32/32/32/8 → 6/6/4/4, backup config.yaml.bak-caps-20260729-0311",
+    "ssh_command(litellm-safe-restart + metrics) → LiteLLM active; ring drained 55→1 running, 0 waiting",
+    "ssh_command(mtime+grep) → NO reverter: exemplar live (14 markers mtime 02:56), caps live (2×6 confirmed), earlier grep-0 was wrong search string",
+    "execute_command(MCP health all 19 ports) → ALL healthy; emsu-operations fetch-failed = Mode D transient, retried OK",
+    "ssh_command(audit tail) → frankenstein-llm → picked frankenstein-tools 03:16:09 = Ruben's window routing again"
+  ],
+  "last_turns": [
+    "Ruben: 'Isn't client supposed to have priority? Also look at this that's getting emitted: <frankenstein_what_served>... Still those carrots'",
+    "Ruben: 'If you're gonna cut down the number of interactions why would you do that if it was working before. I feel like I have to keep repeating myself'",
+    "Ruben: '
+```
+
+### `1785322364632` — 7/29/2026, 3:52:45 AM PT — 1 turns
+
+**Original task:**
+
+```
+Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 26 hours
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785322147808` — 7/29/2026, 3:49:08 AM PT — 1 turns
+
+**Original task:**
+
+```
+Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 26 hours
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785321841013` — 7/29/2026, 3:44:01 AM PT — 1 turns
+
+**Original task:**
+
+```
+Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 26 hours
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785320859831` — 7/29/2026, 3:37:41 AM PT — 14 turns
+
+**Original task:**
+
+```
+Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 24 hours
+```
+
+**Last PICKUP PROMPT:**
+
+```
+tempt_completion>
+<result>
+169
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
+Pick up task #0 — Number of terms of Frankenstein LLM that include Frankenstein GLM local model in the last 24 hours.
 
-Pick up task #1910 [deployed] — GLM-5.2 ring stall restore (bug library incident, resolved).
-
-Where we left off (verified 2026-07-29 02:35 PT):
-- GLM-5.2 ring restored to the federation ladder: 20 WINDOW_O_DOWN comments reverted in /etc/litellm/config.yaml, LiteLLM restarted 02:15:34, ring 5-25 running / 0 waiting [deployed]
-- Orchestrator resumed 02:23, processing (+23 events/2.5min, load 20.5 -> 10.07) [deployed]
-- CFAs verified: 32 healthy / 2 degraded (dallasemt + dallasemtrefresher embed_present=0, not LLM) [deployed]
-- Incident recorded: bug library #1910 [deployed]; evening routing-fault RCA #2091 [deployed]; HANDOFF_NOTES updated 02:35 PT
+Where we left off (verified 2026-07-29 03:36 PT):
+- Count of glm‑5.2‑local turns: 169
 
 Open threads to drive next:
-1. #19931 [proposed] (verified: status=proposed dev_stage=idle) — glm52-health-monitor.service in failed state, timer still active; repair or retire
-2. #19932 [proposed] (verified: status=proposed dev_stage=idle) — GLM twin adapter (11511) env drift: TIMEOUT_INTERACTIVE=12 < TTFB SLO 18, FRANK_BOX_CAPACITY missing 8210=8, verify own canary file
-3. (human-only decision, no idea) — dallasemt.com + dallasemtrefresher.com chat widget embed missing (auto-heal failed on one)
+- (none)
 
 Reference IDs:
-- Ideas filed: #19931 [proposed], #19932 [proposed]
-- Bug library: #1910 [deployed] (GLM ring stall RCA, resolved), #2091 [deployed] (evening routing-fault RCA)
-- Files touched: /etc/litellm/config.yaml (reverted, backup config.yaml.bak-window-o-revert-20260729-021434); HANDOFF_NOTES.md
-- Verified: ring metrics 5-25 running / 0 waiting; cline lane TTFB 1-19s via Artemis; orchestrator paused=false
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Diagnosed GLM stall: WINDOW_O_DOWN fallback removal (18:15) + adapter ring ejection (~22:30) + two looping windows (01:06-02:00)
-- [x] Reverted all 20 WINDOW_O_DOWN comments; LiteLLM safe-restarted 02:15:34
-- [x] Ring verified serving real work: 5-25 running / 0 waiting; cline lane TTFB 1-19s via Artemis
-- [x] Orchestrator resumed + verified processing; CFAs 32 healthy / 2 degraded (not LLM)
-- [x] Bug library #1910 recorded; HANDOFF_NOTES updated; ideas #19931 + #19932 filed + reconciled
-</task_progress>
+- Ticket: none
+- Ideas filed: none
+- Files touched: none
+</result>
 </attempt_completion>
 ```
 
-### `1785318405465` — 7/29/2026, 2:52:25 AM PT — 7 turns
+### `1785320155032` — 7/29/2026, 3:37:13 AM PT — 22 turns
+
+**Original task:**
+
+```
+Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 24 hours
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12345, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326
+
+**Last PICKUP PROMPT:**
+
+```
+(turns)** in the last 24 hours.
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #12345 — Count of Frankenstein GLM‑5.2‑LOCAL usage.
+
+Where we left off (verified 2026‑07‑29 03:35 PT):
+- Retrieved backend metrics showing glm‑5.2‑local with 169 turns in the past 24 hours.
+
+Open threads to drive next (none)
+
+Reference IDs:
+- Ticket: (none)
+- Ideas filed: (none)
+- Files touched: (none)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+</result>
+</attempt_completion>
+```
+
+### `1785319773045` — 7/29/2026, 3:13:10 AM PT — 5 turns
+
+**Original task:**
+
+```
+Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 24 hours
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785319108441` — 7/29/2026, 3:11:59 AM PT — 17 turns
+
+**Original task:**
+
+```
+Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 24 hours
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785318405465` — 7/29/2026, 2:54:51 AM PT — 11 turns
 
 **Original task:**
 

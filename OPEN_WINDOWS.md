@@ -6,23 +6,26 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/28/2026, 6:52:59 PM PT | window: last 72h | 108 tasks | index total 265 (parsed 6, cached 259)
+Generated: 7/28/2026, 7:52:59 PM PT | window: last 72h | 110 tasks | index total 268 (parsed 8, cached 260)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785281506240` | 7/28/2026, 6:52:48 PM | 224 | 454KB | for what reason is Moodle running slowly? Didnt we jsut mvoe it over to the new 4TB NVME? |
-| `1785282386265` | 7/28/2026, 6:52:45 PM | 266 | 1569KB | pickup telephony task, have turned off the AI, VAPI agent, but button does not appear to b |
-| `1785284021265` | 7/28/2026, 6:52:24 PM | 515 | 1010KB | Pick up the QB task that was just closed out. where we were tyring to figure out to do wit |
+| `1785282386265` | 7/28/2026, 7:52:56 PM | 453 | 3486KB | pickup telephony task, have turned off the AI, VAPI agent, but button does not appear to b |
+| `1785286248280` | 7/28/2026, 7:52:53 PM | 113 | 764KB | pick up the Plesk login issue that closed for the second time here in cline irritating: |
+| `1785293198244` | 7/28/2026, 7:52:40 PM | 63 | 149KB | Comprehensive session handoff per Ruben's direction. This session spanned multiple workstr |
+| `1785293294377` | 7/28/2026, 7:51:00 PM | 18 | 87KB | A metric ton of emails came in to email agent within the last hour or 2. I need you to go  |
+| `1785281506240` | 7/28/2026, 7:48:25 PM | 405 | 729KB | for what reason is Moodle running slowly? Didnt we jsut mvoe it over to the new 4TB NVME? |
+| `1785291839797` | 7/28/2026, 7:35:20 PM | 78 | 168KB | All external links on emsuniversity.com seem to be pointing to emtrefresher.com endpoints. |
+| `1785267640895` | 7/28/2026, 7:31:07 PM | 226 | 603KB | Pick up task — Query frankenstein router audit log to produce a turn-count-per-model break |
+| `1785266802256` | 7/28/2026, 7:24:10 PM | 178 | 975KB | It appears that I have Frankenstein LLM windows that are getting stalled out trying to use |
+| `1785267604245` | 7/28/2026, 7:20:34 PM | 246 | 3133KB | Pick up task — Fix CFA Voice 52% short-leg rate and broken DEADMAN escalation pipeline. Tw |
+| `1785284021265` | 7/28/2026, 7:20:11 PM | 557 | 1134KB | Pick up the QB task that was just closed out. where we were tyring to figure out to do wit |
 | `1785281710410` | 7/28/2026, 6:42:22 PM | 218 | 920KB | for this image on my desktop, compress and upload it here: https://www.emsuniversity.com/i |
-| `1785286248280` | 7/28/2026, 6:35:19 PM | 64 | 671KB | pick up the Plesk login issue that closed for the second time here in cline irritating: |
 | `1785272558620` | 7/28/2026, 6:29:43 PM | 622 | 1768KB | Stopping here per your correction — noted that the schedule source is https://emsuniversit |
-| `1785267604245` | 7/28/2026, 6:18:02 PM | 174 | 923KB | Pick up task — Fix CFA Voice 52% short-leg rate and broken DEADMAN escalation pipeline. Tw |
-| `1785267640895` | 7/28/2026, 6:13:38 PM | 130 | 470KB | Pick up task — Query frankenstein router audit log to produce a turn-count-per-model break |
 | `1785267620046` | 7/28/2026, 6:04:18 PM | 153 | 415KB | Pick up task — Verify Argus gets clinerules steering injection via steering_builder.php, c |
 | `1785285698105` | 7/28/2026, 5:49:02 PM | 62 | 104KB | We need to resolve the Plesk license issue that was recovered. Can you please resolve that |
 | `1785279405884` | 7/28/2026, 5:11:26 PM | 330 | 1012KB | # Full Session Summary — All Issues Covered |
 | `1785283734874` | 7/28/2026, 5:10:20 PM | 11 | 33KB | Quickbooks seems to be blocking their own Invoice Payments filled out from their own syste |
-| `1785266802256` | 7/28/2026, 4:22:38 PM | 148 | 646KB | It appears that I have Frankenstein LLM windows that are getting stalled out trying to use |
 | `1785270520347` | 7/28/2026, 4:20:05 PM | 172 | 2037KB | I need a button on Telephony where i turn off AI from answering first in Admin areas Red b |
 | `1785267857397` | 7/28/2026, 3:55:58 PM | 480 | 1647KB | Link for instructor login on top right of emsuniversity.com does not go to the proper plac |
 | `1785266982412` | 7/28/2026, 3:12:43 PM | 148 | 652KB | Do we have a page or tool that helps us to calculate the STRF quarterly reports? If so, ca |
@@ -117,13 +120,114 @@ Generated: 7/28/2026, 6:52:59 PM PT | window: last 72h | 108 tasks | index total
 | `1785040020369` | 7/25/2026, 9:42:05 PM | 10 | 37KB | Can you do a benchmark on GLM 5.2 in the last 5 min |
 | `1785019334706` | 7/25/2026, 9:25:21 PM | 40 | 130KB | Hey I'm just checking to see how you were doing and feeling today |
 | `1785012025445` | 7/25/2026, 8:24:57 PM | 1650 | 5172KB | #GLM |
-| `1784995580054` | 7/25/2026, 7:34:23 PM | 316 | 1067KB | #C |
 
 ---
 
 ## Per-window detail
 
-### `1785281506240` — 7/28/2026, 6:52:48 PM PT — 224 turns
+### `1785282386265` — 7/28/2026, 7:52:56 PM PT — 453 turns
+
+**Original task:**
+
+```
+pickup telephony task, have turned off the AI, VAPI agent, but button does not appear to be working says Vicky:
+
+he answered the call from qb
+i clicked it right away
+but it disconnected
+when i checked ai answered it
+Ill send another request
+--
+
+https://www.emsuniversity.com/emtskills/routes/telephony_hub.php?view=admin 
+
+🔴 VAPI AI Receptionist
+Master Admin only — Turn off to prevent VAPI from answering calls. When off, calls go directly to live agents.
+
+🔴 AI OFF — Live agents only
+
+Why did you hallucinate this button working?
+
+Can you resolve that and make sure it doesn't happen again, do an
+```
+
+**Ideas referenced:** #001018, #059669, #062017, #166534, #19837 [proposed], #19838 [proposed], #19839 [proposed], #19840 [proposed], #19841 [deployed], #19842 [proposed], #19843 [proposed], #19844 [proposed], #19845 [proposed], #2563, #334155, #374151, #475569, #64748, #718096, #8899, #92400, #9733, #9734
+
+**Last PICKUP PROMPT:**
+
+```
+api_fallback_dial_repair.php ✅
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up telephony barge-in features — #19841 tab notification + #19842 takeover button built.
+
+Where we left off (verified 2026-07-28T19:23 PT):
+- #19842 takeOverConference() built into telephony_live_calls.js + telephony_hub.php render + live_conference_api.php announce action — all deployed and lint-clean
+- #19841 notifyLiveCall() built with tab title flash (🔴 Live Call) + Web Audio API chime — deployed in telephony_live_calls.js
+- REQUIREMENT_IDEA_AUTO_FILE.md rule created — any recommendation mid-task auto-filed as idea
+- 22/22 test suite passed earlier — toggle override, cron guard, role hierarchy, conference API all verified
+
+Open threads to drive next:
+1. #19842 [deployed] — Take Over button delivered and verified on disk
+2. #19841 [deployed] — Tab flash + chime notification delivered
+3. #19840 [proposed] — ExecAdmin VAPI toggle (2-line change, not yet approved)
+4. #19843 [proposed] — Hand back to VAPI button (warm transfer)
+5. #19844 [proposed] — Barge-in audit log table exists, front-end log viewer TBD
+6. #19845 [proposed] — VAPI phone number validation cron
+
+Reference IDs:
+- Ideas: #19840, #19841, #19842, #19843, #19844, #19845
+- Files: telephony_hub.php, live_conference_api.php, telephony_live_calls.js, REQUIREMENT_IDEA_AUTO_FILE.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785286248280` — 7/28/2026, 7:52:53 PM PT — 113 turns
+
+**Original task:**
+
+```
+pick up the Plesk login issue that closed for the second time here in cline irritating:
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18935, #19131 [deployed], #19567, #19827 [proposed], #19829 [executing], #19854 [proposed], #2063, #2065, #2073, #7142, #7149
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785293198244` — 7/28/2026, 7:52:40 PM PT — 63 turns
+
+**Original task:**
+
+```
+Comprehensive session handoff per Ruben's direction. This session spanned multiple workstreams across QB payments, WOPR infrastructure, PAN vault, EA backfill, Moodle performance, and GPU diagnosis.
+
+The QB auto-void fix (#19387) has been deployed. The remaining work on that thread is querying pan_vault for payment tokens saved on risk-decline-voided charges from 7/27-7/28 and writing a password-protected CSV to the Desktop. That is filed as #19849.
+
+The WOPR reboot was executed (#19848), BAR0 is now assigned but BAR1 is still blocked by an unprogrammed bridge prefetchable window. The BIOS ask
+```
+
+**Ideas referenced:** #19387 [deployed], #19403, #19495, #19511, #19545, #19835 [rejected], #19836 [proposed], #19837 [proposed], #19838 [proposed], #19846 [rejected], #19847 [rejected], #19848 [executed], #19849 [proposed], #19853 [queued], #2044, #2056, #3067, #3069, #3070, #3071, #3075, #3076, #3077, #3078, #3079, #3172, #3174, #3202, #3206
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785293294377` — 7/28/2026, 7:51:00 PM PT — 18 turns
+
+**Original task:**
+
+```
+A metric ton of emails came in to email agent within the last hour or 2. I need you to go over them for failures, do RCAs and build improvements into Email Agent / CFAs to be able to respond/act autonmously to resolve issues. Act on them and then give a status report / summary.
+```
+
+**Ideas referenced:** #19492, #19495, #19511, #19522, #19573, #19583, #19584, #19585, #19645, #19646, #19807, #19810, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830, #19831, #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #406060, #406061, #406242
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785281506240` — 7/28/2026, 7:48:25 PM PT — 405 turns
 
 **Original task:**
 
@@ -131,7 +235,7 @@ Generated: 7/28/2026, 6:52:59 PM PT | window: last 72h | 108 tasks | index total
 for what reason is Moodle running slowly? Didnt we jsut mvoe it over to the new 4TB NVME?
 ```
 
-**Ideas referenced:** #11925, #136533, #15158, #178501, #19458, #19460, #19490, #19491, #19522, #19558, #19594, #19615, #19686, #19690 [deployed], #19704, #19714 [proposed], #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19807, #19810 [proposed], #19818 [proposed], #19819 [proposed], #19820 [proposed], #19836 [proposed], #19837 [proposed], #19838 [proposed], #19839 [proposed], #19848 [proposed], #2084, #2085
+**Ideas referenced:** #11925, #136533, #15158, #178501, #19458, #19460, #19490, #19491, #19522, #19558, #19594, #19615, #19686, #19690 [deployed], #19704, #19714 [proposed], #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19807, #19810 [proposed], #19818 [proposed], #19819 [proposed], #19820 [proposed], #19836 [proposed], #19837 [proposed], #19838 [proposed], #19839 [proposed], #19848 [proposed], #19853 [proposed], #19857 [proposed], #2084, #2085
 
 **Last PICKUP PROMPT:**
 
@@ -160,212 +264,45 @@ Reference IDs:
 </attempt_completion>
 ```
 
-### `1785282386265` — 7/28/2026, 6:52:45 PM PT — 266 turns
+### `1785291839797` — 7/28/2026, 7:35:20 PM PT — 78 turns
 
 **Original task:**
 
 ```
-pickup telephony task, have turned off the AI, VAPI agent, but button does not appear to be working says Vicky:
-
-he answered the call from qb
-i clicked it right away
-but it disconnected
-when i checked ai answered it
-Ill send another request
---
-
-https://www.emsuniversity.com/emtskills/routes/telephony_hub.php?view=admin 
-
-🔴 VAPI AI Receptionist
-Master Admin only — Turn off to prevent VAPI from answering calls. When off, calls go directly to live agents.
-
-🔴 AI OFF — Live agents only
-
-Why did you hallucinate this button working?
-
-Can you resolve that and make sure it doesn't happen again, do an
+All external links on emsuniversity.com seem to be pointing to emtrefresher.com endpoints. Not appropriate. rEsolve
 ```
 
-**Ideas referenced:** #001018, #059669, #062017, #166534, #19837 [proposed], #19838 [proposed], #19839 [proposed], #19840 [proposed], #19841 [deployed], #19842 [proposed], #19843, #19844, #19845, #2563, #334155, #374151, #475569, #64748, #8899, #92400, #9733, #9734
+**Ideas referenced:** #19855 [deployed]
 
 **Last PICKUP PROMPT:**
 
 ```
-estrator_ideas` with real IDs.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up telephony recommendations — all 6 ideas filed + new clinerule.
-
-Where we left off (verified 2026-07-28T18:40 PT):
-- 6 ideas filed: #19840 (ExecAdmin toggle) [proposed], #19841 (live call notification) [proposed], #19842 (takeover button) [proposed], #19843 (hand-back to VAPI) [proposed], #19844 (barge-in audit log) [proposed], #19845 (VAPI number validation) [proposed]
-- New clinerule REQUIREMENT_IDEA_AUTO_FILE.md deployed — any recommendation mid-task must be immediately filed as orchestrator_ideas row
-- RCA complete: no mid-task rule existed; durable fix applied
-
-Open threads to drive next:
-1. #19840 [proposed] — Add ExecAdmin to VAPI toggle in telephony_hub.php (2 lines)
-2. #19842 [proposed] — Build one-click takeover button in Live Calls section
-3. #19841 [proposed] — Add tab title flash + optional chime notification
-
-Reference IDs:
-- Ideas: #19840, #19841, #19842, #19843, #19844, #19845
-- Rule: REQUIREMENT_IDEA_AUTO_FILE.md
-- Files: telephony_hub.php, live_conference_api.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785284021265` — 7/28/2026, 6:52:24 PM PT — 515 turns
-
-**Original task:**
-
-```
-Pick up the QB task that was just closed out. where we were tyring to figure out to do witht he Auto Void due to Risk Decline:
-
-Also we did save their payment info on those students denied from today with a key so we could run again and possibly yesterday. Can you give me that payment info for htose students so we can run that manually in a file on my desktop / with a password?
-```
-
-**Ideas referenced:** #11925, #15158, #16134, #16555 [queued], #16590 [queued], #178501, #19387 [deployed], #19458, #19460, #19490, #19491, #19492 [rejected], #19495 [rejected], #19511 [rejected], #19558, #19594, #19615, #19686, #19690 [deployed], #19704, #19714 [proposed], #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19807, #19810, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19831 [proposed], #19832 [proposed], #19849 [proposed], #2036, #2044, #2084, #2085, #5821, #5962, #6112, #9086, #9168, #9339
-
-**Last PICKUP PROMPT:**
-
-```
-o execute the Authnet queries.
+[deployed] filed for tracking.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task: QB auto-void risk decline, extract saved payment info for manual re-run
+Pick up task #19855 - emsuniversity external links fix (emtrefresher.com bleeding)
 
-Where we left off (verified 2026-07-28 18:50 PT):
-- YOLO loop occurred; Ruben directed a clean rule-91 handoff to a fresh window
-- QB auto-void fix #19387 [deployed]: the root cause (approved charges voided due to CVC/AVS risk decline) is already fixed
-- #19849 [proposed]: remaining work. Query pan_vault or authnet_cim_profiles for payment tokens saved on risk-decline-voided Authorize.net charges from 2026-07-28 and 2026-07-27, write to a password-protected file on /Users/rubenmajor/Desktop/ so Ruben can manually re-run those charges
+Where we left off (verified 2026-07-28 19:33 PT):
+- #19855 [deployed] -- WP_HOME/WP_SITEURL override in both emsuniversity.com + emtrefresher.com wp-config.php
+- Shared DB architecture: wordpress_2, prefix LzDe7pTO_ -- two docroots, one DB
+- Verified REST API returns correct per-domain url/home values
 
 Open threads to drive next:
-1. #19849 [proposed]: Query pan_vault for saved payment keys from risk-decline-voided Authnet charges (7/27-7/28), write encrypted CSV to Desktop
+1. #19855 [deployed] -- Monitor for broken links; DB scan wp_posts for residual hardcoded emtrefresher.com in post_content
 
 Reference IDs:
-- Ideas filed: #19387 [deployed], #19849 [proposed]
-- Files touched: none
+- Ideas filed: #19855 [deployed]
+- Files touched: /var/www/vhosts/emsuniversity.com/httpdocs/wp-config.php, /var/www/vhosts/emtrefresher.com/httpdocs/wp-config.php
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
 
-### `1785281710410` — 7/28/2026, 6:42:22 PM PT — 218 turns
-
-**Original task:**
-
-```
-for this image on my desktop, compress and upload it here: https://www.emsuniversity.com/img/gaberodriguezmd.jpg - needs to be on a white background first though, not offwhite.
-```
-
-**Ideas referenced:** #19835 [proposed], #19846 [rejected], #19847 [rejected], #600179
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785286248280` — 7/28/2026, 6:35:19 PM PT — 64 turns
-
-**Original task:**
-
-```
-pick up the Plesk login issue that closed for the second time here in cline irritating:
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18935, #19567, #19827 [proposed], #19829 [executing], #2063, #2065, #2073, #7142, #7149
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785272558620` — 7/28/2026, 6:29:43 PM PT — 622 turns
-
-**Original task:**
-
-```
-Stopping here per your correction — noted that the schedule source is https://emsuniversity.com/emtskills/routes/view_class_schedule.php (a live webpage the students use), NOT a Google Sheets doc. I had wrongly pulled the Google Sheets link from Course_Schedules.googlesheeturl column instead. No further action taken this turn.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — TDSHS: correct schedule source + remaining open items
-
-Where we left off (verified 2026-07-28 13:59 PT):
-- COR
-```
-
-**Ideas referenced:** #11925, #15158, #1565, #178501, #18693, #19217, #19224, #19437, #19456, #19458, #19460, #19490, #19491, #19492, #19493, #19518, #19543, #19558, #19573 [executing], #19576, #19580, #19581, #19583 [executing], #19584 [executing], #19585 [executing], #19594, #19615, #19640, #19642, #19644, #19645 [executing], #19646 [executing], #19686, #19690 [deployed], #19704, #19714 [proposed], #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19779 [executing], #19780 [executing], #19781 [executing], #19786 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19803 [proposed], #19807 [proposed], #19811 [proposed], #19827 [proposed], #19833 [executing], #19834 [proposed], #1993, #2009, #2015, #2025, #2036, #2042, #2084, #2085, #334155, #34495, #401956, #401957, #5229, #5230, #64748, #68437, #68450, #68493, #68494, #68496, #72073, #73291, #73292, #73293, #73294, #73295, #8212, #9083, #9086, #9168, #9339, #9831
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785267604245` — 7/28/2026, 6:18:02 PM PT — 174 turns
-
-**Original task:**
-
-```
-Pick up task — Fix CFA Voice 52% short-leg rate and broken DEADMAN escalation pipeline. Two highest-impact CFA defects from today's audit.
-
-Context:
-- #19766 [proposed] — 52% of 384 VAPI calls <60s (only 148 healthy legs). Average VAPI call 88.2s vs human 261-779s.
-- #19767 [proposed] — Multiple DEADMAN tickets 77-200h stale (TKT-20260724-A3641222, TKT-20260724-19960097, TKT-20260720-D197BA0A, etc.)
-- #19769 [proposed] — CFA cross-channel session memory
-- #19772 [proposed] — CFA shared tool palette
-
-Step 1 — Investigate VAPI voice short-legs:
-  use_mcp_tool server_name=mysql, tool_name=execute
-```
-
-**Ideas referenced:** #11925, #12018, #12605, #12606, #13553, #15158, #15404, #15405, #15406, #15783, #16152, #16154, #16475, #16732, #1745, #178501, #18316, #19458, #19460, #19490, #19491, #19558, #19585, #19604, #19690 [deployed], #19704, #19714 [proposed], #19766 [proposed], #19767 [proposed], #19769 [proposed], #19772 [proposed], #19777 [proposed], #19778 [proposed], #19794 [proposed], #19795 [deployed], #19796, #19830 [proposed], #2084, #2085, #6172, #9042, #9159, #9222, #9501
-
-**Last PICKUP PROMPT:**
-
-```
-(162/month -> under 80/month).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #19830 - Deadman RCA + self-healing feedback loop: stop promises before they deadman
-
-Where we left off (verified 2026-07-28 18:03 PT):
-- #19766 [approved] - CFA Voice short-leg thresholds raised (FAST_CONF 0.65 to 0.80, BASE_CONF 0.80 to 0.90, FAST_SECONDS 120 to 240)
-- #19767 [approved] - DEADMAN pipeline audited
-- #19794 [approved] - STALE_HOURS lowered 72 to 48 in cron_deadman_ruben_pipeline.php
-- #19830 [proposed] - Deadman RCA + self-healing feedback loop (Ruben confirmed: stop deadman at source)
-- 30-day data: 162 promises in top 7 issue classes, 0-10% auto-resolution, avg 8-13 sweeps each
-- Phase 1 scope defined: expand deadmanAutoAct() to all 7 classes, create deadman_rca_feedback table, agent warning injection, auto-prompt-patch cron
-
-Open threads to drive next:
-1. #19830 [proposed] - Phase 1: Expand deadmanAutoAct() in cron_promise_deadman.php to cover refund_request, moodle_access, enrollment, seb, ea by wiring existing fix classes from lib/deadman_fix_classes.php
-2. #19830 [proposed] - Phase 2: Create deadman_rca_feedback table + agent warning injection into alltastic_api.php prompt builder
-3. #19830 [proposed] - Phase 3: Auto-prompt-patch cron: when same issue_class hits 5 deadman escalations in a week, file orchestrator_idea for agent retrain
-4. #19795 [deployed] - Monitor 24h short-leg rate: goal under 30% (was 55%)
-
-Reference IDs:
-- Ideas filed: #19766 [approved], #19767 [approved], #19794 [approved], #19795 [deployed], #19830 [proposed]
-- Files touched: /var/www/emtskills/lib/voice_call_duration_guard.php, /var/www/emtskills/config/voice_call_duration_guard.config.php, /var/www/emtskills/cron/cron_deadman_ruben_pipeline.php, /var/www/emtskills/docs/HANDOFF_NOTES.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Investigate deadman root causes - 162 promises in top 7 issue classes, 0-10% resolution
-- [x] Auto-fix audit: deadmanAutoAct() only covers 2 of 7 classes, deadman_fix_classes.php routes reactively
-- [x] RCA gap: zero feedback mechanism exists, no agent warning injection
-- [x] Self-healing gap: same issue classes repeat indefinitely with no learning
-- [x] Idea #19830 filed: expand auto-act + RCA feedback table + agent injection + prompt-patch cron
-</task_progress>
-</attempt_completion>
-```
-
-### `1785267640895` — 7/28/2026, 6:13:38 PM PT — 130 turns
+### `1785267640895` — 7/28/2026, 7:31:07 PM PT — 226 turns
 
 **Original task:**
 
@@ -399,6 +336,221 @@ ter-naming issue.
 7. Current Work:
    Immediately before this summary was triggered, I was mid-investi
 ```
+
+### `1785266802256` — 7/28/2026, 7:24:10 PM PT — 178 turns
+
+**Original task:**
+
+```
+It appears that I have Frankenstein LLM windows that are getting stalled out trying to use sub agents. Appears to be a new occurrence. I'm not sure exactly why this is happening. It was not happening earlier this morning. But yet we are having some problems here. This may have had something to do with when we asked Frankenstein LLM that it not try to have the sub agents emit tool calls. Anyway I am showing zero tokens and zero tools called. 
+
+I don't know if it is actually appropriate to tell the sub agents not to emit tool calls. Can you explain to me the strategy on that? Again, sub agents a
+```
+
+**Ideas referenced:** #11925, #12231, #12251, #12269, #12407, #12643, #12657, #13108, #13155, #13157, #13199, #13204, #13490, #13575, #13874, #15158, #16578, #16625, #1754, #1755, #178501, #18671, #18720, #18935, #1896, #1903, #1906, #1920, #19239 [rejected], #19403, #19458, #19460, #19490, #19491, #19518, #19558, #19571, #19585, #19604, #19611, #19646, #19647, #19653 [deployed], #19657, #19686, #19690 [deployed], #19704, #19714 [proposed], #19777 [proposed], #19778 [proposed], #19790 [proposed], #19808 [proposed], #1986, #1988, #1989, #1991, #2014, #2050, #2084, #2085, #3048, #3049
+
+**Last PICKUP PROMPT:**
+
+```
+a. Filed as #19808 [proposed].
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #19790 [deployed] — Subagent stall fix rebased, 5.5h post-fix monitoring.
+
+Where we left off (verified 2026-07-28 19:23 PT):
+- Steering text fix deployed 13:39 PT: zero subagent failures across 110 interactive turns since then
+- GLM ring capacity at 32 confirmed correct per IDEAL_GLM52_HEX_BUILD.md
+- Adapter 503 cascade found and fixed at 19:22 PT: orphan processes (PIDs 8912 + 749040) were competing, killed orphan, restarted adapter, fresh test passes
+- Recurring orphan-process problem: adapter restarts leave stale processes that cause 503 cascades. Third occurrence today.
+- Upstream logging bug explained: /tmp/emsu_adapter_upstream.log dead since 23:42 Jul 27, _record_metric has except Exception pass
+
+Open threads to drive next:
+1. #19808 [proposed] — Fix adapter upstream log (dead 14h) AND add systemd KillMode=control-group + ExecStartPre to kill stale adapter processes on restart (the orphan problem)
+2. (human-only decision, no idea) Dispatch a real Cline subagent now to confirm end to end under live conditions
+3. (human-only decision, no idea) If prefill saturation returns at 32, feed it MORE concurrency per IDEAL_GLM52_HEX_BUILD.md section 4 (ceiling never found at c=64)
+
+Reference IDs:
+- Ideas filed: #19790 [deployed], #19808 [proposed]
+- Ideas closed: none
+- Files touched this turn: none (killed orphan PID 8912, restarted adapter)
+- Files touched prior: /etc/litellm/_router_core.py (line 347), /etc/systemd/system/frankenstein-tools.service.d/zzzzz-glm-ring-capacity.conf (8210=8 to 8210=32)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Deploy steering text fix at _router_core.py line 347
+- [x] Fix GLM ring capacity from 8 back to 32
+- [x] Kill orphan adapter process PID 136681
+- [x] litellm-safe-restart and verify subagents work
+- [x] Fix adapter 503 (stale cooldown + orphan process)
+- [x] Rebase historical summary + deliver to Ruben
+</task_progress>
+</attempt_completion>
+```
+
+### `1785267604245` — 7/28/2026, 7:20:34 PM PT — 246 turns
+
+**Original task:**
+
+```
+Pick up task — Fix CFA Voice 52% short-leg rate and broken DEADMAN escalation pipeline. Two highest-impact CFA defects from today's audit.
+
+Context:
+- #19766 [proposed] — 52% of 384 VAPI calls <60s (only 148 healthy legs). Average VAPI call 88.2s vs human 261-779s.
+- #19767 [proposed] — Multiple DEADMAN tickets 77-200h stale (TKT-20260724-A3641222, TKT-20260724-19960097, TKT-20260720-D197BA0A, etc.)
+- #19769 [proposed] — CFA cross-channel session memory
+- #19772 [proposed] — CFA shared tool palette
+
+Step 1 — Investigate VAPI voice short-legs:
+  use_mcp_tool server_name=mysql, tool_name=execute
+```
+
+**Ideas referenced:** #0066, #11925, #12018, #12605, #12606, #13047, #13442, #13553, #13965, #14741, #14742, #14743, #14749, #15158, #15404, #15405, #15406, #15783, #16152, #16154, #16445, #16475, #16732, #1745, #178501, #18132, #18176, #18309, #18313, #18316, #1892, #19458, #19460, #19490, #19491, #19558, #19585, #19604, #19690 [deployed], #19704, #19714 [proposed], #19766 [proposed], #19767 [proposed], #19769 [proposed], #19772 [proposed], #19777 [proposed], #19778 [proposed], #19794 [proposed], #19795 [deployed], #19796, #19830 [proposed], #2084, #2085, #3587, #4686, #4689, #4929, #4930, #4931, #4957, #4958, #5391, #5431, #5574, #5638, #5768, #5770, #5779, #5787, #5792, #5793, #5794, #5795, #5819, #6172, #7126, #7368, #7381, #7548, #7550, #9042, #9132, #9159, #9222, #9501
+
+**Last PICKUP PROMPT:**
+
+```
+se: deadman_rca_feedback table
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #19830 - Wire deadman_voice_hook.php into vapi_server_webhook.php, monitor deadman RCA pipeline
+
+Where we left off (verified 2026-07-28 19:19 PT):
+- #19766 [approved] - CFA Voice short-leg thresholds raised (FAST_CONF 0.65 to 0.80, BASE_CONF 0.80 to 0.90, FAST_SECONDS 120 to 240)
+- #19794 [approved] - DEADMAN stale threshold lowered 72 to 48 in cron_deadman_ruben_pipeline.php
+- #19830 [approved] - Deadman RCA + self-healing pipeline deployed (Phases 1-3)
+- lib/deadman_rca_feedback.php created with 4 functions (RCA record, agent warn, hotspots, auto-retrain)
+- cron/cron_promise_deadman.php: expanded auto-act to all 7 issue classes + RCA recording
+- ai_ticket_agent.php: deadmanAgentWarning() injected into prompt builder
+- cron/cron_deadman_rca_retrain.php: daily retrain idea filing cron
+- deadman_rca_feedback SQL table created with indexes
+- Voice hook: api/voice/deadman_voice_hook.php created and linted but NOT wired (file write permissions restricted)
+
+Open threads to drive next:
+1. #19830 [approved] - Wire deadman_voice_hook.php into vapi_server_webhook.php:
+   - Add require_once __DIR__ . '/deadman_voice_hook.php'; near line 28 (after other require_once)
+   - Add injectVoiceDeadmanWarning() call after SLS block injection at line ~2549:
+     if (function_exists('injectVoiceDeadmanWarning') && !empty($issueClass)) {
+         $prompt = &$arResponse['assistantOverrides']['systemPrompt'];
+         injectVoiceDeadmanWarning($issueClass, $prompt);
+     }
+   - May need sudo/root to write to api/voice/ directory
+2. #19795 [deployed] - Monitor 24h short-leg rate: goal under 30% (was 55%)
+3. #19830 [approved] - Monitor first deadman RCA records in deadman_rca_feedback table:
+   mysql -u adminportal -piV84o80^y admin_portal -e "SELECT issue_class, agent_source, COUNT(*) as cnt FROM deadman_rca_feedback WHERE created_at > NOW() - INTERVAL 7 DAY GROUP BY issue_class, agent_source ORDER BY cnt DESC"
+4. #19830 [approved] - Verify cron_deadman_rca_retrain.php runs: php /var/www/emtskills/cron/cron_deadman_rca_retrain.php --dry-run
+
+Reference IDs:
+- Ideas filed: #19766 [approved], #19767 [approved], #19794 [approved], #19795 [deployed], #19830 [approved]
+- Files touched: cron/cron_promise_deadman.php, lib/deadman_rca_feedback.php, lib/ai_ticket_agent.php, cron/cron_deadman_rca_retrain.php, api/voice/deadman_voice_hook.php, docs/specs/deadman_rca_self_healing.md
+- Database: admin_portal.deadman_rca_feedback
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Phase 1: Expand deadmanAutoAct() to all 7 top issue classes + RCA recording
+- [x] Phase 2a: Create lib/deadman_rca_feedback.php (4 functions: record, warn, hotspots, retrain)
+- [x] Phase 2b: Create deadman_rca_feedback SQL table with indexes
+- [x] Phase 2c: Wire deadmanAgentWarning() into ai_ticket_agent.php prompt builder
+- [ ] Phase 3a: Wire deadman_voice_hook.php into vapi_server_webhook.php (hook exists, needs manual injection due to restricted perms)
+- [x] Phase 3b: Create cron_deadman_rca_retrain.php daily retrain cron
+- [x] Create spec doc at docs/specs/deadman_rca_self_healing.md
+- [x] Update handoff notes with full deployment log
+- [x] Ship with pickup prompt
+</task_progress>
+</attempt_completion>
+```
+
+### `1785284021265` — 7/28/2026, 7:20:11 PM PT — 557 turns
+
+**Original task:**
+
+```
+Pick up the QB task that was just closed out. where we were tyring to figure out to do witht he Auto Void due to Risk Decline:
+
+Also we did save their payment info on those students denied from today with a key so we could run again and possibly yesterday. Can you give me that payment info for htose students so we can run that manually in a file on my desktop / with a password?
+```
+
+**Ideas referenced:** #11925, #15158, #16134, #16555 [queued], #16590 [queued], #178501, #19387 [deployed], #19458, #19460, #19490, #19491, #19492 [rejected], #19495 [rejected], #19511 [rejected], #19522, #19558, #19594, #19615, #19686, #19690 [deployed], #19704, #19714 [proposed], #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19807, #19810, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19831 [proposed], #19832 [proposed], #19835 [rejected], #19836 [proposed], #19837 [proposed], #19838 [proposed], #19839, #19846 [rejected], #19847 [rejected], #19848 [executed], #19849 [proposed], #19853 [queued], #2036, #2044, #2084, #2085, #5821, #5962, #6112, #9086, #9168, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+led, and 2 duplicates skipped.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task: Comprehensive session handoff, QB auto-void payments and WOPR infrastructure work (task ID to be assigned by new window)
+
+Where we left off (verified 2026-07-28 19:19 PT):
+- #19387 [deployed] QB auto-void fix: root cause was approved Authnet charges getting voided by QuickBooks due to CVC/AVS risk decline signal. Fix deployed.
+- #19849 [proposed] Remaining: query pan_vault for payment tokens saved on risk-decline-voided charges (7/27-7/28), write password-protected CSV to Rubens Desktop
+- #19848 [executed] WOPR reboot executed with pci=realloc. BAR0 now assigned (0xf0000000-64MB) but BAR1 blocked by unprogrammed bridge prefetchable window. BIOS fix needed (#19853 [queued]). Box back up, all services healthy.
+- EA intake backfill ran: 5 replayed OK, 1 failed (502), 2 skipped as duplicates. Sabrina StClair recovered.
+- PAN vault encrypted storage built: AES-256-GCM, key outside webroot, 32 sites, 64 files, 30-day purge cron, end-to-end test byte-exact.
+- 8 EMT cost pages migrated off Authnet. californiaemt + arizonaemt pricing restored. Elementor traps codified into tools.
+- Moodle performance: table cache bumped to 16000/16000, Redis 4GB volatile-lru, rsync throttled with ionice, oldroot unmounted (804GB freed). Portal poller session_lock identified as root cause of spinning.
+- GPU re-diagnosis: Above-4G/ReBAR already ON, kernel PCI alloc failure. pci=realloc is staged and has never been applied (uptime since 7/25, change from 7/27).
+- MD signature swap: Gabe Rodriguez only on EMS 202TX certs (id=44,67). Joshua Zeidler stays on all other 11 templates. No historical cert regeneration. All three threads (#19835 [rejected], #19846 [rejected], #19847 [rejected]) closed.
+
+Open threads to drive next:
+1. #19849 [proposed] Query pan_vault for saved payment keys from risk-decline-voided Authnet charges (7/27-7/28), write encrypted CSV to /Users/rubenmajor/Desktop/
+2. #19853 [queued] BIOS ask: program the 64-bit prefetchable bridge window or reduce ReBAR BAR1 from 16GB to 256MB
+3. #19837 [proposed] Portal session_lock fix: session_write_close() in read-only pollers and Redis session handler migration
+4. #19838 [proposed] portal_bell_poll.php 404: missing file in routes/api/, creates constant FPM churn
+5. #19836 [proposed] nvme-mirror ionice already patched, monitor for lingering util spikes
+
+Reference IDs:
+- Ideas filed: #19387 [deployed], #19849 [proposed], #19848 [executed], #19853 [queued], #19837 [proposed], #19838 [proposed], #19836 [proposed]
+- Files touched: /etc/cron.d/emsu-nvme-mirror, /usr/local/bin/nvme-mirror-sync.sh, /etc/mysql/mariadb.conf.d/99-emsu-perf.cnf, /etc/redis/redis.conf, /etc/default/grub, /boot/grub/grub.cfg, /etc/modprobe.d/blacklist-nvidia-broken-bar0.conf, /etc/udev/rules.d/71-nvidia.rules, /usr/local/bin/wopr_reboot_now.sh
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785281710410` — 7/28/2026, 6:42:22 PM PT — 218 turns
+
+**Original task:**
+
+```
+for this image on my desktop, compress and upload it here: https://www.emsuniversity.com/img/gaberodriguezmd.jpg - needs to be on a white background first though, not offwhite.
+```
+
+**Ideas referenced:** #19835 [proposed], #19846 [rejected], #19847 [rejected], #600179
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785272558620` — 7/28/2026, 6:29:43 PM PT — 622 turns
+
+**Original task:**
+
+```
+Stopping here per your correction — noted that the schedule source is https://emsuniversity.com/emtskills/routes/view_class_schedule.php (a live webpage the students use), NOT a Google Sheets doc. I had wrongly pulled the Google Sheets link from Course_Schedules.googlesheeturl column instead. No further action taken this turn.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — TDSHS: correct schedule source + remaining open items
+
+Where we left off (verified 2026-07-28 13:59 PT):
+- COR
+```
+
+**Ideas referenced:** #11925, #15158, #1565, #178501, #18693, #19217, #19224, #19437, #19456, #19458, #19460, #19490, #19491, #19492, #19493, #19518, #19543, #19558, #19573 [executing], #19576, #19580, #19581, #19583 [executing], #19584 [executing], #19585 [executing], #19594, #19615, #19640, #19642, #19644, #19645 [executing], #19646 [executing], #19686, #19690 [deployed], #19704, #19714 [proposed], #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19779 [executing], #19780 [executing], #19781 [executing], #19786 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19803 [proposed], #19807 [proposed], #19811 [proposed], #19827 [proposed], #19833 [executing], #19834 [proposed], #1993, #2009, #2015, #2025, #2036, #2042, #2084, #2085, #334155, #34495, #401956, #401957, #5229, #5230, #64748, #68437, #68450, #68493, #68494, #68496, #72073, #73291, #73292, #73293, #73294, #73295, #8212, #9083, #9086, #9168, #9339, #9831
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785267620046` — 7/28/2026, 6:04:18 PM PT — 153 turns
 
@@ -566,62 +718,6 @@ Also if this is the case I wonder what is the point of using their invoicing sys
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785266802256` — 7/28/2026, 4:22:38 PM PT — 148 turns
-
-**Original task:**
-
-```
-It appears that I have Frankenstein LLM windows that are getting stalled out trying to use sub agents. Appears to be a new occurrence. I'm not sure exactly why this is happening. It was not happening earlier this morning. But yet we are having some problems here. This may have had something to do with when we asked Frankenstein LLM that it not try to have the sub agents emit tool calls. Anyway I am showing zero tokens and zero tools called. 
-
-I don't know if it is actually appropriate to tell the sub agents not to emit tool calls. Can you explain to me the strategy on that? Again, sub agents a
-```
-
-**Ideas referenced:** #11925, #12231, #12251, #12269, #12407, #12643, #12657, #13108, #13155, #13157, #13199, #13204, #13490, #13575, #13874, #15158, #16578, #16625, #1754, #1755, #178501, #18671, #18720, #18935, #1896, #1903, #1906, #1920, #19239 [rejected], #19403, #19458, #19460, #19490, #19491, #19518, #19558, #19571, #19585, #19604, #19611, #19646, #19647, #19653 [deployed], #19657, #19686, #19690 [deployed], #19704, #19714 [proposed], #19777 [proposed], #19778 [proposed], #19790 [proposed], #19808 [proposed], #1986, #1988, #1989, #1991, #2014, #2050, #2084, #2085, #3048, #3049
-
-**Last PICKUP PROMPT:**
-
-```
-). Filed as #19808 [proposed].
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #19790 [deployed] — Subagent stall fix follow-up: monitoring results, GLM capacity confirmation, logging bug explanation.
-
-Where we left off (verified 2026-07-28 16:21 PT):
-- Fix deployed at 13:39 PT: steering text reworded, GLM ring capacity 8 to 32, orphan killed, litellm restarted
-- Post-fix monitoring: zero subagent failures in audit log after 20:39 UTC, but no real Cline subagent dispatches happened since then to stress-test it
-- GLM at 32 confirmed correct per IDEAL_GLM52_HEX_BUILD.md (max-num-seqs=128, KV 0.2%, ceiling never found at c=64)
-- Upstream logging bug explained: /tmp/emsu_adapter_upstream.log dead since 23:42 Jul 27, _record_metric has except Exception: pass that swallows errors, two adapter processes running again
-- Idea #19808 [proposed] filed for the logging bug
-
-Open threads to drive next:
-1. (human-only decision, no idea) Dispatch a real Cline subagent now to confirm the fix holds under live conditions (synthetic tests pass but no real dispatches since fix)
-2. #19808 [proposed] — Debug the adapter upstream log: fix _record_metric silent exception, dedup the two adapter processes (PIDs 2311227 + 2348356)
-3. (human-only decision, no idea) If prefill saturation returns at 32, feed it MORE concurrency per IDEAL_GLM52_HEX_BUILD.md section 4 (the ceiling was never found at c=64)
-
-Reference IDs:
-- Ideas filed: #19790 [deployed], #19808 [proposed]
-- Ideas closed: none
-- Files touched: none this turn (read-only monitoring)
-- Files touched prior: /etc/litellm/_router_core.py (line 347), /etc/systemd/system/frankenstein-tools.service.d/zzzzz-glm-ring-capacity.conf (8210=8 to 8210=32)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Deploy steering text fix at _router_core.py line 347
-- [x] Fix GLM ring capacity from 8 back to 32
-- [x] Kill orphan adapter process PID 136681
-- [x] litellm-safe-restart and verify subagents work
-- [x] Check live subagent performance since fix (0 failures post-fix)
-- [x] Explain the upstream logging bug
-- [x] File idea for the logging bug (#19808)
-</task_progress>
-</attempt_completion>
-```
 
 ### `1785270520347` — 7/28/2026, 4:20:05 PM PT — 172 turns
 
@@ -4448,63 +4544,4 @@ a).
    Run ONE fast `ssh_command` on WOPR (expect a rule-261 Mode D retry) to test the pool-exhaustion hypothesis before touching anything:
    ```bash
    echo ---PGCONN---; sudo -u postgres psql -A -F"|" -t -c "select state, count(*) from pg_stat_activity where datname='litellm_db' group by state;"; sudo -u postgres psql -A -F"|" -t -c "show max_connections;"; echo ---PS---; sudo docker exec litellm sh -c "ps -eo pid,etime,stat,args" 2>&1 | head -10 | cut -c1-140; echo ---CFG---; grep -nE "disable_spend_logs|general_settings:|database_url|store_model_in_db" /etc/litellm
-```
-
-### `1784995580054` — 7/25/2026, 7:34:23 PM PT — 316 turns
-
-**Original task:**
-
-```
-#C
-Catch-all drive window: everything queued/pending/proposed that is NOT GLM-ring, NOT payments, NOT Argus. Work per rules 267 + 29 — triage, promote proposed→autonomous where Ruben-relevant, hand-ship stalls per GATE C. Mode-D MCP noise: real result arrives next message, don't re-fire.
-
-BUGS FIRST (user-facing): #18941 [proposed] Timeclock buttons network error; #18937 [proposed] EMS210 not-required still enrolled; #18928 [proposed] Skillstastic dropped-students roster; #18898 [proposed] static top bar; #18930 [proposed] Jon tickets regression; #18974 [proposed] AI-orphan tickets user 124.
-C
-```
-
-**Ideas referenced:** #0000, #16224, #16802, #17130 [superseded], #17408, #1744, #17494, #17537 [rejected], #178455, #17913, #18132 [deployed], #18442 [queued], #18559 [queued], #18717 [blocked], #18757 [queued], #18830 [queued], #18851 [queued], #18852 [queued], #18853 [deployed], #18861 [queued], #18862 [proposed], #18866, #18867 [proposed], #18871 [proposed], #18880 [proposed], #18887 [queued], #18895 [queued], #18898 [proposed], #18900 [queued], #18901 [queued], #18903 [queued], #18912 [queued], #18913 [proposed], #18915 [proposed], #18916 [deployed], #18917 [proposed], #18918 [deployed], #18920 [proposed], #18926 [proposed], #18928 [proposed], #18930 [proposed], #18932 [queued], #18934 [proposed], #18935, #18937 [proposed], #18938 [proposed], #18941 [proposed], #18954 [proposed], #18959 [proposed], #18967 [proposed], #18971 [proposed], #18972 [proposed], #18974 [proposed], #18975 [proposed], #18976 [queued], #18977 [proposed], #18983 [proposed], #18985 [proposed], #18998 [proposed], #19125, #19173 [queued], #19175 [executing], #19176 [executing], #19177 [executing], #19178 [executing], #19179 [executing], #19186 [executing], #19187 [executing], #19188 [executing], #19189 [executing], #1959, #26715, #389249, #50255, #50267, #50270, #50274, #50277, #50309, #50378, #52560, #52647, #5344, #6179, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-depth, which no harness fixes.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #19173 - frankenstein-llm obedience program, 5 shipped plus 4 newly approved.
-
-Where we left off (verified 2026-07-25 19:32 PT via reconcile_ideas):
-- #19173 [executing] (verified: status=in_progress dev_stage=auditing) parent obedience set, 5 children hand-shipped and live.
-- #19175 [executing] (verified: status=in_progress dev_stage=auditing) aggregated validator failures, CODE LIVE.
-- #19176 [executing] (verified: status=in_progress dev_stage=auditing) get_rule91_template, CODE LIVE, 47/47/47 verified.
-- #19177 [executing] (verified: status=in_progress dev_stage=auditing) reconcile_ideas, CODE LIVE, 7/7 tags correct.
-- #19178 [executing] (verified: status=in_progress dev_stage=auditing) idea_deploy honest failure, CODE LIVE, verified end to end.
-- #19179 [executing] (verified: status=in_progress dev_stage=auditing) coverage gate, CODE LIVE.
-- #19186 [executing] (verified: status=in_progress dev_stage=idle) Doorman tool-hygiene validator, NEW, Ruben approved.
-- #19187 [executing] (verified: status=in_progress dev_stage=idle) harness prose-without-tool gate, NEW, Ruben approved.
-- #19188 [executing] (verified: status=in_progress dev_stage=idle) Frankenstein Doctor executor sweep, NEW, Ruben approved, P0.
-- #19189 [executing] (verified: status=in_progress dev_stage=idle) Judgment Ledger, NEW, Ruben approved.
-- Executor is 2x over worker cap, 118 active against 60, spawning zero. That is why 6 ideas sit impl_failed.
-- Projection updated: 41 now, 86 with all 9 improvements, vs Sonnet 5 at 92.
-
-Open threads to drive next:
-1. #19188 [executing] run the Frankenstein Doctor sweep FIRST. Federation runbook per rule 276, then bug library per rule 156, then fix the dispatcher cap before rerunning anything.
-2. #18941 [blocked] (verified: dev_stage=impl_failed) timeclock buttons, in the #19188 first-run backlog.
-3. #18913 [blocked] (verified: dev_stage=impl_failed) LITELLM_BASE_URL fallback, decide skip vs fix, Ruben flagged it as possibly obsolete since haiku is retired.
-4. #18959 [blocked] (verified: dev_stage=impl_failed) file-write verify gate.
-5. #18967 [blocked] (verified: dev_stage=impl_failed) WireGuard crypto fix.
-6. #18974 [blocked] (verified: dev_stage=impl_failed) AI-orphan ticket audit.
-7. #18998 [blocked] (verified: dev_stage=impl_failed) silent-ghost blocker on the view-guard chain.
-8. #18871 [queued] (verified: status=approved dev_stage=ready_for_review) connecteam_shifts silent-ghost blocker, deploy click, and verify it actually lands now that #19178 [executing] made no-ops visible.
-9. #18903 [queued] (verified: status=approved dev_stage=ready_for_review) haiku repoint, STRUCTURAL block on routes/reports.php agent_core_denylist, hand-ship per rule 267 GATE C, do not retry.
-10. #19186 [executing] build the Doorman validator, copy prompt is in this result.
-11. #19187 [executing] build the harness gate, copy prompt is in this result, shares the tool catalog with #19186 [executing].
-12. #19189 [executing] build the Judgment Ledger, seed from rule 29 case law plus Cline_Obedience.md plus today's three pushbacks.
-
-Reference IDs:
-- Ideas filed this session: #19173 [executing], #19175 [executing], #19176 [executing], #19177 [executing], #19178 [executing], #19179 [executing], #19186 [executing], #19187 [executing], #19188 [executing], #19189 [executing]
-- Ideas closed this session: #18915 [rejected]
-- Ideas driven this session: #1
 ```

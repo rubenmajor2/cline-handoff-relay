@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/29/2026, 5:53:18 AM PT | window: last 72h | 143 tasks | index total 310 (parsed 7, cached 303)
+Generated: 7/29/2026, 6:53:19 AM PT | window: last 72h | 139 tasks | index total 310 (parsed 1, cached 309)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785329338571` | 7/29/2026, 5:53:17 AM | 15 | 52KB | Tell me about all the open tickets right now |
-| `1785329349404` | 7/29/2026, 5:52:19 AM | 8 | 30KB | Tell me about all the open tickets right now |
-| `1785314663557` | 7/29/2026, 5:52:09 AM | 1161 | 15413KB | I had a working build of GLM 52 local at 10 PM tonight. A series of changes have now made  |
+| `1785314663557` | 7/29/2026, 6:31:56 AM | 1275 | 15687KB | I had a working build of GLM 52 local at 10 PM tonight. A series of changes have now made  |
+| `1785329338571` | 7/29/2026, 6:14:29 AM | 114 | 1215KB | Tell me about all the open tickets right now |
+| `1785329349404` | 7/29/2026, 6:02:08 AM | 34 | 495KB | Tell me about all the open tickets right now |
 | `1785328586617` | 7/29/2026, 5:47:20 AM | 30 | 334KB | WE ARE HAVING RESOURCE issues here in cline. Please do not kill my cline windows. |
 | `1785328677828` | 7/29/2026, 5:47:18 AM | 44 | 141KB | what's goin gon with flm52-only? |
 | `1785327510520` | 7/29/2026, 5:35:05 AM | 40 | 93KB | I'd like to see a different comparison to the various CFA's and your thoughts on how well  |
@@ -149,94 +149,12 @@ Generated: 7/29/2026, 5:53:18 AM PT | window: last 72h | 143 tasks | index total
 | `1785078097518` | 7/26/2026, 8:02:28 AM | 8 | 54KB | How fast is GLM Max vs high? |
 | `1785078021344` | 7/26/2026, 8:01:09 AM | 12 | 74KB | How fast is GLM Max vs high? |
 | `1785077964853` | 7/26/2026, 8:00:39 AM | 14 | 75KB | How fast is GLM Max vs high? |
-| `1785071475049` | 7/26/2026, 6:11:43 AM | 4 | 36KB | tell me how many turns of glm5.2 local have occurren int he last 10 minutes? |
-| `1785071438937` | 7/26/2026, 6:10:52 AM | 6 | 62KB | tell me how many turns of glm5.2 local have occurren int he last 10 minutes? |
-| `1785071145080` | 7/26/2026, 6:08:05 AM | 10 | 38KB | tell me how many turns of glm5.2 local have occurren int he last 10 minutes? |
-| `1785071081866` | 7/26/2026, 6:05:33 AM | 14 | 42KB | tell me how many turns of glm5.2 local have occurren int he last 10 minutes? |
 
 ---
 
 ## Per-window detail
 
-### `1785329338571` — 7/29/2026, 5:53:17 AM PT — 15 turns
-
-**Original task:**
-
-```
-Tell me about all the open tickets right now
-```
-
-**Last PICKUP PROMPT:**
-
-```
-ttempt_completion>
-<result>
-═══════════════════════════════════════════════════
-PICKUP PROMPT — Open Tickets Status
-═══════════════════════════════════════════════════
-
-**Task:** Pulled all open tickets for Ruben's morning check. Queried via `search_tickets(unfiltered, 50)` then `search_tickets(status=open, 50)`. Compiled group summary. Pure read-only — no actions taken.
-
-═══ Where we left off ═══
-- Read full ticket dump → built priority-grouped summary
-- 63 active: ~28 high, ~20 medium, ~15 low
-- Biggest cluster: 17 unanswered chat handoffs (agent 124)
-- 3 urgent NREMT tickets for Leea Waterman
-- 2 refund/cancel (Erika Carpenter, Nicole)
-- 3 pending Vicky tech issues (e2pdf, Matrix login, exam reopen)
-- 11 voice repeat callers AI couldn't resolve
-
-═══ Open threads ═══
-- None — Ruben asked for a readout, got the readout. No action requested.
-
-═══ Reference IDs ═══
-- No ideas filed, no artifacts created, no files touched.
-</result>
-</attempt_completion>
-```
-
-### `1785329349404` — 7/29/2026, 5:52:19 AM PT — 8 turns
-
-**Original task:**
-
-```
-Tell me about all the open tickets right now
-```
-
-**Ideas referenced:** #21970, #21997
-
-**Last PICKUP PROMPT:**
-
-```
-igned) holds 35 of 49 tickets.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT
-═══════════════════════════════════════════════
-
-**Where we left off:**
-- Listed all 49 open tickets with breakdown by priority, pattern, and age
-- No changes made — read-only inquiry
-
-**Open threads:**
-
-1. **10 chat handoff unanswered tickets in ~2 days** — chat widget AI may need health check or threshold tuning. See `chat_widget_healthcheck(action="run")`
-2. **Leea Waterman has 3 duplicate NREMT verification tickets** (21994, 21998, 21999) — consolidate or close duplicates
-3. **6 outbound email blocked (urldefense.com/sendgrid/sentrylink)** — likely needs URL domain whitelist update in outbound email config
-4. **Externship backlog:** 21743 (no communication since 7/8), 22006 (submitted 7/19), 22005 (Bao-Khanh Pham), 21769 (Lakshmi Vemula), 22029 (Meir Ross clarification) — check `get_externship_pending_queue()` for full picture
-5. **Erika Carpenter refund/cancel (#21970)** — needs payment review with `verify_payment_state()`
-6. **Jason Pan Moodle suspended despite payment proof (#21997)** — needs `verify_payment_state()` + `fix_moodle_enrollment(dry_run=true)` to diagnose
-
-**Reference IDs:** None filed (read-only inquiry)
-
-**Files touched:** none
-
-**Verified:** 2026-07-29 05:49 PT
-</result>
-</attempt_completion>
-```
-
-### `1785314663557` — 7/29/2026, 5:52:09 AM PT — 1161 turns
+### `1785314663557` — 7/29/2026, 6:31:56 AM PT — 1275 turns
 
 **Original task:**
 
@@ -244,7 +162,7 @@ PICKUP PROMPT
 I had a working build of GLM 52 local at 10 PM tonight. A series of changes have now made the GLM local stall out. I need you to get this up and running again. It's stalling. It was running at like super fast
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11847, #11936, #11953, #12061, #12247, #12251, #12262, #12266, #12285, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #12403, #12407, #12459, #12477, #12506, #12618, #12657, #12688, #12689, #12710, #12761, #12763, #12764, #12824, #12872, #12878, #13075, #13108, #13121, #13191, #13196, #13199, #13202, #13453, #13470, #13874, #1593, #16163, #16265, #16304, #16578, #16588, #16590, #16648, #16714, #16717, #16718, #16844, #17202, #17203, #17205, #17300, #17430, #1754, #1755, #178531, #1819, #18312, #18326, #18448, #1876, #18786, #1884 [deployed], #18868, #1896, #1910 [deployed], #19135, #19338, #1934, #1965, #1966, #1967, #19686, #19879, #19881, #19882, #19883, #19887 [proposed], #19903, #19907, #19925, #19931 [proposed], #19932 [proposed], #19936 [proposed], #19937 [proposed], #19938 [approved], #19942 [proposed], #19945 [proposed], #19948, #19949, #2014, #2050, #2079, #2084, #2085, #2089 [deployed], #2091 [deployed], #2092, #2096, #2098 [deployed], #2099 [deployed], #2100 [deployed], #48031, #48140
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11847, #11936, #11953, #12061, #12247, #12251, #12262, #12266, #12285, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #12403, #12407, #12459, #12477, #12506, #12618, #12657, #12688, #12689, #12710, #12761, #12763, #12764, #12824, #12872, #12878, #13075, #13108, #13121, #13191, #13196, #13199, #13202, #13453, #13470, #13874, #1593, #16163, #16265, #16304, #16578, #16588, #16590, #16648, #16714, #16717, #16718, #16844, #17202, #17203, #17205, #17300, #17430, #1754, #1755, #178531, #1819, #18312, #18326, #18448, #1876, #18786, #1884 [deployed], #18868, #1896, #1910 [deployed], #19135, #19338, #1934, #1965, #1966, #1967, #19686, #19879, #19881, #19882, #19883, #19887 [proposed], #19903, #19907, #19925, #1993 [deployed], #19931 [proposed], #19932 [proposed], #19936 [proposed], #19937 [proposed], #19938 [approved], #19942 [proposed], #19945 [proposed], #19948, #19949, #19957 [proposed], #19958 [proposed], #19962 [proposed], #2014, #2050, #2079, #2084, #2085, #2089 [deployed], #2091 [deployed], #2092, #2096, #2098 [deployed], #2099 [deployed], #2100 [deployed], #48031, #48140
 
 **Last PICKUP PROMPT:**
 
@@ -266,6 +184,90 @@ re speed",
     "Ruben: 'Isn't client supposed to have priority? Also look at this that's getting emitted: <frankenstein_what_served>... Still those carrots'",
     "Ruben: 'If you're gonna cut down the number of interactions why would you do that if it was working before. I feel like I have to keep repeating myself'",
     "Ruben: '
+```
+
+### `1785329338571` — 7/29/2026, 6:14:29 AM PT — 114 turns
+
+**Original task:**
+
+```
+Tell me about all the open tickets right now
+```
+
+**Ideas referenced:** #0066, #13047, #13442, #13965, #14741, #14742, #14743, #14748, #14749, #16445, #17712, #177949, #18132, #18135, #18176, #18309, #18313, #18853, #1892, #19802 [proposed], #19830, #2782, #3587, #3957, #4686, #4689, #4929, #4930, #4931, #4957, #4958, #5095, #5391, #5431, #5574, #5638, #5768, #5770, #5779, #5787, #5792, #5793, #5794, #5795, #5819, #6039, #6064, #6230, #6728, #6789, #7126, #7164, #7359, #7368, #7381, #7548, #7550, #8060, #9132, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+
+<attempt_completion>
+<result>
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task - Open tickets readout + Ticket Agent root cause analysis + fix deploy
+
+Where we left off (verified 2026-07-29 06:13 PT):
+- Queried all 63 active tickets via seach_tickets (unfiltered + status=open)
+- Identified user 124 as "CS Auto-Agent" (ai-tickets@emsuniversity.com) - 85 tickets stuck untouched >30 min
+- Found idea #19802 [proposed] filed yesterday by SELF_REPORT: same symptom, orphan 124 tickets
+- Found aiPickupAiAgentOrphans() exists at line 6328 of lib/ai_ticket_agent.php but was NEVER wired into the cron pipeline
+- Cron pipeline at lines 194-221 runs: stale -> overflow -> prescreen -> share_balance -> first_touch, but never calls aiPickupAiAgentOrphans
+- Deployed patch: cron_ai_ticket_agent.php now calls aiPickupAiAgentOrphans(10) after share-balance phase
+- Patch includes: backup .bak-orphan124-20260729-061222, syntax-valid, no PHP-FPM errors
+- Next cron tick at 6:14:04 PT should reclaim first 10 orphans; all 85 should be picked up within ~50 min (10/tick)
+
+Open threads to drive next:
+1. (human-only decision, no idea) - Monitor cron log around 6:19-6:24 PT to confirm "AI agent orphan reclaim" lines appear with non-zero found/picked_up
+
+Reference IDs:
+- Ideas filed: idea #19802 [existing, proposed] - orphan_124 bug_class
+- Files touched: /var/www/emtskills/cron/cron_ai_ticket_agent.php (patched), /var/www/emtskills/cron/cron_ai_ticket_agent.php.bak-orphan124-20260729-061222 (backup)
+- Tickets: 85 tickets stuck on agent 124 (user_id=124, CS Auto-Agent)
+
+</result>
+</attempt_completion>
+```
+
+### `1785329349404` — 7/29/2026, 6:02:08 AM PT — 34 turns
+
+**Original task:**
+
+```
+Tell me about all the open tickets right now
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #19567, #2063, #2065, #2073, #21970, #21997, #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+nd this to Vicky via iMessage?
+
+═══════════════════════════════════════════════
+PICKUP PROMPT
+═══════════════════════════════════════════════
+
+**Where we left off:**
+- Fetched all open tickets (49)
+- Analyzed patterns: chat widget bleed, voice AI noise
+- Narrowed to Vicky's team (24 tickets) with category breakdown
+- Flagged worst offenders: Harry Bowden 100h Critical, Seth Rose chargeback threat, 12-day FEMA grading gaps
+
+**Open threads:**
+1. **Ruben asked "send to Vicky?"** — awaiting confirmation before sending via iMessage (chat 64)
+2. Pending actions from prior analysis: Jason Pan suspension fix, Erika Carpenter refund, chat widget health check
+3. Seth Rose chargeback threat — 26415W-45, wrong section since May. Needs `get_student_lifecycle_state(student_id="26415W-45")` to see full gate picture
+
+**Ideas filed:** none
+
+**Files touched:** none
+
+**Verified:** 2026-07-29 05:57 PT
+</result>
+</attempt_completion>
 ```
 
 ### `1785328586617` — 7/29/2026, 5:47:20 AM PT — 30 turns
@@ -5285,103 +5287,5 @@ How fast is GLM Max vs high?
 ```
 
 **Ideas referenced:** #10108, #10740, #11735, #11741, #11781, #12059, #12060, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326, #6711, #6719
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785071475049` — 7/26/2026, 6:11:43 AM PT — 4 turns
-
-**Original task:**
-
-```
-tell me how many turns of glm5.2 local have occurren int he last 10 minutes?
-```
-
-**Last PICKUP PROMPT:**
-
-```
-as_of 2026-07-26 06:11:28 PT).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — GLM-5.2 turn count query.
-(Simple fact-finding, no open task ID.)
-
-Where we left off (verified 2026-07-26 06:11:28 PT):
-- frankenstein_what_served(minutes=10) returned 874 total turns, glm-5.2=8, GLM52 ONL=7, glm52-only=6. Combined GLM-5.2 variants = 21 turns.
-
-Open threads to drive next:
-- None — query answered in full.
-
-Reference IDs:
-- No ideas, tickets, or files touched — single-turn fact query.
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785071438937` — 7/26/2026, 6:10:52 AM PT — 6 turns
-
-**Original task:**
-
-```
-tell me how many turns of glm5.2 local have occurren int he last 10 minutes?
-```
-
-**Last PICKUP PROMPT:**
-
-```
-$0 (local / token-billed).
-
-═══════════════════════════════════════════════  
-**PICKUP PROMPT**  
-═══════════════════════════════════════════════
-
-Queried `frankenstein_what_serv
-
-[Response interrupted by user]
-```
-
-### `1785071145080` — 7/26/2026, 6:08:05 AM PT — 10 turns
-
-**Original task:**
-
-```
-tell me how many turns of glm5.2 local have occurren int he last 10 minutes?
-```
-
-**Last PICKUP PROMPT:**
-
-```
- 509, `emsu-codegen` 403.)
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT
-═══════════════════════════════════════════════════
-
-## Task completed — GLM‑5.2 turn count answered
-- **Answer:** 6 (glm-5.2) + 7 (GLM52 ONL) + 3 (glm52-only) = 16 total GLM‑5.2‑family turns in last 10 min. Verified via `frankenstein_what_served` live probe on WOPR audit log (`2026-07-26T06:06:09-07:00`).
-
-## Open Threads
-None — single‑fact query, answered inline.
-
-## Reference IDs
-None filed this session.
-</result>
-<task_progress>
-- [x] Query GLM-5.2 turn count in last 10 min via SSH audit log
-- [x] Cross-check via Frankenstein what_served (10min window)
-</task_progress>
-</attempt_completion>
-```
-
-### `1785071081866` — 7/26/2026, 6:05:33 AM PT — 14 turns
-
-**Original task:**
-
-```
-tell me how many turns of glm5.2 local have occurren int he last 10 minutes?
-```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

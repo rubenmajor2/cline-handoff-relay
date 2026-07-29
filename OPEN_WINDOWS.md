@@ -6,20 +6,20 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/28/2026, 10:53:16 PM PT | window: last 72h | 121 tasks | index total 282 (parsed 13, cached 269)
+Generated: 7/28/2026, 11:53:16 PM PT | window: last 72h | 118 tasks | index total 282 (parsed 7, cached 275)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785298450123` | 7/28/2026, 10:53:14 PM | 47 | 224KB | #Stripe/Klarna |
-| `1785295028411` | 7/28/2026, 10:53:05 PM | 147 | 538KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
-| `1785302012720` | 7/28/2026, 10:53:04 PM | 53 | 131KB | How can we make Daystorm council more effective and impactful? Seems like they are broken  |
-| `1785301927173` | 7/28/2026, 10:53:02 PM | 55 | 284KB | See this email I got. Scope with deep research whether this is accurate or not:  |
-| `1785293294377` | 7/28/2026, 10:53:02 PM | 267 | 1558KB | A metric ton of emails came in to email agent within the last hour or 2. I need you to go  |
-| `1785303815587` | 7/28/2026, 10:53:02 PM | 70 | 243KB | I'm running a query on litellm:glm52-only now too so you guys may be working on the same t |
-| `1785301964731` | 7/28/2026, 10:52:35 PM | 57 | 96KB | Tell me Are CFA's actually learning? I thought we had a learning system setup. It seels li |
-| `1785282386265` | 7/28/2026, 10:50:59 PM | 659 | 7536KB | pickup telephony task, have turned off the AI, VAPI agent, but button does not appear to b |
+| `1785303815587` | 7/28/2026, 11:53:09 PM | 296 | 671KB | I'm running a query on litellm:glm52-only now too so you guys may be working on the same t |
+| `1785298450123` | 7/28/2026, 11:50:10 PM | 204 | 735KB | #Stripe/Klarna |
+| `1785298633210` | 7/28/2026, 11:47:55 PM | 63 | 250KB | #Scope Oct GLM Build   |
+| `1785302012720` | 7/28/2026, 11:47:54 PM | 71 | 178KB | How can we make Daystorm council more effective and impactful? Seems like they are broken  |
+| `1785301927173` | 7/28/2026, 11:46:09 PM | 103 | 1306KB | See this email I got. Scope with deep research whether this is accurate or not:  |
+| `1785301964731` | 7/28/2026, 11:45:32 PM | 71 | 140KB | Tell me Are CFA's actually learning? I thought we had a learning system setup. It seels li |
+| `1785295028411` | 7/28/2026, 11:45:10 PM | 187 | 614KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
+| `1785293294377` | 7/28/2026, 11:09:11 PM | 300 | 1631KB | A metric ton of emails came in to email agent within the last hour or 2. I need you to go  |
+| `1785282386265` | 7/28/2026, 10:56:05 PM | 662 | 7552KB | pickup telephony task, have turned off the AI, VAPI agent, but button does not appear to b |
 | `1785303393404` | 7/28/2026, 10:48:42 PM | 28 | 107KB | How fast are you today? |
-| `1785298633210` | 7/28/2026, 10:46:51 PM | 40 | 184KB | #Scope Oct GLM Build   |
 | `1785302302290` | 7/28/2026, 10:44:22 PM | 34 | 154KB | Why do subagents completely fail in frankenstein-llm? |
 | `1785303526321` | 7/28/2026, 10:39:36 PM | 12 | 29KB | check rules 298, plus read ideal GLM Build on desktop. Something is not working right with |
 | `1785296742883` | 7/28/2026, 10:34:49 PM | 218 | 482KB | We had a frankenstein doctor type window working and the window just crashed. |
@@ -128,158 +128,12 @@ Generated: 7/28/2026, 10:53:16 PM PT | window: last 72h | 121 tasks | index tota
 | `1785036492220` | 7/26/2026, 12:35:36 AM | 1055 | 1780KB | #GLM |
 | `1785050078893` | 7/26/2026, 12:15:54 AM | 5 | 31KB | tell me how many turns of glm5.2 local have occurren int he last 10 minutes? |
 | `1785050077563` | 7/26/2026, 12:15:36 AM | 6 | 32KB | tell me how many turns of glm5.2 local have occurren int he last 10 minutes? |
-| `1785045454032` | 7/25/2026, 11:06:45 PM | 14 | 84KB | Can you do a benchmark on GLM 5.2 in the last 5 min |
-| `1785045456484` | 7/25/2026, 11:03:53 PM | 46 | 211KB | Can you do a benchmark on GLM 5.2 in the last 5 min |
-| `1785045300511` | 7/25/2026, 10:56:23 PM | 9 | 55KB | Can you do a benchmark on GLM 5.2 in the last 5 min |
 
 ---
 
 ## Per-window detail
 
-### `1785298450123` — 7/28/2026, 10:53:14 PM PT — 47 turns
-
-**Original task:**
-
-```
-#Stripe/Klarna
-
-Look into this, plan and scope only, do deep analysis and consult SLS / MCP,, etc...
-
---
-While you are on it, here remember that we have Stripe/Clarna and check API on that and i need to make sure that's properly wired into SLS, payment tracking, etc... and prevents users from being suspended if paid, knocks off the balance. if any for EMT payments, etc... Just verifying and so needs resolution if not across all EMT sites. Make sureit's activating properly, etc...|
-```
-
-**Ideas referenced:** #16610, #16613, #17580, #19522, #19573, #19583, #19584, #19585, #19645, #19646, #19803, #19807, #19810, #19811, #19818, #19820, #19827, #19830, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19840, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19872, #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #2089, #7317, #9311, #9312, #9339
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785295028411` — 7/28/2026, 10:53:05 PM PT — 147 turns
-
-**Original task:**
-
-```
-What outstanding build issues exist for the Broser Extension for Argus? What else do you recommend? Can you do some work and testing on it to improve it more? Make sure it's wired into actual Argus as well:
-
-https://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome
-```
-
-**Ideas referenced:** #0000, #10003, #10005, #10182, #11316, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13202, #14000, #16213, #16263, #17342, #17345, #17669, #17672, #17673, #17691, #17697, #17741, #17746, #17749, #17751, #1820, #18328, #18337, #18360, #18388 [executing], #18396 [proposed], #18397 [proposed], #18398 [proposed], #1840, #1857, #18687, #18688, #18745, #18770, #1878, #18930 [proposed], #19370, #19407, #1952, #21262, #238636, #274160, #30363, #34495, #6164, #69707, #8942, #9650, #9654, #9660, #9733, #9889
-
-**Last PICKUP PROMPT:**
-
-```
-about the autopilot capability
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #7 — Argus Chrome Extension build issues and fixes.
-
-Where we left off (verified 2026-07-28 20:32 PT):
-- Web download page: emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome
-- Canonical source: /var/www/emtskills/public/argus-extension/ (v2.0.0)
-- Canonical ZIP: /var/www/emtskills/public/argus-extension.zip (rebuilt, 37KB)
-- Build script: /var/www/emtskills/scripts/argus_rebuild_extension_zip.sh (rwx)
-- Report card: /var/www/emtskills/routes/_view_argus_ai_extension_report_card.php
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. Wire `action.default_icon` into manifest.json (currently missing — sidePanel needs an action icon to show in toolbar)
-2. Fix content.js and verify ARGUS_DO extract works with latest DOM on EMSU portal pages
-3. Add manifest keyboard shortcut for faster panel open
-4. Create auto-rebuild cron if ZIP is older than source
-
-Reference IDs:
-- Ticket: N/A (ad-hoc task)
-- Ideas filed: none this session
-- Files touched: extension_version.txt, service-worker.js, _view_argus_ai_extension_report_card.php, argus-extension.zip, argus_rebuild_extension_zip.sh
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785302012720` — 7/28/2026, 10:53:04 PM PT — 53 turns
-
-**Original task:**
-
-```
-How can we make Daystorm council more effective and impactful? Seems like they are broken and need hel? How can we drive them to take more actions that actually help the students and the organization?
-```
-
-**Ideas referenced:** #19840, #19853, #2089, #9077, #9090
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785301927173` — 7/28/2026, 10:53:02 PM PT — 55 turns
-
-**Original task:**
-
-```
-See this email I got. Scope with deep research whether this is accurate or not: 
-
-EA PDF retry has 41 consecutive failures.
-Plugins status: All active
-Timestamp: 2026-07-28 21:15:04
-```
-
-**Ideas referenced:** #11925, #15158, #17580, #178501, #19458, #19460, #19490, #19491, #19492, #19495, #19511, #19522, #19558, #19573, #19583, #19584, #19585, #19594, #19615, #19645, #19646, #19686, #19690 [deployed], #19704, #19714 [proposed], #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19803, #19807, #19810, #19811, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830, #19831, #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19840, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19872, #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #2084, #2085, #2089
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785293294377` — 7/28/2026, 10:53:02 PM PT — 267 turns
-
-**Original task:**
-
-```
-A metric ton of emails came in to email agent within the last hour or 2. I need you to go over them for failures, do RCAs and build improvements into Email Agent / CFAs to be able to respond/act autonmously to resolve issues. Act on them and then give a status report / summary.
-```
-
-**Ideas referenced:** #111827, #1147, #1231, #1286, #1396, #1565, #166534, #1746, #1819, #19492, #19495, #19511, #19522, #19573, #19583, #19584, #19585, #19645, #19646, #19807, #19810, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830, #19831, #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19866 [proposed], #19867 [deployed], #19868 [proposed], #19870 [proposed], #334155, #374151, #406060, #406061, #406242, #414633, #414634, #414636, #414642, #414643, #414692, #414693, #414694, #4480, #4481, #475569, #5749, #64748, #78350, #9888, #9989
-
-**Last PICKUP PROMPT:**
-
-```
-d wastes staff time on triage.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #19867 follow-through — email agent ingestion pipeline backfill.
-
-Where we left off (verified 2026-07-28 20:11 PT):
-- Type-error cascade FIXED in lora_shadow_health.php + cron_orchestrator_triage.php
-- Triage now runs clean in LIVE mode
-- 297 emails still `processed_for_routing=0` in email_inbound_log (created within last 3h)
-- email_inbound_routing.php processPendingInboundEmails() has its own cron — verify it runs and clear the backlog
-- The correct cron is likely in /etc/cron.d/agent_reply_dispatcher (found: runs cron_agent_reply_dispatcher.php every minute)
-
-Open threads to drive next:
-1. #19867 [deployed] — Verify email backlog clears: run `sudo -u www-data php cron/cron_agent_reply_dispatcher.php` and check `SELECT COUNT(*) FROM email_inbound_log WHERE processed_for_routing=0`
-2. #19866 [proposed] — Implement chat handoff dedup in the handoff ticket-creation path (TicketConsolidator pattern exists at line 35, needs pre-creation call)
-3. #19868 [proposed] — Add urldefense.com + sentrylink.com to outbound URL allowlist (grep for unowned_url or url-guard logic in lib/)
-4. #19870 [proposed] — Check RunPod fleet health for 70B, verify API key or pod capacity
-
-Reference IDs:
-- Ideas filed: #19866 [proposed], #19867 [deployed], #19868 [proposed], #19870 [proposed]
-- Files touched: /var/www/emtskills/lib/lora_shadow_health.php, /var/www/emtskills/cron/cron_orchestrator_triage.php
-- Backups taken: lora_shadow_health.php.bak-20260728-pdo, cron_orchestrator_triage.php.bak-20260728-pdo
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Analyze recent email agent traffic and identify failure patterns
-- [x] Root-cause each failure class with evidence
-- [x] Fix type-error cascade critical bug (blocking orchestrator triage)
-- [x] File ideas for chat handoff dedup, blocked URLs, 70B dead
-- [ ] Backfill 297 unprocessed inbound emails (separate pipeline, needs next step)
-- [x] Deliver status report with summary
-</task_progress>
-</attempt_completion>
-```
-
-### `1785303815587` — 7/28/2026, 10:53:02 PM PT — 70 turns
+### `1785303815587` — 7/28/2026, 11:53:09 PM PT — 296 turns
 
 **Original task:**
 
@@ -293,11 +147,216 @@ Read slso glm 52 ideal build on desktop.
 You may cross with the other window on a repa
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12247, #12262, #12314, #12364, #12365, #12366, #12368, #12477, #12618, #12657, #12689, #12824, #12872, #12878, #13108, #13202, #1378, #13874, #16163, #16265, #16304, #16648, #16844, #17202, #17203, #17205, #17300, #17680, #18312, #18326, #18720, #18820, #18868, #19338, #19653, #2014, #2050
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11936, #11942, #11944, #11953, #12247, #12262, #12314, #12363, #12364, #12365, #12366, #12368, #1238, #12477, #12618, #12657, #12673, #12689, #12824, #12872, #12878, #13108, #13202, #1378, #13831, #13874, #13964, #14000, #14848, #16120, #16163, #16265, #16304, #16648, #16844, #17202, #17203, #17205, #17300, #1754, #1755, #17680, #18312, #18326, #18720, #18820, #18868, #19338, #19653, #19840, #19874 [proposed], #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #19881 [proposed], #19882 [proposed], #19883 [proposed], #19903 [proposed], #19907 [proposed], #2014, #2050, #2065, #2090, #2091, #48031, #48140
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785301964731` — 7/28/2026, 10:52:35 PM PT — 57 turns
+### `1785298450123` — 7/28/2026, 11:50:10 PM PT — 204 turns
+
+**Original task:**
+
+```
+#Stripe/Klarna
+
+Look into this, plan and scope only, do deep analysis and consult SLS / MCP,, etc...
+
+--
+While you are on it, here remember that we have Stripe/Clarna and check API on that and i need to make sure that's properly wired into SLS, payment tracking, etc... and prevents users from being suspended if paid, knocks off the balance. if any for EMT payments, etc... Just verifying and so needs resolution if not across all EMT sites. Make sureit's activating properly, etc...|
+```
+
+**Ideas referenced:** #0000, #111827, #16224, #16610, #16613, #16958 [deployed], #16959, #1758, #17580, #19173, #19175 [executing], #19176 [queued], #19522, #19573, #19583, #19584, #19585, #19645, #19646, #19803, #19807, #19810, #19811, #19818, #19820, #19827, #19830, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19840, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19872 [deployed], #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #19897 [proposed], #19898 [proposed], #19899 [proposed], #19900 [proposed], #19901 [proposed], #19902 [proposed], #19903 [proposed], #19904 [proposed], #19908 [proposed], #19909 [proposed], #19910 [proposed], #19911 [proposed], #19912 [proposed], #19913 [proposed], #19914 [proposed], #19915 [proposed], #19916 [proposed], #19917 [proposed], #19918 [proposed], #19920 [proposed], #19921 [proposed], #2089, #5344, #7317, #9086, #9311, #9312, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+ pick the architecture option.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #19897 [proposed] - Klarna is LIVE on 6 WordPress sites with 10 percent conversion, and SLS reads the wrong table
+
+Where we left off (verified 2026-07-28 23:48 PT, live Stripe API acct_18d2efGup709uA0I):
+- CORRECTION: my earlier claim that Klarna was invisible with n=1 was WRONG. I had only queried local mirror tables, never Stripe. Ruben was right.
+- TWO parallel integrations. EMSU_WC_Klarna (WooCommerce, 6 sites, all real revenue) vs EMS_Admin_Portal (emtskills lib, 2 smoke tests ever). Every SLS hook reads the portal table, which real payments never touch. #19921 [proposed].
+- REVENUE: 22 sessions, 2 paid $1,990.00, 18 expired unpaid $21,927.50, 2 still open $2,595.00. 10 percent conversion. #19920 [proposed].
+- 9 ENROLLED STUDENTS in the abandoned set with payment_method NULL and class dates 07-20 or 08-17: connorziehler2, theraccoon049, carly.carruth13, sakuratokyo1327, tessa.northcraft26, cblmommy1007, cooldave2207, mattison.harr, heatherparsons002. At suspension risk right now.
+- lynnhoke@gmail.com PAID 295.00 on 07-21 and has NO Students row.
+- Sites: arizonaemtrefresher 6, arizonaemt 5, dallasemt 4, sanantonioemt 2, paramedicrefresher 2, sandiegoemt 1. arizonaemtrefresher and paramedicrefresher are NOT monitored by check_registration_surface_health.
+- RULE 91 FIX SHIPPED: api/orchestrator/idea_exists.php on WOPR (lint OK, FPM reloaded, live-tested), clinerules-mcp EXISTENCE + IDENTITY GATE (tsc clean), rule 91 amended (lint OK 6243 bytes, 307 rules reindexed). #19915 [proposed]. Activates on next MCP restart.
+
+Open threads to drive next:
+1. #19921 [proposed] - NEEDS RUBEN DECISION on the architecture fork: consolidate on WooCommerce, consolidate on portal, or bridge via a Stripe-API reconciliation cron. Recommendation is bridge then consolidate on WooCommerce. Evaluate cron/detect_klarna_payment.php first, it is already the bridge in draft form.
+2. #19920 [proposed] - Diagnose the 90 percent abandonment (Klarna decline, broken return URL, session expiry, or UX). stark@cowboystateops.com retried twice in minutes on 07-18, which suggests hard failure not hesitation. Then recover the 9 enrolled students before their class dates and before the suspension crons touch them.
+3. #19916 [proposed] - SECURITY. Make processKlarnaWebhook fail CLOSED on an empty secret, then add STRIPE_KLARNA_WEBHOOK_SECRET and register the endpoint.
+4. #19909 [proposed] - Add Klarna to checkPaymentStatus, but RESCOPED per 19921. It must read real Klarna payments, not stripe_klarna_sessions which holds only smoke tests.
+5. #19912 [proposed] - Schema-verify klarna_last_checked_at and klarna_status_log, then evaluate detect_klarna_payment.php as the bridge and schedule it.
+6. #19911 [proposed] - Set klarna_matched in balance_gate::getBalances, ideally by collapsing the three duplicate implementations per rule 92.
+7. #19908 [proposed] - Build queryKlarnaCharge on PaymentEvidenceMatcher and fix the zero-arg constructor call at line 178 against the PDO-requiring ctor at line 23.
+8. #19917 [proposed] - Register check_klarna_status in CanonicalToolRegistry, gated on 19908.
+9. #19913 [proposed] - tagStudentKlarnaPaid does a local-only invoice UPDATE with no QuickBooks writeback. student_db_id DOES exist and joins cleanly, original premise corrected.
+10. #19910 [proposed] - Patch the stale charges-array shape to latest_charge, which is why kraahauge has a pi
+```
+
+### `1785298633210` — 7/28/2026, 11:47:55 PM PT — 63 turns
+
+**Original task:**
+
+```
+#Scope Oct GLM Build  
+
+Read Ideal GLM Build on desktop and let me know your thoughts on whether repurposing Julia and claudia TP=2 into the current GLM Hex would be better than having 2 separate systems
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16578, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #17580, #1766 [investigating], #1779, #17825 [blocked], #17826 [blocked], #17831 [blocked], #17833 [blocked], #17834 [proposed], #17844 [proposed], #17845 [proposed], #1798, #1828, #18448, #1896, #19239 [rejected], #19567, #19803, #19807, #19811, #19833, #19834, #1986, #19872, #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #1988 [blocked], #19881 [proposed], #19882 [proposed], #19883 [proposed], #19886 [proposed], #1989 [blocked], #19903, #19907, #1991, #2014, #2050, #2063, #2065, #2073, #2084, #2085, #2089, #2090, #2091, #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+ge for 120B traffic continues.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task: Restore Julia+Claudia TP=2 gpt-oss-120b cluster (see idea #19886 [proposed])
+
+Where we left off (verified 2026-07-28 23:22 PT):
+- Julia (spark-6ae6, WG 10.100.0.15, SSH tunnel :2205) HEALTHY, GPU 0%, no Docker containers running
+- Claudia (spark-6d51, WG 10.100.0.16, SSH tunnel :2206) HEALTHY, GPU 0%, no Docker containers running
+- 46.3% Cline traffic spilling to paid cloud with no active 120B cluster
+- emsu_distill LoRA weights on Julia at ~/models/emsu_distill_lora
+- Unified worker scripts from 2026-07-15 restore on WOPR /tmp/
+- GLM Hex PP=6 ring: DO NOT TOUCH (rule 157, ideal build section 9)
+
+Open threads to drive next:
+1. #19886 [proposed]: SSH into Julia (:2205) and Claudia (:2206), launch gpt-oss-120b TP=2 cluster with emsu_distill LoRA, register in frankenstein_registry.yaml, verify serving, re-enable 120B routing
+
+Reference IDs:
+- Idea filed: #19886 [proposed]
+- Files touched: IDEAL_GLM52_HEX_BUILD.md, GLM52_HEX_SSH_ACCESS.md, GLM52_6NODE_HYBRID_APPROACH_ANALYSIS.md, GLM52_PICKUP.md, GLM52_IDEAL_BUILD_ANSWER_2026-07-28.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785302012720` — 7/28/2026, 11:47:54 PM PT — 71 turns
+
+**Original task:**
+
+```
+How can we make Daystorm council more effective and impactful? Seems like they are broken and need hel? How can we drive them to take more actions that actually help the students and the organization?
+```
+
+**Ideas referenced:** #11216, #18954, #19053, #19840, #19853, #19890 [proposed], #19893 [proposed], #19894 [proposed], #19895, #19897 [proposed], #20004, #2089, #9077, #9090
+
+**Last PICKUP PROMPT:**
+
+```
+ daily with measurable results
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task -- Daystrom Council turnaround implementation.
+
+Where we left off (verified 2026-07-28 23:04 PT):
+- Full diagnosis complete: 26 escalated vs 4 done in 14 days (7:1 human-parking ratio)
+- Rule 206 (council-acts-on-grounded-consensus) is architecturally sound but not followed by the LLM prompt
+- CouncilActionRouter.php at /var/www/emtskills/lib/CouncilActionRouter.php already handles agent actions correctly -- the LLM just doesn't generate them
+- 110 total actions: 75 escalated, 29 done, 6 dismissed
+- No sessions in last 3 days (last: 7/25 daystrom-20260725-130005-xxxx)
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #19890 [proposed] -- Implement pre-commit agent-ification in CouncilActionRouter::preCommitAgentify() + wire into cron_daystrom_council.php extract-commit loop; P0
+2. #19893 [proposed] -- Build lastSessionSummary() query + inject feedback block into council prompt at session start; P0
+3. #19894 [proposed] -- Wire cron_council_action_driver.php to auto-promote Daystrom ideas when corresponding agent actions complete; P1
+4. #19897 [proposed] -- Build daystrom_council_report.php dashboard route; P2
+
+Reference IDs:
+- Ticket: none (Ruben directive)
+- Ideas filed: #19890 [proposed], #19893 [proposed], #19894 [proposed], #19897 [proposed]
+- Files touched: /var/www/emtskills/lib/CouncilActionRouter.php (read), /var/www/emtskills/cron/cron_daystrom_council.php (read), /var/www/emtskills/cron/cron_council_action_driver.php (read)
+- Rule: .clinerules/206 (council-acts-on-grounded-consensus)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Investigate Daystrom Council current state
+- [x] Search clinerules, database, server docs, and orchestrator for Daystrom Council
+- [x] Analyze what's broken and why
+- [x] Design concrete action-driving improvements
+- [x] File ideas for implementation (#19890, #19893, #19894, #19897)
+- [x] Deliver comprehensive plan with pickup prompt
+</task_progress>
+</attempt_completion>
+```
+
+### `1785301927173` — 7/28/2026, 11:46:09 PM PT — 103 turns
+
+**Original task:**
+
+```
+See this email I got. Scope with deep research whether this is accurate or not: 
+
+EA PDF retry has 41 consecutive failures.
+Plugins status: All active
+Timestamp: 2026-07-28 21:15:04
+```
+
+**Ideas referenced:** #11925, #13976, #15158, #15227, #17580, #178501, #19458, #19460, #19490, #19491, #19492, #19495, #19511, #19522, #19558, #19573, #19583, #19584, #19585, #19594, #19615, #19645, #19646, #19686, #19690 [deployed], #19704, #19714 [proposed], #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19803, #19807, #19810, #19811, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830, #19831, #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19840, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19872, #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #19891 [proposed], #2084, #2085, #2089, #2998, #7817
+
+**Last PICKUP PROMPT:**
+
+```
+h, not in plugin availability.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — EA PDF retry cron fix: replace dead admin-scrape path with REST endpoint.
+
+Where we left off (verified 2026-07-28 22:55 PT):
+- 56 consecutive batch failures in ea_pdf_retry.log, 280 individual failures, ZERO successes
+- Root cause: cron/ea_pdf_retry.php uses local fetchEAPDFWithNonce() (old admin-scrape nonce path) instead of lib/EaPdfFetcher.php (fixed REST path)
+- 5 stuck students with IDs 2800-2804, all from today
+- Null monitor cron_ea_pdf_null_monitor.php also missing from disk
+- REST endpoint live but returns HTTP 401 (app_password not configured for retry cron)
+
+Open threads to drive next:
+1. #19891 [proposed] — Replace fetchEAPDFWithNonce in cron/ea_pdf_retry.php with REST call to wp-json/emsu/v1/export-ea OR import EaPdfFetcher.php directly
+2. #19891 [proposed] — Restore or recreate cron/cron_ea_pdf_null_monitor.php (missing from disk, cron fails every 30 min)
+3. #19891 [proposed] — Add app_password to the retry cron's config so the REST call authenticates
+
+Reference IDs:
+- Idea filed: #19891
+- Retry cron: /var/www/emtskills/cron/ea_pdf_retry.php
+- Fixed library: /var/www/emtskills/lib/EaPdfFetcher.php
+- Retry log: /var/www/emtskills/logs/ea_pdf_retry.log
+- Intake backfill log: /var/www/emtskills/logs/ea_intake_backfill.log
+- REST endpoint: GET /wp-json/emsu/v1/export-ea?template=X&dataset=Y (Application Password auth)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Read HANDOFF_NOTES for EA PDF context
+- [x] Found EA retry log files and analyzed contents
+- [x] Counted exact failures: 56 batches, 280 individual, 0 successes
+- [x] Identified root cause: dead admin-scrape path in retry cron
+- [x] Verified EaPdfFetcher.php fix exists but was never wired into the retry cron
+- [x] Checked null monitor: file missing from disk
+- [x] Verified REST endpoint status (HTTP 401, auth gap)
+- [x] Identified 5 stuck students
+- [x] Filed idea #19891
+- [x] Compiled comprehensive report with evidence
+</task_progress>
+</attempt_completion>
+```
+
+### `1785301964731` — 7/28/2026, 11:45:32 PM PT — 71 turns
 
 **Original task:**
 
@@ -305,11 +364,176 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 Tell me Are CFA's actually learning? I thought we had a learning system setup. It seels like if anything CFA's constantly regress.
 ```
 
-**Ideas referenced:** #11216, #13047, #1333 [resolved], #19338, #19458, #19491
+**Ideas referenced:** #11216, #13047, #1333 [resolved], #19338, #19458, #19491, #19892 [approved], #19895 [approved]
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1785282386265` — 7/28/2026, 10:50:59 PM PT — 659 turns
+```
+
+The previous completion was interrupted mid-PICKUP PROMPT. Re-delivering the complete synthesis now.
+
+<attempt_completion>
+<result>
+## CFA Learning System Investigation: Are CFAs Actually Learning?
+
+**No. The learning system has a working detection layer but a completely broken feedback loop.** Here is the evidence gathered live:
+
+### What works (detection)
+
+KAIZEN detects CFA failures. 7-day coverage:
+
+| Surface | Failures | Classified % |
+|---|---|---|
+| Email AI (ai_ticket_agent) | 81 | 28.4% |
+| SMS AI (sms_ai) | 19 | 0% |
+| Voice AI (voice_call) | 919 | 47.8% |
+| Chat Widget (livechat_ai) | 0 | N/A |
+
+### What is broken (feedback loop)
+
+**1. ZERO CFA repair recipes.** 252 active `failure_repair_recipes` in the DB, but NONE for any CFA surface. All recipes target `ruben_executor` (3), `argus_audit` (5), `glm52` (5), or NULL target_slug (239). The system detects failures but has no repair recipes to feed back into the agents.
+
+**2. 825 corrections trapped in limbo.** `ai_learned_corrections` table: 151 `pending_review`, ZERO approved, 3 rejected. All have EMPTY `channel_applicability` — no correction is mapped to any CFA channel (voice, livechat, email, sms). The system collects but never approves or applies.
+
+**3. Auto-approve pipeline never deployed.** Idea #11216 was fully specified and sandbox-tested (PASSED), but zero files exist on disk. No `lib/ai_learning_auto_approve.php`, no `cron/cron_ai_learning_auto_approve.php`, no cron entry. The sole learning file is `cron_harvest_cline_corrections.php` — a collector with no approval stage.
+
+**4. No learning pipeline crons.** Crontab has zero entries for `learn`, `kaizen`, `harvest`, or `auto_approve`.
+
+### Why it feels like regression
+
+CFAs are not getting dumber — they are making the same mistakes repeatedly because there is no learning feedback loop. Every failure is observed, logged, and then ignored. No recipe is ever created, no correction is ever approved, and nothing is ever fed back into the agent prompts.
+
+### Top unclassified patterns (ready for recipe seeding)
+
+- **Email AI:** `first_touch_clarify_sent: intent=general` (34), `stuck_quiz_attempt: no attempt_id parsed` (13)
+- **SMS AI:** `All AI models failed` (19/19 identical)
+- **Voice AI:** Empty transcript/greeting-only calls (480+ across 10 patterns)
+
+### Next steps (both approved)
+
+- **#19892 [approved]** — Seed KAIZEN repair recipes for all 5 CFA surfaces from top unclassified patterns
+- **#19895 [approved]** — Deploy auto-approve pipeline (idea #11216) from sandbox to server, wire 15-min cron, clear 151 pending backlog
+
+These two steps close the loop: classify failures → recipes → approve corrections → feed back into agent prompts.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task # - CFA learning system investigation -- learning detection works, output stage broken
+
+Where we left off (verified 2026-07-28 22:58 PT):
+- KAIZEN detection works across CFA surfaces: ai_ticket_agent 81 failures/7d (28.4% classified), sms_ai 19/7d (0%), voice_call 919/7d (47.8%), livechat_ai 0
+- ZERO CFA repair recipes: 252 active recipes, NONE for any CFA surface -- all for ruben_executor (3), argus_audit (5), glm52 (5), NULL (239)
+- ai_learned_corrections: 825 total, 151 pending_review, 0 approved, 3 rejected -- all with EMPTY channel_applicability
+- Auto-approve pipeline (#11216) spec exists, sandbox-tested PASSED, but NEVER deployed -- zero PHP files on disk, no cron
+- Onl
+```
+
+### `1785295028411` — 7/28/2026, 11:45:10 PM PT — 187 turns
+
+**Original task:**
+
+```
+What outstanding build issues exist for the Broser Extension for Argus? What else do you recommend? Can you do some work and testing on it to improve it more? Make sure it's wired into actual Argus as well:
+
+https://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome
+```
+
+**Ideas referenced:** #0000, #10003, #10005, #10182, #11316, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13202, #14000, #16213, #16263, #17342, #17345, #17669, #17672, #17673, #17691, #17697, #17741, #17746, #17749, #17751, #1820, #18328, #18337, #18360, #18388 [executing], #18396 [proposed], #18397 [proposed], #18398 [proposed], #1840, #1857, #18687, #18688, #18745, #18770, #1878, #18930 [proposed], #19370, #19407, #1952, #19896 [proposed], #19898 [proposed], #19899 [proposed], #19900 [proposed], #19901 [proposed], #19919 [proposed], #21262, #238636, #274160, #30363, #34495, #6164, #69707, #8942, #9650, #9654, #9660, #9733, #9889
+
+**Last PICKUP PROMPT:**
+
+```
+hipped `attempt_completion` with divider lines of 3 U+2550 chars:
+   ```
+   ═══ PICKUP PROMPT ═══
+   ```
+   instead of the required 47-char runs:
+   ```
+   ═══════════════════════════════════════════════
+   ```
+
+2. The extension-level structural gate (deployed 2026-07-24, documented in Cline_Obedience.md lines 859-878) rejected the completion because it requires 2+ U+2550 runs of 20+ chars — the 3-char runs failed the gate.
+
+3. The extension surface forced a tool-call retry: it returned `Wr.toolError` with the specific missing pieces. The model then re-emitted `attempt_completion` with the correct 47-char dividers, which passed the gate.
+
+4. From the user's perspective, this appeared as two pickup prompts for one task — the first was the failed attempt (still visible as a tool error in the conversation history), and the second was the successful one.
+
+**Why the short dividers happened:**
+
+- I wrote the dividers from memory ("═══") — three characters is the visual shorthand the human eye reads, and I did not check the 47-char requirement before shipping.
+- The steering injection mandate says "47 U+2550 chars (BOX DRAWINGS DOUBLE HORIZONTAL, not ASCII equals). Copy mechanically, do not retype." — I retyped instead of copying from the template.
+- The extension gate correctly enforced the requirement, but the enforcement itself produced the duplicate visibility issue (rejection + retry creates two visible completion turns).
+
+## Is the extension gate wrong?
+
+No. The gate is correct — it enforced the structural requirement. The side effect (visible duplicate) is inherent to any structural gate that forces a retry: the failed attempt is visible in the conversation, and the user sees the failed + successful pair.
+
+**Mitigation, not elimination:** The only way to zero visible duplicates is for the model to ALWAYS copy the 47-char divider from the steering injection template instead of retyping from memory. The gate can only reject — it cannot hide the rejected attempt.
+
+## Durable fix
+
+Add a Rule 91 quick-check item specifically about divider character count before shipping attempt_completion:
+
+> "Count U+2550 chars in each divider line. A valid pickup block has exactly 3 divider lines, each 47 chars of U+2550. If any is shorter than 47, you have not copied from the template — go back and COPY."
+
+This gives the model a mechanical check it can run before calling attempt_completion, reducing rejection-then-retry cycles.
+
+## Corrective actions
+
+1. Filed #19901 [proposed] — Add divider-length quick-check to Rule 91 steering injection
+2. Updated Cline_Obedience.md with this RCA (Violation #22 — duplicate completion from gate rejection)
+3. This RCA file archived on desktop for future agent reference
+</content>
+</write_to_file>
+```
+
+### `1785293294377` — 7/28/2026, 11:09:11 PM PT — 300 turns
+
+**Original task:**
+
+```
+A metric ton of emails came in to email agent within the last hour or 2. I need you to go over them for failures, do RCAs and build improvements into Email Agent / CFAs to be able to respond/act autonmously to resolve issues. Act on them and then give a status report / summary.
+```
+
+**Ideas referenced:** #111827, #1147, #1231, #1286, #1396, #1565, #166534, #1746, #1819, #19492, #19495, #19511, #19522, #19573, #19583, #19584, #19585, #19645, #19646, #19807, #19810, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830, #19831, #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19866 [proposed], #19867 [deployed], #19868 [proposed], #19870 [proposed], #19901 [proposed], #334155, #374151, #406060, #406061, #406242, #414633, #414634, #414636, #414642, #414643, #414692, #414693, #414694, #4480, #4481, #475569, #5749, #64748, #78350, #9888, #9989
+
+**Last PICKUP PROMPT:**
+
+```
+agnosing
+
+**Rule number:** 300
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task ECB-86 — email agent / CFA fleet audit follow-up.
+
+Where we left off (verified 2026-07-28 23:06 PT):
+- 3 fixes deployed and verified on disk: triage type-error cascade #19867 [deployed], chat handoff dedup #19866 [deployed], URL allowlisting #19868 [deployed]
+- 1 false claim identified and traced: "RunPod 70B dead" #19870 [superseded] — event payload was NULL, I invented the diagnosis
+- 1 gap discovered: email inbound routing has no cron trigger #19901 [proposed] — 466 emails unprocessed
+- Tracking document: `/Users/rubenmajor/Desktop/ECB-86_Tracking.md`
+
+Open threads to drive next:
+1. #19901 [proposed] — Add cron trigger for email_inbound_routing — create `/etc/cron.d/emsu-email-inbound-routing` calling `processPendingInboundEmails()` every 2 minutes, then run it once to clear the 466-row backlog
+2. #19870 [superseded] — Reject this idea. The actual event was Joshua disk pressure (87%) from `fleet_resource_pressure`, not a 70B outage. Run `fleet_inventory` or `llm_locate` on Joshua to verify disk health
+3. Rule 300 [proposed] — Create `.clinerules/300-frankenstein-self-health.md` — mandatory event payload verification before any fleet diagnosis, no "RunPod" or fleet claims without a live tool call
+
+Reference IDs:
+- Ticket: ECB-86
+- Ideas: #19866 [deployed], #19867 [deployed], #19868 [deployed], #19870 [superseded], #19901 [proposed]
+- Files touched: lib/lora_shadow_health.php, cron/cron_orchestrator_triage.php, cron/cron_chat_handoff_ticket_spawn.php, lib/MailerUrlAllowlist_TrustedExternal.php, /Users/rubenmajor/Desktop/ECB-86_Tracking.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785282386265` — 7/28/2026, 10:56:05 PM PT — 662 turns
 
 **Original task:**
 
@@ -335,35 +559,38 @@ Why did you hallucinate this button working?
 Can you resolve that and make sure it doesn't happen again, do an
 ```
 
-**Ideas referenced:** #001018, #059669, #062017, #166534, #19837 [proposed], #19838 [proposed], #19839 [proposed], #19840 [proposed], #19841 [deployed], #19842 [proposed], #19843 [proposed], #19844 [proposed], #19845 [proposed], #2563, #334155, #374151, #475569, #64748, #718096, #8899, #92400, #9733, #9734
+**Ideas referenced:** #001018, #059669, #062017, #166534, #19837 [proposed], #19838 [proposed], #19839 [proposed], #19840 [proposed], #19841 [deployed], #19842 [proposed], #19843 [proposed], #19844 [proposed], #19845 [proposed], #21312, #21313 [queued], #21314 [queued], #21315 [queued], #21316 [queued], #2563, #334155, #374151, #475569, #64748, #718096, #8899, #92400, #9733, #9734
 
 **Last PICKUP PROMPT:**
 
 ```
-to build them now?
+ bypassing our TwiML entirely.
 
-═══════════════════════════════════════════════════════════
+═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════
-Pick up task Telephony Feature Completion — Build #19843 Hand Back to VAPI + #19844 Audit Log.
+═══════════════════════════════════════════════
+Pick up task #21312 — VAPI Toggle RCA & Defense-in-Depth Fix for conference_events bypass.
 
-Where we left off (verified 7:28/2026 8:03 PM PT):
-- all files lint-clean and PHP-FPM reloaded
-- ExecAdmin toggle gate deployed ✅
-- VAPI validation cron deployed ✅
-- "Incoming" → "Unassigned" label fix deployed ✅
-- 2 remaining approved ideas: #19843 handback_vapi, #19844 audit log
+Where we left off (verified 10:54 PM PT):
+- Toggle UI writes to `telephony_config` correctly (line 2214 of telephony_hub.php)
+- `twiml_inbound.php` line 45 reads `vapi_fallback_enabled` correctly
+- Cron FIX-2026-07-28 respects human_override_at (30 min window)
+- `conference_events.php` may bypass the toggle — needs investigation
+- `vapi_fallback_worker.php` does NOT verify toggle before joining VAPI — needs defense-in-depth fix
 
-Open threads to drive next:
-1. #19843 [proposed] — Add handBackToVapi() to telephony_live_calls.js (function that calls POST action=handback_vapi), add handback_vapi case to live_conference_api.php that unmutes VAPI participant + plays "<Say>Agent has finished the call, I'm back to assist you</Say>" TwiML via Twilio REST API, add Hand Back button in telephony_hub.php render loop next to Take Over when vapi_muted=true
-2. #19844 [proposed] — Add $db->prepare INSERT INTO telephony_barge_in_log after every action handler in live_conference_api.php (join, mute_vapi, announce, handback_vapi). Table already exists from earlier schema deploy. Columns: conference_sid, action, agent_email, caller_phone, created_at.
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #21313 [queued] — Audit `conference_events.php` for VAPI spawn paths that bypass toggle. grep 'vapi\|fallback\|Dial.*941' /var/www/emtskills/api/telephony/conference_events.php
+2. #21314 [queued] — Add toggle gate to `vapi_fallback_worker.php`: verify `vapi_fallback_enabled` is 'true' before joining VAPI. If false, exit 0. Use emsu-operations write_server_file to apply.
+3. #21315 [queued] — Check VAPI admin dashboard: confirm inbound calls to +19412545009 do NOT auto-answer independently of our TwiML. If they do, disable VAPI's direct inbound handling.
+4. #21316 [queued] — File idea for telephony_hub.php to show "toggle override log" panel that displays when the toggle was last set and whether the cron has cleared the override.
 
 Reference IDs:
-- Ticket: (none)
-- Ideas filed: #19840, #19841, #19842, #19843, #19844, #19845
-- Files touched: telephony_hub.php, telephony_live_calls.js, live_conference_api.php, cron_vapi_phone_validation.php, cron_twilio_vapi_fallback_dial_repair.php, vapi_fallback_worker.php
-═══════════════════════════════════════════════════════════
-</result>
+- Ticket: Vicky's report - "AI answered it even though I clicked AI OFF"
+- Ideas filed: #21313, #21314, #21315, #21316
+- Files touched: /var/www/emtskills/routes/telephony_hub.php (verified), /var/www/emtskills/api/telephony/twiml_inbound.php (verified line 45), /var/www/emtskills/cron/cron_twilio_vapi_fallback_dial_repair.php (verified FIX-2026-07-28)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
 
@@ -378,50 +605,6 @@ How fast are you today?
 **Ideas referenced:** #12459, #1967, #2014
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785298633210` — 7/28/2026, 10:46:51 PM PT — 40 turns
-
-**Original task:**
-
-```
-#Scope Oct GLM Build  
-
-Read Ideal GLM Build on desktop and let me know your thoughts on whether repurposing Julia and claudia TP=2 into the current GLM Hex would be better than having 2 separate systems
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16578, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #1766 [investigating], #1779, #17825 [blocked], #17826 [blocked], #17831 [blocked], #17833 [blocked], #17834 [proposed], #17844 [proposed], #17845 [proposed], #1798, #1828, #18448, #1896, #19239 [rejected], #19567, #1986, #1988 [blocked], #19886 [proposed], #1989 [blocked], #1991, #2014, #2063, #2065, #2073, #2084, #2085, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-ardware, zero ring disruption.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task: Restore Julia+Claudia TP=2 gpt-oss-120b cluster (see idea #19886 [proposed])
-
-Where we left off (verified 2026-07-28 22:39 PT):
-- Idea #19886 [proposed] filed for Julia+Claudia 120B TP=2 restoration
-- Julia (spark-6ae6, WG 10.100.0.15, SSH tunnel :2205) HEALTHY+IDLE, 0% GPU, reclaimable
-- Claudia (spark-6d51, WG 10.100.0.16, SSH tunnel :2206) HEALTHY+IDLE, 0% GPU, reclaimable
-- 46.3% Cline traffic spilling to paid cloud with no active 120B cluster
-- emsu_distill LoRA weights present on Julia at ~/models/emsu_distill_lora
-- Unified worker scripts from 2026-07-15 restore are on WOPR /tmp/
-- GLM Hex PP=6 ring on Cato+Augustus+Pompey+Marcus+Tiberius+Cesar. DO NOT TOUCH (rule 157, ideal build section 9)
-
-Open threads to drive next:
-1. #19886 [proposed]: SSH into Julia (:2205) and Claudia (:2206), verify Ray/docker state, launch gpt-oss-120b TP=2 cluster with emsu_distill LoRA, register in frankenstein_registry.yaml as julia-120b, verify serving, re-enable routing for 120B traffic
-
-Reference IDs:
-- Idea filed: #19886 [proposed]
-- Files touched: IDEAL_GLM52_HEX_BUILD.md, GLM52_HEX_SSH_ACCESS.md, GLM52_6NODE_HYBRID_APPROACH_ANALYSIS.md, GLM52_PICKUP.md, GLM52_IDEAL_BUILD_ANSWER_2026-07-28.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
 
 ### `1785302302290` — 7/28/2026, 10:44:22 PM PT — 34 turns
 
@@ -4690,116 +4873,3 @@ tell me how many turns of glm5.2 local have occurren int he last 10 minutes?
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785045454032` — 7/25/2026, 11:06:45 PM PT — 14 turns
-
-**Original task:**
-
-```
-Can you do a benchmark on GLM 5.2 in the last 5 min
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326
-
-**Last PICKUP PROMPT:**
-
-```
-attempt_completion>
-<result>
-══════════════════════════════════════════════════
-PICKUP PROMPT — Pick up task: GLM 5.2 benchmark (last 5 min)
-══════════════════════════════════════════════════
-
-Where we left off
-──────────────────
-Completed the GLM 5.2 benchmark across three data sources:
-1. Host probe (glm52-ring :8210) — 1.66 tok/s, decode_live=true, slow_by_design=true
-2. Routing audit log (frankenstein_what_served, 5 min window) — 8 turns local + 3 turns cloud
-3. Registry (frankenstein_registry) — both L4g (local) and L3 (cloud) entries present and correct
-
-Benchmark results
-─────────────────
-- GLM‑5.2‑LOCAL: 1.66 tok/s, below 2.5 speed gate, excluded from fast‑120B tier. 8 turns (0.04% of 217). Healthy, decode_live=true, free.
-- GLM‑5.2‑CLOUD: 3 turns, Tier L3, paid‑but‑cheap (≈0 USD in window). No errors.
-- Total GLM traffic: 11 turns out of 217 (5.1%). Rest is emsu-codegen (155), frankenstein-tools (27), deepseek (14).
-
-Open threads
-────────────
-- None. One-shot benchmarking task — all probes returned clean data.
-
-Reference IDs
-─────────────
-- Host: glm52-ring (127.0.0.1:8210)
-- Registry: /etc/litellm/frankenstein_registry.yaml
-- Tiers: L4g (local), L3 (cloud)
-- Benchmark window: 2026-07-25T22:52–22:57 PT
-</result>
-<task_progress>
-- [x] Benchmark GLM 5.2 — get live host probe data (tok/s, decode liveness)
-- [x] Check recent GLM-5.2 routing via frankenstein_what_served
-- [x] Verify GLM-5.2 registry/ring config per Rule 273
-- [x] Compile and present benchmark summary
-</task_progress>
-</attempt_completion>
-```
-
-### `1785045456484` — 7/25/2026, 11:03:53 PM PT — 46 turns
-
-**Original task:**
-
-```
-Can you do a benchmark on GLM 5.2 in the last 5 min
-```
-
-**Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12459, #12477, #13084, #13202, #152615, #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1935, #1936, #1942, #1944, #1948, #1949, #1952, #1955, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #389249, #7223
-
-**Last PICKUP PROMPT:**
-
-```
-=6 MoE ring under active load.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785012025445 — GLM 5.2 benchmark (last 5 min).
-
-Where we left off (verified 2026-07-25 23:02 PT):
-- GLM 5.2 ring UP, $0, decode_live=true, ~1.7-2.0 tok/s single-stream (4 converging probes: host_probe 1.66, adapter_canary 2.0, tier_health 6.8s TTFB, last_gen 4.8s)
-- 12 production turns in last 5 min (9 glm52-only + 3 glm-5.2), all explicit_L4 pinned, 5.4% of fleet traffic
-- Saturation test: 64-token probe timed out at 120s under 6 concurrent conns (full PP=6 ring) — single-stream latency collapses under concurrency, but aggregate throughput scales 57x (task #1785012025445 ledger: c=64 = 48.78 tok/s)
-- slow_by_design=true, quarantined=false — no action needed
-
-Open threads to drive next:
-None — benchmark complete, ring behaving as expected for a slow_by_design PP=6 MoE target under active load. (human-only decision — no idea: whether to add ring capacity / rebalance traffic / pursue TP reshape per #19230 is Ruben's call)
-
-Reference IDs:
-- Ideas filed: None this session
-- Ideas closed: None this session
-- Active task: #1785012025445 (GLM-5.2 ring, ongoing — ledger lines 192-279)
-- Files touched: /tmp/glm_bench.sh, /tmp/glm_bench_result.txt (server temp, safe to delete)
-- Temp process killed: PID 3369415 (competing 256-token probe, killed to free ring capacity)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785045300511` — 7/25/2026, 10:56:23 PM PT — 9 turns
-
-**Original task:**
-
-```
-Can you do a benchmark on GLM 5.2 in the last 5 min
-```
-
-**Ideas referenced:** #12459
-
-**Last PICKUP PROMPT:**
-
-```
-no queue, decode_live=true.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT\n═══════════════════════════════════════════════\n\n## Task\nBenchmarked GLM 5.2 at ~22:55 PDT 2026-07-25.\n\n## Key State\n- glm52-ring alive, decode_live=true, 1.25 tok/s (8-token probe), ~2.5 tok/s sustained estimate\n- 40 turns served in last hour across glm-5.2/glm-5.2-local/glm52-only\n- slow_by_design=true (PP=6 Hexarchy ring — expected)\n- 200-token MCP benchmark timed out (model too slow for curl-via-MCP timeout)\n\n## Open Threads\nNone — benchmark complete.\n\n## Reference IDs\nNone filed — observation-only task."
-}
-</arguments>
-</use_mcp_tool>
-```

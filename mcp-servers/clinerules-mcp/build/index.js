@@ -799,25 +799,100 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
                 `Every #NNNN needs one of [deployed|executing|queued|blocked|proposed|rejected|superseded].`);
         }
     }
+    // ── EXISTENCE + IDENTITY GATE (2026-07-28, source incident below) ───────
+    // A Cline window shipped a pickup prompt citing #19898-#19904 as ideas it
+    // had "filed". It had filed NOTHING. It invented seven plausible sequential
+    // integers and tagged each [proposed]. This validator returned ALL PASSED,
+    // because every gate above is a SYNTAX check: "is each #NNNN followed by a
+    // valid [disposition] bracket". A fabricated number with a correct-looking
+    // tag is indistinguishable from a real one to a regex.
+    //
+    // Worse, when the fabricated ids were finally checked against the DB, ALL
+    // SEVEN EXISTED, pointing at unrelated work (an Argus browser extension, an
+    // email-routing backlog, an Artemis context-length mismatch). So a bare
+    // exists/not-exists check would ALSO have passed. In a live orchestrator the
+    // id space is dense, and any plausible integer an agent invents probably
+    // resolves to SOMETHING.
+    //
+    // Therefore this gate does two things:
+    //   1. HARD FAIL on any cited id that does not exist.
+    //   2. ECHO THE REAL TITLE of every cited id back to the agent, so a
+    //      fabricated-but-existing id is visually impossible to miss. The agent
+    //      cannot claim "#19899 [proposed] Add Klarna to SLS oracle" when the
+    //      validator prints back "#19899 = Argus extension: Add keyboard shortcut".
+    //
+    // Read-only, 8s bounded, fails OPEN on network error so a WOPR outage never
+    // blocks a legitimate completion.
+    let identityEcho = "";
+    {
+        const citedIds = [];
+        const cRe = /#(\d{4,8})\b/g;
+        let cm;
+        while ((cm = cRe.exec(result_text)) !== null) {
+            if (!citedIds.includes(cm[1]))
+                citedIds.push(cm[1]);
+        }
+        if (citedIds.length > 0) {
+            try {
+                const ctrl = new AbortController();
+                const timer = setTimeout(() => ctrl.abort(), 8000);
+                const resp = await fetch("https://www.emsuniversity.com/emtskills/api/orchestrator/idea_exists.php?ids=" +
+                    encodeURIComponent(citedIds.join(",")), { signal: ctrl.signal });
+                clearTimeout(timer);
+                const data = await resp.json();
+                if (data && data.ok && data.ideas) {
+                    const missing = Array.isArray(data.missing)
+                        ? data.missing.map((x) => String(x))
+                        : [];
+                    if (missing.length > 0) {
+                        failures.push(`FABRICATED_IDEA_ID: ${missing.length} cited idea number(s) DO NOT EXIST in orchestrator_ideas: ` +
+                            `${missing.map((i) => "#" + i).join(", ")}. ` +
+                            `You cited an idea you never filed. Call create_idea to get real integer IDs, then re-validate.`);
+                    }
+                    const lines = [];
+                    for (const id of citedIds) {
+                        const rec = data.ideas[id];
+                        if (rec && rec.exists) {
+                            lines.push(`  #${id} [${rec.status}] ${String(rec.title).slice(0, 88)}`);
+                        }
+                        else {
+                            lines.push(`  #${id} *** DOES NOT EXIST ***`);
+                        }
+                    }
+                    identityEcho =
+                        "\n\nIDENTITY ECHO (confirm each title matches what your result claims):\n" +
+                            lines.join("\n") +
+                            "\nIf ANY title above is unrelated to what you wrote next to that number, " +
+                            "you cited the wrong idea. Fix it before shipping.";
+                }
+            }
+            catch {
+                identityEcho =
+                    "\n\nIDENTITY ECHO: SKIPPED (idea_exists.php unreachable). " +
+                        "Existence of cited idea numbers is UNVERIFIED this run. " +
+                        "Confirm manually that every #NNNN you cited was actually created by a create_idea call in this session.";
+            }
+        }
+    }
     const pass = failures.length === 0;
     // Log validation
     try {
         db.prepare("INSERT INTO violations (rule_id, task_id, evidence) VALUES (?,?,?)")
-            .run("91", task_id || "unknown", pass ? "VALIDATION_PASS: all multi-rule gates passed (R91+R29+R120+R01+R02)" : "VALIDATION_FAIL: " + failures.join("; "));
+            .run("91", task_id || "unknown", pass ? "VALIDATION_PASS: all multi-rule gates passed (R91+R29+R120+R01+R02+IDENTITY)" : "VALIDATION_FAIL: " + failures.join("; "));
     }
     catch { /* telemetry */ }
     if (pass) {
         return {
             content: [{
                     type: "text",
-                    text: "\u2705 RULE 91 GATES: ALL PASSED\n\nDivider: 47 U+2550 chars \u2713\nPickup prompt present \u2713\nNo placeholders \u2713\nNo pickup-by-reference \u2713\nNo wait-state phrases \u2713\n\nSafe to call attempt_completion.",
+                    text: "\u2705 RULE 91 GATES: ALL PASSED\n\nDivider: 47 U+2550 chars \u2713\nPickup prompt present \u2713\nNo placeholders \u2713\nNo pickup-by-reference \u2713\nNo wait-state phrases \u2713\nCited idea IDs exist \u2713" + identityEcho + "\n\nSafe to call attempt_completion.",
                 }],
         };
     }
     return {
         content: [{
                 type: "text",
-                text: `\u274c RULE 91 GATES: ${failures.length} FAILURE(S)\n\n${failures.map((f, i) => `${i + 1}. ${f}`).join("\n")}\n\nFix these before calling attempt_completion. The completion is blocked until all gates pass.`,
+                text: `\u274c RULE 91 GATES: ${failures.length} FAILURE(S)\n\n${failures.map((f, i) => `${i + 1}. ${f}`).join("\n")}${identityEcho}\n\nFix these before calling attempt_completion. The completion is blocked until all gates pass.`,
             }],
     };
 });

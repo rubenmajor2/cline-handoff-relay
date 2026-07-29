@@ -40,6 +40,7 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 | Ban | Why |
 |-----|-----|
 | **NO fake IDs** (`IDEA-001`) | Must be real `create_idea` integer |
+| **NO unfiled-but-plausible IDs** | Every `#NNNN` you cite as filed must have come back from a `create_idea` call **in THIS session**. Inventing a plausible sequential integer is the worst violation shape: the id space is dense, so a made-up number usually resolves to a REAL but UNRELATED idea, and every syntax gate passes. If you did not see the id in a `create_idea` return this session, you do not have it (2026-07-28: agent invented #19898-#19904, all seven existed, all seven were Argus/email/Artemis work, validator said ALL PASSED) |
 | **NO bare `#NNNN`** | Every idea number gets `[deployed|executing|queued|blocked|proposed|rejected|superseded]` |
 | **NO unfiled open threads** | Every open-thread item MUST cite a real filed idea `#NNNN [tag]`, OR be explicitly marked `(human-only decision — no idea)`. A thread with no idea number is undone work: file it via `create_idea` BEFORE shipping (2026-07-15 violation: 5 open threads shipped with zero filed ideas — the bare-number scan passed trivially because no numbers existed) |
 | **NO tag-without-number** | A `[tag]` written next to an open-thread item with NO `#NNNN` beside it is FAKE PROVENANCE — worse than a bare number, because it implies a filed idea that does not exist (2026-07-22 violation #14: 4 open threads shipped `[proposed]` with zero `create_idea` calls; agent pattern-matched "I have tags" instead of "I have filed IDs"). Mechanical test per item: "what integer idea ID backs this tag?" None → `create_idea` first, or mark `(human-only decision — no idea)` |
@@ -57,6 +58,7 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 4. Any `IDEA-001`, `#0000`, `<real_idea_number>`? → FAIL
 5. Open-threads section present? Reference IDs present?
 6. Does EVERY open-thread item have a filed idea `#NNNN [tag]` or `(human-only decision — no idea)` marker? If any item has neither → STOP, call `create_idea` first
+7. **Provenance check — for EACH `#NNNN`, name the tool call it came from.** A `create_idea` return this session, a reconcile call, or the task prompt. If you cannot point at one, the number is fabricated. Run `clinerules_validate_completion` and READ THE IDENTITY ECHO: it prints the real DB title of every id you cited. If a printed title does not match what you wrote beside that number, you cited the wrong idea.
 
 
 ## Orders of magnitude

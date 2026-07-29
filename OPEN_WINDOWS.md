@@ -6,12 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/29/2026, 1:41:18 PM PT | window: last 72h | 138 tasks | index total 314 (parsed 4, cached 310)
+Generated: 7/29/2026, 2:41:39 PM PT | window: last 72h | 140 tasks | index total 318 (parsed 4, cached 314)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785356710391` | 7/29/2026, 1:41:11 PM | 85 | 728KB | Yet again, we have ZERO payments on our webformes today for EMT. That's likely another err |
-| `1785355259217` | 7/29/2026, 1:41:07 PM | 201 | 466KB | i ahve been told this form is not populating PDF forms properly downstream. Can you check  |
+| `1785358209522` | 7/29/2026, 2:41:36 PM | 245 | 3541KB | Broke the GLM-5.2 ring deadlock. The blocker that killed every prior attempt is fixed and  |
+| `1785355259217` | 7/29/2026, 2:41:18 PM | 435 | 863KB | i ahve been told this form is not populating PDF forms properly downstream. Can you check  |
+| `1785359143504` | 7/29/2026, 2:41:16 PM | 147 | 1514KB | #Argus  |
+| `1785360672171` | 7/29/2026, 2:40:44 PM | 46 | 104KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
+| `1785356710391` | 7/29/2026, 2:08:45 PM | 134 | 1119KB | Yet again, we have ZERO payments on our webformes today for EMT. That's likely another err |
+| `1785357723624` | 7/29/2026, 1:42:03 PM | 1 | 12KB | Broke the GLM-5.2 ring deadlock. The blocker that killed every prior attempt is fixed and  |
 | `1785356305049` | 7/29/2026, 1:41:00 PM | 116 | 374KB | #GLM |
 | `1785314663557` | 7/29/2026, 1:14:52 PM | 1311 | 15798KB | I had a working build of GLM 52 local at 10 PM tonight. A series of changes have now made  |
 | `1785347179098` | 7/29/2026, 12:59:10 PM | 62 | 336KB | How many turns of each individual LLM,, not groups, but what's inside of each group in the |
@@ -146,26 +150,28 @@ Generated: 7/29/2026, 1:41:18 PM PT | window: last 72h | 138 tasks | index total
 | `1785020279496` | 7/26/2026, 5:23:14 PM | 157 | 545KB | #OPUS Context |
 | `1785013320906` | 7/26/2026, 5:19:44 PM | 601 | 4375KB | Executor has not been broken for 15 days. It has been working other things in 15 days. I'v |
 | `1785051395290` | 7/26/2026, 5:17:38 PM | 1104 | 1886KB | #GLM |
-| `1785098597876` | 7/26/2026, 1:49:56 PM | 56 | 167KB | do an RCA on this - see MCP troubleshooting document on descktop and resolve these:  |
-| `1785098066129` | 7/26/2026, 1:42:45 PM | 70 | 214KB | why does the email  subject say "Deadman" sent to a student?  |
 
 ---
 
 ## Per-window detail
 
-### `1785356710391` — 7/29/2026, 1:41:11 PM PT — 85 turns
+### `1785358209522` — 7/29/2026, 2:41:36 PM PT — 245 turns
 
 **Original task:**
 
 ```
-Yet again, we have ZERO payments on our webformes today for EMT. That's likely another error
+Broke the GLM-5.2 ring deadlock. The blocker that killed every prior attempt is fixed and verified: all 6 ranks now boot with zmq_errors=0, each binding its OWN IP.
+
+## What was actually wrong (two causes, both now addressed)
+
+CAUSE 1, why each boot died in seconds: the docker image bakes VLLM_HOST_IP=192.168.1.115 (Cato/rank0). Every peer inherited it and tried to bind ZMQ to an address it does not own. Fixed by deriving LOCAL_IP from enP7s7 per box and passing -e VLLM_HOST_IP as a docker run override. Verified live at 13:27:51 PT: every rank reports its own IP, zmq_errors=0 on all six. This 
 ```
 
-**Ideas referenced:** #18868, #1910, #19887, #19903, #19907, #19910, #19918, #19925, #19927, #19928, #2098, #5387, #6824
+**Ideas referenced:** #11944, #12459, #12673, #13108, #13964, #1754, #1755, #178501, #178518, #178528, #178531, #1880 [deployed], #19186, #19230 [queued], #19448 [queued], #19458 [rejected], #19490, #19491 [deployed], #1967 [superseded], #19704, #1980, #19879, #19881, #19882, #19883, #19903, #19907, #1993 [superseded], #19957 [proposed], #19958 [proposed], #19962 [proposed], #20004 [proposed], #20005 [proposed], #20008 [proposed], #20014 [proposed], #20022 [rejected], #2101, #48031, #48140
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785355259217` — 7/29/2026, 1:41:07 PM PT — 201 turns
+### `1785355259217` — 7/29/2026, 2:41:18 PM PT — 435 turns
 
 **Original task:**
 
@@ -173,7 +179,154 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 i ahve been told this form is not populating PDF forms properly downstream. Can you check on this? -> https://emsuniversity.com/emtskills/skillstastic/
 ```
 
-**Ideas referenced:** #18868, #1910, #19615, #19887, #19903, #19907, #19910, #19918, #19925, #19927, #19928, #2098, #2835
+**Ideas referenced:** #000000, #18868, #18944, #18951, #1910, #19615, #19887, #19903, #19907, #19910, #19918, #19925, #19927, #19928, #20015, #20021, #200475, #2098, #2835
+
+**Last PICKUP PROMPT:**
+
+```
+fill all ~30+ missing students
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #2004751237 — Form 2835 pipeline fix + backfill
+
+Where we left off (verified 2026-07-29 14:22 PT):
+- Jerome Fermin fixed: PDF generated+uploaded+ce_student inserted. Still needs email sent.
+- RCA complete: form 2835 NEVER built into any pipeline version (confirmed across all 8 backups)
+- ~30+ other CE students from 2026 need same treatment
+- Pipeline fix needed in emsu-skill-pdf-automation.php SKILL_FORMS and handler
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #20021 — Build full pipeline for form 2835 (and 2857): add to SKILL_FORMS, create handler that inserts ce_students + queues infrastructure job + emails student
+2. #20021 — Send Jerome his PDF link via email (jeromefermin60@gmail.com) 
+3. #20021 — Run backfill script to generate PDFs for all ~30+ remaining missing CE students from form 2835 entries
+
+Reference IDs:
+- Ticket: (none filed yet)
+- Ideas filed: #20015, #20021
+- Files touched: emsu-skill-pdf-automation.php, ce_students/, skill_pdf_upload.php, process_pdf_queue.php
+- Drive ID for Jerome: 1nW7AUqK9J9OG4OpnEwT-Ohbg8hDao2NW
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785359143504` — 7/29/2026, 2:41:16 PM PT — 147 turns
+
+**Original task:**
+
+```
+#Argus 
+
+Staff made numerous requests in Argus over the last 12 hours, including me: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser 
+
+I need those all to be catalogued, permissions updated according to rule 29 as well as actions carried out that argus refused and give that terminal additional capabilities for those actions - as well as the increased role permissions . If you think something is borderline or should not be approved accrsing to rul 29, let me know and we can discuss it.
+```
+
+**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128275, #16213, #16263, #17537, #17619 [deployed], #18378, #18579, #18745, #18770, #18777 [pending], #18806, #18935, #18939, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #18977, #19098 [pending], #19099 [pending], #19348, #19415, #19416, #19478, #19479, #19487, #19624 [pending], #19641 [pending], #19731 [pending], #19776, #19784, #19871, #19922, #19970 [pending], #19971 [pending], #19975 [pending], #19978, #19995 [pending], #20023, #20024, #20025, #20026, #20027, #20028, #20029, #20030, #20031, #2006, #21262, #22501, #22502, #25227, #274160, #2989, #30363, #334155, #4338, #64748, #695708, #69707, #697523, #699463, #699474, #8942, #9654, #9660, #9889
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785360672171` — 7/29/2026, 2:40:44 PM PT — 46 turns
+
+**Original task:**
+
+```
+For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? 
+
+Also how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?
+```
+
+**Ideas referenced:** #20032 [proposed], #20033 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+lt>
+═══════════════════════════════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════════════════════════════
+Pick up task #current — Telephony health analysis + caller prioritization + Jalen Lynch investigation.
+
+Where we left off (verified 2026-07-29 14:40 PT):
+- Full telephony health check run — 200-400 calls/day, VAPI handles 99%, only ~6 human pickups in 4h window
+- 14-day call volume trend extracted (7/28: 206 calls, avg 125s dur, success 5.5/10)
+- Jalen Lynch call traced — NOT in voice_call_log at all (conference bridge silent failure)
+- Pre-call prospect routing not implemented (classification works post-call only)
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #20032 [proposed] — Pre-call prospect vs student routing in Twilio inbound path. Ready to implement. Add caller-number lookup against Students.phone/caller_reputation in twiml_inbound.php BEFORE routing to conference.
+2. #20033 [proposed] — Investigate VAPI conference bridge silent-failure mode. Jalen Lynch evidence: 10 min hold, no answer, no voice_call_log row. Add monitoring for conference active >15s with no VAPI join.
+
+Reference IDs:
+- Idea filed: #20032 [proposed], #20033 [proposed]
+- Files touched: none (read-only investigation via voice_call_log SSH + telephony MCP tools)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785356710391` — 7/29/2026, 2:08:45 PM PT — 134 turns
+
+**Original task:**
+
+```
+Yet again, we have ZERO payments on our webformes today for EMT. That's likely another error
+```
+
+**Ideas referenced:** #16287 [deployed], #18868, #1910, #19887, #19903, #19907, #19910, #19918, #19925, #19927, #19928, #20016 [deployed], #20017 [queued], #20018 [queued], #20019 [queued], #2098, #5387, #6824
+
+**Last PICKUP PROMPT:**
+
+```
+═══════════════════════════════════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════════════════════════════════════
+Pick up task — EMT payment pipeline root cause found: 2-layer break
+
+Where we left off (verified 2026-07-29 13:50 PT):
+- 5 WPForms QuickBooks payments today across EMT sites (processed, money captured)
+- 6 real Students created with wpforms_entry_id linked but `payment_method: NULL`
+- ZERO QB_invoices created → ZERO Class_Enrollments → ZERO pipeline progress
+- Cron enrollment_reconciler.php FATAL on `i.course_id` column (doesn't exist) — qb_invoices has `class_section` [idea #20016 deployed]
+- Root cause: the WPForms→QuickBooks path captures payment in WPForms table but never creates a QB_invoice record, so the reconciler (which joins qb_invoices) has nothing to reconcile
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #20016 [deployed] — Fix cron_enrollment_reconciler.php: change `i.course_id` → `i.class_section` on lines 117 and 125. This cron has been FATALing every 10min, blocking all enrollment auto-reconciliation.
+2. #20017 [queued] — Build QB_invoice creation bridge: Students created via WPForms QuickBooks payments never get QB_invoices + Class_Enrollments. Need a bridge that fires when a QuickBooks payment is processed in WPForms.
+3. #20018 [queued] — Replay today's 6 orphan Students: create invoices + enrollments for Veranika Kaiser (26522FT-07), Jonas Monteon (26822FT), Roy Lowe (26223BC-09), Elijah Rubidoux (26524T), Aaron Williams (26822FT), Michelle Kramer (26723BC)
+4. #20019 [queued] — SLS wpforms_reconciliation cron: add QB_invoice existence check to the gate so this silently-orphaned-payment pattern gets caught immediately
+
+Reference IDs:
+- Ideas filed: #20016, #20017, #20018, #20019
+- Files touched: /var/www/emtskills/cron/cron_enrollment_reconciler.php (line 117/125 course_id bug)
+- Students affected: 8196152, 8196145, 8196144, 8196136, 8196123, 8196153
+- Sites with payments today: arizonaemt (1), californiaemt (1), sanantonioemt (2)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785357723624` — 7/29/2026, 1:42:03 PM PT — 1 turns
+
+**Original task:**
+
+```
+Broke the GLM-5.2 ring deadlock. The blocker that killed every prior attempt is fixed and verified: all 6 ranks now boot with zmq_errors=0, each binding its OWN IP.
+
+## What was actually wrong (two causes, both now addressed)
+
+CAUSE 1, why each boot died in seconds: the docker image bakes VLLM_HOST_IP=192.168.1.115 (Cato/rank0). Every peer inherited it and tried to bind ZMQ to an address it does not own. Fixed by deriving LOCAL_IP from enP7s7 per box and passing -e VLLM_HOST_IP as a docker run override. Verified live at 13:27:51 PT: every rank reports its own IP, zmq_errors=0 on all six. This 
+```
+
+**Ideas referenced:** #178531, #1880 [deployed], #1967 [superseded], #1993 [superseded], #19957 [proposed], #19958 [proposed], #19962 [proposed], #20004 [proposed], #20005 [proposed], #20008 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -5084,108 +5237,3 @@ PICKUP PROMPT (paste into a fresh Cline window)
 **Ideas referenced:** #10739, #11397, #11936, #11953, #12251, #12335, #12363, #12364, #12365, #12407, #12657, #12689, #13108, #15783, #16120, #16265, #16648, #1754, #1755, #178501, #18438 [proposed], #18471, #18579 [proposed], #18939 [proposed], #19135, #19184 [rejected], #19185 [rejected], #19190 [rejected], #19192 [rejected], #19193 [rejected], #19198 [rejected], #19202 [rejected], #19218 [rejected], #19227 [approved], #19230 [executing], #19234 [approved], #19239 [rejected], #19257 [rejected], #19258 [executing], #19259 [executing], #19260 [executing], #19261 [approved], #19266 [proposed], #19267 [approved], #19273 [executing], #19274 [executing], #19288 [executing], #19321 [proposed], #19325 [executing], #19338 [proposed], #19348 [proposed], #19364 [proposed], #19370 [executing], #19371 [proposed], #19372 [proposed], #19379 [executing], #19385 [executing], #1967, #1985, #1986, #1987, #1988, #1989, #1990, #1991, #1992, #1993, #1994, #1995, #1996, #1997, #1998, #2000, #2001, #2002, #2003, #2004, #2005, #2006, #2007, #2009, #30363, #3587, #4958
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785098597876` — 7/26/2026, 1:49:56 PM PT — 56 turns
-
-**Original task:**
-
-```
-do an RCA on this - see MCP troubleshooting document on descktop and resolve these: 
-
-Error: MCP error -32602: Tool get_rule91_template not found
-```
-
-**Ideas referenced:** #0000, #1593, #1767, #1770, #17846, #18600, #1895, #19173, #19373 [proposed], #2008 [open], #9731
-
-**Last PICKUP PROMPT:**
-
-```
-Bug library: #2008 [open]
-
----
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #2 - RCA on get_rule91_template -32602 MCP error.
-
-Where we left off (verified 2026-07-26 1:49 PT):
-- All 5 fixes applied: Rule 91 (dangling ref removed), Rule 291 (hallucinated tools map updated), MCP_Troubleshooting.md S7 (clinerules section added), bug library #2008 recorded, clinerules MCP reindexed
-- Verified: clinerules_lookup(91) now shows corrected text with no get_rule91_template reference
-- HANDOFF_NOTES.md updated with RCA summary
-
-Open threads to drive next:
-None - task complete. If the original external agent that invoked get_rule91_template is still stuck, it needs a new Cline window (the old one with stale tool state).
-
-Reference IDs:
-- Ideas filed: #19373 [proposed]
-- Bug library: #2008 [open]
-- Files touched: ~/Documents/Cline/Rules/91-every-completion-needs-pickup-prompt.md, ~/Documents/Cline/Rules-archive/291-mcp-tool-call-validation.md, ~/Desktop/MCP_Troubleshooting.md
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Found MCP Troubleshooting document on Desktop
-- [x] Read MCP Troubleshooting doc
-- [x] Checked bug library - NOVEL_SYMPTOM
-- [x] Confirmed: get_rule91_template does not exist - hallucinated tool
-- [x] Read Rule 291 for hallucinated tool map
-- [x] Verified clinerules MCP tool list - get_rule91_template not present
-- [x] Filed idea #19373
-- [x] Fix 1: Remove dangling reference from Rule 91
-- [x] Fix 2: Add get_rule91_template to MCP_Troubleshooting.md S7
-- [x] Fix 3: Add get_rule91_template to Rule 291 hallucinated tools map
-- [x] Fix 4: Record in bug library as #2008
-- [x] Fix 5: Reindex clinerules MCP
-- [x] Verify Rule 91 fix indexed properly
-- [x] Update handoff notes
-- [x] Pass clinerules_validate_completion gate
-- [x] Complete RCA and wrap up
-</task_progress>
-</attempt_completion>
-```
-
-### `1785098066129` — 7/26/2026, 1:42:45 PM PT — 70 turns
-
-**Original task:**
-
-```
-why does the email  subject say "Deadman" sent to a student? 
-
-DEADMAN escalation: Require externship_agent to state Chanel Jibro's actual current CPR status and cite the specific compliance rule governing her block before the room votes on removing STU-20260720-7C0536.
-```
-
-**Ideas referenced:** #0000, #13047, #18438 [proposed], #18579 [proposed], #18939 [proposed], #18977, #19081, #19166, #19167, #19168, #19169, #19170 [executing], #19173, #19372 [proposed], #1973, #1975, #1976, #21261, #21325, #4929, #9086, #9168, #9339
-
-**Last PICKUP PROMPT:**
-
-```
-overy, WPForms class-date fix.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task: Triage Vicky's urgent ticket follow-ups (TKT-21325 Matrix, TKT-21261 Exam Access).
-
-Where we left off (verified 2026-07-26 13:40 PT):
-- TKT-21325: Keerthana (Matrix) needs PD manual provisioning -- idea #19372 [proposed]
-- TKT-21261: Sam Nelson (Exam Access) -- Ruben said he's fixing it, Midterm cmid 4190 is root blocker
-- DIS-1780889403-10533: Aditya/Joanna -- Vicky investigating per Ruben's request
-- Ruben notified via ops chat, internal comments added to both tickets
-
-Open threads to drive next:
-1. #19372 [proposed] -- Push Keerthana Matrix provisioning to PD; if unresolved in 24h escalate
-2. #18939 [proposed] -- P1 bug: Time Clock button on reports page links to old URL
-3. #18438 [proposed] -- P1 bug: Proctoring scheduler false conflict blocks Zoom creation
-4. #18579 [proposed] -- P1 bug: AI voice/email agent broadcasting wrong attendance mode for DFW
-
-Reference IDs:
-- Ticket: TKT-21325, TKT-21261
-- Ideas filed: #19372
-- Files touched: none (investigation only)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```

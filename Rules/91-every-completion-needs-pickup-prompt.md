@@ -10,6 +10,17 @@ Copy the 47-char U+2550 divider from the template block below — do NOT retype 
 
 **Then verify before shipping: call `clinerules_validate_completion`** with BOTH `result_text` and `task_prompt`. Passing `task_prompt` turns on the coverage gate: every `#NNNN` enumerated in the original task must appear in the result, or the gate names the missing ids.
 
+## The gate is STRUCTURAL now. A FAILURE writes a file.
+
+`clinerules_validate_completion` used to be advisory: it printed failures and did nothing, so agents read `BARE_IDEA_NUMBERS` and called `attempt_completion` anyway. As of 2026-07-30 (#20251) a FAILURE **writes a gate file**; a PASS **deletes it**.
+
+Two-call sequence, every completion, no exceptions:
+
+1. `clinerules_validate_completion(result_text, task_prompt, task_id)` - fix every failure it names, then call it again. Repeat until ALL PASSED.
+2. `clinerules_check_gate(task_id)` - must return `GATE CLEAR`.
+
+**If `clinerules_check_gate` returns `GATE BLOCKED`, calling `attempt_completion` is a hardfloor violation.** The block names the exact failures. Fix them, re-validate, re-check. Never ship past a blocked gate.
+
 ## Template (copy divider — do NOT retype)
 
 ```

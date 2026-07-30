@@ -881,6 +881,31 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
             .run("91", task_id || "unknown", pass ? "VALIDATION_PASS: all multi-rule gates passed (R91+R29+R120+R01+R02+IDENTITY)" : "VALIDATION_FAIL: " + failures.join("; "));
     }
     catch { /* telemetry */ }
+    // ── STRUCTURAL GATE (idea #20251) ──
+    // Before this patch the validator was purely ADVISORY: it returned a failure
+    // report and did nothing else, so agents read the failures and called
+    // attempt_completion anyway. Now a FAILURE writes a gate file that
+    // clinerules_check_gate reads, giving the gate a real side effect.
+    const gateFile = path.join(os.tmpdir(), task_id
+        ? "clinerules_completion_gate_BLOCKED_" + task_id
+        : "clinerules_completion_gate_BLOCKED");
+    try {
+        if (pass) {
+            if (fs.existsSync(gateFile)) fs.unlinkSync(gateFile);
+        }
+        else {
+            fs.writeFileSync(gateFile, JSON.stringify({
+                blocked: true,
+                task_id: task_id || "unknown",
+                failures: failures,
+                timestamp: new Date().toISOString(),
+                message: "attempt_completion is BLOCKED. Fix the failures, re-run clinerules_validate_completion, then clinerules_check_gate."
+            }, null, 2));
+        }
+    }
+    catch (e) {
+        if (!pass) failures.push("GATE_FILE_WRITE_FAILED: " + e.message);
+    }
     if (pass) {
         return {
             content: [{
@@ -895,6 +920,41 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
                 text: `\u274c RULE 91 GATES: ${failures.length} FAILURE(S)\n\n${failures.map((f, i) => `${i + 1}. ${f}`).join("\n")}${identityEcho}\n\nFix these before calling attempt_completion. The completion is blocked until all gates pass.`,
             }],
     };
+});
+server.tool("clinerules_check_gate", "PRE-COMPLETION GATE CHECK (idea #20251): reports whether a validation gate file is blocking attempt_completion. Call this AFTER clinerules_validate_completion and BEFORE attempt_completion. BLOCKED means you must fix the listed failures and re-validate. CLEAR means it is safe to ship.", {
+    task_id: zod_1.z.string().describe("The Cline task ID whose gate file should be checked."),
+}, async ({ task_id }) => {
+    const gateFile = path.join(os.tmpdir(), task_id
+        ? "clinerules_completion_gate_BLOCKED_" + task_id
+        : "clinerules_completion_gate_BLOCKED");
+    try {
+        if (fs.existsSync(gateFile)) {
+            const data = JSON.parse(fs.readFileSync(gateFile, "utf-8"));
+            return {
+                content: [{
+                    type: "text",
+                    text: "\u274c RULE 91 GATE BLOCKED\n\nGate file: " + gateFile
+                        + "\nTask ID: " + data.task_id
+                        + "\nFailures: " + (data.failures || []).join("; ")
+                        + "\n\nattempt_completion is BLOCKED. Fix the failures above, call clinerules_validate_completion again, then re-run this check. Do NOT call attempt_completion while this gate is blocked.",
+                }],
+            };
+        }
+        return {
+            content: [{
+                type: "text",
+                text: "\u2705 RULE 91 GATE CLEAR\n\nNo gate file at " + gateFile + ". Safe to call attempt_completion.",
+            }],
+        };
+    }
+    catch (e) {
+        return {
+            content: [{
+                type: "text",
+                text: "\u274c GATE_CHECK_ERROR: could not read gate file " + gateFile + ": " + e.message,
+            }],
+        };
+    }
 });
 server.tool("clinerules_stats", "Quick stats on the rules corpus + recent lookup activity. Used to verify the MCP is healthy and to track adoption.", {}, async () => {
     const corpus = db.prepare(`

@@ -6,16 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/30/2026, 12:45:40 PM PT | window: last 72h | 138 tasks | index total 333 (parsed 6, cached 327)
+Generated: 7/30/2026, 1:45:40 PM PT | window: last 72h | 138 tasks | index total 334 (parsed 7, cached 327)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785360672171` | 7/30/2026, 12:42:50 PM | 284 | 674KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
-| `1785365363758` | 7/30/2026, 12:35:42 PM | 586 | 1222KB | https://www.emsuniversity.com/emtskills/routes/chat_portal.php - can you review chats from |
-| `1785368618667` | 7/30/2026, 12:33:16 PM | 324 | 1269KB | We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for |
-| `1785435661707` | 7/30/2026, 12:32:04 PM | 336 | 949KB | There's grievances getting lost because of all these categories in here. https://emsuniver |
-| `1785375877050` | 7/30/2026, 12:28:14 PM | 1499 | 6087KB | #GLM |
-| `1785399211024` | 7/30/2026, 12:26:43 PM | 430 | 2541KB | #Julia/Claudia |
+| `1785435661707` | 7/30/2026, 1:45:38 PM | 595 | 1380KB | There's grievances getting lost because of all these categories in here. https://emsuniver |
+| `1785365363758` | 7/30/2026, 1:45:36 PM | 657 | 1711KB | https://www.emsuniversity.com/emtskills/routes/chat_portal.php - can you review chats from |
+| `1785399211024` | 7/30/2026, 1:45:32 PM | 639 | 3134KB | #Julia/Claudia |
+| `1785360672171` | 7/30/2026, 1:45:23 PM | 331 | 760KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
+| `1785375877050` | 7/30/2026, 1:37:03 PM | 1545 | 6191KB | #GLM |
+| `1785441507395` | 7/30/2026, 1:33:51 PM | 88 | 161KB | Argus failure? Cites technical issues but doesn't not correct them with appropriate CFA lo |
+| `1785368618667` | 7/30/2026, 1:31:50 PM | 338 | 1304KB | We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for |
 | `1785432785187` | 7/30/2026, 12:06:12 PM | 206 | 644KB | I have been seeing this in task completion, meaning that it just fails and then still call |
 | `1785363426908` | 7/30/2026, 11:11:39 AM | 464 | 1593KB | #EMT Webforms/Payments |
 | `1785295028411` | 7/30/2026, 9:36:27 AM | 1126 | 4415KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
@@ -147,149 +148,12 @@ Generated: 7/30/2026, 12:45:40 PM PT | window: last 72h | 138 tasks | index tota
 | `1785180724129` | 7/27/2026, 3:03:44 PM | 322 | 1098KB | ## 4 — #GLM · GLM-5.2 ring |
 | `1785180684278` | 7/27/2026, 2:51:26 PM | 300 | 1223KB | ## 3 — #FORMS · durable fix for WPForms + its replacement |
 | `1785181049767` | 7/27/2026, 2:39:06 PM | 100 | 701KB | ## 11 — #EXT · externship system, grounded in Vicky's answers |
-| `1785173739737` | 7/27/2026, 1:11:16 PM | 590 | 1104KB | Tell me how many turns for each LLM occurred overnight / delve into frankenstein-tools and |
 
 ---
 
 ## Per-window detail
 
-### `1785360672171` — 7/30/2026, 12:42:50 PM PT — 284 turns
-
-**Original task:**
-
-```
-For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? 
-
-Also how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?
-```
-
-**Ideas referenced:** #20032 [proposed], #20033 [proposed], #20038, #20045 [proposed], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20052 [proposed], #20081 [proposed], #20279 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-fore SSH commands as a canary.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task # - Continue RCA on #20045 fix false claim, measure actual effect
-
-Where we left off (verified 2026-07-30 12:42 PT):
-- #20045 config fix deployed and verified yesterday (in_array on vapi_fallback line in twiml_inbound.php)
-- False claim about "tools down" traced to 3 failures: wrong SSH host, fault generalization, no verification before claim
-- Rule #20279 filed to prevent recurrence
-- Health check shows 102 calls in 4h, 7.8% human pickup (up from 5.7% yesterday), VAPI avg 105.4s
-- VAPI legs still 0 (bridge blind spot persists — separate from config fix)
-- VAPI prompt update script at /tmp/vapi_minimal.php still awaiting deploy (SSH tunnel flaky for heredoc commands)
-
-Open threads to drive next:
-1. #20051 [proposed] — Deploy VAPI prompt update via simpler command: scp /tmp/vapi_minimal.php to server, then run it
-2. #20081 [proposed] — VAPI voice A/B testing: modify vapi_fallback_worker.php to round-robin assistant_id
-3. #20279 [proposed] — Codify rule to verify tool health with 3 probes before declaring "down"
-
-Reference IDs:
-- Ideas filed: #20032, #20033, #20045 [deployed], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20052 [proposed], #20081 [proposed], #20279 [proposed]
-- Files touched: /var/www/emtskills/api/telephony/twiml_inbound.php (#20045)
-- Script ready locally: /tmp/vapi_minimal.php (for #20051)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785365363758` — 7/30/2026, 12:35:42 PM PT — 586 turns
-
-**Original task:**
-
-```
-https://www.emsuniversity.com/emtskills/routes/chat_portal.php - can you review chats from the last 48 hours for improvements and common issues, common bugs or whatever else needing resolution? Can you check to see if the Chat Widget is doing a good job? I think we did fix some things with CFAs and including Chat widget. Honestly whatever you do with Chat Widget, will need also to be done with other CFAs.
-```
-
-**Ideas referenced:** #1119, #12364, #16955, #17116, #18467 [approved], #18694, #18696, #18706, #18739, #18761, #18763, #18820, #18844, #18853, #18868, #1910, #19887, #19903, #19907, #19908, #19909, #19910 [executing], #19911, #19912, #19913, #19914, #19915, #19916, #19917, #19918 [executing], #19920 [executing], #19921, #19924, #19925, #19927, #19928, #19951 [proposed], #20044, #20073 [approved], #20074 [approved], #20092 [approved], #20107 [approved], #20193 [approved], #20194 [approved], #20284 [approved], #20285 [approved], #20286 [approved], #2050, #2085, #2098, #33689, #4796, #6366, #9019, #9112, #9152, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-
-<attempt_completion>
-<result>═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #20284 — VAPI proactive student lookup trigger and handoff context snippet.
-
-Where we left off (verified 2026-07-30 12:35 PT):
-- 10 transcripts read from last 48h, VAPI is 7/10 with 53 caller_hangups out of 286 calls
-- System prompt already says "first try to answer to avoid transfer" but doesn't instruct to proactively look up student data or show a summary to the human
-- #20284 filed: modify VAPI system prompt to include "If caller asks for a human or seems frustrated, FIRST attempt to use student_lookup tool proactively, then if you have data, offer it; if still needed, include a 1-line context snippet in the handoff instead of 'transferring now'"
-- #20285 filed (internal): Wire chat_widget CFA identification at emsu_ai_brain.php executeTool site — only email_ai has rows (6,690), chat_widget has 0
-- #20092 deployed: cfa_tool_invocations shared table + cfa_telemetry_recorder.php + backward-compat views created
-- #20074 deployed: cron_chat_handoff_unanswered_escalation.php running clean on every 3min cycle
-- #18467: 4 dead domains already at chat_enabled=0 (previously shipped)
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #20092 [deployed] — cfa_tool_invocations shared table + cfa_telemetry_recorder.php exist, need chat_widget and email_ai live wiring verified
-2. #20284 [proposed] — awaiting approval to modify VAPI system prompt with "proactive lookup before handoff" and "context snippet in transfer"
-3. #20285 [proposed] — awaiting approval to wire cfa_record_tool_invocation() at emsu_ai_brain.php line 468
-4. #20286 [proposed] — awaiting approval to add email_agent_dynamic_tools_thread_signals.php cfa_record_tool_invocation at line 196 INSERT
-5. #20107 [queued] — CFA-wide tool telemetry unification design consensus
-
-Reference IDs:
-- Ideas: #20092, #20284, #20285, #20286, #20107
-- Tickets: none
-- Files touched: docs/REFERENCE_CFA_MODEL_ROUTING.md, docs/specs/cfa_tool_invocations_migration.sql, lib/cfa_telemetry_recorder.php, cron/cron_chat_handoff_unanswered_escalation.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785368618667` — 7/30/2026, 12:33:16 PM PT — 324 turns
-
-**Original task:**
-
-```
-We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for this? 
-
-Do we have a decrease in the number of registrations, website traffic across our EMT programs? What about a decrease int he traffic? I'm not worried about emsuniversity.com. I'm concerned with EMT websites only.
-```
-
-**Ideas referenced:** #13437, #13441, #13454, #16732, #17203, #17205, #18315, #18820, #18868, #1910, #19887, #19903, #19907, #19910, #19918, #19925, #19927, #19928, #20044 [deployed], #20085 [proposed], #20086 [proposed], #20119 [proposed], #2096, #2097, #2098, #5431, #5574, #7174, #7907, #8230, #9132, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-cords, no GA4 meta tags found).
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Google Search Console setup for 9 EMT domains.
-
-Where we left off (verified 2026-07-30 12:32 PT):
-- Search Console deployment tool live at https://emsuniversity.com/emtskills/tools/admin_deploy_search_console_verify.php
-- 0 of 9 EMT domains verified in any Google account
-- Browser signed into wrong account (has only emswire.com + sanantoniocpr.org)
-- Tool returns valid JSON but PHP web user lacks write permissions to /var/www/vhosts/
-
-Open threads to drive next:
-1. #20119 [proposed] — Ruben needs to: (a) switch Google account in Search Console, (b) add each EMT domain as Domain property, (c) share the verification filename(s)
-2. #unfiled — Deploy verification HTML files to all 9 domains. Command template: `sudo cp /tmp/verify_file.php /var/www/vhosts/$d.com/httpdocs/googleXXX.html`. Use MCP ssh_command, same mechanism as caller_lookup/SMS/ticket/CFA fixes
-3. #unfiled — Verify each file returns HTTP 200 before telling Ruben to click "Verify" in SC
-
-Reference IDs:
-- Ideas filed: #20085 (SMS AI) [deployed], #20086 (caller lookup) [deployed], #20119 (ticket autospec deepseek) [deployed]
-- Tool deployed: /var/www/emtskills/tools/admin_deploy_search_console_verify.php
-- CFA router fix: /etc/litellm/router_hook.py line 448 (deepseek hop with 5s timeout)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785435661707` — 7/30/2026, 12:32:04 PM PT — 336 turns
+### `1785435661707` — 7/30/2026, 1:45:38 PM PT — 595 turns
 
 **Original task:**
 
@@ -299,11 +163,155 @@ There's grievances getting lost because of all these categories in here. https:/
 The grievances start with Pending Admin Complete (where the a human is supposed to check whether or not the person filled it out properly (i.e. accoridng to already known logic (had to be by hand and all fields completed), if rejected then it's sent to the student with a reason for the rejection. Human has 72 hours to do a disposition. Then after that it becomes an automated decision. If approved goes to the next step which is Admin Complete, it is then Ap
 ```
 
-**Ideas referenced:** #047857, #059669, #11111, #111827, #166534, #16957, #181825, #19592, #19594, #20258 [proposed], #20259 [proposed], #20260 [proposed], #20265 [proposed], #20266 [proposed], #20268 [proposed], #20269 [proposed], #20275 [proposed], #2563, #313244, #334155, #3730, #374151, #4338, #450438, #45475, #475569, #6366, #64748, #78350, #92400
+**Ideas referenced:** #047857, #059669, #11111, #111827, #12770, #166534, #16957, #181825, #19592, #19594, #20258 [proposed], #20259 [proposed], #20260 [proposed], #20265 [proposed], #20266 [proposed], #20268 [proposed], #20269 [proposed], #20275 [proposed], #20282 [proposed], #20283 [proposed], #20286 [proposed], #20290 [proposed], #20292 [proposed], #2563, #313244, #334155, #3730, #374151, #4338, #450438, #45475, #475569, #6366, #64748, #78350, #92400
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785375877050` — 7/30/2026, 12:28:14 PM PT — 1499 turns
+### `1785365363758` — 7/30/2026, 1:45:36 PM PT — 657 turns
+
+**Original task:**
+
+```
+https://www.emsuniversity.com/emtskills/routes/chat_portal.php - can you review chats from the last 48 hours for improvements and common issues, common bugs or whatever else needing resolution? Can you check to see if the Chat Widget is doing a good job? I think we did fix some things with CFAs and including Chat widget. Honestly whatever you do with Chat Widget, will need also to be done with other CFAs.
+```
+
+**Ideas referenced:** #1119, #12364, #12606, #16955, #17116, #1745, #18467 [approved], #18694, #18696, #18706, #18739, #18761, #18763, #18820, #18844, #18853, #18868, #1910, #19887, #19903, #19907, #19908, #19909, #19910 [executing], #19911, #19912, #19913, #19914, #19915, #19916, #19917, #19918 [executing], #19920 [executing], #19921, #19924, #19925, #19927, #19928, #19951 [proposed], #20044, #20073 [approved], #20074 [approved], #20092 [approved], #20107 [approved], #20193 [approved], #20194 [approved], #20284 [approved], #20285 [approved], #20286 [approved], #2050, #2085, #2098, #33689, #4796, #6366, #9019, #9112, #9152, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+
+<attempt_completion>
+<result>═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task Chat Widget 48h Audit — all shipped items verified plus open threads ready to ship.
+
+Where we left off (verified 2026-07-30 13:37 PT):
+- **Cron handoff escalation** running clean for 18+ hours with 0 errors
+- **cfa_tool_invocations** shared table has 6,690 email_ai rows migrated
+- **Chat widget CFA identification** wired at webhook.php line 1311 (dead LiveChat path) but NOT at the live emsu_ai_brain.php line 468 — #20193 [proposed]
+- **Email AI CFA identification** wired at email_agent_dynamic_tools_thread_signals.php line 201 (new lines need verification) — #20194 [proposed]
+- **VAPI prompt improvements** (#20284 [#20284｜proposed], #20285 [#20285｜proposed]) spec written; deployment attempt failed due to tool quoting issues with inline Python/sed
+- **#20286** [proposed] filed for VAPI caller_hangup guard
+- **#20092** [deployed] chat brain tool telemetry gap — shared table built, helper library created, chat widget wired (dead path only)
+
+Open threads to drive next:
+1. #20193 [proposed] — **Wire chat_widget CFA identification at emsu_ai_brain.php line 468** (the REAL executeTool site, not the dead webhook.php path). Add: `if (function_exists('cfa_record_tool_invocation')) { cfa_record_tool_invocation('chat_widget', $tn, $studentId, $chatId, json_encode($ta), json_encode($tr), (bool)($tr['success'] ?? false), $durationMs, ['visitor_email' => $visitorEmail, 'visitor_name' => $visitorName]); }` after line 469 `$tr = executeTool($tn, $ta);`
+2. #20194 [proposed] — **Wire email_ai CFA identification** at email_agent_dynamic_tools_thread_signals.php line 196. The file was modified (line 2 has require for cfa_telemetry_recorder.php) but the cfa_record_tool_invocation() call may not have been added. Verify and fix.
+3. #20284 [proposed] — **Ship VAPI proactive student lookup trigger** by injecting a prompt fragment into `voice_email_capture_prompts.php` that instructs the voice agent: when a student asks for a human, FIRST run `get_student_by_phone_or_email` with the caller's ANI/email, then if found say "I see your account [name]. Let me get someone to help you. While I transfer, [status summary]." If NOT found say "Before I transfer, could I get your email so we can look up your account?" Use the `vapi_prompt_improvements.php` file at /tmp — it needs a PHP syntax fix on line 11 and then deployment via `php /tmp/vapi_prompt_improvements.php`
+4. #20285 [proposed] — **Ship VAPI handoff context snippet** — same file, add fragment: When `flag_for_followup` is called, include in the system a concise snippet: caller name, phone, email, what was promised, and call outcome. This gets passed to the human agent so they don't start from zero.
+5. #20286 [proposed] — **Investigate caller_hangup guard for VAPI** — review the 53 hangup transcripts to identify the drop-off moments. Add a prompt guard: "If the caller seems frustrated or asks for a human twice, immediately say: 'Let me transfer you now. One moment please.' Do not ask clarifying questions."
+
+Reference IDs:
+- Ideas filed: #20092 (chat brain telemetry gap), #20193 (chat widget CFA wiring), #20194 (email AI CFA wiring), #20284 (VAPI proactive lookup), #20285 (VAPI handoff context), #20286 (VAPI hangup guard), #20074 (handoff alerting cron), #20073 (stale constant cleanup), #18467 (dead domain disable), #20107 (CFA telemetry unification opinion)
+- Files touched: `/var/www/emtskills/docs/REFERENC
+```
+
+### `1785399211024` — 7/30/2026, 1:45:32 PM PT — 639 turns
+
+**Original task:**
+
+```
+#Julia/Claudia
+
+——[COPY]——
+# COPY WINDOW — Julia + Claudia CX7 TP=2 gpt-oss-120b recovery (idea #20042)
+
+Pick up idea #20042 [proposed] — restore julia-120b TP=2 to the pool.
+
+## VERIFIED STATE (live-probed 2026-07-30 01:01 PT — do NOT re-derive, but DO re-confirm before acting)
+
+- Julia head: spark-6ae6, LAN 192.168.1.190, WireGuard 10.100.0.15, SSH via
+  `ssh -p 2205 rubenmajor@127.0.0.1` from WOPR.
+- Claudia worker: spark-6d51, LAN 192.168.1.194, WireGuard 10.100.0.16, SSH via
+  `ssh -p 2206 rubenmajor@127.0.0.1` from WOPR.
+- Julia has a LIVE Ray cluster (gcs_server PID ~1394125, session
+  
+```
+
+**Ideas referenced:** #1241, #12459, #12716, #16417, #16448, #16449, #16604, #16648, #16674, #16676, #16844, #16863, #17202, #17203, #17205, #17300, #1765, #1781, #1967, #20042 [proposed], #20172 [proposed], #20181 [proposed], #20248 [proposed], #20285 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+e 504B) before any paid cloud.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #20042 [deployed] — julia+claudia CX7 TP=2 gpt-oss-120b spill ladder position verified.
+
+Where we left off (verified 2026-07-30 13:33 PT):
+- #20042 [deployed] — julia-120b serving :11513, in frankenstein-tools upstreams #2/3 and frankenstein-llm _FLAGSHIP_MEMBERS #3/3, spill fallback to cicero-235b (GLM-5.2)
+- #20248 [proposed] — boot-service idea, pending approval
+- #20285 [proposed] — Gloo env propagation fix, script patched, pending approval
+
+Open threads to drive next:
+1. #20248 [proposed] — approve/reject the frankenstein-julia-tp2-boot.service idea so julia auto-starts on reboot (verified: reconcile_ideas returned status=proposed dev_stage=idle)
+2. #20285 [proposed] — approve the Gloo env propagation fix idea (script already patched, needs approval for record) (verified: reconcile_ideas returned status=proposed dev_stage=idle)
+
+Reference IDs:
+- Ideas filed: #20248 [proposed], #20285 [proposed]
+- Ideas closed: #20042 [deployed]
+- Files touched: /etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzzzz-julia-quarantine.conf (disabled), /etc/litellm/frankenstein_registry.yaml (stale-note corrected), /home/rubenmajor/julia_unified_tp2.sh (Gloo env fix, backup .bak-20260730-pre-gloo-fix)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785360672171` — 7/30/2026, 1:45:23 PM PT — 331 turns
+
+**Original task:**
+
+```
+For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? 
+
+Also how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?
+```
+
+**Ideas referenced:** #20032 [proposed], #20033 [proposed], #20038, #20045 [proposed], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20052 [proposed], #20081 [proposed], #20279 [proposed], #20289 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+outing for poor calls (#20050)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task # - Deploy VAPI prompt update + voice A/B testing + build prospect routing
+
+Where we left off (verified 2026-07-30 13:33 PT):
+- #20045 config type fix deployed and verified on disk
+- #20279 (Rule 264) and #20289 (Rule 265) filed as ideas — codify the false-claim RCA into enforceable rules
+- 96 calls in last 4h, 12 answered by humans, VAPI bridge showing healthy_legs=0 needs watchdog fix
+- VAPI prompt update script ready at /tmp/vapi_minimal.php (needs SCP to server + php run)
+
+Open threads to drive next:
+1. #20279 [proposed] — Deploy Rule 264 to /var/www/emtskills/docs/.clinerules/ (probe 3+ before declaring tools down)
+2. #20289 [proposed] — Deploy Rule 265 to /var/www/emtskills/docs/.clinerules/ (re-check all data before conclusion)
+3. #20051 [proposed] — Deploy VAPI prompt update: scp /tmp/vapi_minimal.php to server, php run
+4. #20081 [proposed] — A/B test VAPI voices (Ronald, Katie, Eric, Bella round-robin)
+5. #20046 [proposed] — Build pre-call prospect detection in twiml_inbound.php
+6. #20050 [proposed] — Build topic-based routing to humans for poor-rated calls
+7. #20033 [proposed] — Investigate VAPI conference bridge silent failure (healthy_legs=0 persistent)
+
+Reference IDs:
+- Ideas filed: #20032, #20033, #20045 [deployed], #20046, #20047, #20049, #20050, #20051, #20052, #20081, #20279, #20289
+- Files touched: /var/www/emtskills/api/telephony/twiml_inbound.php (#20045)
+- Script ready: /tmp/vapi_minimal.php (local)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785375877050` — 7/30/2026, 1:37:03 PM PT — 1545 turns
 
 **Original task:**
 
@@ -320,7 +328,7 @@ I stopped tuning preferences and made it unconditional in /usr/local/bin/franken
 
 ```
 
-**Ideas referenced:** #11261, #12059, #12060, #12231, #12366, #12368, #12459, #1248 [resolved], #12672, #12689, #13108, #13121, #13831, #13832, #13874, #14000, #16120, #16126, #16128, #16844, #1685, #1687, #1705, #1706, #178531, #18781, #18868, #1888, #1894, #1962, #1964, #1967, #19903, #1993 [resolved], #19962 [proposed], #20005 [proposed], #20022 [rejected], #20040 [proposed], #20041 [proposed], #20042 [proposed], #20054 [proposed], #20068 [proposed], #20069 [proposed], #20082 [proposed], #20088 [proposed], #20102 [proposed], #20112 [proposed], #20129 [proposed], #2014, #20172 [proposed], #20178 [proposed], #20179 [proposed], #20245 [executing], #20246 [rejected], #20247 [executing], #20264 [proposed], #20272 [executing], #2050, #2102 [deployed], #2103 [deployed], #2108 [deployed], #2109 [resolved], #2110, #2111
+**Ideas referenced:** #11261, #12059, #12060, #12231, #12366, #12368, #12459, #1248 [resolved], #12672, #12689, #13108, #13121, #13831, #13832, #13874, #14000, #16120, #16126, #16128, #16844, #1685, #1687, #1705, #1706, #178531, #18781, #18868, #1888, #1894, #1962, #1964, #1967, #19903, #1993 [resolved], #19962 [proposed], #20005 [proposed], #20022 [rejected], #20040 [proposed], #20041 [proposed], #20042 [proposed], #20054 [proposed], #20068 [proposed], #20069 [proposed], #20082 [proposed], #20088 [proposed], #20102 [proposed], #20112 [proposed], #20129 [proposed], #2014, #20172 [proposed], #20178 [proposed], #20179 [proposed], #20245 [executing], #20246 [rejected], #20247 [executing], #20264 [proposed], #20272 [executing], #20291 [executing], #2050, #2102 [deployed], #2103 [deployed], #2108 [deployed], #2109 [resolved], #2110, #2111
 
 **Last PICKUP PROMPT:**
 
@@ -364,68 +372,87 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </attempt_completion>
 ```
 
-### `1785399211024` — 7/30/2026, 12:26:43 PM PT — 430 turns
+### `1785441507395` — 7/30/2026, 1:33:51 PM PT — 88 turns
 
 **Original task:**
 
 ```
-#Julia/Claudia
+Argus failure? Cites technical issues but doesn't not correct them with appropriate CFA logic? Do RCA and fix this person and Argus and reply back to Vicky that it's fixed and try again.-> Final Exam 3rd Attempt Request for Wallace Gonzales - (26513FT - San Antonio)
+TKT-20260730-29F0A2F9
+https://emsuniversity.com/emtskills/tickets/view.php?id=22379
 
-——[COPY]——
-# COPY WINDOW — Julia + Claudia CX7 TP=2 gpt-oss-120b recovery (idea #20042)
 
-Pick up idea #20042 [proposed] — restore julia-120b TP=2 to the pool.
+Wallace is requesting access to his third attempt for the Final Exam. However, the "Attempt Quiz" button is missing from his account, preventing him from taking the exam.
 
-## VERIFIED STATE (live-probed 2026-07-30 01:01 PT — do NOT re-derive, but DO re-confirm before acting)
-
-- Julia head: spark-6ae6, LAN 192.168.1.190, WireGuard 10.100.0.15, SSH via
-  `ssh -p 2205 rubenmajor@127.0.0.1` from WOPR.
-- Claudia worker: spark-6d51, LAN 192.168.1.194, WireGuard 10.100.0.16, SSH via
-  `ssh -p 2206 rubenmajor@127.0.0.1` from WOPR.
-- Julia has a LIVE Ray cluster (gcs_server PID ~1394125, session
-  
+Upon reviewing his exam history, it appears that he experienced technical i
 ```
 
-**Ideas referenced:** #12459, #12716, #16417, #16448, #16449, #16604, #16674, #16676, #16844, #16863, #1781, #1967, #20042 [proposed], #20172 [proposed], #20181 [proposed], #20248 [proposed]
+**Ideas referenced:** #20288 [proposed], #22379, #9086, #9168, #9339
 
 **Last PICKUP PROMPT:**
 
 ```
--start, still pending approval
+plies to its diagnostic path.*
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
+Pick up task #22379 — Wallace Gonzales Final Exam 3rd attempt fix + Argus RCA.
 
-Pick up task #20042 [deployed] — julia+claudia CX7 TP=2 gpt-oss-120b restored to adapter rotation.
-
-Where we left off (verified 2026-07-30 12:25 PT):
-- #20042 [deployed] — stale quarantine drop-in disabled, adapter restarted, :11513 back in both UPSTREAMS envs, live PASSTHROUGH+TOOLS probes ok, registry stale-note corrected
-- #20248 [proposed] — boot-service idea for julia TP=2 auto-start on reboot, still pending approval (not blocking)
+Where we left off (verified 2026-07-30 13:33 PT):
+- Fixed: quiz_overrides id=2903 timeclose cleared (expired time was hiding Attempt Quiz button). Ticket TKT-20260730-29F0A2F9 resolved. Vicky notified via ops chat.
+- Idea #20288 promoted to in_progress and queued for auto-implementation by Ruben.
 
 Open threads to drive next:
-1. #20248 [proposed] — approve/reject the frankenstein-julia-tp2-boot.service idea so julia survives reboots without manual relaunch (verified: reconcile_ideas returned status=proposed dev_stage=idle)
+1. #20288 [executing] — Argus: Detect expired quiz override timeclose vs exhausted attempts. Queued for auto-build. Monitor orchestrator for build completion.
 
 Reference IDs:
-- Ideas filed: #20248 [proposed]
-- Ideas closed: #20042 [deployed]
-- Files touched: /etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzzzz-julia-quarantine.conf (disabled), /etc/litellm/frankenstein_registry.yaml (line 85 stale-note corrected, backup .bak-pre-julia-fix-20260730)
+- Ticket: 22379
+- Ideas filed: #20288
+- Files touched: none (DB-only fix: quiz_overrides UPDATE)
+</result>
+</attempt_completion>
+```
 
-When done, append to cline_task_ledger.md (rule 07), run order 66.
+### `1785368618667` — 7/30/2026, 1:31:50 PM PT — 338 turns
+
+**Original task:**
+
+```
+We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for this? 
+
+Do we have a decrease in the number of registrations, website traffic across our EMT programs? What about a decrease int he traffic? I'm not worried about emsuniversity.com. I'm concerned with EMT websites only.
+```
+
+**Ideas referenced:** #13437, #13441, #13454, #16732, #17203, #17205, #18315, #18820, #18868, #1910, #19887, #19903, #19907, #19910, #19918, #19925, #19927, #19928, #20044 [deployed], #20085 [proposed], #20086 [proposed], #20119 [proposed], #2096, #2097, #2098, #5431, #5574, #7174, #7907, #8230, #9132, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+e verification files from CLI.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #current — Revenue investigation: Search Console verification for EMT websites.
+
+Where we left off (verified 2026-07-30 13:31 PT):
+- Four bug fixes deployed and verified: caller lookup SQL (#20086), SMS AI (#20085), ticket autospec (#20119), CFA deepseek fallback
+- Search Console admin PHP tool at /var/www/emtskills/tools/admin_deploy_search_console_verify.php (works via CLI, not web due to vhost permissions)
+- Ruben will paste the browser AI prompt above to collect verification codes for the 9 EMT domains
+
+Open threads to drive next:
+1. Wait for Ruben to bring back verification codes from browser AI
+2. Deploy all 9 googleXXXX.html files via CLI php one-liner to /var/www/vhosts/*/httpdocs/
+3. Verify each file returns HTTP 200 via curl
+4. Ask Ruben to click Verify in Search Console for each domain
+
+Reference IDs:
+- Ideas: #20085 [deployed], #20086 [deployed], #20119 [deployed]
+- Files: twilio_sms_inbound.php, caller_lookup.php, ticket_autospec.php, router_hook.py, cron_klarna_qb_reconciliation.php, admin_deploy_search_console_verify.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Claudia watchdog installed + verified
-- [x] Idea #20248 filed for boot service
-- [x] Fresh turn count — 289 chat turns in 9h
-- [x] Perf data: julia idle (0% KV, 65.8% prefix hit), adapter lanes saturated on artemis/GLM
-- [x] Root cause: zzzzzzzzzzzz-julia-quarantine.conf drop-in excludes :11513
-- [x] Disable quarantine drop-in + restart adapter + verify 11513 in effective env
-- [x] Verify adapter actually routes a turn to julia (PASSTHROUGH + TOOLS ok on :11513)
-- [x] Live example generation through julia for quality check (4.8s, 120 tok)
-- [x] Reconcile ideas #20042 [deployed] + #20248 [proposed]
-- [x] Confirm/fix stale registry note (spark-6ae6 NOT GLM-ring augustus)
-- [x] Validate completion + ship rule-91 pickup prompt
-</task_progress>
 </attempt_completion>
 ```
 
@@ -5341,54 +5368,5 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785173739737` — 7/27/2026, 1:11:16 PM PT — 590 turns
-
-**Original task:**
-
-```
-Tell me how many turns for each LLM occurred overnight / delve into frankenstein-tools and the big groupings and just give the individualLLMs rather than the groups and collate them. Whenever I ask for this, that's what I mean. Doe sthis need to be a cline rule?
-```
-
-**Ideas referenced:** #10108, #10740, #11316, #11319, #11741, #11781, #12335, #12459, #12463, #12477, #12584, #12618, #12680, #12688, #12689, #12824, #12872, #12878, #13121, #13202, #13329, #13840, #13962, #14133, #14141, #14142, #15823, #16163, #16265, #16304, #16449, #16604, #16648, #16715, #16844, #17078, #1754, #1755, #18312, #18326, #18868, #19227, #19230 [queued], #19234 [queued], #19266, #19321, #19325, #19338, #19373, #19388 [executing], #19390 [rejected], #19425, #19427, #19437, #19454, #19464, #19500, #19506 [proposed], #19507 [proposed], #19508 [proposed], #19509, #19510, #1998, #2007, #2008, #2010, #2011, #2012, #2014, #2015, #2016, #2017, #2019, #2027, #2039, #2040, #2041, #2042, #2043, #2045, #2048, #2049, #2051, #2052, #2053, #2054, #21544
-
-**Last PICKUP PROMPT:**
-
-```
-health-monitor.timer` enabled.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — frankenstein-llm ladder correctness: dead-Cicero pin, Artemis wedge, Julia/Claudia RoCE.
-
-Where we left off (verified 2026-07-27 13:07 PT):
-- CESAR/CATO = LIVE GLM Hex ring, DO NOT TOUCH (rules 145/157/251). Cesar spark-3b41 .56 worker 96% GPU uptime 8d; Cato spark-2aa8 .115 head serving :8210. Ring verified healthy: 200, 12 concurrent, 211399 gen tokens. My Cesar contact was 3 READ-ONLY commands only (#2054).
-- ARTEMIS wedged not down: WG fresh, ping 0%/27ms, :22 OPEN, :8000+:11434 closed, SSH banner-exchange timeout. Babysitter restart 12:17:01 succeeded then all fail from 12:23:56.
-- JULIA spark-6ae6 .190 + CLAUDIA spark-6d51 .194: healthy, GPU 0%, no listening ports = free 120B dark. TP=2 blocked by IBV_WC_RETRY_EXC_ERR(12).
-- 45.9% of traffic pinned to dead cicero-235b (969/2113 turns, 191 convs, 721 interactive).
-- Live+verified in container: speed gate 0.5, 5 ring lanes max_output_tokens 32768, glm-5.2-local first rung in 5 chains, glm52-health-monitor.timer enabled.
-
-Open threads to drive next:
-1. #19507 [executing] (verified: reconcile_ideas returned status=in_progress dev_stage=idle) — served-log post-call write, ban silent pre-call fallback, ATTRIBUTION_SUSPECT flag.
-2. #19508 [executing] (verified: reconcile_ideas returned status=in_progress dev_stage=idle) — restore dark pool members + zero-healthy-members alarm.
-3. Widen frankenstein_registry.py:138 to include probe:vllm so MODEL_ENDPOINT covers cicero/glm-5.2-local/julia, then add EXPLICIT_DEADBOX_GUARD at _final_pick (_router_core.py ~6210). Audit MODEL_ENDPOINT consumers at 1042/1100/1268/2601 first (human-only decision — no idea; doorman-filtering blast radius needs Ruben's call).
-4. Artemis Wyze power cycle — Wyze app or physical in Tempe; no remote path exists (human-only decision — no idea, RUBEN/JON ACTION).
-5. Julia/Claudia RoCE fix per #2053: NCCL_DEBUG=INFO for HCA/GID/MTU, ibv_devinfo active_mtu both ends, GID index 3 RoCEv2 parity, mlnx_qos PFC parity; OR no-root workaround NCCL_IB_DISABLE=1 for TCP fallback (human-only decision — no idea; needs root, no passwordless sudo on either box).
-6. artemis_powercycle.sh + artemis_watchdog.sh: stop the 100%-failing 5-min loop, add wyze driver, document plug site (human-only decision — no idea; needs plug credentials).
-
-Reference IDs:
-- Ideas filed: #19507 [executing], #19508 [executing]
-- Ideas closed: #19506 [rejected] (verified: idea_action returned new_status=rejected, superseded by #19508)
-- Bug library: #2042, #2045, #2048, #2049, #2051, #2052, #2053, #2054
-- Files: /etc/litellm/config.yaml (+3 backups), /etc/systemd/system/litellm.service.d/10-frugal.conf (+backup, -e EMSU_FLAGSHIP_SPEED_GATE_TPS=0.5), /tmp/spark_identity.txt, /tmp/julia_preflight.txt, /tmp/cicero_spill_cost.py
-- Gate token: 5e56b11a10571658f5f78ec9
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```

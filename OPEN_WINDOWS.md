@@ -6,22 +6,22 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/29/2026, 5:41:40 PM PT | window: last 72h | 142 tasks | index total 324 (parsed 7, cached 317)
+Generated: 7/29/2026, 6:41:40 PM PT | window: last 72h | 142 tasks | index total 324 (parsed 6, cached 318)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785368587300` | 7/29/2026, 5:41:28 PM | 85 | 400KB | There are some reddit forums out there that are against EMS University. Can you give me li |
-| `1785368618667` | 7/29/2026, 5:37:25 PM | 96 | 361KB | We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for |
-| `1785365363758` | 7/29/2026, 5:34:25 PM | 168 | 520KB | https://www.emsuniversity.com/emtskills/routes/chat_portal.php - can you review chats from |
-| `1785370606525` | 7/29/2026, 5:32:01 PM | 50 | 253KB | pickup TDSHS, TPIA Request 3 at: https://emsuniversity.com/emtskills/personnel/institution |
+| `1785370606525` | 7/29/2026, 6:41:32 PM | 189 | 1769KB | pickup TDSHS, TPIA Request 3 at: https://emsuniversity.com/emtskills/personnel/institution |
+| `1785295028411` | 7/29/2026, 6:41:30 PM | 495 | 2009KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
+| `1785293294377` | 7/29/2026, 6:41:21 PM | 399 | 1909KB | A metric ton of emails came in to email agent within the last hour or 2. I need you to go  |
+| `1785365363758` | 7/29/2026, 6:41:19 PM | 260 | 684KB | https://www.emsuniversity.com/emtskills/routes/chat_portal.php - can you review chats from |
+| `1785368618667` | 7/29/2026, 6:34:05 PM | 148 | 474KB | We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for |
+| `1785368587300` | 7/29/2026, 6:26:24 PM | 156 | 643KB | There are some reddit forums out there that are against EMS University. Can you give me li |
 | `1785364900935` | 7/29/2026, 5:26:56 PM | 337 | 917KB | #GLM |
 | `1785355259217` | 7/29/2026, 5:18:16 PM | 730 | 1633KB | i ahve been told this form is not populating PDF forms properly downstream. Can you check  |
 | `1785359143504` | 7/29/2026, 5:14:36 PM | 446 | 3274KB | #Argus  |
 | `1785298450123` | 7/29/2026, 5:09:58 PM | 680 | 1881KB | #Stripe/Klarna |
 | `1785363426908` | 7/29/2026, 5:09:43 PM | 222 | 830KB | #EMT Webforms/Payments |
-| `1785295028411` | 7/29/2026, 5:07:41 PM | 402 | 1581KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
 | `1785360672171` | 7/29/2026, 5:07:10 PM | 228 | 584KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
-| `1785293294377` | 7/29/2026, 3:58:17 PM | 366 | 1747KB | A metric ton of emails came in to email agent within the last hour or 2. I need you to go  |
 | `1785286248280` | 7/29/2026, 3:51:18 PM | 230 | 978KB | pick up the Plesk login issue that closed for the second time here in cline irritating: |
 | `1785358209522` | 7/29/2026, 3:38:42 PM | 528 | 7749KB | Broke the GLM-5.2 ring deadlock. The blocker that killed every prior attempt is fixed and  |
 | `1785356710391` | 7/29/2026, 2:08:45 PM | 134 | 1119KB | Yet again, we have ZERO payments on our webformes today for EMT. That's likely another err |
@@ -157,7 +157,232 @@ Generated: 7/29/2026, 5:41:40 PM PT | window: last 72h | 142 tasks | index total
 
 ## Per-window detail
 
-### `1785368587300` — 7/29/2026, 5:41:28 PM PT — 85 turns
+### `1785370606525` — 7/29/2026, 6:41:32 PM PT — 189 turns
+
+**Original task:**
+
+```
+pickup TDSHS, TPIA Request 3 at: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
+
+I am quesitonning the portions of the request requesing files about our specific complaint and whether that's a helpful strategy in the request and whether we can even get or access that info anyway. It seems fruitless/pointless to try to get that information because it's completely privileged from disclosure as part of an open investigation. And if I'm going to file on it, could create other issues as well, like the departemtn's greater ire on this. While it's likel
+```
+
+**Ideas referenced:** #0891, #18868, #1910, #19587, #19595 [executing], #19599 [executing], #19605, #19887, #19903, #19907, #19910, #19918, #19919, #19925, #19927, #19928, #20044, #20079 [deployed], #20097, #2098, #2104, #2563, #600179, #623992
+
+**Last PICKUP PROMPT:**
+
+```
+ons ready for review and send.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — TPIA Request #5: final review, PDF generation, and submission.
+
+Where we left off (verified 2026-07-29 18:32 PT):
+- v5 markdown on server (12 items, 5 parts: A-complaint, B-SB14, C-emergency comparators, D-CAPCE, E-Pinsky Law)
+- Investigation #16 updated with v5 scope
+- Server URL: https://www.emsuniversity.com/emtskills/uploads/tdshs/inspection-5196-2026/TPIA_REQUEST_3_COMPLAINT_FILES_v5_2026-07-29.md
+- Ruben also wants file in Google Drive folder 1eZHrNV5Fx5gn1ZuS8AhZnjlKGIIB6efx — needs manual download+upload (no gdrive/rclone available)
+
+Open threads to drive next:
+1. (human-only decision, no idea) — Ruben: download v5 from server URL and upload to Google Drive folder, optionally creating a subfolder for CAPCE+Pinsky sections
+2. (human-only decision, no idea) — Ruben: final review of v5 content. Generate PDF from markdown (wkhtmltopdf on server or browser-based)
+3. (human-only decision, no idea) — Send: openrecords@dshs.texas.gov + certified mail to PO Box 149347, Austin TX 78714-9347. Log date in investigation #16.
+4. (human-only decision, no idea) — Catalog SB 14 + TPIA exception research in tpia_findings table for reusability
+
+Reference IDs:
+- Investigation: #16 (compliance_investigations, slug=tdshs-foia-tpia-requests-2026)
+- Server: /var/www/emtskills/uploads/tdshs/inspection-5196-2026/TPIA_REQUEST_3_COMPLAINT_FILES_v5_2026-07-29.md
+- Local: /tmp/TPIA_REQUEST_3_v5_2026-07-29.md
+- Google Drive: 1eZHrNV5Fx5gn1ZuS8AhZnjlKGIIB6efx
+- Contacts: openrecords@dshs.texas.gov
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785295028411` — 7/29/2026, 6:41:30 PM PT — 495 turns
+
+**Original task:**
+
+```
+What outstanding build issues exist for the Broser Extension for Argus? What else do you recommend? Can you do some work and testing on it to improve it more? Make sure it's wired into actual Argus as well:
+
+https://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome
+```
+
+**Ideas referenced:** #0000, #10003, #10005, #10108, #10182, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12301, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #127908, #1281, #128193, #128203, #128206, #128263, #128266, #128275, #12900, #1309, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14000, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16213, #16263, #16584, #16589, #16590, #16602, #16625, #16646, #16680, #16715, #16716, #16717, #17078, #17307, #17342, #17345, #17669, #17672, #17673, #17691, #17697, #17741, #17746, #17749, #17751, #1807, #1820, #18328, #18337, #18360, #18388 [executing], #18396 [proposed], #18397 [proposed], #18398 [proposed], #1840, #1857, #18670, #18671, #18687, #18688, #18745, #18770, #1878, #18930 [proposed], #19370, #19407, #1952, #19585, #19670, #19686, #19896 [proposed], #19898 [proposed], #19899 [proposed], #19900 [proposed], #19901 [proposed], #19919 [proposed], #19920 [proposed], #19999 [approved], #20079 [deployed], #2071, #2079, #21262, #238636, #274160, #30363, #34495, #6164, #69707, #7490, #7505, #7513, #7554, #8365, #8942, #9650, #9654, #9660, #9689, #9706, #9733, #9889, #9910, #9934
+
+**Last PICKUP PROMPT:**
+
+```
+/argus_download.php?tab=chrome
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus Chrome Extension improvements (original task ~8:17 PM PT).
+
+Where we left off (verified 2026-07-29 18:34 PT):
+- MV3 port-closed crash fixed: safeSend() wrapper in sidepanel.js; ZIP rebuilt + deployed
+- NORMALIZER + gate fixes for ready_for_review deployed (#19919, #20079)
+- Argus extension download URL healthy (200 OK, 15KB ZIP)
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #19900 [executing] — Argus auto-cron ZIP rebuild (still open — cron not wired yet)
+2. #19919 [deployed] — Steering injection QUICK CHECK text for Rule 91 (blocked on Hex fleet — separate window)
+3. Real testing: download from Chrome, install, verify sidepanel no longer shows "port closed" console error [no idea yet — test manually]
+
+Reference IDs:
+- Ideas: #19900 [executing], #19919 [deployed], #20079 [approved]
+- Files touched: sidepanel.js, argus-extension.zip, orchestrator_api.php, cron_ruben_implement.php, orchestrator_ideas
+- Download: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785293294377` — 7/29/2026, 6:41:21 PM PT — 399 turns
+
+**Original task:**
+
+```
+A metric ton of emails came in to email agent within the last hour or 2. I need you to go over them for failures, do RCAs and build improvements into Email Agent / CFAs to be able to respond/act autonmously to resolve issues. Act on them and then give a status report / summary.
+```
+
+**Ideas referenced:** #111827, #1147, #1231, #1286, #1396, #1565, #166534, #1746, #1819, #19492, #19495, #19511, #19522, #19573, #19583, #19584, #19585, #19645, #19646, #19799, #19807, #19810, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830 [approved], #19831 [proposed], #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19866 [proposed], #19867 [deployed], #19868 [proposed], #19870 [proposed], #19901 [proposed], #20058 [proposed], #20059 [proposed], #20060 [proposed], #20062 [proposed], #20063 [proposed], #20064 [proposed], #2082, #2090, #2102, #334155, #374151, #406060, #406061, #406242, #414633, #414634, #414636, #414642, #414643, #414692, #414693, #414694, #4480, #4481, #475569, #54291, #54319, #5749, #64748, #78350, #9888, #9989
+
+**Last PICKUP PROMPT:**
+
+```
+e) processing ~50/min backlog.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task ECB-86 — email agent CFA fleet audit with 13 proposed ideas across deployed fixes, infrastructure improvements, and RCA follow-ups.
+
+Where we left off (verified 2026-07-29 18:20 PT):
+- 4 fixes deployed + verified on disk (type cascade, chat dedup, URL allowlist, email routing cron)
+- Email backlog: cron running at 50/min, ~69/hr remaining in current hour, 830 in last 12h
+- #19799 is DUPE of #19870 — both based on false "70B dead" claim from runpod-pod-watchdog NULL payload
+- Rule 263/hardfloor appended with frankenstein self-health audience
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #20060 [proposed] — RCA: why are chat handoffs going unanswered? Check agent notifications, shift coverage, round-robin assignment path
+2. #20062 [proposed] — Increase email routing cron batch size from 50 to 200 for catch-up, verify backlog cleared via `email_inbound_log WHERE processed_for_routing=0`
+3. #20063 [proposed] — CFA email agent auto-resolve for blocked-URL ticket patterns — detect "Outbound email blocked, unowned URL host" title and auto-respond
+4. #20064 [proposed] — Email AI auto-respond to "Legitimate email without AI response" tickets — call AI to generate + send reply, close ticket
+5. #20058 [proposed] — Kaizon cron-failure detection: add PHP fatal error wrapper + orchestrator_event_log alerting for cron crashes
+6. #19831 [proposed] — EA intake retry: single fire-and-forget hop produced 1 email from 71 entries — needs retry/queue
+7. #19830 [approved] — Deadman RCA + self-healing feedback loop: stop promises before they deadman
+
+Reference IDs:
+- Ticket: ECB-86
+- Ideas filed: 19866, 19867, 19868, 19870, 19901, 20058, 20060, 20062, 20063, 20064
+- Pre-existing: 19830 [approved], 19831 [proposed], 19799 [proposed — DUPE of 19870]
+- Files touched: lib/lora_shadow_health.php, cron/cron_orchestrator_triage.php, lib/MailerUrlAllowlist_TrustedExternal.php, cron/cron_chat_handoff_ticket_spawn.php, /etc/cron.d/emsu-email-inbound-routing, .clinerules/fleet-live-probe-hardfloor.mdc, /Users/rubenmajor/Desktop/ECB-86_Tracking.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785365363758` — 7/29/2026, 6:41:19 PM PT — 260 turns
+
+**Original task:**
+
+```
+https://www.emsuniversity.com/emtskills/routes/chat_portal.php - can you review chats from the last 48 hours for improvements and common issues, common bugs or whatever else needing resolution? Can you check to see if the Chat Widget is doing a good job? I think we did fix some things with CFAs and including Chat widget. Honestly whatever you do with Chat Widget, will need also to be done with other CFAs.
+```
+
+**Ideas referenced:** #1119, #12364, #16955, #17116, #18467 [approved], #18694, #18696, #18706, #18739, #18761, #18763, #18820, #18844, #18853, #18868, #1910, #19887, #19903, #19907, #19908, #19909, #19910 [executing], #19911, #19912, #19913, #19914, #19915, #19916, #19917, #19918 [executing], #19920 [executing], #19921, #19924, #19925, #19927, #19928, #19951 [proposed], #20044, #20073 [approved], #20074 [approved], #20092 [approved], #2050, #2085, #2098, #33689, #4796, #6366, #9019, #9112, #9152, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+y the detection path is fixed.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up the Chat Widget cron handoff escalation — fix remaining schema mismatches.
+
+Where we left off (verified 2026-07-29 18:19 PT):
+- Cron runs every 3 min: detection query now uses `chat_portal_transfers` ✅
+- But `hasBeenEscalated()` function and INSERT at lines 224, 294 still reference `escalation_stage` column which doesn't exist in `chat_handoff_escalation_log` (actual schema has `escalation_type` enum + `escalated_at` timestamp).
+- Log at `/var/log/emsu-chat-handoff-esc.log` shows the detection query is now hitting `chel.escalation_stage` error → partially fixed.
+
+Open threads to drive next:
+1. FIX: Read the full cron and replace ALL `escalation_stage` references with `escalation_type` compatible values. The `chat_handoff_escalation_log` table has `escalation_type` enum('realert','auto_escalate','fallback_offered','fallback_accepted') NOT `escalation_stage` varchar.
+2. TEST: Run `/usr/bin/php /var/www/emtskills/cron/cron_chat_handoff_unanswered_escalation.php` manually and verify it completes clean (no SQL errors).
+3. #20092 [approved] — Build `cron_chat_brain_tool_first_gate.php` and register it to start recording tool telemetry. Check if spec exists at `/var/www/emtskills/docs/specs/register_cron_chat_brain_tool_first_gate.md`.
+4. NEW IDEA NEEDED — SMS AI tool telemetry table doesn't exist. Create a telemetry table in admin_portal for SMS tool invocations, mirroring `email_agent_tool_invocations` pattern.
+5. Reference doc exists: `/var/www/emtskills/docs/REFERENCE_CFA_MODEL_ROUTING.md` — use it when auditing model routing.
+
+Reference IDs:
+- Ideas: #18467 [deployed], #20073 [shipped], #20074 [shipped], #20092 [approved]
+- Files: `/var/www/emtskills/cron/cron_chat_handoff_unanswered_escalation.php` (needs remaining schema fixes), `/var/www/emtskills/docs/REFERENCE_CFA_MODEL_ROUTING.md` (new reference)
+- Tables: `chat_portal_transfers` (live handoff state), `chat_handoff_escalation_log` (escalation_type enum), `email_agent_tool_invocations` (4903 rows — working telemetry pattern)
+
+When done, append to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785368618667` — 7/29/2026, 6:34:05 PM PT — 148 turns
+
+**Original task:**
+
+```
+We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for this? 
+
+Do we have a decrease in the number of registrations, website traffic across our EMT programs? What about a decrease int he traffic? I'm not worried about emsuniversity.com. I'm concerned with EMT websites only.
+```
+
+**Ideas referenced:** #13437, #13441, #13454, #16732, #17205, #18315, #18868, #1910, #19887, #19903, #19907, #19910, #19918, #19925, #19927, #19928, #20044 [deployed], #20085 [proposed], #20086 [proposed], #2096, #2097, #2098, #5431, #5574, #7174, #7907, #9132, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+5s timeout to fallback chain |
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #current — EMT revenue decline — remaining actions.
+
+Where we left off (verified 2026-07-29 18:20 PT):
+- #20085 SMS AI fix identified (twilio_sms_inbound.php:264) — deploy pending
+- #20086 Caller lookup SQL FIXED and DEPLOYED: /var/www/emtskills/api/telephony/caller_lookup.php line 118
+- Payment tracking: auth.net path doesn't write to Students.payment_method — not a bug, structural
+- Google organic drop needs manual Ads/Search Console login
+- CFA Deepseek fallback plan ready but not implemented
+
+Open threads to drive next:
+1. Deploy #20085: change `new SMSAIResponder($pdo)` to `new SMSAIResponder()` at /var/www/emtskills/webhooks/twilio_sms_inbound.php line 264. Then test by sending a real SMS
+2. #20086 [deployed] — Monitor PHP-FPM logs for 2 minutes to confirm caller_lookup errors stop
+3. (human-only decision, no idea) — Login to Google Ads + Search Console to investigate the 50% organic drop (42→20 in July vs June). Check campaign status, keyword rankings, landing page changes
+4. (human-only decision, no idea) — Add Deepseek fallback to CFA: frankenstein-llm → deepseek-v4-pro (5s timeout) → claude-3-5-haiku. Add deepseek-v4-pro to the CFA fallback chain in the router config
+5. (human-only decision, no idea) — Consider writing auth.net payment_method to Students table so payment tracking covers all students, not just Klarna
+
+Reference IDs:
+- Ideas filed: #20085, #20086
+- Files touched: /var/www/emtskills/api/telephony/caller_lookup.php (deployed)
+- Key tables: abuse_blocklist (phone_e164, active), Students (payment_method), Course_Schedules
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785368587300` — 7/29/2026, 6:26:24 PM PT — 156 turns
 
 **Original task:**
 
@@ -170,162 +395,25 @@ There are some reddit forums out there that are against EMS University. Can you 
 **Last PICKUP PROMPT:**
 
 ```
-, not the analysis capability.
+ional complaints worth fixing.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Reddit EMSU-negative thread TOS scan and legal removal draft.
+Pick up task — Analyze browser AI report on 4 Reddit threads, finalize removal requests.
 
-Where we left off (verified 2026-07-29 17:22 PT):
-- 6 automated search paths all blocked (Brave limit, Reddit network block, robots.txt, DuckDuckGo no results, no Playwright available)
-- Idea #20078 [proposed] — "Reddit EMSU-negative thread discovery — search tools rate-limited"
-- Ruben needs to manually search Reddit in a browser and paste thread URLs into a new Cline window
+Where we left off (verified 2026-07-29 18:25 PT):
+- Browser AI prompt rewritten to address copyright/intent concerns, saved at /Users/rubenmajor/Desktop/BROWSER_AI_PROMPT_TO_SCAN_REDDIT_THREADS.md
+- Now asks for paraphrased summaries, frames as institutional compliance monitoring, limits policy flags to Reddit's own rules
+- Ruben needs to paste prompt into a browser AI, get reports, paste results here
 
 Open threads to drive next:
-1. #20078 [proposed] — Receive thread URLs from Ruben (manual browser search required first; no automated workaround exists)
-2. Once URLs are provided: curl each thread's .json endpoint, scan for Reddit Content Policy violations (harassment/doxxing/impersonation/copyright), draft removal request for violative posts, flag non-actionable opinion-only posts
+1. #20078 [proposed] — Ruben pastes browser AI report → I analyze for actual Reddit Content Policy violations (only) → populate final DMCA notice → list constructive feedback for internal action
 
 Reference IDs:
 - Ticket: none
 - Ideas filed: #20078
-- Files touched: none
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785368618667` — 7/29/2026, 5:37:25 PM PT — 96 turns
-
-**Original task:**
-
-```
-We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for this? 
-
-Do we have a decrease in the number of registrations, website traffic across our EMT programs? What about a decrease int he traffic? I'm not worried about emsuniversity.com. I'm concerned with EMT websites only.
-```
-
-**Ideas referenced:** #13437, #13441, #13454, #16732, #18315, #18868, #1910, #19887, #19903, #19907, #19910, #19918, #19925, #19927, #19928, #20044 [deployed], #20085 [proposed], #20086 [proposed], #2096, #2097, #2098, #5431, #5574, #7174, #7907, #9132, #9222
-
-**Last PICKUP PROMPT:**
-
-```
- fallback should be clean now.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #current — EMT revenue/registration decline investigation — follow-up actions.
-
-Where we left off (verified 2026-07-29 17:35 PT):
-- Real organic decline is 30-40% (100-113/week in July vs 150-200 in March-April), not 67%
-- 99% of July students have no payment_method recorded — payment tracking is broken
-- Class Enrollments this week are strong (75 in 2.5 days) — people ARE enrolling
-- San Diego 92-student "spike" was non-paying lead imports (79/80 no payment method)
-- SF/Tucson/Peoria collapse is market/traffic, not technical (schedules fully available)
-- Google organic dropped 50% (42→20), referral tracking broke (NULL source spiked 2→47)
-- SMS AI Responder broken at twilio_sms_inbound.php:264 — PDO passed instead of null API key
-
-Open threads to drive next (EVERY item with real filed idea #):
-1. #20085 [confirmed, needs deploy] — Fix SMS AI Responder: change `new SMSAIResponder($pdo)` to `new SMSAIResponder()` at /var/www/emtskills/webhooks/twilio_sms_inbound.php line 264. Then TEST by sending a real SMS and checking error_log for the error disappearing.
-2. #20086 [needs investigation] — Caller lookup SQL: run `DESCRIBE address_book` to find actual column name for phone, fix the JOIN in caller_lookup function
-3. (human-only decision, no idea) — Fix payment_method tracking: 566/571 July students have NULL payment_method. The payment recording pipeline in the registration flow is broken. Check /var/www/emtskills/lib/stripe_klarna_checkout.php and the enrollment processor for where payment_method should be written to Students
-4. (human-only decision, no idea) — Google Ads/SEO audit: Google organic referrals dropped 42→20 in one month. Check Google Ads campaigns, keyword rankings, Google Search Console
-5. (human-only decision, no idea) — Referral source tracking: NULL source went from 2 to 47. Registration form tracking broke — find where referral_source is captured and fix it
-6. (human-only decision, no idea) — Add Deepseek fallback to CFA: francicken-llm first, deepseek-v4-pro fallback with 5s timeout for fast failure. The deepseek 32K context ceiling was already fixed (now 128K), so the "getting stuck" problem should be resolved
-
-Reference IDs:
-- Ideas filed: #20085, #20086
-- Key table: Students (admin_portal), Class_Enrollments (admin_portal), Course_Schedules (admin_portal)
-- Key file: /var/www/emtskills/webhooks/twilio_sms_inbound.php (line 264)
-- Handoff notes: Klarna card fallback #20044 deployed today, multiple LLM routing fixes
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785365363758` — 7/29/2026, 5:34:25 PM PT — 168 turns
-
-**Original task:**
-
-```
-https://www.emsuniversity.com/emtskills/routes/chat_portal.php - can you review chats from the last 48 hours for improvements and common issues, common bugs or whatever else needing resolution? Can you check to see if the Chat Widget is doing a good job? I think we did fix some things with CFAs and including Chat widget. Honestly whatever you do with Chat Widget, will need also to be done with other CFAs.
-```
-
-**Ideas referenced:** #1119, #12364, #16955, #18467 [approved], #18694, #18696, #18706, #18739, #18761, #18763, #18820, #18844, #18853, #18868, #1910, #19887, #19903, #19907, #19908, #19909, #19910 [executing], #19911, #19912, #19913, #19914, #19915, #19916, #19917, #19918 [executing], #19920 [executing], #19921, #19924, #19925, #19927, #19928, #19951 [proposed], #20044, #20073 [approved], #20074 [approved], #2050, #2085, #2098, #33689, #4796, #6366, #9019, #9112, #9152, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-e this or the cron can't fire.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up Chat Widget 48h audit follow-up — wire webhook + clean stale constant.
-
-Where we left off (verified 2026-07-29 17:14 PT):
-- RCA confirmed: gpt-5.2 on webhook.php line 27 is stale vestige from dead LiveChat.com path — NOT a live bypass. The brain override at emsu_ai_brain.php (bug_library #1119) + line 2191 fallback both use frankenstein-llm.
-- All CFA surfaces verified using frankenstein-llm: chat, email, SMS, tickets.
-- chat_widget_healthcheck = 34 healthy / 8 skipped.
-- chat_widget_ratings: 5+ complaints about handoff delays and superficial answers in past 10 days.
-- 4 dead domains already disabled (#18467 [deployed]).
-
-Open threads to drive next:
-1. HUMAN-ONLY DECISION: Provide real Discord webhook URL to wire into /var/www/emtskills/cron/cron_chat_handoff_unanswered_escalation.php line 27. Script exists with 30min/60min thresholds + Discord ping logic, blocked only on the placeholder URL.
-2. P3 hygiene: Remove stale `define('OPENAI_MODEL', 'gpt-5.2')` from webhook.php line 27 to prevent future false-alarm RCAs.
-3. Investigate chat_widget_ratings complaints about superficial answers — confirm the brain tool-use loop is healthy. Query chat_brain_tool_call_metrics and chat_brain_tool_telemetry tables (both show 0 rows — tool telemetry may not be recording).
-4. Verify cron_chat_handoff_unanswered_escalation.php is registered in crontab once webhook URL is set.
-
-Reference IDs:
-- Ideas: #18467 [deployed], #20073 [superseded], #20074 [queued — blocked on webhook URL]
-- Files: /var/www/emtskills/api/livechat/webhook.php (stale line 27), /var/www/emtskills/api/chat_widget_api.php (line 1264), /var/www/emtskills/lib/emsu_ai_brain.php (brain override), /var/www/emtskills/cron/cron_chat_handoff_unanswered_escalation.php (placeholder URL line 27)
-- Tables: admin_portal.chat_portal_sites (42 sites verified), admin_portal.chat_widget_ratings (30+ entries), admin_portal.chat_portal_transfers (handoff state machine), admin_portal.discord_webhook_config (vicky_dispatch_primary with empty URL)
-
-When done, append to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785370606525` — 7/29/2026, 5:32:01 PM PT — 50 turns
-
-**Original task:**
-
-```
-pickup TDSHS, TPIA Request 3 at: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
-
-I am quesitonning the portions of the request requesing files about our specific complaint and whether that's a helpful strategy in the request and whether we can even get or access that info anyway. It seems fruitless/pointless to try to get that information because it's completely privileged from disclosure as part of an open investigation. And if I'm going to file on it, could create other issues as well, like the departemtn's greater ire on this. While it's likel
-```
-
-**Ideas referenced:** #0891, #18868, #1910, #19587, #19595 [executing], #19599 [executing], #19605, #19887, #19903, #19907, #19910, #19918, #19919, #19925, #19927, #19928, #20044, #20079 [deployed], #2098, #2563, #600179, #623992
-
-**Last PICKUP PROMPT:**
-
-```
- the records you would obtain.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — TPIA Request 3: revise per Ruben's decision on Part A.
-
-Where we left off (verified 2026-07-29 17:31 PT):
-- Full TPIA analysis delivered. Three exceptions analyzed: 552.108 does not apply to DSHS administrative investigations, 552.103 and 552.111 will be used to withhold complaint files.
-- Recommendation: send Part B (policy records) now, send narrowed photo/inventory/June-29 request as separate item, defer full complaint-intake demand.
-- Investigation #16 in institutional_compliance.php tracks the TPIA log. tpia_findings table is empty and needs cataloging.
-
-Open threads to drive next:
-1. (human-only decision, no idea) — Ruben decision: send Part B as-is, revise Part A per recommendation, or send as-drafted. The current PDF is at /emtskills/uploads/tdshs/inspection-5196-2026/TPIA_REQUEST_3_complaint_files_2026-07.pdf.
-2. (human-only decision, no idea) — If revised: generate new TPIA PDF with split structure and send to openrecords@dshs.texas.gov + certified mail.
-3. (human-only decision, no idea) — If sending: update investigation #16 request log with submission date and start the 10-business-day clock.
-
-Reference IDs:
-- Investigation: #16 (tdshs-foia-tpia-requests-2026) in compliance_investigations table
-- Rules consulted: 08-regulator-noi-response-posture
-- Files touched: institutional_compliance.php (investigation record), TPIA Request 3 PDF
+- Files touched: /Users/rubenmajor/Desktop/BROWSER_AI_PROMPT_TO_SCAN_REDDIT_THREADS.md, /Users/rubenmajor/Desktop/EMSU_Reddit_Removal_Requests.md, /Users/rubenmajor/Desktop/clinerule_playwright_first.md
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -558,52 +646,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785295028411` — 7/29/2026, 5:07:41 PM PT — 402 turns
-
-**Original task:**
-
-```
-What outstanding build issues exist for the Broser Extension for Argus? What else do you recommend? Can you do some work and testing on it to improve it more? Make sure it's wired into actual Argus as well:
-
-https://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome
-```
-
-**Ideas referenced:** #0000, #10003, #10005, #10108, #10182, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12301, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #127908, #1281, #128193, #128203, #128206, #128263, #128266, #128275, #12900, #1309, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14000, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16213, #16263, #16584, #16589, #16590, #16602, #16625, #16646, #16680, #16715, #16716, #16717, #17078, #17307, #17342, #17345, #17669, #17672, #17673, #17691, #17697, #17741, #17746, #17749, #17751, #1807, #1820, #18328, #18337, #18360, #18388 [executing], #18396 [proposed], #18397 [proposed], #18398 [proposed], #1840, #1857, #18670, #18671, #18687, #18688, #18745, #18770, #1878, #18930 [proposed], #19370, #19407, #1952, #19585, #19670, #19686, #19896 [proposed], #19898 [proposed], #19899 [proposed], #19900 [proposed], #19901 [proposed], #19919 [proposed], #19920 [proposed], #19999 [approved], #20079 [deployed], #2071, #2079, #21262, #238636, #274160, #30363, #34495, #6164, #69707, #7490, #7505, #7513, #7554, #8365, #8942, #9650, #9654, #9660, #9689, #9706, #9733, #9889, #9910, #9934
-
-**Last PICKUP PROMPT:**
-
-```
- deployed, the idea tracks it)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus Chrome Extension build issues + improvements (original task from ~8:17 PM PT).
-
-Where we left off (verified 2026-07-29 17:07 PT):
-- Gate fix for ready_for_review deployed (orchestrator_api.php:5819) [deployed]
-- NORMALIZER status=deployed fix deployed (cron_ruben_implement.php:2907) [deployed]
-- #19919 row in clean terminal state (status=deployed, dev_stage=ready_for_review) [deployed]
-- #20079 NORMALIZER fix approved, in auditing stage [approved]
-- Argus extension original 6 fixes (default_icon, keyboard shortcut, content.js, etc.) all done per prior checklist
-- Steering injection QUICK CHECK blocked on Hex fleet — separate window handles it
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #19900 [executing] — Argus auto-cron ZIP rebuild (still open from original Argus task)
-2. #19898 [executing] — Argus content.js DOM extraction (completed, per checklist — verify)
-3. #20079 [approved] — NORMALIZER status=deployed fix — implementer cron will process next cycle
-
-Reference IDs:
-- Ideas: #19919 [deployed], #19900 [executing], #19898 [executing], #19899 [executing], #20079 [approved]
-- Files touched: orchestrator_api.php, cron_ruben_implement.php, orchestrator_ideas
-- Original task: Argus Chrome Extension — https://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
 ### `1785360672171` — 7/29/2026, 5:07:10 PM PT — 228 turns
 
 **Original task:**
@@ -645,52 +687,6 @@ Reference IDs:
 - Script ready: /tmp/vapi_minimal.php (local, needs SCP to server)
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785293294377` — 7/29/2026, 3:58:17 PM PT — 366 turns
-
-**Original task:**
-
-```
-A metric ton of emails came in to email agent within the last hour or 2. I need you to go over them for failures, do RCAs and build improvements into Email Agent / CFAs to be able to respond/act autonmously to resolve issues. Act on them and then give a status report / summary.
-```
-
-**Ideas referenced:** #111827, #1147, #1231, #1286, #1396, #1565, #166534, #1746, #1819, #19492, #19495, #19511, #19522, #19573, #19583, #19584, #19585, #19645, #19646, #19807, #19810, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830, #19831, #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19866 [proposed], #19867 [deployed], #19868 [proposed], #19870 [proposed], #19901 [proposed], #20058 [proposed], #20059 [proposed], #20060 [proposed], #20062 [proposed], #20063 [proposed], #20064 [proposed], #334155, #374151, #406060, #406061, #406242, #414633, #414634, #414636, #414642, #414643, #414692, #414693, #414694, #4480, #4481, #475569, #5749, #64748, #78350, #9888, #9989
-
-**Last PICKUP PROMPT:**
-
-```
-
-## Email Backlog: Clearing at 50/min, now ~69/hr remaining vs 1669 total.
-
-═══ PICKUP PROMPT ═══
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task ECB-86 — Email Agent / CFA Fleet Audit follow-up.
-
-Where we left off (verified 2026-07-29 15:57 PT):
-- 5 fixes deployed, all verified on disk with backups
-- Email backlog clearing at 50/min via new /etc/cron.d/emsu-email-inbound-routing
-- Franken health audience integrated into fleet-live-probe-hardfloor.mdc
-- 10 ideas filed across deployed/proposed status
-
-Open threads to drive next:
-1. #20060 [proposed] — Investigate why chat handoffs go unanswered: check agent queue visibility, shift coverage, Discord/chat notification paths. File: `cron/cron_chat_handoff_ticket_spawn.php`
-2. #20062 [proposed] — Increase email inbound batch size to 200/min until backlog < 100. File: `lib/email_inbound_routing.php`
-3. #20059 [proposed] — Audit runpod-pod-watchdog cron: is it actually monitoring anything? All events have NULL payload. Investigate `cron/cron_runpod_pod_watchdog.php` or wherever the events come from.
-4. #20058 [proposed] — Implement Kaizon cron-failure detection: exit code monitoring + smoke test for cron scripts affected by the type-error cascade
-
-Reference IDs:
-- Ticket: ECB-86
-- Tracking doc: `/Users/rubenmajor/Desktop/ECB-86_Tracking.md`
-- Backups: `lora_shadow_health.php.bak-20260728-pdo`, `cron_orchestrator_triage.php.bak-20260728-pdo`, `cron_chat_handoff_ticket_spawn.php.bak-20260728-idea19866`, `MailerUrlAllowlist_TrustedExternal.php.bak-20260728-idea19868`
-- Cron: `/etc/cron.d/emsu-email-inbound-routing`
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>

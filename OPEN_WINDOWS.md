@@ -6,20 +6,21 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/30/2026, 3:45:41 PM PT | window: last 72h | 131 tasks | index total 335 (parsed 5, cached 330)
+Generated: 7/30/2026, 4:45:42 PM PT | window: last 72h | 132 tasks | index total 336 (parsed 1, cached 335)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785360672171` | 7/30/2026, 3:45:39 PM | 461 | 1199KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
-| `1785295028411` | 7/30/2026, 3:45:29 PM | 1173 | 5107KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
-| `1785399211024` | 7/30/2026, 3:45:29 PM | 937 | 5536KB | #Julia/Claudia |
-| `1785363426908` | 7/30/2026, 3:28:45 PM | 670 | 1996KB | #EMT Webforms/Payments |
-| `1785435661707` | 7/30/2026, 3:26:45 PM | 860 | 2754KB | There's grievances getting lost because of all these categories in here. https://emsuniver |
+| `1785435661707` | 7/30/2026, 4:45:39 PM | 1139 | 3607KB | There's grievances getting lost because of all these categories in here. https://emsuniver |
+| `1785452265627` | 7/30/2026, 4:07:38 PM | 42 | 124KB | explain how this student has a Moodle Completion Date but does not have a printed certiica |
+| `1785441507395` | 7/30/2026, 4:05:55 PM | 152 | 305KB | Argus failure? Cites technical issues but doesn't not correct them with appropriate CFA lo |
+| `1785295028411` | 7/30/2026, 4:05:26 PM | 1288 | 5998KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
+| `1785360672171` | 7/30/2026, 3:57:10 PM | 504 | 1473KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
+| `1785399211024` | 7/30/2026, 3:54:40 PM | 966 | 5607KB | #Julia/Claudia |
+| `1785363426908` | 7/30/2026, 3:51:17 PM | 706 | 2066KB | #EMT Webforms/Payments |
 | `1785375877050` | 7/30/2026, 3:15:08 PM | 1653 | 6414KB | #GLM |
 | `1785293294377` | 7/30/2026, 3:13:14 PM | 618 | 2568KB | A metric ton of emails came in to email agent within the last hour or 2. I need you to go  |
 | `1785446562214` | 7/30/2026, 2:28:36 PM | 36 | 64KB | Can you give me a permanent unsername/password for houstonemt.com/wp-login.php? |
 | `1785365363758` | 7/30/2026, 1:57:39 PM | 710 | 1789KB | https://www.emsuniversity.com/emtskills/routes/chat_portal.php - can you review chats from |
-| `1785441507395` | 7/30/2026, 1:33:51 PM | 88 | 161KB | Argus failure? Cites technical issues but doesn't not correct them with appropriate CFA lo |
 | `1785368618667` | 7/30/2026, 1:31:50 PM | 338 | 1304KB | We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for |
 | `1785432785187` | 7/30/2026, 12:06:12 PM | 206 | 644KB | I have been seeing this in task completion, meaning that it just fails and then still call |
 | `1785261380940` | 7/30/2026, 9:35:08 AM | 82 | 402KB | #Comprehensive |
@@ -146,54 +147,113 @@ Generated: 7/30/2026, 3:45:41 PM PT | window: last 72h | 131 tasks | index total
 
 ## Per-window detail
 
-### `1785360672171` — 7/30/2026, 3:45:39 PM PT — 461 turns
+### `1785435661707` — 7/30/2026, 4:45:39 PM PT — 1139 turns
 
 **Original task:**
 
 ```
-For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? 
+There's grievances getting lost because of all these categories in here. https://emsuniversity.com/emtskills/routes/grievance_manager.php 
 
-Also how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?
+The grievances start with Pending Admin Complete (where the a human is supposed to check whether or not the person filled it out properly (i.e. accoridng to already known logic (had to be by hand and all fields completed), if rejected then it's sent to the student with a reason for the rejection. Human has 72 hours to do a disposition. Then after that it becomes an automated decision. If approved goes to the next step which is Admin Complete, it is then Ap
 ```
 
-**Ideas referenced:** #20032 [proposed], #20033 [proposed], #20038, #20045 [proposed], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20052 [proposed], #20081 [proposed], #20279 [proposed], #20289 [proposed], #20294 [proposed], #20296 [proposed], #20297, #20322, #20325
+**Ideas referenced:** #047857, #059669, #11111, #111827, #120179, #12770, #128681, #129302, #13437, #13441, #14662, #14710, #16464, #166534, #16957, #17657, #181825, #19576 [deployed], #19592, #19594, #20258 [proposed], #20259 [proposed], #20260 [proposed], #20265 [proposed], #20266 [proposed], #20268 [proposed], #20269 [proposed], #20275 [proposed], #20282 [proposed], #20283 [proposed], #20286 [proposed], #20290 [proposed], #20292 [proposed], #20295 [proposed], #20299 [proposed], #20309 [proposed], #20310 [proposed], #20316 [proposed], #20328 [executing], #20335 [executing], #20336 [executing], #20340 [executing], #20341 [in_progress], #21707, #2187 [rejected], #2363 [deployed], #2563, #2611 [deployed], #313244, #334155, #353857, #3730, #374151, #4338, #450438, #45475, #475569, #583788, #600179, #623992, #6366, #64748, #65039, #78350, #9203, #92400, #9888
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785452265627` — 7/30/2026, 4:07:38 PM PT — 42 turns
+
+**Original task:**
+
+```
+explain how this student has a Moodle Completion Date but does not have a printed certiicate? https://emsuniversity.com/emtskills/admin_profile.php?id=26913FT-01 
+
+How an you finish moodle and not print the certiicate?
+```
+
+**Ideas referenced:** #18836, #20331 [queued], #20338 [queued]
 
 **Last PICKUP PROMPT:**
 
 ```
-lt>
-═══════════════════════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════════════════════
-Pick up task Telephony improvements auto-deploy — voice A/B test, VAPI prompt update, config fix verification.
+ded once the pipeline is fixed
 
-Where we left off (verified 2026-07-30 14:30 PT):
-- #20045 [deployed] vapi_fallback config type bug fixed — grep verified `in_array` on server
-- #20047+20049+20051 [queued] VAPI prompt update sent via PATCH to Bella assistant 6ee87bdb — HTTP 200 confirmed but get shows old greeting still — may need squadId or serverUrl to stick
-- #20081 [queued] 5-way voice audit complete — Bella (11labs), Ronald (Cartesia male), Katie (Cartesia), Eric (Cartesia) all have same model/config. One new voice can be deployed by swapping assistant_id in twiml_inbound.php
-- #20279 [proposed] Rule 264 — MCP tool health: prove before claim
-- #20289 [proposed] Rule 265 — re-check all available data before declaring diagnostic conclusion
-- VAPI patch script at /tmp/patch_bella2.php — ran successfully but needs VAPI squad merge confirmation
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task -- Reconcile Moodle completion and EOC certificate issuance.
+
+Where we left off (verified 2026-07-30 16:07 PT):
+- Student 26913FT-01 (Kamdyn Sheets): moodle_completion_date=2026-07-27, end_of_course_certificate_link=NULL
+- Systemic issue: 20+ students in 269xx have completion without cert
+- Root cause: moodle_completion_date and certificate generation are two decoupled pipelines
+- Ruben's directive: finishing Moodle MUST trigger certificate generation so they are never out of sync
 
 Open threads to drive next:
-1. #20081 [queued] — Verify VAPI patch stuck by checking squadId/serverUrl merge. If old greeting persists, send full PATCH with squad/serverUrl from GET
-2. #20081 [queued] — Deploy Ronald (Cartesia) as alternative voice: edit twiml_inbound.php to use assistant_id 80f2341e on 10% of calls for A/B test
-3. #20279 [proposed] — Write .clinerules/RULE_264_MCP_TOOL_HEALTH.md to server with the 3-probe requirement
-4. #20289 [proposed] — Write .clinerules/RULE_265.md with the re-check requirement
-5. #20045 [deployed] — Measure effect: query LAST 24 HOURS call stats vs 7/28 baseline to confirm fix improved VAPI pickup rate
+1. #20338 [proposed] -- Architectural fix: hook Moodle completion date write to trigger synchronous certificate generation (or enqueue it); eliminate the gap that lets completions exist without certs
+2. #20331 [proposed] -- Regen certificate for 26913FT-01 (student 8128818) via SLS_Cert_Helpers::regenerateMoodleCertificate() so the student can print their cert
 
 Reference IDs:
-- Tickets: none
-- Ideas filed: #20045 [deployed], #20047 [queued], #20049 [queued], #20051 [queued], #20081 [queued], #20279 [proposed], #20289 [proposed], #20294 [queued], #20296 [queued]
-- Files touched: /tmp/patch_bella2.php, /tmp/vapi_quick.php
+- Ideas filed: #20331 [proposed], #20338 [proposed]
+- Files touched: /var/www/emtskills/lib/sls_cert_helpers.php, /var/www/emtskills/cron/cron_cert_auto_issue.php, /var/www/emtskills/cron/cron_certificate_issuance_pipeline.php, /var/www/emtskills/_scripts/backfill_course_completion_date_from_simplecertificate.php
+- Student: 26913FT-01 / 8128818
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════════════════════════════
+═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
 
-### `1785295028411` — 7/30/2026, 3:45:29 PM PT — 1173 turns
+### `1785441507395` — 7/30/2026, 4:05:55 PM PT — 152 turns
+
+**Original task:**
+
+```
+Argus failure? Cites technical issues but doesn't not correct them with appropriate CFA logic? Do RCA and fix this person and Argus and reply back to Vicky that it's fixed and try again.-> Final Exam 3rd Attempt Request for Wallace Gonzales - (26513FT - San Antonio)
+TKT-20260730-29F0A2F9
+https://emsuniversity.com/emtskills/tickets/view.php?id=22379
+
+
+Wallace is requesting access to his third attempt for the Final Exam. However, the "Attempt Quiz" button is missing from his account, preventing him from taking the exam.
+
+Upon reviewing his exam history, it appears that he experienced technical i
+```
+
+**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128275, #16213, #16263, #18745, #18770, #19415, #20288 [proposed], #20330 [proposed], #20332 [proposed], #20333 [proposed], #20334 [proposed], #20337 [proposed], #21262, #22379, #22501, #25227, #274160, #30363, #69707, #699463, #9086, #9168, #9339, #9889
+
+**Last PICKUP PROMPT:**
+
+```
+ady deployed (this task's fix)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #22379 — Argus V2 improvements: analytics fix, CS role write access, action_permissions DB wire, and tool parity.
+
+Where we left off (verified 2026-07-30 16:05 PT):
+- Argus has 8 sessions today (5 users), 30-day peak of 21 sessions (7 users). 265 total chats across 10 users. Week-over-week adoption climbing.
+- Four critical issues found: analytics logging broken (139 all-time rows, 0 today), action_permissions table empty, CS role write-locked, and 73% of actions are read-only research.
+- Idea #20288 [deployed] — Wallace Gonzales timeclose fix is live. Idea #20332 [proposed] P1 for analytics fix is the most impactful next step.
+
+Open threads to drive next:
+1. #20332 [proposed] P1 — Fix Argus analytics INSERT path so terminal chats write to argus_analytics. Traces: audit the terminal AJAX handler PHP code for where argus_analytics INSERT should fire.
+2. #20333 [proposed] P1 — INSERT INTO argus_action_permissions (role_name='CustomerService', action_key='ticket_comment', allowed=1) and same for ticket_status.
+3. #20334 [proposed] P1 — Populate argus_action_permissions with full permission matrix derived from PHP role checks, then wire the Roles tab UI.
+4. #20337 [proposed] P1 — Add 5 write-action handlers: section_swap, ea_redrive, quiz_unstick, moodle_enroll_fix, moodle_unsuspend.
+5. #20330 [proposed] P3 — Fix terminal_query response_time_ms capture.
+6. #20288 [deployed] — Monitor for recurrence of expired-timeclose vs exhausted-attempts confusion.
+
+Reference IDs:
+- Ticket: 22379
+- Ideas filed: #20288, #20330, #20332, #20333, #20334, #20337
+- Files touched: none (DB-only: quiz_overrides UPDATE + analytics reads)
+</result>
+</attempt_completion>
+```
+
+### `1785295028411` — 7/30/2026, 4:05:26 PM PT — 1288 turns
 
 **Original task:**
 
@@ -203,39 +263,36 @@ What outstanding build issues exist for the Broser Extension for Argus? What els
 https://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome
 ```
 
-**Ideas referenced:** #0000, #10003, #10005, #10108, #10182, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12301, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #127908, #1281, #128193, #128203, #128206, #128263, #128266, #128275, #12900, #1309, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14000, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16213, #16263, #16584, #16589, #16590, #16602, #16625, #16646, #16680, #16715, #16716, #16717, #17078, #17307, #17342, #17345, #17669, #17672, #17673, #17691, #17697, #17741, #17746, #17749, #17751, #1807, #1820, #18328, #18337, #18360, #18388 [executing], #18396 [proposed], #18397 [proposed], #18398 [proposed], #1840, #1857, #18670, #18671, #18687, #18688, #18745, #18770, #1878, #18930 [proposed], #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19370, #19407, #1952, #19585, #19670, #19686, #19896 [proposed], #19898 [proposed], #19899 [proposed], #19900 [proposed], #19901 [proposed], #19919 [proposed], #19920 [proposed], #19999 [approved], #2006, #20079 [deployed], #20103, #2071, #2079, #21262, #238636, #274160, #30363, #34495, #6164, #69707, #7490, #7505, #7513, #7554, #8211, #8365, #8942, #9650, #9654, #9660, #9689, #9706, #9733, #9889, #9910, #9934
+**Ideas referenced:** #0000, #10003, #10005, #10108, #10182, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12301, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #127908, #1281, #128193, #128203, #128206, #128263, #128266, #128275, #12900, #1309, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14000, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16213, #16263, #16584, #16589, #16590, #16602, #16625, #16646, #16680, #16715, #16716, #16717, #17078, #17307, #17342, #17345, #17669, #17672, #17673, #17691, #17697, #17741, #17746, #17749, #17751, #178544, #1807, #1820, #18328, #18337, #18360, #18388 [executing], #18396 [proposed], #18397 [proposed], #18398 [proposed], #1840, #1857, #18670, #18671, #18687, #18688, #18745, #18770, #1878, #18930 [proposed], #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19370, #19407, #1952, #19585, #19670, #19686, #19896 [proposed], #19898 [proposed], #19899 [proposed], #19900 [proposed], #19901 [proposed], #19919 [proposed], #19920 [proposed], #19970 [deployed], #19999 [approved], #2006, #20079 [deployed], #20103 [proposed], #2071, #2079, #21262, #238636, #274160, #30363, #34495, #6164, #69707, #7490, #7505, #7513, #7554, #8211, #8365, #8942, #9650, #9654, #9660, #9689, #9706, #9733, #9889, #9910, #9934
 
 **Last PICKUP PROMPT:**
 
 ```
-nd a query — it should stream.
+ax, earlier), HANDOFF_NOTES.md
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task — Argus Chrome extension v2.1.0 deep-test follow-up.
+Pick up task #1785441507395 — Argus extension build fixes + browser-control wiring.
 
-Where we left off (verified 2026-07-30 09:35 PT):
-- Full authenticated E2E verified externally: list/search/save sessions + SSE chat stream all 200
-- isAjax text/plain patch live in lib/auth.php (JSON 401s for extension)
-- cron_argus_extension_zip.php tempnam + rename bugs fixed; rebuild verified as root
-- #19900 [deployed] — auto-cron ZIP rebuild, now actually verified working
-- #19896 [deployed], #19898 [deployed], #19899 [deployed] — carried forward from prior session
-- #19919 [queued] — RCA idea from prior session, not re-verified
+Where we left off (verified 2026-07-30 16:04 PT):
+- 6 extension build issues fixed, ZIP rebuilt, 5/5 authenticated E2E pass. #19896 [deployed], #19899 [deployed], #19900 [deployed], #19898 [approved] (work done, row not yet promoted)
+- ARGUS_EXT_BROWSER_V1 live: lib/argus_browser_directive.php + alltastic_api.php browser_context ingestion + directive append for chrome-extension. Implements #19970 [deployed]
+- E2E verified: read-page answers page-aware; navigate emits clean single fenced browser_actions block
+- Test session cleaned up; HANDOFF_NOTES updated
 
 Open threads to drive next:
-1. Whitelist OPTIONS in Imunify360/ModSecurity at Plesk level for durable preflight support (human-only decision — no idea; needs Plesk admin)
-2. Ruben reloads extension in chrome://extensions and sends a live query to confirm in-browser (human-only — needs Ruben's browser)
+1. (human-only decision, no idea) — load the rebuilt extension ZIP in a real Chrome profile and click-test the full loop end-to-end in the side panel
+2. #20103 [proposed] — automated syntax validation + ZIP rebuild in deploy pipeline (recommendation, awaiting approval)
 
 Reference IDs:
-- Ideas filed: none this session
-- Ideas closed: #19900 [deployed]
-- Files touched: /var/www/emtskills/lib/auth.php, /var/www/emtskills/cron/cron_argus_extension_zip.php, /var/www/emtskills/public/argus-extension.zip (rebuilt), HANDOFF_NOTES.md
+- Ideas filed: none new this session
+- Ideas closed: #19970 [deployed], #19896 [deployed], #19899 [deployed], #19900 [deployed]
+- Files touched: /var/www/emtskills/lib/argus_browser_directive.php, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/lib/auth.php, HANDOFF_NOTES.md
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
+═══════════════════════════════════════════════</result>
 <task_progress>
 - [x] Argus extension 6 fixes applied
 - [x] RCA filed, #19919 approved
@@ -250,11 +307,63 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Fix isAjax text/plain JSON-401 gap
 - [x] Fix cron tempnam + rename bugs
 - [x] Update HANDOFF_NOTES.md
+- [x] Wire extension into real Argus backend (argus_browser_directive.php + alltastic_api.php browser_context) — #19970 deployed
+- [x] E2E verify browser-control path (read-page + navigate block emission)
 </task_progress>
 </attempt_completion>
 ```
 
-### `1785399211024` — 7/30/2026, 3:45:29 PM PT — 937 turns
+### `1785360672171` — 7/30/2026, 3:57:10 PM PT — 504 turns
+
+**Original task:**
+
+```
+For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? 
+
+Also how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?
+```
+
+**Ideas referenced:** #20032 [proposed], #20033 [proposed], #20038, #20045 [proposed], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20052 [proposed], #20081 [proposed], #20279 [proposed], #20289 [proposed], #20294 [proposed], #20296 [proposed], #20297, #20320 [proposed], #20321 [proposed], #20322, #20323 [proposed], #20325 [deploying]
+
+**Last PICKUP PROMPT:**
+
+```
+lt>
+═══════════════════════════════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════════════════════════════
+Pick up task Telephony improvements — voice A/B testing, VAPI prompts, config fixes.
+
+Where we left off (verified 2026-07-30 15:48 PT):
+- #20045 config fix: VERIFIED on disk — `in_array()` check active in twiml_inbound.php line ~55
+- Voice test calls: Bella_INBOUND + Bella_PROD returned 201 (call created), Ronald/Katie Cartesia timed out (provider issue — #20325)
+- VAPI prompt deploy script shipped but not independently verified yet
+- Rules 264/265/297/298 filed for MCP tool health and behavior fixes
+- #20081 voice A/B testing design filed, #20046 pre-call prospect detection deferred
+- Bella's firstMessage STILL says "Hi, this is Bella, an AI assistant" (last verified via VAPI API GET at ~14:55 PT) — prompt deploy may need retry
+
+Open threads to drive next:
+1. #20294 [deploying] — Verify VAPI prompt update took effect: curl GET assistant 6ee87bdb, check firstMessage changed to "Thanks for calling EMS University — how can I help?" If still old, re-run PATCH with full model config payload
+2. #20325 [deploying] — Fix Ronald/Katie Cartesia timeouts: check Cartesia dashboard for voice IDs, swap to working voices, re-run outbound call test
+3. #20323 [proposed] — Build permanent voice test harness on WOPR so future voice tests are one command
+4. #20081 [proposed] — A/B voice routing: branch on caller_number % 3 in twiml_inbound.php to assign assistant IDs
+5. #20046 [proposed] — Pre-call prospect detection in twiml_inbound.php
+6. #20321 [proposed] — Rule 298: self-validate rule 91 requirements before attempt_completion
+7. #20320 [proposed] — Rule 297: "test" means exercise the thing, not compare configs
+
+Reference IDs:
+- Tickets: Jalen Lynch (no ticket #)
+- Ideas filed: #20032, #20033, #20045 [deployed], #20046, #20047, #20049, #20050, #20051, #20052, #20081, #20279 [deployed], #20289 [deployed], #20294 [deploying], #20296, #20320, #20321, #20322, #20323, #20325 [deploying]
+- Files touched: /var/www/emtskills/api/telephony/twiml_inbound.php (line 55), /tmp/vapi_deploy_prompt.php, /tmp/vapi_test_voices.php
+- VAPI assistants: Bella_INBOUND 6ee87bdb (active), Bella_PROD 0e485e34, Ronald 80f2341e (timeout), Katie 5b4b7b90 (timeout), Eric d7dc496e (401-deleted)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785399211024` — 7/30/2026, 3:54:40 PM PT — 966 turns
 
 **Original task:**
 
@@ -281,32 +390,31 @@ Pick up idea #20042 [proposed] — restore julia-120b TP=2 to the pool.
 **Last PICKUP PROMPT:**
 
 ```
-ut VLLM_HOST_IP=192.168.100.2)
+oss-120b, 60 tok/s)
+</preview>
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #Julia/Claudia — restore julia-120b TP=2 to pool (idea #20042 [proposed]).
+Pick up task #Julia/Claudia — restore julia-120b TP=2 (idea #20042 [proposed]) — now producing RCA and registry fix, remaining work: vLLM TP=2 launch if needed.
 
-Where we left off (verified 2026-07-30 15:32 PT):
-- Julia head: spark-6ae6, LAN 192.168.1.190, RoCE 192.168.100.2, SSH via `ssh -p 2205 rubenmajor@127.0.0.1` from WOPR
-- Claudia worker: spark-6d51, LAN 192.168.1.194, RoCE 192.168.100.1, SSH via `ssh -p 2206 rubenmajor@127.0.0.1`
-- Ray cluster: head on 192.168.100.2, 3 nodes total (2 stale — needs cleanup)
-- Zero vLLM processes, zero active tunne
+Where we left off (verified 2026-07-30 15:53 PT):
+- Julia head spark-6ae6, Claudia spark-6d51 — BOTH LIVE, Ray cluster healthy
+- GLM Hex ring is Pompeii-50c0↔Marcus-63ce↔Tiberius-e9e0↔Cesar-3b41↔Cato-2aa8↔Augustus-e3b2↔Pompeii (julia NOT in ring)
+- Registry fixed: stale "TP=2 EVICTED for GLM ring" claim nuked and replaced with corrected topology
+- Still need: vLLM TP=2 model serving restart if actually down (user says "another window shows Julia/Claudia serving fine" — confirm)
 
 Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #20042 [proposed] — Clean Ray: `ray stop --force` on BOTH, `rm -rf /tmp/ray` on BOTH, restart with ONLY 2 nodes on RoCE IPs (head 192.168.100.2, worker 192.168.100.1)
-2. #20042 [proposed] — Launch with NCCL_IB_DISABLE=0 + LD_PRELOAD (match Cesar+Cato TP=2 config) to bypass Gloo: `NCCL_IB_DISABLE=0 NCCL_P2P_DISABLE=1 NCCL_IB_HCA=rocep1s0f1 NCCL_IB_GID_INDEX=3 NCCL_NET_GDR_LEVEL=5 NCCL_SOCKET_IFNAME=enp1s0f1np1 VLLM_HOST_IP=192.168.100.2 LD_PRELOAD=libnccl.so.2`
-3. #20042 [proposed] — After vLLM serves: create WOPR tunnel `setsid nohup ssh -N -L 11513:192.168.1.190:8000 -p 2205 rubenmajor@127.0.0.1`
-4. #20042 [proposed] — Verify: `curl http://127.0.0.1:11513/v1/models` → HTTP 200, frankenstein_host_probe → decode_live=true
-5. #20042 [proposed] — Fix stale registry note: spark-6ae6 is NOT GLM-ring augustus rank-1 (edit `/etc/litellm/frankenstein_registry.yaml`)
-6. #20042 [proposed] — Reconcile: reconcile_ideas([20042])
+1. #20042 [proposed] — Confirm julia-120b vLLM is serving: `curl http://127.0.0.1:11513/v1/models` from Mac; if down, clean Ray and launch with correct env (NCCL_IB_DISABLE=0 + LD_PRELOAD)
+2. #20042 [proposed] — After vLLM serves: verify `frankenstein_host_probe` shows decode_live=true for julia-120b
+3. #20042 [proposed] — Reconcile idea #20042 when vLLM is confirmed serving
 
 Reference IDs:
 - Ticket: #Julia/Claudia
 - Ideas filed: #20042 [proposed]
-- Files touched: /home/rubenmajor/julia_unified_tp2.sh, /etc/litellm/frankenstein_registry.yaml, /tmp/vllm_roce_tp3.log (failure traces)
-- Working reference: Cesar+Cato TP=2 (NCCL_IB_DISABLE=0, LD_PRELOAD — lookup from `HANDOFF_NOTES` or `grep -r "NCCL_IB_DISABLE=0" /home/rubenmajor/`)
+- Files touched: /etc/litellm/frankenstein_registry.yaml (registry note fixed), /home/rubenmajor/julia_unified_tp2.sh (script exists but has VLLM_HOST_IP mismatch issue)
+- GLM ring topology source: user Ruben (this conversation)
+- Stale origin per rule 297: LLM inference mistake on 2026-07-24 — spark-6ae6 confused with spark-e3b2 via hostname pattern collision
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -314,7 +422,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785363426908` — 7/30/2026, 3:28:45 PM PT — 670 turns
+### `1785363426908` — 7/30/2026, 3:51:17 PM PT — 706 turns
 
 **Original task:**
 
@@ -324,62 +432,42 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 Consult SLS / Webforms on EMT websites. When a payment declines / there is no instant notification to the student that the payment was declined (wonder if this is the case also on refresher webistes and cpr sites) and so because of this people would think that their payments went through. Only to find out later that they did not. This needs to show instantly and kick back. So API needs updating.
 ```
 
-**Ideas referenced:** #13873, #15637, #15902, #16590, #1767, #1770, #17846, #178501, #18820, #18868, #1910, #19492, #19495, #19875, #19876, #19877, #19879, #19881, #19882, #19883, #19887, #19903, #19907, #19908, #19909, #19910 [executing], #19911, #19912, #19913, #19914, #19915, #19916, #19917, #19918 [executing], #19920 [executing], #19921, #19924, #19925, #19927, #19928, #20055 [deployed], #20056 [deployed], #20057 [deployed], #20128 [deployed], #20130 [proposed], #20131, #20134 [proposed], #20183 [proposed], #20313 [proposed], #20314 [proposed], #20315 [proposed], #20317 [proposed], #2050, #2082, #2085, #2098, #4802, #9086, #9168, #9339, #9888
+**Ideas referenced:** #13873, #15637, #15902, #16590, #1767, #1770, #17846, #178501, #18820, #18868, #1910, #19492, #19495, #19875, #19876, #19877, #19879, #19881, #19882, #19883, #19887, #19903, #19907, #19908, #19909, #19910 [executing], #19911, #19912, #19913, #19914, #19915, #19916, #19917, #19918 [executing], #19920 [executing], #19921, #19924, #19925, #19927, #19928, #20055 [deployed], #20056 [deployed], #20057 [deployed], #20128 [deployed], #20130 [proposed], #20131, #20134 [proposed], #20183 [proposed], #20313 [proposed], #20314 [proposed], #20315 [proposed], #20317 [proposed], #20326 [executing], #20327 [executing], #2050, #2082, #2085, #2098, #4802, #9086, #9168, #9339, #9888
 
 **Last PICKUP PROMPT:**
 
 ```
-, which is what shipped today.
+rd token), #20317 [executing].
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1785012025445 (declined-payment escalation follow-ups).
+Pick up task #1785012025445 (declined-payment escalation and fail-open registration).
 
-Where we left off (verified 2026-07-30 15:27 PT):
-- Declined-payment escalation is LIVE: cron/cron_declined_payment_escalation.php, */5 min. Verified end-to-end (ticket TKT-20260730-8E49A533 id 22410 plus Discord msg 1532511844563030018 to #refundchannel, 2nd run escalated=0).
-- Read-only against qb_charge_attempts per the payment-path hold. No payment code touched.
-- ANSWERED Ruben's question: registration DOES survive a decline. ea_completion.php has zero payment references. Matthew Gillespie has 3 declines, 0 successes, registration in 26724T intact. Sabrina and Maia likewise. abandoned_reg_recovery_log is live (194 rows) and auto-invoiced Matthew at 14:40, 17 min after his 3rd decline.
-- The 7/29 $1695 decline with no matching registration was an existing student paying a balance, not a lost signup (12 regs landed 7/29, clean 13:15-20:05 gap around the charge).
-- Discord posting was broken system-wide: discord_watchdog_config.bot_token was empty. Populated with the validated EMSU Externship Agent token, getDiscordConfig() now returns source=db. #20315 [proposed] covers removing the hardcoded copy from api/shifts.php.
-- Payer attribution is a 3-minute Students-row heuristic because qb_charge_attempts.student_id is NULL on 100% of declines. #20313 [proposed] is the root fix.
-- Found 4 dead payment monitors (0 rows, no cron). #20314 [proposed].
-- Found REGISTRATION_FAILURE events written to a flat file while the DB table and its investigator cron see nothing. #20317 [proposed].
+Where we left off (verified 2026-07-30 15:49 PT):
+- Declined-payment escalation is LIVE: cron/cron_declined_payment_escalation.php, */5 min. Verified end-to-end (ticket TKT-20260730-8E49A533 id 22410 plus Discord msg 1532511844563030018 to #refundchannel, 2nd run escalated=0). Read-only against qb_charge_attempts, no payment code touched.
+- ROOT CAUSE of REGISTRATION_FAILURE answered: ambiguity refusal, not a crash. form_id=20 serves 9 locations and a missing location dropdown makes the handler discard the entire payload (name, email, phone included). All 16 logged failures share this cause and all are smoketests, so nothing real was lost yet.
+- Ruben directed fail-open: always persist, queue contact + invoice, prune later via EA/SLS. Filed #20326 [executing], which supersedes the framing of #20317 [executing] (kept as safety net for genuine hard failures).
+- Ruben's real requirement on the callbacks: "as long as the Human Agents actually make those calls and collect." Not yet satisfied. Filed #20327 [executing] for SLA re-ping ladder, mandatory outcome capture on close, and weekly recovery-rate digest.
+- Registration DOES survive declines (verified): ea_completion.php has zero payment references. Matthew Gillespie 3 declines / 0 successes, 26724T registration intact. abandoned_reg_recovery_log live at 194 rows, auto-invoiced Matthew 17 min after his 3rd decline.
+- The 7/29 $1695 decline with no matching registration was an existing student paying a balance, not a lost signup.
+- Discord posting was broken system-wide: discord_watchdog_config.bot_token was empty. Populated with the validated EMSU Externship Agent token, getDiscordConfig() now returns source=db.
+- Channel placement is CLOSED per Ruben (he does not care as long as humans call and collect). Staying on #refundchannel.
 
 Open threads to drive next:
-1. #20317 [proposed]: make REGISTRATION_FAILURE insert into registration_failure_log so cron_registration_submission_failure_investigator.php actually sees failures. Confirm whether emt_registration_enrollment_email.php or the mu-plugins ea_completion flow is live first, since the former self-reports DEPRECATED at line 412.
-2. #20313 [proposed]: wire payer identity at charge time so attribution stops being a heuristic. Touches charge callers, so it needs Ruben's go-ahead against the payment-path hold.
-3. #20315 [proposed]: remove the hardcoded Discord bot token from api/shifts.php (web-served file), point it at getDiscordConfig(), decide on rotation. Also populate discord_channel_config.channel_id, which still holds literal 'CHANNEL_ID_1' through 'CHANNEL_ID_6' placeholders.
-4. #20314 [proposed]: sweep for escalation/queue tables with 0 rows and no crontab reference, then wire or drop them.
-5. Channel placement (human-only decision, no idea): declined-payment callbacks currently go to #refundchannel. A dedicated #paymentupdates channel exists (1493421072626749590). Ruben's call whether these belong there instead.
+1. #20326 [executing]: verify the executor patches the LIVE handler. emt_registration_enrollment_email.php self-reports DEPRECATED at line 412 and names the mu-plugins ea_completion flow as the true handler, so confirm which serves live traffic before accepting the change. The multi-loc refusal is emitted around lines 1300-1311.
+2. #20327 [executing]: check payment_stalled_sla_timers for reuse before building a new SLA timer, since it may be another dead monitor per #20314 [executing].
+3. #20313 [executing]: payer identity at charge time. Ruben approved, which lifts the payment-path hold for this specific change. Verify the executor does not touch charge-success logic.
+4. #20314 [executing]: dead monitor sweep. Expect it to also flag payment_stalled_sla_timers, which #20327 [executing] depends on.
+5. #20315 [executing]: hardcoded Discord token removal from api/shifts.php plus populating discord_channel_config.channel_id, which still holds literal 'CHANNEL_ID_1' through 'CHANNEL_ID_6' placeholders. Token rotation is still an open call since the secret sat in a web-served file.
+6. #20317 [executing]: retained as the hard-failure safety net once #20326 [executing] lands.
 
 Reference IDs:
-- Ideas filed: #20313 [proposed], #20314 [proposed], #20315 [proposed], #20317 [proposed]
+- Ideas filed: #20313 [executing], #20314 [executing], #20315 [executing], #20317 [executing], #20326 [executing], #20327 [executing]
 - Ideas closed: none
-- Files touched: /var/www/emtskills/cron/cron_declined_payment_escalation.php (new), crontab (+1 entry */5), admin_portal.declined_payment_escalations (new table), admin_portal.discord_watchdog_config (bot_token populated), HANDOFF_NOTES.md
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Declined-payment escalation LIVE and verified end-to-end (ticket TKT-20260730-8E49A533 + Discord msg 1532511844563030018)
-- [x] Read-only against qb_cha
+- Files touched: /var/www/emtskills/cron/cron_declined_payment_escalation.php (new), crontab (+1 entry */5), admin_por
 ```
-
-### `1785435661707` — 7/30/2026, 3:26:45 PM PT — 860 turns
-
-**Original task:**
-
-```
-There's grievances getting lost because of all these categories in here. https://emsuniversity.com/emtskills/routes/grievance_manager.php 
-
-The grievances start with Pending Admin Complete (where the a human is supposed to check whether or not the person filled it out properly (i.e. accoridng to already known logic (had to be by hand and all fields completed), if rejected then it's sent to the student with a reason for the rejection. Human has 72 hours to do a disposition. Then after that it becomes an automated decision. If approved goes to the next step which is Admin Complete, it is then Ap
-```
-
-**Ideas referenced:** #047857, #059669, #11111, #111827, #12770, #128681, #129302, #14662, #14710, #166534, #16957, #17657, #181825, #19592, #19594, #20258 [proposed], #20259 [proposed], #20260 [proposed], #20265 [proposed], #20266 [proposed], #20268 [proposed], #20269 [proposed], #20275 [proposed], #20282 [proposed], #20283 [proposed], #20286 [proposed], #20290 [proposed], #20292 [proposed], #20295 [proposed], #20299 [proposed], #20309 [proposed], #20310 [proposed], #20316 [proposed], #2563, #313244, #334155, #3730, #374151, #4338, #450438, #45475, #475569, #600179, #623992, #6366, #64748, #78350, #9203, #92400
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785375877050` — 7/30/2026, 3:15:08 PM PT — 1653 turns
 
@@ -547,48 +635,6 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785441507395` — 7/30/2026, 1:33:51 PM PT — 88 turns
-
-**Original task:**
-
-```
-Argus failure? Cites technical issues but doesn't not correct them with appropriate CFA logic? Do RCA and fix this person and Argus and reply back to Vicky that it's fixed and try again.-> Final Exam 3rd Attempt Request for Wallace Gonzales - (26513FT - San Antonio)
-TKT-20260730-29F0A2F9
-https://emsuniversity.com/emtskills/tickets/view.php?id=22379
-
-
-Wallace is requesting access to his third attempt for the Final Exam. However, the "Attempt Quiz" button is missing from his account, preventing him from taking the exam.
-
-Upon reviewing his exam history, it appears that he experienced technical i
-```
-
-**Ideas referenced:** #20288 [proposed], #22379, #9086, #9168, #9339
-
-**Last PICKUP PROMPT:**
-
-```
-plies to its diagnostic path.*
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #22379 — Wallace Gonzales Final Exam 3rd attempt fix + Argus RCA.
-
-Where we left off (verified 2026-07-30 13:33 PT):
-- Fixed: quiz_overrides id=2903 timeclose cleared (expired time was hiding Attempt Quiz button). Ticket TKT-20260730-29F0A2F9 resolved. Vicky notified via ops chat.
-- Idea #20288 promoted to in_progress and queued for auto-implementation by Ruben.
-
-Open threads to drive next:
-1. #20288 [executing] — Argus: Detect expired quiz override timeclose vs exhausted attempts. Queued for auto-build. Monitor orchestrator for build completion.
-
-Reference IDs:
-- Ticket: 22379
-- Ideas filed: #20288
-- Files touched: none (DB-only fix: quiz_overrides UPDATE)
-</result>
 </attempt_completion>
 ```
 

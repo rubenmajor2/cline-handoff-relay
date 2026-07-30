@@ -6,25 +6,25 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/30/2026, 2:45:41 PM PT | window: last 72h | 138 tasks | index total 335 (parsed 5, cached 330)
+Generated: 7/30/2026, 3:45:41 PM PT | window: last 72h | 131 tasks | index total 335 (parsed 5, cached 330)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785399211024` | 7/30/2026, 2:44:40 PM | 799 | 4905KB | #Julia/Claudia |
-| `1785435661707` | 7/30/2026, 2:32:08 PM | 793 | 2552KB | There's grievances getting lost because of all these categories in here. https://emsuniver |
-| `1785363426908` | 7/30/2026, 2:31:45 PM | 495 | 1639KB | #EMT Webforms/Payments |
-| `1785375877050` | 7/30/2026, 2:28:49 PM | 1621 | 6339KB | #GLM |
+| `1785360672171` | 7/30/2026, 3:45:39 PM | 461 | 1199KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
+| `1785295028411` | 7/30/2026, 3:45:29 PM | 1173 | 5107KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
+| `1785399211024` | 7/30/2026, 3:45:29 PM | 937 | 5536KB | #Julia/Claudia |
+| `1785363426908` | 7/30/2026, 3:28:45 PM | 670 | 1996KB | #EMT Webforms/Payments |
+| `1785435661707` | 7/30/2026, 3:26:45 PM | 860 | 2754KB | There's grievances getting lost because of all these categories in here. https://emsuniver |
+| `1785375877050` | 7/30/2026, 3:15:08 PM | 1653 | 6414KB | #GLM |
+| `1785293294377` | 7/30/2026, 3:13:14 PM | 618 | 2568KB | A metric ton of emails came in to email agent within the last hour or 2. I need you to go  |
 | `1785446562214` | 7/30/2026, 2:28:36 PM | 36 | 64KB | Can you give me a permanent unsername/password for houstonemt.com/wp-login.php? |
-| `1785360672171` | 7/30/2026, 2:10:20 PM | 398 | 901KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
 | `1785365363758` | 7/30/2026, 1:57:39 PM | 710 | 1789KB | https://www.emsuniversity.com/emtskills/routes/chat_portal.php - can you review chats from |
 | `1785441507395` | 7/30/2026, 1:33:51 PM | 88 | 161KB | Argus failure? Cites technical issues but doesn't not correct them with appropriate CFA lo |
 | `1785368618667` | 7/30/2026, 1:31:50 PM | 338 | 1304KB | We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for |
 | `1785432785187` | 7/30/2026, 12:06:12 PM | 206 | 644KB | I have been seeing this in task completion, meaning that it just fails and then still call |
-| `1785295028411` | 7/30/2026, 9:36:27 AM | 1126 | 4415KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
 | `1785261380940` | 7/30/2026, 9:35:08 AM | 82 | 402KB | #Comprehensive |
 | `1785266096234` | 7/30/2026, 9:34:55 AM | 152 | 1032KB | Play Dr. of Frankenstein EXECUTOR for 90 minutes and use time stamps to make sure that you |
 | `1785298450123` | 7/30/2026, 9:34:16 AM | 1104 | 2559KB | #Stripe/Klarna |
-| `1785293294377` | 7/30/2026, 9:31:25 AM | 608 | 2556KB | A metric ton of emails came in to email agent within the last hour or 2. I need you to go  |
 | `1785267620046` | 7/30/2026, 9:31:22 AM | 192 | 542KB | Pick up task — Verify Argus gets clinerules steering injection via steering_builder.php, c |
 | `1785405238813` | 7/30/2026, 9:28:56 AM | 180 | 2320KB | Subject should not say: No-dead-end follow-up: Re: Following up on your EMSU support reque |
 | `1785355259217` | 7/30/2026, 9:24:30 AM | 748 | 1667KB | i ahve been told this form is not populating PDF forms properly downstream. Can you check  |
@@ -141,19 +141,120 @@ Generated: 7/30/2026, 2:45:41 PM PT | window: last 72h | 138 tasks | index total
 | `1785191995112` | 7/27/2026, 9:04:36 PM | 796 | 2848KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
 | `1785209942258` | 7/27/2026, 8:46:39 PM | 46 | 137KB | Do not close my active cline windows, but grey windows keep coming in for some reason here |
 | `1785196068848` | 7/27/2026, 5:25:13 PM | 50 | 640KB | https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students |
-| `1785191816762` | 7/27/2026, 3:37:22 PM | 2 | 2KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
-| `1785180947248` | 7/27/2026, 3:18:16 PM | 258 | 1105KB | ## 7 — #ALERTS · text bombardment / monitoring hygiene |
-| `1785180769250` | 7/27/2026, 3:17:12 PM | 198 | 656KB | ## 5 — #BUGS · user-facing bug queue |
-| `1785189940243` | 7/27/2026, 3:06:17 PM | 2 | 3KB | #Argus |
-| `1785180925366` | 7/27/2026, 3:05:28 PM | 130 | 428KB | ## 6 — #INFRA · WOPR GPU / kernel / WireGuard |
-| `1785180724129` | 7/27/2026, 3:03:44 PM | 322 | 1098KB | ## 4 — #GLM · GLM-5.2 ring |
-| `1785180684278` | 7/27/2026, 2:51:26 PM | 300 | 1223KB | ## 3 — #FORMS · durable fix for WPForms + its replacement |
 
 ---
 
 ## Per-window detail
 
-### `1785399211024` — 7/30/2026, 2:44:40 PM PT — 799 turns
+### `1785360672171` — 7/30/2026, 3:45:39 PM PT — 461 turns
+
+**Original task:**
+
+```
+For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? 
+
+Also how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?
+```
+
+**Ideas referenced:** #20032 [proposed], #20033 [proposed], #20038, #20045 [proposed], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20052 [proposed], #20081 [proposed], #20279 [proposed], #20289 [proposed], #20294 [proposed], #20296 [proposed], #20297, #20322, #20325
+
+**Last PICKUP PROMPT:**
+
+```
+lt>
+═══════════════════════════════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════════════════════════════
+Pick up task Telephony improvements auto-deploy — voice A/B test, VAPI prompt update, config fix verification.
+
+Where we left off (verified 2026-07-30 14:30 PT):
+- #20045 [deployed] vapi_fallback config type bug fixed — grep verified `in_array` on server
+- #20047+20049+20051 [queued] VAPI prompt update sent via PATCH to Bella assistant 6ee87bdb — HTTP 200 confirmed but get shows old greeting still — may need squadId or serverUrl to stick
+- #20081 [queued] 5-way voice audit complete — Bella (11labs), Ronald (Cartesia male), Katie (Cartesia), Eric (Cartesia) all have same model/config. One new voice can be deployed by swapping assistant_id in twiml_inbound.php
+- #20279 [proposed] Rule 264 — MCP tool health: prove before claim
+- #20289 [proposed] Rule 265 — re-check all available data before declaring diagnostic conclusion
+- VAPI patch script at /tmp/patch_bella2.php — ran successfully but needs VAPI squad merge confirmation
+
+Open threads to drive next:
+1. #20081 [queued] — Verify VAPI patch stuck by checking squadId/serverUrl merge. If old greeting persists, send full PATCH with squad/serverUrl from GET
+2. #20081 [queued] — Deploy Ronald (Cartesia) as alternative voice: edit twiml_inbound.php to use assistant_id 80f2341e on 10% of calls for A/B test
+3. #20279 [proposed] — Write .clinerules/RULE_264_MCP_TOOL_HEALTH.md to server with the 3-probe requirement
+4. #20289 [proposed] — Write .clinerules/RULE_265.md with the re-check requirement
+5. #20045 [deployed] — Measure effect: query LAST 24 HOURS call stats vs 7/28 baseline to confirm fix improved VAPI pickup rate
+
+Reference IDs:
+- Tickets: none
+- Ideas filed: #20045 [deployed], #20047 [queued], #20049 [queued], #20051 [queued], #20081 [queued], #20279 [proposed], #20289 [proposed], #20294 [queued], #20296 [queued]
+- Files touched: /tmp/patch_bella2.php, /tmp/vapi_quick.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785295028411` — 7/30/2026, 3:45:29 PM PT — 1173 turns
+
+**Original task:**
+
+```
+What outstanding build issues exist for the Broser Extension for Argus? What else do you recommend? Can you do some work and testing on it to improve it more? Make sure it's wired into actual Argus as well:
+
+https://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome
+```
+
+**Ideas referenced:** #0000, #10003, #10005, #10108, #10182, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12301, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #127908, #1281, #128193, #128203, #128206, #128263, #128266, #128275, #12900, #1309, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14000, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16213, #16263, #16584, #16589, #16590, #16602, #16625, #16646, #16680, #16715, #16716, #16717, #17078, #17307, #17342, #17345, #17669, #17672, #17673, #17691, #17697, #17741, #17746, #17749, #17751, #1807, #1820, #18328, #18337, #18360, #18388 [executing], #18396 [proposed], #18397 [proposed], #18398 [proposed], #1840, #1857, #18670, #18671, #18687, #18688, #18745, #18770, #1878, #18930 [proposed], #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19370, #19407, #1952, #19585, #19670, #19686, #19896 [proposed], #19898 [proposed], #19899 [proposed], #19900 [proposed], #19901 [proposed], #19919 [proposed], #19920 [proposed], #19999 [approved], #2006, #20079 [deployed], #20103, #2071, #2079, #21262, #238636, #274160, #30363, #34495, #6164, #69707, #7490, #7505, #7513, #7554, #8211, #8365, #8942, #9650, #9654, #9660, #9689, #9706, #9733, #9889, #9910, #9934
+
+**Last PICKUP PROMPT:**
+
+```
+nd a query — it should stream.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — Argus Chrome extension v2.1.0 deep-test follow-up.
+
+Where we left off (verified 2026-07-30 09:35 PT):
+- Full authenticated E2E verified externally: list/search/save sessions + SSE chat stream all 200
+- isAjax text/plain patch live in lib/auth.php (JSON 401s for extension)
+- cron_argus_extension_zip.php tempnam + rename bugs fixed; rebuild verified as root
+- #19900 [deployed] — auto-cron ZIP rebuild, now actually verified working
+- #19896 [deployed], #19898 [deployed], #19899 [deployed] — carried forward from prior session
+- #19919 [queued] — RCA idea from prior session, not re-verified
+
+Open threads to drive next:
+1. Whitelist OPTIONS in Imunify360/ModSecurity at Plesk level for durable preflight support (human-only decision — no idea; needs Plesk admin)
+2. Ruben reloads extension in chrome://extensions and sends a live query to confirm in-browser (human-only — needs Ruben's browser)
+
+Reference IDs:
+- Ideas filed: none this session
+- Ideas closed: #19900 [deployed]
+- Files touched: /var/www/emtskills/lib/auth.php, /var/www/emtskills/cron/cron_argus_extension_zip.php, /var/www/emtskills/public/argus-extension.zip (rebuilt), HANDOFF_NOTES.md
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Argus extension 6 fixes applied
+- [x] RCA filed, #19919 approved
+- [x] #19896 done (default_icon present)
+- [x] #19899 done (keyboard shortcut, ZIP rebuilt)
+- [x] #19900 — Add auto-cron ZIP rebuild (verified working)
+- [x] #19898 done (content.js extract function verified solid)
+- [x] Rebuild final ZIP with all changes
+- [x] Fix CORS + SameSite auth root cause
+- [x] Add search_sessions backend handler
+- [x] Authenticated E2E test matrix (5/5 pass)
+- [x] Fix isAjax text/plain JSON-401 gap
+- [x] Fix cron tempnam + rename bugs
+- [x] Update HANDOFF_NOTES.md
+</task_progress>
+</attempt_completion>
+```
+
+### `1785399211024` — 7/30/2026, 3:45:29 PM PT — 937 turns
 
 **Original task:**
 
@@ -175,49 +276,45 @@ Pick up idea #20042 [proposed] — restore julia-120b TP=2 to the pool.
   
 ```
 
-**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11781, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12314, #12335, #12403, #1241, #12459, #12463, #12477, #12506, #12584, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #12716, #12824, #12872, #12878, #12900, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16163, #16265, #16304, #16417, #16448, #16449, #16584, #16589, #16590, #16602, #16604, #16625, #16646, #16648, #16674, #16676, #16680, #16715, #16716, #16717, #16844, #16863, #17078, #17145, #17202, #17203, #17205, #17300, #17307, #17430, #1765, #17673, #1781, #1807, #18312, #18326, #18670, #18671, #19338, #19585, #1967, #19686, #1998, #20042 [proposed], #20172 [proposed], #20181 [proposed], #20248 [proposed], #20285 [proposed], #2071, #2079, #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
+**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11781, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12314, #12335, #12403, #1241, #12459, #12463, #12477, #12506, #12584, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #12716, #12824, #12872, #12878, #12900, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16163, #16265, #16304, #16417, #16448, #16449, #16584, #16589, #16590, #16602, #16604, #16625, #16646, #16648, #16674, #16676, #16680, #16715, #16716, #16717, #16844, #16863, #17078, #17145, #17202, #17203, #17205, #17300, #17307, #17430, #1765, #17673, #1781, #1807, #18312, #18326, #18670, #18671, #19338, #19585, #1967, #19686, #1998, #20042 [proposed], #20108, #20172 [proposed], #20181 [proposed], #20248 [proposed], #20285 [proposed], #2071, #2079, #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
 
 **Last PICKUP PROMPT:**
 
 ```
-e the cluster never went down.
+ut VLLM_HOST_IP=192.168.100.2)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
+Pick up task #Julia/Claudia — restore julia-120b TP=2 to pool (idea #20042 [proposed]).
 
-Pick up task #20042 — Julia+Claudia CX7 TP=2 julia-120b recovery verification
+Where we left off (verified 2026-07-30 15:32 PT):
+- Julia head: spark-6ae6, LAN 192.168.1.190, RoCE 192.168.100.2, SSH via `ssh -p 2205 rubenmajor@127.0.0.1` from WOPR
+- Claudia worker: spark-6d51, LAN 192.168.1.194, RoCE 192.168.100.1, SSH via `ssh -p 2206 rubenmajor@127.0.0.1`
+- Ray cluster: head on 192.168.100.2, 3 nodes total (2 stale — needs cleanup)
+- Zero vLLM processes, zero active tunne
 
-Where we left off (verified 2026-07-30 14:03 PT):
-- #20042 [deployed] confirmed julia-120b :11513 is LIVE serving gpt-oss-120b. HTTP 200, generation probes pass (5 tokens, real vLLM output). Pool members: glm-5.2-local, artemis-gpt-oss-120b, julia-120b. Adapter log shows healthy GLM-first spill. Stale registry note (GLM ring misattribution) already corrected.
-
-Open threads to drive next:
-1. #20042 [deployed] — confirmed live, no recovery action needed.
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #20042 [proposed] — Clean Ray: `ray stop --force` on BOTH, `rm -rf /tmp/ray` on BOTH, restart with ONLY 2 nodes on RoCE IPs (head 192.168.100.2, worker 192.168.100.1)
+2. #20042 [proposed] — Launch with NCCL_IB_DISABLE=0 + LD_PRELOAD (match Cesar+Cato TP=2 config) to bypass Gloo: `NCCL_IB_DISABLE=0 NCCL_P2P_DISABLE=1 NCCL_IB_HCA=rocep1s0f1 NCCL_IB_GID_INDEX=3 NCCL_NET_GDR_LEVEL=5 NCCL_SOCKET_IFNAME=enp1s0f1np1 VLLM_HOST_IP=192.168.100.2 LD_PRELOAD=libnccl.so.2`
+3. #20042 [proposed] — After vLLM serves: create WOPR tunnel `setsid nohup ssh -N -L 11513:192.168.1.190:8000 -p 2205 rubenmajor@127.0.0.1`
+4. #20042 [proposed] — Verify: `curl http://127.0.0.1:11513/v1/models` → HTTP 200, frankenstein_host_probe → decode_live=true
+5. #20042 [proposed] — Fix stale registry note: spark-6ae6 is NOT GLM-ring augustus rank-1 (edit `/etc/litellm/frankenstein_registry.yaml`)
+6. #20042 [proposed] — Reconcile: reconcile_ideas([20042])
 
 Reference IDs:
-- Ideas filed: #20042 [deployed]
-- Files touched: none
+- Ticket: #Julia/Claudia
+- Ideas filed: #20042 [proposed]
+- Files touched: /home/rubenmajor/julia_unified_tp2.sh, /etc/litellm/frankenstein_registry.yaml, /tmp/vllm_roce_tp3.log (failure traces)
+- Working reference: Cesar+Cato TP=2 (NCCL_IB_DISABLE=0, LD_PRELOAD — lookup from `HANDOFF_NOTES` or `grep -r "NCCL_IB_DISABLE=0" /home/rubenmajor/`)
 
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
 </attempt_completion>
 ```
 
-### `1785435661707` — 7/30/2026, 2:32:08 PM PT — 793 turns
-
-**Original task:**
-
-```
-There's grievances getting lost because of all these categories in here. https://emsuniversity.com/emtskills/routes/grievance_manager.php 
-
-The grievances start with Pending Admin Complete (where the a human is supposed to check whether or not the person filled it out properly (i.e. accoridng to already known logic (had to be by hand and all fields completed), if rejected then it's sent to the student with a reason for the rejection. Human has 72 hours to do a disposition. Then after that it becomes an automated decision. If approved goes to the next step which is Admin Complete, it is then Ap
-```
-
-**Ideas referenced:** #047857, #059669, #11111, #111827, #12770, #128681, #129302, #166534, #16957, #17657, #181825, #19592, #19594, #20258 [proposed], #20259 [proposed], #20260 [proposed], #20265 [proposed], #20266 [proposed], #20268 [proposed], #20269 [proposed], #20275 [proposed], #20282 [proposed], #20283 [proposed], #20286 [proposed], #20290 [proposed], #20292 [proposed], #20295 [proposed], #20299 [proposed], #2563, #313244, #334155, #3730, #374151, #4338, #450438, #45475, #475569, #600179, #623992, #6366, #64748, #78350, #9203, #92400
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785363426908` — 7/30/2026, 2:31:45 PM PT — 495 turns
+### `1785363426908` — 7/30/2026, 3:28:45 PM PT — 670 turns
 
 **Original task:**
 
@@ -227,46 +324,64 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 Consult SLS / Webforms on EMT websites. When a payment declines / there is no instant notification to the student that the payment was declined (wonder if this is the case also on refresher webistes and cpr sites) and so because of this people would think that their payments went through. Only to find out later that they did not. This needs to show instantly and kick back. So API needs updating.
 ```
 
-**Ideas referenced:** #1767, #1770, #17846, #18820, #18868, #1910, #19492, #19495, #19875, #19876, #19877, #19879, #19881, #19882, #19883, #19887, #19903, #19907, #19908, #19909, #19910 [executing], #19911, #19912, #19913, #19914, #19915, #19916, #19917, #19918 [executing], #19920 [executing], #19921, #19924, #19925, #19927, #19928, #20055 [deployed], #20056 [deployed], #20057 [deployed], #20128 [deployed], #20130 [proposed], #20131, #20134 [proposed], #20183 [proposed], #2050, #2082, #2085, #2098, #4802, #9086, #9168, #9339, #9888
+**Ideas referenced:** #13873, #15637, #15902, #16590, #1767, #1770, #17846, #178501, #18820, #18868, #1910, #19492, #19495, #19875, #19876, #19877, #19879, #19881, #19882, #19883, #19887, #19903, #19907, #19908, #19909, #19910 [executing], #19911, #19912, #19913, #19914, #19915, #19916, #19917, #19918 [executing], #19920 [executing], #19921, #19924, #19925, #19927, #19928, #20055 [deployed], #20056 [deployed], #20057 [deployed], #20128 [deployed], #20130 [proposed], #20131, #20134 [proposed], #20183 [proposed], #20313 [proposed], #20314 [proposed], #20315 [proposed], #20317 [proposed], #2050, #2082, #2085, #2098, #4802, #9086, #9168, #9339, #9888
 
 **Last PICKUP PROMPT:**
 
 ```
-x rather than touching it now.
+, which is what shipped today.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up: EMT payment forms verified healthy 3x on 2026-07-30. All fixes remain ON HOLD.
+Pick up task #1785012025445 (declined-payment escalation follow-ups).
 
-Where we left off (verified 2026-07-30 11:11 PT):
-- **START HERE for any payment question:** `/var/www/emtskills/docs/PAYMENT_DECLINE_KNOWN_ISSUES.md` (338 lines). Do not re-diagnose from scratch.
-- Ruben asked 3x today (09:17, 11:02, 11:07) whether EMT sites are OK. All three times: healthy, no action needed.
-- **CORRECT SLUG IS `/register/`.** `/emt-course-registration/` 404s and creates a false alarm.
-- **WP-CLI `--after`/`--before` DATE FILTERS ARE SILENTLY IGNORED on these sites.** I mis-reported "54 failed CPR orders today" from all-time cumulative counts. ALWAYS query `{prefix}posts` directly with `DATE(post_date)`. Real answer: cprclass.org has 1 order since 7/24. Prefixes are randomized per site (cprclass.org = `EOLL8yfE7_`, emsuniversity.com = `LzDe7pTO_`) — fetch via `wp config get table_prefix`.
-- Live tests: arizonaemt/dallasemt/sandiegoemt/houstonemt HTTP 200 with QB field + card field + submit button. Intuit tokenize `OAUTH_OK 731` / `HTTP 201` on two runs today.
-- Volume normal for the hour: EMT charges 00:00-11:02 by day = 7/27:1, 7/28:1, 7/29:0, 7/30:0. Yesterday finished best-of-week (10 charges/$7,580) with zero by 11 AM.
-- Intake at parity: registrations by 11:03 = 6 (7/28), 4 (7/29), 4 (today). Canary round-tripped OK at 11:00.
-- Ruben clarified today's payments were CPR, not EMT. Zero WooCommerce orders today across all 13 CPR/refresher vhosts. Authnet settled mirror shows 7/27=3/$2,504.50 and 7/28=10/$16,266.00, with 7/29-7/30 absent because **Authorize.net only exposes SETTLED batches and settlement runs overnight** — expected, not a gap. Sync cron ran clean at 09:10 (`batches=112 seen=2183 upserted=1778`).
+Where we left off (verified 2026-07-30 15:27 PT):
+- Declined-payment escalation is LIVE: cron/cron_declined_payment_escalation.php, */5 min. Verified end-to-end (ticket TKT-20260730-8E49A533 id 22410 plus Discord msg 1532511844563030018 to #refundchannel, 2nd run escalated=0).
+- Read-only against qb_charge_attempts per the payment-path hold. No payment code touched.
+- ANSWERED Ruben's question: registration DOES survive a decline. ea_completion.php has zero payment references. Matthew Gillespie has 3 declines, 0 successes, registration in 26724T intact. Sabrina and Maia likewise. abandoned_reg_recovery_log is live (194 rows) and auto-invoiced Matthew at 14:40, 17 min after his 3rd decline.
+- The 7/29 $1695 decline with no matching registration was an existing student paying a balance, not a lost signup (12 regs landed 7/29, clean 13:15-20:05 gap around the charge).
+- Discord posting was broken system-wide: discord_watchdog_config.bot_token was empty. Populated with the validated EMSU Externship Agent token, getDiscordConfig() now returns source=db. #20315 [proposed] covers removing the hardcoded copy from api/shifts.php.
+- Payer attribution is a 3-minute Students-row heuristic because qb_charge_attempts.student_id is NULL on 100% of declines. #20313 [proposed] is the root fix.
+- Found 4 dead payment monitors (0 rows, no cron). #20314 [proposed].
+- Found REGISTRATION_FAILURE events written to a flat file while the DB table and its investigator cron see nothing. #20317 [proposed].
 
 Open threads to drive next:
-1. #20134 [proposed] — dead payment observability, ON HOLD. NEW EVIDENCE STRENGTHENING IT: `cron_authnet_payment_sync.php` logs `kill-switch check skipped: Unknown column 'config_value'` on every run, so its abort switch is unreadable and it always proceeds. Same schema-drift class as `qb_avs_monitor.php` (SQL 1054) and `cron_qb_charge_attempt.php` (`error_count`, `cron_log.cron_name`). Fold this third instance into the #20134 repair. Safest of the held fixes.
-2. #20130 [proposed] — AVS enum misuse, ON HOLD. `avsStreet`/`avsZip` are Intuit AVS *result* enums (Pass|NotAvailable|Fail), not addresses; every charge 400s then succeeds on the AVS-stripped retry. Ship only on a trigger. Canary one low-volume site first. Frontend address selectors are NOT the bug.
-3. #20183 [proposed] — 13 sites run the QB plugin WITHOUT the #20128 fix. Today's check found zero WooCommerce order volume on all of them, which lowers urgency further. Confirm volume before deploying. Needs a Ruben decision.
-4. seattleemt.com and portlandemt.com 404 on `/register/` — different slug on those two. **(human-only decision, no idea)** — needs Ruben to confirm whether those sites should take registrations.
+1. #20317 [proposed]: make REGISTRATION_FAILURE insert into registration_failure_log so cron_registration_submission_failure_investigator.php actually sees failures. Confirm whether emt_registration_enrollment_email.php or the mu-plugins ea_completion flow is live first, since the former self-reports DEPRECATED at line 412.
+2. #20313 [proposed]: wire payer identity at charge time so attribution stops being a heuristic. Touches charge callers, so it needs Ruben's go-ahead against the payment-path hold.
+3. #20315 [proposed]: remove the hardcoded Discord bot token from api/shifts.php (web-served file), point it at getDiscordConfig(), decide on rotation. Also populate discord_channel_config.channel_id, which still holds literal 'CHANNEL_ID_1' through 'CHANNEL_ID_6' placeholders.
+4. #20314 [proposed]: sweep for escalation/queue tables with 0 rows and no crontab reference, then wire or drop them.
+5. Channel placement (human-only decision, no idea): declined-payment callbacks currently go to #refundchannel. A dedicated #paymentupdates channel exists (1493421072626749590). Ruben's call whether these belong there instead.
 
 Reference IDs:
-- Ideas: #20055 [deployed], #20056 [deployed], #20128 [deployed], #20130 [proposed], #20134 [proposed], #20183 [proposed]
-- Runbook: `/var/www/emtskills/docs/PAYMENT_DECLINE_KNOWN_ISSUES.md`
-- Files touched today: none (verification only, three rounds)
-- Backups on all 19 sites: `.bak-20055-20260729`, `.bak-declinedbody-20260729`
-- HANDOFF_NOTES.md entries: 2026-07-30 01:43, 01:47, 09:22 PT
+- Ideas filed: #20313 [proposed], #20314 [proposed], #20315 [proposed], #20317 [proposed]
+- Ideas closed: none
+- Files touched: /var/www/emtskills/cron/cron_declined_payment_escalation.php (new), crontab (+1 entry */5), admin_portal.declined_payment_escalations (new table), admin_portal.discord_watchdog_config (bot_token populated), HANDOFF_NOTES.md
 
-When done, append to cli
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Declined-payment escalation LIVE and verified end-to-end (ticket TKT-20260730-8E49A533 + Discord msg 1532511844563030018)
+- [x] Read-only against qb_cha
 ```
 
-### `1785375877050` — 7/30/2026, 2:28:49 PM PT — 1621 turns
+### `1785435661707` — 7/30/2026, 3:26:45 PM PT — 860 turns
+
+**Original task:**
+
+```
+There's grievances getting lost because of all these categories in here. https://emsuniversity.com/emtskills/routes/grievance_manager.php 
+
+The grievances start with Pending Admin Complete (where the a human is supposed to check whether or not the person filled it out properly (i.e. accoridng to already known logic (had to be by hand and all fields completed), if rejected then it's sent to the student with a reason for the rejection. Human has 72 hours to do a disposition. Then after that it becomes an automated decision. If approved goes to the next step which is Admin Complete, it is then Ap
+```
+
+**Ideas referenced:** #047857, #059669, #11111, #111827, #12770, #128681, #129302, #14662, #14710, #166534, #16957, #17657, #181825, #19592, #19594, #20258 [proposed], #20259 [proposed], #20260 [proposed], #20265 [proposed], #20266 [proposed], #20268 [proposed], #20269 [proposed], #20275 [proposed], #20282 [proposed], #20283 [proposed], #20286 [proposed], #20290 [proposed], #20292 [proposed], #20295 [proposed], #20299 [proposed], #20309 [proposed], #20310 [proposed], #20316 [proposed], #2563, #313244, #334155, #3730, #374151, #4338, #450438, #45475, #475569, #600179, #623992, #6366, #64748, #78350, #9203, #92400
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785375877050` — 7/30/2026, 3:15:08 PM PT — 1653 turns
 
 **Original task:**
 
@@ -283,47 +398,75 @@ I stopped tuning preferences and made it unconditional in /usr/local/bin/franken
 
 ```
 
-**Ideas referenced:** #11261, #12059, #12060, #12231, #12251, #12335, #12365, #12366, #12368, #12407, #12459, #1248 [resolved], #12672, #12689, #13108, #13121, #13831, #13832, #13874, #14000, #16120, #16126, #16128, #16844, #1685, #1687, #1705, #1706, #178531, #18781, #18868, #1888, #1894, #1962, #1964, #1967, #19903, #1993 [resolved], #19962 [proposed], #20005 [proposed], #20022 [rejected], #20040 [proposed], #20041 [proposed], #20042 [proposed], #20054 [proposed], #20068 [proposed], #20069 [proposed], #20082 [proposed], #20088 [proposed], #20102 [proposed], #20112 [proposed], #20129 [proposed], #2014, #20172 [proposed], #20178 [proposed], #20179 [proposed], #20245 [executing], #20246 [rejected], #20247 [executing], #20264 [proposed], #20272 [executing], #20291 [executing], #20297 [executing], #20300 [proposed], #20302 [executing], #2050, #2102 [deployed], #2103 [deployed], #2108 [deployed], #2109 [resolved], #2110, #2111
+**Ideas referenced:** #11261, #12059, #12060, #12231, #12251, #12335, #12365, #12366, #12368, #12407, #12459, #1248 [resolved], #12672, #12689, #13108, #13121, #13831, #13832, #13874, #14000, #16120, #16126, #16128, #16844, #1685, #1687, #1705, #1706, #17202, #17203, #17205, #17300, #178531, #18781, #18820, #18868, #1888, #1894, #1962, #1964, #1967, #19903, #1993 [resolved], #19962 [proposed], #20005 [proposed], #20022 [rejected], #20040 [proposed], #20041 [proposed], #20042 [proposed], #20054 [proposed], #20068 [proposed], #20069 [proposed], #20082 [proposed], #20088 [proposed], #20102 [proposed], #20112 [proposed], #20129 [proposed], #2014, #20172 [proposed], #20178 [proposed], #20179 [proposed], #20245 [executing], #20246 [rejected], #20247 [executing], #20264 [proposed], #20272 [executing], #20291 [executing], #20297 [executing], #20300 [proposed], #20302 [executing], #20311 [executing], #2050, #2102 [deployed], #2103 [deployed], #2108 [deployed], #2109 [resolved], #2110, #2111
 
 **Last PICKUP PROMPT:**
 
 ```
-atch window with no 4th death.
+ILING` added to its gate list.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1785314663557 — GLM-5.2 serving at full batch, 5h+ uptime.
+Pick up task #1785314663557 — GLM-first enforced at 3 layers + Cline reserve live.
 
-Where we left off (verified 2026-07-30 09:33 PT):
-- Ring SERVING: HTTP 200 in 57ms, 8/8 max_num_seqs full, 0 waiting, 177K generation tokens since 04:26 PT boot (~9.6 tok/s aggregate sustained). All 6 PP=6 nodes up (Cato .115 rank0, Augustus .244 r1, Pompeii .21 r2, Marcus .171 r3, Tiberius .32 r4, Cesar .56 r5) — PP=6 cannot serve with a dead peer, so serving = all 6 healthy.
-- GLM winning production turns continuously (5 wins in 5 min at 09:28-09:32, ttfb 34-53s batch lane). Spills at 30s cline / 60s batch under contention = designed busy-shed to Artemis.
-- Terminology corrected per Ruben: ring = 6 nodes (PP=6); "slots" = vLLM max_num_seqs=8 request cap. Do not conflate.
-- Uptime 5h07m — longest run since ring was built. 4h watch window passed clean.
+Where we left off (verified 2026-07-30 15:14 PT):
+- RUBEN'S 3 REQUIREMENTS, ALL NOW MET. (1) "GLM-5.2-local first then 120Bs in frankenstein-llm" was ALREADY LIVE: router_hook.py GLM-FIRST PREEMPT rewrites data["model"] to frankenstein-glm52-local for the frankenstein_120b/70b lanes BEFORE the lane hook, so the ring is PRIMARY not a spill absorber. Registry confirms: _120b_members = [glm-5.2-local, artemis, julia]; tier_fallthrough L4g before L4f. Guards kept on purpose: ctx <= 120000 (bigger goes to the 120B pool) and a REAL generation liveness probe (never tok/s). Kill-switch EMSU_GLM_FIRST_ROUTER=0.
+- (2) "Same for frankenstein-tools" ALREADY LIVE via a DIFFERENT layer, deliberately: the router does NOT preempt the tools lane (it would bypass tool-envelope translation). The adapter ranks GLM first (_glm_priority=0) and claims it unconditionally (#20272 [deployed]).
+- (3) "Cline precedence, keep other lanes open" — THE GAP, SHIPPED 15:11 PT as #20311 [executing]. Lane-aware ceiling in _claim_least_loaded: interactive gets FRANK_GLM_OVERFLOW_CEILING (16), everything else gets FRANK_GLM_OPS_CEILING (8). Ops can fill at most half the ring; the top half is reserved so an interactive turn never queues behind batch. Ops not shut out — above its ceiling it falls through to Julia :11513 then Artemis :8000. Below the applicable ceiling GLM is still claimed UNCONDITIONALLY on both lanes. _claim_least_loaded gained a lane_interactive param threaded from both dispatch sites. Backup .bak-lanereserve-20260730.
+- VERIFIED: GLM_OVERFLOW_FALLTHROUGH lane=ops conc=9/10/8 >= ceiling=8, ZERO lane=cline fallthroughs. Ops overflow landed on Artemis. Ring 6 running, 0 waiting, 0 preemptions, HTTP 200.
+- BETTER THAN THE HARD 8/8 PARTITION (#20247 [deployed]): idle-Ruben means ops can still use 8 slots instead of stranding them, and the reserve is enforced at claim time.
+- OPERATING CONTRACT IS NOW 8 KNOBS: FRANK_BOX_CAPACITY 8210=16, FRANK_GLM_OVERFLOW_CEILING=16, FRANK_GLM_OPS_CEILING=8, FRANK_SLO_TTFB_INTERACTIVE=180, FRANK_SLO_TTFB_BATCH=180, FRANK_GLM_STAGE1_TTFB_INTERACTIVE=45, EMSU_GLM_ABSOLUTE_CLAIM=1, SERVED_CTX["frankenstein-tools"]=131072.
 
 Open threads to drive next:
-1. #20041 [executing] — read the executor's 4h watch report. If clean, downgrade NCCL durability from open wound to monitor.
-2. #20082 [executing] — P0 deploy write-locking + size-regression guard. Executor drafting.
-3. #20088 [executing] / #20068 [executing] — both carry verification notes; confirm executor closes them.
-4. #20005 [proposed] — supervisor consolidation; leave disabled until rewritten.
-5. #19962 [proposed] — ZMQ bind checks; testable while ring serves.
-6. #20022 [rejected] — read before any future TTFB diagnosis.
+1. #20297 [executing] — drift protection; ADD FRANK_GLM_OPS_CEILING to the gate list (contract grew from 6 to 8 knobs today). Gates: cross-file cap agreement, ceiling<=cap, ops_ceiling<=ceiling, ctx vs live /v1/models, SLO vs observed p95 TTFB, start-up contract echo.
+2. #20311 [executing] — soak the Cline reserve. Confirm lane=cline fallthroughs stay at zero and that ops still gets useful ring share rather than being starved.
+3. #20264 [executing] — derive the constants. SIX were hand-picked today (SLO 30->90, 90->180, ceiling 20, ceiling 16, stage1 45, ops 8).
+4. #20300 [executing] — Option C decision record; Ruben chose C, A and B rejected.
+5. #20291 [executing] — overflow ceiling; cleared via rule 267 GATE C (executor said impl_failed but it is live and firing).
+6. #20082 [executing] — deploy write-lock + size-regression guard.
 
 Reference IDs:
-- Ideas (reconciled 04:48 PT): #20082 [executing] (verified: status=in_progress dev_stage=drafting), #20069 [deployed] (verified: status=deployed dev_stage=ready_for_review), #20041 [executing] (verified: status=in_progress dev_stage=idle), #20088 [executing] (verified: status=in_progress dev_stage=idle), #20068 [executing] (verified: status=in_progress dev_stage=testing), #20054 [rejected] (verified: status=rejected dev_stage=idle), #20040 [rejected] (verified: status=rejected dev_stage=idle), #20042 [deployed] (verified: status=deployed dev_stage=ready_for_review), #20005 [proposed] (verified: status=proposed dev_stage=idle), #19962 [proposed] (verified: status=proposed dev_stage=idle), #20022 [rejected] (verified: status=rejected dev_stage=idle)
-- Bug library: #2109 [resolved] (rejoin-edge), #1993 [resolved] (relaunch recipe), #2103 [deployed], #2102 [deployed]
-- Files: docs/GLM52_FIRST_BUILD.md (build doc), /usr/local/bin/frankenstein_tools_adapter.py (rejoin fix, backup .bak-rejoin-edge-20260730), HANDOFF_NOTES.md (04:48 PT entry)
-- WOPR reaches ring ONLY via glm52-tunnel-8210 at 127.0.0.1:8210. Adapter real log: /tmp/frankenstein_tools_adapter.log.
+- Ideas (reconciled 15:13 PT): #20311 [executing] (verified: status=in_progress dev_stage=idle), #20302 [deployed] (verified: status=deployed dev_stage=ready_for_review), #20300 [executing] (verified: status=in_progress dev_stage=auditing), #20297 [executing] (ver
+```
 
-When done, append to cline_task_ledger.md (rule 07), run order 66.
+### `1785293294377` — 7/30/2026, 3:13:14 PM PT — 618 turns
+
+**Original task:**
+
+```
+A metric ton of emails came in to email agent within the last hour or 2. I need you to go over them for failures, do RCAs and build improvements into Email Agent / CFAs to be able to respond/act autonmously to resolve issues. Act on them and then give a status report / summary.
+```
+
+**Ideas referenced:** #111827, #1147, #1231, #12687, #1286, #13487, #1396, #1565, #15669, #15670, #166534, #16732, #1746, #177851, #1819, #19492, #19495, #19511, #19522, #19573, #19583, #19584, #19585, #19645, #19646, #19794, #19799, #19807, #19810, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830 [approved], #19831 [proposed], #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19846 [rejected], #19847 [rejected], #19848, #1985, #19853, #19857, #19866 [proposed], #19867 [deployed], #19868 [proposed], #19870 [proposed], #19901 [proposed], #20058 [proposed], #20059 [proposed], #20060 [proposed], #20062 [proposed], #20063 [proposed], #20064 [proposed], #20113 [proposed], #20114 [proposed], #20115 [proposed], #20116 [proposed], #20117, #20118, #20119, #2082, #2090, #2102, #32548, #334155, #374151, #406060, #406061, #406242, #414633, #414634, #414636, #414642, #414643, #414692, #414693, #414694, #4480, #4481, #475569, #54291, #54319, #5749, #6168, #64748, #6723, #7174, #78350, #7872, #7906, #7907, #7925, #9086, #9132, #9137, #9222, #9888, #9989
+
+**Last PICKUP PROMPT:**
+
+```
+
+<attempt_completion>
+<result>
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task ECB-86 — Email Agent / CFA Fleet Audit. True-up.
+
+Where we left off (verified 2026-07-30 15:12 PT):
+- #19870 RCA complete [verification-failed]: claim was hallucinated from a runpod-pod-watchdog system_health heartbeat (event #4146432) with NULL payload. No "70B serve dead" text existed anywhere. Root cause: Claude pattern-matched the event source name to "RunPod capacity/key issue" without reading the empty payload. Rule 263 (verify-before-claim) violated. No code changes needed — the idea was never deployed, only proposed.
+
+Open threads to drive next:
+- None remaining. (#20062 batch-size 200 deployed, #20060 notification wired into ChatHandoffNotification.php, #20113-20116 deployed and verified, #19870 filed at verification-failed with RCA.)
+
+Reference IDs:
+- Ticket: ECB-86
+- Ideas: #19870 [verification-failed] #20062 [deployed] #20060 [deployed] #20113 [deployed] #20114 [deployed] #20115 [deployed] #20116 [deployed] #19866 [deployed] #19867 [deployed] #19868 [deployed] #19901 [deployed]
+- Files touched: .clinerules/fleet-live-probe-hardfloor.mdc, lib/lora_shadow_health.php, cron/cron_orchestrator_triage.php, lib/MailerUrlAllowlist_TrustedExternal.php, cron/cron_chat_handoff_ticket_spawn.php, lib/ChatHandoffNotification.php, cron/cron_integrity_watchdog.php, lib/EmailAIResponder.php, lib/email_inbound_routing.php, /etc/cron.d/emsu-email-inbound-routing, /etc/cron.d/emsu-cron-integrity-watchdog, /Users/rubenmajor/Desktop/ECB-86_Tracking.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-<task_progress>
-- [x] GLM-first verified end-to-end 04:45 PT (nonce echo, bug #2109 [resolved] fixed, build doc shipped)
-- [x] 09:06 PT status check: ring alive, usable=2/2, GLM winning real turns
-- [x] 09:33 PT: confirmed serving at 8/8 full batch, all 6 PP=6 nodes up, 177K tokens generated, terminology corrected per Ruben
-</task_progress>
 </attempt_completion>
 ```
 
@@ -362,55 +505,6 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785360672171` — 7/30/2026, 2:10:20 PM PT — 398 turns
-
-**Original task:**
-
-```
-For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? 
-
-Also how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?
-```
-
-**Ideas referenced:** #20032 [proposed], #20033 [proposed], #20038, #20045 [proposed], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20052 [proposed], #20081 [proposed], #20279 [proposed], #20289 [proposed], #20294 [proposed], #20296 [proposed], #20297
-
-**Last PICKUP PROMPT:**
-
-```
-lt>
-═══════════════════════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════════════════════
-Pick up task #current — Telephony improvements + voice A/B testing.
-
-Where we left off (verified 2026-07-30 14:08 PT):
-- #20045 config fix VERIFIED on disk (in_array now accepts '1' from DB)
-- VAPI voice audit complete: 4 non-Bella assistants (Ronald/Katie/Eric/BellaPROD) have empty/broken configs
-- Bella 11labs INBOUND (6ee87bdb) is the only production-ready assistant with serverUrl set
-- Community voice research filed as #20296 [proposed]
-- Rule 264 + 265 filed to prevent future false "tools down" claims
-
-Open threads to drive next:
-1. #20294 [proposed] — Deploy VAPI prompt update (shorter greeting, no AI label, stop gatekeeping). SSH is working via execute_command; deploy /tmp/vapi_minimal.php.
-2. #20296 [proposed] — Community voice research. Search web for 11labs vs Cartesia preference studies + VAPI community forum posts on voice satisfaction.
-3. #20081 [proposed] — VAPI voice A/B testing. Bella is the ONLY production-ready assistant. Fix non-Bella configs BEFORE testing them.
-4. #20047 [proposed] — Shorten VAPI greeting to reduce hangup rate (blocked on #20294 deployment).
-5. #20049 [proposed] — Fix gatekeeping loop (blocked on #20294 deployment).
-6. #20051 [proposed] — Deferred AI disclosure (blocked on #20294 deployment).
-7. #20045 [deployed] — Config fix verified on disk at twiml_inbound.php line 56.
-8. #20279 [proposed] — Rule 264: verify tool health with 3 probes before declaring "down".
-9. #20289 [proposed] — Rule 265: re-check all successful data before declaring diagnostic conclusion.
-
-Reference IDs:
-- Ideas: #20045 [deployed], #20047 [proposed], #20049 [proposed], #20051 [proposed], #20081 [proposed], #20279 [proposed], #20289 [proposed], #20294 [proposed], #20296 [proposed]
-- Files: /var/www/emtskills/api/telephony/twiml_inbound.php (line 56), /tmp/vapi_minimal.php
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 
@@ -635,67 +729,6 @@ Fix these before calling attempt_completion. The completion is blocked until all
     if (/hold\s+until\s+Ruben\s+confirms|wait\s+before\s+acting|pause\
 ```
 
-### `1785295028411` — 7/30/2026, 9:36:27 AM PT — 1126 turns
-
-**Original task:**
-
-```
-What outstanding build issues exist for the Broser Extension for Argus? What else do you recommend? Can you do some work and testing on it to improve it more? Make sure it's wired into actual Argus as well:
-
-https://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome
-```
-
-**Ideas referenced:** #0000, #10003, #10005, #10108, #10182, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12301, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #127908, #1281, #128193, #128203, #128206, #128263, #128266, #128275, #12900, #1309, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14000, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16213, #16263, #16584, #16589, #16590, #16602, #16625, #16646, #16680, #16715, #16716, #16717, #17078, #17307, #17342, #17345, #17669, #17672, #17673, #17691, #17697, #17741, #17746, #17749, #17751, #1807, #1820, #18328, #18337, #18360, #18388 [executing], #18396 [proposed], #18397 [proposed], #18398 [proposed], #1840, #1857, #18670, #18671, #18687, #18688, #18745, #18770, #1878, #18930 [proposed], #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19370, #19407, #1952, #19585, #19670, #19686, #19896 [proposed], #19898 [proposed], #19899 [proposed], #19900 [proposed], #19901 [proposed], #19919 [proposed], #19920 [proposed], #19999 [approved], #2006, #20079 [deployed], #20103, #2071, #2079, #21262, #238636, #274160, #30363, #34495, #6164, #69707, #7490, #7505, #7513, #7554, #8211, #8365, #8942, #9650, #9654, #9660, #9689, #9706, #9733, #9889, #9910, #9934
-
-**Last PICKUP PROMPT:**
-
-```
-nd a query — it should stream.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — Argus Chrome extension v2.1.0 deep-test follow-up.
-
-Where we left off (verified 2026-07-30 09:35 PT):
-- Full authenticated E2E verified externally: list/search/save sessions + SSE chat stream all 200
-- isAjax text/plain patch live in lib/auth.php (JSON 401s for extension)
-- cron_argus_extension_zip.php tempnam + rename bugs fixed; rebuild verified as root
-- #19900 [deployed] — auto-cron ZIP rebuild, now actually verified working
-- #19896 [deployed], #19898 [deployed], #19899 [deployed] — carried forward from prior session
-- #19919 [queued] — RCA idea from prior session, not re-verified
-
-Open threads to drive next:
-1. Whitelist OPTIONS in Imunify360/ModSecurity at Plesk level for durable preflight support (human-only decision — no idea; needs Plesk admin)
-2. Ruben reloads extension in chrome://extensions and sends a live query to confirm in-browser (human-only — needs Ruben's browser)
-
-Reference IDs:
-- Ideas filed: none this session
-- Ideas closed: #19900 [deployed]
-- Files touched: /var/www/emtskills/lib/auth.php, /var/www/emtskills/cron/cron_argus_extension_zip.php, /var/www/emtskills/public/argus-extension.zip (rebuilt), HANDOFF_NOTES.md
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Argus extension 6 fixes applied
-- [x] RCA filed, #19919 approved
-- [x] #19896 done (default_icon present)
-- [x] #19899 done (keyboard shortcut, ZIP rebuilt)
-- [x] #19900 — Add auto-cron ZIP rebuild (verified working)
-- [x] #19898 done (content.js extract function verified solid)
-- [x] Rebuild final ZIP with all changes
-- [x] Fix CORS + SameSite auth root cause
-- [x] Add search_sessions backend handler
-- [x] Authenticated E2E test matrix (5/5 pass)
-- [x] Fix isAjax text/plain JSON-401 gap
-- [x] Fix cron tempnam + rename bugs
-- [x] Update HANDOFF_NOTES.md
-</task_progress>
-</attempt_completion>
-```
-
 ### `1785261380940` — 7/30/2026, 9:35:08 AM PT — 82 turns
 
 **Original task:**
@@ -843,50 +876,6 @@ Open threads to drive next:
 
 Reference IDs:
 - Deployed: #20044 [deployed], #20066 [deployed], #20067 [deployed], #20132 [deployed], #20135 [deployed], #20240 [
-```
-
-### `1785293294377` — 7/30/2026, 9:31:25 AM PT — 608 turns
-
-**Original task:**
-
-```
-A metric ton of emails came in to email agent within the last hour or 2. I need you to go over them for failures, do RCAs and build improvements into Email Agent / CFAs to be able to respond/act autonmously to resolve issues. Act on them and then give a status report / summary.
-```
-
-**Ideas referenced:** #111827, #1147, #1231, #12687, #1286, #13487, #1396, #1565, #15669, #15670, #166534, #16732, #1746, #177851, #1819, #19492, #19495, #19511, #19522, #19573, #19583, #19584, #19585, #19645, #19646, #19794, #19799, #19807, #19810, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830 [approved], #19831 [proposed], #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19846 [rejected], #19847 [rejected], #19848, #1985, #19853, #19857, #19866 [proposed], #19867 [deployed], #19868 [proposed], #19870 [proposed], #19901 [proposed], #20058 [proposed], #20059 [proposed], #20060 [proposed], #20062 [proposed], #20063 [proposed], #20064 [proposed], #20113 [proposed], #20114 [proposed], #20115 [proposed], #20116 [proposed], #20117, #20118, #20119, #2082, #2090, #2102, #32548, #334155, #374151, #406060, #406061, #406242, #414633, #414634, #414636, #414642, #414643, #414692, #414693, #414694, #4480, #4481, #475569, #54291, #54319, #5749, #6168, #64748, #6723, #7174, #78350, #7872, #7906, #7907, #7925, #9086, #9132, #9137, #9222, #9888, #9989
-
-**Last PICKUP PROMPT:**
-
-```
-
-
-<attempt_completion>
-<result>
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task ECB-86 — Email Agent / CFA Fleet Audit. Final rebase.
-
-Where we left off (verified 2026-07-30 09:30 PT):
-- Email backlog: 41/30min, batch size increased 50→200 in email_inbound_routing.php line 36
-- Chat handoff notification: ChatHandoffNotification.php deployed with shift-coverage awareness (#20113), pending wire into escalation cron
-- Rule 91 format verified: 47 U+2550 chars (Box Drawings Double Horizontal) per spec
-
-Open threads to drive next:
-1. #20062 [deployed] — backlog catch-up batch 50→200; file: lib/email_inbound_routing.php
-2. #20060 [active] — wire ChatHandoffNotification.php into cron_chat_handoff_timeout_escalation.php; test live handoff to verify Discord notify fires for on-shift agents
-3. #19870 [verification-failed] — "70B serve dead" claim was false; Claude invented it from a runpod-pod-watchdog system_health event with NULL payload. No further action.
-
-Reference IDs:
-- Ticket: ECB-86
-- Ideas: #19866 #19867 #19868 #19901 #20058 #20060 #20062 #20063 #20064 #20113 #20114 #20115 #20116
-- Files: lib/email_inbound_routing.php lib/ChatHandoffNotification.php lib/EmailAIResponder.php cron/cron_integrity_watchdog.php cron/cron_chat_handoff_timeout_escalation.php cron/cron_chat_handoff_ticket_spawn.php lib/lora_shadow_health.php cron/cron_orchestrator_triage.php lib/MailerUrlAllowlist_TrustedExternal.php
-- Backups: *.bak-20260728-* *.bak-20260730-*
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
 ```
 
 ### `1785267620046` — 7/30/2026, 9:31:22 AM PT — 192 turns
@@ -5117,241 +5106,4 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
-```
-
-### `1785191816762` — 7/27/2026, 3:37:22 PM PT — 2 turns
-
-**Original task:**
-
-```
-Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
-
---
-Advise if is actually a new complaint and provide me with a summary of the situation, claims as well as a draft response. Track as new complaint if is a new complaint in the appropriate seciton. Please make sure you are organizing these properly so they are easy to navigate.
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785180947248` — 7/27/2026, 3:18:16 PM PT — 258 turns
-
-**Original task:**
-
-```
-## 7 — #ALERTS · text bombardment / monitoring hygiene
-
-```
-#ALERTS — EMSU alert noise. Ruben: "I am getting bombarded with text messages. Some of these are stale or have false information that needs to be rectified at the source."
-
-His framing matters: he does not want alerts silenced, he wants the FALSE ones fixed at the source. A stale monitor firing 5,700 times is a broken monitor, not a noisy one. Do NOT add cooldowns or suppression — suppression is how you end up trusting nothing.
-
-ALREADY FIXED, DO NOT REPEAT:
-- LITELLM_BASE_URL "already defined" PHP warning: 3 bare `const` → guarded `d
-```
-
-**Ideas referenced:** #15637, #1573 [critical], #16402, #1641 [critical], #17671, #18977, #19070, #19250, #19345, #19359 [deployed], #19360 [deployed], #19362 [investigating], #19363 [undiagnosed], #19470, #19490 [in_progress], #19541 [proposed], #19550 [queued], #19551 [queued], #19552 [queued], #19554 [queued], #19557 [queued], #1996 [high], #2032 [critical], #2034 [critical], #2253 [critical], #2254 [critical], #2289 [high], #2477 [critical], #2731 [high], #2755 [critical], #2756 [critical], #2828 [critical], #2829 [critical], #2835 [high], #2932 [critical], #2986 [critical], #3076 [critical], #3077 [critical], #3081 [high], #5316, #5322, #5339, #64748, #6837, #9055
-
-**Last PICKUP PROMPT:**
-
-```
-+ stale Bug Hunter repeaters |
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #ALERTS — text bombardment / monitoring hygiene continuation.
-
-Where we left off (verified 2026-07-27 13:17 PT):
-- #19360 deployed: discord_scanner heartbeat updated to status='retired' (watchdog now skips)
-- #19359 verified: twilio_sms_inbound.php stub fix intact with SMS_STUB_REMOVAL_V1 marker
-- #19362, #19363, #19490 still approved/not deployed — need implementation
-- NREMT tables all empty (0 rows) — "NREMTpend:521" is a stale counter from unknown source
-- WOPR is UP — "EMSU DOWN: WOPR_SSH failed 5673 checks" alert source NOT in telephony_sms_log, sms_ai_log, or ruben_system_events — likely webhook/direct-IMessage path
-- 33 detected RUBEN issues: 3 fresh (#3081 QB, #3077 Voice, #3076 Registration), 27+ stale Bug Hunter repeaters dating to June 21
-
-Open threads to drive next:
-1. #19541 — Locate WOPR_SSH alert source: grep ALL cron files for "EMSU DOWN" output string, trace to SMS/webhook sender, verify counter reset mechanism
-2. #19554 — Find VR/NREMT digest cron: search systemd timers and every PHP/Python/Shell script for "NREMTpend" or "vr-c2c" output, verify against actual DB state
-3. #19551 — Auto-void canary design: check authnet_payment_transactions for voided + unnotified transactions, design monitoring
-4. #19557 — Triage 33 detected issues: dismiss 27+ stale Bug Hunter repeaters (set status→dismissed), escalate #3081, #3077, #3076 per rule 29
-5. #19362 [approved] — Implement WOPR_SSH recovery detection: add counter reset on success + sanity gate for absurd values
-6. #19363 [approved] — Diagnose stale_decisions gap: verify ckpt420 pod monitoring and frankenstein canary detection
-7. #19490 [in_progress] — Fix executor health watchdog to detect impl_failed_reason=NULL pattern
-
-Reference IDs:
-- Ticket: #ALERTS
-- Ideas filed: #19360, #19490, #19541, #19550, #19551, #19552, #19554, #19557
-- Files touched: system_heartbeats (discord_scanner row), /var/www/emtskills/webhooks/twilio_sms_inbound.php (verified)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785180769250` — 7/27/2026, 3:17:12 PM PT — 198 turns
-
-**Original task:**
-
-```
-## 5 — #BUGS · user-facing bug queue
-
-```
-#BUGS — EMSU user-facing bugs. Scope: user-visible only. NOT GLM, NOT payments (#PAY), NOT forms (#FORMS), NOT executor plumbing (#EXEC).
-
-RULES: act rather than list — you have update_ticket, add_ticket_comment, fix_moodle_enrollment, unstick_moodle_quiz_attempt, regrade_quiz_attempt, ssh_command, safe_deploy_file, and direct SQL. A fixable bug parked as an "open thread" is a rule-29 violation. DESCRIBE before SQL (live example: a query died this week on `Students.status`, which does not exist — use get_student_lifecycle_state / get_student_360). Serv
-```
-
-**Ideas referenced:** #12135, #12356, #18898 [proposed], #18928 [deployed], #18930 [blocked], #18937 [proposed], #18941 [deployed], #18950, #18974 [proposed], #18975 [deployed], #19439, #19490, #2026, #2196, #2563, #3498, #475569, #64748, #7223, #7634, #8203
-
-**Last PICKUP PROMPT:**
-
-```
-d for #18898 next session
-
----
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up #BUGS — drive remaining: top bar (#18898) and Jon tickets (#18930).
-
-Where we left off (verified 2026-07-27 15:16 PT):
-- #18941 [resolved] — timeclock AJAX guard deployed and CLI-verified
-- #18928 [resolved] — Skillstastic status filter live on disk
-- #18937 [resolved] — EMS 210 defense-in-depth gate deployed to OnboardingService.php:404
-- #18974 [resolved] — AI-orphan scan: zero from user 124; flagged 47 Critical + 146 High unassigned
-- #18898 [proposed] — top bar CSS in cori_shell.css (topbar position:fixed at line 53); need full read + dashboard render trace
-- #18930 [proposed] — Jon IDs: 3 (ExecAdmin, jthompson@...) and 80 (Instructor, jonmoulton77@...) both show zero assigned tickets; need to trace SQL filters
-
-Open threads to drive next:
-1. #18898 — SSH WOPR: read full `/var/www/emtskills/public/css/cori_shell.css`. Check `/var/www/emtskills/includes/team_hub_shell.php` and `includes/header.php` for early output/whitespace before doctype. Grep for `.cori-topbar`, `.cori-sidebar`, `.cori-mobile-nav` in PHP and CSS. Check for PHP warnings in dashboard render.
-2. #18930 — SSH WOPR: read the ticket listing page SQL (grep for `my_tickets` in routes/), trace the filter logic checking `$user['id']` vs `assigned_owner`. Compare with #18950 who fixed counts.
-
-Reference IDs:
-- Tickets: #18941, #18937, #18928, #18898, #18930, #18974
-- Ideas filed: none (MCP create_idea unavailable)
-- Files touched: routes/timeclock_user.php, skillstastic/api_import_class.php, personnel/lib/OnboardingService.php, public/css/cori_shell.css
-- DB: admin_portal (personnel_candidates.skip_ems210), moodle_c_live (user_enrolments, course)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785189940243` — 7/27/2026, 3:06:17 PM PT — 2 turns
-
-**Original task:**
-
-```
-#Argus
-
-OPen up lanes so that Cori and all Exec Admin have permissions to perform these types of actions and then perform them. 
-
-ARGUS
-The short answer: the pipeline didn't record a rejection reason. The `blocked_reason` field is null — it was rejected on July 26 at 20:22 PT with no explanation logged.
-
-The most likely cause is that this idea touches three things that sit outside the build dispatcher's safe scope:
-
-1. Plesk/Roundcube email provisioning — creating an actual mailbox on WOPR's mail server isn't an in-app code change; it's a server admin action.
-2. JustCall phone line provisionin
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785180925366` — 7/27/2026, 3:05:28 PM PT — 130 turns
-
-**Original task:**
-
-```
-## 6 — #INFRA · WOPR GPU / kernel / WireGuard
-
-```
-#INFRA — EMSU WOPR hardware and infrastructure.
-
-READ FIRST (rule 294): /var/www/emtskills/docs/WOPR_STATE.json is canonical live host state, regenerated every 5 min by /usr/local/bin/emsu_host_state.sh via /etc/cron.d/emsu-host-state. Confirm freshness under 10 minutes, then TRUST IT over anything written here. That machinery exists because the 4TB cutover invalidated a class of facts mid-flight while a sibling window kept asserting stale ones — Ruben called that "what i wanted to avoid."
-
-VERIFY-BEFORE-CLAIM IS HARDFLOOR: no SSH to a box mea
-```
-
-**Ideas referenced:** #18867 [deployed], #18967 [queued], #18977 [queued], #18982 [executing], #18985 [rejected], #19006 [executing], #19522 [proposed], #19523 [proposed], #19524 [proposed], #19525 [proposed], #19526 [proposed], #19553 [executing], #19556 [executing]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785180724129` — 7/27/2026, 3:03:44 PM PT — 322 turns
-
-**Original task:**
-
-```
-## 4 — #GLM · GLM-5.2 ring
-
-```
-#GLM — EMSU GLM-5.2 ring. Rebase live, then drive what is left.
-
-HARD CONSTRAINTS:
-- NEVER inject Anthropic. Free-local-first (rule 146); frankenstein-llm is the one router.
-- NEVER set enable_thinking:false on GLM. Ruben rejected it outright; #19239 [rejected] exists to stop it being resurrected — the think block is the entire reason to run GLM over DeepSeek V4 pro.
-- NEVER quarantine glm-5.2-local without Ruben. His rule is 30 minutes OF DEBRIS, not 30 minutes elapsed.
-- Rule 277: GPU_MEM 0.82, no --enforce-eager, no --no-async-scheduling, VLLM_ENGINE_READY_TI
-```
-
-**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11781, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12657, #12680, #12688, #12689, #12708, #12710, #12824, #12872, #12878, #12900, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16163, #16265, #16304, #16508, #16584, #16589, #16590, #16602, #16625, #16646, #16680, #16715, #16716, #16717, #16844, #17078, #17307, #1754, #1755, #17673, #1807, #18312, #18326, #18670, #18671, #19239 [rejected], #19259 [deployed], #19267 [deployed], #19288 [deployed], #19338, #19490, #19531 [proposed], #19532 [proposed], #19533 [proposed], #19540 [proposed], #19555 [proposed], #1980, #1983, #1984, #1985, #1992, #1998, #2050, #2060, #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785180684278` — 7/27/2026, 2:51:26 PM PT — 300 turns
-
-**Original task:**
-
-```
-## 3 — #FORMS · durable fix for WPForms + its replacement
-
-```
-#FORMS — EMSU registration + payment forms. Two separate bugs are already fixed; this window makes the fix DURABLE and carries it into the replacement form.
-
-RULES: no claim without a tool call this session. Server writes via ssh_command with sudo (/var/www needs it — a non-sudo cp silently failed permission-denied during this work). DESCRIBE before SQL. Verify with a live page fetch, never a file read-back. Use parallel streams across sites (xargs -P), do not serialize 30+ (rule 275).
-
-FIXED, DO NOT REDO:
-A) AVS-not-on-charge → In
-```
-
-**Ideas referenced:** #000000, #008000, #0399, #11782, #14740, #15227, #16608, #18841 [queued], #19079 [executing], #19101 [executing], #19128 [executing], #19435 [executing], #19490, #19503 [executing], #2036, #2563, #5920, #856404
-
-**Last PICKUP PROMPT:**
-
-```
-w-only — needs promotion plan.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #3 — #FORMS durable fix continued.
-
-Where we left off (verified 2026-07-27 14:52 PT):
-- v1.0.2 forwarder deployed to 11 EMT vhosts; source at /var/www/emtskills/webhooks/wpforms-complete-data-forwarder.php
-- 19 CLASS A e2PDF rows need regeneration; script at /tmp/class_a_backfill.php (Mac), needs WOPR deploy
-- 4 sites MISSING forwarder entirely (phoenixemt.org, vancouveremt.ca + 2 more)
-- Shadow at 300/551 dates (54%) — needs backfill re-run after forwarder v1.0.2
-- Reconciled ideas: #19435[executing], #18841[queued], #19079[executing], #19503[executing], #19128[executing], #19101[executing]
-
-Open threads to drive next (ALL need real idea #s — file via INSERT into orchestrator_ideas or create_idea MCP):
-1. Server-side class_time validation — add 422-reject in webhook receiver when all 3 fallbacks are empty. File: `/var/www/emtskills/webhooks/emt_registration_centralized.php.bak-*` or mu-plugins handler
-2. e2PDF CLASS A backfill — deploy /tmp/class_a_backfill.php to WOPR and run. Requires WP curl session
-3. e2PDF CLASS B dedup — verify siblings then DELETE 108 negative-entry_id dupes
-4. #19079 CLOSURE — install forwarder on phoenixemt.org and vancouveremt.ca (missing plugins dir = create it), then scan remaining vhosts for WordPress wpforms tables
-5. Shadow backfill — `php /tmp/backfill_shadow_v2.php` after forwarder v1.0.2 deployed everywhere
-6. #19128 — Elementor mu-plugin guard (grep theme-builder queries, strip include/product)
-7. e2PDF canary — SQL-based probe on ea_submissions
-8. Verify live submission — submit test to arizonaemt.com, confirm class_time not empty in webhook log
-
-Reference IDs:
-- Ideas: #19435, #18841, #19079, #19503, #19128, #19101
-- Files: /var/www/emtskills/webhooks/wpforms-complete-data-forwarder.php (v1.0.2 canonical)
-- Files: /var/www/emtskills/routes/native_registration/form.php (native replacement form)
-- Files: /tmp/class_a_backfill.php (CLASS A backfill script, Mac local)
-- DB: admin_portal.ea_submissions (19 CLASS A gap, 108 CLASS B dupes)
-- DB: admin_portal.native_registration_shadow (551 entries, 300 with dates)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
 ```

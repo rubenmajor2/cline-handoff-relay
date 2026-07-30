@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/30/2026, 4:20:34 AM PT | window: last 72h | 144 tasks | index total 331 (parsed 3, cached 328)
+Generated: 7/30/2026, 5:20:35 AM PT | window: last 72h | 144 tasks | index total 331 (parsed 1, cached 330)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785375877050` | 7/30/2026, 4:20:29 AM | 1133 | 3307KB | #GLM |
+| `1785375877050` | 7/30/2026, 4:51:23 AM | 1318 | 5491KB | #GLM |
 | `1785370606525` | 7/30/2026, 4:18:55 AM | 632 | 3344KB | pickup TDSHS, TPIA Request 3 at: https://emsuniversity.com/emtskills/personnel/institution |
 | `1785405238813` | 7/30/2026, 3:56:11 AM | 120 | 1134KB | Subject should not say: No-dead-end follow-up: Re: Following up on your EMSU support reque |
 | `1785396884879` | 7/30/2026, 3:29:54 AM | 306 | 2547KB | #Vicky Issues / Argus  |
@@ -159,7 +159,7 @@ Generated: 7/30/2026, 4:20:34 AM PT | window: last 72h | 144 tasks | index total
 
 ## Per-window detail
 
-### `1785375877050` — 7/30/2026, 4:20:29 AM PT — 1133 turns
+### `1785375877050` — 7/30/2026, 4:51:23 AM PT — 1318 turns
 
 **Original task:**
 
@@ -176,32 +176,39 @@ I stopped tuning preferences and made it unconditional in /usr/local/bin/franken
 
 ```
 
-**Ideas referenced:** #12459, #1248 [resolved], #13874, #16126, #16128, #16844, #1685, #1687, #1705, #1706, #178531, #1888, #1894, #1962, #1964, #1967, #1993, #19962 [proposed], #20005 [proposed], #20022 [rejected], #20040 [proposed], #20041 [proposed], #20042 [proposed], #20054 [proposed], #20068 [proposed], #20069 [proposed], #20082 [proposed], #20088 [proposed], #20102 [proposed], #20112 [proposed], #20129 [proposed], #20172 [proposed], #20178 [proposed], #20179 [proposed], #2108 [deployed]
+**Ideas referenced:** #12459, #1248 [resolved], #12672, #13121, #13831, #13832, #13874, #14000, #16120, #16126, #16128, #16844, #1685, #1687, #1705, #1706, #178531, #18781, #1888, #1894, #1962, #1964, #1967, #19903, #1993 [resolved], #19962 [proposed], #20005 [proposed], #20022 [rejected], #20040 [proposed], #20041 [proposed], #20042 [proposed], #20054 [proposed], #20068 [proposed], #20069 [proposed], #20082 [proposed], #20088 [proposed], #20102 [proposed], #20112 [proposed], #20129 [proposed], #20172 [proposed], #20178 [proposed], #20179 [proposed], #2050, #2102 [deployed], #2103 [deployed], #2108 [deployed], #2109 [resolved]
 
 **Last PICKUP PROMPT:**
 
 ```
- blocker. Real priority is P2.
+d] + #2102 [deployed] carried.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1785314663557 -- GLM ring down, blocked on sudo password for the decisive test
+Pick up task #1785314663557 — GLM-5.2 first everywhere: VERIFIED LANDS, build documented, watch running.
 
-Where we left off (verified 2026-07-30 01:26 PT):
-- RING DOWN. Ranks 1-4 (augustus/pompey/marcus/tiberius) Up and clean. Rank0 cato exit=1 with "Message truncated : received 1024 bytes instead of 512" in ncclCommInitRank. Rank5 cesar exit=1 with "ncclSocketInit: connecting to address (empty) with family 5". PP=6 needs all 6 so nothing serves.
-- ADAPTER + LITELLM BOTH HEALTHY. frankenstein-tools active since 17:15 PT NRestarts=0, GLM-first ranking correct. LiteLLM stable since the 17:03 _router_core.py restore. Neither is the problem.
-- THE 6-FOR-6 DIFFERENTIAL (strongest evidence, #20179 [proposed]): cato and cesar are the ONLY 2 nodes with host /usr/lib/aarch64-linux-gnu/libnccl.so.2.30.4, and the ONLY 2 that fail. Container ships 2.30.7. Ranks 1-4 have no host libnccl. Found via bug library #1248 (same "Message truncated" class, seen 3x, resolved by LD_PRELOAD).
-- LD_PRELOAD FIX APPLIED, PARTIAL RESULT: added -e LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libnccl.so.2.30.7 to the docker run block in /tmp/glm52_authoritative.sh on ALL 6 nodes (bash -n clean, backups .bak-ldpreload-* on every node). Verified present in container env. Cesar truncation went 1 to 0, which PROVED the two failures are SEPARATE bugs not one cascade. But cato still truncates and both still exit 1. Version skew is NOT the whole cause.
-- CAVEAT ON MY OWN THEORY: the host libnccl 2.30.4 is dated Jun 25, so it PREDATES Ruben's 7/28 multi-hour stable run. The "recently installed" reasoning in #20179 [proposed] is wrong and that idea's title overstates "CONFIRMED". Treat it as partially confirmed.
-- ALSO FIXED THIS SESSION: /tmp/glm52_authoritative.sh had shell-vs-container NCCL env mismatch (shell 3600/2/2 vs container 1200/4/4). Reconciled to 3600/2/2. Backup .bak-nccl-timeout-*.
-- THREE THEORIES DISPROVEN, do not revisit: load/concurrency #20129 [rejected] (queue_depth was 0-3, never saturated, max-num-seqs is 128, do NOT add a concurrency cap); cesar wifi dual-interface #20172 [rejected] (bootstrap selects enP7s7 correctly, ip route to rank0 uses enP7s7, address present during the stable run); NCCL version skew as SOLE cause (LD_PRELOAD applied, versions match at 2.30.7, failures persist).
-- BLOCKED ON SUDO PASSWORD. The decisive test needs root on cato and cesar. sudo -n returns "a password is required" on both.
+Where we left off (verified 2026-07-30 04:49 PT):
+- GLM LANDS PROVEN: nonce glm-land6-1785411882 echoed by model=glm-5.2-15pct through :11510 at 04:45 PT. Ring serving since 04:26 PT (glm-5.2-15pct, 131072 ctx), 7/8 slots decoding real traffic, usable=2/2, 8210 first on both lanes.
+- OVERNIGHT FAILURE RECOVERED: 03:37 PT NCCL bootstrap "Message truncated (1024 vs 512 bytes)" init failure on rank0 — third distinct ring death. Relaunched 04:19 PT via bug #1993 [resolved] recipe (workers 1-5 then rank0). THREE ring deaths in 13h (15:35 gloo, 17:04 watchdog, 03:37 bootstrap) — durability is THE open question.
+- NEW BUG FIXED (bug #2109 [resolved]): CANARY_REJOIN edge gate never fired for GLM (NO-QUARANTINE forces healthy=True every cycle, killing the False->True edge). Patched to healthy+missing=rejoin, backup .bak-rejoin-edge-20260730, py_compile clean, live since 04:39 PT.
+- DURABLE BUILD DOC: docs/GLM52_FIRST_BUILD.md on WOPR + HANDOFF_NOTES.md entry 04:48 PT.
+- Executor landed #20069 [deployed] mid-session (per-upstream SLO from measured tok/s — the 60s TTFB spill fix).
 
 Open threads to drive next:
-1. #20179 [proposed] -- P0 DECISIVE TEST, needs Ruben's sudo password or a passwordless path. On cato AND cesar: sudo mv /usr/lib/aarch64-linux-gnu/libnccl.so.2.30.4 /root/libnccl.so.2.30.4.quarantined-20260730 and sudo rm /usr/lib/aarch64-linux-gnu/libnccl.so.2, then relaunch via bash /tmp/glm_ring_up.sh ON CATO (not WOPR). SAFETY VERIFIED: owned by pkg libnccl2, sudo lsof shows ZERO host processes using it, and the 4 working nodes have no host libnccl at all, so removal makes cato/cesar match them. Fully reversible (rename not delete). Also move /home/rubenmajor/.cache/huggingface/hub/nccl-2.30.4 aside since that dir IS bind-mounted to /cache/huggingface. If the ring boots after this, the differential is proven and #20179 [proposed] becomes the real answer.
-2. #20178 [proposed] -- P1, only if thread 1 does not fix it. Contradictory IB env: NCCL_IB_DISABLE=1 is set at the same time as NCCL_IB_HCA=rocep1s0f1 and NCCL_IB_GID_INDEX=3, and rank0 
+1. #20041 [executing] — 4h stability watch on the ring, runs to ~08:26 PT. Executor owns it. If it reports a 4th death, the NCCL collective instability under load needs a root-cause session, not another relaunch.
+2. #20082 [executing] — P0 deploy write-locking + size-regression guard + restart-loop alert. Executor drafting.
+3. #20005 [proposed] — supervisor consolidation; still DISABLED on all 6 nodes, leave disabled until rewritten.
+4. #19962 [proposed] — ZMQ bind checks; testable now that the ring serves.
+5. #20022 [rejected] — worth reading before any future TTFB diagnosis; it called the 60s SLO abort correctly two sessions early.
+6. None others — #20088 [executing] and #20068 [executing] carry verification notes and need no window time; #20054 [rejected], #20040 [rejected], #20042 [deployed], #20069 [deployed] are closed.
+
+Reference IDs:
+- Ideas filed or driven this session: #20082 [executing] (verified: status=in_progress dev_stage=drafting), #20069 [deployed] (verified: status=deployed dev_stage=ready_for_review), #20041 [executing] (verified: status=in_progress dev_stage=idle), #20088 [executing] (verified: status=in_progress dev_stage=idle; verification note attached 04:47 PT), #20068 [executing] (verified: status=in_progress dev_stage=testing; hand-ship verified 132ms bind), #20054 [rejected] (verified: status=rejected dev_stage=idle), #20040 [rejected] (verified: status=rejected dev_stage=idle), #20042 [deployed] (verified: status=deployed dev_stage=ready_for_review), #20005 [proposed] (verified: status=proposed dev_stage=idle), #19962 [proposed] (verified: status=proposed dev_stage=idle), #20022 [rejected] (verified: status=rejected dev_stage=idle)
+- Bug library: #2109 [resolved] (rejoin-edge, new this session), #1993 [resolved] (relaunch recipe applied, kaison snapshot 334), #2103 [deployed], #2102 [deployed]
+- Files touched: /usr/local/bin/frankenstein_tools_adapter.py (rejoin-edge patch, backup .bak-rejoin-edge-20260730), docs/GLM52_FIRST_BUILD.md (new), HANDOFF_NOTES.md (04:48 PT entry)
+- Ring rank map (rule 292 verified): .115=rank0 Cato, .244=1 Augustus, .21=2 Pompey, .171=3 Marcus, .32=4 Tiberius, .56=5 Cesar. WOPR reaches th
 ```
 
 ### `1785370606525` — 7/30/2026, 4:18:55 AM PT — 632 turns

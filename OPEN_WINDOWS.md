@@ -6,25 +6,27 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/29/2026, 11:38:32 PM PT | window: last 72h | 140 tasks | index total 327 (parsed 2, cached 325)
+Generated: 7/30/2026, 1:20:32 AM PT | window: last 72h | 142 tasks | index total 329 (parsed 12, cached 317)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785293294377` | 7/29/2026, 8:22:40 PM | 503 | 2118KB | A metric ton of emails came in to email agent within the last hour or 2. I need you to go  |
-| `1785379883249` | 7/29/2026, 8:16:17 PM | 184 | 1369KB | emsuniversity.com is showing secure, but not emsuniversity.com/ems. Can you resolve that? |
-| `1785298450123` | 7/29/2026, 8:11:36 PM | 920 | 2333KB | #Stripe/Klarna |
-| `1785363426908` | 7/29/2026, 8:11:00 PM | 326 | 1019KB | #EMT Webforms/Payments |
+| `1785375877050` | 7/30/2026, 1:20:21 AM | 204 | 485KB | #GLM |
+| `1785399211024` | 7/30/2026, 1:20:17 AM | 33 | 311KB | #Julia/Claudia |
+| `1785368618667` | 7/30/2026, 1:20:12 AM | 219 | 654KB | We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for |
+| `1785295028411` | 7/30/2026, 1:20:07 AM | 861 | 3029KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
+| `1785359143504` | 7/30/2026, 1:19:43 AM | 467 | 3303KB | #Argus  |
+| `1785368587300` | 7/30/2026, 1:18:38 AM | 264 | 1058KB | There are some reddit forums out there that are against EMS University. Can you give me li |
+| `1785293294377` | 7/30/2026, 1:14:00 AM | 538 | 2167KB | A metric ton of emails came in to email agent within the last hour or 2. I need you to go  |
+| `1785396884879` | 7/30/2026, 1:13:09 AM | 118 | 1352KB | #Vicky Issues / Argus  |
+| `1785298450123` | 7/30/2026, 1:12:25 AM | 1026 | 2460KB | #Stripe/Klarna |
+| `1785365363758` | 7/30/2026, 1:08:01 AM | 408 | 910KB | https://www.emsuniversity.com/emtskills/routes/chat_portal.php - can you review chats from |
+| `1785363426908` | 7/30/2026, 12:58:21 AM | 344 | 1048KB | #EMT Webforms/Payments |
+| `1785379883249` | 7/30/2026, 12:57:14 AM | 238 | 1480KB | emsuniversity.com is showing secure, but not emsuniversity.com/ems. Can you resolve that? |
 | `1785379499916` | 7/29/2026, 8:04:29 PM | 134 | 613KB | #EA/PDF |
-| `1785375877050` | 7/29/2026, 8:01:18 PM | 140 | 345KB | #GLM |
-| `1785295028411` | 7/29/2026, 7:54:55 PM | 772 | 2584KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
 | `1785370606525` | 7/29/2026, 7:49:21 PM | 390 | 2598KB | pickup TDSHS, TPIA Request 3 at: https://emsuniversity.com/emtskills/personnel/institution |
-| `1785368587300` | 7/29/2026, 7:46:41 PM | 244 | 936KB | There are some reddit forums out there that are against EMS University. Can you give me li |
-| `1785368618667` | 7/29/2026, 7:45:25 PM | 172 | 561KB | We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for |
-| `1785365363758` | 7/29/2026, 7:44:08 PM | 400 | 898KB | https://www.emsuniversity.com/emtskills/routes/chat_portal.php - can you review chats from |
 | `1785301927173` | 7/29/2026, 7:15:51 PM | 140 | 1520KB | See this email I got. Scope with deep research whether this is accurate or not:  |
 | `1785364900935` | 7/29/2026, 6:43:10 PM | 338 | 919KB | #GLM |
 | `1785355259217` | 7/29/2026, 5:18:16 PM | 730 | 1633KB | i ahve been told this form is not populating PDF forms properly downstream. Can you check  |
-| `1785359143504` | 7/29/2026, 5:14:36 PM | 446 | 3274KB | #Argus  |
 | `1785360672171` | 7/29/2026, 5:07:10 PM | 228 | 584KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
 | `1785286248280` | 7/29/2026, 3:51:18 PM | 230 | 978KB | pick up the Plesk login issue that closed for the second time here in cline irritating: |
 | `1785358209522` | 7/29/2026, 3:38:42 PM | 528 | 7749KB | Broke the GLM-5.2 ring deadlock. The blocker that killed every prior attempt is fixed and  |
@@ -155,209 +157,7 @@ Generated: 7/29/2026, 11:38:32 PM PT | window: last 72h | 140 tasks | index tota
 
 ## Per-window detail
 
-### `1785293294377` — 7/29/2026, 8:22:40 PM PT — 503 turns
-
-**Original task:**
-
-```
-A metric ton of emails came in to email agent within the last hour or 2. I need you to go over them for failures, do RCAs and build improvements into Email Agent / CFAs to be able to respond/act autonmously to resolve issues. Act on them and then give a status report / summary.
-```
-
-**Ideas referenced:** #111827, #1147, #1231, #1286, #13487, #1396, #1565, #166534, #1746, #1819, #19492, #19495, #19511, #19522, #19573, #19583, #19584, #19585, #19645, #19646, #19794, #19799, #19807, #19810, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830 [approved], #19831 [proposed], #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19846 [rejected], #19847 [rejected], #19848, #1985, #19853, #19857, #19866 [proposed], #19867 [deployed], #19868 [proposed], #19870 [proposed], #19901 [proposed], #20058 [proposed], #20059 [proposed], #20060 [proposed], #20062 [proposed], #20063 [proposed], #20064 [proposed], #20113 [proposed], #20114 [proposed], #20115 [proposed], #20116 [proposed], #2082, #2090, #2102, #334155, #374151, #406060, #406061, #406242, #414633, #414634, #414636, #414642, #414643, #414692, #414693, #414694, #4480, #4481, #475569, #54291, #54319, #5749, #64748, #78350, #9137, #9888, #9989
-
-**Last PICKUP PROMPT:**
-
-```
-rocessed). The fix is working.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #ECB-86 — Email Agent / CFA Fleet Audit completion & durable repair layer
-
-Where we left off (verified 2026-07-29 19:28 PT):
-- 4 symptom fixes deployed (PDO type guard, triage args fixed, chat dedup, URL allowlist)
-- cron_integrity_watchdog deployed + registered — scans 481 scripts every 5min for PHP_FATALs and missing scripts
-- 5 open thread RCAs complete with ideas filed (#20113, #20114, #20115, #20116, #20064)
-- Tracking doc at `/Users/rubenmajor/Desktop/ECB-86_Tracking.md`
-
-Open threads to drive next (EVERY item with a real filed idea #):
-1. #20113 [proposed] — Chat handoff agent notification: wire Discord notify to shift-coverage awareness
-2. #20114 [proposed] — Kaizon cron-failure detection: wire PHP Fatal exit codes to orchestrator_event_log
-3. #20115 [proposed] — CFA auto-resolve blocked-URL tickets: Email AI detects title pattern and auto-responds
-4. #20116 [proposed] — Email AI auto-respond to 'Legitimate email without AI response' tickets
-5. Monitor email_inbound_log processed_for_routing count — should approach 0 within 2 hours (142/hr now, steady-state inbound)
-
-Reference IDs:
-- Ticket: ECB-86
-- Ideas filed: #20113, #20114, #20115, #20116
-- Files touched: cron/cron_integrity_watchdog.php, cron/cron_orchestrator_triage.php, cron/cron_chat_handoff_ticket_spawn.php, lib/lora_shadow_health.php, lib/MailerUrlAllowlist_TrustedExternal.php, _scripts/frankenstein/cron_lora_success_assertion.php
-- Backup files: .bak-20260728-pdo (x2), .bak-20260728-idea19866, .bak-20260728-idea19868
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785379883249` — 7/29/2026, 8:16:17 PM PT — 184 turns
-
-**Original task:**
-
-```
-emsuniversity.com is showing secure, but not emsuniversity.com/ems. Can you resolve that?
-```
-
-**Ideas referenced:** #18868, #1910, #19370, #19887, #19903, #19907, #19910, #19918, #19919, #19925, #19927, #19928, #20044, #20079 [deployed], #20131 [proposed], #20133 [proposed], #20136 [proposed], #2098
-
-**Last PICKUP PROMPT:**
-
-```
-lem will recur without #20133.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task 1785094283000 — emsuniversity.com/ems + mail cert warnings.
-
-Where we left off (verified 2026-07-29 20:15 PT):
-- BUG 1 WEB, FIXED: Plesk renewed the emsuniversity.com LE cert 19:48:12 PT; nginx master (lstart Jul 28 19:42:57) never reloaded, so it served the stale cert from memory. Fixed with `nginx -t` + `systemctl reload nginx`. Verified: SAN covers emsuniversity.com + www, valid Jul 30 → Oct 28 2026, serial 05ADDDE6C5051CC86DDED51DAF77F3E7AEBC, /ems/ → www/ems/ http=200 ssl_verify=0, browser clean on course list + login. Mixed content ruled out.
-- BUG 2 MAIL, FIXED: NOT Postmark (that is outbound api.postmarkapp.com + backup MX prio 10; primary MX is mx.emsuniversity.com prio 5 → WOPR). Real cause: /etc/dovecot/conf.d/14-plesk-sni-mail.emsuniversity.com.conf mapped SNI mail.emsuniversity.com to the WEB cert /opt/psa/var/certificates/scfe2fd2v59gkgu93eyKQI (SAN = emsuniversity.com + www only). Postfix same via hash:/var/spool/postfix/plesk/certs (base64 entry decoded = web cert).
-- MAIL FIX (4 parts): added mx to server_name in /etc/nginx/conf.d/cline_mail_acme_challenge.conf (backup /root/); certbot reissued /etc/letsencrypt/live/mail.emsuniversity.com SAN = mail + mx, expires 2026-10-28 (old cert /root/le-mail-backup-*); dovecot SNI repointed to certbot cert; postfix override map /etc/postfix/sni_override/certs PREPENDED → tls_server_sni_maps = hash:/etc/postfix/sni_override/certs, hash:/var/spool/postfix/plesk/certs (main.cf backup /root/).
-- MAIL VERIFIED: 8/8 `Verify return code: 0 (ok)` with -verify_hostname -verify_return_error, for mail AND mx across 993/465/587/9465. Run these ON the box — LibreSSL on the Mac has no -verify_hostname. Queue empty, no TLS errors, SMTP AUTH advertised, live logins (vyu/jangeles/appleibanez/nguisadio) during the change.
-- DRIFT GUARD: /usr/local/bin/emsu_mail_cert_guard.sh + /etc/cron.d/emsu-mail-cert-guard every 15 min. Idempotent, logs to /var/log/emsu-mail-cert-guard.log ("no drift, nothing to do" when clean). Needed because Plesk regenerates both the dovecot SNI confs and its postfix certs.db.
-- CLIENT-SIDE: Ruben's normal Chrome still showed "not secure" while private browsing was clean = local Chrome cache, server is correct. Told him to clear site data + hard-reload.
-
-Open threads to drive next:
-1. #20133 [proposed] — P1 post-renewal nginx-reload watchdog. Will recur on every renewal across all 65 LE certs on the box, including the Moodle student login page. Build: mtime watch on /usr/local/psa/var/certificates/* + /opt/psa/var/modules/letsencrypt/etc/live/*, compare on-disk leaf SHA256 vs per-SNI served cert, conditional nginx reload, per-vhost SAN assertion, ops-chat alert.
-2. #20136 [proposed] — Get mail + mx onto the Plesk-managed cert so the override map + guard cron can be retired. BLOCKER: `plesk bin extension --exec letsencrypt cli.php -d emsuniversity.com -d www.emsuniversity.com -d mail.emsuniversity.com` fails ACME 404 because Plesk serves its challenges from a different docroot than the nginx block answering mail:80 (which roots at /var/www/vhosts/emsuniversity.com/httpdocs). Path: use the Plesk UI "Secure mail" toggle for the emsuniversity.com subscription, or align the ACME challenge docroot.
-3. #20131 [proposed] — Original mail-cert-SAN idea; now largely superseded in practice by the shipped fix above. Reconcile against #20136 and close or fold in.
-4. Cosmetic, no id
-```
-
-### `1785298450123` — 7/29/2026, 8:11:36 PM PT — 920 turns
-
-**Original task:**
-
-```
-#Stripe/Klarna
-
-Look into this, plan and scope only, do deep analysis and consult SLS / MCP,, etc...
-
---
-While you are on it, here remember that we have Stripe/Clarna and check API on that and i need to make sure that's properly wired into SLS, payment tracking, etc... and prevents users from being suspended if paid, knocks off the balance. if any for EMT payments, etc... Just verifying and so needs resolution if not across all EMT sites. Make sureit's activating properly, etc...|
-```
-
-**Ideas referenced:** #0000, #111827, #11990, #12661, #16224, #16608, #16610, #16613, #16958 [deployed], #16959, #1758, #17580, #18868, #1910, #19173, #19175 [executing], #19176 [queued], #19492, #19522, #19573, #19583, #19584, #19585, #19645, #19646, #19803, #19807, #19810, #19811, #19818, #19820, #19827, #19830, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19840, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19872 [deployed], #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #19887, #19897 [proposed], #19898 [proposed], #19899 [proposed], #19900 [proposed], #19901 [proposed], #19902 [proposed], #19903 [proposed], #19904 [proposed], #19907, #19908 [proposed], #19909 [proposed], #19910 [proposed], #19911 [proposed], #19912 [proposed], #19913 [proposed], #19914 [proposed], #19915 [proposed], #19916 [proposed], #19917 [proposed], #19918 [proposed], #19920 [proposed], #19921 [proposed], #19924 [proposed], #19925, #19927 [executing], #19928 [proposed], #20044 [executing], #20066 [proposed], #20067 [proposed], #20101 [proposed], #20121 [proposed], #20132 [proposed], #20135 [deployed], #2089, #2098, #2106, #2494, #2495, #5344, #7317, #9086, #9168, #9306, #9311, #9312, #9339
-
-**Last PICKUP PROMPT:**
-
-```
-, existence confirmed on WOPR.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Klarna/Stripe: RCA done, detector shipped, two deploy items remain.
-
-Where we left off (verified 2026-07-29 20:11 PT):
-- RCA COMPLETE (#20135 [deployed]). frankenstein-llm is the LLM router and was never in scope for business-logic auditing (rule 146). Real root cause: every EMSU monitor is PER-STUDENT, none is PER-INTEGRATION. A gate reading an empty table and a gate correctly saying 'unpaid' both return FALSE, so nothing errored. orchestrator_chains matching payment/klarna/affirm/integration = ZERO rows. 40-student cohort scan showed 0 NA_ERROR both before and after the fix, measuring blindness not health.
-- DETECTOR SHIPPED: cron/cron_stale_datasource_scan.php, 4,701 bytes, lint clean, nightly 04:10 in /etc/cron.d/emsu-klarna. Dry-run verified it flags the exact originating bug and lists all 7 referencing files.
-- CORRECTION LOGGED: my earlier 'SLS gate was broken, I fixed it' claim was overstated. balance_gate.php lines 157-172 already read the canonical mirror (idea #19921), which is why 26720FT-20 passed at 19:58 BEFORE my 20:00 patch. My patch landed in getPaymentMatchStatus() (lines 450/662), real defense-in-depth but not the primary gate. Handoff notes corrected.
-- Earlier this session: card fallback live on 16 vhosts + portal lib (Stripe-verified returns klarna,card), webhook we_1TygUkGup709uA0IDfVs4xr9 registered with secret in config, recovery cron every 2h, Vicky emailed 11 students to call, internal tests excluded from metrics, mock KlarnaClient retired.
-- Data: 28 abandoned ($39,882.50), 2 paid ($1,990.00).
-
-Open threads to drive next:
-1. #20121 [proposed] — Deploy the corrected Klarna-to-QB reconciliation cron. Corrected file at /Users/rubenmajor/Desktop/klarna_qb_recon.php. Server copy has an undefined QB_CONFIG constant (use the inline production array pattern from api/wc_qb_receipt.php line 225). Dry-run already finds the right 2 rows. Blocked in-window because $ and backslash chars break the MCP write transport; use a direct SSH pipe from the Mac terminal.
-2. #20101 [proposed] — Parent idea for the same QB work. Close it out or fold into #20121 so there is one thread.
-3. #20135 [deployed] — Follow-up: audit lib/klarna_payment_oracle.php, which trusts the legacy stripe_klarna_sessions table first. Lower risk (backfill cron unscheduled, api endpoint 401) but it is a live stale-source reference the new detector will keep flagging until fixed.
-4. #20132 [deployed] — Follow-up, NOT a correctness bug: wire klarnaAttemptNote() (in StudentLifecyclePaymentService.php) into StudentLifecycleState.php so abandoned-checkout students show 'payment attempt in progress, session expired, send fresh link' instead of a bare 'Unpaid'. CS messaging tone only.
-5. #20066 [deployed] — Check executor output on the 10 vhosts that have the gateway installed but have never produced a checkout.
-6. #20067 [deployed] — Check executor output on Klarna decline reason codes for the 11 payment_failed PaymentIntents.
-7. #19927 [deployed] — Monitor the first real recovery cron run at the next 2h mark; tail /var/log/emsu-klarna-recovery.log.
-
-Reference IDs:
-- Deployed: #19927 [deployed], #20044 [deployed], #20066 [deployed], #20067 [deployed], #20132 [deployed], #20135 [deployed]
-- Proposed: #20101 [proposed], #20121 [proposed]
-- Bug library: incident #2106 (silent_stale_datasource_no_agent_detection_20260729)
-- Files created: cron/cron_stale_da
-```
-
-### `1785363426908` — 7/29/2026, 8:11:00 PM PT — 326 turns
-
-**Original task:**
-
-```
-#EMT Webforms/Payments
-
-Consult SLS / Webforms on EMT websites. When a payment declines / there is no instant notification to the student that the payment was declined (wonder if this is the case also on refresher webistes and cpr sites) and so because of this people would think that their payments went through. Only to find out later that they did not. This needs to show instantly and kick back. So API needs updating.
-```
-
-**Ideas referenced:** #1767, #1770, #17846, #18820, #18868, #1910, #19492, #19495, #19875, #19876, #19877, #19879, #19881, #19882, #19883, #19887, #19903, #19907, #19908, #19909, #19910 [executing], #19911, #19912, #19913, #19914, #19915, #19916, #19917, #19918 [executing], #19920 [executing], #19921, #19924, #19925, #19927, #19928, #20055 [deployed], #20056 [deployed], #20057 [deployed], #20128 [deployed], #20130 [proposed], #20131, #20134 [proposed], #2050, #2082, #2085, #2098, #9086, #9168, #9339, #9888
-
-**Last PICKUP PROMPT:**
-
-```
-, awaiting a live-card window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #20130 — EMT payments: AVS enum repair + dead monitor repair.
-
-Where we left off (verified 2026-07-29 20:10 PT):
-- #20128 [deployed] DECLINED-as-SUCCESS fixed on 19 sites. VERIFIED ON LIVE MONEY: patched Api.php deployed 19:58:18, live $1,495 payment at 20:05:16 settled `completed` (qb_charge_attempts id 24). Patched `log_charge_attempt()` derives status from the body, so `completed` proves a genuine CAPTURED. Offline harness `/tmp/verify_decline_logic.php` = 12/12 PASS.
-- #20130 [proposed] CORRECTED diagnosis — my first hypothesis (bad frontend selectors) was WRONG. Real cause: `avsStreet`/`avsZip` are Intuit AVS *result enums* (`Pass`/`NotAvailable`/`Fail`), not address strings. Sending a street address → HTTP 400 → safety-retry strips AVS → 100% of charges land with no AVS, and every charge is submitted twice.
-- #20134 [proposed] RCA filed: 4-layer monitoring failure (schema mismatch → SQL 1054, CREATE-IF-NOT-EXISTS no-op, zero callers, only signal is a human in chat 84).
-- #20055 [deployed] blank Name/Comment fixed. #20056 [deployed] header+footer errors so the decline box renders.
-
-Open threads to drive next:
-1. #20130 [proposed] — remove `avsStreet`/`avsZip` from `build_charge_request()` in `src/Api/Api.php` on all 19 sites; rely on `card.address` in the token request. Re-verify with ONE live card that (a) no HTTP 400 AVS enum error appears, (b) only one charge submission occurs, (c) Intuit shows a real AVS result. Do NOT deploy without that test.
-2. #20134 [proposed] — `ALTER TABLE qb_charge_attempts` to add `http_code`, `avs_street_sent`, `avs_zip_sent`, `cardholder_name`, `response_body`, `request_id`; populate them in `log_charge_attempt()`; wire `qb_avs_monitor.php` to cron + orchestrator; add the schema-assertion guard so monitors fail loudly.
-3. #20128 [deployed] — still wants one live *declined* card test to visually confirm the red decline box + card-shake renders (logic already proven by harness).
-
-Reference IDs:
-- Ideas: #20055 [deployed], #20056 [deployed], #20128 [deployed], #20130 [proposed], #20134 [proposed]
-- Files touched (19 sites): `src/Process.php` (a4aa1aa42f31ce6acb64e90d7adb9e60), `src/Api/Api.php` (192db4fbe778f3a05732346d690299b3), `src/Api/Response.php` (905559275a14166d11acaa8b37a52bfa)
-- Backups: `.bak-20055-20260729`, `.bak-declinedbody-20260729` on all 19 sites
-- Harness: `/tmp/verify_decline_logic.php` (12/12 PASS)
-- HANDOFF_NOTES.md updated 2026-07-29 20:10 PT
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</parameter>
-</invoke>
-</result>
-</attempt_completion>
-```
-
-### `1785379499916` — 7/29/2026, 8:04:29 PM PT — 134 turns
-
-**Original task:**
-
-```
-#EA/PDF
-
-Check EA / PDF / SPFS/ e2PDF, ensure working as designed. Consult SLS, etc.. and review below for accuracy. If found to be inaccurate, do RCA and correct why frankenstein-llm would find it accurate. Proceed according to rule 267/29
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — EA PDF retry investigation and fix.
-
-Where we left off (verified 2026-07-29 19:15 PT):
-- 56 consecutive batch failures (280 individual failures) in /var/www/emtskills/logs/ea_pdf_retry.log
-- Root cau
-```
-
-**Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12477, #13084, #152615, #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [queued], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1935, #1936, #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #19682, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [superseded], #19893 [proposed], #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20110 [proposed], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #2101, #2105, #389249, #7223, #9086, #9168, #9339
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785375877050` — 7/29/2026, 8:01:18 PM PT — 140 turns
+### `1785375877050` — 7/30/2026, 1:20:21 AM PT — 204 turns
 
 **Original task:**
 
@@ -374,173 +174,64 @@ I stopped tuning preferences and made it unconditional in /usr/local/bin/franken
 
 ```
 
-**Ideas referenced:** #13874, #178531, #1993, #19962 [proposed], #20005 [proposed], #20022 [rejected], #20040 [proposed], #20041 [proposed], #20042 [proposed], #20054 [proposed], #20068 [proposed], #20069 [proposed], #20082 [proposed], #20088 [proposed], #20102 [proposed], #20112 [proposed], #20129 [proposed]
+**Ideas referenced:** #12459, #1248 [resolved], #13874, #16844, #178531, #1894, #1967, #1993, #19962 [proposed], #20005 [proposed], #20022 [rejected], #20040 [proposed], #20041 [proposed], #20042 [proposed], #20054 [proposed], #20068 [proposed], #20069 [proposed], #20082 [proposed], #20088 [proposed], #20102 [proposed], #20112 [proposed], #20129 [proposed], #20172 [proposed], #20178
 
 **Last PICKUP PROMPT:**
 
 ```
-e NCCL ring crashes under load
+000 on :11514.
+——[/COPY]——
+```
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1785314663557 -- GLM-5.2: durable build documented, ring booting, open threads ready to drive
+Pick up task #1785314663557 -- GLM ring root cause found (Cesar interface), concurrency theory withdrawn
 
-Where we left off (verified 2026-07-29 19:50 PT):
-- RING: 5th relaunch at 19:47 PT. 4 prior crashes today (30-53 min each, RuntimeError Executor failed/NCCL timeout). NCCL transport NET/Socket.
-- GLM-FIRST ROUTING IS DURABLE: documented at emtskills/docs/GLM_FIRST_DURABLE_BUILD.md with rollback commands. Adapter live 2.5h, CANARY GLM-NO-QUARANTINE firing, GLM position [0] every ADMIT. One `cp` rollback from .bak-glmfirst-* files.
-- ZERO TRAFFIC REACHES GLM: adapter 5s probe timeout kills before ring's 12-50s first request. CONNECT_TIMEOUT=5 at line 278; env FRANK_TOOLS_CONNECT_TIMEOUT available.
-- LITELLM: stable since 17:03 restore. _router_core.py truncation fully remedied.
+Where we left off (verified 2026-07-30 01:02 PT):
+- ROOT CAUSE FOUND, #20172 [proposed]: ring cannot boot because rank5 Cesar (.56) fails ncclSocketInit with "connecting to address (empty) with family 5". Cesar is the ONLY node with two interfaces on 192.168.1.0/24 (enP7s7=.56 plus wlP9s9 wifi=.136). Fix is one command: ip addr del 192.168.1.136/24 dev wlP9s9. Rank0 Cato (.115) Exited(1) only as a downstream victim (WorkerProc init needs all 6 ranks). Ranks 1-4 have been Up 5 hours.
+- CONCURRENCY THEORY WITHDRAWN, #20129 [rejected]: Ruben challenged the proposed 2-4 concurrent cap and was right. Actual GLM wins in /var/log/emsu-adapter-upstream.log show queue_depth 0-3, never saturated, so load was never the trigger. max-num-seqs is 128 and vLLM continuous batching handles queueing. Do NOT add a concurrency cap.
+- NCCL ENV MISMATCH FIXED: /tmp/glm52_authoritative.sh exported NCCL_TIMEOUT=3600 / MIN_NCHANNELS=2 / NET_CHANNEL_COUNT=2 in the shell but passed 1200 / 4 / 4 into the container. Container wins, so the ring ran unintended settings. All three reconciled. Backup /tmp/glm52_authoritative.sh.bak-nccl-timeout-*.
+- #20112 [proposed] RE-SCOPED from P0 down to P2: the request path already has read=30s which covers a 12-50s TTFB. Only the canary probes hardcode read=5.0, and GLM-NO-QUARANTINE already ignores those failures. It is log noise plus a bogus tok_s=0.00, not a traffic blocker. GLM got zero traffic today because the ring was dead.
+- JULIA/CLAUDIA VERIFIED LIVE, and two registry facts are stale. Julia (spark-6ae6, .190, SSH -p 2205) has a live orphaned Ray session from 7/29 00:15 but NO vLLM process and NO containers. Claudia (spark-6d51, .194, SSH -p 2206) is up with zero containers, which is CORRECT for a Ray worker. WOPR has NO ssh -L forward for 11513 (only 8210 and 11516 exist), so the :11513 listener is an orphaned socket, which is the real reason for HTTP 000. The registry claim that spark-6ae6 became "GLM ring augustus rank-1" is FALSE: .190 is not a ring node and augustus is spark-e3b2 at .244. A detailed copy window for this was delivered to Ruben in the prior message.
+- GLM-FIRST ROUTING REMAINS DURABLE: /var/www/emtskills/docs/GLM_FIRST_DURABLE_BUILD.md, one-cp rollback for adapter and router_hook. Adapter active since 17:15 PT, NRestarts=0. LiteLLM stable since the 17:03 restore.
 
 Open threads to drive next:
-1. #20112 [proposed] -- P0. Fix adapter probe timeout. Set FRANK_TOOLS_CONNECT_TIMEOUT=30 in systemd override, restart adapter, verify GLM canary probes succeed against booted ring.
-2. #20102 [proposed] -- P1. Diagnose NCCL ring crashes (4 deaths today). Check NET/Socket throttling at scale for PP=6.
-3. #20088 [proposed] -- After #20112: confirm GLM lands via unique-nonce POST to :11510.
-4. #20082 [proposed] -- P0. Write-locking + size-regression guard for app/extension files.
-5. #20069 [proposed] -- Per-upstream SLO from measured tok/s, not global 60s constant.
-6. #20068 [proposed] -- Verify pre-probe daemon thread patch: restart adapter, confirm :11510 binds within 2s.
-7. #20042 [proposed] -- Julia/Claudia 120b TP=2 recovery.
-8. #20005 [proposed] -- Consolidate ring supervisors.
-
-Reference IDs:
-- Ideas filed: #20102 [proposed], #20112 [proposed]
-- Ideas reconciled: #20088 [proposed], #20082 [proposed], #20041 [proposed], #20069 [proposed], #20068 [proposed], #20042 [proposed], #20005 [proposed]
-- Durable build doc: /var/www/emtskills/docs/GLM_FIRST_DURABLE_BUILD.md
-- CRITICAL LOGS: /tmp/frankenstein_tools_adapter.log (adapter), /var/log/emsu-adapter-upstream.log (winning upstream only)
-- Ring relayer: /tmp/glm_ring_up.sh (ssh -p 2204 from WOPR)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
+1. #20172 [proposed] -- P0 FIRST ACTION. On Cesar (.56): ip addr del 192.168.1.136/24 dev wlP9s9 (or ip link set wlP9s9 down), add NCCL_SOCKET_FAMILY=AF_INET to the launch env, then relaunch via bash /tmp/glm_ring_up.sh ON RANK0 (ssh -p 2204 rubenmajor@127.0.0.1, NOT on WOPR). Verify all 6 containers reach Up and rank0 does not hit WorkerProc init failure.
+2. #19962 [proposed] -- Same family as #20172 [proposed]. Peers binding wrong address. Fold into the #20172 fix or close as duplicate once Cesar is clean.
+3. #20041 [proposed] -- 4h stability watch AFTER the ring boots with all 6 ranks. Ruben reports it served hours stable on 7/28, so that is the benchmark to match.
+4. #20082 [proposed] -- P0, independent of the ring. Write-locking plus size-regression guard on deploys. Today's 70-minute LiteLLM outage came from a truncated _router_core.py (456637 to 1912 bytes) with no alert.
+5. #20112 [proposed] -- P2 now, not
 ```
 
-### `1785295028411` — 7/29/2026, 7:54:55 PM PT — 772 turns
+### `1785399211024` — 7/30/2026, 1:20:17 AM PT — 33 turns
 
 **Original task:**
 
 ```
-What outstanding build issues exist for the Broser Extension for Argus? What else do you recommend? Can you do some work and testing on it to improve it more? Make sure it's wired into actual Argus as well:
+#Julia/Claudia
 
-https://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome
+——[COPY]——
+# COPY WINDOW — Julia + Claudia CX7 TP=2 gpt-oss-120b recovery (idea #20042)
+
+Pick up idea #20042 [proposed] — restore julia-120b TP=2 to the pool.
+
+## VERIFIED STATE (live-probed 2026-07-30 01:01 PT — do NOT re-derive, but DO re-confirm before acting)
+
+- Julia head: spark-6ae6, LAN 192.168.1.190, WireGuard 10.100.0.15, SSH via
+  `ssh -p 2205 rubenmajor@127.0.0.1` from WOPR.
+- Claudia worker: spark-6d51, LAN 192.168.1.194, WireGuard 10.100.0.16, SSH via
+  `ssh -p 2206 rubenmajor@127.0.0.1` from WOPR.
+- Julia has a LIVE Ray cluster (gcs_server PID ~1394125, session
+  
 ```
 
-**Ideas referenced:** #0000, #10003, #10005, #10108, #10182, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12301, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #127908, #1281, #128193, #128203, #128206, #128263, #128266, #128275, #12900, #1309, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14000, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16213, #16263, #16584, #16589, #16590, #16602, #16625, #16646, #16680, #16715, #16716, #16717, #17078, #17307, #17342, #17345, #17669, #17672, #17673, #17691, #17697, #17741, #17746, #17749, #17751, #1807, #1820, #18328, #18337, #18360, #18388 [executing], #18396 [proposed], #18397 [proposed], #18398 [proposed], #1840, #1857, #18670, #18671, #18687, #18688, #18745, #18770, #1878, #18930 [proposed], #19370, #19407, #1952, #19585, #19670, #19686, #19896 [proposed], #19898 [proposed], #19899 [proposed], #19900 [proposed], #19901 [proposed], #19919 [proposed], #19920 [proposed], #19999 [approved], #20079 [deployed], #20103, #2071, #2079, #21262, #238636, #274160, #30363, #34495, #6164, #69707, #7490, #7505, #7513, #7554, #8211, #8365, #8942, #9650, #9654, #9660, #9689, #9706, #9733, #9889, #9910, #9934
+**Ideas referenced:** #16417, #16448, #16449, #16604, #20042 [proposed], #20172 [proposed]
 
-**Last PICKUP PROMPT:**
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-```
-ad serves the working version.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus Chrome Extension final fix: SW URL path + ZIP rebuild.
-(Verified 2026-07-29 19:54 PT)
-
-Where we left off:
-- `argus_proxy.php` backend created and verified working (curl returns valid JSON)
-- `sidepanel.js` has `safeSend()` wrapper with retries [deployed]
-- `service-worker.js` syntax fixed, but URL path still points to `/api/argus_proxy.php` (needs `/emtskills/` prefix)
-- ZIP not rebuilt with latest changes
-
-Open threads to drive next:
-1. #20079 [deployed] — SW URL fix: change `FRANK_API_URL` from `/api/argus_proxy.php` to `/emtskills/api/argus_proxy.php` — edit service-worker.js line 10
-2. #20079 [deployed] — Rebuild ZIP from `/var/www/emtskills/public/argus-extension/` with clean files (no .bak)
-3. #20079 [deployed] — Verify download URL `https://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome` serves the updated ZIP
-
-Reference IDs:
-- Ideas: #20079 (NORMALIZER fix — DEPLOYED), #20103 (auto-lint in deploy pipeline — filed)
-- Files: /var/www/emtskills/api/argus_proxy.php, /var/www/emtskills/public/argus-extension/service-worker.js, sidepanel.js, content.js, manifest.json
-- ZIP: /var/www/emtskills/public/argus-extension.zip
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785370606525` — 7/29/2026, 7:49:21 PM PT — 390 turns
-
-**Original task:**
-
-```
-pickup TDSHS, TPIA Request 3 at: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
-
-I am quesitonning the portions of the request requesing files about our specific complaint and whether that's a helpful strategy in the request and whether we can even get or access that info anyway. It seems fruitless/pointless to try to get that information because it's completely privileged from disclosure as part of an open investigation. And if I'm going to file on it, could create other issues as well, like the departemtn's greater ire on this. While it's likel
-```
-
-**Ideas referenced:** #059669, #0891, #15803, #166534, #16957, #18868, #1910, #19587, #19595 [executing], #19599 [executing], #19605, #19887, #19903, #19907, #19910, #19918, #19919, #19925, #19927, #19928, #20044, #20079 [deployed], #20097 [proposed], #20098 [proposed], #20099 [proposed], #20105 [proposed], #20106 [proposed], #20919, #2098, #2104, #22792, #2563, #33647, #34125, #374151, #37910, #37912, #450438, #4649, #4727, #475569, #49128, #49296, #49297, #57534, #600179, #623992, #64748, #7479, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-ause fix, not a filing detail.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — records-request send sequencing + FOIA tracker registration.
-
-Where we left off (verified 2026-07-29 19:48 PT):
-- ADVISED AGAINST the TEA/THECB request. THECB regulates degree-granting higher ed, TEA regulates K-12, neither has authority over EMS continuing education (DSHS does, under HSC 773 / 25 TAC 157). An empty return becomes a fact a DSHS attorney can cite. The agency that actually polices institutional "accredited" advertising claims in Texas is TWC Career Schools and Colleges (Tex. Educ. Code Ch. 132), but even a TWC definition does not bind CAPCE. The accredited-wording angle is ALREADY fully captured by v7 Part A item 2 (what CAPCE sent TO DSHS). Recommendation: drop the third-agency request.
-- ADVISED SENDING the 3 AZDHS requests. AZ matter is live and open: investigation id=1, NOI 2026-04-13, 7 complaints, EMS Training Certificate #450438, Round 1 response 4/26, Round 2 response 5/19 (Bureau identified complainants EMS-26-0460 Nettles, 0461 Cochrane, 0462 Deaton, 0463 Guillen, 0464 Kubitskey via Lance Bevins). A.R.S. 39-121 has no filing deadline so nothing is time-barred. Only cost of the 76-day delay is losing contemporaneity.
-- FLAGGED A PRE-SEND FIX: the 3 requests were drafted 2026-05-14, BEFORE the Round 2 exchange. They may not ask for the 5/14 Bevins correspondence or the complainant-identification records produced during Round 2, which are now the highest-value items in the AZ file. Review the 3 PDFs against post-5/14 events before sending.
-- RECOMMENDED SEND ORDER: (1) AZDHS requests 2 and 3 (policies + historical records, immune to investigation exceptions, establish comparator baseline) to public_records@azdhs.gov; (2) AZDHS request 1 (case files) after checking what Round 2 already produced; (3) v7 TPIA to DSHS on a SEPARATE week from the AZ sends, because Part C of v7 asks whether the agencies communicate and simultaneous filings look coordinated; (4) BPPE CPRA last, after the 7/20 findings letter arrives so the request can target the underlying notes.
-- ROOT-CAUSE FIX IDENTIFIED: 3 requests sat in state='drafted' for 76 days because nothing was watching them. foia_request_tracker already has TX_PIA loaded (Tex. Gov. Code 552.001, 10 statutory days, 10/20/30/45/60 ladder) and AZ_PRA (A.R.S. 39-121, public_records@azdhs.gov). Register v7 and the AZ requests as tracker rows so the clocks are system-tracked.
-
-Open threads to drive next:
-1. (human-only decision, no idea) — Review the 3 AZDHS FOIA PDFs (uploads/compliance/regulator_correspondence/FOIA_0{1,2,3}_*.pdf) against everything that happened after 2026-05-14, add the Round 2 / Bevins correspondence items, then send 2 and 3 to public_records@azdhs.gov.
-2. (human-only decision, no idea) — SEND DECISION on v7 TPIA to openrecords@dshs.texas.gov + certified mail to DSHS Public Information Coordinator, MC-1919, 1100 West 49th Street, Austin TX 78756-3101. Schedule a different week than the AZ sends.
-3. (human-only decision, no idea) — Register v7 + the 3 AZ requests as foia_request_tracker rows (v7: jurisdiction=TX_PIA, agency=TDSHS, statutory_response_days=10) and update foia_request_tracker ids 1-3 state from 'drafted' to 'sent' with date_sent when they go.
-4. (human-only decision, no idea) — CONFIRM: drop the TEA/THECB request entirely, or pursue TWC Career Schools and Colleges (Tex. Educ. Code Ch. 132) instead. My recommendation is drop.
-5. (human-onl
-```
-
-### `1785368587300` — 7/29/2026, 7:46:41 PM PT — 244 turns
-
-**Original task:**
-
-```
-There are some reddit forums out there that are against EMS University. Can you give me links to them, scan them for violations of TOS and draft a legal request for removal of them?
-```
-
-**Ideas referenced:** #0000, #000000, #00255, #003584, #0045, #0079, #008675, #04090, #050505, #080808, #121213, #131313, #16949, #18360, #1870, #20078 [proposed], #20118 [proposed], #223237, #272729, #303030, #33464, #434343, #504104, #565758, #660099, #665505, #7193, #7785, #818384, #82959, #8700, #962900
-
-**Last PICKUP PROMPT:**
-
-```
-trace the source and purge it.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Send Reddit DMCA takedown based on verified false claims.
-
-Where we left off (verified 2026-07-29 19:44 PT):
-- Fact-check file saved to /Users/rubenmajor/Desktop/EMSU_Reddit_Claims_FactCheck.md
-- VEC/MCP data confirms: "scam" label = defamatory falsehood, VEC/MCP compliance claims = defamatory falsehoods
-- DMCA notice updated with VEC/MCP evidence citations
-- 2 claims unverified (needs facility/billing audit) — flagged for CQI
-
-Open threads to drive next:
-1. #20078 [proposed] — Ruben reviews fact-check → opens threads to confirm still live → attaches VEC/MCP proof → sends to legal@reddit.com
-2. #20118 [proposed] — RCA on stale .188 hostname across Cline agents
-3. CQI: Investigate online-vs-in-person delivery gap (corroborated across 2 independent threads)
-
-Reference IDs:
-- Ticket: none
-- Ideas filed: #20078, #20118
-- Files touched: /Users/rubenmajor/Desktop/EMSU_Reddit_Claims_FactCheck.md, /Users/rubenmajor/Desktop/EMSU_Reddit_DMCA_Takedown_Ready.md, /Users/rubenmajor/Desktop/BROWSER_AI_PROMPT_TO_SCAN_REDDIT_THREADS.md, /Users/rubenmajor/Desktop/EMSU_Reddit_Claims_Analysis.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785368618667` — 7/29/2026, 7:45:25 PM PT — 172 turns
+### `1785368618667` — 7/30/2026, 1:20:12 AM PT — 219 turns
 
 **Original task:**
 
@@ -550,7 +241,7 @@ We have had a huge decrease in revenue over hte last couple of weeks.is there a 
 Do we have a decrease in the number of registrations, website traffic across our EMT programs? What about a decrease int he traffic? I'm not worried about emsuniversity.com. I'm concerned with EMT websites only.
 ```
 
-**Ideas referenced:** #13437, #13441, #13454, #16732, #17205, #18315, #18868, #1910, #19887, #19903, #19907, #19910, #19918, #19925, #19927, #19928, #20044 [deployed], #20085 [proposed], #20086 [proposed], #20119 [proposed], #2096, #2097, #2098, #5431, #5574, #7174, #7907, #9132, #9222
+**Ideas referenced:** #13437, #13441, #13454, #16732, #17203, #17205, #18315, #18820, #18868, #1910, #19887, #19903, #19907, #19910, #19918, #19925, #19927, #19928, #20044 [deployed], #20085 [proposed], #20086 [proposed], #20119 [proposed], #2096, #2097, #2098, #5431, #5574, #7174, #7907, #9132, #9222
 
 **Last PICKUP PROMPT:**
 
@@ -587,7 +278,280 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785365363758` — 7/29/2026, 7:44:08 PM PT — 400 turns
+### `1785295028411` — 7/30/2026, 1:20:07 AM PT — 861 turns
+
+**Original task:**
+
+```
+What outstanding build issues exist for the Broser Extension for Argus? What else do you recommend? Can you do some work and testing on it to improve it more? Make sure it's wired into actual Argus as well:
+
+https://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome
+```
+
+**Ideas referenced:** #0000, #10003, #10005, #10108, #10182, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12301, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #127908, #1281, #128193, #128203, #128206, #128263, #128266, #128275, #12900, #1309, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14000, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16213, #16263, #16584, #16589, #16590, #16602, #16625, #16646, #16680, #16715, #16716, #16717, #17078, #17307, #17342, #17345, #17669, #17672, #17673, #17691, #17697, #17741, #17746, #17749, #17751, #1807, #1820, #18328, #18337, #18360, #18388 [executing], #18396 [proposed], #18397 [proposed], #18398 [proposed], #1840, #1857, #18670, #18671, #18687, #18688, #18745, #18770, #1878, #18930 [proposed], #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19370, #19407, #1952, #19585, #19670, #19686, #19896 [proposed], #19898 [proposed], #19899 [proposed], #19900 [proposed], #19901 [proposed], #19919 [proposed], #19920 [proposed], #19999 [approved], #2006, #20079 [deployed], #20103, #2071, #2079, #21262, #238636, #274160, #30363, #34495, #6164, #69707, #7490, #7505, #7513, #7554, #8211, #8365, #8942, #9650, #9654, #9660, #9689, #9706, #9733, #9889, #9910, #9934
+
+**Last PICKUP PROMPT:**
+
+```
+ad serves the working version.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus Chrome Extension final fix: SW URL path + ZIP rebuild.
+(Verified 2026-07-29 19:54 PT)
+
+Where we left off:
+- `argus_proxy.php` backend created and verified working (curl returns valid JSON)
+- `sidepanel.js` has `safeSend()` wrapper with retries [deployed]
+- `service-worker.js` syntax fixed, but URL path still points to `/api/argus_proxy.php` (needs `/emtskills/` prefix)
+- ZIP not rebuilt with latest changes
+
+Open threads to drive next:
+1. #20079 [deployed] — SW URL fix: change `FRANK_API_URL` from `/api/argus_proxy.php` to `/emtskills/api/argus_proxy.php` — edit service-worker.js line 10
+2. #20079 [deployed] — Rebuild ZIP from `/var/www/emtskills/public/argus-extension/` with clean files (no .bak)
+3. #20079 [deployed] — Verify download URL `https://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome` serves the updated ZIP
+
+Reference IDs:
+- Ideas: #20079 (NORMALIZER fix — DEPLOYED), #20103 (auto-lint in deploy pipeline — filed)
+- Files: /var/www/emtskills/api/argus_proxy.php, /var/www/emtskills/public/argus-extension/service-worker.js, sidepanel.js, content.js, manifest.json
+- ZIP: /var/www/emtskills/public/argus-extension.zip
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785359143504` — 7/30/2026, 1:19:43 AM PT — 467 turns
+
+**Original task:**
+
+```
+#Argus 
+
+Staff made numerous requests in Argus over the last 12 hours, including me: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser 
+
+I need those all to be catalogued, permissions updated according to rule 29 as well as actions carried out that argus refused and give that terminal additional capabilities for those actions - as well as the increased role permissions . If you think something is borderline or should not be approved accrsing to rul 29, let me know and we can discuss it.
+```
+
+**Ideas referenced:** #10003, #10005, #10182, #11925, #12301, #12477, #127908, #128193, #128203, #128206, #128263, #128275, #15158, #16213, #16263, #17537, #1754, #1755, #17580, #17619 [deployed], #17680, #178495, #178501, #18378, #18579, #18745, #18770, #18777 [pending], #18806, #18820, #18867, #18868, #18935, #18939, #18946, #18947, #18948, #18949, #18950, #18951, #18967, #18973, #18977, #18982, #18985 [rejected], #19081, #19098 [pending], #19099 [pending], #1910, #19100 [executing], #19102 [executing], #19126 [rejected], #19134 [executing], #19135 [executing], #19143 [executing], #19144 [executing], #19145, #19158, #19159, #19160 [executing], #19161 [executing], #19163 [executing], #19166, #19167, #19168, #19169, #19170 [executing], #19173, #19194, #19227, #19230 [queued], #19234 [queued], #19266, #19321, #19325, #19338, #19348, #19373, #19388 [executing], #19390 [rejected], #19403 [rejected], #19407, #19415, #19416, #19419, #19425, #19427, #19430, #19434, #19437, #19446, #19454, #19458, #19460, #19464, #19465, #19478, #19479, #19487, #19490, #19491, #19492, #19495, #19500, #19509, #19510, #19511, #19518 [rejected], #19522, #19523, #19524, #19525, #19535, #19537, #19539, #19545, #19558, #19563 [rejected], #19568 [executing], #19571 [proposed], #19572, #19573, #19574, #19576, #19577, #19578, #19579 [executing], #19580, #19581, #19583, #19584, #19585 [executing], #19586, #19587, #19588, #19589, #19590, #19591, #19592, #19594, #19595, #19596, #19597, #19598, #19599, #19600, #19601, #19602, #19603, #19604, #19605, #19606, #19607, #19608, #19610 [executing], #19611, #19615, #19624 [pending], #19641 [pending], #19645, #19646, #19647, #1965, #19657, #1966, #1967, #1968, #19686, #1969, #19690 [deployed], #1970, #19704, #1971, #19714 [proposed], #1972, #1973, #19731 [pending], #1975, #1976, #19766, #19767, #19773, #19776, #19777 [proposed], #19778 [proposed], #19784, #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19803, #19807, #19810, #19811, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830, #19831, #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19840, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19871 [deployed], #19872, #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #19881 [proposed], #19882 [proposed], #19883 [proposed], #19887, #19903, #19907, #19908, #19909, #19910 [executing], #19911, #19912, #19913, #19914, #19915, #19916, #19917, #19918 [executing], #19920 [executing], #19921, #19922, #19924, #19925, #19927, #19928, #19970 [pending], #19971 [pending], #19975 [pending], #19978, #1998, #19995 [pending], #20023 [pending], #20024 [pending], #20025 [pending], #20026 [proposed], #20027, #20028 [pending], #20029 [proposed], #20030 [pending], #20031 [proposed], #20034 [pending], #20036 [pending], #20053 [pending], #2006, #2008, #2010, #2011, #2012, #2014, #2015, #2016, #2017, #2019, #2023, #2024, #2027, #2029, #2030, #2031, #2033, #2039, #2040, #2041, #2043, #2050, #2064, #2066, #2084, #2085, #2089, #2090, #2091, #2098, #21262, #21278, #21765, #22501, #22502, #2322, #2490, #25227, #274160, #2989, #30363, #3048, #3049, #334155, #3595, #4338, #623992, #64748, #695708, #69707, #697523, #699463, #699474, #8942, #9654, #9660, #9889
+
+**Last PICKUP PROMPT:**
+
+```
+aining fixes. Each takes a single sed or Python patch — all code is ready.
+
+═══ PICKUP PROMPT ═══
+Pick up task — Argus build-and-ship, tunnel recovery.
+
+Where we left off (verified 2026-07-30 01:09 PT):
+- 4 fixes shipped (refresher checkout, path regex, CS roles, domain knowledge)
+- 4 fixes ready to build (path double-slash, invoice spam, web_fetch, image thumbnails)
+- SSH tunnel down — ALL MCP tools failing with "Invalid JSON argument"
+- Vicky issues opened in separate window — need cross-window check
+- All code for remaining fixes is on /tmp/build_all_fixes.py (needs re-upload)
+- Tracking doc at /var/www/emtskills/docs/ARGUS_SESSION_20260729_TRACKING.md
+
+Open threads:
+1. #20024 [proposed] — Invoice email spam killswitch (P1)
+2. #20025 [proposed] — Path double-slash cleanup (P2)
+3. #20034 [proposed] — web_fetch action (P0)
+4. #20028 [proposed] — Image thumbnails (P2)
+5. #20023 [proposed] — EA PDF 72 pending entries (P0)
+6. #20026 [proposed] — Weston Trenner attendance (P1)
+7. #20029 [proposed] — Backend compliance validator (P1)
+8. #20036 [proposed] — Argus self-healing (P0)
+9. #20031 [proposed] — Context overflow fix (P2)
+10. #19871 [deployed] — cline_admin_temp placeholder (ready_for_review)
+
+Reference IDs:
+- Ticket: None linked
+- Ideas filed: #20023-#20036
+- Files touched: argus_action_catalog.php, alltastic_api.php, ARGUS_SESSION_20260729_TRACKING.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785368587300` — 7/30/2026, 1:18:38 AM PT — 264 turns
+
+**Original task:**
+
+```
+There are some reddit forums out there that are against EMS University. Can you give me links to them, scan them for violations of TOS and draft a legal request for removal of them?
+```
+
+**Ideas referenced:** #0000, #000000, #00255, #003584, #0045, #0079, #008675, #04090, #050505, #080808, #121213, #131313, #16949, #18360, #1870, #20078 [proposed], #20118 [proposed], #223237, #272729, #303030, #33464, #434343, #504104, #565758, #660099, #665505, #7193, #7785, #818384, #82959, #8700, #962900
+
+**Last PICKUP PROMPT:**
+
+```
+e sending to legal@reddit.com.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Send Reddit defamation takedown for r/UCSD and r/ems threads.
+
+Where we left off (verified 2026-07-30 01:14 PT):
+- False claims identified from browser AI analysis: Thread 1 (online-vs-in-person delivery, over‑enrollment, exam rescheduling, “scam” label) + Thread 3 (instructor leaving early, billing errors blocking exams)
+- DMCA letter rewritten in plain English with no internal jargon — saved to /Users/rubenmajor/Desktop/EMSU_Reddit_DMCA_Takedown_Ready.md
+- Ruben needs to: insert physical address and signer name, attach supporting documentation, send to legal@reddit.com
+
+Open threads to drive next:
+1. #20078 [proposed] — Ruben reviews letter → inserts address + signer → sends to legal@reddit.com
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: #20078, #20118
+- Files touched: /Users/rubenmajor/Desktop/EMSU_Reddit_DMCA_Takedown_Ready.md, /Users/rubenmajor/Desktop/EMSU_Reddit_Claims_FactCheck.md, /Users/rubenmajor/Desktop/EMSU_Reddit_Claims_Analysis.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785293294377` — 7/30/2026, 1:14:00 AM PT — 538 turns
+
+**Original task:**
+
+```
+A metric ton of emails came in to email agent within the last hour or 2. I need you to go over them for failures, do RCAs and build improvements into Email Agent / CFAs to be able to respond/act autonmously to resolve issues. Act on them and then give a status report / summary.
+```
+
+**Ideas referenced:** #111827, #1147, #1231, #1286, #13487, #1396, #1565, #166534, #1746, #1819, #19492, #19495, #19511, #19522, #19573, #19583, #19584, #19585, #19645, #19646, #19794, #19799, #19807, #19810, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830 [approved], #19831 [proposed], #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19846 [rejected], #19847 [rejected], #19848, #1985, #19853, #19857, #19866 [proposed], #19867 [deployed], #19868 [proposed], #19870 [proposed], #19901 [proposed], #20058 [proposed], #20059 [proposed], #20060 [proposed], #20062 [proposed], #20063 [proposed], #20064 [proposed], #20113 [proposed], #20114 [proposed], #20115 [proposed], #20116 [proposed], #2082, #2090, #2102, #334155, #374151, #406060, #406061, #406242, #414633, #414634, #414636, #414642, #414643, #414692, #414693, #414694, #4480, #4481, #475569, #54291, #54319, #5749, #64748, #78350, #9137, #9888, #9989
+
+**Last PICKUP PROMPT:**
+
+```
+ipeline is now self-sustaining
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #unavailable — ECB-86 follow-up: verify integrity watchdog fires, monitor email backlog convergence.
+
+Where we left off (verified 2026-07-30 01:13 PT):
+- 5 subagent implementations deployed and syntax-verified on /var/www/emtskills
+- ChatHandoffNotification.php: 199 lines, shift-coverage-aware Discord notify
+- cron_integrity_watchdog.php: 34 lines, scans 481 scripts for PHP_FATALs
+- EmailAIResponder.php: 3298 lines, autoResolveBlockedUrl + autoRespondLegitimateEmail
+- Email backlog: 68/hr (steady-state inbound), down from 1669
+
+Open threads to drive next (EVERY item has a real filed idea):
+1. #20060 [proposed] — Verify chat handoff notification is actually reaching on-shift agents via Discord; check agent_shift_coverage table has data
+2. #20058 [proposed] — Run `sudo -u www-data timeout 30 php cron/cron_integrity_watchdog.php` and verify alerts appear in orchestrator_event_log
+3. #20063 [proposed] — Create a test blocked-URL ticket and verify Email AI auto-responds within 5 min
+4. #20064 [proposed] — Create a test 'Legitimate email without AI response' ticket and verify auto-reply fires
+5. Monitor email_inbound_log processed_for_routing count — target: <30/hr within 24h
+
+Reference IDs:
+- Ideas filed: #20113, #20114, #20115, #20116, #19866, #19867, #19868, #19901
+- Files created: lib/ChatHandoffNotification.php, cron/cron_integrity_watchdog.php
+- Files modified: lib/EmailAIResponder.php, cron/cron_chat_handoff_ticket_spawn.php, lib/MailerUrlAllowlist_TrustedExternal.php, lib/lora_shadow_health.php, cron/cron_orchestrator_triage.php
+- Cron created: /etc/cron.d/emsu-email-inbound-routing, /etc/cron.d/emsu-cron-integrity-watchdog
+- Rule modified: .clinerules/fleet-live-probe-hardfloor.mdc (frankenstein health audience appended)
+- Backup files: .bak-20260728-pdo (x2), .bak-20260728-idea19866, .bak-20260728-idea19868
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785396884879` — 7/30/2026, 1:13:09 AM PT — 118 turns
+
+**Original task:**
+
+```
+#Vicky Issues / Argus 
+
+Vicky, detailed a bunch of issues in chat 55 related to grievances, some exam stuff, etc... after 10PM pst tonight. I already resolved the Google Drive document issue, but the other stuff, well, I don't think that either ruben imessage ops did anything about it, nor Argus. Check Argus: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=terminal and Vicky's access and whatever she was asking and I want you to check those accounts to see if there are issues with them or if the suspensions are valid or in abilities to take those exams are valid or if there's
+```
+
+**Ideas referenced:** #000000, #047857, #059669, #10003, #10005, #10182, #11111, #111111, #12301, #127908, #128193, #128203, #128206, #128241, #128263, #128266, #128268, #128275, #16213, #16263, #17483, #181825, #18378, #18745, #18770, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19370, #19470, #2006, #20174 [proposed], #20175 [proposed], #20176 [proposed], #21262, #252532, #2563, #274160, #30363, #313244, #3223, #3226, #3227, #3230, #3231, #32324, #3233, #3239, #3240, #3243, #3244, #3246, #3247, #3251, #3254, #3255, #334155, #3387, #3730, #374151, #3742, #4338, #45475, #475569, #6366, #64748, #666666, #69707, #78350, #787890, #842029, #856404, #8942, #9086, #9168, #92400, #9339, #9650, #9654, #9660, #9733, #9889
+
+**Last PICKUP PROMPT:**
+
+```
+a #20174 would close this gap.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Vicky Grievance/Exam/QB Issues RCA follow-up.
+
+Where we left off (verified 2026-07-30 01:11 PT):
+- Full RCA complete on 3 bugs + 6 student tickets from chat 55
+- Grievance upload: PHP post_max_size=8M/upload_max_filesize=2M bottleneck (idea #20175 [proposed] + #20176 [proposed])
+- QB sync/auto-suspend: OAuth connection stale, not a suspension logic bug
+- Aaron Perez (TKT-20260723-E27A8C55): 3 confirmed blockers need execution
+- Argus Admin-tier is diagnostic-only; 4 write actions needed (idea #20174 [proposed])
+
+Open threads to drive next:
+1. #20174 [proposed] — implement 4 Argus write actions in alltastic_api.php run_action (unsuspend_moodle, reset_exam_attempts, fix_class_section, clear_fail_status) for Admin role
+2. #20175 [proposed] — increase PHP limits: post_max_size=64M, upload_max_filesize=32M in php.ini + restart php8.2-fpm
+3. #20176 [proposed] — fix grievance_manager.php JS to display HTTP 413 error from grievance_api.php, verify API path resolves
+4. Execute Aaron Perez 3-step fix: clear fail_date + fix class_section → unsuspend Moodle → reset Final Exam attempts on quiz 5083
+5. Reconnect QB OAuth at quickbooks_settings.php, then run "Sync All Suspensions"
+6. Verify Andrew Wical fix with student — Ruben fixed 3x, Vicky reported still showing closed
+
+Reference IDs:
+- Ideas filed: #20174 [proposed], #20175 [proposed], #20176 [proposed]
+- Tickets: TKT-20260723-E27A8C55 (Aaron), TKT-20260723-E9425A73 (Marcus), TKT-20260723-2AC3960F (Andrew), TKT-20260724-20997E69 (Eesha), TKT-20260726-D0D50268 (Hennah), TKT-14024 (Emelie)
+- Files: /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/routes/api/grievance_api.php, /var/www/emtskills/routes/grievance_manager.php, /var/www/emtskills/cron/qb_payment_sync.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785298450123` — 7/30/2026, 1:12:25 AM PT — 1026 turns
+
+**Original task:**
+
+```
+#Stripe/Klarna
+
+Look into this, plan and scope only, do deep analysis and consult SLS / MCP,, etc...
+
+--
+While you are on it, here remember that we have Stripe/Clarna and check API on that and i need to make sure that's properly wired into SLS, payment tracking, etc... and prevents users from being suspended if paid, knocks off the balance. if any for EMT payments, etc... Just verifying and so needs resolution if not across all EMT sites. Make sureit's activating properly, etc...|
+```
+
+**Ideas referenced:** #0000, #111827, #11990, #12661, #16224, #16608, #16610, #16613, #16958 [deployed], #16959, #1758, #17580, #18868, #1910, #19173, #19175 [executing], #19176 [queued], #19492, #19522, #19573, #19583, #19584, #19585, #19645, #19646, #19803, #19807, #19810, #19811, #19818, #19820, #19827, #19830, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19840, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19872 [deployed], #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #19887, #19897 [proposed], #19898 [proposed], #19899 [proposed], #19900 [proposed], #19901 [proposed], #19902 [proposed], #19903 [proposed], #19904 [proposed], #19907, #19908 [proposed], #19909 [proposed], #19910 [proposed], #19911 [proposed], #19912 [proposed], #19913 [proposed], #19914 [proposed], #19915 [proposed], #19916 [proposed], #19917 [proposed], #19918 [proposed], #19920 [proposed], #19921 [proposed], #19924 [proposed], #19925, #19927 [executing], #19928 [proposed], #20044 [executing], #20066 [proposed], #20067 [proposed], #20101 [proposed], #20121 [proposed], #20132 [proposed], #20135 [deployed], #20170 [proposed], #20173 [proposed], #2089, #2098, #2106, #2107, #2494, #2495, #5344, #7317, #9086, #9168, #9306, #9311, #9312, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+iterations, not one dry-run.**
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Klarna: P0 email-spam incident contained, 3 items need human decisions.
+
+Where we left off (verified 2026-07-30 01:11 PT):
+- P0 INCIDENT CONTAINED (#20173 [proposed]). My recovery cron created a feedback loop and sent 344 emails to 18 real students in 9 hours (mattison.harr 44, stark 28, four at 22). Loop: recovery cron creates Checkout Session, sync cron mirrors it back as new abandonment, next run consumes its own output. Growth 7-20-27-48-75 per 2h window.
+- CONTAINMENT VERIFIED: cron disabled (grep active line = 0), all 177 phantom rows flagged is_internal_test=1, ALL 177 Checkout Sessions expired (remaining_open = 0). Real metrics restored: 21 abandoned $28,162.50, 2 paid $1,990.00 (was falsely showing $282,457.50).
+- CAUGHT MY OWN CLEANUP BUG: first script mapped Stripe HTTP 400 to 'already dead' and marked 25 rows canceled while their sessions were still OPEN and PAYABLE. Correct path is GET /v1/checkout/sessions?payment_intent={pi} then POST /v1/checkout/sessions/{sid}/expire.
+- #20101 closed as rejected, it was my duplicate of #20121.
+- Earlier session work still standing: card fallback live on 16 vhosts + portal lib (Stripe-verified returns klarna,card), webhook we_1TygUkGup709uA0IDfVs4xr9 registered, SLS klarna gate patched, stale-datasource detector shipped nightly 04:10.
+
+Open threads to drive next:
+1. #20173 [proposed] — HUMAN DECISION: do the 18 spammed students get an acknowledgment? My recommendation (Vicky's or Ruben's call, not mine) is one short note to the worst-hit six saying duplicate emails were a system error, only one payment link is valid, no duplicate charge occurred. Rule 02 = no apology language, rule 29 = student comms at this volume are human-gated.
+2. #20173 [proposed] — REBUILD the recovery cron with 6 mandatory guards before re-enabling: (a) exclude integration LIKE 'EMSU_%' from getAbandonedCheckouts, (b) track attempts on student_email+class_section not a self-created column, (c) hard per-run ceiling ~25 with loud abort, (d) global 1-per-student-per-day from email_outbound_log, (e) expire source session when issuing a replacement, (f) 24h dry-run soak across 3+ iterations before live delivery.
+3. #20170 [proposed] — HUMAN DECISION for Vicky: Klarna collected $1,695.00 from kraahauge@icloud.com but QB invoice 172719 is $1,495.00 marked paid. Is the $200 a financing fee needing a QB line, an overcharge owed back, or intentional bundling with QB under-invoiced? Answer determines what 'reconciled' means.
+4. #20121 [proposed] — HOLD until #20170 is answered. Corrected file at /Users/rubenmajor/Desktop/klarna_qb_recon.php. Server copy has undefined QB_CONFIG (use inline array pattern from api/wc_qb_receipt.php line 225). CRITICAL SCOPE CHANGE: must be VERIFY-AND-REPORT, not blind create. Both current candidates were wrong to process — kraahauge already has a paid invoice (would double-book), lynnhoke is a self-activating refresher with intentionally no Students row (must skip via isSelfActivatingSite).
+5. #20135 [deployed] — Follow-up: lib/klarna_payment_oracle.php still trusts the legacy stripe_klarna_sessions table first. Lower risk (backfill cron unscheduled, api endpoint returns 401) but the new nightly detector will keep flagging it until fixed.
+6. #20132 [deployed] — Follow-up, messaging only: wire klarnaAttemptNote() into StudentLifecycleState.php so abandoned students show 'payment attempt
+```
+
+### `1785365363758` — 7/30/2026, 1:08:01 AM PT — 408 turns
 
 **Original task:**
 
@@ -600,34 +564,176 @@ https://www.emsuniversity.com/emtskills/routes/chat_portal.php - can you review 
 **Last PICKUP PROMPT:**
 
 ```
-verification on next tool call
+ll will automatically capture.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #N — Chat Widget 48h audit follow-up.
+Pick up the Chat Widget 48h audit — all 4 shipped items are stable, verify telemetry recording when traffic resumes tomorrow.
 
-Where we left off (verified 2026-07-29 19:43 PT):
-- All 4 approved items shipped
-- cfa_tool_invocations shared telemetry table created with 6,690 email rows
-- cfa_telemetry_recorder.php wired into webhook.php at tool call site
-- Cron handoff escalation fixed, registered, verified clean
-- REFERENCE_CFA_MODEL_ROUTING.md created
+Where we left off (verified 2026-07-30 01:06 PT):
+- Cron escalation: running clean (10+ cycles, 0 errors)
+- Health check file: /tmp/chat_handoff_esc_health.txt updated at 01:06:01
+- Chat widget API: live, {"ok":true}
+- cfa_tool_invocations: 6,690 email_ai rows migrated, 0 chat_widget rows (expected — no evening traffic)
+- Telemetry wired: cfa_record_tool_invocation() after every executeTool() in webhook.php
+- Reference doc: /var/www/emtskills/docs/REFERENCE_CFA_MODEL_ROUTING.md
+- Spec doc: /var/www/emtskills/docs/specs/cfa_tool_invocations_migration.sql
 
 Open threads to drive next:
-1. #20092 [deployed-awaiting-verification] — Wait for next chat widget tool call to confirm cfa_tool_invocations gets chat_widget rows
-2. #20107 [approved] — Replicate cfa_record_tool_invocation() into SMS AI responder and Ticket AI agent
-3. #20073 [approved] — P3: verify stale constant removal didn't break anything (webhook.php backup exists)
-4. #20074 [deployed] — Confirm cron continues running clean (tail /var/log/emsu-chat-handoff-esc.log)
+1. #20092 [deployed] — Verify cfa_tool_invocations shows new chat_widget rows when student traffic hits tomorrow. Query: SELECT cfa_source, COUNT(*) FROM cfa_tool_invocations WHERE cfa_source='chat_widget' AND created_at > '2026-07-30 06:00:00'
+2. #20073 [deployed] — Stale gpt-5.2 constant removed from webhook.php line 27
+3. #20107 [proposed] — Ruben opinion/reco on CFA-wide telemetry unification
+4. #18467 [deployed] — 4 dead domains already disabled in chat_portal_sites
 
 Reference IDs:
-- Ideas: #20092, #20073, #20074, #20107
-- Files touched: webhook.php, cfa_telemetry_recorder.php, cron_chat_handoff_unanswered_escalation.php, docs/specs/cfa_tool_invocations_migration.sql, docs/REFERENCE_CFA_MODEL_ROUTING.md
-- Tables created: cfa_tool_invocations (6,690 rows), 4 backward-compat views
+- Ideas: #20092, #20073, #20107, #18467
+- Files touched: /var/www/emtskills/api/livechat/webhook.php, /var/www/emtskills/lib/cfa_telemetry_recorder.php, /var/www/emtskills/cron/cron_chat_handoff_unanswered_escalation.php, /var/www/emtskills/docs/REFERENCE_CFA_MODEL_ROUTING.md, /var/www/emtskills/docs/specs/cfa_tool_invocations_migration.sql
+- Tables created: cfa_tool_invocations, v_email_agent_tool_invocations, v_vapi_tool_invocations, v_voice_tool_invocations, v_mcp_tool_invocations
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
+═══════════════════════════════════════════════
+</result>
 </attempt_completion>
+```
+
+### `1785363426908` — 7/30/2026, 12:58:21 AM PT — 344 turns
+
+**Original task:**
+
+```
+#EMT Webforms/Payments
+
+Consult SLS / Webforms on EMT websites. When a payment declines / there is no instant notification to the student that the payment was declined (wonder if this is the case also on refresher webistes and cpr sites) and so because of this people would think that their payments went through. Only to find out later that they did not. This needs to show instantly and kick back. So API needs updating.
+```
+
+**Ideas referenced:** #1767, #1770, #17846, #18820, #18868, #1910, #19492, #19495, #19875, #19876, #19877, #19879, #19881, #19882, #19883, #19887, #19903, #19907, #19908, #19909, #19910 [executing], #19911, #19912, #19913, #19914, #19915, #19916, #19917, #19918 [executing], #19920 [executing], #19921, #19924, #19925, #19927, #19928, #20055 [deployed], #20056 [deployed], #20057 [deployed], #20128 [deployed], #20130 [proposed], #20131, #20134 [proposed], #2050, #2082, #2085, #2098, #9086, #9168, #9339, #9888
+
+**Last PICKUP PROMPT:**
+
+```
+nywhere near a charge request.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #20134 — ship the payment observability repair; HOLD #20130 pending a live-card canary.
+
+Where we left off (verified 2026-07-30 00:57 PT):
+- #20128 [deployed] DECLINED-as-SUCCESS fix is live on 19 sites and PROVEN on real money. Today: 10 charges, 9 completed including $2,545 at 22:29 (2.5h post-deploy) and $1,495 at 20:05 (7min post-deploy); 1 correctly caught as `failed` ($1,695 at 15:13, the HTTP-201-DECLINED case). Offline harness /tmp/verify_decline_logic.php = 12/12 PASS.
+- #20130 [approved] and #20134 [approved] both approved by Ruben, NEITHER SHIPPED. Ruben flagged reluctance to risk a working payment day; I agree on #20130 and disagree on #20134 (reasoning below).
+- RISK FINDING for #20130: every successful charge today already routes through the AVS-stripped retry (first attempt HTTP 400 on the enum, retry succeeds), so the payload #20130 produces is already the live money-collecting payload. Change is mechanically a no-op on success, but that is a code reading, not a live-card proof. Recommend NOT a 19-site fan-out.
+- RISK FINDING for #20134: `qb_charge_attempts` is read by only 5 files (api/qb_charge_attempt.php, routes/qb_charge_attempt_detail.php, lib/qb_charge_attempt.php, lib/qb_avs_monitor.php, cron/cron_qb_charge_attempt.php). Verified ZERO references in StudentLifecycleState.php, StudentLifecyclePaymentService.php, PaymentVerifier.php — no SLS/payment/enrollment gate reads it. Additive nullable columns cannot affect the money path.
+- NEW third dead component found: `cron/cron_qb_charge_attempt.php` queries `error_count` (nonexistent) and `cron_log.cron_name` (nonexistent). Untouched since Jul 8. The dead observability layer is broader than just qb_avs_monitor.php.
+
+Open threads to drive next:
+1. #20134 [approved] — SHIP THIS ONE. `ALTER TABLE qb_charge_attempts ADD COLUMN` http_code INT NULL, avs_street_sent TINYINT(1) NULL, avs_zip_sent TINYINT(1) NULL, cardholder_name VARCHAR(255) NULL, response_body TEXT NULL, request_id VARCHAR(255) NULL. Populate in `Api::log_charge_attempt()`. Fix `lib/qb_avs_monitor.php` + `cron/cron_qb_charge_attempt.php` (error_count, cron_log.cron_name) to the real schema. Wire the monitor to cron + orchestrator so a decline-rate spike raises an event. Add the schema-assertion guard so monitors fail LOUDLY instead of returning success=false silently.
+2. #20130 [approved] — HOLD until Ruben opens a live-card window. Then: remove `avsStreet`/`avsZip` from `build_charge_request()` in `src/Api/Api.php` on ONE low-volume site first (tucsonemt or miamiemt), run one live card, confirm (a) no HTTP 400 AVS enum error, (b) single charge submission not two, (c) a real AVS result in Intuit. Only then fan out to the other 18.
+3. #20128 [deployed] — optional: one live *declined* card to visually confirm the red decline box + card-shake renders. Logic already proven by the 12/12 harness and by the 15:13 `failed` row.
+
+Reference IDs:
+- Ideas: #20055 [deployed], #20056 [deployed], #20128 [deployed], #20130 [approved], #20134 [approved]
+- Files touched (19 sites): `src/Process.php` (a4aa1aa42f31ce6acb64e90d7adb9e60), `src/Api/Api.php` (192db4fbe778f3a05732346d690299b3), `src/Api/Response.php` (905559275a14166d11acaa8b37a52bfa)
+- Backups: `.bak-20055-20260729`, `.bak-declinedbody-20260729` on all 19 sites
+- Harness: `/tmp/verify_decline_logic.php` (12/12 PASS)
+- Files to touch for #20134: `lib/qb_avs_m
+```
+
+### `1785379883249` — 7/30/2026, 12:57:14 AM PT — 238 turns
+
+**Original task:**
+
+```
+emsuniversity.com is showing secure, but not emsuniversity.com/ems. Can you resolve that?
+```
+
+**Ideas referenced:** #18868, #1910, #19370, #19887, #19903, #19907, #19910, #19918, #19919, #19925, #19927, #19928, #20044, #20079 [deployed], #20131 [proposed], #20133 [proposed], #20136 [proposed], #20168 [proposed], #2098
+
+**Last PICKUP PROMPT:**
+
+```
+y.com, then `⌘⇧R` hard-reload.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task 1785094283000 — emsuniversity.com cert + mail cert fixes (Jul 29-30).
+
+Where we left off (verified 2026-07-30 00:56 PT):
+- BUG 1 WEB (FIXED): Plesk renewed LE cert 19:48:12 PT Jul 29; nginx master (since Jul 28) never reloaded → served stale cert from memory. Fixed: `nginx -t` + `systemctl reload nginx`. Verified: SAN = emsuniversity.com + www, serial 05ADDDE6C5051CC86DDED51DAF77F3E7AEBC, valid Jul 30 → Oct 28 2026, /ems/ → www/ems/ http=200 ssl_verify=0. Mixed content ruled out (zero insecure subresources). Moodle wwwroot = https://www.emsuniversity.com/ems so non-www→www redirect is intentional and both names on cert.
+- BUG 2 MAIL (FIXED): Root cause was NOT Postmark (outbound API + backup MX prio 10). Primary MX = mx.emsuniversity.com prio 5 → WOPR. Actual cause: Plesk dovecot SNI map + postfix SNI map both pointed mail.emsuniversity.com at the WEB cert (SAN = emsuniversity.com + www) — no 'mail' SAN = CN mismatch on every client connect. Fix: certbot cert reissued with SAN = mail + mx; dovecot SNI repointed; postfix override map /etc/postfix/sni_override/certs prepended to tls_server_sni_maps. Verified 8/8 strict hostname verify (`Verify return code: 0 (ok)`) for mail + mx across 993/465/587/9465. Live users logging in over TLS during the change.
+- DRIFT PROTECTION #1: /usr/local/bin/emsu_mail_cert_guard.sh + /etc/cron.d/emsu-mail-cert-guard (every 15 min). Idempotent, reasserts certbot cert for dovecot + rebuilds postfix override map if Plesk regenerates. Log: /var/log/emsu-mail-cert-guard.log.
+- DRIFT PROTECTION #2: /usr/local/bin/emsu_nginx_cert_watchdog.sh + /etc/cron.d/emsu-nginx-cert-watchdog (every 5 min). Tracks mtimes of every cert.pem under both LE directories. On any mtime change: nginx -t → systemctl reload nginx. State: /var/lib/emsu-nginx-cert-watchdog/state.json. Log: /var/log/emsu-nginx-cert-watchdog.log. Initial state captured 2026-07-30T00:50:05-0700.
+- COSMETIC FIX (#20168): mail.emsuniversity.com:443 was serving webmail cert (SAN = webmail only). Fixed: `certbot certonly --webroot -w /var/www/vhosts/emsuniversity.com/httpdocs --expand -d webmail.emsuniversity.com -d mail.emsuniversity.com`. New SAN: DNS:mail.emsuniversity.com, DNS:webmail.emsuniversity.com. Expires 2026-10-28. Backup: /root/le-webmail-backup-*.
+- CLIENT-SIDE NOTE: Ruben's normal Chrome window still showed "not secure" while private browsing was clean = local Chrome cache, server is correct. Clear site data + hard-reload.
+
+Open threads to drive next:
+1. #20136 [deployed] — APPROVED by Ruben but deployment deferred. Goal: add mail + mx to the Plesk-managed web cert so the override map + guard cron can be retired. BLOCKER: mail.emsuniversity.com is a separate Plesk subscription (not a domain alias of emsuniversity.com). Merging requires Plesk domain-alias config migration that is not safe via CLI ad-hoc. Needs a planned maintenance window and Plesk UI or API workflow.
+2. #20133 [executing] — Post-renewal nginx reload watchdog. Already deployed (works). Orchestrator shows in_progress/drafting — may need a follow-up to verify the cron fires correctly and to add ops-chat alerting on actual reloads.
+3. #20131 [proposed] — Original mail-cert-SAN idea. The immediate CN mismatch is fixed via the override layer. The proper Plesk fix is #20136. Close #20131 as superseded-by-#20136 or repurpose for something else.
+4. #20168 [proposed] — Webmail cert f
+```
+
+### `1785379499916` — 7/29/2026, 8:04:29 PM PT — 134 turns
+
+**Original task:**
+
+```
+#EA/PDF
+
+Check EA / PDF / SPFS/ e2PDF, ensure working as designed. Consult SLS, etc.. and review below for accuracy. If found to be inaccurate, do RCA and correct why frankenstein-llm would find it accurate. Proceed according to rule 267/29
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — EA PDF retry investigation and fix.
+
+Where we left off (verified 2026-07-29 19:15 PT):
+- 56 consecutive batch failures (280 individual failures) in /var/www/emtskills/logs/ea_pdf_retry.log
+- Root cau
+```
+
+**Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12477, #13084, #152615, #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [queued], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1935, #1936, #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #19682, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [superseded], #19893 [proposed], #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20110 [proposed], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #2101, #2105, #389249, #7223, #9086, #9168, #9339
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785370606525` — 7/29/2026, 7:49:21 PM PT — 390 turns
+
+**Original task:**
+
+```
+pickup TDSHS, TPIA Request 3 at: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
+
+I am quesitonning the portions of the request requesing files about our specific complaint and whether that's a helpful strategy in the request and whether we can even get or access that info anyway. It seems fruitless/pointless to try to get that information because it's completely privileged from disclosure as part of an open investigation. And if I'm going to file on it, could create other issues as well, like the departemtn's greater ire on this. While it's likel
+```
+
+**Ideas referenced:** #059669, #0891, #15803, #166534, #16957, #18868, #1910, #19587, #19595 [executing], #19599 [executing], #19605, #19887, #19903, #19907, #19910, #19918, #19919, #19925, #19927, #19928, #20044, #20079 [deployed], #20097 [proposed], #20098 [proposed], #20099 [proposed], #20105 [proposed], #20106 [proposed], #20919, #2098, #2104, #22792, #2563, #33647, #34125, #374151, #37910, #37912, #450438, #4649, #4727, #475569, #49128, #49296, #49297, #57534, #600179, #623992, #64748, #7479, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+ause fix, not a filing detail.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — records-request send sequencing + FOIA tracker registration.
+
+Where we left off (verified 2026-07-29 19:48 PT):
+- ADVISED AGAINST the TEA/THECB request. THECB regulates degree-granting higher ed, TEA regulates K-12, neither has authority over EMS continuing education (DSHS does, under HSC 773 / 25 TAC 157). An empty return becomes a fact a DSHS attorney can cite. The agency that actually polices institutional "accredited" advertising claims in Texas is TWC Career Schools and Colleges (Tex. Educ. Code Ch. 132), but even a TWC definition does not bind CAPCE. The accredited-wording angle is ALREADY fully captured by v7 Part A item 2 (what CAPCE sent TO DSHS). Recommendation: drop the third-agency request.
+- ADVISED SENDING the 3 AZDHS requests. AZ matter is live and open: investigation id=1, NOI 2026-04-13, 7 complaints, EMS Training Certificate #450438, Round 1 response 4/26, Round 2 response 5/19 (Bureau identified complainants EMS-26-0460 Nettles, 0461 Cochrane, 0462 Deaton, 0463 Guillen, 0464 Kubitskey via Lance Bevins). A.R.S. 39-121 has no filing deadline so nothing is time-barred. Only cost of the 76-day delay is losing contemporaneity.
+- FLAGGED A PRE-SEND FIX: the 3 requests were drafted 2026-05-14, BEFORE the Round 2 exchange. They may not ask for the 5/14 Bevins correspondence or the complainant-identification records produced during Round 2, which are now the highest-value items in the AZ file. Review the 3 PDFs against post-5/14 events before sending.
+- RECOMMENDED SEND ORDER: (1) AZDHS requests 2 and 3 (policies + historical records, immune to investigation exceptions, establish comparator baseline) to public_records@azdhs.gov; (2) AZDHS request 1 (case files) after checking what Round 2 already produced; (3) v7 TPIA to DSHS on a SEPARATE week from the AZ sends, because Part C of v7 asks whether the agencies communicate and simultaneous filings look coordinated; (4) BPPE CPRA last, after the 7/20 findings letter arrives so the request can target the underlying notes.
+- ROOT-CAUSE FIX IDENTIFIED: 3 requests sat in state='drafted' for 76 days because nothing was watching them. foia_request_tracker already has TX_PIA loaded (Tex. Gov. Code 552.001, 10 statutory days, 10/20/30/45/60 ladder) and AZ_PRA (A.R.S. 39-121, public_records@azdhs.gov). Register v7 and the AZ requests as tracker rows so the clocks are system-tracked.
+
+Open threads to drive next:
+1. (human-only decision, no idea) — Review the 3 AZDHS FOIA PDFs (uploads/compliance/regulator_correspondence/FOIA_0{1,2,3}_*.pdf) against everything that happened after 2026-05-14, add the Round 2 / Bevins correspondence items, then send 2 and 3 to public_records@azdhs.gov.
+2. (human-only decision, no idea) — SEND DECISION on v7 TPIA to openrecords@dshs.texas.gov + certified mail to DSHS Public Information Coordinator, MC-1919, 1100 West 49th Street, Austin TX 78756-3101. Schedule a different week than the AZ sends.
+3. (human-only decision, no idea) — Register v7 + the 3 AZ requests as foia_request_tracker rows (v7: jurisdiction=TX_PIA, agency=TDSHS, statutory_response_days=10) and update foia_request_tracker ids 1-3 state from 'drafted' to 'sent' with date_sent when they go.
+4. (human-only decision, no idea) — CONFIRM: drop the TEA/THECB request entirely, or pursue TWC Career Schools and Colleges (Tex. Educ. Code Ch. 132) instead. My recommendation is drop.
+5. (human-onl
 ```
 
 ### `1785301927173` — 7/29/2026, 7:15:51 PM PT — 140 turns
@@ -745,61 +851,6 @@ Reference IDs:
 - Ideas filed: #20015 [deployed], #20038 [in_progress], #20039 [in_progress], #20037 [open], #20021 [open]
 - Files touched: /Users/rubenmajor/Desktop/backfill2835.php, /Users/rubenmajor/Desktop/form2835_handler.php, /Users/rubenmajor/Desktop/deploy_form2835_fix.sh
 - Server paths: /var/www/emtskills/backfill2835.php, /var/www/vhosts/emsuniversity.com/httpdocs/wp-content/plugins/emsu-skill-pdf-automation/handlers/class-handler-skills-verification.php, /var/www/vhosts/emsuniversity.com/httpdocs/wp-content/plugins/emsu-skill-pdf-automation/emsu-skill-pdf-automation.php (line ~97, after SKILL_FORMS closing bracket)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785359143504` — 7/29/2026, 5:14:36 PM PT — 446 turns
-
-**Original task:**
-
-```
-#Argus 
-
-Staff made numerous requests in Argus over the last 12 hours, including me: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser 
-
-I need those all to be catalogued, permissions updated according to rule 29 as well as actions carried out that argus refused and give that terminal additional capabilities for those actions - as well as the increased role permissions . If you think something is borderline or should not be approved accrsing to rul 29, let me know and we can discuss it.
-```
-
-**Ideas referenced:** #10003, #10005, #10182, #11925, #12301, #12477, #127908, #128193, #128203, #128206, #128263, #128275, #15158, #16213, #16263, #17537, #1754, #1755, #17580, #17619 [deployed], #17680, #178495, #178501, #18378, #18579, #18745, #18770, #18777 [pending], #18806, #18820, #18867, #18868, #18935, #18939, #18946, #18947, #18948, #18949, #18950, #18951, #18967, #18973, #18977, #18982, #18985 [rejected], #19081, #19098 [pending], #19099 [pending], #1910, #19100 [executing], #19102 [executing], #19126 [rejected], #19134 [executing], #19135 [executing], #19143 [executing], #19144 [executing], #19145, #19158, #19159, #19160 [executing], #19161 [executing], #19163 [executing], #19166, #19167, #19168, #19169, #19170 [executing], #19173, #19194, #19227, #19230 [queued], #19234 [queued], #19266, #19321, #19325, #19338, #19348, #19373, #19388 [executing], #19390 [rejected], #19403 [rejected], #19407, #19415, #19416, #19419, #19425, #19427, #19430, #19434, #19437, #19446, #19454, #19458, #19460, #19464, #19465, #19478, #19479, #19487, #19490, #19491, #19492, #19495, #19500, #19509, #19510, #19511, #19518 [rejected], #19522, #19523, #19524, #19525, #19535, #19537, #19539, #19545, #19558, #19563 [rejected], #19568 [executing], #19571 [proposed], #19572, #19573, #19574, #19576, #19577, #19578, #19579 [executing], #19580, #19581, #19583, #19584, #19585 [executing], #19586, #19587, #19588, #19589, #19590, #19591, #19592, #19594, #19595, #19596, #19597, #19598, #19599, #19600, #19601, #19602, #19603, #19604, #19605, #19606, #19607, #19608, #19610 [executing], #19611, #19615, #19624 [pending], #19641 [pending], #19645, #19646, #19647, #1965, #19657, #1966, #1967, #1968, #19686, #1969, #19690 [deployed], #1970, #19704, #1971, #19714 [proposed], #1972, #1973, #19731 [pending], #1975, #1976, #19766, #19767, #19773, #19776, #19777 [proposed], #19778 [proposed], #19784, #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19803, #19807, #19810, #19811, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830, #19831, #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19840, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19871, #19872, #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #19881 [proposed], #19882 [proposed], #19883 [proposed], #19887, #19903, #19907, #19908, #19909, #19910 [executing], #19911, #19912, #19913, #19914, #19915, #19916, #19917, #19918 [executing], #19920 [executing], #19921, #19922, #19924, #19925, #19927, #19928, #19970 [pending], #19971 [pending], #19975 [pending], #19978, #1998, #19995 [pending], #20023 [pending], #20024 [pending], #20025 [pending], #20026, #20027, #20028 [pending], #20029, #20030 [pending], #20031, #20034 [pending], #20036 [pending], #20053 [pending], #2006, #2008, #2010, #2011, #2012, #2014, #2015, #2016, #2017, #2019, #2023, #2024, #2027, #2029, #2030, #2031, #2033, #2039, #2040, #2041, #2043, #2050, #2064, #2066, #2084, #2085, #2089, #2090, #2091, #2098, #21262, #21278, #21765, #22501, #22502, #2322, #2490, #25227, #274160, #2989, #30363, #3048, #3049, #334155, #3595, #4338, #623992, #64748, #695708, #69707, #697523, #699463, #699474, #8942, #9654, #9660, #9889
-
-**Last PICKUP PROMPT:**
-
-```
- consolidate) | pending | P2 |
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up Ruben's Argus build-and-ship task from 2026-07-29.
-
-**Where we left off (verified 2026-07-29 17:14 PT):**
-- 3 production fixes SHIPPED in `/var/www/emtskills/lib/argus_action_catalog.php` and `/var/www/emtskills/routes/alltastic_api.php` (path fix, CS roles, refresher domains)
-- 4 fixes are fully analyzed and READY TO APPLY but blocked by SSH tunnel instability
-- All 11 ideas filed in orchestrator with #20023-#20036 range
-- Tracking document at `/var/www/emtskills/docs/ARGUS_SESSION_20260729_TRACKING.md`
-
-**Open threads to drive next (EVERY item MUST have a real filed idea #):**
-
-1. #20024 [pending, P1] — Apply invoice spam dedup to `cron_authnet_paid_no_qb_detector.php`: add `email_sent_flag` check to line ~135 WHERE clause, add UPDATE after email send. Then run `crontab -l | grep authnet` to stop current cron until fix is verified.
-
-2. #20025 [deployed, P1] — Apply return-path fix to `/var/www/emtskills/lib/argus_action_catalog.php` line 1634: change `return '/var/www/emtskills/'.$rel;` to conditional that doesn't double the prefix for absolute paths. Verify with `php -r` test.
-
-3. #20034 [pending, P0] — Add web_fetch action to `argus_action_catalog.php`: action definition entry + handler that curl-fetches public URLs. Verify EMSU server can curl external domains (confirmed: curl _any_refresher_domain_ works).
-
-4. #20028 [pending, P2] — Add inline image thumbnail rendering to `argus_download.php` chat message template. Find `[image attached]` placeholder and replace with 150px clickable img tag + lightbox CSS.
-
-5. #20023 [pending, P0] — Investigate EA PDF generation failure: 72 pending entries with NULL pdf_drive_url. Check e2pdf API connectivity and credentials. Run `ea_pdf_retry.php` manually with verbose logging.
-
-6. #19995 [pending, P2] — Consolidate 10+ duplicate browser navigation ideas into one canonical idea. Close duplicates.
-
-**Reference IDs:**
-- Ideas filed: #20023, #20024, #20025, #20026, #20028, #20029, #20030, #20031, #20034, #20036
-- Files touched: `/var/www/emtskills/lib/argus_action_catalog.php`, `/var/www/emtskills/routes/alltastic_api.php`, `/var/www/emtskills/docs/ARGUS_SESSION_20260729_TRACKING.md`
-- Cron file to fix: `/var/www/emtskills/cron/cron_authnet_paid_no_qb_detector.php`
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════

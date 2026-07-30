@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-07-30T17:45:39.394Z",
+ "generated_at": "2026-07-30T18:45:39.735Z",
  "counts": {
-  "parsed": 3,
-  "reused": 329,
+  "parsed": 1,
+  "reused": 332,
   "failed": 0,
-  "total": 332
+  "total": 333
  },
  "tasks": {
   "1784522296714": {
@@ -102684,13 +102684,13 @@
   },
   "1785363426908": {
    "task_id": "1785363426908",
-   "mtime": 1785428618175,
+   "mtime": 1785435099811,
    "created_at": "2026-07-29T22:17:06.908Z",
-   "last_modified": "2026-07-30T16:23:38.175Z",
-   "size_kb": 1530,
-   "turn_count": 416,
+   "last_modified": "2026-07-30T18:11:39.811Z",
+   "size_kb": 1593,
+   "turn_count": 464,
    "title": "#EMT Webforms/Payments\n\nConsult SLS / Webforms on EMT websites. When a payment declines / there is no instant notification to the student that the payment was declined (wonder if this is the case also on refresher webistes and cpr sites) and so because of this people would think that their payments went through. Only to find out later that they did not. This needs to show instantly and kick back. So API needs updating.",
-   "pickup_prompt": "HOLD per your call last night.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up: EMT payment forms verified healthy 2026-07-30 AM. All fixes remain ON HOLD.\n\nWhere we left off (verified 2026-07-30 09:23 PT):\n- **START HERE if payments are ever questioned again:** `/var/www/emtskills/docs/PAYMENT_DECLINE_KNOWN_ISSUES.md` (338 lines) — diagnosis, ship triggers, canary procedures, and one hypothesis PROVEN WRONG.\n- Ruben asked why no EMT payments came in this morning. ANSWER: mornings are always empty. 7-day histogram shows hours 00-08 have ZERO charges every day; first charge of any day is hour 09 at earliest, volume concentrates 15:00-22:00. Yesterday's first charge was 11:52.\n- Morning registrations: 2 real (Caleb Lyman 26225FT 02:04, Patrick kyle saliva 26620FT-17 08:20) + 1 canary. Both real have payment_method NULL which is normal at registration.\n- FORMS TESTED HEALTHY: registration surface 10 PASS / 1 FAIL (miamiemt pre-existing). 8 EMT sites HTTP 200 on `/register/` with QB field + card field + populated cohort dropdowns.\n- **NOTE THE CORRECT SLUG: `/register/`.** `/emt-course-registration/` returns 404 and will produce a false alarm.\n- LIVE API PROOF: OAuth token present (731 chars), Intuit tokenize returned HTTP 201 with a valid token.\n- LIVE CODE PROOF: instantiated the deployed `Api/Response.php` in production — HTTP201+DECLINED gives is_declined=true / whole_ok=false; HTTP201+CAPTURED gives is_declined=false / whole_ok=true. #20128 [deployed] is active and correctly permissive.\n- No PHP fatals from patched files since the 2026-07-29 19:58 deploy.\n\nOpen threads to drive next:\n1. #20130 [proposed] — AVS enum misuse, ON HOLD. `avsStreet`/`avsZip` are Intuit AVS *result* enums (Pass|NotAvailable|Fail), not addresses, so every charge 400s then succeeds on the AVS-stripped retry. Ship only on a trigger (auto-voids reappear, staff report reversals on approved charges, AVS/CVC \"Match: N/A\" cited by processor/bank/chargeback, or double-submission becomes visible). Canary one low-volume site first. The frontend address selectors are NOT the bug.\n2. #20134 [proposed] — dead payment observability, ON HOLD. `lib/qb_avs_monitor.php` queries nonexistent columns (SQL 1054), `CREATE TABLE IF NOT EXISTS` cannot heal the shape mismatch, zero callers, and `cron/cron_qb_charge_attempt.php` is broken too. Safest of the three; best first move if any payment issue recurs.\n3. #20183 [proposed] — 13 sites run the QB plugin WITHOUT the #20128 fix (cprsandiego.net, dallascpr.org, emswire.com, houstoncpr.org, houstonemtrefresher.com, miamiemtrefresher.com, mobilenotaryhere.com, onlineemd.com, phoenixcpr.org, sanantoniocpr.org, sanfranciscocpr.org, sunriserescue.com, tucsoncpr.com). First step is confirming payment volume per site, not deploying. Needs a Ruben decision.\n4. seattleemt.com and portlandemt.com return 404 on `/register/` — likely a different page slug on those two sites. **(human-only decision, no idea)**: needs Ruben to confirm whether those sites are meant to take registrations before anything is filed or changed.\n\nReference IDs:\n- Ideas: #20055 [deployed], #20056 [deployed], #20128 [deployed], #20130 [proposed], #20134 [proposed], #20183 [proposed]\n- Runbook: `/var/www/emtskills/docs/PAYMENT_DECLINE_KNOWN_ISSUES.md`\n- Files touched today: none (verification only)\n- Backups on all 19 sites: `.bak-20055-20260729`, `.bak-declinedbody-20260729`\n- HANDOFF_NOTES.md entries: 2026-07-30 01:43, 01:47, and 09:22 PT\n\nWhen don",
+   "pickup_prompt": "x rather than touching it now.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up: EMT payment forms verified healthy 3x on 2026-07-30. All fixes remain ON HOLD.\n\nWhere we left off (verified 2026-07-30 11:11 PT):\n- **START HERE for any payment question:** `/var/www/emtskills/docs/PAYMENT_DECLINE_KNOWN_ISSUES.md` (338 lines). Do not re-diagnose from scratch.\n- Ruben asked 3x today (09:17, 11:02, 11:07) whether EMT sites are OK. All three times: healthy, no action needed.\n- **CORRECT SLUG IS `/register/`.** `/emt-course-registration/` 404s and creates a false alarm.\n- **WP-CLI `--after`/`--before` DATE FILTERS ARE SILENTLY IGNORED on these sites.** I mis-reported \"54 failed CPR orders today\" from all-time cumulative counts. ALWAYS query `{prefix}posts` directly with `DATE(post_date)`. Real answer: cprclass.org has 1 order since 7/24. Prefixes are randomized per site (cprclass.org = `EOLL8yfE7_`, emsuniversity.com = `LzDe7pTO_`) — fetch via `wp config get table_prefix`.\n- Live tests: arizonaemt/dallasemt/sandiegoemt/houstonemt HTTP 200 with QB field + card field + submit button. Intuit tokenize `OAUTH_OK 731` / `HTTP 201` on two runs today.\n- Volume normal for the hour: EMT charges 00:00-11:02 by day = 7/27:1, 7/28:1, 7/29:0, 7/30:0. Yesterday finished best-of-week (10 charges/$7,580) with zero by 11 AM.\n- Intake at parity: registrations by 11:03 = 6 (7/28), 4 (7/29), 4 (today). Canary round-tripped OK at 11:00.\n- Ruben clarified today's payments were CPR, not EMT. Zero WooCommerce orders today across all 13 CPR/refresher vhosts. Authnet settled mirror shows 7/27=3/$2,504.50 and 7/28=10/$16,266.00, with 7/29-7/30 absent because **Authorize.net only exposes SETTLED batches and settlement runs overnight** — expected, not a gap. Sync cron ran clean at 09:10 (`batches=112 seen=2183 upserted=1778`).\n\nOpen threads to drive next:\n1. #20134 [proposed] — dead payment observability, ON HOLD. NEW EVIDENCE STRENGTHENING IT: `cron_authnet_payment_sync.php` logs `kill-switch check skipped: Unknown column 'config_value'` on every run, so its abort switch is unreadable and it always proceeds. Same schema-drift class as `qb_avs_monitor.php` (SQL 1054) and `cron_qb_charge_attempt.php` (`error_count`, `cron_log.cron_name`). Fold this third instance into the #20134 repair. Safest of the held fixes.\n2. #20130 [proposed] — AVS enum misuse, ON HOLD. `avsStreet`/`avsZip` are Intuit AVS *result* enums (Pass|NotAvailable|Fail), not addresses; every charge 400s then succeeds on the AVS-stripped retry. Ship only on a trigger. Canary one low-volume site first. Frontend address selectors are NOT the bug.\n3. #20183 [proposed] — 13 sites run the QB plugin WITHOUT the #20128 fix. Today's check found zero WooCommerce order volume on all of them, which lowers urgency further. Confirm volume before deploying. Needs a Ruben decision.\n4. seattleemt.com and portlandemt.com 404 on `/register/` — different slug on those two. **(human-only decision, no idea)** — needs Ruben to confirm whether those sites should take registrations.\n\nReference IDs:\n- Ideas: #20055 [deployed], #20056 [deployed], #20128 [deployed], #20130 [proposed], #20134 [proposed], #20183 [proposed]\n- Runbook: `/var/www/emtskills/docs/PAYMENT_DECLINE_KNOWN_ISSUES.md`\n- Files touched today: none (verification only, three rounds)\n- Backups on all 19 sites: `.bak-20055-20260729`, `.bak-declinedbody-20260729`\n- HANDOFF_NOTES.md entries: 2026-07-30 01:43, 01:47, 09:22 PT\n\nWhen done, append to cli",
    "ideas": {
     "1767": null,
     "1770": null,
@@ -102699,6 +102699,7 @@
     "2082": null,
     "2085": null,
     "2098": null,
+    "4802": null,
     "9086": null,
     "9168": null,
     "9339": null,
@@ -103653,20 +103654,62 @@
   },
   "1785432785187": {
    "task_id": "1785432785187",
-   "mtime": 1785433530279,
+   "mtime": 1785434815742,
    "created_at": "2026-07-30T17:33:05.187Z",
-   "last_modified": "2026-07-30T17:45:30.279Z",
-   "size_kb": 160,
-   "turn_count": 57,
+   "last_modified": "2026-07-30T18:06:55.742Z",
+   "size_kb": 538,
+   "turn_count": 154,
    "title": "I have been seeing this in task completion, meaning that it just fails and then still calls to completion anyway. \n\n❌ RULE 91 GATES: 1 FAILURE(S)\n\n1. BARE_IDEA_NUMBERS: 2 idea number(s) in the result have no valid [disposition] bracket: #2109, #1993. Every #NNNN needs one of [deployed|executing|queued|blocked|proposed|rejected|superseded].\n\nFix these before calling attempt_completion. The completion is blocked until all gates pass.",
-   "pickup_prompt": "oyed] (repro-testing only).\\n\\n═══════════════════════════════════════════════\\nPICKUP PROMPT (paste into a fresh Cline window)\\n═══════════════════════════════════════════════\\n\\nPick up task bare-nnnn-gate-analysis -- Bare numbers in completions: structural gate fix filed #20251 [proposed]\\n\\nWhere we left off (verified 2026-07-30 10:45 PT):\\n- Root cause confirmed: clinerules_validate_completion is purely advisory -- returns FAILURES but no structural gate blocks attempt_completion.\\n- Validator code in lib/clinerules_validate_completion_fix.php: validates structure only. No side-effect file write on failure.\\n\\nOpen threads to drive next:\\n1. #20251 [proposed] -- Implement structural enforcement: clinerules_validate_completion MCP writes a gate file on any FAILURE.\\n\\nReference IDs:\\n- Ideas filed: #20251 [proposed]\\n- Files touched: lib/clinerules_validate_completion_fix.php (read only)\\n\\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\\n═══════════════════════════════════════════════\",\n  \"task_id\": \"bare-nnnn-gate-analysis\",\n  \"task_prompt\": \"Investigate why agents ignore clinerules_validate_completion failures (#2109, #1993 bare numbers) and call attempt_completion anyway.\"\n}\n</arguments>\n</use_mcp_tool>",
+   "pickup_prompt": "224): Validates that a pending attempt_completion result complies with rule 91 (PICKUP PROMPT block required). Call BEFORE attempt_completion. Returns pass/fail with specific violations.\", {\n    result_text: zod_1.z.string().describe(\"The result text you plan to pass to attempt_completion.\"),\n    task_id: zod_1.z.string().optional().describe(\"Optional Cline task ID for audit.\"),\n}, async function (_a) {\n    var result_text = _a.result_text, task_id = _a.task_id;\n    var failures = [];\n    var DIVIDER_LEN = 47;\n    var DIVIDER_GLYPH = String.fromCodePoint(0x2550);\n    var lines = result_text.split(\"\\n\");\n    var isFullDivider = function (s) {\n        var t = s.trimEnd();\n        return t.length === DIVIDER_LEN && new RegExp(\"^\" + DIVIDER_GLYPH + \"+$\").test(t);\n    };\n    var dividerIndices = [];\n    for (var i = 0; i < lines.length; i++) {\n        if (isFullDivider(lines[i])) {\n            dividerIndices.push(i);\n            var stripped = lines[i].trimEnd();\n            for (var _i = 0, stripped_1 = stripped; _i < stripped_1.length; _i++) {\n                var ch = stripped_1[_i];\n                if (ch.codePointAt(0) !== 0x2550) {\n                    failures.push(\"DIVIDER_WRONG_GLYPH: line \" + (i + 1) + \" uses wrong character (U+\" + ch.codePointAt(0).toString(16) + \") instead of U+2550.\");\n                    break;\n                }\n            }\n        }\n        else {\n            var stripped = lines[i].trimEnd();\n            if (stripped.length > 20 && new RegExp(\"^\" + DIVIDER_GLYPH + \"+$\").test(stripped)) {\n                failures.push(\"DIVIDER_WRONG_LENGTH: line \" + (i + 1) + \" divider is \" + stripped.length + \" chars, must be exactly 47 chars of U+2550.\");\n            }\n        }\n    }\n    var pickupHeaderIdx = (function () {\n        for (var _i = 0, dividerIndices_1 = dividerIndices; _i < dividerIndices_1.length; _i++) {\n            var di = dividerIndices_1[_i];\n            var hdrIdx = di + 1;\n            if (hdrIdx < lines.length) {\n                var hdr = lines[hdrIdx].trim();\n                if (/^PICKUP PROMPT\\b/i.test(hdr)) return hdrIdx;\n            }\n        }\n        return -1;\n    })();\n    var hasBlock = pickupHeaderIdx !== -1 && dividerIndices.length >= 2;\n    if (!hasBlock) {\n        failures.push(\"MISSING_PICKUP_PROMPT: result text does not contain a structurally-valid PICKUP PROMPT block.\");\n    }\n    var pickupBlock = \"\";\n    if (dividerIndices.length === 0) {\n        failures.push(\"DIVIDER_MISSING: no valid 47-char U+2550 divider lines found.\");\n    }\n    else if (dividerIndices.length < 2) {\n        failures.push(\"DIVIDER_UNPAIRED: only \" + dividerIndices.length + \" divider(s) found.\");\n    }\n    else {\n        pickupBlock = lines.slice(dividerIndices[0], dividerIndices[dividerIndices.length - 1] + 1).join(\"\\n\");\n    }\n    if (/#NNNN|#0000|#XXXX|<task_id>|<timestamp\\s*PT>/i.test(pickupBlock)) {\n        failures.push(\"PLACEHOLDER_DETECTED: literal placeholder token found in pickup prompt.\");\n    }\n    if (pickupBlock) {\n        var taskLineMatch = pickupBlock.match(/^Pick up task\\b[^\\n]*$/im);\n        if (taskLineMatch) {\n            if (!/#\\d+/.test(taskLineMatch[0])) {\n                failures.push(\"MISSING_TASK_ID: 'Pick up task' line has no #<numeric id>.\");\n            }\n        }\n        else {\n            failures.push(\"MISSING_TASK_LINE: no 'Pick up task ...' line found.\");\n        }\n    }\n    if (/see\\s+handoff\\s+file/i.test(pickupBlock)) failures.push(\"PICKUP_BY_REFERENCE: 'see handoff file' detected.\");\n    if (/hold\\s+until\\s+Ruben\\s+confirms|wait\\s+before\\s+acting|pause\\",
    "ideas": {
     "1993": "deployed",
     "2109": "deployed",
+    "5344": null,
+    "16224": null,
+    "19173": null,
+    "19175": "executing",
+    "19176": "queued",
     "19898": null,
     "19904": null,
     "20251": "proposed",
     "0000": null
+   }
+  },
+  "1785435661707": {
+   "task_id": "1785435661707",
+   "mtime": 1785437067765,
+   "created_at": "2026-07-30T18:21:01.707Z",
+   "last_modified": "2026-07-30T18:44:27.765Z",
+   "size_kb": 349,
+   "turn_count": 87,
+   "title": "There's grievances getting lost because of all these categories in here. https://emsuniversity.com/emtskills/routes/grievance_manager.php \n\nThe grievances start with Pending Admin Complete (where the a human is supposed to check whether or not the person filled it out properly (i.e. accoridng to already known logic (had to be by hand and all fields completed), if rejected then it's sent to the student with a reason for the rejection. Human has 72 hours to do a disposition. Then after that it becomes an automated decision. If approved goes to the next step which is Admin Complete, it is then Approved, Approved with stipulations or denied. Most are approved with stipulations. There's automated",
+   "pickup_prompt": null,
+   "ideas": {
+    "2563": null,
+    "3730": null,
+    "4338": null,
+    "6366": null,
+    "11111": null,
+    "16957": null,
+    "19592": null,
+    "19594": null,
+    "20258": "proposed",
+    "20259": "proposed",
+    "20260": "proposed",
+    "45475": null,
+    "64748": null,
+    "78350": null,
+    "92400": null,
+    "111827": null,
+    "166534": null,
+    "181825": null,
+    "313244": null,
+    "334155": null,
+    "374151": null,
+    "450438": null,
+    "475569": null,
+    "059669": null,
+    "047857": null
    }
   }
  }

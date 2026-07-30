@@ -6,18 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/30/2026, 3:20:34 AM PT | window: last 72h | 144 tasks | index total 331 (parsed 8, cached 323)
+Generated: 7/30/2026, 4:20:34 AM PT | window: last 72h | 144 tasks | index total 331 (parsed 3, cached 328)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785370606525` | 7/30/2026, 3:20:27 AM | 531 | 2955KB | pickup TDSHS, TPIA Request 3 at: https://emsuniversity.com/emtskills/personnel/institution |
-| `1785375877050` | 7/30/2026, 3:20:18 AM | 634 | 1443KB | #GLM |
+| `1785375877050` | 7/30/2026, 4:20:29 AM | 1133 | 3307KB | #GLM |
+| `1785370606525` | 7/30/2026, 4:18:55 AM | 632 | 3344KB | pickup TDSHS, TPIA Request 3 at: https://emsuniversity.com/emtskills/personnel/institution |
+| `1785405238813` | 7/30/2026, 3:56:11 AM | 120 | 1134KB | Subject should not say: No-dead-end follow-up: Re: Following up on your EMSU support reque |
+| `1785396884879` | 7/30/2026, 3:29:54 AM | 306 | 2547KB | #Vicky Issues / Argus  |
 | `1785368618667` | 7/30/2026, 3:18:12 AM | 266 | 745KB | We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for |
-| `1785396884879` | 7/30/2026, 3:15:07 AM | 278 | 2428KB | #Vicky Issues / Argus  |
 | `1785399211024` | 7/30/2026, 3:14:59 AM | 258 | 1467KB | #Julia/Claudia |
 | `1785293294377` | 7/30/2026, 3:13:51 AM | 590 | 2535KB | A metric ton of emails came in to email agent within the last hour or 2. I need you to go  |
 | `1785365363758` | 7/30/2026, 3:11:07 AM | 480 | 1036KB | https://www.emsuniversity.com/emtskills/routes/chat_portal.php - can you review chats from |
-| `1785405238813` | 7/30/2026, 3:05:55 AM | 46 | 787KB | Subject should not say: No-dead-end follow-up: Re: Following up on your EMSU support reque |
 | `1785295028411` | 7/30/2026, 2:19:20 AM | 1072 | 3951KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
 | `1785359143504` | 7/30/2026, 2:11:51 AM | 540 | 3897KB | #Argus  |
 | `1785363426908` | 7/30/2026, 1:47:47 AM | 378 | 1159KB | #EMT Webforms/Payments |
@@ -159,42 +159,7 @@ Generated: 7/30/2026, 3:20:34 AM PT | window: last 72h | 144 tasks | index total
 
 ## Per-window detail
 
-### `1785370606525` — 7/30/2026, 3:20:27 AM PT — 531 turns
-
-**Original task:**
-
-```
-pickup TDSHS, TPIA Request 3 at: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
-
-I am quesitonning the portions of the request requesing files about our specific complaint and whether that's a helpful strategy in the request and whether we can even get or access that info anyway. It seems fruitless/pointless to try to get that information because it's completely privileged from disclosure as part of an open investigation. And if I'm going to file on it, could create other issues as well, like the departemtn's greater ire on this. While it's likel
-```
-
-**Ideas referenced:** #059669, #0891, #15803, #166534, #16957, #18868, #1910, #19587, #19595 [executing], #19599 [executing], #19605, #19887, #19903, #19907, #19910, #19918, #19919, #19925, #19927, #19928, #20044, #20079 [deployed], #20097 [proposed], #20098 [proposed], #20099 [proposed], #20105 [proposed], #20106 [proposed], #20919, #2098, #2104, #22792, #2563, #33647, #34125, #374151, #37910, #37912, #450438, #4649, #4727, #475569, #49128, #49296, #49297, #57534, #600179, #623992, #64748, #7479, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-g number so nothing gets lost.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — TPIA v4 send and ORR tracking.
-
-Where we left off (verified 2026-07-30 03:15 PT):
-- FINAL SEND-READY SET: Drive folder "TPIA REQUESTS v4 SEND THESE 2026-07-30" = 1dO4aYyc4EnVlVHqcyIubd-3ny2WlbcnX inside 1eZHrNV5Fx5gn1ZuS8AhZnjlKGIIB6efx. Verified exactly 7 items, no duplicates. All prior folders trashed (v3 1iF4yM-C9Coq2OwGWIX0kn0akMa6giP5O, v2 1ZqPRAb8ht6QL_Ax43CMn9jEYUvzzc1Hi, 1wtnpZ-oLxaENy1J2u7ldiQIVTd2ivcW_, 1lxom-aDKXwFTp-SDtY8BanFUHC6X0nfE) so nothing stale can be grabbed by mistake. Server .md + .pdf pairs in /var/www/emtskills/uploads/tdshs/records-requests/.
-- FINAL PERIOD LANGUAGE, confirmed in extracted PDF text: "Unless a different period is stated for a specific item, the period covered by this request is January 1, 2023 through the date the Department begins processing this request." Ruben set 2023 after I had 2020, then 2026. 2023 gives three years of comparator data, which is what makes 002 (extension dispositions, procedural compliance in prior matters) and 004 (emergency-action history) actually probative of anomalous treatment.
-- ALL 7 CARRY: records-preservation hold, no cost ceiling with a 552.2615 itemized-estimate demand broken out by personnel/programming/per-page, rolling-production request, phone-not-letter clarification request (to avoid 552.222 tolling). Grep-verified zero complaint control numbers, zero inspection 5196, zero license 600179 / course 623992, zero personnel names.
-- TWO BUGS I OWN FROM THIS STRETCH: (1) /tmp/md2html_tpia.py v1 had EMPTY capture-group backreferences so re.sub replaced every bolded span with '<strong></strong>' and DELETED THE TEXT, silently removing the date range and every other bolded phrase from all 6 substantive PDFs. Ruben caught it. Replacement renderer is /tmp/md2html_v2.py, which builds backreferences with chr(92) so JSON transport cannot flatten them. ALWAYS verify with pdftotext on the rendered PDF, never the markdown source alone. (2) I advised caution on "illegal search and seizure" framing; Ruben's alarm-system point was the better argument (an alarmed building is an objective manifestation of an expectation of privacy, defeating the open-commercial-space framing).
-- DEADLINE QUESTION ANSWERED EARLIER: TDSHS cannot shorten EMSU's response deadlines because of these requests. Deadlines come from 25 TAC 157.32, the standard 10-day complaint window, and HSC 773.062's independent imminent-peril requirement. What they can do is exercise discretion (deny extensions, aggressive windows on new demands, stacked deadlines), all of which predates these filings. Real exposure is less grace, not shorter clocks. 002 items 2 and 3 request the written production-time standard and extension criteria plus every extension request and disposition, which makes a future denial comparable and supports an arbitrariness argument on the 7/23 denial.
-
-Open threads to drive next:
-1. (human-only decision, no idea) — SEND the 7 v4 PDFs to openrecords@dshs.texas.gov with the subject lines above. Certified copy to DSHS Public Information Coordinator, MC-1919, 1100 West 49th Street, Austin TX 78756-3101.
-2. (human-only decision, no idea) — RECORD THE DSHS ORR NUMBERS as they arrive and map each to its EMSU-TPIA-2026-NNN tracking number. Ruben will supply them.
-3. (human-only decision, no idea) — Create foia_request_tracker rows, one per tracking number, jurisdiction=TX_PIA, agency=TDSHS, 
-```
-
-### `1785375877050` — 7/30/2026, 3:20:18 AM PT — 634 turns
+### `1785375877050` — 7/30/2026, 4:20:29 AM PT — 1133 turns
 
 **Original task:**
 
@@ -211,7 +176,7 @@ I stopped tuning preferences and made it unconditional in /usr/local/bin/franken
 
 ```
 
-**Ideas referenced:** #12459, #1248 [resolved], #13874, #16126, #16128, #16844, #1685, #1687, #1705, #1706, #178531, #1894, #1962, #1967, #1993, #19962 [proposed], #20005 [proposed], #20022 [rejected], #20040 [proposed], #20041 [proposed], #20042 [proposed], #20054 [proposed], #20068 [proposed], #20069 [proposed], #20082 [proposed], #20088 [proposed], #20102 [proposed], #20112 [proposed], #20129 [proposed], #20172 [proposed], #20178 [proposed], #20179 [proposed], #2108 [deployed]
+**Ideas referenced:** #12459, #1248 [resolved], #13874, #16126, #16128, #16844, #1685, #1687, #1705, #1706, #178531, #1888, #1894, #1962, #1964, #1967, #1993, #19962 [proposed], #20005 [proposed], #20022 [rejected], #20040 [proposed], #20041 [proposed], #20042 [proposed], #20054 [proposed], #20068 [proposed], #20069 [proposed], #20082 [proposed], #20088 [proposed], #20102 [proposed], #20112 [proposed], #20129 [proposed], #20172 [proposed], #20178 [proposed], #20179 [proposed], #2108 [deployed]
 
 **Last PICKUP PROMPT:**
 
@@ -237,6 +202,121 @@ Where we left off (verified 2026-07-30 01:26 PT):
 Open threads to drive next:
 1. #20179 [proposed] -- P0 DECISIVE TEST, needs Ruben's sudo password or a passwordless path. On cato AND cesar: sudo mv /usr/lib/aarch64-linux-gnu/libnccl.so.2.30.4 /root/libnccl.so.2.30.4.quarantined-20260730 and sudo rm /usr/lib/aarch64-linux-gnu/libnccl.so.2, then relaunch via bash /tmp/glm_ring_up.sh ON CATO (not WOPR). SAFETY VERIFIED: owned by pkg libnccl2, sudo lsof shows ZERO host processes using it, and the 4 working nodes have no host libnccl at all, so removal makes cato/cesar match them. Fully reversible (rename not delete). Also move /home/rubenmajor/.cache/huggingface/hub/nccl-2.30.4 aside since that dir IS bind-mounted to /cache/huggingface. If the ring boots after this, the differential is proven and #20179 [proposed] becomes the real answer.
 2. #20178 [proposed] -- P1, only if thread 1 does not fix it. Contradictory IB env: NCCL_IB_DISABLE=1 is set at the same time as NCCL_IB_HCA=rocep1s0f1 and NCCL_IB_GID_INDEX=3, and rank0 
+```
+
+### `1785370606525` — 7/30/2026, 4:18:55 AM PT — 632 turns
+
+**Original task:**
+
+```
+pickup TDSHS, TPIA Request 3 at: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
+
+I am quesitonning the portions of the request requesing files about our specific complaint and whether that's a helpful strategy in the request and whether we can even get or access that info anyway. It seems fruitless/pointless to try to get that information because it's completely privileged from disclosure as part of an open investigation. And if I'm going to file on it, could create other issues as well, like the departemtn's greater ire on this. While it's likel
+```
+
+**Ideas referenced:** #059669, #0891, #15803, #166534, #16957, #18868, #1910, #19587, #19595 [executing], #19599 [executing], #19605, #19887, #19903, #19907, #19910, #19918, #19919, #19925, #19927, #19928, #20044, #20079 [deployed], #20097 [proposed], #20098 [proposed], #20099 [proposed], #20105 [proposed], #20106 [proposed], #20919, #2098, #2104, #22792, #2563, #33647, #34125, #374151, #37910, #37912, #450438, #4649, #4727, #475569, #49128, #49296, #49297, #57534, #600179, #623992, #64748, #7479, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+ommunication is ever produced.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — TPIA clarification replies, mandamus record, 8/6 externship responses.
+
+Where we left off (verified 2026-07-30 04:18 PT):
+- 006 REBUILT AS v3 (DISCRETION COMPARATOR) at Ruben's direction. He held off sending the prior version because it was caught between two failure modes: EMSU-specific was too narrow to show comparative treatment, department-wide was too broad. HIS ACTUAL GOAL, stated: see the internal workings of how the Department communicates, and whether it treats one agency nicely and another not so nicely. It does not have to be EMSU.
+- THE SOLUTION: scope by DECISION TYPE rather than by entity or mailbox. The request now defines a "covered decision" as exactly four things: (a) grant or deny a program's request for additional time; (b) initiate, threaten, or forgo emergency action under HSC 773.062 or 25 TAC 157.36; (c) treat a complaint as warranting investigation, referral, or closure; (d) conduct an unannounced rather than scheduled on-site visit. It then asks for internal communications ABOUT THOSE FOUR DECISIONS ONLY, across all programs, with program identities redacted and replaced by CONSISTENT ANONYMIZED DESIGNATIONS (Program A, Program B) so behavior can be traced across items without disclosing identity. No program is named, including EMSU.
+- WHY IT WORKS: those four categories are where discretion actually lives; nobody exercises judgment about filing paperwork, they exercise it on extensions, escalation, complaint triage, and unannounced visits. Each maps to something that happened to EMSU (extension denied 7/23, emergency suspension threatened, 7 complaints pursued, unannounced 6/19 entry) without the request saying so. It survives a breadth objection because a defined event class is a real limiting principle a records officer can apply.
+- STRUCTURE, 8 items in three parts: Part 1 items 1-3 internal communications (deliberative communications on covered decisions, communications transmitting or announcing outcomes with the internal reason, and ESCALATION/APPROVAL communications where a decision was escalated to or overruled by a supervisor, manager, division director, or legal staff). Part 2 items 4-6 comparative record (disposition summary by decision category with anonymized program designations, written criteria governing each of the four decisions, and an absence-of-criteria fallback asking the Department to state which categories have written criteria and which do not). Part 3 items 7-8 documentation practice (documentation requirement, case-management system fields and data dictionary).
+- ITEM 3 IS THE SLEEPER: if extension denials receive supervisor review for some programs and not others, that is disparate treatment in its purest form. ITEMS 5-6 close the loop: no written criteria means every covered decision is unreviewable discretion, a finding usable whether or not any communication is produced.
+- FILE: /var/www/emtskills/uploads/tdshs/records-requests/EMSU-TPIA-2026-006_telephone_and_informal.md and .pdf (server), uploaded to Drive as EMSU-TPIA-2026-006_v3_DISCRETION_COMPARATOR.pdf in folder 12F69kotU_rwl7bb3tIwI46A7oq21c1RA. The superseded NARROWED version was trashed. Folder now holds 004, 005, 006-v3, 007, and the clarification playbook.
+- SEND STATUS: 000, 001, 002, 003 sent. 004 sent or in progress. 005 sent in Ruben-trimmed 8-item form. 006-v3 and 007 remain to send.
+- CLARIFICATION WORKF
+```
+
+### `1785405238813` — 7/30/2026, 3:56:11 AM PT — 120 turns
+
+**Original task:**
+
+```
+Subject should not say: No-dead-end follow-up: Re: Following up on your EMSU support request
+
+This is an email that just went out. Can you please kill that subject line. We also killed the subject line about the dead man thing too. But this is just as bad if not worse
+```
+
+**Ideas referenced:** #000000, #13474, #155724, #15783, #16069, #16168, #16817, #18944, #18951, #19173 [deployed], #19175 [proposed], #19176 [proposed], #19478, #19866, #2196, #2945, #2994, #3098, #495057, #5449, #5450, #5451, #666666, #7181, #78350, #8226, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+uben (internal), not students.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #19173 — Subject line cleanup follow-up verification.
+
+Where we left off (verified 3:55 AM PT 7/30/2026):
+- "No-dead-end follow-up:" prefix removed from ActBeforePromiseGate.php line 277
+- "Chat handoff went unanswered:" changed to "Chat status check:" in cron_chat_handoff_ticket_spawn.php line 133
+- email_subject_sanitizer.php has both patterns in its strip list (defense-in-depth)
+- SQL LIKE patterns in cron query files intentionally unchanged (must match old DB records)
+- PHP-FPM reloaded
+
+Open threads to drive next:
+1. #19173 [deployed] — Monitor email_outbound_log for 24h: `SELECT recipient, subject, created_at FROM email_outbound_log WHERE (subject LIKE 'No-dead-end follow-up%' OR subject LIKE 'Chat handoff went unanswered%' OR subject LIKE 'Chat status check%') AND created_at >= NOW() - INTERVAL 24 HOUR`
+2. #19176 [proposed] — Find the ACTUAL non-mailer path that delivered "Re: Following up on your EMSU support request" to the student. The mailer.php sanitizer only fires in sendEmail() — the ticket notification path uses notification_sender.php which may bypass it.
+
+Reference IDs:
+- Ticket: #19173 (inline)
+- Files touched: /var/www/emtskills/lib/ActBeforePromiseGate.php, /var/www/emtskills/cron/cron_chat_handoff_ticket_spawn.php, /var/www/emtskills/lib/email_subject_sanitizer.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785396884879` — 7/30/2026, 3:29:54 AM PT — 306 turns
+
+**Original task:**
+
+```
+#Vicky Issues / Argus 
+
+Vicky, detailed a bunch of issues in chat 55 related to grievances, some exam stuff, etc... after 10PM pst tonight. I already resolved the Google Drive document issue, but the other stuff, well, I don't think that either ruben imessage ops did anything about it, nor Argus. Check Argus: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=terminal and Vicky's access and whatever she was asking and I want you to check those accounts to see if there are issues with them or if the suspensions are valid or in abilities to take those exams are valid or if there's
+```
+
+**Ideas referenced:** #000000, #047857, #059669, #10003, #10005, #10182, #11111, #111111, #12301, #127908, #128193, #128203, #128206, #128241, #128263, #128266, #128268, #128275, #16213, #16263, #17483, #181825, #18378, #18745, #18770, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19370, #19415, #19416, #19470, #2006, #20174 [proposed], #20175 [proposed], #20176 [proposed], #20201 [proposed], #20202 [proposed], #21262, #252532, #2563, #274160, #30363, #313244, #3223, #3226, #3227, #3230, #3231, #32324, #3233, #3239, #3240, #3243, #3244, #3246, #3247, #3251, #3254, #3255, #334155, #3387, #3730, #374151, #3742, #4338, #45475, #475569, #6366, #64748, #666666, #69707, #78350, #787890, #842029, #856404, #8942, #9086, #9168, #92400, #9306, #9339, #9650, #9654, #9660, #9733, #9889
+
+**Last PICKUP PROMPT:**
+
+```
+dea for Submit Assignment RCA.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Vicky Issues / Argus bug-bypass build.
+Where we left off (verified 3:29 AM PT):
+- 4 bug-bypass action ENTRIES added to argus_action_catalog.php line 139 (syntax OK)
+- 6 student accounts fixed (Aaron, Marcus, Hennah, Eesha confirmed; Andrew verified; Emelie=human decision)
+Open threads to drive next:
+1. #20174 [proposed] — Add 4 case handlers in argusRunAction() switch (~line 220): resolve_fail_bug (clears fail_date+unsuspends Moodle+reactivates enrollment), resolve_section_mismatch (fixes Students.section+Enrollments.section+Moodle group), extend_exam_deadline (creates quiz_override), sync_student_qb (triggers QB API refresh)
+2. #20176 [proposed] — Fix grievance_manager.php JS fetch to display HTTP 413 error when upload exceeds limits. Find the upload handler XHR/fetch block and wrap in .catch() or !response.ok check to show error to user.
+3. Submit Assignment button RCA — investigate Moodle assignsubmission_file draft state for Hennah Kim or generally. Check if `submissiondrafts` is enabled on the relevant assignments.
+4. Run full PHP syntax check on argus_action_catalog.php and alltastic_api.php after handler insertion
+Reference IDs:
+- Tickets: TKT-20260723-E27A8C55, TKT-20260723-E9425A73, TKT-20260726-D0D50268, TKT-20260724-20997E69, TKT-20260723-2AC3960F, TKT-14024
+- Ideas filed: #20174, #20175, #20176
+- Files touched: /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/routes/grievance_manager.php
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
 ### `1785368618667` — 7/30/2026, 3:18:12 AM PT — 266 turns
@@ -279,28 +359,6 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
-```
-
-### `1785396884879` — 7/30/2026, 3:15:07 AM PT — 278 turns
-
-**Original task:**
-
-```
-#Vicky Issues / Argus 
-
-Vicky, detailed a bunch of issues in chat 55 related to grievances, some exam stuff, etc... after 10PM pst tonight. I already resolved the Google Drive document issue, but the other stuff, well, I don't think that either ruben imessage ops did anything about it, nor Argus. Check Argus: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=terminal and Vicky's access and whatever she was asking and I want you to check those accounts to see if there are issues with them or if the suspensions are valid or in abilities to take those exams are valid or if there's
-```
-
-**Ideas referenced:** #000000, #047857, #059669, #10003, #10005, #10182, #11111, #111111, #12301, #127908, #128193, #128203, #128206, #128241, #128263, #128266, #128268, #128275, #16213, #16263, #17483, #181825, #18378, #18745, #18770, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19370, #19415, #19416, #19470, #2006, #20174 [proposed], #20175 [proposed], #20176 [proposed], #20201 [proposed], #20202 [proposed], #21262, #252532, #2563, #274160, #30363, #313244, #3223, #3226, #3227, #3230, #3231, #32324, #3233, #3239, #3240, #3243, #3244, #3246, #3247, #3251, #3254, #3255, #334155, #3387, #3730, #374151, #3742, #4338, #45475, #475569, #6366, #64748, #666666, #69707, #78350, #787890, #842029, #856404, #8942, #9086, #9168, #92400, #9306, #9339, #9650, #9654, #9660, #9733, #9889
-
-**Last PICKUP PROMPT:**
-
-```
-mec (human decision)
-- [ ] Verify Eesha's section group
-- [ ] Final report with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
 ```
 
 ### `1785399211024` — 7/30/2026, 3:14:59 AM PT — 258 turns
@@ -451,49 +509,6 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
-```
-
-### `1785405238813` — 7/30/2026, 3:05:55 AM PT — 46 turns
-
-**Original task:**
-
-```
-Subject should not say: No-dead-end follow-up: Re: Following up on your EMSU support request
-
-This is an email that just went out. Can you please kill that subject line. We also killed the subject line about the dead man thing too. But this is just as bad if not worse
-```
-
-**Ideas referenced:** #000000, #13474, #155724, #15783, #16069, #16168, #16817, #18944, #18951, #19173 [deployed], #19175 [proposed], #2196, #3098, #495057, #666666, #7181, #78350, #8226, #92400
-
-**Last PICKUP PROMPT:**
-
-```
--FPM reloaded** — fix is live.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #19173 — Kill "No-dead-end follow-up:" subject line leak.
-
-Where we left off (verified 3:05 AM PT 7/30/2026):
-- Fix deployed: ActBeforePromiseGate.php line 277 changed from `$title = substr('No-dead-end follow-up: ' . $issueSummary, 0, 255)` to `$title = substr($issueSummary, 0, 255)`
-- Existing sanitizer at lib/email_subject_sanitizer.php confirmed active
-- DB shows 0 open tickets with old toxic title format
-- PHP-FPM reloaded
-
-Open threads to drive next:
-1. #19173 [deployed] — Verify no new "No-dead-end follow-up:" subjects appear in email_outbound_log over next 24h. Query: `SELECT recipient, subject, created_at FROM email_outbound_log WHERE subject LIKE 'No-dead-end%' AND created_at >= NOW() - INTERVAL 24 HOUR`
-2. #19175 [proposed] — Audit strip_email_ai_tags.php and cron_strip_email_ai_tags.php for any other internal-tag patterns that could leak
-
-Reference IDs:
-- Ticket: #19173 (inline)
-- Ideas filed: none needed (inline fix)
-- Files touched: /var/www/emtskills/lib/ActBeforePromiseGate.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```
 
 ### `1785295028411` — 7/30/2026, 2:19:20 AM PT — 1072 turns

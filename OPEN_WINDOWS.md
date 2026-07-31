@@ -6,14 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/31/2026, 12:06:59 PM PT | window: last 72h | 100 tasks | index total 342 (parsed 4, cached 338)
+Generated: 7/31/2026, 1:07:00 PM PT | window: last 72h | 98 tasks | index total 342 (parsed 3, cached 339)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785465245461` | 7/31/2026, 12:06:53 PM | 551 | 1434KB | check jon's argus 80% PD issues. says not resolved yet.  |
-| `1785435661707` | 7/31/2026, 12:06:48 PM | 1982 | 7274KB | There's grievances getting lost because of all these categories in here. https://emsuniver |
-| `1785375877050` | 7/31/2026, 12:06:47 PM | 2109 | 7167KB | #GLM |
-| `1785363426908` | 7/31/2026, 11:52:38 AM | 936 | 3596KB | #EMT Webforms/Payments |
+| `1785465245461` | 7/31/2026, 1:04:57 PM | 660 | 1987KB | check jon's argus 80% PD issues. says not resolved yet.  |
+| `1785435661707` | 7/31/2026, 1:02:37 PM | 2159 | 7533KB | There's grievances getting lost because of all these categories in here. https://emsuniver |
+| `1785363426908` | 7/31/2026, 12:43:25 PM | 1030 | 3795KB | #EMT Webforms/Payments |
+| `1785375877050` | 7/31/2026, 12:33:21 PM | 2237 | 7345KB | #GLM |
+| `1785368618667` | 7/31/2026, 12:27:12 PM | 356 | 1340KB | We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for |
 | `1785483774534` | 7/31/2026, 9:45:20 AM | 274 | 532KB | Play frankenstein doctor of executor for the next 60 minutes (use timestamps) and make sur |
 | `1785512899843` | 7/31/2026, 9:38:45 AM | 98 | 389KB | It looks like Klein was updated. When this happens sometimes some of our features that we  |
 | `1785483679627` | 7/31/2026, 9:36:49 AM | 122 | 318KB | yesterday, SSL expired for some parts of emsuniversity.com. Some users still reporting SSL |
@@ -28,7 +29,6 @@ Generated: 7/31/2026, 12:06:59 PM PT | window: last 72h | 100 tasks | index tota
 | `1785293294377` | 7/30/2026, 3:13:14 PM | 618 | 2568KB | A metric ton of emails came in to email agent within the last hour or 2. I need you to go  |
 | `1785446562214` | 7/30/2026, 2:28:36 PM | 36 | 64KB | Can you give me a permanent unsername/password for houstonemt.com/wp-login.php? |
 | `1785365363758` | 7/30/2026, 1:57:39 PM | 710 | 1789KB | https://www.emsuniversity.com/emtskills/routes/chat_portal.php - can you review chats from |
-| `1785368618667` | 7/30/2026, 1:31:50 PM | 338 | 1304KB | We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for |
 | `1785432785187` | 7/30/2026, 12:06:12 PM | 206 | 644KB | I have been seeing this in task completion, meaning that it just fails and then still call |
 | `1785261380940` | 7/30/2026, 9:35:08 AM | 82 | 402KB | #Comprehensive |
 | `1785266096234` | 7/30/2026, 9:34:55 AM | 152 | 1032KB | Play Dr. of Frankenstein EXECUTOR for 90 minutes and use time stamps to make sure that you |
@@ -108,14 +108,12 @@ Generated: 7/31/2026, 12:06:59 PM PT | window: last 72h | 100 tasks | index tota
 | `1785267857397` | 7/28/2026, 3:55:58 PM | 480 | 1647KB | Link for instructor login on top right of emsuniversity.com does not go to the proper plac |
 | `1785266982412` | 7/28/2026, 3:12:43 PM | 148 | 652KB | Do we have a page or tool that helps us to calculate the STRF quarterly reports? If so, ca |
 | `1785258502219` | 7/28/2026, 1:59:33 PM | 978 | 2936KB | # TDSHS |
-| `1785267580861` | 7/28/2026, 12:52:17 PM | 94 | 310KB | Pick up task — Build the grievance manual-first toggle with visible auto/manual switch + A |
-| `1785267663329` | 7/28/2026, 12:43:25 PM | 20 | 49KB | Pick up task — Audit 3 silent-ghost blocker chains filed today, determine which are resolv |
 
 ---
 
 ## Per-window detail
 
-### `1785465245461` — 7/31/2026, 12:06:53 PM PT — 551 turns
+### `1785465245461` — 7/31/2026, 1:04:57 PM PT — 660 turns
 
 **Original task:**
 
@@ -125,42 +123,44 @@ check jon's argus 80% PD issues. says not resolved yet.
 check Cori argus building telephony like system for Cyra
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16698, #16844, #18312, #18326, #1880, #1884, #18934, #18935 [rejected], #19403, #19415, #19416, #19487, #19518, #19558, #19604, #19657 [deployed], #19837, #19838, #19840, #19910 [executing], #19916, #19918 [executing], #19920 [executing], #19927, #19928, #19970, #20047, #20049, #20051, #20331 [rejected], #20333 [proposed], #20334 [proposed], #20338 [rejected], #20346 [rejected], #20349 [rejected], #20357 [rejected], #20362 [rejected], #20366 [rejected], #20376 [proposed], #20388 [proposed], #20389 [proposed], #20392 [proposed], #20393 [approved], #20394 [deployed], #20405 [executing], #20406, #20410 [queued], #20411, #20497 [executing], #20500 [pending], #20501 [pending], #20547 [pending], #3202, #3230, #3231, #3239, #3286, #3289, #3294, #3295, #3305, #3306, #3307, #3595, #9306
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16613, #16698, #16844, #18312, #18326, #1880, #1884, #18934, #18935 [rejected], #19403, #19415, #19416, #19487, #19518, #19558, #19604, #19657 [deployed], #19837, #19838, #19840, #19910 [executing], #19916, #19918 [executing], #19920 [executing], #19927, #19928, #19970, #20047, #20049, #20051, #20331 [rejected], #20333 [proposed], #20334 [proposed], #20338 [rejected], #20346 [rejected], #20349 [rejected], #20357 [rejected], #20362 [rejected], #20366 [rejected], #20376 [proposed], #20388 [proposed], #20389 [proposed], #20392 [proposed], #20393 [approved], #20394 [deployed], #20405 [executing], #20406, #20410 [queued], #20411, #20497 [executing], #20500 [pending], #20501 [pending], #20547 [pending], #20549 [executing], #20555 [executing], #20564 [executing], #20565 [executing], #3202, #3230, #3231, #3239, #3286, #3289, #3294, #3295, #3305, #3306, #3307, #3595, #9306
 
 **Last PICKUP PROMPT:**
 
 ```
-ed, folded into the follow-up.
+hand-ship per rule 267 GATE C.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #20547 [pending], Argus vision routing bypass plus the thumbnail gap.
+Pick up task #20565 [executing], QuickBooks sync failure, plus the blocked router vision build.
 
-Where we left off (verified 2026-07-31 12:01 PT):
-- #20547 [pending]: live probe on one test image proved frankenstein-llm extracts ID, name and email PERFECTLY, while claude-sonnet-5-vision garbles the ID and email and kimi-k3 returns an EMPTY 200. Both of the failures are the models the registry names as vision doormen. Argus hardcodes minicpm-v in its own curl at alltastic_api.php ~4841 and never asks the router. router_hook.py has no image_url handling at all, only a Sonnet-5 anti-bounce guard at line 230. Registry tier vision_primary=minicpm-v contradicts the ladder text.
-- VISION_IDENTITY_ENRICH_V2 SHIPPED: enrichment now harvests emails and Firstname Lastname pairs, not just student-ID regex, and injects an instruction to resolve identity and act. Root cause of audit rows 3103/3104 logging terminal_query with zero student_lookup. php -l clean, FPM reloaded, backup routes/alltastic_api.php.bak-vision-identity-20260731-115*.
-- RULE 297 CORRECTION recorded: my earlier claim that minicpm-v hallucinates was based on a 1x1 blank pixel test and is retracted.
-- Thumbnails: argus_attachments has 0 rows, columns file_path and thumb_path exist but the upload path never writes them, so history can only show "[image attached]".
-- Earlier this session and still standing: #20497 [executing] wired 4 catalog actions that had no handler, tier parity now strict at CS 22, Admin 45, ITAdmin 57, ExecAdmin 62, MasterAdmin 63 of 63 with zero subset violations, and #20388 [executing] shipped pd_signoff_list plus pd_nremt_signoff which returns 28 ACTIONABLE students.
+Where we left off (verified 2026-07-31 13:04 PT):
+- #20564 [executing]: the repair queue had NO consumer. 65 of 65 argus_terminal events sat processed=0. Shipped cron/cron_argus_repair_worker.php which restores portal fail_date plus Moodle user.suspended plus user_enrolments.status, flock-guarded, marks processed=1 only on success. Installed */5 in crontab logging to /var/log/argus_repair_worker.log. 52 stranded repairs executed, queue drained 65 to 9 read-only lookups.
+- #20564 [executing] part two: MANUAL_OVERRIDE_GUARD_V1 in cron/cron_payment_reconciliation.php. A suspension cleared by a human within 30 days is no longer re-applied by the cron. Backup .bak-override-guard-20260731-1302*.
+- Vicky's 12 students verified clear at all three layers: 0 suspended Moodle users, 0 blocked enrolments, 0 portal fail_dates, all extended 7 days.
+- #20565 [executing]: QB sync still broken. qb_invoices disagrees with QuickBooks (4 paid, 4 stuck at sent with balance due, 1 with no invoice row) while Vicky confirms all paid and not voided. Check qb_oauth_tokens for a dead refresh token, check whether cron/qb_payment_sync.php is even scheduled, check the admin-portal payment control that presents as a dead button, and wire match_student_payment to close the sent-versus-settled gap.
+- #20549 [blocked]: dev_stage impl_failed. Router-layer vision work needs a hand-ship: add image_url detection to router_hook.py, order a vision-capable free-local-first ladder, extend the rule-256 gate to vision, quarantine kimi-k3 from the vision lane, reconcile the registry.
+- Earlier this session, all verified by live multi-role browser test: privilege escalation is blocked (client-supplied role ignored), the tier matrix enforces correctly, and tier parity is strict at CS 22, Admin 45, ITAdmin 57, ExecAdmin 62, MasterAdmin 63 of 63.
 
 Open threads to drive next:
-1. #20547 [pending]: delete the hardcoded minicpm-v curl, pass images to frankenstein-llm as a normal image_url content part, teach router_hook.py to detect image parts and route free-local-first, extend the rule-256 quality gate so empty or ID-garbling vision replies spill instead of passing, and reconcile the registry to the probe winner.
-2. #20547 [pending]: persist uploads into argus_attachments with a generated thumb_path and render thumbnails in terminal history instead of "[image attached]".
-3. #20501 [pending]: surface argusUnwiredActions() in the Roles tab with an UNWIRED badge plus the CI assertion, then wire or retire activity_requirements and authnet_legacy_link_audit.
-4. #20500 [pending]: build routes/externship_site_outreach.php over agency_contacts for Cyra, create the OutreachSpecialist role, seed the table, and purchase the Tempe DID. Ruben decision needed on the number.
-5. #20410 [queued]: install the durable monotonic permission guard on the permission write path.
+1. #20565 [executing]: fix the QB sync. This is the upstream cause of the entire lockout and it is still live.
+2. #20549 [blocked]: hand-ship the router vision ladder per rule 267 GATE C, the executor failed it.
+3. #20555 [executing]: delegation hardening, dev_stage drafting. Close the escalation loop so a denial routes to the required_role approver with a deadline, show each role its capability list, add per-role landing queues.
+4. #20500 [queued]: build Cyra's externship-site outreach surface over agency_contacts, create the OutreachSpecialist role, seed the table, purchase the Tempe DID. Ruben decision needed on the number.
+5. #20501 [queued]: ship the argusUnwiredActions Roles-tab badge and CI assertion.
+6. #20388 [queued]: work the 28 actionable PD signoff students with Jon.
+7. #20410 [queued]: install the durable monotonic permission guard.
+8. Human-only decision, no idea: tell Vicky her 12 students are unsuspended and extended, and pick the channel since no send_sms tool exists on the emsu-operations MCP.
 
 Reference IDs:
-- Ideas: #20547 [pending], #20501 [pending], #20500 [pending], #20497 [executing], #20388 [executing], #20405 [executing], #20410 [queued], #20333 [executing], #20334 [executing], #20392 [executing], #20393 [deployed]
-- Files touched: routes/alltastic_api.php (VISION_IDENTITY_ENRICH_V2, backup .bak-vision-identity-20260731-115*), lib/argus_action_catalog.php (4 handlers wired, pd_signoff_list, pd_nremt_signoff, argusUnwiredActions guard)
-- Evidence: /etc/litellm/router_hook.py line 230 only vision reference, argus_audit_log rows 3103 and 3104, argus_attachments 0 rows, frankenstein_registry.yaml cluster_topology vs tier vision_primary
-
-When done, append a row to cline_task_ledger.md per rule 
+- Ideas: #20388 [queued], #20389 [queued], #20405 [queued], #20410 [queued], #20497 [queued], #20500 [queued], #20501 [queued], #20547 [queued], #20549 [blocked], #20555 [executing], #20564 [executing], #20565 [executing]
+- Files created: cron/cron_argus_repair_worker.php
+- Files patched: cron/cron_payment_reconciliation.php (MANUAL_OVERRIDE_GUARD_V1), lib/argus_action_catalog.php (PD_FILTER_FIX_V1 p
 ```
 
-### `1785435661707` — 7/31/2026, 12:06:48 PM PT — 1982 turns
+### `1785435661707` — 7/31/2026, 1:02:37 PM PT — 2159 turns
 
 **Original task:**
 
@@ -170,7 +170,7 @@ There's grievances getting lost because of all these categories in here. https:/
 The grievances start with Pending Admin Complete (where the a human is supposed to check whether or not the person filled it out properly (i.e. accoridng to already known logic (had to be by hand and all fields completed), if rejected then it's sent to the student with a reason for the rejection. Human has 72 hours to do a disposition. Then after that it becomes an automated decision. If approved goes to the next step which is Admin Complete, it is then Ap
 ```
 
-**Ideas referenced:** #047857, #059669, #11111, #111827, #120179, #12770, #127891, #128681, #129302, #13437, #13441, #13993, #14662, #14710, #16464, #166534, #16957, #17657, #181825, #19338, #19458, #19470, #19491, #19576 [deployed], #19592, #19594, #20258 [proposed], #20259 [proposed], #20260 [proposed], #20265 [proposed], #20266 [proposed], #20268 [proposed], #20269 [proposed], #20275 [proposed], #20282 [proposed], #20283 [proposed], #20286 [proposed], #20290 [proposed], #20292 [proposed], #20295 [proposed], #20299 [proposed], #20309 [proposed], #20310 [proposed], #20316 [proposed], #20328 [executing], #20335 [executing], #20336 [executing], #20340 [executing], #20341 [in_progress], #20347 [executing], #20350 [executing], #20353 [executing], #20354 [executing], #20360 [executing], #20361 [executing], #20367 [executing], #20368 [proposed], #20369 [executing], #20406 [executing], #20408 [executing], #20412 [executing], #20504 [executing], #20507 [executing], #20509 [executing], #20513 [proposed], #20514 [proposed], #20515 [proposed], #20516 [proposed], #20518 [proposed], #20519 [proposed], #20527 [proposed], #20529 [proposed], #20532 [proposed], #20538 [proposed], #2112 [deployed], #21707, #2187 [rejected], #2363 [deployed], #2563, #2611 [deployed], #313244, #334155, #353857, #3730, #374151, #4338, #450438, #45475, #475569, #583788, #600179, #623992, #6366, #64748, #65039, #78350, #9203, #92400, #9888
+**Ideas referenced:** #047857, #059669, #11111, #111827, #120179, #12770, #127891, #128681, #129302, #13437, #13441, #13993, #14662, #14710, #16464, #166534, #16957, #17657, #181825, #19338, #19458, #19470, #19491, #19576 [deployed], #19592, #19594, #20258 [proposed], #20259 [proposed], #20260 [proposed], #20265 [proposed], #20266 [proposed], #20268 [proposed], #20269 [proposed], #20275 [proposed], #20282 [proposed], #20283 [proposed], #20286 [proposed], #20290 [proposed], #20292 [proposed], #20295 [proposed], #20299 [proposed], #20309 [proposed], #20310 [proposed], #20316 [proposed], #20328 [executing], #20335 [executing], #20336 [executing], #20340 [executing], #20341 [in_progress], #20347 [executing], #20350 [executing], #20353 [executing], #20354 [executing], #20360 [executing], #20361 [executing], #20367 [executing], #20368 [proposed], #20369 [executing], #20406 [executing], #20408 [executing], #20412 [executing], #20504 [executing], #20507 [executing], #20509 [executing], #20513 [proposed], #20514 [proposed], #20515 [proposed], #20516 [proposed], #20518 [proposed], #20519 [proposed], #20527 [proposed], #20529 [proposed], #20532 [proposed], #20538 [proposed], #20548 [proposed], #20552 [proposed], #20558 [proposed], #2112 [deployed], #21707, #2187 [rejected], #2363 [deployed], #2563, #2611 [deployed], #313244, #334155, #353857, #3730, #374151, #4338, #450438, #45475, #475569, #583788, #600179, #623992, #6366, #64748, #65039, #78350, #9203, #92400, #9888
 
 **Last PICKUP PROMPT:**
 
@@ -223,7 +223,57 @@ Recursive (6 levels) restrict-access reader classifying EXTERNSHIP_BLOCKED / PRE
 - Disposition submit: 
 ```
 
-### `1785375877050` — 7/31/2026, 12:06:47 PM PT — 2109 turns
+### `1785363426908` — 7/31/2026, 12:43:25 PM PT — 1030 turns
+
+**Original task:**
+
+```
+#EMT Webforms/Payments
+
+Consult SLS / Webforms on EMT websites. When a payment declines / there is no instant notification to the student that the payment was declined (wonder if this is the case also on refresher webistes and cpr sites) and so because of this people would think that their payments went through. Only to find out later that they did not. This needs to show instantly and kick back. So API needs updating.
+```
+
+**Ideas referenced:** #13873, #15637, #15902, #16590, #1767, #1770, #17846, #178501, #18820, #18868, #1910, #19492, #19495, #19875, #19876, #19877, #19879, #19881, #19882, #19883, #19887, #19903, #19907, #19908, #19909, #19910 [executing], #19911, #19912, #19913, #19914, #19915, #19916, #19917, #19918 [executing], #19920 [executing], #19921, #19924, #19925, #19927, #19928, #20055 [deployed], #20056 [deployed], #20057 [deployed], #20128 [deployed], #20130 [proposed], #20131, #20134 [proposed], #20183 [proposed], #20313 [proposed], #20314 [proposed], #20315 [proposed], #20317 [proposed], #20326 [executing], #20327 [executing], #20394, #20419 [proposed], #20420 [proposed], #20491 [proposed], #2050, #20539 [executing], #20551 [proposed], #20556 [executing], #2082, #2085, #2098, #4802, #9086, #9168, #9339, #9888
+
+**Last PICKUP PROMPT:**
+
+```
+ sale was refused by her bank.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785012025445 (declined-payment recovery path).
+
+Where we left off (verified 2026-07-31 12:41 PT):
+- RULE 297 VIOLATION RECORDED against my own earlier claim. '69 lost leads' failed all four checks. Correctly classified: 9 raw charge failures over 2 days collapse to 3 unique payers (Maia 1, Matthew 4 retries, Elizabeth 4 retries). Today's '4 failures' are ONE person. Invoice coverage is 100 percent (85/85 in 7 days). All sites run ~35-40 percent form completion, so arizonaemt (29 completed / 50 abandoned) is among the BEST, not an anomaly.
+- RUBEN'S CVC HYPOTHESIS ANSWERED: the CVC IS transmitted correctly. QuickBooks reported 'Card Security Code Match: Yes' on Elizabeth's charge. The known AVS-enum bug did NOT cause her decline: sudo grep -c AVSCheckStatusEnum /var/log/php8.3-fpm.log returns 0 across a log spanning 26-Jul to now (verified not rotated), and zero hits in arizonaemt vhost logs. Runbook documented 4 such 400s on 7/29, none since.
+- Her decline is issuer-side: 'Declined - Credit Floor' code 5007, AVS street and zip both No-match, CVC Yes. Points to billing-address mismatch or an issuer limit/hold.
+- READ BEFORE TOUCHING PAYMENT CODE: /var/www/emtskills/docs/PAYMENT_DECLINE_KNOWN_ISSUES.md. It documents a frontend-address-selector hypothesis that was TESTED AND PROVEN WRONG. Do not repeat it.
+- THE REAL GAP: Elizabeth has NO Students row and NO qb_invoices row (both verified). qb_invoices keys off student_db_id, so no student record means no invoice can be created, no payment link exists, and the abandoned-reg recovery cron (which selects FROM Students) cannot see her. A declined payer literally has no way to pay us.
+- Surface is healthy: 49 form POSTs to arizonaemt between 11:00 and 12:39 today, all HTTP 200. One $50 charge completed and tracked at 09:00:44.
+
+Open threads to drive next:
+1. #20556 [executing]: CS manual enroll-and-invoice path that works WITHOUT a successful charge, plus decline-triggered payment-link email and a CS script for code 5007. This is the fix that lets declined students actually pay.
+2. #20130 [queued]: the AVS enum fix, ON HOLD by Ruben's 2026-07-30 decision. NO ship trigger has fired (no Auto Void events, no AVS 400s, no processor citation). Keep holding. Deploy procedure if a trigger ever fires is in the runbook: single low-volume site canary first, never fan out to 19 sites at once.
+3. #20551 [proposed]: corrected narrow scope for WPForms payer-identity fallback so declined-payment tickets stop saying 'payer unidentified'.
+4. #20539 [rejected]: rejected, filed on a false premise. Do not resurrect.
+5. #20491 [proposed]: cron install standard (www-data only, never a /tmp lock) plus cron-liveness alerting.
+6. #20420 [deployed]: TAG IS FALSE, patches sit in /tmp awaiting a deploy click. Verify every deployed tag against live code per rule 99.
+7. Call Elizabeth Shipp Conway at (602) 484-3700 and take $1,295 by phone, then hand-create her registration (human-only decision, no idea). Registration $50 plus Traditional Tuition $1,245, Tempe. Ticket TKT-20260731-E734CAE5 is enriched with everything.
+
+Reference IDs:
+- Ideas filed: #20556 [executing]
+- Ideas closed: none this pass
+- Files touched: HANDOFF_NOTES.md. No production code changed.
+- Rule 297 violation recorded against task 1785012025445.
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+══════════════════════════════
+```
+
+### `1785375877050` — 7/31/2026, 12:33:21 PM PT — 2237 turns
 
 **Original task:**
 
@@ -240,7 +290,7 @@ I stopped tuning preferences and made it unconditional in /usr/local/bin/franken
 
 ```
 
-**Ideas referenced:** #11261, #12059, #12060, #12231, #12251, #12335, #12365, #12366, #12368, #12407, #12459, #1248 [resolved], #12672, #12689, #13108, #13121, #13831, #13832, #13874, #14000, #16120, #16126, #16128, #16844, #1685, #1687, #1705, #1706, #17202, #17203, #17205, #17300, #178531, #18781, #18820, #18868, #1888, #1894, #1962, #1964, #1967, #19903, #1993 [resolved], #19962 [proposed], #20005 [proposed], #20022 [rejected], #20040 [proposed], #20041 [proposed], #20042 [proposed], #20054 [proposed], #20068 [proposed], #20069 [proposed], #20082 [proposed], #20088 [proposed], #20102 [proposed], #20112 [proposed], #20129 [proposed], #2014, #20172 [proposed], #20178 [proposed], #20179 [proposed], #20245 [executing], #20246 [rejected], #20247 [executing], #20264 [proposed], #20272 [executing], #20291 [executing], #20297 [executing], #20300 [proposed], #20302 [executing], #20311 [executing], #20495 [executing], #20498 [executing], #2050, #20506 [executing], #20517 [executing], #20528 [executing], #20536 [executing], #2062, #2092, #2102 [deployed], #2103 [deployed], #2108 [deployed], #2109 [resolved], #2110, #2111, #2115, #2116, #2118, #2119, #2120 [rejected]
+**Ideas referenced:** #11261, #12059, #12060, #12231, #12251, #12335, #12365, #12366, #12368, #12407, #12459, #1248 [resolved], #12672, #12689, #13108, #13121, #13831, #13832, #13874, #14000, #16120, #16126, #16128, #16844, #1685, #1687, #1705, #1706, #17202, #17203, #17205, #17300, #178531, #18781, #18820, #18868, #1888, #1894, #1962, #1964, #1967, #19903, #1993 [resolved], #19962 [proposed], #20005 [proposed], #20022 [rejected], #20040 [proposed], #20041 [proposed], #20042 [proposed], #20054 [proposed], #20068 [proposed], #20069 [proposed], #20082 [proposed], #20088 [proposed], #20102 [proposed], #20112 [proposed], #20129 [proposed], #2014, #20172 [proposed], #20178 [proposed], #20179 [proposed], #20245 [executing], #20246 [rejected], #20247 [executing], #20264 [proposed], #20272 [executing], #20291 [executing], #20297 [executing], #20300 [proposed], #20302 [executing], #20311 [executing], #20495 [executing], #20498 [executing], #2050, #20506 [executing], #20517 [executing], #20528 [executing], #20536 [executing], #20553 [in_progress], #2062, #2092, #2102 [deployed], #2103 [deployed], #2108 [deployed], #2109 [resolved], #2110, #2111, #2115, #2116, #2118, #2119, #2120 [rejected], #2121
 
 **Last PICKUP PROMPT:**
 
@@ -273,50 +323,50 @@ Reference IDs:
 - Ideas (reconciled 15:13 PT): #20311 [executing] (verified: status=in_progress dev_stage=idle), #20302 [deployed] (verified: status=deployed dev_stage=ready_for_review), #20300 [executing] (verified: status=in_progress dev_stage=auditing), #20297 [executing] (ver
 ```
 
-### `1785363426908` — 7/31/2026, 11:52:38 AM PT — 936 turns
+### `1785368618667` — 7/31/2026, 12:27:12 PM PT — 356 turns
 
 **Original task:**
 
 ```
-#EMT Webforms/Payments
+We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for this? 
 
-Consult SLS / Webforms on EMT websites. When a payment declines / there is no instant notification to the student that the payment was declined (wonder if this is the case also on refresher webistes and cpr sites) and so because of this people would think that their payments went through. Only to find out later that they did not. This needs to show instantly and kick back. So API needs updating.
+Do we have a decrease in the number of registrations, website traffic across our EMT programs? What about a decrease int he traffic? I'm not worried about emsuniversity.com. I'm concerned with EMT websites only.
 ```
 
-**Ideas referenced:** #13873, #15637, #15902, #16590, #1767, #1770, #17846, #178501, #18820, #18868, #1910, #19492, #19495, #19875, #19876, #19877, #19879, #19881, #19882, #19883, #19887, #19903, #19907, #19908, #19909, #19910 [executing], #19911, #19912, #19913, #19914, #19915, #19916, #19917, #19918 [executing], #19920 [executing], #19921, #19924, #19925, #19927, #19928, #20055 [deployed], #20056 [deployed], #20057 [deployed], #20128 [deployed], #20130 [proposed], #20131, #20134 [proposed], #20183 [proposed], #20313 [proposed], #20314 [proposed], #20315 [proposed], #20317 [proposed], #20326 [executing], #20327 [executing], #20394, #20419 [proposed], #20420 [proposed], #20491 [proposed], #2050, #20539 [executing], #2082, #2085, #2098, #4802, #9086, #9168, #9339, #9888
+**Ideas referenced:** #13437, #13441, #13454, #16732, #17203, #17205, #18315, #18820, #18868, #1910, #19887, #19903, #19907, #19910, #19918, #19925, #19927, #19928, #20044 [deployed], #20085 [proposed], #20086 [proposed], #20119 [proposed], #2096, #2097, #2098, #5431, #5574, #7174, #7907, #8230, #9132, #9222
 
 **Last PICKUP PROMPT:**
 
 ```
-f you spotting it on the 31st.
+it to all 40 domains instantly
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
+Pick up task #current — Search Console setup for ~40 EMSU domains.
 
-Pick up task #1785012025445 (declined-payment registration loss).
-
-Where we left off (verified 2026-07-31 11:49 PT):
-- ROOT CAUSE: WPForms marks an entry completed only AFTER payment succeeds, and the EMSU registration webhook fires on completion. A declined card therefore leaves status='abandoned', no webhook, no Students row, no registration. The decline and the missing registration are the same event.
-- Elizabeth Shipp Conway: 4 attempts of $1,295 in under 2 min (19ac9x3ujp54, 17ac8x3uoi8q, 14ac6x3uvl76, 15ac5x3uxg94, all failed 11:08-11:09). QB reported "Declined - Credit Floor" code 5007, AVS address and zip both No-match, CVV Yes. No Students row, absent from webhook_registration.log, but wp_ot5lf (arizonaemt.com) PNfs8_wpforms_entries 13043/13044/13045 hold her full contact data.
-- SCALE: abandoned entries with an email, last 3 days: arizonaemt 21, californiaemt 15, sanantonioemt 11, dallasemt 10, sandiegoemt 8, houstonemt 2, texasemt 2. That is 69 contactable people lost.
-- arizonaemt completed:abandoned trend 6:5, 4:8, 3:9, 1:5. Submissions arrive fine, they die at payment.
-- The decline is issuer-side, not an EMSU fault. arizonaemt.com surface health PASS, and a $50 charge completed and tracked normally at 09:00:44 today.
-- UNVERIFIED: could not reach an authoritative Intuit source for code 5007 (Brave quota exhausted, DDG/Bing robots-blocked, Intuit error page unparseable). Confirm issuer semantics with the processor before telling a student anything definitive.
-- ACTED: rewrote TKT-20260731-E734CAE5 from "payer unidentified" to name her, with phone (602) 484-3700, email jones.elizabeth16@yahoo.com, address, product breakdown, and decline reason. She is callable now.
-- The escalation cron itself is healthy: it caught the declines and grouped all 4 into one ticket at 11:25.
+Where we left off (verified 7/31/2026, 12:27 PM PT):
+- All bug fixes deployed and verified (caller_lookup, SMS AI, ticket autospec, CFA deepseek fallback, Klarna QB cron)
+- Search Console deployment tool: /var/www/emtskills/tools/admin_deploy_search_console_verify.php (unused yet, permission fixes needed for web-to-vhost write)
+- Ruben needs to use browser AI at search.google.com/search-console with rmajoremsu@gmail.com
+- 40 domains identified across EMT, Refresher, EMD, CPR
 
 Open threads to drive next:
-1. #20539 [executing]: P0. Teach cron_declined_payment_escalation.php to fall back to WPForms entries when no Students row matches, sweep all 14 wp_* schemas for abandoned entries with an email and no Students row, and add a per-site completion-rate alert. The 69 lost leads are recoverable today by hand if this slips.
-2. #20491 [proposed]: cron install standard (www-data only, never a /tmp lock) plus a cron-liveness alert on stale logs.
-3. #20420 [deployed]: TAG IS FALSE. This is the idea about false deployed tags. Gate the status behind a live-file assertion. Until it lands, verify every deployed tag against production code per rule 99.
-4. #20326 [deployed]: TAG IS FALSE, re-verified. The multi-loc throw is still live. This is the fail-open registration fix, and #20539 [executing] is its natural companion since both are about not discarding a would-be student.
-5. #20315 [deployed] and #20313 [deployed] and #20317 [deployed] and #20419 [deployed] and #20327 [deployed]: all TAGS ARE FALSE, patches sit in /tmp awaiting a deploy click.
-6. #20314 [queued]: dead monitor sweep.
-7. Call Matthew Gillespie and Elizabeth Shipp Conway to collect (human-only decision, no idea). Matthew's TKT-20260730-8E49A533 has been Open since yesterday with no call made and his card never cleared. Elizabeth's TKT-20260731-E734CAE5 is now enriched with her phone. Both need a human to dial, which no agent can do. The systemic enforcement for this is #20327 [deployed].
+1. Ruben pastes the browser AI prompt above → returns Google verification filenames → deploy HTML files via root cp command to all vhosts (bypassing web permissions)
+2. #20085 [deployed] — SMS AI Responder fix: verify no new errors in PHP-FPM logs
+3. #20086 [deployed] — Caller lookup SQL fix: verify no new errors in PHP-FPM logs
+4. #20119 [deployed] — Ticket auto-spec deepseek key fixed: verify no new errors
+5. Implement dashboard for payment_method NULL tracking (566/571 July students with no payment method recorded)
 
 Reference IDs:
-- Ideas filed: #20313 [deployed], #20314 [queued], #20315 [deployed], #20317 [
+- All 4 fix ideas filed (#20085, #20086, #20119, Web AI SEO ideas)
+- Search Console tool: /var/www/emtskills/tools/admin_deploy_search_console_verify.php
+- Klarna QB cron: /var/www/emtskills/cron/cron_klarna_qb_reconciliation.php (nightly at 2 AM)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
 ### `1785483774534` — 7/31/2026, 9:45:20 AM PT — 274 turns
@@ -956,48 +1006,6 @@ Reference IDs:
 - Ideas filed: #20074, #20092, #20107, #20193, #20194, #20284, #20285, #20286
 - Tickets: None filed for this audit
 - Files touched: webhook.php, voice_email_capture_prompts.php, cfa_telemetry_recorder.php, emsu_ai_brain.php (pending), email_agent_dynamic_tools_thread_signals.php (pending), cron_chat_handoff_unanswered_escalation.php, REFERENCE_CFA_MODEL_ROUTING.md, voice_call_log (transcript analysis)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785368618667` — 7/30/2026, 1:31:50 PM PT — 338 turns
-
-**Original task:**
-
-```
-We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for this? 
-
-Do we have a decrease in the number of registrations, website traffic across our EMT programs? What about a decrease int he traffic? I'm not worried about emsuniversity.com. I'm concerned with EMT websites only.
-```
-
-**Ideas referenced:** #13437, #13441, #13454, #16732, #17203, #17205, #18315, #18820, #18868, #1910, #19887, #19903, #19907, #19910, #19918, #19925, #19927, #19928, #20044 [deployed], #20085 [proposed], #20086 [proposed], #20119 [proposed], #2096, #2097, #2098, #5431, #5574, #7174, #7907, #8230, #9132, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-e verification files from CLI.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #current — Revenue investigation: Search Console verification for EMT websites.
-
-Where we left off (verified 2026-07-30 13:31 PT):
-- Four bug fixes deployed and verified: caller lookup SQL (#20086), SMS AI (#20085), ticket autospec (#20119), CFA deepseek fallback
-- Search Console admin PHP tool at /var/www/emtskills/tools/admin_deploy_search_console_verify.php (works via CLI, not web due to vhost permissions)
-- Ruben will paste the browser AI prompt above to collect verification codes for the 9 EMT domains
-
-Open threads to drive next:
-1. Wait for Ruben to bring back verification codes from browser AI
-2. Deploy all 9 googleXXXX.html files via CLI php one-liner to /var/www/vhosts/*/httpdocs/
-3. Verify each file returns HTTP 200 via curl
-4. Ask Ruben to click Verify in Search Console for each domain
-
-Reference IDs:
-- Ideas: #20085 [deployed], #20086 [deployed], #20119 [deployed]
-- Files: twilio_sms_inbound.php, caller_lookup.php, ticket_autospec.php, router_hook.py, cron_klarna_qb_reconciliation.php, admin_deploy_search_console_verify.php
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
@@ -3589,115 +3597,6 @@ When done, run order 66.
 - [ ] dkramer password: waiting on Plesk license fix
 - [ ] Add original TDSHS request emails to each due-date folder
 - [ ] Approve #19786 and implement KAIZEN rules
-</task_progress>
-</attempt_completion>
-```
-
-### `1785267580861` — 7/28/2026, 12:52:17 PM PT — 94 turns
-
-**Original task:**
-
-```
-Pick up task — Build the grievance manual-first toggle with visible auto/manual switch + AI recommendations-only mode. Executor failed (codegen_no_patches) despite 12/15 tests passing — the failure was a hallucinated grievance_settings table.
-
-Context:
-- #19594 [impl_failed] (verified: get_idea_progress shows 12/15 tests passed, sandbox at /tmp/ruben_sandbox_19594_1785256622)
-- #19598 [executing] — 72h auto-disposition spec
-- #19562 [deployed] — 7 grievances pending dashboard
-
-Step 1 — Read the sandbox code the executor already generated (it's valid PHP, just needs the schema hallucination fix
-```
-
-**Ideas referenced:** #19562 [deployed], #19583, #19592, #19594 [impl_failed], #19598 [executing]
-
-**Last PICKUP PROMPT:**
-
-```
-_1785256622 with .orig backups
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #19594 — grievance manual-first toggle with AI recommendations-only mode
-
-Where we left off (verified 2026-07-28 12:51 PT):
-- #19594 [rejected] — Executor sandbox hand-shipped: 6 files deployed, schema hallucinations fixed
-- Sandbox at /tmp/ruben_sandbox_19594_1785256622 (backups: .bak-gate-20260728)
-- Deployed files: lib/grievance_completeness.php, cron/cron_grievance_completeness_review.php, api/grievance_completeness_api.php, views/_view_grievance_completeness.php, routes/grievance_manager.php, lib/report_registry.php
-
-Open threads to drive next:
-1. #19598 [executing] — 72h auto-disposition spec (no files depend on incomplete spec yet)
-2. #19562 [deployed] — 7 grievances pending dashboard (cron now generates recommendations for these)
-
-Reference IDs:
-- Ideas filed: #19594 [rejected]
-- Files touched: /var/www/emtskills/lib/grievance_completeness.php, /var/www/emtskills/cron/cron_grievance_completeness_review.php, /var/www/emtskills/api/grievance_completeness_api.php, /var/www/emtskills/views/_view_grievance_completeness.php, /var/www/emtskills/routes/grievance_manager.php, /var/www/emtskills/lib/report_registry.php
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785267663329` — 7/28/2026, 12:43:25 PM PT — 20 turns
-
-**Original task:**
-
-```
-Pick up task — Audit 3 silent-ghost blocker chains filed today, determine which are resolved by current fixes, mark superseded or leave open.
-
-Context:
-- #19741 [deployed] — Chain: 19741 -> 19668 -> 19623 -> 19482
-- #19740 [deployed] — Chain: 19740 -> 19667 -> 19619 -> 18738
-- #19708 [deployed] — Chain: 19708 -> 19679 -> 19648 -> 18581
-- #19707 [deployed] — Chain: 19707 -> 19379 (student-facing subject builder audit)
-- Silent-ghost watchdog: auto-files blockers after 3 strikes in 7 days, marks them deployed on filing
-
-Step 1 — Check the source ideas for each chain:
-  use_mcp_tool server_name=r
-```
-
-**Ideas referenced:** #18581 [approved], #18738 [approved], #19338, #19379 [approved], #19458, #19482 [rejected], #19491, #19707 [deployed], #19708 [deployed], #19740 [deployed], #19741 [deployed], #9222
-
-**Last PICKUP PROMPT:**
-
-```
-opening to deploy in one pass.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Deploy the 3 AGENT_CORE_HARD_DENYLIST-blocked patches, starting with #19708 (ticket orphan reaper).
-
-Where we left off (verified 2026-07-28 12:42 PT):
-- #19741 [rejected] — source #19482 rejected, blocker closed
-- #19740 [executing] — source #18738 blocked on routes/reports.php, sandbox at /tmp/ruben_sandbox_18738_1785223947
-- #19708 [executing] — source #18581 blocked on lib/ai_ticket_agent.php, sandbox at /tmp/ruben_sandbox_18581_1785220960
-- #19707 [executing] — source #19379 blocked on lib/ai_ticket_agent.php, sandbox at /tmp/ruben_sandbox_19379_1785231046
-
-Open threads to drive next:
-1. #19708 [executing] — Deploy cron/cron_ticket_agent_orphan_reaper.php and lib/ai_ticket_agent.php patch from sandbox_18581 via emsu-safe-deploy (read_server_file sandbox contents first). Then reject the blocker: idea_action(19708, "reject", "Orphan reaper deployed via Cline — tickets now reaped every 5 min").
-2. #19707 [executing] — Deploy 12 file patches from sandbox_19379 for studentSafeEmailSubject() mandate. Same ai_ticket_agent.php gate now open from step 1. Then reject blocker: idea_action(19707, "reject", ...).
-3. #19740 [executing] — Deploy grievance backfill from sandbox_18738 to routes/reports.php, routes/_view_grievance_backfill_68_senders.php, lib/report_registry.php. Then reject blocker.
-
-Reference IDs:
-- Ideas filed: #19741 [rejected], #19740 [executing], #19708 [executing], #19707 [executing]
-- Source ideas: #19482 [rejected], #18738 [approved], #18581 [approved], #19379 [approved]
-- Gate: #9222 (AGENT_CORE_HARD_DENYLIST on CS-agent core files)
-- Files touched: none (audit-only task)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Check all 4 source ideas
-- [x] #19741 rejected (source #19482 resolved)
-- [x] #19740 stays open (source #18738 blocked by AGENT_CORE_HARD_DENYLIST)
-- [x] #19708 stays open (source #18581 blocked by AGENT_CORE_HARD_DENYLIST)
-- [x] #19707 stays open (source #19379 blocked by AGENT_CORE_HARD_DENYLIST)
-- [x] Final verification via reconcile_ideas
-- [x] Completion
 </task_progress>
 </attempt_completion>
 ```

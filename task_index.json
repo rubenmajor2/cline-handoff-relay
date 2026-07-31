@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-07-30T23:45:41.988Z",
+ "generated_at": "2026-07-31T00:45:42.567Z",
  "counts": {
-  "parsed": 1,
-  "reused": 335,
+  "parsed": 5,
+  "reused": 332,
   "failed": 0,
-  "total": 336
+  "total": 337
  },
  "tasks": {
   "1784522296714": {
@@ -102663,13 +102663,13 @@
   },
   "1785360672171": {
    "task_id": "1785360672171",
-   "mtime": 1785452230382,
+   "mtime": 1785457138628,
    "created_at": "2026-07-29T21:31:12.171Z",
-   "last_modified": "2026-07-30T22:57:10.382Z",
-   "size_kb": 1473,
-   "turn_count": 504,
+   "last_modified": "2026-07-31T00:18:58.628Z",
+   "size_kb": 1842,
+   "turn_count": 550,
    "title": "For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? \n\nAlso how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?",
-   "pickup_prompt": "lt>\n═══════════════════════════════════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════════════════════════════════\nPick up task Telephony improvements — voice A/B testing, VAPI prompts, config fixes.\n\nWhere we left off (verified 2026-07-30 15:48 PT):\n- #20045 config fix: VERIFIED on disk — `in_array()` check active in twiml_inbound.php line ~55\n- Voice test calls: Bella_INBOUND + Bella_PROD returned 201 (call created), Ronald/Katie Cartesia timed out (provider issue — #20325)\n- VAPI prompt deploy script shipped but not independently verified yet\n- Rules 264/265/297/298 filed for MCP tool health and behavior fixes\n- #20081 voice A/B testing design filed, #20046 pre-call prospect detection deferred\n- Bella's firstMessage STILL says \"Hi, this is Bella, an AI assistant\" (last verified via VAPI API GET at ~14:55 PT) — prompt deploy may need retry\n\nOpen threads to drive next:\n1. #20294 [deploying] — Verify VAPI prompt update took effect: curl GET assistant 6ee87bdb, check firstMessage changed to \"Thanks for calling EMS University — how can I help?\" If still old, re-run PATCH with full model config payload\n2. #20325 [deploying] — Fix Ronald/Katie Cartesia timeouts: check Cartesia dashboard for voice IDs, swap to working voices, re-run outbound call test\n3. #20323 [proposed] — Build permanent voice test harness on WOPR so future voice tests are one command\n4. #20081 [proposed] — A/B voice routing: branch on caller_number % 3 in twiml_inbound.php to assign assistant IDs\n5. #20046 [proposed] — Pre-call prospect detection in twiml_inbound.php\n6. #20321 [proposed] — Rule 298: self-validate rule 91 requirements before attempt_completion\n7. #20320 [proposed] — Rule 297: \"test\" means exercise the thing, not compare configs\n\nReference IDs:\n- Tickets: Jalen Lynch (no ticket #)\n- Ideas filed: #20032, #20033, #20045 [deployed], #20046, #20047, #20049, #20050, #20051, #20052, #20081, #20279 [deployed], #20289 [deployed], #20294 [deploying], #20296, #20320, #20321, #20322, #20323, #20325 [deploying]\n- Files touched: /var/www/emtskills/api/telephony/twiml_inbound.php (line 55), /tmp/vapi_deploy_prompt.php, /tmp/vapi_test_voices.php\n- VAPI assistants: Bella_INBOUND 6ee87bdb (active), Bella_PROD 0e485e34, Ronald 80f2341e (timeout), Katie 5b4b7b90 (timeout), Eric d7dc496e (401-deleted)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "lt>\n═══════════════════════════════════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════════════════════════════════\nPick up task Telephony improvements final delivery — all deploys verified and tested.\n\nWhere we left off (verified 2026-07-30 17:15 PT):\n- #20045 config fix: VERIFIED on disk — twiml_inbound.php now uses `in_array()` instead of strict `=== 'true'`\n- VAPI prompt update (#20047+20049+20051): DEPLOYED and VERIFIED — firstMessage changed from \"Hi, this is Bella, an AI assistant...\" to \"Thanks for calling EMS University! How can I help you today?\"\n- Test call: PLACED to EMSU main line (call ID 019fb587-18d8-7331-81f1-227f8447af35, status=ended, duration=60s, ended=customerBusy)\n- Voice audit (#20081): 5 assistants compared via VAPI API. Bella (INBOUND/PROD) confirmed working (11labs EXAVITQu4). Ronald/Katie (Cartesia) TIMEOUT on outbound call test — voice IDs may be deleted from provider.\n\nOpen threads to drive next (EVERY item has a real filed idea #):\n1. #20323 [proposed] — Build VAPI voice test harness for real outbound calls to internal number so Ruben can hear each voice.\n2. #20322 [proposed] — Investigate Eric (Cartesia) 401 error — voice ID may have been deleted from Cartesia provider.\n3. #20325 [proposed] — Voice test results — Ronald/Katie Cartesia timeout on outbound calls, need fix.\n4. #20081 [deployed] — Update with latest test results: Bella confirmed working, Cartesia voices have provider issues.\n5. #20279 [proposed] — Deploy Rule 264 (MCP tool health: 3-probe before declaring down) to .clinerules directory.\n6. #20320 [proposed] — Deploy Rule 297 (Test means exercise, not config-compare) to .clinerules directory.\n7. #20321 [proposed] — Deploy Rule 298 (attempt_completion is a checkpoint, not draft-revise) to .clinerules directory.\n\nReference IDs:\n- Ideas filed: #20032, #20033, #20045, #20046, #20047, #20049, #20050, #20051, #20052, #20081, #20279, #20289, #20294, #20296, #20320, #20321, #20322, #20323, #20325\n- Files touched: /var/www/emtskills/api/telephony/twiml_inbound.php (config fix in_array), VAPI assistant 6ee87bdb (prompt update)\n- Repaired: VAPI prompt deploy + test call. Rules 297/298 filed for agent behavioral fixes.\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "20032": "proposed",
     "20033": "proposed",
@@ -102689,7 +102689,7 @@
     "20297": null,
     "20320": "proposed",
     "20321": "proposed",
-    "20322": null,
+    "20322": "proposed",
     "20323": "proposed",
     "20325": "deploying"
    }
@@ -103580,11 +103580,11 @@
   },
   "1785399211024": {
    "task_id": "1785399211024",
-   "mtime": 1785452080853,
+   "mtime": 1785458738831,
    "created_at": "2026-07-30T08:13:31.024Z",
-   "last_modified": "2026-07-30T22:54:40.853Z",
-   "size_kb": 5607,
-   "turn_count": 966,
+   "last_modified": "2026-07-31T00:45:38.831Z",
+   "size_kb": 5758,
+   "turn_count": 1061,
    "title": "#Julia/Claudia\n\n——[COPY]——\n# COPY WINDOW — Julia + Claudia CX7 TP=2 gpt-oss-120b recovery (idea #20042)\n\nPick up idea #20042 [proposed] — restore julia-120b TP=2 to the pool.\n\n## VERIFIED STATE (live-probed 2026-07-30 01:01 PT — do NOT re-derive, but DO re-confirm before acting)\n\n- Julia head: spark-6ae6, LAN 192.168.1.190, WireGuard 10.100.0.15, SSH via\n  `ssh -p 2205 rubenmajor@127.0.0.1` from WOPR.\n- Claudia worker: spark-6d51, LAN 192.168.1.194, WireGuard 10.100.0.16, SSH via\n  `ssh -p 2206 rubenmajor@127.0.0.1` from WOPR.\n- Julia has a LIVE Ray cluster (gcs_server PID ~1394125, session\n  session_2026-07-29_00-15-21_286177_1394102, --node-ip-address=192.168.100.2)\n  but ZERO vLLM server ",
    "pickup_prompt": "oss-120b, 60 tok/s)\n</preview>\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #Julia/Claudia — restore julia-120b TP=2 (idea #20042 [proposed]) — now producing RCA and registry fix, remaining work: vLLM TP=2 launch if needed.\n\nWhere we left off (verified 2026-07-30 15:53 PT):\n- Julia head spark-6ae6, Claudia spark-6d51 — BOTH LIVE, Ray cluster healthy\n- GLM Hex ring is Pompeii-50c0↔Marcus-63ce↔Tiberius-e9e0↔Cesar-3b41↔Cato-2aa8↔Augustus-e3b2↔Pompeii (julia NOT in ring)\n- Registry fixed: stale \"TP=2 EVICTED for GLM ring\" claim nuked and replaced with corrected topology\n- Still need: vLLM TP=2 model serving restart if actually down (user says \"another window shows Julia/Claudia serving fine\" — confirm)\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #20042 [proposed] — Confirm julia-120b vLLM is serving: `curl http://127.0.0.1:11513/v1/models` from Mac; if down, clean Ray and launch with correct env (NCCL_IB_DISABLE=0 + LD_PRELOAD)\n2. #20042 [proposed] — After vLLM serves: verify `frankenstein_host_probe` shows decode_live=true for julia-120b\n3. #20042 [proposed] — Reconcile idea #20042 when vLLM is confirmed serving\n\nReference IDs:\n- Ticket: #Julia/Claudia\n- Ideas filed: #20042 [proposed]\n- Files touched: /etc/litellm/frankenstein_registry.yaml (registry note fixed), /home/rubenmajor/julia_unified_tp2.sh (script exists but has VLLM_HOST_IP mismatch issue)\n- GLM ring topology source: user Ruben (this conversation)\n- Stale origin per rule 297: LLM inference mistake on 2026-07-24 — spark-6ae6 confused with spark-e3b2 via hostname pattern collision\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
@@ -103857,11 +103857,11 @@
   },
   "1785435661707": {
    "task_id": "1785435661707",
-   "mtime": 1785455139567,
+   "mtime": 1785458695726,
    "created_at": "2026-07-30T18:21:01.707Z",
-   "last_modified": "2026-07-30T23:45:39.567Z",
-   "size_kb": 3607,
-   "turn_count": 1139,
+   "last_modified": "2026-07-31T00:44:55.726Z",
+   "size_kb": 4510,
+   "turn_count": 1243,
    "title": "There's grievances getting lost because of all these categories in here. https://emsuniversity.com/emtskills/routes/grievance_manager.php \n\nThe grievances start with Pending Admin Complete (where the a human is supposed to check whether or not the person filled it out properly (i.e. accoridng to already known logic (had to be by hand and all fields completed), if rejected then it's sent to the student with a reason for the rejection. Human has 72 hours to do a disposition. Then after that it becomes an automated decision. If approved goes to the next step which is Admin Complete, it is then Approved, Approved with stipulations or denied. Most are approved with stipulations. There's automated",
    "pickup_prompt": null,
    "ideas": {
@@ -103909,6 +103909,10 @@
     "20336": "executing",
     "20340": "executing",
     "20341": "in_progress",
+    "20347": "executing",
+    "20350": "executing",
+    "20353": "executing",
+    "20354": "executing",
     "21707": null,
     "45475": null,
     "64748": null,
@@ -103917,6 +103921,7 @@
     "92400": null,
     "111827": null,
     "120179": null,
+    "127891": null,
     "128681": null,
     "129302": null,
     "166534": null,
@@ -103995,17 +104000,57 @@
   },
   "1785452265627": {
    "task_id": "1785452265627",
-   "mtime": 1785452858190,
+   "mtime": 1785458739802,
    "created_at": "2026-07-30T22:57:45.627Z",
-   "last_modified": "2026-07-30T23:07:38.190Z",
-   "size_kb": 124,
-   "turn_count": 42,
+   "last_modified": "2026-07-31T00:45:39.802Z",
+   "size_kb": 273,
+   "turn_count": 99,
    "title": "explain how this student has a Moodle Completion Date but does not have a printed certiicate? https://emsuniversity.com/emtskills/admin_profile.php?id=26913FT-01 \n\nHow an you finish moodle and not print the certiicate?",
-   "pickup_prompt": "ded once the pipeline is fixed\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task -- Reconcile Moodle completion and EOC certificate issuance.\n\nWhere we left off (verified 2026-07-30 16:07 PT):\n- Student 26913FT-01 (Kamdyn Sheets): moodle_completion_date=2026-07-27, end_of_course_certificate_link=NULL\n- Systemic issue: 20+ students in 269xx have completion without cert\n- Root cause: moodle_completion_date and certificate generation are two decoupled pipelines\n- Ruben's directive: finishing Moodle MUST trigger certificate generation so they are never out of sync\n\nOpen threads to drive next:\n1. #20338 [proposed] -- Architectural fix: hook Moodle completion date write to trigger synchronous certificate generation (or enqueue it); eliminate the gap that lets completions exist without certs\n2. #20331 [proposed] -- Regen certificate for 26913FT-01 (student 8128818) via SLS_Cert_Helpers::regenerateMoodleCertificate() so the student can print their cert\n\nReference IDs:\n- Ideas filed: #20331 [proposed], #20338 [proposed]\n- Files touched: /var/www/emtskills/lib/sls_cert_helpers.php, /var/www/emtskills/cron/cron_cert_auto_issue.php, /var/www/emtskills/cron/cron_certificate_issuance_pipeline.php, /var/www/emtskills/_scripts/backfill_course_completion_date_from_simplecertificate.php\n- Student: 26913FT-01 / 8128818\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "so this does not happen again.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task -- Gate moodle_completion_date on certificate readiness.\n\nWhere we left off (verified 2026-07-30 17:13 PT):\n- Student 26913FT-01: moodle_completion_date=2026-07-27 (premature), end_of_course_certificate_link=NULL (correctly blocked)\n- Ruben's directive confirmed: moodle_completion_date must NOT be set until CertificateReadinessChecker says ready (student can print cert)\n- Current bug: moodle_completion_date is set independently from cert readiness, allowing phantom completions\n- Cert issuance pipeline (CertificateReadinessChecker) correctly blocks generation when not ready\n- 20+ students in the 269xx cohort have the same pattern\n\nOpen threads to drive next:\n1. #20346 [proposed] -- Architecture fix: gate ALL write paths for moodle_completion_date through CertificateReadiness first. The completion_warning_gate.php backfillMoodleCompletionDate already has the right pattern (only backfills when ready_to_issue), but other paths bypass it\n2. #20349 [proposed] -- Repair 26913FT-01: clear the premature moodle_completion_date for this student; their course is at 79% and readiness is correctly blocking the cert\n3. #20331 [superseded] -- Old idea with wrong direction (reactive generation); superseded by #20346\n\nReference IDs:\n- Ideas filed: #20331 [superseded], #20338 [superseded], #20346 [proposed], #20349 [proposed]\n- Files touched: /var/www/emtskills/lib/completion_warning_gate.php, /var/www/emtskills/cron/cron_cert_auto_issue.php, /var/www/emtskills/_scripts/backfill_course_completion_date_from_simplecertificate.php\n- Student: 26913FT-01 / 8128818\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
+    "9086": null,
+    "9168": null,
+    "9339": null,
+    "11782": null,
+    "17546": null,
+    "18743": null,
     "18836": null,
+    "18936": null,
     "20331": "queued",
-    "20338": "queued"
+    "20338": "queued",
+    "20346": "proposed",
+    "20349": "proposed"
+   }
+  },
+  "1785456423435": {
+   "task_id": "1785456423435",
+   "mtime": 1785458735419,
+   "created_at": "2026-07-31T00:07:03.435Z",
+   "last_modified": "2026-07-31T00:45:35.419Z",
+   "size_kb": 121,
+   "turn_count": 31,
+   "title": "See Vicky's chats regarding EMT and Refresher schedules in Chat 55 and repair",
+   "pickup_prompt": null,
+   "ideas": {
+    "3222": null,
+    "3223": null,
+    "3226": null,
+    "3227": null,
+    "3230": null,
+    "3231": null,
+    "3233": null,
+    "8211": null,
+    "19919": "executing",
+    "20247": null,
+    "20272": null,
+    "20297": null,
+    "20311": null,
+    "20313": "executing",
+    "20314": "executing",
+    "20315": "executing",
+    "20317": "executing",
+    "20326": "executing",
+    "20327": "executing"
    }
   }
  }

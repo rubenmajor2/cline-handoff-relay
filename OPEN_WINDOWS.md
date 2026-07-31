@@ -6,16 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/30/2026, 4:45:42 PM PT | window: last 72h | 132 tasks | index total 336 (parsed 1, cached 335)
+Generated: 7/30/2026, 5:45:42 PM PT | window: last 72h | 132 tasks | index total 337 (parsed 5, cached 332)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785435661707` | 7/30/2026, 4:45:39 PM | 1139 | 3607KB | There's grievances getting lost because of all these categories in here. https://emsuniver |
-| `1785452265627` | 7/30/2026, 4:07:38 PM | 42 | 124KB | explain how this student has a Moodle Completion Date but does not have a printed certiica |
+| `1785452265627` | 7/30/2026, 5:45:39 PM | 99 | 273KB | explain how this student has a Moodle Completion Date but does not have a printed certiica |
+| `1785399211024` | 7/30/2026, 5:45:38 PM | 1061 | 5758KB | #Julia/Claudia |
+| `1785456423435` | 7/30/2026, 5:45:35 PM | 31 | 121KB | See Vicky's chats regarding EMT and Refresher schedules in Chat 55 and repair |
+| `1785435661707` | 7/30/2026, 5:44:55 PM | 1243 | 4510KB | There's grievances getting lost because of all these categories in here. https://emsuniver |
+| `1785360672171` | 7/30/2026, 5:18:58 PM | 550 | 1842KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
 | `1785441507395` | 7/30/2026, 4:05:55 PM | 152 | 305KB | Argus failure? Cites technical issues but doesn't not correct them with appropriate CFA lo |
 | `1785295028411` | 7/30/2026, 4:05:26 PM | 1288 | 5998KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
-| `1785360672171` | 7/30/2026, 3:57:10 PM | 504 | 1473KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
-| `1785399211024` | 7/30/2026, 3:54:40 PM | 966 | 5607KB | #Julia/Claudia |
 | `1785363426908` | 7/30/2026, 3:51:17 PM | 706 | 2066KB | #EMT Webforms/Payments |
 | `1785375877050` | 7/30/2026, 3:15:08 PM | 1653 | 6414KB | #GLM |
 | `1785293294377` | 7/30/2026, 3:13:14 PM | 618 | 2568KB | A metric ton of emails came in to email agent within the last hour or 2. I need you to go  |
@@ -141,27 +142,12 @@ Generated: 7/30/2026, 4:45:42 PM PT | window: last 72h | 132 tasks | index total
 | `1785180665712` | 7/27/2026, 9:07:57 PM | 336 | 1041KB | ## 2 — #EXEC · P0 · executor is failing builds silently |
 | `1785191995112` | 7/27/2026, 9:04:36 PM | 796 | 2848KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
 | `1785209942258` | 7/27/2026, 8:46:39 PM | 46 | 137KB | Do not close my active cline windows, but grey windows keep coming in for some reason here |
-| `1785196068848` | 7/27/2026, 5:25:13 PM | 50 | 640KB | https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students |
 
 ---
 
 ## Per-window detail
 
-### `1785435661707` — 7/30/2026, 4:45:39 PM PT — 1139 turns
-
-**Original task:**
-
-```
-There's grievances getting lost because of all these categories in here. https://emsuniversity.com/emtskills/routes/grievance_manager.php 
-
-The grievances start with Pending Admin Complete (where the a human is supposed to check whether or not the person filled it out properly (i.e. accoridng to already known logic (had to be by hand and all fields completed), if rejected then it's sent to the student with a reason for the rejection. Human has 72 hours to do a disposition. Then after that it becomes an automated decision. If approved goes to the next step which is Admin Complete, it is then Ap
-```
-
-**Ideas referenced:** #047857, #059669, #11111, #111827, #120179, #12770, #128681, #129302, #13437, #13441, #14662, #14710, #16464, #166534, #16957, #17657, #181825, #19576 [deployed], #19592, #19594, #20258 [proposed], #20259 [proposed], #20260 [proposed], #20265 [proposed], #20266 [proposed], #20268 [proposed], #20269 [proposed], #20275 [proposed], #20282 [proposed], #20283 [proposed], #20286 [proposed], #20290 [proposed], #20292 [proposed], #20295 [proposed], #20299 [proposed], #20309 [proposed], #20310 [proposed], #20316 [proposed], #20328 [executing], #20335 [executing], #20336 [executing], #20340 [executing], #20341 [in_progress], #21707, #2187 [rejected], #2363 [deployed], #2563, #2611 [deployed], #313244, #334155, #353857, #3730, #374151, #4338, #450438, #45475, #475569, #583788, #600179, #623992, #6366, #64748, #65039, #78350, #9203, #92400, #9888
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785452265627` — 7/30/2026, 4:07:38 PM PT — 42 turns
+### `1785452265627` — 7/30/2026, 5:45:39 PM PT — 99 turns
 
 **Original task:**
 
@@ -171,36 +157,170 @@ explain how this student has a Moodle Completion Date but does not have a printe
 How an you finish moodle and not print the certiicate?
 ```
 
-**Ideas referenced:** #18836, #20331 [queued], #20338 [queued]
+**Ideas referenced:** #11782, #17546, #18743, #18836, #18936, #20331 [queued], #20338 [queued], #20346 [proposed], #20349 [proposed], #9086, #9168, #9339
 
 **Last PICKUP PROMPT:**
 
 ```
-ded once the pipeline is fixed
+so this does not happen again.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task -- Reconcile Moodle completion and EOC certificate issuance.
+Pick up task -- Gate moodle_completion_date on certificate readiness.
 
-Where we left off (verified 2026-07-30 16:07 PT):
-- Student 26913FT-01 (Kamdyn Sheets): moodle_completion_date=2026-07-27, end_of_course_certificate_link=NULL
-- Systemic issue: 20+ students in 269xx have completion without cert
-- Root cause: moodle_completion_date and certificate generation are two decoupled pipelines
-- Ruben's directive: finishing Moodle MUST trigger certificate generation so they are never out of sync
+Where we left off (verified 2026-07-30 17:13 PT):
+- Student 26913FT-01: moodle_completion_date=2026-07-27 (premature), end_of_course_certificate_link=NULL (correctly blocked)
+- Ruben's directive confirmed: moodle_completion_date must NOT be set until CertificateReadinessChecker says ready (student can print cert)
+- Current bug: moodle_completion_date is set independently from cert readiness, allowing phantom completions
+- Cert issuance pipeline (CertificateReadinessChecker) correctly blocks generation when not ready
+- 20+ students in the 269xx cohort have the same pattern
 
 Open threads to drive next:
-1. #20338 [proposed] -- Architectural fix: hook Moodle completion date write to trigger synchronous certificate generation (or enqueue it); eliminate the gap that lets completions exist without certs
-2. #20331 [proposed] -- Regen certificate for 26913FT-01 (student 8128818) via SLS_Cert_Helpers::regenerateMoodleCertificate() so the student can print their cert
+1. #20346 [proposed] -- Architecture fix: gate ALL write paths for moodle_completion_date through CertificateReadiness first. The completion_warning_gate.php backfillMoodleCompletionDate already has the right pattern (only backfills when ready_to_issue), but other paths bypass it
+2. #20349 [proposed] -- Repair 26913FT-01: clear the premature moodle_completion_date for this student; their course is at 79% and readiness is correctly blocking the cert
+3. #20331 [superseded] -- Old idea with wrong direction (reactive generation); superseded by #20346
 
 Reference IDs:
-- Ideas filed: #20331 [proposed], #20338 [proposed]
-- Files touched: /var/www/emtskills/lib/sls_cert_helpers.php, /var/www/emtskills/cron/cron_cert_auto_issue.php, /var/www/emtskills/cron/cron_certificate_issuance_pipeline.php, /var/www/emtskills/_scripts/backfill_course_completion_date_from_simplecertificate.php
+- Ideas filed: #20331 [superseded], #20338 [superseded], #20346 [proposed], #20349 [proposed]
+- Files touched: /var/www/emtskills/lib/completion_warning_gate.php, /var/www/emtskills/cron/cron_cert_auto_issue.php, /var/www/emtskills/_scripts/backfill_course_completion_date_from_simplecertificate.php
 - Student: 26913FT-01 / 8128818
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785399211024` — 7/30/2026, 5:45:38 PM PT — 1061 turns
+
+**Original task:**
+
+```
+#Julia/Claudia
+
+——[COPY]——
+# COPY WINDOW — Julia + Claudia CX7 TP=2 gpt-oss-120b recovery (idea #20042)
+
+Pick up idea #20042 [proposed] — restore julia-120b TP=2 to the pool.
+
+## VERIFIED STATE (live-probed 2026-07-30 01:01 PT — do NOT re-derive, but DO re-confirm before acting)
+
+- Julia head: spark-6ae6, LAN 192.168.1.190, WireGuard 10.100.0.15, SSH via
+  `ssh -p 2205 rubenmajor@127.0.0.1` from WOPR.
+- Claudia worker: spark-6d51, LAN 192.168.1.194, WireGuard 10.100.0.16, SSH via
+  `ssh -p 2206 rubenmajor@127.0.0.1` from WOPR.
+- Julia has a LIVE Ray cluster (gcs_server PID ~1394125, session
+  
+```
+
+**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11781, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12314, #12335, #12403, #1241, #12459, #12463, #12477, #12506, #12584, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #12716, #12824, #12872, #12878, #12900, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16163, #16265, #16304, #16417, #16448, #16449, #16584, #16589, #16590, #16602, #16604, #16625, #16646, #16648, #16674, #16676, #16680, #16715, #16716, #16717, #16844, #16863, #17078, #17145, #17202, #17203, #17205, #17300, #17307, #17430, #1765, #17673, #1781, #1807, #18312, #18326, #18670, #18671, #19338, #19585, #1967, #19686, #1998, #20042 [proposed], #20108, #20172 [proposed], #20181 [proposed], #20248 [proposed], #20285 [proposed], #2071, #2079, #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
+
+**Last PICKUP PROMPT:**
+
+```
+oss-120b, 60 tok/s)
+</preview>
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #Julia/Claudia — restore julia-120b TP=2 (idea #20042 [proposed]) — now producing RCA and registry fix, remaining work: vLLM TP=2 launch if needed.
+
+Where we left off (verified 2026-07-30 15:53 PT):
+- Julia head spark-6ae6, Claudia spark-6d51 — BOTH LIVE, Ray cluster healthy
+- GLM Hex ring is Pompeii-50c0↔Marcus-63ce↔Tiberius-e9e0↔Cesar-3b41↔Cato-2aa8↔Augustus-e3b2↔Pompeii (julia NOT in ring)
+- Registry fixed: stale "TP=2 EVICTED for GLM ring" claim nuked and replaced with corrected topology
+- Still need: vLLM TP=2 model serving restart if actually down (user says "another window shows Julia/Claudia serving fine" — confirm)
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #20042 [proposed] — Confirm julia-120b vLLM is serving: `curl http://127.0.0.1:11513/v1/models` from Mac; if down, clean Ray and launch with correct env (NCCL_IB_DISABLE=0 + LD_PRELOAD)
+2. #20042 [proposed] — After vLLM serves: verify `frankenstein_host_probe` shows decode_live=true for julia-120b
+3. #20042 [proposed] — Reconcile idea #20042 when vLLM is confirmed serving
+
+Reference IDs:
+- Ticket: #Julia/Claudia
+- Ideas filed: #20042 [proposed]
+- Files touched: /etc/litellm/frankenstein_registry.yaml (registry note fixed), /home/rubenmajor/julia_unified_tp2.sh (script exists but has VLLM_HOST_IP mismatch issue)
+- GLM ring topology source: user Ruben (this conversation)
+- Stale origin per rule 297: LLM inference mistake on 2026-07-24 — spark-6ae6 confused with spark-e3b2 via hostname pattern collision
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785456423435` — 7/30/2026, 5:45:35 PM PT — 31 turns
+
+**Original task:**
+
+```
+See Vicky's chats regarding EMT and Refresher schedules in Chat 55 and repair
+```
+
+**Ideas referenced:** #19919 [executing], #20247, #20272, #20297, #20311, #20313 [executing], #20314 [executing], #20315 [executing], #20317 [executing], #20326 [executing], #20327 [executing], #3222, #3223, #3226, #3227, #3230, #3231, #3233, #8211
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785435661707` — 7/30/2026, 5:44:55 PM PT — 1243 turns
+
+**Original task:**
+
+```
+There's grievances getting lost because of all these categories in here. https://emsuniversity.com/emtskills/routes/grievance_manager.php 
+
+The grievances start with Pending Admin Complete (where the a human is supposed to check whether or not the person filled it out properly (i.e. accoridng to already known logic (had to be by hand and all fields completed), if rejected then it's sent to the student with a reason for the rejection. Human has 72 hours to do a disposition. Then after that it becomes an automated decision. If approved goes to the next step which is Admin Complete, it is then Ap
+```
+
+**Ideas referenced:** #047857, #059669, #11111, #111827, #120179, #12770, #127891, #128681, #129302, #13437, #13441, #14662, #14710, #16464, #166534, #16957, #17657, #181825, #19576 [deployed], #19592, #19594, #20258 [proposed], #20259 [proposed], #20260 [proposed], #20265 [proposed], #20266 [proposed], #20268 [proposed], #20269 [proposed], #20275 [proposed], #20282 [proposed], #20283 [proposed], #20286 [proposed], #20290 [proposed], #20292 [proposed], #20295 [proposed], #20299 [proposed], #20309 [proposed], #20310 [proposed], #20316 [proposed], #20328 [executing], #20335 [executing], #20336 [executing], #20340 [executing], #20341 [in_progress], #20347 [executing], #20350 [executing], #20353 [executing], #20354 [executing], #21707, #2187 [rejected], #2363 [deployed], #2563, #2611 [deployed], #313244, #334155, #353857, #3730, #374151, #4338, #450438, #45475, #475569, #583788, #600179, #623992, #6366, #64748, #65039, #78350, #9203, #92400, #9888
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785360672171` — 7/30/2026, 5:18:58 PM PT — 550 turns
+
+**Original task:**
+
+```
+For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? 
+
+Also how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?
+```
+
+**Ideas referenced:** #20032 [proposed], #20033 [proposed], #20038, #20045 [proposed], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20052 [proposed], #20081 [proposed], #20279 [proposed], #20289 [proposed], #20294 [proposed], #20296 [proposed], #20297, #20320 [proposed], #20321 [proposed], #20322 [proposed], #20323 [proposed], #20325 [deploying]
+
+**Last PICKUP PROMPT:**
+
+```
+lt>
+═══════════════════════════════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════════════════════════════
+Pick up task Telephony improvements final delivery — all deploys verified and tested.
+
+Where we left off (verified 2026-07-30 17:15 PT):
+- #20045 config fix: VERIFIED on disk — twiml_inbound.php now uses `in_array()` instead of strict `=== 'true'`
+- VAPI prompt update (#20047+20049+20051): DEPLOYED and VERIFIED — firstMessage changed from "Hi, this is Bella, an AI assistant..." to "Thanks for calling EMS University! How can I help you today?"
+- Test call: PLACED to EMSU main line (call ID 019fb587-18d8-7331-81f1-227f8447af35, status=ended, duration=60s, ended=customerBusy)
+- Voice audit (#20081): 5 assistants compared via VAPI API. Bella (INBOUND/PROD) confirmed working (11labs EXAVITQu4). Ronald/Katie (Cartesia) TIMEOUT on outbound call test — voice IDs may be deleted from provider.
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #20323 [proposed] — Build VAPI voice test harness for real outbound calls to internal number so Ruben can hear each voice.
+2. #20322 [proposed] — Investigate Eric (Cartesia) 401 error — voice ID may have been deleted from Cartesia provider.
+3. #20325 [proposed] — Voice test results — Ronald/Katie Cartesia timeout on outbound calls, need fix.
+4. #20081 [deployed] — Update with latest test results: Bella confirmed working, Cartesia voices have provider issues.
+5. #20279 [proposed] — Deploy Rule 264 (MCP tool health: 3-probe before declaring down) to .clinerules directory.
+6. #20320 [proposed] — Deploy Rule 297 (Test means exercise, not config-compare) to .clinerules directory.
+7. #20321 [proposed] — Deploy Rule 298 (attempt_completion is a checkpoint, not draft-revise) to .clinerules directory.
+
+Reference IDs:
+- Ideas filed: #20032, #20033, #20045, #20046, #20047, #20049, #20050, #20051, #20052, #20081, #20279, #20289, #20294, #20296, #20320, #20321, #20322, #20323, #20325
+- Files touched: /var/www/emtskills/api/telephony/twiml_inbound.php (config fix in_array), VAPI assistant 6ee87bdb (prompt update)
+- Repaired: VAPI prompt deploy + test call. Rules 297/298 filed for agent behavioral fixes.
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
@@ -310,115 +430,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Wire extension into real Argus backend (argus_browser_directive.php + alltastic_api.php browser_context) — #19970 deployed
 - [x] E2E verify browser-control path (read-page + navigate block emission)
 </task_progress>
-</attempt_completion>
-```
-
-### `1785360672171` — 7/30/2026, 3:57:10 PM PT — 504 turns
-
-**Original task:**
-
-```
-For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? 
-
-Also how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?
-```
-
-**Ideas referenced:** #20032 [proposed], #20033 [proposed], #20038, #20045 [proposed], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20052 [proposed], #20081 [proposed], #20279 [proposed], #20289 [proposed], #20294 [proposed], #20296 [proposed], #20297, #20320 [proposed], #20321 [proposed], #20322, #20323 [proposed], #20325 [deploying]
-
-**Last PICKUP PROMPT:**
-
-```
-lt>
-═══════════════════════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════════════════════
-Pick up task Telephony improvements — voice A/B testing, VAPI prompts, config fixes.
-
-Where we left off (verified 2026-07-30 15:48 PT):
-- #20045 config fix: VERIFIED on disk — `in_array()` check active in twiml_inbound.php line ~55
-- Voice test calls: Bella_INBOUND + Bella_PROD returned 201 (call created), Ronald/Katie Cartesia timed out (provider issue — #20325)
-- VAPI prompt deploy script shipped but not independently verified yet
-- Rules 264/265/297/298 filed for MCP tool health and behavior fixes
-- #20081 voice A/B testing design filed, #20046 pre-call prospect detection deferred
-- Bella's firstMessage STILL says "Hi, this is Bella, an AI assistant" (last verified via VAPI API GET at ~14:55 PT) — prompt deploy may need retry
-
-Open threads to drive next:
-1. #20294 [deploying] — Verify VAPI prompt update took effect: curl GET assistant 6ee87bdb, check firstMessage changed to "Thanks for calling EMS University — how can I help?" If still old, re-run PATCH with full model config payload
-2. #20325 [deploying] — Fix Ronald/Katie Cartesia timeouts: check Cartesia dashboard for voice IDs, swap to working voices, re-run outbound call test
-3. #20323 [proposed] — Build permanent voice test harness on WOPR so future voice tests are one command
-4. #20081 [proposed] — A/B voice routing: branch on caller_number % 3 in twiml_inbound.php to assign assistant IDs
-5. #20046 [proposed] — Pre-call prospect detection in twiml_inbound.php
-6. #20321 [proposed] — Rule 298: self-validate rule 91 requirements before attempt_completion
-7. #20320 [proposed] — Rule 297: "test" means exercise the thing, not compare configs
-
-Reference IDs:
-- Tickets: Jalen Lynch (no ticket #)
-- Ideas filed: #20032, #20033, #20045 [deployed], #20046, #20047, #20049, #20050, #20051, #20052, #20081, #20279 [deployed], #20289 [deployed], #20294 [deploying], #20296, #20320, #20321, #20322, #20323, #20325 [deploying]
-- Files touched: /var/www/emtskills/api/telephony/twiml_inbound.php (line 55), /tmp/vapi_deploy_prompt.php, /tmp/vapi_test_voices.php
-- VAPI assistants: Bella_INBOUND 6ee87bdb (active), Bella_PROD 0e485e34, Ronald 80f2341e (timeout), Katie 5b4b7b90 (timeout), Eric d7dc496e (401-deleted)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785399211024` — 7/30/2026, 3:54:40 PM PT — 966 turns
-
-**Original task:**
-
-```
-#Julia/Claudia
-
-——[COPY]——
-# COPY WINDOW — Julia + Claudia CX7 TP=2 gpt-oss-120b recovery (idea #20042)
-
-Pick up idea #20042 [proposed] — restore julia-120b TP=2 to the pool.
-
-## VERIFIED STATE (live-probed 2026-07-30 01:01 PT — do NOT re-derive, but DO re-confirm before acting)
-
-- Julia head: spark-6ae6, LAN 192.168.1.190, WireGuard 10.100.0.15, SSH via
-  `ssh -p 2205 rubenmajor@127.0.0.1` from WOPR.
-- Claudia worker: spark-6d51, LAN 192.168.1.194, WireGuard 10.100.0.16, SSH via
-  `ssh -p 2206 rubenmajor@127.0.0.1` from WOPR.
-- Julia has a LIVE Ray cluster (gcs_server PID ~1394125, session
-  
-```
-
-**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11781, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12314, #12335, #12403, #1241, #12459, #12463, #12477, #12506, #12584, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #12716, #12824, #12872, #12878, #12900, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16163, #16265, #16304, #16417, #16448, #16449, #16584, #16589, #16590, #16602, #16604, #16625, #16646, #16648, #16674, #16676, #16680, #16715, #16716, #16717, #16844, #16863, #17078, #17145, #17202, #17203, #17205, #17300, #17307, #17430, #1765, #17673, #1781, #1807, #18312, #18326, #18670, #18671, #19338, #19585, #1967, #19686, #1998, #20042 [proposed], #20108, #20172 [proposed], #20181 [proposed], #20248 [proposed], #20285 [proposed], #2071, #2079, #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
-
-**Last PICKUP PROMPT:**
-
-```
-oss-120b, 60 tok/s)
-</preview>
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #Julia/Claudia — restore julia-120b TP=2 (idea #20042 [proposed]) — now producing RCA and registry fix, remaining work: vLLM TP=2 launch if needed.
-
-Where we left off (verified 2026-07-30 15:53 PT):
-- Julia head spark-6ae6, Claudia spark-6d51 — BOTH LIVE, Ray cluster healthy
-- GLM Hex ring is Pompeii-50c0↔Marcus-63ce↔Tiberius-e9e0↔Cesar-3b41↔Cato-2aa8↔Augustus-e3b2↔Pompeii (julia NOT in ring)
-- Registry fixed: stale "TP=2 EVICTED for GLM ring" claim nuked and replaced with corrected topology
-- Still need: vLLM TP=2 model serving restart if actually down (user says "another window shows Julia/Claudia serving fine" — confirm)
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #20042 [proposed] — Confirm julia-120b vLLM is serving: `curl http://127.0.0.1:11513/v1/models` from Mac; if down, clean Ray and launch with correct env (NCCL_IB_DISABLE=0 + LD_PRELOAD)
-2. #20042 [proposed] — After vLLM serves: verify `frankenstein_host_probe` shows decode_live=true for julia-120b
-3. #20042 [proposed] — Reconcile idea #20042 when vLLM is confirmed serving
-
-Reference IDs:
-- Ticket: #Julia/Claudia
-- Ideas filed: #20042 [proposed]
-- Files touched: /etc/litellm/frankenstein_registry.yaml (registry note fixed), /home/rubenmajor/julia_unified_tp2.sh (script exists but has VLLM_HOST_IP mismatch issue)
-- GLM ring topology source: user Ruben (this conversation)
-- Stale origin per rule 297: LLM inference mistake on 2026-07-24 — spark-6ae6 confused with spark-e3b2 via hostname pattern collision
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 
@@ -5111,45 +5122,5 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1785196068848` — 7/27/2026, 5:25:13 PM PT — 50 turns
-
-**Original task:**
-
-```
-https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students 
-
-for some reason exec admin lost access. Give it backa nd also ensure Admin, IT ADmin as well as Program Directors
-```
-
-**Ideas referenced:** #0056, #055160, #15887, #15999, #16000, #16015, #16016, #16312, #17665, #18587, #18657, #198754, #212529, #3109, #3122, #495057, #5387, #842029, #9191, #9313
-
-**Last PICKUP PROMPT:**
-
-```
- files deployed (DB-only fix).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task (pd_80_percent_students access fix: restored ExecAdmin/ITAdmin/PD to the report).
-
-Where we left off (verified 2026-07-27 16:50 PT):
-- DB row admin_portal.report_access_control id 21532 now has allowed_roles = ["MasterAdmin","ExecAdmin","ITAdmin","Admin","PD"]
-- Registry default at /var/www/emtskills/lib/report_registry.php line 12872 matches the DB row
-- Report is accessible at https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students
-- HANDOFF_NOTES.md updated with the fix summary
-
-Open threads to drive next:
-(no open threads, fix is complete; if access issues persist for any role, check the canAccessReportFromRegistry chain which reads the DB cache)
-
-Reference IDs:
-- DB row: report_access_control id 21532
-- Files touched: none (DB-only fix)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```

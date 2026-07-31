@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/31/2026, 3:55:28 AM PT | window: last 72h | 118 tasks | index total 341 (parsed 6, cached 335)
+Generated: 7/31/2026, 7:06:19 AM PT | window: last 72h | 118 tasks | index total 341 (parsed 0, cached 341)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785463237084` | 7/31/2026, 3:45:55 AM | 171 | 750KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
+| `1785463237084` | 7/31/2026, 4:15:04 AM | 182 | 766KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
 | `1785295028411` | 7/31/2026, 3:45:07 AM | 1838 | 9684KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
 | `1785483774534` | 7/31/2026, 3:44:47 AM | 72 | 213KB | Play frankenstein doctor of executor for the next 60 minutes (use timestamps) and make sur |
 | `1785360672171` | 7/31/2026, 1:49:48 AM | 928 | 5304KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
@@ -133,7 +133,7 @@ Generated: 7/31/2026, 3:55:28 AM PT | window: last 72h | 118 tasks | index total
 
 ## Per-window detail
 
-### `1785463237084` — 7/31/2026, 3:45:55 AM PT — 171 turns
+### `1785463237084` — 7/31/2026, 4:15:04 AM PT — 182 turns
 
 **Original task:**
 
@@ -148,29 +148,34 @@ Odd that it's not there next to the 4/ 13 open complaint. Anyway yeah that needs
 **Last PICKUP PROMPT:**
 
 ```
--regulator strategy reference.
+mental_Response_2026-05-29.pdf
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — AZDHS July 2026 NOI: Finalize + Send Consolidated Response (DUE 7/31).
+Pick up task — AZDHS July 2026 NOI: Finalize + Send Consolidated Response (DUE TODAY 7/31).
 
-Where we left off (verified 2026-07-30 21:19 PT):
-- Investigation #17 (azdhs-noi-2026-07-13) populated in DB with 3 response rounds (#133 NOI received, #134 extension sent, #135 draft proposal)
-- Response proposal staged at /var/www/emtskills/uploads/compliance/july2026_noi/RESPONSE_PROPOSAL_20260713.body.md
-- Extension request at /var/www/emtskills/uploads/compliance/july2026_noi/EXTENSION_REQUEST_20260714.txt
+Where we left off (verified 2026-07-31 04:14 PT):
+- Investigation #17 (azdhs-noi-2026-07-13) fully populated in DB: 1 compliance_investigations row + 3 response rounds (#133 received, #134 extension sent, #135 draft proposal)
+- R2 PDF formatting fixed (letter size + emsulogo5.png injected; matches R1 aesthetics)
+- Response proposal: /var/www/emtskills/uploads/compliance/july2026_noi/RESPONSE_PROPOSAL_20260713.body.md
+- Extension request: /var/www/emtskills/uploads/compliance/july2026_noi/EXTENSION_REQUEST_20260714.txt
 - Tracker updated: /var/www/emtskills/routes/_view_azdhs_noi_response_tracker.php (deadline 7/31, EXTENDED badge)
-- Azure compliance dashboard: institutional_compliance.php?tab=investigations&entity=azdhs shows both April (id=1, 10 rounds) and July (id=17, 3 rounds) investigations
-- All 15 Postures + 13 Anti-patterns per .clinerules/08 applied in draft
+- Compliance dashboard: institutional_compliance.php?tab=investigations&entity=azdhs shows both April (#1, 10 rounds) and July (#17, 3 rounds)
 
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #20393 [approved] — 5 remaining items before filing: (a) DB verify Ivan Vasquez 25226W-34, Desiree Nettles, Reid Brenza, Benjamin Eckstein Course 26211FT — completion dates, NREMT ATT status, contact logs from moodle_c_live; (b) Confirm EMS-26-0501 Alpine Fire District complaint concerns Northland Pioneer College students (not EMSU) — if confirmed, that packet collapses to 1-paragraph wrong-institution response; (c) Reconcile TKT-12390 Anna Vasquez escalation with EMS-26-0493; (d) Ruben final legal review + signature; (e) Transmit to Lance Bevins (email + certified mail) per posture doctrine
+Open threads to drive next:
+1. #20393 [approved] [P0] — 5 items to TRANSMIT by end of day 7/31:
+   (a) DB verify named students: Ivan Vasquez 25226W-34, Desiree Nettles, Reid Brenza, Benjamin Eckstein Course 26211FT — completion dates, NREMT ATT, contact logs from moodle_c_live
+   (b) Confirm EMS-26-0501 Alpine Fire District = Northland Pioneer College, NOT EMSU. If confirmed → 1-paragraph "wrong institution" response
+   (c) Reconcile TKT-12390 Anna Vasquez escalation with EMS-26-0493
+   (d) Ruben final legal review + signature
+   (e) TRANSMIT to Lance Bevins (email + certified mail) per .clinerules/08
 
 Reference IDs:
-- Investigations: #1 (April 2026), #17 (July 2026)
+- Investigation: #17 (azdhs-noi-2026-07-13), #1 (azdhs-noi-2026-04-13)
 - Response rounds: #133 (received), #134 (sent extension), #135 (draft proposal)
-- Ideas filed: #20393
-- Files touched: /var/www/emtskills/personnel/institutional_compliance.php, /var/www/emtskills/personnel/lib/InvestigationsHydrator.php, /var/www/emtskills/routes/_view_azdhs_noi_response_tracker.php, /var/www/emtskills/uploads/compliance/july2026_noi/RESPONSE_PROPOSAL_20260713.body.md, /var/www/emtskills/uploads/compliance/july2026_noi/EXTENSION_REQUEST_20260714.txt
+- Idea filed: #20393 (orchestrator_ideas)
+- Files touched: institutional_compliance.php, InvestigationsHydrator.php, _view_azdhs_noi_response_tracker.php, RESPOSE_PROPOSAL_20260713.body.md, EXTENSION_REQUEST_20260714.txt, AZ_NOI_Round2_Supplemental_Response_2026-05-29.html + .pdf
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════

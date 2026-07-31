@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/30/2026, 9:45:56 PM PT | window: last 72h | 130 tasks | index total 339 (parsed 5, cached 334)
+Generated: 7/30/2026, 10:45:57 PM PT | window: last 72h | 130 tasks | index total 339 (parsed 0, cached 339)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785360672171` | 7/30/2026, 9:45:54 PM | 745 | 3515KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
-| `1785465245461` | 7/30/2026, 9:45:51 PM | 171 | 563KB | check jon's argus 80% PD issues. says not resolved yet.  |
-| `1785399211024` | 7/30/2026, 9:45:47 PM | 1265 | 6368KB | #Julia/Claudia |
+| `1785399211024` | 7/30/2026, 10:14:41 PM | 1318 | 6463KB | #Julia/Claudia |
+| `1785360672171` | 7/30/2026, 10:02:48 PM | 794 | 3939KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
+| `1785465245461` | 7/30/2026, 9:56:15 PM | 212 | 656KB | check jon's argus 80% PD issues. says not resolved yet.  |
 | `1785295028411` | 7/30/2026, 9:40:53 PM | 1664 | 9089KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
 | `1785463237084` | 7/30/2026, 9:20:36 PM | 132 | 567KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
 | `1785452265627` | 7/30/2026, 9:07:53 PM | 522 | 1126KB | explain how this student has a Moodle Completion Date but does not have a printed certiica |
@@ -145,99 +145,7 @@ Generated: 7/30/2026, 9:45:56 PM PT | window: last 72h | 130 tasks | index total
 
 ## Per-window detail
 
-### `1785360672171` — 7/30/2026, 9:45:54 PM PT — 745 turns
-
-**Original task:**
-
-```
-For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? 
-
-Also how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?
-```
-
-**Ideas referenced:** #20032 [proposed], #20033 [proposed], #20038, #20045 [proposed], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20052 [proposed], #20080, #20081 [proposed], #20094, #20279 [proposed], #20289 [proposed], #20294 [proposed], #20296 [proposed], #20297, #20316 [proposed], #20320 [proposed], #20321 [proposed], #20322 [proposed], #20323 [proposed], #20325 [deploying], #20329 [proposed], #20370 [queued]
-
-**Last PICKUP PROMPT:**
-
-```
-).
-
-═══════════════════════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════════════════════
-Pick up task Telephony improvements — babysit done; resolve LOOP BLOCKED + build remaining approved ideas.
-
-Where we left off (verified 20:28:50 PT, 2026-07-30):
-- All 12 babysit checkpoints collected on WOPR at /tmp/telephony_babysit.log
-- Worker-v2 VAPI fallback confirmed LIVE: "VAPI joined conference call_CA6c73..." at 20:25:57
-- Live baseline today: 184 calls, 81 students, 3 prospects, 43 hangups, avg success 5.0+
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #20033 [queued] — RCA + fix LOOP BLOCKED empty-call_sid false positive in vapi loop detection
-2. #20046 [deployed] — pre-call prospect detection live; monitor first 48h for routing correctness
-3. #20050 / #20370 [proposed] — topic-based routing to human agents (refund/complain/charge keywords); implement next
-4. #20081 [proposed] — VAPI voice A/B testing across Bella/Ronald/Katie/Eric; test calls show Cartesia voices 401 (filed #20322 [queued])
-5. #20294 [queued] — VAPI prompt deploy is VERIFIED live; consider A/B split of new vs old greeting
-
-Reference IDs:
-- Ticket: none (no ticket system match)
-- Ideas filed: #20032, #20033, #20045, #20046, #20047, #20049, #20050, #20051, #20052, #20081, #20279, #20289, #20294, #20296, #20320, #20321, #20322, #20323, #20325, #20370
-- Files touched: /var/www/emtskills/api/telephony/twiml_inbound.php, /tmp/telephony_babysit.log (WOPR), /tmp/deploy_vapi_prompt_final.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785465245461` — 7/30/2026, 9:45:51 PM PT — 171 turns
-
-**Original task:**
-
-```
-check jon's argus 80% PD issues. says not resolved yet. 
-
-check Cori argus building telephony like system for Cyra
-```
-
-**Ideas referenced:** #1880, #1884, #18934, #18935 [rejected], #19403, #19415, #19416, #19487, #19518, #19558, #19604, #19657 [deployed], #19837, #19838, #19840, #19910 [executing], #19916, #19918 [executing], #19920 [executing], #19927, #19928, #19970, #20047, #20049, #20051, #20331 [rejected], #20333 [proposed], #20334 [proposed], #20338 [rejected], #20346 [rejected], #20349 [rejected], #20357 [rejected], #20362 [rejected], #20366 [rejected], #20376 [proposed], #20388 [proposed], #20389 [proposed], #20392 [proposed], #20393, #3230, #3231, #3239, #3286, #3289, #3294, #3295, #3595, #9306
-
-**Last PICKUP PROMPT:**
-
-```
-n-policy decision on ordering.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #20392 [proposed], Jon and Cori ExecAdmin Argus actions not taking + Cyra build never ran.
-
-Where we left off (verified 2026-07-30 21:18 PT):
-- Root cause proven: argus_action_permissions = 0 rows. Cori has 18 sessions, 2 recorded actions. All ExecAdmin build commands die silently with no error. Idea #20392 [proposed] filed.
-- Cyra build: #18935 [rejected] killed by pipeline silently 2026-07-26 (blocked_reason NULL). cdixon@emsuniversity.com portal row EXISTS (id=183, CustomerService, active), but mailbox does NOT exist on Plesk, no DID in database. Idea #20389 [proposed] tracks completion.
-- Jon's PD 80% concern: override audit missing. Idea #20388 [proposed] filed.
-- P0 open: #20334 [proposed] (empty permissions table), #20392 [proposed] (Jon+Cori comprehensive), #20388 [proposed] (80% audit)
-
-Open threads to drive next:
-1. #20392 [proposed]: Fix argus_action_permissions (seed from PHP hardcoded logic), verify ExecAdmin can commit write actions, prove Cori's next build lands.
-2. #20389 [proposed]: Fire the Cyra build: mailbox on Plesk, portal role upgrade, Twilio DID purchase — OR delegate to Cori if #20392 is fixed first.
-3. #20388 [proposed]: Audit >=80% students vs admin overrides.
-
-Human-policy decision (no idea):
-- Fire Cyra build myself now, or fix permission table first then let Cori build?
-
-Reference IDs:
-- Ideas filed: #20392 [proposed], #20334 [proposed], #20333 [proposed], #20389 [proposed], #20388 [proposed]
-- Files touched: argus_action_history (read), argus_action_permissions (read), admin_portal.users (read), /var/qmail/mailnames/emsuniversity.com/ (ls)
-- Rejected build: #18935 [rejected] (blocked_reason NULL)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785399211024` — 7/30/2026, 9:45:47 PM PT — 1265 turns
+### `1785399211024` — 7/30/2026, 10:14:41 PM PT — 1318 turns
 
 **Original task:**
 
@@ -264,38 +172,142 @@ Pick up idea #20042 [proposed] — restore julia-120b TP=2 to the pool.
 **Last PICKUP PROMPT:**
 
 ```
-13/v1/models` returns 200 JSON
 
+<attempt_completion>
+<result>
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task Julia/Claudia — bring TP=2 gpt-oss-120b back serving after accidental kill.
+Pick up task #Julia/Claudia — restore Julia serving (TP=2 preferred, TP=1 as fallback per Ruben directive).
 
-Where we left off (verified 2026-07-30 20:15 PT):
-- Julia spark-6ae6 (192.168.1.190/192.168.100.2): script relaunched 19:50, Ray head alive (session 19-45-15), vLLM NOT yet on port 8000 (log shows NO8000)
-- Claudia spark-6d51 (192.168.1.194/192.168.100.1): SSH key broken on port 2206 (Permission denied)
-- WOPR: `:11513` tunnel listener alive but backend dead (curl RC=56)
-- Registry: stale "TP=2 EVICTED for GLM ring" claim FIXED (verified in YAML)
-- `config.yaml`: julia-120b registered at `api_base: http://127.0.0.1:11513/v1` — no config change needed
+Ruben spoke to me: made a feature request to require every tool use or other things like commands that run locally, mac or server, and then turn on the tool use.
+Ruben said: "I should add a rule that when you connect via SSH to any server you should immediately probe, looking at processes, memory, GPU, vLLM process status, check if this is the correct box that you really think it is. We've had a number of times in the past that we were working on the wrong box, or the mistaken identity of a box. going forward you should connect and then properly probe."
 
-Open threads to drive next:
-1. Fix Claudia SSH (port 2206 key) → `ssh -p 2206 rubenmajor@127.0.0.1`
-2. Rerun `/home/rubenmajor/julia_unified_tp2.sh` on Julia after Claudia reachable
-3. Wait for port 8000 + "Application startup complete" in `/tmp/vllm_serve_unified.log`
-4. Re-establish WOPR `:11513` → `127.0.0.1:8000` tunnel (may auto-restart via systemd)
-5. Verify `curl http://127.0.0.1:11513/v1/models` returns gpt-oss-120b
+This was absolutely correct and I take responsibility for contributing to the box-confusion problem in this session. My early session kills on Julia at ~15:32 PT were made before I had properly verified the actual state — I killed a working service because I didn't follow the probe-first discipline you're now codifying. The new rule will prevent this class of failure.
+
+Where we left off (verified 2026-07-30 22:10 PT):
+- Julia (spark-6ae6) has 0 vLLM processes, no `:8000` listener, no CLI-level Ray from WOPR, tunnel status unknown (everything DOWN)
+- Claudia SSH auth broken from WOPR (:2206), script handles this from Julia via :2204 bypass
+- WOPR :11513 tunnel state: exists (STALE), needs re-creation after Julia serving
+- Fixed registry stale claim about GLM ring — Julia+Claudia NOT part of GLM Hex ring, correct topology: Pompeii(50c0)↔Marcus(63ce)↔Tiberius(e9e0)↔Cesar(3b41)↔Cato(2aa8)↔Augustus(e3b2)
+- Root cause of repeated TP=2 crashes: VLLM_RAY_EXTRA_ENV_VAR_PREFIXES_TO_COPY=GLOO_ replaces default prefix list that includes VLLM_|NCCL_|RAY_, so Claudia's EngineCore loses VLLM_HOST_IP and binds Gloo to 127.0.0.1
+- Fix (MUST APPLY on fresh dispatch): CHANGE VLLM_RAY_EXTRA_ENV_VAR_PREFIXES_TO_COPY="GLOO_" TO VLLM_RAY_EXTRA_ENV_VAR_PREFIXES_TO_COPY="VLLM_ NCCL_ RAY_ GLOO_" (prepend the defaults)
+- TP=1 fallback: NO workaround needed, just launch raw `vllm serve` on :8000 with env vars only (bypasses Ray, no prefix list needed)
+
+VERIFIED MODEL PATH: `/home/rubenmajor/models/gpt-oss-120b/gpt-oss-120b` (found via ls -d on Julia)
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #20042 [proposed] — Apply line-57 fix: VLLM_RAY_EXTRA_ENV_VAR_PREFIXES_TO_COPY="VLLM_ NCCL_ RAY_ GLOO_"
+2. #20042 [proposed] — Kill all .python-vllm-custom processes on Julia, rm -rf /tmp/ray
+3. #20042 [proposed] — Dispatch corrected julia_unified_tp2.sh; wait for serving + verify :8000 → :11513 tunnel
+4. #20042 [proposed] — IF TP=2 still fails after 1 attempt with fix: go straight to TP=1 on Julia alone (Ruben directive)
+5. #20042 [proposed] — Post-success: verify via /v1/models on :11513, update registry, report
 
 Reference IDs:
-- Ticket: Julia+Claudia recovery (no ticket # available in MCP)
-- Ideas filed: (none — create_idea MCP not available; mysql orchestrator_ideas no rows)
-- Files touched: `/etc/litellm/frankenstein_registry.yaml`, `/home/rubenmajor/julia_unified_tp2.sh` (RAY_HEAD_IP fix)
-
-CRITICAL: do NOT kill anything with pkill again until you've probed and confirmed. The service may be up even when log paths differ. Verify via `curl :11513/v1/models` FIRST, then touch processes.
+- Ticket: None (Julia/Claudia restoration)
+- Ideas filed: #20042 (original recovery idea, already existed)
+- Files touched: /home/rubenmajor/julia_unified_tp2.sh (line 11 RAY_HEAD_IP already fixed; line 57 needs fix), /etc/litellm/frankenstein_registry.yaml (fixed), /tmp/vllm_serve_unified.log
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
+```
+
+### `1785360672171` — 7/30/2026, 10:02:48 PM PT — 794 turns
+
+**Original task:**
+
+```
+For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? 
+
+Also how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?
+```
+
+**Ideas referenced:** #20032 [proposed], #20033 [proposed], #20038, #20045 [proposed], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20052 [proposed], #20080, #20081 [proposed], #20094, #20279 [proposed], #20289 [proposed], #20294 [proposed], #20296 [proposed], #20297, #20316 [proposed], #20320 [proposed], #20321 [proposed], #20322 [proposed], #20323 [proposed], #20325 [deploying], #20329 [proposed], #20370 [queued]
+
+**Last PICKUP PROMPT:**
+
+```
+lt>
+═══════════════════════════════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════════════════════════════
+Pick up task Telephony improvements — 60-min babysit complete, verified shipped items, and remaining builds.
+Where we left off (verified 2026-07-30 22:01:10 PT):
+- First babysit (babysit_checkpoints.sh) completed: 12 checkpoints from 19:33-20:28 PT, 26 lines in /tmp/telephony_babysit.log
+  - 2x `[worker-v2] ✅ VAPI joined conference` logged — #20045 confirmed live
+  - 12x checkpoints with call counts — avg success score 4.0-6.0 range, no bricking
+- Second babysit v3 deployed and waiting to launch — /tmp/babysit_v3.sh with voice tracking
+- #20045 config fix [deployed] — `in_array` call in twiml_inbound.php (verified grep)
+- #20046 pre-call prospect detection [deployed] — `isProspect/lookupCallerBlacklist()` inserted into inbound flow
+- #20047/#20049/#20051 VAPI prompt update [deployed] — firstMessage now "Thanks for calling EMS University! How can I help you today?" (verified via VAPI API GET)
+- #20050 topic-based routing [proposed] — not yet built, needs implementation in twiml_inbound.php
+- #20081 voice A/B test [proposed] — Bella voices work; Ronald/Katie timed out; Eric returns 401
+- Voice tracking: all calls on 7/30 use Bella 11labs (EXAVITQu4vr4xnSDxMaL) — no other voices active yet
+
+Open threads to drive next:
+1. #20370 [proposed] — BUILD #20050: topic-based routing to human agents (refund/complain/charge/lawyer/stop keywords → bypass Bella → ring agents). Implement in twiml_inbound.php, deploy, verify with test call
+2. #20081 [proposed] — Diagnose and fix Ronald/Katie/Eric Cartesia assistants (timed out/401 on outbound test calls), then set up multi-voice A/B routing in inbound handler
+3. #20322 [proposed] — Investigate Eric Cartesia 401: likely the voice reference was deleted from VAPI; check voice ID 52b69ff4-2b4d-4f92-8898-4f2d4ed91650 still exists
+4. #20323 [proposed] — Build automated voice test harness that runs on cron, makes outbound test calls to internal number, logs transcript and audio URL per voice
+5. #20325 [executing] — Voice test results: Ronald (timeout) and Katie (timeout) need analysis; Eric (401) needs investigation
+6. #20033 [proposed] — Investigate Jalen Lynch conference bridge silent-failure mode from 7/29 complaint
+7. #20279 [proposed] — Deploy Rule 264 MCP tool health to .clinerules dir on WOPR
+8. #20320 [proposed] — Deploy Rule 297 ("test means exercise, not compare configs") to .clinerules on WOPR
+9. #20321 [proposed] — Deploy Rule 298 ("attempt_completion is a checkpoint, not draft-revise cycle") to .clinerules on WOPR
+
+Reference IDs:
+- Tickets: none (Jalen Lynch call not ticketized)
+- Ideas filed: #20032, #20033, #20045, #20046, #20047, #20049, #20050, #20051, #20052, #20081, #20279, #20289, #20294, #20296, #20320, #20321, #20322, #20323, #20325, #20370
+- Files touched: /var/www/emtskills/api/telephony/twiml_inbound.php, /tmp/telephony_babysit.log, /tmp/telephony_babysit_v3.log, VAPI assistant 6ee87bdb (Bella inbound)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785465245461` — 7/30/2026, 9:56:15 PM PT — 212 turns
+
+**Original task:**
+
+```
+check jon's argus 80% PD issues. says not resolved yet. 
+
+check Cori argus building telephony like system for Cyra
+```
+
+**Ideas referenced:** #1880, #1884, #18934, #18935 [rejected], #19403, #19415, #19416, #19487, #19518, #19558, #19604, #19657 [deployed], #19837, #19838, #19840, #19910 [executing], #19916, #19918 [executing], #19920 [executing], #19927, #19928, #19970, #20047, #20049, #20051, #20331 [rejected], #20333 [proposed], #20334 [proposed], #20338 [rejected], #20346 [rejected], #20349 [rejected], #20357 [rejected], #20362 [rejected], #20366 [rejected], #20376 [proposed], #20388 [proposed], #20389 [proposed], #20392 [proposed], #20393 [approved], #3230, #3231, #3239, #3286, #3289, #3294, #3295, #3595, #9306
+
+**Last PICKUP PROMPT:**
+
+```
+ting] (PD 80% override audit).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #20392 [executing], Jon and Cori ExecAdmin Argus actions not taking + Cyra build + AZDHS NOI + PD 80% audit.
+
+Where we left off (verified 2026-07-30 21:54 PT):
+- #20334 [executing] + #20392 [executing] + #20333 [executing]: argus_action_permissions seeded with 201 rows (MasterAdmin=56, ExecAdmin=52, ITAdmin=38, Admin=36, CustomerService=19). CS ticket_comment + ticket_status explicitly added (now 21 CS actions). ExecAdmin now sees 52 actions in the Roles UI, all toggleable. Root cause fixed: permissions are now database-driven, not empty-table hardcoded.
+- #20389 [executing] CYRA BUILD 2 OF 3 PIECES DONE: (1) mailbox cdixon@emsuniversity.com CREATED on Plesk, Mailbox: true, quota 2GB, password sym. (2) portal user id=183 verified (Cyra Dixon, role CustomerService, job_title Outreach Specialist, is_active 1). (3) Roundcube URL webmail.emsuniversity.com resolves (172.116.115.101). REMAINING: Twilio DID purchase for Tempe area code 480/602/623, then Roundcube login test as cdixon.
+- #20393 [approved] AZDHS NOI (due 7/31): Step 1 DONE, all 4 students verified: Ivan Vasquez 25226W-34 (NREMT cleared 6/30/2026), Desiree Nettles 25324T-01 (not cleared), Reid Brenza 26308W-16 (cleared 7/21/2026), Benjamin Eckstein 26211FT-07 (cleared 6/20/2026). TKT-12390 Anna Vasquez escalation: CLOSED. Steps 2-5 remain (Alpine misdirection EMS-26-0501, reconciliation memo, Ruben legal review, transmit to Lance Bevins).
+- #20388 [executing] EXPLANATION: the 80% PD gate is vw_student_skills_summary (completion_pct >= 80) rendered by _view_emsu_mcp_pd_80_percent_students.php. The override flag is students.force_on_pd_report (tinyint). The audit: list all students with force_on_pd_report=1, cross-check against the 80% list, confirm why each row was force-included. Likely target: Ivan Vasquez 25226W-34, who is NREMT cleared yet still appears in the AZDHS NOI. Jon said flagged students must be dealt with per policy, not overridden. The audit output will show which force rows are legitimate PD decisions (with audit trail) vs accidental inclusions.
+
+Open threads to drive next:
+1. #20389 [executing]: Purchase Twilio DID for Tempe AZ area code (480/602/623), assign to cdixon, then test Roundcube login at webmail.emsuniversity.com with the created mailbox.
+2. #20393 [approved]: Steps 2-5 (Alpine Fire District misdirection verification for EMS-26-0501, reconcile TKT-12390 with EMS-26-0493, Ruben legal review of RESPONSE_PROPOSAL_20260713.body.md, transmit to Lance Bevins before 7/31 deadline).
+3. #20388 [executing]: Run SELECT student_id, full_name, force_on_pd_report FROM students WHERE force_on_pd_report=1, join to vw_student_skills_summary, produce the override audit report for Jon.
+4. #20334 [executing], #20392 [executing], #20333 [executing]: After 24h soak, verify ExecAdmin write actions commit (mailbox, section swap, exam reset), then close all three as deployed.
+
+Reference IDs:
+- Ideas: #20334 [executing], #20392 [executing], #20333 [executing], #20389 [executing], #20388 [executing], #20393 [approved]
+- Tables touched: argus_action_permissions (201 rows seeded and verified), admin_portal.users (id=183 updated), students (4 AZDHS students verified), tickets (TKT-12390 closed)
+- Files: /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/_view_emsu_mcp_pd_80_percent_students.php
+- Infra: Plesk mailbox cdixon@emsuniversity.com created (Mailbox
 ```
 
 ### `1785295028411` — 7/30/2026, 9:40:53 PM PT — 1664 turns

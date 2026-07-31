@@ -6,17 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/30/2026, 7:45:43 PM PT | window: last 72h | 134 tasks | index total 339 (parsed 6, cached 333)
+Generated: 7/30/2026, 9:45:56 PM PT | window: last 72h | 130 tasks | index total 339 (parsed 5, cached 334)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785465245461` | 7/30/2026, 7:45:37 PM | 31 | 163KB | check jon's argus 80% PD issues. says not resolved yet.  |
-| `1785399211024` | 7/30/2026, 7:45:30 PM | 1218 | 6220KB | #Julia/Claudia |
-| `1785463237084` | 7/30/2026, 7:45:26 PM | 73 | 403KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
-| `1785360672171` | 7/30/2026, 7:36:01 PM | 712 | 3210KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
-| `1785295028411` | 7/30/2026, 7:31:45 PM | 1582 | 8285KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
+| `1785360672171` | 7/30/2026, 9:45:54 PM | 745 | 3515KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
+| `1785465245461` | 7/30/2026, 9:45:51 PM | 171 | 563KB | check jon's argus 80% PD issues. says not resolved yet.  |
+| `1785399211024` | 7/30/2026, 9:45:47 PM | 1265 | 6368KB | #Julia/Claudia |
+| `1785295028411` | 7/30/2026, 9:40:53 PM | 1664 | 9089KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
+| `1785463237084` | 7/30/2026, 9:20:36 PM | 132 | 567KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
+| `1785452265627` | 7/30/2026, 9:07:53 PM | 522 | 1126KB | explain how this student has a Moodle Completion Date but does not have a printed certiica |
 | `1785456423435` | 7/30/2026, 7:28:17 PM | 300 | 1067KB | See Vicky's chats regarding EMT and Refresher schedules in Chat 55 and repair |
-| `1785452265627` | 7/30/2026, 6:54:52 PM | 484 | 1046KB | explain how this student has a Moodle Completion Date but does not have a printed certiica |
 | `1785435661707` | 7/30/2026, 6:38:33 PM | 1386 | 4874KB | There's grievances getting lost because of all these categories in here. https://emsuniver |
 | `1785441507395` | 7/30/2026, 4:05:55 PM | 152 | 305KB | Argus failure? Cites technical issues but doesn't not correct them with appropriate CFA lo |
 | `1785363426908` | 7/30/2026, 3:51:17 PM | 706 | 2066KB | #EMT Webforms/Payments |
@@ -140,16 +140,57 @@ Generated: 7/30/2026, 7:45:43 PM PT | window: last 72h | 134 tasks | index total
 | `1785194061900` | 7/27/2026, 11:39:38 PM | 232 | 459KB | Jon connected the 2 mac minis that were on his home network to the Tempe UniFi UDM.  |
 | `1785218810237` | 7/27/2026, 11:29:42 PM | 80 | 239KB | My AVP will not connect to this Mac now after an update. I created a program callsed Fix A |
 | `1785218791688` | 7/27/2026, 11:06:31 PM | 1 | 2KB | My AVP will not connect to this Mac now after an update. I created a program callsed Fix A |
-| `1785180643044` | 7/27/2026, 9:37:32 PM | 693 | 1244KB | ## 1 — #PAY · P0 money · RUN FIRST |
-| `1785180665712` | 7/27/2026, 9:07:57 PM | 336 | 1041KB | ## 2 — #EXEC · P0 · executor is failing builds silently |
-| `1785191995112` | 7/27/2026, 9:04:36 PM | 796 | 2848KB | Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/e |
-| `1785209942258` | 7/27/2026, 8:46:39 PM | 46 | 137KB | Do not close my active cline windows, but grey windows keep coming in for some reason here |
 
 ---
 
 ## Per-window detail
 
-### `1785465245461` — 7/30/2026, 7:45:37 PM PT — 31 turns
+### `1785360672171` — 7/30/2026, 9:45:54 PM PT — 745 turns
+
+**Original task:**
+
+```
+For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? 
+
+Also how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?
+```
+
+**Ideas referenced:** #20032 [proposed], #20033 [proposed], #20038, #20045 [proposed], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20052 [proposed], #20080, #20081 [proposed], #20094, #20279 [proposed], #20289 [proposed], #20294 [proposed], #20296 [proposed], #20297, #20316 [proposed], #20320 [proposed], #20321 [proposed], #20322 [proposed], #20323 [proposed], #20325 [deploying], #20329 [proposed], #20370 [queued]
+
+**Last PICKUP PROMPT:**
+
+```
+).
+
+═══════════════════════════════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════════════════════════════
+Pick up task Telephony improvements — babysit done; resolve LOOP BLOCKED + build remaining approved ideas.
+
+Where we left off (verified 20:28:50 PT, 2026-07-30):
+- All 12 babysit checkpoints collected on WOPR at /tmp/telephony_babysit.log
+- Worker-v2 VAPI fallback confirmed LIVE: "VAPI joined conference call_CA6c73..." at 20:25:57
+- Live baseline today: 184 calls, 81 students, 3 prospects, 43 hangups, avg success 5.0+
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #20033 [queued] — RCA + fix LOOP BLOCKED empty-call_sid false positive in vapi loop detection
+2. #20046 [deployed] — pre-call prospect detection live; monitor first 48h for routing correctness
+3. #20050 / #20370 [proposed] — topic-based routing to human agents (refund/complain/charge keywords); implement next
+4. #20081 [proposed] — VAPI voice A/B testing across Bella/Ronald/Katie/Eric; test calls show Cartesia voices 401 (filed #20322 [queued])
+5. #20294 [queued] — VAPI prompt deploy is VERIFIED live; consider A/B split of new vs old greeting
+
+Reference IDs:
+- Ticket: none (no ticket system match)
+- Ideas filed: #20032, #20033, #20045, #20046, #20047, #20049, #20050, #20051, #20052, #20081, #20279, #20289, #20294, #20296, #20320, #20321, #20322, #20323, #20325, #20370
+- Files touched: /var/www/emtskills/api/telephony/twiml_inbound.php, /tmp/telephony_babysit.log (WOPR), /tmp/deploy_vapi_prompt_final.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785465245461` — 7/30/2026, 9:45:51 PM PT — 171 turns
 
 **Original task:**
 
@@ -159,11 +200,44 @@ check jon's argus 80% PD issues. says not resolved yet.
 check Cori argus building telephony like system for Cyra
 ```
 
-**Ideas referenced:** #19970, #20331 [rejected], #20338 [rejected], #20346 [rejected], #20349 [rejected], #20357 [rejected], #20362 [rejected], #20366 [rejected], #20376 [proposed], #3230, #3239, #3286, #3289, #3294, #3295, #9306
+**Ideas referenced:** #1880, #1884, #18934, #18935 [rejected], #19403, #19415, #19416, #19487, #19518, #19558, #19604, #19657 [deployed], #19837, #19838, #19840, #19910 [executing], #19916, #19918 [executing], #19920 [executing], #19927, #19928, #19970, #20047, #20049, #20051, #20331 [rejected], #20333 [proposed], #20334 [proposed], #20338 [rejected], #20346 [rejected], #20349 [rejected], #20357 [rejected], #20362 [rejected], #20366 [rejected], #20376 [proposed], #20388 [proposed], #20389 [proposed], #20392 [proposed], #20393, #3230, #3231, #3239, #3286, #3289, #3294, #3295, #3595, #9306
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1785399211024` — 7/30/2026, 7:45:30 PM PT — 1218 turns
+```
+n-policy decision on ordering.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #20392 [proposed], Jon and Cori ExecAdmin Argus actions not taking + Cyra build never ran.
+
+Where we left off (verified 2026-07-30 21:18 PT):
+- Root cause proven: argus_action_permissions = 0 rows. Cori has 18 sessions, 2 recorded actions. All ExecAdmin build commands die silently with no error. Idea #20392 [proposed] filed.
+- Cyra build: #18935 [rejected] killed by pipeline silently 2026-07-26 (blocked_reason NULL). cdixon@emsuniversity.com portal row EXISTS (id=183, CustomerService, active), but mailbox does NOT exist on Plesk, no DID in database. Idea #20389 [proposed] tracks completion.
+- Jon's PD 80% concern: override audit missing. Idea #20388 [proposed] filed.
+- P0 open: #20334 [proposed] (empty permissions table), #20392 [proposed] (Jon+Cori comprehensive), #20388 [proposed] (80% audit)
+
+Open threads to drive next:
+1. #20392 [proposed]: Fix argus_action_permissions (seed from PHP hardcoded logic), verify ExecAdmin can commit write actions, prove Cori's next build lands.
+2. #20389 [proposed]: Fire the Cyra build: mailbox on Plesk, portal role upgrade, Twilio DID purchase — OR delegate to Cori if #20392 is fixed first.
+3. #20388 [proposed]: Audit >=80% students vs admin overrides.
+
+Human-policy decision (no idea):
+- Fire Cyra build myself now, or fix permission table first then let Cori build?
+
+Reference IDs:
+- Ideas filed: #20392 [proposed], #20334 [proposed], #20333 [proposed], #20389 [proposed], #20388 [proposed]
+- Files touched: argus_action_history (read), argus_action_permissions (read), admin_portal.users (read), /var/qmail/mailnames/emsuniversity.com/ (ls)
+- Rejected build: #18935 [rejected] (blocked_reason NULL)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785399211024` — 7/30/2026, 9:45:47 PM PT — 1265 turns
 
 **Original task:**
 
@@ -190,29 +264,33 @@ Pick up idea #20042 [proposed] — restore julia-120b TP=2 to the pool.
 **Last PICKUP PROMPT:**
 
 ```
+13/v1/models` returns 200 JSON
 
-<attempt_completion>
-<result>
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #Julia/Claudia — registry stale-claim fixed; GLM ring correction verified. No Julia/Claudia vLLM action needed per user confirmation.
+Pick up task Julia/Claudia — bring TP=2 gpt-oss-120b back serving after accidental kill.
 
-Where we left off (verified 2026-07-30 18:32 PT):
-- **Registry fix APPLIED and VERIFIED** — stale "TP=2 EVICTED for GLM ring rank-1 GPU (spark-6ae6 = GLM-ring augustus)" CLAIM NUKED. Replaced with correct GLM Hex ring topology: Pompeii(50c0)↔Marcus(63ce)↔Tiberius(e9e0)↔Cesar(3b41)↔Cato(2aa8)↔Augustus(e3b2)↔Pompeii. spark-e3b2.244 = augustus, NOT spark-6ae6.190 (julia). YAML valid after edit.
-- **RCA per rule 297**: Origin = 2026-07-24 hostname confusion. Julia (spark-6ae6, .190) and Augustus (spark-e3b2, .244) both have "spark-6a/e" prefix in their DN42 hostnames. A prior agent mis-mapped "Augustus GPU worker" to Julia's GB10. This mis-attribution was then written into the registry as "TP=2 EVICTED for GLM ring rank-1 GPU." Bug 1942 was referenced.
-- **Julia/Claudia serving status**: WOPR :11513 has an active sshd listener (PID 3271595). My MCP cursor-based curl probes returned RC=56 (partial connection, no response) — this is a KNOWN MCP PROXY ARTIFACT, not evidence of service death. User confirms via parallel window that Julia/Claudia IS SERVING FINE. No intervention needed.
-- **Claudia SSH auth**: WOPR→Claudia over port 2206 fails with publickey auth. This needs fixing for future maintenance but does NOT affect serving (Julia's vLLM talks to Claudia over RoCE 192.168.100.x, not SSH).
+Where we left off (verified 2026-07-30 20:15 PT):
+- Julia spark-6ae6 (192.168.1.190/192.168.100.2): script relaunched 19:50, Ray head alive (session 19-45-15), vLLM NOT yet on port 8000 (log shows NO8000)
+- Claudia spark-6d51 (192.168.1.194/192.168.100.1): SSH key broken on port 2206 (Permission denied)
+- WOPR: `:11513` tunnel listener alive but backend dead (curl RC=56)
+- Registry: stale "TP=2 EVICTED for GLM ring" claim FIXED (verified in YAML)
+- `config.yaml`: julia-120b registered at `api_base: http://127.0.0.1:11513/v1` — no config change needed
 
 Open threads to drive next:
-1. #20042 [proposed] — Julia+Claudia CX7 TP=2 gpt-oss-120b — WAITING: additional action per above
-2. #20449 [proposed] — Rule 297 stale-info-hunt — Closed: origin confirmed (2026-07-24 hostname confusion Julia/Augustus), stale claim nuked in registry 2026-07-30.
-3. #none_yet [proposed] — Fix Claudia SSH publickey auth (port 2206) so WOPR can manage Claudia worker in future recovery scenarios.
+1. Fix Claudia SSH (port 2206 key) → `ssh -p 2206 rubenmajor@127.0.0.1`
+2. Rerun `/home/rubenmajor/julia_unified_tp2.sh` on Julia after Claudia reachable
+3. Wait for port 8000 + "Application startup complete" in `/tmp/vllm_serve_unified.log`
+4. Re-establish WOPR `:11513` → `127.0.0.1:8000` tunnel (may auto-restart via systemd)
+5. Verify `curl http://127.0.0.1:11513/v1/models` returns gpt-oss-120b
 
 Reference IDs:
-- Ticket: none
-- Ideas filed: #20042, #20449
-- Files touched: /etc/litellm/frankenstein_registry.yaml (stale claim nuked via sudo python3, YAML validates)
+- Ticket: Julia+Claudia recovery (no ticket # available in MCP)
+- Ideas filed: (none — create_idea MCP not available; mysql orchestrator_ideas no rows)
+- Files touched: `/etc/litellm/frankenstein_registry.yaml`, `/home/rubenmajor/julia_unified_tp2.sh` (RAY_HEAD_IP fix)
+
+CRITICAL: do NOT kill anything with pkill again until you've probed and confirmed. The service may be up even when log paths differ. Verify via `curl :11513/v1/models` FIRST, then touch processes.
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -220,85 +298,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785463237084` — 7/30/2026, 7:45:26 PM PT — 73 turns
-
-**Original task:**
-
-```
-AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations that was due 7/28, now due 7/31. Can you populate that R2 that was supposed to be posted on the page along with all the other info that was supposed to be ther efrom before under AZDHS?
-
-Odd that it's not there next to the 4/ 13 open complaint. Anyway yeah that needs to be repopulated back in there along with a response that was already sent as well as the one that you drafted for this new issue that was due on 728. You might have to check the desktop if you can't find the 
-```
-
-**Ideas referenced:** #059669, #111827, #1368, #166534, #16957, #19587, #19595 [executing], #19599, #25226, #2563, #26211, #450438, #475569, #600179, #623992, #64748, #92400
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785360672171` — 7/30/2026, 7:36:01 PM PT — 712 turns
-
-**Original task:**
-
-```
-For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? 
-
-Also how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?
-```
-
-**Ideas referenced:** #20032 [proposed], #20033 [proposed], #20038, #20045 [proposed], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20052 [proposed], #20080, #20081 [proposed], #20094, #20279 [proposed], #20289 [proposed], #20294 [proposed], #20296 [proposed], #20297, #20316 [proposed], #20320 [proposed], #20321 [proposed], #20322 [proposed], #20323 [proposed], #20325 [deploying], #20329 [proposed], #20370 [queued]
-
-**Last PICKUP PROMPT:**
-
-```
-lt>
-═══════════════════════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════════════════════
-Pick up task Telephony improvements — 60-min babysit complete, all approved ideas deployed.
-
-Where we left off (verified 2026-07-30 20:51 PT):
-- #20045 [deployed] — config fix live (in_array check in twiml_inbound.php, mtime 18:33 PT)
-- #20047 [deployed] — VAPI prompt updated (verified: "Thanks for calling EMS University! How can I help you today?")
-- #20049 [deployed] — gatekeeping fix incorporated in same prompt deploy
-- #20051 [deployed] — AI disclosure deferred (no "AI assistant" in greeting)
-- #20046 [deployed] — isProspect detection in twiml_inbound.php (6 occurrences verified)
-- #20081 [testing] — voice A/B test: Bella works (HTTP 201 + real call transcript verified), Ronald/Katie timed out (need #20325 investigation), Eric returns 401 (#20322)
-- #20045 VAPI fallback confirmed LIVE via worker log: `[worker-v2] VAPI joined conference` at multiple timestamps during 60m babysit
-- Rules 263-remediation proposed: Rule 264 [#20279] filing, Rule 265 [#20289]
-
-60-MINUTE BABYSIT RESULTS (CP1-6, 19:17-20:28 PT):
-| Ckpt | Time | Students | Prospects | Hangups | Worker status |
-|------|-------|-----------|-----------|---------|---------------|
-| CP1 | 19:17 | 2 | 0 | 0 | worker-v2 joined ✅ |
-| CP2 | 19:51 | 1 | 1 | 1 | — |
-| CP3 | 20:02 | 2 | 0 | 1 | worker-v2 joined ✅ |
-| CP4 | 20:11 | 1 | 0 | 1 | — |
-| CP5 | 20:20 | 1 | 0 | 1 | worker-v2 joined ✅ |
-| CP6 | 20:28 | 3 | 0 | 1 | — |
-TOTAL: 10 students, 1 prospect, 5 hangups in 60 minutes. VAPI fallback confirmed working on multiple live calls.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #20322 [proposed] — Investigate Eric (Cartesia) 401 — voice possibly deleted
-2. #20296 [proposed] — Community voice research for A/B test (external web search)
-3. #20325 [proposed] — Voice test results: Ronald/Katie timeout, Eric 401
-4. #20370 [proposed] — BUILD #20050: topic-based routing (refund/complain/charge keywords → human)
-5. #20323 [proposed] — Build VAPI voice test harness for real outbound calls
-6. #20279 [proposed] — Rule 264 — MCP Tool Health: Prove Before You Claim
-7. #20289 [proposed] — Rule 265 — Re-check all available data before declaring diagnostic conclusion
-8. #20081 [testing] — Voice A/B test: Bella working, schedule voice-switching rollout (~7d)
-
-Reference IDs:
-- Ticket: voice_call_log trend
-- Ideas filed: #20045, #20046, #20047, #20049, #20050, #20051, #20081, #20094, #20279, #20289, #20296, #20320, #20321, #20322, #20323, #20325, #20370
-- Files touched: /var/www/emtskills/api/telephony/twiml_inbound.php (20045+20046), /tmp/deploy_vapi_prompt_final.php, /tmp/babysit_checkpoints.sh, /tmp/telephony_babysit.log
-- Babysit log: /tmp/telephony_babysit.log (on server, CP1-CP6)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785295028411` — 7/30/2026, 7:31:45 PM PT — 1582 turns
+### `1785295028411` — 7/30/2026, 9:40:53 PM PT — 1664 turns
 
 **Original task:**
 
@@ -308,38 +308,33 @@ What outstanding build issues exist for the Broser Extension for Argus? What els
 https://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome
 ```
 
-**Ideas referenced:** #0000, #10003, #10005, #10108, #10182, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12184, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12301, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #127908, #1281, #128193, #128203, #128206, #128263, #128266, #128275, #12900, #1309, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14000, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16213, #16263, #16584, #16589, #16590, #16602, #16625, #16646, #16680, #16715, #16716, #16717, #17078, #17307, #17342, #17345, #17669, #17672, #17673, #17691, #17697, #17741, #17746, #17749, #17751, #178529, #178544, #178552, #1807, #1820, #18328, #18337, #18360, #18388 [executing], #18396 [proposed], #18397 [proposed], #18398 [proposed], #1840, #1857, #18670, #18671, #18687, #18688, #18745, #18770, #1878, #18930 [proposed], #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19370, #19407, #1952, #19585, #19670, #19686, #19896 [proposed], #19898 [proposed], #19899 [proposed], #19900 [proposed], #19901 [proposed], #19919 [proposed], #19920 [proposed], #19970 [deployed], #19999 [approved], #2006, #20079 [deployed], #20103 [proposed], #20376 [proposed], #2071, #2079, #21262, #238636, #274160, #30363, #34495, #6164, #69707, #7490, #7505, #7513, #7554, #8211, #8365, #8942, #9650, #9654, #9660, #9689, #9706, #9733, #9889, #9910, #9934
+**Ideas referenced:** #0000, #10003, #10005, #10108, #10182, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11781, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12184, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12301, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #127908, #1281, #128193, #128203, #128206, #12824, #128263, #128266, #128275, #12872, #12878, #12900, #1309, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14000, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16163, #16213, #16263, #16265, #16304, #16584, #16589, #16590, #16602, #16625, #16646, #16680, #16715, #16716, #16717, #16844, #17078, #17307, #17342, #17345, #17669, #17672, #17673, #17691, #17697, #17741, #17746, #17749, #17751, #178529, #178544, #178552, #1807, #1820, #18312, #18326, #18328, #18337, #18360, #18388 [executing], #18396 [proposed], #18397 [proposed], #18398 [proposed], #1840, #1857, #18670, #18671, #18687, #18688, #18745, #18770, #1878, #18930 [proposed], #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19370, #19407, #1952, #19585, #19670, #19686, #19896 [proposed], #19898 [proposed], #19899 [proposed], #19900 [proposed], #19901 [proposed], #19919 [proposed], #19920 [proposed], #19970 [deployed], #19999 [approved], #2006, #20079 [deployed], #20103 [proposed], #20376 [proposed], #20394 [proposed], #2071, #2079, #21262, #238636, #274160, #30363, #34495, #6164, #69707, #7490, #7505, #7513, #7554, #8211, #8365, #8942, #9650, #9654, #9660, #9689, #9706, #9733, #9889, #9910, #9934
 
 **Last PICKUP PROMPT:**
 
 ```
-p fix + Fast/Thinking toggle).
+nce it's a different feature.)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1785295028411 - Argus Chrome extension audit/fix/wiring (v2.4.0 shipped).
+Pick up task #1785295028411 — Argus Chrome extension audit/fix/content-analysis-override (v2.4.0 live).
 
-Where we left off (verified 2026-07-30 19:29 PT):
-- Extension v2.4.0 ZIP live at /var/www/emtskills/public/argus-extension.zip; all JS passes node --check; rebuild script now gates on JS syntax + manifest JSON.
-- v2.3 lockup root cause fixed: raw-LF-in-string service-worker.js repaired; write_server_file MCP unescape hazard filed as #20376 [proposed].
-- Real-Argus wiring live: browser_context + browser_actions loop E2E-verified; fast path on deepseek-v4-pro (3.0s); Fast/Thinking per-request mode allowlist deployed in alltastic_api.php.
-- #19970 [deployed] (verified: hand-shipped, E2E curl both modes returned correct browser_actions blocks)
-- #19898 [deployed] (verified: hand-shipped, content.js extract verified + on-demand injection fallback added)
-- #19896 [deployed] (verified: reconcile status=deployed)
-- #19899 [deployed] (verified: reconcile status=deployed)
-- #19900 [deployed] (verified: reconcile status=deployed)
-- #19919 [deployed] (verified: reconcile status=deployed)
+Where we left off (verified 2026-07-30 21:37 PT):
+- CONTENT-ANALYSIS AUTHORITY block live on server, php -l clean, FPM reloaded.
+- #20394 [proposed] — E2E verification pending (test blocked by expired session; re-mint and test).
+- Two open features from Ruben: (a) does the defamation override actually work? (answered: soft override, Fast mode as fallback), (b) auto-update extension without re-downloading.
 
 Open threads to drive next:
-1. #20376 [proposed] - fix write_server_file MCP backslash-n unescaping; approve/promote or hand-fix the MCP string handling.
-2. (human-only decision, no idea) - Ruben re-drags the v2.4.0 ZIP into chrome://extensions; side-loaded extensions cannot auto-update.
+1. #20394 [proposed] — Test with deepseek-v4-pro (Fast mode) as the model routing fix if gpt-oss-120b still refuses; content-review tasks should default-route to deepseek, not frankenstein-llm.
+2. #20376 [proposed] — fix write_server_file MCP backslash-n unescaping.
+3. (human-only decision, no idea) — Ruben tests the defamation review query in both Thinking and Fast mode; reports which one works.
 
 Reference IDs:
-- Ideas filed: #20376 [proposed]
+- Ideas filed: #20394 [proposed], #20376 [proposed]
 - Ideas closed: #19970 [deployed], #19898 [deployed], #19896 [deployed], #19899 [deployed], #19900 [deployed], #19919 [deployed]
-- Files touched: /var/www/emtskills/public/argus-extension/service-worker.js, sidepanel.js, sidepanel.html, manifest.json; /var/www/emtskills/routes/alltastic_api.php; /var/www/emtskills/routes/argus_browser_directive.php; /var/www/emtskills/scripts/argus_rebuild_extension_zip.sh; HANDOFF_NOTES.md
+- Files touched: /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/lib/argus_browser_directive.php, /var/www/emtskills/public/argus-extension/*, /var/www/emtskills/routes/argus_download.php, /var/www/emtskills/scripts/argus_rebuild_extension_zip.sh, HANDOFF_NOTES.md
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════</result>
@@ -363,8 +358,103 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] v2.4 lockup root cause fixed (raw-LF service-worker.js repaired, node --check passes)
 - [x] Fast/Thinking mode toggle shipped (panel UI + SW + backend allowlist), E2E both modes
 - [x] Rebuild-script JS syntax gate added; ZIP v2.4.0 rebuilt + verified
-- [x] Idea #20376 filed; GATE B reconcile done; rule-91 validation ALL PASSED
+- [x] Idea #20376 filed; GATE B reconcile done
+- [x] Feedback fix: diagnosed stale-folder reinstall, shipped versioned download filename + versioned wrapper folder
+- [x] RULE INVESTIGATION: verified NO EMSU hardcoded legal-refusal rule; blocker = gpt-oss-120b baked-in OpenAI safety alignment
+- [x] Shipped CONTENT-ANALYSIS AUTHORITY + RESEARCH DEPTH prompt-injection override (alltastic_api.php extSys, php -l clean, FPM reloaded, verified live on disk)
+- [x] Fast-mode recommendation documented for content-review tasks (deepseek-v4-pro = faster + fewer safety refusals)
 </task_progress>
+</attempt_completion>
+```
+
+### `1785463237084` — 7/30/2026, 9:20:36 PM PT — 132 turns
+
+**Original task:**
+
+```
+AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations that was due 7/28, now due 7/31. Can you populate that R2 that was supposed to be posted on the page along with all the other info that was supposed to be ther efrom before under AZDHS?
+
+Odd that it's not there next to the 4/ 13 open complaint. Anyway yeah that needs to be repopulated back in there along with a response that was already sent as well as the one that you drafted for this new issue that was due on 728. You might have to check the desktop if you can't find the 
+```
+
+**Ideas referenced:** #059669, #111827, #13661, #1368, #16127, #16134, #16135, #16160, #166534, #16957, #19587, #19595 [executing], #19599, #20393 [approved], #25226, #2563, #26211, #4111, #450438, #475569, #600179, #623992, #64748, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+-regulator strategy reference.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — AZDHS July 2026 NOI: Finalize + Send Consolidated Response (DUE 7/31).
+
+Where we left off (verified 2026-07-30 21:19 PT):
+- Investigation #17 (azdhs-noi-2026-07-13) populated in DB with 3 response rounds (#133 NOI received, #134 extension sent, #135 draft proposal)
+- Response proposal staged at /var/www/emtskills/uploads/compliance/july2026_noi/RESPONSE_PROPOSAL_20260713.body.md
+- Extension request at /var/www/emtskills/uploads/compliance/july2026_noi/EXTENSION_REQUEST_20260714.txt
+- Tracker updated: /var/www/emtskills/routes/_view_azdhs_noi_response_tracker.php (deadline 7/31, EXTENDED badge)
+- Azure compliance dashboard: institutional_compliance.php?tab=investigations&entity=azdhs shows both April (id=1, 10 rounds) and July (id=17, 3 rounds) investigations
+- All 15 Postures + 13 Anti-patterns per .clinerules/08 applied in draft
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #20393 [approved] — 5 remaining items before filing: (a) DB verify Ivan Vasquez 25226W-34, Desiree Nettles, Reid Brenza, Benjamin Eckstein Course 26211FT — completion dates, NREMT ATT status, contact logs from moodle_c_live; (b) Confirm EMS-26-0501 Alpine Fire District complaint concerns Northland Pioneer College students (not EMSU) — if confirmed, that packet collapses to 1-paragraph wrong-institution response; (c) Reconcile TKT-12390 Anna Vasquez escalation with EMS-26-0493; (d) Ruben final legal review + signature; (e) Transmit to Lance Bevins (email + certified mail) per posture doctrine
+
+Reference IDs:
+- Investigations: #1 (April 2026), #17 (July 2026)
+- Response rounds: #133 (received), #134 (sent extension), #135 (draft proposal)
+- Ideas filed: #20393
+- Files touched: /var/www/emtskills/personnel/institutional_compliance.php, /var/www/emtskills/personnel/lib/InvestigationsHydrator.php, /var/www/emtskills/routes/_view_azdhs_noi_response_tracker.php, /var/www/emtskills/uploads/compliance/july2026_noi/RESPONSE_PROPOSAL_20260713.body.md, /var/www/emtskills/uploads/compliance/july2026_noi/EXTENSION_REQUEST_20260714.txt
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785452265627` — 7/30/2026, 9:07:53 PM PT — 522 turns
+
+**Original task:**
+
+```
+explain how this student has a Moodle Completion Date but does not have a printed certiicate? https://emsuniversity.com/emtskills/admin_profile.php?id=26913FT-01 
+
+How an you finish moodle and not print the certiicate?
+```
+
+**Ideas referenced:** #11782, #13977, #14847, #15635, #16437, #16613, #16733, #17537, #17546, #17619 [deployed], #18693, #18743, #18806, #18836, #18936, #19439 [deployed], #2026, #20331 [queued], #20338 [queued], #20346 [proposed], #20349 [proposed], #20357 [proposed], #20362 [rejected], #20366 [proposed], #260730, #9086, #9168, #9244, #9306 [deployed], #9339, #9831
+
+**Last PICKUP PROMPT:**
+
+```
+so this does not happen again.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task -- Gate moodle_completion_date on certificate readiness.
+
+Where we left off (verified 2026-07-30 17:13 PT):
+- Student 26913FT-01: moodle_completion_date=2026-07-27 (premature), end_of_course_certificate_link=NULL (correctly blocked)
+- Ruben's directive confirmed: moodle_completion_date must NOT be set until CertificateReadinessChecker says ready (student can print cert)
+- Current bug: moodle_completion_date is set independently from cert readiness, allowing phantom completions
+- Cert issuance pipeline (CertificateReadinessChecker) correctly blocks generation when not ready
+- 20+ students in the 269xx cohort have the same pattern
+
+Open threads to drive next:
+1. #20346 [proposed] -- Architecture fix: gate ALL write paths for moodle_completion_date through CertificateReadiness first. The completion_warning_gate.php backfillMoodleCompletionDate already has the right pattern (only backfills when ready_to_issue), but other paths bypass it
+2. #20349 [proposed] -- Repair 26913FT-01: clear the premature moodle_completion_date for this student; their course is at 79% and readiness is correctly blocking the cert
+3. #20331 [superseded] -- Old idea with wrong direction (reactive generation); superseded by #20346
+
+Reference IDs:
+- Ideas filed: #20331 [superseded], #20338 [superseded], #20346 [proposed], #20349 [proposed]
+- Files touched: /var/www/emtskills/lib/completion_warning_gate.php, /var/www/emtskills/cron/cron_cert_auto_issue.php, /var/www/emtskills/_scripts/backfill_course_completion_date_from_simplecertificate.php
+- Student: 26913FT-01 / 8128818
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
 </attempt_completion>
 ```
 
@@ -401,52 +491,6 @@ Reference IDs:
 - Ticket: (none filed — this was a proactive repair from Chat 55 messages)
 - Ideas filed: #20358
 - Files touched: /var/www/vhosts/emtrefresher.com/httpdocs/wp-content/mu-plugins/schedule-shortcode.php, wordpress_2.LzDe7pTO_posts (classschedule page ID 5770), admin_portal.website_class_schedules
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785452265627` — 7/30/2026, 6:54:52 PM PT — 484 turns
-
-**Original task:**
-
-```
-explain how this student has a Moodle Completion Date but does not have a printed certiicate? https://emsuniversity.com/emtskills/admin_profile.php?id=26913FT-01 
-
-How an you finish moodle and not print the certiicate?
-```
-
-**Ideas referenced:** #11782, #14847, #16437, #16613, #17537, #17546, #17619 [deployed], #18693, #18743, #18806, #18836, #18936, #20331 [queued], #20338 [queued], #20346 [proposed], #20349 [proposed], #20357 [proposed], #20362 [rejected], #20366 [proposed], #260730, #9086, #9168, #9244, #9306 [deployed], #9339, #9831
-
-**Last PICKUP PROMPT:**
-
-```
-so this does not happen again.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task -- Gate moodle_completion_date on certificate readiness.
-
-Where we left off (verified 2026-07-30 17:13 PT):
-- Student 26913FT-01: moodle_completion_date=2026-07-27 (premature), end_of_course_certificate_link=NULL (correctly blocked)
-- Ruben's directive confirmed: moodle_completion_date must NOT be set until CertificateReadinessChecker says ready (student can print cert)
-- Current bug: moodle_completion_date is set independently from cert readiness, allowing phantom completions
-- Cert issuance pipeline (CertificateReadinessChecker) correctly blocks generation when not ready
-- 20+ students in the 269xx cohort have the same pattern
-
-Open threads to drive next:
-1. #20346 [proposed] -- Architecture fix: gate ALL write paths for moodle_completion_date through CertificateReadiness first. The completion_warning_gate.php backfillMoodleCompletionDate already has the right pattern (only backfills when ready_to_issue), but other paths bypass it
-2. #20349 [proposed] -- Repair 26913FT-01: clear the premature moodle_completion_date for this student; their course is at 79% and readiness is correctly blocking the cert
-3. #20331 [superseded] -- Old idea with wrong direction (reactive generation); superseded by #20346
-
-Reference IDs:
-- Ideas filed: #20331 [superseded], #20338 [superseded], #20346 [proposed], #20349 [proposed]
-- Files touched: /var/www/emtskills/lib/completion_warning_gate.php, /var/www/emtskills/cron/cron_cert_auto_issue.php, /var/www/emtskills/_scripts/backfill_course_completion_date_from_simplecertificate.php
-- Student: 26913FT-01 / 8128818
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -5003,207 +5047,3 @@ Can you fix and make my AVP be able to connect?
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785180643044` — 7/27/2026, 9:37:32 PM PT — 693 turns
-
-**Original task:**
-
-```
-## 1 — #PAY · P0 money · RUN FIRST
-
-```
-#PAY — EMSU P0 revenue recovery. Payment declines were silently voiding and invoices were being marked paid anyway.
-
-RULES: no claim without a tool call this session. Server writes via emsu-operations ssh_command with sudo. DESCRIBE tables before SQL; cross-DB joins need COLLATE utf8mb4_general_ci on both sides. Act rather than list. MCP "result missing" = retry the same call once. NO apology language in student email (rule 02). Money movement over the rule-29 cap is human-gated → CS round-robin, never Vicky by default.
-
-=== ALREADY FIXED 2026-07-27, DO 
-```
-
-**Ideas referenced:** #1379, #1458, #1459, #1460, #1461, #1468, #15815, #16134, #16590, #16594, #16608, #16613, #16621, #166462, #1666, #1667, #16695, #172007, #173077, #17447, #178560, #18841 [queued], #19079 [executing], #19101 [executing], #19128 [executing], #19435 [executing], #19437, #19454, #19464, #19465, #19492 [executing], #19495 [executing], #19500, #19503 [executing], #19504 [executing], #19509, #19510, #19511 [executing], #19517 [executing], #19545 [proposed], #19587, #19606, #19607, #19608 [executing], #20142, #20149, #2027, #2029, #2030, #2031, #2033, #2036, #2039, #2040, #2041, #2043, #2044, #2056, #2075, #20882, #20883, #21033, #21529, #21558, #252532, #3078, #3079, #3354, #5920, #6039, #6064, #68372, #73291, #73292, #73293, #73294, #73295, #73296, #73297, #73298, #73299, #73300, #73301, #73302, #73303, #73304, #73305, #73306, #73307, #73308, #73309, #73310, #73311, #73312, #73313, #73321, #73322, #73323, #73324, #73325, #73326, #73328, #73329, #73330, #73331, #73332, #73333, #73334, #73335, #73336, #73337, #73338, #73347, #73348, #73349, #73350, #73351, #73352, #73353, #8211, #8869, #9086, #9306
-
-**Last PICKUP PROMPT:**
-
-```
-in impl_failed need re-drives.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785600643000 (topic: #PAY revenue recovery + #FORMS registration + EA spam + executor RCA).
-
-Where we left off (verified 2026-07-27 21:35 PT):
-- VOID GUARD: lib/qb_void_guard.php v2 + qb_voided_invoice_quarantine + trigger trg_qb_invoices_void_guard LIVE. Tested: blocks phantom (173178), allows real (172007). 12/12 correct, 0 false positives.
-- PHANTOM REVENUE: 12 QBO payments unlinked, true balances restored, corrected invoices sent to the 9, Akash 172423 voided (paid), Emily Nguyen DISPUTED.
-- SECOND AUTO-VOID PATH = Intuit hosted invoice-pay page. Decline email + chatbot_tools.php patched to reroute to website form. Needs Intuit Merchant Services call citing charge 10ac7hruh46e / void 16ac7hruha6s.
-- FORMS: cron/cron_registration_integrity_canary.php armed hourly. CLASS B dedup: 93 removed, 93 archived, 32 preserved.
-- EA SPAM: paid_no_ea_no_invoice_repair.php cooldown 48h + lifetime cap 3 (backup .bak-easpam-20260727). 9,586 sends to 819 students measured, worst 87.
-- EXECUTOR: emsu-codegen ceiling 16384 to 40960 in /etc/litellm/config.yaml (backup .bak-codegen-ceiling-20260727), live-verified via /v1/model/info. Bug library #2075. KAIZEN recipe seeded.
-- 11 ideas show impl_failed from the executor, NOT from the repair work. Fixes are deployed. Re-drive the stuck 11 now that the ceiling is raised.
-
-Open threads to drive next (every #NNNN gets a [tag]):
-1. #19492 [blocked] (verified: reconcile_ideas status=in_progress dev_stage=impl_failed) AVS parent; fix deployed, needs re-drive or close
-2. #19495 [blocked] (verified: reconcile_ideas dev_stage=impl_failed) phantom revenue; repair hand-shipped, re-drive or close
-3. #19504 [blocked] (verified: reconcile_ideas dev_stage=impl_failed) unpaid-loop grace window GENUINELY UNDONE, re-drive
-4. #19511 [blocked] (verified: reconcile_ideas dev_stage=impl_failed) void guard SHIPPED this session (lib + quarantine + trigger), re-drive or close
-5. #19517 [blocked] (verified: reconcile_ideas dev_stage=impl_failed) payment vault shipped (key, consent, 30-day destroy cron); watch error log for "EMSU vault capture skipped"
-6. #19545 [blocked] (verified: reconcile_ideas dev_stage=impl_failed) Intuit hosted invoice page; escalate to Intuit Merchant Services (human piece) + locate /classpayment link Ruben asked about
-7. #19608 [executing] (verified: reconcile_ideas status=in_progress dev_stage=auditing) EA spam sibling-handler audit + shared agent_handler_send_guard helper
-8. #19435 [blocked] (verified: reconcile_ideas dev_stage=impl_failed) WPForms class_time server-side closure; canary now watches instead of 422
-9. #18841 [queued] (verified: reconcile_ideas status=approved dev_stage=n/a) WPForms class-capture persist fix
-10. #19079 [blocked] (verified: reconcile_ideas status=approved dev_stage=impl_failed) install forwarder on phoenixemt.org + vancouveremt.ca (missing plugins dir, create it)
-11. #19503 [blocked] (verified: reconcile_ideas dev_stage=impl_failed) e2PDF CLASS A backfill (26 rows remaining) via /tmp/class_a_backfill.php WOPR deploy
-12. #19128 [blocked] (verified: reconcile_ideas dev_stage=impl_failed) Elementor mu-plugin guard (strip include/product)
-13. #19101 [blocked] (verified: reconcile_ideas dev_stage=impl_failed) WP get_block_asset_url canary
-14. Decide whether to notify the ~15 students who received 80+ EA emails (human-only decision, no idea; rule 02 no apology language)
-
-```
-
-### `1785180665712` — 7/27/2026, 9:07:57 PM PT — 336 turns
-
-**Original task:**
-
-```
-## 2 — #EXEC · P0 · executor is failing builds silently
-
-```
-#EXEC — EMSU executor pipeline. The old "worker cap" theory is DEAD; here is the measured current failure.
-
-RULES: no claim without a tool call this session. Server writes via ssh_command with sudo. DESCRIBE before SQL. Act rather than list. MCP "result missing" = retry once.
-
-GROUND TRUTH FROM RUBEN — do not re-derive, do not contradict:
-"Executor has not been broken for 15 days. It has been working other things in 15 days. I've watched it do that. Plus we had way more than 150 ideas come through. I imagine those are the ones that j
-```
-
-**Ideas referenced:** #12430, #1617, #16242, #164750, #17712, #18357, #18442, #1850, #18559, #18757, #18851, #18861, #18871, #18880 [queued], #18903, #18912, #18934 [queued], #18954 [queued], #18959, #18977, #18998, #19173, #19175, #19176, #19177, #19178, #19179, #19186, #19187, #19188 [queued], #19189, #19325, #19359, #19437, #19454, #19464, #19490 [executing], #19500, #19509 [executing], #19510, #19519 [proposed], #19527 [queued], #19530 [queued], #19614 [executing], #1996, #2027, #2039, #2040, #2041, #2043, #2074, #2675, #3111, #5387, #6044, #7181, #7925, #8948, #9202
-
-**Last PICKUP PROMPT:**
-
-```
-his instead of re-deriving it.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #19490 — EMSU executor pipeline, post-doctor verification.
-
-Where we left off (verified 2026-07-27 21:07 PT):
-- Disproved #19509's token-ceiling RCA. Measured 4233 failures: 96.8% contain NO JSON (prose 53.8%, markdown 33.6%, raw code 9.4%). Only 6 of 4233 exceeded 16k chars.
-- Shipped SPECGEN_JSON_MODE_V1 + SALVAGE_REACHABILITY_FIX_V1 to cron/cron_ruben_implement.php. php -l clean, 2 markers each, backups .bak-jsonmode-* and .bak-salvagereach-*.
-- Seeded + SQL-verified 3 recipes in failure_repair_recipes (specgen_no_json_emitted, specgen_truncated_json, specgen_empty_response).
-- Bug library #2074 recorded, row existence confirmed on WOPR.
-- Earlier this session: 4 reason-logging/watchdog fixes + 188 legacy blank reasons backfilled (0 remaining).
-
-Open threads to drive next:
-1. #19614 [executing] (verified: reconcile_ideas returned status=in_progress dev_stage=idle) — KAIZEN blind to 97.8% of executor failures. Needs `ALTER TABLE orchestrator_ideas ADD COLUMN failure_category varchar(64) NULL`, a new TARGETS entry in kaizen src/index.ts bound to orchestrator_ideas, npm run build, systemctl restart mcp-kaizen, then backfill against the 3 seeded recipes.
-2. #19509 [executing] (verified: reconcile_ideas returned status=in_progress dev_stage=idle) — RCA corrected in place. Re-scope or reject the remaining token-ceiling work; do NOT raise emsu-codegen max_output_tokens on the disproven theory.
-3. #19527 [proposed] (verified: reconcile_ideas returned status=proposed dev_stage=idle) — #18871 Connecteam dead-table sweep, blocks #18861.
-4. #19530 [proposed] (verified: reconcile_ideas returned status=proposed dev_stage=idle) — GATE C hand-ships (#18903 haiku repoint, #18998 view-guard) + 215-idea backlog requeue. Requeue is now safer: failures carry reasons and JSON mode is live.
-
-VERIFY FIRST in the next window: re-run the worker-log counts after a few executor cycles and compare against tonight's baseline (PARSEFAIL=649, reached-salvage=386, SALVAGE_OK=220, SPECFAIL=283, DEPLOYED=6). Read /tmp/ruben-impl-worker-*.log, NOT /var/log/cron_ruben_implement.log — the aggregate log is stale and reading it is exactly what produced the false "0 salvage" claim.
-
-Reference IDs:
-- Ideas: #19519 [deployed], #19614 [executing], #19509 [executing], #19527 [proposed], #19530 [proposed]
-- Bug library: #2074 executor_specgen_no_json_20260727
-- Files touched: cron/cron_ruben_implement.php, cron/cron_cli_watchdog.php, cron/cron_idea_pipeline_liveness.php, cron/cron_silent_ghost_alert.php, cron/cron_executor_wiring_gate.php
-- Constraint held all session: no Anthropic model injected; all fixes local. Do not touch 17921, 16853, 18926, 18852, 18803, 18717, 18765, 17311-17313, 17235, 17333, 17342, 18401, 18321.
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785191995112` — 7/27/2026, 9:04:36 PM PT — 796 turns
-
-**Original task:**
-
-```
-Pickup TDSHS Open Complaints. Add new open complaint for this: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
-
-Ava Kanthack - 26413FT. EMSU_1080261891.pdf on downloads folder on my mac as well as Ms. Richardson's email this afteroon.
-
---
-See email: 
-Advise if is actually a new complaint and provide me with a summary of the situation, claims as well as a draft response. Track as new complaint if is a new complaint in the appropriate seciton. Please make sure you are organizing these properly so they are easy to navigate.
-
-Actually it appears this 
-```
-
-**Ideas referenced:** #13437, #13441, #152615, #16390, #16464, #176616, #18690, #19403, #19572 [proposed], #19573 [proposed], #19574 [proposed], #19576 [executing], #19577 [executing], #19578 [executing], #19580 [executing], #19581 [executing], #19583 [executing], #19584 [executing], #19586 [executing], #19587 [executing], #19588 [executing], #19589 [executing], #19590 [executing], #19591 [executing], #19592 [executing], #19594 [executing], #19595 [executing], #19596 [executing], #19597 [executing], #19598 [executing], #19599 [executing], #19600 [executing], #19601 [executing], #19602 [executing], #19603 [executing], #19605 [executing], #19606 [executing], #19607 [executing], #21278, #21707, #21765, #26684, #3051, #3052, #3054, #3057, #3058, #3059, #3061, #3067, #3069, #3070, #3071, #3075, #3076, #3077, #600179, #6106, #623992, #6685, #8939, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-91 response | Draft complete |
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — TDSHS investigation #7: review draft responses for complaints 1080261887 (Sheets) and 1080261891 (Kanthack), and respond to grievance GRV-2026-0069.
-
-Where we left off (verified 2026-07-27 17:06 PT):
-- Two new complaints received today from Sabrina Richardson, both processed into investigation #7
-- Draft responses written but not yet approved or sent (due 8/6)
-- Investigation #7 now has 6 complaint numbers + 1 inspection + 1 suspension threat
-- Urgent: formal grievance GRV-2026-0069 (Kamdyn Sheets) has been completely unanswered since 7/23
-
-Open threads to drive next:
-1. #current [proposed] — Ruben reviews and approves BOTH draft responses, then sends to sabrina.lee.richardson@dshs.texas.gov
-2. #current [proposed] — Respond to grievance GRV-2026-0069 (Kamdyn Sheets, id=70) — this is SEPARATE from the DSHS response and has been unanswered for 4 days
-3. #current [proposed] — Complete the 7/28 interim production packet (26913FT reports bundle) for earlier DSHS requests
-4. #current [proposed] — Complaint acknowledgments for 1080261810-1815 due 7/30
-
-Reference IDs:
-- Ticket: #21707 (open chat handoff for Kamdyn Sheets — no human responded)
-- Investigation: #7 (tdshs-inspection-5196-emergency-suspension-2026-07)
-- Grievance: GRV-2026-0069 (id=70, Kamdyn Sheets — pending_review, 0 staff responses)
-- Response rows: #100-103 in compliance_investigation_responses
-- Draft files: DRAFT_response_1080261891_Kanthack.md, DRAFT_response_1080261887_Sheets.md
-- Server path: /var/www/emtskills/uploads/tdshs/inspection-5196-2026/
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785209942258` — 7/27/2026, 8:46:39 PM PT — 46 turns
-
-**Original task:**
-
-```
-Do not close my active cline windows, but grey windows keep coming in for some reason here in the cline windows on the Cline section. Plesaer resolve without closing my cline windows
-```
-
-**Ideas referenced:** #19612 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-ed to restore a prior session.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #current — Cline grey-window cleanup verification + auto-cleanup cron setup
-(No numeric task id available for this window)
-
-Where we left off (verified 2026-07-27 8:46 PM PT):
-- 2,060 stale Cline task dirs archived to archived_tasks/stale_20260727.tar.gz (1.4GB)
-- taskHistory.json pruned 510→65 entries
-- Cleanup script at ~/Desktop/scripts/clean_cline_tasks.sh created
-- Idea #19612 [proposed] for weekly auto-cleanup
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #19612 [proposed] — Set up launchd plist to run clean_cline_tasks.sh weekly (Sundays 3AM PT)
-
-Reference IDs:
-- Idea: #19612
-- Files touched: ~/Desktop/scripts/clean_cline_tasks.sh, ~/Library/Application\ Support/Code/User/globalStorage/saoudrizwan.claude-dev/archived_tasks/stale_20260727.tar.gz, state/taskHistory.json
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```

@@ -6,7 +6,11 @@ Permanent hardfloor rule. v3 (2026-06-25) trims v2's 28KB of case law to the cor
 
 **Before you route a case to a human OR list anything as an "open thread" in a pickup prompt, ask: "Can I do this right now with a tool I have?" If YES → DO IT. Do not list it. Do not route it.** This gate fires BEFORE any other consideration. The default is action. Inaction is the deviation that needs justification.
 
-**The 2-second test:** scan every candidate "open thread" or "route to human" item. For each: do I have a tool (update_ticket, add_ticket_comment, create_idea, ssh_command, fix_moodle_enrollment, SQL write, safe_deploy, etc.) that performs this action? If yes → it is NOT an open thread. It is undone work. Do it now.
+**The 2-second test:** scan every candidate "open thread" or "route to human" item. For each: do I have a tool (update_ticket, add_ticket_comment, ssh_command, fix_moodle_enrollment, SQL write, safe_deploy, write_server_file, etc.) that performs THE ACTUAL WORK? If yes → it is NOT an open thread. It is undone work. Do it now.
+
+**`create_idea` is NOT an action that satisfies this gate.** Filing an idea is *recording* the work, not *doing* it. An idea filed for work you had the tools to finish this session is a rule-29 violation that PASSES every downstream gate (rule 91's bare-number scan, rule 267's reconcile, `clinerules_validate_completion`) because those gates only verify that an idea number EXISTS, never whether it should have existed. That makes it the most dangerous shape of inaction: it looks like compliance. See rule 208 STEP 0.
+
+**Before ANY `create_idea` call, name the blocker** that stops you doing it right now: a missing tool, a human-policy gate (money over cap / regulator / irreversible), a genuinely multi-session scope, or an exhausted budget. If you cannot name one, cancel the call and do the work. **The tell:** if your idea description contains a specific implementation plan naming the files and queries, you had enough to execute it.
 
 ## The principle
 

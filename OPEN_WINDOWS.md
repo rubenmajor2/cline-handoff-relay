@@ -6,15 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/30/2026, 6:45:43 PM PT | window: last 72h | 132 tasks | index total 337 (parsed 6, cached 331)
+Generated: 7/30/2026, 7:45:43 PM PT | window: last 72h | 134 tasks | index total 339 (parsed 6, cached 333)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785399211024` | 7/30/2026, 6:45:39 PM | 1113 | 5918KB | #Julia/Claudia |
-| `1785456423435` | 7/30/2026, 6:45:16 PM | 161 | 580KB | See Vicky's chats regarding EMT and Refresher schedules in Chat 55 and repair |
-| `1785452265627` | 7/30/2026, 6:43:34 PM | 450 | 963KB | explain how this student has a Moodle Completion Date but does not have a printed certiica |
-| `1785295028411` | 7/30/2026, 6:43:06 PM | 1387 | 6793KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
-| `1785360672171` | 7/30/2026, 6:41:21 PM | 604 | 2309KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
+| `1785465245461` | 7/30/2026, 7:45:37 PM | 31 | 163KB | check jon's argus 80% PD issues. says not resolved yet.  |
+| `1785399211024` | 7/30/2026, 7:45:30 PM | 1218 | 6220KB | #Julia/Claudia |
+| `1785463237084` | 7/30/2026, 7:45:26 PM | 73 | 403KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
+| `1785360672171` | 7/30/2026, 7:36:01 PM | 712 | 3210KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
+| `1785295028411` | 7/30/2026, 7:31:45 PM | 1582 | 8285KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
+| `1785456423435` | 7/30/2026, 7:28:17 PM | 300 | 1067KB | See Vicky's chats regarding EMT and Refresher schedules in Chat 55 and repair |
+| `1785452265627` | 7/30/2026, 6:54:52 PM | 484 | 1046KB | explain how this student has a Moodle Completion Date but does not have a printed certiica |
 | `1785435661707` | 7/30/2026, 6:38:33 PM | 1386 | 4874KB | There's grievances getting lost because of all these categories in here. https://emsuniver |
 | `1785441507395` | 7/30/2026, 4:05:55 PM | 152 | 305KB | Argus failure? Cites technical issues but doesn't not correct them with appropriate CFA lo |
 | `1785363426908` | 7/30/2026, 3:51:17 PM | 706 | 2066KB | #EMT Webforms/Payments |
@@ -147,7 +149,21 @@ Generated: 7/30/2026, 6:45:43 PM PT | window: last 72h | 132 tasks | index total
 
 ## Per-window detail
 
-### `1785399211024` — 7/30/2026, 6:45:39 PM PT — 1113 turns
+### `1785465245461` — 7/30/2026, 7:45:37 PM PT — 31 turns
+
+**Original task:**
+
+```
+check jon's argus 80% PD issues. says not resolved yet. 
+
+check Cori argus building telephony like system for Cyra
+```
+
+**Ideas referenced:** #19970, #20331 [rejected], #20338 [rejected], #20346 [rejected], #20349 [rejected], #20357 [rejected], #20362 [rejected], #20366 [rejected], #20376 [proposed], #3230, #3239, #3286, #3289, #3294, #3295, #9306
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785399211024` — 7/30/2026, 7:45:30 PM PT — 1218 turns
 
 **Original task:**
 
@@ -204,7 +220,155 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785456423435` — 7/30/2026, 6:45:16 PM PT — 161 turns
+### `1785463237084` — 7/30/2026, 7:45:26 PM PT — 73 turns
+
+**Original task:**
+
+```
+AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations that was due 7/28, now due 7/31. Can you populate that R2 that was supposed to be posted on the page along with all the other info that was supposed to be ther efrom before under AZDHS?
+
+Odd that it's not there next to the 4/ 13 open complaint. Anyway yeah that needs to be repopulated back in there along with a response that was already sent as well as the one that you drafted for this new issue that was due on 728. You might have to check the desktop if you can't find the 
+```
+
+**Ideas referenced:** #059669, #111827, #1368, #166534, #16957, #19587, #19595 [executing], #19599, #25226, #2563, #26211, #450438, #475569, #600179, #623992, #64748, #92400
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785360672171` — 7/30/2026, 7:36:01 PM PT — 712 turns
+
+**Original task:**
+
+```
+For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? 
+
+Also how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?
+```
+
+**Ideas referenced:** #20032 [proposed], #20033 [proposed], #20038, #20045 [proposed], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20052 [proposed], #20080, #20081 [proposed], #20094, #20279 [proposed], #20289 [proposed], #20294 [proposed], #20296 [proposed], #20297, #20316 [proposed], #20320 [proposed], #20321 [proposed], #20322 [proposed], #20323 [proposed], #20325 [deploying], #20329 [proposed], #20370 [queued]
+
+**Last PICKUP PROMPT:**
+
+```
+lt>
+═══════════════════════════════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════════════════════════════
+Pick up task Telephony improvements — 60-min babysit complete, all approved ideas deployed.
+
+Where we left off (verified 2026-07-30 20:51 PT):
+- #20045 [deployed] — config fix live (in_array check in twiml_inbound.php, mtime 18:33 PT)
+- #20047 [deployed] — VAPI prompt updated (verified: "Thanks for calling EMS University! How can I help you today?")
+- #20049 [deployed] — gatekeeping fix incorporated in same prompt deploy
+- #20051 [deployed] — AI disclosure deferred (no "AI assistant" in greeting)
+- #20046 [deployed] — isProspect detection in twiml_inbound.php (6 occurrences verified)
+- #20081 [testing] — voice A/B test: Bella works (HTTP 201 + real call transcript verified), Ronald/Katie timed out (need #20325 investigation), Eric returns 401 (#20322)
+- #20045 VAPI fallback confirmed LIVE via worker log: `[worker-v2] VAPI joined conference` at multiple timestamps during 60m babysit
+- Rules 263-remediation proposed: Rule 264 [#20279] filing, Rule 265 [#20289]
+
+60-MINUTE BABYSIT RESULTS (CP1-6, 19:17-20:28 PT):
+| Ckpt | Time | Students | Prospects | Hangups | Worker status |
+|------|-------|-----------|-----------|---------|---------------|
+| CP1 | 19:17 | 2 | 0 | 0 | worker-v2 joined ✅ |
+| CP2 | 19:51 | 1 | 1 | 1 | — |
+| CP3 | 20:02 | 2 | 0 | 1 | worker-v2 joined ✅ |
+| CP4 | 20:11 | 1 | 0 | 1 | — |
+| CP5 | 20:20 | 1 | 0 | 1 | worker-v2 joined ✅ |
+| CP6 | 20:28 | 3 | 0 | 1 | — |
+TOTAL: 10 students, 1 prospect, 5 hangups in 60 minutes. VAPI fallback confirmed working on multiple live calls.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #20322 [proposed] — Investigate Eric (Cartesia) 401 — voice possibly deleted
+2. #20296 [proposed] — Community voice research for A/B test (external web search)
+3. #20325 [proposed] — Voice test results: Ronald/Katie timeout, Eric 401
+4. #20370 [proposed] — BUILD #20050: topic-based routing (refund/complain/charge keywords → human)
+5. #20323 [proposed] — Build VAPI voice test harness for real outbound calls
+6. #20279 [proposed] — Rule 264 — MCP Tool Health: Prove Before You Claim
+7. #20289 [proposed] — Rule 265 — Re-check all available data before declaring diagnostic conclusion
+8. #20081 [testing] — Voice A/B test: Bella working, schedule voice-switching rollout (~7d)
+
+Reference IDs:
+- Ticket: voice_call_log trend
+- Ideas filed: #20045, #20046, #20047, #20049, #20050, #20051, #20081, #20094, #20279, #20289, #20296, #20320, #20321, #20322, #20323, #20325, #20370
+- Files touched: /var/www/emtskills/api/telephony/twiml_inbound.php (20045+20046), /tmp/deploy_vapi_prompt_final.php, /tmp/babysit_checkpoints.sh, /tmp/telephony_babysit.log
+- Babysit log: /tmp/telephony_babysit.log (on server, CP1-CP6)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785295028411` — 7/30/2026, 7:31:45 PM PT — 1582 turns
+
+**Original task:**
+
+```
+What outstanding build issues exist for the Broser Extension for Argus? What else do you recommend? Can you do some work and testing on it to improve it more? Make sure it's wired into actual Argus as well:
+
+https://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome
+```
+
+**Ideas referenced:** #0000, #10003, #10005, #10108, #10182, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12184, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12301, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #127908, #1281, #128193, #128203, #128206, #128263, #128266, #128275, #12900, #1309, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14000, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16213, #16263, #16584, #16589, #16590, #16602, #16625, #16646, #16680, #16715, #16716, #16717, #17078, #17307, #17342, #17345, #17669, #17672, #17673, #17691, #17697, #17741, #17746, #17749, #17751, #178529, #178544, #178552, #1807, #1820, #18328, #18337, #18360, #18388 [executing], #18396 [proposed], #18397 [proposed], #18398 [proposed], #1840, #1857, #18670, #18671, #18687, #18688, #18745, #18770, #1878, #18930 [proposed], #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19370, #19407, #1952, #19585, #19670, #19686, #19896 [proposed], #19898 [proposed], #19899 [proposed], #19900 [proposed], #19901 [proposed], #19919 [proposed], #19920 [proposed], #19970 [deployed], #19999 [approved], #2006, #20079 [deployed], #20103 [proposed], #20376 [proposed], #2071, #2079, #21262, #238636, #274160, #30363, #34495, #6164, #69707, #7490, #7505, #7513, #7554, #8211, #8365, #8942, #9650, #9654, #9660, #9689, #9706, #9733, #9889, #9910, #9934
+
+**Last PICKUP PROMPT:**
+
+```
+p fix + Fast/Thinking toggle).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785295028411 - Argus Chrome extension audit/fix/wiring (v2.4.0 shipped).
+
+Where we left off (verified 2026-07-30 19:29 PT):
+- Extension v2.4.0 ZIP live at /var/www/emtskills/public/argus-extension.zip; all JS passes node --check; rebuild script now gates on JS syntax + manifest JSON.
+- v2.3 lockup root cause fixed: raw-LF-in-string service-worker.js repaired; write_server_file MCP unescape hazard filed as #20376 [proposed].
+- Real-Argus wiring live: browser_context + browser_actions loop E2E-verified; fast path on deepseek-v4-pro (3.0s); Fast/Thinking per-request mode allowlist deployed in alltastic_api.php.
+- #19970 [deployed] (verified: hand-shipped, E2E curl both modes returned correct browser_actions blocks)
+- #19898 [deployed] (verified: hand-shipped, content.js extract verified + on-demand injection fallback added)
+- #19896 [deployed] (verified: reconcile status=deployed)
+- #19899 [deployed] (verified: reconcile status=deployed)
+- #19900 [deployed] (verified: reconcile status=deployed)
+- #19919 [deployed] (verified: reconcile status=deployed)
+
+Open threads to drive next:
+1. #20376 [proposed] - fix write_server_file MCP backslash-n unescaping; approve/promote or hand-fix the MCP string handling.
+2. (human-only decision, no idea) - Ruben re-drags the v2.4.0 ZIP into chrome://extensions; side-loaded extensions cannot auto-update.
+
+Reference IDs:
+- Ideas filed: #20376 [proposed]
+- Ideas closed: #19970 [deployed], #19898 [deployed], #19896 [deployed], #19899 [deployed], #19900 [deployed], #19919 [deployed]
+- Files touched: /var/www/emtskills/public/argus-extension/service-worker.js, sidepanel.js, sidepanel.html, manifest.json; /var/www/emtskills/routes/alltastic_api.php; /var/www/emtskills/routes/argus_browser_directive.php; /var/www/emtskills/scripts/argus_rebuild_extension_zip.sh; HANDOFF_NOTES.md
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Argus extension 6 fixes applied
+- [x] RCA filed, #19919 approved
+- [x] #19896 done (default_icon present)
+- [x] #19899 done (keyboard shortcut, ZIP rebuilt)
+- [x] #19900 — Add auto-cron ZIP rebuild (verified working)
+- [x] #19898 done (content.js extract function verified solid)
+- [x] Rebuild final ZIP with all changes
+- [x] Fix CORS + SameSite auth root cause
+- [x] Add search_sessions backend handler
+- [x] Authenticated E2E test matrix (5/5 pass)
+- [x] Fix isAjax text/plain JSON-401 gap
+- [x] Fix cron tempnam + rename bugs
+- [x] Update HANDOFF_NOTES.md
+- [x] Wire extension into real Argus backend (argus_browser_directive.php + alltastic_api.php browser_context) — #19970 deployed
+- [x] E2E verify browser-control path (read-page + navigate block emission)
+- [x] Fast-path model knob (argus_ext_model) + deepseek-v4-pro latency fix — 39.9s → 3.0s, E2E verified
+- [x] v2.4 lockup root cause fixed (raw-LF service-worker.js repaired, node --check passes)
+- [x] Fast/Thinking mode toggle shipped (panel UI + SW + backend allowlist), E2E both modes
+- [x] Rebuild-script JS syntax gate added; ZIP v2.4.0 rebuilt + verified
+- [x] Idea #20376 filed; GATE B reconcile done; rule-91 validation ALL PASSED
+</task_progress>
+</attempt_completion>
+```
+
+### `1785456423435` — 7/30/2026, 7:28:17 PM PT — 300 turns
 
 **Original task:**
 
@@ -212,33 +376,31 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 See Vicky's chats regarding EMT and Refresher schedules in Chat 55 and repair
 ```
 
-**Ideas referenced:** #003366, #0369, #047857, #059669, #0891, #14532, #15803, #166534, #177825, #19919 [executing], #20247, #20272, #20297, #20311, #20313 [executing], #20314 [executing], #20315 [executing], #20317 [executing], #20326 [executing], #20327 [executing], #20346, #20358 [proposed], #2196, #2563, #3222, #3223, #3226, #3227, #3230, #3231, #3233, #334155, #374151, #4338, #475569, #495057, #64748, #8211, #92400
+**Ideas referenced:** #003366, #0369, #047857, #059669, #0891, #14532, #15803, #166534, #177825, #19919 [executing], #20247, #20272, #20297, #20311, #20313 [executing], #20314 [executing], #20315 [executing], #20317 [executing], #20326 [executing], #20327 [executing], #20346, #20358 [proposed], #2196, #2563, #3222, #3223, #3226, #3227, #3230, #3231, #3233, #334155, #374151, #4338, #475569, #495057, #64748, #8211, #8217, #92400
 
 **Last PICKUP PROMPT:**
 
 ```
-untability SLA ladder (#20327)
+es pending your instruction.**
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #1778250911122 — Investigate and repair Vicky's reported EMT/Refresher schedule issues from Chat 55.
+Pick up task — EMT & Refresher Schedules repair (Chat 55)
 
-Where we left off (verified 2026-07-30 17:59 PT):
-- All 6 empty refresher sites now have 42 future class schedule entries through 2026-09-12
-- e2PDF plugin confirmed active on emsuniversity.com, tab-not-showing was transient
-- Idea #20358 [proposed] filed for auto-populate recurring schedules
+Where we left off (verified 2026-07-30 19:27 PT):
+- Refresher schedules: all 9 sites working (48 VILT entries added through Sept 12, emtrefresher.com 404 fixed)
+- Boot Camp schedules: NO changes made. Gap exists Jul 19–Aug 17 between *19BC and *23BC cycles.
+- e2PDF plugin: verified active on emsuniversity.com (index 10 in active_plugins array)
 
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #20358 [proposed] — Build auto-populate cron for recurring Saturday VILT refresher schedules (template: Zoom 3464320055, $197.50, VILT Online, advance date weekly). Currently Vicky must manually add dates via Mass Add Classes tool or she forgets, causing 2-week schedule gaps.
-2. #20327 [executing] — Collection accountability SLA re-ping ladder (30 min no-comment -> Vicky -> Jon)
-3. #20315 [executing] — Remove hardcoded Discord token from api/shifts.php
+Open threads:
+1. #20358 [proposed] — Refresher schedule auto-population to prevent future empty pages (auto-generate recurring Saturday VILT entries)
+2. Boot Camp Aug 8 gap — pending Ruben's instruction on whether/how to fill
 
 Reference IDs:
-- File: `/var/www/emtskills/routes/website_pricing.php` (Mass Add Classes UI + schedule management)
-- File: `/var/www/emtskills/cron/check_website_schedules.php` (detects empty schedules, creates tickets but doesn't auto-fill)
-- Table: `website_class_schedules` in `admin_portal` (48 rows inserted this session)
-- DB: `wordpress_2` / `LzDe7pTO_options.active_plugins` — e2pdf/e2pdf.php confirmed active
+- Ticket: (none filed — this was a proactive repair from Chat 55 messages)
+- Ideas filed: #20358
+- Files touched: /var/www/vhosts/emtrefresher.com/httpdocs/wp-content/mu-plugins/schedule-shortcode.php, wordpress_2.LzDe7pTO_posts (classschedule page ID 5770), admin_portal.website_class_schedules
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -246,7 +408,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785452265627` — 7/30/2026, 6:43:34 PM PT — 450 turns
+### `1785452265627` — 7/30/2026, 6:54:52 PM PT — 484 turns
 
 **Original task:**
 
@@ -256,7 +418,7 @@ explain how this student has a Moodle Completion Date but does not have a printe
 How an you finish moodle and not print the certiicate?
 ```
 
-**Ideas referenced:** #11782, #14847, #16437, #16613, #17537, #17546, #17619 [deployed], #18693, #18743, #18806, #18836, #18936, #20331 [queued], #20338 [queued], #20346 [proposed], #20349 [proposed], #20357 [proposed], #20362 [rejected], #20366 [proposed], #260730, #9086, #9168, #9244, #9339, #9831
+**Ideas referenced:** #11782, #14847, #16437, #16613, #17537, #17546, #17619 [deployed], #18693, #18743, #18806, #18836, #18936, #20331 [queued], #20338 [queued], #20346 [proposed], #20349 [proposed], #20357 [proposed], #20362 [rejected], #20366 [proposed], #260730, #9086, #9168, #9244, #9306 [deployed], #9339, #9831
 
 **Last PICKUP PROMPT:**
 
@@ -288,68 +450,6 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785295028411` — 7/30/2026, 6:43:06 PM PT — 1387 turns
-
-**Original task:**
-
-```
-What outstanding build issues exist for the Broser Extension for Argus? What else do you recommend? Can you do some work and testing on it to improve it more? Make sure it's wired into actual Argus as well:
-
-https://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome
-```
-
-**Ideas referenced:** #0000, #10003, #10005, #10108, #10182, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12301, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #127908, #1281, #128193, #128203, #128206, #128263, #128266, #128275, #12900, #1309, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14000, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16213, #16263, #16584, #16589, #16590, #16602, #16625, #16646, #16680, #16715, #16716, #16717, #17078, #17307, #17342, #17345, #17669, #17672, #17673, #17691, #17697, #17741, #17746, #17749, #17751, #178544, #1807, #1820, #18328, #18337, #18360, #18388 [executing], #18396 [proposed], #18397 [proposed], #18398 [proposed], #1840, #1857, #18670, #18671, #18687, #18688, #18745, #18770, #1878, #18930 [proposed], #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19370, #19407, #1952, #19585, #19670, #19686, #19896 [proposed], #19898 [proposed], #19899 [proposed], #19900 [proposed], #19901 [proposed], #19919 [proposed], #19920 [proposed], #19970 [deployed], #19999 [approved], #2006, #20079 [deployed], #20103 [proposed], #2071, #2079, #21262, #238636, #274160, #30363, #34495, #6164, #69707, #7490, #7505, #7513, #7554, #8211, #8365, #8942, #9650, #9654, #9660, #9689, #9706, #9733, #9889, #9910, #9934
-
-**Last PICKUP PROMPT:**
-
-```
-sult|tool_call|tool)[^>]*>#i', ' ', $etext));\n                if (preg_match('#PICKUP PROMPT#i', $etext)) { $etext = trim((string)preg_replace('#={10,}.*#s', '', $etext)); }\n                if ($etext === '') { $etext = 'Done.'; }\n                try { $portalDb->prepare(\"INSERT INTO argus_audit_log (user_email, action_type, action_name, args, result_summary, success, duration_ms, mode) VALUES (?, 'tool', 'terminal_query', ?, ?, 1, 0, 'extension')\")->execute([$userEmail, json_encode(['query' => mb_substr($query, 0, 200)]), mb_substr($etext, 0, 500)]); } catch (Exception $ae) {}\n                if ($streamMode) {\n                    ($GLOBALS['argus_progress_cb'])('answer', ['response' => $etext, 'model' => 'frankenstein-llm', 'session' => $streamSession, 'tool_calls' => 0]);\n                    ($GLOBALS['argus_progress_cb'])('done', []);\n                } else {\n                    echo json_encode(['success' => true, 'response' => $etext, 'model' => 'frankenstein-llm', 'tool_calls' => 0]);\n                }\n                exit;\n            } catch (Throwable $extEx) {\n                error_log('terminal_query extension fast-path Throwable: ' . $extEx->getMessage());\n                // fall through to the full pipeline on error\n            }\n        }\n\n'''\nsrc = src.replace(anchor, fastpath + anchor, 1)\nopen(p, 'w').write(src)\nprint('inserted fast path')\nPYEOF\nsudo php -l /var/www/emtskills/routes/alltastic_api.php"}
-</arguments>
-</use_mcp_tool>
-```
-
-### `1785360672171` — 7/30/2026, 6:41:21 PM PT — 604 turns
-
-**Original task:**
-
-```
-For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? 
-
-Also how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?
-```
-
-**Ideas referenced:** #20032 [proposed], #20033 [proposed], #20038, #20045 [proposed], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20052 [proposed], #20080, #20081 [proposed], #20094, #20279 [proposed], #20289 [proposed], #20294 [proposed], #20296 [proposed], #20297, #20316 [proposed], #20320 [proposed], #20321 [proposed], #20322 [proposed], #20323 [proposed], #20325 [deploying], #20329 [proposed], #20370 [queued]
-
-**Last PICKUP PROMPT:**
-
-```
- succeeded multiple times.
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task Telephony improvements — finish #20050 topic-based routing, then monitor real-caller results of the deployed VAPI prompt.
-
-Where we left off (verified 5:45 PM PT 7/30):
-- #20045 [deployed] — vapi fallback type fix on disk
-- #20046 [deployed] — pre-call prospect detection on disk
-- VAPI prompt [deployed] — firstMessage/system prompt verified live
-
-Open threads to drive next:
-1. #20370 [queued] — build #20050 topic-based human routing (refund/complain/charge/lawyer/stop → agent queue)
-2. #20081 [proposed] — voice A/B test across Ronald/Katie/Eric/Bella; Eric returns 401 (voice id may be deleted, #20322)
-3. #20047/49/51 [deployed] — monitor next 48h for hangup-rate and success-score deltas
-
-Reference IDs:
-- Ideas filed: #20032, #20033, #20045, #20046, #20047, #20049, #20050, #20051, #20081, #20279, #20289, #20320, #20321, #20322, #20323, #20325, #20370
-- Files touched: /var/www/emtskills/api/telephony/twiml_inbound.php, VAPI assistant 6ee87bdb-9d70-424d-93dc-a15daa824bbf
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```

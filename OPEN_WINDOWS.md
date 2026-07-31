@@ -6,18 +6,21 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/31/2026, 3:07:01 PM PT | window: last 72h | 102 tasks | index total 347 (parsed 7, cached 340)
+Generated: 7/31/2026, 4:07:01 PM PT | window: last 72h | 103 tasks | index total 350 (parsed 6, cached 344)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785463237084` | 7/31/2026, 3:06:56 PM | 197 | 798KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
+| `1785463237084` | 7/31/2026, 4:07:00 PM | 399 | 1766KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
+| `1785531619110` | 7/31/2026, 4:06:43 PM | 327 | 22964KB | The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "servi |
+| `1785537564406` | 7/31/2026, 4:06:21 PM | 179 | 3146KB | #Argus |
+| `1785528867234` | 7/31/2026, 3:56:57 PM | 482 | 1389KB | Saying it is dismissed is not right. Just say it's moot. Then this way we don't call it di |
+| `1785529983485` | 7/31/2026, 3:40:49 PM | 375 | 981KB | Make sure that you are consulting the SLS so that incorrect information does not persist.  |
+| `1785537526001` | 7/31/2026, 3:38:46 PM | 1 | 14KB | #Argus |
+| `1785537361555` | 7/31/2026, 3:36:33 PM | 2 | 4KB | What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor  |
+| `1785465245461` | 7/31/2026, 3:34:55 PM | 774 | 3026KB | check jon's argus 80% PD issues. says not resolved yet.  |
 | `1785530188751` | 7/31/2026, 3:06:16 PM | 226 | 919KB | See the Jon and Cori SMS chat regarding EMT classes suppsedly with the wrong dates posted  |
-| `1785531619110` | 7/31/2026, 3:05:22 PM | 193 | 10154KB | The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "servi |
 | `1785535349176` | 7/31/2026, 3:03:57 PM | 8 | 17KB | root into wopr and give me apple's username and password for webmail for email: |
 | `1785441507395` | 7/31/2026, 2:58:00 PM | 168 | 335KB | Argus failure? Cites technical issues but doesn't not correct them with appropriate CFA lo |
-| `1785528867234` | 7/31/2026, 2:57:14 PM | 324 | 933KB | Saying it is dismissed is not right. Just say it's moot. Then this way we don't call it di |
-| `1785529983485` | 7/31/2026, 2:57:01 PM | 327 | 866KB | Make sure that you are consulting the SLS so that incorrect information does not persist.  |
-| `1785465245461` | 7/31/2026, 2:01:24 PM | 724 | 2149KB | check jon's argus 80% PD issues. says not resolved yet.  |
 | `1785375877050` | 7/31/2026, 1:59:50 PM | 2361 | 9279KB | #GLM |
 | `1785363426908` | 7/31/2026, 1:26:46 PM | 1042 | 3843KB | #EMT Webforms/Payments |
 | `1785435661707` | 7/31/2026, 1:11:29 PM | 2170 | 7588KB | There's grievances getting lost because of all these categories in here. https://emsuniver |
@@ -110,14 +113,12 @@ Generated: 7/31/2026, 3:07:01 PM PT | window: last 72h | 102 tasks | index total
 | `1785279405884` | 7/28/2026, 5:11:26 PM | 330 | 1012KB | # Full Session Summary — All Issues Covered |
 | `1785283734874` | 7/28/2026, 5:10:20 PM | 11 | 33KB | Quickbooks seems to be blocking their own Invoice Payments filled out from their own syste |
 | `1785270520347` | 7/28/2026, 4:20:05 PM | 172 | 2037KB | I need a button on Telephony where i turn off AI from answering first in Admin areas Red b |
-| `1785267857397` | 7/28/2026, 3:55:58 PM | 480 | 1647KB | Link for instructor login on top right of emsuniversity.com does not go to the proper plac |
-| `1785266982412` | 7/28/2026, 3:12:43 PM | 148 | 652KB | Do we have a page or tool that helps us to calculate the STRF quarterly reports? If so, ca |
 
 ---
 
 ## Per-window detail
 
-### `1785463237084` — 7/31/2026, 3:06:56 PM PT — 197 turns
+### `1785463237084` — 7/31/2026, 4:07:00 PM PT — 399 turns
 
 **Original task:**
 
@@ -127,91 +128,46 @@ AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/instit
 Odd that it's not there next to the 4/ 13 open complaint. Anyway yeah that needs to be repopulated back in there along with a response that was already sent as well as the one that you drafted for this new issue that was due on 728. You might have to check the desktop if you can't find the 
 ```
 
-**Ideas referenced:** #059669, #111827, #13661, #1368, #16127, #16134, #16135, #16160, #166534, #16957, #19587, #19595 [executing], #19599, #20393 [approved], #25226, #2563, #26211, #4111, #450438, #475569, #600179, #623992, #64748, #92400
+**Ideas referenced:** #0369, #059669, #0891, #111827, #13661, #1368, #1565, #15803, #16127, #16134, #16135, #16160, #166534, #16957, #19587, #19595 [executing], #19599, #20393 [approved], #25226, #2563, #26211, #334155, #4111, #450438, #475569, #600179, #623992, #6366, #64748, #92400
 
 **Last PICKUP PROMPT:**
 
 ```
-mental_Response_2026-05-29.pdf
+e style with your e-signature.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — AZDHS July 2026 NOI: Finalize + Send Consolidated Response (DUE TODAY 7/31).
 
-Where we left off (verified 2026-07-31 04:14 PT):
-- Investigation #17 (azdhs-noi-2026-07-13) fully populated in DB: 1 compliance_investigations row + 3 response rounds (#133 received, #134 extension sent, #135 draft proposal)
-- R2 PDF formatting fixed (letter size + emsulogo5.png injected; matches R1 aesthetics)
-- Response proposal: /var/www/emtskills/uploads/compliance/july2026_noi/RESPONSE_PROPOSAL_20260713.body.md
-- Extension request: /var/www/emtskills/uploads/compliance/july2026_noi/EXTENSION_REQUEST_20260714.txt
-- Tracker updated: /var/www/emtskills/routes/_view_azdhs_noi_response_tracker.php (deadline 7/31, EXTENDED badge)
-- Compliance dashboard: institutional_compliance.php?tab=investigations&entity=azdhs shows both April (#1, 10 rounds) and July (#17, 3 rounds)
+Pick up task #20393 — AZDHS July 2026 NOI response, DUE TODAY 7/31.
+
+Where we left off (verified 2026-07-31 15:58 PT):
+- Investigation #17 `azdhs-noi-2026-07-13` exists with 3 response rounds (#133 received / #134 extension sent / #135 draft)
+- CONFIRMED MISSING: AZDHS original NOI letters. Round #133 `file_path` is NULL. Searched ticket_attachments (all July 8-15 attachments are student reflection letters), uploads/tickets scanned PDFs, imessage_messages, Google Drive. Zero hits. Source was 8 iMessage photos in /tmp which were wiped.
+- CONFIRMED: no Round 2 exists for July 2026. Only one draft (#135, the 7/13 markdown proposal at `uploads/compliance/july2026_noi/RESPONSE_PROPOSAL_20260713.body.md`)
+- SCOPE ERROR CORRECTED: `AZ_NOI_Round2_Supplemental_Response_2026-05-29.pdf` belongs to investigation #1 (April NOI), not this matter. It was reformatted (logo fix, Letter size, Ruben e-signature embedded) — good work but wrong document for today's deadline.
+- Ruben's e-signature is extracted and saved at `uploads/compliance/regulator_correspondence/ruben_major_signature.png` (verified diff=0.0 vs F01-13067 signed form), reusable for the real response.
 
 Open threads to drive next:
-1. #20393 [approved] [P0] — 5 items to TRANSMIT by end of day 7/31:
-   (a) DB verify named students: Ivan Vasquez 25226W-34, Desiree Nettles, Reid Brenza, Benjamin Eckstein Course 26211FT — completion dates, NREMT ATT, contact logs from moodle_c_live
-   (b) Confirm EMS-26-0501 Alpine Fire District = Northland Pioneer College, NOT EMSU. If confirmed → 1-paragraph "wrong institution" response
-   (c) Reconcile TKT-12390 Anna Vasquez escalation with EMS-26-0493
-   (d) Ruben final legal review + signature
-   (e) TRANSMIT to Lance Bevins (email + certified mail) per .clinerules/08
+1. #20393 [blocked] — BLOCKER: need AZDHS original letters from Ruben (re-forward email or re-send photos). Unblocker = Ruben. Once received: OCR → save to `uploads/compliance/july2026_noi/` → UPDATE compliance_investigation_responses SET file_path WHERE id=133 → letters appear on investigations page.
+2. #20393 [blocked] — Build the July 2026 consolidated response PDF: convert `RESPONSE_PROPOSAL_20260713.body.md` to R1 house style (logo at top:0.12in, Letter 612x792, margins 0.85in/0.9in, serif body, "Best, &c" + e-signature data-URI). Generation approach that works: python3 script written via `write_server_file` using `chr(10)` for newlines, then `wkhtmltopdf --page-size Letter -T 0.85in -B 0.85in -L 0.9in -R 0.9in --enable-local-file-access`.
+3. #20393 [blocked] — Pre-send verification: DB-verify Ivan Vasquez 25226W-34, Desiree Nettles, Reid Brenza, Benjamin Eckstein (course 26211FT) completion dates + NREMT elevation; confirm EMS-26-0501 concerns Northland Pioneer College not EMSU; reconcile TKT-12390 (Anna Vasquez escalation, closed 7/1) with EMS-26-0493.
+4. (human-only decision — no idea) — Ruben signs and transmits to Lance Bevins (lawrence.bevins@azdhs.gov, cc brent.caswell@azdhs.gov) before midnight 7/31.
 
 Reference IDs:
-- Investigation: #17 (azdhs-noi-2026-07-13), #1 (azdhs-noi-2026-04-13)
-- Response rounds: #133 (received), #134 (sent extension), #135 (draft proposal)
-- Idea filed: #20393 (orchestrator_ideas)
-- Files touched: institutional_compliance.php, InvestigationsHydrator.php, _view_azdhs_noi_response_tracker.php, RESPOSE_PROPOSAL_20260713.body.md, EXTENSION_REQUEST_20260714.txt, AZ_NOI_Round2_Supplemental_Response_2026-05-29.html + .pdf
+- Investigations: #17 (azdhs-noi-2026-07-13, July, DUE TODAY), #1 (azdhs-noi-2026-04-13, April, closed-out)
+- Response rounds: #133 (received, file_path NULL), #134 (extension sent), #135 (draft proposal)
+- Ideas filed: #20393 [blocked]
+- Related ticket: TKT-20260625-A1402B7F (id 12390, Anna Vasquez escalation re 25226W-34)
+- Files touched: `uploads/compliance/july2026_noi/RESPONSE_PROPOSAL_20260713.body.md`, `uploads/compliance/july2026_noi/EXTENSION_REQUEST_20260714.txt`, `uploads/compliance/regulator_correspondence/AZ_NOI_Round2_Supplemental_Response_2026-05-29.{html,pdf}`, `uploads/compliance/regulator_correspondence/ruben_major_signature.png`, `routes/_view_azdhs_noi_response_tracker.php`, `personnel/institutional_compliance.php`
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
 
-### `1785530188751` — 7/31/2026, 3:06:16 PM PT — 226 turns
-
-**Original task:**
-
-```
-See the Jon and Cori SMS chat regarding EMT classes suppsedly with the wrong dates posted for Boot Camp on the various schedules and advise what's happening with that.
-```
-
-**Ideas referenced:** #0056, #11998, #155724, #1565, #16732, #19017, #1976, #20578 [queued], #20593 [deployed], #20606 [queued], #20607, #218838, #262220, #2640, #3295, #3300, #3336, #3337, #3338, #3339, #334155, #37474, #495057, #64748, #856404
-
-**Last PICKUP PROMPT:**
-
-```
-n, no drop/fail/transfer flags
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Cancel 8/8 Boot Camp classes + wire Cancel-class button (Ruben-approved).
-
-Where we left off (verified 3:05 PM PT 7/31/2026):
-- Display bug FIXED + verified: view_course_schedules.php now renders all 10 rows (null-guarded 8 strtotime sites, backup .bak-20260731-1413)
-- RCA COMPLETE: 8/8 BC rows (26222BC-26922BC, ids 531-538) were created 7/30 19:04:20 by a Cline SSH session writing /tmp/_generate_bootcamp_schedules.php with $startDate='2026-08-08' — NOT cron, NOT CSV import, NOT web form
-- Ruben approved: cancel the 8/8 classes (8/3 is gone)
-- 2 affected students: Liliana Frausto (26222BC Tempe, lilyfrost86@gmail.com, 213-999-6131) + Frank Heald (26922BC-01 DFW, frankraymondheald123@gmail.com, +19727303060) — list provided to Vicky
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #20606 [queued] — Remove/cancel 26222BC-26922BC from Course_Schedules so they disappear from ALL EMT website schedule pages (verify californiaemt.com, arizonaemt.com, texasemt/DFW sites, Team Hub all pull from DB — website_dropdown_rules.php domain map). DELETE rows vs mark cancelled — get Ruben's call on hard delete vs soft-cancel.
-2. #20606 [queued] — Add Cancel Class button next to Edit/Delete on view_course_schedules.php: cancels class, notifies students (email/SMS), offers alternate course join, writes audit record.
-3. #20593 [deployed] — Documented strtotime NULL fix; nothing further unless regression appears.
-4. #20578 [queued] — Update BC start dates 8/8→8/3 — SUPERSEDED by Ruben's cancel decision; close/repurpose.
-
-Reference IDs:
-- Ticket: none (imessage chat 84, Cori report; ops chat 55 items #3295/#3300)
-- Ideas filed: #20578, #20593, #20606, #20607
-- Files touched: /var/www/emtskills/google-sheets-to-mysql-migration/view_course_schedules.php (+ .bak-20260731-1413)
-- RCA artifact: /tmp/_generate_bootcamp_schedules.php (on WOPR)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785531619110` — 7/31/2026, 3:05:22 PM PT — 193 turns
+### `1785531619110` — 7/31/2026, 4:06:43 PM PT — 327 turns
 
 **Original task:**
 
@@ -270,6 +226,164 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Sustained decode 2.49 tok/s
 - [x] Close false impl_failed #20553, #20536, #20517, #20506
 - [x] Rule-91 gate ALL PASSED + GAT
+```
+
+### `1785537564406` — 7/31/2026, 4:06:21 PM PT — 179 turns
+
+**Original task:**
+
+```
+#Argus
+
+Here is the comprehensive build-and-ship handoff. Tags below are server-derived from a live GATE B reconcile run seconds ago, not hand-written.
+
+Two more Argus response-quality fixes shipped this session: **ARGUS_NO_REASONING_LEAK_V1** (the prompt had zero anti-leak guidance, grep count 0) and **ARGUS_NO_DEADEND_V1** (Jon was told to "Hit Send again" after 4 failed tries, that count is now 0). Both php -l clean, FPM reloaded, backups kept. And #20555 just flipped to impl_failed, making it the **fourth** idea killed by the missing `blocked_reason` column, which moves #20569 to the top o
+```
+
+**Ideas referenced:** #10017, #12430, #14828, #14829, #14834, #14835, #16578, #16594, #177956, #18357, #1850, #19173, #19325, #19490, #19519, #1988, #1996, #2006, #20333 [queued], #20334 [queued], #20388 [queued], #20389 [queued], #20392 [queued], #20393 [deployed], #20405 [queued], #20410 [queued], #20497 [queued], #20500 [queued], #20501 [queued], #20547 [queued], #20549 [queued], #20555 [blocked], #20564 [queued], #20565 [queued], #20569 [proposed], #2084, #2085, #2113, #4517, #6432, #6523, #7925, #9090
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785528867234` — 7/31/2026, 3:56:57 PM PT — 482 turns
+
+**Original task:**
+
+```
+Saying it is dismissed is not right. Just say it's moot. Then this way we don't call it dismissed and just say it's Moot and if they disagree to let us know and we'll resolve it. 
+
+How many students are covered and how many are not? 
+
+
+Rewrote the email with explicit moot framing and filed it as #20566 [proposed], superseding the softer draft. Your instinct was better than mine: moot is a defined procedural outcome, and naming it says plainly that the decision no longer exists, whereas "resolved" implies we weighed the merits and sided with them.
+
+**Subject: Grievance {GRV-NUMBER} - Dismissed 
+```
+
+**Ideas referenced:** #1565, #16069, #178561, #18944, #18951, #19419, #20513 [proposed], #20514 [proposed], #20515 [proposed], #20516 [proposed], #20518 [proposed], #20519 [proposed], #20527 [proposed], #20529 [proposed], #20532 [proposed], #20538 [proposed], #20548 [proposed], #20552 [proposed], #20558 [proposed], #20566 [proposed], #20568 [proposed], #20571 [approved], #20573 [proposed], #20574 [proposed], #20575 [proposed], #20580 [proposed], #20581 [proposed], #20582 [proposed], #20587 [proposed], #20588 [proposed], #20595 [proposed], #20596 [proposed], #20597 [proposed], #20601 [proposed], #20608 [proposed], #20610 [proposed], #20612 [proposed], #20615 [proposed], #20616 [proposed], #20617 [proposed], #6785, #9191, #92400
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785529983485` — 7/31/2026, 3:40:49 PM PT — 375 turns
+
+**Original task:**
+
+```
+Make sure that you are consulting the SLS so that incorrect information does not persist. Same with the mcp's.
+
+I also agree with your proposed ideas so go ahead and approve those and then leverage rule 267 to bring the items to conclusion we need to bring all of these to conclusion to end and then do comprehensive testing to make sure that everything is fixed
+
+
+Comprehensive handoff below. I re-verified every claim against live code before writing it, including re-checking the false `deployed` tags and confirming the escalation cron is still running (clean run at 13:20).
+
+════════════════════
+```
+
+**Ideas referenced:** #0000, #10086, #10092, #10096, #10103, #10110, #10116, #10121, #10123, #10125, #10132, #1218, #12993, #13025, #13030, #13040, #13044, #13045, #13057, #13873, #13976, #16608, #16610, #17130 [superseded], #17537 [rejected], #17580, #178501, #18132 [deployed], #19125, #19173, #19921 [approved], #20055 [deployed], #20056 [deployed], #20128 [deployed], #20130 [queued], #20134, #20183, #20313 [deployed], #20314 [queued], #20315 [deployed], #20317 [deployed], #20326 [deployed], #20327 [deployed], #20357, #20419 [deployed], #20420 [deployed], #20491 [proposed], #20539 [rejected], #20551 [proposed], #20556 [queued], #20577 [executing], #20579 [executing], #20591 [executing], #20592 [executing], #20600 [executing], #20613 [proposed], #22606, #22647, #4410, #4414, #4422, #4428, #4929, #4970, #4972, #4977, #4988, #4991, #4992, #5588, #5603, #5604, #5704, #5705, #5721, #5722, #5920, #9086, #9168, #9339
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785537526001` — 7/31/2026, 3:38:46 PM PT — 1 turns
+
+**Original task:**
+
+```
+#Argus
+
+Here is the comprehensive build-and-ship handoff. Tags below are server-derived from a live GATE B reconcile run seconds ago, not hand-written.
+
+Two more Argus response-quality fixes shipped this session: **ARGUS_NO_REASONING_LEAK_V1** (the prompt had zero anti-leak guidance, grep count 0) and **ARGUS_NO_DEADEND_V1** (Jon was told to "Hit Send again" after 4 failed tries, that count is now 0). Both php -l clean, FPM reloaded, backups kept. And #20555 just flipped to impl_failed, making it the **fourth** idea killed by the missing `blocked_reason` column, which moves #20569 to the top o
+```
+
+**Ideas referenced:** #20333 [queued], #20334 [queued], #20388 [queued], #20389 [queued], #20392 [queued], #20393 [deployed], #20405 [queued], #20410 [queued], #20497 [queued], #20500 [queued], #20501 [queued], #20547 [queued], #20549 [queued], #20555 [blocked], #20564 [queued], #20565 [queued], #20569 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785537361555` — 7/31/2026, 3:36:33 PM PT — 2 turns
+
+**Original task:**
+
+```
+What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor for 50 minutes
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785465245461` — 7/31/2026, 3:34:55 PM PT — 774 turns
+
+**Original task:**
+
+```
+check jon's argus 80% PD issues. says not resolved yet. 
+
+check Cori argus building telephony like system for Cyra
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16613, #16698, #16844, #17430, #18312, #18326, #18329, #1880, #18806, #1884, #18934, #18935 [rejected], #19403, #19415, #19416, #19487, #19518, #19558, #19604, #19657 [deployed], #19837, #19838, #19840, #19910 [executing], #19916, #19918 [executing], #19920 [executing], #19927, #19928, #19970, #19978, #20047, #20049, #20051, #20331 [rejected], #20333 [proposed], #20334 [proposed], #20338 [rejected], #20346 [rejected], #20349 [rejected], #20357 [rejected], #20362 [rejected], #20366 [rejected], #20376 [proposed], #20388 [proposed], #20389 [proposed], #20392 [proposed], #20393 [approved], #20394 [deployed], #20405 [executing], #20406, #20410 [queued], #20411, #20497 [executing], #20500 [pending], #20501 [pending], #20547 [pending], #20549 [executing], #20555 [executing], #20564 [executing], #20565 [executing], #20569 [proposed], #3202, #3230, #3231, #3239, #3286, #3289, #3294, #3295, #3305, #3306, #3307, #3316, #3317, #3319, #3595, #9202, #9306
+
+**Last PICKUP PROMPT:**
+
+```
+20569 to the top of the queue.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+BUILD AND SHIP WINDOW. Drive every item below to done, leveraging rule 267 offload. Reconcile all filed ideas before completing.
+
+Where we left off (verified 2026-07-31 15:33 PT):
+
+PRIORITY 1, #20569 [proposed], UNBLOCKS EVERYTHING ELSE. Root cause found and NOT yet fixed: there is NO blocked_reason column on orchestrator_ideas. SHOW COLUMNS returns only dev_stage from the reason/error/log/block family, so every impl_failed is structurally forced to be silent. FOUR ideas died this way this session: #20549, #20564, #20565, and #20555 which flipped to impl_failed during the final reconcile. BUILD: ALTER TABLE orchestrator_ideas ADD COLUMN impl_error TEXT NULL, ADD COLUMN impl_failed_at DATETIME NULL. Then patch every writer that sets dev_stage='impl_failed' to populate impl_error with the exception plus the stage it died in. Writers located: lib/OrchestratorRebaseEngine.php, lib/RubenQueueDrainer.php, lib/RubenIdeaETA.php. Then surface impl_error through get_idea_progress and idea_promote_and_run so a caller sees the reason without reading the DB. Then classify infrastructure versus builder crash and auto-route infrastructure work to rule 267 GATE C hand-ship instead of failing silently. Then backfill-report how many ideas sit in impl_failed with no reason. I did not run the ALTER because it is a schema change on the orchestrator core table and Ruben should see it first.
+
+PRIORITY 2, DAYSTROM MINUTES, Jon asked and it is still broken. daystrom_sessions returns zero recent rows and there is NO daystrom entry in crontab. The minutes are not compiling because nothing triggers the harvest. Tables exist and are built: daystrom_minutes_recipients, daystrom_harvest_log, daystrom_harvest_health, daystrom_sessions, daystrom_session_outcomes. BUILD: locate the harvest or minutes script under /var/www/emtskills/cron, run it by hand to confirm it works, then schedule it. Same failure shape as the Argus repair queue having no consumer.
+
+PRIORITY 3, COLLATION AUDIT, likely the true cause of QB mis-reconciliation. Every join between the payment tables and students.email throws ERROR 1267 Illegal mix of collations, utf8mb4_general_ci versus utf8mb4_unicode_ci. I had to force COLLATE on both sides to get any rows at all. BUILD: grep cron/cron_payment_reconciliation.php, cron/qb_payment_sync.php and lib/AuthnetQbAutoMatcher.php for email joins and check whether they force collation. If they do not, a paid student silently matches nothing and looks unpaid, which is exactly the symptom Vicky reported. Fix by forcing COLLATE at the join or normalizing column collations.
+
+PRIORITY 4, ARGUS RESPONSE QUALITY, shipped but NOT live-verified. Two fixes went in today. ARGUS_NO_REASONING_LEAK_V1 at routes/alltastic_api.php line 5085 bans planning leakage (User asks, They likely refer to, So first call X) and announcing which tool it is about to call, and requires investigate-silently then report cause plus action. ARGUS_NO_DEADEND_V1 at routes/argus_download.php line 1127 replaced the Hit Send again dead-end with an auto-requeue message, verified Hit Send again count is now 0. Both php -l clean, FPM reloaded, backups .bak-noleak-20260731-1319* and .bak-deadend-20260731-1532*. NOT LIVE-VERIFIED because POSTing to alltastic_api.php as MasterAdmin returned 401 twice, the API path enforces stricter session validation than the page path. NEXT: have Ruben or Jon run a real quer
+```
+
+### `1785530188751` — 7/31/2026, 3:06:16 PM PT — 226 turns
+
+**Original task:**
+
+```
+See the Jon and Cori SMS chat regarding EMT classes suppsedly with the wrong dates posted for Boot Camp on the various schedules and advise what's happening with that.
+```
+
+**Ideas referenced:** #0056, #11998, #155724, #1565, #16732, #19017, #1976, #20578 [queued], #20593 [deployed], #20606 [queued], #20607, #218838, #262220, #2640, #3295, #3300, #3336, #3337, #3338, #3339, #334155, #37474, #495057, #64748, #856404
+
+**Last PICKUP PROMPT:**
+
+```
+n, no drop/fail/transfer flags
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Cancel 8/8 Boot Camp classes + wire Cancel-class button (Ruben-approved).
+
+Where we left off (verified 3:05 PM PT 7/31/2026):
+- Display bug FIXED + verified: view_course_schedules.php now renders all 10 rows (null-guarded 8 strtotime sites, backup .bak-20260731-1413)
+- RCA COMPLETE: 8/8 BC rows (26222BC-26922BC, ids 531-538) were created 7/30 19:04:20 by a Cline SSH session writing /tmp/_generate_bootcamp_schedules.php with $startDate='2026-08-08' — NOT cron, NOT CSV import, NOT web form
+- Ruben approved: cancel the 8/8 classes (8/3 is gone)
+- 2 affected students: Liliana Frausto (26222BC Tempe, lilyfrost86@gmail.com, 213-999-6131) + Frank Heald (26922BC-01 DFW, frankraymondheald123@gmail.com, +19727303060) — list provided to Vicky
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #20606 [queued] — Remove/cancel 26222BC-26922BC from Course_Schedules so they disappear from ALL EMT website schedule pages (verify californiaemt.com, arizonaemt.com, texasemt/DFW sites, Team Hub all pull from DB — website_dropdown_rules.php domain map). DELETE rows vs mark cancelled — get Ruben's call on hard delete vs soft-cancel.
+2. #20606 [queued] — Add Cancel Class button next to Edit/Delete on view_course_schedules.php: cancels class, notifies students (email/SMS), offers alternate course join, writes audit record.
+3. #20593 [deployed] — Documented strtotime NULL fix; nothing further unless regression appears.
+4. #20578 [queued] — Update BC start dates 8/8→8/3 — SUPERSEDED by Ruben's cancel decision; close/repurpose.
+
+Reference IDs:
+- Ticket: none (imessage chat 84, Cori report; ops chat 55 items #3295/#3300)
+- Ideas filed: #20578, #20593, #20606, #20607
+- Files touched: /var/www/emtskills/google-sheets-to-mysql-migration/view_course_schedules.php (+ .bak-20260731-1413)
+- RCA artifact: /tmp/_generate_bootcamp_schedules.php (on WOPR)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
 ### `1785535349176` — 7/31/2026, 3:03:57 PM PT — 8 turns
@@ -356,88 +470,6 @@ Reference IDs:
 - Files touched: none (DB-only reads/updates this session)
 </result>
 </attempt_completion>
-```
-
-### `1785528867234` — 7/31/2026, 2:57:14 PM PT — 324 turns
-
-**Original task:**
-
-```
-Saying it is dismissed is not right. Just say it's moot. Then this way we don't call it dismissed and just say it's Moot and if they disagree to let us know and we'll resolve it. 
-
-How many students are covered and how many are not? 
-
-
-Rewrote the email with explicit moot framing and filed it as #20566 [proposed], superseding the softer draft. Your instinct was better than mine: moot is a defined procedural outcome, and naming it says plainly that the decision no longer exists, whereas "resolved" implies we weighed the merits and sided with them.
-
-**Subject: Grievance {GRV-NUMBER} - Dismissed 
-```
-
-**Ideas referenced:** #16069, #178561, #18944, #18951, #20513 [proposed], #20514 [proposed], #20515 [proposed], #20516 [proposed], #20518 [proposed], #20519 [proposed], #20527 [proposed], #20529 [proposed], #20532 [proposed], #20538 [proposed], #20548 [proposed], #20552 [proposed], #20558 [proposed], #20566 [proposed], #20568 [proposed], #20571 [approved], #20573 [proposed], #20574 [proposed], #20575 [proposed], #20580 [proposed], #20581 [proposed], #20582 [proposed], #20587 [proposed], #20588 [proposed], #20595 [proposed], #20596 [proposed], #20597 [proposed], #20601 [proposed], #6785, #9191, #92400
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785529983485` — 7/31/2026, 2:57:01 PM PT — 327 turns
-
-**Original task:**
-
-```
-Make sure that you are consulting the SLS so that incorrect information does not persist. Same with the mcp's.
-
-I also agree with your proposed ideas so go ahead and approve those and then leverage rule 267 to bring the items to conclusion we need to bring all of these to conclusion to end and then do comprehensive testing to make sure that everything is fixed
-
-
-Comprehensive handoff below. I re-verified every claim against live code before writing it, including re-checking the false `deployed` tags and confirming the escalation cron is still running (clean run at 13:20).
-
-════════════════════
-```
-
-**Ideas referenced:** #0000, #10086, #10092, #10096, #10103, #10110, #10116, #10121, #10123, #10125, #10132, #1218, #12993, #13025, #13030, #13040, #13044, #13045, #13057, #13873, #13976, #16610, #17130 [superseded], #17537 [rejected], #178501, #18132 [deployed], #19125, #19173, #19921, #20055 [deployed], #20056 [deployed], #20128 [deployed], #20130 [queued], #20134, #20183, #20313 [deployed], #20314 [queued], #20315 [deployed], #20317 [deployed], #20326 [deployed], #20327 [deployed], #20419 [deployed], #20420 [deployed], #20491 [proposed], #20539 [rejected], #20551 [proposed], #20556 [queued], #20577 [executing], #20579 [executing], #20591 [executing], #20592 [executing], #20600 [executing], #22606, #22647, #4410, #4414, #4422, #4428, #4929, #4970, #4972, #4977, #4988, #4991, #4992, #5588, #5603, #5604, #5704, #5705, #5721, #5722, #5920, #9086, #9168, #9339
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785465245461` — 7/31/2026, 2:01:24 PM PT — 724 turns
-
-**Original task:**
-
-```
-check jon's argus 80% PD issues. says not resolved yet. 
-
-check Cori argus building telephony like system for Cyra
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16613, #16698, #16844, #17430, #18312, #18326, #18329, #1880, #1884, #18934, #18935 [rejected], #19403, #19415, #19416, #19487, #19518, #19558, #19604, #19657 [deployed], #19837, #19838, #19840, #19910 [executing], #19916, #19918 [executing], #19920 [executing], #19927, #19928, #19970, #19978, #20047, #20049, #20051, #20331 [rejected], #20333 [proposed], #20334 [proposed], #20338 [rejected], #20346 [rejected], #20349 [rejected], #20357 [rejected], #20362 [rejected], #20366 [rejected], #20376 [proposed], #20388 [proposed], #20389 [proposed], #20392 [proposed], #20393 [approved], #20394 [deployed], #20405 [executing], #20406, #20410 [queued], #20411, #20497 [executing], #20500 [pending], #20501 [pending], #20547 [pending], #20549 [executing], #20555 [executing], #20564 [executing], #20565 [executing], #20569 [proposed], #3202, #3230, #3231, #3239, #3286, #3289, #3294, #3295, #3305, #3306, #3307, #3595, #9202, #9306
-
-**Last PICKUP PROMPT:**
-
-```
-gs in the pickup prompt below.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #20569 [proposed], executor repair, plus the Vicky payment escalation.
-
-Where we left off (verified 2026-07-31 13:17 PT):
-- Q1 ANSWERED YES. cron_argus_repair_worker.php is installed and persisted at */5 in crontab logging to /var/log/argus_repair_worker.log. 52 stranded repairs executed, queue 65 to 9 read-only lookups. Subordinate-role actions now execute for real within 5 minutes.
-- MANUAL_OVERRIDE_GUARD_V1 is live in cron/cron_payment_reconciliation.php so a human-cleared suspension is no longer re-applied by the cron.
-- MONEY ESCALATION, HUMAN DECISION REQUIRED. The QB token is HEALTHY (refreshed 29 min ago, valid to 2026-11-09) and the sync IS running, so "QB not syncing" was wrong. Real cause: trigger trg_qb_invoices_void_guard reverts paid-marking for invoices in qb_voided_invoice_quarantine. Jason Pan 26820FT-40 invoice 173178 quarantine reason is "Intuit auto-void risk decline; phantom payment unlinked", the $2,295 QB payment is a PHANTOM, and Authnet shows only $50.00 settled in 120 days. The other 9 students have ZERO payment rows. The guard is CORRECT and was NOT overridden. Access is restored and deadlines extended so no student is stuck, but Vicky's "they are all paid" is not supported by Authnet and needs reconciliation with her.
-- #20549 [deployed]: VISION_LADDER_V1 hand-shipped per GATE C. def line 281, CALLED line 545, py_compile OK, safe restart, /v1/models 200, live probe returned gpt-oss-120b extracting the image text. Backup /etc/litellm/router_hook.py.bak-vision-ladder-20260731-1314*.
-- #20564 [blocked] and #20565 [blocked] BOTH came back impl_failed with no reason, same as #20549 did. Three in one session, a repeat of #19978.
-
-Open threads to drive next:
-1. #20569 [proposed]: repair the executor. Force a reason on every impl_failed, surface it through idea_promote_and_run and get_idea_progress, classify infrastructure versus builder crash, auto-route infrastructure to GATE C, escalate on a second failure, and report how many ideas sit in impl_failed with a null reason.
-2. Human-only decision, no idea: reconcile Vicky's payment claim. Portal, QuickBooks and Authnet disagree. Do not credit or mark paid until someone confirms what evidence she is reading, and decide whether to release the void quarantine for 173178.
-3. #20564 [blocked] and #20565 [blocked]: both need hand-ship or re-file once #20569 makes the failure legible.
-4. #20555 [executing]: delegation hardening. Close the escalation loop so a denial routes to the required_role approver with a deadline, show each role its capability list, add per-role landing queues.
-5. #20500 [queued]: build Cyra's externship-site outreach surface over agency_contacts, create the OutreachSpecialist role, seed the table, purchase the Tempe DID. Ruben decision needed on the number.
-6. #20501 [queued]: ship the argusUnwiredActions Roles-tab badge and CI assertion so a granted action can never again be a silent no-op.
-7. #20388 [queued]: work the 28 actionable PD signoff students with Jon using pd_signoff_list, then pd_nremt_signoff each.
-8. #20410 [queued]: install the durable monotonic permission guard on the permission write path.
-
-Reference IDs:
-- Ideas: #20333 [queued], #20334 [queued], #20388 [queued], #20389 [queued], #20392 [queued], #20393 [deployed], #20405 [queued], #20410 [queued], #20497 [queued], #20500 [queued], #20501 [queued], #20547 [queued], #20549 [d
 ```
 
 ### `1785375877050` — 7/31/2026, 1:59:50 PM PT — 2361 turns
@@ -3620,91 +3652,5 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785267857397` — 7/28/2026, 3:55:58 PM PT — 480 turns
-
-**Original task:**
-
-```
-Link for instructor login on top right of emsuniversity.com does not go to the proper place. Instesd it resolves to: https://emtrefresher.com/emtskills/  (which is 404) - /emtskills folder is at emsuniversity.com. What hallucination caused this? Also Vicky reports because of this matrix and all websites for EMT are down. I'm searching on this now. Fix and do an RCA
-```
-
-**Ideas referenced:** #11925, #128196, #128295, #1426, #15158, #15803, #161818, #162240, #16594, #166534, #178501, #19458, #19460, #19490, #19491, #19495, #19511, #19545, #19558, #19594, #19615, #19690 [deployed], #19704, #19714 [proposed], #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #198754, #2044, #2056, #2084, #2085, #2563, #334155, #374151, #64748, #8212, #8594, #9202, #92400, #9679
-
-**Last PICKUP PROMPT:**
-
-```
-t this kind of false referral.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1785012025445 — EMSU incident wrap-up: all fixes verified + QuickBooks email search complete.
-
-Where we left off (verified 2026-07-28 13:53 PT):
-- Instructor/Student Login links correct on live page ✅
-- Postfix mail queue flushed (374 messages delivered) ✅
-- Zero Intuit/QuickBooks emails TO rubenmajor found today
-- fresnoemt.com = agent hallucination (not an EMSU domain)
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #19791 [proposed] — Comprehensive mu-plugin audit for home_url() paths
-2. #19792 [proposed] — Shared-DB RCA: fix siteurl or define EMSU_SKILLS_BASE_URL
-3. #19794 [proposed] — fresnoemt.com false referral audit
-4. Have Intuit resend the QuickBooks document now that mail queue is clear
-
-Reference IDs:
-- Ideas filed: #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed]
-- Tracking document: /Users/rubenmajor/Desktop/EMSU_issues_tracker_2026-07-28.md
-- Files changed: emsu-modern-design.php, emsu-global-design.php (login links)
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785266982412` — 7/28/2026, 3:12:43 PM PT — 148 turns
-
-**Original task:**
-
-```
-Do we have a page or tool that helps us to calculate the STRF quarterly reports? If so, can you give me the link to that as well as the proposed numbers for the second 1:45 thousand 26 which should include the dates of April 1, 2026 through June 30 2026? See this document for referencehttps://drive.google.com/drive/search?q=raven
-```
-
-**Ideas referenced:** #0369, #0891, #1368, #1565, #15803, #166534, #2563, #334155, #475569, #50169, #5641, #60093, #6366, #64748, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-e-strf
-
-**Due:** July 31, 2026
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — STRF Q2 2026: review filled PDF, reconcile flagged students, file with BPPE.
-
-Where we left off (verified 2026-07-28 3:12 PM PT):
-- Filled PDF: https://emsuniversity.com/STRF_Q2_2026_FILLED_FORM.pdf (2 pages, all line items)
-- Admin portal: emsuniversity.com/personnel/institutional_compliance.php?tab=bppe-strf
-- Server artifacts in /var/www/emtskills/personnel/uploads/institutional_compliance/strf/2026-Q2/
-- Q2 numbers: A=505, B=505, C=419, D=$857,000, E=30, E-charges=$60,000, F=$0.00
-- 5 manual-review students flagged: 26613FT-49, 26813FT-21, 26814T-26, 26613FT-48, 26813FT-52
-
-Open threads to drive next:
-1. (human-only decision - no idea) — Reconcile 5 manual-review students (no QB record); check QuickBooks by name
-2. (human-only decision - no idea) — Upload filled PDF to Google Drive folder and share with Vicky
-3. (human-only decision - no idea) — File BPPE STRF by July 31 deadline
-
-Reference IDs:
-- PDF: https://emsuniversity.com/STRF_Q2_2026_FILLED_FORM.pdf
-- Raven Drive: 1LtNzcSVNzD-YbcTy7qDYVAMILfvq1xW1
-- Server: /var/www/emtskills/personnel/uploads/institutional_compliance/strf/2026-Q2/
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```

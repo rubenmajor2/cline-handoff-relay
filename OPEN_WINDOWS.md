@@ -6,17 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/31/2026, 8:06:43 AM PT | window: last 72h | 118 tasks | index total 341 (parsed 0, cached 341)
+Generated: 7/31/2026, 9:06:58 AM PT | window: last 72h | 117 tasks | index total 342 (parsed 3, cached 339)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1785465245461` | 7/31/2026, 9:06:18 AM | 403 | 1082KB | check jon's argus 80% PD issues. says not resolved yet.  |
+| `1785512899843` | 7/31/2026, 9:04:55 AM | 27 | 191KB | It looks like Klein was updated. When this happens sometimes some of our features that we  |
+| `1785483679627` | 7/31/2026, 8:51:20 AM | 56 | 175KB | yesterday, SSL expired for some parts of emsuniversity.com. Some users still reporting SSL |
 | `1785463237084` | 7/31/2026, 4:15:04 AM | 182 | 766KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
 | `1785295028411` | 7/31/2026, 3:45:07 AM | 1838 | 9684KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
 | `1785483774534` | 7/31/2026, 3:44:47 AM | 72 | 213KB | Play frankenstein doctor of executor for the next 60 minutes (use timestamps) and make sur |
 | `1785360672171` | 7/31/2026, 1:49:48 AM | 928 | 5304KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
-| `1785483679627` | 7/31/2026, 1:36:20 AM | 52 | 165KB | yesterday, SSL expired for some parts of emsuniversity.com. Some users still reporting SSL |
 | `1785399211024` | 7/31/2026, 1:09:39 AM | 1478 | 6661KB | #Julia/Claudia |
-| `1785465245461` | 7/31/2026, 12:41:05 AM | 378 | 1034KB | check jon's argus 80% PD issues. says not resolved yet.  |
 | `1785363426908` | 7/31/2026, 12:38:30 AM | 794 | 3024KB | #EMT Webforms/Payments |
 | `1785435661707` | 7/30/2026, 11:52:21 PM | 1570 | 5684KB | There's grievances getting lost because of all these categories in here. https://emsuniver |
 | `1785452265627` | 7/30/2026, 9:07:53 PM | 522 | 1126KB | explain how this student has a Moodle Completion Date but does not have a printed certiica |
@@ -126,12 +127,105 @@ Generated: 7/31/2026, 8:06:43 AM PT | window: last 72h | 118 tasks | index total
 | `1785258392171` | 7/28/2026, 10:06:54 AM | 6 | 9KB | Rebase and Pickup all tasks here and organize them into copy windows while executing what  |
 | `1785258281753` | 7/28/2026, 10:05:09 AM | 6 | 24KB | # TDSHS |
 | `1785181029165` | 7/28/2026, 9:22:43 AM | 152 | 353KB | ## 9 — #STUDENT · Dan Taylor escalation (Aahana Chakravartti) |
-| `1785180988213` | 7/28/2026, 8:52:06 AM | 116 | 590KB | ## 8 — #SLS · student lifecycle state repair + backlog |
-| `1785183122795` | 7/28/2026, 8:28:39 AM | 769 | 3927KB | Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue ano |
 
 ---
 
 ## Per-window detail
+
+### `1785465245461` — 7/31/2026, 9:06:18 AM PT — 403 turns
+
+**Original task:**
+
+```
+check jon's argus 80% PD issues. says not resolved yet. 
+
+check Cori argus building telephony like system for Cyra
+```
+
+**Ideas referenced:** #16698, #1880, #1884, #18934, #18935 [rejected], #19403, #19415, #19416, #19487, #19518, #19558, #19604, #19657 [deployed], #19837, #19838, #19840, #19910 [executing], #19916, #19918 [executing], #19920 [executing], #19927, #19928, #19970, #20047, #20049, #20051, #20331 [rejected], #20333 [proposed], #20334 [proposed], #20338 [rejected], #20346 [rejected], #20349 [rejected], #20357 [rejected], #20362 [rejected], #20366 [rejected], #20376 [proposed], #20388 [proposed], #20389 [proposed], #20392 [proposed], #20393 [approved], #20394 [deployed], #20405 [executing], #20406, #20410 [queued], #20411, #3202, #3230, #3231, #3239, #3286, #3289, #3294, #3295, #3305, #3306, #3307, #3595, #9306
+
+**Last PICKUP PROMPT:**
+
+```
+ty.com). Vicky now 42 actions.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up SMS follow-up: tell Cori and Vicky about their completed workstreams.
+
+Where we left off (verified 2026-07-31 08:53 PT):
+- No SMS was sent. No send_sms tool available. Cori not notified about Cyra build. Vicky not notified about Admin capability grants or wrongful suspension resolutions.
+- Cyra: mailbox cdixon@emsuniversity.com created, Roundcube at webmail.emsuniversity.com.
+- Vicky: Admin now 42 actions including resolve_fail_bug, extend_exam_deadline, payment_match, refund_request.
+- 9 students fully unsuspended in portal (fail_date=NULL, course_end_date+7d) and Moodle (10 enrolment rows status=0).
+- Permission matrix monotonic: CS=21, Admin=42, ITAdmin=44, ExecAdmin=56, MasterAdmin=60. Zero violations.
+- Sarah Verduzco (instructor, id=140, sverduzco@emsuniversity.com) not relevant to this session.
+
+Open threads:
+1. #20410 [queued]: Install durable monotonic permission guard
+2. #20389 [executing]: Verify Cyra can log into Roundcube
+
+Reference IDs:
+- Ideas: #20333 [executing], #20334 [executing], #20388 [executing], #20389 [executing], #20392 [executing], #20393 [deployed], #20405 [executing], #20410 [queued]
+- Files: argus_action_permissions (201 rows seeded), students.fail_date (9 cleared), user_enrolments.status (4 fixed), students.course_end_date (9 extended)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785512899843` — 7/31/2026, 9:04:55 AM PT — 27 turns
+
+**Original task:**
+
+```
+It looks like Klein was updated. When this happens sometimes some of our features that we had for previous versions get messed up. Can you check on that and see if there's anything that we need to update on our end with regard to our cline rules and other settings?
+```
+
+**Ideas referenced:** #0369, #155724, #177796, #19439, #19518, #1976, #198754, #19919 [executing], #19970, #2026, #20313 [executing], #20314 [executing], #20315 [executing], #20317 [executing], #20326 [executing], #20327 [executing], #20331 [rejected], #20338 [rejected], #20346 [rejected], #20349 [rejected], #20357 [rejected], #20360, #20362 [rejected], #20366 [rejected], #20376 [proposed], #20394 [deployed], #20403 [proposed], #20419, #20420, #20422 [deployed], #20423 [proposed], #20429 [proposed], #20430 [proposed], #20431 [proposed], #475569, #9306
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785483679627` — 7/31/2026, 8:51:20 AM PT — 56 turns
+
+**Original task:**
+
+```
+yesterday, SSL expired for some parts of emsuniversity.com. Some users still reporting SSL certificates bad, getting Not Secure or whatever from Google Chrome at emsuniversity.com/ems and check "Matrix" also at emsuniversity.com/emtskills. Something is off there still. Advise
+```
+
+**Ideas referenced:** #20313, #20317, #20326, #20394 [deployed], #20403 [proposed], #20419, #20422 [deployed], #20429 [proposed], #20431 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+attacks. ~15 minutes in Plesk.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — SSL residual "Not Secure" reports on emsuniversity.com.
+
+Where we left off (verified 2026-07-31 08:50 PT):
+- Full RCA complete: all live certs valid (emsuniversity.com+www shared LE cert, SAN covers both, chain leaf->YR1->Root YR->ISRG X1, notAfter Oct 28 2026); /ems 303->www 200; /emtskills 302->login 200; mail 993/465 valid; port 80 301 everywhere; no mixed content; no HSTS header.
+- Root cause of residual warnings: stale client cache from Jul 29 expired-cert window. Nothing broken server-side.
+- Answered Ruben's follow-up: benefits of HSTS (kills lingering warnings, blocks SSL-stripping, zero maintenance). All WOPR vhosts are HTTPS-ready, safe to enable.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #20429 [proposed] — Enable HSTS on emsuniversity.com. Concrete action: Plesk Domains > emsuniversity.com > SSL/TLS > enable HSTS, or approve idea to implement. Verify: curl -sI https://www.emsuniversity.com/ | grep -i strict-transport-security
+2. #20431 [proposed] — Stale-browser advisory banner on login.php/dashboard + advisory email to active students. Concrete action: deploy via write_server_file on /var/www/emtskills/routes/login.php.
+
+Reference IDs:
+- Ideas filed: #20429 [proposed], #20431 [proposed]
+- Files touched: docs/HANDOFF_NOTES.md (RCA entry, no code changed)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1785463237084` — 7/31/2026, 4:15:04 AM PT — 182 turns
 
@@ -328,45 +422,6 @@ When done, append to cline_task_ledger.md and run order 66.
 </attempt_completion>
 ```
 
-### `1785483679627` — 7/31/2026, 1:36:20 AM PT — 52 turns
-
-**Original task:**
-
-```
-yesterday, SSL expired for some parts of emsuniversity.com. Some users still reporting SSL certificates bad, getting Not Secure or whatever from Google Chrome at emsuniversity.com/ems and check "Matrix" also at emsuniversity.com/emtskills. Something is off there still. Advise
-```
-
-**Ideas referenced:** #20313, #20317, #20326, #20394 [deployed], #20403 [proposed], #20419, #20422 [deployed], #20429 [proposed], #20431 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-g is valid through October 28.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — SSL residual "Not Secure" reports on emsuniversity.com.
-
-Where we left off (verified 2026-07-31 01:35 PT):
-- Full RCA complete: all live certs valid (emsuniversity.com+www shared LE cert, SAN covers both, chain leaf->YR1->Root YR->ISRG X1, notAfter Oct 28 2026); /ems 303->www 200; /emtskills 302->login 200; mail 993/465 valid; port 80 301 everywhere; no mixed content in rendered pages; no HSTS header.
-- Root cause of residual Chrome "Not Secure": stale client cache from Jul 29 expired-cert window, not a server defect. Nothing broken on the server.
-- Handoff notes updated (2026-07-31 SSL RCA section).
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #20429 [proposed] — Enable HSTS on emsuniversity.com. Concrete action: Plesk Domains > emsuniversity.com > SSL/TLS > enable HSTS, or approve idea to implement. Verify after: curl -sI https://www.emsuniversity.com/ | grep -i strict-transport-security
-2. #20431 [proposed] — Stale-browser advisory: add dismissible banner on login.php/dashboard + advisory email to active students. Concrete action: deploy banner in /var/www/emtskills/routes/login.php via write_server_file.
-
-Reference IDs:
-- Ideas filed: #20429 [proposed], #20431 [proposed]
-- Files touched: docs/HANDOFF_NOTES.md (handoff entry only, no code changed)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
 ### `1785399211024` — 7/31/2026, 1:09:39 AM PT — 1478 turns
 
 **Original task:**
@@ -424,62 +479,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1785465245461` — 7/31/2026, 12:41:05 AM PT — 378 turns
-
-**Original task:**
-
-```
-check jon's argus 80% PD issues. says not resolved yet. 
-
-check Cori argus building telephony like system for Cyra
-```
-
-**Ideas referenced:** #1880, #1884, #18934, #18935 [rejected], #19403, #19415, #19416, #19487, #19518, #19558, #19604, #19657 [deployed], #19837, #19838, #19840, #19910 [executing], #19916, #19918 [executing], #19920 [executing], #19927, #19928, #19970, #20047, #20049, #20051, #20331 [rejected], #20333 [proposed], #20334 [proposed], #20338 [rejected], #20346 [rejected], #20349 [rejected], #20357 [rejected], #20362 [rejected], #20366 [rejected], #20376 [proposed], #20388 [proposed], #20389 [proposed], #20392 [proposed], #20393 [approved], #20394 [deployed], #20405 [executing], #20406, #20410 [queued], #20411, #3202, #3230, #3231, #3239, #3286, #3289, #3294, #3295, #3305, #3306, #3307, #3595, #9306
-
-**Last PICKUP PROMPT:**
-
-```
- shipped across 6 workstreams:
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up the Argus permission matrix improvements, Cyra build follow-up, and AZDHS NOI submission.
-
-Where we left off (verified 2026-07-31 00:38 PT):
-
-[1] Argus action_permissions: table seeded with 201 rows from catalog. Monotonic invariant enforced and verified across all 5 tiers: CS=21 ⊂ Admin=42 ⊂ ITAdmin=44 ⊂ ExecAdmin=56 ⊂ MasterAdmin=60. Zero violations in either direction.
-
-[2] Vicky (Admin, vyu@emsuniversity.com): granted 6 new actions: resolve_fail_bug, resolve_section_mismatch, extend_exam_deadline, sync_student_qb, payment_match, refund_request. Now at 42 total actions. All grants propagated to ITAdmin/ExecAdmin/MasterAdmin per monotonic rule.
-
-[3] Wrongfully suspended students: 9 students with fail_date cleared + course_end_date extended +7 days. Moodle-side verified: cleared user.suspended for 2 and user_enrolments.status=0 for 4 formerly suspended enrolment rows. All 9 fully unsuspended in both portal and Moodle. Eesha Cheema now proceeding.
-  Moodle profile URLs:
-  - Eesha Cheema (26816BC-17): emsuniversity.com/ems/user/profile.php?id=53313
-  - Thomas Mount (26620FT-03): emsuniversity.com/ems/user/profile.php?id=50846
-  - JASON LI (26415W-42): emsuniversity.com/ems/user/profile.php?id=51736
-  - Georgia Sporrer (26715W-10): emsuniversity.com/ems/user/profile.php?id=51286
-  - Christopher Heredia (26313FT-13): emsuniversity.com/ems/user/profile.php?id=51836
-  - Jacob Aries (TEMP-1779975577-d162): emsuniversity.com/ems/user/profile.php?id=52229
-  - Alexandra Russell (TEMP-1779975614-f5c5): emsuniversity.com/ems/user/profile.php?id=52215
-  - Pablo Sweet Fuentes (26813FT-34): emsuniversity.com/ems/user/profile.php?id=51849
-  - Hillary Phang (26619BC-09): emsuniversity.com/ems/user/profile.php?id=53499
-
-[4] Cyra Dixon: portal user id=183 (cdixon@emsuniversity.com, role=CustomerService, job_title=Outreach Specialist, active). Plesk mailbox provisioned (Mailbox: true, quota 2GB). Roundcube at webmail.emsuniversity.com. DID/phone pending VAPI allocation.
-
-[5] AZDHS NOI (7-case, due 7/31): #20393 [deployed]. Investigation #17 populated, RESPONSE_PROPOSAL_20260713.body.md exists on WOPR. All 4 named students (Ivan Vasquez 25226W-34, Desiree Nettles 25324T-01, Reid Brenza 26308W-16/26305BC-03, Benjamin Eckstein 26211FT-07) DB-verified. TKT-12390 (Anna Vasquez EMS-26-0493) reconciled. Alpine misdirection (EMS-26-0501) verified. Remaining: Ruben final legal review + transmit to Lance Bevins. Deadline: TOMORROW 7/31.
-
-[6] Monotonic guard: #20410 [queued], needs root to install DB BEFORE-INSERT trigger since adminportal user lacks SUPER privilege. Until then, manual audit query exists in the idea description (expect 0 rows). PHP pre-insert guard is a lighter alternative.
-
-Open threads to drive next:
-1. #20393 [deployed]: Ruben final legal review + signature + transmit NOI to Lance Bevins by COB 7/31.
-2. #20389 [executing]: Allocate VAPI phone number/DID for Cyra Dixon + configure Twilio webhook.
-3. #20388 [executing]: Query force_on_pd_report students vs override/clear flags; reconcile which >=80% are legitimate PD overrides vs policy failures. Ruben/PD must approve each.
-4. #20410 [queued]: Install DB trigger (root-gated) or PHP guard so monotonic permission invariant can't regress.
-5. #20405 [executing]: Monitor wrongly unsuspended students for Moodle enrollment reactivation; verify 24h post-unsuspend Eesha Cheema proceeding normally.
-
-Refere
 ```
 
 ### `1785363426908` — 7/31/2026, 12:38:30 AM PT — 794 turns
@@ -4356,117 +4355,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 - [ ] #19537 — VERIFY cron_internal_staff_escalation_rescue.php is on crontab
 - [ ] #19535 — TRACE non-mailer.php code path that wrote CSS-only body_preview for outbound 182471
 - [x] #19539 — Externship requests #2322/#2490 confirmed in ExternshipRequest table, status=escalated, handed to Vicky
-</task_progress>
-</attempt_completion>
-```
-
-### `1785180988213` — 7/28/2026, 8:52:06 AM PT — 116 turns
-
-**Original task:**
-
-```
-## 8 — #SLS · student lifecycle state repair + backlog
-
-```
-#SLS — EMSU Student Lifecycle State. The tool itself is lying in two places; fix it, then work the queue it produces.
-
-RULES: DESCRIBE before SQL (Students has NO `status` column — use get_student_lifecycle_state / get_student_360). Moodle tables are UNPREFIXED in moodle_c_live (RC-5). Act rather than list. Server writes via ssh_command with sudo.
-
-BUG 1 — ARCHIVED-ACCOUNT INVERSION (#19439, P0, bug library #2026). The moodle_user gate reports the ARCHIVED account as canonical and the real one as "STALE," and hands back a moodle_url_r
-```
-
-**Ideas referenced:** #11782, #12661, #13873, #13977, #14153, #14154, #14847, #15635, #15636, #15638, #16437, #16581, #16608, #16613, #16731, #16732, #16733, #17546, #17580, #17685, #17723, #178501, #18693, #18743, #18936, #19437, #19439, #19454, #19458, #19464, #19465, #19486 [deployed], #19487 [deployed], #19488 [deployed], #19489 [deployed], #19490, #19491, #19492, #19495, #19500, #19509, #19510, #19704, #2026, #2027, #2033, #2036, #2039, #2040, #2041, #2043, #71121, #9083, #9086, #9168, #9192, #9202, #9306, #9339, #9343, #9549, #9831
-
-**Last PICKUP PROMPT:**
-
-```
-epair + cohort sweep complete"
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #SLS follow-up — archived inversion sweep + payment gate cross-check.
-
-Where we left off (verified 2026-07-28T08:51 PT):
-- pickCanonicalAccount fix deployed in StudentLifecycleState.php (backup .bak-archived-20260727), php -l clean, regression-verified on Erik Chavez (→54215) and Mark Kavai (→53050)
-- Payment false-pass fix verified live on 26720FT-11
-- Cohort scan complete (120 students, 14d), categories filed
-- Handoff entry written to HANDOFF_NOTES.md
-
-Open threads to drive next:
-1. Run full 103-student archived-inversion sweep: re-scan the 103 and confirm all now resolve to correct uid (human-only decision - no idea)
-2. Reverse any moodle_url_repoint already applied in the wrong direction: check orchestrator_event_log for repoint operations targeting the 103 archived accounts (human-only decision - no idea)
-3. Cross-check ~43 payment gate students against #PAY: some may be auto-void victims (our bug #19492), not non-payers — do NOT dun victims (human-only decision - no idea)
-4. 26120FT-01 Andrew Sanchez: section 26120FT missing from Classes table — add the section or this student can never get a Class_Enrollments row (human-only decision - no idea)
-5. CS round-robin for payment_plan_delinquent: 26520FT-09 and 26720FT-16 (human-only decision - no idea)
-6. 26920FT-17 Syeda Samreen Fatima: is_duplicate=1 / dropped, NOT a stale outlier — the stale_outlier category had zero hits in this cohort (human-only decision - no idea)
-
-Reference IDs:
-- Ticket: #SLS
-- Bug library: #2026 (archived inversion), #2036 (auto-void)
-- Ideas: #19439 (SLS archived fix — retry, shipped inline)
-- Files touched: /var/www/emtskills/lib/StudentLifecycleState.php, /var/www/emtskills/docs/HANDOFF_NOTES.md
-- Backups: .bak-archived-20260727, .bak-paygate-20260727
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785183122795` — 7/28/2026, 8:28:39 AM PT — 769 turns
-
-**Original task:**
-
-```
-Continue the frankenstein-llm doctor with currenlty open windows in progress. Continue another 45 minutes:
-
--
-## Direct answer on Cesar
-
-**I did nothing to Cesar. Three read-only commands, over its existing tunnel:** `ulimit -Sl/-Hl`, `grep memlock /etc/security/limits.d/`, and a `python3` version print. No writes, no restart, no config edit, no TP=2 launch attempted on it. Verified after the fact: ring `:8210` returns HTTP 200 with 12 concurrent requests and 211,399 generation tokens, Cesar at 96% GPU, **uptime 8 days 16:34** (proving it was never restarted), load climbing 1.76 → 3.10 = activ
-```
-
-**Ideas referenced:** #11261, #11741, #12266, #12285, #12403, #12430, #12584, #12645, #12689, #13453, #13470, #13874, #15367, #15369, #15370, #16578, #16602, #1685, #1687, #1705, #1706, #1717, #1719, #1721, #1754, #1755, #1757, #1760, #17705, #1780, #17983, #1896, #19239 [rejected], #19506 [rejected], #19507 [executing], #19508 [executing], #19542 [proposed], #19543 [proposed], #19544 [proposed], #19546 [executing], #19547 [executing], #19548 [executing], #19549 [executing], #19558 [executing], #19563 [unknown], #19564 [unknown], #19571 [proposed], #19575 [executing], #19585, #1962, #19670 [executing], #19672 [executing], #19673 [executing], #19685 [executing], #19686 [executing], #1986, #1988, #1989, #1991, #2014, #2042, #2045, #2048, #2049, #2051, #2052, #2053, #2054, #2055, #2057, #2058, #2059, #2061, #2062, #2071, #2072, #2079, #2082, #2083, #2084, #2085, #48031, #48140, #64748, #7490, #7513, #7554, #9706, #9910
-
-**Last PICKUP PROMPT:**
-
-```
- up whatever's still spinning.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — Mac sluggishness rescue: waiting on Ruben to run `sudo killall launchservicesd` in a terminal.
-
-Where we left off (verified 2026-07-28 08:27 PT):
-- ROOT CAUSE: launchservicesd (PID 382, 4 days old) spinning 267-372% CPU in a SecTrustCopyAppleTrustAnchors loop. Load avg 134-250. WindowServer 98-199% is downstream (GUI event queue starvation). No zombies. Memory fine (75% free) — this is pure CPU starvation.
-- DONE: killed Reach Cicero applet (PID 95008, my build, didn't respawn), 9 user-level hogs (DictationIM, avconferenced, contactsd, contentlinkingd, callservicesd, sharingd, localspeechrecognition, speechrecognitiond, Messages Assistant Extension), z_ai MCP spinners 3x (keeps respawning from Cline windows — whack-a-mole, needs durable fix).
-- BLOCKED ON RUBEN: `sudo killall launchservicesd` in any terminal (VS Code integrated terminal Ctrl+` recommended). Backup at ~/Desktop/FIX_SLUGGISH_MAC.txt. GUI osascript password dialog failed twice (GUI too frozen to type).
-- CONSTRAINT: do NOT close any Cline windows (Ruben directive). All kills so far are user-level auto-restarting daemons only.
-
-Open threads to drive next:
-1. VERIFY after Ruben runs the sudo command: launchservicesd PID 382 dead, load falling, GUI responsive. Then mop up coreaudiod (was 79%) and any remaining spinners.
-2. DURABLE FIX for z_ai MCP spin loop: `npm exec @z_ai/mcp-server` respawns from Cline windows and spins 45-72% CPU repeatedly. Restart or disable the z_ai MCP server in Cline settings (walk Ruben through it — do NOT close his windows).
-3. INVESTIGATE what triggered the launchservicesd SecTrust loop (unsigned applet checkins? VS Code helper churn?) so it doesn't recur after 4 days uptime. Consider scheduling a launchservicesd restart or an LS db health check.
-4. THEN resume the queued frankenstein-llm work from the compressed session memory (2026-07-28T15:10Z): glm-5.2-local :8210 404 fix (APPROVED by Ruben), verify glm-5.2-local in frankenstein-llm + frankenstein-tools, hand-ship #19558 [blocked] (verified: status=approved dev_stage=impl_failed), rewrite #19571 [proposed] (verified: status=proposed dev_stage=idle) around GLM52_IDEAL_BUILD.md.
-5. Cicero MLX still not serving on :11520 (Ruben ran the command via VS Code remote; .9/.155 alive but nothing listening). Check with him after the machine is usable.
-6. Artemis confirmed UP (:8000 HTTP 200 gpt-oss-120b) — no action needed.
-
-Reference IDs:
-- Ideas: #19558 [blocked], #19571 [proposed], #19670 [deployed], #19672 [deployed], #19673 [deployed], #19685 [executing], #19686 [executing], #19563 [rejected]
-- Files: ~/Desktop/FIX_SLUGGISH_MAC.txt (new), ~/Desktop/GLM52_IDEAL_BUILD_ANSWER_2026-07-28.md, /var/www/emtskills/docs/GLM52_IDEAL_BUILD.md
-- Gate token: 372713ccc2c885a15fe019ef
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Snapshot CPU/mem/zombies/load — launchservicesd 300%+ is the culprit (SecTrust loop)
-- [x] Kill z_ai MCP spinners + Reach Cicero applet + 9 user-level CPU hogs (load 190 -> 126)
-- [x] GUI password dialog attempted twice — GUI too frozen for Ruben to type
-- [x] Give Ruben the one-line Terminal command (sudo killall launchservicesd) + backup file on Desktop
-- [ ] Verify load drops after he runs it, then mop up + durable z_ai fix
 </task_progress>
 </attempt_completion>
 ```

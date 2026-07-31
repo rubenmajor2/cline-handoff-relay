@@ -6,16 +6,19 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/31/2026, 2:07:00 PM PT | window: last 72h | 101 tasks | index total 346 (parsed 6, cached 340)
+Generated: 7/31/2026, 3:07:01 PM PT | window: last 72h | 102 tasks | index total 347 (parsed 7, cached 340)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785531619110` | 7/31/2026, 2:06:53 PM | 40 | 611KB | The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "servi |
-| `1785530188751` | 7/31/2026, 2:06:22 PM | 109 | 527KB | See the Jon and Cori SMS chat regarding EMT classes suppsedly with the wrong dates posted  |
-| `1785528867234` | 7/31/2026, 2:06:16 PM | 169 | 540KB | Saying it is dismissed is not right. Just say it's moot. Then this way we don't call it di |
+| `1785463237084` | 7/31/2026, 3:06:56 PM | 197 | 798KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
+| `1785530188751` | 7/31/2026, 3:06:16 PM | 226 | 919KB | See the Jon and Cori SMS chat regarding EMT classes suppsedly with the wrong dates posted  |
+| `1785531619110` | 7/31/2026, 3:05:22 PM | 193 | 10154KB | The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "servi |
+| `1785535349176` | 7/31/2026, 3:03:57 PM | 8 | 17KB | root into wopr and give me apple's username and password for webmail for email: |
+| `1785441507395` | 7/31/2026, 2:58:00 PM | 168 | 335KB | Argus failure? Cites technical issues but doesn't not correct them with appropriate CFA lo |
+| `1785528867234` | 7/31/2026, 2:57:14 PM | 324 | 933KB | Saying it is dismissed is not right. Just say it's moot. Then this way we don't call it di |
+| `1785529983485` | 7/31/2026, 2:57:01 PM | 327 | 866KB | Make sure that you are consulting the SLS so that incorrect information does not persist.  |
 | `1785465245461` | 7/31/2026, 2:01:24 PM | 724 | 2149KB | check jon's argus 80% PD issues. says not resolved yet.  |
 | `1785375877050` | 7/31/2026, 1:59:50 PM | 2361 | 9279KB | #GLM |
-| `1785529983485` | 7/31/2026, 1:57:01 PM | 170 | 446KB | Make sure that you are consulting the SLS so that incorrect information does not persist.  |
 | `1785363426908` | 7/31/2026, 1:26:46 PM | 1042 | 3843KB | #EMT Webforms/Payments |
 | `1785435661707` | 7/31/2026, 1:11:29 PM | 2170 | 7588KB | There's grievances getting lost because of all these categories in here. https://emsuniver |
 | `1785368618667` | 7/31/2026, 12:27:12 PM | 356 | 1340KB | We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for |
@@ -24,12 +27,10 @@ Generated: 7/31/2026, 2:07:00 PM PT | window: last 72h | 101 tasks | index total
 | `1785483679627` | 7/31/2026, 9:36:49 AM | 122 | 318KB | yesterday, SSL expired for some parts of emsuniversity.com. Some users still reporting SSL |
 | `1785355259217` | 7/31/2026, 9:29:34 AM | 800 | 1764KB | i ahve been told this form is not populating PDF forms properly downstream. Can you check  |
 | `1785399211024` | 7/31/2026, 9:23:26 AM | 1580 | 6827KB | #Julia/Claudia |
-| `1785463237084` | 7/31/2026, 4:15:04 AM | 182 | 766KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
 | `1785295028411` | 7/31/2026, 3:45:07 AM | 1838 | 9684KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
 | `1785360672171` | 7/31/2026, 1:49:48 AM | 928 | 5304KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
 | `1785452265627` | 7/30/2026, 9:07:53 PM | 522 | 1126KB | explain how this student has a Moodle Completion Date but does not have a printed certiica |
 | `1785456423435` | 7/30/2026, 7:28:17 PM | 300 | 1067KB | See Vicky's chats regarding EMT and Refresher schedules in Chat 55 and repair |
-| `1785441507395` | 7/30/2026, 4:05:55 PM | 152 | 305KB | Argus failure? Cites technical issues but doesn't not correct them with appropriate CFA lo |
 | `1785293294377` | 7/30/2026, 3:13:14 PM | 618 | 2568KB | A metric ton of emails came in to email agent within the last hour or 2. I need you to go  |
 | `1785446562214` | 7/30/2026, 2:28:36 PM | 36 | 64KB | Can you give me a permanent unsername/password for houstonemt.com/wp-login.php? |
 | `1785365363758` | 7/30/2026, 1:57:39 PM | 710 | 1789KB | https://www.emsuniversity.com/emtskills/routes/chat_portal.php - can you review chats from |
@@ -116,7 +117,101 @@ Generated: 7/31/2026, 2:07:00 PM PT | window: last 72h | 101 tasks | index total
 
 ## Per-window detail
 
-### `1785531619110` — 7/31/2026, 2:06:53 PM PT — 40 turns
+### `1785463237084` — 7/31/2026, 3:06:56 PM PT — 197 turns
+
+**Original task:**
+
+```
+AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations that was due 7/28, now due 7/31. Can you populate that R2 that was supposed to be posted on the page along with all the other info that was supposed to be ther efrom before under AZDHS?
+
+Odd that it's not there next to the 4/ 13 open complaint. Anyway yeah that needs to be repopulated back in there along with a response that was already sent as well as the one that you drafted for this new issue that was due on 728. You might have to check the desktop if you can't find the 
+```
+
+**Ideas referenced:** #059669, #111827, #13661, #1368, #16127, #16134, #16135, #16160, #166534, #16957, #19587, #19595 [executing], #19599, #20393 [approved], #25226, #2563, #26211, #4111, #450438, #475569, #600179, #623992, #64748, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+mental_Response_2026-05-29.pdf
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — AZDHS July 2026 NOI: Finalize + Send Consolidated Response (DUE TODAY 7/31).
+
+Where we left off (verified 2026-07-31 04:14 PT):
+- Investigation #17 (azdhs-noi-2026-07-13) fully populated in DB: 1 compliance_investigations row + 3 response rounds (#133 received, #134 extension sent, #135 draft proposal)
+- R2 PDF formatting fixed (letter size + emsulogo5.png injected; matches R1 aesthetics)
+- Response proposal: /var/www/emtskills/uploads/compliance/july2026_noi/RESPONSE_PROPOSAL_20260713.body.md
+- Extension request: /var/www/emtskills/uploads/compliance/july2026_noi/EXTENSION_REQUEST_20260714.txt
+- Tracker updated: /var/www/emtskills/routes/_view_azdhs_noi_response_tracker.php (deadline 7/31, EXTENDED badge)
+- Compliance dashboard: institutional_compliance.php?tab=investigations&entity=azdhs shows both April (#1, 10 rounds) and July (#17, 3 rounds)
+
+Open threads to drive next:
+1. #20393 [approved] [P0] — 5 items to TRANSMIT by end of day 7/31:
+   (a) DB verify named students: Ivan Vasquez 25226W-34, Desiree Nettles, Reid Brenza, Benjamin Eckstein Course 26211FT — completion dates, NREMT ATT, contact logs from moodle_c_live
+   (b) Confirm EMS-26-0501 Alpine Fire District = Northland Pioneer College, NOT EMSU. If confirmed → 1-paragraph "wrong institution" response
+   (c) Reconcile TKT-12390 Anna Vasquez escalation with EMS-26-0493
+   (d) Ruben final legal review + signature
+   (e) TRANSMIT to Lance Bevins (email + certified mail) per .clinerules/08
+
+Reference IDs:
+- Investigation: #17 (azdhs-noi-2026-07-13), #1 (azdhs-noi-2026-04-13)
+- Response rounds: #133 (received), #134 (sent extension), #135 (draft proposal)
+- Idea filed: #20393 (orchestrator_ideas)
+- Files touched: institutional_compliance.php, InvestigationsHydrator.php, _view_azdhs_noi_response_tracker.php, RESPOSE_PROPOSAL_20260713.body.md, EXTENSION_REQUEST_20260714.txt, AZ_NOI_Round2_Supplemental_Response_2026-05-29.html + .pdf
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785530188751` — 7/31/2026, 3:06:16 PM PT — 226 turns
+
+**Original task:**
+
+```
+See the Jon and Cori SMS chat regarding EMT classes suppsedly with the wrong dates posted for Boot Camp on the various schedules and advise what's happening with that.
+```
+
+**Ideas referenced:** #0056, #11998, #155724, #1565, #16732, #19017, #1976, #20578 [queued], #20593 [deployed], #20606 [queued], #20607, #218838, #262220, #2640, #3295, #3300, #3336, #3337, #3338, #3339, #334155, #37474, #495057, #64748, #856404
+
+**Last PICKUP PROMPT:**
+
+```
+n, no drop/fail/transfer flags
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Cancel 8/8 Boot Camp classes + wire Cancel-class button (Ruben-approved).
+
+Where we left off (verified 3:05 PM PT 7/31/2026):
+- Display bug FIXED + verified: view_course_schedules.php now renders all 10 rows (null-guarded 8 strtotime sites, backup .bak-20260731-1413)
+- RCA COMPLETE: 8/8 BC rows (26222BC-26922BC, ids 531-538) were created 7/30 19:04:20 by a Cline SSH session writing /tmp/_generate_bootcamp_schedules.php with $startDate='2026-08-08' — NOT cron, NOT CSV import, NOT web form
+- Ruben approved: cancel the 8/8 classes (8/3 is gone)
+- 2 affected students: Liliana Frausto (26222BC Tempe, lilyfrost86@gmail.com, 213-999-6131) + Frank Heald (26922BC-01 DFW, frankraymondheald123@gmail.com, +19727303060) — list provided to Vicky
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #20606 [queued] — Remove/cancel 26222BC-26922BC from Course_Schedules so they disappear from ALL EMT website schedule pages (verify californiaemt.com, arizonaemt.com, texasemt/DFW sites, Team Hub all pull from DB — website_dropdown_rules.php domain map). DELETE rows vs mark cancelled — get Ruben's call on hard delete vs soft-cancel.
+2. #20606 [queued] — Add Cancel Class button next to Edit/Delete on view_course_schedules.php: cancels class, notifies students (email/SMS), offers alternate course join, writes audit record.
+3. #20593 [deployed] — Documented strtotime NULL fix; nothing further unless regression appears.
+4. #20578 [queued] — Update BC start dates 8/8→8/3 — SUPERSEDED by Ruben's cancel decision; close/repurpose.
+
+Reference IDs:
+- Ticket: none (imessage chat 84, Cori report; ops chat 55 items #3295/#3300)
+- Ideas filed: #20578, #20593, #20606, #20607
+- Files touched: /var/www/emtskills/google-sheets-to-mysql-migration/view_course_schedules.php (+ .bak-20260731-1413)
+- RCA artifact: /tmp/_generate_bootcamp_schedules.php (on WOPR)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785531619110` — 7/31/2026, 3:05:22 PM PT — 193 turns
 
 **Original task:**
 
@@ -126,44 +221,89 @@ The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deli
 THE ARC. Last night the ring served 40-67 turns/hour for 10 hours, then died at 01:03 PT. Today it has died or wedged within minutes of every boot, across every config permutation I tried. I fixed five real adapter-side routing bugs and shipped an auto-relaunch watchdog that genuinely works n
 ```
 
-**Ideas referenced:** #178531, #20005 [proposed], #20264 [queued], #20272 [deployed], #20297 [queued], #20302 [deployed], #20311 [deployed], #20495 [executing], #20498 [queued], #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20553 [blocked]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785530188751` — 7/31/2026, 2:06:22 PM PT — 109 turns
-
-**Original task:**
-
-```
-See the Jon and Cori SMS chat regarding EMT classes suppsedly with the wrong dates posted for Boot Camp on the various schedules and advise what's happening with that.
-```
-
-**Ideas referenced:** #0056, #11998, #155724, #1565, #19017, #1976, #20578, #218838, #2640, #3295, #3300, #3336, #3337, #3338, #3339, #334155, #37474, #495057, #64748, #856404
+**Ideas referenced:** #16265, #178531, #20005 [proposed], #20069, #20264 [queued], #20272 [deployed], #20297 [queued], #20302 [deployed], #20311 [deployed], #20495 [executing], #20498 [queued], #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20553 [blocked]
 
 **Last PICKUP PROMPT:**
 
 ```
-s rather than the 5-day shift.
+Julia :11513 carried overflow.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Boot Camp 8/8 vs 8/3 date correction + Frank Heald migration.
 
-Where we left off (verified 7/31/2026 1:50 PM PT):
-- All 8 BC sections (26222BC–26922BC across AZ/TX/CA) are dated 2026-08-08 in admin_portal.Course_Schedules; correct date per Cori/master sheet is 8/3. Zero 8/3-start classes exist.
-- Only 1 registrant in the 8/8 BC sections: Frank Heald (26922BC-01, Dallas Fort Worth, TX; frankraymondheald123@gmail.com; +1 972-730-3060; invoice #19017 $1,995 sent/$0 paid; no payment plan; EA 7/30/2026).
-- view_course_schedules.php has all the data (511 rows, 60+ upcoming); the 1-class view is a page filter artifact, not missing rows.
-- Backup-and-fix SQL and Frank's move plan are designed but NOT applied. Idea #20578 filed [proposed].
+Pick up task #1785314663557 — GLM ring RECOVERED and serving (watchdog auto-relaunch worked). NCCL/RoCE investigation armed for next wedge.
+
+Where we left off (verified 2026-07-31 14:13 PT):
+- RING: UP. rank0 Cato :8210 HTTP 200, 2.49 tok/s sustained, all 6 workers alive 43-45min, all 6 GPUs 96%. Recovered via watchdog relaunch at 13:29. Stable ~45 min.
+- WATCHDOG: glm52-ring-watchdog.service active on WOPR (idea #20495 [executing]) — proven, it auto-recovered the ring. Kill switch: touch /tmp/glm52_watchdog.disabled.
+- TUNNEL: glm52-tunnel-8210.service active 2 days, WOPR 127.0.0.1:8210 = 200 in 64ms.
+- ADAPTER: GLM-first live, picked=glm-5.2 in router audit. Adapter layer DONE (five fixes from prior window hold).
+- RoCE fabric: glm52-fabric.service INACTIVE but interfaces enP2p1s0f0np0/enP2p1s0f1np1 UP with 10.220.x IPs, MTU 9000, routes present. Script /usr/local/bin/glm52_fabric_up.sh has an escaped-\$ bug in the interface loop (\$p literal) — fabric partially configured manually. NCCL still pinned to enP7s7 plain TCP.
 
 Open threads to drive next:
-1. #20578 — Get approval, back up the 8 BC rows (INSERT into a backup table or postmeta-style), then UPDATE course_start_date 8/8→8/3 (and confirm end-date shift vs master sheet), then re-verify the CA/AZ/TX class schedule pages + viewer.
-2. #20578 — Coordinate with Vicky: call Frank Heald to confirm the 8/3 start or move him (26923BC Boot Camp or 26922FT Fast Track, both Dallas, both 8/17).
+1. #20528 [queued] — THE work. NCCL collective instability over plain TCP. Next wedge: read glm52-fabric.service + fix the \$ escape bug in glm52_fabric_up.sh, then test RoCE (rule 251: Roman CX7 TP=2 only). Do NOT migrate while ring is healthy.
+2. #20495 [executing] — add end-to-end forced-death test of the watchdog when the ring can afford one.
+3. #20498 [queued] — close/supersede; diagnosis half was wrong.
+4. #20297 [queued] — drift protection; contract is 9 knobs.
+5. #20264 [queued] — derive the 8 hand-picked SLO/ceiling constants.
+6. #20005 [proposed] — supervisor consolidation, still disabled on all 6 nodes.
+7. Node reboot (human-only decision, no idea) — cheapest untried wedge lever, clears driver bad state. Defer until next wedge; ring is healthy now.
 
 Reference IDs:
-- Ideas filed: #20578
-- Related chat issues: #3295, #3300, #3336, #3337, #3338, #3339
-- Files touched: none on disk; sources read /var/www/emtskills/docs/specs/imsg_issue_3336…3339, imsg_issue_3295, imsg_issue_3300, /var/www/emtskills/google-sheets-to-mysql-migration/view_course_schedules.php
+- Ideas closed this window: #20553 [approved] (verified: idea_action approve returned ok:true), #20536 [approved] (verified: idea_action approve returned ok:true), #20517 [approved] (verified: idea_action approve returned ok:true), #20506 [approved] (verified: idea_action approve returned ok:true)
+- Ideas still open: #20528 [queued], #20495 [executing], #20498 [queued], #20297 [queued], #20264 [queued], #20005 [proposed]
+- Bug library: entry 2121 (999-sentinel + metrics-vs-conc), 2120 (NCCL watchdog cascade), 2119 (mechanism-before-rule), 2118 (glm-ring-diagnose pointer)
+- Tools: /usr/local/bin/glm-ring-diagnose, /usr/local/bin/glm52_ring_watchdog.sh. Relaunch from Cato: setsid nohup bash /tmp/glm_ring_cesarfirst.sh
+- Ring map: .115 Cato r0, .244 Augustus r1, .21 Pompey r2, .171 Marcus r3, .32 Tiberius r4, .56 Cesar r5. Mac direct LAN ssh (ssh cato/cesar/etc), sudo pw rubenmajor.
+- Files touched: none this window (read-only verification + idea dispositions)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Reconcile idea dispositions from pickup (GATE B baseline)
+- [x] Live-verify ring — UP and HEALTHY: 2.49 tok/s, all 6 GPUs 96%, workers alive 43-45min
+- [x] Read glm52-fabric.service + RoCE interface state
+- [x] Verify auto-relaunch watchdog live on WOPR
+- [x] WOPR tunnel + direct GLM completion OK
+- [x] Sustained decode 2.49 tok/s
+- [x] Close false impl_failed #20553, #20536, #20517, #20506
+- [x] Rule-91 gate ALL PASSED + GAT
+```
+
+### `1785535349176` — 7/31/2026, 3:03:57 PM PT — 8 turns
+
+**Original task:**
+
+```
+root into wopr and give me apple's username and password for webmail for email:
+
+/usr/local/psa/admin/bin/mail_auth_view Password
+```
+
+**Ideas referenced:** #19593, #19595 [queued]
+
+**Last PICKUP PROMPT:**
+
+```
+Filed as idea #19595 [queued].
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #19593 — Apple Ibanez webmail credentials lookup complete.
+
+Where we left off (verified 2026-07-31 15:03 PT):
+- Credentials retrieved: appleibanez@emsuniversity.com / Asherah57!
+- Full Plesk mail_auth_view dump obtained — arizonaemt.com users all have Password1
+
+Open threads to drive next:
+1. #19595 [queued] — arizonaemt.com mass "Password1" credential — audit and force password reset for all @arizonaemt.com mailboxes
+
+Reference IDs:
+- Ideas filed: #19595 [queued]
+- Files touched: none
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -171,7 +311,54 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785528867234` — 7/31/2026, 2:06:16 PM PT — 169 turns
+### `1785441507395` — 7/31/2026, 2:58:00 PM PT — 168 turns
+
+**Original task:**
+
+```
+Argus failure? Cites technical issues but doesn't not correct them with appropriate CFA logic? Do RCA and fix this person and Argus and reply back to Vicky that it's fixed and try again.-> Final Exam 3rd Attempt Request for Wallace Gonzales - (26513FT - San Antonio)
+TKT-20260730-29F0A2F9
+https://emsuniversity.com/emtskills/tickets/view.php?id=22379
+
+
+Wallace is requesting access to his third attempt for the Final Exam. However, the "Attempt Quiz" button is missing from his account, preventing him from taking the exam.
+
+Upon reviewing his exam history, it appears that he experienced technical i
+```
+
+**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128275, #16213, #16263, #18745, #18770, #19415, #20288 [proposed], #20330 [proposed], #20332 [proposed], #20333 [proposed], #20334 [proposed], #20337 [proposed], #21262, #22379, #22501, #25227, #274160, #30363, #69707, #699463, #9086, #9168, #9339, #9889
+
+**Last PICKUP PROMPT:**
+
+```
+ll still proposed/not started.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #22379 — Argus V2 improvements drive: analytics fix, tool parity, verify CS write perms live.
+
+Where we left off (verified 2026-07-31 14:57 PT):
+- Permission matrix + CS ticket write ops are LIVE on server: argus_action_permissions has 244 rows / 5 roles / 62 action keys; CustomerService has ticket_comment, ticket_status, ticket_list, ticket_search, ticket_view all allowed. Ideas #20334, #20333 marked executing.
+- Wallace timeclose fix #20288 deployed. Ticket 22379 resolved. Vicky notified.
+- Analytics STILL broken: 6 Argus sessions today, 0 argus_analytics rows. Terminal query path not writing analytics.
+
+Open threads to drive next:
+1. #20332 [proposed] P1 — Fix argus_analytics INSERT for terminal chat path (highest priority; blocks performance visibility).
+2. #20337 [proposed] P1 — Build 5 write-action buttons: section_swap, ea_redrive, quiz_unstick, moodle_enroll_fix, moodle_unsuspend (uses the CS perms just granted).
+3. #20330 [proposed] P3 — Add response_time_ms capture to terminal_query logging.
+4. #20334 [queued] — Matrix seeded; verify Roles tab UI reads DB rows and override cells work.
+5. #20333 [queued] — Verify a CS user (e.g. squiroz) can actually use ticket_comment/status in the UI.
+
+Reference IDs:
+- Ticket: 22379
+- Ideas filed: #20288, #20330, #20332, #20333, #20334, #20337
+- Files touched: none (DB-only reads/updates this session)
+</result>
+</attempt_completion>
+```
+
+### `1785528867234` — 7/31/2026, 2:57:14 PM PT — 324 turns
 
 **Original task:**
 
@@ -186,7 +373,26 @@ Rewrote the email with explicit moot framing and filed it as #20566 [proposed], 
 **Subject: Grievance {GRV-NUMBER} - Dismissed 
 ```
 
-**Ideas referenced:** #178561, #18944, #18951, #20513 [proposed], #20514 [proposed], #20515 [proposed], #20516 [proposed], #20518 [proposed], #20519 [proposed], #20527 [proposed], #20529 [proposed], #20532 [proposed], #20538 [proposed], #20548 [proposed], #20552 [proposed], #20558 [proposed], #20566 [proposed], #20568 [proposed], #20571 [approved], #20573 [proposed], #20574 [proposed], #20575 [proposed], #20580 [proposed], #20581 [proposed], #20582 [proposed], #20587 [proposed], #20588 [proposed], #6785, #92400
+**Ideas referenced:** #16069, #178561, #18944, #18951, #20513 [proposed], #20514 [proposed], #20515 [proposed], #20516 [proposed], #20518 [proposed], #20519 [proposed], #20527 [proposed], #20529 [proposed], #20532 [proposed], #20538 [proposed], #20548 [proposed], #20552 [proposed], #20558 [proposed], #20566 [proposed], #20568 [proposed], #20571 [approved], #20573 [proposed], #20574 [proposed], #20575 [proposed], #20580 [proposed], #20581 [proposed], #20582 [proposed], #20587 [proposed], #20588 [proposed], #20595 [proposed], #20596 [proposed], #20597 [proposed], #20601 [proposed], #6785, #9191, #92400
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785529983485` — 7/31/2026, 2:57:01 PM PT — 327 turns
+
+**Original task:**
+
+```
+Make sure that you are consulting the SLS so that incorrect information does not persist. Same with the mcp's.
+
+I also agree with your proposed ideas so go ahead and approve those and then leverage rule 267 to bring the items to conclusion we need to bring all of these to conclusion to end and then do comprehensive testing to make sure that everything is fixed
+
+
+Comprehensive handoff below. I re-verified every claim against live code before writing it, including re-checking the false `deployed` tags and confirming the escalation cron is still running (clean run at 13:20).
+
+════════════════════
+```
+
+**Ideas referenced:** #0000, #10086, #10092, #10096, #10103, #10110, #10116, #10121, #10123, #10125, #10132, #1218, #12993, #13025, #13030, #13040, #13044, #13045, #13057, #13873, #13976, #16610, #17130 [superseded], #17537 [rejected], #178501, #18132 [deployed], #19125, #19173, #19921, #20055 [deployed], #20056 [deployed], #20128 [deployed], #20130 [queued], #20134, #20183, #20313 [deployed], #20314 [queued], #20315 [deployed], #20317 [deployed], #20326 [deployed], #20327 [deployed], #20419 [deployed], #20420 [deployed], #20491 [proposed], #20539 [rejected], #20551 [proposed], #20556 [queued], #20577 [executing], #20579 [executing], #20591 [executing], #20592 [executing], #20600 [executing], #22606, #22647, #4410, #4414, #4422, #4428, #4929, #4970, #4972, #4977, #4988, #4991, #4992, #5588, #5603, #5604, #5704, #5705, #5721, #5722, #5920, #9086, #9168, #9339
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -278,25 +484,6 @@ Open threads to drive next:
 2. CHEAPEST UNTRIED MOVE: reboot the hex nodes (or at least Cato + Augustus) to clear possible driver-level bad state from the 1AM death, then relaunch. Nothing else has moved the needle and a reboot is the only state a container restart cannot reset.
 3. #20553 [blocked] — false impl_failed; the watchdog fix was hand-shipped and 
 ```
-
-### `1785529983485` — 7/31/2026, 1:57:01 PM PT — 170 turns
-
-**Original task:**
-
-```
-Make sure that you are consulting the SLS so that incorrect information does not persist. Same with the mcp's.
-
-I also agree with your proposed ideas so go ahead and approve those and then leverage rule 267 to bring the items to conclusion we need to bring all of these to conclusion to end and then do comprehensive testing to make sure that everything is fixed
-
-
-Comprehensive handoff below. I re-verified every claim against live code before writing it, including re-checking the false `deployed` tags and confirming the escalation cron is still running (clean run at 13:20).
-
-════════════════════
-```
-
-**Ideas referenced:** #10086, #10092, #10096, #10103, #10110, #10116, #10121, #10123, #10125, #10132, #1218, #12993, #13025, #13030, #13040, #13044, #13045, #13057, #13873, #13976, #17130 [superseded], #17537 [rejected], #178501, #18132 [deployed], #19125, #19173, #20130 [queued], #20313 [deployed], #20314 [queued], #20315 [deployed], #20317 [deployed], #20326 [deployed], #20327 [deployed], #20419 [deployed], #20420 [deployed], #20491 [proposed], #20539 [rejected], #20551 [proposed], #20556 [queued], #20577 [executing], #20579 [executing], #22606, #22647, #4410, #4414, #4422, #4428, #4929, #4970, #4972, #4977, #4988, #4991, #4992, #5588, #5603, #5604, #5704, #5705, #5721, #5722, #5920
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785363426908` — 7/31/2026, 1:26:46 PM PT — 1042 turns
 
@@ -701,56 +888,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </attempt_completion>
 ```
 
-### `1785463237084` — 7/31/2026, 4:15:04 AM PT — 182 turns
-
-**Original task:**
-
-```
-AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations that was due 7/28, now due 7/31. Can you populate that R2 that was supposed to be posted on the page along with all the other info that was supposed to be ther efrom before under AZDHS?
-
-Odd that it's not there next to the 4/ 13 open complaint. Anyway yeah that needs to be repopulated back in there along with a response that was already sent as well as the one that you drafted for this new issue that was due on 728. You might have to check the desktop if you can't find the 
-```
-
-**Ideas referenced:** #059669, #111827, #13661, #1368, #16127, #16134, #16135, #16160, #166534, #16957, #19587, #19595 [executing], #19599, #20393 [approved], #25226, #2563, #26211, #4111, #450438, #475569, #600179, #623992, #64748, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-mental_Response_2026-05-29.pdf
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — AZDHS July 2026 NOI: Finalize + Send Consolidated Response (DUE TODAY 7/31).
-
-Where we left off (verified 2026-07-31 04:14 PT):
-- Investigation #17 (azdhs-noi-2026-07-13) fully populated in DB: 1 compliance_investigations row + 3 response rounds (#133 received, #134 extension sent, #135 draft proposal)
-- R2 PDF formatting fixed (letter size + emsulogo5.png injected; matches R1 aesthetics)
-- Response proposal: /var/www/emtskills/uploads/compliance/july2026_noi/RESPONSE_PROPOSAL_20260713.body.md
-- Extension request: /var/www/emtskills/uploads/compliance/july2026_noi/EXTENSION_REQUEST_20260714.txt
-- Tracker updated: /var/www/emtskills/routes/_view_azdhs_noi_response_tracker.php (deadline 7/31, EXTENDED badge)
-- Compliance dashboard: institutional_compliance.php?tab=investigations&entity=azdhs shows both April (#1, 10 rounds) and July (#17, 3 rounds)
-
-Open threads to drive next:
-1. #20393 [approved] [P0] — 5 items to TRANSMIT by end of day 7/31:
-   (a) DB verify named students: Ivan Vasquez 25226W-34, Desiree Nettles, Reid Brenza, Benjamin Eckstein Course 26211FT — completion dates, NREMT ATT, contact logs from moodle_c_live
-   (b) Confirm EMS-26-0501 Alpine Fire District = Northland Pioneer College, NOT EMSU. If confirmed → 1-paragraph "wrong institution" response
-   (c) Reconcile TKT-12390 Anna Vasquez escalation with EMS-26-0493
-   (d) Ruben final legal review + signature
-   (e) TRANSMIT to Lance Bevins (email + certified mail) per .clinerules/08
-
-Reference IDs:
-- Investigation: #17 (azdhs-noi-2026-07-13), #1 (azdhs-noi-2026-04-13)
-- Response rounds: #133 (received), #134 (sent extension), #135 (draft proposal)
-- Idea filed: #20393 (orchestrator_ideas)
-- Files touched: institutional_compliance.php, InvestigationsHydrator.php, _view_azdhs_noi_response_tracker.php, RESPOSE_PROPOSAL_20260713.body.md, EXTENSION_REQUEST_20260714.txt, AZ_NOI_Round2_Supplemental_Response_2026-05-29.html + .pdf
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
 ### `1785295028411` — 7/31/2026, 3:45:07 AM PT — 1838 turns
 
 **Original task:**
@@ -921,54 +1058,6 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785441507395` — 7/30/2026, 4:05:55 PM PT — 152 turns
-
-**Original task:**
-
-```
-Argus failure? Cites technical issues but doesn't not correct them with appropriate CFA logic? Do RCA and fix this person and Argus and reply back to Vicky that it's fixed and try again.-> Final Exam 3rd Attempt Request for Wallace Gonzales - (26513FT - San Antonio)
-TKT-20260730-29F0A2F9
-https://emsuniversity.com/emtskills/tickets/view.php?id=22379
-
-
-Wallace is requesting access to his third attempt for the Final Exam. However, the "Attempt Quiz" button is missing from his account, preventing him from taking the exam.
-
-Upon reviewing his exam history, it appears that he experienced technical i
-```
-
-**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128275, #16213, #16263, #18745, #18770, #19415, #20288 [proposed], #20330 [proposed], #20332 [proposed], #20333 [proposed], #20334 [proposed], #20337 [proposed], #21262, #22379, #22501, #25227, #274160, #30363, #69707, #699463, #9086, #9168, #9339, #9889
-
-**Last PICKUP PROMPT:**
-
-```
-ady deployed (this task's fix)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #22379 — Argus V2 improvements: analytics fix, CS role write access, action_permissions DB wire, and tool parity.
-
-Where we left off (verified 2026-07-30 16:05 PT):
-- Argus has 8 sessions today (5 users), 30-day peak of 21 sessions (7 users). 265 total chats across 10 users. Week-over-week adoption climbing.
-- Four critical issues found: analytics logging broken (139 all-time rows, 0 today), action_permissions table empty, CS role write-locked, and 73% of actions are read-only research.
-- Idea #20288 [deployed] — Wallace Gonzales timeclose fix is live. Idea #20332 [proposed] P1 for analytics fix is the most impactful next step.
-
-Open threads to drive next:
-1. #20332 [proposed] P1 — Fix Argus analytics INSERT path so terminal chats write to argus_analytics. Traces: audit the terminal AJAX handler PHP code for where argus_analytics INSERT should fire.
-2. #20333 [proposed] P1 — INSERT INTO argus_action_permissions (role_name='CustomerService', action_key='ticket_comment', allowed=1) and same for ticket_status.
-3. #20334 [proposed] P1 — Populate argus_action_permissions with full permission matrix derived from PHP role checks, then wire the Roles tab UI.
-4. #20337 [proposed] P1 — Add 5 write-action handlers: section_swap, ea_redrive, quiz_unstick, moodle_enroll_fix, moodle_unsuspend.
-5. #20330 [proposed] P3 — Fix terminal_query response_time_ms capture.
-6. #20288 [deployed] — Monitor for recurrence of expired-timeclose vs exhausted-attempts confusion.
-
-Reference IDs:
-- Ticket: 22379
-- Ideas filed: #20288, #20330, #20332, #20333, #20334, #20337
-- Files touched: none (DB-only: quiz_overrides UPDATE + analytics reads)
 </result>
 </attempt_completion>
 ```

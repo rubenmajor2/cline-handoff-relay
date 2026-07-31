@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-07-31T05:45:56.985Z",
+ "generated_at": "2026-07-31T06:59:41.062Z",
  "counts": {
-  "parsed": 0,
-  "reused": 339,
+  "parsed": 5,
+  "reused": 334,
   "failed": 0,
   "total": 339
  },
@@ -100664,13 +100664,13 @@
   },
   "1785295028411": {
    "task_id": "1785295028411",
-   "mtime": 1785472853929,
+   "mtime": 1785480741810,
    "created_at": "2026-07-29T03:17:08.411Z",
-   "last_modified": "2026-07-31T04:40:53.929Z",
-   "size_kb": 9089,
-   "turn_count": 1664,
+   "last_modified": "2026-07-31T06:52:21.810Z",
+   "size_kb": 9393,
+   "turn_count": 1743,
    "title": "What outstanding build issues exist for the Broser Extension for Argus? What else do you recommend? Can you do some work and testing on it to improve it more? Make sure it's wired into actual Argus as well:\n\nhttps://emsuniversity.com/emtskills/routes/argus_download.php?tab=chrome",
-   "pickup_prompt": "nce it's a different feature.)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1785295028411 — Argus Chrome extension audit/fix/content-analysis-override (v2.4.0 live).\n\nWhere we left off (verified 2026-07-30 21:37 PT):\n- CONTENT-ANALYSIS AUTHORITY block live on server, php -l clean, FPM reloaded.\n- #20394 [proposed] — E2E verification pending (test blocked by expired session; re-mint and test).\n- Two open features from Ruben: (a) does the defamation override actually work? (answered: soft override, Fast mode as fallback), (b) auto-update extension without re-downloading.\n\nOpen threads to drive next:\n1. #20394 [proposed] — Test with deepseek-v4-pro (Fast mode) as the model routing fix if gpt-oss-120b still refuses; content-review tasks should default-route to deepseek, not frankenstein-llm.\n2. #20376 [proposed] — fix write_server_file MCP backslash-n unescaping.\n3. (human-only decision, no idea) — Ruben tests the defamation review query in both Thinking and Fast mode; reports which one works.\n\nReference IDs:\n- Ideas filed: #20394 [proposed], #20376 [proposed]\n- Ideas closed: #19970 [deployed], #19898 [deployed], #19896 [deployed], #19899 [deployed], #19900 [deployed], #19919 [deployed]\n- Files touched: /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/lib/argus_browser_directive.php, /var/www/emtskills/public/argus-extension/*, /var/www/emtskills/routes/argus_download.php, /var/www/emtskills/scripts/argus_rebuild_extension_zip.sh, HANDOFF_NOTES.md\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════</result>\n<task_progress>\n- [x] Argus extension 6 fixes applied\n- [x] RCA filed, #19919 approved\n- [x] #19896 done (default_icon present)\n- [x] #19899 done (keyboard shortcut, ZIP rebuilt)\n- [x] #19900 — Add auto-cron ZIP rebuild (verified working)\n- [x] #19898 done (content.js extract function verified solid)\n- [x] Rebuild final ZIP with all changes\n- [x] Fix CORS + SameSite auth root cause\n- [x] Add search_sessions backend handler\n- [x] Authenticated E2E test matrix (5/5 pass)\n- [x] Fix isAjax text/plain JSON-401 gap\n- [x] Fix cron tempnam + rename bugs\n- [x] Update HANDOFF_NOTES.md\n- [x] Wire extension into real Argus backend (argus_browser_directive.php + alltastic_api.php browser_context) — #19970 deployed\n- [x] E2E verify browser-control path (read-page + navigate block emission)\n- [x] Fast-path model knob (argus_ext_model) + deepseek-v4-pro latency fix — 39.9s → 3.0s, E2E verified\n- [x] v2.4 lockup root cause fixed (raw-LF service-worker.js repaired, node --check passes)\n- [x] Fast/Thinking mode toggle shipped (panel UI + SW + backend allowlist), E2E both modes\n- [x] Rebuild-script JS syntax gate added; ZIP v2.4.0 rebuilt + verified\n- [x] Idea #20376 filed; GATE B reconcile done\n- [x] Feedback fix: diagnosed stale-folder reinstall, shipped versioned download filename + versioned wrapper folder\n- [x] RULE INVESTIGATION: verified NO EMSU hardcoded legal-refusal rule; blocker = gpt-oss-120b baked-in OpenAI safety alignment\n- [x] Shipped CONTENT-ANALYSIS AUTHORITY + RESEARCH DEPTH prompt-injection override (alltastic_api.php extSys, php -l clean, FPM reloaded, verified live on disk)\n- [x] Fast-mode recommendation documented for content-review tasks (deepseek-v4-pro = faster + fewer safety refusals)\n</task_progress>\n</attempt_completion>",
+   "pickup_prompt": "-level fix is the durable one.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1785295028411 — Argus extension: content-analysis refusal — community research done, durable fix options filed.\n\nWhere we left off (verified 2026-07-30 23:11 PT):\n- Community research complete and verified: refusal is a single residual-stream direction (Arditi/LessWrong); abliteration removes it at weight level (Labonne/HuggingFace recipe); vLLM-compatible.\n- #20403 [proposed] filed: ablitherate gpt-oss-120b OR remap Thinking mode.\n- #20394 [proposed]: live prompt override shipped but acknowledged soft.\n- #20376 [proposed]: MCP write_server_file backslash-n unescape bug still open.\n- Fast mode (deepseek-v4-pro) already E2E-verified non-refusing for the defamation-review query class.\n\nOpen threads to drive next:\n1. #20403 [proposed] — decide Path B (remap Thinking mode → deepseek-v4-pro or cicero-235b, 1-line config) vs Path A (abliterate 120B fleet, ~4hr compute). Path B is the immediate unblock.\n2. #20394 [proposed] — E2E re-test the content-analysis override with a minted session; confirm whether override holds or whether mode remap is required.\n3. #20376 [proposed] — fix write_server_file MCP backslash-n unescaping (root cause of v2.3 lockup).\n\nReference IDs:\n- Ideas filed: #20403 [proposed], #20394 [proposed], #20376 [proposed]\n- Ideas closed: #19970 [deployed], #19898 [deployed], #19896 [deployed], #19899 [deployed], #19900 [deployed], #19919 [deployed]\n- Files touched: alltastic_api.php (extSys prompt override), HANDOFF_NOTES.md, argus_browser_directive.php, argus_download.php, argus_rebuild_extension_zip.sh, public/argus-extension/*\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════</result>\n<task_progress>\n- [x] Argus extension 6 fixes applied\n- [x] RCA filed, #19919 approved\n- [x] #19896 done (default_icon present)\n- [x] #19899 done (keyboard shortcut, ZIP rebuilt)\n- [x] #19900 — Add auto-cron ZIP rebuild (verified working)\n- [x] #19898 done (content.js extract function verified solid)\n- [x] Rebuild final ZIP with all changes\n- [x] Fix CORS + SameSite auth root cause\n- [x] Add search_sessions backend handler\n- [x] Authenticated E2E test matrix (5/5 pass)\n- [x] Fix isAjax text/plain JSON-401 gap\n- [x] Fix cron tempnam + rename bugs\n- [x] Update HANDOFF_NOTES.md\n- [x] Wire extension into real Argus backend (argus_browser_directive.php + alltastic_api.php browser_context) — #19970 deployed\n- [x] E2E verify browser-control path (read-page + navigate block emission)\n- [x] Fast-path model knob (argus_ext_model) + deepseek-v4-pro latency fix — 39.9s → 3.0s, E2E verified\n- [x] v2.4 lockup root cause fixed (raw-LF service-worker.js repaired, node --check passes)\n- [x] Fast/Thinking mode toggle shipped (panel UI + SW + backend allowlist), E2E both modes\n- [x] Rebuild-script JS syntax gate added; ZIP v2.4.0 rebuilt + verified\n- [x] Idea #20376 filed; GATE B reconcile done\n- [x] Feedback fix: diagnosed stale-folder reinstall, shipped versioned download filename + versioned wrapper folder\n- [x] RULE INVESTIGATION: verified NO EMSU hardcoded legal-refusal rule; blocker = gpt-oss-120b baked-in safety alignment\n- [x] Shipped CONTENT-ANALYSIS AUTHORITY + RESEARCH DEPTH prompt-injection override (alltastic_api.php extSys, php -l clean, FPM reloaded)\n- [x] Fast-mode recommendation documented for content-review tasks\n- [x] Community research on durable fix complete (LessWron",
    "ideas": {
     "1151": null,
     "1281": null,
@@ -100741,6 +100741,7 @@
     "12463": null,
     "12477": null,
     "12506": null,
+    "12584": null,
     "12588": null,
     "12589": null,
     "12590": null,
@@ -100860,6 +100861,7 @@
     "20103": "proposed",
     "20376": "proposed",
     "20394": "proposed",
+    "20403": "proposed",
     "21262": null,
     "30363": null,
     "34495": null,
@@ -102678,13 +102680,13 @@
   },
   "1785360672171": {
    "task_id": "1785360672171",
-   "mtime": 1785474168443,
+   "mtime": 1785480343030,
    "created_at": "2026-07-29T21:31:12.171Z",
-   "last_modified": "2026-07-31T05:02:48.443Z",
-   "size_kb": 3939,
-   "turn_count": 794,
+   "last_modified": "2026-07-31T06:45:43.030Z",
+   "size_kb": 5240,
+   "turn_count": 922,
    "title": "For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? \n\nAlso how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?",
-   "pickup_prompt": "lt>\n═══════════════════════════════════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════════════════════════════════\nPick up task Telephony improvements — 60-min babysit complete, verified shipped items, and remaining builds.\nWhere we left off (verified 2026-07-30 22:01:10 PT):\n- First babysit (babysit_checkpoints.sh) completed: 12 checkpoints from 19:33-20:28 PT, 26 lines in /tmp/telephony_babysit.log\n  - 2x `[worker-v2] ✅ VAPI joined conference` logged — #20045 confirmed live\n  - 12x checkpoints with call counts — avg success score 4.0-6.0 range, no bricking\n- Second babysit v3 deployed and waiting to launch — /tmp/babysit_v3.sh with voice tracking\n- #20045 config fix [deployed] — `in_array` call in twiml_inbound.php (verified grep)\n- #20046 pre-call prospect detection [deployed] — `isProspect/lookupCallerBlacklist()` inserted into inbound flow\n- #20047/#20049/#20051 VAPI prompt update [deployed] — firstMessage now \"Thanks for calling EMS University! How can I help you today?\" (verified via VAPI API GET)\n- #20050 topic-based routing [proposed] — not yet built, needs implementation in twiml_inbound.php\n- #20081 voice A/B test [proposed] — Bella voices work; Ronald/Katie timed out; Eric returns 401\n- Voice tracking: all calls on 7/30 use Bella 11labs (EXAVITQu4vr4xnSDxMaL) — no other voices active yet\n\nOpen threads to drive next:\n1. #20370 [proposed] — BUILD #20050: topic-based routing to human agents (refund/complain/charge/lawyer/stop keywords → bypass Bella → ring agents). Implement in twiml_inbound.php, deploy, verify with test call\n2. #20081 [proposed] — Diagnose and fix Ronald/Katie/Eric Cartesia assistants (timed out/401 on outbound test calls), then set up multi-voice A/B routing in inbound handler\n3. #20322 [proposed] — Investigate Eric Cartesia 401: likely the voice reference was deleted from VAPI; check voice ID 52b69ff4-2b4d-4f92-8898-4f2d4ed91650 still exists\n4. #20323 [proposed] — Build automated voice test harness that runs on cron, makes outbound test calls to internal number, logs transcript and audio URL per voice\n5. #20325 [executing] — Voice test results: Ronald (timeout) and Katie (timeout) need analysis; Eric (401) needs investigation\n6. #20033 [proposed] — Investigate Jalen Lynch conference bridge silent-failure mode from 7/29 complaint\n7. #20279 [proposed] — Deploy Rule 264 MCP tool health to .clinerules dir on WOPR\n8. #20320 [proposed] — Deploy Rule 297 (\"test means exercise, not compare configs\") to .clinerules on WOPR\n9. #20321 [proposed] — Deploy Rule 298 (\"attempt_completion is a checkpoint, not draft-revise cycle\") to .clinerules on WOPR\n\nReference IDs:\n- Tickets: none (Jalen Lynch call not ticketized)\n- Ideas filed: #20032, #20033, #20045, #20046, #20047, #20049, #20050, #20051, #20052, #20081, #20279, #20289, #20294, #20296, #20320, #20321, #20322, #20323, #20325, #20370\n- Files touched: /var/www/emtskills/api/telephony/twiml_inbound.php, /tmp/telephony_babysit.log, /tmp/telephony_babysit_v3.log, VAPI assistant 6ee87bdb (Bella inbound)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "n.\n\n═══════════════════════════════════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════════════════════════════════\nPick up task Telephony improvements — deploy remaining P1 items, verify multi-voice routing.\n\nWhere we left off (verified 2026-07-30 11:34 PM PT):\n- **#20045 config fix [deployed]** — `in_array() check` live in twiml_inbound.php, verified in fallback logs\n- **VAPI prompt update [deployed]** — Bella greeting shortened to \"Thanks for calling EMS University! How can I help you today?\"\n- **60-min babysit completed** — 12 checkpoints (19:33–20:28 PT) in /tmp/telephony_babysit.log, 15 calls, 2 VAPI joins, success score 4.0–5.5\n- **Voice 401 RCA complete** — stale assistant IDs (5b4b7b90, d7dc496e), real IDs confirmed: Ronald 80f2341e, Katie e5a5320e, Eric 494523de\n- **Multi-voice patch NOT yet deployed** — voicePool count remains 0; patch looks for hardcoded UUID that doesn't exist in file\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #20322 [proposed] — Fix Katie/Eric 401s: update voice IDs to live Cartesia/11labs IDs, test outbound calls\n2. #20081 [proposed] — Deploy multi-voice A/B routing: add voicePool array to twiml_inbound.php with 4 live assistant IDs, random selection\n3. #20050 [proposed] — Deploy topic-based human escalation: keyword detection in VAPI prompt (refund/complain/charge/lawyer/stop → transfer to agent)\n4. #20046 [proposed] — Deploy pre-call prospect detection: check phone number against student DB before conference routing\n5. #20279 [proposed] — Install Rule 264 (3-probe MCP health check) as .clinerules/RULE_264_MCP_TOOL_HEALTH.md\n6. #20289 [proposed] — Install Rule 265 (re-check before diagnostic conclusion) as .clinerules/RULE_265_RECHECK_DIAGNOSTIC.md\n\nReference IDs:\n- Ticket: Jalen Lynch complaint (call that didn't connect, ID 19641, 26174 in voice_call_log)\n- Ideas filed: #20045, #20046, #20047, #20049, #20050, #20051, #20081, #20094, #20279, #20289, #20322, #20323, #20325, #20407\n- Files touched: /var/www/emtskills/api/telephony/twiml_inbound.php, /var/www/emtskills/logs/vapi_fallback_2026-07.log, /tmp/telephony_babysit.log\n- Time anchor: 2026-07-30 23:36 PT\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "20032": "proposed",
     "20033": "proposed",
@@ -102711,7 +102713,8 @@
     "20323": "proposed",
     "20325": "deploying",
     "20329": "proposed",
-    "20370": "queued"
+    "20370": "queued",
+    "20407": null
    }
   },
   "1785363426908": {
@@ -103600,13 +103603,13 @@
   },
   "1785399211024": {
    "task_id": "1785399211024",
-   "mtime": 1785474881228,
+   "mtime": 1785479457684,
    "created_at": "2026-07-30T08:13:31.024Z",
-   "last_modified": "2026-07-31T05:14:41.228Z",
-   "size_kb": 6463,
-   "turn_count": 1318,
+   "last_modified": "2026-07-31T06:30:57.684Z",
+   "size_kb": 6530,
+   "turn_count": 1364,
    "title": "#Julia/Claudia\n\n——[COPY]——\n# COPY WINDOW — Julia + Claudia CX7 TP=2 gpt-oss-120b recovery (idea #20042)\n\nPick up idea #20042 [proposed] — restore julia-120b TP=2 to the pool.\n\n## VERIFIED STATE (live-probed 2026-07-30 01:01 PT — do NOT re-derive, but DO re-confirm before acting)\n\n- Julia head: spark-6ae6, LAN 192.168.1.190, WireGuard 10.100.0.15, SSH via\n  `ssh -p 2205 rubenmajor@127.0.0.1` from WOPR.\n- Claudia worker: spark-6d51, LAN 192.168.1.194, WireGuard 10.100.0.16, SSH via\n  `ssh -p 2206 rubenmajor@127.0.0.1` from WOPR.\n- Julia has a LIVE Ray cluster (gcs_server PID ~1394125, session\n  session_2026-07-29_00-15-21_286177_1394102, --node-ip-address=192.168.100.2)\n  but ZERO vLLM server ",
-   "pickup_prompt": "\n<attempt_completion>\n<result>\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #Julia/Claudia — restore Julia serving (TP=2 preferred, TP=1 as fallback per Ruben directive).\n\nRuben spoke to me: made a feature request to require every tool use or other things like commands that run locally, mac or server, and then turn on the tool use.\nRuben said: \"I should add a rule that when you connect via SSH to any server you should immediately probe, looking at processes, memory, GPU, vLLM process status, check if this is the correct box that you really think it is. We've had a number of times in the past that we were working on the wrong box, or the mistaken identity of a box. going forward you should connect and then properly probe.\"\n\nThis was absolutely correct and I take responsibility for contributing to the box-confusion problem in this session. My early session kills on Julia at ~15:32 PT were made before I had properly verified the actual state — I killed a working service because I didn't follow the probe-first discipline you're now codifying. The new rule will prevent this class of failure.\n\nWhere we left off (verified 2026-07-30 22:10 PT):\n- Julia (spark-6ae6) has 0 vLLM processes, no `:8000` listener, no CLI-level Ray from WOPR, tunnel status unknown (everything DOWN)\n- Claudia SSH auth broken from WOPR (:2206), script handles this from Julia via :2204 bypass\n- WOPR :11513 tunnel state: exists (STALE), needs re-creation after Julia serving\n- Fixed registry stale claim about GLM ring — Julia+Claudia NOT part of GLM Hex ring, correct topology: Pompeii(50c0)↔Marcus(63ce)↔Tiberius(e9e0)↔Cesar(3b41)↔Cato(2aa8)↔Augustus(e3b2)\n- Root cause of repeated TP=2 crashes: VLLM_RAY_EXTRA_ENV_VAR_PREFIXES_TO_COPY=GLOO_ replaces default prefix list that includes VLLM_|NCCL_|RAY_, so Claudia's EngineCore loses VLLM_HOST_IP and binds Gloo to 127.0.0.1\n- Fix (MUST APPLY on fresh dispatch): CHANGE VLLM_RAY_EXTRA_ENV_VAR_PREFIXES_TO_COPY=\"GLOO_\" TO VLLM_RAY_EXTRA_ENV_VAR_PREFIXES_TO_COPY=\"VLLM_ NCCL_ RAY_ GLOO_\" (prepend the defaults)\n- TP=1 fallback: NO workaround needed, just launch raw `vllm serve` on :8000 with env vars only (bypasses Ray, no prefix list needed)\n\nVERIFIED MODEL PATH: `/home/rubenmajor/models/gpt-oss-120b/gpt-oss-120b` (found via ls -d on Julia)\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #20042 [proposed] — Apply line-57 fix: VLLM_RAY_EXTRA_ENV_VAR_PREFIXES_TO_COPY=\"VLLM_ NCCL_ RAY_ GLOO_\"\n2. #20042 [proposed] — Kill all .python-vllm-custom processes on Julia, rm -rf /tmp/ray\n3. #20042 [proposed] — Dispatch corrected julia_unified_tp2.sh; wait for serving + verify :8000 → :11513 tunnel\n4. #20042 [proposed] — IF TP=2 still fails after 1 attempt with fix: go straight to TP=1 on Julia alone (Ruben directive)\n5. #20042 [proposed] — Post-success: verify via /v1/models on :11513, update registry, report\n\nReference IDs:\n- Ticket: None (Julia/Claudia restoration)\n- Ideas filed: #20042 (original recovery idea, already existed)\n- Files touched: /home/rubenmajor/julia_unified_tp2.sh (line 11 RAY_HEAD_IP already fixed; line 57 needs fix), /etc/litellm/frankenstein_registry.yaml (fixed), /tmp/vllm_serve_unified.log\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "<attempt_completion>\n<result>\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task Julia/Claudia — TP=1 restoration attempt at 23:26 PT failed: APIServer pid=1786832 crashed with `Engine core initialization failed` after ~1 minute of weight loading. No vLLM process, no :8000 listener. Log `/tmp/vllm_tp1.log` confirms crash at tensor loading stage.\n\nRoot cause analysis of ALL failures:\n- TP=2 (via script): Gloo placement group wedge (`node:192.168.100.2` demand vs LAN-keyed nodes). Script line 11 sets `RAY_HEAD_IP=192.168.1.190` (LAN) but `VLLM_HOST_IP=192.168.100.2` (RoCE) — the script's own comment says \"LAN IP (not RoCE)\" — this mismatch causes Ray to register nodes as 192.168.1.190 while vLLM's placement group demands 192.168.100.2.\n- TP=1 (manual): Also fails with `Engine core initialization failed`. The launch command used `--tensor-parallel-size 1` but vLLM still initializes EngineCore which hits the same placement group logic internally.\n\nBoth paths hit the same wall because the underlying cause is vLLM's Ray placement group logic not matching what Ray has registered. The correct fix is:\n1. Set `RAY_HEAD_IP=192.168.100.2` (matching VLLM_HOST_IP) so Ray registers nodes with the RoCE key.\n2. Then TP=1 on Julia alone should work (single node, no Claudia needed).\n\nFix that MUST be applied before relaunching:\nsed -i 's/RAY_HEAD_IP=192.168.1.190/RAY_HEAD_IP=192.168.100.2/' /home/rubenmajor/julia_unified_tp2.sh\n\nOpen threads to drive next:\n1. Apply the RAY_HEAD_IP fix (line 11) to /home/rubenmajor/julia_unified_tp2.sh on Julia\n2. Clean slate: `rm -rf /tmp/ray && rm -f /tmp/vllm_tp1.log && rm -f /tmp/vllm_serve_unified.log`\n3. Start Ray head: `/home/rubenmajor/.python-vllm-custom/bin/ray start --head --node-ip-address=192.168.100.2 --port=6379 --num-cpus 8 --num-gpus 1 --dashboard-host=0.0.0.0 --disable-usage-stats`\n4. Launch TP=1: `vllm serve openai/gpt-oss-120b --served-model-name gpt-oss-120b --host 0.0.0.0 --port 8000 --tensor-parallel-size 1 --gpu-memory-utilization 0.55 --max-model-len 131072 --max-num-seqs 16 --enforce-eager --trust-remote-code`\n5. Once serving: create WOPR tunnel `nohup ssh -N -L 11513:192.168.1.190:8000 -p 2205 rubenmajor@127.0.0.1 > /dev/null 2>&1 &`\n6. Verify `curl http://127.0.0.1:11513/v1/models` → HTTP 200 with gpt-oss-120b\n\nReference IDs:\n- Files touched: /home/rubenmajor/julia_unified_tp2.sh, /etc/litellm/frankenstein_registry.yaml, /etc/litellm/config.yaml, /tmp/vllm_tp1.log, /tmp/vllm_serve_unified.log\n- Idea: #20042 (Julia/Claudia TP=2 restore, originally proposed)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1151": null,
     "1241": null,
@@ -103878,14 +103881,15 @@
   },
   "1785435661707": {
    "task_id": "1785435661707",
-   "mtime": 1785461913521,
+   "mtime": 1785480741536,
    "created_at": "2026-07-30T18:21:01.707Z",
-   "last_modified": "2026-07-31T01:38:33.521Z",
-   "size_kb": 4874,
-   "turn_count": 1386,
+   "last_modified": "2026-07-31T06:52:21.536Z",
+   "size_kb": 5684,
+   "turn_count": 1570,
    "title": "There's grievances getting lost because of all these categories in here. https://emsuniversity.com/emtskills/routes/grievance_manager.php \n\nThe grievances start with Pending Admin Complete (where the a human is supposed to check whether or not the person filled it out properly (i.e. accoridng to already known logic (had to be by hand and all fields completed), if rejected then it's sent to the student with a reason for the rejection. Human has 72 hours to do a disposition. Then after that it becomes an automated decision. If approved goes to the next step which is Admin Complete, it is then Approved, Approved with stipulations or denied. Most are approved with stipulations. There's automated",
    "pickup_prompt": null,
    "ideas": {
+    "2112": "deployed",
     "2187": "rejected",
     "2363": "deployed",
     "2563": null,
@@ -103939,6 +103943,9 @@
     "20367": "executing",
     "20368": "proposed",
     "20369": "executing",
+    "20406": "executing",
+    "20408": "executing",
+    "20412": "executing",
     "21707": null,
     "45475": null,
     "64748": null,
@@ -104157,16 +104164,17 @@
   },
   "1785465245461": {
    "task_id": "1785465245461",
-   "mtime": 1785473775834,
+   "mtime": 1785480198446,
    "created_at": "2026-07-31T02:34:05.461Z",
-   "last_modified": "2026-07-31T04:56:15.834Z",
-   "size_kb": 656,
-   "turn_count": 212,
+   "last_modified": "2026-07-31T06:43:18.446Z",
+   "size_kb": 926,
+   "turn_count": 334,
    "title": "check jon's argus 80% PD issues. says not resolved yet. \n\ncheck Cori argus building telephony like system for Cyra",
-   "pickup_prompt": "ting] (PD 80% override audit).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #20392 [executing], Jon and Cori ExecAdmin Argus actions not taking + Cyra build + AZDHS NOI + PD 80% audit.\n\nWhere we left off (verified 2026-07-30 21:54 PT):\n- #20334 [executing] + #20392 [executing] + #20333 [executing]: argus_action_permissions seeded with 201 rows (MasterAdmin=56, ExecAdmin=52, ITAdmin=38, Admin=36, CustomerService=19). CS ticket_comment + ticket_status explicitly added (now 21 CS actions). ExecAdmin now sees 52 actions in the Roles UI, all toggleable. Root cause fixed: permissions are now database-driven, not empty-table hardcoded.\n- #20389 [executing] CYRA BUILD 2 OF 3 PIECES DONE: (1) mailbox cdixon@emsuniversity.com CREATED on Plesk, Mailbox: true, quota 2GB, password sym. (2) portal user id=183 verified (Cyra Dixon, role CustomerService, job_title Outreach Specialist, is_active 1). (3) Roundcube URL webmail.emsuniversity.com resolves (172.116.115.101). REMAINING: Twilio DID purchase for Tempe area code 480/602/623, then Roundcube login test as cdixon.\n- #20393 [approved] AZDHS NOI (due 7/31): Step 1 DONE, all 4 students verified: Ivan Vasquez 25226W-34 (NREMT cleared 6/30/2026), Desiree Nettles 25324T-01 (not cleared), Reid Brenza 26308W-16 (cleared 7/21/2026), Benjamin Eckstein 26211FT-07 (cleared 6/20/2026). TKT-12390 Anna Vasquez escalation: CLOSED. Steps 2-5 remain (Alpine misdirection EMS-26-0501, reconciliation memo, Ruben legal review, transmit to Lance Bevins).\n- #20388 [executing] EXPLANATION: the 80% PD gate is vw_student_skills_summary (completion_pct >= 80) rendered by _view_emsu_mcp_pd_80_percent_students.php. The override flag is students.force_on_pd_report (tinyint). The audit: list all students with force_on_pd_report=1, cross-check against the 80% list, confirm why each row was force-included. Likely target: Ivan Vasquez 25226W-34, who is NREMT cleared yet still appears in the AZDHS NOI. Jon said flagged students must be dealt with per policy, not overridden. The audit output will show which force rows are legitimate PD decisions (with audit trail) vs accidental inclusions.\n\nOpen threads to drive next:\n1. #20389 [executing]: Purchase Twilio DID for Tempe AZ area code (480/602/623), assign to cdixon, then test Roundcube login at webmail.emsuniversity.com with the created mailbox.\n2. #20393 [approved]: Steps 2-5 (Alpine Fire District misdirection verification for EMS-26-0501, reconcile TKT-12390 with EMS-26-0493, Ruben legal review of RESPONSE_PROPOSAL_20260713.body.md, transmit to Lance Bevins before 7/31 deadline).\n3. #20388 [executing]: Run SELECT student_id, full_name, force_on_pd_report FROM students WHERE force_on_pd_report=1, join to vw_student_skills_summary, produce the override audit report for Jon.\n4. #20334 [executing], #20392 [executing], #20333 [executing]: After 24h soak, verify ExecAdmin write actions commit (mailbox, section swap, exam reset), then close all three as deployed.\n\nReference IDs:\n- Ideas: #20334 [executing], #20392 [executing], #20333 [executing], #20389 [executing], #20388 [executing], #20393 [approved]\n- Tables touched: argus_action_permissions (201 rows seeded and verified), admin_portal.users (id=183 updated), students (4 AZDHS students verified), tickets (TKT-12390 closed)\n- Files: /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/_view_emsu_mcp_pd_80_percent_students.php\n- Infra: Plesk mailbox cdixon@emsuniversity.com created (Mailbox",
+   "pickup_prompt": "ng]: force_on_pd_report audit.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #20405 [executing], wrongful suspensions plus Vicky Admin capability plus monotonic invariant.\n\nWhere we left off (verified 2026-07-30 23:42 PT):\n- Vicky Admin has 42 permissions, incl 6 new operational + payment grants.\n- 9 students unsuspended and extended (fail_date NULL, course_end_date +7d).\n- Full 5-role argus_action_permissions lattice monotonic: CS=21, Admin=42, ITAdmin=44, ExecAdmin=56, MasterAdmin=60. Zero violations.\n- Durable guard deferred: #20410 [queued] needs root or PHP propagation logic.\n\nOpen threads to drive next:\n1. #20405 [executing]: Verify payment_match + resolve_fail_bug work for Vicky in Argus terminal.\n2. #20410 [queued]: Install monotonic guard (root-gated trigger or PHP propagation).\n3. #20388 [executing]: Run force_on_pd_report audit for 80% PD students.\n4. #20393 [deployed]: AZDHS NOI steps 2-5 (deadline 7/31).\n5. #20389 [executing]: Purchase Twilio DID for cdixon, test Roundcube.\n\nReference IDs:\n- Ideas: #20405 [executing], #20410 [queued], #20388 [executing], #20393 [deployed], #20389 [executing], #20334 [executing], #20333 [executing], #20392 [executing]\n- Tables: argus_action_permissions (full lattice verified), students (9 cleared + extended)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
     "1880": null,
     "1884": null,
+    "3202": null,
     "3230": null,
     "3231": null,
     "3239": null,
@@ -104174,6 +104182,9 @@
     "3289": null,
     "3294": null,
     "3295": null,
+    "3305": null,
+    "3306": null,
+    "3307": null,
     "3595": null,
     "9306": null,
     "18934": null,
@@ -104212,7 +104223,10 @@
     "20388": "proposed",
     "20389": "proposed",
     "20392": "proposed",
-    "20393": "approved"
+    "20393": "approved",
+    "20405": "executing",
+    "20406": null,
+    "20410": "queued"
    }
   }
  }

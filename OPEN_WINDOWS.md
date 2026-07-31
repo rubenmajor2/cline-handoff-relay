@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/31/2026, 10:06:59 AM PT | window: last 72h | 114 tasks | index total 342 (parsed 5, cached 337)
+Generated: 7/31/2026, 11:06:59 AM PT | window: last 72h | 110 tasks | index total 342 (parsed 2, cached 340)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785375877050` | 7/31/2026, 10:06:57 AM | 1853 | 6696KB | #GLM |
-| `1785435661707` | 7/31/2026, 10:06:21 AM | 1657 | 6117KB | There's grievances getting lost because of all these categories in here. https://emsuniver |
+| `1785435661707` | 7/31/2026, 11:06:45 AM | 1787 | 6856KB | There's grievances getting lost because of all these categories in here. https://emsuniver |
+| `1785375877050` | 7/31/2026, 10:39:20 AM | 1917 | 6823KB | #GLM |
 | `1785483774534` | 7/31/2026, 9:45:20 AM | 274 | 532KB | Play frankenstein doctor of executor for the next 60 minutes (use timestamps) and make sur |
 | `1785465245461` | 7/31/2026, 9:41:42 AM | 484 | 1255KB | check jon's argus 80% PD issues. says not resolved yet.  |
 | `1785512899843` | 7/31/2026, 9:38:45 AM | 98 | 389KB | It looks like Klein was updated. When this happens sometimes some of our features that we  |
@@ -120,16 +120,75 @@ Generated: 7/31/2026, 10:06:59 AM PT | window: last 72h | 114 tasks | index tota
 | `1785263767633` | 7/28/2026, 11:41:47 AM | 28 | 154KB | #Artemis |
 | `1785262867442` | 7/28/2026, 11:23:36 AM | 22 | 44KB | ——[COPY]—— |
 | `1785262842860` | 7/28/2026, 11:23:06 AM | 18 | 36KB | ——[COPY]—— |
-| `1785258740211` | 7/28/2026, 10:58:24 AM | 124 | 2527KB | some cline windows here are stalling for unknown reason. We are running only 4 windows now |
-| `1785261361629` | 7/28/2026, 10:56:09 AM | 2 | 15KB | Give this again, i was supposed to get actual copy prompts where I click on the copy promp |
-| `1785258471936` | 7/28/2026, 10:38:37 AM | 260 | 1345KB | Play doctor of frankenstein executor for 90 minutes to ensure ideas are being implemented  |
-| `1785258453183` | 7/28/2026, 10:33:22 AM | 168 | 1699KB | # Comprehensive |
 
 ---
 
 ## Per-window detail
 
-### `1785375877050` — 7/31/2026, 10:06:57 AM PT — 1853 turns
+### `1785435661707` — 7/31/2026, 11:06:45 AM PT — 1787 turns
+
+**Original task:**
+
+```
+There's grievances getting lost because of all these categories in here. https://emsuniversity.com/emtskills/routes/grievance_manager.php 
+
+The grievances start with Pending Admin Complete (where the a human is supposed to check whether or not the person filled it out properly (i.e. accoridng to already known logic (had to be by hand and all fields completed), if rejected then it's sent to the student with a reason for the rejection. Human has 72 hours to do a disposition. Then after that it becomes an automated decision. If approved goes to the next step which is Admin Complete, it is then Ap
+```
+
+**Ideas referenced:** #047857, #059669, #11111, #111827, #120179, #12770, #127891, #128681, #129302, #13437, #13441, #14662, #14710, #16464, #166534, #16957, #17657, #181825, #19338, #19458, #19470, #19491, #19576 [deployed], #19592, #19594, #20258 [proposed], #20259 [proposed], #20260 [proposed], #20265 [proposed], #20266 [proposed], #20268 [proposed], #20269 [proposed], #20275 [proposed], #20282 [proposed], #20283 [proposed], #20286 [proposed], #20290 [proposed], #20292 [proposed], #20295 [proposed], #20299 [proposed], #20309 [proposed], #20310 [proposed], #20316 [proposed], #20328 [executing], #20335 [executing], #20336 [executing], #20340 [executing], #20341 [in_progress], #20347 [executing], #20350 [executing], #20353 [executing], #20354 [executing], #20360 [executing], #20361 [executing], #20367 [executing], #20368 [proposed], #20369 [executing], #20406 [executing], #20408 [executing], #20412 [executing], #20504 [executing], #20507 [executing], #20509 [executing], #20513 [proposed], #20514 [proposed], #20515 [proposed], #20516 [proposed], #20518 [proposed], #20519 [proposed], #2112 [deployed], #21707, #2187 [rejected], #2363 [deployed], #2563, #2611 [deployed], #313244, #334155, #353857, #3730, #374151, #4338, #450438, #45475, #475569, #583788, #600179, #623992, #6366, #64748, #65039, #78350, #9203, #92400, #9888
+
+**Last PICKUP PROMPT:**
+
+```
+lvable recursively.
+- **Rule 91/267 gates**: every `attempt_completion` needs a PICKUP PROMPT; `clinerules_validate_completion` + `clinerules_check_gate` must pass. **NO EM DASHES** (R01_EM_DASH blocks completion).
+
+# 3. Files and Code Sections
+
+### `src/Status.php` (MODIFIED — critical fix)
+`StatusCalculator::compute()` is the authoritative status engine driving the admin-profile badge AND "NREMT Testing Dates Remaining". It read ONLY display-label keys, so raw `SELECT *` callers silently got `days=0` (reads as "out of time"). Fixed with alias loop:
+```php
+$_didacticAliases = [
+    'Scheduled Didactic Completion Date',
+    'scheduled_didactic_completion_date',
+    'Didactic Completion Date',
+    'didactic_completion_date',
+];
+foreach ($_didacticAliases as $_alias) {
+    if (!empty($row[$_alias])) { $didactic = trim((string)$row[$_alias]); break; }
+}
+```
+Verified: Hannah 26913FT-49 = Current/20, Kamdyn 26913FT-01 = Current/20, Sammi Chou 26817FT-46 = Current/48, Waldrop 26414T-18 = Current/90.
+
+### `routes/api/grievance_api.php` (HEAVILY MODIFIED)
+- Cached-read fast path in `handleAnalyze()` (serves stored `ai_analysis_json`, 0.01ms, zero LLM calls; `force=1` recomputes)
+- CLI bypass in `callClaude()`: `$_isCli = (PHP_SAPI === 'cli')` → localhost:4000, timeout 600
+- Non-JSON/HTML guard, input cap `$GRV_ANALYZE_MAX_CHARS = 12000`, `max_tokens` 2500
+- `grvIsAgentScaffolding()` detector (matches `<use_mcp_tool`, `<thinking>`, etc.) wired at write path (retry once then REFUSE to store), cached-read path
+- EXTERNSHIP OUTREACH EVIDENCE block (transmitted vs NOT TRANSMITTED per `postmark_message_id`)
+- COURSE CERTIFICATE ACCESS REQUIREMENTS block via `MoodleAvailabilityResolver`
+- AUTHORITATIVE STUDENT STATUS block calling `StatusCalculator::compute($stu)` + mandatory directive that any letter asserting a closed window "IS FACTUALLY FALSE"
+- EVIDENCE DISCIPLINE paragraph (do not invent hour/PCR counts)
+- `CAST(? AS JSON)` → `JSON_MERGE_PATCH` at line ~305
+
+### `routes/api/grievance_agent.php` (MODIFIED)
+Houses `handleRecommendDisposition()` and `handleValidateCompleteness()` (NOT in grievance_api.php; required at line 35). Fixes: derived `status` CASE from drop_date/fail_date; model pin `emsu-executor-auto` → `frankenstein-llm`; CLI bypass; status-aware errors (403/524/HTTP-0); `CAST(? AS JSON)` → `JSON_MERGE_PATCH` at line ~390.
+
+### `lib/GrievanceAutomation.php` (MODIFIED)
+`computeDispositionRecommendation()` had hardcoded `$conf = 0.80` / `0.70`. Added `scoreCompleteConfidence()` (base 0.55, terms for text volume/OCR/density/entities/freshness/per-question/risk/legacy/hold, clamped [0.05,0.95]) and `scoreDeficientConfidence()` (asymmetric base 0.45, FORCED to 0.10 when text <200 chars or OCR failed). Verified 7 identical 0.800s → 0.52/0.75/0.77/0.78/0.87/0.88/0.88.
+
+### `lib/MoodleAvailabilityResolver.php` (NEW)
+Recursive (6 levels) restrict-access reader classifying EXTERNSHIP_BLOCKED / PRECEPTOR_AUTHORED / STUDENT_OWED / DONE. Validated on cmid 2449 uid 48606: independently derived exactly the 2 STUDENT_OWED items Ruben named by hand (NREMT EMS ID, Comprehensive Course Review). Moodle creds: `moodle_51` / `!oF7wN2tY1`.
+
+### `assets/js/grievance_manager.js` (MODIFIED)
+- `formatStatus()` had DUPLICATE KEYS (JS silently keeps last) causing doubled labels; deduped + stripped "1."/"2." from row badges
+- `raw_analysis` fallback renderer (markdown → HTML)
+- PDF iframe replaced with auto-loading server page images (`handleDownload` returns HTTP 204 for iframes by design)
+- AI Interaction Log auto-loads
+- Disposition submit: 
+```
+
+### `1785375877050` — 7/31/2026, 10:39:20 AM PT — 1917 turns
 
 **Original task:**
 
@@ -146,7 +205,7 @@ I stopped tuning preferences and made it unconditional in /usr/local/bin/franken
 
 ```
 
-**Ideas referenced:** #11261, #12059, #12060, #12231, #12251, #12335, #12365, #12366, #12368, #12407, #12459, #1248 [resolved], #12672, #12689, #13108, #13121, #13831, #13832, #13874, #14000, #16120, #16126, #16128, #16844, #1685, #1687, #1705, #1706, #17202, #17203, #17205, #17300, #178531, #18781, #18820, #18868, #1888, #1894, #1962, #1964, #1967, #19903, #1993 [resolved], #19962 [proposed], #20005 [proposed], #20022 [rejected], #20040 [proposed], #20041 [proposed], #20042 [proposed], #20054 [proposed], #20068 [proposed], #20069 [proposed], #20082 [proposed], #20088 [proposed], #20102 [proposed], #20112 [proposed], #20129 [proposed], #2014, #20172 [proposed], #20178 [proposed], #20179 [proposed], #20245 [executing], #20246 [rejected], #20247 [executing], #20264 [proposed], #20272 [executing], #20291 [executing], #20297 [executing], #20300 [proposed], #20302 [executing], #20311 [executing], #20495 [executing], #20498 [executing], #2050, #2062, #2092, #2102 [deployed], #2103 [deployed], #2108 [deployed], #2109 [resolved], #2110, #2111, #2115, #2116, #2118
+**Ideas referenced:** #11261, #12059, #12060, #12231, #12251, #12335, #12365, #12366, #12368, #12407, #12459, #1248 [resolved], #12672, #12689, #13108, #13121, #13831, #13832, #13874, #14000, #16120, #16126, #16128, #16844, #1685, #1687, #1705, #1706, #17202, #17203, #17205, #17300, #178531, #18781, #18820, #18868, #1888, #1894, #1962, #1964, #1967, #19903, #1993 [resolved], #19962 [proposed], #20005 [proposed], #20022 [rejected], #20040 [proposed], #20041 [proposed], #20042 [proposed], #20054 [proposed], #20068 [proposed], #20069 [proposed], #20082 [proposed], #20088 [proposed], #20102 [proposed], #20112 [proposed], #20129 [proposed], #2014, #20172 [proposed], #20178 [proposed], #20179 [proposed], #20245 [executing], #20246 [rejected], #20247 [executing], #20264 [proposed], #20272 [executing], #20291 [executing], #20297 [executing], #20300 [proposed], #20302 [executing], #20311 [executing], #20495 [executing], #20498 [executing], #2050, #20506 [executing], #20517 [executing], #2062, #2092, #2102 [deployed], #2103 [deployed], #2108 [deployed], #2109 [resolved], #2110, #2111, #2115, #2116, #2118, #2119
 
 **Last PICKUP PROMPT:**
 
@@ -178,20 +237,6 @@ Open threads to drive next:
 Reference IDs:
 - Ideas (reconciled 15:13 PT): #20311 [executing] (verified: status=in_progress dev_stage=idle), #20302 [deployed] (verified: status=deployed dev_stage=ready_for_review), #20300 [executing] (verified: status=in_progress dev_stage=auditing), #20297 [executing] (ver
 ```
-
-### `1785435661707` — 7/31/2026, 10:06:21 AM PT — 1657 turns
-
-**Original task:**
-
-```
-There's grievances getting lost because of all these categories in here. https://emsuniversity.com/emtskills/routes/grievance_manager.php 
-
-The grievances start with Pending Admin Complete (where the a human is supposed to check whether or not the person filled it out properly (i.e. accoridng to already known logic (had to be by hand and all fields completed), if rejected then it's sent to the student with a reason for the rejection. Human has 72 hours to do a disposition. Then after that it becomes an automated decision. If approved goes to the next step which is Admin Complete, it is then Ap
-```
-
-**Ideas referenced:** #047857, #059669, #11111, #111827, #120179, #12770, #127891, #128681, #129302, #13437, #13441, #14662, #14710, #16464, #166534, #16957, #17657, #181825, #19576 [deployed], #19592, #19594, #20258 [proposed], #20259 [proposed], #20260 [proposed], #20265 [proposed], #20266 [proposed], #20268 [proposed], #20269 [proposed], #20275 [proposed], #20282 [proposed], #20283 [proposed], #20286 [proposed], #20290 [proposed], #20292 [proposed], #20295 [proposed], #20299 [proposed], #20309 [proposed], #20310 [proposed], #20316 [proposed], #20328 [executing], #20335 [executing], #20336 [executing], #20340 [executing], #20341 [in_progress], #20347 [executing], #20350 [executing], #20353 [executing], #20354 [executing], #20360 [executing], #20361 [executing], #20367 [executing], #20368 [proposed], #20369 [executing], #20406 [executing], #20408 [executing], #20412 [executing], #20504 [executing], #20507 [executing], #2112 [deployed], #21707, #2187 [rejected], #2363 [deployed], #2563, #2611 [deployed], #313244, #334155, #353857, #3730, #374151, #4338, #450438, #45475, #475569, #583788, #600179, #623992, #6366, #64748, #65039, #78350, #9203, #92400, #9888
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785483774534` — 7/31/2026, 9:45:20 AM PT — 274 turns
 
@@ -4120,182 +4165,4 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 - [x] Final — Pickup prompt assembled with reconciled state
 </task_progress>
 </attempt_completion>
-```
-
-### `1785258740211` — 7/28/2026, 10:58:24 AM PT — 124 turns
-
-**Original task:**
-
-```
-some cline windows here are stalling for unknown reason. We are running only 4 windows now.
-```
-
-**Ideas referenced:** #178501, #178518, #178525, #19202, #19218, #19230 [executing], #19234, #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #19387 [executing], #19448 [queued], #19458 [rejected], #19490 [deployed], #19491 [deployed], #19704, #1986, #1987, #1988, #1989, #1990, #1991
-
-**Last PICKUP PROMPT:**
-
-```
-
-<attempt_completion>
-<result>
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785258740211 - patched Cline 4.0.7 runFlushCycle loop, deleted corrupted task
-
-Where we left off (verified 2026-07-28 10:56 PT):
-- Patch VERIFIED on disk: `for(;;)` changed to `for(var _fc=0;_fc<500;_fc++)` at offset 19346321 in extension.js
-- Deleted corrupted task 1785258740211 from tasks/ and confirmed gone
-- Killed all Cline extension host processes to prevent auto-regeneration
-- THIS window is still running the OLD uncached code — it may stall again momentarily
-
-Open threads to drive next:
-1. **Quit VS Code (Cmd+Q) and reopen** — this loads the patched extension.js from disk
-2. **Start fresh tasks in new windows** — do NOT re-open any window that previously greyed out (they loaded stale state)
-3. If any window still greys out after restart: close it, find its task ID from the Cline log, delete that task dir, and reopen
-
-Reference IDs:
-- Files touched: extension.js (patched), tasks/1785258740211/ (deleted)
-- Backups: extension.js.bak-20260728-flushcycle
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-
-## Fix Applied — Action Required
-
-**Two-part fix shipped to disk:**
-
-1. **Extension code patched** — `for(;;)` → `for(var _fc=0;_fc<500;_fc++)` in the presentation scheduler (runFlushCycle). Prevents the infinite CPU spin.
-2. **Corrupted task deleted** — task 1785258740211 (this session's conversation) removed from Cline storage to eliminate the trigger that re-queues infinite presentation updates on load.
-
-**What you need to do**: Quit VS Code completely (Cmd+Q) and reopen. Start fresh tasks in new windows. Do not re-open any window that previously greyed out — their loaded state may still contain the trigger. If any window still greys out after restart, close it, delete its task ID from `~/.codebuddy/tasks/`, and try again.
-</result>
-</attempt_completion>
-```
-
-### `1785261361629` — 7/28/2026, 10:56:09 AM PT — 2 turns
-
-**Original task:**
-
-```
-Give this again, i was supposed to get actual copy prompts where I click on the copy prompt only, wehere I don't select text Just press the button and it copies to the clipboard. That's the cline rule I asked for:
-
-GATE D (9d) and COPY-WINDOW FORMAT (9e) both shipped to _RULE_TREE.md and CLINERULES_MIRROR.md (42 files, 339613 bytes). Mirrors regen every hour, every Cline window gets these gates.
-
-Below are 5 copy windows — each self-contained, with concrete commands, verified provenance, and `——[COPY]——` markers for one-click paste. The clinerule format requirement is now enforced by gate 9d's
-```
-
-**Ideas referenced:** #19490 [deployed per prior session], #19509 [executing], #19553 [deployed], #19562 [deployed], #19594 [executing], #19598 [executing], #19686 [queued], #19689 [queued], #19701 [queued], #19704 [executing], #19706 [queued], #19724 [queued], #19743 [queued], #19756 [deployed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785258471936` — 7/28/2026, 10:38:37 AM PT — 260 turns
-
-**Original task:**
-
-```
-Play doctor of frankenstein executor for 90 minutes to ensure ideas are being implemented properly
-```
-
-**Ideas referenced:** #12430, #13202, #1468, #178501, #18395, #18935, #19177, #19188, #19338, #19403, #19458, #19490, #19491, #19503, #19509 [auditing], #19518, #19553 [auditing], #19558, #19571, #19585, #19592, #19594 [drafting], #19598 [auditing], #19604, #19611, #19646, #19647, #19657, #19661, #19690 [deployed], #19704 [auditing], #19714 [proposed], #19738, #19739, #19742, #19744, #19745, #19746, #19747, #19748, #19749, #19750, #19752 [proposed], #19753 [proposed], #19754, #2043, #2084, #2085, #2820, #3048, #3049, #4747, #4906, #53462, #53482, #53483, #5516, #7925, #815009, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-g it from reaching `deployed`.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #current — Frankenstein Doctor follow-up: remove copycat gate and manually deploy #19509.
-
-Where we left off (verified 2026-07-28 10:35 PT):
-- 5 rearmed ideas (#19509, #19553, #19594, #19598, #19704) all fell back to impl_failed within minutes
-- 0 deployments in 24h; 101 ideas permanently stuck at retry cap 5
-- Root cause: #19509 identifies 2 lines that break JSON parsing, but the gate prevents deployment
-- INV1 + INV4 bandaid tests fixed; INV2/INV5 are structural and not fixable without Ruben
-
-Open threads to drive next:
-1. #19509 [queued] — Remove copycat gate, then manually apply spec_gen_json_fix to lib/frankenstein_spec_gen.php and verify parser output
-2. #19752 [proposed] — Fix INV2 silent return in ea_completion.php L2374 (bare return null in registration path)
-3. #19753 [proposed] — Add security probe classifier to stop SQL injection/XSS/fuzzing from filing as buildable ideas
-
-Reference IDs:
-- Ideas touched this session: #19509, #19553, #19594, #19598, #19704 (all rearmed, all fell back)
-- Ideas filed: #19752 (INV4 slug fix — already done), #19753 (pipeline noise guard)
-- Files touched: /var/www/emtskills/lib/report_registry.php (deployed), /tmp/ruben_sandbox_19704/e2pdf_health_check.php (syntax fix), /var/www/emtskills/docs/HANDOFF_NOTES.md (appended)
-- Handoff notes: /var/www/emtskills/docs/HANDOFF_NOTES.md (append at 10:25 PT)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785258453183` — 7/28/2026, 10:33:22 AM PT — 168 turns
-
-**Original task:**
-
-```
-# Comprehensive
-
-Rebase and Pickup all tasks here and organize them into copy windows while executing what is oustanding or implementation failed/blocked by executor. Leverage Rule 267:
-
-https://docs.google.com/document/d/1qKgA18bcMRR9K0Ok3W6GR9uekmftn3XzIOclR40Q6ws/edit?tab=t.0#heading=h.jainx63k6q9x
-```
-
-**Ideas referenced:** #0000, #1281, #15652, #15887, #15999, #16000, #16015, #16016, #16312, #16578, #17130 [superseded], #17537 [rejected], #1754, #1755, #17665, #178496, #178501, #178511, #178518, #178519, #178560, #18132 [deployed], #18500, #18587, #18657, #18841, #18867, #18871, #18898, #18903, #18928, #18930, #18935, #18937, #18941, #18950, #1896, #18967, #18974, #18975, #18977, #18982, #18985, #19006, #19079, #19101, #19125, #19173, #19186, #19188, #19230, #19239 [rejected], #19258, #19338, #19359, #19360, #19362, #19363, #19379, #19403, #19404, #19423, #19430, #19431, #19432, #19433, #19435, #19437, #19438, #19439, #19441, #19447, #19448, #19449, #19454, #19455, #19456, #19458, #19460, #19464, #19465, #19466, #19490 [deployed], #19491 [deployed], #19498, #19500, #19503, #19504, #19505, #19507, #19508, #19509 [blocked], #19510, #19516, #19518, #19519, #19522, #19523, #19524, #19525, #19526, #19527, #19528, #19529, #19530, #19531, #19532, #19533, #19540, #19541, #19542, #19543, #19544, #19546, #19547, #19548, #19549, #19550, #19551, #19552, #19553 [blocked], #19554, #19555, #19556, #19557, #19558, #19559, #19560, #19561, #19562 [deployed], #19563, #19564, #19571, #19575, #19582, #19585, #19592, #19594 [executing], #19598 [blocked], #19604, #19611, #19621, #19630, #19632, #19643, #19645, #19646, #19647, #19648, #19651, #19652, #19654, #19657, #19658, #19659 [deployed], #19661, #19662, #19667, #19668, #19670, #19671, #19672, #19673, #19679, #19682, #19684, #19685, #19686 [queued], #19689 [queued], #19690 [deployed], #19695 [deployed], #19696 [proposed], #19697 [deployed], #19698, #19701 [queued], #19704 [blocked], #19705, #19706 [queued], #19714 [proposed], #19721 [proposed], #19722, #19724 [queued], #19743 [queued], #19751 [proposed], #19756 [proposed], #1986, #1988, #1989, #1991, #2014, #2027, #2029, #2030, #2031, #2033, #2035, #2038, #2039, #2040, #2041, #2043, #2046, #2050, #2060, #2061, #2062, #2071, #2072, #2073, #2075, #2076, #2077, #2078, #2079, #2080, #2082, #2083, #2084, #2085, #2086, #2932, #2986, #3048, #3049, #3076, #3077, #3081, #3109, #3122, #4536, #5387, #7925, #8281, #8321, #8563, #8598, #9313
-
-**Last PICKUP PROMPT:**
-
-```
-e hourly to all Cline windows.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — EMSU comprehensive rebase: 5 copy windows with concrete commands.
-
-Where we left off (verified 2026-07-28 10:33 PT via reconcile_ideas):
-- #19509 [executing] (verified: dev_stage=auditing) — report_registry.php card hand-shipped this session
-- #19704 [executing] (verified: dev_stage=auditing) — e2PDF REST plugin patched + backfill dry-run OK (33 rows)
-- #19553 [executing] (verified: dev_stage=auditing) — all 3 GPU questions answered live, mirror+GRUB done
-- #19594 [executing] (verified: dev_stage=drafting) — grievance manual-first, ZERO deployable code
-- #19598 [executing] (verified: dev_stage=auditing) — 72h auto-disposition going forward
-- #19689 [queued] (verified: approved/idle) — Julia+Claudia at WOPR:11513, needs bringup
-- #19686 [queued] (verified: approved/idle) — Argus has no config.yaml entry
-- #19562 [deployed] (verified: ready_for_review) — 7 grievances dashboard
-- #19695 [deployed] (verified: ready_for_review) — VAPI reporting fix
-- #19756 [deployed] (verified: approved+mirror regen OK) — GATE D + gate 9e shipped this session
-
-Open threads (each copy window is self-contained, markers for one-click copy):
-
-——[COPY]——
-# COPY WINDOW 1 — P0 Grievance Manual-First Pipeline
-
-Pick up task — Build grievance manual-first toggle + 72h auto-disposition engine.
-
-Step 1 — Read specs: idea_spec(19594) and idea_spec(19598)
-Step 2 — Check DB: ssh_command(mysql -u adminportal -pIV84o80^y admin_portal -e "SHOW COLUMNS FROM grievances WHERE Field LIKE '%manual%' OR Field LIKE '%auto%'")
-Step 3 — Add columns if missing: ALTER TABLE grievances ADD COLUMN manual_mode TINYINT(1) DEFAULT 1, ADD COLUMN auto_disposition_at DATETIME NULL, ADD COLUMN disposition_status ENUM('pending','recommended','auto_decided','manually_decided') DEFAULT 'pending'
-Step 4 — Read current: read_server_file("routes/grievance_manager.php", 400)
-Step 5 — Edit grievance_manager.php to add toggle + POST handler + AJAX poller
-Step 6 — Write cron: write_server_file("cron/cron_grievance_auto_disposition.php") — queries manual_mode=0 AND auto_disposition_at < NOW() AND disposition_status='pending', flips to auto_decided
-Step 7 — Verify: php -l on both files, sudo /usr/local/bin/emsu-fpm-guard reload, sql_query SELECT id,manual_mode,auto_disposition_at,disposition_status FROM grievances LIMIT 5
-——[/COPY]——
-
-——[COPY]——
-# COPY WINDOW 2 — P1 Infrastructure: 2nd 120B + Argus
-
-Pick up task — Restore Julia+Claudia as second 120B ring, integrate Argus into Frankenstein fleet.
-
-Step 1 — Probe: ssh_command(curl -s -m 5 http://127.0.0.1:11513/v1/models | head -15)
-Step 2 — If dead, check: ssh_command(docker ps | grep vllm) and ssh_command(docker logs vllm --tail 50 | tail -30)
-Step 3 — Read build ref: read_file("/Users/rubenmajor/Desktop/IDEAL_GLM52_HEX_BUILD.md")
-Step 4 — Add Julia+Claudia to config.yaml: sudo cp /etc/litellm/config.yaml /etc/litellm/config.yaml.bak-20260728, edit model_list to add artemis-2 entry with fallbacks=[artemis-120b, glm-5.2-local]
-Step 5 — Add Argus: edit /etc/litellm/config.yaml to add argus-chat model_list entry with fallbacks=[frankenstein-llm, glm-5.2-local], add to STEERING_MODELS array
-Step 6 — Add registry entry: edit /var/www/emtskills/docs/frankenstein_registry.json (model_id=argus-chat, surface=agent, tier=interactive)
-Step 7 — Restart LiteLLM: sudo systemctl restart litellm && sudo systemctl status litellm --no-pager | head -10
-Step 8 — Ve
 ```

@@ -6,12 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/1/2026, 3:07:07 AM PT | window: last 72h | 84 tasks | index total 371 (parsed 1, cached 370)
+Generated: 8/1/2026, 4:13:17 AM PT | window: last 72h | 80 tasks | index total 373 (parsed 4, cached 369)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785360672171` | 8/1/2026, 3:07:01 AM | 1899 | 9187KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
-| `1785566876939` | 8/1/2026, 2:31:58 AM | 622 | 1422KB | GLM ring RoCE root cause found (wrong-NIC RX-offload drops from /30 shortcut routes); /32  |
+| `1785360672171` | 8/1/2026, 4:13:16 AM | 2500 | 11464KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
+| `1785582017987` | 8/1/2026, 4:13:09 AM | 35 | 1753KB | GLM ring TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wan |
+| `1785581189111` | 8/1/2026, 4:12:46 AM | 97 | 335KB | I need to make sure that the orchestra is running and that we don't just have a bunch of i |
+| `1785566876939` | 8/1/2026, 3:57:20 AM | 634 | 1456KB | GLM ring RoCE root cause found (wrong-NIC RX-offload drops from /30 shortcut routes); /32  |
 | `1785548524428` | 8/1/2026, 2:00:05 AM | 350 | 706KB | Jon says Daystron counsil stopped working |
 | `1785537564406` | 8/1/2026, 1:56:30 AM | 902 | 14669KB | #Argus |
 | `1785463237084` | 8/1/2026, 1:52:03 AM | 1166 | 3971KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
@@ -88,18 +90,12 @@ Generated: 8/1/2026, 3:07:07 AM PT | window: last 72h | 84 tasks | index total 3
 | `1785328241690` | 7/29/2026, 5:34:48 AM | 17 | 469KB | I'd like to see a different comparison to the various CFA's and your thoughts on how well  |
 | `1785326871798` | 7/29/2026, 5:17:54 AM | 16 | 120KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
 | `1785322364632` | 7/29/2026, 5:13:46 AM | 10 | 16KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
-| `1785322147808` | 7/29/2026, 3:53:39 AM | 3 | 5KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
-| `1785321841013` | 7/29/2026, 3:44:01 AM | 1 | 2KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
-| `1785320859831` | 7/29/2026, 3:37:41 AM | 14 | 47KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
-| `1785320155032` | 7/29/2026, 3:37:13 AM | 22 | 97KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
-| `1785319773045` | 7/29/2026, 3:13:10 AM | 5 | 8KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
-| `1785319108441` | 7/29/2026, 3:11:59 AM | 17 | 24KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
 
 ---
 
 ## Per-window detail
 
-### `1785360672171` — 8/1/2026, 3:07:01 AM PT — 1899 turns
+### `1785360672171` — 8/1/2026, 4:13:16 AM PT — 2500 turns
 
 **Original task:**
 
@@ -144,7 +140,81 @@ When done, append to cline_task_ledger.md and run order 66.
 </attempt_completion>
 ```
 
-### `1785566876939` — 8/1/2026, 2:31:58 AM PT — 622 turns
+### `1785582017987` — 8/1/2026, 4:13:09 AM PT — 35 turns
+
+**Original task:**
+
+```
+GLM ring TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wants autonomous monitoring + cron automation so the ring can self-recover overnight without human intervention. Extremely detailed pickup prompt below for the next window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785314663557 — GLM ring: TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wants autonomous monitoring + cron automation so the ring can self-recover o
+```
+
+**Ideas referenced:** #1293, #1334, #1353, #1359, #1360, #1361, #1367, #1368, #1374, #1391, #1474, #1475, #1515, #1531, #1537, #1567 [resolved], #1569, #15822, #1586, #1587, #1600, #1606 [investigating], #1608 [investigating], #1609, #1611, #1612, #1614 [investigating], #16803, #16962, #1703, #17104, #17128, #1715, #1723, #1724, #1725, #1733, #1740, #1742, #1754, #1755, #1765, #178531, #1842, #1881, #19166, #1962 [resolved], #1963 [investigating], #1964 [resolved], #1967 [resolved], #1968 [resolved], #1970 [investigating], #1973 [investigating], #1974 [investigating], #1975 [resolved], #1979 [investigating], #1982 [resolved], #1983 [resolved], #1984 [resolved], #1985 [resolved], #1993 [resolved], #20495 [queued], #20506 [queued], #20517 [blocked], #20528 [queued], #20536 [queued], #20553 [queued], #20724 [proposed], #20725 [proposed], #20740 [proposed], #48031, #48140
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785581189111` — 8/1/2026, 4:12:46 AM PT — 97 turns
+
+**Original task:**
+
+```
+I need to make sure that the orchestra is running and that we don't just have a bunch of ideas queuedOr work cute.
+```
+
+**Ideas referenced:** #16523, #20336 [in_progress], #20340 [proposed], #20492 [in_progress], #20493 [in_progress], #20507 [in_progress], #20509 [proposed], #20517 [proposed], #20613 [proposed], #20624 [in_progress], #20662 [in_progress], #20672 [in_progress], #20793 [proposed], #2113, #2114, #2123, #444279, #444280
+
+**Last PICKUP PROMPT:**
+
+```
+tab or toggling a config flag.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #20793 [proposed] - orchestra health check: triage shadow mode + 11 impl_failed ideas
+
+Where we left off (verified 2026-08-01 03:56 PT):
+- Triage cron fires every 2 min but defaults to SHADOW MODE (needs --live flag). 800 shadow entries ever, zero LIVE. #20793 [proposed].
+- Executor in quiet hours (23:00-06:00). Resumes execution at 06:00.
+- 11 ideas in-progress all impl_failed. Will retry at 06:00.
+
+Open threads to drive next:
+1. #20793 [proposed] Add --live to triage crontab or toggle orchestrator_config flag. Investigate why shadow was default before flipping. Edit crontab on WOPR.
+2. #20613 [blocked] P0: Zero large EMT approvals. Human call to Intuit Merchant Services needed. Check if any large charges cleared since Jul 31.
+3. #20340 [blocked] P0: Externship agency outreach, 22h stuck, 95% batched threads reference nonexistent parents. Watch 06:00 retry.
+4. #20517 [blocked] P0: Structural enforcement, 17h stuck. Check impl_failed reason.
+5. #20509 [blocked] P0: 14 grievance backfill, 17h stuck. Postmark attachment retrieval pending.
+
+Reference IDs:
+- Ideas filed: #20793 [proposed]
+- Stuck ideas: #20672 [blocked] #20662 [blocked] #20624 [blocked] #20613 [blocked] #20517 [blocked] #20509 [blocked] #20507 [blocked] #20493 [blocked] #20492 [blocked] #20340 [blocked] #20336 [blocked]
+- Files touched: none
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Probe orchestrator health (orchestrator_status)
+- [x] List queued/in-progress ideas
+- [x] List pending decisions
+- [x] Verify crons/processes are actually running
+- [x] Investigate SHADOW MODE + executor failures
+- [x] Check specific impl_failed ideas for root cause
+- [x] Check executor log for live activity
+- [x] Diagnose why executor executes zero ideas
+- [x] File ideas for fix actions
+- [x] Verify --live flag mechanics + why shadow was set
+- [x] Report state + pickup prompt
+</task_progress>
+</attempt_completion>
+```
+
+### `1785566876939` — 8/1/2026, 3:57:20 AM PT — 634 turns
 
 **Original task:**
 
@@ -163,49 +233,60 @@ Pick up task #1785314663557 — GLM ring RoCE bring-up: root cause SOLVED in ana
 **Last PICKUP PROMPT:**
 
 ```
-gress, deadlock at compilation
+mpt below for the next window.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1785314663557 — GLM ring: TP=2 PP=3 + Socket gets furthest (weights load, KV cache, but deadlock at compilation). 7 approaches tried. PP group all-to-all is the root constraint.
+Pick up task #1785314663557 — GLM ring: TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wants autonomous monitoring + cron automation so the ring can self-recover overnight without human intervention.
 
-Where we left off (verified 2026-08-01 02:30 PT):
-- RING: DEADLOCKED. TP=2 PP=3 + Socket: weights loaded, KV cache computed, compilation deadlocked.
-- Container alive 30+ min, 0 errors, but no progress past KV cache (09:06:09).
-- Workers stuck in NCCL socket poll_schedule_timeout (many open TCP sockets, no compilation file access).
+== CURRENT STATE (verified 2026-08-01 03:55 PT) ==
+- RING: DEADLOCKED. All 6 containers Up 2 hours (cato/augustus/pompey/marcus/tiberius/cesar), 0 errors, but no progress past KV cache (09:06:09). HTTP 000 (not serving).
+- CONFIG: TP=2 PP=3, NCCL_IB_DISABLE=1 (Socket transport), NCCL_ALGO=Ring, CROSS_NIC=1, MERGE_NICS=1.
+- GPU MEMORY: 56 GiB model + 36 GiB KV cache per node, all allocated but deadlocked.
+- WATCHDOG: STOPPED on all 6 nodes (disabled during RoCE work).
 
-Open threads to drive next:
-1. Debug the Socket deadlock: check if NCCL TCP transport supports all-to-all for PP group. May need NCCL_DEBUG=TRACE. (human-only decision, no idea)
-2. Try NCCL_NET=Socket (instead of IB_DISABLE=1) — may handle routing differently. (human-only decision, no idea)
-3. Try Gloo backend for PP group (patch parallel_state.py to use Gloo instead of NCCL for PP). (human-only decision, no idea)
-4. Try --distributed-executor-backend ray (Ray may handle PP communication differently). (human-only decision, no idea)
-5. Accept ring cannot serve interactively, use 120B pool. (human-only decision, no idea)
+== WHAT RUBEN WANTS ==
+Ruben wants you to build autonomous monitoring + cron automation so the ring can self-recover overnight without human intervention. This means:
+1. A monitoring script that checks if the ring is serving (HTTP 200 on :8210) and if not, automatically relaunches with the best-known config.
+2. A cron job that runs the monitoring script every 5-10 min.
+3. The automation should try multiple configs in sequence if one fails (e.g., TP=2 PP=3 + Socket, then TP=2 PP=3 + RoCE, then PP=6 + Socket).
+4. The automation should log all attempts and results to a file for review in the morning.
+5. The automation should NOT require human intervention — it should handle container cleanup, relaunch, and verification autonomously.
 
-Reference IDs:
-- Ideas: #20528 [queued], #20724 [proposed], #20740 [proposed], #20725 [proposed], #20553 [queued], #20536 [queued], #20517 [blocked], #20506 [queued], #20495 [queued]
-- Bug library: incidents 2116 (RoCE /32 fix), 1579 (PP group topology constraint)
-- Files: /tmp/fabric32.sh (all 6 nodes), /tmp/glm52_authoritative.sh (TP=2 PP=3 Socket), /tmp/parallel_state_patched.py (use_device_communicator=False), /tmp/glm_ring_cesarfirst.sh
-- Access: ssh cato/augustus/pompey/marcus/tiberius/cesar. sudo: qefru3-cocnyf-xuxnoP.
-- Fabric IPs (must restore after reboot): Cato f0=10.220.1.1 f1=10.220.6.2, Aug f0=10.220.1.2 f1=10.220.2.1, Pompey f0=10.220.2.2 f1=10.220.3.1, Marcus f0=10.220.3.2 f1=10.220.4.1, Tib f0=10.220.4.2 f1=10.220.5.1, Cesar f0=10.220.5.2 f1=10.220.6.1
-- Interfaces: enP2p1s0f0np0 (f0), enP2p1s0f1np1 (f1). HCA names: roceP2p1s0f0, roceP2p1s0f1. GID index 3 = RoCEv2 IPv4.
-- Ring topology: Pompey(50c0) <-> Marcus(63ce) <-> Tiberius(e9e0) <-> Cesar(3b41) <-> Cato(2aa8) <-> Augustus(e3b2) <-> Pompey
+== THE BEST-KNOWN CONFIG (TP=2 PP=3 + Socket) ==
+This config gets the furthest: ring connects, PP group passes, weights load (100%), KV cache computed. But it deadlocks during compilation. The deadlock is in PP group send/recv over TCP during the compilation phase.
 
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>- [x] /32 route fix WORKS for RoCE ring connect (proven 4x)
-- [x] Fabric IPs + GIDs restored after reboot (documented for future)
-- [x] TP=2 PP=3 + RoCE: ring connects, TP works, PP group qp_fail (non-adjacent)
-- [x] TP=2 PP=3 + Socket: ring connects, PP passes, weights load, KV cache, then deadlock
-- [x] CPU PP communicator (use_device_communicator=False): PP group hangs
-- [x] Reboot: cleared GIDs (had to manually restore fabric IPs)
-- [x] Bug library incidents 2116 + 1579 recorded with full diagnosis
-- [x] 7 approaches tried, all documented
-- [x] Root cause: PP group all-to-all communicators + ring topology = architectural constraint
-- [x] Rule-91 pickup prompt validated + gate cleared
-- [ ] Next: debug Socket deadlock, try Gloo for PP, or accept defeat and use 120B pool</task_progress>
-</attempt_completion>
+Possible fixes to try autonomously:
+1. Increase VLLM_ENGINE_READY_TIMEOUT_S to 3600 (60 min) — may give compilation more time.
+2. Add NCCL_DEBUG=TRACE to diagnose the deadlock.
+3. Try NCCL_NET=Socket (instead of IB_DISABLE=1).
+4. Try Gloo backend for PP group (patch parallel_state.py).
+5. Try --distributed-executor-backend ray.
+
+== FABRIC IPs (MUST BE RESTORED AFTER REBOOT) ==
+The reboot cleared all 10.220.x.x IP addresses. Must be restored on each boot:
+- Cato (192.168.1.115): f0=10.220.1.1/30 on enP2p1s0f0np0, f1=10.220.6.2/30 on enP2p1s0f1np1
+- Augustus (192.168.1.244): f0=10.220.1.2/30, f1=10.220.2.1/30
+- Pompey (192.168.1.21): f0=10.220.2.2/30, f1=10.220.3.1/30
+- Marcus (192.168.1.171): f0=10.220.3.2/30, f1=10.220.4.1/30
+- Tiberius (192.168.1.32): f0=10.220.4.2/30, f1=10.220.5.1/30
+- Cesar (192.168.1.56): f0=10.220.5.2/30, f1=10.220.6.1/30
+After IPs, run: sudo bash /tmp/fabric32.sh (on each node) for /32 routes.
+
+== ALL 7 APPROACHES TRIED (do not re-try without modification) ==
+1. PP=6 + RoCE: qp_fail (non-adjacent pairs, ibv_modify_qp 110)
+2. PP=6 + Socket: 0 tok/s (1 Gbps too slow for 6 PP stages)
+3. TP=2 PP=3 + RoCE: qp_fail (non-adjacent PP pairs)
+4. TP=2 PP=3 + Socket: weights load, KV cache, then DEADLOCK during compilation
+5. Reboot + RoCE: GIDs cleared, had to manually restore fabric IPs
+6. CPU PP communicator (use_device_communicator=False): PP group hangs (CPU can't do tensor send/recv)
+7. TP=2 PP=3 + Socket with patched parallel_state.py: same deadlock
+
+== FILES ON ALL 6 NODES ==
+- /tmp/glm52_authoritative.sh: vLLM launch script (TP=2 PP=3, Socket, all env vars). Currently set to NCCL_IB_DISABLE=1.
+- /tmp/glm_ring_cesarfirst.sh: Cesar-first stagg
 ```
 
 ### `1785548524428` — 8/1/2026, 2:00:05 AM PT — 350 turns
@@ -3376,114 +3457,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 
 ```
 Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 26 hours
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785322147808` — 7/29/2026, 3:53:39 AM PT — 3 turns
-
-**Original task:**
-
-```
-Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 26 hours
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785321841013` — 7/29/2026, 3:44:01 AM PT — 1 turns
-
-**Original task:**
-
-```
-Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 26 hours
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785320859831` — 7/29/2026, 3:37:41 AM PT — 14 turns
-
-**Original task:**
-
-```
-Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 24 hours
-```
-
-**Last PICKUP PROMPT:**
-
-```
-tempt_completion>
-<result>
-169
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #0 — Number of terms of Frankenstein LLM that include Frankenstein GLM local model in the last 24 hours.
-
-Where we left off (verified 2026-07-29 03:36 PT):
-- Count of glm‑5.2‑local turns: 169
-
-Open threads to drive next:
-- (none)
-
-Reference IDs:
-- Ticket: none
-- Ideas filed: none
-- Files touched: none
-</result>
-</attempt_completion>
-```
-
-### `1785320155032` — 7/29/2026, 3:37:13 AM PT — 22 turns
-
-**Original task:**
-
-```
-Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 24 hours
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12345, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326
-
-**Last PICKUP PROMPT:**
-
-```
-(turns)** in the last 24 hours.
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #12345 — Count of Frankenstein GLM‑5.2‑LOCAL usage.
-
-Where we left off (verified 2026‑07‑29 03:35 PT):
-- Retrieved backend metrics showing glm‑5.2‑local with 169 turns in the past 24 hours.
-
-Open threads to drive next (none)
-
-Reference IDs:
-- Ticket: (none)
-- Ideas filed: (none)
-- Files touched: (none)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-</result>
-</attempt_completion>
-```
-
-### `1785319773045` — 7/29/2026, 3:13:10 AM PT — 5 turns
-
-**Original task:**
-
-```
-Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 24 hours
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785319108441` — 7/29/2026, 3:11:59 AM PT — 17 turns
-
-**Original task:**
-
-```
-Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 24 hours
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

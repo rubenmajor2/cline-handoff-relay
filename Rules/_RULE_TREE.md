@@ -87,6 +87,7 @@
 - **Ops chat / iMessage to staff** — R: 01,09,10,30,32,43,57,72,96,108,111,175,177,178,179,186,187,198,207,247,259
 - **Staff escalation (Vicky/Jon/Ruben)** — R: 10,13,15,19,48,117
 - **CTA / link formatting** — R: 47 (full URLs, no shortcuts)
+- **Ruben's electronic signature** — R: 301 (canonical file `signature2small.jpg`, NEVER extract from another PDF)
 - **CS-agent response-quality bug library** — R: 270 (consult before recycling wrong replies across Email/Chat/SMS/Ticket/Voice/To AI agents; 2-strike tripwire)
 
 ---

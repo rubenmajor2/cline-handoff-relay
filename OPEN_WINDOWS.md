@@ -6,17 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/31/2026, 7:07:03 PM PT | window: last 72h | 100 tasks | index total 352 (parsed 4, cached 348)
+Generated: 7/31/2026, 8:07:03 PM PT | window: last 72h | 95 tasks | index total 352 (parsed 5, cached 347)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785531619110` | 7/31/2026, 7:06:59 PM | 455 | 24173KB | The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "servi |
-| `1785549425107` | 7/31/2026, 7:06:45 PM | 25 | 334KB | Play doctor of frankenstein - frankenstein-llm appears to be having difficulty with subage |
-| `1785463237084` | 7/31/2026, 7:00:49 PM | 966 | 3416KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
-| `1785548524428` | 7/31/2026, 6:43:21 PM | 6 | 16KB | Jon says Daystron counsil stopped working |
+| `1785549425107` | 7/31/2026, 8:07:03 PM | 74 | 587KB | Play doctor of frankenstein - frankenstein-llm appears to be having difficulty with subage |
+| `1785537564406` | 7/31/2026, 8:06:44 PM | 491 | 9802KB | #Argus |
+| `1785531619110` | 7/31/2026, 8:06:09 PM | 557 | 24545KB | The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "servi |
+| `1785548524428` | 7/31/2026, 8:05:35 PM | 146 | 416KB | Jon says Daystron counsil stopped working |
+| `1785463237084` | 7/31/2026, 7:44:57 PM | 1028 | 3581KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
 | `1785537361555` | 7/31/2026, 5:56:13 PM | 152 | 588KB | What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor  |
 | `1785360672171` | 7/31/2026, 5:55:46 PM | 938 | 5410KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
-| `1785537564406` | 7/31/2026, 4:33:18 PM | 266 | 5444KB | #Argus |
 | `1785399211024` | 7/31/2026, 4:30:59 PM | 1674 | 7063KB | #Julia/Claudia |
 | `1785528867234` | 7/31/2026, 4:21:05 PM | 498 | 1481KB | Saying it is dismissed is not right. Just say it's moot. Then this way we don't call it di |
 | `1785529983485` | 7/31/2026, 4:16:23 PM | 397 | 1027KB | Make sure that you are consulting the SLS so that incorrect information does not persist.  |
@@ -105,17 +105,44 @@ Generated: 7/31/2026, 7:07:03 PM PT | window: last 72h | 100 tasks | index total
 | `1785296704123` | 7/28/2026, 8:45:52 PM | 3 | 5KB | We had a frankenstein doctor type window working and the window just crashed. |
 | `1785296318095` | 7/28/2026, 8:41:36 PM | 24 | 153KB | Waht caused frankenstein-llm to freeze just now? it's not responding. can you resolve it? |
 | `1785293198244` | 7/28/2026, 8:34:56 PM | 195 | 456KB | Comprehensive session handoff per Ruben's direction. This session spanned multiple workstr |
-| `1785281506240` | 7/28/2026, 8:05:41 PM | 479 | 858KB | for what reason is Moodle running slowly? Didnt we jsut mvoe it over to the new 4TB NVME? |
-| `1785291839797` | 7/28/2026, 8:03:06 PM | 106 | 216KB | All external links on emsuniversity.com seem to be pointing to emtrefresher.com endpoints. |
-| `1785266802256` | 7/28/2026, 7:24:10 PM | 178 | 975KB | It appears that I have Frankenstein LLM windows that are getting stalled out trying to use |
-| `1785267604245` | 7/28/2026, 7:20:34 PM | 246 | 3133KB | Pick up task — Fix CFA Voice 52% short-leg rate and broken DEADMAN escalation pipeline. Tw |
-| `1785284021265` | 7/28/2026, 7:20:11 PM | 557 | 1134KB | Pick up the QB task that was just closed out. where we were tyring to figure out to do wit |
 
 ---
 
 ## Per-window detail
 
-### `1785531619110` — 7/31/2026, 7:06:59 PM PT — 455 turns
+### `1785549425107` — 7/31/2026, 8:07:03 PM PT — 74 turns
+
+**Original task:**
+
+```
+Play doctor of frankenstein - frankenstein-llm appears to be having difficulty with subagents. I have a could that say 0 tools called - 0 tokens after several minutes. Please resolve.
+```
+
+**Ideas referenced:** #10108, #10739, #10740, #11316, #1151, #11741, #11781, #11798, #11944, #11952, #11953, #12314, #12365, #12366, #12368, #12430, #12459, #12477, #12588, #12618, #12657, #12672, #12680, #12688, #12689, #12716, #12824, #12872, #12878, #13108, #13121, #13202, #13831, #13874, #14133, #14142, #16163, #16265, #16304, #16648, #16715, #16844, #17202, #17203, #17205, #17300, #17430, #18312, #18326, #18329, #18720, #18781, #18820, #18868, #1934, #2014, #20333, #20410, #20549, #20555, #20565, #20569 [deployed], #20627, #20628, #20629, #20630, #2125, #22386, #7505
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785537564406` — 7/31/2026, 8:06:44 PM PT — 491 turns
+
+**Original task:**
+
+```
+#Argus
+
+Here is the comprehensive build-and-ship handoff. Tags below are server-derived from a live GATE B reconcile run seconds ago, not hand-written.
+
+Two more Argus response-quality fixes shipped this session: **ARGUS_NO_REASONING_LEAK_V1** (the prompt had zero anti-leak guidance, grep count 0) and **ARGUS_NO_DEADEND_V1** (Jon was told to "Hit Send again" after 4 failed tries, that count is now 0). Both php -l clean, FPM reloaded, backups kept. And #20555 just flipped to impl_failed, making it the **fourth** idea killed by the missing `blocked_reason` column, which moves #20569 to the top o
+```
+
+**Ideas referenced:** #10017, #1130, #1131, #1241, #12425, #12430, #12459, #1248, #1249, #1252, #1258, #128263, #128266, #14828, #14829, #14834, #14835, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16578, #16594, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #1779, #177956, #178553, #178554, #1798, #1828, #18357, #1850, #18586, #1896, #19173, #19239 [rejected], #19325, #19370, #19415, #19416, #19419, #19490, #19519, #19567, #1986, #1988, #1989, #1991, #1996, #20042, #2006, #2014, #20282 [executing], #20333 [queued], #20334 [queued], #20388 [queued], #20389 [queued], #20392 [queued], #20393 [deployed], #20405 [queued], #20410 [queued], #20497 [queued], #20500 [queued], #20501 [queued], #20547 [queued], #20549 [queued], #20555 [blocked], #20564 [queued], #20565 [queued], #20569 [proposed], #20613, #20627 [deployed], #20628 [deployed], #20629 [deployed], #2063, #20630 [proposed], #2065, #20661 [executing], #20662 [proposed], #20663 [proposed], #2073, #2084, #2085, #2113, #2125, #2126, #2127, #2128, #30363, #3229 [approved], #3231 [rejected], #4517, #6432, #6523, #7142, #7149, #7925, #9090, #9650, #9660
+
+**Last PICKUP PROMPT:**
+
+```
+ds below with dispositions.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1785548524428, Argus build-and-ship follow-up: Jon lockup fixed, CS gates live, remaining Ruben-approved items.\n\nWhere we left off (verified 2026-07-31 19:59 PT):\n- Jon's Argus lockup FIXED: JS_QUOTE_FIX_V1 in routes/argus_download.php line 936. My earlier more-cell audit fix used unescaped single quotes inside a single-quoted JS string, killing the entire script block (dead Send, empty sidebar = the deadman load). Rendered JS now node --check clean, FPM reloaded. Jon needs a HARD REFRESH (Cmd+Shift+R).\n- RESOLVE_FAIL_BUG_CS_GATE_V1 + PERM_SET_EXECADMIN_SCOPE_V1 live in lib/argus_action_catalog.php: Admin/CS can resolve_fail_bug only with bug_ref (BUG FIX denoted); perm_set now ExecAdmin-granted but scoped to Admin-and-lower roles. php -l clean, FPM reloaded.\n- Cicero 297 done: box alive, WOPR:11520 reverse tunnel DOWN (no listener, no ssh -R process); router hardcodes 127.0.0.1:11520. Framing inside #20662 [proposed] corrected.\n- #20663 [rejected] by Ruben (deepseek-v4-pro = effectively unlimited spill) (verified: new_status=rejected).\n- Vicky's overrides verified as bug fixes (resolve_fail_bug 26816BC-17 false-fail, executed 13:02 PT).\n\nOpen threads to drive next:\n1. GLM52 doc append (Ruben said YES): add Argus performance section to IDEAL_GLM52_HEX_BUILD.md citing measured 599 to 4,828 tok/s under concurrency. Doc NOT at /var/www/emtskills/docs/ — find it (likely local Mac or another host) then append. (no idea — Ruben-approved inline doc edit)\n2. iMessage Cori+Jon (Ruben said imessage, chat 84): tell them Cyra (users.id 183) has portal + SMS login + webmail live for the externship outreach role. Also tell Jon the Argus lockup is fixed and to hard-refresh. (no idea — direct send, gate already passed by Ruben saying imessage)\n3. Catalog frankenstein findings (Ruben directive): record in bug library so agents stop hitting the same traps: cicero-235b hardcoded fallback to dead tunnel endpoint, Anthropic-shaped-tools 400 spam to GLM ring 8210, QOS_PREEMPT storm + adapter inflight-leak (#20662 [proposed]). (no idea — bug_library_record calls)\n4. File idea (Ruben approved): payment-attribution back-and-forth flow — Vicky/agent exchange payment proof through routes/payment_attribution_queue.php with proper posting + traceback of whatever is submitted; then unsuspend the four substantial-payment students through payment_suspensions + audited repair actions only. FIRST MOVE: create_idea, then tag it [proposed] here.\n5. #20662 [proposed]: adapter inflight-leak + QOS storm fix; sub-item: restore Cicero reverse tunnel (check cicero selfheal HEAL4 / ssh -R from Mac side: rubenmajor@192.168.1.252).\n6. #20555 [blocked]: re-drive delegation hardening now that #20569 [deployed] makes failures legible, or hand-ship per rule 267 GATE C.\n7. #20630 [proposed]: phantom-payment mechanism — build detection + quarantine (QB payment rows Intuit later risk-declines/auto-voids; invoice reads paid-then-voided while Authnet shows only $50 settled).\n8. Human-only decision, no idea: ruben_active permanent override (explained to Ruben, leaning no: flag yields to live Cline work; detector cannot see MCP traffic so it stays 0; forcing 1 deprioritizes batch forever).\n\nReference IDs:\n- Ideas: #20662 [proposed], #20663 [rejected], #20555 [blocked], #20630 [proposed], #20569 [deployed]\n- Implementer live runs: #20661 [executing], #20282 [e
+```
+
+### `1785531619110` — 7/31/2026, 8:06:09 PM PT — 557 turns
 
 **Original task:**
 
@@ -125,67 +152,109 @@ The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deli
 THE ARC. Last night the ring served 40-67 turns/hour for 10 hours, then died at 01:03 PT. Today it has died or wedged within minutes of every boot, across every config permutation I tried. I fixed five real adapter-side routing bugs and shipped an auto-relaunch watchdog that genuinely works n
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12657, #12824, #12872, #12878, #13202, #13840, #15144, #16163, #16254, #16265, #16304, #16844, #1754, #1755, #178531, #18312, #18326, #18720, #19125, #19903, #19907, #19925, #20005 [proposed], #20069, #20247, #20264 [queued], #20272 [deployed], #20297 [queued], #20302 [deployed], #20311 [deployed], #20495 [executing], #20498 [queued], #2050, #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20553 [blocked], #20625 [proposed], #20626 [proposed], #2092, #2101, #2118, #48031, #48140
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11942, #12477, #12618, #12657, #12824, #12872, #12878, #13202, #13840, #15144, #16163, #16254, #16265, #16304, #16844, #1754, #1755, #178531, #18312, #18326, #18720, #19125, #19653, #19903, #19907, #19925, #20005 [proposed], #20069, #20247, #20264 [queued], #20272 [deployed], #20297 [queued], #20302 [deployed], #20311 [deployed], #20495 [executing], #20498 [queued], #2050, #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20553 [blocked], #20625 [proposed], #20626 [proposed], #20660 [proposed], #20665 [proposed], #2092, #2101, #2118, #48031, #48140
 
 **Last PICKUP PROMPT:**
 
 ```
-r in the traffic distribution.
+rst ordering confirmed in env.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1785314663557, GLM ring RCA done. Ring is 0.2% of traffic. Awaiting Ruben decision on next lever (reboot vs RoCE vs deprioritize).
+Pick up task #1785314663557, GLM-first order restored, upstream log is broken and needs fixing before any passthrough report can work.
 
-Where we left off (verified 2026-07-31 18:49 PT):
-- RING: UP (HTTP 200, stable since 13:29 PT, 5+ hours). But glm-5.2-local got only 3 turns (0.2%) in the last hour. Paid cloud glm-5.2 got 44 turns (15x more). Artemis 120B carries 99.9% of 120B gen (22.7M tokens). GLM ring = 22K tokens.
-- ROOT CAUSE of intermittent wedge: NCCL over TCP/mgmt NIC (enP7s7) with IB_DISABLE=1. CX7 RoCE fabric (roceP2p1s0f0/f1, 4096 MTU, /30 P2P ring) sits IDLE. NCCL_IB_HCA=rocep1s0f1 points to WRONG device.
-- WATCHDOG: working as designed (active, fails=0, silence = healthy).
-- FRANKENSTEIN-TOOLS and FRANKENSTEIN-LLM are passthrough names. Inside both: artemis-gpt-oss-120b (workhorse), julia-120b, glm-5.2-local (ring). Router audit does not record which pool member served each turn.
-- RUBEN QUESTION answered: GLM ring is 0.2% of traffic. Fixing the wedge has near-zero fleet impact. Artemis is the real 120B backbone.
+Where we left off (verified 2026-07-31 19:37 PT):
+- RING: UP (HTTP 200, stable since 13:29 PT, 8 hours). Watchdog active.
+- GLM-FIRST DEPLOYED: zzzzzzzzzzzzzzzzzzz-glm-first-restore.conf (19:08 PT), env verified GLM first. Adapter active.
+- UPSTREAM LOG: BROKEN. Only 1 entry in 28 minutes since 19:08 restart. Same pattern as 17:23 restart (writes for ~2 min, then FD disappears). Log file last write: 19:10:03 PT (28 min stale). PID 2808062 has 0 visible FDs. Filed #20665 [proposed] to fix.
+- RULE 298: strengthened with trigger phrases + log-freshness gate. Passthrough reporting blocked until upstream log is fixed.
+- #20660 [proposed]: GLM-first drift protection.
+- #20626 [proposed]: RoCE, defer pending reboot decision.
 
 Open threads to drive next:
-1. #20626 [proposed], RoCE activation. DEFER. Ring is 0.2% of traffic, fixing wedge has near-zero fleet impact. (human-only decision, no idea)
-2. #20625 [proposed], watchdog SSH timeout hardening. Low priority.
-3. #20528 [queued], NCCL investigation, superseded by #20626 [proposed]. (verified: status=ready_for_review dev_stage=ready_for_review)
-4. #20553 [queued], watchdog live and working. (verified: status=ready_for_review dev_stage=ready_for_review)
-5. #20517 [blocked], layer 1 shipped, remaining MCP registration. (verified: status=in_progress dev_stage=impl_failed)
-6. #20506 [blocked], GATE C cleared. (verified: status=in_progress dev_stage=impl_failed)
-7. #20536 [queued], supersede. (verified: status=ready_for_review dev_stage=ready_for_review)
-8. #20495 [executing], watchdog shipped, add forced-death test when stable. (verified: status=in_progress dev_stage=idle)
-9. #20498 [queued], close/supersede. (verified: status=ready_for_review dev_stage=ready_for_review)
-10. #20297 [queued], drift protection. (verified: status=ready_for_review dev_stage=ready_for_review)
-11. #20264 [queued], derive SLO/ceiling constants. (verified: status=ready_for_review dev_stage=ready_for_review)
-12. #20005 [proposed], supervisor consolidation. (verified: status=proposed dev_stage=idle)
+1. #20665 [proposed], fix upstream log bug. Investigation: why does the FD disappear after first write? Is it buffered and not flushed? Is /proc/$PID/fd not showing it but it exists? (verified: status=proposed dev_stage=idle)
+2. #20660 [proposed], GLM-first drift protection. (verified: status=proposed dev_stage=idle)
+3. #20626 [proposed], RoCE activation. DEFER. (verified: status=proposed dev_stage=idle)
+4. #20625 [proposed], watchdog SSH timeout hardening. Low priority.
+5. #20528 [queued], superseded. (verified: status=ready_for_review dev_stage=ready_for_review)
+6. #20553 [queued], watchdog live. (verified: status=ready_for_review dev_stage=ready_for_review)
+7. #20517 [blocked], layer 1 shipped. (verified: status=in_progress dev_stage=impl_failed)
+8. #20506 [blocked], GATE C cleared. (verified: status=in_progress dev_stage=impl_failed)
+9. #20536 [queued], supersede. (verified: status=ready_for_review dev_stage=ready_for_review)
+10. #20495 [executing], watchdog shipped. (verified: status=in_progress dev_stage=idle)
+11. #20498 [queued], close. (verified: status=ready_for_review dev_stage=ready_for_review)
+12. #20297 [queued], drift protection. (verified: status=ready_for_review dev_stage=ready_for_review)
+13. #20264 [queued], SLO/ceiling constants. (verified: status=ready_for_review dev_stage=ready_for_review)
+14. #20005 [proposed], supervisor consolidation. (verified: status=proposed dev_stage=idle)
 
 Reference IDs:
-- Ideas filed: #20625 [proposed] (verified: status=proposed dev_stage=idle), #20626 [proposed] (verified: status=proposed dev_stage=idle)
-- Ideas reconciled: #20553 [queued], #20536 [queued], #20528 [queued], #20517 [blocked], #20506 [blocked], #20495 [executing], #20498 [queued], #20311 [deployed], #20302 [deployed], #20297 [queued], #20264 [queued], #20005 [proposed]
-- Files touched: none
-- Ring map: Cato r0 (.115), Augustus r1 (.244), Pompey r2 (.21), Marcus r3 (.171), Tiberius r4 (.32), Cesar r5 (.56)
-- RoCE fabric: Cato(f0:10.220.1.1, f1:10.220.6.2) to Aug(f0:10.220.1.2, f1:10.220.2.1) to Pom(f0:10.220.2.2, f1:10.220.3.1) to Mar(f0:10.220.3.2, f1:10.220.4.1) to Tib(f0:10.220.5.1, f1:10.220.4.2) to Ces(f0:10.220.5.2, f1:10.220.6.1) to Cato
+- Ideas filed: #20660 [proposed], #20665 [proposed] (verified: status=proposed dev_stage=idle)
+- Files touched: rule 298 strengthened
+- Files created: /etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzzzzzzzzzzz-glm-first-restore.conf
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════</result>
 <task_progress>
-- [x] Window 1: ring verified UP/healthy, 4 false impl_faileds closed
-- [x] RCA-1: ring NEVER died 13:57, froze ~13:41,
+- [x] Answered "last 15 minutes 298 rule" question
+- [x] Discovered upstream log is broken (28 min stale, 1 entry only)
+- [x] Filed #20665 [proposed] for the log bug
+- [x] Provided alias-level data with disclaimer per rule 298 caveat
+- [x] Rule 298 strengthened, GLM-first deployed, both verified
+- [x] Clean pickup prompt with all open threads + new #20665
+</task_progress>
+</attempt_completion>
 ```
 
-### `1785549425107` — 7/31/2026, 7:06:45 PM PT — 25 turns
+### `1785548524428` — 7/31/2026, 8:05:35 PM PT — 146 turns
 
 **Original task:**
 
 ```
-Play doctor of frankenstein - frankenstein-llm appears to be having difficulty with subagents. I have a could that say 0 tools called - 0 tokens after several minutes. Please resolve.
+Jon says Daystron counsil stopped working
 ```
 
-**Ideas referenced:** #10108, #10739, #10740, #11316, #1151, #11741, #11781, #11944, #11953, #12314, #12365, #12366, #12368, #12430, #12459, #12477, #12588, #12618, #12657, #12688, #12689, #12824, #12872, #12878, #13108, #13202, #13874, #14133, #14142, #16163, #16265, #16304, #16648, #16715, #16844, #17202, #17203, #17205, #17300, #17430, #18312, #18326, #18329, #18720, #18820, #18868, #1934, #2014, #20549, #22386, #7505
+**Ideas referenced:** #11227, #12019, #16260, #18644, #20666 [deployed], #6419, #64748, #702534, #9090, #9475
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1785463237084` — 7/31/2026, 7:00:49 PM PT — 966 turns
+```
+ed returns valid harvest JSON.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task Daystrom Council restore + info@ auto-sort disable
+
+Where we left off (verified 2026-07-31 20:05 PT):
+- Daystrom Council root cause: LiteLLM key is 403-denied for claude-haiku-4-5. Every harvest call returned empty, so 0 proposals/actions were filed per session.
+- Per Ruben's directive the council must use frankenstein-llm. Live-tested HTTP 200 with clean JSON, then patched all API payloads: cron/cron_daystrom_council.php (lines 304, 384, 2002) and lib/daystrom_harvest_helpers.php (line 169). Lint clean. Backups .bak-20260731-sonnetfix. Remaining haiku strings are display labels only.
+- info@ auto-sorting disabled: /etc/cron.d/emsu-info-maildir-mover replaced with comment-only (original at .bak-20260731).
+- Idea #20666 [deployed] filed documenting the incident.
+
+Open threads to drive next:
+1. #20666 [deployed] -- verify the 23:30 PT council tonight files proposals with frankenstein-llm; check /var/log/emsu-cron/daystrom_scheduled.log for "proposals filed: N" with N>0.
+2. #20666 [deployed] -- confirm no further info@ sorting: /var/log/emsu-info-maildir-mover.log stops growing; inbox messages stay in INBOX.
+
+Reference IDs:
+- Idea: #20666 [deployed]
+- Files touched: /var/www/emtskills/cron/cron_daystrom_council.php, /var/www/emtskills/lib/daystrom_harvest_helpers.php, /etc/cron.d/emsu-info-maildir-mover
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Daystrom Council root cause found — 403 on claude-haiku-4-5, 0 proposals filed
+- [x] frankenstein-llm tested — HTTP 200, valid JSON, key allowed
+- [x] All council payloads patched to frankenstein-llm (3 payload sites + harvest helper), lint clean
+- [x] info@ auto-sort disabled, original cron backed up
+- [x] Idea #20666 filed
+- [x] Completed with pickup prompt
+</task_progress>
+</attempt_completion>
+```
+
+### `1785463237084` — 7/31/2026, 7:44:57 PM PT — 1028 turns
 
 **Original task:**
 
@@ -195,7 +264,7 @@ AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/instit
 Odd that it's not there next to the 4/ 13 open complaint. Anyway yeah that needs to be repopulated back in there along with a response that was already sent as well as the one that you drafted for this new issue that was due on 728. You might have to check the desktop if you can't find the 
 ```
 
-**Ideas referenced:** #0369, #059669, #0891, #111827, #13661, #1368, #1441, #1454, #1538, #1565, #15654, #15803, #16127, #16134, #16135, #16160, #1633, #166534, #16957, #19587, #19595 [executing], #19599, #20393 [approved], #20633 [executing], #20634 [executing], #20640 [proposed], #20643 [executing], #20645 [executing], #25226, #2563, #26211, #334155, #4111, #450438, #475569, #600179, #623992, #6366, #64748, #92400
+**Ideas referenced:** #0000, #0369, #059669, #0891, #111827, #13661, #1368, #1441, #1454, #1538, #1565, #15654, #15803, #16127, #16134, #16135, #16160, #1633, #166534, #16957, #19587, #19595 [executing], #19599, #20393 [approved], #20633 [executing], #20634 [executing], #20640 [proposed], #20643 [executing], #20645 [executing], #25226, #2563, #26211, #334155, #4111, #450438, #475569, #600179, #623992, #6366, #64748, #92400
 
 **Last PICKUP PROMPT:**
 
@@ -235,16 +304,6 @@ Reference IDs:
 - Tickets: 631 (Nettles externship record), 12390 (third-party Vasquez escalation), 15654 (Brenza NREMT clearance holds)
 - Files: `uploads/compliance/july2026_noi/
 ```
-
-### `1785548524428` — 7/31/2026, 6:43:21 PM PT — 6 turns
-
-**Original task:**
-
-```
-Jon says Daystron counsil stopped working
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785537361555` — 7/31/2026, 5:56:13 PM PT — 152 turns
 
@@ -333,56 +392,6 @@ When done, append to cline_task_ledger.md and run order 66.
 ═══════════════════════════════════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1785537564406` — 7/31/2026, 4:33:18 PM PT — 266 turns
-
-**Original task:**
-
-```
-#Argus
-
-Here is the comprehensive build-and-ship handoff. Tags below are server-derived from a live GATE B reconcile run seconds ago, not hand-written.
-
-Two more Argus response-quality fixes shipped this session: **ARGUS_NO_REASONING_LEAK_V1** (the prompt had zero anti-leak guidance, grep count 0) and **ARGUS_NO_DEADEND_V1** (Jon was told to "Hit Send again" after 4 failed tries, that count is now 0). Both php -l clean, FPM reloaded, backups kept. And #20555 just flipped to impl_failed, making it the **fourth** idea killed by the missing `blocked_reason` column, which moves #20569 to the top o
-```
-
-**Ideas referenced:** #10017, #12430, #14828, #14829, #14834, #14835, #16578, #16594, #177956, #178553, #18357, #1850, #18586, #19173, #19325, #19419, #19490, #19519, #1988, #1996, #2006, #20333 [queued], #20334 [queued], #20388 [queued], #20389 [queued], #20392 [queued], #20393 [deployed], #20405 [queued], #20410 [queued], #20497 [queued], #20500 [queued], #20501 [queued], #20547 [queued], #20549 [queued], #20555 [blocked], #20564 [queued], #20565 [queued], #20569 [proposed], #20613, #20627 [deployed], #20628 [deployed], #20629 [deployed], #20630 [proposed], #2084, #2085, #2113, #3229 [approved], #3231 [rejected], #4517, #6432, #6523, #7925, #9090
-
-**Last PICKUP PROMPT:**
-
-```
-c, so setting it is your call.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785537564406, Argus build-and-ship thread: leak filter, impl_failed guard, collation fix, sentinel persistence all deployed; money questions and 5 queued ideas remain.
-
-Where we left off (verified 2026-07-31 16:26 PT):
-- #20569 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review). Guard cron every 5 min, 146 backfilled, 29 infra routed to GATE C, reason surfaced in API+MCP.
-- #20627 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review). Leak filter live, 212-response role sweep zero casualties.
-- #20629 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review). 74 collation ALTERs, probe join 2,360 rows.
-- #20628 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review). Sentinel persistent, implementer spawning within 1 cycle.
-- #20555 [executing] (verified: reconcile_ideas returned status=in_progress dev_stage=drafting). Re-driven 15:45, picked up 15:53.
-- #20565 [rejected] (verified: status=rejected). Wrong premise, superseded by #20630 [proposed].
-- Record-reconciled deployed this session: #20333 [deployed], #20334 [deployed], #20389 [deployed], #20392 [deployed], #20405 [deployed], #20497 [deployed], #20547 [deployed], #20549 [deployed], #20564 [deployed].
-
-Open threads to drive next:
-1. #20630 [proposed], phantom-payment/risk-decline money-truth verifier. Build after the five Vicky answers land (needs those answers to encode rules correctly).
-2. Human-only decision, no idea: the five Vicky questions (deposit vs balance, Jason Pan $2,295 phantom, dispute refunds, third-party payers, installment currency); then unsuspend ONLY the four substantial-payment students if not refund cases.
-3. #20388 [queued], work the 28 actionable PD signoff students with Jon (pd_signoff_list then pd_nremt_signoff).
-4. #20410 [queued], monotonic permission guard via PHP propagation on the write path.
-5. #20500 [queued], Cyra outreach build; Ruben decision required on Tempe DID purchase.
-6. #20501 [queued], argusUnwiredActions Roles-tab badge + CI assertion; wire or retire activity_requirements and authnet_legacy_link_audit.
-7. Human-only decision, no idea: append the Argus performance section to GLM52_IDEAL_BUILD.md (explanation delivered; paste text: '## Argus production confirmation (2026-07-31): the Argus terminal workload measured 599 tok/s at low concurrency and 4,828 tok/s under parallel load on the same ring, an 8.06x aggregate scaling factor with zero config or hardware change. This is the section 8.1 concurrency lever proven in production: single-stream tok/s is the pipeline bubble, aggregate throughput under parallel agent load is the ring real capacity (128 lanes, KV cache 0.2%). Optimize for parallel dispatch, not single-stream speed.').
-8. Human-only decision, no idea: ruben_active=1 in orchestrator_config (detector can't see MCP Cline traffic), and perm_set for ExecAdmin vs MasterAdmin-only plus a channel to tell Cori/Jon about Cyra's access.
-9. #20555 [executing], if it impl_fails again the guard cron now captures the reason; hand-ship the delegation hardening per GATE C.
-
-Reference IDs:
-- Ideas filed this session: #20627 [deployed], #20628 [deployed], #20629 [deployed], #20630 [proposed]
-- Ideas closed/reconciled: #20333 [deployed], #20334 [deployed], #20389 [deployed], #20392 [deployed], #
 ```
 
 ### `1785399211024` — 7/31/2026, 4:30:59 PM PT — 1674 turns
@@ -3327,259 +3336,3 @@ The WOPR reboot was executed (#19848), BAR0 is now assigned but BAR1 is still bl
 **Ideas referenced:** #12004, #16613, #16621, #19387 [deployed], #19403, #19495, #19511, #19545, #19820 [proposed], #19835 [rejected], #19836 [proposed], #19837 [proposed], #19838 [proposed], #19846 [rejected], #19847 [rejected], #19848 [executed], #19849 [proposed], #19853 [queued], #19859 [proposed], #19860 [proposed], #19861 [proposed], #19862 [proposed], #19869 [executing], #2044, #2056, #3067, #3069, #3070, #3071, #3075, #3076, #3077, #3078, #3079, #3172, #3174, #3202, #3206
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785281506240` — 7/28/2026, 8:05:41 PM PT — 479 turns
-
-**Original task:**
-
-```
-for what reason is Moodle running slowly? Didnt we jsut mvoe it over to the new 4TB NVME?
-```
-
-**Ideas referenced:** #11925, #136533, #15158, #178501, #19458, #19460, #19490, #19491, #19522, #19558, #19594, #19615, #19686, #19690 [deployed], #19704, #19714 [proposed], #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19807, #19810 [proposed], #19818 [proposed], #19819 [proposed], #19820 [proposed], #19836 [proposed], #19837 [proposed], #19838 [proposed], #19839 [proposed], #19848 [proposed], #19853 [proposed], #19857 [proposed], #2084, #2085
-
-**Last PICKUP PROMPT:**
-
-```
-rating the DB connection pool.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Moodle slowness RCA: confirmed NVMe is fine, MariaDB CPU bottleneck.
-
-Where we left off (verified 2026-07-28 16:35 PT):
-- Verified Moodle lives on /dev/nvme0n1p2 (4TB NVMe at 30% used, fast)
-- MariaDB consuming 308% CPU with 40GB resident, 34GB InnoDB buffer pool
-- PHP-FPM 8 workers at 92-100% CPU
-- No slow query log enabled
-- Old NVMe still mounted at /mnt/oldroot at 93% wasted
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #19810 [proposed] — Tune MariaDB: enable slow query log, analyze buffer pool hit ratio, check innodb_io_capacity and thread_cache_size, review if Redis is running for Moodle caching, check FPM max_children=180 vs MariaDB max_connections
-
-Reference IDs:
-- Ideas filed: #19810 [proposed]
-- Files touched: none
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785291839797` — 7/28/2026, 8:03:06 PM PT — 106 turns
-
-**Original task:**
-
-```
-All external links on emsuniversity.com seem to be pointing to emtrefresher.com endpoints. Not appropriate. rEsolve
-```
-
-**Ideas referenced:** #19855 [deployed], #19864 [deployed], #2563
-
-**Last PICKUP PROMPT:**
-
-```
-ployed] filed for audit trail.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #19864 [deployed] - emsuniversity external links fix: other sites audit
-
-Where we left off (verified 2026-07-28 20:02 PT):
-- #19855 [deployed] -- WP_HOME/WP_SITEURL override on emsuniversity.com + emtrefresher.com
-- #19864 [deployed] -- Full audit confirmed no other sites affected (all have independent DBs)
-
-Open threads to drive next:
-1. #19855 [deployed] -- Monitor for broken links from the domain change
-
-Reference IDs:
-- #19855 [deployed]
-- #19864 [deployed]
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785266802256` — 7/28/2026, 7:24:10 PM PT — 178 turns
-
-**Original task:**
-
-```
-It appears that I have Frankenstein LLM windows that are getting stalled out trying to use sub agents. Appears to be a new occurrence. I'm not sure exactly why this is happening. It was not happening earlier this morning. But yet we are having some problems here. This may have had something to do with when we asked Frankenstein LLM that it not try to have the sub agents emit tool calls. Anyway I am showing zero tokens and zero tools called. 
-
-I don't know if it is actually appropriate to tell the sub agents not to emit tool calls. Can you explain to me the strategy on that? Again, sub agents a
-```
-
-**Ideas referenced:** #11925, #12231, #12251, #12269, #12407, #12643, #12657, #13108, #13155, #13157, #13199, #13204, #13490, #13575, #13874, #15158, #16578, #16625, #1754, #1755, #178501, #18671, #18720, #18935, #1896, #1903, #1906, #1920, #19239 [rejected], #19403, #19458, #19460, #19490, #19491, #19518, #19558, #19571, #19585, #19604, #19611, #19646, #19647, #19653 [deployed], #19657, #19686, #19690 [deployed], #19704, #19714 [proposed], #19777 [proposed], #19778 [proposed], #19790 [proposed], #19808 [proposed], #1986, #1988, #1989, #1991, #2014, #2050, #2084, #2085, #3048, #3049
-
-**Last PICKUP PROMPT:**
-
-```
-a. Filed as #19808 [proposed].
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #19790 [deployed] — Subagent stall fix rebased, 5.5h post-fix monitoring.
-
-Where we left off (verified 2026-07-28 19:23 PT):
-- Steering text fix deployed 13:39 PT: zero subagent failures across 110 interactive turns since then
-- GLM ring capacity at 32 confirmed correct per IDEAL_GLM52_HEX_BUILD.md
-- Adapter 503 cascade found and fixed at 19:22 PT: orphan processes (PIDs 8912 + 749040) were competing, killed orphan, restarted adapter, fresh test passes
-- Recurring orphan-process problem: adapter restarts leave stale processes that cause 503 cascades. Third occurrence today.
-- Upstream logging bug explained: /tmp/emsu_adapter_upstream.log dead since 23:42 Jul 27, _record_metric has except Exception pass
-
-Open threads to drive next:
-1. #19808 [proposed] — Fix adapter upstream log (dead 14h) AND add systemd KillMode=control-group + ExecStartPre to kill stale adapter processes on restart (the orphan problem)
-2. (human-only decision, no idea) Dispatch a real Cline subagent now to confirm end to end under live conditions
-3. (human-only decision, no idea) If prefill saturation returns at 32, feed it MORE concurrency per IDEAL_GLM52_HEX_BUILD.md section 4 (ceiling never found at c=64)
-
-Reference IDs:
-- Ideas filed: #19790 [deployed], #19808 [proposed]
-- Ideas closed: none
-- Files touched this turn: none (killed orphan PID 8912, restarted adapter)
-- Files touched prior: /etc/litellm/_router_core.py (line 347), /etc/systemd/system/frankenstein-tools.service.d/zzzzz-glm-ring-capacity.conf (8210=8 to 8210=32)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Deploy steering text fix at _router_core.py line 347
-- [x] Fix GLM ring capacity from 8 back to 32
-- [x] Kill orphan adapter process PID 136681
-- [x] litellm-safe-restart and verify subagents work
-- [x] Fix adapter 503 (stale cooldown + orphan process)
-- [x] Rebase historical summary + deliver to Ruben
-</task_progress>
-</attempt_completion>
-```
-
-### `1785267604245` — 7/28/2026, 7:20:34 PM PT — 246 turns
-
-**Original task:**
-
-```
-Pick up task — Fix CFA Voice 52% short-leg rate and broken DEADMAN escalation pipeline. Two highest-impact CFA defects from today's audit.
-
-Context:
-- #19766 [proposed] — 52% of 384 VAPI calls <60s (only 148 healthy legs). Average VAPI call 88.2s vs human 261-779s.
-- #19767 [proposed] — Multiple DEADMAN tickets 77-200h stale (TKT-20260724-A3641222, TKT-20260724-19960097, TKT-20260720-D197BA0A, etc.)
-- #19769 [proposed] — CFA cross-channel session memory
-- #19772 [proposed] — CFA shared tool palette
-
-Step 1 — Investigate VAPI voice short-legs:
-  use_mcp_tool server_name=mysql, tool_name=execute
-```
-
-**Ideas referenced:** #0066, #11925, #12018, #12605, #12606, #13047, #13442, #13553, #13965, #14741, #14742, #14743, #14749, #15158, #15404, #15405, #15406, #15783, #16152, #16154, #16445, #16475, #16732, #1745, #178501, #18132, #18176, #18309, #18313, #18316, #1892, #19458, #19460, #19490, #19491, #19558, #19585, #19604, #19690 [deployed], #19704, #19714 [proposed], #19766 [proposed], #19767 [proposed], #19769 [proposed], #19772 [proposed], #19777 [proposed], #19778 [proposed], #19794 [proposed], #19795 [deployed], #19796, #19830 [proposed], #2084, #2085, #3587, #4686, #4689, #4929, #4930, #4931, #4957, #4958, #5391, #5431, #5574, #5638, #5768, #5770, #5779, #5787, #5792, #5793, #5794, #5795, #5819, #6172, #7126, #7368, #7381, #7548, #7550, #9042, #9132, #9159, #9222, #9501
-
-**Last PICKUP PROMPT:**
-
-```
-se: deadman_rca_feedback table
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #19830 - Wire deadman_voice_hook.php into vapi_server_webhook.php, monitor deadman RCA pipeline
-
-Where we left off (verified 2026-07-28 19:19 PT):
-- #19766 [approved] - CFA Voice short-leg thresholds raised (FAST_CONF 0.65 to 0.80, BASE_CONF 0.80 to 0.90, FAST_SECONDS 120 to 240)
-- #19794 [approved] - DEADMAN stale threshold lowered 72 to 48 in cron_deadman_ruben_pipeline.php
-- #19830 [approved] - Deadman RCA + self-healing pipeline deployed (Phases 1-3)
-- lib/deadman_rca_feedback.php created with 4 functions (RCA record, agent warn, hotspots, auto-retrain)
-- cron/cron_promise_deadman.php: expanded auto-act to all 7 issue classes + RCA recording
-- ai_ticket_agent.php: deadmanAgentWarning() injected into prompt builder
-- cron/cron_deadman_rca_retrain.php: daily retrain idea filing cron
-- deadman_rca_feedback SQL table created with indexes
-- Voice hook: api/voice/deadman_voice_hook.php created and linted but NOT wired (file write permissions restricted)
-
-Open threads to drive next:
-1. #19830 [approved] - Wire deadman_voice_hook.php into vapi_server_webhook.php:
-   - Add require_once __DIR__ . '/deadman_voice_hook.php'; near line 28 (after other require_once)
-   - Add injectVoiceDeadmanWarning() call after SLS block injection at line ~2549:
-     if (function_exists('injectVoiceDeadmanWarning') && !empty($issueClass)) {
-         $prompt = &$arResponse['assistantOverrides']['systemPrompt'];
-         injectVoiceDeadmanWarning($issueClass, $prompt);
-     }
-   - May need sudo/root to write to api/voice/ directory
-2. #19795 [deployed] - Monitor 24h short-leg rate: goal under 30% (was 55%)
-3. #19830 [approved] - Monitor first deadman RCA records in deadman_rca_feedback table:
-   mysql -u adminportal -piV84o80^y admin_portal -e "SELECT issue_class, agent_source, COUNT(*) as cnt FROM deadman_rca_feedback WHERE created_at > NOW() - INTERVAL 7 DAY GROUP BY issue_class, agent_source ORDER BY cnt DESC"
-4. #19830 [approved] - Verify cron_deadman_rca_retrain.php runs: php /var/www/emtskills/cron/cron_deadman_rca_retrain.php --dry-run
-
-Reference IDs:
-- Ideas filed: #19766 [approved], #19767 [approved], #19794 [approved], #19795 [deployed], #19830 [approved]
-- Files touched: cron/cron_promise_deadman.php, lib/deadman_rca_feedback.php, lib/ai_ticket_agent.php, cron/cron_deadman_rca_retrain.php, api/voice/deadman_voice_hook.php, docs/specs/deadman_rca_self_healing.md
-- Database: admin_portal.deadman_rca_feedback
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Phase 1: Expand deadmanAutoAct() to all 7 top issue classes + RCA recording
-- [x] Phase 2a: Create lib/deadman_rca_feedback.php (4 functions: record, warn, hotspots, retrain)
-- [x] Phase 2b: Create deadman_rca_feedback SQL table with indexes
-- [x] Phase 2c: Wire deadmanAgentWarning() into ai_ticket_agent.php prompt builder
-- [ ] Phase 3a: Wire deadman_voice_hook.php into vapi_server_webhook.php (hook exists, needs manual injection due to restricted perms)
-- [x] Phase 3b: Create cron_deadman_rca_retrain.php daily retrain cron
-- [x] Create spec doc at docs/specs/deadman_rca_self_healing.md
-- [x] Update handoff notes with full deployment log
-- [x] Ship with pickup prompt
-</task_progress>
-</attempt_completion>
-```
-
-### `1785284021265` — 7/28/2026, 7:20:11 PM PT — 557 turns
-
-**Original task:**
-
-```
-Pick up the QB task that was just closed out. where we were tyring to figure out to do witht he Auto Void due to Risk Decline:
-
-Also we did save their payment info on those students denied from today with a key so we could run again and possibly yesterday. Can you give me that payment info for htose students so we can run that manually in a file on my desktop / with a password?
-```
-
-**Ideas referenced:** #11925, #15158, #16134, #16555 [queued], #16590 [queued], #178501, #19387 [deployed], #19458, #19460, #19490, #19491, #19492 [rejected], #19495 [rejected], #19511 [rejected], #19522, #19558, #19594, #19615, #19686, #19690 [deployed], #19704, #19714 [proposed], #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19807, #19810, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19831 [proposed], #19832 [proposed], #19835 [rejected], #19836 [proposed], #19837 [proposed], #19838 [proposed], #19839, #19846 [rejected], #19847 [rejected], #19848 [executed], #19849 [proposed], #19853 [queued], #2036, #2044, #2084, #2085, #5821, #5962, #6112, #9086, #9168, #9339
-
-**Last PICKUP PROMPT:**
-
-```
-led, and 2 duplicates skipped.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task: Comprehensive session handoff, QB auto-void payments and WOPR infrastructure work (task ID to be assigned by new window)
-
-Where we left off (verified 2026-07-28 19:19 PT):
-- #19387 [deployed] QB auto-void fix: root cause was approved Authnet charges getting voided by QuickBooks due to CVC/AVS risk decline signal. Fix deployed.
-- #19849 [proposed] Remaining: query pan_vault for payment tokens saved on risk-decline-voided charges (7/27-7/28), write password-protected CSV to Rubens Desktop
-- #19848 [executed] WOPR reboot executed with pci=realloc. BAR0 now assigned (0xf0000000-64MB) but BAR1 blocked by unprogrammed bridge prefetchable window. BIOS fix needed (#19853 [queued]). Box back up, all services healthy.
-- EA intake backfill ran: 5 replayed OK, 1 failed (502), 2 skipped as duplicates. Sabrina StClair recovered.
-- PAN vault encrypted storage built: AES-256-GCM, key outside webroot, 32 sites, 64 files, 30-day purge cron, end-to-end test byte-exact.
-- 8 EMT cost pages migrated off Authnet. californiaemt + arizonaemt pricing restored. Elementor traps codified into tools.
-- Moodle performance: table cache bumped to 16000/16000, Redis 4GB volatile-lru, rsync throttled with ionice, oldroot unmounted (804GB freed). Portal poller session_lock identified as root cause of spinning.
-- GPU re-diagnosis: Above-4G/ReBAR already ON, kernel PCI alloc failure. pci=realloc is staged and has never been applied (uptime since 7/25, change from 7/27).
-- MD signature swap: Gabe Rodriguez only on EMS 202TX certs (id=44,67). Joshua Zeidler stays on all other 11 templates. No historical cert regeneration. All three threads (#19835 [rejected], #19846 [rejected], #19847 [rejected]) closed.
-
-Open threads to drive next:
-1. #19849 [proposed] Query pan_vault for saved payment keys from risk-decline-voided Authnet charges (7/27-7/28), write encrypted CSV to /Users/rubenmajor/Desktop/
-2. #19853 [queued] BIOS ask: program the 64-bit prefetchable bridge window or reduce ReBAR BAR1 from 16GB to 256MB
-3. #19837 [proposed] Portal session_lock fix: session_write_close() in read-only pollers and Redis session handler migration
-4. #19838 [proposed] portal_bell_poll.php 404: missing file in routes/api/, creates constant FPM churn
-5. #19836 [proposed] nvme-mirror ionice already patched, monitor for lingering util spikes
-
-Reference IDs:
-- Ideas filed: #19387 [deployed], #19849 [proposed], #19848 [executed], #19853 [queued], #19837 [proposed], #19838 [proposed], #19836 [proposed]
-- Files touched: /etc/cron.d/emsu-nvme-mirror, /usr/local/bin/nvme-mirror-sync.sh, /etc/mysql/mariadb.conf.d/99-emsu-perf.cnf, /etc/redis/redis.conf, /etc/default/grub, /boot/grub/grub.cfg, /etc/modprobe.d/blacklist-nvidia-broken-bar0.conf, /etc/udev/rules.d/71-nvidia.rules, /usr/local/bin/wopr_reboot_now.sh
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```

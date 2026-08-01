@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/1/2026, 6:46:45 AM PT | window: last 72h | 72 tasks | index total 373 (parsed 1, cached 372)
+Generated: 8/1/2026, 7:46:46 AM PT | window: last 72h | 72 tasks | index total 373 (parsed 1, cached 372)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785360672171` | 8/1/2026, 6:46:27 AM | 3369 | 15600KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
+| `1785360672171` | 8/1/2026, 7:46:32 AM | 3639 | 16954KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
 | `1785582017987` | 8/1/2026, 4:52:37 AM | 106 | 4073KB | GLM ring TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wan |
 | `1785581189111` | 8/1/2026, 4:25:55 AM | 148 | 519KB | I need to make sure that the orchestra is running and that we don't just have a bunch of i |
 | `1785566876939` | 8/1/2026, 3:57:20 AM | 634 | 1456KB | GLM ring RoCE root cause found (wrong-NIC RX-offload drops from /30 shortcut routes); /32  |
@@ -87,7 +87,7 @@ Generated: 8/1/2026, 6:46:45 AM PT | window: last 72h | 72 tasks | index total 3
 
 ## Per-window detail
 
-### `1785360672171` — 8/1/2026, 6:46:27 AM PT — 3369 turns
+### `1785360672171` — 8/1/2026, 7:46:32 AM PT — 3639 turns
 
 **Original task:**
 

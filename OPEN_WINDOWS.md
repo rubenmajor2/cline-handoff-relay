@@ -6,15 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/31/2026, 8:07:03 PM PT | window: last 72h | 95 tasks | index total 352 (parsed 5, cached 347)
+Generated: 7/31/2026, 9:07:04 PM PT | window: last 72h | 92 tasks | index total 353 (parsed 5, cached 348)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785549425107` | 7/31/2026, 8:07:03 PM | 74 | 587KB | Play doctor of frankenstein - frankenstein-llm appears to be having difficulty with subage |
-| `1785537564406` | 7/31/2026, 8:06:44 PM | 491 | 9802KB | #Argus |
-| `1785531619110` | 7/31/2026, 8:06:09 PM | 557 | 24545KB | The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "servi |
-| `1785548524428` | 7/31/2026, 8:05:35 PM | 146 | 416KB | Jon says Daystron counsil stopped working |
-| `1785463237084` | 7/31/2026, 7:44:57 PM | 1028 | 3581KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
+| `1785537564406` | 7/31/2026, 9:06:40 PM | 743 | 13682KB | #Argus |
+| `1785549425107` | 7/31/2026, 9:06:37 PM | 117 | 677KB | Play doctor of frankenstein - frankenstein-llm appears to be having difficulty with subage |
+| `1785548524428` | 7/31/2026, 8:44:15 PM | 218 | 538KB | Jon says Daystron counsil stopped working |
+| `1785463237084` | 7/31/2026, 8:39:38 PM | 1100 | 3774KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
+| `1785555199745` | 7/31/2026, 8:37:57 PM | 30 | 102KB | #SLS MEGA HUH |
+| `1785530188751` | 7/31/2026, 8:32:06 PM | 232 | 946KB | See the Jon and Cori SMS chat regarding EMT classes suppsedly with the wrong dates posted  |
+| `1785531619110` | 7/31/2026, 8:28:03 PM | 576 | 24626KB | The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "servi |
 | `1785537361555` | 7/31/2026, 5:56:13 PM | 152 | 588KB | What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor  |
 | `1785360672171` | 7/31/2026, 5:55:46 PM | 938 | 5410KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
 | `1785399211024` | 7/31/2026, 4:30:59 PM | 1674 | 7063KB | #Julia/Claudia |
@@ -22,7 +24,6 @@ Generated: 7/31/2026, 8:07:03 PM PT | window: last 72h | 95 tasks | index total 
 | `1785529983485` | 7/31/2026, 4:16:23 PM | 397 | 1027KB | Make sure that you are consulting the SLS so that incorrect information does not persist.  |
 | `1785537526001` | 7/31/2026, 3:38:46 PM | 1 | 14KB | #Argus |
 | `1785465245461` | 7/31/2026, 3:34:55 PM | 774 | 3026KB | check jon's argus 80% PD issues. says not resolved yet.  |
-| `1785530188751` | 7/31/2026, 3:06:16 PM | 226 | 919KB | See the Jon and Cori SMS chat regarding EMT classes suppsedly with the wrong dates posted  |
 | `1785535349176` | 7/31/2026, 3:03:57 PM | 8 | 17KB | root into wopr and give me apple's username and password for webmail for email: |
 | `1785441507395` | 7/31/2026, 2:58:00 PM | 168 | 335KB | Argus failure? Cites technical issues but doesn't not correct them with appropriate CFA lo |
 | `1785375877050` | 7/31/2026, 1:59:50 PM | 2361 | 9279KB | #GLM |
@@ -101,28 +102,12 @@ Generated: 7/31/2026, 8:07:03 PM PT | window: last 72h | 95 tasks | index total 
 | `1785261275539` | 7/28/2026, 9:17:55 PM | 255 | 1525KB | Why was this occurrign? I'm not running anything in Cline here to restart the LitelLM? ->  |
 | `1785267640895` | 7/28/2026, 9:12:15 PM | 288 | 763KB | Pick up task — Query frankenstein router audit log to produce a turn-count-per-model break |
 | `1785272558620` | 7/28/2026, 9:10:38 PM | 720 | 1973KB | Stopping here per your correction — noted that the schedule source is https://emsuniversit |
-| `1785293744959` | 7/28/2026, 8:56:07 PM | 232 | 2135KB | See frankenstein-llm task completion error - doctor of frankenstein resolve RCA resolve -> |
-| `1785296704123` | 7/28/2026, 8:45:52 PM | 3 | 5KB | We had a frankenstein doctor type window working and the window just crashed. |
-| `1785296318095` | 7/28/2026, 8:41:36 PM | 24 | 153KB | Waht caused frankenstein-llm to freeze just now? it's not responding. can you resolve it? |
-| `1785293198244` | 7/28/2026, 8:34:56 PM | 195 | 456KB | Comprehensive session handoff per Ruben's direction. This session spanned multiple workstr |
 
 ---
 
 ## Per-window detail
 
-### `1785549425107` — 7/31/2026, 8:07:03 PM PT — 74 turns
-
-**Original task:**
-
-```
-Play doctor of frankenstein - frankenstein-llm appears to be having difficulty with subagents. I have a could that say 0 tools called - 0 tokens after several minutes. Please resolve.
-```
-
-**Ideas referenced:** #10108, #10739, #10740, #11316, #1151, #11741, #11781, #11798, #11944, #11952, #11953, #12314, #12365, #12366, #12368, #12430, #12459, #12477, #12588, #12618, #12657, #12672, #12680, #12688, #12689, #12716, #12824, #12872, #12878, #13108, #13121, #13202, #13831, #13874, #14133, #14142, #16163, #16265, #16304, #16648, #16715, #16844, #17202, #17203, #17205, #17300, #17430, #18312, #18326, #18329, #18720, #18781, #18820, #18868, #1934, #2014, #20333, #20410, #20549, #20555, #20565, #20569 [deployed], #20627, #20628, #20629, #20630, #2125, #22386, #7505
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785537564406` — 7/31/2026, 8:06:44 PM PT — 491 turns
+### `1785537564406` — 7/31/2026, 9:06:40 PM PT — 743 turns
 
 **Original task:**
 
@@ -134,15 +119,252 @@ Here is the comprehensive build-and-ship handoff. Tags below are server-derived 
 Two more Argus response-quality fixes shipped this session: **ARGUS_NO_REASONING_LEAK_V1** (the prompt had zero anti-leak guidance, grep count 0) and **ARGUS_NO_DEADEND_V1** (Jon was told to "Hit Send again" after 4 failed tries, that count is now 0). Both php -l clean, FPM reloaded, backups kept. And #20555 just flipped to impl_failed, making it the **fourth** idea killed by the missing `blocked_reason` column, which moves #20569 to the top o
 ```
 
-**Ideas referenced:** #10017, #1130, #1131, #1241, #12425, #12430, #12459, #1248, #1249, #1252, #1258, #128263, #128266, #14828, #14829, #14834, #14835, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16578, #16594, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #1779, #177956, #178553, #178554, #1798, #1828, #18357, #1850, #18586, #1896, #19173, #19239 [rejected], #19325, #19370, #19415, #19416, #19419, #19490, #19519, #19567, #1986, #1988, #1989, #1991, #1996, #20042, #2006, #2014, #20282 [executing], #20333 [queued], #20334 [queued], #20388 [queued], #20389 [queued], #20392 [queued], #20393 [deployed], #20405 [queued], #20410 [queued], #20497 [queued], #20500 [queued], #20501 [queued], #20547 [queued], #20549 [queued], #20555 [blocked], #20564 [queued], #20565 [queued], #20569 [proposed], #20613, #20627 [deployed], #20628 [deployed], #20629 [deployed], #2063, #20630 [proposed], #2065, #20661 [executing], #20662 [proposed], #20663 [proposed], #2073, #2084, #2085, #2113, #2125, #2126, #2127, #2128, #30363, #3229 [approved], #3231 [rejected], #4517, #6432, #6523, #7142, #7149, #7925, #9090, #9650, #9660
+**Ideas referenced:** #10017, #11261, #1130, #1131, #1241, #12425, #12430, #12459, #1248, #1249, #1252, #1258, #128263, #128266, #14828, #14829, #14834, #14835, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16578, #16594, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #1779, #177956, #178553, #178554, #1798, #1828, #18357, #1850, #18586, #1896, #19173, #19239 [rejected], #19325, #19370, #19415, #19416, #19419, #19490, #19519, #19567, #1986, #1988, #1989, #1991, #1996, #20042, #2006, #2014, #20282 [executing], #20333 [queued], #20334 [queued], #20388 [queued], #20389 [queued], #20392 [queued], #20393 [deployed], #20405 [queued], #20410 [queued], #20497 [queued], #20500 [queued], #20501 [queued], #20547 [queued], #20549 [queued], #20555 [blocked], #20564 [queued], #20565 [queued], #20569 [proposed], #20613, #20620 [executing], #20622 [executing], #20627 [deployed], #20628 [deployed], #20629 [deployed], #2063, #20630 [proposed], #2065, #20661 [executing], #20662 [proposed], #20663 [proposed], #20672 [proposed], #20674 [executing], #20676 [proposed], #20677 [proposed], #20681 [executing], #20682 [executing], #2073, #2084, #2085, #2113, #2125, #2126 [deployed], #2127 [deployed], #2128 [approved], #30363, #3229 [approved], #3231 [rejected], #4517, #6432, #6523, #7142, #7149, #7925, #9090, #9650, #9660
 
 **Last PICKUP PROMPT:**
 
 ```
-ds below with dispositions.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1785548524428, Argus build-and-ship follow-up: Jon lockup fixed, CS gates live, remaining Ruben-approved items.\n\nWhere we left off (verified 2026-07-31 19:59 PT):\n- Jon's Argus lockup FIXED: JS_QUOTE_FIX_V1 in routes/argus_download.php line 936. My earlier more-cell audit fix used unescaped single quotes inside a single-quoted JS string, killing the entire script block (dead Send, empty sidebar = the deadman load). Rendered JS now node --check clean, FPM reloaded. Jon needs a HARD REFRESH (Cmd+Shift+R).\n- RESOLVE_FAIL_BUG_CS_GATE_V1 + PERM_SET_EXECADMIN_SCOPE_V1 live in lib/argus_action_catalog.php: Admin/CS can resolve_fail_bug only with bug_ref (BUG FIX denoted); perm_set now ExecAdmin-granted but scoped to Admin-and-lower roles. php -l clean, FPM reloaded.\n- Cicero 297 done: box alive, WOPR:11520 reverse tunnel DOWN (no listener, no ssh -R process); router hardcodes 127.0.0.1:11520. Framing inside #20662 [proposed] corrected.\n- #20663 [rejected] by Ruben (deepseek-v4-pro = effectively unlimited spill) (verified: new_status=rejected).\n- Vicky's overrides verified as bug fixes (resolve_fail_bug 26816BC-17 false-fail, executed 13:02 PT).\n\nOpen threads to drive next:\n1. GLM52 doc append (Ruben said YES): add Argus performance section to IDEAL_GLM52_HEX_BUILD.md citing measured 599 to 4,828 tok/s under concurrency. Doc NOT at /var/www/emtskills/docs/ — find it (likely local Mac or another host) then append. (no idea — Ruben-approved inline doc edit)\n2. iMessage Cori+Jon (Ruben said imessage, chat 84): tell them Cyra (users.id 183) has portal + SMS login + webmail live for the externship outreach role. Also tell Jon the Argus lockup is fixed and to hard-refresh. (no idea — direct send, gate already passed by Ruben saying imessage)\n3. Catalog frankenstein findings (Ruben directive): record in bug library so agents stop hitting the same traps: cicero-235b hardcoded fallback to dead tunnel endpoint, Anthropic-shaped-tools 400 spam to GLM ring 8210, QOS_PREEMPT storm + adapter inflight-leak (#20662 [proposed]). (no idea — bug_library_record calls)\n4. File idea (Ruben approved): payment-attribution back-and-forth flow — Vicky/agent exchange payment proof through routes/payment_attribution_queue.php with proper posting + traceback of whatever is submitted; then unsuspend the four substantial-payment students through payment_suspensions + audited repair actions only. FIRST MOVE: create_idea, then tag it [proposed] here.\n5. #20662 [proposed]: adapter inflight-leak + QOS storm fix; sub-item: restore Cicero reverse tunnel (check cicero selfheal HEAL4 / ssh -R from Mac side: rubenmajor@192.168.1.252).\n6. #20555 [blocked]: re-drive delegation hardening now that #20569 [deployed] makes failures legible, or hand-ship per rule 267 GATE C.\n7. #20630 [proposed]: phantom-payment mechanism — build detection + quarantine (QB payment rows Intuit later risk-declines/auto-voids; invoice reads paid-then-voided while Authnet shows only $50 settled).\n8. Human-only decision, no idea: ruben_active permanent override (explained to Ruben, leaning no: flag yields to live Cline work; detector cannot see MCP traffic so it stays 0; forcing 1 deprioritizes batch forever).\n\nReference IDs:\n- Ideas: #20662 [proposed], #20663 [rejected], #20555 [blocked], #20630 [proposed], #20569 [deployed]\n- Implementer live runs: #20661 [executing], #20282 [e
+er rule 07 (verified by tail).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785548524428 - Argus / fleet / payment drive (2026-07-31 window 3).
+
+Where we left off (verified 2026-07-31 20:46 PT):
+- ARGUS_STREAM_WATCHDOG_V1 shipped in routes/argus_download.php: 90s stream-stall watchdog (line 1235) kills the infinite-hang Ruben hit live; busy-claim text fully removed (grep 0); neutral connect text x2; gateway retry cap 10; macro-retry 3x; no-deadend queued fallback. php -l clean, FPM reloaded. Ruben must hard-refresh the terminal tab (Cmd+Shift+R) and retry.
+- Eight ideas executing under the executor: #20630 [executing] (drafting), #20672 [executing], #20662 [executing], #20674 [executing], #20676 [executing], #20681 [executing] (daystrom harvest cron), #20682 [executing] (collation audit), #20555 [executing]. Plus #20677 [queued] ready_for_review per echo.
+- #20569 [deployed]: impl_error now exists on orchestrator_ideas, so executor failures are legible; #20555 [executing] was auto-unblocked and is already in progress.
+- Provenance repair: daystrom and collation were miscited as #20622 [queued] and #20620 [queued] by the prior window; those ids are unrelated ideas (RCA retrain, fleet watchdog). Real threads now live at #20681 [executing] and #20682 [executing].
+- Argus busy/hang answer for Ruben: never capacity; transient 5xx bursts from the adapter/QOS storm (owned by #20662 [executing]) plus client wording and an untimed stream reader (fixed in prod this window).
+
+Open threads to drive next:
+1. #20630 [executing] - watch for ready_for_review, then verify the phantom-payment build end-to-end against the Jason Pan population (qb_voided_invoice_quarantine id 1).
+2. #20662 [executing] - root fix for the 5xx bursts; when it lands, confirm via a live Argus query that the watchdog and requeue paths stop firing.
+3. #20681 [executing] - verify daystrom_sessions populates after the harvest cron is scheduled (Jon's recurring question).
+4. #20682 [executing] - verify a known paid student matches after the email-join collation fix.
+5. #20676 [executing] - verify ruben_active flips to 1 after a Cline MCP call and decays after silence.
+6. #20677 [queued] - ready_for_review per echo; sign off, then verify the 235b lane endpoint is registry-derived and the cicero tunnel selfheals.
+7. #20555 [executing] - unblocked by the #20569 [deployed] impl_error repair; watch for ready_for_review on the delegation hardening.
+8. #20388 [executing] - PD signoff audit for Jon, in progress per echo.
+9. (human-only decision, no idea) - Argus PERFORMANCE section for IDEAL_GLM52_HEX_BUILD.md: awaiting Ruben's reply on the explanation he requested before any build.
+10. (human-only decision, no idea) - five Vicky money questions (deposit vs full balance, Jason Pan phantom $2,295, dispute-refund list, third-party payment channels, installment currency), then unsuspend only the four substantial-payment students.
+11. (human-only decision, no idea) - perm_set for ExecAdmin vs MasterAdmin-only, and the channel to tell Cori and Jon about Cyra's access (no send_sms tool on emsu-operations MCP).
+
+Reference IDs:
+- Ideas executing: #20630 [executing], #20662 [executing], #20672 [executing], #20674 [executing], #20676 [executing], #20681 [executing], #20682 [executing], #20555 [executing], #20388 [executing]
+- Ideas deployed: #20569 [deployed], #20564 [deployed], #20393 [deployed]
+- Ideas queued: #20677 [queued], #20549 [queued], #20410 [queued], #2
 ```
 
-### `1785531619110` — 7/31/2026, 8:06:09 PM PT — 557 turns
+### `1785549425107` — 7/31/2026, 9:06:37 PM PT — 117 turns
+
+**Original task:**
+
+```
+Play doctor of frankenstein - frankenstein-llm appears to be having difficulty with subagents. I have a could that say 0 tools called - 0 tokens after several minutes. Please resolve.
+```
+
+**Ideas referenced:** #10108, #10739, #10740, #11316, #1151, #11741, #11781, #11798, #11944, #11952, #11953, #12314, #12365, #12366, #12368, #12430, #12459, #12477, #12588, #12618, #12657, #12672, #12680, #12688, #12689, #12716, #12824, #12872, #12878, #13108, #13121, #13202, #13831, #13874, #13964, #14000, #14133, #14142, #16120, #16163, #16265, #16304, #16648, #16715, #16844, #17202, #17203, #17205, #17300, #17430, #18312, #18326, #18329, #18720, #18781, #18820, #18868, #1934, #2014, #20333, #20410, #20549, #20555, #20565, #20569 [deployed], #20627, #20628, #20629, #20630, #2125 [deployed], #2129 [deployed], #22386, #7505
+
+**Last PICKUP PROMPT:**
+
+```
+ument before claiming absence.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #frankenstein-doctor-session2 — continue the 50-minute fleet session Ruben requested.
+
+Where we left off (verified 2026-07-31 20:27 PT):
+- Bug #2125 [deployed] — router_hook.py _reserve_visible_budget patched for subagent None max_tokens; LiteLLM restarted
+- Bug #2129 [deployed] — FRANK_TOOLS_OLLAMA_UPSTREAMS="" killed phantom Artemis :11434 probe; adapter restarted; canary clean
+- Joshua 70B [proposed→confirmed healthy] — serving via socat tunnel; host-probe 503 is false-negative (no WG path)
+
+Open threads to drive next (monitor/session-2 candidates):
+1. #2125 [deployed] — watch llm_call_log for GLM subagent turns now producing real tokens (verify end-to-end with an actual Cline subagent dispatch this session)
+2. GLM ring decode_live=False + fail_streak=5 at last adapter restart — confirm ring stabilized (was early-restart window, verify tok_s now)
+3. #2129 [deployed] — nothing further needed; tier_health should be clean
+
+Reference IDs:
+- Ideas filed: #2125 [deployed], #2129 [deployed]
+- Files touched: /etc/litellm/router_hook.py, /etc/systemd/system/frankenstein-tools.service.d/50-canonical-upstreams.conf
+- HANDOFF_NOTES.md updated 2026-07-31
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</
+```
+
+### `1785548524428` — 7/31/2026, 8:44:15 PM PT — 218 turns
+
+**Original task:**
+
+```
+Jon says Daystron counsil stopped working
+```
+
+**Ideas referenced:** #11227, #12019, #16260, #18644, #20666 [deployed], #6104, #6419, #64748, #702534, #9090, #9475
+
+**Last PICKUP PROMPT:**
+
+```
+ sent to rmajor and jthompson.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task Daystrom Council harvest fix + agent prompt repair
+
+Where we left off (verified 2026-07-31 20:44 PT):
+- Live council session completed (daystrom-20260731-202444-dbe7). frankenstein-llm confirmed working across all 12 agent turns + 18 chair turns. 0 proposals filed, 0 actions executed.
+- Root cause identified: harvest call to frankenstein-llm with 4000 max_tokens is hitting 40-second CURLOPT_TIMEOUT (line 319 cron_daystrom_council.php). Short turns (420 tokens) work fine in 5-33s; 4000-token harvest generation needs longer timeout. Also per-round mini-harvest flaky (some rounds return empty after timeout).
+- Secondary issue: agents hallucinate tool execution because the seed prompt tells them to "USE check_student, verify_payment_state etc." but they cannot actually shell out to those tools from the council cron. They generate fictional execution tables instead, wasting round time and RAMBLE_CAP trims them to empty.
+- RAMBLE_CAP triggered on 12+ turns — frankenstein-llm produces excessively verbose output (2000-4000+ chars) that gets entirely scrubbed.
+- Session retro worked (1464 chars via frankenstein-llm), minutes emailed to rmajor + jthompson.
+
+Open threads to drive next:
+1. #20666 [deployed] — increase CURLOPT_TIMEOUT from 40 to 120 on line 319 of cron/cron_daystrom_council.php (harvest call). This is the critical fix to get proposals filing again.
+2. (needs new idea) — change the seed prompt tool instruction to remove the hallucination trigger. Agents cannot run tools from council; the executor picks up ideas after the session. Replace "USE THEM" with "propose concrete actions backed by real data."
+3. (needs new idea) — tighten RAMBLE_CAP threshold or test a max_tokens limit on regular turns. frankenstein-llm is verbose; 420 default may still produce 3000+ chars that get scrubbed.
+
+Reference IDs:
+- Idea: #20666 [deployed]
+- Files touched: /var/www/emtskills/cron/cron_daystrom_council.php, /var/www/emtskills/lib/daystrom_harvest_helpers.php, /etc/cron.d/emsu-info-maildir-mover
+- Live session: daystrom-20260731-202444-dbe7, log at /tmp/daystrom_live.log
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Launch live Daystrom Council session
+- [x] Babysit to completion (Rule 158) — 8 rounds, ~12 minutes
+- [x] Diagnose: frankenstein-llm works for turns, harvest timeout (40s → 120s needed), agents hallucinate tool use
+- [x] Recommendations: increase CURLOPT_TIMEOUT to 120s, fix seed prompt tool instruction, tighten RAMBLE_CAP
+- [x] Report to Ruben with full details
+</task_progress>
+</attempt_completion>
+```
+
+### `1785463237084` — 7/31/2026, 8:39:38 PM PT — 1100 turns
+
+**Original task:**
+
+```
+AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations that was due 7/28, now due 7/31. Can you populate that R2 that was supposed to be posted on the page along with all the other info that was supposed to be ther efrom before under AZDHS?
+
+Odd that it's not there next to the 4/ 13 open complaint. Anyway yeah that needs to be repopulated back in there along with a response that was already sent as well as the one that you drafted for this new issue that was due on 728. You might have to check the desktop if you can't find the 
+```
+
+**Ideas referenced:** #0000, #0369, #059669, #0891, #111827, #13661, #1368, #1441, #1454, #1538, #1565, #15654, #15803, #16127, #16134, #16135, #16160, #1633, #166534, #16957, #19587, #19595 [executing], #19599, #20393 [approved], #20633 [executing], #20634 [executing], #20640 [proposed], #20643 [executing], #20645 [executing], #20680 [executing], #25226, #2563, #26211, #334155, #4111, #450438, #475569, #600179, #623992, #6366, #64748, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+hen ready and I'll regenerate.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #20393 — AZDHS July 2026 NOI, package complete, DUE TODAY 7/31.
+
+Where we left off (verified 2026-07-31 16:32 PT):
+- Investigation #17 `azdhs-noi-2026-07-13`, five timeline rounds (#133-#137), all file_paths resolve HTTP 200
+- #133 [received] original AZDHS letters (OCR'd, 9pp) · #134 [sent] extension request · #135 [draft] Consolidated Response 9pp · #136 [draft] Enclosure A Class Rosters 3pp · #137 [draft] Enclosure B Policies 2pp
+- FULL RECORD RESEARCH COMPLETE. All four named students NREMT cleared: 0493 + 0494 on 6/30/26, 0496 on 6/20/26, 0500 on 7/21/26.
+- Moodle gradebook (users 46701/46700, course 25) proves both 25226W students incomplete at the 12/16/25 course end; courtesy-extension timeline exams 1/13 → midterm 1/30 → practical skills 2/2 → total 2/3 → cert 2/6. Prereq docs still posting 6/24, 7/24, 7/29/26.
+- Ticket 631 (TKT-20260306-91FD5D2B) diagnostic: "no externship records or attachments present in backend" for the 0460 student. Passed final 133/150. Externship 0/8 because the record never existed.
+- 0496 complaint dated 6/07 predates its 6/08 completion; cleared 6/20 (12 days).
+- 0500 54-day interval = academic-integrity + payment-hold review (ticket 15654), not an unattended file.
+- 0501 verified: 0 DeLisle records, 0 Northland/Alpine emails, 0 Paramedic/AEMT across 7,749 students / 522 sections.
+- Constraints enforced and grep-verified: no names in Response, no profile links in Response, no volunteered-production language. Names only in Enclosure A per the Department's own request.
+- All 6 investigation-summary anchors converted to target="_blank" rel="noopener noreferrer". PHP lint clean. Backup at institutional_compliance.php.bak-20260731-newtab.
+- Ledger row appended.
+
+Open threads to drive next:
+1. #20393 [executing] — Ruben is assembling the real Policies and Procedures documents. When supplied, replace the Enclosure B policy-area map with the actual documents and regenerate `AZDHS_NOI_July2026_EnclosureB_Policies_Procedures.pdf` via the same wkhtmltopdf pipeline, then update round #137.
+2. #20393 [executing] — Execute the two corrective measures the Response states as already instituted, so the statement is true when it ships: externship assignment-latency monitoring (a placement request cannot age to expiration unassigned without escalation) and portal submission-record verification (no submission deadline applied where the receiving record was never created).
+3. #20393 [executing] — Execute the 0460 commitments: open the externship record for student 25324T-01 so ride-along documentation can be received, reconcile the psychomotor skills checklist against the 12/15/25 completion record, and initiate the grievance/reinstatement pathway.
+4. (human-only decision — no idea) — Ruben final review and transmission to lawrence.bevins@azdhs.gov cc brent.caswell@azdhs.gov before midnight 7/31.
+
+Reference IDs:
+- Investigations: #17 (July 2026, DUE TODAY), #1 (April 2026, separate matter)
+- Response rounds: #133, #134, #135, #136, #137
+- Ideas: #20393 [executing]
+- Students: 25226W-34 (id 2255, Moodle 46701), 25226W-12 (id 1933, Moodle 46700), 26211FT-07 (id 8141124, Moodle 50430), 25324T-01 (id 1347, Moodle 45607), 26308W-16 (id 8138168, Moodle 49724)
+- Tickets: 631 (Nettles externship record), 12390 (third-party Vasquez escalation), 15654 (Brenza NREMT clearance holds)
+- Files: `uploads/compliance/july2026_noi/
+```
+
+### `1785555199745` — 7/31/2026, 8:37:57 PM PT — 30 turns
+
+**Original task:**
+
+```
+#SLS MEGA HUH
+
+Please organize the proposed ideas and work here so i can understand where we are going with everything, it's very all over the place. 
+--
+
+You were right to stop me. I ran the SLS across all 24 and it corrects my analysis in three places. Nothing has been written to any student record.
+
+## What the SLS actually says, uniform across all 24
+
+**First failed gate: `moodle_user` on 24 of 24.** Their Moodle accounts are SUSPENDED. For the student I pulled in full (Josiah Rajesh), the SLS classifies it precisely: a lone outlier whose suspension timestamp matches his EA-completion time
+```
+
+**Ideas referenced:** #178561, #20513 [proposed], #20514 [proposed], #20515 [proposed], #20516 [proposed], #20518 [proposed], #20519 [proposed], #20527 [proposed], #20529 [proposed], #20532 [proposed], #20538 [proposed], #20548 [proposed], #20552 [proposed], #20558 [proposed], #20566 [proposed], #20568 [proposed], #20573 [proposed], #20574 [proposed], #20575 [proposed], #20580 [proposed], #20581 [proposed], #20582 [proposed], #20587 [proposed], #20588 [proposed], #20595 [proposed], #20596 [proposed], #20597 [proposed], #20601 [proposed], #20608 [proposed], #20610 [proposed], #20612 [proposed], #20615 [proposed], #20616 [proposed], #20617 [proposed], #20623 [proposed], #9306 [deployed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785530188751` — 7/31/2026, 8:32:06 PM PT — 232 turns
+
+**Original task:**
+
+```
+See the Jon and Cori SMS chat regarding EMT classes suppsedly with the wrong dates posted for Boot Camp on the various schedules and advise what's happening with that.
+```
+
+**Ideas referenced:** #0056, #11998, #155724, #1565, #16732, #19017, #1976, #20578 [queued], #20593 [deployed], #20606 [queued], #20607 [deployed], #20678 [proposed], #218838, #262220, #2640, #3295, #3300, #3336, #3337, #3338, #3339, #334155, #37474, #495057, #64748, #856404
+
+**Last PICKUP PROMPT:**
+
+```
+ded schedules on any EMT site.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Boot Camp 8/8 cancellation + prevent-recurrence guardrails.
+(No numeric task id assigned this session; topic named.)
+
+Where we left off (verified 7/31/2026, 8:31 PM PT):
+- RCA filed idea #20607 [deployed]: 8 BC rows (26222BC–26922BC) inserted 7/30 7:04:20 PM via Cline MCP ssh_command; /tmp/_generate_bootcamp_schedules.php (owner emsuserver, mtime 7/30 7:06:52 PM) hardcodes all 8 sections with $startDate='2026-08-08' and NULL didactic/end dates. No web request, no cron, no shell history = non-interactive MCP SSH. Agent incremented 26221BC→26222BC but fabricated 08/08 instead of the real 8/3 anchor.
+- Display bug fixed + deployed, idea #20593 [deployed]: strtotime(NULL) fatal at line 1100 of view_course_schedules.php null-guarded (backup view_course_schedules.php.bak-20260731-1413); page now renders all 10 rows.
+- Ruben confirmed: 8/3 is gone — cancel the 8/8 sections, do NOT create 8/3 classes.
+
+Open threads to drive next (EV .clinerules/EXECUTE_ORDER_66.
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+ERY item has a real filed idea #):
+1. #20606 [queued] — Cancel 8/8 BC sections: remove 26222BC–26922BC from Course_Schedules across all EMT websites; add Cancel Class button beside Edit/Delete on view_course_schedules.php with student notification + offer to join another course. Students to contact first: Liliana Frausto (26222BC Tempe, lilyfrost86@gmail.com, (213) 999-6131) and Frank Heald (26922BC-01 DFW, frankraymondheald123@gmail.com, +19727303060) — list handed to Vicky's team.
+2. #20678 [proposed] — Implement prevent-recurrence guardrails: date-source validation, Saturday start-date check, NOT NULL didactic/end dates, created_by column, ban raw Course_Schedules INSERTs via /tmp scripts.
+3. #20578 [superseded] — Original "update dates 8/8→8/3" idea is dead per Ruben's decision; do not create 8/3 classes.
+
+Reference IDs:
+- Ideas filed: #20593 [deployed], #20606 [queued], #20607 [deployed], #20678 [proposed], #20578 [superseded]
+- Files touched: /var/www/emtskills/google-sheets-to-mysql-migration/view_course_schedules.php (+ .bak-20260731-1413), /tmp/_generate_bootcamp_schedules.php (RCA evidence)
+- Students impacted: Liliana Frausto (26222BC), Frank Heald (26922BC-01)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785531619110` — 7/31/2026, 8:28:03 PM PT — 576 turns
 
 **Original task:**
 
@@ -205,104 +427,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Clean pickup prompt with all open threads + new #20665
 </task_progress>
 </attempt_completion>
-```
-
-### `1785548524428` — 7/31/2026, 8:05:35 PM PT — 146 turns
-
-**Original task:**
-
-```
-Jon says Daystron counsil stopped working
-```
-
-**Ideas referenced:** #11227, #12019, #16260, #18644, #20666 [deployed], #6419, #64748, #702534, #9090, #9475
-
-**Last PICKUP PROMPT:**
-
-```
-ed returns valid harvest JSON.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task Daystrom Council restore + info@ auto-sort disable
-
-Where we left off (verified 2026-07-31 20:05 PT):
-- Daystrom Council root cause: LiteLLM key is 403-denied for claude-haiku-4-5. Every harvest call returned empty, so 0 proposals/actions were filed per session.
-- Per Ruben's directive the council must use frankenstein-llm. Live-tested HTTP 200 with clean JSON, then patched all API payloads: cron/cron_daystrom_council.php (lines 304, 384, 2002) and lib/daystrom_harvest_helpers.php (line 169). Lint clean. Backups .bak-20260731-sonnetfix. Remaining haiku strings are display labels only.
-- info@ auto-sorting disabled: /etc/cron.d/emsu-info-maildir-mover replaced with comment-only (original at .bak-20260731).
-- Idea #20666 [deployed] filed documenting the incident.
-
-Open threads to drive next:
-1. #20666 [deployed] -- verify the 23:30 PT council tonight files proposals with frankenstein-llm; check /var/log/emsu-cron/daystrom_scheduled.log for "proposals filed: N" with N>0.
-2. #20666 [deployed] -- confirm no further info@ sorting: /var/log/emsu-info-maildir-mover.log stops growing; inbox messages stay in INBOX.
-
-Reference IDs:
-- Idea: #20666 [deployed]
-- Files touched: /var/www/emtskills/cron/cron_daystrom_council.php, /var/www/emtskills/lib/daystrom_harvest_helpers.php, /etc/cron.d/emsu-info-maildir-mover
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Daystrom Council root cause found — 403 on claude-haiku-4-5, 0 proposals filed
-- [x] frankenstein-llm tested — HTTP 200, valid JSON, key allowed
-- [x] All council payloads patched to frankenstein-llm (3 payload sites + harvest helper), lint clean
-- [x] info@ auto-sort disabled, original cron backed up
-- [x] Idea #20666 filed
-- [x] Completed with pickup prompt
-</task_progress>
-</attempt_completion>
-```
-
-### `1785463237084` — 7/31/2026, 7:44:57 PM PT — 1028 turns
-
-**Original task:**
-
-```
-AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations that was due 7/28, now due 7/31. Can you populate that R2 that was supposed to be posted on the page along with all the other info that was supposed to be ther efrom before under AZDHS?
-
-Odd that it's not there next to the 4/ 13 open complaint. Anyway yeah that needs to be repopulated back in there along with a response that was already sent as well as the one that you drafted for this new issue that was due on 728. You might have to check the desktop if you can't find the 
-```
-
-**Ideas referenced:** #0000, #0369, #059669, #0891, #111827, #13661, #1368, #1441, #1454, #1538, #1565, #15654, #15803, #16127, #16134, #16135, #16160, #1633, #166534, #16957, #19587, #19595 [executing], #19599, #20393 [approved], #20633 [executing], #20634 [executing], #20640 [proposed], #20643 [executing], #20645 [executing], #25226, #2563, #26211, #334155, #4111, #450438, #475569, #600179, #623992, #6366, #64748, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-hen ready and I'll regenerate.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #20393 — AZDHS July 2026 NOI, package complete, DUE TODAY 7/31.
-
-Where we left off (verified 2026-07-31 16:32 PT):
-- Investigation #17 `azdhs-noi-2026-07-13`, five timeline rounds (#133-#137), all file_paths resolve HTTP 200
-- #133 [received] original AZDHS letters (OCR'd, 9pp) · #134 [sent] extension request · #135 [draft] Consolidated Response 9pp · #136 [draft] Enclosure A Class Rosters 3pp · #137 [draft] Enclosure B Policies 2pp
-- FULL RECORD RESEARCH COMPLETE. All four named students NREMT cleared: 0493 + 0494 on 6/30/26, 0496 on 6/20/26, 0500 on 7/21/26.
-- Moodle gradebook (users 46701/46700, course 25) proves both 25226W students incomplete at the 12/16/25 course end; courtesy-extension timeline exams 1/13 → midterm 1/30 → practical skills 2/2 → total 2/3 → cert 2/6. Prereq docs still posting 6/24, 7/24, 7/29/26.
-- Ticket 631 (TKT-20260306-91FD5D2B) diagnostic: "no externship records or attachments present in backend" for the 0460 student. Passed final 133/150. Externship 0/8 because the record never existed.
-- 0496 complaint dated 6/07 predates its 6/08 completion; cleared 6/20 (12 days).
-- 0500 54-day interval = academic-integrity + payment-hold review (ticket 15654), not an unattended file.
-- 0501 verified: 0 DeLisle records, 0 Northland/Alpine emails, 0 Paramedic/AEMT across 7,749 students / 522 sections.
-- Constraints enforced and grep-verified: no names in Response, no profile links in Response, no volunteered-production language. Names only in Enclosure A per the Department's own request.
-- All 6 investigation-summary anchors converted to target="_blank" rel="noopener noreferrer". PHP lint clean. Backup at institutional_compliance.php.bak-20260731-newtab.
-- Ledger row appended.
-
-Open threads to drive next:
-1. #20393 [executing] — Ruben is assembling the real Policies and Procedures documents. When supplied, replace the Enclosure B policy-area map with the actual documents and regenerate `AZDHS_NOI_July2026_EnclosureB_Policies_Procedures.pdf` via the same wkhtmltopdf pipeline, then update round #137.
-2. #20393 [executing] — Execute the two corrective measures the Response states as already instituted, so the statement is true when it ships: externship assignment-latency monitoring (a placement request cannot age to expiration unassigned without escalation) and portal submission-record verification (no submission deadline applied where the receiving record was never created).
-3. #20393 [executing] — Execute the 0460 commitments: open the externship record for student 25324T-01 so ride-along documentation can be received, reconcile the psychomotor skills checklist against the 12/15/25 completion record, and initiate the grievance/reinstatement pathway.
-4. (human-only decision — no idea) — Ruben final review and transmission to lawrence.bevins@azdhs.gov cc brent.caswell@azdhs.gov before midnight 7/31.
-
-Reference IDs:
-- Investigations: #17 (July 2026, DUE TODAY), #1 (April 2026, separate matter)
-- Response rounds: #133, #134, #135, #136, #137
-- Ideas: #20393 [executing]
-- Students: 25226W-34 (id 2255, Moodle 46701), 25226W-12 (id 1933, Moodle 46700), 26211FT-07 (id 8141124, Moodle 50430), 25324T-01 (id 1347, Moodle 45607), 26308W-16 (id 8138168, Moodle 49724)
-- Tickets: 631 (Nettles externship record), 12390 (third-party Vasquez escalation), 15654 (Brenza NREMT clearance holds)
-- Files: `uploads/compliance/july2026_noi/
 ```
 
 ### `1785537361555` — 7/31/2026, 5:56:13 PM PT — 152 turns
@@ -540,50 +664,6 @@ PRIORITY 2, DAYSTROM MINUTES, Jon asked and it is still broken. daystrom_session
 PRIORITY 3, COLLATION AUDIT, likely the true cause of QB mis-reconciliation. Every join between the payment tables and students.email throws ERROR 1267 Illegal mix of collations, utf8mb4_general_ci versus utf8mb4_unicode_ci. I had to force COLLATE on both sides to get any rows at all. BUILD: grep cron/cron_payment_reconciliation.php, cron/qb_payment_sync.php and lib/AuthnetQbAutoMatcher.php for email joins and check whether they force collation. If they do not, a paid student silently matches nothing and looks unpaid, which is exactly the symptom Vicky reported. Fix by forcing COLLATE at the join or normalizing column collations.
 
 PRIORITY 4, ARGUS RESPONSE QUALITY, shipped but NOT live-verified. Two fixes went in today. ARGUS_NO_REASONING_LEAK_V1 at routes/alltastic_api.php line 5085 bans planning leakage (User asks, They likely refer to, So first call X) and announcing which tool it is about to call, and requires investigate-silently then report cause plus action. ARGUS_NO_DEADEND_V1 at routes/argus_download.php line 1127 replaced the Hit Send again dead-end with an auto-requeue message, verified Hit Send again count is now 0. Both php -l clean, FPM reloaded, backups .bak-noleak-20260731-1319* and .bak-deadend-20260731-1532*. NOT LIVE-VERIFIED because POSTing to alltastic_api.php as MasterAdmin returned 401 twice, the API path enforces stricter session validation than the page path. NEXT: have Ruben or Jon run a real quer
-```
-
-### `1785530188751` — 7/31/2026, 3:06:16 PM PT — 226 turns
-
-**Original task:**
-
-```
-See the Jon and Cori SMS chat regarding EMT classes suppsedly with the wrong dates posted for Boot Camp on the various schedules and advise what's happening with that.
-```
-
-**Ideas referenced:** #0056, #11998, #155724, #1565, #16732, #19017, #1976, #20578 [queued], #20593 [deployed], #20606 [queued], #20607, #218838, #262220, #2640, #3295, #3300, #3336, #3337, #3338, #3339, #334155, #37474, #495057, #64748, #856404
-
-**Last PICKUP PROMPT:**
-
-```
-n, no drop/fail/transfer flags
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Cancel 8/8 Boot Camp classes + wire Cancel-class button (Ruben-approved).
-
-Where we left off (verified 3:05 PM PT 7/31/2026):
-- Display bug FIXED + verified: view_course_schedules.php now renders all 10 rows (null-guarded 8 strtotime sites, backup .bak-20260731-1413)
-- RCA COMPLETE: 8/8 BC rows (26222BC-26922BC, ids 531-538) were created 7/30 19:04:20 by a Cline SSH session writing /tmp/_generate_bootcamp_schedules.php with $startDate='2026-08-08' — NOT cron, NOT CSV import, NOT web form
-- Ruben approved: cancel the 8/8 classes (8/3 is gone)
-- 2 affected students: Liliana Frausto (26222BC Tempe, lilyfrost86@gmail.com, 213-999-6131) + Frank Heald (26922BC-01 DFW, frankraymondheald123@gmail.com, +19727303060) — list provided to Vicky
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #20606 [queued] — Remove/cancel 26222BC-26922BC from Course_Schedules so they disappear from ALL EMT website schedule pages (verify californiaemt.com, arizonaemt.com, texasemt/DFW sites, Team Hub all pull from DB — website_dropdown_rules.php domain map). DELETE rows vs mark cancelled — get Ruben's call on hard delete vs soft-cancel.
-2. #20606 [queued] — Add Cancel Class button next to Edit/Delete on view_course_schedules.php: cancels class, notifies students (email/SMS), offers alternate course join, writes audit record.
-3. #20593 [deployed] — Documented strtotime NULL fix; nothing further unless regression appears.
-4. #20578 [queued] — Update BC start dates 8/8→8/3 — SUPERSEDED by Ruben's cancel decision; close/repurpose.
-
-Reference IDs:
-- Ticket: none (imessage chat 84, Cori report; ops chat 55 items #3295/#3300)
-- Ideas filed: #20578, #20593, #20606, #20607
-- Files touched: /var/www/emtskills/google-sheets-to-mysql-migration/view_course_schedules.php (+ .bak-20260731-1413)
-- RCA artifact: /tmp/_generate_bootcamp_schedules.php (on WOPR)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```
 
 ### `1785535349176` — 7/31/2026, 3:03:57 PM PT — 8 turns
@@ -3251,88 +3331,3 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </result>
 </attempt_completion>
 ```
-
-### `1785293744959` — 7/28/2026, 8:56:07 PM PT — 232 turns
-
-**Original task:**
-
-```
-See frankenstein-llm task completion error - doctor of frankenstein resolve RCA resolve -> Still 2 fixes left (#19840 ExecAdmin gate + hint text). SSH is flaky — sed/PHP inline both fail intermittently. `read_server_file` and `write_server_file` work reliably but `write_server_file` re-inlines the full file and we
-...[2660 chars trimmed to fit frankenstein-tools ctx]...
-</attempt_completion>
-```
-
-**Ideas referenced:** #001018, #059669, #062017, #10740, #11397, #1154, #11925, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12477, #12584, #12657, #12672, #12673, #12689, #12716, #13108, #13121, #13831, #13832, #13874, #13964, #14000, #14848, #15158, #16120, #16588, #16613, #166534, #16718, #16844, #1754, #1755, #17580, #17680, #178495, #178501, #18327, #18781, #18786, #18795, #18801 [deployed], #18807, #1883, #18833 [deployed], #18836 [deployed], #18837, #18864 [deployed], #18867, #18868, #18889 [deployed], #18892 [rejected], #18915 [proposed], #18926 [in_progress], #18929, #18935, #18944, #18949, #18950, #18951, #18952, #1896, #18961, #18966, #18967, #18970 [proposed], #18971 [executing], #18972 [proposed], #18977 [proposed], #18982, #18985 [rejected], #19007 [deployed], #19008 [proposed], #19040, #19055 [deployed], #19080, #19081, #19100 [executing], #19102 [executing], #19126 [rejected], #19134 [executing], #19135 [executing], #19143 [executing], #19144 [executing], #19145, #19158, #19159, #19160 [executing], #19161 [executing], #19163 [executing], #19166, #19167, #19168, #19169, #19170 [executing], #19173, #19194, #19227, #19230 [queued], #19234 [queued], #19266, #1932, #19321, #19325, #19338, #1935 [investigating], #19373, #19388 [executing], #1939 [investigating], #19390 [rejected], #19403 [rejected], #19407, #19415, #19416, #19419, #19425, #19427, #19430, #19434, #19437, #19446, #19454, #19458, #19460, #19464, #19465, #1947 [resolved], #19490, #19491, #19492, #19495, #19500, #19509, #19510, #19511, #19518 [rejected], #19522, #19523, #19524, #19525, #1953, #19535, #19537, #19539, #1954 [investigating], #19545, #19558, #1956 [resolved], #19563 [rejected], #19568 [executing], #1957 [investigating], #19571 [proposed], #19572, #19573, #19574, #19576, #19577, #19578, #19579 [executing], #1958 [resolved], #19580, #19581, #19583, #19584, #19585 [executing], #19586, #19587, #19588, #19589, #1959, #19590, #19591, #19592, #19594, #19595, #19596, #19597, #19598, #19599, #1960, #19600, #19601, #19602, #19603, #19604, #19605, #19606, #19607, #19608, #19610 [executing], #19611, #19615, #1962, #1963, #1964, #19645, #19646, #19647, #1965, #19653, #19657, #1966, #1967, #1968, #19686, #1969, #19690 [deployed], #1970, #19704, #1971, #19714 [proposed], #1972, #1973, #1975, #1976, #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19803, #19807, #19810, #19811, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830, #19831, #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19840 [approved], #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19863 [proposed], #19872, #19874 [proposed], #19875 [proposed], #1998, #2008, #2010, #2011, #2012, #2014, #2015, #2016, #2017, #2019, #2023, #2024, #2027, #2029, #2030, #2031, #2033, #2039, #2040, #2041, #2043, #2064, #2066, #2084, #2085, #21278, #21765, #2322, #2490, #2563, #3048, #3049, #334155, #3595, #374151, #475569, #623992, #64748, #92400, #9733, #9734
-
-**Last PICKUP PROMPT:**
-
-```
-er.py.bak-20260728-chateffort`
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — frankenstein-llm completion error resolved; investigate GLM-5.2 decode-stall.
-
-Where we left off (verified 2026-07-28 20:55 PT):
-- Fix #1 (reasoning_effort default="low") verified on disk at lines 2904 + 3024 of `/usr/local/bin/frankenstein_tools_adapter.py` [deployed]
-- Fix #2 (#19840 ExecAdmin gate) verified in `/var/www/emtskills/api/telephony/config_api.php` [deployed]
-- Adapter restarted via `sudo systemctl restart frankenstein-tools` — health 200 OK [deployed]
-- End-to-end test confirmed: content returns clean, reasoning_content=NONE [verified]
-- GLM-5.2 cluster (:8210) discovered decode-stalled: 0.139 tok/s, 7 running, streak=14 (filed as #19874)
-
-Open threads to drive next:
-1. #19874 [proposed] — Investigate GLM-5.2 local PP=6 cluster decode-stall (rate=0.139 tok/s, running=7, wedge-streak=14). Possible causes: model reload needed, PP head hung, or max_model_len overflow. Check `/metrics` on :8210 directly.
-2. #19875 [proposed] — Consider reducing GLM-5.2 priority back below 120B pool — the 2026-07-28 "hard priority tier" change routes ALL traffic to a stalled box. The `_least_loaded_order()` sort key `(0 if _is_glm(u) else 1)` forces GLM first regardless of health.
-
-Reference IDs:
-- Ideas filed: #19874 (GLM decode-stall investigation), #19875 (GLM routing priority reconsideration)
-- Ticket: frankenstein-llm task completion error (root cause resolved)
-- Files touched: `/usr/local/bin/frankenstein_tools_adapter.py`, `/var/www/emtskills/api/telephony/config_api.php`, `/var/www/emtskills/docs/HANDOFF_NOTES.md`
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785296704123` — 7/28/2026, 8:45:52 PM PT — 3 turns
-
-**Original task:**
-
-```
-We had a frankenstein doctor type window working and the window just crashed.
-
-Frankenstein LLM stalled. I had mentioned not to inject anthropic llm. I told you to consult the GLM 5.2 Ideal build document on the desktop becasue it seemed liek you were about to quarantiene GLM.
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785296318095` — 7/28/2026, 8:41:36 PM PT — 24 turns
-
-**Original task:**
-
-```
-Waht caused frankenstein-llm to freeze just now? it's not responding. can you resolve it?
-
-Do not inject anthropic.
-```
-
-**Ideas referenced:** #1238, #12506, #12761, #12763, #12764, #13075, #14848, #16648, #16714, #16717, #18720, #2014
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785293198244` — 7/28/2026, 8:34:56 PM PT — 195 turns
-
-**Original task:**
-
-```
-Comprehensive session handoff per Ruben's direction. This session spanned multiple workstreams across QB payments, WOPR infrastructure, PAN vault, EA backfill, Moodle performance, and GPU diagnosis.
-
-The QB auto-void fix (#19387) has been deployed. The remaining work on that thread is querying pan_vault for payment tokens saved on risk-decline-voided charges from 7/27-7/28 and writing a password-protected CSV to the Desktop. That is filed as #19849.
-
-The WOPR reboot was executed (#19848), BAR0 is now assigned but BAR1 is still blocked by an unprogrammed bridge prefetchable window. The BIOS ask
-```
-
-**Ideas referenced:** #12004, #16613, #16621, #19387 [deployed], #19403, #19495, #19511, #19545, #19820 [proposed], #19835 [rejected], #19836 [proposed], #19837 [proposed], #19838 [proposed], #19846 [rejected], #19847 [rejected], #19848 [executed], #19849 [proposed], #19853 [queued], #19859 [proposed], #19860 [proposed], #19861 [proposed], #19862 [proposed], #19869 [executing], #2044, #2056, #3067, #3069, #3070, #3071, #3075, #3076, #3077, #3078, #3079, #3172, #3174, #3202, #3206
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

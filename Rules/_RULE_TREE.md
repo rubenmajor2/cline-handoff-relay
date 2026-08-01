@@ -88,6 +88,7 @@
 - **Staff escalation (Vicky/Jon/Ruben)** — R: 10,13,15,19,48,117
 - **CTA / link formatting** — R: 47 (full URLs, no shortcuts)
 - **Ruben's electronic signature** — R: 301 (canonical file `signature2small.jpg`, NEVER extract from another PDF)
+- **REGULATOR RESPONSES (AZDHS/TDSHS/BPPE/CAPCE/any agency)** — R: 302 (defensive posture, never volunteer admissions, never repeat their numbers, never restate the allegation, courtesy framing wording, grace-period deadline math, enclosure pattern, pre-transmission verification) + `NoiDefenseEvidence.php`
 - **CS-agent response-quality bug library** — R: 270 (consult before recycling wrong replies across Email/Chat/SMS/Ticket/Voice/To AI agents; 2-strike tripwire)
 
 ---

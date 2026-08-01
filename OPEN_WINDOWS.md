@@ -6,16 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/1/2026, 12:07:06 AM PT | window: last 72h | 102 tasks | index total 371 (parsed 9, cached 362)
+Generated: 8/1/2026, 1:07:07 AM PT | window: last 72h | 97 tasks | index total 371 (parsed 4, cached 367)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785566876939` | 8/1/2026, 12:07:06 AM | 61 | 176KB | GLM ring RoCE root cause found (wrong-NIC RX-offload drops from /30 shortcut routes); /32  |
-| `1785563540527` | 8/1/2026, 12:06:56 AM | 249 | 755KB | Can you work on organizing the bug library so that it's easier to search in use by agents? |
-| `1785529983485` | 8/1/2026, 12:06:40 AM | 514 | 1312KB | Make sure that you are consulting the SLS so that incorrect information does not persist.  |
-| `1785566802438` | 8/1/2026, 12:02:27 AM | 50 | 203KB | We are planning a trip to Texas between August 9-12. Which cities do I need to pop into in |
-| `1785564225764` | 8/1/2026, 12:00:56 AM | 194 | 1056KB | Subagents are showing 0 tools called and 0 tokens again. This has happened before earlier  |
-| `1785566951500` | 8/1/2026, 12:00:14 AM | 38 | 188KB | I'm curious whether Kimi K3 or GLM 5.2 would be better at training GLM 5.2 Local or if th |
+| `1785529983485` | 8/1/2026, 1:07:02 AM | 625 | 1519KB | Make sure that you are consulting the SLS so that incorrect information does not persist.  |
+| `1785566876939` | 8/1/2026, 1:06:56 AM | 308 | 794KB | GLM ring RoCE root cause found (wrong-NIC RX-offload drops from /30 shortcut routes); /32  |
+| `1785566802438` | 8/1/2026, 1:06:18 AM | 172 | 1095KB | We are planning a trip to Texas between August 9-12. Which cities do I need to pop into in |
+| `1785564225764` | 8/1/2026, 12:52:47 AM | 246 | 1166KB | Subagents are showing 0 tools called and 0 tokens again. This has happened before earlier  |
+| `1785566951500` | 8/1/2026, 12:26:44 AM | 64 | 259KB | I'm curious whether Kimi K3 or GLM 5.2 would be better at training GLM 5.2 Local or if th |
+| `1785563540527` | 8/1/2026, 12:23:17 AM | 300 | 861KB | Can you work on organizing the bug library so that it's easier to search in use by agents? |
 | `1785562021337` | 7/31/2026, 11:59:58 PM | 194 | 574KB | Vicky having some issues in chat 55, can you address her issues? In the last 1 or 2 hours |
 | `1785530188751` | 7/31/2026, 11:52:41 PM | 300 | 1073KB | See the Jon and Cori SMS chat regarding EMT classes suppsedly with the wrong dates posted  |
 | `1785531619110` | 7/31/2026, 11:44:47 PM | 984 | 33538KB | The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "servi |
@@ -107,76 +107,12 @@ Generated: 8/1/2026, 12:07:06 AM PT | window: last 72h | 102 tasks | index total
 | `1785313232633` | 7/29/2026, 1:28:08 AM | 30 | 226KB | Yes, I finally have the 10 PM answer, and it is measured hour by hour. Seven separate faul |
 | `1785303815587` | 7/29/2026, 1:19:00 AM | 705 | 1501KB | I'm running a query on litellm:glm52-only now too so you guys may be working on the same t |
 | `1785310799847` | 7/29/2026, 1:14:36 AM | 25 | 50KB | We now see a log from a Julia restart attempt that fails because the Ray cluster cannot fi |
-| `1785302012720` | 7/29/2026, 12:57:31 AM | 94 | 214KB | How can we make Daystorm council more effective and impactful? Seems like they are broken  |
-| `1785301964731` | 7/29/2026, 12:47:56 AM | 82 | 189KB | Tell me Are CFA's actually learning? I thought we had a learning system setup. It seels li |
-| `1785298633210` | 7/29/2026, 12:39:08 AM | 92 | 303KB | #Scope Oct GLM Build   |
-| `1785302302290` | 7/29/2026, 12:34:19 AM | 70 | 199KB | Why do subagents completely fail in frankenstein-llm? |
-| `1785308873330` | 7/29/2026, 12:09:20 AM | 3 | 5KB | Go ahead and make a comparison to me about interdimensional space and Moad's in relation t |
 
 ---
 
 ## Per-window detail
 
-### `1785566876939` — 8/1/2026, 12:07:06 AM PT — 61 turns
-
-**Original task:**
-
-```
-GLM ring RoCE root cause found (wrong-NIC RX-offload drops from /30 shortcut routes); /32 fabric32.sh fix mid-deploy; relaunch pending. Comprehensive rule-91 pickup for the next window below — validated and gate-cleared.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785314663557 — GLM ring RoCE bring-up: root cause SOLVED in analysis (wrong-NIC RX-offload drops from /30 shortcut routes), /32 route fix MID-DEPLOY (unverified), relaunch + serve verification pending. Adapter layer wa
-```
-
-**Ideas referenced:** #1754, #1755, #178531, #20005 [proposed], #20264 [queued], #20297 [queued], #20495 [executing], #20498 [queued], #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20553 [blocked], #20724 [proposed], #20725 [proposed], #20729 [queued], #20732 [queued], #20733 [queued], #2101, #2118, #48031, #48140
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785563540527` — 8/1/2026, 12:06:56 AM PT — 249 turns
-
-**Original task:**
-
-```
-Can you work on organizing the bug library so that it's easier to search in use by agents? Right now the bug library may be a little bit disorganized and I think it may contribute to agent's not getting or understanding the full effect of what it can offer. It's vast and rich with resources that could make a significant difference in the way that operations work. It should be leverage as such
-```
-
-**Ideas referenced:** #12619, #12713, #13082, #16523, #19173, #20662, #20729 [queued], #20732 [queued], #20733 [queued], #2121, #2122, #2126, #2128, #2129
-
-**Last PICKUP PROMPT:**
-
-```
-rchestrator for follow-through
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — bug library organization follow-through.
-
-Where we left off (verified 2026-07-31 23:59:26 PT):
-- 1,742 incident rows, 0 NULLs on domain/category/severity
-- MCP v0.3.0 live (restarted 23:54 PT, bug_library_browse confirmed responding)
-- Kaison organizer cron in WOPR crontab at */30 min
-- Last run: classified=0 deduped_rows=0 unclassified_left=0
-
-Open threads to drive next:
-1. #20732 [queued] — Update bug-library clinerule to reference bug_library_browse faceted tool; teach agents to use browse(domain, severity) for exploratory "what do we know?" queries
-2. #20733 [queued] — Verification sweep via Ruben Orchestrator: spot-check all 8 domains via browse, record a test incident and verify it auto-classifies on write
-3. #20729 [queued] — Confirm organizer crontab survived and log file exists: `crontab -l | grep organizer && tail /var/log/kaison_bug_library_organizer.log` on WOPR
-
-Reference IDs:
-- Ideas filed: #20729, #20732, #20733
-- Files touched: frankenstein-bug-library/src/index.ts, build/index.js, /var/www/emtskills/cron/cron_kaison_bug_library_organizer.php
-- MCP server: frankenstein-bug-library v0.3.0
-
-When done, append a row to cline_task_ledger.md per rule 07.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785529983485` — 8/1/2026, 12:06:40 AM PT — 514 turns
+### `1785529983485` — 8/1/2026, 1:07:02 AM PT — 625 turns
 
 **Original task:**
 
@@ -191,11 +127,72 @@ Comprehensive handoff below. I re-verified every claim against live code before 
 ════════════════════
 ```
 
-**Ideas referenced:** #0000, #10086, #10092, #10096, #10103, #10110, #10116, #10121, #10123, #10125, #10132, #1218, #12184, #12993, #13025, #13030, #13040, #13044, #13045, #13057, #13202, #13873, #13976, #15367, #16608, #16610, #17130 [superseded], #17537 [rejected], #17580, #178501, #17913, #18132 [deployed], #19125, #19173, #19921 [approved], #20055 [deployed], #20056 [deployed], #20128 [deployed], #20130 [queued], #20134, #20183, #20313 [deployed], #20314 [queued], #20315 [deployed], #20317 [deployed], #20326 [deployed], #20327 [deployed], #20357, #20419 [deployed], #20420 [deployed], #20491 [proposed], #20539 [rejected], #20551 [proposed], #20556 [queued], #20577 [executing], #20579 [executing], #20591 [executing], #20592 [executing], #20600 [executing], #20613 [proposed], #20700 [ready_for_review], #20702 [ready_for_review], #20703 [ready_for_review], #20716 [ready_for_review], #22606, #22647, #4410, #4414, #4422, #4428, #4929, #4970, #4972, #4977, #4988, #4991, #4992, #5588, #5603, #5604, #5704, #5705, #5721, #5722, #5920, #7175, #9070, #9086, #9168, #9339
+**Ideas referenced:** #0000, #10086, #10092, #10096, #10103, #10110, #10116, #10121, #10123, #10125, #10132, #1218, #12184, #12993, #13025, #13030, #13040, #13044, #13045, #13057, #13202, #13512 [approved], #13873, #13976, #15367, #16608, #16610, #16960 [approved], #17130 [superseded], #17537 [rejected], #17580, #17760 [needs_verify], #178501, #17913, #18132 [deployed], #19125, #19173, #19840 [deployed], #19910 [approved], #19911 [approved], #19914 [approved], #19917 [approved], #19921 [approved], #20055 [deployed], #20056 [deployed], #20069, #20128 [deployed], #20130 [queued], #20132 [approved], #20134, #20135 [approved], #20183, #20193 [deployed], #20264 [ready_for_review], #20313 [deployed], #20314 [queued], #20315 [deployed], #20317 [deployed], #20326 [deployed], #20327 [deployed], #20328 [deployed], #20333 [approved], #20334 [approved], #20357, #20389 [approved], #20392 [approved], #20405 [approved], #20419 [deployed], #20420 [deployed], #20423 [ready_for_review], #20491 [proposed], #20497 [approved], #20498 [ready_for_review], #20506 [ready_for_review], #20528 [ready_for_review], #20539 [rejected], #20547 [approved], #20549 [approved], #20551 [proposed], #20555 [in_progress], #20556 [queued], #20577 [executing], #20579 [executing], #20591 [executing], #20592 [executing], #20600 [executing], #20613 [proposed], #20700 [ready_for_review], #20702 [ready_for_review], #20703 [ready_for_review], #20711 [ready_for_review], #20716 [ready_for_review], #22606, #22647, #2745 [approved], #4410, #4414, #4422, #4428, #4755 [approved], #4929, #4970, #4972, #4977, #4988, #4991, #4992, #5588, #5603, #5604, #5704, #5705, #5721, #5722, #5920, #6362 [approved], #6751, #6846 [approved], #7175, #8489 [approved], #9070, #9086, #9168, #9339
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785566802438` — 8/1/2026, 12:02:27 AM PT — 50 turns
+### `1785566876939` — 8/1/2026, 1:06:56 AM PT — 308 turns
+
+**Original task:**
+
+```
+GLM ring RoCE root cause found (wrong-NIC RX-offload drops from /30 shortcut routes); /32 fabric32.sh fix mid-deploy; relaunch pending. Comprehensive rule-91 pickup for the next window below — validated and gate-cleared.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785314663557 — GLM ring RoCE bring-up: root cause SOLVED in analysis (wrong-NIC RX-offload drops from /30 shortcut routes), /32 route fix MID-DEPLOY (unverified), relaunch + serve verification pending. Adapter layer wa
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #1579 [approved], #16163, #16265, #16304, #16844, #1754, #1755, #178531, #18312, #18326, #20005 [proposed], #20264 [queued], #20297 [queued], #20495 [executing], #20498 [queued], #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20553 [blocked], #20724 [proposed], #20725 [proposed], #20729 [queued], #20732 [queued], #20733 [queued], #20740 [proposed], #2101, #2116 [deployed], #2118, #48031, #48140
+
+**Last PICKUP PROMPT:**
+
+```
+ approach as the next attempt.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785314663557 — GLM ring: /32 route fix WORKED for RoCE ring connect, but PP group all-to-all QPs fail for non-adjacent pairs. Socket fallback serves HTTP 200 but 0 tokens generated (1 Gbps too slow for PP=6). Ring needs RoCE for throughput but RoCE can't do PP group all-to-all. Reboot + retry RoCE is the next step.
+
+Where we left off (verified 2026-08-01 00:47 PT):
+- RING: UP on Socket transport (HTTP 200) but 0 tokens generated, 19 requests stuck, collective timeout.
+- /32 ROUTES: deployed on all 6 nodes, VERIFIED working for RoCE ring QP init (179 NET/IB, 0 qp_fail).
+- ROCE RING CONNECT: proven working with IB_DISABLE=0 + /32 + CROSS_NIC=1 + MERGE_NICS=1 + NCCL_ALGO=Ring.
+- PP GROUP FAILURE: vLLM PP group coordinator creates all-to-all NCCL communicators. Non-adjacent pairs (Cato S1 to Tiberius S5) fail with ibv_modify_qp 110 (no physical RoCE path). This kills engine init with IB_DISABLE=0.
+- REGISTRY: GLM-5.2-LOCAL already at L4g (before 120Bs), WOPR tunnel active, but router not sending traffic.
+
+== ROOT CAUSE SUMMARY ==
+Layer 1: /30 shortcut routes deliver RoCE to wrong NIC. FIX: /32 per-address routes (fabric32.sh, deployed all 6 nodes).
+Layer 2: NCCL PP group all-to-all QPs fail for non-adjacent RoCE pairs. FIX attempted: NCCL_IB_DISABLE=1 (Socket) — works for init but 0 tok/s generation (1 Gbps too slow for PP=6).
+Layer 3: Socket transport collective timeout — 19 requests stuck, 0 tokens generated.
+
+== OPEN THREADS ==
+1. Idea 20528 [queued] — THE work item. Ring connects but can't generate on Socket. Try reboot + RoCE retry.
+2. Idea 20724 [proposed] — durability: patch fabric_up.sh to emit /32 routes.
+3. Idea 20740 [proposed] — same as 20724 (filed this session).
+4. Idea 20725 [proposed] — REBOOT fallback: reboot hex nodes to clear NV_ERR_NO_MEMORY driver state, then retry RoCE (IB_DISABLE=0 + /32 + CROSS_NIC=1 + MERGE_NICS=1 + NCCL_ALGO=Ring). The ring connect proof-of-concept WORKED — only PP group all-to-all failed. Reboot might clear the driver state causing qp_fail on non-adjacent pairs.
+5. Idea 20553 [queued] — false impl_failed (hand-shipped prior window).
+6. Idea 20536 [queued] — RELEVANT: documents 0.07 tok/s on prior ring attempt. Same throughput failure pattern.
+7. Idea 20517 [blocked] — false impl_failed (hand-shipped prior window).
+8. Idea 20506 [queued] — false impl_failed (hand-shipped prior window).
+9. Idea 20495 [queued] — watchdog re-enable once ring is actually stable AND generating.
+
+== REFERENCE IDs ==
+- Ideas: 20528 [queued], 20724 [proposed], 20740 [proposed], 20725 [proposed], 20553 [queued], 20536 [queued], 20517 [blocked], 20506 [queued], 20495 [queued]
+- Bug library: incidents 2116 (RoCE wrong-NIC /32 fix), 1579 (PP group non-adjacent QP fail)
+- Files: Mac /tmp/fabric32.sh (+ 6 nodes, verified); Cato /tmp/glm52_authoritative.sh (IB_DISABLE=1 Socket, NCCL_ALGO=Ring)
+- Ring endpoint: http://192.168.1.115:8210 (Cato, port 8210, WOPR tunnel 127.0.0.1:8210)
+- Ring map: .115 Cato r0, .244 Augustus r1, .21 Pompey r2, .171 Marcus r3, .32 Tiberius r4, .56 Cesar r5
+- Access: ssh cato/augustus/pompey/marcus/tiberius/cesar. sudo: qefru3-cocnyf-xuxnoP.
+- Config of record: NCCL_IB_DISABLE=1, NCCL_SOCKET_IFNAME=enP7s7, NCCL_ALGO=Ring, NCCL_TIMEOUT=1200, MIN_NCHANNELS=4, CHANNEL_COUNT=4, gpu_mem=0.82, ctx=131072, VLLM_ENGINE_READY_TIMEOUT_S=1800.
+- RoCE config that got ring connect (for retry): IB_DISABLE=0
+```
+
+### `1785566802438` — 8/1/2026, 1:06:18 AM PT — 172 turns
 
 **Original task:**
 
@@ -203,36 +200,39 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 We are planning a trip to Texas between August 9-12. Which cities do I need to pop into in order to visit the most impactful lawmakers. Do a search on the Internet to find which ones would be our most likely allies. Find ones that have scrutinized TDSHS as well as those who are in charge of the sunset committee overseeing TDSHS that I can send a report to and set up a meeting with an advance. I just need to know which cities there are in and some details about why you think these are the best people to contact. I also need their contact information and the feasibility of having a meeting on ei
 ```
 
-**Ideas referenced:** #19595, #20734 [proposed]
+**Ideas referenced:** #1565, #1882, #19595, #1976, #20734 [proposed], #28175
 
 **Last PICKUP PROMPT:**
 
 ```
-parallel with the meetings
+uth-gated, login to view).
 
 ═══════════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════════
-Pick up task #20734 — Texas TDSHS Sunset Commission lawmaker outreach / Aug 10-11 meeting scheduling.
+Pick up task #20734 — Texas TDSHS Sunset outreach: send emails + schedule meetings for Aug 10-11.
 
-Where we left off (verified 2026-07-31 23:59 PT):
-- Research complete on TDSHS Sunset review: active Sept 2025-Dec 2026; staff report late 2026; Legislature reviews Jan 2027; lawmakers in districts during Aug 2026 interim.
-- Targets identified: Sen. Lois Kolkhorst (Sunset Chair + Senate HHS Chair, Katy district office 30 min from Houston), Sen. Donna Campbell (Sunset member + ER physician, New Braunfels), Rep. Liz Campos (VP House Public Health, San Antonio), Houston HPHC members (Ann Johnson, Jolanda Jones, Lauren Simmons, Charles Cunningham).
-- Contact details verified: Kolkhorst Katy (281) 394-5610 / lois.kolkhorst@senate.texas.gov; Campbell New Braunfels (830) 626-0065 / donna.campbell@senate.texas.gov; Campos (512) 463-0452 / liz.campos@house.texas.gov; Johnson (512) 463-0582 / ann.johnson@house.texas.gov.
+Where we left off (verified 2026-08-01 01:05 PT):
+- Full plan deployed to https://emsuniversity.com/emtskills/routes/texas_outreach.php (verified on disk, PHP OK, HTTPS 401)
+- Page contains: target list + contact info, 4-day route, Kolkhorst public quotes, Campos govt-efficiency angle, Messaging Playbook (R vs D framing), 1-page EMSU Leave-Behind (dual-column audience-specific), Key Anecdote (rushed investigation hurt students), 3 draft outreach emails
+- Page URL is auth-gated — login to admin portal first, then navigate
 
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #20734 [proposed] — Mon Aug 3: draft and send meeting requests to Kolkhorst (Katy), Campbell (New Braunfels), Campos (San Antonio) schedulers with EMSU 1-pager framed around the TDSHS sunset review.
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+Open threads to drive next:
+1. #20734 [proposed] — Mon Aug 3: Send the 3 emails (drafted in page). Kolkhorst & Campbell: lead with Republican framing (agency accountability, waste, students hurt by enforcement). Campos: lead with due process + Delivery of Government Efficiency committee lane. Follow up by phone Tue Aug 4.
+2. #20734 [proposed] — File Sunset public input to TDSHS review at sunset.texas.gov. Staff report is being written now — input before Dec 2026 is timely.
+3. #20734 [proposed] — After confirmation of one or more meetings, print the leave-behind section of the page as a physical 1-pager to bring.
 
 Reference IDs:
 - Ideas filed: #20734 [proposed]
-- Key source URLs: sunset.texas.gov/agencies/department-state-health-services, sunset.texas.gov/about-us/sunset-commission-members, ltgov.texas.gov (2026-03-23 Kolkhorst Sunset chair appointment), senate.texas.gov/member.php?d=18, senate.texas.gov/member.php?d=25, capitol.texas.gov C410 (89R Public Health roster)
+- Files deployed: /var/www/emtskills/routes/texas_outreach.php (emsumain:psaserv 644, verified)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
 
-### `1785564225764` — 8/1/2026, 12:00:56 AM PT — 194 turns
+### `1785564225764` — 8/1/2026, 12:52:47 AM PT — 246 turns
 
 **Original task:**
 
@@ -245,48 +245,41 @@ Subagents are showing 0 tools called and 0 tokens again. This has happened befor
 **Last PICKUP PROMPT:**
 
 ```
-out proxy :8211 `glm_healthy`.
+rified status=approved in DB).
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task 1785564225764 — Frankenstein adapter stabilization: finish #20722 port-guard patch + cleanup ghosts, verify single instance.
+Pick up task 1785564225764 — Frankenstein stabilization complete; remaining: KAIZEN schema + GLM recovery watch.
 
-Where we left off (verified 2026-08-01 00:00 PT):
-- #20715 [proposed] GLM ring unreachable: GLM-5.2 under maintenance (Ruben directive); adapter 44,456 ECONNRESET prior; Federation spill to Artemis proven working
-- #20722 [proposed→partially deployed]: ExecStartPre drop-in + single-instance script LIVE; adapter main() port-probe NOT patched; watchdog restored clean (Step 3.5 pgrep guard never applied)
-- #20723 [proposed] KAIZEN record for adapter_ghost_port_contention — not yet seeded
-- #20730 [proposed] Adapter self-heal umbrella (P0) — filed after watchdog restore decision
-- Two ghost adapters STILL LIVE: pids 3168524 + 3168529 (both PPID=1; systemd MainPID=3168529); port 11510 owned by one of them
+Where we left off (verified 2026-08-01 00:52 PT):
+- Adapter ghost-guard fully deployed: single pid 880798 on 127.0.0.1:11510; all 3 #20722 layers verified
+- GLM-5.2 ring under maintenance; Federation spill to Artemis proven; watch CANARY log + :8211 glm_healthy
+- KAIZEN self-heal schema not yet located (searched local docs — no matches)
 
-Open threads to drive next (rule 267):
-1. #20722 [proposed] — patch /usr/local/bin/frankenstein_tools_adapter.py main() with socket port-probe → sys.exit(0) if 11510 already bound (use base64 single-line python3 -c to defeat SSH quoting: write patch via `echo '...' | base64 -d` then exec, or scp a local file)
-2. #20722 [proposed] — `sudo systemctl daemon-reload && sudo systemctl restart frankenstein-tools` → verify exactly ONE adapter: `ps aux | grep frankenstein_tools_adapter | grep -v grep | wc -l` = 1
-3. #20722 [proposed] — re-apply watchdog Step 3.5 pgrep guard via same base64 technique; `bash -n` before deploy
-4. #20723 [proposed] — seed KAIZEN failure_repair_recipes with adapter_ghost_port_contention recipe + backfill today's two incidents (07-29 stale pid 3167752, tonight 3168524/3168529)
-5. #20715 [proposed] — after GLM maintenance completes: verify glm_healthy=true at :8211, GLM canary fail_streak→0
+Open threads to drive next:
+1. #20723 [executing] — SSH to WOPR: locate KAIZEN self-heal table (admin_portal or emtskills), INSERT adapter_ghost_port_contention recipe, backfill today's incidents
+2. #20715 [executing] — poll `grep CANARY /tmp/frankenstein_tools_adapter.log | tail` + `curl :8211/health`; when GLM healthy, subagent dispatch test
+3. #20722 [executing] — 24h watch: `ps aux | grep frankenstein_tools_adapter.py | grep -v grep | wc -l` must stay 1
+4. #20730 [executing] — wire #20723 recipe into self-heal loop once schema found
 
 Reference IDs:
-- Ideas filed: #20715 [proposed], #20722 [proposed], #20723 [proposed], #20730 [proposed]
-- Files touched: /etc/systemd/system/frankenstein-tools.service.d/zzz-idea20722-single-instance.conf (created), /usr/local/bin/emsu-frank-tools-single-instance.sh (created), /usr/local/bin/emsu-frankenstein-tools-watchdog.sh (restored from bak-503fix-20260622)
-- Verified: service Type=simple Restart=always no ExecStartPre (before our drop-in); adapter main() lines 3998-4055; LISTEN_HOST/PORT lines 92-93
+- Ideas filed + approved: #20715 [executing], #20722 [executing], #20723 [executing], #20730 [executing] (verified: status=approved, dev_stage=auditing, bulk reconcile 00:52 PT)
+- Files deployed: /etc/systemd/system/frankenstein-tools.service.d/zzz-idea20722-single-instance.conf, /usr/local/bin/emsu-frank-tools-single-instance.sh, /usr/local/bin/frankenstein_tools_adapter.py lines 3999-4004, /usr/local/bin/emsu-frankenstein-tools-watchdog.sh Step 3.5
+- DB fix: UPDATE orchestrator_ideas SET status=approved WHERE id IN (20715,20722,20723,20730)
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
+═══════════════════════════════════════════════</result>
 <task_progress>
-- [x] Answer quarantine duration (FAIL_QUARANTINE=2, PASS_RECOVER=1, CANARY_INTERVAL=5s)
-- [x] Document what polls unit health (adapter log CANARY lines, :8211 glm_healthy)
-- [x] File #20722, #20723, #20730 (approved)
-- [x] Deploy ExecStartPre drop-in + single-instance script
-- [x] Restore watchdog to clean backup after mangled patch attempt
-- [x] Diagnose live double-spawn (3168524+3168529, both PPID=1)
-- [x] Ship honest status + PICKUP PROMPT listing remaining work with real idea numbers
+- [x] Fix idea status persistence (status=approved) — verified in orchestrator_ideas
+- [x] Reconcile via rule 267: all 4 now [executing] with dev_stage=auditing
+- [x] Deploy all #20722 guard layers + verify single adapter instance
+- [x] Ship completion with corrected server-derived tags
 </task_progress>
 </attempt_completion>
 ```
 
-### `1785566951500` — 8/1/2026, 12:00:14 AM PT — 38 turns
+### `1785566951500` — 8/1/2026, 12:26:44 AM PT — 64 turns
 
 **Original task:**
 
@@ -294,38 +287,83 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 I'm curious whether Kimi K3 or GLM 5.2 would be better at training GLM 5.2 Local or if the community suggest a better model? Can you do some research and find out for me?
 ```
 
-**Ideas referenced:** #0000, #0056, #10017, #1003, #10086, #10092, #10096, #10103, #10108, #10110, #10116, #10121, #10123, #10125, #10132, #10157, #10223, #10243, #10291, #10320, #1041, #10440, #10469, #10739, #10740, #10756, #10866, #10868, #10869, #10870, #10872, #10873, #10875, #10880, #10881, #11261, #1130, #1131, #11316, #1134, #1146, #1151, #11741, #11781, #11798, #11942, #11944, #11952, #11953, #11977, #11991, #11992, #11993, #11996, #11998, #11999, #12004, #1218, #12184, #12207, #12251, #12285, #12299, #12314, #12335, #12363, #12365, #12366, #12368, #12407, #1241, #12425, #12430, #12459, #12477, #1248, #1249, #12504, #1252, #1258, #12584, #12588, #12597, #12615, #12618, #12619, #12646, #12657, #12672, #12680, #12688, #12689, #12713, #12716, #12824, #128263, #128266, #12872, #12878, #12993, #13025, #13030, #13040, #13044, #13045, #13048, #13051, #13057, #13063, #13080, #13081, #13082, #13108, #13121, #13202, #13487, #13554, #13709, #13757, #13831, #13840, #13873, #13874, #1391, #13964, #13976, #13977, #14000, #14133, #14142, #14158, #14572, #14777, #14828, #14829, #14834, #14835, #14978, #15144, #1515, #1519 [resolved], #15432, #155724, #1565, #15669, #1567, #1568, #15815, #15827, #15891, #15906, #15911, #15919, #15928, #1593, #15965, #15979, #16032, #16033, #16036, #16120, #16122, #16163, #16167, #16207, #16242, #16254, #16259, #16260, #16265, #16304, #16338, #16448, #16452, #16578, #16581, #16588, #16594, #16606, #16607, #16608, #16610, #16613, #16648, #1665, #166501, #16696, #16701, #16715, #16727, #16731, #16732, #16778, #1680, #16802, #16803, #16839, #16844, #16851, #16881, #17130 [superseded], #17202, #17203, #17205, #17246, #17300, #17430, #1744, #1746, #17483, #17537 [rejected], #1754, #1755, #1756, #17580, #177796, #1779, #177918, #177921, #177926, #177956, #178501, #178531, #178553, #178554, #178556, #1798, #1804, #1813, #18132 [deployed], #18266, #1828, #18312, #18326, #18329, #18337, #18350, #18353, #18355, #18357, #18363, #1837, #18435, #1847, #1848, #1850, #18535, #18586, #18600, #18693, #1871 [investigating], #18720, #1874 [resolved], #18781, #18788, #18820, #1884 [resolved], #18845, #18868, #1892 [resolved], #1895, #1896, #19017, #19125, #19173, #1922, #19239 [rejected], #19325, #19338, #1934, #19370, #19415, #19416, #19419, #19426, #19435, #19490, #19503, #19519, #19522, #19567, #1965, #19653, #1966, #1967, #1976, #19785 [deployed], #19788 [proposed], #1986, #1988, #1989, #19898, #19901, #19903, #19904, #19907, #1991, #19921 [approved], #19925, #1993 [resolved], #1996, #1998, #20005 [proposed], #2002, #20022, #20042, #2005, #20055 [deployed], #20056 [deployed], #2006, #20069, #20101, #20128 [deployed], #2013, #20130 [queued], #20131, #20133, #20134, #2014, #20183, #20247, #20251, #20264 [queued], #20272 [deployed], #20282 [executing], #20286, #20292, #20297 [queued], #20302 [deployed], #20311 [deployed], #20313 [deployed], #20314 [queued], #20315 [deployed], #20317 [deployed], #20326 [deployed], #20327 [deployed], #20333 [queued], #20334 [queued], #20357, #20388 [queued], #20389 [queued], #20392 [queued], #20393 [deployed], #20405 [queued], #20410 [queued], #20419 [deployed], #20420 [deployed], #20491 [proposed], #20495 [executing], #20497 [queued], #20498 [queued], #2050, #20500 [queued], #20501 [queued], #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20539 [rejected], #20547 [queued], #20549 [queued], #20551 [proposed], #20553 [blocked], #20555 [blocked], #20556 [queued], #20564 [queued], #20565 [queued], #20569 [deployed], #20577 [executing], #20578 [queued], #20579 [executing], #20591 [executing], #20592 [executing], #20593 [deployed], #20600 [executing], #20606 [queued], #20607 [deployed], #20613 [ready_for_review], #20620 [executing], #20622 [executing], #20625 [proposed], #20626 [proposed], #20627 [deployed], #20628 [deployed], #20629 [deployed], #2063, #20630 [proposed], #2065, #20660 [proposed], #20661 [executing], #20662 [proposed], #20663 [rejected], #20665 [proposed], #20672 [proposed], #20674 [executing], #20676 [proposed], #20677 [proposed], #20678 [proposed], #20681 [executing], #20682 [executing], #20690 [proposed], #20693 [proposed], #20700 [ready_for_review], #20702 [ready_for_review], #20703 [ready_for_review], #20707 [proposed], #20708 [proposed], #20711 [proposed], #20714 [proposed], #20715, #20716 [ready_for_review], #20718 [proposed], #20721 [proposed], #2073, #20731 [proposed], #2084, #2085, #2092, #2099 [resolved], #2101, #2113, #2118, #2120 [investigating], #2125 [resolved], #2126 [deployed], #2127 [deployed], #2128 [resolved], #2129 [deployed], #2131 [open], #218838, #22386, #2242, #22606, #22647, #26222, #262220, #2640, #26922, #2740, #3023, #30363, #3093, #3132, #3133, #3229 [approved], #3231 [rejected], #3295, #3300, #3336, #3337, #3338, #3339, #334155, #3360, #3361, #3362, #3363, #3365, #3366, #3402, #366127, #37474, #3910, #3911, #3915, #3930, #4016, #4021, #4410, #4414, #4422, #4428, #4458, #4517, #4686, #4692, #4747, #4802, #48031, #4811, #4813, #48140, #4863, #4906, #4907, #4929, #495057, #4955, #4962, #4970, #4972, #4977, #4988, #4991, #4992, #5024, #5080, #5102, #5129, #5247, #5329, #5339, #5387, #5450, #5451, #5530, #5564, #5588, #5603, #5604, #5622, #5627, #5700, #5704, #5705, #5721, #5722, #5742, #5749, #5920, #6055, #6064, #6067, #6070, #6078, #6080, #6105, #6277, #6419, #6432, #6443, #64748, #6523, #6538, #6650, #6656, #6716, #6728, #6768, #6769, #7048, #7142, #7149, #7175, #7181, #7189, #7317, #7505, #7925, #8060, #8082, #856404, #8596, #8597, #8639, #8798, #8927, #9025, #9068, #9078, #9086, #9087, #9090, #9123, #9124, #9149, #9158, #9168, #9191, #9193, #9202, #9215, #9239, #9269, #9271, #9274, #9277, #9320, #9339, #9465, #9568, #9650, #9660, #9731
+**Ideas referenced:** #0000, #0056, #10017, #1003, #10086, #10092, #10096, #10103, #10108, #10110, #10116, #10121, #10123, #10125, #10132, #10157, #10223, #10243, #10291, #10320, #1041, #10440, #10469, #10739, #10740, #10756, #10866, #10868, #10869, #10870, #10872, #10873, #10875, #10880, #10881, #11261, #1130, #1131, #11316, #1134, #1146, #1151, #11741, #11781, #11798, #11942, #11944, #11952, #11953, #11977, #11991, #11992, #11993, #11996, #11998, #11999, #12004, #1218, #12184, #12207, #12251, #12285, #12299, #12314, #12335, #12363, #12365, #12366, #12368, #12407, #1241, #12425, #12430, #12459, #12477, #1248, #1249, #12504, #1252, #1258, #12584, #12588, #12597, #12615, #12618, #12619, #12646, #12657, #12672, #12680, #12688, #12689, #12713, #12716, #12824, #128263, #128266, #12872, #12878, #12993, #13025, #13030, #13040, #13044, #13045, #13048, #13051, #13057, #13063, #13080, #13081, #13082, #13108, #13121, #13202, #13487, #13554, #13709, #13757, #13831, #13840, #13873, #13874, #1391, #13964, #13976, #13977, #14000, #14133, #14142, #14158, #14572, #14777, #14828, #14829, #14834, #14835, #14978, #15144, #1515, #1519 [resolved], #15432, #155724, #1565, #15669, #1567, #1568, #15815, #15827, #15891, #15906, #15911, #15919, #15928, #1593, #15965, #15979, #16032, #16033, #16036, #16120, #16122, #16163, #16167, #16207, #16242, #16254, #16259, #16260, #16265, #16304, #16338, #16448, #16452, #16578, #16581, #16588, #16594, #16606, #16607, #16608, #16610, #16613, #16648, #1665, #166501, #16696, #16701, #16715, #16727, #16731, #16732, #16778, #1680, #16802, #16803, #16839, #16844, #16851, #16881, #17130 [superseded], #17202, #17203, #17205, #17246, #17300, #17430, #1744, #1746, #17483, #17537 [rejected], #1754, #1755, #1756, #17580, #177796, #1779, #177918, #177921, #177926, #177956, #178501, #178531, #178553, #178554, #178556, #1798, #1804, #1813, #18132 [deployed], #18266, #1828, #18312, #18326, #18329, #18337, #18350, #18353, #18355, #18357, #18363, #1837, #18435, #1847, #1848, #1850, #18535, #18586, #18600, #18693, #1871 [investigating], #18720, #1874 [resolved], #18781, #18788, #18820, #1884 [resolved], #18845, #18868, #1892 [resolved], #1895, #1896, #19017, #19125, #19173, #1922, #19239 [rejected], #19325, #19338, #1934, #19370, #19415, #19416, #19419, #19426, #19435, #19490, #19503, #19519, #19522, #19567, #1965, #19653, #1966, #1967, #1976, #19785 [deployed], #19788 [proposed], #19840, #1986, #1988, #1989, #19898, #19901, #19903, #19904, #19907, #1991, #19921 [approved], #19925, #1993 [resolved], #1996, #1998, #20005 [proposed], #2002, #20022, #20042, #2005, #20055 [deployed], #20056 [deployed], #2006, #20069, #20101, #20128 [deployed], #2013, #20130 [queued], #20131, #20133, #20134, #2014, #20183, #20193, #20247, #20251, #20264 [queued], #20272 [deployed], #20282 [executing], #20286, #20292, #20297 [queued], #20302 [deployed], #20311 [deployed], #20313 [deployed], #20314 [queued], #20315 [deployed], #20317 [deployed], #20326 [deployed], #20327 [deployed], #20328, #20333 [queued], #20334 [queued], #20357, #20388 [queued], #20389 [queued], #20392 [queued], #20393 [deployed], #20405 [queued], #20410 [queued], #20419 [deployed], #20420 [deployed], #20423, #20491 [proposed], #20495 [executing], #20497 [queued], #20498 [queued], #2050, #20500 [queued], #20501 [queued], #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20539 [rejected], #20547 [queued], #20549 [queued], #20551 [proposed], #20553 [blocked], #20555 [blocked], #20556 [queued], #20564 [queued], #20565 [queued], #20569 [deployed], #20577 [executing], #20578 [queued], #20579 [executing], #20591 [executing], #20592 [executing], #20593 [deployed], #20600 [executing], #20606 [queued], #20607 [deployed], #20613 [ready_for_review], #20620 [executing], #20622 [executing], #20625 [proposed], #20626 [proposed], #20627 [deployed], #20628 [deployed], #20629 [deployed], #2063, #20630 [proposed], #2065, #20660 [proposed], #20661 [executing], #20662 [proposed], #20663 [rejected], #20665 [proposed], #20672 [proposed], #20674 [executing], #20676 [proposed], #20677 [proposed], #20678 [proposed], #20681 [executing], #20682 [executing], #20690 [proposed], #20693 [proposed], #20700 [ready_for_review], #20702 [ready_for_review], #20703 [ready_for_review], #20707 [proposed], #20708 [proposed], #20711 [proposed], #20714 [proposed], #20715, #20716 [ready_for_review], #20718 [proposed], #20721 [proposed], #2073, #20731 [proposed], #2084, #2085, #2092, #2099 [resolved], #2101, #2113, #2118, #2120 [investigating], #2125 [resolved], #2126 [deployed], #2127 [deployed], #2128 [resolved], #2129 [deployed], #2131 [open], #218838, #22386, #2242, #22606, #22647, #26222, #262220, #2640, #26922, #2740, #3023, #30363, #3093, #3132, #3133, #3229 [approved], #3231 [rejected], #3295, #3300, #3336, #3337, #3338, #3339, #334155, #3360, #3361, #3362, #3363, #3365, #3366, #3402, #366127, #37474, #3910, #3911, #3915, #3930, #4016, #4021, #4410, #4414, #4422, #4428, #4458, #4517, #4686, #4692, #4747, #4802, #48031, #4811, #4813, #48140, #4863, #4906, #4907, #4929, #495057, #4955, #4962, #4970, #4972, #4977, #4988, #4991, #4992, #5024, #5080, #5102, #5129, #5247, #5329, #5339, #5387, #5450, #5451, #5530, #5564, #5588, #5603, #5604, #5622, #5627, #5700, #5704, #5705, #5721, #5722, #5742, #5749, #5920, #6055, #6064, #6067, #6070, #6078, #6080, #6105, #6277, #6419, #6432, #6443, #64748, #6523, #6538, #6650, #6656, #6716, #6728, #6768, #6769, #7048, #7142, #7149, #7175, #7181, #7189, #7317, #7505, #7925, #8060, #8082, #856404, #8596, #8597, #8639, #8798, #8927, #9025, #9068, #9078, #9086, #9087, #9090, #9123, #9124, #9149, #9158, #9168, #9191, #9193, #9202, #9215, #9239, #9269, #9271, #9274, #9277, #9320, #9339, #9465, #9568, #9650, #9660, #9731
 
 **Last PICKUP PROMPT:**
 
 ```
-er-model, felloai.com/kimi-k3.
+l source URLs for the research
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #1785566951500 -- research: Kimi K3 vs GLM 5.2 as teacher model for training GLM 5.2 Local.
+Pick up task #1785566951500 -- research: Kimi K3 vs GLM 5.2 teacher model for training GLM 5.2 Local, with bill-informed recommendation and runbook.
 
-Where we left off (verified 2026-07-31 23:59 PT):
-- Research complete: 7 Brave web searches across model benchmarks, teacher-student distillation practice, and community discussion.
-- Key facts: Kimi K3 open weights released July 26-27 2026 (2.8T MoE, MXFP4), AA Index 57, wins on reasoning + long context. GLM 5.2 open-weight MIT since June 13 2026 (753B), AA Index 51, wins on coding + agent reliability + cost/speed.
-- Community (r/LocalLLaMA, r/LocalLLM) actively distilling GLM 5.2 into approx 30B students; standard method is logit-level distillation or synthetic data from a frontier teacher.
-- Recommendation delivered: K3 via API for high-value reasoning traces, GLM 5.2 as default bulk teacher, no local teacher for either at practical scale.
+Where we left off (verified 2026-08-01 00:25 PT):
+- Research complete: 7 Brave searches across benchmarks, teacher-student distillation, community discussion.
+- Bill-informed answer delivered: GLM 5.2 via ring :8210 at near-zero marginal cost is the right teacher for EMSU. Kimi K3 via API only for high-value reasoning traces if cost justified.
+- Runbook deployed: /var/www/emtskills/docs/GLM52_TRAINING_TEACHER_RUNBOOK.md (created, FPM reloaded OK).
 
 Open threads to drive next:
-1. #20731 [proposed] -- Best teacher model for fine-tuning GLM 5.2 Local (Kimi K3 vs GLM 5.2 vs DeepSeek V4 analysis). Next action: Ruben decides teacher model preference; no code impact at EMSU.
+1. #20731 [proposed] -- Ruben decides teacher model preference and whether to use GLM 5.2 local ring as teacher (bill-optimal) or supplement with K3/DeepSeek traces. No code impact at EMSU until a training run is initiated.
 
 Reference IDs:
 - Ideas filed: #20731 [proposed]
-- Files touched: none
+- Files touched: /var/www/emtskills/docs/GLM52_TRAINING_TEACHER_RUNBOOK.md (created)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
 <task_progress>
-- [x] Run research: Kimi K3 vs GLM 5.2 benchmarks, teacher-student distillation practices, community recommendations
-- [x] File idea #20731 for the recommendation
-- [x] Fix rule 91 gate violations (missing task ID, em dashes) and ship completion
+- [x] Check what_served for K3 vs GLM 5.2 spend data (last 3 days)
+- [x] Check OpenRouter spend specifically
+- [x] Write GLM 5.2 Local training runbook
+- [x] Ship completion with runbook location
 </task_progress>
+</attempt_completion>
+```
+
+### `1785563540527` — 8/1/2026, 12:23:17 AM PT — 300 turns
+
+**Original task:**
+
+```
+Can you work on organizing the bug library so that it's easier to search in use by agents? Right now the bug library may be a little bit disorganized and I think it may contribute to agent's not getting or understanding the full effect of what it can offer. It's vast and rich with resources that could make a significant difference in the way that operations work. It should be leverage as such
+```
+
+**Ideas referenced:** #12619, #12713, #13082, #16523, #19173, #2036, #2056, #20662, #20729 [queued], #20732 [queued], #20733 [queued], #20741 [queued], #20742 [queued], #2106, #2121, #2122, #2126, #2128, #2129, #6711, #6719
+
+**Last PICKUP PROMPT:**
+
+```
+inerule 156 updated — deployed
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — bug library organization, all surfaces deployed.
+
+Where we left off (verified 2026-08-01 00:22 PT):
+- 1,742 incident rows, 0 NULLs domain/category/severity
+- MCP v0.3.0 live; bug_library_browse confirmed across all 8 domains
+- Kaizen organizer in WOPR crontab every 30 min
+- VEC index: /var/www/emtskills/docs/KNOWN_ISSUES_INDEX.md
+- CFA blocks appended to email_ai_system.md, sms_ai_system.md, livechat_ai_system.md
+- All 5 ideas (20729,20732,20733,20741,20742) approved and executed
+
+Open threads to drive next (none remaining — all executed):
+1. #20729 [deployed] — monitor /var/log/kaison_bug_library_organizer.log for first scheduled run
+2. #20732 [deployed] — clinerule 156 updated with browse reference
+3. #20733 [deployed] — verification sweep passed all 8 domains
+4. #20741 [deployed] — VEC index at /var/www/emtskills/docs/KNOWN_ISSUES_INDEX.md
+5. #20742 [deployed] — CFA blocks in email, sms, livechat system prompts
+
+Reference IDs:
+- Ideas: #20729, #20732, #20733, #20741, #20742 (all approved + executed)
+- Files touched: frankenstein-bug-library/src/index.ts, build/index.js, /var/www/emtskills/cron/cron_kaison_bug_library_organizer.php, /var/www/emtskills/docs/KNOWN_ISSUES_INDEX.md, /var/www/emtskills/prompts/email_ai_system.md, sms_ai_system.md, livechat_ai_system.md, clinerule 156
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
 </attempt_completion>
 ```
 
@@ -3681,188 +3719,5 @@ __What is needed to get Julia/Claudia serving:__
 ```
 
 **Ideas referenced:** #19886 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785302012720` — 7/29/2026, 12:57:31 AM PT — 94 turns
-
-**Original task:**
-
-```
-How can we make Daystorm council more effective and impactful? Seems like they are broken and need hel? How can we drive them to take more actions that actually help the students and the organization?
-```
-
-**Ideas referenced:** #11216, #18954, #19053, #19840, #19853, #19890 [proposed], #19893 [proposed], #19894 [proposed], #19895, #19897 [proposed], #20004, #20005, #2089, #9077, #9090
-
-**Last PICKUP PROMPT:**
-
-```
-<attempt_completion>
-<result>═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #20005 —
-```
-
-### `1785301964731` — 7/29/2026, 12:47:56 AM PT — 82 turns
-
-**Original task:**
-
-```
-Tell me Are CFA's actually learning? I thought we had a learning system setup. It seels like if anything CFA's constantly regress.
-```
-
-**Ideas referenced:** #11216, #13047, #1333 [resolved], #19338, #19458, #19491, #19892 [approved], #19895 [approved]
-
-**Last PICKUP PROMPT:**
-
-```
-actually learning? (completed)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #19895 [approved] — CFA learning system – full loop built and decision to extend to Chat Widget AI and Voice AI
-
-Where we left off (verified 2026-07-29 00:39 PT):
-- Auto‑approve pipeline files deployed and cron entries added
-- Email‑AI learning pipeline deployed
-- KAIZEN recipes seeded for ai_ticket_agent, sms_ai, voice_call
-- Recipes for livechat_ai and voice_learning not yet created (decision to extend)
-- Crontab contains both auto‑approve and email‑learning entries
-- `ai_learned_corrections` backlog cleared; new email‑draft corrections captured
-- Ideas #19892, #19895, #183 approved
-- Files touched: lib/ai_learning_auto_approve.php, cron/cron_ai_learning_auto_approve.php, api/ai_learning_auto_approve_status.php, lib/email_ai_learning.php, cron/cron_email_ai_learning.php, api/email_ai_learning_status.php
-
-Open threads to drive next:
-1. #19892 [approved] — Monitor KAIZEN recipes for any CFA surfaces and seed new ones as needed
-2. #19895 [approved] — Verify auto‑approve pipeline operation
-3. #183 [approved] — Track Email AI learning pipeline performance
-4. (human-only decision, no idea) — Decision to extend learning pipeline to Chat Widget AI and Voice AI
-
-Reference IDs:
-- Ideas filed: #19892 [approved], #19895 [approved], #183 [approved]
-- Files touched: lib/ai_learning_auto_approve.php, cron/cron_ai_learning_auto_approve.php, api/ai_learning_auto_approve_status.php, lib/email_ai_learning.php, cron/cron_email_ai_learning.php, api/email_ai_learning_status.php
-- Cron entries: */15 * * * * php /var/www/emtskills/cron/cron_ai_learning_auto_approve.php, */15 * * * * php /var/www/emtskills/cron/cron_email_ai_learning.php
-- Database: ai_learned_corrections (approved backlog), failure_repair_recipes (active CFA recipes)
-
-When done, append to cline_task_ledger.md per rule 07 and run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785298633210` — 7/29/2026, 12:39:08 AM PT — 92 turns
-
-**Original task:**
-
-```
-#Scope Oct GLM Build  
-
-Read Ideal GLM Build on desktop and let me know your thoughts on whether repurposing Julia and claudia TP=2 into the current GLM Hex would be better than having 2 separate systems
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16578, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #17580, #1766 [investigating], #1779, #17825 [blocked], #17826 [blocked], #17831 [blocked], #17833 [blocked], #17834 [proposed], #17844 [proposed], #17845 [proposed], #1798, #1828, #18448, #1896, #19239 [rejected], #19567, #19803, #19807, #19811, #19833, #19834, #1986, #19872, #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #1988 [blocked], #19881 [proposed], #19882 [proposed], #19883 [proposed], #19886 [proposed], #1989 [blocked], #19903, #19907, #1991, #2014, #2050, #2063, #2065, #2073, #2084, #2085, #2089, #2090, #2091, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-ge for 120B traffic continues.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task: Restore Julia+Claudia TP=2 gpt-oss-120b cluster (see idea #19886 [proposed])
-
-Where we left off (verified 2026-07-28 23:22 PT):
-- Julia (spark-6ae6, WG 10.100.0.15, SSH tunnel :2205) HEALTHY, GPU 0%, no Docker containers running
-- Claudia (spark-6d51, WG 10.100.0.16, SSH tunnel :2206) HEALTHY, GPU 0%, no Docker containers running
-- 46.3% Cline traffic spilling to paid cloud with no active 120B cluster
-- emsu_distill LoRA weights on Julia at ~/models/emsu_distill_lora
-- Unified worker scripts from 2026-07-15 restore on WOPR /tmp/
-- GLM Hex PP=6 ring: DO NOT TOUCH (rule 157, ideal build section 9)
-
-Open threads to drive next:
-1. #19886 [proposed]: SSH into Julia (:2205) and Claudia (:2206), launch gpt-oss-120b TP=2 cluster with emsu_distill LoRA, register in frankenstein_registry.yaml, verify serving, re-enable 120B routing
-
-Reference IDs:
-- Idea filed: #19886 [proposed]
-- Files touched: IDEAL_GLM52_HEX_BUILD.md, GLM52_HEX_SSH_ACCESS.md, GLM52_6NODE_HYBRID_APPROACH_ANALYSIS.md, GLM52_PICKUP.md, GLM52_IDEAL_BUILD_ANSWER_2026-07-28.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785302302290` — 7/29/2026, 12:34:19 AM PT — 70 turns
-
-**Original task:**
-
-```
-Why do subagents completely fail in frankenstein-llm?
-```
-
-**Ideas referenced:** #10108, #10739, #10740, #11741, #11781, #11944, #11953, #12366, #12368, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #13831, #13832, #13874, #16163, #16265, #16304, #16844, #18312, #18326, #18781, #1967, #19887 [proposed], #22386
-
-**Last PICKUP PROMPT:**
-
-```
-arger prompts for other tools.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #19887 — Subagents fail in frankenstein-llm: final response
-
-Where we left
-
-[truncated]
-Failure: I did not provide a response.<attempt_completion>
-<result>
-**What “increase adapter context limit” means**
-
-The Frankenstein‑tools adapter caps the request size at roughly **16 K tokens** (≈131 k characters) – this is the `served_ctx` value shown in `frankenstein_registry.yaml` and the hard‑coded limit in `frankenstein_tools_adapter.py`. Raising the limit would involve:
-
-1. **Edit the adapter source** – open `/usr/local/bin/frankenstein_tools_adapter.py` (or the copy at `/Users/rubenmajor/Desktop/frankenstein_tools_adapter.py`) and locate the constant that defines the maximum token count (e.g. `MAX_TOKENS = 16384`). Increase it to a larger value, such as `32768` or `65536`, depending on server memory constraints.
-2. **Reload the service** – restart the sidecar:  
-   ```bash
-   sudo systemd restart frankenstein-tools.service
-   ```  
-   The new limit will be applied immediately.
-3. **Optional registry update** – if you want the router to advertise the larger context, edit the entry for `frankenstein-tools` in `/etc/litellm/frankenstein_registry.yaml` and change the `served_ctx` field to match the new token ceiling.
-
-These steps are **purely internal**; they don’t require any paid model licenses or external services. They can be applied right now on the host that runs the adapter.
-
-**Feasibility** – The source file is already on the Mac (you have read/write access), and restarting the service is a quick operation. The only trade‑off is higher memory usage and possibly slightly slower latency for very large prompts.
-
-**Subagents – wiring them properly**
-
-The root cause of subagents failing is threefold:
-
-1. **Context‑size limit** – the current 16 K token ceiling often truncates the `use_subagents` payload (five parallel prompt strings), so the model never sees the full tool schema.
-2. **Schema incompatibility** – the free gpt‑oss‑120b model isn’t trained on Cline’s `use_subagents` tool definition. It frequently hallucinates the tool name, garbles arguments, or emits placeholder values. The adapter’s safety layer then drops the call, returning plain text instead of a tool‑call.
-3. **Pool health** – only Artemis‑120b is alive; the other 120 B boxes (julia, cesar, cato) are down or repurposed. This forces spills to paid tiers, which also lack the `use_subagents` schema.
-
-**What’s most beneficial?**
-
-- **Short‑term:** Route `use_subagents` turns to a paid model that supports complex Cline tools (e.g. Kimi‑K3, which has `tool_rank=70` and `supports_tools=true`). This gives reliable subagent execution without needing to overhaul the free pool.
-- **Medium‑term:** If you prefer to keep everything free, restore Julia‑120b (currently down) and consider adding additional 120 B boxes. Even then, the schema mismatch would remain, so you’d still need to train or fine‑tune a model to understand `use_subagents`.
-- **Long‑term:** Upgrade the free pool to a vLLM version that supports the OpenAI `tool_calls` parser (vLLM ≥ 0.10.2). That would let the free 120 B models emit proper tool calls, eliminating the need for a paid tier for subagents.
-
-**Recommendation:**  
-1. Implement the immediate routing change to Kimi‑K3 for `use_subagents` (can be done via a Tiny‑rule or orchestrator decision).  
-2. Optionally increase the adapter context limit as described 
-```
-
-### `1785308873330` — 7/29/2026, 12:09:20 AM PT — 3 turns
-
-**Original task:**
-
-```
-Go ahead and make a comparison to me about interdimensional space and Moad's in relation to our LLM's
-```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

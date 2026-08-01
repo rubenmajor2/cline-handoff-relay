@@ -6,17 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/31/2026, 4:07:01 PM PT | window: last 72h | 103 tasks | index total 350 (parsed 6, cached 344)
+Generated: 7/31/2026, 5:07:02 PM PT | window: last 72h | 102 tasks | index total 350 (parsed 2, cached 348)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785463237084` | 7/31/2026, 4:07:00 PM | 399 | 1766KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
-| `1785531619110` | 7/31/2026, 4:06:43 PM | 327 | 22964KB | The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "servi |
-| `1785537564406` | 7/31/2026, 4:06:21 PM | 179 | 3146KB | #Argus |
-| `1785528867234` | 7/31/2026, 3:56:57 PM | 482 | 1389KB | Saying it is dismissed is not right. Just say it's moot. Then this way we don't call it di |
-| `1785529983485` | 7/31/2026, 3:40:49 PM | 375 | 981KB | Make sure that you are consulting the SLS so that incorrect information does not persist.  |
+| `1785537361555` | 7/31/2026, 5:06:34 PM | 77 | 308KB | What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor  |
+| `1785463237084` | 7/31/2026, 4:56:32 PM | 582 | 2638KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
+| `1785537564406` | 7/31/2026, 4:33:18 PM | 266 | 5444KB | #Argus |
+| `1785399211024` | 7/31/2026, 4:30:59 PM | 1674 | 7063KB | #Julia/Claudia |
+| `1785531619110` | 7/31/2026, 4:25:07 PM | 390 | 23818KB | The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "servi |
+| `1785528867234` | 7/31/2026, 4:21:05 PM | 498 | 1481KB | Saying it is dismissed is not right. Just say it's moot. Then this way we don't call it di |
+| `1785529983485` | 7/31/2026, 4:16:23 PM | 397 | 1027KB | Make sure that you are consulting the SLS so that incorrect information does not persist.  |
 | `1785537526001` | 7/31/2026, 3:38:46 PM | 1 | 14KB | #Argus |
-| `1785537361555` | 7/31/2026, 3:36:33 PM | 2 | 4KB | What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor  |
 | `1785465245461` | 7/31/2026, 3:34:55 PM | 774 | 3026KB | check jon's argus 80% PD issues. says not resolved yet.  |
 | `1785530188751` | 7/31/2026, 3:06:16 PM | 226 | 919KB | See the Jon and Cori SMS chat regarding EMT classes suppsedly with the wrong dates posted  |
 | `1785535349176` | 7/31/2026, 3:03:57 PM | 8 | 17KB | root into wopr and give me apple's username and password for webmail for email: |
@@ -29,7 +30,6 @@ Generated: 7/31/2026, 4:07:01 PM PT | window: last 72h | 103 tasks | index total
 | `1785512899843` | 7/31/2026, 9:38:45 AM | 98 | 389KB | It looks like Klein was updated. When this happens sometimes some of our features that we  |
 | `1785483679627` | 7/31/2026, 9:36:49 AM | 122 | 318KB | yesterday, SSL expired for some parts of emsuniversity.com. Some users still reporting SSL |
 | `1785355259217` | 7/31/2026, 9:29:34 AM | 800 | 1764KB | i ahve been told this form is not populating PDF forms properly downstream. Can you check  |
-| `1785399211024` | 7/31/2026, 9:23:26 AM | 1580 | 6827KB | #Julia/Claudia |
 | `1785295028411` | 7/31/2026, 3:45:07 AM | 1838 | 9684KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
 | `1785360672171` | 7/31/2026, 1:49:48 AM | 928 | 5304KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
 | `1785452265627` | 7/30/2026, 9:07:53 PM | 522 | 1126KB | explain how this student has a Moodle Completion Date but does not have a printed certiica |
@@ -112,13 +112,24 @@ Generated: 7/31/2026, 4:07:01 PM PT | window: last 72h | 103 tasks | index total
 | `1785285698105` | 7/28/2026, 5:49:02 PM | 62 | 104KB | We need to resolve the Plesk license issue that was recovered. Can you please resolve that |
 | `1785279405884` | 7/28/2026, 5:11:26 PM | 330 | 1012KB | # Full Session Summary — All Issues Covered |
 | `1785283734874` | 7/28/2026, 5:10:20 PM | 11 | 33KB | Quickbooks seems to be blocking their own Invoice Payments filled out from their own syste |
-| `1785270520347` | 7/28/2026, 4:20:05 PM | 172 | 2037KB | I need a button on Telephony where i turn off AI from answering first in Admin areas Red b |
 
 ---
 
 ## Per-window detail
 
-### `1785463237084` — 7/31/2026, 4:07:00 PM PT — 399 turns
+### `1785537361555` — 7/31/2026, 5:06:34 PM PT — 77 turns
+
+**Original task:**
+
+```
+What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor for 50 minutes
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11944, #11953, #12314, #12363, #12365, #12366, #12368, #12477, #12618, #12657, #12824, #12872, #12878, #13108, #13202, #13874, #1468, #16163, #16265, #16304, #16718, #16844, #17205, #18312, #18326, #19177, #19188, #4987
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785463237084` — 7/31/2026, 4:56:32 PM PT — 582 turns
 
 **Original task:**
 
@@ -128,107 +139,48 @@ AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/instit
 Odd that it's not there next to the 4/ 13 open complaint. Anyway yeah that needs to be repopulated back in there along with a response that was already sent as well as the one that you drafted for this new issue that was due on 728. You might have to check the desktop if you can't find the 
 ```
 
-**Ideas referenced:** #0369, #059669, #0891, #111827, #13661, #1368, #1565, #15803, #16127, #16134, #16135, #16160, #166534, #16957, #19587, #19595 [executing], #19599, #20393 [approved], #25226, #2563, #26211, #334155, #4111, #450438, #475569, #600179, #623992, #6366, #64748, #92400
+**Ideas referenced:** #0369, #059669, #0891, #111827, #13661, #1368, #1441, #1454, #1538, #1565, #15654, #15803, #16127, #16134, #16135, #16160, #1633, #166534, #16957, #19587, #19595 [executing], #19599, #20393 [approved], #20633 [executing], #20634 [executing], #25226, #2563, #26211, #334155, #4111, #450438, #475569, #600179, #623992, #6366, #64748, #92400
 
 **Last PICKUP PROMPT:**
 
 ```
-e style with your e-signature.
+hen ready and I'll regenerate.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #20393 — AZDHS July 2026 NOI response, DUE TODAY 7/31.
+Pick up task #20393 — AZDHS July 2026 NOI, package complete, DUE TODAY 7/31.
 
-Where we left off (verified 2026-07-31 15:58 PT):
-- Investigation #17 `azdhs-noi-2026-07-13` exists with 3 response rounds (#133 received / #134 extension sent / #135 draft)
-- CONFIRMED MISSING: AZDHS original NOI letters. Round #133 `file_path` is NULL. Searched ticket_attachments (all July 8-15 attachments are student reflection letters), uploads/tickets scanned PDFs, imessage_messages, Google Drive. Zero hits. Source was 8 iMessage photos in /tmp which were wiped.
-- CONFIRMED: no Round 2 exists for July 2026. Only one draft (#135, the 7/13 markdown proposal at `uploads/compliance/july2026_noi/RESPONSE_PROPOSAL_20260713.body.md`)
-- SCOPE ERROR CORRECTED: `AZ_NOI_Round2_Supplemental_Response_2026-05-29.pdf` belongs to investigation #1 (April NOI), not this matter. It was reformatted (logo fix, Letter size, Ruben e-signature embedded) — good work but wrong document for today's deadline.
-- Ruben's e-signature is extracted and saved at `uploads/compliance/regulator_correspondence/ruben_major_signature.png` (verified diff=0.0 vs F01-13067 signed form), reusable for the real response.
-
-Open threads to drive next:
-1. #20393 [blocked] — BLOCKER: need AZDHS original letters from Ruben (re-forward email or re-send photos). Unblocker = Ruben. Once received: OCR → save to `uploads/compliance/july2026_noi/` → UPDATE compliance_investigation_responses SET file_path WHERE id=133 → letters appear on investigations page.
-2. #20393 [blocked] — Build the July 2026 consolidated response PDF: convert `RESPONSE_PROPOSAL_20260713.body.md` to R1 house style (logo at top:0.12in, Letter 612x792, margins 0.85in/0.9in, serif body, "Best, &c" + e-signature data-URI). Generation approach that works: python3 script written via `write_server_file` using `chr(10)` for newlines, then `wkhtmltopdf --page-size Letter -T 0.85in -B 0.85in -L 0.9in -R 0.9in --enable-local-file-access`.
-3. #20393 [blocked] — Pre-send verification: DB-verify Ivan Vasquez 25226W-34, Desiree Nettles, Reid Brenza, Benjamin Eckstein (course 26211FT) completion dates + NREMT elevation; confirm EMS-26-0501 concerns Northland Pioneer College not EMSU; reconcile TKT-12390 (Anna Vasquez escalation, closed 7/1) with EMS-26-0493.
-4. (human-only decision — no idea) — Ruben signs and transmits to Lance Bevins (lawrence.bevins@azdhs.gov, cc brent.caswell@azdhs.gov) before midnight 7/31.
-
-Reference IDs:
-- Investigations: #17 (azdhs-noi-2026-07-13, July, DUE TODAY), #1 (azdhs-noi-2026-04-13, April, closed-out)
-- Response rounds: #133 (received, file_path NULL), #134 (extension sent), #135 (draft proposal)
-- Ideas filed: #20393 [blocked]
-- Related ticket: TKT-20260625-A1402B7F (id 12390, Anna Vasquez escalation re 25226W-34)
-- Files touched: `uploads/compliance/july2026_noi/RESPONSE_PROPOSAL_20260713.body.md`, `uploads/compliance/july2026_noi/EXTENSION_REQUEST_20260714.txt`, `uploads/compliance/regulator_correspondence/AZ_NOI_Round2_Supplemental_Response_2026-05-29.{html,pdf}`, `uploads/compliance/regulator_correspondence/ruben_major_signature.png`, `routes/_view_azdhs_noi_response_tracker.php`, `personnel/institutional_compliance.php`
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785531619110` — 7/31/2026, 4:06:43 PM PT — 327 turns
-
-**Original task:**
-
-```
-The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "serving properly" today, and I am not going to pretend otherwise. Here is the honest, complete accounting of a very long session — what is fixed for real, what I got wrong, and exactly where the next window should start.
-
-THE ARC. Last night the ring served 40-67 turns/hour for 10 hours, then died at 01:03 PT. Today it has died or wedged within minutes of every boot, across every config permutation I tried. I fixed five real adapter-side routing bugs and shipped an auto-relaunch watchdog that genuinely works n
-```
-
-**Ideas referenced:** #16265, #178531, #20005 [proposed], #20069, #20264 [queued], #20272 [deployed], #20297 [queued], #20302 [deployed], #20311 [deployed], #20495 [executing], #20498 [queued], #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20553 [blocked]
-
-**Last PICKUP PROMPT:**
-
-```
-Julia :11513 carried overflow.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785314663557 — GLM ring RECOVERED and serving (watchdog auto-relaunch worked). NCCL/RoCE investigation armed for next wedge.
-
-Where we left off (verified 2026-07-31 14:13 PT):
-- RING: UP. rank0 Cato :8210 HTTP 200, 2.49 tok/s sustained, all 6 workers alive 43-45min, all 6 GPUs 96%. Recovered via watchdog relaunch at 13:29. Stable ~45 min.
-- WATCHDOG: glm52-ring-watchdog.service active on WOPR (idea #20495 [executing]) — proven, it auto-recovered the ring. Kill switch: touch /tmp/glm52_watchdog.disabled.
-- TUNNEL: glm52-tunnel-8210.service active 2 days, WOPR 127.0.0.1:8210 = 200 in 64ms.
-- ADAPTER: GLM-first live, picked=glm-5.2 in router audit. Adapter layer DONE (five fixes from prior window hold).
-- RoCE fabric: glm52-fabric.service INACTIVE but interfaces enP2p1s0f0np0/enP2p1s0f1np1 UP with 10.220.x IPs, MTU 9000, routes present. Script /usr/local/bin/glm52_fabric_up.sh has an escaped-\$ bug in the interface loop (\$p literal) — fabric partially configured manually. NCCL still pinned to enP7s7 plain TCP.
+Where we left off (verified 2026-07-31 16:32 PT):
+- Investigation #17 `azdhs-noi-2026-07-13`, five timeline rounds (#133-#137), all file_paths resolve HTTP 200
+- #133 [received] original AZDHS letters (OCR'd, 9pp) · #134 [sent] extension request · #135 [draft] Consolidated Response 9pp · #136 [draft] Enclosure A Class Rosters 3pp · #137 [draft] Enclosure B Policies 2pp
+- FULL RECORD RESEARCH COMPLETE. All four named students NREMT cleared: 0493 + 0494 on 6/30/26, 0496 on 6/20/26, 0500 on 7/21/26.
+- Moodle gradebook (users 46701/46700, course 25) proves both 25226W students incomplete at the 12/16/25 course end; courtesy-extension timeline exams 1/13 → midterm 1/30 → practical skills 2/2 → total 2/3 → cert 2/6. Prereq docs still posting 6/24, 7/24, 7/29/26.
+- Ticket 631 (TKT-20260306-91FD5D2B) diagnostic: "no externship records or attachments present in backend" for the 0460 student. Passed final 133/150. Externship 0/8 because the record never existed.
+- 0496 complaint dated 6/07 predates its 6/08 completion; cleared 6/20 (12 days).
+- 0500 54-day interval = academic-integrity + payment-hold review (ticket 15654), not an unattended file.
+- 0501 verified: 0 DeLisle records, 0 Northland/Alpine emails, 0 Paramedic/AEMT across 7,749 students / 522 sections.
+- Constraints enforced and grep-verified: no names in Response, no profile links in Response, no volunteered-production language. Names only in Enclosure A per the Department's own request.
+- All 6 investigation-summary anchors converted to target="_blank" rel="noopener noreferrer". PHP lint clean. Backup at institutional_compliance.php.bak-20260731-newtab.
+- Ledger row appended.
 
 Open threads to drive next:
-1. #20528 [queued] — THE work. NCCL collective instability over plain TCP. Next wedge: read glm52-fabric.service + fix the \$ escape bug in glm52_fabric_up.sh, then test RoCE (rule 251: Roman CX7 TP=2 only). Do NOT migrate while ring is healthy.
-2. #20495 [executing] — add end-to-end forced-death test of the watchdog when the ring can afford one.
-3. #20498 [queued] — close/supersede; diagnosis half was wrong.
-4. #20297 [queued] — drift protection; contract is 9 knobs.
-5. #20264 [queued] — derive the 8 hand-picked SLO/ceiling constants.
-6. #20005 [proposed] — supervisor consolidation, still disabled on all 6 nodes.
-7. Node reboot (human-only decision, no idea) — cheapest untried wedge lever, clears driver bad state. Defer until next wedge; ring is healthy now.
+1. #20393 [executing] — Ruben is assembling the real Policies and Procedures documents. When supplied, replace the Enclosure B policy-area map with the actual documents and regenerate `AZDHS_NOI_July2026_EnclosureB_Policies_Procedures.pdf` via the same wkhtmltopdf pipeline, then update round #137.
+2. #20393 [executing] — Execute the two corrective measures the Response states as already instituted, so the statement is true when it ships: externship assignment-latency monitoring (a placement request cannot age to expiration unassigned without escalation) and portal submission-record verification (no submission deadline applied where the receiving record was never created).
+3. #20393 [executing] — Execute the 0460 commitments: open the externship record for student 25324T-01 so ride-along documentation can be received, reconcile the psychomotor skills checklist against the 12/15/25 completion record, and initiate the grievance/reinstatement pathway.
+4. (human-only decision — no idea) — Ruben final review and transmission to lawrence.bevins@azdhs.gov cc brent.caswell@azdhs.gov before midnight 7/31.
 
 Reference IDs:
-- Ideas closed this window: #20553 [approved] (verified: idea_action approve returned ok:true), #20536 [approved] (verified: idea_action approve returned ok:true), #20517 [approved] (verified: idea_action approve returned ok:true), #20506 [approved] (verified: idea_action approve returned ok:true)
-- Ideas still open: #20528 [queued], #20495 [executing], #20498 [queued], #20297 [queued], #20264 [queued], #20005 [proposed]
-- Bug library: entry 2121 (999-sentinel + metrics-vs-conc), 2120 (NCCL watchdog cascade), 2119 (mechanism-before-rule), 2118 (glm-ring-diagnose pointer)
-- Tools: /usr/local/bin/glm-ring-diagnose, /usr/local/bin/glm52_ring_watchdog.sh. Relaunch from Cato: setsid nohup bash /tmp/glm_ring_cesarfirst.sh
-- Ring map: .115 Cato r0, .244 Augustus r1, .21 Pompey r2, .171 Marcus r3, .32 Tiberius r4, .56 Cesar r5. Mac direct LAN ssh (ssh cato/cesar/etc), sudo pw rubenmajor.
-- Files touched: none this window (read-only verification + idea dispositions)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Reconcile idea dispositions from pickup (GATE B baseline)
-- [x] Live-verify ring — UP and HEALTHY: 2.49 tok/s, all 6 GPUs 96%, workers alive 43-45min
-- [x] Read glm52-fabric.service + RoCE interface state
-- [x] Verify auto-relaunch watchdog live on WOPR
-- [x] WOPR tunnel + direct GLM completion OK
-- [x] Sustained decode 2.49 tok/s
-- [x] Close false impl_failed #20553, #20536, #20517, #20506
-- [x] Rule-91 gate ALL PASSED + GAT
+- Investigations: #17 (July 2026, DUE TODAY), #1 (April 2026, separate matter)
+- Response rounds: #133, #134, #135, #136, #137
+- Ideas: #20393 [executing]
+- Students: 25226W-34 (id 2255, Moodle 46701), 25226W-12 (id 1933, Moodle 46700), 26211FT-07 (id 8141124, Moodle 50430), 25324T-01 (id 1347, Moodle 45607), 26308W-16 (id 8138168, Moodle 49724)
+- Tickets: 631 (Nettles externship record), 12390 (third-party Vasquez escalation), 15654 (Brenza NREMT clearance holds)
+- Files: `uploads/compliance/july2026_noi/
 ```
 
-### `1785537564406` — 7/31/2026, 4:06:21 PM PT — 179 turns
+### `1785537564406` — 7/31/2026, 4:33:18 PM PT — 266 turns
 
 **Original task:**
 
@@ -240,11 +192,154 @@ Here is the comprehensive build-and-ship handoff. Tags below are server-derived 
 Two more Argus response-quality fixes shipped this session: **ARGUS_NO_REASONING_LEAK_V1** (the prompt had zero anti-leak guidance, grep count 0) and **ARGUS_NO_DEADEND_V1** (Jon was told to "Hit Send again" after 4 failed tries, that count is now 0). Both php -l clean, FPM reloaded, backups kept. And #20555 just flipped to impl_failed, making it the **fourth** idea killed by the missing `blocked_reason` column, which moves #20569 to the top o
 ```
 
-**Ideas referenced:** #10017, #12430, #14828, #14829, #14834, #14835, #16578, #16594, #177956, #18357, #1850, #19173, #19325, #19490, #19519, #1988, #1996, #2006, #20333 [queued], #20334 [queued], #20388 [queued], #20389 [queued], #20392 [queued], #20393 [deployed], #20405 [queued], #20410 [queued], #20497 [queued], #20500 [queued], #20501 [queued], #20547 [queued], #20549 [queued], #20555 [blocked], #20564 [queued], #20565 [queued], #20569 [proposed], #2084, #2085, #2113, #4517, #6432, #6523, #7925, #9090
+**Ideas referenced:** #10017, #12430, #14828, #14829, #14834, #14835, #16578, #16594, #177956, #178553, #18357, #1850, #18586, #19173, #19325, #19419, #19490, #19519, #1988, #1996, #2006, #20333 [queued], #20334 [queued], #20388 [queued], #20389 [queued], #20392 [queued], #20393 [deployed], #20405 [queued], #20410 [queued], #20497 [queued], #20500 [queued], #20501 [queued], #20547 [queued], #20549 [queued], #20555 [blocked], #20564 [queued], #20565 [queued], #20569 [proposed], #20613, #20627 [deployed], #20628 [deployed], #20629 [deployed], #20630 [proposed], #2084, #2085, #2113, #3229 [approved], #3231 [rejected], #4517, #6432, #6523, #7925, #9090
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1785528867234` — 7/31/2026, 3:56:57 PM PT — 482 turns
+```
+c, so setting it is your call.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785537564406, Argus build-and-ship thread: leak filter, impl_failed guard, collation fix, sentinel persistence all deployed; money questions and 5 queued ideas remain.
+
+Where we left off (verified 2026-07-31 16:26 PT):
+- #20569 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review). Guard cron every 5 min, 146 backfilled, 29 infra routed to GATE C, reason surfaced in API+MCP.
+- #20627 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review). Leak filter live, 212-response role sweep zero casualties.
+- #20629 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review). 74 collation ALTERs, probe join 2,360 rows.
+- #20628 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review). Sentinel persistent, implementer spawning within 1 cycle.
+- #20555 [executing] (verified: reconcile_ideas returned status=in_progress dev_stage=drafting). Re-driven 15:45, picked up 15:53.
+- #20565 [rejected] (verified: status=rejected). Wrong premise, superseded by #20630 [proposed].
+- Record-reconciled deployed this session: #20333 [deployed], #20334 [deployed], #20389 [deployed], #20392 [deployed], #20405 [deployed], #20497 [deployed], #20547 [deployed], #20549 [deployed], #20564 [deployed].
+
+Open threads to drive next:
+1. #20630 [proposed], phantom-payment/risk-decline money-truth verifier. Build after the five Vicky answers land (needs those answers to encode rules correctly).
+2. Human-only decision, no idea: the five Vicky questions (deposit vs balance, Jason Pan $2,295 phantom, dispute refunds, third-party payers, installment currency); then unsuspend ONLY the four substantial-payment students if not refund cases.
+3. #20388 [queued], work the 28 actionable PD signoff students with Jon (pd_signoff_list then pd_nremt_signoff).
+4. #20410 [queued], monotonic permission guard via PHP propagation on the write path.
+5. #20500 [queued], Cyra outreach build; Ruben decision required on Tempe DID purchase.
+6. #20501 [queued], argusUnwiredActions Roles-tab badge + CI assertion; wire or retire activity_requirements and authnet_legacy_link_audit.
+7. Human-only decision, no idea: append the Argus performance section to GLM52_IDEAL_BUILD.md (explanation delivered; paste text: '## Argus production confirmation (2026-07-31): the Argus terminal workload measured 599 tok/s at low concurrency and 4,828 tok/s under parallel load on the same ring, an 8.06x aggregate scaling factor with zero config or hardware change. This is the section 8.1 concurrency lever proven in production: single-stream tok/s is the pipeline bubble, aggregate throughput under parallel agent load is the ring real capacity (128 lanes, KV cache 0.2%). Optimize for parallel dispatch, not single-stream speed.').
+8. Human-only decision, no idea: ruben_active=1 in orchestrator_config (detector can't see MCP Cline traffic), and perm_set for ExecAdmin vs MasterAdmin-only plus a channel to tell Cori/Jon about Cyra's access.
+9. #20555 [executing], if it impl_fails again the guard cron now captures the reason; hand-ship the delegation hardening per GATE C.
+
+Reference IDs:
+- Ideas filed this session: #20627 [deployed], #20628 [deployed], #20629 [deployed], #20630 [proposed]
+- Ideas closed/reconciled: #20333 [deployed], #20334 [deployed], #20389 [deployed], #20392 [deployed], #
+```
+
+### `1785399211024` — 7/31/2026, 4:30:59 PM PT — 1674 turns
+
+**Original task:**
+
+```
+#Julia/Claudia
+
+——[COPY]——
+# COPY WINDOW — Julia + Claudia CX7 TP=2 gpt-oss-120b recovery (idea #20042)
+
+Pick up idea #20042 [proposed] — restore julia-120b TP=2 to the pool.
+
+## VERIFIED STATE (live-probed 2026-07-30 01:01 PT — do NOT re-derive, but DO re-confirm before acting)
+
+- Julia head: spark-6ae6, LAN 192.168.1.190, WireGuard 10.100.0.15, SSH via
+  `ssh -p 2205 rubenmajor@127.0.0.1` from WOPR.
+- Claudia worker: spark-6d51, LAN 192.168.1.194, WireGuard 10.100.0.16, SSH via
+  `ssh -p 2206 rubenmajor@127.0.0.1` from WOPR.
+- Julia has a LIVE Ray cluster (gcs_server PID ~1394125, session
+  
+```
+
+**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11781, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12314, #12335, #12403, #1241, #12459, #12463, #12477, #12506, #12584, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #12716, #12824, #12872, #12878, #12900, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16163, #16265, #16304, #16417, #16448, #16449, #16584, #16589, #16590, #16602, #16604, #16625, #16646, #16648, #16674, #16676, #16680, #16715, #16716, #16717, #16844, #16863, #17078, #17145, #17202, #17203, #17205, #17300, #17307, #17430, #1765, #17673, #1781, #1807, #18312, #18326, #18670, #18671, #19338, #19585, #1967, #19686, #1998, #20042 [proposed], #20108, #20172 [proposed], #20181 [proposed], #20248 [proposed], #20285 [proposed], #20449 [proposed], #20493 [executing], #20624 [executing], #2071, #2079, #2114 [rejected], #2123 [needs_verify], #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
+
+**Last PICKUP PROMPT:**
+
+```
+_HANDLING=1, NCCL_TIMEOUT=120)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #20042 [deployed] — Julia + Claudia CX7 TP=2 gpt-oss-120b is serving; post-serve watchdog idea is in flight.
+
+Where we left off (verified 2026-07-31 16:28 PT):
+- #20042 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=n/a) — TP=2 restored twice: 09:17 after Gloo loopback fix (bug library incident 2114), 16:21 after NCCL runtime crash (bug library incident 2123). Currently serving gpt-oss-120b @131072 ctx, frankenstein_host_probe decode_live=true 26.12 tok/s
+- #20493 [blocked] (verified: reconcile_ideas returned status=in_progress dev_stage=impl_failed) — /etc/hosts hardening, hand-shipped the core bash edits (preflight gates in julia_unified_tp2.sh + claudia_cx7_watchdog.sh, fix_etchosts.py on both boxes)
+- #20624 [executing] (verified: reconcile_ideas returned status=in_progress dev_stage=idle) — post-serve watchdog for julia_unified_tp2.sh (monitor :8000/health, relaunch on death, NCCL_ASYNC_ERROR_HANDLING=1, NCCL_TIMEOUT=120)
+- Bug library incidents: 2114 (gloo_localhost_etchosts_tp2_20260731), 2123 (nccl_collective_timeout_tp2_runtime_crash_20260731)
+- GLM ring untouched this session
+
+Open threads to drive next:
+1. #20624 [executing] — executor is building the post-serve watchdog. Re-run reconcile_ideas([20624]); if it lands impl_failed, hand-ship per rule 267 GATE C (add monitoring loop to julia_unified_tp2.sh after SERVING, poll :8000/health every 60s, relaunch on 3 consecutive failures, add NCCL_ASYNC_ERROR_HANDLING=1 + NCCL_TIMEOUT=120 to launch env)
+2. #20493 [blocked] — core bash edits hand-shipped, but the full spec (DB table + dashboard card + cron) was not implemented. If the executor can't land it, the bash-only version is sufficient for the immediate risk
+
+Reference IDs:
+- Ideas filed: #20624 [executing]
+- Ideas closed: #20042 [deployed]
+- Ideas hand-shipped: #20493 [blocked] (core bash edits)
+- Bug library incidents: 2114 (gloo_localhost_etchosts_tp2_20260731), 2123 (nccl_collective_timeout_tp2_runtime_crash_20260731)
+- Files touched: /etc/hosts on 192.168.1.190 + 192.168.1.194 (backed up to /etc/hosts.bak-20260731), /home/rubenmajor/julia_unified_tp2.sh (preflight gate added, backup at .bak-20260731-pre-hosts-gate), /home/rubenmajor/claudia_cx7_watchdog.sh (preflight gate added, backup at .bak-20260731-pre-hosts-gate), /home/rubenmajor/fix_etchosts.py (both boxes)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<command>ssh -o ConnectTimeout=15 rubenmajor@192.168.1.190 'curl -s http://127.0.0.1:8000/v1/models'</command>
+</attempt_completion>
+```
+
+### `1785531619110` — 7/31/2026, 4:25:07 PM PT — 390 turns
+
+**Original task:**
+
+```
+The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "serving properly" today, and I am not going to pretend otherwise. Here is the honest, complete accounting of a very long session — what is fixed for real, what I got wrong, and exactly where the next window should start.
+
+THE ARC. Last night the ring served 40-67 turns/hour for 10 hours, then died at 01:03 PT. Today it has died or wedged within minutes of every boot, across every config permutation I tried. I fixed five real adapter-side routing bugs and shipped an auto-relaunch watchdog that genuinely works n
+```
+
+**Ideas referenced:** #15144, #16163, #16254, #16265, #1754, #1755, #178531, #20005 [proposed], #20069, #20264 [queued], #20272 [deployed], #20297 [queued], #20302 [deployed], #20311 [deployed], #20495 [executing], #20498 [queued], #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20553 [blocked], #20625 [proposed], #20626 [proposed], #2101, #2118, #48031, #48140
+
+**Last PICKUP PROMPT:**
+
+```
+edge or scheduled maintenance.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785314663557 — GLM ring RCA done. Root cause: NCCL over TCP/mgmt NIC, CX7 RoCE idle. Ring stable now but will wedge again.
+
+Where we left off (verified 2026-07-31 16:23 PT):
+- RING: UP (HTTP 200, serving since 13:29 PT, 3+ hours stable, 7 GLM wins in recent traffic, 45737 gen tokens). Artemis + Julia carrying backup.
+- WATCHDOG: NOT hung (prior window wrong). Active PID 1379298, fresh sleep child, fails=0. Last log 13:43 (boot grace reset). Silence = healthy. Working as designed.
+- NV_ERR: NOT reproducible. No NV_ERR in docker logs or container dmesg. Prior "all 6 nodes NV_ERR" claim was wrong.
+- ROOT CAUSE: NCCL bypasses CX7 RoCE. Container runs NCCL_IB_DISABLE=1 + NCCL_SOCKET_IFNAME=enP7s7 (1Gbps mgmt NIC). CX7 RoCE interfaces (roceP2p1s0f0/f1) are PORT_ACTIVE, 4096 MTU, RDMA UP, /30 P2P routes form perfect ring — all IDLE. NCCL_IB_HCA=rocep1s0f1 points to WRONG device (10.220.17/18, not ring 10.220.1-6).
+- RULE 251: checked. PP=6 is NOT TP=2, no conflict. CX7 for NCCL transport is allowed.
+
+Open threads to drive next:
+1. #20626 [proposed] — THE fix. Switch NCCL to CX7 RoCE: IB_DISABLE=0, IB_HCA=roceP2p1s0f0,roceP2p1s0f1, remove SOCKET_IFNAME=enP7s7. Deploy at next wedge or maintenance window. Verify NCCL logs show RoCE transport.
+2. #20528 [queued] — supersedes the NCCL investigation. RoCE activation plan is #20626 [proposed]. (verified: status=ready_for_review dev_stage=ready_for_review)
+3. #20625 [proposed] — watchdog SSH timeout hardening (wrap $CATO_SSH in timeout 30). Latent bug, did not fire today. (verified: status=proposed dev_stage=idle)
+4. #20553 [queued] — watchdog IS live and working (verified: systemctl active, logging). Status shows ready_for_review but it is hand-shipped deployed. (verified: status=ready_for_review dev_stage=ready_for_review)
+5. #20517 [blocked] — layer 1 (glm-ring-diagnose) shipped. Remaining: register as MCP tool, preflight gate, delete superseded prose. (verified: status=in_progress dev_stage=impl_failed)
+6. #20506 [blocked] — GATE C cleared per prior window. NCCL socket family fix was correct. (verified: status=in_progress dev_stage=impl_failed)
+7. #20536 [queued] — crawl investigation complete, folded into #20528 [queued] and #20626 [proposed]. Supersede. (verified: status=ready_for_review dev_stage=ready_for_review)
+8. #20495 [executing] — watchdog shipped and proven. Add end-to-end forced-death test when ring is stable enough. (verified: status=in_progress dev_stage=idle)
+9. #20498 [queued] — close/supersede. Diagnosis half was wrong (see #20506 [blocked], #20528 [queued]). (verified: status=ready_for_review dev_stage=ready_for_review)
+10. #20297 [queued] — drift protection; contract is now 9 knobs. (verified: status=ready_for_review dev_stage=ready_for_review)
+11. #20264 [queued] — derive SLO/ceiling constants; eight were hand-picked. (verified: status=ready_for_review dev_stage=ready_for_review)
+12. #20005 [proposed] — supervisor consolidation, still disabled on all 6 nodes. (verified: status=proposed dev_stage=idle)
+
+Reference IDs:
+- Ideas filed this session: #20625 [proposed] (verified: status=proposed dev_stage=idle), #20626 [proposed] (verified: status=proposed dev_stage=idle)
+- Ideas reconciled: #20553 [queued] (verified: status=ready_for_review dev_stage=ready_for_review), #20536 [queued] (verified: status=ready_for_review dev_stage=ready_for_review), #20528 [queued] (verified:
+```
+
+### `1785528867234` — 7/31/2026, 4:21:05 PM PT — 498 turns
 
 **Original task:**
 
@@ -259,11 +354,11 @@ Rewrote the email with explicit moot framing and filed it as #20566 [proposed], 
 **Subject: Grievance {GRV-NUMBER} - Dismissed 
 ```
 
-**Ideas referenced:** #1565, #16069, #178561, #18944, #18951, #19419, #20513 [proposed], #20514 [proposed], #20515 [proposed], #20516 [proposed], #20518 [proposed], #20519 [proposed], #20527 [proposed], #20529 [proposed], #20532 [proposed], #20538 [proposed], #20548 [proposed], #20552 [proposed], #20558 [proposed], #20566 [proposed], #20568 [proposed], #20571 [approved], #20573 [proposed], #20574 [proposed], #20575 [proposed], #20580 [proposed], #20581 [proposed], #20582 [proposed], #20587 [proposed], #20588 [proposed], #20595 [proposed], #20596 [proposed], #20597 [proposed], #20601 [proposed], #20608 [proposed], #20610 [proposed], #20612 [proposed], #20615 [proposed], #20616 [proposed], #20617 [proposed], #6785, #9191, #92400
+**Ideas referenced:** #1565, #16069, #178561, #18944, #18951, #19419, #20513 [proposed], #20514 [proposed], #20515 [proposed], #20516 [proposed], #20518 [proposed], #20519 [proposed], #20527 [proposed], #20529 [proposed], #20532 [proposed], #20538 [proposed], #20548 [proposed], #20552 [proposed], #20558 [proposed], #20566 [proposed], #20568 [proposed], #20571 [approved], #20573 [proposed], #20574 [proposed], #20575 [proposed], #20580 [proposed], #20581 [proposed], #20582 [proposed], #20587 [proposed], #20588 [proposed], #20595 [proposed], #20596 [proposed], #20597 [proposed], #20601 [proposed], #20608 [proposed], #20610 [proposed], #20612 [proposed], #20615 [proposed], #20616 [proposed], #20617 [proposed], #20623 [proposed], #6785, #9086, #9168, #9191, #92400, #9306 [deployed], #9339
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785529983485` — 7/31/2026, 3:40:49 PM PT — 375 turns
+### `1785529983485` — 7/31/2026, 4:16:23 PM PT — 397 turns
 
 **Original task:**
 
@@ -295,16 +390,6 @@ Two more Argus response-quality fixes shipped this session: **ARGUS_NO_REASONING
 ```
 
 **Ideas referenced:** #20333 [queued], #20334 [queued], #20388 [queued], #20389 [queued], #20392 [queued], #20393 [deployed], #20405 [queued], #20410 [queued], #20497 [queued], #20500 [queued], #20501 [queued], #20547 [queued], #20549 [queued], #20555 [blocked], #20564 [queued], #20565 [queued], #20569 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785537361555` — 7/31/2026, 3:36:33 PM PT — 2 turns
-
-**Original task:**
-
-```
-What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor for 50 minutes
-```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -857,66 +942,6 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1785399211024` — 7/31/2026, 9:23:26 AM PT — 1580 turns
-
-**Original task:**
-
-```
-#Julia/Claudia
-
-——[COPY]——
-# COPY WINDOW — Julia + Claudia CX7 TP=2 gpt-oss-120b recovery (idea #20042)
-
-Pick up idea #20042 [proposed] — restore julia-120b TP=2 to the pool.
-
-## VERIFIED STATE (live-probed 2026-07-30 01:01 PT — do NOT re-derive, but DO re-confirm before acting)
-
-- Julia head: spark-6ae6, LAN 192.168.1.190, WireGuard 10.100.0.15, SSH via
-  `ssh -p 2205 rubenmajor@127.0.0.1` from WOPR.
-- Claudia worker: spark-6d51, LAN 192.168.1.194, WireGuard 10.100.0.16, SSH via
-  `ssh -p 2206 rubenmajor@127.0.0.1` from WOPR.
-- Julia has a LIVE Ray cluster (gcs_server PID ~1394125, session
-  
-```
-
-**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11781, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12314, #12335, #12403, #1241, #12459, #12463, #12477, #12506, #12584, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #12716, #12824, #12872, #12878, #12900, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16163, #16265, #16304, #16417, #16448, #16449, #16584, #16589, #16590, #16602, #16604, #16625, #16646, #16648, #16674, #16676, #16680, #16715, #16716, #16717, #16844, #16863, #17078, #17145, #17202, #17203, #17205, #17300, #17307, #17430, #1765, #17673, #1781, #1807, #18312, #18326, #18670, #18671, #19338, #19585, #1967, #19686, #1998, #20042 [proposed], #20108, #20172 [proposed], #20181 [proposed], #20248 [proposed], #20285 [proposed], #20449 [proposed], #20493 [executing], #2071, #2079, #2114 [rejected], #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
-
-**Last PICKUP PROMPT:**
-
-```
-4 = augustus). No edit needed.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #20042 [deployed] — Julia + Claudia CX7 TP=2 gpt-oss-120b is serving; follow-on hardening is in flight.
-
-Where we left off (verified 2026-07-31 09:21 PT):
-- #20042 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=n/a) — TP=2 restored and serving: Nodes=2, world_size=2, zero Gloo errors, :8000 up with gpt-oss-120b @131072 ctx, WOPR:11513 reverse tunnel verified end-to-end, frankenstein_host_probe decode_live=true 15.56 tok/s
-- Root cause was /etc/hosts mapping each box's own hostname to 127.0.0.1, making Gloo advertise loopback to its peer. Recorded as bug library incident 2114 (gloo_localhost_etchosts_tp2_20260731) so future windows hit KNOWN_REPAIR instead of re-deriving
-- Three inherited claims corrected per rule 297: the GLOO_ prefix-override theory (ray_env.py proves prefixes are additive), the RAY_HEAD_IP RoCE change (a regression against the script's own header, reverted from backup), and the copy window's GLM-ring tracking pointer #20172 [rejected] which is actually a Cesar dual-interface NCCL idea, unrelated and already rejected
-- #20493 [executing] (verified: reconcile_ideas returned status=in_progress dev_stage=auditing) — systemic hardening so this cannot recur on reboot/reimage
-- GLM ring deliberately untouched this session
-
-Open threads to drive next:
-1. #20493 [executing] — executor is auditing the /etc/hosts hardening (preflight gate in julia_unified_tp2.sh, same check plus self-heal in claudia_cx7_watchdog.sh, pkill of hung "ray start --address" retries, and surfacing the buried connectFullMesh line into the launch log). Re-run reconcile_ideas([20493]); if it lands impl_failed, hand-ship it per rule 267 GATE C since the edits are two bash scripts reachable via ssh_command
-2. GLM ring recovery has NO valid tracking idea — the copy window pointed at #20172 [rejected], which is a different, already-rejected Cesar-interface issue. If GLM ring work is wanted, file a fresh idea first (human-only decision, no idea)
-
-Reference IDs:
-- Ideas filed: #20493 [executing]
-- Ideas closed: #20042 [deployed]
-- Ideas corrected: #20172 [rejected] (miscited by the copy window as the GLM-ring tracker)
-- Bug library: incident 2114 (gloo_localhost_etchosts_tp2_20260731, status=resolved)
-- Files touched: /etc/hosts on 192.168.1.190 (spark-6ae6) and 192.168.1.194 (spark-6d51), both backed up to /etc/hosts.bak-20260731; /home/rubenmajor/julia_unified_tp2.sh restored from .bak-20260730-pre-gloo-fix with pre-restore copy at .bak-20260731-pre-restore
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<command>ssh -o ConnectTimeout=15 rubenmajor@192.168.1.190 'curl -s http://127.0.0.1:8000/v1/models'</command>
 </attempt_completion>
 ```
 
@@ -3616,41 +3641,3 @@ Also if this is the case I wonder what is the point of using their invoicing sys
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785270520347` — 7/28/2026, 4:20:05 PM PT — 172 turns
-
-**Original task:**
-
-```
-I need a button on Telephony where i turn off AI from answering first in Admin areas Red button that only Master Admin can use that turns off VAPI from answering or can turn it back on. Only mmaster Admin. Test and make sure working -> https://www.emsuniversity.com/emtskills/routes/telephony_hub.php
-```
-
-**Ideas referenced:** #001018, #059669, #062017, #166534, #2563, #334155, #374151, #475569, #64748, #92400, #9733, #9734
-
-**Last PICKUP PROMPT:**
-
-```
-reloaded** — live immediately.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — VAPI Master Admin toggle + ring config fixes on Telephony Hub.
-
-Where we left off (verified 2026-07-28 16:19 PT):
-- `min_agents_for_ring` = 1 [deployed] — single agent gets rung, no more "skip ring → VAPI" when agent count < 2
-- `online_timeout_minutes` = 15 [deployed] — agent heartbeat valid for 15 min instead of 5
-- `ring_timeout_seconds` = 15 (unchanged)
-- `vapi_fallback_enabled` toggle live in Telephony Hub Call Handling section (MasterAdmin only)
-
-Open threads to drive next:
-(None — both fixes deployed. Monitor whether Vicky/agents now reliably get full ring window.)
-
-Reference IDs:
-- Files touched: api/telephony/config_api.php, routes/telephony_hub.php
-- DB configs changed: min_agents_for_ring=1, online_timeout_minutes=15
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```

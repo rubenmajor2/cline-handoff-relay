@@ -6,19 +6,20 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/1/2026, 10:46:50 AM PT | window: last 72h | 77 tasks | index total 378 (parsed 7, cached 371)
+Generated: 8/1/2026, 11:46:50 AM PT | window: last 72h | 78 tasks | index total 379 (parsed 8, cached 371)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785604764278` | 8/1/2026, 10:46:48 AM | 55 | 253KB | based on the complaints received and current status, what kind of actions can we put into  |
-| `1785537361555` | 8/1/2026, 10:44:51 AM | 432 | 2233KB | What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor  |
-| `1785601440006` | 8/1/2026, 10:44:27 AM | 300 | 649KB | **TELEPHONY ISSUE — FULL STATUS, ROOT CAUSE, AND WHERE WE GO NEXT** |
-| `1785602138255` | 8/1/2026, 10:25:46 AM | 160 | 579KB | #Queued Ideas |
-| `1785582017987` | 8/1/2026, 10:24:18 AM | 330 | 6654KB | GLM ring TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wan |
-| `1785600191339` | 8/1/2026, 10:22:03 AM | 248 | 632KB | #Kaizon / Bugs |
-| `1785599739497` | 8/1/2026, 10:20:04 AM | 188 | 1181KB | I want to get back to work on clustering, parallelism and tarpipe, particularly with the e |
-| `1785581189111` | 8/1/2026, 10:15:55 AM | 356 | 1366KB | I need to make sure that the orchestra is running and that we don't just have a bunch of i |
-| `1785463237084` | 8/1/2026, 10:12:40 AM | 1246 | 4201KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
+| `1785582017987` | 8/1/2026, 11:46:23 AM | 409 | 6894KB | GLM ring TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wan |
+| `1785602138255` | 8/1/2026, 11:43:03 AM | 216 | 786KB | #Queued Ideas |
+| `1785463237084` | 8/1/2026, 11:41:29 AM | 1322 | 4408KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
+| `1785601440006` | 8/1/2026, 11:38:24 AM | 342 | 754KB | **TELEPHONY ISSUE — FULL STATUS, ROOT CAUSE, AND WHERE WE GO NEXT** |
+| `1785608591871` | 8/1/2026, 11:32:15 AM | 38 | 182KB | #Argus |
+| `1785537361555` | 8/1/2026, 11:27:49 AM | 482 | 2311KB | What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor  |
+| `1785600191339` | 8/1/2026, 11:26:46 AM | 302 | 1132KB | #Kaizon / Bugs |
+| `1785581189111` | 8/1/2026, 11:26:41 AM | 478 | 2262KB | I need to make sure that the orchestra is running and that we don't just have a bunch of i |
+| `1785599739497` | 8/1/2026, 11:07:20 AM | 258 | 1351KB | I want to get back to work on clustering, parallelism and tarpipe, particularly with the e |
+| `1785604764278` | 8/1/2026, 10:49:44 AM | 66 | 295KB | based on the complaints received and current status, what kind of actions can we put into  |
 | `1785360672171` | 8/1/2026, 9:23:32 AM | 3888 | 18423KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
 | `1785566876939` | 8/1/2026, 3:57:20 AM | 634 | 1456KB | GLM ring RoCE root cause found (wrong-NIC RX-offload drops from /30 shortcut routes); /32  |
 | `1785548524428` | 8/1/2026, 2:00:05 AM | 350 | 706KB | Jon says Daystron counsil stopped working |
@@ -92,158 +93,7 @@ Generated: 8/1/2026, 10:46:50 AM PT | window: last 72h | 77 tasks | index total 
 
 ## Per-window detail
 
-### `1785604764278` — 8/1/2026, 10:46:48 AM PT — 55 turns
-
-**Original task:**
-
-```
-based on the complaints received and current status, what kind of actions can we put into place that can make things better? What do you recommend? 
-
-https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations
-```
-
-**Ideas referenced:** #16957, #178501, #18822, #18823, #19442, #19591, #19840, #20193, #20328, #20333, #20410, #20420, #20423, #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #20630, #20662, #20663 [rejected], #20665, #20672 [proposed], #20711, #20922 [proposed], #20923 [proposed], #20924 [proposed], #20925 [proposed], #20926 [proposed], #20927 [proposed], #2125, #2126, #2127, #2128, #450438, #5654
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785537361555` — 8/1/2026, 10:44:51 AM PT — 432 turns
-
-**Original task:**
-
-```
-What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor for 50 minutes
-```
-
-**Ideas referenced:** #10108, #10666, #10740, #11741, #11781, #11944, #11953, #12059, #12060, #12314, #12363, #12365, #12366, #12368, #1239, #12477, #12503, #12576, #12591, #12609, #12611, #12617, #12618, #12619, #12657, #12714, #1280, #12824, #12872, #12878, #12894, #12900, #13108, #13202, #13418, #13874, #1468, #16063, #16163, #16265, #16304, #16718, #16834, #16844, #17202, #17205, #177862, #177914, #1784, #18312, #18326, #18360, #19177, #19188, #19338, #20130, #20333, #20410, #20495, #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #20630, #20639 [proposed], #20641 [proposed], #20644 [proposed], #20648 [queued], #20723, #20755, #20899 [filed], #20914 [deployed], #2124 [open], #2182, #2212, #24583, #25170, #3093, #3376, #3378, #3822, #4516, #4987, #6978, #7126, #7181
-
-**Last PICKUP PROMPT:**
-
-```
-ion + dead GLM-first routing).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Ruben Executor doctor: federation fixes shipped, confirm stuck-chain watchdog does not misfire and GLM ring recovery restores GLM-first.
-
-Where we left off (verified 2026-08-01 10:44 AM PT):
-- Executor LLM path HEALTHY: frankenstein-tools :11510 returns 200 in 1.25-2.4s via Artemis, FRANK_EXECUTOR_CAP=64 effective, no saturations.
-- Stuck-chain watchdog cron_orchestrator_stuck_chain_watchdog.php v8 DEPLOYED and verified live: caught idea-4516 (consec=12), wrote orchestrator_events ids 3-5 (agent_stuck_observed_loop), snoozed handoff 8817 to 11:11 PT, status `resting`.
-- Emergency state still live: /etc/systemd/system/frankenstein-tools.service.d/70-glm-first-all-lanes.conf is renamed `.disabled-executor-deadlock-20260731` (GLM-first OFF). GLM ring :8210 current health NOT re-probed this turn — needs re-check.
-- Ideas marked deployed via SQL: 20644, 20914, 20899.
-
-Open threads to drive next (every item MUST have a real filed idea #):
-1. #20644 [deployed] — After the GLM ring :8210 is confirmed healthy, restore EMSU_GLM_FIRST_ALL_LANES=1 and FRANK_EXECUTOR_CAP to 24, then verify executor probes still pass. Decide whether cap 64 should stay permanently (doorman already handles spills).
-2. #20914 [deployed] — Watch cron_heartbeat for cron_orchestrator_stuck_chain_watchdog over 24h: confirm heartbeats are green, no misfires on healthy chains, and that snoozed chains resume after snooze expires. If misfires occur, tighten the 3h/5-consecutive window.
-3. #20899 [deployed] — Close the loop: append the v6->v8 CONCAT() fix story and the sed-restart note to the idea body so the deploy history is complete.
-
-Reference IDs:
-- Incident: frankenstein_router_incidents #2124 ruben_executor_observedloop_deadlock_executor_ticks
-- Ideas filed: #20639, #20641, #20644, #20648, #20899, #20914
-- Files touched: /var/www/emtskills/cron/cron_orchestrator_stuck_chain_watchdog.php, /etc/litellm/config.yaml.bak-ruben-executor-route-fix-20260801, /etc/systemd/system/frankenstein-tools.service.d/70-glm-first-all-lanes.conf.disabled-executor-deadlock-20260731, cap drop-ins in frankenstein-tools.service.d/
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785601440006` — 8/1/2026, 10:44:27 AM PT — 300 turns
-
-**Original task:**
-
-```
-**TELEPHONY ISSUE — FULL STATUS, ROOT CAUSE, AND WHERE WE GO NEXT**
-
-**The question Ruben asked:** Two-part — (1) is the EMSU phone system healthy, and (2) can we prioritize callers / route good and bad calls differently (pre-call prospect detection + topic-based routing for poor-rated calls). Both parts got real answers this session.
-
-**Issue #1 — Phone system health: WORKING, but a serious latent defect is now confirmed.**
-- Live telephony check passed: Vapi AI fallback leg healthy, inbound line alive.
-- Last 24h: **153 calls** to the EMSU Main Line (+19412545009), all handled by Vapi, avera
-```
-
-**Ideas referenced:** #12606, #12815, #12830, #16152, #16154, #16732, #1745, #18935, #20027, #20045 [approved], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20081 [proposed], #20407 [approved], #20880 [proposed], #25511, #7414, #9077, #9086, #9090, #9222, #9501
-
-**Last PICKUP PROMPT:**
-
-```
-/logs/voice_watchdog_auto.log`
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #20880 — Voice A/B routing fix + CA law greeting compliance, post-babysit.
-
-Where we left off (verified 2026-08-01 10:43 PT):
-- Autonomous watchdog ran 14 of 16 ticks clean (0 repairs, 0 new real errors). T15/T16 expected to complete automatically by 10:47.
-- Watchdog log: /var/www/emtskills/logs/voice_watchdog_auto.log — last 6 lines confirm T14 at 10:43:18.
-- PERSONA-ROUTING is live: 17 routes logged, calls hitting both lane-a-eric (494523de) and lane-b-bella (b2183071).
-- CA AI disclosure block is in the canonical sync script AND live in Bella main assistant prompt (verified via Vapi API GET).
-- All voice ideas approved: #20045-20051, #20081, #20407, #20880 [deployed].
-- Watchdog pid 447265, script /var/www/emtskills/scripts/voice_watchdog_auto.php — will exit on its own after T16.
-
-Open threads to drive next:
-1. Verify T15/T16 completed clean: `tail -6 /var/www/emtskills/logs/voice_watchdog_auto.log` and `grep -cE "UNCAUGHT|vapi_call_id|TERMINATION_REASON update failed" /var/www/emtskills/logs/voice_agent.log` — should be flat at 259, 0 new.
-2. #20081 [queued] — After ~7 days of lane-split telemetry (Eric 50% / Bella 50%), run the full 4-assistant A/B test: reactivate demoted Ronald/Katie  variants with weight_pct > 0 in voice_persona_variants, re-run vapi_canonical_sync.php to push tool schemas to all active assistants.
-3. #20046 [queued] — Pre-call prospect detection in Twilio inbound: query voice_analytics DB for caller phone before the conference ring, tag the call with caller_type=prospect if no enrollment match, feed that tag into the PERSONA-ROUTING selection.
-4. #20049 [queued] — Once lane attribution shows which persona(s) cause the gatekeeping loop, add a direct-human-agent bypass for frustrated callers (escalation_reason="gatekeeping_frustration", route to available agent immediately).
-5. deploy watchdog as a cron task so this is fully autonomous post-deploy: `*/2 * * * * php /var/www/emtskills/scripts/voice_watchdog_auto.php` — but only after adding baseline tracking so it doesn't WARN on historical errors.
-
-Reference IDs:
-- Ideas: #20880 [deployed], #20045-20051 [queued], #20081 [queued], #20407 [queued]
-- Files: /var/www/emtskills/scripts/voice_watchdog_auto.php, /var/www/emtskills/scripts/vapi_canonical_sync.php, /var/www/emtskills/api/voice/vapi_server_webhook.php (line 1843, line 6183), /var/www/emtskills/logs/voice_agent.log
-- Vapi: phone 97e4226b-80b1-4e78-9976-1b5ee9be5880, assistants 6ee87bdb / b2183071 / 494523de
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785602138255` — 8/1/2026, 10:25:46 AM PT — 160 turns
-
-**Original task:**
-
-```
-#Queued Ideas
-
-I would like you to stop giving me queued ideas here in cline. Stop giving them in executor and stop giving them in orchestrator, and stop giving them in Argus. Queued ideas are being used as an excuse not to implement ideas and are harmful. Ideas are Approved and move through the queue. You can tell me where they are at in the queue, but you do not mark an idea as queued so they sit in queue indefinitely. We are done with that bottleneck garbage. Please resolve it. You likely will need ot make a cline rule for this too.
-```
-
-**Ideas referenced:** #0000, #1194, #12345 [queued], #16224, #17408, #177796, #19173, #19175 [executing], #19176 [queued], #19813, #19814, #19816, #19822, #19898, #19899 [proposed], #19904, #20251, #20569, #20662 [blocked], #20672 [executing], #20870 [awaiting_review], #20904 [deployed], #32701, #5344
-
-**Last PICKUP PROMPT:**
-
-```
-ool — now fully replaced.
-
----
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #20904 [awaiting_review] — KILL QUEUED: Stop agents parking ideas as [queued].
-
-Where we left off (verified 2026-08-01 10:25 PT):
-- #20904 [awaiting_review] — KILL QUEUED idea filed; deriveTag fixed, validator patched with QUEUED_TAG_BANNED gate, rule 161 created + clarified, rule 91 updated
-- mcp-ruben-orchestrator restarted 09:51 PT; reconcile_ideas verified live returning zero [queued] tags
-- clinerules-mcp rebuilt + launchd restarted; validator verified live rejecting a queued-tagged test case
-- Rule 91 and Rule 161 written to ~/Documents/Cline/Rules/, clinerules reindexed to 311 rules
-
-Open threads to drive next:
-None — all queued-labeling surfaces eliminated and the practice ban is mechanically enforced. If any agent still emits [queued] or deliberately bottlenecks an approved idea, the validator gate blocks completion and rule 161 names the violation.
-
-Reference IDs:
-- Ideas filed: #20904 [awaiting_review]
-- Files touched: /var/www/emtskills/mcp-servers/ruben-orchestrator/src/index.ts, /var/www/emtskills/mcp-servers/ruben-orchestrator/build/index.js, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js, ~/Documents/Cline/Rules/91-every-completion-needs-pickup-prompt.md, ~/Documents/Cline/Rules/161-ideas-never-queued.md
-
-When done, append to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785582017987` — 8/1/2026, 10:24:18 AM PT — 330 turns
+### `1785582017987` — 8/1/2026, 11:46:23 AM PT — 409 turns
 
 **Original task:**
 
@@ -257,7 +107,7 @@ PICKUP PROMPT (paste into a fresh Cline window)
 Pick up task #1785314663557 — GLM ring: TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wants autonomous monitoring + cron automation so the ring can self-recover o
 ```
 
-**Ideas referenced:** #1293, #1334, #1353, #1359, #1360, #1361, #1367, #1368, #1374, #1391, #1474, #1475, #1515, #1531, #1537, #1567 [resolved], #1569, #1579 [investigating], #15822, #1586, #1587, #1600, #1606 [investigating], #1608 [investigating], #1609, #1611, #1612, #1614 [investigating], #16803, #16962, #1703, #17104, #17128, #1715, #1723, #1724, #1725, #1733, #1740, #1742, #1754, #1755, #1765, #17676, #178531, #17902, #1842, #1881, #19166, #1962 [resolved], #1963 [investigating], #1964 [resolved], #1967 [resolved], #1968 [resolved], #1970 [investigating], #1973 [investigating], #1974 [investigating], #1975 [resolved], #1978, #1979 [investigating], #1982 [resolved], #1983 [resolved], #1984 [resolved], #1985 [resolved], #1993 [resolved], #2000, #20495 [queued], #20506 [queued], #20517 [blocked], #20528 [queued], #20536 [queued], #20553 [queued], #20724 [proposed], #20725 [proposed], #20740 [proposed], #20806 [proposed], #20807 [proposed], #20870 [proposed], #20871 [proposed], #20872 [proposed], #20873 [proposed], #2116 [resolved], #2136 [recorded], #21824, #26318, #27313, #2928, #30269, #30682, #32359, #32618, #32701, #33356, #34076, #36651, #36921, #3717, #39863, #40980, #43420, #45094, #48031, #48140, #5087, #5480 [outdated], #57696, #58426, #6826
+**Ideas referenced:** #10108, #10869, #11912, #12403, #12589, #12590, #12645, #12680, #12689, #1293, #1334, #13453, #13470, #1353, #1359, #1360, #1361, #1367, #1368, #1374, #1391, #1474, #1475, #1515, #1531, #1537, #1567 [resolved], #1569, #15776, #1579 [investigating], #15822, #1586, #1587, #1600, #1606 [investigating], #1608 [investigating], #1609, #1611, #1612, #1614 [investigating], #16602, #16625, #16648, #16803, #16844, #16962, #1703, #17104, #17128, #17145, #1715, #17202, #17203, #17205, #1723, #1724, #1725, #17300, #17307, #1733, #1740, #1742, #17430, #1754, #1755, #1765, #17676, #17680, #178531, #17902, #1842, #1881, #19166, #1962 [resolved], #1963 [investigating], #1964 [resolved], #1967 [resolved], #1968 [resolved], #1970 [investigating], #1973 [investigating], #1974 [investigating], #1975 [resolved], #1978, #1979 [investigating], #1982 [resolved], #1983 [resolved], #1984 [resolved], #1985 [resolved], #1993 [resolved], #2000, #20495 [queued], #20506 [queued], #20517 [blocked], #20528 [queued], #20536 [queued], #20549, #20553 [queued], #2071, #20724 [proposed], #20725 [proposed], #20740 [proposed], #2079, #20806 [proposed], #20807 [proposed], #20870 [proposed], #20871 [proposed], #20872 [proposed], #20873 [proposed], #2116 [resolved], #2136 [recorded], #21824, #26318, #27313, #2928, #30269, #30682, #32359, #32618, #32701, #33356, #34076, #36651, #36921, #3717, #39863, #40980, #43420, #45094, #48031, #48140, #5087, #5480 [outdated], #57696, #58426, #6826, #8365, #9706
 
 **Last PICKUP PROMPT:**
 
@@ -307,139 +157,56 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - 
 ```
 
-### `1785600191339` — 8/1/2026, 10:22:03 AM PT — 248 turns
+### `1785602138255` — 8/1/2026, 11:43:03 AM PT — 216 turns
 
 **Original task:**
 
 ```
-#Kaizon / Bugs
+#Queued Ideas
 
-I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
+I would like you to stop giving me queued ideas here in cline. Stop giving them in executor and stop giving them in orchestrator, and stop giving them in Argus. Queued ideas are being used as an excuse not to implement ideas and are harmful. Ideas are Approved and move through the queue. You can tell me where they are at in the queue, but you do not mark an idea as queued so they sit in queue indefinitely. We are done with that bottleneck garbage. Please resolve it. You likely will need ot make a cline rule for this too.
 ```
 
-**Ideas referenced:** #12724, #1468, #14937, #19188, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #3076, #3077, #3081, #7358, #9269
+**Ideas referenced:** #0000, #1194, #12345 [queued], #16224, #17408, #177796, #18357 [deployed], #1850, #19173, #19175 [executing], #19176 [queued], #19490, #19813, #19814, #19816, #19822, #19898, #19899 [proposed], #19904, #20071 [awaiting_review], #20251, #20336 [blocked], #20569, #20662 [blocked], #20672 [executing], #20870 [awaiting_review], #20904 [deployed], #20946 [proposed], #2113, #32701, #4536, #5344
 
 **Last PICKUP PROMPT:**
 
 ```
-hronic-gated within 5 minutes.
+ labeled queued anywhere.
+
+---
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task # — KAIZEN full pipeline deployed through Bug Hunter merge
 
-Where we left off (verified 2026-08-01 10:21 PT):
-- All 9 KAIZEN fixes (#20884-#20891, #20910) built, deployed, verified live on WOPR
-- Bug Hunter merge (#20910 [deployed]): sp_kaizen_bug_hunter_ingest + kaizen_target bug_hunter + cron wiring all live
-- crontab entries: cron_kaizen_pipeline.php (every 5 min), cron_kaizen_surface_refresh.php (weekly Sun 02:30)
-- Bug Hunter source is clean (0 unresolved findings) — pipeline armed, waiting for next finding
-- 296 tables in kaizen_failure_surface_catalog, 7,210 stale entities scored in kaizen_freshness
+Pick up task #20904 [executing] - KILL QUEUED: shipped all 6 ideas, RCA'd the death-loop.
+
+Where we left off (verified 2026-08-01 11:39 PT):
+- #20672 [executing] auditing, payment-attribution, death-loop cleared, building
+- #20662 [executing] drafting, tools-adapter inflight-leak, death-loop cleared, building
+- #20336 [executing] auditing, grievance TRACEBACK panel, death-loop cleared, building
+- #20870 [executing] idle (approved), GLM ring fix, approved per Ruben, awaiting worker pickup
+- #20071 [executing] idle (approved), Form 2835 pipeline fix, approved, awaiting worker pickup
+- #20904 [executing] idle (approved), KILL QUEUED, approved, awaiting worker pickup
+- #20946 [proposed] CLOSE_THE_LOOP backoff escalation fix, filed from RCA
 
 Open threads to drive next:
-1. #20910 [deployed] Monitor the new Bug Hunter → KAIZEN flow: run the pipeline manual check `php /var/www/emtskills/cron_kaizen_pipeline.php` after the next bug_hunter_log write to confirm classification_log + bridge rows appear
-2. #20884 [deployed] Watch kaizen_classification_log fill now that ruben_executor target reads orchestrator_execution_log (it should start getting rows)
-3. #20886 [deployed] Confirm the 15-min freshness sweep is auto-staling impl_failed ideas >7 days (status='stale')
+1. #20946 [proposed] approve so crash guard death loop class escalates to human after N retries instead of looping
+2. #20870 [executing] confirm GLM ring build lands this window
+3. #20672 [executing], #20662 [executing], #20336 [executing] monitor first build pass to confirm death loop does not re-trigger
 
 Reference IDs:
-- Ideas deployed: #20884 [deployed], #20885 [deployed], #20886 [deployed], #20887 [deployed], #20888 [deployed], #20889 [deployed], #20890 [deployed], #20891 [deployed], #20910 [deployed]
-- Files touched: /var/www/emtskills/cron_kaizen_pipeline.php, /var/www/emtskills/cron_kaizen_surface_refresh.php, WOPR crontab, admin_portal tables/views/procedures
+- Ideas filed: #20904 [executing], #20946 [proposed]
+- Files touched: /var/www/emtskills/mcp-servers/ruben-orchestrator/src/index.ts, /var/www/emtskills/mcp-servers/ruben-orchestrator/build/index.js, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js, ~/Documents/Cline/Rules/91-every-completion-needs-pickup-prompt.md, ~/Documents/Cline/Rules/161-ideas-never-queued.md
 
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785599739497` — 8/1/2026, 10:20:04 AM PT — 188 turns
-
-**Original task:**
-
-```
-I want to get back to work on clustering, parallelism and tarpipe, particularly with the executor, orchestrator, CFAs and autonomous tasks. Tell me where we are at with this and how we can increase capacity even more
-```
-
-**Ideas referenced:** #1130, #1131, #12363, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16610, #16778, #16802, #16803, #16839, #16851, #16881, #17246, #17320, #17357, #1744, #17458, #17717, #17736, #17781, #1779, #1798, #1828, #18350, #18353, #18355, #19567, #19840, #19921, #20042, #20128, #20130, #20193, #20328, #20333, #20410, #20420, #20423, #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #2063, #20630, #2065, #20662, #20663 [rejected], #20665, #20672 [proposed], #20711, #2073, #20877 [queued], #20878 [queued], #20879 [queued], #20900 [proposed], #20901 [proposed], #20902 [proposed], #2114, #2125, #2126, #2127, #2128, #3917, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-ws below with what to do next.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Clustering / Parallelism / Tarpipe: deploy rule-297 preflight gate, locate Claudia's real SSH port, and launch Julia vLLM from julia_unified_tp2.sh.
-
-Where we left off (verified 2026-08-01 10:19 PT):
-- #20878 [deployed] — capacity‑ramp G3 gate fixed (LITELLM_MASTER_KEY now sourced from /etc/litellm/env), parallel‑cap applied at 48 with rate 144 / workers 24. Verified live: G1–G4 all PASS, per‑core 0.163.
-- #20879 [deployed] — Daystrom parallelism telemetry runner (cron_daystrom_council_parallelism.php) replaced the 42‑line stub with a live‑truth telemetry insert against agent_brainstorm_turns (the REAL council session store, not the empty ghost table daystrom_sessions). PHP lint passed, deployed.
-- #20900 [proposed] — IDEA‑CLUSTERING ENGINE: semantic batched approval+build+ship across all operations domains (P0, ROI 5.0). Clusters 1,143 needs_verify + 166 ready_for_review ideas by embedding similarity, produces ONE consolidated spec per cluster, one build run covering all N ideas.
-- #20901 [proposed] — OPERATIONS‑WIDE PARALLELISM: lift executor from 3→8 concurrent builds +curl_multi CFA triage (Daystrom pattern) + batch grievance verification (P0, ROI 5.0).
-- #20902 [proposed] — TARPIPE AS SYSTEM‑WIDE CONTEXT BROADCAST: one tar bundle streamed to N parallel workers instead of N individual cold‑start loads (executor, CFA, Daystrom rounds) (P2, ROI 4.0).
-- Rule‑297 preflight script built locally at /Users/rubenmajor/Desktop/rule297_fleet_preflight.sh — probes Julia/Claudia/Cato/Cesar/Artemis via SSH tunnels and emits a JSON truth file. NOT yet deployed to /usr/local/bin/.
-- Live‑truth fleet table (2026‑08‑01 10:12 PT, TOOL OUTPUT ONLY):
-    • WOPR reverse tunnels 11506 + 11513 both LISTENING (ss -tlnp confirmed)
-    • Julia (port 2205 → spark‑6ae6): up 17d 4h, Ray gcs_server PID 2829559 running since Jul31, NO vLLM engine on port 8000 (ss returned empty, curl 8000/v1/models returned empty), GPU 0%
-    • Port 2206 → wopr.emsuniversity.com (NOT claudia — my prior "Claudia SSHd fine" claim was a rule‑297 fabrication from a misrouted tunnel)
-    • Claudia's real SSH port: UNKNOWN (ports 2200, 2206, 2207 all refused/bounced; 2206 is WOPR, not spark‑6d51)
-    • julia_unified_tp2.sh exists on Julia (line 31 references peer spark‑6d51) — this is the launch script that needs to be run once Claudia is reachable
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #20900 [proposed] – Idea Clustering Engine: design the nightly embedding pipeline first (1-2h). Write `lib/idea_embedding.php` that hashes title+description via SHA-256 normalised token set (Jaccard similarity), or calls Ollama embedding endpoint on WOPR for cheap semantic embeddings. Scaffold table `admin_portal.idea_clusters` (cluster_id, idea_ids JSON, consolidated_spec, build_dispatched_at). Then write `cron/cron_idea_clusterer.php` that runs nightly, groups clusters, and creates a single spec‑gen batch per cluster. Dry‑run the first night with 5-cluster max, manual review before auto‑build. Measure: needs_verify queue depth delta after 3 nights.
-2. #20901 [proposed] – Operations‑Wide Parallelism: the fastest win is `cron_ruben_pipeline.php` — change the MAX_CONCURRENT constant from 3 to 6, redeploy, and watch the capacity‑ramp status for 30min (G1–G4 all PASS at 48, so 6 is safe). Second: add curl_multi to `cron_cfa_triage.php` (mirror Daystrom's pattern at li
-```
-
-### `1785581189111` — 8/1/2026, 10:15:55 AM PT — 356 turns
-
-**Original task:**
-
-```
-I need to make sure that the orchestra is running and that we don't just have a bunch of ideas queuedOr work cute.
-```
-
-**Ideas referenced:** #113026, #12022, #12184, #12430, #12802, #1281, #1309, #1314, #15333, #15367, #15652, #15906, #15955 [deployed], #16523, #16881, #17913, #18135, #18357, #18395, #18442, #1850, #18761, #18763 [deployed], #18793 [deployed], #19079, #19325, #19338, #19435, #19458, #19490, #19491, #19494, #19503, #19504, #19509, #19629, #19643, #19661, #19670, #19684, #20044 [deployed], #20071 [queued], #20336 [in_progress], #20340 [proposed], #20350, #20408, #20410 [queued], #2043, #20492 [in_progress], #20493 [in_progress], #20507 [in_progress], #20509 [proposed], #20517 [proposed], #20569, #20613 [proposed], #20624 [in_progress], #20662 [in_progress], #20672 [in_progress], #2076, #20793 [proposed], #20858 [queued], #20859 [blocked], #20860 [queued], #20869 [proposed], #20883 [proposed], #20894 [proposed], #20895 [proposed], #20903 [approved], #2113, #2114, #2123, #3541, #3953, #3957, #444279, #444280, #444539, #444542, #445761, #4536, #4747, #5029, #5031, #5034, #5516, #5778, #7925, #8247, #8281, #8321, #8563, #8598, #9222, #9235, #9581 [deployed]
-
-**Last PICKUP PROMPT:**
-
-```
-B `implementation_log` column.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #20903 — monitor #20662 build completion and ensure no adapter stampede under 40-worker cap
-
-Where we left off (verified 2026-08-01 10:15 PT):
-- #20903 capacity lift deployed: 24→40 workers, log confirms new cap active
-- #20662 and #20509 retriggered with fresh workers, both in idle → drafting transition
-- 8 other target ideas in flight (3 ready_for_review, 1 testing, 4 drafting)
-- 3 process 297s [deployed], #20903 [deploying]
-
-Open threads to drive next:
-1. #20662 [deploying] Tools-adapter inflight leak build — verify progresses past idle, does not revert to impl_failed
-2. #20509 [deploying] Grievance backfill build — same
-3. #20903 [deploying] ADAPTER_BOUND_CAP 40 — watch for impl_failed spike (if >3 in 5 min, revert to 24 per comment in valve code)
-4. #20071 [executing] Form 2835 pipeline fix — ready_for_review, approve or deploy
-5. #20410 [executing] Argus permission guard — testing, verify test results
-6. #20493 [executing] DGX /etc/hosts harden — ready_for_review
-7. #20624 [executing] Julia TP2 watchdog — ready_for_review
-8. #20883 [deployed] Promoter fix shipped — monitor next promoter cycle picks queued ideas
-9. #20894 [deployed] Shallow analysis 297 — enforce rule 263 probe-first
-10. #20895 [deployed] Idea-filing 297 — enforce rule 91/93 compliance
-
-Reference IDs:
-- Ideas deployed this session: #20883, #20894, #20895, #20903
-- Ideas in flight: #20071, #20336, #20340, #20410, #20493, #20509, #20517, #20624, #20662, #20672
-- Files touched: cron/cron_orchestrator_triage.php, lib/lora_shadow_health.php, cron/cron_ruben_implement.php, cron/cron_ideas_promoter.php, orchestrator_config, monitoring_metrics, cron_heartbeat_log
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+When done, append to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
 
-### `1785463237084` — 8/1/2026, 10:12:40 AM PT — 1246 turns
+### `1785463237084` — 8/1/2026, 11:41:29 AM PT — 1322 turns
 
 **Original task:**
 
@@ -454,49 +221,354 @@ Odd that it's not there next to the 4/ 13 open complaint. Anyway yeah that needs
 **Last PICKUP PROMPT:**
 
 ```
-ard: investigation 10, round 2
+ on investigation 10, round 2.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #20680 [executing], TDSHS responses rewritten in Ruben's voice, awaiting his review before PDF renders.
+Pick up task #20645 [executing] and #20634 [executing] — surface the Evidence panel and stand up the two corrective measures for AZDHS.
 
-Where we left off (verified 2026-08-01 10:11 PT):
-- Three TDSHS responses rewritten per Ruben's correction: tone and strategy, not laws. Transmission-defect frame from RCA_shared_facts_named_complaints.md. Zero admissions, zero names, zero em dashes, zero allegation restatement, one continuous-improvement clause each, all grep-verified.
-- Deployed to /var/www/emtskills/uploads/tdshs/inspection-5196-2026/ as the three DRAFT_response_*.md files (root 644).
-- Dashboard row posted: investigation 10, round 2, with full posture note.
-- Local review copies in /Users/rubenmajor/Desktop/tdshs_rewrites/ including TDSHS_RESPONSE_SUMMARY.md (verified on disk).
-- PDF renders NOT yet produced. Server has wkhtmltopdf and google-chrome. Prior PDFs on disk are from the 7/27 drafts.
-- Kanthack double control number clarification (1080261815 / 1080261891) not yet drafted.
-- Sabrina CAPCE question: Ruben has NOT answered it and will not unless she pushes. Keep it out of everything.
+Where we left off (verified 2026-08-01 11:40 PT):
+- #20633 [rejected] is closed. 25324T-01 had access twice. The corrected scope is in #20643 [awaiting_review], waiting on Ruben approval.
+- #20645 [executing] is dispatched to the executor but stalled 9 minutes in idle. Scope: Evidence panel per named student on institutional_compliance.php investigations tab using NoiDefenseEvidence::forStudent(slug, state), plus Copy Narrative, batch view, unstated-standard detector, complaint-predates-course-end detector, third-party-figure scrubber, computed-field filter, certificate-retrieval helper, signature hash check per rule 301. Insertion point is inside the investigation card render loop starting around line 674 of institutional_compliance.php in /var/www/emtskills/personnel/.
+- #20634 [executing] is dispatched to the executor but also stalled. Scope: (1) externship assignment-latency monitoring cron using existing get_externship_pending_queue / assignment_latency_days, alerting when rows age past threshold; (2) portal receiving-record verification gating deadline logic on record existence.
+- TDSHS rewrites v2 are deployed and grep-verified on server: DRAFT_response_1080261869_Smith.md, DRAFT_response_1080261887_Sheets.md, DRAFT_response_1080261891_Kanthack.md in /var/www/emtskills/uploads/tdshs/inspection-5196-2026/. PDF renders needed.
+- Durable library: NoiDefenseEvidence.php in /var/www/emtskills/personnel/lib/ carries SUBMISSION_GRACE_DAYS=31 (AZ-only, verified), per-state window map (AZ = A.A.C. R9-25-304(E)(1), TX = 25 TAC 157.34), and a graceDays method with an $includeDefault flag that refuses for unverified states.
+- DuplicateAccountDetector.php is hand-shipped and verified: 873 duplicate groups, 312 with split graded work. Not yet wired (registration hook, cron, archived-account alert).
+- Rule 302 (regulator response doctrine) is in /Users/rubenmajor/Documents/Cline/Rules-archive/302-regulator-response-doctrine.md. Rule 301 (canonical signature) is in 301-ruben-canonical-signature.md. Both indexed in _RULE_TREE.md.
 
-Open threads:
-1. #20680 [executing] Ruben reviews the three response texts. On sign-off, render PDFs, run the rule-302 grep suite on the rendered PDFs via pdftotext (names, em dash, apology family, should have failed, EMSU-side, better business, course total), verify signature per rule 301, and stage for sending by 8/6.
-2. #20645 [queued] Surface NoiDefenseEvidence on the investigations page.
-3. #20643 [queued] AZDHS 0460 re-enrollment offer for 25324T-01.
-4. #20634 [queued] Externship assignment-latency monitoring and portal verification.
-5. #20633 [queued] Confirm not duplicating #20643 and close it.
-6. #20640 [rejected] Hand-shipped DuplicateAccountDetector. Wiring (registration hook, cron, alert) tracked in investigation 6 note, needs a fresh idea when picked up.
+Open threads to drive next:
+1. #20645 [executing] Surface the Evidence panel. Check get_idea_progress first. If it landed, verify the panel appears on the investigations tab. If it is still stalled at the 15-minute mark, hand-ship per GATE C: add a collapsible section inside the investigation card render loop that calls NoiDefenseEvidence::forStudent for each named student in the investigation, renders the evidence fields, and provides a Copy Narrative button.
+2. #20634 [executing] Stand up the two corrective measures. Check get_idea_progress. If stalled, hand-ship: add a cron script at cron/externship_latency_alert.php using the existing externship queue query, and add a receive-record gate in the submission deadline pipeline.
+3. #20643 [awaiting_review] Submit corrected 0460 scope for Ruben approval: third upload availability, psychomotor reconciliation, free re-enrollment offer, no certificate.
+4. PDF renders for the three TDSHS rewrites: wkhtmltopdf is on the server at /usr/bin/wkhtmltopdf. Render all three markdown files to PDF, replacing the 7/27 originals.
+5. Kanthack 1080261815 / 1080261891 dual control number clarification — Ruben decision pending on whether to send as a standalone
+```
+
+### `1785601440006` — 8/1/2026, 11:38:24 AM PT — 342 turns
+
+**Original task:**
+
+```
+**TELEPHONY ISSUE — FULL STATUS, ROOT CAUSE, AND WHERE WE GO NEXT**
+
+**The question Ruben asked:** Two-part — (1) is the EMSU phone system healthy, and (2) can we prioritize callers / route good and bad calls differently (pre-call prospect detection + topic-based routing for poor-rated calls). Both parts got real answers this session.
+
+**Issue #1 — Phone system health: WORKING, but a serious latent defect is now confirmed.**
+- Live telephony check passed: Vapi AI fallback leg healthy, inbound line alive.
+- Last 24h: **153 calls** to the EMSU Main Line (+19412545009), all handled by Vapi, avera
+```
+
+**Ideas referenced:** #12606, #12815, #12830, #16152, #16154, #16732, #1745, #18935, #194125, #20027, #20045 [approved], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20081 [proposed], #20407 [approved], #20648, #20880 [proposed], #20933 [pending], #25511, #7414, #9077, #9086, #9090, #9112, #9222, #9501
+
+**Last PICKUP PROMPT:**
+
+```
+ ticks with 0 repairs earlier.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — Chat Widget Agent (CFA) direct-human bypass for gatekeeping-frustrated callers: implement idea #20933.
+
+Where we left off (verified 2026-08-01 11:37 PT):
+- Idea #20933 filed and APPROVED: "Chat Widget Agent (CFA) — direct-human bypass for gatekeeping-frustrated callers (rule-297 reclassification from LiveChat)" in admin_portal.orchestrator_ideas (id 20933)
+- Rule-297 classification done: LiveChat is legacy (.bak files); live channel is the Chat Widget Agent (CFA) backend /var/www/emtskills/api/chat_widget_api.php with /var/www/emtskills/lib/widget_force_handoff.php as the existing human-bypass path
+- Voice counterpart #20049 [rejected] per Ruben directive; all other voice ideas approved (#20045, #20046, #20047, #20050, #20051, #20081, #20407, #20880)
+- Voice phone fix stayed live all morning: +19412545009 routes through PERSONA-ROUTING (assistantId null on 97e4226b), CA AI disclosure block in canonical sync script, strtotime + vapi_call_id bugs fixed, watchdog 16/16 ticks clean
+
+Open threads to drive next:
+1. #20933 [approved] — Implement the CFA bypass: wire escalation_reason=gatekeeping_frustration detection in chat_widget_api.php into widget_force_handoff.php for immediate human agent handoff. Start by reading both files to find the escalation/force-handoff trigger points.
+2. #20050 [approved] — Voice: topic-based routing to human agents for poor-rated calls once lane success_score data accumulates in voice_call_log.
+3. #20081 [approved] — Voice: after 7 days of lane-split data, run the 4-assistant A/B (Ronald, Katie, Eric, Bella) by reactivating demoted candidates in voice_persona_variants.
 
 Reference IDs:
-- Ideas: #20680 [executing], #20393 [deployed], #20645 [queued], #20643 [queued], #20634 [queued], #20633 [queued], #20640 [rejected]
-- Files: /var/www/emtskills/uploads/tdshs/inspection-5196-2026/DRAFT_response_1080261869_Smith.md, DRAFT_response_1080261887_Sheets.md, DRAFT_response_1080261891_Kanthack.md, /Users/rubenmajor/Desktop/tdshs_rewrites/
-- Dashboard: investigation 10, round 2
+- Ideas: #20933 [approved], #20049 [rejected], #20045-#20081 [approved]
+- Files touched: /var/www/emtskills/api/chat_widget_api.php, /var/www/emtskills/lib/widget_force_handoff.php (read targets), /var/www/emtskills/api/voice/vapi_server_webhook.php, /var/www/emtskills/scripts/vapi_canonical_sync.php, /var/www/emtskills/scripts/voice_watchdog_auto.php, admin_portal.orchestrator_ideas (row 20933)
 
-When done, append to cline_task_ledger.md, run order 66.
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785608591871` — 8/1/2026, 11:32:15 AM PT — 38 turns
+
+**Original task:**
+
+```
+#Argus
+
+Argus is slow AF for some reason  Per Jon. Why?
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #12584, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1779, #1798, #1828, #19338, #19567, #19686, #1998, #20042, #2063, #2065, #20662, #2073, #20944 [queued], #20945 [queued], #2127, #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+ and I run #20945 immediately.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task: Argus slow due to dark GLM-5.2 PP=6 ring (only 2/6 nodes alive)
+
+Where we left off (verified 2026-08-01 11:30 PT):
+- argus-chat lane points at the GLM-5.2 ring 127.0.0.1:8210 (idea #19686, added 07-28). Backend returns HTTP 000: ring cannot form with only 2 of 6 ranks.
+- Cato (spark-2aa8, :2204) rank-0 master: vLLM PP=6 running since 11:23, 0% GPU, no :8210 listener, stuck at rendezvous waiting for ranks 1-4.
+- Cesar (spark-3b41, :2203) rank-5 --headless: connected to master:29501, no :8210 listener yet.
+- Julia (:2205) and Claudia (:2206): no ring process, both ranks missing. Tiberius/Augustus likely dark (Tiberius heartbeat stale since 07-24).
+- Failure chain per request: :8210 HTTP 000, fall through frankenstein-tools (gpt-oss pool degraded, Julia down since 07-30), then paid DeepSeek/Claude at 30-60s per hop. Root cause of the ~46% paid-cloud spill too.
+
+Open threads to drive next:
+1. #20945 [queued] - Quick fix: stop the two running vLLM procs, relaunch ring as PP=2 (Cato node-rank 0, Cesar node-rank 1 headless, nnodes=2), verify :8210 binds, then confirm argus-chat answers fast. 5 minutes. Highest ROI next step.
+2. #20944 [queued] - Restore full PP=6: relaunch Julia, Claudia, Tiberius, Augustus ranks so the ring scales back to 6 nodes, then move PP back to 6.
+
+Reference IDs:
+- Ideas filed: #20944 [queued], #20945 [queued]
+- Files touched: none (probe-only diagnosis)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785537361555` — 8/1/2026, 11:27:49 AM PT — 482 turns
+
+**Original task:**
+
+```
+What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor for 50 minutes
+```
+
+**Ideas referenced:** #10108, #10666, #10740, #11741, #11781, #11944, #11953, #12059, #12060, #12314, #12363, #12365, #12366, #12368, #1239, #12477, #12503, #12576, #12591, #12609, #12611, #12617, #12618, #12619, #12657, #12714, #1280, #12824, #12872, #12878, #12894, #12900, #13108, #13202, #13418, #13874, #1468, #16063, #16163, #16265, #16304, #16718, #16834, #16844, #17202, #17205, #177862, #177914, #1784, #18312, #18326, #18360, #19177, #19188, #19338, #20130, #20333, #20410, #20495, #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #20630, #20639 [proposed], #20641 [proposed], #20644 [proposed], #20648 [queued], #20723, #20755, #20899 [filed], #2091, #20914 [deployed], #2124 [open], #2137, #2182, #2212, #24583, #25170, #3093, #3376, #3378, #3822, #4516, #4987, #6978, #7126, #7181
+
+**Last PICKUP PROMPT:**
+
+```
+t and code-fence items closed.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Ruben Executor doctor: deadlock diagnosis + federation hardening.
+Where we left off (verified 2026-08-01 11:26 AM PT):
+- Watchdog deployed + cron-registered: `/var/www/emtskills/cron/cron_orchestrator_stuck_chain_watchdog.php` escalates on `observed` + model=NULL >= 5 consecutive rows (writes `orchestrator_events` agent_stuck_observed_loop + snoozes handoff 30 min). Root crontab line confirmed: `*/15 * * * * /usr/bin/php ...`.
+- Executor LLM path healthy: FRANK_EXECUTOR_CAP=64, probes 200 in 1.25-3.3s. GLM ring :8210 still decode-dead (fail_streak 4652); GLM-first disabled (restore conf: `/etc/systemd/system/frankenstein-tools.service.d/70-glm-first-all-lanes.conf.disabled-executor-deadlock-20260731`).
+
+Open threads to drive next:
+1. #20914 [deployed] — idea-4516 auto-expire-incident-gates writes observed/model=NULL by design (no LLM ever called). Watchdog will re-escalate every 30 min forever. Decide: whitelist this chain as a legitimate no-LLM watch, or accept perpetual snooze churn. Confirm with Ruben.
+2. #20648 [deployed] — When GLM ring :8210 is restored (Cato node vLLM back), re-enable GLM-first lane and verify executor remains healthy without the throttle. Also run `bug_library_check_before_fix` on symptom "idea-4516 observed-loop" to mark #2137 resolution.
+3. #20899 [deployed] — Completed audit; if new completions intersect executor routing, apply the same observed-vs-dead model=NULL distinction before claiming "dead".
+
+Reference IDs:
+- Ideas filed: #20639 [deployed], #20641 [superseded], #20644 [deployed], #20648 [deployed], #20899 [deployed], #20914 [deployed].
+- Bug library: frankenstein_router_incidents #2124 (closed), #2137 (recorded, resolution pending in-library).
+- Files touched: cron_orchestrator_stuck_chain_watchdog.php, frankenstein-tools.service.d/*.conf (CAP=64), config.yaml.bak-ruben-executor-route-fix-20260801.
+- When done: append to cline_task_ledger.md per rule 07, then run order 66 per EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785600191339` — 8/1/2026, 11:26:46 AM PT — 302 turns
+
+**Original task:**
+
+```
+#Kaizon / Bugs
+
+I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
+```
+
+**Ideas referenced:** #12724, #1468, #14937, #19188, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #3076, #3077, #3081, #7358, #9269
+
+**Last PICKUP PROMPT:**
+
+```
+ a 5-minute automated cycle.**
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up KAIZEN pipeline — all 10 durable fixes deployed, pipeline firing recipes end-to-end.
+
+Where we left off (verified 2026-08-01 11:25 PT):
+- 10 fixes deployed: #20884 [deployed] target SQL, #20885 [deployed] recipe fire bridge, #20886 [deployed] freshness/dedup, #20887 [deployed] surface catalog, #20888 [deployed] chronic gate, #20889 [deployed] Moodle target, #20890 [deployed] pipeline cron, #20891 [deployed] surface refresh, #20910 [deployed] Bug Hunter bridge, #20911 [deployed] persistent classifier
+- Pipeline fires 17 recipes end-to-end (was 0). 16 recipes fired, 8 chronic gates learned. 296 tables cataloged. 7,210 freshness scored. 3 crons live every 5 min.
+
+Open threads to drive next:
+1. Verify Moodle bridge fires: wait for next Moodle error, confirm recipe fires through v_kaizen_moodle_failures
+2. Verify Bug Hunter bridge fires: next bug_hunter_runs scan should populate bridge via sp_kaizen_bug_hunter_ingest
+3. Monitor chronic gate escalations: watch kaizon_chronic_holds for automatic holds on 3+ repeat failures
+
+Reference IDs:
+- Ideas filed: #20884 [deployed], #20885 [deployed], #20886 [deployed], #20887 [deployed], #20888 [deployed], #20889 [deployed], #20890 [deployed], #20891 [deployed], #20910 [deployed], #20911 [deployed]
+- Files touched: /var/www/emtskills/cron_kaizen_pipeline.php, /var/www/emtskills/cron_kaizen_classifier.php, /var/www/emtskills/cron_kaizen_surface_refresh.php, admin_portal DB: v_kaizen_moodle_failures, sp_kaizen_fire_recipe, sp_kaizen_dedup_notify, sp_kaizen_chronic_gate, sp_kaizen_bug_hunter_ingest, sp_kaizen_classifier_run, kaizen_failure_surface_catalog, kaizen_freshness, kaizen_notification_dedup, kaizen_chronic_gate_learning
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785581189111` — 8/1/2026, 11:26:41 AM PT — 478 turns
+
+**Original task:**
+
+```
+I need to make sure that the orchestra is running and that we don't just have a bunch of ideas queuedOr work cute.
+```
+
+**Ideas referenced:** #113026, #12022, #12184, #12430, #12802, #1281, #1309, #1314, #15333, #15367, #15652, #15906, #15955 [deployed], #16523, #16881, #17913, #18135, #18357, #18395, #18442, #1850, #18761, #18763 [deployed], #18793 [deployed], #19079, #19325, #19338, #19435, #19458, #19490, #19491, #19494, #19503, #19504, #19509, #19629, #19643, #19661, #19670, #19684, #20044 [deployed], #20071 [queued], #20336 [in_progress], #20340 [proposed], #20350, #20408, #20410 [queued], #2043, #20492 [in_progress], #20493 [in_progress], #20507 [in_progress], #20509 [proposed], #20517 [proposed], #20569, #20613 [proposed], #20624 [in_progress], #20662 [in_progress], #20672 [in_progress], #2076, #20793 [proposed], #20858 [queued], #20859 [blocked], #20860 [queued], #20869 [proposed], #20883 [proposed], #20894 [proposed], #20895 [proposed], #20903 [approved], #2113, #2114, #2123, #3541, #3953, #3957, #444279, #444280, #444539, #444542, #445761, #4536, #4747, #5029, #5031, #5034, #5516, #5778, #7925, #8247, #8281, #8321, #8563, #8598, #9222, #9235, #9581 [deployed]
+
+**Last PICKUP PROMPT:**
+
+```
+mpl_failed` in last 15 minutes
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — orchestra fix complete: 10 ideas shipping, need deploy tracking.
+
+Where we left off (verified 2026-08-01 11:25 PT):
+- All 10 target ideas building under 40-worker cap, 90-min reclaim timeout.
+- 7 root causes fixed: schema drift, shadow mode, PHP lint on TS, queued dead-zone, reclaim timeout, capacity cap, heartbeat table.
+- 3 ideas ready_for_review (#20071 [in_progress], #20493 [in_progress], #20624 [in_progress]), 7 drafting.
+
+Open threads to drive next:
+1. #20903 [deployed] — Monitor 40-worker cap for stampede symptoms (adapter 400s). Auto-revert if impl_failed spikes above 3 within 5 min.
+2. #20672 [in_progress] — Payment-attribution flow: track through to deployed, deploy_churn_cap may gate the final deploy.
+3. #20340 [in_progress] — Externship send pipeline: verify it deploys and actually sends.
+4. #20894 [proposed] — 297 shallow analysis: audit whether circuit-breaker claim was foundationless per rule 263.
+5. #20895 [proposed] — 297 missing idea-filing: ensure every open thread has a filed idea.
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: #20883 [deployed], #20903 [deployed], #20894 [proposed], #20895 [proposed]
+- Files touched: cron/cron_orchestrator_triage.php, cron/cron_ruben_implement.php, cron/cron_ideas_promoter.php, lib/lora_shadow_health.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785599739497` — 8/1/2026, 11:07:20 AM PT — 258 turns
+
+**Original task:**
+
+```
+I want to get back to work on clustering, parallelism and tarpipe, particularly with the executor, orchestrator, CFAs and autonomous tasks. Tell me where we are at with this and how we can increase capacity even more
+```
+
+**Ideas referenced:** #1130, #1131, #12363, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16610, #16778, #16802, #16803, #16839, #16851, #16881, #17246, #17320, #17357, #1744, #17458, #17717, #17736, #17781, #1779, #1798, #1828, #18350, #18353, #18355, #19567, #19840, #19921, #20042, #20128, #20130, #20193, #20328, #20333, #20410, #20420, #20423, #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #2063, #20630, #2065, #20662, #20663 [rejected], #20665, #20672 [proposed], #20711, #2073, #20877 [queued], #20878 [queued], #20879 [queued], #20900 [proposed], #20901 [proposed], #20902 [proposed], #20934 [approved], #2114, #2125, #2126, #2127, #2128, #3917, #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+y two truncated completions had the same root cause: I was manually writing the PICKUP PROMPT block from memory instead of mechanically copying the MANDATORY COMPLETION FORMAT template. The gaps:
+
+1. **Truncated completion #1 (~9:41 PT):** I omitted the PICKUP PROMPT block entirely—thinking the report "wasn't a task completion"—but it WAS (it had investigations, tool calls, and a build report). Rule-91 says "status reports, investigations, diagnostics are NEVER Q&A and MUST have the block."
+
+2. **Truncated completion #2 (~10:18 PT):** I included a summary but used `---` dividers instead of the required U+2550 runs, left out the Open threads section, and invented task ID conventions instead of using real idea numbers from `create_idea`.
+
+**The fix deployed:** The mechanical template is in the system prompt. The *behavioral* fix is the preflight gate pattern applied to completions: before any `attempt_completion`, the model must verify the PICKUP PROMPT block is present with actual dividers, actual idea numbers, and actual timestamps. No more hand-writing from memory.
+
+---
+
+<attempt_completion>
+<result>
+# Clustering / Parallelism / Tarpipe — Final Shipment Report (verified 2026-08-01 ~11:06 PT)
+
+## Built & Deployed This Session
+
+| # | What | Status |
+|---|------|--------|
+| **#20878** | Capacity-ramp G3 gate fix (LITELLM_MASTER_KEY from /etc/litellm/env instead of missing /tmp/ll_key.txt) | **[deployed]** Applied parallel=48, rate=144, workers=24 — all 4 gates PASS, guard lint OK |
+| **#20879** | Daystrom Council parallelism telemetry runner | **[deployed]** PHP reads real `agent_brainstorm_turns` (not empty `daystrom_sessions`), inserts into `daystrom_parallel_execution_log`, cron installed (every 2h), DB row confirmed (session 861410692, 12 agents, 32.8min) |
+| **Rule-297 Preflight** | `/usr/local/bin/rule297_fleet_preflight.sh` — mandatory fleet-state probe gate | **[deployed]** Verified live: julia=OK (spark-6ae6, vllm=0, ray=15), claudia/cato/cesar/artemis=UNREACHABLE via current probe ports |
+
+## Approved — Ready to Build (Next Window)
+
+| # | Idea | Priority | Effort |
+|---|------|----------|--------|
+| **#20900** | Idea Clustering Engine — semantic batched approval+build+ship across all operations | P0 | Large |
+| **#20901** | Operations-Wide Parallelism — lift executor to 8 concurrent builds + parallelize CFA triage + batch grievance verification | P0 | Medium |
+| **#20902** | Tarpipe as System-Wide Context Broadcast — one tar bundle streamed to N workers instead of N individual loads | P2 | Medium |
+| **#20934** | .clinerules stanza: rule-297 fleet preflight gate mandatory before any fleet-state claim | P1 | Small |
+
+## 20877 — Julia/Claudia 120B TP=2
+
+| What was found | Evidence |
+|----------------|----------|
+| **Julia (spark-6ae6)** alive over SSH 2205, hostname confirmed, Ray=15 procs running, GPU=0% | Live `sudo /usr/local/bin/rule297_fleet_preflight.sh` |
+| **No vLLM engine on port 8000** (vllm_count=0) | Same probe |
+| **Claudia (spark-6d51)** UNREACHABLE on port 2208 | Probe output: `claudia UNREACHABLE` — the real SSH port for Claudia is unknown (the 2206 previously used routes to WOPR, not spark-6d51) |
+| **WOPR reverse tunnels 11506/11513** both LISTENING — the HTTP=000 is from no vLLM behind the tunnel, not a dead tunnel | `ss -tlnp` confirmed LISTEN on both |
+
+> **Does it need a dedicated window?** YES — Julia's Ray cluster is alive but no vLLM engine is serving, Claudia needs SSH port discovery (UDM/UniFi to get the real LAN IP), and a model-training-capable agent should handle the TP=2 launch.
+```
+
+### `1785604764278` — 8/1/2026, 10:49:44 AM PT — 66 turns
+
+**Original task:**
+
+```
+based on the complaints received and current status, what kind of actions can we put into place that can make things better? What do you recommend? 
+
+https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations
+```
+
+**Ideas referenced:** #16078, #16079, #16083, #16152, #16524, #16957, #178501, #18822, #18823, #19442, #19591, #19840, #20193, #20328, #20333, #20410, #20420, #20423, #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #20630, #20662, #20663 [rejected], #20665, #20672 [proposed], #20711, #20922 [proposed], #20923 [proposed], #20924 [proposed], #20925 [proposed], #20926 [proposed], #20927 [proposed], #2125, #2126, #2127, #2128, #450438, #5654, #9791
+
+**Last PICKUP PROMPT:**
+
+```
+(verified tail shows the row).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1785012025445: EMSU institutional compliance, investigation data review + recommendations
+
+Where we left off (verified 2026-08-01 10:47 PT):
+- compliance_investigations: 18 open across 6 regulators (TDSHS 9, AZDHS 2, BPPE 3, CAPCE 1, SD EMSA 1, WF 1, Multi 1), all open, zero closed
+- compliance_investigation_responses: 167 rows, 3 TDSHS 8/6 student-complaint responses drafted but not sent, AZDHS July response transmitted 7/31 ~3h late
+- complaint_routing_policy notify_emails EMPTY, grievances 83 total with 4 pending_review + 4 pending_admin_complete, GRV-2026-0069 zero staff response became TDSHS complaint 1080261887
+- Root causes: silent send failures, grievance no-touch, 873 dupes/312 split-graded unwired detector, no SLA watchdog
+- 6 ideas filed #20922 [proposed] through #20927 [proposed]
+
+Open threads to drive next:
+1. #20922 [proposed] Compliance response deadline SLA watchdog, cron on compliance_investigation_responses flagging stale drafts, escalate to Discord/email
+2. #20923 [proposed] Grievance first-touch SLA, 24h auto-ack + 48h staff escalation, reuse grievance_sla_alerts + grievance_automation_config
+3. #20924 [proposed] Backfill complaint_routing_policy notify_emails + wire routing notifications (currently empty)
+4. #20925 [proposed] Wire duplicate-student detector into registration + weekly monitoring (873 dupes, 312 split-graded)
+5. #20926 [proposed] Cross-regulator complaint pattern RCA, quarterly aggregation to master dashboard
+6. #20927 [proposed] Investigation response send-audit, draft to sent trace with timestamps
+
+Reference IDs:
+- Ideas filed: #20922 [proposed], #20923 [proposed], #20924 [proposed], #20925 [proposed], #20926 [proposed], #20927 [proposed]
+- Files touched: /var/www/emtskills/personnel/institutional_compliance.php, /var/www/emtskills/personnel/lib/InvestigationsHydrator.php, compliance_investigations, compliance_investigation_responses, compliance_investigation_students, grievances, complaint_routing_policy, orchestrator_ideas, cline_task_ledger.md
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
 <task_progress>
-- [x] Understood Ruben's correction: TONE and STRATEGY, not laws/deadlines
-- [x] Read rule 302, all three prior drafts, and the RCA shared fact base
-- [x] Rewrote Smith, Sheets, Kanthack responses in Ruben's voice (transmission-defect frame, no admissions)
-- [x] Deployed all three to the server (root 644)
-- [x] Rule-302 grep suite verified on all three deployed versions
-- [x] Posted dashboard row (investigation 10, round 2)
-- [x] Saved and re-verified TDSHS_RESPONSE_SUMMARY.md on Desktop
-- [ ] PDF renders (wkhtmltopdf available; markdown is current truth)
-- [ ] Kanthack double control number clarification letter
-- [ ] Ruben review of response texts
+- [x] Locate investigations tab code and InvestigationsHydrator.php
+- [x] Read InvestigationsHydrator.php for DB merge logic
+- [x] Query compliance_investigations rows for current status
+- [x] Query compliance_investigation_responses and students
+- [x] Read HANDOFF_NOTES.md for recent complaint/investigation entries
+- [x] Query grievance queue + externship pending for root-cause grounding
+- [x] Check complaint_routing tables for existing automation
+- [x] Synthesize findings and write recommendations
+- [x] File ideas for improvements
+- [x] Append to cline_task_ledger.md (rule 07)
+- [x] Re-validate completion with rule 91 gate (all passed)
+- [x] Complete with attempt_completion
 </task_progress>
 </attempt_completion>
 ```

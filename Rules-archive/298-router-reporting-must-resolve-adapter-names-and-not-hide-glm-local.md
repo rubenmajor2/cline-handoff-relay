@@ -1,6 +1,14 @@
 # 298 — Router/adapter reporting MUST resolve alias names to real backends; never hide glm-5.2-local inside a pool aggregate
 
-Workspace-scoped. Source: 2026-07-28 Ruben directive (two rounds).
+Workspace-scoped. Source: 2026-07-28 Ruben directive (two rounds) + 2026-07-31 reaffirm ("make a rule that when i ask for this stuff i get pass through").
+
+## TRIGGER PHRASES — when ANY of these appear, this rule fires (MUST resolve to real backends, never alias-only)
+
+Ruben asks any variant of: "what's being served", "how much was X picked", "traffic breakdown", "GLM vs the 120Bs / deepseek", "pass through", "look inside", "the actual LLM", "what is that", "what's underneath", "break that down", "what's the blocker for GLM usage", "how do we get GLM up". ALSO fires when the ask is about ANY pool/adapter membership (frankenstein-tools, frankenstein-llm, emsu-codegen, emsu-executor-auto, frankenstein-405b). In ALL these cases:
+
+1. The FIRST reporting step is `tail -2000 /var/log/emsu-adapter-upstream.log` grouped by `upstream` (with timestamps). **CHECK LOG FRESHNESS FIRST** — `stat -c '%y' /var/log/emsu-adapter-upstream.log` vs `date`. If the log's last write is >15 min old while the adapter is active, the log is STALE/BROKEN — say so and do NOT claim any upstream share from it. A stale log means the adapter stopped recording upstream choices; alias-level audit counts are all you have, and you must label them as alias-level (not real-backend) data.
+2. Resolve upstream URLs to model names: `http://127.0.0.1:8210` = glm-5.2-local (ring), `http://10.100.0.5:8000` = artemis-gpt-oss-120b, `http://127.0.0.1:11513` = julia-120b, `http://127.0.0.1:11455` = Nero (vision/small), `http://127.0.0.1:11434` = WOPR ollama.
+3. For the "blocker" question (why is X getting so few picks): read the LIVE env `systemctl show frankenstein-tools.service -p Environment` — specifically `FRANK_TOOLS_UPSTREAMS` ORDER (first = first-try in load-balance) and `FRANK_BOX_CAPACITY` <port>=N. The upstream LIST ORDER is the routing priority, not the YAML tier_order doc.
 
 ## The rule
 
@@ -45,7 +53,20 @@ Ad-hoc synthetic benchmarks of glm-5.2-local produced numbers that flatly contra
 
 2026-07-28 — Ruben (round 1): "frankenstein-tools needs to be broken down, so does cline main to the ACTUAL LLM, lol that's like you're hiding what is actually happening... Same with emsu-codegen. Those are no[t] actual LLMs." (round 2): "we don't see GLM 5.2 local... Local GLM Needs to be the first pick in the spill le[dd]er before the 120[B]s. It needs some sort of exemption as far as tok/sec measurement is concerned which I'm not entirely convinced as a good measurement anyways because GLM Local 5.2 is lightning fast." Investigation confirmed: glm-5.2-local's true share is masked by adapter aliasing (floor 2.1% vs real ~7.8% of the pool per upstream log), and live code does not implement documented GLM-first priority (co-equal load-balanced peer instead).
 
+## 2026-07-31 drift finding (same-week regression — GLM-first ordering is GONE)
+
+Rule 298's 2026-07-28 finding documented live env `FRANK_TOOLS_UPSTREAMS=http://127.0.0.1:8210,http://10.100.0.5:8000` (GLM first, capacity 8210=32). **Re-verified 2026-07-31 18:58 PT: the ordering has been overwritten by later drop-ins.** Live env is now:
+
+```
+FRANK_TOOLS_UPSTREAMS=http://10.100.0.5:8000,http://127.0.0.1:11513,http://127.0.0.1:8210
+FRANK_BOX_CAPACITY=8000=14,11513=8,8210=16
+```
+
+GLM is LAST in upstream order (Artemis first, Julia middle) and its capacity was HALVED (32 -> 16). This is the concrete blocker for glm-5.2-local usage: the adapter's `_least_loaded_order()` load-balances in list order, so GLM is only reached after Artemis and Julia are busy, and it admits half the concurrency it had when the 07-28 directive was live. The 07-28 "GLM-first" fix did not survive the 07-29..07-31 ring-wedge tuning drop-ins (glm-budget-tune, ring-capacity-reconcile, cline-priority-over-batch, glm-ceiling-above-wedged-floor). ANY subsequent fix in this area must re-verify the live env; the drop-in stack is exactly what regressed it.
+
+Also verified 2026-07-31 18:58 PT: `/var/log/emsu-adapter-upstream.log` last write = 17:28:04 PT while the adapter has been active since 17:23:01 PT — the upstream log is STALE (stopped recording ~5 min after the 17:23 service start). Until fixed, true upstream share is unmeasurable; alias-level audit picks are the only signal. The ring itself is healthy (curl 127.0.0.1:8210/health = HTTP 200, vllm engine up, 2 running / 0 waiting at 18:58 PT).
+
 ## Last updated
 
-2026-07-28 — added "Benchmark methodology pitfalls" section after live-testing the GLM-first priority fix: reasoning-token conflation and synthetic-concurrent-load artifacts caused a false "GLM is slow" reading that contradicted Ruben's real-world experience. Real-traffic TTFB (4.25s glm vs 9.71s artemis) confirmed Ruben was right.
+2026-07-31 — added TRIGGER PHRASES + log-freshness gate + upstream-order drift finding (GLM demoted to last, capacity 16, upstream log stale since 17:28). Ruben: "make a rule that when i ask for this stuff i get pass through. Also, that's really really bad for glm local usage. How do we get that up? What's the blocker?"
 

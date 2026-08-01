@@ -6,14 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/31/2026, 6:07:02 PM PT | window: last 72h | 99 tasks | index total 350 (parsed 3, cached 347)
+Generated: 7/31/2026, 7:07:03 PM PT | window: last 72h | 100 tasks | index total 352 (parsed 4, cached 348)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785463237084` | 7/31/2026, 6:01:51 PM | 800 | 3085KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
+| `1785531619110` | 7/31/2026, 7:06:59 PM | 455 | 24173KB | The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "servi |
+| `1785549425107` | 7/31/2026, 7:06:45 PM | 25 | 334KB | Play doctor of frankenstein - frankenstein-llm appears to be having difficulty with subage |
+| `1785463237084` | 7/31/2026, 7:00:49 PM | 966 | 3416KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
+| `1785548524428` | 7/31/2026, 6:43:21 PM | 6 | 16KB | Jon says Daystron counsil stopped working |
 | `1785537361555` | 7/31/2026, 5:56:13 PM | 152 | 588KB | What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor  |
 | `1785360672171` | 7/31/2026, 5:55:46 PM | 938 | 5410KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
-| `1785531619110` | 7/31/2026, 5:29:44 PM | 402 | 23857KB | The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "servi |
 | `1785537564406` | 7/31/2026, 4:33:18 PM | 266 | 5444KB | #Argus |
 | `1785399211024` | 7/31/2026, 4:30:59 PM | 1674 | 7063KB | #Julia/Claudia |
 | `1785528867234` | 7/31/2026, 4:21:05 PM | 498 | 1481KB | Saying it is dismissed is not right. Just say it's moot. Then this way we don't call it di |
@@ -108,13 +110,82 @@ Generated: 7/31/2026, 6:07:02 PM PT | window: last 72h | 99 tasks | index total 
 | `1785266802256` | 7/28/2026, 7:24:10 PM | 178 | 975KB | It appears that I have Frankenstein LLM windows that are getting stalled out trying to use |
 | `1785267604245` | 7/28/2026, 7:20:34 PM | 246 | 3133KB | Pick up task — Fix CFA Voice 52% short-leg rate and broken DEADMAN escalation pipeline. Tw |
 | `1785284021265` | 7/28/2026, 7:20:11 PM | 557 | 1134KB | Pick up the QB task that was just closed out. where we were tyring to figure out to do wit |
-| `1785281710410` | 7/28/2026, 6:42:22 PM | 218 | 920KB | for this image on my desktop, compress and upload it here: https://www.emsuniversity.com/i |
 
 ---
 
 ## Per-window detail
 
-### `1785463237084` — 7/31/2026, 6:01:51 PM PT — 800 turns
+### `1785531619110` — 7/31/2026, 7:06:59 PM PT — 455 turns
+
+**Original task:**
+
+```
+The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "serving properly" today, and I am not going to pretend otherwise. Here is the honest, complete accounting of a very long session — what is fixed for real, what I got wrong, and exactly where the next window should start.
+
+THE ARC. Last night the ring served 40-67 turns/hour for 10 hours, then died at 01:03 PT. Today it has died or wedged within minutes of every boot, across every config permutation I tried. I fixed five real adapter-side routing bugs and shipped an auto-relaunch watchdog that genuinely works n
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12657, #12824, #12872, #12878, #13202, #13840, #15144, #16163, #16254, #16265, #16304, #16844, #1754, #1755, #178531, #18312, #18326, #18720, #19125, #19903, #19907, #19925, #20005 [proposed], #20069, #20247, #20264 [queued], #20272 [deployed], #20297 [queued], #20302 [deployed], #20311 [deployed], #20495 [executing], #20498 [queued], #2050, #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20553 [blocked], #20625 [proposed], #20626 [proposed], #2092, #2101, #2118, #48031, #48140
+
+**Last PICKUP PROMPT:**
+
+```
+r in the traffic distribution.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785314663557, GLM ring RCA done. Ring is 0.2% of traffic. Awaiting Ruben decision on next lever (reboot vs RoCE vs deprioritize).
+
+Where we left off (verified 2026-07-31 18:49 PT):
+- RING: UP (HTTP 200, stable since 13:29 PT, 5+ hours). But glm-5.2-local got only 3 turns (0.2%) in the last hour. Paid cloud glm-5.2 got 44 turns (15x more). Artemis 120B carries 99.9% of 120B gen (22.7M tokens). GLM ring = 22K tokens.
+- ROOT CAUSE of intermittent wedge: NCCL over TCP/mgmt NIC (enP7s7) with IB_DISABLE=1. CX7 RoCE fabric (roceP2p1s0f0/f1, 4096 MTU, /30 P2P ring) sits IDLE. NCCL_IB_HCA=rocep1s0f1 points to WRONG device.
+- WATCHDOG: working as designed (active, fails=0, silence = healthy).
+- FRANKENSTEIN-TOOLS and FRANKENSTEIN-LLM are passthrough names. Inside both: artemis-gpt-oss-120b (workhorse), julia-120b, glm-5.2-local (ring). Router audit does not record which pool member served each turn.
+- RUBEN QUESTION answered: GLM ring is 0.2% of traffic. Fixing the wedge has near-zero fleet impact. Artemis is the real 120B backbone.
+
+Open threads to drive next:
+1. #20626 [proposed], RoCE activation. DEFER. Ring is 0.2% of traffic, fixing wedge has near-zero fleet impact. (human-only decision, no idea)
+2. #20625 [proposed], watchdog SSH timeout hardening. Low priority.
+3. #20528 [queued], NCCL investigation, superseded by #20626 [proposed]. (verified: status=ready_for_review dev_stage=ready_for_review)
+4. #20553 [queued], watchdog live and working. (verified: status=ready_for_review dev_stage=ready_for_review)
+5. #20517 [blocked], layer 1 shipped, remaining MCP registration. (verified: status=in_progress dev_stage=impl_failed)
+6. #20506 [blocked], GATE C cleared. (verified: status=in_progress dev_stage=impl_failed)
+7. #20536 [queued], supersede. (verified: status=ready_for_review dev_stage=ready_for_review)
+8. #20495 [executing], watchdog shipped, add forced-death test when stable. (verified: status=in_progress dev_stage=idle)
+9. #20498 [queued], close/supersede. (verified: status=ready_for_review dev_stage=ready_for_review)
+10. #20297 [queued], drift protection. (verified: status=ready_for_review dev_stage=ready_for_review)
+11. #20264 [queued], derive SLO/ceiling constants. (verified: status=ready_for_review dev_stage=ready_for_review)
+12. #20005 [proposed], supervisor consolidation. (verified: status=proposed dev_stage=idle)
+
+Reference IDs:
+- Ideas filed: #20625 [proposed] (verified: status=proposed dev_stage=idle), #20626 [proposed] (verified: status=proposed dev_stage=idle)
+- Ideas reconciled: #20553 [queued], #20536 [queued], #20528 [queued], #20517 [blocked], #20506 [blocked], #20495 [executing], #20498 [queued], #20311 [deployed], #20302 [deployed], #20297 [queued], #20264 [queued], #20005 [proposed]
+- Files touched: none
+- Ring map: Cato r0 (.115), Augustus r1 (.244), Pompey r2 (.21), Marcus r3 (.171), Tiberius r4 (.32), Cesar r5 (.56)
+- RoCE fabric: Cato(f0:10.220.1.1, f1:10.220.6.2) to Aug(f0:10.220.1.2, f1:10.220.2.1) to Pom(f0:10.220.2.2, f1:10.220.3.1) to Mar(f0:10.220.3.2, f1:10.220.4.1) to Tib(f0:10.220.5.1, f1:10.220.4.2) to Ces(f0:10.220.5.2, f1:10.220.6.1) to Cato
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Window 1: ring verified UP/healthy, 4 false impl_faileds closed
+- [x] RCA-1: ring NEVER died 13:57, froze ~13:41,
+```
+
+### `1785549425107` — 7/31/2026, 7:06:45 PM PT — 25 turns
+
+**Original task:**
+
+```
+Play doctor of frankenstein - frankenstein-llm appears to be having difficulty with subagents. I have a could that say 0 tools called - 0 tokens after several minutes. Please resolve.
+```
+
+**Ideas referenced:** #10108, #10739, #10740, #11316, #1151, #11741, #11781, #11944, #11953, #12314, #12365, #12366, #12368, #12430, #12459, #12477, #12588, #12618, #12657, #12688, #12689, #12824, #12872, #12878, #13108, #13202, #13874, #14133, #14142, #16163, #16265, #16304, #16648, #16715, #16844, #17202, #17203, #17205, #17300, #17430, #18312, #18326, #18329, #18720, #18820, #18868, #1934, #2014, #20549, #22386, #7505
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785463237084` — 7/31/2026, 7:00:49 PM PT — 966 turns
 
 **Original task:**
 
@@ -164,6 +235,16 @@ Reference IDs:
 - Tickets: 631 (Nettles externship record), 12390 (third-party Vasquez escalation), 15654 (Brenza NREMT clearance holds)
 - Files: `uploads/compliance/july2026_noi/
 ```
+
+### `1785548524428` — 7/31/2026, 6:43:21 PM PT — 6 turns
+
+**Original task:**
+
+```
+Jon says Daystron counsil stopped working
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785537361555` — 7/31/2026, 5:56:13 PM PT — 152 turns
 
@@ -252,66 +333,6 @@ When done, append to cline_task_ledger.md and run order 66.
 ═══════════════════════════════════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1785531619110` — 7/31/2026, 5:29:44 PM PT — 402 turns
-
-**Original task:**
-
-```
-The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "serving properly" today, and I am not going to pretend otherwise. Here is the honest, complete accounting of a very long session — what is fixed for real, what I got wrong, and exactly where the next window should start.
-
-THE ARC. Last night the ring served 40-67 turns/hour for 10 hours, then died at 01:03 PT. Today it has died or wedged within minutes of every boot, across every config permutation I tried. I fixed five real adapter-side routing bugs and shipped an auto-relaunch watchdog that genuinely works n
-```
-
-**Ideas referenced:** #15144, #16163, #16254, #16265, #1754, #1755, #178531, #20005 [proposed], #20069, #20264 [queued], #20272 [deployed], #20297 [queued], #20302 [deployed], #20311 [deployed], #20495 [executing], #20498 [queued], #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20553 [blocked], #20625 [proposed], #20626 [proposed], #2101, #2118, #48031, #48140
-
-**Last PICKUP PROMPT:**
-
-```
-he watchdog already mitigates.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785314663557, GLM ring RCA done, awaiting Ruben decision on next lever (reboot vs RoCE).
-
-Where we left off (verified 2026-07-31 17:28 PT):
-- RING: UP and serving (HTTP 200, stable since 13:29 PT, 4+ hours). GLM = 3.0% of 120K daily calls (3,628 picks/24h). No user impact from wedges, Artemis + Julia + frankenstein-tools carry backup.
-- ROOT CAUSE: NCCL over TCP/mgmt NIC (enP7s7) with IB_DISABLE=1. CX7 RoCE fabric (roceP2p1s0f0/f1, 4096 MTU, /30 P2P ring) sits IDLE. NCCL_IB_HCA=rocep1s0f1 points to WRONG device.
-- WATCHDOG: working as designed (active, fails=0, silence = healthy). Auto-recovers ring within ~20 min of wedge.
-- RUBEN QUESTION: "what is the benefit of proceeding?" answered: GLM is 3% of traffic, wedges cause no user impact, watchdog mitigates. Recommendation: try node reboot first (zero config risk), then RoCE if still wedging.
-
-Open threads to drive next:
-1. #20626 [proposed], RoCE activation. DEFER until reboot tried. (human-only decision, no idea)
-2. #20625 [proposed], watchdog SSH timeout hardening. Low priority, latent bug.
-3. #20528 [queued], NCCL investigation, superseded by #20626 [proposed]. (verified: status=ready_for_review dev_stage=ready_for_review)
-4. #20553 [queued], watchdog live and working. (verified: status=ready_for_review dev_stage=ready_for_review)
-5. #20517 [blocked], layer 1 shipped, remaining MCP registration. (verified: status=in_progress dev_stage=impl_failed)
-6. #20506 [blocked], GATE C cleared. (verified: status=in_progress dev_stage=impl_failed)
-7. #20536 [queued], supersede. (verified: status=ready_for_review dev_stage=ready_for_review)
-8. #20495 [executing], watchdog shipped, add forced-death test when stable. (verified: status=in_progress dev_stage=idle)
-9. #20498 [queued], close/supersede. (verified: status=ready_for_review dev_stage=ready_for_review)
-10. #20297 [queued], drift protection. (verified: status=ready_for_review dev_stage=ready_for_review)
-11. #20264 [queued], derive SLO/ceiling constants. (verified: status=ready_for_review dev_stage=ready_for_review)
-12. #20005 [proposed], supervisor consolidation. (verified: status=proposed dev_stage=idle)
-
-Reference IDs:
-- Ideas filed: #20625 [proposed] (verified: status=proposed dev_stage=idle), #20626 [proposed] (verified: status=proposed dev_stage=idle)
-- Ideas reconciled: #20553 [queued], #20536 [queued], #20528 [queued], #20517 [blocked], #20506 [blocked], #20495 [executing], #20498 [queued], #20311 [deployed], #20302 [deployed], #20297 [queued], #20264 [queued], #20005 [proposed]
-- Files touched: none
-- Ring map: Cato r0 (.115), Augustus r1 (.244), Pompey r2 (.21), Marcus r3 (.171), Tiberius r4 (.32), Cesar r5 (.56)
-- RoCE fabric: Cato(f0:10.220.1.1, f1:10.220.6.2) to Aug(f0:10.220.1.2, f1:10.220.2.1) to Pom(f0:10.220.2.2, f1:10.220.3.1) to Mar(f0:10.220.3.2, f1:10.220.4.1) to Tib(f0:10.220.5.1, f1:10.220.4.2) to Ces(f0:10.220.5.2, f1:10.220.6.1) to Cato
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Window 1: ring verified UP/healthy, 4 false impl_faileds closed
-- [x] RCA-1: ring NEVER died 13:57, froze ~13:41, self-recovered ~14:01
-- [x] RCA-1b: NO NV_ERR in docker logs, NOT reproducible
-- [x] RCA-3a: WATCHDOG NOT HUNG, actively cycling, silence is expected (fails=0)
-- [x] RCA-3b: Watchdog has NO active bug, latent SSH-timeou
 ```
 
 ### `1785537564406` — 7/31/2026, 4:33:18 PM PT — 266 turns
@@ -3562,15 +3583,3 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
-
-### `1785281710410` — 7/28/2026, 6:42:22 PM PT — 218 turns
-
-**Original task:**
-
-```
-for this image on my desktop, compress and upload it here: https://www.emsuniversity.com/img/gaberodriguezmd.jpg - needs to be on a white background first though, not offwhite.
-```
-
-**Ideas referenced:** #19835 [proposed], #19846 [rejected], #19847 [rejected], #600179
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

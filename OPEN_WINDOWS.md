@@ -6,14 +6,19 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/31/2026, 10:07:05 PM PT | window: last 72h | 98 tasks | index total 363 (parsed 7, cached 356)
+Generated: 7/31/2026, 11:07:06 PM PT | window: last 72h | 99 tasks | index total 368 (parsed 6, cached 362)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785531619110` | 7/31/2026, 10:06:54 PM | 735 | 26791KB | The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "servi |
+| `1785563447930` | 7/31/2026, 11:06:42 PM | 49 | 355KB | Why is this happening? Can you resole it? See MCP Troubleshooting document on deskopt/ upd |
+| `1785564225764` | 7/31/2026, 11:06:23 PM | 11 | 181KB | Subagents are showing 0 tools called and 0 tokens again. This has happened before earlier  |
+| `1785531619110` | 7/31/2026, 11:05:49 PM | 934 | 30018KB | The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "servi |
+| `1785564150001` | 7/31/2026, 11:03:04 PM | 2 | 5KB | Subagents are showing 0 tools called and 0 tokens again. This has happened before earlier  |
+| `1785562021337` | 7/31/2026, 10:55:11 PM | 104 | 355KB | Vicky having some issues in chat 55, can you address her issues? In the last 1 or 2 hours |
+| `1785563540527` | 7/31/2026, 10:55:04 PM | 14 | 26KB | Can you work on organizing the bug library so that it's easier to search in use by agents? |
+| `1785558681928` | 7/31/2026, 10:09:57 PM | 11 | 25KB | ---[COPY]--- |
 | `1785558616224` | 7/31/2026, 10:01:37 PM | 48 | 195KB | ---[COPY]--- |
 | `1785558513263` | 7/31/2026, 10:00:31 PM | 32 | 98KB | ---[COPY]--- |
-| `1785558681928` | 7/31/2026, 9:52:06 PM | 4 | 8KB | ---[COPY]--- |
 | `1785558524976` | 7/31/2026, 9:47:04 PM | 73 | 133KB | ---[COPY]--- |
 | `1785558666932` | 7/31/2026, 9:40:12 PM | 10 | 16KB | ---[COPY]--- |
 | `1785558633080` | 7/31/2026, 9:37:12 PM | 16 | 85KB | ---[COPY]--- |
@@ -104,16 +109,41 @@ Generated: 7/31/2026, 10:07:05 PM PT | window: last 72h | 98 tasks | index total
 | `1785298633210` | 7/29/2026, 12:39:08 AM | 92 | 303KB | #Scope Oct GLM Build   |
 | `1785302302290` | 7/29/2026, 12:34:19 AM | 70 | 199KB | Why do subagents completely fail in frankenstein-llm? |
 | `1785308873330` | 7/29/2026, 12:09:20 AM | 3 | 5KB | Go ahead and make a comparison to me about interdimensional space and Moad's in relation t |
-| `1785282386265` | 7/28/2026, 10:56:05 PM | 662 | 7552KB | pickup telephony task, have turned off the AI, VAPI agent, but button does not appear to b |
-| `1785303393404` | 7/28/2026, 10:48:42 PM | 28 | 107KB | How fast are you today? |
-| `1785303526321` | 7/28/2026, 10:39:36 PM | 12 | 29KB | check rules 298, plus read ideal GLM Build on desktop. Something is not working right with |
-| `1785296742883` | 7/28/2026, 10:34:49 PM | 218 | 482KB | We had a frankenstein doctor type window working and the window just crashed. |
 
 ---
 
 ## Per-window detail
 
-### `1785531619110` — 7/31/2026, 10:06:54 PM PT — 735 turns
+### `1785563447930` — 7/31/2026, 11:06:42 PM PT — 49 turns
+
+**Original task:**
+
+```
+Why is this happening? Can you resole it? See MCP Troubleshooting document on deskopt/ update if needed. As it's ben a while
+
+Error:
+Error: MCP error -32601: Unknown tool: read_server_file</
+
+These still come up from time to time
+```
+
+**Ideas referenced:** #10157, #10223, #10243, #10291, #10320, #1041, #10440, #10756, #10868, #10869, #10870, #10872, #10873, #10875, #10880, #10881, #11977, #11991, #11992, #11993, #11996, #11999, #12619, #13048, #13051, #13080, #13081, #14978, #15827, #15911, #1593, #1665, #166501, #1680, #17300, #18435, #18600, #1895, #20022, #20286, #20292, #3402, #5700, #9158, #9269, #9271, #9274, #9277, #9731
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785564225764` — 7/31/2026, 11:06:23 PM PT — 11 turns
+
+**Original task:**
+
+```
+Subagents are showing 0 tools called and 0 tokens again. This has happened before earlier today in the morning
+```
+
+**Ideas referenced:** #12251, #12335, #12407, #1519 [resolved], #16648, #17202, #17203, #17205, #17300, #17430, #18329, #1871 [investigating], #1874 [resolved], #18820, #1884 [resolved], #18868, #1892 [resolved], #1934, #20130, #20333, #20410, #20549, #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #20630, #20662, #20663 [rejected], #20665, #20672 [proposed], #2099 [resolved], #2125 [resolved], #2126, #2127, #2128
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785531619110` — 7/31/2026, 11:05:49 PM PT — 934 turns
 
 **Original task:**
 
@@ -123,7 +153,7 @@ The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deli
 THE ARC. Last night the ring served 40-67 turns/hour for 10 hours, then died at 01:03 PT. Today it has died or wedged within minutes of every boot, across every config permutation I tried. I fixed five real adapter-side routing bugs and shipped an auto-relaunch watchdog that genuinely works n
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11942, #12477, #12618, #12657, #12824, #12872, #12878, #13202, #13840, #15144, #16163, #16254, #16265, #16304, #16844, #1754, #1755, #178531, #18312, #18326, #18720, #19125, #19653, #19903, #19907, #19925, #20005 [proposed], #20069, #20247, #20264 [queued], #20272 [deployed], #20297 [queued], #20302 [deployed], #20311 [deployed], #20495 [executing], #20498 [queued], #2050, #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20553 [blocked], #20625 [proposed], #20626 [proposed], #20660 [proposed], #20665 [proposed], #20693 [proposed], #2092, #2101, #2118, #48031, #48140
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11942, #12477, #12618, #12657, #12824, #12872, #12878, #13202, #13840, #15144, #16163, #16254, #16265, #16304, #16844, #1754, #1755, #178531, #1804, #18312, #18326, #18720, #19125, #19653, #19903, #19907, #19925, #1993 [resolved], #20005 [proposed], #20069, #2013, #20247, #20264 [queued], #20272 [deployed], #20297 [queued], #20302 [deployed], #20311 [deployed], #20495 [executing], #20498 [queued], #2050, #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20553 [blocked], #20625 [proposed], #20626 [proposed], #20660 [proposed], #20665 [proposed], #20693 [proposed], #2092, #2101, #2118, #2120 [investigating], #366127, #48031, #48140
 
 **Last PICKUP PROMPT:**
 
@@ -168,6 +198,121 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Gate validation: ALL PASSED, GATE CLEAR
 - [x] Delivered windows + doc link
 </task_progress>
+</attempt_completion>
+```
+
+### `1785564150001` — 7/31/2026, 11:03:04 PM PT — 2 turns
+
+**Original task:**
+
+```
+Subagents are showing 0 tools called and 0 tokens again. This has happened before earlier today in the morning
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785562021337` — 7/31/2026, 10:55:11 PM PT — 104 turns
+
+**Original task:**
+
+```
+Vicky having some issues in chat 55, can you address her issues? In the last 1 or 2 hours
+```
+
+**Ideas referenced:** #20128, #20130, #20333, #20410, #20555, #20565, #20569 [deployed], #20613 [ready_for_review], #20627, #20628, #20629, #20630, #20662, #20663 [rejected], #20665, #20672 [proposed], #20707 [proposed], #20708 [proposed], #2125, #2126, #2127, #2128, #3360, #3361, #3362, #3363, #3365, #3366
+
+**Last PICKUP PROMPT:**
+
+```
+at 55 via ruben_message_queue.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #20707 [proposed] - Vicky chat 55 issues: Jason Li extensions + refresher schedule cleanup
+
+Where we left off (verified 2026-07-31 22:38 PT):
+- Jason Li (26415W-42): exam 5 (681) and 6 (682) group overrides expired 7/22, 7/23; zero attempts on both; final (683) override active through 8/2; 2 deadline_miss entries on record
+- Refresher schedule: weekly rows 8/1 through 9/12 bulk-created 7/30; extras 8/1, 8/8, 8/22, 9/5, 9/12
+- Published findings + approvals request to chat 55 via ruben_message_queue, queued true
+
+Open threads to drive next:
+1. #20707 [proposed] Jason Li exam 5, 6, final extensions: get Ruben/Jon approval on extension dates, then UPDATE moodle_c_live.quiz_overrides (group 2622, quizzes 681/682/683)
+2. #20708 [proposed] Refresh schedule cleanup: on approval, DELETE website_class_schedules rows for 8/1, 8/8, 8/22, 9/5, 9/12 across all refresher sites, keep 8/15, 8/29
+3. #20613 [queued] Intuit risk throttle / 5007 Credit Floor: watch Aug 1 first large charge for monthly-cap vs risk-hold discrimination, per outage watch cron
+
+Reference IDs:
+- Ideas filed: #20707 [proposed], #20708 [proposed]
+- Files touched: /var/www/emtskills/routes/website_pricing.php (read only)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Read recent chat 55 messages to find Vicky's issues
+- [x] Issue 1: Jason Li (26415W-42) exam 5/6/final extensions — analyzed, awaiting approval
+- [x] Issue 2: Refresher schedule showing weekly — identified extra dates, awaiting approval to delete
+- [x] Report findings and actions taken
+</task_progress>
+</attempt_completion>
+```
+
+### `1785563540527` — 7/31/2026, 10:55:04 PM PT — 14 turns
+
+**Original task:**
+
+```
+Can you work on organizing the bug library so that it's easier to search in use by agents? Right now the bug library may be a little bit disorganized and I think it may contribute to agent's not getting or understanding the full effect of what it can offer. It's vast and rich with resources that could make a significant difference in the way that operations work. It should be leverage as such
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785558681928` — 7/31/2026, 10:09:57 PM PT — 11 turns
+
+**Original task:**
+
+```
+---[COPY]---
+# COPY WINDOW 10: 15-minute soak, one rep/minute, alternating paths
+execute_command:
+for i in $(seq 1 15); do
+  M=$([ $((i % 2)) -eq 1 ] && echo glm52-only || echo frankenstein-llm);
+  curl -sN -o /dev/null -w "min$i $M start=$(date +%T) ttfb=%{time_starttransfer}s total=%{time_total}s code=%{http_code}\n" \
+    https://litellm.emsuniversity.com/v1/chat/completions -H 'Content-Type: application/json' -H 'Authorization: Bearer sk-test' \
+    -d "{\"model\":\"$M\",\"stream\":true,\"max_tokens\":48,\"messages\":[{\"role\":\"user\",\"content\":\"Say the number $i.\"}]}";
+  sleep 55;
+d
+```
+
+**Last PICKUP PROMPT:**
+
+```
+ before the timeout fired.
+
+═══════════════════════════════════════════════════
+PICKUP PROMPT
+═══════════════════════════════════════════════════
+
+**Task:** 15-minute soak test — 1 rep/minute, alternating `glm52-only` (direct) vs `frankenstein-llm` (adapter), measuring TTFB/total/HTTP code to detect path degradation over time.
+
+**Result:** No degradation. 15/15 reps completed. Adapter adds ~12-14ms median overhead; direct path stable 0.117-0.181s. One cold-start outlier at min3 (0.721s) on glm52-only, no other anomalies. All 401s from dummy `sk-test` key (expected — auth gate rejecting bad key, routes live).
+
+**What I did:**
+- Ran the soak loop twice; first timed out at local-shell 1000s cap with output lost, second run re-ran with `>> /tmp/soak_glm52.log` capture so all 15 rows persisted before timeout.
+- Read /tmp/soak_glm52.log (15 lines, all 15 reps present, min1 start 21:52:06 → min15 start 22:04:59).
+
+**Where we left off:**
+- Full raw log saved at `/tmp/soak_glm52.log`.
+- No further soak required — the question ("does the adapter degrade over time?") is answered: **no.**
+- Next step if any: replace `sk-test` with a real key to measure actual generation TTFB (streaming first-token) rather than the 401 auth-reject round-trip. That would confirm the +12ms is pure proxy overhead, not hidden model latency.
+
+**Open threads (no ideas filed this task — pure measurement):**
+None — no code changes, no recommendations made that warrant idea filing. This was a read-only soak measurement.
+
+**Files touched:**
+- `/tmp/soak_glm52.log` (created, soak output)
+</result>
+<command>cat /tmp/soak_glm52.log</command>
 </attempt_completion>
 ```
 
@@ -309,25 +454,6 @@ FINDINGS / HONEST CAVEATS (not inventing numbers where the box wouldn't answer):
 
 2. The code=000 ttfb=0.000000s reps are NOT measured TTFB. 000 = curl connection failure/timeout. ttfb=0.0s means never connected, not instant. Reporting them as 0s TTFB would be 
 ```
-
-### `1785558681928` — 7/31/2026, 9:52:06 PM PT — 4 turns
-
-**Original task:**
-
-```
----[COPY]---
-# COPY WINDOW 10: 15-minute soak, one rep/minute, alternating paths
-execute_command:
-for i in $(seq 1 15); do
-  M=$([ $((i % 2)) -eq 1 ] && echo glm52-only || echo frankenstein-llm);
-  curl -sN -o /dev/null -w "min$i $M start=$(date +%T) ttfb=%{time_starttransfer}s total=%{time_total}s code=%{http_code}\n" \
-    https://litellm.emsuniversity.com/v1/chat/completions -H 'Content-Type: application/json' -H 'Authorization: Bearer sk-test' \
-    -d "{\"model\":\"$M\",\"stream\":true,\"max_tokens\":48,\"messages\":[{\"role\":\"user\",\"content\":\"Say the number $i.\"}]}";
-  sleep 55;
-d
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785558524976` — 7/31/2026, 9:47:04 PM PT — 73 turns
 
@@ -3548,106 +3674,5 @@ The root cause of subagents failing is threefold:
 ```
 Go ahead and make a comparison to me about interdimensional space and Moad's in relation to our LLM's
 ```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785282386265` — 7/28/2026, 10:56:05 PM PT — 662 turns
-
-**Original task:**
-
-```
-pickup telephony task, have turned off the AI, VAPI agent, but button does not appear to be working says Vicky:
-
-he answered the call from qb
-i clicked it right away
-but it disconnected
-when i checked ai answered it
-Ill send another request
---
-
-https://www.emsuniversity.com/emtskills/routes/telephony_hub.php?view=admin 
-
-🔴 VAPI AI Receptionist
-Master Admin only — Turn off to prevent VAPI from answering calls. When off, calls go directly to live agents.
-
-🔴 AI OFF — Live agents only
-
-Why did you hallucinate this button working?
-
-Can you resolve that and make sure it doesn't happen again, do an
-```
-
-**Ideas referenced:** #001018, #059669, #062017, #166534, #19837 [proposed], #19838 [proposed], #19839 [proposed], #19840 [proposed], #19841 [deployed], #19842 [proposed], #19843 [proposed], #19844 [proposed], #19845 [proposed], #21312, #21313 [queued], #21314 [queued], #21315 [queued], #21316 [queued], #2563, #334155, #374151, #475569, #64748, #718096, #8899, #92400, #9733, #9734
-
-**Last PICKUP PROMPT:**
-
-```
- bypassing our TwiML entirely.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #21312 — VAPI Toggle RCA & Defense-in-Depth Fix for conference_events bypass.
-
-Where we left off (verified 10:54 PM PT):
-- Toggle UI writes to `telephony_config` correctly (line 2214 of telephony_hub.php)
-- `twiml_inbound.php` line 45 reads `vapi_fallback_enabled` correctly
-- Cron FIX-2026-07-28 respects human_override_at (30 min window)
-- `conference_events.php` may bypass the toggle — needs investigation
-- `vapi_fallback_worker.php` does NOT verify toggle before joining VAPI — needs defense-in-depth fix
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #21313 [queued] — Audit `conference_events.php` for VAPI spawn paths that bypass toggle. grep 'vapi\|fallback\|Dial.*941' /var/www/emtskills/api/telephony/conference_events.php
-2. #21314 [queued] — Add toggle gate to `vapi_fallback_worker.php`: verify `vapi_fallback_enabled` is 'true' before joining VAPI. If false, exit 0. Use emsu-operations write_server_file to apply.
-3. #21315 [queued] — Check VAPI admin dashboard: confirm inbound calls to +19412545009 do NOT auto-answer independently of our TwiML. If they do, disable VAPI's direct inbound handling.
-4. #21316 [queued] — File idea for telephony_hub.php to show "toggle override log" panel that displays when the toggle was last set and whether the cron has cleared the override.
-
-Reference IDs:
-- Ticket: Vicky's report - "AI answered it even though I clicked AI OFF"
-- Ideas filed: #21313, #21314, #21315, #21316
-- Files touched: /var/www/emtskills/routes/telephony_hub.php (verified), /var/www/emtskills/api/telephony/twiml_inbound.php (verified line 45), /var/www/emtskills/cron/cron_twilio_vapi_fallback_dial_repair.php (verified FIX-2026-07-28)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785303393404` — 7/28/2026, 10:48:42 PM PT — 28 turns
-
-**Original task:**
-
-```
-How fast are you today?
-```
-
-**Ideas referenced:** #12459, #1967, #2014
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785303526321` — 7/28/2026, 10:39:36 PM PT — 12 turns
-
-**Original task:**
-
-```
-check rules 298, plus read ideal GLM Build on desktop. Something is not working right with flrankenstein-llm. It's sluggish since some fix shipped an hour or two ago. I had mened this beore, but the repair has not landed. Something is off with some setting we made on the router
-
-It may be isolated to frankenstein-llm as litellm:glm52-only appears to be iterating quicker.
-```
-
-**Ideas referenced:** #2014
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785296742883` — 7/28/2026, 10:34:49 PM PT — 218 turns
-
-**Original task:**
-
-```
-We had a frankenstein doctor type window working and the window just crashed.
-
-Frankenstein LLM stalled. I had mentioned not to inject anthropic llm. I told you to consult the GLM 5.2 Ideal build document on the desktop becasue it seemed liek you were about to quarantiene GLM.
-```
-
-**Ideas referenced:** #12184, #12247, #12262, #12672, #12824, #12872, #12878, #13108, #13832, #16265, #16578, #1754, #1755, #1877, #1896, #19239 [rejected], #1986, #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #1988, #19881 [proposed], #19882 [proposed], #19883 [proposed], #1989, #1991, #2014, #2084, #2085, #2089, #2090, #2739
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

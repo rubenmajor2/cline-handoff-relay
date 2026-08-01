@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/1/2026, 4:13:17 AM PT | window: last 72h | 80 tasks | index total 373 (parsed 4, cached 369)
+Generated: 8/1/2026, 5:13:17 AM PT | window: last 72h | 80 tasks | index total 373 (parsed 2, cached 371)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785360672171` | 8/1/2026, 4:13:16 AM | 2500 | 11464KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
-| `1785582017987` | 8/1/2026, 4:13:09 AM | 35 | 1753KB | GLM ring TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wan |
-| `1785581189111` | 8/1/2026, 4:12:46 AM | 97 | 335KB | I need to make sure that the orchestra is running and that we don't just have a bunch of i |
+| `1785360672171` | 8/1/2026, 5:13:12 AM | 3041 | 13972KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
+| `1785582017987` | 8/1/2026, 4:52:37 AM | 106 | 4073KB | GLM ring TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wan |
+| `1785581189111` | 8/1/2026, 4:25:55 AM | 148 | 519KB | I need to make sure that the orchestra is running and that we don't just have a bunch of i |
 | `1785566876939` | 8/1/2026, 3:57:20 AM | 634 | 1456KB | GLM ring RoCE root cause found (wrong-NIC RX-offload drops from /30 shortcut routes); /32  |
 | `1785548524428` | 8/1/2026, 2:00:05 AM | 350 | 706KB | Jon says Daystron counsil stopped working |
 | `1785537564406` | 8/1/2026, 1:56:30 AM | 902 | 14669KB | #Argus |
@@ -95,7 +95,7 @@ Generated: 8/1/2026, 4:13:17 AM PT | window: last 72h | 80 tasks | index total 3
 
 ## Per-window detail
 
-### `1785360672171` — 8/1/2026, 4:13:16 AM PT — 2500 turns
+### `1785360672171` — 8/1/2026, 5:13:12 AM PT — 3041 turns
 
 **Original task:**
 
@@ -140,7 +140,7 @@ When done, append to cline_task_ledger.md and run order 66.
 </attempt_completion>
 ```
 
-### `1785582017987` — 8/1/2026, 4:13:09 AM PT — 35 turns
+### `1785582017987` — 8/1/2026, 4:52:37 AM PT — 106 turns
 
 **Original task:**
 
@@ -154,11 +154,49 @@ PICKUP PROMPT (paste into a fresh Cline window)
 Pick up task #1785314663557 — GLM ring: TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wants autonomous monitoring + cron automation so the ring can self-recover o
 ```
 
-**Ideas referenced:** #1293, #1334, #1353, #1359, #1360, #1361, #1367, #1368, #1374, #1391, #1474, #1475, #1515, #1531, #1537, #1567 [resolved], #1569, #15822, #1586, #1587, #1600, #1606 [investigating], #1608 [investigating], #1609, #1611, #1612, #1614 [investigating], #16803, #16962, #1703, #17104, #17128, #1715, #1723, #1724, #1725, #1733, #1740, #1742, #1754, #1755, #1765, #178531, #1842, #1881, #19166, #1962 [resolved], #1963 [investigating], #1964 [resolved], #1967 [resolved], #1968 [resolved], #1970 [investigating], #1973 [investigating], #1974 [investigating], #1975 [resolved], #1979 [investigating], #1982 [resolved], #1983 [resolved], #1984 [resolved], #1985 [resolved], #1993 [resolved], #20495 [queued], #20506 [queued], #20517 [blocked], #20528 [queued], #20536 [queued], #20553 [queued], #20724 [proposed], #20725 [proposed], #20740 [proposed], #48031, #48140
+**Ideas referenced:** #1293, #1334, #1353, #1359, #1360, #1361, #1367, #1368, #1374, #1391, #1474, #1475, #1515, #1531, #1537, #1567 [resolved], #1569, #1579 [investigating], #15822, #1586, #1587, #1600, #1606 [investigating], #1608 [investigating], #1609, #1611, #1612, #1614 [investigating], #16803, #16962, #1703, #17104, #17128, #1715, #1723, #1724, #1725, #1733, #1740, #1742, #1754, #1755, #1765, #178531, #1842, #1881, #19166, #1962 [resolved], #1963 [investigating], #1964 [resolved], #1967 [resolved], #1968 [resolved], #1970 [investigating], #1973 [investigating], #1974 [investigating], #1975 [resolved], #1979 [investigating], #1982 [resolved], #1983 [resolved], #1984 [resolved], #1985 [resolved], #1993 [resolved], #20495 [queued], #20506 [queued], #20517 [blocked], #20528 [queued], #20536 [queued], #20553 [queued], #20724 [proposed], #20725 [proposed], #20740 [proposed], #20806 [proposed], #20807 [proposed], #2116 [resolved], #2136 [recorded], #48031, #48140
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1785581189111` — 8/1/2026, 4:12:46 AM PT — 97 turns
+```
+sk_ledger.md, 04:45 PT entry).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785314663557, GLM ring autonomous monitor + cron self-recovery deployed; ring booting config socket-fabric.
+
+Where we left off (verified 2026-08-01 04:45 PT):
+- Monitor /home/rubenmajor/bin/glm52_ring_monitor.sh live on Cato, cron */5, verified BOOTING path at 04:40 tick. #20495 [queued] (verified: status=approved dev_stage=idle) overnight-autorecovery gap this task closed; orchestrator owns status flip.
+- Ring booting socket-fabric (NCCL TCP data plane on 200GbE fabric, gloo on enP7s7), dispatched 04:37:56 PT, grace until ~05:23 PT. Deadlock hypothesis logged as bug-library incident 2136.
+- Rotation armed: socket-fabric, then roce (fabric /32 routes pre-installed per relaunch, #20724 [proposed] (verified: status=proposed dev_stage=idle)), then enp7s7-patience (READY=3600). 60 min cooldown after full-cycle failure.
+- Evidence per attempt in ~/glm52_ring_attempts/ on Cato; monitor log ~/glm52_ring_monitor.log; state ~/glm52_ring_monitor.state.
+
+Open threads to drive next:
+1. #20806 [proposed] (verified: status=proposed dev_stage=idle): if the socket-fabric boot also deadlocks, root-cause with a bounded NCCL_DEBUG=TRACE run, Gloo-for-PP patch, or ray executor. Check the monitor log first; the monitor auto-rotates through roce + enp7s7-patience overnight.
+2. #20807 [proposed] (verified: status=proposed dev_stage=idle): morning report generator + alert path on full-cycle failure (currently ALERT only lands in the monitor's own log).
+3. (human-only decision, no idea) morning check: curl http://192.168.1.115:8210/v1/models; if serving, run a 200-token decode to confirm real tok/s (guard against the #20536 [queued] (verified: status=ready_for_review dev_stage=ready_for_review) serving-but-0.07-tok/s state); review ~/glm52_ring_monitor.log overnight timeline.
+4. #20725 [proposed] (verified: status=proposed dev_stage=idle): reboot fallback lever stays on the shelf unless all 3 configs + cooldown cycles fail.
+
+Reference IDs:
+- Ideas filed: #20806 [proposed], #20807 [proposed]
+- Ideas carried: #20528 [queued], #20536 [queued], #20506 [queued], #20495 [queued], #20724 [proposed], #20740 [proposed], #20725 [proposed], #20553 [queued], #20517 [blocked]
+- Bug library: incident 2136 recorded this session (tonight's deadlock + automation + field-shift lesson); consulted incidents 1567, 1606, 1614, 1964, 1967, 1979, 1985, 1993, 2116, 1579
+- Files touched: /home/rubenmajor/bin/glm52_ring_monitor.sh (Cato, new), /tmp/glm52_launch_cfg.sh (all 6 nodes, new), Cato crontab (added */5 monitor line), /Users/rubenmajor/Documents/Cline/cline_task_ledger.md (appended), Mac-local /tmp/glm52_launch_cfg.sh + /tmp/glm52_ring_monitor.sh (sources)
+- Access: ssh cato/augustus/pompey/marcus/tiberius/cesar from Mac; monitor SSHes from Cato as rubenmajor (BatchMode) with sudo -S for fabric ops; ring endpoint http://192.168.1.115:8210
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+<command>ssh cato 'tail -6 /home/rubenmajor/glm52_ring_monitor.log; cat /home/rubenmajor/glm52_ring_monitor.state'</command>
+<task_progress>
+- [x] Verify ring state (Cato) — container up 2h, CPU 3%, HTTP 000
+- [x] Check fleet-wide state — PP1 pair (Pompey/Marcus) spinning 203%, others idle
+- [x] Confirm via docker logs — last output 09:06 UTC (~2h ago), hung post-KV-cache
+- [x] Consult bug library — prior art rev
+```
+
+### `1785581189111` — 8/1/2026, 4:25:55 AM PT — 148 turns
 
 **Original task:**
 
@@ -166,51 +204,41 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 I need to make sure that the orchestra is running and that we don't just have a bunch of ideas queuedOr work cute.
 ```
 
-**Ideas referenced:** #16523, #20336 [in_progress], #20340 [proposed], #20492 [in_progress], #20493 [in_progress], #20507 [in_progress], #20509 [proposed], #20517 [proposed], #20613 [proposed], #20624 [in_progress], #20662 [in_progress], #20672 [in_progress], #20793 [proposed], #2113, #2114, #2123, #444279, #444280
+**Ideas referenced:** #113026, #12184, #16523, #16881, #20336 [in_progress], #20340 [proposed], #20492 [in_progress], #20493 [in_progress], #20507 [in_progress], #20509 [proposed], #20517 [proposed], #20613 [proposed], #20624 [in_progress], #20662 [in_progress], #20672 [in_progress], #20793 [proposed], #2113, #2114, #2123, #444279, #444280, #444539, #444542
 
 **Last PICKUP PROMPT:**
 
 ```
-tab or toggling a config flag.
+eue drains over the next hour.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #20793 [proposed] - orchestra health check: triage shadow mode + 11 impl_failed ideas
+Pick up task - orchestra health check: triage live, executor spawning, babysit running
 
-Where we left off (verified 2026-08-01 03:56 PT):
-- Triage cron fires every 2 min but defaults to SHADOW MODE (needs --live flag). 800 shadow entries ever, zero LIVE. #20793 [proposed].
-- Executor in quiet hours (23:00-06:00). Resumes execution at 06:00.
-- 11 ideas in-progress all impl_failed. Will retry at 06:00.
+Where we left off (verified 2026-08-01 04:25 PT):
+- Two schema-drift bugs fixed (metric_name + task_kind AS name). Verified clean.
+- Triage crontab now has `--live`. 800 shadow entries ever, now live.
+- Autonomous dispatcher is spawning chains (12 workers last cycle).
+- 60-min babysit watcher running (PID #1130269, ends 05:24 PT). Log at /tmp/babysit_orchestra.log.
+- 11 ideas in_progress, 2 queued — expect draining over next hour.
+- /etc/cron.d/emsu line 11: `cron_ruben_autonomous` is COMMENTED OUT — salvaged via /etc/cron.d/emsu-ruben-autonomous.
 
 Open threads to drive next:
-1. #20793 [proposed] Add --live to triage crontab or toggle orchestrator_config flag. Investigate why shadow was default before flipping. Edit crontab on WOPR.
-2. #20613 [blocked] P0: Zero large EMT approvals. Human call to Intuit Merchant Services needed. Check if any large charges cleared since Jul 31.
-3. #20340 [blocked] P0: Externship agency outreach, 22h stuck, 95% batched threads reference nonexistent parents. Watch 06:00 retry.
-4. #20517 [blocked] P0: Structural enforcement, 17h stuck. Check impl_failed reason.
-5. #20509 [blocked] P0: 14 grievance backfill, 17h stuck. Postmark attachment retrieval pending.
+1. Check /tmp/babysit_orchestra.log at 05:24 PT — confirm queue drained. If ideas still stuck at impl_failed, investigate executor outcome health.
+2. Fix the commented-out `cron_ruben_autonomous` entry in /etc/cron.d/emsu: uncomment line 11.
+3. Check triage log for first real LIVE decisions — verify they appear in orchestrator_decisions table.
+4. #20613 [blocked] P0: Zero large EMT approvals. Human call to Intuit Merchant Services needed. Check if any large charges cleared since Jul 31.
 
 Reference IDs:
 - Ideas filed: #20793 [proposed]
 - Stuck ideas: #20672 [blocked] #20662 [blocked] #20624 [blocked] #20613 [blocked] #20517 [blocked] #20509 [blocked] #20507 [blocked] #20493 [blocked] #20492 [blocked] #20340 [blocked] #20336 [blocked]
-- Files touched: none
+- Files touched: cron_orchestrator_triage.php, lib/lora_shadow_health.php, monitoring_metrics table, crontab
+- Babysit PID: 1130269, log: /tmp/babysit_orchestra.log
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Probe orchestrator health (orchestrator_status)
-- [x] List queued/in-progress ideas
-- [x] List pending decisions
-- [x] Verify crons/processes are actually running
-- [x] Investigate SHADOW MODE + executor failures
-- [x] Check specific impl_failed ideas for root cause
-- [x] Check executor log for live activity
-- [x] Diagnose why executor executes zero ideas
-- [x] File ideas for fix actions
-- [x] Verify --live flag mechanics + why shadow was set
-- [x] Report state + pickup prompt
-</task_progress>
 </attempt_completion>
 ```
 

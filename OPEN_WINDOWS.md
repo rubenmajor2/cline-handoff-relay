@@ -6,13 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/1/2026, 1:46:51 PM PT | window: last 72h | 77 tasks | index total 381 (parsed 8, cached 373)
+Generated: 8/1/2026, 2:46:51 PM PT | window: last 72h | 78 tasks | index total 383 (parsed 4, cached 379)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785600191339` | 8/1/2026, 1:46:48 PM | 643 | 1723KB | #Kaizon / Bugs |
-| `1785582017987` | 8/1/2026, 1:46:48 PM | 565 | 7255KB | GLM ring TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wan |
-| `1785602138255` | 8/1/2026, 1:46:43 PM | 544 | 1811KB | #Queued Ideas |
+| `1785600191339` | 8/1/2026, 2:46:47 PM | 751 | 1893KB | #Kaizon / Bugs |
+| `1785620212473` | 8/1/2026, 2:46:22 PM | 30 | 63KB | #GLM |
+| `1785620201169` | 8/1/2026, 2:37:03 PM | 2 | 8KB | **Yes, run the next window on frankenstein-llm.** It is the correct pick per rule 146 (fre |
+| `1785582017987` | 8/1/2026, 2:35:44 PM | 642 | 7444KB | GLM ring TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wan |
+| `1785602138255` | 8/1/2026, 2:08:55 PM | 628 | 1917KB | #Queued Ideas |
 | `1785608591871` | 8/1/2026, 1:38:26 PM | 204 | 892KB | #Argus |
 | `1785599739497` | 8/1/2026, 1:31:09 PM | 448 | 2257KB | I want to get back to work on clustering, parallelism and tarpipe, particularly with the e |
 | `1785581189111` | 8/1/2026, 1:28:11 PM | 646 | 2630KB | I need to make sure that the orchestra is running and that we don't just have a bunch of i |
@@ -86,13 +88,12 @@ Generated: 8/1/2026, 1:46:51 PM PT | window: last 72h | 77 tasks | index total 3
 | `1785364900935` | 7/29/2026, 6:43:10 PM | 338 | 919KB | #GLM |
 | `1785286248280` | 7/29/2026, 3:51:18 PM | 230 | 978KB | pick up the Plesk login issue that closed for the second time here in cline irritating: |
 | `1785358209522` | 7/29/2026, 3:38:42 PM | 528 | 7749KB | Broke the GLM-5.2 ring deadlock. The blocker that killed every prior attempt is fixed and  |
-| `1785356710391` | 7/29/2026, 2:08:45 PM | 134 | 1119KB | Yet again, we have ZERO payments on our webformes today for EMT. That's likely another err |
 
 ---
 
 ## Per-window detail
 
-### `1785600191339` — 8/1/2026, 1:46:48 PM PT — 643 turns
+### `1785600191339` — 8/1/2026, 2:46:47 PM PT — 751 turns
 
 **Original task:**
 
@@ -102,20 +103,74 @@ Generated: 8/1/2026, 1:46:51 PM PT | window: last 72h | 77 tasks | index total 3
 I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
 ```
 
-**Ideas referenced:** #12724, #1468, #14937, #19188, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #3076, #3077, #3081, #7358, #9269
+**Ideas referenced:** #12724, #1468, #14937, #1679, #1685, #1686, #1687, #1833, #19188, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #20969 [proposed], #20970 [proposed], #20971 [proposed], #20972 [proposed], #20973 [proposed], #20974 [proposed], #21000 [deployed], #21001, #21002, #3076, #3077, #3081, #7358, #9269
 
 **Last PICKUP PROMPT:**
 
 ```
-ct columns)
-- [x] All 3 gaps addressed
-- [ ] Final verification
-- [ ] Ship with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
+verified-resolved, 0 recurred.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — KAIZEN bug efficiency audit: verified-resolution loop shipped and live.
+
+Where we left off (verified 2026-08-01 2:27 PM PT):
+- 104 bugs classified, 153 recipes fired, 153 verified-resolved with 0 recurrences
+- cron_kaizen_verify.php live on cron every 15 min, verified on WOPR
+- cron_kaizen_classifier.php + cron_kaizen_pipeline.php + cron_kaizen_surface_refresh.php all live
+- Bug Hunter bridge reactivated: 5 GLM52 bugs backfilled into bug_hunter_log, ingest SP rebuilt
+- Email leak pipeline live: 20 leaks classified, recipe added
+- All 8 KAIZEN targets active, unified view v_kaizen_all_findings covers executor/email/moodle/voice/payment/bug_hunter
+
+Open threads to drive next:
+1. #21000 [deployed] — Monitor next 48h: confirm verified-resolved count grows and no recurrences appear; watch cron_kaizen_verify.log on WOPR
+2. #20969 [deployed] — Watch that the 5 new recipes actually fire on next impl_failed cycles, not just classify
+3. #20970 [deployed] — When Bug Hunter next runs naturally, confirm its findings auto-ingest through sp_kaizen_bug_hunter_ingest
+4. #20971 [deployed] — Verify email leak resolution holds; watch for recurring email_leak_unclassified without recipe fire
+5. #20968 [deployed] — Confirm v_kaizen_all_findings stays current as new surfaces register
+
+Reference IDs:
+- Ideas filed/deployed: #20884, #20885, #20886, #20887, #20888, #20889, #20890, #20891, #20910, #20911, #20962, #20963, #20968, #20969, #20970, #20971, #21000
+- Files touched: /var/www/emtskills/cron_kaizen_pipeline.php, cron_kaizen_classifier.php, cron_kaizen_verify.php (NEW), cron_kaizen_surface_refresh.php
+- Cron schedule: pipeline */5, classifier */5, verify */15, surface refresh Sunday 2:30 AM
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
 ```
 
-### `1785582017987` — 8/1/2026, 1:46:48 PM PT — 565 turns
+### `1785620212473` — 8/1/2026, 2:46:22 PM PT — 30 turns
+
+**Original task:**
+
+```
+#GLM
+
+**Yes, run the next window on frankenstein-llm.** It is the correct pick per rule 146 (free-local-first, one router for everything). Two things to know: the GLM 5.2 priority gate I shipped is live, so frankenstein-llm will gen-probe GLM 5.2 first, correctly see it cannot decode, and fall through to the 120B pool / frankenstein-tools adapter. You get free local either way. Do NOT pick an Anthropic model.
+
+Where things stand: the ring now BOOTS clean (all 6 up, HTTP 200, correct sparse attention backend) after I found and fixed four launcher regressions. The original decode-wedge is still 
+```
+
+**Ideas referenced:** #178531, #20495 [executing], #20536 [awaiting_review], #20873 [proposed], #20955 [awaiting_review], #21004 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785620201169` — 8/1/2026, 2:37:03 PM PT — 2 turns
+
+**Original task:**
+
+```
+**Yes, run the next window on frankenstein-llm.** It is the correct pick per rule 146 (free-local-first, one router for everything). Two things to know: the GLM 5.2 priority gate I shipped is live, so frankenstein-llm will gen-probe GLM 5.2 first, correctly see it cannot decode, and fall through to the 120B pool / frankenstein-tools adapter. You get free local either way. Do NOT pick an Anthropic model.
+
+Where things stand: the ring now BOOTS clean (all 6 up, HTTP 200, correct sparse attention backend) after I found and fixed four launcher regressions. The original decode-wedge is still there,
+```
+
+**Ideas referenced:** #178531, #20495 [executing], #20536 [awaiting_review], #20873 [proposed], #20955 [awaiting_review], #21004 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785582017987` — 8/1/2026, 2:35:44 PM PT — 642 turns
 
 **Original task:**
 
@@ -129,7 +184,7 @@ PICKUP PROMPT (paste into a fresh Cline window)
 Pick up task #1785314663557 — GLM ring: TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wants autonomous monitoring + cron automation so the ring can self-recover o
 ```
 
-**Ideas referenced:** #10108, #10419, #10869, #11912, #11936, #12246, #12403, #12589, #12590, #12645, #12680, #12688, #12689, #1293, #1334, #13453, #13470, #1353, #1359, #1360, #1361, #1367, #1368, #1374, #1391, #13962, #1474, #1475, #1515, #1531, #1537, #1567 [resolved], #1569, #15776, #1579 [investigating], #15822, #1586, #1587, #1600, #1606 [investigating], #1608 [investigating], #1609, #1611, #1612, #1614 [investigating], #16602, #16625, #16648, #16803, #16844, #16962, #1703, #17104, #17128, #17145, #1715, #17202, #17203, #17205, #1723, #1724, #1725, #17300, #17307, #1733, #1740, #1742, #17430, #1754, #1755, #1765, #17676, #17680, #178531, #17902, #1842, #1881, #19166, #1962 [resolved], #1963 [investigating], #1964 [resolved], #1967 [resolved], #1968 [resolved], #1970 [investigating], #1973 [investigating], #1974 [investigating], #1975 [resolved], #1978, #1979 [investigating], #1982 [resolved], #1983 [resolved], #1984 [resolved], #1985 [resolved], #1993 [resolved], #2000, #20495 [queued], #20506 [queued], #20517 [blocked], #20528 [queued], #20536 [queued], #20549, #20553 [queued], #2071, #20724 [proposed], #20725 [proposed], #20740 [proposed], #2079 [deployed], #20806 [proposed], #20807 [proposed], #20870 [proposed], #20871 [proposed], #20872 [proposed], #20873 [proposed], #20955 [proposed], #2116 [resolved], #2136 [recorded], #21824, #26318, #27313, #2928, #30269, #30682, #32359, #32618, #32701, #33356, #34076, #36643, #36651, #36872, #36921, #3717, #38976, #39863, #40674, #40980, #41530, #43420, #44697, #45094, #46097, #48031, #48140, #5087, #5480 [outdated], #5484, #57696, #58426, #6826, #8365, #9405, #9706
+**Ideas referenced:** #10108, #10419, #10869, #11912, #11936, #12246, #12403, #12589, #12590, #12645, #12680, #12688, #12689, #1293, #1334, #13453, #13470, #1353, #1359, #1360, #1361, #1367, #1368, #1374, #1391, #13962, #1474, #1475, #1515, #1531, #1537, #1567 [resolved], #1569, #15776, #1579 [investigating], #15822, #1586, #1587, #1600, #1606 [investigating], #1608 [investigating], #1609, #1611, #1612, #1614 [investigating], #16602, #16625, #16648, #16803, #16844, #16962, #1703, #17104, #17128, #17145, #1715, #17202, #17203, #17205, #1723, #1724, #1725, #17300, #17307, #1733, #1740, #1742, #17430, #1754, #1755, #1765, #17676, #17680, #178531, #17902, #1842, #1881, #19166, #1962 [resolved], #1963 [investigating], #1964 [resolved], #1967 [resolved], #1968 [resolved], #1970 [investigating], #1973 [investigating], #1974 [investigating], #1975 [resolved], #1978, #1979 [investigating], #1982 [resolved], #1983 [resolved], #1984 [resolved], #1985 [resolved], #1993 [resolved], #2000, #20495 [queued], #20506 [queued], #20517 [blocked], #20528 [queued], #20536 [queued], #20549, #20553 [queued], #2071, #20724 [proposed], #20725 [proposed], #20740 [proposed], #2079 [deployed], #20806 [proposed], #20807 [proposed], #20870 [proposed], #20871 [proposed], #20872 [proposed], #20873 [proposed], #20955 [proposed], #21004 [proposed], #2116 [resolved], #2136 [recorded], #2138, #21824, #26318, #27313, #2928, #30269, #30682, #32359, #32618, #32701, #33356, #34076, #36643, #36651, #36872, #36921, #3717, #38976, #39863, #40674, #40980, #41530, #43420, #44697, #45094, #46097, #48031, #48140, #5087, #5480 [outdated], #5484, #57696, #58426, #6826, #8365, #9405, #9706
 
 **Last PICKUP PROMPT:**
 
@@ -167,7 +222,7 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </attempt_completion>
 ```
 
-### `1785602138255` — 8/1/2026, 1:46:43 PM PT — 544 turns
+### `1785602138255` — 8/1/2026, 2:08:55 PM PT — 628 turns
 
 **Original task:**
 
@@ -182,29 +237,32 @@ I would like you to stop giving me queued ideas here in cline. Stop giving them 
 **Last PICKUP PROMPT:**
 
 ```
-ued, zero arbitrarily blocked.
+tes to blocked after 5 retries
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #20904 [executing]: KILL QUEUED directive + CLOSE_THE_LOOP fix complete, all ideas executing.
-Where we left off (verified 2026-08-01 13:01 PT):
-- Queued ban: rule 161 active, reconcile_ideas never emits [queued], validator rejects [queued] tags
-- Death-loop fix: cron_close_the_loop.php increments [IMPL_RETRY] on every orphaned-worker reset, escalates at count 5
-- 13 ideas verified executing with live worker processes
-- 6 previously blocked ideas reset, approved, and dispatched
-Open threads:
-1. #20672 [executing] confirm build completes before next 40-min watchdog cycle
-2. #20662 [executing] confirm build completes
-3. #20336 [executing] confirm build completes
-4. #20946 [executing] confirm the CLOSE_THE_LOOP fix survives its own build cycle
-5. #20975 [executing] confirm build completes and ready_for_review status resolves
+Pick up task deploy-all-13-final — 13 ideas built and shipped, infrastructure patches live.
+
+Where we left off (verified 2026-08-01 14:08 PT):
+- 13 of 13 ideas deployed per reconcile_ideas live verify
+- 3 infrastructure patches deployed: gate assertion fallback, CLOSE_THE_LOOP escalation, queued disposition banned
+- 20946 patch in production (CLOSE_THE_LOOP backoff) but cron_close_the_loop.php was edited directly; verify VCS sync
+- 20904 and 20975 deployed with files on disk; confirm any follow-on monitoring
+
+Open threads to drive next:
+1. #20946 [deployed] — verify CLOSE_THE_LOOP escalation in production logs after next watchdog cycle; confirm impl_failed ideas auto-escalating at count 5
+2. #20904 [deployed] — verify new rule 161 hardfloor is being enforced in Cline/executor/Argus; audit any residual [queued] tags in pickup prompts
+3. #20960 [deployed] — confirm RCA retrain agent pipeline picked up the DEADMAN guard and is training
+4. Audit orchestrator_api.php lines 3270-3290 (FALSE-DEPLOYED gate caller) for the completion_note write path; workers may need a one-line fix to write assertion to completion_note as well as implementation_log
+
 Reference IDs:
-- Ideas filed: #20904 [executing], #20946 [executing], #161 [deployed] (rule)
-- Rules updated: 91, 161
-- Files touched: /var/www/emtskills/cron/cron_close_the_loop.php, /var/www/emtskills/mcp-servers/ruben-orchestrator/build/index.js, /var/www/emtskills/mcp-servers/ruben-orchestrator/src/index.ts
-- Validator: /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts (QUEUED_TAG_BANNED gate)
-When done, append to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+- Original task: kill-queued-status
+- Ideas filed this session: #20904, #20946, #20975
+- All 13 ideas deployed: #20672, #20662, #20336, #20870, #20071, #20904, #20946, #20895, #20894, #20880, #20960, #20975, #20933
+- Files touched: rules/91-every-completion-needs-pickup-prompt.md, rules/161-ideas-never-queued.md, mcp-servers/ruben-orchestrator/src/index.ts, mcp-servers/ruben-orchestrator/build/index.js, clinerules-mcp/src/index.ts, lib/ruben_deployed_assertion_gate.php, cron/cron_close_the_loop.php, plus 30+ deployed PHP files
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
@@ -3419,47 +3477,4 @@ Reference IDs:
 - Ideas filed this session: #20040 [proposed], #20041 [proposed], #20042 [proposed], #20054 [proposed] (all verified: status=proposed dev_stage=idle via reconcile_ideas 15:37 PT)
 - Ideas carried: #19957 [executing] (verified: in_progress drafting), #19958 [deployed] (verified: ready_for_review), #19962 [proposed], #20004 [deployed] (verified: ready_for_review), #20005 [proposed], #20008 [deployed] (verified: ready_for_review), #20014 [deployed] (verified: ready_for_review), #20022 [rejected] (verified: status=rejected)
 - Bug library: #2082 (bitmask JIT freeze, seen_count=3, resolution merged: restart recovers ~7 min, durable fix = #20054). #1880 [deployed] canonical 
-```
-
-### `1785356710391` — 7/29/2026, 2:08:45 PM PT — 134 turns
-
-**Original task:**
-
-```
-Yet again, we have ZERO payments on our webformes today for EMT. That's likely another error
-```
-
-**Ideas referenced:** #16287 [deployed], #18868, #1910, #19887, #19903, #19907, #19910, #19918, #19925, #19927, #19928, #20016 [deployed], #20017 [queued], #20018 [queued], #20019 [queued], #2098, #5387, #6824
-
-**Last PICKUP PROMPT:**
-
-```
-═══════════════════════════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════════════════════════════
-Pick up task — EMT payment pipeline root cause found: 2-layer break
-
-Where we left off (verified 2026-07-29 13:50 PT):
-- 5 WPForms QuickBooks payments today across EMT sites (processed, money captured)
-- 6 real Students created with wpforms_entry_id linked but `payment_method: NULL`
-- ZERO QB_invoices created → ZERO Class_Enrollments → ZERO pipeline progress
-- Cron enrollment_reconciler.php FATAL on `i.course_id` column (doesn't exist) — qb_invoices has `class_section` [idea #20016 deployed]
-- Root cause: the WPForms→QuickBooks path captures payment in WPForms table but never creates a QB_invoice record, so the reconciler (which joins qb_invoices) has nothing to reconcile
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #20016 [deployed] — Fix cron_enrollment_reconciler.php: change `i.course_id` → `i.class_section` on lines 117 and 125. This cron has been FATALing every 10min, blocking all enrollment auto-reconciliation.
-2. #20017 [queued] — Build QB_invoice creation bridge: Students created via WPForms QuickBooks payments never get QB_invoices + Class_Enrollments. Need a bridge that fires when a QuickBooks payment is processed in WPForms.
-3. #20018 [queued] — Replay today's 6 orphan Students: create invoices + enrollments for Veranika Kaiser (26522FT-07), Jonas Monteon (26822FT), Roy Lowe (26223BC-09), Elijah Rubidoux (26524T), Aaron Williams (26822FT), Michelle Kramer (26723BC)
-4. #20019 [queued] — SLS wpforms_reconciliation cron: add QB_invoice existence check to the gate so this silently-orphaned-payment pattern gets caught immediately
-
-Reference IDs:
-- Ideas filed: #20016, #20017, #20018, #20019
-- Files touched: /var/www/emtskills/cron/cron_enrollment_reconciler.php (line 117/125 course_id bug)
-- Students affected: 8196152, 8196145, 8196144, 8196136, 8196123, 8196153
-- Sites with payments today: arizonaemt (1), californiaemt (1), sanantonioemt (2)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```

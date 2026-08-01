@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-01T20:46:51.563Z",
+ "generated_at": "2026-08-01T21:46:51.932Z",
  "counts": {
-  "parsed": 8,
-  "reused": 373,
+  "parsed": 4,
+  "reused": 379,
   "failed": 0,
-  "total": 381
+  "total": 383
  },
  "tasks": {
   "1784522296714": {
@@ -106633,11 +106633,11 @@
   },
   "1785582017987": {
    "task_id": "1785582017987",
-   "mtime": 1785617208346,
+   "mtime": 1785620144265,
    "created_at": "2026-08-01T11:00:17.987Z",
-   "last_modified": "2026-08-01T20:46:48.346Z",
-   "size_kb": 7255,
-   "turn_count": 565,
+   "last_modified": "2026-08-01T21:35:44.265Z",
+   "size_kb": 7444,
+   "turn_count": 642,
    "title": "GLM ring TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wants autonomous monitoring + cron automation so the ring can self-recover overnight without human intervention. Extremely detailed pickup prompt below for the next window.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1785314663557 — GLM ring: TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wants autonomous monitoring + cron automation so the ring can self-recover overnight without human intervention.\n\n== CURRENT STATE (verified 2026-08-01 03:55 PT) ==\n- RING: DEA",
    "pickup_prompt": "ugh to actually serve traffic.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1785314663557 — GLM 5.2 routing shipped ABOVE 120Bs. Decode-wedge remains.\n\nWhere we left off (verified 2026-08-01 12:26 PT):\n- ROUTING SHIPPED: GLM 5.2 priority gate live in frankenstein-llm (pick_flagship_track line 2508) + frankenstein-tools (LOCAL_TOOL_FALLBACK_CHAIN line 118). LiteLLM active, patches loaded.\n- RING: HTTP 200 but decode-wedged (gen_timeout, 0 tok/s). Gen-probe correctly reports healthy=False, so traffic falls through to 120Bs/adapter. Monitor auto-relaunches every ~10 min.\n- TURNS: 0 when wedged. ~65 tok/s when healthy (first ~10 min post-boot).\n- Blocking issue: decode-wedge (NCCL BROADCAST timeout in PP token-passing).\n\nOpen threads to drive next:\n1. #20536 [proposed] — ROOT CAUSE of decode-wedge. NCCL BROADCAST timeout in _pp_receive_prev_sampled_token_ids. Blocking GLM 5.2 from being reliable primary. (verified: reconcile_ideas returned status=ready_for_review)\n2. #20955 [proposed] — GLM 5.2 routing priority gate (shipped). Mark deployed. (verified: create_idea returned id=20955)\n3. #20873 [proposed] — Add generation forward-progress probe to monitor. (verified: reconcile_ideas returned status=proposed)\n4. #20495 [executing] — Monitor + cron automation deployed. Ring self-recovers. (verified: reconcile_ideas returned status=approved)\n\nReference IDs:\n- Ideas filed this session: #20955 [proposed]\n- Prior ideas: #20870 [proposed], #20871 [proposed], #20872 [proposed], #20873 [proposed], #20806 [proposed], #20807 [proposed], #20528 [proposed], #20536 [proposed], #20506 [proposed], #20495 [executing], #20553 [proposed], #20724 [proposed], #20740 [proposed], #20725 [proposed], #20517 [blocked]\n- Bug library: incident 2136 (RESOLVED: TP=1 PP=6), incident 2116 (RoCE /32 fix), incident 1579 (PP topology), incident 2079 (ring 65 tok/s)\n- Files patched: /etc/litellm/_router_core.py (line 2508), /etc/litellm/hooks/tools.py (line 118). Backups: .bak-glm52priority-20260801_*\n- Ring: http://192.168.1.115:8210 (TP=1 PP=6, all 6 hex nodes)\n- Monitor: /home/rubenmajor/bin/glm52_ring_monitor.sh (v3, cron every 5 min)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
@@ -106702,6 +106702,7 @@
     "2079": "deployed",
     "2116": "resolved",
     "2136": "recorded",
+    "2138": null,
     "2928": null,
     "3717": null,
     "5087": null,
@@ -106765,6 +106766,7 @@
     "20872": "proposed",
     "20873": "proposed",
     "20955": "proposed",
+    "21004": "proposed",
     "21824": null,
     "26318": null,
     "27313": null,
@@ -106951,15 +106953,20 @@
   },
   "1785600191339": {
    "task_id": "1785600191339",
-   "mtime": 1785617208481,
+   "mtime": 1785620807366,
    "created_at": "2026-08-01T16:03:11.339Z",
-   "last_modified": "2026-08-01T20:46:48.481Z",
-   "size_kb": 1723,
-   "turn_count": 643,
+   "last_modified": "2026-08-01T21:46:47.366Z",
+   "size_kb": 1893,
+   "turn_count": 751,
    "title": "#Kaizon / Bugs\n\nI want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh instead of what's stale? \n\nI need to increase overall operational efficiency and I see that Kaizon, ",
-   "pickup_prompt": "ct columns)\n- [x] All 3 gaps addressed\n- [ ] Final verification\n- [ ] Ship with PICKUP PROMPT\n</task_progress>\n</use_mcp_tool>",
+   "pickup_prompt": "verified-resolved, 0 recurred.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — KAIZEN bug efficiency audit: verified-resolution loop shipped and live.\n\nWhere we left off (verified 2026-08-01 2:27 PM PT):\n- 104 bugs classified, 153 recipes fired, 153 verified-resolved with 0 recurrences\n- cron_kaizen_verify.php live on cron every 15 min, verified on WOPR\n- cron_kaizen_classifier.php + cron_kaizen_pipeline.php + cron_kaizen_surface_refresh.php all live\n- Bug Hunter bridge reactivated: 5 GLM52 bugs backfilled into bug_hunter_log, ingest SP rebuilt\n- Email leak pipeline live: 20 leaks classified, recipe added\n- All 8 KAIZEN targets active, unified view v_kaizen_all_findings covers executor/email/moodle/voice/payment/bug_hunter\n\nOpen threads to drive next:\n1. #21000 [deployed] — Monitor next 48h: confirm verified-resolved count grows and no recurrences appear; watch cron_kaizen_verify.log on WOPR\n2. #20969 [deployed] — Watch that the 5 new recipes actually fire on next impl_failed cycles, not just classify\n3. #20970 [deployed] — When Bug Hunter next runs naturally, confirm its findings auto-ingest through sp_kaizen_bug_hunter_ingest\n4. #20971 [deployed] — Verify email leak resolution holds; watch for recurring email_leak_unclassified without recipe fire\n5. #20968 [deployed] — Confirm v_kaizen_all_findings stays current as new surfaces register\n\nReference IDs:\n- Ideas filed/deployed: #20884, #20885, #20886, #20887, #20888, #20889, #20890, #20891, #20910, #20911, #20962, #20963, #20968, #20969, #20970, #20971, #21000\n- Files touched: /var/www/emtskills/cron_kaizen_pipeline.php, cron_kaizen_classifier.php, cron_kaizen_verify.php (NEW), cron_kaizen_surface_refresh.php\n- Cron schedule: pipeline */5, classifier */5, verify */15, surface refresh Sunday 2:30 AM\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
     "1468": null,
+    "1679": null,
+    "1685": null,
+    "1686": null,
+    "1687": null,
+    "1833": null,
     "3076": null,
     "3077": null,
     "3081": null,
@@ -106983,7 +106990,16 @@
     "20914": "proposed",
     "20962": "deployed",
     "20963": "proposed",
-    "20968": "proposed"
+    "20968": "proposed",
+    "20969": "proposed",
+    "20970": "proposed",
+    "20971": "proposed",
+    "20972": "proposed",
+    "20973": "proposed",
+    "20974": "proposed",
+    "21000": "deployed",
+    "21001": null,
+    "21002": null
    }
   },
   "1785601440006": {
@@ -107031,13 +107047,13 @@
   },
   "1785602138255": {
    "task_id": "1785602138255",
-   "mtime": 1785617203633,
+   "mtime": 1785618535390,
    "created_at": "2026-08-01T16:35:38.255Z",
-   "last_modified": "2026-08-01T20:46:43.633Z",
-   "size_kb": 1811,
-   "turn_count": 544,
+   "last_modified": "2026-08-01T21:08:55.390Z",
+   "size_kb": 1917,
+   "turn_count": 628,
    "title": "#Queued Ideas\n\nI would like you to stop giving me queued ideas here in cline. Stop giving them in executor and stop giving them in orchestrator, and stop giving them in Argus. Queued ideas are being used as an excuse not to implement ideas and are harmful. Ideas are Approved and move through the queue. You can tell me where they are at in the queue, but you do not mark an idea as queued so they sit in queue indefinitely. We are done with that bottleneck garbage. Please resolve it. You likely will need ot make a cline rule for this too.",
-   "pickup_prompt": "ued, zero arbitrarily blocked.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #20904 [executing]: KILL QUEUED directive + CLOSE_THE_LOOP fix complete, all ideas executing.\nWhere we left off (verified 2026-08-01 13:01 PT):\n- Queued ban: rule 161 active, reconcile_ideas never emits [queued], validator rejects [queued] tags\n- Death-loop fix: cron_close_the_loop.php increments [IMPL_RETRY] on every orphaned-worker reset, escalates at count 5\n- 13 ideas verified executing with live worker processes\n- 6 previously blocked ideas reset, approved, and dispatched\nOpen threads:\n1. #20672 [executing] confirm build completes before next 40-min watchdog cycle\n2. #20662 [executing] confirm build completes\n3. #20336 [executing] confirm build completes\n4. #20946 [executing] confirm the CLOSE_THE_LOOP fix survives its own build cycle\n5. #20975 [executing] confirm build completes and ready_for_review status resolves\nReference IDs:\n- Ideas filed: #20904 [executing], #20946 [executing], #161 [deployed] (rule)\n- Rules updated: 91, 161\n- Files touched: /var/www/emtskills/cron/cron_close_the_loop.php, /var/www/emtskills/mcp-servers/ruben-orchestrator/build/index.js, /var/www/emtskills/mcp-servers/ruben-orchestrator/src/index.ts\n- Validator: /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts (QUEUED_TAG_BANNED gate)\nWhen done, append to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "tes to blocked after 5 retries\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task deploy-all-13-final — 13 ideas built and shipped, infrastructure patches live.\n\nWhere we left off (verified 2026-08-01 14:08 PT):\n- 13 of 13 ideas deployed per reconcile_ideas live verify\n- 3 infrastructure patches deployed: gate assertion fallback, CLOSE_THE_LOOP escalation, queued disposition banned\n- 20946 patch in production (CLOSE_THE_LOOP backoff) but cron_close_the_loop.php was edited directly; verify VCS sync\n- 20904 and 20975 deployed with files on disk; confirm any follow-on monitoring\n\nOpen threads to drive next:\n1. #20946 [deployed] — verify CLOSE_THE_LOOP escalation in production logs after next watchdog cycle; confirm impl_failed ideas auto-escalating at count 5\n2. #20904 [deployed] — verify new rule 161 hardfloor is being enforced in Cline/executor/Argus; audit any residual [queued] tags in pickup prompts\n3. #20960 [deployed] — confirm RCA retrain agent pipeline picked up the DEADMAN guard and is training\n4. Audit orchestrator_api.php lines 3270-3290 (FALSE-DEPLOYED gate caller) for the completion_note write path; workers may need a one-line fix to write assertion to completion_note as well as implementation_log\n\nReference IDs:\n- Original task: kill-queued-status\n- Ideas filed this session: #20904, #20946, #20975\n- All 13 ideas deployed: #20672, #20662, #20336, #20870, #20071, #20904, #20946, #20895, #20894, #20880, #20960, #20975, #20933\n- Files touched: rules/91-every-completion-needs-pickup-prompt.md, rules/161-ideas-never-queued.md, mcp-servers/ruben-orchestrator/src/index.ts, mcp-servers/ruben-orchestrator/build/index.js, clinerules-mcp/src/index.ts, lib/ruben_deployed_assertion_gate.php, cron/cron_close_the_loop.php, plus 30+ deployed PHP files\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1194": null,
     "1281": null,
@@ -107421,6 +107437,42 @@
     "20958": null,
     "20985": "deployed",
     "47918": null
+   }
+  },
+  "1785620201169": {
+   "task_id": "1785620201169",
+   "mtime": 1785620223786,
+   "created_at": "2026-08-01T21:36:41.169Z",
+   "last_modified": "2026-08-01T21:37:03.786Z",
+   "size_kb": 8,
+   "turn_count": 2,
+   "title": "**Yes, run the next window on frankenstein-llm.** It is the correct pick per rule 146 (free-local-first, one router for everything). Two things to know: the GLM 5.2 priority gate I shipped is live, so frankenstein-llm will gen-probe GLM 5.2 first, correctly see it cannot decode, and fall through to the 120B pool / frankenstein-tools adapter. You get free local either way. Do NOT pick an Anthropic model.\n\nWhere things stand: the ring now BOOTS clean (all 6 up, HTTP 200, correct sparse attention backend) after I found and fixed four launcher regressions. The original decode-wedge is still there, generation returns zero tokens. That is the one real remaining problem, and I proved it is independ",
+   "pickup_prompt": null,
+   "ideas": {
+    "20495": "executing",
+    "20536": "awaiting_review",
+    "20873": "proposed",
+    "20955": "awaiting_review",
+    "21004": "proposed",
+    "178531": null
+   }
+  },
+  "1785620212473": {
+   "task_id": "1785620212473",
+   "mtime": 1785620782735,
+   "created_at": "2026-08-01T21:36:52.473Z",
+   "last_modified": "2026-08-01T21:46:22.735Z",
+   "size_kb": 63,
+   "turn_count": 30,
+   "title": "#GLM\n\n**Yes, run the next window on frankenstein-llm.** It is the correct pick per rule 146 (free-local-first, one router for everything). Two things to know: the GLM 5.2 priority gate I shipped is live, so frankenstein-llm will gen-probe GLM 5.2 first, correctly see it cannot decode, and fall through to the 120B pool / frankenstein-tools adapter. You get free local either way. Do NOT pick an Anthropic model.\n\nWhere things stand: the ring now BOOTS clean (all 6 up, HTTP 200, correct sparse attention backend) after I found and fixed four launcher regressions. The original decode-wedge is still there, generation returns zero tokens. That is the one real remaining problem, and I proved it is in",
+   "pickup_prompt": null,
+   "ideas": {
+    "20495": "executing",
+    "20536": "awaiting_review",
+    "20873": "proposed",
+    "20955": "awaiting_review",
+    "21004": "proposed",
+    "178531": null
    }
   }
  }

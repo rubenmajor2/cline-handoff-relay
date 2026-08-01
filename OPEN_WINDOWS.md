@@ -6,16 +6,21 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/31/2026, 11:07:06 PM PT | window: last 72h | 99 tasks | index total 368 (parsed 6, cached 362)
+Generated: 8/1/2026, 12:07:06 AM PT | window: last 72h | 102 tasks | index total 371 (parsed 9, cached 362)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785563447930` | 7/31/2026, 11:06:42 PM | 49 | 355KB | Why is this happening? Can you resole it? See MCP Troubleshooting document on deskopt/ upd |
-| `1785564225764` | 7/31/2026, 11:06:23 PM | 11 | 181KB | Subagents are showing 0 tools called and 0 tokens again. This has happened before earlier  |
-| `1785531619110` | 7/31/2026, 11:05:49 PM | 934 | 30018KB | The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "servi |
+| `1785566876939` | 8/1/2026, 12:07:06 AM | 61 | 176KB | GLM ring RoCE root cause found (wrong-NIC RX-offload drops from /30 shortcut routes); /32  |
+| `1785563540527` | 8/1/2026, 12:06:56 AM | 249 | 755KB | Can you work on organizing the bug library so that it's easier to search in use by agents? |
+| `1785529983485` | 8/1/2026, 12:06:40 AM | 514 | 1312KB | Make sure that you are consulting the SLS so that incorrect information does not persist.  |
+| `1785566802438` | 8/1/2026, 12:02:27 AM | 50 | 203KB | We are planning a trip to Texas between August 9-12. Which cities do I need to pop into in |
+| `1785564225764` | 8/1/2026, 12:00:56 AM | 194 | 1056KB | Subagents are showing 0 tools called and 0 tokens again. This has happened before earlier  |
+| `1785566951500` | 8/1/2026, 12:00:14 AM | 38 | 188KB | I'm curious whether Kimi K3 or GLM 5.2 would be better at training GLM 5.2 Local or if th |
+| `1785562021337` | 7/31/2026, 11:59:58 PM | 194 | 574KB | Vicky having some issues in chat 55, can you address her issues? In the last 1 or 2 hours |
+| `1785530188751` | 7/31/2026, 11:52:41 PM | 300 | 1073KB | See the Jon and Cori SMS chat regarding EMT classes suppsedly with the wrong dates posted  |
+| `1785531619110` | 7/31/2026, 11:44:47 PM | 984 | 33538KB | The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "servi |
+| `1785563447930` | 7/31/2026, 11:17:57 PM | 86 | 521KB | Why is this happening? Can you resole it? See MCP Troubleshooting document on deskopt/ upd |
 | `1785564150001` | 7/31/2026, 11:03:04 PM | 2 | 5KB | Subagents are showing 0 tools called and 0 tokens again. This has happened before earlier  |
-| `1785562021337` | 7/31/2026, 10:55:11 PM | 104 | 355KB | Vicky having some issues in chat 55, can you address her issues? In the last 1 or 2 hours |
-| `1785563540527` | 7/31/2026, 10:55:04 PM | 14 | 26KB | Can you work on organizing the bug library so that it's easier to search in use by agents? |
 | `1785558681928` | 7/31/2026, 10:09:57 PM | 11 | 25KB | ---[COPY]--- |
 | `1785558616224` | 7/31/2026, 10:01:37 PM | 48 | 195KB | ---[COPY]--- |
 | `1785558513263` | 7/31/2026, 10:00:31 PM | 32 | 98KB | ---[COPY]--- |
@@ -31,12 +36,10 @@ Generated: 7/31/2026, 11:07:06 PM PT | window: last 72h | 99 tasks | index total
 | `1785548524428` | 7/31/2026, 8:44:15 PM | 218 | 538KB | Jon says Daystron counsil stopped working |
 | `1785463237084` | 7/31/2026, 8:39:38 PM | 1100 | 3774KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
 | `1785555199745` | 7/31/2026, 8:37:57 PM | 30 | 102KB | #SLS MEGA HUH |
-| `1785530188751` | 7/31/2026, 8:32:06 PM | 232 | 946KB | See the Jon and Cori SMS chat regarding EMT classes suppsedly with the wrong dates posted  |
 | `1785537361555` | 7/31/2026, 5:56:13 PM | 152 | 588KB | What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor  |
 | `1785360672171` | 7/31/2026, 5:55:46 PM | 938 | 5410KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
 | `1785399211024` | 7/31/2026, 4:30:59 PM | 1674 | 7063KB | #Julia/Claudia |
 | `1785528867234` | 7/31/2026, 4:21:05 PM | 498 | 1481KB | Saying it is dismissed is not right. Just say it's moot. Then this way we don't call it di |
-| `1785529983485` | 7/31/2026, 4:16:23 PM | 397 | 1027KB | Make sure that you are consulting the SLS so that incorrect information does not persist.  |
 | `1785537526001` | 7/31/2026, 3:38:46 PM | 1 | 14KB | #Argus |
 | `1785465245461` | 7/31/2026, 3:34:55 PM | 774 | 3026KB | check jon's argus 80% PD issues. says not resolved yet.  |
 | `1785535349176` | 7/31/2026, 3:03:57 PM | 8 | 17KB | root into wopr and give me apple's username and password for webmail for email: |
@@ -114,7 +117,357 @@ Generated: 7/31/2026, 11:07:06 PM PT | window: last 72h | 99 tasks | index total
 
 ## Per-window detail
 
-### `1785563447930` — 7/31/2026, 11:06:42 PM PT — 49 turns
+### `1785566876939` — 8/1/2026, 12:07:06 AM PT — 61 turns
+
+**Original task:**
+
+```
+GLM ring RoCE root cause found (wrong-NIC RX-offload drops from /30 shortcut routes); /32 fabric32.sh fix mid-deploy; relaunch pending. Comprehensive rule-91 pickup for the next window below — validated and gate-cleared.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785314663557 — GLM ring RoCE bring-up: root cause SOLVED in analysis (wrong-NIC RX-offload drops from /30 shortcut routes), /32 route fix MID-DEPLOY (unverified), relaunch + serve verification pending. Adapter layer wa
+```
+
+**Ideas referenced:** #1754, #1755, #178531, #20005 [proposed], #20264 [queued], #20297 [queued], #20495 [executing], #20498 [queued], #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20553 [blocked], #20724 [proposed], #20725 [proposed], #20729 [queued], #20732 [queued], #20733 [queued], #2101, #2118, #48031, #48140
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785563540527` — 8/1/2026, 12:06:56 AM PT — 249 turns
+
+**Original task:**
+
+```
+Can you work on organizing the bug library so that it's easier to search in use by agents? Right now the bug library may be a little bit disorganized and I think it may contribute to agent's not getting or understanding the full effect of what it can offer. It's vast and rich with resources that could make a significant difference in the way that operations work. It should be leverage as such
+```
+
+**Ideas referenced:** #12619, #12713, #13082, #16523, #19173, #20662, #20729 [queued], #20732 [queued], #20733 [queued], #2121, #2122, #2126, #2128, #2129
+
+**Last PICKUP PROMPT:**
+
+```
+rchestrator for follow-through
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — bug library organization follow-through.
+
+Where we left off (verified 2026-07-31 23:59:26 PT):
+- 1,742 incident rows, 0 NULLs on domain/category/severity
+- MCP v0.3.0 live (restarted 23:54 PT, bug_library_browse confirmed responding)
+- Kaison organizer cron in WOPR crontab at */30 min
+- Last run: classified=0 deduped_rows=0 unclassified_left=0
+
+Open threads to drive next:
+1. #20732 [queued] — Update bug-library clinerule to reference bug_library_browse faceted tool; teach agents to use browse(domain, severity) for exploratory "what do we know?" queries
+2. #20733 [queued] — Verification sweep via Ruben Orchestrator: spot-check all 8 domains via browse, record a test incident and verify it auto-classifies on write
+3. #20729 [queued] — Confirm organizer crontab survived and log file exists: `crontab -l | grep organizer && tail /var/log/kaison_bug_library_organizer.log` on WOPR
+
+Reference IDs:
+- Ideas filed: #20729, #20732, #20733
+- Files touched: frankenstein-bug-library/src/index.ts, build/index.js, /var/www/emtskills/cron/cron_kaison_bug_library_organizer.php
+- MCP server: frankenstein-bug-library v0.3.0
+
+When done, append a row to cline_task_ledger.md per rule 07.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785529983485` — 8/1/2026, 12:06:40 AM PT — 514 turns
+
+**Original task:**
+
+```
+Make sure that you are consulting the SLS so that incorrect information does not persist. Same with the mcp's.
+
+I also agree with your proposed ideas so go ahead and approve those and then leverage rule 267 to bring the items to conclusion we need to bring all of these to conclusion to end and then do comprehensive testing to make sure that everything is fixed
+
+
+Comprehensive handoff below. I re-verified every claim against live code before writing it, including re-checking the false `deployed` tags and confirming the escalation cron is still running (clean run at 13:20).
+
+════════════════════
+```
+
+**Ideas referenced:** #0000, #10086, #10092, #10096, #10103, #10110, #10116, #10121, #10123, #10125, #10132, #1218, #12184, #12993, #13025, #13030, #13040, #13044, #13045, #13057, #13202, #13873, #13976, #15367, #16608, #16610, #17130 [superseded], #17537 [rejected], #17580, #178501, #17913, #18132 [deployed], #19125, #19173, #19921 [approved], #20055 [deployed], #20056 [deployed], #20128 [deployed], #20130 [queued], #20134, #20183, #20313 [deployed], #20314 [queued], #20315 [deployed], #20317 [deployed], #20326 [deployed], #20327 [deployed], #20357, #20419 [deployed], #20420 [deployed], #20491 [proposed], #20539 [rejected], #20551 [proposed], #20556 [queued], #20577 [executing], #20579 [executing], #20591 [executing], #20592 [executing], #20600 [executing], #20613 [proposed], #20700 [ready_for_review], #20702 [ready_for_review], #20703 [ready_for_review], #20716 [ready_for_review], #22606, #22647, #4410, #4414, #4422, #4428, #4929, #4970, #4972, #4977, #4988, #4991, #4992, #5588, #5603, #5604, #5704, #5705, #5721, #5722, #5920, #7175, #9070, #9086, #9168, #9339
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785566802438` — 8/1/2026, 12:02:27 AM PT — 50 turns
+
+**Original task:**
+
+```
+We are planning a trip to Texas between August 9-12. Which cities do I need to pop into in order to visit the most impactful lawmakers. Do a search on the Internet to find which ones would be our most likely allies. Find ones that have scrutinized TDSHS as well as those who are in charge of the sunset committee overseeing TDSHS that I can send a report to and set up a meeting with an advance. I just need to know which cities there are in and some details about why you think these are the best people to contact. I also need their contact information and the feasibility of having a meeting on ei
+```
+
+**Ideas referenced:** #19595, #20734 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+parallel with the meetings
+
+═══════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════
+Pick up task #20734 — Texas TDSHS Sunset Commission lawmaker outreach / Aug 10-11 meeting scheduling.
+
+Where we left off (verified 2026-07-31 23:59 PT):
+- Research complete on TDSHS Sunset review: active Sept 2025-Dec 2026; staff report late 2026; Legislature reviews Jan 2027; lawmakers in districts during Aug 2026 interim.
+- Targets identified: Sen. Lois Kolkhorst (Sunset Chair + Senate HHS Chair, Katy district office 30 min from Houston), Sen. Donna Campbell (Sunset member + ER physician, New Braunfels), Rep. Liz Campos (VP House Public Health, San Antonio), Houston HPHC members (Ann Johnson, Jolanda Jones, Lauren Simmons, Charles Cunningham).
+- Contact details verified: Kolkhorst Katy (281) 394-5610 / lois.kolkhorst@senate.texas.gov; Campbell New Braunfels (830) 626-0065 / donna.campbell@senate.texas.gov; Campos (512) 463-0452 / liz.campos@house.texas.gov; Johnson (512) 463-0582 / ann.johnson@house.texas.gov.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #20734 [proposed] — Mon Aug 3: draft and send meeting requests to Kolkhorst (Katy), Campbell (New Braunfels), Campos (San Antonio) schedulers with EMSU 1-pager framed around the TDSHS sunset review.
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+
+Reference IDs:
+- Ideas filed: #20734 [proposed]
+- Key source URLs: sunset.texas.gov/agencies/department-state-health-services, sunset.texas.gov/about-us/sunset-commission-members, ltgov.texas.gov (2026-03-23 Kolkhorst Sunset chair appointment), senate.texas.gov/member.php?d=18, senate.texas.gov/member.php?d=25, capitol.texas.gov C410 (89R Public Health roster)
+</result>
+</attempt_completion>
+```
+
+### `1785564225764` — 8/1/2026, 12:00:56 AM PT — 194 turns
+
+**Original task:**
+
+```
+Subagents are showing 0 tools called and 0 tokens again. This has happened before earlier today in the morning
+```
+
+**Ideas referenced:** #1003, #10223, #10291, #10469, #10866, #1134, #1146, #11953, #12004, #12184, #12207, #12251, #12285, #12335, #12363, #12407, #12504, #12584, #12597, #12615, #12646, #12672, #13063, #13487, #13554, #13709, #13757, #13873, #1391, #13964, #13977, #14158, #14572, #14777, #1515, #1519 [resolved], #15432, #15669, #1567, #1568, #15815, #15891, #15906, #15919, #15928, #15965, #16167, #16207, #16242, #16259, #16260, #16581, #16606, #16607, #16613, #16648, #16696, #16701, #16727, #16731, #16881, #17202, #17203, #17205, #17300, #17430, #1746, #17483, #1756, #177796, #177918, #177921, #177926, #177956, #1813, #18266, #18329, #18337, #18350, #18353, #18355, #18357, #18363, #1837, #1847, #1848, #18535, #18693, #1871 [investigating], #1874 [resolved], #18788, #18820, #1884 [resolved], #18845, #18868, #1892 [resolved], #1922, #1934, #19426, #19435, #19490, #19503, #19522, #1965, #1966, #1967, #19901, #19921, #2002, #2005, #20101, #20130, #20131, #20133, #20333, #20410, #20491, #20549, #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #20630, #20662, #20663 [rejected], #20665, #20672 [proposed], #20715 [proposed], #20722 [proposed], #20723 [proposed], #20730 [proposed], #2099 [resolved], #2125 [resolved], #2126, #2127, #2128, #2242, #2740, #3023, #3093, #3132, #3133, #3910, #3911, #3915, #3930, #4016, #4021, #4458, #4686, #4692, #4747, #4802, #4811, #4813, #4863, #4906, #4907, #4955, #4962, #5024, #5080, #5102, #5129, #5247, #5329, #5339, #5387, #5450, #5451, #5530, #5564, #5622, #5627, #5742, #5749, #5920, #6055, #6064, #6067, #6070, #6078, #6080, #6105, #6277, #6419, #6443, #6523, #6538, #6650, #6656, #6716, #6728, #6768, #6769, #7048, #7175, #7181, #7189, #7317, #8060, #8082, #8596, #8597, #8639, #8798, #8927, #9025, #9068, #9078, #9086, #9087, #9090, #9123, #9124, #9149, #9191, #9193, #9202, #9215, #9239, #9320, #9465, #9568
+
+**Last PICKUP PROMPT:**
+
+```
+out proxy :8211 `glm_healthy`.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task 1785564225764 — Frankenstein adapter stabilization: finish #20722 port-guard patch + cleanup ghosts, verify single instance.
+
+Where we left off (verified 2026-08-01 00:00 PT):
+- #20715 [proposed] GLM ring unreachable: GLM-5.2 under maintenance (Ruben directive); adapter 44,456 ECONNRESET prior; Federation spill to Artemis proven working
+- #20722 [proposed→partially deployed]: ExecStartPre drop-in + single-instance script LIVE; adapter main() port-probe NOT patched; watchdog restored clean (Step 3.5 pgrep guard never applied)
+- #20723 [proposed] KAIZEN record for adapter_ghost_port_contention — not yet seeded
+- #20730 [proposed] Adapter self-heal umbrella (P0) — filed after watchdog restore decision
+- Two ghost adapters STILL LIVE: pids 3168524 + 3168529 (both PPID=1; systemd MainPID=3168529); port 11510 owned by one of them
+
+Open threads to drive next (rule 267):
+1. #20722 [proposed] — patch /usr/local/bin/frankenstein_tools_adapter.py main() with socket port-probe → sys.exit(0) if 11510 already bound (use base64 single-line python3 -c to defeat SSH quoting: write patch via `echo '...' | base64 -d` then exec, or scp a local file)
+2. #20722 [proposed] — `sudo systemctl daemon-reload && sudo systemctl restart frankenstein-tools` → verify exactly ONE adapter: `ps aux | grep frankenstein_tools_adapter | grep -v grep | wc -l` = 1
+3. #20722 [proposed] — re-apply watchdog Step 3.5 pgrep guard via same base64 technique; `bash -n` before deploy
+4. #20723 [proposed] — seed KAIZEN failure_repair_recipes with adapter_ghost_port_contention recipe + backfill today's two incidents (07-29 stale pid 3167752, tonight 3168524/3168529)
+5. #20715 [proposed] — after GLM maintenance completes: verify glm_healthy=true at :8211, GLM canary fail_streak→0
+
+Reference IDs:
+- Ideas filed: #20715 [proposed], #20722 [proposed], #20723 [proposed], #20730 [proposed]
+- Files touched: /etc/systemd/system/frankenstein-tools.service.d/zzz-idea20722-single-instance.conf (created), /usr/local/bin/emsu-frank-tools-single-instance.sh (created), /usr/local/bin/emsu-frankenstein-tools-watchdog.sh (restored from bak-503fix-20260622)
+- Verified: service Type=simple Restart=always no ExecStartPre (before our drop-in); adapter main() lines 3998-4055; LISTEN_HOST/PORT lines 92-93
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Answer quarantine duration (FAIL_QUARANTINE=2, PASS_RECOVER=1, CANARY_INTERVAL=5s)
+- [x] Document what polls unit health (adapter log CANARY lines, :8211 glm_healthy)
+- [x] File #20722, #20723, #20730 (approved)
+- [x] Deploy ExecStartPre drop-in + single-instance script
+- [x] Restore watchdog to clean backup after mangled patch attempt
+- [x] Diagnose live double-spawn (3168524+3168529, both PPID=1)
+- [x] Ship honest status + PICKUP PROMPT listing remaining work with real idea numbers
+</task_progress>
+</attempt_completion>
+```
+
+### `1785566951500` — 8/1/2026, 12:00:14 AM PT — 38 turns
+
+**Original task:**
+
+```
+I'm curious whether Kimi K3 or GLM 5.2 would be better at training GLM 5.2 Local or if the community suggest a better model? Can you do some research and find out for me?
+```
+
+**Ideas referenced:** #0000, #0056, #10017, #1003, #10086, #10092, #10096, #10103, #10108, #10110, #10116, #10121, #10123, #10125, #10132, #10157, #10223, #10243, #10291, #10320, #1041, #10440, #10469, #10739, #10740, #10756, #10866, #10868, #10869, #10870, #10872, #10873, #10875, #10880, #10881, #11261, #1130, #1131, #11316, #1134, #1146, #1151, #11741, #11781, #11798, #11942, #11944, #11952, #11953, #11977, #11991, #11992, #11993, #11996, #11998, #11999, #12004, #1218, #12184, #12207, #12251, #12285, #12299, #12314, #12335, #12363, #12365, #12366, #12368, #12407, #1241, #12425, #12430, #12459, #12477, #1248, #1249, #12504, #1252, #1258, #12584, #12588, #12597, #12615, #12618, #12619, #12646, #12657, #12672, #12680, #12688, #12689, #12713, #12716, #12824, #128263, #128266, #12872, #12878, #12993, #13025, #13030, #13040, #13044, #13045, #13048, #13051, #13057, #13063, #13080, #13081, #13082, #13108, #13121, #13202, #13487, #13554, #13709, #13757, #13831, #13840, #13873, #13874, #1391, #13964, #13976, #13977, #14000, #14133, #14142, #14158, #14572, #14777, #14828, #14829, #14834, #14835, #14978, #15144, #1515, #1519 [resolved], #15432, #155724, #1565, #15669, #1567, #1568, #15815, #15827, #15891, #15906, #15911, #15919, #15928, #1593, #15965, #15979, #16032, #16033, #16036, #16120, #16122, #16163, #16167, #16207, #16242, #16254, #16259, #16260, #16265, #16304, #16338, #16448, #16452, #16578, #16581, #16588, #16594, #16606, #16607, #16608, #16610, #16613, #16648, #1665, #166501, #16696, #16701, #16715, #16727, #16731, #16732, #16778, #1680, #16802, #16803, #16839, #16844, #16851, #16881, #17130 [superseded], #17202, #17203, #17205, #17246, #17300, #17430, #1744, #1746, #17483, #17537 [rejected], #1754, #1755, #1756, #17580, #177796, #1779, #177918, #177921, #177926, #177956, #178501, #178531, #178553, #178554, #178556, #1798, #1804, #1813, #18132 [deployed], #18266, #1828, #18312, #18326, #18329, #18337, #18350, #18353, #18355, #18357, #18363, #1837, #18435, #1847, #1848, #1850, #18535, #18586, #18600, #18693, #1871 [investigating], #18720, #1874 [resolved], #18781, #18788, #18820, #1884 [resolved], #18845, #18868, #1892 [resolved], #1895, #1896, #19017, #19125, #19173, #1922, #19239 [rejected], #19325, #19338, #1934, #19370, #19415, #19416, #19419, #19426, #19435, #19490, #19503, #19519, #19522, #19567, #1965, #19653, #1966, #1967, #1976, #19785 [deployed], #19788 [proposed], #1986, #1988, #1989, #19898, #19901, #19903, #19904, #19907, #1991, #19921 [approved], #19925, #1993 [resolved], #1996, #1998, #20005 [proposed], #2002, #20022, #20042, #2005, #20055 [deployed], #20056 [deployed], #2006, #20069, #20101, #20128 [deployed], #2013, #20130 [queued], #20131, #20133, #20134, #2014, #20183, #20247, #20251, #20264 [queued], #20272 [deployed], #20282 [executing], #20286, #20292, #20297 [queued], #20302 [deployed], #20311 [deployed], #20313 [deployed], #20314 [queued], #20315 [deployed], #20317 [deployed], #20326 [deployed], #20327 [deployed], #20333 [queued], #20334 [queued], #20357, #20388 [queued], #20389 [queued], #20392 [queued], #20393 [deployed], #20405 [queued], #20410 [queued], #20419 [deployed], #20420 [deployed], #20491 [proposed], #20495 [executing], #20497 [queued], #20498 [queued], #2050, #20500 [queued], #20501 [queued], #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20539 [rejected], #20547 [queued], #20549 [queued], #20551 [proposed], #20553 [blocked], #20555 [blocked], #20556 [queued], #20564 [queued], #20565 [queued], #20569 [deployed], #20577 [executing], #20578 [queued], #20579 [executing], #20591 [executing], #20592 [executing], #20593 [deployed], #20600 [executing], #20606 [queued], #20607 [deployed], #20613 [ready_for_review], #20620 [executing], #20622 [executing], #20625 [proposed], #20626 [proposed], #20627 [deployed], #20628 [deployed], #20629 [deployed], #2063, #20630 [proposed], #2065, #20660 [proposed], #20661 [executing], #20662 [proposed], #20663 [rejected], #20665 [proposed], #20672 [proposed], #20674 [executing], #20676 [proposed], #20677 [proposed], #20678 [proposed], #20681 [executing], #20682 [executing], #20690 [proposed], #20693 [proposed], #20700 [ready_for_review], #20702 [ready_for_review], #20703 [ready_for_review], #20707 [proposed], #20708 [proposed], #20711 [proposed], #20714 [proposed], #20715, #20716 [ready_for_review], #20718 [proposed], #20721 [proposed], #2073, #20731 [proposed], #2084, #2085, #2092, #2099 [resolved], #2101, #2113, #2118, #2120 [investigating], #2125 [resolved], #2126 [deployed], #2127 [deployed], #2128 [resolved], #2129 [deployed], #2131 [open], #218838, #22386, #2242, #22606, #22647, #26222, #262220, #2640, #26922, #2740, #3023, #30363, #3093, #3132, #3133, #3229 [approved], #3231 [rejected], #3295, #3300, #3336, #3337, #3338, #3339, #334155, #3360, #3361, #3362, #3363, #3365, #3366, #3402, #366127, #37474, #3910, #3911, #3915, #3930, #4016, #4021, #4410, #4414, #4422, #4428, #4458, #4517, #4686, #4692, #4747, #4802, #48031, #4811, #4813, #48140, #4863, #4906, #4907, #4929, #495057, #4955, #4962, #4970, #4972, #4977, #4988, #4991, #4992, #5024, #5080, #5102, #5129, #5247, #5329, #5339, #5387, #5450, #5451, #5530, #5564, #5588, #5603, #5604, #5622, #5627, #5700, #5704, #5705, #5721, #5722, #5742, #5749, #5920, #6055, #6064, #6067, #6070, #6078, #6080, #6105, #6277, #6419, #6432, #6443, #64748, #6523, #6538, #6650, #6656, #6716, #6728, #6768, #6769, #7048, #7142, #7149, #7175, #7181, #7189, #7317, #7505, #7925, #8060, #8082, #856404, #8596, #8597, #8639, #8798, #8927, #9025, #9068, #9078, #9086, #9087, #9090, #9123, #9124, #9149, #9158, #9168, #9191, #9193, #9202, #9215, #9239, #9269, #9271, #9274, #9277, #9320, #9339, #9465, #9568, #9650, #9660, #9731
+
+**Last PICKUP PROMPT:**
+
+```
+er-model, felloai.com/kimi-k3.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1785566951500 -- research: Kimi K3 vs GLM 5.2 as teacher model for training GLM 5.2 Local.
+
+Where we left off (verified 2026-07-31 23:59 PT):
+- Research complete: 7 Brave web searches across model benchmarks, teacher-student distillation practice, and community discussion.
+- Key facts: Kimi K3 open weights released July 26-27 2026 (2.8T MoE, MXFP4), AA Index 57, wins on reasoning + long context. GLM 5.2 open-weight MIT since June 13 2026 (753B), AA Index 51, wins on coding + agent reliability + cost/speed.
+- Community (r/LocalLLaMA, r/LocalLLM) actively distilling GLM 5.2 into approx 30B students; standard method is logit-level distillation or synthetic data from a frontier teacher.
+- Recommendation delivered: K3 via API for high-value reasoning traces, GLM 5.2 as default bulk teacher, no local teacher for either at practical scale.
+
+Open threads to drive next:
+1. #20731 [proposed] -- Best teacher model for fine-tuning GLM 5.2 Local (Kimi K3 vs GLM 5.2 vs DeepSeek V4 analysis). Next action: Ruben decides teacher model preference; no code impact at EMSU.
+
+Reference IDs:
+- Ideas filed: #20731 [proposed]
+- Files touched: none
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Run research: Kimi K3 vs GLM 5.2 benchmarks, teacher-student distillation practices, community recommendations
+- [x] File idea #20731 for the recommendation
+- [x] Fix rule 91 gate violations (missing task ID, em dashes) and ship completion
+</task_progress>
+</attempt_completion>
+```
+
+### `1785562021337` — 7/31/2026, 11:59:58 PM PT — 194 turns
+
+**Original task:**
+
+```
+Vicky having some issues in chat 55, can you address her issues? In the last 1 or 2 hours
+```
+
+**Ideas referenced:** #19490, #20128, #20130, #20333, #20410, #20555, #20565, #20569 [deployed], #20613 [ready_for_review], #20627, #20628, #20629, #20630, #20662, #20663 [rejected], #20665, #20672 [proposed], #20707 [proposed], #20708 [proposed], #20711 [proposed], #20718 [proposed], #20728 [proposed], #21088, #2125, #2126, #21261, #2127, #2128, #21490, #21495, #3360, #3361, #3362, #3363, #3364, #3365, #3366 [deployed], #3372, #6067
+
+**Last PICKUP PROMPT:**
+
+```
+ cleanup through this UI page.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — Vicky and Ruben follow-through on approved fixes and exam enforcement tickets
+
+Where we left off (verified 2026-08-01 00:00 PT):
+- ✔ Repetition guard alive: 0 "still on this one" spam messages since 23:46 PT deploy; cron confirms clean ticks
+- ✔ Vicky access fixed: requireRole allows Admin tier + $isVicky vyu@ check, 4509-line file intact, php lint clean
+- ✔ Ruben approved #20711 (implementing), #20728 (implementing), #20613 (approved)
+- ✔ website_pricing.php wired to website_class_schedules + api/website_schedules.php; Vicky can do refresher cleanup via UI
+- ▸ Renewed dashboard gate + isVicky fix active; next 10-min cron tick likely marks Vicky issue #3372 as resolved
+
+Open threads to drive next:
+1. #20711 [in_progress] — Executor spec patch should finish in ~7 min; if it diff-no-ops because guard is already deployed, mark as done
+2. #20728 [in_progress] — Executor generates spec next; if diff no-ops (patch already applied), mark complete
+3. #20708 [proposed] — Vicky to delete the weekly refresher extras (8/1, 8/8, 8/22, 9/5, 9/12) via website_pricing.php UI
+4. #20707 [proposed] — Jason Li extensions: get approved dates and UPDATE moodle_c_live.quiz_overrides (group 2622, quizzes 681/682/683)
+5. Aaron Perez (ticket #21088) and Sam Nelson (ticket #21261) both need exam enforcement action via Vicky on exam_enforcement_dashboard.php
+6. #20613 [approved] — Watch Aug 1 first large charge for monthly-cap vs risk-hold discrimination
+
+Reference IDs:
+- Ideas approved this session: #20711 [in_progress], #20728 [in_progress], #20613 [approved]
+- Superseded: #20718 [proposed] (false claim, corrected by #20728)
+- False-positive resolved: #3366 (transient MCP probe timeout)
+- DB changes: follow_through_chat_sent_at column on ruben_imessage_issues, #3366 → resolved
+- Files deployed: exam_enforcement_dashboard.php (2 sed patches), cron_ruben_imessage_follow_through.php (v3 guard)
+- File restored from backup: exam_enforcement_dashboard.php.bak-2026-08-01T06-46-17-mcp-deploy
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785530188751` — 7/31/2026, 11:52:41 PM PT — 300 turns
+
+**Original task:**
+
+```
+See the Jon and Cori SMS chat regarding EMT classes suppsedly with the wrong dates posted for Boot Camp on the various schedules and advise what's happening with that.
+```
+
+**Ideas referenced:** #0056, #11998, #155724, #1565, #16732, #19017, #1976, #20578 [queued], #20593 [deployed], #20606 [queued], #20607 [deployed], #20678 [proposed], #20721 [proposed], #218838, #26222, #262220, #2640, #26922, #3295, #3300, #3336, #3337, #3338, #3339, #334155, #37474, #495057, #64748, #856404
+
+**Last PICKUP PROMPT:**
+
+```
+ification hook + audit record.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Cancel Class button on view_course_schedules.php + confirm 8/8 BC cancellation.
+
+Where we left off (verified 7/31/2026 11:52 PM PT):
+- 8/8 ghost BC sections 26222BC–26922BC (Course_Schedules ids 531–538 + class_schedule_instances 3160–3167): DELETED — Course_Schedules count for `26%22BC` = 0
+- Students migrated: Liliana Frausto, Jacob Aldaco, Starrenity Jones → 26223BC (Tempe 8/17); Frank Heald → 26923BC (DFW 8/17)
+- qb_invoices migrated: 4 → 26223BC, 1 → 26923BC
+- Public sites verified clean: arizonaemt.com/classschedule/ and texasemt.com show August 17, zero August 8
+- Display fix shipped: view_course_schedules.php strtotime(NULL) fatal patched (8 null-guarded sites; backup .bak-20260731-1413) — all 10 rows render
+- Guardrail rule installed: /var/www/emtskills/.clinerules/300-bootcamp-safe-course-writes.md (33 lines, verified)
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #20606 [executing] — Build the Cancel Class button on google-sheets-to-mysql-migration/view_course_schedules.php: cancel action deletes/marks the class, then triggers student email/SMS notification offering transfer to nearest open section, and writes an audit record. Need Ruben's decision on mark-as-cancelled column vs hard DELETE.
+2. #20606 [executing] — Contact 4 affected students: Liliana Frausto (lilyfrost86@gmail.com, Tempe), Jacob Aldaco (jacobaldaco2006@gmail.com, Tempe), Starrenity Jones (mrsstarrjones@gmail.com, Tempe, EA completed 7/31), Frank Heald (frankraymondheald123@gmail.com, DFW) — confirm the 8/17 placement is acceptable; Vicky outreach.
+
+Reference IDs:
+- Ideas: #20606 [approved/executing], #20678 [approved], #20721 [proposed], #20578 [proposed], #20593 [proposed]
+- Files touched: /var/www/emtskills/google-sheets-to-mysql-migration/view_course_schedules.php (+.bak-20260731-1413), /var/www/emtskills/.clinerules/300-bootcamp-safe-course-writes.md
+- Tables mutated: Course_Schedules, class_schedule_instances, Students, qb_invoices
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+```
+
+### `1785531619110` — 7/31/2026, 11:44:47 PM PT — 984 turns
+
+**Original task:**
+
+```
+The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "serving properly" today, and I am not going to pretend otherwise. Here is the honest, complete accounting of a very long session — what is fixed for real, what I got wrong, and exactly where the next window should start.
+
+THE ARC. Last night the ring served 40-67 turns/hour for 10 hours, then died at 01:03 PT. Today it has died or wedged within minutes of every boot, across every config permutation I tried. I fixed five real adapter-side routing bugs and shipped an auto-relaunch watchdog that genuinely works n
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11942, #12477, #12618, #12657, #12824, #12872, #12878, #13202, #13840, #15144, #16163, #16254, #16265, #16304, #16844, #1754, #1755, #178531, #1804, #18312, #18326, #18720, #19125, #19653, #19903, #19907, #19925, #1993 [resolved], #20005 [proposed], #20069, #2013, #20247, #20264 [queued], #20272 [deployed], #20297 [queued], #20302 [deployed], #20311 [deployed], #20495 [executing], #20498 [queued], #2050, #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20553 [blocked], #20625 [proposed], #20626 [proposed], #20660 [proposed], #20665 [proposed], #20693 [proposed], #20724 [proposed], #20725 [proposed], #2092, #2101, #2118, #2120 [investigating], #366127, #48031, #48140
+
+**Last PICKUP PROMPT:**
+
+```
+ — validated and gate-cleared.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785314663557 — GLM ring RoCE bring-up: root cause SOLVED in analysis (wrong-NIC RX-offload drops from /30 shortcut routes), /32 route fix MID-DEPLOY (unverified), relaunch + serve verification pending. Adapter layer was already fully fixed in the prior window.
+
+== CURRENT STATE (verified 2026-07-31 23:40 PT) ==
+- RING: DOWN. Last boot (relaunch #4, 23:20) died at NCCL ring-transport connect. Artemis :8000 + Julia :11513 carry ALL traffic — no user impact at any point.
+- WATCHDOG: intentionally STOPPED on all 6 nodes during RoCE work — re-enable only after the ring is stable: `systemctl start glm52-ring-watchdog` (kill switch also available: touch /tmp/glm52_watchdog.disabled).
+
+== ROOT CAUSE (do not re-derive) ==
+RoCE RX is NIC-offloaded: an arriving RoCE packet must hit the NIC that owns the QP, or the mlx5 hardware drops it silently (kernel IP routing never sees it; ping works fine, which is the trap). The fabric's /30 SHORTCUT routes (written by /usr/local/bin/fabric_up.sh) send a /30's transit traffic INTO a member host via that host's OTHER port — e.g. Cato had `10.220.5.0/30 via 10.220.6.1` (Cesar), so a reply for Cesar's f0 address (10.220.5.2) arrives on Cesar's f1 NIC and is hardware-dropped. Result: ibv_modify_qp fails with 110 Connection timed out; proxy.cc:1861 `operation=Connect, res=3` is only the downstream symptom. Even ADJACENT pairs fail when NCCL pins the channel to the wrong local port (proven boot #4: Cesar f0 10.220.5.2 -> Cato 10.220.6.2). Config knobs CANNOT fix this — it is an L3 path-vs-NIC-ownership problem.
+
+== THE FIX: /32 per-address routes ==
+On every node, route each REMOTE fabric address individually: .1 addresses via the ccw neighbor, .2 addresses via the cw neighbor (every /30 link has .1=ccw member, .2=cw member — verified against all 6 route tables). /32 beats /30 on specificity, so the shortcuts become dead without deleting them. Neighbor table (ccw / cw):
+- Cato .115:    ccw=10.220.6.1  cw=10.220.1.2
+- Augustus .244: ccw=10.220.1.1  cw=10.220.2.2
+- Pompey .21:    ccw=10.220.2.1  cw=10.220.3.2
+- Marcus .171:   ccw=10.220.3.1  cw=10.220.4.2
+- Tiberius .32:  ccw=10.220.4.1  cw=10.220.5.2
+- Cesar .56:     ccw=10.220.5.1  cw=10.220.6.2
+Script: /tmp/fabric32.sh on the Mac AND already scp'd to all 6 nodes — BUT the deploy terminal output garbled, so integrity is UNVERIFIED. First move: `bash -n /tmp/fabric32.sh` and md5sum-compare each node vs the Mac copy; re-scp if mismatched. Then run on ALL 6 with sudo (`echo rubenmajor | sudo -S bash /tmp/fabric32.sh`, fallback password qefru3-cocnyf-xuxnoP) and verify `ip route | grep 10.220` shows the ten /32s per node. The script skips the node's own addresses and is idempotent.
+
+== VERIFY BEFORE BOOTING (cheap, saves 15 min) ==
+rping a previously-failing cross-subnet pair: on Cesar `rping -s &`; on Augustus `rping -c -S 10.220.2.1 -a 10.220.6.2 -v`. RDMA CM connect succeeding = the /32 fix works at the verbs layer.
+
+== RELAUNCH + SERVE MARKERS ==
+From Cato: `setsid nohup bash /tmp/glm_ring_cesarfirst.sh > /tmp/glm_ring_cesarfirst.log 2>&1 < /dev/null &` (script handles cleanup + Cesar-first stagger + rank0 dispatch). Watch: each worker logs ~86 `via NET/IB` lines with ZERO `ibv_modify_qp failed`; then `Connected all rings` appears; then Cato JIT compiles 10-15 min; then curl the ring endpoint (grep --port in /tmp/glm52_authoritative.sh) for HTTP 200, th
+```
+
+### `1785563447930` — 7/31/2026, 11:17:57 PM PT — 86 turns
 
 **Original task:**
 
@@ -127,77 +480,35 @@ Error: MCP error -32601: Unknown tool: read_server_file</
 These still come up from time to time
 ```
 
-**Ideas referenced:** #10157, #10223, #10243, #10291, #10320, #1041, #10440, #10756, #10868, #10869, #10870, #10872, #10873, #10875, #10880, #10881, #11977, #11991, #11992, #11993, #11996, #11999, #12619, #13048, #13051, #13080, #13081, #14978, #15827, #15911, #1593, #1665, #166501, #1680, #17300, #18435, #18600, #1895, #20022, #20286, #20292, #3402, #5700, #9158, #9269, #9271, #9274, #9277, #9731
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785564225764` — 7/31/2026, 11:06:23 PM PT — 11 turns
-
-**Original task:**
-
-```
-Subagents are showing 0 tools called and 0 tokens again. This has happened before earlier today in the morning
-```
-
-**Ideas referenced:** #12251, #12335, #12407, #1519 [resolved], #16648, #17202, #17203, #17205, #17300, #17430, #18329, #1871 [investigating], #1874 [resolved], #18820, #1884 [resolved], #18868, #1892 [resolved], #1934, #20130, #20333, #20410, #20549, #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #20630, #20662, #20663 [rejected], #20665, #20672 [proposed], #2099 [resolved], #2125 [resolved], #2126, #2127, #2128
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785531619110` — 7/31/2026, 11:05:49 PM PT — 934 turns
-
-**Original task:**
-
-```
-The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "serving properly" today, and I am not going to pretend otherwise. Here is the honest, complete accounting of a very long session — what is fixed for real, what I got wrong, and exactly where the next window should start.
-
-THE ARC. Last night the ring served 40-67 turns/hour for 10 hours, then died at 01:03 PT. Today it has died or wedged within minutes of every boot, across every config permutation I tried. I fixed five real adapter-side routing bugs and shipped an auto-relaunch watchdog that genuinely works n
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11942, #12477, #12618, #12657, #12824, #12872, #12878, #13202, #13840, #15144, #16163, #16254, #16265, #16304, #16844, #1754, #1755, #178531, #1804, #18312, #18326, #18720, #19125, #19653, #19903, #19907, #19925, #1993 [resolved], #20005 [proposed], #20069, #2013, #20247, #20264 [queued], #20272 [deployed], #20297 [queued], #20302 [deployed], #20311 [deployed], #20495 [executing], #20498 [queued], #2050, #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20553 [blocked], #20625 [proposed], #20626 [proposed], #20660 [proposed], #20665 [proposed], #20693 [proposed], #2092, #2101, #2118, #2120 [investigating], #366127, #48031, #48140
+**Ideas referenced:** #10157, #10223, #10243, #10291, #10320, #1041, #10440, #10756, #10868, #10869, #10870, #10872, #10873, #10875, #10880, #10881, #11977, #11991, #11992, #11993, #11996, #11999, #12619, #13048, #13051, #13080, #13081, #14978, #15827, #15911, #1593, #1665, #166501, #1680, #17300, #18435, #18600, #1895, #20022, #20286, #20292, #20714 [proposed], #3402, #5700, #9158, #9269, #9271, #9274, #9277, #9731
 
 **Last PICKUP PROMPT:**
 
 ```
-d value + timestamp + verdict.
+ose the ticket
 
-═══════════════════════════════════════════════
+═══════════════════════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
+═══════════════════════════════════════════════════════════════
+Pick up task — MCP tunnel warmup hardening: verify zero -32601 occurrences after 1 week.
 
-Pick up task #1785314663557, GLM52 speed bakeoff running. Live doc /var/www/emtskills/docs/GLM52_SPEED_BAKEOFF.md. Fill per-window results + CLAIMS vs MEASURED table as windows complete.
-
-Where we left off (verified 2026-07-31 21:21 PT):
-- glm52-only CONFIRMED = direct hard pin to GLM ring via LiteLLM only (fallbacks [], no adapter). Control path. frankenstein-llm = treatment path (full adapter). Same LiteLLM endpoint for both.
-- LIVE DOC: /var/www/emtskills/docs/GLM52_SPEED_BAKEOFF.md with CLAIMS vs MEASURED table, per-rep PT timestamp columns, agent-proof re-run appendix, rule-297 sampling warning.
-- 10 copy windows delivered with per-rep timestamps.
-- RING: alive at 21:14 PT (2 running, gen_tokens moving).
-- ADAPTER FIXES TODAY: GLM-first ordering, executor cap 24, stream TTFB 240s, verified live.
+Where we left off (verified 2026-07-31 23:17 PT):
+- Two proactive fixes shipped to mcp-tunnel.sh: ServerAlive 10→7 (14s detection) + post-reconnect bridge warmup (initialize + tools/list on all 10 ports before Cline clients can connect)
+- Both verified live: all 10 ports warm, bash -n clean, tunnel restarted via launchctl kickstart
+- MCP_Troubleshooting.md §14 documents the three-class error table
+- Idea #20714 filed to track residual -32601 frequency
 
 Open threads to drive next:
-1. #20693 [proposed], THE ACTIVE WORK: collect window results, correlate with adapter log, fill CLAIMS vs MEASURED, identify which adapter mechanism mismeasures a healthy ring, fix it, write verdict. (verified: status=proposed dev_stage=idle)
-2. #20660 [proposed], GLM-first drift protection. (verified: status=proposed dev_stage=idle)
-3. #20626 [proposed], RoCE activation. (human-only decision, no idea)
-4. #20625 [proposed], watchdog SSH timeout hardening. (verified: status=proposed dev_stage=idle)
-5. #20553 [queued], watchdog live. (verified: status=ready_for_review dev_stage=ready_for_review)
-6. #20495 [executing], watchdog shipped. (verified: status=in_progress dev_stage=idle)
+1. #20714 [proposed] — After 1 week, run: `tail -100 /tmp/mcp-tunnel.log | grep -i warmup` to confirm warmup fires on reconnect; grep for any WARMUP failures. Ask Ruben if -32601 read_server_file errors have ceased. If zero occurrences, close #20714 and mark §14 "Resolved"
+2. If any -32601 still occurs: the warmup fix eliminates the race on reconnect — remaining occurrences would be from long-lived Cline windows with stale in-memory tool caches. The fix there is `Cmd+Shift+P → Developer: Reload Window`
 
 Reference IDs:
-- Ideas filed this task: #20660 [proposed], #20693 [proposed] (verified: status=proposed dev_stage=idle)
-- Ideas rejected: #20665 [rejected] (verified: upstream log never broken)
-- Files touched: Rules-archive/298 (strengthened), HANDOFF_NOTES (rule 297 self-audit), docs/GLM52_SPEED_BAKEOFF.md (created + claims table)
-- Server drop-ins deployed: zzzzzzzzzzzzzzzzzzz-glm-first-restore.conf, zzzzzzzzzzzzzzzzzzzz-glm-executor-cap-fix.conf, zzzzzzzzzzzzzzzzzzzzz-glm-stream-ttfb-fix.conf
+- Idea: #20714
+- Files: /Users/rubenmajor/bin/emsu-mcp-tunnel.sh, /Users/rubenmajor/Desktop/MCP_Troubleshooting.md
 
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Confirm glm52-only = GLM 5.2 Local only
-- [x] Build 10 copy-window test prompts with per-rep PT timestamps + tok/s math
-- [x] File bakeoff idea #20693 [proposed]
-- [x] Create live results document with CLAIMS vs MEASURED table + agent-proof appendix
-- [x] Fix em-dash gate (copy markers now ---[COPY]---)
-- [x] Gate validation: ALL PASSED, GATE CLEAR
-- [x] Delivered windows + doc link
-</task_progress>
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════════════════
+</result>
 </attempt_completion>
 ```
 
@@ -207,62 +518,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 
 ```
 Subagents are showing 0 tools called and 0 tokens again. This has happened before earlier today in the morning
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785562021337` — 7/31/2026, 10:55:11 PM PT — 104 turns
-
-**Original task:**
-
-```
-Vicky having some issues in chat 55, can you address her issues? In the last 1 or 2 hours
-```
-
-**Ideas referenced:** #20128, #20130, #20333, #20410, #20555, #20565, #20569 [deployed], #20613 [ready_for_review], #20627, #20628, #20629, #20630, #20662, #20663 [rejected], #20665, #20672 [proposed], #20707 [proposed], #20708 [proposed], #2125, #2126, #2127, #2128, #3360, #3361, #3362, #3363, #3365, #3366
-
-**Last PICKUP PROMPT:**
-
-```
-at 55 via ruben_message_queue.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #20707 [proposed] - Vicky chat 55 issues: Jason Li extensions + refresher schedule cleanup
-
-Where we left off (verified 2026-07-31 22:38 PT):
-- Jason Li (26415W-42): exam 5 (681) and 6 (682) group overrides expired 7/22, 7/23; zero attempts on both; final (683) override active through 8/2; 2 deadline_miss entries on record
-- Refresher schedule: weekly rows 8/1 through 9/12 bulk-created 7/30; extras 8/1, 8/8, 8/22, 9/5, 9/12
-- Published findings + approvals request to chat 55 via ruben_message_queue, queued true
-
-Open threads to drive next:
-1. #20707 [proposed] Jason Li exam 5, 6, final extensions: get Ruben/Jon approval on extension dates, then UPDATE moodle_c_live.quiz_overrides (group 2622, quizzes 681/682/683)
-2. #20708 [proposed] Refresh schedule cleanup: on approval, DELETE website_class_schedules rows for 8/1, 8/8, 8/22, 9/5, 9/12 across all refresher sites, keep 8/15, 8/29
-3. #20613 [queued] Intuit risk throttle / 5007 Credit Floor: watch Aug 1 first large charge for monthly-cap vs risk-hold discrimination, per outage watch cron
-
-Reference IDs:
-- Ideas filed: #20707 [proposed], #20708 [proposed]
-- Files touched: /var/www/emtskills/routes/website_pricing.php (read only)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Read recent chat 55 messages to find Vicky's issues
-- [x] Issue 1: Jason Li (26415W-42) exam 5/6/final extensions — analyzed, awaiting approval
-- [x] Issue 2: Refresher schedule showing weekly — identified extra dates, awaiting approval to delete
-- [x] Report findings and actions taken
-</task_progress>
-</attempt_completion>
-```
-
-### `1785563540527` — 7/31/2026, 10:55:04 PM PT — 14 turns
-
-**Original task:**
-
-```
-Can you work on organizing the bug library so that it's easier to search in use by agents? Right now the bug library may be a little bit disorganized and I think it may contribute to agent's not getting or understanding the full effect of what it can offer. It's vast and rich with resources that could make a significant difference in the way that operations work. It should be leverage as such
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
@@ -1013,52 +1268,6 @@ You were right to stop me. I ran the SLS across all 24 and it corrects my analys
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785530188751` — 7/31/2026, 8:32:06 PM PT — 232 turns
-
-**Original task:**
-
-```
-See the Jon and Cori SMS chat regarding EMT classes suppsedly with the wrong dates posted for Boot Camp on the various schedules and advise what's happening with that.
-```
-
-**Ideas referenced:** #0056, #11998, #155724, #1565, #16732, #19017, #1976, #20578 [queued], #20593 [deployed], #20606 [queued], #20607 [deployed], #20678 [proposed], #218838, #262220, #2640, #3295, #3300, #3336, #3337, #3338, #3339, #334155, #37474, #495057, #64748, #856404
-
-**Last PICKUP PROMPT:**
-
-```
-ded schedules on any EMT site.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Boot Camp 8/8 cancellation + prevent-recurrence guardrails.
-(No numeric task id assigned this session; topic named.)
-
-Where we left off (verified 7/31/2026, 8:31 PM PT):
-- RCA filed idea #20607 [deployed]: 8 BC rows (26222BC–26922BC) inserted 7/30 7:04:20 PM via Cline MCP ssh_command; /tmp/_generate_bootcamp_schedules.php (owner emsuserver, mtime 7/30 7:06:52 PM) hardcodes all 8 sections with $startDate='2026-08-08' and NULL didactic/end dates. No web request, no cron, no shell history = non-interactive MCP SSH. Agent incremented 26221BC→26222BC but fabricated 08/08 instead of the real 8/3 anchor.
-- Display bug fixed + deployed, idea #20593 [deployed]: strtotime(NULL) fatal at line 1100 of view_course_schedules.php null-guarded (backup view_course_schedules.php.bak-20260731-1413); page now renders all 10 rows.
-- Ruben confirmed: 8/3 is gone — cancel the 8/8 sections, do NOT create 8/3 classes.
-
-Open threads to drive next (EV .clinerules/EXECUTE_ORDER_66.
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-ERY item has a real filed idea #):
-1. #20606 [queued] — Cancel 8/8 BC sections: remove 26222BC–26922BC from Course_Schedules across all EMT websites; add Cancel Class button beside Edit/Delete on view_course_schedules.php with student notification + offer to join another course. Students to contact first: Liliana Frausto (26222BC Tempe, lilyfrost86@gmail.com, (213) 999-6131) and Frank Heald (26922BC-01 DFW, frankraymondheald123@gmail.com, +19727303060) — list handed to Vicky's team.
-2. #20678 [proposed] — Implement prevent-recurrence guardrails: date-source validation, Saturday start-date check, NOT NULL didactic/end dates, created_by column, ban raw Course_Schedules INSERTs via /tmp scripts.
-3. #20578 [superseded] — Original "update dates 8/8→8/3" idea is dead per Ruben's decision; do not create 8/3 classes.
-
-Reference IDs:
-- Ideas filed: #20593 [deployed], #20606 [queued], #20607 [deployed], #20678 [proposed], #20578 [superseded]
-- Files touched: /var/www/emtskills/google-sheets-to-mysql-migration/view_course_schedules.php (+ .bak-20260731-1413), /tmp/_generate_bootcamp_schedules.php (RCA evidence)
-- Students impacted: Liliana Frausto (26222BC), Frank Heald (26922BC-01)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
 ### `1785537361555` — 7/31/2026, 5:56:13 PM PT — 152 turns
 
 **Original task:**
@@ -1224,25 +1433,6 @@ Rewrote the email with explicit moot framing and filed it as #20566 [proposed], 
 ```
 
 **Ideas referenced:** #1565, #16069, #178561, #18944, #18951, #19419, #20513 [proposed], #20514 [proposed], #20515 [proposed], #20516 [proposed], #20518 [proposed], #20519 [proposed], #20527 [proposed], #20529 [proposed], #20532 [proposed], #20538 [proposed], #20548 [proposed], #20552 [proposed], #20558 [proposed], #20566 [proposed], #20568 [proposed], #20571 [approved], #20573 [proposed], #20574 [proposed], #20575 [proposed], #20580 [proposed], #20581 [proposed], #20582 [proposed], #20587 [proposed], #20588 [proposed], #20595 [proposed], #20596 [proposed], #20597 [proposed], #20601 [proposed], #20608 [proposed], #20610 [proposed], #20612 [proposed], #20615 [proposed], #20616 [proposed], #20617 [proposed], #20623 [proposed], #6785, #9086, #9168, #9191, #92400, #9306 [deployed], #9339
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785529983485` — 7/31/2026, 4:16:23 PM PT — 397 turns
-
-**Original task:**
-
-```
-Make sure that you are consulting the SLS so that incorrect information does not persist. Same with the mcp's.
-
-I also agree with your proposed ideas so go ahead and approve those and then leverage rule 267 to bring the items to conclusion we need to bring all of these to conclusion to end and then do comprehensive testing to make sure that everything is fixed
-
-
-Comprehensive handoff below. I re-verified every claim against live code before writing it, including re-checking the false `deployed` tags and confirming the escalation cron is still running (clean run at 13:20).
-
-════════════════════
-```
-
-**Ideas referenced:** #0000, #10086, #10092, #10096, #10103, #10110, #10116, #10121, #10123, #10125, #10132, #1218, #12993, #13025, #13030, #13040, #13044, #13045, #13057, #13873, #13976, #16608, #16610, #17130 [superseded], #17537 [rejected], #17580, #178501, #18132 [deployed], #19125, #19173, #19921 [approved], #20055 [deployed], #20056 [deployed], #20128 [deployed], #20130 [queued], #20134, #20183, #20313 [deployed], #20314 [queued], #20315 [deployed], #20317 [deployed], #20326 [deployed], #20327 [deployed], #20357, #20419 [deployed], #20420 [deployed], #20491 [proposed], #20539 [rejected], #20551 [proposed], #20556 [queued], #20577 [executing], #20579 [executing], #20591 [executing], #20592 [executing], #20600 [executing], #20613 [proposed], #22606, #22647, #4410, #4414, #4422, #4428, #4929, #4970, #4972, #4977, #4988, #4991, #4992, #5588, #5603, #5604, #5704, #5705, #5721, #5722, #5920, #9086, #9168, #9339
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 

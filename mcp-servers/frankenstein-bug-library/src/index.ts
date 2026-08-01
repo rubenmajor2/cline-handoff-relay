@@ -32,7 +32,7 @@ import { z } from "zod";
 import { execSync } from "child_process";
 import { randomBytes } from "crypto";
 
-const VERSION = "0.2.1";
+const VERSION = "0.3.0";
 
 // ─── Error handlers ───────────────────────────────────────────────────────────
 process.stdin.on("error", (e: any) => {
@@ -192,6 +192,49 @@ function buildLikeWhere(keywords: string[], columns: string[]): string {
   });
   const valid = clauses.filter(Boolean);
   return valid.length ? valid.join(" AND ") : "1=1";
+}
+
+// ─── CLASSIFICATION (organization scheme, 2026-07-31) ────────────────────────
+// Mirrors the backfill taxonomy used on existing rows (domain/category/severity).
+// Shared by bug_library_record (auto-classify on write) and bug_library_browse.
+
+const DOMAIN_RULES: Array<{ domain: string; category: string; re: RegExp; severity?: string }> = [
+  // P1 finance — rule-147 hard human-block
+  { domain: "payment-finance", category: "payment-finance", severity: "P1_high", re: /(authnet|quickbook|refund|billing|affirm|invoice|payment|qbo|charge|dunning|overdue)/i },
+  // Student ops
+  { domain: "student-ops", category: "email-comm", re: /(emailai|inbound_to_email|student_?facing|chatwidgetapi|chat_widget|rag_inject|student_notification)/i },
+  { domain: "student-ops", category: "moodle-exam", severity: "P1_high", re: /(moodle|exam|quiz|course|enroll|student|grade)/i },
+  // Voice
+  { domain: "voice-telephony", category: "voice-telephony", re: /(vapi|voice|call|phone|telephony|twilio|sms|ivr|ringcentral)/i },
+  // Training
+  { domain: "training-llm", category: "training-llm", re: /(train|lora|qlora|fine_?tun|runpod|h100|checkpoint|gradient|dataset|corpus)/i },
+  // HPC networking (runs BEFORE generic infrastructure)
+  { domain: "infrastructure", category: "hpc-networking", re: /(nccl|roce|ib_hca|ib_rdma|gid|p2p|rdma|vxlan|topo|socket_ifname|infiniband|gloo|ethernet)/i },
+  // Health-noise artifacts — router watchdogs/restart-storms (huge volume)
+  { domain: "routing-infrastructure", category: "health-noise-artifact", re: /(restart_storm|ladder_cycle|phantom_ladder|gateway_watchdog|false_wedge|recursive_ghost_strike)/i },
+  // MCP tooling
+  { domain: "agent-execution", category: "mcp-tooling", re: /(bug_library_mcp|bug_library_search|bug_library_mysql|mcp_error|mcp_hallucinated|mcp_type|mcp_false_drop|mcp_guard|gdrive_mcp|mcp_read_only|use_mcp_tool|unknown_tool)/i },
+  // Cline / agent behavior
+  { domain: "agent-execution", category: "cline-behavior", re: /(behavior_pickup|adaptive_repair|weak_completions|ungrounded_diagnosis|rule91)/i },
+  // Codegen / build failures
+  { domain: "agent-execution", category: "codegen-build", re: /(sql_42s|deploy|codegen|cron_|autonomous_cron|spec_gen|dispatcher|planner_hallucin|dashboard_|writeback|ideas_promoter|ruben_idea|safe_write|render_leak|strlen_false|undefined_|class_not_found|fatal_error|type_error|uncaught|database_error|guard_before|redeclare|undefined_function|undefined_method|DATE_SUB_typo|shutdown_guard|kaizen_target_slug|handoff_notes|placeholder_gate|basename_mismatch|churn_cap)/i },
+  // Watchdogs / monitoring
+  { domain: "agent-execution", category: "watchdog", re: /(watchdog|stale_|probe_bleed|probe_wedge|flagship_surfaces_dark|false_down|fleet_inventory|down_inventory)/i },
+  // Model / serving quality
+  { domain: "model-instance", category: "serving-quality", re: /(warm_interval|fp4|quantiz|downproj|gateupproj|stream_chunk|streaming_reasoning|vocab_download|llm_judge|accelerate_|anthropic_system_prompt|anthropic_messages_system|claude_cost|cost_leak|reasoning_model|audit_surface|empty_choices|garbage_token|mxfp4|bf16_upcast)/i },
+  // Model instance by host name
+  { domain: "model-instance", category: "model-instance", re: /(glm52|cicero|artemis|cesar|cato|joshua|roman|augustus|marcus|julia|tiberius|pompey|claudia|perikles|glm_|qwen|ollama|vllm|deepseek|70b|120b)/i },
+  // Routing infra
+  { domain: "routing-infrastructure", category: "router-gateway", re: /(router|litellm|doorman|spill|rung|tier|fallback|frankenstein|routing|adapter|stall|wedge|dead|endpoint|budget|429|500 |502|404|mis.?rout|hollow|shallow|garbage|gateway|timeout|fk_|pass.?through|decode|warm_interval|failover|shadow_mode|proxy_signal|drain_gate|judgemodel|sonnet_ban|distiller)/i },
+];
+
+function classifyIncident(text: string): { domain: string | null; category: string | null; severity: string | null } {
+  for (const rule of DOMAIN_RULES) {
+    if (rule.re.test(text)) {
+      return { domain: rule.domain, category: rule.category, severity: rule.severity ?? null };
+    }
+  }
+  return { domain: null, category: null, severity: null };
 }
 
 // ─── DEDUP helper (FORCING FUNCTION #2) ──────────────────────────────────────
@@ -693,12 +736,21 @@ record's resolution instead of creating a duplicate.`,
       }
     }
 
+    // ── AUTO-CLASSIFY: apply domain/category/severity to new record ──────────
+    const classificationText = `${symptom} ${diagnosis} ${key}`;
+    const cls = classifyIncident(classificationText);
+    const domainVal = cls.domain ? `'${esc(cls.domain, 50)}'` : "NULL";
+    const categoryVal = cls.category ? `'${esc(cls.category, 50)}'` : "NULL";
+    const severityVal = cls.severity ? `'${cls.severity}'` : "NULL";
+
     // ── No duplicate — proceed with INSERT ───────────────────────────────────
     const insertSql = `INSERT INTO frankenstein_router_incidents
-        (problem_key, symptom_observed, diagnosis, resolution, evidence, status, created_by, seen_count, last_seen_at)
+        (problem_key, symptom_observed, diagnosis, resolution, evidence, status, created_by,
+         seen_count, last_seen_at, domain, category, severity)
       VALUES (
         '${esc(key)}','${esc(symptom)}','${esc(diagnosis)}','${esc(resolution)}',
-        '${esc(evidence)}','${status}','${esc(created_by)}',1,NULL
+        '${esc(evidence)}','${status}','${esc(created_by)}',1,NULL,
+        ${domainVal},${categoryVal},${severityVal}
       );
       SELECT LAST_INSERT_ID() AS new_id;`;
 
@@ -1268,6 +1320,114 @@ dry_run=true (default) previews the repair without executing. Pass dry_run=false
         ].join("\n"),
       }],
     };
+  }
+);
+
+// ─── Tool 9: bug_library_browse (FACETED NAVIGATION, 2026-07-31) ────────────
+
+const VALID_DOMAINS = [
+  "agent-execution", "routing-infrastructure", "model-instance",
+  "infrastructure", "student-ops", "voice-telephony", "training-llm", "payment-finance"
+] as const;
+const VALID_SEVERITIES = ["P0_critical", "P1_high", "P2_medium", "P3_low"] as const;
+
+server.tool(
+  "bug_library_browse",
+  `Faceted browser for frankenstein_router_incidents — filters by domain, category, severity, and status.
+Use this to explore the library by topic area rather than keyword search. Ideal for agents that want
+to see all known incidents in a particular domain (e.g. "what do we know about model-instance failures?").
+
+Results include domain, category, and severity metadata so agents can prioritize accordingly.
+(Added 2026-07-31 as part of organization overhaul — replaces ad-hoc "grep the problem_key" pattern.)`,
+  {
+    domain: z
+      .string()
+      .optional()
+      .describe("Filter by domain: agent-execution, routing-infrastructure, model-instance, infrastructure, student-ops, voice-telephony, training-llm, payment-finance. Omit for all."),
+    severity: z
+      .string()
+      .optional()
+      .describe("Filter by severity: P0_critical, P1_high, P2_medium, P3_low. Omit for all."),
+    status_filter: z
+      .enum(["all", "resolved", "investigating", "open"])
+      .default("all")
+      .describe("Filter by resolution status. Default: all."),
+    limit: z.number().int().min(1).max(50).default(15).describe("Max results (default 15)."),
+  },
+  async ({ domain, severity, status_filter, limit }) => {
+    const clauses: string[] = ["1=1"];
+    if (domain) clauses.push(`domain = '${esc(domain, 40)}'`);
+    if (severity) clauses.push(`severity = '${esc(severity, 15)}'`);
+    if (status_filter !== "all") clauses.push(`status = '${status_filter}'`);
+
+    const where = clauses.join(" AND ");
+
+    const sql = `
+      SELECT
+        id AS id,
+        problem_key AS problem_key,
+        COALESCE(domain,'(unset)') AS domain,
+        COALESCE(category,'(unset)') AS category,
+        COALESCE(severity,'P2_medium') AS severity,
+        status AS status,
+        COALESCE(seen_count,1) AS seen_count,
+        DATE_FORMAT(occurred_at, '%Y-%m-%d') AS occurred_at,
+        DATE_FORMAT(last_seen_at, '%Y-%m-%d') AS last_seen_at,
+        LEFT(symptom_observed, 250) AS symptom_observed,
+        LEFT(resolution, 200) AS resolution
+      FROM frankenstein_router_incidents
+      WHERE ${where}
+      ORDER BY
+        CASE severity
+          WHEN 'P0_critical' THEN 0
+          WHEN 'P1_high' THEN 1
+          WHEN 'P2_medium' THEN 2
+          WHEN 'P3_low' THEN 3
+          ELSE 4
+        END,
+        occurred_at DESC
+      LIMIT ${limit}
+    `;
+
+    const rows = queryRows(sql);
+
+    if (!rows.length) {
+      const filters = [domain, severity, status_filter !== "all" ? status_filter : null]
+        .filter(Boolean).join(", ");
+      return {
+        content: [{
+          type: "text",
+          text: `📂 bug_library_browse(filters: ${filters || "none"}): No matching incidents.`,
+        }],
+      };
+    }
+
+    const lines: string[] = [
+      `📂 bug_library_browse — ${rows.length} incident(s)`,
+      domain ? `   domain: ${domain}` : "   domain: (all)",
+      severity ? `   severity: ${severity}` : "   severity: (all)",
+      status_filter !== "all" ? `   status: ${status_filter}` : "   status: (all)",
+      "",
+    ];
+
+    for (const r of rows) {
+      const severityMark = r.severity === "P0_critical" ? "🔴" :
+                           r.severity === "P1_high" ? "🟠" :
+                           r.severity === "P2_medium" ? "🟡" : "⚪";
+      const statusIcon = r.status === "resolved" ? "✅" : r.status === "investigating" ? "🔍" : "🆕";
+      const recur = parseInt(r.seen_count || "1", 10) > 1 ? ` [seen ${r.seen_count}x]` : "";
+
+      lines.push(`${severityMark} ${statusIcon} #${r.id}${recur} ${r.domain} / ${r.category} — ${r.occurred_at}`);
+      lines.push(`   ${r.problem_key} [${r.severity}]`);
+      lines.push(`   ${r.symptom_observed}`);
+      if (r.resolution) lines.push(`   fix: ${r.resolution}`);
+      if (r.last_seen_at) lines.push(`   last: ${r.last_seen_at}`);
+      lines.push("");
+    }
+
+    lines.push("Use bug_library_search(symptom) for keyword matching, or bug_library_check_before_fix() for symptom-specific lookup.");
+
+    return { content: [{ type: "text", text: lines.join("\n") }] };
   }
 );
 

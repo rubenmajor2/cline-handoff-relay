@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-01T14:46:46.918Z",
+ "generated_at": "2026-08-01T15:46:48.838Z",
  "counts": {
-  "parsed": 1,
-  "reused": 372,
+  "parsed": 3,
+  "reused": 370,
   "failed": 0,
   "total": 373
  },
@@ -102685,13 +102685,13 @@
   },
   "1785360672171": {
    "task_id": "1785360672171",
-   "mtime": 1785595592551,
+   "mtime": 1785599126176,
    "created_at": "2026-07-29T21:31:12.171Z",
-   "last_modified": "2026-08-01T14:46:32.551Z",
-   "size_kb": 16954,
-   "turn_count": 3639,
+   "last_modified": "2026-08-01T15:45:26.176Z",
+   "size_kb": 18016,
+   "turn_count": 3841,
    "title": "For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? \n\nAlso how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?",
-   "pickup_prompt": "d.\n\n═══════════════════════════════════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════════════════════════════════\nPick up task Telephony improvements — deploy #20081 voicePool A/B rotation, file #20050 replacement as chat-steering.\n\nWhere we left off (verified 2026-08-01 1:26 AM PT):\n- #20081 NOT deployed — 21 calls since 5:55 PM yesterday, all to Bella. Zero to Ronald/Katie/Eric.\n- twiml_inbound.php has #20046 prospect detection (line 48) but NO voicePool code\n- #20050 rejected — replace with chat-steering prompt instead of human routing\n- #20046 approved — already live in twiml_inbound.php, needs voicePool to test\n\nOpen threads to drive next:\n1. #20081 [proposed] — Deploy voicePool: insert $voicePool = ['bella','ronald','katie','eric'] with real IDs, random pick per call, pass to VAPI spawn\n2. #20050-replacement [proposed] — File new idea: VAPI prompt steers to chat widget (\"visit emsuniversity.com, click chat bubble\") instead of human routing\n3. #20407 [proposed] — Clean up stale assistant ID references from config/code\n\nReference IDs:\n- Ideas: #20045, #20046, #20047, #20049, #20050, #20051, #20081, #20407\n- Files: /var/www/emtskills/api/telephony/twiml_inbound.php (687 lines)\n- Real IDs: Bella 6ee87bdb, Ronald 80f2341e, Katie 5b4b7b90, Eric d7dc496e\n- Time anchor: 2026-08-01 1:26 AM PT\n\nWhen done, append to cline_task_ledger.md and run order 66.\n═══════════════════════════════════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "ay (command is in my history).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1785614851057 — voice A/B routing (Eric/Bella 50/50 live).\n\nWhere we left off (verified 2026-08-01 8:34 AM PT):\n- #20045 [deployed] config fix live + verified\n- #20046 [deployed] pre-call prospect detection live + verified\n- #20047 [deployed], #20049 [deployed], #20051 [deployed] VAPI prompt updates shipped\n- A/B routing live: lane-a-eric 50 / lane-b-bella 50, all candidates demoted\n- Previous window looped 13+ turns flipping lane-b-bella first_message_override; left NULL (assistant default firstMessage in effect)\n\nOpen threads to drive next:\n1. #20081 [queued] — multi-voice A/B routing system full build\n2. #20050 [queued] — topic-based routing to human agents\n3. #20407 [queued] — clean up stale assistant IDs from code/config\n4. (human-only decision — no idea) — decide if lane-b-bella gets personalized first_message_override or keeps assistant default. Currently NULL/default.\n\nReference IDs:\n- Ideas filed/closed: none filed this session (loop burned the turns)\n- Files touched: none this session; DB table admin_portal.voice_persona_variants (lane-b-bella row currently NULL)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] #20045 [deployed] config fix deployed + verified\n- [x] #20046 [deployed] pre-call prospect detection deployed + verified\n- [x] VAPI prompt update shipped (#20047, #20049, #20051 — all [deployed])\n- [x] Voice investigation: real IDs healthy, stale IDs caused 401s\n- [x] 60-min babysit completed (12 checkpoints, 19:33-20:28 PT)\n- [x] Loop admitted + bailed with state report (rule 143)\n- [ ] #20081 [queued] — multi-voice A/B routing system (build needed)\n- [ ] #20050 [queued] — topic-based routing to human agents (build needed)\n- [ ] #20407 [queued] — clean up stale assistant IDs from code/config\n</task_progress>\n</attempt_completion>",
    "ideas": {
     "1745": null,
     "9222": null,
@@ -102724,7 +102724,8 @@
     "20325": "deploying",
     "20329": "proposed",
     "20370": "queued",
-    "20407": "executing"
+    "20407": "executing",
+    "178561": null
    }
   },
   "1785363426908": {
@@ -106507,20 +106508,27 @@
   },
   "1785581189111": {
    "task_id": "1785581189111",
-   "mtime": 1785583555922,
+   "mtime": 1785599037100,
    "created_at": "2026-08-01T10:46:29.111Z",
-   "last_modified": "2026-08-01T11:25:55.922Z",
-   "size_kb": 519,
-   "turn_count": 148,
+   "last_modified": "2026-08-01T15:43:57.100Z",
+   "size_kb": 547,
+   "turn_count": 156,
    "title": "I need to make sure that the orchestra is running and that we don't just have a bunch of ideas queued\rOr work cute.",
-   "pickup_prompt": "eue drains over the next hour.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task - orchestra health check: triage live, executor spawning, babysit running\n\nWhere we left off (verified 2026-08-01 04:25 PT):\n- Two schema-drift bugs fixed (metric_name + task_kind AS name). Verified clean.\n- Triage crontab now has `--live`. 800 shadow entries ever, now live.\n- Autonomous dispatcher is spawning chains (12 workers last cycle).\n- 60-min babysit watcher running (PID #1130269, ends 05:24 PT). Log at /tmp/babysit_orchestra.log.\n- 11 ideas in_progress, 2 queued — expect draining over next hour.\n- /etc/cron.d/emsu line 11: `cron_ruben_autonomous` is COMMENTED OUT — salvaged via /etc/cron.d/emsu-ruben-autonomous.\n\nOpen threads to drive next:\n1. Check /tmp/babysit_orchestra.log at 05:24 PT — confirm queue drained. If ideas still stuck at impl_failed, investigate executor outcome health.\n2. Fix the commented-out `cron_ruben_autonomous` entry in /etc/cron.d/emsu: uncomment line 11.\n3. Check triage log for first real LIVE decisions — verify they appear in orchestrator_decisions table.\n4. #20613 [blocked] P0: Zero large EMT approvals. Human call to Intuit Merchant Services needed. Check if any large charges cleared since Jul 31.\n\nReference IDs:\n- Ideas filed: #20793 [proposed]\n- Stuck ideas: #20672 [blocked] #20662 [blocked] #20624 [blocked] #20613 [blocked] #20517 [blocked] #20509 [blocked] #20507 [blocked] #20493 [blocked] #20492 [blocked] #20340 [blocked] #20336 [blocked]\n- Files touched: cron_orchestrator_triage.php, lib/lora_shadow_health.php, monitoring_metrics table, crontab\n- Babysit PID: 1130269, log: /tmp/babysit_orchestra.log\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
+   "pickup_prompt": "tern so retries actually land.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task - orchestra draining: fix the 8 impl_failed retry loops\n\nWhere we left off (verified 2026-08-01 08:41 PT):\n- Triage is LIVE (was shadow forever). Babysit log at /tmp/babysit_orchestra.log shows live runs 2 to 29, zero SQL crashes.\n- Two schema-drift bugs patched: monitoring_metrics (metric_key crash) and lora_shadow_health.php (name/model_id/http_code crash). Both verified clean.\n- Dispatcher spawning 12 workers per cycle via /etc/cron.d/emsu-ruben-autonomous.\n- A batch of ideas deployed at 08:30 today. Queue: 5 completed, 8 in_progress, 2 queued.\n- 8 ideas stuck in impl_failed retry loops. The autonomous executor is NOT the bottleneck, implementation success is.\n\nOpen threads to drive next:\n1. #20517 [blocked] P0 structural enforcement. Pull its implementation log and the last impl_failed reason. Find the failure pattern, fix it, retry.\n2. #20340 [blocked] P0 externship agency outreach. Same: inspect impl log, fix, retry.\n3. #20662 [blocked] Tools-adapter inflight leak. Same procedure.\n4. Uncomment line 11 in /etc/cron.d/emsu to re-enable cron_ruben_autonomous in the primary file (working copy already exists).\n5. Watch triage decisions per hour. Target is 6 per hour, currently 1. If LOW after the impl_failed fixes, check RubenPolicyLedger suppression.\n\nReference IDs:\n- Deployed today: #18763 [deployed], #20044 [deployed], #15955 [deployed], #18793 [deployed], #9581 [deployed]\n- Stuck impl_failed: #20662 [blocked], #20340 [blocked], #20517 [blocked], #20509 [blocked], #20672 [blocked], #20493 [blocked], #20336 [blocked], #20859 [blocked]\n- New RCA: #20858 [queued], #20860 [queued]\n- Files touched: cron_orchestrator_triage.php, lib/lora_shadow_health.php, monitoring_metrics table, crontab\n- Babysit log: /tmp/babysit_orchestra.log (ended 05:24 PT)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "2113": null,
     "2114": null,
     "2123": null,
+    "9581": "deployed",
     "12184": null,
+    "15906": null,
+    "15955": "deployed",
     "16523": null,
     "16881": null,
+    "18761": null,
+    "18763": "deployed",
+    "18793": "deployed",
+    "20044": "deployed",
     "20336": "in_progress",
     "20340": "proposed",
     "20492": "in_progress",
@@ -106533,20 +106541,24 @@
     "20662": "in_progress",
     "20672": "in_progress",
     "20793": "proposed",
+    "20858": "queued",
+    "20859": "blocked",
+    "20860": "queued",
     "113026": null,
     "444279": null,
     "444280": null,
     "444539": null,
-    "444542": null
+    "444542": null,
+    "445761": null
    }
   },
   "1785582017987": {
    "task_id": "1785582017987",
-   "mtime": 1785585157718,
+   "mtime": 1785599148918,
    "created_at": "2026-08-01T11:00:17.987Z",
-   "last_modified": "2026-08-01T11:52:37.718Z",
-   "size_kb": 4073,
-   "turn_count": 106,
+   "last_modified": "2026-08-01T15:45:48.918Z",
+   "size_kb": 4668,
+   "turn_count": 117,
    "title": "GLM ring TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wants autonomous monitoring + cron automation so the ring can self-recover overnight without human intervention. Extremely detailed pickup prompt below for the next window.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1785314663557 — GLM ring: TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wants autonomous monitoring + cron automation so the ring can self-recover overnight without human intervention.\n\n== CURRENT STATE (verified 2026-08-01 03:55 PT) ==\n- RING: DEA",
    "pickup_prompt": "sk_ledger.md, 04:45 PT entry).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1785314663557, GLM ring autonomous monitor + cron self-recovery deployed; ring booting config socket-fabric.\n\nWhere we left off (verified 2026-08-01 04:45 PT):\n- Monitor /home/rubenmajor/bin/glm52_ring_monitor.sh live on Cato, cron */5, verified BOOTING path at 04:40 tick. #20495 [queued] (verified: status=approved dev_stage=idle) overnight-autorecovery gap this task closed; orchestrator owns status flip.\n- Ring booting socket-fabric (NCCL TCP data plane on 200GbE fabric, gloo on enP7s7), dispatched 04:37:56 PT, grace until ~05:23 PT. Deadlock hypothesis logged as bug-library incident 2136.\n- Rotation armed: socket-fabric, then roce (fabric /32 routes pre-installed per relaunch, #20724 [proposed] (verified: status=proposed dev_stage=idle)), then enp7s7-patience (READY=3600). 60 min cooldown after full-cycle failure.\n- Evidence per attempt in ~/glm52_ring_attempts/ on Cato; monitor log ~/glm52_ring_monitor.log; state ~/glm52_ring_monitor.state.\n\nOpen threads to drive next:\n1. #20806 [proposed] (verified: status=proposed dev_stage=idle): if the socket-fabric boot also deadlocks, root-cause with a bounded NCCL_DEBUG=TRACE run, Gloo-for-PP patch, or ray executor. Check the monitor log first; the monitor auto-rotates through roce + enp7s7-patience overnight.\n2. #20807 [proposed] (verified: status=proposed dev_stage=idle): morning report generator + alert path on full-cycle failure (currently ALERT only lands in the monitor's own log).\n3. (human-only decision, no idea) morning check: curl http://192.168.1.115:8210/v1/models; if serving, run a 200-token decode to confirm real tok/s (guard against the #20536 [queued] (verified: status=ready_for_review dev_stage=ready_for_review) serving-but-0.07-tok/s state); review ~/glm52_ring_monitor.log overnight timeline.\n4. #20725 [proposed] (verified: status=proposed dev_stage=idle): reboot fallback lever stays on the shelf unless all 3 configs + cooldown cycles fail.\n\nReference IDs:\n- Ideas filed: #20806 [proposed], #20807 [proposed]\n- Ideas carried: #20528 [queued], #20536 [queued], #20506 [queued], #20495 [queued], #20724 [proposed], #20740 [proposed], #20725 [proposed], #20553 [queued], #20517 [blocked]\n- Bug library: incident 2136 recorded this session (tonight's deadlock + automation + field-shift lesson); consulted incidents 1567, 1606, 1614, 1964, 1967, 1979, 1985, 1993, 2116, 1579\n- Files touched: /home/rubenmajor/bin/glm52_ring_monitor.sh (Cato, new), /tmp/glm52_launch_cfg.sh (all 6 nodes, new), Cato crontab (added */5 monitor line), /Users/rubenmajor/Documents/Cline/cline_task_ledger.md (appended), Mac-local /tmp/glm52_launch_cfg.sh + /tmp/glm52_ring_monitor.sh (sources)\n- Access: ssh cato/augustus/pompey/marcus/tiberius/cesar from Mac; monitor SSHes from Cato as rubenmajor (BatchMode) with sudo -S for fabric ops; ring endpoint http://192.168.1.115:8210\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════</result>\n<command>ssh cato 'tail -6 /home/rubenmajor/glm52_ring_monitor.log; cat /home/rubenmajor/glm52_ring_monitor.state'</command>\n<task_progress>\n- [x] Verify ring state (Cato) — container up 2h, CPU 3%, HTTP 000\n- [x] Check fleet-wide state — PP1 pair (Pompey/Marcus) spinning 203%, others idle\n- [x] Confirm via docker logs — last output 09:06 UTC (~2h ago), hung post-KV-cache\n- [x] Consult bug library — prior art rev",
    "ideas": {

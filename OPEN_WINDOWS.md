@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/1/2026, 7:46:46 AM PT | window: last 72h | 72 tasks | index total 373 (parsed 1, cached 372)
+Generated: 8/1/2026, 8:46:48 AM PT | window: last 72h | 72 tasks | index total 373 (parsed 3, cached 370)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785360672171` | 8/1/2026, 7:46:32 AM | 3639 | 16954KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
-| `1785582017987` | 8/1/2026, 4:52:37 AM | 106 | 4073KB | GLM ring TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wan |
-| `1785581189111` | 8/1/2026, 4:25:55 AM | 148 | 519KB | I need to make sure that the orchestra is running and that we don't just have a bunch of i |
+| `1785582017987` | 8/1/2026, 8:45:48 AM | 117 | 4668KB | GLM ring TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wan |
+| `1785360672171` | 8/1/2026, 8:45:26 AM | 3841 | 18016KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
+| `1785581189111` | 8/1/2026, 8:43:57 AM | 156 | 547KB | I need to make sure that the orchestra is running and that we don't just have a bunch of i |
 | `1785566876939` | 8/1/2026, 3:57:20 AM | 634 | 1456KB | GLM ring RoCE root cause found (wrong-NIC RX-offload drops from /30 shortcut routes); /32  |
 | `1785548524428` | 8/1/2026, 2:00:05 AM | 350 | 706KB | Jon says Daystron counsil stopped working |
 | `1785537564406` | 8/1/2026, 1:56:30 AM | 902 | 14669KB | #Argus |
@@ -87,52 +87,7 @@ Generated: 8/1/2026, 7:46:46 AM PT | window: last 72h | 72 tasks | index total 3
 
 ## Per-window detail
 
-### `1785360672171` — 8/1/2026, 7:46:32 AM PT — 3639 turns
-
-**Original task:**
-
-```
-For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? 
-
-Also how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?
-```
-
-**Ideas referenced:** #12606, #16154, #1745, #20032 [proposed], #20033 [proposed], #20038, #20045 [proposed], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20052 [proposed], #20080, #20081 [proposed], #20094, #20279 [proposed], #20289 [proposed], #20294 [proposed], #20296 [proposed], #20297, #20316 [proposed], #20320 [proposed], #20321 [proposed], #20322 [proposed], #20323 [proposed], #20325 [deploying], #20329 [proposed], #20370 [queued], #20407 [executing], #9222, #9501
-
-**Last PICKUP PROMPT:**
-
-```
-d.
-
-═══════════════════════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════════════════════
-Pick up task Telephony improvements — deploy #20081 voicePool A/B rotation, file #20050 replacement as chat-steering.
-
-Where we left off (verified 2026-08-01 1:26 AM PT):
-- #20081 NOT deployed — 21 calls since 5:55 PM yesterday, all to Bella. Zero to Ronald/Katie/Eric.
-- twiml_inbound.php has #20046 prospect detection (line 48) but NO voicePool code
-- #20050 rejected — replace with chat-steering prompt instead of human routing
-- #20046 approved — already live in twiml_inbound.php, needs voicePool to test
-
-Open threads to drive next:
-1. #20081 [proposed] — Deploy voicePool: insert $voicePool = ['bella','ronald','katie','eric'] with real IDs, random pick per call, pass to VAPI spawn
-2. #20050-replacement [proposed] — File new idea: VAPI prompt steers to chat widget ("visit emsuniversity.com, click chat bubble") instead of human routing
-3. #20407 [proposed] — Clean up stale assistant ID references from config/code
-
-Reference IDs:
-- Ideas: #20045, #20046, #20047, #20049, #20050, #20051, #20081, #20407
-- Files: /var/www/emtskills/api/telephony/twiml_inbound.php (687 lines)
-- Real IDs: Bella 6ee87bdb, Ronald 80f2341e, Katie 5b4b7b90, Eric d7dc496e
-- Time anchor: 2026-08-01 1:26 AM PT
-
-When done, append to cline_task_ledger.md and run order 66.
-═══════════════════════════════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785582017987` — 8/1/2026, 4:52:37 AM PT — 106 turns
+### `1785582017987` — 8/1/2026, 8:45:48 AM PT — 117 turns
 
 **Original task:**
 
@@ -188,7 +143,64 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Consult bug library — prior art rev
 ```
 
-### `1785581189111` — 8/1/2026, 4:25:55 AM PT — 148 turns
+### `1785360672171` — 8/1/2026, 8:45:26 AM PT — 3841 turns
+
+**Original task:**
+
+```
+For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? 
+
+Also how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?
+```
+
+**Ideas referenced:** #12606, #16154, #1745, #178561, #20032 [proposed], #20033 [proposed], #20038, #20045 [proposed], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20052 [proposed], #20080, #20081 [proposed], #20094, #20279 [proposed], #20289 [proposed], #20294 [proposed], #20296 [proposed], #20297, #20316 [proposed], #20320 [proposed], #20321 [proposed], #20322 [proposed], #20323 [proposed], #20325 [deploying], #20329 [proposed], #20370 [queued], #20407 [executing], #9222, #9501
+
+**Last PICKUP PROMPT:**
+
+```
+ay (command is in my history).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785614851057 — voice A/B routing (Eric/Bella 50/50 live).
+
+Where we left off (verified 2026-08-01 8:34 AM PT):
+- #20045 [deployed] config fix live + verified
+- #20046 [deployed] pre-call prospect detection live + verified
+- #20047 [deployed], #20049 [deployed], #20051 [deployed] VAPI prompt updates shipped
+- A/B routing live: lane-a-eric 50 / lane-b-bella 50, all candidates demoted
+- Previous window looped 13+ turns flipping lane-b-bella first_message_override; left NULL (assistant default firstMessage in effect)
+
+Open threads to drive next:
+1. #20081 [queued] — multi-voice A/B routing system full build
+2. #20050 [queued] — topic-based routing to human agents
+3. #20407 [queued] — clean up stale assistant IDs from code/config
+4. (human-only decision — no idea) — decide if lane-b-bella gets personalized first_message_override or keeps assistant default. Currently NULL/default.
+
+Reference IDs:
+- Ideas filed/closed: none filed this session (loop burned the turns)
+- Files touched: none this session; DB table admin_portal.voice_persona_variants (lane-b-bella row currently NULL)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] #20045 [deployed] config fix deployed + verified
+- [x] #20046 [deployed] pre-call prospect detection deployed + verified
+- [x] VAPI prompt update shipped (#20047, #20049, #20051 — all [deployed])
+- [x] Voice investigation: real IDs healthy, stale IDs caused 401s
+- [x] 60-min babysit completed (12 checkpoints, 19:33-20:28 PT)
+- [x] Loop admitted + bailed with state report (rule 143)
+- [ ] #20081 [queued] — multi-voice A/B routing system (build needed)
+- [ ] #20050 [queued] — topic-based routing to human agents (build needed)
+- [ ] #20407 [queued] — clean up stale assistant IDs from code/config
+</task_progress>
+</attempt_completion>
+```
+
+### `1785581189111` — 8/1/2026, 8:43:57 AM PT — 156 turns
 
 **Original task:**
 
@@ -196,41 +208,43 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 I need to make sure that the orchestra is running and that we don't just have a bunch of ideas queuedOr work cute.
 ```
 
-**Ideas referenced:** #113026, #12184, #16523, #16881, #20336 [in_progress], #20340 [proposed], #20492 [in_progress], #20493 [in_progress], #20507 [in_progress], #20509 [proposed], #20517 [proposed], #20613 [proposed], #20624 [in_progress], #20662 [in_progress], #20672 [in_progress], #20793 [proposed], #2113, #2114, #2123, #444279, #444280, #444539, #444542
+**Ideas referenced:** #113026, #12184, #15906, #15955 [deployed], #16523, #16881, #18761, #18763 [deployed], #18793 [deployed], #20044 [deployed], #20336 [in_progress], #20340 [proposed], #20492 [in_progress], #20493 [in_progress], #20507 [in_progress], #20509 [proposed], #20517 [proposed], #20613 [proposed], #20624 [in_progress], #20662 [in_progress], #20672 [in_progress], #20793 [proposed], #20858 [queued], #20859 [blocked], #20860 [queued], #2113, #2114, #2123, #444279, #444280, #444539, #444542, #445761, #9581 [deployed]
 
 **Last PICKUP PROMPT:**
 
 ```
-eue drains over the next hour.
+tern so retries actually land.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task - orchestra health check: triage live, executor spawning, babysit running
+Pick up task - orchestra draining: fix the 8 impl_failed retry loops
 
-Where we left off (verified 2026-08-01 04:25 PT):
-- Two schema-drift bugs fixed (metric_name + task_kind AS name). Verified clean.
-- Triage crontab now has `--live`. 800 shadow entries ever, now live.
-- Autonomous dispatcher is spawning chains (12 workers last cycle).
-- 60-min babysit watcher running (PID #1130269, ends 05:24 PT). Log at /tmp/babysit_orchestra.log.
-- 11 ideas in_progress, 2 queued — expect draining over next hour.
-- /etc/cron.d/emsu line 11: `cron_ruben_autonomous` is COMMENTED OUT — salvaged via /etc/cron.d/emsu-ruben-autonomous.
+Where we left off (verified 2026-08-01 08:41 PT):
+- Triage is LIVE (was shadow forever). Babysit log at /tmp/babysit_orchestra.log shows live runs 2 to 29, zero SQL crashes.
+- Two schema-drift bugs patched: monitoring_metrics (metric_key crash) and lora_shadow_health.php (name/model_id/http_code crash). Both verified clean.
+- Dispatcher spawning 12 workers per cycle via /etc/cron.d/emsu-ruben-autonomous.
+- A batch of ideas deployed at 08:30 today. Queue: 5 completed, 8 in_progress, 2 queued.
+- 8 ideas stuck in impl_failed retry loops. The autonomous executor is NOT the bottleneck, implementation success is.
 
 Open threads to drive next:
-1. Check /tmp/babysit_orchestra.log at 05:24 PT — confirm queue drained. If ideas still stuck at impl_failed, investigate executor outcome health.
-2. Fix the commented-out `cron_ruben_autonomous` entry in /etc/cron.d/emsu: uncomment line 11.
-3. Check triage log for first real LIVE decisions — verify they appear in orchestrator_decisions table.
-4. #20613 [blocked] P0: Zero large EMT approvals. Human call to Intuit Merchant Services needed. Check if any large charges cleared since Jul 31.
+1. #20517 [blocked] P0 structural enforcement. Pull its implementation log and the last impl_failed reason. Find the failure pattern, fix it, retry.
+2. #20340 [blocked] P0 externship agency outreach. Same: inspect impl log, fix, retry.
+3. #20662 [blocked] Tools-adapter inflight leak. Same procedure.
+4. Uncomment line 11 in /etc/cron.d/emsu to re-enable cron_ruben_autonomous in the primary file (working copy already exists).
+5. Watch triage decisions per hour. Target is 6 per hour, currently 1. If LOW after the impl_failed fixes, check RubenPolicyLedger suppression.
 
 Reference IDs:
-- Ideas filed: #20793 [proposed]
-- Stuck ideas: #20672 [blocked] #20662 [blocked] #20624 [blocked] #20613 [blocked] #20517 [blocked] #20509 [blocked] #20507 [blocked] #20493 [blocked] #20492 [blocked] #20340 [blocked] #20336 [blocked]
+- Deployed today: #18763 [deployed], #20044 [deployed], #15955 [deployed], #18793 [deployed], #9581 [deployed]
+- Stuck impl_failed: #20662 [blocked], #20340 [blocked], #20517 [blocked], #20509 [blocked], #20672 [blocked], #20493 [blocked], #20336 [blocked], #20859 [blocked]
+- New RCA: #20858 [queued], #20860 [queued]
 - Files touched: cron_orchestrator_triage.php, lib/lora_shadow_health.php, monitoring_metrics table, crontab
-- Babysit PID: 1130269, log: /tmp/babysit_orchestra.log
+- Babysit log: /tmp/babysit_orchestra.log (ended 05:24 PT)
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
+═══════════════════════════════════════════════
+</result>
 </attempt_completion>
 ```
 

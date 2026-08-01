@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-01T12:13:17.836Z",
+ "generated_at": "2026-08-01T13:46:45.940Z",
  "counts": {
-  "parsed": 2,
-  "reused": 371,
+  "parsed": 1,
+  "reused": 372,
   "failed": 0,
   "total": 373
  },
@@ -102685,11 +102685,11 @@
   },
   "1785360672171": {
    "task_id": "1785360672171",
-   "mtime": 1785586392743,
+   "mtime": 1785591987920,
    "created_at": "2026-07-29T21:31:12.171Z",
-   "last_modified": "2026-08-01T12:13:12.743Z",
-   "size_kb": 13972,
-   "turn_count": 3041,
+   "last_modified": "2026-08-01T13:46:27.920Z",
+   "size_kb": 15600,
+   "turn_count": 3369,
    "title": "For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? \n\nAlso how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?",
    "pickup_prompt": "d.\n\n═══════════════════════════════════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════════════════════════════════\nPick up task Telephony improvements — deploy #20081 voicePool A/B rotation, file #20050 replacement as chat-steering.\n\nWhere we left off (verified 2026-08-01 1:26 AM PT):\n- #20081 NOT deployed — 21 calls since 5:55 PM yesterday, all to Bella. Zero to Ronald/Katie/Eric.\n- twiml_inbound.php has #20046 prospect detection (line 48) but NO voicePool code\n- #20050 rejected — replace with chat-steering prompt instead of human routing\n- #20046 approved — already live in twiml_inbound.php, needs voicePool to test\n\nOpen threads to drive next:\n1. #20081 [proposed] — Deploy voicePool: insert $voicePool = ['bella','ronald','katie','eric'] with real IDs, random pick per call, pass to VAPI spawn\n2. #20050-replacement [proposed] — File new idea: VAPI prompt steers to chat widget (\"visit emsuniversity.com, click chat bubble\") instead of human routing\n3. #20407 [proposed] — Clean up stale assistant ID references from config/code\n\nReference IDs:\n- Ideas: #20045, #20046, #20047, #20049, #20050, #20051, #20081, #20407\n- Files: /var/www/emtskills/api/telephony/twiml_inbound.php (687 lines)\n- Real IDs: Bella 6ee87bdb, Ronald 80f2341e, Katie 5b4b7b90, Eric d7dc496e\n- Time anchor: 2026-08-01 1:26 AM PT\n\nWhen done, append to cline_task_ledger.md and run order 66.\n═══════════════════════════════════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {

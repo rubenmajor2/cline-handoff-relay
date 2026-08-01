@@ -833,7 +833,10 @@ server.tool(
     // Reported as ONE aggregated failure listing every offender, not one-at-a-time,
     // so the agent fixes them in a single round trip instead of N ping-pongs.
     {
-      const VALID_TAGS = /^(deployed|executing|queued|blocked|proposed|rejected|superseded|approved|closed|done)$/i;
+      // 2026-08-01 Ruben directive: queued is BANNED as a parking-lot excuse.
+      // queued in the tag text is a HARD FAIL, not just "bare number." See rule 161.
+      const VALID_TAGS = /^(deployed|executing|blocked|proposed|rejected|superseded|awaiting_review|approved|closed|done)$/i;
+      const queuedTags: string[] = [];
       const bare: string[] = [];
       const scanRe = /#(\d{3,8})\b(\s*\[([^\]]*)\])?/g;
       let sm: RegExpExecArray | null;
@@ -841,14 +844,25 @@ server.tool(
         const id = sm[1];
         const tag = sm[3];
         if (!tag || !VALID_TAGS.test(tag.trim())) {
-          if (!bare.includes(id)) bare.push(id);
+          if (tag && /queued/i.test(tag.trim())) {
+            if (!queuedTags.includes(id)) queuedTags.push(id);
+          } else {
+            if (!bare.includes(id)) bare.push(id);
+          }
         }
+      }
+      if (queuedTags.length > 0) {
+        failures.push(
+          `QUEUED_TAG_BANNED: ${queuedTags.length} idea number(s) have [queued] disposition which is BANNED by Ruben directive (2026-08-01, rule 161): ` +
+          `${queuedTags.map((i) => "#" + i).join(", ")}. ` +
+          `Approved ideas are [executing], not queued. If the work is not moving, use [blocked] and name the obstruction.`
+        );
       }
       if (bare.length > 0) {
         failures.push(
           `BARE_IDEA_NUMBERS: ${bare.length} idea number(s) in the result have no valid [disposition] bracket: ` +
           `${bare.map((i) => "#" + i).join(", ")}. ` +
-          `Every #NNNN needs one of [deployed|executing|queued|blocked|proposed|rejected|superseded].`
+          `Every #NNNN needs one of [deployed|executing|blocked|proposed|rejected|superseded|awaiting_review].`
         );
       }
     }

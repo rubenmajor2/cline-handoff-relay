@@ -6,15 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 7/31/2026, 5:07:02 PM PT | window: last 72h | 102 tasks | index total 350 (parsed 2, cached 348)
+Generated: 7/31/2026, 6:07:02 PM PT | window: last 72h | 99 tasks | index total 350 (parsed 3, cached 347)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785537361555` | 7/31/2026, 5:06:34 PM | 77 | 308KB | What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor  |
-| `1785463237084` | 7/31/2026, 4:56:32 PM | 582 | 2638KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
+| `1785463237084` | 7/31/2026, 6:01:51 PM | 800 | 3085KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
+| `1785537361555` | 7/31/2026, 5:56:13 PM | 152 | 588KB | What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor  |
+| `1785360672171` | 7/31/2026, 5:55:46 PM | 938 | 5410KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
+| `1785531619110` | 7/31/2026, 5:29:44 PM | 402 | 23857KB | The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "servi |
 | `1785537564406` | 7/31/2026, 4:33:18 PM | 266 | 5444KB | #Argus |
 | `1785399211024` | 7/31/2026, 4:30:59 PM | 1674 | 7063KB | #Julia/Claudia |
-| `1785531619110` | 7/31/2026, 4:25:07 PM | 390 | 23818KB | The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "servi |
 | `1785528867234` | 7/31/2026, 4:21:05 PM | 498 | 1481KB | Saying it is dismissed is not right. Just say it's moot. Then this way we don't call it di |
 | `1785529983485` | 7/31/2026, 4:16:23 PM | 397 | 1027KB | Make sure that you are consulting the SLS so that incorrect information does not persist.  |
 | `1785537526001` | 7/31/2026, 3:38:46 PM | 1 | 14KB | #Argus |
@@ -31,7 +32,6 @@ Generated: 7/31/2026, 5:07:02 PM PT | window: last 72h | 102 tasks | index total
 | `1785483679627` | 7/31/2026, 9:36:49 AM | 122 | 318KB | yesterday, SSL expired for some parts of emsuniversity.com. Some users still reporting SSL |
 | `1785355259217` | 7/31/2026, 9:29:34 AM | 800 | 1764KB | i ahve been told this form is not populating PDF forms properly downstream. Can you check  |
 | `1785295028411` | 7/31/2026, 3:45:07 AM | 1838 | 9684KB | What outstanding build issues exist for the Broser Extension for Argus? What else do you r |
-| `1785360672171` | 7/31/2026, 1:49:48 AM | 928 | 5304KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
 | `1785452265627` | 7/30/2026, 9:07:53 PM | 522 | 1126KB | explain how this student has a Moodle Completion Date but does not have a printed certiica |
 | `1785456423435` | 7/30/2026, 7:28:17 PM | 300 | 1067KB | See Vicky's chats regarding EMT and Refresher schedules in Chat 55 and repair |
 | `1785293294377` | 7/30/2026, 3:13:14 PM | 618 | 2568KB | A metric ton of emails came in to email agent within the last hour or 2. I need you to go  |
@@ -109,27 +109,12 @@ Generated: 7/31/2026, 5:07:02 PM PT | window: last 72h | 102 tasks | index total
 | `1785267604245` | 7/28/2026, 7:20:34 PM | 246 | 3133KB | Pick up task — Fix CFA Voice 52% short-leg rate and broken DEADMAN escalation pipeline. Tw |
 | `1785284021265` | 7/28/2026, 7:20:11 PM | 557 | 1134KB | Pick up the QB task that was just closed out. where we were tyring to figure out to do wit |
 | `1785281710410` | 7/28/2026, 6:42:22 PM | 218 | 920KB | for this image on my desktop, compress and upload it here: https://www.emsuniversity.com/i |
-| `1785285698105` | 7/28/2026, 5:49:02 PM | 62 | 104KB | We need to resolve the Plesk license issue that was recovered. Can you please resolve that |
-| `1785279405884` | 7/28/2026, 5:11:26 PM | 330 | 1012KB | # Full Session Summary — All Issues Covered |
-| `1785283734874` | 7/28/2026, 5:10:20 PM | 11 | 33KB | Quickbooks seems to be blocking their own Invoice Payments filled out from their own syste |
 
 ---
 
 ## Per-window detail
 
-### `1785537361555` — 7/31/2026, 5:06:34 PM PT — 77 turns
-
-**Original task:**
-
-```
-What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor for 50 minutes
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11944, #11953, #12314, #12363, #12365, #12366, #12368, #12477, #12618, #12657, #12824, #12872, #12878, #13108, #13202, #13874, #1468, #16163, #16265, #16304, #16718, #16844, #17205, #18312, #18326, #19177, #19188, #4987
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785463237084` — 7/31/2026, 4:56:32 PM PT — 582 turns
+### `1785463237084` — 7/31/2026, 6:01:51 PM PT — 800 turns
 
 **Original task:**
 
@@ -139,7 +124,7 @@ AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/instit
 Odd that it's not there next to the 4/ 13 open complaint. Anyway yeah that needs to be repopulated back in there along with a response that was already sent as well as the one that you drafted for this new issue that was due on 728. You might have to check the desktop if you can't find the 
 ```
 
-**Ideas referenced:** #0369, #059669, #0891, #111827, #13661, #1368, #1441, #1454, #1538, #1565, #15654, #15803, #16127, #16134, #16135, #16160, #1633, #166534, #16957, #19587, #19595 [executing], #19599, #20393 [approved], #20633 [executing], #20634 [executing], #25226, #2563, #26211, #334155, #4111, #450438, #475569, #600179, #623992, #6366, #64748, #92400
+**Ideas referenced:** #0369, #059669, #0891, #111827, #13661, #1368, #1441, #1454, #1538, #1565, #15654, #15803, #16127, #16134, #16135, #16160, #1633, #166534, #16957, #19587, #19595 [executing], #19599, #20393 [approved], #20633 [executing], #20634 [executing], #20640 [proposed], #20643 [executing], #20645 [executing], #25226, #2563, #26211, #334155, #4111, #450438, #475569, #600179, #623992, #6366, #64748, #92400
 
 **Last PICKUP PROMPT:**
 
@@ -178,6 +163,155 @@ Reference IDs:
 - Students: 25226W-34 (id 2255, Moodle 46701), 25226W-12 (id 1933, Moodle 46700), 26211FT-07 (id 8141124, Moodle 50430), 25324T-01 (id 1347, Moodle 45607), 26308W-16 (id 8138168, Moodle 49724)
 - Tickets: 631 (Nettles externship record), 12390 (third-party Vasquez escalation), 15654 (Brenza NREMT clearance holds)
 - Files: `uploads/compliance/july2026_noi/
+```
+
+### `1785537361555` — 7/31/2026, 5:56:13 PM PT — 152 turns
+
+**Original task:**
+
+```
+What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor for 50 minutes
+```
+
+**Ideas referenced:** #10108, #10666, #10740, #11741, #11781, #11944, #11953, #12314, #12363, #12365, #12366, #12368, #12477, #12618, #12657, #12824, #12872, #12878, #13108, #13202, #13874, #1468, #16163, #16265, #16304, #16718, #16844, #17202, #17205, #18312, #18326, #19177, #19188, #19338, #20130, #20333, #20410, #20495, #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #20630, #20639 [proposed], #20641 [proposed], #20644 [proposed], #20648 [queued], #2124, #2182, #4516, #4987, #6978
+
+**Last PICKUP PROMPT:**
+
+```
+LM, 120B, or any future model.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Ruben Executor deadlock: implement the federation fixes so chains execute instead of looping at outcome='observed'.
+(Start by re-probing the executor path to confirm whether the 18:00 tick passed.)
+
+Where we left off (verified 2026-07-31 17:55 PT):
+- Incident: frankenstein_router_incidents #2124 (open)
+- Ideas: #20639 [proposed] diagnosis, #20641 [queued] code-fence strip, #20644 [proposed] route executor to :11511, #20648 [queued] federation blueprint
+- Emergency changes live on WOPR: GLM-first disabled, FRANK_EXECUTOR_CAP 6→16 (effective 24)
+- Verified STILL BROKEN: 17:30 (row 340549) + 17:45 (row 340550) both `observed`; QoS cap still saturated at effective=24 (leak or 24+ real slots — unverified which)
+- GLM :8210 recovered 17:25 (200, 59ms); Artemis :8000 + Julia :11513 healthy at 32 tok/s
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #20641 — Implement the 5-line markdown code-fence strip in /var/www/emtskills/lib/plan_shape_validator_tool_name_nudge.php before json_decode, then force a re-dispatch of idea-4516 and confirm outcome != 'observed'.
+2. #20648 — Implement federation items A+D+G in /usr/local/bin/frankenstein_tools_adapter.py (reorder admission, try/finally release, PHP stuck-detector). A+D alone end the dead-upstream slot-burn loop.
+3. #20644 — Read the `_exec_release` call sites in the adapter to find whether 503-spill paths leak slots; if found, fix + restart + probe executor path.
+
+Reference IDs:
+- Incident: #2124
+- Ideas filed: #20639, #20641, #20644, #20648
+- Ticket: TKT-20260723-2AC3960F (186h SLA breach)
+- Files touched: 70-glm-first-all-lanes.conf.disabled-executor-deadlock-20260731, zzzzzzzzzz-cline-priority-over-batch.conf, frankenstein-tools.service (restarted 2x)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785360672171` — 7/31/2026, 5:55:46 PM PT — 938 turns
+
+**Original task:**
+
+```
+For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? 
+
+Also how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?
+```
+
+**Ideas referenced:** #20032 [proposed], #20033 [proposed], #20038, #20045 [proposed], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20052 [proposed], #20080, #20081 [proposed], #20094, #20279 [proposed], #20289 [proposed], #20294 [proposed], #20296 [proposed], #20297, #20316 [proposed], #20320 [proposed], #20321 [proposed], #20322 [proposed], #20323 [proposed], #20325 [deploying], #20329 [proposed], #20370 [queued], #20407 [executing]
+
+**Last PICKUP PROMPT:**
+
+```
+n.
+
+═══════════════════════════════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════════════════════════════
+Pick up task Telephony improvements — deploy #20081 multi-voice routing, finish #20050 human escalation.
+
+Where we left off (verified 2026-07-31 5:55 PM PT):
+- Voice performance: Bella 1,343 calls/7d, avg 101s, score 5.2/10. Ronald/Katie/Eric zero calls.
+- A/B routing (#20081) NOT deployed — twiml_inbound.php still routes 100% to Bella
+- Real voice IDs verified: Ronald 80f2341e Cartesia, Katie e5a5320e Cartesia, Eric 494523de 11labs, Bella 6ee87bdb 11labs
+
+Open threads to drive next:
+1. #20081 [deploying] — Deploy voicePool A/B rotation to twiml_inbound.php: insert $voicePool = ['bella','ronald','katie','eric'] + random pick, pass selected ID through to VAPI spawn
+2. #20050 [proposed] — Deploy topic-based human escalation: keyword matching in VAPI prompt (refund/complain/charge/lawyer/stop → transfer to human agent)
+3. #20046 [proposed] — Deploy pre-call prospect detection: phone number lookup against Students table before routing
+4. #20407 [executing] — Clean up stale assistant ID references from all config/code
+
+Reference IDs:
+- Ideas filed: #20045, #20046, #20047, #20049, #20050, #20051, #20081, #20279, #20289, #20322, #20323, #20325, #20407
+- Files: /var/www/emtskills/api/telephony/twiml_inbound.php (687 lines), /var/www/emtskills/api/telephony/vapi_fallback_worker.php
+- Time anchor: 2026-07-31 5:55 PM PT
+
+When done, append to cline_task_ledger.md and run order 66.
+═══════════════════════════════════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785531619110` — 7/31/2026, 5:29:44 PM PT — 402 turns
+
+**Original task:**
+
+```
+The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "serving properly" today, and I am not going to pretend otherwise. Here is the honest, complete accounting of a very long session — what is fixed for real, what I got wrong, and exactly where the next window should start.
+
+THE ARC. Last night the ring served 40-67 turns/hour for 10 hours, then died at 01:03 PT. Today it has died or wedged within minutes of every boot, across every config permutation I tried. I fixed five real adapter-side routing bugs and shipped an auto-relaunch watchdog that genuinely works n
+```
+
+**Ideas referenced:** #15144, #16163, #16254, #16265, #1754, #1755, #178531, #20005 [proposed], #20069, #20264 [queued], #20272 [deployed], #20297 [queued], #20302 [deployed], #20311 [deployed], #20495 [executing], #20498 [queued], #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20553 [blocked], #20625 [proposed], #20626 [proposed], #2101, #2118, #48031, #48140
+
+**Last PICKUP PROMPT:**
+
+```
+he watchdog already mitigates.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785314663557, GLM ring RCA done, awaiting Ruben decision on next lever (reboot vs RoCE).
+
+Where we left off (verified 2026-07-31 17:28 PT):
+- RING: UP and serving (HTTP 200, stable since 13:29 PT, 4+ hours). GLM = 3.0% of 120K daily calls (3,628 picks/24h). No user impact from wedges, Artemis + Julia + frankenstein-tools carry backup.
+- ROOT CAUSE: NCCL over TCP/mgmt NIC (enP7s7) with IB_DISABLE=1. CX7 RoCE fabric (roceP2p1s0f0/f1, 4096 MTU, /30 P2P ring) sits IDLE. NCCL_IB_HCA=rocep1s0f1 points to WRONG device.
+- WATCHDOG: working as designed (active, fails=0, silence = healthy). Auto-recovers ring within ~20 min of wedge.
+- RUBEN QUESTION: "what is the benefit of proceeding?" answered: GLM is 3% of traffic, wedges cause no user impact, watchdog mitigates. Recommendation: try node reboot first (zero config risk), then RoCE if still wedging.
+
+Open threads to drive next:
+1. #20626 [proposed], RoCE activation. DEFER until reboot tried. (human-only decision, no idea)
+2. #20625 [proposed], watchdog SSH timeout hardening. Low priority, latent bug.
+3. #20528 [queued], NCCL investigation, superseded by #20626 [proposed]. (verified: status=ready_for_review dev_stage=ready_for_review)
+4. #20553 [queued], watchdog live and working. (verified: status=ready_for_review dev_stage=ready_for_review)
+5. #20517 [blocked], layer 1 shipped, remaining MCP registration. (verified: status=in_progress dev_stage=impl_failed)
+6. #20506 [blocked], GATE C cleared. (verified: status=in_progress dev_stage=impl_failed)
+7. #20536 [queued], supersede. (verified: status=ready_for_review dev_stage=ready_for_review)
+8. #20495 [executing], watchdog shipped, add forced-death test when stable. (verified: status=in_progress dev_stage=idle)
+9. #20498 [queued], close/supersede. (verified: status=ready_for_review dev_stage=ready_for_review)
+10. #20297 [queued], drift protection. (verified: status=ready_for_review dev_stage=ready_for_review)
+11. #20264 [queued], derive SLO/ceiling constants. (verified: status=ready_for_review dev_stage=ready_for_review)
+12. #20005 [proposed], supervisor consolidation. (verified: status=proposed dev_stage=idle)
+
+Reference IDs:
+- Ideas filed: #20625 [proposed] (verified: status=proposed dev_stage=idle), #20626 [proposed] (verified: status=proposed dev_stage=idle)
+- Ideas reconciled: #20553 [queued], #20536 [queued], #20528 [queued], #20517 [blocked], #20506 [blocked], #20495 [executing], #20498 [queued], #20311 [deployed], #20302 [deployed], #20297 [queued], #20264 [queued], #20005 [proposed]
+- Files touched: none
+- Ring map: Cato r0 (.115), Augustus r1 (.244), Pompey r2 (.21), Marcus r3 (.171), Tiberius r4 (.32), Cesar r5 (.56)
+- RoCE fabric: Cato(f0:10.220.1.1, f1:10.220.6.2) to Aug(f0:10.220.1.2, f1:10.220.2.1) to Pom(f0:10.220.2.2, f1:10.220.3.1) to Mar(f0:10.220.3.2, f1:10.220.4.1) to Tib(f0:10.220.5.1, f1:10.220.4.2) to Ces(f0:10.220.5.2, f1:10.220.6.1) to Cato
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Window 1: ring verified UP/healthy, 4 false impl_faileds closed
+- [x] RCA-1: ring NEVER died 13:57, froze ~13:41, self-recovered ~14:01
+- [x] RCA-1b: NO NV_ERR in docker logs, NOT reproducible
+- [x] RCA-3a: WATCHDOG NOT HUNG, actively cycling, silence is expected (fails=0)
+- [x] RCA-3b: Watchdog has NO active bug, latent SSH-timeou
 ```
 
 ### `1785537564406` — 7/31/2026, 4:33:18 PM PT — 266 turns
@@ -288,55 +422,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </result>
 <command>ssh -o ConnectTimeout=15 rubenmajor@192.168.1.190 'curl -s http://127.0.0.1:8000/v1/models'</command>
 </attempt_completion>
-```
-
-### `1785531619110` — 7/31/2026, 4:25:07 PM PT — 390 turns
-
-**Original task:**
-
-```
-The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "serving properly" today, and I am not going to pretend otherwise. Here is the honest, complete accounting of a very long session — what is fixed for real, what I got wrong, and exactly where the next window should start.
-
-THE ARC. Last night the ring served 40-67 turns/hour for 10 hours, then died at 01:03 PT. Today it has died or wedged within minutes of every boot, across every config permutation I tried. I fixed five real adapter-side routing bugs and shipped an auto-relaunch watchdog that genuinely works n
-```
-
-**Ideas referenced:** #15144, #16163, #16254, #16265, #1754, #1755, #178531, #20005 [proposed], #20069, #20264 [queued], #20272 [deployed], #20297 [queued], #20302 [deployed], #20311 [deployed], #20495 [executing], #20498 [queued], #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20553 [blocked], #20625 [proposed], #20626 [proposed], #2101, #2118, #48031, #48140
-
-**Last PICKUP PROMPT:**
-
-```
-edge or scheduled maintenance.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785314663557 — GLM ring RCA done. Root cause: NCCL over TCP/mgmt NIC, CX7 RoCE idle. Ring stable now but will wedge again.
-
-Where we left off (verified 2026-07-31 16:23 PT):
-- RING: UP (HTTP 200, serving since 13:29 PT, 3+ hours stable, 7 GLM wins in recent traffic, 45737 gen tokens). Artemis + Julia carrying backup.
-- WATCHDOG: NOT hung (prior window wrong). Active PID 1379298, fresh sleep child, fails=0. Last log 13:43 (boot grace reset). Silence = healthy. Working as designed.
-- NV_ERR: NOT reproducible. No NV_ERR in docker logs or container dmesg. Prior "all 6 nodes NV_ERR" claim was wrong.
-- ROOT CAUSE: NCCL bypasses CX7 RoCE. Container runs NCCL_IB_DISABLE=1 + NCCL_SOCKET_IFNAME=enP7s7 (1Gbps mgmt NIC). CX7 RoCE interfaces (roceP2p1s0f0/f1) are PORT_ACTIVE, 4096 MTU, RDMA UP, /30 P2P routes form perfect ring — all IDLE. NCCL_IB_HCA=rocep1s0f1 points to WRONG device (10.220.17/18, not ring 10.220.1-6).
-- RULE 251: checked. PP=6 is NOT TP=2, no conflict. CX7 for NCCL transport is allowed.
-
-Open threads to drive next:
-1. #20626 [proposed] — THE fix. Switch NCCL to CX7 RoCE: IB_DISABLE=0, IB_HCA=roceP2p1s0f0,roceP2p1s0f1, remove SOCKET_IFNAME=enP7s7. Deploy at next wedge or maintenance window. Verify NCCL logs show RoCE transport.
-2. #20528 [queued] — supersedes the NCCL investigation. RoCE activation plan is #20626 [proposed]. (verified: status=ready_for_review dev_stage=ready_for_review)
-3. #20625 [proposed] — watchdog SSH timeout hardening (wrap $CATO_SSH in timeout 30). Latent bug, did not fire today. (verified: status=proposed dev_stage=idle)
-4. #20553 [queued] — watchdog IS live and working (verified: systemctl active, logging). Status shows ready_for_review but it is hand-shipped deployed. (verified: status=ready_for_review dev_stage=ready_for_review)
-5. #20517 [blocked] — layer 1 (glm-ring-diagnose) shipped. Remaining: register as MCP tool, preflight gate, delete superseded prose. (verified: status=in_progress dev_stage=impl_failed)
-6. #20506 [blocked] — GATE C cleared per prior window. NCCL socket family fix was correct. (verified: status=in_progress dev_stage=impl_failed)
-7. #20536 [queued] — crawl investigation complete, folded into #20528 [queued] and #20626 [proposed]. Supersede. (verified: status=ready_for_review dev_stage=ready_for_review)
-8. #20495 [executing] — watchdog shipped and proven. Add end-to-end forced-death test when ring is stable enough. (verified: status=in_progress dev_stage=idle)
-9. #20498 [queued] — close/supersede. Diagnosis half was wrong (see #20506 [blocked], #20528 [queued]). (verified: status=ready_for_review dev_stage=ready_for_review)
-10. #20297 [queued] — drift protection; contract is now 9 knobs. (verified: status=ready_for_review dev_stage=ready_for_review)
-11. #20264 [queued] — derive SLO/ceiling constants; eight were hand-picked. (verified: status=ready_for_review dev_stage=ready_for_review)
-12. #20005 [proposed] — supervisor consolidation, still disabled on all 6 nodes. (verified: status=proposed dev_stage=idle)
-
-Reference IDs:
-- Ideas filed this session: #20625 [proposed] (verified: status=proposed dev_stage=idle), #20626 [proposed] (verified: status=proposed dev_stage=idle)
-- Ideas reconciled: #20553 [queued] (verified: status=ready_for_review dev_stage=ready_for_review), #20536 [queued] (verified: status=ready_for_review dev_stage=ready_for_review), #20528 [queued] (verified:
 ```
 
 ### `1785528867234` — 7/31/2026, 4:21:05 PM PT — 498 turns
@@ -986,50 +1071,6 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785360672171` — 7/31/2026, 1:49:48 AM PT — 928 turns
-
-**Original task:**
-
-```
-For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? 
-
-Also how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?
-```
-
-**Ideas referenced:** #20032 [proposed], #20033 [proposed], #20038, #20045 [proposed], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20052 [proposed], #20080, #20081 [proposed], #20094, #20279 [proposed], #20289 [proposed], #20294 [proposed], #20296 [proposed], #20297, #20316 [proposed], #20320 [proposed], #20321 [proposed], #20322 [proposed], #20323 [proposed], #20325 [deploying], #20329 [proposed], #20370 [queued], #20407 [executing]
-
-**Last PICKUP PROMPT:**
-
-```
-h.
-
-═══════════════════════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════════════════════
-Pick up task Telephony improvements — deploy #20081 multi-voice routing, finish #20050 human escalation.
-
-Where we left off (verified 2026-07-31 12:55 AM PT):
-- Voice 401 RCA complete: real IDs verified (Ronald 80f2341e Cartesia, Katie e5a5320e Cartesia, Eric 494523de 11labs, Bella 6ee87bdb 11labs)
-- 100% calls on Bella today (206 calls), Ronald/Katie/Eric zero calls — A/B routing not live yet
-- Multi-voice patch needed in twiml_inbound.php (687 lines, no grep hit for assistant ID literal)
-
-Open threads to drive next:
-1. #20081 [deploying] — Deploy voicePool A/B rotation to twiml_inbound.php: insert $voicePool = ['bella','ronald','katie','eric'] + random pick, pass selected ID through to VAPI spawn
-2. #20050 [proposed] — Deploy topic-based human escalation: keyword matching in VAPI prompt (refund/complain/charge/lawyer/stop → transfer to human agent)
-3. #20046 [proposed] — Deploy pre-call prospect detection: phone number lookup against Students table before routing
-4. #20407 [executing] — Clean up stale assistant ID references from all config/code
-
-Reference IDs:
-- Ideas filed: #20045, #20046, #20047, #20049, #20050, #20051, #20081, #20279, #20289, #20322, #20323, #20325, #20407
-- Files: /var/www/emtskills/api/telephony/twiml_inbound.php (687 lines), /var/www/emtskills/api/telephony/vapi_fallback_worker.php
-- Time anchor: 2026-07-31 12:55 PT
-
-When done, append to cline_task_ledger.md and run order 66.
-═══════════════════════════════════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 
@@ -3531,113 +3572,5 @@ for this image on my desktop, compress and upload it here: https://www.emsuniver
 ```
 
 **Ideas referenced:** #19835 [proposed], #19846 [rejected], #19847 [rejected], #600179
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785285698105` — 7/28/2026, 5:49:02 PM PT — 62 turns
-
-**Original task:**
-
-```
-We need to resolve the Plesk license issue that was recovered. Can you please resolve that so that we don't have a problem with the license??
-```
-
-**Ideas referenced:** #13487, #19492, #19495, #19511, #19594, #19615, #19766, #19767, #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19807, #19810, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-th the full context and steps.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task - Plesk license fix needed (human-gated)
-
-Where we left off (verified 2026-07-28 17:44 PT):
-- Confirmed WOPR Plesk license EXT.12414222.0005 is INVALID (already activated on another server) - verified live via `sudo plesk bin license -c` exit 1
-- Identified fix path: deactivate old activation via platform360.io, run `sudo plesk bin license --install <code>` on WOPR
-- Filed idea #19827 [proposed] for tracking
-- Updated HANDOFF_NOTES.md with context + repair steps
-
-Open threads to drive next:
-1. #19827 [proposed] - Ruben must log into https://platform360.io/, deactivate EXT.12414222.0005 from the stale machine, retrieve the activation code, then run `sudo plesk bin license --install <code>` on WOPR
-
-Reference IDs:
-- Ideas filed: #19827 [proposed]
-- Files touched: /var/www/emtskills/docs/HANDOFF_NOTES.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785279405884` — 7/28/2026, 5:11:26 PM PT — 330 turns
-
-**Original task:**
-
-```
-# Full Session Summary — All Issues Covered
-
-This thread covered multiple dovetailing issues starting from a WordPress link bug and ending in a QuickBooks payment/suspension investigation. Full recap below.
-
-## 1. Instructor Login Link (FIXED)
-- Root cause: emsuniversity.com + emtrefresher.com share one WordPress DB (`wordpress_2`, prefix `LzDe7pTO_`) with `siteurl`/`home` = emtrefresher.com. Any `home_url()` call building `/emtskills/` links resolved to the wrong domain (404).
-- Fixed in `emsu-modern-design.php` + `emsu-global-design.php`: hardcoded to `https://www.emsuniversity.com/emtskills
-```
-
-**Ideas referenced:** #10739, #11925, #12184, #15158, #160482, #161818, #16523, #16613, #178501, #178519, #18713, #18971, #19205, #19206 [approved], #19209 [approved], #19258, #19460, #19506, #19507, #19508 [approved], #19511, #1953, #19558, #19594, #19615, #19686, #19766, #19767, #19773, #19777 [proposed], #19778 [proposed], #19786 [deployed], #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19812 [executing], #19813 [rejected], #19814 [executing], #19816 [rejected], #19821 [proposed], #19822 [rejected], #19823 [rejected], #1998, #2000, #2001, #2007, #2042, #9202
-
-**Last PICKUP PROMPT:**
-
-```
-mentation of a solved problem.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785012025445 — EMSU email-pipeline RCA + MCP tool-defect fixes.
-
-Where we left off (verified 2026-07-28 17:11 PT):
-- GRANT APPLIED + VERIFIED: adminportal now has INSERT/UPDATE/DELETE on moodle_c_live.user_enrolments, groups_members, role_assignments. Applied via `sudo mysql` (socket auth) after the plesk-admin path timed out twice. Proven with live writes as adminportal: ENROL_WRITE_OK + GROUPS_WRITE_OK, no ERROR 1142.
-- fix_moodle_enrollment end-to-end verified: on a user with enrolment status=1 it now returns both issues and both repair actions. Detection fix (TSV parser + contradiction assertion) shipped earlier this session.
-- create_idea dedup guard SHIPPED + LIVE-PROVEN: canary retry returned DEDUP_NOOP_IDEA instead of creating a duplicate. Same guard shape as #19814's agent_send_or_draft fix.
-- Jason Pan (26820FT-40) remains fully restored with 1-week exam extension sent.
-
-Open threads to drive next:
-1. #19821 [proposed] — body says "BLOCKED needs root" but the GRANT is now applied and verified. Close it or reject it as stale; do NOT re-run the GRANT.
-2. #19812 [executing] — now at dev_stage=testing. Verify it lands all 6 sub-fixes, especially SCHEDULING the two existing drain crons (cron_email_deferred_send.php, cron_email_deferred_repair_sweep.php — neither is in crontab) and backfilling the 292-email deferred backlog. Do not let it ship a brand-new drain worker while the existing two stay unwired.
-3. #19508 [queued] — frankenstein-llm pool health fix, approved but executor has not picked it up.
-4. Auto-void exposure list — a scan of qb_invoices vs qb_invoice_payments surfaced many rows marked paid with zero/partial payment rows recorded. That list was pulled but NOT yet triaged or acted on. Needs its own pass to separate genuine Intuit auto-voids from legacy pre-sync invoices before any dunning.
-5. Diego Rivera refund decision (human-only decision, no idea) — money-cap per rule 29, needs Vicky/CS.
-
-Reference IDs:
-- Ideas: #19821 [proposed], #19814 [deployed], #19812 [executing], #19823 [rejected], #19508 [queued], #19786 [deployed]
-- Files touched: mcp-servers/emsu-operations/src/index.ts + build/index.js; mcp-servers/ruben-orchestrator/src/index.ts + build/index.js. Backups: src/index.ts.bak-suspendparse-*, .bak-idem-*, .bak-ideadedup-*
-- Services restarted: mcp-emsu-operations, mcp-ruben-orchestrator (both active)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785283734874` — 7/28/2026, 5:10:20 PM PT — 11 turns
-
-**Original task:**
-
-```
-Quickbooks seems to be blocking their own Invoice Payments filled out from their own system. Can you check this against quickbooks API, the Voided payments int he last 2 months (supposedly those over 1000)
-
-See: transactions-20260728 (1) and transactions-20260728
-
-I think our API, registration form and siteurl/costs/ for EMT class pages. 
-
-that page BTW needs to be better decorated with what was there before and more info about what they are paying and how the page works, etc... Is this properly wired in? 
-
-Also if this is the case I wonder what is the point of using their invoicing system if 
-```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

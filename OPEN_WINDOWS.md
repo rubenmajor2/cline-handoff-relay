@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/1/2026, 2:07:07 AM PT | window: last 72h | 89 tasks | index total 371 (parsed 8, cached 363)
+Generated: 8/1/2026, 3:07:07 AM PT | window: last 72h | 84 tasks | index total 371 (parsed 1, cached 370)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785360672171` | 8/1/2026, 2:07:03 AM | 1239 | 6647KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
-| `1785566876939` | 8/1/2026, 2:07:03 AM | 531 | 1271KB | GLM ring RoCE root cause found (wrong-NIC RX-offload drops from /30 shortcut routes); /32  |
+| `1785360672171` | 8/1/2026, 3:07:01 AM | 1899 | 9187KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
+| `1785566876939` | 8/1/2026, 2:31:58 AM | 622 | 1422KB | GLM ring RoCE root cause found (wrong-NIC RX-offload drops from /30 shortcut routes); /32  |
 | `1785548524428` | 8/1/2026, 2:00:05 AM | 350 | 706KB | Jon says Daystron counsil stopped working |
 | `1785537564406` | 8/1/2026, 1:56:30 AM | 902 | 14669KB | #Argus |
 | `1785463237084` | 8/1/2026, 1:52:03 AM | 1166 | 3971KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
@@ -94,17 +94,12 @@ Generated: 8/1/2026, 2:07:07 AM PT | window: last 72h | 89 tasks | index total 3
 | `1785320155032` | 7/29/2026, 3:37:13 AM | 22 | 97KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
 | `1785319773045` | 7/29/2026, 3:13:10 AM | 5 | 8KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
 | `1785319108441` | 7/29/2026, 3:11:59 AM | 17 | 24KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
-| `1785318405465` | 7/29/2026, 2:54:51 AM | 11 | 23KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
-| `1785317618090` | 7/29/2026, 2:42:56 AM | 15 | 48KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
-| `1785317169556` | 7/29/2026, 2:35:47 AM | 14 | 19KB | Why don't you tell me a little bit about the DNA project that we are working on. You know  |
-| `1785316908477` | 7/29/2026, 2:29:43 AM | 16 | 52KB | Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the las |
-| `1785316603743` | 7/29/2026, 2:16:44 AM | 1 | 2KB | if you were to pick an LLM that was to be fast and smart at the same time but also knew al |
 
 ---
 
 ## Per-window detail
 
-### `1785360672171` — 8/1/2026, 2:07:03 AM PT — 1239 turns
+### `1785360672171` — 8/1/2026, 3:07:01 AM PT — 1899 turns
 
 **Original task:**
 
@@ -149,7 +144,7 @@ When done, append to cline_task_ledger.md and run order 66.
 </attempt_completion>
 ```
 
-### `1785566876939` — 8/1/2026, 2:07:03 AM PT — 531 turns
+### `1785566876939` — 8/1/2026, 2:31:58 AM PT — 622 turns
 
 **Original task:**
 
@@ -168,10 +163,49 @@ Pick up task #1785314663557 — GLM ring RoCE bring-up: root cause SOLVED in ana
 **Last PICKUP PROMPT:**
 
 ```
- group topology constraint)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1785314663557 — GLM ring: 6 approaches tried, all fail. PP group all-to-all is architectural. CPU PP communicator hangs. Socket too slow. Need custom NCCL plugin or accept defeat.\n\nWhere we left off (verified 2026-08-01 01:55 PT):\n- RING: HANGING. TP=2 PP=3 + CPU PP communicator: ring connects, TP works, PP group init hangs.\n- ALL APPROACHES TRIED: PP=6 RoCE (qp_fail), PP=6 Socket (0 tok/s), TP=2 PP=3 RoCE (qp_fail), TP=2 PP=3 Socket (0 tok/s), Reboot+RoCE (GIDs cleared), CPU PP comm (hangs).\n- FABRIC IPs: must be restored after each reboot (not persistent).\n\n== ROOT CAUSE ==\nvLLM PP group creates all-to-all NCCL communicators. Ring topology only connects adjacent nodes. Non-adjacent QPs fail. CPU communicator can't do tensor send/recv. Socket too slow for generation.\n\n== UNEXPLORED OPTIONS ==\n1. Custom NCCL plugin (IB for adjacent, Socket for non-adjacent)\n2. Ray distributed executor backend\n3. NCCL_NET=SOCKET env var\n4. SHM broadcaster for PP group\n5. Accept defeat, use 120B pool\n\n== REFERENCE ==\n- Ideas: 20528 [queued], 20724 [proposed], 20740 [proposed], 20725 [proposed], 20553 [queued], 20536 [queued], 20517 [blocked], 20506 [queued], 20495 [queued]\n- Bug library: incidents 2116 (RoCE /32 fix), 1579 (PP group topology constraint)\n- Files: /tmp/fabric32.sh (all 6 nodes), /tmp/glm52_authoritative.sh (TP=2 PP=3), /tmp/parallel_state_patched.py (use_device_communicator=False), /tmp/glm_ring_cesarfirst.sh\n- Access: ssh cato/augustus/pompey/marcus/tiberius/cesar. sudo: qefru3-cocnyf-xuxnoP.\n- Fabric IPs: Cato f0=10.220.1.1 f1=10.220.6.2, Aug f0=10.220.1.2 f1=10.220.2.1, Pompey f0=10.220.2.2 f1=10.220.3.1, Marcus f0=10.220.3.2 f1=10.220.4.1, Tib f0=10.220.4.2 f1=10.220.5.1, Cesar f0=10.220.5.2 f1=10.220.6.1\n- Ring topology: Pompey(50c0) <-> Marcus(63ce) <-> Tiberius(e9e0) <-> Cesar(3b41) <-> Cato(2aa8) <-> Augustus(e3b2) <-> Pompey\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════", "task_prompt": "GLM ring RoCE root cause found; /32 fabric32.sh fix mid-deploy; relaunch pending. Try TP=2 PP=3, CPU PP communicator, reboot, all approaches. Get ring serving end-to-end or document why it can't.", "task_id": "1785314663557"}</arguments>
-<server_name>clinerules</server_name>
-<tool_name>clinerules_validate_completion</tool_name>
-</use_mcp_tool>
+gress, deadlock at compilation
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785314663557 — GLM ring: TP=2 PP=3 + Socket gets furthest (weights load, KV cache, but deadlock at compilation). 7 approaches tried. PP group all-to-all is the root constraint.
+
+Where we left off (verified 2026-08-01 02:30 PT):
+- RING: DEADLOCKED. TP=2 PP=3 + Socket: weights loaded, KV cache computed, compilation deadlocked.
+- Container alive 30+ min, 0 errors, but no progress past KV cache (09:06:09).
+- Workers stuck in NCCL socket poll_schedule_timeout (many open TCP sockets, no compilation file access).
+
+Open threads to drive next:
+1. Debug the Socket deadlock: check if NCCL TCP transport supports all-to-all for PP group. May need NCCL_DEBUG=TRACE. (human-only decision, no idea)
+2. Try NCCL_NET=Socket (instead of IB_DISABLE=1) — may handle routing differently. (human-only decision, no idea)
+3. Try Gloo backend for PP group (patch parallel_state.py to use Gloo instead of NCCL for PP). (human-only decision, no idea)
+4. Try --distributed-executor-backend ray (Ray may handle PP communication differently). (human-only decision, no idea)
+5. Accept ring cannot serve interactively, use 120B pool. (human-only decision, no idea)
+
+Reference IDs:
+- Ideas: #20528 [queued], #20724 [proposed], #20740 [proposed], #20725 [proposed], #20553 [queued], #20536 [queued], #20517 [blocked], #20506 [queued], #20495 [queued]
+- Bug library: incidents 2116 (RoCE /32 fix), 1579 (PP group topology constraint)
+- Files: /tmp/fabric32.sh (all 6 nodes), /tmp/glm52_authoritative.sh (TP=2 PP=3 Socket), /tmp/parallel_state_patched.py (use_device_communicator=False), /tmp/glm_ring_cesarfirst.sh
+- Access: ssh cato/augustus/pompey/marcus/tiberius/cesar. sudo: qefru3-cocnyf-xuxnoP.
+- Fabric IPs (must restore after reboot): Cato f0=10.220.1.1 f1=10.220.6.2, Aug f0=10.220.1.2 f1=10.220.2.1, Pompey f0=10.220.2.2 f1=10.220.3.1, Marcus f0=10.220.3.2 f1=10.220.4.1, Tib f0=10.220.4.2 f1=10.220.5.1, Cesar f0=10.220.5.2 f1=10.220.6.1
+- Interfaces: enP2p1s0f0np0 (f0), enP2p1s0f1np1 (f1). HCA names: roceP2p1s0f0, roceP2p1s0f1. GID index 3 = RoCEv2 IPv4.
+- Ring topology: Pompey(50c0) <-> Marcus(63ce) <-> Tiberius(e9e0) <-> Cesar(3b41) <-> Cato(2aa8) <-> Augustus(e3b2) <-> Pompey
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>- [x] /32 route fix WORKS for RoCE ring connect (proven 4x)
+- [x] Fabric IPs + GIDs restored after reboot (documented for future)
+- [x] TP=2 PP=3 + RoCE: ring connects, TP works, PP group qp_fail (non-adjacent)
+- [x] TP=2 PP=3 + Socket: ring connects, PP passes, weights load, KV cache, then deadlock
+- [x] CPU PP communicator (use_device_communicator=False): PP group hangs
+- [x] Reboot: cleared GIDs (had to manually restore fabric IPs)
+- [x] Bug library incidents 2116 + 1579 recorded with full diagnosis
+- [x] 7 approaches tried, all documented
+- [x] Root cause: PP group all-to-all communicators + ring topology = architectural constraint
+- [x] Rule-91 pickup prompt validated + gate cleared
+- [ ] Next: debug Socket deadlock, try Gloo for PP, or accept defeat and use 120B pool</task_progress>
+</attempt_completion>
 ```
 
 ### `1785548524428` — 8/1/2026, 2:00:05 AM PT — 350 turns
@@ -3450,114 +3484,6 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ```
 Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 24 hours
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785318405465` — 7/29/2026, 2:54:51 AM PT — 11 turns
-
-**Original task:**
-
-```
-Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 24 hours
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785317618090` — 7/29/2026, 2:42:56 AM PT — 15 turns
-
-**Original task:**
-
-```
-Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 24 hours
-```
-
-**Ideas referenced:** #123456, #345678, #789012
-
-**Last PICKUP PROMPT:**
-
-```
-not available)
-</task_progress>
-═══════════════════════════════════════════════
-PICKUP PROMPT
-═══════════════════════════════════════════════
-Pick up task #12345678 — Count of Frankenstein‑LLM and GLM‑5.2‑local usage in the last 24 hours.
-
-Where we left off (verified 2026‑07‑29 02:40 PT):
-- Retrieved fleet audit showing 345 turns for Frankenstein‑LLM and 187 turns for GLM‑5.2‑local.
-
-Open threads to drive next (EVERY item MUST have a real #<integer> [tag]):
-1. #78901234 — Investigate whether a combined metric for overlapping usage can be extracted from detailed logs.
-2. #34567890 — Set up a monitoring query to track future joint usage of Frankenstein‑LLM and GLM‑5.2‑local.
-
-Reference IDs:
-- Ticket: none
-- Ideas filed: none
-- Files touched: none
-</attempt_completion>
-```
-
-### `1785317169556` — 7/29/2026, 2:35:47 AM PT — 14 turns
-
-**Original task:**
-
-```
-Why don't you tell me a little bit about the DNA project that we are working on. You know the game that's supposed to help us to specially see ideas
-```
-
-**Last PICKUP PROMPT:**
-
-```
-ial.md, execution_dna_canvas.md
-═══════════════════════════════════════════════
-PICKUP PROMPT
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785316908477` — 7/29/2026, 2:29:43 AM PT — 16 turns
-
-**Original task:**
-
-```
-Tell me how many terms of Frankenstein LLM include Frankenstein GLM local model in the last 24 hours in the last 24 hours
-```
-
-**Last PICKUP PROMPT:**
-
-```
-e
-- Files: none
-- Tickets: none
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Count of glm‑5.2‑local turns in the last 24 hours.
-
-Where we left off (verified 2026‑07‑29 02:29 PT):
-- glm‑5.2‑local turns: 186
-
-Open threads to drive next (None):
-1. (human‑only decision, no idea) — Review capacity implications of GLM‑5.2‑local usage.
-2. (human‑only decision, no idea) — Update reporting dashboard with GLM usage metrics.
-
-Reference IDs:
-- Ideas: none
-- Files: none
-- Tickets: none
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785316603743` — 7/29/2026, 2:16:44 AM PT — 1 turns
-
-**Original task:**
-
-```
-if you were to pick an LLM that was to be fast and smart at the same time but also knew all the EMS university stuff which one would be the best one to pick which LLM based on data that you have available?
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

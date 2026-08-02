@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/2/2026, 12:47:13 AM PT | window: last 72h | 77 tasks | index total 387 (parsed 2, cached 385)
+Generated: 8/2/2026, 4:00:21 AM PT | window: last 72h | 72 tasks | index total 387 (parsed 0, cached 387)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785620212473` | 8/2/2026, 12:44:54 AM | 1218 | 3664KB | #GLM |
+| `1785620212473` | 8/2/2026, 12:59:32 AM | 1240 | 3740KB | #GLM |
 | `1785653497679` | 8/2/2026, 12:30:52 AM | 96 | 719KB | The Fix AVP app is not working anymore, and seems to be stuck on my desktop / quick launch |
 | `1785600191339` | 8/2/2026, 12:16:39 AM | 1604 | 3425KB | #Kaizon / Bugs |
 | `1785649980432` | 8/2/2026, 12:05:32 AM | 84 | 224KB | #Argus |
@@ -82,17 +82,12 @@ Generated: 8/2/2026, 12:47:13 AM PT | window: last 72h | 77 tasks | index total 
 | `1785405238813` | 7/30/2026, 9:28:56 AM | 180 | 2320KB | Subject should not say: No-dead-end follow-up: Re: Following up on your EMSU support reque |
 | `1785347179098` | 7/30/2026, 9:21:41 AM | 66 | 377KB | How many turns of each individual LLM,, not groups, but what's inside of each group in the |
 | `1785370606525` | 7/30/2026, 4:18:55 AM | 632 | 3344KB | pickup TDSHS, TPIA Request 3 at: https://emsuniversity.com/emtskills/personnel/institution |
-| `1785396884879` | 7/30/2026, 3:29:54 AM | 306 | 2547KB | #Vicky Issues / Argus  |
-| `1785359143504` | 7/30/2026, 2:11:51 AM | 540 | 3897KB | #Argus  |
-| `1785401121290` | 7/30/2026, 1:45:46 AM | 2 | 2KB | Hi there. I bet you are working GLM 5.2 local, arent you? |
-| `1785368587300` | 7/30/2026, 1:18:38 AM | 264 | 1058KB | There are some reddit forums out there that are against EMS University. Can you give me li |
-| `1785379883249` | 7/30/2026, 12:57:14 AM | 238 | 1480KB | emsuniversity.com is showing secure, but not emsuniversity.com/ems. Can you resolve that? |
 
 ---
 
 ## Per-window detail
 
-### `1785620212473` — 8/2/2026, 12:44:54 AM PT — 1218 turns
+### `1785620212473` — 8/2/2026, 12:59:32 AM PT — 1240 turns
 
 **Original task:**
 
@@ -104,7 +99,7 @@ Generated: 8/2/2026, 12:47:13 AM PT | window: last 72h | 77 tasks | index total 
 Where things stand: the ring now BOOTS clean (all 6 up, HTTP 200, correct sparse attention backend) after I found and fixed four launcher regressions. The original decode-wedge is still 
 ```
 
-**Ideas referenced:** #11256, #12167, #12430, #1281, #1309, #14093, #1579 [approved], #178531, #1864 [investigating], #19325, #19509, #19519, #19629, #19670, #19840, #1996, #2000 [resolved], #20130, #20193, #20328, #20333, #20410, #20420, #20423, #20495 [executing], #20536 [awaiting_review], #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #20630, #20662, #20663 [rejected], #20665, #20672 [proposed], #20711, #2073, #2076, #2081, #20873 [proposed], #2092, #2093, #20955 [awaiting_review], #2096, #2097, #20985 [deployed], #2099, #21004 [proposed], #2101, #2102, #21020 [proposed], #2103, #21034 [proposed], #21038 [queued], #21039 [proposed], #21044 [proposed], #21053 [proposed], #2109, #2111, #2113, #21139 [proposed], #21146 [proposed], #21147 [proposed], #21151 [approved], #21158 [proposed], #2116 [deployed], #21167 [proposed], #2121 [resolved], #2125, #2126, #2127, #2128, #2129, #2131, #2136 [deployed], #2138 [deployed], #2139 [rejected], #2140 [rejected], #2141 [proposed], #2142 [resolved], #2143 [resolved], #21447, #2147 [needs_verify], #2148 [deployed], #2149 [deployed], #2150, #2151 [deployed], #2152, #2156, #2167, #21824, #22731, #2439, #26318, #32618, #32701, #36643, #36651, #36872, #37972, #37996, #39863, #42354, #44697, #45094, #4536, #4747, #6826 [deployed], #7925, #8281, #8321, #8563, #8598, #9405
+**Ideas referenced:** #11256, #12167, #12430, #1281, #1309, #14093, #1579 [approved], #178531, #1864 [investigating], #19325, #19509, #19519, #19629, #19670, #19840, #1996, #2000 [resolved], #20130, #20193, #20328, #20333, #20410, #20420, #20423, #20495 [executing], #20536 [awaiting_review], #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #20630, #20662, #20663 [rejected], #20665, #20672 [proposed], #20711, #2073, #2076, #2081, #20873 [proposed], #2092, #2093, #20955 [awaiting_review], #2096, #2097, #20985 [deployed], #2099, #21004 [proposed], #2101, #2102, #21020 [proposed], #2103, #21034 [proposed], #21038 [queued], #21039 [proposed], #21044 [proposed], #21053 [proposed], #2109, #2111, #2113, #21139 [proposed], #21146 [proposed], #21147 [proposed], #21151 [approved], #21158 [proposed], #2116 [deployed], #21167 [proposed], #2121 [resolved], #21213 [proposed], #2125, #2126, #2127, #2128, #2129, #2131, #2136 [deployed], #2138 [deployed], #2139 [rejected], #2140 [rejected], #2141 [proposed], #2142 [resolved], #2143 [resolved], #21447, #2147 [needs_verify], #2148 [deployed], #2149 [deployed], #2150, #2151 [deployed], #2152, #2156, #2167, #21824, #22731, #2439, #26318, #32618, #32701, #36643, #36651, #36872, #37972, #37996, #39863, #42354, #44697, #45094, #4536, #4747, #6826 [deployed], #7925, #8281, #8321, #8563, #8598, #9405
 
 **Last PICKUP PROMPT:**
 
@@ -3305,181 +3300,4 @@ Where we left off (verified 2026-07-30 04:18 PT):
 - FILE: /var/www/emtskills/uploads/tdshs/records-requests/EMSU-TPIA-2026-006_telephone_and_informal.md and .pdf (server), uploaded to Drive as EMSU-TPIA-2026-006_v3_DISCRETION_COMPARATOR.pdf in folder 12F69kotU_rwl7bb3tIwI46A7oq21c1RA. The superseded NARROWED version was trashed. Folder now holds 004, 005, 006-v3, 007, and the clarification playbook.
 - SEND STATUS: 000, 001, 002, 003 sent. 004 sent or in progress. 005 sent in Ruben-trimmed 8-item form. 006-v3 and 007 remain to send.
 - CLARIFICATION WORKF
-```
-
-### `1785396884879` — 7/30/2026, 3:29:54 AM PT — 306 turns
-
-**Original task:**
-
-```
-#Vicky Issues / Argus 
-
-Vicky, detailed a bunch of issues in chat 55 related to grievances, some exam stuff, etc... after 10PM pst tonight. I already resolved the Google Drive document issue, but the other stuff, well, I don't think that either ruben imessage ops did anything about it, nor Argus. Check Argus: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=terminal and Vicky's access and whatever she was asking and I want you to check those accounts to see if there are issues with them or if the suspensions are valid or in abilities to take those exams are valid or if there's
-```
-
-**Ideas referenced:** #000000, #047857, #059669, #10003, #10005, #10182, #11111, #111111, #12301, #127908, #128193, #128203, #128206, #128241, #128263, #128266, #128268, #128275, #16213, #16263, #17483, #181825, #18378, #18745, #18770, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19370, #19415, #19416, #19470, #2006, #20174 [proposed], #20175 [proposed], #20176 [proposed], #20201 [proposed], #20202 [proposed], #21262, #252532, #2563, #274160, #30363, #313244, #3223, #3226, #3227, #3230, #3231, #32324, #3233, #3239, #3240, #3243, #3244, #3246, #3247, #3251, #3254, #3255, #334155, #3387, #3730, #374151, #3742, #4338, #45475, #475569, #6366, #64748, #666666, #69707, #78350, #787890, #842029, #856404, #8942, #9086, #9168, #92400, #9306, #9339, #9650, #9654, #9660, #9733, #9889
-
-**Last PICKUP PROMPT:**
-
-```
-dea for Submit Assignment RCA.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Vicky Issues / Argus bug-bypass build.
-Where we left off (verified 3:29 AM PT):
-- 4 bug-bypass action ENTRIES added to argus_action_catalog.php line 139 (syntax OK)
-- 6 student accounts fixed (Aaron, Marcus, Hennah, Eesha confirmed; Andrew verified; Emelie=human decision)
-Open threads to drive next:
-1. #20174 [proposed] — Add 4 case handlers in argusRunAction() switch (~line 220): resolve_fail_bug (clears fail_date+unsuspends Moodle+reactivates enrollment), resolve_section_mismatch (fixes Students.section+Enrollments.section+Moodle group), extend_exam_deadline (creates quiz_override), sync_student_qb (triggers QB API refresh)
-2. #20176 [proposed] — Fix grievance_manager.php JS fetch to display HTTP 413 error when upload exceeds limits. Find the upload handler XHR/fetch block and wrap in .catch() or !response.ok check to show error to user.
-3. Submit Assignment button RCA — investigate Moodle assignsubmission_file draft state for Hennah Kim or generally. Check if `submissiondrafts` is enabled on the relevant assignments.
-4. Run full PHP syntax check on argus_action_catalog.php and alltastic_api.php after handler insertion
-Reference IDs:
-- Tickets: TKT-20260723-E27A8C55, TKT-20260723-E9425A73, TKT-20260726-D0D50268, TKT-20260724-20997E69, TKT-20260723-2AC3960F, TKT-14024
-- Ideas filed: #20174, #20175, #20176
-- Files touched: /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/routes/grievance_manager.php
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785359143504` — 7/30/2026, 2:11:51 AM PT — 540 turns
-
-**Original task:**
-
-```
-#Argus 
-
-Staff made numerous requests in Argus over the last 12 hours, including me: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser 
-
-I need those all to be catalogued, permissions updated according to rule 29 as well as actions carried out that argus refused and give that terminal additional capabilities for those actions - as well as the increased role permissions . If you think something is borderline or should not be approved accrsing to rul 29, let me know and we can discuss it.
-```
-
-**Ideas referenced:** #10003, #10005, #10182, #11925, #12301, #12477, #127908, #128193, #128203, #128206, #128263, #128275, #15158, #16213, #16263, #17537, #1754, #1755, #17580, #17619 [deployed], #17680, #178495, #178501, #18378, #18579, #18745, #18770, #18777 [pending], #18806, #18820, #18867, #18868, #18935, #18939, #18946, #18947, #18948, #18949, #18950, #18951, #18967, #18973, #18977, #18982, #18985 [rejected], #19081, #19098 [pending], #19099 [pending], #1910, #19100 [executing], #19102 [executing], #19126 [rejected], #19134 [executing], #19135 [executing], #19143 [executing], #19144 [executing], #19145, #19158, #19159, #19160 [executing], #19161 [executing], #19163 [executing], #19166, #19167, #19168, #19169, #19170 [executing], #19173, #19194, #19227, #19230 [queued], #19234 [queued], #19266, #19321, #19325, #19338, #19348, #19373, #19388 [executing], #19390 [rejected], #19403 [rejected], #19407, #19415, #19416, #19419, #19425, #19427, #19430, #19434, #19437, #19446, #19454, #19458, #19460, #19464, #19465, #19478, #19479, #19487, #19490, #19491, #19492, #19495, #19500, #19509, #19510, #19511, #19518 [rejected], #19522, #19523, #19524, #19525, #19535, #19537, #19539, #19545, #19558, #19563 [rejected], #19568 [executing], #19571 [proposed], #19572, #19573, #19574, #19576, #19577, #19578, #19579 [executing], #19580, #19581, #19583, #19584, #19585 [executing], #19586, #19587, #19588, #19589, #19590, #19591, #19592, #19594, #19595, #19596, #19597, #19598, #19599, #19600, #19601, #19602, #19603, #19604, #19605, #19606, #19607, #19608, #19610 [executing], #19611, #19615, #19624 [pending], #19641 [pending], #19645, #19646, #19647, #1965, #19657, #1966, #1967, #1968, #19686, #1969, #19690 [deployed], #1970, #19704, #1971, #19714 [proposed], #1972, #1973, #19731 [pending], #1975, #1976, #19766, #19767, #19773, #19776, #19777 [proposed], #19778 [proposed], #19784, #19791 [proposed], #19792 [proposed], #19793 [proposed], #19794 [proposed], #19795 [deployed], #19803, #19807, #19810, #19811, #19818, #19819, #19820, #19824 [proposed], #19825 [proposed], #19826 [proposed], #19827 [proposed], #19830, #19831, #19832, #19833, #19834, #19835 [rejected], #19836, #19837, #19838, #19839, #19840, #19846 [rejected], #19847 [rejected], #19848, #19853, #19857, #19871 [deployed], #19872, #19875 [proposed], #19876 [proposed], #19877 [proposed], #19879 [proposed], #19881 [proposed], #19882 [proposed], #19883 [proposed], #19887, #19903, #19907, #19908, #19909, #19910 [executing], #19911, #19912, #19913, #19914, #19915, #19916, #19917, #19918 [executing], #19920 [executing], #19921, #19922, #19924, #19925, #19927, #19928, #19970 [pending], #19971 [pending], #19975 [pending], #19978, #1998, #19995 [pending], #20023 [pending], #20024 [pending], #20025 [pending], #20026 [proposed], #20027, #20028 [pending], #20029 [proposed], #20030 [pending], #20031 [proposed], #20034 [pending], #20036 [pending], #20053 [pending], #2006, #2008, #2010, #2011, #2012, #2014, #2015, #2016, #2017, #2019, #2023, #2024, #2027, #2029, #2030, #2031, #2033, #2039, #2040, #2041, #2043, #2050, #2064, #2066, #2084, #2085, #2089, #2090, #2091, #2098, #21262, #21278, #21765, #22501, #22502, #2322, #24125, #2490, #25227, #274160, #2989, #30363, #3048, #3049, #334155, #3595, #4016, #4338, #5337, #5373, #5384, #5387, #623992, #64748, #6646, #6824, #695708, #69707, #697523, #699463, #699474, #8942, #9168, #9654, #9660, #9889
-
-**Last PICKUP PROMPT:**
-
-```
-
-<attempt_completion>
-<result>
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #24125 — Argus session cleanup: ship remaining 4 fixes, verify all deployed changes.
-
-Where we left off (verified 2026-07-30 02:11 PT):
-- SHIPPED TO PRODUCTION: design_read_file regex fix (str_starts_with removed, absolute path prefix added) at /var/www/emtskills/lib/argus_action_catalog.php line 1632-1633 — VERIFIED ON DISK
-- SHIPPED TO PRODUCTION: CustomerService role granted request_repair/request_feature in /var/www/emtskills/routes/alltastic_api.php — VERIFIED ON DISK
-- SHIPPED TO PRODUCTION: Refresher domain knowledge (dallasemtrefresher.com) added — VERIFIED ON DISK
-- SHIPPED: Invoice spam dedup fix (#20024) — NOT YET VERIFIED (subagent claimed success, not independently confirmed)
-- SHIPPED: web_fetch action (#20034) — NOT YET VERIFIED (subagent claimed success, not independently confirmed)
-- STATUS: emsu-operations MCP SSH adapter is currently rejecting ALL commands with "Invalid JSON argument" error (character sensitivity — $ and pipe chars cause rejection, now even simple echos fail). Adapter may need restart.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #20024 [executing] — Invoice spam dedup — VERIFY: grep -n email_sent_flag /var/www/emtskills/cron/cron_authnet_paid_no_qb_detector.php to confirm dedup marker was added. If missing, apply via sed on line 135.
-2. #20025 [deployed] — design_read_file path fix — VERIFY return double-slash: sed -n '1636p' /var/www/emtskills/lib/argus_action_catalog.php should show conditional return not bare return
-3. #20034 [queued] — web_fetch action — VERIFY: grep -n web_fetch /var/www/emtskills/lib/argus_action_catalog.php | head -5
-4. #20028 [queued] — Image thumbnail — BUILD: add inline thumbnail CSS/JS to terminal UI
-5. #20023 [executing] — EA PDF 72 pending entries — INVESTIGATE: check webhook failure error in e2pdf health lib
-6. #20026 [queued] — Weston Trenner attendance flag
-7. #20029 [queued] — Backend compliance validator for idea numbers
-
-Reference IDs:
-- Tickets: (none from this session)
-- Ideas filed: #20023, #20024, #20025, #20026, #20028, #20029, #20030, #20031, #20034, #20036, #20053
-- Files touched: /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/docs/ARGUS_SESSION_20260729_TRACKING.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785401121290` — 7/30/2026, 1:45:46 AM PT — 2 turns
-
-**Original task:**
-
-```
-Hi there. I bet you are working GLM 5.2 local, arent you?
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785368587300` — 7/30/2026, 1:18:38 AM PT — 264 turns
-
-**Original task:**
-
-```
-There are some reddit forums out there that are against EMS University. Can you give me links to them, scan them for violations of TOS and draft a legal request for removal of them?
-```
-
-**Ideas referenced:** #0000, #000000, #00255, #003584, #0045, #0079, #008675, #04090, #050505, #080808, #121213, #131313, #16949, #18360, #1870, #20078 [proposed], #20118 [proposed], #223237, #272729, #303030, #33464, #434343, #504104, #565758, #660099, #665505, #7193, #7785, #818384, #82959, #8700, #962900
-
-**Last PICKUP PROMPT:**
-
-```
-e sending to legal@reddit.com.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Send Reddit defamation takedown for r/UCSD and r/ems threads.
-
-Where we left off (verified 2026-07-30 01:14 PT):
-- False claims identified from browser AI analysis: Thread 1 (online-vs-in-person delivery, over‑enrollment, exam rescheduling, “scam” label) + Thread 3 (instructor leaving early, billing errors blocking exams)
-- DMCA letter rewritten in plain English with no internal jargon — saved to /Users/rubenmajor/Desktop/EMSU_Reddit_DMCA_Takedown_Ready.md
-- Ruben needs to: insert physical address and signer name, attach supporting documentation, send to legal@reddit.com
-
-Open threads to drive next:
-1. #20078 [proposed] — Ruben reviews letter → inserts address + signer → sends to legal@reddit.com
-
-Reference IDs:
-- Ticket: none
-- Ideas filed: #20078, #20118
-- Files touched: /Users/rubenmajor/Desktop/EMSU_Reddit_DMCA_Takedown_Ready.md, /Users/rubenmajor/Desktop/EMSU_Reddit_Claims_FactCheck.md, /Users/rubenmajor/Desktop/EMSU_Reddit_Claims_Analysis.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785379883249` — 7/30/2026, 12:57:14 AM PT — 238 turns
-
-**Original task:**
-
-```
-emsuniversity.com is showing secure, but not emsuniversity.com/ems. Can you resolve that?
-```
-
-**Ideas referenced:** #18868, #1910, #19370, #19887, #19903, #19907, #19910, #19918, #19919, #19925, #19927, #19928, #20044, #20079 [deployed], #20131 [proposed], #20133 [proposed], #20136 [proposed], #20168 [proposed], #2098
-
-**Last PICKUP PROMPT:**
-
-```
-y.com, then `⌘⇧R` hard-reload.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task 1785094283000 — emsuniversity.com cert + mail cert fixes (Jul 29-30).
-
-Where we left off (verified 2026-07-30 00:56 PT):
-- BUG 1 WEB (FIXED): Plesk renewed LE cert 19:48:12 PT Jul 29; nginx master (since Jul 28) never reloaded → served stale cert from memory. Fixed: `nginx -t` + `systemctl reload nginx`. Verified: SAN = emsuniversity.com + www, serial 05ADDDE6C5051CC86DDED51DAF77F3E7AEBC, valid Jul 30 → Oct 28 2026, /ems/ → www/ems/ http=200 ssl_verify=0. Mixed content ruled out (zero insecure subresources). Moodle wwwroot = https://www.emsuniversity.com/ems so non-www→www redirect is intentional and both names on cert.
-- BUG 2 MAIL (FIXED): Root cause was NOT Postmark (outbound API + backup MX prio 10). Primary MX = mx.emsuniversity.com prio 5 → WOPR. Actual cause: Plesk dovecot SNI map + postfix SNI map both pointed mail.emsuniversity.com at the WEB cert (SAN = emsuniversity.com + www) — no 'mail' SAN = CN mismatch on every client connect. Fix: certbot cert reissued with SAN = mail + mx; dovecot SNI repointed; postfix override map /etc/postfix/sni_override/certs prepended to tls_server_sni_maps. Verified 8/8 strict hostname verify (`Verify return code: 0 (ok)`) for mail + mx across 993/465/587/9465. Live users logging in over TLS during the change.
-- DRIFT PROTECTION #1: /usr/local/bin/emsu_mail_cert_guard.sh + /etc/cron.d/emsu-mail-cert-guard (every 15 min). Idempotent, reasserts certbot cert for dovecot + rebuilds postfix override map if Plesk regenerates. Log: /var/log/emsu-mail-cert-guard.log.
-- DRIFT PROTECTION #2: /usr/local/bin/emsu_nginx_cert_watchdog.sh + /etc/cron.d/emsu-nginx-cert-watchdog (every 5 min). Tracks mtimes of every cert.pem under both LE directories. On any mtime change: nginx -t → systemctl reload nginx. State: /var/lib/emsu-nginx-cert-watchdog/state.json. Log: /var/log/emsu-nginx-cert-watchdog.log. Initial state captured 2026-07-30T00:50:05-0700.
-- COSMETIC FIX (#20168): mail.emsuniversity.com:443 was serving webmail cert (SAN = webmail only). Fixed: `certbot certonly --webroot -w /var/www/vhosts/emsuniversity.com/httpdocs --expand -d webmail.emsuniversity.com -d mail.emsuniversity.com`. New SAN: DNS:mail.emsuniversity.com, DNS:webmail.emsuniversity.com. Expires 2026-10-28. Backup: /root/le-webmail-backup-*.
-- CLIENT-SIDE NOTE: Ruben's normal Chrome window still showed "not secure" while private browsing was clean = local Chrome cache, server is correct. Clear site data + hard-reload.
-
-Open threads to drive next:
-1. #20136 [deployed] — APPROVED by Ruben but deployment deferred. Goal: add mail + mx to the Plesk-managed web cert so the override map + guard cron can be retired. BLOCKER: mail.emsuniversity.com is a separate Plesk subscription (not a domain alias of emsuniversity.com). Merging requires Plesk domain-alias config migration that is not safe via CLI ad-hoc. Needs a planned maintenance window and Plesk UI or API workflow.
-2. #20133 [executing] — Post-renewal nginx reload watchdog. Already deployed (works). Orchestrator shows in_progress/drafting — may need a follow-up to verify the cron fires correctly and to add ops-chat alerting on actual reloads.
-3. #20131 [proposed] — Original mail-cert-SAN idea. The immediate CN mismatch is fixed via the override layer. The proper Plesk fix is #20136. Close #20131 as superseded-by-#20136 or repurpose for something else.
-4. #20168 [proposed] — Webmail cert f
 ```

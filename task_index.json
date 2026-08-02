@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-02T07:47:13.802Z",
+ "generated_at": "2026-08-02T11:00:21.534Z",
  "counts": {
-  "parsed": 2,
-  "reused": 385,
+  "parsed": 0,
+  "reused": 387,
   "failed": 0,
   "total": 387
  },
@@ -107668,11 +107668,11 @@
   },
   "1785620212473": {
    "task_id": "1785620212473",
-   "mtime": 1785656694770,
+   "mtime": 1785657572367,
    "created_at": "2026-08-01T21:36:52.473Z",
-   "last_modified": "2026-08-02T07:44:54.770Z",
-   "size_kb": 3664,
-   "turn_count": 1218,
+   "last_modified": "2026-08-02T07:59:32.367Z",
+   "size_kb": 3740,
+   "turn_count": 1240,
    "title": "#GLM\n\n**Yes, run the next window on frankenstein-llm.** It is the correct pick per rule 146 (free-local-first, one router for everything). Two things to know: the GLM 5.2 priority gate I shipped is live, so frankenstein-llm will gen-probe GLM 5.2 first, correctly see it cannot decode, and fall through to the 120B pool / frankenstein-tools adapter. You get free local either way. Do NOT pick an Anthropic model.\n\nWhere things stand: the ring now BOOTS clean (all 6 up, HTTP 200, correct sparse attention backend) after I found and fixed four launcher regressions. The original decode-wedge is still there, generation returns zero tokens. That is the one real remaining problem, and I proved it is in",
    "pickup_prompt": ": http://192.168.1.115:8210/v1\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1785314663557, GLM-5.2 ring. Model: frankenstein-llm.\n\nWhere we left off (verified 2026-08-01 19:05 PT):\n- PP=5 ring LIVE: cato(r0), augustus(r1), pompey(r2), tiberius(r3), cesar(r4)\n- Marcus UP but IDLE (not in PP=5 ring, no container)\n- Durable fix verified: --nnodes ${CFG_NNODES} on all 5 nodes\n- Generation WORKING: ~2.65 tok/s\n- Bug library #2143 [resolved] recorded\n\nOpen threads:\n1. #21004 [proposed] Decode-wedge levers - moot for PP=5\n2. #20536 [awaiting_review] Original decode-wedge idea\n3. #20873 [proposed] Generation forward-progress probe for monitor\n4. #20955 [awaiting_review] GLM 5.2 routing priority gate, shipped live\n5. #20495 [executing] Monitor + cron automation deployed\n\nReference IDs:\n- Bug library: #2143 [resolved] (297 classification), #2142 [resolved] (PP=5 decode-wedge)\n- Files: /Users/rubenmajor/Desktop/glm52_launch_cfg.sh (v6, fixed nnodes)\n- Ring: cato(r0)@115, augustus(r1)@244, pompey(r2)@21, tiberius(r3)@32, cesar(r4)@56\n- Marcus: UP@171, IDLE (no container)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
@@ -107777,6 +107777,7 @@
     "21151": "approved",
     "21158": "proposed",
     "21167": "proposed",
+    "21213": "proposed",
     "21447": null,
     "21824": null,
     "22731": null,

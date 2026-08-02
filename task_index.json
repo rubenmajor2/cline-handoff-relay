@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-02T11:00:21.534Z",
+ "generated_at": "2026-08-02T20:46:08.546Z",
  "counts": {
-  "parsed": 0,
-  "reused": 387,
+  "parsed": 3,
+  "reused": 384,
   "failed": 0,
   "total": 387
  },
@@ -106977,13 +106977,13 @@
   },
   "1785600191339": {
    "task_id": "1785600191339",
-   "mtime": 1785654999995,
+   "mtime": 1785703550390,
    "created_at": "2026-08-01T16:03:11.339Z",
-   "last_modified": "2026-08-02T07:16:39.995Z",
-   "size_kb": 3425,
-   "turn_count": 1604,
+   "last_modified": "2026-08-02T20:45:50.390Z",
+   "size_kb": 3478,
+   "turn_count": 1647,
    "title": "#Kaizon / Bugs\n\nI want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh instead of what's stale? \n\nI need to increase overall operational efficiency and I see that Kaizon, ",
-   "pickup_prompt": "icked up without code changes.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — KAIZEN chassis finalization (bug hunting, deadman retrain, classifier hardening, recipe coverage).\n\nWhere we left off (verified 2026-08-02 00:15 AM PT):\n- All approved ideas built & verified on WOPR\n- 0 recipe gaps confirmed\n- Classifier cron is `/var/www/emtskills/cron_kaizen_classifier.php` (COLLATE-safe, no SP dependency)\n- Retrain executor generalized to `rca_retrain_enabled` flag\n\nOpen threads to drive next (EVERY item has real idea record):\n1. #21167 [impl_failed] — GLM52 ring monitor: leave alone per steering; GLM workstream handled in another window\n2. #21201 [implemented] — ghost recipe coverage completed\n3. #21165 [implemented] — moodle_access deadman retrain complete\n4. #21166 [implemented] — refund_request deadman retrain complete\n5. #20973 [implemented] — enrollment deadman retrain complete\n6. #20974 [implemented] — moodle_access deadman retrain complete\n7. #20975 [implemented] — refund_request deadman retrain complete\n8. #20970 [implemented] — Bug Hunter scanner live\n9. #20971 [implemented] — recipe coverage 0 gaps verified\n10. #21162 [implemented] — classifier COLLATE-safe pattern deployed\n11. #21163 [implemented] — retrain executor generalized with rca_retrain_enabled\n\nReference IDs:\n- Ideas filed: #21201, #21165, #21166, #21167, #21163, #21162, #20970–#20975\n- Files touched: `/var/www/emtskills/cron_kaizen_classifier.php`, `/var/www/emtskills/cron_kaizen_retrain_executor.php`, `/var/www/emtskills/cron_bug_hunter_scan.php`, `admin_portal.system_prompt_history`, `admin_portal.failure_repair_recipes`, `admin_portal.v_kaizen_all_findings`\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "ck → CSAT/NPS scores\n- [ ] Run ingest, verify rows, add crontab\n- [ ] Ship with PICKUP PROMPT\n</task_progress>\n</use_mcp_tool>",
    "ideas": {
     "1468": null,
     "1679": null,
@@ -107668,11 +107668,11 @@
   },
   "1785620212473": {
    "task_id": "1785620212473",
-   "mtime": 1785657572367,
+   "mtime": 1785703372758,
    "created_at": "2026-08-01T21:36:52.473Z",
-   "last_modified": "2026-08-02T07:59:32.367Z",
-   "size_kb": 3740,
-   "turn_count": 1240,
+   "last_modified": "2026-08-02T20:42:52.758Z",
+   "size_kb": 3844,
+   "turn_count": 1314,
    "title": "#GLM\n\n**Yes, run the next window on frankenstein-llm.** It is the correct pick per rule 146 (free-local-first, one router for everything). Two things to know: the GLM 5.2 priority gate I shipped is live, so frankenstein-llm will gen-probe GLM 5.2 first, correctly see it cannot decode, and fall through to the 120B pool / frankenstein-tools adapter. You get free local either way. Do NOT pick an Anthropic model.\n\nWhere things stand: the ring now BOOTS clean (all 6 up, HTTP 200, correct sparse attention backend) after I found and fixed four launcher regressions. The original decode-wedge is still there, generation returns zero tokens. That is the one real remaining problem, and I proved it is in",
    "pickup_prompt": ": http://192.168.1.115:8210/v1\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1785314663557, GLM-5.2 ring. Model: frankenstein-llm.\n\nWhere we left off (verified 2026-08-01 19:05 PT):\n- PP=5 ring LIVE: cato(r0), augustus(r1), pompey(r2), tiberius(r3), cesar(r4)\n- Marcus UP but IDLE (not in PP=5 ring, no container)\n- Durable fix verified: --nnodes ${CFG_NNODES} on all 5 nodes\n- Generation WORKING: ~2.65 tok/s\n- Bug library #2143 [resolved] recorded\n\nOpen threads:\n1. #21004 [proposed] Decode-wedge levers - moot for PP=5\n2. #20536 [awaiting_review] Original decode-wedge idea\n3. #20873 [proposed] Generation forward-progress probe for monitor\n4. #20955 [awaiting_review] GLM 5.2 routing priority gate, shipped live\n5. #20495 [executing] Monitor + cron automation deployed\n\nReference IDs:\n- Bug library: #2143 [resolved] (297 classification), #2142 [resolved] (PP=5 decode-wedge)\n- Files: /Users/rubenmajor/Desktop/glm52_launch_cfg.sh (v6, fixed nnodes)\n- Ring: cato(r0)@115, augustus(r1)@244, pompey(r2)@21, tiberius(r3)@32, cesar(r4)@56\n- Marcus: UP@171, IDLE (no container)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
@@ -107733,6 +107733,7 @@
     "12167": null,
     "12430": null,
     "14093": null,
+    "16170": null,
     "19325": null,
     "19509": null,
     "19519": null,
@@ -107965,11 +107966,11 @@
   },
   "1785649980432": {
    "task_id": "1785649980432",
-   "mtime": 1785654332567,
+   "mtime": 1785703143511,
    "created_at": "2026-08-02T05:53:00.432Z",
-   "last_modified": "2026-08-02T07:05:32.567Z",
-   "size_kb": 224,
-   "turn_count": 84,
+   "last_modified": "2026-08-02T20:39:03.511Z",
+   "size_kb": 266,
+   "turn_count": 102,
    "title": "#Argus\n\nArgus seems incredibly slow and is giviing answers not even close to liek what the answers you will give here in cline, why? I just wonder becasue I'm genuinely confused why. Can you help with this?",
    "pickup_prompt": "decision per your instruction.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Argus post-fix verification wrap-up: GLM ring status + use_subagents recommendation.\n\nWhere we left off (verified 2026-08-02 00:05 PT):\n- 5-prompt sweep on frankenstein-llm with metadata.surface=argus_terminal: **5/5 CLEAN** of Cline XML contamination. Real answers on real questions (balance, roster, policy). Zero `<execute_command>`/`<use_mcp_tool>`/`<attempt_completion>` artifacts.\n- GLM ring :8210 re-checked: NOT dead (Ruben correction accepted). HTTP alive, healthy=true, decode_live=false, 0 tok/s, fail_streak=90 = PP=6 pipeline-bubble starvation, not death. It still sits FIRST in FRANK_TOOLS_UPSTREAMS, adding latency (turn 1 = 31s, turn 2 = 5.7s).\n- Recommendation delivered: DO NOT filter `use_subagents` from the Argus catalog. Harmless on trivial prompts, zero student impact, filtering is whack-a-mole. Called it a human-only decision.\n\nOpen threads to drive next:\n1. #21171 [proposed] — GLM ring first in upstream order + token-starved decode. Recommend: revisit the \"never quarantine GLM\" directive with Ruben using the new token-starvation framing; OR reorder upstreams so the healthy 120Bs (artemis :8000, julia :11513) get dialed first and the ring trails. Every Argus/Cline turn currently pays the front-of-line penalty.\n2. (human-only decision, no idea) — Whether to add a \"no tool_calls for greeting/trivial turns\" gate in the Argus surface handler later, if the cosmetic `{\"use_subagents\": []}` ever bothers anyone. Filed nothing; Ruben's call.\n\nReference IDs:\n- Bug library: #2153 (NameError ejecting upstreams), #2154 (Cline steering contamination)\n- Files patched: /etc/litellm/router_hook.py, /etc/litellm/_router_core.py, /usr/local/bin/frankenstein_tools_adapter.py\n- Sweep output: /tmp/argus_retest_out.txt on WOPR\n- Live canary: adapter_canary_decode 2026-08-02 00:03:42-0700\n- Handoff: 2026-08-01 22:13 PT entry\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════</result>\n<task_progress>\n- [x] Get LiteLLM API key for direct endpoint access\n- [x] Launch + poll 5-prompt sweep — 5/5 CLEAN of XML, 0 Cline steering hallucinations\n- [x] Re-check turn-1 JSON artifact — model knows use_subagents, harmless\n- [x] Explain how Frankenstein-LLm found it but Anthropic didn't\n- [x] Retract \"GLM dead\" per Ruben correction; re-verified live canary\n- [x] Recommendation on use_subagents: accept as harmless, no filter\n</task_progress>\n</attempt_completion>",
    "ideas": {

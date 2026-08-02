@@ -6,14 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/1/2026, 8:47:12 PM PT | window: last 72h | 73 tasks | index total 383 (parsed 2, cached 381)
+Generated: 8/1/2026, 9:47:12 PM PT | window: last 72h | 74 tasks | index total 384 (parsed 4, cached 380)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785620212473` | 8/1/2026, 8:46:30 PM | 939 | 2924KB | #GLM |
-| `1785613730033` | 8/1/2026, 8:18:49 PM | 258 | 1537KB | #Julia/Claudia |
-| `1785608591871` | 8/1/2026, 8:15:49 PM | 890 | 3240KB | #Argus |
-| `1785600191339` | 8/1/2026, 8:08:56 PM | 1400 | 3119KB | #Kaizon / Bugs |
+| `1785646010358` | 8/1/2026, 9:47:11 PM | 5 | 26KB | #Argus |
+| `1785620212473` | 8/1/2026, 9:46:05 PM | 1026 | 3154KB | #GLM |
+| `1785608591871` | 8/1/2026, 9:44:23 PM | 946 | 3347KB | #Argus |
+| `1785600191339` | 8/1/2026, 9:40:52 PM | 1532 | 3308KB | #Kaizon / Bugs |
+| `1785613730033` | 8/1/2026, 8:56:42 PM | 274 | 1567KB | #Julia/Claudia |
 | `1785602138255` | 8/1/2026, 8:06:05 PM | 886 | 2785KB | #Queued Ideas |
 | `1785355259217` | 8/1/2026, 6:18:54 PM | 986 | 2150KB | i ahve been told this form is not populating PDF forms properly downstream. Can you check  |
 | `1785581189111` | 8/1/2026, 5:37:33 PM | 902 | 3501KB | I need to make sure that the orchestra is running and that we don't just have a bunch of i |
@@ -88,7 +89,32 @@ Generated: 8/1/2026, 8:47:12 PM PT | window: last 72h | 73 tasks | index total 3
 
 ## Per-window detail
 
-### `1785620212473` — 8/1/2026, 8:46:30 PM PT — 939 turns
+### `1785646010358` — 8/1/2026, 9:47:11 PM PT — 5 turns
+
+**Original task:**
+
+```
+#Argus
+
+Troubleshoot Argus / leave the actual LLM's alone, take into consideration the Federation, quarantiening, canaries and how that's supposed to work. Do not inject anthropic. Leave GLM and Julia/Claudia LLMs alone, routing configs can be suggested. Other work is fine
+
+Test 30x prompts and make improvements based on intended use and rpceed below
+
+## The student is right, and the code proves it
+
+That message is not a slow model. It is a **false promise, hardcoded**.
+
+`routes/argus_download.php:1132`, after 3 failed retries:
+
+```javascript
+appendMsg('Argus', 'Still working on that one. I qu
+```
+
+**Ideas referenced:** #1864, #19840, #20193, #20328, #20420, #20423, #20662, #20663 [rejected], #20672 [proposed], #20711, #21004, #21034, #21044, #21053 [proposed], #21106 [deployed], #21107 [deployed], #21108 [deployed], #21109 [deployed], #21110 [deployed], #21111 [deployed], #21112 [rejected], #21116 [deployed], #21117 [deployed], #21118 [deployed], #21119 [deployed], #21120 [proposed], #21121 [proposed], #21122 [proposed], #21123 [rejected], #21125 [deployed], #21126 [deployed], #21131 [proposed], #21132 [proposed], #21133 [proposed], #21134 [deployed], #21136 [deployed], #21138 [deployed], #21139 [proposed], #21140 [deployed], #21141 [proposed], #2121, #2126, #2127, #2128, #2138, #2139, #2140, #2144, #2145, #2146, #37972, #45094
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785620212473` — 8/1/2026, 9:46:05 PM PT — 1026 turns
 
 **Original task:**
 
@@ -100,7 +126,7 @@ Generated: 8/1/2026, 8:47:12 PM PT | window: last 72h | 73 tasks | index total 3
 Where things stand: the ring now BOOTS clean (all 6 up, HTTP 200, correct sparse attention backend) after I found and fixed four launcher regressions. The original decode-wedge is still 
 ```
 
-**Ideas referenced:** #11256, #12167, #14093, #1579 [approved], #178531, #1864 [investigating], #19840, #2000 [resolved], #20130, #20193, #20328, #20333, #20410, #20420, #20423, #20495 [executing], #20536 [awaiting_review], #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #20630, #20662, #20663 [rejected], #20665, #20672 [proposed], #20711, #2073, #2081, #20873 [proposed], #2092, #2093, #20955 [awaiting_review], #2096, #2097, #20985 [deployed], #2099, #21004 [proposed], #2101, #2102, #21020 [proposed], #2103, #21034 [proposed], #21038 [queued], #21039 [proposed], #21044 [proposed], #21053 [proposed], #2109, #2111, #21139 [proposed], #21146 [proposed], #21147 [proposed], #2116 [deployed], #2121 [resolved], #2125, #2126, #2127, #2128, #2129, #2131, #2136 [deployed], #2138 [deployed], #2139 [rejected], #2140 [rejected], #2141 [proposed], #2142 [resolved], #2143 [resolved], #2147 [needs_verify], #2148 [deployed], #2149 [deployed], #2167, #21824, #22731, #2439, #26318, #32618, #32701, #36643, #36651, #36872, #37972, #37996, #39863, #42354, #44697, #45094, #6826 [deployed], #9405
+**Ideas referenced:** #11256, #12167, #14093, #1579 [approved], #178531, #1864 [investigating], #19840, #2000 [resolved], #20130, #20193, #20328, #20333, #20410, #20420, #20423, #20495 [executing], #20536 [awaiting_review], #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #20630, #20662, #20663 [rejected], #20665, #20672 [proposed], #20711, #2073, #2081, #20873 [proposed], #2092, #2093, #20955 [awaiting_review], #2096, #2097, #20985 [deployed], #2099, #21004 [proposed], #2101, #2102, #21020 [proposed], #2103, #21034 [proposed], #21038 [queued], #21039 [proposed], #21044 [proposed], #21053 [proposed], #2109, #2111, #21139 [proposed], #21146 [proposed], #21147 [proposed], #21151 [approved], #21158 [proposed], #2116 [deployed], #21167 [proposed], #2121 [resolved], #2125, #2126, #2127, #2128, #2129, #2131, #2136 [deployed], #2138 [deployed], #2139 [rejected], #2140 [rejected], #2141 [proposed], #2142 [resolved], #2143 [resolved], #2147 [needs_verify], #2148 [deployed], #2149 [deployed], #2150, #2151 [deployed], #2152, #2167, #21824, #22731, #2439, #26318, #32618, #32701, #36643, #36651, #36872, #37972, #37996, #39863, #42354, #44697, #45094, #6826 [deployed], #9405
 
 **Last PICKUP PROMPT:**
 
@@ -138,7 +164,99 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </attempt_completion>
 ```
 
-### `1785613730033` — 8/1/2026, 8:18:49 PM PT — 258 turns
+### `1785608591871` — 8/1/2026, 9:44:23 PM PT — 946 turns
+
+**Original task:**
+
+```
+#Argus
+
+Argus is slow AF for some reason  Per Jon. Why?
+```
+
+**Ideas referenced:** #10740, #1130, #1131, #11397, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #1241, #12425, #1248, #1249, #1252, #1258, #12584, #12657, #12672, #12673, #12689, #12716, #13108, #13121, #1378, #13831, #13832, #13874, #13964, #13977, #14000, #14848, #15144, #15979, #16032, #16033, #16036, #16120, #16122, #16163, #16338, #16448, #16452, #16613, #16718, #16778, #16802, #16803, #16839, #16844, #16851, #17130 [superseded], #17202, #17246, #1744, #17537 [rejected], #1779, #1798, #18132 [deployed], #1828, #18693, #18720, #18781, #18786, #18868, #18944, #18951, #19125, #19173, #19338, #19370, #19567, #19653, #19686, #19786, #19903, #1998, #20042, #2014, #20272, #20300, #20495, #2050, #20536 [queued], #2063, #2065, #20662, #20722 [deployed], #2073, #20944 [queued], #20945 [queued], #20956 [queued], #20957 [queued], #20958 [queued], #20976 [deployed], #20980 [proposed], #20981 [proposed], #21027 [queued], #21032 [executing], #21033 [executing], #21035, #21044 [queued], #21045 [executing], #21046 [proposed], #21047 [proposed], #21050, #21070, #21071, #21072, #21073, #21074, #21106 [deployed], #21107 [deployed], #21108 [deployed], #21109 [deployed], #21110 [deployed], #21111 [proposed], #21112 [proposed], #21114, #21115, #21116 [deployed], #21117 [deployed], #21118 [deployed], #21119 [proposed], #21120 [proposed], #21121 [proposed], #21122 [proposed], #21123 [proposed], #21124, #21125 [deployed], #21126 [deployed], #21131 [proposed], #21132 [proposed], #21133 [proposed], #21134 [deployed], #21135 [proposed], #21136 [deployed], #21137 [proposed], #21138 [deployed], #21139 [proposed], #21140 [deployed], #21141 [proposed], #2127, #2144, #2145, #2146 [recorded], #7142, #7149, #9086, #9168, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+ship is Federation's decision.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #21140 — Argus false-promise fixed; Federation still dialing a maintenance box.
+
+Where we left off (verified 2026-08-01 21:43 PT):
+- #21140 [deployed] — argus_download.php:1132 promised "I queued it to keep retrying in the background and I will post the answer here when it lands. You do not need to resend." NO queue, NO timer, NO delivery existed; the next lines just clear queryBusy and return. This is the user's "message #47 ... empty promise recycled like a broken vending machine." Replaced with honest text + a real next action. php -l clean, old string verified gone. Backup .bak-21140-20260801-214324.
+- FEDERATION STATE: Artemis :8000 healthy 32.74 tok/s decode=true. Julia :11513 healthy 14.78 tok/s decode=true. GLM ring :8210 healthy tok_s=0.00 (UNDER MAINTENANCE per Ruben).
+- PROBLEM: :8210 is still FIRST in both FRANK_TOOLS_UPSTREAMS and FRANK_CHAT_UPSTREAMS. 50 of the last 200 adapter log lines are dead-ring attempts. Every turn dials the maintenance box first, which is the added latency pushing turns into the 3-retry wall.
+- NOT DONE (Federation's call, per Ruben): reordering/removing :8210, and repointing the tunnel. NOTE: the only answering ring node (spark-6ae6 / .190:8000) serves gpt-oss-120b, NOT glm-5.2-15pct. Cato (.115) holds the GLM weights and is down. Repointing :8210 to .190 would silently swap the model behind the GLM lane.
+- Also deployed today: #21138 (Argus NULL-email TypeError crash, 6 call sites), #21136 (canary liveness-rescue no longer zeroes fail_streak), #21134 (Argus interactive lane), #21125/#21126 (Argus acts, no tool names, routes around blockers).
+
+Open threads to drive next:
+1. #21141 [proposed] — while GLM is under maintenance, have the Federation skip :8210 instead of dialing it every turn. A FRANK_GLM_MAINTENANCE flag already exists in the adapter but is unwired. Federation owns whether to use it, reorder the list, or leave as-is.
+2. #21140 [deployed] — confirm with a real Argus chat that a failing turn now shows the honest message and that "escalate this" reaches a human.
+3. #21131 [proposed] — SLS payment gate crash (getMatchStatus undefined) makes payment read NA. BLOCKS #21133.
+4. #21133 [proposed] — Vignan 26220FT-13: verify payment (rule 33) before any section swap; active suspension stands.
+5. #21139 [proposed] — the 149 NULL-email rows are junk test data (136 blank names, 136 created 2026-04-01 in one batch), not students. Archive, do not backfill; a human should confirm the 11 with active enrollments are demo rows.
+6. #21132 [proposed] — SectionCorrectionHandler swallows Moodle group migration failures as non-fatal.
+
+Reference IDs:
+- Ideas: #21106 [deployed], #21107 [deployed], #21108 [deployed], #21109 [deployed], #21110 [deployed], #21111 [deployed], #21112 [rejected], #21116 [deployed], #21117 [deployed], #21118 [deployed], #21119 [deployed], #21120 [proposed], #21121 [proposed], #21122 [proposed], #21123 [rejected], #21125 [deployed], #21126 [deployed], #21131 [proposed], #21132 [proposed], #21133 [proposed], #21134 [deployed], #21136 [deployed], #21138 [deployed], #21139 [proposed], #21140 [deployed], #21141 [proposed]
+- Bug library: #2144, #2145, #2146
+- Files: routes/argus_download.php (.bak-21140-*), routes/alltastic_api.php (.bak-21138-*, .bak-21134-*), /usr/local/bin/frankenstein_tools_adapter.py (.bak-21136-*)
+
+When done, append to cline_task_ledger.md (rule 07), run ord
+```
+
+### `1785600191339` — 8/1/2026, 9:40:52 PM PT — 1532 turns
+
+**Original task:**
+
+```
+#Kaizon / Bugs
+
+I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
+```
+
+**Ideas referenced:** #12724, #1468, #14937, #1679, #1685, #1686, #1687, #1754, #1755, #178501, #1833, #18694, #18696, #18841, #1909, #19188, #19190, #19193, #19198, #19227, #19234, #19435, #19490, #19492, #19495, #19504, #19511, #19576, #19776, #1980, #19803, #1985, #1986, #1990, #1993, #20079, #20142, #20149, #20297 [queued], #2036, #2044, #20495 [queued], #20506 [executing], #20633, #20882, #20883, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #20969 [proposed], #20970 [proposed], #20971 [proposed], #20972 [proposed], #20973 [proposed], #20974 [proposed], #20975 [approved], #21000 [deployed], #21001, #21002, #21004 [proposed], #2103, #21033, #2109, #21096 [ready_for_review], #21097 [deployed], #2116, #21162 [proposed], #21163 [proposed], #2118, #21529, #21558, #3076, #3077, #3081, #4421, #45094, #7358, #8869, #9269
+
+**Last PICKUP PROMPT:**
+
+```
+e fix (left alone, fleet side)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — KAIZEN deadman retrain pipeline complete: enrollment + moodle_access + refund_request all live.
+
+Where we left off (verified 9:40 PM PT):
+- #20973 enrollment DEADMAN: seeds → classified → fired → prompts deployed
+- #20974 moodle_access DEADMAN: same pipeline live
+- #20975 refund_request DEADMAN: same pipeline live
+- #21163 [deployed] retrain executor generalized (EXISTS subquery, no hardcoded list)
+- #20970 Bug Hunter scanner crontabbed, 45 bugs in log
+- #20971 Recipe coverage 100% (264 active recipes)
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #21162 [proposed] — KAIZEN classifier SP: apply the COLLATE-safe pattern to the PHP cron file permanently so future additions don't break on collation mismatches
+2. #21163 [proposed] — Confirm generalized executor picks up next new deadman category automatically; consider adding `rca_retrain_enabled` bit to failure_repair_recipes as the single gating flag
+3. #21004 [proposed] — GLM-5.2 TP=1 PP=6 decode-wedge: NCCL_DEBUG=TRACE capture + ray backend + SGLang PP fallback (fleet side, do not touch without Ruben's explicit instruction)
+
+Reference IDs:
+- Ideas filed: 20970, 20971, 20973, 20974, 20975, 21162, 21163, 21004, 21096, 21097
+- Tickets: none open for these items
+- Files touched: /var/www/emtskills/cron_bug_hunter_scan.php, /var/www/emtskills/cron_kaizen_classifier.php, /var/www/emtskills/cron_kaizen_pipeline.php, /var/www/emtskills/cron_kaizen_retrain_executor.php, /var/www/emtskills/api/bug_hunter_api.php, /var/www/emtskills/sql/bug_hunter_idea_agent_freshness.sql, admin_portal.sp_kaizen_surface_classify, admin_portal.v_kaizen_all_findings
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785613730033` — 8/1/2026, 8:56:42 PM PT — 274 turns
 
 **Original task:**
 
@@ -161,131 +279,32 @@ Where we left off (verified 2026-08-01 10:10 PT):
 **Last PICKUP PROMPT:**
 
 ```
-ched without live ps preflight
+riggers STOP, never a mutation
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up Julia/Claudia TP=2 — 48h stability watch is active
+Pick up Julia/Claudia TP=2 — 48h stability watch after durable fix
 
-Where we left off (verified 2026-08-01 20:16 PT):
-- Julia/Claudia TP=2 SERVING, WOPR:11513 HTTP=200, gpt-oss-120b, 60ms, auto-healed
-- Build document at /var/www/emtskills/docs/specs/julia_claudia_tp2_build_20260801.md (95 lines, 15 sections)
-- Rule 263a approved (#21043) — fleet mutation preflight is live hardfloor rule
+Where we left off (verified 2026-08-01 20:56 PT):
+- Julia/Claudia TP=2 SERVING, WOPR:11513 HTTP=200, verified twice (20:16 + 20:55 PT), auto-healed
+- Build doc: /var/www/emtskills/docs/specs/julia_claudia_tp2_build_20260801.md
+- Guard: /usr/local/bin/julia_tp2_check.sh — run before ANY mutation on julia/claudia
+- Registry: julia=healthy with do-not-touch annotation; 263a preflight is hardfloor
 
 Open threads to drive next:
-1. #20985 [deployed] — Julia/Claudia 48h stability watch (check ~24-36h from now for any crash/restart cycle)
-2. #21038 [queued] — Correct fleet_inventory for cesar+cato (GLM 5.2 ring, NOT 120B); retire WOPR:11506; verify all 6 ring nodes (SEPARATE WINDOW only — Ruben's explicit instruction)
-3. #21043 [approved] — Rule 263a enforcement (now live — verify next window loads CLINERULE 263a-fleet-mutation-preflight.md from EMSU corpus)
+1. #20985 [deployed] — Julia/Claudia 48h stability watch; check crash/restart cycles ~24-36h out; run julia_tp2_check.sh
+2. #21038 [queued] — Fleet registry correction (cesar/cato = GLM ring, retire WOPR:11506) — SEPARATE window only, Ruben explicitly said leave GLM alone in this window
+3. #21043 [approved] — Verify Rule 263a loads in next window from EMSU corpus (docs/CLINERULE 263a-fleet-mutation-preflight.md)
 
 Reference IDs:
-- Ideas: #20985 [deployed], #21038 [queued], #21043 [approved]
+- Ideas: #20985, #21038, #21043
 - Build doc: /var/www/emtskills/docs/specs/julia_claudia_tp2_build_20260801.md
 - Bug library: /var/www/emtskills/docs/specs/bug_library_julia_claudia_ninja_path_watchdog_loop.md
-- Rule: /var/www/emtskills/docs/CLINERULE 263a-fleet-mutation-preflight.md
-- SSH: rubenmajor / qefru3-cocnyf-xuxnoP, Julia=WOPR:2205, Claudia=WOPR:2206
+- SSH: rubenmajor@127.0.0.1 -p 2205 (julia), -p 2206 (claudia)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785608591871` — 8/1/2026, 8:15:49 PM PT — 890 turns
-
-**Original task:**
-
-```
-#Argus
-
-Argus is slow AF for some reason  Per Jon. Why?
-```
-
-**Ideas referenced:** #10740, #1130, #1131, #11397, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #1241, #12425, #1248, #1249, #1252, #1258, #12584, #12657, #12672, #12673, #12689, #12716, #13108, #13121, #1378, #13831, #13832, #13874, #13964, #13977, #14000, #14848, #15144, #15979, #16032, #16033, #16036, #16120, #16122, #16163, #16338, #16448, #16452, #16613, #16718, #16778, #16802, #16803, #16839, #16844, #16851, #17130 [superseded], #17202, #17246, #1744, #17537 [rejected], #1779, #1798, #18132 [deployed], #1828, #18693, #18720, #18781, #18786, #18868, #18944, #18951, #19125, #19173, #19338, #19567, #19653, #19686, #19786, #19903, #1998, #20042, #2014, #20272, #20300, #20495, #2050, #20536 [queued], #2063, #2065, #20662, #20722 [deployed], #2073, #20944 [queued], #20945 [queued], #20956 [queued], #20957 [queued], #20958 [queued], #20976 [deployed], #20980 [proposed], #20981 [proposed], #21027 [queued], #21032 [executing], #21033 [executing], #21035, #21044 [queued], #21045 [executing], #21046 [proposed], #21047 [proposed], #21050, #21070, #21071, #21072, #21073, #21074, #21106 [deployed], #21107 [deployed], #21108 [deployed], #21109 [deployed], #21110 [deployed], #21111 [proposed], #21112 [proposed], #21114, #21115, #21116 [deployed], #21117 [deployed], #21118 [deployed], #21119 [proposed], #21120 [proposed], #21121 [proposed], #21122 [proposed], #21123 [proposed], #21124, #21125 [deployed], #21126 [deployed], #21131 [proposed], #21132 [proposed], #21133 [proposed], #21134 [deployed], #21135 [proposed], #21136 [deployed], #21137 [proposed], #2127, #2144, #2145, #2146 [recorded], #7142, #7149, #9086, #9168, #9339
-
-**Last PICKUP PROMPT:**
-
-```
- reached the interactive lane.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #21137 — repoint the Hexarchy ring tunnel.
-
-Where we left off (verified 2026-08-01 20:15 PT):
-- RING IS HEALTHY. spark-6ae6:8000 answers /v1/models with HTTP 200 in 1.8ms. vLLM + Ray running on spark-3b41, spark-2aa8, spark-6ae6, spark-6d51 (ssh ports 2203-2206; 2207/2208 refuse).
-- ROOT CAUSE: WOPR tunnel glm52-tunnel-8210.service forwards 8210 -> 192.168.1.115:8210 (Cato), but NOTHING listens on Cato:8210. The serving API is on spark-6ae6 port 8000. Ray session restarted 20:10:14, so the ring moved and the tunnel was never repointed. Tunnel unit NRestarts=58.
-- NOT DONE deliberately: repointing the tunnel is a live fleet mutation on ring hosts (rule 263a) and the ring was relaunched minutes ago in another window. Needs Ruben's call + coordination so it does not fight glm52-ring-watchdog.
-- #21136 [deployed] — canary liveness-rescue no longer zeroes fail_streak (adapter line 1386). /v1/models is cache-served, so the old code made quarantine unreachable and left refusing endpoints marked healthy forever. VERIFIED: ring streak now climbs 8->19->29 instead of resetting. Generic fix, no host-specific config touched.
-- #21134 [deployed] — Argus sends metadata.surface=argus_terminal so it reaches the interactive lane instead of lane=batch. Baseline before fix: 69.7s tunnel / 34.4s local for a 20-token prompt.
-- Julia :11513 LEFT ALONE per Ruben and is healthy on its own (tok_s=21.96, decode_live=true, fail=0).
-
-Open threads to drive next:
-1. #21137 [proposed] — repoint glm52-tunnel-8210 to the node actually serving the ring API (spark-6ae6:8000, ssh port 2205), or confirm with the ring-relaunch window which node should own :8210. Verify with: curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8210/v1/models on WOPR. Expect 200.
-2. #21134 [deployed] — re-run /tmp/bench.sh and confirm Argus logs ADMIT lane=cline and TTFB falls vs the 69.7s/34.4s baseline.
-3. #21132 [proposed] — SectionCorrectionHandler swallows Moodle group migration failures as non-fatal.
-4. #21131 [proposed] — SLS payment gate crash (getMatchStatus undefined) makes payment read NA.
-5. #21133 [proposed] — Vignan 26220FT-13: verify payment first (rule 33); active suspension means no section swap yet.
-6. #21121 [proposed] / #21122 [proposed] — close the EMAIL_SILENCE_GUARD loop; dedupe orchestrator_event_log (383,262 unprocessed, 4,357 critical).
-
-Reference IDs:
-- Ideas: #21106 [deployed], #21107 [deployed], #21108 [deployed], #21109 [deployed], #21110 [deployed], #21111 [deployed], #21112 [rejected], #21116 [deployed], #21117 [deployed], #21118 [deployed], #21119 [deployed], #21120 [proposed], #21121 [proposed], #21122 [proposed], #21123 [rejected], #21125 [deployed], #21126 [deployed], #21131 [proposed], #21132 [proposed], #21133 [proposed], #21134 [deployed], #21136 [deployed]
-- Bug library: #2144, #2145, #2146
-- Files: /usr/local/bin/frankenstein_tools_adapter.py (.bak-21136-20260801-201203), routes/alltastic_api.php (.bak-21134-20260801-200239)
-- Bench: /tmp/bench.sh, results /tmp/argus_bench.txt
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785600191339` — 8/1/2026, 8:08:56 PM PT — 1400 turns
-
-**Original task:**
-
-```
-#Kaizon / Bugs
-
-I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
-```
-
-**Ideas referenced:** #12724, #1468, #14937, #1679, #1685, #1686, #1687, #1754, #1755, #178501, #1833, #18694, #18696, #18841, #1909, #19188, #19190, #19193, #19198, #19227, #19234, #19435, #19490, #19492, #19495, #19504, #19511, #19576, #19776, #1980, #19803, #1985, #1986, #1990, #1993, #20079, #20142, #20149, #20297 [queued], #2036, #2044, #20495 [queued], #20506 [executing], #20633, #20882, #20883, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #20969 [proposed], #20970 [proposed], #20971 [proposed], #20972 [proposed], #20973 [proposed], #20974 [proposed], #20975 [approved], #21000 [deployed], #21001, #21002, #21004 [proposed], #2103, #21033, #2109, #21097 [deployed], #2116, #2118, #21529, #21558, #3076, #3077, #3081, #4421, #45094, #7358, #8869, #9269
-
-**Last PICKUP PROMPT:**
-
-```
-e coverage | 274 all matched |
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #current — KAIZEN pipeline with deadman retrain executor deployed.
-
-Where we left off (verified 2026-08-01 20:07 PT):
-- #20973 [deployed] enrollment deadman retrain live (3 seeds, 3 classified, 3 fired, 3 retrain prompts)
-- #20974 [deployed] moodle_access deadman retrain live (3 seeds, 3 classified, 3 fired, 3 retrain prompts)
-- #20970 [deployed] Bug Hunter scanner crontab'd (40 BL rows, 2 runs, 45 classified)
-- #20971 [deployed] Recipe coverage: 274 active, 0 gaps
-- #21000 [deployed] Verifier dispatch bridge: 101 verified-resolved, 17 replay-consumed
-- consumer crontab (*/10) + retrain crontab (*/30) active
-
-Open threads to drive next:
-1. #21004 [proposed] — GLM-5.2 TP=1 PP=6 decode-wedge: LEFT ALONE per Ruben, fleet-owned, no Cline action
-2. #21097 [deployed] — RCA retrain enrollment DEADMAN system prompt: seeds, classification, recipes, retrain executor all live. Next: monitor whether voice_ai actually reads new system_prompt_history rows on next call cycle
-3. #20975 [approved] — RCA retrain refund_request DEADMAN promises: same pattern, needs seed + recipe + executor. File new idea for it
-
-Reference IDs:
-- Ideas deployed: #20884-#20891, #20910, #20911, #20962, #20963, #20968, #20969, #20970, #20971, #20973, #20974, #21000, #21097
-- Ideas left alone: #21004
-- Ideas pending: #20975 (refund_request deadman, approved, not yet deployed)
-- Files created: cron_kaizen_verify.php, cron_kaizen_repair_dispatch.php, cron_kaizen_consumer.php, cron_bug_hunter_scan.php, cron_kaizen_retrain_executor.php
-- Files touched: cron_kaizen_classifier.php, cron_kaizen_pipeline.php, v_kaizen_all_findings, sp_kaizen_surface_classify
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 

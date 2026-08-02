@@ -6,15 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/1/2026, 11:47:13 PM PT | window: last 72h | 76 tasks | index total 386 (parsed 5, cached 381)
+Generated: 8/2/2026, 12:47:13 AM PT | window: last 72h | 77 tasks | index total 387 (parsed 2, cached 385)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785600191339` | 8/1/2026, 11:39:53 PM | 1570 | 3373KB | #Kaizon / Bugs |
-| `1785649980432` | 8/1/2026, 11:38:37 PM | 78 | 205KB | #Argus |
+| `1785620212473` | 8/2/2026, 12:44:54 AM | 1218 | 3664KB | #GLM |
+| `1785653497679` | 8/2/2026, 12:30:52 AM | 96 | 719KB | The Fix AVP app is not working anymore, and seems to be stuck on my desktop / quick launch |
+| `1785600191339` | 8/2/2026, 12:16:39 AM | 1604 | 3425KB | #Kaizon / Bugs |
+| `1785649980432` | 8/2/2026, 12:05:32 AM | 84 | 224KB | #Argus |
 | `1785602138255` | 8/1/2026, 11:36:20 PM | 890 | 2797KB | #Queued Ideas |
 | `1785613730033` | 8/1/2026, 11:30:44 PM | 288 | 1601KB | #Julia/Claudia |
-| `1785620212473` | 8/1/2026, 11:27:50 PM | 1064 | 3281KB | #GLM |
 | `1785649916867` | 8/1/2026, 10:51:57 PM | 1 | 2KB | #Argus |
 | `1785646010358` | 8/1/2026, 10:16:27 PM | 217 | 1115KB | #Argus |
 | `1785608591871` | 8/1/2026, 9:44:23 PM | 946 | 3347KB | #Argus |
@@ -91,7 +92,105 @@ Generated: 8/1/2026, 11:47:13 PM PT | window: last 72h | 76 tasks | index total 
 
 ## Per-window detail
 
-### `1785600191339` — 8/1/2026, 11:39:53 PM PT — 1570 turns
+### `1785620212473` — 8/2/2026, 12:44:54 AM PT — 1218 turns
+
+**Original task:**
+
+```
+#GLM
+
+**Yes, run the next window on frankenstein-llm.** It is the correct pick per rule 146 (free-local-first, one router for everything). Two things to know: the GLM 5.2 priority gate I shipped is live, so frankenstein-llm will gen-probe GLM 5.2 first, correctly see it cannot decode, and fall through to the 120B pool / frankenstein-tools adapter. You get free local either way. Do NOT pick an Anthropic model.
+
+Where things stand: the ring now BOOTS clean (all 6 up, HTTP 200, correct sparse attention backend) after I found and fixed four launcher regressions. The original decode-wedge is still 
+```
+
+**Ideas referenced:** #11256, #12167, #12430, #1281, #1309, #14093, #1579 [approved], #178531, #1864 [investigating], #19325, #19509, #19519, #19629, #19670, #19840, #1996, #2000 [resolved], #20130, #20193, #20328, #20333, #20410, #20420, #20423, #20495 [executing], #20536 [awaiting_review], #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #20630, #20662, #20663 [rejected], #20665, #20672 [proposed], #20711, #2073, #2076, #2081, #20873 [proposed], #2092, #2093, #20955 [awaiting_review], #2096, #2097, #20985 [deployed], #2099, #21004 [proposed], #2101, #2102, #21020 [proposed], #2103, #21034 [proposed], #21038 [queued], #21039 [proposed], #21044 [proposed], #21053 [proposed], #2109, #2111, #2113, #21139 [proposed], #21146 [proposed], #21147 [proposed], #21151 [approved], #21158 [proposed], #2116 [deployed], #21167 [proposed], #2121 [resolved], #2125, #2126, #2127, #2128, #2129, #2131, #2136 [deployed], #2138 [deployed], #2139 [rejected], #2140 [rejected], #2141 [proposed], #2142 [resolved], #2143 [resolved], #21447, #2147 [needs_verify], #2148 [deployed], #2149 [deployed], #2150, #2151 [deployed], #2152, #2156, #2167, #21824, #22731, #2439, #26318, #32618, #32701, #36643, #36651, #36872, #37972, #37996, #39863, #42354, #44697, #45094, #4536, #4747, #6826 [deployed], #7925, #8281, #8321, #8563, #8598, #9405
+
+**Last PICKUP PROMPT:**
+
+```
+: http://192.168.1.115:8210/v1
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785314663557, GLM-5.2 ring. Model: frankenstein-llm.
+
+Where we left off (verified 2026-08-01 19:05 PT):
+- PP=5 ring LIVE: cato(r0), augustus(r1), pompey(r2), tiberius(r3), cesar(r4)
+- Marcus UP but IDLE (not in PP=5 ring, no container)
+- Durable fix verified: --nnodes ${CFG_NNODES} on all 5 nodes
+- Generation WORKING: ~2.65 tok/s
+- Bug library #2143 [resolved] recorded
+
+Open threads:
+1. #21004 [proposed] Decode-wedge levers - moot for PP=5
+2. #20536 [awaiting_review] Original decode-wedge idea
+3. #20873 [proposed] Generation forward-progress probe for monitor
+4. #20955 [awaiting_review] GLM 5.2 routing priority gate, shipped live
+5. #20495 [executing] Monitor + cron automation deployed
+
+Reference IDs:
+- Bug library: #2143 [resolved] (297 classification), #2142 [resolved] (PP=5 decode-wedge)
+- Files: /Users/rubenmajor/Desktop/glm52_launch_cfg.sh (v6, fixed nnodes)
+- Ring: cato(r0)@115, augustus(r1)@244, pompey(r2)@21, tiberius(r3)@32, cesar(r4)@56
+- Marcus: UP@171, IDLE (no container)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785653497679` — 8/2/2026, 12:30:52 AM PT — 96 turns
+
+**Original task:**
+
+```
+The Fix AVP app is not working anymore, and seems to be stuck on my desktop / quick launch app. Can you fix it? I can't access my AVP again.
+```
+
+**Last PICKUP PROMPT:**
+
+```
+ will not try to run anything.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Fix macOS AVP connectivity + stuck window cleanup.
+
+Where we left off (verified 2026-08-01 23:50 PT):
+- AVP connectivity restored (user confirmed working)
+- 3 stuck 'fix-avp.command' Terminal windows force-closed via AppleScript
+- All zombie applet/osascript processes killed
+- Chrome (PID 892) killed, mDNS port 5353 freed
+- Tailscale stopped, Wi-Fi bounced, CoreServicesUIAgent + UserNotificationCenter restarted
+
+Open threads to drive next:
+1. (human-only decision, no idea) — Drag 'Fix AVP.app' off the Dock or right-click > Remove from Dock to clear the stale icon
+
+Reference IDs:
+- Files touched: /Users/rubenmajor/Desktop/fix-avp.sh, /Users/rubenmajor/Desktop/fix-avp.command, /tmp/cg_list.swift
+- Processes killed: 93938 (applet), 82415 (applet), 97277 (Reach Cicero applet), 33982 (osascript), 55652 (wedged sudo), 892 (Chrome/5353)
+- Services restarted: Dock, Finder, CoreServicesUIAgent, UserNotificationCenter
+
+Ideas filed: none (local macOS task, no orchestrator DB needed)
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+
+WINDOW DISPOSITION: CLOSE — AVP fixed, zombie windows cleared, one manual Dock cleanup remaining.</result>
+<task_progress>
+- [x] Fixed AVP connectivity (user confirmed works)
+- [x] Killed all stuck applet processes
+- [x] Closed 3 stuck fix-avp Terminal windows
+- [x] Found and cleared root causes (Chrome/5353, Tailscale, wedged sudo, Bluetooth off)
+- [x] Final verification + completion
+</task_progress>
+</attempt_completion>
+```
+
+### `1785600191339` — 8/2/2026, 12:16:39 AM PT — 1604 turns
 
 **Original task:**
 
@@ -101,37 +200,40 @@ Generated: 8/1/2026, 11:47:13 PM PT | window: last 72h | 76 tasks | index total 
 I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
 ```
 
-**Ideas referenced:** #12724, #1468, #14937, #1679, #1685, #1686, #1687, #1754, #1755, #178501, #1833, #18694, #18696, #18841, #1909, #19188, #19190, #19193, #19198, #19227, #19234, #19435, #19490, #19492, #19495, #19504, #19511, #19576, #19776, #1980, #19803, #1985, #1986, #1990, #1993, #20079, #20142, #20149, #20297 [queued], #2036, #2044, #20495 [queued], #20506 [executing], #20633, #20882, #20883, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #20969 [proposed], #20970 [proposed], #20971 [proposed], #20972 [proposed], #20973 [proposed], #20974 [proposed], #20975 [approved], #21000 [deployed], #21001, #21002, #21004 [proposed], #2103, #21033, #2109, #21096 [ready_for_review], #21097 [deployed], #2116, #21162 [proposed], #21163 [proposed], #21168, #21169, #2118, #21529, #21558, #3076, #3077, #3081, #4421, #45094, #7358, #8869, #9269
+**Ideas referenced:** #12724, #1468, #14937, #1679, #1685, #1686, #1687, #1754, #1755, #178501, #1833, #18694, #18696, #18841, #1909, #19188, #19190, #19193, #19198, #19227, #19234, #19435, #19490, #19492, #19495, #19504, #19511, #19576, #19776, #1980, #19803, #1985, #1986, #1990, #1993, #20079, #20142, #20149, #20297 [queued], #2036, #2044, #20495 [queued], #20506 [executing], #20633, #20882, #20883, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #20969 [proposed], #20970 [proposed], #20971 [proposed], #20972 [proposed], #20973 [proposed], #20974 [proposed], #20975 [approved], #21000 [deployed], #21001, #21002, #21004 [proposed], #2103, #21033, #2109, #21096 [ready_for_review], #21097 [deployed], #2116, #21162 [proposed], #21163 [proposed], #21165 [implemented], #21166 [implemented], #21167 [impl_failed], #21168, #21169, #2118, #21201 [implemented], #21529, #21558, #3076, #3077, #3081, #4421, #45094, #7358, #8869, #9269
 
 **Last PICKUP PROMPT:**
 
 ```
-on, and the work here is done.
+icked up without code changes.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task KAIZEN/Deadman Retrain — KAIZEN pipeline + Bug Hunter + deadman retrain shipped and verified.
+Pick up task — KAIZEN chassis finalization (bug hunting, deadman retrain, classifier hardening, recipe coverage).
 
-Where we left off (verified 2026-08-01 11:38 PM PT):
-- #20970 [deployed] Bug Hunter scanner: cron every 15 min, 40 findings/run, 45 bugs in log, 45 classified
-- #20971 [deployed] Recipe coverage: 269 active, 6 gaps closed, bug_hunter_critical has recipe
-- #20973 [deployed] enrollment deadman retrain: 3 seed incidents, recipe, prompts deployed
-- #20974 [deployed] moodle_access deadman retrain: 3 seed incidents, recipe, prompts deployed
-- #20975 [deployed] refund_request deadman retrain: 6 seed incidents, recipe, 6 prompts deployed
-- #21162 [deployed] Classifier COLLATE-safe — no more collation crashes, 9 rows classified clean
-- #21163 [deployed] Executor generalized + rca_retrain_enabled flag added (ALTER TABLE), 3 recipes flagged
-- #21004 [untouched] GLM-5.2 wedge fix — left alone per instruction, no fleet/LMM changes from this window
-- 12 DEADMAN_RETRAIN prompts live in system_prompt_history (voice_ai channel)
+Where we left off (verified 2026-08-02 00:15 AM PT):
+- All approved ideas built & verified on WOPR
+- 0 recipe gaps confirmed
+- Classifier cron is `/var/www/emtskills/cron_kaizen_classifier.php` (COLLATE-safe, no SP dependency)
+- Retrain executor generalized to `rca_retrain_enabled` flag
 
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #21168 — 3 uncovered classification categories (predispatch_ghost_detected, silent_ghost_no_files, ''): 920 rows this week have no enabled recipe. Add recipes or drop the categories. (Filed as new idea for the next window.)
-2. #21169 — CSAT/NPS instrument: no customer-satisfaction table exists; add one so "customers happier" is measurable, not inferred. (Filed as new idea.)
+Open threads to drive next (EVERY item has real idea record):
+1. #21167 [impl_failed] — GLM52 ring monitor: leave alone per steering; GLM workstream handled in another window
+2. #21201 [implemented] — ghost recipe coverage completed
+3. #21165 [implemented] — moodle_access deadman retrain complete
+4. #21166 [implemented] — refund_request deadman retrain complete
+5. #20973 [implemented] — enrollment deadman retrain complete
+6. #20974 [implemented] — moodle_access deadman retrain complete
+7. #20975 [implemented] — refund_request deadman retrain complete
+8. #20970 [implemented] — Bug Hunter scanner live
+9. #20971 [implemented] — recipe coverage 0 gaps verified
+10. #21162 [implemented] — classifier COLLATE-safe pattern deployed
+11. #21163 [implemented] — retrain executor generalized with rca_retrain_enabled
 
 Reference IDs:
-- Ideas filed this session: #21097, #21162, #21163, plus #21168/#21169 for closeout
-- Files touched: /var/www/emtskills/cron_bug_hunter_scan.php, cron_kaizen_classifier.php, cron_kaizen_retrain_executor.php, cron_kaizen_pipeline.php, config/bug_hunter/ (WOPR)
-- Tables changed: failure_repair_recipes (+rca_retrain_enabled, +6 recipes), kaizen_targets (+3), agent_deadman_incidents (+12), system_prompt_history (+12), v_kaizen_all_findings (rebuilt, COLLATE-safe), bug_hunter_runs/log, kaizen_classification_log
+- Ideas filed: #21201, #21165, #21166, #21167, #21163, #21162, #20970–#20975
+- Files touched: `/var/www/emtskills/cron_kaizen_classifier.php`, `/var/www/emtskills/cron_kaizen_retrain_executor.php`, `/var/www/emtskills/cron_bug_hunter_scan.php`, `admin_portal.system_prompt_history`, `admin_portal.failure_repair_recipes`, `admin_portal.v_kaizen_all_findings`
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -139,7 +241,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785649980432` — 8/1/2026, 11:38:37 PM PT — 78 turns
+### `1785649980432` — 8/2/2026, 12:05:32 AM PT — 84 turns
 
 **Original task:**
 
@@ -154,36 +256,38 @@ Argus seems incredibly slow and is giviing answers not even close to liek what t
 **Last PICKUP PROMPT:**
 
 ```
-l sites, not any model change.
+decision per your instruction.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Argus answer-quality re-test confirmed + explain how Frankenstein-LLm found it but Anthropic didn't.
+Pick up task — Argus post-fix verification wrap-up: GLM ring status + use_subagents recommendation.
 
-Where we left off (verified 2026-08-01 23:37 PT):
-- 5-prompt sweep against frankenstein-llm with metadata.surface=argus_terminal: **5/5 CLEAN** of Cline XML envelope contamination. Zero `<execute_command>`, zero `<use_mcp_tool>`, zero `<attempt_completion>`, zero hallucinated SQL in tool tags. All 5 turns produced valid content (real student lookup, real roster table, real policy summary, or appropriate "need more info" response).
-- Turn 1 emitted `{"use_subagents": []}` — a plain JSON hallucination (model knows the tool name from the adapter catalog), NOT the old Cline XML contamination. This is normal model behavior on trivial prompts with tools present, not the systematic steering bug.
-- Surgical explanation: the Cline steering injection in `router_hook.py` and `_router_core.py` was condition-gated on `_has_tools=true` only, with zero check of which surface was calling. Argus always sends tools, so every Argus turn got Cline steering injected. The models were just following instructions. Fix was purely local — add `metadata.surface` gate — no model behavior changed.
-- Quick follow-up for the use_subagents noise on turn 1: could add "use_subagents" to the tool catalog exclusion list for chat-surface turns in the adapter, but this is cosmetic — it's not the Cline XML steering bug and doesn't produce garbage student-facing answers.
+Where we left off (verified 2026-08-02 00:05 PT):
+- 5-prompt sweep on frankenstein-llm with metadata.surface=argus_terminal: **5/5 CLEAN** of Cline XML contamination. Real answers on real questions (balance, roster, policy). Zero `<execute_command>`/`<use_mcp_tool>`/`<attempt_completion>` artifacts.
+- GLM ring :8210 re-checked: NOT dead (Ruben correction accepted). HTTP alive, healthy=true, decode_live=false, 0 tok/s, fail_streak=90 = PP=6 pipeline-bubble starvation, not death. It still sits FIRST in FRANK_TOOLS_UPSTREAMS, adding latency (turn 1 = 31s, turn 2 = 5.7s).
+- Recommendation delivered: DO NOT filter `use_subagents` from the Argus catalog. Harmless on trivial prompts, zero student impact, filtering is whack-a-mole. Called it a human-only decision.
 
 Open threads to drive next:
-1. #21171 [proposed] — GLM ring :8210 dead but still first in FRANK_TOOLS_UPSTREAMS, adds ~10s delay to every Argus/Cline request before falling through to healthy 120Bs. The 31s on turn 1 vs 5.7s on turn 2 is exactly this pattern (first request hits cold ring, second hits healthy 120B cache-warm). Ruben decision needed on upstream ordering.
-2. (human-only decision, no idea) — The `{"use_subagents": []}` JSON on trivial prompts with tools present: filter from chat-surface tool catalog or accept as harmless? Doesn't produce garbage student answers — was not part of the Cline XML bug.
+1. #21171 [proposed] — GLM ring first in upstream order + token-starved decode. Recommend: revisit the "never quarantine GLM" directive with Ruben using the new token-starvation framing; OR reorder upstreams so the healthy 120Bs (artemis :8000, julia :11513) get dialed first and the ring trails. Every Argus/Cline turn currently pays the front-of-line penalty.
+2. (human-only decision, no idea) — Whether to add a "no tool_calls for greeting/trivial turns" gate in the Argus surface handler later, if the cosmetic `{"use_subagents": []}` ever bothers anyone. Filed nothing; Ruben's call.
 
 Reference IDs:
-- Bug library: #2153 (CORRECTIVE_RETRY_ENABLED NameError), #2154 (Cline steering contamination of Argus)
-- Sweep results: /tmp/argus_retest_out.txt on WOPR
-- Handoff entry: 2026-08-01 22:13 PT
+- Bug library: #2153 (NameError ejecting upstreams), #2154 (Cline steering contamination)
 - Files patched: /etc/litellm/router_hook.py, /etc/litellm/_router_core.py, /usr/local/bin/frankenstein_tools_adapter.py
+- Sweep output: /tmp/argus_retest_out.txt on WOPR
+- Live canary: adapter_canary_decode 2026-08-02 00:03:42-0700
+- Handoff: 2026-08-01 22:13 PT entry
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
 <task_progress>
 - [x] Get LiteLLM API key for direct endpoint access
 - [x] Launch + poll 5-prompt sweep — 5/5 CLEAN of XML, 0 Cline steering hallucinations
-- [x] Re-check turn-1 JSON artifact — model knows use_subagents, not systematic contamination
+- [x] Re-check turn-1 JSON artifact — model knows use_subagents, harmless
 - [x] Explain how Frankenstein-LLm found it but Anthropic didn't
+- [x] Retract "GLM dead" per Ruben correction; re-verified live canary
+- [x] Recommendation on use_subagents: accept as harmless, no filter
 </task_progress>
 </attempt_completion>
 ```
@@ -289,56 +393,6 @@ Reference IDs:
 - SSH: Julia=WOPR:2205, Claudia=WOPR:2206, user rubenmajor
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785620212473` — 8/1/2026, 11:27:50 PM PT — 1064 turns
-
-**Original task:**
-
-```
-#GLM
-
-**Yes, run the next window on frankenstein-llm.** It is the correct pick per rule 146 (free-local-first, one router for everything). Two things to know: the GLM 5.2 priority gate I shipped is live, so frankenstein-llm will gen-probe GLM 5.2 first, correctly see it cannot decode, and fall through to the 120B pool / frankenstein-tools adapter. You get free local either way. Do NOT pick an Anthropic model.
-
-Where things stand: the ring now BOOTS clean (all 6 up, HTTP 200, correct sparse attention backend) after I found and fixed four launcher regressions. The original decode-wedge is still 
-```
-
-**Ideas referenced:** #11256, #12167, #14093, #1579 [approved], #178531, #1864 [investigating], #19840, #2000 [resolved], #20130, #20193, #20328, #20333, #20410, #20420, #20423, #20495 [executing], #20536 [awaiting_review], #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #20630, #20662, #20663 [rejected], #20665, #20672 [proposed], #20711, #2073, #2081, #20873 [proposed], #2092, #2093, #20955 [awaiting_review], #2096, #2097, #20985 [deployed], #2099, #21004 [proposed], #2101, #2102, #21020 [proposed], #2103, #21034 [proposed], #21038 [queued], #21039 [proposed], #21044 [proposed], #21053 [proposed], #2109, #2111, #21139 [proposed], #21146 [proposed], #21147 [proposed], #21151 [approved], #21158 [proposed], #2116 [deployed], #21167 [proposed], #2121 [resolved], #2125, #2126, #2127, #2128, #2129, #2131, #2136 [deployed], #2138 [deployed], #2139 [rejected], #2140 [rejected], #2141 [proposed], #2142 [resolved], #2143 [resolved], #21447, #2147 [needs_verify], #2148 [deployed], #2149 [deployed], #2150, #2151 [deployed], #2152, #2167, #21824, #22731, #2439, #26318, #32618, #32701, #36643, #36651, #36872, #37972, #37996, #39863, #42354, #44697, #45094, #6826 [deployed], #9405
-
-**Last PICKUP PROMPT:**
-
-```
-: http://192.168.1.115:8210/v1
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785314663557, GLM-5.2 ring. Model: frankenstein-llm.
-
-Where we left off (verified 2026-08-01 19:05 PT):
-- PP=5 ring LIVE: cato(r0), augustus(r1), pompey(r2), tiberius(r3), cesar(r4)
-- Marcus UP but IDLE (not in PP=5 ring, no container)
-- Durable fix verified: --nnodes ${CFG_NNODES} on all 5 nodes
-- Generation WORKING: ~2.65 tok/s
-- Bug library #2143 [resolved] recorded
-
-Open threads:
-1. #21004 [proposed] Decode-wedge levers - moot for PP=5
-2. #20536 [awaiting_review] Original decode-wedge idea
-3. #20873 [proposed] Generation forward-progress probe for monitor
-4. #20955 [awaiting_review] GLM 5.2 routing priority gate, shipped live
-5. #20495 [executing] Monitor + cron automation deployed
-
-Reference IDs:
-- Bug library: #2143 [resolved] (297 classification), #2142 [resolved] (PP=5 decode-wedge)
-- Files: /Users/rubenmajor/Desktop/glm52_launch_cfg.sh (v6, fixed nnodes)
-- Ring: cato(r0)@115, augustus(r1)@244, pompey(r2)@21, tiberius(r3)@32, cesar(r4)@56
-- Marcus: UP@171, IDLE (no container)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```

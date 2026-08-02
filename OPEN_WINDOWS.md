@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/1/2026, 9:47:12 PM PT | window: last 72h | 74 tasks | index total 384 (parsed 4, cached 380)
+Generated: 8/1/2026, 10:47:13 PM PT | window: last 72h | 74 tasks | index total 384 (parsed 0, cached 384)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785646010358` | 8/1/2026, 9:47:11 PM | 5 | 26KB | #Argus |
+| `1785646010358` | 8/1/2026, 10:16:27 PM | 217 | 1115KB | #Argus |
 | `1785620212473` | 8/1/2026, 9:46:05 PM | 1026 | 3154KB | #GLM |
 | `1785608591871` | 8/1/2026, 9:44:23 PM | 946 | 3347KB | #Argus |
 | `1785600191339` | 8/1/2026, 9:40:52 PM | 1532 | 3308KB | #Kaizon / Bugs |
@@ -89,7 +89,7 @@ Generated: 8/1/2026, 9:47:12 PM PT | window: last 72h | 74 tasks | index total 3
 
 ## Per-window detail
 
-### `1785646010358` — 8/1/2026, 9:47:11 PM PT — 5 turns
+### `1785646010358` — 8/1/2026, 10:16:27 PM PT — 217 turns
 
 **Original task:**
 
@@ -110,7 +110,7 @@ That message is not a slow model. It is a **false promise, hardcoded**.
 appendMsg('Argus', 'Still working on that one. I qu
 ```
 
-**Ideas referenced:** #1864, #19840, #20193, #20328, #20420, #20423, #20662, #20663 [rejected], #20672 [proposed], #20711, #21004, #21034, #21044, #21053 [proposed], #21106 [deployed], #21107 [deployed], #21108 [deployed], #21109 [deployed], #21110 [deployed], #21111 [deployed], #21112 [rejected], #21116 [deployed], #21117 [deployed], #21118 [deployed], #21119 [deployed], #21120 [proposed], #21121 [proposed], #21122 [proposed], #21123 [rejected], #21125 [deployed], #21126 [deployed], #21131 [proposed], #21132 [proposed], #21133 [proposed], #21134 [deployed], #21136 [deployed], #21138 [deployed], #21139 [proposed], #21140 [deployed], #21141 [proposed], #2121, #2126, #2127, #2128, #2138, #2139, #2140, #2144, #2145, #2146, #37972, #45094
+**Ideas referenced:** #10182, #10740, #11397, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12269, #12285, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12459, #12589, #12590, #12618, #12657, #12672, #12673, #12689, #12716, #13108, #13121, #13453, #13459, #13470, #13831, #13832, #13874, #13964, #14000, #14848, #15776, #16120, #16213, #16263, #1646 [investigating], #16718, #17078, #17203, #17205, #17300, #17430, #178564, #18329, #18378, #1864, #18745, #1876, #18781, #18786, #18820, #18868, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19338, #19348, #19653, #19840, #19903, #1999 [resolved], #2006, #2014, #20193, #20272, #20300, #20328, #20420, #20423, #2050, #20536, #20547, #20549, #20662, #20663 [rejected], #20672 [proposed], #20711, #20722, #21004, #21034, #21044, #21045, #21053 [proposed], #21106 [deployed], #21107 [deployed], #21108 [deployed], #21109 [deployed], #21110 [deployed], #21111 [deployed], #21112 [rejected], #21116 [deployed], #21117 [deployed], #21118 [deployed], #21119 [deployed], #21120 [proposed], #21121 [proposed], #21122 [proposed], #21123 [rejected], #21125 [deployed], #21126 [deployed], #21131 [proposed], #21132 [proposed], #21133 [proposed], #21134 [deployed], #21136 [deployed], #21138 [deployed], #21139 [proposed], #21140 [deployed], #21141 [proposed], #21171 [proposed], #2121, #2126, #2127, #2128, #2138, #2139, #2140, #2144, #2145, #2146, #2153 [deployed], #2154 [deployed], #274160, #30363, #334155, #37972, #4338, #45094, #64748
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 

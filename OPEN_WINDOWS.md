@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/1/2026, 5:47:11 PM PT | window: last 72h | 76 tasks | index total 383 (parsed 7, cached 376)
+Generated: 8/1/2026, 6:47:11 PM PT | window: last 72h | 75 tasks | index total 383 (parsed 2, cached 381)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785355259217` | 8/1/2026, 5:46:42 PM | 859 | 1869KB | i ahve been told this form is not populating PDF forms properly downstream. Can you check  |
-| `1785620212473` | 8/1/2026, 5:42:38 PM | 420 | 1630KB | #GLM |
+| `1785620212473` | 8/1/2026, 6:47:06 PM | 544 | 2119KB | #GLM |
+| `1785355259217` | 8/1/2026, 6:18:54 PM | 986 | 2150KB | i ahve been told this form is not populating PDF forms properly downstream. Can you check  |
 | `1785602138255` | 8/1/2026, 5:42:28 PM | 718 | 2097KB | #Queued Ideas |
 | `1785608591871` | 8/1/2026, 5:40:39 PM | 434 | 2253KB | #Argus |
 | `1785581189111` | 8/1/2026, 5:37:33 PM | 902 | 3501KB | I need to make sure that the orchestra is running and that we don't just have a bunch of i |
@@ -85,60 +85,12 @@ Generated: 8/1/2026, 5:47:11 PM PT | window: last 72h | 76 tasks | index total 3
 | `1785379883249` | 7/30/2026, 12:57:14 AM | 238 | 1480KB | emsuniversity.com is showing secure, but not emsuniversity.com/ems. Can you resolve that? |
 | `1785379499916` | 7/29/2026, 8:04:29 PM | 134 | 613KB | #EA/PDF |
 | `1785301927173` | 7/29/2026, 7:15:51 PM | 140 | 1520KB | See this email I got. Scope with deep research whether this is accurate or not:  |
-| `1785364900935` | 7/29/2026, 6:43:10 PM | 338 | 919KB | #GLM |
 
 ---
 
 ## Per-window detail
 
-### `1785355259217` — 8/1/2026, 5:46:42 PM PT — 859 turns
-
-**Original task:**
-
-```
-i ahve been told this form is not populating PDF forms properly downstream. Can you check on this? -> https://emsuniversity.com/emtskills/skillstastic/
-```
-
-**Ideas referenced:** #000000, #15007 [proposed], #15009 [proposed], #18868, #18944, #18951, #1910, #19615, #19887, #19903, #19907, #19910, #19918, #19925, #19927, #19928, #20015 [in_progress], #20021 [blocked], #20037 [open], #20038 [proposed], #20039 [in_progress], #20040 [proposed], #200475, #2098, #2213, #2835, #2857
-
-**Last PICKUP PROMPT:**
-
-```
-
-<attempt_completion>
-<result>
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Form 2835/2857 Skills Verification pipeline deploy (re-base complete, tunnel DOWN)
-
-Where we left off (verified 2026-07-31 09:26 PT):
-
-- **Jerome Fermin [DONE]**: PDF on Drive (1nW7AUqK9J9OG4OpnEwT-Ohbg8hDao2NW), ce_students record #2213 (source=form_2835_manual_fix), email sent (Wf7bZdr)
-- **Backfill script**: at `/Users/rubenmajor/Desktop/backfill2835.php` (6033 bytes), NOT on server
-- **Pipeline handler**: at `/Users/rubenmajor/Desktop/form2835_handler.php` (~4KB), NOT on server
-- **Registry entry**: NOT in `emsu-skill-pdf-automation` SKILL_FORMS or hooks
-- **3 items confirmed EXISTING [verified]**: 138 form 2835 entries (Jerome done, ~30 unprocessed), skillstastic_pdf_queue has 161 failed, Jerome's ce_students record IS in place
-- **MCP bridge**: SSH on port 2222 DOWN ("Connection refused") — clean scp in prior window worked
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #20038 [proposed] — Deploy backfill2835.php → WOPR `/var/www/emtskills/` via scp/sftp, run with `sudo -u www-data php backfill2835.php`
-2. #20039 [proposed] — Deploy form2835_handler.php → WP plugins handler dir, register in SKILL_FORMS for 2835/2857
-3. #20040 [proposed] — Run backfill, verify ~30 CE students have ce_students records + PDFs, spot-check 3
-4. #20037 [proposed] — RCA: Why did I claim 7 issues existed when only 3 are real? (intermittent tunnel + hallucinated findings)
-
-Reference IDs:
-- Ticket: [original user message](https://emsuniversity.com/emtskills/skillstastic/)
-- Ideas filed: #20038, #20039, #20040, #20037, #20015 [deployed], #20021 [deployed], #15009 [approved], #15007 [approved]
--Files touched: `/Users/rubenmajor/Desktop/backfill2835.php`, `/Users/rubenmajor/Desktop/form2835_handler.php`, `/tmp/backfill2835.php`, `/tmp/backfill_form2835_all.sh`
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785620212473` — 8/1/2026, 5:42:38 PM PT — 420 turns
+### `1785620212473` — 8/1/2026, 6:47:06 PM PT — 544 turns
 
 **Original task:**
 
@@ -150,56 +102,86 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 Where things stand: the ring now BOOTS clean (all 6 up, HTTP 200, correct sparse attention backend) after I found and fixed four launcher regressions. The original decode-wedge is still 
 ```
 
-**Ideas referenced:** #178531, #1864 [investigating], #19840, #2000 [resolved], #20130, #20193, #20328, #20333, #20410, #20420, #20423, #20495 [executing], #20536 [awaiting_review], #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #20630, #20662, #20663 [rejected], #20665, #20672 [proposed], #20711, #20873 [proposed], #20955 [awaiting_review], #20985 [deployed], #21004 [proposed], #21020 [proposed], #21034 [proposed], #21038 [queued], #21039 [proposed], #21044 [proposed], #21053 [proposed], #2121 [resolved], #2125, #2126, #2127, #2128, #2138 [deployed], #2139 [rejected], #2140 [rejected], #32618, #36651, #37972, #37996, #39863, #45094
+**Ideas referenced:** #1579 [approved], #178531, #1864 [investigating], #19840, #2000 [resolved], #20130, #20193, #20328, #20333, #20410, #20420, #20423, #20495 [executing], #20536 [awaiting_review], #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #20630, #20662, #20663 [rejected], #20665, #20672 [proposed], #20711, #20873 [proposed], #20955 [awaiting_review], #20985 [deployed], #21004 [proposed], #21020 [proposed], #21034 [proposed], #21038 [queued], #21039 [proposed], #21044 [proposed], #21053 [proposed], #2116 [deployed], #2121 [resolved], #2125, #2126, #2127, #2128, #2136 [deployed], #2138 [deployed], #2139 [rejected], #2140 [rejected], #2141 [proposed], #32618, #32701, #36651, #37972, #37996, #39863, #45094
 
 **Last PICKUP PROMPT:**
 
 ```
-Augustus(e3b2) back to Pompey.
+h NCCL_DEBUG=TRACE/ray/SGLang.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1785314663557 - GLM-5.2 Hex ring: PP=3 after physical power-cycle (OOM cascade recovery)
+Pick up task #1785314663557, GLM-5.2 hex ring decode-wedge. Model: frankenstein-llm.
 
-Where we left off (verified 2026-08-01 16:34 PT):
-- 5 of 6 GB10 boxes OOM-locked from failed PP=2 and single-node attempts. Augustus is only SSH-reachable box.
-- Root cause CONFIRMED via vLLM issue 45094: stale NCCL state from prior OOM crashes. Only full host reboot clears it.
-- Memory math: PP=3 (101GB/rank) is the ONLY config that fits 128GB boxes AND avoids PP>=4 bug.
-- PP=2 OOMs (152GB > 128GB). Single-node OOMs (305GB > 128GB). PP=6 fits but has PP>=4 lazy-communicator bug.
-- Bug library incident 2139 (lazy-communicator), incident 2140 (OOM cascade). Ideas #21044 [proposed] (vLLM patch), #21053 [proposed] (PP=3 plan).
+Where we left off (verified 2026-08-01 18:20 PT):
+- Marcus (192.168.1.171) is DOWN at network level: ping fails, ssh "No route to host". Hardware intervention required.
+- Augustus (192.168.1.244) responds to ping/SSH (hostname spark-e3b2) but docker container exits immediately.
+- Monitor on Cato cycling tp1pp6/tp1pp6-fabric configs, cannot complete 6-node ring without Marcus.
+- Decode-wedge (zero tokens on generation) remains the primary unfixed bug — was present even when all 6 nodes were up.
+- Bug library incident #2141 [proposed] recorded: glm52_marcus_down_20260801.
 
-Open threads to drive next:
-1. #21053 [proposed] - Physical power-cycle all 6 boxes, then launch PP=3 on 3 boxes. This is the ONLY untried config that can work without code changes.
-2. #21044 [proposed] - Patch vLLM parallel_state.py to pre-initialize PP NCCL communicators. Needed if PP=3 also wedges.
-3. #21034 [proposed] - Ship ring-wide mutual-exclusion lock so only one agent can launch/modify the Hex ring at a time.
-4. (human-only decision, no idea) Ruben needs to physically power-cycle the 5 OOM-locked boxes (Cato, Pompey, Marcus, Tiberius, Cesar). SSH reboots failed.
+IMMEDIATE NEXT ACTION (choose one):
+A. Launch PP=3 on 3 healthy nodes (Augustus rank 0 @ 192.168.1.244, Pompey rank 1, Tiberius rank 2) to test decode-wedge fixes while Marcus down. Risk: PP=3 OOMed at 101GB/rank previously.
+B. Wait for Marcus physical reboot, then full PP=6, then attack decode-wedge with 3 untried levers.
+
+Open threads:
+1. #21004 [proposed] Three untried decode-wedge levers: NCCL_DEBUG=TRACE, ray executor, SGLang PP-only.
+2. #20536 [awaiting_review] Original decode-wedge idea, superseded by bug library 2138.
+3. #20873 [proposed] Generation forward-progress probe for monitor.
+4. #20955 [awaiting_review] GLM 5.2 routing priority gate, shipped live.
+5. #20495 [executing] Monitor + cron automation deployed.
 
 Reference IDs:
-- Ideas filed: #21020 [proposed], #21034 [proposed], #21039 [proposed], #21044 [proposed], #21053 [proposed]
-- Ideas reconciled: #21004 [proposed], #20536 [awaiting_review], #20873 [proposed], #20955 [awaiting_review], #20495 [executing]
-- Bug library: incident 2139 (lazy-communicator desync, investigating), incident 2140 (OOM cascade, investigating), incident 1864 (prior PP=6 wedge July 19), incident 2121 (adapter sentinel, resolved)
-- Community: vLLM issue 45094 (EXACT match, stale NCCL state), issue 37972 (PP>=4 fails), issue 37996 (lazy-communicator warning is normal)
-- Files touched: /Users/rubenmajor/Desktop/glm52_launch_cfg_v7a.sh, /Users/rubenmajor/Desktop/glm52_launch_cfg_v7.sh, /Users/rubenmajor/Desktop/glm52_launch_pp2.sh, /tmp/glm52_probe.sh
-- Ring: Pompey(50c0) to Marcus(63ce) to Tiberius(e9e0) to Cesar(3b41) to Cato(2aa8) to Augustus(e3b2) back to Pompey
-- Access: ssh cato/augustus/pompey/marcus/tiberius/cesar (5 of 6 currently OOM-locked, only augustus reachable)
+- Bug library: #2141 [proposed] (Marcus down)
+- Files: /Users/rubenmajor/Desktop/glm52_launch_cfg.sh (v6), /home/rubenmajor/bin/glm52_ring_monitor.sh (Cato), /tmp/launch_tp1pp6.sh, /tmp/fabric32.sh
+- Ring: Pompey(50c0)→Marcus(63ce)→Tiberius(e9e0)→Cesar(3b41)→Cato(2aa8)→Augustus(e3b2)→Pompey
+- Access: ssh cato/augustus/pompey/tiberius/cesar (Marcus DOWN)
 
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Root cause: stale NCCL state from prior OOM crashes (vLLM #45094 confirms)
-- [x] PP>=4 also has a separate lazy-communicator issue (#37972)
-- [x] Single-node OOM (model 305GB > 128GB per box)
-- [x] PP=2 OOM (152GB per rank > 128GB per box)
-- [x] Bug library: #1864 confirms PP=6 wedge since July 19, #2121 adapter sentinel
-- [x] Community: vLLM #45094 EXACT match, only host reboot fixes stale NCCL state
-- [x] Memory math: PP=3 (101GB/rank) is ONLY config that fits 128GB AND avoids PP>=4 bug
-- [x] Filed #21053 [proposed] for PP=3 after power-cycle plan
-- [x] Recorded bug library #2140 (OOM cascade)
-- [x] Updated HANDOFF_NOTES with full diagnosis + PP=3 plan
-- [x] Rule 91 completion (validated, gate clear)
-</task_progress>
+When done, append to cline_task_ledger.md (rule 07), run
+
+[Response interrupted by user]
+```
+
+### `1785355259217` — 8/1/2026, 6:18:54 PM PT — 986 turns
+
+**Original task:**
+
+```
+i ahve been told this form is not populating PDF forms properly downstream. Can you check on this? -> https://emsuniversity.com/emtskills/skillstastic/
+```
+
+**Ideas referenced:** #000000, #15007 [proposed], #15009 [proposed], #18868, #18944, #18951, #1910, #19163, #19615, #19887, #19903, #19907, #19910, #19918, #19925, #19927, #19928, #20015 [in_progress], #20021 [blocked], #20037 [open], #20038 [proposed], #20039 [in_progress], #20040 [proposed], #200475, #2098, #2213, #2835, #2857, #6785, #6842, #9019
+
+**Last PICKUP PROMPT:**
+
+```
+ure submissions auto-generate.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Form 2835/2857 Skills Verification: finish backfill + wire pipeline (re-based Aug 1)
+
+Where we left off (verified 2026-08-01 18:16 PT):
+- `backfill2835.php` deployed at /var/www/emtskills/ but PDF step fails for all 142 entries (shortcode href not followed; HTML fed to base64_decode).
+- `handler_skills_verification.php` staged at /var/www/emtskills/ but NOT in plugin `handlers/` dir; `emsu-skill-pdf-automation.php` still registers 0 forms 2835/2857.
+- Only Jerome Fermin (E175037) has a ce_students record; 142 form-2835 students still lack Drive PDF + ce_students rows.
+- Proven working PDF method (Jul 29): `wp eval` shortcode → extract `href` → `wp_remote_get` → base64 encode → 153KB PDF bytes.
+
+Open threads to drive next (real idea IDs):
+1. #20021 [executing] — Fix backfill2835.php generatePdf(): regex the shortcode href, wp_remote_get it, then base64. Re-run `sudo php /var/www/emtskills/backfill2835.php`.
+2. #20038 [executing] — mkdir plugin handlers/, move handler_skills_verification.php, add 2835/2857 to SKILL_FORMS with template 18/19, verify wp plugin loads without fatal.
+3. #20037 [open] — RCA: double attempt_completion violation; add gate note to .clinerules (only ONE attempt_completion per task, verify pickup block before emit).
+
+Reference IDs:
+- Ideas filed: #20015 [deployed], #20021 [executing], #20038 [executing], #20037 [open]
+- Files touched: /var/www/emtskills/backfill2835.php, /var/www/emtskills/handler_skills_verification.php, /var/www/vhosts/emsuniversity.com/httpdocs/wp-content/plugins/emsu-skill-pdf-automation/emsu-skill-pdf-automation.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
 </attempt_completion>
 ```
 
@@ -3434,22 +3416,3 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1785364900935` — 7/29/2026, 6:43:10 PM PT — 338 turns
-
-**Original task:**
-
-```
-#GLM
-
-Get it serving properly. I think you might have zombies, extra old stuff or files that are causing wedging and for it to not work. You need to be looking at that stuff too before you dramatically try to rebuild what was sserving stabily last night at 10PM.
-
-GLM-5.2 ring status: root causes fixed and verified serving, then a THIRD freeze instance was caught live, diagnosed to the same kernel, restarted as a stopgap, and the durable fix is filed with a complete repair recipe.
-
-WHAT HAPPENED THIS WINDOW (all verified live):
-1. Ring restarted 15:08 PT (docker restart vllm_slot x6). Full boot
-```
-
-**Ideas referenced:** #10108, #11397, #11936, #11942, #11944, #11953, #12314, #12335, #12365, #12366, #12368, #12657, #12673, #12689, #13108, #1378, #13831, #13874, #13964, #14000, #16120, #16265, #16648, #17202, #17203, #17205, #17300, #1754, #1755, #178531, #18720, #18781, #1880 [deployed], #18820, #18868, #1894, #1899, #19338, #1967 [superseded], #19903, #19907, #19925, #1993, #19957 [executing], #19958 [deployed], #19962 [proposed], #20004 [deployed], #20005 [proposed], #20008 [deployed], #20014 [deployed], #20022 [rejected], #20040 [proposed], #20041 [proposed], #20042 [proposed], #20054 [proposed], #20068 [proposed], #20069 [proposed], #20082 [proposed], #20088 [proposed], #2050, #2082, #2092, #2096, #2101, #2102, #2103, #48031, #48140
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

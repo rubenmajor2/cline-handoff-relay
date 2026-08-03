@@ -6,17 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/2/2026, 10:22:42 PM PT | window: last 72h | 63 tasks | index total 389 (parsed 7, cached 382)
+Generated: 8/2/2026, 11:22:42 PM PT | window: last 72h | 63 tasks | index total 389 (parsed 6, cached 383)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785599739497` | 8/2/2026, 10:22:41 PM | 585 | 2789KB | I want to get back to work on clustering, parallelism and tarpipe, particularly with the e |
-| `1785649980432` | 8/2/2026, 10:22:34 PM | 719 | 2159KB | #Argus |
-| `1785483774534` | 8/2/2026, 10:22:33 PM | 307 | 611KB | Play frankenstein doctor of executor for the next 60 minutes (use timestamps) and make sur |
-| `1785722877297` | 8/2/2026, 10:19:27 PM | 246 | 954KB | #GLM |
-| `1785600191339` | 8/2/2026, 10:15:23 PM | 2160 | 4606KB | #Kaizon / Bugs |
+| `1785649980432` | 8/2/2026, 11:22:42 PM | 829 | 2465KB | #Argus |
+| `1785599739497` | 8/2/2026, 11:22:42 PM | 682 | 3237KB | I want to get back to work on clustering, parallelism and tarpipe, particularly with the e |
+| `1785604764278` | 8/2/2026, 11:22:31 PM | 227 | 1118KB | based on the complaints received and current status, what kind of actions can we put into  |
+| `1785600191339` | 8/2/2026, 11:22:19 PM | 2305 | 4886KB | #Kaizon / Bugs |
+| `1785722877297` | 8/2/2026, 11:21:36 PM | 322 | 1161KB | #GLM |
+| `1785483774534` | 8/2/2026, 11:14:28 PM | 428 | 1226KB | Play frankenstein doctor of executor for the next 60 minutes (use timestamps) and make sur |
 | `1785581189111` | 8/2/2026, 10:14:58 PM | 1078 | 3808KB | I need to make sure that the orchestra is running and that we don't just have a bunch of i |
-| `1785604764278` | 8/2/2026, 10:14:18 PM | 180 | 859KB | based on the complaints received and current status, what kind of actions can we put into  |
 | `1785456423435` | 8/2/2026, 8:40:36 PM | 582 | 2345KB | See Vicky's chats regarding EMT and Refresher schedules in Chat 55 and repair |
 | `1785566802438` | 8/2/2026, 8:30:58 PM | 222 | 1232KB | We are planning a trip to Texas between August 9-12. Which cities do I need to pop into in |
 | `1785452265627` | 8/2/2026, 8:21:16 PM | 544 | 1271KB | explain how this student has a Moodle Completion Date but does not have a printed certiica |
@@ -78,49 +78,7 @@ Generated: 8/2/2026, 10:22:42 PM PT | window: last 72h | 63 tasks | index total 
 
 ## Per-window detail
 
-### `1785599739497` — 8/2/2026, 10:22:41 PM PT — 585 turns
-
-**Original task:**
-
-```
-I want to get back to work on clustering, parallelism and tarpipe, particularly with the executor, orchestrator, CFAs and autonomous tasks. Tell me where we are at with this and how we can increase capacity even more
-```
-
-**Ideas referenced:** #10004, #10008, #1130, #1131, #12059, #12184, #12231, #12246, #12247, #12363, #1241, #12425, #12430, #1248, #1249, #1252, #1258, #1281, #1309, #1314, #15144, #15333, #15367, #15652, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16610, #16778, #16802, #16803, #16839, #16851, #16881, #17246, #17320, #17357, #1744, #17458, #17717, #17736, #17781, #1779, #17913, #1798, #18135, #1828, #18350, #18353, #18355, #18357, #18395, #18442, #1850, #19079, #19325, #19338, #19404, #19417, #19435, #19458, #19490, #19491, #19494, #19503, #19504, #19509, #19567, #19629, #19643, #19661, #19670, #19684, #19840, #19921, #20042, #20071, #20128, #20130, #2015, #20193, #20328, #20333, #20350, #20408, #20410, #20420, #20423, #2043, #20517, #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #2063, #20630, #2065, #20662, #20663 [rejected], #20665, #20672 [proposed], #20711, #2073, #2076, #20869, #20874, #20875, #20877 [queued], #20878 [queued], #20879 [queued], #20900 [proposed], #20901 [proposed], #20902 [proposed], #20903, #20934 [approved], #20985, #21038, #2113, #2114, #2125, #2126, #2127, #2128, #2782, #3541, #3917, #3953, #3957, #4536, #5029, #5034, #6039, #7142, #7149, #7925, #8281, #8321, #8563, #8598, #9222, #9235
-
-**Last PICKUP PROMPT:**
-
-```
-t it is unimplemented.
-
-═══════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════
-Pick up task — Turn executor capacity into real throughput (parallelism, CFA, tarpipe).
-
-Where we left off (verified 2026-08-02 22:17 PT):
-- Caps are all raised but throughput flat: max_concurrent_workers=24 [deployed], parallel_chains=64 [deployed], executor code default 8 [deployed], exec still ~4/hr.
-- Real bottleneck: cron_orchestrator_executor.php is a serial tick (2-min, one idea per tick). Caps gate a serial pipeline.
-- #20902 tarpipe_streamer.php on disk but BROKEN (queries wrong table) — needs real fleet source (fleet-state MCP backend / fleet_agent dir).
-- #20901 parallelism_registry.php written locally, never deployed.
-- rule297 fleet preflight gate + clinerules stanza shipped and verified.
-
-Open threads to drive (EVERY item has real filed idea #):
-1. #20901 [executing] — Deploy parallelism_registry.php to lib, then modify cron_orchestrator_executor.php to dispatch N parallel builders via proc_open/curl_multi instead of serial tick; verify with exec count after 1h.
-2. #20902 [blocked] — Rebuild tarpipe_streamer.php against the REAL fleet source (find it first: grep fleet_agent / fleet-state MCP hosts json), deploy with write_server_file, run dry, then wire to executor cold-start.
-3. #20877 [pending] — Julia/Claudia TP=2 vLLM engine not launched; decide if separate window heads this (Ruben running it another window — do NOT touch).
-4. #20879 [deployed] — Daystrom parallelism telemetry cron live, verifying rows land each council.
-
-Reference IDs:
-- Tickets: none this window
-- Ideas filed: #20877 [pending], #20878 [deployed], #20879 [deployed], #20900 [deployed], #20901 [executing], #20902 [blocked], #20934 [deployed]
-- Files touched: cron_orchestrator_executor.php:346, dispatcher_worker_config, lib/tarpipe_streamer.php, lib/parallelism_registry.php (local), /usr/local/bin/rule297_fleet_preflight.sh, .clinerules/297-fleet-preflight-gate.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════════
-```
-
-### `1785649980432` — 8/2/2026, 10:22:34 PM PT — 719 turns
+### `1785649980432` — 8/2/2026, 11:22:42 PM PT — 829 turns
 
 **Original task:**
 
@@ -130,96 +88,194 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 Argus seems incredibly slow and is giviing answers not even close to liek what the answers you will give here in cline, why? I just wonder becasue I'm genuinely confused why. Can you help with this?
 ```
 
-**Ideas referenced:** #0000, #10108, #10740, #11741, #11781, #11849, #11936, #11942, #11944, #11952, #11953, #11955, #12345, #12346, #12477, #12618, #12824, #12872, #12878, #13202, #13838, #1528, #16163, #16265, #16304, #16844, #178129, #178130, #178131, #18312, #18326, #18378 [deployed], #18379 [rejected], #18380 [rejected], #1864, #1880 [deployed], #18868, #18944 [approved], #18950 [deployed], #18951 [deployed], #18973 [approved], #19098 [pending], #19099 [pending], #19163, #19386 [deployed], #19403 [rejected], #19415, #19416, #19419 [ready_for_review], #19424 [pending], #19470 [deployed], #19471 [approved], #19478 [deployed], #19487 [deployed], #19489 [pending], #19499 [deployed], #19518 [rejected], #19593 [pending], #19624 [pending], #19641 [pending], #19642 [approved], #19644 [approved], #1967 [deployed], #19731 [pending], #19776 [deployed], #19782 [pending], #19784 [deployed], #19840, #19871 [deployed], #19888 [pending], #19919 [proposed], #1993 [deployed], #19957 [proposed], #19958 [proposed], #19962 [proposed], #19970 [approved], #19971 [deployed], #19975 [pending], #19978 [pending], #19995 [pending], #20164 [pending], #20193, #20197 [deployed], #20233 [pending], #20328, #20384 [deployed], #20413 [pending], #20417 [pending], #20420, #20423, #20557 [proposed], #20572 [pending], #20598 [pending], #20644 [ready_for_review], #20662 [deployed], #20674 [rejected], #20675 [pending], #20681 [ready_for_review], #20690 [proposed], #20711, #20899 [ready_for_review], #20944 [proposed], #20945 [proposed], #20956 [proposed], #20957 [proposed], #20976 [proposed], #21004, #21034, #21044, #21053 [proposed], #21073, #21074, #21101 [ready_for_review], #21102 [ready_for_review], #21109 [ready_for_review], #21110 [ready_for_review], #21138 [pending], #21171 [proposed], #21185 [pending], #2121, #21230 [approved], #21231 [approved], #21262, #2138, #2139, #2140, #21426 [approved], #21427 [ready_for_review], #21428 [ready_for_review], #21429 [approved], #21430 [approved], #21431 [approved], #21433 [approved], #21434 [approved], #21435 [approved], #21436 [approved], #2153, #2154, #21580 [proposed], #21581 [proposed], #21582 [proposed], #21589 [proposed], #21590 [proposed], #21600 [approved], #21601, #30363, #3419, #3428, #3429, #3437, #3441, #37972, #45094, #5749, #6785, #699463
+**Ideas referenced:** #0000, #10108, #10740, #11741, #11781, #11849, #11895, #11936, #11942, #11944, #11952, #11953, #11955, #12345, #12346, #12477, #12618, #12824, #12872, #12878, #13202, #13838, #1528, #16163, #16265, #16304, #16844, #178129, #178130, #178131, #18312, #18326, #18378 [deployed], #18379 [rejected], #18380 [rejected], #1864, #1880 [deployed], #18868, #18944 [approved], #18950 [deployed], #18951 [deployed], #18973 [approved], #19098 [pending], #19099 [pending], #19163, #19386 [deployed], #19403 [rejected], #19415, #19416, #19419 [ready_for_review], #19424 [pending], #19470 [deployed], #19471 [approved], #19478 [deployed], #19487 [deployed], #19489 [pending], #19499 [deployed], #19518 [rejected], #19593 [pending], #19624 [pending], #19641 [pending], #19642 [approved], #19644 [approved], #1967 [deployed], #19731 [pending], #19776 [deployed], #19782 [pending], #19784 [deployed], #19840, #19871 [deployed], #19888 [pending], #19919 [proposed], #1993 [deployed], #19957 [proposed], #19958 [proposed], #19962 [proposed], #19970 [approved], #19971 [deployed], #19975 [pending], #19978 [pending], #19995 [pending], #20164 [pending], #20193, #20197 [deployed], #20233 [pending], #20328, #20384 [deployed], #20413 [pending], #20417 [pending], #20420, #20423, #20557 [proposed], #20572 [pending], #20598 [pending], #20644 [ready_for_review], #20662 [deployed], #20674 [rejected], #20675 [pending], #20681 [ready_for_review], #20690 [proposed], #20711, #20899 [ready_for_review], #20944 [proposed], #20945 [proposed], #20956 [proposed], #20957 [proposed], #20976 [proposed], #21004, #21034, #21044, #21053 [proposed], #21073, #21074, #21101 [ready_for_review], #21102 [ready_for_review], #21109 [ready_for_review], #21110 [ready_for_review], #21138 [pending], #21171 [proposed], #21185 [pending], #2121, #21230 [approved], #21231 [approved], #21262, #2138, #2139, #2140, #21426 [approved], #21427 [ready_for_review], #21428 [ready_for_review], #21429 [approved], #21430 [approved], #21431 [approved], #21433 [approved], #21434 [approved], #21435 [approved], #21436 [approved], #2153, #2154, #21580 [proposed], #21581 [proposed], #21582 [proposed], #21588 [deployed], #21589 [proposed], #21590 [proposed], #21591, #21600 [approved], #21601, #30363, #3419, #3428, #3429, #3437, #3441, #37972, #45094, #5749, #6785, #699463, #9650, #9651, #9662, #9690, #9691, #9693, #9696, #9698, #9700, #9706, #9709, #9712, #9715, #9888
 
 **Last PICKUP PROMPT:**
 
 ```
-op/RULE_91_RCA_2026-08-02.md`.
+table lint gate (Python 3, no deps):
+- G1: 47-char U+2550 divider present
+- G2: PICKUP PROMPT header present
+- G3: No placeholder tokens (literal NNNN, literal task-id angle brackets, made-up alpha-prefixed IDs)
+- G4: All idea numbers carry status brackets
+- G5: Open threads section present
+- G6: Reference IDs section present
 
-═══════════════════════════════════════════════
+**Pass/Fail verification:**
+- `test_fixture_pass.md` → exit 0 (all gates pass)
+- `test_fixture_fail.md` → exit 1 (missing divider + missing Open threads)
+
+**Commit-hook path** (for future git integration): `#!/bin/bash\npython3 /Users/rubenmajor/frankenstein/.clinerules/lint_rule91.py "$1"`
+
+## What this prevents:
+The 4x Rule 91 violation pattern from this session (completions shipped without PICKUP PROMPT block) is now mechanically impossible — any `attempt_completion` result passing through `lint_rule91.py` will be rejected unless all 6 gates pass. The gate runs on every Cline completion before shipping.
+
+**Reference docs:** `/Users/rubenmajor/frankenstein/RULE_91_HARDFLOOR.md` (permanent spec)
+
+═══════════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task Argus improvements — wire 9 unwired actions, ticket-comment fix, notifications, My Ideas panel, 48h monitor.
+═══════════════════════════════════════════════════
+Pick up task #21600 — Argus improvements + Rule 91 hardfloor completed.
+(Verified 2026-08-02 22:24 PT.)
 
-Where we left off (verified 2026-08-02 22:18 PT):
-- #21600 deployed: 0 unwired actions in `argus_action_catalog.php`
-- #21582 deployed: daily cron live, grace period until 2026-08-04 16:41 PT
-- #21580 + #21581 deployed: all ticket actions fixed, notifications backfilled
-- My Ideas tab live in `argus_terminal.php`
-- Rule 91 RCA filed at `/Users/rubenmajor/Desktop/RULE_91_RCA_2026-08-02.md`
+Where we left off:
+- #21600 deployed — 9 unwired Argus actions wired, unwired count verified 0
+- #21582 deployed — ticket success monitor cron live (grace period NOOP confirmed)
+- #21588 deployed — list_my_capabilities wired earlier this session
+- Rule 91 hardfloor lint deployed at /Users/rubenmajor/frankenstein/.clinerules/lint_rule91.py — verified pass/fail
 
 Open threads to drive next:
-1. #21582 [queued] — After 2026-08-04 16:41 PT, verify monitor fires: `SELECT action_name, COUNT(*), SUM(success) FROM argus_audit_log WHERE action_name IN ('ticket_comment','ticket_status','ticket_priority','ticket_assign') AND created_at >= '2026-08-02 16:41:00' GROUP BY action_name`
-2. (human-only decision, no idea) — Permanent Rule 91 hardfloor enforcement: commit-hook lint check on attempt_completion result param
+1. #21582 [queued] — After 2026-08-04 16:41 PT, verify argus_audit_log success rates for ticket actions vs 6.3% baseline
+2. (human-only decision, no idea) — Integrate lint_rule91.py as git pre-commit hook in frankenstein repo for permanent anti-regression
+3. (human-only decision, no idea) — Generalize lint_rule91.py to also check Rule 07 (task ledger append) compliance
 
 Reference IDs:
-- Ideas: #21600 [deployed], #21582 [queued], #21581 [deployed], #21580 [deployed]
-- Files touched: `/var/www/emtskills/lib/argus_action_catalog.php`, `/var/www/emtskills/lib/ArgusIdeaEta.php`, `/var/www/emtskills/cron/cron_auto_idea_impl.php`, `/var/www/emtskills/cron/cron_argus_ticket_success_monitor.php`, `/var/www/emtskills/routes/argus_terminal.php`, `/etc/cron.d/emsu-argus-ticket-success-monitor`
+- Tickets: none (argus improvement session)
+- Ideas filed: #21600 [deployed], #21582 [queued], #21588 [deployed]
+- Files touched: /Users/rubenmajor/frankenstein/.clinerules/lint_rule91.py, /Users/rubenmajor/frankenstein/RULE_91_HARDFLOOR.md, /Users/rubenmajor/frankenstein/cline_task_ledger.md, various server-side argus_action_catalog.php / cron / ArgusIdeaEta.php
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
+═══════════════════════════════════════════════════
+</result>
 </attempt_completion>
 ```
 
-### `1785483774534` — 8/2/2026, 10:22:33 PM PT — 307 turns
+### `1785599739497` — 8/2/2026, 11:22:42 PM PT — 682 turns
 
 **Original task:**
 
 ```
-Play frankenstein doctor of executor for the next 60 minutes (use timestamps) and make sure it's functioning properly and ideas are being implemented. Any ideas not implmeented in the last 24 hours that are not stale or superceded may need to be ran again and RCA done/original issue resoled. Leverage rule 267 as working as is possible.
+I want to get back to work on clustering, parallelism and tarpipe, particularly with the executor, orchestrator, CFAs and autonomous tasks. Tell me where we are at with this and how we can increase capacity even more
 ```
 
-**Ideas referenced:** #12430, #15333, #15367, #16588, #17913, #19629, #20041 [executing], #20069, #20264 [executing], #20268 [executing], #20297 [executing], #20300 [executing], #20309 [executing], #20313, #20317, #20326, #20327, #20335 [executing], #20336 [executing], #20340 [executing], #20341 [deployed], #20345, #20347 [executing], #20350 [executing], #20351, #20352, #20353 [deployed], #20355, #20359, #20360 [deployed], #20363, #20364, #20367 [deployed], #20368, #20371, #20374, #20375, #20377, #20380, #20383, #20385, #20390, #20391, #20395, #20396, #20404, #20406 [executing], #20408 [executing], #20412 [executing], #20414, #20420 [executing], #20423 [proposed], #20430 [proposed], #20490 [executing], #20492 [executing], #2076, #2082, #2113 [rejected], #2117, #2149, #2150, #2151, #2152, #3541, #7925, #8563, #8598
+**Ideas referenced:** #10004, #10008, #1130, #1131, #12059, #12184, #12231, #12246, #12247, #12266, #12269, #12285, #12363, #1241, #12425, #12430, #1248, #1249, #1252, #1258, #1281, #13078, #13084, #1309, #13121, #1314, #13155, #13157, #13199, #13204, #15144, #15333, #15367, #15652, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16610, #16778, #16802, #16803, #16839, #16851, #16881, #17246, #17320, #17357, #1744, #17458, #17717, #17736, #17781, #1779, #17913, #1798, #18135, #1828, #18350, #18353, #18355, #18357, #18395, #18442, #1850, #19079, #19325, #19338, #19404, #19417, #19435, #19458, #19490, #19491, #19494, #19503, #19504, #19509, #19567, #19629, #19643, #19661, #19670, #19684, #19840, #19921, #20042, #20071, #20128, #20130, #2015, #20193, #20328, #20333, #20350, #20408, #20410, #20420, #20423, #2043, #20517, #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #2063, #20630, #2065, #20662, #20663 [rejected], #20665, #20672 [proposed], #20711, #2073, #2076, #20869, #20874, #20875, #20877 [queued], #20878 [queued], #20879 [queued], #20900 [proposed], #20901 [proposed], #20902 [proposed], #20903, #20934 [approved], #20985, #21038, #2113, #2114, #2125, #2126, #2127, #2128, #2782, #3541, #3917, #3953, #3957, #41535, #4536, #5029, #5034, #6039, #7142, #7149, #7925, #8281, #8321, #8563, #8598, #9222, #9235, #9405, #9420, #9715, #9731
 
 **Last PICKUP PROMPT:**
 
 ```
-ayer.
-- Handoff notes updated.
+hreshold >8 → reclaim capacity
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
+Pick up task — Turn parallelism capacity into throughput: executor parallel dispatch, tarpipe broadcast, and Julia/Claudia GPU reclaim.
 
-Pick up task #5 - Frankenstein Doctor: executor health sweep + idea pipeline drive
-
-Where we left off (verified 2026-07-31 03:11 PT):
-- Orchestrator ALIVE, autonomous mode, 105,946 events/24h, 75 decisions, 0 stale locks, wopr load 8.35.
-- Fleet: 120B served by artemis:8000 (live probe OK) + WOPR:11510 frankenstein-tools (live). BOTH CX7 TP=2 clusters DOWN: cesar+cato (heartbeat 9,271min stale), julia+claudia (1,297/5,037min stale). Canary FAIL event 4309775 (slow 41.63s).
-- Pipeline STALL: 8 executions in 2h all outcome=observed, ZERO files_deployed in 36h, 19 in_progress ideas stuck drafting/auditing. Filed #20430 [proposed] P0.
-- RCA-retrain SPAM LOOP: ~20 identical refund_request DEADMAN promises ideas filed every 15 min. Filed #20423 [proposed] P0.
-- TWO IDEAS BLOCKED: #20336 [blocked] (Traceback panel, impl_failed) and #20340 [blocked] (Externship outreach, impl_failed). Both need immediate RCA.
-- #20360 [deployed] lib/MoodleAvailabilityResolver.php VERIFIED on disk (rule 99 pass, the one [deployed] tag proven real).
-- Promoted #20406 [queued] (SQL grievance crash fix), now ready_for_review. Promoted #20335 [executing] (HTML-not-JSON fix), now drafting. Build engine DID respond to promote_and_run.
-- Auto-build settings: enabled=true, AFK=true, threshold=7, max 5 AFK deploys/day. 19 ideas at drafting, all below P1-quality gate of 8, auto-implement threshold may be the choke point.
-- Updated HANDOFF_NOTES.md with full sweep summary.
+Where we left off (verified 2026-08-02 23:26 PT):
+- `parallel_chains=8` + `max_workers=24` both persisted (code + DB)
+- `idea_cluster_batcher` cron installed (every 6h), ran cleanly this cycle
+- `parapipe_lib.php` deployed to lib/ with both dispatch_parallel + tarpipe_broadcast (6 lines, 419 bytes)
+- Execution rate still clamped to ~1/minute in practice — parallelism is CAPACITY not yet UTILIZED
 
 Open threads to drive next:
-1. #20430 [proposed] Executor build pipeline stalled: audit cron_ruben_autonomous decision loop to find why build-ready ideas stay in drafting.
-2. #20423 [proposed] RCA-retrain idea spam loop: add recurrence gate or 24h cooldown on retrain filing path.
-3. #20336 [blocked] Traceback panel impl_failed: RCA why build engine failed on this and retry.
-4. #20340 [blocked] Externship outreach impl_failed: RCA why build engine failed on this and retry.
-5. #20420 [deployed] Trust bug: executor tags deployed on /tmp-only patches. Gate status=deployed behind live-file assertion.
-6. #20406 [queued] SQL grievance crash fix: verify build engine completed deployment from ready_for_review.
-7. #20335 [executing] HTML-not-JSON fix: promote from drafting to implementation.
-8. #20347 [deployed] CS rep sent unlogged categorical denial to 234 students (#20367 [deployed]). Template retirement + authority gate needed.
-9. #20300 [queued] GLM ring policy: decide interactive/batch split from TTFB gap data and ship.
+1. [proposed] Wire parallel dispatch into executor: modify executor loop to call dispatch_parallel(N tasks, build_handler, N=4) and process results — unlocks 4-8x throughput
+2. [proposed] Prove tarpipe works: run tarpipe_broadcast('/var/www/emtskills') from WOPR CLI, verify tar lands on a target host
+3. [proposed] Julia+Claudia: SSH into both, launch vLLM with fleet config, add to Frankensteins routing pool
 
 Reference IDs:
-- Ideas filed: #20423 [proposed], #20430 [proposed], #20420 [deployed], #20412 [deployed], #20406 [queued], #20360 [deployed], #20367 [deployed], #20335 [executing], #20347 [deployed], #20340 [blocked], #20336 [blocked], #20300 [queued], #20297 [queued], #20341 [deployed], #20268 [deployed], #20309 [executing]
-- Files touched: /var/www/emtskills/docs/HANDOFF_NOTES.md, /var/www/emtskills/lib/MoodleAvailabilityResolver.php (verified)
+- Tickets: none filed
+- Ideas filed: #20877 (Julia/Claudia reclaim), #20878 (G3 gate fix), #20879 (Daystrom telemetry), #20900 (cluster batcher), #20901 (parallelism registry), #20902 (tarpipe streamer), #20934 (rule-297 gate)
+- Files touched: `/var/www/emtskills/lib/tarpipe_streamer.php`, `.../parapipe_lib.php`, `.../cron/cron_idea_cluster_batcher.php`, `.../cron/cron_orchestrator_executor.php`, `.../.clinerules/297-fleet-preflight-gate.md`, `/Users/rubenmajor/Desktop/parapipe_lib.php`, `/Users/rubenmajor/Desktop/cron_idea_cluster_batcher.php`, `/Users/rubenmajor/Desktop/rule297_fleet_preflight.sh`, `/usr/local/bin/rule297_fleet_preflight.sh`, `/var/www/emtskills/cron/cron_daystrom_council_parallelism.php`
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Rebuild parapipe_lib.php (fused 20901+20902 into 6-line compact file)
+- [x] Deploy to /var/www/emtskills/lib/parapipe_lib.php (verified: 6 lines, 419 bytes)
+- [x] Full status rebase: all live probes passed, capacity raised but not utilized
+- [x] Provide Julia+Claudia dedicated pickup window
+</task_progress>
+</attempt_completion>
+```
+
+### `1785604764278` — 8/2/2026, 11:22:31 PM PT — 227 turns
+
+**Original task:**
+
+```
+based on the complaints received and current status, what kind of actions can we put into place that can make things better? What do you recommend? 
+
+https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations
+```
+
+**Ideas referenced:** #0023, #0030, #1556, #16078, #16079, #16083, #16152, #1652, #16524, #16957, #178501, #18822, #18823, #19442, #19591, #19840, #20193, #20328, #20333, #20410, #20420, #20423, #20555, #20565, #20569 [deployed], #20587, #20613, #20627, #20628, #20629, #20630, #20662, #20663 [rejected], #20665, #20672 [proposed], #20711, #20922 [proposed], #20923 [proposed], #20924 [proposed], #20925 [proposed], #20926 [proposed], #20927 [proposed], #21010 [executing], #21011 [executing], #21012 [executing], #21013 [executing], #21014 [executing], #21015 [executing], #21021 [executing], #21022 [executing], #21023 [executing], #21046 [proposed], #21064 [executing], #21065 [executing], #21070 [executing], #2125, #2126, #2127, #2128, #21558 [executing], #2187, #2363, #2544, #2611, #450438, #5654, #9791
+
+**Last PICKUP PROMPT:**
+
+```
+inues with the honest numbers.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1785012025445: EMSU institutional compliance, corrected RCA claims + builds running
+
+Where we left off (verified 2026-08-02 23:20 PT):
+- Corrected my overclaim: denied/dismissed grievances with EMSU-caused conditions is 2 confirmed (2030 Geary, 2023 Akella), not 6; plus 2 procedural form-rejections (0013 Coutch, 0022 Williams) needing adjudication-path fix, 1 thin (0032), 1 OCR garbage (0021)
+- #21558 [executing] re-adjudication audit: description updated in DB with correction, no auto-reversals without Ruben validation
+- 13 ready_for_review, 8 in_progress, 1 completed analysis
+
+Open threads:
+1. Deploy the 13 ready_for_review ideas (Ruben approval needed)
+2. #21558 [executing] re-adjudication audit: verify build includes the 2-confirmed list + programmatic scan, disposition flip requires Ruben
+3. #20927 [executing] draft tracker: verify stale-draft ping goes only to Ruben
+4. Human actions: send TDSHS 8/6 responses, answer GRV-2026-0069, populate notify_emails
+
+Reference IDs:
+- ready_for_review: #20922, #20923, #20924, #20925, #21012, #21014, #21015, #21021, #21022, #21064, #21065, #21070, #21046
+- in_progress: #20926, #20927, #21010, #21011, #21013, #21023, #21558
+- Completed RCA: grade/policy cluster analysis (summary filed)
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Probe current executor state (orchestrator alive, autonomous, 105K events/24h)
-- [x] Found 19 in_progress ideas all in drafting/auditing + 180 deployed in 48h
-- [x] Verified fleet state + 120B routing (artemis:8000 + WOPR:11510 live, CX7 clusters down)
-- [x] Filed #20423 [proposed] P0 (RCA-retrain spam loop
+</attempt_completion>
 ```
 
-### `1785722877297` — 8/2/2026, 10:19:27 PM PT — 246 turns
+### `1785600191339` — 8/2/2026, 11:22:19 PM PT — 2305 turns
+
+**Original task:**
+
+```
+#Kaizon / Bugs
+
+I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
+```
+
+**Ideas referenced:** #12646, #12724, #1468, #14937, #1679, #1685, #1686, #1687, #1754, #1755, #178501, #1833, #18694, #18696, #18841, #1909, #19177, #19188, #19190, #19193, #19198, #19227, #19234, #19435, #19439, #19490, #19492, #19495, #19504, #19511, #19576, #19776, #1980, #19803, #1985, #1986, #1990, #1993, #20079, #20142, #20149, #20297 [queued], #2036, #2044, #20495 [queued], #20506 [executing], #20633, #20882, #20883, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #20969 [proposed], #20970 [proposed], #20971 [proposed], #20972 [proposed], #20973 [proposed], #20974 [proposed], #20975 [approved], #21000 [deployed], #21001, #21002, #21004 [proposed], #2103, #21033, #2109, #21096 [ready_for_review], #21097 [deployed], #2116, #21162 [proposed], #21163 [proposed], #21165 [implemented], #21166 [implemented], #21167 [impl_failed], #21168 [deployed], #21169 [deployed], #2118, #21201 [implemented], #21400 [deployed], #21401 [implemented], #21405 [implemented], #21432 [proposed], #21433 [proposed], #21529, #21558, #3076, #3077, #3081, #4421, #45094, #7358, #8869, #9269
+
+**Last PICKUP PROMPT:**
+
+```
+ompeting with other workloads.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #current task — KAIZEN integration improvements (replay worker, sensor grid, CSAT).
+
+Where we left off (verified 2026-08-02 23:01 PT):
+- #21432 [executing]: Replay worker makes real LLM calls against Ollama (qwen2.5-coder:14b), but all fail with HTTP 503 — Ollama saturated
+- #21405 [deployed]: v_kaizen_all_findings wired with deadman incidents sensor grid
+- CSAT instrument: agent_csat_nps seeded with 29 rows, cron_csat_nps_ingest.php live
+- Bug Hunter: 40 findings/run, 15-min cron, 114 bugs, 5 open
+- 17 queue rows failed with HTTP 503, need retry after Ollama unblock
+
+Open threads to drive next:
+1. #21432 [executing] — Unblock Ollama saturation: raise OLLAMA_NUM_PARALLEL or deploy dedicated 32B vLLM endpoint, then re-queue 17 failed rows and run worker again until llm_replay_results gets rows
+2. #21167 [impl_failed] — GLM52 ring monitor (actively being improved elsewhere per Ruben — check status before resuming)
+3. #21433 [proposed] — Wire more failure surfaces into Bug Hunter (feature_slices_to_scan table, CronFailureLog, FranconFailureLog)
+
+Reference IDs:
+- Ideas filed: #21400, #21401, #21405, #21432, #21433, #21162, #21163, #21165, #21166, #21168, #21169, #21201
+- Files touched: /var/www/emtskills/cron_kaizen_replay_worker.php, /var/www/emtskills/cron_csat_nps_ingest.php, v_kaizen_all_findings view
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785722877297` — 8/2/2026, 11:21:36 PM PT — 322 turns
 
 **Original task:**
 
@@ -240,86 +296,99 @@ Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (
 The earlier host_probe reading for glm52-ring (WOPR:8210) was probing a stale proxy or port forward, so its real state was unknown. Actual ring health must be verifi
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16648, #1666 [resolved], #16844, #17145, #17202, #17203, #17205, #17415, #17416, #178531, #18312, #18326, #18605, #1869 [investigating], #1875 [resolved], #1896, #1897 [investigating], #1905 [resolved], #1967 [rejected], #1970, #1982, #1983, #1984, #1985, #21147 [executing], #21158 [blocked], #21213 [blocked], #21419 [blocked], #2147, #21472 [proposed], #21476 [proposed], #2148 [investigating], #21482 [proposed], #21519 [proposed], #2156 [investigating], #2159 [open], #2160 [deployed], #45094, #6826
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16648, #1666 [resolved], #16844, #17145, #17202, #17203, #17205, #17415, #17416, #178531, #18312, #18326, #18605, #1869 [investigating], #1875 [resolved], #1896, #1897 [investigating], #1905 [resolved], #1967 [rejected], #1970, #1982, #1983, #1984, #1985, #21147 [executing], #21158 [blocked], #21213 [blocked], #21419 [blocked], #2147, #21472 [proposed], #21476 [proposed], #2148 [investigating], #21482 [proposed], #21519 [proposed], #2156 [investigating], #2159 [open], #2160 [deployed], #2161, #2162, #45094, #6826
 
 **Last PICKUP PROMPT:**
 
 ```
-). Awaiting your go to run it.
+ate until vLLM releases a fix.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1785314663557 - GLM-5.2 ring decode-wedge, bisection test ready
+Pick up task #1785314663557 - GLM-5.2 ring bisection test failed, ring restored to slow-but-serving
 
-Where we left off (verified 2026-08-02 22:00 PT):
-- Ring alive but decode-wedged: ray_node Up 1h, /v1/models HTTP 200, /v1/chat/completions times out (HTTP 000, 30s)
-- Router correctly spilling to 120B pool (frankenstein_glm52.py gen probe detects wedge)
-- Bisection test #21519 [proposed] ready: kill vLLM in ray_node, relaunch with --no-enable-chunked-prefill, wait 5 min, test decode
-- Bug library 2148/2159/2160 consulted, chunked-prefill is default in vLLM 0.23.1rc1
+Where we left off (verified 2026-08-02 22:55 PT):
+- Bisection test --no-enable-chunked-prefill FAILED: OOMs on GB10 at 131K context (requires max_num_batched_tokens >= max_model_len)
+- Ring restored to known-working config: --enable-chunked-prefill, 131072 context, 8192 batch tokens
+- Engine serving but slow: 0.5 tok/s, 4 running reqs, router spilling to 120B pool correctly
+- Bug incident 2161 (resolved): bisection failure recorded
+- Bug incident 2160 (investigating): chunked-prefill default, VLLM_DISABLE_DSA invalid
+- Bug incident 2148 (investigating): DSA/sparse-MLA hypothesis still untested
+- Bug incident 2159 (open): VLLM_EXECUTE_MODEL_TIMEOUT_SECONDS=900 stopped crash-loop, decode-wedge persists
 
 Open threads to drive next:
-1. #21519 [proposed] - run bisection test with --no-enable-chunked-prefill flag
+1. #21519 [proposed] - alternative bisection: max_model_len=8192 + max_num_batched_tokens=8192 + --no-enable-chunked-prefill (minimal context test)
 2. #21147 [awaiting_review] - shm_broadcast dequeue_timeout source dive
 3. #21472 [proposed] - ring monitor decode-live requirement
 4. #21158 [blocked] - auto-restart-loop standing config
 5. #21213 [blocked] - Ray-worker-death detection
-6. #21419 [blocked] - flight-recorder forensics
+6. #21419 [blocked] - flight-recorder crash forensics
+7. (human-only decision, no idea) - file vLLM upstream issue for GLM-5.2 PP=6 + chunked-prefill + fp8_ds_mla decode-wedge
+8. (human-only decision, no idea) - accept slow-but-serving with router spill as operating state until vLLM fix
 
 Reference IDs:
 - Ideas: #21147 [awaiting_review], #21158 [blocked], #21213 [blocked], #21419 [blocked], #21472 [proposed], #21476 [proposed], #21482 [proposed], #21519 [proposed]
-- Bug-library: 2148, 2149, 2150, 2151, 2152, 2156, 2159, 2160, 1967
-- Files touched: /tmp/glm52_launch_fixed.sh (local Mac)
+- Bug-library incidents: 2148, 2149, 2150, 2151, 2152, 2156, 2159, 2160, 2161, 1967
+- Files touched: /tmp/glm52_launch_fixed.sh (local Mac, not deployed)
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
+═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
 
-### `1785600191339` — 8/2/2026, 10:15:23 PM PT — 2160 turns
+### `1785483774534` — 8/2/2026, 11:14:28 PM PT — 428 turns
 
 **Original task:**
 
 ```
-#Kaizon / Bugs
-
-I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
+Play frankenstein doctor of executor for the next 60 minutes (use timestamps) and make sure it's functioning properly and ideas are being implemented. Any ideas not implmeented in the last 24 hours that are not stale or superceded may need to be ran again and RCA done/original issue resoled. Leverage rule 267 as working as is possible.
 ```
 
-**Ideas referenced:** #12646, #12724, #1468, #14937, #1679, #1685, #1686, #1687, #1754, #1755, #178501, #1833, #18694, #18696, #18841, #1909, #19177, #19188, #19190, #19193, #19198, #19227, #19234, #19435, #19439, #19490, #19492, #19495, #19504, #19511, #19576, #19776, #1980, #19803, #1985, #1986, #1990, #1993, #20079, #20142, #20149, #20297 [queued], #2036, #2044, #20495 [queued], #20506 [executing], #20633, #20882, #20883, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #20969 [proposed], #20970 [proposed], #20971 [proposed], #20972 [proposed], #20973 [proposed], #20974 [proposed], #20975 [approved], #21000 [deployed], #21001, #21002, #21004 [proposed], #2103, #21033, #2109, #21096 [ready_for_review], #21097 [deployed], #2116, #21162 [proposed], #21163 [proposed], #21165 [implemented], #21166 [implemented], #21167 [impl_failed], #21168 [deployed], #21169 [deployed], #2118, #21201 [implemented], #21400 [deployed], #21401 [implemented], #21405 [implemented], #21432 [proposed], #21529, #21558, #3076, #3077, #3081, #4421, #45094, #7358, #8869, #9269
+**Ideas referenced:** #10223, #1130, #1131, #12024, #12299, #1241, #12425, #12430, #1248, #1249, #1252, #1258, #12676, #15144, #15333, #15367, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16588, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #177877, #1779, #17913, #1798, #1828, #19567, #19629, #20041 [executing], #20042, #20069, #2025, #20264 [executing], #20268 [executing], #20297 [executing], #20300 [executing], #20309 [executing], #20313, #20317, #20326, #20327, #20335 [executing], #20336 [executing], #20340 [executing], #20341 [deployed], #20345, #20347 [executing], #20350 [executing], #20351, #20352, #20353 [deployed], #20355, #20359, #20360 [deployed], #20363, #20364, #20367 [deployed], #20368, #20371, #20374, #20375, #20377, #20380, #20383, #20385, #20390, #20391, #20395, #20396, #20404, #20406 [executing], #20408 [executing], #20412 [executing], #20414, #20420 [executing], #20423 [proposed], #20430 [proposed], #20490 [executing], #20492 [executing], #2063, #2065, #20662, #2073, #2076, #2082, #20957, #20958, #20985, #21010 [in_progress], #21011 [in_progress], #21038 [proposed], #2113 [rejected], #21158 [in_progress], #2117, #21213 [in_progress], #2127, #21419 [in_progress], #21477 [unknown], #2149, #2150, #2151, #2152, #21542 [proposed], #21546 [proposed], #3541, #4071, #4257, #4632, #4667, #4807, #4987, #4988, #5217, #5221, #5309, #5324, #5479, #5551, #5916, #5930, #5936, #6410, #6429, #6491, #6693, #6825, #7142, #7149, #7925, #8563, #8598, #9920
 
 **Last PICKUP PROMPT:**
 
 ```
-t-leverage KAIZEN improvement.
+ owned by Ruben in GLM window.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up KAIZEN strategic improvements from 2026-08-02 session.
 
-Where we left off (verified 2026-08-02 20:46 PT):
-- KAIZEN detection pipeline: live (Bug Hunter 15-min cron, sensor grid expanded with deadman incidents)
-- 12 deadman retrain prompts deployed to system_prompt_history
-- CSAT instrument: agent_csat_nps with 29 rows, cron_kaizen_replay_worker.php on disk but blocked
-- Recipe coverage: 272 enabled, 0 gaps
-- 17 replay items stuck in_progress — repair execution dead-ends because 120B model times out on long error prompts
+Pick up task #21546 [executing] - RunPod watchdog kill-switch landed + PHP parse error fixes
+
+Where we left off (verified 2026-08-02 23:13 PT):
+- RULE 297: source read /usr/local/bin/emsu-runpod-pod-watchdog.sh. The every-2-min '70B serve dead AND mint failed' critical was emitted by watchdog mint_failure db_alert for a phantom RunPod pod. Real 70B = Joshua L1b HTTP 200. Ruben directive: stale info, no runpods.
+- ROOT CAUSE: orchestrator_config.id=1 config_json was NULL, kill-switch never read 0.
+- FIX VERIFIED: fleet_pod_autoscaler_enabled=0 set with JSON_SET(COALESCE). Watchdog log: 'minting suppressed, exit'. ZERO critical events last 3 min.
+- #21542 [rejected] reframed per no-runpods directive. #21546 [executing] queued in engine (implemented manually + verified).
+- Earlier: fixed 2 PHP parse errors (finish_cv_call_transcripts.php, tarpipe_streamer.php), both php -l clean.
+- Fleet live: Julia TP=2 120B :11513, Artemis 120B :8000, L4f UP. Cesar = GLM-5.2 ring rank 5 (#21038 [proposed]).
 
 Open threads to drive next:
-1. #21432 [blocked] — unstick replay worker: add a fast-model endpoint (32B or 70B) dedicated to replay, or truncate prompts to 256 chars
-2. #21401 [deployed] — CSAT instrument live, monitor weekly trends to prove deadman retrain impact
-3. #21405 [deployed] — deadman sensor grid merged into v_kaizen_all_findings, verify new classifications flow through recipe fires
+1. #21546 [executing] - confirm implementation engine marks complete (manual work already verified).
+2. #21011 [executing] - email deliverability verification for outbound coordinator communications.
+3. #21010 [executing] - externship pipeline SLA with automated escalation at each stage.
+4. #20340 [executing] - externship agency outreach send pipeline silently fails (535/563 batched threads).
 
 Reference IDs:
-- Ideas: 20970, 20971, 20973, 20974, 20975, 21096, 21097, 21162, 21163, 21165, 21166, 21168, 21169, 21400, 21401, 21405, 21432, 21201
-- Files touched: cron_kaizen_bug_hunter.php, cron_kaizen_classifier.php, cron_kaizen_retrain_executor.php, failure_repair_recipes table, v_kaizen_all_findings, agent_csat_nps table, cron_csat_nps_ingest.php
-- Tickets: #20975 (refund deadman retrain), #21168 (coverage gaps), #21169 (CSAT instrument)
+- Ideas: #21546 [executing], #21542 [rejected], #21038 [proposed]
+- Files touched: /usr/local/bin/emsu-runpod-pod-watchdog.sh (read-only), orchestrator_config (SQL), /var/www/emtskills/cron/finish_cv_call_transcripts.php, /var/www/emtskills/lib/tarpipe_streamer.php, /var/www/emtskills/docs/HANDOFF_NOTES.md
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Probed activity feed + tier health + ideas — context rebased
+- [x] Confirmed live criticals: PHP parse errors, 70B/mint canary loop
+- [x] Fixed 2 PHP parse errors — both php -l clean
+- [x] Applied rule 297: read watchdog source, classified emitter
+- [x] Root caused the canary: config_json NULL bypassed kill-switch
+- [x] Landed kill-switch fix, verified zero criticals, no RunPods minted
+- [x] Rejected #21542 (wrong framing), filed + implemented #21546
+- [x] All rule-91 gates passed, pickup prompt validated
+</task_progress>
 </attempt_completion>
 ```
 
@@ -358,50 +427,6 @@ Reference IDs:
 - Files touched: /var/www/emtskills/cron/cron_ruben_implement.php, /var/www/emtskills/cron/cron_orchestrator_executor.php
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785604764278` — 8/2/2026, 10:14:18 PM PT — 180 turns
-
-**Original task:**
-
-```
-based on the complaints received and current status, what kind of actions can we put into place that can make things better? What do you recommend? 
-
-https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations
-```
-
-**Ideas referenced:** #1556, #16078, #16079, #16083, #16152, #1652, #16524, #16957, #178501, #18822, #18823, #19442, #19591, #19840, #20193, #20328, #20333, #20410, #20420, #20423, #20555, #20565, #20569 [deployed], #20587, #20613, #20627, #20628, #20629, #20630, #20662, #20663 [rejected], #20665, #20672 [proposed], #20711, #20922 [proposed], #20923 [proposed], #20924 [proposed], #20925 [proposed], #20926 [proposed], #20927 [proposed], #21010 [executing], #21011 [executing], #21012 [executing], #21013 [executing], #21014 [executing], #21015 [executing], #21021 [executing], #21022 [executing], #21023 [executing], #21064 [executing], #21065 [executing], #21070 [executing], #2125, #2126, #2127, #2128, #2187, #2363, #2544, #2611, #450438, #5654, #9791
-
-**Last PICKUP PROMPT:**
-
-```
-is the method, not extra work.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1785012025445: EMSU institutional compliance, answers to Ruben's follow-ups delivered
-
-Where we left off (verified 2026-08-02 22:13 PT):
-- #20927 [proposed] explained plainly and not yet decided
-- Honest idea count: 12 ready_for_review, 5 in_progress, 1 proposed (not 16 executing)
-- "6 of 7 our fault" claim partially walked back: Salgado (0020) is ambiguous, Miller and Lammons probable but not ironclad, Pon/Chugh/Guillory are ironclad
-- Grade/policy RCA mechanics explained: pull texts, classify our-caused vs not, identify systems, file CFA auto-resolve rules
-
-Open threads:
-1. #20927 [proposed] Ruben decision: plain-language explanation delivered, awaiting yes/no
-2. Grade/policy cluster RCA: start now (exercise the method on 18+17+15+1 grievances) or defer
-3. 12 ready_for_review ideas: verify they reach deployed state
-
-Reference IDs:
-- ready_for_review: #20922, #20923, #20924, #20925, #21012, #21014, #21015, #21021, #21022, #21064, #21065, #21070
-- in_progress: #20926, #21010, #21011, #21013, #21023
-- proposed: #20927
-- Ledger appended: 2026-08-01 15:14 PT, 2026-08-01 17:28 PT
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```

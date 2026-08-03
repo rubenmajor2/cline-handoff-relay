@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/2/2026, 4:07:00 PM PT | window: last 72h | 61 tasks | index total 387 (parsed 3, cached 384)
+Generated: 8/2/2026, 5:07:00 PM PT | window: last 72h | 61 tasks | index total 387 (parsed 3, cached 384)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785649980432` | 8/2/2026, 4:05:48 PM | 180 | 603KB | #Argus |
-| `1785620212473` | 8/2/2026, 4:05:47 PM | 1540 | 4624KB | #GLM |
-| `1785600191339` | 8/2/2026, 3:59:58 PM | 1730 | 3617KB | #Kaizon / Bugs |
+| `1785600191339` | 8/2/2026, 4:59:07 PM | 1838 | 3834KB | #Kaizon / Bugs |
+| `1785620212473` | 8/2/2026, 4:44:26 PM | 1595 | 4747KB | #GLM |
+| `1785649980432` | 8/2/2026, 4:42:10 PM | 332 | 973KB | #Argus |
 | `1785653497679` | 8/2/2026, 12:30:52 AM | 96 | 719KB | The Fix AVP app is not working anymore, and seems to be stuck on my desktop / quick launch |
 | `1785602138255` | 8/1/2026, 11:36:20 PM | 890 | 2797KB | #Queued Ideas |
 | `1785613730033` | 8/1/2026, 11:30:44 PM | 288 | 1601KB | #Julia/Claudia |
@@ -76,63 +76,52 @@ Generated: 8/2/2026, 4:07:00 PM PT | window: last 72h | 61 tasks | index total 3
 
 ## Per-window detail
 
-### `1785649980432` — 8/2/2026, 4:05:48 PM PT — 180 turns
+### `1785600191339` — 8/2/2026, 4:59:07 PM PT — 1838 turns
 
 **Original task:**
 
 ```
-#Argus
+#Kaizon / Bugs
 
-Argus seems incredibly slow and is giviing answers not even close to liek what the answers you will give here in cline, why? I just wonder becasue I'm genuinely confused why. Can you help with this?
+I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #13838, #16163, #16265, #16304, #16844, #18312, #18326, #1864, #18868, #19163, #19415, #19416, #19784, #19840, #20193, #20328, #20420, #20423, #20644 [ready_for_review], #20662 [deployed], #20674 [rejected], #20675 [pending], #20681 [ready_for_review], #20690 [proposed], #20711, #20899 [ready_for_review], #20944 [proposed], #20945 [proposed], #20956 [proposed], #20957 [proposed], #20976 [proposed], #21004, #21034, #21044, #21053 [proposed], #21073, #21074, #21101 [ready_for_review], #21102 [ready_for_review], #21109 [ready_for_review], #21110 [ready_for_review], #21138 [pending], #21171 [proposed], #21185 [pending], #2121, #21230 [approved], #21231 [approved], #2138, #2139, #2140, #21426 [approved], #21427 [ready_for_review], #21428 [ready_for_review], #21429 [approved], #21430 [approved], #21431 [approved], #21433 [approved], #21434 [approved], #21435 [approved], #21436 [approved], #2153, #2154, #37972, #45094, #5749, #6785, #699463
+**Ideas referenced:** #12646, #12724, #1468, #14937, #1679, #1685, #1686, #1687, #1754, #1755, #178501, #1833, #18694, #18696, #18841, #1909, #19177, #19188, #19190, #19193, #19198, #19227, #19234, #19435, #19439, #19490, #19492, #19495, #19504, #19511, #19576, #19776, #1980, #19803, #1985, #1986, #1990, #1993, #20079, #20142, #20149, #20297 [queued], #2036, #2044, #20495 [queued], #20506 [executing], #20633, #20882, #20883, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #20969 [proposed], #20970 [proposed], #20971 [proposed], #20972 [proposed], #20973 [proposed], #20974 [proposed], #20975 [approved], #21000 [deployed], #21001, #21002, #21004 [proposed], #2103, #21033, #2109, #21096 [ready_for_review], #21097 [deployed], #2116, #21162 [proposed], #21163 [proposed], #21165 [implemented], #21166 [implemented], #21167 [impl_failed], #21168 [deployed], #21169 [deployed], #2118, #21201 [implemented], #21400, #21401 [implemented], #21405 [implemented], #21432 [proposed], #21529, #21558, #3076, #3077, #3081, #4421, #45094, #7358, #8869, #9269
 
 **Last PICKUP PROMPT:**
 
 ```
-ou want me to implement first?
+for the doorman details first?
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Argus improvements: notifications for idea status changes + error reduction.
+Pick up task #N — KAIZEN replay loop: worker built, provider details needed from Ruben.
 
-Where we left off (verified 2026-08-02 15:49 PT):
-- 255 argus-tagged ideas: 91 deployed (36%), 47 rejected (18%), 84 in limbo (33%) with zero user notification on status changes
-- 3,419 actions, 275 failures (8.0%), top categories: entity_not_resolved (184/67%), unclassified (43/16%), missing_required_arg (19/7%)
-- CFrench searched sharriganemt@gmail.com 4x via 4 different actions — all returned "no student found" — zero notification to CFrench
-- ticket_comment at 6.3% success (effectively broken), student_lookup at 47% (half fail)
-- Aug 1 dip to 84% tracked Cline steering bug #2154; Aug 2 recovered to 96% — fix confirmed helping
-- 6 improvements prioritized: notification wiring (#1), entity resolution (#2), ticket_comment (#3), student_lookup fuzzy matching (#4), missing_required_arg auto-repair (#5), failure categorization (#6)
+Where we left off (verified Sat Aug 2 2026 5:01 PM PDT):
+- `cron_kaizen_replay_worker.php` (48 lines) deployed — queries in_progress, loops, but provider lookup fails because `frankenstein-llm` has no active row in `llm_replay_providers`.
+- Replay queue: 12 in_progress, 5 failed, 0 completed. Worker returns 0 replays.
+- Full pipeline: Bug Hunter (live), classifier (hardened), recipe fire (100/run), deadman retrains (12 prompts deployed), CSAT/NPS instrument (29 rows, writer cron).
+- Recipe coverage: 272 enabled recipes, 0 uncovered categories confirmed.
+- CSAT baseline: avg 2.0 CSAT, NPS −50 across all deadman classes.
+- Bug library: 114 total, 5 open.
 
-Open threads to drive next:
-1. (human-only decision, no idea) — Implement `orchestrator_ideas.status` → `notifications` INSERT on status change. 15 lines. Ruben go-ahead pending.
-2. (human-only decision, no idea) — Implement entity detection pre-routing: "this looks like a course name" → skip student_lookup. Fixes 67% of failures.
-3. (human-only decision, no idea) — Investigate and fix ticket_comment at 6.3% success. Likely token/auth/format bug.
-4. (human-only decision, no idea) — Add fuzzy matching to student_lookup (47% success rate). "Did you mean?" before "not found."
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #21432 [executing] — KAIZEN replay worker: needs Ruben's provider details before it goes live. Burn 12 stuck items per Ruben's word.
+2. #21167 [blocked] — GLM-5.2 TP=1 PP=6 NCCL decode-wedge: impl_failed, left for fleet window per Ruben's steering.
+3. (human-only decision) — Should the replay worker ingest training data from successful replays into `glm52_lora_training_examples`?
+4. (human-only decision) — Should the worker post to `system_prompt_history` when retrain_system_prompt recipes fire AND replays succeed?
+5. #21167 [blocked — GLM52 fleet work] — left for dedicated fleet window per Ruben's steering. No action taken in this window.
 
 Reference IDs:
-- Bug library: #2154 (Cline steering fix — confirmed improving Argus success rate)
-- Ideas: #21138 (Speed up Argus), #21110 (Argus can't answer exam questions), #21109 (Argus progress stuck at 0%), #20944 (Restore GLM ring)
-- Tables: orchestrator_ideas (status, source), argus_audit_log (action_name, failure_category, success), argus_task_queue (3 tasks total), argus_analytics (model_used, response_time_ms, is_moot)
+- Ideas shipped: #20970, #20971, #20973, #20974, #20975, #21096, #21097, #21162, #21163, #21165, #21166, #21168, #21169, #21400, #21401, #21432, #21201
+- Files touched: `/var/www/emtskills/cron_kaizen_replay_worker.php`, `/var/www/emtskills/cron_kaizen_classifier.php`, `/var/www/emtskills/cron_kaizen_retrain_executor.php`, `/var/www/emtskills/cron_csat_nps_ingest.php`, `/var/www/emtskills/cron_bug_hunter_scan.php`, `/var/www/emtskills/cron_kaizen_consumer.php`
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Check argus_task_queue — 3 tasks (all done, barely used)
-- [x] Check orchestrator_ideas tagged argus — 255 total, 91 deployed, 84 in limbo with no notification
-- [x] Check argus_audit_log — 3,419 actions, 8% failure rate, entity_not_resolved = 67% of failures
-- [x] Check per-action success rates — ticket_comment 6.3%, student_lookup 47% are worst
-- [x] Check daily error trend — 96% today (post-fix recovery from 84% Aug 1)
-- [x] Concrete example: CFrench x4 silent failures on sharriganemt@gmail.com
-- [x] Deliver prioritized improvement plan to Ruben
-</task_progress>
-</attempt_completion>
 ```
 
-### `1785620212473` — 8/2/2026, 4:05:47 PM PT — 1540 turns
+### `1785620212473` — 8/2/2026, 4:44:26 PM PT — 1595 turns
 
 **Original task:**
 
@@ -182,47 +171,45 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </attempt_completion>
 ```
 
-### `1785600191339` — 8/2/2026, 3:59:58 PM PT — 1730 turns
+### `1785649980432` — 8/2/2026, 4:42:10 PM PT — 332 turns
 
 **Original task:**
 
 ```
-#Kaizon / Bugs
+#Argus
 
-I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
+Argus seems incredibly slow and is giviing answers not even close to liek what the answers you will give here in cline, why? I just wonder becasue I'm genuinely confused why. Can you help with this?
 ```
 
-**Ideas referenced:** #12724, #1468, #14937, #1679, #1685, #1686, #1687, #1754, #1755, #178501, #1833, #18694, #18696, #18841, #1909, #19188, #19190, #19193, #19198, #19227, #19234, #19435, #19490, #19492, #19495, #19504, #19511, #19576, #19776, #1980, #19803, #1985, #1986, #1990, #1993, #20079, #20142, #20149, #20297 [queued], #2036, #2044, #20495 [queued], #20506 [executing], #20633, #20882, #20883, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #20969 [proposed], #20970 [proposed], #20971 [proposed], #20972 [proposed], #20973 [proposed], #20974 [proposed], #20975 [approved], #21000 [deployed], #21001, #21002, #21004 [proposed], #2103, #21033, #2109, #21096 [ready_for_review], #21097 [deployed], #2116, #21162 [proposed], #21163 [proposed], #21165 [implemented], #21166 [implemented], #21167 [impl_failed], #21168 [deployed], #21169 [deployed], #2118, #21201 [implemented], #21400, #21401 [implemented], #21405 [implemented], #21432 [proposed], #21529, #21558, #3076, #3077, #3081, #4421, #45094, #7358, #8869, #9269
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #13838, #16163, #16265, #16304, #16844, #18312, #18326, #18378 [deployed], #18379 [rejected], #18380 [rejected], #1864, #18868, #18944 [approved], #18950 [deployed], #18951 [deployed], #18973 [approved], #19098 [pending], #19099 [pending], #19163, #19386 [deployed], #19403 [rejected], #19415, #19416, #19419 [ready_for_review], #19424 [pending], #19470 [deployed], #19471 [approved], #19478 [deployed], #19487 [deployed], #19489 [pending], #19499 [deployed], #19518 [rejected], #19593 [pending], #19624 [pending], #19641 [pending], #19642 [approved], #19644 [approved], #19731 [pending], #19776 [deployed], #19782 [pending], #19784 [deployed], #19840, #19871 [deployed], #19888 [pending], #19970 [approved], #19971 [deployed], #19975 [pending], #19978 [pending], #19995 [pending], #20164 [pending], #20193, #20197 [deployed], #20233 [pending], #20328, #20384 [deployed], #20413 [pending], #20417 [pending], #20420, #20423, #20557 [proposed], #20572 [pending], #20598 [pending], #20644 [ready_for_review], #20662 [deployed], #20674 [rejected], #20675 [pending], #20681 [ready_for_review], #20690 [proposed], #20711, #20899 [ready_for_review], #20944 [proposed], #20945 [proposed], #20956 [proposed], #20957 [proposed], #20976 [proposed], #21004, #21034, #21044, #21053 [proposed], #21073, #21074, #21101 [ready_for_review], #21102 [ready_for_review], #21109 [ready_for_review], #21110 [ready_for_review], #21138 [pending], #21171 [proposed], #21185 [pending], #2121, #21230 [approved], #21231 [approved], #21262, #2138, #2139, #2140, #21426 [approved], #21427 [ready_for_review], #21428 [ready_for_review], #21429 [approved], #21430 [approved], #21431 [approved], #21433 [approved], #21434 [approved], #21435 [approved], #21436 [approved], #2153, #2154, #21580 [proposed], #21581 [proposed], #21582 [proposed], #30363, #37972, #45094, #5749, #6785, #699463
 
 **Last PICKUP PROMPT:**
 
 ```
-currently fires into the void.
+e (5 of 79 successes pre-fix).
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up KAIZEN replay worker + health source DB writers — expand catch/fix radius.
+Pick up task — Argus improvements wrap-up + 48h success-rate monitor.
 
-Where we left off (verified 2026-08-02 15:58 PT):
-- Recipe pipeline: classifying 903 rows/7d, firing 1041 recipes/24h, 0 recipe gaps
-- Repair dead-end: 17 items stuck in_progress in orchestrator_llm_replay_queue, 0 completed, no replay worker exists
-- Health sources all empty: glm52_health_events (0), fleet_backend_health (0), cluster_health_log (0), cx7_nccl_stall_events (0) — DB tables exist, no writers
-- Bug Hunter scanner: feeds only from bug_library (40 findings/run, same 40 rows rescanned)
+Where we left off (verified 2026-08-02 16:41 PT):
+- lib/argus_action_catalog.php: 4 ticket actions patched with string ticket_id resolver; entity pre-routing guard added for student/course/exam queries
+- lib/ArgusIdeaEta.php: argus_notify_idea_change() helper added (dedup via source_chain_slug)
+- cron/cron_auto_idea_impl.php: notify call at deployed transition
+- routes/argus_terminal.php: My Ideas tab rendering argus_my_ideas() with ETA
+- agent_drafts + notifications: 102 backfilled rows for Argus filers
 
-Open threads to drive next:
-1. #21432 [proposed] — KAIZEN replay worker: unstick 17 in_progress repairs + build cron_executor for replay queue
-2. #21201 [deployed] — Ghost category recipes added (predispatch_ghost_detected + silent_ghost_no_files), 0 uncovered categories verified
-3. #21163 [deployed] — Retrain executor generalized via EXISTS subquery + rca_retrain_enabled flag, 12 deadman prompts deployed to system_prompt_history
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #21582 [queued] — After 2026-08-04 16:41 PT, run argus_audit_log query: SELECT action_name, COUNT(*), SUM(success) FROM argus_audit_log WHERE action_name IN ('ticket_comment','ticket_status','ticket_priority','ticket_assign') AND created_at > '2026-08-02 16:41:00' GROUP BY action_name; compare to 6.3% baseline
+2. #21580 [deployed] — If success rate still <80%, inspect tickets.ticket_number formats (some may use display_id / legacy numbering not covered by exact+LIKE lookup)
 
 Reference IDs:
-- Ticket: Kaizon / Bugs (originating task)
-- Ideas filed: 20970, 20971, 20973, 20974, 20975, 21096, 21097, 21162, 21163, 21165, 21166, 21168, 21169, 21400, 21401, 21405, 21432
-- Files touched: cron_bug_hunter_scan.php, cron_kaizen_classifier.php, cron_kaizen_retrain_executor.php, cron_csat_nps_ingest.php, sp_kaizen_surface_classify, v_kaizen_all_findings, agent_csat_nps table, failure_repair_recipes table, agent_deadman_incidents table
+- Ideas filed: #21580, #21581, #21582
+- Files touched: /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/lib/ArgusIdeaEta.php, /var/www/emtskills/cron/cron_auto_idea_impl.php, /var/www/emtskills/routes/argus_terminal.php
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
+═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
 

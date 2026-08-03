@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-03T00:07:00.832Z",
+ "generated_at": "2026-08-03T01:22:40.664Z",
  "counts": {
-  "parsed": 3,
-  "reused": 384,
+  "parsed": 2,
+  "reused": 385,
   "failed": 0,
   "total": 387
  },
@@ -106977,11 +106977,11 @@
   },
   "1785600191339": {
    "task_id": "1785600191339",
-   "mtime": 1785715147675,
+   "mtime": 1785720126418,
    "created_at": "2026-08-01T16:03:11.339Z",
-   "last_modified": "2026-08-02T23:59:07.675Z",
-   "size_kb": 3834,
-   "turn_count": 1838,
+   "last_modified": "2026-08-03T01:22:06.418Z",
+   "size_kb": 3840,
+   "turn_count": 1842,
    "title": "#Kaizon / Bugs\n\nI want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh instead of what's stale? \n\nI need to increase overall operational efficiency and I see that Kaizon, ",
    "pickup_prompt": "for the doorman details first?\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #N — KAIZEN replay loop: worker built, provider details needed from Ruben.\n\nWhere we left off (verified Sat Aug 2 2026 5:01 PM PDT):\n- `cron_kaizen_replay_worker.php` (48 lines) deployed — queries in_progress, loops, but provider lookup fails because `frankenstein-llm` has no active row in `llm_replay_providers`.\n- Replay queue: 12 in_progress, 5 failed, 0 completed. Worker returns 0 replays.\n- Full pipeline: Bug Hunter (live), classifier (hardened), recipe fire (100/run), deadman retrains (12 prompts deployed), CSAT/NPS instrument (29 rows, writer cron).\n- Recipe coverage: 272 enabled recipes, 0 uncovered categories confirmed.\n- CSAT baseline: avg 2.0 CSAT, NPS −50 across all deadman classes.\n- Bug library: 114 total, 5 open.\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #21432 [executing] — KAIZEN replay worker: needs Ruben's provider details before it goes live. Burn 12 stuck items per Ruben's word.\n2. #21167 [blocked] — GLM-5.2 TP=1 PP=6 NCCL decode-wedge: impl_failed, left for fleet window per Ruben's steering.\n3. (human-only decision) — Should the replay worker ingest training data from successful replays into `glm52_lora_training_examples`?\n4. (human-only decision) — Should the worker post to `system_prompt_history` when retrain_system_prompt recipes fire AND replays succeed?\n5. #21167 [blocked — GLM52 fleet work] — left for dedicated fleet window per Ruben's steering. No action taken in this window.\n\nReference IDs:\n- Ideas shipped: #20970, #20971, #20973, #20974, #20975, #21096, #21097, #21162, #21163, #21165, #21166, #21168, #21169, #21400, #21401, #21432, #21201\n- Files touched: `/var/www/emtskills/cron_kaizen_replay_worker.php`, `/var/www/emtskills/cron_kaizen_classifier.php`, `/var/www/emtskills/cron_kaizen_retrain_executor.php`, `/var/www/emtskills/cron_csat_nps_ingest.php`, `/var/www/emtskills/cron_bug_hunter_scan.php`, `/var/www/emtskills/cron_kaizen_consumer.php`\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════",
    "ideas": {
@@ -107675,11 +107675,11 @@
   },
   "1785620212473": {
    "task_id": "1785620212473",
-   "mtime": 1785714266842,
+   "mtime": 1785720017148,
    "created_at": "2026-08-01T21:36:52.473Z",
-   "last_modified": "2026-08-02T23:44:26.842Z",
-   "size_kb": 4747,
-   "turn_count": 1595,
+   "last_modified": "2026-08-03T01:20:17.148Z",
+   "size_kb": 4758,
+   "turn_count": 1599,
    "title": "#GLM\n\n**Yes, run the next window on frankenstein-llm.** It is the correct pick per rule 146 (free-local-first, one router for everything). Two things to know: the GLM 5.2 priority gate I shipped is live, so frankenstein-llm will gen-probe GLM 5.2 first, correctly see it cannot decode, and fall through to the 120B pool / frankenstein-tools adapter. You get free local either way. Do NOT pick an Anthropic model.\n\nWhere things stand: the ring now BOOTS clean (all 6 up, HTTP 200, correct sparse attention backend) after I found and fixed four launcher regressions. The original decode-wedge is still there, generation returns zero tokens. That is the one real remaining problem, and I proved it is in",
    "pickup_prompt": ": http://192.168.1.115:8210/v1\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1785314663557, GLM-5.2 ring. Model: frankenstein-llm.\n\nWhere we left off (verified 2026-08-01 19:05 PT):\n- PP=5 ring LIVE: cato(r0), augustus(r1), pompey(r2), tiberius(r3), cesar(r4)\n- Marcus UP but IDLE (not in PP=5 ring, no container)\n- Durable fix verified: --nnodes ${CFG_NNODES} on all 5 nodes\n- Generation WORKING: ~2.65 tok/s\n- Bug library #2143 [resolved] recorded\n\nOpen threads:\n1. #21004 [proposed] Decode-wedge levers - moot for PP=5\n2. #20536 [awaiting_review] Original decode-wedge idea\n3. #20873 [proposed] Generation forward-progress probe for monitor\n4. #20955 [awaiting_review] GLM 5.2 routing priority gate, shipped live\n5. #20495 [executing] Monitor + cron automation deployed\n\nReference IDs:\n- Bug library: #2143 [resolved] (297 classification), #2142 [resolved] (PP=5 decode-wedge)\n- Files: /Users/rubenmajor/Desktop/glm52_launch_cfg.sh (v6, fixed nnodes)\n- Ring: cato(r0)@115, augustus(r1)@244, pompey(r2)@21, tiberius(r3)@32, cesar(r4)@56\n- Marcus: UP@171, IDLE (no container)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {

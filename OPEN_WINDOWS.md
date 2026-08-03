@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/2/2026, 5:07:00 PM PT | window: last 72h | 61 tasks | index total 387 (parsed 3, cached 384)
+Generated: 8/2/2026, 6:22:40 PM PT | window: last 72h | 61 tasks | index total 387 (parsed 2, cached 385)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785600191339` | 8/2/2026, 4:59:07 PM | 1838 | 3834KB | #Kaizon / Bugs |
-| `1785620212473` | 8/2/2026, 4:44:26 PM | 1595 | 4747KB | #GLM |
+| `1785600191339` | 8/2/2026, 6:22:06 PM | 1842 | 3840KB | #Kaizon / Bugs |
+| `1785620212473` | 8/2/2026, 6:20:17 PM | 1599 | 4758KB | #GLM |
 | `1785649980432` | 8/2/2026, 4:42:10 PM | 332 | 973KB | #Argus |
 | `1785653497679` | 8/2/2026, 12:30:52 AM | 96 | 719KB | The Fix AVP app is not working anymore, and seems to be stuck on my desktop / quick launch |
 | `1785602138255` | 8/1/2026, 11:36:20 PM | 890 | 2797KB | #Queued Ideas |
@@ -76,7 +76,7 @@ Generated: 8/2/2026, 5:07:00 PM PT | window: last 72h | 61 tasks | index total 3
 
 ## Per-window detail
 
-### `1785600191339` — 8/2/2026, 4:59:07 PM PT — 1838 turns
+### `1785600191339` — 8/2/2026, 6:22:06 PM PT — 1842 turns
 
 **Original task:**
 
@@ -121,7 +121,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════
 ```
 
-### `1785620212473` — 8/2/2026, 4:44:26 PM PT — 1595 turns
+### `1785620212473` — 8/2/2026, 6:20:17 PM PT — 1599 turns
 
 **Original task:**
 

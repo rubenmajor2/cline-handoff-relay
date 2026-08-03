@@ -6,10 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/3/2026, 9:51:24 AM PT | window: last 72h | 62 tasks | index total 390 (parsed 3, cached 387)
+Generated: 8/3/2026, 10:51:24 AM PT | window: last 72h | 68 tasks | index total 396 (parsed 4, cached 392)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1785775905424` | 8/3/2026, 10:51:12 AM | 183 | 432KB | # GLM-5.2 Hexarchy Ring — Scientific Diagnosis & Stabilization Summary |
+| `1785777088737` | 8/3/2026, 10:51:07 AM | 75 | 1011KB | #Texas |
+| `1785778361008` | 8/3/2026, 10:51:07 AM | 61 | 333KB | https://emsuniversity.com/emtskills/routes/login_sms.php Sent verification code, but does  |
+| `1785778409357` | 8/3/2026, 10:47:21 AM | 64 | 936KB | What is this person actually upset about other than AI answering calls and emails? Can you |
+| `1785776636014` | 8/3/2026, 10:15:42 AM | 50 | 148KB | Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up |
+| `1785776142309` | 8/3/2026, 10:03:48 AM | 34 | 309KB | Why does frankenstein-llm have this error? |
 | `1785600191339` | 8/3/2026, 9:48:05 AM | 2838 | 5890KB | #Kaizon / Bugs |
 | `1785722877297` | 8/3/2026, 9:47:21 AM | 870 | 2955KB | #GLM |
 | `1785775272174` | 8/3/2026, 9:41:12 AM | 1 | 2KB | Analysis only - tell me why frankenstein llm is so slow right now |
@@ -76,6 +82,195 @@ Generated: 8/3/2026, 9:51:24 AM PT | window: last 72h | 62 tasks | index total 3
 ---
 
 ## Per-window detail
+
+### `1785775905424` — 8/3/2026, 10:51:12 AM PT — 183 turns
+
+**Original task:**
+
+```
+# GLM-5.2 Hexarchy Ring — Scientific Diagnosis & Stabilization Summary
+
+## Root Causes Identified (Ruben Directive: "stop regressing, use the bug library")
+
+**Bug 1 (New Discovery): spark-memguard.sh — The Silent Killer**
+- `/usr/local/bin/spark-memguard.sh` runs every minute as root cron on ALL ring nodes
+- When swap used > 10GB, it executes `pkill -9 -f EngineCore` + `pkill -9 -f "vllm serve"` in EVERY container
+- This was the root cause of silent ring deaths: the 352 GiB weight load spikes swap >10GB → memguard fires → APIServer sees engine death → clean shutdown at 15:00:26
+- **FIXED 2026-
+```
+
+**Ideas referenced:** #10108, #1130, #1131, #11741, #1241, #12425, #1248, #1249, #1252, #1258, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18471, #19135, #19567, #1967, #1986, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2116, #21213, #2127, #2138, #2157, #2160, #21684 [drafted], #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+nk4 .32, Cesar(3b41)=rank5 .56
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #21684 [executing] — GLM-5.2 hexarchy ring: sustained decode check + leftover cleanup.
+
+Where we left off (verified 2026-08-03 10:36 PT):
+- Ring SERVING on Cato :8210 (glm-5.2-15pct, max_model_len 131072). EngineCore PID 126 inside vllm_slot, access logs show 14x POST /v1/chat/completions 200 OK.
+- v5 canonical launcher active: NCCL_IB_DISABLE=0, VLLM_DISABLE_DSA=0, EXEC=mp, PP=6, rank0=Cato 192.168.1.115.
+- Interference disabled: hexarchy_guard no-op (flag file removed), ray_worker_monitor out of crontab, /tmp/glm52_launch_ray.sh -> .BAK, glm52-logdump quieted.
+- Supervisor v3 live on Cato (~/bin/glm52_ring_supervisor.sh, serial-to-IP resolver).
+- stale_cron (root) active on all 6 nodes; memguard v2.1 on all 6.
+
+Open threads to drive next:
+1. #21684 [executing] — Sustained decode: send 3-5 multi-token chat completions from within vllm_slot container (docker exec to avoid SSH escaping), confirm coherent finish_reason + completion_tokens > 1 each, and ring does not restart under load.
+2. #21684 [executing] — After 48h stability: rm /tmp/glm52_launch_ray.sh.BAK and consider re-enabling ray_worker_monitor with v5 launcher (optional).
+3. #21684 [executing] — Add on-box decode probe for supervisor (currently HTTP-only health check); PR to bug library for hexarchy_guard interference.
+
+Reference IDs:
+- Bugs recorded: glm52_ring_stabilized_cfgv5_ncclib0_dsa0_20260803 (P0_resolved); new interference incidents (hexarchy_guard, ray_worker_monitor) in HANDOFF_NOTES 2026-08-03 10:28 PT.
+- Files touched: ~/bin/glm52_ring_supervisor.sh (v3), ~/glm52_launch_pp6.sh (x6 nodes), /tmp/glm52_logdumper.sh (placeholder), HANDOFF_NOTES.md.
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785777088737` — 8/3/2026, 10:51:07 AM PT — 75 turns
+
+**Original task:**
+
+```
+#Texas
+
+See the proposed flight schedule for San Antonio and Houston. We could potentially drive to Austin if needed. But hoping that's not required? 
+
+#TDSHS  The pickup prompt covers all rule-91 required elements:
+
+- __Binary gate:__ `═══ PICKUP PROMPT ═══` (47 U+2550 chars)
+- __Task ID with topic:__ `Pick up task #20734 — Texas TDSHS Sunset Commission outreach...`
+- __Where we left off:__ verified PT timestamp, current state with URLs, file paths, and context (the 404 fix, WOPR deployment, all content present, critical Mon Aug 3 deadline)
+- __Open threads:__ 3 actions, ALL with real idea #2
+```
+
+**Ideas referenced:** #0369, #0891, #1368, #1565, #15803, #166534, #1976, #20734 [proposed], #2563, #334155, #475569, #6366, #64748, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+ori can access it with a link?
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #20734 [executing] — Texas TDSHS Sunset outreach: update Cori PDF with per-legislator constituent framing, fix route
+
+Where we left off (2026-08-03 10:45 PT):
+- 4 emails already sent (Kolkhorst x2, Campbell, Campos)
+- Cori PDF on Desktop needs per-legislator approach guidance:
+  Campos = constituent (HD-119 contains EMSU)
+  Campbell = EMS educator with first responders in your district (stretch but true)
+  Kolkhorst = Sunset review input from Texas EMS provider (do NOT claim constituent)
+- Route table on deployed page still STALE
+
+Open threads:
+1. #20734 [proposed] — Rebuild Cori PDF with per-legislator talking points
+2. #20734 [proposed] — Deploy PDF to server for shareable link
+3. #20734 [proposed] — Fix texas_outreach.php route table
+4. #20734 [proposed] — File Sunset public input
+
+Reference IDs:
+- Ideas filed: #20734 [executing]
+- Files touched: /Users/rubenmajor/Desktop/Cori_Meeting_Scheduling_Texas_Aug9-12.pdf
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785778361008` — 8/3/2026, 10:51:07 AM PT — 61 turns
+
+**Original task:**
+
+```
+https://emsuniversity.com/emtskills/routes/login_sms.php Sent verification code, but does not move to the page where I can enter it
+```
+
+**Ideas referenced:** #15669, #16817, #3742, #666666, #842029
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785778409357` — 8/3/2026, 10:47:21 AM PT — 64 turns
+
+**Original task:**
+
+```
+What is this person actually upset about other than AI answering calls and emails? Can you look at the underlying issues for legitimacy as well?
+```
+
+**Ideas referenced:** #15711, #16413, #21748 [proposed], #21749 [proposed], #22861, #2686, #4929, #687532, #9373
+
+**Last PICKUP PROMPT:**
+
+```
+lameda for a slot before 8/19.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — Bode Penrose: drive the two filed fixes forward (chat abandonment + externship placement).
+
+Where we left off (verified 2026-08-03 10:46 PT):
+- Student Scott "Bode" Penrose (26617FT-06): $2,195 paid, Final Exam 131/150, course ends 8/19/2026.
+- 18 "Chat handoff went unanswered" tickets since 7/4, all auto-closed with no human action. Open ticket #22861 remains pending.
+- Phone call 7/13 auto-dismissed as "system UP" by VAPI detector, no callback. Ticket #16413.
+- Externship request #2686: 14d pending, pref date 8/1 passed, preceptor_state=not_sent, no agency contacted. Moodle externship assigns 162-166 show 0 submissions; he cannot complete them without a placement.
+- Recomended call to Bode at +14153053381 and Falck Alameda push before 8/19.
+
+Open threads to drive next:
+1. #21748 [proposed] — Route to Vicky/Ruben: human must call Bode today; investigate why chat-handoff tickets are created High-priority but never actioned (watchdog gap).
+2. #21749 [proposed] — Have Nefemito/Jehan contact a Falck Alameda/Oakland agency for request #2686 this week; course end 8/19 is the hard deadline.
+
+Reference IDs:
+- Ideas filed: #21748 [proposed], #21749 [proposed]
+- Files touched: none
+- Tickets: 22861, 16413, 22644, 22216, 22221, 20318, 20498, 20399, 17482, 18241
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785776636014` — 8/3/2026, 10:15:42 AM PT — 50 turns
+
+**Original task:**
+
+```
+Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up
+
+Where we left off (verified 2026-08-03 09:46 PT):
+- Replay worker: 17/17 stuck items cleared, 17 rows landed in llm_replay_results (provider qwen14b_fast). Verified earlier this session.
+- Sensor grid: v_kaizen_all_findings live with 4 sources (executor 884, recipefire 1241, deadman 11, buglib 41). Verified executor is fresh.
+- Pipeline classifier: 127 rows classified via manual run at 7:33 AM; crons registered but kaizen_*.log files DON'T exist — automation delivery mechanism broken (log files never created)
+- #21710 REV
+```
+
+**Ideas referenced:** #13440, #21432 [proposed], #21433 [ready_for_review], #21434 [ready_for_review], #21586 [approved], #21587 [ready_for_review], #21588 [approved], #21667 [executing], #21710 [reverted], #21712 [proposed], #9109, #9132, #9222
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785776142309` — 8/3/2026, 10:03:48 AM PT — 34 turns
+
+**Original task:**
+
+```
+Why does frankenstein-llm have this error?
+
+Ist his fromthe new VS Code upgrade?
+```
+
+**Ideas referenced:** #16588, #16648, #17202, #17203, #17205, #17300, #17430, #178493, #18329, #18820, #18868, #1934, #20549, #2164 [open], #21737 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785600191339` — 8/3/2026, 9:48:05 AM PT — 2838 turns
 

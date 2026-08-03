@@ -6,15 +6,21 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/3/2026, 10:51:24 AM PT | window: last 72h | 68 tasks | index total 396 (parsed 4, cached 392)
+Generated: 8/3/2026, 11:51:24 AM PT | window: last 72h | 74 tasks | index total 402 (parsed 10, cached 392)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785775905424` | 8/3/2026, 10:51:12 AM | 183 | 432KB | # GLM-5.2 Hexarchy Ring — Scientific Diagnosis & Stabilization Summary |
-| `1785777088737` | 8/3/2026, 10:51:07 AM | 75 | 1011KB | #Texas |
-| `1785778361008` | 8/3/2026, 10:51:07 AM | 61 | 333KB | https://emsuniversity.com/emtskills/routes/login_sms.php Sent verification code, but does  |
-| `1785778409357` | 8/3/2026, 10:47:21 AM | 64 | 936KB | What is this person actually upset about other than AI answering calls and emails? Can you |
-| `1785776636014` | 8/3/2026, 10:15:42 AM | 50 | 148KB | Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up |
+| `1785775905424` | 8/3/2026, 11:51:19 AM | 361 | 848KB | # GLM-5.2 Hexarchy Ring — Scientific Diagnosis & Stabilization Summary |
+| `1785780445834` | 8/3/2026, 11:51:06 AM | 111 | 434KB | Propose for Telephony with some features similar to /proctoring for the Admin role (in thi |
+| `1785782909425` | 8/3/2026, 11:51:06 AM | 15 | 52KB | Why am i not seeing clustered ideas here in cline? |
+| `1785779852459` | 8/3/2026, 11:51:01 AM | 183 | 1609KB | Reply to this person says Hi "Internal" - tha'ts wrong. Also it appears that Email Agent d |
+| `1785779749179` | 8/3/2026, 11:50:58 AM | 135 | 376KB | I need to make sure that the AI categoriztion of the info@emsuniversity.com inbox has stop |
+| `1785778409357` | 8/3/2026, 11:50:54 AM | 219 | 2010KB | What is this person actually upset about other than AI answering calls and emails? Can you |
+| `1785781386836` | 8/3/2026, 11:50:51 AM | 22 | 70KB | Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/  |
+| `1785778361008` | 8/3/2026, 11:49:14 AM | 188 | 739KB | https://emsuniversity.com/emtskills/routes/login_sms.php Sent verification code, but does  |
+| `1785781530203` | 8/3/2026, 11:35:20 AM | 46 | 208KB | Is this GLM faster aggregate than 4tok/sec |
+| `1785776636014` | 8/3/2026, 11:22:07 AM | 134 | 337KB | Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up |
+| `1785777088737` | 8/3/2026, 10:58:22 AM | 94 | 1066KB | #Texas |
 | `1785776142309` | 8/3/2026, 10:03:48 AM | 34 | 309KB | Why does frankenstein-llm have this error? |
 | `1785600191339` | 8/3/2026, 9:48:05 AM | 2838 | 5890KB | #Kaizon / Bugs |
 | `1785722877297` | 8/3/2026, 9:47:21 AM | 870 | 2955KB | #GLM |
@@ -83,7 +89,7 @@ Generated: 8/3/2026, 10:51:24 AM PT | window: last 72h | 68 tasks | index total 
 
 ## Per-window detail
 
-### `1785775905424` — 8/3/2026, 10:51:12 AM PT — 183 turns
+### `1785775905424` — 8/3/2026, 11:51:19 AM PT — 361 turns
 
 **Original task:**
 
@@ -99,40 +105,359 @@ Generated: 8/3/2026, 10:51:24 AM PT | window: last 72h | 68 tasks | index total 
 - **FIXED 2026-
 ```
 
-**Ideas referenced:** #10108, #1130, #1131, #11741, #1241, #12425, #1248, #1249, #1252, #1258, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18471, #19135, #19567, #1967, #1986, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2116, #21213, #2127, #2138, #2157, #2160, #21684 [drafted], #7142, #7149
+**Ideas referenced:** #10108, #1130, #1131, #11741, #12365, #12368, #1241, #12425, #1248, #1249, #1252, #1258, #12657, #13121, #13202, #1378, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18471, #18720, #18868, #19135, #19567, #1967, #1986, #19903, #19907, #19925, #20042, #20247, #20264, #20272, #2050, #20536, #2063, #2065, #20662, #2073, #2092, #2096, #20985, #21038, #2116, #21213, #2127, #2138, #2157, #2160, #21684 [drafted], #22000 [proposed], #22001 [proposed], #22002 [proposed], #22003 [proposed], #22004 [proposed], #22051, #22052, #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
-nk4 .32, Cesar(3b41)=rank5 .56
+ogdump loop, stale_launcher v2
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #21684 [executing] — GLM-5.2 hexarchy ring: sustained decode check + leftover cleanup.
+Pick up task #21684 [executing] — GLM-5.2 hexarchy ring stabilization phase 2.
 
-Where we left off (verified 2026-08-03 10:36 PT):
-- Ring SERVING on Cato :8210 (glm-5.2-15pct, max_model_len 131072). EngineCore PID 126 inside vllm_slot, access logs show 14x POST /v1/chat/completions 200 OK.
-- v5 canonical launcher active: NCCL_IB_DISABLE=0, VLLM_DISABLE_DSA=0, EXEC=mp, PP=6, rank0=Cato 192.168.1.115.
-- Interference disabled: hexarchy_guard no-op (flag file removed), ray_worker_monitor out of crontab, /tmp/glm52_launch_ray.sh -> .BAK, glm52-logdump quieted.
-- Supervisor v3 live on Cato (~/bin/glm52_ring_supervisor.sh, serial-to-IP resolver).
-- stale_cron (root) active on all 6 nodes; memguard v2.1 on all 6.
+Where we left off (verified 2026-08-03 11:22 PT):
+- Ring auto-relaunched by supervisor v3 at 11:18:09, container Up 3 minutes, weight-loading (expect service ~11:26).
+- 120B fleet (CESAR :11506, ARTEMIS :11507) is DOWN from both WOPR and Cato LAN — needs investigation.
+- 5 open threads filed above: #22000 (root-cause silent engine death), #22001 (restore 120B fleet), #22002 (turn distribution sidecar), #22003 (supervisor v3 @reboot cron), #22004 (keep-warm probe).
 
 Open threads to drive next:
-1. #21684 [executing] — Sustained decode: send 3-5 multi-token chat completions from within vllm_slot container (docker exec to avoid SSH escaping), confirm coherent finish_reason + completion_tokens > 1 each, and ring does not restart under load.
-2. #21684 [executing] — After 48h stability: rm /tmp/glm52_launch_ray.sh.BAK and consider re-enabling ray_worker_monitor with v5 launcher (optional).
-3. #21684 [executing] — Add on-box decode probe for supervisor (currently HTTP-only health check); PR to bug library for hexarchy_guard interference.
+1. #22000 [proposed] — diagnose silent EngineCore death: check dmesg GPU XID errors, NCCL health in container, KV cache growth over lifetime. ~/bin/glm52_ring_debug.sh
+2. #22001 [proposed] — SSH to cesar/artemis via Cato relay, check if gpt-oss-120b vLLM serving on LXC; if down, restart. Verify port :8210 tunnel from WOPR.
+3. #22002 [proposed] — deploy request-counter sidecar to /usr/local/bin/frank_turn_counter.py on :11511, expose /metrics.
+4. #22003 [proposed] — add `@reboot sleep 30 && ~/bin/glm52_ring_supervisor.sh` to rubenmajor crontab on Cato.
+5. #22004 [proposed] — install keep-warm probe: 4-token decode POST to :8210 every 120s via cron, log to /tmp/glm52_keep_warm.log.
 
 Reference IDs:
-- Bugs recorded: glm52_ring_stabilized_cfgv5_ncclib0_dsa0_20260803 (P0_resolved); new interference incidents (hexarchy_guard, ray_worker_monitor) in HANDOFF_NOTES 2026-08-03 10:28 PT.
-- Files touched: ~/bin/glm52_ring_supervisor.sh (v3), ~/glm52_launch_pp6.sh (x6 nodes), /tmp/glm52_logdumper.sh (placeholder), HANDOFF_NOTES.md.
+- Ideas: #21684 [executing], #22000-22004 [proposed]
+- Tickets: GLM-5.2 diagnosis & stabilization
+- Files: /tmp/glm52_launch_cfg.sh v5, ~/bin/glm52_ring_supervisor.sh v3, ~/glm52_launch_pp6.sh
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+When done, append to /home/rubenmajor/HANDOFF_NOTES.md and run order 66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
 
-### `1785777088737` — 8/3/2026, 10:51:07 AM PT — 75 turns
+### `1785780445834` — 8/3/2026, 11:51:06 AM PT — 111 turns
+
+**Original task:**
+
+```
+Propose for Telephony with some features similar to /proctoring for the Admin role (in this case) to manage the ability for students to schedule a call back. The schedule a call back feature will require 24 hours before the person will be called back. This is an idea proposed to be integrated with CFAs to make it so admins can do call backs to students with issues. 
+
+We need to only permit 1 scheduled call backs per hour from 9AM to 9PM each day to start. 
+
+The admin could configure more often, but this could be used to help those students requiring additional help. I think CFAs can suggest to
+```
+
+**Ideas referenced:** #059669, #20340 [executing], #21010 [executing], #21011 [executing], #21038 [proposed], #21158 [executing], #21213 [executing], #21419 [executing], #21542 [rejected], #21546 [executing], #21763 [proposed], #21764 [proposed], #21765 [proposed], #21775 [proposed], #21777 [proposed], #2563, #334155, #475569, #64748, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+ons on C1 and C2 specifically.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #21763 [proposed], Telephony Callback Scheduling System, Admin-Managed Callback Queue
+
+Where we left off (verified 2026-08-03 11:37 PT):
+- Link location decided: new Callbacks tab inside /emtskills/routes/telephony_hub.php between SMS and Performance, gated by $isTelephonyAdmin, badge with pending count (#21775 [proposed])
+- 6 conflicts between Vicky CS proposal and Rule 29 analyzed and filed (#21777 [proposed])
+- C1 needs decision: hard daily cap vs 1 active at a time
+- C2 needs decision: 1/hr default vs 5-10/hr configurable
+- Parent spec #21763 [proposed] with 3-table schema, pending Phase 1 DB migration
+
+Open threads to drive next:
+1. #21763 [proposed] - Wait for Ruben decision on C1 request cap then promote to executing, run DB migration for callback_slots, callback_bookings, callback_config
+2. #21775 [proposed] - After schema lands, add Callbacks tab button + panel shell to telephony_hub.php
+3. #21764 [proposed] - Build /emtskills/callback/admin/slots.php and config.php with bulk slot generation
+4. (human-only decision, no idea) - Ruben: confirm C1 (1 active per student, no hard cap) and C2 (1/hr default)
+
+Reference IDs:
+- Ideas filed: #21763 [proposed], #21775 [proposed], #21777 [proposed], #21764 [proposed], #21765 [proposed]
+- Files touched: none on disk yet, directories /var/www/emtskills/callback/admin and /callback/includes created
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Located telephony_hub.php in routes/
+- [x] Found tab navigation at lines 2393-2430
+- [x] Designed placement: new "Callbacks" tab after SMS, gated by $isTelephonyAdmin
+- [x] Filed idea for telephony hub tab integration (#21775)
+- [x] Analyzed Vicky proposal against Rule 29, filed #21777 with 6 conflicts
+- [x] Showed Ruben link placement + conflict analysis, awaiting decisions on C1 and C2
+</task_progress>
+</attempt_completion>
+```
+
+### `1785782909425` — 8/3/2026, 11:51:06 AM PT — 15 turns
+
+**Original task:**
+
+```
+Why am i not seeing clustered ideas here in cline?
+```
+
+**Ideas referenced:** #21470, #21761, #21763, #2686
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785779852459` — 8/3/2026, 11:51:01 AM PT — 183 turns
+
+**Original task:**
+
+```
+Reply to this person says Hi "Internal" - tha'ts wrong. Also it appears that Email Agent did nothing for this student. that needs repair
+```
+
+**Ideas referenced:** #16613, #167143, #2196, #23131, #4929, #495057
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785779749179` — 8/3/2026, 11:50:58 AM PT — 135 turns
+
+**Original task:**
+
+```
+I need to make sure that the AI categoriztion of the info@emsuniversity.com inbox has stopped. Can you confirm this?
+```
+
+**Ideas referenced:** #16252, #16260, #16523, #20340 [executing], #21010 [executing], #21011 [executing], #21038 [proposed], #21158 [executing], #21171, #21213 [executing], #21419 [executing], #2153, #2154, #21542 [rejected], #21546 [executing], #21761 [proposed], #21771 [proposed], #45094, #4991
+
+**Last PICKUP PROMPT:**
+
+```
+er misreading of your request.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #21771 [proposed] - info@ email system status verified, folder sorting stopped, AI classification and auto-responses fully active
+
+Where we left off (verified 2026-08-03 11:28 PT):
+- AI classification active: /etc/cron.d/emsu-email-responder every 5 min, Method: ai on external emails, 2,320 rows in 24h
+- AI auto-responses active: 9 sent in last 24h (payment_billing, technical_support, withdrawal, complaint_grievance)
+- Info@ folder sorting DISABLED since 2026-07-31: /etc/cron.d/emsu-info-maildir-mover has only a comment line, no active cron
+- Jon mailbox mover active but ONLY touches jthompson@, not info@
+- Prior idea #21761 [rejected] - superseded by #21771
+
+Open threads to drive next:
+1. #21771 [proposed] - info@ email system status verified as functioning as designed, no action needed
+
+Reference IDs:
+- Ideas filed: #21771 [proposed]
+- Ideas superseded: #21761 [rejected]
+- Files touched: none (read-only investigation)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785778409357` — 8/3/2026, 11:50:54 AM PT — 219 turns
+
+**Original task:**
+
+```
+What is this person actually upset about other than AI answering calls and emails? Can you look at the underlying issues for legitimacy as well?
+```
+
+**Ideas referenced:** #15711, #16413, #20957, #20958, #21748 [proposed], #21749 [proposed], #21754 [proposed], #21755 [proposed], #21769 [proposed], #21770 [proposed], #22861, #2686, #4863, #4929, #687532, #9222, #9269, #9373, #9457
+
+**Last PICKUP PROMPT:**
+
+```
+ready did the diagnostic work.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — Bode Penrose CFA build-out: non-human externship automation
+
+Where we left off (verified 2026-08-03 11:26 PT):
+- #21754 [deployed] — CFA placement-state guard live. AI stops listing forms to unplaced students.
+- #21749 [proposed] — Bode placement URGENT: course ends 8/19, Nefemito assigned, preceptor_state='not_sent'.
+- #21755 [proposed] — Chat-handoff watchdog (force_handoff tickets get human action within 4h).
+- #21769 [proposed] — CFA externship slot auto-matcher: read available_slots, auto-confirm, send email. No human.
+- #21770 [proposed] — CFA externship form auto-grader: validate signatures/fields, auto-grade. No human.
+
+Open threads to drive next:
+1. #21749 [proposed] — Call Nefemito/Jehan to push Falck Alameda/Oakland for Bode before 8/19. Critical path.
+2. #21769 [proposed] — Build slot auto-matcher: scan ExternshipRequest, match against open slots, auto-confirm placements. Schema columns ready (available_slots, preferred_dates).
+3. #21770 [proposed] — Build form auto-grader: validate preceptor + student signatures, auto-grade completed/hold_pending. Schema columns ready (grade_status, auto_grade_confidence).
+4. #21755 [proposed] — Build chat-handoff watchdog from #21755 for force_handoff tickets.
+
+Reference IDs:
+- Ideas: #21748 [superseded], #21749 [proposed], #21754 [deployed], #21755 [proposed], #21769 [proposed], #21770 [proposed]
+- Tickets: 22861 (open/high), 16413 (phone auto-dismissed)
+- Files deployed: lib/ExternshipStatusResolver.php line 127
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785781386836` — 8/3/2026, 11:50:51 AM PT — 22 turns
+
+**Original task:**
+
+```
+Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/ 
+
+Help me with this
+```
+
+**Ideas referenced:** #5062, #5244
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785778361008` — 8/3/2026, 11:49:14 AM PT — 188 turns
+
+**Original task:**
+
+```
+https://emsuniversity.com/emtskills/routes/login_sms.php Sent verification code, but does not move to the page where I can enter it
+```
+
+**Ideas referenced:** #15669, #16817, #21753 [proposed], #21762 [proposed], #3742, #3869, #5272, #5275, #5277, #5278, #5279, #5280, #666666, #842029
+
+**Last PICKUP PROMPT:**
+
+```
+esh send request now succeeds.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — SMS login RCA + deployed ideas #21753 & #21762.
+
+Where we left off (verified 2026-08-03 11:48 PT):
+- RCA complete: "SMS not sent" = rate-limit exhaustion (3 OTPs/10 min per phone) from test sends; Twilio shows 5/5 delivered to +17605250530.
+- #21753 DEPLOYED: no-account message renders .message.notice (yellow) instead of .message.success; live-verified.
+- #21762 DEPLOYED: checkSMSRateLimit() logs [sms_rate_limit] BLOCKED on ≥3 sends/10min; live-verified (entry 11:30:15).
+- PHP lint clean both files; PHP-FPM reloaded; backups: login_sms.php.bak-20260803-css-fix, sms_auth.php.bak-20260803-ratelimit-log.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #21762 [deployed] — monitor [sms_rate_limit] entries over next 48h; if legit users start hitting cap, raise it or add a "resend after cooldown" UX.
+2. #21753 [deployed] — spot-check the notice styling on the verify step's error path in a real browser session.
+
+Reference IDs:
+- Ideas filed: #21753 [deployed], #21762 [deployed]
+- Files touched: /var/www/emtskills/routes/login_sms.php, /var/www/emtskills/lib/sms_auth.php
+- Evidence: /var/log/php8.3-fpm-errors.log (sms_rate_limit 11:30:15), Twilio Messages API delivered statuses, sms_login_tokens/sms_send_log rows
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785781530203` — 8/3/2026, 11:35:20 AM PT — 46 turns
+
+**Original task:**
+
+```
+Is this GLM faster aggregate than 4tok/sec
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #17202, #1754, #1755, #1820, #18312, #18326, #18389, #18493, #18530, #18552, #1859, #1871, #1875, #1884, #1885, #18868, #1896, #19143, #19230 [queued], #19234 [queued], #1935, #1937, #1964 [resolved], #1967, #1968, #1970, #19714 [proposed], #19887, #19907 [blocked], #2084, #2085, #2098 [queued], #2125
+
+**Last PICKUP PROMPT:**
+
+```
+
+<attempt_completion>
+<result>═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #19907 - GLM ring aggregate throughput answer (4 tok/s threshold)
+
+Where we left off (verified 2026-08-03 11:33 PT):
+- Answered Ruben's question 'Is this GLM faster aggregate than 4 tok/sec' [answering]
+- GLM Hex Ring (PP=6) documented healthy aggregate: ~60-70 tok/s @3+ concurrent (HANDOFF 2885); 3.5-8.2 tok/s hourly real-load avg (HANDOFF 2171); ~7.2 tok/s @12 concurrent (HANDOFF 4280) - all above 4 tok/s aggregate [answering]
+- Single-stream 0.85-2.9 tok/s is PP=6 pipeline bubble (per-request, not aggregate); aggregate scales with concurrency [answering]
+- Ring CURRENTLY DOWN: tunnel :8210 HTTP 000, no vllm_slot on Cato (192.168.1.115), no ray_node on any of 6 boxes, supervisor relaunch 11:18:09 died after 'Up 2 seconds', glm-5.2-local HTTP 500 via LiteLLM; current aggregate = 0 tok/s [blocked]
+
+Open threads to drive next:
+1. #19907 [blocked] - Ring relaunch is Ruben's call per rule on glm-5.2-local; needs rule 277 recipe: VLLM_ENGINE_READY_TIMEOUT_S=1800, gpu_memory_utilization=0.82, PP=6 TP=1, NO --enforce-eager, verify with >=1200 max_tokens on ring-only lane
+2. #1964 [resolved] - Supervisor rank table fixed (.115 head rank1=.244 Augustus); current crash may be stale-killer cron (glm52_stale_killer.sh) racing supervisor relaunch, verify before relaunch
+3. #2098 [queued] - Ring oversubscription under GLM-first routing (36-43 running / 29 waiting) tanks per-stream to ~0.3 tok/s; capacity not bug
+
+Reference IDs:
+- Ideas filed: #19907 [blocked], #1964 [resolved], #2098 [queued]
+- Files touched: none
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Check GLM cluster health and aggregate tok/sec
+- [x] Diagnose why GLM ring returns empty/500
+- [x] Confirm GLM ring serving status
+- [x] Investigate failed relaunch
+- [x] Check vllm_slot / ray_node state after relaunch
+- [x] Document historical benchmarks from HANDOFF
+- [x] Answer whether GLM aggregate > 4 tok/sec
+</task_progress>
+</attempt_completion>
+```
+
+### `1785776636014` — 8/3/2026, 11:22:07 AM PT — 134 turns
+
+**Original task:**
+
+```
+Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up
+
+Where we left off (verified 2026-08-03 09:46 PT):
+- Replay worker: 17/17 stuck items cleared, 17 rows landed in llm_replay_results (provider qwen14b_fast). Verified earlier this session.
+- Sensor grid: v_kaizen_all_findings live with 4 sources (executor 884, recipefire 1241, deadman 11, buglib 41). Verified executor is fresh.
+- Pipeline classifier: 127 rows classified via manual run at 7:33 AM; crons registered but kaizen_*.log files DON'T exist — automation delivery mechanism broken (log files never created)
+- #21710 REV
+```
+
+**Ideas referenced:** #13440, #1549, #21432 [proposed], #21433 [ready_for_review], #21434 [ready_for_review], #21586 [approved], #21587 [ready_for_review], #21588 [approved], #21667 [executing], #21710 [reverted], #21712 [proposed], #7121, #7164, #7168, #7186, #9109, #9132, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+as rows 21432 + 21587 updated.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up KAIZEN bug improvement session — post-approval follow-up complete, next backlog items.
+
+Where we left off (verified 2026-08-03 11:21 PT):
+- #21710 [deployed] — deadman logger INSERT matches real schema; rewired into AgentReplyPipeline::guard() scanMoneyPromise branch via logDeadmanGuard(). E2E verified.
+- #21667 [deployed] — kaizen/kaison crons repointed to /var/www/emtskills/logs/ (root cause: emsuserver can't write /var/log); kaizen_cron_heartbeat table + classifier/promoter heartbeat upserts both reporting status=ok.
+- #21712 [deployed] — cron_kaizen_bug_library_promoter.php: bug_hunter_queue new/high/critical → INSERT IGNORE bug_library (symptom unique, bug_id BH-<id>), marks triaged, every 15m. Tested + idempotent.
+- #21432 [deployed] — replay worker now builds structured REPLAY CONTEXT (chain_slug/task_kind/provider/agent/model/outcome/failure_category/tool_calls/diagnostic_context/error_text) instead of raw error_text.
+- #21587 [resolved] — buglib fresh (42 rows, newest 08-03 11:06 PT from #21712 writer); deadman has live caller (needs real CS traffic to populate).
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #21667 [deployed] — Watch kaizen_cron_heartbeat for next 24h: only classifier + promoter are instrumented. Pipeline/consumer/verify/retrain crons still lack heartbeats — copy the same upsert block into them so ALL kaizen automation is independently observable.
+2. #21588 [approved] — Next approved backlog item (not yet started this session): execute per its original spec. Confirm scope in orchestrator_ideas before implementation.
+
+Reference IDs:
+- Ideas filed/updated: #21432 [deployed], #21587 [resolved], #21667 [deployed], #21710 [deployed], #21712 [deployed], #21588 [approved]
+- Files touched: /var/www/emtskills/cron_kaizen_replay_worker.php, /var/www/emtskills/lib/deadman_incident_logger.php, /var/www/emtskills/lib/AgentReplyPipeline.php, /var/www/emtskills/cron_kaizen_classifier.php, /var/www/emtskills/cron_kaizen_bug_library_promoter.php (new), /var/www/emtskills/docs/cline_task_ledger.md, crontab
+- DB state: agent_deadman_incidents (clean, writer live), kaizen_cron_heartbeat (2 crons OK), bug_library (129 rows incl. BH-1), bug_hunter_queue (row 1 triaged), kaizen_classification_log (recent), orchestrator_ideas (21432=deployed, 21587=resolved)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785777088737` — 8/3/2026, 10:58:22 AM PT — 94 turns
 
 **Original task:**
 
@@ -149,114 +474,42 @@ See the proposed flight schedule for San Antonio and Houston. We could potential
 - __Open threads:__ 3 actions, ALL with real idea #2
 ```
 
-**Ideas referenced:** #0369, #0891, #1368, #1565, #15803, #166534, #1976, #20734 [proposed], #2563, #334155, #475569, #6366, #64748, #92400
+**Ideas referenced:** #0369, #0891, #1368, #1565, #15803, #1645, #1647, #166534, #1976, #20734 [proposed], #2563, #334155, #475569, #6366, #64748, #92400
 
 **Last PICKUP PROMPT:**
 
 ```
-ori can access it with a link?
+indow — the file is only ~5KB.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #20734 [executing] — Texas TDSHS Sunset outreach: update Cori PDF with per-legislator constituent framing, fix route
+Pick up task #20734 [executing] — Texas TDSHS Sunset outreach: upload Cori PDF to server + fix route table
 
-Where we left off (2026-08-03 10:45 PT):
-- 4 emails already sent (Kolkhorst x2, Campbell, Campos)
-- Cori PDF on Desktop needs per-legislator approach guidance:
-  Campos = constituent (HD-119 contains EMSU)
-  Campbell = EMS educator with first responders in your district (stretch but true)
-  Kolkhorst = Sunset review input from Texas EMS provider (do NOT claim constituent)
-- Route table on deployed page still STALE
+Where we left off (2026-08-03 10:57 PT):
+- Compliance card created: compliance_investigations id=18 (tdshs-sunset-outreach-aug-2026) ✅
+- Card renders at: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations&entity=tdshs
+- Outreach page: https://emsuniversity.com/emtskills/routes/texas_outreach.php
+- Sunset report: https://www.sunset.texas.gov/reviews-and-reports/agencies/department-state-health-services
+- Public input form: https://www.sunset.texas.gov/input-form
+- Cori PDF on Desktop (verified 2 pages, both SA meetings Mon, Kolkhorst Tue): SCP upload failed (SSH port 22 blocked)
+- texas_outreach.php route table STILL STALE (Mon Houston / Tue SA vs real plan Mon SA+NB / Tue Katy)
 
 Open threads:
-1. #20734 [proposed] — Rebuild Cori PDF with per-legislator talking points
-2. #20734 [proposed] — Deploy PDF to server for shareable link
-3. #20734 [proposed] — Fix texas_outreach.php route table
-4. #20734 [proposed] — File Sunset public input
+1. #20734 [proposed] — Upload Cori PDF to server via write_server_file or SSH tunnel so Cori has a web link
+2. #20734 [proposed] — Fix texas_outreach.php route table on WOPR (ssh_command sed from /tmp/ copy, then sudo cp)
+3. #20734 [proposed] — Send Campbell/Campos correction emails shifting from Tue to Mon (per v2 plan: both SA meetings Monday)
+4. #20734 [proposed] — File Sunset public input at sunset.texas.gov/input-form
 
 Reference IDs:
 - Ideas filed: #20734 [executing]
-- Files touched: /Users/rubenmajor/Desktop/Cori_Meeting_Scheduling_Texas_Aug9-12.pdf
+- Files touched: compliance_investigations row id=18 (WOPR) / /Users/rubenmajor/Desktop/Cori_Meeting_Scheduling_Texas_Aug9-12.pdf (local)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
-
-### `1785778361008` — 8/3/2026, 10:51:07 AM PT — 61 turns
-
-**Original task:**
-
-```
-https://emsuniversity.com/emtskills/routes/login_sms.php Sent verification code, but does not move to the page where I can enter it
-```
-
-**Ideas referenced:** #15669, #16817, #3742, #666666, #842029
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785778409357` — 8/3/2026, 10:47:21 AM PT — 64 turns
-
-**Original task:**
-
-```
-What is this person actually upset about other than AI answering calls and emails? Can you look at the underlying issues for legitimacy as well?
-```
-
-**Ideas referenced:** #15711, #16413, #21748 [proposed], #21749 [proposed], #22861, #2686, #4929, #687532, #9373
-
-**Last PICKUP PROMPT:**
-
-```
-lameda for a slot before 8/19.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — Bode Penrose: drive the two filed fixes forward (chat abandonment + externship placement).
-
-Where we left off (verified 2026-08-03 10:46 PT):
-- Student Scott "Bode" Penrose (26617FT-06): $2,195 paid, Final Exam 131/150, course ends 8/19/2026.
-- 18 "Chat handoff went unanswered" tickets since 7/4, all auto-closed with no human action. Open ticket #22861 remains pending.
-- Phone call 7/13 auto-dismissed as "system UP" by VAPI detector, no callback. Ticket #16413.
-- Externship request #2686: 14d pending, pref date 8/1 passed, preceptor_state=not_sent, no agency contacted. Moodle externship assigns 162-166 show 0 submissions; he cannot complete them without a placement.
-- Recomended call to Bode at +14153053381 and Falck Alameda push before 8/19.
-
-Open threads to drive next:
-1. #21748 [proposed] — Route to Vicky/Ruben: human must call Bode today; investigate why chat-handoff tickets are created High-priority but never actioned (watchdog gap).
-2. #21749 [proposed] — Have Nefemito/Jehan contact a Falck Alameda/Oakland agency for request #2686 this week; course end 8/19 is the hard deadline.
-
-Reference IDs:
-- Ideas filed: #21748 [proposed], #21749 [proposed]
-- Files touched: none
-- Tickets: 22861, 16413, 22644, 22216, 22221, 20318, 20498, 20399, 17482, 18241
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785776636014` — 8/3/2026, 10:15:42 AM PT — 50 turns
-
-**Original task:**
-
-```
-Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up
-
-Where we left off (verified 2026-08-03 09:46 PT):
-- Replay worker: 17/17 stuck items cleared, 17 rows landed in llm_replay_results (provider qwen14b_fast). Verified earlier this session.
-- Sensor grid: v_kaizen_all_findings live with 4 sources (executor 884, recipefire 1241, deadman 11, buglib 41). Verified executor is fresh.
-- Pipeline classifier: 127 rows classified via manual run at 7:33 AM; crons registered but kaizen_*.log files DON'T exist — automation delivery mechanism broken (log files never created)
-- #21710 REV
-```
-
-**Ideas referenced:** #13440, #21432 [proposed], #21433 [ready_for_review], #21434 [ready_for_review], #21586 [approved], #21587 [ready_for_review], #21588 [approved], #21667 [executing], #21710 [reverted], #21712 [proposed], #9109, #9132, #9222
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785776142309` — 8/3/2026, 10:03:48 AM PT — 34 turns
 

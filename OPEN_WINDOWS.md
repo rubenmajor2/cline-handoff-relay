@@ -6,20 +6,21 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/3/2026, 1:51:25 PM PT | window: last 72h | 73 tasks | index total 404 (parsed 7, cached 397)
+Generated: 8/3/2026, 2:51:25 PM PT | window: last 72h | 73 tasks | index total 405 (parsed 10, cached 395)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785776636014` | 8/3/2026, 1:51:11 PM | 177 | 455KB | Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up |
-| `1785775905424` | 8/3/2026, 1:47:36 PM | 598 | 1406KB | # GLM-5.2 Hexarchy Ring — Scientific Diagnosis & Stabilization Summary |
-| `1785782909425` | 8/3/2026, 1:46:15 PM | 366 | 2105KB | Why am i not seeing clustered ideas here in cline? |
-| `1785779749179` | 8/3/2026, 1:37:38 PM | 364 | 1581KB | I need to make sure that the AI categoriztion of the info@emsuniversity.com inbox has stop |
-| `1785780445834` | 8/3/2026, 1:24:24 PM | 274 | 823KB | Propose for Telephony with some features similar to /proctoring for the Admin role (in thi |
-| `1785779852459` | 8/3/2026, 1:22:30 PM | 344 | 2044KB | Reply to this person says Hi "Internal" - tha'ts wrong. Also it appears that Email Agent d |
+| `1785780445834` | 8/3/2026, 2:51:20 PM | 349 | 992KB | Propose for Telephony with some features similar to /proctoring for the Admin role (in thi |
+| `1785778409357` | 8/3/2026, 2:51:09 PM | 309 | 2557KB | What is this person actually upset about other than AI answering calls and emails? Can you |
+| `1785779852459` | 8/3/2026, 2:51:05 PM | 545 | 2500KB | Reply to this person says Hi "Internal" - tha'ts wrong. Also it appears that Email Agent d |
+| `1785790859915` | 8/3/2026, 2:51:05 PM | 183 | 2293KB | Ruben Major Jr., IT Admin is saying that he is not receiving messages in TeamHub / request |
+| `1785782909425` | 8/3/2026, 2:51:00 PM | 387 | 2188KB | Why am i not seeing clustered ideas here in cline? |
+| `1785775905424` | 8/3/2026, 2:51:00 PM | 657 | 1534KB | # GLM-5.2 Hexarchy Ring — Scientific Diagnosis & Stabilization Summary |
+| `1785787998507` | 8/3/2026, 2:50:58 PM | 56 | 545KB | Was the "Clear" button on this page supposed to be wired into the actual NREMT clearance a |
+| `1785776636014` | 8/3/2026, 2:50:52 PM | 215 | 523KB | Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up |
+| `1785781386836` | 8/3/2026, 2:50:33 PM | 99 | 487KB | Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/  |
+| `1785779749179` | 8/3/2026, 2:47:33 PM | 370 | 1603KB | I need to make sure that the AI categoriztion of the info@emsuniversity.com inbox has stop |
 | `1785787253230` | 8/3/2026, 1:22:09 PM | 100 | 181KB | When I click on "Login As Student Link" for example: https://emsuniversity.com/emtskills/e |
-| `1785787998507` | 8/3/2026, 1:18:59 PM | 28 | 472KB | Was the "Clear" button on this page supposed to be wired into the actual NREMT clearance a |
-| `1785781386836` | 8/3/2026, 1:14:43 PM | 98 | 486KB | Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/  |
-| `1785778409357` | 8/3/2026, 12:00:55 PM | 256 | 2093KB | What is this person actually upset about other than AI answering calls and emails? Can you |
 | `1785778361008` | 8/3/2026, 11:49:14 AM | 188 | 739KB | https://emsuniversity.com/emtskills/routes/login_sms.php Sent verification code, but does  |
 | `1785781530203` | 8/3/2026, 11:35:20 AM | 46 | 208KB | Is this GLM faster aggregate than 4tok/sec |
 | `1785777088737` | 8/3/2026, 10:58:22 AM | 94 | 1066KB | #Texas |
@@ -82,197 +83,12 @@ Generated: 8/3/2026, 1:51:25 PM PT | window: last 72h | 73 tasks | index total 4
 | `1785465245461` | 7/31/2026, 3:34:55 PM | 774 | 3026KB | check jon's argus 80% PD issues. says not resolved yet.  |
 | `1785535349176` | 7/31/2026, 3:03:57 PM | 8 | 17KB | root into wopr and give me apple's username and password for webmail for email: |
 | `1785441507395` | 7/31/2026, 2:58:00 PM | 168 | 335KB | Argus failure? Cites technical issues but doesn't not correct them with appropriate CFA lo |
-| `1785375877050` | 7/31/2026, 1:59:50 PM | 2361 | 9279KB | #GLM |
 
 ---
 
 ## Per-window detail
 
-### `1785776636014` — 8/3/2026, 1:51:11 PM PT — 177 turns
-
-**Original task:**
-
-```
-Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up
-
-Where we left off (verified 2026-08-03 09:46 PT):
-- Replay worker: 17/17 stuck items cleared, 17 rows landed in llm_replay_results (provider qwen14b_fast). Verified earlier this session.
-- Sensor grid: v_kaizen_all_findings live with 4 sources (executor 884, recipefire 1241, deadman 11, buglib 41). Verified executor is fresh.
-- Pipeline classifier: 127 rows classified via manual run at 7:33 AM; crons registered but kaizen_*.log files DON'T exist — automation delivery mechanism broken (log files never created)
-- #21710 REV
-```
-
-**Ideas referenced:** #13440, #1549, #20890, #21432 [proposed], #21433 [ready_for_review], #21434 [ready_for_review], #21586 [approved], #21587 [ready_for_review], #21588 [approved], #21667 [executing], #21710 [reverted], #21712 [proposed], #7121, #7164, #7168, #7186, #9109, #9132, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-/30` with no heartbeat either.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up KAIZEN health check follow-up — 2026-08-03 13:07 PT.
-
-Where we left off (verified 2026-08-03 13:07 PT):
-- All 5 deployed fixes from today's session are holding: deadman writer (#21710) live on pipeline, cron log paths fixed (#21667), bug_library promoter running (#21712), replay context enriched (#21432), deadman+buglib root causes closed (#21587 resolved).
-- v_kaizen_all_findings: recipefire 3739 (fresh), executor 847 (fresh), buglib 42 (1hr stale — was 11 days), deadman 11 (41hr stale — has live writer, needs CS traffic).
-- Heartbeats: classifier (102 rows, 1min), promoter (0 rows, 5min) — both ok.
-- email_ai_leak_log: 55 past money_promise blocks — deadman will catch future ones.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #21667 [deployed] — Instrument the 4 remaining kaizen crons with heartbeats: pipeline (every 5min), consumer (every 10min), verify (every 15min), retrain_executor (every 30min). Also cron_kaison_bug_library_organizer.php (every 30min). Copy the 3-line heartbeat block from cron_kaizen_classifier.php into each. All 6+1 crons become independently observable.
-
-Reference IDs:
-- Completed: #21432 [deployed], #21587 [resolved], #21667 [deployed], #21710 [deployed], #21712 [deployed]
-- Next to start: #21588 [approved] — verify scope in orchestrator_ideas
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785775905424` — 8/3/2026, 1:47:36 PM PT — 598 turns
-
-**Original task:**
-
-```
-# GLM-5.2 Hexarchy Ring — Scientific Diagnosis & Stabilization Summary
-
-## Root Causes Identified (Ruben Directive: "stop regressing, use the bug library")
-
-**Bug 1 (New Discovery): spark-memguard.sh — The Silent Killer**
-- `/usr/local/bin/spark-memguard.sh` runs every minute as root cron on ALL ring nodes
-- When swap used > 10GB, it executes `pkill -9 -f EngineCore` + `pkill -9 -f "vllm serve"` in EVERY container
-- This was the root cause of silent ring deaths: the 352 GiB weight load spikes swap >10GB → memguard fires → APIServer sees engine death → clean shutdown at 15:00:26
-- **FIXED 2026-
-```
-
-**Ideas referenced:** #10108, #1130, #1131, #11741, #12365, #12368, #1241, #12425, #1248, #1249, #1252, #1258, #12657, #13121, #13202, #1378, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18471, #18720, #18868, #19135, #19567, #1967, #1986, #19903, #19907, #19925, #20042, #20247, #20264, #20272, #2050, #20536, #2063, #2065, #20662, #2073, #2092, #2096, #20985, #21038, #2116, #21213, #2127, #2138, #2157, #2160, #21684 [drafted], #22000 [proposed], #22001 [proposed], #22002 [proposed], #22003 [proposed], #22004 [proposed], #22051 [executing], #22052 [proposed], #32701, #45094, #6847, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-ath is through WOPR port 2204 reverse tunnel to Cato on port 2204.
-
----
-
-══════ PICKUP PROMPT ══════════════════════════════════════════
-Pick up task #21684 — GLM-5.2 ring stabilization continuation
-(Verified 2026-08-03 13:46 PT)
-
-Current State:
-- Ring container being killed by `clean_and_launch.sh` (sudo password embedded)
-- Supervisor v3 auto-relaunches ring successfully
-- Crash capture log at `/tmp/glm52_crash_capture_cato.log`
-
-Open Threads:
-1. #22000 [investigating] — Remove/disable the `clean_and_launch.sh` cron to stop the 15-min kill cycle
-2. #22004 [executing] — Keep-warm probe script deployed at `~/bin/glm52_keep_warm.sh` (fix log path to /tmp)
-3. #22052 [proposed] — stale_cron validation across all 6 nodes still needed
-
-Reference IDs:
-- GlitchTicket: The container-killing cron calling clean_and_launch.sh
-- Ideas: 22000 (ring death), 22004 (keep-warm), 22052 (stale_cron)
-
-Files Touched:
-- /tmp/glm52_crash_capture_cato.log — has the full 601s traceback
-- /tmp/glm52_clean_and_launch.sh — the killer script
-- /home/rubenmajor/bin/glm52_keep_warm.sh — deployed warm probe
-
-When done, append row to cline_task_ledger.md per rule 07.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785782909425` — 8/3/2026, 1:46:15 PM PT — 366 turns
-
-**Original task:**
-
-```
-Why am i not seeing clustered ideas here in cline?
-```
-
-**Ideas referenced:** #10739 [proposed], #1194, #12459, #16648, #17202, #17203, #17205, #17300, #177796, #178456, #182471, #18326 [proposed], #18327 [proposed], #18329 [proposed], #18337 [deployed], #1845, #18671, #18800, #18811 [proposed], #18812 [queued], #18813 [queued], #19437, #19495, #19535 [proposed], #19537 [proposed], #19538 [proposed], #19539 [proposed], #19545, #19682, #19813, #19814, #19816, #19822, #2023, #21470, #21761, #21763, #22053 [proposed], #22057, #22059, #22063, #22065, #22070, #22072, #22076, #22078, #22079 [proposed], #22097 [proposed], #2322, #2490, #2686, #55522, #815007, #886191
-
-**Last PICKUP PROMPT:**
-
-```
- at unity, not piecemeal."
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task #22053 — clustered ideas in Cline: fix approve_cluster column name bug.
-
-Where we left off (verified 2026-08-03 13:44 PT):
-- 10 clusters populated in visual_canvas_clusters (PKs 21-30, linked via canvas_cluster_id FK on 932 ideas)
-- MCP server extended with list_clusters, get_cluster_recommendation (both working), approve_cluster (partially built)
-- Cron running daily at 4:15 AM to refresh clusters
-- approve_cluster has a SQL column-name bug: writes to non-existent `approval_reason` instead of `approved_by` (varchar 50)
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #22097 [proposed] — Fix approve_cluster SQL: line 1525 in src/index.ts sets `approval_reason=` — change to `approved_by='cluster_bulk'` and remove the multi-line CONCAT that overflows varchar(50). Also remove orphaned continuation line. Rebuild (sudo -u emsuserver npm run build) + restart (sudo systemctl restart mcp-ruben-orchestrator.service). Verify by calling approve_cluster(22) via MCP — should approve 10+ callback-scheduler ideas in bulk.
-
-Reference IDs:
-- Ticket: none
-- Ideas filed: #22053 [deployed], #22079 [deployed], #22097 [proposed]
-- Files touched: /var/www/emtskills/scripts/cluster_ideas_pipeline.php, /var/www/emtskills/mcp-servers/ruben-orchestrator/src/index.ts, /var/www/emtskills/mcp-servers/ruben-orchestrator/build/index.js
-- DB tables: visual_canvas_clusters (10 rows, PKs 21-30), orchestrator_ideas (932 rows with canvas_cluster_id populated, cluster_evidence JSON with WHY narratives)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785779749179` — 8/3/2026, 1:37:38 PM PT — 364 turns
-
-**Original task:**
-
-```
-I need to make sure that the AI categoriztion of the info@emsuniversity.com inbox has stopped. Can you confirm this?
-```
-
-**Ideas referenced:** #12206, #128260, #14132, #16152, #16153, #16154, #16210, #16252, #16260, #16473, #16523, #16732, #17446, #177914, #18190, #19437, #19682, #20340 [executing], #21010 [executing], #21011 [executing], #21038 [proposed], #21158 [executing], #21171, #21213 [executing], #21419 [executing], #2153, #2154, #21542 [rejected], #21546 [executing], #21761 [proposed], #21771 [proposed], #22056 [proposed], #22060 [proposed], #2563, #3237, #32584, #3572, #45094, #4991, #5298, #5447, #5646, #6064, #6106, #6228, #6751, #7206, #7207, #7317, #7356, #7882, #7907, #8103
-
-**Last PICKUP PROMPT:**
-
-```
-raining at the next cron tick.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task # - Email agent deferred drain + cleanup (follow-up from 2026-08-03 investigation)
-
-Where we left off (verified 2026-08-03 13:38 PT):
-- Original question answered: info@ folder sorting is STOPPED (disabled 2026-07-31 per Ruben). AI classification + auto-responses still active (by design — 9 responses sent in last 24h).
-- #22060 [deployed]: `cron_email_responder.php` guarded against missing `EmailTimingProfileClassifier.php`. Backup: `.bak-ruben-impl-20260803-125700`.
-- #22056 [deployed]: Drain cron registered at `/etc/cron.d/emsu-email-deferred-send`. 23 >14d rows cancelled. 525 pending await drain. Old schema-incompatible `cron_email_deferred_send.php` backed up.
-- 525 deferred emails (94 <3d, 427 3-14d, 4 >14d remaining). None of the 515 checked had `ai_response_sent=1` — all are true non-responses.
-- Refire fallback script at `/tmp/cron_email_deferred_refire.php` (resets inbound dedup + touches Maildir mtime).
-
-Open threads to drive next:
-1. #22056 [executing] — Check `/var/log/emsu-email-deferred-send.log` at next cron tick. If `due_rows > 0` and sending, the drain is working. If `due_rows = 0`, install the `/tmp/` refire script into cron as the active drain.
-2. #21771 [proposed] — Confirmed info@ folder auto-sorting disabled, AI classification + responses active. (Verification-only, no code changes needed.)
-3. #22060 [deployed] — Fatal crash guarded. Verify no PHP fatal errors in next responder run: `grep Fatal /var/log/emsu_email_responder.log | tail -5`.
-
-Reference IDs:
-- Ticket: 91902
-- Ideas filed: #21771 [proposed], #22056 [executing], #22060 [deployed]
-- Files touched: `/var/www/emtskills/cron/cron_email_responder.php` (patched), `/etc/cron.d/emsu-email-deferred-send` (new), `/tmp/cron_email_deferred_refire.php` (fallback), `/var/www/emtskills/cron/cron_email_deferred_send.php` (backed up)
-- Backups: `.bak-ruben-impl-20260803-125700`, `.bak-ruben-impl-20260803-132300`
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785780445834` — 8/3/2026, 1:24:24 PM PT — 274 turns
+### `1785780445834` — 8/3/2026, 2:51:20 PM PT — 349 turns
 
 **Original task:**
 
@@ -289,123 +105,30 @@ The admin could configure more often, but this could be used to help those stude
 **Last PICKUP PROMPT:**
 
 ```
-iz not loading, platform error
+kills/callback/api/suggest.php
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
+Pick up task #21763 — Telephony Callback Scheduling System — tested, CFA endpoint live, ready for production.
 
-Pick up task #21763 [executing] — Callback system shipped end-to-end. Next: test gate form, verify comms log insertions, build CFA suggest endpoint
-
-Where we left off (verified 2026-08-03 13:23 PT):
-- 7 files lint clean: book.php, slots.php, config.php, booking_detail.php, _panel_callback.php, cron_callback_slot_generator.php, telephony_hub.php
-- DB: 84 slots (7 days, 1/hr, 9AM-9PM), 19 config rows, 0 bookings, 0 audit entries
-- JS hash handler: #callbacks and #missed deep-link now works
-- Self-troubleshoot gate now required for ALL requesters (student + third-party)
-- communication_log insert on book.php create and booking_detail outcome
-- callback_audit_log insert on all CRUD operations
-
-Open threads to drive next:
-1. #21765 [proposed] — Test gate form: submit booking via book.php, verify audit_log + comms_log populate, verify 1/day gate blocks second submission
-2. #21775 [proposed] — Test booking_detail.php outcome form: mark call as completed, verify communication_log insert
-3. #22062 [proposed] — Verify audit_log entries appear for block/unblock/generate actions in slots.php
-4. (next) — CFA integration: build suggest endpoint under /callback/api/suggest.php, wire per-surface CFA callers, enforce rate limiting per Rule 272
-5. (next) — Register slot generator cron in production (currently dev/3:15am only — needs staging prod verify)
-
-Reference IDs:
-- Ideas filed: #21763 [executing], #21764 [proposed], #21765 [proposed], #21775 [proposed], #21777 [proposed], #22062 [proposed]
-- Files: telephony_hub.php, _panel_callback.php, book.php, slots.php, config.php, booking_detail.php, cron_callback_slot_generator.php
-- Tables: callback_config (19 rows), callback_slots (84), callback_bookings (26 cols), callback_audit_log
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785779852459` — 8/3/2026, 1:22:30 PM PT — 344 turns
-
-**Original task:**
-
-```
-Reply to this person says Hi "Internal" - tha'ts wrong. Also it appears that Email Agent did nothing for this student. that needs repair
-```
-
-**Ideas referenced:** #11780, #164627, #16613, #167143, #18944, #18951, #19173, #2196, #22061 [queued], #22085 [active], #23131, #4929, #495057
-
-**Last PICKUP PROMPT:**
-
-```
-.php.bak-20260803-hi-internal`
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Deep RCA on "Hi Internal" greeting + Email Agent inaction repair follow-up.
-
-Where we left off (verified 1:05 PM PT):
-- "Hi Internal" came from ai_ticket_agent.php follow-up path (line 782-789), NOT notification_sender
-- notification_sender patched (defense-in-depth): first_name added to fallback chain
-- William Jones corrected email SENT (messageId ouJ8KudNbbVbuE2x9n4Yk7KYc2STDemXAs6GHXSUAw, 1:01 PM PT)
-- TKT 23131 updated with verified payment truth (genuinely unpaid, NOT sync_gap)
+Where we left off (verified 2026-08-03 14:33 PT):
+- All 8 files lint clean, 84 slots, 19 config rows, cron registered at 3:15am daily.
+- Atomic DB tests passed: booking + audit + comms, slot lock, 1/day gate (verified app logic correct), outcome → comms, slot block/unblock/generate → audit.
+- CFA suggest endpoint (/callback/api/suggest.php) tested: create + duplicate detection both work.
+- Cleanup: all test data removed, bookings=0, audit=0, 84 slots available.
+- Key verification: one bug found in suggest.php (empty student_id student like squiroz@emsuniversity.com) — guard added.
 
 Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #22085 [active] — Sweep all 15+ "Internal Follow-Up Gate" tickets; verify each student (a) got correct greeting, (b) had substantive resolution (not holding reply), (c) payment truth correctly diagnosed
-2. Systemic RCA: Fix ActBeforePromiseGate.php:306 — should NOT write "Internal Follow-Up Gate" to created_by_name; should pull student.first_name from students table (has student_id + email at create time)
-3. Systemic RCA: Fix ai_ticket_agent.php:782 — $dlg_name ($dlg_tdata['student_name'] ?? $studentName) must never fall back to created_by_name for customer-facing greeting; query students table
+1. #21765 [proposed] — Wire pending CFA suggestions into the Callbacks panel (_panel_callback.php): add section showing callback_queue rows with status='pending', admin "Convert to Booking" button that pre-fills slot picker + student context.
+2. #22062 [proposed] — Wire per-surface CFA callers (call_insight, web chat, connect team) to hit suggest.php. Start with call_insight (line 1) — add a "Suggest Callback" action.
+3. #21775 [proposed] — Verify production cron: after 3:15am, check callback_slot_generator.log for zero-error completion + slots increased to 14 days.
+4. (human-only decision, no idea) — Decide slot density increase timing: current 1/hr works for launch, but Ruben may want config change to 2-3/hr once staffing scales.
 
 Reference IDs:
-- Ticket: 23131
-- Invoice: 167143
-- Ideas filed: #22085 [active]
-- Files touched: /var/www/emtskills/tickets/lib/notification_sender.php, /var/www/emtskills/lib/ai_ticket_agent.php (needs fix)
-
-When done, append to cline_task_ledger.md and run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785787253230` — 8/3/2026, 1:22:09 PM PT — 100 turns
-
-**Original task:**
-
-```
-When I click on "Login As Student Link" for example: https://emsuniversity.com/emtskills/externship/student_portal.php?view_token=9c6f330f5e080ad1a0e000b8056eb3e982dd81cd1e9f4c1653668e3bc488f83f 
-
- from here: https://emsuniversity.com/emtskills/admin_profile.php
-
-Needs to automatically staff into that student's account like it did before. The auto-login here to the student accounts seems to have been removed or the token is bad or something is off
-```
-
-**Ideas referenced:** #128203, #18836, #22091 [deployed], #9662
-
-**Last PICKUP PROMPT:**
-
-```
-s. Deployed and verified.
-
----
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task: Login As Student auto-login for failed/dropped students -- #22091 [deployed]
-
-Where we left off (verified 2026-08-03 13:20 PT):
-- Fix deployed to /var/www/emtskills/externship/student_portal.php: removed fail_date/drop_date/transfer_date/is_duplicate filters from admin view_token student lookup
-- Token validation for 25914T-12 (Jayden Planz, fail_date=2025-10-30) confirmed working, dashboard loads
-- Normal OTP login unaffected
-- PHP-FPM reloaded
-- Backup at /tmp/sp_fix_backup.php
-- Handoff notes updated
-
-Open threads to drive next:
-(human-only decision, no idea) No open threads remaining. Fix is deployed and verified.
-
-Reference IDs:
-- Idea filed: #22091 [deployed]
-- Files touched: /var/www/emtskills/externship/student_portal.php
+- Ticket: Callback Scheduling System (Telephony Hub integration)
+- Ideas filed: #21763 [proposed], #21764 [proposed], #21765 [proposed], #21775 [proposed], #22062 [proposed], #21777 [proposed]
+- Files touched: callback/book.php, callback/admin/slots.php, callback/admin/config.php, callback/admin/booking_detail.php, callback/admin/_panel_callback.php, callback/api/suggest.php, cron/cron_callback_slot_generator.php, routes/telephony_hub.php, callback/migrate.php
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -413,7 +136,208 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785787998507` — 8/3/2026, 1:18:59 PM PT — 28 turns
+### `1785778409357` — 8/3/2026, 2:51:09 PM PT — 309 turns
+
+**Original task:**
+
+```
+What is this person actually upset about other than AI answering calls and emails? Can you look at the underlying issues for legitimacy as well?
+```
+
+**Ideas referenced:** #1286, #15711, #16413, #20957, #20958, #21748 [proposed], #21749 [proposed], #21754 [proposed], #21755 [proposed], #21769 [proposed], #21770 [proposed], #22015 [proposed], #22054 [proposed], #22055 [proposed], #22102 [proposed], #22103 [proposed], #22861, #2686, #4863, #4929, #687532, #9222, #9269, #9373, #9457
+
+**Last PICKUP PROMPT:**
+
+```
+Jon claim) | [proposed] |
+
+---
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Bode Penrose analysis: implement approved hours gate + admin_profile hours display + Moodle timesheet grading audit
+
+Where we left off (verified 2026-08-03 14:03 PT):
+- #21754 [deployed] — placement-state guard in `ExternshipStatusResolver.php` line 127, FPM reloaded, live-probed for Bode (verified guard text appears)
+- #22055 [proposed] — APPROVED by Ruben: wire `ExternshipHoursCalculator.is_complete` into `CertificateReadiness::getEAStatus()`, replacing broken `ea_submissions` query
+- #22102 [proposed] — count timesheet properly (audit fill_form.php timesheet total_hours capture) + add externship hours to admin_profile.php
+- #22103 [proposed] — investigate Moodle externship timesheet grading accuracy (Jon claims inaccurate)
+- #22054 [proposed] — slot suggestion panel on externship request page (staff opt-in)
+
+Open threads to drive next:
+1. #22055 [proposed] — Replace broken `getEAStatus` function in `CertificateReadiness.php` (lines 567-614). Backed up as `.bak-idea-22055-hours-gate-20260803`. New implementation: call `ExternshipHoursCalculator::calculate($studentId, null)`, use `is_complete` + `remaining_hours` as the pass/fail signal, return structured array matching existing format.
+2. #22102 [proposed] — Audit timesheet total_hours capture (`fill_form.php?form=student-timesheet` → form_id=5 → submission_data JSON `total_hours` key). Then read `admin_profile.php` and add externship hours panel (use `ExternshipHoursCalculator` to fetch `completed_hours/required_hours/remaining_hours` for display).
+3. #22103 [proposed] — Moodle timesheet audit: read Moodle assignment 165 (Student Externship Time Sheet) submissions and compare against admin DB `ExternshipFormSubmission` where `form_id=5`. Determine if parallel grading systems exist and whether Moodle completion gating on assign_grades bypasses hours minimum.
+
+Reference IDs:
+- Ticket: #22861 (Chat status check: Bode Penrose)
+- Ideas filed: #21754 [deployed], #22055 [proposed], #22102 [proposed], #22103 [proposed], #22054 [proposed]
+- Files touched: `/var/www/emtskills/lib/ExternshipStatusResolver.php` (guard deployed), `/var/www/emtskills/lib/CertificateReadiness.php` (backed up, needs edit)
+- Backups: `ExternshipStatusResolver.php.bak-idea-21754-placement-state-gate-20260803`, `CertificateReadiness.php.bak-idea-22055-hours-gate-20260803`
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785779852459` — 8/3/2026, 2:51:05 PM PT — 545 turns
+
+**Original task:**
+
+```
+Reply to this person says Hi "Internal" - tha'ts wrong. Also it appears that Email Agent did nothing for this student. that needs repair
+```
+
+**Ideas referenced:** #11780, #164627, #16613, #167143, #18944, #18951, #19173, #2196, #22061 [queued], #22085 [active], #23131, #4929, #495057, #5431
+
+**Last PICKUP PROMPT:**
+
+```
+touch the AI agent pipeline. ⸻
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #current — deploy SafeGreetingName systemic fix for "Hi {garbage}" greeting bug class (not "Internal" only).
+
+Where we left off (verified 2:43 PM 8/3/2026):
+- `SafeGreetingName.php` deployed to WOPR (`/var/www/emtskills/lib/`, php -l clean)
+- 4 explosion sites rewired to `SafeGreetingName::resolveFromTicket($ticket)` — verified no remaining `explode(created_by_name)` in greeting code
+- `notification_sender.php` JOIN fixed (students → Students)
+- William Jones: corrected email SENT, ticket comments added, payment truth verified
+- `#22085 [active]` — sweep 15+ Internal Follow-Up Gate tickets for greeting/text issues
+
+Open threads to drive next:
+1. #22085 [active] — Sweep: for each ticket with `created_by_name LIKE 'Internal%'`, verify student-facing reply text is appropriate (not just greeting — check factual content, risk of system-label leakage into ticket body/messages)
+2. #22085 [active] — Email AI Agent pipeline: the holding-reply agent must resolve payment/substantive facts before replying; currently replies with template text that may misstate facts (e.g., "payment_sync_gap" when genuinely unpaid). Investigate `lib/ai_ticket_agent.php` reply-composition path and add a `verify_payment_state` call before auto-reply drafting.
+3. Verify SafeGreetingName actually works: `SELECT created_by_name, student_id FROM tickets WHERE created_by_name LIKE 'Internal%' LIMIT 1` — pass the ticket array to `resolveFromTicket()` via PHP on WOPR to confirm it returns "William" (not "Internal" or "Student"). This confirms the Students JOIN and fallback both work.
+
+Reference IDs:
+- Idea: #22085 (sweep), #22061 (superseded)
+- Ticket: TKT-23131 / TKT-20260803-0AE189A0 (William Jones)
+- Files touched: lib/SafeGreetingName.php (new), lib/ai_ticket_agent.php, lib/ExamTechnicalExtensionHandler.php, lib/ai_ticket_agent_exam_extension_handler.php, tickets/lib/notification_sender.php
+- Invoice: #167143 ($1,395 unpaid, Moodle suspended)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785790859915` — 8/3/2026, 2:51:05 PM PT — 183 turns
+
+**Original task:**
+
+```
+Ruben Major Jr., IT Admin is saying that he is not receiving messages in TeamHub / requests or a callback queue in TeamHub or something. Can you see if that can be opened up for you.
+```
+
+**Ideas referenced:** #0891, #14571, #16067, #16956, #18378, #1864, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20340 [executing], #20547, #21010 [executing], #21011 [executing], #21038 [proposed], #21044, #21053 [proposed], #21125, #21126, #21138, #21158 [executing], #21171, #2121, #21213 [executing], #21262, #2139, #2140, #21419 [executing], #2153, #2154, #21542 [rejected], #21546 [executing], #22066, #22067, #22068, #22119 [proposed], #22120 [proposed], #30363, #334155, #37972, #4338, #45094, #64748, #695708, #697523, #92400, #9577
+
+**Last PICKUP PROMPT:**
+
+```
+ stuck with `notified_at=NULL`
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Ruben Major Jr. TeamHub/Argus investigation follow-up.
+(No numeric Cline task_id available — this was an investigation; the next window will get its own task_id.)
+
+Where we left off (verified 2026-08-03 2:37 PM PT):
+- User 31 (Ruben Major Jr.): 17 channel memberships, 0 DMs, 0 unread messages — not broken, just no DMs initiated
+- 4 pending shift claims (Victor Mesa) with notified_at=NULL, need manager approval
+- Argus terminal_query returning empty: fast-path missed, AI path empty. Ideas #22119 + #22120 filed
+- No student record currently in Students for rubenmajorjr@ — but no staff-persistence gate in agent lookups
+
+Open threads to drive next:
+1. #22119 [proposed] — Add is_employee gate to argusResolveStudentContact(), staff-persist users 31 + any other dual-identity staff
+2. #22120 [proposed] — Fix empty Argus terminal_query response: add staff-self fast-path for "my DMs/messages" queries
+3. Notify Ruben/Jon: have Victor Mesa's claims approved at shift_lifecycle.php, and explain Junior's DM situation (0 DMs = no one has DM'd him yet, not broken)
+
+Reference IDs:
+- Ideas filed: #22119, #22120
+- User: 31 (Ruben Major Jr., rubenmajorjr@emsuniversity.com, ExecAdmin)
+- Tables checked: users, emsu_channels, emsu_channel_members, emsu_messages, emsu_shift_claims, emsu_notification_preferences, argus_audit_log, Students, Complete_Student_Data
+- Files touched: /var/www/emtskills/routes/argus_terminal.php, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/api/messaging.php, /var/www/emtskills/routes/chat.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785782909425` — 8/3/2026, 2:51:00 PM PT — 387 turns
+
+**Original task:**
+
+```
+Why am i not seeing clustered ideas here in cline?
+```
+
+**Ideas referenced:** #10739 [proposed], #1194, #12459, #16648, #17202, #17203, #17205, #17300, #177796, #178456, #182471, #18326 [proposed], #18327 [proposed], #18329 [proposed], #18337 [deployed], #1845, #18671, #18800, #18811 [proposed], #18812 [queued], #18813 [queued], #19437, #19495, #19535 [proposed], #19537 [proposed], #19538 [proposed], #19539 [proposed], #19545, #19682, #19813, #19814, #19816, #19822, #2023, #21470, #21761, #21763, #22053 [proposed], #22057, #22059, #22063, #22065, #22070, #22072, #22076, #22078, #22079 [proposed], #22097 [proposed], #2322, #2490, #2686, #55522, #815007, #886191
+
+**Last PICKUP PROMPT:**
+
+```
+e test approve_cluster(24) — ticket queue cluster, 12 ideas
+- [ ] Complete with PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1785775905424` — 8/3/2026, 2:51:00 PM PT — 657 turns
+
+**Original task:**
+
+```
+# GLM-5.2 Hexarchy Ring — Scientific Diagnosis & Stabilization Summary
+
+## Root Causes Identified (Ruben Directive: "stop regressing, use the bug library")
+
+**Bug 1 (New Discovery): spark-memguard.sh — The Silent Killer**
+- `/usr/local/bin/spark-memguard.sh` runs every minute as root cron on ALL ring nodes
+- When swap used > 10GB, it executes `pkill -9 -f EngineCore` + `pkill -9 -f "vllm serve"` in EVERY container
+- This was the root cause of silent ring deaths: the 352 GiB weight load spikes swap >10GB → memguard fires → APIServer sees engine death → clean shutdown at 15:00:26
+- **FIXED 2026-
+```
+
+**Ideas referenced:** #10108, #1130, #1131, #11741, #12365, #12368, #1241, #12425, #1248, #1249, #1252, #1258, #12657, #13121, #13202, #1378, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18471, #18720, #18868, #19135, #19567, #1967, #1986, #19903, #19907, #19925, #20042, #20247, #20264, #20272, #2050, #20536, #2063, #2065, #20662, #2073, #2092, #2096, #20985, #21038, #2116, #21213, #2127, #2138, #2157, #2160, #21684 [drafted], #22000 [proposed], #22001 [proposed], #22002 [proposed], #22003 [proposed], #22004 [proposed], #22051 [executing], #22052 [proposed], #22053, #32701, #45094, #6847, #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+our approval of this direction.
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up — GLM-5.2 single-box cutover on Cato (all ring ideas discarded per Ruben 2026-08-03).
+
+Where we left off (verified 14:31 PT):
+- Root cause: PP=6 ring only ever forms ranks 0-1; ranks 2-5 die ~50s post-launch; DistStoreError 601s on rank 0. Zero production decodes across 8+ relaunches.
+- All ideas discarded in orchestrator_ideas: #21684, #22000, #22001, #22003, #22004, #22051, #22052, #22053.
+- Supervisor v3 running (pid verified), keep-warm cron */2 active, ./bin/glm52_keep_warm.sh on Cato, memguard v2.1 + stale_cron on all 6.
+- Crash evidence preserved in /tmp/glm52_crash_capture_cato.log; supervisor log /tmp/glm52_ring_supervisor.log.
+
+Open threads to drive next (EVERY item pending Ruben GO — human-only decision, no idea filed per his explicit order):
+1. Await GO — single-box GLM-5.2 AWQ on Cato :8210 with v5 cfg env (nohup env CFG_NCCL_IB_DISABLE=0 VLLM_DISABLE_DSA=0 CFG_EXECUTOR_BACKEND=mp bash /tmp/glm52_launch_cfg.sh 0 127.0.0.1 0.82), then verify /v1/models + live decode.
+2. Await GO — kill/disable the PP=6 supervisor relaunch loop to stop churning (or update supervisor v3 to single-box mode).
+3. Await GO — file ONE idea with chosen direction; then set status executing per Rule 161.
+
+Reference IDs:
+- Ideas: #21684 #22000 #22001 #22003 #22004 #22051 #22052 #22053 — all [discarded] in orchestrator_ideas.
+- Files: /tmp/glm52_launch_cfg.sh, /home/rubenmajor/bin/glm52_ring_supervisor.sh, /tmp/glm52_crash_capture_cato.log, /tmp/glm52_ring_supervisor.log, /usr/local/bin/glm52_stale_cron.sh, /home/rubenmajor/bin/glm52_keep_warm.sh.
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785787998507` — 8/3/2026, 2:50:58 PM PT — 56 turns
 
 **Original task:**
 
@@ -428,27 +352,79 @@ https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percen
 **Last PICKUP PROMPT:**
 
 ```
- actual NREMT.org transaction.
+ row into `nremt_submissions`.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up investigation: PD 80% report Clear button vs nremt.org wiring.
+Pick up: Wire PD Clear button to NREMT submission pipeline — fix 184 uncleared students.
 
-Where we left off (verified 2026-08-03 13:18 PT):
-- Clear button on pd_80_percent_students report calls `api/clearance_queue_action.php` [verified]
-- clearance_queue_action.php only does local DB updates — no nremt.org API calls [verified]
-- Separate `api/nremt_client.php` exists for actual NREMT API integration but is NOT called from the Clear button flow [verified]
-- File: `/var/www/emtskills/routes/report_viewer.php` lines 2780-2830 (Clear button + JS fetch)
-- File: `/var/www/emtskills/api/clearance_queue_action.php` (full endpoint, ~100 lines)
-- File: `/var/www/emtskills/api/nremt_client.php` (NREMT API client, unused by Clear button)
+Where we left off (verified 2026-08-03 14:50 PT):
+- Clear button in pd_80_percent_students report calls api/clearance_queue_action.php — local DB only, zero NREMT API calls [verified]
+- 184 students in clearance_queue with status='cleared', all have NO_SUBMISSION in hremt_submissions [verified]
+- hremt_submissions table: 0 rows, empty since creation [verified]
+- 24 cleared students have zero NREMT data (no ems_id, no application_id, no registry_number) [verified]
+- 160 cleared students have nremt_ems_id but no application submission [verified]
+- Most recent uncleared: 33 students cleared July 14-31, 2026 [verified]
+- api/nremt_client.php exists with fetchNremtStatus/verifyNremtCandidate but never called from Clear flow [verified]
 
 Open threads to drive next:
-- No open threads — this was a factual investigation, complete.
+- N/A — this was a research investigation, actionable finding delivered.
 
 Reference IDs:
 - Report: pd_80_percent_students (Students Pending NREMT Verification)
-- Files touched: `/var/www/emtskills/routes/report_viewer.php`, `/var/www/emtskills/api/clearance_queue_action.php`, `/var/www/emtskills/api/nremt_client.php`
+- Files: clearance_queue_action.php, nremt_client.php, report_viewer.php
+- Tables: clearance_queue (184 cleared), nremt_submissions (0 rows), Students.nremt_cleared_date
+
+When done, file idea in orchestrator_ideas with title "Wire PD Clear button to NREMT submission pipeline — 184 cleared students never submitted", priority P0, domain student_ops, then run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785776636014` — 8/3/2026, 2:50:52 PM PT — 215 turns
+
+**Original task:**
+
+```
+Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up
+
+Where we left off (verified 2026-08-03 09:46 PT):
+- Replay worker: 17/17 stuck items cleared, 17 rows landed in llm_replay_results (provider qwen14b_fast). Verified earlier this session.
+- Sensor grid: v_kaizen_all_findings live with 4 sources (executor 884, recipefire 1241, deadman 11, buglib 41). Verified executor is fresh.
+- Pipeline classifier: 127 rows classified via manual run at 7:33 AM; crons registered but kaizen_*.log files DON'T exist — automation delivery mechanism broken (log files never created)
+- #21710 REV
+```
+
+**Ideas referenced:** #13440, #1549, #20890, #21432 [proposed], #21433 [ready_for_review], #21434 [ready_for_review], #21586 [approved], #21587 [ready_for_review], #21588 [approved], #21667 [executing], #21710 [reverted], #21712 [proposed], #22104 [proposed], #22105 [proposed], #7121, #7164, #7168, #7186, #9109, #9132, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+ write path that has no guard.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up KAIZEN health-check + CFA bug hunt — 2026-08-03 13:59 PT.
+
+Where we left off (verified 2026-08-03 13:59 PT):
+- ALL 7 kaizen/kaison crons now heartbeat-instrumented into kaizen_cron_heartbeat (pipeline, classifier, consumer, verify, retrain_executor, bug_library_promoter, kaison_bug_library_organizer). Verified on disk + PHP lint clean.
+- CFA audit via mysql MCP on communication_log (55,164 rows): 3 empty bodies, 8 apology violations (rule 02), 81 internal/reasoning/system-prompt leaks, scanner_corrected=0 universally (no guard on this table).
+- email_ai_leak_log: 88K+ high/critical blocks in 90 days (75K peak in June 2026). pattern_label column universally NULL — meta-column never populated.
+- New bugs filed: #22104 [proposed] (P1), #22105 [proposed] (P2).
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #22104 [proposed] P1 — Wire AIReasoningLeakScanner::scanAndRepair, scanMoneyPromise, and scanReceiptClaim into the communication_log INSERT path. The table has `scanner_corrected`, `gate_blocked`, `gate_override_by` columns already. Trace the INSERT call-site (likely cron_email_responder.php or EmailAIResponder), add the guard call before the INSERT, and backfill scanner_corrected for historical rows via a retroactive scan.
+2. #22105 [proposed] P2 — Populate pattern_label in email_ai_leak_log. The matched_patterns column has JSON that could be parsed; write a backfill query or add extraction at INSERT time. Also investigate whether the pattern_label IS NULL on all 88K+ rows is a column-naming mismatch between the scanner output and the INSERT statement.
+3. #21588 [approved] — Next approved backlog item for KAIZEN execution. Verify scope in orchestrator_ideas before implementing.
+
+Reference IDs:
+- Completed today: #21432 [deployed], #21587 [resolved], #21667 [deployed], #21710 [deployed], #21712 [deployed]
+- New this session: #22104 [proposed], #22105 [proposed]
+- Next approved: #21588 [approved]
+- Files touched: cron_kaizen_pipeline.php, cron_kaizen_consumer.php, cron_kaizen_verify.php, cron_kaizen_retrain_executor.php, cron/cron_kaison_bug_library_organizer.php, docs/cline_task_ledger.md
+- DB state: kaizen_cron_heartbeat (all 7 crons instrumented), communication_log (55,164 rows, 81 leaks, 8 apologies, 3 empties), email_ai_leak_log (88K+ rows, pattern_label NULL)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -456,7 +432,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785781386836` — 8/3/2026, 1:14:43 PM PT — 98 turns
+### `1785781386836` — 8/3/2026, 2:50:33 PM PT — 99 turns
 
 **Original task:**
 
@@ -502,47 +478,88 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 </attempt_completion>
 ```
 
-### `1785778409357` — 8/3/2026, 12:00:55 PM PT — 256 turns
+### `1785779749179` — 8/3/2026, 2:47:33 PM PT — 370 turns
 
 **Original task:**
 
 ```
-What is this person actually upset about other than AI answering calls and emails? Can you look at the underlying issues for legitimacy as well?
+I need to make sure that the AI categoriztion of the info@emsuniversity.com inbox has stopped. Can you confirm this?
 ```
 
-**Ideas referenced:** #15711, #16413, #20957, #20958, #21748 [proposed], #21749 [proposed], #21754 [proposed], #21755 [proposed], #21769 [proposed], #21770 [proposed], #22015 [proposed], #22054 [proposed], #22055 [proposed], #22861, #2686, #4863, #4929, #687532, #9222, #9269, #9373, #9457
+**Ideas referenced:** #12206, #128260, #14132, #16152, #16153, #16154, #16210, #16252, #16260, #16473, #16523, #16732, #17446, #177914, #18190, #19437, #19682, #20340 [executing], #21010 [executing], #21011 [executing], #21038 [proposed], #21158 [executing], #21171, #21213 [executing], #21419 [executing], #2153, #2154, #21542 [rejected], #21546 [executing], #21761 [proposed], #21771 [proposed], #22056 [proposed], #22060 [proposed], #2563, #3237, #32584, #3572, #45094, #4991, #5298, #5447, #5646, #6064, #6106, #6228, #6751, #7206, #7207, #7317, #7356, #7882, #7907, #8103
 
 **Last PICKUP PROMPT:**
 
 ```
-te into NREMT clearance path |
+ailTimingProfileClassifier.php
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up the Bode Penrose / externship hours investigation.
 
-Where we left off (verified 2026-08-03 12:00 PT):
-- #21754 [deployed] — CFA placement-state guard live (ExternshipStatusResolver.php:127)
-- #22015 [proposed] — Chat handoff watchdog for unanswered handoff tickets
-- #21749 [proposed] — Bode's externship placement #2686 still pending, no agency contacted
-- #22054 [proposed] — Slot suggestion panel on externship request page, staff opt-in (supersedes #21769)
-- #21770 [proposed] — Partially redundant: externship form auto-grader pipeline already exists; the gap is hours enforcement, not grading
-- #22055 [proposed] — P0 compliance: wire ExternshipHoursCalculator into NREMT clearance to enforce externship hours minimum
-- Verified: ea_submissions lacks hours_completed/hours_required columns (broken gate), ExternshipHoursCalculator has zero callers (dead code), students with 12h time sheets auto_passed with no hours check
-- Files: lib/ExternshipStatusResolver.php (deployed), lib/ExternshipFormGrader.php, lib/ExternshipHoursCalculator.php, lib/CertificateReadiness.php
+Pick up task — Email Agent deferred drain improvement (from #21771 context)
+
+Where we left off (verified 2026-08-03 14:47 PT):
+- info@ folder auto-sorting confirmed STOPPED since 2026-07-31 (Ruben-approved finding #21771)
+- 521 deferred outbound emails with no drain mechanism (separate issue, uncovered during investigation)
+- Fixed #22060: guarded missing EmailTimingProfileClassifier.php — no longer crashes
 
 Open threads to drive next:
-1. #22055 [proposed] — Wire ExternshipHoursCalculator.is_complete into CertificateReadiness to enforce hours gate. Replace broken getEAStatus ea_submissions query.
-2. #21749 [proposed] — Place Bode Penrose in externship before 8/19 course deadline. Request #2686 14d pending, preceptor_state='not_sent'.
-3. #22054 [proposed] — Build slot suggestion panel on externship request page (opt-in, no auto-confirm).
-4. #21755 [proposed] — Add chat-handoff watchdog: any High-priority handoff ticket with no human action in 4h triggers escalation.
+1. #21771 [approved] — verified info@ state, no further action needed
+2. #22060 [deployed] — fatal crash fix live, no further action needed
 
 Reference IDs:
-- Ideas filed: #21748 (superseded), #21749 [proposed], #21754 [deployed], #21755 [proposed], #21769 (superseded by #22054), #21770 [proposed], #22054 [proposed], #22055 [proposed]
-- Files touched: lib/ExternshipStatusResolver.php (deployed), lib/ExternshipFormGrader.php (analyzed), lib/ExternshipHoursCalculator.php (analyzed), lib/CertificateReadiness.php (analyzed), lib/AgentContextBuilder.php (read)
+- Ideas filed: #21771 [approved], #22060 [deployed]
+- Files touched: /var/www/emtskills/cron/cron_email_responder.php (guarded include)
+- Backup: /var/www/emtskills/cron/cron_email_responder.php.bak-ruben-impl-20260803-125700
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785787253230` — 8/3/2026, 1:22:09 PM PT — 100 turns
+
+**Original task:**
+
+```
+When I click on "Login As Student Link" for example: https://emsuniversity.com/emtskills/externship/student_portal.php?view_token=9c6f330f5e080ad1a0e000b8056eb3e982dd81cd1e9f4c1653668e3bc488f83f 
+
+ from here: https://emsuniversity.com/emtskills/admin_profile.php
+
+Needs to automatically staff into that student's account like it did before. The auto-login here to the student accounts seems to have been removed or the token is bad or something is off
+```
+
+**Ideas referenced:** #128203, #18836, #22091 [deployed], #9662
+
+**Last PICKUP PROMPT:**
+
+```
+s. Deployed and verified.
+
+---
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task: Login As Student auto-login for failed/dropped students -- #22091 [deployed]
+
+Where we left off (verified 2026-08-03 13:20 PT):
+- Fix deployed to /var/www/emtskills/externship/student_portal.php: removed fail_date/drop_date/transfer_date/is_duplicate filters from admin view_token student lookup
+- Token validation for 25914T-12 (Jayden Planz, fail_date=2025-10-30) confirmed working, dashboard loads
+- Normal OTP login unaffected
+- PHP-FPM reloaded
+- Backup at /tmp/sp_fix_backup.php
+- Handoff notes updated
+
+Open threads to drive next:
+(human-only decision, no idea) No open threads remaining. Fix is deployed and verified.
+
+Reference IDs:
+- Idea filed: #22091 [deployed]
+- Files touched: /var/www/emtskills/externship/student_portal.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
@@ -3190,49 +3207,4 @@ Reference IDs:
 - Files touched: none (DB-only reads/updates this session)
 </result>
 </attempt_completion>
-```
-
-### `1785375877050` — 7/31/2026, 1:59:50 PM PT — 2361 turns
-
-**Original task:**
-
-```
-#GLM
-
-How is it doing now? If stable, document that as a durable build first. Then Conitnue with open threads. leverage rule 267
-
-You were right and I was wrong twice. First I overrode you on GLM preference. Then I spent rounds patching ranking logic while the actual problem was that the ring's engine had died mid-session. Both are fixed. Here is the honest accounting.
-
-GLM IS NOW FIRST EVERYWHERE, IN CODE, NOT CONFIG
-
-I stopped tuning preferences and made it unconditional in /usr/local/bin/frankenstein_tools_adapter.py (9 patches, py_compile clean, backups .bak-glmfirst-* and .bak-glmctx-*):
-
-```
-
-**Ideas referenced:** #11261, #12059, #12060, #12231, #12251, #12335, #12365, #12366, #12368, #12407, #12459, #1248 [resolved], #12672, #12689, #13108, #13121, #13831, #13832, #13874, #14000, #16120, #16126, #16128, #16844, #1685, #1687, #1705, #1706, #17202, #17203, #17205, #17300, #178531, #18781, #18820, #18868, #1888, #1894, #1962, #1964, #1967, #19903, #1993 [resolved], #19962 [proposed], #20005 [proposed], #20022 [rejected], #20040 [proposed], #20041 [proposed], #20042 [proposed], #20054 [proposed], #20068 [proposed], #20069 [proposed], #20082 [proposed], #20088 [proposed], #20102 [proposed], #20112 [proposed], #20129 [proposed], #2014, #20172 [proposed], #20178 [proposed], #20179 [proposed], #20245 [executing], #20246 [rejected], #20247 [executing], #20264 [proposed], #20272 [executing], #20291 [executing], #20297 [executing], #20300 [proposed], #20302 [executing], #20311 [executing], #20495 [executing], #20498 [executing], #2050, #20506 [executing], #20517 [executing], #20528 [executing], #20536 [executing], #20553 [in_progress], #2062, #2092, #2102 [deployed], #2103 [deployed], #2108 [deployed], #2109 [resolved], #2110, #2111, #2115, #2116, #2118, #2119, #2120 [rejected], #2121
-
-**Last PICKUP PROMPT:**
-
-```
-clear and a node reboot might.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785314663557 — GLM ring: adapter layer fully fixed, ring itself still unstable. NCCL/RoCE or node reboot is the next lever.
-
-Where we left off (verified 2026-07-31 13:57 PT):
-- RING: DOWN (HTTP 000). All 6 nodes were up and booting fine at 13:27, served at 13:37 for ~4 min (867 tokens), froze, died. GLM wins today: near zero. Artemis :8000 + Julia :11513 healthy and carrying ALL traffic — no user impact.
-- LAST NIGHT IT WORKED: 40-67 turns/hr for 10 hours with NCCL_TIMEOUT=3600, MIN_NCHANNELS=2, CHANNEL_COUNT=2 (PROVEN by bak-ldpreload-20260730-012232, which pre-dates the good run). Died 01:03 PT, cause unrecoverable (logs overwritten by today's relaunches; logdumper snapshot is root-owned).
-- ADAPTER LAYER IS DONE. Five verified fixes: (1) DECODE_STALL 999-sentinel penalty removed (bug library entry 2121 — fallthroughs 263 to 0); (2) ceilings raised to FRANK_GLM_OPS_CEILING=24 / FRANK_GLM_OVERFLOW_CEILING=32; (3) SLO raised to FRANK_SLO_TTFB_INTERACTIVE=240 / _BATCH=300 / stage1=240; (4) inflight-leak clamp FRANK_INFLIGHT_SANITY_MAX=8 with self-healing reset; (5) GLM-first is live in router_hook.py (GLM_FIRST_PREEMPT) + adapter absolute claim bypass (#20272 [deployed] class). Backups: .bak-stall999-*, .bak-inflightleak-*, drop-ins in frankenstein-tools.service.d/.
-- WATCHDOG IS NOW REAL: /usr/local/bin/glm52_ring_watchdog.sh + glm52-ring-watchdog.service, enabled + active. Proven: detected "DECODE-CRAWL: 0 tokens in 60s with 13 running -> DEAD" AND correctly logged "rank0 inside 1200s boot grace — resetting fail count" instead of looping. Kill switch: touch /tmp/glm52_watchdog.disabled. Ring-side SSH now runs as emsuserver (the root-blindness fix). Backups .bak-sshuser-*, .bak-bootfix-*, .bak-bootgrace-*.
-- THE UNEXPLAINED WEDGE: all 6 nodes log NV_ERR_NO_MEMORY (NVRM mem_desc alloc failures) — host-side, on unified-memory GB10. Cesar host RAM was 87% used at 13:45. Boots clean, generates briefly, freezes with requests stuck running, dies. Not config: timeout value, channel count, ASYNC_ERROR_HANDLING, socket pins all ruled out by permutation. torch watchdog 3600 and 900 both still wedge.
-- CONFIG OF RECORD (adapter, tuned for a wedging ring — tighten back toward SLO 180 / ceilings 16/8 once stable): OPS_CEILING=24, OVERFLOW_CEILING=32, SLO 240/300, stage1 240, INFLIGHT_SANITY_MAX=8, SERVED_CTX[frankenstein-tools]=131072.
-- Launch script /tmp/glm52_authoritative.sh on Cato is currently at: NCCL_TIMEOUT=1200, MIN_NCHANNELS=4, CHANNEL_COUNT=4, no TORCH vars, no SOCKET_FAMILY pins, LD_PRELOAD=libnccl.so.2.30.7 present. Last night's PROVEN-good config was 3600/2/2 with LD_PRELOAD and none of today's vars.
-
-Open threads to drive next:
-1. #20528 [queued] — THE work. Hypothesis 3 is leading: collectives run over plain TCP (NCCL_IB_DISABLE=1, NCCL_NET=Socket) while every node has unused CX7 RoCE interfaces (enP2p1s0f0np0 10.220.5.2/30, enP2p1s0f1np1 10.220.6.1/30) and glm52-fabric.service exists but is INACTIVE (someone tried this before). READ that service file first. Respect rule 251 (Roman CX7 TP=2 only).
-2. CHEAPEST UNTRIED MOVE: reboot the hex nodes (or at least Cato + Augustus) to clear possible driver-level bad state from the 1AM death, then relaunch. Nothing else has moved the needle and a reboot is the only state a container restart cannot reset.
-3. #20553 [blocked] — false impl_failed; the watchdog fix was hand-shipped and 
 ```

@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-03T07:22:43.186Z",
+ "generated_at": "2026-08-03T08:22:43.534Z",
  "counts": {
-  "parsed": 3,
-  "reused": 386,
+  "parsed": 2,
+  "reused": 387,
   "failed": 0,
   "total": 389
  },
@@ -107145,13 +107145,13 @@
   },
   "1785600191339": {
    "task_id": "1785600191339",
-   "mtime": 1785741577924,
+   "mtime": 1785743565207,
    "created_at": "2026-08-01T16:03:11.339Z",
-   "last_modified": "2026-08-03T07:19:37.924Z",
-   "size_kb": 5085,
-   "turn_count": 2402,
+   "last_modified": "2026-08-03T07:52:45.207Z",
+   "size_kb": 5165,
+   "turn_count": 2438,
    "title": "#Kaizon / Bugs\n\nI want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh instead of what's stale? \n\nI need to increase overall operational efficiency and I see that Kaizon, ",
-   "pickup_prompt": "ting] with verification above.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #21432 — KAIZEN replay worker + sensor grid closeout.\n(task is the full KAIZEN efficiency session; idea ids below are real)\n\nWhere we left off (verified 2026-08-02 11:59 PM PT):\n- #21433 [deployed] — v_kaizen_all_findings extended to 4 sources (executor 1061, recipefire 1141, deadman 11, buglib 41); classifier ran 1055 rows\n- #21434 [deployed] — recipe fire bridge live via cron_kaizen_pipeline (100 fires/hr), but 94 are unclassified noise; suggested unclassified-skip guard pending Ruben's approval\n- #21432 [executing] — replay worker code fixed (error_text alias, qwen2.5-coder:14b) but Ollama 503 saturation blocks all 16 completions; fleet-side fix owned by GLM52 workstream\n- #21168 [deployed] — 0 uncovered categories; 916 junk rows purged\n\nOpen threads to drive next:\n1. #21434 — build unclassified-skip guard in cron_kaizen_pipeline.php recipe fire bridge (waiting on approval)\n2. #21432 — after Ollama un-saturates: reset 16 failed replay rows to pending, run worker, confirm llm_replay_results rows appear\n\nReference IDs:\n- Ideas filed: #21162, #21163, #21165, #21166, #21168, #21169, #21400, #21401, #21405, #21432, #21433, #21434\n- Files touched: /var/www/emtskills/cron_kaizen_replay_worker.php, cron_kaizen_pipeline.php, cron_kaizen_classifier.php, cron_csat_nps_ingest.php, v_kaizen_all_findings view\n- Verifications: 0 uncovered categories, 29 CSAT rows, 17 replay rows (1 pending/16 failed), 4 view sources, 12 deadman classifications\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════",
+   "pickup_prompt": "fied, all system state probed.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #244045 — Extensive KAIZEN gap research completed.\n\nWhere we left off (verified 2026-08-03 00:48 PT):\n- Pipeline intermittent silence confirmed (0 rows at 00:41, healthy when manually run at 00:47)\n- Sensor staleness: deadman (2 days), buglib (11 days) — no continuous loader\n- Replay loop stalled: 16 failed/1 pending, all HTTP 503, ollama.service masked\n- All crons active, www-data owned, correct user\n- 3 new ideas filed: #21586, #21587, #21588\n\nOpen threads to drive next (EVERY item has a real filed idea #):\n1. #21586 [proposed] — Root-cause pipeline silence window (check Doorman or DB lock)\n2. #21587 [proposed] — Build continuous loader for deadman+buglib into v_kaizen_all_findings\n3. #21588 [proposed] — Unmask ollama.service, apply OLLAMA_NUM_PARALLEL=8, reprocess stuck queue → 16 completions\n4. #21435 [deployed] — 6 refund retrain fires verified in orchestrator_recipe_fires at 23:50:47\n\nReference IDs:\n- Ticket: #Kaizon / Bugs (root task)\n- Ideas filed: #21586, #21587, #21588\n- Files touched: /var/www/emtskills/cron_kaizen_replay_worker.php, v_kaizen_all_findings (view), /etc/litellm/config.yaml, /etc/systemd/system/ollama.service.d/override.conf\n- Database state: 4-source view (executor, deadman, buglib, recipefire), 16 failed replays, 3 new ideas\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1468": null,
     "1679": null,
@@ -107259,8 +107259,12 @@
     "21435": "blocked",
     "21529": null,
     "21558": null,
+    "21586": "proposed",
+    "21587": "proposed",
+    "21588": "proposed",
     "45094": null,
-    "178501": null
+    "178501": null,
+    "244045": null
    }
   },
   "1785601440006": {
@@ -108420,11 +108424,11 @@
   },
   "1785722877297": {
    "task_id": "1785722877297",
-   "mtime": 1785741552518,
+   "mtime": 1785745316669,
    "created_at": "2026-08-03T02:07:57.297Z",
-   "last_modified": "2026-08-03T07:19:12.518Z",
-   "size_kb": 1319,
-   "turn_count": 384,
+   "last_modified": "2026-08-03T08:21:56.669Z",
+   "size_kb": 1451,
+   "turn_count": 440,
    "title": "#GLM\n\nIs GLM live? \n\n\n\nStopped per your instruction. Comprehensive Rule 91 wrap-up with the corrected ring location: the GLM-5.2 ring sits on the Oceanside LAN, not on WOPR.\n\n## Ring location correction (from you, 2026-08-02 18:59 PT)\n\nThe 6-node DGX Spark ring is on the Oceanside LAN, Cato now head:\nPompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) -> Pompeii (repeats ring)\n\nThe earlier host_probe reading for glm52-ring (WOPR:8210) was probing a stale proxy or port forward, so its real state was unknown. Actual ring health must be verified from the Oceanside network or through a proper WOPR-to-Oceanside tunnel, which you confirmed shou",
    "pickup_prompt": " a known bug with a known fix.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1785314663557 - GLM-5.2 ring decode-wedge, process failure analysis\n\nWhere we left off (verified 2026-08-03 00:07 PT):\n- Ring restored to known-working config, serving but slow (0.4-0.7 tok/s)\n- 200GbE NCCL interface change helped (2.5 tok/s peak vs 0.4 before) but stall pattern persists\n- Bisection tests failed: chunked-prefill removal OOMs, fp8_ds_mla removal does not fix wedge\n- Wedge is in PP=6 pipeline parallel communication layer\n- Bug library incidents: 2148 (DSA hypothesis untested), 2159 (crash-loop fixed), 2160 (chunked-prefill default), 2161 (no-chunked-prefill OOM), 2162 (DSA disproven)\n- Process failure: did NOT consult bug library first, did NOT read bug 2148 full resolution, did NOT search vLLM community for known fixes\n\nOpen threads to drive next:\n1. (human-only decision, no idea) - search vLLM GitHub issues for \"pipeline parallel decode hang\" or \"shm_broadcast dequeue timeout\" to find known fix\n2. #21147 [awaiting_review] - shm_broadcast dequeue_timeout source dive\n3. #21472 [proposed] - ring monitor decode-live requirement\n4. #21158 [blocked] - auto-restart-loop standing config\n5. #21213 [blocked] - Ray-worker-death detection\n6. #21419 [blocked] - flight-recorder crash forensics\n7. #21519 [proposed] - alternative bisection: max_model_len=8192 + --no-enable-chunked-prefill\n8. (human-only decision, no idea) - file vLLM upstream issue for GLM-5.2 PP=6 decode-wedge\n\nReference IDs:\n- Ideas: #21147 [awaiting_review], #21158 [blocked], #21213 [blocked], #21419 [blocked], #21472 [proposed], #21476 [proposed], #21482 [proposed], #21519 [proposed]\n- Bug-library incidents: 2148, 2149, 2150, 2151, 2152, 2156, 2159, 2160, 2161, 2162, 1967\n- Files touched: /tmp/glm52_launch_fixed.sh (local Mac, not deployed), /tmp/glm52_launch_ray.sh (Cato + all 6 nodes, NCCL_SOCKET_IFNAME=enp1s0f0np0)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {

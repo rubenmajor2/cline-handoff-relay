@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-03T16:22:46.178Z",
+ "generated_at": "2026-08-03T16:51:24.022Z",
  "counts": {
-  "parsed": 2,
+  "parsed": 3,
   "reused": 387,
   "failed": 0,
-  "total": 389
+  "total": 390
  },
  "tasks": {
   "1784522296714": {
@@ -107145,13 +107145,13 @@
   },
   "1785600191339": {
    "task_id": "1785600191339",
-   "mtime": 1785774135666,
+   "mtime": 1785775685102,
    "created_at": "2026-08-01T16:03:11.339Z",
-   "last_modified": "2026-08-03T16:22:15.666Z",
-   "size_kb": 5786,
-   "turn_count": 2771,
+   "last_modified": "2026-08-03T16:48:05.102Z",
+   "size_kb": 5890,
+   "turn_count": 2838,
    "title": "#Kaizon / Bugs\n\nI want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh instead of what's stale? \n\nI need to increase overall operational efficiency and I see that Kaizon, ",
-   "pickup_prompt": " 12 known incidents\n\n## PICKUP\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task: KAIZEN stale sensors — wire the writers (#21710, #21712)\n(Current PT time: 8/3/2026 8:28 AM)\n\nWhere we left off (verified 2026-08-03 08:28 PT):\n- #21710 Deadman logger has zero callers — verified grep: only lib/deadman_incident_logger.php + view reference it\n- #21712 bug_hunter_scan.php only READS bug_library, never WRITES findings to it — latest bug_library row 2026-07-23\n- #21587 sensor staleness now root-caused to missing WRITE paths\n- Replay worker: 17/17 completed, rows in llm_replay_results (qwen14b_fast)\n\nOpen threads to drive next (every item has a real filed idea #):\n1. #21710 [proposed] — Find the agent conversation pipeline (voice_ai / email_agent) and call deadman_incident_logger when a refund is promised without the refund API\n2. #21712 [proposed] — Add an INSERT into bug_library in cron_bug_hunter_scan.php for new findings (or wire bug_hunter_queue → bug_library)\n3. #21587 [ready_for_review] — Re-check view freshness 24h after writers land\n\nReference IDs:\n- Ideas filed: #21710, #21712 (also #21667 pipeline healthcheck, #21588 replay root cause deployed)\n- Files touched: /var/www/emtskills/cron_kaizen_replay_worker.php, v_kaizen_all_findings view, cron_bug_hunter_scan.php (read-only)\n- Queue: orchestrator_llm_replay_queue 17/17 completed\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "is the complete pickup prompt.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up\n\nWhere we left off (verified 2026-08-03 09:46 PT):\n- Replay worker: 17/17 stuck items cleared, 17 rows landed in llm_replay_results (provider qwen14b_fast). Verified earlier this session.\n- Sensor grid: v_kaizen_all_findings live with 4 sources (executor 884, recipefire 1241, deadman 11, buglib 41). Verified executor is fresh.\n- Pipeline classifier: 127 rows classified via manual run at 7:33 AM; crons registered but kaizen_*.log files DON'T exist — automation delivery mechanism broken (log files never created)\n- #21710 REVERTED at 9:45 PT: deadman logger wire was REMOVED from AgentReplyPipeline. Root cause: logger INSERT has 5 params (agent_id, conversation_id, issue_class, details, created_at) but the code passes 4 positional + 1 keyword. Column mismatch. Needs logger rewrite before re-wire.\n- #21712: confirmed bug_library scanner only READS — no INSERT INTO bug_library found anywhere in codebase\n\nOpen threads to drive next (every item has a real filed idea #):\n1. #21710 [reverted] — Fix logger INSERT signature to match table schema, then re-wire into AgentReplyPipeline guard branch\n2. #21712 [proposed] — Write bug_library promotion: scan bug_hunter_queue → INSERT new rows into bug_library so the sensor stays fresh\n3. #21667 [executing] — Fix cron delivery: kaizen_*.log files missing → either spool broken or redirect path wrong. Add DB heartbeat (INSERT into kaizen_classification_log or new kaizen_heartbeat table) so we can detect silent automation independently of files\n4. #21587 [ready_for_review] — Deadman (2 days stale) + buglib (11 days stale) — both root-caused. Deadman: zero callers found via grep. Buglib: no INSERT writers found.\n5. #21432 [proposed] — Replay worker chain_slug replay context needs improvement (currently sends raw error_text)\n\nReference IDs:\n- Ideas filed: #21432 [proposed], #21433 [ready_for_review], #21434 [ready_for_review], #21586 [approved], #21587 [ready_for_review], #21588 [approved], #21667 [executing], #21710 [reverted], #21712 [proposed]\n- Files touched: /var/www/emtskills/cron_kaizen_replay_worker.php (repointed to :11505/qwen2.5-coder:32b), /var/www/emtskills/lib/AgentReplyPipeline.php (restored from backup, no changes), /var/www/emtskills/lib/deadman_incident_logger.php (unchanged, 33 lines), /var/www/emtskills/cron_bug_hunter_scan.php (read-only)\n- DB state: v_kaizen_all_findings (4 sources), kaizen_classification_log (recent manual classifications), orchestrator_llm_replay_queue (17/17 completed), llm_replay_results (17 rows)\n- Views: v_kaizen_all_findings (target_key: executor 884, recipefire 1241, deadman 11, buglib 41)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1468": null,
     "1679": null,
@@ -108432,13 +108432,13 @@
   },
   "1785722877297": {
    "task_id": "1785722877297",
-   "mtime": 1785774157551,
+   "mtime": 1785775641455,
    "created_at": "2026-08-03T02:07:57.297Z",
-   "last_modified": "2026-08-03T16:22:37.551Z",
-   "size_kb": 2814,
-   "turn_count": 843,
+   "last_modified": "2026-08-03T16:47:21.455Z",
+   "size_kb": 2955,
+   "turn_count": 870,
    "title": "#GLM\n\nIs GLM live? \n\n\n\nStopped per your instruction. Comprehensive Rule 91 wrap-up with the corrected ring location: the GLM-5.2 ring sits on the Oceanside LAN, not on WOPR.\n\n## Ring location correction (from you, 2026-08-02 18:59 PT)\n\nThe 6-node DGX Spark ring is on the Oceanside LAN, Cato now head:\nPompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) -> Pompeii (repeats ring)\n\nThe earlier host_probe reading for glm52-ring (WOPR:8210) was probing a stale proxy or port forward, so its real state was unknown. Actual ring health must be verified from the Oceanside network or through a proper WOPR-to-Oceanside tunnel, which you confirmed shou",
-   "pickup_prompt": "aking the autolauncher robust.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — GLM 5.2 ring stabilization: deploy canonical v5 cfg fleet-wide + restore autolauncher supervision + verify sustained decode.\n\nWhere we left off (verified 2026-08-03 06:46 PT):\n- Cato rank 0 (spark-2aa8, 192.168.1.115): `/v1/models` HTTP 200, but `/v1/chat/completions` timed out (HTTP 000) — GPU 0%. Ring may have crashed post-06:38 decode.\n- Ring supervisor at `~/bin/glm52_ring_supervisor.sh` line 53 now references canonical v5 launcher with correct env: `env CFG_NCCL_IB_DISABLE=0 VLLM_DISABLE_DSA=0 CFG_EXECUTOR_BACKEND=mp bash /tmp/glm52_launch_cfg.sh $rank 192.168.1.115`.\n- Canonical launcher wrapper `~/glm52_launch_pp6.sh` installed on Cato only — NOT yet deployed to workers (Augustus/244, Pompey/21, Marcus/171, Tiberius/32, Cesar/56).\n- Idea #21684 [drafted] — autolauncher v2: serial-to-IP resolver, retry-on-NCCL-race, per-node log capture, fleet-wide canonical launcher deployment.\n\nOpen threads to drive next (EVERY item has a real filed idea #):\n1. #21684 [drafted] — Check ring state: `docker logs vllm_slot` on all 6 nodes to confirm if crash occurred; if crashed, relaunch with v5 canonical env per bug #2116 procedure (workers first, settle 30s, rank 0 last, retry once). Verify decode with `/v1/chat/completions`.\n2. #21684 [drafted] — Deploy canonical `~/glm52_launch_pp6.sh` wrapper + `/tmp/glm52_launch_cfg.sh` v5 to all 6 ring nodes (scp to 192.168.1.244,21,171,32,56).\n3. #21684 [drafted] — Implement serial-to-IP resolution in ring supervisor per `GLM52_RING_TOPOLOGY.md` (serial→current IP via `fleet_inventory` or arp lookup, never hardcode IPs).\n4. #21684 [drafted] — Kill `/tmp/glm52_launch_ray.sh` regression vector (it encodes NCCL_IB_DISABLE=1 + GLOO=enp1s0f0np0 — rename to .BAK so no script references it).\n5. #21684 [drafted] — Verify ring supervisor process is running (`ps aux | grep ring_supervisor`), restart if not; add retry-once NCCL race logic to relaunch; test auto-relaunch end-to-end by stopping rank 0 container.\n\nReference IDs:\n- Bug library incidents: #2115 (10h serving), #2116 (transient NCCL P2P race retry fix), #2138 (DSA=0 mandatory), #2142 (PP=6 needs 6), #2149/#2157 (Ray unstable → mp), #1986 (/dev/infiniband mapping)\n- Ideas filed: #21684 (autolauncher v2 expansion, P0)\n- Files touched: `~/glm52_launch_pp6.sh` (canonical wrapper on Cato), `~/bin/glm52_ring_supervisor.sh` (line 53 fixed), `admin_portal.frankenstein_router_incidents` (resolution recorded), `/Users/rubenmajor/Desktop/autolauncher_idea.sql`\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "\n\n## Next Steps (Open Threads)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task — GLM-5.2 hexarchy ring stabilization: verify ring boot after clean relaunch + sustained decode verification.\n\nWhere we left off (verified 2026-08-03 09:46 PT):\n- Ring freshly launched with v5 canonical config + stale_cron protection. Workers (ranks 1-5) confirmed Up via subagents. Rank 0 launched (container f8b91c036e90). Ring is in weight-load phase.\n- **MUST verify** ring is actually serving: `curl http://127.0.0.1:8210/v1/models` on Cato (192.168.1.115) after ~3-4 min from launch (should return HTTP 200 with glm-5.2-15pct).\n- **MUST verify decode**: `curl -X POST http://127.0.0.1:8210/v1/chat/completions` with a simple prompt, confirm `finish_reason` and `completion_tokens`.\n- Root cause identified: spark-memguard.sh v1 killed EngineCore every minute on swap pressure. Deployed v2.1 (drop_caches, never kills). Stale_cron active to prevent ray_node shadow fleet.\n- Ring topology: Pompey(50c0)→Marcus(63ce)→Tiberius(e9e0)→Cesar(3b41)→Cato(2aa8)→Augustus(e3b2)→Pompey. Cato=rank0. Workers: Augustus(e3b2)=rank1, Pompey(50c0)=rank2, Marcus(63ce)=rank3, Tiberius(e9e0)=rank4, Cesar(3b41)=rank5.\n\nOpen threads to drive next (every item has a real filed idea #):\n1. **#21684 [drafted]** — GLM-5.2 ring autolauncher v2: serial-to-IP resolver, retry-on-NCCL-race, per-node log capture, fleet-wide canonical launcher deployment. All nodes have v5 launcher, but ring supervisor at `~/bin/glm52_ring_supervisor.sh` still references `/tmp/glm52_v34_failfast.sh` (missing file) — MUST be updated to point at `/tmp/glm52_launch_cfg.sh` with env CFG_NCCL_IB_DISABLE=0 VLLM_DISABLE_DSA=0. Deploy canonical `~/glm52_launch_pp6.sh` wrapper to all 6 nodes.\n2. **#21684 [drafted]** — Verify ring decode end-to-end: curl `/v1/models`, `/v1/chat/completions`, confirm 200 + real tokens + GPU 96%. If dead, relaunch with v5 config (workers first, settle 30s, rank 0 last, retry once per bug #2116).\n3. **#21684 [drafted]** — Deploy canonical `~/glm52_launch_pp6.sh` wrapper (v5 delegates to `/tmp/glm52_launch_cfg.sh`) to all 6 nodes. Currently only on Cato.\n4. **#21684 [drafted]** — Kill old `/tmp/glm52_launch_ray.sh` regression vector (encodes NCCL_IB_DISABLE=1 + GLOO=enp1s0f0np0) — rename to `.BAK` so no script references it.\n5. **#21684 [drafted]** — Implement serial-to-IP resolution in ring supervisor per GLM52_RING_TOPOLOGY.md (serial→current IP via fleet_inventory or arp lookup, never hardcode IPs).\n\nReference IDs:\n- Bug library incidents recorded: `glm52_ring_stabilized_cfgv5_ncclib0_dsa0_20260803` (P0_critical, resolved)\n- Ideas filed: #21684 (autolauncher v2, P0, draft)\n- Files deployed: memguard v2.1, stale_cron, v5 launcher wrapper on Cato\n- All 6 nodes: 115 (Cato), 244 (Augustus), 21 (Pompey), 171 (Marcus), 32 (Tiberius), 56 (Cesar)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1666": "resolved",
     "1793": null,
@@ -108574,6 +108574,17 @@
    "ideas": {
     "21481": "proposed"
    }
+  },
+  "1785775272174": {
+   "task_id": "1785775272174",
+   "mtime": 1785775272477,
+   "created_at": "2026-08-03T16:41:12.174Z",
+   "last_modified": "2026-08-03T16:41:12.477Z",
+   "size_kb": 2,
+   "turn_count": 1,
+   "title": "Analysis only - tell me why frankenstein llm is so slow right now",
+   "pickup_prompt": null,
+   "ideas": {}
   }
  }
 }

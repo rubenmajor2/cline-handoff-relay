@@ -6,12 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/3/2026, 9:22:46 AM PT | window: last 72h | 62 tasks | index total 389 (parsed 2, cached 387)
+Generated: 8/3/2026, 9:51:24 AM PT | window: last 72h | 62 tasks | index total 390 (parsed 3, cached 387)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785722877297` | 8/3/2026, 9:22:37 AM | 843 | 2814KB | #GLM |
-| `1785600191339` | 8/3/2026, 9:22:15 AM | 2771 | 5786KB | #Kaizon / Bugs |
+| `1785600191339` | 8/3/2026, 9:48:05 AM | 2838 | 5890KB | #Kaizon / Bugs |
+| `1785722877297` | 8/3/2026, 9:47:21 AM | 870 | 2955KB | #GLM |
+| `1785775272174` | 8/3/2026, 9:41:12 AM | 1 | 2KB | Analysis only - tell me why frankenstein llm is so slow right now |
 | `1785604764278` | 8/3/2026, 12:04:02 AM | 264 | 1217KB | based on the complaints received and current status, what kind of actions can we put into  |
 | `1785649980432` | 8/2/2026, 11:52:25 PM | 906 | 2864KB | #Argus |
 | `1785599739497` | 8/2/2026, 11:25:37 PM | 690 | 3266KB | I want to get back to work on clustering, parallelism and tarpipe, particularly with the e |
@@ -71,13 +72,60 @@ Generated: 8/3/2026, 9:22:46 AM PT | window: last 72h | 62 tasks | index total 3
 | `1785363426908` | 7/31/2026, 1:26:46 PM | 1042 | 3843KB | #EMT Webforms/Payments |
 | `1785435661707` | 7/31/2026, 1:11:29 PM | 2170 | 7588KB | There's grievances getting lost because of all these categories in here. https://emsuniver |
 | `1785368618667` | 7/31/2026, 12:27:12 PM | 356 | 1340KB | We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for |
-| `1785512899843` | 7/31/2026, 9:38:45 AM | 98 | 389KB | It looks like Klein was updated. When this happens sometimes some of our features that we  |
 
 ---
 
 ## Per-window detail
 
-### `1785722877297` — 8/3/2026, 9:22:37 AM PT — 843 turns
+### `1785600191339` — 8/3/2026, 9:48:05 AM PT — 2838 turns
+
+**Original task:**
+
+```
+#Kaizon / Bugs
+
+I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
+```
+
+**Ideas referenced:** #12646, #12724, #13440, #1468, #14937, #1679, #1685, #1686, #1687, #1754, #1755, #178501, #1833, #18694, #18696, #18841, #1909, #19177, #19188, #19190, #19193, #19198, #19227, #19234, #19435, #19439, #19490, #19492, #19495, #19504, #19511, #19576, #19776, #1980, #19803, #1985, #1986, #1990, #1993, #20079, #20142, #20149, #20297 [queued], #2036, #2044, #20495 [queued], #20506 [executing], #20633, #20882, #20883, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #20969 [proposed], #20970 [proposed], #20971 [proposed], #20972 [proposed], #20973 [proposed], #20974 [proposed], #20975 [approved], #21000 [deployed], #21001, #21002, #21004 [proposed], #2103, #21033, #2109, #21096 [ready_for_review], #21097 [deployed], #2116, #21162 [proposed], #21163 [proposed], #21165 [implemented], #21166 [implemented], #21167 [impl_failed], #21168 [deployed], #21169 [deployed], #2118, #21201 [implemented], #21400 [deployed], #21401 [implemented], #21405 [implemented], #21432 [proposed], #21433 [proposed], #21434 [proposed], #21435 [blocked], #21529, #21558, #21586 [proposed], #21587 [proposed], #21588 [proposed], #21667 [proposed], #21710 [proposed], #21712 [proposed], #244045, #3076, #3077, #3081, #4421, #45094, #4955, #7358, #8869, #9109, #9132, #9222, #9269
+
+**Last PICKUP PROMPT:**
+
+```
+is the complete pickup prompt.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up
+
+Where we left off (verified 2026-08-03 09:46 PT):
+- Replay worker: 17/17 stuck items cleared, 17 rows landed in llm_replay_results (provider qwen14b_fast). Verified earlier this session.
+- Sensor grid: v_kaizen_all_findings live with 4 sources (executor 884, recipefire 1241, deadman 11, buglib 41). Verified executor is fresh.
+- Pipeline classifier: 127 rows classified via manual run at 7:33 AM; crons registered but kaizen_*.log files DON'T exist — automation delivery mechanism broken (log files never created)
+- #21710 REVERTED at 9:45 PT: deadman logger wire was REMOVED from AgentReplyPipeline. Root cause: logger INSERT has 5 params (agent_id, conversation_id, issue_class, details, created_at) but the code passes 4 positional + 1 keyword. Column mismatch. Needs logger rewrite before re-wire.
+- #21712: confirmed bug_library scanner only READS — no INSERT INTO bug_library found anywhere in codebase
+
+Open threads to drive next (every item has a real filed idea #):
+1. #21710 [reverted] — Fix logger INSERT signature to match table schema, then re-wire into AgentReplyPipeline guard branch
+2. #21712 [proposed] — Write bug_library promotion: scan bug_hunter_queue → INSERT new rows into bug_library so the sensor stays fresh
+3. #21667 [executing] — Fix cron delivery: kaizen_*.log files missing → either spool broken or redirect path wrong. Add DB heartbeat (INSERT into kaizen_classification_log or new kaizen_heartbeat table) so we can detect silent automation independently of files
+4. #21587 [ready_for_review] — Deadman (2 days stale) + buglib (11 days stale) — both root-caused. Deadman: zero callers found via grep. Buglib: no INSERT writers found.
+5. #21432 [proposed] — Replay worker chain_slug replay context needs improvement (currently sends raw error_text)
+
+Reference IDs:
+- Ideas filed: #21432 [proposed], #21433 [ready_for_review], #21434 [ready_for_review], #21586 [approved], #21587 [ready_for_review], #21588 [approved], #21667 [executing], #21710 [reverted], #21712 [proposed]
+- Files touched: /var/www/emtskills/cron_kaizen_replay_worker.php (repointed to :11505/qwen2.5-coder:32b), /var/www/emtskills/lib/AgentReplyPipeline.php (restored from backup, no changes), /var/www/emtskills/lib/deadman_incident_logger.php (unchanged, 33 lines), /var/www/emtskills/cron_bug_hunter_scan.php (read-only)
+- DB state: v_kaizen_all_findings (4 sources), kaizen_classification_log (recent manual classifications), orchestrator_llm_replay_queue (17/17 completed), llm_replay_results (17 rows)
+- Views: v_kaizen_all_findings (target_key: executor 884, recipefire 1241, deadman 11, buglib 41)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785722877297` — 8/3/2026, 9:47:21 AM PT — 870 turns
 
 **Original task:**
 
@@ -103,30 +151,35 @@ The earlier host_probe reading for glm52-ring (WOPR:8210) was probing a stale pr
 **Last PICKUP PROMPT:**
 
 ```
-aking the autolauncher robust.
+
+
+## Next Steps (Open Threads)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — GLM 5.2 ring stabilization: deploy canonical v5 cfg fleet-wide + restore autolauncher supervision + verify sustained decode.
 
-Where we left off (verified 2026-08-03 06:46 PT):
-- Cato rank 0 (spark-2aa8, 192.168.1.115): `/v1/models` HTTP 200, but `/v1/chat/completions` timed out (HTTP 000) — GPU 0%. Ring may have crashed post-06:38 decode.
-- Ring supervisor at `~/bin/glm52_ring_supervisor.sh` line 53 now references canonical v5 launcher with correct env: `env CFG_NCCL_IB_DISABLE=0 VLLM_DISABLE_DSA=0 CFG_EXECUTOR_BACKEND=mp bash /tmp/glm52_launch_cfg.sh $rank 192.168.1.115`.
-- Canonical launcher wrapper `~/glm52_launch_pp6.sh` installed on Cato only — NOT yet deployed to workers (Augustus/244, Pompey/21, Marcus/171, Tiberius/32, Cesar/56).
-- Idea #21684 [drafted] — autolauncher v2: serial-to-IP resolver, retry-on-NCCL-race, per-node log capture, fleet-wide canonical launcher deployment.
+Pick up task — GLM-5.2 hexarchy ring stabilization: verify ring boot after clean relaunch + sustained decode verification.
 
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #21684 [drafted] — Check ring state: `docker logs vllm_slot` on all 6 nodes to confirm if crash occurred; if crashed, relaunch with v5 canonical env per bug #2116 procedure (workers first, settle 30s, rank 0 last, retry once). Verify decode with `/v1/chat/completions`.
-2. #21684 [drafted] — Deploy canonical `~/glm52_launch_pp6.sh` wrapper + `/tmp/glm52_launch_cfg.sh` v5 to all 6 ring nodes (scp to 192.168.1.244,21,171,32,56).
-3. #21684 [drafted] — Implement serial-to-IP resolution in ring supervisor per `GLM52_RING_TOPOLOGY.md` (serial→current IP via `fleet_inventory` or arp lookup, never hardcode IPs).
-4. #21684 [drafted] — Kill `/tmp/glm52_launch_ray.sh` regression vector (it encodes NCCL_IB_DISABLE=1 + GLOO=enp1s0f0np0 — rename to .BAK so no script references it).
-5. #21684 [drafted] — Verify ring supervisor process is running (`ps aux | grep ring_supervisor`), restart if not; add retry-once NCCL race logic to relaunch; test auto-relaunch end-to-end by stopping rank 0 container.
+Where we left off (verified 2026-08-03 09:46 PT):
+- Ring freshly launched with v5 canonical config + stale_cron protection. Workers (ranks 1-5) confirmed Up via subagents. Rank 0 launched (container f8b91c036e90). Ring is in weight-load phase.
+- **MUST verify** ring is actually serving: `curl http://127.0.0.1:8210/v1/models` on Cato (192.168.1.115) after ~3-4 min from launch (should return HTTP 200 with glm-5.2-15pct).
+- **MUST verify decode**: `curl -X POST http://127.0.0.1:8210/v1/chat/completions` with a simple prompt, confirm `finish_reason` and `completion_tokens`.
+- Root cause identified: spark-memguard.sh v1 killed EngineCore every minute on swap pressure. Deployed v2.1 (drop_caches, never kills). Stale_cron active to prevent ray_node shadow fleet.
+- Ring topology: Pompey(50c0)→Marcus(63ce)→Tiberius(e9e0)→Cesar(3b41)→Cato(2aa8)→Augustus(e3b2)→Pompey. Cato=rank0. Workers: Augustus(e3b2)=rank1, Pompey(50c0)=rank2, Marcus(63ce)=rank3, Tiberius(e9e0)=rank4, Cesar(3b41)=rank5.
+
+Open threads to drive next (every item has a real filed idea #):
+1. **#21684 [drafted]** — GLM-5.2 ring autolauncher v2: serial-to-IP resolver, retry-on-NCCL-race, per-node log capture, fleet-wide canonical launcher deployment. All nodes have v5 launcher, but ring supervisor at `~/bin/glm52_ring_supervisor.sh` still references `/tmp/glm52_v34_failfast.sh` (missing file) — MUST be updated to point at `/tmp/glm52_launch_cfg.sh` with env CFG_NCCL_IB_DISABLE=0 VLLM_DISABLE_DSA=0. Deploy canonical `~/glm52_launch_pp6.sh` wrapper to all 6 nodes.
+2. **#21684 [drafted]** — Verify ring decode end-to-end: curl `/v1/models`, `/v1/chat/completions`, confirm 200 + real tokens + GPU 96%. If dead, relaunch with v5 config (workers first, settle 30s, rank 0 last, retry once per bug #2116).
+3. **#21684 [drafted]** — Deploy canonical `~/glm52_launch_pp6.sh` wrapper (v5 delegates to `/tmp/glm52_launch_cfg.sh`) to all 6 nodes. Currently only on Cato.
+4. **#21684 [drafted]** — Kill old `/tmp/glm52_launch_ray.sh` regression vector (encodes NCCL_IB_DISABLE=1 + GLOO=enp1s0f0np0) — rename to `.BAK` so no script references it.
+5. **#21684 [drafted]** — Implement serial-to-IP resolution in ring supervisor per GLM52_RING_TOPOLOGY.md (serial→current IP via fleet_inventory or arp lookup, never hardcode IPs).
 
 Reference IDs:
-- Bug library incidents: #2115 (10h serving), #2116 (transient NCCL P2P race retry fix), #2138 (DSA=0 mandatory), #2142 (PP=6 needs 6), #2149/#2157 (Ray unstable → mp), #1986 (/dev/infiniband mapping)
-- Ideas filed: #21684 (autolauncher v2 expansion, P0)
-- Files touched: `~/glm52_launch_pp6.sh` (canonical wrapper on Cato), `~/bin/glm52_ring_supervisor.sh` (line 53 fixed), `admin_portal.frankenstein_router_incidents` (resolution recorded), `/Users/rubenmajor/Desktop/autolauncher_idea.sql`
+- Bug library incidents recorded: `glm52_ring_stabilized_cfgv5_ncclib0_dsa0_20260803` (P0_critical, resolved)
+- Ideas filed: #21684 (autolauncher v2, P0, draft)
+- Files deployed: memguard v2.1, stale_cron, v5 launcher wrapper on Cato
+- All 6 nodes: 115 (Cato), 244 (Augustus), 21 (Pompey), 171 (Marcus), 32 (Tiberius), 56 (Cesar)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -134,52 +187,15 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785600191339` — 8/3/2026, 9:22:15 AM PT — 2771 turns
+### `1785775272174` — 8/3/2026, 9:41:12 AM PT — 1 turns
 
 **Original task:**
 
 ```
-#Kaizon / Bugs
-
-I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
+Analysis only - tell me why frankenstein llm is so slow right now
 ```
 
-**Ideas referenced:** #12646, #12724, #13440, #1468, #14937, #1679, #1685, #1686, #1687, #1754, #1755, #178501, #1833, #18694, #18696, #18841, #1909, #19177, #19188, #19190, #19193, #19198, #19227, #19234, #19435, #19439, #19490, #19492, #19495, #19504, #19511, #19576, #19776, #1980, #19803, #1985, #1986, #1990, #1993, #20079, #20142, #20149, #20297 [queued], #2036, #2044, #20495 [queued], #20506 [executing], #20633, #20882, #20883, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #20969 [proposed], #20970 [proposed], #20971 [proposed], #20972 [proposed], #20973 [proposed], #20974 [proposed], #20975 [approved], #21000 [deployed], #21001, #21002, #21004 [proposed], #2103, #21033, #2109, #21096 [ready_for_review], #21097 [deployed], #2116, #21162 [proposed], #21163 [proposed], #21165 [implemented], #21166 [implemented], #21167 [impl_failed], #21168 [deployed], #21169 [deployed], #2118, #21201 [implemented], #21400 [deployed], #21401 [implemented], #21405 [implemented], #21432 [proposed], #21433 [proposed], #21434 [proposed], #21435 [blocked], #21529, #21558, #21586 [proposed], #21587 [proposed], #21588 [proposed], #21667 [proposed], #21710 [proposed], #21712 [proposed], #244045, #3076, #3077, #3081, #4421, #45094, #4955, #7358, #8869, #9109, #9132, #9222, #9269
-
-**Last PICKUP PROMPT:**
-
-```
- 12 known incidents
-
-## PICKUP
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task: KAIZEN stale sensors — wire the writers (#21710, #21712)
-(Current PT time: 8/3/2026 8:28 AM)
-
-Where we left off (verified 2026-08-03 08:28 PT):
-- #21710 Deadman logger has zero callers — verified grep: only lib/deadman_incident_logger.php + view reference it
-- #21712 bug_hunter_scan.php only READS bug_library, never WRITES findings to it — latest bug_library row 2026-07-23
-- #21587 sensor staleness now root-caused to missing WRITE paths
-- Replay worker: 17/17 completed, rows in llm_replay_results (qwen14b_fast)
-
-Open threads to drive next (every item has a real filed idea #):
-1. #21710 [proposed] — Find the agent conversation pipeline (voice_ai / email_agent) and call deadman_incident_logger when a refund is promised without the refund API
-2. #21712 [proposed] — Add an INSERT into bug_library in cron_bug_hunter_scan.php for new findings (or wire bug_hunter_queue → bug_library)
-3. #21587 [ready_for_review] — Re-check view freshness 24h after writers land
-
-Reference IDs:
-- Ideas filed: #21710, #21712 (also #21667 pipeline healthcheck, #21588 replay root cause deployed)
-- Files touched: /var/www/emtskills/cron_kaizen_replay_worker.php, v_kaizen_all_findings view, cron_bug_hunter_scan.php (read-only)
-- Queue: orchestrator_llm_replay_queue 17/17 completed
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785604764278` — 8/3/2026, 12:04:02 AM PT — 264 turns
 
@@ -2739,52 +2755,5 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1785512899843` — 7/31/2026, 9:38:45 AM PT — 98 turns
-
-**Original task:**
-
-```
-It looks like Klein was updated. When this happens sometimes some of our features that we had for previous versions get messed up. Can you check on that and see if there's anything that we need to update on our end with regard to our cline rules and other settings?
-```
-
-**Ideas referenced:** #0369, #155724, #177796, #178551, #18480 [deployed], #18481 [blocked], #18491 [rejected], #19261, #19439, #19518, #1976, #19777 [proposed], #19785 [deployed], #19788 [proposed], #198754, #19919 [executing], #19970, #2026, #202607, #20313 [executing], #20314 [executing], #20315 [executing], #20317 [executing], #20326 [executing], #20327 [executing], #20331 [rejected], #20338 [rejected], #20346 [rejected], #20349 [rejected], #20357 [rejected], #20360, #20362 [rejected], #20366 [rejected], #20376 [proposed], #20394 [deployed], #20403 [proposed], #20419, #20420, #20422 [deployed], #20423 [proposed], #20429 [proposed], #20430 [proposed], #20431 [proposed], #20494 [proposed], #20499 [proposed], #475569, #9306
-
-**Last PICKUP PROMPT:**
-
-```
--agnostic behavior directives.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785512899843 — Cline 4.0.7 config audit and repairs
-
-Where we left off (verified 2026-07-31 09:37 PT):
-- custom_modes.json was corrupt (XML inside JSON) — FIXED
-- Checkpoints on Desktop not working (no git tracking) — FIXED: git init + .gitignore + .checkpoints dir
-- 3 git commits on Desktop, clean .gitignore that excludes junk but tracks code/docs
-- Cline 4.0.7, NOT Klein — no Klein references anywhere
-- MCP settings, providers, globalState all compatible
-
-Open threads to drive next:
-1. #20494 [proposed] — Cline 4.0.7 config audit: extend sync script for desktop app (P2, technical)
-2. #20499 [proposed] — Extend cline_settings_apply.sh to cover Cline Desktop app globalState.json paths (P2, technical)
-
-Reference IDs:
-- Ideas filed: #20494 [proposed], #20499 [proposed]
-- Files touched: /Users/rubenmajor/.cline/data/settings/custom_modes.json, /Users/rubenmajor/Desktop/.gitignore, /Users/rubenmajor/Desktop/.checkpoints/
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Fixed custom_modes.json corruption
-- [x] Fixed checkpoints on Desktop (git init + .gitignore + .checkpoints dir)
-- [x] Filed idea #20499 for Artemis sync script extension (deferred — server not reachable from this session)
-- [x] Report all fixes
-</task_progress>
 </attempt_completion>
 ```

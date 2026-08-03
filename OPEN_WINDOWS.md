@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/3/2026, 7:22:45 AM PT | window: last 72h | 62 tasks | index total 389 (parsed 1, cached 388)
+Generated: 8/3/2026, 8:22:45 AM PT | window: last 72h | 62 tasks | index total 389 (parsed 2, cached 387)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785722877297` | 8/3/2026, 7:22:33 AM | 655 | 2240KB | #GLM |
-| `1785600191339` | 8/3/2026, 6:01:59 AM | 2574 | 5407KB | #Kaizon / Bugs |
+| `1785600191339` | 8/3/2026, 8:22:09 AM | 2663 | 5586KB | #Kaizon / Bugs |
+| `1785722877297` | 8/3/2026, 8:15:56 AM | 736 | 2526KB | #GLM |
 | `1785604764278` | 8/3/2026, 12:04:02 AM | 264 | 1217KB | based on the complaints received and current status, what kind of actions can we put into  |
 | `1785649980432` | 8/2/2026, 11:52:25 PM | 906 | 2864KB | #Argus |
 | `1785599739497` | 8/2/2026, 11:25:37 PM | 690 | 3266KB | I want to get back to work on clustering, parallelism and tarpipe, particularly with the e |
@@ -77,7 +77,51 @@ Generated: 8/3/2026, 7:22:45 AM PT | window: last 72h | 62 tasks | index total 3
 
 ## Per-window detail
 
-### `1785722877297` — 8/3/2026, 7:22:33 AM PT — 655 turns
+### `1785600191339` — 8/3/2026, 8:22:09 AM PT — 2663 turns
+
+**Original task:**
+
+```
+#Kaizon / Bugs
+
+I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
+```
+
+**Ideas referenced:** #12646, #12724, #1468, #14937, #1679, #1685, #1686, #1687, #1754, #1755, #178501, #1833, #18694, #18696, #18841, #1909, #19177, #19188, #19190, #19193, #19198, #19227, #19234, #19435, #19439, #19490, #19492, #19495, #19504, #19511, #19576, #19776, #1980, #19803, #1985, #1986, #1990, #1993, #20079, #20142, #20149, #20297 [queued], #2036, #2044, #20495 [queued], #20506 [executing], #20633, #20882, #20883, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #20969 [proposed], #20970 [proposed], #20971 [proposed], #20972 [proposed], #20973 [proposed], #20974 [proposed], #20975 [approved], #21000 [deployed], #21001, #21002, #21004 [proposed], #2103, #21033, #2109, #21096 [ready_for_review], #21097 [deployed], #2116, #21162 [proposed], #21163 [proposed], #21165 [implemented], #21166 [implemented], #21167 [impl_failed], #21168 [deployed], #21169 [deployed], #2118, #21201 [implemented], #21400 [deployed], #21401 [implemented], #21405 [implemented], #21432 [proposed], #21433 [proposed], #21434 [proposed], #21435 [blocked], #21529, #21558, #21586 [proposed], #21587 [proposed], #21588 [proposed], #21667 [proposed], #244045, #3076, #3077, #3081, #4421, #45094, #4955, #7358, #8869, #9269
+
+**Last PICKUP PROMPT:**
+
+```
+ monitor), both already filed.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task Kaizen operational audit wrap-up — 2026-08-03 07:40 AM PT session.
+
+Where we left off (verified 2026-08-03 07:37 PT):
+- Replay worker: 17/17 queue items completed, 17 rows in llm_replay_results (qwen14b_fast) — done
+- View v_kaizen_all_findings: 4 sources live (executor 884 fresh 07:30, recipefire 1241, deadman 11 stale since 08-01, buglib 41 stale since 07-23)
+- Classifier verified working manually: 127 rows classified 07:33 PT
+- Crons confirmed executing via journalctl (emsuserver CMD entries observed), kaizen_*.log files DO NOT exist at /var/log/ — logs missing, not crons
+
+Open threads:
+1. #21587 [approved] — Build continuous loader for deadman + buglib sources into the view; both stale (2d / 11d). Next: check if any writer inserts into agent_deadman_incidents (grep found none in /var/www/emtskills); if no writer exists, that's the root gap — detection never gets fresh deadman rows.
+2. #21667 [proposed] — Healthcheck monitor for classifier+pipeline crons; verify cron spawns observable (journalctl works) but write heartbeat table + row-count watchdog.
+3. #21586 [deployed] — Root-caused pipeline silence to Ollama saturation + missing log files; monitor re-occurrence.
+
+Reference IDs:
+- Queue: 17 completed (ids 1-17), llm_replay_results 17 rows
+- Ideas: #21432, #21433, #21434, #21586, #21587, #21588, #21667
+- Files touched: /var/www/emtskills/cron_kaizen_replay_worker.php, /var/www/emtskills/cron_kaizen_classifier.php (view extended to 4 sources)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785722877297` — 8/3/2026, 8:15:56 AM PT — 736 turns
 
 **Original task:**
 
@@ -98,7 +142,7 @@ Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (
 The earlier host_probe reading for glm52-ring (WOPR:8210) was probing a stale proxy or port forward, so its real state was unknown. Actual ring health must be verifi
 ```
 
-**Ideas referenced:** #10108, #10544, #10577, #10591, #10740, #11741, #11781, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16648, #1666 [resolved], #16844, #17130 [superseded], #17145, #17202, #17203, #17205, #17415, #17416, #178531, #1793, #18312, #18326, #18471, #18605, #1869 [investigating], #1875 [resolved], #1896, #1897 [investigating], #1905 [resolved], #19135, #19173, #1967 [rejected], #1970, #1982, #1983, #1984, #1985, #1986, #1988, #1989, #20005, #20311, #21147 [executing], #2115, #21158 [blocked], #2116, #21213 [blocked], #2138, #2139, #21419 [blocked], #2142, #2147, #21472 [proposed], #21476 [proposed], #2148 [investigating], #21482 [proposed], #2149, #21519 [proposed], #2156 [investigating], #2157, #2159 [open], #2160 [deployed], #2161, #2162, #21684 [drafted], #23582, #28659, #30682, #30966, #35104, #36643, #36701, #36872, #3717, #40303, #40926, #41530, #43232, #44044, #44465, #44697, #44800, #45094, #45718, #45810, #45959, #46074, #46189, #46262, #46284, #46363, #46422, #46552, #46560, #46713, #46808, #46820, #46835, #47155, #47187, #47383, #47410, #47448, #47452, #47502, #47671, #48010, #6826, #6842, #9969
+**Ideas referenced:** #10108, #10544, #10577, #10591, #10740, #11741, #11781, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16648, #1666 [resolved], #16844, #17130 [superseded], #17145, #17202, #17203, #17205, #17415, #17416, #178531, #1793, #18312, #18326, #18471, #18605, #1869 [investigating], #1875 [resolved], #1896, #1897 [investigating], #1905 [resolved], #19135, #19173, #1967 [rejected], #1970, #1982, #1983, #1984, #1985, #1986, #1988, #1989, #20005, #20311, #21147 [executing], #2115, #21158 [blocked], #2116, #21213 [blocked], #2138, #2139, #21419 [blocked], #2142, #2147, #21472 [proposed], #21476 [proposed], #2148 [investigating], #21482 [proposed], #2149, #21519 [proposed], #2156 [investigating], #2157, #2159 [open], #2160 [deployed], #2161, #2162, #21684 [drafted], #23582, #28659, #30682, #30966, #32701, #35104, #36643, #36701, #36872, #3717, #40303, #40926, #41530, #43232, #44044, #44465, #44697, #44800, #45094, #45718, #45810, #45959, #46074, #46189, #46262, #46284, #46363, #46422, #46552, #46560, #46713, #46808, #46820, #46835, #47155, #47187, #47383, #47410, #47448, #47452, #47502, #47671, #48010, #6826, #6842, #9969
 
 **Last PICKUP PROMPT:**
 
@@ -127,51 +171,6 @@ Reference IDs:
 - Bug library incidents: #2115 (10h serving), #2116 (transient NCCL P2P race retry fix), #2138 (DSA=0 mandatory), #2142 (PP=6 needs 6), #2149/#2157 (Ray unstable → mp), #1986 (/dev/infiniband mapping)
 - Ideas filed: #21684 (autolauncher v2 expansion, P0)
 - Files touched: `~/glm52_launch_pp6.sh` (canonical wrapper on Cato), `~/bin/glm52_ring_supervisor.sh` (line 53 fixed), `admin_portal.frankenstein_router_incidents` (resolution recorded), `/Users/rubenmajor/Desktop/autolauncher_idea.sql`
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785600191339` — 8/3/2026, 6:01:59 AM PT — 2574 turns
-
-**Original task:**
-
-```
-#Kaizon / Bugs
-
-I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
-```
-
-**Ideas referenced:** #12646, #12724, #1468, #14937, #1679, #1685, #1686, #1687, #1754, #1755, #178501, #1833, #18694, #18696, #18841, #1909, #19177, #19188, #19190, #19193, #19198, #19227, #19234, #19435, #19439, #19490, #19492, #19495, #19504, #19511, #19576, #19776, #1980, #19803, #1985, #1986, #1990, #1993, #20079, #20142, #20149, #20297 [queued], #2036, #2044, #20495 [queued], #20506 [executing], #20633, #20882, #20883, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #20969 [proposed], #20970 [proposed], #20971 [proposed], #20972 [proposed], #20973 [proposed], #20974 [proposed], #20975 [approved], #21000 [deployed], #21001, #21002, #21004 [proposed], #2103, #21033, #2109, #21096 [ready_for_review], #21097 [deployed], #2116, #21162 [proposed], #21163 [proposed], #21165 [implemented], #21166 [implemented], #21167 [impl_failed], #21168 [deployed], #21169 [deployed], #2118, #21201 [implemented], #21400 [deployed], #21401 [implemented], #21405 [implemented], #21432 [proposed], #21433 [proposed], #21434 [proposed], #21435 [blocked], #21529, #21558, #21586 [proposed], #21587 [proposed], #21588 [proposed], #21667 [proposed], #244045, #3076, #3077, #3081, #4421, #45094, #4955, #7358, #8869, #9269
-
-**Last PICKUP PROMPT:**
-
-```
-onfirm delivery independently.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up KAIZEN cron delivery gap — crons registered but never execute.
-
-Where we left off (verified 2026-08-03, 6:01 AM PT):
-- /var/log/kaizen_classifier.log, kaizen_pipeline.log, kaizen_consumer.log DO NOT EXIST on disk
-- Crons registered in emsuserver's crontab (verified at 5:56 AM)
-- Manual runs work (105 classifications, 100 fires at 00:47 AM)
-- Cron daemon is active (systemctl)
-- All 17 replay queue items completed and rows landed in llm_replay_results
-- Sensor grid: 4 sources live in v_kaizen_all_findings
-
-Open threads to drive next:
-1. #21667 [executing] — Verify emsuserver cron spool file exists + daemon picks it up; add DB heartbeat table
-2. #21587 [approved] — Build continuous deadman/buglib loader (sources stale since Jul 31 / Jul 23)
-
-Reference IDs:
-- Ideas filed: #21667 [executing], #21587 [approved], #21588 [deployed], #21586 [deployed], #21432 [deployed], #21433 [deployed], #21434 [deployed]
-- Files touched: /var/www/emtskills/cron_kaizen_replay_worker.php, /var/www/emtskills/cron_kaizen_pipeline.php, /var/www/emtskills/cron_kaizen_classifier.php
-- Queue: 17/17 completed with rows in llm_replay_results
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════

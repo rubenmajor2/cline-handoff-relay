@@ -6,17 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/2/2026, 8:22:41 PM PT | window: last 72h | 63 tasks | index total 389 (parsed 8, cached 381)
+Generated: 8/2/2026, 9:22:42 PM PT | window: last 72h | 63 tasks | index total 389 (parsed 1, cached 388)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785722877297` | 8/2/2026, 8:22:38 PM | 161 | 545KB | #GLM |
-| `1785456423435` | 8/2/2026, 8:22:23 PM | 505 | 1673KB | See Vicky's chats regarding EMT and Refresher schedules in Chat 55 and repair |
-| `1785566802438` | 8/2/2026, 8:22:17 PM | 209 | 1190KB | We are planning a trip to Texas between August 9-12. Which cities do I need to pop into in |
+| `1785722877297` | 8/2/2026, 8:59:04 PM | 230 | 894KB | #GLM |
+| `1785581189111` | 8/2/2026, 8:51:08 PM | 970 | 3642KB | I need to make sure that the orchestra is running and that we don't just have a bunch of i |
+| `1785600191339` | 8/2/2026, 8:45:51 PM | 2158 | 4593KB | #Kaizon / Bugs |
+| `1785456423435` | 8/2/2026, 8:40:36 PM | 582 | 2345KB | See Vicky's chats regarding EMT and Refresher schedules in Chat 55 and repair |
+| `1785649980432` | 8/2/2026, 8:36:16 PM | 646 | 1945KB | #Argus |
+| `1785566802438` | 8/2/2026, 8:30:58 PM | 222 | 1232KB | We are planning a trip to Texas between August 9-12. Which cities do I need to pop into in |
 | `1785452265627` | 8/2/2026, 8:21:16 PM | 544 | 1271KB | explain how this student has a Moodle Completion Date but does not have a printed certiica |
-| `1785649980432` | 8/2/2026, 8:20:59 PM | 608 | 1826KB | #Argus |
 | `1785355259217` | 8/2/2026, 8:20:44 PM | 1098 | 2393KB | i ahve been told this form is not populating PDF forms properly downstream. Can you check  |
-| `1785600191339` | 8/2/2026, 8:20:29 PM | 2120 | 4516KB | #Kaizon / Bugs |
 | `1785602138255` | 8/2/2026, 8:02:30 PM | 994 | 2961KB | #Queued Ideas |
 | `1785723688286` | 8/2/2026, 7:34:58 PM | 74 | 183KB | I can't open my messages app and when I click it it says You can't open the applcation "Me |
 | `1785620212473` | 8/2/2026, 7:06:36 PM | 1700 | 5039KB | #GLM |
@@ -25,7 +26,6 @@ Generated: 8/2/2026, 8:22:41 PM PT | window: last 72h | 63 tasks | index total 3
 | `1785649916867` | 8/1/2026, 10:51:57 PM | 1 | 2KB | #Argus |
 | `1785646010358` | 8/1/2026, 10:16:27 PM | 217 | 1115KB | #Argus |
 | `1785608591871` | 8/1/2026, 9:44:23 PM | 946 | 3347KB | #Argus |
-| `1785581189111` | 8/1/2026, 5:37:33 PM | 902 | 3501KB | I need to make sure that the orchestra is running and that we don't just have a bunch of i |
 | `1785604764278` | 8/1/2026, 5:28:32 PM | 172 | 817KB | based on the complaints received and current status, what kind of actions can we put into  |
 | `1785483679627` | 8/1/2026, 4:07:30 PM | 126 | 325KB | yesterday, SSL expired for some parts of emsuniversity.com. Some users still reporting SSL |
 | `1785599739497` | 8/1/2026, 3:40:06 PM | 558 | 2683KB | I want to get back to work on clustering, parallelism and tarpipe, particularly with the e |
@@ -78,7 +78,7 @@ Generated: 8/2/2026, 8:22:41 PM PT | window: last 72h | 63 tasks | index total 3
 
 ## Per-window detail
 
-### `1785722877297` — 8/2/2026, 8:22:38 PM PT — 161 turns
+### `1785722877297` — 8/2/2026, 8:59:04 PM PT — 230 turns
 
 **Original task:**
 
@@ -99,45 +99,144 @@ Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (
 The earlier host_probe reading for glm52-ring (WOPR:8210) was probing a stale proxy or port forward, so its real state was unknown. Actual ring health must be verifi
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16648, #1666 [resolved], #16844, #17145, #17202, #17203, #17205, #17415, #17416, #178531, #18312, #18326, #18605, #1869 [investigating], #1875 [resolved], #1896, #1897 [investigating], #1905 [resolved], #1967 [rejected], #1970, #1982, #1983, #1984, #1985, #21147 [executing], #21158 [blocked], #21213 [blocked], #21419 [blocked], #2147, #21472 [proposed], #21476 [proposed], #2148 [investigating], #21482 [proposed], #2156 [investigating], #2159 [open], #45094, #6826
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16648, #1666 [resolved], #16844, #17145, #17202, #17203, #17205, #17415, #17416, #178531, #18312, #18326, #18605, #1869 [investigating], #1875 [resolved], #1896, #1897 [investigating], #1905 [resolved], #1967 [rejected], #1970, #1982, #1983, #1984, #1985, #21147 [executing], #21158 [blocked], #21213 [blocked], #21419 [blocked], #2147, #21472 [proposed], #21476 [proposed], #2148 [investigating], #21482 [proposed], #21519 [proposed], #2156 [investigating], #2159 [open], #2160 [deployed], #45094, #6826
 
 **Last PICKUP PROMPT:**
 
 ```
-st before trusting /v1/models.
+ked-prefill + DSA interaction.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1785314663557 — GLM-5.2 ring decode-wedge confirmed (localhost timeout on Cato)
+Pick up task #1785314663557 - GLM-5.2 ring decode-wedge diagnosis + Rule 297 source-code analysis + bug library consultation
 
-Where we left off (verified 2026-08-02 19:50 PT):
-- Confirmed: ring wedge, not warmup — localhost decode on Cato (127.0.0.1:8210) times out after 30s, same as external
-- Host vLLM alive (PID 1813837, EngineCore 1814446), 6 ALIVE Ray actors, 96% GPU, but zero completions served
-- Auto-restart loop PID 1488161 (started 15:46 PT, triggered restart 19:10 PT) still running
-- Idea #21482 [proposed] confirmed: host-layer, not Docker
-- Idea #21472 [proposed] confirmed: decode-live required, /v1/models alone is misleading
+Where we left off (verified 2026-08-02 20:57 PT):
+- Ring IS alive (vLLM + EngineCore running, 6 ALIVE Ray actors, 6.0 GPU in placement groups, /v1/models HTTP 200)
+- Ring IS serving but pathologically slow: 0.0-0.7 tok/s (should be 40-110), /v1/chat/completions times out from Mac and WOPR tunnel
+- Router frankenstein_glm52.py lane handler correctly detects wedge via generation probe and spills to 120B pool, zero glm-5.2-local picks in audit log
+- Rule 297 source-code analysis: VLLM_DISABLE_DSA does NOT exist in vLLM 0.23.1rc1, chunked-prefill is DEFAULT (enable_chunked_prefill=True even without flag)
+- Bug library incident 2148 (investigating): DSA/sparse-MLA indexer communicator path suspected, next step 3 is --no-enable-chunked-prefill bisection test
+- Bug library incident 2159 (open): VLLM_EXECUTE_MODEL_TIMEOUT_SECONDS=900 fix applied, stopped crash-loop but did NOT fix decode-wedge
+- Bug library incident 2160 recorded this session: chunked-prefill default + VLLM_DISABLE_DSA invalid
+- I caused a full Ray cluster outage by running ray stop --force (killed container PID 1), ring rebuilt and restored to known-working config
+- Idea #21519 [proposed] filed: bisection test with --no-enable-chunked-prefill flag
 
 Open threads to drive next:
-1. Idea #21482 [proposed] — kill PID 1488161 (auto-restart while-loop), let vLLM die, then restart engine fresh. Verify localhost decode on Cato before declaring alive
-2. Idea #21147 [executing] — source dive on shm_broadcast dequeue_timeout root cause
-3. Idea #21472 [proposed] — ring monitor: require decode_live, not just /v1/models
-4. Idea #21158 [blocked] — auto-restart-loop: improve kill-before-restart safety
-5. Idea #21213 [blocked] — Ray-worker-death detection with --limit 1000
-6. Idea #21419 [blocked] — flight-recorder forensics
+1. #21519 [proposed] - bisection test: kill vLLM in ray_node container, relaunch with --no-enable-chunked-prefill flag, wait 5 min, test decode. If decode succeeds at 40-110 tok/s, wedge is confirmed as chunked-prefill + DSA interaction.
+2. #21147 [awaiting_review] - source dive on EngineCore shm_broadcast dequeue_timeout root cause (ready for review)
+3. #21472 [proposed] - ring monitor: never declare ring alive from infra alone, require decode-live verification
+4. #21158 [blocked] - auto-restart-loop: confirmed deployed (VLLM_EXECUTE_MODEL_TIMEOUT_SECONDS=900), promote to standing config
+5. #21213 [blocked] - Ray-worker-death detection: use --limit 1000 + ALIVE count, not first-100 truncation
+6. #21419 [blocked] - flight-recorder crash forensics as monitoring service
+7. (human-only decision, no idea) - whether to disable chunked-prefill permanently if bisection test passes (tradeoff: chunked-prefill improves prefill throughput for long prompts)
 
 Reference IDs:
-- Ideas filed: #21147 [executing], #21158 [blocked], #21213 [blocked], #21419 [blocked], #21472 [proposed], #21476 [proposed], #21482 [proposed]
-- Files touched: none
+- Ideas filed: #21147 [awaiting_review], #21158 [blocked], #21213 [blocked], #21419 [blocked], #21472 [proposed], #21476 [proposed], #21482 [proposed], #21519 [proposed]
+- Bug-library incidents: 2148, 2149, 2150, 2151, 2152, 2156, 2159, 2160, 1967
+- Files touched: /tmp/glm52_launch_fixed.sh (local Mac, not deployed)
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Doublecheck premise: re-probe ring decode — confirmed wedge (infra alive, decode stalls)
+- [x] Rule 297 on frankenstein-llm: read registry + router source for glm-5.2 routing path
+- [x] Classify failure: ring-side shm_broadcast dequeue_timeout wedge (0.0 tok/s, 26 stuck reqs)
+- [x] CONSULT BUG LIBRARY (rule 156/262) — #2159 is the match, fix was applied but wedge persists
+- [x] Read full resolution of #2159 to understand next steps
+- [x] Apply known repair — attempted DSA disable (env var doesn't exist) + chunked-prefill removal (is default, needs --no-enable-chunked-pref
+```
+
+### `1785581189111` — 8/2/2026, 8:51:08 PM PT — 970 turns
+
+**Original task:**
+
+```
+I need to make sure that the orchestra is running and that we don't just have a bunch of ideas queuedOr work cute.
+```
+
+**Ideas referenced:** #113026, #12022, #12059, #12184, #12430, #12504, #12802, #1281, #1309, #1314, #15333, #15367, #15652, #15906, #15955 [deployed], #16523, #16881, #17913, #18135, #18357, #18395, #18442, #1850, #18761, #18763 [deployed], #18793 [deployed], #19079, #19325, #19338, #19435, #19458, #19490, #19491, #19494, #19503, #19504, #19509, #19629, #19643, #19661, #19670, #19684, #20044 [deployed], #20071 [queued], #20282, #20336 [in_progress], #20340 [proposed], #20341, #20347, #20350, #20367, #20408, #20410 [queued], #2043, #20492 [in_progress], #20493 [in_progress], #20504, #20507 [in_progress], #20509 [proposed], #20517 [proposed], #20569, #20613 [proposed], #20624 [in_progress], #20629, #20630, #20662 [in_progress], #20672 [in_progress], #2076, #20793 [proposed], #20858 [queued], #20859 [blocked], #20860 [queued], #20869 [proposed], #20883 [proposed], #20894 [proposed], #208942, #20895 [proposed], #20903 [approved], #20931, #20936, #20953, #21006, #21007, #21008, #2113, #2114, #21213, #2123, #21419, #21518 [proposed], #2782, #3541, #3953, #3957, #444279, #444280, #444539, #444542, #445761, #446187, #446420, #4536, #465819, #4747, #5029, #5031, #5034, #5516, #5778, #7925, #8247, #8281, #8321, #8563, #8598, #9222, #9235, #9581 [deployed]
+
+**Last PICKUP PROMPT:**
+
+```
+ion hook), or hold for review?
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #current — Orchestrator live status report delivered, Ruben to approve/reject #21518.
+
+Where we left off (verified 2026-08-02 20:49 PT):
+- Orchestrator live: triage autonomous, 54 decisions/24h, executor running clean, 70 implementer workers, 0 stale locks
+- 528 ready_for_review ideas, 11 impl_failed ideas with "UNKNOWN" failure (codegen null-response gap)
+- #21518 [proposed] filed to fix codegen retry loop + reset 11 impl_failed ideas + add executor notification hook
+- Implementer code read: impl_failed transition at lines 2917/2930 of cron_ruben_implement.php
+
+Open threads to drive next:
+1. #21518 [proposed] — Awaiting Ruben: approve → build + ship (fix codegen null-response gap + reset 11 impl_failed ideas)
+2. If #21518 approved, add deterministic retry loop when codegen LLM returns null/empty
+3. If #21518 approved, add `executor_notify_on_failure` RPC hook after each impl_failed transition
+4. Monitor executor log to confirm `executed` becomes non-zero when new pending decisions arrive
+
+Reference IDs:
+- Ideas filed: #21518 [proposed]
+- Files touched: /var/www/emtskills/cron/cron_orchestrator_executor.php (IN_LIB_CONTEXT define, writeback removal), /var/www/emtskills/cron/cron_ruben_implement.php (interpolation rule, 90-min reclaim)
+- Config: orchestrator_config.auto_actions populated
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
 
-### `1785456423435` — 8/2/2026, 8:22:23 PM PT — 505 turns
+### `1785600191339` — 8/2/2026, 8:45:51 PM PT — 2158 turns
+
+**Original task:**
+
+```
+#Kaizon / Bugs
+
+I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
+```
+
+**Ideas referenced:** #12646, #12724, #1468, #14937, #1679, #1685, #1686, #1687, #1754, #1755, #178501, #1833, #18694, #18696, #18841, #1909, #19177, #19188, #19190, #19193, #19198, #19227, #19234, #19435, #19439, #19490, #19492, #19495, #19504, #19511, #19576, #19776, #1980, #19803, #1985, #1986, #1990, #1993, #20079, #20142, #20149, #20297 [queued], #2036, #2044, #20495 [queued], #20506 [executing], #20633, #20882, #20883, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #20969 [proposed], #20970 [proposed], #20971 [proposed], #20972 [proposed], #20973 [proposed], #20974 [proposed], #20975 [approved], #21000 [deployed], #21001, #21002, #21004 [proposed], #2103, #21033, #2109, #21096 [ready_for_review], #21097 [deployed], #2116, #21162 [proposed], #21163 [proposed], #21165 [implemented], #21166 [implemented], #21167 [impl_failed], #21168 [deployed], #21169 [deployed], #2118, #21201 [implemented], #21400 [deployed], #21401 [implemented], #21405 [implemented], #21432 [proposed], #21529, #21558, #3076, #3077, #3081, #4421, #45094, #7358, #8869, #9269
+
+**Last PICKUP PROMPT:**
+
+```
+t-leverage KAIZEN improvement.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up KAIZEN strategic improvements from 2026-08-02 session.
+
+Where we left off (verified 2026-08-02 20:46 PT):
+- KAIZEN detection pipeline: live (Bug Hunter 15-min cron, sensor grid expanded with deadman incidents)
+- 12 deadman retrain prompts deployed to system_prompt_history
+- CSAT instrument: agent_csat_nps with 29 rows, cron_kaizen_replay_worker.php on disk but blocked
+- Recipe coverage: 272 enabled, 0 gaps
+- 17 replay items stuck in_progress — repair execution dead-ends because 120B model times out on long error prompts
+
+Open threads to drive next:
+1. #21432 [blocked] — unstick replay worker: add a fast-model endpoint (32B or 70B) dedicated to replay, or truncate prompts to 256 chars
+2. #21401 [deployed] — CSAT instrument live, monitor weekly trends to prove deadman retrain impact
+3. #21405 [deployed] — deadman sensor grid merged into v_kaizen_all_findings, verify new classifications flow through recipe fires
+
+Reference IDs:
+- Ideas: 20970, 20971, 20973, 20974, 20975, 21096, 21097, 21162, 21163, 21165, 21166, 21168, 21169, 21400, 21401, 21405, 21432, 21201
+- Files touched: cron_kaizen_bug_hunter.php, cron_kaizen_classifier.php, cron_kaizen_retrain_executor.php, failure_repair_recipes table, v_kaizen_all_findings, agent_csat_nps table, cron_csat_nps_ingest.php
+- Tickets: #20975 (refund deadman retrain), #21168 (coverage gaps), #21169 (CSAT instrument)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785456423435` — 8/2/2026, 8:40:36 PM PT — 582 turns
 
 **Original task:**
 
@@ -145,42 +244,78 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 See Vicky's chats regarding EMT and Refresher schedules in Chat 55 and repair
 ```
 
-**Ideas referenced:** #003366, #0369, #047857, #059669, #0891, #14532, #1500, #15803, #166534, #177825, #19919 [executing], #20050, #20071, #20247, #202607, #20272, #20297, #20311, #20313 [executing], #20314 [executing], #20315 [executing], #20317 [executing], #20326 [executing], #20327 [executing], #20346, #20358 [proposed], #20359 [proposed], #20410, #20516, #20539, #20587, #20617, #20672, #20869, #2088, #20884, #21106, #21147, #21168, #21169, #21213, #21472, #21476, #21490 [executing], #21491, #21492 [proposed], #21493 [proposed], #21494 [executing], #21495, #21496, #21497 [proposed], #21503, #21504 [proposed], #21505, #2196, #2563, #3222, #3223, #3226, #3227, #3230, #3231, #3233, #32701, #334155, #374151, #4338, #475569, #495057, #54737, #54755, #54756, #54970, #54972, #54984, #55026, #55111, #55205, #55216, #55227, #55257, #55387, #55418, #64748, #8211, #8217, #92400
+**Ideas referenced:** #003366, #0369, #047857, #059669, #0891, #14532, #1500, #15803, #166534, #177825, #19919 [executing], #20050, #20071, #20247, #202607, #20272, #20297, #20311, #20313 [executing], #20314 [executing], #20315 [executing], #20317 [executing], #20326 [executing], #20327 [executing], #20346, #20358 [proposed], #20359 [proposed], #20410, #20516, #20539, #20587, #20617, #20672, #20869, #2088, #20884, #21106, #21147, #21168, #21169, #21213, #21472, #21476, #21490 [executing], #21491, #21492 [proposed], #21493 [proposed], #21494 [executing], #21495, #21496 [proposed], #21497 [proposed], #21503, #21504 [proposed], #21505 [proposed], #2196, #2563, #2980, #3222, #3223, #3226, #3227, #3230, #3231, #3233, #32701, #334155, #374151, #4338, #475569, #495057, #54737, #54755, #54756, #54970, #54972, #54984, #55026, #55111, #55205, #55216, #55227, #55257, #55387, #55418, #64748, #8211, #8217, #92400
 
 **Last PICKUP PROMPT:**
 
 ```
-le). Filed **#21494**.[queued]
+correctly linked to Zoom. 
+
+═══════════════════════════════════════════════
+═══ PICKUP PROMPT ═══
+═══════════════════════════════════════════════
+Pick up task #21505 — confirm paramedicrefresher.com registrations are correctly linked to Zoom.
+(2026‑08‑02 20:24 PT)
+Where we left off (verified <timestamp PT>):
+- All paramedic future schedules present and functional
+- Zoom join URLs stored, displayed, and emailed
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #21492 — restore missing Paramedic schedules (already completed, monitor)
+2. #21493 — develop EMS‑University schedule page (future work)
+Reference IDs:
+- Ticket: none
+- Ideas filed: #21490, #21492, #21493, #21494, #21496, #21497, #21505
+- Files touched: website_class_schedules DB, refresher_students.php, post_class_processor.php
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785649980432` — 8/2/2026, 8:36:16 PM PT — 646 turns
+
+**Original task:**
+
+```
+#Argus
+
+Argus seems incredibly slow and is giviing answers not even close to liek what the answers you will give here in cline, why? I just wonder becasue I'm genuinely confused why. Can you help with this?
+```
+
+**Ideas referenced:** #0000, #10108, #10740, #11741, #11781, #11849, #11936, #11942, #11944, #11952, #11953, #11955, #12345, #12346, #12477, #12618, #12824, #12872, #12878, #13202, #13838, #1528, #16163, #16265, #16304, #16844, #178129, #178130, #178131, #18312, #18326, #18378 [deployed], #18379 [rejected], #18380 [rejected], #1864, #1880 [deployed], #18868, #18944 [approved], #18950 [deployed], #18951 [deployed], #18973 [approved], #19098 [pending], #19099 [pending], #19163, #19386 [deployed], #19403 [rejected], #19415, #19416, #19419 [ready_for_review], #19424 [pending], #19470 [deployed], #19471 [approved], #19478 [deployed], #19487 [deployed], #19489 [pending], #19499 [deployed], #19518 [rejected], #19593 [pending], #19624 [pending], #19641 [pending], #19642 [approved], #19644 [approved], #1967 [deployed], #19731 [pending], #19776 [deployed], #19782 [pending], #19784 [deployed], #19840, #19871 [deployed], #19888 [pending], #19919 [proposed], #1993 [deployed], #19957 [proposed], #19958 [proposed], #19962 [proposed], #19970 [approved], #19971 [deployed], #19975 [pending], #19978 [pending], #19995 [pending], #20164 [pending], #20193, #20197 [deployed], #20233 [pending], #20328, #20384 [deployed], #20413 [pending], #20417 [pending], #20420, #20423, #20557 [proposed], #20572 [pending], #20598 [pending], #20644 [ready_for_review], #20662 [deployed], #20674 [rejected], #20675 [pending], #20681 [ready_for_review], #20690 [proposed], #20711, #20899 [ready_for_review], #20944 [proposed], #20945 [proposed], #20956 [proposed], #20957 [proposed], #20976 [proposed], #21004, #21034, #21044, #21053 [proposed], #21073, #21074, #21101 [ready_for_review], #21102 [ready_for_review], #21109 [ready_for_review], #21110 [ready_for_review], #21138 [pending], #21171 [proposed], #21185 [pending], #2121, #21230 [approved], #21231 [approved], #21262, #2138, #2139, #2140, #21426 [approved], #21427 [ready_for_review], #21428 [ready_for_review], #21429 [approved], #21430 [approved], #21431 [approved], #21433 [approved], #21434 [approved], #21435 [approved], #21436 [approved], #2153, #2154, #21580 [proposed], #21581 [proposed], #21582 [proposed], #21589 [proposed], #21590 [proposed], #21600 [approved], #21601, #30363, #3419, #3428, #3429, #3437, #3441, #37972, #45094, #5749, #6785, #699463
+
+**Last PICKUP PROMPT:**
+
+```
+**
+
+**Defect class:** PROCESS defect in the completion artifact — I treated the PICKUP PROMPT block as optional prose I could append after a summary, when it is the ONLY legal deliverable of `attempt_completion`. The fix: always emit the full block FIRST, then any summary content. This violated Ruben's directive 4 times despite the gate rejecting me — the RCA is documented at `/Users/rubenmajor/Desktop/RULE_91_RCA_2026-08-02.md`, and the current Argus #21600 wiring task is tracked below with real idea ids.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Refresher sites repair is done; next steps are Ruben's Boot Camp Aug 8 decision, paramedic Zoom delivery confirmation, and emsuniversity.com classschedule page.
+Pick up task — Argus unwired-actions wiring #21600 plus Rule 91 compliance.
 
-Where we left off (verified 2026-08-02 20:18 PT):
-- All 7 refresher sites render future dates: arizona/sandiego/bayarea/sanantonio/dallas/houston/miami + emtrefresher.com (was 404, fixed via page 5770 + mu-plugin) + paramedicrefresher.com (7 dates render: Aug 7–Sep 18).
-- Registration URLs verified live end-to-end; emtrefresher fixed to `.../go/product/40-hour-nremt-refresher-transition-vilt/` (was 404 slug).
-- Paramedic Zoom meeting 7360338497 join URL returns HTTP/2 200; product 1060 = WooCommerce → Moodle (course 12, post 1005) delivery path; public page shows join CTA, not raw Zoom URL.
-- Boot Camp: 22BC entries I created without permission were REMOVED. Classes=0, Course_Schedules=0, instances=0, orphan dates=0. Gap remains between Jul 19 and Aug 17 cycles.
+Where we left off (verified 2026-08-02 20:35 PT):
+- #21580 [deployed] — ticket_id string resolver applied to ticket_comment, ticket_status, ticket_priority, ticket_assign in /var/www/emtskills/lib/argus_action_catalog.php (verified on disk, lint clean).
+- #21581 [deployed] — backfill notifications for existing Argus ideas: 56 new + 46 dedup = 102 agent_drafts/notifications rows.
+- #21582 [deployed] — Argus ticket-action success monitor cron is live at /etc/cron.d/emsu-argus-ticket-success-monitor, script at /var/www/emtskills/cron/cron_argus_ticket_success_monitor.php; false-alert bug fixed (zero-sample skip + 48h grace); 3 false drafts/notifications deleted, 12 empty log rows deleted.
+- #21600 [executing] — list_my_capabilities was declared but unwired in argus_action_catalog.php, causing Visible "Unknown action" errors on easy questions. I wired a full case handler (calls argusPermittedActions). File currently restored to clean baseline (md5 98f8012a497b67e838d1e22b649f8268, lint OK). 9 actions REMAIN unwired: activity_requirements, request_escalation, file_bug, file_feature, get_my_queue, list_unwired_actions, action_permissions_backfill, action_permissions_edit, authnet_legacy_link_audit.
 
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #21492 [proposed] — Paramedic Friday VILT restore: verify all 8 inserted rows (ids 405+) display + registration/Zoom fields intact; extend beyond Sep 18 if Vicky wants rolling 6-month horizon.
-2. #21493 [queued] — emsuniversity.com/classschedule/ 404: research how arizonaemt.com/classschedule/ renders (Classes/Course_Schedules pipeline) and replicate on emsuniversity.com.
-3. #21494 [queued] — e2PDF: confirm the admin tab visibility + export endpoint behavior with Vicky; files exist, plugin active.
-4. #21497 [proposed] — Boot Camp Aug 8 cycle: WAIT for Ruben's explicit go/no-go before creating any Classes/Course_Schedules/instances rows. Research ScheduleTemplateManager template 3 pattern first.
-5. #21504 [proposed] — RCA task: implement auto-recurring schedule population so the Jul 18 cutoff never recurs (cron exists but only files tickets).
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #21600 [executing] — Finish wiring the remaining 9 unwired Argus actions into argusRunAction. Delegation helpers confirmed present in /var/www/emtskills/lib/argus_delegation.php (createEscalation, getRoleCapabilities, getRoleQueue, fileBugOrFeature, listUnwiredActions). Use sed/awk line-2034 anchor insertion, NOT PHP heredoc (double-quote $key interpolation is what broke the last 8 attempts; single-quoted heredoc 'CASES' with escaped \$anchor is proven).
+2. #21582 [queued] — After 2026-08-04 16:41 PT, re-run the argus_audit_log success-rate query and compare to the 6.3% baseline; cron is already scheduled to alert if any ticket action falls below 80%.
+3. (human-only decision, no idea) — Ambassadore MCP servers: verified serving on ports 11512/11513, process confirmed listening. No code action approved; do NOT build a new ambassador service without Ruben sign-off.
 
 Reference IDs:
-- Ideas filed: #21504, #21497, #21496, #21493, #21492, #21490, #21505
-- Files touched: /var/www/vhosts/emtrefresher.com/httpdocs/wp-content/mu-plugins/schedule-shortcode.php (copied + emtrefresher.com added to site_keys); wordpress_2.LzDe7pTO_posts page id 5770 (classschedule, publish)
-- DB tables modified: website_class_schedules (+56 rows), Classes/Course_Schedules/class_schedule_instances/class_schedule_dates (22BC removed, 0 remaining)
+- Ideas filed: #21580 [deployed], #21581 [deployed], #21582 [deployed], #21600 [executing]
+- Files touched: /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/lib/argus_delegation.php, /var/www/emtskills/lib/ArgusIdeaEta.php, /var/www/emtskills/cron/cron_auto_idea_impl.php, /var/www/emtskills/cron/cron_argus_ticket_success_monitor.php, /etc/cron.d/emsu-argus-ticket-success-monitor, /var/www/emtskills/routes/argus_terminal.php, /Users/rubenmajor/Desktop/RULE_91_RCA_2026-08-02.md
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
+═══════════════════════════════════════════════
+</resul
 ```
 
-### `1785566802438` — 8/2/2026, 8:22:17 PM PT — 209 turns
+### `1785566802438` — 8/2/2026, 8:30:58 PM PT — 222 turns
 
 **Original task:**
 
@@ -188,35 +323,34 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 We are planning a trip to Texas between August 9-12. Which cities do I need to pop into in order to visit the most impactful lawmakers. Do a search on the Internet to find which ones would be our most likely allies. Find ones that have scrutinized TDSHS as well as those who are in charge of the sunset committee overseeing TDSHS that I can send a report to and set up a meeting with an advance. I just need to know which cities there are in and some details about why you think these are the best people to contact. I also need their contact information and the feasibility of having a meeting on ei
 ```
 
-**Ideas referenced:** #1565, #1882, #19595, #1976, #20734 [proposed], #28175
+**Ideas referenced:** #0000, #1565, #1882, #19595, #1976, #19898, #19904, #20251, #20734 [proposed], #28175
 
 **Last PICKUP PROMPT:**
 
 ```
- maps to WOPR, not LAN box
-
-═══════════════════════════════════════════════════
+attempt_completion>
+<result>═══════════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════════
-Pick up task #20734 — Texas TDSHS Sunset outreach: send the 3 emails + schedule Aug 10-11 meetings.
+Pick up task #20734 — Texas TDSHS Sunset Commission outreach: send lawmaker emails and schedule meetings for the Aug 10-11, 2026 trip.
 
-Where we left off (verified 2026-08-01 01:30 PT):
-- Full outreach plan deployed and verified on WOPR public URL: https://emsuniversity.com/emtskills/routes/texas_outreach.php (HTTP 401, auth-gated, login to view)
-- Content verified: target list with contact info, 4-day route plan (Houston Aug 10, San Antonio/New Braunfels Aug 11), Kolkhorst public quotes, Messaging Playbook with R vs D framing, Key Anecdote (phone call would have helped students sooner), 1-page EMSU Leave-Behind (dual-column audience-specific), 3 draft emails
-- WOPR deployment confirmed: file at /var/www/vhosts/emsuniversity.com/httpdocs/emtskills/routes/texas_outreach.php, emsumain:psaserv 644, PHP lint OK, public HTTPS returns 401
+Where we left off (verified 2026-08-02 20:30 PT):
+- Full outreach plan is deployed and verified at https://emsuniversity.com/emtskills/routes/texas_outreach.php (log in first at https://emsuniversity.com/emtskills/routes/login.php; the page returns HTTP 401 when not authenticated).
+- 404 was fixed: public DNS resolves to WOPR (76.167.100.188). File is deployed to /var/www/vhosts/emsuniversity.com/httpdocs/emtskills/routes/texas_outreach.php on WOPR, owner emsumain:psaserv 644, PHP lint OK.
+- Page contains: target list (Sen. Lois Kolkhorst — Sunset Chair + Senate HHS Chair, Katy office; Sen. Donna Campbell — Sunset member + ER physician, New Braunfels; Rep. Liz Campos — House Public Health Vice Chair + constituent, San Antonio), contact info, 4-day route (Houston full day Mon Aug 10, San Antonio/New Braunfels Tue Aug 11), Kolkhorst's direct quotes from March 2026 Sunset appointment, Messaging Playbook with R vs D framing, Key Anecdote (rushed investigation blocked a phone call that would've helped students sooner), 1-page EMSU Leave-Behind (dual-column framing mapped to 6 issues), and three draft emails.
+- Today is Sun Aug 2, 2026. Send the three emails Mon Aug 3. Phone follow-up Tue Aug 4.
 
 Open threads to drive next:
-1. #20734 [proposed] — Mon Aug 3 morning: Send the 3 outreach emails. Kolkhorst (Katy) and Campbell (New Braunfels): lead with Republican framing (agency accountability, government waste, students hurt by enforcement). Campos (San Antonio): lead with due process + Delivery of Government Efficiency committee lane. Follow up by phone Tue Aug 4.
-2. #20734 [proposed] — File Sunset public input to TDSHS review at sunset.texas.gov. Staff report being written now — input before Dec 2026 is timely.
-3. #20734 [proposed] — Print the leave-behind section of the page as physical 1-pager to bring to confirmed meetings.
+1. #20734 [proposed] — Send the 3 draft emails Mon Aug 3. Kolkhorst/Campbell: lead with Republican framing (taxpayer-funded witch hunt, students hurt, public safety delayed). Campos: due process + Delivery of Government Efficiency committee lane.
+2. #20734 [proposed] — File Sunset public input at sunset.texas.gov. Staff report is being written now; input before Dec 2026 is timely.
+3. #20734 [proposed] — Print the 1-page EMSU leave-behind for confirmed meetings.
 
 Reference IDs:
-- Ideas filed: #20734 [proposed]
-- Files deployed: /var/www/vhosts/emsuniversity.com/httpdocs/emtskills/routes/texas_outreach.php (WOPR, verified via public HTTPS curl returning 401)
+- Ideas filed: #20734
+- Files touched: /var/www/vhosts/emsuniversity.com/httpdocs/emtskills/routes/texas_outreach.php (WOPR, verified HTTP 401)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════
-</result>
+═══════════════════════════════════════════════════</result>
 </attempt_completion>
 ```
 
@@ -263,64 +397,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785649980432` — 8/2/2026, 8:20:59 PM PT — 608 turns
-
-**Original task:**
-
-```
-#Argus
-
-Argus seems incredibly slow and is giviing answers not even close to liek what the answers you will give here in cline, why? I just wonder becasue I'm genuinely confused why. Can you help with this?
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12345, #12346, #12477, #12618, #12824, #12872, #12878, #13202, #13838, #1528, #16163, #16265, #16304, #16844, #18312, #18326, #18378 [deployed], #18379 [rejected], #18380 [rejected], #1864, #18868, #18944 [approved], #18950 [deployed], #18951 [deployed], #18973 [approved], #19098 [pending], #19099 [pending], #19163, #19386 [deployed], #19403 [rejected], #19415, #19416, #19419 [ready_for_review], #19424 [pending], #19470 [deployed], #19471 [approved], #19478 [deployed], #19487 [deployed], #19489 [pending], #19499 [deployed], #19518 [rejected], #19593 [pending], #19624 [pending], #19641 [pending], #19642 [approved], #19644 [approved], #19731 [pending], #19776 [deployed], #19782 [pending], #19784 [deployed], #19840, #19871 [deployed], #19888 [pending], #19970 [approved], #19971 [deployed], #19975 [pending], #19978 [pending], #19995 [pending], #20164 [pending], #20193, #20197 [deployed], #20233 [pending], #20328, #20384 [deployed], #20413 [pending], #20417 [pending], #20420, #20423, #20557 [proposed], #20572 [pending], #20598 [pending], #20644 [ready_for_review], #20662 [deployed], #20674 [rejected], #20675 [pending], #20681 [ready_for_review], #20690 [proposed], #20711, #20899 [ready_for_review], #20944 [proposed], #20945 [proposed], #20956 [proposed], #20957 [proposed], #20976 [proposed], #21004, #21034, #21044, #21053 [proposed], #21073, #21074, #21101 [ready_for_review], #21102 [ready_for_review], #21109 [ready_for_review], #21110 [ready_for_review], #21138 [pending], #21171 [proposed], #21185 [pending], #2121, #21230 [approved], #21231 [approved], #21262, #2138, #2139, #2140, #21426 [approved], #21427 [ready_for_review], #21428 [ready_for_review], #21429 [approved], #21430 [approved], #21431 [approved], #21433 [approved], #21434 [approved], #21435 [approved], #21436 [approved], #2153, #2154, #21580 [proposed], #21581 [proposed], #21582 [proposed], #21589 [proposed], #21590 [proposed], #21600 [approved], #21601, #30363, #3419, #3428, #3429, #3437, #3441, #37972, #45094, #5749, #6785, #699463
-
-**Last PICKUP PROMPT:**
-
-```
-ext window and direct approach
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window with claude-fable-5)
-═══════════════════════════════════════════════
-Pick up task #current — Wire remaining 9 unwired Argus actions (#21600)
-
-Where we left off (verified 2026-08-02 20:20 PT):
-- `argus_action_catalog.php` restored to clean baseline (md5 98f8012a — no wreckage)
-- Switch close at line 2033 (`}`), Unknown-action return at line 2034
-- Delegation helpers confirmed in `argus_delegation.php`:
-  - `getRoleQueue(PDO, string role): array` — returns JSON-serialized queue items
-  - `fileBugOrFeature(PDO, string kind, string title, string desc, string email): array` — `kind = 'bug' | 'feature'`
-  - `getUnwiredActions(): array` — calls same `argusUnwiredActions()`
-  - `backfillActionPermissions(PDO): array` — inserts missing permissions
-  - `editActionPermission(PDO, string key, string role, bool allowed): array`
-  - `auditAuthnetLegacyLinks(PDO): array`
-  - `createEscalation(PDO, string fromUser, string toRole, string actionName, array params): array`
-  - `argusPermittedActions(PDO, string role): array` — already called by `list_my_capabilities` (done)
-  - `argusActivityRequirements(PDO, string studId): array` — resolves Moodle activity chain
-
-- Case block file: `/tmp/argus_case_blocks.txt` — may not exist (Rule 144: write_to_file target must be LOCAL)
-  If missing, write it fresh: 9 case blocks, each 8-15 lines, standard indent (match existing case styles)
-- Quoting trap: `$key` in anchor string interpolates — use literal string matching or byte-level splice
-- Python3 `replace()` works: read file + `replace(anchor, cases+anchor)` for clean insertion
-
-Open threads to drive next (all must verify before claiming done):
-1. Write 9 case blocks (use `cat > /tmp/argus_cases.txt << 'XEOF' ... XEOF` with single-quoted XEOF)
-2. Splice before line 2034 via python3: `python3 -c "f=open('...'); c=f.read(); c=c.replace(anchor, blocks+anchor); ..."`
-3. Verify: `php -r "require 'lib/argus_action_catalog.php'; echo count(argusUnwiredActions());"` — MUST return 0
-4. Reload PHP-FPM + run `list_my_capabilities` smoke test
-
-Reference IDs:
-- Ideas: #21600 [queued], #21582 [deployed]
-- Files: `/var/www/emtskills/lib/argus_action_catalog.php`, `/var/www/emtskills/lib/argus_delegation.php`
-- Backups: `*bak-wire9-20260802-201728.mp` (clean restore point)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
 ### `1785355259217` — 8/2/2026, 8:20:44 PM PT — 1098 turns
 
 **Original task:**
@@ -359,48 +435,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1785600191339` — 8/2/2026, 8:20:29 PM PT — 2120 turns
-
-**Original task:**
-
-```
-#Kaizon / Bugs
-
-I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
-```
-
-**Ideas referenced:** #12646, #12724, #1468, #14937, #1679, #1685, #1686, #1687, #1754, #1755, #178501, #1833, #18694, #18696, #18841, #1909, #19177, #19188, #19190, #19193, #19198, #19227, #19234, #19435, #19439, #19490, #19492, #19495, #19504, #19511, #19576, #19776, #1980, #19803, #1985, #1986, #1990, #1993, #20079, #20142, #20149, #20297 [queued], #2036, #2044, #20495 [queued], #20506 [executing], #20633, #20882, #20883, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #20969 [proposed], #20970 [proposed], #20971 [proposed], #20972 [proposed], #20973 [proposed], #20974 [proposed], #20975 [approved], #21000 [deployed], #21001, #21002, #21004 [proposed], #2103, #21033, #2109, #21096 [ready_for_review], #21097 [deployed], #2116, #21162 [proposed], #21163 [proposed], #21165 [implemented], #21166 [implemented], #21167 [impl_failed], #21168 [deployed], #21169 [deployed], #2118, #21201 [implemented], #21400 [deployed], #21401 [implemented], #21405 [implemented], #21432 [proposed], #21529, #21558, #3076, #3077, #3081, #4421, #45094, #7358, #8869, #9269
-
-**Last PICKUP PROMPT:**
-
-```
- fit frankenstein-tools ctx]...
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up KAIZEN improvement task — re-engage on repair execution
-
-Where we left off (verified 2026-08-02 20:19 PT):
-- #21432 [deployed] — Kafka bypass worker built at /var/www/emtskills/cron_kaizen_replay_worker.php but model name mismatch (frankenstein-tools vs frankenstein-llm) causes no completions
-- #21400 [deployed] — 0 recipe gaps (3 ghost gaps closed this session)
-- #21401 [deployed] — CSAT table built, crontab deployed, 29 rows baselined
-- #21432 [blocked] — Replay worker returns 0 completions; model name mismatch between worker (frankenstein-llm) and doorman (frankenstein-tools) identified
-
-Open threads to drive next:
-1. #21432 [blocked] — Fix model name in cron_kaizen_replay_worker.php (frankenstein-llm → frankenstein-tools), run worker, verify llm_replay_results gets rows
-2. #21405 [proposed] — Wire agent_deadman_incidents into v_kaizen_all_findings (customer-side sensor grid) — agent source column needs resolution
-3. #21401 [deployed] — Verify CSAT/NPS cron firing (check /var/log/csat_nps_ingest.log for new writes)
-4. #21167 [impl_failed] — GLM52 ring auto-classify wrapper (left for GLM52 window per steering)
-
-Reference IDs:
-- Ideas: #21400, #21401, #21405, #21432, #21167
-- Files: /var/www/emtskills/cron_kaizen_replay_worker.php, /var/www/emtskills/cron_kaizen_classifier.php
-- Tables: failure_repair_recipes (rca_retrain_enabled), agent_csat_nps (29 rows), orchestrator_llm_replay_queue (12 in_progress, 5 failed)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
 ```
 
 ### `1785602138255` — 8/2/2026, 8:02:30 PM PT — 994 turns
@@ -732,47 +766,6 @@ Reference IDs:
 - Files: routes/argus_download.php (.bak-21140-*), routes/alltastic_api.php (.bak-21138-*, .bak-21134-*), /usr/local/bin/frankenstein_tools_adapter.py (.bak-21136-*)
 
 When done, append to cline_task_ledger.md (rule 07), run ord
-```
-
-### `1785581189111` — 8/1/2026, 5:37:33 PM PT — 902 turns
-
-**Original task:**
-
-```
-I need to make sure that the orchestra is running and that we don't just have a bunch of ideas queuedOr work cute.
-```
-
-**Ideas referenced:** #113026, #12022, #12059, #12184, #12430, #12504, #12802, #1281, #1309, #1314, #15333, #15367, #15652, #15906, #15955 [deployed], #16523, #16881, #17913, #18135, #18357, #18395, #18442, #1850, #18761, #18763 [deployed], #18793 [deployed], #19079, #19325, #19338, #19435, #19458, #19490, #19491, #19494, #19503, #19504, #19509, #19629, #19643, #19661, #19670, #19684, #20044 [deployed], #20071 [queued], #20282, #20336 [in_progress], #20340 [proposed], #20341, #20347, #20350, #20367, #20408, #20410 [queued], #2043, #20492 [in_progress], #20493 [in_progress], #20504, #20507 [in_progress], #20509 [proposed], #20517 [proposed], #20569, #20613 [proposed], #20624 [in_progress], #20629, #20630, #20662 [in_progress], #20672 [in_progress], #2076, #20793 [proposed], #20858 [queued], #20859 [blocked], #20860 [queued], #20869 [proposed], #20883 [proposed], #20894 [proposed], #208942, #20895 [proposed], #20903 [approved], #20931, #20936, #21006, #21007, #21008, #2113, #2114, #2123, #2782, #3541, #3953, #3957, #444279, #444280, #444539, #444542, #445761, #446187, #446420, #4536, #4747, #5029, #5031, #5034, #5516, #5778, #7925, #8247, #8281, #8321, #8563, #8598, #9222, #9235, #9581 [deployed]
-
-**Last PICKUP PROMPT:**
-
-```
-p without the DSN parse error.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task 20509-20672 — Orchestra throughput: executor rate=0 + codegen impl_failed fixes shipped.
-
-Where we left off (verified 2026-08-01 17:36 PT):
-- Executor: 3 bugs fixed (auto_actions NULL, IN_LIB_CONTEXT fatal, orphaned writeback SQL). Runs clean; 0 pending decisions so executed=0 is correct. 104 completed + 1 failed in 24h.
-- Codegen: PHP STRING INTERPOLATION RULE landed in cron_ruben_implement.php line 1568; #20517 + #20340 reset and now drafting.
-- #20509 (grievance backfill) + #20410 (argus guard) both deployed at 17:00:47.
-- #20672 reset to idle; worker spawned 17:02:04.
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #20672 [executing] — Watch payment-attribution #20672 through spec→codegen→deploy; verify it does NOT hit the DSN interpolation bug.
-2. #20662 [executing] — Confirm tools-adapter inflight fix re-draft completes; watch for impl_failed recurrence.
-3. #20894 [executing] — 297 audit: after 30 min with executor running, verify `orchestrator_decisions` shows at least one `auto_executed` writeback row; if not, re-open the classification path.
-
-Reference IDs:
-- Ideas filed/deployed: #20509 [deployed], #20410 [deployed], #20340 [executing], #20517 [executing], #20672 [executing], #20662 [executing], #20894 [queued], #20895 [queued]
-- Files touched: /var/www/emtskills/cron/cron_ruben_implement.php (prompt rule), /var/www/emtskills/cron/cron_orchestrator_executor.php (IN_LIB_CONTEXT + writeback removal), orchestrator_config config_json (auto_actions)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```
 
 ### `1785604764278` — 8/1/2026, 5:28:32 PM PT — 172 turns

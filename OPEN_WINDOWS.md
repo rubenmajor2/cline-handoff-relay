@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/3/2026, 8:22:45 AM PT | window: last 72h | 62 tasks | index total 389 (parsed 2, cached 387)
+Generated: 8/3/2026, 9:22:46 AM PT | window: last 72h | 62 tasks | index total 389 (parsed 2, cached 387)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785600191339` | 8/3/2026, 8:22:09 AM | 2663 | 5586KB | #Kaizon / Bugs |
-| `1785722877297` | 8/3/2026, 8:15:56 AM | 736 | 2526KB | #GLM |
+| `1785722877297` | 8/3/2026, 9:22:37 AM | 843 | 2814KB | #GLM |
+| `1785600191339` | 8/3/2026, 9:22:15 AM | 2771 | 5786KB | #Kaizon / Bugs |
 | `1785604764278` | 8/3/2026, 12:04:02 AM | 264 | 1217KB | based on the complaints received and current status, what kind of actions can we put into  |
 | `1785649980432` | 8/2/2026, 11:52:25 PM | 906 | 2864KB | #Argus |
 | `1785599739497` | 8/2/2026, 11:25:37 PM | 690 | 3266KB | I want to get back to work on clustering, parallelism and tarpipe, particularly with the e |
@@ -77,51 +77,7 @@ Generated: 8/3/2026, 8:22:45 AM PT | window: last 72h | 62 tasks | index total 3
 
 ## Per-window detail
 
-### `1785600191339` — 8/3/2026, 8:22:09 AM PT — 2663 turns
-
-**Original task:**
-
-```
-#Kaizon / Bugs
-
-I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
-```
-
-**Ideas referenced:** #12646, #12724, #1468, #14937, #1679, #1685, #1686, #1687, #1754, #1755, #178501, #1833, #18694, #18696, #18841, #1909, #19177, #19188, #19190, #19193, #19198, #19227, #19234, #19435, #19439, #19490, #19492, #19495, #19504, #19511, #19576, #19776, #1980, #19803, #1985, #1986, #1990, #1993, #20079, #20142, #20149, #20297 [queued], #2036, #2044, #20495 [queued], #20506 [executing], #20633, #20882, #20883, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #20969 [proposed], #20970 [proposed], #20971 [proposed], #20972 [proposed], #20973 [proposed], #20974 [proposed], #20975 [approved], #21000 [deployed], #21001, #21002, #21004 [proposed], #2103, #21033, #2109, #21096 [ready_for_review], #21097 [deployed], #2116, #21162 [proposed], #21163 [proposed], #21165 [implemented], #21166 [implemented], #21167 [impl_failed], #21168 [deployed], #21169 [deployed], #2118, #21201 [implemented], #21400 [deployed], #21401 [implemented], #21405 [implemented], #21432 [proposed], #21433 [proposed], #21434 [proposed], #21435 [blocked], #21529, #21558, #21586 [proposed], #21587 [proposed], #21588 [proposed], #21667 [proposed], #244045, #3076, #3077, #3081, #4421, #45094, #4955, #7358, #8869, #9269
-
-**Last PICKUP PROMPT:**
-
-```
- monitor), both already filed.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task Kaizen operational audit wrap-up — 2026-08-03 07:40 AM PT session.
-
-Where we left off (verified 2026-08-03 07:37 PT):
-- Replay worker: 17/17 queue items completed, 17 rows in llm_replay_results (qwen14b_fast) — done
-- View v_kaizen_all_findings: 4 sources live (executor 884 fresh 07:30, recipefire 1241, deadman 11 stale since 08-01, buglib 41 stale since 07-23)
-- Classifier verified working manually: 127 rows classified 07:33 PT
-- Crons confirmed executing via journalctl (emsuserver CMD entries observed), kaizen_*.log files DO NOT exist at /var/log/ — logs missing, not crons
-
-Open threads:
-1. #21587 [approved] — Build continuous loader for deadman + buglib sources into the view; both stale (2d / 11d). Next: check if any writer inserts into agent_deadman_incidents (grep found none in /var/www/emtskills); if no writer exists, that's the root gap — detection never gets fresh deadman rows.
-2. #21667 [proposed] — Healthcheck monitor for classifier+pipeline crons; verify cron spawns observable (journalctl works) but write heartbeat table + row-count watchdog.
-3. #21586 [deployed] — Root-caused pipeline silence to Ollama saturation + missing log files; monitor re-occurrence.
-
-Reference IDs:
-- Queue: 17 completed (ids 1-17), llm_replay_results 17 rows
-- Ideas: #21432, #21433, #21434, #21586, #21587, #21588, #21667
-- Files touched: /var/www/emtskills/cron_kaizen_replay_worker.php, /var/www/emtskills/cron_kaizen_classifier.php (view extended to 4 sources)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785722877297` — 8/3/2026, 8:15:56 AM PT — 736 turns
+### `1785722877297` — 8/3/2026, 9:22:37 AM PT — 843 turns
 
 **Original task:**
 
@@ -171,6 +127,53 @@ Reference IDs:
 - Bug library incidents: #2115 (10h serving), #2116 (transient NCCL P2P race retry fix), #2138 (DSA=0 mandatory), #2142 (PP=6 needs 6), #2149/#2157 (Ray unstable → mp), #1986 (/dev/infiniband mapping)
 - Ideas filed: #21684 (autolauncher v2 expansion, P0)
 - Files touched: `~/glm52_launch_pp6.sh` (canonical wrapper on Cato), `~/bin/glm52_ring_supervisor.sh` (line 53 fixed), `admin_portal.frankenstein_router_incidents` (resolution recorded), `/Users/rubenmajor/Desktop/autolauncher_idea.sql`
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785600191339` — 8/3/2026, 9:22:15 AM PT — 2771 turns
+
+**Original task:**
+
+```
+#Kaizon / Bugs
+
+I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
+```
+
+**Ideas referenced:** #12646, #12724, #13440, #1468, #14937, #1679, #1685, #1686, #1687, #1754, #1755, #178501, #1833, #18694, #18696, #18841, #1909, #19177, #19188, #19190, #19193, #19198, #19227, #19234, #19435, #19439, #19490, #19492, #19495, #19504, #19511, #19576, #19776, #1980, #19803, #1985, #1986, #1990, #1993, #20079, #20142, #20149, #20297 [queued], #2036, #2044, #20495 [queued], #20506 [executing], #20633, #20882, #20883, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #20969 [proposed], #20970 [proposed], #20971 [proposed], #20972 [proposed], #20973 [proposed], #20974 [proposed], #20975 [approved], #21000 [deployed], #21001, #21002, #21004 [proposed], #2103, #21033, #2109, #21096 [ready_for_review], #21097 [deployed], #2116, #21162 [proposed], #21163 [proposed], #21165 [implemented], #21166 [implemented], #21167 [impl_failed], #21168 [deployed], #21169 [deployed], #2118, #21201 [implemented], #21400 [deployed], #21401 [implemented], #21405 [implemented], #21432 [proposed], #21433 [proposed], #21434 [proposed], #21435 [blocked], #21529, #21558, #21586 [proposed], #21587 [proposed], #21588 [proposed], #21667 [proposed], #21710 [proposed], #21712 [proposed], #244045, #3076, #3077, #3081, #4421, #45094, #4955, #7358, #8869, #9109, #9132, #9222, #9269
+
+**Last PICKUP PROMPT:**
+
+```
+ 12 known incidents
+
+## PICKUP
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task: KAIZEN stale sensors — wire the writers (#21710, #21712)
+(Current PT time: 8/3/2026 8:28 AM)
+
+Where we left off (verified 2026-08-03 08:28 PT):
+- #21710 Deadman logger has zero callers — verified grep: only lib/deadman_incident_logger.php + view reference it
+- #21712 bug_hunter_scan.php only READS bug_library, never WRITES findings to it — latest bug_library row 2026-07-23
+- #21587 sensor staleness now root-caused to missing WRITE paths
+- Replay worker: 17/17 completed, rows in llm_replay_results (qwen14b_fast)
+
+Open threads to drive next (every item has a real filed idea #):
+1. #21710 [proposed] — Find the agent conversation pipeline (voice_ai / email_agent) and call deadman_incident_logger when a refund is promised without the refund API
+2. #21712 [proposed] — Add an INSERT into bug_library in cron_bug_hunter_scan.php for new findings (or wire bug_hunter_queue → bug_library)
+3. #21587 [ready_for_review] — Re-check view freshness 24h after writers land
+
+Reference IDs:
+- Ideas filed: #21710, #21712 (also #21667 pipeline healthcheck, #21588 replay root cause deployed)
+- Files touched: /var/www/emtskills/cron_kaizen_replay_worker.php, v_kaizen_all_findings view, cron_bug_hunter_scan.php (read-only)
+- Queue: orchestrator_llm_replay_queue 17/17 completed
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════

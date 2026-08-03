@@ -6,13 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/2/2026, 6:22:40 PM PT | window: last 72h | 61 tasks | index total 387 (parsed 2, cached 385)
+Generated: 8/2/2026, 7:22:41 PM PT | window: last 72h | 63 tasks | index total 389 (parsed 5, cached 384)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785600191339` | 8/2/2026, 6:22:06 PM | 1842 | 3840KB | #Kaizon / Bugs |
-| `1785620212473` | 8/2/2026, 6:20:17 PM | 1599 | 4758KB | #GLM |
-| `1785649980432` | 8/2/2026, 4:42:10 PM | 332 | 973KB | #Argus |
+| `1785600191339` | 8/2/2026, 7:22:30 PM | 1959 | 4184KB | #Kaizon / Bugs |
+| `1785723688286` | 8/2/2026, 7:22:27 PM | 9 | 14KB | I can't open my messages app and when I click it it says You can't open the applcation "Me |
+| `1785649980432` | 8/2/2026, 7:22:18 PM | 551 | 1478KB | #Argus |
+| `1785722877297` | 8/2/2026, 7:20:00 PM | 50 | 170KB | #GLM |
+| `1785620212473` | 8/2/2026, 7:06:36 PM | 1700 | 5039KB | #GLM |
 | `1785653497679` | 8/2/2026, 12:30:52 AM | 96 | 719KB | The Fix AVP app is not working anymore, and seems to be stuck on my desktop / quick launch |
 | `1785602138255` | 8/1/2026, 11:36:20 PM | 890 | 2797KB | #Queued Ideas |
 | `1785613730033` | 8/1/2026, 11:30:44 PM | 288 | 1601KB | #Julia/Claudia |
@@ -76,7 +78,7 @@ Generated: 8/2/2026, 6:22:40 PM PT | window: last 72h | 61 tasks | index total 3
 
 ## Per-window detail
 
-### `1785600191339` — 8/2/2026, 6:22:06 PM PT — 1842 turns
+### `1785600191339` — 8/2/2026, 7:22:30 PM PT — 1959 turns
 
 **Original task:**
 
@@ -91,37 +93,153 @@ I want to concentrate on bugs and how they are slowing everyhing we are doing do
 **Last PICKUP PROMPT:**
 
 ```
-for the doorman details first?
+ugh the doorman and self-heal.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #N — KAIZEN replay loop: worker built, provider details needed from Ruben.
+Pick up KAIZEN Stage 3 — replay worker repair dispatch.
 
-Where we left off (verified Sat Aug 2 2026 5:01 PM PDT):
-- `cron_kaizen_replay_worker.php` (48 lines) deployed — queries in_progress, loops, but provider lookup fails because `frankenstein-llm` has no active row in `llm_replay_providers`.
-- Replay queue: 12 in_progress, 5 failed, 0 completed. Worker returns 0 replays.
-- Full pipeline: Bug Hunter (live), classifier (hardened), recipe fire (100/run), deadman retrains (12 prompts deployed), CSAT/NPS instrument (29 rows, writer cron).
-- Recipe coverage: 272 enabled recipes, 0 uncovered categories confirmed.
-- CSAT baseline: avg 2.0 CSAT, NPS −50 across all deadman classes.
-- Bug library: 114 total, 5 open.
+Where we left off (verified 2026-08-02 18:46 PT):
+- Replay worker at `/var/www/emtskills/cron_kaizen_replay_worker.php` returns "0 replays completed"
+- 17 queue items at various statuses (verified: 5 reset to in_progress, others failed)
+- Provider `frankenstein-llm` exists in `llm_replay_providers` with base_url `http://localhost:11510/v1`
+- Doorman responds to curl (verified live)
+- Worker's actual dispatch loop: ~line 14 builds curl to localhost:11510/v1/chat/completions, ~line 28 checks curl error, ~line 35 marks completed/failed
 
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #21432 [executing] — KAIZEN replay worker: needs Ruben's provider details before it goes live. Burn 12 stuck items per Ruben's word.
-2. #21167 [blocked] — GLM-5.2 TP=1 PP=6 NCCL decode-wedge: impl_failed, left for fleet window per Ruben's steering.
-3. (human-only decision) — Should the replay worker ingest training data from successful replays into `glm52_lora_training_examples`?
-4. (human-only decision) — Should the worker post to `system_prompt_history` when retrain_system_prompt recipes fire AND replays succeed?
-5. #21167 [blocked — GLM52 fleet work] — left for dedicated fleet window per Ruben's steering. No action taken in this window.
+Open threads to drive next:
+1. #21432 [proposed] — Debug replay worker: test one queue item with manual curl, verify payload, fix error handling
 
 Reference IDs:
-- Ideas shipped: #20970, #20971, #20973, #20974, #20975, #21096, #21097, #21162, #21163, #21165, #21166, #21168, #21169, #21400, #21401, #21432, #21201
-- Files touched: `/var/www/emtskills/cron_kaizen_replay_worker.php`, `/var/www/emtskills/cron_kaizen_classifier.php`, `/var/www/emtskills/cron_kaizen_retrain_executor.php`, `/var/www/emtskills/cron_csat_nps_ingest.php`, `/var/www/emtskills/cron_bug_hunter_scan.php`, `/var/www/emtskills/cron_kaizen_consumer.php`
+- Tickets: KAIZEN improvement session
+- Ideas filed: #21432
+- Files touched: `/var/www/emtskills/cron_kaizen_replay_worker.php`, `admin_portal.orchestrator_llm_replay_queue`, `admin_portal.llm_replay_providers`
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
-### `1785620212473` — 8/2/2026, 6:20:17 PM PT — 1599 turns
+### `1785723688286` — 8/2/2026, 7:22:27 PM PT — 9 turns
+
+**Original task:**
+
+```
+I can't open my messages app and when I click it it says You can't open the applcation "Messages" because it is not responding
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785649980432` — 8/2/2026, 7:22:18 PM PT — 551 turns
+
+**Original task:**
+
+```
+#Argus
+
+Argus seems incredibly slow and is giviing answers not even close to liek what the answers you will give here in cline, why? I just wonder becasue I'm genuinely confused why. Can you help with this?
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12345, #12346, #12477, #12618, #12824, #12872, #12878, #13202, #13838, #16163, #16265, #16304, #16844, #18312, #18326, #18378 [deployed], #18379 [rejected], #18380 [rejected], #1864, #18868, #18944 [approved], #18950 [deployed], #18951 [deployed], #18973 [approved], #19098 [pending], #19099 [pending], #19163, #19386 [deployed], #19403 [rejected], #19415, #19416, #19419 [ready_for_review], #19424 [pending], #19470 [deployed], #19471 [approved], #19478 [deployed], #19487 [deployed], #19489 [pending], #19499 [deployed], #19518 [rejected], #19593 [pending], #19624 [pending], #19641 [pending], #19642 [approved], #19644 [approved], #19731 [pending], #19776 [deployed], #19782 [pending], #19784 [deployed], #19840, #19871 [deployed], #19888 [pending], #19970 [approved], #19971 [deployed], #19975 [pending], #19978 [pending], #19995 [pending], #20164 [pending], #20193, #20197 [deployed], #20233 [pending], #20328, #20384 [deployed], #20413 [pending], #20417 [pending], #20420, #20423, #20557 [proposed], #20572 [pending], #20598 [pending], #20644 [ready_for_review], #20662 [deployed], #20674 [rejected], #20675 [pending], #20681 [ready_for_review], #20690 [proposed], #20711, #20899 [ready_for_review], #20944 [proposed], #20945 [proposed], #20956 [proposed], #20957 [proposed], #20976 [proposed], #21004, #21034, #21044, #21053 [proposed], #21073, #21074, #21101 [ready_for_review], #21102 [ready_for_review], #21109 [ready_for_review], #21110 [ready_for_review], #21138 [pending], #21171 [proposed], #21185 [pending], #2121, #21230 [approved], #21231 [approved], #21262, #2138, #2139, #2140, #21426 [approved], #21427 [ready_for_review], #21428 [ready_for_review], #21429 [approved], #21430 [approved], #21431 [approved], #21433 [approved], #21434 [approved], #21435 [approved], #21436 [approved], #2153, #2154, #21580 [proposed], #21581 [proposed], #21582 [proposed], #21589 [proposed], #21590 [proposed], #21600, #21601, #30363, #3419, #3428, #3429, #3437, #3441, #37972, #45094, #5749, #6785, #699463
+
+**Last PICKUP PROMPT:**
+
+```
+fix that's deployed above.
+
+═══════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════
+Pick up task — Argus Ambassador MCP restore + remaining unwired actions
+
+Where we left off (verified 2026-08-02 19:10 PT):
+- Argus `list_my_capabilities` + `get_my_queue` wired and tested (2 of 10 unwired actions)
+- 8 actions still declared-but-unwired: `activity_requirements`, `request_escalation`, `file_bug`, `file_feature`, `list_unwired_actions`, `action_permissions_backfill`, `action_permissions_edit`, `authnet_legacy_link_audit`
+- Ambassador MCP process is dead; port 11512 owned by SSH tunnel with no backing process
+- Server: WOPR (plesk), 127.0.0.1, all other MCP services running (emsu-operations, fetch, filesystem, github, context7, project-frankenstein via port 11510)
+
+Open threads to drive next:
+1. #21589 [proposed] — Locate ambassador MCP source (search /root, /home, Docker images, PM2 configs) and restart the process
+2. #21590 [proposed] — Wire remaining 8 declared-but-unwired Argus actions into argus_action_catalog.php
+3. #21582 [queued] — 48h monitor: re-run argus_audit_log query for ticket_comment/sibling success rates after 2026-08-04 16:41 PT
+
+Reference IDs:
+- Files touched this session: `lib/argus_action_catalog.php` (ticket fixes + capabilities wiring), `lib/ArgusIdeaEta.php` (notification helper), `cron/cron_argus_ticket_success_monitor.php` (48h watchdog), `routes/argus_terminal.php` (My Ideas tab)
+- Ideas filed: #21580 [deployed], #21581 [deployed], #21582 [queued]
+- Argus audit log failures analyzed: 3,419 total calls, 275 failures (8.0%), top category `argus_entity_not_resolved` (184)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785722877297` — 8/2/2026, 7:20:00 PM PT — 50 turns
+
+**Original task:**
+
+```
+#GLM
+
+Is GLM live? 
+
+
+
+Stopped per your instruction. Comprehensive Rule 91 wrap-up with the corrected ring location: the GLM-5.2 ring sits on the Oceanside LAN, not on WOPR.
+
+## Ring location correction (from you, 2026-08-02 18:59 PT)
+
+The 6-node DGX Spark ring is on the Oceanside LAN, Cato now head:
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) -> Pompeii (repeats ring)
+
+The earlier host_probe reading for glm52-ring (WOPR:8210) was probing a stale proxy or port forward, so its real state was unknown. Actual ring health must be verifi
+```
+
+**Ideas referenced:** #12459, #178531, #1967 [rejected], #21147 [executing], #21158 [blocked], #21213 [blocked], #21419 [blocked], #21472 [proposed], #21476 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ 76.24 tok/s, decode_live=true
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785314663557 — GLM-5.2 ring decode-wedge, Cato zombie (100/100 Ray workers DEAD)
+
+Where we left off (verified 2026-08-02 19:14 PT):
+- Cato (192.168.1.115, spark-2aa8) shows /v1/models HTTP 200 but /v1/chat/completions hangs forever
+- Inside Docker container 618a48417c2d: 100/100 Ray workers DEAD, vLLM engine not found, port 8210 not listening
+- GPU detected but idle (N/A memory/util), container CPU thrashing at 114%
+- WOPR:8210 proxy dead (HTTP 000 — no tunnel to Oceanside LAN)
+- #21476 [proposed] — hard restart needed (docker restart 618a48417c2d)
+
+Open threads to drive next:
+1. #21476 [proposed] — docker restart 618a48417c2d on Cato, then live decode test max_tokens=10, ray list actors verify all ALIVE
+2. #21472 [proposed] — prevent future zombie detection: ring monitor MUST NOT trust /v1/models alone — require decode_live verification
+3. #21147 [executing] — source dive on EngineCore shm_broadcast dequeue_timeout root cause
+4. #21158 [blocked] — auto-restart-loop launch pattern (impl_failed, needs root-cause fix first)
+5. #21213 [blocked] — Ray-worker-death detection in ring monitor cron (blocked on #21476 [proposed] restart)
+6. #21419 [blocked] — flight-recorder crash forensics (blocked on #21476 [proposed] restart)
+
+Reference IDs:
+- Ideas filed: #21147 [executing], #21158 [blocked], #21213 [blocked], #21419 [blocked], #21472 [proposed], #21476 [proposed]
+- Files touched: none
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Probe live fleet state (host_probe + tier_health)
+- [x] Probe the real ring on Oceanside LAN (Cato 192.168.1.115:8210) directly from this Mac — /v1/models + real decode
+- [x] Try WOPR tunnel route if direct LAN unreachable
+- [x] Determine GLM liveness with evidence
+- [x] Report with Rule 91 pickup prompt
+</task_progress>
+</attempt_completion>
+```
+
+### `1785620212473` — 8/2/2026, 7:06:36 PM PT — 1700 turns
 
 **Original task:**
 
@@ -133,83 +251,50 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 Where things stand: the ring now BOOTS clean (all 6 up, HTTP 200, correct sparse attention backend) after I found and fixed four launcher regressions. The original decode-wedge is still 
 ```
 
-**Ideas referenced:** #0000, #11256, #12167, #12430, #1281, #1309, #14093, #1415, #1418, #1419, #1536, #1538, #1543, #1550, #1551, #1579 [approved], #1583, #16170, #1689, #1690, #1691, #1692, #1693, #1696, #1697, #1763, #1774, #178531, #1864 [investigating], #1866, #19273, #19325, #19509, #1951, #19519, #1959, #1961, #19629, #1963, #19670, #1970, #1973, #1974, #1975, #1976, #1978, #1981, #1982, #1983, #1984, #19840, #1985, #1986, #1987, #1993, #1995, #1996, #2000 [resolved], #20130, #20193, #2020, #2021, #2022, #2026, #2028, #20328, #20333, #2034, #20410, #20420, #20423, #20495 [executing], #20517, #2052, #2053, #20536 [awaiting_review], #20555, #2056, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #20630, #2065, #20662, #20663 [rejected], #20665, #20672 [proposed], #20711, #2073, #2076, #2081, #20873 [proposed], #2092, #2093, #20955 [awaiting_review], #2096, #2097, #20985 [deployed], #2099, #21004 [proposed], #2101, #2102, #21020 [proposed], #2103, #21034 [proposed], #21038 [queued], #21039 [proposed], #21044 [proposed], #21053 [proposed], #2108 [deployed], #2109, #2111, #2113, #21139 [proposed], #2114, #21146 [proposed], #21147 [proposed], #21151 [approved], #21158 [proposed], #21159 [ready_for_review], #2116 [deployed], #21167 [proposed], #2118 [deployed], #2120 [rejected], #2121 [resolved], #21213 [proposed], #2122, #2123, #2125, #2126, #2127, #2128, #2129, #2130, #2131, #2132, #2133, #2134, #2136 [deployed], #2138 [deployed], #2139 [rejected], #2140 [rejected], #2141 [proposed], #21419 [proposed], #2142 [resolved], #2143 [resolved], #2144, #21447, #2145, #2146, #2147 [needs_verify], #2148 [deployed], #2149 [deployed], #2150 [needs_verify], #2151 [deployed], #2152 [rejected], #2155, #2156 [deployed], #2157 [deployed], #2158 [deployed], #2159 [needs_verify], #2167, #21824, #22731, #2439, #26318, #32618, #32701, #36643, #36651, #36872, #37972, #37996, #39863, #42354, #44697, #45094, #4536, #4747, #6826 [deployed], #7925, #8281, #8321, #8563, #8598, #9405
+**Ideas referenced:** #0000, #11256, #12167, #12430, #12459, #1281, #1309, #14093, #1415, #1418, #1419, #1536, #1538, #1543, #1550, #1551, #1579 [approved], #1583, #16170, #1689, #1690, #1691, #1692, #1693, #1696, #1697, #1763, #1774, #178531, #1864 [investigating], #1866, #19273, #19325, #19509, #1951, #19519, #1959, #1961, #19629, #1963, #1967 [rejected], #19670, #1970, #1973, #1974, #1975, #1976, #1978, #1981, #1982, #1983, #1984, #19840, #1985, #1986, #1987, #1993, #1995, #1996, #2000 [resolved], #20130, #20193, #2020, #2021, #2022, #2026, #2028, #20328, #20333, #2034, #20410, #20420, #20423, #20495 [executing], #20517, #2052, #2053, #20536 [awaiting_review], #20555, #2056, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #20630, #2065, #20662, #20663 [rejected], #20665, #20672 [proposed], #20711, #2073, #2076, #2081, #20873 [proposed], #2092, #2093, #20955 [awaiting_review], #2096, #2097, #20985 [deployed], #2099, #21004 [proposed], #2101, #2102, #21020 [proposed], #2103, #21034 [proposed], #21038 [queued], #21039 [proposed], #21044 [proposed], #21053 [proposed], #2108 [deployed], #2109, #2111, #2113, #21139 [proposed], #2114, #21146 [proposed], #21147 [proposed], #21151 [approved], #21158 [proposed], #21159 [ready_for_review], #2116 [deployed], #21167 [proposed], #2118 [deployed], #2120 [rejected], #2121 [resolved], #21213 [proposed], #2122, #2123, #2125, #2126, #2127, #2128, #2129, #2130, #2131, #2132, #2133, #2134, #2136 [deployed], #2138 [deployed], #2139 [rejected], #2140 [rejected], #2141 [proposed], #21419 [proposed], #2142 [resolved], #2143 [resolved], #2144, #21447, #2145, #2146, #2147 [needs_verify], #21472 [proposed], #2148 [deployed], #2149 [deployed], #2150 [needs_verify], #2151 [deployed], #2152 [rejected], #2155, #2156 [deployed], #2157 [deployed], #2158 [deployed], #2159 [needs_verify], #2167, #21824, #22731, #2439, #26318, #32618, #32701, #36643, #36651, #36872, #37972, #37996, #39863, #42354, #44697, #45094, #4536, #4747, #6826 [deployed], #7925, #8281, #8321, #8563, #8598, #9405
 
 **Last PICKUP PROMPT:**
 
 ```
-: http://192.168.1.115:8210/v1
+e (investigation-only session)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1785314663557, GLM-5.2 ring. Model: frankenstein-llm.
+Pick up task #1785314663557 - GLM-5.2 ring decode-wedge, Oceanside LAN (NOT WOPR)
 
-Where we left off (verified 2026-08-01 19:05 PT):
-- PP=5 ring LIVE: cato(r0), augustus(r1), pompey(r2), tiberius(r3), cesar(r4)
-- Marcus UP but IDLE (not in PP=5 ring, no container)
-- Durable fix verified: --nnodes ${CFG_NNODES} on all 5 nodes
-- Generation WORKING: ~2.65 tok/s
-- Bug library #2143 [resolved] recorded
+Where we left off (verified 2026-08-02 19:02 PT):
+- Ruben corrected ring location: 6 DGX Spark boxes on the Oceanside LAN (Pompeii 50c0 <-> Marcus 63ce <-> Tiberius e9e0 <-> Cesar 3b41 <-> Cato 2aa8 <-> Augustus e3b2 -> Pompeii). NOT on WOPR.
+- WOPR:8210 glm52-ring probe is a stale proxy, not the real ring. Real ring health is unknown and must be verified from Oceanside or through a WOPR tunnel.
+- Healthy decode hosts: julia-120b 18 tok/s, artemis-120b 28 tok/s, nero-minicpm-v 78 tok/s.
+- Ring crash cluster: #21147 [executing] shm_broadcast dequeue TimeoutError, #21158 [blocked] auto-restart-loop, #21213 [blocked] Ray-worker-death detection, #21419 [blocked] flight-recorder. Bug-library incidents 2147-2152.
+- New idea #21472 [proposed]: live decode probe before claiming ring alive.
 
-Open threads:
-1. #21004 [proposed] Decode-wedge levers - moot for PP=5
-2. #20536 [awaiting_review] Original decode-wedge idea
-3. #20873 [proposed] Generation forward-progress probe for monitor
-4. #20955 [awaiting_review] GLM 5.2 routing priority gate, shipped live
-5. #20495 [executing] Monitor + cron automation deployed
-
-Reference IDs:
-- Bug library: #2143 [resolved] (297 classification), #2142 [resolved] (PP=5 decode-wedge)
-- Files: /Users/rubenmajor/Desktop/glm52_launch_cfg.sh (v6, fixed nnodes)
-- Ring: cato(r0)@115, augustus(r1)@244, pompey(r2)@21, tiberius(r3)@32, cesar(r4)@56
-- Marcus: UP@171, IDLE (no container)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785649980432` — 8/2/2026, 4:42:10 PM PT — 332 turns
-
-**Original task:**
-
-```
-#Argus
-
-Argus seems incredibly slow and is giviing answers not even close to liek what the answers you will give here in cline, why? I just wonder becasue I'm genuinely confused why. Can you help with this?
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #13838, #16163, #16265, #16304, #16844, #18312, #18326, #18378 [deployed], #18379 [rejected], #18380 [rejected], #1864, #18868, #18944 [approved], #18950 [deployed], #18951 [deployed], #18973 [approved], #19098 [pending], #19099 [pending], #19163, #19386 [deployed], #19403 [rejected], #19415, #19416, #19419 [ready_for_review], #19424 [pending], #19470 [deployed], #19471 [approved], #19478 [deployed], #19487 [deployed], #19489 [pending], #19499 [deployed], #19518 [rejected], #19593 [pending], #19624 [pending], #19641 [pending], #19642 [approved], #19644 [approved], #19731 [pending], #19776 [deployed], #19782 [pending], #19784 [deployed], #19840, #19871 [deployed], #19888 [pending], #19970 [approved], #19971 [deployed], #19975 [pending], #19978 [pending], #19995 [pending], #20164 [pending], #20193, #20197 [deployed], #20233 [pending], #20328, #20384 [deployed], #20413 [pending], #20417 [pending], #20420, #20423, #20557 [proposed], #20572 [pending], #20598 [pending], #20644 [ready_for_review], #20662 [deployed], #20674 [rejected], #20675 [pending], #20681 [ready_for_review], #20690 [proposed], #20711, #20899 [ready_for_review], #20944 [proposed], #20945 [proposed], #20956 [proposed], #20957 [proposed], #20976 [proposed], #21004, #21034, #21044, #21053 [proposed], #21073, #21074, #21101 [ready_for_review], #21102 [ready_for_review], #21109 [ready_for_review], #21110 [ready_for_review], #21138 [pending], #21171 [proposed], #21185 [pending], #2121, #21230 [approved], #21231 [approved], #21262, #2138, #2139, #2140, #21426 [approved], #21427 [ready_for_review], #21428 [ready_for_review], #21429 [approved], #21430 [approved], #21431 [approved], #21433 [approved], #21434 [approved], #21435 [approved], #21436 [approved], #2153, #2154, #21580 [proposed], #21581 [proposed], #21582 [proposed], #30363, #37972, #45094, #5749, #6785, #699463
-
-**Last PICKUP PROMPT:**
-
-```
-e (5 of 79 successes pre-fix).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus improvements wrap-up + 48h success-rate monitor.
-
-Where we left off (verified 2026-08-02 16:41 PT):
-- lib/argus_action_catalog.php: 4 ticket actions patched with string ticket_id resolver; entity pre-routing guard added for student/course/exam queries
-- lib/ArgusIdeaEta.php: argus_notify_idea_change() helper added (dedup via source_chain_slug)
-- cron/cron_auto_idea_impl.php: notify call at deployed transition
-- routes/argus_terminal.php: My Ideas tab rendering argus_my_ideas() with ETA
-- agent_drafts + notifications: 102 backfilled rows for Argus filers
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #21582 [queued] — After 2026-08-04 16:41 PT, run argus_audit_log query: SELECT action_name, COUNT(*), SUM(success) FROM argus_audit_log WHERE action_name IN ('ticket_comment','ticket_status','ticket_priority','ticket_assign') AND created_at > '2026-08-02 16:41:00' GROUP BY action_name; compare to 6.3% baseline
-2. #21580 [deployed] — If success rate still <80%, inspect tickets.ticket_number formats (some may use display_id / legacy numbering not covered by exact+LIKE lookup)
+Open threads to drive next:
+1. #21472 [proposed] -- Verify ring reachability from WOPR (if tunnel exists) or directly from the Oceanside Mac. Curl Cato:8210 /v1/chat/completions max_tokens=10, check empty choices + TTFB, ray status GPU count per #21213 [blocked].
+2. #21147 [executing] -- Source dive on dequeue_timeout config + per-rank straggler across the 52-crash dataset.
+3. #21213 [blocked] -- Ray-worker-death detection (ray status GPU count) in the ring monitor cron.
+4. #21158 [blocked] -- Auto-restart-loop launch pattern as standing production config.
+5. #21419 [blocked] -- Flight-recorder crash forensics as systemd monitoring.
 
 Reference IDs:
-- Ideas filed: #21580, #21581, #21582
-- Files touched: /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/lib/ArgusIdeaEta.php, /var/www/emtskills/cron/cron_auto_idea_impl.php, /var/www/emtskills/routes/argus_terminal.php
+- Ideas reconciled: #21147 [executing], #21158 [blocked], #21213 [blocked], #21419 [blocked], #21472 [proposed]
+- Bug-library incidents: 2147, 2148, 2149, 2150, 2151, 2152, 1967
+- Files touched: none
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Reconcile existing ideas + file #21472 [proposed]
+- [x] Server-side dispositions via reconcile_ideas
+- [x] host_probe snapshot (noted proxy/stale issue for glm52-ring)
+- [x] Ruben correction: ring on Oceanside LAN, not WOPR
+- [x] Validate completion with clinerules MCP (ALL PASSED)
+- [x] Gate check CLEAR
+- [x] Ship completion with rule-91 pickup prompt
+</task_progress>
 </attempt_completion>
 ```
 

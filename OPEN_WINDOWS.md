@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/3/2026, 1:22:43 AM PT | window: last 72h | 63 tasks | index total 389 (parsed 2, cached 387)
+Generated: 8/3/2026, 2:22:43 AM PT | window: last 72h | 63 tasks | index total 389 (parsed 0, cached 389)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785722877297` | 8/3/2026, 1:21:56 AM | 440 | 1451KB | #GLM |
-| `1785600191339` | 8/3/2026, 12:52:45 AM | 2438 | 5165KB | #Kaizon / Bugs |
+| `1785600191339` | 8/3/2026, 1:48:19 AM | 2520 | 5303KB | #Kaizon / Bugs |
+| `1785722877297` | 8/3/2026, 1:45:20 AM | 459 | 1539KB | #GLM |
 | `1785604764278` | 8/3/2026, 12:04:02 AM | 264 | 1217KB | based on the complaints received and current status, what kind of actions can we put into  |
 | `1785649980432` | 8/2/2026, 11:52:25 PM | 906 | 2864KB | #Argus |
 | `1785599739497` | 8/2/2026, 11:25:37 PM | 690 | 3266KB | I want to get back to work on clustering, parallelism and tarpipe, particularly with the e |
@@ -78,7 +78,49 @@ Generated: 8/3/2026, 1:22:43 AM PT | window: last 72h | 63 tasks | index total 3
 
 ## Per-window detail
 
-### `1785722877297` — 8/3/2026, 1:21:56 AM PT — 440 turns
+### `1785600191339` — 8/3/2026, 1:48:19 AM PT — 2520 turns
+
+**Original task:**
+
+```
+#Kaizon / Bugs
+
+I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
+```
+
+**Ideas referenced:** #12646, #12724, #1468, #14937, #1679, #1685, #1686, #1687, #1754, #1755, #178501, #1833, #18694, #18696, #18841, #1909, #19177, #19188, #19190, #19193, #19198, #19227, #19234, #19435, #19439, #19490, #19492, #19495, #19504, #19511, #19576, #19776, #1980, #19803, #1985, #1986, #1990, #1993, #20079, #20142, #20149, #20297 [queued], #2036, #2044, #20495 [queued], #20506 [executing], #20633, #20882, #20883, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #20969 [proposed], #20970 [proposed], #20971 [proposed], #20972 [proposed], #20973 [proposed], #20974 [proposed], #20975 [approved], #21000 [deployed], #21001, #21002, #21004 [proposed], #2103, #21033, #2109, #21096 [ready_for_review], #21097 [deployed], #2116, #21162 [proposed], #21163 [proposed], #21165 [implemented], #21166 [implemented], #21167 [impl_failed], #21168 [deployed], #21169 [deployed], #2118, #21201 [implemented], #21400 [deployed], #21401 [implemented], #21405 [implemented], #21432 [proposed], #21433 [proposed], #21434 [proposed], #21435 [blocked], #21529, #21558, #21586 [proposed], #21587 [proposed], #21588 [proposed], #244045, #3076, #3077, #3081, #4421, #45094, #7358, #8869, #9269
+
+**Last PICKUP PROMPT:**
+
+```
+ Ready to execute or hand off.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up KAIZEN system build-out — sensor grid, repair pipeline, and gap closure.
+(no Cline task id assigned — handoff from status wrap-up)
+
+Where we left off (verified 2026-08-03 01:46 PT):
+- #21433 sensor grid deployed: v_kaizen_all_findings unions 4 sources (executor, buglib, deadman, recipefire)
+- #21432 replay worker deployed: 17/17 completed, rows in llm_replay_results (verified this session)
+- #21586 root-caused: pipeline silence was Ollama saturation — fix applied (worker repointed to :11505)
+- #21588 verified: worker now completes replays
+
+Open threads to drive next (every item has a real filed idea #):
+1. #21587 [approved] — Auto-loader for deadman + buglib sensors: cron_kaizen_surface_refresh runs weekly — need 5-min loader or explicit bridge to refresh these two stale sources (deadman latest 2026-08-01, buglib 2026-07-23)
+2. #21586 [deployed] — Pipeline silence root-caused + verified self-healing via cron recovery; monitor after Ollama load settles
+
+Reference IDs:
+- Ideas filed: #21432, #21433, #21434, #21435, #21586, #21587, #21588
+- Files touched: /var/www/emtskills/cron_kaizen_replay_worker.php (model → qwen2.5-coder:32b, endpoint → :11505), /var/www/emtskills/cron_kaizen_pipeline.php, /var/www/emtskills/cron_kaizen_classifier.php
+- Views: admin_portal.v_kaizen_all_findings (4 sources)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result></attempt_completion>
+```
+
+### `1785722877297` — 8/3/2026, 1:45:20 AM PT — 459 turns
 
 **Original task:**
 
@@ -136,53 +178,6 @@ Reference IDs:
 - Files touched: /tmp/glm52_launch_fixed.sh (local Mac, not deployed), /tmp/glm52_launch_ray.sh (Cato + all 6 nodes, NCCL_SOCKET_IFNAME=enp1s0f0np0)
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785600191339` — 8/3/2026, 12:52:45 AM PT — 2438 turns
-
-**Original task:**
-
-```
-#Kaizon / Bugs
-
-I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
-```
-
-**Ideas referenced:** #12646, #12724, #1468, #14937, #1679, #1685, #1686, #1687, #1754, #1755, #178501, #1833, #18694, #18696, #18841, #1909, #19177, #19188, #19190, #19193, #19198, #19227, #19234, #19435, #19439, #19490, #19492, #19495, #19504, #19511, #19576, #19776, #1980, #19803, #1985, #1986, #1990, #1993, #20079, #20142, #20149, #20297 [queued], #2036, #2044, #20495 [queued], #20506 [executing], #20633, #20882, #20883, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #20969 [proposed], #20970 [proposed], #20971 [proposed], #20972 [proposed], #20973 [proposed], #20974 [proposed], #20975 [approved], #21000 [deployed], #21001, #21002, #21004 [proposed], #2103, #21033, #2109, #21096 [ready_for_review], #21097 [deployed], #2116, #21162 [proposed], #21163 [proposed], #21165 [implemented], #21166 [implemented], #21167 [impl_failed], #21168 [deployed], #21169 [deployed], #2118, #21201 [implemented], #21400 [deployed], #21401 [implemented], #21405 [implemented], #21432 [proposed], #21433 [proposed], #21434 [proposed], #21435 [blocked], #21529, #21558, #21586 [proposed], #21587 [proposed], #21588 [proposed], #244045, #3076, #3077, #3081, #4421, #45094, #7358, #8869, #9269
-
-**Last PICKUP PROMPT:**
-
-```
-fied, all system state probed.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #244045 — Extensive KAIZEN gap research completed.
-
-Where we left off (verified 2026-08-03 00:48 PT):
-- Pipeline intermittent silence confirmed (0 rows at 00:41, healthy when manually run at 00:47)
-- Sensor staleness: deadman (2 days), buglib (11 days) — no continuous loader
-- Replay loop stalled: 16 failed/1 pending, all HTTP 503, ollama.service masked
-- All crons active, www-data owned, correct user
-- 3 new ideas filed: #21586, #21587, #21588
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #21586 [proposed] — Root-cause pipeline silence window (check Doorman or DB lock)
-2. #21587 [proposed] — Build continuous loader for deadman+buglib into v_kaizen_all_findings
-3. #21588 [proposed] — Unmask ollama.service, apply OLLAMA_NUM_PARALLEL=8, reprocess stuck queue → 16 completions
-4. #21435 [deployed] — 6 refund retrain fires verified in orchestrator_recipe_fires at 23:50:47
-
-Reference IDs:
-- Ticket: #Kaizon / Bugs (root task)
-- Ideas filed: #21586, #21587, #21588
-- Files touched: /var/www/emtskills/cron_kaizen_replay_worker.php, v_kaizen_all_findings (view), /etc/litellm/config.yaml, /etc/systemd/system/ollama.service.d/override.conf
-- Database state: 4-source view (executor, deadman, buglib, recipefire), 16 failed replays, 3 new ideas
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>

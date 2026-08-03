@@ -6,17 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/3/2026, 11:51:24 AM PT | window: last 72h | 74 tasks | index total 402 (parsed 10, cached 392)
+Generated: 8/3/2026, 12:51:24 PM PT | window: last 72h | 73 tasks | index total 402 (parsed 3, cached 399)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785775905424` | 8/3/2026, 11:51:19 AM | 361 | 848KB | # GLM-5.2 Hexarchy Ring — Scientific Diagnosis & Stabilization Summary |
-| `1785780445834` | 8/3/2026, 11:51:06 AM | 111 | 434KB | Propose for Telephony with some features similar to /proctoring for the Admin role (in thi |
-| `1785782909425` | 8/3/2026, 11:51:06 AM | 15 | 52KB | Why am i not seeing clustered ideas here in cline? |
-| `1785779852459` | 8/3/2026, 11:51:01 AM | 183 | 1609KB | Reply to this person says Hi "Internal" - tha'ts wrong. Also it appears that Email Agent d |
-| `1785779749179` | 8/3/2026, 11:50:58 AM | 135 | 376KB | I need to make sure that the AI categoriztion of the info@emsuniversity.com inbox has stop |
-| `1785778409357` | 8/3/2026, 11:50:54 AM | 219 | 2010KB | What is this person actually upset about other than AI answering calls and emails? Can you |
-| `1785781386836` | 8/3/2026, 11:50:51 AM | 22 | 70KB | Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/  |
+| `1785779749179` | 8/3/2026, 12:51:16 PM | 213 | 830KB | I need to make sure that the AI categoriztion of the info@emsuniversity.com inbox has stop |
+| `1785780445834` | 8/3/2026, 12:50:30 PM | 199 | 644KB | Propose for Telephony with some features similar to /proctoring for the Admin role (in thi |
+| `1785782909425` | 8/3/2026, 12:49:50 PM | 208 | 1609KB | Why am i not seeing clustered ideas here in cline? |
+| `1785781386836` | 8/3/2026, 12:19:14 PM | 56 | 161KB | Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/  |
+| `1785775905424` | 8/3/2026, 12:09:29 PM | 396 | 924KB | # GLM-5.2 Hexarchy Ring — Scientific Diagnosis & Stabilization Summary |
+| `1785779852459` | 8/3/2026, 12:04:01 PM | 242 | 1741KB | Reply to this person says Hi "Internal" - tha'ts wrong. Also it appears that Email Agent d |
+| `1785778409357` | 8/3/2026, 12:00:55 PM | 256 | 2093KB | What is this person actually upset about other than AI answering calls and emails? Can you |
 | `1785778361008` | 8/3/2026, 11:49:14 AM | 188 | 739KB | https://emsuniversity.com/emtskills/routes/login_sms.php Sent verification code, but does  |
 | `1785781530203` | 8/3/2026, 11:35:20 AM | 46 | 208KB | Is this GLM faster aggregate than 4tok/sec |
 | `1785776636014` | 8/3/2026, 11:22:07 AM | 134 | 337KB | Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up |
@@ -83,13 +83,198 @@ Generated: 8/3/2026, 11:51:24 AM PT | window: last 72h | 74 tasks | index total 
 | `1785375877050` | 7/31/2026, 1:59:50 PM | 2361 | 9279KB | #GLM |
 | `1785363426908` | 7/31/2026, 1:26:46 PM | 1042 | 3843KB | #EMT Webforms/Payments |
 | `1785435661707` | 7/31/2026, 1:11:29 PM | 2170 | 7588KB | There's grievances getting lost because of all these categories in here. https://emsuniver |
-| `1785368618667` | 7/31/2026, 12:27:12 PM | 356 | 1340KB | We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for |
 
 ---
 
 ## Per-window detail
 
-### `1785775905424` — 8/3/2026, 11:51:19 AM PT — 361 turns
+### `1785779749179` — 8/3/2026, 12:51:16 PM PT — 213 turns
+
+**Original task:**
+
+```
+I need to make sure that the AI categoriztion of the info@emsuniversity.com inbox has stopped. Can you confirm this?
+```
+
+**Ideas referenced:** #12206, #128260, #14132, #16152, #16153, #16154, #16252, #16260, #16473, #16523, #16732, #17446, #177914, #19437, #19682, #20340 [executing], #21010 [executing], #21011 [executing], #21038 [proposed], #21158 [executing], #21171, #21213 [executing], #21419 [executing], #2153, #2154, #21542 [rejected], #21546 [executing], #21761 [proposed], #21771 [proposed], #22056 [proposed], #22060 [proposed], #2563, #3237, #32584, #3572, #45094, #4991, #5298, #5447, #5646, #6064, #6106, #6228, #6751, #7206, #7207, #7317, #7356, #7907, #8103
+
+**Last PICKUP PROMPT:**
+
+```
+decision, not a technical fix.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — Email Agent health check complete, 536 deferred stuck, two fixes ready
+
+Where we left off (verified 2026-08-03 12:01 PT):
+- 536 deferred emails stuck — poller detects them but re-fire logic not implemented (#22056 [proposed])
+- Existing cron_email_deferred_send.php (763 lines) not in crontab — either wire it in or implement re-fire in poller
+- Fatal crash noise on line 3090 of cron_email_responder.php — missing EmailTimingProfileClassifier.php (#22060 [proposed])
+- AI classification and auto-responses confirmed active, 2-12 responses/day, near-instant latency
+- Info@ folder auto-sorting confirmed DISABLED since 2026-07-31
+
+Open threads to drive next:
+1. #22056 [proposed] — Unblock 536 stuck deferred by wiring cron_email_deferred_send.php into crontab, or implementing re-fire in poller
+2. #22060 [proposed] — Remove or supply missing EmailTimingProfileClassifier.php (non-blocking noise fix)
+
+Reference IDs:
+- Ideas filed: #22056 [proposed], #22060 [proposed], #21771 [proposed] (status verified)
+- Ideas superseded: #21761 [rejected]
+- Files read: cron/cron_email_responder.php, lib/EmailOutboundRateGuard.php, cron/cron_email_agent_outbound_deferred_poller.php, cron/cron_email_deferred_send.php, lib/info_mailbox_archive_compact.php, lib/DovecotEmailClassifier.php
+- Crons: /etc/cron.d/emsu-email-responder, /etc/cron.d/emsu-info-maildir-mover (disabled), /etc/cron.d/emsu-jon-maildir-mover, /etc/cron.d/emsu-agents
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785780445834` — 8/3/2026, 12:50:30 PM PT — 199 turns
+
+**Original task:**
+
+```
+Propose for Telephony with some features similar to /proctoring for the Admin role (in this case) to manage the ability for students to schedule a call back. The schedule a call back feature will require 24 hours before the person will be called back. This is an idea proposed to be integrated with CFAs to make it so admins can do call backs to students with issues. 
+
+We need to only permit 1 scheduled call backs per hour from 9AM to 9PM each day to start. 
+
+The admin could configure more often, but this could be used to help those students requiring additional help. I think CFAs can suggest to
+```
+
+**Ideas referenced:** #059669, #20340 [executing], #21010 [executing], #21011 [executing], #21038 [proposed], #21158 [executing], #21213 [executing], #21419 [executing], #21542 [rejected], #21546 [executing], #21763 [proposed], #21764 [proposed], #21765 [proposed], #21775 [proposed], #21777 [proposed], #22062 [proposed], #2563, #334155, #475569, #64748, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+ no complex routing (DEPLOYED)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #21763 [executing], Callbacks tab is LIVE at /emtskills/routes/telephony_hub.php — build remaining pages
+
+Where we left off (verified 2026-08-03 12:09 PT):
+- Callbacks tab + badge + panel deployed and php -l clean in telephony_hub.php
+- 4 DB tables: callback_config (19 rows), callback_slots (84 slots 1/hr 9AM-9PM 7 days), callback_bookings (26 cols with gate fields), callback_audit_log
+- Gate design approved per Ruben (#22062 [proposed]): 1/day, description + self-troubleshoot required, third-party allowed with consent
+- Admin panel shows stats + upcoming bookings + available slots + management links
+
+Open threads to drive next:
+1. #21764 [proposed] — Build slot management page at /emtskills/callback/admin/slots.php with bulk generation, admin_blocked toggle, density config
+2. #21765 [proposed] — Build student-facing /emtskills/callback/book.php (email lookup → auto-populate student data → gate fields → slot picker → confirmation), plus admin booking_detail.php with full student context
+3. #21775 [proposed] — Wire student comms log integration (INSERT INTO communication_log on booking/create/complete)
+4. #22062 [proposed] — Wire audit logging from _panel_callback.php and future book.php into callback_audit_log with booking_id, action, actor, details
+5. (next) — Cron callback slot generator (daily auto-create slots, verified against existing 84 slots before duplicating)
+
+Reference IDs:
+- Ideas filed: #21763 [executing], #21764 [proposed], #21765 [proposed], #21775 [proposed], #21777 [proposed], #22062 [proposed]
+- Files touched: telephony_hub.php (tab + panel + count query), _panel_callback.php (new), migrate.php (new), patch_hub.php (new, failed due to escaping — fragments used instead)
+- Tables: callback_config, callback_slots (84 rows), callback_bookings (26 cols), callback_audit_log
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Locked Ruben decisions (C1 1-active/1-day gate, C2 1/hr gold, C3 full form + self-troubleshoot, C6 escalate-to-Vicky, C5 high-priority 4h lead: Exam Assistance + Moodle/Technical Support)
+- [x] Deployed DB schema: callback_config (19), callback_slots (84), callback_bookings (26 cols), callback_audit_log
+- [x] Added Callbacks tab + badge + prominent panel to telephony_hub.php (php -l clean, backup created)
+- [x] Verified deployment: source grep confirms tab button, panel div, count query, panel include — all present and syntax-clean
+- [x] Third-party caller gate fields added (requestor_type, requestor_name, requestor_relationship, third_party_consent)
+- [x] Filed gate design idea #22062 [proposed] capturing Ruben's 1/day + form-as-gate + third-party consent decisions
+- [x] Provide final pickup prompt for remaining pages (#21764, #21765, #21775, #22062)
+</task_progress>
+</attempt_completion>
+```
+
+### `1785782909425` — 8/3/2026, 12:49:50 PM PT — 208 turns
+
+**Original task:**
+
+```
+Why am i not seeing clustered ideas here in cline?
+```
+
+**Ideas referenced:** #10739 [proposed], #1194, #12459, #16648, #17202, #17203, #17205, #17300, #177796, #178456, #182471, #18326 [proposed], #18327 [proposed], #18329 [proposed], #18337 [deployed], #1845, #18671, #18800, #18811 [proposed], #18812 [queued], #18813 [queued], #19437, #19495, #19535 [proposed], #19537 [proposed], #19538 [proposed], #19539 [proposed], #19545, #19682, #19813, #19814, #19816, #19822, #2023, #21470, #21761, #21763, #22053 [proposed], #22079 [proposed], #2322, #2490, #2686, #55522, #815007, #886191
+
+**Last PICKUP PROMPT:**
+
+```
+ne-click approval accelerator.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task (idea cluster surface + approve actions) — clustered ideas now show in Cline; next step is approve_cluster MCP tool.
+
+Where we left off (verified 2026-08-03 12:49 PT):
+- 10 clusters populated across 932 ideas with WHY-recommended narratives
+- `visual_canvas_clusters` has UNIQUE index on `canvas_id`, PKs stable at 21–30
+- `list_ideas` MCP returns CLUSTERED PROJECTS block + per-idea `[🟢 cluster]` tags + WHY narrative
+- `list_clusters` MCP tool live
+- Cron: daily 4:15 AM = `php /var/www/emtskills/scripts/cluster_ideas_pipeline.php`
+- Source: `/var/www/emtskills/mcp-servers/ruben-orchestrator/src/index.ts` — cluster block around line 519
+
+Open threads to drive next:
+1. #22079 [proposed] — Add approve_cluster(cluster_id) + get_cluster_recommendation(cluster_id) MCP tools to ruben-orchestrator. The DB linkage is set (canvas_cluster_id → visual_canvas_clusters.id), the ideas are clustered, the WHY narratives are in cluster_evidence JSON. Patch src/index.ts with two new tools, rebuild (npm run build), restart mcp-ruben-orchestrator.service.
+2. #22053 [executing] — Original cluster pipeline ticket. Pipeline is built and working. Recommend reviewing cluster coverage: currently 10 keyword-based clusters catch 932/21514 ideas (4.3%). Expand to clustering via title-embedding similarity or LLM-assisted grouping for broader coverage.
+
+Reference IDs:
+- Ideas filed: #22053, #22079
+- Files touched: /var/www/emtskills/scripts/cluster_ideas_pipeline.php, /var/www/emtskills/mcp-servers/ruben-orchestrator/src/index.ts (and build/index.js)
+- DB tables: visual_canvas_clusters (unique_canvas_id index), orchestrator_ideas.canvas_cluster_id / cluster_evidence
+- Service: mcp-ruben-orchestrator.service
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785781386836` — 8/3/2026, 12:19:14 PM PT — 56 turns
+
+**Original task:**
+
+```
+Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/ 
+
+Help me with this
+```
+
+**Ideas referenced:** #22066 [proposed], #22067 [proposed], #22068 [proposed], #5062, #5244, #9108
+
+**Last PICKUP PROMPT:**
+
+```
+actually run starting tonight.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task # — EMSU ticket queue mass cleanup — 1,452 stale tickets closed, 3 broken crons fixed
+
+Where we left off (verified 2026-08-03 12:18 PT):
+- 3 broken crons discovered and fixed: cron_stale_resolved_close.php (execute_sql→execute), auto_close_stale_tickets.php ($STALE_DAYS undefined), auto_router (confirmed fine)
+- 1,452 stale Resolved tickets auto-closed across 9 runs — queue crashed from ~1,887 to 229 real active tickets
+- 49 Open, 105 In Progress (52 are >14d zombies), 76 Pending, 14 Resolved (<36h), 18,988 Closed
+- Ideas filed: #22066 [proposed] (stale In-Progress auto-close), #22067 [proposed] (raise MAX_CLOSE_PER_RUN + fix affected_rows logging), #22068 [proposed] (ticket queue observability dashboard)
+
+Open threads to drive next:
+1. #22066 [proposed] — Build stale In-Progress auto-close cron targeting 52 zombie tickets
+2. #22067 [proposed] — Raise MAX_CLOSE_PER_RUN to 2000 or self-draining loop, and fix affected_rows log
+3. #22068 [proposed] — Add ticket queue dashboard metric to admin dashboard for early warning
+
+Reference IDs:
+- Ideas filed: #22066 [proposed], #22067 [proposed], #22068 [proposed]
+- Files touched: /var/www/emtskills/cron/cron_stale_resolved_close.php, /var/www/emtskills/scripts/auto_close_stale_tickets.php, /var/www/emtskills/docs/HANDOFF_NOTES.md
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785775905424` — 8/3/2026, 12:09:29 PM PT — 396 turns
 
 **Original task:**
 
@@ -105,108 +290,45 @@ Generated: 8/3/2026, 11:51:24 AM PT | window: last 72h | 74 tasks | index total 
 - **FIXED 2026-
 ```
 
-**Ideas referenced:** #10108, #1130, #1131, #11741, #12365, #12368, #1241, #12425, #1248, #1249, #1252, #1258, #12657, #13121, #13202, #1378, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18471, #18720, #18868, #19135, #19567, #1967, #1986, #19903, #19907, #19925, #20042, #20247, #20264, #20272, #2050, #20536, #2063, #2065, #20662, #2073, #2092, #2096, #20985, #21038, #2116, #21213, #2127, #2138, #2157, #2160, #21684 [drafted], #22000 [proposed], #22001 [proposed], #22002 [proposed], #22003 [proposed], #22004 [proposed], #22051, #22052, #7142, #7149
+**Ideas referenced:** #10108, #1130, #1131, #11741, #12365, #12368, #1241, #12425, #1248, #1249, #1252, #1258, #12657, #13121, #13202, #1378, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18471, #18720, #18868, #19135, #19567, #1967, #1986, #19903, #19907, #19925, #20042, #20247, #20264, #20272, #2050, #20536, #2063, #2065, #20662, #2073, #2092, #2096, #20985, #21038, #2116, #21213, #2127, #2138, #2157, #2160, #21684 [drafted], #22000 [proposed], #22001 [proposed], #22002 [proposed], #22003 [proposed], #22004 [proposed], #22051 [executing], #22052 [proposed], #6847, #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
-ogdump loop, stale_launcher v2
+it. This idea is now complete.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #21684 [executing] — GLM-5.2 hexarchy ring stabilization phase 2.
+Pick up task #6847 — GLM-5.2 ring stabilization and Ruben idea reconciliation.
 
-Where we left off (verified 2026-08-03 11:22 PT):
-- Ring auto-relaunched by supervisor v3 at 11:18:09, container Up 3 minutes, weight-loading (expect service ~11:26).
-- 120B fleet (CESAR :11506, ARTEMIS :11507) is DOWN from both WOPR and Cato LAN — needs investigation.
-- 5 open threads filed above: #22000 (root-cause silent engine death), #22001 (restore 120B fleet), #22002 (turn distribution sidecar), #22003 (supervisor v3 @reboot cron), #22004 (keep-warm probe).
+Where we left off (verified 2026-08-03 12:08 PT):
+- Ring ANOTHER death at 12:06 — EngineCore gone inside running container (4th death today)
+- Supervisor v3 watching (last log: `12:06:12 API down, watching`)
+- Watchdog daemon running (PID 645, /usr/local/bin/glm52_watchdog_daemon.sh, /dev/watchdog pinger)
+- Health monitor service: inactive
+- No existing HTTP keep-warm cron on any node
+- Worker hexarchy_guard flags: disabled on all 6
+- launch_ray.sh: .BAK on all 6
+- stale_cron: verified clean script
+- All 6 ideas reconciled in DB
 
-Open threads to drive next:
-1. #22000 [proposed] — diagnose silent EngineCore death: check dmesg GPU XID errors, NCCL health in container, KV cache growth over lifetime. ~/bin/glm52_ring_debug.sh
-2. #22001 [proposed] — SSH to cesar/artemis via Cato relay, check if gpt-oss-120b vLLM serving on LXC; if down, restart. Verify port :8210 tunnel from WOPR.
-3. #22002 [proposed] — deploy request-counter sidecar to /usr/local/bin/frank_turn_counter.py on :11511, expose /metrics.
-4. #22003 [proposed] — add `@reboot sleep 30 && ~/bin/glm52_ring_supervisor.sh` to rubenmajor crontab on Cato.
-5. #22004 [proposed] — install keep-warm probe: 4-token decode POST to :8210 every 120s via cron, log to /tmp/glm52_keep_warm.log.
+Open threads — all idempotent, pick what fits in your budget:
+1. #22004 [executing] — Deploy WOPR keep-warm script: `curl -s -m 15 -X POST http://127.0.0.1:8210/v1/chat/completions -H "Content-Type: application/json" -d '{"model":"glm-5.2-15pct","messages":[{"role":"user","content":"OK"}],"max_tokens":4}'` every 120s from WOPR cron. Write script to `/usr/local/bin/glm52_keep_warm.sh` (needs sudo on WOPR) + cron entry.
+
+⚠️ POWER MOVE OPPORTUNITY: The ring engine keeps dying silently (4x today). If you have enough context to collect the crash evidence, follow #22000's investigation path: `docker logs vllm_slot` during the death window (11:43-12:06), check worker NCCL logs, and if you can find the root cause — you can fix the ring permanently. Otherwise just deploy #22004 (keep-warm).
 
 Reference IDs:
-- Ideas: #21684 [executing], #22000-22004 [proposed]
-- Tickets: GLM-5.2 diagnosis & stabilization
-- Files: /tmp/glm52_launch_cfg.sh v5, ~/bin/glm52_ring_supervisor.sh v3, ~/glm52_launch_pp6.sh
+- Ideas filed: #21684 [superseded], #22000 [investigating], #22001 [superseded], #22003 [executing], #22004 [executing], #22051 [executing], #22052 [proposed]
+- Files touched: /home/rubenmajor/bin/glm52_ring_supervisor.sh (v3), /tmp/glm52_launch_cfg.sh (v5), /etc/litellm/config.yaml (:8210 routes), /usr/local/bin/glm52_watchdog_daemon.sh (active), /var/log/glm52_stale_cron.log, /tmp/glm52_ring_supervisor.log
+- Bug discoveries: hexarchy_guard interference (workers), glm52-logdump storm, ray_worker_monitor regression vector
 
-When done, append to /home/rubenmajor/HANDOFF_NOTES.md and run order 66.
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
 
-### `1785780445834` — 8/3/2026, 11:51:06 AM PT — 111 turns
-
-**Original task:**
-
-```
-Propose for Telephony with some features similar to /proctoring for the Admin role (in this case) to manage the ability for students to schedule a call back. The schedule a call back feature will require 24 hours before the person will be called back. This is an idea proposed to be integrated with CFAs to make it so admins can do call backs to students with issues. 
-
-We need to only permit 1 scheduled call backs per hour from 9AM to 9PM each day to start. 
-
-The admin could configure more often, but this could be used to help those students requiring additional help. I think CFAs can suggest to
-```
-
-**Ideas referenced:** #059669, #20340 [executing], #21010 [executing], #21011 [executing], #21038 [proposed], #21158 [executing], #21213 [executing], #21419 [executing], #21542 [rejected], #21546 [executing], #21763 [proposed], #21764 [proposed], #21765 [proposed], #21775 [proposed], #21777 [proposed], #2563, #334155, #475569, #64748, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-ons on C1 and C2 specifically.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #21763 [proposed], Telephony Callback Scheduling System, Admin-Managed Callback Queue
-
-Where we left off (verified 2026-08-03 11:37 PT):
-- Link location decided: new Callbacks tab inside /emtskills/routes/telephony_hub.php between SMS and Performance, gated by $isTelephonyAdmin, badge with pending count (#21775 [proposed])
-- 6 conflicts between Vicky CS proposal and Rule 29 analyzed and filed (#21777 [proposed])
-- C1 needs decision: hard daily cap vs 1 active at a time
-- C2 needs decision: 1/hr default vs 5-10/hr configurable
-- Parent spec #21763 [proposed] with 3-table schema, pending Phase 1 DB migration
-
-Open threads to drive next:
-1. #21763 [proposed] - Wait for Ruben decision on C1 request cap then promote to executing, run DB migration for callback_slots, callback_bookings, callback_config
-2. #21775 [proposed] - After schema lands, add Callbacks tab button + panel shell to telephony_hub.php
-3. #21764 [proposed] - Build /emtskills/callback/admin/slots.php and config.php with bulk slot generation
-4. (human-only decision, no idea) - Ruben: confirm C1 (1 active per student, no hard cap) and C2 (1/hr default)
-
-Reference IDs:
-- Ideas filed: #21763 [proposed], #21775 [proposed], #21777 [proposed], #21764 [proposed], #21765 [proposed]
-- Files touched: none on disk yet, directories /var/www/emtskills/callback/admin and /callback/includes created
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Located telephony_hub.php in routes/
-- [x] Found tab navigation at lines 2393-2430
-- [x] Designed placement: new "Callbacks" tab after SMS, gated by $isTelephonyAdmin
-- [x] Filed idea for telephony hub tab integration (#21775)
-- [x] Analyzed Vicky proposal against Rule 29, filed #21777 with 6 conflicts
-- [x] Showed Ruben link placement + conflict analysis, awaiting decisions on C1 and C2
-</task_progress>
-</attempt_completion>
-```
-
-### `1785782909425` — 8/3/2026, 11:51:06 AM PT — 15 turns
-
-**Original task:**
-
-```
-Why am i not seeing clustered ideas here in cline?
-```
-
-**Ideas referenced:** #21470, #21761, #21763, #2686
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785779852459` — 8/3/2026, 11:51:01 AM PT — 183 turns
+### `1785779852459` — 8/3/2026, 12:04:01 PM PT — 242 turns
 
 **Original task:**
 
@@ -214,89 +336,31 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 Reply to this person says Hi "Internal" - tha'ts wrong. Also it appears that Email Agent did nothing for this student. that needs repair
 ```
 
-**Ideas referenced:** #16613, #167143, #2196, #23131, #4929, #495057
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785779749179` — 8/3/2026, 11:50:58 AM PT — 135 turns
-
-**Original task:**
-
-```
-I need to make sure that the AI categoriztion of the info@emsuniversity.com inbox has stopped. Can you confirm this?
-```
-
-**Ideas referenced:** #16252, #16260, #16523, #20340 [executing], #21010 [executing], #21011 [executing], #21038 [proposed], #21158 [executing], #21171, #21213 [executing], #21419 [executing], #2153, #2154, #21542 [rejected], #21546 [executing], #21761 [proposed], #21771 [proposed], #45094, #4991
+**Ideas referenced:** #164627, #16613, #167143, #2196, #22061 [queued], #23131, #4929, #495057
 
 **Last PICKUP PROMPT:**
 
 ```
-er misreading of your request.
+lean + grep/sed confirmation).
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
+Pick up task — Sweep and repair all "Hi Internal" greeting emails + Email Agent inaction (William Jones case done).
 
-Pick up task #21771 [proposed] - info@ email system status verified, folder sorting stopped, AI classification and auto-responses fully active
-
-Where we left off (verified 2026-08-03 11:28 PT):
-- AI classification active: /etc/cron.d/emsu-email-responder every 5 min, Method: ai on external emails, 2,320 rows in 24h
-- AI auto-responses active: 9 sent in last 24h (payment_billing, technical_support, withdrawal, complaint_grievance)
-- Info@ folder sorting DISABLED since 2026-07-31: /etc/cron.d/emsu-info-maildir-mover has only a comment line, no active cron
-- Jon mailbox mover active but ONLY touches jthompson@, not info@
-- Prior idea #21761 [rejected] - superseded by #21771
+Where we left off (verified 2026-08-03 12:03 PM PT):
+- Root cause FIXED: /var/www/emtskills/tickets/lib/notification_sender.php now falls back to student first_name (4 patches, php -l clean, backup /tmp/notification_sender.php.bak-20260803-hi-internal)
+- William Jones (26918A-07, TKT 23131): payment truth verified genuinely unpaid (Invoice #167143, $1,395), corrected email queued (email_outbound_queue id=1), comments 164627 (internal) + 164631 (student) added
+- Rule-161 comment 164588 on TKT 23131 incorrectly flagged payment_sync_gap — corrected
 
 Open threads to drive next:
-1. #21771 [proposed] - info@ email system status verified as functioning as designed, no action needed
+1. #22061 [queued] — Sweep other tickets auto-created by "Internal Follow-Up Gate" (created_by_name LIKE 'Internal%') that sent greeting emails; verify each student received their real first name and a substantive resolution, not a holding reply
+2. Watch email_outbound_queue id=1: confirm the corrected William Jones email is picked up by the queue worker (scanning → sent) and logs to email_outbound_log
 
 Reference IDs:
-- Ideas filed: #21771 [proposed]
-- Ideas superseded: #21761 [rejected]
-- Files touched: none (read-only investigation)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785778409357` — 8/3/2026, 11:50:54 AM PT — 219 turns
-
-**Original task:**
-
-```
-What is this person actually upset about other than AI answering calls and emails? Can you look at the underlying issues for legitimacy as well?
-```
-
-**Ideas referenced:** #15711, #16413, #20957, #20958, #21748 [proposed], #21749 [proposed], #21754 [proposed], #21755 [proposed], #21769 [proposed], #21770 [proposed], #22861, #2686, #4863, #4929, #687532, #9222, #9269, #9373, #9457
-
-**Last PICKUP PROMPT:**
-
-```
-ready did the diagnostic work.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — Bode Penrose CFA build-out: non-human externship automation
-
-Where we left off (verified 2026-08-03 11:26 PT):
-- #21754 [deployed] — CFA placement-state guard live. AI stops listing forms to unplaced students.
-- #21749 [proposed] — Bode placement URGENT: course ends 8/19, Nefemito assigned, preceptor_state='not_sent'.
-- #21755 [proposed] — Chat-handoff watchdog (force_handoff tickets get human action within 4h).
-- #21769 [proposed] — CFA externship slot auto-matcher: read available_slots, auto-confirm, send email. No human.
-- #21770 [proposed] — CFA externship form auto-grader: validate signatures/fields, auto-grade. No human.
-
-Open threads to drive next:
-1. #21749 [proposed] — Call Nefemito/Jehan to push Falck Alameda/Oakland for Bode before 8/19. Critical path.
-2. #21769 [proposed] — Build slot auto-matcher: scan ExternshipRequest, match against open slots, auto-confirm placements. Schema columns ready (available_slots, preferred_dates).
-3. #21770 [proposed] — Build form auto-grader: validate preceptor + student signatures, auto-grade completed/hold_pending. Schema columns ready (grade_status, auto_grade_confidence).
-4. #21755 [proposed] — Build chat-handoff watchdog from #21755 for force_handoff tickets.
-
-Reference IDs:
-- Ideas: #21748 [superseded], #21749 [proposed], #21754 [deployed], #21755 [proposed], #21769 [proposed], #21770 [proposed]
-- Tickets: 22861 (open/high), 16413 (phone auto-dismissed)
-- Files deployed: lib/ExternshipStatusResolver.php line 127
+- Ticket: TKT-20260803-0AE189A0 (23131)
+- Ideas filed: #22061
+- Files touched: /var/www/emtskills/tickets/lib/notification_sender.php (+ backup), email_outbound_queue (row 1), ticket_comments (164627, 164631)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -304,19 +368,51 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785781386836` — 8/3/2026, 11:50:51 AM PT — 22 turns
+### `1785778409357` — 8/3/2026, 12:00:55 PM PT — 256 turns
 
 **Original task:**
 
 ```
-Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/ 
-
-Help me with this
+What is this person actually upset about other than AI answering calls and emails? Can you look at the underlying issues for legitimacy as well?
 ```
 
-**Ideas referenced:** #5062, #5244
+**Ideas referenced:** #15711, #16413, #20957, #20958, #21748 [proposed], #21749 [proposed], #21754 [proposed], #21755 [proposed], #21769 [proposed], #21770 [proposed], #22015 [proposed], #22054 [proposed], #22055 [proposed], #22861, #2686, #4863, #4929, #687532, #9222, #9269, #9373, #9457
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+te into NREMT clearance path |
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up the Bode Penrose / externship hours investigation.
+
+Where we left off (verified 2026-08-03 12:00 PT):
+- #21754 [deployed] — CFA placement-state guard live (ExternshipStatusResolver.php:127)
+- #22015 [proposed] — Chat handoff watchdog for unanswered handoff tickets
+- #21749 [proposed] — Bode's externship placement #2686 still pending, no agency contacted
+- #22054 [proposed] — Slot suggestion panel on externship request page, staff opt-in (supersedes #21769)
+- #21770 [proposed] — Partially redundant: externship form auto-grader pipeline already exists; the gap is hours enforcement, not grading
+- #22055 [proposed] — P0 compliance: wire ExternshipHoursCalculator into NREMT clearance to enforce externship hours minimum
+- Verified: ea_submissions lacks hours_completed/hours_required columns (broken gate), ExternshipHoursCalculator has zero callers (dead code), students with 12h time sheets auto_passed with no hours check
+- Files: lib/ExternshipStatusResolver.php (deployed), lib/ExternshipFormGrader.php, lib/ExternshipHoursCalculator.php, lib/CertificateReadiness.php
+
+Open threads to drive next:
+1. #22055 [proposed] — Wire ExternshipHoursCalculator.is_complete into CertificateReadiness to enforce hours gate. Replace broken getEAStatus ea_submissions query.
+2. #21749 [proposed] — Place Bode Penrose in externship before 8/19 course deadline. Request #2686 14d pending, preceptor_state='not_sent'.
+3. #22054 [proposed] — Build slot suggestion panel on externship request page (opt-in, no auto-confirm).
+4. #21755 [proposed] — Add chat-handoff watchdog: any High-priority handoff ticket with no human action in 4h triggers escalation.
+
+Reference IDs:
+- Ideas filed: #21748 (superseded), #21749 [proposed], #21754 [deployed], #21755 [proposed], #21769 (superseded by #22054), #21770 [proposed], #22054 [proposed], #22055 [proposed]
+- Files touched: lib/ExternshipStatusResolver.php (deployed), lib/ExternshipFormGrader.php (analyzed), lib/ExternshipHoursCalculator.php (analyzed), lib/CertificateReadiness.php (analyzed), lib/AgentContextBuilder.php (read)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1785778361008` — 8/3/2026, 11:49:14 AM PT — 188 turns
 
@@ -3158,50 +3254,4 @@ Recursive (6 levels) restrict-access reader classifying EXTERNSHIP_BLOCKED / PRE
 - PDF iframe replaced with auto-loading server page images (`handleDownload` returns HTTP 204 for iframes by design)
 - AI Interaction Log auto-loads
 - Disposition submit: 
-```
-
-### `1785368618667` — 7/31/2026, 12:27:12 PM PT — 356 turns
-
-**Original task:**
-
-```
-We have had a huge decrease in revenue over hte last couple of weeks.is there a reason for this? 
-
-Do we have a decrease in the number of registrations, website traffic across our EMT programs? What about a decrease int he traffic? I'm not worried about emsuniversity.com. I'm concerned with EMT websites only.
-```
-
-**Ideas referenced:** #13437, #13441, #13454, #16732, #17203, #17205, #18315, #18820, #18868, #1910, #19887, #19903, #19907, #19910, #19918, #19925, #19927, #19928, #20044 [deployed], #20085 [proposed], #20086 [proposed], #20119 [proposed], #2096, #2097, #2098, #5431, #5574, #7174, #7907, #8230, #9132, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-it to all 40 domains instantly
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #current — Search Console setup for ~40 EMSU domains.
-
-Where we left off (verified 7/31/2026, 12:27 PM PT):
-- All bug fixes deployed and verified (caller_lookup, SMS AI, ticket autospec, CFA deepseek fallback, Klarna QB cron)
-- Search Console deployment tool: /var/www/emtskills/tools/admin_deploy_search_console_verify.php (unused yet, permission fixes needed for web-to-vhost write)
-- Ruben needs to use browser AI at search.google.com/search-console with rmajoremsu@gmail.com
-- 40 domains identified across EMT, Refresher, EMD, CPR
-
-Open threads to drive next:
-1. Ruben pastes the browser AI prompt above → returns Google verification filenames → deploy HTML files via root cp command to all vhosts (bypassing web permissions)
-2. #20085 [deployed] — SMS AI Responder fix: verify no new errors in PHP-FPM logs
-3. #20086 [deployed] — Caller lookup SQL fix: verify no new errors in PHP-FPM logs
-4. #20119 [deployed] — Ticket auto-spec deepseek key fixed: verify no new errors
-5. Implement dashboard for payment_method NULL tracking (566/571 July students with no payment method recorded)
-
-Reference IDs:
-- All 4 fix ideas filed (#20085, #20086, #20119, Web AI SEO ideas)
-- Search Console tool: /var/www/emtskills/tools/admin_deploy_search_console_verify.php
-- Klarna QB cron: /var/www/emtskills/cron/cron_klarna_qb_reconciliation.php (nightly at 2 AM)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```

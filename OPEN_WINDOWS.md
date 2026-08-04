@@ -6,13 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/4/2026, 9:22:12 AM PT | window: last 72h | 60 tasks | index total 422 (parsed 5, cached 417)
+Generated: 8/4/2026, 10:22:12 AM PT | window: last 72h | 61 tasks | index total 424 (parsed 3, cached 421)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785860435008` | 8/4/2026, 9:22:09 AM | 13 | 39KB | #GLM |
-| `1785858742320` | 8/4/2026, 9:21:08 AM | 108 | 1108KB | I dont' see here where the callback system is working properly? Seems like it is not. Can  |
-| `1785858480786` | 8/4/2026, 9:19:08 AM | 80 | 236KB | For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. P |
+| `1785860435008` | 8/4/2026, 10:16:09 AM | 237 | 717KB | #GLM |
+| `1785861156554` | 8/4/2026, 9:53:18 AM | 75 | 209KB | https://emsuniversity.com/emtskills slow to load again |
+| `1785858742320` | 8/4/2026, 9:53:05 AM | 153 | 1256KB | I dont' see here where the callback system is working properly? Seems like it is not. Can  |
+| `1785858480786` | 8/4/2026, 9:48:52 AM | 118 | 412KB | For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. P |
+| `1785860776891` | 8/4/2026, 9:40:54 AM | 94 | 335KB | #Argus |
 | `1785833407446` | 8/4/2026, 9:17:09 AM | 431 | 919KB | In argus:  |
 | `1785858167516` | 8/4/2026, 9:14:49 AM | 113 | 310KB | #GLM |
 | `1785822732682` | 8/4/2026, 8:34:13 AM | 1002 | 7748KB | GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes. Key achie |
@@ -69,13 +71,12 @@ Generated: 8/4/2026, 9:22:12 AM PT | window: last 72h | 60 tasks | index total 4
 | `1785601440006` | 8/1/2026, 12:55:09 PM | 454 | 1095KB | **TELEPHONY ISSUE — FULL STATUS, ROOT CAUSE, AND WHERE WE GO NEXT** |
 | `1785613709787` | 8/1/2026, 12:48:30 PM | 1 | 5KB | #Julia/Claudia |
 | `1785537361555` | 8/1/2026, 12:37:04 PM | 496 | 2332KB | What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor  |
-| `1785360672171` | 8/1/2026, 9:23:32 AM | 3888 | 18423KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
 
 ---
 
 ## Per-window detail
 
-### `1785860435008` — 8/4/2026, 9:22:09 AM PT — 13 turns
+### `1785860435008` — 8/4/2026, 10:16:09 AM PT — 237 turns
 
 **Original task:**
 
@@ -92,11 +93,23 @@ Here is how we get there, and the first move is not what I would have guessed an
 
 ```
 
-**Ideas referenced:** #2083, #2157, #2159, #2168, #22128 [executing], #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #22479 [proposed], #22480 [proposed], #22484 [proposed], #22491 [proposed], #22499 [proposed], #22500 [executing]
+**Ideas referenced:** #18868, #19571, #19585, #1979 [outdated], #1986 [deployed], #2083, #2085, #2157, #2159, #2168, #2174, #2185, #2186, #22128 [executing], #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #22479 [proposed], #22480 [proposed], #22484 [proposed], #22491 [proposed], #22499 [proposed], #22500 [executing], #22527 [proposed], #22528 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785858742320` — 8/4/2026, 9:21:08 AM PT — 108 turns
+### `1785861156554` — 8/4/2026, 9:53:18 AM PT — 75 turns
+
+**Original task:**
+
+```
+https://emsuniversity.com/emtskills slow to load again
+```
+
+**Ideas referenced:** #1658, #1986, #2176, #2177, #22334, #22355 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785858742320` — 8/4/2026, 9:53:05 AM PT — 153 turns
 
 **Original task:**
 
@@ -141,7 +154,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785858480786` — 8/4/2026, 9:19:08 AM PT — 80 turns
+### `1785858480786` — 8/4/2026, 9:48:52 AM PT — 118 turns
 
 **Original task:**
 
@@ -149,39 +162,66 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. Probably a lot have gone unanswered. The last one we need to develop that Catalog, brochure, etc.. base dn what we currently have for the EMT program, and everythign else. We also need to go back through other requests for the last several weeks and do a massive sweep of improvements to help get the program up and running. Give me a comprehenisvie list based on what you find (which will no doubt require subagent research) so that we can push forward. Oh also work to improve the CNA Agent and the page she i
 ```
 
-**Ideas referenced:** #1658, #1986, #2176, #2177, #22334, #22355 [proposed], #7301
+**Ideas referenced:** #0000, #1658, #1986, #19898, #19904, #20251, #20957, #20958, #2176, #2177, #22334, #22355 [proposed], #22514 [in_progress], #22515 [in_progress], #22516 [in_progress], #22517 [in_progress], #22518 [in_progress], #22519 [in_progress], #22520 [in_progress], #22521 [in_progress], #7301
 
 **Last PICKUP PROMPT:**
 
 ```
-n packet | Cline | This week |
+ if zero messages in 48 hours.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — CNA Program comprehensive sweep and improvements.
-(No numeric task ID available — treat as new task from Ruben.)
 
-Where we left off (verified 2026-08-04 09:17 PT):
-- Full CNA database audit completed: 28 tasks (0 complete, 12 in_progress, 8 not_started, 4 cancelled), 38 externship sites (0 signed), 0 affiliation agreements, 458 agent messages (all decided, agent silent since June 25)
-- Implementation plan read: start date Aug 1 PASSED, AZSBN submission Aug 15 (11 days), first cohort Sept 1 (28 days). Program critically behind.
-- Valleywise (#38) contacted but no CAA sent. Shela requested catalog/brochure today.
-- No EMT catalog/brochure templates found on server or Drive. Must build CNA catalog from scratch using implementation plan data.
-- CNA Agent (85+ crons) has been silent 6+ weeks. Root cause unknown.
+Pick up task 22514: CNA Program comprehensive sweep (catalog, brochure, CAA, Agent RCA, draft backfill).
+
+Where we left off (verified 2026-08-04 09:38 PT):
+- Database: 28 tasks (0 complete, 12 in_progress 90+ days stale, 8 not_started), 38 externship sites (0 signed), cna_affiliation_agreements empty, 458 agent messages all decided.
+- EMT catalog template at https://emsuniversity.com/arizonacatalog.pdf. EMT externship contract at https://emsuniversity.com/emtskills/externship/dashboard.php.
+- crontab has zero CNA entries. 85+ cron files exist, none scheduled. Unverified root cause.
+- Shela Aug 4 email requesting catalog/brochure for Valleywise, CAA review, program confirmation.
+- Valleywise site 38: Sherrie Beardsley, sherrie.beardsley@valleywisehealth.org, 602-344-8406.
 
 Open threads to drive next:
-1. Build CNA catalog PDF and brochure using data from cna_program_tasks, implementation_plan.md, pricing research. Create public-facing CNA info page at /routes/cna_info.php (no login). Seed into cna_program_documents.
-2. Locate and review the CAA PDF Shela attached. Compare against cna_affiliation_template.md. Send to Valleywise (sherrie.beardsley@valleywisehealth.org) with cover email.
-3. Restart CNA Agent crons — investigate why agent stopped producing messages after June 25. Check cron_cna_agent.php, cna_agent_autopush_errors, cna_agent_spinup_log.
-4. Backfill 8 not_started task drafts Shela requested May 11 and May 27. Tasks 17-19, 21-24, 26, 28.
-5. Recalibrate program timeline in implementation_plan.md — Aug 1 start date missed, push all downstream dates.
-6. Assemble AZSBN application packet from 12 policies + implementation plan + equipment list + faculty roster.
-7. Send CAA to all 15 contacted-but-unsigned sites via agent autopush.
+1. #22514 [executing] - Build CNA catalog and brochure as batch-action sections from EMT template. Shela reviews each section.
+2. #22515 [executing] - Draft response to Shela Aug 4 email.
+3. #22516 [executing] - RCA CNA Agent silence. Read cron source, classify per rule 297.
+4. #22517 [executing] - Backfill 8 not_started task drafts Shela requested (tasks 17-28).
+5. #22518 [executing] - Send CAA v1.0 to Valleywise site 38 and all contacted sites.
+6. #22519 [executing] - Recalibrate timeline. Assemble AZSBN application packet.
+7. #22520 [executing] - Public CNA info page and tracker page improvements.
+8. #22521 [executing] - CNA Agent health watchdog.
 
 Reference IDs:
-- Shela's email: squiroz@emsuniversity.com (Aug 4, 2026)
-- Valleywise site ID: 38 (cna_program
+- Ideas filed: #22514 [executing], #22515 [executing], #22516 [executing], #22517 [executing], #22518 [executing], #22519 [executing], #22520 [executing], #22521 [executing].
+- Files touched: /var/www/emtskills/routes/cna_program.php, /var/www/emtskills/docs/cna_program/implementation_plan.md, cna_program_tasks (28 rows), cna_program_externship_sites (38 rows), cna_agent_messages (458 rows), orchestrator_ideas (8 filed).
+
+When done, append to cline_task_ledger.md per rule 07 and run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
 ```
+
+### `1785860776891` — 8/4/2026, 9:40:54 AM PT — 94 turns
+
+**Original task:**
+
+```
+#Argus
+
+What other Argus improvements can we make? 
+
+Also do not inject Anthropic
+
+Rule 297 RCA done at the source, the never-lose guarantee is now server-side, the queue was tested live end to end (and the test itself caught and survived two real failures), the learner was evaluated and the verdict is bad, and every student from your Argus windows now has a named owner. Details below.
+
+## RCA on the flat lie (rule 297, classified: REAL BUG)
+
+Source: `alltastic_api.php:12534`, inside `callClaude()`, the retry-exhausted branch. It returned the string "your request is queued and I am continuing 
+```
+
+**Ideas referenced:** #12661, #16608, #1758, #17580, #19492, #22356 [executing], #22365 [executing], #22366 [executing], #22376 [executing], #22377 [executing], #22416 [executing], #22438 [executing], #22460 [executing], #22488 [executing], #22489 [executing], #22490 [executing], #22501 [executing], #22511 [approved], #22512 [approved], #22513 [approved], #9086, #9168, #9306, #9339, #9343
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785833407446` — 8/4/2026, 9:17:09 AM PT — 431 turns
 
@@ -2497,54 +2537,6 @@ Reference IDs:
 - Incident: frankenstein_router_incidents #2124 (closed)
 - Ideas filed: #20639, #20641 (superseded), #20644, #20648, #20899, #20914, #20915, #2137
 - Files touched: `/var/www/emtskills/cron/cron_orchestrator_stuck_chain_watchdog.php`, `/usr/local/bin/frankenstein_tools_adapter.py` (env vars only), `/etc/systemd/system/frankenstein-tools.service.d/*.conf` (cap values), root crontab (watchdog registration)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785360672171` — 8/1/2026, 9:23:32 AM PT — 3888 turns
-
-**Original task:**
-
-```
-For call ins for potential customers, i wonder how we can prioritize those with Telephony vs current students. Is this possible using our Telephony system? 
-
-Also how are calls into Telephony doing? I wonder about this because I'm wonding if our imprvements made ot the sytem yetserday are helping things. Are more Humans answering than before or what's going on with that? How are customers doing with AI as well? What are the ratings, etc...?
-```
-
-**Ideas referenced:** #12606, #16154, #1745, #178561, #20032 [proposed], #20033 [proposed], #20038, #20045 [proposed], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20052 [proposed], #20080, #20081 [proposed], #20094, #20279 [proposed], #20289 [proposed], #20294 [proposed], #20296 [proposed], #20297, #20316 [proposed], #20320 [proposed], #20321 [proposed], #20322 [proposed], #20323 [proposed], #20325 [deploying], #20329 [proposed], #20370 [queued], #20407 [executing], #20880 [proposed], #9222, #9501
-
-**Last PICKUP PROMPT:**
-
-```
-t IDs, all live voices healthy
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up — Voice A/B routing root cause + fix enablement (Vapi persona lanes).
-
-Where we left off (verified 2026-08-01 09:21 PT):
-- Filed idea #20880 [proposed] — ROOT CAUSE: Vapi Main Line +19412545009 has assistantId 6ee87bdb hardcoded at the phone-number level, so Vapi never fires assistant-request; the persona A/B engine in vapi_server_webhook.php lines 2373-2553 is dead code.
-- Evidence bundle already collected: voice_persona_variants live table (Eric lane-a-eric 50%, Bella lane-b-bella 50% active, 4 demoted); 153/153 calls/24h attributed fallback-no-pick via Vapi API probe (phone id 97e4226b, serverUrl vapi_server_webhook.php); voice_agent.log has zero PERSONA-ROUTING / ASSISTANT-REQUEST lines.
-- Live telephony health: PASS — main line +19412545009 healthy, avg call 123s, 153 calls/24h. Cosmetic noise only: AUTH FAILED bad secret from 192.168.1.68 (local health poller, stale secret).
-- Webhook routing code is verified correct and needs NO code change — the fix is purely a Vapi phone-number config change.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #20880 [proposed] — Execute the fix: in Vapi dashboard remove assistantId from phone number +19412545009 (id 97e4226b) so assistant-request fires. Then call https://api.vapi.ai/phone-number to confirm assistantId=null on 97e4226b. Then make a test call and grep logs/voice_agent.log for a PERSONA-ROUTING line with a picked slug.
-2. #20050 [proposed] — After lanes go live, collect success_score per lane and build topic-based routing to human agents for poor-rated calls (needs ~7 days of lane-split data first).
-3. #20081 [proposed] — Once Eric/Bella split is verified live, run the 4-assistant A/B test (Ronald, Katie, Eric, Bella) using the now-working voice_persona_variants weight buckets.
-4. #20046 [proposed] — Pre-call prospect detection in Twilio inbound routing so the AI / agents know who is calling before the first ring.
-5. #20047 [proposed] — Shorten the VAPI greeting to attack the 10s hangup window (works with #20081 — same greeting field).
-6. #20049 [proposed] — Bella gatekeeping loop: add a direct-human-agent route for frustrated callers once lane attribution proves which persona causes it.
-7. #20051 [proposed] — Change spokesperson greeting to remove "AI assistant" from the opening.
-
-Reference IDs:
-- Ideas filed: #20880 [proposed] (this session), plus 8 prior voice ideas: #20045 / #20046 / #20047 / #20049 / #20050 / #20051 / #20081 / #20407 — ALL [proposed]
-- Files touched: /var/www/emtskills/api/voice/vapi_server_webhook.php (read-only, lines 200-215 vlog, 2190 pick call, 2373-2553 persona A/B, 6036-6046 attribution), /var/www/emtskills/logs/voice_agent.log, /var/www/emtskills/api/voice/ruben_voice_webhook.php (referenced as serverUrl on 2 phone numbers)
-- Live evidence: Vapi API /phone-number probe (9 numbers; 97e4226b = EMSU Main Line), voice_persona_variants DB, voice_call_log DB
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════

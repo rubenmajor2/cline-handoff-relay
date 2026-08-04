@@ -6,13 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/4/2026, 3:22:14 PM PT | window: last 72h | 77 tasks | index total 446 (parsed 1, cached 445)
+Generated: 8/4/2026, 4:22:14 PM PT | window: last 72h | 79 tasks | index total 449 (parsed 4, cached 445)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1785885342087` | 8/4/2026, 4:21:42 PM | 37 | 100KB | Your numbers appear to be to be far from my reality.  |
+| `1785885194894` | 8/4/2026, 4:21:32 PM | 42 | 241KB | What's going on today in Argus? |
+| `1785885221719` | 8/4/2026, 4:14:07 PM | 2 | 5KB | What's going on today in Argus? |
+| `1785858480786` | 8/4/2026, 4:01:49 PM | 596 | 2311KB | For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. P |
+| `1785858742320` | 8/4/2026, 3:28:10 PM | 310 | 2664KB | I dont' see here where the callback system is working properly? Seems like it is not. Can  |
 | `1785881207296` | 8/4/2026, 3:19:41 PM | 56 | 471KB | Can you look into this and advise if there's an isseu? |
-| `1785858480786` | 8/4/2026, 2:25:06 PM | 503 | 1986KB | For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. P |
-| `1785858742320` | 8/4/2026, 2:23:36 PM | 297 | 2624KB | I dont' see here where the callback system is working properly? Seems like it is not. Can  |
 | `1785817138435` | 8/4/2026, 2:12:26 PM | 128 | 466KB | i noticed a lot of reasonsing time across models wasted contemplating context and whether  |
 | `1785873518014` | 8/4/2026, 2:06:51 PM | 294 | 691KB | #GLM  |
 | `1785861156554` | 8/4/2026, 1:53:32 PM | 398 | 802KB | https://emsuniversity.com/emtskills slow to load again |
@@ -86,11 +89,183 @@ Generated: 8/4/2026, 3:22:14 PM PT | window: last 72h | 77 tasks | index total 4
 | `1785649916867` | 8/1/2026, 10:51:57 PM | 1 | 2KB | #Argus |
 | `1785646010358` | 8/1/2026, 10:16:27 PM | 217 | 1115KB | #Argus |
 | `1785608591871` | 8/1/2026, 9:44:23 PM | 946 | 3347KB | #Argus |
-| `1785483679627` | 8/1/2026, 4:07:30 PM | 126 | 325KB | yesterday, SSL expired for some parts of emsuniversity.com. Some users still reporting SSL |
 
 ---
 
 ## Per-window detail
+
+### `1785885342087` — 8/4/2026, 4:21:42 PM PT — 37 turns
+
+**Original task:**
+
+```
+Your numbers appear to be to be far from my reality. 
+
+Especially this table which tends to show that the 120B is smarter AND faster than the GLM 5.2. Makes me think that there's something missing:
+
+3. Break-even tok/s, the number you asked for
+Same question, both correct. Artemis: 7.0s, 122 visible tokens, 17.4 tok/s.
+
+Bar	GLM must sustain	vs today's 2.65
+Single turn, visible tokens only	17.4 tok/s	6.6x
+Single turn, counting reasoning tokens	69.7 tok/s	26.3x
+Complex scenarios at 1.0 hops	70.9 tok/s	26.8x
+at 1.5 hops	106.3 tok/s	40.1x
+at 2.33 hops (matching the 120B)	165.2 tok/s	62.3x
+
+
+You we
+```
+
+**Ideas referenced:** #12363, #2197, #22128 [executing], #22370 [proposed], #22371 [proposed], #22500 [awaiting_review], #22543 [proposed], #22563 [proposed], #22564 [proposed], #22565 [proposed], #22583 [proposed], #22584 [proposed], #22598 [proposed], #22599 [proposed], #22600 [proposed], #22601 [proposed], #22602 [proposed], #22612 [proposed], #22613 [proposed], #22657 [proposed], #22658 [proposed], #22659 [proposed], #22660 [rejected]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785885194894` — 8/4/2026, 4:21:32 PM PT — 42 turns
+
+**Original task:**
+
+```
+What's going on today in Argus?
+```
+
+**Ideas referenced:** #10003, #10005, #10182, #1130, #1131, #12301, #1241, #12425, #1248, #1249, #1252, #1258, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16213, #16263, #16338, #16448, #16452, #16588, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18745, #18770, #19370, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #21140, #21262, #2127, #2168, #22331, #22362, #22368, #22422, #22486, #22529, #22580, #274160, #30363, #69707, #7142, #7149, #8942, #9650, #9654, #9660, #9733, #9889
+
+**Last PICKUP PROMPT:**
+
+```
+Augustus (GLM-5.2 ring rank-1, stale heartbeat), or another host, let me know.
+
+PICKUP PROMPT
+╔══════════════════════════════════════════════════════════════╗
+║ TASK: What's going on today in Argus?                        ║
+║ TOPIC: Daily fleet/system health check                       ║
+║ VERIFIED: 2026-08-04 16:15 PT                                ║
+║ FILES: [none]                                                ║
+║ WHERE WE LEFT OFF:                                           ║
+║   - Full fleet_now + orchestrator_status + error_watchdog    ║
+║     + fleet_inventory returned                               ║
+║   - No host named "Argus" found; comprehensive summary       ║
+║     provided covering fleet, orchestrator, errors, issues    ║
+║ OPEN THREADS:                                                ║
+║   1. cron_segment_backfill — 2566 consecutive failures       ║
+║      (human-only decision, no idea)                          ║
+║   2. Implementation engine 100% failure rate today — 9       ║
+║      recent failures (no idea filed)                         ║
+║   3. 183 unanswered emails >4h with no ticket — recurring    ║
+║      silent-drop class (cf. idea 18376)                      ║
+║   4. User may have meant Artemis/Augustus, not "Argus"       ║
+║      (human-only decision, no idea)                          ║
+║ IDEAS FILED: [none in this task]                             ║
+╚══════════════════════════════════════════════════════════════╝
+</result>
+</attempt_completion>
+```
+
+### `1785885221719` — 8/4/2026, 4:14:07 PM PT — 2 turns
+
+**Original task:**
+
+```
+What's going on today in Argus?
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785858480786` — 8/4/2026, 4:01:49 PM PT — 596 turns
+
+**Original task:**
+
+```
+For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. Probably a lot have gone unanswered. The last one we need to develop that Catalog, brochure, etc.. base dn what we currently have for the EMT program, and everythign else. We also need to go back through other requests for the last several weeks and do a massive sweep of improvements to help get the program up and running. Give me a comprehenisvie list based on what you find (which will no doubt require subagent research) so that we can push forward. Oh also work to improve the CNA Agent and the page she i
+```
+
+**Ideas referenced:** #0000, #003366, #1658, #16817, #17130 [superseded], #17537 [rejected], #18132 [deployed], #18944, #18951, #19125, #19171, #19173, #19338, #19458, #19491, #1986, #19898, #19904, #199497, #199498, #199499, #20251, #20903, #20957, #20958, #21062, #21419, #2176, #2177, #22280, #22334, #22355 [proposed], #22412, #22420, #22423, #22437, #22514 [in_progress], #22515 [in_progress], #22516 [in_progress], #22517 [in_progress], #22518 [in_progress], #22519 [in_progress], #22520 [in_progress], #22521 [in_progress], #6581, #6933, #6942, #7301, #7612, #7620
+
+**Last PICKUP PROMPT:**
+
+```
+rmissions but send succeeded).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task CNA Program Sweep and Valleywise Deliverables.
+
+Where we left off (verified 2026-08-04 16:00 PT):
+- Sent CNA catalog + brochure + CAA draft PDFs to Shela (#199498) and Vicky (#199499) at 15:58:56 PT
+- Shela and Vicky jointly verify all three, then Shela uploads corrected versions
+- All 8 ideas filed (#22514 through #22521); orchestrator builds stalled, manual path used
+
+Open threads to drive next (EVERY item has a filed idea #):
+1. #22515 [deployed] - Shela Aug 4 email answered, drafts in her inbox
+2. #22514 [executing] - Watch for Shela/Vicky corrections; next step: check cna inbox + cna_agent_messages in 24h
+3. #22517 [executing] - 8 not_started task drafts (17-21, 24-26) still pending; orchestrator reset to coding
+4. #22518 [executing] - After Shela+Vicky approve, send CAA to Valleywise (site 38) + 37 other contacted sites
+5. #22516 [executing] - RCA CNA Agent silent since 06-25 (458 decided, 0 pending)
+6. #22521 [executing] - CNA Agent health watchdog cron
+7. #22519 [executing] - AZSBN timeline recalibration (application due 08-15, already past 08-01 start)
+8. #22520 [executing] - Public CNA info page + batch actions + catalog links on tracker
+
+Reference IDs:
+- Emails: 199497 (test), 199498 (Shela), 199499 (Vicky)
+- Ideas filed: #22514, #22515, #22516, #22517, #22518, #22519, #22520, #22521
+- Valleywise site: #38; CNA tasks not_started: 17, 18, 19, 21, 24, 25, 26
+- Files: uploads/cna_program/catalog_draft.md, brochure_draft.md, cron/cna_send_docs.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785858742320` — 8/4/2026, 3:28:10 PM PT — 310 turns
+
+**Original task:**
+
+```
+I dont' see here where the callback system is working properly? Seems like it is not. Can your esolve that: https://www.emsuniversity.com/emtskills/routes/telephony_hub.php
+
+Also as an admin I'd liek to be able to see the schedule in the admin section. 
+
+I think there's something wrong eith the actual tab. Can you test nd fix it. login, use tokens to test and resolve. make usre it actually all works and is wired in properly? Are CFAs aware and how are they utilizing this? This should only be by request.
+```
+
+**Ideas referenced:** #001018, #059669, #062017, #127891, #128274, #1652, #1658, #166534, #18868, #19163, #1986, #20825, #2168, #2174, #2176, #2177, #21775, #22066, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #22334, #22355 [proposed], #22507 [deployed], #2563, #334155, #374151, #475569, #64748, #6785, #92400, #9733, #9734
+
+**Last PICKUP PROMPT:**
+
+```
+xt I'll confirm it's resolved.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up Vicky's Argus telephony escalation — verify the fixes resolved her specific report.
+
+Where we left off (verified 2026-08-04 15:27 PT):
+- Callback tab nesting fixed — panel moved from inside tab-settings Twilio Credentials row to sibling tab-panel at line 3190
+- ruben_context_api.php 401 fixed — added session_name(EMSU_SESSION_COOKIE_NAME) before session_start()
+- ruben_context_api.php 404 fixed — path /api/ruben_context_api.php → /emtskills/api/ruben_context_api.php
+- Standalone switchTab deployed at line 3371 — dependency-free, renders before Twilio SDK, overrideable
+- Usage audit complete — 1 e2e-test booking, 0 real student usage, 180 empty slots
+- Argus escalation text NOT retrieved (SSH quoting failed)
+- Idea #22507 [deployed] — Telephony Hub callback fixes + admin schedule
+
+Open threads to drive next:
+1. #22507 [deployed] — Ask Vicky to refresh + hard-refresh the telephony hub page and confirm switchTab and ruben_context_api errors are gone. Pull her Argus escalation ID if still active.
+2. #22507 [deployed] — Consider exposing the callback schedule more prominently (e.g., "Need a call? Book a callback" CTA) since feature has never been offered to students yet (0 CFA suggestions, 0 real bookings)
+
+Reference IDs:
+- Ticket: none filed (Ruben asked via Cline)
+- Ideas filed: #22507
+- Files touched: /var/www/emtskills/routes/telephony_hub.php, /var/www/emtskills/js/ruben_bubble.js, /var/www/emtskills/api/ruben_context_api.php
+- Database: admin_portal.callback_bookings (1 e2e-test), callback_slots (180 available)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
 
 ### `1785881207296` — 8/4/2026, 3:19:41 PM PT — 56 turns
 
@@ -140,99 +315,6 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [x] Verify WP post_content for Aug 17 Boot Camp end-date inconsistency
 - [x] Advise on whether an issue exists and the right response
 </task_progress>
-</attempt_completion>
-```
-
-### `1785858480786` — 8/4/2026, 2:25:06 PM PT — 503 turns
-
-**Original task:**
-
-```
-For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. Probably a lot have gone unanswered. The last one we need to develop that Catalog, brochure, etc.. base dn what we currently have for the EMT program, and everythign else. We also need to go back through other requests for the last several weeks and do a massive sweep of improvements to help get the program up and running. Give me a comprehenisvie list based on what you find (which will no doubt require subagent research) so that we can push forward. Oh also work to improve the CNA Agent and the page she i
-```
-
-**Ideas referenced:** #0000, #1658, #17130 [superseded], #17537 [rejected], #18132 [deployed], #19125, #19171, #19173, #19338, #19458, #19491, #1986, #19898, #19904, #20251, #20903, #20957, #20958, #21062, #21419, #2176, #2177, #22280, #22334, #22355 [proposed], #22412, #22420, #22423, #22437, #22514 [in_progress], #22515 [in_progress], #22516 [in_progress], #22517 [in_progress], #22518 [in_progress], #22519 [in_progress], #22520 [in_progress], #22521 [in_progress], #6581, #6933, #6942, #7301, #7612, #7620
-
-**Last PICKUP PROMPT:**
-
-```
-hes manually before deploying.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — CNA Program sweep: 3 deliverables on Desktop; Shela email unsent; 6 orchestrator retries stalled.
-
-Where we left off (verified 2026-08-04 13:30 PT):
-- cna_catalog_draft.md (353 lines, 14.9KB), cna_brochure_draft.md (78 lines, 3.0KB), cna_caa_draft_valleywise.md (253 lines, 13.7KB) all copied to /Users/rubenmajor/Desktop/.
-- Shela email not sent — send_email tool rejected JSON argument during this session. Either retry send_email with correct JSON or Ruben forwards from Desktop.
-- 6 orchestrator ideas still stalled in coding after 50+ min (expected 2). emsuserver lacks write permission on /tmp/ruben-impl-worker-*.log files owned by www-data.
-- 2 ideas ready_for_review: #22515 [awaiting_review] (Shela response email with drifted patches), #22518 [awaiting_review] (CAA send with drifted patches). Both have SPEC DRIFT warnings.
-- Shela-Vicky-Verify-Upload gate flow present in #22514, #22515, #22518 DB descriptions.
-
-Open threads to drive next:
-1. #22514 [executing] — CNA Catalog/Brochure. Manually built and on Desktop. Verify catalog sections against EMT arizonacatalog.pdf table-of-contents.
-2. #22515 [awaiting_review] — Shela response email. Either deploy drifted orchestrator patches or send email manually from Desktop files.
-3. #22517 [executing] — Backfill 8 task drafts. Stalled for 50+ min. Write task drafts to cna_program_tasks table directly if orchestrator doesn't unstick.
-4. #22518 [awaiting_review] — CAA send to Valleywise. CAA draft on Desktop. Deploy or reject drifted patches.
-5. #22516 [executing] — CNA Agent silence RCA. Check if cron_cna_agent.php source was read to confirm crontab diagnosis.
-6. #22519 [executing] — Timeline recalibration. Stalled.
-7. #22520 [executing] — Public CNA info page. Stalled.
-8. #22521 [executing] — Health watchdog. Stalled. Verify crontab entry if/when deployed.
-
-Reference IDs:
-- Ideas filed: #22514 [executing], #22515 [awaiting_review], #22516 [executing], #22517 [executing], #22518 [awaiting_review], #22519 [executing], #22520 [executing], #22521 [executing].
-- Files on Desktop: /Users/rubenmajor/Desktop/cna_catalog_draft.md, /Users/rubenmajor/Desktop/cna_brochure_draft.md, /Users/rubenmajor/Desktop/cna_caa_draft_valleywise.md.
-- Files on server: /var/www/emtskills/docs/cna_program/cna_affiliation_template.md (CAA template), /var/www/emtskills/docs/cna_program/CNA_PRICING_RESEARCH_2026-05-06.md, /var/www/emtskills/docs/cna_program/implementation_plan.md.
-- Tickets: Shela Aug 4 email, Valleywise site #38 (Sherrie Beardsley), 8 Shela-requested task drafts from May/June.
-
-When done, append to cline_task_ledger.md per rule 07 and run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785858742320` — 8/4/2026, 2:23:36 PM PT — 297 turns
-
-**Original task:**
-
-```
-I dont' see here where the callback system is working properly? Seems like it is not. Can your esolve that: https://www.emsuniversity.com/emtskills/routes/telephony_hub.php
-
-Also as an admin I'd liek to be able to see the schedule in the admin section. 
-
-I think there's something wrong eith the actual tab. Can you test nd fix it. login, use tokens to test and resolve. make usre it actually all works and is wired in properly? Are CFAs aware and how are they utilizing this? This should only be by request.
-```
-
-**Ideas referenced:** #001018, #059669, #062017, #127891, #128274, #1652, #1658, #166534, #18868, #19163, #1986, #20825, #2168, #2174, #2176, #2177, #21775, #22066, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #22334, #22355 [proposed], #22507 [deployed], #2563, #334155, #374151, #475569, #64748, #6785, #92400, #9733, #9734
-
-**Last PICKUP PROMPT:**
-
-```
-errors she'd see on that page.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up Vicky's Argus telephony report — pull argus_escalations and confirm her exact error.
-
-Where we left off (verified 2026-08-04 13:24 PT):
-- Callback usage audit complete: 1 e2e-test booking, 0 real student/CFA usage, 180 empty slots — feature never offered to students
-- ruben_bubble.js 404 fixed (hardcoded /api/ → /emtskills/api/, deployed)
-- tab-callbacks nesting bug fixed (moved from inside tab-settings to top-level panel)
-- Argus escalation query NOT completed — SSH quoting error blocked `argus_escalations` lookup
-- Idea #22507 [deployed] — Telephony Hub callback tab fix + admin schedule section
-
-Open threads to drive next:
-1. #22507 [deployed] — Run `SELECT id, summary, status, created_at FROM argus_escalations WHERE summary LIKE '%teleph%' ORDER BY created_at DESC LIMIT 10` via emsu-operations sql_query to get Vicky's exact Argus report, then resolve the underlying telephony_hub.php JS error (switchTab is not defined at line 3015 still needs the agent-view script audit completed)
-
-Reference IDs:
-- Ticket: (none filed — Ruben asked via Cline)
-- Ideas filed: #22507
-- Files touched: /var/www/emtskills/routes/telephony_hub.php, /var/www/emtskills/js/ruben_bubble.js
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
 
@@ -2946,43 +3028,4 @@ Reference IDs:
 - Files: routes/argus_download.php (.bak-21140-*), routes/alltastic_api.php (.bak-21138-*, .bak-21134-*), /usr/local/bin/frankenstein_tools_adapter.py (.bak-21136-*)
 
 When done, append to cline_task_ledger.md (rule 07), run ord
-```
-
-### `1785483679627` — 8/1/2026, 4:07:30 PM PT — 126 turns
-
-**Original task:**
-
-```
-yesterday, SSL expired for some parts of emsuniversity.com. Some users still reporting SSL certificates bad, getting Not Secure or whatever from Google Chrome at emsuniversity.com/ems and check "Matrix" also at emsuniversity.com/emtskills. Something is off there still. Advise
-```
-
-**Ideas referenced:** #19370, #20313, #20317, #20326, #20394 [deployed], #20403 [proposed], #20419, #20422 [deployed], #20429 [proposed], #20430, #20431 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-[deployed], #20431 [rejected].
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — SSL "Not Secure" residual reports on emsuniversity.com.
-
-Where we left off (verified 2026-08-01 16:07 PT):
-- All 8 confirmatory checks passed: cert valid through Oct 28, HSTS live on every URL path, port 80 redirect works, Moodle config correct, HSTS directive on disk
-- No remaining issues — safe to close
-
-Open threads to drive next:
-1. #20429 [deployed] — HSTS enabled, nginx config in production, no further action
-2. #20431 [rejected] — Stale-browser advisory, rejected by Ruben
-
-Reference IDs:
-- Ideas: #20429 [deployed], #20431 [rejected]
-- Files touched: /var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf (line 2 HSTS)
-- Handoff: docs/HANDOFF_NOTES.md updated with HSTS deployment entry
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```

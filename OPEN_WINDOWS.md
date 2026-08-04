@@ -6,12 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/4/2026, 8:22:11 AM PT | window: last 72h | 56 tasks | index total 418 (parsed 1, cached 417)
+Generated: 8/4/2026, 9:22:12 AM PT | window: last 72h | 60 tasks | index total 422 (parsed 5, cached 417)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785822732682` | 8/4/2026, 8:20:36 AM | 964 | 7645KB | GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes. Key achie |
-| `1785833407446` | 8/4/2026, 2:36:13 AM | 257 | 587KB | In argus:  |
+| `1785860435008` | 8/4/2026, 9:22:09 AM | 13 | 39KB | #GLM |
+| `1785858742320` | 8/4/2026, 9:21:08 AM | 108 | 1108KB | I dont' see here where the callback system is working properly? Seems like it is not. Can  |
+| `1785858480786` | 8/4/2026, 9:19:08 AM | 80 | 236KB | For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. P |
+| `1785833407446` | 8/4/2026, 9:17:09 AM | 431 | 919KB | In argus:  |
+| `1785858167516` | 8/4/2026, 9:14:49 AM | 113 | 310KB | #GLM |
+| `1785822732682` | 8/4/2026, 8:34:13 AM | 1002 | 7748KB | GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes. Key achie |
 | `1785817138435` | 8/4/2026, 2:17:32 AM | 32 | 114KB | i noticed a lot of reasonsing time across models wasted contemplating context and whether  |
 | `1785833341637` | 8/4/2026, 2:10:06 AM | 68 | 208KB | run this plase |
 | `1785807924524` | 8/4/2026, 2:07:44 AM | 108 | 458KB | I’m assuming TeamHub is currently blank because you’re doing something with it at the mome |
@@ -71,60 +75,115 @@ Generated: 8/4/2026, 8:22:11 AM PT | window: last 72h | 56 tasks | index total 4
 
 ## Per-window detail
 
-### `1785822732682` — 8/4/2026, 8:20:36 AM PT — 964 turns
+### `1785860435008` — 8/4/2026, 9:22:09 AM PT — 13 turns
 
 **Original task:**
 
 ```
-GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes. Key achievements this session:
+#GLM
 
-1. Discovered 200Gbps RoCE ring topology, set MTU 9000 on all interfaces
-2. Fixed crossed CX7 cables on Tiberius + Marcus (IPs on wrong interfaces) - 200G links now work
-3. Distributed 419G FP8-MXFP4 checkpoint to all 6 nodes via 200G ring (~20 min per node)
-4. Fixed quantization error: patched config.json quant_method from hybrid_mxfp4_ct to compressed-tensors
-5. Discovered TP=6 impossible (64 attention heads not divisible by 6), using TP=2 PP=3 instead
-6. Fixed NCCL ibv_create_cq 
+Here is how we get there, and the first move is not what I would have guessed an hour ago.
+
+**Restate your target in the one unit the hardware answers to.** 3.5 tok/s per stream is 286 ms per output token. Measured mean inter-token latency on the ring right now is 528 ms, which is 1.89 tok/s. Implied step time is 160 ms at 1 stream and 572 ms at 8 streams, so batching 8x only cost 3.6x in step time. Your two numbers become:
+
+- **8 lanes:** step time must be ≤286 ms while serving 8. That is a **2.0x** step-time cut.
+- **12 lanes:** same 2.0x cut **and** 1.5x more batch than today's cap.
+
+
 ```
 
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11944, #12299, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12673, #12824, #12872, #12878, #13108, #13202, #13874, #15144, #15979, #1602 [resolved], #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #1640, #16448, #16452, #1652 [resolved], #1655, #1658 [rejected], #16588, #16778, #16802, #16803, #16839, #16844, #16851, #17202, #17246, #17298, #17301, #1744, #1754, #1755, #1779, #1798, #1828, #18312, #18326, #18327, #18471, #1897, #19563, #19567, #1980, #1983, #1984, #1986, #19903, #20005, #20042, #20069, #20264, #20272, #20340 [executing], #2050, #2051, #2052, #2053, #20536, #2054, #2055, #2060, #2061, #2062, #2063, #2065, #20662, #2073, #2081, #20825, #2083 [resolved], #2085, #2089, #2090, #2092, #2093, #2096, #2097, #20985, #2099, #2101, #21010 [executing], #21011 [executing], #2102, #2103, #21038 [proposed], #21045, #2109, #2110, #2111, #21158 [executing], #2116, #21171, #2121, #21213 [executing], #2127, #2128, #2129, #2131, #2138, #2139 [investigating], #2141, #21419 [executing], #2147, #2149, #2151, #2152, #2153, #2154, #21542 [rejected], #21546 [executing], #2157, #2159 [resolved], #2168 [deployed], #21684, #2170 [resolved], #2174 [deployed], #2176 [resolved], #2179, #2180, #2181, #22066, #22067, #22068, #22086, #22087, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #22379 [proposed], #22479, #7142, #7149
+**Ideas referenced:** #2083, #2157, #2159, #2168, #22128 [executing], #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #22479 [proposed], #22480 [proposed], #22484 [proposed], #22491 [proposed], #22499 [proposed], #22500 [executing]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785858742320` — 8/4/2026, 9:21:08 AM PT — 108 turns
+
+**Original task:**
+
+```
+I dont' see here where the callback system is working properly? Seems like it is not. Can your esolve that: https://www.emsuniversity.com/emtskills/routes/telephony_hub.php
+
+Also as an admin I'd liek to be able to see the schedule in the admin section. 
+
+I think there's something wrong eith the actual tab. Can you test nd fix it. login, use tokens to test and resolve. make usre it actually all works and is wired in properly? Are CFAs aware and how are they utilizing this? This should only be by request.
+```
+
+**Ideas referenced:** #001018, #059669, #062017, #1652, #1658, #166534, #1986, #20825, #2168, #2174, #2176, #2177, #21775, #22066, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #22334, #22355 [proposed], #22507 [deployed], #2563, #334155, #374151, #475569, #64748, #92400, #9733, #9734
 
 **Last PICKUP PROMPT:**
 
 ```
-ring. Option C is likely best.
+n above the agent view toggle.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
+Pick up telephony callback fix cleanup — verify tab renders and schedule shows live data.
 
-Pick up task #22128 [executing] - GLM ring serves 12.84 tok/s but tool_track bypasses it for interactive Cline
-
-Where we left off (verified 2026-08-04 08:08 PT):
-- Ring SERVING: cato:8210 = glm-5.2-15pct, ctx 131072. RATE: 1892 samples, mean 12.84 tok/s, min 0.20, max 18.40
-- COST IS CLEAN: 1693 turns in 60 min, total $0. frankenstein-llm resolves to local 127.0.0.1:11510 ($0 verified). claude-opus took only 2 of 1693 turns. Rule 146 holding
-- BUT: glm-5.2-local got 6 of 7492 picks (0.08 pct). Of 2296 req=frankenstein-llm, frankenstein-tools won 2141 (93 pct), GLM ring won 4
-- ROOT CAUSE: tool_track is rank-ordered and short-circuits BEFORE the tier ladder. frankenstein-tools rank 10, glm-5.2-local rank 45. Tool-bearing turns never walk down. Tier ladder IS correct (L4g ahead of L4f per the 2026-07-11 directive) and is being silently defeated by the tool track
-- Zero health/skip/dead events name glm-5.2-local in 40k audit lines - not excluded, never reached
-- Rung 1 of the speedup ladder (NCCL socket tuning) was tested on hardware and FALSIFIED earlier this session (bug row 2180)
+Where we left off (verified 2026-08-04 09:20 PT):
+- `tab-callbacks` extracted from nested bug inside `tab-settings` → now sibling panel at line 3190
+- Admin schedule section `callbackScheduleSection` added at line 2412 with `_panel_callback.php` include
+- 180 callback slots, 1 confirmed booking in admin_portal database
+- CFA suggest API tested E2E, live and wired
+- Idea #22507 [deployed] — Telephony Hub callback tab nesting bug FIXED + admin schedule section deployed
 
 Open threads to drive next:
-1. #22379 [proposed] - HUMAN DECISION on the tool_track question. Option A leave it and re-scope the GLM-before-120B directive in writing to tier-ladder-only. Option B move glm-5.2-local ahead of frankenstein-tools in tool_track (12.84 tok/s interactive instead of 44-60, so only after #22378). Option C split by workload: interactive stays on the fast adapter, subagent/batch/executor routes at the ring. Option C is my recommendation.
-2. #22378 [proposed] - resolve the max_num_seqs contradiction on the current checkpoint (row 1640 says 128 gave 110 tok/s aggregate, row 1655 says >8 hangs torch.compile). This changes the Option B math materially. Must also extend cudagraph_capture_sizes if max_num_seqs rises.
-3. #22357 [proposed] - reboot durability, still highest-risk. Supervisor pause flag in /tmp, routes and iptables not persistent, glm52-fabric.service failed. Any node reboot silently breaks the ring and presents as an NCCL error.
-4. #22370 [proposed] - concurrency benchmark n=1/4/8 with 200-token completions to establish real aggregate ceiling before anyone greenlights the TP=4+DCP4+DSpark migration.
-5. #22371 [proposed] - speedup ladder, rung 1 falsified, rungs 3-5 untested. Rung 5 IS the routing question now tracked in #22379.
+1. #22507 [deployed] — Verify the telephony_hub.php page renders correctly by having Ruben or an admin visit the page and check the Callbacks tab + Callback Schedule section in admin view
+2. (human-only decision - no idea) — CFA utilization: current system is "by-request" only. If CFAs should be auto-suggesting callbacks, the `suggest.php` API is ready but no CFA-facing UI exists yet — needs Ruben's decision on whether to build a CFA chime-in widget
 
 Reference IDs:
-- Ideas: #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #22379 [proposed]
-- Bug library rows: 2176 resolved (network fix), 2179 resolved (spec decode verdict), 2180 resolved (NCCL socket tuning falsified), 1968 (PP=6 single-stream ceiling)
-- Evidence: tail -20000 /tmp/emsu_router_audit.log | grep -oE '"picked": "[^"]+"' | sort | uniq -c | sort -rn
-- Files: /home/rubenmajor/glm52_launch_cfg_pp6.sh (all 6, defaults), /etc/litellm/frankenstein_registry.yaml, /Users/rubenmajor/Desktop/GLM52_SPEC_DECODE_VERDICT_20260804.md
+- Ticket: (none filed — Ruben asked via Cline)
+- Ideas filed: #22507
+- Files touched: /var/www/emtskills/routes/telephony_hub.php
 
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
 ```
 
-### `1785833407446` — 8/4/2026, 2:36:13 AM PT — 257 turns
+### `1785858480786` — 8/4/2026, 9:19:08 AM PT — 80 turns
+
+**Original task:**
+
+```
+For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. Probably a lot have gone unanswered. The last one we need to develop that Catalog, brochure, etc.. base dn what we currently have for the EMT program, and everythign else. We also need to go back through other requests for the last several weeks and do a massive sweep of improvements to help get the program up and running. Give me a comprehenisvie list based on what you find (which will no doubt require subagent research) so that we can push forward. Oh also work to improve the CNA Agent and the page she i
+```
+
+**Ideas referenced:** #1658, #1986, #2176, #2177, #22334, #22355 [proposed], #7301
+
+**Last PICKUP PROMPT:**
+
+```
+n packet | Cline | This week |
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — CNA Program comprehensive sweep and improvements.
+(No numeric task ID available — treat as new task from Ruben.)
+
+Where we left off (verified 2026-08-04 09:17 PT):
+- Full CNA database audit completed: 28 tasks (0 complete, 12 in_progress, 8 not_started, 4 cancelled), 38 externship sites (0 signed), 0 affiliation agreements, 458 agent messages (all decided, agent silent since June 25)
+- Implementation plan read: start date Aug 1 PASSED, AZSBN submission Aug 15 (11 days), first cohort Sept 1 (28 days). Program critically behind.
+- Valleywise (#38) contacted but no CAA sent. Shela requested catalog/brochure today.
+- No EMT catalog/brochure templates found on server or Drive. Must build CNA catalog from scratch using implementation plan data.
+- CNA Agent (85+ crons) has been silent 6+ weeks. Root cause unknown.
+
+Open threads to drive next:
+1. Build CNA catalog PDF and brochure using data from cna_program_tasks, implementation_plan.md, pricing research. Create public-facing CNA info page at /routes/cna_info.php (no login). Seed into cna_program_documents.
+2. Locate and review the CAA PDF Shela attached. Compare against cna_affiliation_template.md. Send to Valleywise (sherrie.beardsley@valleywisehealth.org) with cover email.
+3. Restart CNA Agent crons — investigate why agent stopped producing messages after June 25. Check cron_cna_agent.php, cna_agent_autopush_errors, cna_agent_spinup_log.
+4. Backfill 8 not_started task drafts Shela requested May 11 and May 27. Tasks 17-19, 21-24, 26, 28.
+5. Recalibrate program timeline in implementation_plan.md — Aug 1 start date missed, push all downstream dates.
+6. Assemble AZSBN application packet from 12 policies + implementation plan + equipment list + faculty roster.
+7. Send CAA to all 15 contacted-but-unsigned sites via agent autopush.
+
+Reference IDs:
+- Shela's email: squiroz@emsuniversity.com (Aug 4, 2026)
+- Valleywise site ID: 38 (cna_program
+```
+
+### `1785833407446` — 8/4/2026, 9:17:09 AM PT — 431 turns
 
 **Original task:**
 
@@ -141,9 +200,71 @@ Searched EMSU knowledge base (VEC) - relevant docs found
 Thinking with frankenstein-llm...
 ```
 
-**Ideas referenced:** #10003, #10005, #10182, #11397, #12301, #12368, #12589, #12590, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13874, #16213, #16263, #18671, #18745, #18770, #19370 [deployed], #19686, #19903, #2006, #2050, #20547, #21125, #21126, #21134 [ready_for_review], #21140 [ready_for_review], #21262, #2178 [deployed], #22178 [ready_for_review], #22365 [approved], #22366 [approved], #22376 [approved], #22377 [approved], #274160, #30363, #69707, #8942, #9650, #9654, #9660, #9733, #9889
+**Ideas referenced:** #10003, #10005, #10182, #11397, #12301, #12368, #12589, #12590, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13874, #16213, #16263, #18671, #18745, #18770, #19370 [deployed], #19686, #19784, #19903, #2006, #2050, #20547, #21125, #21126, #21134 [ready_for_review], #21140 [ready_for_review], #21262, #2178 [deployed], #2183, #22178 [ready_for_review], #22356 [approved], #22365 [approved], #22366 [approved], #22376 [approved], #22377 [approved], #22416 [approved], #22438 [approved], #22460 [approved], #22488 [approved], #22489 [approved], #22490 [approved], #22501 [approved], #274160, #30363, #69707, #8942, #9650, #9654, #9660, #9733, #9889
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785858167516` — 8/4/2026, 9:14:49 AM PT — 113 turns
+
+**Original task:**
+
+```
+#GLM
+
+To note it would be difficult for me to need or run 32, 64, windows, etc.. At any given time, with iterations going. My thoughts are that abaolute max windows in cline i could have iterating and keep up would be 12 just fron a human standpoint. As for interative usage, supposedly the windows need to be 3.5 tok/sec to be better than the 120Bs based on my habits, waiting between iterations,quality of 120Bs vs GLM 5.2, etc... this should be baked into the eventual build
+
+--
+You are right and my framing was wrong. I called it saturation. It is truncation, and that changes everything.
+
+Look a
+```
+
+**Ideas referenced:** #12459, #20272, #20536, #2071, #2072, #2085, #2184, #2185, #22128 [executing], #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #22479 [proposed], #22480 [proposed], #22484 [proposed], #22491 [proposed], #22499 [proposed], #22500 [in_progress]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785822732682` — 8/4/2026, 8:34:13 AM PT — 1002 turns
+
+**Original task:**
+
+```
+GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes. Key achievements this session:
+
+1. Discovered 200Gbps RoCE ring topology, set MTU 9000 on all interfaces
+2. Fixed crossed CX7 cables on Tiberius + Marcus (IPs on wrong interfaces) - 200G links now work
+3. Distributed 419G FP8-MXFP4 checkpoint to all 6 nodes via 200G ring (~20 min per node)
+4. Fixed quantization error: patched config.json quant_method from hybrid_mxfp4_ct to compressed-tensors
+5. Discovered TP=6 impossible (64 attention heads not divisible by 6), using TP=2 PP=3 instead
+6. Fixed NCCL ibv_create_cq 
+```
+
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11944, #12299, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12673, #12824, #12872, #12878, #13108, #13202, #13874, #15144, #15979, #1602 [resolved], #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #1640, #16448, #16452, #1652 [resolved], #1655, #1658 [rejected], #16588, #16778, #16802, #16803, #16839, #16844, #16851, #17202, #17246, #17298, #17301, #1744, #1754, #1755, #1779, #1798, #1828, #18312, #18326, #18327, #18471, #1897, #19563, #19567, #1980, #1983, #1984, #1986, #19903, #20005, #20042, #20069, #20264, #20272, #20340 [executing], #2050, #2051, #2052, #2053, #20536, #2054, #2055, #2060, #2061, #2062, #2063, #2065, #20662, #2073, #2081, #20825, #2083 [resolved], #2085, #2089, #2090, #2092, #2093, #2096, #2097, #20985, #2099, #2101, #21010 [executing], #21011 [executing], #2102, #2103, #21038 [proposed], #21045, #2109, #2110, #2111, #21158 [executing], #2116, #21171, #2121, #21213 [executing], #2127, #2128, #2129, #2131, #2138, #2139 [investigating], #2141, #21419 [executing], #2147, #2149, #2151, #2152, #2153, #2154, #21542 [rejected], #21546 [executing], #2157, #2159 [resolved], #2168 [deployed], #21684, #2170 [resolved], #2174 [deployed], #2176 [resolved], #2179, #2180, #2181, #2182, #22066, #22067, #22068, #22086, #22087, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #22379 [proposed], #22479 [proposed], #22480 [proposed], #22484 [proposed], #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+sume your interactive reserve.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #22128 [executing] - RAISE max_num_seqs on the GLM ring to reach 65+ tok/s aggregate
+
+Where we left off (verified 2026-08-04 08:32 PT):
+- THE HEADLINE: the ring is admission-capped, not saturated. Aggregate climbs monotonically to the cap (c1 6.26, c2 7.69, c3 8.96, c4 9.91, c5 9.28, c6 11.36, c7 12.72, c8 13.99) and 1396 of 2057 samples sit at exactly c8 with 4.26 avg waiting. KV cache usage is 0.84 PERCENT: kv_cache_size_tokens 2,959,424, num_gpu_blocks 46,241, kv_cache_max_concurrency 22.58x at full 131K ctx. About 99 percent of the KV cache is idle. --max-num-seqs 8 is the entire limit
+- RUBEN TARGET: 65+ tok/s aggregate. Bug row 1640 already measured this exact hardware (6x DGX Spark PP=6 socket) at max_num_seqs=128 giving 67.33 at 64 clients, 93.34 at 96, 110.21 at 128. Target is proven achievable
+- THE BLOCKER TO BREAK: bug row 1655 (one day after 1640) says max_num_seqs 12 and 32 hang torch.compile on the custom sparse-MLA build, declares 8 the max. Contradicts 1640, never reconciled, 8 carried forward unquestioned since 07-12
+- RING IS HEALTHY AND SERVING INTERACTIVE AGAIN: two non-ranking gates fixed today (bug row 2181) - stale FRANK_GLM_MAINTENANCE=1 (zzzzz-glm-maintenance.conf mtime 08-03 18:32, set during outage, ring repaired 02:45, renamed .disabled-ring-repaired-20260804) and FRANK_GLM_STAGE1_TTFB_INTERACTIVE 8 -> 0 (new drop-in zzzzzzzzzzzzzzzzzzzzzzz-glm-stage1-interactive-fix.conf). GLM cline turns 0 -> 3, canary healthy=True decode_live=True
+- DO NOT RE-PATCH RANKING: EMSU_GLM_FIRST_ALL_LANES defaults 1, _glm_priority()=0 for GLM every lane, _speed_rank() pins -1e9, sort key cooldown-exempt, EMSU_GLM_ABSOLUTE_CLAIM=1. Ruben directive already implemented in four places
+- ARGUS SAFE: lane classifier (adapter lines 323-345) returns cline ONLY on Cline markers. Admin Argus GLM opt-in classifies ops/batch, cannot eat the interactive reserve
+
+Open threads to drive next:
+1. #22484 [proposed] P0 - THE MAIN JOB. Raise CFG_MAX_SEQS in glm52_launch_cfg_pp6.sh in steps 16, 32, 64, 128. Deploy all 6, relaunch workers 1-5 THEN rank 0 (bug row 2168). Re-extract the curve at each step, stop when aggregate flattens or interactive TTFB exceeds the 240s SLO. Watch for the row-1655 signature (GPU 0 pct, no progress during KV cache setup / CUDA graph capture). MANDATORY: extend cudagraph_capture_sizes (now [1,2,4,8] max 16) to match each new max_num_seqs, or batches fall off the graph path into eager = 30-100x decode slowdown per bug row 1979, which will look like a regression and get wrongly reverted. Also revisit max_num_batched_tokens (now 8192) as seq count rises.
+2. #22357 [proposed] - SEQUENCE THIS FIRST or do the whole experiment in one sitting. Ring is not reboot-durable: supervisor pause flag lives in /tmp, ring routes and the iptables ring ACCEPT are not persistent, glm52-fabric.service is failed. Any node reboot silently breaks the ring and presents as an NCCL error.
+3. #22480 [proposed] P0 - the lane split. Cap-ops-at-4 (FRANK_GLM_OPS_CEILING=4) was correct for a hard 8-slot ceiling and becomes unnecessary if 22484 lands. Note FRANK_GLM_OVERFLOW_CEILING=32 and FRANK_GLM_OPS_CEILING=24 are currently DEAD CONFIG, unreachable above the real cap of 8, so the 07-30 lane reservation is a no-op today. Re-derive the split AFTER 22484.
+4. #22479 [proposed] - GLM now takes roughly 9 percent of interactive turns. Decide if that
+```
 
 ### `1785817138435` — 8/4/2026, 2:17:32 AM PT — 32 turns
 

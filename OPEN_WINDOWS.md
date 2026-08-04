@@ -6,16 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/4/2026, 12:22:13 PM PT | window: last 72h | 81 tasks | index total 444 (parsed 7, cached 437)
+Generated: 8/4/2026, 1:22:13 PM PT | window: last 72h | 79 tasks | index total 445 (parsed 6, cached 439)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785858742320` | 8/4/2026, 12:22:12 PM | 179 | 1328KB | I dont' see here where the callback system is working properly? Seems like it is not. Can  |
-| `1785871298806` | 8/4/2026, 12:22:01 PM | 3 | 17KB | #120Bs |
-| `1785861156554` | 8/4/2026, 12:21:50 PM | 179 | 429KB | https://emsuniversity.com/emtskills slow to load again |
-| `1785858480786` | 8/4/2026, 12:18:10 PM | 210 | 648KB | For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. P |
-| `1785869498305` | 8/4/2026, 12:17:59 PM | 112 | 318KB | Ruben Orchestrator MCP is offline. This is odd considering. Take a look at MCP Troubleshoo |
-| `1785868208238` | 8/4/2026, 12:13:13 PM | 174 | 422KB | #GLM  |
+| `1785861156554` | 8/4/2026, 1:22:12 PM | 327 | 677KB | https://emsuniversity.com/emtskills slow to load again |
+| `1785817138435` | 8/4/2026, 1:22:10 PM | 37 | 130KB | i noticed a lot of reasonsing time across models wasted contemplating context and whether  |
+| `1785858742320` | 8/4/2026, 1:21:53 PM | 203 | 1421KB | I dont' see here where the callback system is working properly? Seems like it is not. Can  |
+| `1785873518014` | 8/4/2026, 1:21:36 PM | 129 | 324KB | #GLM  |
+| `1785871298806` | 8/4/2026, 1:18:41 PM | 174 | 484KB | #120Bs |
+| `1785858480786` | 8/4/2026, 1:10:51 PM | 291 | 833KB | For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. P |
+| `1785868208238` | 8/4/2026, 12:49:31 PM | 322 | 689KB | #GLM  |
+| `1785869498305` | 8/4/2026, 12:37:31 PM | 162 | 508KB | Ruben Orchestrator MCP is offline. This is odd considering. Take a look at MCP Troubleshoo |
 | `1785869837093` | 8/4/2026, 11:57:54 AM | 4 | 18KB | I have been told you died. Is that false? |
 | `1785865689091` | 8/4/2026, 11:27:54 AM | 86 | 933KB | ——[COPY]—— |
 | `1785860435008` | 8/4/2026, 11:26:53 AM | 470 | 1297KB | #GLM |
@@ -38,7 +40,6 @@ Generated: 8/4/2026, 12:22:13 PM PT | window: last 72h | 81 tasks | index total 
 | `1785833407446` | 8/4/2026, 9:17:09 AM | 431 | 919KB | In argus:  |
 | `1785858167516` | 8/4/2026, 9:14:49 AM | 113 | 310KB | #GLM |
 | `1785822732682` | 8/4/2026, 8:34:13 AM | 1002 | 7748KB | GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes. Key achie |
-| `1785817138435` | 8/4/2026, 2:17:32 AM | 32 | 114KB | i noticed a lot of reasonsing time across models wasted contemplating context and whether  |
 | `1785833341637` | 8/4/2026, 2:10:06 AM | 68 | 208KB | run this plase |
 | `1785807924524` | 8/4/2026, 2:07:44 AM | 108 | 458KB | I’m assuming TeamHub is currently blank because you’re doing something with it at the mome |
 | `1785821651406` | 8/4/2026, 1:48:58 AM | 522 | 3348KB | For Argus only: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser  |
@@ -88,15 +89,99 @@ Generated: 8/4/2026, 12:22:13 PM PT | window: last 72h | 81 tasks | index total 
 | `1785620201169` | 8/1/2026, 2:37:03 PM | 2 | 8KB | **Yes, run the next window on frankenstein-llm.** It is the correct pick per rule 146 (fre |
 | `1785582017987` | 8/1/2026, 2:35:44 PM | 642 | 7444KB | GLM ring TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wan |
 | `1785463237084` | 8/1/2026, 1:25:47 PM | 1400 | 4567KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
-| `1785601440006` | 8/1/2026, 12:55:09 PM | 454 | 1095KB | **TELEPHONY ISSUE — FULL STATUS, ROOT CAUSE, AND WHERE WE GO NEXT** |
-| `1785613709787` | 8/1/2026, 12:48:30 PM | 1 | 5KB | #Julia/Claudia |
-| `1785537361555` | 8/1/2026, 12:37:04 PM | 496 | 2332KB | What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor  |
 
 ---
 
 ## Per-window detail
 
-### `1785858742320` — 8/4/2026, 12:22:12 PM PT — 179 turns
+### `1785861156554` — 8/4/2026, 1:22:12 PM PT — 327 turns
+
+**Original task:**
+
+```
+https://emsuniversity.com/emtskills slow to load again
+```
+
+**Ideas referenced:** #16170, #1658, #1986, #2176, #2177, #22334, #22355 [proposed], #22517 [in_progress], #22550 [awaiting_review]
+
+**Last PICKUP PROMPT:**
+
+```
+ay and status is now deployed.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #22550 [deployed]: emtskills capacity increase follow-up.
+
+Where we left off (verified 2026-08-04 12:53 PT):
+- Capacity increase deployed. pm.max_children 300, spawn_rate 64, thread_cache 200, max_connections 2000, all verified live.
+- Root-caused the mystery reverter: /var/www/emtskills/scripts/emsu-memory-guardian.sh (every-minute cron) rewrote max_children to tier 180. Patched tiers to 300/400.
+- HANDOFF_NOTES updated with full change record.
+
+Open threads to drive next:
+1. #22550 [deployed] Watch for fleet burst regressions; confirm no FPM worker starvation under the next vec_query/orchestrator spike.
+2. #22550 [deployed] Next capacity lever: MySQL is still ~272% CPU from orchestrator_api LLM curl_exec + caller_lookup. Consider moving LLM calls to fleet boxes or adding query indexes.
+
+Reference IDs:
+- Ideas filed: #22550 [deployed]
+- Files touched: emsu-memory-guardian.sh, www.conf, 99-emsu-perf.cnf, 99-emsu-max-connections.cnf, HANDOFF_NOTES.md
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Diagnose slow load (origin fast, fleet API traffic drives load)
+- [x] Increase PHP-FPM max_children tiers in memory-guardian (moderate 180→300, full 200→400)
+- [x] Increase pm.max_spawn_rate 32→64
+- [x] Increase MySQL thread_cache_size 50→200, max_connections 1000→2000 (live + persisted)
+- [x] Update fpm_reverter_config desired=300, auto_reapply=1
+- [x] Verify pm.max_children=300 persists across guardian cycle, live TTFB 14ms
+- [x] Log changes to HANDOFF_NOTES
+- [x] Update idea #22550 to deployed and complete with pickup prompt
+</task_progress>
+</attempt_completion>
+```
+
+### `1785817138435` — 8/4/2026, 1:22:10 PM PT — 37 turns
+
+**Original task:**
+
+```
+i noticed a lot of reasonsing time across models wasted contemplating context and whether to compress. It's kind of insane how many tokens are wasted on this. What can we do about that? Tell me how much waste is occurring from this.
+```
+
+**Ideas referenced:** #178584, #19162, #22282 [queued]
+
+**Last PICKUP PROMPT:**
+
+```
+ools without LLM deliberation.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1785840812960 — implement mechanical context compression trigger.
+
+Where we left off (verified 2026-08-04 02:16 PT):
+- Threshold per rule 119: CHECK at 0.55 × W, COMPRESS at 0.75 × W — no new numbers needed
+- 412 sessions analyzed, ~880K tokens wasted on deliberation that mechanical trigger eliminates
+- Idea #22282 [proposed] pending approval — user confirmed threshold is the blocker
+
+Open threads to drive next:
+1. #22282 [proposed] — approved once threshold confirmed. Implement: pre-turn watchdog reads X from environment_details, fires should_compress_now at 0.55W, cline_compress_session at 0.75W. Zero LLM deliberation.
+2. (human-only decision, no idea) — approve #22282 in ruben-orchestrator if not already done
+
+Reference IDs:
+- Ideas filed: #22282 [proposed]
+- Files touched: /tmp/scan_compress_waste_v2.py
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785858742320` — 8/4/2026, 1:21:53 PM PT — 203 turns
 
 **Original task:**
 
@@ -113,35 +198,55 @@ I think there's something wrong eith the actual tab. Can you test nd fix it. log
 **Last PICKUP PROMPT:**
 
 ```
-n above the agent view toggle.
+ed for admin view at line 2412
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up telephony callback fix cleanup — verify tab renders and schedule shows live data.
+Pick up telephony hub errors — verify ruben_context_api.php 404 is gone and switchTab works in agent view.
 
-Where we left off (verified 2026-08-04 09:20 PT):
-- `tab-callbacks` extracted from nested bug inside `tab-settings` → now sibling panel at line 3190
-- Admin schedule section `callbackScheduleSection` added at line 2412 with `_panel_callback.php` include
-- 180 callback slots, 1 confirmed booking in admin_portal database
-- CFA suggest API tested E2E, live and wired
-- Idea #22507 [deployed] — Telephony Hub callback tab nesting bug FIXED + admin schedule section deployed
+Where we left off (verified 2026-08-04 12:25 PT):
+- ruben_bubble.js line 25: changed `/api/ruben_context_api.php` → `/emtskills/api/ruben_context_api.php` (deployed)
+- telephony_hub.php: PHP syntax OK; JS block structure verified (node --check pass); tab-callbacks extracted from nesting
+- Callback system: 1 e2e-test booking, 0 real requests, 0 CFA suggestions, 180 empty slots
+- Idea #22507 [deployed] — Telephony Hub callback tab nesting bug FIXED + admin schedule section added + ruben_bubble.js 404 fixed
 
 Open threads to drive next:
-1. #22507 [deployed] — Verify the telephony_hub.php page renders correctly by having Ruben or an admin visit the page and check the Callbacks tab + Callback Schedule section in admin view
-2. (human-only decision - no idea) — CFA utilization: current system is "by-request" only. If CFAs should be auto-suggesting callbacks, the `suggest.php` API is ready but no CFA-facing UI exists yet — needs Ruben's decision on whether to build a CFA chime-in widget
+1. #22507 [deployed] — Ruben visits `telephony_hub.php?view=agent` and confirms: ruben_context_api.php 404s are gone, Callbacks tab loads correctly, switchTab works for all tabs
 
 Reference IDs:
 - Ticket: (none filed — Ruben asked via Cline)
 - Ideas filed: #22507
-- Files touched: /var/www/emtskills/routes/telephony_hub.php
+- Files touched: /var/www/emtskills/routes/telephony_hub.php, /var/www/emtskills/js/ruben_bubble.js
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
 
-### `1785871298806` — 8/4/2026, 12:22:01 PM PT — 3 turns
+### `1785873518014` — 8/4/2026, 1:21:36 PM PT — 129 turns
+
+**Original task:**
+
+```
+#GLM 
+
+Is there a better way to probe the loop then? I feel left off a cliff here, where are we going with all this? 
+
+Since i laready did the test and found the GLM to be an acceptable speed and the test was not faulty, I'm happy about cline functionality. 
+
+However, you did not finish your test of GLM vs the 120Bs. I already ran 22564 in another window and will work ont he followup ideas there shortly. 
+
+Build and ship these now:
+
+Unchanged and still worth doing, but it is now clearly the smaller fish. The copy window I gave you stands: size max_tokens at 3x the target word count, per-surfac
+```
+
+**Ideas referenced:** #12335, #12459, #13108, #13121, #15371, #15374, #18567, #1877, #18868, #1889, #19144, #19163, #1965, #1966, #1967, #21045, #22128 [executing], #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #22479 [proposed], #22480 [proposed], #22484 [proposed], #22491 [proposed], #22500 [executing], #22527 [proposed], #22528 [proposed], #22543 [proposed], #22563 [proposed], #22564 [proposed], #22565 [proposed], #22570 [proposed], #22571 [proposed], #22572 [proposed], #22583 [proposed], #22584 [proposed], #6429
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785871298806` — 8/4/2026, 1:18:41 PM PT — 174 turns
 
 **Original task:**
 
@@ -161,59 +266,44 @@ rubric 9/9, single pass. The cap, not the model, was the failure.
 Corrobora
 ```
 
-**Ideas referenced:** #11563, #22543 [proposed], #22564 [proposed], #22572 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785861156554` — 8/4/2026, 12:21:50 PM PT — 179 turns
-
-**Original task:**
-
-```
-https://emsuniversity.com/emtskills slow to load again
-```
-
-**Ideas referenced:** #16170, #1658, #1986, #2176, #2177, #22334, #22355 [proposed], #22517 [in_progress], #22550 [awaiting_review]
+**Ideas referenced:** #11563, #11849, #12251, #12335, #12365, #12407, #12657, #12689, #13475, #1378, #16063, #19338, #19653, #22543 [proposed], #22564 [proposed], #22572 [proposed], #22588 [proposed], #22589 [proposed], #6520
 
 **Last PICKUP PROMPT:**
 
 ```
-NOTES.md (triage entry added).
+oor stays 2000 for batch lanes
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #22550 [awaiting_review] - emtskills slow-load triage follow-up.
+Pick up task — fleet-wide max_tokens sizing audit (idea #22564), the "#120Bs" sweet-spot work.
 
-Where we left off (verified 2026-08-04 11:06 PT):
-- Site is loading fast now (external TTFB 190ms avg via Cloudflare, verified 5 runs). High load from fleet API traffic, not web stack.
-- HANDOFF_NOTES updated with full triage summary.
-- No code changes made; origin TTFB 13ms direct, cloudflared healthy 11h uptime.
+Where we left off (verified 2026-08-04 12:48 PT):
+- 4 caller caps raised and verified on disk: cline_router_proxy.php:253→12000 [deployed], cline_local_proxy.php:190,427→12000 [deployed], cron_local_llm_executor_replay.php:86,114→16000 [deployed]. PHP-FPM reloaded [verifying].
+- Router WARNING added to /etc/litellm/_router_core.py `_final_maxtokens_guard()` (tags `emsu_maxtokens_warning`) [executing — on disk, NOT live until litellm restart].
+- Audit memo: /tmp/max_tokens_audit_2026-08-04.md. Backups: cline_router_proxy.php.bak-20260804, _router_core.py.bak-20260804 (no .bak for api/cron dirs — write-protected).
+- Live GLM-ring baseline: stop=1061 length=1171 error=1624 (lifetime counters).
 
-Open threads to drive next:
-1. #22550 [awaiting_review] If slowness recurs: check fleet burst vs web traffic pattern.
-2. #22550 [awaiting_review] Consider reducing concurrent Cline windows or throttling vec_query RAG load.
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #22588 [proposed] — raise FRANK_TOOLS_TIMEOUT_INTERACTIVE 12→900s in frankenstein_tools_adapter.py so 12K-token cline responses survive the adapter (22 tok/s ≈ 9 min). Blocked by #22543. Do it in the same window as #22543 fix.
+2. #22589 [proposed] — get Ruben's explicit approval to restart litellm.service (no reload job) to activate the `emsu_maxtokens_warning` tag. Restart is the only remaining deploy step for the WARNING.
+3. #22543 [proposed] — LiteLLM 180s request_timeout root-cause for the 1624 GLM-ring errors; prime suspect for the error lane and the gate for #22588.
+4. #22572 [proposed] — GLM ring max_num_seqs=8 starvation; do NOT raise caps on ring batch lanes until this is resolved.
+5. Re-measure ~4h post-remediation: curl -s http://127.0.0.1:8210/metrics | grep request_success_total. Expect stop > length once #22588+#22543 land. If length still dominates, remaining truncations are a different bug (look at router clamps, not caller config).
 
 Reference IDs:
-- Ideas filed: #22550 [awaiting_review]
-- Files touched: /var/www/emtskills/docs/HANDOFF_NOTES.md
+- Idea filed this session (executed): #22564 [executing]
+- Ideas filed for follow-up: #22588 [proposed], #22589 [proposed]
+- Pre-existing deps: #22543 [proposed], #22572 [proposed]
+- Files touched: /var/www/emtskills/services/cline_router_proxy.php, /var/www/emtskills/api/cline_local_proxy.php, /var/www/emtskills/cron/cron_local_llm_executor_replay.php, /etc/litellm/_router_core.py, /tmp/max_tokens_audit_2026-08-04.md
 
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Check server health (load, disk, PHP-FPM, MySQL)
-- [x] Check nginx/PHP-FPM logs for slow requests or errors
-- [x] Check recent HANDOFF_NOTES for known slow-load issues
-- [x] Measure actual page load time on /emtskills (server-side: 14ms TTFB)
-- [x] Check Cloudflare tunnel health (healthy, 11h uptime)
-- [x] Measure external page load time (190ms avg TTFB, fast)
-- [x] Identify bottleneck (fleet API traffic, not web stack)
-- [x] Verify fix (none needed; triage documented)
-</task_progress>
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
 </attempt_completion>
 ```
 
-### `1785858480786` — 8/4/2026, 12:18:10 PM PT — 210 turns
+### `1785858480786` — 8/4/2026, 1:10:51 PM PT — 291 turns
 
 **Original task:**
 
@@ -221,96 +311,48 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. Probably a lot have gone unanswered. The last one we need to develop that Catalog, brochure, etc.. base dn what we currently have for the EMT program, and everythign else. We also need to go back through other requests for the last several weeks and do a massive sweep of improvements to help get the program up and running. Give me a comprehenisvie list based on what you find (which will no doubt require subagent research) so that we can push forward. Oh also work to improve the CNA Agent and the page she i
 ```
 
-**Ideas referenced:** #0000, #1658, #17130 [superseded], #17537 [rejected], #18132 [deployed], #19125, #19173, #19338, #19458, #19491, #1986, #19898, #19904, #20251, #20957, #20958, #2176, #2177, #22334, #22355 [proposed], #22514 [in_progress], #22515 [in_progress], #22516 [in_progress], #22517 [in_progress], #22518 [in_progress], #22519 [in_progress], #22520 [in_progress], #22521 [in_progress], #7301
+**Ideas referenced:** #0000, #1658, #17130 [superseded], #17537 [rejected], #18132 [deployed], #19125, #19171, #19173, #19338, #19458, #19491, #1986, #19898, #19904, #20251, #20903, #20957, #20958, #21062, #21419, #2176, #2177, #22280, #22334, #22355 [proposed], #22412, #22420, #22423, #22437, #22514 [in_progress], #22515 [in_progress], #22516 [in_progress], #22517 [in_progress], #22518 [in_progress], #22519 [in_progress], #22520 [in_progress], #22521 [in_progress], #7301
 
 **Last PICKUP PROMPT:**
 
 ```
- this single clean completion.
+g, CAA, and brochure together.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #22514 — CNA Program sweep: catalog, contract, brochure with Shela-Vicky-Verify-Upload gate, then CAA send, Agent RCA, draft backfill.
+Pick up task — CNA Program sweep; 6 orchestrator retries stalled in coding stage.
 
-Where we left off (verified 2026-08-04 12:17 PT):
-- 28 tasks: 8 not_started (all Shela draft asks from May/Jun, never fulfilled), 16 in_progress 90+ days stale, 4 cancelled. 38 externship sites: 0 signed. 458 agent messages all decided, agent silent since June 25. Crons absent from crontab.
-- Zero outbound emails to Shela in August. Her Aug 4 Valleywise catalog/CAA/program request has no reply.
-- EMT catalog: https://emsuniversity.com/arizonacatalog.pdf. EMT contract: https://emsuniversity.com/emtskills/externship/dashboard.php. CNA contract base: doc id 2.
-- Gate flow directive verified in DB for #22514, #22515, #22518: Shela reaches out to Vicky, they verify together, Shela uploads corrected versions herself, Valleywise send only after both confirm.
-- Orchestrator reconciled: #22515 and #22518 ready_for_review with SPEC DRIFT warnings. #22514, #22516, #22517, #22519, #22520, #22521 all impl_failed.
+Where we left off (verified 2026-08-04 12:49 PT):
+- 28 tasks: 8 not_started (Shela-requested drafts from May/June), 16 in_progress 90+ days stale, 4 cancelled. Zero complete.
+- 8 ideas filed #22514-#22521. #22515 and #22518 ready_for_review with tested patches (both flagged SPEC DRIFT, same pattern as rejected #19338/#19458).
+- 6 ideas reset to coding and re-dispatched per Ruben directive: #22514, #22516, #22517, #22519, #22520, #22521. All now is_stalled=true after 16-17 min in coding.
+- Dispatcher running 24+ workers. emsuserver (/tmp log writer) lacks write permission on /tmp/ruben-impl-worker-*.log files owned by www-data. CAUSE UNVERIFIED per rule 297.
+- Shela-Vicky-Verify-Upload gate flow present in #22514, #22515, #22518 DB descriptions. Valleywise send blocked until Shela+Vicky both confirm OK.
+- Zero outbound CNA email to Shela in August. #22515 patches hold the response with the gate-flow language.
 
 Open threads to drive next:
-1. #22514 [executing] — Build CNA catalog and brochure batch-action sections from arizonacatalog.pdf. Shela reaches out to Vicky, they verify together, Shela uploads corrected versions, Valleywise send after both confirm. Retry orchestrator or build manually.
-2. #22515 [awaiting_review] — Shela response email with the reach-out-to-Vicky instruction. Patches ready, SPEC DRIFT warning. Review, decide deploy/reject/retry.
-3. #22516 [executing] — RCA CNA Agent silence: read cron_cna_agent.php, cron_cna_agent_autopush.php, check systemd timers, classify per rule 297. Orchestrator impl_failed.
-4. #22517 [executing] — Backfill 8 not_started task drafts Shela requested (tasks 17, 18, 19, 21, 23, 24, 26, 28). Orchestrator impl_failed.
-5. #22518 [awaiting_review] — CAA send to Valleywise + contacted sites with Shela/Vicky verify/upload gate. Patches ready, SPEC DRIFT warning. Review and decide.
-6. #22519 [executing] — Recalibrate timeline, assemble AZSBN packet. Orchestrator impl_failed.
-7. #22520 [executing] — Public CNA info page + tracker improvements. Orchestrator impl_failed.
-8. #22521 [executing] — CNA Agent health watchdog. Orchestrator impl_failed.
+1. #22514 [executing] — CNA Catalog PDF + Brochure. Stalled in coding. Read worker log /var/www/emtskills/cron/cron_ruben_implement.php dispatcher source for stall root cause per rule 297.
+2. #22515 [awaiting_review] — Shela response email. Review SPEC DRIFT patches in sandbox /tmp/ruben_sandbox_22515_1785862926. Deploy or reject in orchestrator UI.
+3. #22516 [executing] — CNA Agent silence RCA. Stalled in coding. Verify crontab finding by reading cron_cna_agent.php source.
+4. #22517 [executing] — Backfill 8 task drafts. Stalled in coding. Confirm drafts created in cna_program_tasks or cna_drafts.
+5. #22518 [awaiting_review] — CAA send to Valleywise. Review SPEC DRIFT patches /tmp/ruben_sandbox_22518_1785862115. Deploy or reject.
+6. #22519 [executing] — Timeline recalibration + AZSBN packet. Stalled in coding.
+7. #22520 [executing] — Public CNA info page + tracker batch actions. Stalled in coding.
+8. #22521 [executing] — CNA Agent health watchdog. Stalled in coding. Verify crontab entry once deployed.
 
 Reference IDs:
-- Ideas: #22514 [executing], #22515 [awaiting_review], #22516 [executing], #22517 [executing], #22518 [awaiting_review], #22519 [executing], #22520 [executing], #22521 [executing]
-- Files: /var/www/emtskills/routes/cna_program.php, /var/www/emtskills/docs/cna_program/implementation_plan.md, cna_program_tasks (28 rows), cna_program_externship_sites (38 rows), cna_agent_messages (458 rows), orchestrator_ideas (8 reconciled, gate flow on 22514/22515/22518)
+- Ideas filed: #22514 [executing], #22515 [awaiting_review], #22516 [executing], #22517 [executing], #22518 [awaiting_review], #22519 [executing], #22520 [executing], #22521 [executing].
+- Files touched: cna_program_tasks (28 rows), cna_program_externship_sites (38 rows), cna_agent_messages (458 rows), orchestrator_ideas (8 filed, 6 retried), cna_program_documents (6 rows), /var/www/emtskills/cron/cron_ruben_implement.php.
+- Tickets: Shela Aug 4 email (catalog/brochure/CAA/go-no-go), Valleywise site #38 (Sherrie Beardsley).
 
 When done, append to cline_task_ledger.md per rule 07 and run order 66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
 
-### `1785869498305` — 8/4/2026, 12:17:59 PM PT — 112 turns
-
-**Original task:**
-
-```
-Ruben Orchestrator MCP is offline. This is odd considering. Take a look at MCP Troubleshooting Document on Desktop and update as needed. Resolve the issue. All other MCPs appear stable
-```
-
-**Ideas referenced:** #1593, #16235, #18600, #1895, #22569 [proposed], #22575 [proposed], #9731
-
-**Last PICKUP PROMPT:**
-
-```
-tch_idea hallucination entry).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task ruben-orchestrator MCP outage fix (verified 2026-08-04 12:17 PT)
-
-Where we left off:
-- ruben-orchestrator (7843) restored via systemctl start after 11h outage caused by explicit stop
-- MCP_Troubleshooting.md updated with Section 15 (root cause, fix, verification, durable gap)
-- dispatch_idea hallucination documented in Section 7 hallucinated tools table
-- Full sweep: all 20 MCPs healthy (10 tunnel + 10 local)
-
-Open threads to drive next:
-1. #22569 [proposed] - Add inactive-service revival logic to emsu-overload-guard.sh (Needs Ruben sign-off: auto-revival of explicitly-stopped mcp-* units could interfere with deliberate admin stops)
-2. #22575 [proposed] - Document dispatch_idea hallucination in MCP Troubleshooting (documentation only, P3)
-
-Reference IDs:
-- Ideas filed: #22569 [proposed], #22575 [proposed]
-- Files touched: MCP_Troubleshooting.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Find MCP Troubleshooting Document on Desktop
-- [x] Diagnose why Ruben Orchestrator MCP is offline (port 7843) — explicit stop at 00:35:08, no restart
-- [x] Fix the MCP connectivity issue — restart WOPR service
-- [x] Update troubleshooting document with Section 15 (explicit-stop incident)
-- [x] Verify all MCPs are stable (20/20 sweep)
-- [x] Investigate dispatch_idea: confirmed hallucinated tool name
-- [x] Add dispatch_idea to Section 7 hallucinated tools table
-- [x] File ideas #22569 (durable gap) and #22575 (dispatch_idea documentation)
-</task_progress>
-</attempt_completion>
-```
-
-### `1785868208238` — 8/4/2026, 12:13:13 PM PT — 174 turns
+### `1785868208238` — 8/4/2026, 12:49:31 PM PT — 322 turns
 
 **Original task:**
 
@@ -336,9 +378,47 @@ I ran the actual experiment. Same v2 prompt, straight to `gpt-oss-120b`:
 The br
 ```
 
-**Ideas referenced:** #12618, #12680, #2193 [resolved], #2194, #22128 [executing], #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #22479 [proposed], #22480 [proposed], #22484 [proposed], #22491 [proposed], #22499 [rejected], #22500 [executing], #22527 [proposed], #22528 [proposed], #22543 [proposed], #22563 [proposed], #22564 [proposed], #22565 [proposed], #22570 [proposed], #22571 [proposed], #22572 [proposed], #7381 [queued]
+**Ideas referenced:** #12618, #12680, #13121, #15371, #15374, #19338, #1965, #1966, #1967, #2193 [resolved], #2194, #2195, #22128 [executing], #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #22479 [proposed], #22480 [proposed], #22484 [proposed], #22491 [proposed], #22499 [rejected], #22500 [executing], #22527 [proposed], #22528 [proposed], #22543 [proposed], #22563 [proposed], #22564 [proposed], #22565 [proposed], #22570 [proposed], #22571 [proposed], #22572 [proposed], #22583 [proposed], #22584 [proposed], #7381 [queued]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785869498305` — 8/4/2026, 12:37:31 PM PT — 162 turns
+
+**Original task:**
+
+```
+Ruben Orchestrator MCP is offline. This is odd considering. Take a look at MCP Troubleshooting Document on Desktop and update as needed. Resolve the issue. All other MCPs appear stable
+```
+
+**Ideas referenced:** #1593, #16170, #16221, #16235, #18600, #1895, #22569 [proposed], #22575 [proposed], #22582 [deployed], #3988, #5918, #6104, #9731
+
+**Last PICKUP PROMPT:**
+
+```
+ew hallucinated tool entries).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task ruben-orchestrator MCP outage fix (verified 2026-08-04 12:37 PT)
+
+Where we left off:
+- ruben-orchestrator (7843) restored via systemctl start after 11h outage caused by explicit stop
+- Inactive-revival guard SHIPPED: idea #22569 [deployed] (Section 9 in emsu-overload-guard.sh, verified live)
+- dispatch_idea and implement_idea hallucination rows added to MCP_Troubleshooting.md section 7
+- Full sweep: all 20 MCPs healthy (10 tunnel + 10 local)
+
+All open threads resolved. No remaining work.
+
+Reference IDs:
+- Ideas filed: #22569 [deployed], #22575 [deployed], #22582 [deployed]
+- Files touched: MCP_Troubleshooting.md, /usr/local/bin/emsu-overload-guard.sh
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
 
 ### `1785869837093` — 8/4/2026, 11:57:54 AM PT — 4 turns
 
@@ -888,45 +968,6 @@ Open threads to drive next:
 2. #22357 [proposed] - SEQUENCE THIS FIRST or do the whole experiment in one sitting. Ring is not reboot-durable: supervisor pause flag lives in /tmp, ring routes and the iptables ring ACCEPT are not persistent, glm52-fabric.service is failed. Any node reboot silently breaks the ring and presents as an NCCL error.
 3. #22480 [proposed] P0 - the lane split. Cap-ops-at-4 (FRANK_GLM_OPS_CEILING=4) was correct for a hard 8-slot ceiling and becomes unnecessary if 22484 lands. Note FRANK_GLM_OVERFLOW_CEILING=32 and FRANK_GLM_OPS_CEILING=24 are currently DEAD CONFIG, unreachable above the real cap of 8, so the 07-30 lane reservation is a no-op today. Re-derive the split AFTER 22484.
 4. #22479 [proposed] - GLM now takes roughly 9 percent of interactive turns. Decide if that
-```
-
-### `1785817138435` — 8/4/2026, 2:17:32 AM PT — 32 turns
-
-**Original task:**
-
-```
-i noticed a lot of reasonsing time across models wasted contemplating context and whether to compress. It's kind of insane how many tokens are wasted on this. What can we do about that? Tell me how much waste is occurring from this.
-```
-
-**Ideas referenced:** #178584, #19162, #22282 [queued]
-
-**Last PICKUP PROMPT:**
-
-```
-ools without LLM deliberation.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1785840812960 — implement mechanical context compression trigger.
-
-Where we left off (verified 2026-08-04 02:16 PT):
-- Threshold per rule 119: CHECK at 0.55 × W, COMPRESS at 0.75 × W — no new numbers needed
-- 412 sessions analyzed, ~880K tokens wasted on deliberation that mechanical trigger eliminates
-- Idea #22282 [proposed] pending approval — user confirmed threshold is the blocker
-
-Open threads to drive next:
-1. #22282 [proposed] — approved once threshold confirmed. Implement: pre-turn watchdog reads X from environment_details, fires should_compress_now at 0.55W, cline_compress_session at 0.75W. Zero LLM deliberation.
-2. (human-only decision, no idea) — approve #22282 in ruben-orchestrator if not already done
-
-Reference IDs:
-- Ideas filed: #22282 [proposed]
-- Files touched: /tmp/scan_compress_waste_v2.py
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```
 
 ### `1785833341637` — 8/4/2026, 2:10:06 AM PT — 68 turns
@@ -3006,124 +3047,5 @@ Reference IDs:
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785601440006` — 8/1/2026, 12:55:09 PM PT — 454 turns
-
-**Original task:**
-
-```
-**TELEPHONY ISSUE — FULL STATUS, ROOT CAUSE, AND WHERE WE GO NEXT**
-
-**The question Ruben asked:** Two-part — (1) is the EMSU phone system healthy, and (2) can we prioritize callers / route good and bad calls differently (pre-call prospect detection + topic-based routing for poor-rated calls). Both parts got real answers this session.
-
-**Issue #1 — Phone system health: WORKING, but a serious latent defect is now confirmed.**
-- Live telephony check passed: Vapi AI fallback leg healthy, inbound line alive.
-- Last 24h: **153 calls** to the EMSU Main Line (+19412545009), all handled by Vapi, avera
-```
-
-**Ideas referenced:** #12606, #12815, #12830, #16152, #16154, #16523, #16732, #1745, #18935, #194125, #20027, #20045 [approved], #20046 [proposed], #20047 [proposed], #20049 [proposed], #20050 [proposed], #20051 [proposed], #20081 [proposed], #20407 [approved], #20648, #20880 [proposed], #20933 [pending], #20950 [proposed], #25511, #7414, #9077, #9086, #9090, #9112, #9222, #9501
-
-**Last PICKUP PROMPT:**
-
-```
-ocs/voice_ai_disclosure_ca.md`
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #voice-session-20260801 — EMSU phone system root cause + A/B persona routing + CA disclosure + autonomous watchdog + memoryless 7-day quality gate.
-
-Where we left off (verified 2026-08-01 12:38 PT):
-- Vapi main line (97e4226b): assistantId=NULL, webhook fires on every call
-- PERSONA-ROUTING: 18 calls routed across lane-a-eric (17) + lane-b-bella (7) since fix
-- CA AI disclosure: durable in canonical sync script, pushed to Bella main
-- strtotime bug: fixed (int cast), 0 post-fix errors
-- vapi_call_id bug: fixed (→call_id), 0 post-reload errors
-- Watchdog (voice_watchdog_auto.php): 16 ticks, 0 repairs across 32min
-- Chat-channel: LiveChat→CFA reclassified (rule 297), idea #20933 approved
-- 7-day gate: cron_voice_ab_gate.php deployed, crontab 09:00 daily, dry-run passes
-
-Open threads to drive next:
-1. #20081 [approved] — 7-day gate will auto-execute when threshold met (no human memory needed)
-2. #20950 [approved] — Phase1+Phase2 script (extensive scope) deployed; monitor first 09:00 cron run
-3. #20933 [approved] — CFA direct-human bypass for gatekeeping frustration; implement in chat_widget_api.php
-4. #20880 [approved] — Root cause + fix documented; verify zero new strtotime/vapi_call_id errors tomorrow
-
-Reference IDs:
-- Ticket: voice-session-20260801
-- Ideas filed: #20045, #20046, #20047, #20049 (rejected), #20050, #20051, #20081, #20407, #20880, #20933, #20950
-- Files touched: /var/www/emtskills/api/voice/vapi_server_webhook.php (line 6183 fix), /var/www/emtskills/scripts/vapi_canonical_sync.php (CA disclosure durable block), /var/www/emtskills/scripts/voice_watchdog_auto.php, /var/www/emtskills/scripts/cron_voice_ab_gate.php, /var/www/emtskills/logs/voice_ab_gate.log
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785613709787` — 8/1/2026, 12:48:30 PM PT — 1 turns
-
-**Original task:**
-
-```
-#Julia/Claudia
-
-First do the ground truth here and see if it's not actually TP=2 and serving already, if not then proceed. If so, then need to do a 297 on why Agents would get it wrong and fix it durably.
-
-Be sure to consult bug library
-
-Pick up task dedicated Julia/Claudia TP=2 start window.
-
-Where we left off (verified 2026-08-01 10:10 PT):
-- Julia (spark-6ae6) SSH port 2205: ALIVE, up 17d, hostname spark-6ae6, Ray=3 procs, vLLM=0, GPU=0%
-- Claudia (spark-6d51) SSH port: UNKNOWN. Port 2206 routes to WOPR (not spark-6d51). Port 2208 refused. Port 2207 refused. 
-  Claudia was NOT reachable via
-```
-
-**Ideas referenced:** #20877 [proposed], #20878, #20879, #20900, #20901 [approved], #20902 [approved], #20934
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785537361555` — 8/1/2026, 12:37:04 PM PT — 496 turns
-
-**Original task:**
-
-```
-What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor for 50 minutes
-```
-
-**Ideas referenced:** #10108, #10666, #10740, #11741, #11781, #11944, #11953, #12059, #12060, #12314, #12363, #12365, #12366, #12368, #1239, #12477, #12503, #12576, #12591, #12609, #12611, #12617, #12618, #12619, #12657, #12714, #1280, #12824, #12872, #12878, #12894, #12900, #13108, #13202, #13418, #13874, #1468, #16063, #16163, #16265, #16304, #16718, #16834, #16844, #17202, #17205, #177862, #177914, #1784, #18312, #18326, #18360, #19177, #19188, #19338, #20130, #20333, #20410, #20495, #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #20630, #20639 [proposed], #20641 [proposed], #20644 [proposed], #20648 [queued], #20723, #20755, #20899 [filed], #2091, #20914 [deployed], #20915, #2124 [open], #2137 [queued], #2182, #2212, #24583, #25170, #3093, #3376, #3378, #3822, #4516, #4987, #6978, #7126, #7181
-
-**Last PICKUP PROMPT:**
-
-```
-
-- Zero open threads remaining
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #N/A — Ruben Executor doctor session close-out.
-
-Where we left off (verified 12:36 PM PT):
-- Executor LLM path healthy: adapter :11510 returns 200 via Artemis, cap=64, no saturation
-- Stuck-chain watchdog `cron_orchestrator_stuck_chain_watchdog.php` deployed and cron-registered (root crontab */15, last heartbeat 12:00 status=ok)
-- Idea #4516 snoozed, watchdog re-fires correctly on model=NULL + 5+ consec
-- Bug library incident #2124 closed with resolution text
-- All ideas (#20639, #20644, #20648, #20899, #20914) marked deployed
-
-Open threads to drive next:
-- No open threads — all items deployed and verified.
-- (human-only decision - GLM ring restore deferred: Hex tunnel channel 2 Connection refused, ring decode-dead with fail_streak 4652+. WOPR admin needed to `systemctl restart vllm@...` on Cato. Not executor-blocking since GLM-first disabled.)
-
-Reference IDs:
-- Incident: frankenstein_router_incidents #2124 (closed)
-- Ideas filed: #20639, #20641 (superseded), #20644, #20648, #20899, #20914, #20915, #2137
-- Files touched: `/var/www/emtskills/cron/cron_orchestrator_stuck_chain_watchdog.php`, `/usr/local/bin/frankenstein_tools_adapter.py` (env vars only), `/etc/systemd/system/frankenstein-tools.service.d/*.conf` (cap values), root crontab (watchdog registration)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```

@@ -6,15 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/3/2026, 10:51:28 PM PT | window: last 72h | 64 tasks | index total 414 (parsed 7, cached 407)
+Generated: 8/3/2026, 11:51:29 PM PT | window: last 72h | 63 tasks | index total 416 (parsed 3, cached 413)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785812189858` | 8/3/2026, 10:51:05 PM | 321 | 2746KB | What is the slowest speed that frankenstein-llm will permit prior to quaranteining an indi |
-| `1785821651406` | 8/3/2026, 10:50:56 PM | 55 | 751KB | For Argus only: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser  |
-| `1785781386836` | 8/3/2026, 10:50:44 PM | 561 | 2332KB | Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/  |
+| `1785821651406` | 8/3/2026, 11:50:57 PM | 173 | 1105KB | For Argus only: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser  |
+| `1785822732682` | 8/3/2026, 11:48:22 PM | 218 | 640KB | GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes. Key achie |
+| `1785824593043` | 8/3/2026, 11:31:22 PM | 48 | 120KB | why is frankenstein-llm down? |
+| `1785781386836` | 8/3/2026, 11:13:10 PM | 649 | 2469KB | Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/  |
+| `1785821481522` | 8/3/2026, 11:09:43 PM | 78 | 709KB | pages at emsuniversity.com/emtskills appear to be loading very slowly. Why? |
+| `1785812189858` | 8/3/2026, 10:53:20 PM | 328 | 2799KB | What is the slowest speed that frankenstein-llm will permit prior to quaranteining an indi |
 | `1785814799237` | 8/3/2026, 10:48:43 PM | 568 | 1006KB | ## GLM-5.2 TP=6 Migration — Session Complete (Context Compressed) |
-| `1785821481522` | 8/3/2026, 10:37:22 PM | 22 | 109KB | pages at emsuniversity.com/emtskills appear to be loading very slowly. Why? |
 | `1785778409357` | 8/3/2026, 10:32:01 PM | 720 | 3745KB | What is this person actually upset about other than AI answering calls and emails? Can you |
 | `1785776636014` | 8/3/2026, 10:28:33 PM | 650 | 1454KB | Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up |
 | `1785817138435` | 8/3/2026, 9:32:05 PM | 24 | 92KB | i noticed a lot of reasonsing time across models wasted contemplating context and whether  |
@@ -71,15 +73,188 @@ Generated: 8/3/2026, 10:51:28 PM PT | window: last 72h | 64 tasks | index total 
 | `1785563540527` | 8/1/2026, 12:23:17 AM | 300 | 861KB | Can you work on organizing the bug library so that it's easier to search in use by agents? |
 | `1785562021337` | 7/31/2026, 11:59:58 PM | 194 | 574KB | Vicky having some issues in chat 55, can you address her issues? In the last 1 or 2 hours |
 | `1785530188751` | 7/31/2026, 11:52:41 PM | 300 | 1073KB | See the Jon and Cori SMS chat regarding EMT classes suppsedly with the wrong dates posted  |
-| `1785531619110` | 7/31/2026, 11:44:47 PM | 984 | 33538KB | The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "servi |
-| `1785563447930` | 7/31/2026, 11:17:57 PM | 86 | 521KB | Why is this happening? Can you resole it? See MCP Troubleshooting document on deskopt/ upd |
-| `1785564150001` | 7/31/2026, 11:03:04 PM | 2 | 5KB | Subagents are showing 0 tools called and 0 tokens again. This has happened before earlier  |
 
 ---
 
 ## Per-window detail
 
-### `1785812189858` — 8/3/2026, 10:51:05 PM PT — 321 turns
+### `1785821651406` — 8/3/2026, 11:50:57 PM PT — 173 turns
+
+**Original task:**
+
+```
+For Argus only: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser 
+
+for frankenstein-llm, frankenstein-tools i'd like to disallow the use of the GLM 5.2 unless the user specificly chooses "Thinking" mode. Thinking mode is only permitted by Exec Admin, IT Admin, Master Admin. All others must not use GLM 5.2 within frankenstein-llm or frankenstein-tools.
+```
+
+**Ideas referenced:** #10182, #12301, #16213, #16263, #16648, #17202, #17203, #17205, #17300, #17430, #18329, #18378, #1864, #18745, #18820, #18868, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #1934, #19348, #2006, #20340 [executing], #20547, #20549, #21010 [executing], #21011 [executing], #21038 [proposed], #21044, #21053 [proposed], #21125, #21126, #21134, #21138, #21158 [executing], #21171, #2121, #21213 [executing], #21262, #2139 [investigating], #2140, #21419 [executing], #2147, #2149, #2153, #2154, #21542 [rejected], #21546 [executing], #2159 [resolved], #2170 [resolved], #22066, #22067, #22068, #22086, #22087, #22188, #22200, #22240 [proposed], #22256, #274160, #30363, #334155, #37972, #4338, #45094, #64748, #69707
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785822732682` — 8/3/2026, 11:48:22 PM PT — 218 turns
+
+**Original task:**
+
+```
+GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes. Key achievements this session:
+
+1. Discovered 200Gbps RoCE ring topology, set MTU 9000 on all interfaces
+2. Fixed crossed CX7 cables on Tiberius + Marcus (IPs on wrong interfaces) - 200G links now work
+3. Distributed 419G FP8-MXFP4 checkpoint to all 6 nodes via 200G ring (~20 min per node)
+4. Fixed quantization error: patched config.json quant_method from hybrid_mxfp4_ct to compressed-tensors
+5. Discovered TP=6 impossible (64 attention heads not divisible by 6), using TP=2 PP=3 instead
+6. Fixed NCCL ibv_create_cq 
+```
+
+**Ideas referenced:** #1130, #1131, #12299, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #1652 [resolved], #16588, #16778, #16802, #16803, #16839, #16851, #17202, #17246, #1744, #1779, #1798, #1828, #18471, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2139 [investigating], #2147, #2149, #2159 [resolved], #2168 [deployed], #21684, #2170 [resolved], #2174 [deployed], #22128 [executing], #22240 [proposed], #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+executing], #22240 [proposed].
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #22128 - GLM-5.2: PP=1.5 asymmetric not implementable; TP=4/DCP=4 (4 nodes) is the real buildable breakthrough
+
+Where we left off (verified 2026-08-03 23:47 PT):
+- Diagnosed 22:43 OOM reboot: NVRM NV_ERR_NO_MEMORY, softdog watchdog force-reboot all 6 nodes (bug library incident)
+- 272G NVFP4+AQLM download RUNNING on Cato (60G/272G, 8 workers, setsid detached)
+- Cloned m9e/blackwell-llm-docker on Cato; inspected glm52-b12x-spark recipe
+- VERIFIED: production config = TP=4/DCP=4 PP=1 on 4-node Ray cluster (start-glm52-production.sh + glm52-spark4-dcp4-mtp4-128k.env). MAX_NUM_BATCHED_TOKENS=1024, GMU 0.89, KV 1.81e9, MTP4, VLLM_KZ_TRIM_AFTER_LOAD=1 (our OOM fix)
+- REALITY CHECK GIVEN: PP=1.5 asymmetric (4-node core + 2-node expert offload) is NOT implementable in vLLM. PP is integer/even, no expert-offload-to-separate-nodes config exists. No such variant in m9e recipe or any community GB10 recipe
+- We have vllm-node-tf5-glm52-b12x:sm121fix2 but NOT glm-eldritch-b12x:20260702-arm64-spark4 (needs build)
+- RECOMMENDATION: build TP=4/DCP=4 on 4 nodes first (real 24 tok/s breakthrough), 2 spare nodes become TP=3/AQLM second ring later
+- #22128 [executing], #22240 [proposed]
+
+Open threads to drive next:
+1. #22128 [executing] , AWAITING RUBEN PICK: (A) build eldritch image on Cato + verify Mapika checkpoint vs our 419G, then TP=4/DCP=4 on 4 nodes; (B) skip TP=4, stick with TP=3/AQLM dual-ring (downloading)
+2. #22240 [proposed] , research community GLM-5.2 configs; largely answered by threads 378150 + 375416
+3. (human-only decision, no idea) , confirm whether Mapika/GLM-5.2-NVFP4-MTP-hybrid = our existing 419G FP8-MXFP4 or a separate download
+
+Reference IDs:
+- Ideas filed: #22128 [executing], #22240 [proposed]
+- Files touched: /Users/rubenmajor/Desktop/glm52_launch_cfg_tp2pp3.sh, /Users/rubenmajor/Desktop/dl_aqlm.sh, /home/rubenmajor/glm52_launch_cfg_tp2pp3.sh (all 6 nodes), /home/rubenmajor/dl_aqlm.sh (cato), /home/rubenmajor/blackwell-llm-docker/ (cato, cloned), HANDOFF_NOTES.md, bug library incident (GB10 OOM ring reboot)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>- [x] Read handoff notes for current state
+- [x] Diagnose OOM root cause (bug library incident)
+- [x] 272G NVFP4+AQLM download RUNNING on Cato (60G)
+- [x] TWO recipes documented (TP=3/AQLM dual-ring vs TP=4/DCP=4 full-ckpt)
+- [x] KZ_TRIM malloc_trim hook = our exact OOM fix
+- [x] Ruben CONFIRMED: TP=4/PP=1.5 = asymmetric PP=2
+- [x] REALITY CONFIRMED: m9e recipe is 4-node Ray TP=4/DCP=4 PP=1. NO asymmetric PP=1.5 / expert-offload config exists in recipe or standard vLLM
+- [x] Check eldritch image: have vllm-node-tf5-glm52-b12x:sm121fix2, NOT glm-eldritch-b12x:20260702-arm64-spark4
+- [x] Present reality to Ruben honestly + recommend TP=4/DCP=4 on 4 nodes
+- [ ] AWAITING Ruben pick: (A) build eldritch image + TP=4, (B) stick with TP=3/AQLM
+- [ ] Validate completion + ship pickup prompt</task_progress> </attempt_completion>
+```
+
+### `1785824593043` — 8/3/2026, 11:31:22 PM PT — 48 turns
+
+**Original task:**
+
+```
+why is frankenstein-llm down?
+```
+
+**Ideas referenced:** #16648, #17202, #17203, #17205, #178513, #18820, #1908, #2045, #2169, #2175 [deployed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785781386836` — 8/3/2026, 11:13:10 PM PT — 649 turns
+
+**Original task:**
+
+```
+Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/ 
+
+Help me with this
+```
+
+**Ideas referenced:** #10647, #12135, #13047, #13246, #13687, #13754, #13943, #14024, #14323, #15417, #17712, #18135, #18176, #1878, #1892, #19173, #19802, #19866, #20825, #21621, #22066 [proposed], #22067 [proposed], #22068 [proposed], #22086 [proposed], #22087 [proposed], #22188 [proposed], #22200 [proposed], #22201, #22215 [proposed], #22245 [proposed], #22250 [deployed], #22983, #23076, #23079, #23127, #23142, #23231, #2388, #26105, #2636, #2693, #2980, #3016, #3498, #5062, #5244, #5459, #5608, #5770, #5795, #6728, #6947, #698083, #7024, #7045, #7126, #7381, #7548, #8060, #8894, #8902, #9108, #9171, #9201, #9406, #9413, #9415, #9417, #9418, #9419
+
+**Last PICKUP PROMPT:**
+
+```
+ kept seeing on his dashboard.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #26105 — EMSU ticket queue management (Jon overload, 36h SLA technical routing)
+
+Where we left off (verified 2026-08-03 23:11 PT):
+- 36h SLA cron `cron_agent_36h_sla.php` line 83 fixed: technical tickets now route to CS Auto-Agent (user 124), not Jon (user 3). This was the root cause of ticket #20825 and Jon's overload.
+- Reassigned 15 of Jon's active tickets to 124; Jon now holds 1 Academic ticket. Ticket #20825 verified assigned to ai-tickets@emsuniversity.com.
+- Queue: 336 active (133 with AI agent, 1 with Jon). Dead-end auto-resolve patch was reverted due to PHP continue-level fatal; original restored, lint clean, 5-min cron healthy.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #22250 [queued] — Dead-end auto-resolve: implement carefully in `cron_ai_ticket_agent.php` (avoid `continue 2` fatal — use flag or goto-free restructure). Verify with php -l + dry run before letting the 5-min cron touch it.
+2. #22200 [queued] — Share-balance reclaim auto-escalation: force-reclaim idle `[Email AI-replied]` tickets from overloaded humans (target 35% AI hold).
+3. #22068 [deployed] — Queue health panel live on /tickets/; consider adding the 36h SLA routing metric so technical misrouting is visible instantly.
+
+Reference IDs:
+- Ticket flagged by Ruben: #20825 (`QSB-20260722-0f4eeee6`, now assigned to 124)
+- Ideas filed: #22086 [deployed], #22067 [deployed], #22066 [deployed], #22068 [deployed], #22188 [deployed], #22200 [queued], #22250 [queued]
+- Files touched: `/var/www/emtskills/cron/cron_agent_36h_sla.php` (line 83, 84), `/var/www/emtskills/cron/cron_ai_ticket_agent.php` (reverted, backup `.bak-20260803-v2`), HANDOFF_NOTES.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785821481522` — 8/3/2026, 11:09:43 PM PT — 78 turns
+
+**Original task:**
+
+```
+pages at emsuniversity.com/emtskills appear to be loading very slowly. Why?
+```
+
+**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #12900, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16584, #16589, #16590, #16602, #16625, #16646, #16648, #16680, #16715, #16716, #16717, #17078, #17202, #17203, #17205, #17307, #17673, #1807, #18329 [queued], #18670, #18671, #18800, #19585, #19686, #2071, #2079, #2139 [investigating], #2147, #2149, #2159 [resolved], #2170 [resolved], #22298 [executing], #22306 [proposed], #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
+
+**Last PICKUP PROMPT:**
+
+```
+g. Filed as #22306 [proposed].
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task # - emtskills slow pages investigation
+
+Where we left off (verified 2026-08-03 23:08 PT):
+- emtskills pages clock at 3-4ms from localhost (not slow)
+- fleet-api systemd service is inactive on WOPR
+- slow-log entries (891/5min) are exclusively LLM background calls (orchestrator_api, ticket_autospec), not page requests
+- perceived slowness is environmental (CDN/TLS/client-side), not server-side
+
+Open threads to drive next:
+1. #22306 [proposed] Restart fleet-api on WOPR: systemctl start fleet-api
+
+Reference IDs:
+- Ideas filed: #22306 [proposed]
+- Files touched: none
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Check server health (load, disk, PHP-FPM, MySQL)
+- [x] Check PHP-FPM and nginx logs for slow requests / errors
+- [x] Check HANDOFF_NOTES for known issues
+- [x] Identify root cause of slow page loads
+- [x] Report findings + remediation
+</task_progress>
+</attempt_completion>
+```
+
+### `1785812189858` — 8/3/2026, 10:53:20 PM PT — 328 turns
 
 **Original task:**
 
@@ -92,70 +267,34 @@ What is the slowest speed that frankenstein-llm will permit prior to quaranteini
 **Last PICKUP PROMPT:**
 
 ```
-grep needs a working ssh path.
+are health, not configuration.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1785940561168 - canary GLM-5.2 pin status ANSWERED
+Pick up task #1785940561168 - canary GLM-5.2 pin source CONFIRMED from registry
 
-Where we left off (verified 2026-08-03 22:47 PT):
-- Registry intact: glm-5.2-local still in frankenstein-llm pool_members, still first in health ladder (2026-07-11 directive).
-- Live probe 22:18 PT: glm52-ring decode_live=false, slow-by-design timeout, degraded_slow=true, explicitly NOT a death signal (bug 1967). Canary still probes it every cycle but it is not selected as active member; pool effectively artemis + julia.
-- Could not grep canary source: verify_routing timed out x2 (transient), ssh-executor MCP not connected.
+Where we left off (verified 2026-08-03 22:52 PT):
+- Canary source identified: frankenstein_registry.yaml, read successfully this session (no more caveat).
+- Pin config: frankenstein-llm pool_members = [glm-5.2-local, artemis-gpt-oss-120b, julia-120b]; health ladder places GLM-5.2-LOCAL before 120B per 2026-07-11 directive.
+- Still looking for GLM-5.2: YES. Ring currently fails response-time canary (decode_live=false, slow-by-design timeout) so not selectable; pool effectively artemis + julia until a healthy probe.
+- Prior verify_routing timeout x2 and missing ssh paths are no longer blockers; registry tool covers the source.
 - Filed #22278 [proposed] GLM button, #22290 [proposed] deepseek ladder promotion eval.
 
 Open threads to drive next:
-1. grep /etc/litellm for canary/pin source line to confirm exact config; needs working ssh path or verify_routing recovery. (human-only decision, no idea)
-2. #22290 [proposed] - decide deepseek ladder promotion with measured live deepseek tok/s.
-3. #22278 [proposed] - implement Argus Think harder button + auto-swap on loop detection.
+1. #22290 [proposed] - decide deepseek ladder promotion with measured live deepseek tok/s.
+2. #22278 [proposed] - implement Argus Think harder button + auto-swap on loop detection.
+3. Monitor glm52-ring probe: when decode_live=true returns, expect pin to GLM-5.2 to resume automatically. (human-only decision, no idea)
 
 Reference IDs:
 - Ideas filed: #22278 [proposed], #22290 [proposed]
-- Files touched: none
+- Files touched: none (read-only registry probe)
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1785821651406` — 8/3/2026, 10:50:56 PM PT — 55 turns
-
-**Original task:**
-
-```
-For Argus only: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser 
-
-for frankenstein-llm, frankenstein-tools i'd like to disallow the use of the GLM 5.2 unless the user specificly chooses "Thinking" mode. Thinking mode is only permitted by Exec Admin, IT Admin, Master Admin. All others must not use GLM 5.2 within frankenstein-llm or frankenstein-tools.
-```
-
-**Ideas referenced:** #10182, #12301, #16213, #16263, #16648, #17202, #17203, #17205, #17300, #17430, #18329, #18378, #1864, #18745, #18820, #18868, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #1934, #19348, #2006, #20340 [executing], #20547, #20549, #21010 [executing], #21011 [executing], #21038 [proposed], #21044, #21053 [proposed], #21125, #21126, #21138, #21158 [executing], #21171, #2121, #21213 [executing], #21262, #2139 [investigating], #2140, #21419 [executing], #2147, #2149, #2153, #2154, #21542 [rejected], #21546 [executing], #2159 [resolved], #2170 [resolved], #22066, #22067, #22068, #22086, #22087, #22188, #22200, #22240 [proposed], #274160, #30363, #334155, #37972, #4338, #45094, #64748, #69707
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785781386836` — 8/3/2026, 10:50:44 PM PT — 561 turns
-
-**Original task:**
-
-```
-Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/ 
-
-Help me with this
-```
-
-**Ideas referenced:** #10647, #12135, #13047, #13246, #13687, #13754, #13943, #14024, #14323, #15417, #17712, #18135, #18176, #1878, #1892, #19173, #19802, #19866, #20825, #21621, #22066 [proposed], #22067 [proposed], #22068 [proposed], #22086 [proposed], #22087 [proposed], #22188 [proposed], #22200 [proposed], #22201, #22215 [proposed], #22245 [proposed], #22250, #22983, #23076, #23079, #23127, #23142, #23231, #2388, #26105, #2636, #2693, #2980, #3016, #3498, #5062, #5244, #5770, #6728, #6947, #698083, #7024, #7045, #7126, #7381, #7548, #8060, #8894, #8902, #9108, #9171, #9201, #9406, #9413, #9415, #9417, #9418, #9419
-
-**Last PICKUP PROMPT:**
-
-```
-
-- [ ] Run once to clear residual
-- [ ] Verify queue
-- [ ] Report to Ruben with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
 ```
 
 ### `1785814799237` — 8/3/2026, 10:48:43 PM PT — 568 turns
@@ -221,47 +360,6 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [ ] Verify serving on :8211
 - [ ] Switch router config.yaml
 </task_progress>
-</attempt_completion>
-```
-
-### `1785821481522` — 8/3/2026, 10:37:22 PM PT — 22 turns
-
-**Original task:**
-
-```
-pages at emsuniversity.com/emtskills appear to be loading very slowly. Why?
-```
-
-**Ideas referenced:** #2139 [investigating], #2147, #2149, #2159 [resolved], #2170 [resolved], #22298 [executing]
-
-**Last PICKUP PROMPT:**
-
-```
-php bombarder on 192.168.1.68.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — slow /emtskills page loads on WOPR: implement remediation for idea #22298.
-
-Where we left off (verified 2026-08-03 22:36 PT):
-- Root cause diagnosed: (1) PHP file-session lock contention at bootstrap.php:64 session_start(), (2) sync LLM curl_exec blocking FPM workers (up to 120s), (3) MySQL adminportal connection leak (Max_used_connections=729, 70 conns), (4) vec_query.php flood from 192.168.1.68.
-- 13 stale MySQL sleep connections killed this session (73→65 total, 1 respawned in 30s so leak is slow-burn).
-- Idea #22298 filed [executing], domain technical, P0.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #22298 — Session storage: switch PHP-FPM sessions to Redis/Memcached. Read /etc/php/8.3/fpm/pool.d/www.conf + bootstrap.php, pick handler, deploy, verify slow log empties.
-2. #22298 — Connection leak: grep adminportal PHP for PDO::ATTR_PERSISTENT / missed close() / new mysqli without close; fix the 70-connection adminportal pool.
-3. #22298 — Investigate /api/vec_query.php caller on 192.168.1.68 (Docker/Longhorn) and rate-limit or fix the agent that fires it every 10 min.
-
-Reference IDs:
-- Idea filed: #22298 [executing]
-- Files touched: none (diagnosis only)
-- Logs: /var/log/php8.3-fpm.log, /var/log/php8.3-fpm-slow.log (session_start + curl_exec traces), PHP-FPM pool www.conf (pm.max_children=180, sessions=/var/lib/php/sessions), nginx error log (vec_query.php resets)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 
@@ -2691,105 +2789,3 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 ```
-
-### `1785531619110` — 7/31/2026, 11:44:47 PM PT — 984 turns
-
-**Original task:**
-
-```
-The GLM ring is DOWN again as I write this (HTTP 000 at 13:57). I could not deliver "serving properly" today, and I am not going to pretend otherwise. Here is the honest, complete accounting of a very long session — what is fixed for real, what I got wrong, and exactly where the next window should start.
-
-THE ARC. Last night the ring served 40-67 turns/hour for 10 hours, then died at 01:03 PT. Today it has died or wedged within minutes of every boot, across every config permutation I tried. I fixed five real adapter-side routing bugs and shipped an auto-relaunch watchdog that genuinely works n
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11942, #12477, #12618, #12657, #12824, #12872, #12878, #13202, #13840, #15144, #16163, #16254, #16265, #16304, #16844, #1754, #1755, #178531, #1804, #18312, #18326, #18720, #19125, #19653, #19903, #19907, #19925, #1993 [resolved], #20005 [proposed], #20069, #2013, #20247, #20264 [queued], #20272 [deployed], #20297 [queued], #20302 [deployed], #20311 [deployed], #20495 [executing], #20498 [queued], #2050, #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20553 [blocked], #20625 [proposed], #20626 [proposed], #20660 [proposed], #20665 [proposed], #20693 [proposed], #20724 [proposed], #20725 [proposed], #2092, #2101, #2118, #2120 [investigating], #366127, #48031, #48140
-
-**Last PICKUP PROMPT:**
-
-```
- — validated and gate-cleared.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785314663557 — GLM ring RoCE bring-up: root cause SOLVED in analysis (wrong-NIC RX-offload drops from /30 shortcut routes), /32 route fix MID-DEPLOY (unverified), relaunch + serve verification pending. Adapter layer was already fully fixed in the prior window.
-
-== CURRENT STATE (verified 2026-07-31 23:40 PT) ==
-- RING: DOWN. Last boot (relaunch #4, 23:20) died at NCCL ring-transport connect. Artemis :8000 + Julia :11513 carry ALL traffic — no user impact at any point.
-- WATCHDOG: intentionally STOPPED on all 6 nodes during RoCE work — re-enable only after the ring is stable: `systemctl start glm52-ring-watchdog` (kill switch also available: touch /tmp/glm52_watchdog.disabled).
-
-== ROOT CAUSE (do not re-derive) ==
-RoCE RX is NIC-offloaded: an arriving RoCE packet must hit the NIC that owns the QP, or the mlx5 hardware drops it silently (kernel IP routing never sees it; ping works fine, which is the trap). The fabric's /30 SHORTCUT routes (written by /usr/local/bin/fabric_up.sh) send a /30's transit traffic INTO a member host via that host's OTHER port — e.g. Cato had `10.220.5.0/30 via 10.220.6.1` (Cesar), so a reply for Cesar's f0 address (10.220.5.2) arrives on Cesar's f1 NIC and is hardware-dropped. Result: ibv_modify_qp fails with 110 Connection timed out; proxy.cc:1861 `operation=Connect, res=3` is only the downstream symptom. Even ADJACENT pairs fail when NCCL pins the channel to the wrong local port (proven boot #4: Cesar f0 10.220.5.2 -> Cato 10.220.6.2). Config knobs CANNOT fix this — it is an L3 path-vs-NIC-ownership problem.
-
-== THE FIX: /32 per-address routes ==
-On every node, route each REMOTE fabric address individually: .1 addresses via the ccw neighbor, .2 addresses via the cw neighbor (every /30 link has .1=ccw member, .2=cw member — verified against all 6 route tables). /32 beats /30 on specificity, so the shortcuts become dead without deleting them. Neighbor table (ccw / cw):
-- Cato .115:    ccw=10.220.6.1  cw=10.220.1.2
-- Augustus .244: ccw=10.220.1.1  cw=10.220.2.2
-- Pompey .21:    ccw=10.220.2.1  cw=10.220.3.2
-- Marcus .171:   ccw=10.220.3.1  cw=10.220.4.2
-- Tiberius .32:  ccw=10.220.4.1  cw=10.220.5.2
-- Cesar .56:     ccw=10.220.5.1  cw=10.220.6.2
-Script: /tmp/fabric32.sh on the Mac AND already scp'd to all 6 nodes — BUT the deploy terminal output garbled, so integrity is UNVERIFIED. First move: `bash -n /tmp/fabric32.sh` and md5sum-compare each node vs the Mac copy; re-scp if mismatched. Then run on ALL 6 with sudo (`echo rubenmajor | sudo -S bash /tmp/fabric32.sh`, fallback password qefru3-cocnyf-xuxnoP) and verify `ip route | grep 10.220` shows the ten /32s per node. The script skips the node's own addresses and is idempotent.
-
-== VERIFY BEFORE BOOTING (cheap, saves 15 min) ==
-rping a previously-failing cross-subnet pair: on Cesar `rping -s &`; on Augustus `rping -c -S 10.220.2.1 -a 10.220.6.2 -v`. RDMA CM connect succeeding = the /32 fix works at the verbs layer.
-
-== RELAUNCH + SERVE MARKERS ==
-From Cato: `setsid nohup bash /tmp/glm_ring_cesarfirst.sh > /tmp/glm_ring_cesarfirst.log 2>&1 < /dev/null &` (script handles cleanup + Cesar-first stagger + rank0 dispatch). Watch: each worker logs ~86 `via NET/IB` lines with ZERO `ibv_modify_qp failed`; then `Connected all rings` appears; then Cato JIT compiles 10-15 min; then curl the ring endpoint (grep --port in /tmp/glm52_authoritative.sh) for HTTP 200, th
-```
-
-### `1785563447930` — 7/31/2026, 11:17:57 PM PT — 86 turns
-
-**Original task:**
-
-```
-Why is this happening? Can you resole it? See MCP Troubleshooting document on deskopt/ update if needed. As it's ben a while
-
-Error:
-Error: MCP error -32601: Unknown tool: read_server_file</
-
-These still come up from time to time
-```
-
-**Ideas referenced:** #10157, #10223, #10243, #10291, #10320, #1041, #10440, #10756, #10868, #10869, #10870, #10872, #10873, #10875, #10880, #10881, #11977, #11991, #11992, #11993, #11996, #11999, #12619, #13048, #13051, #13080, #13081, #14978, #15827, #15911, #1593, #1665, #166501, #1680, #17300, #18435, #18600, #1895, #20022, #20286, #20292, #20714 [proposed], #3402, #5700, #9158, #9269, #9271, #9274, #9277, #9731
-
-**Last PICKUP PROMPT:**
-
-```
-ose the ticket
-
-═══════════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════════
-Pick up task — MCP tunnel warmup hardening: verify zero -32601 occurrences after 1 week.
-
-Where we left off (verified 2026-07-31 23:17 PT):
-- Two proactive fixes shipped to mcp-tunnel.sh: ServerAlive 10→7 (14s detection) + post-reconnect bridge warmup (initialize + tools/list on all 10 ports before Cline clients can connect)
-- Both verified live: all 10 ports warm, bash -n clean, tunnel restarted via launchctl kickstart
-- MCP_Troubleshooting.md §14 documents the three-class error table
-- Idea #20714 filed to track residual -32601 frequency
-
-Open threads to drive next:
-1. #20714 [proposed] — After 1 week, run: `tail -100 /tmp/mcp-tunnel.log | grep -i warmup` to confirm warmup fires on reconnect; grep for any WARMUP failures. Ask Ruben if -32601 read_server_file errors have ceased. If zero occurrences, close #20714 and mark §14 "Resolved"
-2. If any -32601 still occurs: the warmup fix eliminates the race on reconnect — remaining occurrences would be from long-lived Cline windows with stale in-memory tool caches. The fix there is `Cmd+Shift+P → Developer: Reload Window`
-
-Reference IDs:
-- Idea: #20714
-- Files: /Users/rubenmajor/bin/emsu-mcp-tunnel.sh, /Users/rubenmajor/Desktop/MCP_Troubleshooting.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785564150001` — 7/31/2026, 11:03:04 PM PT — 2 turns
-
-**Original task:**
-
-```
-Subagents are showing 0 tools called and 0 tokens again. This has happened before earlier today in the morning
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/4/2026, 4:51:30 AM PT | window: last 72h | 56 tasks | index total 418 (parsed 0, cached 418)
+Generated: 8/4/2026, 8:22:11 AM PT | window: last 72h | 56 tasks | index total 418 (parsed 1, cached 417)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785822732682` | 8/4/2026, 2:46:21 AM | 878 | 7400KB | GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes. Key achie |
+| `1785822732682` | 8/4/2026, 8:20:36 AM | 964 | 7645KB | GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes. Key achie |
 | `1785833407446` | 8/4/2026, 2:36:13 AM | 257 | 587KB | In argus:  |
 | `1785817138435` | 8/4/2026, 2:17:32 AM | 32 | 114KB | i noticed a lot of reasonsing time across models wasted contemplating context and whether  |
 | `1785833341637` | 8/4/2026, 2:10:06 AM | 68 | 208KB | run this plase |
@@ -71,7 +71,7 @@ Generated: 8/4/2026, 4:51:30 AM PT | window: last 72h | 56 tasks | index total 4
 
 ## Per-window detail
 
-### `1785822732682` — 8/4/2026, 2:46:21 AM PT — 878 turns
+### `1785822732682` — 8/4/2026, 8:20:36 AM PT — 964 turns
 
 **Original task:**
 
@@ -86,44 +86,42 @@ GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes.
 6. Fixed NCCL ibv_create_cq 
 ```
 
-**Ideas referenced:** #1130, #1131, #12299, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #1602 [resolved], #16032, #16033, #16036, #16122, #16163, #16338, #1640, #16448, #16452, #1652 [resolved], #1655, #1658 [rejected], #16588, #16778, #16802, #16803, #16839, #16851, #17202, #17246, #17298, #17301, #1744, #1754, #1755, #1779, #1798, #1828, #18327, #18471, #1897, #19563, #19567, #1980, #1983, #1984, #1986, #20005, #20042, #20264, #20272, #20340 [executing], #2050, #2051, #2052, #2053, #2054, #2055, #2060, #2061, #2062, #2063, #2065, #20662, #2073, #2081, #20825, #2083 [resolved], #2085, #2089, #2090, #2092, #2093, #2096, #2097, #20985, #2099, #2101, #21010 [executing], #21011 [executing], #2102, #2103, #21038 [proposed], #2109, #2110, #2111, #21158 [executing], #2116, #21171, #2121, #21213 [executing], #2127, #2128, #2129, #2131, #2138, #2139 [investigating], #2141, #21419 [executing], #2147, #2149, #2151, #2152, #2153, #2154, #21542 [rejected], #21546 [executing], #2157, #2159 [resolved], #2168 [deployed], #21684, #2170 [resolved], #2174 [deployed], #2176 [resolved], #2179, #2180, #22066, #22067, #22068, #22086, #22087, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #7142, #7149
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11944, #12299, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12673, #12824, #12872, #12878, #13108, #13202, #13874, #15144, #15979, #1602 [resolved], #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #1640, #16448, #16452, #1652 [resolved], #1655, #1658 [rejected], #16588, #16778, #16802, #16803, #16839, #16844, #16851, #17202, #17246, #17298, #17301, #1744, #1754, #1755, #1779, #1798, #1828, #18312, #18326, #18327, #18471, #1897, #19563, #19567, #1980, #1983, #1984, #1986, #19903, #20005, #20042, #20069, #20264, #20272, #20340 [executing], #2050, #2051, #2052, #2053, #20536, #2054, #2055, #2060, #2061, #2062, #2063, #2065, #20662, #2073, #2081, #20825, #2083 [resolved], #2085, #2089, #2090, #2092, #2093, #2096, #2097, #20985, #2099, #2101, #21010 [executing], #21011 [executing], #2102, #2103, #21038 [proposed], #21045, #2109, #2110, #2111, #21158 [executing], #2116, #21171, #2121, #21213 [executing], #2127, #2128, #2129, #2131, #2138, #2139 [investigating], #2141, #21419 [executing], #2147, #2149, #2151, #2152, #2153, #2154, #21542 [rejected], #21546 [executing], #2157, #2159 [resolved], #2168 [deployed], #21684, #2170 [resolved], #2174 [deployed], #2176 [resolved], #2179, #2180, #2181, #22066, #22067, #22068, #22086, #22087, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #22379 [proposed], #22479, #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
-irst or finish in one sitting.
+ring. Option C is likely best.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #22128 [executing] - GLM-5.2 PP=6 ring: NCCL socket tuning falsified, max_num_seqs is next
+Pick up task #22128 [executing] - GLM ring serves 12.84 tok/s but tool_track bypasses it for interactive Cline
 
-Where we left off (verified 2026-08-04 02:45 PT):
-- Ring SERVING at defaults: API returns glm-5.2-15pct, Application startup complete, 83/83 shards, 50.73 GiB in 211.7s, KV cache 131,072. Fully recovered after the failed tuning experiment
-- BASELINE to beat: 202 nonzero samples, mean 13.01 tok/s, max 19.10 (vLLM own metric, not wall clock)
-- FABRIC MEASURED HEALTHY: both ports 200000 Mb/s, MTU 9000, jumbo no-frag 0.253ms 1-hop / 0.770ms 2-hop. Wire is not the bottleneck
-- RUNG 1 FALSIFIED ON HARDWARE (bug row 2180 resolved): NCCL_SOCKET_NTHREADS/NSOCKS_PERTHREAD stall channel build - 4x4 at 47/240, 2x2 at 112/240, defaults complete 240/240. Do NOT retry without first reducing NCCL_MAX_NCHANNELS
-- DIAGNOSTIC TRAP: log tail repeats the last RECEIVE-direction channel line so healthy builds look stalled. Use grep -c on channel lines, never the tail
-- Spec decode remains CLOSED (bug row 2179): not achievable on PP=6 this build, measured 3.7x slower
+Where we left off (verified 2026-08-04 08:08 PT):
+- Ring SERVING: cato:8210 = glm-5.2-15pct, ctx 131072. RATE: 1892 samples, mean 12.84 tok/s, min 0.20, max 18.40
+- COST IS CLEAN: 1693 turns in 60 min, total $0. frankenstein-llm resolves to local 127.0.0.1:11510 ($0 verified). claude-opus took only 2 of 1693 turns. Rule 146 holding
+- BUT: glm-5.2-local got 6 of 7492 picks (0.08 pct). Of 2296 req=frankenstein-llm, frankenstein-tools won 2141 (93 pct), GLM ring won 4
+- ROOT CAUSE: tool_track is rank-ordered and short-circuits BEFORE the tier ladder. frankenstein-tools rank 10, glm-5.2-local rank 45. Tool-bearing turns never walk down. Tier ladder IS correct (L4g ahead of L4f per the 2026-07-11 directive) and is being silently defeated by the tool track
+- Zero health/skip/dead events name glm-5.2-local in 40k audit lines - not excluded, never reached
+- Rung 1 of the speedup ladder (NCCL socket tuning) was tested on hardware and FALSIFIED earlier this session (bug row 2180)
 
 Open threads to drive next:
-1. #22378 [proposed] - RUNG 2, the real lever. Resolve the max_num_seqs contradiction on the CURRENT checkpoint: row 1640 measured 128 giving 110.21 tok/s aggregate, row 1655 says >8 hangs torch.compile. Try 16, then 32, then 64/128. Failure mode is a startup compile hang so it is safe, one relaunch per attempt. MUST also extend cudagraph_capture_sizes (now [1,2,4,8] max 16) to match or the win is erased per row 1979.
-2. #22357 [proposed] - reboot durability, sequence this first or do tuning in one sitting. Supervisor pause flag lives in /tmp, routes and iptables rule are not persistent, glm52-fabric.service is failed. Any node reboot silently breaks the ring and looks like an NCCL error.
-3. #22370 [proposed] - concurrency benchmark at n=1/4/8 with 200-token completions to establish the real aggregate ceiling, and check which 4 of 6 nodes could form a directly-cabled TP=4 group before anyone greenlights the TP+DSpark migration.
-4. #22371 [proposed] - the ladder itself, now retitled to record rung 1 as falsified. Rungs 3-5 (cudagraph sizes, max_num_batched_tokens, concurrency routing) still untested.
+1. #22379 [proposed] - HUMAN DECISION on the tool_track question. Option A leave it and re-scope the GLM-before-120B directive in writing to tier-ladder-only. Option B move glm-5.2-local ahead of frankenstein-tools in tool_track (12.84 tok/s interactive instead of 44-60, so only after #22378). Option C split by workload: interactive stays on the fast adapter, subagent/batch/executor routes at the ring. Option C is my recommendation.
+2. #22378 [proposed] - resolve the max_num_seqs contradiction on the current checkpoint (row 1640 says 128 gave 110 tok/s aggregate, row 1655 says >8 hangs torch.compile). This changes the Option B math materially. Must also extend cudagraph_capture_sizes if max_num_seqs rises.
+3. #22357 [proposed] - reboot durability, still highest-risk. Supervisor pause flag in /tmp, routes and iptables not persistent, glm52-fabric.service failed. Any node reboot silently breaks the ring and presents as an NCCL error.
+4. #22370 [proposed] - concurrency benchmark n=1/4/8 with 200-token completions to establish real aggregate ceiling before anyone greenlights the TP=4+DCP4+DSpark migration.
+5. #22371 [proposed] - speedup ladder, rung 1 falsified, rungs 3-5 untested. Rung 5 IS the routing question now tracked in #22379.
 
 Reference IDs:
-- Ideas: #22355 [proposed] (spec decode research closed), #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed]
-- Bug library rows: 2176 resolved (network fix), 2179 resolved (spec decode verdict), 2180 resolved (NCCL socket tuning falsified)
-- Prior research rows: 1640, 1655, 1968, 1979, 1988
-- Files: /home/rubenmajor/glm52_launch_cfg_pp6.sh (all 6, reverted to defaults), /home/rubenmajor/glm52_ring_routes.sh (all 6), /Users/rubenmajor/Desktop/GLM52_SPEC_DECODE_VERDICT_20260804.md, HANDOFF_NOTES.md
+- Ideas: #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #22379 [proposed]
+- Bug library rows: 2176 resolved (network fix), 2179 resolved (spec decode verdict), 2180 resolved (NCCL socket tuning falsified), 1968 (PP=6 single-stream ceiling)
+- Evidence: tail -20000 /tmp/emsu_router_audit.log | grep -oE '"picked": "[^"]+"' | sort | uniq -c | sort -rn
+- Files: /home/rubenmajor/glm52_launch_cfg_pp6.sh (all 6, defaults), /etc/litellm/frankenstein_registry.yaml, /Users/rubenmajor/Desktop/GLM52_SPEC_DECODE_VERDICT_20260804.md
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
-</result>
-<command>ssh cato "curl -s http://127.0.0.1:8210/v1/models | head -c 120; echo; docker logs vllm_slot 2>&1 | grep -oE 'Avg generation throughput: [0-9.]+ tokens/s' | tail -3"</command>
-</attempt_completion>
 ```
 
 ### `1785833407446` — 8/4/2026, 2:36:13 AM PT — 257 turns

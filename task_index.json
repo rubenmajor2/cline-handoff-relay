@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-04T21:22:13.769Z",
+ "generated_at": "2026-08-04T22:22:14.118Z",
  "counts": {
-  "parsed": 5,
-  "reused": 440,
+  "parsed": 1,
+  "reused": 445,
   "failed": 0,
-  "total": 445
+  "total": 446
  },
  "tasks": {
   "1784522296714": {
@@ -110404,11 +110404,11 @@
   },
   "1785858480786": {
    "task_id": "1785858480786",
-   "mtime": 1785878475213,
+   "mtime": 1785878706763,
    "created_at": "2026-08-04T15:48:00.786Z",
-   "last_modified": "2026-08-04T21:21:15.213Z",
-   "size_kb": 1958,
-   "turn_count": 497,
+   "last_modified": "2026-08-04T21:25:06.763Z",
+   "size_kb": 1986,
+   "turn_count": 503,
    "title": "For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. Probably a lot have gone unanswered. The last one we need to develop that Catalog, brochure, etc.. base dn what we currently have for the EMT program, and everythign else. We also need to go back through other requests for the last several weeks and do a massive sweep of improvements to help get the program up and running. Give me a comprehenisvie list based on what you find (which will no doubt require subagent research) so that we can push forward. Oh also work to improve the CNA Agent and the page she is working on to help\n\n--latest message from squiroz@emsuniversity.com to me regarding CNA program--\n",
    "pickup_prompt": "hes manually before deploying.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task — CNA Program sweep: 3 deliverables on Desktop; Shela email unsent; 6 orchestrator retries stalled.\n\nWhere we left off (verified 2026-08-04 13:30 PT):\n- cna_catalog_draft.md (353 lines, 14.9KB), cna_brochure_draft.md (78 lines, 3.0KB), cna_caa_draft_valleywise.md (253 lines, 13.7KB) all copied to /Users/rubenmajor/Desktop/.\n- Shela email not sent — send_email tool rejected JSON argument during this session. Either retry send_email with correct JSON or Ruben forwards from Desktop.\n- 6 orchestrator ideas still stalled in coding after 50+ min (expected 2). emsuserver lacks write permission on /tmp/ruben-impl-worker-*.log files owned by www-data.\n- 2 ideas ready_for_review: #22515 [awaiting_review] (Shela response email with drifted patches), #22518 [awaiting_review] (CAA send with drifted patches). Both have SPEC DRIFT warnings.\n- Shela-Vicky-Verify-Upload gate flow present in #22514, #22515, #22518 DB descriptions.\n\nOpen threads to drive next:\n1. #22514 [executing] — CNA Catalog/Brochure. Manually built and on Desktop. Verify catalog sections against EMT arizonacatalog.pdf table-of-contents.\n2. #22515 [awaiting_review] — Shela response email. Either deploy drifted orchestrator patches or send email manually from Desktop files.\n3. #22517 [executing] — Backfill 8 task drafts. Stalled for 50+ min. Write task drafts to cna_program_tasks table directly if orchestrator doesn't unstick.\n4. #22518 [awaiting_review] — CAA send to Valleywise. CAA draft on Desktop. Deploy or reject drifted patches.\n5. #22516 [executing] — CNA Agent silence RCA. Check if cron_cna_agent.php source was read to confirm crontab diagnosis.\n6. #22519 [executing] — Timeline recalibration. Stalled.\n7. #22520 [executing] — Public CNA info page. Stalled.\n8. #22521 [executing] — Health watchdog. Stalled. Verify crontab entry if/when deployed.\n\nReference IDs:\n- Ideas filed: #22514 [executing], #22515 [awaiting_review], #22516 [executing], #22517 [executing], #22518 [awaiting_review], #22519 [executing], #22520 [executing], #22521 [executing].\n- Files on Desktop: /Users/rubenmajor/Desktop/cna_catalog_draft.md, /Users/rubenmajor/Desktop/cna_brochure_draft.md, /Users/rubenmajor/Desktop/cna_caa_draft_valleywise.md.\n- Files on server: /var/www/emtskills/docs/cna_program/cna_affiliation_template.md (CAA template), /var/www/emtskills/docs/cna_program/CNA_PRICING_RESEARCH_2026-05-06.md, /var/www/emtskills/docs/cna_program/implementation_plan.md.\n- Tickets: Shela Aug 4 email, Valleywise site #38 (Sherrie Beardsley), 8 Shela-requested task drafts from May/June.\n\nWhen done, append to cline_task_ledger.md per rule 07 and run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
@@ -110459,11 +110459,11 @@
   },
   "1785858742320": {
    "task_id": "1785858742320",
-   "mtime": 1785878475357,
+   "mtime": 1785878616063,
    "created_at": "2026-08-04T15:52:22.320Z",
-   "last_modified": "2026-08-04T21:21:15.357Z",
-   "size_kb": 2615,
-   "turn_count": 295,
+   "last_modified": "2026-08-04T21:23:36.063Z",
+   "size_kb": 2624,
+   "turn_count": 297,
    "title": "I dont' see here where the callback system is working properly? Seems like it is not. Can your esolve that: https://www.emsuniversity.com/emtskills/routes/telephony_hub.php\n\nAlso as an admin I'd liek to be able to see the schedule in the admin section. \n\nI think there's something wrong eith the actual tab. Can you test nd fix it. login, use tokens to test and resolve. make usre it actually all works and is wired in properly? Are CFAs aware and how are they utilizing this? This should only be by request.",
    "pickup_prompt": "errors she'd see on that page.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up Vicky's Argus telephony report — pull argus_escalations and confirm her exact error.\n\nWhere we left off (verified 2026-08-04 13:24 PT):\n- Callback usage audit complete: 1 e2e-test booking, 0 real student/CFA usage, 180 empty slots — feature never offered to students\n- ruben_bubble.js 404 fixed (hardcoded /api/ → /emtskills/api/, deployed)\n- tab-callbacks nesting bug fixed (moved from inside tab-settings to top-level panel)\n- Argus escalation query NOT completed — SSH quoting error blocked `argus_escalations` lookup\n- Idea #22507 [deployed] — Telephony Hub callback tab fix + admin schedule section\n\nOpen threads to drive next:\n1. #22507 [deployed] — Run `SELECT id, summary, status, created_at FROM argus_escalations WHERE summary LIKE '%teleph%' ORDER BY created_at DESC LIMIT 10` via emsu-operations sql_query to get Vicky's exact Argus report, then resolve the underlying telephony_hub.php JS error (switchTab is not defined at line 3015 still needs the agent-view script audit completed)\n\nReference IDs:\n- Ticket: (none filed — Ruben asked via Cline)\n- Ideas filed: #22507\n- Files touched: /var/www/emtskills/routes/telephony_hub.php, /var/www/emtskills/js/ruben_bubble.js\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
@@ -110969,6 +110969,39 @@
     "22602": "proposed",
     "22612": "proposed",
     "22613": "proposed"
+   }
+  },
+  "1785881207296": {
+   "task_id": "1785881207296",
+   "mtime": 1785881981336,
+   "created_at": "2026-08-04T22:06:47.296Z",
+   "last_modified": "2026-08-04T22:19:41.336Z",
+   "size_kb": 471,
+   "turn_count": 56,
+   "title": "Can you look into this and advise if there's an isseu?",
+   "pickup_prompt": "led as idea #22639 [proposed].\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #22638 [proposed] - Arizona EMT Peoria Boot Camp check\n\nWhere we left off (verified 2026-08-04 15:18 PT):\n- Verified arizonaemt.com/classschedule/ live: Peoria Boot Camp 26123BC starts Aug 17, 2026 ($2,345 + $50 reg)\n- Adam Smart not found in Students or any lead tables; he can register via the working Register Now button\n- Found miamiemt.com registration dropdown dead since 2022, filed #22639 [proposed]\n\nOpen threads to drive next:\n1. #22639 [proposed] - miamiemt.com no Miami courses in Course_Schedules since 2022; run registration_surface_repair and add Miami rows or retire the site\n2. #22640 [proposed] - verify Arizona EMT WP classschedule post_content against Course_Schedules for stale Boot Camp start dates\n\nReference IDs:\n- Ideas filed: #22638 [proposed] - Peoria Boot Camp Adam Smart registration check, #22639 [proposed] - miamiemt.com registration dropdown dead since 2022, #22640 [proposed] - Verify Arizona EMT class schedule Boot Camp dates, spec 3338 still pending\n- Files touched: none\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n<task_progress>\n- [x] Check registration surface health across all EMT sites (Peoria especially)\n- [x] Look up Adam Smart in student/lead systems\n- [x] Verify Peoria course dates for the 2-week EMT Boot Camp\n- [x] Read HANDOFF_NOTES for related recent work\n- [x] Check arizonaemt.com page for Boot Camp claims\n- [x] Check arizonaemt.com/classschedule/ for displayed Peoria Boot Camp dates\n- [x] Check pending spec files for the AZ Boot Camp date issue\n- [x] Locate the Arizona EMT WordPress DB\n- [x] Verify WP post_content for Aug 17 Boot Camp end-date inconsistency\n- [x] Advise on whether an issue exists and the right response\n</task_progress>\n</attempt_completion>",
+   "ideas": {
+    "1652": null,
+    "1658": null,
+    "1986": null,
+    "2168": null,
+    "2174": null,
+    "2176": null,
+    "2177": null,
+    "3338": null,
+    "20825": null,
+    "22066": null,
+    "22128": "executing",
+    "22188": null,
+    "22200": null,
+    "22240": "proposed",
+    "22250": null,
+    "22334": null,
+    "22338": "ready_for_review",
+    "22355": "proposed",
+    "22638": "proposed",
+    "22639": "proposed",
+    "22640": "proposed"
    }
   }
  }

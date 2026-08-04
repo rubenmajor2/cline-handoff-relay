@@ -6,12 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/4/2026, 2:22:13 PM PT | window: last 72h | 78 tasks | index total 445 (parsed 5, cached 440)
+Generated: 8/4/2026, 3:22:14 PM PT | window: last 72h | 77 tasks | index total 446 (parsed 1, cached 445)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785858742320` | 8/4/2026, 2:21:15 PM | 295 | 2615KB | I dont' see here where the callback system is working properly? Seems like it is not. Can  |
-| `1785858480786` | 8/4/2026, 2:21:15 PM | 497 | 1958KB | For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. P |
+| `1785881207296` | 8/4/2026, 3:19:41 PM | 56 | 471KB | Can you look into this and advise if there's an isseu? |
+| `1785858480786` | 8/4/2026, 2:25:06 PM | 503 | 1986KB | For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. P |
+| `1785858742320` | 8/4/2026, 2:23:36 PM | 297 | 2624KB | I dont' see here where the callback system is working properly? Seems like it is not. Can  |
 | `1785817138435` | 8/4/2026, 2:12:26 PM | 128 | 466KB | i noticed a lot of reasonsing time across models wasted contemplating context and whether  |
 | `1785873518014` | 8/4/2026, 2:06:51 PM | 294 | 691KB | #GLM  |
 | `1785861156554` | 8/4/2026, 1:53:32 PM | 398 | 802KB | https://emsuniversity.com/emtskills slow to load again |
@@ -86,58 +87,63 @@ Generated: 8/4/2026, 2:22:13 PM PT | window: last 72h | 78 tasks | index total 4
 | `1785646010358` | 8/1/2026, 10:16:27 PM | 217 | 1115KB | #Argus |
 | `1785608591871` | 8/1/2026, 9:44:23 PM | 946 | 3347KB | #Argus |
 | `1785483679627` | 8/1/2026, 4:07:30 PM | 126 | 325KB | yesterday, SSL expired for some parts of emsuniversity.com. Some users still reporting SSL |
-| `1785620201169` | 8/1/2026, 2:37:03 PM | 2 | 8KB | **Yes, run the next window on frankenstein-llm.** It is the correct pick per rule 146 (fre |
-| `1785582017987` | 8/1/2026, 2:35:44 PM | 642 | 7444KB | GLM ring TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wan |
 
 ---
 
 ## Per-window detail
 
-### `1785858742320` — 8/4/2026, 2:21:15 PM PT — 295 turns
+### `1785881207296` — 8/4/2026, 3:19:41 PM PT — 56 turns
 
 **Original task:**
 
 ```
-I dont' see here where the callback system is working properly? Seems like it is not. Can your esolve that: https://www.emsuniversity.com/emtskills/routes/telephony_hub.php
-
-Also as an admin I'd liek to be able to see the schedule in the admin section. 
-
-I think there's something wrong eith the actual tab. Can you test nd fix it. login, use tokens to test and resolve. make usre it actually all works and is wired in properly? Are CFAs aware and how are they utilizing this? This should only be by request.
+Can you look into this and advise if there's an isseu?
 ```
 
-**Ideas referenced:** #001018, #059669, #062017, #127891, #128274, #1652, #1658, #166534, #18868, #19163, #1986, #20825, #2168, #2174, #2176, #2177, #21775, #22066, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #22334, #22355 [proposed], #22507 [deployed], #2563, #334155, #374151, #475569, #64748, #6785, #92400, #9733, #9734
+**Ideas referenced:** #1652, #1658, #1986, #20825, #2168, #2174, #2176, #2177, #22066, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #22334, #22338 [ready_for_review], #22355 [proposed], #22638 [proposed], #22639 [proposed], #22640 [proposed], #3338
 
 **Last PICKUP PROMPT:**
 
 ```
-errors she'd see on that page.
+led as idea #22639 [proposed].
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up Vicky's Argus telephony report — pull argus_escalations and confirm her exact error.
 
-Where we left off (verified 2026-08-04 13:24 PT):
-- Callback usage audit complete: 1 e2e-test booking, 0 real student/CFA usage, 180 empty slots — feature never offered to students
-- ruben_bubble.js 404 fixed (hardcoded /api/ → /emtskills/api/, deployed)
-- tab-callbacks nesting bug fixed (moved from inside tab-settings to top-level panel)
-- Argus escalation query NOT completed — SSH quoting error blocked `argus_escalations` lookup
-- Idea #22507 [deployed] — Telephony Hub callback tab fix + admin schedule section
+Pick up task #22638 [proposed] - Arizona EMT Peoria Boot Camp check
+
+Where we left off (verified 2026-08-04 15:18 PT):
+- Verified arizonaemt.com/classschedule/ live: Peoria Boot Camp 26123BC starts Aug 17, 2026 ($2,345 + $50 reg)
+- Adam Smart not found in Students or any lead tables; he can register via the working Register Now button
+- Found miamiemt.com registration dropdown dead since 2022, filed #22639 [proposed]
 
 Open threads to drive next:
-1. #22507 [deployed] — Run `SELECT id, summary, status, created_at FROM argus_escalations WHERE summary LIKE '%teleph%' ORDER BY created_at DESC LIMIT 10` via emsu-operations sql_query to get Vicky's exact Argus report, then resolve the underlying telephony_hub.php JS error (switchTab is not defined at line 3015 still needs the agent-view script audit completed)
+1. #22639 [proposed] - miamiemt.com no Miami courses in Course_Schedules since 2022; run registration_surface_repair and add Miami rows or retire the site
+2. #22640 [proposed] - verify Arizona EMT WP classschedule post_content against Course_Schedules for stale Boot Camp start dates
 
 Reference IDs:
-- Ticket: (none filed — Ruben asked via Cline)
-- Ideas filed: #22507
-- Files touched: /var/www/emtskills/routes/telephony_hub.php, /var/www/emtskills/js/ruben_bubble.js
+- Ideas filed: #22638 [proposed] - Peoria Boot Camp Adam Smart registration check, #22639 [proposed] - miamiemt.com registration dropdown dead since 2022, #22640 [proposed] - Verify Arizona EMT class schedule Boot Camp dates, spec 3338 still pending
+- Files touched: none
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Check registration surface health across all EMT sites (Peoria especially)
+- [x] Look up Adam Smart in student/lead systems
+- [x] Verify Peoria course dates for the 2-week EMT Boot Camp
+- [x] Read HANDOFF_NOTES for related recent work
+- [x] Check arizonaemt.com page for Boot Camp claims
+- [x] Check arizonaemt.com/classschedule/ for displayed Peoria Boot Camp dates
+- [x] Check pending spec files for the AZ Boot Camp date issue
+- [x] Locate the Arizona EMT WordPress DB
+- [x] Verify WP post_content for Aug 17 Boot Camp end-date inconsistency
+- [x] Advise on whether an issue exists and the right response
+</task_progress>
 </attempt_completion>
 ```
 
-### `1785858480786` — 8/4/2026, 2:21:15 PM PT — 497 turns
+### `1785858480786` — 8/4/2026, 2:25:06 PM PT — 503 turns
 
 **Original task:**
 
@@ -182,6 +188,50 @@ Reference IDs:
 - Tickets: Shela Aug 4 email, Valleywise site #38 (Sherrie Beardsley), 8 Shela-requested task drafts from May/June.
 
 When done, append to cline_task_ledger.md per rule 07 and run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785858742320` — 8/4/2026, 2:23:36 PM PT — 297 turns
+
+**Original task:**
+
+```
+I dont' see here where the callback system is working properly? Seems like it is not. Can your esolve that: https://www.emsuniversity.com/emtskills/routes/telephony_hub.php
+
+Also as an admin I'd liek to be able to see the schedule in the admin section. 
+
+I think there's something wrong eith the actual tab. Can you test nd fix it. login, use tokens to test and resolve. make usre it actually all works and is wired in properly? Are CFAs aware and how are they utilizing this? This should only be by request.
+```
+
+**Ideas referenced:** #001018, #059669, #062017, #127891, #128274, #1652, #1658, #166534, #18868, #19163, #1986, #20825, #2168, #2174, #2176, #2177, #21775, #22066, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #22334, #22355 [proposed], #22507 [deployed], #2563, #334155, #374151, #475569, #64748, #6785, #92400, #9733, #9734
+
+**Last PICKUP PROMPT:**
+
+```
+errors she'd see on that page.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up Vicky's Argus telephony report — pull argus_escalations and confirm her exact error.
+
+Where we left off (verified 2026-08-04 13:24 PT):
+- Callback usage audit complete: 1 e2e-test booking, 0 real student/CFA usage, 180 empty slots — feature never offered to students
+- ruben_bubble.js 404 fixed (hardcoded /api/ → /emtskills/api/, deployed)
+- tab-callbacks nesting bug fixed (moved from inside tab-settings to top-level panel)
+- Argus escalation query NOT completed — SSH quoting error blocked `argus_escalations` lookup
+- Idea #22507 [deployed] — Telephony Hub callback tab fix + admin schedule section
+
+Open threads to drive next:
+1. #22507 [deployed] — Run `SELECT id, summary, status, created_at FROM argus_escalations WHERE summary LIKE '%teleph%' ORDER BY created_at DESC LIMIT 10` via emsu-operations sql_query to get Vicky's exact Argus report, then resolve the underlying telephony_hub.php JS error (switchTab is not defined at line 3015 still needs the agent-view script audit completed)
+
+Reference IDs:
+- Ticket: (none filed — Ruben asked via Cline)
+- Ideas filed: #22507
+- Files touched: /var/www/emtskills/routes/telephony_hub.php, /var/www/emtskills/js/ruben_bubble.js
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
@@ -2934,71 +2984,5 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1785620201169` — 8/1/2026, 2:37:03 PM PT — 2 turns
-
-**Original task:**
-
-```
-**Yes, run the next window on frankenstein-llm.** It is the correct pick per rule 146 (free-local-first, one router for everything). Two things to know: the GLM 5.2 priority gate I shipped is live, so frankenstein-llm will gen-probe GLM 5.2 first, correctly see it cannot decode, and fall through to the 120B pool / frankenstein-tools adapter. You get free local either way. Do NOT pick an Anthropic model.
-
-Where things stand: the ring now BOOTS clean (all 6 up, HTTP 200, correct sparse attention backend) after I found and fixed four launcher regressions. The original decode-wedge is still there,
-```
-
-**Ideas referenced:** #178531, #20495 [executing], #20536 [awaiting_review], #20873 [proposed], #20955 [awaiting_review], #21004 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785582017987` — 8/1/2026, 2:35:44 PM PT — 642 turns
-
-**Original task:**
-
-```
-GLM ring TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wants autonomous monitoring + cron automation so the ring can self-recover overnight without human intervention. Extremely detailed pickup prompt below for the next window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785314663557 — GLM ring: TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wants autonomous monitoring + cron automation so the ring can self-recover o
-```
-
-**Ideas referenced:** #10108, #10419, #10869, #11912, #11936, #12246, #12403, #12589, #12590, #12645, #12680, #12688, #12689, #1293, #1334, #13453, #13470, #1353, #1359, #1360, #1361, #1367, #1368, #1374, #1391, #13962, #1474, #1475, #1515, #1531, #1537, #1567 [resolved], #1569, #15776, #1579 [investigating], #15822, #1586, #1587, #1600, #1606 [investigating], #1608 [investigating], #1609, #1611, #1612, #1614 [investigating], #16602, #16625, #16648, #16803, #16844, #16962, #1703, #17104, #17128, #17145, #1715, #17202, #17203, #17205, #1723, #1724, #1725, #17300, #17307, #1733, #1740, #1742, #17430, #1754, #1755, #1765, #17676, #17680, #178531, #17902, #1842, #1881, #19166, #1962 [resolved], #1963 [investigating], #1964 [resolved], #1967 [resolved], #1968 [resolved], #1970 [investigating], #1973 [investigating], #1974 [investigating], #1975 [resolved], #1978, #1979 [investigating], #1982 [resolved], #1983 [resolved], #1984 [resolved], #1985 [resolved], #1993 [resolved], #2000, #20495 [queued], #20506 [queued], #20517 [blocked], #20528 [queued], #20536 [queued], #20549, #20553 [queued], #2071, #20724 [proposed], #20725 [proposed], #20740 [proposed], #2079 [deployed], #20806 [proposed], #20807 [proposed], #20870 [proposed], #20871 [proposed], #20872 [proposed], #20873 [proposed], #20955 [proposed], #21004 [proposed], #2116 [resolved], #2136 [recorded], #2138, #21824, #26318, #27313, #2928, #30269, #30682, #32359, #32618, #32701, #33356, #34076, #36643, #36651, #36872, #36921, #3717, #38976, #39863, #40674, #40980, #41530, #43420, #44697, #45094, #46097, #48031, #48140, #5087, #5480 [outdated], #5484, #57696, #58426, #6826, #8365, #9405, #9706
-
-**Last PICKUP PROMPT:**
-
-```
-ugh to actually serve traffic.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785314663557 — GLM 5.2 routing shipped ABOVE 120Bs. Decode-wedge remains.
-
-Where we left off (verified 2026-08-01 12:26 PT):
-- ROUTING SHIPPED: GLM 5.2 priority gate live in frankenstein-llm (pick_flagship_track line 2508) + frankenstein-tools (LOCAL_TOOL_FALLBACK_CHAIN line 118). LiteLLM active, patches loaded.
-- RING: HTTP 200 but decode-wedged (gen_timeout, 0 tok/s). Gen-probe correctly reports healthy=False, so traffic falls through to 120Bs/adapter. Monitor auto-relaunches every ~10 min.
-- TURNS: 0 when wedged. ~65 tok/s when healthy (first ~10 min post-boot).
-- Blocking issue: decode-wedge (NCCL BROADCAST timeout in PP token-passing).
-
-Open threads to drive next:
-1. #20536 [proposed] — ROOT CAUSE of decode-wedge. NCCL BROADCAST timeout in _pp_receive_prev_sampled_token_ids. Blocking GLM 5.2 from being reliable primary. (verified: reconcile_ideas returned status=ready_for_review)
-2. #20955 [proposed] — GLM 5.2 routing priority gate (shipped). Mark deployed. (verified: create_idea returned id=20955)
-3. #20873 [proposed] — Add generation forward-progress probe to monitor. (verified: reconcile_ideas returned status=proposed)
-4. #20495 [executing] — Monitor + cron automation deployed. Ring self-recovers. (verified: reconcile_ideas returned status=approved)
-
-Reference IDs:
-- Ideas filed this session: #20955 [proposed]
-- Prior ideas: #20870 [proposed], #20871 [proposed], #20872 [proposed], #20873 [proposed], #20806 [proposed], #20807 [proposed], #20528 [proposed], #20536 [proposed], #20506 [proposed], #20495 [executing], #20553 [proposed], #20724 [proposed], #20740 [proposed], #20725 [proposed], #20517 [blocked]
-- Bug library: incident 2136 (RESOLVED: TP=1 PP=6), incident 2116 (RoCE /32 fix), incident 1579 (PP topology), incident 2079 (ring 65 tok/s)
-- Files patched: /etc/litellm/_router_core.py (line 2508), /etc/litellm/hooks/tools.py (line 118). Backups: .bak-glm52priority-20260801_*
-- Ring: http://192.168.1.115:8210 (TP=1 PP=6, all 6 hex nodes)
-- Monitor: /home/rubenmajor/bin/glm52_ring_monitor.sh (v3, cron every 5 min)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```

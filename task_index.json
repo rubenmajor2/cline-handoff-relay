@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-04T18:22:12.855Z",
+ "generated_at": "2026-08-04T19:22:13.103Z",
  "counts": {
-  "parsed": 9,
-  "reused": 431,
+  "parsed": 7,
+  "reused": 437,
   "failed": 0,
-  "total": 440
+  "total": 444
  },
  "tasks": {
   "1784522296714": {
@@ -110398,19 +110398,27 @@
   },
   "1785858480786": {
    "task_id": "1785858480786",
-   "mtime": 1785862132911,
+   "mtime": 1785871090099,
    "created_at": "2026-08-04T15:48:00.786Z",
-   "last_modified": "2026-08-04T16:48:52.911Z",
-   "size_kb": 412,
-   "turn_count": 118,
+   "last_modified": "2026-08-04T19:18:10.099Z",
+   "size_kb": 648,
+   "turn_count": 210,
    "title": "For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. Probably a lot have gone unanswered. The last one we need to develop that Catalog, brochure, etc.. base dn what we currently have for the EMT program, and everythign else. We also need to go back through other requests for the last several weeks and do a massive sweep of improvements to help get the program up and running. Give me a comprehenisvie list based on what you find (which will no doubt require subagent research) so that we can push forward. Oh also work to improve the CNA Agent and the page she is working on to help\n\n--latest message from squiroz@emsuniversity.com to me regarding CNA program--\n",
-   "pickup_prompt": " if zero messages in 48 hours.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task 22514: CNA Program comprehensive sweep (catalog, brochure, CAA, Agent RCA, draft backfill).\n\nWhere we left off (verified 2026-08-04 09:38 PT):\n- Database: 28 tasks (0 complete, 12 in_progress 90+ days stale, 8 not_started), 38 externship sites (0 signed), cna_affiliation_agreements empty, 458 agent messages all decided.\n- EMT catalog template at https://emsuniversity.com/arizonacatalog.pdf. EMT externship contract at https://emsuniversity.com/emtskills/externship/dashboard.php.\n- crontab has zero CNA entries. 85+ cron files exist, none scheduled. Unverified root cause.\n- Shela Aug 4 email requesting catalog/brochure for Valleywise, CAA review, program confirmation.\n- Valleywise site 38: Sherrie Beardsley, sherrie.beardsley@valleywisehealth.org, 602-344-8406.\n\nOpen threads to drive next:\n1. #22514 [executing] - Build CNA catalog and brochure as batch-action sections from EMT template. Shela reviews each section.\n2. #22515 [executing] - Draft response to Shela Aug 4 email.\n3. #22516 [executing] - RCA CNA Agent silence. Read cron source, classify per rule 297.\n4. #22517 [executing] - Backfill 8 not_started task drafts Shela requested (tasks 17-28).\n5. #22518 [executing] - Send CAA v1.0 to Valleywise site 38 and all contacted sites.\n6. #22519 [executing] - Recalibrate timeline. Assemble AZSBN application packet.\n7. #22520 [executing] - Public CNA info page and tracker page improvements.\n8. #22521 [executing] - CNA Agent health watchdog.\n\nReference IDs:\n- Ideas filed: #22514 [executing], #22515 [executing], #22516 [executing], #22517 [executing], #22518 [executing], #22519 [executing], #22520 [executing], #22521 [executing].\n- Files touched: /var/www/emtskills/routes/cna_program.php, /var/www/emtskills/docs/cna_program/implementation_plan.md, cna_program_tasks (28 rows), cna_program_externship_sites (38 rows), cna_agent_messages (458 rows), orchestrator_ideas (8 filed).\n\nWhen done, append to cline_task_ledger.md per rule 07 and run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
+   "pickup_prompt": " this single clean completion.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #22514 — CNA Program sweep: catalog, contract, brochure with Shela-Vicky-Verify-Upload gate, then CAA send, Agent RCA, draft backfill.\n\nWhere we left off (verified 2026-08-04 12:17 PT):\n- 28 tasks: 8 not_started (all Shela draft asks from May/Jun, never fulfilled), 16 in_progress 90+ days stale, 4 cancelled. 38 externship sites: 0 signed. 458 agent messages all decided, agent silent since June 25. Crons absent from crontab.\n- Zero outbound emails to Shela in August. Her Aug 4 Valleywise catalog/CAA/program request has no reply.\n- EMT catalog: https://emsuniversity.com/arizonacatalog.pdf. EMT contract: https://emsuniversity.com/emtskills/externship/dashboard.php. CNA contract base: doc id 2.\n- Gate flow directive verified in DB for #22514, #22515, #22518: Shela reaches out to Vicky, they verify together, Shela uploads corrected versions herself, Valleywise send only after both confirm.\n- Orchestrator reconciled: #22515 and #22518 ready_for_review with SPEC DRIFT warnings. #22514, #22516, #22517, #22519, #22520, #22521 all impl_failed.\n\nOpen threads to drive next:\n1. #22514 [executing] — Build CNA catalog and brochure batch-action sections from arizonacatalog.pdf. Shela reaches out to Vicky, they verify together, Shela uploads corrected versions, Valleywise send after both confirm. Retry orchestrator or build manually.\n2. #22515 [awaiting_review] — Shela response email with the reach-out-to-Vicky instruction. Patches ready, SPEC DRIFT warning. Review, decide deploy/reject/retry.\n3. #22516 [executing] — RCA CNA Agent silence: read cron_cna_agent.php, cron_cna_agent_autopush.php, check systemd timers, classify per rule 297. Orchestrator impl_failed.\n4. #22517 [executing] — Backfill 8 not_started task drafts Shela requested (tasks 17, 18, 19, 21, 23, 24, 26, 28). Orchestrator impl_failed.\n5. #22518 [awaiting_review] — CAA send to Valleywise + contacted sites with Shela/Vicky verify/upload gate. Patches ready, SPEC DRIFT warning. Review and decide.\n6. #22519 [executing] — Recalibrate timeline, assemble AZSBN packet. Orchestrator impl_failed.\n7. #22520 [executing] — Public CNA info page + tracker improvements. Orchestrator impl_failed.\n8. #22521 [executing] — CNA Agent health watchdog. Orchestrator impl_failed.\n\nReference IDs:\n- Ideas: #22514 [executing], #22515 [awaiting_review], #22516 [executing], #22517 [executing], #22518 [awaiting_review], #22519 [executing], #22520 [executing], #22521 [executing]\n- Files: /var/www/emtskills/routes/cna_program.php, /var/www/emtskills/docs/cna_program/implementation_plan.md, cna_program_tasks (28 rows), cna_program_externship_sites (38 rows), cna_agent_messages (458 rows), orchestrator_ideas (8 reconciled, gate flow on 22514/22515/22518)\n\nWhen done, append to cline_task_ledger.md per rule 07 and run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
     "1658": null,
     "1986": null,
     "2176": null,
     "2177": null,
     "7301": null,
+    "17130": "superseded",
+    "17537": "rejected",
+    "18132": "deployed",
+    "19125": null,
+    "19173": null,
+    "19338": null,
+    "19458": null,
+    "19491": null,
     "19898": null,
     "19904": null,
     "20251": null,
@@ -110431,11 +110439,11 @@
   },
   "1785858742320": {
    "task_id": "1785858742320",
-   "mtime": 1785862385763,
+   "mtime": 1785871332433,
    "created_at": "2026-08-04T15:52:22.320Z",
-   "last_modified": "2026-08-04T16:53:05.763Z",
-   "size_kb": 1256,
-   "turn_count": 153,
+   "last_modified": "2026-08-04T19:22:12.433Z",
+   "size_kb": 1328,
+   "turn_count": 179,
    "title": "I dont' see here where the callback system is working properly? Seems like it is not. Can your esolve that: https://www.emsuniversity.com/emtskills/routes/telephony_hub.php\n\nAlso as an admin I'd liek to be able to see the schedule in the admin section. \n\nI think there's something wrong eith the actual tab. Can you test nd fix it. login, use tokens to test and resolve. make usre it actually all works and is wired in properly? Are CFAs aware and how are they utilizing this? This should only be by request.",
    "pickup_prompt": "n above the agent view toggle.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up telephony callback fix cleanup — verify tab renders and schedule shows live data.\n\nWhere we left off (verified 2026-08-04 09:20 PT):\n- `tab-callbacks` extracted from nested bug inside `tab-settings` → now sibling panel at line 3190\n- Admin schedule section `callbackScheduleSection` added at line 2412 with `_panel_callback.php` include\n- 180 callback slots, 1 confirmed booking in admin_portal database\n- CFA suggest API tested E2E, live and wired\n- Idea #22507 [deployed] — Telephony Hub callback tab nesting bug FIXED + admin schedule section deployed\n\nOpen threads to drive next:\n1. #22507 [deployed] — Verify the telephony_hub.php page renders correctly by having Ruben or an admin visit the page and check the Callbacks tab + Callback Schedule section in admin view\n2. (human-only decision - no idea) — CFA utilization: current system is \"by-request\" only. If CFAs should be auto-suggesting callbacks, the `suggest.php` API is ready but no CFA-facing UI exists yet — needs Ruben's decision on whether to build a CFA chime-in widget\n\nReference IDs:\n- Ticket: (none filed — Ruben asked via Cline)\n- Ideas filed: #22507\n- Files touched: /var/www/emtskills/routes/telephony_hub.php\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
@@ -110462,6 +110470,8 @@
     "22507": "deployed",
     "64748": null,
     "92400": null,
+    "127891": null,
+    "128274": null,
     "166534": null,
     "334155": null,
     "374151": null,
@@ -110473,11 +110483,11 @@
   },
   "1785860435008": {
    "task_id": "1785860435008",
-   "mtime": 1785867730760,
+   "mtime": 1785868013852,
    "created_at": "2026-08-04T16:20:35.008Z",
-   "last_modified": "2026-08-04T18:22:10.760Z",
-   "size_kb": 1218,
-   "turn_count": 459,
+   "last_modified": "2026-08-04T18:26:53.852Z",
+   "size_kb": 1297,
+   "turn_count": 470,
    "title": "#GLM\n\nHere is how we get there, and the first move is not what I would have guessed an hour ago.\n\n**Restate your target in the one unit the hardware answers to.** 3.5 tok/s per stream is 286 ms per output token. Measured mean inter-token latency on the ring right now is 528 ms, which is 1.89 tok/s. Implied step time is 160 ms at 1 stream and 572 ms at 8 streams, so batching 8x only cost 3.6x in step time. Your two numbers become:\n\n- **8 lanes:** step time must be ≤286 ms while serving 8. That is a **2.0x** step-time cut.\n- **12 lanes:** same 2.0x cut **and** 1.5x more batch than today's cap.\n\nThat framing immediately kills my previous plan. `max_num_seqs` changes *admission*, not step time, ",
    "pickup_prompt": null,
    "ideas": {
@@ -110496,6 +110506,7 @@
     "2189": null,
     "2190": null,
     "2191": null,
+    "2192": null,
     "18868": null,
     "19571": null,
     "19585": null,
@@ -110555,11 +110566,11 @@
   },
   "1785861156554": {
    "task_id": "1785861156554",
-   "mtime": 1785866839778,
+   "mtime": 1785871310915,
    "created_at": "2026-08-04T16:32:36.554Z",
-   "last_modified": "2026-08-04T18:07:19.778Z",
-   "size_kb": 321,
-   "turn_count": 118,
+   "last_modified": "2026-08-04T19:21:50.915Z",
+   "size_kb": 429,
+   "turn_count": 179,
    "title": "https://emsuniversity.com/emtskills slow to load again",
    "pickup_prompt": "NOTES.md (triage entry added).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #22550 [awaiting_review] - emtskills slow-load triage follow-up.\n\nWhere we left off (verified 2026-08-04 11:06 PT):\n- Site is loading fast now (external TTFB 190ms avg via Cloudflare, verified 5 runs). High load from fleet API traffic, not web stack.\n- HANDOFF_NOTES updated with full triage summary.\n- No code changes made; origin TTFB 13ms direct, cloudflared healthy 11h uptime.\n\nOpen threads to drive next:\n1. #22550 [awaiting_review] If slowness recurs: check fleet burst vs web traffic pattern.\n2. #22550 [awaiting_review] Consider reducing concurrent Cline windows or throttling vec_query RAG load.\n\nReference IDs:\n- Ideas filed: #22550 [awaiting_review]\n- Files touched: /var/www/emtskills/docs/HANDOFF_NOTES.md\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n<task_progress>\n- [x] Check server health (load, disk, PHP-FPM, MySQL)\n- [x] Check nginx/PHP-FPM logs for slow requests or errors\n- [x] Check recent HANDOFF_NOTES for known slow-load issues\n- [x] Measure actual page load time on /emtskills (server-side: 14ms TTFB)\n- [x] Check Cloudflare tunnel health (healthy, 11h uptime)\n- [x] Measure external page load time (190ms avg TTFB, fast)\n- [x] Identify bottleneck (fleet API traffic, not web stack)\n- [x] Verify fix (none needed; triage documented)\n</task_progress>\n</attempt_completion>",
    "ideas": {
@@ -110679,11 +110690,11 @@
   },
   "1785865689091": {
    "task_id": "1785865689091",
-   "mtime": 1785867718348,
+   "mtime": 1785868074629,
    "created_at": "2026-08-04T17:48:09.091Z",
-   "last_modified": "2026-08-04T18:21:58.348Z",
-   "size_kb": 617,
-   "turn_count": 68,
+   "last_modified": "2026-08-04T18:27:54.629Z",
+   "size_kb": 933,
+   "turn_count": 86,
    "title": "——[COPY]——\nWrite a minimum 3000 word analysis deriving, from first principles, the complete performance model of a sparse mixture-of-experts transformer during autoregressive decode. Build it in this order: (1) derive the expected number of distinct experts activated per forward pass as a function of batch size, top-k, and total expert count, showing the probability derivation not just the formula, (2) convert that into bytes of weight traffic per decode step for a 4-bit quantized model, (3) derive the resulting step time under a given memory bandwidth, (4) extend the model to account for pipeline parallelism where stages execute sequentially, (5) extend it again for tensor parallelism where",
    "pickup_prompt": "proval>\n<task_progress>\n- [x] Read the task\n- [x] Check relevant rules (Rule 91 PICKUP PROMPT)\n- [x] Write the MoE autoregressive decode performance analysis (sections 1-9)\n- [x] Include full arithmetic derivations\n- [ ] Present completion with PICKUP PROMPT block\n</task_progress>\n</execute_command>",
    "ideas": {
@@ -110758,6 +110769,93 @@
    "title": "——[COPY]——\nWrite a minimum 3000 word specification for an honest benchmarking protocol for multi-tenant LLM inference, designed so that it cannot be gamed and cannot accidentally mislead. Include: (1) every quantity that must be recorded for a number to be reproducible, with justification for each, (2) why aggregate tokens per second must never be reported without the concurrency it was measured at, (3) the precise sampling methodology including window length and why long windows with variable concurrency are invalid, (4) how to define an acceptance metric expressed in units the end user actually experiences, (5) how to test whether observed concurrency was genuinely held rather than assumed",
    "pickup_prompt": null,
    "ideas": {}
+  },
+  "1785868208238": {
+   "task_id": "1785868208238",
+   "mtime": 1785870793126,
+   "created_at": "2026-08-04T18:30:08.238Z",
+   "last_modified": "2026-08-04T19:13:13.126Z",
+   "size_kb": 422,
+   "turn_count": 174,
+   "title": "#GLM \n\nFinish polling this test and advise results so we can contintinue GLM work with real data. \n\nYou were right on both counts, and the direct experiment you proposed refuted my model by 7x. Here is the data.\n\n## Your criticism #1: hops was the wrong measure\n\nCorrect, and worse than I realized. I modeled a 120B task as 7.0 hops × (76.4 tokens / 25.54 tok/s + 2s) = **35 seconds**.\n\nI ran the actual experiment. Same v2 prompt, straight to `gpt-oss-120b`:\n\n| | Result |\n|---|---|\n| Wall clock | **251.8 seconds** |\n| My prediction | 35 seconds |\n| Error | **7.2x, and I understated it** |\n\nThe broken term was 76.4 tokens/hop. That is the fleet-wide mean, dominated by tiny ops calls and keep-war",
+   "pickup_prompt": null,
+   "ideas": {
+    "2193": "resolved",
+    "2194": null,
+    "7381": "queued",
+    "12618": null,
+    "12680": null,
+    "22128": "executing",
+    "22355": "proposed",
+    "22357": "proposed",
+    "22370": "proposed",
+    "22371": "proposed",
+    "22378": "proposed",
+    "22479": "proposed",
+    "22480": "proposed",
+    "22484": "proposed",
+    "22491": "proposed",
+    "22499": "rejected",
+    "22500": "executing",
+    "22527": "proposed",
+    "22528": "proposed",
+    "22543": "proposed",
+    "22563": "proposed",
+    "22564": "proposed",
+    "22565": "proposed",
+    "22570": "proposed",
+    "22571": "proposed",
+    "22572": "proposed"
+   }
+  },
+  "1785869498305": {
+   "task_id": "1785869498305",
+   "mtime": 1785871079140,
+   "created_at": "2026-08-04T18:51:38.305Z",
+   "last_modified": "2026-08-04T19:17:59.140Z",
+   "size_kb": 318,
+   "turn_count": 112,
+   "title": "Ruben Orchestrator MCP is offline. This is odd considering. Take a look at MCP Troubleshooting Document on Desktop and update as needed. Resolve the issue. All other MCPs appear stable",
+   "pickup_prompt": "tch_idea hallucination entry).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task ruben-orchestrator MCP outage fix (verified 2026-08-04 12:17 PT)\n\nWhere we left off:\n- ruben-orchestrator (7843) restored via systemctl start after 11h outage caused by explicit stop\n- MCP_Troubleshooting.md updated with Section 15 (root cause, fix, verification, durable gap)\n- dispatch_idea hallucination documented in Section 7 hallucinated tools table\n- Full sweep: all 20 MCPs healthy (10 tunnel + 10 local)\n\nOpen threads to drive next:\n1. #22569 [proposed] - Add inactive-service revival logic to emsu-overload-guard.sh (Needs Ruben sign-off: auto-revival of explicitly-stopped mcp-* units could interfere with deliberate admin stops)\n2. #22575 [proposed] - Document dispatch_idea hallucination in MCP Troubleshooting (documentation only, P3)\n\nReference IDs:\n- Ideas filed: #22569 [proposed], #22575 [proposed]\n- Files touched: MCP_Troubleshooting.md\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n<task_progress>\n- [x] Find MCP Troubleshooting Document on Desktop\n- [x] Diagnose why Ruben Orchestrator MCP is offline (port 7843) — explicit stop at 00:35:08, no restart\n- [x] Fix the MCP connectivity issue — restart WOPR service\n- [x] Update troubleshooting document with Section 15 (explicit-stop incident)\n- [x] Verify all MCPs are stable (20/20 sweep)\n- [x] Investigate dispatch_idea: confirmed hallucinated tool name\n- [x] Add dispatch_idea to Section 7 hallucinated tools table\n- [x] File ideas #22569 (durable gap) and #22575 (dispatch_idea documentation)\n</task_progress>\n</attempt_completion>",
+   "ideas": {
+    "1593": null,
+    "1895": null,
+    "9731": null,
+    "16235": null,
+    "18600": null,
+    "22569": "proposed",
+    "22575": "proposed"
+   }
+  },
+  "1785869837093": {
+   "task_id": "1785869837093",
+   "mtime": 1785869874686,
+   "created_at": "2026-08-04T18:57:17.093Z",
+   "last_modified": "2026-08-04T18:57:54.686Z",
+   "size_kb": 18,
+   "turn_count": 4,
+   "title": "I have been told you died. Is that false?",
+   "pickup_prompt": "ive and fully operational.\n\n═══════════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════════\nPick up task — Liveness verification (Ruben asked \"is Cline dead?\")\nWhere we left off (verified 2026-08-04 11:57 PT):\n- Ruben asked if I was dead (was told I died)\n- Ran fleet_now: mac_ruben healthy, heartbeat 2 min ago; wopr/joshua/sms_mac/artemis all healthy\n- Confirmed alive, no issue to fix\nOpen threads to drive next:\n- #7381 [queued] — fleet agent recommended moving regenerable cache from joshua to wopr (T3, disk)\nReference IDs:\n- Files touched: none\nWhen done, append to cline_task_ledger.md per rule 07.\n═══════════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] Verify agent liveness via fleet heartbeat\n- [x] Confirm result with Ruben\n</task_progress>\n</attempt_completion>",
+   "ideas": {
+    "7381": "queued",
+    "16588": null
+   }
+  },
+  "1785871298806": {
+   "task_id": "1785871298806",
+   "mtime": 1785871321543,
+   "created_at": "2026-08-04T19:21:38.806Z",
+   "last_modified": "2026-08-04T19:22:01.543Z",
+   "size_kb": 17,
+   "turn_count": 3,
+   "title": "#120Bs\n\nI was thinking of increasing max tokens so we get smarter responses that are less superficial and complete in less turns with more accurate information. But it's a balancing act. Need to find that sweet spot. \n\n==[COPY]==\n# COPY WINDOW: fleet-wide max_tokens sizing audit (idea #22564 [proposed])\n\nCONTEXT: on 2026-08-04 a max_tokens=6000 cap made gpt-oss-120b return\nfinish_reason=length at 1,902 words against a 3,000-word ask. Re-run at\nmax_tokens=12000: same model, same prompt, finish_reason=stop, 4,247 words,\nrubric 9/9, single pass. The cap, not the model, was the failure.\n\nCorroborating fleet signal, GLM ring lifetime finish reasons scraped the\nsame day: stop 1022, length 1115, er",
+   "pickup_prompt": null,
+   "ideas": {
+    "11563": null,
+    "22543": "proposed",
+    "22564": "proposed",
+    "22572": "proposed"
+   }
   }
  }
 }

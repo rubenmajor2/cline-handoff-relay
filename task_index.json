@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-04T17:22:12.540Z",
+ "generated_at": "2026-08-04T18:22:12.855Z",
  "counts": {
-  "parsed": 3,
-  "reused": 421,
+  "parsed": 9,
+  "reused": 431,
   "failed": 0,
-  "total": 424
+  "total": 440
  },
  "tasks": {
   "1784522296714": {
@@ -110473,11 +110473,11 @@
   },
   "1785860435008": {
    "task_id": "1785860435008",
-   "mtime": 1785863769378,
+   "mtime": 1785867730760,
    "created_at": "2026-08-04T16:20:35.008Z",
-   "last_modified": "2026-08-04T17:16:09.378Z",
-   "size_kb": 717,
-   "turn_count": 237,
+   "last_modified": "2026-08-04T18:22:10.760Z",
+   "size_kb": 1218,
+   "turn_count": 459,
    "title": "#GLM\n\nHere is how we get there, and the first move is not what I would have guessed an hour ago.\n\n**Restate your target in the one unit the hardware answers to.** 3.5 tok/s per stream is 286 ms per output token. Measured mean inter-token latency on the ring right now is 528 ms, which is 1.89 tok/s. Implied step time is 160 ms at 1 stream and 572 ms at 8 streams, so batching 8x only cost 3.6x in step time. Your two numbers become:\n\n- **8 lanes:** step time must be ≤286 ms while serving 8. That is a **2.0x** step-time cut.\n- **12 lanes:** same 2.0x cut **and** 1.5x more batch than today's cap.\n\nThat framing immediately kills my previous plan. `max_num_seqs` changes *admission*, not step time, ",
    "pickup_prompt": null,
    "ideas": {
@@ -110491,6 +110491,11 @@
     "2174": null,
     "2185": null,
     "2186": null,
+    "2187": null,
+    "2188": null,
+    "2189": null,
+    "2190": null,
+    "2191": null,
     "18868": null,
     "19571": null,
     "19585": null,
@@ -110507,7 +110512,8 @@
     "22499": "proposed",
     "22500": "executing",
     "22527": "proposed",
-    "22528": "proposed"
+    "22528": "proposed",
+    "22543": "proposed"
    }
   },
   "1785860776891": {
@@ -110549,21 +110555,209 @@
   },
   "1785861156554": {
    "task_id": "1785861156554",
-   "mtime": 1785862398288,
+   "mtime": 1785866839778,
    "created_at": "2026-08-04T16:32:36.554Z",
-   "last_modified": "2026-08-04T16:53:18.288Z",
-   "size_kb": 209,
-   "turn_count": 75,
+   "last_modified": "2026-08-04T18:07:19.778Z",
+   "size_kb": 321,
+   "turn_count": 118,
    "title": "https://emsuniversity.com/emtskills slow to load again",
-   "pickup_prompt": null,
+   "pickup_prompt": "NOTES.md (triage entry added).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #22550 [awaiting_review] - emtskills slow-load triage follow-up.\n\nWhere we left off (verified 2026-08-04 11:06 PT):\n- Site is loading fast now (external TTFB 190ms avg via Cloudflare, verified 5 runs). High load from fleet API traffic, not web stack.\n- HANDOFF_NOTES updated with full triage summary.\n- No code changes made; origin TTFB 13ms direct, cloudflared healthy 11h uptime.\n\nOpen threads to drive next:\n1. #22550 [awaiting_review] If slowness recurs: check fleet burst vs web traffic pattern.\n2. #22550 [awaiting_review] Consider reducing concurrent Cline windows or throttling vec_query RAG load.\n\nReference IDs:\n- Ideas filed: #22550 [awaiting_review]\n- Files touched: /var/www/emtskills/docs/HANDOFF_NOTES.md\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n<task_progress>\n- [x] Check server health (load, disk, PHP-FPM, MySQL)\n- [x] Check nginx/PHP-FPM logs for slow requests or errors\n- [x] Check recent HANDOFF_NOTES for known slow-load issues\n- [x] Measure actual page load time on /emtskills (server-side: 14ms TTFB)\n- [x] Check Cloudflare tunnel health (healthy, 11h uptime)\n- [x] Measure external page load time (190ms avg TTFB, fast)\n- [x] Identify bottleneck (fleet API traffic, not web stack)\n- [x] Verify fix (none needed; triage documented)\n</task_progress>\n</attempt_completion>",
    "ideas": {
     "1658": null,
     "1986": null,
     "2176": null,
     "2177": null,
+    "16170": null,
     "22334": null,
-    "22355": "proposed"
+    "22355": "proposed",
+    "22517": "in_progress",
+    "22550": "awaiting_review"
    }
+  },
+  "1785864459503": {
+   "task_id": "1785864459503",
+   "mtime": 1785864549761,
+   "created_at": "2026-08-04T17:27:39.503Z",
+   "last_modified": "2026-08-04T17:29:09.761Z",
+   "size_kb": 20,
+   "turn_count": 4,
+   "title": "——[COPY]——\nWindow 1. Write roughly 600 words explaining how pipeline parallelism differs from tensor parallelism for transformer inference. Cover why pipeline stages run sequentially per token, what that does to effective memory bandwidth on a multi-node ring, and when each layout is the right choice. Prose, no bullet lists.\n——[/COPY]——",
+   "pickup_prompt": "ullet lists, as requested.\n\n═══════════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════════\nPick up task — Pipeline vs Tensor Parallelism essay (600 words)\nWhere we left off (verified 2026-08-04 10:28 PT):\n- Completed the full essay in prose form; no pending edits.\nOpen threads to drive next:\n- None — deliverable was a standalone written piece; no idea filed, no follow-up action needed. This was a content request, not a code/ops task.\nReference IDs:\n- Ticket: none\n- Ideas filed: none\n- Files touched: /Users/rubenmajor/Desktop/pipeline_vs_tensor_parallelism.md\nWhen done, append to cline_task_ledger.md per rule 07.\n═══════════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "ideas": {}
+  },
+  "1785864472446": {
+   "task_id": "1785864472446",
+   "mtime": 1785864546632,
+   "created_at": "2026-08-04T17:27:52.446Z",
+   "last_modified": "2026-08-04T17:29:06.632Z",
+   "size_kb": 16,
+   "turn_count": 4,
+   "title": "——[COPY]——\nWindow 2. Write roughly 600 words explaining how a mixture-of-experts layer works at inference time. Cover the router, top-k expert selection, why the number of DISTINCT experts touched grows sublinearly with batch size, and what that implies for memory traffic per decode step. Prose, no bullet lists.\n——[/COPY]——",
+   "pickup_prompt": "cost of each loaded expert\n\n═══════════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════════\nPick up task — MoE inference explanation, write ~600 words\nWhere we left off (verified 2026-08-04 10:28 PT):\n- Prose explanation written to /Users/rubenmajor/Desktop/moe_inference_explanation.md\n- Covers router, top-k, sublinear expert growth, memory traffic implications\nOpen threads to drive next:\nNone — one-off writing task, complete.\nReference IDs:\n- Ticket: none\n- Ideas filed: none\n- Files touched: /Users/rubenmajor/Desktop/moe_inference_explanation.md\nWhen done, append to cline_task_ledger.md per rule 07.\n═══════════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] Write ~600 word prose explanation of MoE inference\n</task_progress>\n</attempt_completion>",
+   "ideas": {}
+  },
+  "1785864485442": {
+   "task_id": "1785864485442",
+   "mtime": 1785864569913,
+   "created_at": "2026-08-04T17:28:05.442Z",
+   "last_modified": "2026-08-04T17:29:29.913Z",
+   "size_kb": 21,
+   "turn_count": 4,
+   "title": "——[COPY]——\nWindow 3. Write roughly 600 words explaining the difference between prefill and decode in LLM serving. Cover why prefill is compute-bound and decode is memory-bound, what prefix caching does and does not help, and why chunked prefill exists. Prose, no bullet lists.\n——[/COPY]——",
+   "pickup_prompt": "g and predictable latency.\n\n═══════════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════════\nPick up task — prefill vs decode explanation (600-word prose)\nWhere we left off (verified 2026-08-04 10:29 PT):\n- Wrote the prose essay to /Users/rubenmajor/Desktop/prefill-vs-decode.md (~700 words, prose only)\n- Covered prefill (compute-bound single pass) vs decode (memory-bound autoregressive), prefix caching limits, and chunked prefill rationale\nOpen threads to drive next:\n1. none — task complete, no further action needed\nReference IDs:\n- Ticket: none\n- Ideas filed: none\n- Files touched: /Users/rubenmajor/Desktop/prefill-vs-decode.md\nWhen done, append to cline_task_ledger.md per rule 07.\n═══════════════════════════════════════════════════</result>\n</attempt_completion>",
+   "ideas": {}
+  },
+  "1785864497210": {
+   "task_id": "1785864497210",
+   "mtime": 1785864576490,
+   "created_at": "2026-08-04T17:28:17.210Z",
+   "last_modified": "2026-08-04T17:29:36.490Z",
+   "size_kb": 15,
+   "turn_count": 8,
+   "title": "——[COPY]——\nWindow 4. Write roughly 600 words explaining what CUDA graphs do for inference latency. Cover kernel launch overhead, why graphs must be captured per batch size, what happens when a batch size has no captured graph, and the tradeoff against capture time and memory. Prose, no bullet lists.\n——[/COPY]——",
+   "pickup_prompt": "off in production traffic.\n\n═══════════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════════\nPick up task — CUDA graphs inference latency prose (writes-only output window)\nWhere we left off (verified 2026-08-04 10:29 PT):\n- Delivered ~600-word prose explanation of CUDA graphs for inference latency, self-authored inline because the delegate-70b local endpoint (wopr:8000) was unreachable.\n- Covers all four required points: kernel launch overhead, per-batch-size capture requirement, fallback behavior on missing graph, and the capture-time/memory tradeoff.\nOpen threads to drive next:\n- None — [completed deliverable in this window; no persistent state or files touched]\nReference IDs:\n- No real idea #s filed this window (no fake placeholders used). File: none (output-only task, no repo changes).\n- Files touched: none\nWhen done, append to cline_task_ledger.md per rule 07.\n═══════════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "ideas": {}
+  },
+  "1785864511866": {
+   "task_id": "1785864511866",
+   "mtime": 1785864654969,
+   "created_at": "2026-08-04T17:28:31.866Z",
+   "last_modified": "2026-08-04T17:30:54.969Z",
+   "size_kb": 29,
+   "turn_count": 12,
+   "title": "——[COPY]——\nWindow 5. Write roughly 600 words explaining RDMA versus TCP sockets for GPU cluster collectives. Cover kernel bypass, why per-message latency matters more than bandwidth for all-reduce, how many collectives a 78-layer model issues per token under tensor parallelism, and why that makes the transport choice decisive. Prose, no bullet lists.\n——[/COPY]——",
+   "pickup_prompt": "mpletes them in microseconds).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #22334 - RDMA vs TCP explainer essay\n\nWhere we left off (verified 2026-08-04 10:30 PT):\n- 698-word prose essay written and saved to rdma_vs_tcp_gpu_collectives.md\n- Covers kernel bypass, latency vs bandwidth, per-token collective count, transport choice decisive\n- No remaining writing work; file is production-ready\n\nOpen threads to drive next:\n1. (none, single-file writing task, complete)\n\nReference IDs:\n- Ideas filed: none\n- Files touched: /Users/rubenmajor/Desktop/rdma_vs_tcp_gpu_collectives.md\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n<task_progress>\n- [x] Draft ~600-word prose explanation of RDMA vs TCP for GPU collectives\n- [x] Cover kernel bypass, latency vs bandwidth, per-token collective count, decisive transport choice\n- [x] Verify word count (698 words)\n- [x] Save to file\n</task_progress>\n</attempt_completion>",
+   "ideas": {
+    "22334": null
+   }
+  },
+  "1785864534211": {
+   "task_id": "1785864534211",
+   "mtime": 1785864626791,
+   "created_at": "2026-08-04T17:28:54.211Z",
+   "last_modified": "2026-08-04T17:30:26.791Z",
+   "size_kb": 18,
+   "turn_count": 6,
+   "title": "——[COPY]——\nWindow 6. Write roughly 600 words explaining KV cache quantization in LLM serving. Cover what is actually stored per token, why FP8 halves the footprint, what accuracy risk it carries, and how cache capacity relates to max concurrent sequences. Prose, no bullet lists.\n——[/COPY]——",
+   "pickup_prompt": " max concurrent sequences.\n\n═══════════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════════\nPick up task #none — KV cache quantization explainer completed\nWhere we left off (verified 2026-08-04 10:30 PT):\n- Task is a one-shot writing task, no ongoing work\nOpen threads to drive next:\n1. (none — task complete)\nReference IDs:\n- Files touched: kv_cache_quantization_explained.md\n═══════════════════════════════════════════════════</result>\n</attempt_completion>",
+   "ideas": {}
+  },
+  "1785864555606": {
+   "task_id": "1785864555606",
+   "mtime": 1785864620750,
+   "created_at": "2026-08-04T17:29:15.606Z",
+   "last_modified": "2026-08-04T17:30:20.750Z",
+   "size_kb": 14,
+   "turn_count": 6,
+   "title": "——[COPY]——\nWindow 7. Write roughly 600 words explaining why unified memory architectures behave differently from discrete GPU HBM for large model inference. Cover the bandwidth gap, why capacity stops being the binding constraint and bandwidth starts, and what that means for choosing a model size per node. Prose, no bullet lists.\n——[/COPY]——",
+   "pickup_prompt": "n rather than a non-issue.\n\n═══════════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════════\nPick up task #22567 — Window 7 parallel prose: unified memory vs discrete GPU HBM for large model inference\nWhere we left off (verified 2026-08-04 10:29 PT):\n- Prose written (~600 words) covering the bandwidth gap, why capacity unbinds and bandwidth binds, and what that means for picking model size per node on unified memory machines.\n- No server files touched, no ideas filed, no further work pending.\nOpen threads to drive next:\nNone — this was a write-and-done window. Prose delivered above.\nReference IDs:\n- Tickets: none\n- Ideas filed: none\n- Files touched: none\nWhen done, append to cline_task_ledger.md per rule 07.\n═══════════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] Verify MCP health\n- [x] Write ~600-word prose on unified memory vs discrete GPU HBM\n- [x] Complete with PICKUP PROMPT per rule 91\n</task_progress>\n</attempt_completion>",
+   "ideas": {
+    "22567": null
+   }
+  },
+  "1785864591765": {
+   "task_id": "1785864591765",
+   "mtime": 1785864644915,
+   "created_at": "2026-08-04T17:29:51.765Z",
+   "last_modified": "2026-08-04T17:30:44.915Z",
+   "size_kb": 15,
+   "turn_count": 4,
+   "title": "——[COPY]——\nWindow 8. Write roughly 600 words explaining how to benchmark a multi-user inference endpoint honestly. Cover why aggregate tokens per second hides per-user experience, why dividing a long-window aggregate by an assumed concurrency is invalid, and what you must record alongside every number for it to be reproducible. Prose, no bullet lists.\n——[/COPY]——",
+   "pickup_prompt": "raphs totaling ~590 words.\n\n═══════════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════════\nPick up task <copy-window-8> — multi-user inference benchmarking prose piece.\nWhere we left off (verified 2026-08-04 10:30 PT):\n- Wrote ~590 words explaining honest multi-user inference endpoint benchmarking: why aggregate tokens/sec hides per-user experience, why dividing a long-window aggregate by assumed concurrency is invalid, and what to record beside every number for reproducibility.\n- Prose only, no bullet lists, as requested. Saved to Desktop: /Users/rubenmajor/Desktop/WINDOW8_BENCHMARK_MULTIUSER_INFERENCE.md (5 paragraphs, ~590 words).\nOpen threads to drive next:\n1. (human) — Review the piece; adjust length/tone/emphasis if desired. No further automated work pending.\nReference IDs:\n- Ticket: none\n- Ideas filed: none\n- Files touched: WINDOW8_BENCHMARK_MULTIUSER_INFERENCE.md\nWhen done, append to cline_task_ledger.md per rule 07.\n═══════════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "ideas": {}
+  },
+  "1785865665427": {
+   "task_id": "1785865665427",
+   "mtime": 1785866043476,
+   "created_at": "2026-08-04T17:47:45.427Z",
+   "last_modified": "2026-08-04T17:54:03.476Z",
+   "size_kb": 225,
+   "turn_count": 15,
+   "title": "Write a complete technical design document, minimum 3000 words, for migrating a 744B-parameter mixture-of-experts model from a 6-node pipeline-parallel layout to a 2-way tensor-parallel by 3-stage pipeline layout across the same six 128GB unified-memory nodes. Work through it in strict order and do not skip ahead: (1) derive the per-node weight footprint in both layouts and show the arithmetic, (2) compute how many collective operations per token each layout issues and the latency cost over both TCP sockets and RoCE RDMA, (3) identify every failure mode during the transition including partial-ring states, (4) write the exact rollback procedure, (5) define the acceptance tests with pass/fail ",
+   "pickup_prompt": null,
+   "ideas": {}
+  },
+  "1785865689091": {
+   "task_id": "1785865689091",
+   "mtime": 1785867718348,
+   "created_at": "2026-08-04T17:48:09.091Z",
+   "last_modified": "2026-08-04T18:21:58.348Z",
+   "size_kb": 617,
+   "turn_count": 68,
+   "title": "——[COPY]——\nWrite a minimum 3000 word analysis deriving, from first principles, the complete performance model of a sparse mixture-of-experts transformer during autoregressive decode. Build it in this order: (1) derive the expected number of distinct experts activated per forward pass as a function of batch size, top-k, and total expert count, showing the probability derivation not just the formula, (2) convert that into bytes of weight traffic per decode step for a 4-bit quantized model, (3) derive the resulting step time under a given memory bandwidth, (4) extend the model to account for pipeline parallelism where stages execute sequentially, (5) extend it again for tensor parallelism where",
+   "pickup_prompt": "proval>\n<task_progress>\n- [x] Read the task\n- [x] Check relevant rules (Rule 91 PICKUP PROMPT)\n- [x] Write the MoE autoregressive decode performance analysis (sections 1-9)\n- [x] Include full arithmetic derivations\n- [ ] Present completion with PICKUP PROMPT block\n</task_progress>\n</execute_command>",
+   "ideas": {
+    "19898": null,
+    "19904": null,
+    "20251": null,
+    "0000": null
+   }
+  },
+  "1785865716440": {
+   "task_id": "1785865716440",
+   "mtime": 1785866017541,
+   "created_at": "2026-08-04T17:48:36.440Z",
+   "last_modified": "2026-08-04T17:53:37.541Z",
+   "size_kb": 156,
+   "turn_count": 15,
+   "title": "—[COPY]——\nWrite a minimum 3000 word incident post-mortem for a subtle production failure: a benchmark reported 8.1 tokens per second per stream, and that figure was recorded as fact and propagated into launch configuration comments as design intent, but the true value was 1.7. The error came from dividing an aggregate throughput measured over an 18-minute window by an assumed constant concurrency of 8, when concurrency was actually unbounded and averaged 22. Cover: (1) how the error was originally made and why it looked reasonable, (2) every downstream decision that was corrupted by it, (3) why it survived seven days undetected, (4) the exact measurement methodology that should have been use",
+   "pickup_prompt": null,
+   "ideas": {}
+  },
+  "1785865742982": {
+   "task_id": "1785865742982",
+   "mtime": 1785865959578,
+   "created_at": "2026-08-04T17:49:02.982Z",
+   "last_modified": "2026-08-04T17:52:39.578Z",
+   "size_kb": 98,
+   "turn_count": 9,
+   "title": "——[COPY]——\nWrite a minimum 3000 word treatise on the distinction between throughput and latency in multi-tenant inference serving, and why optimizing one systematically degrades the other. Structure it as a build: (1) define both precisely with units, (2) derive the queueing relationship between admission capacity, arrival rate, and time-to-first-token, (3) show why increasing batch size improves aggregate throughput while worsening per-stream latency on a memory-bound system, (4) work a concrete numerical example with 8 admission slots, a 21-request queue, and 2 tokens per second per stream, computing what a newly arriving user experiences, (5) explain why agentic workloads that issue many ",
+   "pickup_prompt": null,
+   "ideas": {}
+  },
+  "1785865761749": {
+   "task_id": "1785865761749",
+   "mtime": 1785865931303,
+   "created_at": "2026-08-04T17:49:21.749Z",
+   "last_modified": "2026-08-04T17:52:11.303Z",
+   "size_kb": 39,
+   "turn_count": 7,
+   "title": "—[COPY]——\nWrite a minimum 3000 word engineering analysis of RDMA versus kernel TCP for collective communication in distributed model inference. Proceed in order: (1) trace a single message through both stacks, naming every copy and context switch, (2) derive per-message latency for both, (3) compute the total per-token communication cost for a 78-layer model under tensor parallelism issuing two all-reduces per layer, (4) show what fraction of a 173 millisecond step budget each transport consumes, (5) explain why a tensor-parallel experiment run over TCP would produce a false negative and cause the technique to be wrongly abandoned, (6) describe the specific failure modes of RoCE including me",
+   "pickup_prompt": null,
+   "ideas": {}
+  },
+  "1785865777611": {
+   "task_id": "1785865777611",
+   "mtime": 1785866011264,
+   "created_at": "2026-08-04T17:49:37.611Z",
+   "last_modified": "2026-08-04T17:53:31.264Z",
+   "size_kb": 142,
+   "turn_count": 11,
+   "title": "——[COPY]——\nWrite a minimum 3000 word guide to diagnosing a production system where 39 percent of requests fail but every dashboard shows healthy. Build it as an investigation: (1) enumerate at least eight distinct mechanisms by which a high failure rate can be invisible to monitoring, (2) for each, give the specific query or probe that would reveal it, (3) explain how automatic retries and fallback routing mask failures from operators while multiplying resource consumption, (4) derive the capacity cost of a failed request that consumed prefill and partial decode before dying, (5) show how to attribute failures to a specific calling surface when logs do not record the failure reason, (6) desi",
+   "pickup_prompt": null,
+   "ideas": {}
+  },
+  "1785865794494": {
+   "task_id": "1785865794494",
+   "mtime": 1785866031393,
+   "created_at": "2026-08-04T17:49:54.494Z",
+   "last_modified": "2026-08-04T17:53:51.393Z",
+   "size_kb": 127,
+   "turn_count": 13,
+   "title": "——[COPY]——\nWrite a minimum 3000 word comparative analysis of unified-memory versus discrete-HBM architectures for serving very large models. Work through: (1) state the bandwidth and capacity figures for each and their ratio, (2) derive the arithmetic intensity threshold at which a workload transitions from compute-bound to memory-bound, (3) show where transformer prefill and transformer decode each fall relative to that threshold and why they differ, (4) explain why unified memory makes very large models POSSIBLE while making them SLOW, and why that is a genuine engineering tradeoff rather than a defect, (5) derive the optimal model size per node for a target per-user token rate, (6) analyz",
+   "pickup_prompt": null,
+   "ideas": {}
+  },
+  "1785865813454": {
+   "task_id": "1785865813454",
+   "mtime": 1785866189044,
+   "created_at": "2026-08-04T17:50:13.454Z",
+   "last_modified": "2026-08-04T17:56:29.044Z",
+   "size_kb": 287,
+   "turn_count": 21,
+   "title": "——[COPY]——\nWrite a minimum 3000 word specification for an honest benchmarking protocol for multi-tenant LLM inference, designed so that it cannot be gamed and cannot accidentally mislead. Include: (1) every quantity that must be recorded for a number to be reproducible, with justification for each, (2) why aggregate tokens per second must never be reported without the concurrency it was measured at, (3) the precise sampling methodology including window length and why long windows with variable concurrency are invalid, (4) how to define an acceptance metric expressed in units the end user actually experiences, (5) how to test whether observed concurrency was genuinely held rather than assumed",
+   "pickup_prompt": null,
+   "ideas": {}
   }
  }
 }

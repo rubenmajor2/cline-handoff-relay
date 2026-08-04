@@ -6,24 +6,24 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/4/2026, 1:51:29 AM PT | window: last 72h | 59 tasks | index total 418 (parsed 4, cached 414)
+Generated: 8/4/2026, 2:51:30 AM PT | window: last 72h | 57 tasks | index total 418 (parsed 2, cached 416)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785822732682` | 8/4/2026, 1:51:20 AM | 692 | 7048KB | GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes. Key achie |
-| `1785833407446` | 8/4/2026, 1:51:19 AM | 16 | 122KB | In argus:  |
-| `1785833341637` | 8/4/2026, 1:51:05 AM | 7 | 23KB | run this plase |
+| `1785822732682` | 8/4/2026, 2:46:21 AM | 878 | 7400KB | GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes. Key achie |
+| `1785833407446` | 8/4/2026, 2:36:13 AM | 257 | 587KB | In argus:  |
+| `1785817138435` | 8/4/2026, 2:17:32 AM | 32 | 114KB | i noticed a lot of reasonsing time across models wasted contemplating context and whether  |
+| `1785833341637` | 8/4/2026, 2:10:06 AM | 68 | 208KB | run this plase |
+| `1785807924524` | 8/4/2026, 2:07:44 AM | 108 | 458KB | I’m assuming TeamHub is currently blank because you’re doing something with it at the mome |
 | `1785821651406` | 8/4/2026, 1:48:58 AM | 522 | 3348KB | For Argus only: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser  |
 | `1785821481522` | 8/4/2026, 12:44:46 AM | 140 | 1104KB | pages at emsuniversity.com/emtskills appear to be loading very slowly. Why? |
 | `1785782909425` | 8/4/2026, 12:39:40 AM | 1010 | 5582KB | Why am i not seeing clustered ideas here in cline? |
-| `1785807924524` | 8/4/2026, 12:35:15 AM | 100 | 439KB | I’m assuming TeamHub is currently blank because you’re doing something with it at the mome |
 | `1785781386836` | 8/4/2026, 12:33:40 AM | 732 | 2611KB | Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/  |
 | `1785824593043` | 8/3/2026, 11:31:22 PM | 48 | 120KB | why is frankenstein-llm down? |
 | `1785812189858` | 8/3/2026, 10:53:20 PM | 328 | 2799KB | What is the slowest speed that frankenstein-llm will permit prior to quaranteining an indi |
 | `1785814799237` | 8/3/2026, 10:48:43 PM | 568 | 1006KB | ## GLM-5.2 TP=6 Migration — Session Complete (Context Compressed) |
 | `1785778409357` | 8/3/2026, 10:32:01 PM | 720 | 3745KB | What is this person actually upset about other than AI answering calls and emails? Can you |
 | `1785776636014` | 8/3/2026, 10:28:33 PM | 650 | 1454KB | Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up |
-| `1785817138435` | 8/3/2026, 9:32:05 PM | 24 | 92KB | i noticed a lot of reasonsing time across models wasted contemplating context and whether  |
 | `1785809433242` | 8/3/2026, 8:36:39 PM | 462 | 860KB | # GLM-5.2 TP=6 Migration — FP8-MXFP4 Checkpoint Downloading (verified 2026-08-03 19:08 PT) |
 | `1785801179446` | 8/3/2026, 8:13:29 PM | 242 | 2253KB | #Argus |
 | `1785780445834` | 8/3/2026, 7:49:39 PM | 864 | 3778KB | Propose for Telephony with some features similar to /proctoring for the Admin role (in thi |
@@ -67,14 +67,12 @@ Generated: 8/4/2026, 1:51:29 AM PT | window: last 72h | 59 tasks | index total 4
 | `1785537361555` | 8/1/2026, 12:37:04 PM | 496 | 2332KB | What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor  |
 | `1785360672171` | 8/1/2026, 9:23:32 AM | 3888 | 18423KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
 | `1785566876939` | 8/1/2026, 3:57:20 AM | 634 | 1456KB | GLM ring RoCE root cause found (wrong-NIC RX-offload drops from /30 shortcut routes); /32  |
-| `1785548524428` | 8/1/2026, 2:00:05 AM | 350 | 706KB | Jon says Daystron counsil stopped working |
-| `1785537564406` | 8/1/2026, 1:56:30 AM | 902 | 14669KB | #Argus |
 
 ---
 
 ## Per-window detail
 
-### `1785822732682` — 8/4/2026, 1:51:20 AM PT — 692 turns
+### `1785822732682` — 8/4/2026, 2:46:21 AM PT — 878 turns
 
 **Original task:**
 
@@ -89,52 +87,47 @@ GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes.
 6. Fixed NCCL ibv_create_cq 
 ```
 
-**Ideas referenced:** #1130, #1131, #12299, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #1602 [resolved], #16032, #16033, #16036, #16122, #16163, #16338, #1640, #16448, #16452, #1652 [resolved], #1655, #1658, #16588, #16778, #16802, #16803, #16839, #16851, #17202, #17246, #17298, #17301, #1744, #1754, #1755, #1779, #1798, #1828, #18471, #1897, #19563, #19567, #1980, #1983, #1984, #1986, #20005, #20042, #20264, #20272, #20340 [executing], #2050, #2051, #2052, #2053, #2054, #2055, #2060, #2061, #2062, #2063, #2065, #20662, #2073, #2081, #20825, #2083 [resolved], #2085, #2089, #2090, #2092, #2093, #2096, #2097, #20985, #2099, #2101, #21010 [executing], #21011 [executing], #2102, #2103, #21038 [proposed], #2109, #2110, #2111, #21158 [executing], #2116, #21171, #2121, #21213 [executing], #2127, #2128, #2129, #2131, #2138, #2139 [investigating], #2141, #21419 [executing], #2147, #2149, #2151, #2152, #2153, #2154, #21542 [rejected], #21546 [executing], #2157, #2159 [resolved], #2168 [deployed], #21684, #2170 [resolved], #2174 [deployed], #2176 [resolved], #22066, #22067, #22068, #22086, #22087, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #22355 [proposed], #7142, #7149
+**Ideas referenced:** #1130, #1131, #12299, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #1602 [resolved], #16032, #16033, #16036, #16122, #16163, #16338, #1640, #16448, #16452, #1652 [resolved], #1655, #1658 [rejected], #16588, #16778, #16802, #16803, #16839, #16851, #17202, #17246, #17298, #17301, #1744, #1754, #1755, #1779, #1798, #1828, #18327, #18471, #1897, #19563, #19567, #1980, #1983, #1984, #1986, #20005, #20042, #20264, #20272, #20340 [executing], #2050, #2051, #2052, #2053, #2054, #2055, #2060, #2061, #2062, #2063, #2065, #20662, #2073, #2081, #20825, #2083 [resolved], #2085, #2089, #2090, #2092, #2093, #2096, #2097, #20985, #2099, #2101, #21010 [executing], #21011 [executing], #2102, #2103, #21038 [proposed], #2109, #2110, #2111, #21158 [executing], #2116, #21171, #2121, #21213 [executing], #2127, #2128, #2129, #2131, #2138, #2139 [investigating], #2141, #21419 [executing], #2147, #2149, #2151, #2152, #2153, #2154, #21542 [rejected], #21546 [executing], #2157, #2159 [resolved], #2168 [deployed], #21684, #2170 [resolved], #2174 [deployed], #2176 [resolved], #2179, #2180, #22066, #22067, #22068, #22086, #22087, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
-executing], #22240 [proposed].
+irst or finish in one sitting.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #22128 - GLM-5.2: best cherry-pick = PP=6 15pct + max_num_seqs=8 + auto-restart + EXEC_TIMEOUT=900 (8 users @ ~8 tok/s, 65 tok/s agg)
+Pick up task #22128 [executing] - GLM-5.2 PP=6 ring: NCCL socket tuning falsified, max_num_seqs is next
 
-Where we left off (verified 2026-08-04 00:02 PT):
-- THOUGHT EXPERIMENT COMPLETE. Best cherry-pick for max STABLE concurrency >5-10 tok/s: PP=6 15pct ring + max_num_seqs=8 + while-true auto-restart + EXEC_TIMEOUT=900 + workers-first + gpu_mem 0.82 + KZ_TRIM + Socket transport
-- Simulated: N=8 -> 65 tok/s agg (~8 tok/s/user). 8 concurrent at ~8 tok/s each. Stable 17h w/ auto-restart (#2157)
-- KEY TENSION RESOLVED: max_num_seqs is BUILD-SPECIFIC. v40 Socket build tolerated 128 (110 tok/s); current b12x/sm121fix2 hangs compile >8 (#1655). Safe ceiling on current image = 8 (#1655). #2083's 128-collapse was UNSET admission, not tuned 128
-- Canonical stable build (2026-07-30): PP=6 15pct, gpu_mem 0.82 (rule 277 do NOT lower), 131072 ctx, kv_max_concurrency 21.2, 0 preemptions, ring uptime 8h55m+
-- ONE UNCERTAINTY: does current b12x/sm121fix2 hang compile at max_num_seqs>8 (#1655) or tolerate 16 (#2083)? Test: launch at 8, verify, step to 16, watch compile
-- 272G AQLM download RUNNING (108G/272G) - the near-Q4 quality upgrade path, unproven on our HW
-- #22128 [executing], #22240 [proposed]
+Where we left off (verified 2026-08-04 02:45 PT):
+- Ring SERVING at defaults: API returns glm-5.2-15pct, Application startup complete, 83/83 shards, 50.73 GiB in 211.7s, KV cache 131,072. Fully recovered after the failed tuning experiment
+- BASELINE to beat: 202 nonzero samples, mean 13.01 tok/s, max 19.10 (vLLM own metric, not wall clock)
+- FABRIC MEASURED HEALTHY: both ports 200000 Mb/s, MTU 9000, jumbo no-frag 0.253ms 1-hop / 0.770ms 2-hop. Wire is not the bottleneck
+- RUNG 1 FALSIFIED ON HARDWARE (bug row 2180 resolved): NCCL_SOCKET_NTHREADS/NSOCKS_PERTHREAD stall channel build - 4x4 at 47/240, 2x2 at 112/240, defaults complete 240/240. Do NOT retry without first reducing NCCL_MAX_NCHANNELS
+- DIAGNOSTIC TRAP: log tail repeats the last RECEIVE-direction channel line so healthy builds look stalled. Use grep -c on channel lines, never the tail
+- Spec decode remains CLOSED (bug row 2179): not achievable on PP=6 this build, measured 3.7x slower
 
 Open threads to drive next:
-1. #22128 [executing] , AWAITING RUBEN GO: relaunch PP=6 15pct ring with the cherry-pick config (max_num_seqs=8, auto-restart, EXEC_TIMEOUT=900, workers-first, gpu_mem 0.82, KZ_TRIM, Socket). Relaunch recipe: bug library 1993, run /tmp/glm52_relaunch_perf.sh FROM CATO via setsid, workers 1-5 then rank0
-2. #22240 [proposed] , research community GLM-5.2 configs; answered by threads 378150 + 375416
-3. (human-only decision, no idea) , 272G AQLM download continues (108G/272G); near-Q4 quality upgrade path once downloaded + proven
+1. #22378 [proposed] - RUNG 2, the real lever. Resolve the max_num_seqs contradiction on the CURRENT checkpoint: row 1640 measured 128 giving 110.21 tok/s aggregate, row 1655 says >8 hangs torch.compile. Try 16, then 32, then 64/128. Failure mode is a startup compile hang so it is safe, one relaunch per attempt. MUST also extend cudagraph_capture_sizes (now [1,2,4,8] max 16) to match or the win is erased per row 1979.
+2. #22357 [proposed] - reboot durability, sequence this first or do tuning in one sitting. Supervisor pause flag lives in /tmp, routes and iptables rule are not persistent, glm52-fabric.service is failed. Any node reboot silently breaks the ring and looks like an NCCL error.
+3. #22370 [proposed] - concurrency benchmark at n=1/4/8 with 200-token completions to establish the real aggregate ceiling, and check which 4 of 6 nodes could form a directly-cabled TP=4 group before anyone greenlights the TP+DSpark migration.
+4. #22371 [proposed] - the ladder itself, now retitled to record rung 1 as falsified. Rungs 3-5 (cudagraph sizes, max_num_batched_tokens, concurrency routing) still untested.
 
 Reference IDs:
-- Ideas filed: #22128 [executing], #22240 [proposed]
-- Files touched: /home/rubenmajor/blackwell-llm-docker/ (cato, cloned), /home/rubenmajor/dl_aqlm.sh (cato), /home/rubenmajor/glm52_launch_cfg_tp2pp3.sh (all 6 nodes), HANDOFF_NOTES.md, bug library incidents #2083/#2085/#2152/#2157/#2159/#1640/#1655/#2168
+- Ideas: #22355 [proposed] (spec decode research closed), #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed]
+- Bug library rows: 2176 resolved (network fix), 2179 resolved (spec decode verdict), 2180 resolved (NCCL socket tuning falsified)
+- Prior research rows: 1640, 1655, 1968, 1979, 1988
+- Files: /home/rubenmajor/glm52_launch_cfg_pp6.sh (all 6, reverted to defaults), /home/rubenmajor/glm52_ring_routes.sh (all 6), /Users/rubenmajor/Desktop/GLM52_SPEC_DECODE_VERDICT_20260804.md, HANDOFF_NOTES.md
 
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>- [x] Read handoff notes for current state
-- [x] Diagnose OOM root cause (bug library incident)
-- [x] 272G NVFP4+AQLM download RUNNING on Cato (108G/272G)
-- [x] OUR recent history: PP=6 15pct AWQ (:8210) stable bs=1; TP=2/PP=3 419G OOM-rebooted; TP=6 impossible
-- [x] Ruben REJECTED TP=4: "we actually have an ideal GLM build a while back. your TP4 recommendation is terrible"
-- [x] FOUND ideal build candidates: v40 (#1640: PP=6 Socket max_num_seqs=128 = 110 tok/s @ 128), #1655 (>8 hangs compile), #2083 (N=8=65 tok/s, cap 16), #2157 (auto-restart 17h), #2159 (EXEC_TIMEOUT=900), #2168 (workers-first)
-- [x] Read canonical stable-build doc (PROJECT_FRANKENSTEIN.md LAST KNOWN STABLE BUILD): PP=6 15pct, gpu_mem 0.82, 131072 ctx, kv_max_concurrency 21.2, 0 preemptions, 8h55m uptime
-- [x] Ruben: "cherry pick" + "do a real thought experiment and simulate the best cherry pick situation"
-- [x] Ran the thought experiment: best cherry-pick = PP=6 15pct + max_num_seqs=8 + auto-restart + EXEC_TIMEOUT=900 + workers-first + gpu_mem 0.82 + KZ_TRIM + Socket = 8 users @ ~8 tok/s, 65 tok/s agg, 17h stable
-- [ ] AWAITING Ruben go: relau
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<command>ssh cato "curl -s http://127.0.0.1:8210/v1/models | head -c 120; echo; docker logs vllm_slot 2>&1 | grep -oE 'Avg generation throughput: [0-9.]+ tokens/s' | tail -3"</command>
+</attempt_completion>
 ```
 
-### `1785833407446` — 8/4/2026, 1:51:19 AM PT — 16 turns
+### `1785833407446` — 8/4/2026, 2:36:13 AM PT — 257 turns
 
 **Original task:**
 
@@ -151,11 +144,50 @@ Searched EMSU knowledge base (VEC) - relevant docs found
 Thinking with frankenstein-llm...
 ```
 
-**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #16213, #16263, #18745, #18770, #19370, #21140, #21262, #274160, #30363, #69707, #8942, #9650, #9654, #9660, #9733, #9889
+**Ideas referenced:** #10003, #10005, #10182, #11397, #12301, #12368, #12589, #12590, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13874, #16213, #16263, #18671, #18745, #18770, #19370 [deployed], #19686, #19903, #2006, #2050, #20547, #21125, #21126, #21134 [ready_for_review], #21140 [ready_for_review], #21262, #2178 [deployed], #22178 [ready_for_review], #22365 [approved], #22366 [approved], #22376 [approved], #22377 [approved], #274160, #30363, #69707, #8942, #9650, #9654, #9660, #9733, #9889
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785833341637` — 8/4/2026, 1:51:05 AM PT — 7 turns
+### `1785817138435` — 8/4/2026, 2:17:32 AM PT — 32 turns
+
+**Original task:**
+
+```
+i noticed a lot of reasonsing time across models wasted contemplating context and whether to compress. It's kind of insane how many tokens are wasted on this. What can we do about that? Tell me how much waste is occurring from this.
+```
+
+**Ideas referenced:** #178584, #19162, #22282 [queued]
+
+**Last PICKUP PROMPT:**
+
+```
+ools without LLM deliberation.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1785840812960 — implement mechanical context compression trigger.
+
+Where we left off (verified 2026-08-04 02:16 PT):
+- Threshold per rule 119: CHECK at 0.55 × W, COMPRESS at 0.75 × W — no new numbers needed
+- 412 sessions analyzed, ~880K tokens wasted on deliberation that mechanical trigger eliminates
+- Idea #22282 [proposed] pending approval — user confirmed threshold is the blocker
+
+Open threads to drive next:
+1. #22282 [proposed] — approved once threshold confirmed. Implement: pre-turn watchdog reads X from environment_details, fires should_compress_now at 0.55W, cline_compress_session at 0.75W. Zero LLM deliberation.
+2. (human-only decision, no idea) — approve #22282 in ruben-orchestrator if not already done
+
+Reference IDs:
+- Ideas filed: #22282 [proposed]
+- Files touched: /tmp/scan_compress_waste_v2.py
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785833341637` — 8/4/2026, 2:10:06 AM PT — 68 turns
 
 **Original task:**
 
@@ -165,16 +197,76 @@ run this plase
 1. #22334 [proposed] — Rule-91/MCP tunnel wedge RCA: document the transport artifact (client-side JSON parse rejection ~1400 chars) for cross-agent learning
 ```
 
-**Ideas referenced:** #13487, #22333, #22334 [proposed]
+**Ideas referenced:** #13487, #1652, #20957, #20958, #2174, #2177 [resolved], #22128 [executing], #22240 [proposed], #22333, #22334 [proposed], #22335
 
 **Last PICKUP PROMPT:**
 
 ```
-r cross-agent learning
-- [ ] Update idea status + reconcile
-- [ ] Complete with PICKUP PROMPT block
-</task_progress>
-</use_mcp_tool>
+dexed: 311 rules, 9 hardfloor.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #22334 [resolved] — Rule-91/MCP tunnel wedge RCA: transport artifact cross-agent doc.
+
+Where we left off (verified 2026-08-04 02:09 PT):
+- RCA #22334 [resolved] — live-reproduced client-side JSON parse rejection (~150-300 char grep commands with braces/pipes/globs) returning 'Invalid JSON argument' on 2026-08-04 01:53-01:54 PT. Tunnel confirmed UP via echo OK.
+- Durable RCA docs deployed: .clinerules/165-transport-artifact-rca-22334.md (local) + /var/www/emtskills/docs/specs/transport_artifact_rca_22334.md (server).
+- Bug-library row #2177 [resolved] recorded (problem_key invalid_json_arg_brace_glob_shape_2026_08_04).
+- Rule-165 body updated with Extended fingerprint section per Ruben approval. MCP reindexed.
+- Handoff notes updated with RCA summary.
+
+Open threads to drive next:
+1. #22334 [resolved] — (done) document the transport artifact RCA. All actions complete.
+2. (none remaining — the human-only decision to update rule-165 has been executed)
+
+Reference IDs:
+- Ideas filed: #22334 [resolved]
+- Files touched: .clinerules/165-transport-artifact-rca-22334.md, /var/www/emtskills/docs/specs/transport_artifact_rca_22334.md, Rules-archive/165-invalid-json-arg-is-not-tunnel-wedged.md
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785807924524` — 8/4/2026, 2:07:44 AM PT — 108 turns
+
+**Original task:**
+
+```
+I’m assuming TeamHub is currently blank because you’re doing something with it at the moment? Lol.
+```
+
+**Ideas referenced:** #059669, #20340 [executing], #21010 [executing], #21011 [executing], #21038 [proposed], #21158 [executing], #21171, #21213 [executing], #21419 [executing], #2153, #2154, #21542 [rejected], #21546 [executing], #22066, #22067, #22068, #22086, #22087, #22188, #22274 [deployed], #22275 [filed], #22276 [proposed], #2563, #475569, #6021, #6366, #64748, #7390, #7634, #9577, #9795
+
+**Last PICKUP PROMPT:**
+
+```
+same number. No action needed.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up #22274_#22276 — TeamHub 500 fixed + pending-claims badge deployed, count-sync confirmed (2026-08-04 02:07 PT).
+
+Where we left off (verified 2026-08-04 02:07 PT):
+- #22274 [deployed]: TeamHub 500 fixed — missing require + $pdo scope bug, both resolved
+- #22276 [deployed]: pending_claims_badge.php created, HubShell sidebar wired, require re-enabled
+- Count sync verified: sidebar badge and scheduler_admin tab badge use identical SQL against same DB — no drift possible
+
+Open threads:
+- None. Both ideas complete.
+
+Reference IDs:
+- Ideas completed: #22274, #22276
+- Files created: `/var/www/emtskills/views/team_hub/pending_claims_badge.php`
+- Files touched: `/var/www/emtskills/routes/team_hub.php`, `/var/www/emtskills/lib/HubShell.php`
+- Backups: `HubShell.php.bak-20260803-fix22274`
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
 ```
 
 ### `1785821651406` — 8/4/2026, 1:48:58 AM PT — 522 turns
@@ -292,46 +384,6 @@ Reference IDs:
 - Ticket: #22241 (bridge/child verification + no-restart fix)
 - Ideas filed: #22241 [proposed], #22251 [proposed], #22329 [proposed], #22193 [proposed], #22194 [queued], #22097 [deployed]
 - Files touched: WOPR `/var/www/emtskills/mcp-servers/ruben-orchestrator/src/index.ts`, `build/index.js`, `/var/www/emtskills/scripts/cluster_ideas_pipeline.php`; local `/Users/rubenmajor/Desktop/orchestrator_index.ts`, `/Users/rubenmajor/Desktop/cluster_tools.ts`, `/Users/rubenmajor/Desktop/bridge.js`
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785807924524` — 8/4/2026, 12:35:15 AM PT — 100 turns
-
-**Original task:**
-
-```
-I’m assuming TeamHub is currently blank because you’re doing something with it at the moment? Lol.
-```
-
-**Ideas referenced:** #059669, #20340 [executing], #21010 [executing], #21011 [executing], #21038 [proposed], #21158 [executing], #21171, #21213 [executing], #21419 [executing], #2153, #2154, #21542 [rejected], #21546 [executing], #22066, #22067, #22068, #22086, #22087, #22188, #22274 [deployed], #22275 [filed], #22276 [proposed], #2563, #475569, #6021, #6366, #64748, #7390, #7634, #9577, #9795
-
-**Last PICKUP PROMPT:**
-
-```
- when staff file shift claims)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up #22276_v1 — Pending claims badge feature complete (2026-08-04 00:34 PT).
-
-Where we left off (verified 2026-08-04 00:34 PT):
-- #22276 [deployed]: views/team_hub/pending_claims_badge.php created, team_hub.php require re-enabled, HubShell sidebar wired
-- #22274 [resolved]: TeamHub 500 fixed — both half-deployed feature bugs (missing require + scope) resolved
-- TeamHub page loads; pending-claims badge will appear when emsu_shift_claims.pending > 0
-
-Open threads to drive next:
-1. Scheduler admin claims tab (`scheduler_admin.php?tab=pending_claims`) already has its own badge in L829 — confirm sidebar and tab badge counts stay in sync (both query same condition: `status='pending'`)
-
-Reference IDs:
-- Ideas completed: #22274, #22276
-- Files created: `/var/www/emtskills/views/team_hub/pending_claims_badge.php`
-- Files touched: `/var/www/emtskills/routes/team_hub.php`, `/var/www/emtskills/lib/HubShell.php`
-- Backups: `HubShell.php.bak-20260803-fix22274`
-- Fix scripts: `/tmp/fix_hubshell.py`, `/tmp/fix_teamhub_500.py`, `/tmp/fix_22276_wire.py`
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
@@ -590,52 +642,6 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1785817138435` — 8/3/2026, 9:32:05 PM PT — 24 turns
-
-**Original task:**
-
-```
-i noticed a lot of reasonsing time across models wasted contemplating context and whether to compress. It's kind of insane how many tokens are wasted on this. What can we do about that? Tell me how much waste is occurring from this.
-```
-
-**Ideas referenced:** #178584, #22282 [queued]
-
-**Last PICKUP PROMPT:**
-
-```
-thousands of tokens per month.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1785840812960 — implement mechanical context compression trigger.
-
-Where we left off (verified 2026-08-03 21:30 PT):
-- 412 Cline sessions analyzed — 9.2% of thinking tokens wasted on compress deliberation
-- ~880K tokens deliberating whether to compress, only 34 actual compress calls
-- Idea #22282 [proposed] filed with impact estimate
-
-Open threads to drive next:
-1. #22282 [proposed] — implement mechanical compress trigger: watchdog that fires should_compress_now + cline_compress_session at token threshold without LLM deliberation
-
-Reference IDs:
-- Ideas filed: #22282 [proposed]
-- Files touched: /tmp/scan_compress_waste_v2.py
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Quantify the waste: ~880K tokens across 412 sessions
-- [x] Identify why it happens: model deliberates, rarely acts (34 calls / 30K thinking blocks)
-- [x] Recommend fix: mechanical trigger (option 1)
-- [x] File idea #22282 [proposed]
-- [x] Validate completion passes rule 91 gates
-- [x] Ship completion
-</task_progress>
 </attempt_completion>
 ```
 
@@ -2501,104 +2507,4 @@ After IPs, run: sudo bash /tmp/fabric32.sh (on each node) for /32 routes.
 == FILES ON ALL 6 NODES ==
 - /tmp/glm52_authoritative.sh: vLLM launch script (TP=2 PP=3, Socket, all env vars). Currently set to NCCL_IB_DISABLE=1.
 - /tmp/glm_ring_cesarfirst.sh: Cesar-first stagg
-```
-
-### `1785548524428` — 8/1/2026, 2:00:05 AM PT — 350 turns
-
-**Original task:**
-
-```
-Jon says Daystron counsil stopped working
-```
-
-**Ideas referenced:** #11227, #12019, #16260, #18644, #20666 [deployed], #20757 [proposed], #20758 [proposed], #20759, #20761 [deployed], #20767 [proposed], #6104, #6419, #6432, #64748, #702534, #9090, #9475
-
-**Last PICKUP PROMPT:**
-
-```
-ers.php.bak-20260731-sonnetfix
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Daystrom Council restore + live-session babysit verification.
-
-Where we left off (verified 2026-07-31 19:43 PT / session ran 2026-08-01 02:00-03:00 PT):
-- Council restored to frankenstein-llm: all turn payloads and harvest helper now use frankenstein-llm (was 403-denied claude-haiku-4-5). Live session v2 (daystrom-20260801-013542-3442) completed with harvest returning 650 bytes of real JSON (was 0).
-- Seed prompt tool-hallucination trigger removed: agenda now says agents do NOT run tools, executor picks up proposals. Backups + lint clean.
-- Blocking bug: final harvest rejected both proposals via title validator (needs >=15 chars; model gives short/empty). Filed idea #20767 [proposed].
-- info@emsuniversity.com auto-sorting disabled: /etc/cron.d/emsu-info-maildir-mover replaced with comment (backup .bak-20260731).
-
-Open threads to drive next:
-- #20767 [proposed] — fix title validator (relax 15->3 chars or auto-title from problem) in cron_daystrom_council.php lines ~1718, then re-run live session and confirm proposals file > 0.
-- #20758 [proposed] — tighten RAMBLE_CAP further (max_tokens=220 already set; consider trimming member system-prompt rails) and update chair labels claude-haiku-4-5 -> frankenstein-llm (display-only, lines 441-1083).
-- #20666 [deployed] — verify next scheduled council (07:30 PT) uses frankenstein-llm end-to-end and files proposals; watch /var/log/emsu-cron/daystrom_scheduled.log.
-
-Reference IDs:
-- Ideas filed: #20666 [deployed], #20757 [proposed], #20758 [proposed], #20761 [deployed], #20767 [proposed]
-- Files touched: /var/www/emtskills/cron/cron_daystrom_council.php, /var/www/emtskills/lib/daystrom_harvest_helpers.php, /etc/cron.d/emsu-info-maildir-mover
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785537564406` — 8/1/2026, 1:56:30 AM PT — 902 turns
-
-**Original task:**
-
-```
-#Argus
-
-Here is the comprehensive build-and-ship handoff. Tags below are server-derived from a live GATE B reconcile run seconds ago, not hand-written.
-
-Two more Argus response-quality fixes shipped this session: **ARGUS_NO_REASONING_LEAK_V1** (the prompt had zero anti-leak guidance, grep count 0) and **ARGUS_NO_DEADEND_V1** (Jon was told to "Hit Send again" after 4 failed tries, that count is now 0). Both php -l clean, FPM reloaded, backups kept. And #20555 just flipped to impl_failed, making it the **fourth** idea killed by the missing `blocked_reason` column, which moves #20569 to the top o
-```
-
-**Ideas referenced:** #10003, #10017, #11261, #1130, #1131, #1241, #12425, #12430, #12459, #1248, #1249, #1252, #1258, #128263, #128266, #14828, #14829, #14834, #14835, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16578, #16594, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #1779, #177956, #178553, #178554, #178556, #1798, #1828, #18357, #1850, #18586, #1896, #19173, #19239 [rejected], #19325, #19370, #19415, #19416, #19419, #19490, #19519, #19567, #1986, #1988, #1989, #1991, #1996, #20042, #2006, #2014, #20282 [executing], #20333 [queued], #20334 [queued], #20388 [queued], #20389 [queued], #20392 [queued], #20393 [deployed], #20405 [queued], #20410 [queued], #20497 [queued], #20500 [queued], #20501 [queued], #20547 [queued], #20549 [queued], #20555 [blocked], #20564 [queued], #20565 [queued], #20569 [proposed], #20613, #20620 [executing], #20622 [executing], #20627 [deployed], #20628 [deployed], #20629 [deployed], #2063, #20630 [proposed], #2065, #20661 [executing], #20662 [proposed], #20663 [proposed], #20672 [proposed], #20674 [executing], #20676 [proposed], #20677 [proposed], #20681 [executing], #20682 [executing], #20690 [proposed], #2073, #20765 [proposed], #2084, #2085, #2113, #2125, #2126 [deployed], #2127 [deployed], #2128 [approved], #30363, #3229 [approved], #3231 [rejected], #4517, #6432, #6523, #7142, #7149, #7925, #9090, #9650, #9660
-
-**Last PICKUP PROMPT:**
-
-```
-in_progress 2026-08-01 01:53).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785566876939 (Argus build-and-ship drive, window 4 follow-up).
-
-Where we left off (verified 2026-08-01 01:53 PT):
-- Extension fix shipped: literal backslash-n in service-worker.js line 27 swallowed const OPENAI_STYLE_TIMEOUT_MS into a comment; split to two lines, node --check OK, manifest 2.5.1. Jon must reload at chrome://extensions.
-- PERM_MATRIX_EXECADMIN_EDIT_V1 live: ExecAdmin can toggle Roles-tab cells; server scope limits ExecAdmin to Admin/CustomerService overrides. php -l clean, FPM reloaded.
-- Cyra access note delivered to chat 84.
-- #20569 [deployed] (verified: reconcile_ideas returned status=deployed) but its reason capture is still blind, see #20765 [proposed].
-- #20630 [executing], #20672 [executing], #20676 [executing] re-driven after impl_failed (verified: idea_action implement returned in_progress 01:53).
-- #20565 [rejected] (verified: reconcile_ideas returned status=rejected); wrong premise, successor is #20630 [executing].
-
-Open threads to drive next:
-1. #20630 [executing]: phantom-payment verifier re-driven; if it impl_fails a second time, hand-ship per GATE C (agent is the ship path).
-2. #20672 [executing]: payment-attribution flow, same rule.
-3. #20676 [executing]: ruben_active MCP-traffic detector, same rule.
-4. #20765 [proposed]: small patch, capture the exception at the impl_failed throw site instead of a post-hoc log tail. Approve + implement.
-5. #20555 [executing]: delegation hardening, executor in testing stage.
-6. #20392 [executing] and #20497 [executing]: executor-owned, no action needed.
-7. #20334 [queued], #20388 [queued], #20389 [queued], #20405 [queued], #20410 [queued], #20500 [queued], #20501 [queued], #20547 [queued], #20549 [queued]: executor/review queue, no rebuilds.
-8. (human-only decision, no idea): Jon reloads the Argus extension (chrome://extensions, reload button) to pick up v2.5.1.
-9. (human-only decision, no idea): the five Vicky money questions (deposit vs full balance, Jason Pan phantom 2295 QB payment, dispute-refund students, third-party/family payers, installment-plan currency) remain unanswered. Unsuspend ONLY the four substantial-payment students (Jacob Aries 1195, Alexandra Russell 1095, Austin Ford 995, Dyron Castillo 672.50) after answers; leave the 50-dollar deposit group suspended.
-
-Reference IDs:
-- Ideas filed this session: #20765 [proposed]
-- Ideas re-driven this session: #20630 [executing], #20672 [executing], #20676 [executing]
-- Ideas reconciled: #20333 [deployed], #20334 [queued], #20388 [queued], #20389 [queued], #20392 [executing], #20393 [deployed], #20405 [queued], #20410 [queued], #20497 [executing], #20500 [queued], #20501 [queued], #20547 [queued], #20549 [queued], #20555 [executing], #20564 [deployed], #20565 [rejected], #20569 [deployed]
-- Files touched: public/argus-extension/service-worker.js, public/argus-extension/manifest.json, routes/alltastic_api.php, routes/argus_download.php, cline_task_ledger.md
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] ARGUS_REASONING_LEAK_FILTER_V2 shipped + gate-clear completion (window 4)
-- [x] Jon's extension error FIXED: literal \n in service-worker.js line 27; node --check OK, manifest 2.5.1
-- [x] perm_set for ExecAdmin GRANTED: PERM_MATRIX_EXECADMIN_EDIT_V1, php -l clean, FPM reloaded
-- [x] Cyra access note sent to 
 ```

@@ -49,10 +49,27 @@ These phrases are reserved for genuine TRANSPORT failures (the right-hand column
 - Rule 144 — server-path writes go through ssh_command (use file-write + transfer for complex payloads to avoid the arg-parse trap entirely)
 - Rule 41 addendum — the MCP "result missing" trigger is for empty bodies, not for arg-parse rejections
 
+## Extended fingerprint (2026-08-04, RCA #22334)
+
+The 2026-06-20 incident captured only complex shapes (nested quotes, heredocs, `$(...)`, embedded JSON). The 2026-08-04 incident proves the artifact is broader:
+
+**A moderately long command (~150-300 chars) containing brace chars `{|}`, double quotes, glob chars (`*`, `?`), and slashes can trip the client-side parser even with NO heredoc, NO `$(...)`, NO embedded JSON.**
+
+Live reproduction (2026-08-04 01:53-01:54 PT):
+- Two `grep -r "...\|..." /tmp/*.md ...` style ssh_command calls → `Invalid JSON argument` on both.
+- Immediately after, `{"command": "echo OK"}` → `OK`. Tunnel was UP the entire time.
+- The same failure shape also reproduced on the `mysql` execute_query tool and the `clinerules` validate_completion tool when handed a long result_text parameter — this is not emsu-operations-specific.
+
+Consequences for agents:
+- The ~1400-char ceiling / long-command rejection is a CLIENT-side serialization artifact. Treat char length + brace/quote/glob shape as the fingerprint; do NOT pattern-match it to a timeout, an empty result, or a wedge (rule 143 counts only empty results / missing bodies, never parse rejections).
+- When validation tools like `clinerules_validate_completion` reject a long result_text, shorten the result_text (or split it) instead of dropping the PICKUP PROMPT. Do not conclude the MCP is wedged.
+- Durable RCA: `.clinerules/165-transport-artifact-rca-22334.md` (local) and `/var/www/emtskills/docs/specs/transport_artifact_rca_22334.md` (server). Bug-library problem_key `invalid_json_arg_brace_glob_shape_2026_08_04` (row #2177).
+
 ## Source incident
 
 2026-06-20 — #13487 clinerules/tool_compliance LoRA window. A long sequence of `ssh_command` calls carrying RunPod-mint curls (embedded `-d '{...}'` JSON), pod-staging heredocs, and `$(date +%s)` substitutions repeatedly returned `Invalid JSON argument`. The window concluded the WOPR tunnel was wedged and parked the task. In reality `server_status` worked throughout and `echo TUNNEL_FINE && uptime` succeeded on the first plain-shaped call — the tunnel was never down. The fix was always to simplify the command shape (single-line, no embedded JSON/heredoc), not to kick a tunnel. This rule makes that distinction permanent so no future window mis-diagnoses an arg-parse rejection as a transport outage.
 
 ## Last updated
 
+2026-08-04 — added Extended fingerprint section (RCA #22334).
 2026-06-20 — initial.

@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/4/2026, 3:51:30 AM PT | window: last 72h | 57 tasks | index total 418 (parsed 0, cached 418)
+Generated: 8/4/2026, 4:51:30 AM PT | window: last 72h | 56 tasks | index total 418 (parsed 0, cached 418)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -66,7 +66,6 @@ Generated: 8/4/2026, 3:51:30 AM PT | window: last 72h | 57 tasks | index total 4
 | `1785613709787` | 8/1/2026, 12:48:30 PM | 1 | 5KB | #Julia/Claudia |
 | `1785537361555` | 8/1/2026, 12:37:04 PM | 496 | 2332KB | What's going on with Ruben Executor? Can you fix it? Play doctor of frankenstein executor  |
 | `1785360672171` | 8/1/2026, 9:23:32 AM | 3888 | 18423KB | For call ins for potential customers, i wonder how we can prioritize those with Telephony  |
-| `1785566876939` | 8/1/2026, 3:57:20 AM | 634 | 1456KB | GLM ring RoCE root cause found (wrong-NIC RX-offload drops from /30 shortcut routes); /32  |
 
 ---
 
@@ -2432,79 +2431,4 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1785566876939` — 8/1/2026, 3:57:20 AM PT — 634 turns
-
-**Original task:**
-
-```
-GLM ring RoCE root cause found (wrong-NIC RX-offload drops from /30 shortcut routes); /32 fabric32.sh fix mid-deploy; relaunch pending. Comprehensive rule-91 pickup for the next window below — validated and gate-cleared.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785314663557 — GLM ring RoCE bring-up: root cause SOLVED in analysis (wrong-NIC RX-offload drops from /30 shortcut routes), /32 route fix MID-DEPLOY (unverified), relaunch + serve verification pending. Adapter layer wa
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #1579 [approved], #16163, #16265, #16304, #16844, #1754, #1755, #178531, #18312, #18326, #20005 [proposed], #20264 [queued], #20297 [queued], #20495 [executing], #20498 [queued], #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20553 [blocked], #20724 [proposed], #20725 [proposed], #20729 [queued], #20732 [queued], #20733 [queued], #20740 [proposed], #2101, #2116 [deployed], #2118, #48031, #48140
-
-**Last PICKUP PROMPT:**
-
-```
-mpt below for the next window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785314663557 — GLM ring: TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wants autonomous monitoring + cron automation so the ring can self-recover overnight without human intervention.
-
-== CURRENT STATE (verified 2026-08-01 03:55 PT) ==
-- RING: DEADLOCKED. All 6 containers Up 2 hours (cato/augustus/pompey/marcus/tiberius/cesar), 0 errors, but no progress past KV cache (09:06:09). HTTP 000 (not serving).
-- CONFIG: TP=2 PP=3, NCCL_IB_DISABLE=1 (Socket transport), NCCL_ALGO=Ring, CROSS_NIC=1, MERGE_NICS=1.
-- GPU MEMORY: 56 GiB model + 36 GiB KV cache per node, all allocated but deadlocked.
-- WATCHDOG: STOPPED on all 6 nodes (disabled during RoCE work).
-
-== WHAT RUBEN WANTS ==
-Ruben wants you to build autonomous monitoring + cron automation so the ring can self-recover overnight without human intervention. This means:
-1. A monitoring script that checks if the ring is serving (HTTP 200 on :8210) and if not, automatically relaunches with the best-known config.
-2. A cron job that runs the monitoring script every 5-10 min.
-3. The automation should try multiple configs in sequence if one fails (e.g., TP=2 PP=3 + Socket, then TP=2 PP=3 + RoCE, then PP=6 + Socket).
-4. The automation should log all attempts and results to a file for review in the morning.
-5. The automation should NOT require human intervention — it should handle container cleanup, relaunch, and verification autonomously.
-
-== THE BEST-KNOWN CONFIG (TP=2 PP=3 + Socket) ==
-This config gets the furthest: ring connects, PP group passes, weights load (100%), KV cache computed. But it deadlocks during compilation. The deadlock is in PP group send/recv over TCP during the compilation phase.
-
-Possible fixes to try autonomously:
-1. Increase VLLM_ENGINE_READY_TIMEOUT_S to 3600 (60 min) — may give compilation more time.
-2. Add NCCL_DEBUG=TRACE to diagnose the deadlock.
-3. Try NCCL_NET=Socket (instead of IB_DISABLE=1).
-4. Try Gloo backend for PP group (patch parallel_state.py).
-5. Try --distributed-executor-backend ray.
-
-== FABRIC IPs (MUST BE RESTORED AFTER REBOOT) ==
-The reboot cleared all 10.220.x.x IP addresses. Must be restored on each boot:
-- Cato (192.168.1.115): f0=10.220.1.1/30 on enP2p1s0f0np0, f1=10.220.6.2/30 on enP2p1s0f1np1
-- Augustus (192.168.1.244): f0=10.220.1.2/30, f1=10.220.2.1/30
-- Pompey (192.168.1.21): f0=10.220.2.2/30, f1=10.220.3.1/30
-- Marcus (192.168.1.171): f0=10.220.3.2/30, f1=10.220.4.1/30
-- Tiberius (192.168.1.32): f0=10.220.4.2/30, f1=10.220.5.1/30
-- Cesar (192.168.1.56): f0=10.220.5.2/30, f1=10.220.6.1/30
-After IPs, run: sudo bash /tmp/fabric32.sh (on each node) for /32 routes.
-
-== ALL 7 APPROACHES TRIED (do not re-try without modification) ==
-1. PP=6 + RoCE: qp_fail (non-adjacent pairs, ibv_modify_qp 110)
-2. PP=6 + Socket: 0 tok/s (1 Gbps too slow for 6 PP stages)
-3. TP=2 PP=3 + RoCE: qp_fail (non-adjacent PP pairs)
-4. TP=2 PP=3 + Socket: weights load, KV cache, then DEADLOCK during compilation
-5. Reboot + RoCE: GIDs cleared, had to manually restore fabric IPs
-6. CPU PP communicator (use_device_communicator=False): PP group hangs (CPU can't do tensor send/recv)
-7. TP=2 PP=3 + Socket with patched parallel_state.py: same deadlock
-
-== FILES ON ALL 6 NODES ==
-- /tmp/glm52_authoritative.sh: vLLM launch script (TP=2 PP=3, Socket, all env vars). Currently set to NCCL_IB_DISABLE=1.
-- /tmp/glm_ring_cesarfirst.sh: Cesar-first stagg
 ```

@@ -6,16 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/4/2026, 1:22:13 PM PT | window: last 72h | 79 tasks | index total 445 (parsed 6, cached 439)
+Generated: 8/4/2026, 2:22:13 PM PT | window: last 72h | 78 tasks | index total 445 (parsed 5, cached 440)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785861156554` | 8/4/2026, 1:22:12 PM | 327 | 677KB | https://emsuniversity.com/emtskills slow to load again |
-| `1785817138435` | 8/4/2026, 1:22:10 PM | 37 | 130KB | i noticed a lot of reasonsing time across models wasted contemplating context and whether  |
-| `1785858742320` | 8/4/2026, 1:21:53 PM | 203 | 1421KB | I dont' see here where the callback system is working properly? Seems like it is not. Can  |
-| `1785873518014` | 8/4/2026, 1:21:36 PM | 129 | 324KB | #GLM  |
-| `1785871298806` | 8/4/2026, 1:18:41 PM | 174 | 484KB | #120Bs |
-| `1785858480786` | 8/4/2026, 1:10:51 PM | 291 | 833KB | For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. P |
+| `1785858742320` | 8/4/2026, 2:21:15 PM | 295 | 2615KB | I dont' see here where the callback system is working properly? Seems like it is not. Can  |
+| `1785858480786` | 8/4/2026, 2:21:15 PM | 497 | 1958KB | For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. P |
+| `1785817138435` | 8/4/2026, 2:12:26 PM | 128 | 466KB | i noticed a lot of reasonsing time across models wasted contemplating context and whether  |
+| `1785873518014` | 8/4/2026, 2:06:51 PM | 294 | 691KB | #GLM  |
+| `1785861156554` | 8/4/2026, 1:53:32 PM | 398 | 802KB | https://emsuniversity.com/emtskills slow to load again |
+| `1785871298806` | 8/4/2026, 1:25:05 PM | 178 | 496KB | #120Bs |
 | `1785868208238` | 8/4/2026, 12:49:31 PM | 322 | 689KB | #GLM  |
 | `1785869498305` | 8/4/2026, 12:37:31 PM | 162 | 508KB | Ruben Orchestrator MCP is offline. This is odd considering. Take a look at MCP Troubleshoo |
 | `1785869837093` | 8/4/2026, 11:57:54 AM | 4 | 18KB | I have been told you died. Is that false? |
@@ -88,100 +88,12 @@ Generated: 8/4/2026, 1:22:13 PM PT | window: last 72h | 79 tasks | index total 4
 | `1785483679627` | 8/1/2026, 4:07:30 PM | 126 | 325KB | yesterday, SSL expired for some parts of emsuniversity.com. Some users still reporting SSL |
 | `1785620201169` | 8/1/2026, 2:37:03 PM | 2 | 8KB | **Yes, run the next window on frankenstein-llm.** It is the correct pick per rule 146 (fre |
 | `1785582017987` | 8/1/2026, 2:35:44 PM | 642 | 7444KB | GLM ring TP=2 PP=3 + Socket deadlocked after weights loaded. 7 approaches tried. Ruben wan |
-| `1785463237084` | 8/1/2026, 1:25:47 PM | 1400 | 4567KB | AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_co |
 
 ---
 
 ## Per-window detail
 
-### `1785861156554` — 8/4/2026, 1:22:12 PM PT — 327 turns
-
-**Original task:**
-
-```
-https://emsuniversity.com/emtskills slow to load again
-```
-
-**Ideas referenced:** #16170, #1658, #1986, #2176, #2177, #22334, #22355 [proposed], #22517 [in_progress], #22550 [awaiting_review]
-
-**Last PICKUP PROMPT:**
-
-```
-ay and status is now deployed.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #22550 [deployed]: emtskills capacity increase follow-up.
-
-Where we left off (verified 2026-08-04 12:53 PT):
-- Capacity increase deployed. pm.max_children 300, spawn_rate 64, thread_cache 200, max_connections 2000, all verified live.
-- Root-caused the mystery reverter: /var/www/emtskills/scripts/emsu-memory-guardian.sh (every-minute cron) rewrote max_children to tier 180. Patched tiers to 300/400.
-- HANDOFF_NOTES updated with full change record.
-
-Open threads to drive next:
-1. #22550 [deployed] Watch for fleet burst regressions; confirm no FPM worker starvation under the next vec_query/orchestrator spike.
-2. #22550 [deployed] Next capacity lever: MySQL is still ~272% CPU from orchestrator_api LLM curl_exec + caller_lookup. Consider moving LLM calls to fleet boxes or adding query indexes.
-
-Reference IDs:
-- Ideas filed: #22550 [deployed]
-- Files touched: emsu-memory-guardian.sh, www.conf, 99-emsu-perf.cnf, 99-emsu-max-connections.cnf, HANDOFF_NOTES.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Diagnose slow load (origin fast, fleet API traffic drives load)
-- [x] Increase PHP-FPM max_children tiers in memory-guardian (moderate 180→300, full 200→400)
-- [x] Increase pm.max_spawn_rate 32→64
-- [x] Increase MySQL thread_cache_size 50→200, max_connections 1000→2000 (live + persisted)
-- [x] Update fpm_reverter_config desired=300, auto_reapply=1
-- [x] Verify pm.max_children=300 persists across guardian cycle, live TTFB 14ms
-- [x] Log changes to HANDOFF_NOTES
-- [x] Update idea #22550 to deployed and complete with pickup prompt
-</task_progress>
-</attempt_completion>
-```
-
-### `1785817138435` — 8/4/2026, 1:22:10 PM PT — 37 turns
-
-**Original task:**
-
-```
-i noticed a lot of reasonsing time across models wasted contemplating context and whether to compress. It's kind of insane how many tokens are wasted on this. What can we do about that? Tell me how much waste is occurring from this.
-```
-
-**Ideas referenced:** #178584, #19162, #22282 [queued]
-
-**Last PICKUP PROMPT:**
-
-```
-ools without LLM deliberation.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1785840812960 — implement mechanical context compression trigger.
-
-Where we left off (verified 2026-08-04 02:16 PT):
-- Threshold per rule 119: CHECK at 0.55 × W, COMPRESS at 0.75 × W — no new numbers needed
-- 412 sessions analyzed, ~880K tokens wasted on deliberation that mechanical trigger eliminates
-- Idea #22282 [proposed] pending approval — user confirmed threshold is the blocker
-
-Open threads to drive next:
-1. #22282 [proposed] — approved once threshold confirmed. Implement: pre-turn watchdog reads X from environment_details, fires should_compress_now at 0.55W, cline_compress_session at 0.75W. Zero LLM deliberation.
-2. (human-only decision, no idea) — approve #22282 in ruben-orchestrator if not already done
-
-Reference IDs:
-- Ideas filed: #22282 [proposed]
-- Files touched: /tmp/scan_compress_waste_v2.py
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785858742320` — 8/4/2026, 1:21:53 PM PT — 203 turns
+### `1785858742320` — 8/4/2026, 2:21:15 PM PT — 295 turns
 
 **Original task:**
 
@@ -193,26 +105,27 @@ Also as an admin I'd liek to be able to see the schedule in the admin section.
 I think there's something wrong eith the actual tab. Can you test nd fix it. login, use tokens to test and resolve. make usre it actually all works and is wired in properly? Are CFAs aware and how are they utilizing this? This should only be by request.
 ```
 
-**Ideas referenced:** #001018, #059669, #062017, #127891, #128274, #1652, #1658, #166534, #1986, #20825, #2168, #2174, #2176, #2177, #21775, #22066, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #22334, #22355 [proposed], #22507 [deployed], #2563, #334155, #374151, #475569, #64748, #92400, #9733, #9734
+**Ideas referenced:** #001018, #059669, #062017, #127891, #128274, #1652, #1658, #166534, #18868, #19163, #1986, #20825, #2168, #2174, #2176, #2177, #21775, #22066, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #22334, #22355 [proposed], #22507 [deployed], #2563, #334155, #374151, #475569, #64748, #6785, #92400, #9733, #9734
 
 **Last PICKUP PROMPT:**
 
 ```
-ed for admin view at line 2412
+errors she'd see on that page.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up telephony hub errors — verify ruben_context_api.php 404 is gone and switchTab works in agent view.
+Pick up Vicky's Argus telephony report — pull argus_escalations and confirm her exact error.
 
-Where we left off (verified 2026-08-04 12:25 PT):
-- ruben_bubble.js line 25: changed `/api/ruben_context_api.php` → `/emtskills/api/ruben_context_api.php` (deployed)
-- telephony_hub.php: PHP syntax OK; JS block structure verified (node --check pass); tab-callbacks extracted from nesting
-- Callback system: 1 e2e-test booking, 0 real requests, 0 CFA suggestions, 180 empty slots
-- Idea #22507 [deployed] — Telephony Hub callback tab nesting bug FIXED + admin schedule section added + ruben_bubble.js 404 fixed
+Where we left off (verified 2026-08-04 13:24 PT):
+- Callback usage audit complete: 1 e2e-test booking, 0 real student/CFA usage, 180 empty slots — feature never offered to students
+- ruben_bubble.js 404 fixed (hardcoded /api/ → /emtskills/api/, deployed)
+- tab-callbacks nesting bug fixed (moved from inside tab-settings to top-level panel)
+- Argus escalation query NOT completed — SSH quoting error blocked `argus_escalations` lookup
+- Idea #22507 [deployed] — Telephony Hub callback tab fix + admin schedule section
 
 Open threads to drive next:
-1. #22507 [deployed] — Ruben visits `telephony_hub.php?view=agent` and confirms: ruben_context_api.php 404s are gone, Callbacks tab loads correctly, switchTab works for all tabs
+1. #22507 [deployed] — Run `SELECT id, summary, status, created_at FROM argus_escalations WHERE summary LIKE '%teleph%' ORDER BY created_at DESC LIMIT 10` via emsu-operations sql_query to get Vicky's exact Argus report, then resolve the underlying telephony_hub.php JS error (switchTab is not defined at line 3015 still needs the agent-view script audit completed)
 
 Reference IDs:
 - Ticket: (none filed — Ruben asked via Cline)
@@ -224,7 +137,105 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785873518014` — 8/4/2026, 1:21:36 PM PT — 129 turns
+### `1785858480786` — 8/4/2026, 2:21:15 PM PT — 497 turns
+
+**Original task:**
+
+```
+For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. Probably a lot have gone unanswered. The last one we need to develop that Catalog, brochure, etc.. base dn what we currently have for the EMT program, and everythign else. We also need to go back through other requests for the last several weeks and do a massive sweep of improvements to help get the program up and running. Give me a comprehenisvie list based on what you find (which will no doubt require subagent research) so that we can push forward. Oh also work to improve the CNA Agent and the page she i
+```
+
+**Ideas referenced:** #0000, #1658, #17130 [superseded], #17537 [rejected], #18132 [deployed], #19125, #19171, #19173, #19338, #19458, #19491, #1986, #19898, #19904, #20251, #20903, #20957, #20958, #21062, #21419, #2176, #2177, #22280, #22334, #22355 [proposed], #22412, #22420, #22423, #22437, #22514 [in_progress], #22515 [in_progress], #22516 [in_progress], #22517 [in_progress], #22518 [in_progress], #22519 [in_progress], #22520 [in_progress], #22521 [in_progress], #6581, #6933, #6942, #7301, #7612, #7620
+
+**Last PICKUP PROMPT:**
+
+```
+hes manually before deploying.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — CNA Program sweep: 3 deliverables on Desktop; Shela email unsent; 6 orchestrator retries stalled.
+
+Where we left off (verified 2026-08-04 13:30 PT):
+- cna_catalog_draft.md (353 lines, 14.9KB), cna_brochure_draft.md (78 lines, 3.0KB), cna_caa_draft_valleywise.md (253 lines, 13.7KB) all copied to /Users/rubenmajor/Desktop/.
+- Shela email not sent — send_email tool rejected JSON argument during this session. Either retry send_email with correct JSON or Ruben forwards from Desktop.
+- 6 orchestrator ideas still stalled in coding after 50+ min (expected 2). emsuserver lacks write permission on /tmp/ruben-impl-worker-*.log files owned by www-data.
+- 2 ideas ready_for_review: #22515 [awaiting_review] (Shela response email with drifted patches), #22518 [awaiting_review] (CAA send with drifted patches). Both have SPEC DRIFT warnings.
+- Shela-Vicky-Verify-Upload gate flow present in #22514, #22515, #22518 DB descriptions.
+
+Open threads to drive next:
+1. #22514 [executing] — CNA Catalog/Brochure. Manually built and on Desktop. Verify catalog sections against EMT arizonacatalog.pdf table-of-contents.
+2. #22515 [awaiting_review] — Shela response email. Either deploy drifted orchestrator patches or send email manually from Desktop files.
+3. #22517 [executing] — Backfill 8 task drafts. Stalled for 50+ min. Write task drafts to cna_program_tasks table directly if orchestrator doesn't unstick.
+4. #22518 [awaiting_review] — CAA send to Valleywise. CAA draft on Desktop. Deploy or reject drifted patches.
+5. #22516 [executing] — CNA Agent silence RCA. Check if cron_cna_agent.php source was read to confirm crontab diagnosis.
+6. #22519 [executing] — Timeline recalibration. Stalled.
+7. #22520 [executing] — Public CNA info page. Stalled.
+8. #22521 [executing] — Health watchdog. Stalled. Verify crontab entry if/when deployed.
+
+Reference IDs:
+- Ideas filed: #22514 [executing], #22515 [awaiting_review], #22516 [executing], #22517 [executing], #22518 [awaiting_review], #22519 [executing], #22520 [executing], #22521 [executing].
+- Files on Desktop: /Users/rubenmajor/Desktop/cna_catalog_draft.md, /Users/rubenmajor/Desktop/cna_brochure_draft.md, /Users/rubenmajor/Desktop/cna_caa_draft_valleywise.md.
+- Files on server: /var/www/emtskills/docs/cna_program/cna_affiliation_template.md (CAA template), /var/www/emtskills/docs/cna_program/CNA_PRICING_RESEARCH_2026-05-06.md, /var/www/emtskills/docs/cna_program/implementation_plan.md.
+- Tickets: Shela Aug 4 email, Valleywise site #38 (Sherrie Beardsley), 8 Shela-requested task drafts from May/June.
+
+When done, append to cline_task_ledger.md per rule 07 and run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785817138435` — 8/4/2026, 2:12:26 PM PT — 128 turns
+
+**Original task:**
+
+```
+i noticed a lot of reasonsing time across models wasted contemplating context and whether to compress. It's kind of insane how many tokens are wasted on this. What can we do about that? Tell me how much waste is occurring from this.
+```
+
+**Ideas referenced:** #178584, #19162, #22282 [queued], #5351, #5354, #7377, #7380, #8370, #9731
+
+**Last PICKUP PROMPT:**
+
+```
+ion** in load on Frankenstein.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1785840812960: monitor mechanical compress signal system post-deploy.
+
+Where we left off (verified 2026-08-04 14:11 PT):
+- Confirmed: no issues for Frankenstein LLM. Client-side only, reduces server prompt load on compress.
+- One watch item: `model_window` config must match actual model window. Currently 128K. If Frankenstein serves different sizes, update `~/.config/emsu/budget_watchdog.json`.
+- Reference doc at Desktop/Cline Compress.MD (221 lines)
+- Idea #22282 [executing]
+
+Open threads to drive next:
+1. #22282 [executing] - in a real Cline window, let context cross 70,400; verify the model's FIRST tool call is `ls /tmp/cline_compress_signal_TASK<id>.json`, then should_compress_now fires with zero deliberation. Log the observation.
+2. #22282 [executing] - after ~1 week, re-run /tmp/scan_compress_waste_v2.py over new sessions. Expected: deliberation blocks drop from 9.2% to <1%. Report actual.
+
+Reference IDs:
+- Idea: #22282 [executing]
+- Files: ~/bin/cline_budget_watchdog.py, ~/Documents/Cline/Rules/119-mandatory-context-compress.md, ~/.config/emsu/budget_watchdog.json, ~/Library/LaunchAgents/com.emsu.cline-budget-watchdog.plist, Desktop/Cline Compress.MD
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Quantify waste: ~880K tokens, 9.2% of thinking
+- [x] Build watchdog v2 with signal-file writer + ~/bin/ deploy
+- [x] Update rule 119 with mechanical pre-turn signal check, reindex
+- [x] Create launchd agent + config file, verify live
+- [x] Create Desktop/Cline Compress.MD reference doc
+- [x] Answer: compress %s (55% CHECK, 75% COMPRESS)
+- [x] Answer: Frankenstein LLM impact (none — client-side only, beneficial for server load)
+</task_progress>
+</attempt_completion>
+```
+
+### `1785873518014` — 8/4/2026, 2:06:51 PM PT — 294 turns
 
 **Original task:**
 
@@ -242,11 +253,50 @@ Build and ship these now:
 Unchanged and still worth doing, but it is now clearly the smaller fish. The copy window I gave you stands: size max_tokens at 3x the target word count, per-surfac
 ```
 
-**Ideas referenced:** #12335, #12459, #13108, #13121, #15371, #15374, #18567, #1877, #18868, #1889, #19144, #19163, #1965, #1966, #1967, #21045, #22128 [executing], #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #22479 [proposed], #22480 [proposed], #22484 [proposed], #22491 [proposed], #22500 [executing], #22527 [proposed], #22528 [proposed], #22543 [proposed], #22563 [proposed], #22564 [proposed], #22565 [proposed], #22570 [proposed], #22571 [proposed], #22572 [proposed], #22583 [proposed], #22584 [proposed], #6429
+**Ideas referenced:** #12335, #12459, #13108, #13121, #13475, #15371, #15374, #18567, #1877, #18868, #1889, #19144, #19163, #1934, #1965, #1966, #1967, #21045, #22128 [executing], #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #22479 [proposed], #22480 [proposed], #22484 [proposed], #22491 [proposed], #22500 [executing], #22527 [proposed], #22528 [proposed], #22543 [proposed], #22563 [proposed], #22564 [proposed], #22565 [proposed], #22570 [proposed], #22571 [proposed], #22572 [proposed], #22583 [proposed], #22584 [proposed], #22598 [proposed], #22599 [proposed], #22600 [proposed], #22601 [proposed], #22602 [proposed], #22612 [proposed], #22613 [proposed], #6429
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785871298806` — 8/4/2026, 1:18:41 PM PT — 174 turns
+### `1785861156554` — 8/4/2026, 1:53:32 PM PT — 398 turns
+
+**Original task:**
+
+```
+https://emsuniversity.com/emtskills slow to load again
+```
+
+**Ideas referenced:** #16170, #1658, #1986, #2176, #2177, #22334, #22355 [proposed], #22517 [in_progress], #22550 [awaiting_review]
+
+**Last PICKUP PROMPT:**
+
+```
+d, so freshness is unaffected.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #22550 - emtskills capacity increase and slow-load follow-up.
+
+Where we left off (verified 2026-08-04 13:53 PT):
+- Deployed and verified: FPM max_children tiers 180 to 300 moderate, 200 to 400 full, via memory-guardian.sh patch. pm.max_spawn_rate 64. MySQL thread_cache 200, max_connections 2000, innodb_io_capacity 4000/8000, read_io_threads 8. All persisted.
+- Live verification: pm.max_children 300, MySQL params live, external TTFB 13ms, load 10 on 48 cores.
+- Ruben asked for double-check on side effects and why phone lookups were highlighted. Answered: no risky caching added, guardrails intact, Lookup queries are 1 to 5ms indexed, under 5% of MySQL CPU. Real drivers are WordPress/moodle databases plus LLM orchestration processes.
+
+Open threads to drive next:
+1. #22550 [deployed] Watch load this week. If access log shows caller_lookup fallback VIEW path spiking (look for ['vapi_lookup'] fallback lines in php-fpm log), optimize the VIEW join with an index. No action yet, baseline is healthy.
+2. #22550 [deployed] Optional next lever if load climbs again: move orchestrator_api LLM curl_exec calls to the litellm host so MariaDB CPU drops. Propose before doing, it is a bigger change.
+
+Reference IDs:
+- Ideas filed: #22550 [deployed]
+- Files touched: emsu-memory-guardian.sh, www.conf, 99-emsu-perf.cnf, 99-emsu-max-connections.cnf, HANDOFF_NOTES.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785871298806` — 8/4/2026, 1:25:05 PM PT — 178 turns
 
 **Original task:**
 
@@ -300,55 +350,6 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1785858480786` — 8/4/2026, 1:10:51 PM PT — 291 turns
-
-**Original task:**
-
-```
-For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. Probably a lot have gone unanswered. The last one we need to develop that Catalog, brochure, etc.. base dn what we currently have for the EMT program, and everythign else. We also need to go back through other requests for the last several weeks and do a massive sweep of improvements to help get the program up and running. Give me a comprehenisvie list based on what you find (which will no doubt require subagent research) so that we can push forward. Oh also work to improve the CNA Agent and the page she i
-```
-
-**Ideas referenced:** #0000, #1658, #17130 [superseded], #17537 [rejected], #18132 [deployed], #19125, #19171, #19173, #19338, #19458, #19491, #1986, #19898, #19904, #20251, #20903, #20957, #20958, #21062, #21419, #2176, #2177, #22280, #22334, #22355 [proposed], #22412, #22420, #22423, #22437, #22514 [in_progress], #22515 [in_progress], #22516 [in_progress], #22517 [in_progress], #22518 [in_progress], #22519 [in_progress], #22520 [in_progress], #22521 [in_progress], #7301
-
-**Last PICKUP PROMPT:**
-
-```
-g, CAA, and brochure together.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — CNA Program sweep; 6 orchestrator retries stalled in coding stage.
-
-Where we left off (verified 2026-08-04 12:49 PT):
-- 28 tasks: 8 not_started (Shela-requested drafts from May/June), 16 in_progress 90+ days stale, 4 cancelled. Zero complete.
-- 8 ideas filed #22514-#22521. #22515 and #22518 ready_for_review with tested patches (both flagged SPEC DRIFT, same pattern as rejected #19338/#19458).
-- 6 ideas reset to coding and re-dispatched per Ruben directive: #22514, #22516, #22517, #22519, #22520, #22521. All now is_stalled=true after 16-17 min in coding.
-- Dispatcher running 24+ workers. emsuserver (/tmp log writer) lacks write permission on /tmp/ruben-impl-worker-*.log files owned by www-data. CAUSE UNVERIFIED per rule 297.
-- Shela-Vicky-Verify-Upload gate flow present in #22514, #22515, #22518 DB descriptions. Valleywise send blocked until Shela+Vicky both confirm OK.
-- Zero outbound CNA email to Shela in August. #22515 patches hold the response with the gate-flow language.
-
-Open threads to drive next:
-1. #22514 [executing] — CNA Catalog PDF + Brochure. Stalled in coding. Read worker log /var/www/emtskills/cron/cron_ruben_implement.php dispatcher source for stall root cause per rule 297.
-2. #22515 [awaiting_review] — Shela response email. Review SPEC DRIFT patches in sandbox /tmp/ruben_sandbox_22515_1785862926. Deploy or reject in orchestrator UI.
-3. #22516 [executing] — CNA Agent silence RCA. Stalled in coding. Verify crontab finding by reading cron_cna_agent.php source.
-4. #22517 [executing] — Backfill 8 task drafts. Stalled in coding. Confirm drafts created in cna_program_tasks or cna_drafts.
-5. #22518 [awaiting_review] — CAA send to Valleywise. Review SPEC DRIFT patches /tmp/ruben_sandbox_22518_1785862115. Deploy or reject.
-6. #22519 [executing] — Timeline recalibration + AZSBN packet. Stalled in coding.
-7. #22520 [executing] — Public CNA info page + tracker batch actions. Stalled in coding.
-8. #22521 [executing] — CNA Agent health watchdog. Stalled in coding. Verify crontab entry once deployed.
-
-Reference IDs:
-- Ideas filed: #22514 [executing], #22515 [awaiting_review], #22516 [executing], #22517 [executing], #22518 [awaiting_review], #22519 [executing], #22520 [executing], #22521 [executing].
-- Files touched: cna_program_tasks (28 rows), cna_program_externship_sites (38 rows), cna_agent_messages (458 rows), orchestrator_ideas (8 filed, 6 retried), cna_program_documents (6 rows), /var/www/emtskills/cron/cron_ruben_implement.php.
-- Tickets: Shela Aug 4 email (catalog/brochure/CAA/go-no-go), Valleywise site #38 (Sherrie Beardsley).
-
-When done, append to cline_task_ledger.md per rule 07 and run order 66.
-═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
 
@@ -2996,54 +2997,6 @@ Reference IDs:
 - Files patched: /etc/litellm/_router_core.py (line 2508), /etc/litellm/hooks/tools.py (line 118). Backups: .bak-glm52priority-20260801_*
 - Ring: http://192.168.1.115:8210 (TP=1 PP=6, all 6 hex nodes)
 - Monitor: /home/rubenmajor/bin/glm52_ring_monitor.sh (v3, cron every 5 min)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785463237084` — 8/1/2026, 1:25:47 PM PT — 1400 turns
-
-**Original task:**
-
-```
-AZDHS gave an extension for https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations that was due 7/28, now due 7/31. Can you populate that R2 that was supposed to be posted on the page along with all the other info that was supposed to be ther efrom before under AZDHS?
-
-Odd that it's not there next to the 4/ 13 open complaint. Anyway yeah that needs to be repopulated back in there along with a response that was already sent as well as the one that you drafted for this new issue that was due on 728. You might have to check the desktop if you can't find the 
-```
-
-**Ideas referenced:** #0000, #0369, #059669, #0891, #111827, #13661, #1368, #1441, #1454, #1538, #1565, #15654, #15803, #16127, #16134, #16135, #16160, #1633, #16390, #16464, #166534, #16957, #19572, #19573, #19576, #19587, #19595 [executing], #19599, #20393 [approved], #20633 [executing], #20634 [executing], #20640 [proposed], #20643 [executing], #20645 [executing], #20680 [executing], #21278, #21707, #25226, #2563, #26211, #334155, #4111, #450438, #475569, #600179, #623992, #6366, #64748, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-osture reads cleaner per case.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #20680 [awaiting_review], TDSHS responses for Smith, Sheets, Kanthack are drafted, rendered to PDF, and waiting on the 8/5 vs 8/6 due-date confirmation and send decisions.
-
-Where we left off (verified 2026-08-01 13:24 PT):
-- All three rewritten responses live at /var/www/emtskills/uploads/tdshs/inspection-5196-2026/DRAFT_response_10802618*.md and .pdf. PDFs rendered 8/1 13:00 with modern web headers, zero apology-family strings, zero em dashes.
-- Tone and strategy per Ruben 2026-08-01 correction: transmission-defect frame, 749 threads / 483 students scope, corrected 7/27, continuous-improvement closing, no law lectures, no allegation restatement.
-- Ruben said due 8/5; the shared fact base says due 8/6. CONFIRM BEFORE SENDING.
-- Kanthack clarification draft at DRAFT_clarification_1080261815-1891_Kanthack.md is send-ready. Recommendation posted on investigation 10: send standalone now, fold in both-numbers caption if no reply by 8/4.
-
-Open threads to drive next:
-1. #20680 [awaiting_review] Confirm the operative due date (8/5 vs 8/6), run the rule 301 signature-hash check on the three PDFs, then load the send checklist: recipients, subject lines, attachment names. PDFs already carry a modern header block.
-2. #20643 [executing] AZDHS 0460 offer was made to the REGULATOR. Do NOT execute the free re-enrollment or third upload surface unless AZDHS pushes the offer down to the student. No certificate, no eligibility post on the current record.
-3. #20645 [executing] Surface the NoiDefenseEvidence panel on institutional_compliance.php investigations tab. Build cron_noi_defense_evidence.php is in flight (5% progress, stalled in idle per get_idea_progress).
-4. #20634 [executing] Externship assignment-latency monitoring + portal receiving-record verification. Build is in flight (idle).
-5. #20633 [rejected] Closed as superseded by #20643. Verified: student 25324T-01 had TWO 30-day Moodle access windows (3/11, 3/20), logged in 3/25, submitted 0 of 8 documents.
-6. (human-only decision, no idea) Send decisions pending: Kanthack standalone clarification now vs fold-in (recommend: standalone now); three separate letters vs consolidated (recommend: separate).
-
-Reference IDs:
-- Ideas verified this session: #20680 [awaiting_review], #20643 [executing], #20645 [executing], #20634 [executing], #20633 [rejected]
-- Dashboards: investigation 10 (TDSHS), investigation 6 (systemic duplicate finding), investigation 17 (AZDHS transmission + timeline)
-- Files: /var/www/emtskills/uploads/tdshs/inspection-5196-2026/DRAFT_response_10802618{69_Smith,87_Sheets,91_Kanthack}.{md,pdf}, DRAFT_clarification_1080261815-1891_Kanthack.md
-- Local review copies: /Users/rubenmajor/Desktop/tdshs_rewrites/
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════</result>

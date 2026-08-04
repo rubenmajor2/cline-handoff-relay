@@ -39,6 +39,71 @@ YELLOW_MAX  = 700_000
 RED_MAX     = 900_000
 # > RED_MAX = IMMINENT
 
+# ── Mechanical compress signal (idea #22282, 2026-08-04) ──────────────────────
+# Per rule 119, thresholds are FRACTIONS of the model's real context window W,
+# not fixed counts. The watchdog computes W from a config file so a 200K model
+# and a 1M model get different, correct thresholds without any LLM involvement.
+# When context cross the CHECK (0.55W) or COMPRESS (0.75W) boundary, the
+# watchdog writes a SIGNAL FILE the model must mechanically read pre-turn.
+# The model NEVER decides "should I compress?" — the file decides.
+SIGNAL_DIR = "/tmp"
+WATCHDOG_CFG = os.path.join(HOME, ".config", "emsu", "budget_watchdog.json")
+# Defaults: 200K model window (most common on this fleet). Override in cfg.
+DEFAULT_MODEL_WINDOW = 200_000
+CHECK_FRAC   = 0.55
+COMPRESS_FRAC = 0.75
+# Cooldown: never rewrite the same signal level more than once per N seconds.
+SIGNAL_COOLDOWN = 300  # 5 min
+
+def load_cfg(default_model_window=DEFAULT_MODEL_WINDOW) -> dict:
+    cfg = {"model_window": default_model_window}
+    try:
+        if os.path.exists(WATCHDOG_CFG):
+            with open(WATCHDOG_CFG) as f:
+                cfg.update(json.load(f))
+    except Exception as e:
+        log(f"err loading cfg {WATCHDOG_CFG}: {e}")
+    return cfg
+
+def write_compress_signal(task_id: str, action: str, ctx: int, w: int, reason: str) -> bool:
+    """Write /tmp/cline_compress_signal_TASK<id>.json (or global fallback).
+    Returns True if written, False if cooldown-suppressed.
+    """
+    signal_file = f"/tmp/cline_compress_signal_TASK{task_id}.json"
+    existing = {}
+    try:
+        if os.path.exists(signal_file):
+            with open(signal_file) as f:
+                existing = json.load(f)
+    except Exception:
+        pass
+    now = time.time()
+    last_ts = existing.get("written_at_epoch", 0)
+    if existing.get("action") == action and existing.get("task_id") == task_id:
+        if now - last_ts < SIGNAL_COOLDOWN:
+            return False  # same level already signaled recently
+    payload = {
+        "task_id": task_id,
+        "action": action,                 # "check" | "compress"
+        "context_size": ctx,
+        "model_window": w,
+        "check_threshold": int(round(CHECK_FRAC * w)),
+        "compress_threshold": int(round(COMPRESS_FRAC * w)),
+        "reason": reason,
+        "written_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+        "written_at_epoch": now,
+        "from": "cline_budget_watchdog",
+        "instruction": (
+            f"MECHANICAL action required. If action=compress call "
+            f"cline_compress_session IMMEDIATELY with a rule-91 pickup prompt. "
+            f"If action=check call should_compress_now once. Do not deliberate."
+        ),
+    }
+    with open(signal_file, "w") as f:
+        json.dump(payload, f, indent=2)
+    log(f"SIGNAL {action} task={task_id} ctx={ctx} W={w}")
+    return True
+
 def log(msg: str) -> None:
     try:
         os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
@@ -151,6 +216,32 @@ def main():
     per_task_file = f"/tmp/cline_budget_status_TASK{task_id}.json"
     with open(per_task_file, "w") as f:
         json.dump(status, f, indent=2)
+
+    # ── Mechanical compress signal (idea #22282) ───────────────────────────────
+    # W-based thresholds per rule 119. Same numbers rule 119 derives, computed
+    # HERE so the model never has to reason about them.
+    cfg = load_cfg()
+    W = int(cfg.get("model_window", DEFAULT_MODEL_WINDOW))
+    ctx = tokens["context_size"]
+    check_at = int(round(CHECK_FRAC * W))
+    compress_at = int(round(COMPRESS_FRAC * W))
+    if ctx >= compress_at:
+        write_compress_signal(task_id, "compress", ctx, W,
+                              f"context {ctx:,} >= compress threshold {compress_at:,} (0.75×W={W:,})")
+    elif ctx >= check_at:
+        write_compress_signal(task_id, "check", ctx, W,
+                              f"context {ctx:,} >= check threshold {check_at:,} (0.55×W={W:,})")
+    else:
+        # Below CHECK: remove any stale signal for this task so the model
+        # isn't told to compress when context already dropped (e.g. after
+        # a fresh-window pickup or a manual compress).
+        stale = f"/tmp/cline_compress_signal_TASK{task_id}.json"
+        try:
+            if os.path.exists(stale):
+                os.remove(stale)
+                log(f"SIGNAL clear task={task_id} ctx={ctx} < check {check_at}")
+        except Exception as e:
+            log(f"err clearing signal {stale}: {e}")
 
     # Notification logic: only fire once per task per tier (RED, IMMINENT)
     if tier in ("RED", "IMMINENT"):

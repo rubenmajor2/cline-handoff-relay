@@ -75,11 +75,34 @@ Never rush, skip steps, read fewer files, dispatch fewer subagents, or produce a
 - Rushing or shortcutting because the percentage looks high.
 - Closing a window or calling `attempt_completion` because P > 100%.
 
+## MECHANICAL pre-turn signal check (idea #22282, 2026-08-04) — do this FIRST, every turn
+
+The budget watchdog (`cline_budget_watchdog.py`, launchd `com.emsu.cline-budget-watchdog`) computes the thresholds for you and writes a signal file. **You do not deliberate about compression. You check the file.**
+
+**Before your FIRST tool call of every turn**, run:
+
+```
+ls /tmp/cline_compress_signal_TASK<current_task_id>.json
+```
+
+(the current task id is in this conversation's task header / environment. If you cannot determine it, check both `/tmp/cline_compress_signal_TASK*.json` matching the most recent mtime and the global `/tmp/cline_compress_signal.json` if present.)
+
+Then, **mechanically**:
+
+1. **File exists with `"action": "compress"`** → read the file, then call `cline_compress_session` IMMEDIATELY with a rule-91 pickup prompt (task, pickup_prompt verbatim ≤5KB, tool_rounds, last_turns). Do NOT continue the current task first. Do NOT "wrap up" first. Do NOT think about whether it is a good idea. Then `attempt_completion` with the SESSION MEMORY blob. Zero deliberation.
+2. **File exists with `"action": "check"`** → call `should_compress_now` once with `{task_id, last_compress_size: <last compress size or 0>, growth_threshold: 100000}`. If it returns `should_compress: true` or `tier != GREEN`, proceed under (1). If false/GREEN, continue normal work and delete the signal file if you just handled it.
+3. **No file exists** → normal operation. Do not mention context. Do not think about context.
+
+After handling a signal, delete the file (`rm /tmp/cline_compress_signal_TASK<task_id>.json`) so you don't re-process it next turn. Read the file with `cat` — use the raw values; do not recompute thresholds yourself.
+
+This replaces ALL deliberation about compression. The question "should I compress?" is answered by the file's existence, not by your judgment. If you find yourself thinking about context size WITHOUT a signal file present, stop — that thought is the waste this rule eliminates.
+
 ## Self-check when X >= 0.55 × W
 
-1. `X >= 0.75 × W`? → `cline_compress_session` now, then `attempt_completion`. Nothing else.
-2. `X >= 0.55 × W`? → have I called `should_compress_now` this task? If no, that is the next call.
-3. Below that? → proceed normally.
+1. Signal file present with `action: compress`? → `cline_compress_session` now, then `attempt_completion`. Nothing else. No deliberation.
+2. Signal file present with `action: check`? → `should_compress_now` now.
+3. No signal file but X still >= 0.75 × W? → the watchdog may be stale (it polls every 60s). Call `should_compress_now` once; if true, `cline_compress_session`. Do not wait for the file.
+4. No signal file and X < 0.75 × W? → proceed normally.
 
 ## Cross-references
 

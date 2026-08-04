@@ -6,25 +6,25 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/3/2026, 11:51:29 PM PT | window: last 72h | 63 tasks | index total 416 (parsed 3, cached 413)
+Generated: 8/4/2026, 12:51:29 AM PT | window: last 72h | 59 tasks | index total 416 (parsed 6, cached 410)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785821651406` | 8/3/2026, 11:50:57 PM | 173 | 1105KB | For Argus only: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser  |
-| `1785822732682` | 8/3/2026, 11:48:22 PM | 218 | 640KB | GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes. Key achie |
+| `1785821651406` | 8/4/2026, 12:51:19 AM | 325 | 1690KB | For Argus only: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser  |
+| `1785822732682` | 8/4/2026, 12:51:12 AM | 461 | 4291KB | GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes. Key achie |
+| `1785821481522` | 8/4/2026, 12:44:46 AM | 140 | 1104KB | pages at emsuniversity.com/emtskills appear to be loading very slowly. Why? |
+| `1785782909425` | 8/4/2026, 12:39:40 AM | 1010 | 5582KB | Why am i not seeing clustered ideas here in cline? |
+| `1785807924524` | 8/4/2026, 12:35:15 AM | 100 | 439KB | I’m assuming TeamHub is currently blank because you’re doing something with it at the mome |
+| `1785781386836` | 8/4/2026, 12:33:40 AM | 732 | 2611KB | Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/  |
 | `1785824593043` | 8/3/2026, 11:31:22 PM | 48 | 120KB | why is frankenstein-llm down? |
-| `1785781386836` | 8/3/2026, 11:13:10 PM | 649 | 2469KB | Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/  |
-| `1785821481522` | 8/3/2026, 11:09:43 PM | 78 | 709KB | pages at emsuniversity.com/emtskills appear to be loading very slowly. Why? |
 | `1785812189858` | 8/3/2026, 10:53:20 PM | 328 | 2799KB | What is the slowest speed that frankenstein-llm will permit prior to quaranteining an indi |
 | `1785814799237` | 8/3/2026, 10:48:43 PM | 568 | 1006KB | ## GLM-5.2 TP=6 Migration — Session Complete (Context Compressed) |
 | `1785778409357` | 8/3/2026, 10:32:01 PM | 720 | 3745KB | What is this person actually upset about other than AI answering calls and emails? Can you |
 | `1785776636014` | 8/3/2026, 10:28:33 PM | 650 | 1454KB | Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up |
 | `1785817138435` | 8/3/2026, 9:32:05 PM | 24 | 92KB | i noticed a lot of reasonsing time across models wasted contemplating context and whether  |
 | `1785809433242` | 8/3/2026, 8:36:39 PM | 462 | 860KB | # GLM-5.2 TP=6 Migration — FP8-MXFP4 Checkpoint Downloading (verified 2026-08-03 19:08 PT) |
-| `1785782909425` | 8/3/2026, 8:14:37 PM | 974 | 5429KB | Why am i not seeing clustered ideas here in cline? |
 | `1785801179446` | 8/3/2026, 8:13:29 PM | 242 | 2253KB | #Argus |
 | `1785780445834` | 8/3/2026, 7:49:39 PM | 864 | 3778KB | Propose for Telephony with some features similar to /proctoring for the Admin role (in thi |
-| `1785807924524` | 8/3/2026, 7:41:56 PM | 66 | 341KB | I’m assuming TeamHub is currently blank because you’re doing something with it at the mome |
 | `1785779749179` | 8/3/2026, 7:22:54 PM | 622 | 2784KB | I need to make sure that the AI categoriztion of the info@emsuniversity.com inbox has stop |
 | `1785775905424` | 8/3/2026, 7:10:14 PM | 1138 | 2596KB | # GLM-5.2 Hexarchy Ring — Scientific Diagnosis & Stabilization Summary |
 | `1785807416292` | 8/3/2026, 6:58:46 PM | 52 | 146KB | where is the system for Cyra at? the "Telephony like" system? What is the link to get to t |
@@ -69,16 +69,12 @@ Generated: 8/3/2026, 11:51:29 PM PT | window: last 72h | 63 tasks | index total 
 | `1785537564406` | 8/1/2026, 1:56:30 AM | 902 | 14669KB | #Argus |
 | `1785529983485` | 8/1/2026, 1:43:17 AM | 753 | 1679KB | Make sure that you are consulting the SLS so that incorrect information does not persist.  |
 | `1785564225764` | 8/1/2026, 1:40:35 AM | 260 | 1197KB | Subagents are showing 0 tools called and 0 tokens again. This has happened before earlier  |
-| `1785566951500` | 8/1/2026, 12:26:44 AM | 64 | 259KB | I'm curious whether Kimi K3 or GLM 5.2 would be better at training GLM 5.2 Local or if th |
-| `1785563540527` | 8/1/2026, 12:23:17 AM | 300 | 861KB | Can you work on organizing the bug library so that it's easier to search in use by agents? |
-| `1785562021337` | 7/31/2026, 11:59:58 PM | 194 | 574KB | Vicky having some issues in chat 55, can you address her issues? In the last 1 or 2 hours |
-| `1785530188751` | 7/31/2026, 11:52:41 PM | 300 | 1073KB | See the Jon and Cori SMS chat regarding EMT classes suppsedly with the wrong dates posted  |
 
 ---
 
 ## Per-window detail
 
-### `1785821651406` — 8/3/2026, 11:50:57 PM PT — 173 turns
+### `1785821651406` — 8/4/2026, 12:51:19 AM PT — 325 turns
 
 **Original task:**
 
@@ -88,11 +84,42 @@ For Argus only: https://emsuniversity.com/emtskills/routes/argus_download.php?ta
 for frankenstein-llm, frankenstein-tools i'd like to disallow the use of the GLM 5.2 unless the user specificly chooses "Thinking" mode. Thinking mode is only permitted by Exec Admin, IT Admin, Master Admin. All others must not use GLM 5.2 within frankenstein-llm or frankenstein-tools.
 ```
 
-**Ideas referenced:** #10182, #12301, #16213, #16263, #16648, #17202, #17203, #17205, #17300, #17430, #18329, #18378, #1864, #18745, #18820, #18868, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #1934, #19348, #2006, #20340 [executing], #20547, #20549, #21010 [executing], #21011 [executing], #21038 [proposed], #21044, #21053 [proposed], #21125, #21126, #21134, #21138, #21158 [executing], #21171, #2121, #21213 [executing], #21262, #2139 [investigating], #2140, #21419 [executing], #2147, #2149, #2153, #2154, #21542 [rejected], #21546 [executing], #2159 [resolved], #2170 [resolved], #22066, #22067, #22068, #22086, #22087, #22188, #22200, #22240 [proposed], #22256, #274160, #30363, #334155, #37972, #4338, #45094, #64748, #69707
+**Ideas referenced:** #10182, #12301, #1557, #16213, #16263, #16648, #17202, #17203, #17205, #17300, #17430, #18329, #18378, #1864, #18745, #18820, #18868, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #1934, #19348, #2006, #20340 [executing], #20547, #20549, #21010 [executing], #21011 [executing], #21038 [proposed], #21044, #21053 [proposed], #21125, #21126, #21134, #21138, #21158 [executing], #21171, #2121, #21213 [executing], #21262, #2139 [investigating], #2140, #21419 [executing], #2147, #2149, #2153, #2154, #21542 [rejected], #21546 [executing], #2159 [resolved], #2170 [resolved], #22066, #22067, #22068, #22086, #22087, #22188, #22200, #22240 [proposed], #22256, #22333, #22334, #274160, #30363, #334155, #37972, #4338, #45094, #64748, #69707
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1785822732682` — 8/3/2026, 11:48:22 PM PT — 218 turns
+```
+al): `/tmp/glm_gate_simple.py`
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up GLM 5.2 Thinking Mode Gate deployment.
+
+Where we left off (verified 2026-08-03 11:19 PM PT):
+- Backups exist for all three files (router_hook.py, alltastic_api.php, argus_download.php)
+- Patch plan fully specified with exact code blocks (A-F above)
+- MCP tool call formatting blocked at high context depth (>95K tokens) — fresh window will succeed
+
+Open threads to drive next:
+1. Deploy router_hook.py patches A+B (gate function + final guard before super call) — 2 insertions
+2. Deploy alltastic_api.php patches C+D (emsu_mode/emsu_role in callClaude metadata + terminal_query mode detection)
+3. Deploy argus_download.php patches E+F (🧠 toggle button + sendQuery mode payload)
+4. Run verification: py_compile, php -l, LiteLLM restart, live terminal probe
+5. File orchestrator idea + mark task complete
+
+Reference IDs:
+- Files touched: /etc/litellm/router_hook.py, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/routes/argus_download.php
+- Backups: *.bak-20260803-glmtaskinggate
+- Local patch: /tmp/glm_gate_simple.py (ready to base64-encode and transfer)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785822732682` — 8/4/2026, 12:51:12 AM PT — 461 turns
 
 **Original task:**
 
@@ -107,7 +134,7 @@ GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes.
 6. Fixed NCCL ibv_create_cq 
 ```
 
-**Ideas referenced:** #1130, #1131, #12299, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #1652 [resolved], #16588, #16778, #16802, #16803, #16839, #16851, #17202, #17246, #1744, #1779, #1798, #1828, #18471, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2139 [investigating], #2147, #2149, #2159 [resolved], #2168 [deployed], #21684, #2170 [resolved], #2174 [deployed], #22128 [executing], #22240 [proposed], #7142, #7149
+**Ideas referenced:** #1130, #1131, #12299, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #1640, #16448, #16452, #1652 [resolved], #1655, #1658, #16588, #16778, #16802, #16803, #16839, #16851, #17202, #17246, #17298, #17301, #1744, #1754, #1755, #1779, #1798, #1828, #18471, #1897, #19563, #19567, #1980, #1983, #1984, #1986, #20005, #20042, #20264, #20272, #20340 [executing], #2050, #2051, #2052, #2053, #2054, #2055, #2060, #2061, #2062, #2063, #2065, #20662, #2073, #2081, #20825, #2083 [resolved], #2085, #2089, #2090, #2092, #2093, #2096, #2097, #20985, #2099, #2101, #21010 [executing], #21011 [executing], #2102, #2103, #21038 [proposed], #2109, #2110, #2111, #21158 [executing], #2116, #21171, #2121, #21213 [executing], #2127, #2128, #2129, #2131, #2138, #2139 [investigating], #2141, #21419 [executing], #2147, #2149, #2151, #2152, #2153, #2154, #21542 [rejected], #21546 [executing], #2157, #2159 [resolved], #2168 [deployed], #21684, #2170 [resolved], #2174 [deployed], #22066, #22067, #22068, #22086, #22087, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #7142, #7149
 
 **Last PICKUP PROMPT:**
 
@@ -118,40 +145,206 @@ executing], #22240 [proposed].
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #22128 - GLM-5.2: PP=1.5 asymmetric not implementable; TP=4/DCP=4 (4 nodes) is the real buildable breakthrough
+Pick up task #22128 - GLM-5.2: best cherry-pick = PP=6 15pct + max_num_seqs=8 + auto-restart + EXEC_TIMEOUT=900 (8 users @ ~8 tok/s, 65 tok/s agg)
 
-Where we left off (verified 2026-08-03 23:47 PT):
-- Diagnosed 22:43 OOM reboot: NVRM NV_ERR_NO_MEMORY, softdog watchdog force-reboot all 6 nodes (bug library incident)
-- 272G NVFP4+AQLM download RUNNING on Cato (60G/272G, 8 workers, setsid detached)
-- Cloned m9e/blackwell-llm-docker on Cato; inspected glm52-b12x-spark recipe
-- VERIFIED: production config = TP=4/DCP=4 PP=1 on 4-node Ray cluster (start-glm52-production.sh + glm52-spark4-dcp4-mtp4-128k.env). MAX_NUM_BATCHED_TOKENS=1024, GMU 0.89, KV 1.81e9, MTP4, VLLM_KZ_TRIM_AFTER_LOAD=1 (our OOM fix)
-- REALITY CHECK GIVEN: PP=1.5 asymmetric (4-node core + 2-node expert offload) is NOT implementable in vLLM. PP is integer/even, no expert-offload-to-separate-nodes config exists. No such variant in m9e recipe or any community GB10 recipe
-- We have vllm-node-tf5-glm52-b12x:sm121fix2 but NOT glm-eldritch-b12x:20260702-arm64-spark4 (needs build)
-- RECOMMENDATION: build TP=4/DCP=4 on 4 nodes first (real 24 tok/s breakthrough), 2 spare nodes become TP=3/AQLM second ring later
+Where we left off (verified 2026-08-04 00:02 PT):
+- THOUGHT EXPERIMENT COMPLETE. Best cherry-pick for max STABLE concurrency >5-10 tok/s: PP=6 15pct ring + max_num_seqs=8 + while-true auto-restart + EXEC_TIMEOUT=900 + workers-first + gpu_mem 0.82 + KZ_TRIM + Socket transport
+- Simulated: N=8 -> 65 tok/s agg (~8 tok/s/user). 8 concurrent at ~8 tok/s each. Stable 17h w/ auto-restart (#2157)
+- KEY TENSION RESOLVED: max_num_seqs is BUILD-SPECIFIC. v40 Socket build tolerated 128 (110 tok/s); current b12x/sm121fix2 hangs compile >8 (#1655). Safe ceiling on current image = 8 (#1655). #2083's 128-collapse was UNSET admission, not tuned 128
+- Canonical stable build (2026-07-30): PP=6 15pct, gpu_mem 0.82 (rule 277 do NOT lower), 131072 ctx, kv_max_concurrency 21.2, 0 preemptions, ring uptime 8h55m+
+- ONE UNCERTAINTY: does current b12x/sm121fix2 hang compile at max_num_seqs>8 (#1655) or tolerate 16 (#2083)? Test: launch at 8, verify, step to 16, watch compile
+- 272G AQLM download RUNNING (108G/272G) - the near-Q4 quality upgrade path, unproven on our HW
 - #22128 [executing], #22240 [proposed]
 
 Open threads to drive next:
-1. #22128 [executing] , AWAITING RUBEN PICK: (A) build eldritch image on Cato + verify Mapika checkpoint vs our 419G, then TP=4/DCP=4 on 4 nodes; (B) skip TP=4, stick with TP=3/AQLM dual-ring (downloading)
-2. #22240 [proposed] , research community GLM-5.2 configs; largely answered by threads 378150 + 375416
-3. (human-only decision, no idea) , confirm whether Mapika/GLM-5.2-NVFP4-MTP-hybrid = our existing 419G FP8-MXFP4 or a separate download
+1. #22128 [executing] , AWAITING RUBEN GO: relaunch PP=6 15pct ring with the cherry-pick config (max_num_seqs=8, auto-restart, EXEC_TIMEOUT=900, workers-first, gpu_mem 0.82, KZ_TRIM, Socket). Relaunch recipe: bug library 1993, run /tmp/glm52_relaunch_perf.sh FROM CATO via setsid, workers 1-5 then rank0
+2. #22240 [proposed] , research community GLM-5.2 configs; answered by threads 378150 + 375416
+3. (human-only decision, no idea) , 272G AQLM download continues (108G/272G); near-Q4 quality upgrade path once downloaded + proven
 
 Reference IDs:
 - Ideas filed: #22128 [executing], #22240 [proposed]
-- Files touched: /Users/rubenmajor/Desktop/glm52_launch_cfg_tp2pp3.sh, /Users/rubenmajor/Desktop/dl_aqlm.sh, /home/rubenmajor/glm52_launch_cfg_tp2pp3.sh (all 6 nodes), /home/rubenmajor/dl_aqlm.sh (cato), /home/rubenmajor/blackwell-llm-docker/ (cato, cloned), HANDOFF_NOTES.md, bug library incident (GB10 OOM ring reboot)
+- Files touched: /home/rubenmajor/blackwell-llm-docker/ (cato, cloned), /home/rubenmajor/dl_aqlm.sh (cato), /home/rubenmajor/glm52_launch_cfg_tp2pp3.sh (all 6 nodes), HANDOFF_NOTES.md, bug library incidents #2083/#2085/#2152/#2157/#2159/#1640/#1655/#2168
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
 <task_progress>- [x] Read handoff notes for current state
 - [x] Diagnose OOM root cause (bug library incident)
-- [x] 272G NVFP4+AQLM download RUNNING on Cato (60G)
-- [x] TWO recipes documented (TP=3/AQLM dual-ring vs TP=4/DCP=4 full-ckpt)
-- [x] KZ_TRIM malloc_trim hook = our exact OOM fix
-- [x] Ruben CONFIRMED: TP=4/PP=1.5 = asymmetric PP=2
-- [x] REALITY CONFIRMED: m9e recipe is 4-node Ray TP=4/DCP=4 PP=1. NO asymmetric PP=1.5 / expert-offload config exists in recipe or standard vLLM
-- [x] Check eldritch image: have vllm-node-tf5-glm52-b12x:sm121fix2, NOT glm-eldritch-b12x:20260702-arm64-spark4
-- [x] Present reality to Ruben honestly + recommend TP=4/DCP=4 on 4 nodes
-- [ ] AWAITING Ruben pick: (A) build eldritch image + TP=4, (B) stick with TP=3/AQLM
-- [ ] Validate completion + ship pickup prompt</task_progress> </attempt_completion>
+- [x] 272G NVFP4+AQLM download RUNNING on Cato (108G/272G)
+- [x] OUR recent history: PP=6 15pct AWQ (:8210) stable bs=1; TP=2/PP=3 419G OOM-rebooted; TP=6 impossible
+- [x] Ruben REJECTED TP=4: "we actually have an ideal GLM build a while back. your TP4 recommendation is terrible"
+- [x] FOUND ideal build candidates: v40 (#1640: PP=6 Socket max_num_seqs=128 = 110 tok/s @ 128), #1655 (>8 hangs compile), #2083 (N=8=65 tok/s, cap 16), #2157 (auto-restart 17h), #2159 (EXEC_TIMEOUT=900), #2168 (workers-first)
+- [x] Read canonical stable-build doc (PROJECT_FRANKENSTEIN.md LAST KNOWN STABLE BUILD): PP=6 15pct, gpu_mem 0.82, 131072 ctx, kv_max_concurrency 21.2, 0 preemptions, 8h55m uptime
+- [x] Ruben: "cherry pick" + "do a real thought experiment and simulate the best cherry pick situation"
+- [x] Ran the thought experiment: best cherry-pick = PP=6 15pct + max_num_seqs=8 + auto-restart + EXEC_TIMEOUT=900 + workers-first + gpu_mem 0.82 + KZ_TRIM + Socket = 8 users @ ~8 tok/s, 65 tok/s agg, 17h stable
+- [ ] AWAITING Ruben go: relau
+```
+
+### `1785821481522` — 8/4/2026, 12:44:46 AM PT — 140 turns
+
+**Original task:**
+
+```
+pages at emsuniversity.com/emtskills appear to be loading very slowly. Why?
+```
+
+**Ideas referenced:** #0000, #10108, #10739, #10740, #10756, #10868, #10869, #10880, #11261, #11296, #11302, #11316, #11319, #11373, #11383, #11397, #1151, #11735, #11741, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12060, #12184, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #12900, #13095, #13121, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16294, #16584, #16589, #16590, #16602, #16625, #16646, #16648, #16680, #16715, #16716, #16717, #17078, #17202, #17203, #17205, #17307, #17673, #1807, #18329 [queued], #18670, #18671, #18800, #18918, #19338, #19458, #19491, #19585, #19686, #2071, #2079, #2139 [investigating], #2147, #2149, #2159 [resolved], #2170 [resolved], #22298 [executing], #22306 [proposed], #22308 [needs_guidance], #22321 [proposed], #22386, #6711, #6719, #6825, #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
+
+**Last PICKUP PROMPT:**
+
+```
+dropped, 1 PHP file removed. |
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #current — emtskills slow pages + #22306/#22308/#22321 investigation
+
+Where we left off (verified 2026-08-04 00:43 PT):
+- emtskills pages are NOT slow (3-4ms from localhost)
+- #22306 [moot] "fleet-api" was wrong premise — no systemd service exists, PHP endpoint is working
+- #22321 [deployed] Cleanup done: agent_prompt_audit + agent_tool_audit dropped, report_moodle_access_rca_card.php removed
+- #22308 [rejected] Spec-drift pattern (same as #19338/#19458): generator built monitoring infra instead of simple prompt/tool-config fix
+
+Open threads to drive next:
+1. Re-implement #22308 properly: add check_and_sync_moodle_enrollment to ticket_agent tool list + update system prompt (5-min config change, no new tables/files)
+2. Clean up #22306 descriptor to reflect it was moot
+
+Reference IDs:
+- Ideas filed: #22306 [moot], #22321 [deployed], #22308 [rejected]
+- DB tables dropped: agent_prompt_audit, agent_tool_audit
+- File removed: /var/www/emtskills/routes/report_moodle_access_rca_card.php
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785782909425` — 8/4/2026, 12:39:40 AM PT — 1010 turns
+
+**Original task:**
+
+```
+Why am i not seeing clustered ideas here in cline?
+```
+
+**Ideas referenced:** #10739 [proposed], #1194, #12459, #16648, #17202, #17203, #17205, #17300, #17408, #177796, #178456, #182471, #18326 [proposed], #18327 [proposed], #18329 [proposed], #18337 [deployed], #1845, #18671, #18800, #18811 [proposed], #18812 [queued], #18813 [queued], #19173, #19437, #19495, #19535 [proposed], #19537 [proposed], #19538 [proposed], #19539 [proposed], #19545, #19682, #19813, #19814, #19816, #19822, #2023, #21470, #21761, #21763, #21788 [proposed], #22053 [proposed], #22057, #22059, #22063, #22065, #22070, #22072, #22076, #22078, #22079 [proposed], #22097 [proposed], #22193 [proposed], #22194 [queued], #22195 [proposed], #22196 [proposed], #22197 [proposed], #22198, #22241 [proposed], #22251 [proposed], #22329 [proposed], #2322, #2490, #2686, #401383, #55522, #55557, #815007, #886191, #9731
+
+**Last PICKUP PROMPT:**
+
+```
+tion), then confirm via Cline.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #22241 — Force clean child respawn so Cline sees the compiled cluster tools, then verify end-to-end.
+
+Where we left off (verified 2026-08-03 ~18:10 PT):
+- WOPR build has the cluster tools: `list_clusters` (2 refs), `get_cluster_recommendation`, `approve_cluster` with `approved_by='cluster_bulk'` in `/var/www/emtskills/mcp-servers/ruben-orchestrator/build/index.js`
+- DB has 10 clusters in `visual_canvas_clusters` + 932 ideas tagged with `canvas_cluster_id` + WHY narratives; cron refreshes daily 4:15 AM PT
+- Current running child on port 7843 returns OLD tool registry (Cline `list_clusters` = error -32602 not found; local probe greps returned 0 before truncation)
+- Bridge file backup exists at `bridge.js.bak-pretoolschange`; the bridge forwards tools/list live from the child (no cache), so a clean child = new tools visible without window restart
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #22241 [proposed] — Run `sudo systemctl stop mcp-ruben-orchestrator; sudo fuser -k 7843/tcp; pkill -9 -f 'ruben-orchestrator/build'; sudo systemctl start` then save `tools/list` probe to a local file (`curl -s -X POST localhost:7843/mcp -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' -o /tmp/probe.txt`) and grep locally for `list_clusters` — no truncated output. If present, Cline reconnects and sees it.
+2. #22329 [proposed] — After live verification, wire `visual_canvas_clusters` into `/admin/ideas?page=canvas` (PHP) rendering cluster cards + WHY narrative; keep cluster-first bulk approve as default once canvas UI is live.
+3. #22251 [proposed] — Confirm all 932 ideas actually rendered in the CLUSTERED PROJECTS block (`SELECT canvas_cluster_id, COUNT(*) FROM orchestrator_ideas WHERE canvas_cluster_id IS NOT NULL GROUP BY 1`) so the block is populated when the new tools go live.
+
+Reference IDs:
+- Ticket: #22241 (bridge/child verification + no-restart fix)
+- Ideas filed: #22241 [proposed], #22251 [proposed], #22329 [proposed], #22193 [proposed], #22194 [queued], #22097 [deployed]
+- Files touched: WOPR `/var/www/emtskills/mcp-servers/ruben-orchestrator/src/index.ts`, `build/index.js`, `/var/www/emtskills/scripts/cluster_ideas_pipeline.php`; local `/Users/rubenmajor/Desktop/orchestrator_index.ts`, `/Users/rubenmajor/Desktop/cluster_tools.ts`, `/Users/rubenmajor/Desktop/bridge.js`
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785807924524` — 8/4/2026, 12:35:15 AM PT — 100 turns
+
+**Original task:**
+
+```
+I’m assuming TeamHub is currently blank because you’re doing something with it at the moment? Lol.
+```
+
+**Ideas referenced:** #059669, #20340 [executing], #21010 [executing], #21011 [executing], #21038 [proposed], #21158 [executing], #21171, #21213 [executing], #21419 [executing], #2153, #2154, #21542 [rejected], #21546 [executing], #22066, #22067, #22068, #22086, #22087, #22188, #22274 [deployed], #22275 [filed], #22276 [proposed], #2563, #475569, #6021, #6366, #64748, #7390, #7634, #9577, #9795
+
+**Last PICKUP PROMPT:**
+
+```
+ when staff file shift claims)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up #22276_v1 — Pending claims badge feature complete (2026-08-04 00:34 PT).
+
+Where we left off (verified 2026-08-04 00:34 PT):
+- #22276 [deployed]: views/team_hub/pending_claims_badge.php created, team_hub.php require re-enabled, HubShell sidebar wired
+- #22274 [resolved]: TeamHub 500 fixed — both half-deployed feature bugs (missing require + scope) resolved
+- TeamHub page loads; pending-claims badge will appear when emsu_shift_claims.pending > 0
+
+Open threads to drive next:
+1. Scheduler admin claims tab (`scheduler_admin.php?tab=pending_claims`) already has its own badge in L829 — confirm sidebar and tab badge counts stay in sync (both query same condition: `status='pending'`)
+
+Reference IDs:
+- Ideas completed: #22274, #22276
+- Files created: `/var/www/emtskills/views/team_hub/pending_claims_badge.php`
+- Files touched: `/var/www/emtskills/routes/team_hub.php`, `/var/www/emtskills/lib/HubShell.php`
+- Backups: `HubShell.php.bak-20260803-fix22274`
+- Fix scripts: `/tmp/fix_hubshell.py`, `/tmp/fix_teamhub_500.py`, `/tmp/fix_22276_wire.py`
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785781386836` — 8/4/2026, 12:33:40 AM PT — 732 turns
+
+**Original task:**
+
+```
+Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/ 
+
+Help me with this
+```
+
+**Ideas referenced:** #10647, #12135, #13047, #13246, #13687, #13754, #13943, #14024, #14323, #15417, #17712, #18135, #18176, #1878, #1892, #19173, #19802, #19866, #20825, #21621, #22066 [proposed], #22067 [proposed], #22068 [proposed], #22086 [proposed], #22087 [proposed], #22188 [proposed], #22200 [proposed], #22201, #22215 [proposed], #22245 [proposed], #22250 [deployed], #22260 [proposed], #22261 [proposed], #22262 [proposed], #22983, #23035, #23076, #23079, #23127, #23142, #23231, #23258, #23263, #23496, #23497, #2388, #26105, #2636, #2693, #2782, #2980, #3016, #3498, #5062, #5244, #5459, #5608, #5770, #5795, #6728, #6947, #698083, #7024, #7045, #7126, #7381, #7548, #7550, #8060, #8894, #8902, #9108, #9171, #9201, #9406, #9413, #9415, #9417, #9418, #9419
+
+**Last PICKUP PROMPT:**
+
+```
+the auto-resolve patch is live
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — EMSU ticket queue: root causes diagnosed, 3 structural fixes still needed.
+
+Where we left off (verified 2026-08-04 00:30 PT):
+- 36h SLA cron technical routing fixed (line 83: 3→124)
+- Dead-end auto-resolve patch was attempted but reverted due to PHP fatal error on continue level
+- 96 dead [Email AI-replied] manually resolved, ~22 new ones piled up
+- DAILY-GATE leaves Ruben-shaped technical tickets on agent 124 forever with no exit
+- getNextCsAgent() has no technical→124 hard-route
+
+Open threads to drive next:
+1. #22260 [proposed] — Fix `aiLogDeadEnd()` at cron_ai_ticket_agent.php line 1363-1385: auto-resolve instead of escalate when ticket already has [Email AI-replied] in title
+2. #22261 [proposed] — Fix DAILY-GATE at line 315-360: Ruben-shaped technical after max_attempts should auto-resolve, not sit on agent
+3. #22262 [proposed] — Patch getNextCsAgent() at line 2776: technical category → hard-return 124 instead of load-balancing to humans
+
+Reference IDs:
+- Ticket: 26105
+- Ideas filed: #22066, #22067, #22068, #22086, #22188 (all implemented)
+- #22087 guard fix implemented, #22250 dead-end auto-resolve filed, #22200 share-balance reclaim filed
+- #22260, #22261, #22262 filed this turn for the 3 remaining structural fixes
+- Files touched: cron_ai_ticket_agent.php, cron_agent_36h_sla.php, cron_stale_resolved_close.php, cron_stale_inprogress_close.php, cs_reasoning_guardrails.php, ai_pickup_needs_human_guard.php, MailerUrlAllowlist.php, tickets/index.php, tickets/queue_health_panel.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
 ```
 
 ### `1785824593043` — 8/3/2026, 11:31:22 PM PT — 48 turns
@@ -165,94 +358,6 @@ why is frankenstein-llm down?
 **Ideas referenced:** #16648, #17202, #17203, #17205, #178513, #18820, #1908, #2045, #2169, #2175 [deployed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785781386836` — 8/3/2026, 11:13:10 PM PT — 649 turns
-
-**Original task:**
-
-```
-Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/ 
-
-Help me with this
-```
-
-**Ideas referenced:** #10647, #12135, #13047, #13246, #13687, #13754, #13943, #14024, #14323, #15417, #17712, #18135, #18176, #1878, #1892, #19173, #19802, #19866, #20825, #21621, #22066 [proposed], #22067 [proposed], #22068 [proposed], #22086 [proposed], #22087 [proposed], #22188 [proposed], #22200 [proposed], #22201, #22215 [proposed], #22245 [proposed], #22250 [deployed], #22983, #23076, #23079, #23127, #23142, #23231, #2388, #26105, #2636, #2693, #2980, #3016, #3498, #5062, #5244, #5459, #5608, #5770, #5795, #6728, #6947, #698083, #7024, #7045, #7126, #7381, #7548, #8060, #8894, #8902, #9108, #9171, #9201, #9406, #9413, #9415, #9417, #9418, #9419
-
-**Last PICKUP PROMPT:**
-
-```
- kept seeing on his dashboard.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #26105 — EMSU ticket queue management (Jon overload, 36h SLA technical routing)
-
-Where we left off (verified 2026-08-03 23:11 PT):
-- 36h SLA cron `cron_agent_36h_sla.php` line 83 fixed: technical tickets now route to CS Auto-Agent (user 124), not Jon (user 3). This was the root cause of ticket #20825 and Jon's overload.
-- Reassigned 15 of Jon's active tickets to 124; Jon now holds 1 Academic ticket. Ticket #20825 verified assigned to ai-tickets@emsuniversity.com.
-- Queue: 336 active (133 with AI agent, 1 with Jon). Dead-end auto-resolve patch was reverted due to PHP continue-level fatal; original restored, lint clean, 5-min cron healthy.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #22250 [queued] — Dead-end auto-resolve: implement carefully in `cron_ai_ticket_agent.php` (avoid `continue 2` fatal — use flag or goto-free restructure). Verify with php -l + dry run before letting the 5-min cron touch it.
-2. #22200 [queued] — Share-balance reclaim auto-escalation: force-reclaim idle `[Email AI-replied]` tickets from overloaded humans (target 35% AI hold).
-3. #22068 [deployed] — Queue health panel live on /tickets/; consider adding the 36h SLA routing metric so technical misrouting is visible instantly.
-
-Reference IDs:
-- Ticket flagged by Ruben: #20825 (`QSB-20260722-0f4eeee6`, now assigned to 124)
-- Ideas filed: #22086 [deployed], #22067 [deployed], #22066 [deployed], #22068 [deployed], #22188 [deployed], #22200 [queued], #22250 [queued]
-- Files touched: `/var/www/emtskills/cron/cron_agent_36h_sla.php` (line 83, 84), `/var/www/emtskills/cron/cron_ai_ticket_agent.php` (reverted, backup `.bak-20260803-v2`), HANDOFF_NOTES.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785821481522` — 8/3/2026, 11:09:43 PM PT — 78 turns
-
-**Original task:**
-
-```
-pages at emsuniversity.com/emtskills appear to be loading very slowly. Why?
-```
-
-**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #12900, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16584, #16589, #16590, #16602, #16625, #16646, #16648, #16680, #16715, #16716, #16717, #17078, #17202, #17203, #17205, #17307, #17673, #1807, #18329 [queued], #18670, #18671, #18800, #19585, #19686, #2071, #2079, #2139 [investigating], #2147, #2149, #2159 [resolved], #2170 [resolved], #22298 [executing], #22306 [proposed], #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
-
-**Last PICKUP PROMPT:**
-
-```
-g. Filed as #22306 [proposed].
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task # - emtskills slow pages investigation
-
-Where we left off (verified 2026-08-03 23:08 PT):
-- emtskills pages clock at 3-4ms from localhost (not slow)
-- fleet-api systemd service is inactive on WOPR
-- slow-log entries (891/5min) are exclusively LLM background calls (orchestrator_api, ticket_autospec), not page requests
-- perceived slowness is environmental (CDN/TLS/client-side), not server-side
-
-Open threads to drive next:
-1. #22306 [proposed] Restart fleet-api on WOPR: systemctl start fleet-api
-
-Reference IDs:
-- Ideas filed: #22306 [proposed]
-- Files touched: none
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Check server health (load, disk, PHP-FPM, MySQL)
-- [x] Check PHP-FPM and nginx logs for slow requests / errors
-- [x] Check HANDOFF_NOTES for known issues
-- [x] Identify root cause of slow page loads
-- [x] Report findings + remediation
-</task_progress>
-</attempt_completion>
-```
 
 ### `1785812189858` — 8/3/2026, 10:53:20 PM PT — 328 turns
 
@@ -562,49 +667,6 @@ Ring node map (from supervisor v4):
 - cato=192.168.1.115 rank 0 (head
 ```
 
-### `1785782909425` — 8/3/2026, 8:14:37 PM PT — 974 turns
-
-**Original task:**
-
-```
-Why am i not seeing clustered ideas here in cline?
-```
-
-**Ideas referenced:** #10739 [proposed], #1194, #12459, #16648, #17202, #17203, #17205, #17300, #17408, #177796, #178456, #182471, #18326 [proposed], #18327 [proposed], #18329 [proposed], #18337 [deployed], #1845, #18671, #18800, #18811 [proposed], #18812 [queued], #18813 [queued], #19173, #19437, #19495, #19535 [proposed], #19537 [proposed], #19538 [proposed], #19539 [proposed], #19545, #19682, #19813, #19814, #19816, #19822, #2023, #21470, #21761, #21763, #21788 [proposed], #22053 [proposed], #22057, #22059, #22063, #22065, #22070, #22072, #22076, #22078, #22079 [proposed], #22097 [proposed], #22193 [proposed], #22194 [queued], #22195 [proposed], #22196 [proposed], #22197 [proposed], #22198, #22241 [proposed], #22251 [proposed], #2322, #2490, #2686, #401383, #55522, #55557, #815007, #886191, #9731
-
-**Last PICKUP PROMPT:**
-
-```
-ndow restart, no bridge patch.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #current — Clustered ideas surface in Cline with batch-approve tools.
-
-Where we left off (verified 2026-08-03 17:29 PT):
-- 10 clusters populated, 932 ideas tagged, daily cron wired
-- ruben-orchestrator MCP patched with list_clusters/get_cluster_recommendation/approve_cluster
-- Bridge is alive at :7843, tools/list confirms live via HTTP probe
-- Cline session needs MCP reconnect (click refresh); #22241 closed — bridge is not the blocker
-
-Open threads to drive next:
-1. #22053 [deployed] — Cluster pipeline fully deployed (daily cron, 10 clusters)
-2. #22097 [deployed] — approve_cluster SQL fix (approval_reason→approved_by) baked into MCP source
-3. #22193 [deployed] — Bridge analyzed, confirmed passthrough — no cache, no patch needed
-4. #22194 [queued] — Reconnect Cline MCP session to pick up new tools (user action: click refresh)
-5. #22251 [proposed] — Populate idea_clusters table (distinct from visual_canvas_clusters, covers the PhD flow)
-
-Reference IDs:
-- Ticket: none (direct task)
-- Ideas filed: #22053, #22097, #22193, #22194, #22241, #22251
-- Files touched: /var/www/emtskills/scripts/cluster_ideas_pipeline.php, /var/www/emtskills/mcp-servers/ruben-orchestrator/src/index.ts, /var/www/emtskills/mcp-servers/ruben-orchestrator/build/index.js
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
 ### `1785801179446` — 8/3/2026, 8:13:29 PM PT — 242 turns
 
 **Original task:**
@@ -692,45 +754,6 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1785807924524` — 8/3/2026, 7:41:56 PM PT — 66 turns
-
-**Original task:**
-
-```
-I’m assuming TeamHub is currently blank because you’re doing something with it at the moment? Lol.
-```
-
-**Ideas referenced:** #059669, #20340 [executing], #21010 [executing], #21011 [executing], #21038 [proposed], #21158 [executing], #21171, #21213 [executing], #21419 [executing], #2153, #2154, #21542 [rejected], #21546 [executing], #22066, #22067, #22068, #22086, #22087, #22188, #22274 [deployed], #22275 [filed], #2563, #475569, #6021, #6366, #64748, #7390, #7634, #9577, #9795
-
-**Last PICKUP PROMPT:**
-
-```
-it should load immediately now
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up #cline_22274_teamhub_blank_20260803 — TeamHub blank-page bug: HubShell::navContext() undefined $pdo fatal.
-
-Where we left off (verified 2026-08-03 19:38 PT):
-- Fix deployed to /var/www/emtskills/lib/HubShell.php — php -l clean
-- FPM reload blocked by sudoers (not required; opcache revalidate handles it)
-- Ruben needs to refresh and confirm TeamHub loads
-
-Open threads to drive next:
-1. #22274 [deployed] — Ruben to verify TeamHub loads after fix. If still blank, check /var/log/php8.3-fpm-errors.log for other fatal errors — the $pendingClaimsCount variable may also be undefined in the sidebar renderer (it's used in renderSidebar() L89 but was moved out of scope). If sidebar renders without the pending-claims badge, $pendingClaimsCount needs to be returned from navContext() and passed to renderSidebar().
-2. #22275 [filed] — The `$pendingClaimsCount` variable is used in renderSidebar() at `<?= (... && $pendingClaimsCount>0)` but was originally a local var in navContext(). After the reorder, it's still local to navContext() — renderSidebar() won't see it. Need to either add it to navContext's return array or query it fresh in renderSidebar().
-
-Reference IDs:
-- Backup: HubShell.php.bak-20260803-fix22274
-- Fix script: /tmp/fix_hubshell.py
-- Files touched: /var/www/emtskills/lib/HubShell.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
 
@@ -2609,183 +2632,4 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Ship answer with pickup prompt
 </task_progress>
 </attempt_completion>
-```
-
-### `1785566951500` — 8/1/2026, 12:26:44 AM PT — 64 turns
-
-**Original task:**
-
-```
-I'm curious whether Kimi K3 or GLM 5.2 would be better at training GLM 5.2 Local or if the community suggest a better model? Can you do some research and find out for me?
-```
-
-**Ideas referenced:** #0000, #0056, #10017, #1003, #10086, #10092, #10096, #10103, #10108, #10110, #10116, #10121, #10123, #10125, #10132, #10157, #10223, #10243, #10291, #10320, #1041, #10440, #10469, #10739, #10740, #10756, #10866, #10868, #10869, #10870, #10872, #10873, #10875, #10880, #10881, #11261, #1130, #1131, #11316, #1134, #1146, #1151, #11741, #11781, #11798, #11942, #11944, #11952, #11953, #11977, #11991, #11992, #11993, #11996, #11998, #11999, #12004, #1218, #12184, #12207, #12251, #12285, #12299, #12314, #12335, #12363, #12365, #12366, #12368, #12407, #1241, #12425, #12430, #12459, #12477, #1248, #1249, #12504, #1252, #1258, #12584, #12588, #12597, #12615, #12618, #12619, #12646, #12657, #12672, #12680, #12688, #12689, #12713, #12716, #12824, #128263, #128266, #12872, #12878, #12993, #13025, #13030, #13040, #13044, #13045, #13048, #13051, #13057, #13063, #13080, #13081, #13082, #13108, #13121, #13202, #13487, #13554, #13709, #13757, #13831, #13840, #13873, #13874, #1391, #13964, #13976, #13977, #14000, #14133, #14142, #14158, #14572, #14777, #14828, #14829, #14834, #14835, #14978, #15144, #1515, #1519 [resolved], #15432, #155724, #1565, #15669, #1567, #1568, #15815, #15827, #15891, #15906, #15911, #15919, #15928, #1593, #15965, #15979, #16032, #16033, #16036, #16120, #16122, #16163, #16167, #16207, #16242, #16254, #16259, #16260, #16265, #16304, #16338, #16448, #16452, #16578, #16581, #16588, #16594, #16606, #16607, #16608, #16610, #16613, #16648, #1665, #166501, #16696, #16701, #16715, #16727, #16731, #16732, #16778, #1680, #16802, #16803, #16839, #16844, #16851, #16881, #17130 [superseded], #17202, #17203, #17205, #17246, #17300, #17430, #1744, #1746, #17483, #17537 [rejected], #1754, #1755, #1756, #17580, #177796, #1779, #177918, #177921, #177926, #177956, #178501, #178531, #178553, #178554, #178556, #1798, #1804, #1813, #18132 [deployed], #18266, #1828, #18312, #18326, #18329, #18337, #18350, #18353, #18355, #18357, #18363, #1837, #18435, #1847, #1848, #1850, #18535, #18586, #18600, #18693, #1871 [investigating], #18720, #1874 [resolved], #18781, #18788, #18820, #1884 [resolved], #18845, #18868, #1892 [resolved], #1895, #1896, #19017, #19125, #19173, #1922, #19239 [rejected], #19325, #19338, #1934, #19370, #19415, #19416, #19419, #19426, #19435, #19490, #19503, #19519, #19522, #19567, #1965, #19653, #1966, #1967, #1976, #19785 [deployed], #19788 [proposed], #19840, #1986, #1988, #1989, #19898, #19901, #19903, #19904, #19907, #1991, #19921 [approved], #19925, #1993 [resolved], #1996, #1998, #20005 [proposed], #2002, #20022, #20042, #2005, #20055 [deployed], #20056 [deployed], #2006, #20069, #20101, #20128 [deployed], #2013, #20130 [queued], #20131, #20133, #20134, #2014, #20183, #20193, #20247, #20251, #20264 [queued], #20272 [deployed], #20282 [executing], #20286, #20292, #20297 [queued], #20302 [deployed], #20311 [deployed], #20313 [deployed], #20314 [queued], #20315 [deployed], #20317 [deployed], #20326 [deployed], #20327 [deployed], #20328, #20333 [queued], #20334 [queued], #20357, #20388 [queued], #20389 [queued], #20392 [queued], #20393 [deployed], #20405 [queued], #20410 [queued], #20419 [deployed], #20420 [deployed], #20423, #20491 [proposed], #20495 [executing], #20497 [queued], #20498 [queued], #2050, #20500 [queued], #20501 [queued], #20506 [blocked], #20517 [blocked], #20528 [queued], #20536 [blocked], #20539 [rejected], #20547 [queued], #20549 [queued], #20551 [proposed], #20553 [blocked], #20555 [blocked], #20556 [queued], #20564 [queued], #20565 [queued], #20569 [deployed], #20577 [executing], #20578 [queued], #20579 [executing], #20591 [executing], #20592 [executing], #20593 [deployed], #20600 [executing], #20606 [queued], #20607 [deployed], #20613 [ready_for_review], #20620 [executing], #20622 [executing], #20625 [proposed], #20626 [proposed], #20627 [deployed], #20628 [deployed], #20629 [deployed], #2063, #20630 [proposed], #2065, #20660 [proposed], #20661 [executing], #20662 [proposed], #20663 [rejected], #20665 [proposed], #20672 [proposed], #20674 [executing], #20676 [proposed], #20677 [proposed], #20678 [proposed], #20681 [executing], #20682 [executing], #20690 [proposed], #20693 [proposed], #20700 [ready_for_review], #20702 [ready_for_review], #20703 [ready_for_review], #20707 [proposed], #20708 [proposed], #20711 [proposed], #20714 [proposed], #20715, #20716 [ready_for_review], #20718 [proposed], #20721 [proposed], #2073, #20731 [proposed], #2084, #2085, #2092, #2099 [resolved], #2101, #2113, #2118, #2120 [investigating], #2125 [resolved], #2126 [deployed], #2127 [deployed], #2128 [resolved], #2129 [deployed], #2131 [open], #218838, #22386, #2242, #22606, #22647, #26222, #262220, #2640, #26922, #2740, #3023, #30363, #3093, #3132, #3133, #3229 [approved], #3231 [rejected], #3295, #3300, #3336, #3337, #3338, #3339, #334155, #3360, #3361, #3362, #3363, #3365, #3366, #3402, #366127, #37474, #3910, #3911, #3915, #3930, #4016, #4021, #4410, #4414, #4422, #4428, #4458, #4517, #4686, #4692, #4747, #4802, #48031, #4811, #4813, #48140, #4863, #4906, #4907, #4929, #495057, #4955, #4962, #4970, #4972, #4977, #4988, #4991, #4992, #5024, #5080, #5102, #5129, #5247, #5329, #5339, #5387, #5450, #5451, #5530, #5564, #5588, #5603, #5604, #5622, #5627, #5700, #5704, #5705, #5721, #5722, #5742, #5749, #5920, #6055, #6064, #6067, #6070, #6078, #6080, #6105, #6277, #6419, #6432, #6443, #64748, #6523, #6538, #6650, #6656, #6716, #6728, #6768, #6769, #7048, #7142, #7149, #7175, #7181, #7189, #7317, #7505, #7925, #8060, #8082, #856404, #8596, #8597, #8639, #8798, #8927, #9025, #9068, #9078, #9086, #9087, #9090, #9123, #9124, #9149, #9158, #9168, #9191, #9193, #9202, #9215, #9239, #9269, #9271, #9274, #9277, #9320, #9339, #9465, #9568, #9650, #9660, #9731
-
-**Last PICKUP PROMPT:**
-
-```
-l source URLs for the research
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1785566951500 -- research: Kimi K3 vs GLM 5.2 teacher model for training GLM 5.2 Local, with bill-informed recommendation and runbook.
-
-Where we left off (verified 2026-08-01 00:25 PT):
-- Research complete: 7 Brave searches across benchmarks, teacher-student distillation, community discussion.
-- Bill-informed answer delivered: GLM 5.2 via ring :8210 at near-zero marginal cost is the right teacher for EMSU. Kimi K3 via API only for high-value reasoning traces if cost justified.
-- Runbook deployed: /var/www/emtskills/docs/GLM52_TRAINING_TEACHER_RUNBOOK.md (created, FPM reloaded OK).
-
-Open threads to drive next:
-1. #20731 [proposed] -- Ruben decides teacher model preference and whether to use GLM 5.2 local ring as teacher (bill-optimal) or supplement with K3/DeepSeek traces. No code impact at EMSU until a training run is initiated.
-
-Reference IDs:
-- Ideas filed: #20731 [proposed]
-- Files touched: /var/www/emtskills/docs/GLM52_TRAINING_TEACHER_RUNBOOK.md (created)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Check what_served for K3 vs GLM 5.2 spend data (last 3 days)
-- [x] Check OpenRouter spend specifically
-- [x] Write GLM 5.2 Local training runbook
-- [x] Ship completion with runbook location
-</task_progress>
-</attempt_completion>
-```
-
-### `1785563540527` — 8/1/2026, 12:23:17 AM PT — 300 turns
-
-**Original task:**
-
-```
-Can you work on organizing the bug library so that it's easier to search in use by agents? Right now the bug library may be a little bit disorganized and I think it may contribute to agent's not getting or understanding the full effect of what it can offer. It's vast and rich with resources that could make a significant difference in the way that operations work. It should be leverage as such
-```
-
-**Ideas referenced:** #12619, #12713, #13082, #16523, #19173, #2036, #2056, #20662, #20729 [queued], #20732 [queued], #20733 [queued], #20741 [queued], #20742 [queued], #2106, #2121, #2122, #2126, #2128, #2129, #6711, #6719
-
-**Last PICKUP PROMPT:**
-
-```
-inerule 156 updated — deployed
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — bug library organization, all surfaces deployed.
-
-Where we left off (verified 2026-08-01 00:22 PT):
-- 1,742 incident rows, 0 NULLs domain/category/severity
-- MCP v0.3.0 live; bug_library_browse confirmed across all 8 domains
-- Kaizen organizer in WOPR crontab every 30 min
-- VEC index: /var/www/emtskills/docs/KNOWN_ISSUES_INDEX.md
-- CFA blocks appended to email_ai_system.md, sms_ai_system.md, livechat_ai_system.md
-- All 5 ideas (20729,20732,20733,20741,20742) approved and executed
-
-Open threads to drive next (none remaining — all executed):
-1. #20729 [deployed] — monitor /var/log/kaison_bug_library_organizer.log for first scheduled run
-2. #20732 [deployed] — clinerule 156 updated with browse reference
-3. #20733 [deployed] — verification sweep passed all 8 domains
-4. #20741 [deployed] — VEC index at /var/www/emtskills/docs/KNOWN_ISSUES_INDEX.md
-5. #20742 [deployed] — CFA blocks in email, sms, livechat system prompts
-
-Reference IDs:
-- Ideas: #20729, #20732, #20733, #20741, #20742 (all approved + executed)
-- Files touched: frankenstein-bug-library/src/index.ts, build/index.js, /var/www/emtskills/cron/cron_kaison_bug_library_organizer.php, /var/www/emtskills/docs/KNOWN_ISSUES_INDEX.md, /var/www/emtskills/prompts/email_ai_system.md, sms_ai_system.md, livechat_ai_system.md, clinerule 156
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785562021337` — 7/31/2026, 11:59:58 PM PT — 194 turns
-
-**Original task:**
-
-```
-Vicky having some issues in chat 55, can you address her issues? In the last 1 or 2 hours
-```
-
-**Ideas referenced:** #19490, #20128, #20130, #20333, #20410, #20555, #20565, #20569 [deployed], #20613 [ready_for_review], #20627, #20628, #20629, #20630, #20662, #20663 [rejected], #20665, #20672 [proposed], #20707 [proposed], #20708 [proposed], #20711 [proposed], #20718 [proposed], #20728 [proposed], #21088, #2125, #2126, #21261, #2127, #2128, #21490, #21495, #3360, #3361, #3362, #3363, #3364, #3365, #3366 [deployed], #3372, #6067
-
-**Last PICKUP PROMPT:**
-
-```
- cleanup through this UI page.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — Vicky and Ruben follow-through on approved fixes and exam enforcement tickets
-
-Where we left off (verified 2026-08-01 00:00 PT):
-- ✔ Repetition guard alive: 0 "still on this one" spam messages since 23:46 PT deploy; cron confirms clean ticks
-- ✔ Vicky access fixed: requireRole allows Admin tier + $isVicky vyu@ check, 4509-line file intact, php lint clean
-- ✔ Ruben approved #20711 (implementing), #20728 (implementing), #20613 (approved)
-- ✔ website_pricing.php wired to website_class_schedules + api/website_schedules.php; Vicky can do refresher cleanup via UI
-- ▸ Renewed dashboard gate + isVicky fix active; next 10-min cron tick likely marks Vicky issue #3372 as resolved
-
-Open threads to drive next:
-1. #20711 [in_progress] — Executor spec patch should finish in ~7 min; if it diff-no-ops because guard is already deployed, mark as done
-2. #20728 [in_progress] — Executor generates spec next; if diff no-ops (patch already applied), mark complete
-3. #20708 [proposed] — Vicky to delete the weekly refresher extras (8/1, 8/8, 8/22, 9/5, 9/12) via website_pricing.php UI
-4. #20707 [proposed] — Jason Li extensions: get approved dates and UPDATE moodle_c_live.quiz_overrides (group 2622, quizzes 681/682/683)
-5. Aaron Perez (ticket #21088) and Sam Nelson (ticket #21261) both need exam enforcement action via Vicky on exam_enforcement_dashboard.php
-6. #20613 [approved] — Watch Aug 1 first large charge for monthly-cap vs risk-hold discrimination
-
-Reference IDs:
-- Ideas approved this session: #20711 [in_progress], #20728 [in_progress], #20613 [approved]
-- Superseded: #20718 [proposed] (false claim, corrected by #20728)
-- False-positive resolved: #3366 (transient MCP probe timeout)
-- DB changes: follow_through_chat_sent_at column on ruben_imessage_issues, #3366 → resolved
-- Files deployed: exam_enforcement_dashboard.php (2 sed patches), cron_ruben_imessage_follow_through.php (v3 guard)
-- File restored from backup: exam_enforcement_dashboard.php.bak-2026-08-01T06-46-17-mcp-deploy
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785530188751` — 7/31/2026, 11:52:41 PM PT — 300 turns
-
-**Original task:**
-
-```
-See the Jon and Cori SMS chat regarding EMT classes suppsedly with the wrong dates posted for Boot Camp on the various schedules and advise what's happening with that.
-```
-
-**Ideas referenced:** #0056, #11998, #155724, #1565, #16732, #19017, #1976, #20578 [queued], #20593 [deployed], #20606 [queued], #20607 [deployed], #20678 [proposed], #20721 [proposed], #218838, #26222, #262220, #2640, #26922, #3295, #3300, #3336, #3337, #3338, #3339, #334155, #37474, #495057, #64748, #856404
-
-**Last PICKUP PROMPT:**
-
-```
-ification hook + audit record.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Cancel Class button on view_course_schedules.php + confirm 8/8 BC cancellation.
-
-Where we left off (verified 7/31/2026 11:52 PM PT):
-- 8/8 ghost BC sections 26222BC–26922BC (Course_Schedules ids 531–538 + class_schedule_instances 3160–3167): DELETED — Course_Schedules count for `26%22BC` = 0
-- Students migrated: Liliana Frausto, Jacob Aldaco, Starrenity Jones → 26223BC (Tempe 8/17); Frank Heald → 26923BC (DFW 8/17)
-- qb_invoices migrated: 4 → 26223BC, 1 → 26923BC
-- Public sites verified clean: arizonaemt.com/classschedule/ and texasemt.com show August 17, zero August 8
-- Display fix shipped: view_course_schedules.php strtotime(NULL) fatal patched (8 null-guarded sites; backup .bak-20260731-1413) — all 10 rows render
-- Guardrail rule installed: /var/www/emtskills/.clinerules/300-bootcamp-safe-course-writes.md (33 lines, verified)
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #20606 [executing] — Build the Cancel Class button on google-sheets-to-mysql-migration/view_course_schedules.php: cancel action deletes/marks the class, then triggers student email/SMS notification offering transfer to nearest open section, and writes an audit record. Need Ruben's decision on mark-as-cancelled column vs hard DELETE.
-2. #20606 [executing] — Contact 4 affected students: Liliana Frausto (lilyfrost86@gmail.com, Tempe), Jacob Aldaco (jacobaldaco2006@gmail.com, Tempe), Starrenity Jones (mrsstarrjones@gmail.com, Tempe, EA completed 7/31), Frank Heald (frankraymondheald123@gmail.com, DFW) — confirm the 8/17 placement is acceptable; Vicky outreach.
-
-Reference IDs:
-- Ideas: #20606 [approved/executing], #20678 [approved], #20721 [proposed], #20578 [proposed], #20593 [proposed]
-- Files touched: /var/www/emtskills/google-sheets-to-mysql-migration/view_course_schedules.php (+.bak-20260731-1413), /var/www/emtskills/.clinerules/300-bootcamp-safe-course-writes.md
-- Tables mutated: Course_Schedules, class_schedule_instances, Students, qb_invoices
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
 ```

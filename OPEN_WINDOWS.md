@@ -6,12 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/4/2026, 12:51:29 AM PT | window: last 72h | 59 tasks | index total 416 (parsed 6, cached 410)
+Generated: 8/4/2026, 1:51:29 AM PT | window: last 72h | 59 tasks | index total 418 (parsed 4, cached 414)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785821651406` | 8/4/2026, 12:51:19 AM | 325 | 1690KB | For Argus only: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser  |
-| `1785822732682` | 8/4/2026, 12:51:12 AM | 461 | 4291KB | GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes. Key achie |
+| `1785822732682` | 8/4/2026, 1:51:20 AM | 692 | 7048KB | GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes. Key achie |
+| `1785833407446` | 8/4/2026, 1:51:19 AM | 16 | 122KB | In argus:  |
+| `1785833341637` | 8/4/2026, 1:51:05 AM | 7 | 23KB | run this plase |
+| `1785821651406` | 8/4/2026, 1:48:58 AM | 522 | 3348KB | For Argus only: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser  |
 | `1785821481522` | 8/4/2026, 12:44:46 AM | 140 | 1104KB | pages at emsuniversity.com/emtskills appear to be loading very slowly. Why? |
 | `1785782909425` | 8/4/2026, 12:39:40 AM | 1010 | 5582KB | Why am i not seeing clustered ideas here in cline? |
 | `1785807924524` | 8/4/2026, 12:35:15 AM | 100 | 439KB | I’m assuming TeamHub is currently blank because you’re doing something with it at the mome |
@@ -67,59 +69,12 @@ Generated: 8/4/2026, 12:51:29 AM PT | window: last 72h | 59 tasks | index total 
 | `1785566876939` | 8/1/2026, 3:57:20 AM | 634 | 1456KB | GLM ring RoCE root cause found (wrong-NIC RX-offload drops from /30 shortcut routes); /32  |
 | `1785548524428` | 8/1/2026, 2:00:05 AM | 350 | 706KB | Jon says Daystron counsil stopped working |
 | `1785537564406` | 8/1/2026, 1:56:30 AM | 902 | 14669KB | #Argus |
-| `1785529983485` | 8/1/2026, 1:43:17 AM | 753 | 1679KB | Make sure that you are consulting the SLS so that incorrect information does not persist.  |
-| `1785564225764` | 8/1/2026, 1:40:35 AM | 260 | 1197KB | Subagents are showing 0 tools called and 0 tokens again. This has happened before earlier  |
 
 ---
 
 ## Per-window detail
 
-### `1785821651406` — 8/4/2026, 12:51:19 AM PT — 325 turns
-
-**Original task:**
-
-```
-For Argus only: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser 
-
-for frankenstein-llm, frankenstein-tools i'd like to disallow the use of the GLM 5.2 unless the user specificly chooses "Thinking" mode. Thinking mode is only permitted by Exec Admin, IT Admin, Master Admin. All others must not use GLM 5.2 within frankenstein-llm or frankenstein-tools.
-```
-
-**Ideas referenced:** #10182, #12301, #1557, #16213, #16263, #16648, #17202, #17203, #17205, #17300, #17430, #18329, #18378, #1864, #18745, #18820, #18868, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #1934, #19348, #2006, #20340 [executing], #20547, #20549, #21010 [executing], #21011 [executing], #21038 [proposed], #21044, #21053 [proposed], #21125, #21126, #21134, #21138, #21158 [executing], #21171, #2121, #21213 [executing], #21262, #2139 [investigating], #2140, #21419 [executing], #2147, #2149, #2153, #2154, #21542 [rejected], #21546 [executing], #2159 [resolved], #2170 [resolved], #22066, #22067, #22068, #22086, #22087, #22188, #22200, #22240 [proposed], #22256, #22333, #22334, #274160, #30363, #334155, #37972, #4338, #45094, #64748, #69707
-
-**Last PICKUP PROMPT:**
-
-```
-al): `/tmp/glm_gate_simple.py`
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up GLM 5.2 Thinking Mode Gate deployment.
-
-Where we left off (verified 2026-08-03 11:19 PM PT):
-- Backups exist for all three files (router_hook.py, alltastic_api.php, argus_download.php)
-- Patch plan fully specified with exact code blocks (A-F above)
-- MCP tool call formatting blocked at high context depth (>95K tokens) — fresh window will succeed
-
-Open threads to drive next:
-1. Deploy router_hook.py patches A+B (gate function + final guard before super call) — 2 insertions
-2. Deploy alltastic_api.php patches C+D (emsu_mode/emsu_role in callClaude metadata + terminal_query mode detection)
-3. Deploy argus_download.php patches E+F (🧠 toggle button + sendQuery mode payload)
-4. Run verification: py_compile, php -l, LiteLLM restart, live terminal probe
-5. File orchestrator idea + mark task complete
-
-Reference IDs:
-- Files touched: /etc/litellm/router_hook.py, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/routes/argus_download.php
-- Backups: *.bak-20260803-glmtaskinggate
-- Local patch: /tmp/glm_gate_simple.py (ready to base64-encode and transfer)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785822732682` — 8/4/2026, 12:51:12 AM PT — 461 turns
+### `1785822732682` — 8/4/2026, 1:51:20 AM PT — 692 turns
 
 **Original task:**
 
@@ -134,7 +89,7 @@ GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes.
 6. Fixed NCCL ibv_create_cq 
 ```
 
-**Ideas referenced:** #1130, #1131, #12299, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #1640, #16448, #16452, #1652 [resolved], #1655, #1658, #16588, #16778, #16802, #16803, #16839, #16851, #17202, #17246, #17298, #17301, #1744, #1754, #1755, #1779, #1798, #1828, #18471, #1897, #19563, #19567, #1980, #1983, #1984, #1986, #20005, #20042, #20264, #20272, #20340 [executing], #2050, #2051, #2052, #2053, #2054, #2055, #2060, #2061, #2062, #2063, #2065, #20662, #2073, #2081, #20825, #2083 [resolved], #2085, #2089, #2090, #2092, #2093, #2096, #2097, #20985, #2099, #2101, #21010 [executing], #21011 [executing], #2102, #2103, #21038 [proposed], #2109, #2110, #2111, #21158 [executing], #2116, #21171, #2121, #21213 [executing], #2127, #2128, #2129, #2131, #2138, #2139 [investigating], #2141, #21419 [executing], #2147, #2149, #2151, #2152, #2153, #2154, #21542 [rejected], #21546 [executing], #2157, #2159 [resolved], #2168 [deployed], #21684, #2170 [resolved], #2174 [deployed], #22066, #22067, #22068, #22086, #22087, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #7142, #7149
+**Ideas referenced:** #1130, #1131, #12299, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #1602 [resolved], #16032, #16033, #16036, #16122, #16163, #16338, #1640, #16448, #16452, #1652 [resolved], #1655, #1658, #16588, #16778, #16802, #16803, #16839, #16851, #17202, #17246, #17298, #17301, #1744, #1754, #1755, #1779, #1798, #1828, #18471, #1897, #19563, #19567, #1980, #1983, #1984, #1986, #20005, #20042, #20264, #20272, #20340 [executing], #2050, #2051, #2052, #2053, #2054, #2055, #2060, #2061, #2062, #2063, #2065, #20662, #2073, #2081, #20825, #2083 [resolved], #2085, #2089, #2090, #2092, #2093, #2096, #2097, #20985, #2099, #2101, #21010 [executing], #21011 [executing], #2102, #2103, #21038 [proposed], #2109, #2110, #2111, #21158 [executing], #2116, #21171, #2121, #21213 [executing], #2127, #2128, #2129, #2131, #2138, #2139 [investigating], #2141, #21419 [executing], #2147, #2149, #2151, #2152, #2153, #2154, #21542 [rejected], #21546 [executing], #2157, #2159 [resolved], #2168 [deployed], #21684, #2170 [resolved], #2174 [deployed], #2176 [resolved], #22066, #22067, #22068, #22086, #22087, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #22355 [proposed], #7142, #7149
 
 **Last PICKUP PROMPT:**
 
@@ -177,6 +132,88 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [x] Ruben: "cherry pick" + "do a real thought experiment and simulate the best cherry pick situation"
 - [x] Ran the thought experiment: best cherry-pick = PP=6 15pct + max_num_seqs=8 + auto-restart + EXEC_TIMEOUT=900 + workers-first + gpu_mem 0.82 + KZ_TRIM + Socket = 8 users @ ~8 tok/s, 65 tok/s agg, 17h stable
 - [ ] AWAITING Ruben go: relau
+```
+
+### `1785833407446` — 8/4/2026, 1:51:19 AM PT — 16 turns
+
+**Original task:**
+
+```
+In argus: 
+
+I just asked a really simple stupid question adn it's taking multiple attempts to asnwer. 
+
+why does this make me laugh?
+Argus
+Connected - researching...
+Searched EMSU records (1 student profile matched)
+Searched EMSU knowledge base (VEC) - relevant docs found
+Thinking with frankenstein-llm...
+```
+
+**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #16213, #16263, #18745, #18770, #19370, #21140, #21262, #274160, #30363, #69707, #8942, #9650, #9654, #9660, #9733, #9889
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785833341637` — 8/4/2026, 1:51:05 AM PT — 7 turns
+
+**Original task:**
+
+```
+run this plase
+
+1. #22334 [proposed] — Rule-91/MCP tunnel wedge RCA: document the transport artifact (client-side JSON parse rejection ~1400 chars) for cross-agent learning
+```
+
+**Ideas referenced:** #13487, #22333, #22334 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+r cross-agent learning
+- [ ] Update idea status + reconcile
+- [ ] Complete with PICKUP PROMPT block
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1785821651406` — 8/4/2026, 1:48:58 AM PT — 522 turns
+
+**Original task:**
+
+```
+For Argus only: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser 
+
+for frankenstein-llm, frankenstein-tools i'd like to disallow the use of the GLM 5.2 unless the user specificly chooses "Thinking" mode. Thinking mode is only permitted by Exec Admin, IT Admin, Master Admin. All others must not use GLM 5.2 within frankenstein-llm or frankenstein-tools.
+```
+
+**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #1557, #16213, #16263, #16648, #17202, #17203, #17205, #17300, #17430, #18329, #18378, #1864, #18745, #18770, #18820, #18868, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #1934, #19348, #19370, #2006, #20340 [executing], #20547, #20549, #21010 [executing], #21011 [executing], #21038 [proposed], #21044, #21053 [proposed], #21125, #21126, #21134, #21138, #21140, #21158 [executing], #21171, #2121, #21213 [executing], #21262, #2139 [investigating], #2140, #21419 [executing], #2147, #2149, #2153, #2154, #21542 [rejected], #21546 [executing], #2159 [resolved], #2170 [resolved], #22066, #22067, #22068, #22086, #22087, #22188, #22200, #22240 [proposed], #22256, #22333 [deploying], #22334 [proposed], #274160, #30363, #334155, #37972, #4338, #45094, #64748, #69707, #8942, #9650, #9654, #9660, #9733, #9889
+
+**Last PICKUP PROMPT:**
+
+```
+min/MasterAdmin can toggle it.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — GLM 5.2 Thinking Mode Gate deployment.
+
+Where we left off (verified 2026-08-04 01:46 PT):
+- All 6 patches applied and verified: router_hook.py gate function + final guard (lines 76, 604-606), alltastic_api.php emsu_mode/role metadata (line 12087) + terminal_query session (line 5081), argus_download.php 🧠 toggle button (lines 287, 1385).
+- php -l passed for both PHP files. LiteLLM container restarted. Live probe of the gate itself is the remaining open item.
+
+Open threads to drive next:
+1. #22333 [deploying] — run a live terminal_query probe: send a non-thinking CS-roled query and a thinking ExecAdmin query, confirm the GLM-5.2 vs 120B routing in the response metadata. (Confirmed the gate code is on disk; end-to-end probe with the real API key is the next step.)
+2. #22334 [proposed] — close out the RCA for the MCP tunnel wedge that blocked this deploy.
+
+Reference IDs:
+- Idea: #22333 (GLM gate), #22334 (RCA)
+- Files touched: /etc/litellm/router_hook.py, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/routes/argus_download.php
+- Backups: .bak-20260803-glmtaskinggate
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
 ### `1785821481522` — 8/4/2026, 12:44:46 AM PT — 140 turns
@@ -2564,72 +2601,4 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Jon's extension error FIXED: literal \n in service-worker.js line 27; node --check OK, manifest 2.5.1
 - [x] perm_set for ExecAdmin GRANTED: PERM_MATRIX_EXECADMIN_EDIT_V1, php -l clean, FPM reloaded
 - [x] Cyra access note sent to 
-```
-
-### `1785529983485` — 8/1/2026, 1:43:17 AM PT — 753 turns
-
-**Original task:**
-
-```
-Make sure that you are consulting the SLS so that incorrect information does not persist. Same with the mcp's.
-
-I also agree with your proposed ideas so go ahead and approve those and then leverage rule 267 to bring the items to conclusion we need to bring all of these to conclusion to end and then do comprehensive testing to make sure that everything is fixed
-
-
-Comprehensive handoff below. I re-verified every claim against live code before writing it, including re-checking the false `deployed` tags and confirming the escalation cron is still running (clean run at 13:20).
-
-════════════════════
-```
-
-**Ideas referenced:** #0000, #10086, #10092, #10096, #10103, #10110, #10116, #10121, #10123, #10125, #10132, #1218, #12184, #12993, #13025, #13030, #13040, #13044, #13045, #13057, #13202, #13512 [approved], #13873, #13976, #15367, #16608, #16610, #16960 [approved], #17130 [superseded], #17537 [rejected], #17580, #17760 [needs_verify], #178501, #17913, #18132 [deployed], #19125, #19173, #19840 [deployed], #19910 [approved], #19911 [approved], #19914 [approved], #19917 [approved], #19921 [approved], #20055 [deployed], #20056 [deployed], #20069, #20128 [deployed], #20130 [queued], #20132 [approved], #20134, #20135 [approved], #20183, #20193 [deployed], #20264 [ready_for_review], #20313 [deployed], #20314 [queued], #20315 [deployed], #20317 [deployed], #20326 [deployed], #20327 [deployed], #20328 [deployed], #20333 [approved], #20334 [approved], #20357, #20389 [approved], #20392 [approved], #20405 [approved], #20419 [deployed], #20420 [deployed], #20423 [ready_for_review], #20491 [proposed], #20497 [approved], #20498 [ready_for_review], #20506 [ready_for_review], #20528 [ready_for_review], #20539 [rejected], #20547 [approved], #20549 [approved], #20551 [proposed], #20555 [in_progress], #20556 [queued], #20577 [executing], #20579 [executing], #20591 [executing], #20592 [executing], #20600 [executing], #20606 [executing], #20613 [proposed], #20700 [ready_for_review], #20702 [ready_for_review], #20703 [ready_for_review], #20711 [ready_for_review], #20716 [ready_for_review], #22606, #22647, #2745 [approved], #4410, #4414, #4422, #4428, #4755 [approved], #4929, #4970, #4972, #4977, #4988, #4991, #4992, #5588, #5603, #5604, #5704, #5705, #5721, #5722, #5920, #6362 [approved], #6751, #6846 [approved], #7175, #8489 [approved], #9070, #9086, #9168, #9339
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785564225764` — 8/1/2026, 1:40:35 AM PT — 260 turns
-
-**Original task:**
-
-```
-Subagents are showing 0 tools called and 0 tokens again. This has happened before earlier today in the morning
-```
-
-**Ideas referenced:** #1003, #10223, #10291, #10469, #10866, #1134, #1146, #11953, #12004, #12184, #12207, #12251, #12285, #12335, #12363, #12407, #12504, #12584, #12597, #12615, #12646, #12672, #13063, #13487, #13554, #13709, #13757, #13873, #1391, #13964, #13977, #14158, #14572, #14777, #1515, #1519 [resolved], #15432, #15669, #1567, #1568, #15815, #15891, #15906, #15919, #15928, #15965, #16167, #16207, #16242, #16259, #16260, #16581, #16606, #16607, #16613, #16648, #16696, #16701, #16727, #16731, #16881, #17202, #17203, #17205, #17300, #17430, #1746, #17483, #1756, #177796, #177918, #177921, #177926, #177956, #1813, #18266, #18329, #18337, #18350, #18353, #18355, #18357, #18363, #1837, #1847, #1848, #18535, #18693, #1871 [investigating], #1874 [resolved], #18788, #18820, #1884 [resolved], #18845, #18868, #1892 [resolved], #1922, #1934, #19426, #19435, #19490, #19503, #19522, #1965, #1966, #1967, #19901, #19921, #2002, #2005, #20101, #20130, #20131, #20133, #20333, #20410, #20491, #20549, #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #20630, #20662, #20663 [rejected], #20665, #20672 [proposed], #20715 [proposed], #20722 [proposed], #20723 [proposed], #20730 [proposed], #2099 [resolved], #2125 [resolved], #2126, #2127, #2128, #2242, #2740, #3023, #3093, #3132, #3133, #3910, #3911, #3915, #3930, #4016, #4021, #4458, #4686, #4692, #4747, #4802, #4811, #4813, #4863, #4906, #4907, #4955, #4962, #5024, #5080, #5102, #5129, #5247, #5329, #5339, #5387, #5450, #5451, #5530, #5564, #5622, #5627, #5742, #5749, #5920, #6055, #6064, #6067, #6070, #6078, #6080, #6105, #6277, #6419, #6443, #6523, #6538, #6650, #6656, #6716, #6728, #6768, #6769, #7048, #7175, #7181, #7189, #7317, #8060, #8082, #8596, #8597, #8639, #8798, #8927, #9025, #9068, #9078, #9086, #9087, #9090, #9123, #9124, #9149, #9191, #9193, #9202, #9215, #9239, #9320, #9465, #9568
-
-**Last PICKUP PROMPT:**
-
-```
-M the moment the ring answers.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task 1785564225764 — Frankenstein stabilization wrap: canary verified 49d old + live, remaining GLM watch.
-
-Where we left off (verified 2026-08-01 01:39 PT):
-- Canary (idea #11953, 2026-06-12) confirmed live: health file written 01:39:22 PT, Artemis pass_streak=429 healthy, GLM fail_streak=431 with GLM-NO-QUARANTINE so it auto-rejoins post-maintenance
-- #20722 [executing] adapter ghost-guard fully deployed: single pid owns 127.0.0.1:11510
-- #20723 [executing] KAIZEN schema not yet located server-side
-- #20715 [executing] GLM-5.2 ring in maintenance, Federation spill to Artemis proven
-- #20730 [executing] umbrella idea tracking
-
-Open threads to drive next:
-1. #20723 [executing] — locate KAIZEN self-heal table on WOPR (`SHOW TABLES LIKE '%kaizen%'/'%self_heal%'/'%repair%'`), seed adapter_ghost_port_contention recipe, backfill incidents
-2. #20715 [executing] — next session poll `grep CANARY /tmp/frankenstein_tools_adapter.log | tail` for GLM fail_streak→0 / ok=True, then confirm glm_healthy at :8211 and run subagent dispatch test
-3. #20722 [executing] — 24h recur check: `ps aux | grep frankenstein_tools_adapter.py | grep -v grep | wc -l` stays 1
-4. #20730 [executing] — wire #20723 recipe into self-heal loop when schema found
-
-Reference IDs:
-- Ideas filed + approved: #20715 [executing], #20722 [executing], #20723 [executing], #20730 [executing] (verified: status=approved, dev_stage=auditing)
-- Files deployed: /etc/systemd/system/frankenstein-tools.service.d/zzz-idea20722-single-instance.conf, /usr/local/bin/emsu-frank-tools-single-instance.sh, /usr/local/bin/frankenstein_tools_adapter.py lines 3999-4004, /usr/local/bin/emsu-frankenstein-tools-watchdog.sh Step 3.5
-- DB: orchestrator_ideas status=approved for all 4 (fixed 00:47 PT)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Probe canary age: introduced 2026-06-12 (idea #11953, Window-3) — 49 days old
-- [x] Verify canary live: health file written 01:39:22 PT
-- [x] Confirm state: Artemis pass_streak=429 healthy, GLM fail_streak=431 + GLM-NO-QUARANTINE, Julia ECONNRESET
-- [x] Ship answer with pickup prompt
-</task_progress>
-</attempt_completion>
 ```

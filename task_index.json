@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-04T07:51:29.395Z",
+ "generated_at": "2026-08-04T08:51:29.796Z",
  "counts": {
-  "parsed": 6,
-  "reused": 410,
+  "parsed": 4,
+  "reused": 414,
   "failed": 0,
-  "total": 416
+  "total": 418
  },
  "tasks": {
   "1784522296714": {
@@ -109971,13 +109971,13 @@
   },
   "1785821651406": {
    "task_id": "1785821651406",
-   "mtime": 1785829879449,
+   "mtime": 1785833338673,
    "created_at": "2026-08-04T05:34:11.406Z",
-   "last_modified": "2026-08-04T07:51:19.449Z",
-   "size_kb": 1690,
-   "turn_count": 325,
+   "last_modified": "2026-08-04T08:48:58.673Z",
+   "size_kb": 3348,
+   "turn_count": 522,
    "title": "For Argus only: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser \n\nfor frankenstein-llm, frankenstein-tools i'd like to disallow the use of the GLM 5.2 unless the user specificly chooses \"Thinking\" mode. Thinking mode is only permitted by Exec Admin, IT Admin, Master Admin. All others must not use GLM 5.2 within frankenstein-llm or frankenstein-tools.",
-   "pickup_prompt": "al): `/tmp/glm_gate_simple.py`\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up GLM 5.2 Thinking Mode Gate deployment.\n\nWhere we left off (verified 2026-08-03 11:19 PM PT):\n- Backups exist for all three files (router_hook.py, alltastic_api.php, argus_download.php)\n- Patch plan fully specified with exact code blocks (A-F above)\n- MCP tool call formatting blocked at high context depth (>95K tokens) — fresh window will succeed\n\nOpen threads to drive next:\n1. Deploy router_hook.py patches A+B (gate function + final guard before super call) — 2 insertions\n2. Deploy alltastic_api.php patches C+D (emsu_mode/emsu_role in callClaude metadata + terminal_query mode detection)\n3. Deploy argus_download.php patches E+F (🧠 toggle button + sendQuery mode payload)\n4. Run verification: py_compile, php -l, LiteLLM restart, live terminal probe\n5. File orchestrator idea + mark task complete\n\nReference IDs:\n- Files touched: /etc/litellm/router_hook.py, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/routes/argus_download.php\n- Backups: *.bak-20260803-glmtaskinggate\n- Local patch: /tmp/glm_gate_simple.py (ready to base64-encode and transfer)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "min/MasterAdmin can toggle it.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — GLM 5.2 Thinking Mode Gate deployment.\n\nWhere we left off (verified 2026-08-04 01:46 PT):\n- All 6 patches applied and verified: router_hook.py gate function + final guard (lines 76, 604-606), alltastic_api.php emsu_mode/role metadata (line 12087) + terminal_query session (line 5081), argus_download.php 🧠 toggle button (lines 287, 1385).\n- php -l passed for both PHP files. LiteLLM container restarted. Live probe of the gate itself is the remaining open item.\n\nOpen threads to drive next:\n1. #22333 [deploying] — run a live terminal_query probe: send a non-thinking CS-roled query and a thinking ExecAdmin query, confirm the GLM-5.2 vs 120B routing in the response metadata. (Confirmed the gate code is on disk; end-to-end probe with the real API key is the next step.)\n2. #22334 [proposed] — close out the RCA for the MCP tunnel wedge that blocked this deploy.\n\nReference IDs:\n- Idea: #22333 (GLM gate), #22334 (RCA)\n- Files touched: /etc/litellm/router_hook.py, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/routes/argus_download.php\n- Backups: .bak-20260803-glmtaskinggate\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1557": null,
     "1864": null,
@@ -109993,6 +109993,14 @@
     "2159": "resolved",
     "2170": "resolved",
     "4338": null,
+    "8942": null,
+    "9650": null,
+    "9654": null,
+    "9660": null,
+    "9733": null,
+    "9889": null,
+    "10003": null,
+    "10005": null,
     "10182": null,
     "12301": null,
     "16213": null,
@@ -110006,6 +110014,7 @@
     "18329": null,
     "18378": null,
     "18745": null,
+    "18770": null,
     "18820": null,
     "18868": null,
     "18946": null,
@@ -110016,6 +110025,7 @@
     "18951": null,
     "18973": null,
     "19348": null,
+    "19370": null,
     "20340": "executing",
     "20547": null,
     "20549": null,
@@ -110028,6 +110038,7 @@
     "21126": null,
     "21134": null,
     "21138": null,
+    "21140": null,
     "21158": "executing",
     "21171": null,
     "21213": "executing",
@@ -110044,24 +110055,31 @@
     "22200": null,
     "22240": "proposed",
     "22256": null,
-    "22333": null,
-    "22334": null,
+    "22333": "deploying",
+    "22334": "proposed",
     "30363": null,
     "37972": null,
     "45094": null,
     "64748": null,
     "69707": null,
+    "127908": null,
+    "128193": null,
+    "128203": null,
+    "128206": null,
+    "128263": null,
+    "128266": null,
+    "128275": null,
     "274160": null,
     "334155": null
    }
   },
   "1785822732682": {
    "task_id": "1785822732682",
-   "mtime": 1785829872357,
+   "mtime": 1785833480470,
    "created_at": "2026-08-04T05:52:12.682Z",
-   "last_modified": "2026-08-04T07:51:12.357Z",
-   "size_kb": 4291,
-   "turn_count": 461,
+   "last_modified": "2026-08-04T08:51:20.470Z",
+   "size_kb": 7048,
+   "turn_count": 692,
    "title": "GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes. Key achievements this session:\n\n1. Discovered 200Gbps RoCE ring topology, set MTU 9000 on all interfaces\n2. Fixed crossed CX7 cables on Tiberius + Marcus (IPs on wrong interfaces) - 200G links now work\n3. Distributed 419G FP8-MXFP4 checkpoint to all 6 nodes via 200G ring (~20 min per node)\n4. Fixed quantization error: patched config.json quant_method from hybrid_mxfp4_ct to compressed-tensors\n5. Discovered TP=6 impossible (64 attention heads not divisible by 6), using TP=2 PP=3 instead\n6. Fixed NCCL ibv_create_cq memory exhaustion with NCCL_IB_DISABLE=1 (TCP transport)\n7. NCCL init complete, FLASHINFER_MLA_SPARS",
    "pickup_prompt": "executing], #22240 [proposed].\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #22128 - GLM-5.2: best cherry-pick = PP=6 15pct + max_num_seqs=8 + auto-restart + EXEC_TIMEOUT=900 (8 users @ ~8 tok/s, 65 tok/s agg)\n\nWhere we left off (verified 2026-08-04 00:02 PT):\n- THOUGHT EXPERIMENT COMPLETE. Best cherry-pick for max STABLE concurrency >5-10 tok/s: PP=6 15pct ring + max_num_seqs=8 + while-true auto-restart + EXEC_TIMEOUT=900 + workers-first + gpu_mem 0.82 + KZ_TRIM + Socket transport\n- Simulated: N=8 -> 65 tok/s agg (~8 tok/s/user). 8 concurrent at ~8 tok/s each. Stable 17h w/ auto-restart (#2157)\n- KEY TENSION RESOLVED: max_num_seqs is BUILD-SPECIFIC. v40 Socket build tolerated 128 (110 tok/s); current b12x/sm121fix2 hangs compile >8 (#1655). Safe ceiling on current image = 8 (#1655). #2083's 128-collapse was UNSET admission, not tuned 128\n- Canonical stable build (2026-07-30): PP=6 15pct, gpu_mem 0.82 (rule 277 do NOT lower), 131072 ctx, kv_max_concurrency 21.2, 0 preemptions, ring uptime 8h55m+\n- ONE UNCERTAINTY: does current b12x/sm121fix2 hang compile at max_num_seqs>8 (#1655) or tolerate 16 (#2083)? Test: launch at 8, verify, step to 16, watch compile\n- 272G AQLM download RUNNING (108G/272G) - the near-Q4 quality upgrade path, unproven on our HW\n- #22128 [executing], #22240 [proposed]\n\nOpen threads to drive next:\n1. #22128 [executing] , AWAITING RUBEN GO: relaunch PP=6 15pct ring with the cherry-pick config (max_num_seqs=8, auto-restart, EXEC_TIMEOUT=900, workers-first, gpu_mem 0.82, KZ_TRIM, Socket). Relaunch recipe: bug library 1993, run /tmp/glm52_relaunch_perf.sh FROM CATO via setsid, workers 1-5 then rank0\n2. #22240 [proposed] , research community GLM-5.2 configs; answered by threads 378150 + 375416\n3. (human-only decision, no idea) , 272G AQLM download continues (108G/272G); near-Q4 quality upgrade path once downloaded + proven\n\nReference IDs:\n- Ideas filed: #22128 [executing], #22240 [proposed]\n- Files touched: /home/rubenmajor/blackwell-llm-docker/ (cato, cloned), /home/rubenmajor/dl_aqlm.sh (cato), /home/rubenmajor/glm52_launch_cfg_tp2pp3.sh (all 6 nodes), HANDOFF_NOTES.md, bug library incidents #2083/#2085/#2152/#2157/#2159/#1640/#1655/#2168\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n<task_progress>- [x] Read handoff notes for current state\n- [x] Diagnose OOM root cause (bug library incident)\n- [x] 272G NVFP4+AQLM download RUNNING on Cato (108G/272G)\n- [x] OUR recent history: PP=6 15pct AWQ (:8210) stable bs=1; TP=2/PP=3 419G OOM-rebooted; TP=6 impossible\n- [x] Ruben REJECTED TP=4: \"we actually have an ideal GLM build a while back. your TP4 recommendation is terrible\"\n- [x] FOUND ideal build candidates: v40 (#1640: PP=6 Socket max_num_seqs=128 = 110 tok/s @ 128), #1655 (>8 hangs compile), #2083 (N=8=65 tok/s, cap 16), #2157 (auto-restart 17h), #2159 (EXEC_TIMEOUT=900), #2168 (workers-first)\n- [x] Read canonical stable-build doc (PROJECT_FRANKENSTEIN.md LAST KNOWN STABLE BUILD): PP=6 15pct, gpu_mem 0.82, 131072 ctx, kv_max_concurrency 21.2, 0 preemptions, 8h55m uptime\n- [x] Ruben: \"cherry pick\" + \"do a real thought experiment and simulate the best cherry pick situation\"\n- [x] Ran the thought experiment: best cherry-pick = PP=6 15pct + max_num_seqs=8 + auto-restart + EXEC_TIMEOUT=900 + workers-first + gpu_mem 0.82 + KZ_TRIM + Socket = 8 users @ ~8 tok/s, 65 tok/s agg, 17h stable\n- [ ] AWAITING Ruben go: relau",
    "ideas": {
@@ -110072,6 +110090,7 @@
     "1249": null,
     "1252": null,
     "1258": null,
+    "1602": "resolved",
     "1640": null,
     "1652": "resolved",
     "1655": null,
@@ -110135,6 +110154,7 @@
     "2168": "deployed",
     "2170": "resolved",
     "2174": "deployed",
+    "2176": "resolved",
     "7142": null,
     "7149": null,
     "12299": null,
@@ -110189,7 +110209,8 @@
     "22188": null,
     "22200": null,
     "22240": "proposed",
-    "22250": null
+    "22250": null,
+    "22355": "proposed"
    }
   },
   "1785824593043": {
@@ -110212,6 +110233,60 @@
     "17205": null,
     "18820": null,
     "178513": null
+   }
+  },
+  "1785833341637": {
+   "task_id": "1785833341637",
+   "mtime": 1785833465592,
+   "created_at": "2026-08-04T08:49:01.637Z",
+   "last_modified": "2026-08-04T08:51:05.592Z",
+   "size_kb": 23,
+   "turn_count": 7,
+   "title": "run this plase\n\n1. #22334 [proposed] — Rule-91/MCP tunnel wedge RCA: document the transport artifact (client-side JSON parse rejection ~1400 chars) for cross-agent learning",
+   "pickup_prompt": "r cross-agent learning\n- [ ] Update idea status + reconcile\n- [ ] Complete with PICKUP PROMPT block\n</task_progress>\n</use_mcp_tool>",
+   "ideas": {
+    "13487": null,
+    "22333": null,
+    "22334": "proposed"
+   }
+  },
+  "1785833407446": {
+   "task_id": "1785833407446",
+   "mtime": 1785833479813,
+   "created_at": "2026-08-04T08:50:07.446Z",
+   "last_modified": "2026-08-04T08:51:19.813Z",
+   "size_kb": 122,
+   "turn_count": 16,
+   "title": "In argus: \n\nI just asked a really simple stupid question adn it's taking multiple attempts to asnwer. \n\nwhy does this make me laugh?\nArgus\nConnected - researching...\nSearched EMSU records (1 student profile matched)\nSearched EMSU knowledge base (VEC) - relevant docs found\nThinking with frankenstein-llm...",
+   "pickup_prompt": null,
+   "ideas": {
+    "8942": null,
+    "9650": null,
+    "9654": null,
+    "9660": null,
+    "9733": null,
+    "9889": null,
+    "10003": null,
+    "10005": null,
+    "10182": null,
+    "12301": null,
+    "16213": null,
+    "16263": null,
+    "18745": null,
+    "18770": null,
+    "19370": null,
+    "21140": null,
+    "21262": null,
+    "30363": null,
+    "69707": null,
+    "127908": null,
+    "128193": null,
+    "128203": null,
+    "128206": null,
+    "128263": null,
+    "128266": null,
+    "128275": null,
+    "274160": null
    }
   }
  }

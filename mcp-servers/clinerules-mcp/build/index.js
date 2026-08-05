@@ -847,13 +847,37 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
                 citedIds.push(cm[1]);
         }
         if (citedIds.length > 0) {
+            // 2026-08-05: FAIL-CLOSED + RETRY.
+            // Previously a single 8s fetch with a silent catch -> on any hiccup the
+            // gate degraded to a soft "SKIPPED" note and the completion PASSED with
+            // idea numbers totally unverified. That is a fail-OPEN anti-lie gate:
+            // it protects you exactly when it happens to be up, which is the one
+            // property a lie-detector must not have. Now: 3 attempts with backoff,
+            // and if all 3 fail the validation HARD-FAILS so the agent cannot ship
+            // unverified idea numbers by getting unlucky with the network.
+            let data = null;
+            let lastErr = "";
+            for (let attempt = 1; attempt <= 3; attempt++) {
+                try {
+                    const ctrl = new AbortController();
+                    const timer = setTimeout(() => ctrl.abort(), 15000);
+                    const resp = await fetch("https://www.emsuniversity.com/emtskills/api/orchestrator/idea_exists.php?ids=" +
+                        encodeURIComponent(citedIds.join(",")), { signal: ctrl.signal });
+                    clearTimeout(timer);
+                    data = await resp.json();
+                    if (data && data.ok)
+                        break;
+                    lastErr = "endpoint returned ok=false";
+                    data = null;
+                }
+                catch (e) {
+                    lastErr = String(e && e.message ? e.message : e).slice(0, 120);
+                    data = null;
+                }
+                if (attempt < 3)
+                    await new Promise((r) => setTimeout(r, 1000 * attempt));
+            }
             try {
-                const ctrl = new AbortController();
-                const timer = setTimeout(() => ctrl.abort(), 8000);
-                const resp = await fetch("https://www.emsuniversity.com/emtskills/api/orchestrator/idea_exists.php?ids=" +
-                    encodeURIComponent(citedIds.join(",")), { signal: ctrl.signal });
-                clearTimeout(timer);
-                const data = await resp.json();
                 if (data && data.ok && data.ideas) {
                     const missing = Array.isArray(data.missing)
                         ? data.missing.map((x) => String(x))
@@ -880,11 +904,19 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
                             "you cited the wrong idea. Fix it before shipping.";
                 }
             }
-            catch {
+            catch (e) {
+                lastErr = String(e && e.message ? e.message : e).slice(0, 120);
+                data = null;
+            }
+            if (!data) {
+                // FAIL CLOSED. An unverifiable claim is not a passing claim.
+                failures.push(`IDENTITY_GATE_UNAVAILABLE: could not verify ${citedIds.length} cited idea id(s) after 3 attempts ` +
+                    `(last error: ${lastErr || "unknown"}). The existence gate FAILS CLOSED by design: an agent must not be ` +
+                    `able to ship unverified idea numbers just because the network hiccuped. Retry in a moment. If the ` +
+                    `endpoint is genuinely down, remove every #NNNN citation from the result or fix the endpoint first.`);
                 identityEcho =
-                    "\n\nIDENTITY ECHO: SKIPPED (idea_exists.php unreachable). " +
-                        "Existence of cited idea numbers is UNVERIFIED this run. " +
-                        "Confirm manually that every #NNNN you cited was actually created by a create_idea call in this session.";
+                    "\n\nIDENTITY ECHO: FAILED (idea_exists.php unreachable after 3 attempts). " +
+                        "This is now a HARD FAILURE, not a soft skip.";
             }
         }
     }

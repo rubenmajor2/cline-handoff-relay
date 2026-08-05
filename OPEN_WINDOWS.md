@@ -6,23 +6,23 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/5/2026, 12:39:38 PM PT | window: last 72h | 112 tasks | index total 487 (parsed 4, cached 483)
+Generated: 8/5/2026, 1:39:38 PM PT | window: last 72h | 112 tasks | index total 487 (parsed 4, cached 483)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785954595787` | 8/5/2026, 12:39:35 PM | 81 | 326KB | #KAISON |
-| `1785954856277` | 8/5/2026, 12:39:20 PM | 105 | 1076KB | #CFA |
-| `1785957900287` | 8/5/2026, 12:38:32 PM | 27 | 85KB | Telphony still having issues: |
-| `1785954766914` | 8/5/2026, 12:33:25 PM | 66 | 558KB | #LLM FLEET |
-| `1785939420388` | 8/5/2026, 12:09:29 PM | 236 | 640KB | #Argus |
+| `1785939083137` | 8/5/2026, 1:37:32 PM | 1036 | 1477KB | https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since  |
+| `1785953476892` | 8/5/2026, 1:25:26 PM | 338 | 701KB | build and ship this |
+| `1785957900287` | 8/5/2026, 1:15:27 PM | 93 | 443KB | Telphony still having issues: |
+| `1785940995783` | 8/5/2026, 1:10:41 PM | 256 | 574KB | Resolve this issue: |
+| `1785937503831` | 8/5/2026, 1:07:53 PM | 374 | 1574KB | Can you tell me how many turns have taken place for each model in the last 5 hours by mode |
+| `1785939420388` | 8/5/2026, 1:06:09 PM | 250 | 682KB | #Argus |
+| `1785954733601` | 8/5/2026, 1:02:40 PM | 220 | 444KB | #SLS MEGA |
+| `1785954856277` | 8/5/2026, 1:02:23 PM | 134 | 1164KB | #CFA |
+| `1785954766914` | 8/5/2026, 1:01:10 PM | 106 | 638KB | #LLM FLEET |
+| `1785954595787` | 8/5/2026, 12:42:12 PM | 92 | 357KB | #KAISON |
 | `1785954707277` | 8/5/2026, 11:56:25 AM | 190 | 587KB | #EA PIPELINE |
-| `1785953476892` | 8/5/2026, 11:53:34 AM | 266 | 512KB | build and ship this |
 | `1785953852961` | 8/5/2026, 11:49:22 AM | 190 | 496KB | #GLM  |
-| `1785954733601` | 8/5/2026, 11:49:00 AM | 134 | 272KB | #SLS MEGA |
 | `1785953794202` | 8/5/2026, 11:48:56 AM | 206 | 732KB | COPY_WINDOW_0_DATA_ACCURACY_AUDIT |
-| `1785937503831` | 8/5/2026, 11:45:03 AM | 328 | 1511KB | Can you tell me how many turns have taken place for each model in the last 5 hours by mode |
-| `1785939083137` | 8/5/2026, 11:24:10 AM | 788 | 1113KB | https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since  |
-| `1785940995783` | 8/5/2026, 11:09:54 AM | 244 | 553KB | Resolve this issue: |
 | `1785937352780` | 8/5/2026, 11:07:18 AM | 298 | 1588KB | A bunch of my windows closed out here in Cline all at once. For these windows can you go a |
 | `1785939400779` | 8/5/2026, 7:16:41 AM | 1 | 5KB | Please see this in Argus, appears like some hallucinations, the model is not answering que |
 | `1785907561329` | 8/5/2026, 6:36:05 AM | 206 | 951KB | For Argus in a situation like this, can we give a link right here in line to the actual id |
@@ -127,55 +127,38 @@ Generated: 8/5/2026, 12:39:38 PM PT | window: last 72h | 112 tasks | index total
 
 ## Per-window detail
 
-### `1785954595787` — 8/5/2026, 12:39:35 PM PT — 81 turns
+### `1785939083137` — 8/5/2026, 1:37:32 PM PT — 1036 turns
 
 **Original task:**
 
 ```
-#KAISON
-
-
-═══════════════════════════════════════════════
-PICKUP PROMPT: KAIZEN CLOSED-LOOP OWNER
-═══════════════════════════════════════════════
-Pick up KAIZEN closed-loop ownership. KAIZEN = the continuous improvement / recipe loop across the EMSU systems. It is a pure-SQL + local-LLM system by design.
-
-GROUND TRUTH (verified from ledger + handoff, 2026-08-05):
-- KAIZEN MCP server makes NO LLM calls itself (pure SQL + paid-model-blocking guard). Verified 2026-07-18, idea #18347 [rejected] closed with evidence: nothing to wire.
-- Executor consumes KAIZEN proposals via local glm-5.2 (free-loca
+https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since we have a 4TB NVME on WOPR. Can you tell me what's going on here and get these pages loaded faster?
 ```
 
-**Ideas referenced:** #0000, #13575, #152615, #17166, #176616, #178424, #178455, #178531, #178553, #1802, #1803, #1806, #1811, #18133 [approved], #1815, #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [rejected], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #1894, #1896, #1897, #1912, #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1934, #1935 [rejected], #1936 [resolved], #1942, #1944, #1948, #1949, #1952, #1955, #1961, #1963, #1964, #20555, #20565, #20569, #20627, #20628, #20629, #20630, #20662, #20663, #20672, #20674, #20676, #20677, #20806 [proposed], #2126, #2127, #2128, #23198 [proposed], #23204 [proposed], #389249
-
-**Last PICKUP PROMPT:**
-
-```
-very port-map verification.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #23204 [proposed] — KAIZEN closed-loop health check follow-up.\n\nWhere we left off (verified 2026-08-05 12:31 PT):\n- KAIZEN MCP: 272 recipes, glm52 100% classified (144/144), ruben_executor 0 failures (genuine)\n- glm52 autopsy cron: ticking */10, clean. 97% unreachable = pompey/marcus/tiberius (no tunnels, HANDOFF 5950 human-gated)\n- Paid-model guard: intact (3 regex gates, zero LLM deps)\n- #18347 [rejected] — nothing to wire\n\nOpen threads to drive next:\n1. #23204 [proposed] — After pompey/marcus/tiberius physical access restores tunnels, re-verify port mapping against fleet_inventory\n2. (human-only decision, no idea) — pompey/marcus/tiberius need physical access per HANDOFF 5950\n\nReference IDs:\n- Ideas filed: #23204 [proposed]\n- Prior idea: #18347 [rejected]\n- Files touched: /var/www/emtskills/cron/cron_glm52_kaizen_autopsy.php (read), /var/www/emtskills/mcp-servers/kaizen/src/index.ts (read), KAIZEN MCP (PID 4046)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════"}</arguments>
-</use_mcp_tool>
-```
-
-### `1785954856277` — 8/5/2026, 12:39:20 PM PT — 105 turns
-
-**Original task:**
-
-```
-#CFA
-
-
-═══════════════════════════════════════════════
-PICKUP PROMPT: CFA HEALTH VALIDATION OWNER
-═══════════════════════════════════════════════
-Pick up CFA validation. Ruben's read is that the CFAs ARE working, so this is a VALIDATION task, not a restart task. Do NOT restart or reconfigure anything until the instrumentation question below is answered.
-
-MAJOR CONTEXT ADDED 2026-08-05 10:50 PT — A ROUTER BUG WAS BREAKING TOOL CALLS FLEET-WIDE:
-For most of this morning every tool-bearing request through LiteLLM returned HTTP 400 (53 validation errors: ('body','tools',N,'function') Field require
-```
-
-**Ideas referenced:** #12206, #1255, #128260, #14132, #15204, #16152, #16153, #16154, #16473, #16732, #17446, #177914, #18848 [deployed], #19437, #19682, #22060, #22294 [deployed], #23050 [executing], #23054 [executing], #23122 [executing], #23184, #23207, #23208, #2563, #3237, #32584, #3572, #4991, #5298, #5447, #5646, #6064, #6106, #6228, #6751, #7206, #7207, #7317, #7356, #7907, #8103
+**Ideas referenced:** #2211 [needs_verify], #2213, #2214, #2215, #2223, #2224, #23028 [proposed], #23029 [proposed], #23030 [proposed], #23031 [proposed], #23051 [executing], #23053 [executing], #23067 [deployed], #23133 [executing], #23134 [executing], #23139 [executing], #23145 [executing], #23232 [executing], #23233 [executing], #2998, #9112
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785957900287` — 8/5/2026, 12:38:32 PM PT — 27 turns
+### `1785953476892` — 8/5/2026, 1:25:26 PM PT — 338 turns
+
+**Original task:**
+
+```
+build and ship this
+
+__3. The RCA on why frankenstein-llm could not do this work — filed as #23135 [executing], promoted.__
+
+Four causes, and the first one is the biggest:
+
+- __Tool calling was broken all morning.__ A model that cannot call tools cannot investigate, so it answers from priors. That is a large part of "why not" and it is now fixed (#23122).
+- __No project registry.__ 216 tables match escalation/urgent/frustration patterns. 55 match callback. An agent pattern-matching table names against a keyword lands on the wrong one nearly every time, and lands confidently, because the wrong 
+```
+
+**Ideas referenced:** #17300, #18329 [queued], #18800, #18868, #1934, #22598, #22601, #23117, #23122 [in_progress], #23135 [executing], #23172 [approved], #23178 [approved], #23179 [approved], #23182 [proposed], #23183 [proposed], #23234 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785957900287` — 8/5/2026, 1:15:27 PM PT — 93 turns
 
 **Original task:**
 
@@ -194,235 +177,53 @@ telephony_hub.php?view=agent:3000 Uncaught ReferenceError: switchTab is not defi
 telephony_hub.php?view=agent:2997 Uncaught ReferenceError: switchTab is n
 ```
 
+**Ideas referenced:** #334155
+
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785954766914` — 8/5/2026, 12:33:25 PM PT — 66 turns
+### `1785940995783` — 8/5/2026, 1:10:41 PM PT — 256 turns
 
 **Original task:**
 
 ```
-#LLM FLEET
+Resolve this issue:
 
-Give assessments based on below tasks first
+- __#23028 [executing]__ — There's an __active SQL injection__ against your `wordpress_2` database. Time-based blind SQLi injecting `SELECT SLEEP(3)` through a `post_author` param, 37 probes between 08-02 and 08-05, each one holding a MariaDB thread for __864-1044 seconds__. Since every vhost on WOPR shares one mariadbd, it's stealing threads from everything. 
 
-
-═══════════════════════════════════════════════
-PICKUP PROMPT: FRANKENSTEIN-LLM ROUTER + LADDER AUDIT
-═══════════════════════════════════════════════
-Pick up frankenstein-llm and frankenstein-tools routing. Ruben's directive: verify the ladder is GLM-5.2 local FIRST, then the 120Bs, then Cicero, then DeepSeek V4 Pro (direct then OpenRouter), then GLM-5.2 cloud (direct then OpenRouter), then Kimi K3.
-
-TOOL-SCHEMA REGRESSION: FIXED 2026-08-05 10:50 PT (#23122 [executing]).
-For most of this morning every tool-bearing request returned HTTP 
+-
 ```
 
-**Ideas referenced:** #12672, #13832, #16844 [deployed], #18329 [queued], #18332 [executing], #18811 [deployed], #18812 [deployed], #18820 [deployed], #18918 [deployed], #1967, #22897 [proposed], #23050 [executing], #23056 [executing], #23122 [executing], #23190 [executing], #23191 [executing], #23192 [proposed], #23205 [proposed]
+**Ideas referenced:** #2212, #23027, #23028 [executing], #23029, #23030, #23031, #23036, #23038, #23039, #23077 [executing], #23078 [executing], #23117 [proposed]
 
 **Last PICKUP PROMPT:**
 
 ```
-e up/down claim on this fleet.
+ases and untouched by the WAF.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up — Fleet: revive Cicero WG tunnel; confirm glm-5.2 dual-entry intent. GLM ring is HEALTHY, do not touch it.
+Pick up task #23028 [executing] - SQLi attack on wordpress_2: WAF + IP block live, status verified green 13:10 PT
 
-Where we left off (verified 2026-08-05 12:32 PT):
-- CORRECTION LANDED: GLM-5.2-local ring is ALIVE and serving. Live proof: vllm generation_tokens_total 496438 to 496562 = 124 tokens/10s = 12.4 tok/s with 15 concurrent requests; canary healthy=true decode_live=true fail_streak=0 pass_streak=11. An earlier claim that it was decode-dead was FALSE (read from one stale 11:36 snapshot). DO NOT cycle or quarantine 127.0.0.1:8210.
-- Ladder order CONFIRMED vs Ruben's design: 7B, 14B, 32B, Joshua-70B, GLM-local, 120B pool, Cicero, DeepSeek-direct, GLM-cloud-direct, Kimi. registry_source RESOLVED to registry:/etc/litellm/frankenstein_registry.yaml.
-- Direct-then-OpenRouter CONFIRMED for both deepseek-v4-pro and glm-5.2.
-- Cicero-235b genuinely DOWN: no listener on 11520, WG handshake_age=999999s stale, watchdog alerting through 12:30 PT. WireGuard tunnel issue, not a model crash.
-- Live fleet: Artemis 33.4 tok/s, Julia+Claudia 27.2 tok/s, GLM ring 9.3-12.4 tok/s, all decode_live=true, none quarantined.
-
-Open threads to drive next (every item has a real filed idea #):
-1. #23191 [executing] — Revive Cicero-235b. Start with the WireGuard tunnel, not vLLM: read /var/log/emsu-cicero-wg-watchdog.log, check wg show handshake age, then confirm a listener returns on port 11520 before declaring it fixed.
-2. #23205 [proposed] — Human decision for Ruben: model_name glm-5.2 has TWO entries (127.0.0.1:8210 local first, then api.z.ai). Under rule 146 free-local-first this may be intentional. Ruben confirms intent; document it, or drop the local entry so L3 is pure cloud. No config change without sign-off.
-3. #23056 [executing] — Remaining ladder-audit work: header-prove the DeepSeek/GLM-cloud direct-then-OpenRouter sub-order under load (config-level only so far, rule 140 wants headers), and fix the project-frankenstein MCP fleet API path (frankenstein_registry returned fleet_api_unreachable all session; file reads on WOPR were the workaround).
-4. #22897 [proposed] — GLM-first preempt spill-on-capacity. Stays proposed on original merit only; the claim that today validated it was withdrawn. Worth noting 15 concurrent streams at 12.4 tok/s aggregate is ~0.8 tok/s per stream. Needs real queue-depth data before promotion.
-5. #23190 [rejected] — Withdrawn, GLM ring was never dead. No action.
-6. #23192 [rejected] — Withdrawn, dual membership is fine on a healthy box. No action.
-7. #18332 [executing] — Mini fleet: 6 campus M4s on WOPR:18001-18006, fix cron_activate_ollama_minis.php. No new evidence this session.
-8. #18329 [queued] — VKL umbrella, phase-2 sqlite-vec ANN. Untouched.
-9. #18820 [deployed] — Structured-local-pin guard VERIFIED still holding: frankenstein-llm resolves to 127.0.0.1:11510 at $0 cost, never a paid provider.
-
-Reference IDs:
-- Ideas filed this session: #23190 [rejected], #23191 [executing], #23192 [rejected], #23205 [proposed]
-- Carried forward: #23056 [executing], #23050 [executing], #22897 [proposed], #18332 [executing], #18329 [queued], #18820 [deployed]
-- Files: /usr/local/bin/frankenstein_tools_adapter.py (passive GLM canary, lines 912-1010), /etc/litellm/config.yaml (fallbacks 1090-1103, dual glm-5.2 entries), /etc/litellm/frankenstein_registry.yaml, /tmp/emsu_router_registry_state.json, /tmp/frankenstein_canary_health.json, /var/lo
-```
-
-### `1785939420388` — 8/5/2026, 12:09:29 PM PT — 236 turns
-
-**Original task:**
-
-```
-#Argus
-
-Please see this in Argus, appears like some hallucinations, the model is not answering questiosn proerly and something is wrong. Also when I click on those individual task links it spins forever. Plus what does it mean "marale"? And why all the excuses? And it's answering things I didn't ask:
-
-Test as:
-
-MasterAdmin
-Dashboard
-Argus
-New chat started. Saves automatically after your first message.
-You
-can you tell me how many requests were made in Argus overnight and by whom and what were the topics?
-Argus
-Still thinking (50s)...
-Searched EMSU records (0 student profiles matched)
-Searched 
-```
-
-**Ideas referenced:** #16213, #19348, #20627 [deployed], #2212 [open], #22688, #22850, #22887 [proposed], #22939 [proposed], #23027 [deployed], #23029, #23036 [proposed], #23037 [proposed], #23038 [proposed], #23039 [proposed], #23050 [executing], #23052, #23061 [executing], #23067 [deployed], #23094, #23116 [filed], #23132, #23144, #23161 [filed]
-
-**Last PICKUP PROMPT:**
-
-```
-to confirm no regression.
-
----
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task # — Argus fixes deployed: monitor queue, verify clean cycle
-
-Where we left off (verified 2026-08-05 12:08 PT):
-- Root cause: router regression #23067 [deployed] (tool-schema break 01:00-08:18 PT)
-- #23027 [deployed]: DB creds in argus_task_status.php — task links load
-- #23036 [deployed]: worker quality gate + self-heal sweep — 0 "Thinking..." done rows
-- #23038 [deployed]: salvage dedupe via argusEnqueueBackgroundTask
-- #23039 [deployed]: prompt prohibits placeholder strings
-- #23037 [superseded] by #23036 — dedupe filed as #23161
-- Cache probe: argus_ticket_action_cache + argus_connector_data_cache both empty (0 rows)
-- #22939 [proposed] + #22887 [proposed]: background task offload after 6 fails — not yet addressed
+Where we left off (verified 2026-08-05 13:10 PT):
+- #23028 [executing] - WAF 403-blocking live: 19 (emsu) + 9 (emtrefresher) intercepted since deploy; 0 new DB hits; 0 long-running queries
+- #23117 [in_progress] - Audit complete: no vulnerable custom code found (theme + all 6 custom plugins clean). Root cause = WP core `author` param through MariaDB escaping; edge defense is the mitigation. ER sites verified zero direct probes.
+- #23077 [rejected] - closed; deny 80.94.95.236 deployed directly in nginx shared snippet (verified in active `nginx -T` output)
+- Actual slow-log delta 110→114 = my own diagnostic queries at 13:00–13:06 PT (artifact, not attack)
 
 Open threads to drive next:
-1. #124-#126 [queued/running] — Monitor one clean worker cycle to confirm no regression. If any task hits 6 fails, it offloads to orchestrator; verify offload quality.
-2. #23050 [proposed] — Cache staleness issue (non-Argus surfaces). Argus caches are empty but the umbrella fix for EMSU-wide caches remains open.
-3. #22939 [proposed] — Background task offload quality: after 6 failed attempts, tasks go to orchestrator. Verify the offload creates an actionable idea, not just a log entry.
+1. #23117 [in_progress] - consider permanent hardening: per-user MariaDB `max_statement_time` for wordpress_2 account (currently unsupported on this MariaDB version) or upgrade review. Edge defense fully handles the current attack pattern.
 
 Reference IDs:
-- Ideas deployed: #23027, #23036, #23038, #23039 [all deployed]
-- Ideas superseded: #23037 [superseded by #23036]
-- Regression fix: #23067 [deployed]
-- Incident: #2212 [open, attributed to #23067]
-- Ideas filed: #23161 [filed] dedicated to deduplication of ideas linking to existing tickets and issues
-- Files touched: /var/www/emtskills/routes/argus_task_status.php, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/routes/cron_argus_task_worker.php, /etc/litellm/hooks/claude.py, /var/www/emtskills/docs/HANDOFF_NOTES.md
+- Ideas filed: #23117 [in_progress], #23077 [rejected]
+- Files touched: /etc/nginx/emsu-sqli-waf.conf, emsuniversity.com vhost_nginx.conf, emtrefresher.com nginx.conf
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Deployed all 4 Argus fixes (#23027, #23036, #23038, #23039)
-- [x] ARGUS OWNER pickup: dedupe #23037 superseded by #23036
-- [x] Cache probe: both Argus caches empty (stale-cache concern not currently live)
-- [x] 'marale' explained (CoT leak artifact, task #113 pre-fix)
-- [x] Handoff notes updated with all verified state
-- [x] Open threads section added: #124-#126 monitor, #23050 non-Argus, #22939 offload quality
-- [x] Final report with PICKUP PROMPT per rule 91
-</task_progress>
+═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
 
-### `1785954707277` — 8/5/2026, 11:56:25 AM PT — 190 turns
-
-**Original task:**
-
-```
-#EA PIPELINE
-
-═══════════════════════════════════════════════
-PICKUP PROMPT: PAYMENTS, QB, EA/PDF, CERTS
-═══════════════════════════════════════════════
-Pick up payments, QuickBooks, EA/PDF pipeline, and cert renewal.
-
-PROBE FIRST (per #23050). Stored notes are CONTEXT, not ground truth. A prior window shipped a WRONG cert deadline from stored notes; that is why this section exists.
-
-CERT: THE PRIOR CLAIM WAS WRONG, CORRECTED 2026-08-05 07:49 PT
-- Prior handoffs said "mail.emsuniversity.com expiring 2026-08-12, certbot renewal failing." Both halves are false.
-- Live: openssl x509 -in /etc/lets
-```
-
-**Ideas referenced:** #16695, #19387 [executing], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #23050 [executing], #23052 [executing], #23169 [queued], #23184 [proposed], #23185 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785953476892` — 8/5/2026, 11:53:34 AM PT — 266 turns
-
-**Original task:**
-
-```
-build and ship this
-
-__3. The RCA on why frankenstein-llm could not do this work — filed as #23135 [executing], promoted.__
-
-Four causes, and the first one is the biggest:
-
-- __Tool calling was broken all morning.__ A model that cannot call tools cannot investigate, so it answers from priors. That is a large part of "why not" and it is now fixed (#23122).
-- __No project registry.__ 216 tables match escalation/urgent/frustration patterns. 55 match callback. An agent pattern-matching table names against a keyword lands on the wrong one nearly every time, and lands confidently, because the wrong 
-```
-
-**Ideas referenced:** #17300, #18329 [queued], #18800, #18868, #1934, #22598, #22601, #23117, #23122 [in_progress], #23135 [executing], #23172 [approved], #23178 [approved], #23179 [approved], #23182 [proposed], #23183 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785953852961` — 8/5/2026, 11:49:22 AM PT — 190 turns
-
-**Original task:**
-
-```
-#GLM 
-
-COPY_WINDOW_1_GLM_RING
-
-begin work on this. Start with a comprehensive state of the system
-```
-
-**Ideas referenced:** #12459, #12618, #12643, #12645 [deployed], #12680, #12689, #13874, #16265, #1685, #1687, #1705, #1706, #17203, #17205, #17307, #18471, #18820, #18868, #19218 [approved], #19230 [queued], #19261 [approved], #1962, #1986 [deployed], #1987 [outdated], #1988 [needs_verify], #1989 [outdated], #1990 [outdated], #1991 [deployed], #1998, #2101 [resolved], #2168, #21684, #2216 [deployed], #2217 [deployed], #22601, #22897 [proposed], #23050 [executing], #23056 [executing], #23157 [approved], #23159 [approved], #23169 [approved]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785954733601` — 8/5/2026, 11:49:00 AM PT — 134 turns
-
-**Original task:**
-
-```
-#SLS MEGA
-
-
-═══════════════════════════════════════════════
-PICKUP PROMPT: EMTSKILLS PERFORMANCE, SLS, CS QUEUES
-═══════════════════════════════════════════════
-Pick up emtskills server performance, Student Lifecycle Service (SLS), and CS queue ownership.
-
-VERIFIED GROUND TRUTH (from ledger + handoff, 2026-08-05):
-EMTSKILLS SLOW-LOAD (fixed 2026-08-04):
-- 3rd recurrence root cause: hourly full-root rsync to 2x 8TB IronWolf HDDs (sda/sdb 97-100% util, 847ms write await) starving MariaDB + PHP-FPM.
-- Old load>30 guard NEVER fired because disk I/O saturation does not show high load (load was 13-1
-```
-
-**Ideas referenced:** #18329, #18337, #18841 [queued], #18842 [queued], #18848 [deployed], #18850 [deployed], #18864 [queued], #20825, #2219 [deployed], #22258 [superseded], #22294 [deployed], #23173 [in_progress], #5459, #5608
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785953794202` — 8/5/2026, 11:48:56 AM PT — 206 turns
-
-**Original task:**
-
-```
-COPY_WINDOW_0_DATA_ACCURACY_AUDIT
-
-Work on that
-```
-
-**Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12477, #13084, #152615, #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #178593, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1935, #1936, #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20555, #20565, #20569, #20627, #20628, #20629, #20630, #20662, #20663, #20672, #20674, #20676, #20677, #20806 [proposed], #2101, #2105, #2126, #2127, #2128, #22808 [proposed], #23027, #23036, #23037, #23038, #23039, #23050 [executing], #23054 [executing], #23056 [executing], #23061 [executing], #23062 [executing], #23146 [proposed], #23150 [proposed], #23152 [proposed], #23160 [proposed], #23163 [proposed], #23164 [proposed], #23165 [proposed], #23180 [proposed], #389249, #7223, #7925, #8639, #9048
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785937503831` — 8/5/2026, 11:45:03 AM PT — 328 turns
+### `1785937503831` — 8/5/2026, 1:07:53 PM PT — 374 turns
 
 **Original task:**
 
@@ -430,7 +231,7 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 Can you tell me how many turns have taken place for each model in the last 5 hours by model and also look inside the grouped models like frankenstein-llm, frankenstein-tools, emsu-codegen, etc...? I want to see how many turns for the individual LLMs themselves, not the groupings
 ```
 
-**Ideas referenced:** #10108, #10740, #11397, #11741, #11781, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12477, #12618, #12657, #12672, #12673, #12689, #12716, #12824, #12872, #12878, #13108, #13121, #13202, #13831, #13832, #13874, #13964, #14000, #14848, #16120, #16163, #16265, #16304, #16588, #16648, #16718, #16844, #17202, #17203, #17205, #18312, #18326, #18781, #18786, #18868, #19653, #1967, #19903, #2014, #20272, #20300, #2050, #20536, #20722, #21045 [deployed], #21136, #2176, #2177, #2218 [deployed], #22258 [proposed], #22294, #22334, #22583, #22749, #22750 [proposed], #22751 [proposed], #22820, #22897, #23028, #23029, #23030, #23031, #23044 [proposed], #23067 [deployed], #23076 [executing], #23127 [proposed], #23171 [proposed]
+**Ideas referenced:** #10108, #10740, #11397, #11741, #11781, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12477, #12618, #12657, #12672, #12673, #12689, #12716, #12824, #12872, #12878, #13108, #13121, #13202, #13831, #13832, #13874, #13964, #14000, #14848, #16120, #16163, #16265, #16304, #16588, #16648, #16718, #16844, #17202, #17203, #17205, #18312, #18326, #18781, #18786, #18868, #19173, #19653, #1967, #19903, #2014, #20272, #20300, #2050, #20536, #20722, #21045 [deployed], #21136, #2176, #2177, #2218 [deployed], #22258 [proposed], #22294, #22334, #22583, #22749, #22750 [proposed], #22751 [proposed], #22820, #22897, #23028, #23029, #23030, #23031, #23044 [proposed], #23067 [deployed], #23076 [executing], #23127 [proposed], #23171 [proposed], #64748, #9889
 
 **Last PICKUP PROMPT:**
 
@@ -466,59 +267,311 @@ Reference IDs:
 - Bug library incident (separate namespace
 ```
 
-### `1785939083137` — 8/5/2026, 11:24:10 AM PT — 788 turns
+### `1785939420388` — 8/5/2026, 1:06:09 PM PT — 250 turns
 
 **Original task:**
 
 ```
-https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since we have a 4TB NVME on WOPR. Can you tell me what's going on here and get these pages loaded faster?
+#Argus
+
+Please see this in Argus, appears like some hallucinations, the model is not answering questiosn proerly and something is wrong. Also when I click on those individual task links it spins forever. Plus what does it mean "marale"? And why all the excuses? And it's answering things I didn't ask:
+
+Test as:
+
+MasterAdmin
+Dashboard
+Argus
+New chat started. Saves automatically after your first message.
+You
+can you tell me how many requests were made in Argus overnight and by whom and what were the topics?
+Argus
+Still thinking (50s)...
+Searched EMSU records (0 student profiles matched)
+Searched 
 ```
 
-**Ideas referenced:** #2211 [needs_verify], #2213, #2214, #2215, #23028 [proposed], #23029 [proposed], #23030 [proposed], #23031 [proposed], #23051 [executing], #23053 [executing], #23067 [deployed], #23133 [executing], #23134 [executing], #23139 [executing], #23145 [executing], #2998, #9112
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785940995783` — 8/5/2026, 11:09:54 AM PT — 244 turns
-
-**Original task:**
-
-```
-Resolve this issue:
-
-- __#23028 [executing]__ — There's an __active SQL injection__ against your `wordpress_2` database. Time-based blind SQLi injecting `SELECT SLEEP(3)` through a `post_author` param, 37 probes between 08-02 and 08-05, each one holding a MariaDB thread for __864-1044 seconds__. Since every vhost on WOPR shares one mariadbd, it's stealing threads from everything. 
-
--
-```
-
-**Ideas referenced:** #2212, #23027, #23028 [executing], #23029, #23030, #23031, #23036, #23038, #23039, #23077 [executing], #23078 [executing], #23117 [proposed]
+**Ideas referenced:** #16213, #19348, #20627 [deployed], #2212 [open], #22688, #22850, #22887 [proposed], #22939 [proposed], #23027 [deployed], #23029, #23036 [proposed], #23037 [proposed], #23038 [proposed], #23039 [proposed], #23050 [executing], #23052, #23061 [executing], #23067 [deployed], #23094, #23116 [filed], #23132, #23136, #23144, #23161 [filed], #23166, #23170, #23209, #23217, #23218
 
 **Last PICKUP PROMPT:**
 
 ```
- is very real on the ER sites.
+eanup could reclaim disk.
+
+---
+
+═══════════════════════════════════════════════
+PICKUP PROMPT
+═══════════════════════════════════════════════
+
+Pick up task # — Cache freshness: vet non-Argus cache tables for staleness (#23050)
+
+Where we left off (verified 2026-08-05 13:04 PT):
+- All Argus fixes deployed: #23027, #23036, #23038, #23039 [all deployed]
+- #22939 [proposed]: offload quality CONFIRMED — all offloaded tasks carry full context, 0 MISSING
+- #23050 [proposed]: non-Argus cache tables identified:
+  - voice_embedding_cache: 326K rows, 11GB
+  - cached_communications: 14K rows, 15MB
+  - report_doc_drive_cache: 6.5K rows
+  - qb_invoice_payments_authnet_cache: 4.6K rows
+  - ruben_executor_plan_cache: 40 rows
+  - uploaded_chunk_registry: 2.2K rows
+- Handoff notes updated with both findings
+
+Open threads to drive next:
+1. #23050 [proposed] — For each non-Argus cache table: determine stale threshold (30d/90d/never), add `expires_at` or `last_freshness_probe_ts` column, write cleanup cron or invalidation trigger. Start with voice_embedding_cache (11GB — highest disk impact).
+2. (none immediate for Argus — monitor queue for one clean cycle)
+
+Reference IDs:
+- Ideas deployed: #23027, #23036, #23038, #23039 [all deployed]
+- Ideas superseded: #23037 [superseded by #23036]
+- Ideas proposed: #22939 [confirmed satisfied by offload quality check], #23050 [proposed — needs policy on stale thresholds]
+- Incident: #2212 [open, attributed to #23067]
+- Files touched: see handoff notes for full list
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785954733601` — 8/5/2026, 1:02:40 PM PT — 220 turns
+
+**Original task:**
+
+```
+#SLS MEGA
+
+
+═══════════════════════════════════════════════
+PICKUP PROMPT: EMTSKILLS PERFORMANCE, SLS, CS QUEUES
+═══════════════════════════════════════════════
+Pick up emtskills server performance, Student Lifecycle Service (SLS), and CS queue ownership.
+
+VERIFIED GROUND TRUTH (from ledger + handoff, 2026-08-05):
+EMTSKILLS SLOW-LOAD (fixed 2026-08-04):
+- 3rd recurrence root cause: hourly full-root rsync to 2x 8TB IronWolf HDDs (sda/sdb 97-100% util, 847ms write await) starving MariaDB + PHP-FPM.
+- Old load>30 guard NEVER fired because disk I/O saturation does not show high load (load was 13-1
+```
+
+**Ideas referenced:** #18329, #18337, #18841 [queued], #18842 [queued], #18848 [deployed], #18850 [deployed], #18864 [queued], #2018, #20825, #2165, #2166, #2167, #2183, #2187, #2193, #2201, #2214, #2219 [deployed], #2220, #2222, #22258 [superseded], #22294 [deployed], #23173 [in_progress], #23211 [in_progress], #23223 [in_progress], #5459, #5608
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785954856277` — 8/5/2026, 1:02:23 PM PT — 134 turns
+
+**Original task:**
+
+```
+#CFA
+
+
+═══════════════════════════════════════════════
+PICKUP PROMPT: CFA HEALTH VALIDATION OWNER
+═══════════════════════════════════════════════
+Pick up CFA validation. Ruben's read is that the CFAs ARE working, so this is a VALIDATION task, not a restart task. Do NOT restart or reconfigure anything until the instrumentation question below is answered.
+
+MAJOR CONTEXT ADDED 2026-08-05 10:50 PT — A ROUTER BUG WAS BREAKING TOOL CALLS FLEET-WIDE:
+For most of this morning every tool-bearing request through LiteLLM returned HTTP 400 (53 validation errors: ('body','tools',N,'function') Field require
+```
+
+**Ideas referenced:** #12206, #1255, #128260, #14132, #15204, #16152, #16153, #16154, #16473, #16732, #17150, #17446, #177914, #18848 [deployed], #19437, #19682, #22060, #22294 [deployed], #23050 [executing], #23054 [executing], #23122 [executing], #23184, #23207 [deployed], #23208 [proposed], #23225 [proposed], #2563, #3237, #32584, #3572, #4991, #5298, #5447, #5646, #6064, #6106, #6228, #6751, #7206, #7207, #7317, #7356, #7907, #8103
+
+**Last PICKUP PROMPT:**
+
+```
+ly (13), zero Technical ✅
+
+---
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #23028 [executing] — SQLi on wordpress_2 resolved: WAF + IP block live, audit complete, no code patch needed
+Pick up task #23054 — CFA health validation complete + email subject fix + 5 crons re-registered
 
-Where we left off (verified 2026-08-05 11:09 PT):
-- #23028 [executing] — WAF (403 on SQLi payloads) + IP deny (80.94.95.236) live on both emsuniversity.com and emtrefresher.com; 19 blocks confirmed in live logs; no new slow-log entries since deploy
-- #23077 [rejected] — IP block route closed; manual deny deployed instead
-- #23078 [rejected] — code-patch route closed; full audit (#23117) found no vulnerable custom code
-- #23117 [executing] — theme/plugin audit complete: no raw post_author injection found. WP core safe via wp_parse_id_list. MariaDB weak escaping was the vector; edge defense suffices. Correction filed: PNfs8_ prefix is real in ER registration DBs but harmless in wordpress_2 context.
+Where we left off (verified 2026-08-05 13:01 PT):
+- #23054 [executing] CFA classification: 5 H2 orphaned crons (now re-registered), 1 H1 never-wired (cfa_auto_resolve_log). No outage — students ARE being replied to.
+- #23207 [deployed] [Email AI-replied] tag removed from 4 files + 49 DB titles cleaned.
+- #23208 [deployed] 5 CFA crons re-registered in /etc/cron.d/ — 12:55 PT. Access sweep */15, dispatch */5, quality */15, llm-health */5, struct */15. Root:root 644, verified on disk.
+- #23225 [proposed] Backlog finding: 414/468 tickets (88%) have NULL intake_source — invisible to auto-close/merge crons. Needs backfill.
+- Ticket backlog: 468 total (225/144/99), 313 >24h, 90 >72h, 0 closure_pending_contact_since.
 
 Open threads to drive next:
-1. #23117 [executing] — Consider adding MariaDB max_statement_time via SET SESSION (if supported on this version) as defense-in-depth. Also consider fail2ban jail for SQLi payload patterns to auto-ban future IPs.
+1. #23208 [deployed] — verify first rows appear: `SELECT COUNT(*) FROM cfa_llm_heartbeat` and `SELECT COUNT(*) FROM cfa_dispatch_log` after 13:10 PT. Should show >0.
+2. #23207 [deployed] — verify no new [Email AI-replied] tickets: `SELECT COUNT(*) FROM tickets WHERE title LIKE '[Email AI-replied]%' AND created_at > '2026-08-05 12:40:00'`.
+3. #23225 [proposed] — backfill intake_source on 414 NULL tickets. Query: `SELECT created_via, COUNT(*) FROM tickets WHERE intake_source IS NULL AND status IN ('Open','In Progress','Pending') GROUP BY created_via ORDER BY COUNT(*) DESC LIMIT 10;` then bulk UPDATE where inferable.
 
 Reference IDs:
-- Ideas filed: #23117 [executing], #23077 [rejected], #23078 [rejected]
-- Files touched: /etc/nginx/emsu-sqli-waf.conf, emsuniversity.com vhost_nginx.conf (.bak), emtrefresher.com nginx.conf (.bak)
+- Ideas: #23054 [executing], #23050 [executing], #23207 [deployed], #23208 [deployed], #23225 [proposed], #23122 [executing]
+- Rules: 297 (classify-before-alarm ✅), 299 (positive control ✅), 263 (verify-before-claim ✅)
+- Files touched: /var/www/emtskills/cron/cron_email_responder.php, cron_ai_replied_stale_resolve.php, cron_deep_sweep_ai_replied.php, cron_rule29_human_queue.php
+- Cron files created: /etc/cron.d/emsu-cfa-{access-sweep,dispatch,quality,llm-health,struct}
+- Backups: *.bak-20260805-1228 in cron/
 
-When done, append to cline_task_ledger.md per rule 07, run order 66.
+When done, append to cline_task_ledger.md per rule 07 and run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785954766914` — 8/5/2026, 1:01:10 PM PT — 106 turns
+
+**Original task:**
+
+```
+#LLM FLEET
+
+Give assessments based on below tasks first
+
+
+═══════════════════════════════════════════════
+PICKUP PROMPT: FRANKENSTEIN-LLM ROUTER + LADDER AUDIT
+═══════════════════════════════════════════════
+Pick up frankenstein-llm and frankenstein-tools routing. Ruben's directive: verify the ladder is GLM-5.2 local FIRST, then the 120Bs, then Cicero, then DeepSeek V4 Pro (direct then OpenRouter), then GLM-5.2 cloud (direct then OpenRouter), then Kimi K3.
+
+TOOL-SCHEMA REGRESSION: FIXED 2026-08-05 10:50 PT (#23122 [executing]).
+For most of this morning every tool-bearing request returned HTTP 
+```
+
+**Ideas referenced:** #12672, #13121, #13832, #16844 [deployed], #18329 [queued], #18332 [executing], #18786, #18811 [deployed], #18812 [deployed], #18820 [deployed], #18918 [deployed], #1967, #21136, #2121, #2181, #2210, #2221, #22897 [proposed], #23050 [executing], #23056 [executing], #23122 [executing], #23190 [executing], #23191 [executing], #23192 [proposed], #23205 [proposed], #23206
+
+**Last PICKUP PROMPT:**
+
+```
+el failure, not a model crash.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up — Cicero WG tunnel revival + glm-5.2 dual-entry intent. GLM ring is HEALTHY, do not touch it.
+
+Where we left off (verified 2026-08-05 13:00 PT):
+- SYSTEM FIX SHIPPED: /usr/local/bin/frankenstein_tools_adapter.py now stamps probe provenance into /tmp/frankenstein_canary_health.json (probe_mode, probe_reason, probe_gen_delta, probe_running, probe_waiting). Only probe_reason=DECODE_STALLED_REAL_ZOMBIE is a death signal. py_compile clean, service active, adapter :11510 HTTP 200. Backup: ...bak-provenance-20260805-125644.
+- Live proof: 8210 decode_live=True tok_s=14.67 REASON=DECODE_LIVE gen_delta=88 running=13. GLM ring healthy, DO NOT cycle 127.0.0.1:8210.
+- Rule 296 rewritten with a mandatory counter-delta gate + verdict table. Lint exit 0, indexed, search-verified. Bug library #2221 resolved, cross-linked to #2210 (the real zombie).
+- Ladder order + direct-then-OpenRouter + registry_source all CONFIRMED. Rule 18820 local-pin guard holds.
+- Cicero-235b genuinely DOWN: no listener on 11520, WG handshake_age=999999s stale, watchdog alerting to 12:30 PT.
+
+Open threads to drive next (every item carries a real filed idea #):
+1. #23191 [executing] — Revive Cicero-235b. Start at the WireGuard tunnel, NOT vLLM: read /var/log/emsu-cicero-wg-watchdog.log, check `wg show` handshake age, then confirm `ss -ltnp | grep 11520` returns a listener before declaring it fixed. Finish with the rule-296 counter-delta to prove it decodes.
+2. #23205 [proposed] — Human decision for Ruben: model_name glm-5.2 has TWO config entries (127.0.0.1:8210 local first, then api.z.ai). Under rule 146 free-local-first this may be intentional. Confirm intent, then either document it so future audits stop flagging it, or drop the local entry so L3 is pure cloud. No config change without sign-off.
+3. #22897 [executing] — GLM-first preempt / spill-on-capacity. Needs real queue-depth evidence (13-15 concurrent at ~0.8-1.1 tok/s per stream is the only data so far). No routing change until that data exists.
+4. #23056 [executing] — Remaining ladder audit: header-prove the DeepSeek/GLM-cloud direct-then-OpenRouter sub-order under load (config-level only so far; rule 140 wants headers), and fix the project-frankenstein MCP fleet API path (frankenstein_registry returned fleet_api_unreachable all session; WOPR file reads were the workaround).
+5. #18332 [executing] — Mini fleet: 6 campus M4s on WOPR:18001-18006, fix cron_activate_ollama_minis.php. No new evidence this session.
+6. #18329 [executing] — VKL umbrella, phase-2 sqlite-vec ANN + LiteLLM surface wiring. Untouched.
+7. #23190 [rejected] — withdrawn, GLM was never dead. No action.
+8. #23192 [rejected] — withdrawn, dual membership fine on a healthy box. No action.
+9. #18820 [deployed] — structured-local-pin guard re-verified holding ($0, 127.0.0.1:11510).
+
+Reference IDs:
+- Ideas this session: #23190 [rejected], #23191 [executing], #23192 [rejected], #23205 [proposed]
+- Carried: #23056 [executing], #23050 [executing], #22897 [executing], #18332 [executing], #18329 [executing], #18820 [deployed]
+- Bug library: #2221 (resolved, false-positive twin), #2210 (real zombie repair path)
+- Files: /usr/local/bin/frankenstein_tools_adapter.py (patched, provenance), /Users/rubenmajor/Documents/Cline/Rules-archive/296-never-declare-llm-dead-from-cached-probe.md (rewritten), /etc/litellm/config.yaml (fallbacks 1090-1103, dual glm-5.2), /etc/lite
+```
+
+### `1785954595787` — 8/5/2026, 12:42:12 PM PT — 92 turns
+
+**Original task:**
+
+```
+#KAISON
+
+
+═══════════════════════════════════════════════
+PICKUP PROMPT: KAIZEN CLOSED-LOOP OWNER
+═══════════════════════════════════════════════
+Pick up KAIZEN closed-loop ownership. KAIZEN = the continuous improvement / recipe loop across the EMSU systems. It is a pure-SQL + local-LLM system by design.
+
+GROUND TRUTH (verified from ledger + handoff, 2026-08-05):
+- KAIZEN MCP server makes NO LLM calls itself (pure SQL + paid-model-blocking guard). Verified 2026-07-18, idea #18347 [rejected] closed with evidence: nothing to wire.
+- Executor consumes KAIZEN proposals via local glm-5.2 (free-loca
+```
+
+**Ideas referenced:** #0000, #13575, #152615, #17166, #176616, #178424, #178455, #178531, #178553, #1802, #1803, #1806, #1811, #18133 [approved], #1815, #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [rejected], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #1894, #1896, #1897, #1912, #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1934, #1935 [rejected], #1936 [resolved], #1942, #1944, #1948, #1949, #1952, #1955, #1961, #1963, #1964, #20555, #20565, #20569, #20627, #20628, #20629, #20630, #20662, #20663, #20672, #20674, #20676, #20677, #20806 [proposed], #2126, #2127, #2128, #23198 [proposed], #23204 [proposed], #389249
+
+**Last PICKUP PROMPT:**
+
+```
+ecovery port-map verification.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #23204 [proposed] — KAIZEN closed-loop health check follow-up.
+
+Where we left off (verified 2026-08-05 12:31 PT):
+- KAIZEN MCP: 272 recipes, glm52 100% classified (144/144), ruben_executor 0 failures (genuine)
+- glm52 autopsy cron: ticking */10, clean. 97% unreachable = pompey/marcus/tiberius (no tunnels, HANDOFF 5950 human-gated)
+- Paid-model guard: intact (3 regex gates, zero LLM deps)
+- #18347 [rejected] — nothing to wire
+
+Open threads to drive next:
+1. #23204 [proposed] — After pompey/marcus/tiberius physical access restores tunnels, re-verify port mapping against fleet_inventory
+2. (human-only decision, no idea) — pompey/marcus/tiberius need physical access per HANDOFF 5950
+
+Reference IDs:
+- Ideas filed: #23204 [proposed]
+- Prior idea: #18347 [rejected]
+- Files touched: /var/www/emtskills/cron/cron_glm52_kaizen_autopsy.php (read), /var/www/emtskills/mcp-servers/kaizen/src/index.ts (read), KAIZEN MCP (PID 4046)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
+
+### `1785954707277` — 8/5/2026, 11:56:25 AM PT — 190 turns
+
+**Original task:**
+
+```
+#EA PIPELINE
+
+═══════════════════════════════════════════════
+PICKUP PROMPT: PAYMENTS, QB, EA/PDF, CERTS
+═══════════════════════════════════════════════
+Pick up payments, QuickBooks, EA/PDF pipeline, and cert renewal.
+
+PROBE FIRST (per #23050). Stored notes are CONTEXT, not ground truth. A prior window shipped a WRONG cert deadline from stored notes; that is why this section exists.
+
+CERT: THE PRIOR CLAIM WAS WRONG, CORRECTED 2026-08-05 07:49 PT
+- Prior handoffs said "mail.emsuniversity.com expiring 2026-08-12, certbot renewal failing." Both halves are false.
+- Live: openssl x509 -in /etc/lets
+```
+
+**Ideas referenced:** #16695, #19387 [executing], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #23050 [executing], #23052 [executing], #23169 [queued], #23184 [proposed], #23185 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785953852961` — 8/5/2026, 11:49:22 AM PT — 190 turns
+
+**Original task:**
+
+```
+#GLM 
+
+COPY_WINDOW_1_GLM_RING
+
+begin work on this. Start with a comprehensive state of the system
+```
+
+**Ideas referenced:** #12459, #12618, #12643, #12645 [deployed], #12680, #12689, #13874, #16265, #1685, #1687, #1705, #1706, #17203, #17205, #17307, #18471, #18820, #18868, #19218 [approved], #19230 [queued], #19261 [approved], #1962, #1986 [deployed], #1987 [outdated], #1988 [needs_verify], #1989 [outdated], #1990 [outdated], #1991 [deployed], #1998, #2101 [resolved], #2168, #21684, #2216 [deployed], #2217 [deployed], #22601, #22897 [proposed], #23050 [executing], #23056 [executing], #23157 [approved], #23159 [approved], #23169 [approved]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785953794202` — 8/5/2026, 11:48:56 AM PT — 206 turns
+
+**Original task:**
+
+```
+COPY_WINDOW_0_DATA_ACCURACY_AUDIT
+
+Work on that
+```
+
+**Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12477, #13084, #152615, #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #178593, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1935, #1936, #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20555, #20565, #20569, #20627, #20628, #20629, #20630, #20662, #20663, #20672, #20674, #20676, #20677, #20806 [proposed], #2101, #2105, #2126, #2127, #2128, #22808 [proposed], #23027, #23036, #23037, #23038, #23039, #23050 [executing], #23054 [executing], #23056 [executing], #23061 [executing], #23062 [executing], #23146 [proposed], #23150 [proposed], #23152 [proposed], #23160 [proposed], #23163 [proposed], #23164 [proposed], #23165 [proposed], #23180 [proposed], #389249, #7223, #7925, #8639, #9048
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785937352780` — 8/5/2026, 11:07:18 AM PT — 298 turns
 

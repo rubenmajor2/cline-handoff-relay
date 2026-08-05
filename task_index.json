@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-05T19:39:38.163Z",
+ "generated_at": "2026-08-05T20:39:38.550Z",
  "counts": {
   "parsed": 4,
   "reused": 483,
@@ -112499,11 +112499,11 @@
   },
   "1785937503831": {
    "task_id": "1785937503831",
-   "mtime": 1785955503001,
+   "mtime": 1785960473551,
    "created_at": "2026-08-05T13:45:03.831Z",
-   "last_modified": "2026-08-05T18:45:03.001Z",
-   "size_kb": 1511,
-   "turn_count": 328,
+   "last_modified": "2026-08-05T20:07:53.551Z",
+   "size_kb": 1574,
+   "turn_count": 374,
    "title": "Can you tell me how many turns have taken place for each model in the last 5 hours by model and also look inside the grouped models like frankenstein-llm, frankenstein-tools, emsu-codegen, etc...? I want to see how many turns for the individual LLMs themselves, not the groupings",
    "pickup_prompt": "oved`, contradicting the rule.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #23171 [proposed] on per-LLM turn counts, instrument drift RCA, registry scrub.\n\nWhere we left off (verified 2026-08-05 11:41 PT):\n- Canonical instrument SHIPPED and verified on disk: /var/www/emtskills/scripts/emsu_llm_turn_counts.sh (read_server_file confirmed, bash -n SYNTAX_OK, live run 11:40:22 PDT). Any \"turns per model/box\" question MUST run this and quote verbatim. Hand-rolled greps are banned for this question.\n- Verified 5h counts. A: router-level total 5866 across 15 model ids (frankenstein-tools 3123, deepseek-v4-pro 1046, frankenstein-glm52-local 393, frankenstein-llm 336, ollama-7b-lora 242, glm-5.2 223, ollama-14b 222, ollama-32b 222, frankenstein-405b 18, 7b-parallel 18, ollama-llama3.3-70b 12, emsu-codegen 8, minicpm-v 1, claude-opus-4-8 1, glm-4.6v-flash 1). B: adapter box-level 1375 (Artemis :8000 = 790, Julia :11513 = 466, GLM Hex ring :8210 = 119, 8 spills).\n- A and B are DIFFERENT instruments. Do not sum them. The delta is NOT explained by verified evidence and must not be guessed at.\n- Two defects RCA'd and recorded in the frankenstein bug library as incident 2218 (namespace is frankenstein_router_incidents, NOT the orchestrator idea namespace): instrument drift (4 greps, 4 populations) and fabrication (3 values in a shipped table that appeared in no tool output).\n- Cesar 3b41 and Cato 2aa8 CONFIRMED as GLM-5.2 Hex PP=6 ring members via :8210, NOT standalone gpt-oss-120b. Zero attributions in the entire log, both ports dead, :8210 serves glm-5.2-15pct.\n- Artemis ollama :11434 RCA complete: dead since 2026-08-03 18:00 PT, TCP-refused every probe since the 2026-08-04 13:08 restart, absorbed harmlessly by the adapter instant-skip, but still stale-listed in CHAT_UPSTREAMS and the registry.\n\nOpen threads to drive next:\n1. #23076 [rejected] on per-member backend attribution into llm_call_log. Do NOT re-file it under a new number. Needs a human decision on direction before anything is built. Duplicate #23044 [proposed] is still open and should be closed or merged to match the rejection.\n2. #23127 [executing] on Artemis ollama :11434. Decide restart versus decommission, then either bring the daemon up on 10.100.0.5 or scrub it from the adapter's default CHAT_UPSTREAMS and the registry entries.\n3. #23171 [proposed] to scrub the self-contradicting cesar-cx7-cluster row from frankenstein_registry.yaml serving_endpoints, using the julia-claudia-cx7-cluster row's embedded ring-membership note as the template.\n4. Dashboard surfacing of these counts in llm_router_live.php RAW TURN COUNTS, blocked on the #23076 [rejected] direction call (human-only decision, no idea).\n5. Server-side reconcile_ideas deriveTag still returns the queued tag for status=approved, contradicting clinerule 161 which bans it (human-only decision, no idea). Flagging rather than patching a rules-enforcement surface unilaterally.\n6. #21045 [rejected] describes the GLM canary TCP-refused instant-skip, but that behavior IS live in /usr/local/bin/frankenstein_tools_adapter.py. Code and idea record disagree; needs a human call on whether to re-open the idea or annotate it as shipped-by-other-means (human-only decision, no idea).\n\nReference IDs:\n- Ideas filed: #23171 [proposed], #23127 [executing], #23044 [proposed]\n- Ideas closed: #23076 [rejected]\n- Ideas flagged as inconsistent with live code: #21045 [rejected]\n- Bug library incident (separate namespace",
    "ideas": {
@@ -112514,6 +112514,7 @@
     "2176": null,
     "2177": null,
     "2218": "deployed",
+    "9889": null,
     "10108": null,
     "10740": null,
     "11397": null,
@@ -112570,6 +112571,7 @@
     "18781": null,
     "18786": null,
     "18868": null,
+    "19173": null,
     "19653": null,
     "19903": null,
     "20272": null,
@@ -112595,16 +112597,17 @@
     "23067": "deployed",
     "23076": "executing",
     "23127": "proposed",
-    "23171": "proposed"
+    "23171": "proposed",
+    "64748": null
    }
   },
   "1785939083137": {
    "task_id": "1785939083137",
-   "mtime": 1785954250879,
+   "mtime": 1785962252773,
    "created_at": "2026-08-05T14:11:23.137Z",
-   "last_modified": "2026-08-05T18:24:10.879Z",
-   "size_kb": 1113,
-   "turn_count": 788,
+   "last_modified": "2026-08-05T20:37:32.773Z",
+   "size_kb": 1477,
+   "turn_count": 1036,
    "title": "https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since we have a 4TB NVME on WOPR. Can you tell me what's going on here and get these pages loaded faster?",
    "pickup_prompt": null,
    "ideas": {
@@ -112612,6 +112615,8 @@
     "2213": null,
     "2214": null,
     "2215": null,
+    "2223": null,
+    "2224": null,
     "2998": null,
     "9112": null,
     "23028": "proposed",
@@ -112624,7 +112629,9 @@
     "23133": "executing",
     "23134": "executing",
     "23139": "executing",
-    "23145": "executing"
+    "23145": "executing",
+    "23232": "executing",
+    "23233": "executing"
    }
   },
   "1785939400779": {
@@ -112640,13 +112647,13 @@
   },
   "1785939420388": {
    "task_id": "1785939420388",
-   "mtime": 1785956969067,
+   "mtime": 1785960369415,
    "created_at": "2026-08-05T14:17:00.388Z",
-   "last_modified": "2026-08-05T19:09:29.067Z",
-   "size_kb": 640,
-   "turn_count": 236,
+   "last_modified": "2026-08-05T20:06:09.415Z",
+   "size_kb": 682,
+   "turn_count": 250,
    "title": "#Argus\n\nPlease see this in Argus, appears like some hallucinations, the model is not answering questiosn proerly and something is wrong. Also when I click on those individual task links it spins forever. Plus what does it mean \"marale\"? And why all the excuses? And it's answering things I didn't ask:\n\nTest as:\n\nMasterAdmin\nDashboard\nArgus\nNew chat started. Saves automatically after your first message.\nYou\ncan you tell me how many requests were made in Argus overnight and by whom and what were the topics?\nArgus\nStill thinking (50s)...\nSearched EMSU records (0 student profiles matched)\nSearched EMSU knowledge base (VEC) - relevant docs found\nThinking with frankenstein-llm...\nSteer Argus mid-th",
-   "pickup_prompt": "to confirm no regression.\n\n---\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task # — Argus fixes deployed: monitor queue, verify clean cycle\n\nWhere we left off (verified 2026-08-05 12:08 PT):\n- Root cause: router regression #23067 [deployed] (tool-schema break 01:00-08:18 PT)\n- #23027 [deployed]: DB creds in argus_task_status.php — task links load\n- #23036 [deployed]: worker quality gate + self-heal sweep — 0 \"Thinking...\" done rows\n- #23038 [deployed]: salvage dedupe via argusEnqueueBackgroundTask\n- #23039 [deployed]: prompt prohibits placeholder strings\n- #23037 [superseded] by #23036 — dedupe filed as #23161\n- Cache probe: argus_ticket_action_cache + argus_connector_data_cache both empty (0 rows)\n- #22939 [proposed] + #22887 [proposed]: background task offload after 6 fails — not yet addressed\n\nOpen threads to drive next:\n1. #124-#126 [queued/running] — Monitor one clean worker cycle to confirm no regression. If any task hits 6 fails, it offloads to orchestrator; verify offload quality.\n2. #23050 [proposed] — Cache staleness issue (non-Argus surfaces). Argus caches are empty but the umbrella fix for EMSU-wide caches remains open.\n3. #22939 [proposed] — Background task offload quality: after 6 failed attempts, tasks go to orchestrator. Verify the offload creates an actionable idea, not just a log entry.\n\nReference IDs:\n- Ideas deployed: #23027, #23036, #23038, #23039 [all deployed]\n- Ideas superseded: #23037 [superseded by #23036]\n- Regression fix: #23067 [deployed]\n- Incident: #2212 [open, attributed to #23067]\n- Ideas filed: #23161 [filed] dedicated to deduplication of ideas linking to existing tickets and issues\n- Files touched: /var/www/emtskills/routes/argus_task_status.php, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/routes/cron_argus_task_worker.php, /etc/litellm/hooks/claude.py, /var/www/emtskills/docs/HANDOFF_NOTES.md\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] Deployed all 4 Argus fixes (#23027, #23036, #23038, #23039)\n- [x] ARGUS OWNER pickup: dedupe #23037 superseded by #23036\n- [x] Cache probe: both Argus caches empty (stale-cache concern not currently live)\n- [x] 'marale' explained (CoT leak artifact, task #113 pre-fix)\n- [x] Handoff notes updated with all verified state\n- [x] Open threads section added: #124-#126 monitor, #23050 non-Argus, #22939 offload quality\n- [x] Final report with PICKUP PROMPT per rule 91\n</task_progress>\n</attempt_completion>",
+   "pickup_prompt": "eanup could reclaim disk.\n\n---\n\n═══════════════════════════════════════════════\nPICKUP PROMPT\n═══════════════════════════════════════════════\n\nPick up task # — Cache freshness: vet non-Argus cache tables for staleness (#23050)\n\nWhere we left off (verified 2026-08-05 13:04 PT):\n- All Argus fixes deployed: #23027, #23036, #23038, #23039 [all deployed]\n- #22939 [proposed]: offload quality CONFIRMED — all offloaded tasks carry full context, 0 MISSING\n- #23050 [proposed]: non-Argus cache tables identified:\n  - voice_embedding_cache: 326K rows, 11GB\n  - cached_communications: 14K rows, 15MB\n  - report_doc_drive_cache: 6.5K rows\n  - qb_invoice_payments_authnet_cache: 4.6K rows\n  - ruben_executor_plan_cache: 40 rows\n  - uploaded_chunk_registry: 2.2K rows\n- Handoff notes updated with both findings\n\nOpen threads to drive next:\n1. #23050 [proposed] — For each non-Argus cache table: determine stale threshold (30d/90d/never), add `expires_at` or `last_freshness_probe_ts` column, write cleanup cron or invalidation trigger. Start with voice_embedding_cache (11GB — highest disk impact).\n2. (none immediate for Argus — monitor queue for one clean cycle)\n\nReference IDs:\n- Ideas deployed: #23027, #23036, #23038, #23039 [all deployed]\n- Ideas superseded: #23037 [superseded by #23036]\n- Ideas proposed: #22939 [confirmed satisfied by offload quality check], #23050 [proposed — needs policy on stale thresholds]\n- Incident: #2212 [open, attributed to #23067]\n- Files touched: see handoff notes for full list\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "2212": "open",
     "16213": null,
@@ -112669,19 +112676,25 @@
     "23094": null,
     "23116": "filed",
     "23132": null,
+    "23136": null,
     "23144": null,
-    "23161": "filed"
+    "23161": "filed",
+    "23166": null,
+    "23170": null,
+    "23209": null,
+    "23217": null,
+    "23218": null
    }
   },
   "1785940995783": {
    "task_id": "1785940995783",
-   "mtime": 1785953394446,
+   "mtime": 1785960641277,
    "created_at": "2026-08-05T14:43:15.783Z",
-   "last_modified": "2026-08-05T18:09:54.446Z",
-   "size_kb": 553,
-   "turn_count": 244,
+   "last_modified": "2026-08-05T20:10:41.277Z",
+   "size_kb": 574,
+   "turn_count": 256,
    "title": "Resolve this issue:\n\n- __#23028 [executing]__ — There's an __active SQL injection__ against your `wordpress_2` database. Time-based blind SQLi injecting `SELECT SLEEP(3)` through a `post_author` param, 37 probes between 08-02 and 08-05, each one holding a MariaDB thread for __864-1044 seconds__. Since every vhost on WOPR shares one mariadbd, it's stealing threads from everything. \n\n-",
-   "pickup_prompt": " is very real on the ER sites.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #23028 [executing] — SQLi on wordpress_2 resolved: WAF + IP block live, audit complete, no code patch needed\n\nWhere we left off (verified 2026-08-05 11:09 PT):\n- #23028 [executing] — WAF (403 on SQLi payloads) + IP deny (80.94.95.236) live on both emsuniversity.com and emtrefresher.com; 19 blocks confirmed in live logs; no new slow-log entries since deploy\n- #23077 [rejected] — IP block route closed; manual deny deployed instead\n- #23078 [rejected] — code-patch route closed; full audit (#23117) found no vulnerable custom code\n- #23117 [executing] — theme/plugin audit complete: no raw post_author injection found. WP core safe via wp_parse_id_list. MariaDB weak escaping was the vector; edge defense suffices. Correction filed: PNfs8_ prefix is real in ER registration DBs but harmless in wordpress_2 context.\n\nOpen threads to drive next:\n1. #23117 [executing] — Consider adding MariaDB max_statement_time via SET SESSION (if supported on this version) as defense-in-depth. Also consider fail2ban jail for SQLi payload patterns to auto-ban future IPs.\n\nReference IDs:\n- Ideas filed: #23117 [executing], #23077 [rejected], #23078 [rejected]\n- Files touched: /etc/nginx/emsu-sqli-waf.conf, emsuniversity.com vhost_nginx.conf (.bak), emtrefresher.com nginx.conf (.bak)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
+   "pickup_prompt": "ases and untouched by the WAF.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #23028 [executing] - SQLi attack on wordpress_2: WAF + IP block live, status verified green 13:10 PT\n\nWhere we left off (verified 2026-08-05 13:10 PT):\n- #23028 [executing] - WAF 403-blocking live: 19 (emsu) + 9 (emtrefresher) intercepted since deploy; 0 new DB hits; 0 long-running queries\n- #23117 [in_progress] - Audit complete: no vulnerable custom code found (theme + all 6 custom plugins clean). Root cause = WP core `author` param through MariaDB escaping; edge defense is the mitigation. ER sites verified zero direct probes.\n- #23077 [rejected] - closed; deny 80.94.95.236 deployed directly in nginx shared snippet (verified in active `nginx -T` output)\n- Actual slow-log delta 110→114 = my own diagnostic queries at 13:00–13:06 PT (artifact, not attack)\n\nOpen threads to drive next:\n1. #23117 [in_progress] - consider permanent hardening: per-user MariaDB `max_statement_time` for wordpress_2 account (currently unsupported on this MariaDB version) or upgrade review. Edge defense fully handles the current attack pattern.\n\nReference IDs:\n- Ideas filed: #23117 [in_progress], #23077 [rejected]\n- Files touched: /etc/nginx/emsu-sqli-waf.conf, emsuniversity.com vhost_nginx.conf, emtrefresher.com nginx.conf\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
     "2212": null,
     "23027": null,
@@ -112699,11 +112712,11 @@
   },
   "1785953476892": {
    "task_id": "1785953476892",
-   "mtime": 1785956014035,
+   "mtime": 1785961526307,
    "created_at": "2026-08-05T18:11:16.892Z",
-   "last_modified": "2026-08-05T18:53:34.035Z",
-   "size_kb": 512,
-   "turn_count": 266,
+   "last_modified": "2026-08-05T20:25:26.307Z",
+   "size_kb": 701,
+   "turn_count": 338,
    "title": "build and ship this\n\n__3. The RCA on why frankenstein-llm could not do this work — filed as #23135 [executing], promoted.__\n\nFour causes, and the first one is the biggest:\n\n- __Tool calling was broken all morning.__ A model that cannot call tools cannot investigate, so it answers from priors. That is a large part of \"why not\" and it is now fixed (#23122).\n- __No project registry.__ 216 tables match escalation/urgent/frustration patterns. 55 match callback. An agent pattern-matching table names against a keyword lands on the wrong one nearly every time, and lands confidently, because the wrong table has plausible rows in it. That is exactly what happened to me.\n- __VEC is document-shaped, not",
    "pickup_prompt": null,
    "ideas": {
@@ -112721,7 +112734,8 @@
     "23178": "approved",
     "23179": "approved",
     "23182": "proposed",
-    "23183": "proposed"
+    "23183": "proposed",
+    "23234": "proposed"
    }
   },
   "1785953794202": {
@@ -113099,13 +113113,13 @@
   },
   "1785954595787": {
    "task_id": "1785954595787",
-   "mtime": 1785958775670,
+   "mtime": 1785958932961,
    "created_at": "2026-08-05T18:29:55.787Z",
-   "last_modified": "2026-08-05T19:39:35.670Z",
-   "size_kb": 326,
-   "turn_count": 81,
+   "last_modified": "2026-08-05T19:42:12.961Z",
+   "size_kb": 357,
+   "turn_count": 92,
    "title": "#KAISON\n\n\n═══════════════════════════════════════════════\nPICKUP PROMPT: KAIZEN CLOSED-LOOP OWNER\n═══════════════════════════════════════════════\nPick up KAIZEN closed-loop ownership. KAIZEN = the continuous improvement / recipe loop across the EMSU systems. It is a pure-SQL + local-LLM system by design.\n\nGROUND TRUTH (verified from ledger + handoff, 2026-08-05):\n- KAIZEN MCP server makes NO LLM calls itself (pure SQL + paid-model-blocking guard). Verified 2026-07-18, idea #18347 [rejected] closed with evidence: nothing to wire.\n- Executor consumes KAIZEN proposals via local glm-5.2 (free-local, rule 146).\n- Ticket classifier for KAIZEN inputs is a local TF-IDF pickle, NOT an LLM.\n- 7B-LoRA ",
-   "pickup_prompt": "very port-map verification.\\n\\n═══════════════════════════════════════════════\\nPICKUP PROMPT (paste into a fresh Cline window)\\n═══════════════════════════════════════════════\\nPick up task #23204 [proposed] — KAIZEN closed-loop health check follow-up.\\n\\nWhere we left off (verified 2026-08-05 12:31 PT):\\n- KAIZEN MCP: 272 recipes, glm52 100% classified (144/144), ruben_executor 0 failures (genuine)\\n- glm52 autopsy cron: ticking */10, clean. 97% unreachable = pompey/marcus/tiberius (no tunnels, HANDOFF 5950 human-gated)\\n- Paid-model guard: intact (3 regex gates, zero LLM deps)\\n- #18347 [rejected] — nothing to wire\\n\\nOpen threads to drive next:\\n1. #23204 [proposed] — After pompey/marcus/tiberius physical access restores tunnels, re-verify port mapping against fleet_inventory\\n2. (human-only decision, no idea) — pompey/marcus/tiberius need physical access per HANDOFF 5950\\n\\nReference IDs:\\n- Ideas filed: #23204 [proposed]\\n- Prior idea: #18347 [rejected]\\n- Files touched: /var/www/emtskills/cron/cron_glm52_kaizen_autopsy.php (read), /var/www/emtskills/mcp-servers/kaizen/src/index.ts (read), KAIZEN MCP (PID 4046)\\n\\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\\n═══════════════════════════════════════════════\"}</arguments>\n</use_mcp_tool>",
+   "pickup_prompt": "ecovery port-map verification.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #23204 [proposed] — KAIZEN closed-loop health check follow-up.\n\nWhere we left off (verified 2026-08-05 12:31 PT):\n- KAIZEN MCP: 272 recipes, glm52 100% classified (144/144), ruben_executor 0 failures (genuine)\n- glm52 autopsy cron: ticking */10, clean. 97% unreachable = pompey/marcus/tiberius (no tunnels, HANDOFF 5950 human-gated)\n- Paid-model guard: intact (3 regex gates, zero LLM deps)\n- #18347 [rejected] — nothing to wire\n\nOpen threads to drive next:\n1. #23204 [proposed] — After pompey/marcus/tiberius physical access restores tunnels, re-verify port mapping against fleet_inventory\n2. (human-only decision, no idea) — pompey/marcus/tiberius need physical access per HANDOFF 5950\n\nReference IDs:\n- Ideas filed: #23204 [proposed]\n- Prior idea: #18347 [rejected]\n- Files touched: /var/www/emtskills/cron/cron_glm52_kaizen_autopsy.php (read), /var/www/emtskills/mcp-servers/kaizen/src/index.ts (read), KAIZEN MCP (PID 4046)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
     "1802": null,
     "1803": null,
@@ -113281,15 +113295,26 @@
   },
   "1785954733601": {
    "task_id": "1785954733601",
-   "mtime": 1785955740704,
+   "mtime": 1785960160235,
    "created_at": "2026-08-05T18:32:13.601Z",
-   "last_modified": "2026-08-05T18:49:00.704Z",
-   "size_kb": 272,
-   "turn_count": 134,
+   "last_modified": "2026-08-05T20:02:40.235Z",
+   "size_kb": 444,
+   "turn_count": 220,
    "title": "#SLS MEGA\n\n\n═══════════════════════════════════════════════\nPICKUP PROMPT: EMTSKILLS PERFORMANCE, SLS, CS QUEUES\n═══════════════════════════════════════════════\nPick up emtskills server performance, Student Lifecycle Service (SLS), and CS queue ownership.\n\nVERIFIED GROUND TRUTH (from ledger + handoff, 2026-08-05):\nEMTSKILLS SLOW-LOAD (fixed 2026-08-04):\n- 3rd recurrence root cause: hourly full-root rsync to 2x 8TB IronWolf HDDs (sda/sdb 97-100% util, 847ms write await) starving MariaDB + PHP-FPM.\n- Old load>30 guard NEVER fired because disk I/O saturation does not show high load (load was 13-15 during outage).\n- FIXES DEPLOYED: (1) nvme-mirror-sync.sh now dual-guards: skip if load1 >= 12 OR ",
    "pickup_prompt": null,
    "ideas": {
+    "2018": null,
+    "2165": null,
+    "2166": null,
+    "2167": null,
+    "2183": null,
+    "2187": null,
+    "2193": null,
+    "2201": null,
+    "2214": null,
     "2219": "deployed",
+    "2220": null,
+    "2222": null,
     "5459": null,
     "5608": null,
     "18329": null,
@@ -113302,29 +113327,38 @@
     "20825": null,
     "22258": "superseded",
     "22294": "deployed",
-    "23173": "in_progress"
+    "23173": "in_progress",
+    "23211": "in_progress",
+    "23223": "in_progress"
    }
   },
   "1785954766914": {
    "task_id": "1785954766914",
-   "mtime": 1785958405026,
+   "mtime": 1785960070169,
    "created_at": "2026-08-05T18:32:46.914Z",
-   "last_modified": "2026-08-05T19:33:25.026Z",
-   "size_kb": 558,
-   "turn_count": 66,
+   "last_modified": "2026-08-05T20:01:10.169Z",
+   "size_kb": 638,
+   "turn_count": 106,
    "title": "#LLM FLEET\n\nGive assessments based on below tasks first\n\n\n═══════════════════════════════════════════════\nPICKUP PROMPT: FRANKENSTEIN-LLM ROUTER + LADDER AUDIT\n═══════════════════════════════════════════════\nPick up frankenstein-llm and frankenstein-tools routing. Ruben's directive: verify the ladder is GLM-5.2 local FIRST, then the 120Bs, then Cicero, then DeepSeek V4 Pro (direct then OpenRouter), then GLM-5.2 cloud (direct then OpenRouter), then Kimi K3.\n\nTOOL-SCHEMA REGRESSION: FIXED 2026-08-05 10:50 PT (#23122 [executing]).\nFor most of this morning every tool-bearing request returned HTTP 400 with 53 validation errors: ('body','tools',N,'function') Field required. Root cause: Anthropic-s",
-   "pickup_prompt": "e up/down claim on this fleet.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up — Fleet: revive Cicero WG tunnel; confirm glm-5.2 dual-entry intent. GLM ring is HEALTHY, do not touch it.\n\nWhere we left off (verified 2026-08-05 12:32 PT):\n- CORRECTION LANDED: GLM-5.2-local ring is ALIVE and serving. Live proof: vllm generation_tokens_total 496438 to 496562 = 124 tokens/10s = 12.4 tok/s with 15 concurrent requests; canary healthy=true decode_live=true fail_streak=0 pass_streak=11. An earlier claim that it was decode-dead was FALSE (read from one stale 11:36 snapshot). DO NOT cycle or quarantine 127.0.0.1:8210.\n- Ladder order CONFIRMED vs Ruben's design: 7B, 14B, 32B, Joshua-70B, GLM-local, 120B pool, Cicero, DeepSeek-direct, GLM-cloud-direct, Kimi. registry_source RESOLVED to registry:/etc/litellm/frankenstein_registry.yaml.\n- Direct-then-OpenRouter CONFIRMED for both deepseek-v4-pro and glm-5.2.\n- Cicero-235b genuinely DOWN: no listener on 11520, WG handshake_age=999999s stale, watchdog alerting through 12:30 PT. WireGuard tunnel issue, not a model crash.\n- Live fleet: Artemis 33.4 tok/s, Julia+Claudia 27.2 tok/s, GLM ring 9.3-12.4 tok/s, all decode_live=true, none quarantined.\n\nOpen threads to drive next (every item has a real filed idea #):\n1. #23191 [executing] — Revive Cicero-235b. Start with the WireGuard tunnel, not vLLM: read /var/log/emsu-cicero-wg-watchdog.log, check wg show handshake age, then confirm a listener returns on port 11520 before declaring it fixed.\n2. #23205 [proposed] — Human decision for Ruben: model_name glm-5.2 has TWO entries (127.0.0.1:8210 local first, then api.z.ai). Under rule 146 free-local-first this may be intentional. Ruben confirms intent; document it, or drop the local entry so L3 is pure cloud. No config change without sign-off.\n3. #23056 [executing] — Remaining ladder-audit work: header-prove the DeepSeek/GLM-cloud direct-then-OpenRouter sub-order under load (config-level only so far, rule 140 wants headers), and fix the project-frankenstein MCP fleet API path (frankenstein_registry returned fleet_api_unreachable all session; file reads on WOPR were the workaround).\n4. #22897 [proposed] — GLM-first preempt spill-on-capacity. Stays proposed on original merit only; the claim that today validated it was withdrawn. Worth noting 15 concurrent streams at 12.4 tok/s aggregate is ~0.8 tok/s per stream. Needs real queue-depth data before promotion.\n5. #23190 [rejected] — Withdrawn, GLM ring was never dead. No action.\n6. #23192 [rejected] — Withdrawn, dual membership is fine on a healthy box. No action.\n7. #18332 [executing] — Mini fleet: 6 campus M4s on WOPR:18001-18006, fix cron_activate_ollama_minis.php. No new evidence this session.\n8. #18329 [queued] — VKL umbrella, phase-2 sqlite-vec ANN. Untouched.\n9. #18820 [deployed] — Structured-local-pin guard VERIFIED still holding: frankenstein-llm resolves to 127.0.0.1:11510 at $0 cost, never a paid provider.\n\nReference IDs:\n- Ideas filed this session: #23190 [rejected], #23191 [executing], #23192 [rejected], #23205 [proposed]\n- Carried forward: #23056 [executing], #23050 [executing], #22897 [proposed], #18332 [executing], #18329 [queued], #18820 [deployed]\n- Files: /usr/local/bin/frankenstein_tools_adapter.py (passive GLM canary, lines 912-1010), /etc/litellm/config.yaml (fallbacks 1090-1103, dual glm-5.2 entries), /etc/litellm/frankenstein_registry.yaml, /tmp/emsu_router_registry_state.json, /tmp/frankenstein_canary_health.json, /var/lo",
+   "pickup_prompt": "el failure, not a model crash.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up — Cicero WG tunnel revival + glm-5.2 dual-entry intent. GLM ring is HEALTHY, do not touch it.\n\nWhere we left off (verified 2026-08-05 13:00 PT):\n- SYSTEM FIX SHIPPED: /usr/local/bin/frankenstein_tools_adapter.py now stamps probe provenance into /tmp/frankenstein_canary_health.json (probe_mode, probe_reason, probe_gen_delta, probe_running, probe_waiting). Only probe_reason=DECODE_STALLED_REAL_ZOMBIE is a death signal. py_compile clean, service active, adapter :11510 HTTP 200. Backup: ...bak-provenance-20260805-125644.\n- Live proof: 8210 decode_live=True tok_s=14.67 REASON=DECODE_LIVE gen_delta=88 running=13. GLM ring healthy, DO NOT cycle 127.0.0.1:8210.\n- Rule 296 rewritten with a mandatory counter-delta gate + verdict table. Lint exit 0, indexed, search-verified. Bug library #2221 resolved, cross-linked to #2210 (the real zombie).\n- Ladder order + direct-then-OpenRouter + registry_source all CONFIRMED. Rule 18820 local-pin guard holds.\n- Cicero-235b genuinely DOWN: no listener on 11520, WG handshake_age=999999s stale, watchdog alerting to 12:30 PT.\n\nOpen threads to drive next (every item carries a real filed idea #):\n1. #23191 [executing] — Revive Cicero-235b. Start at the WireGuard tunnel, NOT vLLM: read /var/log/emsu-cicero-wg-watchdog.log, check `wg show` handshake age, then confirm `ss -ltnp | grep 11520` returns a listener before declaring it fixed. Finish with the rule-296 counter-delta to prove it decodes.\n2. #23205 [proposed] — Human decision for Ruben: model_name glm-5.2 has TWO config entries (127.0.0.1:8210 local first, then api.z.ai). Under rule 146 free-local-first this may be intentional. Confirm intent, then either document it so future audits stop flagging it, or drop the local entry so L3 is pure cloud. No config change without sign-off.\n3. #22897 [executing] — GLM-first preempt / spill-on-capacity. Needs real queue-depth evidence (13-15 concurrent at ~0.8-1.1 tok/s per stream is the only data so far). No routing change until that data exists.\n4. #23056 [executing] — Remaining ladder audit: header-prove the DeepSeek/GLM-cloud direct-then-OpenRouter sub-order under load (config-level only so far; rule 140 wants headers), and fix the project-frankenstein MCP fleet API path (frankenstein_registry returned fleet_api_unreachable all session; WOPR file reads were the workaround).\n5. #18332 [executing] — Mini fleet: 6 campus M4s on WOPR:18001-18006, fix cron_activate_ollama_minis.php. No new evidence this session.\n6. #18329 [executing] — VKL umbrella, phase-2 sqlite-vec ANN + LiteLLM surface wiring. Untouched.\n7. #23190 [rejected] — withdrawn, GLM was never dead. No action.\n8. #23192 [rejected] — withdrawn, dual membership fine on a healthy box. No action.\n9. #18820 [deployed] — structured-local-pin guard re-verified holding ($0, 127.0.0.1:11510).\n\nReference IDs:\n- Ideas this session: #23190 [rejected], #23191 [executing], #23192 [rejected], #23205 [proposed]\n- Carried: #23056 [executing], #23050 [executing], #22897 [executing], #18332 [executing], #18329 [executing], #18820 [deployed]\n- Bug library: #2221 (resolved, false-positive twin), #2210 (real zombie repair path)\n- Files: /usr/local/bin/frankenstein_tools_adapter.py (patched, provenance), /Users/rubenmajor/Documents/Cline/Rules-archive/296-never-declare-llm-dead-from-cached-probe.md (rewritten), /etc/litellm/config.yaml (fallbacks 1090-1103, dual glm-5.2), /etc/lite",
    "ideas": {
     "1967": null,
+    "2121": null,
+    "2181": null,
+    "2210": null,
+    "2221": null,
     "12672": null,
+    "13121": null,
     "13832": null,
     "16844": "deployed",
     "18329": "queued",
     "18332": "executing",
+    "18786": null,
     "18811": "deployed",
     "18812": "deployed",
     "18820": "deployed",
     "18918": "deployed",
+    "21136": null,
     "22897": "proposed",
     "23050": "executing",
     "23056": "executing",
@@ -113332,18 +113366,19 @@
     "23190": "executing",
     "23191": "executing",
     "23192": "proposed",
-    "23205": "proposed"
+    "23205": "proposed",
+    "23206": null
    }
   },
   "1785954856277": {
    "task_id": "1785954856277",
-   "mtime": 1785958760026,
+   "mtime": 1785960143479,
    "created_at": "2026-08-05T18:34:16.277Z",
-   "last_modified": "2026-08-05T19:39:20.026Z",
-   "size_kb": 1076,
-   "turn_count": 105,
+   "last_modified": "2026-08-05T20:02:23.479Z",
+   "size_kb": 1164,
+   "turn_count": 134,
    "title": "#CFA\n\n\n═══════════════════════════════════════════════\nPICKUP PROMPT: CFA HEALTH VALIDATION OWNER\n═══════════════════════════════════════════════\nPick up CFA validation. Ruben's read is that the CFAs ARE working, so this is a VALIDATION task, not a restart task. Do NOT restart or reconfigure anything until the instrumentation question below is answered.\n\nMAJOR CONTEXT ADDED 2026-08-05 10:50 PT — A ROUTER BUG WAS BREAKING TOOL CALLS FLEET-WIDE:\nFor most of this morning every tool-bearing request through LiteLLM returned HTTP 400 (53 validation errors: ('body','tools',N,'function') Field required). Anthropic-shaped tools were reaching OpenAI-format endpoints. FIXED and verified at 10:50 PT (#2",
-   "pickup_prompt": null,
+   "pickup_prompt": "ly (13), zero Technical ✅\n\n---\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #23054 — CFA health validation complete + email subject fix + 5 crons re-registered\n\nWhere we left off (verified 2026-08-05 13:01 PT):\n- #23054 [executing] CFA classification: 5 H2 orphaned crons (now re-registered), 1 H1 never-wired (cfa_auto_resolve_log). No outage — students ARE being replied to.\n- #23207 [deployed] [Email AI-replied] tag removed from 4 files + 49 DB titles cleaned.\n- #23208 [deployed] 5 CFA crons re-registered in /etc/cron.d/ — 12:55 PT. Access sweep */15, dispatch */5, quality */15, llm-health */5, struct */15. Root:root 644, verified on disk.\n- #23225 [proposed] Backlog finding: 414/468 tickets (88%) have NULL intake_source — invisible to auto-close/merge crons. Needs backfill.\n- Ticket backlog: 468 total (225/144/99), 313 >24h, 90 >72h, 0 closure_pending_contact_since.\n\nOpen threads to drive next:\n1. #23208 [deployed] — verify first rows appear: `SELECT COUNT(*) FROM cfa_llm_heartbeat` and `SELECT COUNT(*) FROM cfa_dispatch_log` after 13:10 PT. Should show >0.\n2. #23207 [deployed] — verify no new [Email AI-replied] tickets: `SELECT COUNT(*) FROM tickets WHERE title LIKE '[Email AI-replied]%' AND created_at > '2026-08-05 12:40:00'`.\n3. #23225 [proposed] — backfill intake_source on 414 NULL tickets. Query: `SELECT created_via, COUNT(*) FROM tickets WHERE intake_source IS NULL AND status IN ('Open','In Progress','Pending') GROUP BY created_via ORDER BY COUNT(*) DESC LIMIT 10;` then bulk UPDATE where inferable.\n\nReference IDs:\n- Ideas: #23054 [executing], #23050 [executing], #23207 [deployed], #23208 [deployed], #23225 [proposed], #23122 [executing]\n- Rules: 297 (classify-before-alarm ✅), 299 (positive control ✅), 263 (verify-before-claim ✅)\n- Files touched: /var/www/emtskills/cron/cron_email_responder.php, cron_ai_replied_stale_resolve.php, cron_deep_sweep_ai_replied.php, cron_rule29_human_queue.php\n- Cron files created: /etc/cron.d/emsu-cfa-{access-sweep,dispatch,quality,llm-health,struct}\n- Backups: *.bak-20260805-1228 in cron/\n\nWhen done, append to cline_task_ledger.md per rule 07 and run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1255": null,
     "2563": null,
@@ -113371,6 +113406,7 @@
     "16154": null,
     "16473": null,
     "16732": null,
+    "17150": null,
     "17446": null,
     "18848": "deployed",
     "19437": null,
@@ -113381,8 +113417,9 @@
     "23054": "executing",
     "23122": "executing",
     "23184": null,
-    "23207": null,
-    "23208": null,
+    "23207": "deployed",
+    "23208": "proposed",
+    "23225": "proposed",
     "32584": null,
     "128260": null,
     "177914": null
@@ -113390,14 +113427,16 @@
   },
   "1785957900287": {
    "task_id": "1785957900287",
-   "mtime": 1785958712677,
+   "mtime": 1785960927845,
    "created_at": "2026-08-05T19:25:00.287Z",
-   "last_modified": "2026-08-05T19:38:32.677Z",
-   "size_kb": 85,
-   "turn_count": 27,
+   "last_modified": "2026-08-05T20:15:27.845Z",
+   "size_kb": 443,
+   "turn_count": 93,
    "title": "Telphony still having issues:\n\nLots of errors on this page:\n\nhttps://www.emsuniversity.com/emtskills/routes/telephony_hub.php?view=agent \n\nUncaught ReferenceError: switchTab is not defined\n    at HTMLButtonElement.onclick (telephony_hub.php?view=agent:3011:87)\n/emtskills/api/ruben_context_api.php:1  Failed to load resource: the server responded with a status of 401 ()\ntelephony_hub.php?view=agent:3000 Uncaught ReferenceError: switchTab is not defined\n    at HTMLButtonElement.onclick (telephony_hub.php?view=agent:3000:95)\ntelephony_hub.php?view=agent:2997 Uncaught ReferenceError: switchTab is not defined\n    at HTMLButtonElement.onclick (telephony_hub.php?view=agent:2997:106)\n/emtskills/api/r",
    "pickup_prompt": null,
-   "ideas": {}
+   "ideas": {
+    "334155": null
+   }
   }
  }
 }

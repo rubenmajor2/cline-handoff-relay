@@ -6,10 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/5/2026, 6:39:36 AM PT | window: last 72h | 97 tasks | index total 472 (parsed 1, cached 471)
+Generated: 8/5/2026, 7:39:36 AM PT | window: last 72h | 102 tasks | index total 477 (parsed 5, cached 472)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1785939420388` | 8/5/2026, 7:39:34 AM | 81 | 249KB | #Argus |
+| `1785937352780` | 8/5/2026, 7:39:22 AM | 103 | 569KB | A bunch of my windows closed out here in Cline all at once. For these windows can you go a |
+| `1785937503831` | 8/5/2026, 7:39:20 AM | 133 | 707KB | Can you tell me how many turns have taken place for each model in the last 5 hours by mode |
+| `1785939083137` | 8/5/2026, 7:39:05 AM | 241 | 328KB | https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since  |
+| `1785939400779` | 8/5/2026, 7:16:41 AM | 1 | 5KB | Please see this in Argus, appears like some hallucinations, the model is not answering que |
 | `1785907561329` | 8/5/2026, 6:36:05 AM | 206 | 951KB | For Argus in a situation like this, can we give a link right here in line to the actual id |
 | `1785776636014` | 8/5/2026, 4:52:16 AM | 1436 | 3135KB | Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up |
 | `1785912519173` | 8/5/2026, 2:29:54 AM | 396 | 709KB | #GLM |
@@ -111,6 +116,148 @@ Generated: 8/5/2026, 6:39:36 AM PT | window: last 72h | 97 tasks | index total 4
 ---
 
 ## Per-window detail
+
+### `1785939420388` — 8/5/2026, 7:39:34 AM PT — 81 turns
+
+**Original task:**
+
+```
+#Argus
+
+Please see this in Argus, appears like some hallucinations, the model is not answering questiosn proerly and something is wrong. Also when I click on those individual task links it spins forever. Plus what does it mean "marale"? And why all the excuses? And it's answering things I didn't ask:
+
+Test as:
+
+MasterAdmin
+Dashboard
+Argus
+New chat started. Saves automatically after your first message.
+You
+can you tell me how many requests were made in Argus overnight and by whom and what were the topics?
+Argus
+Still thinking (50s)...
+Searched EMSU records (0 student profiles matched)
+Searched 
+```
+
+**Ideas referenced:** #16213, #19348, #2212, #22688, #22850, #22939, #23027, #23029, #23036, #23038, #23039
+
+**Last PICKUP PROMPT:**
+
+```
+) via write_server_file
+- [ ] Verify fix took effect
+- [ ] Report findings with PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1785937352780` — 8/5/2026, 7:39:22 AM PT — 103 turns
+
+**Original task:**
+
+```
+A bunch of my windows closed out here in Cline all at once. For these windows can you go ahead and give me multiple copy prompts to run that are re-organized / com bined by topic so that I can continue where I left off?
+```
+
+**Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12477, #13084, #152615, #1652, #1658, #16844 [deployed], #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #178577, #178578, #178586, #178590, #178591, #178593, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839 [resolved], #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676 [blocked], #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811 [deployed], #18812 [deployed], #18813, #18817, #18820 [deployed], #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930 [resolved], #1931, #1932, #1933, #1935, #1936 [resolved], #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20555, #20565, #20569, #20627, #20628, #20629, #20630, #20662, #20663, #20672, #20674, #20676, #20677, #20806 [proposed], #20825, #2101 [resolved], #2105, #2126, #2127, #2128, #2168, #2174, #2176, #2177, #22066, #22128 [executing], #22188, #22200, #22201, #22202, #22240 [proposed], #22250, #22258 [proposed], #22294 [deployed], #22334, #22355 [proposed], #22726, #22749 [deployed], #22750 [proposed], #22751 [proposed], #22779 [approved], #22780, #22850 [proposed], #389249, #7223
+
+**Last PICKUP PROMPT:**
+
+```
+ entry documenting everything.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785937352780 — 8 copy windows produced, handoff complete.
+
+Where we left off (verified 2026-08-05 07:38 PT):
+- 8 click-to-copy windows in /Users/rubenmajor/Desktop/CopyWindows/ (verified on disk: 8 .command files, 31-52 lines each).
+- RCA 297 applied: all claims rebased against live completions (GLM :8210, Julia+Claudia :11513, Artemis :8000, LiteLLM :4000 — all 200s).
+- Fleet naming errors corrected (Julia+Claudia TP=2, not "Ruby/Claudia"). CFA activity errors corrected (7 automation tables all zero, not active as prior windows claimed).
+- CFA silence finding: 311 open tickets, 204 new/24h, heartbeat NULL, zero sweep/dispatch/quality activity. Window 8 carries the full diagnosis prompt.
+- HANDOFF_NOTES.md updated with 2026-08-05 07:38 PT entry.
+
+Open threads to drive next:
+1. CFA automation silence [proposed] — window 8 carries full diagnosis; highest single-window priority. 311 open tickets, heartbeat NULL.
+2. #22750 [proposed] — remove TEMP DEBUG sms_debug_reports after 3 clean days (1+ clean since 2026-08-04 fix).
+3. #22751 [proposed] — consolidate session bootstraps into lib/session_bootstrap.php + canary.
+4. #19387 [executing] — QB auto-void AVS fix needs real card to confirm + historical backfill.
+5. mail.emsuniversity.com cert expiring 2026-08-12 — certbot renewal already failing.
+6. Preceptor Evaluation form 2 capture rate 701/1,862 — investigate intake gap.
+7. GLM-5.2 ring monitor — verify serving + evidence (window 1).
+8. Moodle emscards v4 — Ruben visual confirmation pending courses 25/37/41.
+9. Corpus replica rsync — OPEN WATCH for emtskills slow-load recurrence.
+10. WOPR root disk 93% full — NVMe migration follow-up.
+11. Rule 267 Executor dispatch — windows 4+5 best candidates (no fleet dependency), window 8 highest priority.
+
+Reference IDs:
+- Ideas: #22749 [deployed], #22750 [proposed], #22751 [proposed], #22850 [proposed], #19387 [executing], #19218 [approved], #19230 [queued], #19261 [approved]
+- Window task ids recovered: 1785937503831, 1785908659354, 1785915160150, 1785915008005, 1785861156554, 1785909027381, 1785776636014, 1785780445834, 1785781386836
+- Files: /Users/rubenmajor/Desktop/CopyWindows/*.command (8 files), /Users/rubenmajor/Documents/Cline/cline_task_ledger.md, /var/www/emtskills/docs/HANDOFF_NOTES.md
+
+When done, append to cline_task_ledger.md per rule 07 and run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785937503831` — 8/5/2026, 7:39:20 AM PT — 133 turns
+
+**Original task:**
+
+```
+Can you tell me how many turns have taken place for each model in the last 5 hours by model and also look inside the grouped models like frankenstein-llm, frankenstein-tools, emsu-codegen, etc...? I want to see how many turns for the individual LLMs themselves, not the groupings
+```
+
+**Ideas referenced:** #10740, #11953, #12314, #12365, #12366, #12368, #12657, #13108, #16588, #16648, #17202, #17203, #17205, #2176, #2177, #22258 [proposed], #22294, #22334, #22749, #22750 [proposed], #22751 [proposed], #22820, #22897, #23028, #23029, #23030, #23031
+
+**Last PICKUP PROMPT:**
+
+```
+
+- [ ] File idea for per-member audit tracking
+- [ ] Present final summary with PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1785939083137` — 8/5/2026, 7:39:05 AM PT — 241 turns
+
+**Original task:**
+
+```
+https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since we have a 4TB NVME on WOPR. Can you tell me what's going on here and get these pages loaded faster?
+```
+
+**Ideas referenced:** #2211 [needs_verify], #23028 [proposed], #23029 [proposed], #23030 [proposed], #23031 [proposed], #2998
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785939400779` — 8/5/2026, 7:16:41 AM PT — 1 turns
+
+**Original task:**
+
+```
+Please see this in Argus, appears like some hallucinations, the model is not answering questiosn proerly and something is wrong. Also when I click on those individual task links it spins forever. Plus what does it mean "marale"? And why all the excuses? And it's answering things I didn't ask:
+
+Test as:
+
+MasterAdmin
+Dashboard
+Argus
+New chat started. Saves automatically after your first message.
+You
+can you tell me how many requests were made in Argus overnight and by whom and what were the topics?
+Argus
+Still thinking (50s)...
+Searched EMSU records (0 student profiles matched)
+Searched EMSU kno
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785907561329` — 8/5/2026, 6:36:05 AM PT — 206 turns
 

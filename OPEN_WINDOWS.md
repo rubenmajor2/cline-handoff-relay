@@ -6,22 +6,24 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/4/2026, 11:22:17 PM PT | window: last 72h | 95 tasks | index total 468 (parsed 9, cached 459)
+Generated: 8/5/2026, 12:22:19 AM PT | window: last 72h | 96 tasks | index total 470 (parsed 12, cached 458)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785909027381` | 8/4/2026, 11:22:10 PM | 73 | 269KB | The moodle layout for the EMT classes AZ, CA and TX is very ugly and off-center. Need to b |
-| `1785907561329` | 8/4/2026, 11:22:05 PM | 85 | 545KB | For Argus in a situation like this, can we give a link right here in line to the actual id |
-| `1785901946011` | 8/4/2026, 11:21:59 PM | 555 | 1264KB | #GLM  |
-| `1785782909425` | 8/4/2026, 11:21:55 PM | 1231 | 6315KB | Why am i not seeing clustered ideas here in cline? |
-| `1785776636014` | 8/4/2026, 11:20:57 PM | 1303 | 2817KB | Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up |
-| `1785907400228` | 8/4/2026, 11:17:49 PM | 88 | 250KB | https://emsuniversity.com/emtskills is very slow again today. This is the 3rd time I've ha |
-| `1785860776891` | 8/4/2026, 11:16:37 PM | 545 | 1346KB | #Argus |
-| `1785908659354` | 8/4/2026, 11:02:37 PM | 35 | 274KB | Frankenstein-llm window seems stuck or crawling at snails speed (later more likely) dwith  |
-| `1785781386836` | 8/4/2026, 10:58:34 PM | 1104 | 3473KB | Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/  |
-| `1785881207296` | 8/4/2026, 10:29:46 PM | 132 | 719KB | Can you look into this and advise if there's an isseu? |
+| `1785881207296` | 8/5/2026, 12:22:18 AM | 165 | 774KB | Can you look into this and advise if there's an isseu? |
+| `1785782909425` | 8/5/2026, 12:22:15 AM | 1256 | 6355KB | Why am i not seeing clustered ideas here in cline? |
+| `1785907400228` | 8/5/2026, 12:22:13 AM | 109 | 305KB | https://emsuniversity.com/emtskills is very slow again today. This is the 3rd time I've ha |
+| `1785909027381` | 8/5/2026, 12:22:05 AM | 180 | 2970KB | The moodle layout for the EMT classes AZ, CA and TX is very ugly and off-center. Need to b |
+| `1785912519173` | 8/5/2026, 12:22:05 AM | 133 | 267KB | #GLM |
+| `1785817138435` | 8/5/2026, 12:22:01 AM | 194 | 946KB | i noticed a lot of reasonsing time across models wasted contemplating context and whether  |
+| `1785912414137` | 8/5/2026, 12:21:51 AM | 31 | 79KB | this is a new window test to see if frankenstein-llm will pick up |
+| `1785907561329` | 8/5/2026, 12:21:48 AM | 121 | 658KB | For Argus in a situation like this, can we give a link right here in line to the actual id |
+| `1785776636014` | 8/5/2026, 12:21:42 AM | 1337 | 2970KB | Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up |
+| `1785781386836` | 8/5/2026, 12:21:38 AM | 1129 | 3502KB | Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/  |
+| `1785860776891` | 8/5/2026, 12:10:47 AM | 550 | 1357KB | #Argus |
+| `1785908659354` | 8/5/2026, 12:04:59 AM | 37 | 279KB | Frankenstein-llm window seems stuck or crawling at snails speed (later more likely) dwith  |
+| `1785901946011` | 8/4/2026, 11:36:18 PM | 622 | 1406KB | #GLM  |
 | `1785871298806` | 8/4/2026, 10:18:50 PM | 202 | 542KB | #120Bs |
-| `1785817138435` | 8/4/2026, 9:56:46 PM | 178 | 772KB | i noticed a lot of reasonsing time across models wasted contemplating context and whether  |
 | `1785903133016` | 8/4/2026, 9:51:29 PM | 46 | 171KB | #SLS Various |
 | `1785905340493` | 8/4/2026, 9:51:10 PM | 6 | 18KB | ## WINDOW 8 |
 | `1785905180050` | 8/4/2026, 9:50:18 PM | 10 | 27KB | ## WINDOW 1 |
@@ -104,63 +106,61 @@ Generated: 8/4/2026, 11:22:17 PM PT | window: last 72h | 95 tasks | index total 
 | `1785723688286` | 8/2/2026, 7:34:58 PM | 74 | 183KB | I can't open my messages app and when I click it it says You can't open the applcation "Me |
 | `1785620212473` | 8/2/2026, 7:06:36 PM | 1700 | 5039KB | #GLM |
 | `1785653497679` | 8/2/2026, 12:30:52 AM | 96 | 719KB | The Fix AVP app is not working anymore, and seems to be stuck on my desktop / quick launch |
-| `1785613730033` | 8/1/2026, 11:30:44 PM | 288 | 1601KB | #Julia/Claudia |
 
 ---
 
 ## Per-window detail
 
-### `1785909027381` — 8/4/2026, 11:22:10 PM PT — 73 turns
+### `1785881207296` — 8/5/2026, 12:22:18 AM PT — 165 turns
 
 **Original task:**
 
 ```
-The moodle layout for the EMT classes AZ, CA and TX is very ugly and off-center. Need to be even and brouble badk in to the center area.
+Can you look into this and advise if there's an isseu?
 ```
 
-**Ideas referenced:** #047857, #1565, #2177, #2196, #22258 [proposed], #22294, #22334, #22749, #22750 [proposed], #22751 [proposed], #495057
+**Ideas referenced:** #003366, #004080, #059669, #1652, #1658, #18868, #19163, #1986, #20825, #20957, #20958, #2168, #2174, #2176, #2177, #2196, #22066, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #22334, #22338 [ready_for_review], #22355 [proposed], #22638 [proposed], #22639 [proposed], #22640 [proposed], #22829 [proposed], #22878 [proposed], #3337, #3338, #334155, #64748, #6785
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785907561329` — 8/4/2026, 11:22:05 PM PT — 85 turns
-
-**Original task:**
+**Last PICKUP PROMPT:**
 
 ```
-For Argus in a situation like this, can we give a link right here in line to the actual idea or task where they can click it and open it up to see the status?? 
+now while Elementor is active.
 
-That one was slow inline, so it is now background task #77. It runs within about 2 minutes and the answer posts right here in this chat when it lands (and in the Tasks panel). You do not need to resend it, nothing was lost. Go ahead with your next question.
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #22638 [proposed] -- Arizona EMT schedule RCA + SLS integration
+
+Where we left off (verified 2026-08-04 22:28 PT):
+- Rule-297 RCA complete: /classschedule/ renders via Elementor widget e156da6 `[dynamic_schedule]` (postmeta char 2765) to mu-plugin dynamic-schedule-shortcode.php to ABSPATH class-schedule-dynamic.php to admin_portal.Course_Schedules
+- Classified BY-DESIGN; my earlier "PHP override via rewrite" claim retracted -- no nginx/htaccess rule exists
+- Stale static post_content (Dec 2025, ends July 2026) is a dormant fallback, not the live renderer
+- SLS integration: one Course_Schedules table feeds both the public schedule page and view_course_schedules.php (db('skills'), filters cs.course_start_date >= CURDATE())
+
+Open threads to drive next:
+1. #22829 [proposed] -- mitigate dormant fallback: empty stale post_content or add unconditional template override mu-plugin for classschedule slug
+2. #22639 [proposed] -- miamiemt.com registration dropdown dead since 2022; run registration_surface_repair for Miami
+3. #22640 [deployed] -- verified live AZ schedule correct; no date action needed
+
+Reference IDs:
+- Ideas filed: #22638 [proposed], #22639 [proposed], #22640 [deployed], #22829 [proposed]
+- Files touched: none (investigation only: read only, no deletes)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] (297 Step 1) Symptom: static post_content vs live dynamic output
+- [x] (297 Step 2) Read all rendering source files with citations
+- [x] (297 Step 3) Classify: BY-DESIGN via Elementor shortcode widget → admin_portal
+- [x] Identify dormant fallback risk → filed #22829 [proposed]
+- [x] SLS integration explained (Course_Schedules as single source of truth)
+- [x] Delivery with pickup block
+</task_progress>
+</attempt_completion>
 ```
 
-**Ideas referenced:** #128203, #16213, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19370, #21125, #21126, #21140, #22511, #22688, #22850, #334155, #4338
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785901946011` — 8/4/2026, 11:21:59 PM PT — 555 turns
-
-**Original task:**
-
-```
-#GLM 
-
-Here is how we fix it. Three levers, cheapest and highest-confidence first.
-
-## Fix 1: raise `--num_workers` (5 minutes, reversible, do this first)
-
-The proxy runs **4 workers** against 15+ connections. Each worker handles one request at a time, so request 5 waits for one to free up. That is the 40 seconds.
-
-```
-docker run ... --num_workers 4     ->     --num_workers 16
-```
-
-One word in the docker run line. WOPR has 48 cores, so 16 async workers is conservative. Restart via `/usr/local/bin/litellm-safe-restart.sh`, then re-run `/tmp/doctor_layer_probe.sh`. **If the 40s collapses toward 
-```
-
-**Ideas referenced:** #1150, #11936, #11990, #12403, #13108, #16120, #16648, #17202, #17203, #17205, #17300, #1754, #1755, #1876, #18820 [deployed], #18868, #19338 [rejected], #19458 [rejected], #1986, #2083, #2157, #2159, #2168 [deployed], #2174, #2206, #2207, #2208, #22128 [executing], #22370 [proposed], #22500 [awaiting_review], #22598, #22601 [proposed], #22613 [proposed], #22674 [proposed], #22675 [proposed], #22680 [proposed], #22681 [proposed], #22683 [proposed], #22684 [proposed], #22685 [proposed], #22686 [proposed], #22699 [proposed], #22700 [proposed], #22704 [proposed], #22713 [proposed], #22727 [proposed], #22729 [proposed], #22743 [proposed], #22752 [proposed], #22758 [proposed], #22761 [proposed], #22765 [proposed], #22770 [proposed], #22784 [proposed], #22795 [proposed], #22796 [proposed], #22797 [proposed], #22808 [proposed], #22815 [proposed], #22818 [proposed], #22827 [proposed], #22856 [proposed], #48031, #48140, #8370
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785782909425` — 8/4/2026, 11:21:55 PM PT — 1231 turns
+### `1785782909425` — 8/5/2026, 12:22:15 AM PT — 1256 turns
 
 **Original task:**
 
@@ -206,7 +206,260 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785776636014` — 8/4/2026, 11:20:57 PM PT — 1303 turns
+### `1785907400228` — 8/5/2026, 12:22:13 AM PT — 109 turns
+
+**Original task:**
+
+```
+https://emsuniversity.com/emtskills is very slow again today. This is the 3rd time I've had to get with you about this. We need a durable solution and a better RCA. i'ts simply loading very slow  spin spin spin
+```
+
+**Ideas referenced:** #1658, #16731 [queued], #19522 [deployed], #19836 [executing], #1986, #20957, #20958, #2176, #2177, #22258 [proposed], #22294, #22334, #22355 [proposed], #22749, #22750 [proposed], #22751 [proposed], #22886 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ting your Go on option A vs C.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — emtskills slow-load RCA (FIXED, verified 2026-08-04 22:46 PT) + durable mirror-relocation design #22886
+
+Where we left off (verified 2026-08-05 00:21 PT):
+- Root cause: hourly root-mirror rsync to 2x 7200rpm HDDs (md0) pinned sda/sdb at 97–100% util, starving MariaDB + PHP-FPM.
+- Fixes deployed [deployed]: nvme-mirror-sync.sh dual-guards (load ≥12 OR disk util ≥50%), cron reduced to 4x/day (`5 */6`), WP health cron load-guard + jitter (#16731 [deployed] live-verified), 157MB error log truncated.
+- Verified: HTTP 200, TTFB 13–14ms with backup running; load 13.7 → 9.7; disk 0% during throttled sync.
+- Durable design #22886 [proposed] filed: relocate mirror to idle NVMe nvme2n1 (930G, ext4, unmounted). Root 1.1T used → need exclude list (corpus, caches, temp).
+
+Open threads to drive next:
+1. #22886 [proposed] — awaiting Ruben Go on option A (NVMe mirror) vs C (shrink sync surface). Approved = execute immediately: mount nvme2n1p2, build exclude list, repoint DEST in nvme-mirror-sync.sh, first full mirror, verify.
+2. #16731 [deployed] — monitoring clean; only fires on real corruption now.
+
+Reference IDs:
+- Ideas: #22886 [proposed], #16731 [deployed], #19522 [deployed]
+- Files touched: /usr/local/bin/nvme-mirror-sync.sh, /etc/cron.d/emsu-nvme-mirror, /var/www/emtskills/crons/cron_wp_active_plugins_health.php, /var/log/php8.3-fpm-errors.log, docs/HANDOFF_NOTES.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+<result>
+emtskills slow again — root cause found and fixed this time, plus a design for the permanent fix.
+
+## Root cause (3rd time = pattern)
+
+The hourly full-root rsync (`nvme-mirror-sync.sh`) runs at :17 every hour to **2x 8TB 7200rpm HDDs** (md0 RAID1). During the write, sda/sdb pinned at **97–100% util, 847ms write await**, starving MariaDB + PHP-FPM. I caught 3 concurrent runaway rsyncs live tonight.
+
+The July 28 "load guard" (threshold 30) **never fired** — I/O-bound rsync doesn't raise load, the box idles on CPU waiting on disk. That's why all prior RCAs missed it and pointed at "fleet burst."
+
+## Fixes shipped (verified)
+
+1. Killed the 3 runaway rsyncs → disk 100% → 0%, load 13.7 → 9.7, TTFB 13ms.
+2. `nvme-mirror-sync.sh` dual-guards: **skip if load1 ≥ 12 OR sda/sdb util ≥ 50%**.
+3. Mirror cron: hourly → **4x/day** (`5 */6 * * *`). rsync is incremental; skipped runs just defer the delta.
+4. WP active_plugins health cron: load guard (>20) + per-site 150–500ms stagger jitter. Idea #16731 [deployed], live run passed.
+5. Truncated 157MB php8.3-fpm-errors.log (unrotated sms_debug spam).
+
+**Verified result:** HTTP 200, TTFB 13–14ms *with backup running*; load single digits; handoff notes updated.
+
+## Better long-run design — #22886 [proposed]
+
+The real problem isn't the rsync, it's the **target**: streaming 1.1TB to 7200rpm rust every night. Verified: an **idle 930G NVMe (nvme2n1p2, ext4, unmounted)** exists on this box. Repointing DEST there drops write latency from 847ms → ~0.3ms and turns the sync into a background blip. Needs a small exclude list (corpus DB, caches, temp — non-rollback data that shouldn't be mirrored anyway). Files filed as #22886 [proposed], awaiting your Go. Per rule 161, the moment you say go it executes.
+</result>
+<task_progress>
+- [x] Check server load (13-15/48 CPUs)
+- [x] Read HANDOFF_NOT
+```
+
+### `1785909027381` — 8/5/2026, 12:22:05 AM PT — 180 turns
+
+**Original task:**
+
+```
+The moodle layout for the EMT classes AZ, CA and TX is very ugly and off-center. Need to be even and brouble badk in to the center area.
+```
+
+**Ideas referenced:** #047857, #1565, #21588, #2177, #2196, #22104, #22105, #22138, #22189, #22244, #22245, #22258 [proposed], #22294, #22334, #22726, #22749, #22750 [proposed], #22751 [proposed], #22776, #22871 [proposed], #495057
+
+**Last PICKUP PROMPT:**
+
+```
+rses 25/37/41, ledger updated.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #22871 - Moodle emscards centering v3 - content aligned under page header
+
+Where we left off (verified 2026-08-05 00:16 PT):
+- v1: margin-left 252->304, margin-right -15->20 (insufficient)
+- v2: added max-width 1400px + margin auto to .emscards-layout (still misaligned with header)
+- v3: changed margin-left:304px to padding-left:304px on .format-emscards
+- Container now spans full width aligned with page header, content centers in remaining space
+- PHP lint clean, FPM reloaded, Moodle cache purged for courses 25/37/41
+- HANDOFF_NOTES.md + cline_task_ledger.md updated
+
+Open threads to drive next:
+1. #22871 [proposed] - Ruben visual verification of centering under page header on all 3 course pages at www.emsuniversity.com/ems/course/view.php?id=25,37,41
+2. (human-only decision, no idea) - If 1400px max-width is too narrow or wide, adjust the value
+
+Reference IDs:
+- Ideas filed: #22871 [proposed]
+- Files touched: /var/www/moodle/ems/course/format/emscards/format.php, /var/www/moodle/ems/course/format/emscards/styles.css
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] v1: margin-left 252->304, margin-right -15->20
+- [x] v2: added max-width 1400px + margin auto to .emscards-layout
+- [x] v3: change margin-left to padding-left so content aligns with page header
+- [x] PHP lint clean
+- [x] FPM reloaded
+- [x] Cache purged
+- [x] Ledger updated
+</task_progress>
+</attempt_completion>
+```
+
+### `1785912519173` — 8/5/2026, 12:22:05 AM PT — 133 turns
+
+**Original task:**
+
+```
+#GLM
+
+I have stalling new and old frankenstein-llm windows here in cline indicating GLM is stalled out
+
+Went 12 with 7/5, as you suggested. But the doctor pass says lane count was never the problem, and I want to show you why before you accept the change.
+
+## What I actually measured
+
+| | per-stream | aggregate |
+|---|---|---|
+| width 8 | 1.34 tok/s | 10.7 tok/s |
+| width 15 | **1.35 tok/s** | **20.2 tok/s** |
+
+Widening did not cost per-stream speed at all. Aggregate nearly doubled. By the numbers, 15 was working.
+
+And during your stall report: only **9 chat completions in 3 minutes** while al
+```
+
+**Ideas referenced:** #12584, #12689, #13108, #16844, #19338, #19686, #1998, #2091, #2094, #2112, #22128 [executing], #22680 [proposed], #22681 [proposed], #22729 [proposed], #22752 [proposed], #22761 [proposed], #22765 [proposed], #22770 [proposed], #22784 [proposed], #22795 [proposed], #22796 [proposed], #22797 [proposed], #22808 [proposed], #22815 [proposed], #22818 [proposed], #22827 [proposed], #22856 [proposed], #22866 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785817138435` — 8/5/2026, 12:22:01 AM PT — 194 turns
+
+**Original task:**
+
+```
+i noticed a lot of reasonsing time across models wasted contemplating context and whether to compress. It's kind of insane how many tokens are wasted on this. What can we do about that? Tell me how much waste is occurring from this.
+```
+
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1779, #178584, #1798, #1828, #18312, #18326, #19162, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #22282 [queued], #5351, #5354, #7142, #7149, #7377, #7380, #8370, #9731
+
+**Last PICKUP PROMPT:**
+
+```
+correct windows. No more 405B.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1785840812960: monitor v2 compress system. KNOWN_WINDOWS updated to 32K/128K/200K/1M per rule 297.
+
+Where we left off (verified 2026-08-05 00:21 PT):
+- v2 shipped with W auto-detect + escalation + rule 119 supremacy clause
+- 405B reference removed from KNOWN_WINDOWS (Ruben confirmed stale)
+- Windows per doorman LADDER: 32K (Ollama 7B-32B, GLM-5.2), 128K (phi-4-mini, DeepSeek-V3, kimi-k3), 200K (Claudes, Gemini), 1M (120B class)
+- Watchdog live: `SIGNAL check task=1785781386836 ctx=88163 W=128000` at 00:20 PT
+- Idea #22282 [executing]
+
+Open threads:
+1. #22282 [executing] — after ~1 week, re-run /tmp/scan_compress_waste_v2.py. Expected: deliberation blocks drop from 9.2% to <1%.
+2. #22282 [executing] — if the LADDER changes, update KNOWN_WINDOWS in ~/bin/cline_budget_watchdog.py. The windows are NOT read from the registry at runtime; they're hardcoded with a rule-297 annotation. Any new model tier with a different window size needs a manual update.
+
+Reference IDs:
+- Idea: #22282 [executing]
+- Files: ~/bin/cline_budget_watchdog.py, ~/Documents/Cline/Rules/119-mandatory-context-compress.md, ~/.config/emsu/budget_watchdog.json, ~/Library/LaunchAgents/com.emsu.cline-budget-watchdog.plist, Desktop/Cline Compress.MD
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Quantify waste: ~880K tokens, 9.2% of thinking
+- [x] Build watchdog v2 with signal-file writer + launchd agent
+- [x] Update rule 119 with mechanical pre-turn signal check + supremacy clause
+- [x] Ship v1, debug v1 failure, ship v2 bugfix
+- [x] Fix: W auto-detect + escalation (Bug A)
+- [x] Fix: rule 119 supremacy clause over rule 00 (Bug B)
+- [x] Fix: Remove stale 405B from KNOWN_WINDOWS, replace with 32K per rule 297 and Ruben's directive
+- [x] Verify: escalation tests confirmed, watchdog live with correct windows
+- [x] Update Desktop/Cline Compress.MD
+</task_progress>
+</attempt_completion>
+```
+
+### `1785912414137` — 8/5/2026, 12:21:51 AM PT — 31 turns
+
+**Original task:**
+
+```
+this is a new window test to see if frankenstein-llm will pick up
+```
+
+**Ideas referenced:** #12184, #19338, #22880 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ tracked at #22880 [proposed].
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task: frankenstein-llm new-window pickup test, complete. Follow up: fleet API investigation.
+
+Where we left off (verified 2026-08-05 00:17 PT):
+- Routing test PASSED: frankenstein-llm to frankenstein-tools, confidence 100, explicit_L4, all tiers live on WOPR.
+- project-frankenstein MCP fleet API was unreachable during the test. Router itself healthy, reporting layer is the failure.
+- Ruben approved the investigation direction.
+
+Open threads to drive next:
+1. #22880 [proposed] - Investigate fleet API endpoint on WOPR. Check what is serving the project-frankenstein MCP backend, why it hangs, fix without touching router tiers.
+
+Reference IDs:
+- Ideas filed: #22880 [proposed]
+- Files touched: none, all evidence from WOPR /tmp/emsu_router_audit.log
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Probe frankenstein-llm routing: PASSED
+- [x] WOPR audit log confirms active routing
+- [x] Filed #22880 for fleet API outage
+- [x] Ruben approved investigation direction
+</task_progress>
+</attempt_completion>
+```
+
+### `1785907561329` — 8/5/2026, 12:21:48 AM PT — 121 turns
+
+**Original task:**
+
+```
+For Argus in a situation like this, can we give a link right here in line to the actual idea or task where they can click it and open it up to see the status?? 
+
+That one was slow inline, so it is now background task #77. It runs within about 2 minutes and the answer posts right here in this chat when it lands (and in the Tasks panel). You do not need to resend it, nothing was lost. Go ahead with your next question.
+```
+
+**Ideas referenced:** #128203, #16213, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19370, #21125, #21126, #21140, #22511, #22688, #22850, #334155, #4338
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785776636014` — 8/5/2026, 12:21:42 AM PT — 1337 turns
 
 **Original task:**
 
@@ -220,7 +473,7 @@ Where we left off (verified 2026-08-03 09:46 PT):
 - #21710 REV
 ```
 
-**Ideas referenced:** #10060, #13440, #14158, #1549, #16207, #16523, #19511, #2061, #20890, #21432 [proposed], #21433 [ready_for_review], #21434 [ready_for_review], #21586 [approved], #21587 [ready_for_review], #21588 [approved], #21589, #21667 [executing], #21710 [reverted], #21712 [proposed], #22044, #22104 [proposed], #22105 [proposed], #22138 [proposed], #22158 [proposed], #22171 [approved], #22189 [proposed], #22244 [proposed], #22245 [approved], #22726 [proposed], #22776 [proposed], #22807 [proposed], #2450, #2491, #2520, #3082, #4072, #5240, #5387, #5833, #6417, #6930, #7121, #7142, #7164, #7168, #7180, #7186, #7218, #7232, #7317, #7381, #7388, #7389, #7390, #7414, #7415, #7427, #7428, #7429, #7441, #7442, #7443, #7444, #7445, #7446, #7447, #7491, #7492, #7496, #7497, #7498, #7503, #7514, #7515, #7516, #7566, #7853, #7893, #7907, #7908, #7909, #9109, #9132, #9222, #9989
+**Ideas referenced:** #10060, #13440, #14158, #1549, #16207, #16523, #19511, #2061, #20890, #21432 [proposed], #21433 [ready_for_review], #21434 [ready_for_review], #21586 [approved], #21587 [ready_for_review], #21588 [approved], #21589, #21667 [executing], #21710 [reverted], #21712 [proposed], #22044, #22104 [proposed], #22105 [proposed], #22138 [proposed], #22158 [proposed], #22171 [approved], #22189 [proposed], #22244 [proposed], #22245 [approved], #22726 [proposed], #22776 [proposed], #22807 [proposed], #2450, #2491, #2520, #3082, #4007, #4013, #4072, #5240, #5387, #5833, #6111, #61286, #6417, #6670, #6930, #7121, #7142, #7164, #7168, #7180, #7186, #7218, #7232, #7317, #7381, #7388, #7389, #7390, #7414, #7415, #7427, #7428, #7429, #7441, #7442, #7443, #7444, #7445, #7446, #7447, #7491, #7492, #7496, #7497, #7498, #7503, #7514, #7515, #7516, #7566, #7853, #7893, #7907, #7908, #7909, #813772, #9109, #9132, #9173, #9222, #9989
 
 **Last PICKUP PROMPT:**
 
@@ -253,65 +506,48 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785907400228` — 8/4/2026, 11:17:49 PM PT — 88 turns
+### `1785781386836` — 8/5/2026, 12:21:38 AM PT — 1129 turns
 
 **Original task:**
 
 ```
-https://emsuniversity.com/emtskills is very slow again today. This is the 3rd time I've had to get with you about this. We need a durable solution and a better RCA. i'ts simply loading very slow  spin spin spin
+Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/ 
+
+Help me with this
 ```
 
-**Ideas referenced:** #1658, #16731 [queued], #19522 [deployed], #19836 [executing], #1986, #20957, #20958, #2176, #2177, #22258 [proposed], #22294, #22334, #22355 [proposed], #22749, #22750 [proposed], #22751 [proposed]
+**Ideas referenced:** #10647, #12135, #13047, #13246, #13687, #13754, #13943, #14024, #14323, #14743, #15417, #17712, #18135, #18176, #1878, #1892, #19173, #19802, #19866, #20825, #21621, #21793, #22066 [proposed], #22067 [proposed], #22068 [proposed], #22086 [proposed], #22087 [proposed], #22188 [proposed], #22200 [proposed], #22201 [proposed], #22202 [proposed], #22215 [proposed], #22245 [proposed], #22250 [deployed], #22256, #22260 [proposed], #22261 [proposed], #22262 [proposed], #22263, #22264, #22286, #22589, #22983, #23035, #23076, #23079, #23127, #23142, #23231, #23258, #23263, #23485, #23494, #23496, #23497, #23504, #23536, #23539, #2388, #26105, #2636, #2693, #2782, #2980, #3016, #3498, #4480, #4481, #4929, #5062, #5095, #5244, #5459, #55593, #5608, #5770, #5795, #6728, #6947, #698083, #7024, #7045, #7126, #7381, #7548, #7550, #8060, #8894, #8902, #9108, #9171, #9201, #9406, #9413, #9415, #9417, #9418, #9419
 
 **Last PICKUP PROMPT:**
 
 ```
- needs a guard/reschedule too.
+, not 3. This closes the loop.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — emtskills 3rd slow-load RCA: disk I/O starvation from hourly HDD rsync (FIXED, verified 2026-08-04 23:11 PT).
+Pick up task #26105 — Ticket queue cleanup phase 2: close the endless-loop for 34 AI-replied tickets
 
-Where we left off (verified 2026-08-04 23:11 PT):
-- Root cause: hourly `nvme-mirror-sync.sh` to 2x 7200rpm HDDs (md0) pinned sda/sdb at 97–100% util, starving MariaDB + PHP-FPM. Old load guard (>30) never fired on I/O-bound rsync.
-- Fix 1 [deployed]: `/usr/local/bin/nvme-mirror-sync.sh` dual-guards (load ≥12 OR disk util ≥50% = skip). Backed up at `.bak-2026-08-04-rca`.
-- Fix 2 [deployed]: `/etc/cron.d/emsu-nvme-mirror` now `5 */6 * * *` (4x/day, was hourly).
-- Fix 3 [deployed]: `cron_wp_active_plugins_health.php` load guard >20 + 150–500ms stagger jitter. #16731 [deployed], live run passed.
-- Fix 4 [deployed]: truncated 157MB php8.3-fpm-errors.log.
-- Verified: HTTP 200, TTFB 13–14ms with backup running; load 13.7 → 9.7; disk 0% during throttled sync.
-- Handoff notes updated (2026-08-04 22:45 PT section).
+Where we left off (verified 2026-08-04 22:53 PT):
+- 442 active, 34 [Email AI-replied] in Open that agent touches but doesn't resolve
+- Agent runs every 5 min, hits 36 "waiting" decisions per run
+- Dead-end auto-resolve at count 3 works but these aren't reaching count 3 — AI keeps trying new approaches
 
 Open threads to drive next:
-1. #16731 [deployed] — cleanup: idea status updated to deployed, live-verified. No further action needed unless the monitor fires a corruption alert (it auto-repairs and logs to orchestrator_event_log).
-2. #19522 [deployed] — corpus-replica rsync (`emsu_corpus_replica/corpus.db.new`, ~120GB) also hits the HDDs; apply the same load/disk-util guard pattern if slow-load returns.
+1. #22250 — Fix dead-end auto-resolve: for [Email AI-replied], resolve at dead-end count 1 not 3 (in cron_ai_ticket_agent.php line 1363-1385)
+2. #22200 — Deep-sweep already reclaimed AI-replied from humans — verify 0 on Jon/Vicky/Ruben
+3. #22201 — Resolution-throughput gap: verify first-touch cap 30→60 remains, monitor 103 resolved/day target
 
 Reference IDs:
-- Ideas: #16731 [deployed], #19522 [deployed]
-- Files touched: /usr/local/bin/nvme-mirror-sync.sh, /etc/cron.d/emsu-nvme-mirror, /var/www/emtskills/crons/cron_wp_active_plugins_health.php, /var/log/php8.3-fpm-errors.log, docs/HANDOFF_NOTES.md
+- Ticket: #26105 (this task)
+- Ideas filed: #22250, #22200, #22201, #22260, #22261, #22262
+- Files touched: /var/www/emtskills/cron/cron_ai_ticket_agent.php, /var/www/emtskills/cron/cron_deep_sweep_ai_replied.php, /var/www/emtskills/cron/cron_ai_replied_stale_resolve.php, /var/www/emtskills/cron/cron_agent_36h_sla.php, /var/www/emtskills/lib/ai_ticket_agent.php, /var/www/emtskills/lib/MailerUrlAllowlist.php
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Check server load (13-15/48 CPUs)
-- [x] Read HANDOFF_NOTES (capacity raises done, fleet burst noted)
-- [x] Top CPU: mysql 278%, 3 rsyncs saturating HDDs at 97-100% util
-- [x] Page TTFB 13ms now, spikes from I/O contention
-- [x] RCA: hourly rsync to spinning rust + WP health storm = I/O starvation
-- [x] Killed runaway rsyncs (relief immediate: disk 100% -> 0%, load 13.7 -> 9.7)
-- [x] Deployed hardened nvme-mirror-sync.sh (load >= 12 OR disk util >= 50% guards)
-- [x] Reduced backup cron to 4x/day (5 */6)
-- [x] Deployed WP health cron load guard + stagger jitter (PHP lint OK)
-- [x] Truncated 157MB error log
-- [x] Verified: HTTP 200, TTFB 13-14ms with backup running, load single digits
-- [x] Updated handoff notes (2026-08-04 22:45 PT section)
-- [x] Idea #16731: [queued] → [deployed], live-verified
-</task_progress>
-</attempt_completion>
 ```
 
-### `1785860776891` — 8/4/2026, 11:16:37 PM PT — 545 turns
+### `1785860776891` — 8/5/2026, 12:10:47 AM PT — 550 turns
 
 **Original task:**
 
@@ -329,7 +565,7 @@ Rule 297 RCA done at the source, the never-lose guarantee is now server-side, th
 Source: `alltastic_api.php:12534`, inside `callClaude()`, the retry-exhausted branch. It returned the string "your request is queued and I am continuing 
 ```
 
-**Ideas referenced:** #12661, #127891, #128274, #13453, #15367, #16608, #1758, #17580, #18378, #18777 [approved], #18935, #18949, #18950, #18951, #19098 [merged], #19099 [merged], #19492, #19624 [merged], #19641 [merged], #19731 [merged], #19975 [merged], #19995 [merged], #20164 [pending], #20233 [merged], #20413 [pending], #20598 [pending], #21477 [pending], #21582, #21621 [pending], #22143 [pending], #22208 [pending], #22246 [pending], #22305 [pending], #22308, #22319, #22320, #22325 [proposed], #22326 [proposed], #22327 [proposed], #22328 [proposed], #22329 [proposed], #22333 [proposed], #22334 [resolved], #22338, #22339, #22340, #22347 [proposed], #22351 [proposed], #22355 [proposed], #22356 [executing], #22357 [proposed], #22358, #22359, #22360, #22364 [pending], #22365 [executing], #22366 [executing], #22376 [executing], #22377 [executing], #22383 [pending], #22384, #22385, #22386, #22400, #22401, #22402, #22416 [executing], #22420, #22421, #22422, #22438 [executing], #22459 [proposed], #22460 [executing], #22488 [executing], #22489 [executing], #22490 [executing], #22501 [executing], #22502 [pending], #22511 [approved], #22512 [approved], #22513 [approved], #22522 [pending], #22526 [pending], #22534 [pending], #22536 [pending], #22552 [rejected], #22556 [pending], #22607 [pending], #22611 [rejected], #22617 [pending], #22625 [pending], #22670 [pending], #22687 [approved], #22688 [approved], #22695 [rejected], #22697 [rejected], #22698 [pending], #22711 [pending], #22712 [rejected], #22718 [rejected], #22724 [rejected], #22728 [rejected], #22738 [approved], #22739 [approved], #22740 [approved], #22741 [approved], #22747 [rejected], #22748 [rejected], #22752 [proposed], #22753 [pending], #22757 [rejected], #22758 [proposed], #22759 [proposed], #22760 [proposed], #22761 [proposed], #22765 [proposed], #22769 [pending], #22770 [proposed], #22771 [proposed], #22772 [proposed], #22776 [proposed], #22777 [ready_for_review], #22778 [approved], #22779 [proposed], #22780 [blocked], #22784 [proposed], #22788 [executing], #22789 [pending], #22790 [in_progress], #22795 [proposed], #22796 [proposed], #22797 [proposed], #22806 [proposed], #22814 [approved], #9086, #9168, #9306, #9339, #9343
+**Ideas referenced:** #11812, #12661, #127891, #128274, #13453, #15367, #16608, #1758, #17580, #18378, #18777 [approved], #18935, #18949, #18950, #18951, #19098 [merged], #19099 [merged], #19492, #19624 [merged], #19641 [merged], #19731 [merged], #19975 [merged], #19995 [merged], #20164 [pending], #20233 [merged], #20413 [pending], #20598 [pending], #21477 [pending], #21582, #21621 [pending], #22143 [pending], #22208 [pending], #22246 [pending], #22305 [pending], #22308, #22319, #22320, #22325 [proposed], #22326 [proposed], #22327 [proposed], #22328 [proposed], #22329 [proposed], #22333 [proposed], #22334 [resolved], #22338, #22339, #22340, #22347 [proposed], #22351 [proposed], #22355 [proposed], #22356 [executing], #22357 [proposed], #22358, #22359, #22360, #22364 [pending], #22365 [executing], #22366 [executing], #22376 [executing], #22377 [executing], #22383 [pending], #22384, #22385, #22386, #22400, #22401, #22402, #22416 [executing], #22420, #22421, #22422, #22438 [executing], #22459 [proposed], #22460 [executing], #22488 [executing], #22489 [executing], #22490 [executing], #22501 [executing], #22502 [pending], #22511 [approved], #22512 [approved], #22513 [approved], #22522 [pending], #22526 [pending], #22534 [pending], #22536 [pending], #22552 [rejected], #22556 [pending], #22607 [pending], #22611 [rejected], #22617 [pending], #22625 [pending], #22670 [pending], #22687 [approved], #22688 [approved], #22695 [rejected], #22697 [rejected], #22698 [pending], #22711 [pending], #22712 [rejected], #22718 [rejected], #22724 [rejected], #22728 [rejected], #22738 [approved], #22739 [approved], #22740 [approved], #22741 [approved], #22747 [rejected], #22748 [rejected], #22752 [proposed], #22753 [pending], #22757 [rejected], #22758 [proposed], #22759 [proposed], #22760 [proposed], #22761 [proposed], #22765 [proposed], #22769 [pending], #22770 [proposed], #22771 [proposed], #22772 [proposed], #22776 [proposed], #22777 [ready_for_review], #22778 [approved], #22779 [proposed], #22780 [blocked], #22784 [proposed], #22788 [executing], #22789 [pending], #22790 [in_progress], #22795 [proposed], #22796 [proposed], #22797 [proposed], #22806 [proposed], #22814 [approved], #9086, #9168, #9306, #9339, #9343
 
 **Last PICKUP PROMPT:**
 
@@ -376,7 +612,7 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </attempt_completion>
 ```
 
-### `1785908659354` — 8/4/2026, 11:02:37 PM PT — 35 turns
+### `1785908659354` — 8/5/2026, 12:04:59 AM PT — 37 turns
 
 **Original task:**
 
@@ -388,95 +624,29 @@ Frankenstein-llm window seems stuck or crawling at snails speed (later more like
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785781386836` — 8/4/2026, 10:58:34 PM PT — 1104 turns
+### `1785901946011` — 8/4/2026, 11:36:18 PM PT — 622 turns
 
 **Original task:**
 
 ```
-Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/ 
+#GLM 
 
-Help me with this
-```
+Here is how we fix it. Three levers, cheapest and highest-confidence first.
 
-**Ideas referenced:** #10647, #12135, #13047, #13246, #13687, #13754, #13943, #14024, #14323, #14743, #15417, #17712, #18135, #18176, #1878, #1892, #19173, #19802, #19866, #20825, #21621, #21793, #22066 [proposed], #22067 [proposed], #22068 [proposed], #22086 [proposed], #22087 [proposed], #22188 [proposed], #22200 [proposed], #22201 [proposed], #22202 [proposed], #22215 [proposed], #22245 [proposed], #22250 [deployed], #22256, #22260 [proposed], #22261 [proposed], #22262 [proposed], #22263, #22264, #22286, #22589, #22983, #23035, #23076, #23079, #23127, #23142, #23231, #23258, #23263, #23485, #23494, #23496, #23497, #23504, #23536, #23539, #2388, #26105, #2636, #2693, #2782, #2980, #3016, #3498, #4480, #4481, #4929, #5062, #5095, #5244, #5459, #5608, #5770, #5795, #6728, #6947, #698083, #7024, #7045, #7126, #7381, #7548, #7550, #8060, #8894, #8902, #9108, #9171, #9201, #9406, #9413, #9415, #9417, #9418, #9419
+## Fix 1: raise `--num_workers` (5 minutes, reversible, do this first)
 
-**Last PICKUP PROMPT:**
-
-```
-, not 3. This closes the loop.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #26105 — Ticket queue cleanup phase 2: close the endless-loop for 34 AI-replied tickets
-
-Where we left off (verified 2026-08-04 22:53 PT):
-- 442 active, 34 [Email AI-replied] in Open that agent touches but doesn't resolve
-- Agent runs every 5 min, hits 36 "waiting" decisions per run
-- Dead-end auto-resolve at count 3 works but these aren't reaching count 3 — AI keeps trying new approaches
-
-Open threads to drive next:
-1. #22250 — Fix dead-end auto-resolve: for [Email AI-replied], resolve at dead-end count 1 not 3 (in cron_ai_ticket_agent.php line 1363-1385)
-2. #22200 — Deep-sweep already reclaimed AI-replied from humans — verify 0 on Jon/Vicky/Ruben
-3. #22201 — Resolution-throughput gap: verify first-touch cap 30→60 remains, monitor 103 resolved/day target
-
-Reference IDs:
-- Ticket: #26105 (this task)
-- Ideas filed: #22250, #22200, #22201, #22260, #22261, #22262
-- Files touched: /var/www/emtskills/cron/cron_ai_ticket_agent.php, /var/www/emtskills/cron/cron_deep_sweep_ai_replied.php, /var/www/emtskills/cron/cron_ai_replied_stale_resolve.php, /var/www/emtskills/cron/cron_agent_36h_sla.php, /var/www/emtskills/lib/ai_ticket_agent.php, /var/www/emtskills/lib/MailerUrlAllowlist.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-```
-
-### `1785881207296` — 8/4/2026, 10:29:46 PM PT — 132 turns
-
-**Original task:**
+The proxy runs **4 workers** against 15+ connections. Each worker handles one request at a time, so request 5 waits for one to free up. That is the 40 seconds.
 
 ```
-Can you look into this and advise if there's an isseu?
+docker run ... --num_workers 4     ->     --num_workers 16
 ```
 
-**Ideas referenced:** #003366, #004080, #059669, #1652, #1658, #18868, #19163, #1986, #20825, #20957, #20958, #2168, #2174, #2176, #2177, #2196, #22066, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #22334, #22338 [ready_for_review], #22355 [proposed], #22638 [proposed], #22639 [proposed], #22640 [proposed], #22829 [proposed], #3337, #3338, #334155, #64748, #6785
-
-**Last PICKUP PROMPT:**
-
+One word in the docker run line. WOPR has 48 cores, so 16 async workers is conservative. Restart via `/usr/local/bin/litellm-safe-restart.sh`, then re-run `/tmp/doctor_layer_probe.sh`. **If the 40s collapses toward 
 ```
-now while Elementor is active.
 
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
+**Ideas referenced:** #1150, #11936, #11990, #12403, #13108, #16120, #16648, #17202, #17203, #17205, #17300, #1754, #1755, #1876, #18820 [deployed], #18868, #19338 [rejected], #19458 [rejected], #1986, #2083, #2157, #2159, #2168 [deployed], #2174, #2206, #2207, #2208, #2209, #22128 [executing], #22370 [proposed], #22500 [awaiting_review], #22598, #22601 [proposed], #22613 [proposed], #22674 [proposed], #22675 [proposed], #22680 [proposed], #22681 [proposed], #22683 [proposed], #22684 [proposed], #22685 [proposed], #22686 [proposed], #22699 [proposed], #22700 [proposed], #22704 [proposed], #22713 [proposed], #22727 [proposed], #22729 [proposed], #22743 [proposed], #22752 [proposed], #22758 [proposed], #22761 [proposed], #22765 [proposed], #22770 [proposed], #22784 [proposed], #22795 [proposed], #22796 [proposed], #22797 [proposed], #22808 [proposed], #22815 [proposed], #22818 [proposed], #22827 [proposed], #22856 [proposed], #22866 [proposed], #48031, #48140, #8370
 
-Pick up task #22638 [proposed] -- Arizona EMT schedule RCA + SLS integration
-
-Where we left off (verified 2026-08-04 22:28 PT):
-- Rule-297 RCA complete: /classschedule/ renders via Elementor widget e156da6 `[dynamic_schedule]` (postmeta char 2765) to mu-plugin dynamic-schedule-shortcode.php to ABSPATH class-schedule-dynamic.php to admin_portal.Course_Schedules
-- Classified BY-DESIGN; my earlier "PHP override via rewrite" claim retracted -- no nginx/htaccess rule exists
-- Stale static post_content (Dec 2025, ends July 2026) is a dormant fallback, not the live renderer
-- SLS integration: one Course_Schedules table feeds both the public schedule page and view_course_schedules.php (db('skills'), filters cs.course_start_date >= CURDATE())
-
-Open threads to drive next:
-1. #22829 [proposed] -- mitigate dormant fallback: empty stale post_content or add unconditional template override mu-plugin for classschedule slug
-2. #22639 [proposed] -- miamiemt.com registration dropdown dead since 2022; run registration_surface_repair for Miami
-3. #22640 [deployed] -- verified live AZ schedule correct; no date action needed
-
-Reference IDs:
-- Ideas filed: #22638 [proposed], #22639 [proposed], #22640 [deployed], #22829 [proposed]
-- Files touched: none (investigation only: read only, no deletes)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] (297 Step 1) Symptom: static post_content vs live dynamic output
-- [x] (297 Step 2) Read all rendering source files with citations
-- [x] (297 Step 3) Classify: BY-DESIGN via Elementor shortcode widget → admin_portal
-- [x] Identify dormant fallback risk → filed #22829 [proposed]
-- [x] SLS integration explained (Course_Schedules as single source of truth)
-- [x] Delivery with pickup block
-</task_progress>
-</attempt_completion>
-```
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785871298806` — 8/4/2026, 10:18:50 PM PT — 202 turns
 
@@ -534,62 +704,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Check #22550 MariaDB query cache: actually OFF, not deployed despite [deployed] tag
 - [x] Explain #22550 to Ruben
 - [x] Rule 297 on rule-91 failures: transport envelope, not pickup content
-</task_progress>
-</attempt_completion>
-```
-
-### `1785817138435` — 8/4/2026, 9:56:46 PM PT — 178 turns
-
-**Original task:**
-
-```
-i noticed a lot of reasonsing time across models wasted contemplating context and whether to compress. It's kind of insane how many tokens are wasted on this. What can we do about that? Tell me how much waste is occurring from this.
-```
-
-**Ideas referenced:** #178584, #19162, #22282 [queued], #5351, #5354, #7377, #7380, #8370, #9731
-
-**Last PICKUP PROMPT:**
-
-```
- | Updated with v2 changelog |
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1785840812960: monitor v2 compress system and verify the two fixes hold.
-
-Where we left off (verified 2026-08-04 21:55 PT):
-- v1 shipped 2026-08-04 13:39 PT, had two bugs (wrong W + rule conflict)
-- v2 shipped 2026-08-04 21:54 PT with W auto-detect + escalation + rule 119 supremacy clause
-- Bug A fix: W no longer hardcoded to 128K; auto-detected from task's environment_details Y with K/M support; escalation when ctx > 0.75W (live example: 128K→1M at ctx=437K)
-- Bug B fix: rule 119 now supersedes rule 00 for the first micro-action of every turn (signal-file `ls` wins, then subagent dispatch)
-- Idea #22282 [executing]
-- Desktop doc: Cline Compress.MD updated with v2 changelog
-
-Open threads to drive next:
-1. #22282 [executing] - in a real Cline window with >70K context, verify the model's FIRST tool call is `ls /tmp/cline_compress_signal_TASK<id>.json`, then should_compress_now if check signal exists. Log observation.
-2. #22282 [executing] - after ~1 week, re-run /tmp/scan_compress_waste_v2.py over new sessions. Expected: deliberation blocks drop from 9.2% to <1%. Report actual.
-3. (human-only decision, no idea) - if different models serve different window sizes regularly, the escalation table (64K/128K/200K/1M) may need a 500K entry or whatever the 405B tier uses. Check with Ruben.
-
-Reference IDs:
-- Idea: #22282 [executing]
-- Files: ~/bin/cline_budget_watchdog.py, ~/Documents/Cline/Rules/119-mandatory-context-compress.md, ~/.config/emsu/budget_watchdog.json, ~/Library/LaunchAgents/com.emsu.cline-budget-watchdog.plist, Desktop/Cline Compress.MD
-- Log evidence: ~/Library/Logs/cline_budget.log (W_ESCALATE, SIGNAL, clear entries)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Quantify waste: ~880K tokens, 9.2% of thinking
-- [x] Build watchdog v2 with signal-file writer + launchd agent
-- [x] Update rule 119 with mechanical pre-turn signal check + reindex
-- [x] Create Desktop/Cline Compress.MD reference doc
-- [x] Ship v1 (2026-08-04 13:39)
-- [x] DEBUG: Identify root causes of v1 failure (Bug A: wrong W; Bug B: rule conflict)
-- [x] FIX Bug A: W auto-detect from environment_details + escalation (verified live: W_ESCALATE log entry)
-- [x] FIX Bug B: Rule 119 supremacy clause over rule 00 (reindexed, 312 rules)
-- [x] Update Desktop/Cline Compress.MD with v2 changelog
-- [x] Ship v2 completion
 </task_progress>
 </attempt_completion>
 ```
@@ -3621,58 +3735,5 @@ WINDOW DISPOSITION: CLOSE — AVP fixed, zombie windows cleared, one manual Dock
 - [x] Found and cleared root causes (Chrome/5353, Tailscale, wedged sudo, Bluetooth off)
 - [x] Final verification + completion
 </task_progress>
-</attempt_completion>
-```
-
-### `1785613730033` — 8/1/2026, 11:30:44 PM PT — 288 turns
-
-**Original task:**
-
-```
-#Julia/Claudia
-
-First do the ground truth here and see if it's not actually TP=2 and serving already, if not then proceed. If so, then need to do a 297 on why Agents would get it wrong and fix it durably.
-
-Be sure to consult bug library and the community / nvidia, etc.. as needed
-
-Pick up task dedicated Julia/Claudia TP=2 start window.
-
-Where we left off (verified 2026-08-01 10:10 PT):
-- Julia (spark-6ae6) SSH port 2205: ALIVE, up 17d, hostname spark-6ae6, Ray=3 procs, vLLM=0, GPU=0%
-- Claudia (spark-6d51) SSH port: UNKNOWN. Port 2206 routes to WOPR (not spark-6d51). Port 2208 refused. Port 22
-```
-
-**Ideas referenced:** #1130, #1131, #11316, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16323, #16338, #16345, #16346, #16448, #16449, #16452, #16604, #16674, #16676, #16730, #16778, #16802, #16803, #16839, #16851, #16863, #17246, #1744, #1765, #1779, #1781, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20877 [proposed], #20878, #20879, #20900, #20901 [approved], #20902 [approved], #20934, #20957, #20958, #20985 [deployed], #21038 [queued], #21043 [proposed], #2114, #2127, #47918, #6825, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-annotation (48h watch #20985).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Julia/Claudia TP=2 post-restart throughput verification + 48h stability watch
-
-Where we left off (verified 2026-08-01 23:29 PT):
-- Engine self-healed 23:22-23:23 PT (watchdog STRIKE 1/2 at 23:20 → unified rebuild → SERVING, PID 69566)
-- Live single-stream benchmark: 44.7 tok/s @ 128 tokens; aggregate 70+ tok/s was 3-way concurrency, not single-stream
-- Current state: 0 running/waiting requests, GPUs idle, model healthy, WOPR:11513 HTTP=200
-- Guardrails live: julia_tp2_check.sh + Rule 263a + registry do-not-disturb note
-
-Open threads to drive next:
-1. #20985 [deployed] — 48h stability watch continues; check watchdog log for STRIKE pattern at ~24h mark; investigate why HEALTY probe flapped at 23:20 (tolerance vs actual failure)
-2. #21038 [queued] — Cesar/Cato GLM ring registry correction + 6-node health verify (SEPARATE window only, Ruben's explicit instruction)
-3. #21043 [approved] — Rule 263a fleet-mutation preflight; verify next window's steering loads CLINERULE 263a-fleet-mutation-preflight.md from EMSU corpus
-
-Reference IDs:
-- Ideas: #20985 [deployed], #21038 [queued], #21043 [approved]
-- Build doc: /var/www/emtskills/docs/specs/julia_claudia_tp2_build_20260801.md
-- Reality check: /usr/local/bin/julia_tp2_check.sh (verified run 23:27 PT)
-- Bug library: /var/www/emtskills/docs/specs/bug_library_julia_claudia_ninja_path_watchdog_loop.md
-- SSH: Julia=WOPR:2205, Claudia=WOPR:2206, user rubenmajor
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```

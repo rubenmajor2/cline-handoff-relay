@@ -75,7 +75,12 @@ _CTX_RE = _re.compile(r"Context Window Usage:\s*[\d,]+\.?\d*\s*/\s*([\d,]+\.?\d*
 # Standard fleet windows (Cline/Anthropic/router tiers). Used for escalation
 # when detected Y is unavailable: if current ctx exceeds a window's capacity,
 # the real window must be the next tier up.
-KNOWN_WINDOWS = (1_000_000, 200_000, 128_000, 64_000)
+# Per rule 297 (verified against doorman LADDER 2026-08-05):
+#   32K  — local Ollama 7B/14B/32B, GLM-5.2-LOCAL (744B params, 32K ctx)
+#   128K — phi-4-mini, DeepSeek-V3-MESS, kimi-k3
+#   200K — Claude Sonnet/Opus-4.8/Fable-5, Gemini 2.5 Pro
+#   1M   — 120B class (Cesar/Cato/Artemis DeepSeek); 405B tier removed (stale, Ruben 2026-08-05)
+KNOWN_WINDOWS = (1_000_000, 200_000, 128_000, 32_000)
 
 def pick_window(estimated_cap: int) -> int:
     """Return the smallest KNOWN_WINDOWS >= estimated_cap, else max."""

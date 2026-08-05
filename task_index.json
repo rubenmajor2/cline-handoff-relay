@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-05T08:30:50.673Z",
+ "generated_at": "2026-08-05T13:39:36.382Z",
  "counts": {
-  "parsed": 9,
-  "reused": 463,
+  "parsed": 1,
+  "reused": 471,
   "failed": 0,
   "total": 472
  },
@@ -108724,13 +108724,13 @@
   },
   "1785776636014": {
    "task_id": "1785776636014",
-   "mtime": 1785918611261,
+   "mtime": 1785930736081,
    "created_at": "2026-08-03T17:03:56.014Z",
-   "last_modified": "2026-08-05T08:30:11.261Z",
-   "size_kb": 3088,
-   "turn_count": 1415,
+   "last_modified": "2026-08-05T11:52:16.081Z",
+   "size_kb": 3135,
+   "turn_count": 1436,
    "title": "Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up\n\nWhere we left off (verified 2026-08-03 09:46 PT):\n- Replay worker: 17/17 stuck items cleared, 17 rows landed in llm_replay_results (provider qwen14b_fast). Verified earlier this session.\n- Sensor grid: v_kaizen_all_findings live with 4 sources (executor 884, recipefire 1241, deadman 11, buglib 41). Verified executor is fresh.\n- Pipeline classifier: 127 rows classified via manual run at 7:33 AM; crons registered but kaizen_*.log files DON'T exist — automation delivery mechanism broken (log files never created)\n- #21710 REVERTED at 9:45 PT: deadman logger wire was REMOVED from AgentReplyPipeline. Root cause: logger INSERT",
-   "pickup_prompt": "ppended (cline_task_ledger.md)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up KAIZEN bug improvement follow-up — all 6 ideas shipped, session concluded.\n\nWhere we left off (verified 2026-08-05 01:20 PT):\n- #22189, #22244, #22245, #22726, #22776, #22807 all shipped/verified\n- communication_log (rows 56229-56242): all flagged (human_review_flagged=1, needs_resend=1)\n- watchdog_findings: 313 rows promoted to bug_library, promoter cron active (/etc/cron.d/watchdog_findings_promoter)\n- systems watchdog (cron_ai_systems_watchdog.php): persist call at line 1547, full run clean exit 0\n- scanner detection: guard at line 39 of communication_log_scanner_coverage.php\n\nReference IDs:\n- Ticket: #NC\n- Ideas filed: #22726, #22776, #22807 (all deployed)\n- Files touched: lib/communication_log_scanner_coverage.php, cron/cron_ai_systems_watchdog.php, cron/cron_watchdog_findings_promoter.php, lib/watchdog_findings_helper.php, lib/kaison_bug_library_maintenance.php\n- Cron live: /etc/cron.d/watchdog_findings_promoter\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "n KAIZEN, not just your phone.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task 22968 area — watchdog_sms_log dead code and KAIZEN session closure.\n(No numeric Cline task id known this window; topic covers the remaining open thread.)\n\nWhere we left off (verified 2026-08-05 04:21 AM PT):\n- All six KAIZEN ideas closed: #22189 [deployed], #22244 [completed], #22245 [deployed], #22726 [deployed], #22776 [deployed], #22807 [deployed]\n- watchdog_findings: 313 rows, all promoted=1, cron registered\n- #22726 learnable verified live (row 56230 ROW_FLAGGED, 14 rows needs_resend=1)\n- Ledger rows written and verified on disk (od hexdump confirmed 2026-08-04 21:26 PT row)\n\nOpen threads to drive next:\n1. #22968 [proposed] — Decision needed: wire watchdog_sms_log lib as SMS audit trail (it defines watchdog_sms_log_alert() but nothing calls it, table 0 rows) or retire it. Recommend retire, superseded by watchdog_findings bridge.\n2. #22807 [deployed] — Post-deploy: confirm next cron fires every 15 min and log at /var/log/watchdog_findings_promoter.log accumulates rows.\n3. #22726 [deployed] — Optionally backfill remaining communication_log rows with NULL sent_at beyond the 14 already flagged (full count query available).\n\nReference IDs:\n- Ideas filed: #22968 (this session), plus #22189, #22244, #22245, #22726, #22776, #22807\n- Files touched: lib/communication_log_scanner_coverage.php, lib/watchdog_findings_helper.php, lib/kaison_bug_library_maintenance.php, cron/cron_ai_systems_watchdog.php, cron/cron_ai_watchdog.php, cron/cron_ai_watchdog_ext.php, cron/cron_watchdog_findings_promoter.php, /etc/cron.d/watchdog_findings_promoter\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1549": null,
     "2061": null,
@@ -108822,7 +108822,9 @@
     "22726": "proposed",
     "22776": "proposed",
     "22807": "proposed",
+    "22858": null,
     "22871": null,
+    "22968": "proposed",
     "61286": null,
     "813772": null
    }
@@ -111921,13 +111923,13 @@
   },
   "1785907561329": {
    "task_id": "1785907561329",
-   "mtime": 1785918066149,
+   "mtime": 1785936965750,
    "created_at": "2026-08-05T05:26:01.329Z",
-   "last_modified": "2026-08-05T08:21:06.149Z",
-   "size_kb": 874,
-   "turn_count": 177,
+   "last_modified": "2026-08-05T13:36:05.750Z",
+   "size_kb": 951,
+   "turn_count": 206,
    "title": "For Argus in a situation like this, can we give a link right here in line to the actual idea or task where they can click it and open it up to see the status?? \n\nThat one was slow inline, so it is now background task #77. It runs within about 2 minutes and the answer posts right here in this chat when it lands (and in the Tasks panel). You do not need to resend it, nothing was lost. Go ahead with your next question.",
-   "pickup_prompt": null,
+   "pickup_prompt": " (this whole fix) is complete.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Argus task links + sidebar Tasks panel + #77/#79 double-queue loop fix.\n\nWhere we left off (verified 2026-08-05 6:31 AM PT):\n- All deployed files verified live: `routes/argus_task_status.php` (6779B), `routes/alltastic_api.php` (748578B, php -l clean; ARGUS_DEDUPE_V1 x2, ARGUS_WORKER_NO_SALVAGE_V1, 2 linkify sites), `routes/argus_download.php` (2 linkify sites, php -l clean), `extensions/argus-chrome/sidebar.html` (Tasks tab), `sidebar.js` (STATUS_URL + switchTab/refreshTasks), `background.js` (list/cancel/retry relays)\n- Extension zip rebuilt at `public/argus-extension.zip` (created Aug 5 01:21) — Ruben must reinstall the extension to see the Tasks tab\n- Idea #22850 filed [deployed]\n\nOpen threads to drive next:\n1. #22850 [deployed] — Reinstall verification: have Ruben reinstall the extension from the Argus page and confirm the Tasks tab + a clicked task link open `argus_task_status.php?task=N` correctly. Quick acceptance: send a slow query in the sidebar, see \"background task [#N]\" clickable, click it, status page shows the task.\n2. Update idea #22850 status via SQL if the MCP `update_idea_status` tool name is still wrong: `UPDATE orchestrator_ideas SET status='deployed', completed_at=NOW() WHERE id=22850` (I hit \"Tool update_idea_status not found\" — the actual tool name needs discovering from the orchestrator MCP).\n\nReference IDs:\n- Task: #77 (dupe root cause), #79 (second enqueue)\n- Idea: #22850 [deployed]\n- Files touched: routes/argus_task_status.php (new), routes/alltastic_api.php, routes/argus_download.php, extensions/argus-chrome/sidebar.html, sidebar.js, background.js, public/argus-extension.zip\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "4338": null,
     "16213": null,
@@ -111947,18 +111949,18 @@
     "21140": null,
     "22511": null,
     "22688": null,
-    "22850": null,
+    "22850": "deployed",
     "128203": null,
     "334155": null
    }
   },
   "1785908659354": {
    "task_id": "1785908659354",
-   "mtime": 1785918396508,
+   "mtime": 1785920448616,
    "created_at": "2026-08-05T05:44:19.354Z",
-   "last_modified": "2026-08-05T08:26:36.508Z",
-   "size_kb": 323,
-   "turn_count": 67,
+   "last_modified": "2026-08-05T09:00:48.616Z",
+   "size_kb": 326,
+   "turn_count": 69,
    "title": "Frankenstein-llm window seems stuck or crawling at snails speed (later more likely) dwith subagent calls. Has 0 tools called. Great initial burst on tokens now stalling (only on subagents_ -odd ->",
    "pickup_prompt": null,
    "ideas": {
@@ -112043,11 +112045,11 @@
   },
   "1785912519173": {
    "task_id": "1785912519173",
-   "mtime": 1785918640470,
+   "mtime": 1785922194742,
    "created_at": "2026-08-05T06:48:39.173Z",
-   "last_modified": "2026-08-05T08:30:40.470Z",
-   "size_kb": 658,
-   "turn_count": 386,
+   "last_modified": "2026-08-05T09:29:54.742Z",
+   "size_kb": 709,
+   "turn_count": 396,
    "title": "#GLM\n\nI have stalling new and old frankenstein-llm windows here in cline indicating GLM is stalled out\n\nWent 12 with 7/5, as you suggested. But the doctor pass says lane count was never the problem, and I want to show you why before you accept the change.\n\n## What I actually measured\n\n| | per-stream | aggregate |\n|---|---|---|\n| width 8 | 1.34 tok/s | 10.7 tok/s |\n| width 15 | **1.35 tok/s** | **20.2 tok/s** |\n\nWidening did not cost per-stream speed at all. Aggregate nearly doubled. By the numbers, 15 was working.\n\nAnd during your stall report: only **9 chat completions in 3 minutes** while all 15 lanes stayed full. That is not a request flood. Those are long-running streams, 22 distinct con",
    "pickup_prompt": null,
    "ideas": {
@@ -112055,7 +112057,7 @@
     "2091": null,
     "2094": null,
     "2112": null,
-    "2210": null,
+    "2210": "rejected",
     "12584": null,
     "12689": null,
     "13108": null,

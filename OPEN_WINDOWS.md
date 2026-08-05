@@ -6,14 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/5/2026, 1:30:52 AM PT | window: last 72h | 97 tasks | index total 472 (parsed 9, cached 463)
+Generated: 8/5/2026, 6:39:36 AM PT | window: last 72h | 97 tasks | index total 472 (parsed 1, cached 471)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785912519173` | 8/5/2026, 1:30:40 AM | 386 | 658KB | #GLM |
-| `1785776636014` | 8/5/2026, 1:30:11 AM | 1415 | 3088KB | Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up |
-| `1785908659354` | 8/5/2026, 1:26:36 AM | 67 | 323KB | Frankenstein-llm window seems stuck or crawling at snails speed (later more likely) dwith  |
-| `1785907561329` | 8/5/2026, 1:21:06 AM | 177 | 874KB | For Argus in a situation like this, can we give a link right here in line to the actual id |
+| `1785907561329` | 8/5/2026, 6:36:05 AM | 206 | 951KB | For Argus in a situation like this, can we give a link right here in line to the actual id |
+| `1785776636014` | 8/5/2026, 4:52:16 AM | 1436 | 3135KB | Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up |
+| `1785912519173` | 8/5/2026, 2:29:54 AM | 396 | 709KB | #GLM |
+| `1785908659354` | 8/5/2026, 2:00:48 AM | 69 | 326KB | Frankenstein-llm window seems stuck or crawling at snails speed (later more likely) dwith  |
 | `1785860776891` | 8/5/2026, 1:19:14 AM | 565 | 1410KB | #Argus |
 | `1785915008005` | 8/5/2026, 1:16:03 AM | 50 | 189KB | How many turns of glm 5.2 local have occurred in the last 15 minutes vs 120Bs if you dive  |
 | `1785915160150` | 8/5/2026, 1:15:09 AM | 42 | 132KB | How many turns of glm 5.2 local have occurred in the last 15 minutes vs 120Bs if you dive  |
@@ -112,7 +112,97 @@ Generated: 8/5/2026, 1:30:52 AM PT | window: last 72h | 97 tasks | index total 4
 
 ## Per-window detail
 
-### `1785912519173` — 8/5/2026, 1:30:40 AM PT — 386 turns
+### `1785907561329` — 8/5/2026, 6:36:05 AM PT — 206 turns
+
+**Original task:**
+
+```
+For Argus in a situation like this, can we give a link right here in line to the actual idea or task where they can click it and open it up to see the status?? 
+
+That one was slow inline, so it is now background task #77. It runs within about 2 minutes and the answer posts right here in this chat when it lands (and in the Tasks panel). You do not need to resend it, nothing was lost. Go ahead with your next question.
+```
+
+**Ideas referenced:** #128203, #16213, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19370, #21125, #21126, #21140, #22511, #22688, #22850 [deployed], #334155, #4338
+
+**Last PICKUP PROMPT:**
+
+```
+ (this whole fix) is complete.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus task links + sidebar Tasks panel + #77/#79 double-queue loop fix.
+
+Where we left off (verified 2026-08-05 6:31 AM PT):
+- All deployed files verified live: `routes/argus_task_status.php` (6779B), `routes/alltastic_api.php` (748578B, php -l clean; ARGUS_DEDUPE_V1 x2, ARGUS_WORKER_NO_SALVAGE_V1, 2 linkify sites), `routes/argus_download.php` (2 linkify sites, php -l clean), `extensions/argus-chrome/sidebar.html` (Tasks tab), `sidebar.js` (STATUS_URL + switchTab/refreshTasks), `background.js` (list/cancel/retry relays)
+- Extension zip rebuilt at `public/argus-extension.zip` (created Aug 5 01:21) — Ruben must reinstall the extension to see the Tasks tab
+- Idea #22850 filed [deployed]
+
+Open threads to drive next:
+1. #22850 [deployed] — Reinstall verification: have Ruben reinstall the extension from the Argus page and confirm the Tasks tab + a clicked task link open `argus_task_status.php?task=N` correctly. Quick acceptance: send a slow query in the sidebar, see "background task [#N]" clickable, click it, status page shows the task.
+2. Update idea #22850 status via SQL if the MCP `update_idea_status` tool name is still wrong: `UPDATE orchestrator_ideas SET status='deployed', completed_at=NOW() WHERE id=22850` (I hit "Tool update_idea_status not found" — the actual tool name needs discovering from the orchestrator MCP).
+
+Reference IDs:
+- Task: #77 (dupe root cause), #79 (second enqueue)
+- Idea: #22850 [deployed]
+- Files touched: routes/argus_task_status.php (new), routes/alltastic_api.php, routes/argus_download.php, extensions/argus-chrome/sidebar.html, sidebar.js, background.js, public/argus-extension.zip
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785776636014` — 8/5/2026, 4:52:16 AM PT — 1436 turns
+
+**Original task:**
+
+```
+Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up
+
+Where we left off (verified 2026-08-03 09:46 PT):
+- Replay worker: 17/17 stuck items cleared, 17 rows landed in llm_replay_results (provider qwen14b_fast). Verified earlier this session.
+- Sensor grid: v_kaizen_all_findings live with 4 sources (executor 884, recipefire 1241, deadman 11, buglib 41). Verified executor is fresh.
+- Pipeline classifier: 127 rows classified via manual run at 7:33 AM; crons registered but kaizen_*.log files DON'T exist — automation delivery mechanism broken (log files never created)
+- #21710 REV
+```
+
+**Ideas referenced:** #10060, #13440, #14158, #1549, #16207, #16523, #19511, #2061, #20890, #21432 [proposed], #21433 [ready_for_review], #21434 [ready_for_review], #21586 [approved], #21587 [ready_for_review], #21588 [approved], #21589, #21667 [executing], #21710 [reverted], #21712 [proposed], #22044, #22104 [proposed], #22105 [proposed], #22138 [proposed], #22158 [proposed], #22171 [approved], #22189 [proposed], #22244 [proposed], #22245 [approved], #22726 [proposed], #22776 [proposed], #22807 [proposed], #22858, #22871, #22968 [proposed], #2450, #2491, #2520, #3082, #4007, #4013, #4072, #5240, #5387, #5833, #6111, #61286, #6417, #6670, #6930, #7121, #7142, #7164, #7168, #7180, #7186, #7218, #7232, #7317, #7381, #7388, #7389, #7390, #7414, #7415, #7427, #7428, #7429, #7441, #7442, #7443, #7444, #7445, #7446, #7447, #7491, #7492, #7496, #7497, #7498, #7503, #7514, #7515, #7516, #7566, #7853, #7893, #7907, #7908, #7909, #813772, #9109, #9132, #9173, #9222, #9989
+
+**Last PICKUP PROMPT:**
+
+```
+n KAIZEN, not just your phone.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task 22968 area — watchdog_sms_log dead code and KAIZEN session closure.
+(No numeric Cline task id known this window; topic covers the remaining open thread.)
+
+Where we left off (verified 2026-08-05 04:21 AM PT):
+- All six KAIZEN ideas closed: #22189 [deployed], #22244 [completed], #22245 [deployed], #22726 [deployed], #22776 [deployed], #22807 [deployed]
+- watchdog_findings: 313 rows, all promoted=1, cron registered
+- #22726 learnable verified live (row 56230 ROW_FLAGGED, 14 rows needs_resend=1)
+- Ledger rows written and verified on disk (od hexdump confirmed 2026-08-04 21:26 PT row)
+
+Open threads to drive next:
+1. #22968 [proposed] — Decision needed: wire watchdog_sms_log lib as SMS audit trail (it defines watchdog_sms_log_alert() but nothing calls it, table 0 rows) or retire it. Recommend retire, superseded by watchdog_findings bridge.
+2. #22807 [deployed] — Post-deploy: confirm next cron fires every 15 min and log at /var/log/watchdog_findings_promoter.log accumulates rows.
+3. #22726 [deployed] — Optionally backfill remaining communication_log rows with NULL sent_at beyond the 14 already flagged (full count query available).
+
+Reference IDs:
+- Ideas filed: #22968 (this session), plus #22189, #22244, #22245, #22726, #22776, #22807
+- Files touched: lib/communication_log_scanner_coverage.php, lib/watchdog_findings_helper.php, lib/kaison_bug_library_maintenance.php, cron/cron_ai_systems_watchdog.php, cron/cron_ai_watchdog.php, cron/cron_ai_watchdog_ext.php, cron/cron_watchdog_findings_promoter.php, /etc/cron.d/watchdog_findings_promoter
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785912519173` — 8/5/2026, 2:29:54 AM PT — 396 turns
 
 **Original task:**
 
@@ -135,56 +225,11 @@ Widening did not cost per-stream speed at all. Aggregate nearly doubled. By the 
 And during your stall report: only **9 chat completions in 3 minutes** while al
 ```
 
-**Ideas referenced:** #12584, #12689, #13108, #16844, #17203, #17205, #18720, #19338, #19686, #1998, #2091, #2094, #2112, #2210, #22128 [executing], #22680 [proposed], #22681 [proposed], #22729 [proposed], #22752 [proposed], #22761 [proposed], #22765 [proposed], #22770 [proposed], #22784 [proposed], #22795 [proposed], #22796 [proposed], #22797 [proposed], #22808 [proposed], #22815 [proposed], #22818 [proposed], #22827 [proposed], #22856 [proposed], #22866 [proposed], #22890 [proposed], #22897 [proposed]
+**Ideas referenced:** #12584, #12689, #13108, #16844, #17203, #17205, #18720, #19338, #19686, #1998, #2091, #2094, #2112, #2210 [rejected], #22128 [executing], #22680 [proposed], #22681 [proposed], #22729 [proposed], #22752 [proposed], #22761 [proposed], #22765 [proposed], #22770 [proposed], #22784 [proposed], #22795 [proposed], #22796 [proposed], #22797 [proposed], #22808 [proposed], #22815 [proposed], #22818 [proposed], #22827 [proposed], #22856 [proposed], #22866 [proposed], #22890 [proposed], #22897 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785776636014` — 8/5/2026, 1:30:11 AM PT — 1415 turns
-
-**Original task:**
-
-```
-Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up
-
-Where we left off (verified 2026-08-03 09:46 PT):
-- Replay worker: 17/17 stuck items cleared, 17 rows landed in llm_replay_results (provider qwen14b_fast). Verified earlier this session.
-- Sensor grid: v_kaizen_all_findings live with 4 sources (executor 884, recipefire 1241, deadman 11, buglib 41). Verified executor is fresh.
-- Pipeline classifier: 127 rows classified via manual run at 7:33 AM; crons registered but kaizen_*.log files DON'T exist — automation delivery mechanism broken (log files never created)
-- #21710 REV
-```
-
-**Ideas referenced:** #10060, #13440, #14158, #1549, #16207, #16523, #19511, #2061, #20890, #21432 [proposed], #21433 [ready_for_review], #21434 [ready_for_review], #21586 [approved], #21587 [ready_for_review], #21588 [approved], #21589, #21667 [executing], #21710 [reverted], #21712 [proposed], #22044, #22104 [proposed], #22105 [proposed], #22138 [proposed], #22158 [proposed], #22171 [approved], #22189 [proposed], #22244 [proposed], #22245 [approved], #22726 [proposed], #22776 [proposed], #22807 [proposed], #22871, #2450, #2491, #2520, #3082, #4007, #4013, #4072, #5240, #5387, #5833, #6111, #61286, #6417, #6670, #6930, #7121, #7142, #7164, #7168, #7180, #7186, #7218, #7232, #7317, #7381, #7388, #7389, #7390, #7414, #7415, #7427, #7428, #7429, #7441, #7442, #7443, #7444, #7445, #7446, #7447, #7491, #7492, #7496, #7497, #7498, #7503, #7514, #7515, #7516, #7566, #7853, #7893, #7907, #7908, #7909, #813772, #9109, #9132, #9173, #9222, #9989
-
-**Last PICKUP PROMPT:**
-
-```
-ppended (cline_task_ledger.md)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up KAIZEN bug improvement follow-up — all 6 ideas shipped, session concluded.
-
-Where we left off (verified 2026-08-05 01:20 PT):
-- #22189, #22244, #22245, #22726, #22776, #22807 all shipped/verified
-- communication_log (rows 56229-56242): all flagged (human_review_flagged=1, needs_resend=1)
-- watchdog_findings: 313 rows promoted to bug_library, promoter cron active (/etc/cron.d/watchdog_findings_promoter)
-- systems watchdog (cron_ai_systems_watchdog.php): persist call at line 1547, full run clean exit 0
-- scanner detection: guard at line 39 of communication_log_scanner_coverage.php
-
-Reference IDs:
-- Ticket: #NC
-- Ideas filed: #22726, #22776, #22807 (all deployed)
-- Files touched: lib/communication_log_scanner_coverage.php, cron/cron_ai_systems_watchdog.php, cron/cron_watchdog_findings_promoter.php, lib/watchdog_findings_helper.php, lib/kaison_bug_library_maintenance.php
-- Cron live: /etc/cron.d/watchdog_findings_promoter
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785908659354` — 8/5/2026, 1:26:36 AM PT — 67 turns
+### `1785908659354` — 8/5/2026, 2:00:48 AM PT — 69 turns
 
 **Original task:**
 
@@ -193,20 +238,6 @@ Frankenstein-llm window seems stuck or crawling at snails speed (later more like
 ```
 
 **Ideas referenced:** #10740 [executing], #10741 [executing], #10742 [executing], #11953, #12299, #12672, #13202, #13832, #16163, #16588, #18720, #19653
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785907561329` — 8/5/2026, 1:21:06 AM PT — 177 turns
-
-**Original task:**
-
-```
-For Argus in a situation like this, can we give a link right here in line to the actual idea or task where they can click it and open it up to see the status?? 
-
-That one was slow inline, so it is now background task #77. It runs within about 2 minutes and the answer posts right here in this chat when it lands (and in the Tasks panel). You do not need to resend it, nothing was lost. Go ahead with your next question.
-```
-
-**Ideas referenced:** #128203, #16213, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19370, #21125, #21126, #21140, #22511, #22688, #22850, #334155, #4338
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 

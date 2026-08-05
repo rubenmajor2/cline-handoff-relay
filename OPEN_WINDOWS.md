@@ -6,12 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/4/2026, 4:22:14 PM PT | window: last 72h | 79 tasks | index total 449 (parsed 4, cached 445)
+Generated: 8/4/2026, 5:22:14 PM PT | window: last 72h | 79 tasks | index total 449 (parsed 3, cached 446)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785885342087` | 8/4/2026, 4:21:42 PM | 37 | 100KB | Your numbers appear to be to be far from my reality.  |
-| `1785885194894` | 8/4/2026, 4:21:32 PM | 42 | 241KB | What's going on today in Argus? |
+| `1785780445834` | 8/4/2026, 5:22:01 PM | 865 | 3779KB | Propose for Telephony with some features similar to /proctoring for the Admin role (in thi |
+| `1785776636014` | 8/4/2026, 5:21:52 PM | 653 | 1458KB | Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up |
+| `1785885342087` | 8/4/2026, 5:21:44 PM | 289 | 889KB | Your numbers appear to be to be far from my reality.  |
+| `1785885194894` | 8/4/2026, 4:48:42 PM | 92 | 354KB | What's going on today in Argus? |
 | `1785885221719` | 8/4/2026, 4:14:07 PM | 2 | 5KB | What's going on today in Argus? |
 | `1785858480786` | 8/4/2026, 4:01:49 PM | 596 | 2311KB | For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. P |
 | `1785858742320` | 8/4/2026, 3:28:10 PM | 310 | 2664KB | I dont' see here where the callback system is working properly? Seems like it is not. Can  |
@@ -54,10 +56,8 @@ Generated: 8/4/2026, 4:22:14 PM PT | window: last 72h | 79 tasks | index total 4
 | `1785812189858` | 8/3/2026, 10:53:20 PM | 328 | 2799KB | What is the slowest speed that frankenstein-llm will permit prior to quaranteining an indi |
 | `1785814799237` | 8/3/2026, 10:48:43 PM | 568 | 1006KB | ## GLM-5.2 TP=6 Migration — Session Complete (Context Compressed) |
 | `1785778409357` | 8/3/2026, 10:32:01 PM | 720 | 3745KB | What is this person actually upset about other than AI answering calls and emails? Can you |
-| `1785776636014` | 8/3/2026, 10:28:33 PM | 650 | 1454KB | Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up |
 | `1785809433242` | 8/3/2026, 8:36:39 PM | 462 | 860KB | # GLM-5.2 TP=6 Migration — FP8-MXFP4 Checkpoint Downloading (verified 2026-08-03 19:08 PT) |
 | `1785801179446` | 8/3/2026, 8:13:29 PM | 242 | 2253KB | #Argus |
-| `1785780445834` | 8/3/2026, 7:49:39 PM | 864 | 3778KB | Propose for Telephony with some features similar to /proctoring for the Admin role (in thi |
 | `1785779749179` | 8/3/2026, 7:22:54 PM | 622 | 2784KB | I need to make sure that the AI categoriztion of the info@emsuniversity.com inbox has stop |
 | `1785775905424` | 8/3/2026, 7:10:14 PM | 1138 | 2596KB | # GLM-5.2 Hexarchy Ring — Scientific Diagnosis & Stabilization Summary |
 | `1785807416292` | 8/3/2026, 6:58:46 PM | 52 | 146KB | where is the system for Cyra at? the "Telephony like" system? What is the link to get to t |
@@ -94,7 +94,98 @@ Generated: 8/4/2026, 4:22:14 PM PT | window: last 72h | 79 tasks | index total 4
 
 ## Per-window detail
 
-### `1785885342087` — 8/4/2026, 4:21:42 PM PT — 37 turns
+### `1785780445834` — 8/4/2026, 5:22:01 PM PT — 865 turns
+
+**Original task:**
+
+```
+Propose for Telephony with some features similar to /proctoring for the Admin role (in this case) to manage the ability for students to schedule a call back. The schedule a call back feature will require 24 hours before the person will be called back. This is an idea proposed to be integrated with CFAs to make it so admins can do call backs to students with issues. 
+
+We need to only permit 1 scheduled call backs per hour from 9AM to 9PM each day to start. 
+
+The admin could configure more often, but this could be used to help those students requiring additional help. I think CFAs can suggest to
+```
+
+**Ideas referenced:** #001018, #059669, #062017, #166534, #1976, #20340 [executing], #21010 [executing], #21011 [executing], #21038 [proposed], #21158 [executing], #21213 [executing], #21419 [executing], #21542 [rejected], #21546 [executing], #21763 [proposed], #21764 [proposed], #21765 [proposed], #21773, #21775 [proposed], #21777 [proposed], #22062 [proposed], #22203 [executing], #22204 [waiting], #22205 [waiting], #2563, #334155, #374151, #475569, #64748, #92400, #9733, #9734
+
+**Last PICKUP PROMPT:**
+
+```
+tion_log on successful booking
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #22062 — callback system book.php 500 fix + e2e verification.
+
+Where we left off (verified 2026-08-03 19:48 PT):
+- Per-CFA rate limit: working, cfa_rate_limit_hours=1 in DB
+- DB-level booking flow: PASS at 6:11pm (booking_id=1, audit_id=1, comms insert all OK)
+- book.php: 500 on POST (1/day gate logic works, db query works, but 500 response code)
+- Clean state: queue=0, bookings=1 fresh, audit=1, 168 available slots
+- Files: /var/www/emtskills/callback/book.php (current, php -l clean)
+
+Open threads to drive next:
+1. #22203 [executing] — Read book.php POST handler (lines ~55-90), add explicit http_response_code(200) after booking confirmation, and set 200 for the gate/error paths too. Test via curl POST with fresh email+slot.
+2. #22204 [waiting] — Full booking flow verification: submit fresh POST → verify callback_bookings row + callback_audit_log row + communication_log row + slot status flipped to "booked"
+3. #22205 [waiting] — Admin pages smoke test: browse callback/config.php, callback/admin/slots.php, callback/admin/booking_detail.php — verify they render without errors
+
+Reference IDs:
+- Ticket: #22062
+- Ideas filed: #21765, #21775, #22203, #22204, #22205
+- Files touched: /var/www/emtskills/callback/book.php, /var/www/emtskills/callback/api/suggest.php, /var/www/emtskills/routes/telephony_hub.php, /var/www/emtskills/callback/admin/, /var/www/emtskills/callback/api/
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785776636014` — 8/4/2026, 5:21:52 PM PT — 653 turns
+
+**Original task:**
+
+```
+Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up
+
+Where we left off (verified 2026-08-03 09:46 PT):
+- Replay worker: 17/17 stuck items cleared, 17 rows landed in llm_replay_results (provider qwen14b_fast). Verified earlier this session.
+- Sensor grid: v_kaizen_all_findings live with 4 sources (executor 884, recipefire 1241, deadman 11, buglib 41). Verified executor is fresh.
+- Pipeline classifier: 127 rows classified via manual run at 7:33 AM; crons registered but kaizen_*.log files DON'T exist — automation delivery mechanism broken (log files never created)
+- #21710 REV
+```
+
+**Ideas referenced:** #13440, #1549, #19511, #2061, #20890, #21432 [proposed], #21433 [ready_for_review], #21434 [ready_for_review], #21586 [approved], #21587 [ready_for_review], #21588 [approved], #21589, #21667 [executing], #21710 [reverted], #21712 [proposed], #22044, #22104 [proposed], #22105 [proposed], #22138 [proposed], #22158 [proposed], #22171 [approved], #22189 [proposed], #22245 [approved], #2450, #2491, #2520, #3082, #5240, #5833, #6930, #7121, #7164, #7168, #7186, #7232, #7853, #9109, #9132, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+═══════════════════════════════════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════════════════════════════════
+Pick up task #22245 — Wire SMS watchdog alerts into the KAIZEN pipeline so bugs that today only reach Ruben's phone also land in bug_library and v_kaizen_all_findings.
+
+Where we left off (verified 2026-08-03 22:27 PT):
+- #22189 [deployed]: kaison_bug_library_maintenance.php live in cron_kaison_bug_library_organizer.php; 14-day stale auto-resolve + symptom dedupe + audit log; state table has maint_resolved/maint_deduped columns; run 21 clean.
+- #22245 [proposed]: watchdog SMS alerts (cron_ai_watchdog.php + cron_ai_systems_watchdog.php) write no persistence; every alert is lost after the SMS. Idea filed + approved; build next.
+- #22104 [deployed]: retroactive scanner for communication_log running hourly (2000 rows/run); live guard wired into send_message.php.
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #22245 [proposed] — Build watchdog→KAIZEN bridge: add INSERT into a new watchdog_findings table (tool_name, issue_type, details, created_at) in cron_ai_watchdog.php at the SMS-send point, then extend the v_kaizen_all_findings view to union it. Verify with a synthetic watchdog alert.
+2. #22105 [deployed] — monitor pattern_label backfill (100/100 populated); confirm new INSERTs carry labels.
+
+Reference IDs:
+- Ideas shipped this session: #22104, #22105, #22138, #22158, #22189, #22245
+- Files touched: /var/www/emtskills/lib/kaison_bug_library_maintenance.php, cron/cron_kaison_bug_library_organizer.php, cron_communication_log_retroactive_scanner.php, tickets/send_message.php, lib/AIReasoningLeakScanner.php, lib/ai_ticket_agent_first_touch.php
+- Ledger: /var/www/emtskills/docs/cline_task_ledger.md (row appended 2026-08-03)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785885342087` — 8/4/2026, 5:21:44 PM PT — 289 turns
 
 **Original task:**
 
@@ -117,11 +208,11 @@ at 2.33 hops (matching the 120B)	165.2 tok/s	62.3x
 You we
 ```
 
-**Ideas referenced:** #12363, #2197, #22128 [executing], #22370 [proposed], #22371 [proposed], #22500 [awaiting_review], #22543 [proposed], #22563 [proposed], #22564 [proposed], #22565 [proposed], #22583 [proposed], #22584 [proposed], #22598 [proposed], #22599 [proposed], #22600 [proposed], #22601 [proposed], #22602 [proposed], #22612 [proposed], #22613 [proposed], #22657 [proposed], #22658 [proposed], #22659 [proposed], #22660 [rejected]
+**Ideas referenced:** #12363, #12430, #1281, #1309, #1314, #15333, #15367, #15652, #16648, #17913, #18135, #18357, #18395, #18442, #1850, #1876, #19079, #19325, #19338, #19435, #19458, #19490, #19491, #19494, #19503, #19504, #19509, #19629, #19643, #19661, #19670, #19684, #20350, #20408, #2043, #20517, #2076, #20903, #2113, #2197 [deployed], #2198, #2199, #22128 [executing], #22370 [proposed], #22371 [proposed], #22500 [awaiting_review], #22543 [proposed], #22563 [proposed], #22564 [proposed], #22565 [proposed], #22583 [proposed], #22584 [proposed], #22598 [proposed], #22599 [proposed], #22600 [proposed], #22601 [proposed], #22602 [proposed], #22612 [proposed], #22613 [proposed], #22657 [proposed], #22658 [proposed], #22659 [proposed], #22660 [rejected], #22665 [proposed], #22669 [proposed], #22674 [proposed], #22675 [proposed], #22680 [proposed], #22681 [proposed], #22682 [proposed], #22683 [proposed], #22684 [proposed], #22685 [proposed], #3541, #3953, #4536, #5029, #5034, #7925, #8281, #8321, #8563, #8598, #9222, #9235
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785885194894` — 8/4/2026, 4:21:32 PM PT — 42 turns
+### `1785885194894` — 8/4/2026, 4:48:42 PM PT — 92 turns
 
 **Original task:**
 
@@ -129,7 +220,7 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 What's going on today in Argus?
 ```
 
-**Ideas referenced:** #10003, #10005, #10182, #1130, #1131, #12301, #1241, #12425, #1248, #1249, #1252, #1258, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16213, #16263, #16338, #16448, #16452, #16588, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18745, #18770, #19370, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #21140, #21262, #2127, #2168, #22331, #22362, #22368, #22422, #22486, #22529, #22580, #274160, #30363, #69707, #7142, #7149, #8942, #9650, #9654, #9660, #9733, #9889
+**Ideas referenced:** #10003, #10005, #10182, #1130, #1131, #12301, #1241, #12425, #1248, #1249, #1252, #1258, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13202, #13235, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16213, #16263, #16338, #16448, #16452, #16588, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #1779, #1798, #1828, #18745, #18770, #19370, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #21140, #21262, #2127, #2168, #22331, #22362, #22368, #22422, #22486, #22529, #22580, #274160, #30363, #48031, #48140, #69707, #7142, #7149, #8942, #9650, #9654, #9660, #9733, #9889
 
 **Last PICKUP PROMPT:**
 
@@ -1517,50 +1608,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785776636014` — 8/3/2026, 10:28:33 PM PT — 650 turns
-
-**Original task:**
-
-```
-Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up
-
-Where we left off (verified 2026-08-03 09:46 PT):
-- Replay worker: 17/17 stuck items cleared, 17 rows landed in llm_replay_results (provider qwen14b_fast). Verified earlier this session.
-- Sensor grid: v_kaizen_all_findings live with 4 sources (executor 884, recipefire 1241, deadman 11, buglib 41). Verified executor is fresh.
-- Pipeline classifier: 127 rows classified via manual run at 7:33 AM; crons registered but kaizen_*.log files DON'T exist — automation delivery mechanism broken (log files never created)
-- #21710 REV
-```
-
-**Ideas referenced:** #13440, #1549, #19511, #2061, #20890, #21432 [proposed], #21433 [ready_for_review], #21434 [ready_for_review], #21586 [approved], #21587 [ready_for_review], #21588 [approved], #21589, #21667 [executing], #21710 [reverted], #21712 [proposed], #22044, #22104 [proposed], #22105 [proposed], #22138 [proposed], #22158 [proposed], #22171 [approved], #22189 [proposed], #22245 [approved], #2450, #2491, #2520, #3082, #5240, #5833, #6930, #7121, #7164, #7168, #7186, #7232, #7853, #9109, #9132, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-═══════════════════════════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════════════════════════
-Pick up task #22245 — Wire SMS watchdog alerts into the KAIZEN pipeline so bugs that today only reach Ruben's phone also land in bug_library and v_kaizen_all_findings.
-
-Where we left off (verified 2026-08-03 22:27 PT):
-- #22189 [deployed]: kaison_bug_library_maintenance.php live in cron_kaison_bug_library_organizer.php; 14-day stale auto-resolve + symptom dedupe + audit log; state table has maint_resolved/maint_deduped columns; run 21 clean.
-- #22245 [proposed]: watchdog SMS alerts (cron_ai_watchdog.php + cron_ai_systems_watchdog.php) write no persistence; every alert is lost after the SMS. Idea filed + approved; build next.
-- #22104 [deployed]: retroactive scanner for communication_log running hourly (2000 rows/run); live guard wired into send_message.php.
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #22245 [proposed] — Build watchdog→KAIZEN bridge: add INSERT into a new watchdog_findings table (tool_name, issue_type, details, created_at) in cron_ai_watchdog.php at the SMS-send point, then extend the v_kaizen_all_findings view to union it. Verify with a synthetic watchdog alert.
-2. #22105 [deployed] — monitor pattern_label backfill (100/100 populated); confirm new INSERTs carry labels.
-
-Reference IDs:
-- Ideas shipped this session: #22104, #22105, #22138, #22158, #22189, #22245
-- Files touched: /var/www/emtskills/lib/kaison_bug_library_maintenance.php, cron/cron_kaison_bug_library_organizer.php, cron_communication_log_retroactive_scanner.php, tickets/send_message.php, lib/AIReasoningLeakScanner.php, lib/ai_ticket_agent_first_touch.php
-- Ledger: /var/www/emtskills/docs/cline_task_ledger.md (row appended 2026-08-03)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
 ### `1785809433242` — 8/3/2026, 8:36:39 PM PT — 462 turns
 
 **Original task:**
@@ -1662,53 +1709,6 @@ Reference IDs:
 - Ideas filed: #22219 (Argus slowness), #22220 (PD 80% access)
 - DB row: report_access_control id=21532
 - Files touched: removed `/etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzzzzzzzzzzz-glm-first-restore.conf`, added `/etc/systemd/system/frankenstein-tools.service.d/zzzzz-glm-maintenance.conf`
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785780445834` — 8/3/2026, 7:49:39 PM PT — 864 turns
-
-**Original task:**
-
-```
-Propose for Telephony with some features similar to /proctoring for the Admin role (in this case) to manage the ability for students to schedule a call back. The schedule a call back feature will require 24 hours before the person will be called back. This is an idea proposed to be integrated with CFAs to make it so admins can do call backs to students with issues. 
-
-We need to only permit 1 scheduled call backs per hour from 9AM to 9PM each day to start. 
-
-The admin could configure more often, but this could be used to help those students requiring additional help. I think CFAs can suggest to
-```
-
-**Ideas referenced:** #001018, #059669, #062017, #166534, #1976, #20340 [executing], #21010 [executing], #21011 [executing], #21038 [proposed], #21158 [executing], #21213 [executing], #21419 [executing], #21542 [rejected], #21546 [executing], #21763 [proposed], #21764 [proposed], #21765 [proposed], #21773, #21775 [proposed], #21777 [proposed], #22062 [proposed], #22203 [executing], #22204 [waiting], #22205 [waiting], #2563, #334155, #374151, #475569, #64748, #92400, #9733, #9734
-
-**Last PICKUP PROMPT:**
-
-```
-tion_log on successful booking
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #22062 — callback system book.php 500 fix + e2e verification.
-
-Where we left off (verified 2026-08-03 19:48 PT):
-- Per-CFA rate limit: working, cfa_rate_limit_hours=1 in DB
-- DB-level booking flow: PASS at 6:11pm (booking_id=1, audit_id=1, comms insert all OK)
-- book.php: 500 on POST (1/day gate logic works, db query works, but 500 response code)
-- Clean state: queue=0, bookings=1 fresh, audit=1, 168 available slots
-- Files: /var/www/emtskills/callback/book.php (current, php -l clean)
-
-Open threads to drive next:
-1. #22203 [executing] — Read book.php POST handler (lines ~55-90), add explicit http_response_code(200) after booking confirmation, and set 200 for the gate/error paths too. Test via curl POST with fresh email+slot.
-2. #22204 [waiting] — Full booking flow verification: submit fresh POST → verify callback_bookings row + callback_audit_log row + communication_log row + slot status flipped to "booked"
-3. #22205 [waiting] — Admin pages smoke test: browse callback/config.php, callback/admin/slots.php, callback/admin/booking_detail.php — verify they render without errors
-
-Reference IDs:
-- Ticket: #22062
-- Ideas filed: #21765, #21775, #22203, #22204, #22205
-- Files touched: /var/www/emtskills/callback/book.php, /var/www/emtskills/callback/api/suggest.php, /var/www/emtskills/routes/telephony_hub.php, /var/www/emtskills/callback/admin/, /var/www/emtskills/callback/api/
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════

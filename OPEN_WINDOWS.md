@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/5/2026, 8:39:36 AM PT | window: last 72h | 103 tasks | index total 478 (parsed 3, cached 475)
+Generated: 8/5/2026, 9:39:37 AM PT | window: last 72h | 103 tasks | index total 478 (parsed 0, cached 478)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785940995783` | 8/5/2026, 8:39:20 AM | 141 | 269KB | Resolve this issue: |
+| `1785940995783` | 8/5/2026, 8:56:21 AM | 170 | 354KB | Resolve this issue: |
 | `1785937503831` | 8/5/2026, 8:33:47 AM | 246 | 1250KB | Can you tell me how many turns have taken place for each model in the last 5 hours by mode |
 | `1785937352780` | 8/5/2026, 8:23:01 AM | 226 | 1369KB | A bunch of my windows closed out here in Cline all at once. For these windows can you go a |
 | `1785939083137` | 8/5/2026, 8:06:46 AM | 416 | 603KB | https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since  |
@@ -118,7 +118,7 @@ Generated: 8/5/2026, 8:39:36 AM PT | window: last 72h | 103 tasks | index total 
 
 ## Per-window detail
 
-### `1785940995783` — 8/5/2026, 8:39:20 AM PT — 141 turns
+### `1785940995783` — 8/5/2026, 8:56:21 AM PT — 170 turns
 
 **Original task:**
 
@@ -130,9 +130,35 @@ Resolve this issue:
 -
 ```
 
-**Ideas referenced:** #2212, #23027, #23028 [executing], #23029, #23030, #23031, #23036, #23038, #23039
+**Ideas referenced:** #2212, #23027, #23028 [executing], #23029, #23030, #23031, #23036, #23038, #23039, #23077 [executing], #23078 [executing]
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+ added, .bak-20260805-sqliwaf)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #23028 [executing] - SQLi attack on wordpress_2 blocked, WAF deployed, payment and registration sites verified safe
+
+Where we left off (verified 2026-08-05 08:48 PT):
+- #23028 [executing] - WAF deployed and verified on both emsuniversity.com and emtrefresher.com; 403 on SQLi payloads, 200 on normal traffic including checkout/cart/shop/author archives/ER registration sites
+- #23077 [proposed] - follow-up to block 34 attacker IPs via fail2ban/iptables
+- #23078 [proposed] - follow-up to identify and patch the vulnerable WP plugin/theme query builder
+
+Open threads to drive next:
+1. #23077 [proposed] - Block SQLi attacker IPs (34 unique, top 136.65.189.187 and GCP range). WAF already deployed but IP-level blocking prevents future pattern mutations.
+2. #23078 [proposed] - Identify and patch the vulnerable WP plugin/theme code building post_author NOT IN(...) clauses in wordpress_2. WAF is edge defense; code-level fix needed for permanence.
+
+Reference IDs:
+- Ideas filed: #23077 [proposed], #23078 [proposed]
+- Files touched: /etc/nginx/emsu-sqli-waf.conf, /var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf, /var/www/vhosts/system/emtrefresher.com/conf/nginx.conf
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
 
 ### `1785937503831` — 8/5/2026, 8:33:47 AM PT — 246 turns
 

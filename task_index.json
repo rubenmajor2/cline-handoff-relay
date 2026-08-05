@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-05T05:22:17.259Z",
+ "generated_at": "2026-08-05T06:22:17.735Z",
  "counts": {
-  "parsed": 8,
-  "reused": 456,
+  "parsed": 9,
+  "reused": 459,
   "failed": 0,
-  "total": 464
+  "total": 468
  },
  "tasks": {
   "1784522296714": {
@@ -108724,13 +108724,13 @@
   },
   "1785776636014": {
    "task_id": "1785776636014",
-   "mtime": 1785907320596,
+   "mtime": 1785910857621,
    "created_at": "2026-08-03T17:03:56.014Z",
-   "last_modified": "2026-08-05T05:22:00.596Z",
-   "size_kb": 2622,
-   "turn_count": 1223,
+   "last_modified": "2026-08-05T06:20:57.621Z",
+   "size_kb": 2817,
+   "turn_count": 1303,
    "title": "Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up\n\nWhere we left off (verified 2026-08-03 09:46 PT):\n- Replay worker: 17/17 stuck items cleared, 17 rows landed in llm_replay_results (provider qwen14b_fast). Verified earlier this session.\n- Sensor grid: v_kaizen_all_findings live with 4 sources (executor 884, recipefire 1241, deadman 11, buglib 41). Verified executor is fresh.\n- Pipeline classifier: 127 rows classified via manual run at 7:33 AM; crons registered but kaizen_*.log files DON'T exist — automation delivery mechanism broken (log files never created)\n- #21710 REVERTED at 9:45 PT: deadman logger wire was REMOVED from AgentReplyPipeline. Root cause: logger INSERT",
-   "pickup_prompt": "ow id=64\n- [ ] #22807: Verify + update idea → deployed\n- [ ] Final wrap-up with PICKUP PROMPT\n</task_progress>\n</use_mcp_tool>",
+   "pickup_prompt": "ending SMS without persistence\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up KAIZEN bug improvement session — next iteration from 2026-08-04 22:43 PT wrap-up.\n\nWhere we left off (verified 2026-08-04 22:43 PT):\n- All 5 shipped: #22189, #22244, #22245, #22776, #22807 [all deployed or completed]\n- 313 watchdog findings promoted to bug_library, 5 KAIZEN crons heartbeating\n- Bug library has watchdog-sourced symptoms flowing in realtime\n\nOpen threads to drive next:\n1. #22726 [proposed] — Build Kaizen learnable: auto-flag NULL/zero sent_at as undelivered in communication_log_scanner_coverage.php\n2. #22807 [deployed] — Monitor cron_watchdog_findings_promoter: verify /var/log/watchdog_findings_promoter.log, confirm no new findings pile up unpromoted after 24h\n3. #22189 [deployed] — Monitor maintenance results: check kaison_bug_library_maintenance_log for resolved/deduped counts after 72h runtime\n\nReference IDs:\n- Ideas: #22189, #22244, #22245, #22726, #22776, #22807\n- Files touched: lib/kaison_bug_library_maintenance.php, lib/watchdog_findings_helper.php, cron/cron_ai_watchdog.php, cron/cron_ai_systems_watchdog.php, cron/cron_watchdog_findings_promoter.php, cron/cron_ai_watchdog_ext.php\n- Watchdog state: /var/www/emtskills/.state/ai_systems_watchdog.json\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1549": null,
     "2061": null,
@@ -109142,13 +109142,13 @@
   },
   "1785781386836": {
    "task_id": "1785781386836",
-   "mtime": 1785907327906,
+   "mtime": 1785909514922,
    "created_at": "2026-08-03T18:23:06.836Z",
-   "last_modified": "2026-08-05T05:22:07.906Z",
-   "size_kb": 3341,
-   "turn_count": 1035,
+   "last_modified": "2026-08-05T05:58:34.922Z",
+   "size_kb": 3473,
+   "turn_count": 1104,
    "title": "Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/ \n\nHelp me with this",
-   "pickup_prompt": " + apply cap raise\n- [ ] #22202: Investigate Jon's 10 tickets\n- [ ] Report with PICKUP PROMPT\n</task_progress>\n</use_mcp_tool>",
+   "pickup_prompt": ", not 3. This closes the loop.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #26105 — Ticket queue cleanup phase 2: close the endless-loop for 34 AI-replied tickets\n\nWhere we left off (verified 2026-08-04 22:53 PT):\n- 442 active, 34 [Email AI-replied] in Open that agent touches but doesn't resolve\n- Agent runs every 5 min, hits 36 \"waiting\" decisions per run\n- Dead-end auto-resolve at count 3 works but these aren't reaching count 3 — AI keeps trying new approaches\n\nOpen threads to drive next:\n1. #22250 — Fix dead-end auto-resolve: for [Email AI-replied], resolve at dead-end count 1 not 3 (in cron_ai_ticket_agent.php line 1363-1385)\n2. #22200 — Deep-sweep already reclaimed AI-replied from humans — verify 0 on Jon/Vicky/Ruben\n3. #22201 — Resolution-throughput gap: verify first-touch cap 30→60 remains, monitor 103 resolved/day target\n\nReference IDs:\n- Ticket: #26105 (this task)\n- Ideas filed: #22250, #22200, #22201, #22260, #22261, #22262\n- Files touched: /var/www/emtskills/cron/cron_ai_ticket_agent.php, /var/www/emtskills/cron/cron_deep_sweep_ai_replied.php, /var/www/emtskills/cron/cron_ai_replied_stale_resolve.php, /var/www/emtskills/cron/cron_agent_36h_sla.php, /var/www/emtskills/lib/ai_ticket_agent.php, /var/www/emtskills/lib/MailerUrlAllowlist.php\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════",
    "ideas": {
     "1878": null,
     "1892": null,
@@ -109198,6 +109198,7 @@
     "13943": null,
     "14024": null,
     "14323": null,
+    "14743": null,
     "15417": null,
     "17712": null,
     "18135": null,
@@ -109220,6 +109221,7 @@
     "22215": "proposed",
     "22245": "proposed",
     "22250": "deployed",
+    "22256": null,
     "22260": "proposed",
     "22261": "proposed",
     "22262": "proposed",
@@ -109309,13 +109311,13 @@
   },
   "1785782909425": {
    "task_id": "1785782909425",
-   "mtime": 1785907274367,
+   "mtime": 1785910915499,
    "created_at": "2026-08-03T18:48:29.425Z",
-   "last_modified": "2026-08-05T05:21:14.367Z",
-   "size_kb": 6164,
-   "turn_count": 1173,
+   "last_modified": "2026-08-05T06:21:55.499Z",
+   "size_kb": 6315,
+   "turn_count": 1231,
    "title": "Why am i not seeing clustered ideas here in cline?",
-   "pickup_prompt": "al drag/group in the admin UI.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up the cluster dedup work — the cluster tools are live on the server, this session needs a reconnect to see them.\n\nWhere we left off (verified 2026-08-04 10:11 PM PT):\n- Cluster tools deployed: `registerClusterTools(server)` now called in main(), all 3 tools live (28 total), HTTP probe confirmed\n- `approve_cluster` tested on cluster #22 (Telephony) — approved 31 ideas with `approved_by='cluster_bulk'`\n- Root cause of \"not found\": MCP session cached old 25-tool registry; fresh window gets 28 tools\n- Build file: `/var/www/emtskills/mcp-servers/ruben-orchestrator/build/index.js` (1532 lines, `CLUSTERED PROJECTS` block + all 3 tools + approve SQL fix)\n- Cron: `15 4 * * * php /var/www/emtskills/scripts/cluster_ideas_pipeline.php`\n\nOpen threads to drive next:\n1. #22771 [proposed] — Add dedup to RCA retrain generator (`/var/www/emtskills/lib/ArgusIdeaEta.php`) and Fleet backtest generator — `INSERT ... ON DUPLICATE KEY UPDATE counter=counter+1` instead of fresh INSERT per identical incident\n2. #22733 [proposed] — After dedup, rewire `list_ideas` CLUSTERED PROJECTS block to show dedup'd cluster counts\n3. #22329 [proposed] — Wire `visual_canvas_clusters` to `/admin/ideas?page=canvas` admin UI\n\nReference IDs:\n- Ticket: original cluster visibility task\n- Ideas filed: #22771, #22733, #22329, #22251, #22194\n- Files touched: `/var/www/emtskills/mcp-servers/ruben-orchestrator/src/index.ts` (final_index.ts), `/var/www/emtskills/scripts/cluster_ideas_pipeline.php`, `/var/www/emtskills/lib/ArgusIdeaEta.php`\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════",
+   "pickup_prompt": "load (#22771, #22733, #22329):\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #22839 + #22840 — Dedup idea generators + wire canvas clusters via rule 267 offload.\n\nWhere we left off (verified 2026-08-04 22:47 PT):\n- 933 ideas clustered across 10 visual_canvas_clusters in DB\n- 3 of 10 clusters are 79% duplicates: RCA retrain (331 ideas, 2 unique titles), Moodle access (263, 41 titles), Fleet backtest (140, 7 titles)\n- Source generators: ArgusIdeaEta.php (argus_terminal), fleet_backtest_health.php (fleet_backtest_health_watchdog), cron_orchestrator_triage.php\n- CLUSTERED PROJECTS block is compiled and served — list_ideas includes it\n- cluster_ideas_pipeline.php @ /var/www/emtskills/scripts/ runs daily at 4:15 AM via cron\n- build/index.js has registerClusterTools called from main() (verified — 28 tools total, all 3 cluster tools True)\n\nOpen threads to drive next:\n1. #22771 [executing via rule-267] — Pull the 3 generator files locally, add dedup: SELECT existing row WHERE title/canvas_cluster_id matches → UPDATE counters instead of INSERT. Deploy, test with a manual pipeline run, verify counts in DB.\n2. #22839 [executing via rule-267] — Offloaded: #22771 dispatch with generator file list, dedup logic spec, reconciliation instruction\n3. #22840 [executing via rule-267] — Offloaded: #22733 (rewire CLUSTERED PROJECTS block post-dedup) + #22329 (wire canvas page)\n4. #22329 [proposed] — Visual canvas wiring: files at /var/www/emtskills/modules/orchestrator_ideas/view.php, /admin/ideas?page=canvas. Pull canvas data from visual_canvas_clusters table, render grouped ideas with drag/approve controls.\n\nReference IDs:\n- Ideas filed: #22839 (rule-267 dispatch dedup), #22840 (rule-267 dispatch canvas block + page)\n- Tickets: #22771 (dedup), #22733 (CLUSTERED PROJECTS block post-dedup), #22329 (canvas page)\n- Files touched: /var/www/emtskills/mcp-servers/ruben-orchestrator/src/index.ts (patched, CLUSTERED PROJECTS + registerClusterTools call), build/index.js (deployed, 28 tools), /var/www/emtskills/mcp-servers/mcp-http-bridge/bridge.js (restored baseline)\n- Generator files: /var/www/emtskills/lib/ArgusIdeaEta.php, /var/www/emtskills/lib/fleet_backtest_health.php, /var/www/emtskills/cron/cron_orchestrator_triage.php\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1194": null,
     "1845": null,
@@ -109323,8 +109325,10 @@
     "2322": null,
     "2490": null,
     "2686": null,
+    "7427": null,
     "9731": null,
     "10739": "proposed",
+    "11709": null,
     "12459": null,
     "16523": null,
     "16648": null,
@@ -109386,14 +109390,21 @@
     "22329": "proposed",
     "22733": "proposed",
     "22771": "proposed",
+    "22839": null,
+    "22840": null,
     "30363": null,
     "55522": null,
     "55557": null,
     "56199": null,
+    "128161": null,
+    "128269": null,
     "177796": null,
     "178456": null,
     "182471": null,
+    "334155": null,
     "401383": null,
+    "475569": null,
+    "718096": null,
     "815007": null,
     "886191": null
    }
@@ -110650,13 +110661,13 @@
   },
   "1785860776891": {
    "task_id": "1785860776891",
-   "mtime": 1785907258029,
+   "mtime": 1785910597925,
    "created_at": "2026-08-04T16:26:16.891Z",
-   "last_modified": "2026-08-05T05:20:58.029Z",
-   "size_kb": 1111,
-   "turn_count": 454,
+   "last_modified": "2026-08-05T06:16:37.925Z",
+   "size_kb": 1346,
+   "turn_count": 545,
    "title": "#Argus\n\nWhat other Argus improvements can we make? \n\nAlso do not inject Anthropic\n\nRule 297 RCA done at the source, the never-lose guarantee is now server-side, the queue was tested live end to end (and the test itself caught and survived two real failures), the learner was evaluated and the verdict is bad, and every student from your Argus windows now has a named owner. Details below.\n\n## RCA on the flat lie (rule 297, classified: REAL BUG)\n\nSource: `alltastic_api.php:12534`, inside `callClaude()`, the retry-exhausted branch. It returned the string \"your request is queued and I am continuing in the background. Nothing was lost\" and then simply returned. No row written anywhere, no worker in",
-   "pickup_prompt": "a numbers in the pickup below.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #22814 [approved] — Build Argus auto-approval pipeline: five pieces, then dedup cron + learner rebuild + executor repair.\n\nWhere we left off (verified 2026-08-04 22:16 PT):\n\nSHIPPED THIS SESSION:\n- FPM reload storm: root cause found (291 reloads/day, process_control_timeout=0 killed in-flight Argus runs), fixed (120s), durable by 3 layers (guard cooldown 90s→300s, self-healing sentinel cron deployed with daily assert+self-heal+alert at /etc/cron.d/fpm-reload-sentinel). 5 offloaded tasks requeued. 5 dup auto-ideas (#22552, #22611, #22747, #22748, #22757) superseded. Remaining hardening inside #22788 [executing].\n- Idea audit: 486 ideas filed 2026-08-04. 124 proposed are system noise (79% from 3 auto-clusters). 52 Argus-filed pending are real backlog. Zero Argus user ever sees \"proposed\" — code verified at alltastic_api.php:1425 status='pending'. User-facing gap is 52 unreviewed.\n- Ruben auto-approval pipeline designed and filed: #22814 [approved], 70% confidence, 2-day human veto gate, 2x daily per-role email (06:00/18:00 PT), idea_approve.php drafted at /tmp/idea_approve.php, argus_my_ideas surfacing needed.\n- 4 ideas approved per Ruben directive: #22789 [approved] (invoice apply, ExecAdmin/Admin/ITAdmin), #22711 [approved] (cert verification, Exec Admin lane), #22769 [approved] (site-shift, CFrench ExecAdmin carte blanche), #18777 [approved] (MasterAdmin browser-nav, 8 dupes merged_into).\n\nREADY TO BUILD (#22814):\n1. confidence_roles table (role, allowed_domains, confidence_threshold) + seed data (ExecAdmin: invoice_matching=90, cert_verification=85; Admin: ticket_bulk_ops=80, student_records=75; CS: bug_reports=85)\n2. Classifier hook in alltastic_api.php lines 1425/1474: runs at INSERT time, queries confidence_roles, produces score+reason, writes auto_approved_at + gate_until if >= threshold\n3. auto_approved_at + gate_until columns on orchestrator_ideas (if missing)\n4. cron_idea_approval_email.php deploy + first manual run tonight (send now per Ruben)\n5. idea_approve.php: validate, deploy to /var/www/emtskills/routes/, lint, live test against one real id\n6. argus_my_ideas surfacing: prompt footer + system-prompt directive at alltastic_api.php\n\nOTHER OPEN THREADS:\n- #22771 [approved]: dedup cron (DEADMAN RCA + fleet backtest A1/A2/A3 = 79% noise)\n- #22501 [approved]: argus_feedback table (idea_approve writes it, coordinate learner rebuild)\n- #22788 [executing]: sentinel at 03:20, check reload-count vs today's 292 baseline\n- #22513 [executing]: executor sls_repair, check progress, hand-ship per GATE C\n- Notify Bowen exams reopened (human comms, no idea)\n- Joshua tunnel failover publickey failure (noted in #22788 [executing])\n\nReference IDs:\n- Ideas filed this session: #22814 [approved], #22806 [proposed], #22788 [approved]\n- Approved by Ruben: #22789 [approved], #22711 [approved], #22769 [approved], #18777 [approved]\n- Merged: #19098 [merged], #19099 [merged], #19624 [merged], #19641 [merged], #19731 [merged], #19975 [merged], #19995 [merged], #20233 [merged]\n- Rejected: #22552 [rejected], #22611 [rejected], #22747 [rejected], #22748 [rejected], #22757 [rejected]\n- Carried: #22771 [approved], #22501 [approved], #22513 [executing], #22512 [deployed], #22511 [deployed], #22688 [executing], #22687 [executing], #22489 [executing], #22488 [executing], #22490 [executing], #22377 [executing]\n- Files: /etc/php/8.3/fpm/php-fpm.conf, /usr",
+   "pickup_prompt": "tive with no naming conflicts.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #22814 [approved] — Argus idea pipeline: auto-approval engine, 2x daily per-role approval email, idea_approve.php endpoint, rule-29 adjacency classifier, Joshua tunnel access normalization.\n\nWhere we left off (verified 2026-08-04 23:15 PT):\n- Joshua tunnel: NOT an outage. Wrong-user SSH attempt on my part. Canonical access path verified: emsusrvr2@10.100.0.4:2222 (MDM portal), reverse tunnel 127.0.0.1:2224 roundtrip OK. Joshua uptime 13 days. Pubkey present. Service active.\n- Bowen CFA email: SENT via localSendStudentEmail (canonical Argus route, logged, Mailer::sendEmailWithAttachments). Student 26419BC-30 William Bowen, Block Exam 5 + Final Exam reopened. No standalone MCP tool; the PHP route is the real channel.\n- Rule 298: already exists. My wording was wrong, not the number. Rule 297 RCA: I guessed SSH access instead of consulting MDM portal first; corrected, access method now documented.\n- Auto-approval pipeline #22814 [approved]: spec complete, build pending (confidence_roles table, classifier hook, gate columns, cron_idea_approval_email.php 06:00/18:00 PT + first manual run, idea_approve.php deploy + live test, argus_my_ideas surfacing).\n\nOpen threads to drive next:\n1. #22814 [approved]: build the five pipeline pieces, including deploy + lint + live-test of idea_approve.php (draft at /tmp/idea_approve.php re-verified this session).\n2. #22771 [approved]: dedup cron for DEADMAN RCA + fleet backtest A1/A2/A3 clusters (79% of proposed noise).\n3. #22501 [approved]: argus_feedback rows being written by idea_approve endpoint; coordinate learner rebuild after first email run.\n4. #22788 [executing]: fleet-reload sentinel check at next 03:20 PT run; verify reload count dropped vs 292/day baseline.\n5. #22513 [executing]: executor sls_repair check progress, hand-ship per GATE C.\n6. Tunnel access note: document MDM portal as canonical SSH resolver (one-liner in emsu-fleet-finisher.sh header or argus access docs) so future agents do not blind-SSH.\n\nReference IDs:\n- Ideas filed this session: #22814 [approved], #22806 [proposed]\n- Approved by Ruben: #22789 [approved], #22711 [approved], #22769 [approved], #18777 [approved], #22771 [approved]\n- Merged: #19098, #19099, #19624, #19641, #19731, #19975, #19995, #20233 → into #18777 [approved]\n- Carried: #22501 [approved], #22788 [executing], #22513 [executing]\n- Files: /var/www/emtskills/routes/mdm_portal.php (line ~752 Joshua card), /var/www/emtskills/routes/alltastic_api.php (localSendStudentEmail line 9748), /tmp/emstu_email_bowen.php (self-deleted after successful send), /home/emsuserver/.ssh/authorized_keys\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════</result>\n<task_progress>\n- [x] Tunnel RCA: NOT an outage, wrong-user SSH attempt; MDM portal is canonical access path\n- [x] Joshua verified: pubkey present, service active, port 2224 roundtrip OK, uptime 13 days\n- [x] Bowen CFA email SENT via canonical localSendStudentEmail route\n- [x] Rule 298 confirmed to exist; no duplicate proposal\n- [x] Rule 297 RCA: blind SSH from memory instead of MDM catalog first\n- [x] Shipped\n</task_progress>\n</attempt_completion>",
    "ideas": {
     "1758": null,
     "9086": null,
@@ -110665,6 +110676,7 @@
     "9339": null,
     "9343": null,
     "12661": null,
+    "13453": null,
     "15367": null,
     "16608": null,
     "17580": null,
@@ -110793,7 +110805,9 @@
     "22796": "proposed",
     "22797": "proposed",
     "22806": "proposed",
-    "22814": "approved"
+    "22814": "approved",
+    "127891": null,
+    "128274": null
    }
   },
   "1785861156554": {
@@ -111184,13 +111198,13 @@
   },
   "1785881207296": {
    "task_id": "1785881207296",
-   "mtime": 1785907286606,
+   "mtime": 1785907786132,
    "created_at": "2026-08-04T22:06:47.296Z",
-   "last_modified": "2026-08-05T05:21:26.606Z",
-   "size_kb": 620,
-   "turn_count": 113,
+   "last_modified": "2026-08-05T05:29:46.132Z",
+   "size_kb": 719,
+   "turn_count": 132,
    "title": "Can you look into this and advise if there's an isseu?",
-   "pickup_prompt": "Arizona schedule page is fine.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #22638 [proposed] — Arizona EMT Peoria Boot Camp check\n\nWhere we left off (verified 2026-08-04 21:22 PT):\n- Verified arizonaemt.com/classschedule/ is dynamic PHP (`class-schedule-dynamic.php`), not static WP\n- WP post_content (ID=304, last mod 2025-12-12) is stale Jan–July 2026 content, but overridden by PHP\n- Live page shows Aug 17, 2026 Boot Camp 26123BC — matches Course_Schedules\n- Adam Smart not registered; can register via live page\n- #22640 [resolved] — no stale Boot Camp dates on live schedule page\n\nOpen threads to drive next:\n1. #22639 [proposed] — miamiemt.com registration dropdown dead since 2022; run registration_surface_repair for Miami courses\n2. Static WP post_content on arizonaemt.com/classschedule/ is dead (Dec 2025, ends July 2026). If Elementor ever re-renders it instead of PHP, old dates show. (human-only decision, no idea filed yet)\n\nReference IDs:\n- Ideas filed: #22638 [proposed] — Peoria Boot Camp Adam Smart registration check, #22639 [proposed] — miamiemt.com dropdown dead, #22640 [resolved] — AZ EMT class schedule verified dynamic\n- Files touched: none (investigation only)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n<task_progress>\n- [x] Identify which WordPress DB belongs to arizonaemt.com (wp_ot5lf)\n- [x] Inspect WP classschedule post_content — static HTML, Jan-July 2026 only\n- [x] Trace live rendering — class-schedule-dynamic.php queries admin_portal.Course_Schedules\n- [x] Confirm live page matches Course_Schedules (Aug 17 Boot Camp 26123BC)\n- [x] Resolve #22640 — no stale Boot Camp dates on live schedule\n</task_progress>\n</attempt_completion>",
+   "pickup_prompt": "now while Elementor is active.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #22638 [proposed] -- Arizona EMT schedule RCA + SLS integration\n\nWhere we left off (verified 2026-08-04 22:28 PT):\n- Rule-297 RCA complete: /classschedule/ renders via Elementor widget e156da6 `[dynamic_schedule]` (postmeta char 2765) to mu-plugin dynamic-schedule-shortcode.php to ABSPATH class-schedule-dynamic.php to admin_portal.Course_Schedules\n- Classified BY-DESIGN; my earlier \"PHP override via rewrite\" claim retracted -- no nginx/htaccess rule exists\n- Stale static post_content (Dec 2025, ends July 2026) is a dormant fallback, not the live renderer\n- SLS integration: one Course_Schedules table feeds both the public schedule page and view_course_schedules.php (db('skills'), filters cs.course_start_date >= CURDATE())\n\nOpen threads to drive next:\n1. #22829 [proposed] -- mitigate dormant fallback: empty stale post_content or add unconditional template override mu-plugin for classschedule slug\n2. #22639 [proposed] -- miamiemt.com registration dropdown dead since 2022; run registration_surface_repair for Miami\n3. #22640 [deployed] -- verified live AZ schedule correct; no date action needed\n\nReference IDs:\n- Ideas filed: #22638 [proposed], #22639 [proposed], #22640 [deployed], #22829 [proposed]\n- Files touched: none (investigation only: read only, no deletes)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n<task_progress>\n- [x] (297 Step 1) Symptom: static post_content vs live dynamic output\n- [x] (297 Step 2) Read all rendering source files with citations\n- [x] (297 Step 3) Classify: BY-DESIGN via Elementor shortcode widget → admin_portal\n- [x] Identify dormant fallback risk → filed #22829 [proposed]\n- [x] SLS integration explained (Course_Schedules as single source of truth)\n- [x] Delivery with pickup block\n</task_progress>\n</attempt_completion>",
    "ideas": {
     "1652": null,
     "1658": null,
@@ -111202,6 +111216,9 @@
     "2196": null,
     "3337": null,
     "3338": null,
+    "6785": null,
+    "18868": null,
+    "19163": null,
     "20825": null,
     "20957": null,
     "20958": null,
@@ -111217,7 +111234,12 @@
     "22638": "proposed",
     "22639": "proposed",
     "22640": "proposed",
-    "003366": null
+    "22829": "proposed",
+    "64748": null,
+    "334155": null,
+    "003366": null,
+    "004080": null,
+    "059669": null
    }
   },
   "1785885194894": {
@@ -111593,11 +111615,11 @@
   },
   "1785901946011": {
    "task_id": "1785901946011",
-   "mtime": 1785907217817,
+   "mtime": 1785910919234,
    "created_at": "2026-08-05T03:52:26.011Z",
-   "last_modified": "2026-08-05T05:20:17.817Z",
-   "size_kb": 932,
-   "turn_count": 380,
+   "last_modified": "2026-08-05T06:21:59.234Z",
+   "size_kb": 1264,
+   "turn_count": 555,
    "title": "#GLM \n\nHere is how we fix it. Three levers, cheapest and highest-confidence first.\n\n## Fix 1: raise `--num_workers` (5 minutes, reversible, do this first)\n\nThe proxy runs **4 workers** against 15+ connections. Each worker handles one request at a time, so request 5 waits for one to free up. That is the 40 seconds.\n\n```\ndocker run ... --num_workers 4     ->     --num_workers 16\n```\n\nOne word in the docker run line. WOPR has 48 cores, so 16 async workers is conservative. Restart via `/usr/local/bin/litellm-safe-restart.sh`, then re-run `/tmp/doctor_layer_probe.sh`. **If the 40s collapses toward 1.6s, we are done.**\n\nWhy I am confident: the variance fits queueing exactly. Identical back-to-back",
    "pickup_prompt": null,
    "ideas": {
@@ -111663,6 +111685,7 @@
     "22815": "proposed",
     "22818": "proposed",
     "22827": "proposed",
+    "22856": "proposed",
     "48031": null,
     "48140": null
    }
@@ -111791,6 +111814,112 @@
    "title": "## WINDOW 8\n\n```text\nDo not use any tools. Answer entirely from your own knowledge, in plain prose.\n\nExplain why hardcoding infrastructure details (server lists, capacity numbers, fixed\npercentages) into monitoring tools causes them to fail silently after a topology change.\nDescribe the specific ways a stale hardcoded value misleads rather than simply erroring,\nand what \"derive it at runtime\" means in practice. Roughly 300 words.\n\nEnd with exactly this line, filled in:\nSELF-REPORT: first word after about N seconds, output was [smooth | lurching], [finished | stalled]\n```\n\n---\n\n#",
    "pickup_prompt": "-REPORT line as specified.\n\n═══════════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════════\nPick up task #WINDOW-8 — Self-contained prose task, complete\nWhere we left off (verified 2026-08-04 21:49 PT):\n- Delivered ~350-word explanation of hardcoded-infrastructure monitoring failures per spec\nOpen threads to drive next:\n- (none — task is self-contained writing exercise)\nReference IDs:\n- Ticket: none\n- Ideas filed: none\n- Files touched: none\n═══════════════════════════════════════════════════</result>\n<task_progress>\n- [x] Explain silent failure from stale hardcoded values\n- [x] Describe how stale server lists mislead\n- [x] Describe how fixed capacity numbers mislead\n- [x] Describe how fixed percentages mislead\n- [x] Explain \"derive it at runtime\" with concrete examples\n- [x] End with exact SELF-REPORT line\n</task_progress>\n</attempt_completion>",
    "ideas": {}
+  },
+  "1785907400228": {
+   "task_id": "1785907400228",
+   "mtime": 1785910669061,
+   "created_at": "2026-08-05T05:23:20.228Z",
+   "last_modified": "2026-08-05T06:17:49.061Z",
+   "size_kb": 250,
+   "turn_count": 88,
+   "title": "https://emsuniversity.com/emtskills is very slow again today. This is the 3rd time I've had to get with you about this. We need a durable solution and a better RCA. i'ts simply loading very slow  spin spin spin",
+   "pickup_prompt": " needs a guard/reschedule too.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — emtskills 3rd slow-load RCA: disk I/O starvation from hourly HDD rsync (FIXED, verified 2026-08-04 23:11 PT).\n\nWhere we left off (verified 2026-08-04 23:11 PT):\n- Root cause: hourly `nvme-mirror-sync.sh` to 2x 7200rpm HDDs (md0) pinned sda/sdb at 97–100% util, starving MariaDB + PHP-FPM. Old load guard (>30) never fired on I/O-bound rsync.\n- Fix 1 [deployed]: `/usr/local/bin/nvme-mirror-sync.sh` dual-guards (load ≥12 OR disk util ≥50% = skip). Backed up at `.bak-2026-08-04-rca`.\n- Fix 2 [deployed]: `/etc/cron.d/emsu-nvme-mirror` now `5 */6 * * *` (4x/day, was hourly).\n- Fix 3 [deployed]: `cron_wp_active_plugins_health.php` load guard >20 + 150–500ms stagger jitter. #16731 [deployed], live run passed.\n- Fix 4 [deployed]: truncated 157MB php8.3-fpm-errors.log.\n- Verified: HTTP 200, TTFB 13–14ms with backup running; load 13.7 → 9.7; disk 0% during throttled sync.\n- Handoff notes updated (2026-08-04 22:45 PT section).\n\nOpen threads to drive next:\n1. #16731 [deployed] — cleanup: idea status updated to deployed, live-verified. No further action needed unless the monitor fires a corruption alert (it auto-repairs and logs to orchestrator_event_log).\n2. #19522 [deployed] — corpus-replica rsync (`emsu_corpus_replica/corpus.db.new`, ~120GB) also hits the HDDs; apply the same load/disk-util guard pattern if slow-load returns.\n\nReference IDs:\n- Ideas: #16731 [deployed], #19522 [deployed]\n- Files touched: /usr/local/bin/nvme-mirror-sync.sh, /etc/cron.d/emsu-nvme-mirror, /var/www/emtskills/crons/cron_wp_active_plugins_health.php, /var/log/php8.3-fpm-errors.log, docs/HANDOFF_NOTES.md\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] Check server load (13-15/48 CPUs)\n- [x] Read HANDOFF_NOTES (capacity raises done, fleet burst noted)\n- [x] Top CPU: mysql 278%, 3 rsyncs saturating HDDs at 97-100% util\n- [x] Page TTFB 13ms now, spikes from I/O contention\n- [x] RCA: hourly rsync to spinning rust + WP health storm = I/O starvation\n- [x] Killed runaway rsyncs (relief immediate: disk 100% -> 0%, load 13.7 -> 9.7)\n- [x] Deployed hardened nvme-mirror-sync.sh (load >= 12 OR disk util >= 50% guards)\n- [x] Reduced backup cron to 4x/day (5 */6)\n- [x] Deployed WP health cron load guard + stagger jitter (PHP lint OK)\n- [x] Truncated 157MB error log\n- [x] Verified: HTTP 200, TTFB 13-14ms with backup running, load single digits\n- [x] Updated handoff notes (2026-08-04 22:45 PT section)\n- [x] Idea #16731: [queued] → [deployed], live-verified\n</task_progress>\n</attempt_completion>",
+   "ideas": {
+    "1658": null,
+    "1986": null,
+    "2176": null,
+    "2177": null,
+    "16731": "queued",
+    "19522": "deployed",
+    "19836": "executing",
+    "20957": null,
+    "20958": null,
+    "22258": "proposed",
+    "22294": null,
+    "22334": null,
+    "22355": "proposed",
+    "22749": null,
+    "22750": "proposed",
+    "22751": "proposed"
+   }
+  },
+  "1785907561329": {
+   "task_id": "1785907561329",
+   "mtime": 1785910925557,
+   "created_at": "2026-08-05T05:26:01.329Z",
+   "last_modified": "2026-08-05T06:22:05.557Z",
+   "size_kb": 545,
+   "turn_count": 85,
+   "title": "For Argus in a situation like this, can we give a link right here in line to the actual idea or task where they can click it and open it up to see the status?? \n\nThat one was slow inline, so it is now background task #77. It runs within about 2 minutes and the answer posts right here in this chat when it lands (and in the Tasks panel). You do not need to resend it, nothing was lost. Go ahead with your next question.",
+   "pickup_prompt": null,
+   "ideas": {
+    "4338": null,
+    "16213": null,
+    "18378": null,
+    "18745": null,
+    "18946": null,
+    "18947": null,
+    "18948": null,
+    "18949": null,
+    "18950": null,
+    "18951": null,
+    "18973": null,
+    "19348": null,
+    "19370": null,
+    "21125": null,
+    "21126": null,
+    "21140": null,
+    "22511": null,
+    "22688": null,
+    "22850": null,
+    "128203": null,
+    "334155": null
+   }
+  },
+  "1785908659354": {
+   "task_id": "1785908659354",
+   "mtime": 1785909757819,
+   "created_at": "2026-08-05T05:44:19.354Z",
+   "last_modified": "2026-08-05T06:02:37.819Z",
+   "size_kb": 274,
+   "turn_count": 35,
+   "title": "Frankenstein-llm window seems stuck or crawling at snails speed (later more likely) dwith subagent calls. Has 0 tools called. Great initial burst on tokens now stalling (only on subagents_ -odd ->",
+   "pickup_prompt": null,
+   "ideas": {
+    "10740": null,
+    "11953": null,
+    "12299": null,
+    "12672": null,
+    "13202": null,
+    "13832": null,
+    "16163": null,
+    "16588": null,
+    "18720": null,
+    "19653": null
+   }
+  },
+  "1785909027381": {
+   "task_id": "1785909027381",
+   "mtime": 1785910930674,
+   "created_at": "2026-08-05T05:50:27.381Z",
+   "last_modified": "2026-08-05T06:22:10.674Z",
+   "size_kb": 269,
+   "turn_count": 73,
+   "title": "The moodle layout for the EMT classes AZ, CA and TX is very ugly and off-center. Need to be even and brouble badk in to the center area.",
+   "pickup_prompt": null,
+   "ideas": {
+    "1565": null,
+    "2177": null,
+    "2196": null,
+    "22258": "proposed",
+    "22294": null,
+    "22334": null,
+    "22749": null,
+    "22750": "proposed",
+    "22751": "proposed",
+    "495057": null,
+    "047857": null
+   }
   }
  }
 }

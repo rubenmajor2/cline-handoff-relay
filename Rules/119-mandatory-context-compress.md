@@ -79,7 +79,9 @@ Never rush, skip steps, read fewer files, dispatch fewer subagents, or produce a
 
 The budget watchdog (`cline_budget_watchdog.py`, launchd `com.emsu.cline-budget-watchdog`) computes the thresholds for you and writes a signal file. **You do not deliberate about compression. You check the file.**
 
-**Before your FIRST tool call of every turn**, run:
+**This pre-turn signal check SUPERSEDES rule 00 for the first micro-action.** The `ls` below is the absolute first action of EVERY turn, before subagent dispatch, before any tool call. If no signal file exists, THEN proceed with rule 00 subagent dispatch. Both rules cannot be followed simultaneously at turn start: rule 119 wins for the first micro-action.
+
+**Before your FIRST tool call of every turn** — including the very first turn of a window and every turn after (even repeat turns after an error) — run:
 
 ```
 ls /tmp/cline_compress_signal_TASK<current_task_id>.json

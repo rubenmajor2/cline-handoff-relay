@@ -65,6 +65,72 @@ def load_cfg(default_model_window=DEFAULT_MODEL_WINDOW) -> dict:
         log(f"err loading cfg {WATCHDOG_CFG}: {e}")
     return cfg
 
+import re as _re
+
+# Regex matching Cline's environment_details line:
+#   "Context Window Usage: 340,193 / 1,000,000 tokens used (34%)"
+# Y (the second number) is the model's reported window ceiling.
+_CTX_RE = _re.compile(r"Context Window Usage:\s*[\d,]+\.?\d*\s*/\s*([\d,]+\.?\d*\s*[KkMm]?)\s*tokens?", _re.I)
+
+# Standard fleet windows (Cline/Anthropic/router tiers). Used for escalation
+# when detected Y is unavailable: if current ctx exceeds a window's capacity,
+# the real window must be the next tier up.
+KNOWN_WINDOWS = (1_000_000, 200_000, 128_000, 64_000)
+
+def pick_window(estimated_cap: int) -> int:
+    """Return the smallest KNOWN_WINDOWS >= estimated_cap, else max."""
+    for w in sorted(KNOWN_WINDOWS):
+        if w >= estimated_cap:
+            return w
+    return max(KNOWN_WINDOWS)
+
+def detect_window_from_task(task_dir: str) -> Optional[int]:
+    """Best-effort detect the model's context window W from the task's own
+    environment_details. Y in 'X / Y tokens used' is the window the router
+    reports for THIS task. Fall back to cfg on failure.
+    """
+    for fname in ("ui_messages.json", "api_conversation_history.json"):
+        p = os.path.join(task_dir, fname)
+        if not os.path.exists(p):
+            continue
+        try:
+            with open(p, "r", encoding="utf-8", errors="replace") as f:
+                data = json.load(f)
+        except Exception:
+            continue
+        # walk every message's text fields looking for the latest occurrence
+        best = None
+        def walk(o):
+            nonlocal best
+            if isinstance(o, dict):
+                for v in o.values():
+                    walk(v)
+            elif isinstance(o, list):
+                for v in o:
+                    walk(v)
+            elif isinstance(o, str):
+                m = _CTX_RE.search(o)
+                if m:
+                    try:
+                        raw = m.group(1).replace(",", "").strip().upper()
+                        if raw.endswith("K"):
+                            w = int(float(raw.replace("K", "")) * 1000)
+                        elif raw.endswith("M"):
+                            w = int(float(raw.replace("M", "")) * 1_000_000)
+                        else:
+                            w = int(float(raw))
+                        if w >= 16_000:
+                            best = w
+                    except Exception:
+                        pass
+        try:
+            walk(data)
+        except Exception:
+            continue
+        if best:
+            return best
+    return None
+
 def write_compress_signal(task_id: str, action: str, ctx: int, w: int, reason: str) -> bool:
     """Write /tmp/cline_compress_signal_TASK<id>.json (or global fallback).
     Returns True if written, False if cooldown-suppressed.
@@ -220,9 +286,24 @@ def main():
     # ── Mechanical compress signal (idea #22282) ───────────────────────────────
     # W-based thresholds per rule 119. Same numbers rule 119 derives, computed
     # HERE so the model never has to reason about them.
-    cfg = load_cfg()
-    W = int(cfg.get("model_window", DEFAULT_MODEL_WINDOW))
     ctx = tokens["context_size"]
+    cfg = load_cfg()
+    # Auto-detect W from task's own environment_details (idea #22282 bugfix 2026-08-04).
+    # Hardcoded W=128K was correct for 128K windows but wrong for 200K/1M windows,
+    # causing premature compress signals (e.g. 340K context triggering compress at 96K).
+    detected = detect_window_from_task(task_dir)
+    if detected and detected >= 16_000:
+        W = detected
+    else:
+        W = int(cfg.get("model_window", DEFAULT_MODEL_WINDOW))
+    # Self-correction: if context_size > COMPRESS threshold for current W,
+    # W is demonstrably WRONG (you can't use 340K tokens on a 128K window).
+    # Escalate to the next known tier.
+    if ctx > COMPRESS_FRAC * W:
+        corrected = pick_window(int(ctx / COMPRESS_FRAC))  # find smallest W that fits
+        if corrected > W:
+            log(f"W_ESCALATE {W}->{corrected} (ctx={ctx} > 0.75x{W}={int(COMPRESS_FRAC*W)})")
+            W = corrected
     check_at = int(round(CHECK_FRAC * W))
     compress_at = int(round(COMPRESS_FRAC * W))
     if ctx >= compress_at:

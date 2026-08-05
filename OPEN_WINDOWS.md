@@ -6,15 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/5/2026, 1:39:38 PM PT | window: last 72h | 112 tasks | index total 487 (parsed 4, cached 483)
+Generated: 8/5/2026, 2:39:38 PM PT | window: last 72h | 112 tasks | index total 487 (parsed 4, cached 483)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1785937352780` | 8/5/2026, 2:39:25 PM | 317 | 1634KB | A bunch of my windows closed out here in Cline all at once. For these windows can you go a |
+| `1785937503831` | 8/5/2026, 2:39:06 PM | 399 | 1600KB | Can you tell me how many turns have taken place for each model in the last 5 hours by mode |
+| `1785940995783` | 8/5/2026, 2:37:03 PM | 262 | 594KB | Resolve this issue: |
+| `1785957900287` | 8/5/2026, 2:27:15 PM | 112 | 483KB | Telphony still having issues: |
 | `1785939083137` | 8/5/2026, 1:37:32 PM | 1036 | 1477KB | https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since  |
 | `1785953476892` | 8/5/2026, 1:25:26 PM | 338 | 701KB | build and ship this |
-| `1785957900287` | 8/5/2026, 1:15:27 PM | 93 | 443KB | Telphony still having issues: |
-| `1785940995783` | 8/5/2026, 1:10:41 PM | 256 | 574KB | Resolve this issue: |
-| `1785937503831` | 8/5/2026, 1:07:53 PM | 374 | 1574KB | Can you tell me how many turns have taken place for each model in the last 5 hours by mode |
 | `1785939420388` | 8/5/2026, 1:06:09 PM | 250 | 682KB | #Argus |
 | `1785954733601` | 8/5/2026, 1:02:40 PM | 220 | 444KB | #SLS MEGA |
 | `1785954856277` | 8/5/2026, 1:02:23 PM | 134 | 1164KB | #CFA |
@@ -23,7 +24,6 @@ Generated: 8/5/2026, 1:39:38 PM PT | window: last 72h | 112 tasks | index total 
 | `1785954707277` | 8/5/2026, 11:56:25 AM | 190 | 587KB | #EA PIPELINE |
 | `1785953852961` | 8/5/2026, 11:49:22 AM | 190 | 496KB | #GLM  |
 | `1785953794202` | 8/5/2026, 11:48:56 AM | 206 | 732KB | COPY_WINDOW_0_DATA_ACCURACY_AUDIT |
-| `1785937352780` | 8/5/2026, 11:07:18 AM | 298 | 1588KB | A bunch of my windows closed out here in Cline all at once. For these windows can you go a |
 | `1785939400779` | 8/5/2026, 7:16:41 AM | 1 | 5KB | Please see this in Argus, appears like some hallucinations, the model is not answering que |
 | `1785907561329` | 8/5/2026, 6:36:05 AM | 206 | 951KB | For Argus in a situation like this, can we give a link right here in line to the actual id |
 | `1785776636014` | 8/5/2026, 4:52:16 AM | 1436 | 3135KB | Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up |
@@ -127,103 +127,53 @@ Generated: 8/5/2026, 1:39:38 PM PT | window: last 72h | 112 tasks | index total 
 
 ## Per-window detail
 
-### `1785939083137` — 8/5/2026, 1:37:32 PM PT — 1036 turns
+### `1785937352780` — 8/5/2026, 2:39:25 PM PT — 317 turns
 
 **Original task:**
 
 ```
-https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since we have a 4TB NVME on WOPR. Can you tell me what's going on here and get these pages loaded faster?
+A bunch of my windows closed out here in Cline all at once. For these windows can you go ahead and give me multiple copy prompts to run that are re-organized / com bined by topic so that I can continue where I left off?
 ```
 
-**Ideas referenced:** #2211 [needs_verify], #2213, #2214, #2215, #2223, #2224, #23028 [proposed], #23029 [proposed], #23030 [proposed], #23031 [proposed], #23051 [executing], #23053 [executing], #23067 [deployed], #23133 [executing], #23134 [executing], #23139 [executing], #23145 [executing], #23232 [executing], #23233 [executing], #2998, #9112
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785953476892` — 8/5/2026, 1:25:26 PM PT — 338 turns
-
-**Original task:**
-
-```
-build and ship this
-
-__3. The RCA on why frankenstein-llm could not do this work — filed as #23135 [executing], promoted.__
-
-Four causes, and the first one is the biggest:
-
-- __Tool calling was broken all morning.__ A model that cannot call tools cannot investigate, so it answers from priors. That is a large part of "why not" and it is now fixed (#23122).
-- __No project registry.__ 216 tables match escalation/urgent/frustration patterns. 55 match callback. An agent pattern-matching table names against a keyword lands on the wrong one nearly every time, and lands confidently, because the wrong 
-```
-
-**Ideas referenced:** #17300, #18329 [queued], #18800, #18868, #1934, #22598, #22601, #23117, #23122 [in_progress], #23135 [executing], #23172 [approved], #23178 [approved], #23179 [approved], #23182 [proposed], #23183 [proposed], #23234 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785957900287` — 8/5/2026, 1:15:27 PM PT — 93 turns
-
-**Original task:**
-
-```
-Telphony still having issues:
-
-Lots of errors on this page:
-
-https://www.emsuniversity.com/emtskills/routes/telephony_hub.php?view=agent 
-
-Uncaught ReferenceError: switchTab is not defined
-    at HTMLButtonElement.onclick (telephony_hub.php?view=agent:3011:87)
-/emtskills/api/ruben_context_api.php:1  Failed to load resource: the server responded with a status of 401 ()
-telephony_hub.php?view=agent:3000 Uncaught ReferenceError: switchTab is not defined
-    at HTMLButtonElement.onclick (telephony_hub.php?view=agent:3000:95)
-telephony_hub.php?view=agent:2997 Uncaught ReferenceError: switchTab is n
-```
-
-**Ideas referenced:** #334155
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785940995783` — 8/5/2026, 1:10:41 PM PT — 256 turns
-
-**Original task:**
-
-```
-Resolve this issue:
-
-- __#23028 [executing]__ — There's an __active SQL injection__ against your `wordpress_2` database. Time-based blind SQLi injecting `SELECT SLEEP(3)` through a `post_author` param, 37 probes between 08-02 and 08-05, each one holding a MariaDB thread for __864-1044 seconds__. Since every vhost on WOPR shares one mariadbd, it's stealing threads from everything. 
-
--
-```
-
-**Ideas referenced:** #2212, #23027, #23028 [executing], #23029, #23030, #23031, #23036, #23038, #23039, #23077 [executing], #23078 [executing], #23117 [proposed]
+**Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12477, #13084, #152615, #1652, #1658, #16648, #16844 [deployed], #17203, #17205, #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #178577, #178578, #178586, #178590, #178591, #178593, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839 [resolved], #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676 [blocked], #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811 [deployed], #18812 [deployed], #18813, #18817, #18820 [deployed], #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930 [resolved], #1931, #1932, #1933, #1935, #1936 [resolved], #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20555, #20565, #20569, #20613, #20627 [deployed], #20628, #20629, #20630, #20662, #20663, #20672, #20674, #20676, #20677, #20806 [proposed], #20825, #2101 [resolved], #2105, #2126, #2127, #2128, #2168, #2174, #2176, #2177, #22066, #22128 [executing], #22188, #22200, #22201, #22202, #22240 [proposed], #22250, #22258 [proposed], #22294 [deployed], #22334, #22355 [proposed], #22726, #22749 [deployed], #22750 [proposed], #22751 [proposed], #22779 [approved], #22780, #22850 [proposed], #22887 [proposed], #22897 [proposed], #22939 [proposed], #23027 [proposed], #23036 [proposed], #23037 [proposed], #23038 [proposed], #23039 [proposed], #23050 [executing], #23052 [executing], #23054 [executing], #23055 [executing], #23056 [executing], #23061 [executing], #23062 [executing], #23063, #23067 [deployed], #23068 [executing], #23071, #23117 [proposed], #23122 [executing], #23123 [executing], #23126 [executing], #23135 [executing], #389249, #7223
 
 **Last PICKUP PROMPT:**
 
 ```
-ases and untouched by the WAF.
+be re-measured after 10:50 PT.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #23028 [executing] - SQLi attack on wordpress_2: WAF + IP block live, status verified green 13:10 PT
 
-Where we left off (verified 2026-08-05 13:10 PT):
-- #23028 [executing] - WAF 403-blocking live: 19 (emsu) + 9 (emtrefresher) intercepted since deploy; 0 new DB hits; 0 long-running queries
-- #23117 [in_progress] - Audit complete: no vulnerable custom code found (theme + all 6 custom plugins clean). Root cause = WP core `author` param through MariaDB escaping; edge defense is the mitigation. ER sites verified zero direct probes.
-- #23077 [rejected] - closed; deny 80.94.95.236 deployed directly in nginx shared snippet (verified in active `nginx -T` output)
-- Actual slow-log delta 110→114 = my own diagnostic queries at 13:00–13:06 PT (artifact, not attack)
+Pick up task #1785937352780 — tool-schema fix holding, callback finding corrected, frankenstein-llm RCA filed.
+
+Where we left off (verified 2026-08-05 11:06 PT):
+- TOOL-SCHEMA FIX HOLDING. _normalize_tool_schemas() router_hook.py:682, wired :848. litellm 200, Field required=0, normalizer_wired=2. Earlier proof: full failing shape 200 in 2.3s with finish_reason=tool_calls and a real tool_call. Backup router_hook.py.bak-toolschema-20260805-104300.
+- CALLBACK FINDING CORRECTED BY RUBEN. +19412943388 is EMSU's OWN SWITCHBOARD, not students. The real project is inbound-email urgent-language detection (URGENT, !!!, ALL CAPS, panicking), NOT voice_callback_queue. My earlier framing is discarded. Starting evidence for the real one: crons cron_callback_sla.php, cron_callback_retry_stale_flagger.php, cron_ai_staff_paging.php, cron_ticket_escalation_ai_routing.php, cron_auto_escalate_handoff.php, cron_email_responder.php, cron_ai_ticket_agent.php; candidate tables callback_config (20), declined_payment_escalations (20), outreach_response_escalations (21).
+- RCA FILED for why frankenstein-llm could not do this class of work: broken tool calling (now fixed), no project registry (216 escalation tables, 55 callback tables, so name-matching always misfires), VEC is document-shaped not schema-shaped, no write-path verification gate.
+- Copy windows: 11 files in /Users/rubenmajor/Desktop/CopyWindows/, all chmod +x. Window 10 rewritten, windows 6 and 8 corrected.
 
 Open threads to drive next:
-1. #23117 [in_progress] - consider permanent hardening: per-user MariaDB `max_statement_time` for wordpress_2 account (currently unsupported on this MariaDB version) or upgrade review. Edge defense fully handles the current attack pattern.
+1. #23135 [executing] the RCA plus capability build. Find the REAL urgent-email project by reading detector code and citing the INSERT, build the project registry, wire it into VKL injection, add the write-path citation gate. Before any outreach, cross-check every recipient against tickets and communication_log for whether the question was already answered — Ruben asked for this explicitly and the original 19 may have grown.
+2. #23117 [executing] promoted out of proposed. Grep themes and custom plugins for pre_get_posts / posts_where / author query var overrides, patch the raw WHERE clause builder. WAF plus IP deny already live, this is the permanent fix.
+3. #23126 [executing] tool-bearing canary plus guard invariant plus log detector. The outage passed every text-only probe twice.
+4. #23122 [executing] the shipped fix. Remaining: decide the fate of the inert claude.py shim, and find what changed overnight (claude.py and router_hook.py both mtime 01:03-01:08).
+5. #23123 [executing] voice_callback_queue cleanup and the 52 empty callback tables. Real but SEPARATE from the urgent-email project, lower priority.
+6. #23050 [executing] probe-first mandate, re-driven from impl_failed to idle.
+7. #23062 [executing] server-wide data accuracy audit. The 52 empty callback tables and 6 empty CFA tables are live CLASS 1 instances.
+8. #23054 [executing] CFA validation. Re-measure cfa_tool_invocations AFTER 10:50 PT, the 0-in-24h may have been the router not an unwired table.
+9. #23056 [executing] ladder audit, resolve registry_source None.
+10. #23061 [executing] Argus stale-cache sweep.
+11. #23052 [executing] certbot, real failure is checkenginehelp.com not mail.
+12. #23055 [executing] Preceptor Evaluation form 2, 701 of 1862.
+13. #19387 [executing] QB AVS fix, needs a real card.
 
 Reference IDs:
-- Ideas filed: #23117 [in_progress], #23077 [rejected]
-- Files touched: /etc/nginx/emsu-sqli-waf.conf, emsuniversity.com vhost_nginx.conf, emtrefresher.com nginx.conf
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
+- Filed and promoted this session: #23050 [executing], #23052 [executing], #23054 [executing],
 ```
 
-### `1785937503831` — 8/5/2026, 1:07:53 PM PT — 374 turns
+### `1785937503831` — 8/5/2026, 2:39:06 PM PT — 399 turns
 
 **Original task:**
 
@@ -231,7 +181,7 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 Can you tell me how many turns have taken place for each model in the last 5 hours by model and also look inside the grouped models like frankenstein-llm, frankenstein-tools, emsu-codegen, etc...? I want to see how many turns for the individual LLMs themselves, not the groupings
 ```
 
-**Ideas referenced:** #10108, #10740, #11397, #11741, #11781, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12477, #12618, #12657, #12672, #12673, #12689, #12716, #12824, #12872, #12878, #13108, #13121, #13202, #13831, #13832, #13874, #13964, #14000, #14848, #16120, #16163, #16265, #16304, #16588, #16648, #16718, #16844, #17202, #17203, #17205, #18312, #18326, #18781, #18786, #18868, #19173, #19653, #1967, #19903, #2014, #20272, #20300, #2050, #20536, #20722, #21045 [deployed], #21136, #2176, #2177, #2218 [deployed], #22258 [proposed], #22294, #22334, #22583, #22749, #22750 [proposed], #22751 [proposed], #22820, #22897, #23028, #23029, #23030, #23031, #23044 [proposed], #23067 [deployed], #23076 [executing], #23127 [proposed], #23171 [proposed], #64748, #9889
+**Ideas referenced:** #10108, #10740, #11397, #11741, #11781, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12477, #12618, #12657, #12672, #12673, #12689, #12716, #12824, #12872, #12878, #13108, #13121, #13202, #13831, #13832, #13874, #13964, #14000, #14848, #16120, #16163, #16265, #16304, #16588, #16648, #16718, #16844, #17202, #17203, #17205, #18312, #18326, #18781, #18786, #18868, #19173, #19653, #1967, #19903, #2014, #20272, #20300, #2050, #20536, #20722, #21045 [deployed], #21136, #2176, #2177, #2218 [deployed], #22258 [proposed], #22294, #22334, #22583, #22749, #22750 [proposed], #22751 [proposed], #22820, #22897, #23028, #23029, #23030, #23031, #23044 [proposed], #23067 [deployed], #23076 [executing], #23127 [proposed], #23171 [proposed], #23264 [proposed], #23265 [proposed], #64748, #9889
 
 **Last PICKUP PROMPT:**
 
@@ -266,6 +216,127 @@ Reference IDs:
 - Ideas flagged as inconsistent with live code: #21045 [rejected]
 - Bug library incident (separate namespace
 ```
+
+### `1785940995783` — 8/5/2026, 2:37:03 PM PT — 262 turns
+
+**Original task:**
+
+```
+Resolve this issue:
+
+- __#23028 [executing]__ — There's an __active SQL injection__ against your `wordpress_2` database. Time-based blind SQLi injecting `SELECT SLEEP(3)` through a `post_author` param, 37 probes between 08-02 and 08-05, each one holding a MariaDB thread for __864-1044 seconds__. Since every vhost on WOPR shares one mariadbd, it's stealing threads from everything. 
+
+-
+```
+
+**Ideas referenced:** #2212, #23027, #23028 [executing], #23029, #23030, #23031, #23036, #23038, #23039, #23077 [executing], #23078 [executing], #23117 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+a P3 ops note, not a P0 to-do.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #23028 [executing] — SQLi attack on wordpress_2: WAF + IP block live, hardening path evaluated
+
+Where we left off (verified 2026-08-05 14:36 PT):
+- #23028 [executing] — WAF 403-blocking live: 19 (emsu) + 9 (emtrefresher) intercepted since deploy; 0 new DB hits; 0 long-running queries. MariaDB 10.11.14 global `max_statement_time` only — per-user GRANT syntax unsupported. Global cap would risk cutting off admin_portal (SLS brain), moodle, and all 9 ER registration DBs. Edge defense is the correct tier.
+- #23117 [in_progress] — audit complete: no vulnerable custom code found (theme + all 6 custom plugins clean). Root cause = WP core `author` param through MariaDB escaping. Permanently mitigated at the edge. Per-user max_statement_time shelved until MariaDB upgrade supports it.
+- #23077 [rejected] — IP deny 80.94.95.236 live in nginx active config (nginx -T verified)
+
+Open threads to drive next:
+1. #23117 [in_progress] — when MariaDB upgrade reaches the feature level where GRANT ... WITH MAX_STATEMENT_TIME is supported, apply to wordpress_2 user only (not admin_portal, not moodle, not ER DBs). Edge defense handles the current threat pattern fully.
+
+Reference IDs:
+- Ideas filed: #23117 [in_progress], #23077 [rejected]
+- Files touched: /etc/nginx/emsu-sqli-waf.conf, emsuniversity.com vhost_nginx.conf, emtrefresher.com nginx.conf
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785957900287` — 8/5/2026, 2:27:15 PM PT — 112 turns
+
+**Original task:**
+
+```
+Telphony still having issues:
+
+Lots of errors on this page:
+
+https://www.emsuniversity.com/emtskills/routes/telephony_hub.php?view=agent 
+
+Uncaught ReferenceError: switchTab is not defined
+    at HTMLButtonElement.onclick (telephony_hub.php?view=agent:3011:87)
+/emtskills/api/ruben_context_api.php:1  Failed to load resource: the server responded with a status of 401 ()
+telephony_hub.php?view=agent:3000 Uncaught ReferenceError: switchTab is not defined
+    at HTMLButtonElement.onclick (telephony_hub.php?view=agent:3000:95)
+telephony_hub.php?view=agent:2997 Uncaught ReferenceError: switchTab is n
+```
+
+**Ideas referenced:** #334155
+
+**Last PICKUP PROMPT:**
+
+```
+fallback but is now dead code)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up telephony hub diagnostic follow-up.
+
+Where we left off (verified 2026-08-05 14:26 PT):
+- switchTab moved to <head> in telephony_hub.php line 773 — loads before tab buttons
+- ruben_context_api.php now reads $_SESSION['user']['id'] instead of nonexistent $_SESSION['user_id']
+- ruben_context_api.php now uses custom session_save_path matching auth.php
+- PHP-FPM reloaded — both fixes live
+- Redundant standalone switchTab block at line 3371 remains as fallback (body copy) — fine since head loads first
+
+Open threads to drive next:
+1. **(human-only decision, no idea)** — Have an agent open the telephony hub page with DevTools open and confirm: (a) no more switchTab errors, (b) no more 401 ruben_context_api.php storms
+2. **(human-only decision, no idea)** — Monitor FPM pool health — the 401 retry storm was consuming ~3.4 req/s continuously. After fix, FPM load should drop noticeably within 2-5 minutes as open tabs re-poll with successful 200s
+
+Reference IDs:
+- Files: `/var/www/emtskills/routes/telephony_hub.php`, `/var/www/emtskills/api/ruben_context_api.php`
+- Backups: `telephony_hub.php.bak-20260805-switchtab`, `BACKED_UP` (via write_server_file)
+</result>
+</attempt_completion>
+```
+
+### `1785939083137` — 8/5/2026, 1:37:32 PM PT — 1036 turns
+
+**Original task:**
+
+```
+https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since we have a 4TB NVME on WOPR. Can you tell me what's going on here and get these pages loaded faster?
+```
+
+**Ideas referenced:** #2211 [needs_verify], #2213, #2214, #2215, #2223, #2224, #23028 [proposed], #23029 [proposed], #23030 [proposed], #23031 [proposed], #23051 [executing], #23053 [executing], #23067 [deployed], #23133 [executing], #23134 [executing], #23139 [executing], #23145 [executing], #23232 [executing], #23233 [executing], #2998, #9112
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785953476892` — 8/5/2026, 1:25:26 PM PT — 338 turns
+
+**Original task:**
+
+```
+build and ship this
+
+__3. The RCA on why frankenstein-llm could not do this work — filed as #23135 [executing], promoted.__
+
+Four causes, and the first one is the biggest:
+
+- __Tool calling was broken all morning.__ A model that cannot call tools cannot investigate, so it answers from priors. That is a large part of "why not" and it is now fixed (#23122).
+- __No project registry.__ 216 tables match escalation/urgent/frustration patterns. 55 match callback. An agent pattern-matching table names against a keyword lands on the wrong one nearly every time, and lands confidently, because the wrong 
+```
+
+**Ideas referenced:** #17300, #18329 [queued], #18800, #18868, #1934, #22598, #22601, #23117, #23122 [in_progress], #23135 [executing], #23172 [approved], #23178 [approved], #23179 [approved], #23182 [proposed], #23183 [proposed], #23234 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785939420388` — 8/5/2026, 1:06:09 PM PT — 250 turns
 
@@ -572,52 +643,6 @@ Work on that
 **Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12477, #13084, #152615, #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #178593, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1935, #1936, #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20555, #20565, #20569, #20627, #20628, #20629, #20630, #20662, #20663, #20672, #20674, #20676, #20677, #20806 [proposed], #2101, #2105, #2126, #2127, #2128, #22808 [proposed], #23027, #23036, #23037, #23038, #23039, #23050 [executing], #23054 [executing], #23056 [executing], #23061 [executing], #23062 [executing], #23146 [proposed], #23150 [proposed], #23152 [proposed], #23160 [proposed], #23163 [proposed], #23164 [proposed], #23165 [proposed], #23180 [proposed], #389249, #7223, #7925, #8639, #9048
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785937352780` — 8/5/2026, 11:07:18 AM PT — 298 turns
-
-**Original task:**
-
-```
-A bunch of my windows closed out here in Cline all at once. For these windows can you go ahead and give me multiple copy prompts to run that are re-organized / com bined by topic so that I can continue where I left off?
-```
-
-**Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12477, #13084, #152615, #1652, #1658, #16648, #16844 [deployed], #17203, #17205, #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #178577, #178578, #178586, #178590, #178591, #178593, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839 [resolved], #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676 [blocked], #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811 [deployed], #18812 [deployed], #18813, #18817, #18820 [deployed], #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930 [resolved], #1931, #1932, #1933, #1935, #1936 [resolved], #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20555, #20565, #20569, #20627 [deployed], #20628, #20629, #20630, #20662, #20663, #20672, #20674, #20676, #20677, #20806 [proposed], #20825, #2101 [resolved], #2105, #2126, #2127, #2128, #2168, #2174, #2176, #2177, #22066, #22128 [executing], #22188, #22200, #22201, #22202, #22240 [proposed], #22250, #22258 [proposed], #22294 [deployed], #22334, #22355 [proposed], #22726, #22749 [deployed], #22750 [proposed], #22751 [proposed], #22779 [approved], #22780, #22850 [proposed], #22887 [proposed], #22897 [proposed], #22939 [proposed], #23027 [proposed], #23036 [proposed], #23037 [proposed], #23038 [proposed], #23039 [proposed], #23050 [executing], #23052 [executing], #23054 [executing], #23055 [executing], #23056 [executing], #23061 [executing], #23062 [executing], #23063, #23067 [deployed], #23068 [executing], #23071, #23117 [proposed], #23122 [executing], #23123 [executing], #23126 [executing], #23135 [executing], #389249, #7223
-
-**Last PICKUP PROMPT:**
-
-```
-be re-measured after 10:50 PT.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785937352780 — tool-schema fix holding, callback finding corrected, frankenstein-llm RCA filed.
-
-Where we left off (verified 2026-08-05 11:06 PT):
-- TOOL-SCHEMA FIX HOLDING. _normalize_tool_schemas() router_hook.py:682, wired :848. litellm 200, Field required=0, normalizer_wired=2. Earlier proof: full failing shape 200 in 2.3s with finish_reason=tool_calls and a real tool_call. Backup router_hook.py.bak-toolschema-20260805-104300.
-- CALLBACK FINDING CORRECTED BY RUBEN. +19412943388 is EMSU's OWN SWITCHBOARD, not students. The real project is inbound-email urgent-language detection (URGENT, !!!, ALL CAPS, panicking), NOT voice_callback_queue. My earlier framing is discarded. Starting evidence for the real one: crons cron_callback_sla.php, cron_callback_retry_stale_flagger.php, cron_ai_staff_paging.php, cron_ticket_escalation_ai_routing.php, cron_auto_escalate_handoff.php, cron_email_responder.php, cron_ai_ticket_agent.php; candidate tables callback_config (20), declined_payment_escalations (20), outreach_response_escalations (21).
-- RCA FILED for why frankenstein-llm could not do this class of work: broken tool calling (now fixed), no project registry (216 escalation tables, 55 callback tables, so name-matching always misfires), VEC is document-shaped not schema-shaped, no write-path verification gate.
-- Copy windows: 11 files in /Users/rubenmajor/Desktop/CopyWindows/, all chmod +x. Window 10 rewritten, windows 6 and 8 corrected.
-
-Open threads to drive next:
-1. #23135 [executing] the RCA plus capability build. Find the REAL urgent-email project by reading detector code and citing the INSERT, build the project registry, wire it into VKL injection, add the write-path citation gate. Before any outreach, cross-check every recipient against tickets and communication_log for whether the question was already answered — Ruben asked for this explicitly and the original 19 may have grown.
-2. #23117 [executing] promoted out of proposed. Grep themes and custom plugins for pre_get_posts / posts_where / author query var overrides, patch the raw WHERE clause builder. WAF plus IP deny already live, this is the permanent fix.
-3. #23126 [executing] tool-bearing canary plus guard invariant plus log detector. The outage passed every text-only probe twice.
-4. #23122 [executing] the shipped fix. Remaining: decide the fate of the inert claude.py shim, and find what changed overnight (claude.py and router_hook.py both mtime 01:03-01:08).
-5. #23123 [executing] voice_callback_queue cleanup and the 52 empty callback tables. Real but SEPARATE from the urgent-email project, lower priority.
-6. #23050 [executing] probe-first mandate, re-driven from impl_failed to idle.
-7. #23062 [executing] server-wide data accuracy audit. The 52 empty callback tables and 6 empty CFA tables are live CLASS 1 instances.
-8. #23054 [executing] CFA validation. Re-measure cfa_tool_invocations AFTER 10:50 PT, the 0-in-24h may have been the router not an unwired table.
-9. #23056 [executing] ladder audit, resolve registry_source None.
-10. #23061 [executing] Argus stale-cache sweep.
-11. #23052 [executing] certbot, real failure is checkenginehelp.com not mail.
-12. #23055 [executing] Preceptor Evaluation form 2, 701 of 1862.
-13. #19387 [executing] QB AVS fix, needs a real card.
-
-Reference IDs:
-- Filed and promoted this session: #23050 [executing], #23052 [executing], #23054 [executing],
-```
 
 ### `1785939400779` — 8/5/2026, 7:16:41 AM PT — 1 turns
 

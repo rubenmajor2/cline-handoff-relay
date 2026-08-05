@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-05T20:39:38.550Z",
+ "generated_at": "2026-08-05T21:39:38.856Z",
  "counts": {
   "parsed": 4,
   "reused": 483,
@@ -112142,11 +112142,11 @@
   },
   "1785937352780": {
    "task_id": "1785937352780",
-   "mtime": 1785953238759,
+   "mtime": 1785965965467,
    "created_at": "2026-08-05T13:42:32.780Z",
-   "last_modified": "2026-08-05T18:07:18.759Z",
-   "size_kb": 1588,
-   "turn_count": 298,
+   "last_modified": "2026-08-05T21:39:25.467Z",
+   "size_kb": 1634,
+   "turn_count": 317,
    "title": "A bunch of my windows closed out here in Cline all at once. For these windows can you go ahead and give me multiple copy prompts to run that are re-organized / com bined by topic so that I can continue where I left off?",
    "pickup_prompt": "be re-measured after 10:50 PT.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1785937352780 — tool-schema fix holding, callback finding corrected, frankenstein-llm RCA filed.\n\nWhere we left off (verified 2026-08-05 11:06 PT):\n- TOOL-SCHEMA FIX HOLDING. _normalize_tool_schemas() router_hook.py:682, wired :848. litellm 200, Field required=0, normalizer_wired=2. Earlier proof: full failing shape 200 in 2.3s with finish_reason=tool_calls and a real tool_call. Backup router_hook.py.bak-toolschema-20260805-104300.\n- CALLBACK FINDING CORRECTED BY RUBEN. +19412943388 is EMSU's OWN SWITCHBOARD, not students. The real project is inbound-email urgent-language detection (URGENT, !!!, ALL CAPS, panicking), NOT voice_callback_queue. My earlier framing is discarded. Starting evidence for the real one: crons cron_callback_sla.php, cron_callback_retry_stale_flagger.php, cron_ai_staff_paging.php, cron_ticket_escalation_ai_routing.php, cron_auto_escalate_handoff.php, cron_email_responder.php, cron_ai_ticket_agent.php; candidate tables callback_config (20), declined_payment_escalations (20), outreach_response_escalations (21).\n- RCA FILED for why frankenstein-llm could not do this class of work: broken tool calling (now fixed), no project registry (216 escalation tables, 55 callback tables, so name-matching always misfires), VEC is document-shaped not schema-shaped, no write-path verification gate.\n- Copy windows: 11 files in /Users/rubenmajor/Desktop/CopyWindows/, all chmod +x. Window 10 rewritten, windows 6 and 8 corrected.\n\nOpen threads to drive next:\n1. #23135 [executing] the RCA plus capability build. Find the REAL urgent-email project by reading detector code and citing the INSERT, build the project registry, wire it into VKL injection, add the write-path citation gate. Before any outreach, cross-check every recipient against tickets and communication_log for whether the question was already answered — Ruben asked for this explicitly and the original 19 may have grown.\n2. #23117 [executing] promoted out of proposed. Grep themes and custom plugins for pre_get_posts / posts_where / author query var overrides, patch the raw WHERE clause builder. WAF plus IP deny already live, this is the permanent fix.\n3. #23126 [executing] tool-bearing canary plus guard invariant plus log detector. The outage passed every text-only probe twice.\n4. #23122 [executing] the shipped fix. Remaining: decide the fate of the inert claude.py shim, and find what changed overnight (claude.py and router_hook.py both mtime 01:03-01:08).\n5. #23123 [executing] voice_callback_queue cleanup and the 52 empty callback tables. Real but SEPARATE from the urgent-email project, lower priority.\n6. #23050 [executing] probe-first mandate, re-driven from impl_failed to idle.\n7. #23062 [executing] server-wide data accuracy audit. The 52 empty callback tables and 6 empty CFA tables are live CLASS 1 instances.\n8. #23054 [executing] CFA validation. Re-measure cfa_tool_invocations AFTER 10:50 PT, the 0-in-24h may have been the router not an unwired table.\n9. #23056 [executing] ladder audit, resolve registry_source None.\n10. #23061 [executing] Argus stale-cache sweep.\n11. #23052 [executing] certbot, real failure is checkenginehelp.com not mail.\n12. #23055 [executing] Preceptor Evaluation form 2, 701 of 1862.\n13. #19387 [executing] QB AVS fix, needs a real card.\n\nReference IDs:\n- Filed and promoted this session: #23050 [executing], #23052 [executing], #23054 [executing],",
    "ideas": {
@@ -112369,6 +112369,7 @@
     "20555": null,
     "20565": null,
     "20569": null,
+    "20613": null,
     "20627": "deployed",
     "20628": null,
     "20629": null,
@@ -112499,11 +112500,11 @@
   },
   "1785937503831": {
    "task_id": "1785937503831",
-   "mtime": 1785960473551,
+   "mtime": 1785965946150,
    "created_at": "2026-08-05T13:45:03.831Z",
-   "last_modified": "2026-08-05T20:07:53.551Z",
-   "size_kb": 1574,
-   "turn_count": 374,
+   "last_modified": "2026-08-05T21:39:06.150Z",
+   "size_kb": 1600,
+   "turn_count": 399,
    "title": "Can you tell me how many turns have taken place for each model in the last 5 hours by model and also look inside the grouped models like frankenstein-llm, frankenstein-tools, emsu-codegen, etc...? I want to see how many turns for the individual LLMs themselves, not the groupings",
    "pickup_prompt": "oved`, contradicting the rule.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #23171 [proposed] on per-LLM turn counts, instrument drift RCA, registry scrub.\n\nWhere we left off (verified 2026-08-05 11:41 PT):\n- Canonical instrument SHIPPED and verified on disk: /var/www/emtskills/scripts/emsu_llm_turn_counts.sh (read_server_file confirmed, bash -n SYNTAX_OK, live run 11:40:22 PDT). Any \"turns per model/box\" question MUST run this and quote verbatim. Hand-rolled greps are banned for this question.\n- Verified 5h counts. A: router-level total 5866 across 15 model ids (frankenstein-tools 3123, deepseek-v4-pro 1046, frankenstein-glm52-local 393, frankenstein-llm 336, ollama-7b-lora 242, glm-5.2 223, ollama-14b 222, ollama-32b 222, frankenstein-405b 18, 7b-parallel 18, ollama-llama3.3-70b 12, emsu-codegen 8, minicpm-v 1, claude-opus-4-8 1, glm-4.6v-flash 1). B: adapter box-level 1375 (Artemis :8000 = 790, Julia :11513 = 466, GLM Hex ring :8210 = 119, 8 spills).\n- A and B are DIFFERENT instruments. Do not sum them. The delta is NOT explained by verified evidence and must not be guessed at.\n- Two defects RCA'd and recorded in the frankenstein bug library as incident 2218 (namespace is frankenstein_router_incidents, NOT the orchestrator idea namespace): instrument drift (4 greps, 4 populations) and fabrication (3 values in a shipped table that appeared in no tool output).\n- Cesar 3b41 and Cato 2aa8 CONFIRMED as GLM-5.2 Hex PP=6 ring members via :8210, NOT standalone gpt-oss-120b. Zero attributions in the entire log, both ports dead, :8210 serves glm-5.2-15pct.\n- Artemis ollama :11434 RCA complete: dead since 2026-08-03 18:00 PT, TCP-refused every probe since the 2026-08-04 13:08 restart, absorbed harmlessly by the adapter instant-skip, but still stale-listed in CHAT_UPSTREAMS and the registry.\n\nOpen threads to drive next:\n1. #23076 [rejected] on per-member backend attribution into llm_call_log. Do NOT re-file it under a new number. Needs a human decision on direction before anything is built. Duplicate #23044 [proposed] is still open and should be closed or merged to match the rejection.\n2. #23127 [executing] on Artemis ollama :11434. Decide restart versus decommission, then either bring the daemon up on 10.100.0.5 or scrub it from the adapter's default CHAT_UPSTREAMS and the registry entries.\n3. #23171 [proposed] to scrub the self-contradicting cesar-cx7-cluster row from frankenstein_registry.yaml serving_endpoints, using the julia-claudia-cx7-cluster row's embedded ring-membership note as the template.\n4. Dashboard surfacing of these counts in llm_router_live.php RAW TURN COUNTS, blocked on the #23076 [rejected] direction call (human-only decision, no idea).\n5. Server-side reconcile_ideas deriveTag still returns the queued tag for status=approved, contradicting clinerule 161 which bans it (human-only decision, no idea). Flagging rather than patching a rules-enforcement surface unilaterally.\n6. #21045 [rejected] describes the GLM canary TCP-refused instant-skip, but that behavior IS live in /usr/local/bin/frankenstein_tools_adapter.py. Code and idea record disagree; needs a human call on whether to re-open the idea or annotate it as shipped-by-other-means (human-only decision, no idea).\n\nReference IDs:\n- Ideas filed: #23171 [proposed], #23127 [executing], #23044 [proposed]\n- Ideas closed: #23076 [rejected]\n- Ideas flagged as inconsistent with live code: #21045 [rejected]\n- Bug library incident (separate namespace",
    "ideas": {
@@ -112598,6 +112599,8 @@
     "23076": "executing",
     "23127": "proposed",
     "23171": "proposed",
+    "23264": "proposed",
+    "23265": "proposed",
     "64748": null
    }
   },
@@ -112688,13 +112691,13 @@
   },
   "1785940995783": {
    "task_id": "1785940995783",
-   "mtime": 1785960641277,
+   "mtime": 1785965823749,
    "created_at": "2026-08-05T14:43:15.783Z",
-   "last_modified": "2026-08-05T20:10:41.277Z",
-   "size_kb": 574,
-   "turn_count": 256,
+   "last_modified": "2026-08-05T21:37:03.749Z",
+   "size_kb": 594,
+   "turn_count": 262,
    "title": "Resolve this issue:\n\n- __#23028 [executing]__ — There's an __active SQL injection__ against your `wordpress_2` database. Time-based blind SQLi injecting `SELECT SLEEP(3)` through a `post_author` param, 37 probes between 08-02 and 08-05, each one holding a MariaDB thread for __864-1044 seconds__. Since every vhost on WOPR shares one mariadbd, it's stealing threads from everything. \n\n-",
-   "pickup_prompt": "ases and untouched by the WAF.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #23028 [executing] - SQLi attack on wordpress_2: WAF + IP block live, status verified green 13:10 PT\n\nWhere we left off (verified 2026-08-05 13:10 PT):\n- #23028 [executing] - WAF 403-blocking live: 19 (emsu) + 9 (emtrefresher) intercepted since deploy; 0 new DB hits; 0 long-running queries\n- #23117 [in_progress] - Audit complete: no vulnerable custom code found (theme + all 6 custom plugins clean). Root cause = WP core `author` param through MariaDB escaping; edge defense is the mitigation. ER sites verified zero direct probes.\n- #23077 [rejected] - closed; deny 80.94.95.236 deployed directly in nginx shared snippet (verified in active `nginx -T` output)\n- Actual slow-log delta 110→114 = my own diagnostic queries at 13:00–13:06 PT (artifact, not attack)\n\nOpen threads to drive next:\n1. #23117 [in_progress] - consider permanent hardening: per-user MariaDB `max_statement_time` for wordpress_2 account (currently unsupported on this MariaDB version) or upgrade review. Edge defense fully handles the current attack pattern.\n\nReference IDs:\n- Ideas filed: #23117 [in_progress], #23077 [rejected]\n- Files touched: /etc/nginx/emsu-sqli-waf.conf, emsuniversity.com vhost_nginx.conf, emtrefresher.com nginx.conf\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
+   "pickup_prompt": "a P3 ops note, not a P0 to-do.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #23028 [executing] — SQLi attack on wordpress_2: WAF + IP block live, hardening path evaluated\n\nWhere we left off (verified 2026-08-05 14:36 PT):\n- #23028 [executing] — WAF 403-blocking live: 19 (emsu) + 9 (emtrefresher) intercepted since deploy; 0 new DB hits; 0 long-running queries. MariaDB 10.11.14 global `max_statement_time` only — per-user GRANT syntax unsupported. Global cap would risk cutting off admin_portal (SLS brain), moodle, and all 9 ER registration DBs. Edge defense is the correct tier.\n- #23117 [in_progress] — audit complete: no vulnerable custom code found (theme + all 6 custom plugins clean). Root cause = WP core `author` param through MariaDB escaping. Permanently mitigated at the edge. Per-user max_statement_time shelved until MariaDB upgrade supports it.\n- #23077 [rejected] — IP deny 80.94.95.236 live in nginx active config (nginx -T verified)\n\nOpen threads to drive next:\n1. #23117 [in_progress] — when MariaDB upgrade reaches the feature level where GRANT ... WITH MAX_STATEMENT_TIME is supported, apply to wordpress_2 user only (not admin_portal, not moodle, not ER DBs). Edge defense handles the current threat pattern fully.\n\nReference IDs:\n- Ideas filed: #23117 [in_progress], #23077 [rejected]\n- Files touched: /etc/nginx/emsu-sqli-waf.conf, emsuniversity.com vhost_nginx.conf, emtrefresher.com nginx.conf\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
     "2212": null,
     "23027": null,
@@ -113427,13 +113430,13 @@
   },
   "1785957900287": {
    "task_id": "1785957900287",
-   "mtime": 1785960927845,
+   "mtime": 1785965235028,
    "created_at": "2026-08-05T19:25:00.287Z",
-   "last_modified": "2026-08-05T20:15:27.845Z",
-   "size_kb": 443,
-   "turn_count": 93,
+   "last_modified": "2026-08-05T21:27:15.028Z",
+   "size_kb": 483,
+   "turn_count": 112,
    "title": "Telphony still having issues:\n\nLots of errors on this page:\n\nhttps://www.emsuniversity.com/emtskills/routes/telephony_hub.php?view=agent \n\nUncaught ReferenceError: switchTab is not defined\n    at HTMLButtonElement.onclick (telephony_hub.php?view=agent:3011:87)\n/emtskills/api/ruben_context_api.php:1  Failed to load resource: the server responded with a status of 401 ()\ntelephony_hub.php?view=agent:3000 Uncaught ReferenceError: switchTab is not defined\n    at HTMLButtonElement.onclick (telephony_hub.php?view=agent:3000:95)\ntelephony_hub.php?view=agent:2997 Uncaught ReferenceError: switchTab is not defined\n    at HTMLButtonElement.onclick (telephony_hub.php?view=agent:2997:106)\n/emtskills/api/r",
-   "pickup_prompt": null,
+   "pickup_prompt": "fallback but is now dead code)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up telephony hub diagnostic follow-up.\n\nWhere we left off (verified 2026-08-05 14:26 PT):\n- switchTab moved to <head> in telephony_hub.php line 773 — loads before tab buttons\n- ruben_context_api.php now reads $_SESSION['user']['id'] instead of nonexistent $_SESSION['user_id']\n- ruben_context_api.php now uses custom session_save_path matching auth.php\n- PHP-FPM reloaded — both fixes live\n- Redundant standalone switchTab block at line 3371 remains as fallback (body copy) — fine since head loads first\n\nOpen threads to drive next:\n1. **(human-only decision, no idea)** — Have an agent open the telephony hub page with DevTools open and confirm: (a) no more switchTab errors, (b) no more 401 ruben_context_api.php storms\n2. **(human-only decision, no idea)** — Monitor FPM pool health — the 401 retry storm was consuming ~3.4 req/s continuously. After fix, FPM load should drop noticeably within 2-5 minutes as open tabs re-poll with successful 200s\n\nReference IDs:\n- Files: `/var/www/emtskills/routes/telephony_hub.php`, `/var/www/emtskills/api/ruben_context_api.php`\n- Backups: `telephony_hub.php.bak-20260805-switchtab`, `BACKED_UP` (via write_server_file)\n</result>\n</attempt_completion>",
    "ideas": {
     "334155": null
    }

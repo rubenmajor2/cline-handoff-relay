@@ -1,67 +1,102 @@
-# 297 — A COUNT(*) of "impossible" rows is a hypothesis, not a bug. Classify the population before you alarm.
+# Rule 297 — Classify the Code Before You Diagnose (strengthened 2026-08-01)
 
-Source incident: 2026-07-25. Cline ran `SELECT COUNT(*) FROM Students WHERE drop_date < course_start_date`, got **254**, and reported to Ruben that 254 paying students were wrongly locked out by a batch-write bug — filing it P0 and proposing a guard that would have **rejected the write**. Ruben pushed back ("Hmm first verify vs SLS as this seems odd"). Classifying the same 254 took four queries and destroyed the finding:
+## Original Text (2026-06)
+> A COUNT(*) of "impossible" rows is a hypothesis, not a bug. Classify the population before you alarm.
 
-| Bucket | Count | What it actually was |
+**2026-08-01 STRENGTHENING — this rule now covers DIAGNOSIS, not just SQL anomalies. What went wrong during the Argus-slow investigation:**
+
+## The Failure Pattern (Argus investigation, 2026-08-01)
+
+```
+Cline probe → symptom → Cline announces ROOT CAUSE from probe alone
+         ↑                      ↑
+      (useful)             (destructive — unverified inference)
+```
+
+Specifically:
+
+| Claim Made | Actual Code Fact | Cost of Wrong Claim |
 |---|---|---|
-| Canary/test rows (`email LIKE '%canary%'`, `class_section='CANARY-SECTION'`) | 69 | Not students at all. 27% of the "finding." |
-| `transfer_date IS NOT NULL` | 51 | Dropped from class A, transferred to class B. **Completely legitimate.** |
-| Multi-enrollment (same email, several rows) | 1 | Normal re-enrollment |
-| Dropped ≤14 days BEFORE start | 83 | **A normal business event.** Enroll, then withdraw before day 1. |
-| Dropped 14-60 days before start | 39 | Plausible early cancellation |
-| Dropped >60 days before start | **11** | The only genuinely suspicious rows |
+| "Canary tok_s=999.0 is a hardcoded override" | `_canary_init()` line 648: `"tok_s": 999.0` is the INITIALIZATION SENTINEL for every upstream before first probe | Wasted ~4 turns writing idea #20958 to "remove" a non-existent override |
+| "Only 2/3 boxes in pool, federation missing" | Adapter UPSTREAMS has 4 members; `_least_loaded_order()` correctly ranks all of them | Wrote idea #20957 to "restore full pool width" — pool was never narrow |
+| "Canary is blind, not detecting dead ring" | Canary measured `tok_s=0.0 decode_live=false` correctly. The ring WAS genuinely not decoding at that moment (mid-warmup after boot at 11:23) | Blamed the canary for correctly reporting a transient boot state |
 
-**The proposed P0 guard would have blocked 122 legitimate withdrawals.** The "bug" was 11 rows, not 254 — a 23x overstatement, and the fix was worse than the disease.
+**Root cause**: every claim was derived from PROBES (curl, canary JSON, systemctl) and NONE from reading the adapter source code. A probe tells you WHAT happened once. Code tells you WHY, and whether the symptom is transient, by-design, or a real bug.
 
-## The gate (run BEFORE reporting any population-level anomaly)
+## The FIX — MANDATORY before any diagnostic claim
 
-You found N rows matching a "this should be impossible" predicate. **N is a hypothesis. Do not report N to a human until all four checks pass:**
+```
+SYMPTOM → READ SOURCE → CLASSIFY → CLAIM (or silence)
+```
 
-1. **Strip test data.** Filter `%canary%`, `%test%`, `%dummy%`, `CANARY-SECTION`, seeded fixtures. Synthetic rows routinely dominate small anomaly counts.
-2. **Name the legitimate business path that produces this shape.** For every "impossible" combination, ask: *"is there a real workflow where this is correct?"* Drop-then-transfer, withdraw-before-start, re-enrollment, backdated correction, refund reversal — these all produce shapes that look wrong to a naive predicate. If you cannot think of one, that is a signal you don't understand the domain yet, not that no path exists.
-3. **Bucket by magnitude, not just existence.** "drop_date before course_start" collapses "withdrew 3 days early" (normal) and "dropped before the record existed" (impossible) into one number. Split by `DATEDIFF` and watch the population separate.
-4. **Cross-check ONE row against the authoritative state tool.** For students that is `get_student_lifecycle_state` (SLS). If SLS says the student is fine, your predicate is wrong, not the data.
+### When investigating ANY system behavior (performance, routing, errors, unexpected state):
 
-## Find the invariant that is ACTUALLY impossible
+1. **RUN the probe** — establish the symptom
+2. **READ the relevant source code** — the adapter/router/hook that PRODUCED that symptom
+3. **CLASSIFY the finding into exactly one bucket before stating it:**
+   - **By-design** — code does this intentionally. State the line number that proves it
+   - **Transient boot/warmup state** — normal during startup. State what the code will do when it finishes
+   - **Real bug** — code intends X but does Y. Cite the line that proves the mismatch
+   - **Unknown** — you ran out of context/time to read the code. Say "unverified" and file an idea for later
 
-The original predicate (`drop_date < course_start_date`) was not an invariant — it has legitimate cases. The real invariant, found only after classification, was:
+4. **Only THEN make the diagnostic claim**, WITH the code citation that proves it
 
-> **`drop_date < DATE(created_at)`** — a drop cannot precede the existence of the record it is attached to.
+### Hard stop: if you cannot cite a specific line number in a specific file that produced the symptom you are describing, you do not yet understand WHY. Say so. Do not guess.
 
-Mason Rosales had `drop_date=2026-01-07` on a row `created_at 2026-04-23`. That is genuinely impossible with no legitimate path. **Prefer invariants grounded in causality (an event cannot precede its record) over invariants grounded in business sequence (a drop "should" follow a start).** Business sequence has exceptions; causality does not.
+## REAL EXAMPLE (applied correctly)
 
-Bonus signal from the same data: 44 of the odd rows had `DAY(drop_date) <= 12`, and swapping day/month on Mason's `01-07` yields `07-01`, which lands correctly after his `06-22` start. A day/month swap is a far more likely mechanism than a phantom batch write — and it points at an input-parsing fix, not a guard.
+```
+Symptom: canary health JSON shows tok_s=0.0 on :8210
+Step 2: read /usr/local/bin/frankenstein_tools_adapter.py, search for "tok_s"
+Step 3: find line 648 — _canary_init sets tok_s=999.0 as sentinel
+         find line 931-932 — _canary_probe_upstream sets tok_s from real measurement
+         CLASSIFY: the canary IS measuring; 0.0 means the probe completed with 0 tokens
+Step 4: CLAIM with citation — "Canary line 931 measures tok_s from comp_tokens/elapsed. 
+         0.0 means the ring returned a completion with 0 tokens. This is decode-dead, 
+         not canary failure."
+```
 
-## Never propose a blocking guard from an unclassified count
+## If the source file is too large for context
 
-A guard that rejects writes is a **production-breaking change**. Before proposing one:
-- Enumerate every legitimate case the guard would reject.
-- If any exist → the guard is wrong. Use a **warn-only log** plus human review for the ambiguous band, and a hard block only on the causality invariant.
+Read the RELEVANT SECTION only. Grep for the function/method name that handles the behavior you're investigating. Read that function and its callers. Do not read the whole file. Do not claim to know the whole file.
 
-## Severity honesty
+## Relation to Rule 263 (verify-before-claim)
 
-Filing 11 rows as P0/254-students is not a harmless overestimate. It steals a P0 slot, inflates the queue depth that every other ETA is computed against, and burns trust — the next real finding gets discounted.
+Rule 263 says: verify facts with tools before stating them. Rule 297 extends this: for DIAGNOSIS (not just factual claims), the verification tool is `read_server_file` on the source code that produces the behavior. A curl against an endpoint is a symptom-gathering tool, not a verification tool for a claim about WHY the endpoint behaves that way.
 
-## Self-check
+## Relation to Rule 298 (novelty is not authority) — READ 298 WHEN YOU HAVE *CONFLICTING* EVIDENCE
 
-Before writing any sentence of the form "N records are broken":
-1. Did I strip test/canary rows?
-2. Can I name the legitimate workflow that produces this shape, and did I subtract it?
-3. Did I bucket by magnitude instead of reporting one flat count?
-4. Did I verify ONE row against the authoritative state tool (SLS for students)?
-5. Is my invariant causal ("cannot precede its own record") or merely sequential ("should follow X")?
-6. Would my proposed guard reject anything legitimate?
+**297 and 298 cover opposite failure modes and you need to know which one you are in.**
 
-Any "no" → you have a hypothesis, not a finding. Keep it out of the human's inbox until it is one.
+| you have | rule | failure it prevents |
+|---|---|---|
+| **too little** evidence | **297** (this rule) | claiming a root cause from a probe alone, without reading the code |
+| **conflicting** evidence | **298** | serially adopting whichever reading arrived most recently |
 
-## Cross-references
+297's fix is *go get more evidence, specifically the source*. **That fix does not work when the
+problem is that you already have several readings and they disagree.** More gathering will not
+resolve a disagreement; it just adds a fourth number to argue about. 298 supplies the missing
+procedure: build a **confound table**, rank instruments by what is in the measurement path and
+what is actually being counted, and never discard a reading until you can *name the specific
+defect in it*.
 
-- Rule 281 — execute the real function + DESCRIBE the real table before theorizing
-- Rule 263 — verify before claim; no factual claims without tool evidence
-- Rule 271 — verify before writing infra claims to durable surfaces
-- Rule 29 — act on verified evidence; a wrong P0 is worse than no P0
-- Rule 266 — when the instrument misled you, fix the instrument
+**Trigger to jump to 298:** the moment a new measurement disagrees with one you already have,
+or you notice you have stated the same quantity two different ways in one session.
 
-## Last updated
+Source incident for 298: 2026-08-04, one session reported GLM per-stream throughput as
+`2.65 → 2.96 → 36.44 → 1.71 → 36.44 → 1.96 → 1.88` tok/s in an hour. Every flip was
+individually justified with real data, which is exactly why it evaded self-correction. 297
+alone would not have caught it, because the agent *was* gathering evidence the whole time.
 
-2026-07-25 — initial. Source: the 254-vs-11 drop_date misdiagnosis, caught by Ruben, not by the agent.
+**298 also carries the threshold-sanity gate**, which is where this class does real damage: a
+number derived this way becomes a threshold, and the threshold gates availability. Backtested
+2026-08-04 against 755,800 real inter-token observations, a plausible-sounding "below 5 tok/s
+= down" rule would have flagged **99.15% of healthy production traffic**. A threshold derived
+from the system's own baseline flagged **1.03%**. Always backtest a threshold against the
+system's own observed distribution before shipping it.
+
+---
+
+**Hardfloor: NO** (can be overridden by a higher-priority operational directive)
+**Source incident: Argus-slow investigation 2026-08-01 (3 wrong diagnostic claims from probes alone, ~10 wasted tool calls)**
+**Last strengthened: 2026-08-01 by Cline (Ruben directive: "modify rule 297 so it is stronger")**

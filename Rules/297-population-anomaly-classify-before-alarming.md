@@ -64,6 +64,37 @@ Read the RELEVANT SECTION only. Grep for the function/method name that handles t
 
 Rule 263 says: verify facts with tools before stating them. Rule 297 extends this: for DIAGNOSIS (not just factual claims), the verification tool is `read_server_file` on the source code that produces the behavior. A curl against an endpoint is a symptom-gathering tool, not a verification tool for a claim about WHY the endpoint behaves that way.
 
+## Relation to Rule 298 (novelty is not authority) — READ 298 WHEN YOU HAVE *CONFLICTING* EVIDENCE
+
+**297 and 298 cover opposite failure modes and you need to know which one you are in.**
+
+| you have | rule | failure it prevents |
+|---|---|---|
+| **too little** evidence | **297** (this rule) | claiming a root cause from a probe alone, without reading the code |
+| **conflicting** evidence | **298** | serially adopting whichever reading arrived most recently |
+
+297's fix is *go get more evidence, specifically the source*. **That fix does not work when the
+problem is that you already have several readings and they disagree.** More gathering will not
+resolve a disagreement; it just adds a fourth number to argue about. 298 supplies the missing
+procedure: build a **confound table**, rank instruments by what is in the measurement path and
+what is actually being counted, and never discard a reading until you can *name the specific
+defect in it*.
+
+**Trigger to jump to 298:** the moment a new measurement disagrees with one you already have,
+or you notice you have stated the same quantity two different ways in one session.
+
+Source incident for 298: 2026-08-04, one session reported GLM per-stream throughput as
+`2.65 → 2.96 → 36.44 → 1.71 → 36.44 → 1.96 → 1.88` tok/s in an hour. Every flip was
+individually justified with real data, which is exactly why it evaded self-correction. 297
+alone would not have caught it, because the agent *was* gathering evidence the whole time.
+
+**298 also carries the threshold-sanity gate**, which is where this class does real damage: a
+number derived this way becomes a threshold, and the threshold gates availability. Backtested
+2026-08-04 against 755,800 real inter-token observations, a plausible-sounding "below 5 tok/s
+= down" rule would have flagged **99.15% of healthy production traffic**. A threshold derived
+from the system's own baseline flagged **1.03%**. Always backtest a threshold against the
+system's own observed distribution before shipping it.
+
 ---
 
 **Hardfloor: NO** (can be overridden by a higher-priority operational directive)

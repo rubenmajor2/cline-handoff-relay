@@ -160,6 +160,7 @@
 → Trigger: student status, enrollment, Moodle, exam, proctoring, externship, paperwork, integrity, grades, quiz
 → Fetch all: `clinerules_list_by_topic("student")`
 - **Lifecycle state** — R: 79,125,128,135 + `get_student_lifecycle_state()` (FIRST move on any student issue)
+- **Certificate blockers (MANDATORY traceback)** — R: 303 (walk the simplecertificate `cm.availability` tree recursively: completion + grade + grouping conditions, check `simplecertificate_issues` for an already-issued cert, NEVER send a flat quiz list or a paperwork-catalog gap as a "blocker")
 - **Exam enforcement** — `emsu://reference/exam-retake-policy` (SEB+proctor+72hr), `check_exam_enforcement()`
 - **NREMT under-18** — `emsu://reference/nremt-under18-policy` (deadline → 18th birthday + 60-day refresher; under-18 students are NOT past-deadline)
 - **Externship** — `emsu://reference/externship-agent`, `lookup_paperwork_state()` (rule 31)

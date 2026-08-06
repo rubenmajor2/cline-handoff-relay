@@ -6,26 +6,27 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/5/2026, 7:39:40 PM PT | window: last 72h | 114 tasks | index total 491 (parsed 4, cached 487)
+Generated: 8/5/2026, 8:39:40 PM PT | window: last 72h | 111 tasks | index total 492 (parsed 6, cached 486)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785937503831` | 8/5/2026, 7:39:36 PM | 595 | 2040KB | Can you tell me how many turns have taken place for each model in the last 5 hours by mode |
-| `1785939083137` | 8/5/2026, 7:22:54 PM | 1538 | 2520KB | https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since  |
-| `1785939420388` | 8/5/2026, 7:16:27 PM | 714 | 14208KB | #Argus |
-| `1785966242067` | 8/5/2026, 7:14:54 PM | 338 | 924KB | #TDSHS |
-| `1785976094322` | 8/5/2026, 6:43:55 PM | 114 | 1332KB | For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 |
+| `1785954856277` | 8/5/2026, 8:39:38 PM | 330 | 2096KB | #CFA |
+| `1785939083137` | 8/5/2026, 8:39:30 PM | 1605 | 2789KB | https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since  |
+| `1785986098106` | 8/5/2026, 8:38:13 PM | 138 | 302KB | #TDSHS |
+| `1785939420388` | 8/5/2026, 8:37:44 PM | 944 | 14697KB | #Argus |
+| `1785954595787` | 8/5/2026, 8:20:31 PM | 226 | 1063KB | #KAISON |
+| `1785937503831` | 8/5/2026, 8:11:44 PM | 658 | 2201KB | Can you tell me how many turns have taken place for each model in the last 5 hours by mode |
+| `1785966242067` | 8/5/2026, 8:03:19 PM | 386 | 1295KB | #TDSHS |
+| `1785953794202` | 8/5/2026, 7:56:59 PM | 396 | 1299KB | COPY_WINDOW_0_DATA_ACCURACY_AUDIT |
+| `1785954766914` | 8/5/2026, 7:56:32 PM | 248 | 949KB | #LLM FLEET |
+| `1785976094322` | 8/5/2026, 7:53:06 PM | 158 | 1399KB | For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 |
 | `1785971158342` | 8/5/2026, 4:45:56 PM | 118 | 287KB | #AZDHS |
 | `1785953852961` | 8/5/2026, 4:34:41 PM | 408 | 1149KB | #GLM  |
-| `1785954595787` | 8/5/2026, 4:17:15 PM | 160 | 794KB | #KAISON |
 | `1785954733601` | 8/5/2026, 4:13:01 PM | 356 | 692KB | #SLS MEGA |
-| `1785954856277` | 8/5/2026, 4:10:08 PM | 208 | 1802KB | #CFA |
 | `1785957900287` | 8/5/2026, 4:08:38 PM | 174 | 642KB | Telphony still having issues: |
-| `1785954766914` | 8/5/2026, 4:03:24 PM | 218 | 861KB | #LLM FLEET |
 | `1785954707277` | 8/5/2026, 4:03:19 PM | 294 | 818KB | #EA PIPELINE |
 | `1785953476892` | 8/5/2026, 3:59:23 PM | 480 | 1034KB | build and ship this |
 | `1785966271898` | 8/5/2026, 3:52:29 PM | 162 | 435KB | #Payment Issues |
-| `1785953794202` | 8/5/2026, 3:49:35 PM | 352 | 1203KB | COPY_WINDOW_0_DATA_ACCURACY_AUDIT |
 | `1785937352780` | 8/5/2026, 2:43:42 PM | 330 | 1676KB | A bunch of my windows closed out here in Cline all at once. For these windows can you go a |
 | `1785940995783` | 8/5/2026, 2:37:03 PM | 262 | 594KB | Resolve this issue: |
 | `1785939400779` | 8/5/2026, 7:16:41 AM | 1 | 5KB | Please see this in Argus, appears like some hallucinations, the model is not answering que |
@@ -120,64 +121,70 @@ Generated: 8/5/2026, 7:39:40 PM PT | window: last 72h | 114 tasks | index total 
 | `1785483774534` | 8/2/2026, 11:14:28 PM | 428 | 1226KB | Play frankenstein doctor of executor for the next 60 minutes (use timestamps) and make sur |
 | `1785581189111` | 8/2/2026, 10:14:58 PM | 1078 | 3808KB | I need to make sure that the orchestra is running and that we don't just have a bunch of i |
 | `1785456423435` | 8/2/2026, 8:40:36 PM | 582 | 2345KB | See Vicky's chats regarding EMT and Refresher schedules in Chat 55 and repair |
-| `1785566802438` | 8/2/2026, 8:30:58 PM | 222 | 1232KB | We are planning a trip to Texas between August 9-12. Which cities do I need to pop into in |
-| `1785452265627` | 8/2/2026, 8:21:16 PM | 544 | 1271KB | explain how this student has a Moodle Completion Date but does not have a printed certiica |
-| `1785355259217` | 8/2/2026, 8:20:44 PM | 1098 | 2393KB | i ahve been told this form is not populating PDF forms properly downstream. Can you check  |
-| `1785602138255` | 8/2/2026, 8:02:30 PM | 994 | 2961KB | #Queued Ideas |
 
 ---
 
 ## Per-window detail
 
-### `1785937503831` — 8/5/2026, 7:39:36 PM PT — 595 turns
+### `1785954856277` — 8/5/2026, 8:39:38 PM PT — 330 turns
 
 **Original task:**
 
 ```
-Can you tell me how many turns have taken place for each model in the last 5 hours by model and also look inside the grouped models like frankenstein-llm, frankenstein-tools, emsu-codegen, etc...? I want to see how many turns for the individual LLMs themselves, not the groupings
+#CFA
+
+
+═══════════════════════════════════════════════
+PICKUP PROMPT: CFA HEALTH VALIDATION OWNER
+═══════════════════════════════════════════════
+Pick up CFA validation. Ruben's read is that the CFAs ARE working, so this is a VALIDATION task, not a restart task. Do NOT restart or reconfigure anything until the instrumentation question below is answered.
+
+MAJOR CONTEXT ADDED 2026-08-05 10:50 PT — A ROUTER BUG WAS BREAKING TOOL CALLS FLEET-WIDE:
+For most of this morning every tool-bearing request through LiteLLM returned HTTP 400 (53 validation errors: ('body','tools',N,'function') Field require
 ```
 
-**Ideas referenced:** #10108, #10740, #11397, #11741, #11781, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12477, #12618, #12657, #12672, #12673, #12689, #12716, #12824, #12872, #12878, #13108, #13121, #13202, #13831, #13832, #13874, #13964, #14000, #14848, #15269 [deployed], #16120, #16163, #16265, #16304, #16588, #16646 [deployed], #16648, #16718, #16844, #17202, #17203, #17205, #18312, #18326, #18781, #18786, #18868, #19173, #19653 [unknown], #1967, #19903, #2014, #20272, #20300, #2050, #20536, #20722, #21045 [deployed], #21136, #2176, #2177, #2218 [deployed], #22258 [proposed], #22294, #2231, #22334, #22583, #22749, #22750 [proposed], #22751 [proposed], #22820, #22897, #23028, #23029, #23030, #23031, #23044 [proposed], #23067 [deployed], #23076 [executing], #23127 [proposed], #23171 [proposed], #23264 [proposed], #23265 [proposed], #64748, #9889
+**Ideas referenced:** #12206, #1255, #128260, #14132, #15204, #16152, #16153, #16154, #16473, #16732, #16817, #17150, #17446, #177914, #18796 [deployed], #18848 [deployed], #18944, #18951, #19437, #19682, #20925, #21064, #21070 [ready_for_review], #22060, #22294 [deployed], #23050 [executing], #23054 [executing], #23122 [executing], #23184, #23207 [deployed], #23208 [proposed], #23209, #23225 [proposed], #23309 [proposed], #23316 [proposed], #23317, #23466 [executing], #23493 [proposed], #2563, #2782, #3237, #32584, #3572, #4470, #4991, #5298, #5447, #5459, #5608, #5646, #6064, #6106, #6228, #6751, #7206, #7207, #7317, #7356, #7907, #8060, #8103
 
 **Last PICKUP PROMPT:**
 
 ```
-ved this session is finalized.
+d — now registered via #23309.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
+Pick up task #CFA follow-through — CFA validation remainder + Ruben decisions.
 
-Pick up task #23264 [executing] — probe tag shipped, cache warming fixed, remaining items are decisions.
+Where we left off (verified 2026-08-05 20:37 PT):
+- 5 CFA crons re-registered and running (#23208 [deployed])
+- Closure-pending notifier built + registered + forward-filled — 11 emails sent, 11 timers set (#23317 / #23466 [executing])
+- Payment auto-resolve cron registered (#23309 [deployed])
+- Email subject leak fixed (#23207 [deployed])
+- Backlog intake_source backfilled (#23225 [deployed])
+- 213 NULL intake_source tickets in backlog (Admin Holds, academics)
+- 11 closure_pending_contact_since timers ticking (consumer gate will resolve at 36h+)
 
-Where we left off (verified 2026-08-05 16:11 PT):
-- #23264 [executing] SHIPPED: FleetTierHealth.php:121 probe content = emsu_fleet_liveness_probe; llm_router_live.php:302 classifies it as probe; PHP-FPM reloaded; 18 tagged probes verified live. Backups FleetTierHealth.php.bak-16646-20260805-154838, llm_router_live.php.bak-probetag-20260805-155500.
-- #23265 [executing] SHIPPED: cron_deepseek_cache_warming.php STEERING_TEXT enlarged past 64 tokens; verified 0% to 92.09% over two consecutive runs. DeepSeek prefix caching PROVEN working. Backup cron_deepseek_cache_warming.php.bak-64tok-20260805-152032.
-- deriveTag patched and verified identical in src + build; service restarted NRestarts=0; queued tag ban live.
-- #19653 [executing] ALREADY IMPLEMENTED; /var/log/emsu-adapter-upstream.log live at 24MB; Path A needed no work.
-- No unnecessary paid spill: 12 non-probe cloud picks in a true tz-aware hour, zero fallthrough, zero 503s.
-- DB-verified states after reconcile timeout: #23076 [proposed], #23171 [proposed], #23127 [executing], #19653 [executing].
-- Bug library incident 2231 documents this session's three errors (TZ inflation, dashboard false-negative, cache self-measurement).
-
-Open threads to drive next:
-1. #23127 [executing] Artemis ollama :11434 dead — restart or decommission, then scrub adapter CHAT_UPSTREAMS and registry. Only approved idea with concrete remaining scope.
-2. #23076 [proposed] per-member backend attribution into llm_call_log; cost telemetry blind to cloud picks.
-3. #23171 [proposed] scrub cesar-cx7-cluster gpt-oss-120b-on-:11506 claim in frankenstein_registry.yaml; stale row misleads agents.
-4. Probe cadence budget (human-only, no idea): 1,440 deepseek + 1,440 glm-5.2 paid probes/day per #15269 [deployed]; claude-opus tier hard-skipped in FleetTierHealth.php; cadence never re-validated.
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #23493 [proposed] — Ruben decision: DROP cfa_auto_resolve_log table? (0 rows, #21070 spec never built). Rollback script exists at /var/www/emtskills/docs/specs/cfa_auto_resolve_our_caused_grievances_rollback.sh
+2. #21070 [ready_for_review] — Ruben decision: build grievance auto-resolve pipeline from P0 spec, or close as won't-build?
+3. #23316 [executing] — Verify blank-source tickets resolved themselves (was 176, now 0 in backlog). Update idea status → deployed if confirmed.
+4. #23466 [deploying] — Verify 11 closure_pending_contact_since timers cascade to resolved after 36h. Check consumer gate log at /var/log/emsu/closure_contact_gate.log after 2026-08-06 08:34 PT.
+5. CFA cron health re-check: did access_sweep, dispatch, struct_enforcer populate after overnight? (were 0 at 15:41 PT)
 
 Reference IDs:
-- Ideas: #23264 [executing], #23265 [executing], #19653 [executing], #23127 [executing], #23076 [proposed], #23171 [proposed], #15269 [deployed]
-- Bug library incidents: 2231 (this session), 2218 (earlier drift)
-- Files changed: lib/FleetTierHealth.php, routes/llm_router_live.php, cron/cron_deepseek_cache_warming.php, scripts/emsu_llm_turn_counts.sh, mcp-servers/ruben-orchestrator/src/index.ts, mcp-servers/ruben-orchestrator/build/index.js
-- Backups: FleetTierHealth.php.bak-16646-20260805-154838, llm_router_live.php.bak-probetag-20260805-155500, cron_deepseek_cache_warming.php.bak-64tok-20260805-152032, src/index.ts.bak-queuedban-*, build/index.js.bak-queuedban-*
+- Ticket: #CFA (this session)
+- Ideas filed: #23207, #23208, #23225, #23309, #23316, #23317/#23466, #23493
+- Files touched: /var/www/emtskills/cron/cron_email_responder.php, cron_ai_replied_stale_resolve.php, cron_deep_sweep_ai_replied.php, cron_rule29_human_queue.php, cron_closure_pending_notifier.php, cron_closure_contact_gate.php
+- /etc/cron.d/emsu-cfa-access-sweep, emsu-cfa-dispatch, emsu-cfa-quality, emsu-cfa-llm-health, emsu-cfa-struct, emsu-cfa-payment-auto-resolve, emsu-closure-pending-notifier
+- Ledger: /var/www/emtskills/cline_task_ledger.md (appended throughout)
 
-When done, append to cline_task_ledger.md (rule 07), run order 66.
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
 
-### `1785939083137` — 8/5/2026, 7:22:54 PM PT — 1538 turns
+### `1785939083137` — 8/5/2026, 8:39:30 PM PT — 1605 turns
 
 **Original task:**
 
@@ -189,7 +196,21 @@ https://www.emsuniversity.com/emtskills is choked out again. Very very slow and 
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785939420388` — 8/5/2026, 7:16:27 PM PT — 714 turns
+### `1785986098106` — 8/5/2026, 8:38:13 PM PT — 138 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+Open up the TDSHS window I just inadvertantly closed and tell me the last task completed regarding this page: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=list  / BTW clicking thowe rows does nothing. Plus why are there duplicate entires for 2 students? I'm confused on that like for tomorrow I see 6 responses due. I think if there's a linkage, those all get populated on the detail page with the centralized response for each, this way we're not splitting hairs. Again, those links don't yet work or show details. Table should also show name of student // Wai
+```
+
+**Ideas referenced:** #047857, #059669, #111827, #23463 [unknown], #23482 [proposed], #23484 [proposed], #23491 [proposed], #2563, #3730, #374151, #475569, #64748, #92400
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785939420388` — 8/5/2026, 8:37:44 PM PT — 944 turns
 
 **Original task:**
 
@@ -212,7 +233,7 @@ Searched EMSU records (0 student profiles matched)
 Searched 
 ```
 
-**Ideas referenced:** #16213, #16523, #18944, #18951, #19348, #20627 [deployed], #21582, #2212 [open], #22688, #22850, #22887 [proposed], #22939 [proposed], #23027 [deployed], #23029, #23036 [proposed], #23037 [proposed], #23038 [proposed], #23039 [proposed], #23050 [executing], #23052, #23061 [executing], #23067 [deployed], #23094, #23116 [filed], #23132, #23136, #23144, #23161 [filed], #23166, #23170, #23209, #23210, #23217, #23218, #23281 [executing], #23291 [proposed], #23323 [proposed], #23324 [proposed], #23328, #23364 [proposed], #23391 [deployed], #23392 [proposed], #23393 [proposed], #23425 [proposed], #23426 [proposed], #23427 [proposed], #23428 [in_progress], #23429 [in_progress], #23430 [proposed], #23440 [proposed], #3528, #3529, #3530, #3536, #3537, #3538, #3540, #3542, #3543, #56754, #56756
+**Ideas referenced:** #0000, #16213, #16523, #18944, #18951, #19348, #20627 [deployed], #21582, #2212 [open], #22688, #22850, #22887 [proposed], #22939 [proposed], #23027 [deployed], #23029, #23036 [proposed], #23037 [proposed], #23038 [proposed], #23039 [proposed], #23050 [executing], #23052, #23061 [executing], #23067 [deployed], #23094, #23116 [filed], #23132, #23136, #23144, #23161 [filed], #23166, #23170, #23209, #23210, #23217, #23218, #23281 [executing], #23291 [proposed], #23323 [proposed], #23324 [proposed], #23328, #23340, #23364 [proposed], #23387, #23391 [deployed], #23392 [proposed], #23393 [proposed], #23425 [proposed], #23426 [proposed], #23427 [proposed], #23428 [in_progress], #23429 [in_progress], #23430 [proposed], #23440 [proposed], #23468 [proposed], #23472 [proposed], #23477 [proposed], #23483 [proposed], #23489 [proposed], #3528, #3529, #3530, #3536, #3537, #3538, #3540, #3542, #3543, #56754, #56756, #9086, #9168, #9339
 
 **Last PICKUP PROMPT:**
 
@@ -246,7 +267,106 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785966242067` — 8/5/2026, 7:14:54 PM PT — 338 turns
+### `1785954595787` — 8/5/2026, 8:20:31 PM PT — 226 turns
+
+**Original task:**
+
+```
+#KAISON
+
+
+═══════════════════════════════════════════════
+PICKUP PROMPT: KAIZEN CLOSED-LOOP OWNER
+═══════════════════════════════════════════════
+Pick up KAIZEN closed-loop ownership. KAIZEN = the continuous improvement / recipe loop across the EMSU systems. It is a pure-SQL + local-LLM system by design.
+
+GROUND TRUTH (verified from ledger + handoff, 2026-08-05):
+- KAIZEN MCP server makes NO LLM calls itself (pure SQL + paid-model-blocking guard). Verified 2026-07-18, idea #18347 [rejected] closed with evidence: nothing to wire.
+- Executor consumes KAIZEN proposals via local glm-5.2 (free-loca
+```
+
+**Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12477, #13084, #13575, #152615, #17166, #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #1802, #1803, #1806, #1811, #18133 [approved], #1815, #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [rejected], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1934, #1935 [rejected], #1936 [resolved], #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20495, #20555, #20565, #20569, #20627, #20628, #20629, #20630, #20662, #20663, #20672, #20674, #20676, #20677, #20806 [proposed], #2101, #2105, #2126, #2127, #2128, #2221, #2232, #2238, #22897 [executing], #23190 [rejected], #23191 [executing], #23192 [rejected], #23198 [proposed], #23204 [proposed], #23205 [rejected], #23307 [rejected], #23315 [proposed], #23339 [executing], #23467 [executing], #389249, #7223
+
+**Last PICKUP PROMPT:**
+
+```
+anner_suppressed_email active)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #23315 [deployed] — GLM52 ring tunnels built, autopsy cron now 6/6 reachable.
+
+Where we left off (verified 2026-08-05 20:18 PT):
+- Reverse tunnels built + verified: WOPR:2207→Pompeii(50c0), WOPR:2208→Marcus(63ce), WOPR:2209→Tiberius(e9e0)
+- Systemd services: glm52-tunnel-pompeii.service, glm52-tunnel-marcus.service, glm52-tunnel-tiberius.service (enabled+active)
+- Auth: emsuserver@wopr ed25519 added to rubenmajor authorized_keys on all 3 boxes
+- Autopsy cron manual run: "ring connectivity: 6/6 reachable" — zero host_unreachable
+- KAIZEN: 272 recipes, glm52 100% classified, paid-model guard intact
+- #23315 [deployed] — infrastructure fix complete, no cron code change needed
+- #23204 [rejected] — stale finding, boxes were never unreachable
+
+Open threads to drive next:
+1. #23315 [deployed] — Watch next few */10 cron ticks to confirm medic_log stops adding glm52_host_unreachable rows; existing rows remain as historical false-positives
+2. (human-only decision, no idea) — no further action needed on tunnels; all 6 boxes WOPR-reachable
+
+Reference IDs:
+- Ideas: #23315 [deployed], #23204 [rejected], #18347 [rejected]
+- Files: /etc/systemd/system/glm52-tunnel-pompeii.service, glm52-tunnel-marcus.service, glm52-tunnel-tiberius.service (all boxes), /home/emsuserver/.ssh/authorized_keys (WOPR), cline_task_ledger.md (row 448 updated)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785937503831` — 8/5/2026, 8:11:44 PM PT — 658 turns
+
+**Original task:**
+
+```
+Can you tell me how many turns have taken place for each model in the last 5 hours by model and also look inside the grouped models like frankenstein-llm, frankenstein-tools, emsu-codegen, etc...? I want to see how many turns for the individual LLMs themselves, not the groupings
+```
+
+**Ideas referenced:** #10108, #10740, #11397, #11741, #11781, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12477, #12618, #12657, #12672, #12673, #12689, #12716, #12824, #12872, #12878, #13108, #13121, #13202, #13831, #13832, #13874, #13964, #14000, #14848, #15269 [deployed], #16120, #16163, #16265, #16304, #16588, #16646 [deployed], #16648, #16718, #16844, #17202, #17203, #17205, #18312, #18326, #18781, #18786, #18868, #19173, #19653 [unknown], #1967, #19903, #2014, #20272, #20300, #2050, #20536, #20722, #21045 [deployed], #21136, #2176, #2177, #2218 [deployed], #22258 [proposed], #22294, #2231, #22334, #22583, #22749, #22750 [proposed], #22751 [proposed], #22820, #22897, #23028, #23029, #23030, #23031, #23044 [proposed], #23067 [deployed], #23076 [executing], #23127 [proposed], #23171 [proposed], #23264 [proposed], #23265 [proposed], #64748, #9889
+
+**Last PICKUP PROMPT:**
+
+```
+oards immediately more useful.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #23127 [executing] — Artemis ollama :11434, the only approved idea from this session with zero work done (dead engine, stale adapter CHAT_UPSTREAMS + registry references).
+
+Where we left off (verified 2026-08-05 20:10 PT):
+- #23076 [executing] DONE: LLMCostLogger persists router_model_used + endpoint_used; live-tested.
+- #23171 [executing] DONE: cesar-cx7-cluster disabled: true (port 11506 is sshd tunnel, not vLLM); YAML valid.
+- #23264 [executing] DONE: probe tag shipped (emsu_fleet_liveness_probe); dashboard already splits real vs probe.
+- #23265 [executing] DONE: cache-warming fix verified 0% → 92.09%; prefix caching PROVEN working.
+- #19653 [executing] already implemented; /var/log/emsu-adapter-upstream.log live at 24MB; Path A needed no work.
+- deriveTag queued-tag ban live and verified.
+
+Probe cadence impact analysis (human-only decision, no idea filed — no code changed): cloud probes cost ~$0.27/day total (~$100/year). 5x reduction to 5min cadence saves ~$80/year and makes dashboards immediately more useful by cutting cloud noise. Detection window goes from 3min to 15min, but spill ladder handles actual outages instantly. Safe to proceed if you approve.
+
+Open threads:
+1. #23127 [executing] — Artemis ollama :11434 dead since Aug 3. Restart vs decommission call, then scrub stale adapter + registry references.
+2. (human-only decision — no idea) Cloud probe cadence from 60s → 5min. Quantified above.
+
+Reference IDs:
+- Ideas: #23076 [executing], #23171 [executing], #23264 [executing], #23265 [executing], #19653 [executing], #23127 [executing]
+- Backups: LLMCostLogger.php.bak-attribution-20260805-192349, frankenstein_registry.yaml.bak-23171-20260805-194218, FleetTierHealth.php.bak-16646-20260805-154838, llm_router_live.php.bak-probetag-20260805-155500, cron_deepseek_cache_warming.php.bak-64tok-20260805-152032
+- Files changed: lib/LLMCostLogger.php, /etc/litellm/frankenstein_registry.yaml, lib/FleetTierHealth.php, routes/llm_router_live.php, cron/cron_deepseek_cache_warming.php, scripts/emsu_llm_turn_counts.sh, mcp-servers/ruben-orchestrator/src/index.ts + build/index.js
+- Bug library: incident 2231
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785966242067` — 8/5/2026, 8:03:19 PM PT — 386 turns
 
 **Original task:**
 
@@ -264,42 +384,116 @@ Ruben said Sabrina Richardson sent 14 messages. It is actually 17, and prior han
 that they were unretrievable. All 17 are in admin_portal.email_inbound
 ```
 
-**Ideas referenced:** #059669, #111827, #1559, #18676 [blocked], #18690 [blocked], #19600, #19601, #19602, #23038, #23269 [executing], #23348 [high], #23349 [critical], #23350 [open], #23361 [executing], #23362 [blocked], #23365 [executing], #23366 [executing], #23367 [executing], #23372 [executing], #23373 [blocked], #23374 [proposed], #23380 [proposed], #23381 [executing], #23382 [executing], #23383 [proposed], #23413 [critical], #23414 [executing], #23415 [proposed], #23416 [proposed], #23417 [proposed], #23438 [executing], #23439 [executing], #2563, #3730, #374151, #56740, #56754, #56756, #600179, #6106, #92400
+**Ideas referenced:** #0369, #047857, #059669, #0891, #111827, #1368, #1559, #1565, #15803, #166534, #18676 [blocked], #18690 [blocked], #19600, #19601, #19602, #23038, #23269 [executing], #23348 [high], #23349 [critical], #23350 [open], #23361 [executing], #23362 [blocked], #23365 [executing], #23366 [executing], #23367 [executing], #23372 [executing], #23373 [blocked], #23374 [proposed], #23380 [proposed], #23381 [executing], #23382 [executing], #23383 [proposed], #23413 [critical], #23414 [executing], #23415 [proposed], #23416 [proposed], #23417 [proposed], #23438 [executing], #23439 [executing], #23463 [executing], #23464 [executing], #23465 [executing], #23466 [proposed], #2563, #334155, #3730, #374151, #450438, #475569, #56740, #56754, #56756, #600179, #6106, #6366, #64748, #92400
 
 **Last PICKUP PROMPT:**
 
 ```
-facts off their site directly.
+ events are now clickable too.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #23269 — TDSHS: 3 responses due 8/6 with 2 pre-send blockers, TPIA-006 drafted, counsel candidate identified.
+Pick up task #23269 — TDSHS: 3 responses due 8/6 with preservation block, CAPCE demand Friday.
 
-Where we left off (verified 2026-08-05 19:14 PT):
-- TPIA-006 DRAFTED at uploads/tdshs/records-requests/EMSU-TPIA-2026-006_texts_and_ai_tools.md. Part A texts/IM on ANY device quoting Gov Code 552.002(a-2) and (c); Part B AI-tool policies and procurement. Filed as 006 not an amendment so the 005 clock is preserved. Part A item 3 asks the solicitation question with Chapter 552 compulsion behind it. #23438 [executing]
-- TPIA LAW: personal-device texts about official business are SETTLED public information (552.002(a-2), 552.002(c), 83rd Leg. 2013). AI-use disclosure duty is UNSETTLED but the underlying policies and procurement records are ordinary agency records. Ask for records and policies, never an admission about a specific email. inv16 row 161.
-- COUNSEL CANDIDATE: Riggs & Ray PC Austin, r-alaw.com, 512-457-9806. Jennifer S Riggs and Jason Ray, both TBLS board-certified in Administrative Law (1990, 2005). Reported DSHS defense win, Texas DSHS v Holmes 294 S.W.3d 328 (Tex App Austin 2009). Hundreds of SOAH proceedings. inv13 row 162, #23439 [executing]. NOT authorized to engage; SOAH contingency only; nothing about counsel goes to TDSHS.
-- PRE-SEND RESCAN (inv10 row 160): SHEETS signed MWFD affiliation agreement 7/29 (id 94758), thanked Virginia 7/31 (id 97844), verify current status. KANTHACK Moodle completion regression 7/31 (id 98073), follow-up 8/2 (id 101757), UNANSWERED 4 days, draft's 95.4 figure may be contradicted. SMITH unchanged. Zero ExternshipRequest rows for all three.
-- CAPCE particulars-demand scheduled Friday 8/7 afternoon, counsel paragraph struck (inv7 row 159).
+Where we left off (verified 2026-08-05 20:02 PT):
+- STANDARD PRESERVATION BLOCK written per Ruben: SOAH reads the correspondence, so volume, the intake-information refusal, the after-hours transmittals, the 12-hour extension denial, and the June 19 entry scope must be embedded in EVERY reply. Five paragraphs at uploads/tdshs/inspection-5196-2026/STANDARD_PRESERVATION_LANGUAGE_all_TDSHS_replies.md, inv10 row 164. Discipline is PRESERVE DO NOT ARGUE: facts and procedural requests only, no legal conclusions.
+- DELIBERATE OMISSION FOR RUBEN TO CONFIRM: the phrase "due process" is NOT in the block. Paragraph 5 preserves the objection without naming the doctrine, which avoids spending it early, avoids inviting agency counsel, and is consistent with keeping counsel out of the TDSHS channel. Ruben can override.
+- DEADLINE PAGE v3 deployed: clickable rows to a per-record detail view showing every draft reply due, sibling deadlines, and the full correspondence history; full-text search; pagination at 25/page. Lint clean, renders, data verified (the three 8/6 rows resolve to inv10 with 20 responses / 4 drafts).
+- 3 responses due 8/6: Smith, Sheets, Kanthack. Drafted 8/1, rule-302 passed, PDFs NOT rendered (on-disk stale 7/27).
 
 Open threads to drive next:
-1. #23365 [executing] — Smith/Sheets/Kanthack DUE 8/6. TWO PRE-SEND BLOCKERS: verify the Sheets MWFD status, re-verify the Kanthack completion figure. Then render fresh PDFs (on-disk stale 7/27) and READ ALL THREE AGAINST EACH OTHER for contradictions.
-2. #23416 [proposed] — Fix Ava Kanthack's Moodle regression and answer her 7/31 and 8/2 emails today. Owed regardless of DSHS.
-3. #23438 [executing] — File TPIA-006. Confirm the DSHS public information coordinator address, confirm the 1080261800-1999 control number envelope, decide whether to reach back to Jan 1 2025, diary the clock separately from 005.
-4. #23439 [executing] — Conflict-check and evaluate Riggs & Ray. Check against CAPCE and Pinsky Law first. Advisory or SOAH-contingency scope only.
-5. #23413 [executing] — CAPCE particulars-demand. Greg reviews Thursday silently, Ruben sends Friday afternoon. If she answers generally, repeat once and let the record build.
-6. #23414 [executing] — Fold the v3 addendum quotes into the Sunset submission; verify each quotation character by character.
-7. #23417 [proposed] — Add the cost-asymmetry process point to Sunset item 2. Neutral framing; never mention AI or the investigator's drafting method.
-8. #23415 [proposed] — Preserve current website and marketing state internally. Do not disclose.
-9. #23383 [proposed] — Finalize and submit Sunset after the 8/6 responses land.
-10. #23382 [executing] — Clear the externship backlog. Numbers never go to DSHS or into the Sunset submission.
-11. #23372 [deployed] — TPIA-005 filed. Diary the 10-business-day 552.301 clock in inv16; escalate to AG if refused.
-12. #23362 [blocked] — Ho
+1. #23365 [executing] — Smith/Sheets/Kanthack DUE 8/6. Append the preservation block to each with per-matter customization. TWO PRE-SEND BLOCKERS: verify the Sheets MWFD agreement status, re-verify the Kanthack 95.4 figure against her 7/31 Moodle regression report. Render fresh PDFs, then READ ALL THREE AGAINST EACH OTHER for contradictions.
+2. #23466 [proposed] — Ruben decides whether to name "due process" explicitly in the preservation block or keep paragraph 5's implicit reservation.
+3. #23416 [proposed] — Fix Ava Kanthack's Moodle regression and answer her 7/31 and 8/2 emails. Four days unanswered.
+4. #23413 [executing] — CAPCE particulars-demand. Greg reviews Thursday silently, Ruben sends Friday afternoon.
+5. #23438 [executing] — File TPIA-006 (texts on any device + AI-tool policies).
+6. #23439 [executing] — Riggs & Ray: verify bar standing for both via Playwright, conflict-check against CAPCE and Pinsky Law. Ray is the demonstrably current partner; Riggs is the Open Government Section fit for the TPIA work.
+7. #23463 [executing] — Deadline center v3 live. Confirm the 5 INFERRED TDSHS dates and the AZDHS estimate with the agencies.
+8. #23464 [executing] — AZDHS: watch 8/14-8/28; reconcile whether EMS-26-0460 Nettles is actually closed.
+9. #23465 [executing] — Build a reusable Playwright wrapper on WOPR.
+10. #23414 [executing] — Fold the v3 addendum quotes into the Sunset submission; verify each character by character.
+11. #23382 [executing] — Clear the externship backlog. Numbers never go to DSHS or the Sunset submission.
+12. #23372 [deployed] — TPIA-005 filed. Diary the 10-business-day 552.301 clock. Part D items 13-16 are the only real answer on Richardson's record with other programs.
+13. #23362 [blocked] — Hold the factual pattern claim until TPIA productions return.
+14. #23380 [proposed] — Mejia. Do NOT contact about the complaint without Ruben and counsel sign-off. DO place him.
+15. #23373 [blocked] / #23348 [blocked] — Pinsky letters and 5 complaint PDFs. Unblocker: POSTMARK_ACCOUNT_TOKEN in co
 ```
 
-### `1785976094322` — 8/5/2026, 6:43:55 PM PT — 114 turns
+### `1785953794202` — 8/5/2026, 7:56:59 PM PT — 396 turns
+
+**Original task:**
+
+```
+COPY_WINDOW_0_DATA_ACCURACY_AUDIT
+
+Work on that
+```
+
+**Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12477, #13084, #152615, #1681, #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #178593, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1935, #1936, #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20503, #20540, #20541, #20555, #20565, #20569, #20627, #20628, #20629, #20630, #20662, #20663, #20672, #20674, #20676, #20677, #20806 [proposed], #2101, #2105, #2126, #2127, #2128, #2226, #2234, #22808 [proposed], #23027, #23036, #23037, #23038, #23039, #23050 [executing], #23054 [executing], #23056 [executing], #23061 [executing], #23062 [executing], #23146 [proposed], #23150 [proposed], #23152 [proposed], #23160 [proposed], #23163 [proposed], #23164 [proposed], #23165 [proposed], #23171, #23174, #23175, #23180 [proposed], #23181, #23182, #23183, #23184, #23276 [proposed], #23277 [proposed], #23285 [proposed], #23318 [proposed], #23471 [proposed], #389249, #7223, #7925, #8639, #9048
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785954766914` — 8/5/2026, 7:56:32 PM PT — 248 turns
+
+**Original task:**
+
+```
+#LLM FLEET
+
+Give assessments based on below tasks first
+
+
+═══════════════════════════════════════════════
+PICKUP PROMPT: FRANKENSTEIN-LLM ROUTER + LADDER AUDIT
+═══════════════════════════════════════════════
+Pick up frankenstein-llm and frankenstein-tools routing. Ruben's directive: verify the ladder is GLM-5.2 local FIRST, then the 120Bs, then Cicero, then DeepSeek V4 Pro (direct then OpenRouter), then GLM-5.2 cloud (direct then OpenRouter), then Kimi K3.
+
+TOOL-SCHEMA REGRESSION: FIXED 2026-08-05 10:50 PT (#23122 [executing]).
+For most of this morning every tool-bearing request returned HTTP 
+```
+
+**Ideas referenced:** #1130, #1131, #12368, #1241, #12425, #1248, #1249, #1252, #1258, #12672, #13121, #13202, #13331, #13436, #13439, #13484, #13832, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844 [deployed], #16851, #17246, #1744, #1779, #178531, #1798, #1828, #18329 [queued], #18332 [executing], #18786, #18811 [deployed], #18812 [deployed], #18820 [deployed], #18918 [deployed], #19567, #1967, #19903, #20042, #20272, #20536 [ready_for_review], #2063, #20630, #2065, #20662, #20672, #20674, #20676, #20677, #2073, #20806 [proposed], #20985, #21038, #21136, #2121, #2127, #2168, #2181, #2210 [rejected], #2221 [deployed], #2232 [deployed], #2238 [deployed], #22897 [proposed], #23050 [executing], #23056 [executing], #23122 [executing], #23190 [executing], #23191 [executing], #23192 [proposed], #23204, #23205 [proposed], #23206, #23207, #23307 [deployed], #23315 [deployed], #23339 [executing], #23467 [executing], #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+ lesson I promise to remember.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #23191 [executing] — Cicero reverse tunnel (Cicero-side action required); monitor restored GLM 8-lane autospill.
+
+Where we left off (verified 2026-08-05 19:55 PT):
+- GLM ceiling HELD 3.8h: FRANK_GLM_OPS_CEILING=8, FRANK_GLM_OVERFLOW_CEILING=32, service active. Batch split Julia 30 / Artemis 23 / GLM 4 (53 of 60 batch turns now spill off the ring). GLM_OVERFLOW_FALLTHROUGH lane=ops conc=37 >= ceiling=8 firing as designed.
+- Cicero: model ALIVE, reverse SSH tunnel to WOPR:11520 still DOWN (no listener, no -R proc). WOPR cannot reach 192.168.1.252 (No route to host, different LAN segment), so the tunnel MUST be re-established from Cicero itself.
+- Fixed a real defect found while investigating: emsu-cicero-wg-watchdog.sh had alarmed 'WireGuard tunnel is DOWN' every 2 minutes for 3 weeks on a path decommissioned 2026-07-16. Reworded to name the reverse tunnel and to say the box/MLX are likely fine. bash -n clean, verified live. Backup .bak-wording-20260805.
+- Ledger row appended, then repaired after a terminal-echo corruption mangled one line.
+
+Open threads to drive next:
+1. #23191 [executing] — Restore the Cicero reverse tunnel. Cicero-side only: on Cicero run launchctl unload/load ~/Library/LaunchAgents/com.emsu.cicero-235b-tunnel.plist, or let selfheal HEAL4 restore it. Verify on WOPR with ss -ltnp | grep 11520 and pgrep -af 'ssh -R.*11520'. Do NOT restart MLX. Do NOT probe 10.100.0.12 (decommissioned).
+2. #23467 [executing] — Watchdog wording shipped; confirm over 24h that alerts now name the reverse tunnel and no longer say WireGuard.
+3. #23339 [executing] — Watch the restored ceiling 24h. GUARDRAIL: if wedged slots return do NOT raise the ceiling again (that is what disabled autospill) — fix the wedge under #20536 [awaiting_review].
+4. #22897 [executing] — Judge on ORIGINAL merit only; my claim that 2026-08-05 validated it was retracted.
+5. #23056 [executing] — Header-prove DeepSeek/GLM-cloud direct-then-OpenRouter sub-order under load; fix the project-frankenstein MCP fleet API path (still fleet_api_unreachable).
+6. #18332 [executing] — Mini fleet: fix cron_activate_ollama_minis.php, onboard 6 dark M4s.
+7. #18329 [executing] — VKL phase-2 sqlite-vec ANN + LiteLLM surface wiring.
+8. #23307 [rejected] wrong-fix reorder patch reverted; #23205 [rejected] dual glm-5.2 entry correct as-is per Ruben; #23190 [rejected] and #23192 [rejected] false decode-dead claims — no action on any.
+9. #18820 [deployed] — structured-local-pin guard verified holding ($0, 127.0.0.1:11510).
+
+Reference IDs:
+- Ideas: #23339 [executing], #23467 [executing], #23191 [executing], #22897 [executing], #23056 [executing], #18332 [executing], #18329 [executing], #20536 [awaiting_review], #18820 [deployed], #23307 [rejected], #23205 [rejected], #23190 [rejected], #23192 [rejected]
+- Bug library incidents (SEPARATE numbering from ideas, cite as BUG-nnnn): BUG-2238 Cicero wrong-address trap, BUG-2232 subagent fan-out pinned to ring, BUG-2221 canary provenance, BUG-2210 real GLM zombie repair path
+- Files: /usr/local/bin/emsu-cicero-wg-watchdog.sh, /usr/local/bin/frankenstein_tools_adapter.py, /etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzzzzzzzzzzz-glm-ceiling-above-wedged-floor.conf, Rules-archive/296-never-declare-llm-dead-from-cached-probe.md, cline_task_ledger.md
+
+When done, append to cline_task_ledger.md per rule 07 and run order 66.
+══════════════
+```
+
+### `1785976094322` — 8/5/2026, 7:53:06 PM PT — 158 turns
 
 **Original task:**
 
@@ -386,57 +580,6 @@ begin work on this. Start with a comprehensive state of the system
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785954595787` — 8/5/2026, 4:17:15 PM PT — 160 turns
-
-**Original task:**
-
-```
-#KAISON
-
-
-═══════════════════════════════════════════════
-PICKUP PROMPT: KAIZEN CLOSED-LOOP OWNER
-═══════════════════════════════════════════════
-Pick up KAIZEN closed-loop ownership. KAIZEN = the continuous improvement / recipe loop across the EMSU systems. It is a pure-SQL + local-LLM system by design.
-
-GROUND TRUTH (verified from ledger + handoff, 2026-08-05):
-- KAIZEN MCP server makes NO LLM calls itself (pure SQL + paid-model-blocking guard). Verified 2026-07-18, idea #18347 [rejected] closed with evidence: nothing to wire.
-- Executor consumes KAIZEN proposals via local glm-5.2 (free-loca
-```
-
-**Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12477, #13084, #13575, #152615, #17166, #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #1802, #1803, #1806, #1811, #18133 [approved], #1815, #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [rejected], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1934, #1935 [rejected], #1936 [resolved], #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20495, #20555, #20565, #20569, #20627, #20628, #20629, #20630, #20662, #20663, #20672, #20674, #20676, #20677, #20806 [proposed], #2101, #2105, #2126, #2127, #2128, #23198 [proposed], #23204 [proposed], #23315 [proposed], #389249, #7223
-
-**Last PICKUP PROMPT:**
-
-```
- Cato relay; liveness proven).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #23315 [deployed] — fix glm52 autopsy cron host-unreachable false-positive.
-
-Where we left off (verified 2026-08-05 16:15 PT):
-- ALL 6 ring boxes reachable from WOPR via Cato relay (ProxyJump 2204): Pompeii(.21), Marcus(.171), Tiberius(.32), Cesar(.56), Cato(.115), Augustus(.244)
-- vLLM PP=6 serving since Aug 3 (Worker_PP0 298% CPU on Cato)
-- Autopsy cron probes stale WOPR ports 2207/2208/2209 (no listeners) → 97% of 1815 medic rows are false positives
-- WOPR has no direct tunnels to pompey/marcus/tiberius (2223/2224/2225 auth-blocked) — build them if needed, but relay through Cato works today
-- #23315 [deployed] — fix verified: probe via ProxyJump or check vLLM process table, not stale tunnel ports
-- KAIZEN: 272 recipes, guard intact
-
-Open threads to drive next:
-1. #23315 [deployed] — Rewrite $RING_BOXES in cron_glm52_kaizen_autopsy.php: probe via Cato relay with ProxyJump (proven working), or check vLLM PP=6 process table on Cato (if ring serves, all boxes reachable). Remove stale 2207/2208/2209 ports.
-2. (human-only decision) — Build direct WOPR tunnels to pompey/marcus/tiberius if desired; 2223/2224/2225 ports exist but have different SSH keys/passwords currently auth-blocked.
-
-Reference IDs:
-- Ideas: #23315 [deployed], #23204 [rejected], #18347 [rejected]
-- Files: /var/www/emtskills/cron/cron_glm52_kaizen_autopsy.php (read — stale port map), /var/www/emtskills/mcp-servers/kaizen/src/index.ts (read), cline_task_ledger.md (row 448 updated)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
 ### `1785954733601` — 8/5/2026, 4:13:01 PM PT — 356 turns
 
 **Original task:**
@@ -459,60 +602,6 @@ EMTSKILLS SLOW-LOAD (fixed 2026-08-04):
 **Ideas referenced:** #18329, #18337, #18841 [queued], #18842 [queued], #18848 [deployed], #18850 [deployed], #18864 [queued], #2018, #20825, #2165, #2166, #2167, #2183, #2187, #2193, #2201, #2214, #2219 [deployed], #2220, #2222, #22258 [superseded], #22294 [deployed], #2233, #2239, #23173 [in_progress], #23211 [in_progress], #23223 [in_progress], #23308 [in_progress], #23341 [in_progress], #5459, #5608
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785954856277` — 8/5/2026, 4:10:08 PM PT — 208 turns
-
-**Original task:**
-
-```
-#CFA
-
-
-═══════════════════════════════════════════════
-PICKUP PROMPT: CFA HEALTH VALIDATION OWNER
-═══════════════════════════════════════════════
-Pick up CFA validation. Ruben's read is that the CFAs ARE working, so this is a VALIDATION task, not a restart task. Do NOT restart or reconfigure anything until the instrumentation question below is answered.
-
-MAJOR CONTEXT ADDED 2026-08-05 10:50 PT — A ROUTER BUG WAS BREAKING TOOL CALLS FLEET-WIDE:
-For most of this morning every tool-bearing request through LiteLLM returned HTTP 400 (53 validation errors: ('body','tools',N,'function') Field require
-```
-
-**Ideas referenced:** #12206, #1255, #128260, #14132, #15204, #16152, #16153, #16154, #16473, #16732, #17150, #17446, #177914, #18796 [deployed], #18848 [deployed], #19437, #19682, #20925, #21064, #21070 [ready_for_review], #22060, #22294 [deployed], #23050 [executing], #23054 [executing], #23122 [executing], #23184, #23207 [deployed], #23208 [proposed], #23209, #23225 [proposed], #23309 [proposed], #23316 [proposed], #23317, #2563, #2782, #3237, #32584, #3572, #4991, #5298, #5447, #5459, #5608, #5646, #6064, #6106, #6228, #6751, #7206, #7207, #7317, #7356, #7907, #8060, #8103
-
-**Last PICKUP PROMPT:**
-
-```
-dy for execution when approved
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up the 36h auto-close chain repair.
-
-Where we left off (verified 2026-08-05 16:00 PT):
-- 22 tickets >24h with no student contact qualify for closing-warning email
-- 17 tickets >36h qualify for auto-close
-- `closure_pending_contact_since` column exists on tickets but is NEVER set by any code
-- `cron_closure_contact_gate.php` (in /etc/cron.d) resolves tickets where `closure_pending_contact_since` is set — this works, it just has no input
-- `cron_agent_36h_sla.php` is a DIFFERENT mechanism (reassigns user-124 to human pool only)
-
-Open threads to drive next:
-1. #23317 — Build `cron_ticket_closure_notifier.php`: scans tickets >24h no-student-contact, sends closing-warning email (template: "We'll close this ticket automatically if we don't hear back"), sets `closure_pending_contact_since = NOW()`. Register in /etc/cron.d every 15 min. Apply to existing 22 candidates. [proposed] (file this idea now)
-2. #21070 [ready_for_review] — Decision from Ruben: build grievance auto-resolve pipeline or close spec?
-3. #23316 [proposed] — Bulk-close 176 blank-source "Other" tickets >60 days; audit remaining blank-source tickets
-
-Reference IDs:
-- Tickets touched: none directly (investigation only)
-- Ideas filed this session: #23207, #23208, #23209, #23225, #23316
-- Cron files created: /etc/cron.d/emsu-cfa-{access-sweep,dispatch,quality,llm-health,struct,payment-auto-resolve}
-- Backups: /var/www/emtskills/cron/*.bak-20260805-1228
-- Ticket backlog: 188 IP / 176 Open / 113 Pending = 477 total (up 9 from morning)
-
-When done, append a row to cline_task_ledger.md and run EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
 
 ### `1785957900287` — 8/5/2026, 4:08:38 PM PT — 174 turns
 
@@ -561,61 +650,6 @@ Reference IDs:
 - DB: `callback_slots` (192 slots), `callback_bookings` (0), `email_inbound_log` (108k), `email_outbound_log` (exists)
 </result>
 </attempt_completion>
-```
-
-### `1785954766914` — 8/5/2026, 4:03:24 PM PT — 218 turns
-
-**Original task:**
-
-```
-#LLM FLEET
-
-Give assessments based on below tasks first
-
-
-═══════════════════════════════════════════════
-PICKUP PROMPT: FRANKENSTEIN-LLM ROUTER + LADDER AUDIT
-═══════════════════════════════════════════════
-Pick up frankenstein-llm and frankenstein-tools routing. Ruben's directive: verify the ladder is GLM-5.2 local FIRST, then the 120Bs, then Cicero, then DeepSeek V4 Pro (direct then OpenRouter), then GLM-5.2 cloud (direct then OpenRouter), then Kimi K3.
-
-TOOL-SCHEMA REGRESSION: FIXED 2026-08-05 10:50 PT (#23122 [executing]).
-For most of this morning every tool-bearing request returned HTTP 
-```
-
-**Ideas referenced:** #1130, #1131, #12368, #1241, #12425, #1248, #1249, #1252, #1258, #12672, #13121, #13202, #13331, #13436, #13439, #13484, #13832, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844 [deployed], #16851, #17246, #1744, #1779, #1798, #1828, #18329 [queued], #18332 [executing], #18786, #18811 [deployed], #18812 [deployed], #18820 [deployed], #18918 [deployed], #19567, #1967, #19903, #20042, #20272, #20536, #2063, #2065, #20662, #2073, #20985, #21038, #21136, #2121, #2127, #2168, #2181, #2210, #2221, #2232, #2238, #22897 [proposed], #23050 [executing], #23056 [executing], #23122 [executing], #23190 [executing], #23191 [executing], #23192 [proposed], #23205 [proposed], #23206, #23207, #23307 [deployed], #23339 [executing], #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-ix the wedge instead (#20536).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up — restore the Cicero reverse tunnel; watch the restored GLM 8-lane autospill.
-
-Where we left off (verified 2026-08-05 16:02 PT):
-- GLM DESIGN RESTORED. FRANK_GLM_OPS_CEILING back to 8 (was silently overridden to 24 by a 2026-07-31 stopgap drop-in written for a wedged-slot condition that no longer exists). OVERFLOW_CEILING stays 32 for the interactive lane. VERIFIED LIVE: GLM_OVERFLOW_FALLTHROUGH lane=ops conc=37 >= ceiling=8 firing, batch split Artemis 17 / Julia 14 / GLM 4, batch TTFB on Julia 0.5-1.0s. GLM still FIRST below the ceiling on every lane. Stopgap backup at /tmp/glm-ceiling-stopgap.bak-20260805.
-- A prior code reorder patch (#23307) was the WRONG fix and is fully REVERTED; the earlier probe-provenance fix was retained (probe_reason etc still present, 6 refs).
-- CICERO IS ALIVE. Apple M5 128GB, LAN 192.168.1.252 Oceanside, serving qwen3-235b-a22b 3bit-DWQ MLX on :11520. The ONLY failure is the reverse SSH tunnel to WOPR:11520: no listener, no ssh -R process. Do NOT probe 10.100.0.12 (WireGuard DECOMMISSIONED). Do NOT restart MLX.
-
-Open threads to drive next (every item carries a real filed idea #):
-1. #23191 [executing] — Restore the Cicero reverse tunnel ONLY. On WOPR verify with: ss -ltnp | grep 11520 and pgrep -af 'ssh -R.*11520'. Re-establish ssh -R 11520 from Cicero (LAN 192.168.1.252) or let on-box selfheal HEAL4 restore it. Read bug library #2238 FIRST for the address trap. Never touch MLX/vLLM for this.
-2. #23339 [executing] — Watch the restored ceiling for 24h. Confirm GLM keeps winning turns below 8 while ops overflow spills to Julia/Artemis. GUARDRAIL: if wedged slots return, do NOT raise the ceiling again (that is what disabled the autospill) — fix the wedge under #20536.
-3. #22897 [executing] — GLM-first preempt / capacity-aware spill. My claim that 2026-08-05 validated it is RETRACTED; the capacity gate existed and was merely misconfigured. Judge this idea on its original merit only, with real queue-depth data.
-4. #23056 [executing] — Header-prove the DeepSeek/GLM-cloud direct-then-OpenRouter sub-order under load (config-level only so far); fix the project-frankenstein MCP fleet API path (frankenstein_registry still returns fleet_api_unreachable).
-5. #18332 [executing] — Mini fleet: 6 campus M4s on WOPR:18001-18006, fix cron_activate_ollama_minis.php.
-6. #18329 [executing] — VKL phase-2 sqlite-vec ANN + LiteLLM surface wiring.
-7. #23307 [rejected] — wrong-fix reorder patch, reverted. No action.
-8. #23205 [rejected] — dual glm-5.2 entry is CORRECT as-is per Ruben (local first, then z.ai). No action.
-9. #23190 [rejected] and #23192 [rejected] — withdrawn false decode-dead claims. No action.
-10. #18820 [deployed] — structured-local-pin guard holding ($0, 127.0.0.1:11510).
-
-Reference IDs:
-- Ideas: #23339 [executing], #23191 [executing], #22897 [executing], #23056 [executing], #18332 [executing], #18329 [executing], #18820 [deployed], #23307 [rejected], #23205 [rejected], #23190 [rejected], #23192 [rejected]
-- Bug library: #2238 (Cicero wrong-address trap), #2232 (subagent fan-out, superseded by the ceiling fix), #2221 (canary provenance), #2210 (real GLM zombie repair)
-- Files: /etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzzzzzzzzzz-glm-cline-precedence.conf (the 8-lane design), .../zzzzzzzzzzzzzzzzzzz-glm-ceiling-above-wedged-floor.conf (stopgap, now 8), /usr/local/bin/frankenstein_tools_adapter.py 
 ```
 
 ### `1785954707277` — 8/5/2026, 4:03:19 PM PT — 294 turns
@@ -679,20 +713,6 @@ FOUR different sites (sandiegoemt, dallasemt, californiaemt x2, ariz
 ```
 
 **Ideas referenced:** #19387 [executing], #20130, #20491, #20613 [approved], #23062 [executing], #23268 [executing], #23279 [proposed], #23280 [proposed], #23281 [proposed], #23282 [proposed], #23304 [in_progress], #23394, #23584, #23585, #23890, #4929, #8211
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785953794202` — 8/5/2026, 3:49:35 PM PT — 352 turns
-
-**Original task:**
-
-```
-COPY_WINDOW_0_DATA_ACCURACY_AUDIT
-
-Work on that
-```
-
-**Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12477, #13084, #152615, #1681, #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #178593, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1935, #1936, #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20503, #20540, #20541, #20555, #20565, #20569, #20627, #20628, #20629, #20630, #20662, #20663, #20672, #20674, #20676, #20677, #20806 [proposed], #2101, #2105, #2126, #2127, #2128, #2226, #2234, #22808 [proposed], #23027, #23036, #23037, #23038, #23039, #23050 [executing], #23054 [executing], #23056 [executing], #23061 [executing], #23062 [executing], #23146 [proposed], #23150 [proposed], #23152 [proposed], #23160 [proposed], #23163 [proposed], #23164 [proposed], #23165 [proposed], #23171, #23174, #23175, #23180 [proposed], #23181, #23182, #23183, #23184, #23276 [proposed], #23277 [proposed], #23285 [proposed], #23318 [proposed], #389249, #7223, #7925, #8639, #9048
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -4228,166 +4248,4 @@ Reference IDs:
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1785566802438` — 8/2/2026, 8:30:58 PM PT — 222 turns
-
-**Original task:**
-
-```
-We are planning a trip to Texas between August 9-12. Which cities do I need to pop into in order to visit the most impactful lawmakers. Do a search on the Internet to find which ones would be our most likely allies. Find ones that have scrutinized TDSHS as well as those who are in charge of the sunset committee overseeing TDSHS that I can send a report to and set up a meeting with an advance. I just need to know which cities there are in and some details about why you think these are the best people to contact. I also need their contact information and the feasibility of having a meeting on ei
-```
-
-**Ideas referenced:** #0000, #1565, #1882, #19595, #1976, #19898, #19904, #20251, #20734 [proposed], #28175
-
-**Last PICKUP PROMPT:**
-
-```
-attempt_completion>
-<result>═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task #20734 — Texas TDSHS Sunset Commission outreach: send lawmaker emails and schedule meetings for the Aug 10-11, 2026 trip.
-
-Where we left off (verified 2026-08-02 20:30 PT):
-- Full outreach plan is deployed and verified at https://emsuniversity.com/emtskills/routes/texas_outreach.php (log in first at https://emsuniversity.com/emtskills/routes/login.php; the page returns HTTP 401 when not authenticated).
-- 404 was fixed: public DNS resolves to WOPR (76.167.100.188). File is deployed to /var/www/vhosts/emsuniversity.com/httpdocs/emtskills/routes/texas_outreach.php on WOPR, owner emsumain:psaserv 644, PHP lint OK.
-- Page contains: target list (Sen. Lois Kolkhorst — Sunset Chair + Senate HHS Chair, Katy office; Sen. Donna Campbell — Sunset member + ER physician, New Braunfels; Rep. Liz Campos — House Public Health Vice Chair + constituent, San Antonio), contact info, 4-day route (Houston full day Mon Aug 10, San Antonio/New Braunfels Tue Aug 11), Kolkhorst's direct quotes from March 2026 Sunset appointment, Messaging Playbook with R vs D framing, Key Anecdote (rushed investigation blocked a phone call that would've helped students sooner), 1-page EMSU Leave-Behind (dual-column framing mapped to 6 issues), and three draft emails.
-- Today is Sun Aug 2, 2026. Send the three emails Mon Aug 3. Phone follow-up Tue Aug 4.
-
-Open threads to drive next:
-1. #20734 [proposed] — Send the 3 draft emails Mon Aug 3. Kolkhorst/Campbell: lead with Republican framing (taxpayer-funded witch hunt, students hurt, public safety delayed). Campos: due process + Delivery of Government Efficiency committee lane.
-2. #20734 [proposed] — File Sunset public input at sunset.texas.gov. Staff report is being written now; input before Dec 2026 is timely.
-3. #20734 [proposed] — Print the 1-page EMSU leave-behind for confirmed meetings.
-
-Reference IDs:
-- Ideas filed: #20734
-- Files touched: /var/www/vhosts/emsuniversity.com/httpdocs/emtskills/routes/texas_outreach.php (WOPR, verified HTTP 401)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785452265627` — 8/2/2026, 8:21:16 PM PT — 544 turns
-
-**Original task:**
-
-```
-explain how this student has a Moodle Completion Date but does not have a printed certiicate? https://emsuniversity.com/emtskills/admin_profile.php?id=26913FT-01 
-
-How an you finish moodle and not print the certiicate?
-```
-
-**Ideas referenced:** #11782, #13977, #14847, #15635, #16437, #16613, #16733, #17537, #17546, #17619 [deployed], #18693, #18743, #18806, #18836, #18936, #19439 [deployed], #2026, #20331 [queued], #20338 [queued], #20346 [proposed], #20349 [proposed], #20357 [proposed], #20362 [rejected], #20366 [proposed], #21502 [proposed], #2187, #2363, #260730, #2611, #9086, #9168, #9244, #9306 [deployed], #9339, #9831
-
-**Last PICKUP PROMPT:**
-
-```
- confirmed: #21502 [rejected].
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Rule 29 audit + GRV-2026-0069 placement verification for 26913FT-01 (Kamdyn Sheets).
-
-Where we left off (verified 2026-08-02 8:21 PM PT):
-- Rule 29 answer delivered: prior certificate-gap response was not compliant (explained instead of running the live SLS gate first); corrected same session.
-- Externship placement VERIFIED FULFILLED: request #2611 approved with Mineral Wells EMS for Aug 11-14, 2026 (Jehan De Los Angeles, 2026-07-31), before the grievance response shipped.
-- Idea #21502 [rejected] — filed in error from an incomplete read (placement was already confirmed); rejected with note.
-
-Open threads to drive next:
-1. (none — placement verified done; remaining exam/quiz blockers are student coursework; no open agent work)
-
-Reference IDs:
-- Grievance: GRV-2026-0069 (id 70) — dispositioned moot 2026-07-31 (wrong 30-day policy notice withdrawn; real policy 60 days per src/Status.php:91)
-- Student: 26913FT-01 (id 8128818, Moodle uid 48606)
-- Externship request: #2611 (approved, Mineral Wells EMS 2026-08-11..08-14)
-- TDSHS investigation 1080261887 (named complainant) + inspection 5196/623992 (same section) — compliance-linked, no action needed from this thread
-- Idea #21502 [rejected]
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785355259217` — 8/2/2026, 8:20:44 PM PT — 1098 turns
-
-**Original task:**
-
-```
-i ahve been told this form is not populating PDF forms properly downstream. Can you check on this? -> https://emsuniversity.com/emtskills/skillstastic/
-```
-
-**Ideas referenced:** #000000, #13446, #15007 [proposed], #15009 [proposed], #18868, #18944, #18951, #1910, #19163, #19615, #19887, #19903, #19907, #19910, #19918, #19925, #19927, #19928, #20015 [in_progress], #20021 [blocked], #20037 [open], #20038 [proposed], #20039 [in_progress], #20040 [proposed], #200475, #20884, #2098, #2213, #2835, #2857, #6785, #6842, #9019
-
-**Last PICKUP PROMPT:**
-
-```
-PDF generation bug needing fix
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Form 2835/2857 pipeline: 2 remaining items (deploy handler + fix backfill PDF bug)
-
-Where we left off (verified 2026-08-02 20:20 PT):
-- Backfill script deployed to `/var/www/emtskills/backfill2835.php` but PDF generation fails (shortcode returns HTML href, not binary)
-- Handler file at `/Users/rubenmajor/Desktop/form2835_handler.php` (216 lines, verified on disk) — NOT yet deployed to WP plugin
-- Handler queues email via infrastructure_job_queue for new submissions going forward
-- Jerome Fermin already done
-
-Open threads to drive next:
-1. #20038 [completed] — Fix backfill PDF generation (current line 97: e2pdf shortcode returns Download link HTML, needs two-step fetch: shortcode → extract href → wp_remote_get → base64_encode)
-2. #20038 [completed] — Deploy handler to WP plugin: cp to `/var/www/vhosts/emsuniversity.com/httpdocs/wp-content/plugins/emsu-skill-pdf-automation/handlers/class-handler-skills-verification.php` AND register in SKILL_FORMS array in emsu-skill-pdf-automation.php
-
-Reference IDs:
-- Ideas: #20015 [deployed], #20021 [open], #20037 [deployed], #20038 [completed], #20039 [completed]
-- Files: backfill2835.php (server, /var/www/emtskills/), form2835_handler.php (Desktop), handler_skills_verification.php (server, /var/www/emtskills/)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785602138255` — 8/2/2026, 8:02:30 PM PT — 994 turns
-
-**Original task:**
-
-```
-#Queued Ideas
-
-I would like you to stop giving me queued ideas here in cline. Stop giving them in executor and stop giving them in orchestrator, and stop giving them in Argus. Queued ideas are being used as an excuse not to implement ideas and are harmful. Ideas are Approved and move through the queue. You can tell me where they are at in the queue, but you do not mark an idea as queued so they sit in queue indefinitely. We are done with that bottleneck garbage. Please resolve it. You likely will need ot make a cline rule for this too.
-```
-
-**Ideas referenced:** #0000, #10123, #10133, #10866, #10867, #11786, #1194, #12251, #12345 [queued], #12430, #12503, #12504, #12714, #1281, #1309, #1314, #1373, #14574, #14632, #15333, #15367, #15652, #1586, #16064, #16224, #16294 [deployed], #16438, #16744, #16838, #1737, #17408, #17494, #177796, #17913, #18135, #18357 [deployed], #18395, #18401, #18442, #18451, #18452, #18453, #1850, #18746, #18862, #19079, #19160, #19173, #19175 [executing], #19176 [queued], #19325, #19338, #19435, #19458, #19490, #19491, #19494, #19503, #19504, #19509, #19519, #1953, #19629, #19643, #19661, #19670, #19684, #1973, #19813, #19814, #19816, #19822, #19873, #19898, #19899 [proposed], #19904, #20071 [awaiting_review], #2025, #20251, #20316, #20336 [blocked], #20350, #20408, #20410, #2043, #20517, #20542 [proposed], #20569, #20662 [blocked], #20672 [executing], #2076, #20868 [deployed], #20869, #20870 [awaiting_review], #20872 [executing], #20874 [deployed], #20880 [blocked], #20884 [deployed], #20894 [blocked], #20895 [blocked], #20903, #20904 [deployed], #20933 [blocked], #20946 [proposed], #20960 [executing], #20975 [executing], #20982 [deployed], #20987 [deployed], #20988 [deployed], #20995 [proposed], #21006 [deployed], #21007 [executing], #21008 [deployed], #21009 [proposed], #21074 [approved], #21075 [executing], #2113, #21501 [executing], #2580, #3135, #32701, #3541, #3947, #3953, #3957, #4257, #45094, #4536, #4767, #5029, #5034, #5217, #5222, #5244, #5344, #5479, #5771, #5914, #5916, #5918, #596956, #6016, #6067, #6070, #6164, #6252, #6650, #6751, #7062, #7142, #7557, #7630, #7853, #7925, #8281, #8321, #8563, #8598, #9019, #9044, #9222, #9235, #9263, #9510, #9822
-
-**Last PICKUP PROMPT:**
-
-```
-s lacked `implemented_files`).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Babysit final 2 builds to deployed: #20672 payment-attribution flow + #20884 KAIZEN session_handoffs fix.
-
-Where we left off (verified 8/2/2026 8:01 PM PT):
-- 20 of 22 ideas done. All marked deployed with BUILD_PROOF in implementation_log (see batch: 20662, 20336, 20870, 20071, 20904, 20946, 20895, 20894, 20880, 20960, 20975, 20933, 21008, 21007, 21006, 20982, 20874, 20872, 20868, 20542 — all [deployed])
-- Workers alive: #20672 pid 2763212 (v4 rebuild, Phase 2 codegen), #20884 pid 2620172 (generating lib/kaizen_target_fix.php)
-- Root cause of all demotions fixed: deployed rows MUST have non-empty `implemented_files` JSON or `cron_silent_ghost_alert` flips them back to approved. #20975, #20982, #20904 had this applied already.
-
-Open threads to drive next:
-1. #21501 [executing] — wait for both workers; verify files on disk with `ls -la` + `php -l` + deploy proof, then UPDATE each to `status='deployed', dev_stage='deployed'` WITH `implemented_files` populated to prevent ghost-alert re-demotion.
-2. #21009 [superseded] — do not resurrect; the 9-idea batch it tracked is fully handled.
-
-Reference IDs:
-- Ideas filed: #21501 [executing] (babysit task), #21075 [deployed] (RCA retrain approve+deploy batch), #21009 [superseded]
-- Files touched: /var/www/emtskills/lib/ruben_deployed_assertion_gate.php (gate v2 patch — accepts implementation_log as deploy evidence), /var/www/emtskills/cron/cron_silent_ghost_alert.php (root-cause cause of re-demotions — do NOT modify; feed it `implemented_files` instead)
-- Worker logs: /tmp/impl_worker_20672_v4.log, /tmp/impl_worker_20884_v2.log
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
 ```

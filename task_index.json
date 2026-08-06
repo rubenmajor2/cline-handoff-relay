@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-06T22:32:49.400Z",
+ "generated_at": "2026-08-06T23:32:49.825Z",
  "counts": {
-  "parsed": 1,
-  "reused": 508,
+  "parsed": 4,
+  "reused": 507,
   "failed": 0,
-  "total": 509
+  "total": 511
  },
  "tasks": {
   "1784522296714": {
@@ -114804,11 +114804,11 @@
   },
   "1786008133029": {
    "task_id": "1786008133029",
-   "mtime": 1786055560609,
+   "mtime": 1786058316147,
    "created_at": "2026-08-06T09:22:13.029Z",
-   "last_modified": "2026-08-06T22:32:40.609Z",
-   "size_kb": 1121,
-   "turn_count": 345,
+   "last_modified": "2026-08-06T23:18:36.147Z",
+   "size_kb": 1518,
+   "turn_count": 498,
    "title": "There seems to be something that is submitting courses or something to TDSHS. Can you tell me what is going on with that? I thought we already did a bunch of those semi-automatically before and I just saw a couple fire in the last week or 2 and those submissions need to pause temporarily.",
    "pickup_prompt": null,
    "ideas": {
@@ -114823,6 +114823,7 @@
     "24086": "proposed",
     "24098": "proposed",
     "24103": "proposed",
+    "24108": "proposed",
     "600179": null
    }
   },
@@ -114995,13 +114996,13 @@
   },
   "1786036273485": {
    "task_id": "1786036273485",
-   "mtime": 1786045200540,
+   "mtime": 1786058960565,
    "created_at": "2026-08-06T17:11:13.485Z",
-   "last_modified": "2026-08-06T19:40:00.540Z",
-   "size_kb": 814,
-   "turn_count": 426,
+   "last_modified": "2026-08-06T23:29:20.565Z",
+   "size_kb": 857,
+   "turn_count": 446,
    "title": "#Argus \n\nFound the actual reason Argus over-texts the server. It was not the timeouts. Three separate defects, all fixed and verified live.\n\nEXCLUDED: #2250 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)\nEXCLUDED: #2251 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)\n\n## The timeout work was right but it was treating a symptom\n\nRaising curl 240->600 and pool max_execution_time 120->600 was correct and necessary. But a longer timeout on an amplifying loop just means MORE concurrent long-held connections. Here is what was actually driving the load.\n\n## 1. Self-amplification: one prompt became N rows (#23920 [execu",
-   "pickup_prompt": "meout (read-only this session)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #259 — Argus over-texting: #23852 routing fix (token instrumentation prerequisite delivered). \n\nWhere we left off (verified 2026-08-06 12:39 PT):\n- #23974 instrument is live: DISPATCH line shows `-- prompt 1185 total bytes` per batch.\n- Worker drain V2 stable (4 tasks processed, 0 fatals).\n- Falsy-zero sweep complete (0 additional bugs).\n- Timeout floor resolved (both worker curl + argus pool at 600s).\n\nOpen threads to drive next (EVERY item has a real filed idea #):\n1. #23974 [deployed] — Instrument delivered and live-verified. Prerequisites for #23852 satisfied.\n2. #23852 [proposed] — Routing violation fix. NOW UNBLOCKED: prompt bytes are captured at dispatch. Compare prompt-bytes-per-task against model cost (llm-locate from alltastic_api.php ~4936-4998). Flag when ExpensiveModel answers SimpleCountQuestion.\n3. #23878 [queued] — FPM full restart (human-only: Ruben must explicitly authorize).\n\nReference IDs:\n- Ticket: #259\n- Ideas filed: #23973 [documentation], #23974 [deployed]\n- Files touched: cron_argus_task_worker.php (drain function + prompt_bytes instrument)\n- Backups: cron_argus_task_worker.php.bak-20260806-predrain (V1), cron_argus_task_worker.php.bak-20260806-batch16 (pre-all), drain_p1/p2 splice files\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n\n</result>\n</attempt_completion>",
+   "pickup_prompt": "quest to find the real bloat).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #259 — Argus improvement: next levers from offload data.\n\nWhere we left off (verified 2026-08-06 16:29 PT):\n- Argus healthy: no fatals, no stuck tasks. #23941 drain V2 + #23974 prompt-bytes instrument live.\n- 26 offloads today, 18 done. Offload reasons cluster into feature-requests / ambiguous asks / knowledge gaps.\n\n═══════════════════════════════════════════════\nOpen threads to drive next:\n1. #23982 [proposed] — Add a \"not-doable-in-terminal\" self-classifier guard: detect failure signature (UI button / product change / references another ticket id / human-waiting) in the offload candidate and short-circuit the 3-6 attempt retry loop to immediate offload. Reclaims ~78-156 dead agentic attempts/day.\n2. #23852 [proposed] — Routing fix: log assembled-context token count INSIDE the alltastic_api.php model request (probeForData + VEC + action-catalog), not just the dispatch payload. The 59K-token bloat is server-side context, not worker payload.\n3. #23974 [deployed] — Prompt-bytes instrument live; extend it into the model request to find the real token contributor.\n\nReference IDs:\n- Ideas: #23974 [deployed], #23982 [proposed], #23852 [proposed]\n- Files: /var/www/emtskills/routes/cron_argus_task_worker.php, /var/www/emtskills/routes/alltastic_api.php\n- Log: /var/log/argus_task_worker.log\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "2250": "superseded",
     "2251": "superseded",
@@ -115033,9 +115034,12 @@
     "23934": "executing",
     "23941": "executing",
     "23944": "executing",
+    "23952": "proposed",
     "23953": null,
     "23973": "proposed",
     "23974": "proposed",
+    "23975": null,
+    "23982": "proposed",
     "178601": null
    }
   },
@@ -115278,6 +115282,85 @@
     "24055": "proposed",
     "24056": "proposed",
     "178590": null
+   }
+  },
+  "1786057314451": {
+   "task_id": "1786057314451",
+   "mtime": 1786058851244,
+   "created_at": "2026-08-06T23:01:54.451Z",
+   "last_modified": "2026-08-06T23:27:31.244Z",
+   "size_kb": 1445,
+   "turn_count": 132,
+   "title": "I keep getting this message every 15 minutes and is it fixed or not?",
+   "pickup_prompt": "hestrator reminder for #20885.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #24122 - KAIZEN argus feed cron column-name errors fixed + #20885 pipeline reminder\n\nWhere we left off (verified 2026-08-06 16:27 PT):\n- Fixed /var/www/emtskills/cron/cron_argus_feed_kaizen_recipes.php — 3 column errors patched (summary_text→summary, dropped target_table/target_id, planner_input_modifier→recipe_text). Verified: 2 clean runs, 3 recipes seeded then idempotent skip. Log cleaned of stale error lines.\n- #24122 [proposed] filed for the cron fix.\n- #20885 [awaiting_review] — the ACTUAL source of the 15-minute recurring message. Implemented 100%, awaiting Ruben's deploy click from orchestrator interface.\n\nOpen threads to drive next:\n1. #20885 [awaiting_review] — Deploy the KAIZEN recipe firing pipeline fix to stop the 15-minute reminder. Queue slug: `kaizen-20885-pipeline-reconnect`.\n2. #24122 [proposed] — Monitor the next argus_feed_kaizen cron run at 17:00 PT to confirm clean (no summary_text errors).\n\nReference IDs:\n- Ideas filed: #24122 [proposed], #20885 [awaiting_review]\n- Files touched: /var/www/emtskills/cron/cron_argus_feed_kaizen_recipes.php\n\nWhen done append to cline_task_ledger.md per rule 07 run order 66.\n═══════════════════════════════════════════════</result>\n<task_progress>\n- [x] Identify the recurring message source — #20885 ready_for_review reminder\n- [x] Check recipe #20885 status — awaiting review, not deployed\n- [x] Fix the argus_feed_kaizen cron column-name errors\n- [x] Verify cron runs clean\n- [x] Identify the actual 15-min emitter — orchestrator reminder for pending deploy\n- [x] Report findings to Ruben\n</task_progress>\n</attempt_completion>",
+   "ideas": {
+    "1603": null,
+    "4516": null,
+    "11735": null,
+    "12059": null,
+    "12060": null,
+    "12299": null,
+    "19173": null,
+    "19370": null,
+    "20885": "queued",
+    "21432": null,
+    "21587": null,
+    "21588": null,
+    "21667": null,
+    "21710": null,
+    "21712": null,
+    "22104": null,
+    "22105": null,
+    "22138": null,
+    "22244": null,
+    "22245": null,
+    "22726": null,
+    "22776": null,
+    "23710": null,
+    "23711": null,
+    "23920": "in_progress",
+    "23941": "in_progress",
+    "23944": "in_progress",
+    "23945": null,
+    "23952": null,
+    "23954": null,
+    "23960": null,
+    "23975": null,
+    "23976": null,
+    "23981": null,
+    "24025": null,
+    "24026": "executing",
+    "24027": "executing",
+    "24028": "executing",
+    "24054": "deployed",
+    "24055": "proposed",
+    "24056": "proposed",
+    "24122": "deployed",
+    "509402": null,
+    "509403": null,
+    "509463": null,
+    "509687": null,
+    "509688": null
+   }
+  },
+  "1786058811201": {
+   "task_id": "1786058811201",
+   "mtime": 1786059133471,
+   "created_at": "2026-08-06T23:26:51.201Z",
+   "last_modified": "2026-08-06T23:32:13.471Z",
+   "size_kb": 238,
+   "turn_count": 59,
+   "title": "#TDSHS\n\n\nput those documents on the compliance page/s for later use if needed.\n\nI'm thiniking we are finaly good, now i need your opinion on how this is internally digested, the likely next steps here and what we have in front of us. \n\nAdditionally, I'd like for you to comb this final polished response for anything that could be used to update the gold standard response as well as that for TX in these cases. \n\nThere are futher nuances as well as my tone, what i like and don't. I'd like to save time on the next complaint responses.\n\nTo that end i need you also to inject such updates to those other complaint responses to be more similar to this and take this all into consideration for other re",
+   "pickup_prompt": null,
+   "ideas": {
+    "5196": null,
+    "23666": "proposed",
+    "23667": "executing",
+    "24086": "proposed",
+    "24098": "proposed",
+    "24103": "proposed",
+    "24108": "proposed",
+    "178596": null
    }
   }
  }

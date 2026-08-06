@@ -6,16 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/6/2026, 3:32:49 PM PT | window: last 72h | 114 tasks | index total 509 (parsed 1, cached 508)
+Generated: 8/6/2026, 4:32:49 PM PT | window: last 72h | 115 tasks | index total 511 (parsed 4, cached 507)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786008133029` | 8/6/2026, 3:32:40 PM | 345 | 1121KB | There seems to be something that is submitting courses or something to TDSHS. Can you tell |
+| `1786058811201` | 8/6/2026, 4:32:13 PM | 59 | 238KB | #TDSHS |
+| `1786036273485` | 8/6/2026, 4:29:20 PM | 446 | 857KB | #Argus  |
+| `1786057314451` | 8/6/2026, 4:27:31 PM | 132 | 1445KB | I keep getting this message every 15 minutes and is it fixed or not? |
+| `1786008133029` | 8/6/2026, 4:18:36 PM | 498 | 1518KB | There seems to be something that is submitting courses or something to TDSHS. Can you tell |
 | `1786045024813` | 8/6/2026, 2:22:06 PM | 280 | 1038KB | #TDSHS |
 | `1786047728462` | 8/6/2026, 2:05:06 PM | 273 | 1658KB | #/emtskills lag |
 | `1786047694363` | 8/6/2026, 1:21:39 PM | 3 | 43KB | #/emtskills lag |
 | `1786037557221` | 8/6/2026, 12:43:55 PM | 387 | 707KB | /emtskills lag |
-| `1786036273485` | 8/6/2026, 12:40:00 PM | 426 | 814KB | #Argus  |
 | `1785986098106` | 8/6/2026, 12:33:42 PM | 1020 | 2925KB | #TDSHS |
 | `1786010979248` | 8/6/2026, 12:18:57 PM | 628 | 1362KB | Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to |
 | `1786032945879` | 8/6/2026, 10:15:19 AM | 474 | 718KB | #/emtskills lag |
@@ -123,13 +125,130 @@ Generated: 8/6/2026, 3:32:49 PM PT | window: last 72h | 114 tasks | index total 
 | `1785775905424` | 8/3/2026, 7:10:14 PM | 1138 | 2596KB | # GLM-5.2 Hexarchy Ring — Scientific Diagnosis & Stabilization Summary |
 | `1785790859915` | 8/3/2026, 6:01:41 PM | 532 | 4871KB | Ruben Major Jr., IT Admin is saying that he is not receiving messages in TeamHub / request |
 | `1785787998507` | 8/3/2026, 5:15:44 PM | 172 | 993KB | Was the "Clear" button on this page supposed to be wired into the actual NREMT clearance a |
-| `1785779852459` | 8/3/2026, 4:23:03 PM | 780 | 2974KB | Reply to this person says Hi "Internal" - tha'ts wrong. Also it appears that Email Agent d |
 
 ---
 
 ## Per-window detail
 
-### `1786008133029` — 8/6/2026, 3:32:40 PM PT — 345 turns
+### `1786058811201` — 8/6/2026, 4:32:13 PM PT — 59 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+
+put those documents on the compliance page/s for later use if needed.
+
+I'm thiniking we are finaly good, now i need your opinion on how this is internally digested, the likely next steps here and what we have in front of us. 
+
+Additionally, I'd like for you to comb this final polished response for anything that could be used to update the gold standard response as well as that for TX in these cases. 
+
+There are futher nuances as well as my tone, what i like and don't. I'd like to save time on the next complaint responses.
+
+To that end i need you also to inject such updates to those ot
+```
+
+**Ideas referenced:** #178596, #23666 [proposed], #23667 [executing], #24086 [proposed], #24098 [proposed], #24103 [proposed], #24108 [proposed], #5196
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786036273485` — 8/6/2026, 4:29:20 PM PT — 446 turns
+
+**Original task:**
+
+```
+#Argus 
+
+Found the actual reason Argus over-texts the server. It was not the timeouts. Three separate defects, all fixed and verified live.
+
+EXCLUDED: #2250 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)
+EXCLUDED: #2251 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)
+
+## The timeout work was right but it was treating a symptom
+
+Raising curl 240->600 and pool max_execution_time 120->600 was correct and necessary. But a longer timeout on an amplifying loop just means MORE concurrent long-held connections. Here is wh
+```
+
+**Ideas referenced:** #16523, #178601, #19370, #2250 [superseded], #2251 [superseded], #2252, #2253, #22688, #23036, #23428, #23429, #23468, #23506, #23585, #23630 [executing], #23675, #23710, #23711, #23851 [rejected], #23852 [proposed], #23854, #23867, #23868 [executing], #23878 [proposed], #23879 [proposed], #23913 [executing], #23920 [executing], #23934 [executing], #23941 [executing], #23944 [executing], #23952 [proposed], #23953, #23973 [proposed], #23974 [proposed], #23975, #23982 [proposed], #2563
+
+**Last PICKUP PROMPT:**
+
+```
+quest to find the real bloat).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #259 — Argus improvement: next levers from offload data.
+
+Where we left off (verified 2026-08-06 16:29 PT):
+- Argus healthy: no fatals, no stuck tasks. #23941 drain V2 + #23974 prompt-bytes instrument live.
+- 26 offloads today, 18 done. Offload reasons cluster into feature-requests / ambiguous asks / knowledge gaps.
+
+═══════════════════════════════════════════════
+Open threads to drive next:
+1. #23982 [proposed] — Add a "not-doable-in-terminal" self-classifier guard: detect failure signature (UI button / product change / references another ticket id / human-waiting) in the offload candidate and short-circuit the 3-6 attempt retry loop to immediate offload. Reclaims ~78-156 dead agentic attempts/day.
+2. #23852 [proposed] — Routing fix: log assembled-context token count INSIDE the alltastic_api.php model request (probeForData + VEC + action-catalog), not just the dispatch payload. The 59K-token bloat is server-side context, not worker payload.
+3. #23974 [deployed] — Prompt-bytes instrument live; extend it into the model request to find the real token contributor.
+
+Reference IDs:
+- Ideas: #23974 [deployed], #23982 [proposed], #23852 [proposed]
+- Files: /var/www/emtskills/routes/cron_argus_task_worker.php, /var/www/emtskills/routes/alltastic_api.php
+- Log: /var/log/argus_task_worker.log
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786057314451` — 8/6/2026, 4:27:31 PM PT — 132 turns
+
+**Original task:**
+
+```
+I keep getting this message every 15 minutes and is it fixed or not?
+```
+
+**Ideas referenced:** #11735, #12059, #12060, #12299, #1603, #19173, #19370, #20885 [queued], #21432, #21587, #21588, #21667, #21710, #21712, #22104, #22105, #22138, #22244, #22245, #22726, #22776, #23710, #23711, #23920 [in_progress], #23941 [in_progress], #23944 [in_progress], #23945, #23952, #23954, #23960, #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed], #24122 [deployed], #4516, #509402, #509403, #509463, #509687, #509688
+
+**Last PICKUP PROMPT:**
+
+```
+hestrator reminder for #20885.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #24122 - KAIZEN argus feed cron column-name errors fixed + #20885 pipeline reminder
+
+Where we left off (verified 2026-08-06 16:27 PT):
+- Fixed /var/www/emtskills/cron/cron_argus_feed_kaizen_recipes.php — 3 column errors patched (summary_text→summary, dropped target_table/target_id, planner_input_modifier→recipe_text). Verified: 2 clean runs, 3 recipes seeded then idempotent skip. Log cleaned of stale error lines.
+- #24122 [proposed] filed for the cron fix.
+- #20885 [awaiting_review] — the ACTUAL source of the 15-minute recurring message. Implemented 100%, awaiting Ruben's deploy click from orchestrator interface.
+
+Open threads to drive next:
+1. #20885 [awaiting_review] — Deploy the KAIZEN recipe firing pipeline fix to stop the 15-minute reminder. Queue slug: `kaizen-20885-pipeline-reconnect`.
+2. #24122 [proposed] — Monitor the next argus_feed_kaizen cron run at 17:00 PT to confirm clean (no summary_text errors).
+
+Reference IDs:
+- Ideas filed: #24122 [proposed], #20885 [awaiting_review]
+- Files touched: /var/www/emtskills/cron/cron_argus_feed_kaizen_recipes.php
+
+When done append to cline_task_ledger.md per rule 07 run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Identify the recurring message source — #20885 ready_for_review reminder
+- [x] Check recipe #20885 status — awaiting review, not deployed
+- [x] Fix the argus_feed_kaizen cron column-name errors
+- [x] Verify cron runs clean
+- [x] Identify the actual 15-min emitter — orchestrator reminder for pending deploy
+- [x] Report findings to Ruben
+</task_progress>
+</attempt_completion>
+```
+
+### `1786008133029` — 8/6/2026, 4:18:36 PM PT — 498 turns
 
 **Original task:**
 
@@ -137,7 +256,7 @@ Generated: 8/6/2026, 3:32:49 PM PT | window: last 72h | 114 tasks | index total 
 There seems to be something that is submitting courses or something to TDSHS. Can you tell me what is going on with that? I thought we already did a bunch of those semi-automatically before and I just saw a couple fire in the last week or 2 and those submissions need to pause temporarily.
 ```
 
-**Ideas referenced:** #13437, #18676, #2187, #2363, #23666 [proposed], #23667 [proposed], #24086 [proposed], #24098 [proposed], #24103 [proposed], #2611, #2703, #600179
+**Ideas referenced:** #13437, #18676, #2187, #2363, #23666 [proposed], #23667 [proposed], #24086 [proposed], #24098 [proposed], #24103 [proposed], #24108 [proposed], #2611, #2703, #600179
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -251,59 +370,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Verified pool health + cleanup
 - [x] Reconcile ideas + handoff + pickup
 </task_progress>
-</attempt_completion>
-```
-
-### `1786036273485` — 8/6/2026, 12:40:00 PM PT — 426 turns
-
-**Original task:**
-
-```
-#Argus 
-
-Found the actual reason Argus over-texts the server. It was not the timeouts. Three separate defects, all fixed and verified live.
-
-EXCLUDED: #2250 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)
-EXCLUDED: #2251 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)
-
-## The timeout work was right but it was treating a symptom
-
-Raising curl 240->600 and pool max_execution_time 120->600 was correct and necessary. But a longer timeout on an amplifying loop just means MORE concurrent long-held connections. Here is wh
-```
-
-**Ideas referenced:** #16523, #178601, #19370, #2250 [superseded], #2251 [superseded], #2252, #2253, #22688, #23036, #23428, #23429, #23468, #23506, #23585, #23630 [executing], #23675, #23710, #23711, #23851 [rejected], #23852 [proposed], #23854, #23867, #23868 [executing], #23878 [proposed], #23879 [proposed], #23913 [executing], #23920 [executing], #23934 [executing], #23941 [executing], #23944 [executing], #23953, #23973 [proposed], #23974 [proposed], #2563
-
-**Last PICKUP PROMPT:**
-
-```
-meout (read-only this session)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #259 — Argus over-texting: #23852 routing fix (token instrumentation prerequisite delivered). 
-
-Where we left off (verified 2026-08-06 12:39 PT):
-- #23974 instrument is live: DISPATCH line shows `-- prompt 1185 total bytes` per batch.
-- Worker drain V2 stable (4 tasks processed, 0 fatals).
-- Falsy-zero sweep complete (0 additional bugs).
-- Timeout floor resolved (both worker curl + argus pool at 600s).
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #23974 [deployed] — Instrument delivered and live-verified. Prerequisites for #23852 satisfied.
-2. #23852 [proposed] — Routing violation fix. NOW UNBLOCKED: prompt bytes are captured at dispatch. Compare prompt-bytes-per-task against model cost (llm-locate from alltastic_api.php ~4936-4998). Flag when ExpensiveModel answers SimpleCountQuestion.
-3. #23878 [queued] — FPM full restart (human-only: Ruben must explicitly authorize).
-
-Reference IDs:
-- Ticket: #259
-- Ideas filed: #23973 [documentation], #23974 [deployed]
-- Files touched: cron_argus_task_worker.php (drain function + prompt_bytes instrument)
-- Backups: cron_argus_task_worker.php.bak-20260806-predrain (V1), cron_argus_task_worker.php.bak-20260806-batch16 (pre-all), drain_p1/p2 splice files
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-
-</result>
 </attempt_completion>
 ```
 
@@ -4248,50 +4314,6 @@ Reference IDs:
 - PD accounts: AZ (JThompson), CA (MRios), TX (agamez) — all 3 have working NREMT portal access
 
 When done, append row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785779852459` — 8/3/2026, 4:23:03 PM PT — 780 turns
-
-**Original task:**
-
-```
-Reply to this person says Hi "Internal" - tha'ts wrong. Also it appears that Email Agent did nothing for this student. that needs repair
-```
-
-**Ideas referenced:** #11780, #164627, #164631, #16613, #167143, #18944, #18951, #19173, #2196, #22061 [queued], #22085 [active], #22090, #22106 [active], #22107 [queued], #22108 [queued], #22109 [queued], #23131, #4929, #495057, #5431
-
-**Last PICKUP PROMPT:**
-
-```
-rrected email sent + delivered
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up #22107 follow-up — David Jones + Saul Cruz "Hi Internal" sweep completed.
-
-Where we left off (verified 2026-08-03 4:23 PM PT):
-- SafeGreetingName v2 deployed to /var/www/emtskills/lib/SafeGreetingName.php (php -l clean, live-tested)
-- All 4 explode(created_by_name) sites wired: ExamTechnicalExtensionHandler, exam_extension_handler, ai_ticket_agent, notification_sender
-- David Jones (26220FT-11) sweep: zero "Hi Internal" emails found — no corrections needed
-- Saul Cruz (24527FT-05) sweep: no Internal% tickets from his student_id — no corrections needed
-- ai_diagnostic.php:2381 explode usage confirmed legitimate (not a greeting)
-
-Open threads to drive next:
-1. #22085 [active/deployed] — Monitor production logs for SafeGreetingName::resolveFromTicket usage; confirm zero "Hi" + non-human-name greetings appear in outbound email
-2. #22106 [active] — William's corrected email: sent at 1:01 PM PT (messageId ouJ8KudNbbVbuE2x9n4Yk7KYc2STDemXAs6GHXSUAw), queue marked sent. Verify receipt if William replies.
-3. (no idea needed) — Email Agent inaction for William was NOT a code bug — it was correct behavior (agent detected unpaid invoice). Ruben confirmed this is expected; the agent shouldn't promise things it can't deliver.
-
-Reference IDs:
-- Ticket: TKT-23131 — William Jones (26918A-07)
-- Ideas filed: #22085 (name guard), #22106 (William corrective email), #22107 (sweep complete)
-- Files touched: /var/www/emtskills/lib/SafeGreetingName.php, /var/www/emtskills/lib/ai_ticket_agent.php:5786, /var/www/emtskills/lib/ai_ticket_agent_exam_extension_handler.php:196, /var/www/emtskills/lib/ExamTechnicalExtensionHandler.php:79, /var/www/emtskills/tickets/lib/notification_sender.php:1125
-- Files verified-as-legitimate: /var/www/emtskills/tickets/ai_diagnostic.php:2381
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>

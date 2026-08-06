@@ -6,16 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/6/2026, 11:32:48 AM PT | window: last 72h | 114 tasks | index total 506 (parsed 3, cached 503)
+Generated: 8/6/2026, 12:32:48 PM PT | window: last 72h | 112 tasks | index total 506 (parsed 4, cached 502)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786037557221` | 8/6/2026, 11:32:37 AM | 260 | 444KB | /emtskills lag |
-| `1786036273485` | 8/6/2026, 11:32:27 AM | 372 | 739KB | #Argus  |
-| `1786010979248` | 8/6/2026, 11:32:01 AM | 375 | 963KB | Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to |
+| `1786037557221` | 8/6/2026, 12:32:42 PM | 312 | 542KB | /emtskills lag |
+| `1786036273485` | 8/6/2026, 12:32:38 PM | 389 | 764KB | #Argus  |
+| `1785986098106` | 8/6/2026, 12:32:23 PM | 1015 | 2903KB | #TDSHS |
+| `1786010979248` | 8/6/2026, 12:18:57 PM | 628 | 1362KB | Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to |
 | `1786032945879` | 8/6/2026, 10:15:19 AM | 474 | 718KB | #/emtskills lag |
 | `1786033674961` | 8/6/2026, 10:00:27 AM | 214 | 441KB | ## Argus  |
-| `1785986098106` | 8/6/2026, 9:39:39 AM | 922 | 2518KB | #TDSHS |
 | `1786002734721` | 8/6/2026, 9:27:15 AM | 556 | 1532KB | #Argus |
 | `1785939083137` | 8/6/2026, 8:58:16 AM | 1734 | 3041KB | https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since  |
 | `1786002462510` | 8/6/2026, 3:25:39 AM | 416 | 1678KB | frankenstein-llm seems to be getting stuck here: |
@@ -122,14 +122,12 @@ Generated: 8/6/2026, 11:32:48 AM PT | window: last 72h | 114 tasks | index total
 | `1785787998507` | 8/3/2026, 5:15:44 PM | 172 | 993KB | Was the "Clear" button on this page supposed to be wired into the actual NREMT clearance a |
 | `1785779852459` | 8/3/2026, 4:23:03 PM | 780 | 2974KB | Reply to this person says Hi "Internal" - tha'ts wrong. Also it appears that Email Agent d |
 | `1785787253230` | 8/3/2026, 1:22:09 PM | 100 | 181KB | When I click on "Login As Student Link" for example: https://emsuniversity.com/emtskills/e |
-| `1785778361008` | 8/3/2026, 11:49:14 AM | 188 | 739KB | https://emsuniversity.com/emtskills/routes/login_sms.php Sent verification code, but does  |
-| `1785781530203` | 8/3/2026, 11:35:20 AM | 46 | 208KB | Is this GLM faster aggregate than 4tok/sec |
 
 ---
 
 ## Per-window detail
 
-### `1786037557221` — 8/6/2026, 11:32:37 AM PT — 260 turns
+### `1786037557221` — 8/6/2026, 12:32:42 PM PT — 312 turns
 
 **Original task:**
 
@@ -141,11 +139,54 @@ I am still having problems with this that need to be resolved. There are other p
 You were right to push back, and you were right that testing it myself was the obvious move. I did that, and I reproduced your exact
 ```
 
-**Ideas referenced:** #16213, #178590, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19370, #22850, #23031 [executing], #23053 [executing], #23133 [executing], #23139 [executing], #23293 [executing], #23378 [approved], #23495 [executing], #23500 [executing], #23867 [proposed], #23880 [proposed], #23884 [proposed], #23885 [proposed], #23886 [deployed], #23925 [rejected], #23926 [rejected], #23927 [proposed], #23929 [rejected], #23930 [rejected], #23931 [proposed], #23932 [rejected], #23934, #23941 [executing], #23944 [executing], #23945 [proposed], #23947 [proposed], #23952 [proposed], #23954 [proposed], #23975 [executing], #23976 [executing], #23981 [in_progress], #711392
+**Ideas referenced:** #16213, #178590, #178600, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19370, #22850, #23031 [executing], #23053 [executing], #23133 [executing], #23139 [executing], #23293 [executing], #23378 [approved], #23429, #23495 [executing], #23500 [executing], #23506, #23867 [proposed], #23880 [proposed], #23884 [proposed], #23885 [proposed], #23886 [deployed], #23925 [rejected], #23926 [rejected], #23927 [proposed], #23929 [rejected], #23930 [rejected], #23931 [proposed], #23932 [rejected], #23934, #23941 [executing], #23944 [executing], #23945 [proposed], #23947 [proposed], #23952 [proposed], #23954 [proposed], #23975 [executing], #23976 [executing], #23981 [in_progress], #711392
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1786036273485` — 8/6/2026, 11:32:27 AM PT — 372 turns
+```
+(verified: status=in_progress)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786002734721, /emtskills lag: repairs shipped end to end + verified.
+
+Where we left off (verified 2026-08-06 11:41 PT):
+- SESSLOCK_RELEASE_V1 LIVE in routes/alltastic_api.php (~line 190): session_write_close before slow LLM work. Backup .bak-20260806-sesslock.
+- #23954 [executing] SHIPPED: 240s/180s to 60s caps in orchestrator_api.php (lines 5387, 6221, 8350, 9661, 10966, plus 6631 180 to 60) and alltastic_api.php (all 240s to 60s). Both php -l clean, zero long timeouts remain, FPM reloaded. Backups .bak-20260806-240cap.
+- NAVIGATION TEST: 20 pages across 4 endpoints during in-flight LLM call: all 0.012-0.024s, zero stalls.
+- Earlier: AGENT_POOL_V1 live, process_control_timeout 620 to 60, reload storm killed.
+- Rule 267 doctor pass: #23954 [executing] (status=approved dev_stage=drafting), #23952 [executing] (status=approved), #23975 [executing] (in_progress), #23976 [executing] (in_progress), #23981 [executing] (in_progress), #23945 [proposed].
+- Test session cleaned.
+
+Open threads to drive next:
+1. #23954 [executing]: close out; caps are live and verified, executor should mark deployed.
+2. #23952 [executing]: executor sweep of remaining 276 session-locked routes.
+3. #23945 [proposed]: close out; agents pool is live.
+4. #23975 [executing]: SMS responder crash fix.
+5. #23976 [executing]: remove reload-as-heal from voice health cron.
+6. #23981 [executing]: 24h reload-rate watch on /var/log/emsu-fpm-guard.log.
+
+Reference IDs:
+- Ideas shipped: #23954 [executing]
+- Ideas advanced: #23952 [executing], #23945 [proposed], #23975 [executing], #23976 [executing], #23981 [executing]
+- Files touched: routes/alltastic_api.php (.bak-20260806-sesslock, .bak-20260806-240cap), api/orchestrator_api.php (.bak-20260806-240cap), /etc/php/8.3/fpm/pool.d/agents.conf, /etc/php/8.3/fpm/php-fpm.conf (.bak-20260806-pct60), vhost nginx confs (.bak-20260806-agentpool), HANDOFF_NOTES.md
+- DB: none
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Server-level fixes on disk (agents pool, reload storm, pct 620→60, SESSLOCK_RELEASE_V1)
+- [x] Ship #23954: 240s/180s→60s caps in orchestrator_api.php + alltastic_api.php, php -l clean, FPM reloaded
+- [x] Exercise navigation path under live load (20 pages 0.012-0.024s)
+- [x] Verified pool health + cleanup
+- [x] Reconcile ideas + handoff + pickup
+</task_progress>
+</attempt_completion>
+```
+
+### `1786036273485` — 8/6/2026, 12:32:38 PM PT — 389 turns
 
 **Original task:**
 
@@ -194,7 +235,47 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786010979248` — 8/6/2026, 11:32:01 AM PT — 375 turns
+### `1785986098106` — 8/6/2026, 12:32:23 PM PT — 1015 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+Open up the TDSHS window I just inadvertantly closed and tell me the last task completed regarding this page: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=list  / BTW clicking thowe rows does nothing. Plus why are there duplicate entires for 2 students? I'm confused on that like for tomorrow I see 6 responses due. I think if there's a linkage, those all get populated on the detail page with the centralized response for each, this way we're not splitting hairs. Again, those links don't yet work or show details. Table should also show name of student // Wai
+```
+
+**Ideas referenced:** #047857, #059669, #111827, #12892, #13017, #13437, #1370 [rejected], #178595, #178600, #18676, #19581, #19591, #19595, #19605, #2001, #23463 [unknown], #23482 [proposed], #23484 [proposed], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [proposed], #23518 [proposed], #23519 [proposed], #23643 [proposed], #23644 [proposed], #23645 [proposed], #23651 [rejected], #23652 [proposed], #23653 [approved], #23654 [approved], #23659 [proposed], #23660 [proposed], #23661 [proposed], #23666 [proposed], #23672 [proposed], #23673 [proposed], #23679 [proposed], #23680 [proposed], #23681 [proposed], #23682 [proposed], #23688 [proposed], #23695 [proposed], #23696 [proposed], #23697 [proposed], #23699 [proposed], #23700 [proposed], #23706 [proposed], #23707 [proposed], #23708 [proposed], #23709 [proposed], #23855 [proposed], #23856 [proposed], #23877 [proposed], #23882 [proposed], #23887 [proposed], #23888 [proposed], #23905 [proposed], #23906 [proposed], #23907 [proposed], #23914 [proposed], #23922 [proposed], #23998 [proposed], #23999 [proposed], #24018 [proposed], #2563, #26114, #2703, #3730, #374151, #450438, #475569, #600179, #64748, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+ deadline center + rows 19/20.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1785954856277 (TDSHS compliance doctrine and deadline center).
+
+Where we left off (verified 2026-08-05 21:24 PT):
+- Doctrine Library LIVE at /personnel/compliance_doctrine.php. #23515 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle; the CODE is deployed and harness-verified at 58 items, the idea row is the work record). Table admin_portal.compliance_doctrine, 58 active items: 19 postures, 19 anti-patterns, 6 fact patterns, 3 accomplishments, 7 agency defects, 4 statutory authorities. 9 carry regulator_facing=0 and render with an adjudication-only lock. Verified: facing=adj filter returns exactly 9, all locked.
+- Regulator-owed deadlines LIVE. #23516 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle). compliance_deadlines gained direction / requested_on / statutory_basis / last_agency_contact. Rows 27 (TPIA-004, due 8/10), 28 (TPIA-005, due 8/19 provisional), 29 (stale TDSHS request, monitor), 30 (AZ 39-121 trio, no send date recorded). List renders 21 deliverables, 5 they-owe pills, agency-owes card 0/4.
+- Row 19 verified sound. Row 20 CORRECTED: Moodle course_completions row 49223 shows user 51417 course 37 completed 2026-06-20 08:10:53 reaggregate 0, so the completion is INTACT and the regression premise is unconfirmed. Both rows still not_started, both still block the 8/6 send.
+- v4 packet consolidation and red-bar card from earlier this session: #23482 [executing] (reconcile_ideas returned status=approved dev_stage=idle), #23491 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle), prior v2 work #23463 [deployed] (reconcile_ideas returned status=open dev_stage=idle).
+
+Open threads to drive next:
+1. #23519 [executing] Answer Ava Kanthack. Five days unanswered (inbound 98073 on 7/31, 101757 on 8/2). Her completion IS intact in Moodle, so find which surface she is seeing incomplete on, tell her what her record shows, and reconcile the 95.4 figure the draft cites BEFORE the 8/6 reply goes. Per FP04 the letter must neither adopt nor contradict her account.
+2. #23517 [executing] Build the per-state Gold Standards: uniform base, then TX (25 TAC 157 + SB 14 + Gov Code 552), CA (BPPE + the San Diego inspection shape), AZ (v4.22 as the AZ instance). Generate from compliance_doctrine so a posture edit propagates. No state template ships without its own verified citations.
+3. #23518 [executing] Build the doctrine harvester and backfill it over all 157 existing response rows. This is the part that recovers what has already been forgotten in inv1, inv2, inv3, inv9, inv13. regulator_facing must fail closed to 0 on anything touching motive, timing, solicitation, or a named doctrine.
+4. #23484 [executing] Packet composer: merge the 4 pooled drafts for the 8/6 packet into one letter body, opening with the ACC01 accomplishments section, appending the preservation block from response row 164 verbatim per A19, citing all three control numbers in one caption.
+5. Row 19 (human-only decision, no idea) confirm the current signature and filing status of the Kamdyn Sheets MWFD affiliation agreement before the 8/6 reply states anything about her placement. Vicky reply pending per Ruben.
+
+Reference IDs:
+- Ideas filed this session: #23482 [executing], #23484 [executing], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [executing], #23518 [executing], #23519 [executing]
+- Ideas referenc
+```
+
+### `1786010979248` — 8/6/2026, 12:18:57 PM PT — 628 turns
 
 **Original task:**
 
@@ -202,33 +283,38 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to be expanded to make better.
 ```
 
-**Ideas referenced:** #000000, #0693, #12206, #128260, #16069, #162324, #16817, #17446, #177914, #1881, #1882, #18944, #18951, #19173, #19437, #19866, #22086, #2224, #2225, #23184, #23276, #23585, #23710 [proposed], #23711 [proposed], #23955 [deployed], #23989 [proposed], #2457, #2458, #2459, #251236, #2563, #2603, #2703, #32373, #334155, #3572, #4480, #4481, #4991, #6064, #7207, #7317, #7907, #8103, #819596, #8211, #9583, #9584, #9589, #9590, #9591, #9592, #9593, #9594, #9595, #9597, #9598
+**Ideas referenced:** #000000, #0693, #12206, #128260, #16069, #162324, #16474, #16732, #16817, #17446, #177914, #1881, #1882, #18944, #18951, #19173, #19437, #19866, #22086, #2224, #2225, #23184, #23276, #23585, #23710 [proposed], #23711 [proposed], #23955 [deployed], #23989 [proposed], #2457, #2458, #2459, #251236, #2563, #2603, #2703, #32373, #334155, #3572, #4480, #4481, #4991, #6064, #7207, #7317, #7907, #8103, #819596, #8211, #9583, #9584, #9589, #9590, #9591, #9592, #9593, #9594, #9595, #9597, #9598
 
 **Last PICKUP PROMPT:**
 
 ```
-ing via chat brain + voice AI.
+stomer phone from call payload
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — CFA pulse check follow-up: escalate dedup verified working + callback feature adoption needed.
+Pick up task CFA review + callback wiring — all 3 ideas deployed, verified.
 
-Where we left off (verified 2026-08-06 11:27 PT):
-- #23710 [deployed] escalation dedup verified: 0 duplicate emails since 10:03 AM
-- #23711 [deployed] chat empty-gate + URL pre-gate deployed
-- Callback infra exists (55+ tables, 204 future slots, config) but 0 student bookings — offer not wired into chat/voice AI prompts
-- New idea filed: #23989 [proposed] — surface callback booking to students
+Where we left off (verified 2026-08-06 12:18 PT):
+- #23710 [deployed] escalation dedup: cron_email_responder.php + lib/email_staff_escalation_dedup.php — zero duplicates post-deploy
+- #23711 [deployed] capability expansion: D3 cron empty-message gate + lib/email_url_pre_gate.php draft-time URL blocker
+- #23989 [deployed] callback wiring: chat (chat_widget_api.php), email (cron_email_responder.php), voice (vapi_server_webhook.php) all wired through lib/callback_intent_detector.php
 
 Open threads to drive next:
-1. #23989 [proposed] — wire callback offer into chat brain (prompt injection) and voice AI agent (no-agent-available path)
-2. Monitor #23710 escalation count over next 24h to confirm sustained suppression
-3. Watch `cron_chat_handoff_ticket_spawn.php` D3 cycle for #23711a empty-gate stats
+1. #23710 [deployed] monitor escalation emails to vyu@ for 48h — verify sustained suppression
+2. #23711 [deployed] monitor D3 cron chat-status-check ticket cadence and blocked-URL ticket volume to confirm reduction
+3. #23989 [deployed] monitor callback_bookings for first organic student booking within 24h; if zero, investigate slot availability and booking flow
 
 Reference IDs:
-- Tickets: none
-- Ideas filed: #23710 [deployed], #23711 [deployed], #23989 [proposed]
-- Files touched: cron_email_responder.php, cron_chat_handoff_ticket_spawn.php, lib/mailer.php, lib/email_staff_escalation_dedup.php, lib/email_url_pre_gate.php, HANDOFF_NOTES.md
+- Ideas filed: #23710, #23711, #23955 (sub-idea for D3 cron), #23989
+- Files touched:
+  - /var/www/emtskills/cron/cron_email_responder.php (escalation dedup + email callback wiring)
+  - /var/www/emtskills/lib/email_staff_escalation_dedup.php (new dedup helper)
+  - /var/www/emtskills/lib/callback_intent_detector.php (new intent detector + slot booker)
+  - /var/www/emtskills/lib/email_url_pre_gate.php (new URL pre-gate)
+  - /var/www/emtskills/cron/cron_chat_handoff_ticket_spawn.php (empty-message gate)
+  - /var/www/emtskills/api/chat_widget_api.php (chat callback wiring)
+  - /var/www/emtskills/api/voice/vapi_server_webhook.php (voice callback wiring + require)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
@@ -274,46 +360,6 @@ It was never saturation, and you were right to reject that story. It was **three
 **Ideas referenced:** #16523, #19370, #2250 [rejected], #2251 [deployed], #2252 [needs_verify], #2253 [deployed], #22688, #23036, #23378, #23428, #23429, #23468, #23506, #23630 [executing], #23851 [proposed], #23852 [proposed], #23868 [proposed], #23878 [proposed], #23879 [proposed], #23912, #23913 [proposed], #23920 [in_progress], #23921, #23934 [in_progress], #23941 [in_progress], #23942, #23944 [in_progress], #23951
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785986098106` — 8/6/2026, 9:39:39 AM PT — 922 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-Open up the TDSHS window I just inadvertantly closed and tell me the last task completed regarding this page: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=list  / BTW clicking thowe rows does nothing. Plus why are there duplicate entires for 2 students? I'm confused on that like for tomorrow I see 6 responses due. I think if there's a linkage, those all get populated on the detail page with the centralized response for each, this way we're not splitting hairs. Again, those links don't yet work or show details. Table should also show name of student // Wai
-```
-
-**Ideas referenced:** #047857, #059669, #111827, #12892, #13017, #13437, #178595, #178600, #18676, #19581, #19591, #19595, #19605, #2001, #23463 [unknown], #23482 [proposed], #23484 [proposed], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [proposed], #23518 [proposed], #23519 [proposed], #23643 [proposed], #23644 [proposed], #23645 [proposed], #23651 [rejected], #23652 [proposed], #23653 [approved], #23654 [approved], #23659 [proposed], #23660 [proposed], #23661 [proposed], #23666 [proposed], #23672 [proposed], #23673 [proposed], #23679 [proposed], #23680 [proposed], #23681 [proposed], #23682 [proposed], #23688 [proposed], #23695 [proposed], #23696 [proposed], #23697 [proposed], #23699 [proposed], #23700 [proposed], #23706 [proposed], #23707 [proposed], #23708 [proposed], #23709 [proposed], #23855 [proposed], #23856 [proposed], #23877 [proposed], #23882 [proposed], #23887 [proposed], #23888 [proposed], #23905 [proposed], #23906 [proposed], #23907 [proposed], #23914 [proposed], #2563, #26114, #2703, #3730, #374151, #450438, #475569, #600179, #64748, #92400
-
-**Last PICKUP PROMPT:**
-
-```
- deadline center + rows 19/20.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1785954856277 (TDSHS compliance doctrine and deadline center).
-
-Where we left off (verified 2026-08-05 21:24 PT):
-- Doctrine Library LIVE at /personnel/compliance_doctrine.php. #23515 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle; the CODE is deployed and harness-verified at 58 items, the idea row is the work record). Table admin_portal.compliance_doctrine, 58 active items: 19 postures, 19 anti-patterns, 6 fact patterns, 3 accomplishments, 7 agency defects, 4 statutory authorities. 9 carry regulator_facing=0 and render with an adjudication-only lock. Verified: facing=adj filter returns exactly 9, all locked.
-- Regulator-owed deadlines LIVE. #23516 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle). compliance_deadlines gained direction / requested_on / statutory_basis / last_agency_contact. Rows 27 (TPIA-004, due 8/10), 28 (TPIA-005, due 8/19 provisional), 29 (stale TDSHS request, monitor), 30 (AZ 39-121 trio, no send date recorded). List renders 21 deliverables, 5 they-owe pills, agency-owes card 0/4.
-- Row 19 verified sound. Row 20 CORRECTED: Moodle course_completions row 49223 shows user 51417 course 37 completed 2026-06-20 08:10:53 reaggregate 0, so the completion is INTACT and the regression premise is unconfirmed. Both rows still not_started, both still block the 8/6 send.
-- v4 packet consolidation and red-bar card from earlier this session: #23482 [executing] (reconcile_ideas returned status=approved dev_stage=idle), #23491 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle), prior v2 work #23463 [deployed] (reconcile_ideas returned status=open dev_stage=idle).
-
-Open threads to drive next:
-1. #23519 [executing] Answer Ava Kanthack. Five days unanswered (inbound 98073 on 7/31, 101757 on 8/2). Her completion IS intact in Moodle, so find which surface she is seeing incomplete on, tell her what her record shows, and reconcile the 95.4 figure the draft cites BEFORE the 8/6 reply goes. Per FP04 the letter must neither adopt nor contradict her account.
-2. #23517 [executing] Build the per-state Gold Standards: uniform base, then TX (25 TAC 157 + SB 14 + Gov Code 552), CA (BPPE + the San Diego inspection shape), AZ (v4.22 as the AZ instance). Generate from compliance_doctrine so a posture edit propagates. No state template ships without its own verified citations.
-3. #23518 [executing] Build the doctrine harvester and backfill it over all 157 existing response rows. This is the part that recovers what has already been forgotten in inv1, inv2, inv3, inv9, inv13. regulator_facing must fail closed to 0 on anything touching motive, timing, solicitation, or a named doctrine.
-4. #23484 [executing] Packet composer: merge the 4 pooled drafts for the 8/6 packet into one letter body, opening with the ACC01 accomplishments section, appending the preservation block from response row 164 verbatim per A19, citing all three control numbers in one caption.
-5. Row 19 (human-only decision, no idea) confirm the current signature and filing status of the Kamdyn Sheets MWFD affiliation agreement before the 8/6 reply states anything about her placement. Vicky reply pending per Ruben.
-
-Reference IDs:
-- Ideas filed this session: #23482 [executing], #23484 [executing], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [executing], #23518 [executing], #23519 [executing]
-- Ideas referenc
-```
 
 ### `1786002734721` — 8/6/2026, 9:27:15 AM PT — 556 turns
 
@@ -4235,96 +4281,5 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1785778361008` — 8/3/2026, 11:49:14 AM PT — 188 turns
-
-**Original task:**
-
-```
-https://emsuniversity.com/emtskills/routes/login_sms.php Sent verification code, but does not move to the page where I can enter it
-```
-
-**Ideas referenced:** #15669, #16817, #21753 [proposed], #21762 [proposed], #3742, #3869, #5272, #5275, #5277, #5278, #5279, #5280, #666666, #842029
-
-**Last PICKUP PROMPT:**
-
-```
-esh send request now succeeds.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — SMS login RCA + deployed ideas #21753 & #21762.
-
-Where we left off (verified 2026-08-03 11:48 PT):
-- RCA complete: "SMS not sent" = rate-limit exhaustion (3 OTPs/10 min per phone) from test sends; Twilio shows 5/5 delivered to +17605250530.
-- #21753 DEPLOYED: no-account message renders .message.notice (yellow) instead of .message.success; live-verified.
-- #21762 DEPLOYED: checkSMSRateLimit() logs [sms_rate_limit] BLOCKED on ≥3 sends/10min; live-verified (entry 11:30:15).
-- PHP lint clean both files; PHP-FPM reloaded; backups: login_sms.php.bak-20260803-css-fix, sms_auth.php.bak-20260803-ratelimit-log.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #21762 [deployed] — monitor [sms_rate_limit] entries over next 48h; if legit users start hitting cap, raise it or add a "resend after cooldown" UX.
-2. #21753 [deployed] — spot-check the notice styling on the verify step's error path in a real browser session.
-
-Reference IDs:
-- Ideas filed: #21753 [deployed], #21762 [deployed]
-- Files touched: /var/www/emtskills/routes/login_sms.php, /var/www/emtskills/lib/sms_auth.php
-- Evidence: /var/log/php8.3-fpm-errors.log (sms_rate_limit 11:30:15), Twilio Messages API delivered statuses, sms_login_tokens/sms_send_log rows
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785781530203` — 8/3/2026, 11:35:20 AM PT — 46 turns
-
-**Original task:**
-
-```
-Is this GLM faster aggregate than 4tok/sec
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #17202, #1754, #1755, #1820, #18312, #18326, #18389, #18493, #18530, #18552, #1859, #1871, #1875, #1884, #1885, #18868, #1896, #19143, #19230 [queued], #19234 [queued], #1935, #1937, #1964 [resolved], #1967, #1968, #1970, #19714 [proposed], #19887, #19907 [blocked], #2084, #2085, #2098 [queued], #2125
-
-**Last PICKUP PROMPT:**
-
-```
-
-<attempt_completion>
-<result>═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #19907 - GLM ring aggregate throughput answer (4 tok/s threshold)
-
-Where we left off (verified 2026-08-03 11:33 PT):
-- Answered Ruben's question 'Is this GLM faster aggregate than 4 tok/sec' [answering]
-- GLM Hex Ring (PP=6) documented healthy aggregate: ~60-70 tok/s @3+ concurrent (HANDOFF 2885); 3.5-8.2 tok/s hourly real-load avg (HANDOFF 2171); ~7.2 tok/s @12 concurrent (HANDOFF 4280) - all above 4 tok/s aggregate [answering]
-- Single-stream 0.85-2.9 tok/s is PP=6 pipeline bubble (per-request, not aggregate); aggregate scales with concurrency [answering]
-- Ring CURRENTLY DOWN: tunnel :8210 HTTP 000, no vllm_slot on Cato (192.168.1.115), no ray_node on any of 6 boxes, supervisor relaunch 11:18:09 died after 'Up 2 seconds', glm-5.2-local HTTP 500 via LiteLLM; current aggregate = 0 tok/s [blocked]
-
-Open threads to drive next:
-1. #19907 [blocked] - Ring relaunch is Ruben's call per rule on glm-5.2-local; needs rule 277 recipe: VLLM_ENGINE_READY_TIMEOUT_S=1800, gpu_memory_utilization=0.82, PP=6 TP=1, NO --enforce-eager, verify with >=1200 max_tokens on ring-only lane
-2. #1964 [resolved] - Supervisor rank table fixed (.115 head rank1=.244 Augustus); current crash may be stale-killer cron (glm52_stale_killer.sh) racing supervisor relaunch, verify before relaunch
-3. #2098 [queued] - Ring oversubscription under GLM-first routing (36-43 running / 29 waiting) tanks per-stream to ~0.3 tok/s; capacity not bug
-
-Reference IDs:
-- Ideas filed: #19907 [blocked], #1964 [resolved], #2098 [queued]
-- Files touched: none
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Check GLM cluster health and aggregate tok/sec
-- [x] Diagnose why GLM ring returns empty/500
-- [x] Confirm GLM ring serving status
-- [x] Investigate failed relaunch
-- [x] Check vllm_slot / ray_node state after relaunch
-- [x] Document historical benchmarks from HANDOFF
-- [x] Answer whether GLM aggregate > 4 tok/sec
-</task_progress>
 </attempt_completion>
 ```

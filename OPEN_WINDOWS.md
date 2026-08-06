@@ -6,11 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/5/2026, 10:39:41 PM PT | window: last 72h | 112 tasks | index total 495 (parsed 2, cached 493)
+Generated: 8/5/2026, 11:39:41 PM PT | window: last 72h | 111 tasks | index total 496 (parsed 3, cached 493)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785988427679` | 8/5/2026, 10:16:52 PM | 429 | 811KB | #Argus |
+| `1785997318545` | 8/5/2026, 11:39:40 PM | 109 | 421KB | Frankenstein-llm stalled since we added subagents or messed with that just recently |
+| `1785976094322` | 8/5/2026, 11:39:36 PM | 171 | 1424KB | For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 |
+| `1785988427679` | 8/5/2026, 11:22:07 PM | 441 | 838KB | #Argus |
 | `1785986098106` | 8/5/2026, 10:13:02 PM | 272 | 653KB | #TDSHS |
 | `1785989615911` | 8/5/2026, 10:04:26 PM | 206 | 1097KB | for frankenstein-llm subagents are still slow.  Are they using the 120Bs? If 120Bs are pas |
 | `1785971158342` | 8/5/2026, 9:24:41 PM | 160 | 359KB | #AZDHS |
@@ -24,7 +26,6 @@ Generated: 8/5/2026, 10:39:41 PM PT | window: last 72h | 112 tasks | index total
 | `1785937503831` | 8/5/2026, 8:11:44 PM | 658 | 2201KB | Can you tell me how many turns have taken place for each model in the last 5 hours by mode |
 | `1785966242067` | 8/5/2026, 8:03:19 PM | 386 | 1295KB | #TDSHS |
 | `1785954766914` | 8/5/2026, 7:56:32 PM | 248 | 949KB | #LLM FLEET |
-| `1785976094322` | 8/5/2026, 7:53:06 PM | 158 | 1399KB | For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 |
 | `1785953852961` | 8/5/2026, 4:34:41 PM | 408 | 1149KB | #GLM  |
 | `1785954733601` | 8/5/2026, 4:13:01 PM | 356 | 692KB | #SLS MEGA |
 | `1785957900287` | 8/5/2026, 4:08:38 PM | 174 | 642KB | Telphony still having issues: |
@@ -120,14 +121,38 @@ Generated: 8/5/2026, 10:39:41 PM PT | window: last 72h | 112 tasks | index total
 | `1785775272174` | 8/3/2026, 9:41:12 AM | 1 | 2KB | Analysis only - tell me why frankenstein llm is so slow right now |
 | `1785604764278` | 8/3/2026, 12:04:02 AM | 264 | 1217KB | based on the complaints received and current status, what kind of actions can we put into  |
 | `1785649980432` | 8/2/2026, 11:52:25 PM | 906 | 2864KB | #Argus |
-| `1785599739497` | 8/2/2026, 11:25:37 PM | 690 | 3266KB | I want to get back to work on clustering, parallelism and tarpipe, particularly with the e |
-| `1785483774534` | 8/2/2026, 11:14:28 PM | 428 | 1226KB | Play frankenstein doctor of executor for the next 60 minutes (use timestamps) and make sur |
 
 ---
 
 ## Per-window detail
 
-### `1785988427679` — 8/5/2026, 10:16:52 PM PT — 429 turns
+### `1785997318545` — 8/5/2026, 11:39:40 PM PT — 109 turns
+
+**Original task:**
+
+```
+Frankenstein-llm stalled since we added subagents or messed with that just recently
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11944, #11953, #12299, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #13874, #16163, #16265, #16304, #16588, #16844, #178599, #18312, #18326, #18720, #20722, #2240, #2241, #23171, #23352, #23378, #23495, #23574 [executing], #23575 [proposed], #23576 [proposed], #23581 [executing], #23583 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785976094322` — 8/5/2026, 11:39:36 PM PT — 171 turns
+
+**Original task:**
+
+```
+For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 
+
+extremely thin and unviewable. Can you resolve this? Look at this middle content. It should stretch out to both sides (left and right)
+```
+
+**Ideas referenced:** #495057, #856404
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785988427679` — 8/5/2026, 11:22:07 PM PT — 441 turns
 
 **Original task:**
 
@@ -143,41 +168,40 @@ Pick up task #23428 [executing]: Argus request-speed work ONLY.
 Scope guard: this window is Argus performance only. Non-Argus work (student ops, telephony, c
 ```
 
-**Ideas referenced:** #10005, #10108, #11953, #12251, #12335, #12365, #12366, #12368, #12407, #12657, #12689, #127908, #128203, #128263, #128275, #13831, #13874, #16213, #16265, #1627, #17202, #17203, #17205, #17300, #18820, #19903, #20300, #2050, #21125, #21126, #2221, #2232, #2238, #2242 [deployed], #22583 [approved], #22688, #22850, #22897 [executing], #23027, #23036, #23190 [rejected], #23191 [executing], #23192 [rejected], #23205 [rejected], #23307 [rejected], #23339 [executing], #23425 [deployed], #23426 [deployed], #23427 [deployed], #23428 [executing], #23429 [executing], #23430 [deployed], #23440 [proposed], #23467 [executing], #23468 [deployed], #23472 [proposed], #23477 [proposed], #23483 [proposed], #23489 [proposed], #23490, #23505 [proposed], #23506, #23511 [proposed], #23513 [proposed], #23520 [deployed], #23530 [deployed], #23550 [proposed]
+**Ideas referenced:** #10005, #10108, #11953, #12251, #12335, #12365, #12366, #12368, #12407, #12657, #12689, #127908, #128203, #128263, #128275, #13831, #13874, #16213, #16265, #1627, #17202, #17203, #17205, #17300, #18820, #19903, #20300, #2050, #21125, #21126, #2221, #2232, #2238, #2242 [deployed], #22511, #22583 [approved], #22688, #22850, #22897 [executing], #23027, #23036, #23190 [rejected], #23191 [executing], #23192 [rejected], #23205 [rejected], #23307 [rejected], #23339 [executing], #23425 [deployed], #23426 [deployed], #23427 [deployed], #23428 [executing], #23429 [executing], #23430 [deployed], #23440 [proposed], #23467 [executing], #23468 [deployed], #23472 [proposed], #23477 [proposed], #23483 [proposed], #23489 [proposed], #23490, #23505 [proposed], #23506, #23511 [proposed], #23513 [proposed], #23520 [deployed], #23530 [deployed], #23550 [proposed], #23572 [proposed]
 
 **Last PICKUP PROMPT:**
 
 ```
-the worker, not a rewrite.
+ of truncating the answer.
 
 ═══════════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════════
-Pick up task -- Argus subagent decomposition: implement parent_task_id + child row dispatch + per-child round caps + result merge in cron_argus_task_worker.php.
+Pick up task — Argus subagent decomposition (#23550) + DeepSeek research spill (#23572): implement both in the build window.
 
-Where we left off (verified 2026-08-05 22:15 PT):
-- Ruben asked whether Argus can use subagents to save time by limiting turns/tool calls.
-- Research done: Argus has serial round loop inside alltastic_api.php; curl_multi parallelism (#23428) only parallelizes across tasks, not within a single multi-step task.
-- Idea #23550 [proposed] filed with architecture: decompose multi-part tasks into child rows, dispatch via existing curl_multi, per-child reduced max_rounds, merge results.
-- argus_round_latency table (#23513) exists -- use round_no > 3 as decomposition trigger.
+Where we left off (verified 2026-08-05 23:16 PT):
+- #23550 [approved] — parent_task_id column, decomposition in cron_argus_task_worker.php Phase 1, curl_multi child dispatch, per-child max_rounds, result merge. Ruben approved 2026-08-05.
+- #23572 [proposed] — research children route to deepseek-v4-pro fast path ($extModeMap['fast'], line 5414 alltastic_api.php), per-tier round caps (research 4 / fact 2 / production existing), spill flag in argus_round_latency, over-cap children re-split by parent instead of truncating.
 
 Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #23550 [proposed] -- implement parent_task_id column + decomposition logic in cron_argus_task_worker.php Phase 1, curl_multi dispatch of children, result merge into parent. GATED: Ruben approval required before build.
+1. #23550 [approved] — build: ALTER argus_task_queue ADD parent_task_id INT NULL; decomposition + child dispatch + merge in cron_argus_task_worker.php; sidebar child-link display. Run tight definition-of-done loop per rule 137.
+2. #23572 [proposed] — after #23550 lands: add spill_tier field to worker payload, wire research children to spDeepSeek fast path, add argus_mode='subagent_research' to round latency, implement re-split-on-cap.
 
 Reference IDs:
 - Ticket: none
-- Ideas filed: #23550 [proposed]
+- Ideas filed: #23550 [approved], #23572 [proposed]
 - Files touched: none yet (analysis only); target: /var/www/emtskills/routes/cron_argus_task_worker.php, /var/www/emtskills/routes/alltastic_api.php
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════════
 </result>
 <task_progress>
-- [x] Research Argus sidebar architecture and dispatch loop
-- [x] Read worker/dispatch code for subagent feasibility
-- [x] Verify tool-call loop: sequential round loop in alltastic_api, line 12607+
-- [x] Create idea #23550 for subagent-style decomposition
-- [x] Report findings with concrete yes/no + how
+- [x] #23550 approved by Ruben
+- [x] Research spill ladder + DeepSeek routing in alltastic_api.php (extModeMap fast=deepseek-v4-pro, line 5414)
+- [x] Analyze tool cap vs no-tool-cap tradeoff for subagent spill tasks
+- [x] File idea #23572 for subagent research spill to DeepSeek
+- [x] Report findings
 </task_progress>
 </attempt_completion>
 ```
@@ -721,20 +745,6 @@ Reference IDs:
 When done, append to cline_task_ledger.md per rule 07 and run order 66.
 ══════════════
 ```
-
-### `1785976094322` — 8/5/2026, 7:53:06 PM PT — 158 turns
-
-**Original task:**
-
-```
-For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 
-
-extremely thin and unviewable. Can you resolve this? Look at this middle content. It should stretch out to both sides (left and right)
-```
-
-**Ideas referenced:** #495057, #856404
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785953852961` — 8/5/2026, 4:34:41 PM PT — 408 turns
 
@@ -4229,99 +4239,5 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1785599739497` — 8/2/2026, 11:25:37 PM PT — 690 turns
-
-**Original task:**
-
-```
-I want to get back to work on clustering, parallelism and tarpipe, particularly with the executor, orchestrator, CFAs and autonomous tasks. Tell me where we are at with this and how we can increase capacity even more
-```
-
-**Ideas referenced:** #10004, #10008, #1130, #1131, #12059, #12184, #12231, #12246, #12247, #12266, #12269, #12285, #12363, #1241, #12425, #12430, #1248, #1249, #1252, #1258, #1281, #13078, #13084, #1309, #13121, #1314, #13155, #13157, #13199, #13204, #15144, #15333, #15367, #15652, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16610, #16778, #16802, #16803, #16839, #16851, #16881, #17246, #17320, #17357, #1744, #17458, #17717, #17736, #17781, #1779, #17913, #1798, #18135, #1828, #18350, #18353, #18355, #18357, #18395, #18442, #1850, #19079, #19325, #19338, #19404, #19417, #19435, #19458, #19490, #19491, #19494, #19503, #19504, #19509, #19567, #19629, #19643, #19661, #19670, #19684, #19840, #19921, #20042, #20071, #20128, #20130, #2015, #20193, #20328, #20333, #20350, #20408, #20410, #20420, #20423, #2043, #20517, #20555, #20565, #20569 [deployed], #20613, #20627, #20628, #20629, #2063, #20630, #2065, #20662, #20663 [rejected], #20665, #20672 [proposed], #20711, #2073, #2076, #20869, #20874, #20875, #20877 [queued], #20878 [queued], #20879 [queued], #20900 [proposed], #20901 [proposed], #20902 [proposed], #20903, #20934 [approved], #20985, #21038, #2113, #2114, #2125, #2126, #2127, #2128, #2782, #3541, #3917, #3953, #3957, #41535, #4536, #5029, #5034, #6039, #7142, #7149, #7925, #8281, #8321, #8563, #8598, #9222, #9235, #9405, #9420, #9715, #9731
-
-**Last PICKUP PROMPT:**
-
-```
-the last step.
-
-═══════════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════════
-Pick up task — Wire parallel dispatch into the executor: make cron_orchestrator_executor.php fan out N build tasks via the new parapipe_lib instead of one idea per tick.
-
-Where we left off (verified 2026-08-02 23:05 PT, server probes):
-- `/var/www/emtskills/lib/parapipe_lib.php` DEPLOYED + lint-passing: `dispatch_parallel($tasks, $handler, $n=4)` and `tarpipe_broadcast($src, $workers)` ([20901] [20902])
-- Capacity gates already open: dispatcher_worker_config.max_concurrent_workers=24, parallel_chains=8 — but throughput still 3-5 execs/hr because the dispatch loop is serial
-- Executor file: `/var/www/emtskills/cron/cron_orchestrator_executor.php` (read it in full; find the serial `foreach` that processes one idea per tick, around the `isMaxConcurrentWorkersReached` block, and replace it with a `dispatch_parallel()` fan-out honoring the 24 cap)
-
-Open threads to drive next (real idea numbers):
-1. #20901 [deployed] — NEXT: wire dispatch_parallel into cron_orchestrator_executor.php; then measure execs/hr before/after via `SELECT DATE_FORMAT(created_at,'%b%d %Hh') hr, COUNT(*) FROM orchestrator_execution_log ... GROUP BY hr`
-2. #20902 [deployed] — NEXT: run one tarpipe_broadcast dry-run to /tmp and verify all 8 fleet-state hosts get the snapshot; log to /var/log/emsu-cron/tarpipe.log
-3. #20879 [deployed] — NEXT: after 24h of the 2-hourly Daystrom telemetry cron, review rows in daystrom_parallel_execution_log (first session already captured: crc32=861410692, 12 agents, 1,970,000ms)
-
-Reference IDs:
-- Ideas filed/deployed: #20877 (superseded by live-probe audit), #20878 [deployed], #20879 [deployed], #20900 [deployed], #20901 [deployed], #20902 [deployed], #20934 [deployed]
-- Files touched: /var/www/emtskills/cron/cron_orchestrator_executor.php (parallel_chains 1->8), /var/www/
-emtskills/cron/cron_daystrom_council_parallelism.php (rebuilt telemetry runner), /var/www/emtskills/cron/cron_idea_cluster_batcher.php, /var/www/emtskills/lib/parapipe_lib.php, /var/www/emtskills/.clinerules/297-fleet-preflight-gate.md, /usr/local/bin/rule297_fleet_preflight.sh, /usr/local/bin/emsu-capacity-ramp.sh (G3 gate fix), /etc/cron.d/emsu-daystrom-parallelism, /etc/cron.d/emsu-idea-cluster-batcher
-- Leverage note: for deploys use `write_server_file` with pure-ASCII content (the em-dash/unicode and long-base64 channels corrupt); verify every write with `php -l` + `head` per rule 297.
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════════════════
-```
-
-### `1785483774534` — 8/2/2026, 11:14:28 PM PT — 428 turns
-
-**Original task:**
-
-```
-Play frankenstein doctor of executor for the next 60 minutes (use timestamps) and make sure it's functioning properly and ideas are being implemented. Any ideas not implmeented in the last 24 hours that are not stale or superceded may need to be ran again and RCA done/original issue resoled. Leverage rule 267 as working as is possible.
-```
-
-**Ideas referenced:** #10223, #1130, #1131, #12024, #12299, #1241, #12425, #12430, #1248, #1249, #1252, #1258, #12676, #15144, #15333, #15367, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16588, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #177877, #1779, #17913, #1798, #1828, #19567, #19629, #20041 [executing], #20042, #20069, #2025, #20264 [executing], #20268 [executing], #20297 [executing], #20300 [executing], #20309 [executing], #20313, #20317, #20326, #20327, #20335 [executing], #20336 [executing], #20340 [executing], #20341 [deployed], #20345, #20347 [executing], #20350 [executing], #20351, #20352, #20353 [deployed], #20355, #20359, #20360 [deployed], #20363, #20364, #20367 [deployed], #20368, #20371, #20374, #20375, #20377, #20380, #20383, #20385, #20390, #20391, #20395, #20396, #20404, #20406 [executing], #20408 [executing], #20412 [executing], #20414, #20420 [executing], #20423 [proposed], #20430 [proposed], #20490 [executing], #20492 [executing], #2063, #2065, #20662, #2073, #2076, #2082, #20957, #20958, #20985, #21010 [in_progress], #21011 [in_progress], #21038 [proposed], #2113 [rejected], #21158 [in_progress], #2117, #21213 [in_progress], #2127, #21419 [in_progress], #21477 [unknown], #2149, #2150, #2151, #2152, #21542 [proposed], #21546 [proposed], #3541, #4071, #4257, #4632, #4667, #4807, #4987, #4988, #5217, #5221, #5309, #5324, #5479, #5551, #5916, #5930, #5936, #6410, #6429, #6491, #6693, #6825, #7142, #7149, #7925, #8563, #8598, #9920
-
-**Last PICKUP PROMPT:**
-
-```
- owned by Ruben in GLM window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #21546 [executing] - RunPod watchdog kill-switch landed + PHP parse error fixes
-
-Where we left off (verified 2026-08-02 23:13 PT):
-- RULE 297: source read /usr/local/bin/emsu-runpod-pod-watchdog.sh. The every-2-min '70B serve dead AND mint failed' critical was emitted by watchdog mint_failure db_alert for a phantom RunPod pod. Real 70B = Joshua L1b HTTP 200. Ruben directive: stale info, no runpods.
-- ROOT CAUSE: orchestrator_config.id=1 config_json was NULL, kill-switch never read 0.
-- FIX VERIFIED: fleet_pod_autoscaler_enabled=0 set with JSON_SET(COALESCE). Watchdog log: 'minting suppressed, exit'. ZERO critical events last 3 min.
-- #21542 [rejected] reframed per no-runpods directive. #21546 [executing] queued in engine (implemented manually + verified).
-- Earlier: fixed 2 PHP parse errors (finish_cv_call_transcripts.php, tarpipe_streamer.php), both php -l clean.
-- Fleet live: Julia TP=2 120B :11513, Artemis 120B :8000, L4f UP. Cesar = GLM-5.2 ring rank 5 (#21038 [proposed]).
-
-Open threads to drive next:
-1. #21546 [executing] - confirm implementation engine marks complete (manual work already verified).
-2. #21011 [executing] - email deliverability verification for outbound coordinator communications.
-3. #21010 [executing] - externship pipeline SLA with automated escalation at each stage.
-4. #20340 [executing] - externship agency outreach send pipeline silently fails (535/563 batched threads).
-
-Reference IDs:
-- Ideas: #21546 [executing], #21542 [rejected], #21038 [proposed]
-- Files touched: /usr/local/bin/emsu-runpod-pod-watchdog.sh (read-only), orchestrator_config (SQL), /var/www/emtskills/cron/finish_cv_call_transcripts.php, /var/www/emtskills/lib/tarpipe_streamer.php, /var/www/emtskills/docs/HANDOFF_NOTES.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Probed activity feed + tier health + ideas — context rebased
-- [x] Confirmed live criticals: PHP parse errors, 70B/mint canary loop
-- [x] Fixed 2 PHP parse errors — both php -l clean
-- [x] Applied rule 297: read watchdog source, classified emitter
-- [x] Root caused the canary: config_json NULL bypassed kill-switch
-- [x] Landed kill-switch fix, verified zero criticals, no RunPods minted
-- [x] Rejected #21542 (wrong framing), filed + implemented #21546
-- [x] All rule-91 gates passed, pickup prompt validated
-</task_progress>
 </attempt_completion>
 ```

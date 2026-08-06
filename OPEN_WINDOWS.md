@@ -6,13 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/6/2026, 2:39:42 AM PT | window: last 72h | 114 tasks | index total 501 (parsed 5, cached 496)
+Generated: 8/6/2026, 4:01:13 AM PT | window: last 72h | 115 tasks | index total 502 (parsed 4, cached 498)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786002734721` | 8/6/2026, 2:39:38 AM | 207 | 945KB | #Argus |
-| `1786002462510` | 8/6/2026, 2:39:30 AM | 245 | 1390KB | frankenstein-llm seems to be getting stuck here: |
-| `1785986098106` | 8/6/2026, 2:39:18 AM | 553 | 1394KB | #TDSHS |
+| `1786002734721` | 8/6/2026, 3:50:05 AM | 341 | 1244KB | #Argus |
+| `1786010979248` | 8/6/2026, 3:32:57 AM | 83 | 194KB | Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to |
+| `1785986098106` | 8/6/2026, 3:27:11 AM | 714 | 1879KB | #TDSHS |
+| `1786002462510` | 8/6/2026, 3:25:39 AM | 416 | 1678KB | frankenstein-llm seems to be getting stuck here: |
 | `1786008133029` | 8/6/2026, 2:27:39 AM | 42 | 81KB | There seems to be something that is submitting courses or something to TDSHS. Can you tell |
 | `1785976094322` | 8/6/2026, 2:12:29 AM | 348 | 1676KB | For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 |
 | `1786005641053` | 8/6/2026, 1:57:57 AM | 142 | 208KB | #GLM |
@@ -129,7 +130,7 @@ Generated: 8/6/2026, 2:39:42 AM PT | window: last 72h | 114 tasks | index total 
 
 ## Per-window detail
 
-### `1786002734721` — 8/6/2026, 2:39:38 AM PT — 207 turns
+### `1786002734721` — 8/6/2026, 3:50:05 AM PT — 341 turns
 
 **Original task:**
 
@@ -145,33 +146,33 @@ Also, Would like to see total time it took to finish an idea, not just the time 
 https://www.emsuniversity.com/emtskills/routes/argus_task_status.php
 ```
 
-**Ideas referenced:** #16213, #16695, #17759 [proposed], #17761, #17762 [deployed], #17766 [proposed], #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19653 [executing], #2006, #20547, #21125, #21126, #21167, #2212, #2240, #2241, #2244, #22511, #22583, #22688, #22850, #23027, #23031 [executing], #23036, #23037, #23038, #23039, #23050, #23062, #23067, #23117, #23133 [executing], #23135, #23139 [executing], #23164, #23173, #23211, #23223, #23264 [executing], #23265 [executing], #23308, #23323, #23324, #23352, #23378, #23428, #23429, #23431, #23440, #23468, #23472, #23477, #23483, #23489 [in_progress], #23495, #23500, #23505, #23506, #23530 [approved], #23574, #23581, #23583, #23620, #23622, #23623, #23630 [deployed], #23636, #23671, #334155, #3530, #3555, #3556, #3558, #4338, #4948, #4962, #56754, #64748
+**Ideas referenced:** #16213, #16695, #17759 [proposed], #17761, #17762 [deployed], #17766 [proposed], #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19653 [executing], #2006, #20547, #21125, #21126, #21167, #2183, #2212, #2240, #2241, #2244, #22511, #22583, #22688, #22850, #23027, #23031 [executing], #23036, #23037, #23038, #23039, #23050, #23062, #23067, #23117, #23133 [executing], #23135, #23139 [executing], #23164, #23173, #23211, #23223, #23264 [executing], #23265 [executing], #23308, #23323, #23324, #23352, #23378, #23428, #23429, #23431, #23440, #23468, #23472, #23477, #23483, #23489 [in_progress], #23495, #23500, #23505, #23506, #23530 [approved], #23574, #23581, #23583, #23620, #23622, #23623, #23630 [deployed], #23636 [deployed], #23671, #23674, #23675, #334155, #3530, #3555, #3556, #3558, #4338, #4948, #4962, #56754, #64748
 
 **Last PICKUP PROMPT:**
 
 ```
-w includes elapsed/total time.
+ redirect = auth gate, no 500)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Argus follow-up: total duration deployed, finish #23489 per-request latency.
+Pick up task — Argus: rate/report feature deployed, verify live + ship remaining latency fix.
 
-Where we left off (verified 2026-08-06 01:26 PT):
-- Idea #23630 [deployed] — Total-duration metric on argus_task_status.php (fmtDur helper, Total time + Elapsed rows)
-- Idea #23489 [in_progress, idle] — Parallelize within-round tool calls in runClaudeChatWithTools() (the dominant latency source)
-- Subagent question answered: NONE in Argus (no child-agent forking, no MCP subagent dispatch, only curl_multi task-batch parallelism)
-- Queue: 2 running (205-206), 172 done, 0 stuck
-- Backup: argus_task_status.php.bak-20260806-duration
+Where we left off (verified 2026-08-06 02:42 PT):
+- #23630 [deployed] — Total-duration metric on argus_task_status.php
+- #23623 / #23636 [deployed] — Incorrect Response rating button (the feature from tasks 204-206, now built and live). argus_task_ratings table will auto-create on first rating POST. Handler at lib/argus_rating_handler.php, UI at lib/argus_rating_ui.php.
+- Offload idea link now clickable (links to idea_status.php in new tab)
+- Tasks 204+205 HTTP 0 failures caused by frankenstein-tools adapter restart storm (separate issues in #23583/#23574/#23581 — still in_progress but unrelated to the feature itself)
+- Queue: running tasks 206 (same feature request, 5th attempt consumed after feature was shipped, now moot)
 
 Open threads to drive next:
-1. #23489 [in_progress] — Execute: modify terminal_query path in alltastic_api.php to parallelize tool calls within a single round (the 8 sequential rounds are ~45s each, so an 8-round request is ~6min). Each round's calls are independent lookups; fire them in parallel via curl_multi or pcntl_fork, collect results, pass to next round.
-2. #23530 [approved] — UX: add a "NEW" notification flag to Argus terminal instead of dumping background-task text inline into open chat threads.
+1. #23489 [in_progress, idle] — Parallelize within-round tool calls in alltastic_api.php. The 8 sequential rounds per request are ~45s each; an 8-round request is ~6min. Each round's tool calls are independent lookups — parallelize via curl_multi or pcntl_fork.
+2. #23530 [approved] — Terminal UX: NEW notification flag instead of dumping background-task text inline.
+3. Live-verify the rating feature: POST a correct/incorrect rating to task 1 (or any done task) and confirm the argus_task_ratings row is written and flash message renders.
 
 Reference IDs:
-- Ticket: N/A (no open Argus ticket)
-- Ideas filed: #23630 [deployed], #23489 [in_progress], #23530 [approved]
-- Files touched: /var/www/emtskills/routes/argus_task_status.php (modified), argus_task_status.php.bak-20260806-duration (backup)
+- Ideas filed: #23630 [deployed], #23623 [built — argus_rating], #23636 [built — argus_rating]
+- Files touched: argus_task_status.php (modified), lib/argus_rating_handler.php (new), lib/argus_rating_ui.php (new)
 - URL: https://www.emsuniversity.com/emtskills/routes/argus_task_status.php
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
@@ -180,32 +181,44 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786002462510` — 8/6/2026, 2:39:30 AM PT — 245 turns
+### `1786010979248` — 8/6/2026, 3:32:57 AM PT — 83 turns
 
 **Original task:**
 
 ```
-frankenstein-llm seems to be getting stuck here:
-
-Response
-
-Plain TextRich DisplayMarkdown
-
-\=== TASK 202 lookup === === argus code files === argus_backups _view_argus_spill_ladder_health.php admin_users.php.bak-argus-20260715 alltastic_api.php.bak-20250710-argus-upgrade alltastic_api.php.bak-20260220-pre-argus-knowledge alltastic_api.php.bak-20260221-pre-argus-diagnostic alltastic_api.php.bak-20260310-argus-hardening alltastic_api.php.bak-20260321-argusv4 alltastic_api.php.bak-20260324-argus alltastic_api.php.bak-20260327-argus-improvements alltastic_api.php.bak-20260409-183023-argus-phase0 a
+Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to be expanded to make better.
 ```
 
-**Ideas referenced:** #10740, #11397, #11741, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12584, #12657, #12672, #12673, #12689, #12716, #13108, #13121, #13202, #13831, #13832, #13874, #13964, #14000, #14848, #16120, #16718, #16844, #178600, #18781, #18786, #1884, #18868, #19338, #19653, #1967, #19903, #2014, #20272, #20300, #2050, #20536, #20722, #2097, #2099, #2100, #21045, #21136, #2244, #2247 [resolved], #22583, #22688, #23171, #23206, #23428, #23490, #23521, #23596, #23620, #23631 [proposed], #23638
+**Ideas referenced:** #23585, #23710 [proposed], #23711 [proposed], #251236, #9594
 
 **Last PICKUP PROMPT:**
 
 ```
- [ ] Design + implement quarantine bridge
-- [ ] Deploy + verify + complete with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
+o voice escalations in window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #23710 [proposed] -- CFA escalation-dedup loop (P0): add per-case suppression so human-action cases are not re-emailed every ~10 min.
+
+Where we left off (verified 2026-08-06 03:26 PT):
+- CFA 24h review complete; 2 ideas filed: #23710 [proposed], #23711 [proposed]
+- Handoff notes updated
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #23710 [proposed] -- implement escalation dedup/cooldown on cron_email_responder (suppress re-send if same case+recipient within 6h)
+2. #23711 [proposed] -- chat status-check inline resolution + draft-time URL pre-gate capability expansion
+
+Reference IDs:
+- Ideas filed: #23710 [proposed], #23711 [proposed]
+- Files touched: HANDOFF_NOTES.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
 ```
 
-### `1785986098106` — 8/6/2026, 2:39:18 AM PT — 553 turns
+### `1785986098106` — 8/6/2026, 3:27:11 AM PT — 714 turns
 
 **Original task:**
 
@@ -215,7 +228,7 @@ Plain TextRich DisplayMarkdown
 Open up the TDSHS window I just inadvertantly closed and tell me the last task completed regarding this page: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=list  / BTW clicking thowe rows does nothing. Plus why are there duplicate entires for 2 students? I'm confused on that like for tomorrow I see 6 responses due. I think if there's a linkage, those all get populated on the detail page with the centralized response for each, this way we're not splitting hairs. Again, those links don't yet work or show details. Table should also show name of student // Wai
 ```
 
-**Ideas referenced:** #047857, #059669, #111827, #12892, #13017, #13437, #178595, #178600, #18676, #19591, #19605, #23463 [unknown], #23482 [proposed], #23484 [proposed], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [proposed], #23518 [proposed], #23519 [proposed], #23643 [proposed], #23644 [proposed], #23645 [proposed], #23651 [rejected], #23652 [proposed], #23653 [approved], #23654 [approved], #23659 [proposed], #23660 [proposed], #23661 [proposed], #23666 [proposed], #23672 [proposed], #23673 [proposed], #2563, #26114, #2703, #3730, #374151, #450438, #475569, #600179, #64748, #92400
+**Ideas referenced:** #047857, #059669, #111827, #12892, #13017, #13437, #178595, #178600, #18676, #19581, #19591, #19605, #23463 [unknown], #23482 [proposed], #23484 [proposed], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [proposed], #23518 [proposed], #23519 [proposed], #23643 [proposed], #23644 [proposed], #23645 [proposed], #23651 [rejected], #23652 [proposed], #23653 [approved], #23654 [approved], #23659 [proposed], #23660 [proposed], #23661 [proposed], #23666 [proposed], #23672 [proposed], #23673 [proposed], #23679 [proposed], #23680 [proposed], #23681 [proposed], #23682 [proposed], #23688 [proposed], #23695 [proposed], #23696 [proposed], #23697 [proposed], #23699 [proposed], #23700 [proposed], #23706 [proposed], #23707 [proposed], #23708 [proposed], #23709 [proposed], #2563, #26114, #2703, #3730, #374151, #450438, #475569, #600179, #64748, #92400
 
 **Last PICKUP PROMPT:**
 
@@ -243,6 +256,55 @@ Open threads to drive next:
 Reference IDs:
 - Ideas filed this session: #23482 [executing], #23484 [executing], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [executing], #23518 [executing], #23519 [executing]
 - Ideas referenc
+```
+
+### `1786002462510` — 8/6/2026, 3:25:39 AM PT — 416 turns
+
+**Original task:**
+
+```
+frankenstein-llm seems to be getting stuck here:
+
+Response
+
+Plain TextRich DisplayMarkdown
+
+\=== TASK 202 lookup === === argus code files === argus_backups _view_argus_spill_ladder_health.php admin_users.php.bak-argus-20260715 alltastic_api.php.bak-20250710-argus-upgrade alltastic_api.php.bak-20260220-pre-argus-knowledge alltastic_api.php.bak-20260221-pre-argus-diagnostic alltastic_api.php.bak-20260310-argus-hardening alltastic_api.php.bak-20260321-argusv4 alltastic_api.php.bak-20260324-argus alltastic_api.php.bak-20260327-argus-improvements alltastic_api.php.bak-20260409-183023-argus-phase0 a
+```
+
+**Ideas referenced:** #10740, #11397, #11741, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12584, #12657, #12672, #12673, #12689, #12716, #13108, #13121, #13202, #13831, #13832, #13874, #13964, #14000, #14848, #16120, #16718, #16844, #1715, #178600, #18781, #18786, #1884, #18868, #19338, #19653, #1967, #19903, #2014, #20272, #20300, #2050, #20536, #20722, #2097, #2099, #2100, #21045, #21136, #2244, #2247 [resolved], #22583, #22688, #23171, #23206, #23428, #23490, #23521, #23596, #23620, #23631 [proposed], #23638 [deployed]
+
+**Last PICKUP PROMPT:**
+
+```
+x produces valid output again.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1786002462510 — quality quarantine for frankenstein-tools adapter.
+
+Where we left off (verified 2026-08-06T03:11-0700):
+- Quality quarantine patch deployed to /usr/local/bin/frankenstein_tools_adapter.py
+- Adapter restarted, healthy, syntax-verified
+- `_quality_fail_streak` dict + `_record_quality_fail`/`_record_quality_pass` helpers inserted
+- `_is_quarantined()` now checks quality-fail streak
+- Gate sites wired at EMPTY_RESPONSE_GATE and EMPTY_PASSTHROUGH_GATE_v2
+
+Open threads to drive next:
+1. #23638 [deployed] — monitor adapter log for QUALITY_QUARANTINE and QUARANTINE_FAIL events
+2. #23638 [deployed] — verify that a real garbage-producing box gets quarantined within 2 turns
+3. #2247 [resolved] — confirm the bug-library entry is still accurate post-fix
+
+Reference IDs:
+- Ticket: #1786002462510 (frankenstein-llm stuck/empty-unparsable cascade)
+- Ideas filed: #23631, #23638
+- Files touched: /usr/local/bin/frankenstein_tools_adapter.py
+- Bug library: #2247 (quality_canary_detects_garbage)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
 ```
 
 ### `1786008133029` — 8/6/2026, 2:27:39 AM PT — 42 turns

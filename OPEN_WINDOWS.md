@@ -6,15 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/5/2026, 4:39:39 PM PT | window: last 72h | 115 tasks | index total 490 (parsed 9, cached 481)
+Generated: 8/5/2026, 5:39:39 PM PT | window: last 72h | 116 tasks | index total 491 (parsed 3, cached 488)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785971158342` | 8/5/2026, 4:39:34 PM | 105 | 259KB | #AZDHS |
-| `1785966242067` | 8/5/2026, 4:39:31 PM | 171 | 407KB | #TDSHS |
-| `1785939420388` | 8/5/2026, 4:39:00 PM | 355 | 913KB | #Argus |
+| `1785976094322` | 8/5/2026, 5:39:33 PM | 75 | 1246KB | For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 |
+| `1785939420388` | 8/5/2026, 5:38:15 PM | 436 | 13810KB | #Argus |
+| `1785966242067` | 8/5/2026, 5:34:38 PM | 284 | 757KB | #TDSHS |
+| `1785939083137` | 8/5/2026, 5:07:17 PM | 1482 | 2417KB | https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since  |
+| `1785971158342` | 8/5/2026, 4:45:56 PM | 118 | 287KB | #AZDHS |
 | `1785953852961` | 8/5/2026, 4:34:41 PM | 408 | 1149KB | #GLM  |
-| `1785939083137` | 8/5/2026, 4:31:36 PM | 1334 | 2133KB | https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since  |
 | `1785937503831` | 8/5/2026, 4:17:22 PM | 536 | 1927KB | Can you tell me how many turns have taken place for each model in the last 5 hours by mode |
 | `1785954595787` | 8/5/2026, 4:17:15 PM | 160 | 794KB | #KAISON |
 | `1785954733601` | 8/5/2026, 4:13:01 PM | 356 | 692KB | #SLS MEGA |
@@ -130,63 +131,21 @@ Generated: 8/5/2026, 4:39:39 PM PT | window: last 72h | 115 tasks | index total 
 
 ## Per-window detail
 
-### `1785971158342` — 8/5/2026, 4:39:34 PM PT — 105 turns
+### `1785976094322` — 8/5/2026, 5:39:33 PM PT — 75 turns
 
 **Original task:**
 
 ```
-#AZDHS
+For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 
 
-See this request from Lawrence Bevins sent August 3 at 8:30 AM:
-
-Dear Ruben Major,
-
-EMS-26-0495 references student Richella Trujillo. Please compile the requested information in the NOI for this student.
-
-Respectfully,
-
-Lance Bevins
-
---
-reference complaint responses here: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations
+extremely thin and unviewable. Can you resolve this? Look at this middle content. It should stretch out to both sides (left and right)
 ```
 
-**Ideas referenced:** #249290, #25226, #26211, #450438, #92400
+**Ideas referenced:** #495057, #856404
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785966242067` — 8/5/2026, 4:39:31 PM PT — 171 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-Pick up Texas DSHS compliance. FIRST STOP, before anything else:
-https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations
-
-Backing tables: compliance_investigations (18 rows), compliance_investigation_responses (137),
-compliance_investigation_students (11), tdshs_course_notifications (72), dshs_form_signers (2).
-
-THE HEADLINE (probed live 2026-08-05 14:39 PT, idea #23269 [executing]):
-Ruben said Sabrina Richardson sent 14 messages. It is actually 17, and prior handoffs were WRONG
-that they were unretrievable. All 17 are in admin_portal.email_inbound
-```
-
-**Ideas referenced:** #1559, #18676 [blocked], #18690 [blocked], #23269 [executing], #23348 [high], #23349 [critical], #23350 [open], #23361 [executing], #23362 [blocked], #56740
-
-**Last PICKUP PROMPT:**
-
-```
- rows
-- [ ] Build deadline dashboard page
-- [ ] Verify page renders
-- [ ] Final PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
-```
-
-### `1785939420388` — 8/5/2026, 4:39:00 PM PT — 355 turns
+### `1785939420388` — 8/5/2026, 5:38:15 PM PT — 436 turns
 
 **Original task:**
 
@@ -209,15 +168,160 @@ Searched EMSU records (0 student profiles matched)
 Searched 
 ```
 
-**Ideas referenced:** #16213, #16523, #19348, #20627 [deployed], #2212 [open], #22688, #22850, #22887 [proposed], #22939 [proposed], #23027 [deployed], #23029, #23036 [proposed], #23037 [proposed], #23038 [proposed], #23039 [proposed], #23050 [executing], #23052, #23061 [executing], #23067 [deployed], #23094, #23116 [filed], #23132, #23136, #23144, #23161 [filed], #23166, #23170, #23209, #23217, #23218, #23291 [proposed], #23323 [proposed], #23324 [proposed], #23328, #23364
+**Ideas referenced:** #16213, #16523, #19348, #20627 [deployed], #2212 [open], #22688, #22850, #22887 [proposed], #22939 [proposed], #23027 [deployed], #23029, #23036 [proposed], #23037 [proposed], #23038 [proposed], #23039 [proposed], #23050 [executing], #23052, #23061 [executing], #23067 [deployed], #23094, #23116 [filed], #23132, #23136, #23144, #23161 [filed], #23166, #23170, #23209, #23217, #23218, #23291 [proposed], #23323 [proposed], #23324 [proposed], #23328, #23364 [proposed], #23391 [deployed], #23392 [proposed], #23393 [proposed]
 
 **Last PICKUP PROMPT:**
 
 ```
-BATCH=3 with 2-3min LLM calls the real throughput bottleneck?
-- [ ] Report with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
+3323/#23324 and stopped there.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up Argus task queue throughput and status-page UX.
+
+Where we left off (verified 2026-08-05 17:34 PT):
+- 4 core fixes deployed and confirmed (#23027, #23036, #23038, #23039)
+- Queue backlog clearing — #167 finishing, 168-169/171-172/174-175 queued
+- Cascade dedupe (#23391) live and verified (0 new dupes in 50 min)
+- Page still blank for queued/running tasks (no queue position, ETA, or partial result)
+
+Open threads to drive next:
+1. #23391 [deployed] — Monitor: confirm 0 cascaded dupes form in next 24h of production usage
+2. #23392 [proposed] — Throughput: evaluate parallelizing worker (process up to 3 in parallel with curl_multi or subprocesses) OR adding a second independent worker
+3. #23393 [proposed] — UX: enrich argus_task_status.php for queued/running tasks with queue position, ETA, and partial result like "Attempt 2/6 — running LLM call (17s so far)"
+
+Reference IDs:
+- Ticket: #23067 (router regression — root cause)
+- Ideas filed: #23027, #23036, #23038, #23039, #23037, #23391, #23392, #23393
+- Files touched: alltastic_api.php, cron_argus_task_worker.php, argus_task_status.php, HANDOFF_NOTES.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785966242067` — 8/5/2026, 5:34:38 PM PT — 284 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+Pick up Texas DSHS compliance. FIRST STOP, before anything else:
+https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations
+
+Backing tables: compliance_investigations (18 rows), compliance_investigation_responses (137),
+compliance_investigation_students (11), tdshs_course_notifications (72), dshs_form_signers (2).
+
+THE HEADLINE (probed live 2026-08-05 14:39 PT, idea #23269 [executing]):
+Ruben said Sabrina Richardson sent 14 messages. It is actually 17, and prior handoffs were WRONG
+that they were unretrievable. All 17 are in admin_portal.email_inbound
+```
+
+**Ideas referenced:** #059669, #111827, #1559, #18676 [blocked], #18690 [blocked], #19600, #19601, #19602, #23269 [executing], #23348 [high], #23349 [critical], #23350 [open], #23361 [executing], #23362 [blocked], #23365 [executing], #23366 [executing], #23367 [executing], #23372 [executing], #23373 [blocked], #23374 [proposed], #23380 [proposed], #23381 [executing], #23382 [executing], #23383 [proposed], #2563, #3730, #374151, #56740, #600179, #6106, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+h. 157 subsection** in item 7.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #23269 — TDSHS: 3 responses due 8/6, Sunset v2 ready, Richardson letter pending 2 edits.
+
+Where we left off (verified 2026-08-05 17:33 PT):
+- SUNSET SUBMISSION v2 written to uploads/tdshs/inspection-5196-2026/DRAFT_sunset_commission_input_EMSU.md (7173 to 15905 bytes, v1 backed up). Item 2 re-baselined to 11 control numbers + the aggregate-burden argument. NEW item 6 complaint intake transparency, NEW item 7 third-party private-organization referrals. Both framed as does-a-written-standard-exist, asserting no facts about Department conduct. New evidence-status table. inv18 row 155, also on the deadline page.
+- TIMING CHANGED: submit after the 8/6 responses and the Richardson letter, do NOT wait for TPIA-005 production, supplement later. sunset@sunset.texas.gov, subject "DSHS Review". Review window Sept 2025 to Dec 2026.
+- RICHARDSON LETTER approved by Ruben pending 2 edits: collapse "20+ in last 3 days" and "14 since Monday" into one window (both describe 8/3-8/5), and change "numerous separate control numbers" to "eleven" for consistency with the later reference.
+- STRATEGIC READ recorded: the letter will not change Richardson's behavior; its value is the contemporaneous record, three questions damaging to leave unanswered, a reasonableness contrast, and a predicate that unlocks escalation. Most licensees lose by attrition, so consistency ACROSS the eleven responses matters more than the strength of any one.
+- 3 responses due 8/6: Smith, Sheets, Kanthack. Drafted 8/1, rule-302 passed, PDFs NOT rendered (on-disk PDFs are stale 7/27).
+
+Open threads to drive next:
+1. #23365 [executing] — Render fresh PDFs from the 8/1 markdown for Smith/Sheets/Kanthack and send. DUE 8/6. CROSS-CHECK ALL THREE FOR CONTRADICTIONS before sending; that is the attrition risk. Kanthack blocked on dual control number 1080261815 vs 1080261891.
+2. #23366 [executing] — Ruben sends the Richardson letter after the two edits. Also VERIFY the exact 25 TAC ch. 157 subsection, which is cited in both the letter and Sunset item 7.
+3. #23383 [proposed] — Finalize and submit Sunset v2. Needs counsel review of item 7, [DATE] and phone filled, and confirmation the 8/6 responses went out.
+4. #23382 [executing] — Clear the externship backlog. Owed to students; dissolves complaint substance. Numbers never go to DSHS or into the Sunset submission.
+5. #23372 [deployed] — TPIA-005 filed. Diary the 10-business-day Gov Code 552 clock in inv16; escalate to AG if refused. Production feeds the Sunset supplement.
+6. #23362 [blocked] — Hold the factual pattern claim until TPIA-005 returns. Venue is the Sunset supplement.
+7. #23380 [proposed] — Mejia. Do NOT contact about the complaint without Ruben and counsel sign-off. DO place him.
+8. #23381 [executing] — Standing rule: never ask in correspondence what a pending TPIA already compels.
+9. #23373 [blocked] — Retrieve full Pinsky 7/9 text + the 6/18 and 6/24 demand PDFs. Needed to firm up Sunset item 7. Unblocker: Postmark account token.
+10. #23348 [blocked] — 5 complaint PDFs unfetched. Same blocker: POSTMARK_ACCOUNT_TOKEN in config.local.php is the literal placeholder `__RUBEN_PASTE_ACCOUNT_TOKEN_HERE__`.
+11. #18676 [blocked] — rmajor@ IMAP password. Caused three wrong conclusions today. Highest-leverage unblock in this matter.
+12. #23367 [executing] — Confirm the 5 INFERRED deadlines; link the deadline page from institutional_comp
+```
+
+### `1785939083137` — 8/5/2026, 5:07:17 PM PT — 1482 turns
+
+**Original task:**
+
+```
+https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since we have a 4TB NVME on WOPR. Can you tell me what's going on here and get these pages loaded faster?
+```
+
+**Ideas referenced:** #12245, #13839, #16732, #178590, #2211 [needs_verify], #2213, #2214, #2215, #2223, #2224, #2228 [rejected], #2229, #2230, #2235, #2240 [deployed], #23028 [proposed], #23029 [proposed], #23030 [proposed], #23031 [proposed], #23051 [executing], #23053 [executing], #23067 [deployed], #23133 [executing], #23134 [executing], #23139 [executing], #23145 [executing], #23232 [executing], #23233 [executing], #23293 [executing], #23352 [proposed], #23378 [proposed], #2998, #4907, #9112
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785971158342` — 8/5/2026, 4:45:56 PM PT — 118 turns
+
+**Original task:**
+
+```
+#AZDHS
+
+See this request from Lawrence Bevins sent August 3 at 8:30 AM:
+
+Dear Ruben Major,
+
+EMS-26-0495 references student Richella Trujillo. Please compile the requested information in the NOI for this student.
+
+Respectfully,
+
+Lance Bevins
+
+--
+reference complaint responses here: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations
+```
+
+**Ideas referenced:** #249290, #25226, #26114, #26211, #450438, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+t of 0495 as no-student-named.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #26114 — AZDHS NOI EMS-26-0495 supplementary filing, Richella Trujillo/Oscar Trujillo IV.
+
+Where we left off (verified 2026-08-05 16:44 PT):
+- Richella Trujillo identified as parent of Oscar Trujillo IV (26114T-05), Peoria Traditional 26114T
+- Supplementary response drafted covering all 5 NOI items: `/var/www/emtskills/uploads/compliance/july2026_noi/AZDHS_NOI_July2026_Supplementary_EMS-26-0495.txt`
+- DB record: compliance_investigation_responses id 149 [draft]
+- Investigation 17 summary updated
+
+Open threads to drive next:
+1. (human-only decision, no idea) — Ruben to review supplementary, sign, and transmit to Bevins cc Caswell
+2. (human-only decision, no idea) — Update file_path column on id 149 after PDF rendering
+3. (human-only decision, no idea) — Update investigation 17 summary to reflect supplementary round
+
+Reference IDs:
+- Investigation: 17 (azdhs-noi-2026-07-13)
+- Response: id 149
+- Student: Oscar Trujillo IV, 26114T-05, admin PK 8142323
+- Ticket: TKT-20260525-89AD507F
+- Chargeback: XJDYKPH7U1UM9HOT
+- Evidence dirs: 51, 57, 65
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
 ```
 
 ### `1785953852961` — 8/5/2026, 4:34:41 PM PT — 408 turns
@@ -233,18 +337,6 @@ begin work on this. Start with a comprehensive state of the system
 ```
 
 **Ideas referenced:** #0000, #12459, #12463, #12618, #12643, #12645 [deployed], #12680, #12689, #13121, #13832, #13874, #13962, #16224, #16265, #1685, #1687, #1705, #1706, #17203, #17205, #17307, #18471, #18820, #18868, #19173, #19175 [executing], #19176 [queued], #19218 [approved], #19230 [queued], #19261 [approved], #1962, #1967, #1986 [deployed], #1987 [outdated], #1988 [needs_verify], #1989 [outdated], #19898 [ready_for_review], #19899 [proposed], #1990 [outdated], #19903, #19904 [proposed], #1991 [deployed], #1998, #199999, #20251, #2050, #2101 [resolved], #21045, #2168, #21684, #2216 [deployed], #2217 [deployed], #2227, #2236, #22601, #22897 [proposed], #23050 [executing], #23056 [executing], #23157 [approved], #23159 [approved], #23169 [approved], #23283 [approved], #23326 [in_progress], #23354 [deployed], #5344
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785939083137` — 8/5/2026, 4:31:36 PM PT — 1334 turns
-
-**Original task:**
-
-```
-https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since we have a 4TB NVME on WOPR. Can you tell me what's going on here and get these pages loaded faster?
-```
-
-**Ideas referenced:** #16732, #178590, #2211 [needs_verify], #2213, #2214, #2215, #2223, #2224, #2228 [rejected], #2229, #2230, #2235, #2240, #23028 [proposed], #23029 [proposed], #23030 [proposed], #23031 [proposed], #23051 [executing], #23053 [executing], #23067 [deployed], #23133 [executing], #23134 [executing], #23139 [executing], #23145 [executing], #23232 [executing], #23233 [executing], #23293 [executing], #2998, #9112
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 

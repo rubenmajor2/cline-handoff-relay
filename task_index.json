@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-05T23:39:39.506Z",
+ "generated_at": "2026-08-06T00:39:39.864Z",
  "counts": {
-  "parsed": 9,
-  "reused": 481,
+  "parsed": 3,
+  "reused": 488,
   "failed": 0,
-  "total": 490
+  "total": 491
  },
  "tasks": {
   "1784522296714": {
@@ -112611,11 +112611,11 @@
   },
   "1785939083137": {
    "task_id": "1785939083137",
-   "mtime": 1785972696022,
+   "mtime": 1785974837146,
    "created_at": "2026-08-05T14:11:23.137Z",
-   "last_modified": "2026-08-05T23:31:36.022Z",
-   "size_kb": 2133,
-   "turn_count": 1334,
+   "last_modified": "2026-08-06T00:07:17.146Z",
+   "size_kb": 2417,
+   "turn_count": 1482,
    "title": "https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since we have a 4TB NVME on WOPR. Can you tell me what's going on here and get these pages loaded faster?",
    "pickup_prompt": null,
    "ideas": {
@@ -112629,9 +112629,12 @@
     "2229": null,
     "2230": null,
     "2235": null,
-    "2240": null,
+    "2240": "deployed",
     "2998": null,
+    "4907": null,
     "9112": null,
+    "12245": null,
+    "13839": null,
     "16732": null,
     "23028": "proposed",
     "23029": "proposed",
@@ -112647,6 +112650,8 @@
     "23232": "executing",
     "23233": "executing",
     "23293": "executing",
+    "23352": "proposed",
+    "23378": "proposed",
     "178590": null
    }
   },
@@ -112663,13 +112668,13 @@
   },
   "1785939420388": {
    "task_id": "1785939420388",
-   "mtime": 1785973140426,
+   "mtime": 1785976695807,
    "created_at": "2026-08-05T14:17:00.388Z",
-   "last_modified": "2026-08-05T23:39:00.426Z",
-   "size_kb": 913,
-   "turn_count": 355,
+   "last_modified": "2026-08-06T00:38:15.807Z",
+   "size_kb": 13810,
+   "turn_count": 436,
    "title": "#Argus\n\nPlease see this in Argus, appears like some hallucinations, the model is not answering questiosn proerly and something is wrong. Also when I click on those individual task links it spins forever. Plus what does it mean \"marale\"? And why all the excuses? And it's answering things I didn't ask:\n\nTest as:\n\nMasterAdmin\nDashboard\nArgus\nNew chat started. Saves automatically after your first message.\nYou\ncan you tell me how many requests were made in Argus overnight and by whom and what were the topics?\nArgus\nStill thinking (50s)...\nSearched EMSU records (0 student profiles matched)\nSearched EMSU knowledge base (VEC) - relevant docs found\nThinking with frankenstein-llm...\nSteer Argus mid-th",
-   "pickup_prompt": "BATCH=3 with 2-3min LLM calls the real throughput bottleneck?\n- [ ] Report with PICKUP PROMPT\n</task_progress>\n</use_mcp_tool>",
+   "pickup_prompt": "3323/#23324 and stopped there.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up Argus task queue throughput and status-page UX.\n\nWhere we left off (verified 2026-08-05 17:34 PT):\n- 4 core fixes deployed and confirmed (#23027, #23036, #23038, #23039)\n- Queue backlog clearing — #167 finishing, 168-169/171-172/174-175 queued\n- Cascade dedupe (#23391) live and verified (0 new dupes in 50 min)\n- Page still blank for queued/running tasks (no queue position, ETA, or partial result)\n\nOpen threads to drive next:\n1. #23391 [deployed] — Monitor: confirm 0 cascaded dupes form in next 24h of production usage\n2. #23392 [proposed] — Throughput: evaluate parallelizing worker (process up to 3 in parallel with curl_multi or subprocesses) OR adding a second independent worker\n3. #23393 [proposed] — UX: enrich argus_task_status.php for queued/running tasks with queue position, ETA, and partial result like \"Attempt 2/6 — running LLM call (17s so far)\"\n\nReference IDs:\n- Ticket: #23067 (router regression — root cause)\n- Ideas filed: #23027, #23036, #23038, #23039, #23037, #23391, #23392, #23393\n- Files touched: alltastic_api.php, cron_argus_task_worker.php, argus_task_status.php, HANDOFF_NOTES.md\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "2212": "open",
     "16213": null,
@@ -112705,7 +112710,10 @@
     "23323": "proposed",
     "23324": "proposed",
     "23328": null,
-    "23364": null
+    "23364": "proposed",
+    "23391": "deployed",
+    "23392": "proposed",
+    "23393": "proposed"
    }
   },
   "1785940995783": {
@@ -113747,24 +113755,45 @@
   },
   "1785966242067": {
    "task_id": "1785966242067",
-   "mtime": 1785973171847,
+   "mtime": 1785976478784,
    "created_at": "2026-08-05T21:44:02.067Z",
-   "last_modified": "2026-08-05T23:39:31.847Z",
-   "size_kb": 407,
-   "turn_count": 171,
+   "last_modified": "2026-08-06T00:34:38.784Z",
+   "size_kb": 757,
+   "turn_count": 284,
    "title": "#TDSHS\n\nPick up Texas DSHS compliance. FIRST STOP, before anything else:\nhttps://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations\n\nBacking tables: compliance_investigations (18 rows), compliance_investigation_responses (137),\ncompliance_investigation_students (11), tdshs_course_notifications (72), dshs_form_signers (2).\n\nTHE HEADLINE (probed live 2026-08-05 14:39 PT, idea #23269 [executing]):\nRuben said Sabrina Richardson sent 14 messages. It is actually 17, and prior handoffs were WRONG\nthat they were unretrievable. All 17 are in admin_portal.email_inbound_log from\nsabrina.lee.richardson@dshs.texas.gov, display name \"Richardson,Sabrina Lee (DSHS)\", sendi",
-   "pickup_prompt": " rows\n- [ ] Build deadline dashboard page\n- [ ] Verify page renders\n- [ ] Final PICKUP PROMPT\n</task_progress>\n</use_mcp_tool>",
+   "pickup_prompt": "h. 157 subsection** in item 7.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #23269 — TDSHS: 3 responses due 8/6, Sunset v2 ready, Richardson letter pending 2 edits.\n\nWhere we left off (verified 2026-08-05 17:33 PT):\n- SUNSET SUBMISSION v2 written to uploads/tdshs/inspection-5196-2026/DRAFT_sunset_commission_input_EMSU.md (7173 to 15905 bytes, v1 backed up). Item 2 re-baselined to 11 control numbers + the aggregate-burden argument. NEW item 6 complaint intake transparency, NEW item 7 third-party private-organization referrals. Both framed as does-a-written-standard-exist, asserting no facts about Department conduct. New evidence-status table. inv18 row 155, also on the deadline page.\n- TIMING CHANGED: submit after the 8/6 responses and the Richardson letter, do NOT wait for TPIA-005 production, supplement later. sunset@sunset.texas.gov, subject \"DSHS Review\". Review window Sept 2025 to Dec 2026.\n- RICHARDSON LETTER approved by Ruben pending 2 edits: collapse \"20+ in last 3 days\" and \"14 since Monday\" into one window (both describe 8/3-8/5), and change \"numerous separate control numbers\" to \"eleven\" for consistency with the later reference.\n- STRATEGIC READ recorded: the letter will not change Richardson's behavior; its value is the contemporaneous record, three questions damaging to leave unanswered, a reasonableness contrast, and a predicate that unlocks escalation. Most licensees lose by attrition, so consistency ACROSS the eleven responses matters more than the strength of any one.\n- 3 responses due 8/6: Smith, Sheets, Kanthack. Drafted 8/1, rule-302 passed, PDFs NOT rendered (on-disk PDFs are stale 7/27).\n\nOpen threads to drive next:\n1. #23365 [executing] — Render fresh PDFs from the 8/1 markdown for Smith/Sheets/Kanthack and send. DUE 8/6. CROSS-CHECK ALL THREE FOR CONTRADICTIONS before sending; that is the attrition risk. Kanthack blocked on dual control number 1080261815 vs 1080261891.\n2. #23366 [executing] — Ruben sends the Richardson letter after the two edits. Also VERIFY the exact 25 TAC ch. 157 subsection, which is cited in both the letter and Sunset item 7.\n3. #23383 [proposed] — Finalize and submit Sunset v2. Needs counsel review of item 7, [DATE] and phone filled, and confirmation the 8/6 responses went out.\n4. #23382 [executing] — Clear the externship backlog. Owed to students; dissolves complaint substance. Numbers never go to DSHS or into the Sunset submission.\n5. #23372 [deployed] — TPIA-005 filed. Diary the 10-business-day Gov Code 552 clock in inv16; escalate to AG if refused. Production feeds the Sunset supplement.\n6. #23362 [blocked] — Hold the factual pattern claim until TPIA-005 returns. Venue is the Sunset supplement.\n7. #23380 [proposed] — Mejia. Do NOT contact about the complaint without Ruben and counsel sign-off. DO place him.\n8. #23381 [executing] — Standing rule: never ask in correspondence what a pending TPIA already compels.\n9. #23373 [blocked] — Retrieve full Pinsky 7/9 text + the 6/18 and 6/24 demand PDFs. Needed to firm up Sunset item 7. Unblocker: Postmark account token.\n10. #23348 [blocked] — 5 complaint PDFs unfetched. Same blocker: POSTMARK_ACCOUNT_TOKEN in config.local.php is the literal placeholder `__RUBEN_PASTE_ACCOUNT_TOKEN_HERE__`.\n11. #18676 [blocked] — rmajor@ IMAP password. Caused three wrong conclusions today. Highest-leverage unblock in this matter.\n12. #23367 [executing] — Confirm the 5 INFERRED deadlines; link the deadline page from institutional_comp",
    "ideas": {
     "1559": null,
+    "2563": null,
+    "3730": null,
+    "6106": null,
     "18676": "blocked",
     "18690": "blocked",
+    "19600": null,
+    "19601": null,
+    "19602": null,
     "23269": "executing",
     "23348": "high",
     "23349": "critical",
     "23350": "open",
     "23361": "executing",
     "23362": "blocked",
-    "56740": null
+    "23365": "executing",
+    "23366": "executing",
+    "23367": "executing",
+    "23372": "executing",
+    "23373": "blocked",
+    "23374": "proposed",
+    "23380": "proposed",
+    "23381": "executing",
+    "23382": "executing",
+    "23383": "proposed",
+    "56740": null,
+    "92400": null,
+    "111827": null,
+    "374151": null,
+    "600179": null,
+    "059669": null
    }
   },
   "1785966271898": {
@@ -113798,19 +113827,34 @@
   },
   "1785971158342": {
    "task_id": "1785971158342",
-   "mtime": 1785973174453,
+   "mtime": 1785973556133,
    "created_at": "2026-08-05T23:05:58.342Z",
-   "last_modified": "2026-08-05T23:39:34.453Z",
-   "size_kb": 259,
-   "turn_count": 105,
+   "last_modified": "2026-08-05T23:45:56.133Z",
+   "size_kb": 287,
+   "turn_count": 118,
    "title": "#AZDHS\n\nSee this request from Lawrence Bevins sent August 3 at 8:30 AM:\n\nDear Ruben Major,\n\nEMS-26-0495 references student Richella Trujillo. Please compile the requested information in the NOI for this student.\n\nRespectfully,\n\nLance Bevins\n\n--\nreference complaint responses here: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations",
-   "pickup_prompt": null,
+   "pickup_prompt": "t of 0495 as no-student-named.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #26114 — AZDHS NOI EMS-26-0495 supplementary filing, Richella Trujillo/Oscar Trujillo IV.\n\nWhere we left off (verified 2026-08-05 16:44 PT):\n- Richella Trujillo identified as parent of Oscar Trujillo IV (26114T-05), Peoria Traditional 26114T\n- Supplementary response drafted covering all 5 NOI items: `/var/www/emtskills/uploads/compliance/july2026_noi/AZDHS_NOI_July2026_Supplementary_EMS-26-0495.txt`\n- DB record: compliance_investigation_responses id 149 [draft]\n- Investigation 17 summary updated\n\nOpen threads to drive next:\n1. (human-only decision, no idea) — Ruben to review supplementary, sign, and transmit to Bevins cc Caswell\n2. (human-only decision, no idea) — Update file_path column on id 149 after PDF rendering\n3. (human-only decision, no idea) — Update investigation 17 summary to reflect supplementary round\n\nReference IDs:\n- Investigation: 17 (azdhs-noi-2026-07-13)\n- Response: id 149\n- Student: Oscar Trujillo IV, 26114T-05, admin PK 8142323\n- Ticket: TKT-20260525-89AD507F\n- Chargeback: XJDYKPH7U1UM9HOT\n- Evidence dirs: 51, 57, 65\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
     "25226": null,
+    "26114": null,
     "26211": null,
     "92400": null,
     "249290": null,
     "450438": null
+   }
+  },
+  "1785976094322": {
+   "task_id": "1785976094322",
+   "mtime": 1785976773549,
+   "created_at": "2026-08-06T00:28:14.322Z",
+   "last_modified": "2026-08-06T00:39:33.549Z",
+   "size_kb": 1246,
+   "turn_count": 75,
+   "title": "For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 \n\nextremely thin and unviewable. Can you resolve this? Look at this middle content. It should stretch out to both sides (left and right)",
+   "pickup_prompt": null,
+   "ideas": {
+    "495057": null,
+    "856404": null
    }
   }
  }

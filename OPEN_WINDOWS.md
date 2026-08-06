@@ -6,16 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/6/2026, 9:30:43 AM PT | window: last 72h | 117 tasks | index total 504 (parsed 4, cached 500)
+Generated: 8/6/2026, 10:32:47 AM PT | window: last 72h | 115 tasks | index total 506 (parsed 4, cached 502)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786033674961` | 8/6/2026, 9:30:42 AM | 28 | 84KB | ## Argus  |
-| `1786032945879` | 8/6/2026, 9:30:34 AM | 127 | 217KB | #/emtskills lag |
-| `1785986098106` | 8/6/2026, 9:30:00 AM | 876 | 2438KB | #TDSHS |
+| `1786036273485` | 8/6/2026, 10:32:47 AM | 115 | 292KB | #Argus  |
+| `1786037557221` | 8/6/2026, 10:32:37 AM | 1 | 12KB | /emtskills lag |
+| `1786010979248` | 8/6/2026, 10:16:36 AM | 260 | 791KB | Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to |
+| `1786032945879` | 8/6/2026, 10:15:19 AM | 474 | 718KB | #/emtskills lag |
+| `1786033674961` | 8/6/2026, 10:00:27 AM | 214 | 441KB | ## Argus  |
+| `1785986098106` | 8/6/2026, 9:39:39 AM | 922 | 2518KB | #TDSHS |
 | `1786002734721` | 8/6/2026, 9:27:15 AM | 556 | 1532KB | #Argus |
 | `1785939083137` | 8/6/2026, 8:58:16 AM | 1734 | 3041KB | https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since  |
-| `1786010979248` | 8/6/2026, 3:32:57 AM | 83 | 194KB | Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to |
 | `1786002462510` | 8/6/2026, 3:25:39 AM | 416 | 1678KB | frankenstein-llm seems to be getting stuck here: |
 | `1786008133029` | 8/6/2026, 2:27:39 AM | 42 | 81KB | There seems to be something that is submitting courses or something to TDSHS. Can you tell |
 | `1785976094322` | 8/6/2026, 2:12:29 AM | 348 | 1676KB | For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 |
@@ -123,36 +125,95 @@ Generated: 8/6/2026, 9:30:43 AM PT | window: last 72h | 117 tasks | index total 
 | `1785778361008` | 8/3/2026, 11:49:14 AM | 188 | 739KB | https://emsuniversity.com/emtskills/routes/login_sms.php Sent verification code, but does  |
 | `1785781530203` | 8/3/2026, 11:35:20 AM | 46 | 208KB | Is this GLM faster aggregate than 4tok/sec |
 | `1785777088737` | 8/3/2026, 10:58:22 AM | 94 | 1066KB | #Texas |
-| `1785776142309` | 8/3/2026, 10:03:48 AM | 34 | 309KB | Why does frankenstein-llm have this error? |
-| `1785600191339` | 8/3/2026, 9:48:05 AM | 2838 | 5890KB | #Kaizon / Bugs |
-| `1785722877297` | 8/3/2026, 9:47:21 AM | 870 | 2955KB | #GLM |
-| `1785775272174` | 8/3/2026, 9:41:12 AM | 1 | 2KB | Analysis only - tell me why frankenstein llm is so slow right now |
 
 ---
 
 ## Per-window detail
 
-### `1786033674961` — 8/6/2026, 9:30:42 AM PT — 28 turns
+### `1786036273485` — 8/6/2026, 10:32:47 AM PT — 115 turns
 
 **Original task:**
 
 ```
-## Argus 
+#Argus 
 
-OK there has to be a better way of dealing with this situation, getting proper iteration and not over texting the server. They seem to be pretty simple things to do. I need you to act in accordance with rule 29 and proceed
+Found the actual reason Argus over-texts the server. It was not the timeouts. Three separate defects, all fixed and verified live.
 
-502/HTTP-0 failures: three chained root causes found, all three fixed, fix proven live
+EXCLUDED: #2250 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)
+EXCLUDED: #2251 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)
 
-### The answer to "why does this keep happening"
+## The timeout work was right but it was treating a symptom
 
-It was never saturation, and you were right to reject that story. It was **three timeouts stacked in the same request path**, each one hiding behind the next. Fix the inner one, and the next one becomes the new failure — with a
+Raising curl 240->600 and pool max_execution_time 120->600 was correct and necessary. But a longer timeout on an amplifying loop just means MORE concurrent long-held connections. Here is wh
 ```
 
-**Ideas referenced:** #16523, #19370, #2250, #2251, #22688, #23036, #23378, #23428, #23429, #23630 [executing], #23851 [proposed], #23852 [proposed], #23868 [proposed], #23878 [proposed], #23879 [proposed], #23912, #23913 [proposed]
+**Ideas referenced:** #16523, #178601, #2250 [superseded], #2251 [superseded], #2252, #2253, #22688, #23036, #23428, #23429, #23468, #23506, #23585, #23630 [executing], #23675, #23710, #23711, #23851 [rejected], #23852 [proposed], #23854, #23867, #23868 [executing], #23878 [proposed], #23879 [proposed], #23913 [executing], #23920 [executing], #23934 [executing], #23941 [executing], #23944 [executing], #23953
+
+**Last PICKUP PROMPT:**
+
+```
+[ ] File ideas for any new findings
+- [ ] Update HANDOFF_NOTES.md
+- [ ] Rule 91 PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1786037557221` — 8/6/2026, 10:32:37 AM PT — 1 turns
+
+**Original task:**
+
+```
+/emtskills lag
+
+I am still having problems with this that need to be resolved. There are other people that are having the same issue right now. So if you're gonna ask us to do something with our browser it's gonna be next year to impossible. This is something that needs to be resolved in the server level. And it's not just the page that you were troubleshooting. There are other serious issues that need to be trapped down on this so that /emtskills loads quickly.
+
+You were right to push back, and you were right that testing it myself was the obvious move. I did that, and I reproduced your exact
+```
+
+**Ideas referenced:** #178590, #23031 [executing], #23053 [executing], #23133 [executing], #23139 [executing], #23293 [executing], #23495 [executing], #23500 [executing], #23867 [proposed], #23880 [proposed], #23884 [proposed], #23885 [proposed], #23886 [deployed], #23925 [rejected], #23926 [rejected], #23927 [proposed], #23929 [rejected], #23930 [rejected], #23931 [proposed], #23932 [rejected], #23941 [executing], #23944 [executing], #23945 [proposed], #23947 [proposed], #23952 [proposed], #23954 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786032945879` — 8/6/2026, 9:30:34 AM PT — 127 turns
+### `1786010979248` — 8/6/2026, 10:16:36 AM PT — 260 turns
+
+**Original task:**
+
+```
+Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to be expanded to make better.
+```
+
+**Ideas referenced:** #000000, #0693, #12206, #128260, #16069, #162324, #16817, #17446, #177914, #1881, #1882, #18944, #18951, #19173, #19437, #19866, #2224, #2225, #23184, #23276, #23585, #23710 [proposed], #23711 [proposed], #2457, #2458, #2459, #251236, #2563, #2603, #2703, #32373, #334155, #3572, #4991, #6064, #7207, #7317, #7907, #8103, #819596, #8211, #9583, #9584, #9589, #9590, #9591, #9592, #9593, #9594, #9595, #9597, #9598
+
+**Last PICKUP PROMPT:**
+
+```
+o voice escalations in window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #23711 [proposed] — CFA capability expansion: suppress empty-message chat handoff tickets + add draft-time URL pre-gate.
+
+Where we left off (verified 2026-08-06 10:15 PT):
+- #23710 [deployed] — escalation dedup guard deployed in cron_email_responder.php + helper lib email_staff_escalation_dedup.php
+- #23711 [proposed] — scoped but not implemented; sub-idea filed in orchestrator_ideas for precise D3 cron patch location (lines 134-153, plus dedup extension at lines 124-128)
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #23711 [proposed] — implement #23711a: add all-empty-message gate in cron_chat_handoff_ticket_spawn.php (insert at line 139, before TICKET SUBSTANCE FIX; extend dedup at line 124 to match visitor_name+site_id when created_by_email IS NULL)
+2. #23711 [proposed] — implement #23711b: add draft-time URL allowlist pre-gate in EmailAIResponder.php / MailerUrlAllowlist.php to catch unowned URLs before sendEmail rather than post-hoc ticket creation
+
+Reference IDs:
+- Ideas filed: #23710 [deployed], #23711 [proposed]
+- Files deployed: /var/www/emtskills/cron/cron_email_responder.php, /var/www/emtskills/lib/email_staff_escalation_dedup.php
+- Files to touch next: /var/www/emtskills/cron/cron_chat_handoff_ticket_spawn.php, /var/www/emtskills/lib/MailerUrlAllowlist.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786032945879` — 8/6/2026, 10:15:19 AM PT — 474 turns
 
 **Original task:**
 
@@ -168,11 +229,31 @@ Spinner root cause proven with a timestamp match to the second, #23500 [executin
 The status page itself renders in 4ms. The TASK behind it was stuck retrying: Argus tasks call alltastic_api synchronously with LLM calls that run 60-240s, and alltastic_api returned 502 at exactly 08:37:31 (x5) and 08:45:07 (x5). The FPM reload log shows reloads at exactly those seconds. Every FPM reload kills in-fli
 ```
 
-**Ideas referenced:** #178590, #19454, #19990, #19998, #20972, #23031 [executing], #23053 [executing], #23133 [executing], #23139 [executing], #23293 [executing], #23352 [executing], #23378 [executing], #23495 [executing], #23500 [executing], #23867 [proposed], #23868 [proposed], #23878 [proposed], #23879 [proposed], #23880 [proposed], #23884 [proposed], #23885 [proposed], #23886 [proposed]
+**Ideas referenced:** #12589, #12590, #15776, #16213, #178590, #19370, #19454, #19990, #19998, #20972, #22850, #23027, #23031 [executing], #23053 [executing], #23133 [executing], #23139 [executing], #23293 [executing], #23352 [executing], #23378 [executing], #23429, #23495 [executing], #23500 [executing], #23506, #23867 [proposed], #23868 [proposed], #23878 [proposed], #23879 [proposed], #23880 [proposed], #23884 [proposed], #23885 [proposed], #23886 [proposed], #23925 [rejected], #23926 [rejected], #23927 [proposed], #23929 [rejected], #23930 [rejected], #23931 [proposed], #23932 [rejected], #23941 [in_progress], #23944 [in_progress], #23945 [proposed], #23947 [proposed], #23952 [proposed], #23954 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785986098106` — 8/6/2026, 9:30:00 AM PT — 876 turns
+### `1786033674961` — 8/6/2026, 10:00:27 AM PT — 214 turns
+
+**Original task:**
+
+```
+## Argus 
+
+OK there has to be a better way of dealing with this situation, getting proper iteration and not over texting the server. They seem to be pretty simple things to do. I need you to act in accordance with rule 29 and proceed
+
+502/HTTP-0 failures: three chained root causes found, all three fixed, fix proven live
+
+### The answer to "why does this keep happening"
+
+It was never saturation, and you were right to reject that story. It was **three timeouts stacked in the same request path**, each one hiding behind the next. Fix the inner one, and the next one becomes the new failure — with a
+```
+
+**Ideas referenced:** #16523, #19370, #2250 [rejected], #2251 [deployed], #2252 [needs_verify], #2253 [deployed], #22688, #23036, #23378, #23428, #23429, #23468, #23506, #23630 [executing], #23851 [proposed], #23852 [proposed], #23868 [proposed], #23878 [proposed], #23879 [proposed], #23912, #23913 [proposed], #23920 [in_progress], #23921, #23934 [in_progress], #23941 [in_progress], #23942, #23944 [in_progress], #23951
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785986098106` — 8/6/2026, 9:39:39 AM PT — 922 turns
 
 **Original task:**
 
@@ -274,43 +355,6 @@ https://www.emsuniversity.com/emtskills is choked out again. Very very slow and 
 **Ideas referenced:** #12245, #13437, #13454, #13839, #16213, #16732, #178590, #2211 [needs_verify], #2213, #2214, #2215, #2223, #2224, #2228 [rejected], #2229, #2230, #2235, #2240 [deployed], #2241, #2250, #23028 [proposed], #23029 [proposed], #23030 [proposed], #23031 [proposed], #23051 [executing], #23053 [executing], #23067 [deployed], #23133 [executing], #23134 [executing], #23139 [executing], #23145 [executing], #23232 [executing], #23233 [executing], #23293 [executing], #23352 [proposed], #23378 [proposed], #23495 [proposed], #23500 [proposed], #23867 [proposed], #23868 [proposed], #23878 [proposed], #23879 [proposed], #23880 [pending], #23884 [proposed], #23885 [proposed], #23886 [proposed], #2998, #4907, #711382, #7907, #9112
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786010979248` — 8/6/2026, 3:32:57 AM PT — 83 turns
-
-**Original task:**
-
-```
-Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to be expanded to make better.
-```
-
-**Ideas referenced:** #23585, #23710 [proposed], #23711 [proposed], #251236, #9594
-
-**Last PICKUP PROMPT:**
-
-```
-o voice escalations in window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #23710 [proposed] -- CFA escalation-dedup loop (P0): add per-case suppression so human-action cases are not re-emailed every ~10 min.
-
-Where we left off (verified 2026-08-06 03:26 PT):
-- CFA 24h review complete; 2 ideas filed: #23710 [proposed], #23711 [proposed]
-- Handoff notes updated
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #23710 [proposed] -- implement escalation dedup/cooldown on cron_email_responder (suppress re-send if same case+recipient within 6h)
-2. #23711 [proposed] -- chat status-check inline resolution + draft-time URL pre-gate capability expansion
-
-Reference IDs:
-- Ideas filed: #23710 [proposed], #23711 [proposed]
-- Files touched: HANDOFF_NOTES.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
 
 ### `1786002462510` — 8/6/2026, 3:25:39 AM PT — 416 turns
 
@@ -4316,137 +4360,3 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66.
 </result>
 </attempt_completion>
 ```
-
-### `1785776142309` — 8/3/2026, 10:03:48 AM PT — 34 turns
-
-**Original task:**
-
-```
-Why does frankenstein-llm have this error?
-
-Ist his fromthe new VS Code upgrade?
-```
-
-**Ideas referenced:** #16588, #16648, #17202, #17203, #17205, #17300, #17430, #178493, #18329, #18820, #18868, #1934, #20549, #2164 [open], #21737 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785600191339` — 8/3/2026, 9:48:05 AM PT — 2838 turns
-
-**Original task:**
-
-```
-#Kaizon / Bugs
-
-I want to concentrate on bugs and how they are slowing everyhing we are doing down. Please do extensive research on how Kaizon is operating and tell me how we can more efficiently leverage Kaizon to work better, smarter, faster and to resolve more bugs, to help with the LLMs better, to help with the Executor better, to help with Moodle better and all the other system errors that cause huge problems for us. I get so many bug notifications over and overa gain. Some are accurate, many are stale. I wonder if Kaizon should also have a freshness duty, to help Agents see what's fresh 
-```
-
-**Ideas referenced:** #12646, #12724, #13440, #1468, #14937, #1679, #1685, #1686, #1687, #1754, #1755, #178501, #1833, #18694, #18696, #18841, #1909, #19177, #19188, #19190, #19193, #19198, #19227, #19234, #19435, #19439, #19490, #19492, #19495, #19504, #19511, #19576, #19776, #1980, #19803, #1985, #1986, #1990, #1993, #20079, #20142, #20149, #20297 [queued], #2036, #2044, #20495 [queued], #20506 [executing], #20633, #20882, #20883, #20884 [queued], #20885 [queued], #20886 [queued], #20887 [queued], #20888 [queued], #20889 [queued], #20890 [proposed], #20891 [proposed], #20910 [proposed], #20911 [queued], #20912 [proposed], #20913 [proposed], #20914 [proposed], #20962 [deployed], #20963 [proposed], #20968 [proposed], #20969 [proposed], #20970 [proposed], #20971 [proposed], #20972 [proposed], #20973 [proposed], #20974 [proposed], #20975 [approved], #21000 [deployed], #21001, #21002, #21004 [proposed], #2103, #21033, #2109, #21096 [ready_for_review], #21097 [deployed], #2116, #21162 [proposed], #21163 [proposed], #21165 [implemented], #21166 [implemented], #21167 [impl_failed], #21168 [deployed], #21169 [deployed], #2118, #21201 [implemented], #21400 [deployed], #21401 [implemented], #21405 [implemented], #21432 [proposed], #21433 [proposed], #21434 [proposed], #21435 [blocked], #21529, #21558, #21586 [proposed], #21587 [proposed], #21588 [proposed], #21667 [proposed], #21710 [proposed], #21712 [proposed], #244045, #3076, #3077, #3081, #4421, #45094, #4955, #7358, #8869, #9109, #9132, #9222, #9269
-
-**Last PICKUP PROMPT:**
-
-```
-is the complete pickup prompt.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up
-
-Where we left off (verified 2026-08-03 09:46 PT):
-- Replay worker: 17/17 stuck items cleared, 17 rows landed in llm_replay_results (provider qwen14b_fast). Verified earlier this session.
-- Sensor grid: v_kaizen_all_findings live with 4 sources (executor 884, recipefire 1241, deadman 11, buglib 41). Verified executor is fresh.
-- Pipeline classifier: 127 rows classified via manual run at 7:33 AM; crons registered but kaizen_*.log files DON'T exist — automation delivery mechanism broken (log files never created)
-- #21710 REVERTED at 9:45 PT: deadman logger wire was REMOVED from AgentReplyPipeline. Root cause: logger INSERT has 5 params (agent_id, conversation_id, issue_class, details, created_at) but the code passes 4 positional + 1 keyword. Column mismatch. Needs logger rewrite before re-wire.
-- #21712: confirmed bug_library scanner only READS — no INSERT INTO bug_library found anywhere in codebase
-
-Open threads to drive next (every item has a real filed idea #):
-1. #21710 [reverted] — Fix logger INSERT signature to match table schema, then re-wire into AgentReplyPipeline guard branch
-2. #21712 [proposed] — Write bug_library promotion: scan bug_hunter_queue → INSERT new rows into bug_library so the sensor stays fresh
-3. #21667 [executing] — Fix cron delivery: kaizen_*.log files missing → either spool broken or redirect path wrong. Add DB heartbeat (INSERT into kaizen_classification_log or new kaizen_heartbeat table) so we can detect silent automation independently of files
-4. #21587 [ready_for_review] — Deadman (2 days stale) + buglib (11 days stale) — both root-caused. Deadman: zero callers found via grep. Buglib: no INSERT writers found.
-5. #21432 [proposed] — Replay worker chain_slug replay context needs improvement (currently sends raw error_text)
-
-Reference IDs:
-- Ideas filed: #21432 [proposed], #21433 [ready_for_review], #21434 [ready_for_review], #21586 [approved], #21587 [ready_for_review], #21588 [approved], #21667 [executing], #21710 [reverted], #21712 [proposed]
-- Files touched: /var/www/emtskills/cron_kaizen_replay_worker.php (repointed to :11505/qwen2.5-coder:32b), /var/www/emtskills/lib/AgentReplyPipeline.php (restored from backup, no changes), /var/www/emtskills/lib/deadman_incident_logger.php (unchanged, 33 lines), /var/www/emtskills/cron_bug_hunter_scan.php (read-only)
-- DB state: v_kaizen_all_findings (4 sources), kaizen_classification_log (recent manual classifications), orchestrator_llm_replay_queue (17/17 completed), llm_replay_results (17 rows)
-- Views: v_kaizen_all_findings (target_key: executor 884, recipefire 1241, deadman 11, buglib 41)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785722877297` — 8/3/2026, 9:47:21 AM PT — 870 turns
-
-**Original task:**
-
-```
-#GLM
-
-Is GLM live? 
-
-
-
-Stopped per your instruction. Comprehensive Rule 91 wrap-up with the corrected ring location: the GLM-5.2 ring sits on the Oceanside LAN, not on WOPR.
-
-## Ring location correction (from you, 2026-08-02 18:59 PT)
-
-The 6-node DGX Spark ring is on the Oceanside LAN, Cato now head:
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) -> Pompeii (repeats ring)
-
-The earlier host_probe reading for glm52-ring (WOPR:8210) was probing a stale proxy or port forward, so its real state was unknown. Actual ring health must be verifi
-```
-
-**Ideas referenced:** #10108, #10544, #10577, #10591, #10740, #11741, #11781, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16648, #1666 [resolved], #16844, #17130 [superseded], #17145, #17202, #17203, #17205, #17415, #17416, #178531, #1793, #18312, #18326, #18471, #18605, #1869 [investigating], #1875 [resolved], #1896, #1897 [investigating], #1905 [resolved], #19135, #19173, #1967 [rejected], #1970, #1982, #1983, #1984, #1985, #1986, #1988, #1989, #20005, #20311, #21147 [executing], #2115, #21158 [blocked], #2116, #21213 [blocked], #2138, #2139, #21419 [blocked], #2142, #2147, #21472 [proposed], #21476 [proposed], #2148 [investigating], #21482 [proposed], #2149, #21519 [proposed], #2156 [investigating], #2157, #2159 [open], #2160 [deployed], #2161, #2162, #21684 [drafted], #23582, #28659, #30682, #30966, #32701, #35104, #36643, #36701, #36872, #3717, #40303, #40926, #41530, #43232, #44044, #44465, #44697, #44800, #45094, #45718, #45810, #45959, #46074, #46189, #46262, #46284, #46363, #46422, #46552, #46560, #46713, #46808, #46820, #46835, #47155, #47187, #47383, #47410, #47448, #47452, #47502, #47671, #48010, #6826, #6842, #9969
-
-**Last PICKUP PROMPT:**
-
-```
-
-
-## Next Steps (Open Threads)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — GLM-5.2 hexarchy ring stabilization: verify ring boot after clean relaunch + sustained decode verification.
-
-Where we left off (verified 2026-08-03 09:46 PT):
-- Ring freshly launched with v5 canonical config + stale_cron protection. Workers (ranks 1-5) confirmed Up via subagents. Rank 0 launched (container f8b91c036e90). Ring is in weight-load phase.
-- **MUST verify** ring is actually serving: `curl http://127.0.0.1:8210/v1/models` on Cato (192.168.1.115) after ~3-4 min from launch (should return HTTP 200 with glm-5.2-15pct).
-- **MUST verify decode**: `curl -X POST http://127.0.0.1:8210/v1/chat/completions` with a simple prompt, confirm `finish_reason` and `completion_tokens`.
-- Root cause identified: spark-memguard.sh v1 killed EngineCore every minute on swap pressure. Deployed v2.1 (drop_caches, never kills). Stale_cron active to prevent ray_node shadow fleet.
-- Ring topology: Pompey(50c0)→Marcus(63ce)→Tiberius(e9e0)→Cesar(3b41)→Cato(2aa8)→Augustus(e3b2)→Pompey. Cato=rank0. Workers: Augustus(e3b2)=rank1, Pompey(50c0)=rank2, Marcus(63ce)=rank3, Tiberius(e9e0)=rank4, Cesar(3b41)=rank5.
-
-Open threads to drive next (every item has a real filed idea #):
-1. **#21684 [drafted]** — GLM-5.2 ring autolauncher v2: serial-to-IP resolver, retry-on-NCCL-race, per-node log capture, fleet-wide canonical launcher deployment. All nodes have v5 launcher, but ring supervisor at `~/bin/glm52_ring_supervisor.sh` still references `/tmp/glm52_v34_failfast.sh` (missing file) — MUST be updated to point at `/tmp/glm52_launch_cfg.sh` with env CFG_NCCL_IB_DISABLE=0 VLLM_DISABLE_DSA=0. Deploy canonical `~/glm52_launch_pp6.sh` wrapper to all 6 nodes.
-2. **#21684 [drafted]** — Verify ring decode end-to-end: curl `/v1/models`, `/v1/chat/completions`, confirm 200 + real tokens + GPU 96%. If dead, relaunch with v5 config (workers first, settle 30s, rank 0 last, retry once per bug #2116).
-3. **#21684 [drafted]** — Deploy canonical `~/glm52_launch_pp6.sh` wrapper (v5 delegates to `/tmp/glm52_launch_cfg.sh`) to all 6 nodes. Currently only on Cato.
-4. **#21684 [drafted]** — Kill old `/tmp/glm52_launch_ray.sh` regression vector (encodes NCCL_IB_DISABLE=1 + GLOO=enp1s0f0np0) — rename to `.BAK` so no script references it.
-5. **#21684 [drafted]** — Implement serial-to-IP resolution in ring supervisor per GLM52_RING_TOPOLOGY.md (serial→current IP via fleet_inventory or arp lookup, never hardcode IPs).
-
-Reference IDs:
-- Bug library incidents recorded: `glm52_ring_stabilized_cfgv5_ncclib0_dsa0_20260803` (P0_critical, resolved)
-- Ideas filed: #21684 (autolauncher v2, P0, draft)
-- Files deployed: memguard v2.1, stale_cron, v5 launcher wrapper on Cato
-- All 6 nodes: 115 (Cato), 244 (Augustus), 21 (Pompey), 171 (Marcus), 32 (Tiberius), 56 (Cesar)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785775272174` — 8/3/2026, 9:41:12 AM PT — 1 turns
-
-**Original task:**
-
-```
-Analysis only - tell me why frankenstein llm is so slow right now
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

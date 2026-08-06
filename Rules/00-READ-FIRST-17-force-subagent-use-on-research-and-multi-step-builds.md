@@ -3,7 +3,9 @@
 
 ## The default (FLIPPED 2026-06-21 — subagents are default-ON)
 
-**Default first move on every new Cline task that needs research or multi-step work = subagents.** Subagents route through `deepseek-v4-pro` (enforced server-side in `router_hook.py`), costing effectively $0 due to prefix caching (-120x cost reduction shipped 2026-06-21). This keeps the local 120B pool free for the main interactive window (rule 146).
+**Default first move on every new Cline task that needs research or multi-step work = subagents.**
+
+**Where subagents actually run (corrected 2026-08-05, live-verified):** they land on the local 120B pool via the `frankenstein-tools` adapter, NOT on `deepseek-v4-pro`. Two measured reasons: (1) `EMSU_SUBAGENT_DS=0` in the live litellm container, and (2) even at `=1` the DS reroute in `_router_core.py` requires `not _has_tools_rc`, but 95.7% of `frankenstein-llm` turns carry tools (1177 of 1230 in an 8000-row audit sample), so the flag would move only the 4.3% non-tool remainder. Tool turns are deliberately kept off DeepSeek (it leaks `reasoning_content` on tool calls, FED-DOCTOR fix 2026-07-07). Cost is still effectively $0 because the pool is local. Practical consequence for you: subagent dispatch CONSUMES the same 120B capacity as the main window, so a wide fan-out can slow your own interactive turns. Prior text claimed DeepSeek routing was "enforced server-side" — that was false in production. See idea #23528.
 
 The main window uses inline MCP tools for single-step operations (one server read, one DB query, one status check). Multi-step research, multi-file analysis, or anything needing parallel investigation → dispatch subagents per the fetch-then-paste pattern below.
 

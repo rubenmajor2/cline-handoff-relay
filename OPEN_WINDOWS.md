@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/5/2026, 9:39:41 PM PT | window: last 72h | 113 tasks | index total 495 (parsed 4, cached 491)
+Generated: 8/5/2026, 10:39:41 PM PT | window: last 72h | 112 tasks | index total 495 (parsed 2, cached 493)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785988427679` | 8/5/2026, 9:39:09 PM | 379 | 685KB | #Argus |
-| `1785989615911` | 8/5/2026, 9:38:39 PM | 156 | 978KB | for frankenstein-llm subagents are still slow.  Are they using the 120Bs? If 120Bs are pas |
-| `1785986098106` | 8/5/2026, 9:25:51 PM | 242 | 551KB | #TDSHS |
+| `1785988427679` | 8/5/2026, 10:16:52 PM | 429 | 811KB | #Argus |
+| `1785986098106` | 8/5/2026, 10:13:02 PM | 272 | 653KB | #TDSHS |
+| `1785989615911` | 8/5/2026, 10:04:26 PM | 206 | 1097KB | for frankenstein-llm subagents are still slow.  Are they using the 120Bs? If 120Bs are pas |
 | `1785971158342` | 8/5/2026, 9:24:41 PM | 160 | 359KB | #AZDHS |
 | `1785953794202` | 8/5/2026, 9:07:26 PM | 444 | 1368KB | COPY_WINDOW_0_DATA_ACCURACY_AUDIT |
 | `1785966271898` | 8/5/2026, 9:05:10 PM | 170 | 458KB | #Payment Issues |
@@ -122,13 +122,12 @@ Generated: 8/5/2026, 9:39:41 PM PT | window: last 72h | 113 tasks | index total 
 | `1785649980432` | 8/2/2026, 11:52:25 PM | 906 | 2864KB | #Argus |
 | `1785599739497` | 8/2/2026, 11:25:37 PM | 690 | 3266KB | I want to get back to work on clustering, parallelism and tarpipe, particularly with the e |
 | `1785483774534` | 8/2/2026, 11:14:28 PM | 428 | 1226KB | Play frankenstein doctor of executor for the next 60 minutes (use timestamps) and make sur |
-| `1785581189111` | 8/2/2026, 10:14:58 PM | 1078 | 3808KB | I need to make sure that the orchestra is running and that we don't just have a bunch of i |
 
 ---
 
 ## Per-window detail
 
-### `1785988427679` — 8/5/2026, 9:39:09 PM PT — 379 turns
+### `1785988427679` — 8/5/2026, 10:16:52 PM PT — 429 turns
 
 **Original task:**
 
@@ -144,23 +143,46 @@ Pick up task #23428 [executing]: Argus request-speed work ONLY.
 Scope guard: this window is Argus performance only. Non-Argus work (student ops, telephony, c
 ```
 
-**Ideas referenced:** #10005, #10108, #11953, #12251, #12335, #12365, #12366, #12368, #12407, #12657, #12689, #127908, #128203, #128263, #128275, #13831, #13874, #16213, #16265, #1627, #17202, #17203, #17205, #17300, #18820, #19903, #20300, #2050, #21125, #21126, #2221, #2232, #2238, #2242 [deployed], #22583 [approved], #22688, #22850, #22897 [executing], #23027, #23036, #23190 [rejected], #23191 [executing], #23192 [rejected], #23205 [rejected], #23307 [rejected], #23339 [executing], #23425 [deployed], #23426 [deployed], #23427 [deployed], #23428 [executing], #23429 [executing], #23430 [deployed], #23440 [proposed], #23467 [executing], #23468 [deployed], #23472 [proposed], #23477 [proposed], #23483 [proposed], #23489 [proposed], #23490, #23505 [proposed], #23511 [proposed], #23513 [proposed], #23520 [deployed], #23530 [deployed]
+**Ideas referenced:** #10005, #10108, #11953, #12251, #12335, #12365, #12366, #12368, #12407, #12657, #12689, #127908, #128203, #128263, #128275, #13831, #13874, #16213, #16265, #1627, #17202, #17203, #17205, #17300, #18820, #19903, #20300, #2050, #21125, #21126, #2221, #2232, #2238, #2242 [deployed], #22583 [approved], #22688, #22850, #22897 [executing], #23027, #23036, #23190 [rejected], #23191 [executing], #23192 [rejected], #23205 [rejected], #23307 [rejected], #23339 [executing], #23425 [deployed], #23426 [deployed], #23427 [deployed], #23428 [executing], #23429 [executing], #23430 [deployed], #23440 [proposed], #23467 [executing], #23468 [deployed], #23472 [proposed], #23477 [proposed], #23483 [proposed], #23489 [proposed], #23490, #23505 [proposed], #23506, #23511 [proposed], #23513 [proposed], #23520 [deployed], #23530 [deployed], #23550 [proposed]
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785989615911` — 8/5/2026, 9:38:39 PM PT — 156 turns
-
-**Original task:**
+**Last PICKUP PROMPT:**
 
 ```
-for frankenstein-llm subagents are still slow.  Are they using the 120Bs? If 120Bs are past their allowable lanes, why are we not spilling off? What's causing slowness or is it something different?
+the worker, not a rewrite.
+
+═══════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════
+Pick up task -- Argus subagent decomposition: implement parent_task_id + child row dispatch + per-child round caps + result merge in cron_argus_task_worker.php.
+
+Where we left off (verified 2026-08-05 22:15 PT):
+- Ruben asked whether Argus can use subagents to save time by limiting turns/tool calls.
+- Research done: Argus has serial round loop inside alltastic_api.php; curl_multi parallelism (#23428) only parallelizes across tasks, not within a single multi-step task.
+- Idea #23550 [proposed] filed with architecture: decompose multi-part tasks into child rows, dispatch via existing curl_multi, per-child reduced max_rounds, merge results.
+- argus_round_latency table (#23513) exists -- use round_no > 3 as decomposition trigger.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #23550 [proposed] -- implement parent_task_id column + decomposition logic in cron_argus_task_worker.php Phase 1, curl_multi dispatch of children, result merge into parent. GATED: Ruben approval required before build.
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: #23550 [proposed]
+- Files touched: none yet (analysis only); target: /var/www/emtskills/routes/cron_argus_task_worker.php, /var/www/emtskills/routes/alltastic_api.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Research Argus sidebar architecture and dispatch loop
+- [x] Read worker/dispatch code for subagent feasibility
+- [x] Verify tool-call loop: sequential round loop in alltastic_api, line 12607+
+- [x] Create idea #23550 for subagent-style decomposition
+- [x] Report findings with concrete yes/no + how
+</task_progress>
+</attempt_completion>
 ```
 
-**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11942, #11944, #11953, #11991, #12046, #12059, #12231, #12246, #12247, #12249, #12251, #12262, #12266, #12269, #12285, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12403, #12407, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12657, #12672, #12673, #12680, #12688, #12689, #12708, #12710, #12716, #12900, #13095, #13108, #13121, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13831, #13832, #13842, #13874, #13962, #13964, #14000, #14133, #14142, #14848, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16120 [deployed], #16584, #16589, #16590, #16602, #16625, #16646, #16648, #16680, #16715, #16716, #16717, #16718, #17078, #17307, #17673, #1807, #18670, #18671, #18781, #18786, #18868, #19585, #19653, #1967, #19686, #19903, #2014, #20272, #20300, #2050, #20536, #2071, #20722, #2079, #21045, #21136 [ready_for_review], #2243 [deployed], #22564, #22583, #22584, #22820, #22897, #23206, #23490, #23521 [deployed], #23526 [approved], #23528 [approved], #23529 [approved], #23533 [approved], #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785986098106` — 8/5/2026, 9:25:51 PM PT — 242 turns
+### `1785986098106` — 8/5/2026, 10:13:02 PM PT — 272 turns
 
 **Original task:**
 
@@ -170,9 +192,77 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 Open up the TDSHS window I just inadvertantly closed and tell me the last task completed regarding this page: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=list  / BTW clicking thowe rows does nothing. Plus why are there duplicate entires for 2 students? I'm confused on that like for tomorrow I see 6 responses due. I think if there's a linkage, those all get populated on the detail page with the centralized response for each, this way we're not splitting hairs. Again, those links don't yet work or show details. Table should also show name of student // Wai
 ```
 
-**Ideas referenced:** #047857, #059669, #111827, #18676, #19591, #19605, #23463 [unknown], #23482 [proposed], #23484 [proposed], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [proposed], #23518 [proposed], #23519 [proposed], #2563, #3730, #374151, #450438, #475569, #64748, #92400
+**Ideas referenced:** #047857, #059669, #111827, #12892, #13017, #178595, #18676, #19591, #19605, #23463 [unknown], #23482 [proposed], #23484 [proposed], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [proposed], #23518 [proposed], #23519 [proposed], #2563, #26114, #3730, #374151, #450438, #475569, #64748, #92400
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+ deadline center + rows 19/20.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1785954856277 (TDSHS compliance doctrine and deadline center).
+
+Where we left off (verified 2026-08-05 21:24 PT):
+- Doctrine Library LIVE at /personnel/compliance_doctrine.php. #23515 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle; the CODE is deployed and harness-verified at 58 items, the idea row is the work record). Table admin_portal.compliance_doctrine, 58 active items: 19 postures, 19 anti-patterns, 6 fact patterns, 3 accomplishments, 7 agency defects, 4 statutory authorities. 9 carry regulator_facing=0 and render with an adjudication-only lock. Verified: facing=adj filter returns exactly 9, all locked.
+- Regulator-owed deadlines LIVE. #23516 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle). compliance_deadlines gained direction / requested_on / statutory_basis / last_agency_contact. Rows 27 (TPIA-004, due 8/10), 28 (TPIA-005, due 8/19 provisional), 29 (stale TDSHS request, monitor), 30 (AZ 39-121 trio, no send date recorded). List renders 21 deliverables, 5 they-owe pills, agency-owes card 0/4.
+- Row 19 verified sound. Row 20 CORRECTED: Moodle course_completions row 49223 shows user 51417 course 37 completed 2026-06-20 08:10:53 reaggregate 0, so the completion is INTACT and the regression premise is unconfirmed. Both rows still not_started, both still block the 8/6 send.
+- v4 packet consolidation and red-bar card from earlier this session: #23482 [executing] (reconcile_ideas returned status=approved dev_stage=idle), #23491 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle), prior v2 work #23463 [deployed] (reconcile_ideas returned status=open dev_stage=idle).
+
+Open threads to drive next:
+1. #23519 [executing] Answer Ava Kanthack. Five days unanswered (inbound 98073 on 7/31, 101757 on 8/2). Her completion IS intact in Moodle, so find which surface she is seeing incomplete on, tell her what her record shows, and reconcile the 95.4 figure the draft cites BEFORE the 8/6 reply goes. Per FP04 the letter must neither adopt nor contradict her account.
+2. #23517 [executing] Build the per-state Gold Standards: uniform base, then TX (25 TAC 157 + SB 14 + Gov Code 552), CA (BPPE + the San Diego inspection shape), AZ (v4.22 as the AZ instance). Generate from compliance_doctrine so a posture edit propagates. No state template ships without its own verified citations.
+3. #23518 [executing] Build the doctrine harvester and backfill it over all 157 existing response rows. This is the part that recovers what has already been forgotten in inv1, inv2, inv3, inv9, inv13. regulator_facing must fail closed to 0 on anything touching motive, timing, solicitation, or a named doctrine.
+4. #23484 [executing] Packet composer: merge the 4 pooled drafts for the 8/6 packet into one letter body, opening with the ACC01 accomplishments section, appending the preservation block from response row 164 verbatim per A19, citing all three control numbers in one caption.
+5. Row 19 (human-only decision, no idea) confirm the current signature and filing status of the Kamdyn Sheets MWFD affiliation agreement before the 8/6 reply states anything about her placement. Vicky reply pending per Ruben.
+
+Reference IDs:
+- Ideas filed this session: #23482 [executing], #23484 [executing], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [executing], #23518 [executing], #23519 [executing]
+- Ideas referenc
+```
+
+### `1785989615911` — 8/5/2026, 10:04:26 PM PT — 206 turns
+
+**Original task:**
+
+```
+for frankenstein-llm subagents are still slow.  Are they using the 120Bs? If 120Bs are past their allowable lanes, why are we not spilling off? What's causing slowness or is it something different?
+```
+
+**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11942, #11944, #11953, #11991, #12046, #12059, #12231, #12246, #12247, #12249, #12251, #12262, #12266, #12269, #12285, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12403, #12407, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12657, #12672, #12673, #12680, #12688, #12689, #12708, #12710, #12716, #12900, #13095, #13108, #13121, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13831, #13832, #13842, #13874, #13962, #13964, #14000, #14133, #14142, #14848, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16120 [deployed], #16584, #16589, #16590, #16602, #16625, #16646, #16648, #16673, #16680, #16715, #16716, #16717, #16718, #16849, #17078, #17166, #17307, #17673, #1807, #18670, #18671, #18781, #18786, #18868, #19585, #19653, #1967, #19686, #19903, #2014, #20272, #20300, #2050, #20536, #2071, #20722, #2079, #21045, #21136 [ready_for_review], #2243 [deployed], #22564, #22583, #22584, #22820, #22897, #23206, #23490, #23521 [deployed], #23526 [approved], #23528 [approved], #23529 [approved], #23533 [approved], #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
+
+**Last PICKUP PROMPT:**
+
+```
+ above is exact and ready.
+
+═══════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════
+Pick up task — DS flag subagent scoping: file idea, lint rule 00, reindex, reconcile.
+
+Where we left off (verified 2026-08-05 22:03 PT):
+- RCA done: DS flag is a near-no-op for subagents (indent-proved in dispatcher source, sibling of `if _has_sg:`; 95.7% tool-bearing; paid-turn peak 143). Rule 00 steering file patched locally to drop the false claim.
+- create_idea MCP failed twice this session (Invalid JSON argument — rule 261 Mode C), so NO idea exists yet. File it FIRST via mysql:
+  INSERT INTO orchestrator_ideas (title, description, domain, priority, status) VALUES ('DS flag is a near-no-op for subagents - add real subagent-scoped LLM route lever', 'RCA 2026-08-05: DS deepseek flag does not scope subagent LLM selection, verified live in dispatcher source. Add subagent_llm_route config key read by subagent dispatcher to override model_id per subagent prompt.', 'technical', 'P2', 'approved');
+  Capture the returned id and use it in the pickup below.
+
+Open threads to drive next (every item carries a real filed idea #):
+1. After the INSERT above returns id #N (use that number): lint the patched rule 00 file with php -l (hardfloor --override per the rule header) — the file is ~/Documents/Cline/Rules/00-agents-act-on-confidence-tier.md.
+2. Run clinerules_reindex via the clinerules MCP so the corrected rule text is searchable.
+3. Reconcile #N disposition via ruben-orchestrator reconcile_ideas, then append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: none yet (the mysql INSERT above is the first action; use its returned id)
+- Files touched: ~/Documents/Cline/Rules/00-agents-act-on-confidence-tier.md (patched), /var/www/emtskills/docs/CLINERULES_MIRROR.md (mirrors after reindex)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1785971158342` — 8/5/2026, 9:24:41 PM PT — 160 turns
 
@@ -4233,44 +4323,5 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [x] Rejected #21542 (wrong framing), filed + implemented #21546
 - [x] All rule-91 gates passed, pickup prompt validated
 </task_progress>
-</attempt_completion>
-```
-
-### `1785581189111` — 8/2/2026, 10:14:58 PM PT — 1078 turns
-
-**Original task:**
-
-```
-I need to make sure that the orchestra is running and that we don't just have a bunch of ideas queuedOr work cute.
-```
-
-**Ideas referenced:** #113026, #12022, #12059, #12184, #12430, #12504, #12802, #1281, #1309, #1314, #15333, #15367, #15652, #15906, #15955 [deployed], #16523, #16881, #17913, #18135, #18357, #18395, #18442, #1850, #18761, #18763 [deployed], #18793 [deployed], #19079, #19171, #19325, #19338, #19435, #19458, #19490, #19491, #19494, #19503, #19504, #19509, #19629, #19643, #19661, #19670, #19684, #20044 [deployed], #20071 [queued], #20282, #20336 [in_progress], #20340 [proposed], #20341, #20347, #20350, #20367, #20408, #20410 [queued], #2043, #20492 [in_progress], #20493 [in_progress], #20504, #20507 [in_progress], #20509 [proposed], #20517 [proposed], #20569, #20613 [proposed], #20624 [in_progress], #20629, #20630, #20662 [in_progress], #20672 [in_progress], #2076, #20793 [proposed], #20858 [queued], #20859 [blocked], #20860 [queued], #20869 [proposed], #20883 [proposed], #20894 [proposed], #208942, #20895 [proposed], #20903 [approved], #20931, #20936, #20953, #21006, #21007, #21008, #21010 [executing], #21011 [executing], #21013 [executing], #21023 [executing], #21062, #2113, #2114, #21158 [executing], #21213 [executing], #2123, #21419 [executing], #21518 [proposed], #2782, #3541, #3953, #3957, #444279, #444280, #444539, #444542, #445761, #446187, #446420, #4536, #465819, #4747, #5029, #5031, #5034, #5516, #5778, #7925, #8247, #8281, #8321, #8563, #8598, #9222, #9235, #9581 [deployed]
-
-**Last PICKUP PROMPT:**
-
-```
- decisions remain unprocessed.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #21518 — Reset + retrigger 9 impl_failed implementer ideas (codegen retry loop).
-
-Where we left off (verified 2026-08-02 22:13 PT):
-- Codegen retry loop shipped in /var/www/emtskills/cron/cron_ruben_implement.php (lines 1600-1616): 3 attempts on null/empty callClaude response before impl_failed. Verified on disk + php -l clean.
-- Reset 9 impl_failed ideas to idle and re-spawned workers: #20340, #20517, #21010, #21011, #21013, #21023, #21158, #21213, #21419.
-- All 9 now past spec-gen (auditing/drafting) — zero impl_failed fleet-wide.
-
-Open threads to drive next:
-1. #21518 [executing] — Watch the 9 re-triggered ideas through codegen/deploy; confirm none flip back to impl_failed under the retry loop. Check in ~20 min: SELECT id, dev_stage FROM orchestrator_ideas WHERE id IN (20340,20517,21010,21011,21013,21023,21158,21213,21419).
-2. #21518 [executing] — Verify the executor `executed=` rate rises above 0 once any decision actually needs execution (currently all propose→completed inline, so 0 is correct).
-
-Reference IDs:
-- Idea: #21518
-- Ideas re-triggered: #20340 [executing], #20517 [executing], #21010 [executing], #21011 [executing], #21013 [executing], #21023 [executing], #21158 [executing], #21213 [executing], #21419 [executing]
-- Files touched: /var/www/emtskills/cron/cron_ruben_implement.php, /var/www/emtskills/cron/cron_orchestrator_executor.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```

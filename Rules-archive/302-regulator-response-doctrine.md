@@ -33,9 +33,30 @@ Ruben on the clearance table: *"The enclosure begs the regulator to ask the ques
 
 Do not open each case with a paragraph reciting the charge. Answer it. Ruben: *"Do not repeat 'Allegations as relayed in the Notice.' only respond to them. We don't need to give it more teeth."*
 
-One line in the section header note covers it: "Nothing in this Response adopts any allegation."
-
 Also: **the Department did not say it, the complainant alleged it.** Never write "The Department states the student was failed…" when it is the student's allegation relayed in the Notice.
+
+### The banned paragraph shape (2026-08-06 reinforcement)
+
+Ruben, restating it as policy after it recurred: *"We do not as a matter of policy need to repeat the complaint, only respond to it."*
+
+**BANNED openers.** Any per-matter section that begins by summarizing the transmittal:
+- "What the transmittal alleges. The July 27, 2026 letter states that…"
+- "The letter makes five assertions: that…; that…; that…"
+- "Allegations as relayed in the Notice…"
+- Any sentence whose subject is the complaint and whose verb is *alleges / states / asserts / claims* followed by the substance of the charge.
+
+**Also banned in sympathetic framing.** The recital sneaks back in when you are being persuasive. This is still a violation: *"The outcome each of these transmittals anticipates, that a student will be unable to complete the externship and test for the National Registry, is an outcome the program has every reason to prevent."* The subordinate clause restates the charge in our own voice, under our own signature. Write *"The outcome these transmittals anticipate is one the program has every reason to prevent"* and let the reader consult their own letter for what that outcome is.
+
+**The replacement shape.** Where the following paragraphs are ordinal or reference an enumeration, preserve the COUNT and the SCOPE, never the CONTENT:
+- "The transmittal in this matter makes five assertions. The program answers each in the order presented and does not restate them."
+- "The program answers the transmittal in this matter without restating it. The letter contains no factual assertion the program can test. It identifies no provision… states no interval… identifies no date, message, or call."
+
+The second form is strictly better than a recital, because it converts the absence of specifics into our affirmative point instead of supplying the specifics ourselves.
+
+**Self-check before shipping any regulator response:** grep the draft for `alleges`, `states that`, `asserts that`, and the complainant-side language of the charge. Every hit is a candidate violation. A response should be readable as a complete answer while telling a reader who has not seen the complaint almost nothing about what was charged.
+
+**Source incident:** 2026-08-06, TDSHS Inspection 5196 consolidated response. Three per-matter sections opened with "What the transmittal alleges" recitals plus a fourth restatement in the Threshold Matter note, and a fifth survived inside a newly-written sympathetic paragraph. Removed in rounds 17 and 18 after Ruben caught it. Doctrine already prohibited it; the failure was reintroduction during redrafting, which is why the banned shapes are now enumerated.
+
 
 ## DO NOT RECITE THEIR DIRECTIVE
 

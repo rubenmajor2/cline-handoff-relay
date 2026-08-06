@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/6/2026, 2:32:49 PM PT | window: last 72h | 114 tasks | index total 509 (parsed 3, cached 506)
+Generated: 8/6/2026, 3:32:49 PM PT | window: last 72h | 114 tasks | index total 509 (parsed 1, cached 508)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786008133029` | 8/6/2026, 2:32:47 PM | 63 | 159KB | There seems to be something that is submitting courses or something to TDSHS. Can you tell |
+| `1786008133029` | 8/6/2026, 3:32:40 PM | 345 | 1121KB | There seems to be something that is submitting courses or something to TDSHS. Can you tell |
 | `1786045024813` | 8/6/2026, 2:22:06 PM | 280 | 1038KB | #TDSHS |
 | `1786047728462` | 8/6/2026, 2:05:06 PM | 273 | 1658KB | #/emtskills lag |
 | `1786047694363` | 8/6/2026, 1:21:39 PM | 3 | 43KB | #/emtskills lag |
@@ -129,7 +129,7 @@ Generated: 8/6/2026, 2:32:49 PM PT | window: last 72h | 114 tasks | index total 
 
 ## Per-window detail
 
-### `1786008133029` — 8/6/2026, 2:32:47 PM PT — 63 turns
+### `1786008133029` — 8/6/2026, 3:32:40 PM PT — 345 turns
 
 **Original task:**
 
@@ -137,7 +137,7 @@ Generated: 8/6/2026, 2:32:49 PM PT | window: last 72h | 114 tasks | index total 
 There seems to be something that is submitting courses or something to TDSHS. Can you tell me what is going on with that? I thought we already did a bunch of those semi-automatically before and I just saw a couple fire in the last week or 2 and those submissions need to pause temporarily.
 ```
 
-**Ideas referenced:** #23667 [proposed]
+**Ideas referenced:** #13437, #18676, #2187, #2363, #23666 [proposed], #23667 [proposed], #24086 [proposed], #24098 [proposed], #24103 [proposed], #2611, #2703, #600179
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 

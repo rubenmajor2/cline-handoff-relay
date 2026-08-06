@@ -6,16 +6,19 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/6/2026, 12:39:42 AM PT | window: last 72h | 109 tasks | index total 496 (parsed 4, cached 492)
+Generated: 8/6/2026, 1:39:42 AM PT | window: last 72h | 112 tasks | index total 499 (parsed 7, cached 492)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785988427679` | 8/6/2026, 12:39:32 AM | 518 | 1433KB | #Argus |
-| `1785989615911` | 8/6/2026, 12:39:28 AM | 317 | 1332KB | for frankenstein-llm subagents are still slow.  Are they using the 120Bs? If 120Bs are pas |
-| `1785997318545` | 8/6/2026, 12:39:24 AM | 377 | 1536KB | Frankenstein-llm stalled since we added subagents or messed with that just recently |
-| `1785988379979` | 8/6/2026, 12:39:16 AM | 236 | 410KB | # NON-ARGUS WINDOW:  |
-| `1785976094322` | 8/5/2026, 11:48:15 PM | 190 | 1461KB | For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 |
-| `1785986098106` | 8/5/2026, 10:13:02 PM | 272 | 653KB | #TDSHS |
+| `1786002462510` | 8/6/2026, 1:39:42 AM | 107 | 294KB | frankenstein-llm seems to be getting stuck here: |
+| `1785988379979` | 8/6/2026, 1:39:40 AM | 607 | 799KB | # NON-ARGUS WINDOW:  |
+| `1785986098106` | 8/6/2026, 1:39:36 AM | 339 | 849KB | #TDSHS |
+| `1785989615911` | 8/6/2026, 1:39:32 AM | 377 | 1486KB | for frankenstein-llm subagents are still slow.  Are they using the 120Bs? If 120Bs are pas |
+| `1785997318545` | 8/6/2026, 1:39:31 AM | 621 | 2062KB | Frankenstein-llm stalled since we added subagents or messed with that just recently |
+| `1786002734721` | 8/6/2026, 1:39:16 AM | 53 | 628KB | #Argus |
+| `1785976094322` | 8/6/2026, 1:39:02 AM | 243 | 1536KB | For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 |
+| `1786002390209` | 8/6/2026, 12:50:24 AM | 23 | 162KB | #Argus |
+| `1785988427679` | 8/6/2026, 12:44:53 AM | 533 | 1461KB | #Argus |
 | `1785971158342` | 8/5/2026, 9:24:41 PM | 160 | 359KB | #AZDHS |
 | `1785953794202` | 8/5/2026, 9:07:26 PM | 444 | 1368KB | COPY_WINDOW_0_DATA_ACCURACY_AUDIT |
 | `1785966271898` | 8/5/2026, 9:05:10 PM | 170 | 458KB | #Payment Issues |
@@ -124,114 +127,33 @@ Generated: 8/6/2026, 12:39:42 AM PT | window: last 72h | 109 tasks | index total
 
 ## Per-window detail
 
-### `1785988427679` — 8/6/2026, 12:39:32 AM PT — 518 turns
+### `1786002462510` — 8/6/2026, 1:39:42 AM PT — 107 turns
 
 **Original task:**
 
 ```
-#Argus
+frankenstein-llm seems to be getting stuck here:
 
+Response
 
-However, most are supposed to be on the 120Bs -> The speed problem is the loop shape, not the wiring. maxToolRounds is 8, dropped to 3 for lookup/chat mode. Each round is a full sequential model call, and the code comment says it plainly: on the ~2 tok/s GLM ring those add up to minutes. So an 8-round research question is 8 serial model calls. That is where the minutes go. Filed as #23489 [proposed] with three ranked levers.
---
+Plain TextRich DisplayMarkdown
 
-Pick up task #23428 [executing]: Argus request-speed work ONLY.
-
-Scope guard: this window is Argus performance only. Non-Argus work (student ops, telephony, c
+\=== TASK 202 lookup === === argus code files === argus_backups _view_argus_spill_ladder_health.php admin_users.php.bak-argus-20260715 alltastic_api.php.bak-20250710-argus-upgrade alltastic_api.php.bak-20260220-pre-argus-knowledge alltastic_api.php.bak-20260221-pre-argus-diagnostic alltastic_api.php.bak-20260310-argus-hardening alltastic_api.php.bak-20260321-argusv4 alltastic_api.php.bak-20260324-argus alltastic_api.php.bak-20260327-argus-improvements alltastic_api.php.bak-20260409-183023-argus-phase0 a
 ```
 
-**Ideas referenced:** #10005, #10108, #11953, #12251, #12335, #12365, #12366, #12368, #12407, #12657, #12689, #127908, #128203, #128263, #128275, #13831, #13874, #16213, #16265, #1627, #17202, #17203, #17205, #17300, #18378, #18745, #18820, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19903, #2006, #20300, #2050, #20547, #21125, #21126, #2221, #2232, #2238, #2242 [deployed], #22511, #22583 [approved], #22688, #22850, #22897 [executing], #23027, #23036, #23190 [rejected], #23191 [executing], #23192 [rejected], #23205 [rejected], #23307 [rejected], #23339 [executing], #23425 [deployed], #23426 [deployed], #23427 [deployed], #23428 [executing], #23429 [executing], #23430 [deployed], #23440 [proposed], #23467 [executing], #23468 [deployed], #23472 [proposed], #23477 [proposed], #23483 [proposed], #23489 [proposed], #23490, #23505 [proposed], #23506, #23511 [proposed], #23513 [proposed], #23520 [deployed], #23530 [deployed], #23550 [proposed], #23572 [proposed], #334155, #4338, #64748
+**Ideas referenced:** #11741, #11953, #12584, #12672, #12673, #13202, #13832, #16844, #178600, #1884, #19338, #2097, #2099, #2100, #2244, #2247 [resolved], #22688, #23171, #23428, #23620, #23631 [proposed]
 
 **Last PICKUP PROMPT:**
 
 ```
-5-25s each = ~30-45s wall.
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task — build #23572: wire DeepSeek research spill for Argus subagent children via existing fast-path.
-
-Where we left off (verified 2026-08-06 00:13 PT):
-- #23550 schema + decomposer built (parent_task_id, spill_tier, child_rounds columns; Phase 1 split logic in worker).
-- #23572 approved: research children spill to deepseek-v4-pro.
-- alltastic_api.php lines 5395-5460 contain the Chrome extension fast-path with deepseek-v4-pro routing via $extModeMap. This code is live, tested, and ready to reuse.
-
-Open threads to drive next:
-1. #23572 [approved] — in cron_argus_task_worker.php payload builder, add spill_tier field for research children. In alltastic_api.php, add spill_tier='research' gate before the main round loop (~line 1760), reuse extension fast-path curl block (model='deepseek-v4-pro', max_tokens=1200, timeout=75), log argus_mode='subagent_research' in argus_round_latency, implement re-split-on-cap in worker merge phase.
-2. #23550 [approved] — if ALTER + decomposer not yet run, do that first.
-
-Reference IDs:
-- Ideas filed: #23550 [approved], #23572 [approved]
-- Files to touch: /var/www/emtskills/routes/cron_argus_task_worker.php, /var/www/emtskills/routes/alltastic_api.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] #23550 + #23572 approved/architected
-- [x] Read alltastic_api.php fast-path + round-logger sections
-- [x] Check argus_task_queue schema
-- [x] Explain #23572 build spec to Ruben
-- [x] Pickup prompt with build plan
+Implement bridge fix
+- [ ] Deploy + verify
+- [ ] Update handoff + complete with PICKUP PROMPT
 </task_progress>
-</attempt_completion>
+</use_mcp_tool>
 ```
 
-### `1785989615911` — 8/6/2026, 12:39:28 AM PT — 317 turns
-
-**Original task:**
-
-```
-for frankenstein-llm subagents are still slow.  Are they using the 120Bs? If 120Bs are past their allowable lanes, why are we not spilling off? What's causing slowness or is it something different?
-```
-
-**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11942, #11944, #11953, #11991, #12046, #12059, #12231, #12246, #12247, #12249, #12251, #12262, #12266, #12269, #12285, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12403, #12407, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12657, #12672, #12673, #12680, #12688, #12689, #12708, #12710, #12716, #12900, #13095, #13108, #13121, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13831, #13832, #13842, #13874, #13962, #13964, #14000, #14133, #14142, #14848, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16120 [deployed], #16584, #16589, #16590, #16602, #16625, #16646, #16648, #16673, #16680, #16715, #16716, #16717, #16718, #16849, #17078, #17166, #17307, #17673, #1807, #18670, #18671, #18781, #18786, #18868, #19585, #19653, #1967, #19686, #19903, #2014, #20272, #20300, #2050, #20536, #2071, #20722, #2079, #21045, #21136 [ready_for_review], #2240, #2241, #2243 [deployed], #22564, #22583, #22584, #22820, #22897, #23206, #23352, #23378, #23490, #23495, #23521 [deployed], #23526 [approved], #23528 [approved], #23529 [approved], #23533 [approved], #23592 [approved], #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
-
-**Last PICKUP PROMPT:**
-
-```
-ill with no pickup prompt.
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task #23592 — DS flag subagent scoping lever: patch subagent TaskExecutor, verify routing, close out.
-
-Where we left off (verified 2026-08-06 00:26 PT):
-- #23592 [executing] filed (mysql insert_data Row ID 23592) and reconciled server-side
-- Subagent dispatcher source found: ~/.vscode/extensions/saoudrizwan.claude-dev-4.0.7/dist/extension.js, class sTr (subagent executor); `this.apiHandler=this.agent.getApiHandler()` is the exact line that forces every subagent onto the parent's model; subagent task schema validated by wfl=Ir.object
-- Proof the DS flag is a cached-bundle-only artifact: `_has_sg` count = 0 in on-disk extension.js AND all 11 .bak backups; it appears only in VS Code CachedData chrome/js (running cache). The lever CANNOT be a config-flag hack — it must be a real patch at the sTr apiHandler assignment so subagents can carry their own model_id
-- Rule 00 steering file already patched to drop the false DS claim; clinerules MCP reindexed (314 rules, 9 hardfloor)
-
-Open threads to drive next:
-1. #23592 [executing] — patch the bundle: at the subagent TaskExecutor (sTr) apiHandler assignment, read a per-subagent model override (e.g. from the subagent prompt's model hint / new `subagent_llm_route` config) and construct the ApiHandler with that model_id; back up extension.js first (pattern: .bak-YYYYMMDD-<tag>), run `node --check` on the patched bundle, reload VS Code
-2. #23592 [executing] — prove the live backend per rule 140: run frankenstein_verify_routing or a live request whose response headers name the resolved backend for the new model_id; then append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66
-
-Reference IDs:
-- Ticket: none
-- Ideas filed: #23592 [executing]
-- Files touched: ~/Documents/Cline/Rules/00-agents-act-on-confidence-tier.md (patched), clinerules MCP index (reindexed), ~/.vscode/extensions/saoudrizwan.claude-dev-4.0.7/dist/extension.js (source located, NOT yet patched)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785997318545` — 8/6/2026, 12:39:24 AM PT — 377 turns
-
-**Original task:**
-
-```
-Frankenstein-llm stalled since we added subagents or messed with that just recently
-```
-
-**Ideas referenced:** #10108, #10740, #11397, #11741, #11781, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12299, #12314, #12335, #123452, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12459, #12477, #12618, #12657, #12672, #12673, #12689, #12716, #12824, #12872, #12878, #13108, #13121, #13202, #13831, #13832, #13874, #13964, #14000, #14848, #1593, #16120, #16163, #16265, #16304, #16588, #16718, #16844, #178599, #18312, #18326, #18600, #18720, #18781, #18786, #18868, #1895, #19653, #1967, #19903, #2014, #20272, #20300, #2050, #20536 [ready_for_review], #20722, #21045, #21136, #2240, #2241, #22569, #22583 [approved], #231529, #23171, #23206, #23352, #23378, #23490, #23495, #23521, #23574 [executing], #23575 [proposed], #23576 [proposed], #23581 [executing], #23583 [proposed], #23591 [executing], #23593 [executing], #23596 [approved], #23598 [proposed], #23599 [proposed], #23600, #261562, #9731
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785988379979` — 8/6/2026, 12:39:16 AM PT — 236 turns
+### `1785988379979` — 8/6/2026, 1:39:40 AM PT — 607 turns
 
 **Original task:**
 
@@ -249,56 +171,11 @@ Do NOT touch Argus in this window. Argus work is running separately.
 ## 1. #23483 [proposed] P0: rep
 ```
 
-**Ideas referenced:** #16437, #18936, #18944, #18951, #20346, #2240, #2241, #23133, #23281 [executing], #23352, #23378, #23425 [deployed], #23426 [deployed], #23440 [proposed], #23472 [proposed], #23477 [proposed], #23483 [proposed], #23495, #3528, #3529, #3530, #3536, #3537, #3538, #3540, #3542, #3543, #3555, #3556, #3558, #9086, #9168, #9339
+**Ideas referenced:** #13437, #16437, #18936, #18944, #18951, #20090, #20346, #20903, #21010, #21011, #21167, #2240, #2241, #2244, #22514, #22517, #22520, #23133, #23281 [executing], #23352, #23378, #23425 [deployed], #23426 [deployed], #23440 [proposed], #23472 [proposed], #23477 [proposed], #23483 [proposed], #23495 [executing], #23620, #2703, #3528, #3529, #3530, #3536, #3537, #3538, #3540, #3542, #3543, #3555, #3556, #3558, #9086, #9168, #9339
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785976094322` — 8/5/2026, 11:48:15 PM PT — 190 turns
-
-**Original task:**
-
-```
-For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 
-
-extremely thin and unviewable. Can you resolve this? Look at this middle content. It should stretch out to both sides (left and right)
-```
-
-**Ideas referenced:** #178595, #23584 [proposed], #23585 [proposed], #495057, #856404
-
-**Last PICKUP PROMPT:**
-
-```
-r full re-sweep, cache purged.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785957972000 — CAPCE audit wrap-up: file 3 ideas + close per Ruben feedback
-
-Where we left off (verified 2026-08-05 23:48 PT):
-- REMOVED false "are CAPCE accredited" claim from config_plugins id 5290 (verified)
-- REWORDED course 23 EMS 210 disclaimer preserving protective meaning (verified)
-- 17,845 issued CAPCE certificates LEFT ALONE per Ruben (thread 2 no)
-- Live CE integration /var/www/moodle/ems/local/capseinsert/ LEFT RUNNING (disabling = thread 1; NOT yet disabled, only idea filed)
-- Full re-sweep returned 0 CAPCE across all editable Moodle content, cache purged
-
-Open threads to drive next:
-1. #23584 [proposed] — Disable CAPCE CE-reporting integration in Moodle. Ruben said "1 - yes" (disable it). Need to deregister the observer without deleting the code.
-2. #23585 [proposed] — Sweep WordPress marketing sites + student-facing docs for false CAPCE accreditation claims. Ruben said "3 - investigate".
-3. 4 (human-only decision, no idea) — Awaiting Ruben's visual confirmation of the emscards layout fixes from earlier in this session.
-
-Reference IDs:
-- Ideas filed: #23584 [proposed], #23585 [proposed]
-- Files touched: /var/www/moodle/ems/course/format/emscards/format.php, moodle_c_live.config_plugins id 5290, moodle_c_live.course id 23, HANDOFF_NOTES.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785986098106` — 8/5/2026, 10:13:02 PM PT — 272 turns
+### `1785986098106` — 8/6/2026, 1:39:36 AM PT — 339 turns
 
 **Original task:**
 
@@ -336,6 +213,257 @@ Open threads to drive next:
 Reference IDs:
 - Ideas filed this session: #23482 [executing], #23484 [executing], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [executing], #23518 [executing], #23519 [executing]
 - Ideas referenc
+```
+
+### `1785989615911` — 8/6/2026, 1:39:32 AM PT — 377 turns
+
+**Original task:**
+
+```
+for frankenstein-llm subagents are still slow.  Are they using the 120Bs? If 120Bs are past their allowable lanes, why are we not spilling off? What's causing slowness or is it something different?
+```
+
+**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11942, #11944, #11953, #11991, #12046, #12059, #12231, #12246, #12247, #12249, #12251, #12262, #12266, #12269, #12285, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12403, #12407, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12657, #12672, #12673, #12680, #12688, #12689, #12708, #12710, #12716, #12900, #13095, #13108, #13121, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13831, #13832, #13842, #13874, #13962, #13964, #14000, #14133, #14142, #14848, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16120 [deployed], #16584, #16589, #16590, #16602, #16625, #16646, #16648, #16673, #16680, #16715, #16716, #16717, #16718, #16849, #17078, #17166, #17307, #17537, #17619 [deployed], #17673, #1807, #18670, #18671, #18781, #18786, #18806, #18868, #19585, #19653, #1967, #19686, #19903, #2014, #20272, #20300, #2050, #20536, #2071, #20722, #2079, #21045, #21136 [ready_for_review], #2240, #2241, #2243 [deployed], #22564, #22583, #22584, #22820, #22897, #23031 [executing], #23133 [executing], #23139 [executing], #23206, #23308, #23352, #23378, #23440, #23472, #23477, #23483, #23490, #23495, #23521 [deployed], #23526 [approved], #23528 [approved], #23529 [approved], #23533 [approved], #23592 [approved], #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
+
+**Last PICKUP PROMPT:**
+
+```
+the subagent's apiHandler.
+
+═══════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════
+Pick up task — verify subagent route lever after VS Code reload, test end to end.
+
+Where we left off (verified 2026-08-06 01:01 PT):
+- #23592 [deployed] — subagent LLM route lever shipped via ~/Documents/Cline/Agents/subagent.yaml (modelId: deepseek/deepseek-chat). No extension.js patch needed — the Cline extension already had the aTr.applyModelOverride code path; only the config file was missing
+- DB verified: orchestrator_ideas #23592 status=deployed, deployed_at=2026-08-06 00:53:05
+- clinerules reindexed (314 rules, 9 hardfloor)
+- cline_task_ledger.md appended
+
+Open threads to drive next:
+1. #23592 [deployed] — after a VS Code RELOAD (Extensions: Reload Window, Cmd+Shift+P), verify the agent config loader picked up subagent.yaml: check Cline extension logs for "[AgentConfigLoader] Found N YAML file(s)" with subagent.yaml included, OR trigger a `use_subagents` tool call with a named subagent and verify the model route via frankenstein_verify_routing per rule 140
+2. #23592 [deployed] — if the modelId route works, mark verified; if it does not (and the old default model is still used), check UDt file filter to confirm it accepts .yaml files (grep for UDt in extension.js) — if it filters by a different extension, rename the file accordingly and reload
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: #23592 [deployed]
+- Files touched: ~/Documents/Cline/Agents/subagent.yaml (created), extension.js backup created (extension.js.bak-20260806-subagentroute), cline_task_ledger.md (appended), clinerules MCP index (reindexed)
+- DB: orchestrator_ideas Row ID 23592 (deployed)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785997318545` — 8/6/2026, 1:39:31 AM PT — 621 turns
+
+**Original task:**
+
+```
+Frankenstein-llm stalled since we added subagents or messed with that just recently
+```
+
+**Ideas referenced:** #10108, #10740, #11397, #11741, #11781, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12299, #12314, #12335, #123452, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12459, #12463, #12477, #12618, #12657, #12672, #12673, #12689, #12716, #12824, #12872, #12878, #13108, #13121, #13202, #13204, #13470, #13831, #13832, #13874, #13964, #14000, #14848, #1593, #16120, #16163, #16213, #16265, #16304, #16588, #16590, #16625, #16718, #16844, #17673, #178599, #18312, #18326, #18600, #18720, #18781, #18786, #18868, #1895, #19653, #1967, #19903, #2014, #20272, #20300, #2050, #20536 [ready_for_review], #20722, #21045, #21136, #2240, #2241, #2246, #22569, #22583 [approved], #22850, #23027, #231529, #23171, #23206, #23352, #23378, #23429, #23490, #23495, #23506, #23521, #23574 [executing], #23575 [proposed], #23576 [proposed], #23581 [executing], #23583 [proposed], #23591 [executing], #23593 [executing], #23596 [approved], #23598 [proposed], #23599 [proposed], #23600, #23601, #23624 [in_progress], #261562, #9731
+
+**Last PICKUP PROMPT:**
+
+```
+idea idea filed this session**
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785997581 - frankenstein-tools fixes: executor-inflight leak + watchdog v4, shipped and live-verified
+
+Where we left off (verified 2026-08-06 00:38 PT):
+- Executor-inflight leak fix shipped and live-verified: 0 QOS_PREEMPT in 30 min, adapter healthy on port 11510
+- Watchdog v4 shipped and live-verified: 0 RESTART events since deployment, passive canary health stable
+- ADAPTER_COUNT guard fix shipped: bash syntax error resolved
+- Full 20-MCP health sweep: all healthy (earlier -32001 was Mode D transient, resolved by retry per MCP_Troubleshooting.md)
+- All 7 ideas reconciled: 6 executing, 1 proposed
+
+Open threads to drive next:
+1. #23598 [proposed] - verify zero false-positive watchdog restarts under v4 over the next several hours (unchanged from prior session state)
+2. #23581 [executing] - Kaizon target for watchdog monitoring still needs to land
+3. #23591 [executing] - WordPress backdoor cleanup on sandiegoemtrefresher.com (separate track, unrelated to frankenstein work)
+
+Reference IDs:
+- Ideas filed: #23574 [executing], #23575 [executing], #23581 [executing], #23591 [executing], #23593 [executing], #23598 [proposed], #23599 [executing]
+- Files touched: /usr/local/bin/emsu-frankenstein-tools-watchdog.sh (v4 rewrite), /usr/local/bin/frankenstein_tools_adapter.py (executor-inflight leak self-heal)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786002734721` — 8/6/2026, 1:39:16 AM PT — 53 turns
+
+**Original task:**
+
+```
+#Argus
+
+Continue with the outstanding Argus tasks in the window that just closed out. 
+
+Also, How are subagents working now in Argus? 
+
+Also, Would like to see total time it took to finish an idea, not just the time stamps. 
+
+https://www.emsuniversity.com/emtskills/routes/argus_task_status.php
+```
+
+**Ideas referenced:** #16213, #16695, #17759 [proposed], #17761, #17762 [deployed], #17766 [proposed], #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19653 [executing], #2006, #20547, #21125, #21126, #21167, #2212, #2240, #2241, #2244, #22511, #22583, #22688, #22850, #23027, #23031 [executing], #23036, #23037, #23038, #23039, #23050, #23062, #23067, #23117, #23133 [executing], #23135, #23139 [executing], #23164, #23173, #23211, #23223, #23264 [executing], #23265 [executing], #23308, #23323, #23324, #23352, #23378, #23428, #23429, #23431, #23440, #23468, #23472, #23477, #23483, #23489 [in_progress], #23495, #23500, #23505, #23506, #23530 [approved], #23620, #23622, #23623, #23630 [deployed], #23636, #23671, #334155, #3530, #3555, #3556, #3558, #4338, #4948, #4962, #56754, #64748
+
+**Last PICKUP PROMPT:**
+
+```
+w includes elapsed/total time.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus follow-up: total duration deployed, finish #23489 per-request latency.
+
+Where we left off (verified 2026-08-06 01:26 PT):
+- Idea #23630 [deployed] — Total-duration metric on argus_task_status.php (fmtDur helper, Total time + Elapsed rows)
+- Idea #23489 [in_progress, idle] — Parallelize within-round tool calls in runClaudeChatWithTools() (the dominant latency source)
+- Subagent question answered: NONE in Argus (no child-agent forking, no MCP subagent dispatch, only curl_multi task-batch parallelism)
+- Queue: 2 running (205-206), 172 done, 0 stuck
+- Backup: argus_task_status.php.bak-20260806-duration
+
+Open threads to drive next:
+1. #23489 [in_progress] — Execute: modify terminal_query path in alltastic_api.php to parallelize tool calls within a single round (the 8 sequential rounds are ~45s each, so an 8-round request is ~6min). Each round's calls are independent lookups; fire them in parallel via curl_multi or pcntl_fork, collect results, pass to next round.
+2. #23530 [approved] — UX: add a "NEW" notification flag to Argus terminal instead of dumping background-task text inline into open chat threads.
+
+Reference IDs:
+- Ticket: N/A (no open Argus ticket)
+- Ideas filed: #23630 [deployed], #23489 [in_progress], #23530 [approved]
+- Files touched: /var/www/emtskills/routes/argus_task_status.php (modified), argus_task_status.php.bak-20260806-duration (backup)
+- URL: https://www.emsuniversity.com/emtskills/routes/argus_task_status.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785976094322` — 8/6/2026, 1:39:02 AM PT — 243 turns
+
+**Original task:**
+
+```
+For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 
+
+extremely thin and unviewable. Can you resolve this? Look at this middle content. It should stretch out to both sides (left and right)
+```
+
+**Ideas referenced:** #178595, #2247, #23584 [proposed], #23585 [proposed], #495057, #856404
+
+**Last PICKUP PROMPT:**
+
+```
+ from earlier in this session.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785957972000 — idea #23584 [deployed]: disable CAPCE CE-reporting observer (Ruben approved)
+
+Where we left off (verified 2026-08-06 01:26 PT):
+- Renamed /var/www/moodle/ems/local/capseinsert/db/events.php to events.php.disabled_by_ruben_20260805, deregistering the course_completed observer that posted completions to a CE API
+- Cache purged; events_handlers CONFIRMED 0 rows registered for capseinsert
+- capce_submissions.log last write 2026-08-05 22:07 PT, well before disable 01:18 PT: reporting silent
+- Code fully preserved (capce_call.php v8.0.0, observer.php, lib.php, version.php) for audit; re-enable = rename back + purge caches
+- HANDOFF_NOTES updated
+
+Open threads to drive next:
+1. #23585 [proposed] — Sweep WordPress marketing sites + student-facing docs for false CAPCE accreditation claims. Ruben said investigate. Same regulatory exposure as the Moodle claim already removed.
+2. 4 (human-only decision, no idea) — Awaiting Ruben's visual confirmation of the emscards layout fixes from earlier this session.
+
+Reference IDs:
+- Ideas filed: #23584 [deployed], #23585 [proposed]
+- Files touched: /var/www/moodle/ems/local/capseinsert/db/events.php (renamed to events.php.disabled_by_ruben_20260805), HANDOFF_NOTES.md
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>- [x] Renamed db/events.php to disable observer
+- [x] Purged caches
+- [x] Verified 0 observer handlers for capseinsert in events_handlers
+- [x] Confirmed capce_submissions.log last write was 22:07 PT, before disable
+- [x] Updated HANDOFF_NOTES
+- [x] Reported to Ruben with completion summary</task_progress>
+</attempt_completion>
+```
+
+### `1786002390209` — 8/6/2026, 12:50:24 AM PT — 23 turns
+
+**Original task:**
+
+```
+#Argus
+
+Finish this up
+
+Partial shipment this window: database schema for #23550/23572 is deployed and verified, but the code changes and end-to-end test are NOT complete. Ruben said "build and ship here... test it until working end to end" — that did not finish; consecutive tool-strikes burned the recovery ceiling mid-build.
+
+SHIPPED THIS WINDOW:
+- ALTER TABLE argus_task_queue (verified via DESCRIBE): parent_task_id INT NULL, spill_tier ENUM, child_rounds TINYINT UNSIGNED. 0 rows affected = pure additive, no risk to queued tasks.
+- Backups: cron_argus_task_worker.php.bak-23550-20260806-v1, al
+```
+
+**Ideas referenced:** #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #20547, #21125, #21126, #22688, #23036, #23428, #23429, #23440, #23468, #23472, #23477, #23483, #23489, #23495, #23506, #23550 [approved], #23572 [approved], #3530, #3555, #3556, #3558
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785988427679` — 8/6/2026, 12:44:53 AM PT — 533 turns
+
+**Original task:**
+
+```
+#Argus
+
+
+However, most are supposed to be on the 120Bs -> The speed problem is the loop shape, not the wiring. maxToolRounds is 8, dropped to 3 for lookup/chat mode. Each round is a full sequential model call, and the code comment says it plainly: on the ~2 tok/s GLM ring those add up to minutes. So an 8-round research question is 8 serial model calls. That is where the minutes go. Filed as #23489 [proposed] with three ranked levers.
+--
+
+Pick up task #23428 [executing]: Argus request-speed work ONLY.
+
+Scope guard: this window is Argus performance only. Non-Argus work (student ops, telephony, c
+```
+
+**Ideas referenced:** #10005, #10108, #11953, #12251, #12335, #12365, #12366, #12368, #12407, #12657, #12689, #127908, #128203, #128263, #128275, #13831, #13874, #16213, #16265, #1627, #17202, #17203, #17205, #17300, #18378, #18745, #18820, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19903, #2006, #20300, #2050, #20547, #21125, #21126, #2221, #2232, #2238, #2242 [deployed], #22511, #22583 [approved], #22688, #22850, #22897 [executing], #23027, #23036, #23190 [rejected], #23191 [executing], #23192 [rejected], #23205 [rejected], #23307 [rejected], #23339 [executing], #23425 [deployed], #23426 [deployed], #23427 [deployed], #23428 [executing], #23429 [executing], #23430 [deployed], #23440 [proposed], #23467 [executing], #23468 [deployed], #23472 [proposed], #23477 [proposed], #23483 [proposed], #23489 [proposed], #23490, #23505 [proposed], #23506, #23511 [proposed], #23513 [proposed], #23520 [deployed], #23530 [deployed], #23550 [proposed], #23572 [proposed], #334155, #4338, #64748
+
+**Last PICKUP PROMPT:**
+
+```
+resh window command below.
+
+═══════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════
+Pick up task — build + ship + end-to-end test #23550 (Argus subagent decomposition) and #23572 (DeepSeek research spill for child tasks).
+
+Where we left off (verified 2026-08-06 00:43 PT):
+- Schema ALTER deployed + verified: argus_task_queue now has parent_task_id INT NULL, spill_tier ENUM('production','research','fact') DEFAULT 'production', child_rounds TINYINT UNSIGNED NULL.
+- Backups: cron_argus_task_worker.php.bak-23550-20260806-v1, alltastic_api.php.bak-23572-20260806-v1 (both root-owned, confirmed on disk).
+- All source read: full cron_argus_task_worker.php (20631 bytes), alltastic_api.php fast-path (lines 5390-5470, extModeMap fast=deepseek-v4-pro at line 5414), round-loop cap maxToolRounds (lines 1794-1983).
+- Draft functions designed but unsaved: argusDecomposeTask (pattern 1: numbered list, pattern 2: bullets, pattern 3: and-also/additionally; min 2 parts, min 15 chars each); argusClassifySpillTier (research → 4 rounds, fact → 2 rounds, production → 6 rounds, heuristic by length); argusMergeChildResults (waits until all children done/failed/offloaded, merges PART 1 of N blocks, parent status='done').
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #23550 [approved] — inject the three functions into cron_argus_task_worker.php between argusConsumeTaskNotes() and the Phase 1 comment block; add split gate in Phase 1 (if task has no parent_task_id, run argusDecomposeTask; if >= 2 parts, insert child rows with parent_task_id and child_rounds, then set parent status='parent_wait' via result_summary, do NOT dispatch the parent); add spill_tier + child_rounds to each payload; in Phase 2 dispatch children; in Phase 3 after results, call argusMergeChildResults(parent_id) for every child whose parent is non-null.
+2. #23572 [approved] — in alltastic_api.php terminal_query path, add a block BEFORE the tool round loop (near line 1760, alongside the chrome-extension fast path): if $jsonInput['spill_tier']==='research' and client !== 'chrome-extension', curl LITELLM_BASE_URL /v1/chat/completions with model='deepseek-v4-pro', max_tokens=1200, timeout=75; set $GLOBALS['argus_mode']='subagent_research' so argus_round_latency logs it; insert one argus_round_latency row (round_no=1, max_rounds=$jsonInput['child_rounds']??4, tool_calls=0, model='deepseek-v4-pro', is_final=1); return {"success":true,"response":etext,"model":"deepseek-v4-pro"}; skip the entire round loop.
+3. #23572 [approved] — worker Phase 3 re-split-on-cap: if a research/fact child's result matches argusResponseIsGarbage OR contains 'needs re-split', create ONE new child row with narrower task_text = original child text + ' — focus only on [first un-answered portion]' and leave the child status='failed'; do NOT let a garbage child answer reach the parent merge.
+
+DoD to run: (1) insert a 3-part test task via argus_task_queue (task_text with numbered list 1. 2. 3., spill_tier='research', child_rounds=4); (2) run php cron_argus_task_worker.php manually; (3) verify 3 child rows created with parent_task_id set, dispatched concurrently, and parent merged result appears; (4) check argus_round_latency for argus_mode='subagent_research' rows on research children; (5) delete the test rows afterward.
+
+Reference IDs:
+- Ideas filed: #23550 [approved], #23572 [approved]
+- Files to modify: /var/www/emtskills/routes/cron_argus_task_worker.php (functions + Phase 1/2/3 surge
 ```
 
 ### `1785971158342` — 8/5/2026, 9:24:41 PM PT — 160 turns

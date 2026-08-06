@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/5/2026, 5:39:39 PM PT | window: last 72h | 116 tasks | index total 491 (parsed 3, cached 488)
+Generated: 8/5/2026, 6:39:40 PM PT | window: last 72h | 116 tasks | index total 491 (parsed 1, cached 490)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785976094322` | 8/5/2026, 5:39:33 PM | 75 | 1246KB | For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 |
+| `1785966242067` | 8/5/2026, 6:36:34 PM | 302 | 816KB | #TDSHS |
+| `1785976094322` | 8/5/2026, 5:41:33 PM | 86 | 1280KB | For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 |
 | `1785939420388` | 8/5/2026, 5:38:15 PM | 436 | 13810KB | #Argus |
-| `1785966242067` | 8/5/2026, 5:34:38 PM | 284 | 757KB | #TDSHS |
 | `1785939083137` | 8/5/2026, 5:07:17 PM | 1482 | 2417KB | https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since  |
 | `1785971158342` | 8/5/2026, 4:45:56 PM | 118 | 287KB | #AZDHS |
 | `1785953852961` | 8/5/2026, 4:34:41 PM | 408 | 1149KB | #GLM  |
@@ -131,7 +131,60 @@ Generated: 8/5/2026, 5:39:39 PM PT | window: last 72h | 116 tasks | index total 
 
 ## Per-window detail
 
-### `1785976094322` — 8/5/2026, 5:39:33 PM PT — 75 turns
+### `1785966242067` — 8/5/2026, 6:36:34 PM PT — 302 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+Pick up Texas DSHS compliance. FIRST STOP, before anything else:
+https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations
+
+Backing tables: compliance_investigations (18 rows), compliance_investigation_responses (137),
+compliance_investigation_students (11), tdshs_course_notifications (72), dshs_form_signers (2).
+
+THE HEADLINE (probed live 2026-08-05 14:39 PT, idea #23269 [executing]):
+Ruben said Sabrina Richardson sent 14 messages. It is actually 17, and prior handoffs were WRONG
+that they were unretrievable. All 17 are in admin_portal.email_inbound
+```
+
+**Ideas referenced:** #059669, #111827, #1559, #18676 [blocked], #18690 [blocked], #19600, #19601, #19602, #23038, #23269 [executing], #23348 [high], #23349 [critical], #23350 [open], #23361 [executing], #23362 [blocked], #23365 [executing], #23366 [executing], #23367 [executing], #23372 [executing], #23373 [blocked], #23374 [proposed], #23380 [proposed], #23381 [executing], #23382 [executing], #23383 [proposed], #23413 [critical], #23414 [executing], #23415 [proposed], #2563, #3730, #374151, #56740, #56754, #56756, #600179, #6106, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+licensees actually lose these.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #23269 — TDSHS: 3 responses due 8/6, CAPCE particulars-demand set for Friday 8/7.
+
+Where we left off (verified 2026-08-05 18:35 PT):
+- COUNSEL POSITION OF RECORD captured at inv5 row 158. Greg to Pinsky: could not find any online references to CAPCE, demanded Pinsky explain what he is talking about, stated EMSU has no interest in anything associated with CAPCE, reserved all rights. Structure is demand particulars, take no substantive position, reserve rights.
+- HARDFLOOR CONSISTENCY RULE recorded: every EMSU communication touching CAPCE must be consistent with counsel's position. Do NOT tell DSHS that no representations exist; that is Greg's assertion in a different forum and repeating it to a regulator makes it a licensee statement in a misrepresentation inquiry. Mirror the structure, not the content.
+- CAPCE REPLY DRAFTED: demand (1) control number, (2) the specific representations with where and approximate date, (3) date the Department received the allegations. Plus a paragraph stating counsel is handling the CAPCE matter and any substantive response comes through counsel. She invited exactly this by offering to clarify by control number and item.
+- TIMELINE SET: send Friday 8/7 EOD. No deadline exists to miss (she wrote that she did not put a timeline). Tomorrow 8/6 is the real deadline and must not compete. Greg reviews Thursday.
+- Richardson 8/5 19:50 CT reply at inv7 row 156. Sunset v3 addendum at inv18 row 157.
+- 3 responses due 8/6: Smith, Sheets, Kanthack. Drafted 8/1, rule-302 passed, PDFs NOT rendered (on-disk PDFs stale 7/27).
+
+Open threads to drive next:
+1. #23365 [executing] — Render fresh PDFs and send Smith/Sheets/Kanthack. DUE 8/6. READ ALL THREE AGAINST EACH OTHER FIRST: does any describe the transmission defect, timeline, or corrective measures inconsistently with another? Attrition, not merits, is how licensees lose. Use her per-number extension offer on Kanthack if 1080261815 vs 1080261891 is still unresolved.
+2. #23413 [executing] — CAPCE particulars-demand. Greg reviews Thursday 8/6, send Friday 8/7 EOD. Open call for Ruben and Greg: name Pinsky or keep it generic as "counsel for CAPCE."
+3. #23415 [proposed] — Preserve current website and marketing state through counsel before anything changes, given the confirmed misrepresentation theory.
+4. #23414 [executing] — Fold the v3 addendum quotes into the Sunset submission. Verify every quotation character by character against the 8/5 19:50 CT email.
+5. #23383 [proposed] — Finalize and submit Sunset. Counsel reviews item 7, fill [DATE] and phone, confirm the 8/6 responses went out.
+6. #23382 [executing] — Clear the externship backlog. Numbers never go to DSHS or into the Sunset submission.
+7. #23372 [deployed] — TPIA-005 filed. Diary the 10-business-day Gov Code 552 clock in inv16; escalate to AG if refused.
+8. #23362 [blocked] — Hold the factual solicitation claim until TPIA-005 returns.
+9. #23380 [proposed] — Mejia. Do NOT contact about the complaint without Ruben and counsel sign-off. DO place him.
+10. #23373 [blocked] — Retrieve full Pinsky 7/9 text + the 6/18 and 6/24 demand PDFs. Now high value: they may contain the particulars Greg asked for and never received. Unblocker: Postmark account token.
+11. #23348 [blocked] — 5 complaint PDFs unfetched. Same blocker: POSTMARK_ACCOUNT_TOKEN in config.local.php is the literal placeholder `__RUBEN_PASTE_ACCOUNT_TO
+```
+
+### `1785976094322` — 8/5/2026, 5:41:33 PM PT — 86 turns
 
 **Original task:**
 
@@ -200,59 +253,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1785966242067` — 8/5/2026, 5:34:38 PM PT — 284 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-Pick up Texas DSHS compliance. FIRST STOP, before anything else:
-https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations
-
-Backing tables: compliance_investigations (18 rows), compliance_investigation_responses (137),
-compliance_investigation_students (11), tdshs_course_notifications (72), dshs_form_signers (2).
-
-THE HEADLINE (probed live 2026-08-05 14:39 PT, idea #23269 [executing]):
-Ruben said Sabrina Richardson sent 14 messages. It is actually 17, and prior handoffs were WRONG
-that they were unretrievable. All 17 are in admin_portal.email_inbound
-```
-
-**Ideas referenced:** #059669, #111827, #1559, #18676 [blocked], #18690 [blocked], #19600, #19601, #19602, #23269 [executing], #23348 [high], #23349 [critical], #23350 [open], #23361 [executing], #23362 [blocked], #23365 [executing], #23366 [executing], #23367 [executing], #23372 [executing], #23373 [blocked], #23374 [proposed], #23380 [proposed], #23381 [executing], #23382 [executing], #23383 [proposed], #2563, #3730, #374151, #56740, #600179, #6106, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-h. 157 subsection** in item 7.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #23269 — TDSHS: 3 responses due 8/6, Sunset v2 ready, Richardson letter pending 2 edits.
-
-Where we left off (verified 2026-08-05 17:33 PT):
-- SUNSET SUBMISSION v2 written to uploads/tdshs/inspection-5196-2026/DRAFT_sunset_commission_input_EMSU.md (7173 to 15905 bytes, v1 backed up). Item 2 re-baselined to 11 control numbers + the aggregate-burden argument. NEW item 6 complaint intake transparency, NEW item 7 third-party private-organization referrals. Both framed as does-a-written-standard-exist, asserting no facts about Department conduct. New evidence-status table. inv18 row 155, also on the deadline page.
-- TIMING CHANGED: submit after the 8/6 responses and the Richardson letter, do NOT wait for TPIA-005 production, supplement later. sunset@sunset.texas.gov, subject "DSHS Review". Review window Sept 2025 to Dec 2026.
-- RICHARDSON LETTER approved by Ruben pending 2 edits: collapse "20+ in last 3 days" and "14 since Monday" into one window (both describe 8/3-8/5), and change "numerous separate control numbers" to "eleven" for consistency with the later reference.
-- STRATEGIC READ recorded: the letter will not change Richardson's behavior; its value is the contemporaneous record, three questions damaging to leave unanswered, a reasonableness contrast, and a predicate that unlocks escalation. Most licensees lose by attrition, so consistency ACROSS the eleven responses matters more than the strength of any one.
-- 3 responses due 8/6: Smith, Sheets, Kanthack. Drafted 8/1, rule-302 passed, PDFs NOT rendered (on-disk PDFs are stale 7/27).
-
-Open threads to drive next:
-1. #23365 [executing] — Render fresh PDFs from the 8/1 markdown for Smith/Sheets/Kanthack and send. DUE 8/6. CROSS-CHECK ALL THREE FOR CONTRADICTIONS before sending; that is the attrition risk. Kanthack blocked on dual control number 1080261815 vs 1080261891.
-2. #23366 [executing] — Ruben sends the Richardson letter after the two edits. Also VERIFY the exact 25 TAC ch. 157 subsection, which is cited in both the letter and Sunset item 7.
-3. #23383 [proposed] — Finalize and submit Sunset v2. Needs counsel review of item 7, [DATE] and phone filled, and confirmation the 8/6 responses went out.
-4. #23382 [executing] — Clear the externship backlog. Owed to students; dissolves complaint substance. Numbers never go to DSHS or into the Sunset submission.
-5. #23372 [deployed] — TPIA-005 filed. Diary the 10-business-day Gov Code 552 clock in inv16; escalate to AG if refused. Production feeds the Sunset supplement.
-6. #23362 [blocked] — Hold the factual pattern claim until TPIA-005 returns. Venue is the Sunset supplement.
-7. #23380 [proposed] — Mejia. Do NOT contact about the complaint without Ruben and counsel sign-off. DO place him.
-8. #23381 [executing] — Standing rule: never ask in correspondence what a pending TPIA already compels.
-9. #23373 [blocked] — Retrieve full Pinsky 7/9 text + the 6/18 and 6/24 demand PDFs. Needed to firm up Sunset item 7. Unblocker: Postmark account token.
-10. #23348 [blocked] — 5 complaint PDFs unfetched. Same blocker: POSTMARK_ACCOUNT_TOKEN in config.local.php is the literal placeholder `__RUBEN_PASTE_ACCOUNT_TOKEN_HERE__`.
-11. #18676 [blocked] — rmajor@ IMAP password. Caused three wrong conclusions today. Highest-leverage unblock in this matter.
-12. #23367 [executing] — Confirm the 5 INFERRED deadlines; link the deadline page from institutional_comp
 ```
 
 ### `1785939083137` — 8/5/2026, 5:07:17 PM PT — 1482 turns

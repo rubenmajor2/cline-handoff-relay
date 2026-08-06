@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/6/2026, 10:32:47 AM PT | window: last 72h | 115 tasks | index total 506 (parsed 4, cached 502)
+Generated: 8/6/2026, 11:32:48 AM PT | window: last 72h | 114 tasks | index total 506 (parsed 3, cached 503)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786036273485` | 8/6/2026, 10:32:47 AM | 115 | 292KB | #Argus  |
-| `1786037557221` | 8/6/2026, 10:32:37 AM | 1 | 12KB | /emtskills lag |
-| `1786010979248` | 8/6/2026, 10:16:36 AM | 260 | 791KB | Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to |
+| `1786037557221` | 8/6/2026, 11:32:37 AM | 260 | 444KB | /emtskills lag |
+| `1786036273485` | 8/6/2026, 11:32:27 AM | 372 | 739KB | #Argus  |
+| `1786010979248` | 8/6/2026, 11:32:01 AM | 375 | 963KB | Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to |
 | `1786032945879` | 8/6/2026, 10:15:19 AM | 474 | 718KB | #/emtskills lag |
 | `1786033674961` | 8/6/2026, 10:00:27 AM | 214 | 441KB | ## Argus  |
 | `1785986098106` | 8/6/2026, 9:39:39 AM | 922 | 2518KB | #TDSHS |
@@ -124,13 +124,28 @@ Generated: 8/6/2026, 10:32:47 AM PT | window: last 72h | 115 tasks | index total
 | `1785787253230` | 8/3/2026, 1:22:09 PM | 100 | 181KB | When I click on "Login As Student Link" for example: https://emsuniversity.com/emtskills/e |
 | `1785778361008` | 8/3/2026, 11:49:14 AM | 188 | 739KB | https://emsuniversity.com/emtskills/routes/login_sms.php Sent verification code, but does  |
 | `1785781530203` | 8/3/2026, 11:35:20 AM | 46 | 208KB | Is this GLM faster aggregate than 4tok/sec |
-| `1785777088737` | 8/3/2026, 10:58:22 AM | 94 | 1066KB | #Texas |
 
 ---
 
 ## Per-window detail
 
-### `1786036273485` — 8/6/2026, 10:32:47 AM PT — 115 turns
+### `1786037557221` — 8/6/2026, 11:32:37 AM PT — 260 turns
+
+**Original task:**
+
+```
+/emtskills lag
+
+I am still having problems with this that need to be resolved. There are other people that are having the same issue right now. So if you're gonna ask us to do something with our browser it's gonna be next year to impossible. This is something that needs to be resolved in the server level. And it's not just the page that you were troubleshooting. There are other serious issues that need to be trapped down on this so that /emtskills loads quickly.
+
+You were right to push back, and you were right that testing it myself was the obvious move. I did that, and I reproduced your exact
+```
+
+**Ideas referenced:** #16213, #178590, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19370, #22850, #23031 [executing], #23053 [executing], #23133 [executing], #23139 [executing], #23293 [executing], #23378 [approved], #23495 [executing], #23500 [executing], #23867 [proposed], #23880 [proposed], #23884 [proposed], #23885 [proposed], #23886 [deployed], #23925 [rejected], #23926 [rejected], #23927 [proposed], #23929 [rejected], #23930 [rejected], #23931 [proposed], #23932 [rejected], #23934, #23941 [executing], #23944 [executing], #23945 [proposed], #23947 [proposed], #23952 [proposed], #23954 [proposed], #23975 [executing], #23976 [executing], #23981 [in_progress], #711392
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786036273485` — 8/6/2026, 11:32:27 AM PT — 372 turns
 
 **Original task:**
 
@@ -147,35 +162,39 @@ EXCLUDED: #2251 [superseded] (bug-library incident row, not an orchestrator idea
 Raising curl 240->600 and pool max_execution_time 120->600 was correct and necessary. But a longer timeout on an amplifying loop just means MORE concurrent long-held connections. Here is wh
 ```
 
-**Ideas referenced:** #16523, #178601, #2250 [superseded], #2251 [superseded], #2252, #2253, #22688, #23036, #23428, #23429, #23468, #23506, #23585, #23630 [executing], #23675, #23710, #23711, #23851 [rejected], #23852 [proposed], #23854, #23867, #23868 [executing], #23878 [proposed], #23879 [proposed], #23913 [executing], #23920 [executing], #23934 [executing], #23941 [executing], #23944 [executing], #23953
+**Ideas referenced:** #16523, #178601, #19370, #2250 [superseded], #2251 [superseded], #2252, #2253, #22688, #23036, #23428, #23429, #23468, #23506, #23585, #23630 [executing], #23675, #23710, #23711, #23851 [rejected], #23852 [proposed], #23854, #23867, #23868 [executing], #23878 [proposed], #23879 [proposed], #23913 [executing], #23920 [executing], #23934 [executing], #23941 [executing], #23944 [executing], #23953, #23973 [proposed], #23974 [proposed], #2563
 
 **Last PICKUP PROMPT:**
 
 ```
-[ ] File ideas for any new findings
-- [ ] Update HANDOFF_NOTES.md
-- [ ] Rule 91 PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
+), no orphaned 'running' rows.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #23974 — instrument payload token bytes at Argus dispatch.
+
+Where we left off (verified 2026-08-06 11:32 PT):
+- #23941 drain V2 already deployed + live-verified in cron_argus_task_worker.php (0 fatals).
+- #23973 sweep done (status=documentation), #23879 timeout-floor resolved (all 600).
+- #23974 instrument site documented: lines 276-289 build `$__payloadArr` (action terminal_query, query, worker_token, worker_role, worker_email + attachments/session), line 289 does `$jobs[id] = ['row'=>$t,'payload'=>json_encode($__payloadArr)]`, line ~316 is the DISPATCH echo.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #23974 — [proposed] Instrument payload bytes: add `prompt_bytes=>strlen($__payloadJson)` to each `$jobs[]` entry, then emit `array_sum(array_column($jobs,'prompt_bytes'))` in the DISPATCH echo line. USE git clone + local edit + deploy (NOT MCP write_server_file — it hit the JSON-arg transport limit). Deploy, then run one seeded test to confirm `-- prompt N total bytes` appears in /var/log/argus_task_worker.log.
+2. #23852 — [proposed] Routing violation fix (needs #23974's token observation first).
+
+Reference IDs:
+- Ticket: n/a (Argus over-texting investigation, approved via feedback)
+- Ideas filed: #23973 [documentation], #23974 [proposed], #23879 [superseded], #23852 [proposed]
+- Files touched: routes/cron_argus_task_worker.php, docs/HANDOFF_NOTES.md, /tmp/drain_p1, /tmp/drain_p2, /tmp/drain_splice.py, /tmp/instr_23974.py
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
-### `1786037557221` — 8/6/2026, 10:32:37 AM PT — 1 turns
-
-**Original task:**
-
-```
-/emtskills lag
-
-I am still having problems with this that need to be resolved. There are other people that are having the same issue right now. So if you're gonna ask us to do something with our browser it's gonna be next year to impossible. This is something that needs to be resolved in the server level. And it's not just the page that you were troubleshooting. There are other serious issues that need to be trapped down on this so that /emtskills loads quickly.
-
-You were right to push back, and you were right that testing it myself was the obvious move. I did that, and I reproduced your exact
-```
-
-**Ideas referenced:** #178590, #23031 [executing], #23053 [executing], #23133 [executing], #23139 [executing], #23293 [executing], #23495 [executing], #23500 [executing], #23867 [proposed], #23880 [proposed], #23884 [proposed], #23885 [proposed], #23886 [deployed], #23925 [rejected], #23926 [rejected], #23927 [proposed], #23929 [rejected], #23930 [rejected], #23931 [proposed], #23932 [rejected], #23941 [executing], #23944 [executing], #23945 [proposed], #23947 [proposed], #23952 [proposed], #23954 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786010979248` — 8/6/2026, 10:16:36 AM PT — 260 turns
+### `1786010979248` — 8/6/2026, 11:32:01 AM PT — 375 turns
 
 **Original task:**
 
@@ -183,30 +202,33 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to be expanded to make better.
 ```
 
-**Ideas referenced:** #000000, #0693, #12206, #128260, #16069, #162324, #16817, #17446, #177914, #1881, #1882, #18944, #18951, #19173, #19437, #19866, #2224, #2225, #23184, #23276, #23585, #23710 [proposed], #23711 [proposed], #2457, #2458, #2459, #251236, #2563, #2603, #2703, #32373, #334155, #3572, #4991, #6064, #7207, #7317, #7907, #8103, #819596, #8211, #9583, #9584, #9589, #9590, #9591, #9592, #9593, #9594, #9595, #9597, #9598
+**Ideas referenced:** #000000, #0693, #12206, #128260, #16069, #162324, #16817, #17446, #177914, #1881, #1882, #18944, #18951, #19173, #19437, #19866, #22086, #2224, #2225, #23184, #23276, #23585, #23710 [proposed], #23711 [proposed], #23955 [deployed], #23989 [proposed], #2457, #2458, #2459, #251236, #2563, #2603, #2703, #32373, #334155, #3572, #4480, #4481, #4991, #6064, #7207, #7317, #7907, #8103, #819596, #8211, #9583, #9584, #9589, #9590, #9591, #9592, #9593, #9594, #9595, #9597, #9598
 
 **Last PICKUP PROMPT:**
 
 ```
-o voice escalations in window.
+ing via chat brain + voice AI.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #23711 [proposed] — CFA capability expansion: suppress empty-message chat handoff tickets + add draft-time URL pre-gate.
+Pick up task — CFA pulse check follow-up: escalate dedup verified working + callback feature adoption needed.
 
-Where we left off (verified 2026-08-06 10:15 PT):
-- #23710 [deployed] — escalation dedup guard deployed in cron_email_responder.php + helper lib email_staff_escalation_dedup.php
-- #23711 [proposed] — scoped but not implemented; sub-idea filed in orchestrator_ideas for precise D3 cron patch location (lines 134-153, plus dedup extension at lines 124-128)
+Where we left off (verified 2026-08-06 11:27 PT):
+- #23710 [deployed] escalation dedup verified: 0 duplicate emails since 10:03 AM
+- #23711 [deployed] chat empty-gate + URL pre-gate deployed
+- Callback infra exists (55+ tables, 204 future slots, config) but 0 student bookings — offer not wired into chat/voice AI prompts
+- New idea filed: #23989 [proposed] — surface callback booking to students
 
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #23711 [proposed] — implement #23711a: add all-empty-message gate in cron_chat_handoff_ticket_spawn.php (insert at line 139, before TICKET SUBSTANCE FIX; extend dedup at line 124 to match visitor_name+site_id when created_by_email IS NULL)
-2. #23711 [proposed] — implement #23711b: add draft-time URL allowlist pre-gate in EmailAIResponder.php / MailerUrlAllowlist.php to catch unowned URLs before sendEmail rather than post-hoc ticket creation
+Open threads to drive next:
+1. #23989 [proposed] — wire callback offer into chat brain (prompt injection) and voice AI agent (no-agent-available path)
+2. Monitor #23710 escalation count over next 24h to confirm sustained suppression
+3. Watch `cron_chat_handoff_ticket_spawn.php` D3 cycle for #23711a empty-gate stats
 
 Reference IDs:
-- Ideas filed: #23710 [deployed], #23711 [proposed]
-- Files deployed: /var/www/emtskills/cron/cron_email_responder.php, /var/www/emtskills/lib/email_staff_escalation_dedup.php
-- Files to touch next: /var/www/emtskills/cron/cron_chat_handoff_ticket_spawn.php, /var/www/emtskills/lib/MailerUrlAllowlist.php
+- Tickets: none
+- Ideas filed: #23710 [deployed], #23711 [deployed], #23989 [proposed]
+- Files touched: cron_email_responder.php, cron_chat_handoff_ticket_spawn.php, lib/mailer.php, lib/email_staff_escalation_dedup.php, lib/email_url_pre_gate.php, HANDOFF_NOTES.md
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
@@ -4304,59 +4326,5 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [x] Document historical benchmarks from HANDOFF
 - [x] Answer whether GLM aggregate > 4 tok/sec
 </task_progress>
-</attempt_completion>
-```
-
-### `1785777088737` — 8/3/2026, 10:58:22 AM PT — 94 turns
-
-**Original task:**
-
-```
-#Texas
-
-See the proposed flight schedule for San Antonio and Houston. We could potentially drive to Austin if needed. But hoping that's not required? 
-
-#TDSHS  The pickup prompt covers all rule-91 required elements:
-
-- __Binary gate:__ `═══ PICKUP PROMPT ═══` (47 U+2550 chars)
-- __Task ID with topic:__ `Pick up task #20734 — Texas TDSHS Sunset Commission outreach...`
-- __Where we left off:__ verified PT timestamp, current state with URLs, file paths, and context (the 404 fix, WOPR deployment, all content present, critical Mon Aug 3 deadline)
-- __Open threads:__ 3 actions, ALL with real idea #2
-```
-
-**Ideas referenced:** #0369, #0891, #1368, #1565, #15803, #1645, #1647, #166534, #1976, #20734 [proposed], #2563, #334155, #475569, #6366, #64748, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-indow — the file is only ~5KB.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #20734 [executing] — Texas TDSHS Sunset outreach: upload Cori PDF to server + fix route table
-
-Where we left off (2026-08-03 10:57 PT):
-- Compliance card created: compliance_investigations id=18 (tdshs-sunset-outreach-aug-2026) ✅
-- Card renders at: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations&entity=tdshs
-- Outreach page: https://emsuniversity.com/emtskills/routes/texas_outreach.php
-- Sunset report: https://www.sunset.texas.gov/reviews-and-reports/agencies/department-state-health-services
-- Public input form: https://www.sunset.texas.gov/input-form
-- Cori PDF on Desktop (verified 2 pages, both SA meetings Mon, Kolkhorst Tue): SCP upload failed (SSH port 22 blocked)
-- texas_outreach.php route table STILL STALE (Mon Houston / Tue SA vs real plan Mon SA+NB / Tue Katy)
-
-Open threads:
-1. #20734 [proposed] — Upload Cori PDF to server via write_server_file or SSH tunnel so Cori has a web link
-2. #20734 [proposed] — Fix texas_outreach.php route table on WOPR (ssh_command sed from /tmp/ copy, then sudo cp)
-3. #20734 [proposed] — Send Campbell/Campos correction emails shifting from Tue to Mon (per v2 plan: both SA meetings Monday)
-4. #20734 [proposed] — File Sunset public input at sunset.texas.gov/input-form
-
-Reference IDs:
-- Ideas filed: #20734 [executing]
-- Files touched: compliance_investigations row id=18 (WOPR) / /Users/rubenmajor/Desktop/Cori_Meeting_Scheduling_Texas_Aug9-12.pdf (local)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```

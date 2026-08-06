@@ -6,17 +6,20 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/6/2026, 1:39:42 AM PT | window: last 72h | 112 tasks | index total 499 (parsed 7, cached 492)
+Generated: 8/6/2026, 2:39:42 AM PT | window: last 72h | 114 tasks | index total 501 (parsed 5, cached 496)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786002462510` | 8/6/2026, 1:39:42 AM | 107 | 294KB | frankenstein-llm seems to be getting stuck here: |
-| `1785988379979` | 8/6/2026, 1:39:40 AM | 607 | 799KB | # NON-ARGUS WINDOW:  |
-| `1785986098106` | 8/6/2026, 1:39:36 AM | 339 | 849KB | #TDSHS |
-| `1785989615911` | 8/6/2026, 1:39:32 AM | 377 | 1486KB | for frankenstein-llm subagents are still slow.  Are they using the 120Bs? If 120Bs are pas |
-| `1785997318545` | 8/6/2026, 1:39:31 AM | 621 | 2062KB | Frankenstein-llm stalled since we added subagents or messed with that just recently |
-| `1786002734721` | 8/6/2026, 1:39:16 AM | 53 | 628KB | #Argus |
-| `1785976094322` | 8/6/2026, 1:39:02 AM | 243 | 1536KB | For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 |
+| `1786002734721` | 8/6/2026, 2:39:38 AM | 207 | 945KB | #Argus |
+| `1786002462510` | 8/6/2026, 2:39:30 AM | 245 | 1390KB | frankenstein-llm seems to be getting stuck here: |
+| `1785986098106` | 8/6/2026, 2:39:18 AM | 553 | 1394KB | #TDSHS |
+| `1786008133029` | 8/6/2026, 2:27:39 AM | 42 | 81KB | There seems to be something that is submitting courses or something to TDSHS. Can you tell |
+| `1785976094322` | 8/6/2026, 2:12:29 AM | 348 | 1676KB | For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 |
+| `1786005641053` | 8/6/2026, 1:57:57 AM | 142 | 208KB | #GLM |
+| `1785997318545` | 8/6/2026, 1:49:28 AM | 692 | 2164KB | Frankenstein-llm stalled since we added subagents or messed with that just recently |
+| `1785988379979` | 8/6/2026, 1:47:38 AM | 638 | 858KB | # NON-ARGUS WINDOW:  |
+| `1785989615911` | 8/6/2026, 1:41:24 AM | 382 | 1500KB | for frankenstein-llm subagents are still slow.  Are they using the 120Bs? If 120Bs are pas |
+| `1785953852961` | 8/6/2026, 1:41:01 AM | 414 | 1161KB | #GLM  |
 | `1786002390209` | 8/6/2026, 12:50:24 AM | 23 | 162KB | #Argus |
 | `1785988427679` | 8/6/2026, 12:44:53 AM | 533 | 1461KB | #Argus |
 | `1785971158342` | 8/5/2026, 9:24:41 PM | 160 | 359KB | #AZDHS |
@@ -29,7 +32,6 @@ Generated: 8/6/2026, 1:39:42 AM PT | window: last 72h | 112 tasks | index total 
 | `1785937503831` | 8/5/2026, 8:11:44 PM | 658 | 2201KB | Can you tell me how many turns have taken place for each model in the last 5 hours by mode |
 | `1785966242067` | 8/5/2026, 8:03:19 PM | 386 | 1295KB | #TDSHS |
 | `1785954766914` | 8/5/2026, 7:56:32 PM | 248 | 949KB | #LLM FLEET |
-| `1785953852961` | 8/5/2026, 4:34:41 PM | 408 | 1149KB | #GLM  |
 | `1785954733601` | 8/5/2026, 4:13:01 PM | 356 | 692KB | #SLS MEGA |
 | `1785957900287` | 8/5/2026, 4:08:38 PM | 174 | 642KB | Telphony still having issues: |
 | `1785954707277` | 8/5/2026, 4:03:19 PM | 294 | 818KB | #EA PIPELINE |
@@ -127,179 +129,7 @@ Generated: 8/6/2026, 1:39:42 AM PT | window: last 72h | 112 tasks | index total 
 
 ## Per-window detail
 
-### `1786002462510` — 8/6/2026, 1:39:42 AM PT — 107 turns
-
-**Original task:**
-
-```
-frankenstein-llm seems to be getting stuck here:
-
-Response
-
-Plain TextRich DisplayMarkdown
-
-\=== TASK 202 lookup === === argus code files === argus_backups _view_argus_spill_ladder_health.php admin_users.php.bak-argus-20260715 alltastic_api.php.bak-20250710-argus-upgrade alltastic_api.php.bak-20260220-pre-argus-knowledge alltastic_api.php.bak-20260221-pre-argus-diagnostic alltastic_api.php.bak-20260310-argus-hardening alltastic_api.php.bak-20260321-argusv4 alltastic_api.php.bak-20260324-argus alltastic_api.php.bak-20260327-argus-improvements alltastic_api.php.bak-20260409-183023-argus-phase0 a
-```
-
-**Ideas referenced:** #11741, #11953, #12584, #12672, #12673, #13202, #13832, #16844, #178600, #1884, #19338, #2097, #2099, #2100, #2244, #2247 [resolved], #22688, #23171, #23428, #23620, #23631 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-Implement bridge fix
-- [ ] Deploy + verify
-- [ ] Update handoff + complete with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
-```
-
-### `1785988379979` — 8/6/2026, 1:39:40 AM PT — 607 turns
-
-**Original task:**
-
-```
-# NON-ARGUS WINDOW: 
-
-But the CFA should be answering this properly -> ### Is 1-2 weeks unreasonable? No. But the silence is.
-
-Then what is the CFA doing wrong? is it not responding? -> 83 was OUTBOUND to her. She sent 27 inbound total since May 25, and only 7 since her course completed July 26. All 7 are ONE thread, same subject, opened August 2. So it is 7 messages over 3 days on one unresolved question, not chronic pestering. My earlier framing was wrong.
-
-student ops, telephony, callbacks
-
-Do NOT touch Argus in this window. Argus work is running separately.
-
-## 1. #23483 [proposed] P0: rep
-```
-
-**Ideas referenced:** #13437, #16437, #18936, #18944, #18951, #20090, #20346, #20903, #21010, #21011, #21167, #2240, #2241, #2244, #22514, #22517, #22520, #23133, #23281 [executing], #23352, #23378, #23425 [deployed], #23426 [deployed], #23440 [proposed], #23472 [proposed], #23477 [proposed], #23483 [proposed], #23495 [executing], #23620, #2703, #3528, #3529, #3530, #3536, #3537, #3538, #3540, #3542, #3543, #3555, #3556, #3558, #9086, #9168, #9339
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785986098106` — 8/6/2026, 1:39:36 AM PT — 339 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-Open up the TDSHS window I just inadvertantly closed and tell me the last task completed regarding this page: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=list  / BTW clicking thowe rows does nothing. Plus why are there duplicate entires for 2 students? I'm confused on that like for tomorrow I see 6 responses due. I think if there's a linkage, those all get populated on the detail page with the centralized response for each, this way we're not splitting hairs. Again, those links don't yet work or show details. Table should also show name of student // Wai
-```
-
-**Ideas referenced:** #047857, #059669, #111827, #12892, #13017, #178595, #18676, #19591, #19605, #23463 [unknown], #23482 [proposed], #23484 [proposed], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [proposed], #23518 [proposed], #23519 [proposed], #2563, #26114, #3730, #374151, #450438, #475569, #64748, #92400
-
-**Last PICKUP PROMPT:**
-
-```
- deadline center + rows 19/20.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1785954856277 (TDSHS compliance doctrine and deadline center).
-
-Where we left off (verified 2026-08-05 21:24 PT):
-- Doctrine Library LIVE at /personnel/compliance_doctrine.php. #23515 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle; the CODE is deployed and harness-verified at 58 items, the idea row is the work record). Table admin_portal.compliance_doctrine, 58 active items: 19 postures, 19 anti-patterns, 6 fact patterns, 3 accomplishments, 7 agency defects, 4 statutory authorities. 9 carry regulator_facing=0 and render with an adjudication-only lock. Verified: facing=adj filter returns exactly 9, all locked.
-- Regulator-owed deadlines LIVE. #23516 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle). compliance_deadlines gained direction / requested_on / statutory_basis / last_agency_contact. Rows 27 (TPIA-004, due 8/10), 28 (TPIA-005, due 8/19 provisional), 29 (stale TDSHS request, monitor), 30 (AZ 39-121 trio, no send date recorded). List renders 21 deliverables, 5 they-owe pills, agency-owes card 0/4.
-- Row 19 verified sound. Row 20 CORRECTED: Moodle course_completions row 49223 shows user 51417 course 37 completed 2026-06-20 08:10:53 reaggregate 0, so the completion is INTACT and the regression premise is unconfirmed. Both rows still not_started, both still block the 8/6 send.
-- v4 packet consolidation and red-bar card from earlier this session: #23482 [executing] (reconcile_ideas returned status=approved dev_stage=idle), #23491 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle), prior v2 work #23463 [deployed] (reconcile_ideas returned status=open dev_stage=idle).
-
-Open threads to drive next:
-1. #23519 [executing] Answer Ava Kanthack. Five days unanswered (inbound 98073 on 7/31, 101757 on 8/2). Her completion IS intact in Moodle, so find which surface she is seeing incomplete on, tell her what her record shows, and reconcile the 95.4 figure the draft cites BEFORE the 8/6 reply goes. Per FP04 the letter must neither adopt nor contradict her account.
-2. #23517 [executing] Build the per-state Gold Standards: uniform base, then TX (25 TAC 157 + SB 14 + Gov Code 552), CA (BPPE + the San Diego inspection shape), AZ (v4.22 as the AZ instance). Generate from compliance_doctrine so a posture edit propagates. No state template ships without its own verified citations.
-3. #23518 [executing] Build the doctrine harvester and backfill it over all 157 existing response rows. This is the part that recovers what has already been forgotten in inv1, inv2, inv3, inv9, inv13. regulator_facing must fail closed to 0 on anything touching motive, timing, solicitation, or a named doctrine.
-4. #23484 [executing] Packet composer: merge the 4 pooled drafts for the 8/6 packet into one letter body, opening with the ACC01 accomplishments section, appending the preservation block from response row 164 verbatim per A19, citing all three control numbers in one caption.
-5. Row 19 (human-only decision, no idea) confirm the current signature and filing status of the Kamdyn Sheets MWFD affiliation agreement before the 8/6 reply states anything about her placement. Vicky reply pending per Ruben.
-
-Reference IDs:
-- Ideas filed this session: #23482 [executing], #23484 [executing], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [executing], #23518 [executing], #23519 [executing]
-- Ideas referenc
-```
-
-### `1785989615911` — 8/6/2026, 1:39:32 AM PT — 377 turns
-
-**Original task:**
-
-```
-for frankenstein-llm subagents are still slow.  Are they using the 120Bs? If 120Bs are past their allowable lanes, why are we not spilling off? What's causing slowness or is it something different?
-```
-
-**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11942, #11944, #11953, #11991, #12046, #12059, #12231, #12246, #12247, #12249, #12251, #12262, #12266, #12269, #12285, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12403, #12407, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12657, #12672, #12673, #12680, #12688, #12689, #12708, #12710, #12716, #12900, #13095, #13108, #13121, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13831, #13832, #13842, #13874, #13962, #13964, #14000, #14133, #14142, #14848, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16120 [deployed], #16584, #16589, #16590, #16602, #16625, #16646, #16648, #16673, #16680, #16715, #16716, #16717, #16718, #16849, #17078, #17166, #17307, #17537, #17619 [deployed], #17673, #1807, #18670, #18671, #18781, #18786, #18806, #18868, #19585, #19653, #1967, #19686, #19903, #2014, #20272, #20300, #2050, #20536, #2071, #20722, #2079, #21045, #21136 [ready_for_review], #2240, #2241, #2243 [deployed], #22564, #22583, #22584, #22820, #22897, #23031 [executing], #23133 [executing], #23139 [executing], #23206, #23308, #23352, #23378, #23440, #23472, #23477, #23483, #23490, #23495, #23521 [deployed], #23526 [approved], #23528 [approved], #23529 [approved], #23533 [approved], #23592 [approved], #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
-
-**Last PICKUP PROMPT:**
-
-```
-the subagent's apiHandler.
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task — verify subagent route lever after VS Code reload, test end to end.
-
-Where we left off (verified 2026-08-06 01:01 PT):
-- #23592 [deployed] — subagent LLM route lever shipped via ~/Documents/Cline/Agents/subagent.yaml (modelId: deepseek/deepseek-chat). No extension.js patch needed — the Cline extension already had the aTr.applyModelOverride code path; only the config file was missing
-- DB verified: orchestrator_ideas #23592 status=deployed, deployed_at=2026-08-06 00:53:05
-- clinerules reindexed (314 rules, 9 hardfloor)
-- cline_task_ledger.md appended
-
-Open threads to drive next:
-1. #23592 [deployed] — after a VS Code RELOAD (Extensions: Reload Window, Cmd+Shift+P), verify the agent config loader picked up subagent.yaml: check Cline extension logs for "[AgentConfigLoader] Found N YAML file(s)" with subagent.yaml included, OR trigger a `use_subagents` tool call with a named subagent and verify the model route via frankenstein_verify_routing per rule 140
-2. #23592 [deployed] — if the modelId route works, mark verified; if it does not (and the old default model is still used), check UDt file filter to confirm it accepts .yaml files (grep for UDt in extension.js) — if it filters by a different extension, rename the file accordingly and reload
-
-Reference IDs:
-- Ticket: none
-- Ideas filed: #23592 [deployed]
-- Files touched: ~/Documents/Cline/Agents/subagent.yaml (created), extension.js backup created (extension.js.bak-20260806-subagentroute), cline_task_ledger.md (appended), clinerules MCP index (reindexed)
-- DB: orchestrator_ideas Row ID 23592 (deployed)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785997318545` — 8/6/2026, 1:39:31 AM PT — 621 turns
-
-**Original task:**
-
-```
-Frankenstein-llm stalled since we added subagents or messed with that just recently
-```
-
-**Ideas referenced:** #10108, #10740, #11397, #11741, #11781, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12299, #12314, #12335, #123452, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12459, #12463, #12477, #12618, #12657, #12672, #12673, #12689, #12716, #12824, #12872, #12878, #13108, #13121, #13202, #13204, #13470, #13831, #13832, #13874, #13964, #14000, #14848, #1593, #16120, #16163, #16213, #16265, #16304, #16588, #16590, #16625, #16718, #16844, #17673, #178599, #18312, #18326, #18600, #18720, #18781, #18786, #18868, #1895, #19653, #1967, #19903, #2014, #20272, #20300, #2050, #20536 [ready_for_review], #20722, #21045, #21136, #2240, #2241, #2246, #22569, #22583 [approved], #22850, #23027, #231529, #23171, #23206, #23352, #23378, #23429, #23490, #23495, #23506, #23521, #23574 [executing], #23575 [proposed], #23576 [proposed], #23581 [executing], #23583 [proposed], #23591 [executing], #23593 [executing], #23596 [approved], #23598 [proposed], #23599 [proposed], #23600, #23601, #23624 [in_progress], #261562, #9731
-
-**Last PICKUP PROMPT:**
-
-```
-idea idea filed this session**
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785997581 - frankenstein-tools fixes: executor-inflight leak + watchdog v4, shipped and live-verified
-
-Where we left off (verified 2026-08-06 00:38 PT):
-- Executor-inflight leak fix shipped and live-verified: 0 QOS_PREEMPT in 30 min, adapter healthy on port 11510
-- Watchdog v4 shipped and live-verified: 0 RESTART events since deployment, passive canary health stable
-- ADAPTER_COUNT guard fix shipped: bash syntax error resolved
-- Full 20-MCP health sweep: all healthy (earlier -32001 was Mode D transient, resolved by retry per MCP_Troubleshooting.md)
-- All 7 ideas reconciled: 6 executing, 1 proposed
-
-Open threads to drive next:
-1. #23598 [proposed] - verify zero false-positive watchdog restarts under v4 over the next several hours (unchanged from prior session state)
-2. #23581 [executing] - Kaizon target for watchdog monitoring still needs to land
-3. #23591 [executing] - WordPress backdoor cleanup on sandiegoemtrefresher.com (separate track, unrelated to frankenstein work)
-
-Reference IDs:
-- Ideas filed: #23574 [executing], #23575 [executing], #23581 [executing], #23591 [executing], #23593 [executing], #23598 [proposed], #23599 [executing]
-- Files touched: /usr/local/bin/emsu-frankenstein-tools-watchdog.sh (v4 rewrite), /usr/local/bin/frankenstein_tools_adapter.py (executor-inflight leak self-heal)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786002734721` — 8/6/2026, 1:39:16 AM PT — 53 turns
+### `1786002734721` — 8/6/2026, 2:39:38 AM PT — 207 turns
 
 **Original task:**
 
@@ -315,7 +145,7 @@ Also, Would like to see total time it took to finish an idea, not just the time 
 https://www.emsuniversity.com/emtskills/routes/argus_task_status.php
 ```
 
-**Ideas referenced:** #16213, #16695, #17759 [proposed], #17761, #17762 [deployed], #17766 [proposed], #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19653 [executing], #2006, #20547, #21125, #21126, #21167, #2212, #2240, #2241, #2244, #22511, #22583, #22688, #22850, #23027, #23031 [executing], #23036, #23037, #23038, #23039, #23050, #23062, #23067, #23117, #23133 [executing], #23135, #23139 [executing], #23164, #23173, #23211, #23223, #23264 [executing], #23265 [executing], #23308, #23323, #23324, #23352, #23378, #23428, #23429, #23431, #23440, #23468, #23472, #23477, #23483, #23489 [in_progress], #23495, #23500, #23505, #23506, #23530 [approved], #23620, #23622, #23623, #23630 [deployed], #23636, #23671, #334155, #3530, #3555, #3556, #3558, #4338, #4948, #4962, #56754, #64748
+**Ideas referenced:** #16213, #16695, #17759 [proposed], #17761, #17762 [deployed], #17766 [proposed], #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19653 [executing], #2006, #20547, #21125, #21126, #21167, #2212, #2240, #2241, #2244, #22511, #22583, #22688, #22850, #23027, #23031 [executing], #23036, #23037, #23038, #23039, #23050, #23062, #23067, #23117, #23133 [executing], #23135, #23139 [executing], #23164, #23173, #23211, #23223, #23264 [executing], #23265 [executing], #23308, #23323, #23324, #23352, #23378, #23428, #23429, #23431, #23440, #23468, #23472, #23477, #23483, #23489 [in_progress], #23495, #23500, #23505, #23506, #23530 [approved], #23574, #23581, #23583, #23620, #23622, #23623, #23630 [deployed], #23636, #23671, #334155, #3530, #3555, #3556, #3558, #4338, #4948, #4962, #56754, #64748
 
 **Last PICKUP PROMPT:**
 
@@ -350,7 +180,84 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1785976094322` — 8/6/2026, 1:39:02 AM PT — 243 turns
+### `1786002462510` — 8/6/2026, 2:39:30 AM PT — 245 turns
+
+**Original task:**
+
+```
+frankenstein-llm seems to be getting stuck here:
+
+Response
+
+Plain TextRich DisplayMarkdown
+
+\=== TASK 202 lookup === === argus code files === argus_backups _view_argus_spill_ladder_health.php admin_users.php.bak-argus-20260715 alltastic_api.php.bak-20250710-argus-upgrade alltastic_api.php.bak-20260220-pre-argus-knowledge alltastic_api.php.bak-20260221-pre-argus-diagnostic alltastic_api.php.bak-20260310-argus-hardening alltastic_api.php.bak-20260321-argusv4 alltastic_api.php.bak-20260324-argus alltastic_api.php.bak-20260327-argus-improvements alltastic_api.php.bak-20260409-183023-argus-phase0 a
+```
+
+**Ideas referenced:** #10740, #11397, #11741, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12584, #12657, #12672, #12673, #12689, #12716, #13108, #13121, #13202, #13831, #13832, #13874, #13964, #14000, #14848, #16120, #16718, #16844, #178600, #18781, #18786, #1884, #18868, #19338, #19653, #1967, #19903, #2014, #20272, #20300, #2050, #20536, #20722, #2097, #2099, #2100, #21045, #21136, #2244, #2247 [resolved], #22583, #22688, #23171, #23206, #23428, #23490, #23521, #23596, #23620, #23631 [proposed], #23638
+
+**Last PICKUP PROMPT:**
+
+```
+ [ ] Design + implement quarantine bridge
+- [ ] Deploy + verify + complete with PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1785986098106` — 8/6/2026, 2:39:18 AM PT — 553 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+Open up the TDSHS window I just inadvertantly closed and tell me the last task completed regarding this page: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=list  / BTW clicking thowe rows does nothing. Plus why are there duplicate entires for 2 students? I'm confused on that like for tomorrow I see 6 responses due. I think if there's a linkage, those all get populated on the detail page with the centralized response for each, this way we're not splitting hairs. Again, those links don't yet work or show details. Table should also show name of student // Wai
+```
+
+**Ideas referenced:** #047857, #059669, #111827, #12892, #13017, #13437, #178595, #178600, #18676, #19591, #19605, #23463 [unknown], #23482 [proposed], #23484 [proposed], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [proposed], #23518 [proposed], #23519 [proposed], #23643 [proposed], #23644 [proposed], #23645 [proposed], #23651 [rejected], #23652 [proposed], #23653 [approved], #23654 [approved], #23659 [proposed], #23660 [proposed], #23661 [proposed], #23666 [proposed], #23672 [proposed], #23673 [proposed], #2563, #26114, #2703, #3730, #374151, #450438, #475569, #600179, #64748, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+ deadline center + rows 19/20.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1785954856277 (TDSHS compliance doctrine and deadline center).
+
+Where we left off (verified 2026-08-05 21:24 PT):
+- Doctrine Library LIVE at /personnel/compliance_doctrine.php. #23515 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle; the CODE is deployed and harness-verified at 58 items, the idea row is the work record). Table admin_portal.compliance_doctrine, 58 active items: 19 postures, 19 anti-patterns, 6 fact patterns, 3 accomplishments, 7 agency defects, 4 statutory authorities. 9 carry regulator_facing=0 and render with an adjudication-only lock. Verified: facing=adj filter returns exactly 9, all locked.
+- Regulator-owed deadlines LIVE. #23516 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle). compliance_deadlines gained direction / requested_on / statutory_basis / last_agency_contact. Rows 27 (TPIA-004, due 8/10), 28 (TPIA-005, due 8/19 provisional), 29 (stale TDSHS request, monitor), 30 (AZ 39-121 trio, no send date recorded). List renders 21 deliverables, 5 they-owe pills, agency-owes card 0/4.
+- Row 19 verified sound. Row 20 CORRECTED: Moodle course_completions row 49223 shows user 51417 course 37 completed 2026-06-20 08:10:53 reaggregate 0, so the completion is INTACT and the regression premise is unconfirmed. Both rows still not_started, both still block the 8/6 send.
+- v4 packet consolidation and red-bar card from earlier this session: #23482 [executing] (reconcile_ideas returned status=approved dev_stage=idle), #23491 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle), prior v2 work #23463 [deployed] (reconcile_ideas returned status=open dev_stage=idle).
+
+Open threads to drive next:
+1. #23519 [executing] Answer Ava Kanthack. Five days unanswered (inbound 98073 on 7/31, 101757 on 8/2). Her completion IS intact in Moodle, so find which surface she is seeing incomplete on, tell her what her record shows, and reconcile the 95.4 figure the draft cites BEFORE the 8/6 reply goes. Per FP04 the letter must neither adopt nor contradict her account.
+2. #23517 [executing] Build the per-state Gold Standards: uniform base, then TX (25 TAC 157 + SB 14 + Gov Code 552), CA (BPPE + the San Diego inspection shape), AZ (v4.22 as the AZ instance). Generate from compliance_doctrine so a posture edit propagates. No state template ships without its own verified citations.
+3. #23518 [executing] Build the doctrine harvester and backfill it over all 157 existing response rows. This is the part that recovers what has already been forgotten in inv1, inv2, inv3, inv9, inv13. regulator_facing must fail closed to 0 on anything touching motive, timing, solicitation, or a named doctrine.
+4. #23484 [executing] Packet composer: merge the 4 pooled drafts for the 8/6 packet into one letter body, opening with the ACC01 accomplishments section, appending the preservation block from response row 164 verbatim per A19, citing all three control numbers in one caption.
+5. Row 19 (human-only decision, no idea) confirm the current signature and filing status of the Kamdyn Sheets MWFD affiliation agreement before the 8/6 reply states anything about her placement. Vicky reply pending per Ruben.
+
+Reference IDs:
+- Ideas filed this session: #23482 [executing], #23484 [executing], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [executing], #23518 [executing], #23519 [executing]
+- Ideas referenc
+```
+
+### `1786008133029` — 8/6/2026, 2:27:39 AM PT — 42 turns
+
+**Original task:**
+
+```
+There seems to be something that is submitting courses or something to TDSHS. Can you tell me what is going on with that? I thought we already did a bunch of those semi-automatically before and I just saw a couple fire in the last week or 2 and those submissions need to pause temporarily.
+```
+
+**Ideas referenced:** #23667 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785976094322` — 8/6/2026, 2:12:29 AM PT — 348 turns
 
 **Original task:**
 
@@ -365,40 +272,187 @@ extremely thin and unviewable. Can you resolve this? Look at this middle content
 **Last PICKUP PROMPT:**
 
 ```
- from earlier in this session.
+tool_customlang table: 0 CAPCE
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1785957972000 — idea #23584 [deployed]: disable CAPCE CE-reporting observer (Ruben approved)
+Pick up task #1785957972000 -- idea #23585 [deployed]: WP CAPCE sweep done, simplecertificate checked
 
-Where we left off (verified 2026-08-06 01:26 PT):
-- Renamed /var/www/moodle/ems/local/capseinsert/db/events.php to events.php.disabled_by_ruben_20260805, deregistering the course_completed observer that posted completions to a CE API
-- Cache purged; events_handlers CONFIRMED 0 rows registered for capseinsert
-- capce_submissions.log last write 2026-08-05 22:07 PT, well before disable 01:18 PT: reporting silent
-- Code fully preserved (capce_call.php v8.0.0, observer.php, lib.php, version.php) for audit; re-enable = rename back + purge caches
+Where we left off (verified 2026-08-06 02:09 PT):
+- Idea #23585 [deployed]: swept 38 WP databases, found and fixed the false State-Approved CAPCE Accreditation claim on 3 marketing FAQ pages (wp_4grai mobilenotaryhere.com, wp_tmrhi, wp_hzbxk sanantonioemtrefresher.com, all ID 384)
+- Remaining live CAPCE is harmless: Home pages ID 2 contain image filenames only (CAPCE logo displays visually), wp_tsjhb ID 2078 holds a product URL slug
+- Moodle simplecertificate: 0 CAPCE everywhere (lang pack, mod dir, customlang)
 - HANDOFF_NOTES updated
 
 Open threads to drive next:
-1. #23585 [proposed] — Sweep WordPress marketing sites + student-facing docs for false CAPCE accreditation claims. Ruben said investigate. Same regulatory exposure as the Moodle claim already removed.
-2. 4 (human-only decision, no idea) — Awaiting Ruben's visual confirmation of the emscards layout fixes from earlier this session.
+1. Home pages on wp_hzbxk/wp_4grai/wp_tmrhi display the CAPCE logo image capce11-300x292.jpg to site visitors. Visual concern only, no false accreditation wording, but the imagery may still imply accreditation. (human-only decision, no idea)
+2. Prior idea #23584 [deployed] was closed this session. Only outstanding item is Ruben's visual confirmation of the emscards layout fixes. (human-only decision, no idea)
 
 Reference IDs:
-- Ideas filed: #23584 [deployed], #23585 [proposed]
-- Files touched: /var/www/moodle/ems/local/capseinsert/db/events.php (renamed to events.php.disabled_by_ruben_20260805), HANDOFF_NOTES.md
+- Ideas filed: #23584 [deployed], #23585 [deployed]
+- Files touched: WP db wp_4grai.PNfs8_posts ID 384, WP db wp_tmrhi.PNfs8_posts ID 384, WP db wp_hzbxk.PNfs8_posts ID 384, HANDOFF_NOTES.md
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════
 </result>
-<task_progress>- [x] Renamed db/events.php to disable observer
-- [x] Purged caches
-- [x] Verified 0 observer handlers for capseinsert in events_handlers
-- [x] Confirmed capce_submissions.log last write was 22:07 PT, before disable
+<task_progress>- [x] FAQ pages on wp_4grai, wp_tmrhi, wp_hzbxk cleaned (all CAPCE=0)
+- [x] Remaining hits classified: images (visual, not text) and product URLs (not claims)
+- [x] Moodle simplecertificate language confirmed clean (0 CAPCE in lang pack + entire dir)
 - [x] Updated HANDOFF_NOTES
-- [x] Reported to Ruben with completion summary</task_progress>
+- [x] Validated completion gate (rule 91 all passed, gate clear) and shipped</task_progress>
 </attempt_completion>
 ```
+
+### `1786005641053` — 8/6/2026, 1:57:57 AM PT — 142 turns
+
+**Original task:**
+
+```
+#GLM
+
+Rebase
+Is there anything left to do here? 
+
+Four questions. I fixed two things while answering, and I need to correct my own framing on the first one.
+
+## 1. "How can we avoid the lies?"
+
+A correction first, because I used the word loosely. There are two different failures and only one is dishonesty.
+
+**Not lying:** I tagged ideas `[executing]` because the database said `in_progress`. The work never ran because the executor is idle. I reported the field I was given, and the field was misleading. Broken instrument. #23326 [executing] owns it.
+
+**Actual fabrication:** an agent writing idea
+```
+
+**Ideas referenced:** #16523, #178593, #19173, #19218 [rejected], #19230 [executing], #19261 [executing], #2249 [needs_verify], #22897 [executing], #23050 [executing], #23056 [executing], #23157 [executing], #23159 [executing], #23169 [executing], #23283 [executing], #23326 [executing], #23354 [deployed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785997318545` — 8/6/2026, 1:49:28 AM PT — 692 turns
+
+**Original task:**
+
+```
+Frankenstein-llm stalled since we added subagents or messed with that just recently
+```
+
+**Ideas referenced:** #10108, #10740, #11397, #11741, #11781, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12299, #12314, #12335, #123452, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12459, #12463, #12477, #12618, #12657, #12672, #12673, #12689, #12716, #12824, #12872, #12878, #13108, #13121, #13202, #13204, #13470, #13831, #13832, #13874, #13964, #14000, #14848, #1593, #16120, #16163, #16213, #16265, #16304, #16588, #16590, #16625, #16718, #16844, #17673, #178599, #18312, #18326, #18600, #18720, #18781, #18786, #18868, #1895, #19653, #1967, #19903, #2014, #20272, #20300, #2050, #20536 [ready_for_review], #20722, #21045, #21136, #2240, #2241, #2246, #2248, #22569, #22583 [approved], #22850, #23027, #231529, #23171, #23206, #23352, #23378, #23429, #23490, #23495, #23506, #23521, #23574 [executing], #23575 [proposed], #23576 [proposed], #23581 [executing], #23583 [proposed], #23591 [executing], #23593 [executing], #23596 [approved], #23598 [proposed], #23599 [proposed], #23600, #23601, #23624 [in_progress], #23646 [proposed], #261562, #9731
+
+**Last PICKUP PROMPT:**
+
+```
+idea idea filed this session**
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785997581 - frankenstein-tools fixes: executor-inflight leak + watchdog v4, shipped and live-verified
+
+Where we left off (verified 2026-08-06 00:38 PT):
+- Executor-inflight leak fix shipped and live-verified: 0 QOS_PREEMPT in 30 min, adapter healthy on port 11510
+- Watchdog v4 shipped and live-verified: 0 RESTART events since deployment, passive canary health stable
+- ADAPTER_COUNT guard fix shipped: bash syntax error resolved
+- Full 20-MCP health sweep: all healthy (earlier -32001 was Mode D transient, resolved by retry per MCP_Troubleshooting.md)
+- All 7 ideas reconciled: 6 executing, 1 proposed
+
+Open threads to drive next:
+1. #23598 [proposed] - verify zero false-positive watchdog restarts under v4 over the next several hours (unchanged from prior session state)
+2. #23581 [executing] - Kaizon target for watchdog monitoring still needs to land
+3. #23591 [executing] - WordPress backdoor cleanup on sandiegoemtrefresher.com (separate track, unrelated to frankenstein work)
+
+Reference IDs:
+- Ideas filed: #23574 [executing], #23575 [executing], #23581 [executing], #23591 [executing], #23593 [executing], #23598 [proposed], #23599 [executing]
+- Files touched: /usr/local/bin/emsu-frankenstein-tools-watchdog.sh (v4 rewrite), /usr/local/bin/frankenstein_tools_adapter.py (executor-inflight leak self-heal)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1785988379979` — 8/6/2026, 1:47:38 AM PT — 638 turns
+
+**Original task:**
+
+```
+# NON-ARGUS WINDOW: 
+
+But the CFA should be answering this properly -> ### Is 1-2 weeks unreasonable? No. But the silence is.
+
+Then what is the CFA doing wrong? is it not responding? -> 83 was OUTBOUND to her. She sent 27 inbound total since May 25, and only 7 since her course completed July 26. All 7 are ONE thread, same subject, opened August 2. So it is 7 messages over 3 days on one unresolved question, not chronic pestering. My earlier framing was wrong.
+
+student ops, telephony, callbacks
+
+Do NOT touch Argus in this window. Argus work is running separately.
+
+## 1. #23483 [proposed] P0: rep
+```
+
+**Ideas referenced:** #13437, #16437, #18936, #18944, #18951, #20090, #20346, #20903, #21010 [approved], #21011, #21167 [impl_failed], #2240, #2241, #2244 [deployed], #22514 [approved], #22517 [approved], #22520 [approved], #23133, #23281 [executing], #23352, #23378, #23425 [deployed], #23426 [deployed], #23440 [proposed], #23472 [proposed], #23477 [proposed], #23483 [proposed], #23495 [executing], #23620 [proposed], #23622 [proposed], #2611 [deployed], #2703 [deployed], #3528, #3529, #3530, #3536, #3537, #3538, #3540, #3542, #3543, #3555, #3556, #3558, #9086, #9168, #9339
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785989615911` — 8/6/2026, 1:41:24 AM PT — 382 turns
+
+**Original task:**
+
+```
+for frankenstein-llm subagents are still slow.  Are they using the 120Bs? If 120Bs are past their allowable lanes, why are we not spilling off? What's causing slowness or is it something different?
+```
+
+**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11942, #11944, #11953, #11991, #12046, #12059, #12231, #12246, #12247, #12249, #12251, #12262, #12266, #12269, #12285, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12403, #12407, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12657, #12672, #12673, #12680, #12688, #12689, #12708, #12710, #12716, #12900, #13095, #13108, #13121, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13831, #13832, #13842, #13874, #13962, #13964, #14000, #14133, #14142, #14848, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16120 [deployed], #16584, #16589, #16590, #16602, #16625, #16646, #16648, #16673, #16680, #16715, #16716, #16717, #16718, #16849, #17078, #17166, #17307, #17537, #17619 [deployed], #17673, #1807, #18670, #18671, #18781, #18786, #18806, #18868, #19585, #19653, #1967, #19686, #19903, #2014, #20272, #20300, #2050, #20536, #2071, #20722, #2079, #21045, #21136 [ready_for_review], #2240, #2241, #2243 [deployed], #22564, #22583, #22584, #22820, #22897, #23031 [executing], #23133 [executing], #23139 [executing], #23206, #23308, #23352, #23378, #23440, #23472, #23477, #23483, #23489 [executing], #23490, #23495, #23521 [deployed], #23526 [approved], #23528 [approved], #23529 [approved], #23533 [approved], #23592 [approved], #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
+
+**Last PICKUP PROMPT:**
+
+```
+ml).
+
+No other loose ends.
+
+═══════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════
+Pick up task — VS Code reload then verify subagent routes to deepseek.
+
+Where we left off (verified 2026-08-06 01:40 PT):
+- #23592 [deployed] — config at ~/Documents/Cline/Agents/subagent.yaml, modelId: deepseek/deepseek-chat
+- AgentConfigLoader reads on STARTUP — needs VS Code reload to pick up the new file
+- All other work (DB, ledger, reindex, backup) complete
+- One loose end: UDt file filter extension check (may need .md instead of .yaml)
+
+Open threads to drive next:
+1. #23592 [deployed] — after VS Code reload (Cmd+Shift+P → Reload Window), trigger a use_subagents tool call and verify the subagent model routes to deepseek via frankenstein_verify_routing (rule 140)
+2. #23592 [deployed] — if the subagent.yaml was NOT picked up (still routes to the old model), check the UDt extension filter in extension.js and rename the file to the accepted extension (likely .md frontmatter), then re-test
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: #23592 [deployed]
+- Files touched: ~/Documents/Cline/Agents/subagent.yaml (created), ~/.vscode/extensions/saoudrizwan.claude-dev-4.0.7/dist/extension.js.bak-20260806-subagentroute (backup), ~/Documents/Cline/cline_task_ledger.md (appended), clinerules MCP index (reindexed)
+- DB: orchestrator_ideas #23592 status=deployed (verified)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785953852961` — 8/6/2026, 1:41:01 AM PT — 414 turns
+
+**Original task:**
+
+```
+#GLM 
+
+COPY_WINDOW_1_GLM_RING
+
+begin work on this. Start with a comprehensive state of the system
+```
+
+**Ideas referenced:** #0000, #12459, #12463, #12618, #12643, #12645 [deployed], #12680, #12689, #13121, #13832, #13874, #13962, #16224, #16265, #1685, #1687, #1705, #1706, #17203, #17205, #17307, #18471, #18820, #18868, #19173, #19175 [executing], #19176 [queued], #19218 [approved], #19230 [queued], #19261 [approved], #1962, #1967, #1986 [deployed], #1987 [outdated], #1988 [needs_verify], #1989 [outdated], #19898 [ready_for_review], #19899 [proposed], #1990 [outdated], #19903, #19904 [proposed], #1991 [deployed], #1998, #199999, #20251, #2050, #2101 [resolved], #21045, #2168, #21684, #2216 [deployed], #2217 [deployed], #2227, #2236, #22601, #22897 [proposed], #23050 [executing], #23056 [executing], #23157 [approved], #23159 [approved], #23169 [approved], #23283 [approved], #23326 [in_progress], #23354 [deployed], #5344
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786002390209` — 8/6/2026, 12:50:24 AM PT — 23 turns
 
@@ -901,22 +955,6 @@ Reference IDs:
 When done, append to cline_task_ledger.md per rule 07 and run order 66.
 ══════════════
 ```
-
-### `1785953852961` — 8/5/2026, 4:34:41 PM PT — 408 turns
-
-**Original task:**
-
-```
-#GLM 
-
-COPY_WINDOW_1_GLM_RING
-
-begin work on this. Start with a comprehensive state of the system
-```
-
-**Ideas referenced:** #0000, #12459, #12463, #12618, #12643, #12645 [deployed], #12680, #12689, #13121, #13832, #13874, #13962, #16224, #16265, #1685, #1687, #1705, #1706, #17203, #17205, #17307, #18471, #18820, #18868, #19173, #19175 [executing], #19176 [queued], #19218 [approved], #19230 [queued], #19261 [approved], #1962, #1967, #1986 [deployed], #1987 [outdated], #1988 [needs_verify], #1989 [outdated], #19898 [ready_for_review], #19899 [proposed], #1990 [outdated], #19903, #19904 [proposed], #1991 [deployed], #1998, #199999, #20251, #2050, #2101 [resolved], #21045, #2168, #21684, #2216 [deployed], #2217 [deployed], #2227, #2236, #22601, #22897 [proposed], #23050 [executing], #23056 [executing], #23157 [approved], #23159 [approved], #23169 [approved], #23283 [approved], #23326 [in_progress], #23354 [deployed], #5344
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785954733601` — 8/5/2026, 4:13:01 PM PT — 356 turns
 

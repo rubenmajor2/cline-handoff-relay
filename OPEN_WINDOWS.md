@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/6/2026, 7:30:42 AM PT | window: last 72h | 115 tasks | index total 502 (parsed 0, cached 502)
+Generated: 8/6/2026, 8:30:42 AM PT | window: last 72h | 115 tasks | index total 502 (parsed 2, cached 500)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786002734721` | 8/6/2026, 3:50:05 AM | 341 | 1244KB | #Argus |
+| `1786002734721` | 8/6/2026, 8:30:38 AM | 409 | 1316KB | #Argus |
+| `1785986098106` | 8/6/2026, 8:30:05 AM | 744 | 1959KB | #TDSHS |
 | `1786010979248` | 8/6/2026, 3:32:57 AM | 83 | 194KB | Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to |
-| `1785986098106` | 8/6/2026, 3:27:11 AM | 714 | 1879KB | #TDSHS |
 | `1786002462510` | 8/6/2026, 3:25:39 AM | 416 | 1678KB | frankenstein-llm seems to be getting stuck here: |
 | `1786008133029` | 8/6/2026, 2:27:39 AM | 42 | 81KB | There seems to be something that is submitting courses or something to TDSHS. Can you tell |
 | `1785976094322` | 8/6/2026, 2:12:29 AM | 348 | 1676KB | For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 |
@@ -130,7 +130,7 @@ Generated: 8/6/2026, 7:30:42 AM PT | window: last 72h | 115 tasks | index total 
 
 ## Per-window detail
 
-### `1786002734721` — 8/6/2026, 3:50:05 AM PT — 341 turns
+### `1786002734721` — 8/6/2026, 8:30:38 AM PT — 409 turns
 
 **Original task:**
 
@@ -146,7 +146,7 @@ Also, Would like to see total time it took to finish an idea, not just the time 
 https://www.emsuniversity.com/emtskills/routes/argus_task_status.php
 ```
 
-**Ideas referenced:** #16213, #16695, #17759 [proposed], #17761, #17762 [deployed], #17766 [proposed], #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19653 [executing], #2006, #20547, #21125, #21126, #21167, #2183, #2212, #2240, #2241, #2244, #22511, #22583, #22688, #22850, #23027, #23031 [executing], #23036, #23037, #23038, #23039, #23050, #23062, #23067, #23117, #23133 [executing], #23135, #23139 [executing], #23164, #23173, #23211, #23223, #23264 [executing], #23265 [executing], #23308, #23323, #23324, #23352, #23378, #23428, #23429, #23431, #23440, #23468, #23472, #23477, #23483, #23489 [in_progress], #23495, #23500, #23505, #23506, #23530 [approved], #23574, #23581, #23583, #23620, #23622, #23623, #23630 [deployed], #23636 [deployed], #23671, #23674, #23675, #334155, #3530, #3555, #3556, #3558, #4338, #4948, #4962, #56754, #64748
+**Ideas referenced:** #16213, #16695, #17759 [proposed], #17761, #17762 [deployed], #17766 [proposed], #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19370, #19653 [executing], #2006, #20547, #21125, #21126, #21167, #2183, #2212, #2240, #2241, #2244, #22511, #22583, #22688, #22850, #23027, #23031 [executing], #23036, #23037, #23038, #23039, #23050, #23062, #23067, #23117, #23133 [executing], #23135, #23139 [executing], #23164, #23173, #23211, #23223, #23264 [executing], #23265 [executing], #23308, #23323, #23324, #23352, #23378, #23428, #23429, #23431, #23440, #23468, #23472, #23477, #23483, #23489 [in_progress], #23495, #23500, #23505, #23506, #23530 [approved], #23574, #23581, #23583, #23620, #23622, #23623, #23630 [deployed], #23636 [deployed], #23671, #23674, #23675, #23851, #23852, #334155, #3530, #3555, #3556, #3558, #4338, #4948, #4962, #56754, #64748
 
 **Last PICKUP PROMPT:**
 
@@ -179,6 +179,46 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
+```
+
+### `1785986098106` — 8/6/2026, 8:30:05 AM PT — 744 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+Open up the TDSHS window I just inadvertantly closed and tell me the last task completed regarding this page: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=list  / BTW clicking thowe rows does nothing. Plus why are there duplicate entires for 2 students? I'm confused on that like for tomorrow I see 6 responses due. I think if there's a linkage, those all get populated on the detail page with the centralized response for each, this way we're not splitting hairs. Again, those links don't yet work or show details. Table should also show name of student // Wai
+```
+
+**Ideas referenced:** #047857, #059669, #111827, #12892, #13017, #13437, #178595, #178600, #18676, #19581, #19591, #19595, #19605, #2001, #23463 [unknown], #23482 [proposed], #23484 [proposed], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [proposed], #23518 [proposed], #23519 [proposed], #23643 [proposed], #23644 [proposed], #23645 [proposed], #23651 [rejected], #23652 [proposed], #23653 [approved], #23654 [approved], #23659 [proposed], #23660 [proposed], #23661 [proposed], #23666 [proposed], #23672 [proposed], #23673 [proposed], #23679 [proposed], #23680 [proposed], #23681 [proposed], #23682 [proposed], #23688 [proposed], #23695 [proposed], #23696 [proposed], #23697 [proposed], #23699 [proposed], #23700 [proposed], #23706 [proposed], #23707 [proposed], #23708 [proposed], #23709 [proposed], #2563, #26114, #2703, #3730, #374151, #450438, #475569, #600179, #64748, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+ deadline center + rows 19/20.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1785954856277 (TDSHS compliance doctrine and deadline center).
+
+Where we left off (verified 2026-08-05 21:24 PT):
+- Doctrine Library LIVE at /personnel/compliance_doctrine.php. #23515 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle; the CODE is deployed and harness-verified at 58 items, the idea row is the work record). Table admin_portal.compliance_doctrine, 58 active items: 19 postures, 19 anti-patterns, 6 fact patterns, 3 accomplishments, 7 agency defects, 4 statutory authorities. 9 carry regulator_facing=0 and render with an adjudication-only lock. Verified: facing=adj filter returns exactly 9, all locked.
+- Regulator-owed deadlines LIVE. #23516 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle). compliance_deadlines gained direction / requested_on / statutory_basis / last_agency_contact. Rows 27 (TPIA-004, due 8/10), 28 (TPIA-005, due 8/19 provisional), 29 (stale TDSHS request, monitor), 30 (AZ 39-121 trio, no send date recorded). List renders 21 deliverables, 5 they-owe pills, agency-owes card 0/4.
+- Row 19 verified sound. Row 20 CORRECTED: Moodle course_completions row 49223 shows user 51417 course 37 completed 2026-06-20 08:10:53 reaggregate 0, so the completion is INTACT and the regression premise is unconfirmed. Both rows still not_started, both still block the 8/6 send.
+- v4 packet consolidation and red-bar card from earlier this session: #23482 [executing] (reconcile_ideas returned status=approved dev_stage=idle), #23491 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle), prior v2 work #23463 [deployed] (reconcile_ideas returned status=open dev_stage=idle).
+
+Open threads to drive next:
+1. #23519 [executing] Answer Ava Kanthack. Five days unanswered (inbound 98073 on 7/31, 101757 on 8/2). Her completion IS intact in Moodle, so find which surface she is seeing incomplete on, tell her what her record shows, and reconcile the 95.4 figure the draft cites BEFORE the 8/6 reply goes. Per FP04 the letter must neither adopt nor contradict her account.
+2. #23517 [executing] Build the per-state Gold Standards: uniform base, then TX (25 TAC 157 + SB 14 + Gov Code 552), CA (BPPE + the San Diego inspection shape), AZ (v4.22 as the AZ instance). Generate from compliance_doctrine so a posture edit propagates. No state template ships without its own verified citations.
+3. #23518 [executing] Build the doctrine harvester and backfill it over all 157 existing response rows. This is the part that recovers what has already been forgotten in inv1, inv2, inv3, inv9, inv13. regulator_facing must fail closed to 0 on anything touching motive, timing, solicitation, or a named doctrine.
+4. #23484 [executing] Packet composer: merge the 4 pooled drafts for the 8/6 packet into one letter body, opening with the ACC01 accomplishments section, appending the preservation block from response row 164 verbatim per A19, citing all three control numbers in one caption.
+5. Row 19 (human-only decision, no idea) confirm the current signature and filing status of the Kamdyn Sheets MWFD affiliation agreement before the 8/6 reply states anything about her placement. Vicky reply pending per Ruben.
+
+Reference IDs:
+- Ideas filed this session: #23482 [executing], #23484 [executing], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [executing], #23518 [executing], #23519 [executing]
+- Ideas referenc
 ```
 
 ### `1786010979248` — 8/6/2026, 3:32:57 AM PT — 83 turns
@@ -216,46 +256,6 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
-```
-
-### `1785986098106` — 8/6/2026, 3:27:11 AM PT — 714 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-Open up the TDSHS window I just inadvertantly closed and tell me the last task completed regarding this page: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=list  / BTW clicking thowe rows does nothing. Plus why are there duplicate entires for 2 students? I'm confused on that like for tomorrow I see 6 responses due. I think if there's a linkage, those all get populated on the detail page with the centralized response for each, this way we're not splitting hairs. Again, those links don't yet work or show details. Table should also show name of student // Wai
-```
-
-**Ideas referenced:** #047857, #059669, #111827, #12892, #13017, #13437, #178595, #178600, #18676, #19581, #19591, #19605, #23463 [unknown], #23482 [proposed], #23484 [proposed], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [proposed], #23518 [proposed], #23519 [proposed], #23643 [proposed], #23644 [proposed], #23645 [proposed], #23651 [rejected], #23652 [proposed], #23653 [approved], #23654 [approved], #23659 [proposed], #23660 [proposed], #23661 [proposed], #23666 [proposed], #23672 [proposed], #23673 [proposed], #23679 [proposed], #23680 [proposed], #23681 [proposed], #23682 [proposed], #23688 [proposed], #23695 [proposed], #23696 [proposed], #23697 [proposed], #23699 [proposed], #23700 [proposed], #23706 [proposed], #23707 [proposed], #23708 [proposed], #23709 [proposed], #2563, #26114, #2703, #3730, #374151, #450438, #475569, #600179, #64748, #92400
-
-**Last PICKUP PROMPT:**
-
-```
- deadline center + rows 19/20.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1785954856277 (TDSHS compliance doctrine and deadline center).
-
-Where we left off (verified 2026-08-05 21:24 PT):
-- Doctrine Library LIVE at /personnel/compliance_doctrine.php. #23515 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle; the CODE is deployed and harness-verified at 58 items, the idea row is the work record). Table admin_portal.compliance_doctrine, 58 active items: 19 postures, 19 anti-patterns, 6 fact patterns, 3 accomplishments, 7 agency defects, 4 statutory authorities. 9 carry regulator_facing=0 and render with an adjudication-only lock. Verified: facing=adj filter returns exactly 9, all locked.
-- Regulator-owed deadlines LIVE. #23516 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle). compliance_deadlines gained direction / requested_on / statutory_basis / last_agency_contact. Rows 27 (TPIA-004, due 8/10), 28 (TPIA-005, due 8/19 provisional), 29 (stale TDSHS request, monitor), 30 (AZ 39-121 trio, no send date recorded). List renders 21 deliverables, 5 they-owe pills, agency-owes card 0/4.
-- Row 19 verified sound. Row 20 CORRECTED: Moodle course_completions row 49223 shows user 51417 course 37 completed 2026-06-20 08:10:53 reaggregate 0, so the completion is INTACT and the regression premise is unconfirmed. Both rows still not_started, both still block the 8/6 send.
-- v4 packet consolidation and red-bar card from earlier this session: #23482 [executing] (reconcile_ideas returned status=approved dev_stage=idle), #23491 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle), prior v2 work #23463 [deployed] (reconcile_ideas returned status=open dev_stage=idle).
-
-Open threads to drive next:
-1. #23519 [executing] Answer Ava Kanthack. Five days unanswered (inbound 98073 on 7/31, 101757 on 8/2). Her completion IS intact in Moodle, so find which surface she is seeing incomplete on, tell her what her record shows, and reconcile the 95.4 figure the draft cites BEFORE the 8/6 reply goes. Per FP04 the letter must neither adopt nor contradict her account.
-2. #23517 [executing] Build the per-state Gold Standards: uniform base, then TX (25 TAC 157 + SB 14 + Gov Code 552), CA (BPPE + the San Diego inspection shape), AZ (v4.22 as the AZ instance). Generate from compliance_doctrine so a posture edit propagates. No state template ships without its own verified citations.
-3. #23518 [executing] Build the doctrine harvester and backfill it over all 157 existing response rows. This is the part that recovers what has already been forgotten in inv1, inv2, inv3, inv9, inv13. regulator_facing must fail closed to 0 on anything touching motive, timing, solicitation, or a named doctrine.
-4. #23484 [executing] Packet composer: merge the 4 pooled drafts for the 8/6 packet into one letter body, opening with the ACC01 accomplishments section, appending the preservation block from response row 164 verbatim per A19, citing all three control numbers in one caption.
-5. Row 19 (human-only decision, no idea) confirm the current signature and filing status of the Kamdyn Sheets MWFD affiliation agreement before the 8/6 reply states anything about her placement. Vicky reply pending per Ruben.
-
-Reference IDs:
-- Ideas filed this session: #23482 [executing], #23484 [executing], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [executing], #23518 [executing], #23519 [executing]
-- Ideas referenc
 ```
 
 ### `1786002462510` — 8/6/2026, 3:25:39 AM PT — 416 turns

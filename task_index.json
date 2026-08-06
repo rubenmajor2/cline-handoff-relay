@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-06T14:30:42.058Z",
+ "generated_at": "2026-08-06T15:30:42.649Z",
  "counts": {
-  "parsed": 0,
-  "reused": 502,
+  "parsed": 2,
+  "reused": 500,
   "failed": 0,
   "total": 502
  },
@@ -113959,14 +113959,15 @@
   },
   "1785986098106": {
    "task_id": "1785986098106",
-   "mtime": 1786012031584,
+   "mtime": 1786030205784,
    "created_at": "2026-08-06T03:14:58.106Z",
-   "last_modified": "2026-08-06T10:27:11.584Z",
-   "size_kb": 1879,
-   "turn_count": 714,
+   "last_modified": "2026-08-06T15:30:05.784Z",
+   "size_kb": 1959,
+   "turn_count": 744,
    "title": "#TDSHS\n\nOpen up the TDSHS window I just inadvertantly closed and tell me the last task completed regarding this page: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=list  / BTW clicking thowe rows does nothing. Plus why are there duplicate entires for 2 students? I'm confused on that like for tomorrow I see 6 responses due. I think if there's a linkage, those all get populated on the detail page with the centralized response for each, this way we're not splitting hairs. Again, those links don't yet work or show details. Table should also show name of student // Wait it just opened. I see a lot of this stuff. For the replies due with 4 drafts. Best on anything due",
    "pickup_prompt": " deadline center + rows 19/20.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #1785954856277 (TDSHS compliance doctrine and deadline center).\n\nWhere we left off (verified 2026-08-05 21:24 PT):\n- Doctrine Library LIVE at /personnel/compliance_doctrine.php. #23515 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle; the CODE is deployed and harness-verified at 58 items, the idea row is the work record). Table admin_portal.compliance_doctrine, 58 active items: 19 postures, 19 anti-patterns, 6 fact patterns, 3 accomplishments, 7 agency defects, 4 statutory authorities. 9 carry regulator_facing=0 and render with an adjudication-only lock. Verified: facing=adj filter returns exactly 9, all locked.\n- Regulator-owed deadlines LIVE. #23516 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle). compliance_deadlines gained direction / requested_on / statutory_basis / last_agency_contact. Rows 27 (TPIA-004, due 8/10), 28 (TPIA-005, due 8/19 provisional), 29 (stale TDSHS request, monitor), 30 (AZ 39-121 trio, no send date recorded). List renders 21 deliverables, 5 they-owe pills, agency-owes card 0/4.\n- Row 19 verified sound. Row 20 CORRECTED: Moodle course_completions row 49223 shows user 51417 course 37 completed 2026-06-20 08:10:53 reaggregate 0, so the completion is INTACT and the regression premise is unconfirmed. Both rows still not_started, both still block the 8/6 send.\n- v4 packet consolidation and red-bar card from earlier this session: #23482 [executing] (reconcile_ideas returned status=approved dev_stage=idle), #23491 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle), prior v2 work #23463 [deployed] (reconcile_ideas returned status=open dev_stage=idle).\n\nOpen threads to drive next:\n1. #23519 [executing] Answer Ava Kanthack. Five days unanswered (inbound 98073 on 7/31, 101757 on 8/2). Her completion IS intact in Moodle, so find which surface she is seeing incomplete on, tell her what her record shows, and reconcile the 95.4 figure the draft cites BEFORE the 8/6 reply goes. Per FP04 the letter must neither adopt nor contradict her account.\n2. #23517 [executing] Build the per-state Gold Standards: uniform base, then TX (25 TAC 157 + SB 14 + Gov Code 552), CA (BPPE + the San Diego inspection shape), AZ (v4.22 as the AZ instance). Generate from compliance_doctrine so a posture edit propagates. No state template ships without its own verified citations.\n3. #23518 [executing] Build the doctrine harvester and backfill it over all 157 existing response rows. This is the part that recovers what has already been forgotten in inv1, inv2, inv3, inv9, inv13. regulator_facing must fail closed to 0 on anything touching motive, timing, solicitation, or a named doctrine.\n4. #23484 [executing] Packet composer: merge the 4 pooled drafts for the 8/6 packet into one letter body, opening with the ACC01 accomplishments section, appending the preservation block from response row 164 verbatim per A19, citing all three control numbers in one caption.\n5. Row 19 (human-only decision, no idea) confirm the current signature and filing status of the Kamdyn Sheets MWFD affiliation agreement before the 8/6 reply states anything about her placement. Vicky reply pending per Ruben.\n\nReference IDs:\n- Ideas filed this session: #23482 [executing], #23484 [executing], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [executing], #23518 [executing], #23519 [executing]\n- Ideas referenc",
    "ideas": {
+    "2001": null,
     "2563": null,
     "2703": null,
     "3730": null,
@@ -113976,6 +113977,7 @@
     "18676": null,
     "19581": null,
     "19591": null,
+    "19595": null,
     "19605": null,
     "23463": "unknown",
     "23482": "proposed",
@@ -114630,11 +114632,11 @@
   },
   "1786002734721": {
    "task_id": "1786002734721",
-   "mtime": 1786013405861,
+   "mtime": 1786030238900,
    "created_at": "2026-08-06T07:52:14.721Z",
-   "last_modified": "2026-08-06T10:50:05.861Z",
-   "size_kb": 1244,
-   "turn_count": 341,
+   "last_modified": "2026-08-06T15:30:38.900Z",
+   "size_kb": 1316,
+   "turn_count": 409,
    "title": "#Argus\n\nContinue with the outstanding Argus tasks in the window that just closed out. \n\nAlso, How are subagents working now in Argus? \n\nAlso, Would like to see total time it took to finish an idea, not just the time stamps. \n\nhttps://www.emsuniversity.com/emtskills/routes/argus_task_status.php",
    "pickup_prompt": " redirect = auth gate, no 500)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Argus: rate/report feature deployed, verify live + ship remaining latency fix.\n\nWhere we left off (verified 2026-08-06 02:42 PT):\n- #23630 [deployed] — Total-duration metric on argus_task_status.php\n- #23623 / #23636 [deployed] — Incorrect Response rating button (the feature from tasks 204-206, now built and live). argus_task_ratings table will auto-create on first rating POST. Handler at lib/argus_rating_handler.php, UI at lib/argus_rating_ui.php.\n- Offload idea link now clickable (links to idea_status.php in new tab)\n- Tasks 204+205 HTTP 0 failures caused by frankenstein-tools adapter restart storm (separate issues in #23583/#23574/#23581 — still in_progress but unrelated to the feature itself)\n- Queue: running tasks 206 (same feature request, 5th attempt consumed after feature was shipped, now moot)\n\nOpen threads to drive next:\n1. #23489 [in_progress, idle] — Parallelize within-round tool calls in alltastic_api.php. The 8 sequential rounds per request are ~45s each; an 8-round request is ~6min. Each round's tool calls are independent lookups — parallelize via curl_multi or pcntl_fork.\n2. #23530 [approved] — Terminal UX: NEW notification flag instead of dumping background-task text inline.\n3. Live-verify the rating feature: POST a correct/incorrect rating to task 1 (or any done task) and confirm the argus_task_ratings row is written and flash message renders.\n\nReference IDs:\n- Ideas filed: #23630 [deployed], #23623 [built — argus_rating], #23636 [built — argus_rating]\n- Files touched: argus_task_status.php (modified), lib/argus_rating_handler.php (new), lib/argus_rating_ui.php (new)\n- URL: https://www.emsuniversity.com/emtskills/routes/argus_task_status.php\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
@@ -114667,6 +114669,7 @@
     "18951": null,
     "18973": null,
     "19348": null,
+    "19370": null,
     "19653": "executing",
     "20547": null,
     "21125": null,
@@ -114725,6 +114728,8 @@
     "23671": null,
     "23674": null,
     "23675": null,
+    "23851": null,
+    "23852": null,
     "56754": null,
     "64748": null,
     "334155": null

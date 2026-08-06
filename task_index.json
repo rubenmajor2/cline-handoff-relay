@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-06T20:32:48.785Z",
+ "generated_at": "2026-08-06T21:32:49.054Z",
  "counts": {
   "parsed": 3,
   "reused": 506,
@@ -114804,11 +114804,11 @@
   },
   "1786008133029": {
    "task_id": "1786008133029",
-   "mtime": 1786008459628,
+   "mtime": 1786051967512,
    "created_at": "2026-08-06T09:22:13.029Z",
-   "last_modified": "2026-08-06T09:27:39.628Z",
-   "size_kb": 81,
-   "turn_count": 42,
+   "last_modified": "2026-08-06T21:32:47.512Z",
+   "size_kb": 159,
+   "turn_count": 63,
    "title": "There seems to be something that is submitting courses or something to TDSHS. Can you tell me what is going on with that? I thought we already did a bunch of those semi-automatically before and I just saw a couple fire in the last week or 2 and those submissions need to pause temporarily.",
    "pickup_prompt": null,
    "ideas": {
@@ -115095,15 +115095,16 @@
   },
   "1786045024813": {
    "task_id": "1786045024813",
-   "mtime": 1786048360240,
+   "mtime": 1786051326981,
    "created_at": "2026-08-06T19:37:04.813Z",
-   "last_modified": "2026-08-06T20:32:40.240Z",
-   "size_kb": 576,
-   "turn_count": 55,
+   "last_modified": "2026-08-06T21:22:06.981Z",
+   "size_kb": 1038,
+   "turn_count": 280,
    "title": "#TDSHS\n\nI need the PDF generated so i can see what it looks like now\n\nContext reached 992,262 / 1,000,000 tokens (99%), past the rule-119 COMPRESS threshold (0.75 x 1M = 750,000). Rule 119 is a hardfloor with no deferral, so I compressed instead of applying the last edit in a degraded window.\n\nDone and verified this window:\n- TDSHS consolidated letter rebuilt on the canonical AZ regulator-letter template: 69,144 bytes, 2 pages, logo 200x200 page 1, signature 256x76 page 2, \"DRAFT\" count 0, public access 403.\n- Canonical template saved to docs/REGULATOR_LETTER_TEMPLATE_canonical.html as the standard form for all regulator correspondence.\n- Security exposure closed at the Plesk vhost. The earl",
    "pickup_prompt": null,
    "ideas": {
     "1370": null,
+    "5688": null,
     "23517": "executing",
     "23519": "executing",
     "23659": "proposed",
@@ -115120,8 +115121,17 @@
     "23907": "proposed",
     "23999": "proposed",
     "24018": "proposed",
+    "24053": "proposed",
+    "24061": "proposed",
+    "24062": "proposed",
+    "24063": "proposed",
+    "24070": "proposed",
+    "78350": null,
+    "111827": null,
     "178600": null,
-    "600179": null
+    "374151": null,
+    "600179": null,
+    "047857": null
    }
   },
   "1786047694363": {
@@ -115194,21 +115204,25 @@
   },
   "1786047728462": {
    "task_id": "1786047728462",
-   "mtime": 1786048357112,
+   "mtime": 1786050306619,
    "created_at": "2026-08-06T20:22:08.462Z",
-   "last_modified": "2026-08-06T20:32:37.112Z",
-   "size_kb": 216,
-   "turn_count": 82,
+   "last_modified": "2026-08-06T21:05:06.619Z",
+   "size_kb": 1658,
+   "turn_count": 273,
    "title": "#/emtskills lag\n\nbuild and ship end to end. make sure you test and fix along the way. leverage rule 267 and work on frankenstein executor as it's doctor during periods of waiting so no time is wasted\n\ndo not inject anthropic llm\n\nI am still having problems with this that need to be resolved. There are other people that are having the same issue right now. So if you're gonna ask us to do something with our browser it's gonna be next year to impossible. This is something that needs to be resolved in the server level. And it's not just the page that you were troubleshooting. There are other serious issues that need to be trapped down on this so that /emtskills loads quickly.\n\nYou were right to ",
    "pickup_prompt": null,
    "ideas": {
+    "1745": null,
     "2244": null,
     "2247": null,
     "2252": null,
     "2253": null,
     "16152": null,
+    "16154": null,
+    "16731": null,
     "16732": null,
     "19370": null,
+    "19918": null,
     "23031": "executing",
     "23053": "executing",
     "23133": "executing",
@@ -115249,6 +115263,9 @@
     "24026": "executing",
     "24027": "executing",
     "24028": "executing",
+    "24054": "deployed",
+    "24055": "proposed",
+    "24056": "proposed",
     "178590": null
    }
   }

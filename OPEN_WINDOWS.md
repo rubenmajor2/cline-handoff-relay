@@ -6,12 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/6/2026, 1:32:48 PM PT | window: last 72h | 114 tasks | index total 509 (parsed 3, cached 506)
+Generated: 8/6/2026, 2:32:49 PM PT | window: last 72h | 114 tasks | index total 509 (parsed 3, cached 506)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786045024813` | 8/6/2026, 1:32:40 PM | 55 | 576KB | #TDSHS |
-| `1786047728462` | 8/6/2026, 1:32:37 PM | 82 | 216KB | #/emtskills lag |
+| `1786008133029` | 8/6/2026, 2:32:47 PM | 63 | 159KB | There seems to be something that is submitting courses or something to TDSHS. Can you tell |
+| `1786045024813` | 8/6/2026, 2:22:06 PM | 280 | 1038KB | #TDSHS |
+| `1786047728462` | 8/6/2026, 2:05:06 PM | 273 | 1658KB | #/emtskills lag |
 | `1786047694363` | 8/6/2026, 1:21:39 PM | 3 | 43KB | #/emtskills lag |
 | `1786037557221` | 8/6/2026, 12:43:55 PM | 387 | 707KB | /emtskills lag |
 | `1786036273485` | 8/6/2026, 12:40:00 PM | 426 | 814KB | #Argus  |
@@ -22,7 +23,6 @@ Generated: 8/6/2026, 1:32:48 PM PT | window: last 72h | 114 tasks | index total 
 | `1786002734721` | 8/6/2026, 9:27:15 AM | 556 | 1532KB | #Argus |
 | `1785939083137` | 8/6/2026, 8:58:16 AM | 1734 | 3041KB | https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since  |
 | `1786002462510` | 8/6/2026, 3:25:39 AM | 416 | 1678KB | frankenstein-llm seems to be getting stuck here: |
-| `1786008133029` | 8/6/2026, 2:27:39 AM | 42 | 81KB | There seems to be something that is submitting courses or something to TDSHS. Can you tell |
 | `1785976094322` | 8/6/2026, 2:12:29 AM | 348 | 1676KB | For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 |
 | `1786005641053` | 8/6/2026, 1:57:57 AM | 142 | 208KB | #GLM |
 | `1785997318545` | 8/6/2026, 1:49:28 AM | 692 | 2164KB | Frankenstein-llm stalled since we added subagents or messed with that just recently |
@@ -129,7 +129,19 @@ Generated: 8/6/2026, 1:32:48 PM PT | window: last 72h | 114 tasks | index total 
 
 ## Per-window detail
 
-### `1786045024813` — 8/6/2026, 1:32:40 PM PT — 55 turns
+### `1786008133029` — 8/6/2026, 2:32:47 PM PT — 63 turns
+
+**Original task:**
+
+```
+There seems to be something that is submitting courses or something to TDSHS. Can you tell me what is going on with that? I thought we already did a bunch of those semi-automatically before and I just saw a couple fire in the last week or 2 and those submissions need to pause temporarily.
+```
+
+**Ideas referenced:** #23667 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786045024813` — 8/6/2026, 2:22:06 PM PT — 280 turns
 
 **Original task:**
 
@@ -145,11 +157,11 @@ Done and verified this window:
 - Canonical template saved to docs/REGULATOR_LETTER_TEMPLATE_canonical.html as the sta
 ```
 
-**Ideas referenced:** #1370, #178600, #23517 [executing], #23519 [executing], #23659 [proposed], #23660 [proposed], #23666 [proposed], #23679 [proposed], #23681 [proposed], #23688 [proposed], #23699 [proposed], #23700 [proposed], #23709 [proposed], #23882 [proposed], #23906 [proposed], #23907 [proposed], #23999 [proposed], #24018 [proposed], #600179
+**Ideas referenced:** #047857, #111827, #1370, #178600, #23517 [executing], #23519 [executing], #23659 [proposed], #23660 [proposed], #23666 [proposed], #23679 [proposed], #23681 [proposed], #23688 [proposed], #23699 [proposed], #23700 [proposed], #23709 [proposed], #23882 [proposed], #23906 [proposed], #23907 [proposed], #23999 [proposed], #24018 [proposed], #24053 [proposed], #24061 [proposed], #24062 [proposed], #24063 [proposed], #24070 [proposed], #374151, #5688, #600179, #78350
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786047728462` — 8/6/2026, 1:32:37 PM PT — 82 turns
+### `1786047728462` — 8/6/2026, 2:05:06 PM PT — 273 turns
 
 **Original task:**
 
@@ -163,7 +175,7 @@ do not inject anthropic llm
 I am still having problems with this that need to be resolved. There are other people that are having the same issue right now. So if you're gonna ask us to do something with our browser it's gonna be next year to impossible. This is something that needs to be resolved in the server level. And it's not just the page that you were troubleshooting. There are other serio
 ```
 
-**Ideas referenced:** #16152, #16732, #178590, #19370, #2244, #2247, #2252, #2253, #23031 [executing], #23053 [executing], #23133 [executing], #23139 [executing], #23293 [executing], #23495 [executing], #23500 [executing], #23584, #23585, #23620, #23710, #23711, #23867 [proposed], #23878, #23880 [proposed], #23884 [proposed], #23885 [proposed], #23886 [deployed], #23920 [in_progress], #23925 [rejected], #23926 [rejected], #23927 [proposed], #23929 [rejected], #23930 [rejected], #23931 [proposed], #23932 [rejected], #23934 [in_progress], #23941 [executing], #23944 [executing], #23945 [proposed], #23947 [proposed], #23952 [proposed], #23954 [proposed], #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing]
+**Ideas referenced:** #16152, #16154, #16731, #16732, #1745, #178590, #19370, #19918, #2244, #2247, #2252, #2253, #23031 [executing], #23053 [executing], #23133 [executing], #23139 [executing], #23293 [executing], #23495 [executing], #23500 [executing], #23584, #23585, #23620, #23710, #23711, #23867 [proposed], #23878, #23880 [proposed], #23884 [proposed], #23885 [proposed], #23886 [deployed], #23920 [in_progress], #23925 [rejected], #23926 [rejected], #23927 [proposed], #23929 [rejected], #23930 [rejected], #23931 [proposed], #23932 [rejected], #23934 [in_progress], #23941 [executing], #23944 [executing], #23945 [proposed], #23947 [proposed], #23952 [proposed], #23954 [proposed], #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -532,18 +544,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
-
-### `1786008133029` — 8/6/2026, 2:27:39 AM PT — 42 turns
-
-**Original task:**
-
-```
-There seems to be something that is submitting courses or something to TDSHS. Can you tell me what is going on with that? I thought we already did a bunch of those semi-automatically before and I just saw a couple fire in the last week or 2 and those submissions need to pause temporarily.
-```
-
-**Ideas referenced:** #23667 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785976094322` — 8/6/2026, 2:12:29 AM PT — 348 turns
 

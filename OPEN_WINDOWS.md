@@ -6,27 +6,30 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/5/2026, 8:39:40 PM PT | window: last 72h | 111 tasks | index total 492 (parsed 6, cached 486)
+Generated: 8/5/2026, 9:39:41 PM PT | window: last 72h | 113 tasks | index total 495 (parsed 4, cached 491)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1785988427679` | 8/5/2026, 9:39:09 PM | 379 | 685KB | #Argus |
+| `1785989615911` | 8/5/2026, 9:38:39 PM | 156 | 978KB | for frankenstein-llm subagents are still slow.  Are they using the 120Bs? If 120Bs are pas |
+| `1785986098106` | 8/5/2026, 9:25:51 PM | 242 | 551KB | #TDSHS |
+| `1785971158342` | 8/5/2026, 9:24:41 PM | 160 | 359KB | #AZDHS |
+| `1785953794202` | 8/5/2026, 9:07:26 PM | 444 | 1368KB | COPY_WINDOW_0_DATA_ACCURACY_AUDIT |
+| `1785966271898` | 8/5/2026, 9:05:10 PM | 170 | 458KB | #Payment Issues |
+| `1785988379979` | 8/5/2026, 8:58:22 PM | 10 | 39KB | # NON-ARGUS WINDOW:  |
+| `1785939083137` | 8/5/2026, 8:47:12 PM | 1624 | 2843KB | https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since  |
 | `1785954856277` | 8/5/2026, 8:39:38 PM | 330 | 2096KB | #CFA |
-| `1785939083137` | 8/5/2026, 8:39:30 PM | 1605 | 2789KB | https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since  |
-| `1785986098106` | 8/5/2026, 8:38:13 PM | 138 | 302KB | #TDSHS |
 | `1785939420388` | 8/5/2026, 8:37:44 PM | 944 | 14697KB | #Argus |
 | `1785954595787` | 8/5/2026, 8:20:31 PM | 226 | 1063KB | #KAISON |
 | `1785937503831` | 8/5/2026, 8:11:44 PM | 658 | 2201KB | Can you tell me how many turns have taken place for each model in the last 5 hours by mode |
 | `1785966242067` | 8/5/2026, 8:03:19 PM | 386 | 1295KB | #TDSHS |
-| `1785953794202` | 8/5/2026, 7:56:59 PM | 396 | 1299KB | COPY_WINDOW_0_DATA_ACCURACY_AUDIT |
 | `1785954766914` | 8/5/2026, 7:56:32 PM | 248 | 949KB | #LLM FLEET |
 | `1785976094322` | 8/5/2026, 7:53:06 PM | 158 | 1399KB | For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 |
-| `1785971158342` | 8/5/2026, 4:45:56 PM | 118 | 287KB | #AZDHS |
 | `1785953852961` | 8/5/2026, 4:34:41 PM | 408 | 1149KB | #GLM  |
 | `1785954733601` | 8/5/2026, 4:13:01 PM | 356 | 692KB | #SLS MEGA |
 | `1785957900287` | 8/5/2026, 4:08:38 PM | 174 | 642KB | Telphony still having issues: |
 | `1785954707277` | 8/5/2026, 4:03:19 PM | 294 | 818KB | #EA PIPELINE |
 | `1785953476892` | 8/5/2026, 3:59:23 PM | 480 | 1034KB | build and ship this |
-| `1785966271898` | 8/5/2026, 3:52:29 PM | 162 | 435KB | #Payment Issues |
 | `1785937352780` | 8/5/2026, 2:43:42 PM | 330 | 1676KB | A bunch of my windows closed out here in Cline all at once. For these windows can you go a |
 | `1785940995783` | 8/5/2026, 2:37:03 PM | 262 | 594KB | Resolve this issue: |
 | `1785939400779` | 8/5/2026, 7:16:41 AM | 1 | 5KB | Please see this in Argus, appears like some hallucinations, the model is not answering que |
@@ -120,11 +123,187 @@ Generated: 8/5/2026, 8:39:40 PM PT | window: last 72h | 111 tasks | index total 
 | `1785599739497` | 8/2/2026, 11:25:37 PM | 690 | 3266KB | I want to get back to work on clustering, parallelism and tarpipe, particularly with the e |
 | `1785483774534` | 8/2/2026, 11:14:28 PM | 428 | 1226KB | Play frankenstein doctor of executor for the next 60 minutes (use timestamps) and make sur |
 | `1785581189111` | 8/2/2026, 10:14:58 PM | 1078 | 3808KB | I need to make sure that the orchestra is running and that we don't just have a bunch of i |
-| `1785456423435` | 8/2/2026, 8:40:36 PM | 582 | 2345KB | See Vicky's chats regarding EMT and Refresher schedules in Chat 55 and repair |
 
 ---
 
 ## Per-window detail
+
+### `1785988427679` — 8/5/2026, 9:39:09 PM PT — 379 turns
+
+**Original task:**
+
+```
+#Argus
+
+
+However, most are supposed to be on the 120Bs -> The speed problem is the loop shape, not the wiring. maxToolRounds is 8, dropped to 3 for lookup/chat mode. Each round is a full sequential model call, and the code comment says it plainly: on the ~2 tok/s GLM ring those add up to minutes. So an 8-round research question is 8 serial model calls. That is where the minutes go. Filed as #23489 [proposed] with three ranked levers.
+--
+
+Pick up task #23428 [executing]: Argus request-speed work ONLY.
+
+Scope guard: this window is Argus performance only. Non-Argus work (student ops, telephony, c
+```
+
+**Ideas referenced:** #10005, #10108, #11953, #12251, #12335, #12365, #12366, #12368, #12407, #12657, #12689, #127908, #128203, #128263, #128275, #13831, #13874, #16213, #16265, #1627, #17202, #17203, #17205, #17300, #18820, #19903, #20300, #2050, #21125, #21126, #2221, #2232, #2238, #2242 [deployed], #22583 [approved], #22688, #22850, #22897 [executing], #23027, #23036, #23190 [rejected], #23191 [executing], #23192 [rejected], #23205 [rejected], #23307 [rejected], #23339 [executing], #23425 [deployed], #23426 [deployed], #23427 [deployed], #23428 [executing], #23429 [executing], #23430 [deployed], #23440 [proposed], #23467 [executing], #23468 [deployed], #23472 [proposed], #23477 [proposed], #23483 [proposed], #23489 [proposed], #23490, #23505 [proposed], #23511 [proposed], #23513 [proposed], #23520 [deployed], #23530 [deployed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785989615911` — 8/5/2026, 9:38:39 PM PT — 156 turns
+
+**Original task:**
+
+```
+for frankenstein-llm subagents are still slow.  Are they using the 120Bs? If 120Bs are past their allowable lanes, why are we not spilling off? What's causing slowness or is it something different?
+```
+
+**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11942, #11944, #11953, #11991, #12046, #12059, #12231, #12246, #12247, #12249, #12251, #12262, #12266, #12269, #12285, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12403, #12407, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12657, #12672, #12673, #12680, #12688, #12689, #12708, #12710, #12716, #12900, #13095, #13108, #13121, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13831, #13832, #13842, #13874, #13962, #13964, #14000, #14133, #14142, #14848, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16120 [deployed], #16584, #16589, #16590, #16602, #16625, #16646, #16648, #16680, #16715, #16716, #16717, #16718, #17078, #17307, #17673, #1807, #18670, #18671, #18781, #18786, #18868, #19585, #19653, #1967, #19686, #19903, #2014, #20272, #20300, #2050, #20536, #2071, #20722, #2079, #21045, #21136 [ready_for_review], #2243 [deployed], #22564, #22583, #22584, #22820, #22897, #23206, #23490, #23521 [deployed], #23526 [approved], #23528 [approved], #23529 [approved], #23533 [approved], #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785986098106` — 8/5/2026, 9:25:51 PM PT — 242 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+Open up the TDSHS window I just inadvertantly closed and tell me the last task completed regarding this page: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=list  / BTW clicking thowe rows does nothing. Plus why are there duplicate entires for 2 students? I'm confused on that like for tomorrow I see 6 responses due. I think if there's a linkage, those all get populated on the detail page with the centralized response for each, this way we're not splitting hairs. Again, those links don't yet work or show details. Table should also show name of student // Wai
+```
+
+**Ideas referenced:** #047857, #059669, #111827, #18676, #19591, #19605, #23463 [unknown], #23482 [proposed], #23484 [proposed], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [proposed], #23518 [proposed], #23519 [proposed], #2563, #3730, #374151, #450438, #475569, #64748, #92400
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785971158342` — 8/5/2026, 9:24:41 PM PT — 160 turns
+
+**Original task:**
+
+```
+#AZDHS
+
+See this request from Lawrence Bevins sent August 3 at 8:30 AM:
+
+Dear Ruben Major,
+
+EMS-26-0495 references student Richella Trujillo. Please compile the requested information in the NOI for this student.
+
+Respectfully,
+
+Lance Bevins
+
+--
+reference complaint responses here: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations
+```
+
+**Ideas referenced:** #12892, #13017, #249290, #25226, #26114, #26211, #450438, #475569, #64748, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+w 21
+
+Window is safe to close.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #26114 — AZDHS NOI EMS-26-0495 follow-up: Bevins named Richella Trujillo. RESOLVED with gold-standard AZ posture — no new filing. Window closed by Ruben.
+
+Where we left off (verified 2026-08-05 21:22 PT):
+- Richella Trujillo = parent/third-party payer of adult student Oscar Trujillo IV (26114T-05)
+- July 31 Consolidated Response remains the filed response for 0495 (generality posture, no complainant/student named) [deployed]
+- Record id 149 reclassified to internal_note [superseded]
+- Record id 165 = internal_note documenting identification + posture [deployed]
+- Investigation 17 summary updated (2026-08-03 notification logged)
+- Unused supplementary .txt/.html removed from /var/www/emtskills/uploads/compliance/july2026_noi/
+- Pipeline row 21 (Round 2 NOI response, not_started) = catch-all if BEMS presses further
+
+Open threads to drive next:
+1. #12892 — If Bevins requests specific supplementation for 0495, respond citing the July 31 filing from the institutional-generalities posture (no student-specific supplement) [queued]
+2. #13017 — When round 2 NOI correspondence actually occurs, update compliance_deadlines row 21 due_date and status [queued]
+
+Reference IDs:
+- Investigation: 17 (azdhs-noi-2026-07-13)
+- Filed 0495 response: round 2, id 139 (sent 7/31 to Bevins cc Caswell)
+- Identification doc: id 165 internal_note
+- Precedent: 7/31 Consolidated Response.pdf (10pp, 7 case sections)
+- Student: Oscar Trujillo IV 26114T-05 (adult), Complainant: Richella Trujillo
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785953794202` — 8/5/2026, 9:07:26 PM PT — 444 turns
+
+**Original task:**
+
+```
+COPY_WINDOW_0_DATA_ACCURACY_AUDIT
+
+Work on that
+```
+
+**Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12477, #13084, #152615, #1681, #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #178593, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1935, #1936, #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20503, #20540, #20541, #20555, #20565, #20569, #20627, #20628, #20629, #20630, #20662, #20663, #20672, #20674, #20676, #20677, #20806 [proposed], #2101, #2105, #2126, #2127, #2128, #2226, #2234, #22808 [proposed], #23027, #23036, #23037, #23038, #23039, #23050 [executing], #23054 [executing], #23056 [executing], #23061 [executing], #23062 [executing], #23146 [proposed], #23150 [proposed], #23152 [proposed], #23160 [proposed], #23163 [proposed], #23164 [proposed], #23165 [proposed], #23171, #23174, #23175, #23180 [proposed], #23181, #23182, #23183, #23184, #23276 [proposed], #23277 [proposed], #23285 [proposed], #23318 [proposed], #23471 [proposed], #23506 [proposed], #389249, #7223, #7925, #8639, #9048
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785966271898` — 8/5/2026, 9:05:10 PM PT — 170 turns
+
+**Original task:**
+
+```
+#Payment Issues
+
+Pick up payments. THE ROOT CAUSE IS ALREADY DIAGNOSED IN IDEA #20613 AND NOBODY READ IT.
+
+#20613 title, verbatim: "URGENT: zero large EMT approvals today, all 5007 Credit Floor with AVS+CVC
+passing, correlates with July crossing $1M processed on 07-27 (first time ever). Leading
+hypothesis: Intuit merchant-account [cap]"
+
+FROM #20613 (2026-07-31): FIVE distinct payers declined across 07-30/07-31 (Matthew Gillespie,
+Frank Heald, Maia, Elizabeth Shipp Conway, Shaheed Kehinde) on DIFFERENT cards, DIFFERENT banks,
+FOUR different sites (sandiegoemt, dallasemt, californiaemt x2, ariz
+```
+
+**Ideas referenced:** #19387 [executing], #20130, #20491, #20613 [approved], #23062 [executing], #23268 [executing], #23279 [proposed], #23280 [proposed], #23281 [proposed], #23282 [proposed], #23304 [in_progress], #23394, #23584, #23585, #23890, #4929, #8211
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785988379979` — 8/5/2026, 8:58:22 PM PT — 10 turns
+
+**Original task:**
+
+```
+# NON-ARGUS WINDOW: 
+
+But the CFA should be answering this properly -> ### Is 1-2 weeks unreasonable? No. But the silence is.
+
+Then what is the CFA doing wrong? is it not responding? -> 83 was OUTBOUND to her. She sent 27 inbound total since May 25, and only 7 since her course completed July 26. All 7 are ONE thread, same subject, opened August 2. So it is 7 messages over 3 days on one unresolved question, not chronic pestering. My earlier framing was wrong.
+
+student ops, telephony, callbacks
+
+Do NOT touch Argus in this window. Argus work is running separately.
+
+## 1. #23483 [proposed] P0: rep
+```
+
+**Ideas referenced:** #23425 [deployed], #23426 [deployed], #23440 [proposed], #23472 [proposed], #23477 [proposed], #23483 [proposed], #9086, #9168, #9339
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785939083137` — 8/5/2026, 8:47:12 PM PT — 1624 turns
+
+**Original task:**
+
+```
+https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since we have a 4TB NVME on WOPR. Can you tell me what's going on here and get these pages loaded faster?
+```
+
+**Ideas referenced:** #12245, #13839, #16732, #178590, #2211 [needs_verify], #2213, #2214, #2215, #2223, #2224, #2228 [rejected], #2229, #2230, #2235, #2240 [deployed], #2241, #23028 [proposed], #23029 [proposed], #23030 [proposed], #23031 [proposed], #23051 [executing], #23053 [executing], #23067 [deployed], #23133 [executing], #23134 [executing], #23139 [executing], #23145 [executing], #23232 [executing], #23233 [executing], #23293 [executing], #23352 [proposed], #23378 [proposed], #23495 [proposed], #23500 [proposed], #2998, #4907, #9112
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785954856277` — 8/5/2026, 8:39:38 PM PT — 330 turns
 
@@ -183,32 +362,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1785939083137` — 8/5/2026, 8:39:30 PM PT — 1605 turns
-
-**Original task:**
-
-```
-https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since we have a 4TB NVME on WOPR. Can you tell me what's going on here and get these pages loaded faster?
-```
-
-**Ideas referenced:** #12245, #13839, #16732, #178590, #2211 [needs_verify], #2213, #2214, #2215, #2223, #2224, #2228 [rejected], #2229, #2230, #2235, #2240 [deployed], #2241, #23028 [proposed], #23029 [proposed], #23030 [proposed], #23031 [proposed], #23051 [executing], #23053 [executing], #23067 [deployed], #23133 [executing], #23134 [executing], #23139 [executing], #23145 [executing], #23232 [executing], #23233 [executing], #23293 [executing], #23352 [proposed], #23378 [proposed], #2998, #4907, #9112
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785986098106` — 8/5/2026, 8:38:13 PM PT — 138 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-Open up the TDSHS window I just inadvertantly closed and tell me the last task completed regarding this page: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=list  / BTW clicking thowe rows does nothing. Plus why are there duplicate entires for 2 students? I'm confused on that like for tomorrow I see 6 responses due. I think if there's a linkage, those all get populated on the detail page with the centralized response for each, this way we're not splitting hairs. Again, those links don't yet work or show details. Table should also show name of student // Wai
-```
-
-**Ideas referenced:** #047857, #059669, #111827, #23463 [unknown], #23482 [proposed], #23484 [proposed], #23491 [proposed], #2563, #3730, #374151, #475569, #64748, #92400
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785939420388` — 8/5/2026, 8:37:44 PM PT — 944 turns
 
@@ -421,20 +574,6 @@ Open threads to drive next:
 15. #23373 [blocked] / #23348 [blocked] — Pinsky letters and 5 complaint PDFs. Unblocker: POSTMARK_ACCOUNT_TOKEN in co
 ```
 
-### `1785953794202` — 8/5/2026, 7:56:59 PM PT — 396 turns
-
-**Original task:**
-
-```
-COPY_WINDOW_0_DATA_ACCURACY_AUDIT
-
-Work on that
-```
-
-**Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12477, #13084, #152615, #1681, #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #178593, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1935, #1936, #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20503, #20540, #20541, #20555, #20565, #20569, #20627, #20628, #20629, #20630, #20662, #20663, #20672, #20674, #20676, #20677, #20806 [proposed], #2101, #2105, #2126, #2127, #2128, #2226, #2234, #22808 [proposed], #23027, #23036, #23037, #23038, #23039, #23050 [executing], #23054 [executing], #23056 [executing], #23061 [executing], #23062 [executing], #23146 [proposed], #23150 [proposed], #23152 [proposed], #23160 [proposed], #23163 [proposed], #23164 [proposed], #23165 [proposed], #23171, #23174, #23175, #23180 [proposed], #23181, #23182, #23183, #23184, #23276 [proposed], #23277 [proposed], #23285 [proposed], #23318 [proposed], #23471 [proposed], #389249, #7223, #7925, #8639, #9048
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
 ### `1785954766914` — 8/5/2026, 7:56:32 PM PT — 248 turns
 
 **Original task:**
@@ -506,63 +645,6 @@ extremely thin and unviewable. Can you resolve this? Look at this middle content
 **Ideas referenced:** #495057, #856404
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785971158342` — 8/5/2026, 4:45:56 PM PT — 118 turns
-
-**Original task:**
-
-```
-#AZDHS
-
-See this request from Lawrence Bevins sent August 3 at 8:30 AM:
-
-Dear Ruben Major,
-
-EMS-26-0495 references student Richella Trujillo. Please compile the requested information in the NOI for this student.
-
-Respectfully,
-
-Lance Bevins
-
---
-reference complaint responses here: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations
-```
-
-**Ideas referenced:** #249290, #25226, #26114, #26211, #450438, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-t of 0495 as no-student-named.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #26114 — AZDHS NOI EMS-26-0495 supplementary filing, Richella Trujillo/Oscar Trujillo IV.
-
-Where we left off (verified 2026-08-05 16:44 PT):
-- Richella Trujillo identified as parent of Oscar Trujillo IV (26114T-05), Peoria Traditional 26114T
-- Supplementary response drafted covering all 5 NOI items: `/var/www/emtskills/uploads/compliance/july2026_noi/AZDHS_NOI_July2026_Supplementary_EMS-26-0495.txt`
-- DB record: compliance_investigation_responses id 149 [draft]
-- Investigation 17 summary updated
-
-Open threads to drive next:
-1. (human-only decision, no idea) — Ruben to review supplementary, sign, and transmit to Bevins cc Caswell
-2. (human-only decision, no idea) — Update file_path column on id 149 after PDF rendering
-3. (human-only decision, no idea) — Update investigation 17 summary to reflect supplementary round
-
-Reference IDs:
-- Investigation: 17 (azdhs-noi-2026-07-13)
-- Response: id 149
-- Student: Oscar Trujillo IV, 26114T-05, admin PK 8142323
-- Ticket: TKT-20260525-89AD507F
-- Chargeback: XJDYKPH7U1UM9HOT
-- Evidence dirs: 51, 57, 65
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
 
 ### `1785953852961` — 8/5/2026, 4:34:41 PM PT — 408 turns
 
@@ -691,28 +773,6 @@ Four causes, and the first one is the biggest:
 ```
 
 **Ideas referenced:** #10119 [rejected], #1026, #1233, #17300, #18329 [queued], #18800, #18868, #19304, #19309, #19313, #1934, #2225 [deployed], #2237 [rejected], #22598, #22601, #22832, #23117, #23122 [in_progress], #23135 [executing], #23172 [approved], #23178 [approved], #23179 [approved], #23182 [proposed], #23183 [proposed], #23217, #23234 [proposed], #23290, #23291, #23325 [in_progress], #4505 [rejected], #52758, #52773, #52775, #52782, #52784, #52799, #52801
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785966271898` — 8/5/2026, 3:52:29 PM PT — 162 turns
-
-**Original task:**
-
-```
-#Payment Issues
-
-Pick up payments. THE ROOT CAUSE IS ALREADY DIAGNOSED IN IDEA #20613 AND NOBODY READ IT.
-
-#20613 title, verbatim: "URGENT: zero large EMT approvals today, all 5007 Credit Floor with AVS+CVC
-passing, correlates with July crossing $1M processed on 07-27 (first time ever). Leading
-hypothesis: Intuit merchant-account [cap]"
-
-FROM #20613 (2026-07-31): FIVE distinct payers declined across 07-30/07-31 (Matthew Gillespie,
-Frank Heald, Maia, Elizabeth Shipp Conway, Shaheed Kehinde) on DIFFERENT cards, DIFFERENT banks,
-FOUR different sites (sandiegoemt, dallasemt, californiaemt x2, ariz
-```
-
-**Ideas referenced:** #19387 [executing], #20130, #20491, #20613 [approved], #23062 [executing], #23268 [executing], #23279 [proposed], #23280 [proposed], #23281 [proposed], #23282 [proposed], #23304 [in_progress], #23394, #23584, #23585, #23890, #4929, #8211
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -4212,40 +4272,5 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785456423435` — 8/2/2026, 8:40:36 PM PT — 582 turns
-
-**Original task:**
-
-```
-See Vicky's chats regarding EMT and Refresher schedules in Chat 55 and repair
-```
-
-**Ideas referenced:** #003366, #0369, #047857, #059669, #0891, #14532, #1500, #15803, #166534, #177825, #19919 [executing], #20050, #20071, #20247, #202607, #20272, #20297, #20311, #20313 [executing], #20314 [executing], #20315 [executing], #20317 [executing], #20326 [executing], #20327 [executing], #20346, #20358 [proposed], #20359 [proposed], #20410, #20516, #20539, #20587, #20617, #20672, #20869, #2088, #20884, #21106, #21147, #21168, #21169, #21213, #21472, #21476, #21490 [executing], #21491, #21492 [proposed], #21493 [proposed], #21494 [executing], #21495, #21496 [proposed], #21497 [proposed], #21503, #21504 [proposed], #21505 [proposed], #2196, #2563, #2980, #3222, #3223, #3226, #3227, #3230, #3231, #3233, #32701, #334155, #374151, #4338, #475569, #495057, #54737, #54755, #54756, #54970, #54972, #54984, #55026, #55111, #55205, #55216, #55227, #55257, #55387, #55418, #64748, #8211, #8217, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-correctly linked to Zoom. 
-
-═══════════════════════════════════════════════
-═══ PICKUP PROMPT ═══
-═══════════════════════════════════════════════
-Pick up task #21505 — confirm paramedicrefresher.com registrations are correctly linked to Zoom.
-(2026‑08‑02 20:24 PT)
-Where we left off (verified <timestamp PT>):
-- All paramedic future schedules present and functional
-- Zoom join URLs stored, displayed, and emailed
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #21492 — restore missing Paramedic schedules (already completed, monitor)
-2. #21493 — develop EMS‑University schedule page (future work)
-Reference IDs:
-- Ticket: none
-- Ideas filed: #21490, #21492, #21493, #21494, #21496, #21497, #21505
-- Files touched: website_class_schedules DB, refresher_students.php, post_class_processor.php
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```

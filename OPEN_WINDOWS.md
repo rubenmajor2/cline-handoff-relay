@@ -6,13 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/6/2026, 12:32:48 PM PT | window: last 72h | 112 tasks | index total 506 (parsed 4, cached 502)
+Generated: 8/6/2026, 1:32:48 PM PT | window: last 72h | 114 tasks | index total 509 (parsed 3, cached 506)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786037557221` | 8/6/2026, 12:32:42 PM | 312 | 542KB | /emtskills lag |
-| `1786036273485` | 8/6/2026, 12:32:38 PM | 389 | 764KB | #Argus  |
-| `1785986098106` | 8/6/2026, 12:32:23 PM | 1015 | 2903KB | #TDSHS |
+| `1786045024813` | 8/6/2026, 1:32:40 PM | 55 | 576KB | #TDSHS |
+| `1786047728462` | 8/6/2026, 1:32:37 PM | 82 | 216KB | #/emtskills lag |
+| `1786047694363` | 8/6/2026, 1:21:39 PM | 3 | 43KB | #/emtskills lag |
+| `1786037557221` | 8/6/2026, 12:43:55 PM | 387 | 707KB | /emtskills lag |
+| `1786036273485` | 8/6/2026, 12:40:00 PM | 426 | 814KB | #Argus  |
+| `1785986098106` | 8/6/2026, 12:33:42 PM | 1020 | 2925KB | #TDSHS |
 | `1786010979248` | 8/6/2026, 12:18:57 PM | 628 | 1362KB | Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to |
 | `1786032945879` | 8/6/2026, 10:15:19 AM | 474 | 718KB | #/emtskills lag |
 | `1786033674961` | 8/6/2026, 10:00:27 AM | 214 | 441KB | ## Argus  |
@@ -121,13 +124,66 @@ Generated: 8/6/2026, 12:32:48 PM PT | window: last 72h | 112 tasks | index total
 | `1785790859915` | 8/3/2026, 6:01:41 PM | 532 | 4871KB | Ruben Major Jr., IT Admin is saying that he is not receiving messages in TeamHub / request |
 | `1785787998507` | 8/3/2026, 5:15:44 PM | 172 | 993KB | Was the "Clear" button on this page supposed to be wired into the actual NREMT clearance a |
 | `1785779852459` | 8/3/2026, 4:23:03 PM | 780 | 2974KB | Reply to this person says Hi "Internal" - tha'ts wrong. Also it appears that Email Agent d |
-| `1785787253230` | 8/3/2026, 1:22:09 PM | 100 | 181KB | When I click on "Login As Student Link" for example: https://emsuniversity.com/emtskills/e |
 
 ---
 
 ## Per-window detail
 
-### `1786037557221` — 8/6/2026, 12:32:42 PM PT — 312 turns
+### `1786045024813` — 8/6/2026, 1:32:40 PM PT — 55 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+I need the PDF generated so i can see what it looks like now
+
+Context reached 992,262 / 1,000,000 tokens (99%), past the rule-119 COMPRESS threshold (0.75 x 1M = 750,000). Rule 119 is a hardfloor with no deferral, so I compressed instead of applying the last edit in a degraded window.
+
+Done and verified this window:
+- TDSHS consolidated letter rebuilt on the canonical AZ regulator-letter template: 69,144 bytes, 2 pages, logo 200x200 page 1, signature 256x76 page 2, "DRAFT" count 0, public access 403.
+- Canonical template saved to docs/REGULATOR_LETTER_TEMPLATE_canonical.html as the sta
+```
+
+**Ideas referenced:** #1370, #178600, #23517 [executing], #23519 [executing], #23659 [proposed], #23660 [proposed], #23666 [proposed], #23679 [proposed], #23681 [proposed], #23688 [proposed], #23699 [proposed], #23700 [proposed], #23709 [proposed], #23882 [proposed], #23906 [proposed], #23907 [proposed], #23999 [proposed], #24018 [proposed], #600179
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786047728462` — 8/6/2026, 1:32:37 PM PT — 82 turns
+
+**Original task:**
+
+```
+#/emtskills lag
+
+build and ship end to end. make sure you test and fix along the way. leverage rule 267 and work on frankenstein executor as it's doctor during periods of waiting so no time is wasted
+
+do not inject anthropic llm
+
+I am still having problems with this that need to be resolved. There are other people that are having the same issue right now. So if you're gonna ask us to do something with our browser it's gonna be next year to impossible. This is something that needs to be resolved in the server level. And it's not just the page that you were troubleshooting. There are other serio
+```
+
+**Ideas referenced:** #16152, #16732, #178590, #19370, #2244, #2247, #2252, #2253, #23031 [executing], #23053 [executing], #23133 [executing], #23139 [executing], #23293 [executing], #23495 [executing], #23500 [executing], #23584, #23585, #23620, #23710, #23711, #23867 [proposed], #23878, #23880 [proposed], #23884 [proposed], #23885 [proposed], #23886 [deployed], #23920 [in_progress], #23925 [rejected], #23926 [rejected], #23927 [proposed], #23929 [rejected], #23930 [rejected], #23931 [proposed], #23932 [rejected], #23934 [in_progress], #23941 [executing], #23944 [executing], #23945 [proposed], #23947 [proposed], #23952 [proposed], #23954 [proposed], #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786047694363` — 8/6/2026, 1:21:39 PM PT — 3 turns
+
+**Original task:**
+
+```
+#/emtskills lag
+
+build and ship end to end. make sure you test and fix along the way. leverage rule 267 and work on frankenstein executor as it's doctor during periods of waiting so no time is wasted
+
+I am still having problems with this that need to be resolved. There are other people that are having the same issue right now. So if you're gonna ask us to do something with our browser it's gonna be next year to impossible. This is something that needs to be resolved in the server level. And it's not just the page that you were troubleshooting. There are other serious issues that need to be tra
+```
+
+**Ideas referenced:** #178590, #19370, #21167, #2244, #2247, #2252, #2253, #23031 [executing], #23053 [executing], #23133 [executing], #23139 [executing], #23293 [executing], #23440, #23472, #23477, #23483, #23495 [executing], #23500 [executing], #23584, #23585, #23620, #23622, #23710, #23711, #23867 [proposed], #23878, #23880 [proposed], #23884 [proposed], #23885 [proposed], #23886 [deployed], #23920 [in_progress], #23925 [rejected], #23926 [rejected], #23927 [proposed], #23929 [rejected], #23930 [rejected], #23931 [proposed], #23932 [rejected], #23934 [in_progress], #23941 [executing], #23944 [executing], #23945 [proposed], #23947 [proposed], #23952 [proposed], #23954 [proposed], #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #3530, #3555, #3556, #3558
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786037557221` — 8/6/2026, 12:43:55 PM PT — 387 turns
 
 **Original task:**
 
@@ -139,7 +195,7 @@ I am still having problems with this that need to be resolved. There are other p
 You were right to push back, and you were right that testing it myself was the obvious move. I did that, and I reproduced your exact
 ```
 
-**Ideas referenced:** #16213, #178590, #178600, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19370, #22850, #23031 [executing], #23053 [executing], #23133 [executing], #23139 [executing], #23293 [executing], #23378 [approved], #23429, #23495 [executing], #23500 [executing], #23506, #23867 [proposed], #23880 [proposed], #23884 [proposed], #23885 [proposed], #23886 [deployed], #23925 [rejected], #23926 [rejected], #23927 [proposed], #23929 [rejected], #23930 [rejected], #23931 [proposed], #23932 [rejected], #23934, #23941 [executing], #23944 [executing], #23945 [proposed], #23947 [proposed], #23952 [proposed], #23954 [proposed], #23975 [executing], #23976 [executing], #23981 [in_progress], #711392
+**Ideas referenced:** #16213, #178590, #178600, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19370, #22850, #23031 [executing], #23053 [executing], #23133 [executing], #23139 [executing], #23293 [executing], #23378 [approved], #23428, #23429, #23468, #23495 [executing], #23500 [executing], #23506, #23867 [proposed], #23880 [proposed], #23884 [proposed], #23885 [proposed], #23886 [deployed], #23925 [rejected], #23926 [rejected], #23927 [proposed], #23929 [rejected], #23930 [rejected], #23931 [proposed], #23932 [rejected], #23934, #23941 [executing], #23944 [executing], #23945 [proposed], #23947 [proposed], #23952 [proposed], #23954 [proposed], #23975 [executing], #23976 [executing], #23981 [in_progress], #24019, #24025 [proposed], #24026 [executing], #24027 [executing], #24028 [executing], #24030 [in_progress], #711392
 
 **Last PICKUP PROMPT:**
 
@@ -186,7 +242,7 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </attempt_completion>
 ```
 
-### `1786036273485` — 8/6/2026, 12:32:38 PM PT — 389 turns
+### `1786036273485` — 8/6/2026, 12:40:00 PM PT — 426 turns
 
 **Original task:**
 
@@ -208,34 +264,38 @@ Raising curl 240->600 and pool max_execution_time 120->600 was correct and neces
 **Last PICKUP PROMPT:**
 
 ```
-), no orphaned 'running' rows.
+meout (read-only this session)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #23974 — instrument payload token bytes at Argus dispatch.
+Pick up task #259 — Argus over-texting: #23852 routing fix (token instrumentation prerequisite delivered). 
 
-Where we left off (verified 2026-08-06 11:32 PT):
-- #23941 drain V2 already deployed + live-verified in cron_argus_task_worker.php (0 fatals).
-- #23973 sweep done (status=documentation), #23879 timeout-floor resolved (all 600).
-- #23974 instrument site documented: lines 276-289 build `$__payloadArr` (action terminal_query, query, worker_token, worker_role, worker_email + attachments/session), line 289 does `$jobs[id] = ['row'=>$t,'payload'=>json_encode($__payloadArr)]`, line ~316 is the DISPATCH echo.
+Where we left off (verified 2026-08-06 12:39 PT):
+- #23974 instrument is live: DISPATCH line shows `-- prompt 1185 total bytes` per batch.
+- Worker drain V2 stable (4 tasks processed, 0 fatals).
+- Falsy-zero sweep complete (0 additional bugs).
+- Timeout floor resolved (both worker curl + argus pool at 600s).
 
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #23974 — [proposed] Instrument payload bytes: add `prompt_bytes=>strlen($__payloadJson)` to each `$jobs[]` entry, then emit `array_sum(array_column($jobs,'prompt_bytes'))` in the DISPATCH echo line. USE git clone + local edit + deploy (NOT MCP write_server_file — it hit the JSON-arg transport limit). Deploy, then run one seeded test to confirm `-- prompt N total bytes` appears in /var/log/argus_task_worker.log.
-2. #23852 — [proposed] Routing violation fix (needs #23974's token observation first).
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #23974 [deployed] — Instrument delivered and live-verified. Prerequisites for #23852 satisfied.
+2. #23852 [proposed] — Routing violation fix. NOW UNBLOCKED: prompt bytes are captured at dispatch. Compare prompt-bytes-per-task against model cost (llm-locate from alltastic_api.php ~4936-4998). Flag when ExpensiveModel answers SimpleCountQuestion.
+3. #23878 [queued] — FPM full restart (human-only: Ruben must explicitly authorize).
 
 Reference IDs:
-- Ticket: n/a (Argus over-texting investigation, approved via feedback)
-- Ideas filed: #23973 [documentation], #23974 [proposed], #23879 [superseded], #23852 [proposed]
-- Files touched: routes/cron_argus_task_worker.php, docs/HANDOFF_NOTES.md, /tmp/drain_p1, /tmp/drain_p2, /tmp/drain_splice.py, /tmp/instr_23974.py
+- Ticket: #259
+- Ideas filed: #23973 [documentation], #23974 [deployed]
+- Files touched: cron_argus_task_worker.php (drain function + prompt_bytes instrument)
+- Backups: cron_argus_task_worker.php.bak-20260806-predrain (V1), cron_argus_task_worker.php.bak-20260806-batch16 (pre-all), drain_p1/p2 splice files
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
+
 </result>
 </attempt_completion>
 ```
 
-### `1785986098106` — 8/6/2026, 12:32:23 PM PT — 1015 turns
+### `1785986098106` — 8/6/2026, 12:33:42 PM PT — 1020 turns
 
 **Original task:**
 
@@ -4230,53 +4290,6 @@ Reference IDs:
 - Ideas filed: #22085 (name guard), #22106 (William corrective email), #22107 (sweep complete)
 - Files touched: /var/www/emtskills/lib/SafeGreetingName.php, /var/www/emtskills/lib/ai_ticket_agent.php:5786, /var/www/emtskills/lib/ai_ticket_agent_exam_extension_handler.php:196, /var/www/emtskills/lib/ExamTechnicalExtensionHandler.php:79, /var/www/emtskills/tickets/lib/notification_sender.php:1125
 - Files verified-as-legitimate: /var/www/emtskills/tickets/ai_diagnostic.php:2381
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785787253230` — 8/3/2026, 1:22:09 PM PT — 100 turns
-
-**Original task:**
-
-```
-When I click on "Login As Student Link" for example: https://emsuniversity.com/emtskills/externship/student_portal.php?view_token=9c6f330f5e080ad1a0e000b8056eb3e982dd81cd1e9f4c1653668e3bc488f83f 
-
- from here: https://emsuniversity.com/emtskills/admin_profile.php
-
-Needs to automatically staff into that student's account like it did before. The auto-login here to the student accounts seems to have been removed or the token is bad or something is off
-```
-
-**Ideas referenced:** #128203, #18836, #22091 [deployed], #9662
-
-**Last PICKUP PROMPT:**
-
-```
-s. Deployed and verified.
-
----
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task: Login As Student auto-login for failed/dropped students -- #22091 [deployed]
-
-Where we left off (verified 2026-08-03 13:20 PT):
-- Fix deployed to /var/www/emtskills/externship/student_portal.php: removed fail_date/drop_date/transfer_date/is_duplicate filters from admin view_token student lookup
-- Token validation for 25914T-12 (Jayden Planz, fail_date=2025-10-30) confirmed working, dashboard loads
-- Normal OTP login unaffected
-- PHP-FPM reloaded
-- Backup at /tmp/sp_fix_backup.php
-- Handoff notes updated
-
-Open threads to drive next:
-(human-only decision, no idea) No open threads remaining. Fix is deployed and verified.
-
-Reference IDs:
-- Idea filed: #22091 [deployed]
-- Files touched: /var/www/emtskills/externship/student_portal.php
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════

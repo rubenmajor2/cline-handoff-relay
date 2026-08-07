@@ -124,15 +124,19 @@ Scan each subagent prompt. If it contains any of these, the dispatch is doomed �
 
 Self-check: *"Does this subagent prompt tell it to FETCH something (MCP/web/server), or to REASON over something I'm pasting in?"* If FETCH → wrong; fetch it myself first. If REASON-over-pasted-text or local-file-read/grep → correct.
 
+**MECHANICAL SCAN (do this, don't just intend it).** The prose above is judgment; this is a string test. Before EVERY `use_subagents` call, scan each prompt for these literals — case-insensitive, substring match:
+
+`curl` · `http://` · `https://` · `web search` · `search the web` · `ssh ` · `use the mcp` · `use_mcp_tool` · `emsu-operations` · `ruben-orchestrator` · `fleet-state` · `query the database` · `check the server`
+
+ANY hit = doomed dispatch. Fetch that data inline first, paste it in, then dispatch. Measured 2026-08-06 (idea #24241): ALL 27 subagent runs at 50+ tool calls were this violation. Worst burned **177 tool calls** looping on `curl`/arxiv fetches it cannot perform, holding its fan-out ~41 min (wall-clock = slowest member). Runaway tasks carried 37-140 banned-fetch signals each. The 75-call extension cap bounds the damage; it does not prevent the waste.
+
 ### Exploratory research is inline-only, never subagent-dispatched
 
-There's a phase subagents cannot help with: **when you don't yet know what you're looking for** — you're forming the question, not answering one. This is different from bounded research (rule 00's normal case), where the sources/scope are already known.
+There's a phase subagents cannot help with: **when you don't yet know what you're looking for** — you're forming the question, not answering one. Bounded research (the normal case) has known sources; this does not.
 
-If the task is "figure out what I even need to look at" — the shape is iterative: fetch → read → decide what to fetch next based on what you just read → repeat. Subagents have no fetch tools (see above), so telling one to "go figure out what's relevant" is an instant fetch-then-paste violation waiting to happen — it can't iterate on live data itself.
+If the task is "figure out what I even need to look at", the shape is iterative: fetch → read → decide what to fetch next → repeat. Subagents have no fetch tools, so telling one to "go figure out what's relevant" is a fetch-then-paste violation waiting to happen.
 
-**The test:** do you already know the bounded, fixed set of sources (specific URLs, specific files, specific query results)? If yes → fetch them yourself, paste in, dispatch subagents to synthesize/compare in parallel (the normal fetch-then-paste flow above). If no — you're still discovering what's even out there — that discovery phase MUST stay inline, sequential, in the parent window, until it converges to a concrete bounded scope. Only THEN does dispatch become legal.
-
-Same principle applies to the async Orchestrator/Executor lever (rule 267) — exploratory/open-ended discovery can't be offloaded there either, for the identical reason (no mid-chain feedback channel to redirect based on what was found).
+**The test:** do you already know the bounded, fixed set of sources? If yes → fetch them, paste in, dispatch to synthesize in parallel. If no → that discovery phase stays inline and sequential in the parent window until it converges to a concrete scope. Only THEN is dispatch legal. Same applies to the async Orchestrator/Executor lever (rule 267), for the identical reason.
 
 ## Self-check
 

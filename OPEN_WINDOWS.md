@@ -6,16 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/6/2026, 10:53:32 PM PT | window: last 72h | 117 tasks | index total 521 (parsed 4, cached 517)
+Generated: 8/6/2026, 11:53:32 PM PT | window: last 72h | 116 tasks | index total 521 (parsed 0, cached 521)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786010979248` | 8/6/2026, 10:53:26 PM | 931 | 1774KB | Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to |
-| `1786059773410` | 8/6/2026, 10:53:15 PM | 91 | 300KB | #Baseline Tempe Loan |
-| `1786060260487` | 8/6/2026, 10:53:09 PM | 601 | 1511KB | frankenstein-llm subagents experiencing delay. Are those on deepseek like they should be?  |
-| `1786081573518` | 8/6/2026, 10:52:58 PM | 35 | 148KB | Whiy is this task 502, we need to stop with the 502s: |
-| `1786066201493` | 8/6/2026, 10:11:51 PM | 176 | 462KB | All three done. The wrapper wiring turned up another silent-blindness bug, and the deadman |
-| `1785954856277` | 8/6/2026, 10:10:25 PM | 428 | 2292KB | #CFA |
+| `1786057314451` | 8/6/2026, 11:16:44 PM | 452 | 2522KB | I keep getting this message every 15 minutes and is it fixed or not? |
+| `1786066201493` | 8/6/2026, 11:06:06 PM | 284 | 1527KB | All three done. The wrapper wiring turned up another silent-blindness bug, and the deadman |
+| `1786060260487` | 8/6/2026, 11:03:04 PM | 642 | 1617KB | frankenstein-llm subagents experiencing delay. Are those on deepseek like they should be?  |
+| `1786010979248` | 8/6/2026, 11:02:06 PM | 986 | 1851KB | Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to |
+| `1785954856277` | 8/6/2026, 11:00:32 PM | 478 | 2369KB | #CFA |
+| `1786081573518` | 8/6/2026, 11:00:28 PM | 70 | 265KB | Whiy is this task 502, we need to stop with the 502s: |
+| `1786059773410` | 8/6/2026, 10:54:22 PM | 96 | 318KB | #Baseline Tempe Loan |
 | `1786079281756` | 8/6/2026, 10:08:24 PM | 3 | 16KB | how long has the GLM been up |
 | `1786063627936` | 8/6/2026, 7:18:40 PM | 157 | 509KB | systems wide / what can i do to increase my own efficiency here. Here in cline, organizati |
 | `1786069048387` | 8/6/2026, 7:18:39 PM | 3 | 19KB | 3 iterations going, which one will be faster |
@@ -23,7 +24,6 @@ Generated: 8/6/2026, 10:53:32 PM PT | window: last 72h | 117 tasks | index total
 | `1786036273485` | 8/6/2026, 7:17:40 PM | 591 | 1147KB | #Argus  |
 | `1786068815556` | 8/6/2026, 7:16:56 PM | 6 | 8KB | test to first iteration |
 | `1786005641053` | 8/6/2026, 7:08:24 PM | 372 | 699KB | #GLM |
-| `1786057314451` | 8/6/2026, 7:04:13 PM | 316 | 1851KB | I keep getting this message every 15 minutes and is it fixed or not? |
 | `1786065775388` | 8/6/2026, 6:47:30 PM | 82 | 149KB | can you investigate and resolve this?  |
 | `1785953794202` | 8/6/2026, 6:19:29 PM | 584 | 1604KB | COPY_WINDOW_0_DATA_ACCURACY_AUDIT |
 | `1785954733601` | 8/6/2026, 6:12:23 PM | 422 | 806KB | #SLS MEGA |
@@ -126,13 +126,117 @@ Generated: 8/6/2026, 10:53:32 PM PT | window: last 72h | 117 tasks | index total
 | `1785807924524` | 8/4/2026, 2:07:44 AM | 108 | 458KB | I’m assuming TeamHub is currently blank because you’re doing something with it at the mome |
 | `1785821651406` | 8/4/2026, 1:48:58 AM | 522 | 3348KB | For Argus only: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser  |
 | `1785821481522` | 8/4/2026, 12:44:46 AM | 140 | 1104KB | pages at emsuniversity.com/emtskills appear to be loading very slowly. Why? |
-| `1785824593043` | 8/3/2026, 11:31:22 PM | 48 | 120KB | why is frankenstein-llm down? |
 
 ---
 
 ## Per-window detail
 
-### `1786010979248` — 8/6/2026, 10:53:26 PM PT — 931 turns
+### `1786057314451` — 8/6/2026, 11:16:44 PM PT — 452 turns
+
+**Original task:**
+
+```
+I keep getting this message every 15 minutes and is it fixed or not?
+```
+
+**Ideas referenced:** #10666, #11735, #12059, #12060, #12299, #1239, #12503, #12576, #12591, #12609, #12611, #12617, #12619, #12714, #1280, #12894, #12900, #13418, #1603, #16063, #16242, #16265, #16834, #177862, #177914, #1784, #18360, #18707, #19173, #19370, #20885 [queued], #20903, #21432, #21587, #21588, #21667, #21710, #21712, #2182, #21972, #22104, #22105, #2212, #22138, #22244, #22245, #22726, #22776, #23710, #23711, #23920 [in_progress], #23941 [in_progress], #23944 [in_progress], #23945, #23952, #23954, #23960, #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed], #24122 [deployed], #24230 [proposed], #24347 [proposed], #3093, #3378, #3590, #3822, #4516, #509402, #509403, #509463, #509687, #509688, #6978, #7126
+
+**Last PICKUP PROMPT:**
+
+```
+(file should be investigated).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — #24230 / #24347 KAIZEN classifier fallback: evaluate detection_pattern at line 4830
+
+Where we left off (verified 2026-08-06 23:16 PT):
+- #24122 [deployed] — stale_cron ignore-list + array_filter in cron_executor_health_alert.php. 7 phantom cron sources suppressed.
+- #24347 [proposed] — Implementation plan for classifier fallback (detection pattern evaluator in PHP context).
+
+Open threads to drive next:
+1. #24230 [proposed] — Open `/var/www/emtskills/lib/RubenExecutor.php`, locate line 4830. Before `return 'unclassified';`, query `failure_repair_recipes` with non-null `detection_pattern`. For each row, evaluate the detection pattern's string literals against `$errorText` (case-insensitive substring match). On first match, return `$row['failure_category']`. Write via `sudo -n sh -c 'cat > ...' << 'EOF'` (base64 patching has quote-sensitive issues — the SSH user has passwordless sudo).
+
+Reference IDs:
+- Ideas filed: #24122 [deployed], #24230 [proposed], #24347 [proposed]
+- Files touched: /var/www/emtskills/cron/cron_executor_health_alert.php, /var/www/emtskills/lib/RubenExecutor.php
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786066201493` — 8/6/2026, 11:06:06 PM PT — 284 turns
+
+**Original task:**
+
+```
+All three done. The wrapper wiring turned up another silent-blindness bug, and the deadman question has a clean answer.
+
+THE TWO WRAPPERS ARE WIRED, BUT ONE WAS LYING
+
+cleanup ran perfectly on the first try and just needed scheduling.
+
+block was the interesting one. It ran, exited 0, and reported "regressions=0" while reading absolutely nothing. Its table map named a column that does not exist on email_outbound_log (it wanted "body", the real column is "body_preview") and a table that does not exist at all (sms_outbound_log). Both failures were caught and logged as one-line notices, so the cro
+```
+
+**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16695 [awaiting_review], #16732, #1745, #178593, #18316, #18535, #19370, #23133, #23185, #23277 [executing], #23285 [executing], #23341 [executing], #23506 [proposed], #23710, #23711, #23920 [in_progress], #23945, #23952, #23954, #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed], #24176 [proposed], #24179, #24181 [proposed], #24191 [proposed], #24192, #24241, #24248 [proposed], #56975, #6172, #7048, #9042, #9159, #9222, #9501
+
+**Last PICKUP PROMPT:**
+
+```
+et cron: clean exit, no fatals
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1785939083137 — data accuracy audit, leak-presend set round.
+
+Where we left off (verified 2026-08-06 23:05 PT):
+- 4 items closed this round: 2 fixes deployed, 1 root-cause investigation complete, 1 discovery fully investigated
+- Deadman scanner running clean (*/10 www-data flock), currently scanning 0 transcripts/day correctly (the Vapi break is the real issue)
+- Fleet rebalancer fixed and running clean every 5 min (self-contained phases D/E/F/F-auto survive, A/C/F-promote skip)
+- Block wrapper running clean (last run 23:00, regressions=0, real scan)
+- Cleanup wrapper running clean (last run :25)
+- VAPI END-OF-CALL-REPORT THINNED: confirmed Vapi-side. Transcripts, recordings, summaries ALL empty since Aug 2. Webhook code correct. Not fixable in-vitro. Next step: check Vapi console for API version change, or build post-hoc transcript fetch
+- Ledger rows 8 (round 3 summary) and 9 (#24248 investigation) appended to admin_portal.cline_task_ledger
+
+Open threads to drive next:
+1. #23285 [executing] continue FOUR-CAUSE TRIAGE for guardrail wiring: for each of the 6 crons deployed/resurrected (leak_sweep, leak_presend, deadman_header, self_pause_demoter, daystrom_close_loop, deadman_scanner), verify: scheduled? loads? runs? target table exists? Bug library entry 2257 has cheapest-first order.
+2. #23277 [executing] remaining broken-require crons (9 listed, all files exist and lint clean): affirm_reconcile, cron_ai_stuck_quiz_reset_processor, cron_ai_watchdog, cron_cna_agent_draft_email, cron_emsu_corpus_realtime_ingest, cron_planner_truncation_decomposer, cron_ruben_staff_chat_triage, cron_vilt_pre_class_validator, ea_orphan_detector. Also cron_fleet_agent L71/L72 guard bypassed by unguarded requires at L1639/L10446.
+3. #23341 [executing] Drive backfill: verify invariant unlatch once drained (~14k pending, ~10h ETA at corrected 23.5/min rate).
+4. #24248 [investigated] Vapi end-of-call-report thinned — verify with Vapi console (API version changed?), or design server-side transcript fetch fallback. Also fix dead path in lib/voice_tool_invocation_gaps.php L25.
+5. #23506 [proposed] guided_json: LOW priority, garbage rate already 0%. Defer unless time permits.
+
+Reference IDs:
+- Idea statuses updated: #24191 [deployed], #24176 [deployed], #24248 [investigated, idle]
+- Filed this round: #24248 [investigated]
+- Executing: #23285 [executing], #23277 [executing], #23341 [executing]
+- Proposed/deferred: #23506 [proposed]
+- Bug library: entry 2257, 2234, 2226
+- Files touched: cron/cron_agent_deadman_scanner.php, /etc/cron.d/emsu-agent-deadman-scanner (new), cron/cron_fleet_dynamic_rebalancer.php (L13 file_exists guard), logs/voice_agent.log (373 end-of-call-reports logged)
+- Ledger: rows 8-9 in admin_portal.cline_task_ledger
+
+When done, append to admin_portal.cline_task_ledger and run order 66 per EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786060260487` — 8/6/2026, 11:03:04 PM PT — 642 turns
+
+**Original task:**
+
+```
+frankenstein-llm subagents experiencing delay. Are those on deepseek like they should be? They are slower I think than they should be. Can you look into this?
+```
+
+**Ideas referenced:** #10108, #10739, #10740, #11735, #11741, #11781, #11944, #11953, #12059, #12060, #12299, #12314, #12365, #12366, #12368, #12459, #12477, #12618, #12657, #12824, #12872, #12878, #13108, #13202, #13204, #13575, #13831, #13874, #16163, #16265, #16304, #16588, #16673, #16844, #16849 [needs_verify], #17166, #18312, #18326, #18720, #19370, #19653, #19925, #2050 [needs_verify], #2092, #22386, #22598, #22601, #23171, #23528, #23710, #23711, #23945, #23952, #23954, #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed], #24138 [proposed], #24144 [proposed], #24145 [proposed], #24156 [proposed], #24157 [proposed], #24164 [proposed], #24165 [proposed], #24166 [proposed], #24171 [proposed], #24173 [proposed], #24174 [proposed], #24175 [proposed], #24183 [proposed], #24186 [proposed], #24199 [proposed], #24200 [proposed], #24203 [proposed], #24206 [proposed], #24214 [proposed], #24218 [proposed], #24220 [proposed], #24229 [proposed], #24231 [proposed], #24239 [proposed], #24241 [proposed], #24242 [proposed], #24249 [proposed], #24335 [proposed], #6711, #6719
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786010979248` — 8/6/2026, 11:02:06 PM PT — 986 turns
 
 **Original task:**
 
@@ -140,32 +244,82 @@ Generated: 8/6/2026, 10:53:32 PM PT | window: last 72h | 117 tasks | index total
 Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to be expanded to make better.
 ```
 
-**Ideas referenced:** #000000, #0693, #12206, #128260, #16069, #162324, #16474, #16732, #16817, #17446, #177914, #1881, #1882, #18944, #18951, #19173, #19437, #19866, #22086, #2224, #2225, #23184, #23276, #23585, #23710 [proposed], #23711 [proposed], #23955 [deployed], #23989 [proposed], #2457, #2458, #2459, #251236, #2563, #2603, #2703, #32373, #334155, #33689, #3572, #374459, #374460, #4480, #4481, #4991, #6064, #7207, #7317, #7907, #8103, #819596, #8211, #9084, #9222, #9583, #9584, #9589, #9590, #9591, #9592, #9593, #9594, #9595, #9597, #9598
+**Ideas referenced:** #000000, #0693, #12206, #128260, #16069, #162324, #16474, #16732, #16817, #17446, #177914, #1881, #1882, #18944, #18951, #19173, #19437, #19866, #22086, #2224, #2225, #23184, #23276, #23585, #23710 [proposed], #23711 [proposed], #23955 [deployed], #23989 [proposed], #2457, #2458, #2459, #251236, #2563, #2603, #2703, #32373, #334155, #33689, #3572, #374459 [executing], #374460 [executing], #4480, #4481, #4991, #6064, #7207, #7317, #7907, #8103, #819596, #8211, #9084, #9222, #9583, #9584, #9589, #9590, #9591, #9592, #9593, #9594, #9595, #9597, #9598
 
 **Last PICKUP PROMPT:**
 
 ```
-g up. I'll implement this now.
+ytime traffic to prove itself.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #current — Fix callback phone extraction to use student profile fallback
+Pick up task #current — callback booking system monitoring & fix.
 
-Where we left off (verified 2026-08-06 22:14 PT):
-- #23710 [deployed] — Escalation dedup working (zero duplicates)
-- #23711 [deployed] — D3 empty-message suppression + URL pre-gate
-- #23989 [deployed] — Callback wiring for chat/voice/email, but detectAndBookCallback fails because extractPhoneNumber(message_text) returns null for messages without phone numbers
-- callback_intent_detector.php:58 `$resolvedPhone = $phone ?? extractPhoneNumber($text)` needs a student-profile phone lookup fallback
+Where we left off (verified 2026-08-06 23:02 PT):
+- `callback_bookings` table: 0 rows ever — system deployed but hasn't been triggered by traffic yet
+- Chat wiring at chat_widget_api.php:497-502 suppresses errors with @ prefix
+- 2 proactive offer rules in ai_compiled_rules (#374459, #374460) — active
+- detector functions load successfully from CLI
+- Chat widget: 34 sites healthy
 
 Open threads to drive next:
-1. #23989 [deployed] — Add student phone lookup: in detectAndBookCallback, if $resolvedPhone is null, query the students table by student_id (already passed) to get phone, then proceed
-2. #23989 [deployed] — Verify the fix with a manual test
+1. #23989 [deployed] — Check callback_bookings tomorrow during business hours; if still zero, remove @ suppression on detectAndBookCallback call and re-test
+2. #23989 [deployed] — If detector confirm-fires but DB insert fails, check collation mismatch utf8mb4_unicode_ci vs utf8mb4_general_ci in callback_bookings vs callback_slots tables
 
 Reference IDs:
-- Ticket: CFA 24h review
-- Ideas filed: #23710, #23711, #23989
-- Files touched: /var/www/emtskills/lib/callback_intent_detector.php, /var/www/emtskills/api/chat_widget_api.php, /var/www/emtskills/cron/cron_email_responder.php, /var/www/emtskills/api/voice/vapi_server_webhook.php
+- Ideas: #23710, #23711, #23989
+- Files: chat_widget_api.php, callback_intent_detector.php, ai_compiled_rules, cron_email_responder.php, vapi_server_webhook.php
+- Tables: callback_bookings, callback_slots, student_callback_requests
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+```
+
+### `1785954856277` — 8/6/2026, 11:00:32 PM PT — 478 turns
+
+**Original task:**
+
+```
+#CFA
+
+
+═══════════════════════════════════════════════
+PICKUP PROMPT: CFA HEALTH VALIDATION OWNER
+═══════════════════════════════════════════════
+Pick up CFA validation. Ruben's read is that the CFAs ARE working, so this is a VALIDATION task, not a restart task. Do NOT restart or reconfigure anything until the instrumentation question below is answered.
+
+MAJOR CONTEXT ADDED 2026-08-05 10:50 PT — A ROUTER BUG WAS BREAKING TOOL CALLS FLEET-WIDE:
+For most of this morning every tool-bearing request through LiteLLM returned HTTP 400 (53 validation errors: ('body','tools',N,'function') Field require
+```
+
+**Ideas referenced:** #12206, #1255, #128260, #14132, #15204, #16152, #16153, #16154, #16473, #16732, #16817, #17150, #17446, #177914, #18796 [deployed], #18848 [deployed], #18944, #18951, #19437, #19682, #20925, #21064, #21070 [ready_for_review], #22060, #22294 [deployed], #23050 [executing], #23054 [executing], #23122 [executing], #23184, #23207 [deployed], #23208 [proposed], #23209, #23225 [proposed], #23309 [proposed], #23316 [proposed], #23317 [deployed], #23466 [executing], #23493 [proposed], #24227 [proposed], #24339 [proposed], #24340 [proposed], #24341 [proposed], #2563, #2782, #3237, #32584, #3572, #4470, #4991, #5298, #5447, #5459, #5608, #5646, #6064, #6106, #6228, #6751, #7206, #7207, #7317, #7356, #7907, #8060, #8103
+
+**Last PICKUP PROMPT:**
+
+```
+vechat` → `livechat_messages`.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up CFA sweep/dispatch/struct repair — three verified root causes preventing three CFA tables from logging.
+
+Where we left off (verified 2026-08-06 23:00 PT):
+- Sweep: `cfa_raw_contacts` table does NOT exist in admin_portal — #24339 [proposed]
+- Dispatch: `_cfa_pdo()` undefined (should call `getCfaDispatchDb()`) — #24340 [proposed]
+- Struct: `livechat` table name wrong (should be `livechat_messages`) — #24341 [proposed]
+- All three ideas filed, awaiting Ruben approval for repair.
+
+Open threads to drive next:
+1. #24339 [proposed] — Sweep: CREATE cfa_raw_contacts table (or point sweep at real raw-contact source), then run cron_closure_pending_notifier, verify cfa_sweep_log > 0, check `cfa_raw_contacts` has rows and is populated correctly
+2. #24340 [proposed] — Dispatch: replace `_cfa_pdo()` with `getCfaDispatchDb()` at lines 38+134 of `cron/cron_parallel_cfa_dispatch.php`, then rerun dispatch cron, verify cfa_dispatch_log > 0, and validate `cfa_dispatch_log` rows on current backlog
+3. #24341 [proposed] — Struct: replace `FROM livechat` → `FROM livechat_messages` at line 90 of `cron/cron_cfa_struct_enforcer.php`, rerun, verify cfa_struct_gate_log > 0
+
+Reference IDs:
+- Ticket: CFA validation (continuous session)
+- Ideas filed: #24339, #24340, #24341
+- Files touched: /var/www/emtskills/cron/cron_cfa_access_sweep.php, /var/www/emtskills/lib/cfa_access_sweep.php, /var/www/emtskills/cron/cron_parallel_cfa_dispatch.php, /var/www/emtskills/lib/parallel_cfa_dispatch.php, /var/www/emtskills/cron/cron_cfa_struct_enforcer.php
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -173,7 +327,49 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786059773410` — 8/6/2026, 10:53:15 PM PT — 91 turns
+### `1786081573518` — 8/6/2026, 11:00:28 PM PT — 70 turns
+
+**Original task:**
+
+```
+Whiy is this task 502, we need to stop with the 502s:
+
+https://www.emsuniversity.com/emtskills/routes/argus_task_status.php?task=300
+```
+
+**Ideas referenced:** #16213, #19370, #22850, #23027, #23429, #23506, #23945, #24336 [proposed], #24337 [proposed], #24338 [proposed], #24342 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+a lightweight JS poll endpoint
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #24336 [proposed] - argus_task_status.php 502 investigation and pool routing fix.
+
+Where we left off (verified 2026-08-06 22:57 PT):
+- Task #24342 [proposed] is offloaded (finished 22:49:32), no longer 502ing.
+- Three ideas filed: #24336 [proposed], #24337 [proposed], #24338 [proposed].
+- Files: /var/www/emtskills/routes/argus_task_status.php, /etc/nginx/sites-enabled/emtskills, /etc/php/8.3/fpm/pool.d/argus.conf.
+
+Open threads to drive next (every item carries a real idea number):
+1. #24336 [proposed] - Edit /etc/nginx/sites-enabled/emtskills to add argus_task_status.php to the argus pool location block, run nginx -t, reload nginx.
+2. #24337 [proposed] - Edit /etc/php/8.3/fpm/pool.d/argus.conf to change request_terminate_timeout from 90 to 120, reload php8.3-fpm.
+3. #24338 [proposed] - Add a ?poll=1 endpoint to argus_task_status.php returning JSON status row, switch the page to a lightweight JS poll instead of the full-page meta-refresh.
+
+Reference IDs:
+- Tickets: none.
+- Ideas filed: #24336 [proposed], #24337 [proposed], #24338 [proposed], #24342 [proposed].
+- Files touched: none (investigation only).
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786059773410` — 8/6/2026, 10:54:22 PM PT — 96 turns
 
 **Original task:**
 
@@ -196,189 +392,40 @@ I just received the list of questions from the underwriter. Could you please res
 **Last PICKUP PROMPT:**
 
 ```
- then I can send via Postmark.
+seidel@calbt.com via Postmark.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #1785907561329 - Baseline Tempe loan - draft response to CBT underwriter
+Pick up task #1785907561329 - Baseline Tempe loan to CBT underwriter
 
-Where we left off (verified 2026-08-06 18:34 PT):
-- Google Drive doc created + verified: CBT_Baseline_Tempe_Loan_Underwriter_Answers.md at https://drive.google.com/file/d/1YTwzCoASZR0VIILKXzk2HtatKicBV5Tt/view (14 questions, myFICO instructions, Alma/Alan CPA flags, Postmark send plan)
-- Desktop draft: /Users/rubenmajor/Desktop/DRAFT_Response_Kristall_Seidel_CBT_Baseline_Tempe.md
+Where we left off (verified 2026-08-06 22:53 PT):
+- Final status tracker in Google Drive: https://drive.google.com/file/d/1GA_RKU1qKuQPP8Z1GLHxrcq126CKH0i7/view (10 answered, 5 pending)
+- Idea #24197 updated to in_progress
 
-Open threads to drive next (EVERY item has a real filed idea number):
-1. #24197 [blocked] - Ruben fills 5 bracketed items (Q3 personal property, Q5 EMS Infinity LLC, Q11 occupancy, Q13 ad cut, Q15 myFICO data)
-2. #24198 [blocked] - Alma asks Alan (CPA): 2025 W2s + extension, affiliate tax returns + debt schedules, $1.2M shareholder loan explanation
-3. #24201 [blocked] - Locate lease agreements + Kristall's debt schedule template
+Open threads to drive next (EVERY item has a real idea #):
+1. #24197 [blocked — pending Ruben] — Q1 (Alma→Alan), Q2 (Ruben+Jen), Q4 (Ruben clarify), Q8 (Ruben confirm SBA), Q15 (myFICO)
+2. #24198 [blocked] — Alma asks Alan (CPA): W2s + extension + affiliate financials
+3. #24201 [blocked] — Locate lease agreements + debt schedule template
 
 Reference IDs:
 - Ideas filed: #24197 [blocked], #24198 [blocked], #24201 [blocked]
-- Files touched: /Users/rubenmajor/Desktop/DRAFT_Response_Kristall_Seidel_CBT_Baseline_Tempe.md, Google Drive doc 1YTwzCoASZR0VIILKXzk2HtatKicBV5Tt
+- Drive docs: 1GA_RKU1qKuQPP8Z1GLHxrcq126CKH0i7 (status tracker), 1YTwzCoASZR0VIILKXzk2HtatKicBV5Tt (original draft)
+- Desktop: /Users/rubenmajor/Desktop/DRAFT_Response_Kristall_Seidel_CBT_Baseline_Tempe.md
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
 <task_progress>
 - [x] Read handoff notes and local Desktop files (SBA narrative, PFS)
-- [x] Search Google Drive for CBT/loan docs (found SBA 1919, LOI, PPP apps, W-9, PFS, Lynn emails)
-- [x] Extract PFS contents
-- [x] Draft comprehensive reply covering all 14 questions
-- [x] Create Google Drive doc with full answers (verified live)
-- [x] Add myFICO instructions into the doc for Question 15
-- [x] Flag CPA items as "Alma can ask Alan" for items 1, 4, 14
-- [x] Add Postmark send plan to the doc
+- [x] Search Google Drive for CBT/loan docs (SBA 1919, LOI, PPP apps, W-9, Lynn emails)
+- [x] Extract PFS contents (Section 1 filled, Section 2 blank, $200K undescribed)
+- [x] Draft reply covering all 14 questions at Desktop .md
+- [x] Create Google Drive doc with answers
+- [x] Update with Alma's answers + status tracker (10 done, 5 pending)
+- [x] Add myFICO instructions for Q15
+- [x] Flag CPA items "Alma asks Alan"
 - [x] File 3 follow-up ideas (#24197, #24198, #24201)
 </task_progress>
-</attempt_completion>
-```
-
-### `1786060260487` — 8/6/2026, 10:53:09 PM PT — 601 turns
-
-**Original task:**
-
-```
-frankenstein-llm subagents experiencing delay. Are those on deepseek like they should be? They are slower I think than they should be. Can you look into this?
-```
-
-**Ideas referenced:** #10108, #10739, #10740, #11735, #11741, #11781, #11944, #11953, #12059, #12060, #12299, #12314, #12365, #12366, #12368, #12459, #12477, #12618, #12657, #12824, #12872, #12878, #13108, #13202, #13204, #13831, #13874, #16163, #16265, #16304, #16588, #16844, #16849 [needs_verify], #18312, #18326, #18720, #19370, #19653, #19925, #2050 [needs_verify], #2092, #22386, #22598, #22601, #23171, #23710, #23711, #23945, #23952, #23954, #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed], #24138 [proposed], #24144 [proposed], #24145 [proposed], #24156 [proposed], #24157 [proposed], #24164 [proposed], #24165 [proposed], #24166 [proposed], #24171 [proposed], #24173 [proposed], #24174 [proposed], #24175 [proposed], #24183 [proposed], #24186 [proposed], #24199 [proposed], #24200 [proposed], #24203 [proposed], #24206 [proposed], #24214 [proposed], #24218 [proposed], #24220 [proposed], #24229 [proposed], #24231 [proposed], #24239 [proposed], #24241 [proposed], #24242 [proposed], #24249 [proposed], #24335 [proposed], #6711, #6719
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786081573518` — 8/6/2026, 10:52:58 PM PT — 35 turns
-
-**Original task:**
-
-```
-Whiy is this task 502, we need to stop with the 502s:
-
-https://www.emsuniversity.com/emtskills/routes/argus_task_status.php?task=300
-```
-
-**Ideas referenced:** #16213, #22850, #23027, #23429, #23506
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786066201493` — 8/6/2026, 10:11:51 PM PT — 176 turns
-
-**Original task:**
-
-```
-All three done. The wrapper wiring turned up another silent-blindness bug, and the deadman question has a clean answer.
-
-THE TWO WRAPPERS ARE WIRED, BUT ONE WAS LYING
-
-cleanup ran perfectly on the first try and just needed scheduling.
-
-block was the interesting one. It ran, exited 0, and reported "regressions=0" while reading absolutely nothing. Its table map named a column that does not exist on email_outbound_log (it wanted "body", the real column is "body_preview") and a table that does not exist at all (sms_outbound_log). Both failures were caught and logged as one-line notices, so the cro
-```
-
-**Ideas referenced:** #16695 [awaiting_review], #178593, #19370, #23185, #23277 [executing], #23285 [executing], #23341 [executing], #23506 [proposed], #23710, #23711, #23920 [in_progress], #23945, #23952, #23954, #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed], #24176 [proposed], #24179, #24181 [proposed], #24191 [proposed], #24192, #24241, #24248 [proposed], #56975, #7048
-
-**Last PICKUP PROMPT:**
-
-```
-nly appears after the fix. All crons are healthy.
-
-Now let me finalize with the PICKUP PROMPT.
-
-<attempt_completion>
-<result>
-Done. Two ideas deployed, one discovery filed, ledger row appended.
-
-#24191 [deployed] — Deadman voice promise scanner: 3 silent-blindness bugs fixed.
-- Table voice_ai_transcripts → voice_call_log (real store: 27,500 rows, 24,753 transcript-bearing)
-- Columns: transcript_text→transcript, session_id→call_id, agent_source→vapi_assistant_id
-- Call signature: logDeadmanPromise was getting PDO as $source (wrong arg order); fixed
-- Scheduled /etc/cron.d/emsu-agent-deadman-scanner every 10 min as www-data with flock
-- Dry-run verified reading 204 real transcripts from 7-day window, 0 promises detected (correct)
-- Downstream views safe: filter on issue_class only, never branch on agent_source
-
-#24176 [deployed] — Fleet dynamic rebalancer fatal fixed.
-- Cron was NOT inert — was scheduled every 5 min, hard-fatal at line 13 (require_once fleet_helpers.php → file not found, not a git repo, no backup)
-- Made require_once file_exists-conditioned; phases A/C/F-promote skip gracefully
-- Phases D/E/F-auto are self-contained in the cron file and continue firing
-- Verified: runs as www-data, exit 0, no more fatal error spam
-- Prior 114KB log is now growing with clean "fleet_helpers missing — skipping" notices only
-
-#24248 [proposed] — Voice transcripts arriving empty since Aug 2.
-- 339 calls on Aug 6, all LENGTH(transcript)=0
-- Non-empty only July 30-31 (178+23 rows). 3 non-empty Aug 1, zero thereafter
-- Calls still creating rows (call_id, vapi_assistant_id, duration_seconds present)
-- Deadman scanner correctly skips empties — this is a VAPI ingestion issue, not scanner
-- Root cause needs investigation (webhook change? storage truncation? pipeline break?)
-
-Everything else holding:
-- Block wrapper: running clean, `audit since=22:10 regressions=0` (real scan, not pre-fix silent-zero)
-- Cleanup wrapper: fired at 21:25, log healthy
-- Fleet cron: runs clean every 5 min
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1785939083137 — data accuracy audit, leak-presend set round.
-
-Where we left off (verified 2026-08-06 22:10 PT):
-- All wrapped crons verified healthy: block @22:10 (real scan, not silent-zero), cleanup @21:25, both www-data-owned logs
-- Deadman scanner #24191 [deployed]: 3 silent-blindness bugs fixed, scheduled every 10 min, dry-run verified reading 204 real transcripts. agent_deadman_log table still empty (0 rows expected — no enrollment promises detected in current window)
-- Fleet dynamic rebalancer #24176 [deployed]: line 13 fatal fixed, now runs clean exit 0 instead of hard-fatal every 5 min. Self-contained phases D/E/F still firing. Phases A/C/F-promote remain unrecoverable (fleet_helpers.php lost, not a git repo, no backup) — grace-skipped.
-- FILE: #24248 [proposed] voice_call_log transcripts arriving empty since Aug 2 (339 calls today, all LENGTH=0). Potential broken VAPI transcription. Non-empty transcripts only Jul 30-31. Separately triage this.
-- Ledger row 8 appended to admin_portal.cline_task_ledger
-
-Open threads to drive next:
-1. #23285 [executing] continue guardrail wiring with four-cause triage (scheduled? loads? runs? target table exists?). Bug library entry 2257 has cheapest-first order. Checklist: the 4 existing fixes (leak_sweep, leak_presend, deadman, self_pause_demoter) plus the 2 crons resurrected (daystrom_close_loop). Verify each against the triage.
-2. #23277 [executing] 
-```
-
-### `1785954856277` — 8/6/2026, 10:10:25 PM PT — 428 turns
-
-**Original task:**
-
-```
-#CFA
-
-
-═══════════════════════════════════════════════
-PICKUP PROMPT: CFA HEALTH VALIDATION OWNER
-═══════════════════════════════════════════════
-Pick up CFA validation. Ruben's read is that the CFAs ARE working, so this is a VALIDATION task, not a restart task. Do NOT restart or reconfigure anything until the instrumentation question below is answered.
-
-MAJOR CONTEXT ADDED 2026-08-05 10:50 PT — A ROUTER BUG WAS BREAKING TOOL CALLS FLEET-WIDE:
-For most of this morning every tool-bearing request through LiteLLM returned HTTP 400 (53 validation errors: ('body','tools',N,'function') Field require
-```
-
-**Ideas referenced:** #12206, #1255, #128260, #14132, #15204, #16152, #16153, #16154, #16473, #16732, #16817, #17150, #17446, #177914, #18796 [deployed], #18848 [deployed], #18944, #18951, #19437, #19682, #20925, #21064, #21070 [ready_for_review], #22060, #22294 [deployed], #23050 [executing], #23054 [executing], #23122 [executing], #23184, #23207 [deployed], #23208 [proposed], #23209, #23225 [proposed], #23309 [proposed], #23316 [proposed], #23317 [deployed], #23466 [executing], #23493 [proposed], #24227 [proposed], #2563, #2782, #3237, #32584, #3572, #4470, #4991, #5298, #5447, #5459, #5608, #5646, #6064, #6106, #6228, #6751, #7206, #7207, #7317, #7356, #7907, #8060, #8103
-
-**Last PICKUP PROMPT:**
-
-```
-y 122, heartbeat 364, struct 0
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #0 — CFA Health Validation wrap-up.
-
-Where we left off (verified 2026-08-06 22:09 PT):
-- #21070 [closed]: cfa_auto_resolve_log table dropped, spec archived, ideas updated
-- #23493 [resolved]: decision complete
-- #23466 [deployed]: closure-pending notifier running + verified (76 timers, 50 auto-closed)
-- #23309 [deployed]: payment auto-resolve debugged — working correctly, 0 pending
-- #23316 [deployed/partial]: 201 of 563 NULL-intake backfilled; 64 remaining all contactable
-- 5 orphaned CFA crons registered; 2 CFA tables still 0-row (sweep, dispatch — may need deeper triggers)
-- #24227 [superseded]: bulk-close 62 verification error — corrected, all contactable
-
-Open threads to drive next:
-1. #24227 [superseded] — 64 NULL-intake tickets: all have created_by_email, Ruben ruled contactable. No action. Accept as baseline.
-2. CFA sweep/dispatch tables still 0-row: investigate if these tables need dependent conditions (cfa_access_drafts table missing? cfa_agent_queue empty?).
-
-Reference IDs:
-- Ideas: #23207, #23309, #23466, #21070, #23493, #23316, #24227
-- Files: cron_closure_pending_notifier.php, cron_cfa_auto_resolve.php, /etc/cron.d/emsu-closure-pending-notifier, /etc/cron.d/emsu-cfa-payment-auto-resolve
-- Ledger: /var/www/emtskills/cline_task_ledger.md (updated 2026-08-06 19:17)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 
@@ -568,60 +615,6 @@ A correction first, because I used the word loosely. There are two different fai
 **Ideas referenced:** #16523, #16578, #1685, #1687, #1688 [resolved], #1705, #1706, #1754, #1755, #178593, #1896, #19173, #19218 [rejected], #19230 [executing], #19239 [rejected], #19261 [executing], #1962, #1986, #1988, #1989 [outdated], #1991, #2014, #2084, #2085, #2147 [investigating], #2249 [needs_verify], #2254 [deployed], #2258, #2259, #2261, #22897 [executing], #23050 [executing], #23056 [executing], #23157 [executing], #23159 [executing], #23169 [executing], #23283 [executing], #23326 [executing], #23354 [deployed], #24172 [proposed], #24217 [proposed], #24240 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786057314451` — 8/6/2026, 7:04:13 PM PT — 316 turns
-
-**Original task:**
-
-```
-I keep getting this message every 15 minutes and is it fixed or not?
-```
-
-**Ideas referenced:** #11735, #12059, #12060, #12299, #12503, #12576, #1603, #16242, #18707, #19173, #19370, #20885 [queued], #20903, #21432, #21587, #21588, #21667, #21710, #21712, #22104, #22105, #22138, #22244, #22245, #22726, #22776, #23710, #23711, #23920 [in_progress], #23941 [in_progress], #23944 [in_progress], #23945, #23952, #23954, #23960, #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed], #24122 [deployed], #24230 [proposed], #3590, #4516, #509402, #509403, #509463, #509687, #509688
-
-**Last PICKUP PROMPT:**
-
-```
-ose are intentionally offline.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #24122 — [EMSU Health] stale_decisions stale_cron alerts rate-limited, KAIZEN pipeline verified
-
-Where we left off (verified 2026-08-06 19:00 PT):
-- `cron_executor_health_alert.php`: RATE_LIMIT_MINUTES 15→120, sent_at schema mismatch fixed (DEFAULT CURRENT_TIMESTAMP + backfill).
-- 17:15 run verified: sms_sent=0 for both stale_decisions and stale_cron — throttle working.
-- argus_feed_kaizen_recipes.php: 3 column errors fixed, verified 2 clean runs, seeds 3 recipes.
-- #20885 [executing]: marked deployed — pipeline IS connected (96K recipe fires, executor consults failure_repair_recipes via KaizenAdaptiveRecipe).
-- #24230 [proposed]: KAIZEN classifier returns unclassified for 95K/96K fires — named recipes never matched.
-- Stale_cron crons (zoom_wrong_room_redirect, check_skills_integrity, etc.) 375+ min stale — need investigation.
-
-Open threads to drive next:
-1. #24230 [proposed] — Fix KAIZEN failure classifier (RubenExecutor::classifyFailure line 4663) so it matches failures to the 273 failure_repair_recipes categories instead of defaulting to unclassified.
-2. #24122 [proposed] — Investigate stale_cron check crons (zoom_wrong_room_redirect, check_skills_integrity, cert_date_watchdog, etc., all 375+ min stale) and either repair or suppress alerts.
-
-Reference IDs:
-- Ticket: none
-- Ideas filed: #24122 [proposed], #20885 [executing], #24230 [proposed]
-- Files touched: /var/www/emtskills/cron/cron_executor_health_alert.php, /var/www/emtskills/cron/cron_argus_feed_kaizen_recipes.php, executor_health_alert_log table
-
-When done, append cline_task_ledger.md per rule 07, run order 66 per EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Fix argus_feed_kaizen column errors (deployed + verified)
-- [x] Identify recurrence source — cron_executor_health_alert.php emitting stale_decisions/stale_cron to chat 3899
-- [x] Fix rate limit: 15→120 min
-- [x] Fix throttle schema: sent_at DEFAULT CURRENT_TIMESTAMP
-- [x] Verify throttle works: 17:15 run sms_sent=0 (skipped)
-- [x] Mark #20885 deployed + verify pipeline connected
-- [x] File #24230 [proposed] for the classifier improvement
-- [ ] Optional: fix the stale_cron crons listed in the alert
-</task_progress>
-</attempt_completion>
-```
 
 ### `1786065775388` — 8/6/2026, 6:47:30 PM PT — 82 turns
 
@@ -4233,15 +4226,3 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
-
-### `1785824593043` — 8/3/2026, 11:31:22 PM PT — 48 turns
-
-**Original task:**
-
-```
-why is frankenstein-llm down?
-```
-
-**Ideas referenced:** #16648, #17202, #17203, #17205, #178513, #18820, #1908, #2045, #2169, #2175 [deployed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

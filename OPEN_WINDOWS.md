@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/7/2026, 10:38:46 AM PT | window: last 72h | 105 tasks | index total 525 (parsed 7, cached 518)
+Generated: 8/7/2026, 11:38:46 AM PT | window: last 72h | 96 tasks | index total 525 (parsed 0, cached 525)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786123588626` | 8/7/2026, 10:38:33 AM | 127 | 376KB | telephony is not working for incoming calls - it's telling people a debug message. Please  |
+| `1786123588626` | 8/7/2026, 11:06:14 AM | 232 | 568KB | telephony is not working for incoming calls - it's telling people a debug message. Please  |
 | `1786088761151` | 8/7/2026, 10:36:29 AM | 134 | 529KB | Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversit |
 | `1786057314451` | 8/7/2026, 10:24:23 AM | 588 | 3844KB | I keep getting this message every 15 minutes and is it fixed or not? |
 | `1786036273485` | 8/7/2026, 10:20:35 AM | 818 | 1565KB | #Argus  |
@@ -106,21 +106,12 @@ Generated: 8/7/2026, 10:38:46 AM PT | window: last 72h | 105 tasks | index total
 | `1785868208238` | 8/4/2026, 12:49:31 PM | 322 | 689KB | #GLM  |
 | `1785869498305` | 8/4/2026, 12:37:31 PM | 162 | 508KB | Ruben Orchestrator MCP is offline. This is odd considering. Take a look at MCP Troubleshoo |
 | `1785869837093` | 8/4/2026, 11:57:54 AM | 4 | 18KB | I have been told you died. Is that false? |
-| `1785865689091` | 8/4/2026, 11:27:54 AM | 86 | 933KB | ——[COPY]—— |
-| `1785860435008` | 8/4/2026, 11:26:53 AM | 470 | 1297KB | #GLM |
-| `1785865813454` | 8/4/2026, 10:56:29 AM | 21 | 287KB | ——[COPY]—— |
-| `1785865665427` | 8/4/2026, 10:54:03 AM | 15 | 225KB | Write a complete technical design document, minimum 3000 words, for migrating a 744B-param |
-| `1785865794494` | 8/4/2026, 10:53:51 AM | 13 | 127KB | ——[COPY]—— |
-| `1785865716440` | 8/4/2026, 10:53:37 AM | 15 | 156KB | —[COPY]—— |
-| `1785865777611` | 8/4/2026, 10:53:31 AM | 11 | 142KB | ——[COPY]—— |
-| `1785865742982` | 8/4/2026, 10:52:39 AM | 9 | 98KB | ——[COPY]—— |
-| `1785865761749` | 8/4/2026, 10:52:11 AM | 7 | 39KB | —[COPY]—— |
 
 ---
 
 ## Per-window detail
 
-### `1786123588626` — 8/7/2026, 10:38:33 AM PT — 127 turns
+### `1786123588626` — 8/7/2026, 11:06:14 AM PT — 232 turns
 
 **Original task:**
 
@@ -128,7 +119,7 @@ Generated: 8/7/2026, 10:38:46 AM PT | window: last 72h | 105 tasks | index total
 telephony is not working for incoming calls - it's telling people a debug message. Please fix and tell me what happened
 ```
 
-**Ideas referenced:** #23133, #24635 [proposed], #24636 [proposed]
+**Ideas referenced:** #16154, #23133, #24635 [proposed], #24636 [proposed], #24645 [proposed], #24646 [proposed], #9222, #9501
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -3741,125 +3732,3 @@ When done, append to cline_task_ledger.md per rule 07.
 </task_progress>
 </attempt_completion>
 ```
-
-### `1785865689091` — 8/4/2026, 11:27:54 AM PT — 86 turns
-
-**Original task:**
-
-```
-——[COPY]——
-Write a minimum 3000 word analysis deriving, from first principles, the complete performance model of a sparse mixture-of-experts transformer during autoregressive decode. Build it in this order: (1) derive the expected number of distinct experts activated per forward pass as a function of batch size, top-k, and total expert count, showing the probability derivation not just the formula, (2) convert that into bytes of weight traffic per decode step for a 4-bit quantized model, (3) derive the resulting step time under a given memory bandwidth, (4) extend the model to account for pipe
-```
-
-**Ideas referenced:** #0000, #19898, #19904, #20251
-
-**Last PICKUP PROMPT:**
-
-```
-proval>
-<task_progress>
-- [x] Read the task
-- [x] Check relevant rules (Rule 91 PICKUP PROMPT)
-- [x] Write the MoE autoregressive decode performance analysis (sections 1-9)
-- [x] Include full arithmetic derivations
-- [ ] Present completion with PICKUP PROMPT block
-</task_progress>
-</execute_command>
-```
-
-### `1785860435008` — 8/4/2026, 11:26:53 AM PT — 470 turns
-
-**Original task:**
-
-```
-#GLM
-
-Here is how we get there, and the first move is not what I would have guessed an hour ago.
-
-**Restate your target in the one unit the hardware answers to.** 3.5 tok/s per stream is 286 ms per output token. Measured mean inter-token latency on the ring right now is 528 ms, which is 1.89 tok/s. Implied step time is 160 ms at 1 stream and 572 ms at 8 streams, so batching 8x only cost 3.6x in step time. Your two numbers become:
-
-- **8 lanes:** step time must be ≤286 ms while serving 8. That is a **2.0x** step-time cut.
-- **12 lanes:** same 2.0x cut **and** 1.5x more batch than today's cap.
-
-
-```
-
-**Ideas referenced:** #18868, #19571, #19585, #1979 [outdated], #1986 [deployed], #2083, #2085, #2157, #2159, #2168, #2174, #2185, #2186, #2187, #2188, #2189, #2190, #2191, #2192, #22128 [executing], #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #22479 [proposed], #22480 [proposed], #22484 [proposed], #22491 [proposed], #22499 [proposed], #22500 [executing], #22527 [proposed], #22528 [proposed], #22543 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785865813454` — 8/4/2026, 10:56:29 AM PT — 21 turns
-
-**Original task:**
-
-```
-——[COPY]——
-Write a minimum 3000 word specification for an honest benchmarking protocol for multi-tenant LLM inference, designed so that it cannot be gamed and cannot accidentally mislead. Include: (1) every quantity that must be recorded for a number to be reproducible, with justification for each, (2) why aggregate tokens per second must never be reported without the concurrency it was measured at, (3) the precise sampling methodology including window length and why long windows with variable concurrency are invalid, (4) how to define an acceptance metric expressed in units the end user actua
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785865665427` — 8/4/2026, 10:54:03 AM PT — 15 turns
-
-**Original task:**
-
-```
-Write a complete technical design document, minimum 3000 words, for migrating a 744B-parameter mixture-of-experts model from a 6-node pipeline-parallel layout to a 2-way tensor-parallel by 3-stage pipeline layout across the same six 128GB unified-memory nodes. Work through it in strict order and do not skip ahead: (1) derive the per-node weight footprint in both layouts and show the arithmetic, (2) compute how many collective operations per token each layout issues and the latency cost over both TCP sockets and RoCE RDMA, (3) identify every failure mode during the transition including partial-
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785865794494` — 8/4/2026, 10:53:51 AM PT — 13 turns
-
-**Original task:**
-
-```
-——[COPY]——
-Write a minimum 3000 word comparative analysis of unified-memory versus discrete-HBM architectures for serving very large models. Work through: (1) state the bandwidth and capacity figures for each and their ratio, (2) derive the arithmetic intensity threshold at which a workload transitions from compute-bound to memory-bound, (3) show where transformer prefill and transformer decode each fall relative to that threshold and why they differ, (4) explain why unified memory makes very large models POSSIBLE while making them SLOW, and why that is a genuine engineering tradeoff rather th
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785865716440` — 8/4/2026, 10:53:37 AM PT — 15 turns
-
-**Original task:**
-
-```
-—[COPY]——
-Write a minimum 3000 word incident post-mortem for a subtle production failure: a benchmark reported 8.1 tokens per second per stream, and that figure was recorded as fact and propagated into launch configuration comments as design intent, but the true value was 1.7. The error came from dividing an aggregate throughput measured over an 18-minute window by an assumed constant concurrency of 8, when concurrency was actually unbounded and averaged 22. Cover: (1) how the error was originally made and why it looked reasonable, (2) every downstream decision that was corrupted by it, (3) wh
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785865777611` — 8/4/2026, 10:53:31 AM PT — 11 turns
-
-**Original task:**
-
-```
-——[COPY]——
-Write a minimum 3000 word guide to diagnosing a production system where 39 percent of requests fail but every dashboard shows healthy. Build it as an investigation: (1) enumerate at least eight distinct mechanisms by which a high failure rate can be invisible to monitoring, (2) for each, give the specific query or probe that would reveal it, (3) explain how automatic retries and fallback routing mask failures from operators while multiplying resource consumption, (4) derive the capacity cost of a failed request that consumed prefill and partial decode before dying, (5) show how to a
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785865742982` — 8/4/2026, 10:52:39 AM PT — 9 turns
-
-**Original task:**
-
-```
-——[COPY]——
-Write a minimum 3000 word treatise on the distinction between throughput and latency in multi-tenant inference serving, and why optimizing one systematically degrades the other. Structure it as a build: (1) define both precisely with units, (2) derive the queueing relationship between admission capacity, arrival rate, and time-to-first-token, (3) show why increasing batch size improves aggregate throughput while worsening per-stream latency on a memory-bound system, (4) work a concrete numerical example with 8 admission slots, a 21-request queue, and 2 tokens per second per stream, 
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785865761749` — 8/4/2026, 10:52:11 AM PT — 7 turns
-
-**Original task:**
-
-```
-—[COPY]——
-Write a minimum 3000 word engineering analysis of RDMA versus kernel TCP for collective communication in distributed model inference. Proceed in order: (1) trace a single message through both stacks, naming every copy and context switch, (2) derive per-message latency for both, (3) compute the total per-token communication cost for a 78-layer model under tensor parallelism issuing two all-reduces per layer, (4) show what fraction of a 173 millisecond step budget each transport consumes, (5) explain why a tensor-parallel experiment run over TCP would produce a false negative and cause
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

@@ -140,5 +140,24 @@ An on-box `curl_rc=7` ("failed to connect", measured **from the box itself**) is
 
 ### Postscript (why this is not academic)
 
-In the same incident the engine **was** in fact not serving. Cline was right about the conclusion and wrong about the grounds. That is the dangerous shape: being accidentally correct trains the bad habit. The grounds matter, because the identical evidence next time will mean the tunnel, and the report will be confideIn the same incident the engine **was** in fact not serving. Cline 
+In the same incident the engine **was** in fact not serving. Cline was right about the conclusion and wrong about the grounds. That is the dangerous shape: being accidentally correct trains the bad habit. The grounds matter, because the identical evidence next time will mean the tunnel, and the report will be confidently wrong while a healthy box sits next to the person reading it. (See the addendum below: on a fuller check the engines were ALIVE the whole time, so even the conclusion was wrong.)
+
 Cross-refs: rule 271 (no SSH to the box = no claims about the box), rule 252 / 296 (live-probe before declaring any host down), rule 263 (verify before claim). Ideas #24370 (RCA), #24372 (the precise on-box state that followed).
+
+### 2026-08-07 ADDENDUM — verify your GREP PATTERN and the box's ROLE before claiming "process absent"
+
+Same box, same night, **two more wrong calls** after the section above was written. Ruben had to say *"Julia is doing just fine do not tell me that Julia is off-line. It's really annoying."* He was right both times.
+
+**Trap 1: the pattern could not match a healthy instance.**
+Cline ran `ps -eo pid,etime,cmd | grep "[v]llm serve"`, got nothing, and reported "no vLLM process". But a Ray-managed vLLM worker presents its cmdline as **`VLLM::EngineCore`**, never as `vllm serve`. Julia had **two** EngineCore processes alive with 8h53m and 7h55m uptime. The grep measured the absence of a **string**, and it was reported as the absence of a **process**.
+
+> Before claiming a process is absent, confirm your pattern can match a *healthy* instance. Use `grep -iE "vllm|EngineCore"`, never a single literal.
+
+**Trap 2: probing an API port on a WORKER node.**
+Cline curled `127.0.0.1:8000` on Julia, got connection-refused, and called the engine down. In a TP=2 Ray pair only **one** node runs the OpenAI API server. On a worker, refused-on-:8000 is **health, not failure**. The registry already encodes this for Claudia (`do_not_probe_ports`: *"Ray worker inside Julia CX7 TP=2 cluster. HTTP-000 here is CORRECT. Never probe/route/restart"*, rule 157). Cline knew the rule and applied it to the wrong box, because a **stale registry label** called Julia the head.
+
+> Establish HEAD vs WORKER before probing. Ask *"should anything be listening here?"* before treating silence as a fault. Live `ps` beats the registry label (rule 294).
+
+**What the box actually was:** both Julia (spark-6ae6) and Claudia (spark-6d51) running EngineCore workers, neither binding :8000, and WOPR `:11513` being a bare `sshd` reverse-forward with nothing live behind it. The engines were up ~9 hours. The missing thing was the HTTP surface, not the compute.
+
+**The compounding lesson:** a stale registry entry plus a too-narrow grep plus a role-blind port probe produced three confident wrong reports about a box the operator was physically sitting next to. Each instrument was individually plausible. None was checked against the box. Ideas #24611, #24613.

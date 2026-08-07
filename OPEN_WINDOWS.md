@@ -6,33 +6,34 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/7/2026, 9:05:25 AM PT | window: last 72h | 114 tasks | index total 524 (parsed 1, cached 523)
+Generated: 8/7/2026, 10:38:46 AM PT | window: last 72h | 105 tasks | index total 525 (parsed 7, cached 518)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785954856277` | 8/7/2026, 5:38:43 AM | 670 | 2660KB | #CFA |
-| `1786088921071` | 8/7/2026, 3:21:37 AM | 114 | 550KB | I don't really understand what's going on here. This task was about email for the being se |
-| `1786088761151` | 8/7/2026, 12:51:42 AM | 14 | 269KB | Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversit |
-| `1786086916545` | 8/7/2026, 12:50:44 AM | 140 | 824KB | Tell me how the student council is doing. Is it healthy? It actually generating ideas and  |
+| `1786123588626` | 8/7/2026, 10:38:33 AM | 127 | 376KB | telephony is not working for incoming calls - it's telling people a debug message. Please  |
+| `1786088761151` | 8/7/2026, 10:36:29 AM | 134 | 529KB | Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversit |
+| `1786057314451` | 8/7/2026, 10:24:23 AM | 588 | 3844KB | I keep getting this message every 15 minutes and is it fixed or not? |
+| `1786036273485` | 8/7/2026, 10:20:35 AM | 818 | 1565KB | #Argus  |
+| `1786060260487` | 8/7/2026, 10:18:31 AM | 782 | 2173KB | frankenstein-llm subagents experiencing delay. Are those on deepseek like they should be?  |
+| `1785954733601` | 8/7/2026, 10:15:30 AM | 486 | 925KB | #SLS MEGA |
+| `1786005641053` | 8/7/2026, 10:13:45 AM | 422 | 810KB | #GLM |
+| `1785954856277` | 8/7/2026, 10:07:26 AM | 680 | 2681KB | #CFA |
+| `1786059773410` | 8/7/2026, 10:03:34 AM | 98 | 323KB | #Baseline Tempe Loan |
+| `1786086916545` | 8/7/2026, 9:57:17 AM | 154 | 865KB | Tell me how the student council is doing. Is it healthy? It actually generating ideas and  |
+| `1785966271898` | 8/7/2026, 9:56:39 AM | 354 | 1012KB | #Payment Issues |
+| `1785954707277` | 8/7/2026, 9:56:34 AM | 358 | 1814KB | #EA PIPELINE |
+| `1786088921071` | 8/7/2026, 9:55:59 AM | 122 | 566KB | I don't really understand what's going on here. This task was about email for the being se |
 | `1786081573518` | 8/7/2026, 12:46:20 AM | 274 | 992KB | Whiy is this task 502, we need to stop with the 502s: |
-| `1786036273485` | 8/7/2026, 12:39:32 AM | 742 | 1329KB | #Argus  |
 | `1786066201493` | 8/7/2026, 12:28:21 AM | 474 | 1841KB | All three done. The wrapper wiring turned up another silent-blindness bug, and the deadman |
-| `1786060260487` | 8/7/2026, 12:18:39 AM | 724 | 1805KB | frankenstein-llm subagents experiencing delay. Are those on deepseek like they should be?  |
 | `1786010979248` | 8/7/2026, 12:13:35 AM | 1076 | 1963KB | Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to |
-| `1786057314451` | 8/7/2026, 12:13:32 AM | 534 | 3600KB | I keep getting this message every 15 minutes and is it fixed or not? |
-| `1786059773410` | 8/6/2026, 10:54:22 PM | 96 | 318KB | #Baseline Tempe Loan |
 | `1786079281756` | 8/6/2026, 10:08:24 PM | 3 | 16KB | how long has the GLM been up |
 | `1786063627936` | 8/6/2026, 7:18:40 PM | 157 | 509KB | systems wide / what can i do to increase my own efficiency here. Here in cline, organizati |
 | `1786069048387` | 8/6/2026, 7:18:39 PM | 3 | 19KB | 3 iterations going, which one will be faster |
 | `1786068904025` | 8/6/2026, 7:18:37 PM | 5 | 7KB | 2nd window arbitrary test |
 | `1786068815556` | 8/6/2026, 7:16:56 PM | 6 | 8KB | test to first iteration |
-| `1786005641053` | 8/6/2026, 7:08:24 PM | 372 | 699KB | #GLM |
 | `1786065775388` | 8/6/2026, 6:47:30 PM | 82 | 149KB | can you investigate and resolve this?  |
 | `1785953794202` | 8/6/2026, 6:19:29 PM | 584 | 1604KB | COPY_WINDOW_0_DATA_ACCURACY_AUDIT |
-| `1785954733601` | 8/6/2026, 6:12:23 PM | 422 | 806KB | #SLS MEGA |
 | `1785953476892` | 8/6/2026, 6:08:42 PM | 520 | 1115KB | build and ship this |
-| `1785966271898` | 8/6/2026, 6:04:54 PM | 336 | 968KB | #Payment Issues |
-| `1785954707277` | 8/6/2026, 6:04:51 PM | 310 | 866KB | #EA PIPELINE |
 | `1785954595787` | 8/6/2026, 5:51:13 PM | 252 | 1102KB | #KAISON |
 | `1786058811201` | 8/6/2026, 5:19:23 PM | 202 | 821KB | #TDSHS |
 | `1786008133029` | 8/6/2026, 4:18:36 PM | 498 | 1518KB | There seems to be something that is submitting courses or something to TDSHS. Can you tell |
@@ -114,22 +115,250 @@ Generated: 8/7/2026, 9:05:25 AM PT | window: last 72h | 114 tasks | index total 
 | `1785865777611` | 8/4/2026, 10:53:31 AM | 11 | 142KB | ——[COPY]—— |
 | `1785865742982` | 8/4/2026, 10:52:39 AM | 9 | 98KB | ——[COPY]—— |
 | `1785865761749` | 8/4/2026, 10:52:11 AM | 7 | 39KB | —[COPY]—— |
-| `1785864511866` | 8/4/2026, 10:30:54 AM | 12 | 29KB | ——[COPY]—— |
-| `1785864591765` | 8/4/2026, 10:30:44 AM | 4 | 15KB | ——[COPY]—— |
-| `1785864534211` | 8/4/2026, 10:30:26 AM | 6 | 18KB | ——[COPY]—— |
-| `1785864555606` | 8/4/2026, 10:30:20 AM | 6 | 14KB | ——[COPY]—— |
-| `1785864497210` | 8/4/2026, 10:29:36 AM | 8 | 15KB | ——[COPY]—— |
-| `1785864485442` | 8/4/2026, 10:29:29 AM | 4 | 21KB | ——[COPY]—— |
-| `1785864459503` | 8/4/2026, 10:29:09 AM | 4 | 20KB | ——[COPY]—— |
-| `1785864472446` | 8/4/2026, 10:29:06 AM | 4 | 16KB | ——[COPY]—— |
-| `1785833407446` | 8/4/2026, 9:17:09 AM | 431 | 919KB | In argus:  |
-| `1785858167516` | 8/4/2026, 9:14:49 AM | 113 | 310KB | #GLM |
 
 ---
 
 ## Per-window detail
 
-### `1785954856277` — 8/7/2026, 5:38:43 AM PT — 670 turns
+### `1786123588626` — 8/7/2026, 10:38:33 AM PT — 127 turns
+
+**Original task:**
+
+```
+telephony is not working for incoming calls - it's telling people a debug message. Please fix and tell me what happened
+```
+
+**Ideas referenced:** #23133, #24635 [proposed], #24636 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786088761151` — 8/7/2026, 10:36:29 AM PT — 134 turns
+
+**Original task:**
+
+```
+Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversity.com/emtskills/routes/ruben_executor_live.php
+```
+
+**Ideas referenced:** #059669, #0891, #10003, #10007, #10060, #12059, #12065, #12184, #127922, #128157, #128190, #128640, #13418, #1373, #14532, #1658, #166534, #17560, #1786, #22031 [fix-needed], #22032 [fix-needed], #24624 [deployed], #24625 [proposed], #24626, #24634 [deployed], #2563, #334155, #3730, #374151, #4338, #4536, #475569, #5031, #6366, #64748, #65039, #78350, #8594, #92400, #9654, #9888, #9989
+
+**Last PICKUP PROMPT:**
+
+```
+eeded for design completeness.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Verify chain backlog draining post-fix, monitor throughput
+
+Where we left off (verified 2026-08-07 10:37 PT):
+- Backlog at 11,254 and falling from peak of 11,302
+- 9 chains pending (planner running), 2 executed since fix
+- Dispatch rate: 12 chains per ~2-min dispatcher tick at 192/hr cap → ~2.4 days to fully drain
+- Two fixes deployed: logWorkerStart/logWorkerEnd (#24624) + noop-loop checkRecurrenceIdempotent (#24634)
+
+Open threads to drive next:
+#24625 [proposed] — Implement completeChainIfRecurrenceMatch() on RubenExecutor. Non-blocking follow-up, not needed for current drain.
+
+Reference IDs:
+- Ideas filed: #24624 [deployed], #24625 [proposed], #24634 [deployed]
+- Files touched: /var/www/emtskills/cron/cron_ruben_autonomous.php (functions insert), /var/www/emtskills/lib/ruben_recurrence_idempotency_hash.php (outcome filter)
+
+When done, clean up /tmp/worker_log_functions.php and append a row to cline_task_ledger.md per rule 07. Run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786057314451` — 8/7/2026, 10:24:23 AM PT — 588 turns
+
+**Original task:**
+
+```
+I keep getting this message every 15 minutes and is it fixed or not?
+```
+
+**Ideas referenced:** #1050, #10666, #11735, #12059, #12060, #12299, #1239, #12503, #12576, #12591, #12609, #12611, #12617, #12619, #12714, #1280, #12802, #12879, #12894, #12900, #13418, #1373, #15161, #1603, #16063, #16242, #16265, #16822, #16834, #177862, #177914, #1784, #18360, #18707, #19173, #19370, #19427, #20885 [queued], #20903, #21432, #21587, #21588, #21667, #21710, #21712, #2182, #21972, #22104, #22105, #2212, #22138, #22209, #22244, #22245, #22726, #22776, #23710, #23711, #23920 [in_progress], #23941 [in_progress], #23944 [in_progress], #23945, #23952, #23954, #23960, #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed], #24122 [deployed], #24230 [proposed], #24347 [proposed], #3093, #3378, #3590, #3822, #3957, #4516, #4536, #5031, #509402, #509403, #509463, #509687, #509688, #6057, #6978, #7126
+
+**Last PICKUP PROMPT:**
+
+```
+su-executor-health (unchanged)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #24230 + backlog-reminder suppression — KAIZEN classifier fallback + stop the "RUBEN backlog: 73 issue(s) awaiting review" recurring iMessage.
+
+Where we left off (verified 2026-08-07 10:25 PT):
+- #24122 [deployed] — stale_cron ignore-list on cron_executor_health_alert.php, verified syntax-clean.
+- Rogue message: "RUBEN backlog: 73 issue(s) awaiting your review for 12+ hrs. Check the Questions section." sent every ~2h from +19412943388 → chat 3899. Message template NOT found in /var/www/emtskills/cron, /lib, or /api — likely generated by a Node/bot service or a script outside those dirs.
+- #24230 [blocked] — KAIZEN classifier: RubenExecutor::classifyFailure() at line 4830 of /var/www/emtskills/lib/RubenExecutor.php returns 'unclassified' 95,653 of 96K times. Need a DB fallback: before `return 'unclassified';`, iterate failure_repair_recipes.detection_pattern (273 rows, SQL-ish conditions referencing error_text/outcome/output_tokens) and return the first matching failure_category. Use $this->db (PDO) available in RubenExecutor.
+
+Open threads to drive next:
+1. #24230 [implement-now] — insert the classifier DB-fallback at line 4830 of RubenExecutor.php (one-line patch: query failure_repair_recipes WHERE detection_pattern IS NOT NULL, evaluate in PHP against $errorText/$outcome/strlen, return first match before falling back to 'unclassified').
+2. Find the "RUBEN backlog" emitter: search /root, /opt, /home, and any Node.js apps (pm2 list?) for the template string. The message originates from the ops bot +19412943388 into chat 3899 — likely an orchestrator notification service or a cron outside the PHP tree.
+
+Reference IDs:
+- Ticket: n/a
+- Ideas filed: #24122, #24230, #24347
+- Files touched: cron_executor_health_alert.php, cron_argus_feed_kaizen_recipes.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786036273485` — 8/7/2026, 10:20:35 AM PT — 818 turns
+
+**Original task:**
+
+```
+#Argus 
+
+Found the actual reason Argus over-texts the server. It was not the timeouts. Three separate defects, all fixed and verified live.
+
+EXCLUDED: #2250 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)
+EXCLUDED: #2251 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)
+
+## The timeout work was right but it was treating a symptom
+
+Raising curl 240->600 and pool max_execution_time 120->600 was correct and necessary. But a longer timeout on an amplifying loop just means MORE concurrent long-held connections. Here is wh
+```
+
+**Ideas referenced:** #047857, #059669, #111827, #16523, #166534, #178601, #19370, #2250 [superseded], #2251 [superseded], #2252, #2253, #22688, #23036, #23428, #23429, #23468, #23506, #23585, #23623, #23630 [executing], #23636, #23637, #23674, #23675, #23710, #23711, #23729, #23739, #23740, #23747, #23748, #23749, #23750, #23751, #23764, #23769, #23851 [rejected], #23852 [proposed], #23854, #23867, #23868 [executing], #23878 [proposed], #23879 [proposed], #23881, #23885, #23897, #23898, #23899, #23900, #23908, #23910, #23911, #23913 [executing], #23920 [executing], #23934 [executing], #23941 [executing], #23944 [executing], #23952 [proposed], #23953, #23973 [proposed], #23974 [proposed], #23975 [deployed], #23982 [proposed], #24012, #24025, #24029, #24036, #24043, #24044, #24097 [proposed], #24182, #24225 [proposed], #24377, #24378, #24379, #24381 [proposed], #24382 [proposed], #24383, #24464, #24466, #24586, #2563, #3730, #374151, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+<attempt_completion>
+<result>
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #259 — Argus over-texting iteration, drain V2, and RCA retrain (24381/24382).
+
+Where we left off (verified 2026-08-07 10:20 PT):
+- #23982 not-doable guard deployed + verified live (task #301 handled in 1 attempt, filed idea #24379 instead of 3 wasteful retries). Guard file: /var/www/emtskills/routes/cron_argus_task_worker.php line 372-388.
+- #23852 LLM payload instrument deployed at /var/www/emtskills/routes/alltastic_api.php line 5509 (error_log '[#23852] ext LLM payload bytes=N model=X'). Lint OK. Not yet confirmed writing to a visible log file.
+- #23974 worker dispatch instrument deployed earlier (-- prompt N total bytes in argus_task_worker.log).
+- Argus queue healthy: workers fire every even minute, no fatals, 16 done / 2 offloaded today.
+- 2 RCA retrain ideas approved by Ruben but NOT yet executed: #24381 [executing] (ea DEADMAN promises, 21 records, suggest ea_grade_resubmit) and #24382 [executing] (enrollment DEADMAN promises, 61 records, suggest enrollment_lookup).
+- VAPI_PRIVATE_KEY found in agent_voice.php; the voice agent system prompt is pushed to Vapi.ai assistant config (not in PHP) — need to find the assistant id + how agent_voice.php updates the config.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #24381 — ea DEADMAN retrain: locate ea_grade_resubmit tool def + Vapi assistant id, inject retrain language ("verified EA grading status; submit ea_grade_resubmit; never promise callback") into voice agent system prompt. Then verify via Vapi API + deadman_enrollment_promise_monitor.
+2. #24382 — enrollment DEADMAN retrain: same pattern with enrollment_lookup tool; verify.
+3. #23852 — confirm instrument output: find where PHP-FPM error_log writes for argus pool (php_admin_value[error_log]?), trigger a task, grep log for '[#23852]'.
+4. #23982 — expand guard keyword set (currently only 'cannot answer'); add 'cannot', 'not able to', 'feature request', 'outside my' to catch modern Llama3 refusals.
+
+Reference IDs:
+- Ticket: #259
+- Ideas filed/deployed: #23941, #23944, #23973 (documentation), #23974 (deployed), #23852 (deployed), #23982 (deployed), #24381 [executing], #24382 [executing]
+- Files touched: /var/www/emtskills/routes/cron_argus_task_worker.php, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/routes/agent_voice.php (read-only), /var/www/emtskills/routes/_view_deadman_refund_promise_agent_retrain.php (read-only)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786060260487` — 8/7/2026, 10:18:31 AM PT — 782 turns
+
+**Original task:**
+
+```
+frankenstein-llm subagents experiencing delay. Are those on deepseek like they should be? They are slower I think than they should be. Can you look into this?
+```
+
+**Ideas referenced:** #10108, #10739, #10740, #11735, #11741, #11781, #11944, #11953, #12059, #12060, #12299, #12314, #12365, #12366, #12368, #12459, #12477, #12618, #12657, #12824, #12872, #12878, #13108, #13202, #13204, #13575, #13831, #13874, #16163, #16265, #16304, #16588, #16673, #16844, #16849 [needs_verify], #17166, #178606, #18312, #18326, #18720, #19370, #19653, #19925, #2050 [needs_verify], #2092, #20957, #20958, #22386, #22598, #22601, #23171, #23528, #23710, #23711, #23945, #23952, #23954, #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed], #24138 [proposed], #24144 [proposed], #24145 [proposed], #24156 [proposed], #24157 [proposed], #24164 [proposed], #24165 [proposed], #24166 [proposed], #24171 [proposed], #24173 [proposed], #24174 [proposed], #24175 [proposed], #24183 [proposed], #24186 [proposed], #24199 [proposed], #24200 [proposed], #24203 [proposed], #24206 [proposed], #24214 [proposed], #24218 [proposed], #24220 [proposed], #24229 [proposed], #24231 [proposed], #24239 [proposed], #24241 [proposed], #24242 [proposed], #24249 [proposed], #24335 [proposed], #24368 [proposed], #24370 [proposed], #24372 [proposed], #24611 [deployed], #24613 [deployed], #24614 [executing], #24615 [blocked], #24616 [blocked], #24617 [proposed], #24618 [proposed], #24619 [proposed], #24620 [proposed], #24621 [proposed], #6711, #6719
+
+**Last PICKUP PROMPT:**
+
+```
+letion` + `clinerules_check_gate`, and ship `attempt_completion` with a rule-91 PICKUP PROMPT using task ID **1786060260487**.
+
+The completion must state plainly that **Julia is fine** (2 live `VLLM::EngineCore`, 8-9h uptime), that my "offline" claims were instrument errors (wrong grep pattern, worker-port probe), and that per Ruben's directive all remaining infra work waits for the new machine. Avoid em dashes (validator gate R01_EM_DASH) and give every `#NNNN` a `[disposition]` bracket.
+
+## 9. Required Files
+
+- Documents/Cline/Rules-archive/297-population-anomaly-classify-before-alarming.md
+- Documents/Cline/Rules/00-READ-FIRST-17-force-subagent-use-on-research-and-multi-step-builds.md
+</context>
+<task_progress>
+- [x] Verify frankenstein-llm/frankenstein-tools routing; confirm EMSU_SUBAGENT_DS=1 at _router_core.py:5200
+- [x] Measure DeepSeek (45.5 tok/s) vs Artemis (38.8 tok/s on-box): DeepSeek is faster
+- [x] Ship adapter _upstream_load patch (#24144): Julia share 12% to 38-48%
+- [x] Ship Julia tp2_watchdog.sh guards (#24186): 30s timeout, busy-not-dead check, 3-strike gate
+- [x] Neutralize cron_cesar_watchdog.sh ring hazard (#24203)
+- [x] Measure tool calls per subagent n=897: median 4, p90 28, max 177 (#24218)
+- [x] Ship GLM ring cap 16 to 2 (#24368): ring 7.5% to 0%, cline TTFB 18.3s to 10.4s
+- [x] Ship mechanical pre-dispatch scan into rule 00 (#24241), G7 12174/12288 PASS
+- [x] Ship extension.js in-loop hard-cap fix (#24242), needs VS Code reload
+- [x] Revert the router_hook change that caused first-turn stalls (#24249)
+- [x] File safe-change protocol with 6 gates (#24335)
+- [x] RC Artemis ON-BOX per Ruben request: claims verified correct (#24370)
+- [x] Correct my wrong Julia claims: 2 live VLLM::EngineCore (#24611, #24613)
+- [x] Add both rule-297 sections (remote-box 000 gate + grep/head-worker traps)
+- [ ] Verify rule 297 repair (size, corrupt_left=0) and reindex MCP
+- [ ] Reconcile ideas and ship attempt_completion with task ID 1786060260487
+</task_progress>
+</summarize_task>
+```
+
+### `1785954733601` — 8/7/2026, 10:15:30 AM PT — 486 turns
+
+**Original task:**
+
+```
+#SLS MEGA
+
+
+═══════════════════════════════════════════════
+PICKUP PROMPT: EMTSKILLS PERFORMANCE, SLS, CS QUEUES
+═══════════════════════════════════════════════
+Pick up emtskills server performance, Student Lifecycle Service (SLS), and CS queue ownership.
+
+VERIFIED GROUND TRUTH (from ledger + handoff, 2026-08-05):
+EMTSKILLS SLOW-LOAD (fixed 2026-08-04):
+- 3rd recurrence root cause: hourly full-root rsync to 2x 8TB IronWolf HDDs (sda/sdb 97-100% util, 847ms write await) starving MariaDB + PHP-FPM.
+- Old load>30 guard NEVER fired because disk I/O saturation does not show high load (load was 13-1
+```
+
+**Ideas referenced:** #18329, #18337, #18841 [queued], #18842 [queued], #18848 [deployed], #18850 [deployed], #18864 [queued], #2018, #20825, #2165, #2166, #2167, #2183, #2187, #2193, #2201, #2214, #2219 [deployed], #2220, #2222, #22258 [superseded], #22294 [deployed], #2233, #2239, #2255, #2262, #23173 [in_progress], #23211 [in_progress], #23223 [in_progress], #23308 [in_progress], #23341 [in_progress], #24184 [in_progress], #5459, #5608
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786005641053` — 8/7/2026, 10:13:45 AM PT — 422 turns
+
+**Original task:**
+
+```
+#GLM
+
+Rebase
+Is there anything left to do here? 
+
+Four questions. I fixed two things while answering, and I need to correct my own framing on the first one.
+
+## 1. "How can we avoid the lies?"
+
+A correction first, because I used the word loosely. There are two different failures and only one is dishonesty.
+
+**Not lying:** I tagged ideas `[executing]` because the database said `in_progress`. The work never ran because the executor is idle. I reported the field I was given, and the field was misleading. Broken instrument. #23326 [executing] owns it.
+
+**Actual fabrication:** an agent writing idea
+```
+
+**Ideas referenced:** #16523, #16578, #1685, #1687, #1688 [resolved], #1705, #1706, #1754, #1755, #178593, #18471, #1896, #19173, #19218 [rejected], #19230 [executing], #19239 [rejected], #19261 [executing], #1962, #1986, #1988, #1989 [outdated], #1991, #2014, #2083, #2084, #2085, #2098, #2108, #2147 [investigating], #2157, #2159, #2168, #21684, #2174, #2185, #2249 [needs_verify], #2254 [deployed], #2258, #2259, #2261, #22897 [executing], #23050 [executing], #23056 [executing], #23157 [executing], #23159 [executing], #23169 [executing], #23283 [executing], #23326 [executing], #23354 [deployed], #24172 [proposed], #24217 [proposed], #24240 [proposed], #24612 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785954856277` — 8/7/2026, 10:07:26 AM PT — 680 turns
 
 **Original task:**
 
@@ -146,7 +375,7 @@ MAJOR CONTEXT ADDED 2026-08-05 10:50 PT — A ROUTER BUG WAS BREAKING TOOL CALLS
 For most of this morning every tool-bearing request through LiteLLM returned HTTP 400 (53 validation errors: ('body','tools',N,'function') Field require
 ```
 
-**Ideas referenced:** #12206, #1255, #128260, #14132, #15204, #16152, #16153, #16154, #16473, #16732, #16817, #17150, #17446, #177914, #18796 [deployed], #18848 [deployed], #18944, #18951, #19437, #19682, #20925, #21064, #21070 [ready_for_review], #22060, #22294 [deployed], #23050 [executing], #23054 [executing], #23122 [executing], #23184, #23207 [deployed], #23208 [proposed], #23209, #23225 [proposed], #23309 [proposed], #23316 [proposed], #23317 [deployed], #23466 [executing], #23493 [proposed], #24227 [proposed], #24339 [proposed], #24340 [proposed], #24341 [proposed], #24345, #24500 [executing], #2563, #2782, #3237, #32584, #3572, #4470, #4991, #5298, #5447, #5459, #5608, #5646, #6064, #6106, #6228, #6751, #7206, #7207, #7317, #7356, #7907, #8060, #8103
+**Ideas referenced:** #12206, #1255, #128260, #14132, #15204, #16152, #16153, #16154, #16473, #16732, #16817, #17150, #17446, #177914, #18796 [deployed], #18848 [deployed], #18944, #18951, #19437, #19682, #20925, #21064, #21070 [ready_for_review], #22060, #22294 [deployed], #23050 [executing], #23054 [executing], #23122 [executing], #23184, #23207 [deployed], #23208 [proposed], #23209, #23225 [proposed], #23309 [proposed], #23316 [proposed], #23317 [deployed], #23466 [executing], #23493 [proposed], #23710 [deployed], #23711 [deployed], #23989 [deployed], #24227 [proposed], #24339 [proposed], #24340 [proposed], #24341 [proposed], #24345, #24500 [executing], #2563, #2782, #3237, #32584, #3572, #374459, #374460, #4470, #4991, #5298, #5447, #5459, #5608, #5646, #6064, #6106, #6228, #6751, #7206, #7207, #7317, #7356, #7907, #8060, #8103
 
 **Last PICKUP PROMPT:**
 
@@ -156,25 +385,21 @@ etion>
 ═══════════════════════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════════════════════
-Pick up task #CFA — CFA sweep/dispatch/struct: sweep & dispatch fixed, struct deferred (#24500).
+Pick up task #CFA — CFA wrap-up: Ruben decides dispatch queue vs vestigial + struct rewrite vs skip.
 
-Where we left off (verified 2026-08-07 05:38 PT):
-- Sweep (#24339) DEPLOYED: `cfa_raw_contacts` → `email_inbound_log` with `from_email AS email, from_name AS name, subject AS snippet`. `cfa_sweep_log` now 17 rows (was 0 for whole session).
-- Dispatch (#24340) DEPLOYED: threaded `PDO $pdo` through `executeParallelDispatch` → `getPendingCfaAgentQueue($pdo)` + `dispatchCfaAgentsParallel($pdo,...)`. Cron now runs clean ("No pending CFA agents. Exiting."), log stays 0 because `cfa_agent_queue` has 0 pending — correct behavior, not a bug.
-- Struct (#24341 → superseded by #24500): DEFERRED. `chat_portal_messages` lacks the columns the struct query needs (`visitor_email, student_message, ai_response, tool_calls, transfer_to_human, resolved`). Ruben confirmed "we do not have live chat anymore. We have chat widget." Requires a full rewrite against actual chat_portal schema — not a simple re-point.
+Where we left off (verified 2026-08-07 10:03 PT):
+- Sweep (#24339) DEPLOYED — `email_inbound_log` pipeline, 17+ rows.
+- Dispatch (#24340) DEPLOYED — PDO plumbing fixed, runs clean, 0 agents in queue. Code fix correct; 0-row because `cfa_agent_queue` has 0 pending. NOT a bug — a pipeline/data-flow gap.
+- Struct (#24500) PROPOSED — `chat_portal_messages` schema incompatible. Cannot re-point; needs full rewrite against actual `chat_portal_messages` columns.
 
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #24500 [executing] — Rewrite CFA struct cron against real `chat_portal_messages`/`chat_portal_visitor_sessions` schema. Verify `chat_portal_visitor_sessions` has visitor_email (confirmed). Map: visitor_email → email, message_text → student_message, created_at → created_at.
-2. #23317 [deployed] — Closure-pending notifier still producing: 76 timers, 50 auto-closed. Monitor that the consumer gate `cron_closure_contact_gate` is registered (I added the producer; gate was pre-existing).
-3. Email tracker spreadsheet: review https://docs.google.com/spreadsheets/d/1_CAiUfcNJnhCNfcG1xURDiOT66693KU5a8 for quality improvements per Ruben's directive.
+Open threads to drive next:
+1. #24340 [deployed] — Ruben: is `cfa_agent_queue` vestigial (kill the cron) or should a pipeline feed it (find the feeder)?
+2. #24500 [proposed] — Ruben: build struct rewrite against actual `chat_portal_messages` schema, or skip (vestigial from livechat era)?
 
 Reference IDs:
-- Ideas deployed: #24339, #24340
-- Ideas superseded: #24341
-- Ideas proposed/executing: #24500
-- Worked: #23316, #23317, #23309, #21070, #23493
-- Files touched: /var/www/emtskills/lib/cfa_access_sweep.php, /var/www/emtskills/cron/cron_parallel_cfa_dispatch.php, /var/www/emtskills/cron/cron_cfa_struct_enforcer.php (read-only), /var/www/emtskills/cron/cron_closure_pending_notifier.php
-- Ledger: /var/www/emtskills/cline_task_ledger.md appended
+- Tickets: CFA validation task
+- Ideas filed: #23207, #23208, #23225, #23309, #23316, #23317, #23466, #23493, #24227, #24339, #24340, #24341, #24500
+- Files touched: `/var/www/emtskills/cron/cron_email_responder.php`, `cron_ai_replied_stale_resolve.php`, `cron_deep_sweep_ai_replied.php`, `cron_rule29_human_queue.php`, `cron_closure_pending_notifier.php`, `cron_parallel_cfa_dispatch.php`, `cron_cfa_struct_enforcer.php`, `lib/cfa_access_sweep.php`, `/etc/cron.d/emsu-*` (9 files)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════════════════════
@@ -182,7 +407,154 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786088921071` — 8/7/2026, 3:21:37 AM PT — 114 turns
+### `1786059773410` — 8/7/2026, 10:03:34 AM PT — 98 turns
+
+**Original task:**
+
+```
+#Baseline Tempe Loan
+
+from kristall.seidel@calbt.com 
+can you help me answer these questions for the loan we're looking at for the Baseline Tempe property. If you search emails from California Bank and Trust, you will get a more complete picture. Help me draft a reply and if you don't know then give me browser instructions to acquire any adiditonal information. 
+
+
+Hi Ruben and Alma,
+
+I just received the list of questions from the underwriter. Could you please respond to the following as completely and quickly as possible?
+
+-Since personal TR for 2025 are on extension, can we get 2025 W2s for t
+```
+
+**Ideas referenced:** #178590, #19370, #23710, #23711, #23920 [in_progress], #23941 [in_progress], #23944 [in_progress], #23945, #23952, #23954, #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed], #24197 [queued], #24198 [queued], #24201 [queued]
+
+**Last PICKUP PROMPT:**
+
+```
+qKuQPP8Z1GLHxrcq126CKH0i7/view
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1785907561329 - Baseline Tempe loan to CBT underwriter
+
+Where we left off (verified 2026-08-07 10:02 PT):
+- Status tracker in Google Drive: https://drive.google.com/file/d/1GA_RKU1qKuQPP8Z1GLHxrcq126CKH0i7/view (10 answered, 5 pending)
+- Idea #24197 in_progress
+
+Open threads to drive next (EVERY item has a real idea #):
+1. #24197 [blocked — pending Ruben] — Q1 (Alma→Alan), Q2 (Ruben+Jen), Q4 (Ruben clarify), Q8 (Ruben confirm SBA), Q15 (myFICO)
+2. #24198 [blocked] — Alma asks Alan (CPA): W2s + extension + affiliate financials
+3. #24201 [blocked] — Locate lease agreements + debt schedule template
+
+Reference IDs:
+- Ideas filed: #24197 [blocked], #24198 [blocked], #24201 [blocked]
+- Drive docs: 1GA_RKU1qKuQPP8Z1GLHxrcq126CKH0i7 (status tracker), 1YTwzCoASZR0VIILKXzk2HtatKicBV5Tt (original draft)
+- Desktop: /Users/rubenmajor/Desktop/DRAFT_Response_Kristall_Seidel_CBT_Baseline_Tempe.md
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Read handoff notes and local Desktop files (SBA narrative, PFS)
+- [x] Search Google Drive for CBT/loan docs
+- [x] Extract PFS contents
+- [x] Draft reply covering all 14 questions
+- [x] Create Google Drive doc with answers
+- [x] Update with Alma's answers + status tracker (10 done, 5 pending)
+- [x] Provide the 5 remaining items in line
+</task_progress>
+</attempt_completion>
+```
+
+### `1786086916545` — 8/7/2026, 9:57:17 AM PT — 154 turns
+
+**Original task:**
+
+```
+Tell me how the student council is doing. Is it healthy? It actually generating ideas and tasks and acting on them? Or is a block? If it's blocked can you fix it?
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12345, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16695 [awaiting_review], #16844, #18312, #18326, #19370, #23171, #23185, #23341, #23945, #24026, #24054 [deployed], #24055 [proposed], #24056 [proposed], #24539 [deployed], #24540 [proposed], #24541 [proposed], #24556 [proposed], #24557 [proposed], #24558 [proposed], #24559 [approved], #6104, #6413, #6432, #64748, #7228, #78350, #9090, #92400, #9475
+
+**Last PICKUP PROMPT:**
+
+```
+il.php.bak-20260807-haiku-fix`
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Daystrom Council fix verified. Next: act on council's morning output (4 ideas, #24556-24559).
+
+Where we left off (verified 2026-08-07 09:56 PT):
+- Fix confirmed in production: 07:30 PT meeting produced 6,239-byte harvest + 4 ideas.
+- Council identified externship backlog + codec truncation as P0 priorities.
+- Patch file: `/var/www/emtskills/cron/cron_daystrom_council.php` (backup .bak-20260807-haiku-fix).
+- 4 pre-fix sessions backfilled in daystrom_sessions (harvest_status='skipped').
+
+Open threads to drive next:
+1. #24539 [deployed] — Council fix complete. Monitor next meetings (13:00, 18:30 PT today).
+2. #24540 [proposed] — Strip tool-list from TODAYS_OPS seed prompt ("Agents have tools: check_student..."). Council agents don't have tools; the executor picks up proposals after session.
+3. #24559 [approved] [P0] — Fix codec truncation in vapi handoff layer. Council voted 8/1. Ruben approved.
+4. #24558 [proposed] [P0] — Auto-escalate-or-assign cron for 60+ day externship requests. Council voted 8/1. Needs Ruben approval.
+
+Reference IDs:
+- Idea: #24539 [deployed]
+- Council ideas: #24556, #24557, #24558 [proposed], #24559 [approved]
+- File: `/var/www/emtskills/cron/cron_daystrom_council.php`
+- Morning session: `daystrom-20260807-073003-e93f` (69 turns, 6,239-byte harvest)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785966271898` — 8/7/2026, 9:56:39 AM PT — 354 turns
+
+**Original task:**
+
+```
+#Payment Issues
+
+Pick up payments. THE ROOT CAUSE IS ALREADY DIAGNOSED IN IDEA #20613 AND NOBODY READ IT.
+
+#20613 title, verbatim: "URGENT: zero large EMT approvals today, all 5007 Credit Floor with AVS+CVC
+passing, correlates with July crossing $1M processed on 07-27 (first time ever). Leading
+hypothesis: Intuit merchant-account [cap]"
+
+FROM #20613 (2026-07-31): FIVE distinct payers declined across 07-30/07-31 (Matthew Gillespie,
+Frank Heald, Maia, Elizabeth Shipp Conway, Shaheed Kehinde) on DIFFERENT cards, DIFFERENT banks,
+FOUR different sites (sandiegoemt, dallasemt, californiaemt x2, ariz
+```
+
+**Ideas referenced:** #11321, #13457, #19387 [executing], #19657, #19935, #19948, #20130, #20491, #20613 [approved], #20693, #20853, #23062 [executing], #23268 [executing], #23279 [proposed], #23280 [proposed], #23281 [proposed], #23282 [proposed], #23304 [in_progress], #23364, #23394, #23584, #23585, #23890, #24158 [in_progress], #24169, #4929, #5805, #8211
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785954707277` — 8/7/2026, 9:56:34 AM PT — 358 turns
+
+**Original task:**
+
+```
+#EA PIPELINE
+
+═══════════════════════════════════════════════
+PICKUP PROMPT: PAYMENTS, QB, EA/PDF, CERTS
+═══════════════════════════════════════════════
+Pick up payments, QuickBooks, EA/PDF pipeline, and cert renewal.
+
+PROBE FIRST (per #23050). Stored notes are CONTEXT, not ground truth. A prior window shipped a WRONG cert deadline from stored notes; that is why this section exists.
+
+CERT: THE PRIOR CLAIM WAS WRONG, CORRECTED 2026-08-05 07:49 PT
+- Prior handoffs said "mail.emsuniversity.com expiring 2026-08-12, certbot renewal failing." Both halves are false.
+- Live: openssl x509 -in /etc/lets
+```
+
+**Ideas referenced:** #16695 [needs_verify], #19387 [executing], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #21582, #23050 [executing], #23052 [executing], #23169 [queued], #23184 [proposed], #23185 [proposed], #23317 [executing], #24606 [executing]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786088921071` — 8/7/2026, 9:55:59 AM PT — 122 turns
 
 **Original task:**
 
@@ -201,109 +573,26 @@ Status recap for when tools recover:
 **Last PICKUP PROMPT:**
 
 ```
-oyed], memory entity recorded.
+and the mechanism is hardened.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up the email-storm fix follow-through — confirm the cooldown/digest hardening is truly durable and no new storms can recur.
+Pick up — Email storm fix verified: zero repeats in 8+ hours, cron clean. (No task id was assigned this session; topic below.)
 
-Where we left off (verified 2026-08-07 03:21 PT):
-- 15-min "New Feature Deployed" email storm to info@emsuniversity.com FIXED: cron_stakeholder_notify.php HY093 (duplicate :now placeholder) — email sent before the cline_fix_log INSERT crashed, so idea #20886 re-emailed every cycle. Patch live (NOW(),NOW(); log-before-email with try/catch; per-idea dedup). Idea #24400 [deployed]. Backlog of 49 ideas drained to 0. Verified via /var/log/stakeholder_notify.log + email_outbound_log (no repeats after 01:00).
+Where we left off (verified 2026-08-07 09:54 PT):
+- Email storm to info@emsuniversity.com RESOLVED as of 01:10 AM PT. Root cause: PDO HY093 crash in cron_stakeholder_notify.php (email before INSERT). Fix deployed (NOW(),NOW(); log-before-email with try/catch; dedup guard). Idea #24400 [deployed].
+- Live verification (09:54 AM PT): email_outbound_log shows zero "New Feature Deployed" emails after 01:45 AM. Cron log shows every run since 01:45 AM returning "Found 0 implemented ideas without stakeholder notification" — clean, no errors. Backlog drained to 0.
+- The 20 emails between 01:15-01:45 AM were the one-time backlog catch-up (each of the 49 previously-unnotified ideas notified exactly once) — correct, not repeats.
 
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #24400 [deployed] — 24-48h post-fix check: confirm a genuinely NEW implemented idea emails exactly once (not zero, not twice) and the cron STAYS free of HY093. Run: SELECT id, subject, sent_at FROM email_outbound_log WHERE subject LIKE '%New Feature Deployed%' ORDER BY id DESC LIMIT 5.
-2. (human-only decision — no idea) — OPTIONAL durability: the mailer still announces every technical (non-user-facing) deploy to info@. Consider a digest/cooldown policy (e.g., collapse to a daily summary) if the once-per-idea cadence still feels noisy; that is a product decision, not a bug.
-
-Reference IDs:
-- Ideas filed: #24400 [deployed].
-- Files touched: /var/www/emtskills/cron/cron_stakeholder_notify.php (v1.0.2), /var/log/stakeholder_notify.log, HANDOFF_NOTES.md, cline_task_ledger.md (line 481).
-- Earlier same-session context: Argus 502 fixes #24336/#24337/#24338 [deployed] were verified in the prior window.
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786088761151` — 8/7/2026, 12:51:42 AM PT — 14 turns
-
-**Original task:**
-
-```
-Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversity.com/emtskills/routes/ruben_executor_live.php
-```
-
-**Ideas referenced:** #059669, #0891, #10003, #10007, #10060, #12059, #12065, #127922, #128157, #128190, #128640, #13418, #14532, #1658, #166534, #17560, #1786, #2563, #334155, #3730, #374151, #4338, #475569, #6366, #64748, #65039, #78350, #8594, #92400, #9654, #9888, #9989
-
-**Last PICKUP PROMPT:**
-
-```
-m, which is expected behavior.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #current — Why does ruben executive show 11,282 "backlogged" ideas? Investigation complete.
-
-Where we left off (verified 2026-08-07 00:52 PT):
-- ruben_executor_live.php reads `$_ideasQueueBacklog` (line ~596) — a JOIN between session_handoffs and orchestrator_ideas
-- No "backlogged" status exists in orchestrator_ideas (verified: 30 statuses, none are "backlogged")
-- Live breakdown: 3,402 approved-resting + 7,873 autonomous-resting + 4 in_progress = 11,279 chains queued
-- The 11,282 number is the active autonomous dispatch queue — healthy resting chains, not stuck items
-- The page banner label "Backlog:" can be misleading — these are chains waiting their turn, not abandoned
-
-Open threads to drive next:
-1. #none — investigation complete; no actionable changes needed unless Ruben wants to rename "Backlog:" label to "Queue depth:" or "Chains waiting:"
+Open threads to drive next (every item carries a real filed idea #):
+1. (human-only decision — no idea) — Forward-looking: the stakeholder-notify mailer sends once per implemented idea. If volume still feels noisy when new ideas land, consider a daily digest. That is a product decision, not a bug.
+2. Nothing else — all verified, all resolved.
 
 Reference IDs:
-- Ticket: ruben executive live page display question
-- Ideas filed: none (this was an investigation, not a bug)
-- Files touched: /var/www/emtskills/routes/ruben_executor_live.php (read only)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786086916545` — 8/7/2026, 12:50:44 AM PT — 140 turns
-
-**Original task:**
-
-```
-Tell me how the student council is doing. Is it healthy? It actually generating ideas and tasks and acting on them? Or is a block? If it's blocked can you fix it?
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12345, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16695 [awaiting_review], #16844, #18312, #18326, #19370, #23171, #23185, #23341, #23945, #24026, #24054 [deployed], #24055 [proposed], #24056 [proposed], #24539 [deployed], #24540 [proposed], #24541 [proposed], #6104, #6413, #6432, #64748, #7228, #78350, #9090, #92400, #9475
-
-**Last PICKUP PROMPT:**
-
-```
-ith `harvest_ideas_filed > 0`.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Daystrom Council fix verification at 07:30 PT morning meeting.
-
-Where we left off (verified 2026-08-07 00:50 PT):
-- Fix deployed: `cron_daystrom_council.php` now calls `api.anthropic.com` with model `claude-haiku-4-5` (bypassing LiteLLM tool-capable fleet).
-- Test session `daystrom-20260807-003229-cc70` produced real council dialog (votes, chairing, no tool XML).
-- Backfill complete: 4 pre-fix sessions from Aug 6 inserted into `daystrom_sessions` with `harvest_status='skipped'`.
-- Idea #24539 [deployed] — full root cause + fix documented.
-- Backup at `cron_daystrom_council.php.bak-20260807-haiku-fix`.
-
-Open threads to drive next:
-1. #24539 [deployed] — After 07:30 PT, check `SELECT * FROM daystrom_sessions WHERE session_id LIKE 'daystrom-20260807-0730%'` for `harvest_ideas_filed > 0`. If still 0, check Anthropic API key via `curl -s https://api.anthropic.com/v1/messages` from WOPR.
-2. #24540 [proposed] — Strip the tool-list from the TODAYS_OPS seed prompt. Current text tells models "Agents have tools: check_student, check_ticket..." — incorrect instruction, could confuse even prose models. Council proposes actions; executor runs them after session.
-3. #24541 [proposed] — If morning meeting works, file a P2 idea to extend the tool-list strip fix to morning/late-night prompts too (they reference the same tool vocabulary).
-
-Reference IDs:
-- Idea: #24539 [deployed]
-- File: `/var/www/emtskills/cron/cron_daystrom_council.php` (patched)
-- Backup: `.bak-20260807-haiku-fix`
-- Backfilled sessions: 4 rows in `daystrom_sessions` (harvest_status='skipped')
+- Idea: #24400 [deployed]
+- Files: /var/www/emtskills/cron/cron_stakeholder_notify.php (v1.0.2), /var/log/stakeholder_notify.log, email_outbound_log
+- Ledger: cline_task_ledger.md line 481
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -351,53 +640,6 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786036273485` — 8/7/2026, 12:39:32 AM PT — 742 turns
-
-**Original task:**
-
-```
-#Argus 
-
-Found the actual reason Argus over-texts the server. It was not the timeouts. Three separate defects, all fixed and verified live.
-
-EXCLUDED: #2250 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)
-EXCLUDED: #2251 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)
-
-## The timeout work was right but it was treating a symptom
-
-Raising curl 240->600 and pool max_execution_time 120->600 was correct and necessary. But a longer timeout on an amplifying loop just means MORE concurrent long-held connections. Here is wh
-```
-
-**Ideas referenced:** #16523, #178601, #19370, #2250 [superseded], #2251 [superseded], #2252, #2253, #22688, #23036, #23428, #23429, #23468, #23506, #23585, #23623, #23630 [executing], #23636, #23637, #23674, #23675, #23710, #23711, #23729, #23739, #23740, #23747, #23748, #23749, #23750, #23751, #23764, #23769, #23851 [rejected], #23852 [proposed], #23854, #23867, #23868 [executing], #23878 [proposed], #23879 [proposed], #23881, #23885, #23897, #23898, #23899, #23900, #23908, #23910, #23911, #23913 [executing], #23920 [executing], #23934 [executing], #23941 [executing], #23944 [executing], #23952 [proposed], #23953, #23973 [proposed], #23974 [proposed], #23975 [deployed], #23982 [proposed], #24012, #24025, #24029, #24036, #24043, #24044, #24097 [proposed], #24182, #24225 [proposed], #24377, #24378, #24379, #2563
-
-**Last PICKUP PROMPT:**
-
-```
-e"). Update guard at line 376.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #259 — Argus iteration follow-up: expand #23982 guard keywords.
-
-Where we left off (verified 2026-08-07 00:38 PT):
-- #23982 guard deployed at cron_argus_task_worker.php line 376, keyword match: `(not-doable|cannot answer)`. Task #301 handled correctly in 1 attempt (done, filed idea #24379), proving the mechanism works.
-- #23852 instrument at alltastic_api.php line 5445, PHP lint OK.
-
-Open threads to drive next:
-1. #24225 [deployed] — Expand keyword match pattern from `(not-doable|cannot answer)` to include modern Llama3 refusal patterns: `(cannot|cant|can't|not able to|feature request|beyond my|outside my|not something I can)`. Edit line 376 of /var/www/emtskills/routes/cron_argus_task_worker.php, lint, deploy, verify.
-
-Reference IDs:
-- Ticket: 259
-- Ideas filed: #24225 (guard), #24377 (routing examine), #24378 (guard keywords follow-up)
-- Files touched: /var/www/emtskills/routes/cron_argus_task_worker.php (lines 372-379), /var/www/emtskills/routes/alltastic_api.php (line 5445)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 
@@ -458,18 +700,6 @@ Reference IDs:
 - Clean temp scripts: `sudo rm -f /var/www/emtskills/admin/*.py` (all *
 ```
 
-### `1786060260487` — 8/7/2026, 12:18:39 AM PT — 724 turns
-
-**Original task:**
-
-```
-frankenstein-llm subagents experiencing delay. Are those on deepseek like they should be? They are slower I think than they should be. Can you look into this?
-```
-
-**Ideas referenced:** #10108, #10739, #10740, #11735, #11741, #11781, #11944, #11953, #12059, #12060, #12299, #12314, #12365, #12366, #12368, #12459, #12477, #12618, #12657, #12824, #12872, #12878, #13108, #13202, #13204, #13575, #13831, #13874, #16163, #16265, #16304, #16588, #16673, #16844, #16849 [needs_verify], #17166, #18312, #18326, #18720, #19370, #19653, #19925, #2050 [needs_verify], #2092, #22386, #22598, #22601, #23171, #23528, #23710, #23711, #23945, #23952, #23954, #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed], #24138 [proposed], #24144 [proposed], #24145 [proposed], #24156 [proposed], #24157 [proposed], #24164 [proposed], #24165 [proposed], #24166 [proposed], #24171 [proposed], #24173 [proposed], #24174 [proposed], #24175 [proposed], #24183 [proposed], #24186 [proposed], #24199 [proposed], #24200 [proposed], #24203 [proposed], #24206 [proposed], #24214 [proposed], #24218 [proposed], #24220 [proposed], #24229 [proposed], #24231 [proposed], #24239 [proposed], #24241 [proposed], #24242 [proposed], #24249 [proposed], #24335 [proposed], #24368 [proposed], #24370 [proposed], #24372 [proposed], #6711, #6719
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
 ### `1786010979248` — 8/7/2026, 12:13:35 AM PT — 1076 turns
 
 **Original task:**
@@ -510,112 +740,6 @@ Reference IDs:
 When done, append row to cline_task_ledger.md and run order 66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1786057314451` — 8/7/2026, 12:13:32 AM PT — 534 turns
-
-**Original task:**
-
-```
-I keep getting this message every 15 minutes and is it fixed or not?
-```
-
-**Ideas referenced:** #10666, #11735, #12059, #12060, #12299, #1239, #12503, #12576, #12591, #12609, #12611, #12617, #12619, #12714, #1280, #12894, #12900, #13418, #1603, #16063, #16242, #16265, #16834, #177862, #177914, #1784, #18360, #18707, #19173, #19370, #20885 [queued], #20903, #21432, #21587, #21588, #21667, #21710, #21712, #2182, #21972, #22104, #22105, #2212, #22138, #22244, #22245, #22726, #22776, #23710, #23711, #23920 [in_progress], #23941 [in_progress], #23944 [in_progress], #23945, #23952, #23954, #23960, #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed], #24122 [deployed], #24230 [proposed], #24347 [proposed], #3093, #3378, #3590, #3822, #4516, #5031, #509402, #509403, #509463, #509687, #509688, #6978, #7126
-
-**Last PICKUP PROMPT:**
-
-```
-egory'];
-        }
-    }
-}
-```
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #24122/24230 — stop rogue "RUBEN backlog" email and apply approved classifier fallback.
-(24230 details: apply to `RubenExecutor.php` line 4830)
-
-Where we left off (verified 2026-08-07 00:13 PT):
-- #24122 [deployed] stale_cron ignore-list in `/var/www/emtskills/cron/cron_executor_health_alert.php` — 7 phantom crons filtered via `$CRON_STALE_IGNORE_SOURCES`
-- Rogue email: "RUBEN backlog: 72 issue(s) awaiting review" from +19412943388 to chat 3899 ~2h cadence
-- Classifier patch script exists at `/tmp/ruben_executor_patch.py` on local Mac
-
-Open threads to drive next:
-1. #24122 [deployed] — Verify stale_cron alerts stopped. Next cron at :15 past will confirm.
-2. Find and suppress the "RUBEN backlog" emitter — grep for `pending_reminders` or `backlog` in `ruben_queue_drainer` / `ruben_autonomous` crons.
-3. #24230 / #24347 [executing] — Apply classifier fallback to `RubenExecutor.php` line 4830 via `write_server_file` with sudo or the base64-python approach.
-
-Reference IDs:
-- Ideas filed: #24122, #24230 [executing], #24347 [proposed]
-- Files touched: `/var/www/emtskills/cron/cron_executor_health_alert.php`, `/var/www/emtskills/lib/RubenExecutor.php`
-- Local patch: `/tmp/ruben_executor_patch.py`
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786059773410` — 8/6/2026, 10:54:22 PM PT — 96 turns
-
-**Original task:**
-
-```
-#Baseline Tempe Loan
-
-from kristall.seidel@calbt.com 
-can you help me answer these questions for the loan we're looking at for the Baseline Tempe property. If you search emails from California Bank and Trust, you will get a more complete picture. Help me draft a reply and if you don't know then give me browser instructions to acquire any adiditonal information. 
-
-
-Hi Ruben and Alma,
-
-I just received the list of questions from the underwriter. Could you please respond to the following as completely and quickly as possible?
-
--Since personal TR for 2025 are on extension, can we get 2025 W2s for t
-```
-
-**Ideas referenced:** #178590, #19370, #23710, #23711, #23920 [in_progress], #23941 [in_progress], #23944 [in_progress], #23945, #23952, #23954, #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed], #24197 [queued], #24198 [queued], #24201 [queued]
-
-**Last PICKUP PROMPT:**
-
-```
-seidel@calbt.com via Postmark.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1785907561329 - Baseline Tempe loan to CBT underwriter
-
-Where we left off (verified 2026-08-06 22:53 PT):
-- Final status tracker in Google Drive: https://drive.google.com/file/d/1GA_RKU1qKuQPP8Z1GLHxrcq126CKH0i7/view (10 answered, 5 pending)
-- Idea #24197 updated to in_progress
-
-Open threads to drive next (EVERY item has a real idea #):
-1. #24197 [blocked — pending Ruben] — Q1 (Alma→Alan), Q2 (Ruben+Jen), Q4 (Ruben clarify), Q8 (Ruben confirm SBA), Q15 (myFICO)
-2. #24198 [blocked] — Alma asks Alan (CPA): W2s + extension + affiliate financials
-3. #24201 [blocked] — Locate lease agreements + debt schedule template
-
-Reference IDs:
-- Ideas filed: #24197 [blocked], #24198 [blocked], #24201 [blocked]
-- Drive docs: 1GA_RKU1qKuQPP8Z1GLHxrcq126CKH0i7 (status tracker), 1YTwzCoASZR0VIILKXzk2HtatKicBV5Tt (original draft)
-- Desktop: /Users/rubenmajor/Desktop/DRAFT_Response_Kristall_Seidel_CBT_Baseline_Tempe.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Read handoff notes and local Desktop files (SBA narrative, PFS)
-- [x] Search Google Drive for CBT/loan docs (SBA 1919, LOI, PPP apps, W-9, Lynn emails)
-- [x] Extract PFS contents (Section 1 filled, Section 2 blank, $200K undescribed)
-- [x] Draft reply covering all 14 questions at Desktop .md
-- [x] Create Google Drive doc with answers
-- [x] Update with Alma's answers + status tracker (10 done, 5 pending)
-- [x] Add myFICO instructions for Q15
-- [x] Flag CPA items "Alma asks Alan"
-- [x] File 3 follow-up ideas (#24197, #24198, #24201)
-</task_progress>
 </attempt_completion>
 ```
 
@@ -728,31 +852,6 @@ Reference IDs:
 </attempt_completion>
 ```
 
-### `1786005641053` — 8/6/2026, 7:08:24 PM PT — 372 turns
-
-**Original task:**
-
-```
-#GLM
-
-Rebase
-Is there anything left to do here? 
-
-Four questions. I fixed two things while answering, and I need to correct my own framing on the first one.
-
-## 1. "How can we avoid the lies?"
-
-A correction first, because I used the word loosely. There are two different failures and only one is dishonesty.
-
-**Not lying:** I tagged ideas `[executing]` because the database said `in_progress`. The work never ran because the executor is idle. I reported the field I was given, and the field was misleading. Broken instrument. #23326 [executing] owns it.
-
-**Actual fabrication:** an agent writing idea
-```
-
-**Ideas referenced:** #16523, #16578, #1685, #1687, #1688 [resolved], #1705, #1706, #1754, #1755, #178593, #1896, #19173, #19218 [rejected], #19230 [executing], #19239 [rejected], #19261 [executing], #1962, #1986, #1988, #1989 [outdated], #1991, #2014, #2084, #2085, #2147 [investigating], #2249 [needs_verify], #2254 [deployed], #2258, #2259, #2261, #22897 [executing], #23050 [executing], #23056 [executing], #23157 [executing], #23159 [executing], #23169 [executing], #23283 [executing], #23326 [executing], #23354 [deployed], #24172 [proposed], #24217 [proposed], #24240 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
 ### `1786065775388` — 8/6/2026, 6:47:30 PM PT — 82 turns
 
 **Original task:**
@@ -835,29 +934,6 @@ Work on that
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1785954733601` — 8/6/2026, 6:12:23 PM PT — 422 turns
-
-**Original task:**
-
-```
-#SLS MEGA
-
-
-═══════════════════════════════════════════════
-PICKUP PROMPT: EMTSKILLS PERFORMANCE, SLS, CS QUEUES
-═══════════════════════════════════════════════
-Pick up emtskills server performance, Student Lifecycle Service (SLS), and CS queue ownership.
-
-VERIFIED GROUND TRUTH (from ledger + handoff, 2026-08-05):
-EMTSKILLS SLOW-LOAD (fixed 2026-08-04):
-- 3rd recurrence root cause: hourly full-root rsync to 2x 8TB IronWolf HDDs (sda/sdb 97-100% util, 847ms write await) starving MariaDB + PHP-FPM.
-- Old load>30 guard NEVER fired because disk I/O saturation does not show high load (load was 13-1
-```
-
-**Ideas referenced:** #18329, #18337, #18841 [queued], #18842 [queued], #18848 [deployed], #18850 [deployed], #18864 [queued], #2018, #20825, #2165, #2166, #2167, #2183, #2187, #2193, #2201, #2214, #2219 [deployed], #2220, #2222, #22258 [superseded], #22294 [deployed], #2233, #2239, #2255, #23173 [in_progress], #23211 [in_progress], #23223 [in_progress], #23308 [in_progress], #23341 [in_progress], #24184 [in_progress], #5459, #5608
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
 ### `1785953476892` — 8/6/2026, 6:08:42 PM PT — 520 turns
 
 **Original task:**
@@ -874,51 +950,6 @@ Four causes, and the first one is the biggest:
 ```
 
 **Ideas referenced:** #10119 [rejected], #1026, #1233, #17300, #18329 [queued], #18800, #18868, #19304, #19309, #19313, #1934, #2225 [deployed], #2237 [rejected], #2256, #22598, #22601, #22832, #23117, #23122 [in_progress], #23135 [executing], #23172 [approved], #23178 [approved], #23179 [approved], #23182 [proposed], #23183 [proposed], #23217, #23234 [proposed], #23290, #23291, #23325 [in_progress], #4505 [rejected], #52758, #52773, #52775, #52782, #52784, #52799, #52801, #56925, #56938
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785966271898` — 8/6/2026, 6:04:54 PM PT — 336 turns
-
-**Original task:**
-
-```
-#Payment Issues
-
-Pick up payments. THE ROOT CAUSE IS ALREADY DIAGNOSED IN IDEA #20613 AND NOBODY READ IT.
-
-#20613 title, verbatim: "URGENT: zero large EMT approvals today, all 5007 Credit Floor with AVS+CVC
-passing, correlates with July crossing $1M processed on 07-27 (first time ever). Leading
-hypothesis: Intuit merchant-account [cap]"
-
-FROM #20613 (2026-07-31): FIVE distinct payers declined across 07-30/07-31 (Matthew Gillespie,
-Frank Heald, Maia, Elizabeth Shipp Conway, Shaheed Kehinde) on DIFFERENT cards, DIFFERENT banks,
-FOUR different sites (sandiegoemt, dallasemt, californiaemt x2, ariz
-```
-
-**Ideas referenced:** #11321, #13457, #19387 [executing], #19657, #19935, #19948, #20130, #20491, #20613 [approved], #20693, #20853, #23062 [executing], #23268 [executing], #23279 [proposed], #23280 [proposed], #23281 [proposed], #23282 [proposed], #23304 [in_progress], #23364, #23394, #23584, #23585, #23890, #24158 [in_progress], #4929, #5805, #8211
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785954707277` — 8/6/2026, 6:04:51 PM PT — 310 turns
-
-**Original task:**
-
-```
-#EA PIPELINE
-
-═══════════════════════════════════════════════
-PICKUP PROMPT: PAYMENTS, QB, EA/PDF, CERTS
-═══════════════════════════════════════════════
-Pick up payments, QuickBooks, EA/PDF pipeline, and cert renewal.
-
-PROBE FIRST (per #23050). Stored notes are CONTEXT, not ground truth. A prior window shipped a WRONG cert deadline from stored notes; that is why this section exists.
-
-CERT: THE PRIOR CLAIM WAS WRONG, CORRECTED 2026-08-05 07:49 PT
-- Prior handoffs said "mail.emsuniversity.com expiring 2026-08-12, certbot renewal failing." Both halves are false.
-- Live: openssl x509 -in /etc/lets
-```
-
-**Ideas referenced:** #16695 [needs_verify], #19387 [executing], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #21582, #23050 [executing], #23052 [executing], #23169 [queued], #23184 [proposed], #23185 [proposed], #23317 [executing]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -3830,331 +3861,5 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 —[COPY]——
 Write a minimum 3000 word engineering analysis of RDMA versus kernel TCP for collective communication in distributed model inference. Proceed in order: (1) trace a single message through both stacks, naming every copy and context switch, (2) derive per-message latency for both, (3) compute the total per-token communication cost for a 78-layer model under tensor parallelism issuing two all-reduces per layer, (4) show what fraction of a 173 millisecond step budget each transport consumes, (5) explain why a tensor-parallel experiment run over TCP would produce a false negative and cause
 ```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785864511866` — 8/4/2026, 10:30:54 AM PT — 12 turns
-
-**Original task:**
-
-```
-——[COPY]——
-Window 5. Write roughly 600 words explaining RDMA versus TCP sockets for GPU cluster collectives. Cover kernel bypass, why per-message latency matters more than bandwidth for all-reduce, how many collectives a 78-layer model issues per token under tensor parallelism, and why that makes the transport choice decisive. Prose, no bullet lists.
-——[/COPY]——
-```
-
-**Ideas referenced:** #22334
-
-**Last PICKUP PROMPT:**
-
-```
-mpletes them in microseconds).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #22334 - RDMA vs TCP explainer essay
-
-Where we left off (verified 2026-08-04 10:30 PT):
-- 698-word prose essay written and saved to rdma_vs_tcp_gpu_collectives.md
-- Covers kernel bypass, latency vs bandwidth, per-token collective count, transport choice decisive
-- No remaining writing work; file is production-ready
-
-Open threads to drive next:
-1. (none, single-file writing task, complete)
-
-Reference IDs:
-- Ideas filed: none
-- Files touched: /Users/rubenmajor/Desktop/rdma_vs_tcp_gpu_collectives.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Draft ~600-word prose explanation of RDMA vs TCP for GPU collectives
-- [x] Cover kernel bypass, latency vs bandwidth, per-token collective count, decisive transport choice
-- [x] Verify word count (698 words)
-- [x] Save to file
-</task_progress>
-</attempt_completion>
-```
-
-### `1785864591765` — 8/4/2026, 10:30:44 AM PT — 4 turns
-
-**Original task:**
-
-```
-——[COPY]——
-Window 8. Write roughly 600 words explaining how to benchmark a multi-user inference endpoint honestly. Cover why aggregate tokens per second hides per-user experience, why dividing a long-window aggregate by an assumed concurrency is invalid, and what you must record alongside every number for it to be reproducible. Prose, no bullet lists.
-——[/COPY]——
-```
-
-**Last PICKUP PROMPT:**
-
-```
-raphs totaling ~590 words.
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task <copy-window-8> — multi-user inference benchmarking prose piece.
-Where we left off (verified 2026-08-04 10:30 PT):
-- Wrote ~590 words explaining honest multi-user inference endpoint benchmarking: why aggregate tokens/sec hides per-user experience, why dividing a long-window aggregate by assumed concurrency is invalid, and what to record beside every number for reproducibility.
-- Prose only, no bullet lists, as requested. Saved to Desktop: /Users/rubenmajor/Desktop/WINDOW8_BENCHMARK_MULTIUSER_INFERENCE.md (5 paragraphs, ~590 words).
-Open threads to drive next:
-1. (human) — Review the piece; adjust length/tone/emphasis if desired. No further automated work pending.
-Reference IDs:
-- Ticket: none
-- Ideas filed: none
-- Files touched: WINDOW8_BENCHMARK_MULTIUSER_INFERENCE.md
-When done, append to cline_task_ledger.md per rule 07.
-═══════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785864534211` — 8/4/2026, 10:30:26 AM PT — 6 turns
-
-**Original task:**
-
-```
-——[COPY]——
-Window 6. Write roughly 600 words explaining KV cache quantization in LLM serving. Cover what is actually stored per token, why FP8 halves the footprint, what accuracy risk it carries, and how cache capacity relates to max concurrent sequences. Prose, no bullet lists.
-——[/COPY]——
-```
-
-**Last PICKUP PROMPT:**
-
-```
- max concurrent sequences.
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task #none — KV cache quantization explainer completed
-Where we left off (verified 2026-08-04 10:30 PT):
-- Task is a one-shot writing task, no ongoing work
-Open threads to drive next:
-1. (none — task complete)
-Reference IDs:
-- Files touched: kv_cache_quantization_explained.md
-═══════════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785864555606` — 8/4/2026, 10:30:20 AM PT — 6 turns
-
-**Original task:**
-
-```
-——[COPY]——
-Window 7. Write roughly 600 words explaining why unified memory architectures behave differently from discrete GPU HBM for large model inference. Cover the bandwidth gap, why capacity stops being the binding constraint and bandwidth starts, and what that means for choosing a model size per node. Prose, no bullet lists.
-——[/COPY]——
-```
-
-**Ideas referenced:** #22567
-
-**Last PICKUP PROMPT:**
-
-```
-n rather than a non-issue.
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task #22567 — Window 7 parallel prose: unified memory vs discrete GPU HBM for large model inference
-Where we left off (verified 2026-08-04 10:29 PT):
-- Prose written (~600 words) covering the bandwidth gap, why capacity unbinds and bandwidth binds, and what that means for picking model size per node on unified memory machines.
-- No server files touched, no ideas filed, no further work pending.
-Open threads to drive next:
-None — this was a write-and-done window. Prose delivered above.
-Reference IDs:
-- Tickets: none
-- Ideas filed: none
-- Files touched: none
-When done, append to cline_task_ledger.md per rule 07.
-═══════════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Verify MCP health
-- [x] Write ~600-word prose on unified memory vs discrete GPU HBM
-- [x] Complete with PICKUP PROMPT per rule 91
-</task_progress>
-</attempt_completion>
-```
-
-### `1785864497210` — 8/4/2026, 10:29:36 AM PT — 8 turns
-
-**Original task:**
-
-```
-——[COPY]——
-Window 4. Write roughly 600 words explaining what CUDA graphs do for inference latency. Cover kernel launch overhead, why graphs must be captured per batch size, what happens when a batch size has no captured graph, and the tradeoff against capture time and memory. Prose, no bullet lists.
-——[/COPY]——
-```
-
-**Last PICKUP PROMPT:**
-
-```
-off in production traffic.
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task — CUDA graphs inference latency prose (writes-only output window)
-Where we left off (verified 2026-08-04 10:29 PT):
-- Delivered ~600-word prose explanation of CUDA graphs for inference latency, self-authored inline because the delegate-70b local endpoint (wopr:8000) was unreachable.
-- Covers all four required points: kernel launch overhead, per-batch-size capture requirement, fallback behavior on missing graph, and the capture-time/memory tradeoff.
-Open threads to drive next:
-- None — [completed deliverable in this window; no persistent state or files touched]
-Reference IDs:
-- No real idea #s filed this window (no fake placeholders used). File: none (output-only task, no repo changes).
-- Files touched: none
-When done, append to cline_task_ledger.md per rule 07.
-═══════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785864485442` — 8/4/2026, 10:29:29 AM PT — 4 turns
-
-**Original task:**
-
-```
-——[COPY]——
-Window 3. Write roughly 600 words explaining the difference between prefill and decode in LLM serving. Cover why prefill is compute-bound and decode is memory-bound, what prefix caching does and does not help, and why chunked prefill exists. Prose, no bullet lists.
-——[/COPY]——
-```
-
-**Last PICKUP PROMPT:**
-
-```
-g and predictable latency.
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task — prefill vs decode explanation (600-word prose)
-Where we left off (verified 2026-08-04 10:29 PT):
-- Wrote the prose essay to /Users/rubenmajor/Desktop/prefill-vs-decode.md (~700 words, prose only)
-- Covered prefill (compute-bound single pass) vs decode (memory-bound autoregressive), prefix caching limits, and chunked prefill rationale
-Open threads to drive next:
-1. none — task complete, no further action needed
-Reference IDs:
-- Ticket: none
-- Ideas filed: none
-- Files touched: /Users/rubenmajor/Desktop/prefill-vs-decode.md
-When done, append to cline_task_ledger.md per rule 07.
-═══════════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785864459503` — 8/4/2026, 10:29:09 AM PT — 4 turns
-
-**Original task:**
-
-```
-——[COPY]——
-Window 1. Write roughly 600 words explaining how pipeline parallelism differs from tensor parallelism for transformer inference. Cover why pipeline stages run sequentially per token, what that does to effective memory bandwidth on a multi-node ring, and when each layout is the right choice. Prose, no bullet lists.
-——[/COPY]——
-```
-
-**Last PICKUP PROMPT:**
-
-```
-ullet lists, as requested.
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task — Pipeline vs Tensor Parallelism essay (600 words)
-Where we left off (verified 2026-08-04 10:28 PT):
-- Completed the full essay in prose form; no pending edits.
-Open threads to drive next:
-- None — deliverable was a standalone written piece; no idea filed, no follow-up action needed. This was a content request, not a code/ops task.
-Reference IDs:
-- Ticket: none
-- Ideas filed: none
-- Files touched: /Users/rubenmajor/Desktop/pipeline_vs_tensor_parallelism.md
-When done, append to cline_task_ledger.md per rule 07.
-═══════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785864472446` — 8/4/2026, 10:29:06 AM PT — 4 turns
-
-**Original task:**
-
-```
-——[COPY]——
-Window 2. Write roughly 600 words explaining how a mixture-of-experts layer works at inference time. Cover the router, top-k expert selection, why the number of DISTINCT experts touched grows sublinearly with batch size, and what that implies for memory traffic per decode step. Prose, no bullet lists.
-——[/COPY]——
-```
-
-**Last PICKUP PROMPT:**
-
-```
-cost of each loaded expert
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task — MoE inference explanation, write ~600 words
-Where we left off (verified 2026-08-04 10:28 PT):
-- Prose explanation written to /Users/rubenmajor/Desktop/moe_inference_explanation.md
-- Covers router, top-k, sublinear expert growth, memory traffic implications
-Open threads to drive next:
-None — one-off writing task, complete.
-Reference IDs:
-- Ticket: none
-- Ideas filed: none
-- Files touched: /Users/rubenmajor/Desktop/moe_inference_explanation.md
-When done, append to cline_task_ledger.md per rule 07.
-═══════════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Write ~600 word prose explanation of MoE inference
-</task_progress>
-</attempt_completion>
-```
-
-### `1785833407446` — 8/4/2026, 9:17:09 AM PT — 431 turns
-
-**Original task:**
-
-```
-In argus: 
-
-I just asked a really simple stupid question adn it's taking multiple attempts to asnwer. 
-
-why does this make me laugh?
-Argus
-Connected - researching...
-Searched EMSU records (1 student profile matched)
-Searched EMSU knowledge base (VEC) - relevant docs found
-Thinking with frankenstein-llm...
-```
-
-**Ideas referenced:** #10003, #10005, #10182, #11397, #12301, #12368, #12589, #12590, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13874, #16213, #16263, #18671, #18745, #18770, #19370 [deployed], #19686, #19784, #19903, #2006, #2050, #20547, #21125, #21126, #21134 [ready_for_review], #21140 [ready_for_review], #21262, #2178 [deployed], #2183, #22178 [ready_for_review], #22356 [approved], #22365 [approved], #22366 [approved], #22376 [approved], #22377 [approved], #22416 [approved], #22438 [approved], #22460 [approved], #22488 [approved], #22489 [approved], #22490 [approved], #22501 [approved], #274160, #30363, #69707, #8942, #9650, #9654, #9660, #9733, #9889
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785858167516` — 8/4/2026, 9:14:49 AM PT — 113 turns
-
-**Original task:**
-
-```
-#GLM
-
-To note it would be difficult for me to need or run 32, 64, windows, etc.. At any given time, with iterations going. My thoughts are that abaolute max windows in cline i could have iterating and keep up would be 12 just fron a human standpoint. As for interative usage, supposedly the windows need to be 3.5 tok/sec to be better than the 120Bs based on my habits, waiting between iterations,quality of 120Bs vs GLM 5.2, etc... this should be baked into the eventual build
-
---
-You are right and my framing was wrong. I called it saturation. It is truncation, and that changes everything.
-
-Look a
-```
-
-**Ideas referenced:** #12459, #20272, #20536, #2071, #2072, #2085, #2184, #2185, #22128 [executing], #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #22479 [proposed], #22480 [proposed], #22484 [proposed], #22491 [proposed], #22499 [proposed], #22500 [in_progress]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

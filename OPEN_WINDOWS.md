@@ -6,12 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/7/2026, 11:38:46 AM PT | window: last 72h | 96 tasks | index total 525 (parsed 0, cached 525)
+Generated: 8/7/2026, 2:10:06 PM PT | window: last 72h | 94 tasks | index total 528 (parsed 4, cached 524)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1786135267277` | 8/7/2026, 2:06:59 PM | 15 | 67KB | I would like to start having a system where we auto-assign externships based on location/d |
+| `1786133997460` | 8/7/2026, 2:02:47 PM | 341 | 439KB | Take a lookat Jon's argus, a lot of 502 and SQL debris. Need to fix these 502s from now on |
+| `1786135150364` | 8/7/2026, 2:02:00 PM | 146 | 212KB | emsuniversity.com is laggy, slow and needs to go faster. Something is bogiging it down |
+| `1785966271898` | 8/7/2026, 1:50:32 PM | 412 | 1142KB | #Payment Issues |
+| `1786088761151` | 8/7/2026, 1:39:56 PM | 158 | 578KB | Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversit |
 | `1786123588626` | 8/7/2026, 11:06:14 AM | 232 | 568KB | telephony is not working for incoming calls - it's telling people a debug message. Please  |
-| `1786088761151` | 8/7/2026, 10:36:29 AM | 134 | 529KB | Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversit |
 | `1786057314451` | 8/7/2026, 10:24:23 AM | 588 | 3844KB | I keep getting this message every 15 minutes and is it fixed or not? |
 | `1786036273485` | 8/7/2026, 10:20:35 AM | 818 | 1565KB | #Argus  |
 | `1786060260487` | 8/7/2026, 10:18:31 AM | 782 | 2173KB | frankenstein-llm subagents experiencing delay. Are those on deepseek like they should be?  |
@@ -20,7 +24,6 @@ Generated: 8/7/2026, 11:38:46 AM PT | window: last 72h | 96 tasks | index total 
 | `1785954856277` | 8/7/2026, 10:07:26 AM | 680 | 2681KB | #CFA |
 | `1786059773410` | 8/7/2026, 10:03:34 AM | 98 | 323KB | #Baseline Tempe Loan |
 | `1786086916545` | 8/7/2026, 9:57:17 AM | 154 | 865KB | Tell me how the student council is doing. Is it healthy? It actually generating ideas and  |
-| `1785966271898` | 8/7/2026, 9:56:39 AM | 354 | 1012KB | #Payment Issues |
 | `1785954707277` | 8/7/2026, 9:56:34 AM | 358 | 1814KB | #EA PIPELINE |
 | `1786088921071` | 8/7/2026, 9:55:59 AM | 122 | 566KB | I don't really understand what's going on here. This task was about email for the being se |
 | `1786081573518` | 8/7/2026, 12:46:20 AM | 274 | 992KB | Whiy is this task 502, we need to stop with the 502s: |
@@ -101,15 +104,107 @@ Generated: 8/7/2026, 11:38:46 AM PT | window: last 72h | 96 tasks | index total 
 | `1785885221719` | 8/4/2026, 4:14:07 PM | 2 | 5KB | What's going on today in Argus? |
 | `1785858480786` | 8/4/2026, 4:01:49 PM | 596 | 2311KB | For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. P |
 | `1785858742320` | 8/4/2026, 3:28:10 PM | 310 | 2664KB | I dont' see here where the callback system is working properly? Seems like it is not. Can  |
-| `1785873518014` | 8/4/2026, 2:06:51 PM | 294 | 691KB | #GLM  |
-| `1785861156554` | 8/4/2026, 1:53:32 PM | 398 | 802KB | https://emsuniversity.com/emtskills slow to load again |
-| `1785868208238` | 8/4/2026, 12:49:31 PM | 322 | 689KB | #GLM  |
-| `1785869498305` | 8/4/2026, 12:37:31 PM | 162 | 508KB | Ruben Orchestrator MCP is offline. This is odd considering. Take a look at MCP Troubleshoo |
-| `1785869837093` | 8/4/2026, 11:57:54 AM | 4 | 18KB | I have been told you died. Is that false? |
 
 ---
 
 ## Per-window detail
+
+### `1786135267277` — 8/7/2026, 2:06:59 PM PT — 15 turns
+
+**Original task:**
+
+```
+I would like to start having a system where we auto-assign externships based on location/distance from the location of the student within a 150 mile radius for externships. I need to spec this: https://emsuniversity.com/emtskills/externship/dashboard.php
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786133997460` — 8/7/2026, 2:02:47 PM PT — 341 turns
+
+**Original task:**
+
+```
+Take a lookat Jon's argus, a lot of 502 and SQL debris. Need to fix these 502s from now on. Fix it.
+```
+
+**Ideas referenced:** #19370, #2265 [deployed], #2266 [deployed], #22688, #23036, #23428, #23880, #23945, #24012 [rejected], #24025 [superseded], #24026, #24029 [superseded], #24044 [superseded], #24182 [superseded], #24334 [superseded], #24428, #24450, #24451, #24452, #24466 [superseded], #24467, #24586 [superseded], #24672 [superseded], #24682 [superseded], #24702 [superseded], #24704 [approved]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786135150364` — 8/7/2026, 2:02:00 PM PT — 146 turns
+
+**Original task:**
+
+```
+emsuniversity.com is laggy, slow and needs to go faster. Something is bogiging it down
+```
+
+**Ideas referenced:** #24714 [proposed], #24715 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1785966271898` — 8/7/2026, 1:50:32 PM PT — 412 turns
+
+**Original task:**
+
+```
+#Payment Issues
+
+Pick up payments. THE ROOT CAUSE IS ALREADY DIAGNOSED IN IDEA #20613 AND NOBODY READ IT.
+
+#20613 title, verbatim: "URGENT: zero large EMT approvals today, all 5007 Credit Floor with AVS+CVC
+passing, correlates with July crossing $1M processed on 07-27 (first time ever). Leading
+hypothesis: Intuit merchant-account [cap]"
+
+FROM #20613 (2026-07-31): FIVE distinct payers declined across 07-30/07-31 (Matthew Gillespie,
+Frank Heald, Maia, Elizabeth Shipp Conway, Shaheed Kehinde) on DIFFERENT cards, DIFFERENT banks,
+FOUR different sites (sandiegoemt, dallasemt, californiaemt x2, ariz
+```
+
+**Ideas referenced:** #11321, #13457, #19387 [executing], #19657, #19935, #19948, #20130, #20491, #20613 [approved], #20693, #20853, #23062 [executing], #23268 [executing], #23279 [proposed], #23280 [proposed], #23281 [proposed], #23282 [proposed], #23304 [in_progress], #23364, #23394, #23584, #23585, #23890, #24158 [in_progress], #24169, #24701 [in_progress], #4929, #5805, #8211
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786088761151` — 8/7/2026, 1:39:56 PM PT — 158 turns
+
+**Original task:**
+
+```
+Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversity.com/emtskills/routes/ruben_executor_live.php
+```
+
+**Ideas referenced:** #059669, #0891, #10003, #10007, #10060, #12059, #12065, #12184, #127922, #128157, #128190, #128640, #13418, #1373, #14532, #1658, #166534, #17560, #1786, #22031 [fix-needed], #22032 [fix-needed], #24624 [deployed], #24625 [proposed], #24626, #24634 [deployed], #24695 [proposed], #2563, #334155, #3730, #374151, #4338, #4536, #475569, #5031, #6366, #64748, #65039, #78350, #8594, #92400, #9654, #9888, #9989
+
+**Last PICKUP PROMPT:**
+
+```
+eeded for design completeness.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Accelerate chain executor drainage: Frank-LLM fleet is degraded, planner times out
+
+Where we left off (verified 2026-08-07 13:39 PT):
+- Backlog draining slowly: 11,302 → 11,205 (~6/hr vs 192/hr configured cap)
+- 3h throughput: 17 executed, 26 failed (24 LLM planner timeouts)
+- 14b (WOPR) at 26 fails, 32b (M4) at 43 fails, deepseek-v4-pro timing out
+- frankenstein-tools adapter returns empty response
+- Only cicero-235B (DeepSeek API) and claude-opus-real (paid API) healthy
+
+Open threads to drive next:
+#24695 [proposed] — Fix planner spill: add cicero-235B and/or claude-opus-real to `ruben_executor_planner_spill_models` config, OR restart the local Ollama fleet. After fix, verify backlog drain rate increases to >50/hr.
+#24625 [proposed] — Implement `completeChainIfRecurrenceMatch()` on RubenExecutor. Non-blocking P2.
+
+Reference IDs:
+- Ideas filed: #24624 [deployed], #24625 [proposed], #24634 [deployed], #24695 [proposed]
+- Files touched: /var/www/emtskills/cron/cron_ruben_autonomous.php (logWorkerStart/logWorkerEnd), /var/www/emtskills/lib/ruben_recurrence_idempotency_hash.php (outcome filter)
+
+When done, clean up /tmp/worker_log_functions.php and append a row to cline_task_ledger.md per rule 07. Run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1786123588626` — 8/7/2026, 11:06:14 AM PT — 232 turns
 
@@ -122,45 +217,6 @@ telephony is not working for incoming calls - it's telling people a debug messag
 **Ideas referenced:** #16154, #23133, #24635 [proposed], #24636 [proposed], #24645 [proposed], #24646 [proposed], #9222, #9501
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786088761151` — 8/7/2026, 10:36:29 AM PT — 134 turns
-
-**Original task:**
-
-```
-Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversity.com/emtskills/routes/ruben_executor_live.php
-```
-
-**Ideas referenced:** #059669, #0891, #10003, #10007, #10060, #12059, #12065, #12184, #127922, #128157, #128190, #128640, #13418, #1373, #14532, #1658, #166534, #17560, #1786, #22031 [fix-needed], #22032 [fix-needed], #24624 [deployed], #24625 [proposed], #24626, #24634 [deployed], #2563, #334155, #3730, #374151, #4338, #4536, #475569, #5031, #6366, #64748, #65039, #78350, #8594, #92400, #9654, #9888, #9989
-
-**Last PICKUP PROMPT:**
-
-```
-eeded for design completeness.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Verify chain backlog draining post-fix, monitor throughput
-
-Where we left off (verified 2026-08-07 10:37 PT):
-- Backlog at 11,254 and falling from peak of 11,302
-- 9 chains pending (planner running), 2 executed since fix
-- Dispatch rate: 12 chains per ~2-min dispatcher tick at 192/hr cap → ~2.4 days to fully drain
-- Two fixes deployed: logWorkerStart/logWorkerEnd (#24624) + noop-loop checkRecurrenceIdempotent (#24634)
-
-Open threads to drive next:
-#24625 [proposed] — Implement completeChainIfRecurrenceMatch() on RubenExecutor. Non-blocking follow-up, not needed for current drain.
-
-Reference IDs:
-- Ideas filed: #24624 [deployed], #24625 [proposed], #24634 [deployed]
-- Files touched: /var/www/emtskills/cron/cron_ruben_autonomous.php (functions insert), /var/www/emtskills/lib/ruben_recurrence_idempotency_hash.php (outcome filter)
-
-When done, clean up /tmp/worker_log_functions.php and append a row to cline_task_ledger.md per rule 07. Run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
 
 ### `1786057314451` — 8/7/2026, 10:24:23 AM PT — 588 turns
 
@@ -499,28 +555,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1785966271898` — 8/7/2026, 9:56:39 AM PT — 354 turns
-
-**Original task:**
-
-```
-#Payment Issues
-
-Pick up payments. THE ROOT CAUSE IS ALREADY DIAGNOSED IN IDEA #20613 AND NOBODY READ IT.
-
-#20613 title, verbatim: "URGENT: zero large EMT approvals today, all 5007 Credit Floor with AVS+CVC
-passing, correlates with July crossing $1M processed on 07-27 (first time ever). Leading
-hypothesis: Intuit merchant-account [cap]"
-
-FROM #20613 (2026-07-31): FIVE distinct payers declined across 07-30/07-31 (Matthew Gillespie,
-Frank Heald, Maia, Elizabeth Shipp Conway, Shaheed Kehinde) on DIFFERENT cards, DIFFERENT banks,
-FOUR different sites (sandiegoemt, dallasemt, californiaemt x2, ariz
-```
-
-**Ideas referenced:** #11321, #13457, #19387 [executing], #19657, #19935, #19948, #20130, #20491, #20613 [approved], #20693, #20853, #23062 [executing], #23268 [executing], #23279 [proposed], #23280 [proposed], #23281 [proposed], #23282 [proposed], #23304 [in_progress], #23364, #23394, #23584, #23585, #23890, #24158 [in_progress], #24169, #4929, #5805, #8211
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1785954707277` — 8/7/2026, 9:56:34 AM PT — 358 turns
 
@@ -3564,171 +3598,5 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785873518014` — 8/4/2026, 2:06:51 PM PT — 294 turns
-
-**Original task:**
-
-```
-#GLM 
-
-Is there a better way to probe the loop then? I feel left off a cliff here, where are we going with all this? 
-
-Since i laready did the test and found the GLM to be an acceptable speed and the test was not faulty, I'm happy about cline functionality. 
-
-However, you did not finish your test of GLM vs the 120Bs. I already ran 22564 in another window and will work ont he followup ideas there shortly. 
-
-Build and ship these now:
-
-Unchanged and still worth doing, but it is now clearly the smaller fish. The copy window I gave you stands: size max_tokens at 3x the target word count, per-surfac
-```
-
-**Ideas referenced:** #12335, #12459, #13108, #13121, #13475, #15371, #15374, #18567, #1877, #18868, #1889, #19144, #19163, #1934, #1965, #1966, #1967, #21045, #22128 [executing], #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #22479 [proposed], #22480 [proposed], #22484 [proposed], #22491 [proposed], #22500 [executing], #22527 [proposed], #22528 [proposed], #22543 [proposed], #22563 [proposed], #22564 [proposed], #22565 [proposed], #22570 [proposed], #22571 [proposed], #22572 [proposed], #22583 [proposed], #22584 [proposed], #22598 [proposed], #22599 [proposed], #22600 [proposed], #22601 [proposed], #22602 [proposed], #22612 [proposed], #22613 [proposed], #6429
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785861156554` — 8/4/2026, 1:53:32 PM PT — 398 turns
-
-**Original task:**
-
-```
-https://emsuniversity.com/emtskills slow to load again
-```
-
-**Ideas referenced:** #16170, #1658, #1986, #2176, #2177, #22334, #22355 [proposed], #22517 [in_progress], #22550 [awaiting_review]
-
-**Last PICKUP PROMPT:**
-
-```
-d, so freshness is unaffected.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #22550 - emtskills capacity increase and slow-load follow-up.
-
-Where we left off (verified 2026-08-04 13:53 PT):
-- Deployed and verified: FPM max_children tiers 180 to 300 moderate, 200 to 400 full, via memory-guardian.sh patch. pm.max_spawn_rate 64. MySQL thread_cache 200, max_connections 2000, innodb_io_capacity 4000/8000, read_io_threads 8. All persisted.
-- Live verification: pm.max_children 300, MySQL params live, external TTFB 13ms, load 10 on 48 cores.
-- Ruben asked for double-check on side effects and why phone lookups were highlighted. Answered: no risky caching added, guardrails intact, Lookup queries are 1 to 5ms indexed, under 5% of MySQL CPU. Real drivers are WordPress/moodle databases plus LLM orchestration processes.
-
-Open threads to drive next:
-1. #22550 [deployed] Watch load this week. If access log shows caller_lookup fallback VIEW path spiking (look for ['vapi_lookup'] fallback lines in php-fpm log), optimize the VIEW join with an index. No action yet, baseline is healthy.
-2. #22550 [deployed] Optional next lever if load climbs again: move orchestrator_api LLM curl_exec calls to the litellm host so MariaDB CPU drops. Propose before doing, it is a bigger change.
-
-Reference IDs:
-- Ideas filed: #22550 [deployed]
-- Files touched: emsu-memory-guardian.sh, www.conf, 99-emsu-perf.cnf, 99-emsu-max-connections.cnf, HANDOFF_NOTES.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785868208238` — 8/4/2026, 12:49:31 PM PT — 322 turns
-
-**Original task:**
-
-```
-#GLM 
-
-Finish polling this test and advise results so we can contintinue GLM work with real data. 
-
-You were right on both counts, and the direct experiment you proposed refuted my model by 7x. Here is the data.
-
-## Your criticism #1: hops was the wrong measure
-
-Correct, and worse than I realized. I modeled a 120B task as 7.0 hops × (76.4 tokens / 25.54 tok/s + 2s) = **35 seconds**.
-
-I ran the actual experiment. Same v2 prompt, straight to `gpt-oss-120b`:
-
-| | Result |
-|---|---|
-| Wall clock | **251.8 seconds** |
-| My prediction | 35 seconds |
-| Error | **7.2x, and I understated it** |
-
-The br
-```
-
-**Ideas referenced:** #12618, #12680, #13121, #15371, #15374, #19338, #1965, #1966, #1967, #2193 [resolved], #2194, #2195, #22128 [executing], #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #22479 [proposed], #22480 [proposed], #22484 [proposed], #22491 [proposed], #22499 [rejected], #22500 [executing], #22527 [proposed], #22528 [proposed], #22543 [proposed], #22563 [proposed], #22564 [proposed], #22565 [proposed], #22570 [proposed], #22571 [proposed], #22572 [proposed], #22583 [proposed], #22584 [proposed], #7381 [queued]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785869498305` — 8/4/2026, 12:37:31 PM PT — 162 turns
-
-**Original task:**
-
-```
-Ruben Orchestrator MCP is offline. This is odd considering. Take a look at MCP Troubleshooting Document on Desktop and update as needed. Resolve the issue. All other MCPs appear stable
-```
-
-**Ideas referenced:** #1593, #16170, #16221, #16235, #18600, #1895, #22569 [proposed], #22575 [proposed], #22582 [deployed], #3988, #5918, #6104, #9731
-
-**Last PICKUP PROMPT:**
-
-```
-ew hallucinated tool entries).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task ruben-orchestrator MCP outage fix (verified 2026-08-04 12:37 PT)
-
-Where we left off:
-- ruben-orchestrator (7843) restored via systemctl start after 11h outage caused by explicit stop
-- Inactive-revival guard SHIPPED: idea #22569 [deployed] (Section 9 in emsu-overload-guard.sh, verified live)
-- dispatch_idea and implement_idea hallucination rows added to MCP_Troubleshooting.md section 7
-- Full sweep: all 20 MCPs healthy (10 tunnel + 10 local)
-
-All open threads resolved. No remaining work.
-
-Reference IDs:
-- Ideas filed: #22569 [deployed], #22575 [deployed], #22582 [deployed]
-- Files touched: MCP_Troubleshooting.md, /usr/local/bin/emsu-overload-guard.sh
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785869837093` — 8/4/2026, 11:57:54 AM PT — 4 turns
-
-**Original task:**
-
-```
-I have been told you died. Is that false?
-```
-
-**Ideas referenced:** #16588, #7381 [queued]
-
-**Last PICKUP PROMPT:**
-
-```
-ive and fully operational.
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task — Liveness verification (Ruben asked "is Cline dead?")
-Where we left off (verified 2026-08-04 11:57 PT):
-- Ruben asked if I was dead (was told I died)
-- Ran fleet_now: mac_ruben healthy, heartbeat 2 min ago; wopr/joshua/sms_mac/artemis all healthy
-- Confirmed alive, no issue to fix
-Open threads to drive next:
-- #7381 [queued] — fleet agent recommended moving regenerable cache from joshua to wopr (T3, disk)
-Reference IDs:
-- Files touched: none
-When done, append to cline_task_ledger.md per rule 07.
-═══════════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Verify agent liveness via fleet heartbeat
-- [x] Confirm result with Ruben
-</task_progress>
 </attempt_completion>
 ```

@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-07T18:38:46.511Z",
+ "generated_at": "2026-08-07T21:10:05.996Z",
  "counts": {
-  "parsed": 0,
-  "reused": 525,
+  "parsed": 4,
+  "reused": 524,
   "failed": 0,
-  "total": 525
+  "total": 528
  },
  "tasks": {
   "1784522296714": {
@@ -113926,11 +113926,11 @@
   },
   "1785966271898": {
    "task_id": "1785966271898",
-   "mtime": 1786121799439,
+   "mtime": 1786135832599,
    "created_at": "2026-08-05T21:44:31.898Z",
-   "last_modified": "2026-08-07T16:56:39.439Z",
-   "size_kb": 1012,
-   "turn_count": 354,
+   "last_modified": "2026-08-07T20:50:32.599Z",
+   "size_kb": 1142,
+   "turn_count": 412,
    "title": "#Payment Issues\n\nPick up payments. THE ROOT CAUSE IS ALREADY DIAGNOSED IN IDEA #20613 AND NOBODY READ IT.\n\n#20613 title, verbatim: \"URGENT: zero large EMT approvals today, all 5007 Credit Floor with AVS+CVC\npassing, correlates with July crossing $1M processed on 07-27 (first time ever). Leading\nhypothesis: Intuit merchant-account [cap]\"\n\nFROM #20613 (2026-07-31): FIVE distinct payers declined across 07-30/07-31 (Matthew Gillespie,\nFrank Heald, Maia, Elizabeth Shipp Conway, Shaheed Kehinde) on DIFFERENT cards, DIFFERENT banks,\nFOUR different sites (sandiegoemt, dallasemt, californiaemt x2, arizonaemt). Shaheed's QuickBooks\nMerchant detail: AVS address MATCH Yes, AVS zip MATCH Yes, CVC MATCH Y",
    "pickup_prompt": null,
    "ideas": {
@@ -113961,7 +113961,8 @@
     "23585": null,
     "23890": null,
     "24158": "in_progress",
-    "24169": null
+    "24169": null,
+    "24701": "in_progress"
    }
   },
   "1785971158342": {
@@ -115942,13 +115943,13 @@
   },
   "1786088761151": {
    "task_id": "1786088761151",
-   "mtime": 1786124189026,
+   "mtime": 1786135196705,
    "created_at": "2026-08-07T07:46:01.151Z",
-   "last_modified": "2026-08-07T17:36:29.026Z",
-   "size_kb": 529,
-   "turn_count": 134,
+   "last_modified": "2026-08-07T20:39:56.705Z",
+   "size_kb": 578,
+   "turn_count": 158,
    "title": "Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversity.com/emtskills/routes/ruben_executor_live.php",
-   "pickup_prompt": "eeded for design completeness.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Verify chain backlog draining post-fix, monitor throughput\n\nWhere we left off (verified 2026-08-07 10:37 PT):\n- Backlog at 11,254 and falling from peak of 11,302\n- 9 chains pending (planner running), 2 executed since fix\n- Dispatch rate: 12 chains per ~2-min dispatcher tick at 192/hr cap → ~2.4 days to fully drain\n- Two fixes deployed: logWorkerStart/logWorkerEnd (#24624) + noop-loop checkRecurrenceIdempotent (#24634)\n\nOpen threads to drive next:\n#24625 [proposed] — Implement completeChainIfRecurrenceMatch() on RubenExecutor. Non-blocking follow-up, not needed for current drain.\n\nReference IDs:\n- Ideas filed: #24624 [deployed], #24625 [proposed], #24634 [deployed]\n- Files touched: /var/www/emtskills/cron/cron_ruben_autonomous.php (functions insert), /var/www/emtskills/lib/ruben_recurrence_idempotency_hash.php (outcome filter)\n\nWhen done, clean up /tmp/worker_log_functions.php and append a row to cline_task_ledger.md per rule 07. Run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "eeded for design completeness.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Accelerate chain executor drainage: Frank-LLM fleet is degraded, planner times out\n\nWhere we left off (verified 2026-08-07 13:39 PT):\n- Backlog draining slowly: 11,302 → 11,205 (~6/hr vs 192/hr configured cap)\n- 3h throughput: 17 executed, 26 failed (24 LLM planner timeouts)\n- 14b (WOPR) at 26 fails, 32b (M4) at 43 fails, deepseek-v4-pro timing out\n- frankenstein-tools adapter returns empty response\n- Only cicero-235B (DeepSeek API) and claude-opus-real (paid API) healthy\n\nOpen threads to drive next:\n#24695 [proposed] — Fix planner spill: add cicero-235B and/or claude-opus-real to `ruben_executor_planner_spill_models` config, OR restart the local Ollama fleet. After fix, verify backlog drain rate increases to >50/hr.\n#24625 [proposed] — Implement `completeChainIfRecurrenceMatch()` on RubenExecutor. Non-blocking P2.\n\nReference IDs:\n- Ideas filed: #24624 [deployed], #24625 [proposed], #24634 [deployed], #24695 [proposed]\n- Files touched: /var/www/emtskills/cron/cron_ruben_autonomous.php (logWorkerStart/logWorkerEnd), /var/www/emtskills/lib/ruben_recurrence_idempotency_hash.php (outcome filter)\n\nWhen done, clean up /tmp/worker_log_functions.php and append a row to cline_task_ledger.md per rule 07. Run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1373": null,
     "1658": null,
@@ -115978,6 +115979,7 @@
     "24625": "proposed",
     "24626": null,
     "24634": "deployed",
+    "24695": "proposed",
     "64748": null,
     "65039": null,
     "78350": null,
@@ -116359,6 +116361,69 @@
     "24645": "proposed",
     "24646": "proposed"
    }
+  },
+  "1786133997460": {
+   "task_id": "1786133997460",
+   "mtime": 1786136567269,
+   "created_at": "2026-08-07T20:19:57.460Z",
+   "last_modified": "2026-08-07T21:02:47.269Z",
+   "size_kb": 439,
+   "turn_count": 341,
+   "title": "Take a lookat Jon's argus, a lot of 502 and SQL debris. Need to fix these 502s from now on. Fix it.",
+   "pickup_prompt": null,
+   "ideas": {
+    "2265": "deployed",
+    "2266": "deployed",
+    "19370": null,
+    "22688": null,
+    "23036": null,
+    "23428": null,
+    "23880": null,
+    "23945": null,
+    "24012": "rejected",
+    "24025": "superseded",
+    "24026": null,
+    "24029": "superseded",
+    "24044": "superseded",
+    "24182": "superseded",
+    "24334": "superseded",
+    "24428": null,
+    "24450": null,
+    "24451": null,
+    "24452": null,
+    "24466": "superseded",
+    "24467": null,
+    "24586": "superseded",
+    "24672": "superseded",
+    "24682": "superseded",
+    "24702": "superseded",
+    "24704": "approved"
+   }
+  },
+  "1786135150364": {
+   "task_id": "1786135150364",
+   "mtime": 1786136520201,
+   "created_at": "2026-08-07T20:39:10.364Z",
+   "last_modified": "2026-08-07T21:02:00.201Z",
+   "size_kb": 212,
+   "turn_count": 146,
+   "title": "emsuniversity.com is laggy, slow and needs to go faster. Something is bogiging it down",
+   "pickup_prompt": null,
+   "ideas": {
+    "24714": "proposed",
+    "24715": "proposed"
+   }
+  },
+  "1786135267277": {
+   "task_id": "1786135267277",
+   "mtime": 1786136819942,
+   "created_at": "2026-08-07T20:41:07.277Z",
+   "last_modified": "2026-08-07T21:06:59.942Z",
+   "size_kb": 67,
+   "turn_count": 15,
+   "title": "I would like to start having a system where we auto-assign externships based on location/distance from the location of the student within a 150 mile radius for externships. I need to spec this: https://emsuniversity.com/emtskills/externship/dashboard.php",
+   "pickup_prompt": null,
+   "ideas": {}
   }
  }
 }

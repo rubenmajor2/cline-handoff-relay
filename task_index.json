@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-07T21:10:05.996Z",
+ "generated_at": "2026-08-07T22:35:37.115Z",
  "counts": {
-  "parsed": 4,
-  "reused": 524,
+  "parsed": 1,
+  "reused": 527,
   "failed": 0,
   "total": 528
  },
@@ -116416,11 +116416,11 @@
   },
   "1786135267277": {
    "task_id": "1786135267277",
-   "mtime": 1786136819942,
+   "mtime": 1786142109993,
    "created_at": "2026-08-07T20:41:07.277Z",
-   "last_modified": "2026-08-07T21:06:59.942Z",
-   "size_kb": 67,
-   "turn_count": 15,
+   "last_modified": "2026-08-07T22:35:09.993Z",
+   "size_kb": 77,
+   "turn_count": 17,
    "title": "I would like to start having a system where we auto-assign externships based on location/distance from the location of the student within a 150 mile radius for externships. I need to spec this: https://emsuniversity.com/emtskills/externship/dashboard.php",
    "pickup_prompt": null,
    "ideas": {}

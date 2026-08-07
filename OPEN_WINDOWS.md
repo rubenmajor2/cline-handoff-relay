@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/7/2026, 2:10:06 PM PT | window: last 72h | 94 tasks | index total 528 (parsed 4, cached 524)
+Generated: 8/7/2026, 3:35:37 PM PT | window: last 72h | 93 tasks | index total 528 (parsed 1, cached 527)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786135267277` | 8/7/2026, 2:06:59 PM | 15 | 67KB | I would like to start having a system where we auto-assign externships based on location/d |
+| `1786135267277` | 8/7/2026, 3:35:09 PM | 17 | 77KB | I would like to start having a system where we auto-assign externships based on location/d |
 | `1786133997460` | 8/7/2026, 2:02:47 PM | 341 | 439KB | Take a lookat Jon's argus, a lot of 502 and SQL debris. Need to fix these 502s from now on |
 | `1786135150364` | 8/7/2026, 2:02:00 PM | 146 | 212KB | emsuniversity.com is laggy, slow and needs to go faster. Something is bogiging it down |
 | `1785966271898` | 8/7/2026, 1:50:32 PM | 412 | 1142KB | #Payment Issues |
@@ -103,13 +103,12 @@ Generated: 8/7/2026, 2:10:06 PM PT | window: last 72h | 94 tasks | index total 5
 | `1785885194894` | 8/4/2026, 4:48:42 PM | 92 | 354KB | What's going on today in Argus? |
 | `1785885221719` | 8/4/2026, 4:14:07 PM | 2 | 5KB | What's going on today in Argus? |
 | `1785858480786` | 8/4/2026, 4:01:49 PM | 596 | 2311KB | For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. P |
-| `1785858742320` | 8/4/2026, 3:28:10 PM | 310 | 2664KB | I dont' see here where the callback system is working properly? Seems like it is not. Can  |
 
 ---
 
 ## Per-window detail
 
-### `1786135267277` — 8/7/2026, 2:06:59 PM PT — 15 turns
+### `1786135267277` — 8/7/2026, 3:35:09 PM PT — 17 turns
 
 **Original task:**
 
@@ -3550,53 +3549,5 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1785858742320` — 8/4/2026, 3:28:10 PM PT — 310 turns
-
-**Original task:**
-
-```
-I dont' see here where the callback system is working properly? Seems like it is not. Can your esolve that: https://www.emsuniversity.com/emtskills/routes/telephony_hub.php
-
-Also as an admin I'd liek to be able to see the schedule in the admin section. 
-
-I think there's something wrong eith the actual tab. Can you test nd fix it. login, use tokens to test and resolve. make usre it actually all works and is wired in properly? Are CFAs aware and how are they utilizing this? This should only be by request.
-```
-
-**Ideas referenced:** #001018, #059669, #062017, #127891, #128274, #1652, #1658, #166534, #18868, #19163, #1986, #20825, #2168, #2174, #2176, #2177, #21775, #22066, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #22334, #22355 [proposed], #22507 [deployed], #2563, #334155, #374151, #475569, #64748, #6785, #92400, #9733, #9734
-
-**Last PICKUP PROMPT:**
-
-```
-xt I'll confirm it's resolved.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up Vicky's Argus telephony escalation — verify the fixes resolved her specific report.
-
-Where we left off (verified 2026-08-04 15:27 PT):
-- Callback tab nesting fixed — panel moved from inside tab-settings Twilio Credentials row to sibling tab-panel at line 3190
-- ruben_context_api.php 401 fixed — added session_name(EMSU_SESSION_COOKIE_NAME) before session_start()
-- ruben_context_api.php 404 fixed — path /api/ruben_context_api.php → /emtskills/api/ruben_context_api.php
-- Standalone switchTab deployed at line 3371 — dependency-free, renders before Twilio SDK, overrideable
-- Usage audit complete — 1 e2e-test booking, 0 real student usage, 180 empty slots
-- Argus escalation text NOT retrieved (SSH quoting failed)
-- Idea #22507 [deployed] — Telephony Hub callback fixes + admin schedule
-
-Open threads to drive next:
-1. #22507 [deployed] — Ask Vicky to refresh + hard-refresh the telephony hub page and confirm switchTab and ruben_context_api errors are gone. Pull her Argus escalation ID if still active.
-2. #22507 [deployed] — Consider exposing the callback schedule more prominently (e.g., "Need a call? Book a callback" CTA) since feature has never been offered to students yet (0 CFA suggestions, 0 real bookings)
-
-Reference IDs:
-- Ticket: none filed (Ruben asked via Cline)
-- Ideas filed: #22507
-- Files touched: /var/www/emtskills/routes/telephony_hub.php, /var/www/emtskills/js/ruben_bubble.js, /var/www/emtskills/api/ruben_context_api.php
-- Database: admin_portal.callback_bookings (1 e2e-test), callback_slots (180 available)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```

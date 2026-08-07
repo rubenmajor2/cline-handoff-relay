@@ -100,3 +100,45 @@ system's own observed distribution before shipping it.
 **Hardfloor: NO** (can be overridden by a higher-priority operational directive)
 **Source incident: Argus-slow investigation 2026-08-01 (3 wrong diagnostic claims from probes alone, ~10 wasted tool calls)**
 **Last strengthened: 2026-08-01 by Cline (Ruben directive: "modify rule 297 so it is stronger")**
+---
+
+## 2026-08-07 STRENGTHENING — a failed PROBE is not a diagnosed FAULT (remote-box case)
+
+**Source incident:** 2026-08-06 00:07 PT. Cline curled `127.0.0.1:11513/metrics` and `/v1/models` from WOPR, got HTTP 000 three times, and told Ruben **"Julia's vLLM is dead, no process, local probes fail."** Ruben replied: *"Julia and claudia TP=2 are here with me and fine. I can SSH into them no issue."* He was right. Going on-box showed hostname `spark-6ae6` resolving, SSH exit code 0, and the **Ray cluster alive** (gcs_server, autoscaler monitor, ray client server, session started 23:42). The box was never dead.
+
+### The rule
+
+**A remote HTTP 000 has at least four distinct causes, and a curl cannot tell them apart:**
+
+1. the model process is genuinely down
+2. the model process is **starting** and has not bound its port yet
+3. the **reverse tunnel** between the box and WOPR is down
+4. the box is reachable but the port is firewalled / not listening
+
+Collapsing all four into cause 1 is the rule-297 error in its remote form: a probe told you **WHAT** happened once, and you reported it as **WHY**.
+
+### The gate
+
+**NEVER claim a remote LLM box is down from probe failures alone.** Minimum evidence for a "down" claim:
+
+```
+ssh <box> 'hostname; ps -eo pid,etime,cmd | grep -i vllm; ss -tln | grep <port>'
+```
+
+Then classify explicitly:
+
+| On-box finding | Correct claim |
+|---|---|
+| SSH fails entirely | "the box is unreachable" (still not "down") |
+| SSH works, processes alive, port listening | **"the PATH is broken"** — tunnel or network, NOT the box |
+| SSH works, Ray/supervisor alive, no serve proc, no listener | "the ENGINE is down, the box is healthy" |
+| SSH works, serve proc present, port bound | "it is UP" — your probe was the thing that was wrong |
+
+### The tell that makes this checkable
+
+An on-box `curl_rc=7` ("failed to connect", measured **from the box itself**) is the evidence that justifies an engine-down claim. A WOPR-side 000 never is. If your only artifact is a remote 000, you have not yet diagnosed anything.
+
+### Postscript (why this is not academic)
+
+In the same incident the engine **was** in fact not serving. Cline was right about the conclusion and wrong about the grounds. That is the dangerous shape: being accidentally correct trains the bad habit. The grounds matter, because the identical evidence next time will mean the tunnel, and the report will be confideIn the same incident the engine **was** in fact not serving. Cline 
+Cross-refs: rule 271 (no SSH to the box = no claims about the box), rule 252 / 296 (live-probe before declaring any host down), rule 263 (verify before claim). Ideas #24370 (RCA), #24372 (the precise on-box state that followed).

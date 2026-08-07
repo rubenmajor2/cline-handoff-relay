@@ -6,16 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/7/2026, 3:35:37 PM PT | window: last 72h | 93 tasks | index total 528 (parsed 1, cached 527)
+Generated: 8/7/2026, 4:35:37 PM PT | window: last 72h | 92 tasks | index total 529 (parsed 5, cached 524)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786135267277` | 8/7/2026, 3:35:09 PM | 17 | 77KB | I would like to start having a system where we auto-assign externships based on location/d |
-| `1786133997460` | 8/7/2026, 2:02:47 PM | 341 | 439KB | Take a lookat Jon's argus, a lot of 502 and SQL debris. Need to fix these 502s from now on |
-| `1786135150364` | 8/7/2026, 2:02:00 PM | 146 | 212KB | emsuniversity.com is laggy, slow and needs to go faster. Something is bogiging it down |
+| `1786144700222` | 8/7/2026, 4:35:30 PM | 135 | 203KB | #TDSHS |
+| `1786123588626` | 8/7/2026, 4:35:28 PM | 275 | 632KB | telephony is not working for incoming calls - it's telling people a debug message. Please  |
+| `1786135150364` | 8/7/2026, 4:33:20 PM | 260 | 406KB | emsuniversity.com is laggy, slow and needs to go faster. Something is bogiging it down |
+| `1786088761151` | 8/7/2026, 4:28:22 PM | 170 | 595KB | Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversit |
+| `1786133997460` | 8/7/2026, 4:19:04 PM | 522 | 923KB | Take a lookat Jon's argus, a lot of 502 and SQL debris. Need to fix these 502s from now on |
+| `1786135267277` | 8/7/2026, 3:41:47 PM | 32 | 173KB | I would like to start having a system where we auto-assign externships based on location/d |
 | `1785966271898` | 8/7/2026, 1:50:32 PM | 412 | 1142KB | #Payment Issues |
-| `1786088761151` | 8/7/2026, 1:39:56 PM | 158 | 578KB | Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversit |
-| `1786123588626` | 8/7/2026, 11:06:14 AM | 232 | 568KB | telephony is not working for incoming calls - it's telling people a debug message. Please  |
 | `1786057314451` | 8/7/2026, 10:24:23 AM | 588 | 3844KB | I keep getting this message every 15 minutes and is it fixed or not? |
 | `1786036273485` | 8/7/2026, 10:20:35 AM | 818 | 1565KB | #Argus  |
 | `1786060260487` | 8/7/2026, 10:18:31 AM | 782 | 2173KB | frankenstein-llm subagents experiencing delay. Are those on deepseek like they should be?  |
@@ -101,36 +102,43 @@ Generated: 8/7/2026, 3:35:37 PM PT | window: last 72h | 93 tasks | index total 5
 | `1785892733295` | 8/4/2026, 6:20:58 PM | 13 | 36KB | I was told you were unresponseive for 5 minutes? |
 | `1785885342087` | 8/4/2026, 5:27:54 PM | 300 | 981KB | Your numbers appear to be to be far from my reality.  |
 | `1785885194894` | 8/4/2026, 4:48:42 PM | 92 | 354KB | What's going on today in Argus? |
-| `1785885221719` | 8/4/2026, 4:14:07 PM | 2 | 5KB | What's going on today in Argus? |
-| `1785858480786` | 8/4/2026, 4:01:49 PM | 596 | 2311KB | For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. P |
 
 ---
 
 ## Per-window detail
 
-### `1786135267277` — 8/7/2026, 3:35:09 PM PT — 17 turns
+### `1786144700222` — 8/7/2026, 4:35:30 PM PT — 135 turns
 
 **Original task:**
 
 ```
-I would like to start having a system where we auto-assign externships based on location/distance from the location of the student within a 150 mile radius for externships. I need to spec this: https://emsuniversity.com/emtskills/externship/dashboard.php
+#TDSHS
+
+See: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
+
+-- 
+See latest email from TDSHS State EMS Director, 1-2PM appx today asking us to contact a parent. Why is he asking us to contact a parent? This needs a reminder that we can't talk to parent about a student's account due to FERPA in a very nice way. 
+
+We did reach out to discuss general policies, but he never replied. We reached out to the dat with no answer
 ```
+
+**Ideas referenced:** #111827, #16957, #23834, #251038, #251211, #251264, #3616, #3617, #3622, #3624, #450438, #6106
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786133997460` — 8/7/2026, 2:02:47 PM PT — 341 turns
+### `1786123588626` — 8/7/2026, 4:35:28 PM PT — 275 turns
 
 **Original task:**
 
 ```
-Take a lookat Jon's argus, a lot of 502 and SQL debris. Need to fix these 502s from now on. Fix it.
+telephony is not working for incoming calls - it's telling people a debug message. Please fix and tell me what happened
 ```
 
-**Ideas referenced:** #19370, #2265 [deployed], #2266 [deployed], #22688, #23036, #23428, #23880, #23945, #24012 [rejected], #24025 [superseded], #24026, #24029 [superseded], #24044 [superseded], #24182 [superseded], #24334 [superseded], #24428, #24450, #24451, #24452, #24466 [superseded], #24467, #24586 [superseded], #24672 [superseded], #24682 [superseded], #24702 [superseded], #24704 [approved]
+**Ideas referenced:** #16154, #23133, #24635 [proposed], #24636 [proposed], #24645 [proposed], #24646 [proposed], #9222, #9501
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786135150364` — 8/7/2026, 2:02:00 PM PT — 146 turns
+### `1786135150364` — 8/7/2026, 4:33:20 PM PT — 260 turns
 
 **Original task:**
 
@@ -138,9 +146,107 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 emsuniversity.com is laggy, slow and needs to go faster. Something is bogiging it down
 ```
 
-**Ideas referenced:** #24714 [proposed], #24715 [proposed]
+**Ideas referenced:** #24714 [proposed], #24715 [proposed], #24772 [proposed], #24773 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786088761151` — 8/7/2026, 4:28:22 PM PT — 170 turns
+
+**Original task:**
+
+```
+Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversity.com/emtskills/routes/ruben_executor_live.php
+```
+
+**Ideas referenced:** #059669, #0891, #10003, #10007, #10060, #12059, #12065, #12184, #127922, #128157, #128190, #128640, #13418, #1373, #14532, #1658, #166534, #17560, #1786, #22031 [fix-needed], #22032 [fix-needed], #24624 [deployed], #24625 [proposed], #24626, #24634 [deployed], #24695 [proposed], #2563, #334155, #3730, #374151, #4338, #4536, #475569, #5031, #6366, #64748, #65039, #78350, #8594, #92400, #9654, #9888, #9989
+
+**Last PICKUP PROMPT:**
+
+```
+ain from ~4/hr to near 192/hr.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Accelerate chain executor drainage: Frank-LLM fleet degraded, planner times out (73 of 192 attempts FAILED)
+
+Where we left off (verified 2026-08-07 16:28 PT):
+- Backlog at 11,179 — draining at ~4 real-executions/hour (23 executeds, 73 failed today)
+- ALL failures are LLM planner timeouts (180s) or invalid JSON responses
+- Local fleet: 14b (26 fails), 32b (43 fails), deepseek-v4-pro hung, frankenstein-tools adapter empty
+- Healthy: cicero-235B (DeepSeek API cloud) and claude-opus-real (paid API) — but NOT in planner spill list
+- Config key: `ruben_executor_planner_spill_models` currently = `ollama-14b,ollama-7b-lora,frankenstein-tools,deepseek-v4-pro`
+
+Open threads to drive next:
+#24695 [proposed] — Fix planner spill: add cicero-235b and/or claude-opus-real to `ruben_executor_planner_spill_models` config, OR restart local Ollama fleet. After fix, verify backlog drain rate increases to >50/hr.
+
+Reference IDs:
+- Ideas filed: #24624 [deployed], #24625 [proposed], #24634 [deployed], #24695 [proposed]
+- Files touched: /var/www/emtskills/cron/cron_ruben_autonomous.php, /var/www/emtskills/lib/ruben_recurrence_idempotency_hash.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786133997460` — 8/7/2026, 4:19:04 PM PT — 522 turns
+
+**Original task:**
+
+```
+Take a lookat Jon's argus, a lot of 502 and SQL debris. Need to fix these 502s from now on. Fix it.
+```
+
+**Ideas referenced:** #19348, #19370, #2006, #22511, #2265 [deployed], #2266 [deployed], #2267, #22688, #23036, #23428, #23468, #23880, #23920, #23945, #24012 [rejected], #24025 [superseded], #24026, #24029 [superseded], #24044 [superseded], #24182 [superseded], #24334 [superseded], #24428, #24450, #24451, #24452, #24466 [superseded], #24467, #24586 [superseded], #24667, #24672 [superseded], #24682 [superseded], #24702 [superseded], #24704 [approved], #24717 [superseded], #24718 [superseded], #24719 [superseded], #24720 [superseded], #24721 [superseded], #24722 [rejected], #24732 [superseded], #24733 [superseded], #24734 [superseded], #24744 [superseded], #24765, #24766 [approved], #24767, #24774, #24775, #24776
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786135267277` — 8/7/2026, 3:41:47 PM PT — 32 turns
+
+**Original task:**
+
+```
+I would like to start having a system where we auto-assign externships based on location/distance from the location of the student within a 150 mile radius for externships. I need to spec this: https://emsuniversity.com/emtskills/externship/dashboard.php
+```
+
+**Ideas referenced:** #24757 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ the existing Google Maps key.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Externship auto-assignment by 150-mile distance radius spec delivery.
+(No numeric task ID available; topic: externship distance-based auto-assign spec)
+
+Where we left off (verified 2026-08-07 ~15:40 PT):
+- Spec written to /var/www/emtskills/docs/specs/externship_auto_assign_distance.md
+- Idea #24757 [proposed] filed in orchestrator_ideas
+- All tables audited live: NO lat/lng columns anywhere, NO existing matching code, 204 pending requests, 55 active sites
+- ExternshipRegions, ExternshipAssignments, ExternshipMatchAudit all empty/unused
+
+Open threads to drive next:
+1. #24757 [proposed] — Approve idea, then run Phase 1 migrations: ALTER TABLE Students + ExternshipSite to add latitude/longitude/geocode_quality/geocoded_at/service_radius_miles columns (SQL in /var/www/emtskills/docs/specs/externship_auto_assign_distance.md)
+2. #24757 [proposed] — Create scripts/geocode_sites.php + scripts/geocode_students.php to batch-geocode using Google Geocoding API with city-centroid fallback
+3. #24757 [proposed] — Create lib/geocode.php with haversineDistance() PHP helper + run MySQL haversine_miles stored function creation
+4. #24757 [proposed] — Create lib/match_engine.php with ExternshipMatchEngine class
+5. #24757 [proposed] — Add Auto-Assign panel to dashboard.php above Pending Requests grid + create api/auto_match.php + api/auto_assign.php
+
+Reference IDs:
+- Idea: #24757 [proposed]
+- Dashboard: https://emsuniversity.com/emtskills/externship/dashboard.php
+- Spec file: /var/www/emtskills/docs/specs/externship_auto_assign_distance.md
+- Database: admin_portal (MySQL)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1785966271898` — 8/7/2026, 1:50:32 PM PT — 412 turns
 
@@ -161,59 +267,6 @@ FOUR different sites (sandiegoemt, dallasemt, californiaemt x2, ariz
 ```
 
 **Ideas referenced:** #11321, #13457, #19387 [executing], #19657, #19935, #19948, #20130, #20491, #20613 [approved], #20693, #20853, #23062 [executing], #23268 [executing], #23279 [proposed], #23280 [proposed], #23281 [proposed], #23282 [proposed], #23304 [in_progress], #23364, #23394, #23584, #23585, #23890, #24158 [in_progress], #24169, #24701 [in_progress], #4929, #5805, #8211
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786088761151` — 8/7/2026, 1:39:56 PM PT — 158 turns
-
-**Original task:**
-
-```
-Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversity.com/emtskills/routes/ruben_executor_live.php
-```
-
-**Ideas referenced:** #059669, #0891, #10003, #10007, #10060, #12059, #12065, #12184, #127922, #128157, #128190, #128640, #13418, #1373, #14532, #1658, #166534, #17560, #1786, #22031 [fix-needed], #22032 [fix-needed], #24624 [deployed], #24625 [proposed], #24626, #24634 [deployed], #24695 [proposed], #2563, #334155, #3730, #374151, #4338, #4536, #475569, #5031, #6366, #64748, #65039, #78350, #8594, #92400, #9654, #9888, #9989
-
-**Last PICKUP PROMPT:**
-
-```
-eeded for design completeness.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Accelerate chain executor drainage: Frank-LLM fleet is degraded, planner times out
-
-Where we left off (verified 2026-08-07 13:39 PT):
-- Backlog draining slowly: 11,302 → 11,205 (~6/hr vs 192/hr configured cap)
-- 3h throughput: 17 executed, 26 failed (24 LLM planner timeouts)
-- 14b (WOPR) at 26 fails, 32b (M4) at 43 fails, deepseek-v4-pro timing out
-- frankenstein-tools adapter returns empty response
-- Only cicero-235B (DeepSeek API) and claude-opus-real (paid API) healthy
-
-Open threads to drive next:
-#24695 [proposed] — Fix planner spill: add cicero-235B and/or claude-opus-real to `ruben_executor_planner_spill_models` config, OR restart the local Ollama fleet. After fix, verify backlog drain rate increases to >50/hr.
-#24625 [proposed] — Implement `completeChainIfRecurrenceMatch()` on RubenExecutor. Non-blocking P2.
-
-Reference IDs:
-- Ideas filed: #24624 [deployed], #24625 [proposed], #24634 [deployed], #24695 [proposed]
-- Files touched: /var/www/emtskills/cron/cron_ruben_autonomous.php (logWorkerStart/logWorkerEnd), /var/www/emtskills/lib/ruben_recurrence_idempotency_hash.php (outcome filter)
-
-When done, clean up /tmp/worker_log_functions.php and append a row to cline_task_ledger.md per rule 07. Run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786123588626` — 8/7/2026, 11:06:14 AM PT — 232 turns
-
-**Original task:**
-
-```
-telephony is not working for incoming calls - it's telling people a debug message. Please fix and tell me what happened
-```
-
-**Ideas referenced:** #16154, #23133, #24635 [proposed], #24636 [proposed], #24645 [proposed], #24646 [proposed], #9222, #9501
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -3491,63 +3544,6 @@ PICKUP PROMPT
 ║      (human-only decision, no idea)                          ║
 ║ IDEAS FILED: [none in this task]                             ║
 ╚══════════════════════════════════════════════════════════════╝
-</result>
-</attempt_completion>
-```
-
-### `1785885221719` — 8/4/2026, 4:14:07 PM PT — 2 turns
-
-**Original task:**
-
-```
-What's going on today in Argus?
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785858480786` — 8/4/2026, 4:01:49 PM PT — 596 turns
-
-**Original task:**
-
-```
-For Shela, she has been sending numerous requests for the CNA Agent and the CNA program. Probably a lot have gone unanswered. The last one we need to develop that Catalog, brochure, etc.. base dn what we currently have for the EMT program, and everythign else. We also need to go back through other requests for the last several weeks and do a massive sweep of improvements to help get the program up and running. Give me a comprehenisvie list based on what you find (which will no doubt require subagent research) so that we can push forward. Oh also work to improve the CNA Agent and the page she i
-```
-
-**Ideas referenced:** #0000, #003366, #1658, #16817, #17130 [superseded], #17537 [rejected], #18132 [deployed], #18944, #18951, #19125, #19171, #19173, #19338, #19458, #19491, #1986, #19898, #19904, #199497, #199498, #199499, #20251, #20903, #20957, #20958, #21062, #21419, #2176, #2177, #22280, #22334, #22355 [proposed], #22412, #22420, #22423, #22437, #22514 [in_progress], #22515 [in_progress], #22516 [in_progress], #22517 [in_progress], #22518 [in_progress], #22519 [in_progress], #22520 [in_progress], #22521 [in_progress], #6581, #6933, #6942, #7301, #7612, #7620
-
-**Last PICKUP PROMPT:**
-
-```
-rmissions but send succeeded).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task CNA Program Sweep and Valleywise Deliverables.
-
-Where we left off (verified 2026-08-04 16:00 PT):
-- Sent CNA catalog + brochure + CAA draft PDFs to Shela (#199498) and Vicky (#199499) at 15:58:56 PT
-- Shela and Vicky jointly verify all three, then Shela uploads corrected versions
-- All 8 ideas filed (#22514 through #22521); orchestrator builds stalled, manual path used
-
-Open threads to drive next (EVERY item has a filed idea #):
-1. #22515 [deployed] - Shela Aug 4 email answered, drafts in her inbox
-2. #22514 [executing] - Watch for Shela/Vicky corrections; next step: check cna inbox + cna_agent_messages in 24h
-3. #22517 [executing] - 8 not_started task drafts (17-21, 24-26) still pending; orchestrator reset to coding
-4. #22518 [executing] - After Shela+Vicky approve, send CAA to Valleywise (site 38) + 37 other contacted sites
-5. #22516 [executing] - RCA CNA Agent silent since 06-25 (458 decided, 0 pending)
-6. #22521 [executing] - CNA Agent health watchdog cron
-7. #22519 [executing] - AZSBN timeline recalibration (application due 08-15, already past 08-01 start)
-8. #22520 [executing] - Public CNA info page + batch actions + catalog links on tracker
-
-Reference IDs:
-- Emails: 199497 (test), 199498 (Shela), 199499 (Vicky)
-- Ideas filed: #22514, #22515, #22516, #22517, #22518, #22519, #22520, #22521
-- Valleywise site: #38; CNA tasks not_started: 17, 18, 19, 21, 24, 25, 26
-- Files: uploads/cna_program/catalog_draft.md, brochure_draft.md, cron/cna_send_docs.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```

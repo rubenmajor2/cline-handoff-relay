@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-07T22:35:37.115Z",
+ "generated_at": "2026-08-07T23:35:37.460Z",
  "counts": {
-  "parsed": 1,
-  "reused": 527,
+  "parsed": 5,
+  "reused": 524,
   "failed": 0,
-  "total": 528
+  "total": 529
  },
  "tasks": {
   "1784522296714": {
@@ -115943,13 +115943,13 @@
   },
   "1786088761151": {
    "task_id": "1786088761151",
-   "mtime": 1786135196705,
+   "mtime": 1786145302309,
    "created_at": "2026-08-07T07:46:01.151Z",
-   "last_modified": "2026-08-07T20:39:56.705Z",
-   "size_kb": 578,
-   "turn_count": 158,
+   "last_modified": "2026-08-07T23:28:22.309Z",
+   "size_kb": 595,
+   "turn_count": 170,
    "title": "Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversity.com/emtskills/routes/ruben_executor_live.php",
-   "pickup_prompt": "eeded for design completeness.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Accelerate chain executor drainage: Frank-LLM fleet is degraded, planner times out\n\nWhere we left off (verified 2026-08-07 13:39 PT):\n- Backlog draining slowly: 11,302 → 11,205 (~6/hr vs 192/hr configured cap)\n- 3h throughput: 17 executed, 26 failed (24 LLM planner timeouts)\n- 14b (WOPR) at 26 fails, 32b (M4) at 43 fails, deepseek-v4-pro timing out\n- frankenstein-tools adapter returns empty response\n- Only cicero-235B (DeepSeek API) and claude-opus-real (paid API) healthy\n\nOpen threads to drive next:\n#24695 [proposed] — Fix planner spill: add cicero-235B and/or claude-opus-real to `ruben_executor_planner_spill_models` config, OR restart the local Ollama fleet. After fix, verify backlog drain rate increases to >50/hr.\n#24625 [proposed] — Implement `completeChainIfRecurrenceMatch()` on RubenExecutor. Non-blocking P2.\n\nReference IDs:\n- Ideas filed: #24624 [deployed], #24625 [proposed], #24634 [deployed], #24695 [proposed]\n- Files touched: /var/www/emtskills/cron/cron_ruben_autonomous.php (logWorkerStart/logWorkerEnd), /var/www/emtskills/lib/ruben_recurrence_idempotency_hash.php (outcome filter)\n\nWhen done, clean up /tmp/worker_log_functions.php and append a row to cline_task_ledger.md per rule 07. Run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "ain from ~4/hr to near 192/hr.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Accelerate chain executor drainage: Frank-LLM fleet degraded, planner times out (73 of 192 attempts FAILED)\n\nWhere we left off (verified 2026-08-07 16:28 PT):\n- Backlog at 11,179 — draining at ~4 real-executions/hour (23 executeds, 73 failed today)\n- ALL failures are LLM planner timeouts (180s) or invalid JSON responses\n- Local fleet: 14b (26 fails), 32b (43 fails), deepseek-v4-pro hung, frankenstein-tools adapter empty\n- Healthy: cicero-235B (DeepSeek API cloud) and claude-opus-real (paid API) — but NOT in planner spill list\n- Config key: `ruben_executor_planner_spill_models` currently = `ollama-14b,ollama-7b-lora,frankenstein-tools,deepseek-v4-pro`\n\nOpen threads to drive next:\n#24695 [proposed] — Fix planner spill: add cicero-235b and/or claude-opus-real to `ruben_executor_planner_spill_models` config, OR restart local Ollama fleet. After fix, verify backlog drain rate increases to >50/hr.\n\nReference IDs:\n- Ideas filed: #24624 [deployed], #24625 [proposed], #24634 [deployed], #24695 [proposed]\n- Files touched: /var/www/emtskills/cron/cron_ruben_autonomous.php, /var/www/emtskills/lib/ruben_recurrence_idempotency_hash.php\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1373": null,
     "1658": null,
@@ -116344,11 +116344,11 @@
   },
   "1786123588626": {
    "task_id": "1786123588626",
-   "mtime": 1786125974465,
+   "mtime": 1786145728965,
    "created_at": "2026-08-07T17:26:28.626Z",
-   "last_modified": "2026-08-07T18:06:14.465Z",
-   "size_kb": 568,
-   "turn_count": 232,
+   "last_modified": "2026-08-07T23:35:28.965Z",
+   "size_kb": 632,
+   "turn_count": 275,
    "title": "telephony is not working for incoming calls - it's telling people a debug message. Please fix and tell me what happened",
    "pickup_prompt": null,
    "ideas": {
@@ -116364,21 +116364,27 @@
   },
   "1786133997460": {
    "task_id": "1786133997460",
-   "mtime": 1786136567269,
+   "mtime": 1786144744424,
    "created_at": "2026-08-07T20:19:57.460Z",
-   "last_modified": "2026-08-07T21:02:47.269Z",
-   "size_kb": 439,
-   "turn_count": 341,
+   "last_modified": "2026-08-07T23:19:04.424Z",
+   "size_kb": 923,
+   "turn_count": 522,
    "title": "Take a lookat Jon's argus, a lot of 502 and SQL debris. Need to fix these 502s from now on. Fix it.",
    "pickup_prompt": null,
    "ideas": {
+    "2006": null,
     "2265": "deployed",
     "2266": "deployed",
+    "2267": null,
+    "19348": null,
     "19370": null,
+    "22511": null,
     "22688": null,
     "23036": null,
     "23428": null,
+    "23468": null,
     "23880": null,
+    "23920": null,
     "23945": null,
     "24012": "rejected",
     "24025": "superseded",
@@ -116394,36 +116400,81 @@
     "24466": "superseded",
     "24467": null,
     "24586": "superseded",
+    "24667": null,
     "24672": "superseded",
     "24682": "superseded",
     "24702": "superseded",
-    "24704": "approved"
+    "24704": "approved",
+    "24717": "superseded",
+    "24718": "superseded",
+    "24719": "superseded",
+    "24720": "superseded",
+    "24721": "superseded",
+    "24722": "rejected",
+    "24732": "superseded",
+    "24733": "superseded",
+    "24734": "superseded",
+    "24744": "superseded",
+    "24765": null,
+    "24766": "approved",
+    "24767": null,
+    "24774": null,
+    "24775": null,
+    "24776": null
    }
   },
   "1786135150364": {
    "task_id": "1786135150364",
-   "mtime": 1786136520201,
+   "mtime": 1786145600440,
    "created_at": "2026-08-07T20:39:10.364Z",
-   "last_modified": "2026-08-07T21:02:00.201Z",
-   "size_kb": 212,
-   "turn_count": 146,
+   "last_modified": "2026-08-07T23:33:20.440Z",
+   "size_kb": 406,
+   "turn_count": 260,
    "title": "emsuniversity.com is laggy, slow and needs to go faster. Something is bogiging it down",
    "pickup_prompt": null,
    "ideas": {
     "24714": "proposed",
-    "24715": "proposed"
+    "24715": "proposed",
+    "24772": "proposed",
+    "24773": "proposed"
    }
   },
   "1786135267277": {
    "task_id": "1786135267277",
-   "mtime": 1786142109993,
+   "mtime": 1786142507645,
    "created_at": "2026-08-07T20:41:07.277Z",
-   "last_modified": "2026-08-07T22:35:09.993Z",
-   "size_kb": 77,
-   "turn_count": 17,
+   "last_modified": "2026-08-07T22:41:47.645Z",
+   "size_kb": 173,
+   "turn_count": 32,
    "title": "I would like to start having a system where we auto-assign externships based on location/distance from the location of the student within a 150 mile radius for externships. I need to spec this: https://emsuniversity.com/emtskills/externship/dashboard.php",
+   "pickup_prompt": " the existing Google Maps key.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Externship auto-assignment by 150-mile distance radius spec delivery.\n(No numeric task ID available; topic: externship distance-based auto-assign spec)\n\nWhere we left off (verified 2026-08-07 ~15:40 PT):\n- Spec written to /var/www/emtskills/docs/specs/externship_auto_assign_distance.md\n- Idea #24757 [proposed] filed in orchestrator_ideas\n- All tables audited live: NO lat/lng columns anywhere, NO existing matching code, 204 pending requests, 55 active sites\n- ExternshipRegions, ExternshipAssignments, ExternshipMatchAudit all empty/unused\n\nOpen threads to drive next:\n1. #24757 [proposed] — Approve idea, then run Phase 1 migrations: ALTER TABLE Students + ExternshipSite to add latitude/longitude/geocode_quality/geocoded_at/service_radius_miles columns (SQL in /var/www/emtskills/docs/specs/externship_auto_assign_distance.md)\n2. #24757 [proposed] — Create scripts/geocode_sites.php + scripts/geocode_students.php to batch-geocode using Google Geocoding API with city-centroid fallback\n3. #24757 [proposed] — Create lib/geocode.php with haversineDistance() PHP helper + run MySQL haversine_miles stored function creation\n4. #24757 [proposed] — Create lib/match_engine.php with ExternshipMatchEngine class\n5. #24757 [proposed] — Add Auto-Assign panel to dashboard.php above Pending Requests grid + create api/auto_match.php + api/auto_assign.php\n\nReference IDs:\n- Idea: #24757 [proposed]\n- Dashboard: https://emsuniversity.com/emtskills/externship/dashboard.php\n- Spec file: /var/www/emtskills/docs/specs/externship_auto_assign_distance.md\n- Database: admin_portal (MySQL)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "ideas": {
+    "24757": "proposed"
+   }
+  },
+  "1786144700222": {
+   "task_id": "1786144700222",
+   "mtime": 1786145730168,
+   "created_at": "2026-08-07T23:18:20.222Z",
+   "last_modified": "2026-08-07T23:35:30.168Z",
+   "size_kb": 203,
+   "turn_count": 135,
+   "title": "#TDSHS\n\nSee: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations \n\n-- \nSee latest email from TDSHS State EMS Director, 1-2PM appx today asking us to contact a parent. Why is he asking us to contact a parent? This needs a reminder that we can't talk to parent about a student's account due to FERPA in a very nice way. \n\nWe did reach out to discuss general policies, but he never replied. We reached out to the dat with no answer",
    "pickup_prompt": null,
-   "ideas": {}
+   "ideas": {
+    "3616": null,
+    "3617": null,
+    "3622": null,
+    "3624": null,
+    "6106": null,
+    "16957": null,
+    "23834": null,
+    "111827": null,
+    "251038": null,
+    "251211": null,
+    "251264": null,
+    "450438": null
+   }
   }
  }
 }

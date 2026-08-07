@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/7/2026, 12:53:33 AM PT | window: last 72h | 118 tasks | index total 524 (parsed 7, cached 517)
+Generated: 8/7/2026, 9:05:25 AM PT | window: last 72h | 114 tasks | index total 524 (parsed 1, cached 523)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1785954856277` | 8/7/2026, 12:53:32 AM | 582 | 2555KB | #CFA |
-| `1786088921071` | 8/7/2026, 12:53:00 AM | 17 | 44KB | I don't really understand what's going on here. This task was about email for the being se |
+| `1785954856277` | 8/7/2026, 5:38:43 AM | 670 | 2660KB | #CFA |
+| `1786088921071` | 8/7/2026, 3:21:37 AM | 114 | 550KB | I don't really understand what's going on here. This task was about email for the being se |
 | `1786088761151` | 8/7/2026, 12:51:42 AM | 14 | 269KB | Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversit |
 | `1786086916545` | 8/7/2026, 12:50:44 AM | 140 | 824KB | Tell me how the student council is doing. Is it healthy? It actually generating ideas and  |
 | `1786081573518` | 8/7/2026, 12:46:20 AM | 274 | 992KB | Whiy is this task 502, we need to stop with the 502s: |
@@ -124,16 +124,12 @@ Generated: 8/7/2026, 12:53:33 AM PT | window: last 72h | 118 tasks | index total
 | `1785864472446` | 8/4/2026, 10:29:06 AM | 4 | 16KB | ——[COPY]—— |
 | `1785833407446` | 8/4/2026, 9:17:09 AM | 431 | 919KB | In argus:  |
 | `1785858167516` | 8/4/2026, 9:14:49 AM | 113 | 310KB | #GLM |
-| `1785822732682` | 8/4/2026, 8:34:13 AM | 1002 | 7748KB | GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes. Key achie |
-| `1785833341637` | 8/4/2026, 2:10:06 AM | 68 | 208KB | run this plase |
-| `1785807924524` | 8/4/2026, 2:07:44 AM | 108 | 458KB | I’m assuming TeamHub is currently blank because you’re doing something with it at the mome |
-| `1785821651406` | 8/4/2026, 1:48:58 AM | 522 | 3348KB | For Argus only: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser  |
 
 ---
 
 ## Per-window detail
 
-### `1785954856277` — 8/7/2026, 12:53:32 AM PT — 582 turns
+### `1785954856277` — 8/7/2026, 5:38:43 AM PT — 670 turns
 
 **Original task:**
 
@@ -150,7 +146,7 @@ MAJOR CONTEXT ADDED 2026-08-05 10:50 PT — A ROUTER BUG WAS BREAKING TOOL CALLS
 For most of this morning every tool-bearing request through LiteLLM returned HTTP 400 (53 validation errors: ('body','tools',N,'function') Field require
 ```
 
-**Ideas referenced:** #12206, #1255, #128260, #14132, #15204, #16152, #16153, #16154, #16473, #16732, #16817, #17150, #17446, #177914, #18796 [deployed], #18848 [deployed], #18944, #18951, #19437, #19682, #20925, #21064, #21070 [ready_for_review], #22060, #22294 [deployed], #23050 [executing], #23054 [executing], #23122 [executing], #23184, #23207 [deployed], #23208 [proposed], #23209, #23225 [proposed], #23309 [proposed], #23316 [proposed], #23317 [deployed], #23466 [executing], #23493 [proposed], #24227 [proposed], #24339 [proposed], #24340 [proposed], #24341 [proposed], #24345, #2563, #2782, #3237, #32584, #3572, #4470, #4991, #5298, #5447, #5459, #5608, #5646, #6064, #6106, #6228, #6751, #7206, #7207, #7317, #7356, #7907, #8060, #8103
+**Ideas referenced:** #12206, #1255, #128260, #14132, #15204, #16152, #16153, #16154, #16473, #16732, #16817, #17150, #17446, #177914, #18796 [deployed], #18848 [deployed], #18944, #18951, #19437, #19682, #20925, #21064, #21070 [ready_for_review], #22060, #22294 [deployed], #23050 [executing], #23054 [executing], #23122 [executing], #23184, #23207 [deployed], #23208 [proposed], #23209, #23225 [proposed], #23309 [proposed], #23316 [proposed], #23317 [deployed], #23466 [executing], #23493 [proposed], #24227 [proposed], #24339 [proposed], #24340 [proposed], #24341 [proposed], #24345, #24500 [executing], #2563, #2782, #3237, #32584, #3572, #4470, #4991, #5298, #5447, #5459, #5608, #5646, #6064, #6106, #6228, #6751, #7206, #7207, #7317, #7356, #7907, #8060, #8103
 
 **Last PICKUP PROMPT:**
 
@@ -160,25 +156,25 @@ etion>
 ═══════════════════════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════════════════════
-Pick up task #CFA — CFA sweep/dispatch/struct follow-up: corrected diagnosis + Ruben's email tracker.
+Pick up task #CFA — CFA sweep/dispatch/struct: sweep & dispatch fixed, struct deferred (#24500).
 
-Where we left off (verified 2026-08-07 00:32 PT):
-- Dispatch 0-row: NOT a bug. `_cfa_pdo()` IS defined (lib line 51). `cfa_agent_queue` has 0 rows ever → dispatch correctly processes nothing. My earlier "undefined function" claim was wrong (violated Rule 263).
-- Sweep 0-row: `cfa_raw_contacts` table missing → #24339 [deployed?]. Real fix pending: determine actual raw-contact source or CREATE table.
-- Struct 0-row: `livechat` table gone. `chat_portal_livechat_archive` has 1,664 rows with `visitor_email` and `transcript_json` columns, but NOT `student_message, ai_response, tool_calls, transfer_to_human, resolved` needed by struct query line 86-93. Simple re-point fails → needs query rewrite or join with messages table.
-- Ruben shared email agent tracker sheet: https://docs.google.com/spreadsheets/d/1_CAiUfcNJnhCNfcG1xURDiOT66693KU5a8I7VYH2VNw/edit for quality improvement reference.
+Where we left off (verified 2026-08-07 05:38 PT):
+- Sweep (#24339) DEPLOYED: `cfa_raw_contacts` → `email_inbound_log` with `from_email AS email, from_name AS name, subject AS snippet`. `cfa_sweep_log` now 17 rows (was 0 for whole session).
+- Dispatch (#24340) DEPLOYED: threaded `PDO $pdo` through `executeParallelDispatch` → `getPendingCfaAgentQueue($pdo)` + `dispatchCfaAgentsParallel($pdo,...)`. Cron now runs clean ("No pending CFA agents. Exiting."), log stays 0 because `cfa_agent_queue` has 0 pending — correct behavior, not a bug.
+- Struct (#24341 → superseded by #24500): DEFERRED. `chat_portal_messages` lacks the columns the struct query needs (`visitor_email, student_message, ai_response, tool_calls, transfer_to_human, resolved`). Ruben confirmed "we do not have live chat anymore. We have chat widget." Requires a full rewrite against actual chat_portal schema — not a simple re-point.
 
-Open threads to drive next:
-1. #24339 [proposed] — CREATE cfa_raw_contacts table or find existing raw-contact source. Decision needed: what pipeline currently feeds access requests?
-2. #24341 [proposed] — Rewrite struct livechat query: map chat_portal_livechat_archive (transcript_json, visitor_email) + chat_portal_messages (message_text, sender_type) → struct output columns. Struct query currently expects: visitor_email, student_message, ai_response, tool_calls, transfer_to_human, resolved, created_at.
-3. #23207 [deployed] — Verify 0 new [Email AI-replied] tags in last 48h (was verified at 0 at last check).
-4. EMAIL QUALITY: Ruben's tracker sheet — integration with cfa_quality_audit_log? Data source for monthly quality tracking?
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #24500 [executing] — Rewrite CFA struct cron against real `chat_portal_messages`/`chat_portal_visitor_sessions` schema. Verify `chat_portal_visitor_sessions` has visitor_email (confirmed). Map: visitor_email → email, message_text → student_message, created_at → created_at.
+2. #23317 [deployed] — Closure-pending notifier still producing: 76 timers, 50 auto-closed. Monitor that the consumer gate `cron_closure_contact_gate` is registered (I added the producer; gate was pre-existing).
+3. Email tracker spreadsheet: review https://docs.google.com/spreadsheets/d/1_CAiUfcNJnhCNfcG1xURDiOT66693KU5a8 for quality improvements per Ruben's directive.
 
 Reference IDs:
-- Ideas filed: #21070 [closed], #23493 [resolved], #24339 [proposed], #24340 [proposed/corrected], #24341 [proposed]
-- Tables checked: chat_portal_livechat_archive (1,664 rows), chat_portal_messages (15,043 rows), cfa_raw_contacts (MISSING), cfa_agent_queue (0 rows)
-- Files touched: cron_cfa_struct_enforcer.php, cron_cfa_access_sweep.php, cron_parallel_cfa_dispatch.php, lib/parallel_cfa_dispatch.php, lib/cfa_access_sweep.php
-- Ruben asset: email agent tracker spreadsheet for quality improvement
+- Ideas deployed: #24339, #24340
+- Ideas superseded: #24341
+- Ideas proposed/executing: #24500
+- Worked: #23316, #23317, #23309, #21070, #23493
+- Files touched: /var/www/emtskills/lib/cfa_access_sweep.php, /var/www/emtskills/cron/cron_parallel_cfa_dispatch.php, /var/www/emtskills/cron/cron_cfa_struct_enforcer.php (read-only), /var/www/emtskills/cron/cron_closure_pending_notifier.php
+- Ledger: /var/www/emtskills/cline_task_ledger.md appended
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════════════════════
@@ -186,7 +182,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786088921071` — 8/7/2026, 12:53:00 AM PT — 17 turns
+### `1786088921071` — 8/7/2026, 3:21:37 AM PT — 114 turns
 
 **Original task:**
 
@@ -200,9 +196,35 @@ Status recap for when tools recover:
 **Argus 502 fix (task #300)** — 
 ```
 
-**Ideas referenced:** #16695 [awaiting_review], #23185, #23341, #23945, #24026, #24054, #24336 [deployed], #24337 [deployed], #24338 [deployed], #24342 [proposed]
+**Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12477, #12724, #13084, #152615, #16695 [awaiting_review], #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1935, #1936, #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20555, #20565, #20569, #20627, #20628, #20629, #20630, #20662, #20663, #20672, #20674, #20676, #20677, #20806 [proposed], #20886, #21000, #2101, #2105, #21162, #21163, #21165, #21166, #21168, #21169, #21201, #2126, #2127, #2128, #21400, #21401, #2221, #22245, #2232, #2238, #2242, #22583, #22897 [executing], #23185, #23190 [rejected], #23191 [executing], #23192 [rejected], #23204, #23205 [rejected], #23307 [rejected], #23315 [deployed], #23339 [executing], #23341, #23428 [deployed], #23429 [deployed], #23467 [executing], #23468, #23489 [executing], #23505 [deployed], #23511 [deployed], #23513 [deployed], #23520 [deployed], #23530 [deployed], #23592, #23945, #24026, #24054, #24336 [deployed], #24337 [deployed], #24338 [deployed], #24342 [proposed], #24400 [deployed], #389249, #7223
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+oyed], memory entity recorded.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up the email-storm fix follow-through — confirm the cooldown/digest hardening is truly durable and no new storms can recur.
+
+Where we left off (verified 2026-08-07 03:21 PT):
+- 15-min "New Feature Deployed" email storm to info@emsuniversity.com FIXED: cron_stakeholder_notify.php HY093 (duplicate :now placeholder) — email sent before the cline_fix_log INSERT crashed, so idea #20886 re-emailed every cycle. Patch live (NOW(),NOW(); log-before-email with try/catch; per-idea dedup). Idea #24400 [deployed]. Backlog of 49 ideas drained to 0. Verified via /var/log/stakeholder_notify.log + email_outbound_log (no repeats after 01:00).
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #24400 [deployed] — 24-48h post-fix check: confirm a genuinely NEW implemented idea emails exactly once (not zero, not twice) and the cron STAYS free of HY093. Run: SELECT id, subject, sent_at FROM email_outbound_log WHERE subject LIKE '%New Feature Deployed%' ORDER BY id DESC LIMIT 5.
+2. (human-only decision — no idea) — OPTIONAL durability: the mailer still announces every technical (non-user-facing) deploy to info@. Consider a digest/cooldown policy (e.g., collapse to a daily summary) if the once-per-idea cadence still feels noisy; that is a product decision, not a bug.
+
+Reference IDs:
+- Ideas filed: #24400 [deployed].
+- Files touched: /var/www/emtskills/cron/cron_stakeholder_notify.php (v1.0.2), /var/log/stakeholder_notify.log, HANDOFF_NOTES.md, cline_task_ledger.md (line 481).
+- Earlier same-session context: Argus 502 fixes #24336/#24337/#24338 [deployed] were verified in the prior window.
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1786088761151` — 8/7/2026, 12:51:42 AM PT — 14 turns
 
@@ -4136,167 +4158,3 @@ Look a
 **Ideas referenced:** #12459, #20272, #20536, #2071, #2072, #2085, #2184, #2185, #22128 [executing], #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #22479 [proposed], #22480 [proposed], #22484 [proposed], #22491 [proposed], #22499 [proposed], #22500 [in_progress]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785822732682` — 8/4/2026, 8:34:13 AM PT — 1002 turns
-
-**Original task:**
-
-```
-GLM-5.2 TP=2/PP=3 ring is LAUNCHED and loading model weights across all 6 nodes. Key achievements this session:
-
-1. Discovered 200Gbps RoCE ring topology, set MTU 9000 on all interfaces
-2. Fixed crossed CX7 cables on Tiberius + Marcus (IPs on wrong interfaces) - 200G links now work
-3. Distributed 419G FP8-MXFP4 checkpoint to all 6 nodes via 200G ring (~20 min per node)
-4. Fixed quantization error: patched config.json quant_method from hybrid_mxfp4_ct to compressed-tensors
-5. Discovered TP=6 impossible (64 attention heads not divisible by 6), using TP=2 PP=3 instead
-6. Fixed NCCL ibv_create_cq 
-```
-
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11944, #12299, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12673, #12824, #12872, #12878, #13108, #13202, #13874, #15144, #15979, #1602 [resolved], #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #1640, #16448, #16452, #1652 [resolved], #1655, #1658 [rejected], #16588, #16778, #16802, #16803, #16839, #16844, #16851, #17202, #17246, #17298, #17301, #1744, #1754, #1755, #1779, #1798, #1828, #18312, #18326, #18327, #18471, #1897, #19563, #19567, #1980, #1983, #1984, #1986, #19903, #20005, #20042, #20069, #20264, #20272, #20340 [executing], #2050, #2051, #2052, #2053, #20536, #2054, #2055, #2060, #2061, #2062, #2063, #2065, #20662, #2073, #2081, #20825, #2083 [resolved], #2085, #2089, #2090, #2092, #2093, #2096, #2097, #20985, #2099, #2101, #21010 [executing], #21011 [executing], #2102, #2103, #21038 [proposed], #21045, #2109, #2110, #2111, #21158 [executing], #2116, #21171, #2121, #21213 [executing], #2127, #2128, #2129, #2131, #2138, #2139 [investigating], #2141, #21419 [executing], #2147, #2149, #2151, #2152, #2153, #2154, #21542 [rejected], #21546 [executing], #2157, #2159 [resolved], #2168 [deployed], #21684, #2170 [resolved], #2174 [deployed], #2176 [resolved], #2179, #2180, #2181, #2182, #22066, #22067, #22068, #22086, #22087, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #22355 [proposed], #22357 [proposed], #22370 [proposed], #22371 [proposed], #22378 [proposed], #22379 [proposed], #22479 [proposed], #22480 [proposed], #22484 [proposed], #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-sume your interactive reserve.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #22128 [executing] - RAISE max_num_seqs on the GLM ring to reach 65+ tok/s aggregate
-
-Where we left off (verified 2026-08-04 08:32 PT):
-- THE HEADLINE: the ring is admission-capped, not saturated. Aggregate climbs monotonically to the cap (c1 6.26, c2 7.69, c3 8.96, c4 9.91, c5 9.28, c6 11.36, c7 12.72, c8 13.99) and 1396 of 2057 samples sit at exactly c8 with 4.26 avg waiting. KV cache usage is 0.84 PERCENT: kv_cache_size_tokens 2,959,424, num_gpu_blocks 46,241, kv_cache_max_concurrency 22.58x at full 131K ctx. About 99 percent of the KV cache is idle. --max-num-seqs 8 is the entire limit
-- RUBEN TARGET: 65+ tok/s aggregate. Bug row 1640 already measured this exact hardware (6x DGX Spark PP=6 socket) at max_num_seqs=128 giving 67.33 at 64 clients, 93.34 at 96, 110.21 at 128. Target is proven achievable
-- THE BLOCKER TO BREAK: bug row 1655 (one day after 1640) says max_num_seqs 12 and 32 hang torch.compile on the custom sparse-MLA build, declares 8 the max. Contradicts 1640, never reconciled, 8 carried forward unquestioned since 07-12
-- RING IS HEALTHY AND SERVING INTERACTIVE AGAIN: two non-ranking gates fixed today (bug row 2181) - stale FRANK_GLM_MAINTENANCE=1 (zzzzz-glm-maintenance.conf mtime 08-03 18:32, set during outage, ring repaired 02:45, renamed .disabled-ring-repaired-20260804) and FRANK_GLM_STAGE1_TTFB_INTERACTIVE 8 -> 0 (new drop-in zzzzzzzzzzzzzzzzzzzzzzz-glm-stage1-interactive-fix.conf). GLM cline turns 0 -> 3, canary healthy=True decode_live=True
-- DO NOT RE-PATCH RANKING: EMSU_GLM_FIRST_ALL_LANES defaults 1, _glm_priority()=0 for GLM every lane, _speed_rank() pins -1e9, sort key cooldown-exempt, EMSU_GLM_ABSOLUTE_CLAIM=1. Ruben directive already implemented in four places
-- ARGUS SAFE: lane classifier (adapter lines 323-345) returns cline ONLY on Cline markers. Admin Argus GLM opt-in classifies ops/batch, cannot eat the interactive reserve
-
-Open threads to drive next:
-1. #22484 [proposed] P0 - THE MAIN JOB. Raise CFG_MAX_SEQS in glm52_launch_cfg_pp6.sh in steps 16, 32, 64, 128. Deploy all 6, relaunch workers 1-5 THEN rank 0 (bug row 2168). Re-extract the curve at each step, stop when aggregate flattens or interactive TTFB exceeds the 240s SLO. Watch for the row-1655 signature (GPU 0 pct, no progress during KV cache setup / CUDA graph capture). MANDATORY: extend cudagraph_capture_sizes (now [1,2,4,8] max 16) to match each new max_num_seqs, or batches fall off the graph path into eager = 30-100x decode slowdown per bug row 1979, which will look like a regression and get wrongly reverted. Also revisit max_num_batched_tokens (now 8192) as seq count rises.
-2. #22357 [proposed] - SEQUENCE THIS FIRST or do the whole experiment in one sitting. Ring is not reboot-durable: supervisor pause flag lives in /tmp, ring routes and the iptables ring ACCEPT are not persistent, glm52-fabric.service is failed. Any node reboot silently breaks the ring and presents as an NCCL error.
-3. #22480 [proposed] P0 - the lane split. Cap-ops-at-4 (FRANK_GLM_OPS_CEILING=4) was correct for a hard 8-slot ceiling and becomes unnecessary if 22484 lands. Note FRANK_GLM_OVERFLOW_CEILING=32 and FRANK_GLM_OPS_CEILING=24 are currently DEAD CONFIG, unreachable above the real cap of 8, so the 07-30 lane reservation is a no-op today. Re-derive the split AFTER 22484.
-4. #22479 [proposed] - GLM now takes roughly 9 percent of interactive turns. Decide if that
-```
-
-### `1785833341637` — 8/4/2026, 2:10:06 AM PT — 68 turns
-
-**Original task:**
-
-```
-run this plase
-
-1. #22334 [proposed] — Rule-91/MCP tunnel wedge RCA: document the transport artifact (client-side JSON parse rejection ~1400 chars) for cross-agent learning
-```
-
-**Ideas referenced:** #13487, #1652, #20957, #20958, #2174, #2177 [resolved], #22128 [executing], #22240 [proposed], #22333, #22334 [proposed], #22335
-
-**Last PICKUP PROMPT:**
-
-```
-dexed: 311 rules, 9 hardfloor.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #22334 [resolved] — Rule-91/MCP tunnel wedge RCA: transport artifact cross-agent doc.
-
-Where we left off (verified 2026-08-04 02:09 PT):
-- RCA #22334 [resolved] — live-reproduced client-side JSON parse rejection (~150-300 char grep commands with braces/pipes/globs) returning 'Invalid JSON argument' on 2026-08-04 01:53-01:54 PT. Tunnel confirmed UP via echo OK.
-- Durable RCA docs deployed: .clinerules/165-transport-artifact-rca-22334.md (local) + /var/www/emtskills/docs/specs/transport_artifact_rca_22334.md (server).
-- Bug-library row #2177 [resolved] recorded (problem_key invalid_json_arg_brace_glob_shape_2026_08_04).
-- Rule-165 body updated with Extended fingerprint section per Ruben approval. MCP reindexed.
-- Handoff notes updated with RCA summary.
-
-Open threads to drive next:
-1. #22334 [resolved] — (done) document the transport artifact RCA. All actions complete.
-2. (none remaining — the human-only decision to update rule-165 has been executed)
-
-Reference IDs:
-- Ideas filed: #22334 [resolved]
-- Files touched: .clinerules/165-transport-artifact-rca-22334.md, /var/www/emtskills/docs/specs/transport_artifact_rca_22334.md, Rules-archive/165-invalid-json-arg-is-not-tunnel-wedged.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785807924524` — 8/4/2026, 2:07:44 AM PT — 108 turns
-
-**Original task:**
-
-```
-I’m assuming TeamHub is currently blank because you’re doing something with it at the moment? Lol.
-```
-
-**Ideas referenced:** #059669, #20340 [executing], #21010 [executing], #21011 [executing], #21038 [proposed], #21158 [executing], #21171, #21213 [executing], #21419 [executing], #2153, #2154, #21542 [rejected], #21546 [executing], #22066, #22067, #22068, #22086, #22087, #22188, #22274 [deployed], #22275 [filed], #22276 [proposed], #2563, #475569, #6021, #6366, #64748, #7390, #7634, #9577, #9795
-
-**Last PICKUP PROMPT:**
-
-```
-same number. No action needed.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up #22274_#22276 — TeamHub 500 fixed + pending-claims badge deployed, count-sync confirmed (2026-08-04 02:07 PT).
-
-Where we left off (verified 2026-08-04 02:07 PT):
-- #22274 [deployed]: TeamHub 500 fixed — missing require + $pdo scope bug, both resolved
-- #22276 [deployed]: pending_claims_badge.php created, HubShell sidebar wired, require re-enabled
-- Count sync verified: sidebar badge and scheduler_admin tab badge use identical SQL against same DB — no drift possible
-
-Open threads:
-- None. Both ideas complete.
-
-Reference IDs:
-- Ideas completed: #22274, #22276
-- Files created: `/var/www/emtskills/views/team_hub/pending_claims_badge.php`
-- Files touched: `/var/www/emtskills/routes/team_hub.php`, `/var/www/emtskills/lib/HubShell.php`
-- Backups: `HubShell.php.bak-20260803-fix22274`
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785821651406` — 8/4/2026, 1:48:58 AM PT — 522 turns
-
-**Original task:**
-
-```
-For Argus only: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser 
-
-for frankenstein-llm, frankenstein-tools i'd like to disallow the use of the GLM 5.2 unless the user specificly chooses "Thinking" mode. Thinking mode is only permitted by Exec Admin, IT Admin, Master Admin. All others must not use GLM 5.2 within frankenstein-llm or frankenstein-tools.
-```
-
-**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #1557, #16213, #16263, #16648, #17202, #17203, #17205, #17300, #17430, #18329, #18378, #1864, #18745, #18770, #18820, #18868, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #1934, #19348, #19370, #2006, #20340 [executing], #20547, #20549, #21010 [executing], #21011 [executing], #21038 [proposed], #21044, #21053 [proposed], #21125, #21126, #21134, #21138, #21140, #21158 [executing], #21171, #2121, #21213 [executing], #21262, #2139 [investigating], #2140, #21419 [executing], #2147, #2149, #2153, #2154, #21542 [rejected], #21546 [executing], #2159 [resolved], #2170 [resolved], #22066, #22067, #22068, #22086, #22087, #22188, #22200, #22240 [proposed], #22256, #22333 [deploying], #22334 [proposed], #274160, #30363, #334155, #37972, #4338, #45094, #64748, #69707, #8942, #9650, #9654, #9660, #9733, #9889
-
-**Last PICKUP PROMPT:**
-
-```
-min/MasterAdmin can toggle it.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — GLM 5.2 Thinking Mode Gate deployment.
-
-Where we left off (verified 2026-08-04 01:46 PT):
-- All 6 patches applied and verified: router_hook.py gate function + final guard (lines 76, 604-606), alltastic_api.php emsu_mode/role metadata (line 12087) + terminal_query session (line 5081), argus_download.php 🧠 toggle button (lines 287, 1385).
-- php -l passed for both PHP files. LiteLLM container restarted. Live probe of the gate itself is the remaining open item.
-
-Open threads to drive next:
-1. #22333 [deploying] — run a live terminal_query probe: send a non-thinking CS-roled query and a thinking ExecAdmin query, confirm the GLM-5.2 vs 120B routing in the response metadata. (Confirmed the gate code is on disk; end-to-end probe with the real API key is the next step.)
-2. #22334 [proposed] — close out the RCA for the MCP tunnel wedge that blocked this deploy.
-
-Reference IDs:
-- Idea: #22333 (GLM gate), #22334 (RCA)
-- Files touched: /etc/litellm/router_hook.py, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/routes/argus_download.php
-- Backups: .bak-20260803-glmtaskinggate
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```

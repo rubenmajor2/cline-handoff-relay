@@ -41,8 +41,9 @@
 9a. **RULE 91 — NO FAKE IDEA NUMBERS:** Never write `IDEA-001`, `IDEA-002`. Always call `create_idea` for real integer IDs. Fake numbers = ticket cannot be looked up = thread stays open forever.
 9b. **RULE 91 — EVERY #NNNN GETS A BRACKET:** Scan entire `result` (not just pickup prompt). Every `#NNNN` must have `[deployed|executing|queued|blocked|proposed|rejected|superseded]`. Bare number = STOP before shipping.
 9c. **RULE 91 — OPEN THREADS + REFERENCE IDS MANDATORY:** Both sections MUST appear. Empty open-threads → write "None — [reason]". Every body idea cited in Reference IDs.
-9d. **GATE D — CONCRETE-TOOL-PATH TEST:** Every copy-window step MUST cite at least one concrete tool path (e.g., `read_server_file("routes/grievance_manager.php")`, `idea_spec(19594)`, `ssh_command('mysql ...')`). A copy window with zero concrete tool paths is a prose prompt, not a copy window.
-9e. **COPY-WINDOW FORMAT — FENCED CODE BLOCKS FOR ONE-CLICK COPY:** Every copy window delivered to Ruben MUST be wrapped in a fenced code block (```text ... ```) so Cline's native copy button copies the entire block. Inside the block, use `——[COPY]——` open/close markers to delimit each self-contained window. No text selection required — the copy button copies the entire fenced block. Format: open with `——[COPY]——`, then `# COPY WINDOW N — Title`, then steps with concrete tool paths, then `——[/COPY]——`. Documented in rule `91-copy-window-format` (Rules-archive, clinerules MCP).
+9d. **GATE D — CONCRETE-TOOL-PATH TEST:** Every copy-window step MUST cite at least one concrete tool path (e.g., `read_server_file("routes/x.php")`, `idea_spec(19594)`). Zero tool paths = a prose prompt, not a copy window.
+9e. **COPY-WINDOW FORMAT:** Wrap every copy window in a fenced ```text block (one-click copy), with `——[COPY]——` / `——[/COPY]——` markers inside. Full spec: rule `91-copy-window-format` (archive).
+
 10. **RULE 29 RUBEN QUESTIONS:** Did Ruben ask a direct question? → Answer it INLINE in `result`. "I'll look into it" does not count.
 11. **RULE 29 ACT, DON'T DEFER:** Did I list anything as "open thread" that I could do myself with a tool I have? → **DO IT NOW, don't list it.** Only genuine human-policy decisions stay open.
 12. **RULE 91 NO PLACEHOLDERS:** Any literal `#NNNN`, `#0000`, `<task_id>`, `<timestamp PT>` in result? → **BROKEN.** Substitute real values.
@@ -88,7 +89,9 @@
 - **Staff escalation (Vicky/Jon/Ruben)** — R: 10,13,15,19,48,117
 - **CTA / link formatting** — R: 47 (full URLs, no shortcuts)
 - **Ruben's electronic signature** — R: 301 (canonical file `signature2small.jpg`, NEVER extract from another PDF)
-- **REGULATOR RESPONSES (AZDHS/TDSHS/BPPE/CAPCE/any agency)** — R: 302 (defensive posture, never volunteer admissions, never repeat their numbers, never restate the allegation, courtesy framing wording, grace-period deadline math, enclosure pattern, pre-transmission verification) + `NoiDefenseEvidence.php`
+- **REGULATOR RESPONSES (AZDHS/TDSHS/BPPE/CAPCE/any agency)** — R: 302 (defensive posture, never volunteer admissions/intervals/commitments/remedies, never repeat their numbers, never restate the allegation, never adopt their premise, consolidate-and-keep-consolidating, accompanying-document consistency gate, disclaimed observation, concede-then-narrow, contemporaneous-record framing, third-party attestation, no links + flattened-extraction verification, courtesy framing wording, grace-period deadline math, enclosure pattern) + `NoiDefenseEvidence.php`
+- **TDSHS / TEXAS COMPLAINTS specifically** — R: 304 (the 8/6 gold standard: section order skeleton, public-interest opening, the outset ledger, Ruben's regulator tone register, the 7-point Texas externship design defense, the Texas citation set incl. 157.32(p)(21)(F) and (u)(1)(A)/(u)(3), threshold-objection form, arrival record, per-matter letters incorporate-never-duplicate). Read 304 BEFORE drafting any TDSHS response. + `ComplianceRefs.php`
+
 - **CS-agent response-quality bug library** — R: 270 (consult before recycling wrong replies across Email/Chat/SMS/Ticket/Voice/To AI agents; 2-strike tripwire)
 
 ---

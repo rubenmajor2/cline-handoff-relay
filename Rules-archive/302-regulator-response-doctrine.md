@@ -58,7 +58,92 @@ The second form is strictly better than a recital, because it converts the absen
 **Source incident:** 2026-08-06, TDSHS Inspection 5196 consolidated response. Three per-matter sections opened with "What the transmittal alleges" recitals plus a fourth restatement in the Threshold Matter note, and a fifth survived inside a newly-written sympathetic paragraph. Removed in rounds 17 and 18 after Ruben caught it. Doctrine already prohibited it; the failure was reintroduction during redrafting, which is why the banned shapes are now enumerated.
 
 
+## CONSOLIDATE, AND KEEP CONSOLIDATING IF THEY DECLINE
+
+Where an agency transmits several matters on the same date concerning the same program and period, answer them in ONE consolidated Response, with a thin per-matter letter that incorporates it by reference. Never file standalone letters that each restate the facts.
+
+The reason, in Ruben's words: filing several separately-worded accounts of one set of events on one date is the licensee handing the agency inconsistencies to find.
+
+If the agency declines consolidation and offers extensions one case number at a time, record the decision and its practical consequence, then consolidate anyway:
+
+> "A single course of conduct is therefore administered as separate matters, each with its own number, its own file, its own clock, and its own correspondence thread. The same facts must be assembled, verified, and stated repeatedly across parallel filings. None of that work advances the resolution of any allegation. It is administrative overhead created by the decision not to consolidate, and it falls entirely on the licensee."
+
+Note what their offer establishes on its face: the response periods are subject to agency discretion.
+
+## THE ACCOMPANYING-DOCUMENT CONSISTENCY GATE
+
+**Before transmitting any set, diff every accompanying letter against the consolidated Response for contradiction.** An admission in a per-matter letter destroys the denial in the consolidated filing, and they travel in the same envelope.
+
+Source incident 2026-08-06 (TDSHS): the consolidated Response stated that no provision "conditions such an adjustment on prior consultation" and that the program "does not concede that any of those obligations exists." An accompanying per-matter letter, written five days earlier under the older doctrine and never brought forward, listed as a corrective measure "Date changes on a student placement request require the student agreement." Same envelope, opposite positions.
+
+**The gate:** if the consolidated Response denies an obligation, no accompanying document may adopt it. Grep every companion letter for the obligations the main filing denies. A document not rewritten when the posture changed is a document still carrying the old posture.
+
+## NEVER VOLUNTEER AN INTERVAL, A COMMITMENT, OR A REMEDY
+
+These four categories are unforced errors. All four appeared in the 8/6 per-matter letters and all four were stripped.
+
+| Never volunteer | Why |
+|---|---|
+| An interval ("escalated at fourteen days") | Where the defense is that no rule fixes an interval, supplying one creates the standard you are denying |
+| A commitment ("designated single point of contact," "written update within five business days") | Creates an obligation the agency can later measure you against |
+| A remedy the agency never demanded (full refund, tuition credit) | Implies liability and invites them to treat it as the baseline |
+| A named third party (a specific fire department, hospital, or partner site) | No benefit to us, and it exposes a partner to agency contact |
+
+Substitute the generic: "a fire-department site operating under an executed affiliation agreement on file."
+
+## DO NOT ADOPT THEIR PREMISE IN YOUR OWN VOICE
+
+Restating a request in terms that presuppose the disputed fact concedes it under our signature. Round 30 on 8/6 caught: a statement "detailing why it is no longer accredited." Neutral form: "a written statement concerning its standing with" the accreditor.
+
+Test every description of an agency request: does my phrasing assume the thing in dispute is true? Describe the request, never its premise.
+
+## THE DISCLAIMED OBSERVATION (how to say the damaging thing safely)
+
+When a fact invites an inference you want the reader to draw but cannot assert, state the fact and explicitly disclaim the inference:
+
+> "The program notes, without asserting purpose, that the Department is in contact with EMS providers across the state and was in a position to assist with placement capacity in this market had it elected to, and that what the Department directed to the program in these weeks were requests for records."
+
+The disclaimer is what makes the observation sayable. Without it the sentence is an accusation. With it, it is a record. Same construction: "The program makes no allegation as to purpose and draws no conclusion from any of them."
+
+Related: quote their admission flat and stop. "The Department response stated that its request for information is not dependent upon the respondent ability to independently verify the Department complaint-intake process. The program records that response verbatim." No rebuttal added.
+
+## CONCEDE THE REASONABLE POINT, THEN NARROW IT
+
+The most disarming move available. Grant what is obviously true, immediately, then state the narrower thing you are actually asserting:
+
+> "Each individual request the Department has made is, taken alone, a request a licensee can answer. The program says that plainly and does not suggest otherwise. What the program records here is the aggregate."
+
+A filing that refuses to concede anything reads as evasive. A filing that concedes the fair point and then narrows reads as credible.
+
+## CONTEMPORANEOUS-RECORD FRAMING
+
+Close every reservation by naming why it is being made now:
+
+> "The program states these reservations now, in this Response, rather than raising them later. An objection recorded when the events occur is part of the contemporaneous record. The same objection raised for the first time at a later stage is characterised as an afterthought. The program prefers the record."
+
+This is also the reason to log procedural objections at the time rather than banking them.
+
+## THIRD-PARTY ATTESTATION BEATS OUR OWN RECORDS
+
+Our system of record is contestable. A third-party signature is not. Where a preceptor, site supervisor, or external examiner has signed, lead with that: "a third party attesting that the student was present and supervised on the date recorded."
+
+**Verify the signature image before relying on it.** Payloads in `ExternshipFormSubmission.preceptor_signature` are base64 PNGs. Decode and PNG-unfilter properly before measuring ink; a naive dark-pixel sample on filtered rows undercounts and produces false "blank" verdicts. Measure ink pixel count and stroke bounding box.
+
+**Count the strongest unit, not the largest.** "Preceptor-signed documentation on four separate dates" beats "seventeen submissions." Seventeen invites a count-based reply. Four dates is the fact that carries weight.
+
+## NO LINKS OF ANY KIND, AND VERIFY WITH A FLATTENED EXTRACTION
+
+Zero URLs in any regulator filing. No Drive links, no portal links, nothing auth-gated. Supporting documents get registered to `compliance_source_documents` against every applicable case number and served internally through the authenticated resolver, never linked in the filing.
+
+**`pdftotext` line-wraps, so a naive grep returns false zeros.** Always flatten first:
+
+```
+pdftotext F.pdf - | tr '\n' ' ' > /tmp/v.txt
+grep -c 'drive.google\|http' /tmp/v.txt   # must be 0
+```
+
 ## DO NOT RECITE THEIR DIRECTIVE
+
 
 No paragraph mapping their required items to your sections. No "Enclosures:" list block. The enclosures travel with the transmission; announcing them inside the letter frames the filing as a checklist.
 
@@ -148,12 +233,17 @@ After sending, insert a `kind='sent'` row in `compliance_investigation_responses
 - Rule 02 — no apologies in external correspondence
 - Rule 29 — act on verified evidence, answer direct questions inline
 - Rule 301 — canonical signature file
+- **Rule 304 — TDSHS / Texas playbook: section order, tone register, the Texas design defense, the outset ledger, the Texas citation set. Read 304 BEFORE drafting any TDSHS response.**
 - Library: `/var/www/emtskills/personnel/lib/NoiDefenseEvidence.php`
+- Library: `/var/www/emtskills/personnel/lib/ComplianceRefs.php` (case number to source document resolver)
 
 ## Source incident
 
 2026-07-31 — AZDHS July 2026 consolidated NOI response, 7 complaint cases, 21 revision rounds. Every rule above is a correction Ruben made to a draft I had already called finished. Transmitted to lawrence.bevins@azdhs.gov cc brent.caswell@azdhs.gov approximately 3 hours past the 7/31 extension deadline.
 
+2026-08-06 — TDSHS Inspection 5196 consolidated response, 3 matters, 31 revision rounds. Added: the consolidate-and-keep-consolidating rule, the accompanying-document consistency gate, the never-volunteer-an-interval table, the do-not-adopt-their-premise rule, the disclaimed observation, concede-then-narrow, contemporaneous-record framing, third-party attestation, and the no-links / flattened-extraction verification. The Texas-specific build sheet is rule 304.
+
 ## Last updated
 
-2026-07-31 — initial.
+2026-08-06 — expanded with the TDSHS 8/6 deltas. Rule 304 added as the Texas playbook.
+

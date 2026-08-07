@@ -6,11 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/6/2026, 4:32:49 PM PT | window: last 72h | 115 tasks | index total 511 (parsed 4, cached 507)
+Generated: 8/6/2026, 5:32:50 PM PT | window: last 72h | 116 tasks | index total 513 (parsed 4, cached 509)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786058811201` | 8/6/2026, 4:32:13 PM | 59 | 238KB | #TDSHS |
+| `1785966271898` | 8/6/2026, 5:32:39 PM | 227 | 582KB | #Payment Issues |
+| `1786059773410` | 8/6/2026, 5:30:51 PM | 28 | 110KB | #Baseline Tempe Loan |
+| `1786060260487` | 8/6/2026, 5:30:12 PM | 126 | 496KB | frankenstein-llm subagents experiencing delay. Are those on deepseek like they should be?  |
+| `1786058811201` | 8/6/2026, 5:19:23 PM | 202 | 821KB | #TDSHS |
 | `1786036273485` | 8/6/2026, 4:29:20 PM | 446 | 857KB | #Argus  |
 | `1786057314451` | 8/6/2026, 4:27:31 PM | 132 | 1445KB | I keep getting this message every 15 minutes and is it fixed or not? |
 | `1786008133029` | 8/6/2026, 4:18:36 PM | 498 | 1518KB | There seems to be something that is submitting courses or something to TDSHS. Can you tell |
@@ -35,7 +38,6 @@ Generated: 8/6/2026, 4:32:49 PM PT | window: last 72h | 115 tasks | index total 
 | `1785988427679` | 8/6/2026, 12:44:53 AM | 533 | 1461KB | #Argus |
 | `1785971158342` | 8/5/2026, 9:24:41 PM | 160 | 359KB | #AZDHS |
 | `1785953794202` | 8/5/2026, 9:07:26 PM | 444 | 1368KB | COPY_WINDOW_0_DATA_ACCURACY_AUDIT |
-| `1785966271898` | 8/5/2026, 9:05:10 PM | 170 | 458KB | #Payment Issues |
 | `1785954856277` | 8/5/2026, 8:39:38 PM | 330 | 2096KB | #CFA |
 | `1785939420388` | 8/5/2026, 8:37:44 PM | 944 | 14697KB | #Argus |
 | `1785954595787` | 8/5/2026, 8:20:31 PM | 226 | 1063KB | #KAISON |
@@ -124,13 +126,68 @@ Generated: 8/6/2026, 4:32:49 PM PT | window: last 72h | 115 tasks | index total 
 | `1785801179446` | 8/3/2026, 8:13:29 PM | 242 | 2253KB | #Argus |
 | `1785775905424` | 8/3/2026, 7:10:14 PM | 1138 | 2596KB | # GLM-5.2 Hexarchy Ring — Scientific Diagnosis & Stabilization Summary |
 | `1785790859915` | 8/3/2026, 6:01:41 PM | 532 | 4871KB | Ruben Major Jr., IT Admin is saying that he is not receiving messages in TeamHub / request |
-| `1785787998507` | 8/3/2026, 5:15:44 PM | 172 | 993KB | Was the "Clear" button on this page supposed to be wired into the actual NREMT clearance a |
 
 ---
 
 ## Per-window detail
 
-### `1786058811201` — 8/6/2026, 4:32:13 PM PT — 59 turns
+### `1785966271898` — 8/6/2026, 5:32:39 PM PT — 227 turns
+
+**Original task:**
+
+```
+#Payment Issues
+
+Pick up payments. THE ROOT CAUSE IS ALREADY DIAGNOSED IN IDEA #20613 AND NOBODY READ IT.
+
+#20613 title, verbatim: "URGENT: zero large EMT approvals today, all 5007 Credit Floor with AVS+CVC
+passing, correlates with July crossing $1M processed on 07-27 (first time ever). Leading
+hypothesis: Intuit merchant-account [cap]"
+
+FROM #20613 (2026-07-31): FIVE distinct payers declined across 07-30/07-31 (Matthew Gillespie,
+Frank Heald, Maia, Elizabeth Shipp Conway, Shaheed Kehinde) on DIFFERENT cards, DIFFERENT banks,
+FOUR different sites (sandiegoemt, dallasemt, californiaemt x2, ariz
+```
+
+**Ideas referenced:** #19387 [executing], #20130, #20491, #20613 [approved], #23062 [executing], #23268 [executing], #23279 [proposed], #23280 [proposed], #23281 [proposed], #23282 [proposed], #23304 [in_progress], #23394, #23584, #23585, #23890, #24158 [in_progress], #4929, #8211
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786059773410` — 8/6/2026, 5:30:51 PM PT — 28 turns
+
+**Original task:**
+
+```
+#Baseline Tempe Loan
+
+from kristall.seidel@calbt.com 
+can you help me answer these questions for the loan we're looking at for the Baseline Tempe property. If you search emails from California Bank and Trust, you will get a more complete picture. Help me draft a reply and if you don't know then give me browser instructions to acquire any adiditonal information. 
+
+
+Hi Ruben and Alma,
+
+I just received the list of questions from the underwriter. Could you please respond to the following as completely and quickly as possible?
+
+-Since personal TR for 2025 are on extension, can we get 2025 W2s for t
+```
+
+**Ideas referenced:** #19370, #23710, #23711, #23920 [in_progress], #23941 [in_progress], #23944 [in_progress], #23945, #23952, #23954, #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786060260487` — 8/6/2026, 5:30:12 PM PT — 126 turns
+
+**Original task:**
+
+```
+frankenstein-llm subagents experiencing delay. Are those on deepseek like they should be? They are slower I think than they should be. Can you look into this?
+```
+
+**Ideas referenced:** #10108, #10739, #10740, #11735, #11741, #11781, #11944, #11953, #12059, #12060, #12299, #12314, #12365, #12366, #12368, #12459, #12477, #12618, #12657, #12824, #12872, #12878, #13108, #13202, #13204, #13874, #16163, #16265, #16304, #16588, #16844, #18312, #18326, #18720, #19370, #19653, #19925, #2050 [needs_verify], #2092, #22386, #23171, #23710, #23711, #23945, #23952, #23954, #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed], #24138 [proposed], #24144 [proposed], #24145 [proposed], #24156 [proposed], #24157 [proposed], #6711, #6719
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786058811201` — 8/6/2026, 5:19:23 PM PT — 202 turns
 
 **Original task:**
 
@@ -149,7 +206,7 @@ There are futher nuances as well as my tone, what i like and don't. I'd like to 
 To that end i need you also to inject such updates to those ot
 ```
 
-**Ideas referenced:** #178596, #23666 [proposed], #23667 [executing], #24086 [proposed], #24098 [proposed], #24103 [proposed], #24108 [proposed], #5196
+**Ideas referenced:** #0000, #178596, #19338, #19458, #19491, #19599 [deployed], #23666 [proposed], #23667 [executing], #24086 [proposed], #24098 [proposed], #24103 [proposed], #24108 [proposed], #24133 [proposed], #24143 [proposed], #24153 [proposed], #250984, #251236, #5196
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -946,28 +1003,6 @@ Work on that
 ```
 
 **Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12477, #13084, #152615, #1681, #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #178593, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1935, #1936, #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20503, #20540, #20541, #20555, #20565, #20569, #20627, #20628, #20629, #20630, #20662, #20663, #20672, #20674, #20676, #20677, #20806 [proposed], #2101, #2105, #2126, #2127, #2128, #2226, #2234, #22808 [proposed], #23027, #23036, #23037, #23038, #23039, #23050 [executing], #23054 [executing], #23056 [executing], #23061 [executing], #23062 [executing], #23146 [proposed], #23150 [proposed], #23152 [proposed], #23160 [proposed], #23163 [proposed], #23164 [proposed], #23165 [proposed], #23171, #23174, #23175, #23180 [proposed], #23181, #23182, #23183, #23184, #23276 [proposed], #23277 [proposed], #23285 [proposed], #23318 [proposed], #23471 [proposed], #23506 [proposed], #389249, #7223, #7925, #8639, #9048
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785966271898` — 8/5/2026, 9:05:10 PM PT — 170 turns
-
-**Original task:**
-
-```
-#Payment Issues
-
-Pick up payments. THE ROOT CAUSE IS ALREADY DIAGNOSED IN IDEA #20613 AND NOBODY READ IT.
-
-#20613 title, verbatim: "URGENT: zero large EMT approvals today, all 5007 Credit Floor with AVS+CVC
-passing, correlates with July crossing $1M processed on 07-27 (first time ever). Leading
-hypothesis: Intuit merchant-account [cap]"
-
-FROM #20613 (2026-07-31): FIVE distinct payers declined across 07-30/07-31 (Matthew Gillespie,
-Frank Heald, Maia, Elizabeth Shipp Conway, Shaheed Kehinde) on DIFFERENT cards, DIFFERENT banks,
-FOUR different sites (sandiegoemt, dallasemt, californiaemt x2, ariz
-```
-
-**Ideas referenced:** #19387 [executing], #20130, #20491, #20613 [approved], #23062 [executing], #23268 [executing], #23279 [proposed], #23280 [proposed], #23281 [proposed], #23282 [proposed], #23304 [in_progress], #23394, #23584, #23585, #23890, #4929, #8211
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -4271,49 +4306,6 @@ Reference IDs:
 - Backups: /tmp/alltastic_backup_22119.php, /tmp/shift_lifecycle_bak_22139.php
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785787998507` — 8/3/2026, 5:15:44 PM PT — 172 turns
-
-**Original task:**
-
-```
-Was the "Clear" button on this page supposed to be wired into the actual NREMT clearance at nremt.org for each program director or no?
-
-https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students
-```
-
-**Ideas referenced:** #15887, #15999, #16000, #16015, #16016, #16312, #17665, #18500, #18587, #18657, #198754, #202608, #2563, #3109, #3122, #5387, #9313
-
-**Last PICKUP PROMPT:**
-
-```
-te against the next cron sync.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up: Improve NREMT clearance workflow — 73 students cleared locally but NREMT-side Certification Incomplete.
-
-Where we left off (verified 2026-08-03 15:43 PT):
-- Clear button = local DB only; nremt_submissions has 0 rows; no API submission exists [verified]
-- cron_nremt_sync.py uses Playwright to pull CSV from NREMT PD portal daily (read-only) [verified]
-- 124 cleared in 90d: 57 Fully Certified (48 certified AFTER Clear, only 9 before), 73 Certification Incomplete [verified]
-- NREMT API has Education.API/Program.API scopes but no roster-submission endpoint; manual portal upload required [verified]
-- nremt_candidate_tracking has 832 rows from daily CSV sync; ready for comparison [verified]
-- Files: api/clearance_queue_action.php, api/nremt_client.php, cron/cron_nremt_sync.py
-
-Open threads to drive next:
-- N/A — investigation complete.
-
-Reference IDs:
-- Tables: clearance_queue (184 cleared), nremt_submissions (0 rows), nremt_candidate_tracking (832 rows)
-- PD accounts: AZ (JThompson), CA (MRios), TX (agamez) — all 3 have working NREMT portal access
-
-When done, append row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>

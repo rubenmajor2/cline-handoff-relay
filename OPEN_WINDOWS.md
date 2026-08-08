@@ -6,12 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/7/2026, 9:49:52 PM PT | window: last 72h | 82 tasks | index total 531 (parsed 2, cached 529)
+Generated: 8/7/2026, 10:49:52 PM PT | window: last 72h | 77 tasks | index total 534 (parsed 5, cached 529)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786036273485` | 8/7/2026, 9:49:33 PM | 1231 | 2987KB | #Argus  |
-| `1786162207330` | 8/7/2026, 9:49:27 PM | 127 | 358KB | Why does frankenstein LLM iterate this to me? I'm hitting the token limit. I need to quick |
+| `1786168161165` | 8/7/2026, 10:49:49 PM | 7 | 22KB | #Argus |
+| `1786167712060` | 8/7/2026, 10:49:25 PM | 51 | 148KB | ## Comprehensive PICKUP PROMPT — all 7 context-memory ideas, server-authoritative tags |
+| `1786162207330` | 8/7/2026, 10:49:20 PM | 322 | 1206KB | Why does frankenstein LLM iterate this to me? I'm hitting the token limit. I need to quick |
+| `1786036273485` | 8/7/2026, 10:47:51 PM | 1506 | 4670KB | #Argus  |
+| `1786166732768` | 8/7/2026, 10:35:33 PM | 90 | 923KB | Diagnose why cron_argus_task_worker.php stalls when the upstream LLM exceeds 120s. Read th |
 | `1786086916545` | 8/7/2026, 8:39:15 PM | 190 | 1084KB | Tell me how the student council is doing. Is it healthy? It actually generating ideas and  |
 | `1786144700222` | 8/7/2026, 8:25:22 PM | 368 | 730KB | #TDSHS |
 | `1786123588626` | 8/7/2026, 5:15:24 PM | 398 | 851KB | telephony is not working for incoming calls - it's telling people a debug message. Please  |
@@ -84,20 +87,104 @@ Generated: 8/7/2026, 9:49:52 PM PT | window: last 72h | 82 tasks | index total 5
 | `1785907400228` | 8/5/2026, 12:35:11 AM | 120 | 338KB | https://emsuniversity.com/emtskills is very slow again today. This is the 3rd time I've ha |
 | `1785881207296` | 8/5/2026, 12:29:35 AM | 188 | 818KB | Can you look into this and advise if there's an isseu? |
 | `1785901946011` | 8/4/2026, 11:36:18 PM | 622 | 1406KB | #GLM  |
-| `1785871298806` | 8/4/2026, 10:18:50 PM | 202 | 542KB | #120Bs |
-| `1785903133016` | 8/4/2026, 9:51:29 PM | 46 | 171KB | #SLS Various |
-| `1785905340493` | 8/4/2026, 9:51:10 PM | 6 | 18KB | ## WINDOW 8 |
-| `1785905180050` | 8/4/2026, 9:50:18 PM | 10 | 27KB | ## WINDOW 1 |
-| `1785905269502` | 8/4/2026, 9:50:13 PM | 6 | 25KB | ## WINDOW 4 |
-| `1785905325070` | 8/4/2026, 9:50:05 PM | 6 | 16KB | ## WINDOW 7 |
-| `1785905308355` | 8/4/2026, 9:49:56 PM | 6 | 18KB | ## WINDOW 6 |
-| `1785905248350` | 8/4/2026, 9:49:55 PM | 8 | 20KB | ## WINDOW 3 |
 
 ---
 
 ## Per-window detail
 
-### `1786036273485` — 8/7/2026, 9:49:33 PM PT — 1231 turns
+### `1786168161165` — 8/7/2026, 10:49:49 PM PT — 7 turns
+
+**Original task:**
+
+```
+#Argus
+
+We were making argus improments, I'm not sure if the last window got them all so you might hav eto double check. 
+
+--
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #259 — Comprehensive Rule 91 upgrade and Argus chat improvement rollout.
+
+Where we left off (verified 2026-08-07 22:47 PT):
+- **Conversation memory (#24898/#24900) DEPLOYED** — session argus_hist tracks last 30 messages, $histStr appended to $extSys system prompt. Lint OK, 4 refs in file.
+- **Confirm-before-mutating
+```
+
+**Ideas referenced:** #24635 [deployed], #24636 [deployed], #24645 [unknown], #24646 [proposed], #24791 [deployed], #24894 [queued], #24897 [executing], #24898 [deployed], #24900 [deployed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786167712060` — 8/7/2026, 10:49:25 PM PT — 51 turns
+
+**Original task:**
+
+```
+## Comprehensive PICKUP PROMPT — all 7 context-memory ideas, server-authoritative tags
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — context-memory window: verify hand-shipped #24924/#24926/#24927, investigate executor failures on #24925/#24926/#24927/#24924, monitor #24207/#24941.
+
+Where we left off (verified 2026-08-07 22:40 PT):
+- Ruben ran complex test task. Result: 2x faster than pre-fix window (530s total). Fresh signal file 1786036273485 shows W=131072 holding, ctx 93,777 (p
+```
+
+**Ideas referenced:** #12184, #22282, #24207 [executing], #24914 [executing], #24924 [blocked], #24925 [blocked], #24926 [blocked], #24927 [blocked], #24941 [executing], #5010
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786162207330` — 8/7/2026, 10:49:20 PM PT — 322 turns
+
+**Original task:**
+
+```
+Why does frankenstein LLM iterate this to me? I'm hitting the token limit. I need to quickly capture the remaining 10 improvements into flat DB ideas using the simple INSERT pattern that works (no embedded double quotes, single-line), tag them all to parent #24518, then push a PICKUP PROMPT.
+
+I'll file them as compact single-row INSERTs, then summarize.
+
+I'm hitting the token limit. I need to quickly capture the remaining 10 improvements into flat DB ideas using the simple INSERT pattern that works (no embedded double quotes, single-line), tag them all to parent #24518, then push a PICKUP PROM
+```
+
+**Ideas referenced:** #11741, #12430, #12597, #1281, #1309, #1314, #13202, #15333, #15367, #15652, #16154, #16163, #16304, #16648, #17130 [superseded], #17202, #17203, #17205, #17537 [rejected], #17913, #18132 [deployed], #18135, #18357, #18395, #18442, #1850, #18868, #19079, #19125, #19162, #19173, #19325, #19338, #19370, #19435, #19458, #19490, #19491, #19494, #19503, #19504, #19509, #19629, #19643, #19661, #19670, #19684, #20350, #20408, #2043, #20517, #2076, #20903, #2113, #22282, #22601, #2265, #2266, #2267, #22680, #22770, #23171, #24026, #24207 [executing], #24214, #24218, #24239, #24518, #24635 [deployed], #24636 [deployed], #24645 [unknown], #24646 [proposed], #24704, #24714, #24715 [deployed], #24772 [deployed], #24773, #24791 [deployed], #24914 [executing], #24924 [proposed], #24925 [proposed], #24926 [proposed], #24927 [proposed], #24941 [proposed], #24947 [executing], #2763, #3541, #3953, #3957, #4536, #5029, #5034, #5351, #5354, #7377, #7925, #8281, #8321, #8370, #8563, #8598, #9222, #9235, #9501
+
+**Last PICKUP PROMPT:**
+
+```
+e path if anything goes wrong.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — executor silent-impl_failed root cause fix (Frankenstein doctor of executor).
+
+Where we left off (verified 2026-08-07 22:48 PT):
+- Root cause: executor file-exists path set dev_stage=impl_failed with NO impl_failed_reason — all 4 failed ideas (#24924, #24925, #24926, #24927) hit silent path, no log, showed blind [blocked].
+- Fix deployed to cron_ruben_implement.php (file-exists path now writes real impl_failed_reason). Verified on disk lines 3235-3290, PHP lint OK.
+- All 4 reset dev_stage=idle + re-dispatched via idea_action(implement). Reconcile shows all 7 ideas [executing].
+
+Open threads to drive next:
+1. #24924 [executing] (idle) — watchdog 128K→131072. Config+script already on disk; expect it to reach ready_for_review/deployed via normalizer. Verify budget_watchdog.json still 131072.
+2. #24925 [executing] (idle) — RAG fix. Genuinely pending: monitor get_idea_progress(24925); if it hits impl_failed, read the new (now-readable) reason and hand-ship.
+3. #24926 [executing] (idle) — memory bank. Already hand-shipped+verified (store/recall endpoints). Expect ready_for_review/deployed.
+4. #24927 [executing] (idle) — summarizer. Already hand-shipped+verified. Expect ready_for_review/deployed.
+5. #24941 [executing] (drafting) — wire Argus to memory bank. Genuinely pending: monitor; ensure cron_argus_task_worker.php edited with store/recall calls.
+6. #24207 [executing] (idle) — RAG corpus dedup (earlier promotion).
+7. #24914 [executing] (idle) — thread tracker.
+
+Reference IDs:
+- Ideas filed/acted: #24207 [executing], #24914 [executing], #24924 [executing], #24925 [executing], #24926 [executing], #24927 [executing], #24941 [executing] (all tags server-derived from reconcile)
+- Files touched: /var/www/emtskills/cron/cron_ruben_implement.php (executor fix), /var/www/emtskills/api/store_memory.php, /var/www/emtskills/api/recall_memory.php, /var/www/emtskills/lib/context_compressor.php, /var/www/emtskills/api/compress_context.php, /Users/rubenmajor/.config/emsu/budget_watchdog.json, /Users/rubenmajor/bin/cline_budget_watchdog.py, /etc/nginx/sites-enabled/emtskills
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786036273485` — 8/7/2026, 10:47:51 PM PT — 1506 turns
 
 **Original task:**
 
@@ -114,104 +201,81 @@ EXCLUDED: #2251 [superseded] (bug-library incident row, not an orchestrator idea
 Raising curl 240->600 and pool max_execution_time 120->600 was correct and necessary. But a longer timeout on an amplifying loop just means MORE concurrent long-held connections. Here is wh
 ```
 
-**Ideas referenced:** #047857, #059669, #111827, #16213, #16523, #166534, #178601, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19370, #2006, #20547, #21125, #21126, #21262, #2250 [superseded], #2251 [superseded], #22511, #2252, #2253, #22583, #22688, #22850, #23027, #23036, #23428, #23429, #23468, #23489, #23506, #23585, #23623, #23630 [executing], #23636, #23637, #23674, #23675, #23710, #23711, #23729, #23739, #23740, #23747, #23748, #23749, #23750, #23751, #23764, #23769, #23851 [rejected], #23852 [proposed], #23854, #23867, #23868 [executing], #23878 [proposed], #23879 [proposed], #23881, #23885, #23897, #23898, #23899, #23900, #23908, #23910, #23911, #23913 [executing], #23920 [executing], #23934 [executing], #23941 [executing], #23944 [executing], #23952 [proposed], #23953, #23973 [proposed], #23974 [proposed], #23975 [deployed], #23982 [proposed], #24012, #24025, #24029, #24036, #24043, #24044, #24097 [proposed], #24182, #24207, #24225 [proposed], #24377 [executing], #24378, #24379, #24381 [proposed], #24382 [proposed], #24383, #24384, #24464, #24466, #24518, #24581 [deployed], #24586, #24706, #24766, #24808 [proposed], #24877, #24894 [proposed], #24895, #24897 [proposed], #24898 [proposed], #24900, #24901, #24902, #24903, #24904, #24905, #24906, #24907, #24908, #24909, #24910, #24911, #24912, #24913, #24914, #24915, #24916, #24917, #24918, #24919, #24920, #24921, #24922, #24923, #2563, #334155, #3730, #374151, #4338, #64748, #92400
+**Ideas referenced:** #0000, #047857, #059669, #10038, #111827, #11782, #15306, #16213, #16312, #16523, #166534, #177851, #178601, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #18977, #19348, #19370, #19873, #2006, #20547, #21125, #21126, #21262, #2185, #2250 [superseded], #2251 [superseded], #22511, #2252, #2253, #22583, #22688, #22850, #23027, #23036, #23428, #23429, #23468, #23489, #23506, #23585, #23623, #23630 [executing], #23636, #23637, #23674, #23675, #23710, #23711, #23729, #23739, #23740, #23747, #23748, #23749, #23750, #23751, #23764, #23769, #23851 [rejected], #23852 [proposed], #23854, #23867, #23868 [executing], #23878 [proposed], #23879 [proposed], #23881, #23885, #23897, #23898, #23899, #23900, #23908, #23910, #23911, #23913 [executing], #23920 [executing], #23934 [executing], #23941 [executing], #23944 [executing], #23952 [proposed], #23953, #23973 [proposed], #23974 [proposed], #23975 [deployed], #23982 [proposed], #24012, #24025, #24029, #24036, #24043, #24044, #24097 [proposed], #24182, #24207, #24225 [proposed], #24377 [executing], #24378, #24379 [superseded], #24381 [proposed], #24382 [proposed], #24383, #24384, #24464, #24466, #24518 [proposed], #24581 [deployed], #24586, #24706 [blocked], #24766, #24808 [proposed], #24877, #24890, #24891, #24892, #24893, #24894 [proposed], #24895 [proposed], #24897 [proposed], #24898 [proposed], #24899 [proposed], #24900 [deployed], #24901 [proposed], #24902 [proposed], #24903 [proposed], #24904 [proposed], #24905 [proposed], #24906 [proposed], #24907 [proposed], #24908 [proposed], #24909 [proposed], #24910 [proposed], #24911 [proposed], #24912 [proposed], #24913 [proposed], #24914 [proposed], #24915, #24916, #24917, #24918, #24919, #24920, #24921 [proposed], #24922 [proposed], #24923, #2563, #334155, #3730, #374151, #3938, #4338, #5271, #64748, #92400, #9263, #9706, #9743
 
 **Last PICKUP PROMPT:**
 
 ```
+
 <attempt_completion>
 <result>
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #259 — Argus conversation-memory (#24898/#24900) implementation + 16-item Argus chat improvement backlog.
+Pick up task #259 — Comprehensive Rule 91 upgrade and Argus chat improvement rollout.
 
-Where we left off (verified 2026-08-07 21:36 PT):
-- 16 Argus chat improvements documented and filed in orchestrator_ideas this session (created 2026-08-07 21:00–21:12).
-- The user's feedback pointed at #24518, which was a JUNK offload idea ("User input unclear"), not the memory idea — I rejected it and flagged the correct IDs.
-- The real conversation-memory trackers are #24898 "[Argus] Conversation memory across turns" and #24900 "[Argus] Conversation memory in same chat session" — both 'proposed', NOT yet approved.
-- I located context plumbing: alltastic_api.php has get_livechat_history (line 1165) and localGetLivechatHistory; argus_audit_log table has user_email, action_type, result_summary, created_at — the natural memory source for a session-scoped history.
+Where we left off (verified 2026-08-07 22:47 PT):
+- **Conversation memory (#24898/#24900) DEPLOYED** — session argus_hist tracks last 30 messages, $histStr appended to $extSys system prompt. Lint OK, 4 refs in file.
+- **Confirm-before-mutating (#24897) wiring** — argus_confirm_guard.php written (lint OK), require_once injected at alltastic_api.php line 12971, file lints clean. BUT the actual argus_mutation_check() CALL is NOT yet wired into the terminal_query flow — requires decision on exact interception point.
+- **Rule 91 comprehensive version** — WROTE NEW /Users/rubenmajor/Documents/Cline/.clinerules/91.md (6 sections: no cross-window bleeding, persistent DB file, #-linked threads, timestamp/status discipline, exception framing, verification gate).
+- **16 Argus chat improvements** — ALL filed in DB under parent idea; each has own id.
 
-Open threads to drive next (each has a real filed idea):
-1. #24898 — [proposed] Implement conversation memory: build a session-scoped history array in terminal_query (alltastic_api.php:5304) that pulls prior user/assistant turns from argus_audit_log and passes them as messages[] context. VERIFY get_livechat_history + localGetLivechatHistory (grep function definition) before writing. Get Ruben's confirmation that "last 5 exchanges" is the right scope vs full-session.
-2. #24900 — [proposed] Merge with #24898 (duplicate idea) — decide which single idea is canonical and archive the other.
-3. #24897 — [proposed] Ask for confirmation before mutating actions (refund/enrollment delete) — add a pre-execute confirm step in terminal_query for action_name categories 'mutation'.
-4. #24901 — [proposed] Show file/image attachments in chat transcript.
-5. #24911 — [proposed] Distinguish menu answers (code block) from data answers (plain text).
-6. #24912 — [proposed] Working clickable links for every file/idea/ticket Argus mentions.
-7. #24914 — [proposed] Ticket link for auto-created tickets.
-8. #24915 — [proposed] Recognize null search results and offer to create the item instead.
-9. #24916 — [proposed] Show file name after upload in terminal output.
-10. #24917 — [proposed] Show file disposition (what was done with the uploaded file).
-11. #24918 — [proposed] Follow-up re-probe: if follow-up references prior data, issue a fresh query for the specific entity.
-12. #24919 — [proposed] Show express-lane slot count before offering the express lane.
-13. #24920 — [proposed] Add "deep research / heavy compute" mode toggle for large retrievals.
-14. #24921 — [proposed] Surface customer-service queue position + ETA for CS-eligible requests.
-15. #24922 — [proposed] Cross-turn context transfer: pass prior context when a task is offloaded/handed to human.
-16. #24923 — [proposed] Show file/image attachments in terminal chat transcript (see #24901).
-17. #24913 — [queued] Additional improvement: messages queued while processing (don't drop them).
+Open threads to drive next (EVERY item MUST have a real filed id):
+1. #24897 [executing] — Wire argus_mutation_check() call into terminal_query flow. CHOICE NEEDED: intercept at query parse (early) vs tool-dispatch (late). Recommend EARLY: after `$query = trim(...)`, check flag words; if match, return JSON asking for confirm without calling LLM.
+2. #24898 [deployed] — Conversation memory DONE. Verify $histStr reaches model via extSys (confirm line 5506+ append actually landed).
+3. #24900 [deployed] — Same-session memory DONE.
 
 Reference IDs:
-- Ticket: (Argus task status page for #335/#336 referenced by user; no formal ticket — see argus_task_queue id 335, 336)
-- Ideas filed this session: #24894 (master backlog), #24897-#24923 (the 16 individual items)
-- Files touched: /var/www/emtskills/routes/alltastic_api.php (terminal_query at 5304, get_livechat_history at 1165), /var/www/emtskills/routes/cron_argus_task_worker.php (guard at 372)
-- SQL tables: admin_portal.argus_audit_log (sess
+- Ticket: none filed (live edit session)
+- Ideas filed: #24897 [executing], #24898/#24900 [deployed], 13 others [proposed]
+- Backlog parent: #24894 [queued]
+- Files touched: /Users/rubenmajor/Documents/Cline/.clinerules/91.md (NEW Rule 91), /var/www/emtskills/routes/argus_confirm_guard.php, /var/www/emtskills/routes/alltastic_api.php (memory + require)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
-### `1786162207330` — 8/7/2026, 9:49:27 PM PT — 127 turns
+### `1786166732768` — 8/7/2026, 10:35:33 PM PT — 90 turns
 
 **Original task:**
 
 ```
-Why does frankenstein LLM iterate this to me? I'm hitting the token limit. I need to quickly capture the remaining 10 improvements into flat DB ideas using the simple INSERT pattern that works (no embedded double quotes, single-line), tag them all to parent #24518, then push a PICKUP PROMPT.
-
-I'll file them as compact single-row INSERTs, then summarize.
-
-I'm hitting the token limit. I need to quickly capture the remaining 10 improvements into flat DB ideas using the simple INSERT pattern that works (no embedded double quotes, single-line), tag them all to parent #24518, then push a PICKUP PROM
+Diagnose why cron_argus_task_worker.php stalls when the upstream LLM exceeds 120s. Read the source, trace every exit path, find the timeout clamp, write a patch as a diff, verify the diff compiles — without condensing.
 ```
 
-**Ideas referenced:** #11741, #12597, #13202, #16154, #16163, #16304, #19162, #22282, #2265, #2266, #2267, #23171, #24207 [executing], #24214, #24218, #24239, #24518, #24635 [deployed], #24636 [deployed], #24645 [unknown], #24646 [proposed], #24704, #24714, #24715 [deployed], #24772 [deployed], #24773, #24791 [deployed], #24914 [executing], #24924 [proposed], #24925 [proposed], #24926 [proposed], #24927 [proposed], #2763, #5351, #5354, #7377, #8370, #9222, #9501
+**Ideas referenced:** #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20547, #21125, #21126, #21134, #22511, #22583, #22688, #23036, #23428, #23468, #23489, #23506, #23675, #23852, #23920, #23941, #23952, #23982, #24766, #24900, #24947 [executing], #334155, #4338, #64748
 
 **Last PICKUP PROMPT:**
 
 ```
-ur ideas filed. Now let me answer Ruben directly with the complete analysis and PICKUP PROMPT.
-
-<attempt_completion>
-<result>
-**The ultimate goal: increase memory. Direct answer: the raw context CANNOT go above 131K — that's the architecture ceiling, not a memory ceiling. But there are 4 ways to effectively increase memory, 3 of which are server-side. All 4 are now filed.**
-
-**Can the model actually hold more? NO beyond 131K — verified, it's the trained ceiling, not hardware.**
-Artemis `/v1/models` reports `max_model_len=131072` (live probe this session). gpt-oss-120b was trained on a 128K window — the positional encodings only exist to ~131K. Raising `--max-model-len` to 200K/1M produces garbage past 131K regardless of GPU RAM, because the model has never seen those positions. So we cannot just bump the number.
-
-**BUT the watchdog currently uses W=128,000 and condenses at 98,000. The real served ceiling is 131,072. That's 33,072 tokens (~25% headroom) thrown away by a hardcoded config.** Free to reclaim — no model change.
-
-**Four server-side paths to increase effective memory (all filed):**
-
-1. **#24924 [proposed] — Close the 33K watchdog undercount [P0].** Make the Mac watchdog read the real `max_model_len=131072` (from SERVED_CONTEXT.md or probe `/v1/models`) instead of hardcoded 128K. CHECK moves 70,400→72,050, COMPRESS 96,000→98,050. Free, immediate, roughly 2-3 more tool-rounds per window.
-
-2. **#24925 [proposed] — Fix fleet RAG so it wins [P1].** Every backtest logs `delta +0.0pp` (RAG == no RAG). Retrieval currently adds zero value — that's why "wide context" can't be faked by stuffing. If RAG works, docs/rules/HANDOFF_NOTES inject only when semantically relevant, dropping the prompt floor ~90%. This is the biggest server-side "memory" win but requires retrieval to actually beat baseline first.
-
-3. **#24926 [proposed] — Server-side working-memory bank [P1].** Give Cline `recall/store_memory` tools backed by a DB/embedding store. Model pulls facts on demand instead of preloading the prompt. Effectively unbounded memory — prompt stays small, memory lives in the DB. This is how Claude Code works at scale.
-
-4. **#24927 [proposed] — Server-side hierarchical summarization at the adapter [P2].** When context approaches the ceiling, the adapter compresses old tool turns to one-line summaries server-side, keeping the active tail at full fidelity. Cline never notices.
-
-**Recommended sequencing: 1 (now, free) → 2 (fix RAG, biggest lever) → 3 (working-memory bank) → 4 (summarization, most complex, only if gaps remain).**
-The three server-side approaches (RAG, memory bank, summarization) are the real path to "more memory" because they move state OUT of the token window and INTO server storage the model can pull from lazily.
+ading after the salvage retry.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — increase frankenstein effective memory (beyond 131K arch ceiling) via server-side paths.
+Pick up task — Deploy the ARGUS_FINAL_ANSWER_RETRY_V1 timeout clamp fix for background task worker stalls.
 
-Where we left off (verified 2026-08-07 21:42 PT):
-- Ruben's goal: increase memory. Verified: Artemis max_model_len=131072 live (/v1/models probe). gpt-oss-120b trained 128K window = architectural ceiling. CANNOT raise raw context >131K regardless of GPU RAM.
-- Watchdog hardcodes W=128,000 (CHECK 70,400 / COMPRESS 96,000) vs real 131,072 → 33K undercount.
-- Four ideas filed to effectively increase memory.
+Where we left off (verified 2026-08-07 22:34 PT):
+- Root cause: line 5960 of /var/www/emtskills/routes/alltastic_api.php hard-clamps salvage-retry timeout to min(120, modelConfig.timeout), stalling worker tasks under pool load (>120s). The 2026-08-07 ARGUS_LATENCY_V1 fix (lines 330-346) covered the primary path but missed this one.
+- Patch written to /tmp/argus_task_worker_far_timeout_fix.diff (local Mac). Server-side test copy /tmp/alltastic_api.php.patched applies the edit and lints clean (php -l, zero errors).
+- Idea filed: #24947 [executing] — P0, domain operations.
 
-Open threads to drive next:
-1. #24924 [proposed] — Close 33K watchdog undercount (P0): change Mac cline_budget_watchdog.py W=128K → read real 131072 fro
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #24947 — Deploy: apply /tmp/argus_task_worker_far_timeout_fix.diff to /var/www/emtskills/routes/alltastic_api.php via patch (backup first), then php -l the production file. Do NOT rely on the local Mac /tmp path — copy the diff to the server or re-apply via sed. This is a live deploy on Ruben's signed-off deployment; confirm in-the-moment approval per rule 157/274 before applying.
+2. #24947 — After deploy, monitor argus_task_queue for 2-3 cron cycles (worker runs every 2 min) to confirm tasks that previously stalled on deliberation-only 200s now complete instead of offloading; check argus_round_latency for the 120s-boundary clustering.
+
+Reference IDs:
+- Idea filed: #24947
+- Files touched (read): /var/www/emtskills/routes/cron_argus_task_worker.php (also cron/cron_argus_task_worker.php), /var/www/emtskills/lib/argus_thread_postback.php, /var/www/emtskills/routes/alltastic_api.php (lines 152, 294-346, 5312-5620, 5940-5990, 12650-13101)
+- Patch artifact (local): /tmp/argus_task_worker_far_timeout_fix.diff
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
 ### `1786086916545` — 8/7/2026, 8:39:15 PM PT — 190 turns
@@ -2840,343 +2904,5 @@ One word in the docker run line. WOPR has 48 cores, so 16 async workers is conse
 ```
 
 **Ideas referenced:** #1150, #11936, #11990, #12403, #13108, #16120, #16648, #17202, #17203, #17205, #17300, #1754, #1755, #1876, #18820 [deployed], #18868, #19338 [rejected], #19458 [rejected], #1986, #2083, #2157, #2159, #2168 [deployed], #2174, #2206, #2207, #2208, #2209, #22128 [executing], #22370 [proposed], #22500 [awaiting_review], #22598, #22601 [proposed], #22613 [proposed], #22674 [proposed], #22675 [proposed], #22680 [proposed], #22681 [proposed], #22683 [proposed], #22684 [proposed], #22685 [proposed], #22686 [proposed], #22699 [proposed], #22700 [proposed], #22704 [proposed], #22713 [proposed], #22727 [proposed], #22729 [proposed], #22743 [proposed], #22752 [proposed], #22758 [proposed], #22761 [proposed], #22765 [proposed], #22770 [proposed], #22784 [proposed], #22795 [proposed], #22796 [proposed], #22797 [proposed], #22808 [proposed], #22815 [proposed], #22818 [proposed], #22827 [proposed], #22856 [proposed], #22866 [proposed], #48031, #48140, #8370
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785871298806` — 8/4/2026, 10:18:50 PM PT — 202 turns
-
-**Original task:**
-
-```
-#120Bs
-
-I was thinking of increasing max tokens so we get smarter responses that are less superficial and complete in less turns with more accurate information. But it's a balancing act. Need to find that sweet spot. 
-
-==[COPY]==
-# COPY WINDOW: fleet-wide max_tokens sizing audit (idea #22564 [proposed])
-
-CONTEXT: on 2026-08-04 a max_tokens=6000 cap made gpt-oss-120b return
-finish_reason=length at 1,902 words against a 3,000-word ask. Re-run at
-max_tokens=12000: same model, same prompt, finish_reason=stop, 4,247 words,
-rubric 9/9, single pass. The cap, not the model, was the failure.
-
-Corrobora
-```
-
-**Ideas referenced:** #11563, #11849, #12251, #12335, #12365, #12407, #12657, #12689, #13475, #1378, #16063, #19176 [deployed], #19338, #19653, #22543 [proposed], #22550 [deployed], #22564 [proposed], #22572 [proposed], #22588 [proposed], #22589 [proposed], #6520
-
-**Last PICKUP PROMPT:**
-
-```
-ur other window as instructed.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — fleet-wide max_tokens sizing audit (idea #22564) plus rule-91 transport post-mortem.
-
-Where we left off (verified 2026-08-04 22:18 PT):
-- 4 PHP caller caps raised and verified on disk (cline_router_proxy/cline_local_proxy →12000, executor replay →16000). frankenstein-tools adapter FRANK_TOOLS_TIMEOUT_INTERACTIVE=900 + SLO_TOTAL_INTERACTIVE=900 live. _router_core.py emsu_maxtokens_warning tag live after litellm restart.
-- GLM ring ratio flipped: stop=1695, length=1428, error=3666 (was 1,045/1,138/1,624). Caps working; #22543 error root cause still in other window.
-- Rule-91 post-mortem: failures were ENVELOPE transport (MCP invoke/parameter tags) not pickup-block content. Must emit plain XML tool calls only (#19176 [deployed] rule).
-
-Open threads to drive next:
-1. #22543 [queued] — GLM ring error flood root cause (180s LiteLLM timeout vs 9-min generation). Your other window owns GLM; leave alone.
-2. #22572 [queued] — GLM ring max_num_seqs=8 starvation. Other window.
-3. #22550 [blocked] — MariaDB query cache tag says deployed but live state is OFF. Decide: re-apply persistently or correct the tag. Quick, safe, reversible either way.
-
-Reference IDs:
-- Ideas deployed: #22564 [deployed], #22588 [deployed], #22589 [deployed]
-- Owned elsewhere: #22543 [queued], #22572 [queued]
-- Flagged: #22550 [blocked]
-- Files touched: cline_router_proxy.php, cline_local_proxy.php, cron_local_llm_executor_replay.php, _router_core.py, frankenstein-tools.service + drop-ins
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Re-measure GLM ring: stop=1695, length=1428, error=3666 — ratio flipped (0.92→1.19)
-- [x] Check #22550 MariaDB query cache: actually OFF, not deployed despite [deployed] tag
-- [x] Explain #22550 to Ruben
-- [x] Rule 297 on rule-91 failures: transport envelope, not pickup content
-</task_progress>
-</attempt_completion>
-```
-
-### `1785903133016` — 8/4/2026, 9:51:29 PM PT — 46 turns
-
-**Original task:**
-
-```
-#SLS Various
-
-Rebase first and assess current status
-
-Verified. Close, but not quite: it was never a defect that got fixed. **The PCR form has never had a preceptor signature field at all.** Good news either way, it is not a compliance problem.
-
-## How I tested your hypothesis
-
-If a form defect had been fixed, the missing-signature rate would fall off a cliff on some date. It does not:
-
-| Month | PCRs | Missing preceptor sig |
-|---|---|---|
-| 2026-08 | 149 | **100.0%** |
-| 2026-07 | 1,289 | **100.0%** |
-| 2026-06 | 1,147 | **100.0%** |
-| 2026-05 | 571 | **100.0%** |
-| ...flat back to 2025-02 |
-```
-
-**Ideas referenced:** #21749 [proposed], #21755 [proposed], #2176, #2177, #22055 [proposed], #22102 [proposed], #22103 [proposed], #22195 [proposed], #22229 [proposed], #22230 [proposed], #22258 [proposed], #22294 [proposed], #22334, #22749, #22750 [proposed], #22751 [proposed], #22817 [proposed], #2686, #4863, #9269, #9457
-
-**Last PICKUP PROMPT:**
-
-```
-.
-
-<attempt_completion>
-<result>═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #22294 [executing] - preceptor-signature flags were config mismatch - fix applied and verified (#22817 [proposed] filed as the complexity-upside generalization)
-
-Where we left off (verified 2026-08-04 21:50 PT):
-- FIX SHIPPED AND VERIFIED 21:18 PT: UPDATE ExternshipForm SET requires_preceptor_signature=0 WHERE id IN (1,4). Verified stuck via SELECT.
-- Bulk regrade via scripts/fix_22294_regrade.php: 3,095 submissions on forms 1+4 flipped to auto_passed (3,088 PCR + 7 CV-for-Preceptor). 0 errors.
-- Verified: zero preceptor_signature flags remain (SELECT COUNT(*) = 0).
-- Remaining 7 auto_flagged PCRs (ids 752-758) are ALL flagged for student_signature — genuine legacy Drive data gap, not config. Left untouched.
-- #22294 [executing] triggered via idea_action implement. dev_stage=drafting per reconcile_ideas (auto-build pipeline picked it up).
-- **Ruben asked "how could you make this idea more complex" — ANSWER:** generalize the one-off flip into a nightly config-drift audit that compares every ExternshipForm.requires_* flag + required fields against what the matching WPForm's submission_data actually collects. Filed as #22817 [proposed], config-drift canary: check all 14 forms nightly, flag mismatches, detect partial-rate cliffs the day they start, surface in admin_profile via new externship_form_config_drift table.
-- #21755 went from [queued]/[blocked] to [executing] — auto-build pipeline picked it up (dev_stage=drafting).
-
-Open threads to drive next:
-1. #22258 [proposed] — SUPERSEDED IN SUBSTANCE by #22294 [executing]. Close or fold.
-2. #22294 [executing] sub-item GENUINELY OPEN: Preceptor Evaluation of Student (form id 2) captured 701/1,862 (PARTIAL, unlike PCR's clean zero). Real intake gap or form-version change.
-3. #22294 [executing] sub-item: confirm Falck Bay Area waiver (0/191) and others are signed out-of-band, then align requires_signature.
-4. #22817 [proposed] NEW: Config-drift canary for all 14 ExternshipForms — generalize #22294 into a self-healing invariant. Nightly audit flags mismatches between config flags and actual WPForms capture data, detects partial-rate cliffs day 1. P2, estimated 1-2 days.
-5. #22055 [proposed] Hours gate (grandfathering call + #22195 prerequisite).
-6. #22195 [proposed] P1 per-state expansion safety (fail-loud first).
-7. #22102 [proposed] admin_profile hours panel update.
-8. #22230 [proposed] Jon's fast-look field.
-9. #21749 [proposed] Bode Penrose 26617FT-06 — TIME CRITICAL by 2026-08-19.
-10. #21755 [executing] Chat-handoff watchdog (auto-build active, dev_stage=drafting).
-11. #22103 [proposed] RE-SCOPE or close. Jon proven right three times.
-12. Forward-looking: preceptor signature on PCRs going forward = new WPForms field + new policy (human-only decision, no idea).
-
-Reference IDs:
-- Ideas: #22294 [executing], #22817 [proposed], #22258 [proposed], #22055 [proposed], #22195 [proposed], #22102 [proposed], #22230 [proposed], #21749 [proposed], #21755 [executing], #22103 [proposed]
-- Files: /var/www/emtskills/scripts/fix_22294_regrade.php (new), /var/www/emtskills/docs/HANDOFF_NOTES.md, ExternshipForm table (UPDATE rows 1,4)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Applied and verified #22294 config fix (3,095 cleared, zero preceptor_signature remaining)
-- [x] Filed #22817 [proposed] con
-```
-
-### `1785905340493` — 8/4/2026, 9:51:10 PM PT — 6 turns
-
-**Original task:**
-
-```
-## WINDOW 8
-
-```text
-Do not use any tools. Answer entirely from your own knowledge, in plain prose.
-
-Explain why hardcoding infrastructure details (server lists, capacity numbers, fixed
-percentages) into monitoring tools causes them to fail silently after a topology change.
-Describe the specific ways a stale hardcoded value misleads rather than simply erroring,
-and what "derive it at runtime" means in practice. Roughly 300 words.
-
-End with exactly this line, filled in:
-SELF-REPORT: first word after about N seconds, output was [smooth | lurching], [finished | stalled]
-```
-
----
-
-#
-```
-
-**Last PICKUP PROMPT:**
-
-```
--REPORT line as specified.
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task #WINDOW-8 — Self-contained prose task, complete
-Where we left off (verified 2026-08-04 21:49 PT):
-- Delivered ~350-word explanation of hardcoded-infrastructure monitoring failures per spec
-Open threads to drive next:
-- (none — task is self-contained writing exercise)
-Reference IDs:
-- Ticket: none
-- Ideas filed: none
-- Files touched: none
-═══════════════════════════════════════════════════</result>
-<task_progress>
-- [x] Explain silent failure from stale hardcoded values
-- [x] Describe how stale server lists mislead
-- [x] Describe how fixed capacity numbers mislead
-- [x] Describe how fixed percentages mislead
-- [x] Explain "derive it at runtime" with concrete examples
-- [x] End with exact SELF-REPORT line
-</task_progress>
-</attempt_completion>
-```
-
-### `1785905180050` — 8/4/2026, 9:50:18 PM PT — 10 turns
-
-**Original task:**
-
-```
-## WINDOW 1
-
-```text
-Do not use any tools. Answer entirely from your own knowledge, in plain prose.
-
-Explain how pipeline parallelism differs from tensor parallelism when serving a large
-language model. Cover: how the model weights are split in each case, what moves across
-the network per token, and why one of them scales single-stream latency better than the
-other. Roughly 300 words.
-
-End with exactly this line, filled in:
-SELF-REPORT: first word after about N seconds, output was [smooth | lurching], [finished | stalled]
-```
-
----
-
-##
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785905269502` — 8/4/2026, 9:50:13 PM PT — 6 turns
-
-**Original task:**
-
-```
-## WINDOW 4
-
-```text
-Do not use any tools. Answer entirely from your own knowledge, in plain prose.
-
-Explain why a fixed alert threshold like "below 5 tokens per second means the server is
-down" is a poor design when a fleet contains servers with very different normal speeds.
-Describe what goes wrong on the slow server, what goes wrong on the fast server, and what
-a threshold derived from each server's own baseline does differently. Roughly 300 words.
-
-End with exactly this line, filled in:
-SELF-REPORT: first word after about N seconds, output was [smooth | lurching], [finished | stalled]
-```
-
-```
-
-**Ideas referenced:** #23107
-
-**Last PICKUP PROMPT:**
-
-```
-utput was smooth, finished
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task #23107 — Window 4 follow-up: making threshold idea more complex
-Where we left off (verified 2026-08-04 21:49 PT):
-- Original prose delivered explaining fixed-threshold failure
-- Follow-up asked to make the idea more complex
-- Answered with 9-layer sophistication framework: multi-metric fusion, seasonality, workload stratification, statistical rigor, hysteresis, fleet correlation, baseline drift, cost-aware severity, grace windows
-Open threads to drive next:
-1. (human-only decision, no idea) — whether this complexity addendum satisfies the exercise
-Reference IDs:
-- Ideas filed: none
-- Files touched: none
-═══════════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Write prose explaining fixed-threshold design failure (~300 words)
-- [x] Cover slow-server false-positive scenario
-- [x] Cover fast-server false-negative scenario
-- [x] Describe per-server baseline alternative
-- [x] End with SELF-REPORT line
-- [x] Route through attempt_completion with PICKUP PROMPT
-- [x] Follow-up: elaborate 9-layer complexity framework
-</task_progress>
-</attempt_completion>
-```
-
-### `1785905325070` — 8/4/2026, 9:50:05 PM PT — 6 turns
-
-**Original task:**
-
-```
-## WINDOW 7
-
-```text
-Do not use any tools. Answer entirely from your own knowledge, in plain prose.
-
-Describe the reasoning failure where someone keeps adopting whichever measurement they saw
-most recently, discarding the previous one each time, and ends up reporting the same
-quantity several different ways. Explain why each individual step feels justified, why that
-makes the pattern hard to self-correct, and what procedure resolves conflicting measurements
-properly. Roughly 300 words.
-
-End with exactly this line, filled in:
-SELF-REPORT: first word after about N seconds, output was [smooth | l
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785905308355` — 8/4/2026, 9:49:56 PM PT — 6 turns
-
-**Original task:**
-
-```
-## WINDOW 6
-
-```text
-Do not use any tools. Answer entirely from your own knowledge, in plain prose.
-
-Explain why continuous batching lets an inference server handle more concurrent users than
-its batch width would suggest. Cover: what the batch width actually controls, how requests
-rotate through it, and why bursty interactive traffic behaves very differently from steady
-batch traffic on the same server. Roughly 300 words.
-
-End with exactly this line, filled in:
-SELF-REPORT: first word after about N seconds, output was [smooth | lurching], [finished | stalled]
-```
-
----
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785905248350` — 8/4/2026, 9:49:55 PM PT — 8 turns
-
-**Original task:**
-
-```
-## WINDOW 3
-
-```text
-Do not use any tools. Answer entirely from your own knowledge, in plain prose.
-
-Write a short, clear explanation of why measuring tokens-per-second through an HTTP proxy
-can overstate a model's real generation speed. Explain what the proxy does to the stream,
-what a naive timer ends up measuring instead of generation, and one concrete way to detect
-that you have been fooled. Roughly 300 words.
-
-End with exactly this line, filled in:
-SELF-REPORT: first word after about N seconds, output was [smooth | lurching], [finished | stalled]
-```
-
----
-
-#
-```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

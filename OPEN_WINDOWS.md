@@ -6,13 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/7/2026, 11:49:53 PM PT | window: last 72h | 77 tasks | index total 535 (parsed 3, cached 532)
+Generated: 8/8/2026, 12:49:53 AM PT | window: last 72h | 74 tasks | index total 537 (parsed 5, cached 532)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786168161165` | 8/7/2026, 11:49:49 PM | 341 | 1367KB | #Argus |
-| `1786169603912` | 8/7/2026, 11:48:16 PM | 160 | 675KB | Play frankenstein doctor of executor. Lots of failed ideas impl blocked, etc.. need resolu |
-| `1786167712060` | 8/7/2026, 11:37:38 PM | 218 | 614KB | ## Comprehensive PICKUP PROMPT — all 7 context-memory ideas, server-authoritative tags |
+| `1786167712060` | 8/8/2026, 12:49:52 AM | 433 | 1039KB | ## Comprehensive PICKUP PROMPT — all 7 context-memory ideas, server-authoritative tags |
+| `1786172929305` | 8/8/2026, 12:49:38 AM | 127 | 525KB | I have windows here in frankenstein-llm with numerous ideas i need built and shipped but f |
+| `1786172805164` | 8/8/2026, 12:49:33 AM | 138 | 3271KB | We have brought up a new LLM for 120B usage, the name is Big Mac, it lives on the same net |
+| `1786168161165` | 8/8/2026, 12:46:31 AM | 610 | 1972KB | #Argus |
+| `1786169603912` | 8/8/2026, 12:45:45 AM | 368 | 1460KB | Play frankenstein doctor of executor. Lots of failed ideas impl blocked, etc.. need resolu |
 | `1786162207330` | 8/7/2026, 11:13:36 PM | 454 | 1608KB | Why does frankenstein LLM iterate this to me? I'm hitting the token limit. I need to quick |
 | `1786036273485` | 8/7/2026, 10:47:51 PM | 1506 | 4670KB | #Argus  |
 | `1786166732768` | 8/7/2026, 10:35:33 PM | 90 | 923KB | Diagnose why cron_argus_task_worker.php stalls when the upstream LLM exceeds 120s. Read th |
@@ -82,130 +84,12 @@ Generated: 8/7/2026, 11:49:53 PM PT | window: last 72h | 77 tasks | index total 
 | `1785915160150` | 8/5/2026, 1:15:09 AM | 42 | 132KB | How many turns of glm 5.2 local have occurred in the last 15 minutes vs 120Bs if you dive  |
 | `1785817138435` | 8/5/2026, 12:58:32 AM | 239 | 1111KB | i noticed a lot of reasonsing time across models wasted contemplating context and whether  |
 | `1785912414137` | 8/5/2026, 12:57:31 AM | 76 | 266KB | this is a new window test to see if frankenstein-llm will pick up |
-| `1785782909425` | 8/5/2026, 12:47:01 AM | 1286 | 6440KB | Why am i not seeing clustered ideas here in cline? |
-| `1785781386836` | 8/5/2026, 12:46:24 AM | 1170 | 3569KB | Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/  |
-| `1785909027381` | 8/5/2026, 12:45:31 AM | 273 | 3714KB | The moodle layout for the EMT classes AZ, CA and TX is very ugly and off-center. Need to b |
-| `1785907400228` | 8/5/2026, 12:35:11 AM | 120 | 338KB | https://emsuniversity.com/emtskills is very slow again today. This is the 3rd time I've ha |
-| `1785881207296` | 8/5/2026, 12:29:35 AM | 188 | 818KB | Can you look into this and advise if there's an isseu? |
 
 ---
 
 ## Per-window detail
 
-### `1786168161165` — 8/7/2026, 11:49:49 PM PT — 341 turns
-
-**Original task:**
-
-```
-#Argus
-
-We were making argus improments, I'm not sure if the last window got them all so you might hav eto double check. 
-
---
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #259 — Comprehensive Rule 91 upgrade and Argus chat improvement rollout.
-
-Where we left off (verified 2026-08-07 22:47 PT):
-- **Conversation memory (#24898/#24900) DEPLOYED** — session argus_hist tracks last 30 messages, $histStr appended to $extSys system prompt. Lint OK, 4 refs in file.
-- **Confirm-before-mutating
-```
-
-**Ideas referenced:** #0000, #178424, #178455, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690, #1871, #18745, #1876, #1877, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #1883, #1894, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #1912, #19348, #2006, #20547, #21125, #21126, #22511, #22583, #23489 [executing], #23592, #23852, #23920, #23952, #24400, #24518, #24635 [deployed], #24636 [deployed], #24645 [unknown], #24646 [proposed], #24766, #24791 [deployed], #24894 [queued], #24895 [proposed], #24897 [executing], #24898 [deployed], #24899 [proposed], #24900 [deployed], #24901 [proposed], #24902 [proposed], #24904 [proposed], #24905 [proposed], #24906 [proposed], #24907 [proposed], #24908 [proposed], #24909 [proposed], #24910 [proposed], #24911 [proposed], #24912 [proposed], #24913 [proposed], #24915, #24926, #24927, #24946 [executing], #24956, #334155, #4338, #57066, #64748
-
-**Last PICKUP PROMPT:**
-
-```
-897-confirmflag-20260807-2259`
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #259 — Argus chat improvements: execute the 12 queued orchestrator specs.
-
-Where we left off (verified 2026-08-07 23:24 PT):
-- #24897 [deployed] — confirm-before-mutating guard wired at alltastic_api.php line 5323 + file-scope require line 52, guard smoke-tested live
-- 12 Argus ideas [executing] — dispatched to orchestrator executor via idea_action implement with detailed specs
-- #24904 [deployed] — closed (dup of #24897)
-- #24946 [deployed] — closed (alltastic_api.php uncorrupted)
-- Files: routes/alltastic_api.php, routes/argus_confirm_guard.php, public/argus-extension/sidepanel.js (target)
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #24895 [executing] — Sidepanel: input queueing (show "Queued" when busy, append to queue_task flow)
-2. #24901 [executing] — Sidepanel: Markdown rendering in addMsg (bold, code blocks, links, images)
-3. #24902 [executing] — System prompt: MENU_FORMAT block + sidepanel: ```menu rendering
-4. #24905 [executing] — System prompt: append ticket link when tool creates a ticket
-5. #24906 [executing] — System prompt: NULL_RESULTS block (offer to create/enroll when zero results)
-6. #24907 [executing] — Sidepanel: addMsg file name on upload success
-7. #24908 [executing] — Sidepanel: completed files persistent chip
-8. #24909 [executing] — Verify FOLLOWUP heredoc at alltastic_api.php line 2656 is active; enhance re-probe
-9. #24910 [executing] — Express-grant action: append current slot count
-10. #24911 [executing] — terminal_query deep_research flag → heavy model routing + extended system prompt budget
-11. #24912 [executing] — System prompt: CS queue info + tool wiring check
-12. #24913 [executing] — queue_event_log context_note write + injection into batchNotice on startup
-
-Reference IDs:
-- Ticket: none filed (live edit session)
-- Ideas dispatched: #24895, #24901, #24902, #24905, #24906, #24907, #24908, #24909, #24910, #24911, #24912, #24913 — all [executing]
-- Ideas deployed: #24897 [deployed], #24904 [deployed], #24946 [deployed]
-- Files touched: routes/alltastic_api.php (3 patches), routes/argus_confirm_guard.php (rewrote), public/argus-extension/sidepanel.js (target for UI)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786169603912` — 8/7/2026, 11:48:16 PM PT — 160 turns
-
-**Original task:**
-
-```
-Play frankenstein doctor of executor. Lots of failed ideas impl blocked, etc.. need resolution and to be sent through again
-```
-
-**Ideas referenced:** #1095, #1143, #13061, #1519, #16523, #177926, #19830, #21075, #21167 [approved], #21710, #22245, #22308, #22321, #22433, #2265, #22656, #2266, #2267, #22780 [blocked], #23135, #23362 [blocked], #23373 [blocked], #24184, #24191, #24205, #24635 [deployed], #24636 [deployed], #24645 [unknown], #24646 [proposed], #24704, #24714, #24715 [deployed], #24772 [deployed], #24773, #24791 [deployed], #24958, #24961 [approved], #24963 [approved], #3132, #3133, #4071, #4517, #4906, #5329, #5467, #6067, #6070, #7175
-
-**Last PICKUP PROMPT:**
-
-```
-newest is 23:15, pre-cleanup).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Frankenstein doctor + Kaison self-heal follow-up (2026-08-07 23:47 PT).
-
-Where we left off (verified 2026-08-07 23:47 PT):
-- DEADMAN RCA dedup FIXED and HOLDING (4 approved, tested returns 0)
-- Kaison self-heal scanner LIVE (scanned 6 recipes, fired 2, correct no-ops)
-- 10 stalled ideas re-dispatched to drafting (1088, 3082, 4472, 4731, 5294, 5779, 5794, 6059, 6847, 4063)
-- 781 approved+idle ideas still waiting on executor P3 starvation fix
-- Recipe #417 (fleet_admission_executor_starvation) logged for agent but needs verifier for auto-change
-
-Open threads to drive next:
-1. #24963 [approved] — Fix fleet admission executor P3 starvation: raise to P2, min-1-worker floor, or time-weighted admission. Recipe #417 auto-detects but logged only (needs verifier or direct fix in `lib/fleet_admission.php`). Verify with `grep ADMISSION /var/log/cron_ruben_implement.log | tail -5` — non-zero cap confirms fix.
-2. #416 [active] — deadman_rca_dedup_flood recipe should continue to hold. Verify every few hours: `SELECT COUNT(*) FROM orchestrator_ideas WHERE title LIKE '%RCA retrain: agent making DEADMAN%' AND status='approved' AND created_at > NOW() - INTERVAL 1 HOUR` — should be 0. If >0, dedup fix regressed.
-3. #418 [active] — implemented_stuck_idle_stage recipe: verify 10 ideas moved to drafting get picked up by executor. Check `orchestrator_ideas WHERE dev_stage='drafting' AND status='approved'` count trend.
-4. #21167 [approved] — Build cron_bug_classifier_wrapper (valid spec at /var/www/emtskills/cron/cron_bug_classifier.php target — needs executor dispatch or manual build)
-
-Reference IDs:
-- Recipes: #416 deadman_rca_dedup_flood, #417 fleet_admission_executor_starvation, #418 implemented_stuck_idle_stage
-- Scanner: /var/www/emtskills/cron/cron_kaison_recipe_scanner.php, cron /etc/cron.d/emsu-kaison-recipe-scanner (every 15 min)
-- Patched file: /var/www/emtskills/lib/deadman_rca_feedback.php (backup .bak-20260807-dedupfix)
-- Audit table: kaison_recipe_audit_log, log: /var/log/kaison_recipe_scanner.log
-- HANDOFF_NOTES: /var/www/emtskills/docs/HANDOFF_NOTES.md (updated twice this session)
-- Implement log: /var/log/cron_ruben_implement.log (check ADMISSION caps)
-- Stalled ideas re-dispatched: 1088, 3082, 4472, 4731, 5294, 5779, 5794, 6059, 6847, 4063
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786167712060` — 8/7/2026, 11:37:38 PM PT — 218 turns
+### `1786167712060` — 8/8/2026, 12:49:52 AM PT — 433 turns
 
 **Original task:**
 
@@ -226,35 +110,223 @@ Where we left off (verified 2026-08-07 22:40 PT):
 **Last PICKUP PROMPT:**
 
 ```
-2:50, 23:03, 23:20, 23:37 PT).
+ngle outstanding verification.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — context-memory window DONE. All 7 ideas shipped, verified 2026-08-07 23:37 PT.
+Pick up task — finish the #24925 fleet backtest verification (n=30+) and confirm the RAG-vs-no-RAG delta.
 
-Where we left off (verified):
-- #24924: W=131072 probe dynamic, signal file holding
-- #24925: reranker inference confirmed (policy 0.598 vs noise 0.00002), reweight active, dedup active
-- #24926/#24927: store/recall/compress endpoints all live, verified round-trip
-- #24207: sha1 dedup in EmsuRagRetriever::contextBlock()
-- #24941: 4 memory-bank wires in cron_argus_task_worker.php confirmed deployed
-- #24914: thread tracker marked completed
-- Reranker: restarted, healthy, bge-reranker-v2-m3 inferring correctly
-- No open terminals, no stuck builds, no pending tasks
+Where we left off (verified 2026-08-08 00:16 PT):
+- All 7 context ideas marked `status=completed` in orchestrator_ideas (24207,24914,24924,24925,24926,24927,24941).
+- #24925 config live: emsu_rag_reranker_enabled=true, reweight=true, candidate_pool=12000. Anthropic fully removed from audit_backtest_runner.php (0 refs), rewired to local frankenstein-tools :11510.
+- Backtest runs exist at /tmp/backtest_rag_on.json (n=5, avg 0.125, inconclusive) and /tmp/backtest_rag_off.json (n=1, avg 0.5, inconclusive). Both decision=inconclusive_low_n.
+- ANTHROPIC RIPPED OUT: the delta must be measured on local fleet, not Opus.
 
-Open threads:
-1. #24941: exercise the deployed Argus memory-bank wiring with a real cron tick when a task enters argus_task_queue
-2. #24925: run the full audit_backtest_runner.php to get a quantitative delta (requires Opus 4.7 API key — the reranker+reweight+dedup pipeline is confirmed correct in isolation)
+Open threads to drive next (each has a filed idea #):
+1. #24925 [executing] — Run `php audit_backtest_runner.php --surface=sms --n=30 --rag-version=v1 --output=/tmp/bk_rag_on.json` and `--rag-version=off` on the local fleet; diff the `summary.avg_cross_judge_score` / `win_rate_b_over_a`. Launch with `ssh -f wopr "nohup ... &"` (30s SSH timeout blocks sync runs). Local LLM ~4-8s/inference → 30 rows ≈ 2-4 min/side.
+2. #24925 [executing] — If delta confirms >0, POST an UPDATE to orchestrator_ideas SET implementation_log recording the real pp delta and clear the unaudited readiness. If still ~0, the issue is retrieval relevance not config — investigate reranker inference (was still loading at :7890 after restart).
 
 Reference IDs:
-- Ideas: #24207, #24914, #24924, #24925, #24926, #24927, #24941
-- Files deployed: EmsuRagRetriever.php, cron_argus_task_worker.php, budget_watchdog.json, orchestrator_config
-- Backups: .bak-clean-*-24941, .bak-dedup-*-24207
-- Ledger: ~/Desktop/cline_task_ledger.md
+- Ideas completed: 24207, 24914, 24924, 24925, 24926, 24927, 24941
+- Backtest runner: /var/www/emtskills/scripts/llm_backtest/audit_backtest_runner.php (backups .bak-anthropic, .bak-local20260808-000156)
+- Files touched: cron_argus_task_worker.php (24941), EmsuRagRetriever.php (24207+24925), audit_backtest_runner.php (24925), budget_watchdog.json + cron_served_ctx_drift_guard.php (24924)
+- Ledger: ~/Desktop/cline_task_ledger.md rows 2026-08-07 22:50 / 23:03 / 23:20
 
-When done, append a row to cline_task_ledger.md per rule 07.
-═══════════════════════════════════════════════</result>
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786172929305` — 8/8/2026, 12:49:38 AM PT — 127 turns
+
+**Original task:**
+
+```
+I have windows here in frankenstein-llm with numerous ideas i need built and shipped but frankenstein-llm will not take them end to end. it keeps stopping and passing off to executor or taking breaks even when I say end to end. How do i get it to obey end to end when I say that?
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11953, #12184, #12231, #12477, #12506, #12618, #12672, #12761, #12763, #12764, #12824, #12872, #12878, #13075, #13108, #13121, #13202, #13832, #13874, #16120, #16163, #16265, #16304, #16648, #16714, #16717, #16844, #17202, #17203, #17205, #17300, #1754, #1755, #18312, #18326, #19338, #19653, #1989, #2050, #2254, #2258, #22820, #22897, #23071, #23169, #23171, #24172, #24217, #24635 [deployed], #24636 [deployed], #24645 [unknown], #24646 [proposed], #24714, #24715 [deployed], #24772 [deployed], #24773, #24791 [deployed], #24971 [executing], #24972 [executing], #24973 [executing], #24985 [executing]
+
+**Last PICKUP PROMPT:**
+
+```
+s filed as #24985 [executing].
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #24985 - GLM ring routing: unblock end-to-end window completion
+
+Where we left off (verified 2026-08-08 00:43 PT):
+- INITIAL DIAGNOSIS WAS WRONG: claimed 120B fleet dead. GLM-5.2 Hex ring alive at 671 tok/s.
+- REAL ROOT CAUSE: frankenstein_tools_adapter _least_loaded_order defaults EMSU_GLM_FIRST_ALL_LANES=0 for interactive cline lanes, sorting by per-stream decode speed. GLM at ~0.9 tok/s per stream at c=8 ranks last, so all interactive tool turns bypass the ring.
+- FIX DEPLOYED: EMSU_GLM_FIRST_ALL_LANES=1 on frankenstein-tools.service (:11510). Confirmed in live process PID 2930357. Service restarted clean. Ring runs at 15/15 lanes currently (at its max_num_seqs ceiling).
+- Stale ideas #24971 #24972 #24973 rejected. Corrected root cause filed as #24985.
+
+Open threads to drive next:
+1. OBSERVE: Wait for routing metrics to shift. Check frankenstein_what_served after 15-30 min. Expected: GLM ring share rises from 3.7% to >20%, deepseek spill drops from 43%.
+2. FOLLOW-UP: If ring saturates at current max_num_seqs=15 (filling up faster now), the structural fix sequence per GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md: (a) un-pause watchdog, (b) write launch artifact, (c) raise max_num_seqs 15 → 32, verify with concbench, then 32 → 64.
+3. The 'end to end' instruction now has a real path: tool → tools adapter → GLM ring (with capacity gate protection).
+
+Reference IDs:
+- Deploy: frankenstein-tools.service, EMSU_GLM_FIRST_ALL_LANES=1 (line 40), PID 2930357, port 11510
+- Ring state: running=15, waiting=4, 671 tok/s total, max_num_seqs=15, 37.22 GiB KV free
+- Ideas: #24985 [executing], #24971-#24973 [rejected]
+- Backups: /etc/systemd/system/frankenstein-tools.service.bak-glmfirst-20260808
+- Files touched: /etc/systemd/system/frankenstein-tools.service (modified)
+- Measurement doc: /var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md (safety sequence)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Read router_hook.py header + imports (lines 1-300)
+- [x] Found tool-turn routing decision: adapter `_least_loaded_order` with `_prefer_fast=True` for interactive lanes
+- [x] Identified root cause: `EMSU_GLM_FIRST_ALL_LANES` defaults to 0, deprioritizing GLM ring
+- [x] Apply the fix: add `EMSU_GLM_FIRST_ALL_LANES=1` to frankenstein-tools.service
+- [x] Deploy and verify (service restarted clean, env in process, ring healthy)
+- [x] Correct three wrong ideas (rejected #24971-#24973)
+</task_progress>
+</attempt_completion>
+```
+
+### `1786172805164` — 8/8/2026, 12:49:33 AM PT — 138 turns
+
+**Original task:**
+
+```
+We have brought up a new LLM for 120B usage, the name is Big Mac, it lives on the same network as WOPR in San Diego. Here is the AnyDesk informaiton for it. password is qefru3-cocnyf-xuxnoP. I need you to get SSH access to it and then begin running commands to get it setup. It has 3 ARC B70s right now (similar to artemis build less 1), it will hold another ARC B70 tomororw, but we need to put it in the LLM ppol now. Can you get this going, consult the Artemis Runbook, look at Intel as needed and the Runbook we created for Artemis to help move this along?
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1731, #1732, #1734, #1737, #1739, #1744, #1746, #1747, #177891, #1779, #1798, #1828, #18320, #1833, #1836, #1837, #1839, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2333, #24975 [executing], #24978 [proposed], #3587, #37030, #46641, #4671, #4672, #4673, #5920, #7142, #7149, #8902
+
+**Last PICKUP PROMPT:**
+
+```
+reGuard, vLLM 120B, registry).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task Big Mac 120B Setup (3x ARC B70).
+
+Where we left off (verified 2026-08-08 00:49 PT):
+- Big Mac IP: 192.168.1.208 (hostname "ubuntu", MAC 30:56:0f:47:56:ca), on Dream Machine SE 192.168.1.0/24
+- Alive (0.3ms) but NO SSH running — password qefru3-cocnyf-xuxnoP can't auth until openssh-server installed
+- One-liner provided to enable SSH
+
+Open threads to drive next:
+1. #24975 [executing] — Ruben pastes the one-liner via AnyDesk. Then from WOPR: `ssh rubenmajor@192.168.1.208` (pass qefru3-cocnyf-xuxnoP). Resume full provisioning.
+2. #24978 [proposed] — Full runbook: Intel GPU drivers, Docker, WireGuard, vLLM gpt-oss-120b MXFP4 TP=3, systemd hardening, frankenstein_registry, fleet_inventory
+
+Reference IDs:
+- Ideas filed: #24975, #24978
+- Big Mac: 192.168.1.208
+- WOPR key: emsuserver@wopr
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786168161165` — 8/8/2026, 12:46:31 AM PT — 610 turns
+
+**Original task:**
+
+```
+#Argus
+
+We were making argus improments, I'm not sure if the last window got them all so you might hav eto double check. 
+
+--
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #259 — Comprehensive Rule 91 upgrade and Argus chat improvement rollout.
+
+Where we left off (verified 2026-08-07 22:47 PT):
+- **Conversation memory (#24898/#24900) DEPLOYED** — session argus_hist tracks last 30 messages, $histStr appended to $extSys system prompt. Lint OK, 4 refs in file.
+- **Confirm-before-mutating
+```
+
+**Ideas referenced:** #0000, #178424, #178455, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18357, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690, #1871, #18745, #1876, #1877, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #1883, #1894, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #1912, #19348, #19490, #2006, #20547, #20903, #21125, #21126, #2113, #22511, #22583, #22680, #23489 [executing], #23592, #23852, #23920, #23952, #24400, #24518, #24635 [deployed], #24636 [deployed], #24645 [unknown], #24646 [proposed], #24766, #24791 [deployed], #24877, #24894 [queued], #24895 [proposed], #24897 [executing], #24898 [deployed], #24899 [proposed], #24900 [deployed], #24901 [proposed], #24902 [proposed], #24904 [proposed], #24905 [proposed], #24906 [proposed], #24907 [proposed], #24908 [proposed], #24909 [proposed], #24910 [proposed], #24911 [proposed], #24912 [proposed], #24913 [proposed], #24915, #24926, #24927, #24946 [executing], #24956, #24966 [queued], #334155, #3957, #4338, #57066, #64748
+
+**Last PICKUP PROMPT:**
+
+```
+ and built as their own batch.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #259 — Argus: 500 fixed, now file + build the UX punch-list from Ruben's chat transcript.
+
+Where we left off (verified 2026-08-08 00:45 PT):
+- HTTP 500 on every terminal_query ROOT-CAUSED and FIXED: `alltastic_api.php:207` used `$query` before it was parsed (it is parsed at ~5316), so `substr(null,...)` threw a fatal. Rewrote to read `$jsonInput['query'] ?? $jsonInput['message']` and made the history mapper null-safe. php -l clean, backup `alltastic_api.php.bak-500fix-20260808-0043`, no new `:207` fatals after deploy.
+- 12 Argus improvements previously shipped by hand (6 frontend in `public/argus-extension/sidepanel.js`, 6 backend guidance blocks in `routes/argus_improvement_prompt.php` injected into terminal_query).
+- Auto-build cron is NOT bypassed; executor is P3 and legitimately starved by fleet_admission. No bypass flag was added.
+
+Open threads to drive next:
+1. #24966 [proposed] — fleet_admission gives executor ~0 slots under GLM ring pressure, so approved auto-builds stall. Decide on a guaranteed minimum executor slot vs leaving hand-deploy as the path.
+2. Ruben's Argus UX punch-list is UNFILED — file each as its own idea, then build: (a) thumbnail click opens the actual image, not a blank tab; (b) shift+enter inserts newline instead of sending, in both terminal and steer box; (c) vision doorman not extracting names from screenshots (task #344 said "no student named" when Yesina Perez was visible — works in Cline, so compare the vision path); (d) ~6 min spent to return "could not answer" — investigate worker latency; (e) task window must allow follow-up/steer AFTER a task finishes, with context retained; (f) print a subtle conversation number on each terminal thread; (g) Tasks list as a top-level tab; (h) Requests tab must populate with Approve/Deny and allow higher-role edit; (i) remove Student Tools and Comms Suite tabs; (j) conversation search in terminal, top-left; (k) folder organization + visible move-to-folder; (l) rule-29 style auto-action on tasks (act first, reject later in the task window).
+3. Email Agent health check — transcript shows multiple inbound student emails logged but never answered and no ticket created (Sebastian Garcia 5:35 PM, Luz Vasquez CPR inquiry, Aden Schopen). Verify the agent is not in an outage and that classification is not silently dropping legitimate mail.
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: #24894, #24895, #24897, #24898, #24900, #24901, #24902, #24904, #24905, #24906, #24907, #24908, #24909, #24910, #24911, #24912, #24913, #24946, #24966
+- Files touched: `routes/alltastic_api.php` (500 fix + guard + guidance inject), `routes/argus_confirm_guard.php`, `routes/argus_improvement_prompt.php`, `public/argus-extension/sidepanel.js`
+- Backups: `alltastic_api.php.bak-500fix-20260808-0043`, `.bak-20260808-0020`, `.bak-24897-wire-20260807-2254`, `.bak-24897-confirmflag-20260807-2259`, `sidepanel.js.bak-20260808-0012`
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786169603912` — 8/8/2026, 12:45:45 AM PT — 368 turns
+
+**Original task:**
+
+```
+Play frankenstein doctor of executor. Lots of failed ideas impl blocked, etc.. need resolution and to be sent through again
+```
+
+**Ideas referenced:** #1095, #1143, #12430, #1281, #13061, #1309, #1314, #1519, #15333, #15367, #15652, #16523, #177926, #17913, #18135, #18357, #18395, #18442, #1850, #19079, #19325, #19338, #19435, #19458, #19490, #19491, #19494, #19503, #19504, #19509, #19629, #19643, #19661, #19670, #19684, #19830, #20350, #20408, #2043, #20495, #20506, #20517, #2076, #20903, #21011, #21075, #2113, #2115, #21167 [approved], #21710, #22245, #22308, #22321, #22433, #22492, #2265, #22656, #2266, #2267, #22680, #22770, #22780 [blocked], #23135, #23362 [blocked], #23373 [blocked], #24184, #24191, #24205, #24635 [deployed], #24636 [deployed], #24645 [unknown], #24646 [proposed], #24704, #24714, #24715 [deployed], #24772 [deployed], #24773, #24791 [deployed], #24928, #24930, #24958, #24959, #24960, #24961 [approved], #24962, #24963 [approved], #24976 [proposed], #24977, #24986 [proposed], #3132, #3133, #3541, #3953, #3957, #4071, #4517, #4536, #4906, #5029, #5034, #5329, #5467, #6067, #6070, #7175, #7925, #8281, #8321, #8563, #8598, #9222, #9235
+
+**Last PICKUP PROMPT:**
+
+```
+60 superseded)
+
+═══════════════════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════════════════
+Pick up task #24976 + #24986 — Wire cron_bug_classifier_wrapper into ring health monitor + verify executor spawning across ticks.
+(No Cline task ID available — this is a direct session completion)
+
+Where we left off (verified 2026-08-08 00:45 PT):
+- Fleet admission min-1 floor shipped & verified (ALLOWED 1)
+- Executor dispatching confirmed: idea #21011 → drafting at 00:11 PT
+- Wrapper lib built + linted (`lib/cron_bug_classifier_wrapper.php`)
+- Ring monitor file read (9915 chars)
+- MCP transport degraded on writes/ssh — wiring one step away
+
+Open threads to drive next:
+1. #24976 [approved] — Append wrapper include+classify block to `cron_glm52_ring_health_monitor.php` (snippet above) OR create stub `.php` that wraps monitor
+2. #24986 [proposed] — Watch `/var/log/cron_ruben_implement.log` for `spawned N` across multiple ticks (N ≥ 1 expected); verify fleet floor holds
+
+Reference IDs:
+- Ticket: #21167
+- Ideas: #24963 [deployed], #24976 [approved], #24986 [proposed]
+- Files: fleet_admission.py, deadman_rca_feedback.php, cron_kaison_recipe_scanner.php, cron_bug_classifier_wrapper.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════════════════
+</result>
 </attempt_completion>
 ```
 
@@ -2767,240 +2839,6 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [x] MCP re-test confirmed still aborting (tier_health same abort)
 - [x] Documented fix candidates in idea #22880
 - [x] Assembled PICKUP PROMPT block
-</task_progress>
-</attempt_completion>
-```
-
-### `1785782909425` — 8/5/2026, 12:47:01 AM PT — 1286 turns
-
-**Original task:**
-
-```
-Why am i not seeing clustered ideas here in cline?
-```
-
-**Ideas referenced:** #10739 [proposed], #11709, #1194, #12459, #128161, #128269, #16523, #16648, #17202, #17203, #17205, #17300, #17408, #177796, #178456, #182471, #18326 [proposed], #18327 [proposed], #18329 [proposed], #18337 [deployed], #1845, #18671, #18800, #18811 [proposed], #18812 [queued], #18813 [queued], #18946, #18947, #18948, #18973, #19173, #19437, #19495, #19535 [proposed], #19537 [proposed], #19538 [proposed], #19539 [proposed], #19545, #19682, #19813, #19814, #19816, #19822, #2023, #21262, #21470, #21761, #21763, #21788 [proposed], #22053 [proposed], #22057, #22059, #22063, #22065, #22070, #22072, #22076, #22078, #22079 [proposed], #22097 [proposed], #22193 [proposed], #22194 [queued], #22195 [proposed], #22196 [proposed], #22197 [proposed], #22198, #22241 [proposed], #22251 [proposed], #22329 [proposed], #22733 [proposed], #22771 [proposed], #22829, #22839 [proposed], #22840 [proposed], #2322, #2490, #2686, #30363, #334155, #401383, #475569, #55522, #55557, #56199, #718096, #7427, #815007, #886191, #9731
-
-**Last PICKUP PROMPT:**
-
-```
- but `main()` never called it.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #unknown — Cluster tools deployment wrap-up and open follow-ups.
-(No explicit Cline task number available.)
-
-Where we left off (verified 2026-08-05 12:41 AM PT):
-- Cluster tools are live at port 7843: list_clusters, get_cluster_recommendation, approve_cluster all working via MCP
-- list_ideas returns CLUSTERED PROJECTS block with 10 semantic clusters and WHY narratives
-- Root cause fixed: registerClusterTools(server) added to main() in build/index.js
-- #22329 [proposed] — Canvas page view.php deployed to /var/www/emtskills/modules/orchestrator_ideas/ (PHP syntax valid, backup preserved)
-- #22771 [proposed] — Pipeline dedup not yet patched (331 duplicate RCA ideas in cluster 21)
-- #22839 [proposed] — DISPATCH: rule-267 offload for #22771 dedup
-- #22840 [proposed] — DISPATCH: canvas page wiring + CLUSTERED PROJECTS rewired
-
-Open threads to drive next:
-1. #22839 [proposed] — Dispatch #22771: Add dedup to RCA retrain and Fleet backtest idea generators (files: /var/www/emtskills/cron/cron_orchestrator_triage.php, /var/www/emtskills/lib/fleet_backtest_health.php) so identical incidents increment count/severity instead of creating duplicate entries with near-identical titles. Then rerun cluster_ideas_pipeline.php to recalculate dedup'd clusters.
-2. #22840 [proposed] — Finish canvas page: wire /admin/ideas?page=canvas route correctly for admin portal (currently resolving via Plesk nginx at :8081/admin-portal, not the main :443/emtskills vhost), verify the cluster canvas renders, then rewrite the CLUSTERED PROJECTS block in list_ideas to show dedup'd counts after #22771 is complete.
-3. #22329 [proposed] — Deployed canvas view.php file (200+ lines), need route test once admin-portal routing is confirmed.
-
-Reference IDs:
-- Ideas filed: #22733, #22771, #22839, #22840, #22329, #22241, #22251
-- Files deployed: /var/www/emtskills/modules/orchestrator_ideas/view.php (canvas), /var/www/emtskills/scripts/cluster_ideas_pipeline.php, /var/www/emtskills/mcp-servers/ruben-orchestrator/build/index.js, /var/www/emtskills/mcp-servers/ruben-orchestrator/src/index.ts
-- Backup preserved: view.php.bak-pre-canvas
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785781386836` — 8/5/2026, 12:46:24 AM PT — 1170 turns
-
-**Original task:**
-
-```
-Tickets have become unmanageable again: https://emsuniversity.com/emtskills/tickets/ 
-
-Help me with this
-```
-
-**Ideas referenced:** #10647, #12135, #13047, #13246, #13687, #13754, #13943, #14024, #14323, #14743, #15417, #17712, #18135, #18176, #1878, #1892, #19173, #19802, #19866, #20825, #21621, #21793, #22066 [proposed], #22067 [proposed], #22068 [proposed], #22086 [proposed], #22087 [proposed], #22188 [proposed], #22200 [proposed], #22201 [proposed], #22202 [proposed], #22215 [proposed], #22245 [proposed], #22250 [deployed], #22256, #22260 [proposed], #22261 [proposed], #22262 [proposed], #22263 [deployed], #22264, #22286, #22589, #22888 [proposed], #22983, #23035, #23076, #23079, #23127, #23142, #23231, #23258, #23263, #23485, #23494, #23496, #23497, #23504, #23536, #23539, #2388, #26105, #2636, #2693, #2782, #2980, #3016, #3498, #4480, #4481, #4929, #5062, #5095, #5244, #5459, #55593, #5608, #5770, #5795, #6728, #6947, #698083, #7024, #7045, #7126, #7381, #7548, #7550, #8060, #8894, #8902, #9108, #9171, #9201, #9406, #9413, #9415, #9417, #9418, #9419
-
-**Last PICKUP PROMPT:**
-
-```
-→ Open sweeper
-
-═══════════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════════
-Pick up task #26105 — Ticket queue cleanup wrap-up
-
-Where we left off (verified 2026-08-05 00:41 PT):
-- 448 active tickets; Jon has 10 (all legit Academic/Admin Hold); agent 124 has 185
-- Outbound noise suppressed at creation (2 sneaking through)
-- Deep-sweep reclaims AI-replied tickets from humans every 5 min
-- Dead-end auto-resolve fires before escalation to Jon
-- Agent per-run cap raised to 60, but 36 tickets/run still stuck in "waiting"
-
-Open threads to drive next:
-1. #22888 [proposed] — build + deploy stale In Progress sweeper: any ticket ON agent 124, In Progress, no update in 14d → return to Open
-2. Investigate the 32 "waiting" tickets per run — check CLUSTER-GATE + DAILY-GATE skip logic
-3. Monitor Jon queue — if those 10 academic tickets sit >48h without Jon touching them, auto-resolve or reassign
-
-Reference IDs:
-- Ticket: #20825 (Quiz Submission Error — verified now on agent 124, not Jon)
-- Ideas filed: #22086, #22200, #22201, #22250, #22260, #22261, #22262, #22263, #22888
-- Files touched: cron_ai_ticket_agent.php, MailerUrlAllowlist.php, ai_ticket_agent.php, cron_agent_36h_sla.php, cron_deep_sweep_ai_replied.php, cron_ai_replied_stale_resolve.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785909027381` — 8/5/2026, 12:45:31 AM PT — 273 turns
-
-**Original task:**
-
-```
-The moodle layout for the EMT classes AZ, CA and TX is very ugly and off-center. Need to be even and brouble badk in to the center area.
-```
-
-**Ideas referenced:** #047857, #1565, #21588, #2177, #2196, #22104, #22105, #22138, #22189, #22244, #22245, #22258 [proposed], #22294, #22334, #22726, #22749, #22750 [proposed], #22751 [proposed], #22776, #22871 [proposed], #495057
-
-**Last PICKUP PROMPT:**
-
-```
-rses 25/37/41, ledger updated.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #22871 - Moodle emscards centering v3 - content aligned under page header
-
-Where we left off (verified 2026-08-05 00:16 PT):
-- v1: margin-left 252->304, margin-right -15->20 (insufficient)
-- v2: added max-width 1400px + margin auto to .emscards-layout (still misaligned with header)
-- v3: changed margin-left:304px to padding-left:304px on .format-emscards
-- Container now spans full width aligned with page header, content centers in remaining space
-- PHP lint clean, FPM reloaded, Moodle cache purged for courses 25/37/41
-- HANDOFF_NOTES.md + cline_task_ledger.md updated
-
-Open threads to drive next:
-1. #22871 [proposed] - Ruben visual verification of centering under page header on all 3 course pages at www.emsuniversity.com/ems/course/view.php?id=25,37,41
-2. (human-only decision, no idea) - If 1400px max-width is too narrow or wide, adjust the value
-
-Reference IDs:
-- Ideas filed: #22871 [proposed]
-- Files touched: /var/www/moodle/ems/course/format/emscards/format.php, /var/www/moodle/ems/course/format/emscards/styles.css
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] v1: margin-left 252->304, margin-right -15->20
-- [x] v2: added max-width 1400px + margin auto to .emscards-layout
-- [x] v3: change margin-left to padding-left so content aligns with page header
-- [x] PHP lint clean
-- [x] FPM reloaded
-- [x] Cache purged
-- [x] Ledger updated
-</task_progress>
-</attempt_completion>
-```
-
-### `1785907400228` — 8/5/2026, 12:35:11 AM PT — 120 turns
-
-**Original task:**
-
-```
-https://emsuniversity.com/emtskills is very slow again today. This is the 3rd time I've had to get with you about this. We need a durable solution and a better RCA. i'ts simply loading very slow  spin spin spin
-```
-
-**Ideas referenced:** #1658, #16731 [queued], #19522 [deployed], #19836 [executing], #1986, #20957, #20958, #2176, #2177, #22258 [proposed], #22294, #22334, #22355 [proposed], #22749, #22750 [proposed], #22751 [proposed], #22886 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-1: one word and it's running).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — emtskills slow-load RCA (FIXED) + durable mirror relocation #22886 to NVMe /data
-
-Where we left off (verified 2026-08-05 00:33 PT):
-- Root cause: hourly root-mirror rsync to `/backup` (= md0, 2x 8TB 7200rpm HDDs) pinned sda/sdb at 97–100% util w/ 847ms write await, starving MariaDB+PHP-FPM. Load-30 guard never fired (I/O-bound ≠ CPU load).
-- Fixes deployed [deployed]: `nvme-mirror-sync.sh` dual-guards (load ≥12 OR disk util ≥50%), cron 4x/day (`5 */6`), WP health cron load-guard+jitter (#16731 [deployed] live-verified: "all WP active_plugins healthy"), 157MB error log truncated. Verified: HTTP 200, TTFB 13–14ms, load 13.7→9.7, disk 0% during throttled sync.
-- Verified topology: nvme0n1 = 4TB Samsung 9100 PRO = `/` (1.1T used), nvme1n1 = 4TB T-FORCE = `/data` (2.4T used, 1.2T free), nvme2n1 = 930G Crucial unmounted, md0 = HDD RAID = `/backup` (7.3T, 2.1T used).
-
-Open threads to drive next:
-1. #22886 [proposed] — awaiting explicit GO from Ruben to repoint mirror `DEST` from `/backup/wopr-root-mirror` (HDD) to `/data/backup/wopr-root-mirror` (NVMe). Execute sequence on GO: verify 1.1T fits in 1.2T free on /data, mkdir target, update DEST in nvme-mirror-sync.sh, run one full mirror, confirm no I/O starvation (iostat + page TTFB), update handoff notes.
-2. #16731 [deployed] — monitor clean; only fires on real corruption now. No action unless alert.
-
-Reference IDs:
-- Ideas: #22886 [proposed], #16731 [deployed], #19522 [deployed]
-- Files touched: /usr/local/bin/nvme-mirror-sync.sh, /etc/cron.d/emsu-nvme-mirror, /var/www/emtskills/crons/cron_wp_active_plugins_health.php, /var/log/php8.3-fpm-errors.log, docs/HANDOFF_NOTES.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Verify disk topology (lsblk with models + df): 4TB 9100 PRO = root, 4TB T-FORCE = /data, HDD RAID = /backup
-- [x] Answer Ruben's confusion: the mirror writes to HDD /backup, not to any NVMe
-- [x] Present verified fix: repoint DEST to /data (NVMe), filed #22886 [proposed]
-</task_progress>
-</attempt_completion>
-```
-
-### `1785881207296` — 8/5/2026, 12:29:35 AM PT — 188 turns
-
-**Original task:**
-
-```
-Can you look into this and advise if there's an isseu?
-```
-
-**Ideas referenced:** #003366, #004080, #059669, #1652, #1658, #18868, #19163, #1986, #20825, #20957, #20958, #2168, #2174, #2176, #2177, #2196, #22066, #22128 [executing], #22188, #22200, #22240 [proposed], #22250, #22334, #22338 [ready_for_review], #22355 [proposed], #22638 [proposed], #22639 [proposed], #22640 [proposed], #22829 [proposed], #22878 [proposed], #22889 [proposed], #3337, #3338, #334155, #64748, #6785
-
-**Last PICKUP PROMPT:**
-
-```
-now while Elementor is active.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #22638 [proposed] -- Arizona EMT schedule RCA + SLS integration
-
-Where we left off (verified 2026-08-04 22:28 PT):
-- Rule-297 RCA complete: /classschedule/ renders via Elementor widget e156da6 `[dynamic_schedule]` (postmeta char 2765) to mu-plugin dynamic-schedule-shortcode.php to ABSPATH class-schedule-dynamic.php to admin_portal.Course_Schedules
-- Classified BY-DESIGN; my earlier "PHP override via rewrite" claim retracted -- no nginx/htaccess rule exists
-- Stale static post_content (Dec 2025, ends July 2026) is a dormant fallback, not the live renderer
-- SLS integration: one Course_Schedules table feeds both the public schedule page and view_course_schedules.php (db('skills'), filters cs.course_start_date >= CURDATE())
-
-Open threads to drive next:
-1. #22829 [proposed] -- mitigate dormant fallback: empty stale post_content or add unconditional template override mu-plugin for classschedule slug
-2. #22639 [proposed] -- miamiemt.com registration dropdown dead since 2022; run registration_surface_repair for Miami
-3. #22640 [deployed] -- verified live AZ schedule correct; no date action needed
-
-Reference IDs:
-- Ideas filed: #22638 [proposed], #22639 [proposed], #22640 [deployed], #22829 [proposed]
-- Files touched: none (investigation only: read only, no deletes)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] (297 Step 1) Symptom: static post_content vs live dynamic output
-- [x] (297 Step 2) Read all rendering source files with citations
-- [x] (297 Step 3) Classify: BY-DESIGN via Elementor shortcode widget → admin_portal
-- [x] Identify dormant fallback risk → filed #22829 [proposed]
-- [x] SLS integration explained (Course_Schedules as single source of truth)
-- [x] Delivery with pickup block
 </task_progress>
 </attempt_completion>
 ```

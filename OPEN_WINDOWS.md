@@ -6,12 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/7/2026, 7:14:17 PM PT | window: last 72h | 88 tasks | index total 530 (parsed 1, cached 529)
+Generated: 8/7/2026, 8:49:51 PM PT | window: last 72h | 86 tasks | index total 530 (parsed 3, cached 527)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786144700222` | 8/7/2026, 7:10:55 PM | 350 | 678KB | #TDSHS |
-| `1786036273485` | 8/7/2026, 5:20:21 PM | 910 | 2122KB | #Argus  |
+| `1786036273485` | 8/7/2026, 8:47:56 PM | 1028 | 2252KB | #Argus  |
+| `1786086916545` | 8/7/2026, 8:39:15 PM | 190 | 1084KB | Tell me how the student council is doing. Is it healthy? It actually generating ideas and  |
+| `1786144700222` | 8/7/2026, 8:25:22 PM | 368 | 730KB | #TDSHS |
 | `1786123588626` | 8/7/2026, 5:15:24 PM | 398 | 851KB | telephony is not working for incoming calls - it's telling people a debug message. Please  |
 | `1786088761151` | 8/7/2026, 5:08:08 PM | 206 | 719KB | Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversit |
 | `1786135150364` | 8/7/2026, 5:03:39 PM | 264 | 411KB | emsuniversity.com is laggy, slow and needs to go faster. Something is bogiging it down |
@@ -25,7 +26,6 @@ Generated: 8/7/2026, 7:14:17 PM PT | window: last 72h | 88 tasks | index total 5
 | `1786005641053` | 8/7/2026, 10:13:45 AM | 422 | 810KB | #GLM |
 | `1785954856277` | 8/7/2026, 10:07:26 AM | 680 | 2681KB | #CFA |
 | `1786059773410` | 8/7/2026, 10:03:34 AM | 98 | 323KB | #Baseline Tempe Loan |
-| `1786086916545` | 8/7/2026, 9:57:17 AM | 154 | 865KB | Tell me how the student council is doing. Is it healthy? It actually generating ideas and  |
 | `1785954707277` | 8/7/2026, 9:56:34 AM | 358 | 1814KB | #EA PIPELINE |
 | `1786088921071` | 8/7/2026, 9:55:59 AM | 122 | 566KB | I don't really understand what's going on here. This task was about email for the being se |
 | `1786081573518` | 8/7/2026, 12:46:20 AM | 274 | 992KB | Whiy is this task 502, we need to stop with the 502s: |
@@ -96,14 +96,103 @@ Generated: 8/7/2026, 7:14:17 PM PT | window: last 72h | 88 tasks | index total 5
 | `1785901405719` | 8/4/2026, 9:17:40 PM | 64 | 682KB | EMSU Operations MCP is down. Take a look at MCP troubleshooting document on desktop and up |
 | `1785780445834` | 8/4/2026, 8:57:37 PM | 1092 | 4326KB | Propose for Telephony with some features similar to /proctoring for the Admin role (in thi |
 | `1785890121460` | 8/4/2026, 8:51:12 PM | 588 | 2563KB | #GLM |
-| `1785900942869` | 8/4/2026, 8:37:36 PM | 9 | 28KB | This window is stuck in a YOLO loop and cannot execute tools. Recommendation: paste the PI |
-| `1785896066452` | 8/4/2026, 8:35:44 PM | 122 | 338KB | Jon is experiencing issues logging in after entering an SMS code: https://emsuniversity.co |
 
 ---
 
 ## Per-window detail
 
-### `1786144700222` — 8/7/2026, 7:10:55 PM PT — 350 turns
+### `1786036273485` — 8/7/2026, 8:47:56 PM PT — 1028 turns
+
+**Original task:**
+
+```
+#Argus 
+
+Found the actual reason Argus over-texts the server. It was not the timeouts. Three separate defects, all fixed and verified live.
+
+EXCLUDED: #2250 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)
+EXCLUDED: #2251 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)
+
+## The timeout work was right but it was treating a symptom
+
+Raising curl 240->600 and pool max_execution_time 120->600 was correct and necessary. But a longer timeout on an amplifying loop just means MORE concurrent long-held connections. Here is wh
+```
+
+**Ideas referenced:** #047857, #059669, #111827, #16213, #16523, #166534, #178601, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19370, #2006, #20547, #21125, #21126, #21262, #2250 [superseded], #2251 [superseded], #22511, #2252, #2253, #22583, #22688, #22850, #23027, #23036, #23428, #23429, #23468, #23489, #23506, #23585, #23623, #23630 [executing], #23636, #23637, #23674, #23675, #23710, #23711, #23729, #23739, #23740, #23747, #23748, #23749, #23750, #23751, #23764, #23769, #23851 [rejected], #23852 [proposed], #23854, #23867, #23868 [executing], #23878 [proposed], #23879 [proposed], #23881, #23885, #23897, #23898, #23899, #23900, #23908, #23910, #23911, #23913 [executing], #23920 [executing], #23934 [executing], #23941 [executing], #23944 [executing], #23952 [proposed], #23953, #23973 [proposed], #23974 [proposed], #23975 [deployed], #23982 [proposed], #24012, #24025, #24029, #24036, #24043, #24044, #24097 [proposed], #24182, #24225 [proposed], #24377 [executing], #24378, #24379, #24381 [proposed], #24382 [proposed], #24383, #24464, #24466, #24586, #24706, #24766, #24808 [proposed], #24877, #2563, #334155, #3730, #374151, #4338, #64748, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+ot by a missing reply‑handler.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #259 — Argus reply‑path fix & LLM‑hang watchdog (#24808).
+
+Where we left off (verified 2026-08-07 20:47 PT):
+- Two worker‑stall tasks reset to `queued` (#345, #346).
+- Idea #24808 filed for the hang‑watchdog.
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #24808 [proposed] — Implement curl_multi_select() timeout watchdog in cron_argus_task_worker.php: after 90 s of idle handles, cancel hung CURL handles and requeue or fail‑fast the task, so a single slow LLM backend never blocks the whole batch.
+2. #23982 [deployed] — Widen the not‑doable keyword set beyond "cannot answer" after verifying the actual refusal text returned by the current LLM backend (needs a live probe).
+
+Reference IDs:
+- Ticket: #259
+- Ideas filed: #24225, #24808
+- Files touched: /var/www/emtskills/routes/cron_argus_task_worker.php, /var/www/emtskills/routes/alltastic_api.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786086916545` — 8/7/2026, 8:39:15 PM PT — 190 turns
+
+**Original task:**
+
+```
+Tell me how the student council is doing. Is it healthy? It actually generating ideas and tasks and acting on them? Or is a block? If it's blocked can you fix it?
+```
+
+**Ideas referenced:** #10108, #1050, #10740, #11741, #11781, #12345, #12477, #12618, #12802, #12824, #12872, #12878, #12879, #13202, #1373, #16163, #16265, #16304, #16695 [awaiting_review], #16822, #16844, #18312, #18326, #19370, #19427, #23171, #23185, #23341, #23945, #24026, #24054 [deployed], #24055 [proposed], #24056 [proposed], #24539 [deployed], #24540 [proposed], #24541 [proposed], #24556 [proposed], #24557 [proposed], #24558 [proposed], #24559 [approved], #3957, #4536, #5031, #6057, #6104, #6413, #6432, #64748, #7228, #78350, #9090, #92400, #9475
+
+**Last PICKUP PROMPT:**
+
+```
+rover mapping before building.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Council 07:30 PT fix confirmed. Two things to build: exec-admin approval email routing + #24558 approval.
+
+Where we left off (verified 2026-08-07 20:38 PT):
+- #24539 [deployed] — Council fix confirmed. 07:30 meeting produced 6,239-byte harvest, 4 ideas. Council is healthy.
+- #24540 [proposed] — NOT YET FILED as an orchestrator_ideas row (IDs 24539/24540 in DB are RCA-retrain ideas, not my council fix claims). NEEDS ACTUAL create_idea call.
+- #24558 [proposed] [P0] — Auto-escalate cron for externship. Needs Ruben approval (touches student enrollment). Full signoff block present.
+- #24559 [approved] [P0] — Codec truncation fix. Approved by auto-confidence-cron.
+
+Open threads to drive next:
+1. #24558 [proposed] — Ruben asked what this means. Answer above. **Needs Ruben approval** (not exec-admin — it's a build).
+2. Exec-Admin approval routing [proposed] — Design above (domain mapping + boundary rules). **Needs Ruben signoff on domain→approver assignments** before building. Then modify council harvest to add email triggers.
+3. #24540 [proposed] — Strip tool-list from TODAYS_OPS seed prompt. **Needs actual idea row created** via `create_idea` or INSERT. Then implement.
+4. #24539-claim [blocked] — Verify what idea #s the council fix and backfill are tracked under (my pickup prompt IDs 24539/24540/24541 don't match DB reality). Fix the reference chain.
+
+Reference IDs:
+- Council file: `/var/www/emtskills/cron/cron_daystrom_council.php` (bak: `.bak-20260807-haiku-fix`)
+- Permission set: `argus_role_permissions` (ExecAdmin: Tier 0-2, write tickets, no bulk)
+- Morning session: `daystrom-20260807-073003-e93f` (69 turns, 4 ideas)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786144700222` — 8/7/2026, 8:25:22 PM PT — 368 turns
 
 **Original task:**
 
@@ -121,57 +210,6 @@ We did reach out to discuss general policies, but he never replied. We reached o
 **Ideas referenced:** #111827, #16957, #23834, #24790 [in_progress], #24805 [in_progress], #24836 [in_progress], #24842 [in_progress], #251038, #251211, #251264, #251382, #2763 [deployed], #3616, #3617, #3622, #3624, #450438, #4929, #6106
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786036273485` — 8/7/2026, 5:20:21 PM PT — 910 turns
-
-**Original task:**
-
-```
-#Argus 
-
-Found the actual reason Argus over-texts the server. It was not the timeouts. Three separate defects, all fixed and verified live.
-
-EXCLUDED: #2250 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)
-EXCLUDED: #2251 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)
-
-## The timeout work was right but it was treating a symptom
-
-Raising curl 240->600 and pool max_execution_time 120->600 was correct and necessary. But a longer timeout on an amplifying loop just means MORE concurrent long-held connections. Here is wh
-```
-
-**Ideas referenced:** #047857, #059669, #111827, #16213, #16523, #166534, #178601, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19370, #2006, #20547, #21125, #21126, #21262, #2250 [superseded], #2251 [superseded], #22511, #2252, #2253, #22583, #22688, #22850, #23027, #23036, #23428, #23429, #23468, #23489, #23506, #23585, #23623, #23630 [executing], #23636, #23637, #23674, #23675, #23710, #23711, #23729, #23739, #23740, #23747, #23748, #23749, #23750, #23751, #23764, #23769, #23851 [rejected], #23852 [proposed], #23854, #23867, #23868 [executing], #23878 [proposed], #23879 [proposed], #23881, #23885, #23897, #23898, #23899, #23900, #23908, #23910, #23911, #23913 [executing], #23920 [executing], #23934 [executing], #23941 [executing], #23944 [executing], #23952 [proposed], #23953, #23973 [proposed], #23974 [proposed], #23975 [deployed], #23982 [proposed], #24012, #24025, #24029, #24036, #24043, #24044, #24097 [proposed], #24182, #24225 [proposed], #24377 [executing], #24378, #24379, #24381 [proposed], #24382 [proposed], #24383, #24464, #24466, #24586, #24706, #24766, #2563, #334155, #3730, #374151, #4338, #64748, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-<attempt_completion>
-<result>
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #259 — Argus reply path: user types a reply and Argus never answers (alltastic_api.php terminal_query).
-
-Where we left off (verified 2026-08-07 17:19 PT):
-- Worker is healthy: #336 completed 17:16:17 (6m), drain working, queue periodically clean
-- Repro: in terminal (argus_terminal.php), user types reply into #queryInput; the JS submits to alltastic_api.php action=terminal_query
-- The handler at line 5304 reads `$query = trim($jsonInput['query'] ?? $jsonInput['message'])`
-- Need to find why a reply (follow-up) doesn't trigger an answer: suspect the reply is being treated as async and queued, or a falsy check drops it
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #24377 [executing] — Trace the terminal_query reply path: confirm the reply POST body key (`query` vs `message`), and verify it reaches the synchronous answer block vs. falling into the async queue
-2. #24381 [executing] — RCA retrain: agent making DEADMAN promises for ea (21 records, voice_ai) — verify EA grading via ea_grade_resubmit, no promises
-3. #24382 [executing] — RCA retrain: agent making DEADMAN promises for enrollment (61 records, voice_ai) — verify via enrollment_lookup, surface/create enrollment
-
-Reference IDs:
-- Ideas filed: #24377 (routing examine), #24381 (ea RCA), #24382 (enrollment RCA)
-- Files touched: /var/www/emtskills/routes/alltastic_api.php (terminal_query line 5304), /var/www/emtskills/routes/argus_task_status.php (status page, no reply handler found yet), /var/www/emtskills/routes/argus_terminal.php (UI #queryInput)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
 
 ### `1786123588626` — 8/7/2026, 5:15:24 PM PT — 398 turns
 
@@ -601,50 +639,6 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [x] Update with Alma's answers + status tracker (10 done, 5 pending)
 - [x] Provide the 5 remaining items in line
 </task_progress>
-</attempt_completion>
-```
-
-### `1786086916545` — 8/7/2026, 9:57:17 AM PT — 154 turns
-
-**Original task:**
-
-```
-Tell me how the student council is doing. Is it healthy? It actually generating ideas and tasks and acting on them? Or is a block? If it's blocked can you fix it?
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12345, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16695 [awaiting_review], #16844, #18312, #18326, #19370, #23171, #23185, #23341, #23945, #24026, #24054 [deployed], #24055 [proposed], #24056 [proposed], #24539 [deployed], #24540 [proposed], #24541 [proposed], #24556 [proposed], #24557 [proposed], #24558 [proposed], #24559 [approved], #6104, #6413, #6432, #64748, #7228, #78350, #9090, #92400, #9475
-
-**Last PICKUP PROMPT:**
-
-```
-il.php.bak-20260807-haiku-fix`
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Daystrom Council fix verified. Next: act on council's morning output (4 ideas, #24556-24559).
-
-Where we left off (verified 2026-08-07 09:56 PT):
-- Fix confirmed in production: 07:30 PT meeting produced 6,239-byte harvest + 4 ideas.
-- Council identified externship backlog + codec truncation as P0 priorities.
-- Patch file: `/var/www/emtskills/cron/cron_daystrom_council.php` (backup .bak-20260807-haiku-fix).
-- 4 pre-fix sessions backfilled in daystrom_sessions (harvest_status='skipped').
-
-Open threads to drive next:
-1. #24539 [deployed] — Council fix complete. Monitor next meetings (13:00, 18:30 PT today).
-2. #24540 [proposed] — Strip tool-list from TODAYS_OPS seed prompt ("Agents have tools: check_student..."). Council agents don't have tools; the executor picks up proposals after session.
-3. #24559 [approved] [P0] — Fix codec truncation in vapi handoff layer. Council voted 8/1. Ruben approved.
-4. #24558 [proposed] [P0] — Auto-escalate-or-assign cron for 60+ day externship requests. Council voted 8/1. Needs Ruben approval.
-
-Reference IDs:
-- Idea: #24539 [deployed]
-- Council ideas: #24556, #24557, #24558 [proposed], #24559 [approved]
-- File: `/var/www/emtskills/cron/cron_daystrom_council.php`
-- Morning session: `daystrom-20260807-073003-e93f` (69 turns, 6,239-byte harvest)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 
@@ -3356,67 +3350,3 @@ How many lanes should
 **Ideas referenced:** #16844, #1718 [deployed], #1877, #19338 [rejected], #19458 [rejected], #19491, #1986 [deployed], #2083, #20903, #20957, #20958, #2157, #2159, #2168, #2174 [deployed], #2185 [deployed], #2187, #2195 [deployed], #2200, #2201, #2202, #2203, #2204, #2205, #22128 [executing], #22322, #22370 [proposed], #22371 [proposed], #22500 [awaiting_review], #22543 [proposed], #22563 [proposed], #22564 [proposed], #22565 [proposed], #22583 [proposed], #22584 [proposed], #22598 [proposed], #22599 [proposed], #22600 [proposed], #22601 [proposed], #22602 [proposed], #22612 [proposed], #22613 [proposed], #22657 [proposed], #22658 [proposed], #22659 [proposed], #22660 [rejected], #22665 [proposed], #22669 [proposed], #22674 [proposed], #22675 [proposed], #22680 [proposed], #22681 [proposed], #22682 [proposed], #22683 [proposed], #22684 [proposed], #22685 [proposed], #22686 [proposed], #22687, #22688, #22689, #22699 [proposed], #22700 [proposed], #22704 [proposed], #22713 [proposed], #22714 [proposed], #22715 [proposed], #22727 [proposed], #22729 [proposed], #22743 [proposed], #22752 [proposed], #22758 [proposed], #22761 [proposed], #22765 [proposed], #22770 [proposed], #22784 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785900942869` — 8/4/2026, 8:37:36 PM PT — 9 turns
-
-**Original task:**
-
-```
-This window is stuck in a YOLO loop and cannot execute tools. Recommendation: paste the PICKUP PROMPT below into a fresh Cline window. #22751 is approved and ready to execute.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #22751 [proposed], consolidate session bootstraps plus canary plus audit. Ruben approved 2026-08-04 20:29 PT.
-
-Where we left off (verified 2026-08-04 20:35 PT):
-- SMS login loop fixed (idea #22749, all 5 patches deployed and verified earlier)
-- #22751 [proposed] ap
-```
-
-**Ideas referenced:** #22749 [proposed], #22750 [approved], #22751 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785896066452` — 8/4/2026, 8:35:44 PM PT — 122 turns
-
-**Original task:**
-
-```
-Jon is experiencing issues logging in after entering an SMS code: https://emsuniversity.com/emtskills/routes/login_sms.php  and then after getting the code someting is off
-```
-
-**Ideas referenced:** #21753, #22749 [proposed], #22750 [proposed], #22751 [proposed], #3742, #842029
-
-**Last PICKUP PROMPT:**
-
-```
-dow is stuck in a YOLO loop and cannot execute tools. Recommendation: paste the PICKUP PROMPT below into a fresh Cline window. #22751 is approved and ready to execute.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #22751 [proposed], consolidate session bootstraps plus canary plus audit. Ruben approved 2026-08-04 20:29 PT.
-
-Where we left off (verified 2026-08-04 20:35 PT):
-- SMS login loop fixed (idea #22749, all 5 patches deployed and verified earlier)
-- #22751 [proposed] approved by Ruben. NOT STARTED. Consolidate lib/auth.php, bootstrap.php, lib/session.php session bootstraps into single lib/session_bootstrap.php. Add host-only EMSUADMINSESSID canary. Audit remaining ad-hoc session starters.
-- #22750 [approved] also approved, not started. Fix routes/reports.php:13 wrong cookie name, add php-fpm logrotate, plan debug removal.
-
-Open threads:
-1. #22750 [approved]. Fix routes/reports.php:13 (PHPSESSID to session_name()), add /etc/logrotate.d/php8.3-fpm for 162MB error log, plan debug line removal after 3 days.
-2. #22751 [proposed]. Consolidate session bootstraps into lib/session_bootstrap.php. Add canary script. Audit api/cline_subagent_noop.php, api/ruben_executor.php, personnel/lib/EmployeeAuthService.php, cron/cron_argus_ext_canary.php.
-
-Reference IDs:
-- Ideas: #22749 [proposed], #22750 [approved], #22751 [proposed]
-- Files already fixed: lib/session.php, lib/auth.php, logout.php, api/travel_rank.php, api/ruben_context_api.php, routes/chain_orchestrator.php
-- Files to touch: lib/auth.php (~line 35-72 session block), bootstrap.php (~line 30-64 session block), lib/session.php (already rewritten, keep post-bootstrap portion), new lib/session_bootstrap.php, routes/reports.php:13
-- HANDOFF_NOTES.md updated 2026-08-04 19:25 PT
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```

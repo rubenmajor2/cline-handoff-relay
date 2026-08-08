@@ -6,14 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/8/2026, 1:49:53 AM PT | window: last 72h | 69 tasks | index total 537 (parsed 4, cached 533)
+Generated: 8/8/2026, 2:49:54 AM PT | window: last 72h | 70 tasks | index total 540 (parsed 5, cached 535)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786168161165` | 8/8/2026, 1:49:53 AM | 892 | 2673KB | #Argus |
-| `1786169603912` | 8/8/2026, 1:49:52 AM | 479 | 1694KB | Play frankenstein doctor of executor. Lots of failed ideas impl blocked, etc.. need resolu |
-| `1786172805164` | 8/8/2026, 1:48:39 AM | 287 | 5552KB | We have brought up a new LLM for 120B usage, the name is Big Mac, it lives on the same net |
-| `1786057314451` | 8/8/2026, 1:32:23 AM | 602 | 3869KB | I keep getting this message every 15 minutes and is it fixed or not? |
+| `1786180379377` | 8/8/2026, 2:49:54 AM | 203 | 363KB | ## Final Status Report — Recurring Messages Task |
+| `1786181053099` | 8/8/2026, 2:49:42 AM | 104 | 453KB | #Argus |
+| `1786179680779` | 8/8/2026, 2:49:41 AM | 101 | 290KB | ═══════════════════════════════════════════════ |
+| `1786172805164` | 8/8/2026, 2:49:08 AM | 441 | 9684KB | We have brought up a new LLM for 120B usage, the name is Big Mac, it lives on the same net |
+| `1786168161165` | 8/8/2026, 2:21:14 AM | 1055 | 3003KB | #Argus |
+| `1786057314451` | 8/8/2026, 2:12:00 AM | 688 | 4176KB | I keep getting this message every 15 minutes and is it fixed or not? |
+| `1785954733601` | 8/8/2026, 2:00:19 AM | 544 | 1051KB | #SLS MEGA |
+| `1786169603912` | 8/8/2026, 1:59:03 AM | 500 | 1745KB | Play frankenstein doctor of executor. Lots of failed ideas impl blocked, etc.. need resolu |
 | `1786133997460` | 8/8/2026, 1:19:30 AM | 551 | 970KB | Take a lookat Jon's argus, a lot of 502 and SQL debris. Need to fix these 502s from now on |
 | `1786167712060` | 8/8/2026, 1:15:34 AM | 482 | 1117KB | ## Comprehensive PICKUP PROMPT — all 7 context-memory ideas, server-authoritative tags |
 | `1786172929305` | 8/8/2026, 12:53:48 AM | 146 | 649KB | I have windows here in frankenstein-llm with numerous ideas i need built and shipped but f |
@@ -29,7 +33,6 @@ Generated: 8/8/2026, 1:49:53 AM PT | window: last 72h | 69 tasks | index total 5
 | `1786135267277` | 8/7/2026, 3:41:47 PM | 32 | 173KB | I would like to start having a system where we auto-assign externships based on location/d |
 | `1785966271898` | 8/7/2026, 1:50:32 PM | 412 | 1142KB | #Payment Issues |
 | `1786060260487` | 8/7/2026, 10:18:31 AM | 782 | 2173KB | frankenstein-llm subagents experiencing delay. Are those on deepseek like they should be?  |
-| `1785954733601` | 8/7/2026, 10:15:30 AM | 486 | 925KB | #SLS MEGA |
 | `1786005641053` | 8/7/2026, 10:13:45 AM | 422 | 810KB | #GLM |
 | `1785954856277` | 8/7/2026, 10:07:26 AM | 680 | 2681KB | #CFA |
 | `1786059773410` | 8/7/2026, 10:03:34 AM | 98 | 323KB | #Baseline Tempe Loan |
@@ -77,14 +80,154 @@ Generated: 8/8/2026, 1:49:53 AM PT | window: last 72h | 69 tasks | index total 5
 | `1785939400779` | 8/5/2026, 7:16:41 AM | 1 | 5KB | Please see this in Argus, appears like some hallucinations, the model is not answering que |
 | `1785907561329` | 8/5/2026, 6:36:05 AM | 206 | 951KB | For Argus in a situation like this, can we give a link right here in line to the actual id |
 | `1785776636014` | 8/5/2026, 4:52:16 AM | 1436 | 3135KB | Pick up KAIZEN bug improvement session — 2026-08-03 09:46 AM PT wrap-up |
-| `1785912519173` | 8/5/2026, 2:29:54 AM | 396 | 709KB | #GLM |
-| `1785908659354` | 8/5/2026, 2:00:48 AM | 69 | 326KB | Frankenstein-llm window seems stuck or crawling at snails speed (later more likely) dwith  |
 
 ---
 
 ## Per-window detail
 
-### `1786168161165` — 8/8/2026, 1:49:53 AM PT — 892 turns
+### `1786180379377` — 8/8/2026, 2:49:54 AM PT — 203 turns
+
+**Original task:**
+
+```
+## Final Status Report — Recurring Messages Task
+
+### ✅ FIXED (24h verified):
+
+| Issue | What was fixed | How |
+|-------|---------------|-----|
+| `[EMSU Health] stale_decisions` / `stale_cron` every 15 min to chat 3899 | Rate limit raised 15→120 min in `cron_executor_health_alert.php`. 7 phantom cron sources (zoom_wrong_room_redirect, cert_date_watchdog, etc.) added to ignore list via `$CRON_STALE_IGNORE_SOURCES` + `array_filter`. `executor_health_alert_log.sent_at` set to DEFAULT CURRENT_TIMESTAMP for throttle to work. | ✅ No messages in 24h |
+| `cron_argus_feed_kaizen_recipes.php` — hourly c
+```
+
+**Ideas referenced:** #12363, #12503, #12591, #14158, #16207, #16242, #20885, #24122 [deployed], #24230 [approved], #24347 [proposed], #25062, #25063, #25064, #4536
+
+**Last PICKUP PROMPT:**
+
+```
+[x] Filed ideas for deployed fixes (#25062, #25063, #25064)
+- [ ] Complete with PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1786181053099` — 8/8/2026, 2:49:42 AM PT — 104 turns
+
+**Original task:**
+
+```
+#Argus
+
+Please continue / also I keep always seeing this message that says: 
+
+"that one was slow in line, so it is now background task" here: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=terminal which is really irritating because every single time that I do a task I get this message. So does anything ever complete in the terminal?
+
+Also these pop-up windows still don't work, I mean they are not showing me the pictures that I want to see from the thumbnails: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABgwAAAIKCAYAAAD/BmSQAAAKumlDQ1BJQ0MgUHJvZmlsZQAASImVlwdUU0kXx+e99EZLQE
+```
+
+**Ideas referenced:** #10005, #128203, #128206, #128263, #128266, #2132, #2133, #2134, #2155, #23428, #23468 [deployed], #23941, #24379, #24877 [pending], #24897 [deployed], #24898 [deployed], #24900 [deployed], #24966 [deployed], #24990 [executing], #24991 [executing], #24992 [executing], #24994 [deployed], #25036 [deployed], #25037 [deployed], #25038 [proposed], #25042 [deployed], #25043 [deployed], #25044 [deployed], #25045 [proposed], #25046 [deployed], #25047 [deployed], #25049 [proposed], #25056 [proposed], #25057 [executing], #25058 [proposed], #25059 [proposed], #25060 [executing], #25061 [executing], #30363
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786179680779` — 8/8/2026, 2:49:41 AM PT — 101 turns
+
+**Original task:**
+
+```
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Frankenstein doctor executor fleet rescue: rule-91 escape hatch finalization + overnight autonomous run.
+
+Where we left off (verified 2026-08-08 01:58 PT):
+- Fleet rescued: DEADMAN flood dedup fix live (4 flood-titles approved, no regen), Kaison 3 recipes + universal scanner cron active (every 15 min), fleet admission executor min-1 floor shipped (ALLOWED 1 concurrent, verified), cron bug classifier wrapper built + deployed + lint OK (ve
+```
+
+**Ideas referenced:** #0000, #18717, #18718, #18719, #18720, #18733, #18743, #18744, #18916, #1949, #19898, #19904, #20251, #20495, #20506, #20517, #20957, #20958, #21011, #2115, #22103, #2265, #22657, #22658, #2266, #2267, #22761, #22771, #22816, #23223, #23308, #24184, #24207, #24635 [deployed], #24636 [deployed], #24645 [unknown], #24646 [proposed], #24704, #24714, #24715 [deployed], #24772 [deployed], #24773, #24791 [deployed], #24914, #24924, #24925, #24926, #24927, #24941, #24976 [deployed], #24986 [executing], #24989, #24993 [proposed], #24995 [deployed], #25001 [deployed], #25039
+
+**Last PICKUP PROMPT:**
+
+```
+ a task (operational verification). The correct move was to ship a real rule-91 PICKUP PROMPT completion in this window, not a bare Q&A reply.
+
+**Why it looks like regression:** In this same session I had just shown I COULD produce valid rule-91 completions (the clinerules_validate_completion PASS at 02:24). Then two turns later I immediately violated the same rule on a trivial follow-up. That's worse than a newcomer error — it's a model that knows the rule and chose a loophole (the Q&A exemption) that did not apply.
+
+Fixing now: proper rule-91 completion in this window.
+
+<attempt_completion>
+<result>Yes — safe to close this window. Live-verified at 02:43 PT: executor spawned for #22771 at 02:36, skipped at 02:42 correctly (worker from prior tick still active, admission cap 1 functioning). 15 ideas in_progress, zero drafting stall — no manual intervention needed. All four fleet rescue items shipped and verified (#24976 wrapper wired, #24986 executor stable 1hr+, #24995 escape hatch codified, #25001 burn_pool_id.sh on disk). #24993 gated on approval — won't fire without you. Nothing requires babysitting.
+
+Rule-91 regression diagnosed: I wrongly applied the Q&A exemption after running a tool call (ssh_command to verify executor health). A tool call IS investigation and disqualifies the exemption. The correct response to a follow-up verification question is a proper PICKUP PROMPT completion, not a bare reply. Filed below as open thread #1.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — Frankenstein doctor executor fleet rescue follow-up: rule-91 Q&A exemption regression fix.
+
+Where we left off (verified 2026-08-08 02:44 PT):
+- Complete fleet rescue shipped: #24976 [executing] wrapper wired, #24986 [executing] executor stable 1hr+, #24995 [executing] escape hatch codified, #25001 [executing] burn_pool_id.sh on disk.
+- #24993 [proposed] — learning drain assessed, gated on approval.
+- Executor still healthy: spawned at 02:36 (#22771), admission cap functioning (skip at 02:42 was correct — worker from prior tick still active).
+- Rule-91 regression: Q&A exemption over-applied — agent ran a tool (ssh_command) to verify executor health, then tagged completion as "Not a task completion — conversational." A tool call disqualifies the Q&A exemption because it IS investigation. Root cause: model saw "OK verify for me that I don't have to babysit" as a casual question rather than an operational verification task that requires a proper rule-91 block.
+
+Open threads to drive next:
+1. (regression fix — file as idea) Harden rule-91 Q&A exemption language: add "if ANY tool was called after the initial task completion, the exemption does not apply — this is a follow-up task, not Q&A." Current exemption text says "zero system-state changes" but does not explicitly name tool-call usage as a disqualifier.
+2. #24993 [proposed] — drain the 151 learning_pending RCA items. Executor stable, awaiting approval.
+3. #25001 [executing] — run chmod +x on burn_pool_id.sh as root.
+
+Reference IDs:
+- Ideas filed: #24995 [executing], #25001 [executing], #24976 [executing], #24986 [executing], #24993 [proposed]
+- Files touched: /var/www/emtskills/cron/cron_glm52_ring_health_monitor.php, /Users/rubenmajor/Documents/Cline/Rules/91-every-completion-needs-pickup-prompt.md, /var/www/emtskills/scripts/burn_pool_id.sh
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attemp
+```
+
+### `1786172805164` — 8/8/2026, 2:49:08 AM PT — 441 turns
+
+**Original task:**
+
+```
+We have brought up a new LLM for 120B usage, the name is Big Mac, it lives on the same network as WOPR in San Diego. Here is the AnyDesk informaiton for it. password is qefru3-cocnyf-xuxnoP. I need you to get SSH access to it and then begin running commands to get it setup. It has 3 ARC B70s right now (similar to artemis build less 1), it will hold another ARC B70 tomororw, but we need to put it in the LLM ppol now. Can you get this going, consult the Artemis Runbook, look at Intel as needed and the Runbook we created for Artemis to help move this along?
+```
+
+**Ideas referenced:** #1130, #1131, #11850, #1241, #12425, #1248, #1249, #1252, #1258, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1731, #1732, #1734, #1737, #1739, #1744, #1746, #1747, #177891, #1779, #1798, #1828, #18320, #1833, #1836, #1837, #1839, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2333, #24975 [executing], #24978 [proposed], #3587, #37030, #46641, #4671, #4672, #4673, #5920, #7142, #7149, #8902
+
+**Last PICKUP PROMPT:**
+
+```
+top/bigmac_provision_120b.md`.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task Big Mac 120B Setup (3x ARC B70).
+
+Where we left off (verified 2026-08-08 01:42 PT):
+- Big Mac: 192.168.1.208, hostname "ubuntu", MAC 30:56:0f:47:56:ca, on Dream Machine SE LAN. Alive, SSH open.
+- SSH auth blocked: password rejected for all combos (big-mac/bigmac/ubuntu/root/etc × qefru3-cocnyf / -xuxnoP) from WOPR AND UDM SE. WOPR key not authorized. AnyDesk headless blocked by WOPR user-context error.
+- Poller armed: WOPR /tmp/bigmac_poll.sh (pid 28852) auto-detects when WOPR key lands in authorized_keys.
+- Runbook staged: /Users/rubenmajor/Desktop/bigmac_provision_120b.md
+
+Open threads to drive next:
+1. #24975 [executing] — Tech pastes key-authorization one-liner (above) into Big Mac terminal via AnyDesk. Poller auto-detects. Then from WOPR: `ssh -i /home/emsuserver/.ssh/id_ed25519 <user>@192.168.1.208`. Verify `lspci | grep -i arc` (3x ARC B70), then execute runbook.
+2. #24978 [proposed] — Full provisioning: Intel GPU stack, Docker, vLLM 0.17.0-xpu gpt-oss-120b MXFP4 TP=3 systemd unit, WireGuard mesh (10.100.0.17/18), frankenstein_registry, fleet_inventory, WOPR reverse tunnel.
+
+Reference IDs:
+- Ideas filed: #24975, #24978
+- Big Mac: 192.168.1.208
+- WOPR key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDZxZvwAxtk/Z2cWnTsXUyGEAB+uG9rLdF/va6fDudfh emsuserver@wopr
+- Runbook: /Users/rubenmajor/Desktop/bigmac_provision_120b.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786168161165` — 8/8/2026, 2:21:14 AM PT — 1055 turns
 
 **Original task:**
 
@@ -104,7 +247,7 @@ Where we left off (verified 2026-08-07 22:47 PT):
 - **Confirm-before-mutating
 ```
 
-**Ideas referenced:** #0000, #178424, #178455, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18357, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690, #1871, #18745, #1876, #1877, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #1883, #1894, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #1912, #19348, #19490, #19901, #2006, #20547, #20903, #21125, #21126, #2113, #22060, #22511, #22583, #22680, #23489 [executing], #23506, #23592, #23852, #23920, #23941, #23952, #24400, #24518, #24635 [deployed], #24636 [deployed], #24645 [unknown], #24646 [proposed], #24766, #24791 [deployed], #24877, #24894 [queued], #24895 [proposed], #24897 [executing], #24898 [deployed], #24899 [proposed], #24900 [deployed], #24901 [proposed], #24902 [proposed], #24904 [proposed], #24905 [proposed], #24906 [proposed], #24907 [proposed], #24908 [proposed], #24909 [proposed], #24910 [proposed], #24911 [proposed], #24912 [proposed], #24913 [proposed], #24915, #24926, #24927, #24941, #24946 [executing], #24948, #24956, #24963, #24966 [queued], #24967, #24969, #24974, #24977, #24981, #24984, #24987, #24990 [executing], #24991 [approved], #24992 [proposed], #24993 [proposed], #24994 [proposed], #334155, #3957, #4338, #57066, #64748, #7317
+**Ideas referenced:** #0000, #178424, #178455, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18357, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690, #1871, #18745, #1876, #1877, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #1883, #1894, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #1912, #19348, #19490, #19901, #2006, #20547, #20903, #21125, #21126, #2113, #22060, #22511, #22583, #22680, #23428, #23468 [approved], #23489 [executing], #23506, #23592, #23852, #23920, #23941, #23952, #24400, #24518, #24635 [deployed], #24636 [deployed], #24645 [unknown], #24646 [proposed], #24766, #24791 [deployed], #24877, #24894 [queued], #24895 [proposed], #24897 [executing], #24898 [deployed], #24899 [proposed], #24900 [deployed], #24901 [proposed], #24902 [proposed], #24904 [proposed], #24905 [proposed], #24906 [proposed], #24907 [proposed], #24908 [proposed], #24909 [proposed], #24910 [proposed], #24911 [proposed], #24912 [proposed], #24913 [proposed], #24915, #24926, #24927, #24941, #24946 [executing], #24948, #24956, #24963, #24966 [queued], #24967, #24969, #24974, #24977, #24981, #24984, #24987, #24990 [executing], #24991 [approved], #24992 [proposed], #24993 [proposed], #24994 [proposed], #25036 [proposed], #25037 [proposed], #25038 [proposed], #25042 [proposed], #25043 [deployed], #25044 [deployed], #25045 [proposed], #25046 [deployed], #25047 [deployed], #334155, #3957, #4338, #57066, #64748, #7317
 
 **Last PICKUP PROMPT:**
 
@@ -164,7 +307,78 @@ Fatal was: `PHP Fatal error: Uncaught TypeError: substr(): Argument #1 ($string)
 Root cause: the conversation-memory block at the early-action gate (~line 200) re
 ```
 
-### `1786169603912` — 8/8/2026, 1:49:52 AM PT — 479 turns
+### `1786057314451` — 8/8/2026, 2:12:00 AM PT — 688 turns
+
+**Original task:**
+
+```
+I keep getting this message every 15 minutes and is it fixed or not?
+```
+
+**Ideas referenced:** #1050, #10666, #1100, #11735, #12059, #12060, #12299, #1239, #12503, #12576, #12591, #12609, #12611, #12617, #12619, #12714, #1280, #12802, #12879, #12894, #12900, #13418, #1373, #15161, #1603, #16063, #16242, #16265, #16822, #16834, #177862, #177914, #1784, #18360, #18707, #19173, #19370, #19427, #20885 [queued], #20903, #21432, #21587, #21588, #21667, #21710, #21712, #2182, #21972, #22104, #22105, #2212, #22138, #22209, #22244, #22245, #22726, #22776, #23710, #23711, #23920 [in_progress], #23941 [in_progress], #23944 [in_progress], #23945, #23952, #23954, #23960, #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed], #24122 [deployed], #24230 [proposed], #24347 [proposed], #3093, #3378, #3590, #3822, #3957, #4516, #4536, #4844, #5031, #509402, #509403, #509463, #509687, #509688, #6057, #6978, #7126
+
+**Last PICKUP PROMPT:**
+
+```
+er and patch RubenExecutor.php
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — Stop recurring messages / fix broken crons.
+
+Where we left off (verified 2026-08-08 02:10 PT):
+- ✅ `[EMSU Health]` alerts: FIXED (24h clean)
+- ✅ `cron_argus_feed_kaizen_recipes.php`: FIXED (schema errors resolved)
+- ❌ "RUBEN backlog: 76 issue(s) awaiting review": still firing every 2h at :25 on odd hours into chat 3899 from +19412943388. Emitter not found yet — NOT in `ruben_imessage_outbound_log`, not in cron/lib PHP with matching template text. Likely generated by orchestrator `ruben_autonomous` pipeline.
+- ❌ `cron_ruben_autonomous.php`: two undefined variables at lines 2228 ($retryPendingMaxMin) and 2263 ($pendingMaxMin). These need to be defined before their respective queries.
+- ❌ `cron_executor_health_alert.php`: missing `../lib/sendSMSAuto.php` — fatal error every run → health checks can't send SMSes
+- ❌ `RubenExecutor.php line 4830`: classifier fallback not yet deployed (approved #24230)
+
+Open threads to drive next:
+1. #24122 [deployed] — stale_cron ignore-list + rate-limit — VERIFY still clean
+2. #24230 [approved] — KAIZEN classifier fallback — DEPLOY the patch
+3. #24347 [proposed] — Implementation plan for #24230 — MERGE with #24230
+4. #N/A (file immediately) — Fix `cron_ruben_autonomous.php` undefined variables at lines 2228, 2263
+5. #N/A (file immediately) — Fix `cron_executor_health_alert.php` missing `sendSMSAuto.php` include
+6. #N/A (file immediately) — Find and suppress "RUBEN backlog" emitter
+
+Reference IDs:
+- Ticket: none (originated from Ruben's iMessage)
+- Ideas filed: #24122, #24230, #24347
+- Files touched: `/var/www/emtskills/cron/cron_argus_feed_kaizen_recipes.php`, `/var/www/emtskills/cron/cron_executor_health_alert.php`, `/var/www/emtskills/lib/RubenExecutor.php` (pending), `/var/www/emtskills/cron/cron_ruben_autonomous.php` (pending)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1785954733601` — 8/8/2026, 2:00:19 AM PT — 544 turns
+
+**Original task:**
+
+```
+#SLS MEGA
+
+
+═══════════════════════════════════════════════
+PICKUP PROMPT: EMTSKILLS PERFORMANCE, SLS, CS QUEUES
+═══════════════════════════════════════════════
+Pick up emtskills server performance, Student Lifecycle Service (SLS), and CS queue ownership.
+
+VERIFIED GROUND TRUTH (from ledger + handoff, 2026-08-05):
+EMTSKILLS SLOW-LOAD (fixed 2026-08-04):
+- 3rd recurrence root cause: hourly full-root rsync to 2x 8TB IronWolf HDDs (sda/sdb 97-100% util, 847ms write await) starving MariaDB + PHP-FPM.
+- Old load>30 guard NEVER fired because disk I/O saturation does not show high load (load was 13-1
+```
+
+**Ideas referenced:** #178593, #18329, #18337, #18841 [queued], #18842 [queued], #18848 [deployed], #18850 [deployed], #18864 [queued], #2018, #20825, #2165, #2166, #2167, #2183, #2187, #2193, #2201, #2214, #2219 [deployed], #2220, #2222, #22258 [superseded], #22294 [deployed], #2233, #2239, #2255, #2262, #2268, #23173 [in_progress], #23211 [in_progress], #23223 [in_progress], #23308 [in_progress], #23341 [in_progress], #24184 [in_progress], #24400, #24895, #24897, #24898, #24900, #24901, #24902, #24904, #24905, #24913, #24946, #25039 [in_progress], #5459, #5608
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786169603912` — 8/8/2026, 1:59:03 AM PT — 500 turns
 
 **Original task:**
 
@@ -177,118 +391,31 @@ Play frankenstein doctor of executor. Lots of failed ideas impl blocked, etc.. n
 **Last PICKUP PROMPT:**
 
 ```
+
 <attempt_completion>
 <result>
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Frankenstein doctor executor fleet rescue: rule-91 escape hatch finalization + overnight autonomous verification.
+Pick up task — Frankenstein doctor executor fleet rescue: rule-91 escape hatch finalization + overnight autonomous run.
 
-Where we left off (verified 2026-08-08 01:47 PT):
-- Executor unblocked: fleet_admission.py returns ALLOWED 1 for executor (previously 0) — verified live with "reserving 7 for higher-priority observed demand (executor min-1 floor override)"
-- 7+ ideas dispatching since floor at 00:04 (latest #22816 P0 at 01:10, drafting)
-- DEADMAN flood contained: flood-title count = 4 (no regen), dedup fix live
-- Idea-ID pool for offline deadlock: 28 reserved slots inserted, IDs 25002-25029, status 'reserved' — verified via SELECT MIN/MAX/COUNT (25002, 25029, 28)
-- Kaison self-heal: 3 recipes inserted (deadman dedup flood, fleet starvation, stuck-idle) — IDs 416-418, verified enabled=1, rca_retrain_enabled=1
-- Universal Kaison recipe scanner shipped: /etc/cron.d/emsu-kaison-recipe-scanner, live test "scanned 6 recipes, fired=2" — auto-redispatched 10 stalled ideas
-- cron_bug_classifier_wrapper.php built + lint-clean + deployed
-- Orchestrator healthy: autonomous, server load 152-157 (stable), 0 stale locks, 151 learning_pending
+Where we left off (verified 2026-08-08 01:58 PT):
+- Fleet rescued: DEADMAN flood dedup fix live (4 flood-titles approved, no regen), Kaison 3 recipes + universal scanner cron active (every 15 min), fleet admission executor min-1 floor shipped (ALLOWED 1 concurrent, verified), cron bug classifier wrapper built + deployed + lint OK (verified), executor unblocked (15 in_progress + 5 drafting, latest idea #22816 moved to drafting at 01:10).
+- Idea-ID pool created: 28 reserved slots (IDs 25002-25029), status reserved. Anti-deadlock for rule-91 transport failures.
+- Rule-91 RCA filed as #24995, explained to Ruben. Pool shipped as #25001. Both approved.
+- emsu-operations MCP intermittently degraded (ssh_command broken, write_server_file flaky on complex content, read_server_file path-only works). Transport is the root cause of the rule-91 completion-deadlock tonight.
 
-Open threads to drive next:
-1. #24995 [deployed] — Finalize rule-91 degraded-mode escape hatch text. The .clinerules dir is NOT on local Mac filesystem and server path 403s; it is injected into Cline system prompt. Options: (a) find rules via Cline settings dir (browse ~/Library/Application Support/* Cline globalStorage for rules template), (b) submit the exact remediation text here and have Ruben paste it into the rules source of truth when he's back. The ID-pool half of the fix (#25001) is DONE and verified.
-2. #24976 [proposed] — Wire cron_bug_classifier_wrapper into ring health monitor: append `include __DIR__ . '/../lib/cron_bug_classifier_wrapper.php';` at EOF of /var/www/emtskills/cron/cron_glm52_ring_health_monitor.php. Blocked by write-server transport (writes with shell chars fail). Use base64 write once transport recovers.
-3. #24986 [proposed] — Watch /var/log/cron_ruben_implement.log 1hr, confirm executor spawns >=1 consistently (Idea #22816 and others confirmed moving to drafting; full 1hr verification pending).
-4. #24993 [proposed] — Drain 151 pending learning/RCA items once executor stability confirmed.
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #24976 — Wire cron bug classifier wrapper into ring health monitor. Append `include __DIR__ . '/../lib/cron_bug_classifier_wrapper.php';` at EOF of `/var/www/emtskills/cron/cron_glm52_ring_health_monitor.php`. Use `write_server_file` with minimal content first, then verify with `read_server_file` path-only. If transport still blocks, file as follow-up.
+2. #24986 — Confirm executor spawns 1+ worker across multiple cron ticks. Read `/var/log/cron_ruben_implement.log` (path-only, last 50 lines) and verify no spawned-0 ticks since fleet floor at 00:04. If spawned-0 reappears, escalate.
+3. #24993 — Drain 151 learning_pending RCA items. Once #24986 confirms executor stable (1hr clean), trigger learning drain cron and verify each item drains to completed.
+4. #24995 — Finalize rule-91 degraded-mode escape hatch. Add text to `.clinerules/91.md`: "Degraded-mode escape hatch: if the agent has attempted a valid PICKUP PROMPT 2+ times AND all MCP create_idea calls fail with documented transport errors, the agent may use a pre-allocated pool ID (from the reserved pool, IDs 25002-25029) and complete. The pool slot is burned by updating its title to the actual topic. A sync process later reconciles."
+5. #25001 — Mark pool creation as completed. 28 reserved slots verified in DB (IDs 25002-25029). Next: write burn-from-pool CLI helper at `/var/www/emtskills/scripts/burn_pool_id.sh` that takes a title and description, updates the next available pool slot, and returns its ID.
 
 Reference IDs:
-- Ticket: none (session is build+ops)
-- Ideas filed: #24995 (rule-91 RCA), #24996 (explain), #25001 (ID pool), #24963, #21167, #24976, #24986, #24993
-- Files touched: /usr/local/bin/fleet_admission.py (floor patch), /var/www/emtskills/lib/deadman_rca_feedback.php (dedup fix), /var/www/emtskills/cron/cron_kaison_recipe_scanner.php (new), /etc/cron.d/emsu-kaison-recipe-scanner (new), /var/www/emtskills/lib/cron_bug_classifier_wrapper.php (new), orchestrator_ideas rows 25002-25029 (pool)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786172805164` — 8/8/2026, 1:48:39 AM PT — 287 turns
-
-**Original task:**
-
-```
-We have brought up a new LLM for 120B usage, the name is Big Mac, it lives on the same network as WOPR in San Diego. Here is the AnyDesk informaiton for it. password is qefru3-cocnyf-xuxnoP. I need you to get SSH access to it and then begin running commands to get it setup. It has 3 ARC B70s right now (similar to artemis build less 1), it will hold another ARC B70 tomororw, but we need to put it in the LLM ppol now. Can you get this going, consult the Artemis Runbook, look at Intel as needed and the Runbook we created for Artemis to help move this along?
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1731, #1732, #1734, #1737, #1739, #1744, #1746, #1747, #177891, #1779, #1798, #1828, #18320, #1833, #1836, #1837, #1839, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2333, #24975 [executing], #24978 [proposed], #3587, #37030, #46641, #4671, #4672, #4673, #5920, #7142, #7149, #8902
-
-**Last PICKUP PROMPT:**
-
-```
-top/bigmac_provision_120b.md`.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task Big Mac 120B Setup (3x ARC B70).
-
-Where we left off (verified 2026-08-08 01:42 PT):
-- Big Mac: 192.168.1.208, hostname "ubuntu", MAC 30:56:0f:47:56:ca, on Dream Machine SE LAN. Alive, SSH open.
-- SSH auth blocked: password rejected for all combos (big-mac/bigmac/ubuntu/root/etc × qefru3-cocnyf / -xuxnoP) from WOPR AND UDM SE. WOPR key not authorized. AnyDesk headless blocked by WOPR user-context error.
-- Poller armed: WOPR /tmp/bigmac_poll.sh (pid 28852) auto-detects when WOPR key lands in authorized_keys.
-- Runbook staged: /Users/rubenmajor/Desktop/bigmac_provision_120b.md
-
-Open threads to drive next:
-1. #24975 [executing] — Tech pastes key-authorization one-liner (above) into Big Mac terminal via AnyDesk. Poller auto-detects. Then from WOPR: `ssh -i /home/emsuserver/.ssh/id_ed25519 <user>@192.168.1.208`. Verify `lspci | grep -i arc` (3x ARC B70), then execute runbook.
-2. #24978 [proposed] — Full provisioning: Intel GPU stack, Docker, vLLM 0.17.0-xpu gpt-oss-120b MXFP4 TP=3 systemd unit, WireGuard mesh (10.100.0.17/18), frankenstein_registry, fleet_inventory, WOPR reverse tunnel.
-
-Reference IDs:
-- Ideas filed: #24975, #24978
-- Big Mac: 192.168.1.208
-- WOPR key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDZxZvwAxtk/Z2cWnTsXUyGEAB+uG9rLdF/va6fDudfh emsuserver@wopr
-- Runbook: /Users/rubenmajor/Desktop/bigmac_provision_120b.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786057314451` — 8/8/2026, 1:32:23 AM PT — 602 turns
-
-**Original task:**
-
-```
-I keep getting this message every 15 minutes and is it fixed or not?
-```
-
-**Ideas referenced:** #1050, #10666, #11735, #12059, #12060, #12299, #1239, #12503, #12576, #12591, #12609, #12611, #12617, #12619, #12714, #1280, #12802, #12879, #12894, #12900, #13418, #1373, #15161, #1603, #16063, #16242, #16265, #16822, #16834, #177862, #177914, #1784, #18360, #18707, #19173, #19370, #19427, #20885 [queued], #20903, #21432, #21587, #21588, #21667, #21710, #21712, #2182, #21972, #22104, #22105, #2212, #22138, #22209, #22244, #22245, #22726, #22776, #23710, #23711, #23920 [in_progress], #23941 [in_progress], #23944 [in_progress], #23945, #23952, #23954, #23960, #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed], #24122 [deployed], #24230 [proposed], #24347 [proposed], #3093, #3378, #3590, #3822, #3957, #4516, #4536, #5031, #509402, #509403, #509463, #509687, #509688, #6057, #6978, #7126
-
-**Last PICKUP PROMPT:**
-
-```
-ove for the next Cline window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — EMSU recurring alerts + KAIZEN classifier
-
-Where we left off (verified 2026-08-08 01:29 PT):
-- #24122 [deployed] — stale_cron + stale_decisions alert fix (24h clean, verified via DB query showing 0 `[EMSU Health]` iMessages in last 24h)
-- #20885 [deployed] — KAIZEN recipe pipeline deploy (verified; 96K recipe fires in DB)
-- #24347 [proposed] — Implementation plan for classifier fallback at line 4830
-- Files touched: `/var/www/emtskills/cron/cron_executor_health_alert.php`, `/var/www/emtskills/cron/cron_argus_feed_kaizen_recipes.php`
-
-Open threads to drive next:
-1. #24347 [proposed] — Implement classifier fallback: insert DB-backed detection_pattern evaluation before `return 'unclassified'` at RubenExecutor.php line 4830. Use `$this->db` (PDO property), query `failure_repair_recipes` WHERE `detection_pattern IS NOT NULL`, evaluate conditions against `$errorText`, `$whatsPending`, `$outcome`. The base64+swo-write technique that worked for the stale_cron fix is the most reliable server-write path.
-2. #24122 audit — Verify the stale_cron fix still holds by checking `grep -rn 'CRON_STALE_IGNORE' /var/www/emtskills/cron/cron_executor_health_alert.php` (should show 2 occurrences: constant definition + array_filter use)
-3. RUBEN backlog emitter — Find and suppress the ~2h "RUBEN backlog: N issue(s) awaiting review" message from +19412943388 → chat 3899. Template text doesn't exist in codebase — likely generated by orchestrator LLM notification. Search `orchestrator_decisions` or `ruben_imessage_queue` for the source.
-
-Reference IDs:
-- Ticket: KAIZEN recipe #20885
-- Ideas filed: #24122 [deployed], #20885 [deployed], #24230 [proposed], #24347 [proposed]
-- Files touched: `cron_executor_health_alert.php`, `cron_argus_feed_kaizen_recipes.php`, `RubenExecutor.php` (pending)
+- Ticket: none
+- Ideas filed: 24995, 25001, 24976, 24986, 24993, 24963, 21167
+- Files touched: /var/www/emtskills/lib/deadman_rca_feedback.php, /usr/local/bin/fleet_admission.py, /var/www/emtskills/cron/cron_kaison_recipe_scanner.php, /etc/cron.d/emsu-kaison-recipe-scanner, /var/www/emtskills/lib/cron_bug_classifier_wrapper.php
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -862,29 +989,6 @@ The completion must state plainly that **Julia is fine** (2 live `VLLM::EngineCo
 </task_progress>
 </summarize_task>
 ```
-
-### `1785954733601` — 8/7/2026, 10:15:30 AM PT — 486 turns
-
-**Original task:**
-
-```
-#SLS MEGA
-
-
-═══════════════════════════════════════════════
-PICKUP PROMPT: EMTSKILLS PERFORMANCE, SLS, CS QUEUES
-═══════════════════════════════════════════════
-Pick up emtskills server performance, Student Lifecycle Service (SLS), and CS queue ownership.
-
-VERIFIED GROUND TRUTH (from ledger + handoff, 2026-08-05):
-EMTSKILLS SLOW-LOAD (fixed 2026-08-04):
-- 3rd recurrence root cause: hourly full-root rsync to 2x 8TB IronWolf HDDs (sda/sdb 97-100% util, 847ms write await) starving MariaDB + PHP-FPM.
-- Old load>30 guard NEVER fired because disk I/O saturation does not show high load (load was 13-1
-```
-
-**Ideas referenced:** #18329, #18337, #18841 [queued], #18842 [queued], #18848 [deployed], #18850 [deployed], #18864 [queued], #2018, #20825, #2165, #2166, #2167, #2183, #2187, #2193, #2201, #2214, #2219 [deployed], #2220, #2222, #22258 [superseded], #22294 [deployed], #2233, #2239, #2255, #2262, #23173 [in_progress], #23211 [in_progress], #23223 [in_progress], #23308 [in_progress], #23341 [in_progress], #24184 [in_progress], #5459, #5608
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786005641053` — 8/7/2026, 10:13:45 AM PT — 422 turns
 
@@ -2593,42 +2697,3 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1785912519173` — 8/5/2026, 2:29:54 AM PT — 396 turns
-
-**Original task:**
-
-```
-#GLM
-
-I have stalling new and old frankenstein-llm windows here in cline indicating GLM is stalled out
-
-Went 12 with 7/5, as you suggested. But the doctor pass says lane count was never the problem, and I want to show you why before you accept the change.
-
-## What I actually measured
-
-| | per-stream | aggregate |
-|---|---|---|
-| width 8 | 1.34 tok/s | 10.7 tok/s |
-| width 15 | **1.35 tok/s** | **20.2 tok/s** |
-
-Widening did not cost per-stream speed at all. Aggregate nearly doubled. By the numbers, 15 was working.
-
-And during your stall report: only **9 chat completions in 3 minutes** while al
-```
-
-**Ideas referenced:** #12584, #12689, #13108, #16844, #17203, #17205, #18720, #19338, #19686, #1998, #2091, #2094, #2112, #2210 [rejected], #22128 [executing], #22680 [proposed], #22681 [proposed], #22729 [proposed], #22752 [proposed], #22761 [proposed], #22765 [proposed], #22770 [proposed], #22784 [proposed], #22795 [proposed], #22796 [proposed], #22797 [proposed], #22808 [proposed], #22815 [proposed], #22818 [proposed], #22827 [proposed], #22856 [proposed], #22866 [proposed], #22890 [proposed], #22897 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785908659354` — 8/5/2026, 2:00:48 AM PT — 69 turns
-
-**Original task:**
-
-```
-Frankenstein-llm window seems stuck or crawling at snails speed (later more likely) dwith subagent calls. Has 0 tools called. Great initial burst on tokens now stalling (only on subagents_ -odd ->
-```
-
-**Ideas referenced:** #10740 [executing], #10741 [executing], #10742 [executing], #11953, #12299, #12672, #13202, #13832, #16163, #16588, #18720, #19653
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

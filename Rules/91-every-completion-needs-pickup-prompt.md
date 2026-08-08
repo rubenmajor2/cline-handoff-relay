@@ -99,6 +99,18 @@ If rule 91 is **1,000 words** → agents skip it. If it's **this short** (~400 w
 - Rule 267 — reconcile ideas before completion
 - _RULE_TREE.md Gate 9 — pre-completion gate
 
+## Degraded-mode escape hatch (2026-08-08, idea #24995)
+
+**Degraded-mode escape hatch:** if the agent has attempted a valid PICKUP PROMPT 2+ times AND all MCP `create_idea` calls fail with documented transport errors, the agent may use a pre-allocated pool ID (from the reserved pool, IDs 25002-25029) and complete. The pool slot is burned by updating its title to the actual topic. A sync process later reconciles.
+
+Conditions (ALL must be true):
+1. The agent has attempted at least 2 valid PICKUP PROMPT blocks that the transport layer dropped.
+2. `create_idea` calls via `ruben-orchestrator` MCP fail with documented errors (not silent success).
+3. The agent uses the `/var/www/emtskills/scripts/burn_pool_id.sh` helper to consume the next available pool slot.
+4. The agent cites the burned pool ID in the PICKUP PROMPT with `[executing]` tag and the note "(pool #<id> burned for transport-degraded completion)".
+
+This is a LAST RESORT. If `create_idea` works, the agent MUST file ideas normally. Pool IDs are a finite resource (28 slots, 25002-25029).
+
 ## Source
 
 2026-05-19 Ruben directive. 2026-07-14: 3 violations in one window (no pickup block, bare #NNNN, no open threads). Root cause: steering injection's "pure Q&A exception" + bloated 151-line rule. Both fixed. 2026-07-22 violation #15 (per Cline_Obedience.md): agent shipped a structurally-correct PICKUP PROMPT block inside `task_progress` instead of `result` — added explicit ban + quick-check step 1 rewording to gate on `result` specifically. 2026-08-01: `[queued]` disposition banned by Ruben directive — queued was being used as an excuse to park ideas indefinitely instead of implementing them. reconcile_ideas no longer derives `[queued]` (approved → executing, ready_for_review → awaiting_review, default → unknown). See rule 161.

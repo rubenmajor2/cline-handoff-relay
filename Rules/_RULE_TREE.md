@@ -180,7 +180,30 @@ Scan the trigger lines above before acting. Match = fetch that branch FIRST via
 Hardfloor rules (★) are always loaded; everything else is one lookup away.
 MCP `emsu://` resources are separate from rules — cross-reference both.
 
+**Renumbered 2026-08-08 (idea #25188) — collision cleanup.** Eleven numbers each had
+TWO different rules. Nine were genuine distinct rules that had collided (a rule number
+is a filename prefix, and nothing enforced uniqueness), so `clinerules_lookup(N)`
+returned whichever file sorted first: a coin flip. The tree-cited rule KEPT its number;
+its twin was renumbered. One (296) was a true duplicate and was retired to Rules-backups/.
+
+| was | now | rule |
+|---|---|---|
+| 255 | **306** | cx7-tp2-cluster-operations-runbook |
+| 273 | **307** | student-certificate-issued-means-done |
+| 274 | **308** | parallel-distributed-file-transfer |
+| 275 | **309** | cicero-ssh-access-and-wireguard |
+| 278 | **310** | afk-mode-needs-verify-auto-deploys |
+| 281 | **311** | regulator-response-playbook |
+| 298 | **312** | router-reporting-must-resolve-adapter-names |
+| 91 | **313** | refund-offer-not-act |
+| 296 dup | retired | never-declare-llm-dead-from-cached-probe (kept the -an-llm- variant) |
+
+`29-case-law.md` and `41-addenda.md` intentionally share their parent's number: they are
+companion files to a hardfloor rule, not separate rules. That is the trim-then-archive
+pattern, not a collision.
+
 **Adding a rule?** New rules go in `Rules-archive/` by default (see `_INDEX.md`
+
 "Adding a new rule" for the caps, the trim-then-archive pattern, and the 5 steps).
 You MUST add the new number to the right `R:` line above or it is invisible to
 future windows. Then reindex:

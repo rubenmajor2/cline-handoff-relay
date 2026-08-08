@@ -866,6 +866,49 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
                 `${bare.map((i) => "#" + i).join(", ")}. ` +
                 `Every #NNNN needs one of [deployed|executing|blocked|proposed|rejected|superseded|awaiting_review].`);
         }
+        // SELF_CONTRADICTING_DISPOSITION (idea #25185, 2026-08-08).
+        // Ruben: "I'm being told by Cline agents that things are completed which are
+        // not being completed." Root cause: when an agent HAND-SHIPS a fix (rule 267
+        // GATE C) it edits the server but never stamps orchestrator_ideas, so the row
+        // stays proposed/idle. reconcile_ideas then faithfully returns [proposed],
+        // the agent pastes that tag beside prose that honestly says FIXED, and the
+        // completion contradicts itself. Every prior gate passed it: rule 91 only
+        // checks a tag EXISTS, rule 267 only checks a reconcile CALL happened.
+        // Neither compares the tag to the CLAIM. This does.
+        const contradictions = [];
+        const claimWord = /\b(FIXED|DEPLOYED|SHIPPED|LIVE IN PRODUCTION|DONE|COMPLETED|VERIFIED LIVE|HAND-SHIPPED)\b/i;
+        const notYetTag = /#(\d{3,8})\s*\[(proposed|executing|awaiting_review)\]/gi;
+        let cm;
+        while ((cm = notYetTag.exec(result_text)) !== null) {
+            const id = cm[1];
+            const tag = cm[2].toLowerCase();
+            // look at the surrounding sentence window on BOTH sides of the tag
+            const from = Math.max(0, cm.index - 220);
+            const to = Math.min(result_text.length, cm.index + cm[0].length + 220);
+            // 2026-08-08 false-positive fix (found by the gate firing on its own author's
+            // completion): a NEIGHBOURING "#NNNN [deployed]" tag contains the literal word
+            // DEPLOYED, which matched claimWord and flagged an innocent [proposed] item
+            // sitting next to it in a list. Strip ALL disposition brackets from the window
+            // before testing, so only genuine PROSE claims count. Without this the gate is
+            // unusable in any completion that lists deployed and proposed ideas together,
+            // which is nearly every real completion.
+            const window = result_text
+                .slice(from, to)
+                .replace(/\[(deployed|executing|blocked|proposed|rejected|superseded|awaiting_review)\]/gi, "");
+            if (claimWord.test(window)) {
+                const key = `#${id} [${tag}]`;
+                if (!contradictions.includes(key))
+                    contradictions.push(key);
+            }
+        }
+        if (contradictions.length > 0) {
+            failures.push(`SELF_CONTRADICTING_DISPOSITION: ${contradictions.length} idea(s) are described with completion language ` +
+                `(FIXED/DEPLOYED/SHIPPED/DONE/VERIFIED LIVE) while carrying a NOT-YET-DONE tag: ${contradictions.join(", ")}. ` +
+                `Either (a) the work IS shipped -- then stamp the record first: UPDATE orchestrator_ideas SET status='deployed', ` +
+                `dev_stage='ready_for_review', implemented_at=NOW(), implemented_files=JSON_ARRAY('/path') WHERE id=N; ` +
+                `re-run reconcile_ideas, and use the [deployed] tag it returns. Or (b) the work is NOT shipped -- then remove the ` +
+                `completion language. A completion that says FIXED next to [proposed] is unreadable to Ruben (idea #25185).`);
+        }
     }
     // ── EXISTENCE + IDENTITY GATE (2026-07-28, source incident below) ───────
     // A Cline window shipped a pickup prompt citing #19898-#19904 as ideas it

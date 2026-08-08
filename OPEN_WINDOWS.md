@@ -6,16 +6,19 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/8/2026, 2:46:52 PM PT | window: last 72h | 92 tasks | index total 567 (parsed 6, cached 561)
+Generated: 8/8/2026, 3:46:52 PM PT | window: last 72h | 95 tasks | index total 570 (parsed 7, cached 563)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786225462991` | 8/8/2026, 2:46:21 PM | 7 | 17KB | I had a thought. One advantage the LLM seems to have over the human is that it can think a |
-| `1786224531010` | 8/8/2026, 2:45:50 PM | 67 | 133KB | #Big Mac |
-| `1786214054947` | 8/8/2026, 2:44:45 PM | 404 | 930KB | Can you play doctor of ruben executor and take a look at this page: https://emsuniversity. |
-| `1786211264211` | 8/8/2026, 2:36:20 PM | 699 | 1678KB | #Context |
-| `1786211568282` | 8/8/2026, 2:31:30 PM | 314 | 769KB | #Argus |
-| `1786211859440` | 8/8/2026, 2:30:13 PM | 418 | 744KB | #Subagents, etc... |
+| `1786225462991` | 8/8/2026, 3:45:27 PM | 149 | 521KB | I had a thought. One advantage the LLM seems to have over the human is that it can think a |
+| `1786229125708` | 8/8/2026, 3:45:26 PM | 1 | 2KB | Do a deep dive and give your thoughts on the 85% confidence gate of rule 29 and whether it |
+| `1786227462879` | 8/8/2026, 3:45:25 PM | 49 | 122KB | #Executor Ops |
+| `1786211859440` | 8/8/2026, 3:45:02 PM | 541 | 1014KB | #Subagents, etc... |
+| `1786226983152` | 8/8/2026, 3:45:00 PM | 79 | 348KB | what is 25220?  |
+| `1786224531010` | 8/8/2026, 3:44:45 PM | 233 | 586KB | #Big Mac |
+| `1786211568282` | 8/8/2026, 3:44:29 PM | 433 | 989KB | #Argus |
+| `1786214054947` | 8/8/2026, 3:15:32 PM | 476 | 1066KB | Can you play doctor of ruben executor and take a look at this page: https://emsuniversity. |
+| `1786211264211` | 8/8/2026, 3:09:34 PM | 784 | 1911KB | #Context |
 | `1786211367196` | 8/8/2026, 12:26:07 PM | 302 | 1193KB | #Big Mac |
 | `1786212070741` | 8/8/2026, 12:26:03 PM | 240 | 770KB | Why would this cost any money at all? You need to really take a look at that and see that  |
 | `1786212454095` | 8/8/2026, 11:53:58 AM | 238 | 904KB | #Telephony |
@@ -107,7 +110,7 @@ Generated: 8/8/2026, 2:46:52 PM PT | window: last 72h | 92 tasks | index total 5
 
 ## Per-window detail
 
-### `1786225462991` — 8/8/2026, 2:46:21 PM PT — 7 turns
+### `1786225462991` — 8/8/2026, 3:45:27 PM PT — 149 turns
 
 **Original task:**
 
@@ -115,161 +118,56 @@ Generated: 8/8/2026, 2:46:52 PM PT | window: last 72h | 92 tasks | index total 5
 I had a thought. One advantage the LLM seems to have over the human is that it can think a thought which has an idea to be executed, while humans have a dificult time doing that withough spacial interdimensional thining. How can this be leveraged?
 ```
 
-**Ideas referenced:** #25227
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786224531010` — 8/8/2026, 2:45:50 PM PT — 67 turns
-
-**Original task:**
-
-```
-#Big Mac
-
-continue
-
-**Everything working. Here's the complete status as of 12:25 PT:**
-
-**#25120 [shipped]** — CORRECTIVE_RETRY_ENABLED live, zero errors since 11:18 restart.
-
-**#25122 [shipped]** — Option B: `executor_plan_race.php` (93 lines) + `executor_parallel_calls_enabled` gate at RubenExecutor:2402. Both `php -l` clean. Awaiting next executor planner tick to exercise curl_multi race.
-
-**#25131 [shipped]** — Rule 147 48h gate REMOVED. `FRESHNESS_HOURS=0` in cron_kaison_wedge_detection.php means `kaison_freshness_gate()` always returns true — Kaison now repairs any classifiable incident 
-```
-
-**Ideas referenced:** #12619, #24635, #24636, #24645, #24646, #24791, #25097 [executing], #25111 [proposed], #25112 [shipped], #25120 [shipped], #25122 [shipped], #25125 [executing], #25127 [rejected], #25131 [shipped], #25158, #25159, #25172, #25173 [approved], #25176 [rejected], #25178, #25193 [approved], #25195 [proposed], #25196 [proposed]
+**Ideas referenced:** #14847, #15637, #16613, #17580, #23642 [superseded], #24635, #24636, #24645, #24646, #24791, #25097, #25111, #25112, #25120, #25122, #25125, #25127 [rejected], #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [executing], #25227 [executing], #25228 [proposed], #25229 [proposed], #25238 [proposed], #25240 [proposed], #25241 [proposed], #25242 [proposed], #7551, #9086, #9831
 
 **Last PICKUP PROMPT:**
 
 ```
-n_race exercise
-- [x] DB cleanup: 15 stuck ideas
-- [ ] Final status report with PICKUP PROMPT
-</task_progress>
+php
+- [ ] Deploy, dry-run test, verify approvals
+- [ ] Register cron, ship with PICKUP PROMPT</parameter>
 </use_mcp_tool>
 ```
 
-### `1786214054947` — 8/8/2026, 2:44:45 PM PT — 404 turns
+### `1786229125708` — 8/8/2026, 3:45:26 PM PT — 1 turns
 
 **Original task:**
 
 ```
-Can you play doctor of ruben executor and take a look at this page: https://emsuniversity.com/emtskills/routes/ruben_executor_live.php 
+Do a deep dive and give your thoughts on the 85% confidence gate of rule 29 and whether it's the sweet spot of innovation and progress without too much fallback and if so why, if not why not and recommendations if any? 
 
-Make sure that every single table that is on this page is wired in properly to reality. I need to be able to take a look at the page and make sure that this statistics that fit fax the figures all of that stuff is properly wired in so that I could see what's going on. This may require some extensive work but it's very important for you to do all of this into end. Again you're going to probably have to use a browser window with a token so that you can access a
+When do we end up with rollbacks or reversions or don't like the 85% gate. Give good data
 ```
-
-**Ideas referenced:** #059669, #1050, #12802, #12836, #12879, #13418, #1373, #16822, #16881, #17560, #19427, #25127, #25172, #25201 [queued], #25202 [proposed], #25203 [proposed], #25204 [proposed], #25205 [proposed], #25223, #25224, #25225, #25226, #2563, #3957, #4536, #4775, #5031, #5578, #6057, #6285, #6300, #6366, #64748, #7048, #78350, #8200, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-e planner LLM routing problem.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #(current) — ruben_executor_live.php Doctor follow-up
-
-Where we left off (verified 2026-08-08 14:43 PT):
-- Reranker fixed: override.conf concurrency=4, CPUQuota=1200%, load healthy at ~19
-- Gated re-queue script staged at `/tmp/requeue_with_gate.php` (lint OK, NOT YET EXECUTED — tunnel was down)
-- RAG static method `injectRagContextForTriage` appended to `/var/www/emtskills/lib/RagSurfaceEnforcer.php` — cron call site at line 600 NOT YET UPDATED to use new method name
-- Executor unpaused: ruben_pause_all=false
-- 74 failed chains in 24h (planner JSON failure) — need gated re-queue
-- WOPR HAS a GPU — reranker running on CPU
-
-Open threads to drive next:
-1. #25201 — Execute `sudo php /tmp/requeue_with_gate.php` on WOPR [queued]
-2. #25223 — Fix cron_ruben_autonomous.php line 600: change `RagSurfaceEnforcer::injectRagIntoPrompt(...)` to `RagSurfaceEnforcer::injectRagContextForTriage(...)` [needs_verify]
-3. #25224 — Verify WOPR GPU (nvidia-smi, CUDA), move reranker to GPU to cut CPU 490%→0% [ready_for_review]
-4. #25225 — Integrate stale-idea gate into dispatcher (from /tmp/requeue_with_gate.php) [ready_for_review]
-5. #25226 — Build Tyson auto-detect+auto-heal for recurring executor clogs [ready_for_review]
-
-Reference IDs:
-- Tickets: None (Doctor session)
-- Ideas filed: #25201, #25223, #25224, #25225, #25226
-- Files touched: `/etc/systemd/system/emsu-reranker.service.d/override.conf`, `/var/www/emtskills/lib/RagSurfaceEnforcer.php`, `/tmp/requeue_with_gate.php`
-- Page: https://emsuniversity.com/emtskills/routes/ruben_executor_live.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786211264211` — 8/8/2026, 2:36:20 PM PT — 699 turns
-
-**Original task:**
-
-```
-#Context
-
-Let's talk also about the contextual improvements that we made and whether they are having an impact and whether we need to make any others where we are using disc space to leverage limited context. Also because we are using executor I would think this is something I'm not sure exactly where this is living this context but should it not be on WOPR? Or is it already? Where does this live?
-
---
-Fixed forward, config only. No rollback of the context increase.
-
-WHAT THE PRIOR WINDOW GOT RIGHT AND WHAT IT MISSED
-
-Your RCA was correct: the hardfloor set was duplicated and the trim updated o
-```
-
-**Ideas referenced:** #0000, #11417, #11847, #12249, #12251, #12266, #12269, #12285, #12588, #12589, #12590, #12688, #12689, #13204, #13470, #14133, #14142, #14205, #15268, #15776 [deployed], #16032, #16224, #16448, #16449, #16461, #16463, #16464, #16525, #16715, #17078, #19125, #19173, #19175 [executing], #19176 [queued], #19686, #19898, #19899 [proposed], #19904, #20251, #20569, #24207, #24971 [rejected], #24972 [rejected], #24973 [rejected], #24985 [rejected], #24988 [executing], #25128 [executing], #25150 [executing], #25151 [executing], #25153 [proposed], #25154 [proposed], #25155 [proposed], #25156, #25157, #25158, #25168 [proposed], #25169 [proposed], #25170 [proposed], #25171 [proposed], #25182 [proposed], #25183 [proposed], #25184 [proposed], #25185 [executing], #25186 [proposed], #25187 [proposed], #25188 [deployed], #25190 [deployed], #25194 [deployed], #25198 [deployed], #25199 [deployed], #25200 [deployed], #25220 [proposed], #25221 [deployed], #25222 [deployed], #27116, #29373, #36237, #40899, #40969, #5344, #5346, #5348, #6729
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786211568282` — 8/8/2026, 2:31:30 PM PT — 314 turns
+### `1786227462879` — 8/8/2026, 3:45:25 PM PT — 49 turns
 
 **Original task:**
 
 ```
-#Argus
+#Executor Ops
 
-Can you confirm for me that all of the ideas below were actually implemented? I know that we took some of these ideas a little bit further but I just wanna see if they were implemented and I don't wanna revert really good changes that we made cell you do need to be careful with this
+First off the claim of no GPU is wrong -> Blackwell 6000 pro or something, 16gb card find it and use it if it helps reduce the 2500 CPU load spike
 
-For my last Argus Chat, I noticed we need to make a great number of improvements. I do NOT want you to forget any of these. I want you to execute them all as well as answer ALL of my questions in the original chat. We need to give Argus more power
+## ruben_executor_live.php — Full Table Wiring Audit + Pipeline Doctor Report
 
---
-Argus
-New chat started. Saves automatically after your 
+### Page Wiring: VERIFIED ✅
+
+Every table on the page is wired to real data sources:
+
+| Section | Query Source | Status |
+|---------|-------------|--------|
+| Quick Stats banner | SELECT COUNT() GROUP BY outcome | ✅ Verified — 25 failed, 48 executed in 24h |
+| Eligible Pool Drain | session_handoffs.status counts | ✅ Verified — 18,007 eligible chains |
+| Cur
 ```
 
-**Ideas referenced:** #128275, #16213, #21262, #22850, #23027, #23429, #23506, #24877, #24897, #24926, #24990 [deployed], #24991 [deployed], #25036 [approved], #25037 [approved], #25044 [approved], #25047 [approved], #25049 [proposed], #25057 [in_progress], #25058 [implemented], #25059 [live], #25060 [in_progress], #25077 [approved], #25152 [pending], #25165 [proposed], #25166 [proposed], #25167 [proposed], #25171 [proposed], #25181 [proposed], #25189 [pending], #26002 [deployed], #26003 [proposed], #274160, #30363, #8645, #8942, #9654, #9660, #9733
+**Ideas referenced:** #1373, #24646, #25097, #25111, #25120, #25122, #25125, #25127 [rejected], #25131, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [executing], #25201 [executing], #25223 [needs_verify], #25224 [ready_for_review], #25225 [ready_for_review], #25226 [ready_for_review]
 
-**Last PICKUP PROMPT:**
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-```
-but hasn't been implemented.**
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up the Kaison JS syntax guard build — task: implement #25165 for real.
-
-Where we left off (verified 2026-08-08 14:30 PT):
-- #25165 [proposed] — Kaison JS syntax guard (node --check on every rendered script block). NOT implemented — grep for "node --check" returns zero hits across /var/www/emtskills/. Idea #25165 is the canonical row (re-filed from phantom #26003).
-- All other approved items shipped this session: #25167, #25047, #25059(a)/(b), #25189 (recipe #437), #25060 superseded.
-- node v20.20.2 is available at /usr/bin/node on the server.
-- Candidate hook points: /var/www/emtskills/cron/cron_planner_prompt_safe_deploy_enforcer.php (safe-deploy enforcement), /var/www/emtskills/lib/kaison_watchdog_pump.php, /var/www/emtskills/cron/cron_kaison_recipe_scanner.php.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #25165 — IMPLEMENT the node --check guard. Find the deploy/write path where PHP files with <script> blocks land, add a step that extracts inline JS and runs `node --check` on it; on parse failure, revert the file and flag/card it. Use write_server_file (root) to deploy, sudo sed for live patches. Mark deployed once verified on disk.
-2. #25152 — Requests blackhole: decide whether deny should auto-create an escalation row, or if the workflow stays manual-click. Needs your decision or the auto-escalate code change.
-3. #25181 — Clinerules completion-gate phantom prevention (verify idea id + exec_log/files_deployed before permitting a `deployed` claim). Not yet built.
-
-Reference IDs:
-- Ideas filed/updated: #25165, #25167, #25047, #25059, #25060, #25189, #25152, #25181, #25171
-- Files touched: routes/argus_task_status.php, routes/argus_download.php, routes/alltastic_api.php, failure_repair_recipes (recipe #437)
-- Kaison recipe: #437 phantom_idea_claim (active)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786211859440` — 8/8/2026, 2:30:13 PM PT — 418 turns
+### `1786211859440` — 8/8/2026, 3:45:02 PM PT — 541 turns
 
 **Original task:**
 
@@ -287,49 +185,241 @@ You were right to say there is another solution. There is, and it shipped a mont
 **Non-streamin
 ```
 
-**Ideas referenced:** #10740, #11953, #12363, #12365, #12589, #12590, #12657, #12689, #13874, #13964 [needs_verify], #14000, #15776, #17078, #178618, #19338 [rejected], #21038, #2273 [approved], #25082 [executing], #25083 [executing], #25084 [executing], #25112 [proposed], #25120, #25122, #25127 [executing], #25130 [executing], #25133 [executing], #25135 [executing], #25158 [proposed], #25159 [proposed], #25171, #25172 [proposed], #25178 [proposed], #25179 [proposed], #25193 [proposed], #25195 [proposed]
+**Ideas referenced:** #10740, #11953, #12363, #12365, #12584, #12589, #12590, #12657, #12689, #13199, #13204, #13490, #13874, #13964 [needs_verify], #14000, #15776, #17078, #178618, #19338 [rejected], #21038, #2273 [approved], #25082 [executing], #25083 [executing], #25084 [executing], #25112 [proposed], #25120, #25122, #25127 [executing], #25130 [executing], #25133 [executing], #25135 [executing], #25157, #25158 [proposed], #25159 [proposed], #25171, #25172 [proposed], #25178 [proposed], #25179 [proposed], #25193 [proposed], #25195 [proposed]
 
 **Last PICKUP PROMPT:**
 
 ```
-**#25127** closed (superseded)
+BAGENT_DS_TOOLS=0` + restart).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Post-#25130 subagent routing: monitor + harden + finish the schema-400 question.
+
+Where we left off (verified 2026-08-08 15:37 PT):
+- #25130 [executing] subagent tool-bearing turns now route to frankenstein-tools lane via `EMSU_SUBAGENT_DS_TOOLS=1` (live in container, confirmed). Adapter mean ttfb 13s→4s, zero 503s vs 6/10min before, ring 0.15s direct. Main-window + subagent tool turns are now separated.
+- Router patch verified live: `/etc/litellm/_router_core.py` ~:5357 has the new gate (4 refs confirmed inside container). Backup at `.bak-25130-*`.
+
+Open threads to drive next:
+- #25195 [approved] — Reranker saturation under concurrent load. The uvicorn --workers 4 attempt CRASH-LOOPED (exit 1, restart counter 5) and was reverted. Clean revert verified 200 OK 0.20s, concurrency=24. Root cause of the crash UNKNOWN (likely CrossEncoder model load in worker subprocesses). Investigate the worker crash properly before retrying multiprocess, or accept single-process + monitor.
+- #25193 [approved] — Canary rolling-window throttled_frac FIXED + verified (0.2572 false ALERT → 0.0000). Closed.
+- Unverified schema-400 on DeepSeek request-side: no API key to test the tool-schema path directly. The 08-06 evidence (40/90min `unknown variant 'function'`) + zero such errors in the last hour means it's likely not firing, but PROVE it: watch `/tmp/frankenstein_tools_adapter.log` + litellm journal for `unknown variant` while subagent tool turns route through the new lane.
+- Monitor ring + adapter for 20-30 min: confirm the 4s mean and 0-503 hold under real Cline traffic before declaring the subagent-stall fully closed.
+
+Reference IDs:
+- Ideas: #25130 [executing], #25195 [approved], #25193 [approved], #25172 [executing], #25158 [executing], #25159 [executing], #25178 [executing]
+- Files touched: /etc/litellm/_router_core.py, /etc/systemd/system/litellm.service.d/10-frugal.conf, /etc/systemd/system/emsu-reranker.service.d/override.conf, /usr/local/bin/emsu_reranker_canary.sh, /usr/local/bin/emsu-reranker.py, /usr/local/bin/frankenstein_tools_adapter.py
+- Service restarted: litellm (15:27, 15:18), emsu-reranker (12:50, 15:23), frankenstein-tools (12:09)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786226983152` — 8/8/2026, 3:45:00 PM PT — 79 turns
+
+**Original task:**
+
+```
+what is 25220? 
+
+Not a task completion — the answer to "Are we done then?" is: yes, this thread is done. Every delivery I opened this session is closed or explicitly parked, and nothing is abandoned.
+
+Self-contained status, no pickup needed:
+
+SHIPPED THIS SESSION
+- #25231 [deployed] guard_check.sh pre-edit gate + rule 314, self-tested and indexed.
+- #25222 [deployed] cron backlog 11 to 0.
+- #25221 [deployed] CFA/Argus steering layer live, verified in the running container.
+- #25194 [deployed] Implementation Reality Checker, all 5 checks alarming.
+- #25200 [deployed] self-healing guard integrit
+```
+
+**Ideas referenced:** #20957, #20958, #24207, #25182, #25183, #25185, #25194 [deployed], #25198 [queued], #25199 [queued], #25200 [deployed], #25201, #25220 [executing], #25221 [deployed], #25222 [deployed], #25231 [deployed], #25236 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+
+<attempt_completion>
+<result>═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #25220 [executing] - reclassify RAG retrieval bottleneck per rule 297 source-level RCA
+
+Where we left off (verified 2026-08-08 15:24 PT):
+- #25220 [executing]: Source inspection of lib/EmsuRagRetriever.php cosineSimilaritySearch() + api/rag_context.php line 36. The 8.4s unfiltered path is NOT 34K vectors. Pool is 6000 rows (emsu_rag_candidate_pool). Load: 6000 rows with JSON blobs, json_decode 1536-dim per row, PHP cosine loop. Filtered path at 5.5s is within 0.5s of cap. An un-activated code path exists: FAISS sidecar gate (emsu_rag_faiss_enabled, http://127.0.0.1:7891/query, HNSW). RCA recorded as #25236 [proposed].
+- api/rag_context.php line 36 pool-starvation guard header from 2026-08-06. 186 x 499 vs 103 x 200 on this URL. Cap stays at 5s.
+
+Open threads to drive next:
+1. #25236 [proposed]: Check FAISS sidecar health on :7891, enable emsu_rag_faiss_enabled in orchestrator_config, test unfiltered curl for sub-1s 200
+2. #25220 [executing]: If FAISS not on box, keyword pre-filter before cosine pass as fallback
+
+Reference IDs:
+- Ideas filed: #25220 [executing], #25236 [proposed]
+- Files touched: /var/www/emtskills/api/rag_context.php, /var/www/emtskills/lib/EmsuRagRetriever.php
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Read idea #25220 progress and spec from orchestrator
+- [x] Read full idea description from MySQL
+- [x] Read source code: api/rag_context.php line 36 (pool-starvation guard)
+- [x] Read source code: lib/EmsuRagRetriever.php cosineSimilaritySearch() (candidate pool + FAISS gate)
+- [x] Classify per Rule 297: BY-DESIGN timeout, actual pool is 6000 not 34K, FAISS sidecar exists but un-activated
+- [x] File corrected RCA as #25236 [proposed]
+- [x] Assemble and validate rule-91 pickup block with real dispositions
+- [x] Complete the task
+</task_progress>
+</attempt_completion>
+```
+
+### `1786224531010` — 8/8/2026, 3:44:45 PM PT — 233 turns
+
+**Original task:**
+
+```
+#Big Mac
+
+continue
+
+**Everything working. Here's the complete status as of 12:25 PT:**
+
+**#25120 [shipped]** — CORRECTIVE_RETRY_ENABLED live, zero errors since 11:18 restart.
+
+**#25122 [shipped]** — Option B: `executor_plan_race.php` (93 lines) + `executor_parallel_calls_enabled` gate at RubenExecutor:2402. Both `php -l` clean. Awaiting next executor planner tick to exercise curl_multi race.
+
+**#25131 [shipped]** — Rule 147 48h gate REMOVED. `FRESHNESS_HOURS=0` in cron_kaison_wedge_detection.php means `kaison_freshness_gate()` always returns true — Kaison now repairs any classifiable incident 
+```
+
+**Ideas referenced:** #12060, #12184, #12550, #12611, #12619, #12900, #202608, #22770, #24635, #24636, #24645, #24646, #24791, #25097 [executing], #25111 [proposed], #25112 [shipped], #25120 [shipped], #25122 [shipped], #25125 [executing], #25127 [rejected], #25131 [shipped], #25158, #25159, #25172, #25173 [approved], #25176 [rejected], #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [proposed], #25197 [deployed], #6978, #9070
+
+**Last PICKUP PROMPT:**
+
+```
+).
+
+**HANDOFF_NOTES updated.**
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1786185342000 — reranker + adapter hardening stable, router RCA + subagent-DS policy still open.
+Pick up task #25196 [deployed] -- continue open threads
 
-Where we left off (verified 2026-08-08 14:28 PT):
-- **ALL SHIPPED FIXES HEALTHY.** Reranker 200 OK 0.32s, throttle 0% (15s window), canary status=OK (worst 0.62s, threads 13, throttled_frac 0.0000). Adapters both 200 in ~0.5ms, backlog=128, POOL_SATURATED=0, kernel ListenDrops lifetime counter NOT increasing (fix holding). All 4 services active. Load 20.7.
-- **#25158 [executing]** reranker stable: concurrency=24, torch_threads=2, CPUQuota=3600%.
-- **#25159 [executing]** adapter backlog 128 + ThreadPoolExecutor live, zero drops.
-- **#25178 [executing]** adapter bind-order live (90s → 2s restart).
-- **#25172 [executing]** TimeoutStopSec + canary + 263a gate live. Canary now OK (was ALERT during crash-loop, self-healed).
-- **#25193 [approved]** canary rolling-window throttle verified.
-- **#25195 [approved]** multiprocess attempt crash-looped + cleanly reverted; the single-process saturation may be a burst artifact (re-evaluate under steady load before retry).
-- **#25127 [rejected]** closed.
-- **#25130 [executing]** STILL AWAITING RUBEN GO/NO-GO — only open policy item from the original task.
+Where we left off (verified 2026-08-08 15:41 PT):
+- #25196 [deployed] Kaison deadlock N-cycle trigger deployed
+- #25122 [deployed] racePlannerCalls() wired into generatePlan
+- #25125 [deployed] validation harness PHP files deployed
+- #25097 [deployed] Big Mac serving, 7970X CPU
 
-Open threads to drive next:
-1. **#25130 [executing]** — AWAITING RUBEN GO/NO-GO, policy only. On yes: two edits at _router_core.py:5203 (add emsu-executor-auto to entrypoint set, delete `not _has_tools_rc` disjunct), update .clinerules/00, restart litellm on Ruben's timing. Verify with a 12-char no-tools turn (expect frankenstein-tools) + surface distribution.
-2. **#25135 [executing]** — router structural RCA. Order a, b, c, d; (d) must NOT start before (a) lands. (a) scoped inside #25082.
-3. **#25133 [executing]** — retire stale warning at _router_core.py:5170-5175 by REPLACING it.
-4. **#25195 [approved]** — investigate the uvicorn worker crash before any multiprocess retry (check `journalctl -u emsu-reranker` ~12:48 for the traceback). Confirm saturation is steady-state, not burst.
-5. **#25082, #25083, #25084 [executing]** — carried.
+Open threads to drive next (carry forward from prior window):
+1. #25196 [deployed] cron Step 1 FATALs: bug_library missing problem_key column
 
 Reference IDs:
-- Ideas shipped/approved: #25158 [executing], #25159 [executing], #25172 [executing], #25178 [executing], #25193 [approved], #25195 [approved]
-- Ideas closed: #25127 [rejected]
-- Ideas carried: #25130, #25135, #25133, #25082, #25083, #25084
-- Files touched: /usr/local/bin/emsu-reranker.py, /etc/systemd/system/emsu-reranker.service.d/override.conf, /usr/local/bin/emsu_reranker_canary.sh, /etc/cron.d/emsu-reranker-canary, /usr/local/bin/frankenstein_tools_adapter.py, /Users/rubenmajor/Desktop/.clinerules/263-fleet-mutation-preflight.md
-- Backups: emsu-reranker.py.bak-25195-20260808-124725, emsu-reranker.py.bak-20260808-110734, frankenstein_tools_adapter.py.bak-25178-20260808-115727, frankenstein_tools_adapter.py.bak-25159b-20260808-120917, /root/emsu-backups/emsu-reranker.service.bak-*
+- Ideas: #25196 [deployed], #25122 [deployed], #25125 [deployed], #25097 [deployed]
+- Files: RubenExecutor.php, cron_kaison_wedge_detection.php, cron_fleet_validation.php
 
-When done, append to cline_task_ledger.md (rule 07), run order 66.
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786211568282` — 8/8/2026, 3:44:29 PM PT — 433 turns
+
+**Original task:**
+
+```
+#Argus
+
+Can you confirm for me that all of the ideas below were actually implemented? I know that we took some of these ideas a little bit further but I just wanna see if they were implemented and I don't wanna revert really good changes that we made cell you do need to be careful with this
+
+For my last Argus Chat, I noticed we need to make a great number of improvements. I do NOT want you to forget any of these. I want you to execute them all as well as answer ALL of my questions in the original chat. We need to give Argus more power
+
+--
+Argus
+New chat started. Saves automatically after your 
+```
+
+**Ideas referenced:** #0000, #1281, #128275, #16213, #16224, #20251, #20517, #21262, #22850, #23027, #23429, #23506, #24877, #24897, #24926, #24990 [deployed], #24991 [deployed], #25036 [approved], #25037 [approved], #25044 [approved], #25047 [approved], #25049 [proposed], #25057 [in_progress], #25058 [implemented], #25059 [live], #25060 [in_progress], #25077 [approved], #25152 [pending], #25155, #25165 [proposed], #25166 [proposed], #25167 [proposed], #25171 [proposed], #25181 [proposed], #25189 [pending], #26002 [deployed], #26003 [proposed], #274160, #30363, #4536, #5344, #7925, #8281, #8321, #8563, #8598, #8645, #8942, #9654, #9660, #9733
+
+**Last PICKUP PROMPT:**
+
+```
+ool_name>ssh_command</tool_name>
+<arguments>{"command": "grep -n 'placeholder\\|PICKUP PROMPT\\|#NNNN\\|orchestrator_ideas\\|__PICKUP\\|pickup' /var/www/emtskills/clinerules/mcp-servers/clinerules-mcp/build/index.js | head -30"}</arguments>
+</use_mcp_tool>
+```
+
+### `1786214054947` — 8/8/2026, 3:15:32 PM PT — 476 turns
+
+**Original task:**
+
+```
+Can you play doctor of ruben executor and take a look at this page: https://emsuniversity.com/emtskills/routes/ruben_executor_live.php 
+
+Make sure that every single table that is on this page is wired in properly to reality. I need to be able to take a look at the page and make sure that this statistics that fit fax the figures all of that stuff is properly wired in so that I could see what's going on. This may require some extensive work but it's very important for you to do all of this into end. Again you're going to probably have to use a browser window with a token so that you can access a
+```
+
+**Ideas referenced:** #059669, #1050, #127891, #12802, #128274, #12836, #12879, #13418, #1373, #16822, #16881, #17560, #19427, #23986, #24297, #24774, #25009, #25011, #25042, #25043, #25127, #25172, #25201 [queued], #25202 [proposed], #25203 [proposed], #25204 [proposed], #25205 [proposed], #25223 [needs_verify], #25224 [ready_for_review], #25225 [ready_for_review], #25226 [x], #2563, #341492, #341493, #341497, #341501, #341503, #341504, #341505, #341507, #341547, #341562, #341565, #341576, #341577, #3957, #4536, #4775, #5031, #5578, #6057, #6285, #6300, #6366, #64748, #7048, #78350, #7903, #8200, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+hardware exists (idea #25224).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #current — ruben_executor_live.php doctor: execute gated re-queue + fix RAG call site.
+
+Where we left off (verified 2026-08-08 15:15 PT):
+- Reranker fixed: CPU 2547%→490%, load 57→19, dispatcher spawning 4 workers/tick
+- 0 failures in last hour — fix holding
+- Gated re-queue script at /tmp/requeue_with_gate.php — dry-run passes, stale gate works on 25 failed chains
+- RAG static method to add: injectRagContextForTriage() already appended to RagSurfaceEnforcer.php
+- Cron call site at cron_ruben_autonomous.php (line ~600-ish) still calls old instance method statically
+
+Open threads to drive next:
+1. #25201 [executing] — Execute LIVE re-queue: add `--live` flag to /tmp/requeue_with_gate.php, run `sudo php /tmp/requeue_with_gate.php --live`, verify failed chains reset to 'resting' status
+2. #25223 [needs_verify] — Fix RAG static method: edit cron_ruben_autonomous.php to call `RagSurfaceEnforcer::injectRagContextForTriage()` instead of the instance `injectRagIntoPrompt()` — currently fires "Non-static method cannot be called statically" on every dispatcher tick
+3. #25224 [ready_for_review] — GPU verification: check if WOPR truly has GPU hardware (NVML says no), if yes install CUDA toolkit + move reranker to device='cuda'
+4. #25225 [ready_for_review] — Integrate stale-idea gate into cron_ruben_autonomous.php so it auto-filters on every dispatch tick
+5. #25226 [ready_for_review] — Build Kaison loop: monitor load_avg per-core, when >0.80 for 3+ ticks, auto-restart reranker with safe concurrency cap, card Ruben only if repair fails twice
+
+Reference IDs:
+- Ideas filed: #25201 [executing], #25223 [needs_verify], #25224 [ready_for_review], #25225 [ready_for_review], #25226 [ready_for_review]
+- Files: /tmp/requeue_with_gate.php, /tmp/requeue_live.php, /var/www/emtskills/lib/RagSurfaceEnforcer.php, /var/www/emtskills/cron/cron_ruben_autonomous.php, /etc/systemd/system/emsu-reranker.service.d/override.conf
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
+
+### `1786211264211` — 8/8/2026, 3:09:34 PM PT — 784 turns
+
+**Original task:**
+
+```
+#Context
+
+Let's talk also about the contextual improvements that we made and whether they are having an impact and whether we need to make any others where we are using disc space to leverage limited context. Also because we are using executor I would think this is something I'm not sure exactly where this is living this context but should it not be on WOPR? Or is it already? Where does this live?
+
+--
+Fixed forward, config only. No rollback of the context increase.
+
+WHAT THE PRIOR WINDOW GOT RIGHT AND WHAT IT MISSED
+
+Your RCA was correct: the hardfloor set was duplicated and the trim updated o
+```
+
+**Ideas referenced:** #0000, #11417, #11847, #12249, #12251, #12266, #12269, #12285, #12588, #12589, #12590, #12688, #12689, #13204, #13470, #14133, #14142, #14205, #15268, #15776 [deployed], #16032, #16224, #16448, #16449, #16461, #16463, #16464, #16525, #16715, #17078, #19125, #19173, #19175 [executing], #19176 [queued], #19686, #19898, #19899 [proposed], #19904, #20251, #20569, #24207, #24971 [rejected], #24972 [rejected], #24973 [rejected], #24985 [rejected], #24988 [executing], #25128 [executing], #25150 [executing], #25151 [executing], #25153 [proposed], #25154 [proposed], #25155 [proposed], #25156, #25157, #25158, #25168 [proposed], #25169 [proposed], #25170 [proposed], #25171 [proposed], #25182 [proposed], #25183 [proposed], #25184 [proposed], #25185 [executing], #25186 [proposed], #25187 [proposed], #25188 [deployed], #25190 [deployed], #25194 [deployed], #25198 [deployed], #25199 [deployed], #25200 [deployed], #25220 [proposed], #25221 [deployed], #25222 [deployed], #25231 [deployed], #27116, #29373, #36237, #40899, #40969, #5344, #5346, #5348, #6729
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786211367196` — 8/8/2026, 12:26:07 PM PT — 302 turns
 

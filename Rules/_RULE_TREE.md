@@ -72,6 +72,8 @@
 - **Self-supervision & repair** — R: 46,49,53,54,55,56,64,65,66,73,81,82,85,92,94,99,110,112,129,130,131,133,134,162,163,166,168,169,176,180,194,209,214,225,240,244,258,261,263,281,297,299 (263=verify-before-claim; 99=subagent writes unverified until parent re-reads; 281=execute-the-real-function schema-truth gate; 297=a COUNT(*) of impossible rows is a hypothesis, classify the population before alarming; 299=a NEGATIVE/zero result proves your query ran, not that the thing is absent — positive-control the instrument before any "none/not found/0/clean" claim)
 - **Routing to humans** — R: 68,69 (Jon=policy only, Vicky=CS only)
 - **Agent-found-wrong** — R: 266 (fix the instrument that misled the agent, same session)
+- **Pre-EDIT guard-comment gate** — R: 314 (before changing ANY existing constant/timeout/threshold/flag, read the 20 lines ABOVE it and run `guard_check.sh <file> <line>`; exit 2 = STOP. KAIZEN structurally cannot cover this class because the code is still CORRECT at the moment of the mistake. Measured 2026-08-08: 5 guard signals + 3 dated incident refs sat above the line that was changed anyway)
+
 - **Cline noop idempotency gate** — R: 274 (noop_check BEFORE any possibly-repeat task; store after)
 - **Parallel windows protocol** — R: 29 (§"wait them out" forbidden), 137, 194, 209, 225
 

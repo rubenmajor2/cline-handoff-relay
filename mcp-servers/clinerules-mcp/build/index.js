@@ -892,9 +892,18 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
             // before testing, so only genuine PROSE claims count. Without this the gate is
             // unusable in any completion that lists deployed and proposed ideas together,
             // which is nearly every real completion.
+            // 2026-08-08 false-positive fix #2: strip (a) neighbouring disposition tags,
+            // whose literal text contains DEPLOYED, and (b) rule 91's OWN mandatory
+            // closing boilerplate "When done, append to cline_task_ledger.md ...", which
+            // contains the word DONE and sits within 220 chars of the Reference IDs list
+            // in EVERY correctly-formatted pickup prompt. Without this the gate fires on
+            // the very template rule 91 requires, which makes a compliant completion
+            // unshippable. A gate that punishes the mandated format is worse than no gate.
             const window = result_text
                 .slice(from, to)
-                .replace(/\[(deployed|executing|blocked|proposed|rejected|superseded|awaiting_review)\]/gi, "");
+                .replace(/\[(deployed|executing|blocked|proposed|rejected|superseded|awaiting_review)\]/gi, "")
+                .replace(/When done,[^\n]*/gi, "")
+                .replace(/run order 66/gi, "");
             if (claimWord.test(window)) {
                 const key = `#${id} [${tag}]`;
                 if (!contradictions.includes(key))

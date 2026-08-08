@@ -6,19 +6,20 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/7/2026, 4:35:37 PM PT | window: last 72h | 92 tasks | index total 529 (parsed 5, cached 524)
+Generated: 8/7/2026, 5:35:37 PM PT | window: last 72h | 91 tasks | index total 530 (parsed 4, cached 526)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786144700222` | 8/7/2026, 4:35:30 PM | 135 | 203KB | #TDSHS |
-| `1786123588626` | 8/7/2026, 4:35:28 PM | 275 | 632KB | telephony is not working for incoming calls - it's telling people a debug message. Please  |
-| `1786135150364` | 8/7/2026, 4:33:20 PM | 260 | 406KB | emsuniversity.com is laggy, slow and needs to go faster. Something is bogiging it down |
-| `1786088761151` | 8/7/2026, 4:28:22 PM | 170 | 595KB | Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversit |
+| `1786036273485` | 8/7/2026, 5:20:21 PM | 910 | 2122KB | #Argus  |
+| `1786144700222` | 8/7/2026, 5:18:55 PM | 292 | 519KB | #TDSHS |
+| `1786123588626` | 8/7/2026, 5:15:24 PM | 398 | 851KB | telephony is not working for incoming calls - it's telling people a debug message. Please  |
+| `1786088761151` | 8/7/2026, 5:08:08 PM | 206 | 719KB | Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversit |
+| `1786135150364` | 8/7/2026, 5:03:39 PM | 264 | 411KB | emsuniversity.com is laggy, slow and needs to go faster. Something is bogiging it down |
+| `1786146213022` | 8/7/2026, 4:59:10 PM | 88 | 581KB | Tokens from admin_profile.php page are not working. Can you fix this: https://emsuniversit |
 | `1786133997460` | 8/7/2026, 4:19:04 PM | 522 | 923KB | Take a lookat Jon's argus, a lot of 502 and SQL debris. Need to fix these 502s from now on |
 | `1786135267277` | 8/7/2026, 3:41:47 PM | 32 | 173KB | I would like to start having a system where we auto-assign externships based on location/d |
 | `1785966271898` | 8/7/2026, 1:50:32 PM | 412 | 1142KB | #Payment Issues |
 | `1786057314451` | 8/7/2026, 10:24:23 AM | 588 | 3844KB | I keep getting this message every 15 minutes and is it fixed or not? |
-| `1786036273485` | 8/7/2026, 10:20:35 AM | 818 | 1565KB | #Argus  |
 | `1786060260487` | 8/7/2026, 10:18:31 AM | 782 | 2173KB | frankenstein-llm subagents experiencing delay. Are those on deepseek like they should be?  |
 | `1785954733601` | 8/7/2026, 10:15:30 AM | 486 | 925KB | #SLS MEGA |
 | `1786005641053` | 8/7/2026, 10:13:45 AM | 422 | 810KB | #GLM |
@@ -100,14 +101,63 @@ Generated: 8/7/2026, 4:35:37 PM PT | window: last 72h | 92 tasks | index total 5
 | `1785807416292` | 8/4/2026, 6:59:24 PM | 82 | 246KB | where is the system for Cyra at? the "Telephony like" system? What is the link to get to t |
 | `1785779749179` | 8/4/2026, 6:40:30 PM | 702 | 2902KB | I need to make sure that the AI categoriztion of the info@emsuniversity.com inbox has stop |
 | `1785892733295` | 8/4/2026, 6:20:58 PM | 13 | 36KB | I was told you were unresponseive for 5 minutes? |
-| `1785885342087` | 8/4/2026, 5:27:54 PM | 300 | 981KB | Your numbers appear to be to be far from my reality.  |
-| `1785885194894` | 8/4/2026, 4:48:42 PM | 92 | 354KB | What's going on today in Argus? |
 
 ---
 
 ## Per-window detail
 
-### `1786144700222` — 8/7/2026, 4:35:30 PM PT — 135 turns
+### `1786036273485` — 8/7/2026, 5:20:21 PM PT — 910 turns
+
+**Original task:**
+
+```
+#Argus 
+
+Found the actual reason Argus over-texts the server. It was not the timeouts. Three separate defects, all fixed and verified live.
+
+EXCLUDED: #2250 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)
+EXCLUDED: #2251 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)
+
+## The timeout work was right but it was treating a symptom
+
+Raising curl 240->600 and pool max_execution_time 120->600 was correct and necessary. But a longer timeout on an amplifying loop just means MORE concurrent long-held connections. Here is wh
+```
+
+**Ideas referenced:** #047857, #059669, #111827, #16213, #16523, #166534, #178601, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19370, #2006, #20547, #21125, #21126, #21262, #2250 [superseded], #2251 [superseded], #22511, #2252, #2253, #22583, #22688, #22850, #23027, #23036, #23428, #23429, #23468, #23489, #23506, #23585, #23623, #23630 [executing], #23636, #23637, #23674, #23675, #23710, #23711, #23729, #23739, #23740, #23747, #23748, #23749, #23750, #23751, #23764, #23769, #23851 [rejected], #23852 [proposed], #23854, #23867, #23868 [executing], #23878 [proposed], #23879 [proposed], #23881, #23885, #23897, #23898, #23899, #23900, #23908, #23910, #23911, #23913 [executing], #23920 [executing], #23934 [executing], #23941 [executing], #23944 [executing], #23952 [proposed], #23953, #23973 [proposed], #23974 [proposed], #23975 [deployed], #23982 [proposed], #24012, #24025, #24029, #24036, #24043, #24044, #24097 [proposed], #24182, #24225 [proposed], #24377 [executing], #24378, #24379, #24381 [proposed], #24382 [proposed], #24383, #24464, #24466, #24586, #24706, #24766, #2563, #334155, #3730, #374151, #4338, #64748, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+<attempt_completion>
+<result>
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #259 — Argus reply path: user types a reply and Argus never answers (alltastic_api.php terminal_query).
+
+Where we left off (verified 2026-08-07 17:19 PT):
+- Worker is healthy: #336 completed 17:16:17 (6m), drain working, queue periodically clean
+- Repro: in terminal (argus_terminal.php), user types reply into #queryInput; the JS submits to alltastic_api.php action=terminal_query
+- The handler at line 5304 reads `$query = trim($jsonInput['query'] ?? $jsonInput['message'])`
+- Need to find why a reply (follow-up) doesn't trigger an answer: suspect the reply is being treated as async and queued, or a falsy check drops it
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #24377 [executing] — Trace the terminal_query reply path: confirm the reply POST body key (`query` vs `message`), and verify it reaches the synchronous answer block vs. falling into the async queue
+2. #24381 [executing] — RCA retrain: agent making DEADMAN promises for ea (21 records, voice_ai) — verify EA grading via ea_grade_resubmit, no promises
+3. #24382 [executing] — RCA retrain: agent making DEADMAN promises for enrollment (61 records, voice_ai) — verify via enrollment_lookup, surface/create enrollment
+
+Reference IDs:
+- Ideas filed: #24377 (routing examine), #24381 (ea RCA), #24382 (enrollment RCA)
+- Files touched: /var/www/emtskills/routes/alltastic_api.php (terminal_query line 5304), /var/www/emtskills/routes/argus_task_status.php (status page, no reply handler found yet), /var/www/emtskills/routes/argus_terminal.php (UI #queryInput)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786144700222` — 8/7/2026, 5:18:55 PM PT — 292 turns
 
 **Original task:**
 
@@ -122,11 +172,11 @@ See latest email from TDSHS State EMS Director, 1-2PM appx today asking us to co
 We did reach out to discuss general policies, but he never replied. We reached out to the dat with no answer
 ```
 
-**Ideas referenced:** #111827, #16957, #23834, #251038, #251211, #251264, #3616, #3617, #3622, #3624, #450438, #6106
+**Ideas referenced:** #111827, #16957, #23834, #24790 [in_progress], #24805 [in_progress], #251038, #251211, #251264, #251382, #2763 [deployed], #3616, #3617, #3622, #3624, #450438, #4929, #6106
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786123588626` — 8/7/2026, 4:35:28 PM PT — 275 turns
+### `1786123588626` — 8/7/2026, 5:15:24 PM PT — 398 turns
 
 **Original task:**
 
@@ -134,11 +184,50 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 telephony is not working for incoming calls - it's telling people a debug message. Please fix and tell me what happened
 ```
 
-**Ideas referenced:** #16154, #23133, #24635 [proposed], #24636 [proposed], #24645 [proposed], #24646 [proposed], #9222, #9501
+**Ideas referenced:** #16154, #23133, #24635 [proposed], #24636 [proposed], #24645 [proposed], #24646 [proposed], #24791 [proposed], #9222, #9501
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786135150364` — 8/7/2026, 4:33:20 PM PT — 260 turns
+### `1786088761151` — 8/7/2026, 5:08:08 PM PT — 206 turns
+
+**Original task:**
+
+```
+Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversity.com/emtskills/routes/ruben_executor_live.php
+```
+
+**Ideas referenced:** #059669, #0891, #10003, #10007, #10060, #12059, #12065, #12184, #1239, #12503, #127922, #128157, #128190, #128640, #13418, #1373, #14532, #1658, #166534, #17560, #1786, #22031 [fix-needed], #22032 [fix-needed], #24624 [deployed], #24625 [proposed], #24626, #24634 [deployed], #24695 [proposed], #2563, #334155, #3730, #374151, #4338, #4536, #475569, #5031, #6366, #64748, #65039, #6978, #78350, #8594, #92400, #9654, #9888, #9989
+
+**Last PICKUP PROMPT:**
+
+```
+in‑tools. No restart required.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Verify chain backlog draining faster now (planner model set to claude-opus-real)
+
+Where we left off (verified 2026-08-07 17:08 PT):
+- Backlog ~11,179, draining at ~4 executed/hour (was 0 pre-fix)
+- Planner primary model defaulted to frankenstein-tools (hung → 180s timeout) — changed to claude-opus-real
+- Spill models: claude-opus-real,deepseek-v4-pro,ollama-7b-lora,frankenstein-tools
+- NEEDS VERIFICATION: is the config change actually speeding up the executor? Check in 15-30 min.
+
+Open threads to drive next:
+None currently — fixes are deployed. Next check: confirm backlog drain rate increase, update idea #24695 to [deployed] if confirmed.
+
+Reference IDs:
+- Ideas: #24624 [deployed], #24625 [proposed], #24634 [deployed], #24695 [deployed]
+- Files: /var/www/emtskills/cron/cron_ruben_autonomous.php (+logWorkerStart/logWorkerEnd), /var/www/emtskills/lib/ruben_recurrence_idempotency_hash.php (outcome filter), orchestrator_config (JSON update)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786135150364` — 8/7/2026, 5:03:39 PM PT — 264 turns
 
 **Original task:**
 
@@ -150,43 +239,53 @@ emsuniversity.com is laggy, slow and needs to go faster. Something is bogiging i
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786088761151` — 8/7/2026, 4:28:22 PM PT — 170 turns
+### `1786146213022` — 8/7/2026, 4:59:10 PM PT — 88 turns
 
 **Original task:**
 
 ```
-Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversity.com/emtskills/routes/ruben_executor_live.php
+Tokens from admin_profile.php page are not working. Can you fix this: https://emsuniversity.com/emtskills/externship/student_portal.php?view_token=c28bcd871e99e4e2cb62243fd4fe2bf92b0602f88b3b20599757147ef096907b
 ```
 
-**Ideas referenced:** #059669, #0891, #10003, #10007, #10060, #12059, #12065, #12184, #127922, #128157, #128190, #128640, #13418, #1373, #14532, #1658, #166534, #17560, #1786, #22031 [fix-needed], #22032 [fix-needed], #24624 [deployed], #24625 [proposed], #24626, #24634 [deployed], #24695 [proposed], #2563, #334155, #3730, #374151, #4338, #4536, #475569, #5031, #6366, #64748, #65039, #78350, #8594, #92400, #9654, #9888, #9989
+**Ideas referenced:** #004085, #0056, #047857, #059669, #155724, #24635, #24636, #24645, #24794 [approved], #24797 [executing], #24798 [deployed], #2563, #374151, #475569, #495057, #6366, #64748, #78350, #856404, #92400
 
 **Last PICKUP PROMPT:**
 
 ```
-ain from ~4/hr to near 192/hr.
+udent.php.bak-20260807-164558.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Accelerate chain executor drainage: Frank-LLM fleet degraded, planner times out (73 of 192 attempts FAILED)
 
-Where we left off (verified 2026-08-07 16:28 PT):
-- Backlog at 11,179 — draining at ~4 real-executions/hour (23 executeds, 73 failed today)
-- ALL failures are LLM planner timeouts (180s) or invalid JSON responses
-- Local fleet: 14b (26 fails), 32b (43 fails), deepseek-v4-pro hung, frankenstein-tools adapter empty
-- Healthy: cicero-235B (DeepSeek API cloud) and claude-opus-real (paid API) — but NOT in planner spill list
-- Config key: `ruben_executor_planner_spill_models` currently = `ollama-14b,ollama-7b-lora,frankenstein-tools,deepseek-v4-pro`
+Pick up task #24798 [deployed] - admin view_token validation fix
+
+Where we left off (verified 2026-08-07 16:56 PT):
+- Admin view_token URL showed login form instead of student portal; token for student 26913FT-33 was valid and unexpired
+- Root cause: SELECT admin_user_id FROM admin_view_tokens failed because that column did not exist on the table; the PDOException was silently swallowed by the catch block
 
 Open threads to drive next:
-#24695 [proposed] — Fix planner spill: add cicero-235b and/or claude-opus-real to `ruben_executor_planner_spill_models` config, OR restart local Ollama fleet. After fix, verify backlog drain rate increases to >50/hr.
+1. #24797 [executing] Monitor admin_view_token validation post-fix in browser; verify new tokens store admin_user_id
 
 Reference IDs:
-- Ideas filed: #24624 [deployed], #24625 [proposed], #24634 [deployed], #24695 [proposed]
-- Files touched: /var/www/emtskills/cron/cron_ruben_autonomous.php, /var/www/emtskills/lib/ruben_recurrence_idempotency_hash.php
+- Ideas filed: #24797 [executing], #24798 [deployed]
+- Files touched: /var/www/emtskills/externship/student_portal.php.bak-20260807-164558, /var/www/emtskills/actions/login_as_student.php.bak-20260807-164558
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════
 </result>
+<task_progress>
+- [x] Analyze requirements
+- [x] Read current student_portal.php to understand token validation
+- [x] Identify why view_token validation fails (SQL error: admin_user_id column doesn't exist in admin_view_tokens)
+- [x] Add admin_user_id column to admin_view_tokens table
+- [x] Update login_as_student.php to store admin_user_id
+- [x] Patch student_portal.php SELECT query with COALESCE fallback
+- [x] Verify DB query works with the token
+- [x] Verify PHP lint clean
+- [x] File ideas for tracking
+- [x] Verify pickup prompt format
+</task_progress>
 </attempt_completion>
 ```
 
@@ -305,62 +404,6 @@ Reference IDs:
 - Files touched: cron_executor_health_alert.php, cron_argus_feed_kaizen_recipes.php
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786036273485` — 8/7/2026, 10:20:35 AM PT — 818 turns
-
-**Original task:**
-
-```
-#Argus 
-
-Found the actual reason Argus over-texts the server. It was not the timeouts. Three separate defects, all fixed and verified live.
-
-EXCLUDED: #2250 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)
-EXCLUDED: #2251 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)
-
-## The timeout work was right but it was treating a symptom
-
-Raising curl 240->600 and pool max_execution_time 120->600 was correct and necessary. But a longer timeout on an amplifying loop just means MORE concurrent long-held connections. Here is wh
-```
-
-**Ideas referenced:** #047857, #059669, #111827, #16523, #166534, #178601, #19370, #2250 [superseded], #2251 [superseded], #2252, #2253, #22688, #23036, #23428, #23429, #23468, #23506, #23585, #23623, #23630 [executing], #23636, #23637, #23674, #23675, #23710, #23711, #23729, #23739, #23740, #23747, #23748, #23749, #23750, #23751, #23764, #23769, #23851 [rejected], #23852 [proposed], #23854, #23867, #23868 [executing], #23878 [proposed], #23879 [proposed], #23881, #23885, #23897, #23898, #23899, #23900, #23908, #23910, #23911, #23913 [executing], #23920 [executing], #23934 [executing], #23941 [executing], #23944 [executing], #23952 [proposed], #23953, #23973 [proposed], #23974 [proposed], #23975 [deployed], #23982 [proposed], #24012, #24025, #24029, #24036, #24043, #24044, #24097 [proposed], #24182, #24225 [proposed], #24377, #24378, #24379, #24381 [proposed], #24382 [proposed], #24383, #24464, #24466, #24586, #2563, #3730, #374151, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-<attempt_completion>
-<result>
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #259 — Argus over-texting iteration, drain V2, and RCA retrain (24381/24382).
-
-Where we left off (verified 2026-08-07 10:20 PT):
-- #23982 not-doable guard deployed + verified live (task #301 handled in 1 attempt, filed idea #24379 instead of 3 wasteful retries). Guard file: /var/www/emtskills/routes/cron_argus_task_worker.php line 372-388.
-- #23852 LLM payload instrument deployed at /var/www/emtskills/routes/alltastic_api.php line 5509 (error_log '[#23852] ext LLM payload bytes=N model=X'). Lint OK. Not yet confirmed writing to a visible log file.
-- #23974 worker dispatch instrument deployed earlier (-- prompt N total bytes in argus_task_worker.log).
-- Argus queue healthy: workers fire every even minute, no fatals, 16 done / 2 offloaded today.
-- 2 RCA retrain ideas approved by Ruben but NOT yet executed: #24381 [executing] (ea DEADMAN promises, 21 records, suggest ea_grade_resubmit) and #24382 [executing] (enrollment DEADMAN promises, 61 records, suggest enrollment_lookup).
-- VAPI_PRIVATE_KEY found in agent_voice.php; the voice agent system prompt is pushed to Vapi.ai assistant config (not in PHP) — need to find the assistant id + how agent_voice.php updates the config.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #24381 — ea DEADMAN retrain: locate ea_grade_resubmit tool def + Vapi assistant id, inject retrain language ("verified EA grading status; submit ea_grade_resubmit; never promise callback") into voice agent system prompt. Then verify via Vapi API + deadman_enrollment_promise_monitor.
-2. #24382 — enrollment DEADMAN retrain: same pattern with enrollment_lookup tool; verify.
-3. #23852 — confirm instrument output: find where PHP-FPM error_log writes for argus pool (php_admin_value[error_log]?), trigger a task, grep log for '[#23852]'.
-4. #23982 — expand guard keyword set (currently only 'cannot answer'); add 'cannot', 'not able to', 'feature request', 'outside my' to catch modern Llama3 refusals.
-
-Reference IDs:
-- Ticket: #259
-- Ideas filed/deployed: #23941, #23944, #23973 (documentation), #23974 (deployed), #23852 (deployed), #23982 (deployed), #24381 [executing], #24382 [executing]
-- Files touched: /var/www/emtskills/routes/cron_argus_task_worker.php, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/routes/agent_voice.php (read-only), /var/www/emtskills/routes/_view_deadman_refund_promise_agent_retrain.php (read-only)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
@@ -3479,71 +3522,3 @@ I was told you were unresponseive for 5 minutes?
 **Ideas referenced:** #1658, #1986, #2176, #2177, #22334, #22355 [proposed], #22388, #22392, #22394, #22428, #22493, #9019
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785885342087` — 8/4/2026, 5:27:54 PM PT — 300 turns
-
-**Original task:**
-
-```
-Your numbers appear to be to be far from my reality. 
-
-Especially this table which tends to show that the 120B is smarter AND faster than the GLM 5.2. Makes me think that there's something missing:
-
-3. Break-even tok/s, the number you asked for
-Same question, both correct. Artemis: 7.0s, 122 visible tokens, 17.4 tok/s.
-
-Bar	GLM must sustain	vs today's 2.65
-Single turn, visible tokens only	17.4 tok/s	6.6x
-Single turn, counting reasoning tokens	69.7 tok/s	26.3x
-Complex scenarios at 1.0 hops	70.9 tok/s	26.8x
-at 1.5 hops	106.3 tok/s	40.1x
-at 2.33 hops (matching the 120B)	165.2 tok/s	62.3x
-
-
-You we
-```
-
-**Ideas referenced:** #12363, #12430, #1281, #1309, #1314, #15333, #15367, #15652, #16648, #17913, #18135, #18357, #18395, #18442, #1850, #1876 [deployed], #19079, #19325, #19338, #19435, #19458, #19490, #19491, #19494, #19503, #19504, #19509, #19629, #19643, #19661, #19670, #19684, #20350, #20408, #2043, #20517, #2076, #20903, #2113, #2197 [deployed], #2198, #2199, #22128 [executing], #22370 [proposed], #22371 [proposed], #22500 [awaiting_review], #22543 [proposed], #22563 [proposed], #22564 [proposed], #22565 [proposed], #22583 [proposed], #22584 [proposed], #22598 [proposed], #22599 [proposed], #22600 [proposed], #22601 [proposed], #22602 [proposed], #22612 [proposed], #22613 [proposed], #22657 [proposed], #22658 [proposed], #22659 [proposed], #22660 [rejected], #22665 [proposed], #22669 [proposed], #22674 [proposed], #22675 [proposed], #22680 [proposed], #22681 [proposed], #22682 [proposed], #22683 [proposed], #22684 [proposed], #22685 [proposed], #22686 [proposed], #3541, #3953, #4536, #5029, #5034, #7925, #8281, #8321, #8563, #8598, #9222, #9235
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785885194894` — 8/4/2026, 4:48:42 PM PT — 92 turns
-
-**Original task:**
-
-```
-What's going on today in Argus?
-```
-
-**Ideas referenced:** #10003, #10005, #10182, #1130, #1131, #12301, #1241, #12425, #1248, #1249, #1252, #1258, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #13202, #13235, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16213, #16263, #16338, #16448, #16452, #16588, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #1779, #1798, #1828, #18745, #18770, #19370, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #21140, #21262, #2127, #2168, #22331, #22362, #22368, #22422, #22486, #22529, #22580, #274160, #30363, #48031, #48140, #69707, #7142, #7149, #8942, #9650, #9654, #9660, #9733, #9889
-
-**Last PICKUP PROMPT:**
-
-```
-Augustus (GLM-5.2 ring rank-1, stale heartbeat), or another host, let me know.
-
-PICKUP PROMPT
-╔══════════════════════════════════════════════════════════════╗
-║ TASK: What's going on today in Argus?                        ║
-║ TOPIC: Daily fleet/system health check                       ║
-║ VERIFIED: 2026-08-04 16:15 PT                                ║
-║ FILES: [none]                                                ║
-║ WHERE WE LEFT OFF:                                           ║
-║   - Full fleet_now + orchestrator_status + error_watchdog    ║
-║     + fleet_inventory returned                               ║
-║   - No host named "Argus" found; comprehensive summary       ║
-║     provided covering fleet, orchestrator, errors, issues    ║
-║ OPEN THREADS:                                                ║
-║   1. cron_segment_backfill — 2566 consecutive failures       ║
-║      (human-only decision, no idea)                          ║
-║   2. Implementation engine 100% failure rate today — 9       ║
-║      recent failures (no idea filed)                         ║
-║   3. 183 unanswered emails >4h with no ticket — recurring    ║
-║      silent-drop class (cf. idea 18376)                      ║
-║   4. User may have meant Artemis/Augustus, not "Argus"       ║
-║      (human-only decision, no idea)                          ║
-║ IDEAS FILED: [none in this task]                             ║
-╚══════════════════════════════════════════════════════════════╝
-</result>
-</attempt_completion>
-```

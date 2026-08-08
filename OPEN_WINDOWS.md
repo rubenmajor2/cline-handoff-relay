@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/7/2026, 5:35:37 PM PT | window: last 72h | 91 tasks | index total 530 (parsed 4, cached 526)
+Generated: 8/7/2026, 7:14:17 PM PT | window: last 72h | 88 tasks | index total 530 (parsed 1, cached 529)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1786144700222` | 8/7/2026, 7:10:55 PM | 350 | 678KB | #TDSHS |
 | `1786036273485` | 8/7/2026, 5:20:21 PM | 910 | 2122KB | #Argus  |
-| `1786144700222` | 8/7/2026, 5:18:55 PM | 292 | 519KB | #TDSHS |
 | `1786123588626` | 8/7/2026, 5:15:24 PM | 398 | 851KB | telephony is not working for incoming calls - it's telling people a debug message. Please  |
 | `1786088761151` | 8/7/2026, 5:08:08 PM | 206 | 719KB | Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversit |
 | `1786135150364` | 8/7/2026, 5:03:39 PM | 264 | 411KB | emsuniversity.com is laggy, slow and needs to go faster. Something is bogiging it down |
@@ -98,13 +98,29 @@ Generated: 8/7/2026, 5:35:37 PM PT | window: last 72h | 91 tasks | index total 5
 | `1785890121460` | 8/4/2026, 8:51:12 PM | 588 | 2563KB | #GLM |
 | `1785900942869` | 8/4/2026, 8:37:36 PM | 9 | 28KB | This window is stuck in a YOLO loop and cannot execute tools. Recommendation: paste the PI |
 | `1785896066452` | 8/4/2026, 8:35:44 PM | 122 | 338KB | Jon is experiencing issues logging in after entering an SMS code: https://emsuniversity.co |
-| `1785807416292` | 8/4/2026, 6:59:24 PM | 82 | 246KB | where is the system for Cyra at? the "Telephony like" system? What is the link to get to t |
-| `1785779749179` | 8/4/2026, 6:40:30 PM | 702 | 2902KB | I need to make sure that the AI categoriztion of the info@emsuniversity.com inbox has stop |
-| `1785892733295` | 8/4/2026, 6:20:58 PM | 13 | 36KB | I was told you were unresponseive for 5 minutes? |
 
 ---
 
 ## Per-window detail
+
+### `1786144700222` — 8/7/2026, 7:10:55 PM PT — 350 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+See: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
+
+-- 
+See latest email from TDSHS State EMS Director, 1-2PM appx today asking us to contact a parent. Why is he asking us to contact a parent? This needs a reminder that we can't talk to parent about a student's account due to FERPA in a very nice way. 
+
+We did reach out to discuss general policies, but he never replied. We reached out to the dat with no answer
+```
+
+**Ideas referenced:** #111827, #16957, #23834, #24790 [in_progress], #24805 [in_progress], #24836 [in_progress], #24842 [in_progress], #251038, #251211, #251264, #251382, #2763 [deployed], #3616, #3617, #3622, #3624, #450438, #4929, #6106
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786036273485` — 8/7/2026, 5:20:21 PM PT — 910 turns
 
@@ -156,25 +172,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1786144700222` — 8/7/2026, 5:18:55 PM PT — 292 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-See: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
-
--- 
-See latest email from TDSHS State EMS Director, 1-2PM appx today asking us to contact a parent. Why is he asking us to contact a parent? This needs a reminder that we can't talk to parent about a student's account due to FERPA in a very nice way. 
-
-We did reach out to discuss general policies, but he never replied. We reached out to the dat with no answer
-```
-
-**Ideas referenced:** #111827, #16957, #23834, #24790 [in_progress], #24805 [in_progress], #251038, #251211, #251264, #251382, #2763 [deployed], #3616, #3617, #3622, #3624, #450438, #4929, #6106
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786123588626` — 8/7/2026, 5:15:24 PM PT — 398 turns
 
@@ -3423,102 +3420,3 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </result>
 </attempt_completion>
 ```
-
-### `1785807416292` — 8/4/2026, 6:59:24 PM PT — 82 turns
-
-**Original task:**
-
-```
-where is the system for Cyra at? the "Telephony like" system? What is the link to get to this?
-```
-
-**Ideas referenced:** #178580, #18480 [deployed], #18481 [blocked], #18491 [rejected], #1864, #18935 [rejected], #19426, #19585, #19604 [proposed], #19657 [deployed], #20046, #20340 [executing], #21010 [executing], #21011 [executing], #21038 [proposed], #21044, #21053 [proposed], #21158 [executing], #21171, #2121, #21213 [executing], #2139, #2140, #21419 [executing], #2153, #2154, #21542 [rejected], #21546 [executing], #22066, #22067, #22068, #22086, #22087, #22188, #22224 [proposed], #3595 [outdated], #37972, #45094
-
-**Last PICKUP PROMPT:**
-
-```
- Cyra can be on calls tonight.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1785807416292 -- Cyra Dixon staff dialer provisioning.
-
-Where we left off (verified 2026-08-04 18:57 PT):
-- Cyra Dixon: users.id=183, Outreach Specialist, needs dedicated phone line for inbound/outbound calls
-- NO softphone line yet -- zero rows in telephony_agents
-- #18935 [rejected] -- original Outreach Specialist bundle (Tempe DID + mailbox + Roundcube)
-- #19657 [deployed] -- ExecAdmin permissions rebuild
-- #22224 [proposed] -- Cyra telephony provisioning (Tempe Twilio DID + telephony_agents row)
-- Awaiting Ruben's Twilio DID purchase (480 area code) before server-side provisioning can begin
-- Recommendation: build routes/staff_dialer.php (lightweight, reuses existing telephony infra) instead of retrofitting the fragile 538KB Hub
-
-Open threads to drive next:
-1. (human-only decision, no idea) -- Awaiting Ruben's Tempe/480 Twilio DID purchase
-2. #22224 [proposed] -- Once DID provided: insert telephony_agents row for cdixon@emsuniversity.com, patch twiml_inbound.php for DID-aware routing (if called == Cyra's DID, direct-connect to her softphone identity, skip CS conference), build routes/staff_dialer.php
-3. (human-only decision, no idea) -- Resolve Plesk duplicate-activation key PLSK.12414221 for cdixon mailbox
-4. (human-only decision, no idea) -- Create Cyra's admin_portal.users row
-
-Reference IDs:
-- Ideas filed: #18935 [rejected], #19657 [deployed], #22224 [proposed]
-- Files touched: none (read-only analysis this session)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785779749179` — 8/4/2026, 6:40:30 PM PT — 702 turns
-
-**Original task:**
-
-```
-I need to make sure that the AI categoriztion of the info@emsuniversity.com inbox has stopped. Can you confirm this?
-```
-
-**Ideas referenced:** #10234, #12206, #12687, #128260, #14132, #15669, #15670, #16152, #16153, #16154, #16210, #16252, #16260, #16473, #16523, #16732, #16817, #17446, #177851, #177914, #18190, #18944, #18951, #19437, #19682, #20340 [executing], #20674 [proposed], #20884, #20957, #20958, #21010 [executing], #21011 [executing], #21038 [proposed], #21158 [executing], #21171, #21213 [executing], #21419 [executing], #2153, #2154, #21542 [rejected], #21546 [executing], #21761 [proposed], #21771 [proposed], #22056 [proposed], #22060 [proposed], #22209 [proposed], #22225 [proposed], #22706 [proposed], #2563, #3237, #32548, #32584, #3572, #45094, #4932, #4991, #5298, #5447, #5646, #6064, #6106, #6168, #6228, #6723, #6751, #6825, #6842, #7174, #7206, #7207, #7317, #7356, #7872, #7882, #7906, #7907, #7925, #8103, #9019, #9070, #9086, #9132, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-he Kaizen guardrails are live.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #22706 — Rule 297 RCA: repeated attempt_completion rejections from incremental fixes (verified 2026-08-04 18:39 PT)
-
-Where we left off:
-- #22706 [approved] — RCA filed and Kaizen avoid-going-forward pass executed. Wrote .clinerules/91-attempt-completion-prevalidate-block.md (pre-validate the ENTIRE pickup block before first emit; no incremental patching).
-- #22225 [approved] — Kaizen canary wired into /etc/cron.d/emsu_kaizen every 5 min; verified running, log OK, 0 stale deferred.
-- #22209 [approved] — RCA canary routing to Kaizon confirmed deployed.
-- #20674 [approved] — SLA re-fire cron cron_email_deferred_sla_refire.php wired every 5 min; verified idle-clean, due=0.
-- #22056 [approved] — Deferred backlog drained 540 rows, 183 emails delivered 16:54-17:11 PT. Backlog holds at zero.
-- #22060 [approved] — EmailTimingProfileClassifier missing-file crash guarded; responder php -l clean, fatal counts at zero since fix.
-- #21771 [approved] — info@ folder auto-sorting confirmed disabled since 2026-07-31; AI classification + auto-responses active as designed.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #22706 [approved] — Confirm the new prevalidate rule is loading in fresh Cline windows automatically (was written to Desktop/.clinerules; verify Cline picks up .clinerules from that location).
-2. #22209 [approved] — Watch kaizen-email-deferred-canary.log over 48h for false positives before considering alert routing changes.
-
-Reference IDs:
-- Ideas filed: #22706, #22225, #22209, #20674, #22056, #22060, #21771
-- Files touched: /etc/cron.d/emsu_kaizen, /etc/cron.d/emsu-agents, /var/www/emtskills/cron/cron_kaizen_canary_email_deferred.php, /var/www/emtskills/cron/cron_email_deferred_sla_refire.php, /var/www/emtskills/cron/cron_email_responder.php, /Users/rubenmajor/Desktop/.clinerules/91-attempt-completion-prevalidate-block.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785892733295` — 8/4/2026, 6:20:58 PM PT — 13 turns
-
-**Original task:**
-
-```
-I was told you were unresponseive for 5 minutes?
-```
-
-**Ideas referenced:** #1658, #1986, #2176, #2177, #22334, #22355 [proposed], #22388, #22392, #22394, #22428, #22493, #9019
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

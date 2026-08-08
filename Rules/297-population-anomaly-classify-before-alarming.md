@@ -95,8 +95,44 @@ number derived this way becomes a threshold, and the threshold gates availabilit
 from the system's own baseline flagged **1.03%**. Always backtest a threshold against the
 system's own observed distribution before shipping it.
 
+## 2026-08-08 STRENGTHENING #1 — the SCOPE GATE (undercounting is the same failure as miscounting)
+
+### Source incident (Argus failure scan, 2026-08-08)
+
+Ruben asked for a scan of Argus errors. The agent queried `argus_task_queue WHERE status='failed'` over 12 hours and reported **6 failures**. Ruben pushed back: "between myself and all users there are many more, closer to 50 to 100." The corrected scan found **85** no-answer tasks in 7 days. The first number was wrong by 14x, not because the query was buggy, but because the QUESTION was scoped wrong on three axes at once:
+
+| Axis | First scan | Reality |
+|---|---|---|
+| Outcome states | `status='failed'` only | The enum has 6 states; `offloaded` (59) and `canceled` (19) are ALSO no-answer outcomes from the user's perspective |
+| Time window | 12 hours | The complaint spanned days; 7d was the honest window |
+| Population | implicit single-user framing | 7 distinct users had failures |
+
+**The trap**: a technically-correct COUNT of a too-narrow population is presented as THE answer. The user's mental model of "failure" (I asked, I got no answer) is wider than the system's `failed` enum value. The agent measured the enum, not the experience.
+
+### The SCOPE GATE (mandatory before quantifying any failure/anomaly population)
+
+Before reporting ANY count of failures, errors, or anomalies:
+
+1. **Enumerate the outcome space first.** `DESCRIBE` the table / read the enum / list the log's event types. Ask: which of these states does the USER experience as failure? Include all of them or state explicitly which are excluded and why.
+2. **State the window and justify it.** If the user's complaint references "always" / "every time" / multiple days, a 12h window is wrong by construction.
+3. **State the population.** All users unless the question names one.
+4. **Report the count WITH its scope inline**: "85 no-answer tasks (failed+canceled+offloaded), 7 days, all users" — never a bare number.
+5. **Sanity-check against the user's estimate.** If the user says 50-100 and you measured 6, your scope is the prime suspect, not the user's memory. Re-scope BEFORE arguing.
+
+## 2026-08-08 STRENGTHENING #2 — "do a 297" means FIX THE CAUSAL RULE, not just write the RCA
+
+Ruben directive, verbatim: "Whenever I ask you to do a 297 that means that you probably need to update the original rule or process that caused you to do that in the first place. I'm thinking that should be part of rule 297."
+
+It is now. A rule-297 request has THREE deliverables, not one:
+
+1. **The RCA itself** — symptom, source read, classification bucket, citation (the original rule body above).
+2. **The causal-rule fix** — identify WHICH rule, process, prompt, or code path let the mistake happen, and UPDATE IT in the same session (edit the .md rule, patch the script, fix the query template). If the causal surface is a hardfloor rule needing Ruben review, draft the edit and flag it. An RCA that leaves the trap armed for the next agent is an incomplete 297.
+3. **The reindex/propagation step** — after editing any rule, run the clinerules MCP reindex so future windows see the fix immediately.
+
+Self-check before closing a 297 task: "If a fresh agent got the same request tomorrow, would it fall into the same trap?" If yes, the 297 is not done.
+
 ---
 
 **Hardfloor: NO** (can be overridden by a higher-priority operational directive)
-**Source incident: Argus-slow investigation 2026-08-01 (3 wrong diagnostic claims from probes alone, ~10 wasted tool calls)**
-**Last strengthened: 2026-08-01 by Cline (Ruben directive: "modify rule 297 so it is stronger")**
+**Source incidents: Argus-slow investigation 2026-08-01 (3 wrong diagnostic claims from probes alone); Argus failure-scan undercount 2026-08-08 (reported 6, reality 85 — scope gate added)**
+**Last strengthened: 2026-08-08 by Cline (Ruben directives: scope gate + "a 297 request includes fixing the causal rule")**

@@ -4,6 +4,8 @@ Hardfloor. 2026-05-19. 2026-08-01: `[queued]` disposition BANNED (Ruben directiv
 
 **The PICKUP PROMPT block MUST end every `attempt_completion` result.** No exceptions for status reports, investigations, bug analysis, or "read-only" tasks. The ONLY exemption: zero system-state changes AND the result starts with `"Not a task completion — conversational/read-only only"`.
 
+**Tool-call disqualifier (2026-08-08, idea #25066):** if ANY tool was called after the prior completion — including read-only diagnostic calls (SELECT, grep, read_server_file, ssh_command) — the Q&A exemption does NOT apply. That tool call makes this a follow-up task, not Q&A, regardless of how casual the user's framing is. Example: user asks "can I close this window?" and the agent runs ssh_command to verify executor health — that completion MUST carry a full PICKUP PROMPT block, not a bare conversational reply.
+
 ## Do NOT retype the divider. Use the template below.
 
 Copy the 47-char U+2550 divider from the template block below — do NOT retype it from memory. Every observed rule-91 failure came from a model retyping the divider and getting the glyphs wrong.

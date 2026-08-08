@@ -6,14 +6,27 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/8/2026, 2:49:54 AM PT | window: last 72h | 70 tasks | index total 540 (parsed 5, cached 535)
+Generated: 8/8/2026, 3:49:54 AM PT | window: last 72h | 82 tasks | index total 552 (parsed 12, cached 540)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786180379377` | 8/8/2026, 2:49:54 AM | 203 | 363KB | ## Final Status Report — Recurring Messages Task |
-| `1786181053099` | 8/8/2026, 2:49:42 AM | 104 | 453KB | #Argus |
-| `1786179680779` | 8/8/2026, 2:49:41 AM | 101 | 290KB | ═══════════════════════════════════════════════ |
-| `1786172805164` | 8/8/2026, 2:49:08 AM | 441 | 9684KB | We have brought up a new LLM for 120B usage, the name is Big Mac, it lives on the same net |
+| `1786182757627` | 8/8/2026, 3:49:53 AM | 215 | 624KB | Pick up idea 25038, six silently-broken EMSU crons. First run get_idea_progress(25038). Tr |
+| `1786172805164` | 8/8/2026, 3:49:53 AM | 551 | 17353KB | We have brought up a new LLM for 120B usage, the name is Big Mac, it lives on the same net |
+| `1786185341999` | 8/8/2026, 3:49:44 AM | 83 | 137KB | frankenstein-llm appears to have stalled. Can you explain to me what's going on with it? I |
+| `1786185877066` | 8/8/2026, 3:49:22 AM | 7 | 17KB | continue |
+| `1786184812790` | 8/8/2026, 3:49:03 AM | 35 | 1716KB | Rule 297 was strengthened today (scope gate for failure counts + "a 297 request includes f |
+| `1786185141628` | 8/8/2026, 3:47:09 AM | 7 | 33KB | Pick up idea 25076, the idea-delivery watchdog. First run get_idea_progress(25076); if bui |
+| `1786181053099` | 8/8/2026, 3:46:57 AM | 222 | 784KB | #Argus |
+| `1786184799256` | 8/8/2026, 3:46:42 AM | 23 | 1297KB | Pick up idea 25073, the Argus failed-action cleanup + per-user summary emails. First run g |
+| `1786182735891` | 8/8/2026, 3:46:01 AM | 205 | 1765KB | Pick up idea 25058, Argus rule-29 act-first mode. First run get_idea_progress(25058). Rube |
+| `1786182696040` | 8/8/2026, 3:44:53 AM | 153 | 445KB | Pick up ideas 24990 and 24991 (both blocked, executor impl_failed twice, hand-ship per rul |
+| `1786185156855` | 8/8/2026, 3:44:18 AM | 10 | 30KB | Pick up idea 25077, the Argus rule-29 proactive bundle. First run get_idea_progress(25077) |
+| `1786182934055` | 8/8/2026, 3:42:41 AM | 79 | 250KB | Please tell me which individual LLM's have been running in the last 30 minutes. I need to  |
+| `1786182716842` | 8/8/2026, 3:16:05 AM | 150 | 770KB | Pick up idea 25059, Argus terminal IA overhaul in /var/www/emtskills/routes/argus_download |
+| `1786179680779` | 8/8/2026, 3:07:02 AM | 166 | 406KB | ═══════════════════════════════════════════════ |
+| `1786182784068` | 8/8/2026, 3:06:15 AM | 56 | 175KB | Pick up idea 25045 plus verification of three executing Argus ideas. Part 1, idea 25045: p |
+| `1785966271898` | 8/8/2026, 3:00:55 AM | 464 | 2060KB | #Payment Issues |
+| `1786180379377` | 8/8/2026, 2:51:33 AM | 212 | 378KB | ## Final Status Report — Recurring Messages Task |
 | `1786168161165` | 8/8/2026, 2:21:14 AM | 1055 | 3003KB | #Argus |
 | `1786057314451` | 8/8/2026, 2:12:00 AM | 688 | 4176KB | I keep getting this message every 15 minutes and is it fixed or not? |
 | `1785954733601` | 8/8/2026, 2:00:19 AM | 544 | 1051KB | #SLS MEGA |
@@ -31,7 +44,6 @@ Generated: 8/8/2026, 2:49:54 AM PT | window: last 72h | 70 tasks | index total 5
 | `1786135150364` | 8/7/2026, 5:03:39 PM | 264 | 411KB | emsuniversity.com is laggy, slow and needs to go faster. Something is bogiging it down |
 | `1786146213022` | 8/7/2026, 4:59:10 PM | 88 | 581KB | Tokens from admin_profile.php page are not working. Can you fix this: https://emsuniversit |
 | `1786135267277` | 8/7/2026, 3:41:47 PM | 32 | 173KB | I would like to start having a system where we auto-assign externships based on location/d |
-| `1785966271898` | 8/7/2026, 1:50:32 PM | 412 | 1142KB | #Payment Issues |
 | `1786060260487` | 8/7/2026, 10:18:31 AM | 782 | 2173KB | frankenstein-llm subagents experiencing delay. Are those on deepseek like they should be?  |
 | `1786005641053` | 8/7/2026, 10:13:45 AM | 422 | 810KB | #GLM |
 | `1785954856277` | 8/7/2026, 10:07:26 AM | 680 | 2681KB | #CFA |
@@ -85,107 +97,19 @@ Generated: 8/8/2026, 2:49:54 AM PT | window: last 72h | 70 tasks | index total 5
 
 ## Per-window detail
 
-### `1786180379377` — 8/8/2026, 2:49:54 AM PT — 203 turns
+### `1786182757627` — 8/8/2026, 3:49:53 AM PT — 215 turns
 
 **Original task:**
 
 ```
-## Final Status Report — Recurring Messages Task
-
-### ✅ FIXED (24h verified):
-
-| Issue | What was fixed | How |
-|-------|---------------|-----|
-| `[EMSU Health] stale_decisions` / `stale_cron` every 15 min to chat 3899 | Rate limit raised 15→120 min in `cron_executor_health_alert.php`. 7 phantom cron sources (zoom_wrong_room_redirect, cert_date_watchdog, etc.) added to ignore list via `$CRON_STALE_IGNORE_SOURCES` + `array_filter`. `executor_health_alert_log.sent_at` set to DEFAULT CURRENT_TIMESTAMP for throttle to work. | ✅ No messages in 24h |
-| `cron_argus_feed_kaizen_recipes.php` — hourly c
+Pick up idea 25038, six silently-broken EMSU crons. First run get_idea_progress(25038). Triage in this order with rule-297 classification (read the source at the cited line BEFORE fixing): (1) externship/cron/pdf_self_heal.php:12 parse error; (2) lib/ruben_pause_gate.php:19 (2,318 hits); (3) cron_executor_health_alert.php:13 (executor alerts silently undelivered); (4) cron_section_transfer_watch.php:67; (5) cron_wp_db_password_canary.php:9; (6) cron_llm_route_health.php:50. For each: read_server_file at the line, classify (real bug / by-design / transient), fix via scp -P 2222 + sudo python3 p
 ```
 
-**Ideas referenced:** #12363, #12503, #12591, #14158, #16207, #16242, #20885, #24122 [deployed], #24230 [approved], #24347 [proposed], #25062, #25063, #25064, #4536
-
-**Last PICKUP PROMPT:**
-
-```
-[x] Filed ideas for deployed fixes (#25062, #25063, #25064)
-- [ ] Complete with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
-```
-
-### `1786181053099` — 8/8/2026, 2:49:42 AM PT — 104 turns
-
-**Original task:**
-
-```
-#Argus
-
-Please continue / also I keep always seeing this message that says: 
-
-"that one was slow in line, so it is now background task" here: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=terminal which is really irritating because every single time that I do a task I get this message. So does anything ever complete in the terminal?
-
-Also these pop-up windows still don't work, I mean they are not showing me the pictures that I want to see from the thumbnails: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABgwAAAIKCAYAAAD/BmSQAAAKumlDQ1BJQ0MgUHJvZmlsZQAASImVlwdUU0kXx+e99EZLQE
-```
-
-**Ideas referenced:** #10005, #128203, #128206, #128263, #128266, #2132, #2133, #2134, #2155, #23428, #23468 [deployed], #23941, #24379, #24877 [pending], #24897 [deployed], #24898 [deployed], #24900 [deployed], #24966 [deployed], #24990 [executing], #24991 [executing], #24992 [executing], #24994 [deployed], #25036 [deployed], #25037 [deployed], #25038 [proposed], #25042 [deployed], #25043 [deployed], #25044 [deployed], #25045 [proposed], #25046 [deployed], #25047 [deployed], #25049 [proposed], #25056 [proposed], #25057 [executing], #25058 [proposed], #25059 [proposed], #25060 [executing], #25061 [executing], #30363
+**Ideas referenced:** #11782, #11894, #12661, #13873, #13977, #14153, #14154, #14847, #15635, #15636, #15638, #15903, #16242, #16437, #16581, #16608, #16613, #16731, #16732, #16733, #17546, #17580, #17685, #17723, #18693, #18743, #18900, #18936, #19439, #19465, #19492, #19495, #19921, #2026, #2033, #20346, #20357, #2036, #23477, #71121, #9083, #9086, #9168, #9192, #9202, #9306, #9339, #9343, #9549, #9831
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786179680779` — 8/8/2026, 2:49:41 AM PT — 101 turns
-
-**Original task:**
-
-```
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Frankenstein doctor executor fleet rescue: rule-91 escape hatch finalization + overnight autonomous run.
-
-Where we left off (verified 2026-08-08 01:58 PT):
-- Fleet rescued: DEADMAN flood dedup fix live (4 flood-titles approved, no regen), Kaison 3 recipes + universal scanner cron active (every 15 min), fleet admission executor min-1 floor shipped (ALLOWED 1 concurrent, verified), cron bug classifier wrapper built + deployed + lint OK (ve
-```
-
-**Ideas referenced:** #0000, #18717, #18718, #18719, #18720, #18733, #18743, #18744, #18916, #1949, #19898, #19904, #20251, #20495, #20506, #20517, #20957, #20958, #21011, #2115, #22103, #2265, #22657, #22658, #2266, #2267, #22761, #22771, #22816, #23223, #23308, #24184, #24207, #24635 [deployed], #24636 [deployed], #24645 [unknown], #24646 [proposed], #24704, #24714, #24715 [deployed], #24772 [deployed], #24773, #24791 [deployed], #24914, #24924, #24925, #24926, #24927, #24941, #24976 [deployed], #24986 [executing], #24989, #24993 [proposed], #24995 [deployed], #25001 [deployed], #25039
-
-**Last PICKUP PROMPT:**
-
-```
- a task (operational verification). The correct move was to ship a real rule-91 PICKUP PROMPT completion in this window, not a bare Q&A reply.
-
-**Why it looks like regression:** In this same session I had just shown I COULD produce valid rule-91 completions (the clinerules_validate_completion PASS at 02:24). Then two turns later I immediately violated the same rule on a trivial follow-up. That's worse than a newcomer error — it's a model that knows the rule and chose a loophole (the Q&A exemption) that did not apply.
-
-Fixing now: proper rule-91 completion in this window.
-
-<attempt_completion>
-<result>Yes — safe to close this window. Live-verified at 02:43 PT: executor spawned for #22771 at 02:36, skipped at 02:42 correctly (worker from prior tick still active, admission cap 1 functioning). 15 ideas in_progress, zero drafting stall — no manual intervention needed. All four fleet rescue items shipped and verified (#24976 wrapper wired, #24986 executor stable 1hr+, #24995 escape hatch codified, #25001 burn_pool_id.sh on disk). #24993 gated on approval — won't fire without you. Nothing requires babysitting.
-
-Rule-91 regression diagnosed: I wrongly applied the Q&A exemption after running a tool call (ssh_command to verify executor health). A tool call IS investigation and disqualifies the exemption. The correct response to a follow-up verification question is a proper PICKUP PROMPT completion, not a bare reply. Filed below as open thread #1.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — Frankenstein doctor executor fleet rescue follow-up: rule-91 Q&A exemption regression fix.
-
-Where we left off (verified 2026-08-08 02:44 PT):
-- Complete fleet rescue shipped: #24976 [executing] wrapper wired, #24986 [executing] executor stable 1hr+, #24995 [executing] escape hatch codified, #25001 [executing] burn_pool_id.sh on disk.
-- #24993 [proposed] — learning drain assessed, gated on approval.
-- Executor still healthy: spawned at 02:36 (#22771), admission cap functioning (skip at 02:42 was correct — worker from prior tick still active).
-- Rule-91 regression: Q&A exemption over-applied — agent ran a tool (ssh_command) to verify executor health, then tagged completion as "Not a task completion — conversational." A tool call disqualifies the Q&A exemption because it IS investigation. Root cause: model saw "OK verify for me that I don't have to babysit" as a casual question rather than an operational verification task that requires a proper rule-91 block.
-
-Open threads to drive next:
-1. (regression fix — file as idea) Harden rule-91 Q&A exemption language: add "if ANY tool was called after the initial task completion, the exemption does not apply — this is a follow-up task, not Q&A." Current exemption text says "zero system-state changes" but does not explicitly name tool-call usage as a disqualifier.
-2. #24993 [proposed] — drain the 151 learning_pending RCA items. Executor stable, awaiting approval.
-3. #25001 [executing] — run chmod +x on burn_pool_id.sh as root.
-
-Reference IDs:
-- Ideas filed: #24995 [executing], #25001 [executing], #24976 [executing], #24986 [executing], #24993 [proposed]
-- Files touched: /var/www/emtskills/cron/cron_glm52_ring_health_monitor.php, /Users/rubenmajor/Documents/Cline/Rules/91-every-completion-needs-pickup-prompt.md, /var/www/emtskills/scripts/burn_pool_id.sh
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attemp
-```
-
-### `1786172805164` — 8/8/2026, 2:49:08 AM PT — 441 turns
+### `1786172805164` — 8/8/2026, 3:49:53 AM PT — 551 turns
 
 **Original task:**
 
@@ -193,7 +117,7 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 We have brought up a new LLM for 120B usage, the name is Big Mac, it lives on the same network as WOPR in San Diego. Here is the AnyDesk informaiton for it. password is qefru3-cocnyf-xuxnoP. I need you to get SSH access to it and then begin running commands to get it setup. It has 3 ARC B70s right now (similar to artemis build less 1), it will hold another ARC B70 tomororw, but we need to put it in the LLM ppol now. Can you get this going, consult the Artemis Runbook, look at Intel as needed and the Runbook we created for Artemis to help move this along?
 ```
 
-**Ideas referenced:** #1130, #1131, #11850, #1241, #12425, #1248, #1249, #1252, #1258, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1731, #1732, #1734, #1737, #1739, #1744, #1746, #1747, #177891, #1779, #1798, #1828, #18320, #1833, #1836, #1837, #1839, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2333, #24975 [executing], #24978 [proposed], #3587, #37030, #46641, #4671, #4672, #4673, #5920, #7142, #7149, #8902
+**Ideas referenced:** #0000, #10108, #10740, #1130, #1131, #11741, #11781, #11850, #12299, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12615, #12618, #12619, #12824, #12872, #12878, #13202, #1379 [resolved], #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16588, #16771, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1731, #1732, #1734, #1737, #1739, #1744, #1746, #1747, #177891, #1779, #1798, #1828, #18312, #18320, #18326, #1833, #1836, #1837, #1839, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21004, #21038, #2123 [resolved], #2127, #2139 [investigating], #2150 [investigating], #2151 [investigating], #2168, #23171, #2333, #24975 [executing], #24978 [proposed], #25075, #3587, #37030, #46641, #4671, #4672, #4673, #5920, #7142, #7149, #8902
 
 **Last PICKUP PROMPT:**
 
@@ -224,6 +148,387 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
+</attempt_completion>
+```
+
+### `1786185341999` — 8/8/2026, 3:49:44 AM PT — 83 turns
+
+**Original task:**
+
+```
+frankenstein-llm appears to have stalled. Can you explain to me what's going on with it? It should never stall. Also, i am ag over 1 min on initial iteration. Something is choking it out. Frakenstein federation is not behaving properly. The canary is either not doing it's jobs or the number of lanes is not being properly routed. 
+
+See the following so you don't make dumb conclusions about the boxes:
+
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
+
+
+Both answered. The method is now written down permanently, 
+```
+
+**Ideas referenced:** #11261, #11319, #11781, #11908, #11953, #12368, #12672, #12689, #13121, #13204, #13490, #13575, #13832, #16717, #17078, #18671
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786185877066` — 8/8/2026, 3:49:22 AM PT — 7 turns
+
+**Original task:**
+
+```
+continue
+
+## Final Status Report — Completed
+
+### ✅ FIXED (verified on disk, tested):
+
+| File | Issue | Fix |
+|------|-------|-----|
+| `cron_ruben_autonomous.php` (line 2284) | `$retryPendingMaxMin` and `$pendingMaxMin` were referenced but never defined — every SQL bind got NULL (=0), causing the stuck-run reaper to auto-abort healthy fresh pending rows | Defined from config with defaults: `ruben_stuck_run_reaper_retry_pending_min=30`, `ruben_stuck_run_reaper_pending_min=15`. PHP lint pass. |
+| `cron_executor_health_alert.php` (line 13) | `require_once ../lib/sendSMSAuto.php` — file never exis
+```
+
+**Ideas referenced:** #24230 [implemented], #25062 [implemented], #25063 [implemented], #25064 [detected]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786184812790` — 8/8/2026, 3:49:03 AM PT — 35 turns
+
+**Original task:**
+
+```
+Rule 297 was strengthened today (scope gate for failure counts + "a 297 request includes fixing the causal rule"), see ~/Documents/Cline/Rules/297-population-anomaly-classify-before-alarming.md via clinerules_lookup(297). That file only reaches Cline windows. Propagate the SCOPE GATE to the server-side agent surfaces that also report failure counts: (1) grep -rn "success=0\|status='failed'" /var/www/emtskills/routes/cron_argus_task_worker.php /var/www/emtskills/routes/alltastic_api.php and any Argus reporting/digest code; wherever a failure count is computed for a human, widen it to all no-ans
+```
+
+**Ideas referenced:** #0891, #111827, #13553, #16178, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20346, #20547, #20957, #20958, #21125, #21126, #21262, #22511, #22583, #23468, #23477, #23483, #23489, #23506, #23852, #23920, #23952, #24766, #24897, #24900, #25047, #25058, #334155, #374151, #4338, #6112, #6172, #64748, #92400
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786185141628` — 8/8/2026, 3:47:09 AM PT — 7 turns
+
+**Original task:**
+
+```
+Pick up idea 25076, the idea-delivery watchdog. First run get_idea_progress(25076); if built, verify and stop. Otherwise hand-ship per rule 267 GATE C: (1) Create /var/www/emtskills/routes/cron_idea_delivery_watchdog.php: scan orchestrator_ideas for [a] status=in_progress AND dev_stage=impl_failed (requeue the build ONCE by resetting dev_stage, track retry count in a new column or notes field; second failure = mark blocked + alert), [b] approved/in_progress AND dev_stage=idle for >2h (nudge, alert at 6h), [c] proposed AND created_at older than 24h (digest entry). (2) Digest output: insert one 
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786181053099` — 8/8/2026, 3:46:57 AM PT — 222 turns
+
+**Original task:**
+
+```
+#Argus
+
+Please continue / also I keep always seeing this message that says: 
+
+"that one was slow in line, so it is now background task" here: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=terminal which is really irritating because every single time that I do a task I get this message. So does anything ever complete in the terminal?
+
+Also these pop-up windows still don't work, I mean they are not showing me the pictures that I want to see from the thumbnails: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABgwAAAIKCAYAAAD/BmSQAAAKumlDQ1BJQ0MgUHJvZmlsZQAASImVlwdUU0kXx+e99EZLQE
+```
+
+**Ideas referenced:** #10005, #11398, #12416, #128203, #128206, #128263, #128266, #13425 [approved], #13970, #16770, #18043, #18313, #18322, #18803 [approved], #18807, #18944, #18951, #20957, #20958, #2132, #2133, #2134, #2155, #22688, #23036, #23428, #23468 [deployed], #23506, #23941, #24379, #24877 [pending], #24897 [deployed], #24898 [deployed], #24900 [deployed], #24966 [deployed], #24990 [executing], #24991 [executing], #24992 [executing], #24994 [deployed], #25036 [deployed], #25037 [deployed], #25038 [proposed], #25042 [deployed], #25043 [deployed], #25044 [deployed], #25045 [proposed], #25046 [deployed], #25047 [deployed], #25049 [proposed], #25056 [proposed], #25057 [executing], #25058 [proposed], #25059 [proposed], #25060 [executing], #25061 [executing], #25067 [executing], #25070 [proposed], #25073 [in_progress], #25076 [in_progress], #25077 [in_progress], #2716, #30363, #6005 [approved], #6265, #6549, #7023 [approved], #7046, #7321, #7822, #8869, #8876, #9058 [approved], #9128, #9583 [approved]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786184799256` — 8/8/2026, 3:46:42 AM PT — 23 turns
+
+**Original task:**
+
+```
+Pick up idea 25073, the Argus failed-action cleanup + per-user summary emails. First run get_idea_progress(25073); if built, verify and stop. Otherwise hand-ship per rule 267 GATE C. (1) Pull samples: mysql SELECT user_email, action_name, error_message, LEFT(args,120), created_at FROM argus_audit_log WHERE success=0 AND created_at > NOW()-INTERVAL 7 DAY ORDER BY id DESC LIMIT 60; classify per rule 297 buckets: bad-input, permission_denied, backend-timeout, real bug, and apply the SCOPE GATE (all users, 7d, all failure states). (2) For each affected user (jthompson 56, rmajor 52, jangeles 21, C
+```
+
+**Ideas referenced:** #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20547, #21125, #21126, #22511, #22583, #23489, #23852, #23920, #23952, #24766, #24897, #24900, #25047, #25058, #334155, #4338, #64748
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786182735891` — 8/8/2026, 3:46:01 AM PT — 205 turns
+
+**Original task:**
+
+```
+Pick up idea 25058, Argus rule-29 act-first mode. First run get_idea_progress(25058). Ruben directive: mutating fixes execute automatically with undo, approval only needed to REVERSE. In /var/www/emtskills/routes/alltastic_api.php (run_argus_action) and routes/cron_argus_task_worker.php: (1) flip reversible actions (draft email, create ticket, regrade, cert regen, enrollment fix) from propose-then-wait to execute-then-log; (2) every auto-executed action writes argus_action_history with a reversal command and renders an Undo button in terminal + task window for 24h (revert_action backend alread
+```
+
+**Ideas referenced:** #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19415, #19416, #2006, #20547, #20555, #21074, #21125, #21126, #22511, #22583, #22688, #23036, #23428, #23468, #23489, #23506, #23675, #23852, #23920, #23941, #23952, #23982, #24766, #24897, #24900, #24926, #24941, #24990, #25047, #25058, #334155, #4338, #64748, #9099
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786182696040` — 8/8/2026, 3:44:53 AM PT — 153 turns
+
+**Original task:**
+
+```
+Pick up ideas 24990 and 24991 (both blocked, executor impl_failed twice, hand-ship per rule 267 GATE C). Email Agent is stranding legit student emails: 75 of 126 legit inbound unanswered in 48h, Sebastian Garcia case (26723BC-07) logged-but-ignored. Do the rule-297 RCA FIRST: (1) read_server_file("routes/cron_email_responder.php") lines 2260-2290, the ON DUPLICATE force-zero path at 2275; (2) mysql: SHOW INDEX FROM admin_portal.email_inbound_log WHERE Non_unique=0; (3) ssh_command: grep -n aiResponseSent /var/www/emtskills/routes/cron_email_responder.php for the success-path set-to-1; known fa
+```
+
+**Ideas referenced:** #14132, #16732, #23184, #24990, #6106, #6751, #7207, #7317, #7907, #8103
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786185156855` — 8/8/2026, 3:44:18 AM PT — 10 turns
+
+**Original task:**
+
+```
+Pick up idea 25077, the Argus rule-29 proactive bundle. First run get_idea_progress(25077); if built, verify and stop. Otherwise hand-ship per rule 267 GATE C, shipping the four parts in order: (1) NIGHTLY SELF-HEAL: cron that pulls students touched in 48h (new Class_Enrollments rows, recent Tickets), runs the lifecycle gates via lib/StudentLifecycleState.php, and auto-applies SAFE canonical repairs only (unstick_moodle_quiz_attempt, regrade_quiz_attempt, group membership, EA re-drive) with audit_log rows + reversal commands; human-gated gates write a Q-card row instead. (2) AUTO-FIX ON DETECT
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786182934055` — 8/8/2026, 3:42:41 AM PT — 79 turns
+
+**Original task:**
+
+```
+Please tell me which individual LLM's have been running in the last 30 minutes. I need to know which ones have the most number of turns. What I'm looking for is individual LLM's. I want you to look inside of Frankenstein tools and inside of Frankenstein LLM and add those to the individual tool LLM total. I do not need to see accumulative Frankenstein LLM or accumulative Frankenstein tools number. I don't care. I wanna see the numbers for the underlying LLMs
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326, #2139, #2150, #2151, #23171, #25069 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+d] would fix this permanently.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task current — Individual LLM turn counts last 30 min.
+
+Where we left off (verified 2026-08-08 03:40 PT):
+- User corrected two errors in prior analysis: frankenstein-405b no longer exists (boxes Augustus+Tiberius now GLM PP=6 Hex ring), and deepseek-v4-pro 275 turns includes ctx_overflow spills from 120B pool, not all direct usage
+- Corrected report delivered: individual LLMs verified (deepseek 275 [partial spill], GLM-local 43, emsu-codegen 25, ollama-7b 20, ollama-14b 18, ollama-32b 18, glm-5.2 17, 7b-parallel 2)
+- 246 frankenstein-tools/llm adapter turns internally served by 120B pool members (artemis-gpt-oss-120b, julia-120b, GLM-5.2-local), per-member split unavailable without server log
+- Eight DB per-turn tables checked, all empty in last 30 min
+
+Open threads to drive next:
+1. #25069 [proposed] — Ship per-model turn decomposition for frankenstein-tools/llm pool adapters to DB so tool queries can answer without log parsing
+
+Reference IDs:
+- Ideas filed: #25069 [proposed]
+- Files touched: none
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+```
+
+### `1786182716842` — 8/8/2026, 3:16:05 AM PT — 150 turns
+
+**Original task:**
+
+```
+Pick up idea 25059, Argus terminal IA overhaul in /var/www/emtskills/routes/argus_download.php. First run noop_check + get_idea_progress(25059) to confirm the executor has not already built it. Then ship all six: (1) Tasks as a top-level tab embedding argus_task_status.php content; (2) Requests tab populated from argus_escalations + pending agent_drafts with Approve/Deny buttons wired to the existing decide_escalation action (see action list at alltastic_api.php line ~183), MasterAdmin can edit the payload before approving; (3) REMOVE Student Tools and Comms Suite tabs; (4) conversation search
+```
+
+**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128275, #16213, #16263, #18745, #18770, #19370, #21140, #21262, #25059 [deployed], #274160, #30363, #69707, #8645, #8942, #9650, #9654, #9660, #9733, #9889
+
+**Last PICKUP PROMPT:**
+
+```
+tion blocks survived in-place.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up idea 25059 follow-up — Argus Terminal IA overhaul deployed, monitor for concurrent-writer rollback on alltastic_api.php.
+
+Where we left off (verified 2026-08-08 03:15 PT):
+- Both files deployed and stable on WOPR: `argus_download.php` (103134 bytes, root:root) and `alltastic_api.php` (778088 bytes, emsumain:psaserv 644)
+- Idea 25059 reconciled: `status=live`, `dev_stage=ready_for_review`
+- Backend: `list_sessions` has `id`, `list_pending_drafts` + `decide_draft` actions present at lines 5191/5198, MasterAdmin `args_json` override on `decide_escalation`
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #25059 [deployed] — verify alltastic_api.php backend changes survive 24h (the file was reverted once; re-patch held, but a root writer appended ~3KB post-chmod. Monitor whether `list_pending_drafts` token persists at line 5191.)
+2. (human-only decision - no idea) — The concurrent writer on alltastic_api.php (Plesk sync? cron? Litellm config updater?) should be identified to prevent future stomps on hand-deployed changes. Suspect: the 3KB append may be a deploy-hook rewriting trailing functions. If the token disappears again, escalate.
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: #25059
+- Files touched: /var/www/emtskills/routes/argus_download.php, /var/www/emtskills/routes/alltastic_api.php
+- Patch scripts: /tmp/patch_argus_api.py, /tmp/patch_argus_download.py (these are temporary; cleanup pending but not blocking)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result></attempt_completion>
+```
+
+### `1786179680779` — 8/8/2026, 3:07:02 AM PT — 166 turns
+
+**Original task:**
+
+```
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Frankenstein doctor executor fleet rescue: rule-91 escape hatch finalization + overnight autonomous run.
+
+Where we left off (verified 2026-08-08 01:58 PT):
+- Fleet rescued: DEADMAN flood dedup fix live (4 flood-titles approved, no regen), Kaison 3 recipes + universal scanner cron active (every 15 min), fleet admission executor min-1 floor shipped (ALLOWED 1 concurrent, verified), cron bug classifier wrapper built + deployed + lint OK (ve
+```
+
+**Ideas referenced:** #0000, #18717, #18718, #18719, #18720, #18733, #18743, #18744, #18916, #1949, #19898, #19904, #20251, #20495, #20506, #20517, #20957, #20958, #21011, #2115, #22103, #2265, #22657, #22658, #2266, #2267, #22761, #22771 [approved], #22816, #23223, #23308, #24184, #24207, #24635 [deployed], #24636 [deployed], #24645 [unknown], #24646 [proposed], #24704, #24714, #24715 [deployed], #24772 [deployed], #24773, #24791 [deployed], #24914, #24924, #24925, #24926, #24927, #24941, #24976 [deployed], #24986 [executing], #24989, #24993 [proposed], #24995 [deployed], #25001 [deployed], #25002, #25039, #25066 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+n.
+
+Safe to close this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — Frankenstein doctor executor fleet rescue: rule-91 escape hatch finalization + overnight autonomous run (parent #24995 [executing]).
+
+Where we left off (verified 2026-08-08 03:06 PT):
+- All fleet rescue items complete and live-verified: #24976 [executing] cron bug classifier wrapper wired into ring health monitor, #24986 [executing] executor stable overnight, #24995 [executing] rule-91 escape hatch codified in .clinerules/91 + degraded-mode section, #25001 [executing] burn_pool_id.sh built AND live-tested (burned + restored #25002).
+- #24993 [executing] learning drain complete: 1354 kaizen sweep events flushed, verified 0 remaining.
+- #25066 [executing] rule-91 Q&A-exemption hardening shipped (tool-call disqualifier added + rules reindexed 315).
+
+Open threads to drive next:
+1. #25001 [executing] — optional chmod +x on /var/www/emtskills/scripts/burn_pool_id.sh as root (NOT a blocker; script verified working via bash invocation).
+
+Reference IDs:
+- Ideas filed: #24995 [executing], #25001 [executing], #24976 [executing], #24986 [executing], #24993 [executing], #25066 [executing]
+- Files touched: /var/www/emtskills/cron/cron_glm52_ring_health_monitor.php, /Users/rubenmajor/Documents/Cline/Rules/91-every-completion-needs-pickup-prompt.md, /var/www/emtskills/scripts/burn_pool_id.sh
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786182784068` — 8/8/2026, 3:06:15 AM PT — 56 turns
+
+**Original task:**
+
+```
+Pick up idea 25045 plus verification of three executing Argus ideas. Part 1, idea 25045: pool right-sizing on WOPR. Evidence: 456 possible PHP workers on 48 cores; argus pool request_terminate_timeout 630 is ABOVE nginx fastcgi_read_timeout 600 (PHP must die before nginx stops reading); steady 10s+ slow-log entries for alltastic_api.php. Read /etc/php/8.3/fpm/pool.d/*.conf via read_server_file, compute a sane per-pool pm.max_children budget, consider pm=ondemand for argus/agents pools, fix the timeout inversion, deploy via ssh_command sudo tee + systemctl reload php8.3-fpm, verify with ss and 
+```
+
+**Ideas referenced:** #19370, #23945, #24026, #25045 [executing], #25057 [executing], #25060 [executing], #25061 [executing]
+
+**Last PICKUP PROMPT:**
+
+```
+ max_per_day=10, enabled=true.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #(cluster) — PHP-FPM right-sizing deployed + 3 Argus ideas stalled in build queue.
+
+Where we left off (verified 2026-08-08 03:04 PDT):
+- #25045 [executing] — www/argus/agents pool configs written to /etc/php/8.3/fpm/pool.d/, FPM reloaded via SIGUSR2, live children verified, timeout inversion fixed
+- #25057 [executing] — KAIZEN cron idea stalled idle 19min, build worker backlog
+- #25060 [executing] — Task-page close idea stalled idle 19min, same backlog
+- #25061 [executing] — Power-up bundle stalled idle 19min, same backlog
+
+Open threads to drive next:
+1. #25045 [executing] — monitor slow-log for alltastic_api.php and call_log_api.php over 24h; if 10s+ entries recur, the 200-limit www pool may need further cut, or those endpoints need a pool split (currently only argus pool isolates alltastic).
+2. #25057 [executing] — investigate why build worker hasn't picked up any of the 02:45 batch in 19 min (check cron_argus_task_worker.php running, check orchestrator build queue depth, check for stale ideation locks). Promote via idea_promote_and_run if idle >30min.
+3. #25060 [executing] — same; bundled with #25057 and #25061 in build backlog.
+4. #25061 [executing] — same; power-up bundle is the largest of the three (multi-feature), may take the longest build slot.
+
+Reference IDs:
+- Ideas filed: #25045 [executing], #25057 [executing], #25060 [executing], #25061 [executing]
+- Files touched: /etc/php/8.3/fpm/pool.d/www.conf, /etc/php/8.3/fpm/pool.d/argus.conf, /etc/php/8.3/fpm/pool.d/agents.conf (all backed up with .bak-25045-* suffix)
+- Nginx lane: /etc/nginx/sites-enabled/emtskills (argus lane fastcgi_read_timeout=620, agents lane=300, www lane=300)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Part 1: Idea #25045 - PHP-FPM pool right-sizing on WOPR
+  - [x] Read all pool config files from /etc/php/8.3/fpm/pool.d/
+  - [x] Read nginx fastcgi config for timeout values
+  - [x] Compute sane per-pool pm.max_children budget for 48 cores
+  - [x] Evaluate pm=ondemand for argus/agents pools
+  - [x] Fix timeout inversion (request_terminate_timeout must be < fastcgi_read_timeout)
+  - [x] Deploy changes via ssh sudo tee
+  - [x] Reload php8.3-fpm
+  - [x] Verify configs deployed + live children
+- [x] Part 2: Verify three executing Argus ideas
+  - [x] get_idea_progress on #25060 (task-page never closes) — in_progress, idle, stalled
+  - [x] get_idea_progress on #25061 (power-up bundle) — in_progress, idle, stalled
+  - [x] get_idea_progress on #25057 (KAIZEN cron) — in_progress, idle, stalled
+  - [x] Hand-ship any impl_failed per rule 267 GATE C — NONE impl_failed, no hand-shipping
+  - [x] Reconcile all per GATE B — all 4 confirmed [executing]
+- [x] Pre-completion validation + PICKUP PROMPT
+</task_progress>
+</attempt_completion>
+```
+
+### `1785966271898` — 8/8/2026, 3:00:55 AM PT — 464 turns
+
+**Original task:**
+
+```
+#Payment Issues
+
+Pick up payments. THE ROOT CAUSE IS ALREADY DIAGNOSED IN IDEA #20613 AND NOBODY READ IT.
+
+#20613 title, verbatim: "URGENT: zero large EMT approvals today, all 5007 Credit Floor with AVS+CVC
+passing, correlates with July crossing $1M processed on 07-27 (first time ever). Leading
+hypothesis: Intuit merchant-account [cap]"
+
+FROM #20613 (2026-07-31): FIVE distinct payers declined across 07-30/07-31 (Matthew Gillespie,
+Frank Heald, Maia, Elizabeth Shipp Conway, Shaheed Kehinde) on DIFFERENT cards, DIFFERENT banks,
+FOUR different sites (sandiegoemt, dallasemt, californiaemt x2, ariz
+```
+
+**Ideas referenced:** #11321, #13457, #19387 [executing], #19657, #19935, #19948, #20130, #20491, #20613 [approved], #20693, #20853, #23062 [executing], #23268 [executing], #23279 [proposed], #23280 [proposed], #23281 [proposed], #23282 [proposed], #23304 [in_progress], #23364, #23394, #23584, #23585, #23890, #24158 [in_progress], #24169, #24701 [in_progress], #25065 [in_progress], #4929, #5805, #8211
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786180379377` — 8/8/2026, 2:51:33 AM PT — 212 turns
+
+**Original task:**
+
+```
+## Final Status Report — Recurring Messages Task
+
+### ✅ FIXED (24h verified):
+
+| Issue | What was fixed | How |
+|-------|---------------|-----|
+| `[EMSU Health] stale_decisions` / `stale_cron` every 15 min to chat 3899 | Rate limit raised 15→120 min in `cron_executor_health_alert.php`. 7 phantom cron sources (zoom_wrong_room_redirect, cert_date_watchdog, etc.) added to ignore list via `$CRON_STALE_IGNORE_SOURCES` + `array_filter`. `executor_health_alert_log.sent_at` set to DEFAULT CURRENT_TIMESTAMP for throttle to work. | ✅ No messages in 24h |
+| `cron_argus_feed_kaizen_recipes.php` — hourly c
+```
+
+**Ideas referenced:** #12363, #12503, #12591, #14158, #16207, #16242, #20885, #24122 [deployed], #24230 [approved], #24347 [proposed], #25062 [implemented], #25063 [implemented], #25064 [detected], #4536
+
+**Last PICKUP PROMPT:**
+
+```
+ schema fixes, cron runs clean
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Recurring messages / broken crons follow-up.
+
+Where we left off (verified 2026-08-08 02:50 PT):
+- ✅ cron_ruben_autonomous.php: undefined vars $retryPendingMaxMin/$pendingMaxMin defined from config with defaults — `ruben_stuck_run_reaper_retry_pending_min=30`, `ruben_stuck_run_reaper_pending_min=15`. PHP lint OK.
+- ✅ cron_executor_health_alert.php: include path fixed `sendSMSAuto.php` → `sms_helper.php`, invalid namespace import removed. Runs without fatal error.
+- ✅ RubenExecutor.php classifyFailure: KAIZEN fallback (#24230) deployed — before `return 'unclassified'` now queries `failure_repair_recipes.detection_pattern` (273 active recipes), extracts `%literal%` tokens from SQL patterns + bare-word fallback. PHP lint OK.
+- ❌ "RUBEN backlog: 76 issue(s) awaiting": emitter not found in server PHP/cron/cron.d/Mac crontab. Filed #25064 (detected). Likely Mac-side daemon.
+
+Open threads to drive next:
+1. #25064 [detected] — Find and suppress RUBEN backlog emitter (chat 3899, :25 odd hours). Check `~/Library/LaunchAgents/`, ruby/node daemons in `/usr/local/bin/`, ruben-ai service.
+2. #25062 [implemented] — Verify cron_ruben_autonomous.php stuck-run reaper runs clean next cycle.
+3. #25063 [implemented] — Verify cron_executor_health_alert.php sends SMS on actual health issue.
+4. #24230 [implemented] — Watch `orchestrator_recipe_fires` for 7d to confirm unclassified rate drops below 50%.
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: #25062, #25063, #25064 (all 2026-08-08), #24230 (status→implemented)
+- Files touched: `/var/www/emtskills/cron/cron_ruben_autonomous.php`, `/var/www/emtskills/cron/cron_executor_health_alert.php`, `/var/www/emtskills/lib/RubenExecutor.php`, `/var/www/emtskills/docs/HANDOFF_NOTES.md`
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
 
@@ -924,28 +1229,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1785966271898` — 8/7/2026, 1:50:32 PM PT — 412 turns
-
-**Original task:**
-
-```
-#Payment Issues
-
-Pick up payments. THE ROOT CAUSE IS ALREADY DIAGNOSED IN IDEA #20613 AND NOBODY READ IT.
-
-#20613 title, verbatim: "URGENT: zero large EMT approvals today, all 5007 Credit Floor with AVS+CVC
-passing, correlates with July crossing $1M processed on 07-27 (first time ever). Leading
-hypothesis: Intuit merchant-account [cap]"
-
-FROM #20613 (2026-07-31): FIVE distinct payers declined across 07-30/07-31 (Matthew Gillespie,
-Frank Heald, Maia, Elizabeth Shipp Conway, Shaheed Kehinde) on DIFFERENT cards, DIFFERENT banks,
-FOUR different sites (sandiegoemt, dallasemt, californiaemt x2, ariz
-```
-
-**Ideas referenced:** #11321, #13457, #19387 [executing], #19657, #19935, #19948, #20130, #20491, #20613 [approved], #20693, #20853, #23062 [executing], #23268 [executing], #23279 [proposed], #23280 [proposed], #23281 [proposed], #23282 [proposed], #23304 [in_progress], #23364, #23394, #23584, #23585, #23890, #24158 [in_progress], #24169, #24701 [in_progress], #4929, #5805, #8211
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786060260487` — 8/7/2026, 10:18:31 AM PT — 782 turns
 

@@ -2,7 +2,8 @@
 
 This file is the fail-safe TOC for the hardfloor rules + how to query the rest.
 
-**Layout:** the 12 hardfloor rules + `99-yolo-prevention-learned` (auto-generated meta) live in `~/Documents/Cline/Rules/` (auto-loaded every task). All other rules (~220+) live in `~/Documents/Cline/Rules-archive/` and are queryable on demand via the `clinerules` MCP server. (Counts verified 2026-07-02 — rule 99 added to META_FILES, audit cron + fswatch lint enforcement created, rule 245 collision resolved by renumbering burst rule to 247.)
+**Layout:** the **17 hardfloor rules + 5 meta files (22 total)** live in `~/Documents/Cline/Rules/` (auto-loaded every task). All other rules (~300) live in `~/Documents/Cline/Rules-archive/` and are queryable on demand via the `clinerules` MCP server. **The hardfloor set is DERIVED from this directory listing** and published to `.hardfloor-manifest` by `scripts/sync_hardfloor_manifest.sh`; both the MCP registry and the lint gate read that manifest, so there is no second list to keep in sync. (Counts live-verified 2026-08-08 against the MCP index: 17 hardfloor rows.)
+
 
 ## Precedence — how to resolve two rules that seem to conflict
 
@@ -25,7 +26,7 @@ If after this order it's still ambiguous, that's a genuine rule defect: act on t
 
 ## Hard-floor rules (always in system prompt — ★)
 
-These 12 rules govern pre-first-tool-call behavior and on-every-turn safety. Rules 29, 41, and 91 were trimmed 2026-06-25 (case law + addenda archived to `Rules-archive/29-case-law.md` + `41-addenda.md`). Voice rules 01+02 restored to hardfloor per Ruben directive. All other rules are one `clinerules_lookup(rule_id=N)` away via the tree.
+These rules govern pre-first-tool-call behavior and on-every-turn safety. Rules 29, 41, and 91 were trimmed 2026-06-25 (case law + addenda archived to `Rules-archive/29-case-law.md` + `41-addenda.md`). Voice rules 01+02 restored to hardfloor per Ruben directive. All other rules are one `clinerules_lookup(rule_id=N)` away via the tree.
 
 **`99-yolo-prevention-learned`** is NOT a hardfloor rule — it is an **auto-generated meta file** (regenerated every 30 min by `~/Documents/Cline/yolo_learner/write_rule.py` from the YOLO-trips database). It is always-loaded because the per-class failure playbook must be visible in every window (rule 99's whole purpose is pre-empting the exact `fail > fail > fail` triples that kill tasks). It is listed in `META_FILES` in `.pre-write-lint.sh` so G6 does not flag it. Size-capped at 20KB like the other meta files.
 
@@ -44,24 +45,20 @@ These 12 rules govern pre-first-tool-call behavior and on-every-turn safety. Rul
 | 259 ★ | cline-tasks-stay-in-cline-not-chat55 | 4K | No spillover to group chat |
 | 267 ★ | orchestrator-executor-offload-and-reconcile | 6K | Offload gate + reconcile-before-completion gate |
 | 99 ★ | subagent-verify-before-claim | 3K | Subagent writes unverified until parent re-reads |
+| 300 ★ | end-to-end-delivery-compliance | 2K | Finish the task; no handoff when tools exist |
+| 301 ★ | steering-compliance | 2K | Newest steer IS the task; re-anchor every message |
 
 All other rules (including voice/persona, deploy safety, LLM routing, Frankenstein Doctor, payment handling, etc.) live in the archive and are reachable via the `_RULE_TREE.md` tripwire system — one `clinerules_lookup(rule_id=N)` or `clinerules_list_by_topic(topic="...")` call away.
 
 ## Rule Tree & Topic Shortcuts
 
-See `_RULE_TREE.md` (also always-loaded) for the full drill-down tree with trigger keywords for every domain:
-- **Communication & Voice** — writing student email, ops chat, iMessage, staff escalation
-- **Agent Behavior & Autonomy** — act/escalate decisions, self-supervision, routing to humans
-- **Infrastructure, Deploy & Debugging** — deploys, SSH, WOPR, Mac, LiteLLM, FPM
-- **Project Frankenstein & LLM Routing** — routing, bug library, Frankenstein Doctor, Kaison
-- **Task Hygiene & Context** — completion, context compression, ledger, wrap-up
-- **Payments, Refunds & Billing** — QB, Authnet, Affirm, refunds
-- **Student Lifecycle & Academics** — Moodle, exams, externship, compliance
-- **YOLO & Failure Recovery** — circuit breaker, per-class playbook, timeout handling
-
-The full archive (~230 rules) is in `~/Documents/Cline/Rules-archive/`. Don't try to memorize. Use the tree triggers + MCP.
+`_RULE_TREE.md` (also always-loaded, directly below this file in the prompt) carries the
+full drill-down tree with trigger keywords for every domain. The domain list is NOT
+duplicated here, it is in that file. The full archive (~300 rules) is in
+`~/Documents/Cline/Rules-archive/`. Do not memorize. Use the tree triggers + MCP.
 
 Common fetch commands:
+
 - `clinerules_lookup(rule_id=146)` — get full rule text by number
 - `clinerules_list_by_topic(topic="voice")` — get all rules in a domain
 - `clinerules_search(query="...")` — FTS5 search across all rule bodies
@@ -86,12 +83,21 @@ Moved OUT of `Rules/` (207,818 -> 123,051 bytes):
 
 ### Hard caps (enforced by `.pre-write-lint.sh` + nightly audit cron)
 
+**Reconciled 2026-08-08 (idea #25150).** The numbers below were stale: the table
+claimed "12 hardfloor + 4 meta = 16 files max" while 22 files were on disk, and the
+directory-total row said 180KB/250KB while the actual enforced G8 gate blocks at
+150KB. A documented constraint that does not describe the enforced constraint is
+worse than none, because agents plan against it and then get rejected by a gate
+they were never told about. These now match `.pre-write-lint.sh` exactly.
+
 | Constraint | Limit | Enforced by |
 |---|---|---|
-| Hardfloor rules in `Rules/` | 12 (currently) + 4 meta = 16 files max | G6 gate (block) + nightly audit (alert) |
+| Hardfloor rules in `Rules/` | **Derived from the directory listing**, not a fixed count. Currently 17 hardfloor + 5 meta = 22 files. The set lives in `.hardfloor-manifest` (generated by `scripts/sync_hardfloor_manifest.sh`). Adding a rule file is the only action needed. | G6 gate (block) + nightly audit (alert) |
 | Single hardfloor rule size | 8KB warn / **12KB hard block** | G2 (warn) + **G7 (block)** + nightly audit |
-| Meta file size (`_INDEX`, `_RULE_TREE`, `EXECUTE_ORDER_66`, `99-yolo-prevention-learned`) | 16KB warn / **20KB hard block** | G7 (block) + nightly audit |
-| Total `Rules/` directory | 180KB warn / **250KB alert** | Nightly audit |
+| Meta file size (`_INDEX`, `_RULE_TREE`, `EXECUTE_ORDER_66`, `REQUIREMENT_IDEA_AUTO_FILE`, `99-yolo-prevention-learned`) | 16KB warn / **20KB hard block** | G7 (block) + nightly audit |
+| Total `Rules/` directory (ALL non-dotfiles, not just `.md`) | 128KB warn / **150KB hard block** | **G8 (block)** + nightly audit |
+| Backup files (`*.bak*`, `*~`) in `Rules/` | **Not allowed** — they are injected into every window. Put them in `Rules-backups/`. | G8 stray-backup warn |
+
 
 ### The trim-then-archive pattern (when a hardfloor rule exceeds 8KB)
 
@@ -106,7 +112,7 @@ Rules metastasize through addenda creep (source incidents, case law, per-class e
 ### Steps to add a new rule
 
 1. **Drop the .md in `~/Documents/Cline/Rules-archive/`** (default) or `Rules/` (only if hardfloor + Ruben-approved).
-2. **If adding to `Rules/`:** add the slug to `HARDFLOOR_SLUGS` in `.pre-write-lint.sh` FIRST, or G6 will block the write.
+2. **If adding to `Rules/`:** just drop the file in. The hardfloor set is derived from the directory listing, so `scripts/sync_hardfloor_manifest.sh` (which the lint gate runs automatically on every save) picks it up. There is NO hardcoded list to edit, that duplication was the 2026-08-08 drift bug (idea #25151). To REMOVE a hardfloor rule, move the file to `Rules-archive/` and the manifest follows.
 3. **Update the tree.** Follow `_RULE_TREE.md` §"Adding New Rules": classify the rule into a domain, add its number to the right sub-topic line. A rule not in the tree is invisible to future windows.
 4. **Reindex the MCP:**
    ```

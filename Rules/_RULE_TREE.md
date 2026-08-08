@@ -8,78 +8,47 @@
 
 **Every hardfloor rule is a binary gate at a specific trigger point. Read the relevant gate BEFORE the action. No gate = no action.**
 
-### ⛔ PRE-FIRST-TOOL GATE (before your first tool call)
+**Trimmed 2026-08-08 (idea #25150).** Gates for HARDFLOOR rules are one-line pointers, because those rule bodies are already loaded IN FULL in this same system prompt — restating them here was pure duplication that pushed the floor past its own G8 block. Gates for ARCHIVED rules keep their full text, because those bodies are NOT loaded and the gate is the only thing standing between you and the mistake.
 
-1. **RULE 00 SUBAGENTS:** Is this task multi-step (>3 distinct MCP/server calls) OR multi-file investigation OR multi-system analysis? → **dispatch `use_subagents` FIRST.** Do NOT inline sequential MCP calls. Subagents are free (DeepSeek prefix caching). Inline is the slow path.
-2. **RULE 146 NEVER CLAUDE:** Am I about to suggest Claude/Anthropic/Sonnet/Opus as the model to use? → **STOP.** Never suggest paid models. Free-local IS the design.
+### ⛔ Hardfloor gates (full text already loaded above — this is just the trigger index)
 
-### ⛔ PRE-EVERY-TOOL GATE (before ANY tool call)
+| Trigger moment | Rule | The gate in one line |
+|---|---|---|
+| Before first tool call | 00 | Multi-step / multi-file / multi-system? → dispatch `use_subagents` FIRST (fetch-then-paste; subagents have NO MCP/web/ssh) |
+| Before ANY tool call | 41 | Turn ends with `:` and no tool block → BROKEN. Prose is never a turn. |
+| After any destructive tool result | 41 | NEXT turn must contain a tool block, not a narration of the next step |
+| About to do 2+ similar ops | 267 | 3-question offload test → `create_idea` autonomous, continue critical path |
+| Before write_to_file/replace_in_file | 144 | Path starts `/etc/ /var/ /usr/ /opt/ /root/ /srv/` → STOP, use `ssh_command` |
+| Before any send | 01 | Would Ruben type this? No em dashes, no fake departments, talk TO people in-thread |
+| Before student email | 02 | Strip all apology language. Neutral acknowledgement + fix action. |
+| Before chat 55 | 259 | Cline technical work does NOT go to the group. Default channel is `attempt_completion`. |
+| Before attempt_completion | 91 | 47-char U+2550 divider + PICKUP PROMPT + real ids with `[disposition]` + open threads + reference ids |
+| Before attempt_completion | 29 | Could I do this myself with a tool I have? → DO IT, don't list it as an open thread |
+| Before attempt_completion | 267 | Reconcile EVERY filed idea with a live call; tag with `(verified: ...)` |
+| Every turn start | 119 | Check `/tmp/cline_compress_signal_TASK<id>.json` FIRST. File says compress → compress, zero deliberation. |
+| Any turn | 120 | Context size is NEVER a reason to do less work. Compress or work fully. |
+| On "you did not use a tool" | 143 | Count CONSECUTIVE only. Strikes 1-8 recover with a simpler tool. Strike 9 = bail to `attempt_completion`. |
+| Anomalous count / diagnosis | 297 | Classify the population + read the source before alarming. Scope the question before quantifying. |
+| Task says "end to end" | 300 | No handoff when the tools to finish are present. A filed idea is not a deliverable. |
+| Any new steer | 301 | The newest steer IS the task. Re-anchor in one line, then act on it. |
+| Subagent reports a write | 99 | Unverified until the parent re-reads the file back |
 
-3. **RULE 41 NO PROSE:** Does my turn end with `:` and have no `<tool_use>` block? → **BROKEN.** Add the tool. Never emit prose without a tool block. The tool call IS the response.
-4. **RULE 41 PROSE LOOP:** After ANY successful destructive tool result (deploy/write/SQL/send), the NEXT turn MUST contain a tool_use block. Not prose describing the next step. Not a narration. A tool.
+### ⛔ Archived-rule gates (bodies NOT loaded — full text kept here on purpose)
 
-### ⛔ MID-TASK OFFLOAD GATE (when about to do 2+ similar inline operations)
+**RULE 146 NEVER CLAUDE (before suggesting any model):** `frankenstein-llm` is the ONE router for EVERY LLM we own (7B → 405B, RunPods, DeepSeek, and the paid heads). **Free-local-first IS the design** — a healthy local box that can serve, serves. Only spill to paid on genuine saturation, never on a single failed probe (check `/tmp/emsu_router_audit.log` for a recent `picked=<model>` before calling anything dead). **Never suggest Claude/Anthropic/Sonnet/Opus** unless Ruben explicitly asked. Cline is PRIORITY; executor/orchestrator queue behind it. Canonical endpoint: `https://litellm.emsuniversity.com` (Cloudflare tunnel → WOPR:4000), never `127.0.0.1:4000`. Full: `clinerules_lookup(rule_id=146)`. Cross-refs: 140, 141, 148, 250.
 
-3a. **RULE 267 GATE A OFFLOAD:** Am I about to do 2+ operations of the same type (SQL fixes, file edits, student lookups, ticket updates, etc.) where at least one doesn't block my next step? → **Run the 3-question test:** (1) 2+ similar ops? (2) independent of my next step? (3) executor can do autonomously? If YES to all 3 → **offload via `create_idea` (autonomous tier) and continue your critical path.** Do NOT serialize work the executor can absorb in parallel. Full rule: `clinerules_lookup(rule_id=267)`.
+**RULE 42 SAFE DEPLOY (before /var/www deploys):** use `safe_deploy_file` MCP. It ALREADY reloads FPM — do not deploy raw then separately reload.
 
-### ⛔ PRE-WRITE GATE (before write_to_file / replace_in_file)
+**RULE 271 VERIFY BEFORE WRITING INFRA CLAIMS (before writing any infra state claim):** for EACH claim ("box is down," "needs reboot," "script doesn't exist"), did I run a tool THIS SESSION that verified it? If no → verify now or delete the claim. **No SSH to the box = no claims about the box.**
 
-5. **RULE 144 SERVER PATHS:** Does path start with `/etc/` `/var/` `/usr/` `/opt/` `/root/` `/srv/`? → **STOP.** Use `emsu-operations ssh_command` with `sudo tee` heredoc. Local file tools can NEVER write to server paths.
-6. **RULE 42 SAFE DEPLOY:** For `/var/www/emtskills/` deploys → use `safe_deploy_file` MCP. It already reloads FPM. Do not deploy raw then separately reload.
-6a. **RULE 271 VERIFY BEFORE WRITING INFRA CLAIMS:** Does my pending write (HANDOFF_NOTES, pickup prompt, runbook, ticket) contain ANY infrastructure state claim ("box is down," "needs reboot," "script doesn't exist," "TP=N caused freeze")? → **For EACH claim: did I run a tool THIS SESSION that verified it?** If no → run the verification tool NOW or remove the claim. **No SSH to the box = no claims about the box.** Full rule: `clinerules_lookup(rule_id=271)`.
+**RULE 175 NO STAFF IMESSAGE (before any send to chats 5/55/64/84/88/3750 or anyone but Ruben):** can I quote Ruben's words asking me to send this ("send," "tell," "ping," "let her know," "forward," "loop in")? If NO → do not send. Offer it in `attempt_completion` instead. This supersedes all confidence-tier autonomy.
 
-### ⛔ PRE-SEND GATE (before imessage send_message / ops chat / student email)
+**RULE 261 MCP FAILURE CLASSIFICATION (before declaring any MCP "wedged"):** classify first. A=server down (ECONNREFUSED → restart, don't retry). B=session expired ("No valid session ID"/401/403 → re-init + retry ONCE, server is healthy). C=transport error (result missing/502 → retry once after 5s). D=transient empty (retry once). One or two failures is NEVER a wedge. Green in Cline settings ≠ valid session.
 
-7. **RULE 01 VOICE:** Would Ruben actually type this? No em dashes, no "the tech team," no "I've identified the root cause," no corporate speak. Talk TO the person IN the chat, not ABOUT them.
-8. **RULE 02 NO APOLOGIES:** Is this student-facing email with apology language ("I'm sorry," "we apologize," "I regret")? → **STRIP IT.** Neutral acknowledgement + concrete fix action only.
-9. **RULE 259 NO SPILLOVER:** Am I about to send to chat 55 (group chat)? → **GATE CHECK: does Jon or Vicky need this?** If the content is Cline technical work, infrastructure, code, LLM routing, bug analysis, SQL, deploy mechanics, clinerules, or system architecture → **FAILS. Do NOT send to group.** The default channel for Ruben-only Cline work is `attempt_completion`, not chat 55. Full rule: `clinerules_lookup(rule_id=259)`.
-10. **RULE 175 NO STAFF IMESSAGE:** Am I about to call `send_message` (iMessage/SMS) or `send_ops_message` (ruben-control) to ANY staff chat (5, 55, 64, 84, 88, 3750) or to ANY recipient other than Ruben himself? → **GATE CHECK: did Ruben explicitly ask me to send this?** Can I quote his words saying "send," "message," "tell," "ping," "let her know," "forward," or "loop in"? If NO → **FAILS. Do not send.** Offer it in `attempt_completion` instead: "Want me to ping <name> with: '<the message>'? Y/N." This gate supersedes all confidence-tier autonomy — even green-tier actions cannot authorize a staff iMessage send. Full rule: `clinerules_lookup(rule_id=175)`.
-
-### ⛔ PRE-COMPLETION GATE (before attempt_completion)
-
-9. **RULE 91 PICKUP PROMPT — BINARY GATE:** `result` MUST end with a 47-char U+2550 divider (COPY mechanically, do not retype: `═══════════════════════════════════════════════`), then `PICKUP PROMPT`, then divider → content. If missing → BROKEN, do not ship.
-9a. **RULE 91 — NO FAKE IDEA NUMBERS:** Never write `IDEA-001`, `IDEA-002`. Always call `create_idea` for real integer IDs. Fake numbers = ticket cannot be looked up = thread stays open forever.
-9b. **RULE 91 — EVERY #NNNN GETS A BRACKET:** Scan entire `result` (not just pickup prompt). Every `#NNNN` must have `[deployed|executing|queued|blocked|proposed|rejected|superseded]`. Bare number = STOP before shipping.
-9c. **RULE 91 — OPEN THREADS + REFERENCE IDS MANDATORY:** Both sections MUST appear. Empty open-threads → write "None — [reason]". Every body idea cited in Reference IDs.
-9d. **GATE D — CONCRETE-TOOL-PATH TEST:** Every copy-window step MUST cite at least one concrete tool path (e.g., `read_server_file("routes/x.php")`, `idea_spec(19594)`). Zero tool paths = a prose prompt, not a copy window.
-9e. **COPY-WINDOW FORMAT:** Wrap every copy window in a fenced ```text block (one-click copy), with `——[COPY]——` / `——[/COPY]——` markers inside. Full spec: rule `91-copy-window-format` (archive).
-
-10. **RULE 29 RUBEN QUESTIONS:** Did Ruben ask a direct question? → Answer it INLINE in `result`. "I'll look into it" does not count.
-11. **RULE 29 ACT, DON'T DEFER:** Did I list anything as "open thread" that I could do myself with a tool I have? → **DO IT NOW, don't list it.** Only genuine human-policy decisions stay open.
-12. **RULE 91 NO PLACEHOLDERS:** Any literal `#NNNN`, `#0000`, `<task_id>`, `<timestamp PT>` in result? → **BROKEN.** Substitute real values.
-13. **RULE 267 RECONCILE (if you filed ideas this task):** Before `attempt_completion`, call `list_decisions`/`get_idea_progress` for EVERY idea # filed. "I filed it, it's fine" is NOT a reconcile pass. Classify each: executed/in-progress/stuck/failed. Tag every filed idea with a disposition in result AND pickup prompt. **Add `(verified: <tool> returned "...")` for ideas reconciled THIS session.**
-
-### ⛔ CONTEXT GATES (check token count in environment_details)
-
-13. **RULE 119/120:** <300K tokens → work fully. 300K-499K → call `should_compress_now` once before next major tool call. ≥500K → call `cline_compress_session` NOW, then `attempt_completion`. Never shortcut work due to context size.
-
-### ⛔ RECOVERY GATE (if you see "[ERROR] You did not use a tool")
-
-14. **RULE 143 (v4, ceiling=10 post-reload):** Count CONSECUTIVE errors only (any successful tool resets streak). Strikes 1-8: recover by emitting a (simpler) tool silently. Strike 9: BAIL to `attempt_completion` with a pickup prompt — do NOT attempt a tenth tool. Strike 10 = YOLO death. ROOT CAUSE FIXED 2026-07-04: `maxConsecutiveMistakes` was hardcoded `{default:3}` in `dist/extension.js` (NOT exposed in UI). Patched to `{default:10}`. After VS Code reload, ceiling=10. Bail = ceiling - 1 = strike 9. Re-patch script: `~/Documents/Cline/scripts/patch_yolo_ceiling.sh`. Until reload, running extension still uses ceiling=3 (bail at strike 2).
-
-### ⛔ PRE-PIVOT GATE (before switching away from an MCP server or declaring it "wedged")
-
-15. **RULE 261 MCP FAILURE CLASSIFICATION:** Empty/error/"No valid session ID" from an MCP call → **STOP, do NOT declare "wedged" yet.** Classify: A=server down (ECONNREFUSED, restart don't retry), B=session expired ("No valid session ID"/401/403, re-init+retry ONCE, server is healthy), C=transport error (result missing/502, retry once after 5s), D=transient empty (retry once, don't declare wedge). ONE or TWO failures is NEVER a wedge — run the rule-258 3-gate check (empty? stale? cross-source verify?) first. Green in Cline settings ≠ valid session. Full rule: `clinerules_lookup(rule_id=261)`.
+**GATE D CONCRETE-TOOL-PATH + COPY-WINDOW FORMAT:** every copy-window step must cite a concrete tool path (e.g. `read_server_file("routes/x.php")`); zero tool paths = a prose prompt, not a copy window. Wrap copy windows in a fenced ```text block with `——[COPY]——` / `——[/COPY]——` markers. Full spec: `91-copy-window-format` (archive).
 
 ---
 
-## ⛔ RULE 146 — READ THIS FIRST. Frankenstein-LLM routes EVERY LLM we own. Free-local models ARE the primary. Never suggest Claude/Anthropic as the default.
-
-- `frankenstein-llm` is the ONE router for EVERY LLM: 7B/14B/32B/70B/120B/405B/235B, RunPods, DeepSeek, AND the paid heads (Sonnet, Opus, Fable-5). If we own it, Frankenstein routes it.
-- **Cline is PRIORITY.** Executor/Orchestrator QUEUE behind it. Never the reverse.
-- **Free-local-first IS the design.** A healthy free local box that can serve = serve from it. Only spill to paid when local is GENUINELY full (real saturation, not a false-offline probe).
-- **A failed health probe does NOT mean a box is dead.** Check `/tmp/emsu_router_audit.log` for recent `picked=<model>` before calling anything dead.
-- **NEVER suggest Claude/Anthropic/Sonnet/Opus as the model to use** unless Ruben explicitly asked. Anthropic models are LAST RESORT in the spill ladder. Suggesting them on an unrelated task is a rule violation.
-- **CANONICAL CLINE ENDPOINT: `https://litellm.emsuniversity.com`** (Cloudflare tunnel → WOPR:4000). PERMANENT, reboot-surviving base URL. Do NOT use `http://127.0.0.1:4000` or localhost SSH tunnels — those die when the Mac→WOPR SSH tunnel drops. (Rule 250: never hand-edit `_FLAGSHIP_MEMBERS` for "box is down" — doorman + reactive quarantine handle liveness at runtime.)
-- Full rule: `clinerules_lookup(rule_id=146)`. Cross-refs: 140 (verify routing live), 141 (MCP first), 148 (never pin raw 120B), 250 (no hardcoded LLM statuses).
-
----
-
-## ⛔ COMPLETION COMPLIANCE — Rules 29 and 91 (details in PRE-COMPLETION GATE #9-12 above)
-
-**Before EVERY `attempt_completion`:** Rule 91 (pickup prompt block required, 47-char U+2550 dividers, real idea #s not placeholders) + Rule 29 (act don't defer — Gate 0 test: "can I do this now?" If yes, DO IT, don't list it as open thread). Full rules: `clinerules_lookup(rule_id=91)`, `clinerules_lookup(rule_id=29)`.
-
----
 
 ## 🗣️ Communication & Voice
 → Trigger: writing student email, ops chat, iMessage, staff escalation, CTA, CC/BCC, tone, apology
@@ -219,3 +188,4 @@ future windows. Then reindex:
 
 Full dated changelog + the long-form versions of these two sections:
 `Rules-archive/_RULE_TREE_CHANGELOG.md`
+Updates Rule Tree

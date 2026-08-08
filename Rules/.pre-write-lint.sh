@@ -82,21 +82,58 @@ get_next_rule_number() {
     echo "$NEXT_NUM"
 }
 
-HARDFLOOR_SLUGS=(
-    "00-READ-FIRST-17-force-subagent-use-on-research-and-multi-step-builds"
-    "01-voice-and-persona"
-    "02-no-apologies-in-student-emails"
-    "29-agents-act-on-confidence-tier"
-    "41-post-deploy-call-the-tool-do-not-narrate"
-    "91-every-completion-needs-pickup-prompt"
-    "119-mandatory-context-compress"
-    "120-context-is-not-an-excuse"
-    "143-prose-loop-circuit-breaker"
-    "144-no-write-to-file-on-server-paths"
-    "259-cline-tasks-stay-in-cline-not-chat55"
-    "267-orchestrator-executor-offload-and-reconcile"
-    "99-subagent-verify-before-claim"
-)
+# ----------------------------------------------------------------------
+# HARDFLOOR_SLUGS + META_FILES — READ FROM THE GENERATED MANIFEST
+# ----------------------------------------------------------------------
+# idea #25151 (2026-08-08): these used to be TWO hardcoded arrays here, which
+# were copies 2 and 3 of a set that also lived in clinerules-mcp/src/index.ts and
+# in the Rules/ dir itself. The 2026-07-25 floor trim updated only some copies, so
+# the MCP reported 9 hardfloor rules while 20 were on disk, and rules 119/120/143/
+# 144/259/267/161/297/99-subagent were loaded into every window but flagged as NOT
+# binding. The divergence survived ~2 weeks because nothing compared the copies.
+#
+# Both arrays are now DERIVED from .hardfloor-manifest, which is itself generated
+# from the directory listing by scripts/sync_hardfloor_manifest.sh. Adding a rule
+# file is the ONLY action needed. There is no second list to forget.
+MANIFEST="${RULES_DIR}/.hardfloor-manifest"
+SYNC_SCRIPT="$HOME/Documents/Cline/scripts/sync_hardfloor_manifest.sh"
+
+# Regenerate first so the manifest always reflects the CURRENT directory.
+# (Cheap: a directory listing. Keeps the gate honest even if someone hand-added a file.)
+[ -x "$SYNC_SCRIPT" ] && "$SYNC_SCRIPT" --quiet >/dev/null 2>&1
+
+read_manifest_section() {
+    # $1 = section name, e.g. "hardfloor" or "meta"
+    [ -f "$MANIFEST" ] || return 0
+    awk -v want="[$1]" '
+        /^\[/ { insec = ($0 == want); next }
+        insec && NF && $0 !~ /^#/ { print }
+    ' "$MANIFEST"
+}
+
+HARDFLOOR_SLUGS=()
+while IFS= read -r line; do
+    [ -n "$line" ] && HARDFLOOR_SLUGS+=("$line")
+done < <(read_manifest_section hardfloor)
+
+MANIFEST_META=()
+while IFS= read -r line; do
+    [ -n "$line" ] && MANIFEST_META+=("$line")
+done < <(read_manifest_section meta)
+
+# Fallback: if the manifest is unreadable, derive from the directory directly
+# rather than falling back to a stale hardcoded list (that is the bug we fixed).
+if [ ${#HARDFLOOR_SLUGS[@]} -eq 0 ]; then
+    warn "manifest missing or empty, deriving hardfloor set from directory listing"
+    for f in "$RULES_DIR"/*.md; do
+        [ -e "$f" ] || continue
+        b=$(basename "$f"); s="${b%.md}"
+        case "$b" in *.bak*|*~|._*) continue ;; esac
+        case "$s" in _*|EXECUTE_ORDER_66|REQUIREMENT_IDEA_AUTO_FILE|99-yolo-prevention-learned) continue ;; esac
+        HARDFLOOR_SLUGS+=("$s")
+    done
+fi
+
 
 # --- G5 hardfloor (runs first; immediate block) --------------------------
 is_hardfloor=0
@@ -117,11 +154,20 @@ fi
 # This is the durable fix for the 2026-06-23 bloat root cause (10 non-hardfloor
 # Frankenstein rules had piled into Rules/, diluting model attention on rules
 # 91/41/etc.). Bypass with --override only for a legitimate one-off.
-META_FILES=("_INDEX" "_RULE_TREE" "EXECUTE_ORDER_66" "99-yolo-prevention-learned")
+# META_FILES comes from the manifest [meta] section (idea #25151). The old
+# hardcoded array here omitted REQUIREMENT_IDEA_AUTO_FILE, so that file would
+# have been rejected by G6 despite living in Rules/ and loading every window.
+# Any slug starting with '_' is also treated as meta.
+META_FILES=("${MANIFEST_META[@]:-}")
+if [ ${#MANIFEST_META[@]} -eq 0 ]; then
+    META_FILES=("_INDEX" "_RULE_TREE" "EXECUTE_ORDER_66" "REQUIREMENT_IDEA_AUTO_FILE" "99-yolo-prevention-learned")
+fi
 is_meta=0
+case "$SLUG" in _*) is_meta=1 ;; esac
 for mf in "${META_FILES[@]}"; do
     if [ "$SLUG" = "$mf" ]; then is_meta=1; break; fi
 done
+
 if [ "$is_hardfloor" = "0" ] && [ "$is_meta" = "0" ] && [ "$OVERRIDE" != "--override" ]; then
     fail "G6 non-hardfloor-in-Rules: '$SLUG' is not a hardfloor rule and not a meta file. Non-hardfloor rules belong in ~/Documents/Cline/Rules-archive/, not Rules/. Either (a) move the file to Rules-archive/, or (b) if this is a genuine new hardfloor rule, add '$SLUG' to HARDFLOOR_SLUGS above first (needs Ruben's call per _INDEX.md). Re-run with --override only for a intentional one-off bypass."
 fi
@@ -172,12 +218,25 @@ fi
 # Cline's Xle() compacts a 200K model at 160,000 tokens, so an oversized floor
 # arms auto-condense on turn 1 and can never be disarmed (33-50% of Opus spend
 # went to writing summaries before this gate existed). Block growth past 150KB.
-FLOOR_BYTES=$(find "$RULES_DIR" -maxdepth 1 -name '*.md' -exec cat {} \; | wc -c | tr -d ' ')
+# 2026-08-08 (idea #25150): G8 used to count ONLY '*.md'. Cline injects EVERY
+# non-dotfile in Rules/, so two backup files (_INDEX.md.bak-20260808 and
+# .pre-write-lint.sh.bak-20260808, 12,254 bytes) were being loaded into every
+# window while G8 reported a floor that did not include them. The gate was
+# measuring something other than the thing it was protecting. Now it counts
+# what actually loads, and rejects backups living in Rules/ outright.
+STRAY_BAKS=$(find "$RULES_DIR" -maxdepth 1 -type f ! -name '.*' \( -name '*.bak*' -o -name '*~' \) 2>/dev/null)
+if [ -n "$STRAY_BAKS" ]; then
+    warn "G8 stray-backups: backup files in Rules/ are injected into EVERY window. Move them to ~/Documents/Cline/Rules-backups/:"
+    while IFS= read -r b; do [ -n "$b" ] && warn "  $(basename "$b") ($(wc -c < "$b" | tr -d ' ') bytes)"; done <<< "$STRAY_BAKS"
+fi
+FLOOR_BYTES=$(find "$RULES_DIR" -maxdepth 1 -type f ! -name '.*' -exec cat {} \; | wc -c | tr -d ' ')
+FLOOR_MD_ONLY=$(find "$RULES_DIR" -maxdepth 1 -name '*.md' -exec cat {} \; | wc -c | tr -d ' ')
 if [ "$FLOOR_BYTES" -gt 153600 ]; then
-    fail "G8 floor-total: Rules/ is $FLOOR_BYTES bytes (>150KB). This is the always-loaded system-prompt floor. Move non-hardfloor content to Rules-archive/ before adding more. See _INDEX.md 2026-07-25 floor trim."
+    fail "G8 floor-total: Rules/ is $FLOOR_BYTES bytes of always-loaded content (>150KB), of which $FLOOR_MD_ONLY is .md. This is the system-prompt floor injected into EVERY window. Move non-hardfloor content to Rules-archive/ and backups to Rules-backups/ before adding more. See _INDEX.md 2026-07-25 floor trim."
 elif [ "$FLOOR_BYTES" -gt 131072 ]; then
     warn "G8 floor-total: Rules/ is $FLOOR_BYTES bytes (>128KB warn). Trim soon."
 fi
+
 
 # --- G1 embed-sim (Jaccard similarity over 4-grams of words) -------------
 # Cheap proxy for "did we just write something paraphrased of an existing rule?"

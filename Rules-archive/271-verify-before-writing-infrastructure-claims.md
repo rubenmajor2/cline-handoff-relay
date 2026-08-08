@@ -69,6 +69,17 @@ Pickup prompts are the #1 vector for stale-info propagation. An unverified claim
 - Carrying forward a prior window's infrastructure claim into a new pickup prompt without re-verifying
 - Writing "box is down" based on a failed WOPR tunnel probe (tunnels lie — rule 248) without SSH-ing to the box directly
 - Writing infrastructure claims to a runbook based on a single session's experience without verification
+- **INSTRUMENT MISMATCH (added 2026-08-08):** citing a systemd unit state on host A as evidence about a service that actually runs on host B. `systemctl is-active gptoss-tp2-julia` on WOPR returns `inactive` **by design** — that unit is disabled and Julia's vLLM is launched by cron ON JULIA (`*/2 * * * * tp2_watchdog.sh`, `@reboot julia_unified_tp2.sh`). The WOPR unit is not the instrument for that question and never was.
+
+## The instrument gate (added 2026-08-08)
+
+Before citing ANY status output as evidence, ask: **"Does this instrument actually observe the thing I am claiming about?"** Name the host the process runs on, then name the host you queried. If they differ, you are holding the wrong instrument and the reading is meaningless regardless of what it says.
+
+Mechanical: for a claim about service S,
+1. Where does S actually execute? (`ps -eo args` ON that box, or the registry `serves_via` / `ssh_access` fields)
+2. Did I query THAT box, or a proxy/tunnel/registry/systemd-unit on a different box?
+3. A tunnel listener (`sshd` holding :NNNNN) is NOT the service. `ss -ltnp` showing `sshd` on the port means the tunnel is up and the far end is dead — that is a DIFFERENT claim from "the service is down", and it points at a different box to go fix.
+
 
 ## Cross-references
 
@@ -87,3 +98,6 @@ Pickup prompts are the #1 vector for stale-info propagation. An unverified claim
 ## Last updated
 
 2026-07-11 — initial. Created per Ruben directive to make verify-before-claim mechanically enforced, not advisory.
+
+2026-08-08 — added the INSTRUMENT GATE. Source incident: an agent reported "julia/claudia :11513 TP=2 cluster services are inactive" in a completion, citing `systemctl is-active gptoss-tp2-julia` on WOPR. That unit is `disabled` by design; Julia's vLLM is cron-launched ON Julia. The reading was real but the instrument did not observe the subject. The cluster WAS in fact down (separate, genuine failure: split-brain Ray, watchdog at MAX_RESTARTS since 14:04 PT), so the conclusion happened to be right for the wrong reason — which is worse than being wrong, because it validates a broken method. Being accidentally correct is not verification. Bug library #2274/#2275.
+

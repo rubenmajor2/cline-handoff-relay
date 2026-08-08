@@ -116,7 +116,51 @@ becomes either a permanent false alarm or a silently dead check after the next m
    conditions?** If yes, the threshold is wrong.
 5. Am I treating agreement between independent instruments as suspicious? **That is backwards.**
 
+## TWO AGENTS DISAGREEING IS THE SAME BUG (added 2026-08-08)
+
+The five-reversal incident was ONE agent flip-flopping over time. The identical failure
+occurs ACROSS agents, and it is more dangerous there because each side has a live tool
+result and neither is lying.
+
+**Trigger:** another window (or a handoff note) asserts the opposite of what you measured,
+and both of you ran real probes.
+
+**Do NOT** (a) assume the other window is wrong because your probe is newer, (b) assume it
+is right because it is more recent than yours, or (c) re-run your own probe expecting a
+different answer. All three are novelty-worship in a new costume.
+
+**DO build the confound table** over the dimensions that could differ between the two
+measurements. For an API claim, the dimensions are at minimum:
+
+| dimension | mine | theirs |
+|---|---|---|
+| endpoint path | `/v1/chat/completions` | `/anthropic/v1/messages` |
+| auth header | `Authorization: Bearer` | `x-api-key` |
+| call_type / surface | `acompletion` | `anthropic_messages` |
+| payload shape | `tools[].function` | `tools[].input_schema` |
+| who translates the schema | LiteLLM openai passthrough | none |
+
+Then run BOTH readings back-to-back yourself with everything held constant except the one
+dimension you suspect. If both reproduce, it was never a contradiction — it is a confound,
+and **the fix is almost always to gate on the confounding dimension**, not to pick a winner.
+
+Measured 2026-08-08: two windows disagreed on "does DeepSeek accept OpenAI `function`
+tools". One shipped a flag on a 200; the other reverted it on a 400. Back-to-back curls with
+an identical tools array: `/v1/chat/completions` → 200 with `tool_calls`;
+`/anthropic/v1/messages` → 400 `unknown variant 'function'`. Both windows were right. The
+correct gate was never "tools yes/no" — it was "is this turn going out over the anthropic
+surface". Bug library #2275.
+
+**Corollary:** "I tested it live" is not evidence until you name the surface. A bare 200 is
+a claim about ONE endpoint, ONE auth shape, ONE call_type. State all three or the reading
+cannot be reconciled against anyone else's.
+
 ## Last updated
 
 2026-08-04 — initial. Source: GLM-5.2 five-reversal incident, bug-library row 2202.
 Ruben asked whether this was systemic and worth a rule. It is both.
+
+2026-08-08 — added the cross-agent confound section. Source: DeepSeek function-tools
+endpoint confound, two windows shipping opposite changes to the same flag within 60 minutes.
+Bug library #2275.
+

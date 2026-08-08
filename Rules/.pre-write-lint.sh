@@ -231,10 +231,26 @@ if [ -n "$STRAY_BAKS" ]; then
 fi
 FLOOR_BYTES=$(find "$RULES_DIR" -maxdepth 1 -type f ! -name '.*' -exec cat {} \; | wc -c | tr -d ' ')
 FLOOR_MD_ONLY=$(find "$RULES_DIR" -maxdepth 1 -name '*.md' -exec cat {} \; | wc -c | tr -d ' ')
-if [ "$FLOOR_BYTES" -gt 153600 ]; then
-    fail "G8 floor-total: Rules/ is $FLOOR_BYTES bytes of always-loaded content (>150KB), of which $FLOOR_MD_ONLY is .md. This is the system-prompt floor injected into EVERY window. Move non-hardfloor content to Rules-archive/ and backups to Rules-backups/ before adding more. See _INDEX.md 2026-07-25 floor trim."
-elif [ "$FLOOR_BYTES" -gt 131072 ]; then
-    warn "G8 floor-total: Rules/ is $FLOOR_BYTES bytes (>128KB warn). Trim soon."
+# 2026-08-08 (idea #25154): the block was a bare 153600 with no stated derivation,
+# so nobody could tell whether hitting it meant "real risk" or "arbitrary number".
+# It is now DERIVED from the smallest model window we still run, using Cline's own
+# Xle() compaction arithmetic:
+#   compaction_threshold(W=200000) = W - 40000 = 160,000 tokens
+#   floor must stay well under that or auto-condense arms on turn 1 (the 2026-07-25
+#   incident: 139K-169K token floor vs a 160,000 threshold = permanent thrash).
+#   Budget the Rules/ dir at 25% of the smallest compaction threshold:
+#     160,000 tok * 0.25 = 40,000 tok ~= 160,000 bytes at ~4 bytes/token.
+# Override for a deliberate, reasoned change (e.g. if 200K models are retired):
+#   echo 196608 > ~/Documents/Cline/Rules/.g8-floor-cap
+G8_CAP_FILE="${RULES_DIR}/.g8-floor-cap"
+G8_CAP=160000
+[ -f "$G8_CAP_FILE" ] && G8_CAP=$(tr -dc '0-9' < "$G8_CAP_FILE")
+G8_WARN=$(( G8_CAP * 85 / 100 ))
+if [ "$FLOOR_BYTES" -gt "$G8_CAP" ]; then
+    fail "G8 floor-total: Rules/ is $FLOOR_BYTES bytes of always-loaded content (cap $G8_CAP), of which $FLOOR_MD_ONLY is .md. This is the system-prompt floor injected into EVERY window. Cap = 25% of the 200K-model compaction threshold (160,000 tok). Move non-hardfloor content to Rules-archive/ and backups to Rules-backups/ before adding more. See _INDEX.md 2026-07-25 floor trim."
+elif [ "$FLOOR_BYTES" -gt "$G8_WARN" ]; then
+    warn "G8 floor-total: Rules/ is $FLOOR_BYTES bytes (>85% of cap $G8_CAP). Trim soon."
+
 fi
 
 

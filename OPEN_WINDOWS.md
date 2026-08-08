@@ -6,11 +6,19 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/8/2026, 10:40:36 AM PT | window: last 72h | 84 tasks | index total 557 (parsed 5, cached 552)
+Generated: 8/8/2026, 11:40:36 AM PT | window: last 72h | 92 tasks | index total 565 (parsed 8, cached 557)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786210038877` | 8/8/2026, 10:40:21 AM | 75 | 426KB | Your instinct was right on both counts. The context change caused this, and the fix is con |
+| `1786211264211` | 8/8/2026, 11:40:36 AM | 209 | 419KB | #Context |
+| `1786214054947` | 8/8/2026, 11:40:29 AM | 35 | 97KB | Can you play doctor of ruben executor and take a look at this page: https://emsuniversity. |
+| `1786211568282` | 8/8/2026, 11:40:25 AM | 95 | 280KB | #Argus |
+| `1786212454095` | 8/8/2026, 11:40:11 AM | 219 | 872KB | #Telephony |
+| `1786211859440` | 8/8/2026, 11:38:43 AM | 218 | 436KB | #Subagents, etc... |
+| `1786211367196` | 8/8/2026, 11:37:19 AM | 160 | 849KB | #Big Mac |
+| `1786212070741` | 8/8/2026, 11:37:15 AM | 154 | 542KB | Why would this cost any money at all? You need to really take a look at that and see that  |
+| `1786214132308` | 8/8/2026, 11:36:12 AM | 2 | 6KB | I recently saw a task that referenced Anthropic and us paying for some kind of anthropic t |
+| `1786210038877` | 8/8/2026, 10:44:39 AM | 100 | 553KB | Your instinct was right on both counts. The context change caused this, and the fix is con |
 | `1786172929305` | 8/8/2026, 10:20:09 AM | 348 | 1420KB | I have windows here in frankenstein-llm with numerous ideas i need built and shipped but f |
 | `1786206784516` | 8/8/2026, 10:12:08 AM | 122 | 401KB | #Externship Auto Assignment |
 | `1786185156855` | 8/8/2026, 10:11:51 AM | 128 | 427KB | Pick up idea 25077, the Argus rule-29 proactive bundle. First run get_idea_progress(25077) |
@@ -99,7 +107,292 @@ Generated: 8/8/2026, 10:40:36 AM PT | window: last 72h | 84 tasks | index total 
 
 ## Per-window detail
 
-### `1786210038877` — 8/8/2026, 10:40:21 AM PT — 75 turns
+### `1786211264211` — 8/8/2026, 11:40:36 AM PT — 209 turns
+
+**Original task:**
+
+```
+#Context
+
+Let's talk also about the contextual improvements that we made and whether they are having an impact and whether we need to make any others where we are using disc space to leverage limited context. Also because we are using executor I would think this is something I'm not sure exactly where this is living this context but should it not be on WOPR? Or is it already? Where does this live?
+
+--
+Fixed forward, config only. No rollback of the context increase.
+
+WHAT THE PRIOR WINDOW GOT RIGHT AND WHAT IT MISSED
+
+Your RCA was correct: the hardfloor set was duplicated and the trim updated o
+```
+
+**Ideas referenced:** #0000, #11417, #11847, #12249, #12251, #12266, #12269, #12285, #12588, #12589, #12590, #12688, #12689, #13204, #13470, #14133, #14142, #14205, #15268, #15776 [deployed], #16715, #19125, #20569, #24207, #24971 [rejected], #24972 [rejected], #24973 [rejected], #24985 [rejected], #24988 [executing], #25128 [executing], #25150 [executing], #25151 [executing], #25153 [proposed], #25154 [proposed], #25155 [proposed], #25156, #25157, #25158, #25168 [proposed], #25169 [proposed], #25170 [proposed], #5344, #5346, #5348, #6729
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786214054947` — 8/8/2026, 11:40:29 AM PT — 35 turns
+
+**Original task:**
+
+```
+Can you play doctor of ruben executor and take a look at this page: https://emsuniversity.com/emtskills/routes/ruben_executor_live.php 
+
+Make sure that every single table that is on this page is wired in properly to reality. I need to be able to take a look at the page and make sure that this statistics that fit fax the figures all of that stuff is properly wired in so that I could see what's going on. This may require some extensive work but it's very important for you to do all of this into end. Again you're going to probably have to use a browser window with a token so that you can access a
+```
+
+**Ideas referenced:** #059669, #16881, #2563, #6366, #64748, #78350, #92400
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786211568282` — 8/8/2026, 11:40:25 AM PT — 95 turns
+
+**Original task:**
+
+```
+#Argus
+
+Can you confirm for me that all of the ideas below were actually implemented? I know that we took some of these ideas a little bit further but I just wanna see if they were implemented and I don't wanna revert really good changes that we made cell you do need to be careful with this
+
+For my last Argus Chat, I noticed we need to make a great number of improvements. I do NOT want you to forget any of these. I want you to execute them all as well as answer ALL of my questions in the original chat. We need to give Argus more power
+
+--
+Argus
+New chat started. Saves automatically after your 
+```
+
+**Ideas referenced:** #24877, #24926, #24990 [deployed], #24991 [deployed], #25036 [approved], #25037 [approved], #25044 [approved], #25047 [approved], #25049 [proposed], #25057 [in_progress], #25058 [implemented], #25059 [live], #25060 [in_progress], #25077 [approved], #25152 [pending], #25165 [proposed], #25166 [proposed], #25167 [proposed], #25171 [proposed], #25181 [proposed], #26002 [deployed], #26003 [proposed], #274160, #30363, #8645, #8942, #9654, #9660, #9733
+
+**Last PICKUP PROMPT:**
+
+```
+ied status, no phantom claims.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Implement Argus fixes: cnum color, search normalization, line 619 gate, and deploy #25047 vision doorman fix.
+
+Where we left off (verified 2026-08-08 11:38 PT):
+- **#25166 [deployed]** — Args tab/editDraft fix is ON DISK (argus_download.php lines 940-942, 946, 958-975, 1055, 1172). Status corrected from phantom "proposed" to "deployed."
+- **#25165 [proposed]** — Kaison JS guard: NOT implemented (zero node --check hits on server). Temp script at /tmp/insert_idea26003.php is DB-insert only, never executed.
+- **#25059 [live] — TWO BUGS:** (a) cnum color #3d4654 invisible on #0d1117 background at line 554/580, (b) search_sessions user_email case mismatch at alltastic_api.php line 3754.
+- **#25047 [approved — was auto-demoted]** — Vision doorman fix: cron_silent_ghost_alert found zero exec_log/files/deploy evidence, demoted from deployed to approved at 11:00 PT. NOT actually deployed — safe to deploy.
+- **#25060 [in_progress — STALLED 8h+]** — Build pipeline blocked, likely root cause #25057 (KAIZEN cron dead since 08-02).
+- **#25152 [pending — STALLED 53m+]** — Same pipeline block.
+- **#25167 [proposed]** — Remove line 619 dead-end gate. Follow-up logic at lines 90-128 already exists.
+- **#25181 [proposed]** — Phantom prevention: validate all #NNNN in completion results against orchestrator_ideas.
+
+Open threads to drive next:
+1. Fix #25059 bug A — Change cnum color from #3d4654 to #6e7681 on lines 554 and 580 of argus_download.php (1-line fix).
+2. Fix #25059 bug B — Add LOWER() normalization to search_sessions query at alltastic_api.php line 3754.
+3. Implement #25167 — Remove or bypass line 619 gate in argus_task_status.php (already has follow-up logic at 90-128).
+4. Deploy #25047 — Find and deploy the actual vision/screenshot fix for offloaded tasks; file exec_log entry.
+5. Unblock build pipeline — Investigate #25057 root cause (KAIZEN cron dead) so #25060 and #25152 can progress.
+6. Delete /tmp/insert_idea26003.php.
+
+Reference IDs:
+- Ideas: #25165 [proposed], #25166 [deployed], #25047 [approved — deploy needed], #25059 [live — 2 bugs], #25060 [in_progress — stalled], #25152 [pending — stalled], #25167 [proposed], #25181 [proposed], #25057 [in_progress — likely root cause]
+- Files: argus_download.php (lines 554, 580), argus_task_status.php (lines 90-128, 619), alltastic_api.php (lines 3751-3778)
+- Temp file: /tmp/insert_idea26003.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786212454095` — 8/8/2026, 11:40:11 AM PT — 219 turns
+
+**Original task:**
+
+```
+#Telephony
+
+Phones are genuinely healthy. One alert did fire overnight and it hit your phone, but that was my monitor being wrong, not a real outage. Details below.
+
+## Yes, it's actually working
+
+Full day today, and this is the number that matters most:
+
+| check | today |
+|---|---|
+| invalid-assistant kills (the thing that killed 92 calls Friday) | **0** |
+| contract test | 10 pass, 0 fail, running hourly on its own |
+| outage monitor | 122 autonomous runs |
+| personas exercised | **both** Eric and Bella now, not just Eric |
+
+The strongest evidence isn't a counter though. An inbound AI call a
+```
+
+**Ideas referenced:** #13137, #15903, #16732, #178612, #19454, #19814, #2271, #24635 [deployed], #24636 [deployed], #24645 [deployed], #24646 [deployed], #24791 [deployed], #25039, #25097, #25112, #25120, #25122, #25131, #25144 [proposed], #25173, #4802, #6520, #6646, #7907, #9086, #9168
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786211859440` — 8/8/2026, 11:38:43 AM PT — 218 turns
+
+**Original task:**
+
+```
+#Subagents, etc...
+
+So right now I have two Frankenstein LLM windows open and they are both seeming to be stuck on the sub agent it looks like I have seven or eight sub agents open and I have zero tokens and zero tool calls on these in the last two minutes. So this is a bug that needs to be resolved as well
+
+Taking the DeepSeek question first, because the answer changes the other one.
+
+## The leak is already fixed. I was quoting a stale comment at you.
+
+You were right to say there is another solution. There is, and it shipped a month ago. I tested both transports live just now.
+
+**Non-streamin
+```
+
+**Ideas referenced:** #10740, #12363, #12365, #12589, #12590, #12657, #12689, #13874, #13964 [needs_verify], #15776, #17078, #178618, #19338 [rejected], #21038, #2273 [approved], #25082 [executing], #25083 [executing], #25084 [executing], #25112 [proposed], #25127 [executing], #25130 [executing], #25133 [executing], #25135 [executing], #25158 [proposed], #25159 [proposed], #25172 [proposed], #25178 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786211367196` — 8/8/2026, 11:37:19 AM PT — 160 turns
+
+**Original task:**
+
+```
+#Big Mac
+
+How is option be doing right now? 
+
+What about Kaizon's universal auto fix?
+
+continue
+
+## Session Summary: Big Mac fleet analysis + Executor RCA + Approval-bug fix
+
+### What was done
+
+1. **Big Mac analysis**: 89 turns in 5min (08:53-08:58 PT), all via adapter path. Zero router picks — two-surface reality from #25112 [in_progress]. Big Mac is serving through the frankenstein-tools adapter at capacity cap 6.
+
+2. **CORRECTIVE_RETRY_ENABLED bug fixed** (#25120 [in_progress]): variable was undefined at line 3049, causing FAILOVER dead-on-dead_conn 1% of Big Mac turns. Fix: added definitio
+```
+
+**Ideas referenced:** #10666, #10740, #11944, #11953, #12060, #12231, #12247, #12262, #12314, #12364, #12365, #12366, #12368, #1239, #12503, #12576, #12591, #12609, #12611, #12615, #12617, #12619, #12657, #12672, #12714, #1280, #12894, #12900, #13108, #13121, #13418, #13832, #13874, #14748, #16063, #16265, #16834, #17566, #17567, #177862, #177914, #1784, #18093, #18360, #19653, #21755, #2182, #2212, #24230, #24646, #25097 [in_progress], #25111 [proposed], #25112 [in_progress], #25120 [in_progress], #25122 [in_progress], #25124 [proposed], #25125 [in_progress], #25131 [in_progress], #25173 [proposed], #25176 [proposed], #3093, #3378, #3822, #6978, #7126
+
+**Last PICKUP PROMPT:**
+
+```
+ow should reject/supersede it.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task -- verify #25122 Option B deployment + update orchestrator statuses (verified 2026-08-08 11:37 PT)
+
+Where we left off:
+- #25122 Option B built and shipped: executor_plan_race.php (93 lines), executor_parallel_calls_enabled gate at RubenExecutor.php:2402, both php -l clean
+- #25120 CORRECTIVE_RETRY_ENABLED shipped: code at adapter:280-282, service restarted 11:18 PT, zero errors verified
+- Orchestrator MCP timed out -- DB statuses for #25122 and #25120 still show in_progress/blocked despite code on disk
+- #25176 is a stale duplicate of #25122 created by mistake -- needs reject/supersede
+- Backup: RubenExecutor.php.bak-25122-option-b at /var/www/emtskills/lib/
+
+Open threads to drive next:
+1. #25122 [deployed] -- update orchestrator to mark shipped via MySQL: UPDATE orchestrator_ideas SET dev_stage='testing', status='in_progress' WHERE id=25122. Or retry idea_action MCP.
+2. #25120 [deployed] -- update orchestrator to mark shipped
+3. #25176 [proposed] -- reject/supersede as duplicate of #25122
+4. Optional: trigger a full executor tick to verify the parallel gate doesn't break the planner loop. tail -20 /var/log/emsu/cron_ruben_implementer_pulse_watchdog.log after next tick
+
+Reference IDs:
+- Ideas: #25122 [deployed on disk], #25120 [deployed on disk], #25173 [approved], #25176 [proposed duplicate], #25131 [executing], #25125 [executing], #25112 [blocked], #25111 [proposed], #25097 [executing], #25124 [proposed]
+- Files touched: /usr/local/bin/frankenstein_tools_adapter.py, /var/www/emtskills/lib/executor_plan_race.php, /var/www/emtskills/lib/RubenExecutor.php, /var/www/emtskills/lib/RubenExecutor.php.bak-25122-option-b
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] #25120: code fix on disk + adapter restarted + zero errors = shipped
+- [x] #25122: executor_plan_race.php + gate in RubenExecutor.php + php -l clean = shipped
+- [x] Explained why blocked: VALIDATION_HARNESS deadlock froze auto-build pipeline at 09:59
+- [ ] Orchestrator MCP timed out -- DB statuses need updating next window
+- [x] #25176 stale duplicate -- flagged for rejection
+</task_progress>
+</attempt_completion>
+```
+
+### `1786212070741` — 8/8/2026, 11:37:15 AM PT — 154 turns
+
+**Original task:**
+
+```
+Why would this cost any money at all? You need to really take a look at that and see that makes no sense. Anyways go ahead and see what you can do to expand these features and scope. Again we are still planning. Make sure that you are updating the documents accordingly. 
+
+Give me an idea on how this would run as well we'll see if we just implemented it tomorrow give me a play-by-play on how that would look from the student standpoint step-by-step.
+
+Direct answers to both questions:
+
+**1. STUDENT LIFECYCLE SLS — What needs to be integrated:**
+
+The SLS tables already exist in `admin_portal` but 
+```
+
+**Ideas referenced:** #1565, #15669, #1976, #2021, #24757 [rejected], #25126 [rejected], #25129 [proposed], #25156 [proposed], #25157 [proposed], #25160 [proposed], #25161 [proposed], #25162 [proposed], #25163 [proposed], #25164 [proposed], #25174 [proposed], #25175 [proposed], #4518, #9660
+
+**Last PICKUP PROMPT:**
+
+```
+#25157's implementation notes.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Externship auto-assign implementation: fix email/SMS config + start provider-first rework.
+
+Where we left off (verified 2026-08-08 11:36 PT):
+- Full spec v3 at `/var/www/emtskills/docs/specs/externship_auto_assign_v3.md` (403 lines)
+- Flowchart PDF at `/var/www/emtskills/docs/specs/externship_flowchart.pdf` (72KB, 2 pages)
+- Flowchart HTML at `/var/www/emtskills/docs/specs/externship_flowchart.html` (9KB)
+- Three major reworks incorporated: (1) no student request — SLS auto-detects eligibility, student receives assignment notification as first contact; (2) provider-availability-first — proposed roster sent for approval, students assigned from approved pool only; (3) email/SMS sender audit — 4 broken items found
+- SLS tables still EMPTY: `externship_eligibility_status` (0 rows), `student_lifecycle_states` (0 rows)
+- `externship_safety_gates.auto_assign_enabled=1` — kill-switch configured
+- 67 ExternshipSite rows, 55 active (no lat/lng columns yet)
+- Census Geocoder API confirmed free + unlimited — total geocoding cost $0.00
+- 0 auto-assignments have occurred — confirmed
+- Suggested improvement: trigger-based SLS evaluation (gradebook push event) to shrink 7-day window to <1 hour
+
+Email/SMS config broken items to fix immediately (#25174):
+1. `cron_externship_auto_notify.php` — From: noreply@emsuniversity.edu → info@emsuniversity.com; fix Reply-To
+2. `lib/email.php` — 4 functions default from noreply@ems-university.edu → info@emsuniversity.com or no-reply@emsuniversity.com
+3. `lib/email.php` — appeal base URL ems-university.edu → emsuniversity.com
+4. `cron_externship_auto_notify.php` — replace SMS stub with sendSMSAuto() call (real Twilio)
+5. `lib/ea_auto_send_helper.php` — verify TWILIO_SID/TOKEN/FROM env/constants not placeholder
+
+Open threads to drive next:
+1. #25174 [proposed] — Fix 4 broken email/SMS sender addresses + SMS stub (2-3 hours, P0)
+2. #25157 [proposed] — Populate student_lifecycle_states + externship_eligibility_status from Students + moodle_c_live
+3. #25175 [proposed] — Begin provider-availability-first rework: modify BatchRequestManager.php to send named roster for approval (not availability request), build availability pool table, wire assignment engine to pool
+4. #25160 [proposed] — geocode_sites.php + geocode_students.php with Census Geocoder; schema ALTER TABLEs
+5. #25161 [proposed] — ProvisionalScheduler redesigned for no-request model (fire on SLS eligibility, not student form submit)
+6. #25162 [proposed] — Haversine MySQL function + distance re-rank
+
+Reference IDs:
+- Master spec: #25156 [proposed]
+- Email/SMS fix: #25174 [proposed]
+- Provider-first rework: #25175 [proposed]
+- Prior ideas: #25157, #25160, #25161, #25162, #25163, #25164 [all proposed]
+- Spec: `/var/www/emtskills/docs/specs/externship_auto_assign_v3.md` (403 lines)
+- Flowchart HTML: `/var/www/emtskills/docs/specs/externship_flowchart.html` (9KB)
+- Flowchart PDF: `/var/www/emtskills/docs/specs/externship_flowchart.pdf` (72KB, 2 pages)
+- SLS tables: admin_portal.externship_eligibility_status, student_lifecycle_states, externship_safety_gates
+- Externship DB: admin_portal.ExternshipSite, ExternshipPlacement, externship_agency_threads, ExternshipMatchAudit
+- Broken files: cron_externship_auto_notify.php, lib/email.php, lib/ea_auto_send_helper.php
+- Dashboard: https://emsuniversity.com/emtskills/externship/dashboard.php
+- Contact: info@emsunivers
+```
+
+### `1786214132308` — 8/8/2026, 11:36:12 AM PT — 2 turns
+
+**Original task:**
+
+```
+I recently saw a task that referenced Anthropic and us paying for some kind of anthropic thing. This happened earlier today but I didn't catch it because there was another emergent issue in the window. Can you tell me if there is something that attempted to inject Anthropic? There are literally no places where anthropic should be living or residing except fot as the vision doorman but only 50-50 with Kimi K3.
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786210038877` — 8/8/2026, 10:44:39 AM PT — 100 turns
 
 **Original task:**
 

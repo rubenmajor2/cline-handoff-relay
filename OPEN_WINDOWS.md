@@ -6,11 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/7/2026, 8:49:51 PM PT | window: last 72h | 86 tasks | index total 530 (parsed 3, cached 527)
+Generated: 8/7/2026, 9:49:52 PM PT | window: last 72h | 82 tasks | index total 531 (parsed 2, cached 529)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786036273485` | 8/7/2026, 8:47:56 PM | 1028 | 2252KB | #Argus  |
+| `1786036273485` | 8/7/2026, 9:49:33 PM | 1231 | 2987KB | #Argus  |
+| `1786162207330` | 8/7/2026, 9:49:27 PM | 127 | 358KB | Why does frankenstein LLM iterate this to me? I'm hitting the token limit. I need to quick |
 | `1786086916545` | 8/7/2026, 8:39:15 PM | 190 | 1084KB | Tell me how the student council is doing. Is it healthy? It actually generating ideas and  |
 | `1786144700222` | 8/7/2026, 8:25:22 PM | 368 | 730KB | #TDSHS |
 | `1786123588626` | 8/7/2026, 5:15:24 PM | 398 | 851KB | telephony is not working for incoming calls - it's telling people a debug message. Please  |
@@ -91,17 +92,12 @@ Generated: 8/7/2026, 8:49:51 PM PT | window: last 72h | 86 tasks | index total 5
 | `1785905325070` | 8/4/2026, 9:50:05 PM | 6 | 16KB | ## WINDOW 7 |
 | `1785905308355` | 8/4/2026, 9:49:56 PM | 6 | 18KB | ## WINDOW 6 |
 | `1785905248350` | 8/4/2026, 9:49:55 PM | 8 | 20KB | ## WINDOW 3 |
-| `1785905216650` | 8/4/2026, 9:49:48 PM | 8 | 23KB | ## WINDOW 2 |
-| `1785905287666` | 8/4/2026, 9:49:43 PM | 8 | 20KB | ## WINDOW 5 |
-| `1785901405719` | 8/4/2026, 9:17:40 PM | 64 | 682KB | EMSU Operations MCP is down. Take a look at MCP troubleshooting document on desktop and up |
-| `1785780445834` | 8/4/2026, 8:57:37 PM | 1092 | 4326KB | Propose for Telephony with some features similar to /proctoring for the Admin role (in thi |
-| `1785890121460` | 8/4/2026, 8:51:12 PM | 588 | 2563KB | #GLM |
 
 ---
 
 ## Per-window detail
 
-### `1786036273485` — 8/7/2026, 8:47:56 PM PT — 1028 turns
+### `1786036273485` — 8/7/2026, 9:49:33 PM PT — 1231 turns
 
 **Original task:**
 
@@ -118,35 +114,104 @@ EXCLUDED: #2251 [superseded] (bug-library incident row, not an orchestrator idea
 Raising curl 240->600 and pool max_execution_time 120->600 was correct and necessary. But a longer timeout on an amplifying loop just means MORE concurrent long-held connections. Here is wh
 ```
 
-**Ideas referenced:** #047857, #059669, #111827, #16213, #16523, #166534, #178601, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19370, #2006, #20547, #21125, #21126, #21262, #2250 [superseded], #2251 [superseded], #22511, #2252, #2253, #22583, #22688, #22850, #23027, #23036, #23428, #23429, #23468, #23489, #23506, #23585, #23623, #23630 [executing], #23636, #23637, #23674, #23675, #23710, #23711, #23729, #23739, #23740, #23747, #23748, #23749, #23750, #23751, #23764, #23769, #23851 [rejected], #23852 [proposed], #23854, #23867, #23868 [executing], #23878 [proposed], #23879 [proposed], #23881, #23885, #23897, #23898, #23899, #23900, #23908, #23910, #23911, #23913 [executing], #23920 [executing], #23934 [executing], #23941 [executing], #23944 [executing], #23952 [proposed], #23953, #23973 [proposed], #23974 [proposed], #23975 [deployed], #23982 [proposed], #24012, #24025, #24029, #24036, #24043, #24044, #24097 [proposed], #24182, #24225 [proposed], #24377 [executing], #24378, #24379, #24381 [proposed], #24382 [proposed], #24383, #24464, #24466, #24586, #24706, #24766, #24808 [proposed], #24877, #2563, #334155, #3730, #374151, #4338, #64748, #92400
+**Ideas referenced:** #047857, #059669, #111827, #16213, #16523, #166534, #178601, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19370, #2006, #20547, #21125, #21126, #21262, #2250 [superseded], #2251 [superseded], #22511, #2252, #2253, #22583, #22688, #22850, #23027, #23036, #23428, #23429, #23468, #23489, #23506, #23585, #23623, #23630 [executing], #23636, #23637, #23674, #23675, #23710, #23711, #23729, #23739, #23740, #23747, #23748, #23749, #23750, #23751, #23764, #23769, #23851 [rejected], #23852 [proposed], #23854, #23867, #23868 [executing], #23878 [proposed], #23879 [proposed], #23881, #23885, #23897, #23898, #23899, #23900, #23908, #23910, #23911, #23913 [executing], #23920 [executing], #23934 [executing], #23941 [executing], #23944 [executing], #23952 [proposed], #23953, #23973 [proposed], #23974 [proposed], #23975 [deployed], #23982 [proposed], #24012, #24025, #24029, #24036, #24043, #24044, #24097 [proposed], #24182, #24207, #24225 [proposed], #24377 [executing], #24378, #24379, #24381 [proposed], #24382 [proposed], #24383, #24384, #24464, #24466, #24518, #24581 [deployed], #24586, #24706, #24766, #24808 [proposed], #24877, #24894 [proposed], #24895, #24897 [proposed], #24898 [proposed], #24900, #24901, #24902, #24903, #24904, #24905, #24906, #24907, #24908, #24909, #24910, #24911, #24912, #24913, #24914, #24915, #24916, #24917, #24918, #24919, #24920, #24921, #24922, #24923, #2563, #334155, #3730, #374151, #4338, #64748, #92400
 
 **Last PICKUP PROMPT:**
 
 ```
-ot by a missing reply‑handler.
+<attempt_completion>
+<result>
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #259 — Argus reply‑path fix & LLM‑hang watchdog (#24808).
+Pick up task #259 — Argus conversation-memory (#24898/#24900) implementation + 16-item Argus chat improvement backlog.
 
-Where we left off (verified 2026-08-07 20:47 PT):
-- Two worker‑stall tasks reset to `queued` (#345, #346).
-- Idea #24808 filed for the hang‑watchdog.
+Where we left off (verified 2026-08-07 21:36 PT):
+- 16 Argus chat improvements documented and filed in orchestrator_ideas this session (created 2026-08-07 21:00–21:12).
+- The user's feedback pointed at #24518, which was a JUNK offload idea ("User input unclear"), not the memory idea — I rejected it and flagged the correct IDs.
+- The real conversation-memory trackers are #24898 "[Argus] Conversation memory across turns" and #24900 "[Argus] Conversation memory in same chat session" — both 'proposed', NOT yet approved.
+- I located context plumbing: alltastic_api.php has get_livechat_history (line 1165) and localGetLivechatHistory; argus_audit_log table has user_email, action_type, result_summary, created_at — the natural memory source for a session-scoped history.
 
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #24808 [proposed] — Implement curl_multi_select() timeout watchdog in cron_argus_task_worker.php: after 90 s of idle handles, cancel hung CURL handles and requeue or fail‑fast the task, so a single slow LLM backend never blocks the whole batch.
-2. #23982 [deployed] — Widen the not‑doable keyword set beyond "cannot answer" after verifying the actual refusal text returned by the current LLM backend (needs a live probe).
+Open threads to drive next (each has a real filed idea):
+1. #24898 — [proposed] Implement conversation memory: build a session-scoped history array in terminal_query (alltastic_api.php:5304) that pulls prior user/assistant turns from argus_audit_log and passes them as messages[] context. VERIFY get_livechat_history + localGetLivechatHistory (grep function definition) before writing. Get Ruben's confirmation that "last 5 exchanges" is the right scope vs full-session.
+2. #24900 — [proposed] Merge with #24898 (duplicate idea) — decide which single idea is canonical and archive the other.
+3. #24897 — [proposed] Ask for confirmation before mutating actions (refund/enrollment delete) — add a pre-execute confirm step in terminal_query for action_name categories 'mutation'.
+4. #24901 — [proposed] Show file/image attachments in chat transcript.
+5. #24911 — [proposed] Distinguish menu answers (code block) from data answers (plain text).
+6. #24912 — [proposed] Working clickable links for every file/idea/ticket Argus mentions.
+7. #24914 — [proposed] Ticket link for auto-created tickets.
+8. #24915 — [proposed] Recognize null search results and offer to create the item instead.
+9. #24916 — [proposed] Show file name after upload in terminal output.
+10. #24917 — [proposed] Show file disposition (what was done with the uploaded file).
+11. #24918 — [proposed] Follow-up re-probe: if follow-up references prior data, issue a fresh query for the specific entity.
+12. #24919 — [proposed] Show express-lane slot count before offering the express lane.
+13. #24920 — [proposed] Add "deep research / heavy compute" mode toggle for large retrievals.
+14. #24921 — [proposed] Surface customer-service queue position + ETA for CS-eligible requests.
+15. #24922 — [proposed] Cross-turn context transfer: pass prior context when a task is offloaded/handed to human.
+16. #24923 — [proposed] Show file/image attachments in terminal chat transcript (see #24901).
+17. #24913 — [queued] Additional improvement: messages queued while processing (don't drop them).
 
 Reference IDs:
-- Ticket: #259
-- Ideas filed: #24225, #24808
-- Files touched: /var/www/emtskills/routes/cron_argus_task_worker.php, /var/www/emtskills/routes/alltastic_api.php
+- Ticket: (Argus task status page for #335/#336 referenced by user; no formal ticket — see argus_task_queue id 335, 336)
+- Ideas filed this session: #24894 (master backlog), #24897-#24923 (the 16 individual items)
+- Files touched: /var/www/emtskills/routes/alltastic_api.php (terminal_query at 5304, get_livechat_history at 1165), /var/www/emtskills/routes/cron_argus_task_worker.php (guard at 372)
+- SQL tables: admin_portal.argus_audit_log (sess
+```
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+### `1786162207330` — 8/7/2026, 9:49:27 PM PT — 127 turns
+
+**Original task:**
+
+```
+Why does frankenstein LLM iterate this to me? I'm hitting the token limit. I need to quickly capture the remaining 10 improvements into flat DB ideas using the simple INSERT pattern that works (no embedded double quotes, single-line), tag them all to parent #24518, then push a PICKUP PROMPT.
+
+I'll file them as compact single-row INSERTs, then summarize.
+
+I'm hitting the token limit. I need to quickly capture the remaining 10 improvements into flat DB ideas using the simple INSERT pattern that works (no embedded double quotes, single-line), tag them all to parent #24518, then push a PICKUP PROM
+```
+
+**Ideas referenced:** #11741, #12597, #13202, #16154, #16163, #16304, #19162, #22282, #2265, #2266, #2267, #23171, #24207 [executing], #24214, #24218, #24239, #24518, #24635 [deployed], #24636 [deployed], #24645 [unknown], #24646 [proposed], #24704, #24714, #24715 [deployed], #24772 [deployed], #24773, #24791 [deployed], #24914 [executing], #24924 [proposed], #24925 [proposed], #24926 [proposed], #24927 [proposed], #2763, #5351, #5354, #7377, #8370, #9222, #9501
+
+**Last PICKUP PROMPT:**
+
+```
+ur ideas filed. Now let me answer Ruben directly with the complete analysis and PICKUP PROMPT.
+
+<attempt_completion>
+<result>
+**The ultimate goal: increase memory. Direct answer: the raw context CANNOT go above 131K — that's the architecture ceiling, not a memory ceiling. But there are 4 ways to effectively increase memory, 3 of which are server-side. All 4 are now filed.**
+
+**Can the model actually hold more? NO beyond 131K — verified, it's the trained ceiling, not hardware.**
+Artemis `/v1/models` reports `max_model_len=131072` (live probe this session). gpt-oss-120b was trained on a 128K window — the positional encodings only exist to ~131K. Raising `--max-model-len` to 200K/1M produces garbage past 131K regardless of GPU RAM, because the model has never seen those positions. So we cannot just bump the number.
+
+**BUT the watchdog currently uses W=128,000 and condenses at 98,000. The real served ceiling is 131,072. That's 33,072 tokens (~25% headroom) thrown away by a hardcoded config.** Free to reclaim — no model change.
+
+**Four server-side paths to increase effective memory (all filed):**
+
+1. **#24924 [proposed] — Close the 33K watchdog undercount [P0].** Make the Mac watchdog read the real `max_model_len=131072` (from SERVED_CONTEXT.md or probe `/v1/models`) instead of hardcoded 128K. CHECK moves 70,400→72,050, COMPRESS 96,000→98,050. Free, immediate, roughly 2-3 more tool-rounds per window.
+
+2. **#24925 [proposed] — Fix fleet RAG so it wins [P1].** Every backtest logs `delta +0.0pp` (RAG == no RAG). Retrieval currently adds zero value — that's why "wide context" can't be faked by stuffing. If RAG works, docs/rules/HANDOFF_NOTES inject only when semantically relevant, dropping the prompt floor ~90%. This is the biggest server-side "memory" win but requires retrieval to actually beat baseline first.
+
+3. **#24926 [proposed] — Server-side working-memory bank [P1].** Give Cline `recall/store_memory` tools backed by a DB/embedding store. Model pulls facts on demand instead of preloading the prompt. Effectively unbounded memory — prompt stays small, memory lives in the DB. This is how Claude Code works at scale.
+
+4. **#24927 [proposed] — Server-side hierarchical summarization at the adapter [P2].** When context approaches the ceiling, the adapter compresses old tool turns to one-line summaries server-side, keeping the active tail at full fidelity. Cline never notices.
+
+**Recommended sequencing: 1 (now, free) → 2 (fix RAG, biggest lever) → 3 (working-memory bank) → 4 (summarization, most complex, only if gaps remain).**
+The three server-side approaches (RAG, memory bank, summarization) are the real path to "more memory" because they move state OUT of the token window and INTO server storage the model can pull from lazily.
+
 ═══════════════════════════════════════════════
-</result>
-</attempt_completion>
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — increase frankenstein effective memory (beyond 131K arch ceiling) via server-side paths.
+
+Where we left off (verified 2026-08-07 21:42 PT):
+- Ruben's goal: increase memory. Verified: Artemis max_model_len=131072 live (/v1/models probe). gpt-oss-120b trained 128K window = architectural ceiling. CANNOT raise raw context >131K regardless of GPU RAM.
+- Watchdog hardcodes W=128,000 (CHECK 70,400 / COMPRESS 96,000) vs real 131,072 → 33K undercount.
+- Four ideas filed to effectively increase memory.
+
+Open threads to drive next:
+1. #24924 [proposed] — Close 33K watchdog undercount (P0): change Mac cline_budget_watchdog.py W=128K → read real 131072 fro
 ```
 
 ### `1786086916545` — 8/7/2026, 8:39:15 PM PT — 190 turns
@@ -3113,240 +3178,5 @@ SELF-REPORT: first word after about N seconds, output was [smooth | lurching], [
 
 #
 ```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785905216650` — 8/4/2026, 9:49:48 PM PT — 8 turns
-
-**Original task:**
-
-```
-## WINDOW 2
-
-```text
-Do not use any tools. Answer entirely from your own knowledge, in plain prose.
-
-A monitoring service sends a health-check generation request to an inference server every
-10 seconds and abandons the connection without reading the response. Explain what happens
-to the server's scheduler over the following hour, why the effect is far worse on a server
-with a small batch width than a large one, and what a correct health check would do instead.
-Roughly 300 words.
-
-End with exactly this line, filled in:
-SELF-REPORT: first word after about N seconds, output was [smooth | lurching
-```
-
-**Ideas referenced:** #22706 [executing]
-
-**Last PICKUP PROMPT:**
-
-```
- or system state involved.
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task #22706 — conversational answer: health-check generation request abandon effect (deepened)
-Where we left off (verified 2026-08-04 21:49 PT):
-- Answered WINDOW 2 (no tools, plain prose) explaining scheduler impact of abandoned generation requests, expanded for complexity
-- Three-tier architecture: scheduler + memory pool + continuous-batching engine; TCP backpressure → double-shadowing in both KV-cache and scheduler waitlist
-- Feedback cascade on small batch: head-of-line blocking, tail-latency amplification, cascade into timeouts, cascade into more retries (monitoring retries on timeout)
-- Preemption pathology: vLLM-style preemption steals slots, the phantoms get deprioritized, memory pool thrash, cache churn (LRU eviction churn)
-- Correct fix: /health with zero-payload liveness, or max_tokens=1 with read-to-completion, plus monitoring backoff + connection reuse health checks
-Open threads to drive next:
-1. #22706 [executing] — WINDOW 2 conceptual answer delivered with deepened complexity; next window continues the task sequence
-Reference IDs:
-- Ticket: none
-- Ideas filed: none
-- Files touched: none
-When done, append to cline_task_ledger.md per rule 07.
-═══════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785905287666` — 8/4/2026, 9:49:43 PM PT — 8 turns
-
-**Original task:**
-
-```
-## WINDOW 5
-
-```text
-Do not use any tools. Answer entirely from your own knowledge, in plain prose.
-
-Explain the difference between a throttle and a reservation in a shared computing system.
-Use a concrete example where a background batch job and an interactive user share the same
-resource. Explain why a throttle reduces contention but cannot guarantee responsiveness,
-and what a priority scheme adds. Roughly 300 words.
-
-End with exactly this line, filled in:
-SELF-REPORT: first word after about N seconds, output was [smooth | lurching], [finished | stalled]
-```
-
----
-
-#
-```
-
-**Last PICKUP PROMPT:**
-
-```
-rs, and cloud autoscalers.
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task #WINDOW5 — throttle vs reservation explanation
-Where we left off (verified 2026-08-04 21:48 PT):
-- Delivered complete ~300-word plain-prose answer (no tools, per explicit instruction)
-- Explained throttle (upper-limit cap) vs reservation (guaranteed set-aside); batch-job/interactive-user example; priority scheme adds preemptive ordering
-- Ended with required SELF-REPORT line
-Open threads to drive next:
-1. User asked "how could you make this idea more complex" — answered conversationally with 6 complexity extensions: multi-resource, multi-tenancy SLAs, burstable/adaptive soft caps, preemption-with-resume-cost, weighted fair-share/probabilistic, cascading end-to-end budgets
-Reference IDs:
-- Ticket: none
-- Ideas filed: none
-- Files touched: none
-When done, append to cline_task_ledger.md per rule 07.
-═══════════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Answer entirely from own knowledge in plain prose
-- [x] Explain throttle vs reservation
-- [x] Provide concrete batch-job + interactive-user example
-- [x] Explain why throttle reduces contention but can't guarantee responsiveness
-- [x] Explain what a priority scheme adds
-- [x] ~300 words
-- [x] End with exact SELF-REPORT line
-- [x] Respond conversationally to "how could you make this idea more complex"
-</task_progress>
-</attempt_completion>
-```
-
-### `1785901405719` — 8/4/2026, 9:17:40 PM PT — 64 turns
-
-**Original task:**
-
-```
-EMSU Operations MCP is down. Take a look at MCP troubleshooting document on desktop and update once resolved. 
-
-Also frankenstein-llm appears to be down
-```
-
-**Ideas referenced:** #12059, #12299, #12459, #15803, #1593, #16588, #178590, #18600, #1895, #22569, #22790 [proposed], #64748, #9731
-
-**Last PICKUP PROMPT:**
-
-```
- WOPR port 5000 automatically.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785900382260 — MCP/Frankenstein-LLM investigation + fleet API restoration.
-
-Where we left off (verified 2026-08-04 21:17 PT):
-- All 20 MCP bridges healthy, Frankenstein-LLM routing verified working (200 OK)
-- Fleet API (port 5000) confirmed down — no systemd unit
-- MCP_Troubleshooting.md §16 written
-- Idea #22790 [executing] — implementation queued, build worker started, ETA 21:26 PT
-
-Open threads to drive next:
-1. #22790 [executing] — check ruben-orchestrator get_idea_progress to verify fleet API restoration completed
-
-Reference IDs:
-- Ideas filed: #22790 [executing]
-- Files touched: /Users/rubenmajor/Desktop/MCP_Troubleshooting.md (added §16)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Find MCP troubleshooting document on Desktop
-- [x] Diagnose EMSU Operations MCP status
-- [x] Diagnose Frankenstein-LLM status
-- [x] Apply troubleshooting steps for MCP
-- [x] Apply troubleshooting/fix for Frankenstein-LLM
-- [x] Update MCP_Troubleshooting.md with findings
-- [x] File idea for fleet API restoration
-- [x] Trigger implementation of fleet API restoration
-- [ ] Verify implementation progress
-</task_progress>
-</attempt_completion>
-```
-
-### `1785780445834` — 8/4/2026, 8:57:37 PM PT — 1092 turns
-
-**Original task:**
-
-```
-Propose for Telephony with some features similar to /proctoring for the Admin role (in this case) to manage the ability for students to schedule a call back. The schedule a call back feature will require 24 hours before the person will be called back. This is an idea proposed to be integrated with CFAs to make it so admins can do call backs to students with issues. 
-
-We need to only permit 1 scheduled call backs per hour from 9AM to 9PM each day to start. 
-
-The admin could configure more often, but this could be used to help those students requiring additional help. I think CFAs can suggest to
-```
-
-**Ideas referenced:** #001018, #059669, #062017, #166534, #167143, #16732, #1976, #20340 [executing], #21010 [executing], #21011 [executing], #21038 [proposed], #21158 [executing], #21213 [executing], #21419 [executing], #21542 [rejected], #21546 [executing], #21763 [proposed], #21764 [proposed], #21765 [proposed], #21766 [deployed], #21773, #21775 [proposed], #21777 [proposed], #21886 [deployed], #22062 [proposed], #22200, #22203 [executing], #22204 [waiting], #22205 [waiting], #22206 [approved], #22207 [blocked], #22208 [proposed], #22209 [blocked], #22210 [approved], #22742 [proposed], #22777 [approved], #22778 [approved], #22779 [proposed], #22780 [blocked], #2563, #334155, #374151, #475569, #64748, #92400, #9733, #9734
-
-**Last PICKUP PROMPT:**
-
-```
-t send whenever you are ready.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task callback-rollout — send outreach email to 19 backtested students.
-
-Where we left off (verified 2026-08-04 20:57 PT):
-- Preview email resent to major@emsuniversity.com (SENT)
-- Email copy in Ruben's approved voice: "We noticed that you had contacted us..."
-- Backtest data: 24 frustrated emails, 19 unique students, 18 active (Aug 2-3)
-- Callback system verified live: book.php 200, suggest.php rate-limit working, 180 slots available
-- Admin pages auth-gated (config/slots/booking_detail = 401 unauth, MasterAdmin/ExecAdmin/ITAdmin/Admin only)
-
-Open threads to drive next:
-1. #22777 [approved] — Send callback outreach email to 19 backtested students (insert into communication_log per student; monitor callback_bookings)
-2. #22779 [proposed] — Build inbound email subject detector: URGENT/!!! match → verify active → call suggest.php → auto-reply with callback link (cron on communication_log)
-3. #22780 [blocked] [queued] — Admin pages human smoke test: config.php, slots.php, booking_detail.php need admin-session render verification
-
-Reference IDs:
-- Ticket: (none)
-- Ideas filed: #22742, #22777, #22778, #22779, #22780
-- Files touched: /var/www/emtskills/callback/api/suggest.php, /var/www/emtskills/callback/book.php, /var/www/emtskills/callback/admin/*.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785890121460` — 8/4/2026, 8:51:12 PM PT — 588 turns
-
-**Original task:**
-
-```
-#GLM
-
-Create a document to track work as there's a lot of work to do. 
-
-We need to kill the 40 second delay. Taht's ridiculous. 
-
-What is concurrency then? 
-
-So then the GLM absolutely crushes the 120Bs for time to successful completion? Because you had it pegged at 3-10x  if tok/sec was the same.??
-
-Tell me how GLM goes down with additional lanes or does it stay higher tok/sec? 
-
-Sounds to me like this build is uncharted and not in the NVIDIA forums at all? This is beyond bleeding edge? 
-
-Is GLM 5.2 now in front of the 120Bs for frankenstein-llm and frankenstein-tools? 
-
-How many lanes should
-```
-
-**Ideas referenced:** #16844, #1718 [deployed], #1877, #19338 [rejected], #19458 [rejected], #19491, #1986 [deployed], #2083, #20903, #20957, #20958, #2157, #2159, #2168, #2174 [deployed], #2185 [deployed], #2187, #2195 [deployed], #2200, #2201, #2202, #2203, #2204, #2205, #22128 [executing], #22322, #22370 [proposed], #22371 [proposed], #22500 [awaiting_review], #22543 [proposed], #22563 [proposed], #22564 [proposed], #22565 [proposed], #22583 [proposed], #22584 [proposed], #22598 [proposed], #22599 [proposed], #22600 [proposed], #22601 [proposed], #22602 [proposed], #22612 [proposed], #22613 [proposed], #22657 [proposed], #22658 [proposed], #22659 [proposed], #22660 [rejected], #22665 [proposed], #22669 [proposed], #22674 [proposed], #22675 [proposed], #22680 [proposed], #22681 [proposed], #22682 [proposed], #22683 [proposed], #22684 [proposed], #22685 [proposed], #22686 [proposed], #22687, #22688, #22689, #22699 [proposed], #22700 [proposed], #22704 [proposed], #22713 [proposed], #22714 [proposed], #22715 [proposed], #22727 [proposed], #22729 [proposed], #22743 [proposed], #22752 [proposed], #22758 [proposed], #22761 [proposed], #22765 [proposed], #22770 [proposed], #22784 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

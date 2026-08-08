@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-08T14:40:35.300Z",
+ "generated_at": "2026-08-08T15:40:35.653Z",
  "counts": {
-  "parsed": 0,
+  "parsed": 1,
   "reused": 552,
   "failed": 0,
-  "total": 552
+  "total": 553
  },
  "tasks": {
   "1784522296714": {
@@ -117883,11 +117883,11 @@
   },
   "1786185156855": {
    "task_id": "1786185156855",
-   "mtime": 1786191176268,
+   "mtime": 1786201004705,
    "created_at": "2026-08-08T10:32:36.855Z",
-   "last_modified": "2026-08-08T12:12:56.268Z",
-   "size_kb": 80,
-   "turn_count": 24,
+   "last_modified": "2026-08-08T14:56:44.705Z",
+   "size_kb": 84,
+   "turn_count": 25,
    "title": "Pick up idea 25077, the Argus rule-29 proactive bundle. First run get_idea_progress(25077); if built, verify and stop. Otherwise hand-ship per rule 267 GATE C, shipping the four parts in order: (1) NIGHTLY SELF-HEAL: cron that pulls students touched in 48h (new Class_Enrollments rows, recent Tickets), runs the lifecycle gates via lib/StudentLifecycleState.php, and auto-applies SAFE canonical repairs only (unstick_moodle_quiz_attempt, regrade_quiz_attempt, group membership, EA re-drive) with audit_log rows + reversal commands; human-gated gates write a Q-card row instead. (2) AUTO-FIX ON DETECTION: in the KAIZEN classifier path, when a failure matches a failure_repair_recipes row with status=",
    "pickup_prompt": null,
    "ideas": {
@@ -117959,6 +117959,28 @@
     "78350": null,
     "856404": null,
     "003366": null
+   }
+  },
+  "1786200908875": {
+   "task_id": "1786200908875",
+   "mtime": 1786203633485,
+   "created_at": "2026-08-08T14:55:08.875Z",
+   "last_modified": "2026-08-08T15:40:33.485Z",
+   "size_kb": 187,
+   "turn_count": 111,
+   "title": "#big mac \n\nBig Mac 120B LLM onboarding: SSH access established, vLLM PP=3 gpt-oss-120b SERVING and GENERATING (8.57 tok/s probe, correct output, 595K KV tokens, 18.17x concurrency) on 3x Intel Arc B70. Two on-box fixes applied: tiktoken vocab pre-stage (harmony crash) and CCL_ZE_IPC_EXCHANGE=pidfd + --cap-add SYS_PTRACE (PP pt2pt oneCCL fix). Registry serving_endpoints entry present. Context hit the rule-119 compress threshold (150K/200K) mid-wiring, so the session was compressed; the pickup prompt below carries the exact remaining recipe (registry models[] + pool_members patch, litellm-safe-restart, verification, bug library, HANDOFF) for the fresh window. Tracking idea #25097 [executing] (",
+   "pickup_prompt": null,
+   "ideas": {
+    "2271": "deployed",
+    "12247": null,
+    "12262": null,
+    "12477": null,
+    "13108": null,
+    "16120": null,
+    "16844": null,
+    "25097": "executing",
+    "25111": "proposed",
+    "25112": "proposed"
    }
   }
  }

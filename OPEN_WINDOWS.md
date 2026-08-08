@@ -6,15 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/8/2026, 7:40:35 AM PT | window: last 72h | 79 tasks | index total 552 (parsed 0, cached 552)
+Generated: 8/8/2026, 8:40:35 AM PT | window: last 72h | 80 tasks | index total 553 (parsed 1, cached 552)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1786200908875` | 8/8/2026, 8:40:33 AM | 111 | 187KB | #big mac  |
+| `1786185156855` | 8/8/2026, 7:56:44 AM | 25 | 84KB | Pick up idea 25077, the Argus rule-29 proactive bundle. First run get_idea_progress(25077) |
 | `1786172805164` | 8/8/2026, 6:27:54 AM | 650 | 19969KB | We have brought up a new LLM for 120B usage, the name is Big Mac, it lives on the same net |
 | `1786185877066` | 8/8/2026, 6:07:30 AM | 104 | 400KB | continue |
 | `1786185141628` | 8/8/2026, 6:06:52 AM | 96 | 276KB | Pick up idea 25076, the idea-delivery watchdog. First run get_idea_progress(25076); if bui |
 | `1786184812790` | 8/8/2026, 5:58:29 AM | 124 | 2065KB | Rule 297 was strengthened today (scope gate for failure counts + "a 297 request includes f |
-| `1786185156855` | 8/8/2026, 5:12:56 AM | 24 | 80KB | Pick up idea 25077, the Argus rule-29 proactive bundle. First run get_idea_progress(25077) |
 | `1786184799256` | 8/8/2026, 4:03:17 AM | 74 | 1392KB | Pick up idea 25073, the Argus failed-action cleanup + per-user summary emails. First run g |
 | `1786185341999` | 8/8/2026, 4:02:40 AM | 131 | 236KB | frankenstein-llm appears to have stalled. Can you explain to me what's going on with it? I |
 | `1786182696040` | 8/8/2026, 3:59:39 AM | 194 | 523KB | Pick up ideas 24990 and 24991 (both blocked, executor impl_failed twice, hand-ship per rul |
@@ -93,6 +94,32 @@ Generated: 8/8/2026, 7:40:35 AM PT | window: last 72h | 79 tasks | index total 5
 ---
 
 ## Per-window detail
+
+### `1786200908875` — 8/8/2026, 8:40:33 AM PT — 111 turns
+
+**Original task:**
+
+```
+#big mac 
+
+Big Mac 120B LLM onboarding: SSH access established, vLLM PP=3 gpt-oss-120b SERVING and GENERATING (8.57 tok/s probe, correct output, 595K KV tokens, 18.17x concurrency) on 3x Intel Arc B70. Two on-box fixes applied: tiktoken vocab pre-stage (harmony crash) and CCL_ZE_IPC_EXCHANGE=pidfd + --cap-add SYS_PTRACE (PP pt2pt oneCCL fix). Registry serving_endpoints entry present. Context hit the rule-119 compress threshold (150K/200K) mid-wiring, so the session was compressed; the pickup prompt below carries the exact remaining recipe (registry models[] + pool_members patch, litellm-safe-r
+```
+
+**Ideas referenced:** #12247, #12262, #12477, #13108, #16120, #16844, #2271 [deployed], #25097 [executing], #25111 [proposed], #25112 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786185156855` — 8/8/2026, 7:56:44 AM PT — 25 turns
+
+**Original task:**
+
+```
+Pick up idea 25077, the Argus rule-29 proactive bundle. First run get_idea_progress(25077); if built, verify and stop. Otherwise hand-ship per rule 267 GATE C, shipping the four parts in order: (1) NIGHTLY SELF-HEAL: cron that pulls students touched in 48h (new Class_Enrollments rows, recent Tickets), runs the lifecycle gates via lib/StudentLifecycleState.php, and auto-applies SAFE canonical repairs only (unstick_moodle_quiz_attempt, regrade_quiz_attempt, group membership, EA re-drive) with audit_log rows + reversal commands; human-gated gates write a Q-card row instead. (2) AUTO-FIX ON DETECT
+```
+
+**Ideas referenced:** #1592, #20890, #21667
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786172805164` — 8/8/2026, 6:27:54 AM PT — 650 turns
 
@@ -279,18 +306,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1786185156855` — 8/8/2026, 5:12:56 AM PT — 24 turns
-
-**Original task:**
-
-```
-Pick up idea 25077, the Argus rule-29 proactive bundle. First run get_idea_progress(25077); if built, verify and stop. Otherwise hand-ship per rule 267 GATE C, shipping the four parts in order: (1) NIGHTLY SELF-HEAL: cron that pulls students touched in 48h (new Class_Enrollments rows, recent Tickets), runs the lifecycle gates via lib/StudentLifecycleState.php, and auto-applies SAFE canonical repairs only (unstick_moodle_quiz_attempt, regrade_quiz_attempt, group membership, EA re-drive) with audit_log rows + reversal commands; human-gated gates write a Q-card row instead. (2) AUTO-FIX ON DETECT
-```
-
-**Ideas referenced:** #1592, #20890, #21667
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786184799256` — 8/8/2026, 4:03:17 AM PT — 74 turns
 

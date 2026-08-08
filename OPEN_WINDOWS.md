@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/8/2026, 6:40:34 AM PT | window: last 72h | 80 tasks | index total 552 (parsed 3, cached 549)
+Generated: 8/8/2026, 7:40:35 AM PT | window: last 72h | 79 tasks | index total 552 (parsed 0, cached 552)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -89,7 +89,6 @@ Generated: 8/8/2026, 6:40:34 AM PT | window: last 72h | 80 tasks | index total 5
 | `1785957900287` | 8/5/2026, 4:08:38 PM | 174 | 642KB | Telphony still having issues: |
 | `1785937352780` | 8/5/2026, 2:43:42 PM | 330 | 1676KB | A bunch of my windows closed out here in Cline all at once. For these windows can you go a |
 | `1785940995783` | 8/5/2026, 2:37:03 PM | 262 | 594KB | Resolve this issue: |
-| `1785939400779` | 8/5/2026, 7:16:41 AM | 1 | 5KB | Please see this in Argus, appears like some hallucinations, the model is not answering que |
 
 ---
 
@@ -3104,26 +3103,3 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
-
-### `1785939400779` — 8/5/2026, 7:16:41 AM PT — 1 turns
-
-**Original task:**
-
-```
-Please see this in Argus, appears like some hallucinations, the model is not answering questiosn proerly and something is wrong. Also when I click on those individual task links it spins forever. Plus what does it mean "marale"? And why all the excuses? And it's answering things I didn't ask:
-
-Test as:
-
-MasterAdmin
-Dashboard
-Argus
-New chat started. Saves automatically after your first message.
-You
-can you tell me how many requests were made in Argus overnight and by whom and what were the topics?
-Argus
-Still thinking (50s)...
-Searched EMSU records (0 student profiles matched)
-Searched EMSU kno
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

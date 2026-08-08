@@ -6,13 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/7/2026, 10:49:52 PM PT | window: last 72h | 77 tasks | index total 534 (parsed 5, cached 529)
+Generated: 8/7/2026, 11:49:53 PM PT | window: last 72h | 77 tasks | index total 535 (parsed 3, cached 532)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786168161165` | 8/7/2026, 10:49:49 PM | 7 | 22KB | #Argus |
-| `1786167712060` | 8/7/2026, 10:49:25 PM | 51 | 148KB | ## Comprehensive PICKUP PROMPT — all 7 context-memory ideas, server-authoritative tags |
-| `1786162207330` | 8/7/2026, 10:49:20 PM | 322 | 1206KB | Why does frankenstein LLM iterate this to me? I'm hitting the token limit. I need to quick |
+| `1786168161165` | 8/7/2026, 11:49:49 PM | 341 | 1367KB | #Argus |
+| `1786169603912` | 8/7/2026, 11:48:16 PM | 160 | 675KB | Play frankenstein doctor of executor. Lots of failed ideas impl blocked, etc.. need resolu |
+| `1786167712060` | 8/7/2026, 11:37:38 PM | 218 | 614KB | ## Comprehensive PICKUP PROMPT — all 7 context-memory ideas, server-authoritative tags |
+| `1786162207330` | 8/7/2026, 11:13:36 PM | 454 | 1608KB | Why does frankenstein LLM iterate this to me? I'm hitting the token limit. I need to quick |
 | `1786036273485` | 8/7/2026, 10:47:51 PM | 1506 | 4670KB | #Argus  |
 | `1786166732768` | 8/7/2026, 10:35:33 PM | 90 | 923KB | Diagnose why cron_argus_task_worker.php stalls when the upstream LLM exceeds 120s. Read th |
 | `1786086916545` | 8/7/2026, 8:39:15 PM | 190 | 1084KB | Tell me how the student council is doing. Is it healthy? It actually generating ideas and  |
@@ -86,13 +87,12 @@ Generated: 8/7/2026, 10:49:52 PM PT | window: last 72h | 77 tasks | index total 
 | `1785909027381` | 8/5/2026, 12:45:31 AM | 273 | 3714KB | The moodle layout for the EMT classes AZ, CA and TX is very ugly and off-center. Need to b |
 | `1785907400228` | 8/5/2026, 12:35:11 AM | 120 | 338KB | https://emsuniversity.com/emtskills is very slow again today. This is the 3rd time I've ha |
 | `1785881207296` | 8/5/2026, 12:29:35 AM | 188 | 818KB | Can you look into this and advise if there's an isseu? |
-| `1785901946011` | 8/4/2026, 11:36:18 PM | 622 | 1406KB | #GLM  |
 
 ---
 
 ## Per-window detail
 
-### `1786168161165` — 8/7/2026, 10:49:49 PM PT — 7 turns
+### `1786168161165` — 8/7/2026, 11:49:49 PM PT — 341 turns
 
 **Original task:**
 
@@ -112,11 +112,100 @@ Where we left off (verified 2026-08-07 22:47 PT):
 - **Confirm-before-mutating
 ```
 
-**Ideas referenced:** #24635 [deployed], #24636 [deployed], #24645 [unknown], #24646 [proposed], #24791 [deployed], #24894 [queued], #24897 [executing], #24898 [deployed], #24900 [deployed]
+**Ideas referenced:** #0000, #178424, #178455, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690, #1871, #18745, #1876, #1877, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #1883, #1894, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #1912, #19348, #2006, #20547, #21125, #21126, #22511, #22583, #23489 [executing], #23592, #23852, #23920, #23952, #24400, #24518, #24635 [deployed], #24636 [deployed], #24645 [unknown], #24646 [proposed], #24766, #24791 [deployed], #24894 [queued], #24895 [proposed], #24897 [executing], #24898 [deployed], #24899 [proposed], #24900 [deployed], #24901 [proposed], #24902 [proposed], #24904 [proposed], #24905 [proposed], #24906 [proposed], #24907 [proposed], #24908 [proposed], #24909 [proposed], #24910 [proposed], #24911 [proposed], #24912 [proposed], #24913 [proposed], #24915, #24926, #24927, #24946 [executing], #24956, #334155, #4338, #57066, #64748
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1786167712060` — 8/7/2026, 10:49:25 PM PT — 51 turns
+```
+897-confirmflag-20260807-2259`
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #259 — Argus chat improvements: execute the 12 queued orchestrator specs.
+
+Where we left off (verified 2026-08-07 23:24 PT):
+- #24897 [deployed] — confirm-before-mutating guard wired at alltastic_api.php line 5323 + file-scope require line 52, guard smoke-tested live
+- 12 Argus ideas [executing] — dispatched to orchestrator executor via idea_action implement with detailed specs
+- #24904 [deployed] — closed (dup of #24897)
+- #24946 [deployed] — closed (alltastic_api.php uncorrupted)
+- Files: routes/alltastic_api.php, routes/argus_confirm_guard.php, public/argus-extension/sidepanel.js (target)
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #24895 [executing] — Sidepanel: input queueing (show "Queued" when busy, append to queue_task flow)
+2. #24901 [executing] — Sidepanel: Markdown rendering in addMsg (bold, code blocks, links, images)
+3. #24902 [executing] — System prompt: MENU_FORMAT block + sidepanel: ```menu rendering
+4. #24905 [executing] — System prompt: append ticket link when tool creates a ticket
+5. #24906 [executing] — System prompt: NULL_RESULTS block (offer to create/enroll when zero results)
+6. #24907 [executing] — Sidepanel: addMsg file name on upload success
+7. #24908 [executing] — Sidepanel: completed files persistent chip
+8. #24909 [executing] — Verify FOLLOWUP heredoc at alltastic_api.php line 2656 is active; enhance re-probe
+9. #24910 [executing] — Express-grant action: append current slot count
+10. #24911 [executing] — terminal_query deep_research flag → heavy model routing + extended system prompt budget
+11. #24912 [executing] — System prompt: CS queue info + tool wiring check
+12. #24913 [executing] — queue_event_log context_note write + injection into batchNotice on startup
+
+Reference IDs:
+- Ticket: none filed (live edit session)
+- Ideas dispatched: #24895, #24901, #24902, #24905, #24906, #24907, #24908, #24909, #24910, #24911, #24912, #24913 — all [executing]
+- Ideas deployed: #24897 [deployed], #24904 [deployed], #24946 [deployed]
+- Files touched: routes/alltastic_api.php (3 patches), routes/argus_confirm_guard.php (rewrote), public/argus-extension/sidepanel.js (target for UI)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786169603912` — 8/7/2026, 11:48:16 PM PT — 160 turns
+
+**Original task:**
+
+```
+Play frankenstein doctor of executor. Lots of failed ideas impl blocked, etc.. need resolution and to be sent through again
+```
+
+**Ideas referenced:** #1095, #1143, #13061, #1519, #16523, #177926, #19830, #21075, #21167 [approved], #21710, #22245, #22308, #22321, #22433, #2265, #22656, #2266, #2267, #22780 [blocked], #23135, #23362 [blocked], #23373 [blocked], #24184, #24191, #24205, #24635 [deployed], #24636 [deployed], #24645 [unknown], #24646 [proposed], #24704, #24714, #24715 [deployed], #24772 [deployed], #24773, #24791 [deployed], #24958, #24961 [approved], #24963 [approved], #3132, #3133, #4071, #4517, #4906, #5329, #5467, #6067, #6070, #7175
+
+**Last PICKUP PROMPT:**
+
+```
+newest is 23:15, pre-cleanup).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Frankenstein doctor + Kaison self-heal follow-up (2026-08-07 23:47 PT).
+
+Where we left off (verified 2026-08-07 23:47 PT):
+- DEADMAN RCA dedup FIXED and HOLDING (4 approved, tested returns 0)
+- Kaison self-heal scanner LIVE (scanned 6 recipes, fired 2, correct no-ops)
+- 10 stalled ideas re-dispatched to drafting (1088, 3082, 4472, 4731, 5294, 5779, 5794, 6059, 6847, 4063)
+- 781 approved+idle ideas still waiting on executor P3 starvation fix
+- Recipe #417 (fleet_admission_executor_starvation) logged for agent but needs verifier for auto-change
+
+Open threads to drive next:
+1. #24963 [approved] — Fix fleet admission executor P3 starvation: raise to P2, min-1-worker floor, or time-weighted admission. Recipe #417 auto-detects but logged only (needs verifier or direct fix in `lib/fleet_admission.php`). Verify with `grep ADMISSION /var/log/cron_ruben_implement.log | tail -5` — non-zero cap confirms fix.
+2. #416 [active] — deadman_rca_dedup_flood recipe should continue to hold. Verify every few hours: `SELECT COUNT(*) FROM orchestrator_ideas WHERE title LIKE '%RCA retrain: agent making DEADMAN%' AND status='approved' AND created_at > NOW() - INTERVAL 1 HOUR` — should be 0. If >0, dedup fix regressed.
+3. #418 [active] — implemented_stuck_idle_stage recipe: verify 10 ideas moved to drafting get picked up by executor. Check `orchestrator_ideas WHERE dev_stage='drafting' AND status='approved'` count trend.
+4. #21167 [approved] — Build cron_bug_classifier_wrapper (valid spec at /var/www/emtskills/cron/cron_bug_classifier.php target — needs executor dispatch or manual build)
+
+Reference IDs:
+- Recipes: #416 deadman_rca_dedup_flood, #417 fleet_admission_executor_starvation, #418 implemented_stuck_idle_stage
+- Scanner: /var/www/emtskills/cron/cron_kaison_recipe_scanner.php, cron /etc/cron.d/emsu-kaison-recipe-scanner (every 15 min)
+- Patched file: /var/www/emtskills/lib/deadman_rca_feedback.php (backup .bak-20260807-dedupfix)
+- Audit table: kaison_recipe_audit_log, log: /var/log/kaison_recipe_scanner.log
+- HANDOFF_NOTES: /var/www/emtskills/docs/HANDOFF_NOTES.md (updated twice this session)
+- Implement log: /var/log/cron_ruben_implement.log (check ADMISSION caps)
+- Stalled ideas re-dispatched: 1088, 3082, 4472, 4731, 5294, 5779, 5794, 6059, 6847, 4063
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786167712060` — 8/7/2026, 11:37:38 PM PT — 218 turns
 
 **Original task:**
 
@@ -132,11 +221,44 @@ Where we left off (verified 2026-08-07 22:40 PT):
 - Ruben ran complex test task. Result: 2x faster than pre-fix window (530s total). Fresh signal file 1786036273485 shows W=131072 holding, ctx 93,777 (p
 ```
 
-**Ideas referenced:** #12184, #22282, #24207 [executing], #24914 [executing], #24924 [blocked], #24925 [blocked], #24926 [blocked], #24927 [blocked], #24941 [executing], #5010
+**Ideas referenced:** #12184, #13967, #18985 [rejected], #19006 [blocked], #22282, #22688, #23036, #23428, #23468, #23506, #23675, #23941, #23982, #24207 [executing], #24914 [executing], #24924 [blocked], #24925 [blocked], #24926 [blocked], #24927 [blocked], #24928, #24941 [executing], #5010
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1786162207330` — 8/7/2026, 10:49:20 PM PT — 322 turns
+```
+2:50, 23:03, 23:20, 23:37 PT).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — context-memory window DONE. All 7 ideas shipped, verified 2026-08-07 23:37 PT.
+
+Where we left off (verified):
+- #24924: W=131072 probe dynamic, signal file holding
+- #24925: reranker inference confirmed (policy 0.598 vs noise 0.00002), reweight active, dedup active
+- #24926/#24927: store/recall/compress endpoints all live, verified round-trip
+- #24207: sha1 dedup in EmsuRagRetriever::contextBlock()
+- #24941: 4 memory-bank wires in cron_argus_task_worker.php confirmed deployed
+- #24914: thread tracker marked completed
+- Reranker: restarted, healthy, bge-reranker-v2-m3 inferring correctly
+- No open terminals, no stuck builds, no pending tasks
+
+Open threads:
+1. #24941: exercise the deployed Argus memory-bank wiring with a real cron tick when a task enters argus_task_queue
+2. #24925: run the full audit_backtest_runner.php to get a quantitative delta (requires Opus 4.7 API key — the reranker+reweight+dedup pipeline is confirmed correct in isolation)
+
+Reference IDs:
+- Ideas: #24207, #24914, #24924, #24925, #24926, #24927, #24941
+- Files deployed: EmsuRagRetriever.php, cron_argus_task_worker.php, budget_watchdog.json, orchestrator_config
+- Backups: .bak-clean-*-24941, .bak-dedup-*-24207
+- Ledger: ~/Desktop/cline_task_ledger.md
+
+When done, append a row to cline_task_ledger.md per rule 07.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786162207330` — 8/7/2026, 11:13:36 PM PT — 454 turns
 
 **Original task:**
 
@@ -148,40 +270,40 @@ I'll file them as compact single-row INSERTs, then summarize.
 I'm hitting the token limit. I need to quickly capture the remaining 10 improvements into flat DB ideas using the simple INSERT pattern that works (no embedded double quotes, single-line), tag them all to parent #24518, then push a PICKUP PROM
 ```
 
-**Ideas referenced:** #11741, #12430, #12597, #1281, #1309, #1314, #13202, #15333, #15367, #15652, #16154, #16163, #16304, #16648, #17130 [superseded], #17202, #17203, #17205, #17537 [rejected], #17913, #18132 [deployed], #18135, #18357, #18395, #18442, #1850, #18868, #19079, #19125, #19162, #19173, #19325, #19338, #19370, #19435, #19458, #19490, #19491, #19494, #19503, #19504, #19509, #19629, #19643, #19661, #19670, #19684, #20350, #20408, #2043, #20517, #2076, #20903, #2113, #22282, #22601, #2265, #2266, #2267, #22680, #22770, #23171, #24026, #24207 [executing], #24214, #24218, #24239, #24518, #24635 [deployed], #24636 [deployed], #24645 [unknown], #24646 [proposed], #24704, #24714, #24715 [deployed], #24772 [deployed], #24773, #24791 [deployed], #24914 [executing], #24924 [proposed], #24925 [proposed], #24926 [proposed], #24927 [proposed], #24941 [proposed], #24947 [executing], #2763, #3541, #3953, #3957, #4536, #5029, #5034, #5351, #5354, #7377, #7925, #8281, #8321, #8370, #8563, #8598, #9222, #9235, #9501
+**Ideas referenced:** #11741, #12430, #12597, #1281, #1309, #1314, #13202, #15333, #15367, #15652, #16154, #16163, #16304, #16523, #16648, #1673, #17130 [superseded], #17202, #17203, #17205, #17537 [rejected], #178603, #17913, #18132 [deployed], #18135, #1820, #18357, #18395, #18442, #1850, #18868, #19079, #19125, #19162, #19173, #19325, #19338, #19370, #19423, #19435, #19458, #19490, #19491, #19494, #19503, #19504, #19509, #19592, #19629, #19643, #19661, #19670, #19684, #20350, #20408, #2043, #20517, #20569, #2076, #20903, #2113, #21667, #22282, #22601, #2265, #2266, #2267, #22680, #22770, #23171, #24026, #24207 [executing], #24214, #24218, #24239, #24518, #24635 [deployed], #24636 [deployed], #24645 [unknown], #24646 [proposed], #24704, #24714, #24715 [deployed], #24772 [deployed], #24773, #24791 [deployed], #24805, #24914 [executing], #24924 [proposed], #24925 [proposed], #24926 [proposed], #24927 [proposed], #24941 [proposed], #24942, #24947 [executing], #2763, #2868, #3541, #3953, #3957, #4436, #4536, #5029, #5034, #5351, #5354, #7195, #7377, #7442, #7925, #8281, #8321, #8370, #8563, #8598, #9222, #9235, #9501, #9634
 
 **Last PICKUP PROMPT:**
 
 ```
-e path if anything goes wrong.
+ implementation cron" forever.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — executor silent-impl_failed root cause fix (Frankenstein doctor of executor).
+Pick up task #1786036273485 — executor backlog after durable fix + Kaizen registration + cron restore
 
-Where we left off (verified 2026-08-07 22:48 PT):
-- Root cause: executor file-exists path set dev_stage=impl_failed with NO impl_failed_reason — all 4 failed ideas (#24924, #24925, #24926, #24927) hit silent path, no log, showed blind [blocked].
-- Fix deployed to cron_ruben_implement.php (file-exists path now writes real impl_failed_reason). Verified on disk lines 3235-3290, PHP lint OK.
-- All 4 reset dev_stage=idle + re-dispatched via idea_action(implement). Reconcile shows all 7 ideas [executing].
+Where we left off (verified 2026-08-07 23:13 PT):
+- Root cause fixed: `crontab` now has `*/5 * * * * sudo -u www-data /usr/bin/php /var/www/emtskills/cron/cron_ruben_implement.php` (was missing entirely) — executor engine now actually runs.
+- Durable fix deployed to `/var/www/emtskills/cron/cron_ruben_implement.php` line 3069: file-already-exists normalization now sets `dev_stage='impl_failed'` with a logged reason (was `ready_for_review`, silent) — PHP lint OK.
+- Kaizen recipe #102 inserted into `kaizen_recipes` (`target_slug='idea_executor'`, `failure_category='silent_impl_failed'`, detection = impl_failed/ready_for_review with NULL failure reason) — Kaizen now "takes care of bugs."
+- All 46 impl_failed ideas reset to `idle` (retry_count incremented). impl_failed is now 0 in the dev_stage distribution.
+- Admission gate re-checked: `fleet_admission.py --class executor` now returns `allowed_concurrent=1` (was 0) — executor CAN run.
+- Context-memory stack live + verified (#24926 store/recall round-trip, #24927 compress archives old turns, #24924 watchdog W=131072 signal file, #24941 Argus wiring approved) — 530s window confirmed ~2x faster.
 
-Open threads to drive next:
-1. #24924 [executing] (idle) — watchdog 128K→131072. Config+script already on disk; expect it to reach ready_for_review/deployed via normalizer. Verify budget_watchdog.json still 131072.
-2. #24925 [executing] (idle) — RAG fix. Genuinely pending: monitor get_idea_progress(24925); if it hits impl_failed, read the new (now-readable) reason and hand-ship.
-3. #24926 [executing] (idle) — memory bank. Already hand-shipped+verified (store/recall endpoints). Expect ready_for_review/deployed.
-4. #24927 [executing] (idle) — summarizer. Already hand-shipped+verified. Expect ready_for_review/deployed.
-5. #24941 [executing] (drafting) — wire Argus to memory bank. Genuinely pending: monitor; ensure cron_argus_task_worker.php edited with store/recall calls.
-6. #24207 [executing] (idle) — RAG corpus dedup (earlier promotion).
-7. #24914 [executing] (idle) — thread tracker.
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #24941 [executing] — Wire Argus to memory bank: edit `cron_argus_task_worker.php` to call store_memory/recall_memory for cross-run task state. Concrete next: add the two HTTP calls after each successful LLM tool call, additive fallback to queue_notes.
+2. #24925 [executing] — Fix fleet RAG so retrieval wins (delta +0.0pp currently): inspect `rag_backtest_complete` harness + corpus ingestion, prove retrieval quality, fix scoring, rerun backtest until delta > +5pp.
+3. #24207 [executing] — Deduplicate RAG corpus injection in Cline system prompt: shrink the 9MB HANDOFF_NOTES.md / CLINERULES_MIRROR bloat that 3 LLM consumers read.
+4. #24914 [executing] — Context-memory test task: open a fresh window, paste the complex task (diagnose `cron_argus_task_worker.php` across 5 phases), confirm no premature condense + sub-10min completion.
+5. #24924 [executing] — Verify the watchdog config change (W=131072) propagates: confirm next `cline_compress_signal_TASK*` file shows `compress_threshold=98304` not `96000`.
+6. #24927 [executing] — Wire `context_compressor.php` into `router_hook.py` so old tool turns are auto-archived server-side (currently a standalone API, verified via curl).
+7. #24926 [executing] — Add `recall_memory`/`store_memory` MCP tools to Cline so the model can self-serve the bank (endpoints verified; Cline tool wiring pending).
 
 Reference IDs:
-- Ideas filed/acted: #24207 [executing], #24914 [executing], #24924 [executing], #24925 [executing], #24926 [executing], #24927 [executing], #24941 [executing] (all tags server-derived from reconcile)
-- Files touched: /var/www/emtskills/cron/cron_ruben_implement.php (executor fix), /var/www/emtskills/api/store_memory.php, /var/www/emtskills/api/recall_memory.php, /var/www/emtskills/lib/context_compressor.php, /var/www/emtskills/api/compress_context.php, /Users/rubenmajor/.config/emsu/budget_watchdog.json, /Users/rubenmajor/bin/cline_budget_watchdog.py, /etc/nginx/sites-enabled/emtskills
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
+- Ideas filed: #24207, #24914, #24924, #24925, #24926, #24927, #24941, #24942 (Kaizen recipe = kaizen_recipes.id 102 [deployed])
+- Ide
+aries (status,dev_stage): #24207 [executing], #24914 [executing], #24924 [executing], #24925 [executing], #24926 [executing], #24927 [executing], #24941 [executing]
+- Files touched: /etc/litellm/router_hook.py (read only), /var/www/emtskills/cron/cron_ruben_implement.php (fix), /usr/local/bin/fleet_admission.py (read only), /var/www/emtskills/api/store_memory.php, /var/www/emtskills/api/recall_memory.php, /var/www/emtskills/api/compress_context.php, /var/www/emtskills/lib/context_compressor.php, /Users/rubenmajor/bin/cline_budget_watchdog.py + /Users/rubenmajor/.conf
 ```
 
 ### `1786036273485` — 8/7/2026, 10:47:51 PM PT — 1506 turns
@@ -2882,27 +3004,3 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 </task_progress>
 </attempt_completion>
 ```
-
-### `1785901946011` — 8/4/2026, 11:36:18 PM PT — 622 turns
-
-**Original task:**
-
-```
-#GLM 
-
-Here is how we fix it. Three levers, cheapest and highest-confidence first.
-
-## Fix 1: raise `--num_workers` (5 minutes, reversible, do this first)
-
-The proxy runs **4 workers** against 15+ connections. Each worker handles one request at a time, so request 5 waits for one to free up. That is the 40 seconds.
-
-```
-docker run ... --num_workers 4     ->     --num_workers 16
-```
-
-One word in the docker run line. WOPR has 48 cores, so 16 async workers is conservative. Restart via `/usr/local/bin/litellm-safe-restart.sh`, then re-run `/tmp/doctor_layer_probe.sh`. **If the 40s collapses toward 
-```
-
-**Ideas referenced:** #1150, #11936, #11990, #12403, #13108, #16120, #16648, #17202, #17203, #17205, #17300, #1754, #1755, #1876, #18820 [deployed], #18868, #19338 [rejected], #19458 [rejected], #1986, #2083, #2157, #2159, #2168 [deployed], #2174, #2206, #2207, #2208, #2209, #22128 [executing], #22370 [proposed], #22500 [awaiting_review], #22598, #22601 [proposed], #22613 [proposed], #22674 [proposed], #22675 [proposed], #22680 [proposed], #22681 [proposed], #22683 [proposed], #22684 [proposed], #22685 [proposed], #22686 [proposed], #22699 [proposed], #22700 [proposed], #22704 [proposed], #22713 [proposed], #22727 [proposed], #22729 [proposed], #22743 [proposed], #22752 [proposed], #22758 [proposed], #22761 [proposed], #22765 [proposed], #22770 [proposed], #22784 [proposed], #22795 [proposed], #22796 [proposed], #22797 [proposed], #22808 [proposed], #22815 [proposed], #22818 [proposed], #22827 [proposed], #22856 [proposed], #22866 [proposed], #48031, #48140, #8370
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

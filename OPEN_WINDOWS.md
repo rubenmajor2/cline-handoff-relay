@@ -6,14 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/9/2026, 5:48:41 AM PT | window: last 72h | 93 tasks | index total 582 (parsed 0, cached 582)
+Generated: 8/9/2026, 6:48:41 AM PT | window: last 72h | 95 tasks | index total 584 (parsed 3, cached 581)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1786281941469` | 8/9/2026, 6:46:44 AM | 98 | 1135KB | #CALL BACKS  |
+| `1786281595275` | 8/9/2026, 6:39:54 AM | 146 | 302KB | #AI DIRECTED MEDITATION |
+| `1786245923063` | 8/9/2026, 6:30:10 AM | 320 | 3175KB | #Argus |
 | `1786260412872` | 8/9/2026, 1:10:51 AM | 120 | 421KB | #AI Directed Meditation |
 | `1786249226096` | 8/9/2026, 12:25:03 AM | 106 | 548KB | #AI Directed Meditation |
 | `1786256930636` | 8/8/2026, 11:50:27 PM | 117 | 294KB | #Subagents |
-| `1786245923063` | 8/8/2026, 11:48:10 PM | 302 | 3074KB | #Argus |
 | `1786182934055` | 8/8/2026, 11:45:07 PM | 295 | 787KB | Please tell me which individual LLM's have been running in the last 30 minutes. I need to  |
 | `1786214132308` | 8/8/2026, 11:27:32 PM | 450 | 1674KB | I recently saw a task that referenced Anthropic and us paying for some kind of anthropic t |
 | `1786224531010` | 8/8/2026, 11:11:05 PM | 376 | 887KB | #Big Mac |
@@ -107,6 +109,102 @@ Generated: 8/9/2026, 5:48:41 AM PT | window: last 72h | 93 tasks | index total 5
 ---
 
 ## Per-window detail
+
+### `1786281941469` — 8/9/2026, 6:46:44 AM PT — 98 turns
+
+**Original task:**
+
+```
+#CALL BACKS 
+
+THIS SYSTEM IS STILL NOT WORKING PROPERLY AND IT SI NOT INTEGRATED PROPERLY WITH CFAS. PLEASE FIX THAT. https://www.emsuniversity.com/emtskills/routes/telephony_hub.php?view=agent#callbacks
+```
+
+**Ideas referenced:** #12018, #12206, #12364, #12605, #12606, #128260, #13553, #14132, #15404, #15405, #15406, #16152, #16153, #16154, #16473, #16474, #16475, #16732, #17446, #1745, #177914, #18316, #18335, #19437, #19682, #21775, #22060, #2271, #2274, #2275, #23133, #23184, #23276, #23710, #23989, #24635, #24636, #24645, #24646, #24791, #24990, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25365 [deployed], #2563, #2916, #3237, #32584, #334155, #33689, #3572, #4991, #5298, #5447, #5646, #6064, #6106, #6172, #6228, #6366, #64748, #6579, #6751, #7206, #7207, #7317, #7356, #7907, #8103, #9042, #9084, #9112, #9132, #9152, #9159, #9222, #9501
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786281595275` — 8/9/2026, 6:39:54 AM PT — 146 turns
+
+**Original task:**
+
+```
+#AI DIRECTED MEDITATION
+
+HOW IS THIS GOING? IS THIS HELPING? WHAT ELSE can we do here?  I want to make sure SLS is being obeyed properly. 
+
+How is it looking? Is it helping? Will it help? How do w eget it to help more?
+
+continue
+
+# TASK — AI Directed Meditation Dashboard + Live Supercluster Activation
+
+## WHAT WE WERE DOING
+Splice the AI Directed Meditation dashboard panel into `llm_router_live.php`, trigger live supercluster activation, and verify Kaison reads cohort sweeper events — all three open threads from the prior window's pickup prompt.
+
+## WHAT WE ACTUALLY DID
+
+### 1. Dashboard Panel
+```
+
+**Ideas referenced:** #14100, #1584, #17580, #18786, #23924, #23932, #25185, #25228 [executing], #25238 [approved], #25240 [approved], #25241 [approved], #25242 [executing], #25269, #25284 [proposed], #25313, #25314, #25315, #25364 [proposed], #9086, #9087, #9168, #9339, #9343
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786245923063` — 8/9/2026, 6:30:10 AM PT — 320 turns
+
+**Original task:**
+
+```
+#Argus
+---
+
+
+ I was thinking also that if a student issues identified in Argus and there are similar issues with other students in Argos that are found it's the same general type of issue that you want cluster. 
+
+But again you're gonna have to be certain on those ones. Like for example you see some sort of bug or something it needs to be identified to see if there's extensions beyond just the ones too.
+
+Approved
+- #25269 [proposed] - Fix the Kaizon blind spot: wrap argusBuildRevertInfo() in try/catch at both call sites, add the missing error_message column to the INSERT at line 3947, and add a
+```
+
+**Ideas referenced:** #152615, #176616, #178424, #178455, #17926, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #18745, #1876, #18765, #1877, #18771, #18781, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #1894, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #1912, #1927, #1928, #1929, #1930, #1931, #1932, #1933, #19348, #19415, #19416, #2006, #20547, #20555, #21074, #21125, #21126, #22511, #22583, #2274, #2275, #23489, #23852, #23920, #23952, #24635, #24636, #24645, #24646, #24766, #24791, #24897, #24900, #25047, #25058 [deployed], #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [executing], #25196 [deployed], #25224, #25262 [executing], #25263 [executing], #25264 [executing], #25269 [proposed], #25270 [proposed], #25271 [deployed], #25293 [proposed], #25304, #25310, #25313 [approved], #25314 [approved], #25315 [approved], #25409, #334155, #4338, #64748
+
+**Last PICKUP PROMPT:**
+
+```
+314, leave the reranker alone.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — deploy argusClusterScan() (#25313) + verify qb_invoices fix live (#25314). Two items, both executable.
+
+Where we left off (verified 2026-08-09 06:30 PT):
+- WOPR: load 7.27 (86% reduction sustained 12h+), GPU idle at 0% util w/ 15.8 GB model cached. Reranker: zero 500s in last 8h. workers=1 confirmed correct.
+- Argus (last 8h): 44 calls, 93.2% success. 3 user-data failures (not platform bugs). No error storms.
+- qb_invoices payment_status fix is deployed and DB-verified (26215W-02 = $1,545 balance_due). argus_action_catalog.php .bak-25269-pay-20260808-2135.
+- alltastic_api.php error_message wired, php -l clean. .bak-25269-20260808-0845.
+- argusClusterScan() function body NOT deployed (grep count = 0). Insertion anchor: `function argusRunAction(` in /var/www/emtskills/routes/alltastic_api.php. Wireless call after terminal INSERT.
+- idea_clusters/idea_clusters_v2 confirmed systemwide. CFA logic confirmed on disk. Ledger row appended 23:40 PT.
+- EXECUTE_ORDER_66 file verified ABSENT on WOPR.
+
+Open threads:
+1. #25313 [executing] — Deploy argusClusterScan(). Insert function body before `function argusRunAction(` anchor, wire `argusClusterScan($portalDb, $__argusEr, $actionKey)` call after the terminal INSERT. Use JSON-argument MCP form: `{"command": "..."}`. After deploy: grep -c argusClusterScan = 2, php -l clean. This is the one deploy that delivers systemwide cluster detection (AI Directed Meditation / Multi-Threading synergy).
+2. #25314 [executing] — Jon runs payment_status on 26215W-02 in Argus terminal. Confirm real invoice rows render. Check argus_audit_log for error_message classifier output. Close when verified.
+3. #25315 [executing] — Defer. No uvicorn crash in last 8h. Investigate when throughput demand materializes or an actual startup-crash event repeats. Do NOT raise RERANK_WORKERS before CrossEncoder per-worker VRAM is solved (16 GB GPU holds exactly one model copy).
+4. Order 66: file is absent on WOPR. Create it or report absence. Ledger row IS appended (rule 07). Reconcile or note the gap.
+
+Reference IDs:
+- #25313 [executing], #25314 [executing], #25315 [executing]
+- #25269 [deployed]
+- Files: /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/routes/alltastic_api.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1786260412872` — 8/9/2026, 1:10:51 AM PT — 120 turns
 
@@ -254,61 +352,6 @@ The three-line change to /etc/litellm/_router_core.py (subagent DS-routing) is l
 **Ideas referenced:** #11397, #11847, #12231, #12246, #12335, #12463, #12584, #12589, #12590, #13155, #13157, #13199, #13204, #13490, #16063, #16844, #1754, #1755, #18671, #1989, #2254, #2258, #2289 [deployed], #23169, #23171, #24157, #24172, #24183, #24217, #25082 [executing], #25130 [executing], #25133, #25155, #25157, #25266 [proposed], #25267 [proposed], #25296 [proposed], #25316 [proposed], #25317 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786245923063` — 8/8/2026, 11:48:10 PM PT — 302 turns
-
-**Original task:**
-
-```
-#Argus
----
-
-
- I was thinking also that if a student issues identified in Argus and there are similar issues with other students in Argos that are found it's the same general type of issue that you want cluster. 
-
-But again you're gonna have to be certain on those ones. Like for example you see some sort of bug or something it needs to be identified to see if there's extensions beyond just the ones too.
-
-Approved
-- #25269 [proposed] - Fix the Kaizon blind spot: wrap argusBuildRevertInfo() in try/catch at both call sites, add the missing error_message column to the INSERT at line 3947, and add a
-```
-
-**Ideas referenced:** #152615, #176616, #178424, #178455, #17926, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #18745, #1876, #18765, #1877, #18771, #18781, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #1894, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #1912, #1927, #1928, #1929, #1930, #1931, #1932, #1933, #19348, #19415, #19416, #2006, #20547, #20555, #21074, #21125, #21126, #22511, #22583, #2274, #2275, #23489, #23852, #23920, #23952, #24635, #24636, #24645, #24646, #24766, #24791, #24897, #24900, #25047, #25058 [deployed], #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [executing], #25196 [deployed], #25224, #25262 [executing], #25263 [executing], #25264 [executing], #25269 [proposed], #25270 [proposed], #25271 [deployed], #25293 [proposed], #25304, #25310, #25313 [approved], #25314 [approved], #25315 [approved], #25409, #334155, #4338, #64748
-
-**Last PICKUP PROMPT:**
-
-```
-tee, verified present at tail.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus systemwide cluster scan deployment + qb fix live verification.
-
-Where we left off (verified 2026-08-08 23:40 PT):
-- qb_invoices payment_status SQL fixed in /var/www/emtskills/lib/argus_action_catalog.php (qb_doc_number/balance_due/student_id), php -l clean, DB-verified on 26215W-02 ($1,545 balance_due). Backup: .bak-25269-pay-20260808-2135.
-- alltastic_api.php: error_message column wired into argus_audit_log INSERT (grep shows line 484 in the SELECT and line 1042 in the INSERT), php -l clean. Backup: .bak-25269-20260808-0845.
-- argusClusterScan() function body WRITTEN but NOT in the file (grep count = 0). Insertion anchor: `function argusRunAction(` in /var/www/emtskills/routes/alltastic_api.php. Deploy via base64-encoded python3 script through MCP ssh_command with JSON-formatted {"command": "..."} arguments.
-- Reranker OOM RCA complete: CrossEncoder ~13.2 GB + 2.32 GB other process on 16 GB Blackwell; workers=1 (RERANK_WORKERS=1 via override.conf) is correct. 22:41 + 22:58 tracebacks are torch.OutOfMemoryError in CrossEncoder.predict.
-- Ledger row appended 23:40 PT via sudo tee. EXECUTE_ORDER_66 file verified ABSENT on WOPR.
-- idea_clusters/idea_clusters_v2 confirmed systemwide (SHOW TABLES); CFA logic at cfa_auto_resolve.php confirmed on disk.
-
-Open threads to drive next:
-1. #25313 [executing] — Deploy argusClusterScan() now. One-liner anchor: insert before 'function argusRunAction(' then wire the call after the terminal INSERT. Use ONLY the JSON-argument MCP form: {"command": "..."}. php -l verify + grep -c argusClusterScan equals 2. This delivers the systemwide cluster pipeline covering Directed Meditation / Multi-Threading via idea_clusters.
-2. #25314 [executing] — Have Jon run payment_status on 26215W-02 in the Argus terminal; confirm real invoice rows render and argus_audit_log row captures error_message.
-3. #25315 [executing] — Deeper uvicorn startup-crash journal dive when the event next repeats (12:00–13:30 window was empty); do NOT raise RERANK_WORKERS until CrossEncoder per-worker VRAM is solved.
-
-Reference IDs:
-- Ideas filed this session: #25313 [executing], #25314 [executing], #25315 [executing]
-- Deployed this session: #25269 [deployed]
-- Folded in: #25270 [proposed] WOPR rebalance recommendation (85% load drop 51.94→8.04 after reranker restart), #25293 [proposed] Argus terminal "X other students may have the same issue" banner once cluster scan is live
-- Files touched: /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/routes/alltastic_api.php
-- Backups: argus_action_catalog.php.bak-25269-pay-20260808-2135, alltastic_api.php.bak-25269-20260808-0845
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66 (note: file currently absent on WOPR — create it or report).
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
 
 ### `1786182934055` — 8/8/2026, 11:45:07 PM PT — 295 turns
 

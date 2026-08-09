@@ -6,14 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/8/2026, 8:46:54 PM PT | window: last 72h | 98 tasks | index total 578 (parsed 4, cached 574)
+Generated: 8/8/2026, 9:46:55 PM PT | window: last 72h | 99 tasks | index total 580 (parsed 5, cached 575)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786214132308` | 8/8/2026, 8:46:44 PM | 123 | 626KB | I recently saw a task that referenced Anthropic and us paying for some kind of anthropic t |
-| `1786245923063` | 8/8/2026, 8:46:38 PM | 75 | 1443KB | #Argus |
-| `1786225462991` | 8/8/2026, 8:44:58 PM | 402 | 1101KB | I had a thought. One advantage the LLM seems to have over the human is that it can think a |
-| `1786244179890` | 8/8/2026, 8:42:53 PM | 212 | 436KB | #WOPR GPU |
+| `1786249226096` | 8/8/2026, 9:37:32 PM | 5 | 46KB | #AI Directed Meditation |
+| `1786214132308` | 8/8/2026, 9:37:26 PM | 191 | 868KB | I recently saw a task that referenced Anthropic and us paying for some kind of anthropic t |
+| `1786245923063` | 8/8/2026, 9:37:20 PM | 159 | 1900KB | #Argus |
+| `1786244179890` | 8/8/2026, 9:30:44 PM | 340 | 608KB | #WOPR GPU |
+| `1786248426374` | 8/8/2026, 9:17:39 PM | 5 | 33KB | #AI Directed Meditation |
+| `1786225462991` | 8/8/2026, 9:05:57 PM | 403 | 1102KB | I had a thought. One advantage the LLM seems to have over the human is that it can think a |
 | `1786244855784` | 8/8/2026, 8:08:15 PM | 3 | 4KB | iteration test |
 | `1786241775257` | 8/8/2026, 7:47:31 PM | 126 | 637KB | #WOPR GPU |
 | `1786227462879` | 8/8/2026, 7:14:55 PM | 501 | 843KB | #Executor Ops |
@@ -107,13 +109,36 @@ Generated: 8/8/2026, 8:46:54 PM PT | window: last 72h | 98 tasks | index total 5
 | `1785953852961` | 8/6/2026, 1:41:01 AM | 414 | 1161KB | #GLM  |
 | `1786002390209` | 8/6/2026, 12:50:24 AM | 23 | 162KB | #Argus |
 | `1785988427679` | 8/6/2026, 12:44:53 AM | 533 | 1461KB | #Argus |
-| `1785971158342` | 8/5/2026, 9:24:41 PM | 160 | 359KB | #AZDHS |
 
 ---
 
 ## Per-window detail
 
-### `1786214132308` — 8/8/2026, 8:46:44 PM PT — 123 turns
+### `1786249226096` — 8/8/2026, 9:37:32 PM PT — 5 turns
+
+**Original task:**
+
+```
+#AI Directed Meditation
+
+---
+
+What is this all called Multi-Threading, whatever? Can we just call it AI Directed Medication? Or do you have a different situation/solution? 
+
+Shouldn't we put this on this page: https://emsuniversity.com/emtskills/routes/llm_router_live.php 
+
+Is every 6 hours enough? -> - A student like `26422FT-08` is blocked on payment. A human might notice days later when the student emails frustrated. The sweeper catches it automatically, every 6 hours.
+
+But also Kazon of course woudl need to know
+
+Approved, but Make sure ideas are SLS compliant and plus more to it then this
+```
+
+**Ideas referenced:** #2274, #2275, #24635, #24636, #24645, #24646, #24791, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25227 [executing], #25228 [executing], #25229 [proposed], #25238 [proposed], #25240 [proposed], #25241 [proposed], #25242 [in_progress], #25268 [executing], #25284 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786214132308` — 8/8/2026, 9:37:26 PM PT — 191 turns
 
 **Original task:**
 
@@ -121,55 +146,46 @@ Generated: 8/8/2026, 8:46:54 PM PT | window: last 72h | 98 tasks | index total 5
 I recently saw a task that referenced Anthropic and us paying for some kind of anthropic thing. This happened earlier today but I didn't catch it because there was another emergent issue in the window. Can you tell me if there is something that attempted to inject Anthropic? There are literally no places where anthropic should be living or residing except fot as the vision doorman but only 50-50 with Kimi K3.
 ```
 
-**Ideas referenced:** #0000, #10108, #10740, #11741, #11781, #1234 [outdated], #12477, #12584, #12618, #12824, #12872, #12878, #13202, #13204, #16163, #16265, #16304, #16844, #17130 [superseded], #17537 [rejected], #18132 [deployed], #18312, #18326, #19125, #19173, #19898, #19904, #1998, #20251 [deployed], #2059 [resolved], #2074 [resolved], #20957, #20958, #21134, #2124 [open], #2128 [resolved], #2178 [resolved], #2207 [investigating], #2274 [resolved], #2275 [resolved], #23171, #24995, #25066 [deployed], #25082 [executing], #25097, #25130 [superseded], #25131, #25133, #25185, #25196 [deployed], #25266 [proposed], #25267 [proposed], #7505
+**Ideas referenced:** #0000, #10108, #10740, #11741, #11781, #1234 [outdated], #12477, #12584, #12618, #12824, #12872, #12878, #13202, #13204, #16163, #16265, #16304, #16844, #17130 [superseded], #17537 [rejected], #18132 [deployed], #18312, #18326, #19125, #19173, #19898, #19904, #1998, #20251 [deployed], #2059 [resolved], #2074 [resolved], #20957, #20958, #21134, #2124 [open], #2128 [resolved], #2178 [resolved], #2207 [investigating], #2274 [resolved], #2275 [resolved], #23171, #24995, #25066 [deployed], #25082 [executing], #25097, #25130 [superseded], #25131, #25133, #25157, #25185, #25196 [deployed], #25266 [proposed], #25267 [proposed], #7505
 
 **Last PICKUP PROMPT:**
 
 ```
-rly half the total work through subagents — research, grep, synthesis, building PICKUP PROMPT blocks — while keeping the interactive window free for your steers. Only 2 subagent failures today (0.6%).
-
-The 33-minute outage today was NOT caused by subagents. It was caused by the DeepSeek routing gate (idea #25130 [executing]) pushing tool-bearing turns through an incompatible endpoint. Subagents working on the local 120B pool through `emsu-executor-auto` — exactly how they run right now — are not the problem. The routing complexity IS.
-
-### The real tradeoff
-
-Subagents today work on the local 120B pool via `emsu-executor-auto` → `frankenstein-tools` adapter. That works. Moving them to DeepSeek would free local capacity for the interactive window, but carries two real risks:
-
-1. **Tool quality**: DeepSeek leaked `reasoning_content` on tool calls, which is why the FED-DOCTOR (2026-07-07) banned subagents from DeepSeek in the first place. The streaming stripper fix (2026-07-08) reportedly fixed it, but that is one verification away from "works fine" to "silently corrupts tool output."
-
-2. **Anthropic surface risk**: Today proved this is a real footgun. Even with the `_emsu_anthropic_surface` guard, one env flag flip can route tool-bearing turns into the wrong endpoint. Subagents on the local pool have zero external API surface to fail into.
-
-### The simpler path
-
-Leave subagents on the local pool (where they are stable and working), skip the DeepSeek routing entirely, and close idea #25130 [executing] as "not worth the complexity." If local 120B capacity becomes a bottleneck, the right answer is scaling the local pool, not adding a routing layer with two distinct failure surfaces (DeepSeek tool quality + anthropic endpoint risk) for a benefit (free DeepSeek tier) that saves approximately zero dollars since the local pool is already free.
-
-That is my honest read.
+thropic/v1/messages` endpoint.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task — close out the Subagent-DS gate workstream per Ruben's "better off without subagents or with them?" steer.
+Pick up task #25267 [proposed] -- implement the corrective spec for the backward Subagent-DS gate.
 
-Where we left off (verified 2026-08-08 20:36 PT):
-- Ruben asked for an honest assessment of subagents vs no subagents. Answered: with subagents. 358 dispatches today, 0.6% failure rate. The outage was from the DS routing gate, not subagents themselves.
-- Litellm restart verified at 19:45 PT (idea #25266 [proposed] — done).
-- Anthropic injection investigation complete. No billing/keys.
-- Rule 297 RCA complete. Rule-91 BRACKET SCOPE deployed and reindexed.
+Where we left off (verified 2026-08-08 20:09 PT):
+- Ruben asked for an explanation of open-thread item #25267 [proposed]. Provided above with the three-line diff.
+- The Anthropic injection investigation is complete: no Anthropic billing/keys; the alarm was from DeepSeek's `/anthropic/v1/messages` endpoint after a 33-minute config change.
+- Rule 297 RCA on the 6th bare-number violation is complete: BRACKET SCOPE section added to rule 91 and reindexed.
 - HANDOFF_NOTES.md updated 16:51 PT.
 
 Open threads to drive next:
-1. Ruben's decision point — keep subagents on local pool and close the DS routing workstream (idea #25130 [executing], idea #25082 [executing], idea #25267 [proposed]), OR proceed with the corrective spec. If close: update all three ideas to superseded, update rule 00 doctrine to reflect that subagents stay on the local pool, no code change needed.
-2. #25266 [proposed] — this is done (litellm restarted at 19:45 PT). Close it.
-3. #25267 [proposed] — conditionally implement ONLY if Ruben wants DS routing. Otherwise close as superseded.
+1. #25130 [executing] -- the Subagent-DS gate is backwards. The corrective spec (three lines of changes in `_router_core.py`) has not been addressed.
+2. #25267 [proposed] -- implement the corrective spec: add `emsu-executor-auto` to the gate entrypoint set, remove the `not _has_tools_rc` disjunct, update rule 00 doctrine. Coordinate systemctl restart timing with Ruben.
+3. #25082 [executing] -- the original DI proposal; superseded by #25130 [executing]. Decide: close as superseded or merge.
+4. #25266 [proposed] -- verify litellm was restarted after the 16:21 PT guard patch (bug-library incident 2274 [deployed]).
 
 Reference IDs:
 - Ideas filed this session: #25266 [proposed], #25267 [proposed]
 - Ideas carried: #25130 [executing], #25082 [executing]
 - Bug-library incidents: 2274 [deployed], 2275 [deployed]
-- Files touched: /etc/litellm/_router_core.py, /etc/systemd/system/litellm.service.d/10-frugal.conf, /var/www/emtskills/clinerules/Rules/91-every-completion-need
+- Files touched: /etc/litellm/_router_core.py, /etc/systemd/system/litellm.service.d/10-frugal.conf, /var/www/emtskills/clinerules/Rules/91-every-completion-needs-pickup-prompt.md, /var/www/emtskills/docs/HANDOFF_NOTES.md
+- Rule 297 all three deliverables completed this session
+- Rule-91 BRACKET SCOPE section deployed and reindexed
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</completion_result>
 ```
 
-### `1786245923063` — 8/8/2026, 8:46:38 PM PT — 75 turns
+### `1786245923063` — 8/8/2026, 9:37:20 PM PT — 159 turns
 
 **Original task:**
 
@@ -186,11 +202,90 @@ Approved
 - #25269 [proposed] - Fix the Kaizon blind spot: wrap argusBuildRevertInfo() in try/catch at both call sites, add the missing error_message column to the INSERT at line 3947, and add a
 ```
 
-**Ideas referenced:** #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20547, #21125, #21126, #22511, #22583, #2274, #2275, #23489, #23852, #23920, #23952, #24635, #24636, #24645, #24646, #24766, #24791, #24897, #24900, #25047, #25058 [deployed], #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [executing], #25196 [deployed], #25262 [executing], #25263 [executing], #25264 [executing], #25269 [proposed], #25270 [proposed], #25271 [deployed], #334155, #4338, #64748
+**Ideas referenced:** #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19415, #19416, #2006, #20547, #20555, #21074, #21125, #21126, #22511, #22583, #2274, #2275, #23489, #23852, #23920, #23952, #24635, #24636, #24645, #24646, #24766, #24791, #24897, #24900, #25047, #25058 [deployed], #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [executing], #25196 [deployed], #25262 [executing], #25263 [executing], #25264 [executing], #25269 [proposed], #25270 [proposed], #25271 [deployed], #25293 [proposed], #334155, #4338, #64748
+
+**Last PICKUP PROMPT:**
+
+```
+lures rather than hiding them.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — Argus Kaizon blind spot + qb_invoices fix + WOPR capacity decision.
+
+Where we left off (verified 2026-08-08 21:09 PT):
+- #25269 [deployed] — try/catch + error_message column + argusAuditClassify() helper deployed to alltastic_api.php. Backups at alltastic_api.php.bak-25269-20260808-2040 and .bak-25269-classifier. php -l clean, opcache revalidates on timestamp so no FPM reload needed.
+- FIX A: line ~3938, argusBuildRevertInfo() now in try/catch, on throw → $rule29Gate = 'revert_info_error'
+- FIX B: line 3986 INSERT now has 7 placeholders (`success, error_message, duration_ms, mode`) with classifier result[1] for error_message
+- FIX C: argusAuditClassify() at ~line 269, 12 error patterns (not readable, Call to undefined, SQLSTATE, timed out, etc.), returns [0, 'text_signal: ...'] on match
+- #25270 [proposed] — CPUQuota reduction BLOCKED by override.conf guard. php-fpm CPUWeight pending Ruben decision. uvicorn workers crash-looped (CrossEncoder lifespan issue, needs investigation before retry).
+- #25293 [proposed, id 25293] — Cluster idea filed. Existing infra: idea_clusters, idea_cluster_members, orchestrator_ideas.source_cluster_id.
+
+Open threads to drive next:
+1. #25269 [deployed, needs post-deploy verification] — after 1-2 days of live traffic, verify argus_audit_log has rows with error_message LIKE 'text_signal:%' and success=0. If zero rows after 48h, investigate whether the code path exercising line 3986 is actually hit in production (it may only fire on the mutation/action path, not the chat path).
+2. Root cause fix for qb_invoices: edit `argus_action_catalog.php:1574` to NOT return success=1 when it catches a Throwable. The catch block should set `$result['success'] = false` with the real exception message. This is the permanent fix — the #25269 classifier catches it reactively but the handler itself should be honest.
+3. #25293 [proposed] — Wire the text-signal classifier output into the idea_clusters pipeline. When argusAuditClassify() fires, enqueue a scan of recent argus_audit_log for matching error_message patterns. The cluster infrastructure (source_cluster_id, cluster_size columns) already exists in orchestrator_ideas.
+4. #25270 [proposed] — Ruben needs to decide on the WOPR capacity split. php-fpm CPUWeight raise is the safe action. Document: lowering reranker quota risks production timeouts (override.conf guard), and uvicorn workers failed at startup (CrossEncoder crash).
+5. Payment status for 26215W section: all four students have valid QBO invoices — the `not readable` error is a MySQL query die, not a data problem. Run `SELECT invoice_number FROM qb_invoices WHERE student_id LIKE '%26215W%' LIMIT 1` to confirm, then diagnose why the payment_status SELECT throws.
+6. #25262 [executing] — Kaizon protect Argus watchdog. Now that #25269 is deployed and failure rows carry success=0, the watchdog has proper signal. Verify it fires on the next cron tick.
+
+Reference IDs:
+- Ideas filed this session: #25269 [deployed], #25293 [proposed]
+- Ideas evaluated: #25270 [proposed/partially-blocked], #25271 [deployed/verified]
+- Ideas carried: #25262 [executing], #25263 [executing], #25264 [executing], #25195 [proposed], #25058 [deployed]
+- Files touched: /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/docs/HANDOFF_NOTES.md
+- Backups: alltastic_api.php.bak-25269-20260808-2040, alltastic_api.php.bak-25269-classifie
+```
+
+### `1786244179890` — 8/8/2026, 9:30:44 PM PT — 340 turns
+
+**Original task:**
+
+```
+#WOPR GPU
+
+So what now on resolving WOPR's CPU load spikes in excess of 400-2500%
+
+also, continue
+
+curious, what exactly causes CPU to go above 400% are there other solutions besides WOPR GPU, or is WOPR GPU best equipped. I mean WOPR is doing the work already, but wondering honestly
+
+## GPU IS UP. It was never hardware. Two stacked software bugs, both found and fixed.
+
+nvidia-smi is working right now: RTX PRO 2000 Blackwell, 16GB, driver 610.43.02. The reranker restarted itself on CUDA ("Reranker device selected: cuda") and is already holding 2.3GB VRAM. All prod services healthy (nginx/fpm/m
+```
+
+**Ideas referenced:** #2285, #2286, #25185, #25201 [rejected], #25223 [executing], #25224 [executing], #25225 [executing], #25226 [executing], #25256 [executing], #25279 [proposed], #25280 [proposed], #25281 [proposed], #25282 [proposed], #25283 [deployed], #25294 [proposed], #25295 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786225462991` — 8/8/2026, 8:44:58 PM PT — 402 turns
+### `1786248426374` — 8/8/2026, 9:17:39 PM PT — 5 turns
+
+**Original task:**
+
+```
+#AI Directed Meditation
+
+---
+
+What is this all called Multi-Threading, whatever? Can we just call it AI Directed Medication? Or do you have a different situation/solution? 
+
+Shouldn't we put this on this page: https://emsuniversity.com/emtskills/routes/llm_router_live.php 
+
+Is every 6 hours enough? -> - A student like `26422FT-08` is blocked on payment. A human might notice days later when the student emails frustrated. The sweeper catches it automatically, every 6 hours.
+
+But also Kazon of course woudl need to know
+
+Approved, but Make sure ideas are SLS compliant and plus more to it then this
+```
+
+**Ideas referenced:** #25227 [executing], #25228 [executing], #25229 [proposed], #25238 [proposed], #25240 [proposed], #25241 [proposed], #25242 [in_progress], #25268 [executing], #25284 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786225462991` — 8/8/2026, 9:05:57 PM PT — 403 turns
 
 **Original task:**
 
@@ -264,28 +359,6 @@ Wait the question is what else can we do? There is a lot more and that should be
 ACT MODE
 </environment_details>
 ```
-
-### `1786244179890` — 8/8/2026, 8:42:53 PM PT — 212 turns
-
-**Original task:**
-
-```
-#WOPR GPU
-
-So what now on resolving WOPR's CPU load spikes in excess of 400-2500%
-
-also, continue
-
-curious, what exactly causes CPU to go above 400% are there other solutions besides WOPR GPU, or is WOPR GPU best equipped. I mean WOPR is doing the work already, but wondering honestly
-
-## GPU IS UP. It was never hardware. Two stacked software bugs, both found and fixed.
-
-nvidia-smi is working right now: RTX PRO 2000 Blackwell, 16GB, driver 610.43.02. The reranker restarted itself on CUDA ("Reranker device selected: cuda") and is already holding 2.3GB VRAM. All prod services healthy (nginx/fpm/m
-```
-
-**Ideas referenced:** #2285, #25185, #25201 [rejected], #25223 [executing], #25224 [executing], #25225 [executing], #25226 [executing], #25256 [executing], #25279 [proposed], #25280 [proposed], #25281 [proposed], #25282 [proposed], #25283 [deployed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786244855784` — 8/8/2026, 8:08:15 PM PT — 3 turns
 
@@ -3886,65 +3959,4 @@ DoD to run: (1) insert a 3-part test task via argus_task_queue (task_text with n
 Reference IDs:
 - Ideas filed: #23550 [approved], #23572 [approved]
 - Files to modify: /var/www/emtskills/routes/cron_argus_task_worker.php (functions + Phase 1/2/3 surge
-```
-
-### `1785971158342` — 8/5/2026, 9:24:41 PM PT — 160 turns
-
-**Original task:**
-
-```
-#AZDHS
-
-See this request from Lawrence Bevins sent August 3 at 8:30 AM:
-
-Dear Ruben Major,
-
-EMS-26-0495 references student Richella Trujillo. Please compile the requested information in the NOI for this student.
-
-Respectfully,
-
-Lance Bevins
-
---
-reference complaint responses here: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations
-```
-
-**Ideas referenced:** #12892, #13017, #249290, #25226, #26114, #26211, #450438, #475569, #64748, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-w 21
-
-Window is safe to close.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #26114 — AZDHS NOI EMS-26-0495 follow-up: Bevins named Richella Trujillo. RESOLVED with gold-standard AZ posture — no new filing. Window closed by Ruben.
-
-Where we left off (verified 2026-08-05 21:22 PT):
-- Richella Trujillo = parent/third-party payer of adult student Oscar Trujillo IV (26114T-05)
-- July 31 Consolidated Response remains the filed response for 0495 (generality posture, no complainant/student named) [deployed]
-- Record id 149 reclassified to internal_note [superseded]
-- Record id 165 = internal_note documenting identification + posture [deployed]
-- Investigation 17 summary updated (2026-08-03 notification logged)
-- Unused supplementary .txt/.html removed from /var/www/emtskills/uploads/compliance/july2026_noi/
-- Pipeline row 21 (Round 2 NOI response, not_started) = catch-all if BEMS presses further
-
-Open threads to drive next:
-1. #12892 — If Bevins requests specific supplementation for 0495, respond citing the July 31 filing from the institutional-generalities posture (no student-specific supplement) [queued]
-2. #13017 — When round 2 NOI correspondence actually occurs, update compliance_deadlines row 21 due_date and status [queued]
-
-Reference IDs:
-- Investigation: 17 (azdhs-noi-2026-07-13)
-- Filed 0495 response: round 2, id 139 (sent 7/31 to Bevins cc Caswell)
-- Identification doc: id 165 internal_note
-- Precedent: 7/31 Consolidated Response.pdf (10pp, 7 case sections)
-- Student: Oscar Trujillo IV 26114T-05 (adult), Complainant: Richella Trujillo
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```

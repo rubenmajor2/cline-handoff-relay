@@ -6,14 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/8/2026, 11:46:55 PM PT | window: last 72h | 100 tasks | index total 581 (parsed 5, cached 576)
+Generated: 8/9/2026, 12:53:00 AM PT | window: last 72h | 99 tasks | index total 582 (parsed 2, cached 580)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786256930636` | 8/8/2026, 11:46:41 PM | 97 | 242KB | #Subagents |
-| `1786249226096` | 8/8/2026, 11:46:14 PM | 35 | 303KB | #AI Directed Meditation |
+| `1786260412872` | 8/9/2026, 12:52:41 AM | 65 | 304KB | #AI Directed Meditation |
+| `1786249226096` | 8/9/2026, 12:25:03 AM | 106 | 548KB | #AI Directed Meditation |
+| `1786256930636` | 8/8/2026, 11:50:27 PM | 117 | 294KB | #Subagents |
+| `1786245923063` | 8/8/2026, 11:48:10 PM | 302 | 3074KB | #Argus |
 | `1786182934055` | 8/8/2026, 11:45:07 PM | 295 | 787KB | Please tell me which individual LLM's have been running in the last 30 minutes. I need to  |
-| `1786245923063` | 8/8/2026, 11:41:56 PM | 301 | 3062KB | #Argus |
 | `1786214132308` | 8/8/2026, 11:27:32 PM | 450 | 1674KB | I recently saw a task that referenced Anthropic and us paying for some kind of anthropic t |
 | `1786224531010` | 8/8/2026, 11:11:05 PM | 376 | 887KB | #Big Mac |
 | `1786229125708` | 8/8/2026, 11:08:51 PM | 96 | 413KB | Do a deep dive and give your thoughts on the 85% confidence gate of rule 29 and whether it |
@@ -108,38 +109,38 @@ Generated: 8/8/2026, 11:46:55 PM PT | window: last 72h | 100 tasks | index total
 | `1785988379979` | 8/6/2026, 1:47:38 AM | 638 | 858KB | # NON-ARGUS WINDOW:  |
 | `1785989615911` | 8/6/2026, 1:41:24 AM | 382 | 1500KB | for frankenstein-llm subagents are still slow.  Are they using the 120Bs? If 120Bs are pas |
 | `1785953852961` | 8/6/2026, 1:41:01 AM | 414 | 1161KB | #GLM  |
-| `1786002390209` | 8/6/2026, 12:50:24 AM | 23 | 162KB | #Argus |
-| `1785988427679` | 8/6/2026, 12:44:53 AM | 533 | 1461KB | #Argus |
 
 ---
 
 ## Per-window detail
 
-### `1786256930636` — 8/8/2026, 11:46:41 PM PT — 97 turns
+### `1786260412872` — 8/9/2026, 12:52:41 AM PT — 65 turns
 
 **Original task:**
 
 ```
-#Subagents
+#AI Directed Meditation
 
-Subagents still painfully slow. I hae one window that's been open 30 minutes for example with subagents. Fix needed
+Ruben — two deliverables shipped tonight.
 
-## Session stopped — subagent DS-routing change is live, latency root cause still open
+---
 
-Ruben directed to stop here rather than continue debugging via a broken repeated grep chain that ate context.
+## 1. Kaison Wired to Cohort Gate Sweeper
 
-### What is confirmed working
-The three-line change to /etc/litellm/_router_core.py (subagent DS-routing) is live:
-- Line 5365: entrypoint check now includes emsu-executor-auto
-- Line 5375: removed the not-has-tools disjunct from the eligibility check
-- Line 5327: added n
+The sweeper now writes to `orchestrator_event_log` on every student dispatch and every systemic cluster alert. Kaison's query loop (`WHERE kaizen_processed=0 AND event_type IN ('cohort_sweeper_scan', ...)`) will pick these up automatically.
+
+**Two INSERT points added:**
+
+| Function | Event | Severity | Kaison sees |
+|---|---|---|---|
+| `writeCfaDraft()` | `event_type='cohort_sweeper_scan'`, `event_category='student_blocked'`, `event_subtype=<gate>` | `high` if systemic cluster, `
 ```
 
-**Ideas referenced:** #11397, #11847, #12231, #12246, #12335, #12463, #12584, #12589, #12590, #13155, #13157, #13199, #13204, #13490, #16063, #16844, #1754, #1755, #18671, #1989, #2254, #2258, #23169, #23171, #24157, #24172, #24183, #24217, #25082 [executing], #25130 [executing], #25133, #25155, #25157, #25266 [proposed], #25267 [proposed], #25296 [proposed], #25316 [proposed], #25317 [proposed]
+**Ideas referenced:** #06222, #071410, #0891, #10003, #10017, #10107, #11160, #11798, #11812, #11942, #11943, #12184, #12245, #127760, #128225, #128269, #14100, #14141, #141414, #14261, #14532, #15803, #16233, #166534, #181820, #19653, #23264, #23831, #25228 [executing], #25238 [approved], #25240 [approved], #25241 [approved], #25242 [executing], #25284 [proposed], #2563, #334155, #3730, #4338, #475569, #566042, #6366, #64748, #8212, #92400, #9675, #9679, #9888, #9889
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786249226096` — 8/8/2026, 11:46:14 PM PT — 35 turns
+### `1786249226096` — 8/9/2026, 12:25:03 AM PT — 106 turns
 
 **Original task:**
 
@@ -159,9 +160,128 @@ But also Kazon of course woudl need to know
 Approved, but Make sure ideas are SLS compliant and plus more to it then this
 ```
 
-**Ideas referenced:** #06222, #071410, #0891, #10003, #10017, #10107, #11160, #11798, #11812, #11942, #11943, #12184, #12245, #127760, #128225, #128269, #14141, #141414, #14261, #14532, #15803, #16233, #166534, #181820, #19653, #2274, #2275, #23264, #24635, #24636, #24645, #24646, #24791, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25227 [executing], #25228 [executing], #25229 [proposed], #25238 [proposed], #25240 [proposed], #25241 [proposed], #25242 [in_progress], #25268 [executing], #25284 [proposed], #2563, #334155, #3730, #4338, #475569, #566042, #6366, #64748, #8212, #92400, #9675, #9679, #9888, #9889
+**Ideas referenced:** #06222, #071410, #0891, #10003, #10017, #10107, #11160, #11798, #11812, #11942, #11943, #12184, #12245, #127760, #128225, #128269, #14141, #141414, #14261, #14532, #15803, #16233, #166534, #181820, #19653, #2274, #2275, #23264, #23831, #24635, #24636, #24645, #24646, #24791, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25227 [executing], #25228 [executing], #25229 [proposed], #25238 [proposed], #25240 [proposed], #25241 [proposed], #25242 [in_progress], #25268 [executing], #25284 [proposed], #2563, #334155, #3730, #4338, #475569, #566042, #6366, #64748, #8212, #92400, #9675, #9679, #9888, #9889
+
+**Last PICKUP PROMPT:**
+
+```
+nt_type='cohort_sweeper_scan')
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task: Add AI Directed Meditation dashboard to llm_router_live.php, then trigger live supercluster activation.
+
+Where we left off (verified 2026-08-09 00:24 PT):
+- **Supercluster Engine v2 DEPLOYED** — ACTIVATION_CONF=0.80, all 7 Rule-29 gates, dry-run 46 would approve
+  - File: /var/www/emtskills/crons/cron_idea_supercluster_engine.php
+  - Backup: /var/www/emtskills/crons/cron_idea_supercluster_engine.php.bak-20260809-000007
+  - Cron: 45 */6 * * * — dry-run flag removed, ready for next cycle
+- **Cohort Gate Sweeper Kaison-wired DEPLOYED** — writes orchestrator_event_log on every student_blocked + systemic_cluster
+  - File: /var/www/emtskills/crons/cron_cohort_gate_sweeper.php
+  - Events: event_type='cohort_sweeper_scan', event_category='student_blocked' (severity=high/medium) + 'systemic_cluster' (severity=critical)
+  - Dry-run verified: 12 scanned, 1 systemic cluster, all functions execute clean
+  - Log file permissions: /tmp/ems_cohort_sweeper.log owned emsumain:psaserv
+- **Ideas #25238/#25240/#25241 APPROVED** — SLS + QuickBooks scope
+- **Rule 97 RCA filed** — base64 cat blobs caused context bloat; mitigation: use write_server_file MCP, never cat>1KB to stdout
+- **AI Directed Meditation dashboard** PHP/HTML block designed (subagent 4) — dark KDR military styling, reads /tmp/ems_cohort_sweeper.log and /tmp/ems_supercluster.log, ready to splice into llm_router_live.php after `ruben_nav_render('llm_router')` and before `<h1>LLM Router — Live</h1>`
+
+Open threads to drive next:
+1. Splice AI Directed Meditation dashboard block into /var/www/emtskills/routes/llm_router_live.php — after `ruben_nav_render('llm_router')` and before `<h1>LLM Router — Live</h1>`
+2. Trigger live supercluster activation: `sudo -u emsumain php /var/www/emtskills/crons/cron_idea_supercluster_engine.php` — verify ~46 ideas mass-approved in orchestrator_event_log
+3. Verify Kaison reads cohort events: `SELECT * FROM orchestrator_event_log WHERE event_type='cohort_sweeper_scan' AND created_at > NOW() - INTERVAL 1 HOUR`
+
+Reference IDs:
+- Supercluster engine: #25242 [executing]
+- Cohort sweeper: #25228 [executing]
+- Roadmap builds: #25238 [approved], #25240 [approved], #25241 [approved], #25284 [proposed]
+- Rule 97 RCA: context bloat from base64 cat → stdout
+- Files touched: /var/www/emtskills/crons/cron_idea_supercluster_engine.php, /var/www/emtskills/crons/cron_cohort_gate_sweeper.php, /var/www/emtskills/routes/llm_router_live.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786256930636` — 8/8/2026, 11:50:27 PM PT — 117 turns
+
+**Original task:**
+
+```
+#Subagents
+
+Subagents still painfully slow. I hae one window that's been open 30 minutes for example with subagents. Fix needed
+
+## Session stopped — subagent DS-routing change is live, latency root cause still open
+
+Ruben directed to stop here rather than continue debugging via a broken repeated grep chain that ate context.
+
+### What is confirmed working
+The three-line change to /etc/litellm/_router_core.py (subagent DS-routing) is live:
+- Line 5365: entrypoint check now includes emsu-executor-auto
+- Line 5375: removed the not-has-tools disjunct from the eligibility check
+- Line 5327: added n
+```
+
+**Ideas referenced:** #11397, #11847, #12231, #12246, #12335, #12463, #12584, #12589, #12590, #13155, #13157, #13199, #13204, #13490, #16063, #16844, #1754, #1755, #18671, #1989, #2254, #2258, #2289 [deployed], #23169, #23171, #24157, #24172, #24183, #24217, #25082 [executing], #25130 [executing], #25133, #25155, #25157, #25266 [proposed], #25267 [proposed], #25296 [proposed], #25316 [proposed], #25317 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786245923063` — 8/8/2026, 11:48:10 PM PT — 302 turns
+
+**Original task:**
+
+```
+#Argus
+---
+
+
+ I was thinking also that if a student issues identified in Argus and there are similar issues with other students in Argos that are found it's the same general type of issue that you want cluster. 
+
+But again you're gonna have to be certain on those ones. Like for example you see some sort of bug or something it needs to be identified to see if there's extensions beyond just the ones too.
+
+Approved
+- #25269 [proposed] - Fix the Kaizon blind spot: wrap argusBuildRevertInfo() in try/catch at both call sites, add the missing error_message column to the INSERT at line 3947, and add a
+```
+
+**Ideas referenced:** #152615, #176616, #178424, #178455, #17926, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #18745, #1876, #18765, #1877, #18771, #18781, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #1894, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #1912, #1927, #1928, #1929, #1930, #1931, #1932, #1933, #19348, #19415, #19416, #2006, #20547, #20555, #21074, #21125, #21126, #22511, #22583, #2274, #2275, #23489, #23852, #23920, #23952, #24635, #24636, #24645, #24646, #24766, #24791, #24897, #24900, #25047, #25058 [deployed], #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [executing], #25196 [deployed], #25224, #25262 [executing], #25263 [executing], #25264 [executing], #25269 [proposed], #25270 [proposed], #25271 [deployed], #25293 [proposed], #25304, #25310, #25313 [approved], #25314 [approved], #25315 [approved], #25409, #334155, #4338, #64748
+
+**Last PICKUP PROMPT:**
+
+```
+tee, verified present at tail.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus systemwide cluster scan deployment + qb fix live verification.
+
+Where we left off (verified 2026-08-08 23:40 PT):
+- qb_invoices payment_status SQL fixed in /var/www/emtskills/lib/argus_action_catalog.php (qb_doc_number/balance_due/student_id), php -l clean, DB-verified on 26215W-02 ($1,545 balance_due). Backup: .bak-25269-pay-20260808-2135.
+- alltastic_api.php: error_message column wired into argus_audit_log INSERT (grep shows line 484 in the SELECT and line 1042 in the INSERT), php -l clean. Backup: .bak-25269-20260808-0845.
+- argusClusterScan() function body WRITTEN but NOT in the file (grep count = 0). Insertion anchor: `function argusRunAction(` in /var/www/emtskills/routes/alltastic_api.php. Deploy via base64-encoded python3 script through MCP ssh_command with JSON-formatted {"command": "..."} arguments.
+- Reranker OOM RCA complete: CrossEncoder ~13.2 GB + 2.32 GB other process on 16 GB Blackwell; workers=1 (RERANK_WORKERS=1 via override.conf) is correct. 22:41 + 22:58 tracebacks are torch.OutOfMemoryError in CrossEncoder.predict.
+- Ledger row appended 23:40 PT via sudo tee. EXECUTE_ORDER_66 file verified ABSENT on WOPR.
+- idea_clusters/idea_clusters_v2 confirmed systemwide (SHOW TABLES); CFA logic at cfa_auto_resolve.php confirmed on disk.
+
+Open threads to drive next:
+1. #25313 [executing] — Deploy argusClusterScan() now. One-liner anchor: insert before 'function argusRunAction(' then wire the call after the terminal INSERT. Use ONLY the JSON-argument MCP form: {"command": "..."}. php -l verify + grep -c argusClusterScan equals 2. This delivers the systemwide cluster pipeline covering Directed Meditation / Multi-Threading via idea_clusters.
+2. #25314 [executing] — Have Jon run payment_status on 26215W-02 in the Argus terminal; confirm real invoice rows render and argus_audit_log row captures error_message.
+3. #25315 [executing] — Deeper uvicorn startup-crash journal dive when the event next repeats (12:00–13:30 window was empty); do NOT raise RERANK_WORKERS until CrossEncoder per-worker VRAM is solved.
+
+Reference IDs:
+- Ideas filed this session: #25313 [executing], #25314 [executing], #25315 [executing]
+- Deployed this session: #25269 [deployed]
+- Folded in: #25270 [proposed] WOPR rebalance recommendation (85% load drop 51.94→8.04 after reranker restart), #25293 [proposed] Argus terminal "X other students may have the same issue" banner once cluster scan is live
+- Files touched: /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/routes/alltastic_api.php
+- Backups: argus_action_catalog.php.bak-25269-pay-20260808-2135, alltastic_api.php.bak-25269-20260808-0845
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66 (note: file currently absent on WOPR — create it or report).
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1786182934055` — 8/8/2026, 11:45:07 PM PT — 295 turns
 
@@ -210,59 +330,6 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [x] Shipped idea #25069: per_model_turn_counts table + 5-min cron
 - [x] Delivered report with zero adapter labels
 </task_progress>
-</attempt_completion>
-```
-
-### `1786245923063` — 8/8/2026, 11:41:56 PM PT — 301 turns
-
-**Original task:**
-
-```
-#Argus
----
-
-
- I was thinking also that if a student issues identified in Argus and there are similar issues with other students in Argos that are found it's the same general type of issue that you want cluster. 
-
-But again you're gonna have to be certain on those ones. Like for example you see some sort of bug or something it needs to be identified to see if there's extensions beyond just the ones too.
-
-Approved
-- #25269 [proposed] - Fix the Kaizon blind spot: wrap argusBuildRevertInfo() in try/catch at both call sites, add the missing error_message column to the INSERT at line 3947, and add a
-```
-
-**Ideas referenced:** #152615, #176616, #178424, #178455, #17926, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #18745, #1876, #18765, #1877, #18771, #18781, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #1894, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #1912, #1927, #1928, #1929, #1930, #1931, #1932, #1933, #19348, #19415, #19416, #2006, #20547, #20555, #21074, #21125, #21126, #22511, #22583, #2274, #2275, #23489, #23852, #23920, #23952, #24635, #24636, #24645, #24646, #24766, #24791, #24897, #24900, #25047, #25058 [deployed], #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [executing], #25196 [deployed], #25224, #25262 [executing], #25263 [executing], #25264 [executing], #25269 [proposed], #25270 [proposed], #25271 [deployed], #25293 [proposed], #25304, #25310, #25313 [approved], #25314 [approved], #25315 [approved], #25409, #334155, #4338, #64748
-
-**Last PICKUP PROMPT:**
-
-```
-GPU 0% util, CPUQuota 36 cores
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus systemwide cluster scan + uvicorn workers crash root cause.
-
-Where we left off (verified 2026-08-08 23:33 PT):
-- qb_invoices payment_status fix deployed, verified on 26215W-02 ($1,545 balance_due)
-- alltastic_api.php error_message column wired, php -l clean
-- argusClusterScan() function body written, NOT deployed (patch script at /tmp/cluster_patch.py)
-- Reranker OOM tracebacks captured: CrossEncoder.predict → torch.OutOfMemoryError
-- 3 ideas filed: #25313 (cluster scan), #25314 (qb live-verify), #25315 (uvicorn crash)
-- Backups: argus_action_catalog.php.bak-25269-pay-20260808-2135, alltastic_api.php.bak-25269-20260808-0845
-
-Open threads to drive next:
-1. #25313 [executing] — Deploy argusClusterScan() into /var/www/emtskills/routes/alltastic_api.php: insert function before `function argusRunAction(`, wire call after terminal INSERT. Use base64-encoded python3 via ssh_command. php -l verify. (Covers #25293 systemwide cluster pipeline and #25270 WOPR GPU rebalancing recommendation — cluster scan should include CFA/Multi-Threading/Directed Meditation synergy.)
-2. #25314 [executing] — Have Jon run payment_status on 26215W-02 in Argus terminal. Confirm real invoice data renders instead of "(qb_invoices not readable)". Check argus_audit_log for error_message classifier output.
-3. #25315 [executing] — Investigate CrossEncoder lifespan crash: `sudo journalctl -u emsu-reranker --since '2026-08-08 11:00' --until '2026-08-08 13:00'` for exit code 1, model load path errors at uvicorn worker startup. Root cause must be identified before any RERANK_WORKERS increase.
-
-Reference IDs:
-- Ideas filed: #25313 [executing], #25314 [executing], #25315 [executing]
-- Deployed: #25269 [deployed]
-- Files touched: /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/routes/alltastic_api.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 
@@ -3892,69 +3959,3 @@ begin work on this. Start with a comprehensive state of the system
 **Ideas referenced:** #0000, #12459, #12463, #12618, #12643, #12645 [deployed], #12680, #12689, #13121, #13832, #13874, #13962, #16224, #16265, #1685, #1687, #1705, #1706, #17203, #17205, #17307, #18471, #18820, #18868, #19173, #19175 [executing], #19176 [queued], #19218 [approved], #19230 [queued], #19261 [approved], #1962, #1967, #1986 [deployed], #1987 [outdated], #1988 [needs_verify], #1989 [outdated], #19898 [ready_for_review], #19899 [proposed], #1990 [outdated], #19903, #19904 [proposed], #1991 [deployed], #1998, #199999, #20251, #2050, #2101 [resolved], #21045, #2168, #21684, #2216 [deployed], #2217 [deployed], #2227, #2236, #22601, #22897 [proposed], #23050 [executing], #23056 [executing], #23157 [approved], #23159 [approved], #23169 [approved], #23283 [approved], #23326 [in_progress], #23354 [deployed], #5344
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786002390209` — 8/6/2026, 12:50:24 AM PT — 23 turns
-
-**Original task:**
-
-```
-#Argus
-
-Finish this up
-
-Partial shipment this window: database schema for #23550/23572 is deployed and verified, but the code changes and end-to-end test are NOT complete. Ruben said "build and ship here... test it until working end to end" — that did not finish; consecutive tool-strikes burned the recovery ceiling mid-build.
-
-SHIPPED THIS WINDOW:
-- ALTER TABLE argus_task_queue (verified via DESCRIBE): parent_task_id INT NULL, spill_tier ENUM, child_rounds TINYINT UNSIGNED. 0 rows affected = pure additive, no risk to queued tasks.
-- Backups: cron_argus_task_worker.php.bak-23550-20260806-v1, al
-```
-
-**Ideas referenced:** #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #20547, #21125, #21126, #22688, #23036, #23428, #23429, #23440, #23468, #23472, #23477, #23483, #23489, #23495, #23506, #23550 [approved], #23572 [approved], #3530, #3555, #3556, #3558
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785988427679` — 8/6/2026, 12:44:53 AM PT — 533 turns
-
-**Original task:**
-
-```
-#Argus
-
-
-However, most are supposed to be on the 120Bs -> The speed problem is the loop shape, not the wiring. maxToolRounds is 8, dropped to 3 for lookup/chat mode. Each round is a full sequential model call, and the code comment says it plainly: on the ~2 tok/s GLM ring those add up to minutes. So an 8-round research question is 8 serial model calls. That is where the minutes go. Filed as #23489 [proposed] with three ranked levers.
---
-
-Pick up task #23428 [executing]: Argus request-speed work ONLY.
-
-Scope guard: this window is Argus performance only. Non-Argus work (student ops, telephony, c
-```
-
-**Ideas referenced:** #10005, #10108, #11953, #12251, #12335, #12365, #12366, #12368, #12407, #12657, #12689, #127908, #128203, #128263, #128275, #13831, #13874, #16213, #16265, #1627, #17202, #17203, #17205, #17300, #18378, #18745, #18820, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19903, #2006, #20300, #2050, #20547, #21125, #21126, #2221, #2232, #2238, #2242 [deployed], #22511, #22583 [approved], #22688, #22850, #22897 [executing], #23027, #23036, #23190 [rejected], #23191 [executing], #23192 [rejected], #23205 [rejected], #23307 [rejected], #23339 [executing], #23425 [deployed], #23426 [deployed], #23427 [deployed], #23428 [executing], #23429 [executing], #23430 [deployed], #23440 [proposed], #23467 [executing], #23468 [deployed], #23472 [proposed], #23477 [proposed], #23483 [proposed], #23489 [proposed], #23490, #23505 [proposed], #23506, #23511 [proposed], #23513 [proposed], #23520 [deployed], #23530 [deployed], #23550 [proposed], #23572 [proposed], #334155, #4338, #64748
-
-**Last PICKUP PROMPT:**
-
-```
-resh window command below.
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task — build + ship + end-to-end test #23550 (Argus subagent decomposition) and #23572 (DeepSeek research spill for child tasks).
-
-Where we left off (verified 2026-08-06 00:43 PT):
-- Schema ALTER deployed + verified: argus_task_queue now has parent_task_id INT NULL, spill_tier ENUM('production','research','fact') DEFAULT 'production', child_rounds TINYINT UNSIGNED NULL.
-- Backups: cron_argus_task_worker.php.bak-23550-20260806-v1, alltastic_api.php.bak-23572-20260806-v1 (both root-owned, confirmed on disk).
-- All source read: full cron_argus_task_worker.php (20631 bytes), alltastic_api.php fast-path (lines 5390-5470, extModeMap fast=deepseek-v4-pro at line 5414), round-loop cap maxToolRounds (lines 1794-1983).
-- Draft functions designed but unsaved: argusDecomposeTask (pattern 1: numbered list, pattern 2: bullets, pattern 3: and-also/additionally; min 2 parts, min 15 chars each); argusClassifySpillTier (research → 4 rounds, fact → 2 rounds, production → 6 rounds, heuristic by length); argusMergeChildResults (waits until all children done/failed/offloaded, merges PART 1 of N blocks, parent status='done').
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #23550 [approved] — inject the three functions into cron_argus_task_worker.php between argusConsumeTaskNotes() and the Phase 1 comment block; add split gate in Phase 1 (if task has no parent_task_id, run argusDecomposeTask; if >= 2 parts, insert child rows with parent_task_id and child_rounds, then set parent status='parent_wait' via result_summary, do NOT dispatch the parent); add spill_tier + child_rounds to each payload; in Phase 2 dispatch children; in Phase 3 after results, call argusMergeChildResults(parent_id) for every child whose parent is non-null.
-2. #23572 [approved] — in alltastic_api.php terminal_query path, add a block BEFORE the tool round loop (near line 1760, alongside the chrome-extension fast path): if $jsonInput['spill_tier']==='research' and client !== 'chrome-extension', curl LITELLM_BASE_URL /v1/chat/completions with model='deepseek-v4-pro', max_tokens=1200, timeout=75; set $GLOBALS['argus_mode']='subagent_research' so argus_round_latency logs it; insert one argus_round_latency row (round_no=1, max_rounds=$jsonInput['child_rounds']??4, tool_calls=0, model='deepseek-v4-pro', is_final=1); return {"success":true,"response":etext,"model":"deepseek-v4-pro"}; skip the entire round loop.
-3. #23572 [approved] — worker Phase 3 re-split-on-cap: if a research/fact child's result matches argusResponseIsGarbage OR contains 'needs re-split', create ONE new child row with narrower task_text = original child text + ' — focus only on [first un-answered portion]' and leave the child status='failed'; do NOT let a garbage child answer reach the parent merge.
-
-DoD to run: (1) insert a 3-part test task via argus_task_queue (task_text with numbered list 1. 2. 3., spill_tier='research', child_rounds=4); (2) run php cron_argus_task_worker.php manually; (3) verify 3 child rows created with parent_task_id set, dispatched concurrently, and parent merged result appears; (4) check argus_round_latency for argus_mode='subagent_research' rows on research children; (5) delete the test rows afterward.
-
-Reference IDs:
-- Ideas filed: #23550 [approved], #23572 [approved]
-- Files to modify: /var/www/emtskills/routes/cron_argus_task_worker.php (functions + Phase 1/2/3 surge
-```

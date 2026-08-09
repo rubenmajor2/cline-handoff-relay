@@ -6,16 +6,19 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/8/2026, 7:46:54 PM PT | window: last 72h | 99 tasks | index total 575 (parsed 2, cached 573)
+Generated: 8/8/2026, 8:46:54 PM PT | window: last 72h | 98 tasks | index total 578 (parsed 4, cached 574)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786241775257` | 8/8/2026, 7:46:27 PM | 121 | 623KB | #WOPR GPU |
-| `1786225462991` | 8/8/2026, 7:22:58 PM | 333 | 941KB | I had a thought. One advantage the LLM seems to have over the human is that it can think a |
+| `1786214132308` | 8/8/2026, 8:46:44 PM | 123 | 626KB | I recently saw a task that referenced Anthropic and us paying for some kind of anthropic t |
+| `1786245923063` | 8/8/2026, 8:46:38 PM | 75 | 1443KB | #Argus |
+| `1786225462991` | 8/8/2026, 8:44:58 PM | 402 | 1101KB | I had a thought. One advantage the LLM seems to have over the human is that it can think a |
+| `1786244179890` | 8/8/2026, 8:42:53 PM | 212 | 436KB | #WOPR GPU |
+| `1786244855784` | 8/8/2026, 8:08:15 PM | 3 | 4KB | iteration test |
+| `1786241775257` | 8/8/2026, 7:47:31 PM | 126 | 637KB | #WOPR GPU |
 | `1786227462879` | 8/8/2026, 7:14:55 PM | 501 | 843KB | #Executor Ops |
 | `1786226983152` | 8/8/2026, 6:49:37 PM | 418 | 1013KB | what is 25220?  |
 | `1786233427989` | 8/8/2026, 6:25:54 PM | 208 | 707KB | #Argus |
-| `1786214132308` | 8/8/2026, 6:12:43 PM | 102 | 533KB | I recently saw a task that referenced Anthropic and us paying for some kind of anthropic t |
 | `1786229794274` | 8/8/2026, 5:34:29 PM | 42 | 261KB | #Externships |
 | `1786224531010` | 8/8/2026, 5:34:02 PM | 320 | 765KB | #Big Mac |
 | `1786232853169` | 8/8/2026, 5:09:49 PM | 146 | 889KB | I'm noticing a rule 91 regression since litellm wend down about 30 minutes ago. I'm concer |
@@ -105,16 +108,196 @@ Generated: 8/8/2026, 7:46:54 PM PT | window: last 72h | 99 tasks | index total 5
 | `1786002390209` | 8/6/2026, 12:50:24 AM | 23 | 162KB | #Argus |
 | `1785988427679` | 8/6/2026, 12:44:53 AM | 533 | 1461KB | #Argus |
 | `1785971158342` | 8/5/2026, 9:24:41 PM | 160 | 359KB | #AZDHS |
-| `1785939420388` | 8/5/2026, 8:37:44 PM | 944 | 14697KB | #Argus |
-| `1785937503831` | 8/5/2026, 8:11:44 PM | 658 | 2201KB | Can you tell me how many turns have taken place for each model in the last 5 hours by mode |
-| `1785966242067` | 8/5/2026, 8:03:19 PM | 386 | 1295KB | #TDSHS |
-| `1785954766914` | 8/5/2026, 7:56:32 PM | 248 | 949KB | #LLM FLEET |
 
 ---
 
 ## Per-window detail
 
-### `1786241775257` — 8/8/2026, 7:46:27 PM PT — 121 turns
+### `1786214132308` — 8/8/2026, 8:46:44 PM PT — 123 turns
+
+**Original task:**
+
+```
+I recently saw a task that referenced Anthropic and us paying for some kind of anthropic thing. This happened earlier today but I didn't catch it because there was another emergent issue in the window. Can you tell me if there is something that attempted to inject Anthropic? There are literally no places where anthropic should be living or residing except fot as the vision doorman but only 50-50 with Kimi K3.
+```
+
+**Ideas referenced:** #0000, #10108, #10740, #11741, #11781, #1234 [outdated], #12477, #12584, #12618, #12824, #12872, #12878, #13202, #13204, #16163, #16265, #16304, #16844, #17130 [superseded], #17537 [rejected], #18132 [deployed], #18312, #18326, #19125, #19173, #19898, #19904, #1998, #20251 [deployed], #2059 [resolved], #2074 [resolved], #20957, #20958, #21134, #2124 [open], #2128 [resolved], #2178 [resolved], #2207 [investigating], #2274 [resolved], #2275 [resolved], #23171, #24995, #25066 [deployed], #25082 [executing], #25097, #25130 [superseded], #25131, #25133, #25185, #25196 [deployed], #25266 [proposed], #25267 [proposed], #7505
+
+**Last PICKUP PROMPT:**
+
+```
+rly half the total work through subagents — research, grep, synthesis, building PICKUP PROMPT blocks — while keeping the interactive window free for your steers. Only 2 subagent failures today (0.6%).
+
+The 33-minute outage today was NOT caused by subagents. It was caused by the DeepSeek routing gate (idea #25130 [executing]) pushing tool-bearing turns through an incompatible endpoint. Subagents working on the local 120B pool through `emsu-executor-auto` — exactly how they run right now — are not the problem. The routing complexity IS.
+
+### The real tradeoff
+
+Subagents today work on the local 120B pool via `emsu-executor-auto` → `frankenstein-tools` adapter. That works. Moving them to DeepSeek would free local capacity for the interactive window, but carries two real risks:
+
+1. **Tool quality**: DeepSeek leaked `reasoning_content` on tool calls, which is why the FED-DOCTOR (2026-07-07) banned subagents from DeepSeek in the first place. The streaming stripper fix (2026-07-08) reportedly fixed it, but that is one verification away from "works fine" to "silently corrupts tool output."
+
+2. **Anthropic surface risk**: Today proved this is a real footgun. Even with the `_emsu_anthropic_surface` guard, one env flag flip can route tool-bearing turns into the wrong endpoint. Subagents on the local pool have zero external API surface to fail into.
+
+### The simpler path
+
+Leave subagents on the local pool (where they are stable and working), skip the DeepSeek routing entirely, and close idea #25130 [executing] as "not worth the complexity." If local 120B capacity becomes a bottleneck, the right answer is scaling the local pool, not adding a routing layer with two distinct failure surfaces (DeepSeek tool quality + anthropic endpoint risk) for a benefit (free DeepSeek tier) that saves approximately zero dollars since the local pool is already free.
+
+That is my honest read.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — close out the Subagent-DS gate workstream per Ruben's "better off without subagents or with them?" steer.
+
+Where we left off (verified 2026-08-08 20:36 PT):
+- Ruben asked for an honest assessment of subagents vs no subagents. Answered: with subagents. 358 dispatches today, 0.6% failure rate. The outage was from the DS routing gate, not subagents themselves.
+- Litellm restart verified at 19:45 PT (idea #25266 [proposed] — done).
+- Anthropic injection investigation complete. No billing/keys.
+- Rule 297 RCA complete. Rule-91 BRACKET SCOPE deployed and reindexed.
+- HANDOFF_NOTES.md updated 16:51 PT.
+
+Open threads to drive next:
+1. Ruben's decision point — keep subagents on local pool and close the DS routing workstream (idea #25130 [executing], idea #25082 [executing], idea #25267 [proposed]), OR proceed with the corrective spec. If close: update all three ideas to superseded, update rule 00 doctrine to reflect that subagents stay on the local pool, no code change needed.
+2. #25266 [proposed] — this is done (litellm restarted at 19:45 PT). Close it.
+3. #25267 [proposed] — conditionally implement ONLY if Ruben wants DS routing. Otherwise close as superseded.
+
+Reference IDs:
+- Ideas filed this session: #25266 [proposed], #25267 [proposed]
+- Ideas carried: #25130 [executing], #25082 [executing]
+- Bug-library incidents: 2274 [deployed], 2275 [deployed]
+- Files touched: /etc/litellm/_router_core.py, /etc/systemd/system/litellm.service.d/10-frugal.conf, /var/www/emtskills/clinerules/Rules/91-every-completion-need
+```
+
+### `1786245923063` — 8/8/2026, 8:46:38 PM PT — 75 turns
+
+**Original task:**
+
+```
+#Argus
+---
+
+
+ I was thinking also that if a student issues identified in Argus and there are similar issues with other students in Argos that are found it's the same general type of issue that you want cluster. 
+
+But again you're gonna have to be certain on those ones. Like for example you see some sort of bug or something it needs to be identified to see if there's extensions beyond just the ones too.
+
+Approved
+- #25269 [proposed] - Fix the Kaizon blind spot: wrap argusBuildRevertInfo() in try/catch at both call sites, add the missing error_message column to the INSERT at line 3947, and add a
+```
+
+**Ideas referenced:** #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20547, #21125, #21126, #22511, #22583, #2274, #2275, #23489, #23852, #23920, #23952, #24635, #24636, #24645, #24646, #24766, #24791, #24897, #24900, #25047, #25058 [deployed], #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [executing], #25196 [deployed], #25262 [executing], #25263 [executing], #25264 [executing], #25269 [proposed], #25270 [proposed], #25271 [deployed], #334155, #4338, #64748
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786225462991` — 8/8/2026, 8:44:58 PM PT — 402 turns
+
+**Original task:**
+
+```
+I had a thought. One advantage the LLM seems to have over the human is that it can think a thought which has an idea to be executed, while humans have a dificult time doing that withough spacial interdimensional thining. How can this be leveraged?
+```
+
+**Ideas referenced:** #14847, #15637, #16613, #17580, #23642 [superseded], #24635, #24636, #24645, #24646, #24791, #25097, #25111, #25112, #25120, #25122, #25125, #25127 [rejected], #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [executing], #25227 [executing], #25228 [proposed], #25229 [proposed], #25238 [proposed], #25240 [proposed], #25241 [proposed], #25242 [proposed], #25268 [executing], #25269 [proposed], #25281 [proposed], #25284 [proposed], #7551, #9086, #9831
+
+**Last PICKUP PROMPT:**
+
+```
+s the largest student blocker.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task: Continue the mechanical multi-threading build — apply Rule-29 hardgate to Supercluster Engine v2, then build the Payment Cluster Sweeper (#25238).
+
+Where we left off (verified 2026-08-08 20:43 PT):
+- Cohort Gate Sweeper (#25228) DEPLOYED, LIVE, CRON-REGISTERED (15 */6 * * *)
+  - 30d scan detected 27 students blocked, 3 systemic clusters, 27 agent_drafts dispatched
+  - File: /var/www/emtskills/crons/cron_cohort_gate_sweeper.php
+  - Cron: 15 */6 * * * /usr/bin/php /var/www/emtskills/crons/cron_cohort_gate_sweeper.php >> /tmp/ems_cohort_sweeper.log 2>&1
+- Supercluster Engine v2 (#25242) DEPLOYED but needs Rule-29 WHERE-clause patch
+  - IDEA_MIN_CONF already 0.80 (line 42)
+  - ACTIVATION_CONF still 0.70 (needs → 0.80)
+  - Missing WHERE gates: denied_reason IS NULL, age>=3d, priority IN (P0,P1), noise exclusion
+  - Engine already cron-registered: 45 */6 * * * (runs offset from sweeper)
+  - File: /var/www/emtskills/crons/cron_idea_supercluster_engine.php
+  - Complete v2 file (all patches applied) at: /Users/rubenmajor/Desktop/cron_idea_supercluster_engine_v2.php
+- Dry-run validated: 908 ideas, 94 chains, 6 superclusters, 259 would mass-approve
+
+Open threads to drive next:
+1. Apply Rule-29 hardgate WHERE-clause patch to engine (conf>=0.80, age>=3d, P0/P1, noise exclusion) — push local v2 file at /Users/rubenmajor/Desktop/cron_idea_supercluster_engine_v2.php or apply one-line insert after line 69 in the WHERE clause
+2. Re-test dry-run with rule-29-compliant pool, verify activation fires correctly
+3. #25238 [proposed] Build Payment Cluster Sweeper — payment-specific auto-repair using Stripe intent-match (foundation: 100% of SLS first-failures are payment, fixing payment heals the universal blocker)
+4. #25240 [proposed] Build Exam Enforcement Cluster Sweeper — same pattern on exam integrity with proctoring-outage detection
+5. #25241 [proposed] Build Communications Theme Cluster Sweeper — support-question clustering
+
+Reference IDs:
+- Engine deployed: #25228 [executing]
+- Supercluster engine: #25242 [executing]
+- Rule-29 audit: #25268 [executing]
+- Roadmap builds: #25238, #25240, #25241, #25284 [proposed]
+- Framework: #25227 [executing], #25229 [proposed]
+- Files touched: /var/www/emtskills/crons/cron_cohort_gate_sweeper.php, /var/www/emtskills/crons/cron_idea_supercluster_engine.php, /Users/rubenmajor/Desktop/cron_idea_supercluster_engine_v2.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+
+[attempt_completion] Result: DoneThe user has provided feedback on the results. Consider their input to continue the task, and then attempt completion again.
+<feedback>
+Wait the question is what else can we do? There is a lot more and that should be able to maintain itself long term. We need more efficiency now though so focus on the what else. Use the thesis to think of other things that would benefit us the most right now other than staff that we don't have
+</feedback><environment_details>
+# Visual Studio Code Visible Files
+(No visible files)
+
+# Visual Studio Code Open Tabs
+(No open tabs)
+
+# Current Time
+8/8/2026, 8:57:49 PM (America/Los_Angeles, UTC-7:00)
+
+# Context Window Usage
+87,431 / 128K tokens used (68%)
+
+# Current Mode
+ACT MODE
+</environment_details>
+```
+
+### `1786244179890` — 8/8/2026, 8:42:53 PM PT — 212 turns
+
+**Original task:**
+
+```
+#WOPR GPU
+
+So what now on resolving WOPR's CPU load spikes in excess of 400-2500%
+
+also, continue
+
+curious, what exactly causes CPU to go above 400% are there other solutions besides WOPR GPU, or is WOPR GPU best equipped. I mean WOPR is doing the work already, but wondering honestly
+
+## GPU IS UP. It was never hardware. Two stacked software bugs, both found and fixed.
+
+nvidia-smi is working right now: RTX PRO 2000 Blackwell, 16GB, driver 610.43.02. The reranker restarted itself on CUDA ("Reranker device selected: cuda") and is already holding 2.3GB VRAM. All prod services healthy (nginx/fpm/m
+```
+
+**Ideas referenced:** #2285, #25185, #25201 [rejected], #25223 [executing], #25224 [executing], #25225 [executing], #25226 [executing], #25256 [executing], #25279 [proposed], #25280 [proposed], #25281 [proposed], #25282 [proposed], #25283 [deployed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786244855784` — 8/8/2026, 8:08:15 PM PT — 3 turns
+
+**Original task:**
+
+```
+iteration test
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786241775257` — 8/8/2026, 7:47:31 PM PT — 126 turns
 
 **Original task:**
 
@@ -137,53 +320,6 @@ My service ran **flawlessly** this boot — exactly the sequence I said was need
 **Ideas referenced:** #1045, #1057, #1080 [needs_verify], #1104 [deployed], #1130 [resolved], #1448 [resolved], #1449 [resolved], #1457 [resolved], #15144, #1537 [resolved], #1543 [investigating], #16448, #16803, #1717 [resolved], #1795 [resolved], #1817 [investigating], #1826 [resolved], #18605, #1896, #1897 [investigating], #1960 [investigating], #1988 [resolved], #2168, #2179 [resolved], #2180, #2185, #2210, #2213, #2216, #2228, #2235, #2236, #2237, #2239, #2241, #2245, #2248, #2251, #2263, #2264, #2270, #2276 [investigating], #2278 [investigating], #2279 [investigating], #2280 [investigating], #2281 [resolved], #2282 [investigating], #2283 [deployed], #2284, #23290, #23291, #25185, #25201 [rejected], #25223 [executing], #25224 [executing], #25225 [executing], #25226 [executing], #25256 [executing], #25279 [proposed], #35313, #4494 [deployed], #48242, #48243
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786225462991` — 8/8/2026, 7:22:58 PM PT — 333 turns
-
-**Original task:**
-
-```
-I had a thought. One advantage the LLM seems to have over the human is that it can think a thought which has an idea to be executed, while humans have a dificult time doing that withough spacial interdimensional thining. How can this be leveraged?
-```
-
-**Ideas referenced:** #14847, #15637, #16613, #17580, #23642 [superseded], #24635, #24636, #24645, #24646, #24791, #25097, #25111, #25112, #25120, #25122, #25125, #25127 [rejected], #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [executing], #25227 [executing], #25228 [proposed], #25229 [proposed], #25238 [proposed], #25240 [proposed], #25241 [proposed], #25242 [proposed], #25268 [executing], #25269 [proposed], #7551, #9086, #9831
-
-**Last PICKUP PROMPT:**
-
-```
- 349 lines, all gates present.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #25268 — Apply Rule-29 hardgate WHERE patch to Supercluster Engine, re-test, verify compliance.
-
-Where we left off (verified 2026-08-08 18:29 PT):
-- Cohort Gate Sweeper (#25228) [executing] — deployed, cron-registered (15 */6 * * *), live. 30d scan found 3 systemic payment clusters, 27 agent_drafts dispatched.
-- Supercluster Engine (#25242) [executing] — deployed as cron_idea_supercluster_engine.php, cron-registered (0 4 * * 0), dry-run tested. Scans 908 ideas, forms 94 chains, 6 superclusters, would mass-approve 259 at 0.70 aggregate. IDEA_MIN_CONF already raised to 0.80.
-- Rule-29 audit (#25268) [executing]: WHERE clause needs 4 additional gates (denied_reason, age>=3d, P0/P1 whitelist, noise exclusion) — patch not yet applied due to SSH permission issues.
-- Corrected v2 engine file: /Users/rubenmajor/Desktop/cron_idea_supercluster_engine_v2.php (349 lines, all Rule 29 gates present). Also on server as /var/www/emtskills/crons/cron_idea_supercluster_engine_v2.php.
-- Payment Cluster Sweeper (#25238) [proposed], Exam Enforcement (#25240) [proposed], Comms Theme (#25241) [proposed] — roadmap ideas filed, not yet built.
-- Mechanical vs Intuitive framework (#25229) [proposed] — strategic doc ready for audit.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #25268 [executing] — Apply Rule-29 hardgate patch: sudo edit /var/www/emtskills/crons/cron_idea_supercluster_engine.php, insert 4 WHERE gates between lines 70-71 (denied_reason IS NULL, created_at <= NOW() - INTERVAL 3 DAY, priority IN ('P0','P1'), title NOT REGEXP noise exclusion). Or cp the v2 file from Desktop. Then sudo php -l, then dry-run: rm -f /tmp/supercluster_dry_run && sudo php /var/www/emtskills/crons/cron_idea_supercluster_engine.php
-2. #25242 [executing] — After patch applied, run LIVE: remove /tmp/supercluster_dry_run, run sudo php the engine, verify agent_drafts rows with mass-approve decisions. Check orchestrator_ideas for bulk_approved=1.
-3. #25238 [proposed] — Build Payment Cluster Sweeper: cron that groups payment-gate failures by class_section, auto-dispatches payment CFA with cohort summary. Mirror cohort_gate_sweeper pattern, focus on payment gate only.
-4. #25240 [proposed] — Build Exam Enforcement Cluster Sweeper: cron that detects same-section speed anomalies, same-IP clusters, exam blocker bursts. Leverage exam_blocker_trace + quiz data.
-5. #25241 [proposed] — Build Comms Theme Cluster Sweeper: cron that clusters incoming comms by theme (FAQ patterns, sentiment bursts, repetitive CFA drafts). Same agent_drafts dispatch pattern.
-
-Reference IDs:
-- Ideas: #25268 [executing], #25242 [executing], #25228 [executing], #25227 [executing], #25238 [proposed], #25240 [proposed], #25241 [proposed], #25229 [proposed]
-- Files: /var/www/emtskills/crons/cron_cohort_gate_sweeper.php (deployed), /var/www/emtskills/crons/cron_idea_supercluster_engine.php (deployed, needs WHERE patch), /Users/rubenmajor/Desktop/cron_idea_supercluster_engine_v2.php (corrected)
-- Crontab: 15 */6 * * * (cohort sweeper), 0 4 * * 0 (supercluster engine)
-- Handoff notes: updated 2026-08-08 18:29 PT via MCP
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
 
 ### `1786227462879` — 8/8/2026, 7:14:55 PM PT — 501 turns
 
@@ -378,57 +514,6 @@ Reference IDs:
 - Argus: task 381, argus_task_messages notification to Jon
 
 When done, append to cline_task_ledg
-```
-
-### `1786214132308` — 8/8/2026, 6:12:43 PM PT — 102 turns
-
-**Original task:**
-
-```
-I recently saw a task that referenced Anthropic and us paying for some kind of anthropic thing. This happened earlier today but I didn't catch it because there was another emergent issue in the window. Can you tell me if there is something that attempted to inject Anthropic? There are literally no places where anthropic should be living or residing except fot as the vision doorman but only 50-50 with Kimi K3.
-```
-
-**Ideas referenced:** #0000, #10108, #10740, #11741, #11781, #1234 [outdated], #12477, #12618, #12824, #12872, #12878, #13202, #13204, #16163, #16265, #16304, #16844, #17130 [superseded], #17537 [rejected], #18132 [deployed], #18312, #18326, #19125, #19173, #19898, #19904, #20251 [deployed], #2059 [resolved], #2074 [resolved], #20957, #20958, #21134, #2124 [open], #2128 [resolved], #2178 [resolved], #2207 [investigating], #2274 [resolved], #2275 [resolved], #23171, #24995, #25066 [deployed], #25082 [executing], #25097, #25130 [superseded], #25131, #25133, #25185, #25196 [deployed], #25266 [proposed], #25267 [proposed], #7505
-
-**Last PICKUP PROMPT:**
-
-```
-not transient.
-
-**Symptom:** Idea numbers appeared bare in body prose while the PICKUP PROMPT section carried the correct reconcile-derived tags. The validator's BARE_IDEA_NUMBERS scan fires on the entire result string, so body-prose references were flagged. This was the 6th occurrence in a short span.
-
-**Source:** Rule 91 quick-check step 3 and Hardfloor ban table both say brackets are required for every idea number in the entire result. The trap is that the rule's framing (step 1 primes the PICKUP PROMPT block, and every template example shows brackets only inside it) led agents to treat the body prose as exempt.
-
-**Rule-91 edit this session:** Added a BRACKET SCOPE section to rule 91 (file `/var/www/emtskills/clinerules/Rules/91-every-completion-needs-pickup-prompt.md`) that lists narrative prose, timeline tables, evidence trails, and body paragraphs as bracket-required zones. Quick-check step 3 and the bare-number hardfloor ban were amended to name every scanned zone. Reindexed at ~17:50 PT (319 rules, 17 hardfloor).
-
-**Self-check:** A fresh agent given a report-writing task with idea references will now see body-prose brackets named explicitly.
-
----
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25267 [proposed] -- corrective spec for the backward Subagent-DS gate (the Anthropic-surface incident follow-up).
-
-Where we left off (verified 2026-08-08 18:10 PT):
-- Investigated the Anthropic injection concern. A config change at 15:24 PT set EMSU_SUBAGENT_DS_TOOLS=1, routing tool-bearing Cline turns through DeepSeek's /anthropic/v1/messages endpoint (NOT Anthropic servers), causing HTTP 400s. The flag was reverted to 0 at 15:57 (bug-library incident 2275 [deployed]) and a router core guard was added at 16:21 (bug-library incident 2274 [deployed]). No Anthropic billing or keys.
-- Confirmed claude-sonnet and claude-opus-real are BANNED from the tier ladder. Vision Doorman (claude-sonnet-5-vision, 50/50 Kimi K3) is the sole live Anthropic surface.
-- Performed a rule 297 RCA on the 6th bare-number violation. Identified the trap: brackets placed only in the PICKUP PROMPT section, body prose left bare. The causal rule 91 was edited to add a BRACKET SCOPE section and was reindexed.
-- HANDOFF_NOTES.md updated 16:51 PT.
-
-Open threads to drive next:
-1. #25130 [executing] -- the Subagent-DS gate is backwards. The corrective spec (adding emsu-executor-auto to the entrypoint set, removing the no-tools disjunct, updating rule 00 doctrine) has not been addressed yet. Coordinate with Ruben on systemctl restart timing.
-2. #25082 [executing] -- the original DI proposal for EMSU_SUBAGENT_DS=1 routing. Superseded by idea #25130 [executing]; needs a close/supersede decision. No work targeted on this idea.
-3. #25267 [proposed] -- begin work on the corrective spec described in idea #25130 [executing].
-4. #25266 [proposed] -- check whether the litellm process was restarted after the 16:21 PT guard patch (bug-library incident 2274 [deployed]).
-
-Reference IDs:
-- Ideas filed this session: #25266 [proposed], #25267 [proposed]
-- Ideas carried forward: #25130 [executing], #25082 [executing]
-- Bug-library incidents: 2274 [deployed] (router-core guard patch), 2275 [deployed] (flag revert)
-- Files touched: /etc/litellm/_router_core.py, /etc/systemd/system/litellm.service.d/10-frugal.conf, /var/www/emtskills/clinerules/Rules/91-every-completion-needs-pickup-prompt.md, /var/www/emtskills/docs/HANDOFF_NOTES.md
-- Rule 297 deliverables: RCA a
 ```
 
 ### `1786229794274` — 8/8/2026, 5:34:29 PM PT — 42 turns
@@ -3862,221 +3947,4 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1785939420388` — 8/5/2026, 8:37:44 PM PT — 944 turns
-
-**Original task:**
-
-```
-#Argus
-
-Please see this in Argus, appears like some hallucinations, the model is not answering questiosn proerly and something is wrong. Also when I click on those individual task links it spins forever. Plus what does it mean "marale"? And why all the excuses? And it's answering things I didn't ask:
-
-Test as:
-
-MasterAdmin
-Dashboard
-Argus
-New chat started. Saves automatically after your first message.
-You
-can you tell me how many requests were made in Argus overnight and by whom and what were the topics?
-Argus
-Still thinking (50s)...
-Searched EMSU records (0 student profiles matched)
-Searched 
-```
-
-**Ideas referenced:** #0000, #16213, #16523, #18944, #18951, #19348, #20627 [deployed], #21582, #2212 [open], #22688, #22850, #22887 [proposed], #22939 [proposed], #23027 [deployed], #23029, #23036 [proposed], #23037 [proposed], #23038 [proposed], #23039 [proposed], #23050 [executing], #23052, #23061 [executing], #23067 [deployed], #23094, #23116 [filed], #23132, #23136, #23144, #23161 [filed], #23166, #23170, #23209, #23210, #23217, #23218, #23281 [executing], #23291 [proposed], #23323 [proposed], #23324 [proposed], #23328, #23340, #23364 [proposed], #23387, #23391 [deployed], #23392 [proposed], #23393 [proposed], #23425 [proposed], #23426 [proposed], #23427 [proposed], #23428 [in_progress], #23429 [in_progress], #23430 [proposed], #23440 [proposed], #23468 [proposed], #23472 [proposed], #23477 [proposed], #23483 [proposed], #23489 [proposed], #3528, #3529, #3530, #3536, #3537, #3538, #3540, #3542, #3543, #56754, #56756, #9086, #9168, #9339
-
-**Last PICKUP PROMPT:**
-
-```
-3323/#23324 and stopped there.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up Argus task queue throughput and status-page UX.
-
-Where we left off (verified 2026-08-05 17:34 PT):
-- 4 core fixes deployed and confirmed (#23027, #23036, #23038, #23039)
-- Queue backlog clearing — #167 finishing, 168-169/171-172/174-175 queued
-- Cascade dedupe (#23391) live and verified (0 new dupes in 50 min)
-- Page still blank for queued/running tasks (no queue position, ETA, or partial result)
-
-Open threads to drive next:
-1. #23391 [deployed] — Monitor: confirm 0 cascaded dupes form in next 24h of production usage
-2. #23392 [proposed] — Throughput: evaluate parallelizing worker (process up to 3 in parallel with curl_multi or subprocesses) OR adding a second independent worker
-3. #23393 [proposed] — UX: enrich argus_task_status.php for queued/running tasks with queue position, ETA, and partial result like "Attempt 2/6 — running LLM call (17s so far)"
-
-Reference IDs:
-- Ticket: #23067 (router regression — root cause)
-- Ideas filed: #23027, #23036, #23038, #23039, #23037, #23391, #23392, #23393
-- Files touched: alltastic_api.php, cron_argus_task_worker.php, argus_task_status.php, HANDOFF_NOTES.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785937503831` — 8/5/2026, 8:11:44 PM PT — 658 turns
-
-**Original task:**
-
-```
-Can you tell me how many turns have taken place for each model in the last 5 hours by model and also look inside the grouped models like frankenstein-llm, frankenstein-tools, emsu-codegen, etc...? I want to see how many turns for the individual LLMs themselves, not the groupings
-```
-
-**Ideas referenced:** #10108, #10740, #11397, #11741, #11781, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12477, #12618, #12657, #12672, #12673, #12689, #12716, #12824, #12872, #12878, #13108, #13121, #13202, #13831, #13832, #13874, #13964, #14000, #14848, #15269 [deployed], #16120, #16163, #16265, #16304, #16588, #16646 [deployed], #16648, #16718, #16844, #17202, #17203, #17205, #18312, #18326, #18781, #18786, #18868, #19173, #19653 [unknown], #1967, #19903, #2014, #20272, #20300, #2050, #20536, #20722, #21045 [deployed], #21136, #2176, #2177, #2218 [deployed], #22258 [proposed], #22294, #2231, #22334, #22583, #22749, #22750 [proposed], #22751 [proposed], #22820, #22897, #23028, #23029, #23030, #23031, #23044 [proposed], #23067 [deployed], #23076 [executing], #23127 [proposed], #23171 [proposed], #23264 [proposed], #23265 [proposed], #64748, #9889
-
-**Last PICKUP PROMPT:**
-
-```
-oards immediately more useful.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #23127 [executing] — Artemis ollama :11434, the only approved idea from this session with zero work done (dead engine, stale adapter CHAT_UPSTREAMS + registry references).
-
-Where we left off (verified 2026-08-05 20:10 PT):
-- #23076 [executing] DONE: LLMCostLogger persists router_model_used + endpoint_used; live-tested.
-- #23171 [executing] DONE: cesar-cx7-cluster disabled: true (port 11506 is sshd tunnel, not vLLM); YAML valid.
-- #23264 [executing] DONE: probe tag shipped (emsu_fleet_liveness_probe); dashboard already splits real vs probe.
-- #23265 [executing] DONE: cache-warming fix verified 0% → 92.09%; prefix caching PROVEN working.
-- #19653 [executing] already implemented; /var/log/emsu-adapter-upstream.log live at 24MB; Path A needed no work.
-- deriveTag queued-tag ban live and verified.
-
-Probe cadence impact analysis (human-only decision, no idea filed — no code changed): cloud probes cost ~$0.27/day total (~$100/year). 5x reduction to 5min cadence saves ~$80/year and makes dashboards immediately more useful by cutting cloud noise. Detection window goes from 3min to 15min, but spill ladder handles actual outages instantly. Safe to proceed if you approve.
-
-Open threads:
-1. #23127 [executing] — Artemis ollama :11434 dead since Aug 3. Restart vs decommission call, then scrub stale adapter + registry references.
-2. (human-only decision — no idea) Cloud probe cadence from 60s → 5min. Quantified above.
-
-Reference IDs:
-- Ideas: #23076 [executing], #23171 [executing], #23264 [executing], #23265 [executing], #19653 [executing], #23127 [executing]
-- Backups: LLMCostLogger.php.bak-attribution-20260805-192349, frankenstein_registry.yaml.bak-23171-20260805-194218, FleetTierHealth.php.bak-16646-20260805-154838, llm_router_live.php.bak-probetag-20260805-155500, cron_deepseek_cache_warming.php.bak-64tok-20260805-152032
-- Files changed: lib/LLMCostLogger.php, /etc/litellm/frankenstein_registry.yaml, lib/FleetTierHealth.php, routes/llm_router_live.php, cron/cron_deepseek_cache_warming.php, scripts/emsu_llm_turn_counts.sh, mcp-servers/ruben-orchestrator/src/index.ts + build/index.js
-- Bug library: incident 2231
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785966242067` — 8/5/2026, 8:03:19 PM PT — 386 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-Pick up Texas DSHS compliance. FIRST STOP, before anything else:
-https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations
-
-Backing tables: compliance_investigations (18 rows), compliance_investigation_responses (137),
-compliance_investigation_students (11), tdshs_course_notifications (72), dshs_form_signers (2).
-
-THE HEADLINE (probed live 2026-08-05 14:39 PT, idea #23269 [executing]):
-Ruben said Sabrina Richardson sent 14 messages. It is actually 17, and prior handoffs were WRONG
-that they were unretrievable. All 17 are in admin_portal.email_inbound
-```
-
-**Ideas referenced:** #0369, #047857, #059669, #0891, #111827, #1368, #1559, #1565, #15803, #166534, #18676 [blocked], #18690 [blocked], #19600, #19601, #19602, #23038, #23269 [executing], #23348 [high], #23349 [critical], #23350 [open], #23361 [executing], #23362 [blocked], #23365 [executing], #23366 [executing], #23367 [executing], #23372 [executing], #23373 [blocked], #23374 [proposed], #23380 [proposed], #23381 [executing], #23382 [executing], #23383 [proposed], #23413 [critical], #23414 [executing], #23415 [proposed], #23416 [proposed], #23417 [proposed], #23438 [executing], #23439 [executing], #23463 [executing], #23464 [executing], #23465 [executing], #23466 [proposed], #2563, #334155, #3730, #374151, #450438, #475569, #56740, #56754, #56756, #600179, #6106, #6366, #64748, #92400
-
-**Last PICKUP PROMPT:**
-
-```
- events are now clickable too.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #23269 — TDSHS: 3 responses due 8/6 with preservation block, CAPCE demand Friday.
-
-Where we left off (verified 2026-08-05 20:02 PT):
-- STANDARD PRESERVATION BLOCK written per Ruben: SOAH reads the correspondence, so volume, the intake-information refusal, the after-hours transmittals, the 12-hour extension denial, and the June 19 entry scope must be embedded in EVERY reply. Five paragraphs at uploads/tdshs/inspection-5196-2026/STANDARD_PRESERVATION_LANGUAGE_all_TDSHS_replies.md, inv10 row 164. Discipline is PRESERVE DO NOT ARGUE: facts and procedural requests only, no legal conclusions.
-- DELIBERATE OMISSION FOR RUBEN TO CONFIRM: the phrase "due process" is NOT in the block. Paragraph 5 preserves the objection without naming the doctrine, which avoids spending it early, avoids inviting agency counsel, and is consistent with keeping counsel out of the TDSHS channel. Ruben can override.
-- DEADLINE PAGE v3 deployed: clickable rows to a per-record detail view showing every draft reply due, sibling deadlines, and the full correspondence history; full-text search; pagination at 25/page. Lint clean, renders, data verified (the three 8/6 rows resolve to inv10 with 20 responses / 4 drafts).
-- 3 responses due 8/6: Smith, Sheets, Kanthack. Drafted 8/1, rule-302 passed, PDFs NOT rendered (on-disk stale 7/27).
-
-Open threads to drive next:
-1. #23365 [executing] — Smith/Sheets/Kanthack DUE 8/6. Append the preservation block to each with per-matter customization. TWO PRE-SEND BLOCKERS: verify the Sheets MWFD agreement status, re-verify the Kanthack 95.4 figure against her 7/31 Moodle regression report. Render fresh PDFs, then READ ALL THREE AGAINST EACH OTHER for contradictions.
-2. #23466 [proposed] — Ruben decides whether to name "due process" explicitly in the preservation block or keep paragraph 5's implicit reservation.
-3. #23416 [proposed] — Fix Ava Kanthack's Moodle regression and answer her 7/31 and 8/2 emails. Four days unanswered.
-4. #23413 [executing] — CAPCE particulars-demand. Greg reviews Thursday silently, Ruben sends Friday afternoon.
-5. #23438 [executing] — File TPIA-006 (texts on any device + AI-tool policies).
-6. #23439 [executing] — Riggs & Ray: verify bar standing for both via Playwright, conflict-check against CAPCE and Pinsky Law. Ray is the demonstrably current partner; Riggs is the Open Government Section fit for the TPIA work.
-7. #23463 [executing] — Deadline center v3 live. Confirm the 5 INFERRED TDSHS dates and the AZDHS estimate with the agencies.
-8. #23464 [executing] — AZDHS: watch 8/14-8/28; reconcile whether EMS-26-0460 Nettles is actually closed.
-9. #23465 [executing] — Build a reusable Playwright wrapper on WOPR.
-10. #23414 [executing] — Fold the v3 addendum quotes into the Sunset submission; verify each character by character.
-11. #23382 [executing] — Clear the externship backlog. Numbers never go to DSHS or the Sunset submission.
-12. #23372 [deployed] — TPIA-005 filed. Diary the 10-business-day 552.301 clock. Part D items 13-16 are the only real answer on Richardson's record with other programs.
-13. #23362 [blocked] — Hold the factual pattern claim until TPIA productions return.
-14. #23380 [proposed] — Mejia. Do NOT contact about the complaint without Ruben and counsel sign-off. DO place him.
-15. #23373 [blocked] / #23348 [blocked] — Pinsky letters and 5 complaint PDFs. Unblocker: POSTMARK_ACCOUNT_TOKEN in co
-```
-
-### `1785954766914` — 8/5/2026, 7:56:32 PM PT — 248 turns
-
-**Original task:**
-
-```
-#LLM FLEET
-
-Give assessments based on below tasks first
-
-
-═══════════════════════════════════════════════
-PICKUP PROMPT: FRANKENSTEIN-LLM ROUTER + LADDER AUDIT
-═══════════════════════════════════════════════
-Pick up frankenstein-llm and frankenstein-tools routing. Ruben's directive: verify the ladder is GLM-5.2 local FIRST, then the 120Bs, then Cicero, then DeepSeek V4 Pro (direct then OpenRouter), then GLM-5.2 cloud (direct then OpenRouter), then Kimi K3.
-
-TOOL-SCHEMA REGRESSION: FIXED 2026-08-05 10:50 PT (#23122 [executing]).
-For most of this morning every tool-bearing request returned HTTP 
-```
-
-**Ideas referenced:** #1130, #1131, #12368, #1241, #12425, #1248, #1249, #1252, #1258, #12672, #13121, #13202, #13331, #13436, #13439, #13484, #13832, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844 [deployed], #16851, #17246, #1744, #1779, #178531, #1798, #1828, #18329 [queued], #18332 [executing], #18786, #18811 [deployed], #18812 [deployed], #18820 [deployed], #18918 [deployed], #19567, #1967, #19903, #20042, #20272, #20536 [ready_for_review], #2063, #20630, #2065, #20662, #20672, #20674, #20676, #20677, #2073, #20806 [proposed], #20985, #21038, #21136, #2121, #2127, #2168, #2181, #2210 [rejected], #2221 [deployed], #2232 [deployed], #2238 [deployed], #22897 [proposed], #23050 [executing], #23056 [executing], #23122 [executing], #23190 [executing], #23191 [executing], #23192 [proposed], #23204, #23205 [proposed], #23206, #23207, #23307 [deployed], #23315 [deployed], #23339 [executing], #23467 [executing], #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
- lesson I promise to remember.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #23191 [executing] — Cicero reverse tunnel (Cicero-side action required); monitor restored GLM 8-lane autospill.
-
-Where we left off (verified 2026-08-05 19:55 PT):
-- GLM ceiling HELD 3.8h: FRANK_GLM_OPS_CEILING=8, FRANK_GLM_OVERFLOW_CEILING=32, service active. Batch split Julia 30 / Artemis 23 / GLM 4 (53 of 60 batch turns now spill off the ring). GLM_OVERFLOW_FALLTHROUGH lane=ops conc=37 >= ceiling=8 firing as designed.
-- Cicero: model ALIVE, reverse SSH tunnel to WOPR:11520 still DOWN (no listener, no -R proc). WOPR cannot reach 192.168.1.252 (No route to host, different LAN segment), so the tunnel MUST be re-established from Cicero itself.
-- Fixed a real defect found while investigating: emsu-cicero-wg-watchdog.sh had alarmed 'WireGuard tunnel is DOWN' every 2 minutes for 3 weeks on a path decommissioned 2026-07-16. Reworded to name the reverse tunnel and to say the box/MLX are likely fine. bash -n clean, verified live. Backup .bak-wording-20260805.
-- Ledger row appended, then repaired after a terminal-echo corruption mangled one line.
-
-Open threads to drive next:
-1. #23191 [executing] — Restore the Cicero reverse tunnel. Cicero-side only: on Cicero run launchctl unload/load ~/Library/LaunchAgents/com.emsu.cicero-235b-tunnel.plist, or let selfheal HEAL4 restore it. Verify on WOPR with ss -ltnp | grep 11520 and pgrep -af 'ssh -R.*11520'. Do NOT restart MLX. Do NOT probe 10.100.0.12 (decommissioned).
-2. #23467 [executing] — Watchdog wording shipped; confirm over 24h that alerts now name the reverse tunnel and no longer say WireGuard.
-3. #23339 [executing] — Watch the restored ceiling 24h. GUARDRAIL: if wedged slots return do NOT raise the ceiling again (that is what disabled autospill) — fix the wedge under #20536 [awaiting_review].
-4. #22897 [executing] — Judge on ORIGINAL merit only; my claim that 2026-08-05 validated it was retracted.
-5. #23056 [executing] — Header-prove DeepSeek/GLM-cloud direct-then-OpenRouter sub-order under load; fix the project-frankenstein MCP fleet API path (still fleet_api_unreachable).
-6. #18332 [executing] — Mini fleet: fix cron_activate_ollama_minis.php, onboard 6 dark M4s.
-7. #18329 [executing] — VKL phase-2 sqlite-vec ANN + LiteLLM surface wiring.
-8. #23307 [rejected] wrong-fix reorder patch reverted; #23205 [rejected] dual glm-5.2 entry correct as-is per Ruben; #23190 [rejected] and #23192 [rejected] false decode-dead claims — no action on any.
-9. #18820 [deployed] — structured-local-pin guard verified holding ($0, 127.0.0.1:11510).
-
-Reference IDs:
-- Ideas: #23339 [executing], #23467 [executing], #23191 [executing], #22897 [executing], #23056 [executing], #18332 [executing], #18329 [executing], #20536 [awaiting_review], #18820 [deployed], #23307 [rejected], #23205 [rejected], #23190 [rejected], #23192 [rejected]
-- Bug library incidents (SEPARATE numbering from ideas, cite as BUG-nnnn): BUG-2238 Cicero wrong-address trap, BUG-2232 subagent fan-out pinned to ring, BUG-2221 canary provenance, BUG-2210 real GLM zombie repair path
-- Files: /usr/local/bin/emsu-cicero-wg-watchdog.sh, /usr/local/bin/frankenstein_tools_adapter.py, /etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzzzzzzzzzzz-glm-ceiling-above-wedged-floor.conf, Rules-archive/296-never-declare-llm-dead-from-cached-probe.md, cline_task_ledger.md
-
-When done, append to cline_task_ledger.md per rule 07 and run order 66.
-══════════════
 ```

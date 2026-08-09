@@ -6,15 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/8/2026, 6:46:54 PM PT | window: last 72h | 98 tasks | index total 574 (parsed 3, cached 571)
+Generated: 8/8/2026, 7:46:54 PM PT | window: last 72h | 99 tasks | index total 575 (parsed 2, cached 573)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786226983152` | 8/8/2026, 6:46:39 PM | 405 | 990KB | what is 25220?  |
-| `1786225462991` | 8/8/2026, 6:32:16 PM | 304 | 867KB | I had a thought. One advantage the LLM seems to have over the human is that it can think a |
+| `1786241775257` | 8/8/2026, 7:46:27 PM | 121 | 623KB | #WOPR GPU |
+| `1786225462991` | 8/8/2026, 7:22:58 PM | 333 | 941KB | I had a thought. One advantage the LLM seems to have over the human is that it can think a |
+| `1786227462879` | 8/8/2026, 7:14:55 PM | 501 | 843KB | #Executor Ops |
+| `1786226983152` | 8/8/2026, 6:49:37 PM | 418 | 1013KB | what is 25220?  |
 | `1786233427989` | 8/8/2026, 6:25:54 PM | 208 | 707KB | #Argus |
 | `1786214132308` | 8/8/2026, 6:12:43 PM | 102 | 533KB | I recently saw a task that referenced Anthropic and us paying for some kind of anthropic t |
-| `1786227462879` | 8/8/2026, 5:46:14 PM | 420 | 740KB | #Executor Ops |
 | `1786229794274` | 8/8/2026, 5:34:29 PM | 42 | 261KB | #Externships |
 | `1786224531010` | 8/8/2026, 5:34:02 PM | 320 | 765KB | #Big Mac |
 | `1786232853169` | 8/8/2026, 5:09:49 PM | 146 | 889KB | I'm noticing a rule 91 regression since litellm wend down about 30 minutes ago. I'm concer |
@@ -113,72 +114,31 @@ Generated: 8/8/2026, 6:46:54 PM PT | window: last 72h | 98 tasks | index total 5
 
 ## Per-window detail
 
-### `1786226983152` — 8/8/2026, 6:46:39 PM PT — 405 turns
+### `1786241775257` — 8/8/2026, 7:46:27 PM PT — 121 turns
 
 **Original task:**
 
 ```
-what is 25220? 
+#WOPR GPU
 
-Not a task completion — the answer to "Are we done then?" is: yes, this thread is done. Every delivery I opened this session is closed or explicitly parked, and nothing is abandoned.
+Research with the community whether or not what you were saying is correct and then validate your claims. If so, let me know, if not try the other thing or things that you need to try to get it working
 
-Self-contained status, no pickup needed:
+## The reboot gave us the answer: it's the hardware. Your tech should look at the card.
 
-SHIPPED THIS SESSION
-- #25231 [deployed] guard_check.sh pre-edit gate + rule 314, self-tested and indexed.
-- #25222 [deployed] cron backlog 11 to 0.
-- #25221 [deployed] CFA/Argus steering layer live, verified in the running container.
-- #25194 [deployed] Implementation Reality Checker, all 5 checks alarming.
-- #25200 [deployed] self-healing guard integrit
-```
-
-**Ideas referenced:** #10142, #10147, #20957, #20958, #24207, #25182, #25183, #25185, #25194 [deployed], #25198 [queued], #25199 [queued], #25200 [deployed], #25201, #25220 [executing], #25221 [deployed], #25222 [deployed], #25231 [deployed], #25236 [proposed], #6842
-
-**Last PICKUP PROMPT:**
+My service ran **flawlessly** this boot — exactly the sequence I said was needed:
 
 ```
-Rule 91 completion must have a **human-readable summary at the top** before the PICKUP PROMPT block (which is for the next window). I've been emitting only the pickup block as the entire result, missing the summary that tells YOU what this window actually accomplished. Fixing now.
-
-<attempt_completion>
-<result>
-## Summary — #25220 Rule 297 RCA + Approved Fix Path
-
-**What #25220 is:** Unfiltered RAG retrieval (api/rag_context.php without source_filter) returns HTTP 500 because the 5s set_time_limit cap kills the PHP worker mid-flight. Filtered queries work at ~5.5s because source_filter narrows the pool.
-
-**Root cause (Rule 297 classified, source-read and cited):**
-- `api/rag_context.php` line 36: `set_time_limit(5)` — deliberate pool-starvation guard from 2026-08-06. Must NOT be relaxed.
-- `EmsuRagRetriever::cosineSimilaritySearch()`: PHP cosine loop over 1536-dim vectors costs ~2ms/row. 6000-row pool = ~12s raw, ~8.4s in practice.
-- The idea #25220's original description claimed 34K vectors — wrong. Pool is capped at 6000 (emsu_rag_candidate_pool).
-- Corrected RCA filed as #25236.
-
-**What I tested (both FAILED — under 5s not achievable in pure PHP):**
-- LIKE-based keyword pre-filter: full-table scans just as expensive as cosine loop (OR: 6.3s, AND: 6.2s).
-- Dynamic pool cap at 3000 rows: 5.9s, still over 5s. 2500 rows ≈5.0s but sacrifices cross-kind signal.
-- All server changes REVERTED. File is original.
-
-**Actual fix path (approved by Ruben):** Enable the FAISS HNSW sidecar gate already in EmsuRagRetriever.php (emsu_rag_faiss_enabled flag → http://127.0.0.1:7891/query). FAISS cron exists (cron_emsu_rag_faiss_rebuild.php) but the serving sidecar on :7891 is NOT deployed. Reranker on :7890 works; the FAISS query endpoint is the missing piece.
-
-**This session delivered:** Idea #25236 promoted from [proposed] to [executing] with concrete next step: write and deploy faiss_server.py to serve :7891/query from the FAISS index built by the existing cron.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25220 [executing] — deploy FAISS HNSW sidecar on :7891, enable gate, retest
-
-Where we left off (verified 2026-08-08 16:52 PT):
-- #25236 [executing] approved by Ruben: deploy FAISS HNSW serving sidecar on :7891, enable emsu_rag_faiss_enabled in orchestrator_config, retest unfiltered retrieval.
-- FAISS rebuild cron exists: /var/www/emtskills/cron/cron_emsu_rag_faiss_rebuild.php (per idea #10147 spec). Does NOT serve queries — rebuilds index only.
-- Serving sidecar NOT deployed. No rag_serve.py / faiss_server.py / vector_service.py. No supervisor/systemd unit for :7891. Reranker on :7890 is the FastAPI cross-encoder (/rerank), unrelated.
-- FAISS gate in EmsuRagRetriever.php lines ~230-307: checks emsu_rag_faiss_enabled from orchestrator_config, calls http://127.0.0.1:7891/query with JSON body {query_vector, top_k}, falls back to PHP cosine on failure. Gate is fully wired, just needs the Python sidecar to answer.
-
-Open threads to drive next:
-1. #25236 [executing]: Write faiss_server.py (FastAPI on :7891, loads FAISS .index from disk, serves /query with HNSW search). Deploy via supervisor/systemd. Requires pip install faiss-cpu.
-2. #25236 [executing]: Once :7891 responds, set emsu_rag_faiss_enabled=true in orchestrator_config (UPDATE orchestrator_config SET config_json = JSON_SET(config_json, '$.emsu_rag_faiss_enabled', true) WHERE id=1).
-3. #25236 [executing]: Retest: curl unfiltered retrieval → expect sub-200ms HTTP 
+18:58:31  PCIe link retrained to 32GT/s on attempt 1
+18:58:31  link now: Speed 32GT/s, Width x8
+18:58:31  BAR1 resize to 8G OK on attempt 1
+18:58:38  post-load nvidia-smi: No devices found.  link: Speed 32GT/s,
 ```
 
-### `1786225462991` — 8/8/2026, 6:32:16 PM PT — 304 turns
+**Ideas referenced:** #1045, #1057, #1080 [needs_verify], #1104 [deployed], #1130 [resolved], #1448 [resolved], #1449 [resolved], #1457 [resolved], #15144, #1537 [resolved], #1543 [investigating], #16448, #16803, #1717 [resolved], #1795 [resolved], #1817 [investigating], #1826 [resolved], #18605, #1896, #1897 [investigating], #1960 [investigating], #1988 [resolved], #2168, #2179 [resolved], #2180, #2185, #2210, #2213, #2216, #2228, #2235, #2236, #2237, #2239, #2241, #2245, #2248, #2251, #2263, #2264, #2270, #2276 [investigating], #2278 [investigating], #2279 [investigating], #2280 [investigating], #2281 [resolved], #2282 [investigating], #2283 [deployed], #2284, #23290, #23291, #25185, #25201 [rejected], #25223 [executing], #25224 [executing], #25225 [executing], #25226 [executing], #25256 [executing], #25279 [proposed], #35313, #4494 [deployed], #48242, #48243
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786225462991` — 8/8/2026, 7:22:58 PM PT — 333 turns
 
 **Original task:**
 
@@ -222,6 +182,145 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
+</attempt_completion>
+```
+
+### `1786227462879` — 8/8/2026, 7:14:55 PM PT — 501 turns
+
+**Original task:**
+
+```
+#Executor Ops
+
+First off the claim of no GPU is wrong -> Blackwell 6000 pro or something, 16gb card find it and use it if it helps reduce the 2500 CPU load spike
+
+## ruben_executor_live.php — Full Table Wiring Audit + Pipeline Doctor Report
+
+### Page Wiring: VERIFIED ✅
+
+Every table on the page is wired to real data sources:
+
+| Section | Query Source | Status |
+|---------|-------------|--------|
+| Quick Stats banner | SELECT COUNT() GROUP BY outcome | ✅ Verified — 25 failed, 48 executed in 24h |
+| Eligible Pool Drain | session_handoffs.status counts | ✅ Verified — 18,007 eligible chains |
+| Cur
+```
+
+**Ideas referenced:** #1050, #12802, #12879, #1373, #16822, #19427, #2276, #2278, #2279, #2280, #2281, #24646, #25097, #25111, #25120, #25122, #25125, #25127 [rejected], #25131, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [executing], #25201 [executing], #25223 [needs_verify], #25224 [ready_for_review], #25225 [ready_for_review], #25226 [ready_for_review], #25256 [proposed], #25279, #3957, #4536, #5031, #6057
+
+**Last PICKUP PROMPT:**
+
+```
+ith crons firing — it settles.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #25256 — GPU is a HARDWARE fault; software path exhausted and verified.
+
+Where we left off (verified 2026-08-08 19:01 PT):
+- #25256 [executing] HARDWARE PROVEN (bug library #2281): all 64-bit BAR reads fail via /dev/mem (BAR1/2/3 above 4G return nothing) while BAR0 below 4G returns a100601b repeatably. PCI config space intact (10de:2d30). Driver not in the path — this is electrical/physical
+- #25256 [executing] Link-timing theory ELIMINATED: emsu-gpu-bar-resize.service logged retrain to 32GT/s + BAR1 8G BEFORE modprobe, link verified 32GT/s at load, same kbusVerifyBar2 error still fired
+- #25256 [executing] Four software layers verified correct: bridge 64-bit window 12G assigned, iommu=pt Passthrough, BARs zero-overlap, modeset=0 + initramfs rebuilt
+- #25279 → see #2279: display-driver angle from tech was a real misconfig (desktop modeset=1 + PreserveVideoMemoryAllocations=1 on headless box), fixed
+- #25224 [executing] Reranker auto-detects cuda/cpu — will pick up GPU with no code change once hardware fixed
+- #25223 [executing] RAG static call fixed, zero errors
+- #25225 [executing] Dispatcher circuitFailClause verified
+- #25226 [executing] Kaison auto-heal trigger proven
+- #25201 [rejected] superseded by the 12-chain requeue completed earlier
+- Health: 8/8 services active, reranker ok:true, 0 executor failures/20min
+
+Open threads to drive next:
+1. #25256 [executing] — HANDS-ON (human required, no idea can fix this): reseat card + riser, verify 75W slot/supplemental power, bypass the 2 retimers, try a different slot, then test card in another machine. Board Gigabyte TRX50 AERO D, BIOS FE 05/06/2025
+2. #25256 [executing] — Re-test after ANY physical change: `sudo dd if=/dev/mem bs=4 count=1 skip=$((0x2100000000/4)) 2>/dev/null | xxd -p`. Data returned = fixed. Control: same command with 0xf0000000 returns a100601b
+3. #25224 [executing] — Once BAR2 reads succeed: `systemctl restart emsu-reranker`, confirm "device selected: cuda", expect CPU drop and LOAD-BREAKER to stop suppressing dispatch
+4. #25256 [executing] — Do NOT retry software fixes. Bug library #2276/#2278/#2279/#2280/#2281 list seven proven-dead approaches and three of my own disproven theories
+5. #25225 [executing] — Confirm the 12 requeued chains pick up once load settles
+6. #25226 [executing] — Build Kaison loop: per-core load >0.80 for 3+ ticks → auto-restart reranker, card Ruben after two failed repairs
+
+Reference IDs:
+- Ideas: #25201 [rejected], #25223 [executing], #25224 [executing], #25225 [executing], #25226 [executing], #25256 [executing]
+- Bug library: #2276, #2278, #2279, #2280, #2281 (#2281 = the hardware conclusion)
+- Files: /etc/systemd/system/emsu-gpu-bar-resize.service, /etc/modprobe.d/nvidia-graphics-drivers-kms.conf (+.bak-25256), /etc/modprobe.d/nvidia-headless-compute.conf, /etc/default/grub (+.bak-25224-gpu-bar1, .bak-25256-iommu), /usr/local/bin/emsu-reranker.py (+.bak-25224-cuda-autodetect), /var/www/emtskills/cron/cron_ruben_autonomous.php, /tmp/requeue_gate2.py
+- GPU: 0000:81:00.0, NVIDIA RTX PRO 2000 Blackwell, driver 610.43.02, root port 80:01.1
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</parameter>
+</invoke>
+```
+
+### `1786226983152` — 8/8/2026, 6:49:37 PM PT — 418 turns
+
+**Original task:**
+
+```
+what is 25220? 
+
+Not a task completion — the answer to "Are we done then?" is: yes, this thread is done. Every delivery I opened this session is closed or explicitly parked, and nothing is abandoned.
+
+Self-contained status, no pickup needed:
+
+SHIPPED THIS SESSION
+- #25231 [deployed] guard_check.sh pre-edit gate + rule 314, self-tested and indexed.
+- #25222 [deployed] cron backlog 11 to 0.
+- #25221 [deployed] CFA/Argus steering layer live, verified in the running container.
+- #25194 [deployed] Implementation Reality Checker, all 5 checks alarming.
+- #25200 [deployed] self-healing guard integrit
+```
+
+**Ideas referenced:** #10142, #10147, #20957, #20958, #24207, #25182, #25183, #25185, #25194 [deployed], #25198 [queued], #25199 [queued], #25200 [deployed], #25201, #25220 [executing], #25221 [deployed], #25222 [deployed], #25231 [deployed], #25236 [proposed], #6842
+
+**Last PICKUP PROMPT:**
+
+```
+rver restarted, then retested.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #25236 [executing] — FAISS sidecar index loader needs MySQL, server starts but returns 400
+
+Where we left off (verified 2026-08-08 18:48 PT):
+- #25236 [executing]: FAISS venv ready (/var/www/emtskills/services/faiss/venv) with faiss 1.15.0, numpy 2.5.1, pymysql 2.2.8. Server running on :7891 but load_or_build_index() uses non-existent /data/emsu/sql/emsu_preference.db. Fixed version at /tmp/faiss_server_fixed.py (local Mac) uses pymysql.connect(host='localhost', db='admin_portal', user='adminportal', password='iV84o80^y'). FIXED VERIFIED locally but not deployed — write_server_file MCP choked on the 116-line source.
+- emsu_rag_faiss_enabled = true in orchestrator_config (already set).
+- FAISS gate in EmsuRagRetriever fires (HTTP 400 → fallback to PHP, logged). The only bug is the index loader path.
+- #25220 [executing]: The 5s set_time_limit cap in api/rag_context.php must not be relaxed. Keyword pre-filter and pool-capping both tried and failed. FAISS is the only viable path.
+
+Open threads to drive next:
+1. #25236 [executing]: Deploy fixed faiss_server.py (with PyMySQL loader), restart on :7891, verify no `name 'index' is not defined` errors
+2. #25236 [executing]: Retest: curl unfiltered retrieval via EmsuRagRetriever::retrieve() — expect sub-200ms HTTP 200
+3. #25220 [executing]: Once FAISS works, set the 5s cap back to enforce it (it was temporarily relaxed for testing — verify it was never actually removed)
+
+Reference IDs:
+- Ideas filed: #25220 [executing], #25236 [executing]
+- Files touched: /var/www/emtskills/services/faiss/faiss_server.py (deployed, needs fix), /var/www/emtskills/lib/EmsuRagRetriever.php (reverted to original, 453 lines), /tmp/faiss_server_fixed.py (local Mac, the fixed version)
+- admin_portal.orchestrator_config: JSON_SET config_json '$.emsu_rag_faiss_enabled' = true (already done)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Read idea #25220 progress and spec from orchestrator
+- [x] Read full idea description from MySQL
+- [x] Read source code: api/rag_context.php line 36 (pool-starvation guard)
+- [x] Read source code: lib/EmsuRagRetriever.php cosineSimilaritySearch() (candidate pool + FAISS gate)
+- [x] Classify per Rule 297: BY-DESIGN timeout, PHP cosine loop is bottleneck, FAISS is only viable path
+- [x] File corrected RCA as #25236 [proposed] → now [executing]
+- [x] Deploy FAISS venv (faiss 1.15.0 + numpy 2.5.1 + pymysql 2.2.8)
+- [x] Write and deploy faiss_server.py (running on :7891, needs index loader fix)
+- [x] Test keyword pre-filter (OR-match: 5909 matches, AND-match: 388 candidates, still 6.2s — failed)
+- [x] Test pool-capping (3000 rows → 5.9s — failed, still over cap)
+- [x] Confirm FAISS gate in EmsuRagRetriever fires but gets HTTP 400 from broken index loader
+- [x] Set emsu_rag_faiss_enabled=true in orchestrator_config
+- [ ] Deploy fixed faiss_server.py with PyMySQL loader from /tmp/faiss_server_fixed.py
+- [ ] Restart FAISS server and verify no `name 'index' is not defined`
+- [ ] Retest unfiltered retrieval — expect sub-200ms
+- [ ] Complete the task
+</task_progress>
 </attempt_completion>
 ```
 
@@ -330,72 +429,6 @@ Reference IDs:
 - Bug-library incidents: 2274 [deployed] (router-core guard patch), 2275 [deployed] (flag revert)
 - Files touched: /etc/litellm/_router_core.py, /etc/systemd/system/litellm.service.d/10-frugal.conf, /var/www/emtskills/clinerules/Rules/91-every-completion-needs-pickup-prompt.md, /var/www/emtskills/docs/HANDOFF_NOTES.md
 - Rule 297 deliverables: RCA a
-```
-
-### `1786227462879` — 8/8/2026, 5:46:14 PM PT — 420 turns
-
-**Original task:**
-
-```
-#Executor Ops
-
-First off the claim of no GPU is wrong -> Blackwell 6000 pro or something, 16gb card find it and use it if it helps reduce the 2500 CPU load spike
-
-## ruben_executor_live.php — Full Table Wiring Audit + Pipeline Doctor Report
-
-### Page Wiring: VERIFIED ✅
-
-Every table on the page is wired to real data sources:
-
-| Section | Query Source | Status |
-|---------|-------------|--------|
-| Quick Stats banner | SELECT COUNT() GROUP BY outcome | ✅ Verified — 25 failed, 48 executed in 24h |
-| Eligible Pool Drain | session_handoffs.status counts | ✅ Verified — 18,007 eligible chains |
-| Cur
-```
-
-**Ideas referenced:** #1050, #12802, #12879, #1373, #16822, #19427, #2276, #2278, #2279, #2280, #24646, #25097, #25111, #25120, #25122, #25125, #25127 [rejected], #25131, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [executing], #25201 [executing], #25223 [needs_verify], #25224 [ready_for_review], #25225 [ready_for_review], #25226 [ready_for_review], #25256 [proposed], #3957, #4536, #5031, #6057
-
-**Last PICKUP PROMPT:**
-
-```
- RCA including my wrong turns.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #25256 — GPU PCIe link retrain armed, awaiting next boot + physical inspection.
-
-Where we left off (verified 2026-08-08 17:45 PT):
-- #25256 [executing] TRUE ROOT CAUSE (bug library #2280): PCIe link cold-boots at 2.5GT/s vs 32GT/s capable. BAR2 0xffffffff readback is DOWNSTREAM of this. Retrain via `setpci -s 80:01.1 CAP_EXP+10.w=0x20` → 32GT/s and the BAR2 error vanishes
-- #25256 [executing] emsu-gpu-bar-resize.service rewritten: unload modules → retrain link → verify → resize BAR1 8G → modprobe. Retrain logic TESTED LIVE, succeeded attempt 1
-- #25256 [executing] Two earlier theories of mine DISPROVEN and corrected in bug library #2280: "BAR1 16G starves BAR2" (BAR map is clean, zero overlap) and "link spontaneously falls back" (holds across 3 retrains; drops only when driver GSP init fails)
-- #25256 [executing] Display-driver angle from tech was a real find: modeset=1 + PreserveVideoMemoryAllocations=1 were desktop defaults on a headless box, now 0, initramfs rebuilt and verified (#2279)
-- #25224 [executing] Reranker auto-selects device, logs "cpu" now, flips to cuda when GPU binds
-- #25223 [executing] RAG static call fixed, zero errors
-- #25225 [executing] Dispatcher circuitFailClause verified
-- #25226 [executing] Kaison auto-heal trigger proven
-- #25201 [rejected] superseded by the 12-chain requeue done this session
-- All services active, reranker ok:true, load 17.22, 0 executor failures/15min
-
-Open threads to drive next:
-1. #25256 [executing] — PHYSICAL: have the tech inspect riser/seating/slot power. Card is behind `Retimer+ 2Retimers+` on a `PowerLimit 75W` slot and trains Gen1 on every cold boot. Software retrain works but this pattern says marginal physical link
-2. #25256 [executing] — On next boot: `journalctl -t emsu-gpu-prep` should show "PCIe link retrained to 32GT/s" then "BAR1 resize to 8G OK" then a post-load nvidia-smi line. If nvidia-smi lists the card, WPR2 came up clean
-3. #25224 [executing] — Then `systemctl restart emsu-reranker`, confirm "device selected: cuda". Expect CPU drop and LOAD-BREAKER to stop suppressing workers
-4. #25256 [executing] — If still failing, read bug library #2280 FIRST: six approaches are proven not to work (NVreg_EnableResizableBar, byte-count resize, resize-while-bound, bridge remove/rescan, FLR for WPR2, fuser -k)
-5. #25225 [executing] — Once dispatch resumes, confirm the 12 requeued chains pick up
-6. #25226 [executing] — Build Kaison loop: per-core load >0.80 for 3+ ticks → auto-restart reranker, card Ruben after two failed repairs
-
-Reference IDs:
-- Ideas: #25201 [rejected], #25223 [executing], #25224 [executing], #25225 [executing], #25226 [executing], #25256 [executing]
-- Bug library: #2276, #2278, #2279, #2280
-- Files: /etc/systemd/system/emsu-gpu-bar-resize.service, /etc/modprobe.d/nvidia-graphics-drivers-kms.conf (+.bak-25256), /etc/modprobe.d/nvidia-headless-compute.conf, /etc/default/grub (+.bak-25224-gpu-bar1, .bak-25256-iommu), /usr/local/bin/emsu-reranker.py (+.bak-25224-cuda-autodetect), /var/www/emtskills/cron/cron_ruben_autonomous.php, /tmp/requeue_gate2.py
-- GPU: 0000:81:00.0, NVIDIA RTX PRO 2000 Blackwell, driver 610.43.02, root port 80:01.1
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```
 
 ### `1786229794274` — 8/8/2026, 5:34:29 PM PT — 42 turns

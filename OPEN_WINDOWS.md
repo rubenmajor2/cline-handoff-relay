@@ -6,17 +6,19 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/9/2026, 7:48:42 AM PT | window: last 72h | 101 tasks | index total 590 (parsed 8, cached 582)
+Generated: 8/9/2026, 8:48:42 AM PT | window: last 72h | 103 tasks | index total 592 (parsed 4, cached 588)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786286915134` | 8/9/2026, 7:48:35 AM | 1 | 3KB | #Argus Cluster Idea  |
-| `1786286876279` | 8/9/2026, 7:48:29 AM | 3 | 7KB | #GLM Local/frankenstein-llm Improvements / Make Smarter |
-| `1786245923063` | 8/9/2026, 7:48:16 AM | 414 | 4708KB | #Argus |
-| `1786182934055` | 8/9/2026, 7:48:15 AM | 345 | 896KB | Please tell me which individual LLM's have been running in the last 30 minutes. I need to  |
-| `1786285332678` | 8/9/2026, 7:48:10 AM | 107 | 855KB | #Callbacks |
+| `1786285332678` | 8/9/2026, 8:47:29 AM | 295 | 1172KB | #Callbacks |
+| `1786245923063` | 8/9/2026, 8:45:16 AM | 496 | 5265KB | #Argus |
+| `1786288392773` | 8/9/2026, 8:43:11 AM | 112 | 502KB | #Make GLM / frankenstein-llm smarter |
+| `1786288212188` | 8/9/2026, 8:38:13 AM | 140 | 437KB | #AI Directed Meditation |
+| `1786286915134` | 8/9/2026, 8:14:51 AM | 90 | 344KB | #Argus Cluster Idea  |
+| `1786286876279` | 8/9/2026, 8:12:08 AM | 72 | 397KB | #GLM Local/frankenstein-llm Improvements / Make Smarter |
+| `1786284214295` | 8/9/2026, 8:06:32 AM | 178 | 1101KB | #AI DIRECTED MEDITATION |
+| `1786182934055` | 8/9/2026, 8:02:41 AM | 386 | 1002KB | Please tell me which individual LLM's have been running in the last 30 minutes. I need to  |
 | `1786286830612` | 8/9/2026, 7:47:11 AM | 1 | 2KB | What can we do to make our instance of  GLM 5.2 Local smarter? What about frankenstein-llm |
-| `1786284214295` | 8/9/2026, 7:32:14 AM | 98 | 493KB | #AI DIRECTED MEDITATION |
 | `1786285065842` | 8/9/2026, 7:31:45 AM | 98 | 189KB | #WOPR GPU |
 | `1786244179890` | 8/9/2026, 7:16:55 AM | 453 | 917KB | #WOPR GPU |
 | `1786281941469` | 8/9/2026, 7:16:27 AM | 140 | 1271KB | #CALL BACKS  |
@@ -116,42 +118,55 @@ Generated: 8/9/2026, 7:48:42 AM PT | window: last 72h | 101 tasks | index total 
 
 ## Per-window detail
 
-### `1786286915134` — 8/9/2026, 7:48:35 AM PT — 1 turns
+### `1786285332678` — 8/9/2026, 8:47:29 AM PT — 295 turns
 
 **Original task:**
 
 ```
-#Argus Cluster Idea 
+#Callbacks
 
-See issues executing 23313, research bug library, and community as necessary and infrastructure and execute below cleanly
+that should go into the call back system, not a ticket. Those tickets are noise and need to be converted to callbacks GOING FORWARD. Offer callbacks to those outstanding in the last 48 hours like that and depreciate old process. -> Answering your question: "Voice call follow-up needed" tickets are not offers, they are internal support tickets. When the Voice AI cannot fully resolve a caller and the caller agrees to a follow-up, the AI creates one of these tickets so a human can call or email the person back.
 
-Cluster scan (#25313): NOT deployed, file restored clean
-I attempted to deploy argusClusterScan() into alltastic_api.php twice. The second attempt caused a parse error at line 3986 because my python patch used the wrong placeholder pattern for the actual INSERT (the real statement shape differs from my assumption). I rolled back immediately from backup alltastic_api.php.bak-25293-clusterscan-20260809-0655.
 
-Verified restored file:
-
-php -l /var/www/emt
+Answering your question: "Voice call follow-up needed" tickets are not o
 ```
 
-**Ideas referenced:** #25313
+**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #1745, #18316, #2274, #2275, #23133, #23989, #24645, #24646, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25364 [executing], #25365 [deployed], #3133, #475569, #6172, #9042, #9159, #9222, #9501
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786286876279` — 8/9/2026, 7:48:29 AM PT — 3 turns
-
-**Original task:**
+**Last PICKUP PROMPT:**
 
 ```
-#GLM Local/frankenstein-llm Improvements / Make Smarter
+ld digest pipeline archived. ✅
 
-What can we do to make our instance of  GLM 5.2 Local smarter? What about frankenstein-llm? I'm still seeing some minor issues popping up every now and then. Not severe, but I think we can do better. What can we do?
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up topic — Voice follow-up ticket-to-callback conversion (complete, verified).
+
+Where we left off (verified 2026-08-09 08:10 PT):
+- `cron/cron_post_call_summary.php`: AUTO-CALLBACK block replaces old AUTO-TICKET block (lines 227-247). php -l clean.
+- `api/voice/vapi_server_webhook.php`: handleEndOfCallReport() now calls bookCallbackSlot() instead of handleCreateTicket() for follow-ups (lines 6562-6578). php -l clean.
+- Both files backed up: `.bak-20260809-callback`
+- 5 Open/Pending voice_followup tickets converted: 1 booked as callback (#6, Dominic Felix), 4 closed (these carried the +19412943388 hold-greeting trunk number — Ruben confirmed intentional, not a bug).
+- 0 Open/Pending voice_followup tickets remain.
+- 3 dead digest files archived to `/var/www/emtskills/archive/callback_digest_deprecated_20260809/`.
+- Live cron run: clean, no pending rows.
+
+Open threads to drive next:
+1. #25365 [deployed] — callback system core fix (bookCallbackSlot). This task completed the consumer integration. Monitor `callback_bookings` for new entries over next 48h to confirm cron + webhook are populating it.
+
+Reference IDs:
+- Ideas filed: #25365 [deployed]
+- Files touched: /var/www/emtskills/cron/cron_post_call_summary.php, /var/www/emtskills/api/voice/vapi_server_webhook.php, archived /var/www/emtskills/archive/callback_digest_deprecated_20260809/
+- Tickets: 24314, 24309, 24302, 24291, 24280 (all Resolved)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
-**Ideas referenced:** #2208, #2216, #2243
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786245923063` — 8/9/2026, 7:48:16 AM PT — 414 turns
+### `1786245923063` — 8/9/2026, 8:45:16 AM PT — 496 turns
 
 **Original task:**
 
@@ -168,112 +183,197 @@ Approved
 - #25269 [proposed] - Fix the Kaizon blind spot: wrap argusBuildRevertInfo() in try/catch at both call sites, add the missing error_message column to the INSERT at line 3947, and add a
 ```
 
-**Ideas referenced:** #152615, #176616, #178424, #178455, #17926, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #18745, #1876, #18765, #1877, #18771, #18781, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #1894, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #1912, #1927, #1928, #1929, #1930, #1931, #1932, #1933, #19348, #19415, #19416, #2006, #20547, #20555, #21074, #21125, #21126, #22511, #22583, #2274, #2275, #23489, #23852, #23920, #23952, #24635, #24636, #24645, #24646, #24766, #24791, #24897, #24900, #25047, #25058 [deployed], #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [executing], #25196 [deployed], #25224, #25262 [executing], #25263 [executing], #25264 [executing], #25269 [proposed], #25270 [proposed], #25271 [deployed], #25293 [proposed], #25304, #25310, #25313 [approved], #25314 [approved], #25315 [approved], #25409, #334155, #4338, #64748
+**Ideas referenced:** #152615, #176616, #178424, #178455, #17926, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #18745, #1876, #18765, #1877, #18771, #18781, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #1894, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #1912, #1927, #1928, #1929, #1930, #1931, #1932, #1933, #19348, #19415, #19416, #2006, #20547, #20555, #21074, #21125, #21126, #22511, #22583, #2274, #2275, #23489, #23852, #23920, #23952, #24635, #24636, #24645, #24646, #24766, #24791, #24897, #24900, #25047, #25058 [deployed], #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [executing], #25196 [deployed], #25224, #25262 [executing], #25263 [executing], #25264 [executing], #25269 [proposed], #25270 [proposed], #25271 [deployed], #25293 [proposed], #25304, #25310, #25313 [approved], #25314 [approved], #25315 [approved], #25316 [proposing], #25364 [executing], #25409, #334155, #4338, #64748
 
 **Last PICKUP PROMPT:**
 
 ```
-ER_66 verified absent on WOPR.
+02 live in the Argus terminal.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #25409 — finish Argus systemwide cluster scan deployment, then get qb_invoices verified live.
+Pick up task — deploy argusClusterScan (idea 25313), then verify qb_invoices live (idea 25314).
 
-Where we left off (verified 2026-08-09 07:40 PT):
-- FUZZY MATCH DEPLOYED: /var/www/emtskills/lib/argus_action_catalog.php $findMiss now appends "Did you mean: <student_id> <first> <last>, ...?" on lookup miss (LIKE probe on Complete_Student_Data student_id/first_name/last_name/email, LIMIT 5). grep -c 'Did you mean' = 1, php -l clean. Backup: argus_action_catalog.php.bak-fuzzy-20260809-0650.
-- alltastic_api.php restored to lint-clean from backup alltastic_api.php.bak-25293-clusterscan-20260809-0655. error_message column still wired into argus_audit_log INSERT at line 1042. argusClusterScan is NOT in the file (grep count 0).
-- Correct insertion anchor is `function argusEnrollmentStatus(` at line 78. Before patching, READ lines 1038-1065 with sudo sed to copy the exact INSERT literal and execute() argument list — the prior patch broke because the assumed pattern did not match.
-- Argus: 44 calls / 93.2% success last 8h. Reranker: zero 500s last 8h, RERANK_WORKERS=1 correct. WOPR load 7.27, GPU 0% util.
+Where we left off (verified 2026-08-09 08:41:44 PT):
+- Idea 25316 [deployed]: Gate D3 cross-session thread preservation added to Rule 91 Gate D. Real PHP logic queries prior thread_items for open-thread idea numbers and verifies each carries a status bracket. php -l clean, grep count 3. Backups listed above.
+- Fuzzy close-match deployed in argus_action_catalog.php: "Did you mean: student_id first last, ...?" appended on lookup miss. Verified grep, php -l.
+- alltastic_api.php is lint-clean, error_message wiring intact at line 1042. argusClusterScan is NOT in the file. Insert the function before line 78, which is `function argusEnrollmentStatus(`. Read lines 1038-1065 first with sudo sed to copy the exact INSERT literal and execute() argument list before patching. Use the /tmp python3 file method (fuzzyfix.py style), not inline base64.
+- WOPR: load 7.27, GPU 0% util / 15.8 GB cached, zero reranker 500s overnight. RERANK_WORKERS=1 is correct: single 16 GB Blackwell cannot hold two CrossEncoder model copies.
+- Argus last 8h: 44 calls, 93.2% success. Failures were exam_overrides (now fuzzy-assisted), web_fetch (correct private-address refusal), extend_exam_deadline (missing quiz_id param).
+- Ledger row appended 08:35 PT. EXECUTE_ORDER_66 file verified absent on WOPR.
 
-Open threads to drive next (every item is a real filed idea):
-1. #25313 [executing] — Deploy argusClusterScan() into /var/www/emtskills/routes/alltastic_api.php. Insert function body before line 78 (`function argusEnrollmentStatus(`), wire the call after the real argus_audit_log INSERT execute at ~1042 using that block's exact variable names. Use a python3 file written to /tmp (the /tmp/fuzzyfix.py method worked; inline base64 did not). Verify: php -l clean, grep -c argusClusterScan = 2.
-2. #25293 [executing] — Argus terminal banner "X other students may have the same issue". This is BLOCKED on #25313 deploy (needs argusClusterScan to populate idea_clusters first). After #25313 is live, wire the banner into the Argus terminal response when idea_clusters member_count >= 2 for the current error_message pattern.
-3. #25270 [executing] — WOPR GPU rebalancing / reranker capacity. CPUQuota portion is DONE (36 cores, 86% load drop). The uvicorn workers portion is BLOCKED on #25315 (single 16 GB GPU cannot hold two CrossEncoder copies). Do NOT raise RERANK_WORKERS until #25315 resolves per-worker VRAM.
-4. #25315 [executing] — Investigate CrossEncoder lifespan/load crash path. Deferred, no urgency: zero 500s in last 8h. When throughput demand materializes, journal-dive the startup window and resolve per-worker model memory before any workers increase.
-5. #25314 [executing] — Have Jon run payment_status on 26215W-02 in the Argus terminal. Confirm real invoice data renders instead of "(qb_invoices not readable)" and argus_audit_log captures the error_message classifier output. Close when verified.
-
-Reference IDs:
-- Ideas: #25313 [executing], #25293 [executing], #25270 [executing], #25315 [executing], #25314 [executing] (filed in prior sessions; #25313/#25314/#25315 filed this session via orchestrator_ideas INSERT)
-- Deployed this session: #25269 [deployed] (qb_invoices payment_status fix + error_message wiring)
-- Files touched: /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/routes/alltastic_api.php
-- Backups: argus_action_catalog.php.bak-fuzzy-20260809-0650, argus_action_catalog.php.bak-25269-pay-20260808-2135, alltastic_api.php.bak-25293-clusterscan-20260809-0655, alltastic_api.php.bak-25269-20260808-0845
-
-When done, append a row 
-```
-
-### `1786182934055` — 8/9/2026, 7:48:15 AM PT — 345 turns
-
-**Original task:**
-
-```
-Please tell me which individual LLM's have been running in the last 30 minutes. I need to know which ones have the most number of turns. What I'm looking for is individual LLM's. I want you to look inside of Frankenstein tools and inside of Frankenstein LLM and add those to the individual tool LLM total. I do not need to see accumulative Frankenstein LLM or accumulative Frankenstein tools number. I don't care. I wanna see the numbers for the underlying LLMs
-```
-
-**Ideas referenced:** #10108, #10740, #11316, #1151, #11741, #11781, #11944, #11953, #12184, #12366, #12368, #12477, #12588, #12618, #12688, #12689, #12824, #12872, #12878, #13155, #13157, #13202, #13439, #13874, #14133, #14142, #16163, #16265, #16304, #16625, #16680, #16715, #16844, #18312, #18326, #19585, #1998, #20864, #20947, #2139, #2150, #2151, #23171, #25069 [proposed], #25097, #7505, #8365
-
-**Last PICKUP PROMPT:**
-
-```
- artemis-gpt-oss-120b: 21,428)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #current — Bigmac vs Artemis turn difference explained.
-
-Where we left off (verified 2026-08-09 07:28 PT):
-- Bigmac (3x B70 TP=3, vLLM 0.21.0‑b1) outpaces Artemis (4x TP=4, vLLM 0.10.2) by ~5%
-- Root cause: newer vLLM + newer B70 GPU arch + co-located no WireGuard hop = faster per-request throughput
-- Adapter uses equal round-robin — no weight bias
-- per_model_turn_counts table + 5-min cron running (idea #25069 [executing])
-
-Open threads to drive next:
-1. #25069 [executing] — per_model_turn_counts cron live, delivering accurate per-LLM breakdowns
+Open threads to drive next (every item present, no silent drops):
+1. #25313 [executing] — Deploy argusClusterScan() into /var/www/emtskills/routes/alltastic_api.php. Read lines 1038-1065 first, insert function before line 78, wire call after the exact INSERT execute. Verify php -l clean and grep -c argusClusterScan = 2.
+2. #25293 [executing] — Argus terminal banner "X other students may have the same issue". BLOCKED on #25313. After live, wire banner when idea_clusters member_count is 2 or more for the current error_message pattern.
+3. #25270 [executing] — WOPR GPU rebalancing. CPUQuota portion done (36 cores, 86% load drop). uvicorn workers portion BLOCKED on #25315. Do not raise RERANK_WORKERS until per-worker VRAM is solved.
+4. #25315 [executing] — CrossEncoder lifespan and load path investigation. Deferred until throughput demand arrives (zero 500s overnight).
+5. #25314 [executing] — Jon runs payment_status on 26215W-02 in the Argus terminal. Confirm real invoice data renders instead of "(qb_invoices not readable)" and argus_audit_log captures error_message classifier output. Close when verified.
+6. #25316 [deployed] — Gate D3 cross-session thread preservation. No further action.
 
 Reference IDs:
-- Ideas filed: #25069 [executing]
-- Files touched: none new
+- #25316 [deployed], #25313 [executing], #25293 [executing], #25270 [executing], #25315 [executing], #25314 [executing]
+- #25269 [deployed] (qb_invoices payment_status fix + error_message wiring, verified 26215W-02 via SQL)
+- Files touched: /var/www/emtskills/clinerules/Rules/91-attempt-completion-gate-d.md, /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/routes/alltastic_api.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66 (file verified absent on WOPR — create it or report the gap).
 ═══════════════════════════════════════════════
 </result>
-<task_progress>
-- [x] Registry specs: bigmac 3x B70 TP=3 vLLM 0.21.0‑b1, artemis 4x TP=4 vLLM 0.10.2
-- [x] Adapter uses equal round-robin (no weight bias)
-- [x] Latency check: both ~5s p50
-- [x] Root cause: newer CPU/GPU/vLLM stack makes bigmac faster per turn at equal opportunity
-</task_progress>
 </attempt_completion>
 ```
 
-### `1786285332678` — 8/9/2026, 7:48:10 AM PT — 107 turns
+### `1786288392773` — 8/9/2026, 8:43:11 AM PT — 112 turns
 
 **Original task:**
 
 ```
-#Callbacks
+#Make GLM / frankenstein-llm smarter
 
-that should go into the call back system, not a ticket. Those tickets are noise and need to be converted to callbacks GOING FORWARD. Offer callbacks to those outstanding in the last 48 hours like that and depreciate old process. -> Answering your question: "Voice call follow-up needed" tickets are not offers, they are internal support tickets. When the Voice AI cannot fully resolve a caller and the caller agrees to a follow-up, the AI creates one of these tickets so a human can call or email the person back.
+Do you agree with these? Take rule 29 action. Do not inject anthropic
 
+## GLM/frankenstein-llm Smartness Assessment: 2026-08-09
 
-Answering your question: "Voice call follow-up needed" tickets are not o
+### Status
+Investigation only. Five improvement ideas filed. No code changed this session.
+
+### What Is Working
+- GLM ring serving at :8210 (observed 07:51 PT): 11 running, 0 waiting, 0 preemptions
+- Prefix cache 72.5% hit rate (122M hits / 168M queries)
+- Adapter, LiteLLM, and tunnel all active
+- Spill ladder functional: overflow reaches Artemis 120B (~44 tok/s) through GLM_OVERFLOW_FALLTHROUGH when canary quarantines GLM
+
+### T
 ```
 
-**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #1745, #18316, #2274, #2275, #23133, #23989, #24645, #24646, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25364 [executing], #25365 [deployed], #3133, #475569, #6172, #9042, #9159, #9222, #9501
+**Ideas referenced:** #10740, #11397, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12459, #12657, #12672, #12673, #12689, #12716, #13108, #13121, #13831, #13832, #13874, #13964, #14000 [deployed], #14848, #16120, #16718, #18781, #18786, #19338, #19653, #1967, #19903, #2050, #20536, #21045 [in_progress], #22583 [ready_for_review], #22588, #2293 [deployed], #23206, #23490, #24144, #24183, #24368, #25112 [in_progress], #25120, #25159 [in_progress], #25178 [in_progress], #25185, #25378 [proposed], #25379 [proposed], #25380 [proposed], #25381 [proposed], #25382 [proposed], #25389 [proposed], #25390 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786286830612` — 8/9/2026, 7:47:11 AM PT — 1 turns
+### `1786288212188` — 8/9/2026, 8:38:13 AM PT — 140 turns
 
 **Original task:**
 
 ```
+#AI Directed Meditation
+
+What else is there to do here? It seems like we could use so much more??
+
+What is 25229 anyways? I don't understand that one
+
+## What I did with your rule-29 push
+
+You asked me to spec these better and use rule 267 to get them moving faster. Here's what actually happened, not just what I filed.
+
+**1. Two of the three "spec better" items were broken in ways that would have failed silently in production.**
+
+- **#25313 [deployed] (Argus cluster scan)** had a genuinely wrong schema. The auto-build pipeline guessed at columns that don't exist: `argus_audit_log.user_id` (rea
+```
+
+**Ideas referenced:** #13757, #14100, #1568, #1573, #178629, #18786, #20315, #23930 [rejected], #23931 [in_progress], #23932 [rejected], #23935 [proposed], #25130, #25156, #25185, #25220, #25227 [in_progress], #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25245, #25246, #25247, #25268 [deployed], #25313 [deployed], #25364 [deployed], #25366 [deployed], #25374, #25383 [proposed], #25384 [proposed], #25385 [proposed], #57179
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786286915134` — 8/9/2026, 8:14:51 AM PT — 90 turns
+
+**Original task:**
+
+```
+#Argus Cluster Idea 
+
+See issues executing 23313, research bug library, and community as necessary and infrastructure and execute below cleanly
+
+Cluster scan (#25313): NOT deployed, file restored clean
+I attempted to deploy argusClusterScan() into alltastic_api.php twice. The second attempt caused a parse error at line 3986 because my python patch used the wrong placeholder pattern for the actual INSERT (the real statement shape differs from my assumption). I rolled back immediately from backup alltastic_api.php.bak-25293-clusterscan-20260809-0655.
+
+Verified restored file:
+
+php -l /var/www/emt
+```
+
+**Ideas referenced:** #15367, #2292 [resolved], #23313, #23952, #24897, #25058, #25269, #25313 [deployed]
+
+**Last PICKUP PROMPT:**
+
+```
+incidents row 2292 (resolved).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #25313 - Argus Cluster Scan deploy
+
+Where we left off (verified 2026-08-09 08:14 PT):
+- Idea #25313 [deployed] - systemwide Argus cluster scan fully wired and verified
+- lib/argus_cluster_scan.php rewritten to real idea_clusters schema; PDO injected, no global getPDO() landmine
+- routes/alltastic_api.php: require at line 54 + cluster scan fires at line 3990 after text-signal classification
+- lib/report_registry.php line 379 card registered; lib/cfa_auto_resolve.php line 314 cfa_apply_cluster_logic() appended
+- Index idx_error_message_ts(error_message(191), created_at) created on argus_audit_log
+- Functional test: 2 test rows inserted, argusClusterScan() created cluster 628, member_count=2; view route HTTP 401 OK (auth gate)
+- Test data cleaned from DB
+- Bug library incident row 2292 in frankenstein_router_incidents (status resolved) filed, no bare number used
+
+Open threads to drive next:
+None - nothing left open.
+
+Reference IDs:
+- Ideas filed: #25313 [deployed]
+- Files touched: /var/www/emtskills/lib/argus_cluster_scan.php, /var/www/emtskills/routes/_view_argus_cluster_scan.php, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/lib/report_registry.php, /var/www/emtskills/lib/cfa_auto_resolve.php
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786286876279` — 8/9/2026, 8:12:08 AM PT — 72 turns
+
+**Original task:**
+
+```
+#GLM Local/frankenstein-llm Improvements / Make Smarter
+
 What can we do to make our instance of  GLM 5.2 Local smarter? What about frankenstein-llm? I'm still seeing some minor issues popping up every now and then. Not severe, but I think we can do better. What can we do?
 ```
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11944, #11953, #12247, #12262, #12299, #12314, #12365, #12366, #12368, #12477, #12618, #12657, #12672, #12673, #12824, #12872, #12878, #13108, #13121, #13202, #13874, #14000, #16120, #16163, #16265, #16304, #16588, #16844, #18312, #18326, #18786, #1993, #20005, #20040, #20054, #20068, #20069, #20082, #20245, #20247, #20264, #20272, #20291, #20297, #20302, #20311, #20662, #20722, #2094, #2095, #2122, #2126, #2130, #2135, #2168, #2169, #2175, #2177, #2208, #2216, #2243, #2247 [resolved], #2267, #2274, #2275, #2278, #2283, #2284, #2287, #2288, #23171, #24635, #24636, #24645, #24646, #24791, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25364 [executing], #25365 [deployed], #25366 [proposed], #25378 [proposed], #25379 [proposed], #25380 [proposed], #25381 [proposed], #25382 [proposed], #25383
 
-### `1786284214295` — 8/9/2026, 7:32:14 AM PT — 98 turns
+**Last PICKUP PROMPT:**
+
+```
+ens step 5 (the 180s SLO wait)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #25382 [proposed] - GLM/frankenstein-llm smartness improvements
+
+Where we left off (confirmed 2026-08-09 08:07 PT):
+- GLM ring healthy: :8210 serving, 11 running, 0 waiting, prefix cache 72.5% (122M hits / 168M queries)
+- Canary false-positive quarantining GLM 97x, the pipelined-ring measurement artifact is mapped to adapter lines 1173-1214 (canary quarantine), 750-775 (wedge), 700-775 (_upstream_is_busy)
+- Julia+Claudia 120B TP=2 DOWN since Aug 6 (~2.6 days), designed GLM overflow absorber offline
+- 7 fleet hosts have stale heartbeats (3-22 days), Cesar down, ring member health unmonitored
+- Quality canary garbage detection works but enforcement bridge not built
+- SLO_TTFB 180/180 are hand-picked constants, per-upstream derivation proposed
+- Adapter code locations: canary quarantine 1173-1214, wedge detect 750-775, _adaptive_floor 1318, _upstream_is_busy 700-775
+
+Open threads to drive next:
+1. #25382 [proposed] - Apply pipelined-ring canary change: edit /usr/local/bin/frankenstein_tools_adapter.py, add PIPELINED_UPSTREAMS set, bypass tok/s floor for :8210, use running>0 OR /v1/models check. ~15 lines.
+2. #25378 [proposed] - Add per-node hex ring health probes (6 nodes via SSH/WG) to adapter, cache 120s, auto-demote when 1+ node down.
+3. #25380 [proposed] - Wire quality canary parseable=false result into fast 3-strike quarantine with 5min auto-rejoin.
+4. #25381 [proposed] - SSH Julia :2205, restart vLLM with --enforce-eager MXFP4, rejoin Claudia Ray worker :2206.
+5. #25379 [proposed] - Compute per-upstream SLO from canary tok_s: SLO = max(30, ctx_est / canary_tok_s * 2.0).
+
+Reference IDs:
+- Ideas filed: #25382 [proposed], #25378 [proposed], #25380 [proposed], #25381 [proposed], #25379 [proposed]
+- Files touched: none, investigation only, no code changed this session
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786284214295` — 8/9/2026, 8:06:32 AM PT — 178 turns
 
 **Original task:**
 
@@ -294,14 +394,63 @@ It was not helping. It was actively hurting, and this audit is what caught it.
 SLS's d
 ```
 
-**Ideas referenced:** #13757, #14100, #1568, #1573, #1584, #16069, #16523, #16817, #178628, #18693, #18743, #18786, #18944, #18951, #2274, #2275, #23483, #23932, #24635, #24636, #24645, #24646, #24791, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25228 [executing], #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25242 [executing], #25245, #25246, #25247, #25268 [awaiting_review], #25284 [proposed], #25313 [awaiting_review], #25364 [deployed], #25365 [deployed], #25366 [deployed], #3098, #78350, #9202, #92400, #9306
+**Ideas referenced:** #13757, #14100, #15367, #1568, #1573, #1584, #16069, #16523, #16817, #178628, #18378, #18693, #18743, #18745, #18786, #18944, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20547, #21125, #21126, #22511, #22583, #2274, #2275, #23483, #23489, #23852, #23920, #23932, #23952, #24635, #24636, #24645, #24646, #24766, #24791, #24897, #24900, #25047, #25058, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25228 [executing], #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25242 [executing], #25245, #25246, #25247, #25268 [awaiting_review], #25269, #25284 [proposed], #25313 [awaiting_review], #25364 [deployed], #25365 [deployed], #25366 [deployed], #3098, #334155, #4338, #64748, #78350, #9202, #92400, #9306
 
 **Last PICKUP PROMPT:**
 
 ```
-I need to include the PICKUP PROMPT block in the actual result this time (I dropped it accidentally).
+I dropped the PICKUP PROMPT block again. Must include it verbatim in the result this time.
 
 ```
+
+### `1786182934055` — 8/9/2026, 8:02:41 AM PT — 386 turns
+
+**Original task:**
+
+```
+Please tell me which individual LLM's have been running in the last 30 minutes. I need to know which ones have the most number of turns. What I'm looking for is individual LLM's. I want you to look inside of Frankenstein tools and inside of Frankenstein LLM and add those to the individual tool LLM total. I do not need to see accumulative Frankenstein LLM or accumulative Frankenstein tools number. I don't care. I wanna see the numbers for the underlying LLMs
+```
+
+**Ideas referenced:** #10108, #10740, #11316, #1151, #11741, #11781, #11944, #11953, #12184, #12366, #12368, #12477, #12588, #12618, #12688, #12689, #12824, #12872, #12878, #13155, #13157, #13202, #13439, #13874, #14133, #14142, #16163, #16265, #16304, #16625, #16680, #16715, #16844, #18312, #18326, #19585, #1998, #20864, #20947, #2139, #2150, #2151, #23171, #25069 [proposed], #25097, #7505, #8365
+
+**Last PICKUP PROMPT:**
+
+```
+emis moved to the newer image.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #25069 — per-model turn decomposition (table live + cron) and registry fix for artemis-gpt-oss-120b stale vLLM image.
+
+Where we left off (verified 2026-08-09 08:02 PT):
+- `admin_portal.per_model_turn_counts` live (cron every 5 min via `/var/www/emtskills/scripts/ingest_per_model_turn_counts.py`) — decomposes frankenstein-tools/llm into underlying LLMs (bigmac/artemis/julia/glm-local) + router picks
+- `/etc/litellm/frankenstein_registry.yaml` line 64 fixed: artemis entry now `Docker intel/llm-scaler-vllm:0.21.0-b1` (verified live `/version` 0.21.1.dev0 on 10.100.0.5:8000)
+- claude-opus-real removed from `_SURFACE_MAP` in `/etc/litellm/_router_core.py` (line ~3520); hardblock revert applied; 2 autonomous RCA retrain chains (idea 20864/20947) still send opus-real via explicit L4 picks — needs source removal if Ruben wants zero opus traffic
+
+Open threads to drive next (EVERY item has real filed idea #):
+1. #25069 [executing] — Monitor `per_model_turn_counts` first overnight window (it populated ~110 windows already; confirm totals sane vs what_served when asked)
+2. #25069 [executing] — Optionally journal the registry fix as proof-of-stale documentation (RCA notes above) so the "CANONICAL" claim stays trustworthy
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: #25069 [executing]
+- Files touched: `/etc/litellm/frankenstein_registry.yaml`, `/etc/litellm/_router_core.py`, `/var/www/emtskills/scripts/ingest_per_model_turn_counts.py`, `/tmp/fix_registry_line64.py`
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per `.clinerules/EXECUTE_ORDER_66`.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786286830612` — 8/9/2026, 7:47:11 AM PT — 1 turns
+
+**Original task:**
+
+```
+What can we do to make our instance of  GLM 5.2 Local smarter? What about frankenstein-llm? I'm still seeing some minor issues popping up every now and then. Not severe, but I think we can do better. What can we do?
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786285065842` — 8/9/2026, 7:31:45 AM PT — 98 turns
 

@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-09T22:04:50.904Z",
+ "generated_at": "2026-08-09T23:04:51.229Z",
  "counts": {
-  "parsed": 4,
-  "reused": 588,
+  "parsed": 0,
+  "reused": 593,
   "failed": 0,
-  "total": 592
+  "total": 593
  },
  "tasks": {
   "1784522296714": {
@@ -119462,13 +119462,13 @@
   },
   "1786245923063": {
    "task_id": "1786245923063",
-   "mtime": 1786313087798,
+   "mtime": 1786314096377,
    "created_at": "2026-08-09T03:25:23.063Z",
-   "last_modified": "2026-08-09T22:04:47.798Z",
-   "size_kb": 5450,
-   "turn_count": 515,
+   "last_modified": "2026-08-09T22:21:36.377Z",
+   "size_kb": 5710,
+   "turn_count": 552,
    "title": "#Argus\n---\n\n\n I was thinking also that if a student issues identified in Argus and there are similar issues with other students in Argos that are found it's the same general type of issue that you want cluster. \n\nBut again you're gonna have to be certain on those ones. Like for example you see some sort of bug or something it needs to be identified to see if there's extensions beyond just the ones too.\n\nApproved\n- #25269 [proposed] - Fix the Kaizon blind spot: wrap argusBuildRevertInfo() in try/catch at both call sites, add the missing error_message column to the INSERT at line 3947, and add a text-signal classifier so responses containing system-error tells count as failures even when succe",
-   "pickup_prompt": "02 live in the Argus terminal.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — deploy argusClusterScan (idea 25313), then verify qb_invoices live (idea 25314).\n\nWhere we left off (verified 2026-08-09 08:41:44 PT):\n- Idea 25316 [deployed]: Gate D3 cross-session thread preservation added to Rule 91 Gate D. Real PHP logic queries prior thread_items for open-thread idea numbers and verifies each carries a status bracket. php -l clean, grep count 3. Backups listed above.\n- Fuzzy close-match deployed in argus_action_catalog.php: \"Did you mean: student_id first last, ...?\" appended on lookup miss. Verified grep, php -l.\n- alltastic_api.php is lint-clean, error_message wiring intact at line 1042. argusClusterScan is NOT in the file. Insert the function before line 78, which is `function argusEnrollmentStatus(`. Read lines 1038-1065 first with sudo sed to copy the exact INSERT literal and execute() argument list before patching. Use the /tmp python3 file method (fuzzyfix.py style), not inline base64.\n- WOPR: load 7.27, GPU 0% util / 15.8 GB cached, zero reranker 500s overnight. RERANK_WORKERS=1 is correct: single 16 GB Blackwell cannot hold two CrossEncoder model copies.\n- Argus last 8h: 44 calls, 93.2% success. Failures were exam_overrides (now fuzzy-assisted), web_fetch (correct private-address refusal), extend_exam_deadline (missing quiz_id param).\n- Ledger row appended 08:35 PT. EXECUTE_ORDER_66 file verified absent on WOPR.\n\nOpen threads to drive next (every item present, no silent drops):\n1. #25313 [executing] — Deploy argusClusterScan() into /var/www/emtskills/routes/alltastic_api.php. Read lines 1038-1065 first, insert function before line 78, wire call after the exact INSERT execute. Verify php -l clean and grep -c argusClusterScan = 2.\n2. #25293 [executing] — Argus terminal banner \"X other students may have the same issue\". BLOCKED on #25313. After live, wire banner when idea_clusters member_count is 2 or more for the current error_message pattern.\n3. #25270 [executing] — WOPR GPU rebalancing. CPUQuota portion done (36 cores, 86% load drop). uvicorn workers portion BLOCKED on #25315. Do not raise RERANK_WORKERS until per-worker VRAM is solved.\n4. #25315 [executing] — CrossEncoder lifespan and load path investigation. Deferred until throughput demand arrives (zero 500s overnight).\n5. #25314 [executing] — Jon runs payment_status on 26215W-02 in the Argus terminal. Confirm real invoice data renders instead of \"(qb_invoices not readable)\" and argus_audit_log captures error_message classifier output. Close when verified.\n6. #25316 [deployed] — Gate D3 cross-session thread preservation. No further action.\n\nReference IDs:\n- #25316 [deployed], #25313 [executing], #25293 [executing], #25270 [executing], #25315 [executing], #25314 [executing]\n- #25269 [deployed] (qb_invoices payment_status fix + error_message wiring, verified 26215W-02 via SQL)\n- Files touched: /var/www/emtskills/clinerules/Rules/91-attempt-completion-gate-d.md, /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/routes/alltastic_api.php\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66 (file verified absent on WOPR — create it or report the gap).\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "er data) — all three addressed\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Argus banner wiring (#25293) and jangeles role review.\n\nWhere we left off (verified 2026-08-09 08:45 PT):\n- PERMISSIONS AUDITED: Jon = Admin (full access). CS team active and effective: jangeles (386, 94.6%), squiroz (311, 96.6%), nguisadio (105, 98.1%), nbeltran (76, 100%). CS has 21 actions covering full student diagnostic surface. 23 Admin-only actions are gated above CS.\n- PERMISSION DENIALS: jangeles had 6 (exam_overrides/extend_exam_deadline/task_worker_run). CFrench resolved (bumped Admin 8/06). vyu had 3. Jon had 0.\n- RECOMMENDATION: Consider bumping jangeles to Admin — he's the third-highest Argus user, handles exam overrides, and the CS role blocks them. No changes recommended for nguisadio/nbeltran/squiroz.\n- #25313 [deployed]: argusClusterScan live at lib/argus_cluster_scan.php, wired into alltastic_api.php. php -l clean.\n- #25316 [deployed]: Gate D3 cross-session thread preservation patched into Rule 91 Gate D. php -l clean, grep count 3.\n- Fuzzy close-match: $findMiss returns \"Did you mean: student_id first last, ...?\" on lookup miss.\n- WOPR: load 7.27, GPU idle, zero reranker 500s. RERANK_WORKERS=1 correct.\n- Ledger row appended 08:35 PT.\n\nOpen threads to drive next:\n1. #25293 [executing] — Argus terminal banner \"X other students may have the same issue.\" Unblocked: argusClusterScan is live. Check whether alltastic_api.php already includes this banner (3 argusClusterScan hits exist in route file — verify what the 3rd does). If not yet wired, read argus_cluster_scan.php function signature and add the terminal-response annotation.\n2. #25314 [executing] — Jon runs payment_status on 26215W-02 in Argus terminal. Confirm real invoice data renders and error_message classifier output captured. Close when verified.\n3. #25270 [executing] — WOPR GPU rebalancing. CPUQuota done. uvicorn workers blocked on #25315.\n4. #25315 [executing] — CrossEncoder lifespan/load crash path. Deferred (zero 500s in over 12h).\n5. HIT BY JANGELES: exam_overrides, extend_exam_deadline, task_worker_run (unarchive) — review whether jangeles needs Admin elevation for exam deadline workflows. Talk to Ruben.\n6. #25316 [deployed] — Gate D3 cross-session preservation. No further action.\n7. #25313 [deployed] — argusClusterScan. No further action (verified, deployed by parallel window).\n\nReference IDs:\n- #25313 [deployed], #25316 [deployed], #25293 [executing], #25314 [executing], #25270 [executing], #25315 [executing], #25269 [deployed]\n- Files touched: /var/www/emtskills/clinerules/Rules/91-attempt-completion-gate-d.md, /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/lib/argus_cluster_scan.php, /var/www/emtskills/routes/alltastic_api.php\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66 (file verified absent on WOPR — create it or report gap).\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1802": null,
     "1803": null,
@@ -120139,11 +120139,11 @@
   },
   "1786285065842": {
    "task_id": "1786285065842",
-   "mtime": 1786285905002,
+   "mtime": 1786313869255,
    "created_at": "2026-08-09T14:17:45.842Z",
-   "last_modified": "2026-08-09T14:31:45.002Z",
-   "size_kb": 189,
-   "turn_count": 98,
+   "last_modified": "2026-08-09T22:17:49.255Z",
+   "size_kb": 292,
+   "turn_count": 154,
    "title": "#WOPR GPU\n\nwhat is the GPU actually doing? Can we get it to run more efficintly? -> __The GPU headroom you reserved is gone.__ End-of-session check found the reranker had grown from 5.2GB to 13.4GB, leaving 19 MiB free instead of ~8GB. The embeddings service is stable (2.3GB), so it's the reranker. Both are healthy right now (`/health` 200 on each), so I did not restart anything on a live box at 11pm. Filed as #25311 [proposed]. I deliberately did not call it a leak: PyTorch's caching allocator never returns memory to the driver, so a burst of large batches looks identical from outside. Telling those apart needs `memory_allocated()` vs `memory_reserved()` from inside the process, not nvidia-",
    "pickup_prompt": null,
    "ideas": {
@@ -120154,6 +120154,7 @@
     "25158": null,
     "25171": null,
     "25172": null,
+    "25185": null,
     "25193": null,
     "25195": null,
     "25201": "rejected",
@@ -120171,18 +120172,22 @@
     "25311": "proposed",
     "25312": null,
     "25368": "deployed",
+    "25369": null,
+    "25425": "proposed",
+    "25426": "deployed",
+    "25427": "deployed",
     "190957": null
    }
   },
   "1786285332678": {
    "task_id": "1786285332678",
-   "mtime": 1786312995678,
+   "mtime": 1786314040043,
    "created_at": "2026-08-09T14:22:12.678Z",
-   "last_modified": "2026-08-09T22:03:15.678Z",
-   "size_kb": 1267,
-   "turn_count": 335,
+   "last_modified": "2026-08-09T22:20:40.043Z",
+   "size_kb": 1508,
+   "turn_count": 398,
    "title": "#Callbacks\n\nthat should go into the call back system, not a ticket. Those tickets are noise and need to be converted to callbacks GOING FORWARD. Offer callbacks to those outstanding in the last 48 hours like that and depreciate old process. -> Answering your question: \"Voice call follow-up needed\" tickets are not offers, they are internal support tickets. When the Voice AI cannot fully resolve a caller and the caller agrees to a follow-up, the AI creates one of these tickets so a human can call or email the person back.\n\n\nAnswering your question: \"Voice call follow-up needed\" tickets are not offers, they are internal support tickets. When the Voice AI cannot fully resolve a caller and the ca",
-   "pickup_prompt": "backs tab which Vicky manages.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up topic — Callback visibility & accountability system (complete, verified).\n\nWhere we left off (verified 2026-08-09 08:55 PT):\n- `routes/telephony_hub.php`: Gold alert banner at line ~1999 showing pending/today callback counts with \"View Callback Queue\" link. Backed up: `.bak-20260809-callback-alerts`\n- `lib/callback_intent_detector.php`: `bookCallbackSlot()` now emails Vicky on new bookings + logs to `callback_notes`. Backed up: `.bak-20260809-notify`\n- `crons/policing/cron_callback_policing.php`: Every 15 min — escalating overdue (>60min) + upcoming (30min) alerts to Vicky. Installed in `/etc/cron.d/emsu-callback-policing`\n- `archive/callback_digest_deprecated_20260809/`: 3 deprecated digest files archived\n- E2E verified: notification email sent, test data cleaned up\n\nOpen threads to drive next:\n1. #25365 [deployed] — callback system now has full visibility (banner + email on booking + policing cron). Monitor Vicky's inbox + telephony hub Callbacks tab for first 48h.\n2. (human-only decision, no idea) — DiscordNotify::resolveWebhook queries `channel_key` but the `discord_webhook_config` table uses `webhook_key` — this means Discord notify may not be routing correctly. Not introduced by this change; pre-existing.\n\nReference IDs:\n- Ideas filed: #25365 [deployed]\n- Files touched: telephony_hub.php, callback_intent_detector.php, crons/policing/cron_callback_policing.php\n- Cron entries: /etc/cron.d/emsu-callback-policing (every 15 min)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "p` — new, 15-min policing cron\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up — Voice follow-up callback system deployed with visibility + accountability layers.\n\nWhere we left off (verified 2026-08-09 15:19 PT):\n- `cron/cron_post_call_summary.php`: AUTO-CALLBACK block has dedup guard + own-number skip (lines 227-268). Runs clean.\n- `crons/policing/cron_callback_policing.php`: runs every 15 min via `/etc/cron.d/emsu-callback-policing`. Checks overdue + upcoming callbacks, emails Vicky.\n- 19 clean callbacks today (post-cleanup). 118 available slots.\n- Both crons verified running as www-data, exit 0.\n\nOpen threads to drive next:\n1. None — all work completed this session.\n\nReference IDs:\n- Ideas: #25365 [deployed] — callback system core fix + consumer integration\n- Files: `/var/www/emtskills/cron/cron_post_call_summary.php`, `/var/www/emtskills/api/voice/vapi_server_webhook.php`, `/var/www/emtskills/lib/callback_intent_detector.php`, `/var/www/emtskills/routes/telephony_hub.php`, `/var/www/emtskills/crons/policing/cron_callback_policing.php`\n- Cron: `/etc/cron.d/emsu-callback-policing`\n- Archive: `/var/www/emtskills/archive/callback_digest_deprecated_20260809/`\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
     "1745": null,
     "2274": null,
@@ -120426,11 +120431,11 @@
   },
   "1786288392773": {
    "task_id": "1786288392773",
-   "mtime": 1786313073366,
+   "mtime": 1786313697816,
    "created_at": "2026-08-09T15:13:12.773Z",
-   "last_modified": "2026-08-09T22:04:33.366Z",
-   "size_kb": 560,
-   "turn_count": 145,
+   "last_modified": "2026-08-09T22:14:57.816Z",
+   "size_kb": 663,
+   "turn_count": 198,
    "title": "#Make GLM / frankenstein-llm smarter\n\nDo you agree with these? Take rule 29 action. Do not inject anthropic\n\n## GLM/frankenstein-llm Smartness Assessment: 2026-08-09\n\n### Status\nInvestigation only. Five improvement ideas filed. No code changed this session.\n\n### What Is Working\n- GLM ring serving at :8210 (observed 07:51 PT): 11 running, 0 waiting, 0 preemptions\n- Prefix cache 72.5% hit rate (122M hits / 168M queries)\n- Adapter, LiteLLM, and tunnel all active\n- Spill ladder functional: overflow reaches Artemis 120B (~44 tok/s) through GLM_OVERFLOW_FALLTHROUGH when canary quarantines GLM\n\n### The Big Finding\nThe canary probe sends one 5-token request through the 6-stage pipeline, measures 0.2",
    "pickup_prompt": null,
    "ideas": {
@@ -120438,7 +120443,7 @@
     "1967": null,
     "2050": null,
     "2293": "deployed",
-    "2294": null,
+    "2294": "deployed",
     "10740": null,
     "11397": null,
     "11936": null,
@@ -120498,7 +120503,43 @@
     "25381": "proposed",
     "25382": "proposed",
     "25389": "proposed",
-    "25390": "proposed"
+    "25390": "proposed",
+    "25420": "proposed"
+   }
+  },
+  "1786313131031": {
+   "task_id": "1786313131031",
+   "mtime": 1786314231374,
+   "created_at": "2026-08-09T22:05:31.031Z",
+   "last_modified": "2026-08-09T22:23:51.374Z",
+   "size_kb": 396,
+   "turn_count": 108,
+   "title": "#AI Directed Meditation\n\nFor clarification on the idea, it is the idea of holding an idea in the mind that begets another idea. The subject idea is difficult to hold in the mind at the same time as holdingthe object idea as the subject idea is executed at that exact insance. Just for arguments sake. Your point remains valid on 25229 however. \n\nHow are the scans going? \n\nResole this -> The real gap was that __nothing tested whether the mechanical claims were true__.\n\nHow is this going? Did we execute everythign? which venues are using AI Directed Meditation. Which others acan be used or should be used still? What has been their impact thus far. How can we make it even better? \n\n--\n## What 252",
+   "pickup_prompt": null,
+   "ideas": {
+    "14100": null,
+    "23932": null,
+    "23935": null,
+    "25185": null,
+    "25229": "proposed",
+    "25238": "executing",
+    "25240": "executing",
+    "25241": "executing",
+    "25242": null,
+    "25268": "deployed",
+    "25313": "deployed",
+    "25364": "deployed",
+    "25366": "deployed",
+    "25374": null,
+    "25375": null,
+    "25383": "deployed",
+    "25384": "deployed",
+    "25385": "deployed",
+    "25421": "proposed",
+    "25422": "proposed",
+    "25423": "proposed",
+    "25424": "proposed",
+    "178629": null
    }
   }
  }

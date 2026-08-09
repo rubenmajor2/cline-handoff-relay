@@ -6,14 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/8/2026, 9:46:55 PM PT | window: last 72h | 99 tasks | index total 580 (parsed 5, cached 575)
+Generated: 8/8/2026, 10:46:55 PM PT | window: last 72h | 99 tasks | index total 580 (parsed 6, cached 574)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786249226096` | 8/8/2026, 9:37:32 PM | 5 | 46KB | #AI Directed Meditation |
-| `1786214132308` | 8/8/2026, 9:37:26 PM | 191 | 868KB | I recently saw a task that referenced Anthropic and us paying for some kind of anthropic t |
-| `1786245923063` | 8/8/2026, 9:37:20 PM | 159 | 1900KB | #Argus |
-| `1786244179890` | 8/8/2026, 9:30:44 PM | 340 | 608KB | #WOPR GPU |
+| `1786245923063` | 8/8/2026, 10:46:49 PM | 179 | 1977KB | #Argus |
+| `1786214132308` | 8/8/2026, 10:46:41 PM | 369 | 1139KB | I recently saw a task that referenced Anthropic and us paying for some kind of anthropic t |
+| `1786249226096` | 8/8/2026, 10:44:52 PM | 34 | 296KB | #AI Directed Meditation |
+| `1786244179890` | 8/8/2026, 10:42:15 PM | 422 | 855KB | #WOPR GPU |
+| `1786182934055` | 8/8/2026, 10:42:13 PM | 162 | 540KB | Please tell me which individual LLM's have been running in the last 30 minutes. I need to  |
+| `1786229125708` | 8/8/2026, 10:37:14 PM | 48 | 211KB | Do a deep dive and give your thoughts on the 85% confidence gate of rule 29 and whether it |
 | `1786248426374` | 8/8/2026, 9:17:39 PM | 5 | 33KB | #AI Directed Meditation |
 | `1786225462991` | 8/8/2026, 9:05:57 PM | 403 | 1102KB | I had a thought. One advantage the LLM seems to have over the human is that it can think a |
 | `1786244855784` | 8/8/2026, 8:08:15 PM | 3 | 4KB | iteration test |
@@ -27,7 +29,6 @@ Generated: 8/8/2026, 9:46:55 PM PT | window: last 72h | 99 tasks | index total 5
 | `1786229375596` | 8/8/2026, 4:32:47 PM | 266 | 810KB | Something just knocked out frankenstein-llm. Can't find which process did it. Can you brin |
 | `1786211568282` | 8/8/2026, 4:25:57 PM | 492 | 1167KB | #Argus |
 | `1786211859440` | 8/8/2026, 4:12:34 PM | 590 | 1093KB | #Subagents, etc... |
-| `1786229125708` | 8/8/2026, 4:09:21 PM | 42 | 181KB | Do a deep dive and give your thoughts on the 85% confidence gate of rule 29 and whether it |
 | `1786214054947` | 8/8/2026, 3:15:32 PM | 476 | 1066KB | Can you play doctor of ruben executor and take a look at this page: https://emsuniversity. |
 | `1786211264211` | 8/8/2026, 3:09:34 PM | 784 | 1911KB | #Context |
 | `1786211367196` | 8/8/2026, 12:26:07 PM | 302 | 1193KB | #Big Mac |
@@ -51,7 +52,6 @@ Generated: 8/8/2026, 9:46:55 PM PT | window: last 72h | 99 tasks | index total 5
 | `1786182696040` | 8/8/2026, 3:59:39 AM | 194 | 523KB | Pick up ideas 24990 and 24991 (both blocked, executor impl_failed twice, hand-ship per rul |
 | `1786182735891` | 8/8/2026, 3:57:45 AM | 230 | 1842KB | Pick up idea 25058, Argus rule-29 act-first mode. First run get_idea_progress(25058). Rube |
 | `1786182757627` | 8/8/2026, 3:54:33 AM | 230 | 652KB | Pick up idea 25038, six silently-broken EMSU crons. First run get_idea_progress(25038). Tr |
-| `1786182934055` | 8/8/2026, 3:51:55 AM | 84 | 267KB | Please tell me which individual LLM's have been running in the last 30 minutes. I need to  |
 | `1786181053099` | 8/8/2026, 3:46:57 AM | 222 | 784KB | #Argus |
 | `1786182716842` | 8/8/2026, 3:16:05 AM | 150 | 770KB | Pick up idea 25059, Argus terminal IA overhaul in /var/www/emtskills/routes/argus_download |
 | `1786179680779` | 8/8/2026, 3:07:02 AM | 166 | 406KB | ═══════════════════════════════════════════════ |
@@ -114,78 +114,7 @@ Generated: 8/8/2026, 9:46:55 PM PT | window: last 72h | 99 tasks | index total 5
 
 ## Per-window detail
 
-### `1786249226096` — 8/8/2026, 9:37:32 PM PT — 5 turns
-
-**Original task:**
-
-```
-#AI Directed Meditation
-
----
-
-What is this all called Multi-Threading, whatever? Can we just call it AI Directed Medication? Or do you have a different situation/solution? 
-
-Shouldn't we put this on this page: https://emsuniversity.com/emtskills/routes/llm_router_live.php 
-
-Is every 6 hours enough? -> - A student like `26422FT-08` is blocked on payment. A human might notice days later when the student emails frustrated. The sweeper catches it automatically, every 6 hours.
-
-But also Kazon of course woudl need to know
-
-Approved, but Make sure ideas are SLS compliant and plus more to it then this
-```
-
-**Ideas referenced:** #2274, #2275, #24635, #24636, #24645, #24646, #24791, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25227 [executing], #25228 [executing], #25229 [proposed], #25238 [proposed], #25240 [proposed], #25241 [proposed], #25242 [in_progress], #25268 [executing], #25284 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786214132308` — 8/8/2026, 9:37:26 PM PT — 191 turns
-
-**Original task:**
-
-```
-I recently saw a task that referenced Anthropic and us paying for some kind of anthropic thing. This happened earlier today but I didn't catch it because there was another emergent issue in the window. Can you tell me if there is something that attempted to inject Anthropic? There are literally no places where anthropic should be living or residing except fot as the vision doorman but only 50-50 with Kimi K3.
-```
-
-**Ideas referenced:** #0000, #10108, #10740, #11741, #11781, #1234 [outdated], #12477, #12584, #12618, #12824, #12872, #12878, #13202, #13204, #16163, #16265, #16304, #16844, #17130 [superseded], #17537 [rejected], #18132 [deployed], #18312, #18326, #19125, #19173, #19898, #19904, #1998, #20251 [deployed], #2059 [resolved], #2074 [resolved], #20957, #20958, #21134, #2124 [open], #2128 [resolved], #2178 [resolved], #2207 [investigating], #2274 [resolved], #2275 [resolved], #23171, #24995, #25066 [deployed], #25082 [executing], #25097, #25130 [superseded], #25131, #25133, #25157, #25185, #25196 [deployed], #25266 [proposed], #25267 [proposed], #7505
-
-**Last PICKUP PROMPT:**
-
-```
-thropic/v1/messages` endpoint.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25267 [proposed] -- implement the corrective spec for the backward Subagent-DS gate.
-
-Where we left off (verified 2026-08-08 20:09 PT):
-- Ruben asked for an explanation of open-thread item #25267 [proposed]. Provided above with the three-line diff.
-- The Anthropic injection investigation is complete: no Anthropic billing/keys; the alarm was from DeepSeek's `/anthropic/v1/messages` endpoint after a 33-minute config change.
-- Rule 297 RCA on the 6th bare-number violation is complete: BRACKET SCOPE section added to rule 91 and reindexed.
-- HANDOFF_NOTES.md updated 16:51 PT.
-
-Open threads to drive next:
-1. #25130 [executing] -- the Subagent-DS gate is backwards. The corrective spec (three lines of changes in `_router_core.py`) has not been addressed.
-2. #25267 [proposed] -- implement the corrective spec: add `emsu-executor-auto` to the gate entrypoint set, remove the `not _has_tools_rc` disjunct, update rule 00 doctrine. Coordinate systemctl restart timing with Ruben.
-3. #25082 [executing] -- the original DI proposal; superseded by #25130 [executing]. Decide: close as superseded or merge.
-4. #25266 [proposed] -- verify litellm was restarted after the 16:21 PT guard patch (bug-library incident 2274 [deployed]).
-
-Reference IDs:
-- Ideas filed this session: #25266 [proposed], #25267 [proposed]
-- Ideas carried: #25130 [executing], #25082 [executing]
-- Bug-library incidents: 2274 [deployed], 2275 [deployed]
-- Files touched: /etc/litellm/_router_core.py, /etc/systemd/system/litellm.service.d/10-frugal.conf, /var/www/emtskills/clinerules/Rules/91-every-completion-needs-pickup-prompt.md, /var/www/emtskills/docs/HANDOFF_NOTES.md
-- Rule 297 all three deliverables completed this session
-- Rule-91 BRACKET SCOPE section deployed and reindexed
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</completion_result>
-```
-
-### `1786245923063` — 8/8/2026, 9:37:20 PM PT — 159 turns
+### `1786245923063` — 8/8/2026, 10:46:49 PM PT — 179 turns
 
 **Original task:**
 
@@ -207,39 +136,119 @@ Approved
 **Last PICKUP PROMPT:**
 
 ```
-lures rather than hiding them.
+ifespan, needs investigation |
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task — Argus Kaizon blind spot + qb_invoices fix + WOPR capacity decision.
+Pick up task — #25293 cluster pipeline + verify qb_invoices fix live + monitor reranker load.
 
-Where we left off (verified 2026-08-08 21:09 PT):
-- #25269 [deployed] — try/catch + error_message column + argusAuditClassify() helper deployed to alltastic_api.php. Backups at alltastic_api.php.bak-25269-20260808-2040 and .bak-25269-classifier. php -l clean, opcache revalidates on timestamp so no FPM reload needed.
-- FIX A: line ~3938, argusBuildRevertInfo() now in try/catch, on throw → $rule29Gate = 'revert_info_error'
-- FIX B: line 3986 INSERT now has 7 placeholders (`success, error_message, duration_ms, mode`) with classifier result[1] for error_message
-- FIX C: argusAuditClassify() at ~line 269, 12 error patterns (not readable, Call to undefined, SQLSTATE, timed out, etc.), returns [0, 'text_signal: ...'] on match
-- #25270 [proposed] — CPUQuota reduction BLOCKED by override.conf guard. php-fpm CPUWeight pending Ruben decision. uvicorn workers crash-looped (CrossEncoder lifespan issue, needs investigation before retry).
-- #25293 [proposed, id 25293] — Cluster idea filed. Existing infra: idea_clusters, idea_cluster_members, orchestrator_ideas.source_cluster_id.
+Where we left off (verified 2026-08-08 21:37 PT):
+- #25269 [deployed] — try/catch + error_message column + argusAuditClassify() deployed to alltastic_api.php. Backups on WOPR (.bak-25269-20260808-2040, .bak-25269-classifier). php -l clean.
+- qb_invoices fix [deployed] — argus_action_catalog.php:1569-1574 SQL corrected from invoice_number/balance/student_email→qb_doc_number/balance_due/student_id. Backup at .bak-25269-pay-20260808-2135. Verified real data for 26215W section: 8 invoice rows returned.
+- #25293 [proposed, id=25293] — Cluster pipeline idea filed. No code written yet. Infrastructure exists: idea_clusters tables, orchestrator_ideas.source_cluster_id/ cluster_size columns.
+- #25270 [evaluated] — RECOMMENDATION: KEEP reranker CPUQuota at 3600%. Load dropped from 51.94→9.62 after 19:45 restart (same quota). GPU rebalancing confirmed — 2 Python processes on GPU, healthy. Lowering quota risks timeout regression (override.conf guard: concurrency<16 timed out). uvicorn workers (#25195) still crash-looped.
+- WOPR state: load 9.62, 1h52m uptime since 19:45 restart, GPU at 100% util (13.5GB used), mariadbd at 102% CPU (dominant), reranker at 22% CPU (well-behaved).
 
 Open threads to drive next:
-1. #25269 [deployed, needs post-deploy verification] — after 1-2 days of live traffic, verify argus_audit_log has rows with error_message LIKE 'text_signal:%' and success=0. If zero rows after 48h, investigate whether the code path exercising line 3986 is actually hit in production (it may only fire on the mutation/action path, not the chat path).
-2. Root cause fix for qb_invoices: edit `argus_action_catalog.php:1574` to NOT return success=1 when it catches a Throwable. The catch block should set `$result['success'] = false` with the real exception message. This is the permanent fix — the #25269 classifier catches it reactively but the handler itself should be honest.
-3. #25293 [proposed] — Wire the text-signal classifier output into the idea_clusters pipeline. When argusAuditClassify() fires, enqueue a scan of recent argus_audit_log for matching error_message patterns. The cluster infrastructure (source_cluster_id, cluster_size columns) already exists in orchestrator_ideas.
-4. #25270 [proposed] — Ruben needs to decide on the WOPR capacity split. php-fpm CPUWeight raise is the safe action. Document: lowering reranker quota risks production timeouts (override.conf guard), and uvicorn workers failed at startup (CrossEncoder crash).
-5. Payment status for 26215W section: all four students have valid QBO invoices — the `not readable` error is a MySQL query die, not a data problem. Run `SELECT invoice_number FROM qb_invoices WHERE student_id LIKE '%26215W%' LIMIT 1` to confirm, then diagnose why the payment_status SELECT throws.
-6. #25262 [executing] — Kaizon protect Argus watchdog. Now that #25269 is deployed and failure rows carry success=0, the watchdog has proper signal. Verify it fires on the next cron tick.
+1. #25293 [proposed] — Build the cluster pipeline: when argusAuditClassify() fires, scan argus_audit_log (last 60 minutes) for matching error_message patterns. If ≥2 rows match, INSERT into idea_clusters and link via orchestrator_ideas.source_cluster_id. Wire into the Argus terminal so Jon sees "X other students may have the same issue" on systemic patterns.
+2. Verify qb_invoices fix live — have Jon run payment_status on a 26215W student (e.g. 26215W-02 which has a $1,545 balance due). Confirm the response shows real invoice data instead of "(qb_invoices not readable)". Check argus_audit_log for the row.
+3. Monitor reranker load for 48 hours. If sustained load >30, test reducing concurrency to 20 workers BEFORE touching CPUQuota. The guard comment from override.conf says concurrency=12 timed out — never go below 16.
+4. #25269 post-deploy verification — after 1-2 days, check argus_audit_log for rows WHERE error_message LIKE 'text_signal:%' AND success=0. If zero rows, verify the 'terminal' mode INSERT at line 3986 is being exercised in production (it only fires for mutation/action path, not chat tools).
+5. uvicorn workers (#25195) — investigate CrossEncoder lifespan crash before retry. The crash is at process startup (exit code 1, main process exits immediately). Root cause TBD, likely model load path.
+6. Append to cline_task_ledger.md per rule 07, run order 66.
 
 Reference IDs:
-- Ideas filed this session: #25269 [deployed], #25293 [proposed]
-- Ideas evaluated: #25270 [proposed/partially-blocked], #25271 [deployed/verified]
-- Ideas carried: #25262 [executing], #25263 [executing], #25264 [executing], #25195 [proposed], #25058 [deployed]
-- Files touched: /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/docs/HANDOFF_NOTES.md
-- Backups: alltastic_api.php.bak-25269-20260808-2040, alltastic_api.php.bak-25269-classifie
+- Deployed: #25269 [deployed], qb_invoices_fix [deployed]
+- Verified: #25271 [deployed/verified]
+- Proposed: #25293 [proposed]
+- Evaluated: #25270 [recommended Keep 3600%]
+- Blocked: #25195 [uvicorn crash-loop]
+- Executing: #25262 [Kaizon watchdog], #25263, #25264
+- Files touched: alltastic_api.php, argus_action_catalog.php, HANDOFF_NOTES.md
+- Backups: .bak-25269-20260808-2040, .bak-25269-classifier, .bak-25269-pay-20260808-2135, .bak-revertfix-20260808-182034
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
 ```
 
-### `1786244179890` — 8/8/2026, 9:30:44 PM PT — 340 turns
+### `1786214132308` — 8/8/2026, 10:46:41 PM PT — 369 turns
+
+**Original task:**
+
+```
+I recently saw a task that referenced Anthropic and us paying for some kind of anthropic thing. This happened earlier today but I didn't catch it because there was another emergent issue in the window. Can you tell me if there is something that attempted to inject Anthropic? There are literally no places where anthropic should be living or residing except fot as the vision doorman but only 50-50 with Kimi K3.
+```
+
+**Ideas referenced:** #0000, #10108, #10740, #11741, #11781, #1234 [outdated], #12477, #12584, #12618, #12824, #12872, #12878, #13202, #13204 [executing], #16163, #16265, #16304, #16844, #17130 [superseded], #17537 [rejected], #18132 [deployed], #18312, #18326, #19125, #19173, #19898, #19904, #1998, #20251 [deployed], #2059 [resolved], #2074 [resolved], #20957, #20958, #21134, #2124 [open], #2128 [resolved], #2178 [resolved], #2207 [investigating], #2274 [resolved], #2275 [resolved], #23171, #24995, #25066 [deployed], #25082 [executing], #25097, #25130 [superseded], #25131, #25133, #25157 [executing], #25185, #25196 [deployed], #25266 [proposed], #25267 [proposed], #7505
+
+**Last PICKUP PROMPT:**
+
+```
+window has the full 120B pool.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — close out the subagent-DS routing ideas and verify ongoing performance.
+
+Where we left off (verified 2026-08-08 22:12 PT):
+- Three-line fix deployed to `/etc/litellm/_router_core.py`: (1) `emsu-executor-auto` added to gate entrypoint, (2) `not _has_tools_rc` disjunct removed, (3) `_is_subagent_turn` detection patched for non-tool subagents.
+- Litellm restarted at 21:37:25 PT. Audit log confirms four subagent dispatches routed to `deepseek-v4-pro` (Sub-agent Executor surface).
+- Anthropic injection investigation complete. No billing/keys involved.
+- Rule 297 RCA complete. Rule-91 BRACKET SCOPE deployed and reindexed.
+- HANDOFF_NOTES.md updated 16:51 PT.
+
+Open threads to drive next:
+1. Close #25267 [proposed] as deployed (fix shipped + verified).
+2. Close #25130 [executing] as deployed (corrective spec executed).
+3. Close #25082 [executing] as superseded.
+4. Close #25266 [proposed] as deployed (litellm restarts at 19:45 and 21:37 both verified).
+5. Close #25157 [executing] as deployed (the revert idea referenced in the code comments).
+6. Close #13204 [executing] if the no-tool-use corrective retry is no longer needed.
+
+Reference IDs:
+- Ideas filed this session: #25266 [proposed], #25267 [proposed]
+- Ideas carried: #25130 [executing], #25082 [executing]
+- Bug-library incidents: 2274 [deployed], 2275 [deployed]
+- Files touched: /etc/litellm/_router_core.py, /etc/systemd/system/litellm.service.d/10-frugal.conf, /var/www/emtskills/clinerules/Rules/91-every-completion-needs-pickup-prompt.md, /var/www/emtskills/docs/HANDOFF_NOTES.md
+- Rule 297 all three deliverables completed this session
+- Rule-91 BRACKET SCOPE deployed and reindexed
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786249226096` — 8/8/2026, 10:44:52 PM PT — 34 turns
+
+**Original task:**
+
+```
+#AI Directed Meditation
+
+---
+
+What is this all called Multi-Threading, whatever? Can we just call it AI Directed Medication? Or do you have a different situation/solution? 
+
+Shouldn't we put this on this page: https://emsuniversity.com/emtskills/routes/llm_router_live.php 
+
+Is every 6 hours enough? -> - A student like `26422FT-08` is blocked on payment. A human might notice days later when the student emails frustrated. The sweeper catches it automatically, every 6 hours.
+
+But also Kazon of course woudl need to know
+
+Approved, but Make sure ideas are SLS compliant and plus more to it then this
+```
+
+**Ideas referenced:** #06222, #071410, #0891, #10003, #10017, #10107, #11160, #11798, #11812, #11942, #11943, #12184, #12245, #127760, #128225, #128269, #14141, #141414, #14261, #14532, #15803, #16233, #166534, #181820, #19653, #2274, #2275, #23264, #24635, #24636, #24645, #24646, #24791, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25227 [executing], #25228 [executing], #25229 [proposed], #25238 [proposed], #25240 [proposed], #25241 [proposed], #25242 [in_progress], #25268 [executing], #25284 [proposed], #2563, #334155, #3730, #4338, #475569, #566042, #6366, #64748, #8212, #92400, #9675, #9679, #9888, #9889
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786244179890` — 8/8/2026, 10:42:15 PM PT — 422 turns
 
 **Original task:**
 
@@ -257,9 +266,97 @@ curious, what exactly causes CPU to go above 400% are there other solutions besi
 nvidia-smi is working right now: RTX PRO 2000 Blackwell, 16GB, driver 610.43.02. The reranker restarted itself on CUDA ("Reranker device selected: cuda") and is already holding 2.3GB VRAM. All prod services healthy (nginx/fpm/m
 ```
 
-**Ideas referenced:** #2285, #2286, #25185, #25201 [rejected], #25223 [executing], #25224 [executing], #25225 [executing], #25226 [executing], #25256 [executing], #25279 [proposed], #25280 [proposed], #25281 [proposed], #25282 [proposed], #25283 [deployed], #25294 [proposed], #25295 [proposed]
+**Ideas referenced:** #2285, #2286, #2287, #25185, #25201 [rejected], #25223 [executing], #25224 [executing], #25225 [executing], #25226 [executing], #25256 [executing], #25279 [proposed], #25280 [proposed], #25281 [proposed], #25282 [proposed], #25283 [deployed], #25294 [proposed], #25295 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786182934055` — 8/8/2026, 10:42:13 PM PT — 162 turns
+
+**Original task:**
+
+```
+Please tell me which individual LLM's have been running in the last 30 minutes. I need to know which ones have the most number of turns. What I'm looking for is individual LLM's. I want you to look inside of Frankenstein tools and inside of Frankenstein LLM and add those to the individual tool LLM total. I do not need to see accumulative Frankenstein LLM or accumulative Frankenstein tools number. I don't care. I wanna see the numbers for the underlying LLMs
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11944, #11953, #12366, #12368, #12477, #12618, #12824, #12872, #12878, #13202, #13874, #16163, #16265, #16304, #16844, #18312, #18326, #2139, #2150, #2151, #23171, #25069 [proposed], #25097
+
+**Last PICKUP PROMPT:**
+
+```
+ adapter-internal turns = 115.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #current — Under-the-hood individual LLM turn counts.
+
+Where we left off (verified 2026-08-08 22:40 PT):
+- Idea #25069 [executing] upgraded: per_model_turn_counts now ingests adapter log upstreams, mapping 10.100.0.19=bigmac-gpt-oss-120b, 10.100.0.5=artemis-gpt-oss-120b, 127.0.0.1:11513=julia-120b, 127.0.0.1:8210=frankenstein-glm52-local
+- 30-min under-the-hood counts: deepseek-v4-pro (264), bigmac (198), artemis (135), GLM-local (115 = 52 direct + 63 adapter), julia (104), claude-opus-real (50), ollama 7B/14B/32B (~94 combined), glm-5.2 cloud (30), emsu-codegen (16)
+- bigmac is live and serving heavy load; julia active this window (stale-down label was old)
+- frankenstein-405b excluded (stale, boxes now GLM ring)
+
+Open threads to drive next:
+1. #25069 [executing] — Cron confirmed at */5; watch one full cron cycle to confirm clean window rows
+2. (human-only decision, no idea) — Decide if claude-opus-real 50 turns should be routed elsewhere per the opus ban policy
+
+Reference IDs:
+- Ideas filed: #25069 [executing]
+- Files touched: /var/www/emtskills/scripts/ingest_per_model_turn_counts.py, /tmp/count_upstreams_30min.py
+- DB table: admin_portal.per_model_turn_counts
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Idea #25069 deployed + upgraded (router audit + adapter log ingestion)
+- [x] Extracted per-upstream box counts from adapter log (bigmac 198, artemis 135, julia 104, glm 63)
+- [x] Verified DB contains under-the-hood rows
+- [x] Delivered individual LLM report with no adapter labels
+</task_progress>
+</attempt_completion>
+```
+
+### `1786229125708` — 8/8/2026, 10:37:14 PM PT — 48 turns
+
+**Original task:**
+
+```
+Do a deep dive and give your thoughts on the 85% confidence gate of rule 29 and whether it's the sweet spot of innovation and progress without too much fallback and if so why, if not why not and recommendations if any? 
+
+When do we end up with rollbacks or reversions or don't like the 85% gate. Give good data
+```
+
+**Ideas referenced:** #17537, #17619 [deployed], #18806, #20041, #2035, #2037 [in_progress], #2040, #2067, #2069, #2070, #2074, #2075, #2077, #2086, #2088, #2091, #20914, #2104, #2105 [deployed], #2110, #2112, #2113, #2115, #2117, #2119, #2137, #2181, #2203, #2238 [deployed], #2240 [deployed], #2242 [deployed], #2246, #2249 [needs_verify], #2268, #2273, #25247 [deployed]
+
+**Last PICKUP PROMPT:**
+
+```
+with the handler dispatch fix.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #85gate-deepdive, revised: rejecting the 0.90+ retry recommendation, replacing it with handler dispatch fix (#25247 [proposed]).
+
+Where we left off (verified 2026-08-08 22:35 PT):
+- Ruben correctly called out the retry recommendation as wrong given the 0.85 data.
+- Re-pulled failed 0.90+ proposed_actions: ~120 `acknowledge_and_log` (no handler), ~50 API timeout/500 (retry already exhausted), 1 content guard (gate working).
+- Conclusion: 0.90+ failures are a dispatch plumbing gap, not a retry problem. Fix: wire `acknowledge_and_log` handler in the orchestrator.
+- Idea #25247 [proposed] needs update: title and description should reflect the handler fix, not the retry recommendation.
+
+Open threads to drive next:
+1. #25247 [proposed], update description: reject retry, replace with `acknowledge_and_log` handler wiring (eliminates ~70 pct of autonomous failures with a dispatch fix).
+
+Reference IDs:
+- Idea: #25247 [proposed]
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1786248426374` — 8/8/2026, 9:17:39 PM PT — 5 turns
 
@@ -810,82 +907,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1786229125708` — 8/8/2026, 4:09:21 PM PT — 42 turns
-
-**Original task:**
-
-```
-Do a deep dive and give your thoughts on the 85% confidence gate of rule 29 and whether it's the sweet spot of innovation and progress without too much fallback and if so why, if not why not and recommendations if any? 
-
-When do we end up with rollbacks or reversions or don't like the 85% gate. Give good data
-```
-
-**Ideas referenced:** #17537, #17619 [deployed], #18806, #20041, #2035, #2037 [in_progress], #2040, #2067, #2069, #2070, #2074, #2075, #2077, #2086, #2088, #2091, #20914, #2104, #2105 [deployed], #2110, #2112, #2113, #2115, #2117, #2119, #2137, #2181, #2203, #2238 [deployed], #2240 [deployed], #2242 [deployed], #2246, #2249 [needs_verify], #2268, #2273, #25247 [deployed]
-
-**Last PICKUP PROMPT:**
-
-```
-dive complete. Analysis below.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #85gate-deepdive, the 85 percent confidence gate deep-dive, is it the sweet spot (#25247 [proposed]).
-
-Where we left off (verified 2026-08-08 16:06 PT):
-- Filed idea #25247 [proposed] with the full data-backed recommendation.
-- Pulled live data from orchestrator_decisions: 20,509 act_autonomous decisions; 14,526 at 0.90+; 1,987 at 0.85-0.89.
-- Failure rates: 0.85-0.89 = 0.05 pct (1/1987), 0.90+ = 1.22 pct (177/14526).
-- Failure root causes are infrastructure/transient (timeouts, HTTP 500s, no-handler), not confidence misjudgment.
-- Bug library + Kaizen confirm rollbacks are mostly deploy-side (web_500 auto-rollback, safe_write health rollback), not confidence-gate failures.
-
-Open threads to drive next:
-1. #25247 [proposed], consider adding a retry/resilience layer to the 0.90+ bucket, 177 failures are transient infra, not confidence. Gate itself is sound.
-
-Reference IDs:
-- Idea: #25247 [proposed]
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-
-(FULL ANALYSIS)
-
-# Is the 85 Percent Confidence Gate the Sweet Spot?
-
-## Executive verdict
-
-Yes. 85 percent is the correct calibration for the confidence gate. The live data shows it sits at the knife's edge of the cost/benefit tradeoff: it lets the overwhelming majority of high-confidence autonomous work flow unimpeded, and the marginal 5-point band it carves out (0.85-0.89) has the LOWEST failure rate in the whole system. It is not the thing causing rollbacks. The rollbacks come from a different, orthogonal failure class.
-
-## The data, direct from orchestrator_decisions
-
-I pulled every decision row and binned by confidence:
-
-| Confidence band | Decision class | Completed | Failed | Failure rate |
-|---|---|---|---|---|
-| 0.90-1.00 | act_autonomous | 14,334 | 177 | 1.22 pct |
-| 0.85-0.89 | act_autonomous | 1,986 | 1 | 0.05 pct |
-| 0.90-1.00 | act_verify | 221 | 29 | 11.6 pct |
-| 0.85-0.89 | act_verify | 3,575 | 2 | 0.06 pct |
-| 0.80-0.84 | act_verify | 687 | 4 | 0.58 pct |
-| 0.70-0.79 | act_verify | 3,618 | 10 | 0.28 pct |
-
-Two clean facts fall out:
-
-1. **The 0.85-0.89 band is the SAFEST band in the entire system** -- 0.05 pct failure across nearly 2,000 autonomous executions. If anything, the gate drops MORE decisions into the safe zone than it gates out.
-2. **The 0.90+ band is the RISKIEST in absolute failure count** -- 177 failures. But those failures are infra, not judgment.
-
-## When DO we get rollbacks / reversions? Not from the gate.
-
-Cross-referencing the bug library (incidents BUG-2037 through BUG-2242) and the Kaizen recipe corpus (285 installed recipes), every reversion class is a deploy-time or infra-time failure, none a confidence-miscalibration:
-
-- `web_500_undefined_function` and `web_500_too_few_arguments` lead to `auto_rollback_last_safe_deploy` (deploy bug, not gate)
-- `safe_write_health_rollback` fires on PHP lint and render leak (code-gen quality, not gate)
-- `deploy_caused_php_fatal` triggers replan_with_file_reread (codegen truncation, not gate)
-- `marker_regression_guard` (BUG-2037) old ideas re-rewriting files and DROPPING fixes (deploy sequencing, not gate)
-- `executor_idle_is_three_blockers_not_stuck` (BUG-2249) agents misreading status (diagnosis, not gate)
-- `argus_stale_probe_cache` (BUG-2242) and `cicero_declared_down_from_wrong_address` (BUG-2238) ar
 ```
 
 ### `1786214054947` — 8/8/2026, 3:15:32 PM PT — 476 turns
@@ -1868,54 +1889,6 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786182934055` — 8/8/2026, 3:51:55 AM PT — 84 turns
-
-**Original task:**
-
-```
-Please tell me which individual LLM's have been running in the last 30 minutes. I need to know which ones have the most number of turns. What I'm looking for is individual LLM's. I want you to look inside of Frankenstein tools and inside of Frankenstein LLM and add those to the individual tool LLM total. I do not need to see accumulative Frankenstein LLM or accumulative Frankenstein tools number. I don't care. I wanna see the numbers for the underlying LLMs
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326, #2139, #2150, #2151, #23171, #25069 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-d] would fix this permanently.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task current — Individual LLM turn counts last 30 min.
-
-Where we left off (verified 2026-08-08 03:51 PT):
-- Corrected frankenstein-405b removed (Augustus+Tiberius now GLM PP=6 ring, not serving)
-- Corrected deepseek-v4-pro 275 turns includes ctx_overflow spills from 120B pool, not all direct
-- frankenstein-tools (194) + frankenstein-llm (52) = 246 adapter turns load-balanced across 120B pool members (artemis-gpt-oss-120b, julia-120b, GLM-5.2-local ring)
-- Per-120B-member decomposition is NOT available in any database table for this window — all 8 per-turn tables empty
-- 120B pool (artemis + julia + GLM ring) likely dominates total traffic via the 246 adapter turns
-
-Open threads to drive next:
-1. #25069 [proposed] — Ship per-model turn decomposition for frankenstein-tools/llm pool adapters to DB so tool queries can answer without log parsing
-
-Reference IDs:
-- Ideas filed: #25069 [proposed]
-- Files touched: none
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Query per-backend turn counts for last 30 min (frankenstein_what_served)
-- [x] Investigate frankenstein-tools/llm decomposition (found all per-turn tables empty)
-- [x] Correct 405B error and deepseek spill vs direct analysis (per Ruben feedback)
-- [x] Read /var/log/litellm/access.log to get per-120B-member decomposition (log not found on server)
-- [x] Deliver corrected report with honest per-member decomposition assessment
-</task_progress>
 </attempt_completion>
 ```
 

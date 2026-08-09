@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/9/2026, 1:53:00 AM PT | window: last 72h | 95 tasks | index total 582 (parsed 0, cached 582)
+Generated: 8/9/2026, 5:48:41 AM PT | window: last 72h | 93 tasks | index total 582 (parsed 0, cached 582)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -103,8 +103,6 @@ Generated: 8/9/2026, 1:53:00 AM PT | window: last 72h | 95 tasks | index total 5
 | `1786033674961` | 8/6/2026, 10:00:27 AM | 214 | 441KB | ## Argus  |
 | `1786002734721` | 8/6/2026, 9:27:15 AM | 556 | 1532KB | #Argus |
 | `1785939083137` | 8/6/2026, 8:58:16 AM | 1734 | 3041KB | https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since  |
-| `1786002462510` | 8/6/2026, 3:25:39 AM | 416 | 1678KB | frankenstein-llm seems to be getting stuck here: |
-| `1785976094322` | 8/6/2026, 2:12:29 AM | 348 | 1676KB | For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 |
 
 ---
 
@@ -3767,100 +3765,3 @@ https://www.emsuniversity.com/emtskills is choked out again. Very very slow and 
 **Ideas referenced:** #12245, #13437, #13454, #13839, #16213, #16732, #178590, #2211 [needs_verify], #2213, #2214, #2215, #2223, #2224, #2228 [rejected], #2229, #2230, #2235, #2240 [deployed], #2241, #2250, #23028 [proposed], #23029 [proposed], #23030 [proposed], #23031 [proposed], #23051 [executing], #23053 [executing], #23067 [deployed], #23133 [executing], #23134 [executing], #23139 [executing], #23145 [executing], #23232 [executing], #23233 [executing], #23293 [executing], #23352 [proposed], #23378 [proposed], #23495 [proposed], #23500 [proposed], #23867 [proposed], #23868 [proposed], #23878 [proposed], #23879 [proposed], #23880 [pending], #23884 [proposed], #23885 [proposed], #23886 [proposed], #2998, #4907, #711382, #7907, #9112
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786002462510` — 8/6/2026, 3:25:39 AM PT — 416 turns
-
-**Original task:**
-
-```
-frankenstein-llm seems to be getting stuck here:
-
-Response
-
-Plain TextRich DisplayMarkdown
-
-\=== TASK 202 lookup === === argus code files === argus_backups _view_argus_spill_ladder_health.php admin_users.php.bak-argus-20260715 alltastic_api.php.bak-20250710-argus-upgrade alltastic_api.php.bak-20260220-pre-argus-knowledge alltastic_api.php.bak-20260221-pre-argus-diagnostic alltastic_api.php.bak-20260310-argus-hardening alltastic_api.php.bak-20260321-argusv4 alltastic_api.php.bak-20260324-argus alltastic_api.php.bak-20260327-argus-improvements alltastic_api.php.bak-20260409-183023-argus-phase0 a
-```
-
-**Ideas referenced:** #10740, #11397, #11741, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12584, #12657, #12672, #12673, #12689, #12716, #13108, #13121, #13202, #13831, #13832, #13874, #13964, #14000, #14848, #16120, #16718, #16844, #1715, #178600, #18781, #18786, #1884, #18868, #19338, #19653, #1967, #19903, #2014, #20272, #20300, #2050, #20536, #20722, #2097, #2099, #2100, #21045, #21136, #2244, #2247 [resolved], #22583, #22688, #23171, #23206, #23428, #23490, #23521, #23596, #23620, #23631 [proposed], #23638 [deployed]
-
-**Last PICKUP PROMPT:**
-
-```
-x produces valid output again.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1786002462510 — quality quarantine for frankenstein-tools adapter.
-
-Where we left off (verified 2026-08-06T03:11-0700):
-- Quality quarantine patch deployed to /usr/local/bin/frankenstein_tools_adapter.py
-- Adapter restarted, healthy, syntax-verified
-- `_quality_fail_streak` dict + `_record_quality_fail`/`_record_quality_pass` helpers inserted
-- `_is_quarantined()` now checks quality-fail streak
-- Gate sites wired at EMPTY_RESPONSE_GATE and EMPTY_PASSTHROUGH_GATE_v2
-
-Open threads to drive next:
-1. #23638 [deployed] — monitor adapter log for QUALITY_QUARANTINE and QUARANTINE_FAIL events
-2. #23638 [deployed] — verify that a real garbage-producing box gets quarantined within 2 turns
-3. #2247 [resolved] — confirm the bug-library entry is still accurate post-fix
-
-Reference IDs:
-- Ticket: #1786002462510 (frankenstein-llm stuck/empty-unparsable cascade)
-- Ideas filed: #23631, #23638
-- Files touched: /usr/local/bin/frankenstein_tools_adapter.py
-- Bug library: #2247 (quality_canary_detects_garbage)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785976094322` — 8/6/2026, 2:12:29 AM PT — 348 turns
-
-**Original task:**
-
-```
-For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 
-
-extremely thin and unviewable. Can you resolve this? Look at this middle content. It should stretch out to both sides (left and right)
-```
-
-**Ideas referenced:** #178595, #2247, #23584 [proposed], #23585 [proposed], #495057, #856404
-
-**Last PICKUP PROMPT:**
-
-```
-tool_customlang table: 0 CAPCE
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785957972000 -- idea #23585 [deployed]: WP CAPCE sweep done, simplecertificate checked
-
-Where we left off (verified 2026-08-06 02:09 PT):
-- Idea #23585 [deployed]: swept 38 WP databases, found and fixed the false State-Approved CAPCE Accreditation claim on 3 marketing FAQ pages (wp_4grai mobilenotaryhere.com, wp_tmrhi, wp_hzbxk sanantonioemtrefresher.com, all ID 384)
-- Remaining live CAPCE is harmless: Home pages ID 2 contain image filenames only (CAPCE logo displays visually), wp_tsjhb ID 2078 holds a product URL slug
-- Moodle simplecertificate: 0 CAPCE everywhere (lang pack, mod dir, customlang)
-- HANDOFF_NOTES updated
-
-Open threads to drive next:
-1. Home pages on wp_hzbxk/wp_4grai/wp_tmrhi display the CAPCE logo image capce11-300x292.jpg to site visitors. Visual concern only, no false accreditation wording, but the imagery may still imply accreditation. (human-only decision, no idea)
-2. Prior idea #23584 [deployed] was closed this session. Only outstanding item is Ruben's visual confirmation of the emscards layout fixes. (human-only decision, no idea)
-
-Reference IDs:
-- Ideas filed: #23584 [deployed], #23585 [deployed]
-- Files touched: WP db wp_4grai.PNfs8_posts ID 384, WP db wp_tmrhi.PNfs8_posts ID 384, WP db wp_hzbxk.PNfs8_posts ID 384, HANDOFF_NOTES.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>- [x] FAQ pages on wp_4grai, wp_tmrhi, wp_hzbxk cleaned (all CAPCE=0)
-- [x] Remaining hits classified: images (visual, not text) and product URLs (not claims)
-- [x] Moodle simplecertificate language confirmed clean (0 CAPCE in lang pack + entire dir)
-- [x] Updated HANDOFF_NOTES
-- [x] Validated completion gate (rule 91 all passed, gate clear) and shipped</task_progress>
-</attempt_completion>
-```

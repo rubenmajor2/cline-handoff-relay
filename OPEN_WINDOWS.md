@@ -6,15 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/9/2026, 8:48:42 AM PT | window: last 72h | 103 tasks | index total 592 (parsed 4, cached 588)
+Generated: 8/9/2026, 3:04:50 PM PT | window: last 72h | 94 tasks | index total 592 (parsed 4, cached 588)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786285332678` | 8/9/2026, 8:47:29 AM | 295 | 1172KB | #Callbacks |
-| `1786245923063` | 8/9/2026, 8:45:16 AM | 496 | 5265KB | #Argus |
-| `1786288392773` | 8/9/2026, 8:43:11 AM | 112 | 502KB | #Make GLM / frankenstein-llm smarter |
+| `1786245923063` | 8/9/2026, 3:04:47 PM | 515 | 5450KB | #Argus |
+| `1786288392773` | 8/9/2026, 3:04:33 PM | 145 | 560KB | #Make GLM / frankenstein-llm smarter |
+| `1786285332678` | 8/9/2026, 3:03:15 PM | 335 | 1267KB | #Callbacks |
+| `1786286915134` | 8/9/2026, 2:58:34 PM | 92 | 350KB | #Argus Cluster Idea  |
 | `1786288212188` | 8/9/2026, 8:38:13 AM | 140 | 437KB | #AI Directed Meditation |
-| `1786286915134` | 8/9/2026, 8:14:51 AM | 90 | 344KB | #Argus Cluster Idea  |
 | `1786286876279` | 8/9/2026, 8:12:08 AM | 72 | 397KB | #GLM Local/frankenstein-llm Improvements / Make Smarter |
 | `1786284214295` | 8/9/2026, 8:06:32 AM | 178 | 1101KB | #AI DIRECTED MEDITATION |
 | `1786182934055` | 8/9/2026, 8:02:41 AM | 386 | 1002KB | Please tell me which individual LLM's have been running in the last 30 minutes. I need to  |
@@ -104,69 +104,12 @@ Generated: 8/9/2026, 8:48:42 AM PT | window: last 72h | 103 tasks | index total 
 | `1785954595787` | 8/6/2026, 5:51:13 PM | 252 | 1102KB | #KAISON |
 | `1786058811201` | 8/6/2026, 5:19:23 PM | 202 | 821KB | #TDSHS |
 | `1786008133029` | 8/6/2026, 4:18:36 PM | 498 | 1518KB | There seems to be something that is submitting courses or something to TDSHS. Can you tell |
-| `1786045024813` | 8/6/2026, 2:22:06 PM | 280 | 1038KB | #TDSHS |
-| `1786047728462` | 8/6/2026, 2:05:06 PM | 273 | 1658KB | #/emtskills lag |
-| `1786047694363` | 8/6/2026, 1:21:39 PM | 3 | 43KB | #/emtskills lag |
-| `1786037557221` | 8/6/2026, 12:43:55 PM | 387 | 707KB | /emtskills lag |
-| `1785986098106` | 8/6/2026, 12:33:42 PM | 1020 | 2925KB | #TDSHS |
-| `1786032945879` | 8/6/2026, 10:15:19 AM | 474 | 718KB | #/emtskills lag |
-| `1786033674961` | 8/6/2026, 10:00:27 AM | 214 | 441KB | ## Argus  |
-| `1786002734721` | 8/6/2026, 9:27:15 AM | 556 | 1532KB | #Argus |
-| `1785939083137` | 8/6/2026, 8:58:16 AM | 1734 | 3041KB | https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since  |
 
 ---
 
 ## Per-window detail
 
-### `1786285332678` — 8/9/2026, 8:47:29 AM PT — 295 turns
-
-**Original task:**
-
-```
-#Callbacks
-
-that should go into the call back system, not a ticket. Those tickets are noise and need to be converted to callbacks GOING FORWARD. Offer callbacks to those outstanding in the last 48 hours like that and depreciate old process. -> Answering your question: "Voice call follow-up needed" tickets are not offers, they are internal support tickets. When the Voice AI cannot fully resolve a caller and the caller agrees to a follow-up, the AI creates one of these tickets so a human can call or email the person back.
-
-
-Answering your question: "Voice call follow-up needed" tickets are not o
-```
-
-**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #1745, #18316, #2274, #2275, #23133, #23989, #24645, #24646, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25364 [executing], #25365 [deployed], #3133, #475569, #6172, #9042, #9159, #9222, #9501
-
-**Last PICKUP PROMPT:**
-
-```
-ld digest pipeline archived. ✅
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up topic — Voice follow-up ticket-to-callback conversion (complete, verified).
-
-Where we left off (verified 2026-08-09 08:10 PT):
-- `cron/cron_post_call_summary.php`: AUTO-CALLBACK block replaces old AUTO-TICKET block (lines 227-247). php -l clean.
-- `api/voice/vapi_server_webhook.php`: handleEndOfCallReport() now calls bookCallbackSlot() instead of handleCreateTicket() for follow-ups (lines 6562-6578). php -l clean.
-- Both files backed up: `.bak-20260809-callback`
-- 5 Open/Pending voice_followup tickets converted: 1 booked as callback (#6, Dominic Felix), 4 closed (these carried the +19412943388 hold-greeting trunk number — Ruben confirmed intentional, not a bug).
-- 0 Open/Pending voice_followup tickets remain.
-- 3 dead digest files archived to `/var/www/emtskills/archive/callback_digest_deprecated_20260809/`.
-- Live cron run: clean, no pending rows.
-
-Open threads to drive next:
-1. #25365 [deployed] — callback system core fix (bookCallbackSlot). This task completed the consumer integration. Monitor `callback_bookings` for new entries over next 48h to confirm cron + webhook are populating it.
-
-Reference IDs:
-- Ideas filed: #25365 [deployed]
-- Files touched: /var/www/emtskills/cron/cron_post_call_summary.php, /var/www/emtskills/api/voice/vapi_server_webhook.php, archived /var/www/emtskills/archive/callback_digest_deprecated_20260809/
-- Tickets: 24314, 24309, 24302, 24291, 24280 (all Resolved)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786245923063` — 8/9/2026, 8:45:16 AM PT — 496 turns
+### `1786245923063` — 8/9/2026, 3:04:47 PM PT — 515 turns
 
 **Original task:**
 
@@ -183,7 +126,7 @@ Approved
 - #25269 [proposed] - Fix the Kaizon blind spot: wrap argusBuildRevertInfo() in try/catch at both call sites, add the missing error_message column to the INSERT at line 3947, and add a
 ```
 
-**Ideas referenced:** #152615, #176616, #178424, #178455, #17926, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #18745, #1876, #18765, #1877, #18771, #18781, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #1894, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #1912, #1927, #1928, #1929, #1930, #1931, #1932, #1933, #19348, #19415, #19416, #2006, #20547, #20555, #21074, #21125, #21126, #22511, #22583, #2274, #2275, #23489, #23852, #23920, #23952, #24635, #24636, #24645, #24646, #24766, #24791, #24897, #24900, #25047, #25058 [deployed], #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [executing], #25196 [deployed], #25224, #25262 [executing], #25263 [executing], #25264 [executing], #25269 [proposed], #25270 [proposed], #25271 [deployed], #25293 [proposed], #25304, #25310, #25313 [approved], #25314 [approved], #25315 [approved], #25316 [proposing], #25364 [executing], #25409, #334155, #4338, #64748
+**Ideas referenced:** #152615, #176616, #178424, #178455, #17926, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #18745, #1876, #18765, #1877, #18771, #18781, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #1894, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #1912, #1927, #1928, #1929, #1930, #1931, #1932, #1933, #19348, #19415, #19416, #2006, #20547, #20555, #21074, #21125, #21126, #22511, #22583, #2271, #2274, #2275, #2292, #23489, #23852, #23920, #23952, #24635, #24636, #24645, #24646 [proposed], #24766, #24791, #24897, #24900, #25039, #25047, #25058 [deployed], #25064, #25081, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [executing], #25196 [deployed], #25224, #25238, #25240, #25241, #25242, #25262 [executing], #25263 [executing], #25264 [executing], #25269 [proposed], #25270 [proposed], #25271 [deployed], #25293 [proposed], #25304, #25310, #25313 [approved], #25314 [approved], #25315 [approved], #25316 [proposing], #25364 [executing], #25365 [deployed], #25366 [proposed], #25409, #334155, #4338, #64748, #7215, #7683, #8596, #8597, #8783, #9069, #9070, #9071, #9176, #9191
 
 **Last PICKUP PROMPT:**
 
@@ -222,7 +165,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786288392773` — 8/9/2026, 8:43:11 AM PT — 112 turns
+### `1786288392773` — 8/9/2026, 3:04:33 PM PT — 145 turns
 
 **Original task:**
 
@@ -245,9 +188,109 @@ Investigation only. Five improvement ideas filed. No code changed this session.
 ### T
 ```
 
-**Ideas referenced:** #10740, #11397, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12459, #12657, #12672, #12673, #12689, #12716, #13108, #13121, #13831, #13832, #13874, #13964, #14000 [deployed], #14848, #16120, #16718, #18781, #18786, #19338, #19653, #1967, #19903, #2050, #20536, #21045 [in_progress], #22583 [ready_for_review], #22588, #2293 [deployed], #23206, #23490, #24144, #24183, #24368, #25112 [in_progress], #25120, #25159 [in_progress], #25178 [in_progress], #25185, #25378 [proposed], #25379 [proposed], #25380 [proposed], #25381 [proposed], #25382 [proposed], #25389 [proposed], #25390 [proposed]
+**Ideas referenced:** #10740, #11397, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12459, #12657, #12672, #12673, #12689, #12716, #13108, #13121, #13831, #13832, #13874, #13964, #14000 [deployed], #14848, #16120, #16718, #18781, #18786, #19338, #19653, #1967, #19903, #2050, #20536, #21045 [in_progress], #22583 [ready_for_review], #22588, #2293 [deployed], #2294, #23206, #23490, #24144, #24183, #24368, #25112 [in_progress], #25120, #25159 [in_progress], #25178 [in_progress], #25185, #25378 [proposed], #25379 [proposed], #25380 [proposed], #25381 [proposed], #25382 [proposed], #25389 [proposed], #25390 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786285332678` — 8/9/2026, 3:03:15 PM PT — 335 turns
+
+**Original task:**
+
+```
+#Callbacks
+
+that should go into the call back system, not a ticket. Those tickets are noise and need to be converted to callbacks GOING FORWARD. Offer callbacks to those outstanding in the last 48 hours like that and depreciate old process. -> Answering your question: "Voice call follow-up needed" tickets are not offers, they are internal support tickets. When the Voice AI cannot fully resolve a caller and the caller agrees to a follow-up, the AI creates one of these tickets so a human can call or email the person back.
+
+
+Answering your question: "Voice call follow-up needed" tickets are not o
+```
+
+**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #1745, #18316, #2274, #2275, #23133, #23989, #24645, #24646, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25364 [executing], #25365 [deployed], #3133, #475569, #6172, #9042, #9159, #9222, #9501
+
+**Last PICKUP PROMPT:**
+
+```
+backs tab which Vicky manages.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up topic — Callback visibility & accountability system (complete, verified).
+
+Where we left off (verified 2026-08-09 08:55 PT):
+- `routes/telephony_hub.php`: Gold alert banner at line ~1999 showing pending/today callback counts with "View Callback Queue" link. Backed up: `.bak-20260809-callback-alerts`
+- `lib/callback_intent_detector.php`: `bookCallbackSlot()` now emails Vicky on new bookings + logs to `callback_notes`. Backed up: `.bak-20260809-notify`
+- `crons/policing/cron_callback_policing.php`: Every 15 min — escalating overdue (>60min) + upcoming (30min) alerts to Vicky. Installed in `/etc/cron.d/emsu-callback-policing`
+- `archive/callback_digest_deprecated_20260809/`: 3 deprecated digest files archived
+- E2E verified: notification email sent, test data cleaned up
+
+Open threads to drive next:
+1. #25365 [deployed] — callback system now has full visibility (banner + email on booking + policing cron). Monitor Vicky's inbox + telephony hub Callbacks tab for first 48h.
+2. (human-only decision, no idea) — DiscordNotify::resolveWebhook queries `channel_key` but the `discord_webhook_config` table uses `webhook_key` — this means Discord notify may not be routing correctly. Not introduced by this change; pre-existing.
+
+Reference IDs:
+- Ideas filed: #25365 [deployed]
+- Files touched: telephony_hub.php, callback_intent_detector.php, crons/policing/cron_callback_policing.php
+- Cron entries: /etc/cron.d/emsu-callback-policing (every 15 min)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786286915134` — 8/9/2026, 2:58:34 PM PT — 92 turns
+
+**Original task:**
+
+```
+#Argus Cluster Idea 
+
+See issues executing 23313, research bug library, and community as necessary and infrastructure and execute below cleanly
+
+Cluster scan (#25313): NOT deployed, file restored clean
+I attempted to deploy argusClusterScan() into alltastic_api.php twice. The second attempt caused a parse error at line 3986 because my python patch used the wrong placeholder pattern for the actual INSERT (the real statement shape differs from my assumption). I rolled back immediately from backup alltastic_api.php.bak-25293-clusterscan-20260809-0655.
+
+Verified restored file:
+
+php -l /var/www/emt
+```
+
+**Ideas referenced:** #15367, #2292 [resolved], #23313, #23952, #24897, #25058, #25269, #25313 [deployed]
+
+**Last PICKUP PROMPT:**
+
+```
+clean, functional test passed.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #25313 - Argus Cluster Scan deploy
+
+Where we left off (verified 2026-08-09 14:58 PT):
+- Idea #25313 [deployed] - systemwide Argus cluster scan fully wired and verified
+- lib/argus_cluster_scan.php rewritten to real idea_clusters schema; PDO injected, no global getPDO() landmine
+- routes/alltastic_api.php: require at line 54 + cluster scan fires at line 3990 after text-signal classification
+- lib/report_registry.php line 379 card registered; lib/cfa_auto_resolve.php line 314 cfa_apply_cluster_logic() appended
+- Index idx_error_message_ts(error_message(191), created_at) created on argus_audit_log
+- Functional test passed: cluster 628 created, member_count=2; view route HTTP 401 OK
+- Test data cleaned from DB
+- Bug library recorded in frankenstein_router_incidents row 2292 (status resolved)
+
+Open threads to drive next:
+None - nothing left open.
+
+Reference IDs:
+- Ideas filed: #25313 [deployed]
+- Files touched: /var/www/emtskills/lib/argus_cluster_scan.php, /var/www/emtskills/routes/_view_argus_cluster_scan.php, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/lib/report_registry.php, /var/www/emtskills/lib/cfa_auto_resolve.php
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1786288212188` — 8/9/2026, 8:38:13 AM PT — 140 turns
 
@@ -272,58 +315,6 @@ You asked me to spec these better and use rule 267 to get them moving faster. He
 **Ideas referenced:** #13757, #14100, #1568, #1573, #178629, #18786, #20315, #23930 [rejected], #23931 [in_progress], #23932 [rejected], #23935 [proposed], #25130, #25156, #25185, #25220, #25227 [in_progress], #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25245, #25246, #25247, #25268 [deployed], #25313 [deployed], #25364 [deployed], #25366 [deployed], #25374, #25383 [proposed], #25384 [proposed], #25385 [proposed], #57179
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786286915134` — 8/9/2026, 8:14:51 AM PT — 90 turns
-
-**Original task:**
-
-```
-#Argus Cluster Idea 
-
-See issues executing 23313, research bug library, and community as necessary and infrastructure and execute below cleanly
-
-Cluster scan (#25313): NOT deployed, file restored clean
-I attempted to deploy argusClusterScan() into alltastic_api.php twice. The second attempt caused a parse error at line 3986 because my python patch used the wrong placeholder pattern for the actual INSERT (the real statement shape differs from my assumption). I rolled back immediately from backup alltastic_api.php.bak-25293-clusterscan-20260809-0655.
-
-Verified restored file:
-
-php -l /var/www/emt
-```
-
-**Ideas referenced:** #15367, #2292 [resolved], #23313, #23952, #24897, #25058, #25269, #25313 [deployed]
-
-**Last PICKUP PROMPT:**
-
-```
-incidents row 2292 (resolved).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25313 - Argus Cluster Scan deploy
-
-Where we left off (verified 2026-08-09 08:14 PT):
-- Idea #25313 [deployed] - systemwide Argus cluster scan fully wired and verified
-- lib/argus_cluster_scan.php rewritten to real idea_clusters schema; PDO injected, no global getPDO() landmine
-- routes/alltastic_api.php: require at line 54 + cluster scan fires at line 3990 after text-signal classification
-- lib/report_registry.php line 379 card registered; lib/cfa_auto_resolve.php line 314 cfa_apply_cluster_logic() appended
-- Index idx_error_message_ts(error_message(191), created_at) created on argus_audit_log
-- Functional test: 2 test rows inserted, argusClusterScan() created cluster 628, member_count=2; view route HTTP 401 OK (auth gate)
-- Test data cleaned from DB
-- Bug library incident row 2292 in frankenstein_router_incidents (status resolved) filed, no bare number used
-
-Open threads to drive next:
-None - nothing left open.
-
-Reference IDs:
-- Ideas filed: #25313 [deployed]
-- Files touched: /var/www/emtskills/lib/argus_cluster_scan.php, /var/www/emtskills/routes/_view_argus_cluster_scan.php, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/lib/report_registry.php, /var/www/emtskills/lib/cfa_auto_resolve.php
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
 
 ### `1786286876279` — 8/9/2026, 8:12:08 AM PT — 72 turns
 
@@ -3801,261 +3792,5 @@ There seems to be something that is submitting courses or something to TDSHS. Ca
 ```
 
 **Ideas referenced:** #13437, #18676, #2187, #2363, #23666 [proposed], #23667 [proposed], #24086 [proposed], #24098 [proposed], #24103 [proposed], #24108 [proposed], #2611, #2703, #600179
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786045024813` — 8/6/2026, 2:22:06 PM PT — 280 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-I need the PDF generated so i can see what it looks like now
-
-Context reached 992,262 / 1,000,000 tokens (99%), past the rule-119 COMPRESS threshold (0.75 x 1M = 750,000). Rule 119 is a hardfloor with no deferral, so I compressed instead of applying the last edit in a degraded window.
-
-Done and verified this window:
-- TDSHS consolidated letter rebuilt on the canonical AZ regulator-letter template: 69,144 bytes, 2 pages, logo 200x200 page 1, signature 256x76 page 2, "DRAFT" count 0, public access 403.
-- Canonical template saved to docs/REGULATOR_LETTER_TEMPLATE_canonical.html as the sta
-```
-
-**Ideas referenced:** #047857, #111827, #1370, #178600, #23517 [executing], #23519 [executing], #23659 [proposed], #23660 [proposed], #23666 [proposed], #23679 [proposed], #23681 [proposed], #23688 [proposed], #23699 [proposed], #23700 [proposed], #23709 [proposed], #23882 [proposed], #23906 [proposed], #23907 [proposed], #23999 [proposed], #24018 [proposed], #24053 [proposed], #24061 [proposed], #24062 [proposed], #24063 [proposed], #24070 [proposed], #374151, #5688, #600179, #78350
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786047728462` — 8/6/2026, 2:05:06 PM PT — 273 turns
-
-**Original task:**
-
-```
-#/emtskills lag
-
-build and ship end to end. make sure you test and fix along the way. leverage rule 267 and work on frankenstein executor as it's doctor during periods of waiting so no time is wasted
-
-do not inject anthropic llm
-
-I am still having problems with this that need to be resolved. There are other people that are having the same issue right now. So if you're gonna ask us to do something with our browser it's gonna be next year to impossible. This is something that needs to be resolved in the server level. And it's not just the page that you were troubleshooting. There are other serio
-```
-
-**Ideas referenced:** #16152, #16154, #16731, #16732, #1745, #178590, #19370, #19918, #2244, #2247, #2252, #2253, #23031 [executing], #23053 [executing], #23133 [executing], #23139 [executing], #23293 [executing], #23495 [executing], #23500 [executing], #23584, #23585, #23620, #23710, #23711, #23867 [proposed], #23878, #23880 [proposed], #23884 [proposed], #23885 [proposed], #23886 [deployed], #23920 [in_progress], #23925 [rejected], #23926 [rejected], #23927 [proposed], #23929 [rejected], #23930 [rejected], #23931 [proposed], #23932 [rejected], #23934 [in_progress], #23941 [executing], #23944 [executing], #23945 [proposed], #23947 [proposed], #23952 [proposed], #23954 [proposed], #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786047694363` — 8/6/2026, 1:21:39 PM PT — 3 turns
-
-**Original task:**
-
-```
-#/emtskills lag
-
-build and ship end to end. make sure you test and fix along the way. leverage rule 267 and work on frankenstein executor as it's doctor during periods of waiting so no time is wasted
-
-I am still having problems with this that need to be resolved. There are other people that are having the same issue right now. So if you're gonna ask us to do something with our browser it's gonna be next year to impossible. This is something that needs to be resolved in the server level. And it's not just the page that you were troubleshooting. There are other serious issues that need to be tra
-```
-
-**Ideas referenced:** #178590, #19370, #21167, #2244, #2247, #2252, #2253, #23031 [executing], #23053 [executing], #23133 [executing], #23139 [executing], #23293 [executing], #23440, #23472, #23477, #23483, #23495 [executing], #23500 [executing], #23584, #23585, #23620, #23622, #23710, #23711, #23867 [proposed], #23878, #23880 [proposed], #23884 [proposed], #23885 [proposed], #23886 [deployed], #23920 [in_progress], #23925 [rejected], #23926 [rejected], #23927 [proposed], #23929 [rejected], #23930 [rejected], #23931 [proposed], #23932 [rejected], #23934 [in_progress], #23941 [executing], #23944 [executing], #23945 [proposed], #23947 [proposed], #23952 [proposed], #23954 [proposed], #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #3530, #3555, #3556, #3558
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786037557221` — 8/6/2026, 12:43:55 PM PT — 387 turns
-
-**Original task:**
-
-```
-/emtskills lag
-
-I am still having problems with this that need to be resolved. There are other people that are having the same issue right now. So if you're gonna ask us to do something with our browser it's gonna be next year to impossible. This is something that needs to be resolved in the server level. And it's not just the page that you were troubleshooting. There are other serious issues that need to be trapped down on this so that /emtskills loads quickly.
-
-You were right to push back, and you were right that testing it myself was the obvious move. I did that, and I reproduced your exact
-```
-
-**Ideas referenced:** #16213, #178590, #178600, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19370, #22850, #23031 [executing], #23053 [executing], #23133 [executing], #23139 [executing], #23293 [executing], #23378 [approved], #23428, #23429, #23468, #23495 [executing], #23500 [executing], #23506, #23867 [proposed], #23880 [proposed], #23884 [proposed], #23885 [proposed], #23886 [deployed], #23925 [rejected], #23926 [rejected], #23927 [proposed], #23929 [rejected], #23930 [rejected], #23931 [proposed], #23932 [rejected], #23934, #23941 [executing], #23944 [executing], #23945 [proposed], #23947 [proposed], #23952 [proposed], #23954 [proposed], #23975 [executing], #23976 [executing], #23981 [in_progress], #24019, #24025 [proposed], #24026 [executing], #24027 [executing], #24028 [executing], #24030 [in_progress], #711392
-
-**Last PICKUP PROMPT:**
-
-```
-(verified: status=in_progress)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786002734721, /emtskills lag: repairs shipped end to end + verified.
-
-Where we left off (verified 2026-08-06 11:41 PT):
-- SESSLOCK_RELEASE_V1 LIVE in routes/alltastic_api.php (~line 190): session_write_close before slow LLM work. Backup .bak-20260806-sesslock.
-- #23954 [executing] SHIPPED: 240s/180s to 60s caps in orchestrator_api.php (lines 5387, 6221, 8350, 9661, 10966, plus 6631 180 to 60) and alltastic_api.php (all 240s to 60s). Both php -l clean, zero long timeouts remain, FPM reloaded. Backups .bak-20260806-240cap.
-- NAVIGATION TEST: 20 pages across 4 endpoints during in-flight LLM call: all 0.012-0.024s, zero stalls.
-- Earlier: AGENT_POOL_V1 live, process_control_timeout 620 to 60, reload storm killed.
-- Rule 267 doctor pass: #23954 [executing] (status=approved dev_stage=drafting), #23952 [executing] (status=approved), #23975 [executing] (in_progress), #23976 [executing] (in_progress), #23981 [executing] (in_progress), #23945 [proposed].
-- Test session cleaned.
-
-Open threads to drive next:
-1. #23954 [executing]: close out; caps are live and verified, executor should mark deployed.
-2. #23952 [executing]: executor sweep of remaining 276 session-locked routes.
-3. #23945 [proposed]: close out; agents pool is live.
-4. #23975 [executing]: SMS responder crash fix.
-5. #23976 [executing]: remove reload-as-heal from voice health cron.
-6. #23981 [executing]: 24h reload-rate watch on /var/log/emsu-fpm-guard.log.
-
-Reference IDs:
-- Ideas shipped: #23954 [executing]
-- Ideas advanced: #23952 [executing], #23945 [proposed], #23975 [executing], #23976 [executing], #23981 [executing]
-- Files touched: routes/alltastic_api.php (.bak-20260806-sesslock, .bak-20260806-240cap), api/orchestrator_api.php (.bak-20260806-240cap), /etc/php/8.3/fpm/pool.d/agents.conf, /etc/php/8.3/fpm/php-fpm.conf (.bak-20260806-pct60), vhost nginx confs (.bak-20260806-agentpool), HANDOFF_NOTES.md
-- DB: none
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Server-level fixes on disk (agents pool, reload storm, pct 620→60, SESSLOCK_RELEASE_V1)
-- [x] Ship #23954: 240s/180s→60s caps in orchestrator_api.php + alltastic_api.php, php -l clean, FPM reloaded
-- [x] Exercise navigation path under live load (20 pages 0.012-0.024s)
-- [x] Verified pool health + cleanup
-- [x] Reconcile ideas + handoff + pickup
-</task_progress>
-</attempt_completion>
-```
-
-### `1785986098106` — 8/6/2026, 12:33:42 PM PT — 1020 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-Open up the TDSHS window I just inadvertantly closed and tell me the last task completed regarding this page: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=list  / BTW clicking thowe rows does nothing. Plus why are there duplicate entires for 2 students? I'm confused on that like for tomorrow I see 6 responses due. I think if there's a linkage, those all get populated on the detail page with the centralized response for each, this way we're not splitting hairs. Again, those links don't yet work or show details. Table should also show name of student // Wai
-```
-
-**Ideas referenced:** #047857, #059669, #111827, #12892, #13017, #13437, #1370 [rejected], #178595, #178600, #18676, #19581, #19591, #19595, #19605, #2001, #23463 [unknown], #23482 [proposed], #23484 [proposed], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [proposed], #23518 [proposed], #23519 [proposed], #23643 [proposed], #23644 [proposed], #23645 [proposed], #23651 [rejected], #23652 [proposed], #23653 [approved], #23654 [approved], #23659 [proposed], #23660 [proposed], #23661 [proposed], #23666 [proposed], #23672 [proposed], #23673 [proposed], #23679 [proposed], #23680 [proposed], #23681 [proposed], #23682 [proposed], #23688 [proposed], #23695 [proposed], #23696 [proposed], #23697 [proposed], #23699 [proposed], #23700 [proposed], #23706 [proposed], #23707 [proposed], #23708 [proposed], #23709 [proposed], #23855 [proposed], #23856 [proposed], #23877 [proposed], #23882 [proposed], #23887 [proposed], #23888 [proposed], #23905 [proposed], #23906 [proposed], #23907 [proposed], #23914 [proposed], #23922 [proposed], #23998 [proposed], #23999 [proposed], #24018 [proposed], #2563, #26114, #2703, #3730, #374151, #450438, #475569, #600179, #64748, #92400
-
-**Last PICKUP PROMPT:**
-
-```
- deadline center + rows 19/20.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1785954856277 (TDSHS compliance doctrine and deadline center).
-
-Where we left off (verified 2026-08-05 21:24 PT):
-- Doctrine Library LIVE at /personnel/compliance_doctrine.php. #23515 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle; the CODE is deployed and harness-verified at 58 items, the idea row is the work record). Table admin_portal.compliance_doctrine, 58 active items: 19 postures, 19 anti-patterns, 6 fact patterns, 3 accomplishments, 7 agency defects, 4 statutory authorities. 9 carry regulator_facing=0 and render with an adjudication-only lock. Verified: facing=adj filter returns exactly 9, all locked.
-- Regulator-owed deadlines LIVE. #23516 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle). compliance_deadlines gained direction / requested_on / statutory_basis / last_agency_contact. Rows 27 (TPIA-004, due 8/10), 28 (TPIA-005, due 8/19 provisional), 29 (stale TDSHS request, monitor), 30 (AZ 39-121 trio, no send date recorded). List renders 21 deliverables, 5 they-owe pills, agency-owes card 0/4.
-- Row 19 verified sound. Row 20 CORRECTED: Moodle course_completions row 49223 shows user 51417 course 37 completed 2026-06-20 08:10:53 reaggregate 0, so the completion is INTACT and the regression premise is unconfirmed. Both rows still not_started, both still block the 8/6 send.
-- v4 packet consolidation and red-bar card from earlier this session: #23482 [executing] (reconcile_ideas returned status=approved dev_stage=idle), #23491 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle), prior v2 work #23463 [deployed] (reconcile_ideas returned status=open dev_stage=idle).
-
-Open threads to drive next:
-1. #23519 [executing] Answer Ava Kanthack. Five days unanswered (inbound 98073 on 7/31, 101757 on 8/2). Her completion IS intact in Moodle, so find which surface she is seeing incomplete on, tell her what her record shows, and reconcile the 95.4 figure the draft cites BEFORE the 8/6 reply goes. Per FP04 the letter must neither adopt nor contradict her account.
-2. #23517 [executing] Build the per-state Gold Standards: uniform base, then TX (25 TAC 157 + SB 14 + Gov Code 552), CA (BPPE + the San Diego inspection shape), AZ (v4.22 as the AZ instance). Generate from compliance_doctrine so a posture edit propagates. No state template ships without its own verified citations.
-3. #23518 [executing] Build the doctrine harvester and backfill it over all 157 existing response rows. This is the part that recovers what has already been forgotten in inv1, inv2, inv3, inv9, inv13. regulator_facing must fail closed to 0 on anything touching motive, timing, solicitation, or a named doctrine.
-4. #23484 [executing] Packet composer: merge the 4 pooled drafts for the 8/6 packet into one letter body, opening with the ACC01 accomplishments section, appending the preservation block from response row 164 verbatim per A19, citing all three control numbers in one caption.
-5. Row 19 (human-only decision, no idea) confirm the current signature and filing status of the Kamdyn Sheets MWFD affiliation agreement before the 8/6 reply states anything about her placement. Vicky reply pending per Ruben.
-
-Reference IDs:
-- Ideas filed this session: #23482 [executing], #23484 [executing], #23491 [proposed], #23515 [proposed], #23516 [proposed], #23517 [executing], #23518 [executing], #23519 [executing]
-- Ideas referenc
-```
-
-### `1786032945879` — 8/6/2026, 10:15:19 AM PT — 474 turns
-
-**Original task:**
-
-```
-#/emtskills lag
-
-Please let's get rid of the lag once and for all please
-
-Spinner root cause proven with a timestamp match to the second, #23500 [executing] promoted per your approval, and the comprehensive rule 91 wrap-up for the window transfer is below.
-
-## Why task 243 spins
-
-The status page itself renders in 4ms. The TASK behind it was stuck retrying: Argus tasks call alltastic_api synchronously with LLM calls that run 60-240s, and alltastic_api returned 502 at exactly 08:37:31 (x5) and 08:45:07 (x5). The FPM reload log shows reloads at exactly those seconds. Every FPM reload kills in-fli
-```
-
-**Ideas referenced:** #12589, #12590, #15776, #16213, #178590, #19370, #19454, #19990, #19998, #20972, #22850, #23027, #23031 [executing], #23053 [executing], #23133 [executing], #23139 [executing], #23293 [executing], #23352 [executing], #23378 [executing], #23429, #23495 [executing], #23500 [executing], #23506, #23867 [proposed], #23868 [proposed], #23878 [proposed], #23879 [proposed], #23880 [proposed], #23884 [proposed], #23885 [proposed], #23886 [proposed], #23925 [rejected], #23926 [rejected], #23927 [proposed], #23929 [rejected], #23930 [rejected], #23931 [proposed], #23932 [rejected], #23941 [in_progress], #23944 [in_progress], #23945 [proposed], #23947 [proposed], #23952 [proposed], #23954 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786033674961` — 8/6/2026, 10:00:27 AM PT — 214 turns
-
-**Original task:**
-
-```
-## Argus 
-
-OK there has to be a better way of dealing with this situation, getting proper iteration and not over texting the server. They seem to be pretty simple things to do. I need you to act in accordance with rule 29 and proceed
-
-502/HTTP-0 failures: three chained root causes found, all three fixed, fix proven live
-
-### The answer to "why does this keep happening"
-
-It was never saturation, and you were right to reject that story. It was **three timeouts stacked in the same request path**, each one hiding behind the next. Fix the inner one, and the next one becomes the new failure — with a
-```
-
-**Ideas referenced:** #16523, #19370, #2250 [rejected], #2251 [deployed], #2252 [needs_verify], #2253 [deployed], #22688, #23036, #23378, #23428, #23429, #23468, #23506, #23630 [executing], #23851 [proposed], #23852 [proposed], #23868 [proposed], #23878 [proposed], #23879 [proposed], #23912, #23913 [proposed], #23920 [in_progress], #23921, #23934 [in_progress], #23941 [in_progress], #23942, #23944 [in_progress], #23951
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786002734721` — 8/6/2026, 9:27:15 AM PT — 556 turns
-
-**Original task:**
-
-```
-#Argus
-
-Continue with the outstanding Argus tasks in the window that just closed out. 
-
-Also, How are subagents working now in Argus? 
-
-Also, Would like to see total time it took to finish an idea, not just the time stamps. 
-
-https://www.emsuniversity.com/emtskills/routes/argus_task_status.php
-```
-
-**Ideas referenced:** #16213, #16695, #17759 [proposed], #17761, #17762 [deployed], #17766 [proposed], #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19370, #19653 [executing], #2006, #20547, #21125, #21126, #21167, #2183, #2212, #2240, #2241, #2244, #2250, #2251, #22511, #22583, #22688, #22850, #23027, #23031 [executing], #23036, #23037, #23038, #23039, #23050, #23062, #23067, #23117, #23133 [executing], #23135, #23139 [executing], #23164, #23173, #23211, #23223, #23264 [executing], #23265 [executing], #23308, #23323, #23324, #23352, #23378, #23428, #23429, #23431, #23440, #23468, #23472, #23477, #23483, #23489 [in_progress], #23495, #23500, #23505, #23506, #23530 [approved], #23550, #23574, #23581, #23583, #23620, #23622, #23623, #23630 [deployed], #23636 [deployed], #23671, #23674, #23675, #23761, #23851 [superseded], #23852 [proposed], #23868 [deployed], #23878 [blocked], #23879 [proposed], #23885, #23911, #23913 [proposed], #334155, #3530, #3555, #3556, #3558, #4338, #4948, #4962, #56754, #64748
-
-**Last PICKUP PROMPT:**
-
-```
-l that was killing everything.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — Argus: timeout chain fixed, now run the 10-inquiry test and close the routing gap.
-
-Where we left off (verified 2026-08-06 09:26 PT):
-- #23913 [proposed] — worker CURLOPT_TIMEOUT 240→600 SHIPPED and PROVEN. Tasks 257-262 ran to 267s alive; every pre-fix run died at exactly 240-242s. Backup cron_argus_task_worker.php.bak-20260806-curl600. The idea itself covers the remaining instrument fix (capture curl_errno so HTTP 0 stops meaning three different things).
-- #23868 [proposed] — argus pool max_execution_time 120→600 SHIPPED and live (children restarted 08:32:05). Task #240 done at 240s proved it.
-- #23878 [proposed] — process_control_timeout 120→620 STAGED ONLY in /etc/php/8.3/fpm/php-fpm.conf (php-fpm8.3 -t passes). BLOCKER: needs a full FPM restart, needs Ruben's go/no-go on timing. Part 2 is the real fix: gate cron_ai_systems_watchdog to reload only when a heal actually rewrote a PHP file (copy the #23378 pattern). 2,340 reloads today while logging ALL AI SYSTEMS HEALTHY.
-- #23852 [proposed] — Argus requested frankenstein-llm but got 224 turns on paid deepseek-v4-pro via ctx_overflow_reroute + 57 turns on GLM lanes in 25 min. Violates the no-GLM-unless-asked policy. Untouched on purpose (rule 146/148).
-- #23879 [proposed] — prevention guard asserting the worker curl timeout is the FLOOR every server-side timeout must meet or exceed.
-- #23851 [proposed] — original 502 filing; its diagnosis was wrong, superseded by #23868. Consider closing as superseded.
-- #23630 [executing] — Argus task_status total-duration metric (earlier work this session).
-- Bug library: #2250 (502 / max_execution_time=120), #2251 (HTTP 0 / curl 240) — both document my wrong hypotheses so they are not repeated.
-
-Open threads to drive next:
-1. #23878 [proposed] — get the FPM restart decision, then ship part 2 (watchdog reload gating). This clears the last 502 vector.
-2. Run the 10-inquiry test on a CLEAN queue now that the chain is aligned. Do NOT reset attempts while requests are in flight; that writes false offload rows. Seed tasks, let the 2-min cron own them, and read outcomes only from rows whose finished_at is after the fix timestamps.
-3. #23852 [proposed] — instrument the assembled payload token count at dispatch and log it beside the routed backend, then trim the largest contributor in alltastic_api.php (candidates: probeForData context JSON, VEC block, action-catalog description, 14 turns × 1800 chars of history). Do not pin a model.
-4. #23913 [proposed] — capture curl_errno and make the operator-facing message state the human cause.
-
-Reference IDs:
-- Ideas: #23630 [executing], #23851 [proposed], #23852 [proposed], #23868 [proposed], #23878 [proposed], #23879 [proposed], #23913 [proposed] (all verified via reconcile_ideas 09:22 PT)
-- Bug library: #2250, #2251
-- Files touched: routes/cron_argus_task_worker.php (curl 600, MAX_ATTEMPTS_INFRA 6→3, pre-flight gate; backups .bak-20260806-curl600, .bak-20260806-cap), /etc/php/8.3/fpm/pool.d/argus.conf (max_execution_time 600, request_terminate_timeout 600; backups .bak-20260806-maxexec, .bak-20260806-timeout), /etc/php/8.3/fpm/php-fpm.conf (620 staged; backup .bak-20260806-drain), vhost_nginx.conf (fastcgi timeouts 600; backup .bak-20260806-argustimeout), /etc/nginx/sites-enabled/emtskills (wrong-file block REVERTED), routes/argus_task_status.php + lib/argus_rating_handler.php + lib/argus_rating_ui.php (
-```
-
-### `1785939083137` — 8/6/2026, 8:58:16 AM PT — 1734 turns
-
-**Original task:**
-
-```
-https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since we have a 4TB NVME on WOPR. Can you tell me what's going on here and get these pages loaded faster?
-```
-
-**Ideas referenced:** #12245, #13437, #13454, #13839, #16213, #16732, #178590, #2211 [needs_verify], #2213, #2214, #2215, #2223, #2224, #2228 [rejected], #2229, #2230, #2235, #2240 [deployed], #2241, #2250, #23028 [proposed], #23029 [proposed], #23030 [proposed], #23031 [proposed], #23051 [executing], #23053 [executing], #23067 [deployed], #23133 [executing], #23134 [executing], #23139 [executing], #23145 [executing], #23232 [executing], #23233 [executing], #23293 [executing], #23352 [proposed], #23378 [proposed], #23495 [proposed], #23500 [proposed], #23867 [proposed], #23868 [proposed], #23878 [proposed], #23879 [proposed], #23880 [pending], #23884 [proposed], #23885 [proposed], #23886 [proposed], #2998, #4907, #711382, #7907, #9112
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

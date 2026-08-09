@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/9/2026, 12:53:00 AM PT | window: last 72h | 99 tasks | index total 582 (parsed 2, cached 580)
+Generated: 8/9/2026, 1:53:00 AM PT | window: last 72h | 95 tasks | index total 582 (parsed 0, cached 582)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786260412872` | 8/9/2026, 12:52:41 AM | 65 | 304KB | #AI Directed Meditation |
+| `1786260412872` | 8/9/2026, 1:10:51 AM | 120 | 421KB | #AI Directed Meditation |
 | `1786249226096` | 8/9/2026, 12:25:03 AM | 106 | 548KB | #AI Directed Meditation |
 | `1786256930636` | 8/8/2026, 11:50:27 PM | 117 | 294KB | #Subagents |
 | `1786245923063` | 8/8/2026, 11:48:10 PM | 302 | 3074KB | #Argus |
@@ -105,16 +105,12 @@ Generated: 8/9/2026, 12:53:00 AM PT | window: last 72h | 99 tasks | index total 
 | `1785939083137` | 8/6/2026, 8:58:16 AM | 1734 | 3041KB | https://www.emsuniversity.com/emtskills is choked out again. Very very slow and odd since  |
 | `1786002462510` | 8/6/2026, 3:25:39 AM | 416 | 1678KB | frankenstein-llm seems to be getting stuck here: |
 | `1785976094322` | 8/6/2026, 2:12:29 AM | 348 | 1676KB | For Moodle, the layout for classes https://www.emsuniversity.com/ems/course/view.php?id=25 |
-| `1785997318545` | 8/6/2026, 1:49:28 AM | 692 | 2164KB | Frankenstein-llm stalled since we added subagents or messed with that just recently |
-| `1785988379979` | 8/6/2026, 1:47:38 AM | 638 | 858KB | # NON-ARGUS WINDOW:  |
-| `1785989615911` | 8/6/2026, 1:41:24 AM | 382 | 1500KB | for frankenstein-llm subagents are still slow.  Are they using the 120Bs? If 120Bs are pas |
-| `1785953852961` | 8/6/2026, 1:41:01 AM | 414 | 1161KB | #GLM  |
 
 ---
 
 ## Per-window detail
 
-### `1786260412872` — 8/9/2026, 12:52:41 AM PT — 65 turns
+### `1786260412872` — 8/9/2026, 1:10:51 AM PT — 120 turns
 
 **Original task:**
 
@@ -136,9 +132,42 @@ The sweeper now writes to `orchestrator_event_log` on every student dispatch and
 | `writeCfaDraft()` | `event_type='cohort_sweeper_scan'`, `event_category='student_blocked'`, `event_subtype=<gate>` | `high` if systemic cluster, `
 ```
 
-**Ideas referenced:** #06222, #071410, #0891, #10003, #10017, #10107, #11160, #11798, #11812, #11942, #11943, #12184, #12245, #127760, #128225, #128269, #14100, #14141, #141414, #14261, #14532, #15803, #16233, #166534, #181820, #19653, #23264, #23831, #25228 [executing], #25238 [approved], #25240 [approved], #25241 [approved], #25242 [executing], #25284 [proposed], #2563, #334155, #3730, #4338, #475569, #566042, #6366, #64748, #8212, #92400, #9675, #9679, #9888, #9889
+**Ideas referenced:** #06222, #071410, #0891, #10003, #10017, #10107, #11160, #11798, #11812, #11942, #11943, #12184, #12245, #127760, #128225, #128269, #14100, #14141, #141414, #14261, #14532, #15803, #16233, #166534, #181820, #19653, #23264, #23831, #23924, #25228 [executing], #25238 [approved], #25240 [approved], #25241 [approved], #25242 [executing], #25269, #25284 [proposed], #25313, #25314, #25315, #2563, #334155, #3730, #4338, #475569, #566042, #6366, #64748, #8212, #92400, #9675, #9679, #9888, #9889
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+was deleted after verification
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up AI Directed Meditation — verify dashboard renders on live page and Kaison processed the 94 pending events.
+
+Where we left off (verified 2026-08-09 01:10 PT):
+- **Dashboard panel deployed** — `/var/www/emtskills/lib/emsu_ai_meditation_panel.php` (10KB PHP), spliced at line 254 of `/var/www/emtskills/routes/llm_router_live.php` between ruben_nav_render and <h1>LLM Router — Live</h1>. Reads /tmp/ems_cohort_sweeper.log and /tmp/ems_supercluster.log
+- **Supercluster Engine: 47 ideas approved LIVE** (39 P1, 8 P0). ACTIVATION_CONF=0.80. 3 engine bugs fixed: JSON constraint on cluster_evidence, missing bulk_approved_count column, event_log INSERT nonexistent columns. Backup: `routes/llm_router_live.php.bak-20260809-0041-panel-splice`
+- **Cohort Sweeper: 94 Kaison events pending** — 93 cohort (student_blocked + systemic_cluster) + 1 supercluster_activate. All with kaizen_processed=0. Kaison poll query verified to match. Last live sweep 00:57 PT: 362 scanned, 92 dispatched, 0 errors
+- **47 ideas confirmed** via `SELECT COUNT(*) FROM orchestrator_ideas WHERE approved_by LIKE '%supercluster%' AND status_changed_at > '2026-08-09 00:47:00'`
+
+Open threads to drive next:
+1. #25242 [executing] — Supercluster Engine: verify next cron cycle activates any new clusters. Manual trigger: `sudo -u emsumain php /var/www/emtskills/crons/cron_idea_supercluster_engine.php`
+2. #25228 [executing] — Cohort Sweeper: verify Kaison processed the 94 pending events (check `kaizen_processed=1`): `SELECT event_type, COUNT(*) FROM orchestrator_event_log WHERE kaizen_processed=0 AND event_type IN ('cohort_sweeper_scan','supercluster_activate') GROUP BY event_type`
+3. #25238 [approved], #25240 [approved], #25241 [approved] — Roadmap builds: SLS+QuickBooks scope
+4. #25284 [proposed] — Instructor scheduling optimizer
+
+Reference IDs:
+- Supercluster engine: #25242 [executing]
+- Cohort sweeper: #25228 [executing]
+- Roadmap builds: #25238 [approved], #25240 [approved], #25241 [approved]
+- Instructor scheduling: #25284 [proposed]
+- Files touched: /var/www/emtskills/routes/llm_router_live.php, /var/www/emtskills/lib/emsu_ai_meditation_panel.php, /var/www/emtskills/crons/cron_idea_supercluster_engine.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1786249226096` — 8/9/2026, 12:25:03 AM PT — 106 turns
 
@@ -3835,127 +3864,3 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [x] Validated completion gate (rule 91 all passed, gate clear) and shipped</task_progress>
 </attempt_completion>
 ```
-
-### `1785997318545` — 8/6/2026, 1:49:28 AM PT — 692 turns
-
-**Original task:**
-
-```
-Frankenstein-llm stalled since we added subagents or messed with that just recently
-```
-
-**Ideas referenced:** #10108, #10740, #11397, #11741, #11781, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12299, #12314, #12335, #123452, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12459, #12463, #12477, #12618, #12657, #12672, #12673, #12689, #12716, #12824, #12872, #12878, #13108, #13121, #13202, #13204, #13470, #13831, #13832, #13874, #13964, #14000, #14848, #1593, #16120, #16163, #16213, #16265, #16304, #16588, #16590, #16625, #16718, #16844, #17673, #178599, #18312, #18326, #18600, #18720, #18781, #18786, #18868, #1895, #19653, #1967, #19903, #2014, #20272, #20300, #2050, #20536 [ready_for_review], #20722, #21045, #21136, #2240, #2241, #2246, #2248, #22569, #22583 [approved], #22850, #23027, #231529, #23171, #23206, #23352, #23378, #23429, #23490, #23495, #23506, #23521, #23574 [executing], #23575 [proposed], #23576 [proposed], #23581 [executing], #23583 [proposed], #23591 [executing], #23593 [executing], #23596 [approved], #23598 [proposed], #23599 [proposed], #23600, #23601, #23624 [in_progress], #23646 [proposed], #261562, #9731
-
-**Last PICKUP PROMPT:**
-
-```
-idea idea filed this session**
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785997581 - frankenstein-tools fixes: executor-inflight leak + watchdog v4, shipped and live-verified
-
-Where we left off (verified 2026-08-06 00:38 PT):
-- Executor-inflight leak fix shipped and live-verified: 0 QOS_PREEMPT in 30 min, adapter healthy on port 11510
-- Watchdog v4 shipped and live-verified: 0 RESTART events since deployment, passive canary health stable
-- ADAPTER_COUNT guard fix shipped: bash syntax error resolved
-- Full 20-MCP health sweep: all healthy (earlier -32001 was Mode D transient, resolved by retry per MCP_Troubleshooting.md)
-- All 7 ideas reconciled: 6 executing, 1 proposed
-
-Open threads to drive next:
-1. #23598 [proposed] - verify zero false-positive watchdog restarts under v4 over the next several hours (unchanged from prior session state)
-2. #23581 [executing] - Kaizon target for watchdog monitoring still needs to land
-3. #23591 [executing] - WordPress backdoor cleanup on sandiegoemtrefresher.com (separate track, unrelated to frankenstein work)
-
-Reference IDs:
-- Ideas filed: #23574 [executing], #23575 [executing], #23581 [executing], #23591 [executing], #23593 [executing], #23598 [proposed], #23599 [executing]
-- Files touched: /usr/local/bin/emsu-frankenstein-tools-watchdog.sh (v4 rewrite), /usr/local/bin/frankenstein_tools_adapter.py (executor-inflight leak self-heal)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1785988379979` — 8/6/2026, 1:47:38 AM PT — 638 turns
-
-**Original task:**
-
-```
-# NON-ARGUS WINDOW: 
-
-But the CFA should be answering this properly -> ### Is 1-2 weeks unreasonable? No. But the silence is.
-
-Then what is the CFA doing wrong? is it not responding? -> 83 was OUTBOUND to her. She sent 27 inbound total since May 25, and only 7 since her course completed July 26. All 7 are ONE thread, same subject, opened August 2. So it is 7 messages over 3 days on one unresolved question, not chronic pestering. My earlier framing was wrong.
-
-student ops, telephony, callbacks
-
-Do NOT touch Argus in this window. Argus work is running separately.
-
-## 1. #23483 [proposed] P0: rep
-```
-
-**Ideas referenced:** #13437, #16437, #18936, #18944, #18951, #20090, #20346, #20903, #21010 [approved], #21011, #21167 [impl_failed], #2240, #2241, #2244 [deployed], #22514 [approved], #22517 [approved], #22520 [approved], #23133, #23281 [executing], #23352, #23378, #23425 [deployed], #23426 [deployed], #23440 [proposed], #23472 [proposed], #23477 [proposed], #23483 [proposed], #23495 [executing], #23620 [proposed], #23622 [proposed], #2611 [deployed], #2703 [deployed], #3528, #3529, #3530, #3536, #3537, #3538, #3540, #3542, #3543, #3555, #3556, #3558, #9086, #9168, #9339
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785989615911` — 8/6/2026, 1:41:24 AM PT — 382 turns
-
-**Original task:**
-
-```
-for frankenstein-llm subagents are still slow.  Are they using the 120Bs? If 120Bs are past their allowable lanes, why are we not spilling off? What's causing slowness or is it something different?
-```
-
-**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11942, #11944, #11953, #11991, #12046, #12059, #12231, #12246, #12247, #12249, #12251, #12262, #12266, #12269, #12285, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12403, #12407, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12657, #12672, #12673, #12680, #12688, #12689, #12708, #12710, #12716, #12900, #13095, #13108, #13121, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13831, #13832, #13842, #13874, #13962, #13964, #14000, #14133, #14142, #14848, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16120 [deployed], #16584, #16589, #16590, #16602, #16625, #16646, #16648, #16673, #16680, #16715, #16716, #16717, #16718, #16849, #17078, #17166, #17307, #17537, #17619 [deployed], #17673, #1807, #18670, #18671, #18781, #18786, #18806, #18868, #19585, #19653, #1967, #19686, #19903, #2014, #20272, #20300, #2050, #20536, #2071, #20722, #2079, #21045, #21136 [ready_for_review], #2240, #2241, #2243 [deployed], #22564, #22583, #22584, #22820, #22897, #23031 [executing], #23133 [executing], #23139 [executing], #23206, #23308, #23352, #23378, #23440, #23472, #23477, #23483, #23489 [executing], #23490, #23495, #23521 [deployed], #23526 [approved], #23528 [approved], #23529 [approved], #23533 [approved], #23592 [approved], #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
-
-**Last PICKUP PROMPT:**
-
-```
-ml).
-
-No other loose ends.
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task — VS Code reload then verify subagent routes to deepseek.
-
-Where we left off (verified 2026-08-06 01:40 PT):
-- #23592 [deployed] — config at ~/Documents/Cline/Agents/subagent.yaml, modelId: deepseek/deepseek-chat
-- AgentConfigLoader reads on STARTUP — needs VS Code reload to pick up the new file
-- All other work (DB, ledger, reindex, backup) complete
-- One loose end: UDt file filter extension check (may need .md instead of .yaml)
-
-Open threads to drive next:
-1. #23592 [deployed] — after VS Code reload (Cmd+Shift+P → Reload Window), trigger a use_subagents tool call and verify the subagent model routes to deepseek via frankenstein_verify_routing (rule 140)
-2. #23592 [deployed] — if the subagent.yaml was NOT picked up (still routes to the old model), check the UDt extension filter in extension.js and rename the file to the accepted extension (likely .md frontmatter), then re-test
-
-Reference IDs:
-- Ticket: none
-- Ideas filed: #23592 [deployed]
-- Files touched: ~/Documents/Cline/Agents/subagent.yaml (created), ~/.vscode/extensions/saoudrizwan.claude-dev-4.0.7/dist/extension.js.bak-20260806-subagentroute (backup), ~/Documents/Cline/cline_task_ledger.md (appended), clinerules MCP index (reindexed)
-- DB: orchestrator_ideas #23592 status=deployed (verified)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785953852961` — 8/6/2026, 1:41:01 AM PT — 414 turns
-
-**Original task:**
-
-```
-#GLM 
-
-COPY_WINDOW_1_GLM_RING
-
-begin work on this. Start with a comprehensive state of the system
-```
-
-**Ideas referenced:** #0000, #12459, #12463, #12618, #12643, #12645 [deployed], #12680, #12689, #13121, #13832, #13874, #13962, #16224, #16265, #1685, #1687, #1705, #1706, #17203, #17205, #17307, #18471, #18820, #18868, #19173, #19175 [executing], #19176 [queued], #19218 [approved], #19230 [queued], #19261 [approved], #1962, #1967, #1986 [deployed], #1987 [outdated], #1988 [needs_verify], #1989 [outdated], #19898 [ready_for_review], #19899 [proposed], #1990 [outdated], #19903, #19904 [proposed], #1991 [deployed], #1998, #199999, #20251, #2050, #2101 [resolved], #21045, #2168, #21684, #2216 [deployed], #2217 [deployed], #2227, #2236, #22601, #22897 [proposed], #23050 [executing], #23056 [executing], #23157 [approved], #23159 [approved], #23169 [approved], #23283 [approved], #23326 [in_progress], #23354 [deployed], #5344
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

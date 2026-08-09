@@ -6,21 +6,27 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/9/2026, 6:48:41 AM PT | window: last 72h | 95 tasks | index total 584 (parsed 3, cached 581)
+Generated: 8/9/2026, 7:48:42 AM PT | window: last 72h | 101 tasks | index total 590 (parsed 8, cached 582)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786281941469` | 8/9/2026, 6:46:44 AM | 98 | 1135KB | #CALL BACKS  |
+| `1786286915134` | 8/9/2026, 7:48:35 AM | 1 | 3KB | #Argus Cluster Idea  |
+| `1786286876279` | 8/9/2026, 7:48:29 AM | 3 | 7KB | #GLM Local/frankenstein-llm Improvements / Make Smarter |
+| `1786245923063` | 8/9/2026, 7:48:16 AM | 414 | 4708KB | #Argus |
+| `1786182934055` | 8/9/2026, 7:48:15 AM | 345 | 896KB | Please tell me which individual LLM's have been running in the last 30 minutes. I need to  |
+| `1786285332678` | 8/9/2026, 7:48:10 AM | 107 | 855KB | #Callbacks |
+| `1786286830612` | 8/9/2026, 7:47:11 AM | 1 | 2KB | What can we do to make our instance of  GLM 5.2 Local smarter? What about frankenstein-llm |
+| `1786284214295` | 8/9/2026, 7:32:14 AM | 98 | 493KB | #AI DIRECTED MEDITATION |
+| `1786285065842` | 8/9/2026, 7:31:45 AM | 98 | 189KB | #WOPR GPU |
+| `1786244179890` | 8/9/2026, 7:16:55 AM | 453 | 917KB | #WOPR GPU |
+| `1786281941469` | 8/9/2026, 7:16:27 AM | 140 | 1271KB | #CALL BACKS  |
 | `1786281595275` | 8/9/2026, 6:39:54 AM | 146 | 302KB | #AI DIRECTED MEDITATION |
-| `1786245923063` | 8/9/2026, 6:30:10 AM | 320 | 3175KB | #Argus |
 | `1786260412872` | 8/9/2026, 1:10:51 AM | 120 | 421KB | #AI Directed Meditation |
 | `1786249226096` | 8/9/2026, 12:25:03 AM | 106 | 548KB | #AI Directed Meditation |
 | `1786256930636` | 8/8/2026, 11:50:27 PM | 117 | 294KB | #Subagents |
-| `1786182934055` | 8/8/2026, 11:45:07 PM | 295 | 787KB | Please tell me which individual LLM's have been running in the last 30 minutes. I need to  |
 | `1786214132308` | 8/8/2026, 11:27:32 PM | 450 | 1674KB | I recently saw a task that referenced Anthropic and us paying for some kind of anthropic t |
 | `1786224531010` | 8/8/2026, 11:11:05 PM | 376 | 887KB | #Big Mac |
 | `1786229125708` | 8/8/2026, 11:08:51 PM | 96 | 413KB | Do a deep dive and give your thoughts on the 85% confidence gate of rule 29 and whether it |
-| `1786244179890` | 8/8/2026, 11:06:34 PM | 452 | 915KB | #WOPR GPU |
 | `1786248426374` | 8/8/2026, 9:17:39 PM | 5 | 33KB | #AI Directed Meditation |
 | `1786225462991` | 8/8/2026, 9:05:57 PM | 403 | 1102KB | I had a thought. One advantage the LLM seems to have over the human is that it can think a |
 | `1786244855784` | 8/8/2026, 8:08:15 PM | 3 | 4KB | iteration test |
@@ -110,7 +116,230 @@ Generated: 8/9/2026, 6:48:41 AM PT | window: last 72h | 95 tasks | index total 5
 
 ## Per-window detail
 
-### `1786281941469` — 8/9/2026, 6:46:44 AM PT — 98 turns
+### `1786286915134` — 8/9/2026, 7:48:35 AM PT — 1 turns
+
+**Original task:**
+
+```
+#Argus Cluster Idea 
+
+See issues executing 23313, research bug library, and community as necessary and infrastructure and execute below cleanly
+
+Cluster scan (#25313): NOT deployed, file restored clean
+I attempted to deploy argusClusterScan() into alltastic_api.php twice. The second attempt caused a parse error at line 3986 because my python patch used the wrong placeholder pattern for the actual INSERT (the real statement shape differs from my assumption). I rolled back immediately from backup alltastic_api.php.bak-25293-clusterscan-20260809-0655.
+
+Verified restored file:
+
+php -l /var/www/emt
+```
+
+**Ideas referenced:** #25313
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786286876279` — 8/9/2026, 7:48:29 AM PT — 3 turns
+
+**Original task:**
+
+```
+#GLM Local/frankenstein-llm Improvements / Make Smarter
+
+What can we do to make our instance of  GLM 5.2 Local smarter? What about frankenstein-llm? I'm still seeing some minor issues popping up every now and then. Not severe, but I think we can do better. What can we do?
+```
+
+**Ideas referenced:** #2208, #2216, #2243
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786245923063` — 8/9/2026, 7:48:16 AM PT — 414 turns
+
+**Original task:**
+
+```
+#Argus
+---
+
+
+ I was thinking also that if a student issues identified in Argus and there are similar issues with other students in Argos that are found it's the same general type of issue that you want cluster. 
+
+But again you're gonna have to be certain on those ones. Like for example you see some sort of bug or something it needs to be identified to see if there's extensions beyond just the ones too.
+
+Approved
+- #25269 [proposed] - Fix the Kaizon blind spot: wrap argusBuildRevertInfo() in try/catch at both call sites, add the missing error_message column to the INSERT at line 3947, and add a
+```
+
+**Ideas referenced:** #152615, #176616, #178424, #178455, #17926, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #18745, #1876, #18765, #1877, #18771, #18781, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #1894, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #1912, #1927, #1928, #1929, #1930, #1931, #1932, #1933, #19348, #19415, #19416, #2006, #20547, #20555, #21074, #21125, #21126, #22511, #22583, #2274, #2275, #23489, #23852, #23920, #23952, #24635, #24636, #24645, #24646, #24766, #24791, #24897, #24900, #25047, #25058 [deployed], #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [executing], #25196 [deployed], #25224, #25262 [executing], #25263 [executing], #25264 [executing], #25269 [proposed], #25270 [proposed], #25271 [deployed], #25293 [proposed], #25304, #25310, #25313 [approved], #25314 [approved], #25315 [approved], #25409, #334155, #4338, #64748
+
+**Last PICKUP PROMPT:**
+
+```
+ER_66 verified absent on WOPR.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #25409 — finish Argus systemwide cluster scan deployment, then get qb_invoices verified live.
+
+Where we left off (verified 2026-08-09 07:40 PT):
+- FUZZY MATCH DEPLOYED: /var/www/emtskills/lib/argus_action_catalog.php $findMiss now appends "Did you mean: <student_id> <first> <last>, ...?" on lookup miss (LIKE probe on Complete_Student_Data student_id/first_name/last_name/email, LIMIT 5). grep -c 'Did you mean' = 1, php -l clean. Backup: argus_action_catalog.php.bak-fuzzy-20260809-0650.
+- alltastic_api.php restored to lint-clean from backup alltastic_api.php.bak-25293-clusterscan-20260809-0655. error_message column still wired into argus_audit_log INSERT at line 1042. argusClusterScan is NOT in the file (grep count 0).
+- Correct insertion anchor is `function argusEnrollmentStatus(` at line 78. Before patching, READ lines 1038-1065 with sudo sed to copy the exact INSERT literal and execute() argument list — the prior patch broke because the assumed pattern did not match.
+- Argus: 44 calls / 93.2% success last 8h. Reranker: zero 500s last 8h, RERANK_WORKERS=1 correct. WOPR load 7.27, GPU 0% util.
+
+Open threads to drive next (every item is a real filed idea):
+1. #25313 [executing] — Deploy argusClusterScan() into /var/www/emtskills/routes/alltastic_api.php. Insert function body before line 78 (`function argusEnrollmentStatus(`), wire the call after the real argus_audit_log INSERT execute at ~1042 using that block's exact variable names. Use a python3 file written to /tmp (the /tmp/fuzzyfix.py method worked; inline base64 did not). Verify: php -l clean, grep -c argusClusterScan = 2.
+2. #25293 [executing] — Argus terminal banner "X other students may have the same issue". This is BLOCKED on #25313 deploy (needs argusClusterScan to populate idea_clusters first). After #25313 is live, wire the banner into the Argus terminal response when idea_clusters member_count >= 2 for the current error_message pattern.
+3. #25270 [executing] — WOPR GPU rebalancing / reranker capacity. CPUQuota portion is DONE (36 cores, 86% load drop). The uvicorn workers portion is BLOCKED on #25315 (single 16 GB GPU cannot hold two CrossEncoder copies). Do NOT raise RERANK_WORKERS until #25315 resolves per-worker VRAM.
+4. #25315 [executing] — Investigate CrossEncoder lifespan/load crash path. Deferred, no urgency: zero 500s in last 8h. When throughput demand materializes, journal-dive the startup window and resolve per-worker model memory before any workers increase.
+5. #25314 [executing] — Have Jon run payment_status on 26215W-02 in the Argus terminal. Confirm real invoice data renders instead of "(qb_invoices not readable)" and argus_audit_log captures the error_message classifier output. Close when verified.
+
+Reference IDs:
+- Ideas: #25313 [executing], #25293 [executing], #25270 [executing], #25315 [executing], #25314 [executing] (filed in prior sessions; #25313/#25314/#25315 filed this session via orchestrator_ideas INSERT)
+- Deployed this session: #25269 [deployed] (qb_invoices payment_status fix + error_message wiring)
+- Files touched: /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/routes/alltastic_api.php
+- Backups: argus_action_catalog.php.bak-fuzzy-20260809-0650, argus_action_catalog.php.bak-25269-pay-20260808-2135, alltastic_api.php.bak-25293-clusterscan-20260809-0655, alltastic_api.php.bak-25269-20260808-0845
+
+When done, append a row 
+```
+
+### `1786182934055` — 8/9/2026, 7:48:15 AM PT — 345 turns
+
+**Original task:**
+
+```
+Please tell me which individual LLM's have been running in the last 30 minutes. I need to know which ones have the most number of turns. What I'm looking for is individual LLM's. I want you to look inside of Frankenstein tools and inside of Frankenstein LLM and add those to the individual tool LLM total. I do not need to see accumulative Frankenstein LLM or accumulative Frankenstein tools number. I don't care. I wanna see the numbers for the underlying LLMs
+```
+
+**Ideas referenced:** #10108, #10740, #11316, #1151, #11741, #11781, #11944, #11953, #12184, #12366, #12368, #12477, #12588, #12618, #12688, #12689, #12824, #12872, #12878, #13155, #13157, #13202, #13439, #13874, #14133, #14142, #16163, #16265, #16304, #16625, #16680, #16715, #16844, #18312, #18326, #19585, #1998, #20864, #20947, #2139, #2150, #2151, #23171, #25069 [proposed], #25097, #7505, #8365
+
+**Last PICKUP PROMPT:**
+
+```
+ artemis-gpt-oss-120b: 21,428)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #current — Bigmac vs Artemis turn difference explained.
+
+Where we left off (verified 2026-08-09 07:28 PT):
+- Bigmac (3x B70 TP=3, vLLM 0.21.0‑b1) outpaces Artemis (4x TP=4, vLLM 0.10.2) by ~5%
+- Root cause: newer vLLM + newer B70 GPU arch + co-located no WireGuard hop = faster per-request throughput
+- Adapter uses equal round-robin — no weight bias
+- per_model_turn_counts table + 5-min cron running (idea #25069 [executing])
+
+Open threads to drive next:
+1. #25069 [executing] — per_model_turn_counts cron live, delivering accurate per-LLM breakdowns
+
+Reference IDs:
+- Ideas filed: #25069 [executing]
+- Files touched: none new
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Registry specs: bigmac 3x B70 TP=3 vLLM 0.21.0‑b1, artemis 4x TP=4 vLLM 0.10.2
+- [x] Adapter uses equal round-robin (no weight bias)
+- [x] Latency check: both ~5s p50
+- [x] Root cause: newer CPU/GPU/vLLM stack makes bigmac faster per turn at equal opportunity
+</task_progress>
+</attempt_completion>
+```
+
+### `1786285332678` — 8/9/2026, 7:48:10 AM PT — 107 turns
+
+**Original task:**
+
+```
+#Callbacks
+
+that should go into the call back system, not a ticket. Those tickets are noise and need to be converted to callbacks GOING FORWARD. Offer callbacks to those outstanding in the last 48 hours like that and depreciate old process. -> Answering your question: "Voice call follow-up needed" tickets are not offers, they are internal support tickets. When the Voice AI cannot fully resolve a caller and the caller agrees to a follow-up, the AI creates one of these tickets so a human can call or email the person back.
+
+
+Answering your question: "Voice call follow-up needed" tickets are not o
+```
+
+**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #1745, #18316, #2274, #2275, #23133, #23989, #24645, #24646, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25364 [executing], #25365 [deployed], #3133, #475569, #6172, #9042, #9159, #9222, #9501
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786286830612` — 8/9/2026, 7:47:11 AM PT — 1 turns
+
+**Original task:**
+
+```
+What can we do to make our instance of  GLM 5.2 Local smarter? What about frankenstein-llm? I'm still seeing some minor issues popping up every now and then. Not severe, but I think we can do better. What can we do?
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786284214295` — 8/9/2026, 7:32:14 AM PT — 98 turns
+
+**Original task:**
+
+```
+#AI DIRECTED MEDITATION
+
+if this happened just send a message of what was needed for those actual students -> SLS's detection is sound. Its delivery was mailing internal machine text to real students. That is now corrected, proven with numbers, and class-guarded so no cron can repeat it.
+
+##
+also fix whateve is wrong with frankenstein-llm to have done that in the first place. perhaps validation layers? not sure, but the model should be more dependable
+
+What other meditations are qw making?
+
+## Short answer
+
+It was not helping. It was actively hurting, and this audit is what caught it.
+
+SLS's d
+```
+
+**Ideas referenced:** #13757, #14100, #1568, #1573, #1584, #16069, #16523, #16817, #178628, #18693, #18743, #18786, #18944, #18951, #2274, #2275, #23483, #23932, #24635, #24636, #24645, #24646, #24791, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25228 [executing], #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25242 [executing], #25245, #25246, #25247, #25268 [awaiting_review], #25284 [proposed], #25313 [awaiting_review], #25364 [deployed], #25365 [deployed], #25366 [deployed], #3098, #78350, #9202, #92400, #9306
+
+**Last PICKUP PROMPT:**
+
+```
+I need to include the PICKUP PROMPT block in the actual result this time (I dropped it accidentally).
+
+```
+
+### `1786285065842` — 8/9/2026, 7:31:45 AM PT — 98 turns
+
+**Original task:**
+
+```
+#WOPR GPU
+
+what is the GPU actually doing? Can we get it to run more efficintly? -> __The GPU headroom you reserved is gone.__ End-of-session check found the reranker had grown from 5.2GB to 13.4GB, leaving 19 MiB free instead of ~8GB. The embeddings service is stable (2.3GB), so it's the reranker. Both are healthy right now (`/health` 200 on each), so I did not restart anything on a live box at 11pm. Filed as #25311 [proposed]. I deliberately did not call it a leak: PyTorch's caching allocator never returns memory to the driver, so a burst of large batches looks identical from outside. Tellin
+```
+
+**Ideas referenced:** #14206, #14207, #190957, #2290, #25127, #25158, #25171, #25172, #25193, #25195, #25201 [rejected], #25223 [executing], #25224 [deployed], #25225 [executing], #25226 [executing], #25256 [deployed], #25279 [rejected], #25280 [deployed], #25282 [rejected], #25283 [deployed], #25294 [blocked], #25295 [blocked], #25311 [proposed], #25312, #25368 [deployed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786244179890` — 8/9/2026, 7:16:55 AM PT — 453 turns
+
+**Original task:**
+
+```
+#WOPR GPU
+
+So what now on resolving WOPR's CPU load spikes in excess of 400-2500%
+
+also, continue
+
+curious, what exactly causes CPU to go above 400% are there other solutions besides WOPR GPU, or is WOPR GPU best equipped. I mean WOPR is doing the work already, but wondering honestly
+
+## GPU IS UP. It was never hardware. Two stacked software bugs, both found and fixed.
+
+nvidia-smi is working right now: RTX PRO 2000 Blackwell, 16GB, driver 610.43.02. The reranker restarted itself on CUDA ("Reranker device selected: cuda") and is already holding 2.3GB VRAM. All prod services healthy (nginx/fpm/m
+```
+
+**Ideas referenced:** #2285, #2286, #2287, #2288, #25185, #25201 [rejected], #25223 [executing], #25224 [executing], #25225 [executing], #25226 [executing], #25256 [executing], #25279 [proposed], #25280 [proposed], #25281 [proposed], #25282 [proposed], #25283 [deployed], #25294 [proposed], #25295 [proposed], #25311 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786281941469` — 8/9/2026, 7:16:27 AM PT — 140 turns
 
 **Original task:**
 
@@ -120,7 +349,7 @@ Generated: 8/9/2026, 6:48:41 AM PT | window: last 72h | 95 tasks | index total 5
 THIS SYSTEM IS STILL NOT WORKING PROPERLY AND IT SI NOT INTEGRATED PROPERLY WITH CFAS. PLEASE FIX THAT. https://www.emsuniversity.com/emtskills/routes/telephony_hub.php?view=agent#callbacks
 ```
 
-**Ideas referenced:** #12018, #12206, #12364, #12605, #12606, #128260, #13553, #14132, #15404, #15405, #15406, #16152, #16153, #16154, #16473, #16474, #16475, #16732, #17446, #1745, #177914, #18316, #18335, #19437, #19682, #21775, #22060, #2271, #2274, #2275, #23133, #23184, #23276, #23710, #23989, #24635, #24636, #24645, #24646, #24791, #24990, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25365 [deployed], #2563, #2916, #3237, #32584, #334155, #33689, #3572, #4991, #5298, #5447, #5646, #6064, #6106, #6172, #6228, #6366, #64748, #6579, #6751, #7206, #7207, #7317, #7356, #7907, #8103, #9042, #9084, #9112, #9132, #9152, #9159, #9222, #9501
+**Ideas referenced:** #12018, #12206, #12364, #12605, #12606, #128260, #13553, #14132, #15404, #15405, #15406, #16152, #16153, #16154, #16473, #16474, #16475, #16523, #16732, #17446, #1745, #177914, #18316, #18335, #19437, #19682, #21775, #22060, #2271, #2274, #2275, #23133, #23184, #23276, #23710, #23989, #24635, #24636, #24645, #24646, #24791, #24990, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25365 [deployed], #2563, #2916, #3237, #32584, #334155, #33689, #3572, #4929, #4991, #5298, #5447, #5459, #5608, #5646, #6064, #6106, #6172, #6228, #6366, #64748, #6579, #6751, #7206, #7207, #7317, #7356, #7907, #8103, #9042, #9084, #9112, #9132, #9152, #9159, #9222, #9501
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -150,61 +379,6 @@ Splice the AI Directed Meditation dashboard panel into `llm_router_live.php`, tr
 **Ideas referenced:** #14100, #1584, #17580, #18786, #23924, #23932, #25185, #25228 [executing], #25238 [approved], #25240 [approved], #25241 [approved], #25242 [executing], #25269, #25284 [proposed], #25313, #25314, #25315, #25364 [proposed], #9086, #9087, #9168, #9339, #9343
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786245923063` — 8/9/2026, 6:30:10 AM PT — 320 turns
-
-**Original task:**
-
-```
-#Argus
----
-
-
- I was thinking also that if a student issues identified in Argus and there are similar issues with other students in Argos that are found it's the same general type of issue that you want cluster. 
-
-But again you're gonna have to be certain on those ones. Like for example you see some sort of bug or something it needs to be identified to see if there's extensions beyond just the ones too.
-
-Approved
-- #25269 [proposed] - Fix the Kaizon blind spot: wrap argusBuildRevertInfo() in try/catch at both call sites, add the missing error_message column to the INSERT at line 3947, and add a
-```
-
-**Ideas referenced:** #152615, #176616, #178424, #178455, #17926, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #18745, #1876, #18765, #1877, #18771, #18781, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #1894, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #1912, #1927, #1928, #1929, #1930, #1931, #1932, #1933, #19348, #19415, #19416, #2006, #20547, #20555, #21074, #21125, #21126, #22511, #22583, #2274, #2275, #23489, #23852, #23920, #23952, #24635, #24636, #24645, #24646, #24766, #24791, #24897, #24900, #25047, #25058 [deployed], #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [executing], #25196 [deployed], #25224, #25262 [executing], #25263 [executing], #25264 [executing], #25269 [proposed], #25270 [proposed], #25271 [deployed], #25293 [proposed], #25304, #25310, #25313 [approved], #25314 [approved], #25315 [approved], #25409, #334155, #4338, #64748
-
-**Last PICKUP PROMPT:**
-
-```
-314, leave the reranker alone.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — deploy argusClusterScan() (#25313) + verify qb_invoices fix live (#25314). Two items, both executable.
-
-Where we left off (verified 2026-08-09 06:30 PT):
-- WOPR: load 7.27 (86% reduction sustained 12h+), GPU idle at 0% util w/ 15.8 GB model cached. Reranker: zero 500s in last 8h. workers=1 confirmed correct.
-- Argus (last 8h): 44 calls, 93.2% success. 3 user-data failures (not platform bugs). No error storms.
-- qb_invoices payment_status fix is deployed and DB-verified (26215W-02 = $1,545 balance_due). argus_action_catalog.php .bak-25269-pay-20260808-2135.
-- alltastic_api.php error_message wired, php -l clean. .bak-25269-20260808-0845.
-- argusClusterScan() function body NOT deployed (grep count = 0). Insertion anchor: `function argusRunAction(` in /var/www/emtskills/routes/alltastic_api.php. Wireless call after terminal INSERT.
-- idea_clusters/idea_clusters_v2 confirmed systemwide. CFA logic confirmed on disk. Ledger row appended 23:40 PT.
-- EXECUTE_ORDER_66 file verified ABSENT on WOPR.
-
-Open threads:
-1. #25313 [executing] — Deploy argusClusterScan(). Insert function body before `function argusRunAction(` anchor, wire `argusClusterScan($portalDb, $__argusEr, $actionKey)` call after the terminal INSERT. Use JSON-argument MCP form: `{"command": "..."}`. After deploy: grep -c argusClusterScan = 2, php -l clean. This is the one deploy that delivers systemwide cluster detection (AI Directed Meditation / Multi-Threading synergy).
-2. #25314 [executing] — Jon runs payment_status on 26215W-02 in Argus terminal. Confirm real invoice rows render. Check argus_audit_log for error_message classifier output. Close when verified.
-3. #25315 [executing] — Defer. No uvicorn crash in last 8h. Investigate when throughput demand materializes or an actual startup-crash event repeats. Do NOT raise RERANK_WORKERS before CrossEncoder per-worker VRAM is solved (16 GB GPU holds exactly one model copy).
-4. Order 66: file is absent on WOPR. Create it or report absence. Ledger row IS appended (rule 07). Reconcile or note the gap.
-
-Reference IDs:
-- #25313 [executing], #25314 [executing], #25315 [executing]
-- #25269 [deployed]
-- Files: /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/routes/alltastic_api.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
 
 ### `1786260412872` — 8/9/2026, 1:10:51 AM PT — 120 turns
 
@@ -353,56 +527,6 @@ The three-line change to /etc/litellm/_router_core.py (subagent DS-routing) is l
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786182934055` — 8/8/2026, 11:45:07 PM PT — 295 turns
-
-**Original task:**
-
-```
-Please tell me which individual LLM's have been running in the last 30 minutes. I need to know which ones have the most number of turns. What I'm looking for is individual LLM's. I want you to look inside of Frankenstein tools and inside of Frankenstein LLM and add those to the individual tool LLM total. I do not need to see accumulative Frankenstein LLM or accumulative Frankenstein tools number. I don't care. I wanna see the numbers for the underlying LLMs
-```
-
-**Ideas referenced:** #10108, #10740, #11316, #1151, #11741, #11781, #11944, #11953, #12184, #12366, #12368, #12477, #12588, #12618, #12688, #12689, #12824, #12872, #12878, #13155, #13157, #13202, #13439, #13874, #14133, #14142, #16163, #16265, #16304, #16625, #16680, #16715, #16844, #18312, #18326, #19585, #20864, #20947, #2139, #2150, #2151, #23171, #25069 [proposed], #25097, #7505, #8365
-
-**Last PICKUP PROMPT:**
-
-```
-REQUEST') ORDER BY turns DESC`
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #current — Under-the-hood LLM turn counts + opus-real hardblock.
-
-Where we left off (verified 2026-08-08 23:17 PT):
-- Per-LLM under-the-hood counts from adapter log: bigmac 197, GLM-local 115, artemis 134, julia 104, deepseek 264, ollama ladder ~94, glm-5.2-cloud 30
-- Idea #25069 [executing]: per_model_turn_counts table + cron script deployed, ingesting both router audit + adapter upstream decomposition
-- claude-opus-real patched in /etc/litellm/_router_core.py line 5141 to block claude-opus* (was bypassing via explicit_L4)
-- Docker restart needed to apply hardblock patch
-
-Open threads to drive next:
-1. #25069 [executing] — Cron confirmed at */5; monitor next cron cycles for clean per-LLM windows
-2. (human-only, no idea) — Restart litellm Docker to apply opus-real hardblock patch
-3. (human-only, no idea) — Verify zero claude-opus-real picks after restart
-
-Reference IDs:
-- Ideas filed: #25069 [executing]
-- Files touched: /var/www/emtskills/scripts/ingest_per_model_turn_counts.py, /etc/litellm/_router_core.py (patched), /tmp/patch_opus_hardblock.py
-- DB table: admin_portal.per_model_turn_counts
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Found actual per-LLM counts under the hood (adapter internal upstreams)
-- [x] Identified claude-opus-real source: auto chains 20864/20947 (NOT deliberate)
-- [x] Patched hardblock to catch claude-opus* at line 5141
-- [x] Shipped idea #25069: per_model_turn_counts table + 5-min cron
-- [x] Delivered report with zero adapter labels
-</task_progress>
-</attempt_completion>
-```
-
 ### `1786214132308` — 8/8/2026, 11:27:32 PM PT — 450 turns
 
 **Original task:**
@@ -549,28 +673,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1786244179890` — 8/8/2026, 11:06:34 PM PT — 452 turns
-
-**Original task:**
-
-```
-#WOPR GPU
-
-So what now on resolving WOPR's CPU load spikes in excess of 400-2500%
-
-also, continue
-
-curious, what exactly causes CPU to go above 400% are there other solutions besides WOPR GPU, or is WOPR GPU best equipped. I mean WOPR is doing the work already, but wondering honestly
-
-## GPU IS UP. It was never hardware. Two stacked software bugs, both found and fixed.
-
-nvidia-smi is working right now: RTX PRO 2000 Blackwell, 16GB, driver 610.43.02. The reranker restarted itself on CUDA ("Reranker device selected: cuda") and is already holding 2.3GB VRAM. All prod services healthy (nginx/fpm/m
-```
-
-**Ideas referenced:** #2285, #2286, #2287, #2288, #25185, #25201 [rejected], #25223 [executing], #25224 [executing], #25225 [executing], #25226 [executing], #25256 [executing], #25279 [proposed], #25280 [proposed], #25281 [proposed], #25282 [proposed], #25283 [deployed], #25294 [proposed], #25295 [proposed], #25311 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786248426374` — 8/8/2026, 9:17:39 PM PT — 5 turns
 

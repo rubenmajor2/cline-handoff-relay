@@ -213,6 +213,76 @@ if [ "$is_hardfloor" = "0" ]; then
 fi
 
 
+# --- G9 no-override-of-rule-91 (2026-08-08, bug library #2277) --------------
+# Source incident: rule 300 was added to the router's _STEERING_HARDFLOOR_FULL
+# tier (idea #25155), which injects a rule's ENTIRE text VERBATIM at the TOP of
+# the steering system prompt. Rule 300's body contained a "This rule overrides:
+# Rule 91 ... PICKUP PROMPT blocks are FORBIDDEN" clause. Measured live: rule 300
+# at char 857, the rule-91 PICKUP PROMPT skeleton at char 16,823. Models read the
+# override claim ~16K chars BEFORE the rule it overrode and obeyed it. That is a
+# live rule-91 regression across every window, produced entirely by RULE TEXT.
+#
+# The class: any always-loaded rule that (a) claims override authority over a
+# hardfloor FORMATTING rule and (b) is positioned above it, WINS. Rule 91 is
+# unconditional by design, so nothing may claim to override it.
+#
+# Also catches the second-order trap: an RCA section that QUOTES the defective
+# directive re-arms it, because the text is injected verbatim and a model reading
+# a quoted imperative cannot reliably tell "historical example" from "instruction".
+# Describe defective directives in prose; never reproduce them literally.
+# v2 (2026-08-08, same day): v1 of this gate had TWO defects found by its own
+# positive-control test, both worth recording because they are the general traps:
+#   (a) v1 matched only the INLINE form ("overrides rule 91"). The ACTUAL defect
+#       was a MARKDOWN HEADING + LIST form -- "## This rule overrides:" on one
+#       line, "- Rule 91 ..." on the next. A line-oriented grep cannot see that.
+#       A gate that misses the exact shape of the incident that motivated it is
+#       decorative. Now parses the "overrides:" section across lines.
+#   (b) v1's omit-directive regex used [^.]{0,60}, which spanned a semicolon and
+#       false-positived on rule 161's cross-ref line ("Rule 91 - pickup prompt
+#       format; [queued] banned in dispositions"). Clause boundaries (. ; -- and
+#       newline) now terminate the match.
+python3 - "$FILE" "$SLUG" <<'G9EOF'
+import sys, re
+path, slug = sys.argv[1], sys.argv[2]
+try:
+    t = open(path, encoding="utf-8").read()
+except Exception:
+    sys.exit(0)
+
+exempt = re.search(r"does\s+NOT\s+override\s+rule\s+91", t, re.I)
+fails = []
+
+# (1) Override-claim, INLINE form.
+if re.search(r"(overrid|supersed|suspend|waiv)\w*\s+(the\s+)?rule\s+91", t, re.I) \
+   or re.search(r"rule\s+91[^.\n]{0,80}(is\s+)?(overrid|supersed|suspend|waiv)", t, re.I):
+    if not exempt:
+        fails.append("claims override/supersede authority over rule 91 (inline form)")
+
+# (2) Override-claim, HEADING+LIST form -- the shape of the real incident.
+#     Any "overrides:" heading/lead-in, then Rule 91 named in the following block.
+for m in re.finditer(r"^.{0,80}overrid\w*\s*:\s*$", t, re.I | re.M):
+    tail = t[m.end():m.end() + 600]
+    block = tail.split("\n##")[0]          # stop at the next heading
+    if re.search(r"rule\s*91", block, re.I) and not exempt:
+        fails.append("lists Rule 91 under an 'overrides:' heading (heading+list form)")
+        break
+
+# (3) Quotable directive to omit/limit the block. Clause boundaries (. ; -- newline)
+#     terminate the window so cross-reference lines do not false-positive.
+if re.search(r"pickup\s+prompt[^.;\n\u2014]{0,60}(is\s+|are\s+|be\s+)?(forbidden|banned|not\s+required|optional|valid\s+ONLY)", t, re.I) \
+   or re.search(r"(omit|skip|drop)\s+the\s+pickup\s+prompt", t, re.I):
+    fails.append("contains a sentence that reads as an instruction to omit/limit the PICKUP PROMPT block")
+
+if fails:
+    print("FAIL %s: G9 rule-91-supremacy: %s. Rule 91 (PICKUP PROMPT) is UNCONDITIONAL - no rule may override it, and always-loaded rules are injected VERBATIM into every system prompt so even a QUOTED example re-arms the directive. If you mean 'do not DEFER buildable work', say that; the pickup block is a state record, not a deferral. Describe defective directives in prose, never reproduce them literally. If this file legitimately DISCUSSES the relationship it must contain the literal phrase 'does NOT override Rule 91'. See bug library #2277 (2026-08-08 live regression)."
+          % (slug, "; ".join(fails)), file=sys.stderr)
+    sys.exit(2)
+G9EOF
+if [ "$?" = "2" ]; then
+    glog "G9 rule-91-supremacy hard-block triggered"
+    exit 2
+fi
+
 # --- G8 floor-total cap (2026-07-25, idea #19125) ---------------------------
 # The always-loaded Rules/ dir is injected into EVERY window's system prompt.
 # Cline's Xle() compacts a 200K model at 160,000 tokens, so an oversized floor

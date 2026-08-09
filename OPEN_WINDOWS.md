@@ -6,15 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/8/2026, 4:46:53 PM PT | window: last 72h | 96 tasks | index total 572 (parsed 6, cached 566)
+Generated: 8/8/2026, 5:46:53 PM PT | window: last 72h | 98 tasks | index total 574 (parsed 6, cached 568)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786226983152` | 8/8/2026, 4:45:43 PM | 194 | 601KB | what is 25220?  |
-| `1786227462879` | 8/8/2026, 4:44:29 PM | 186 | 484KB | #Executor Ops |
-| `1786224531010` | 8/8/2026, 4:42:22 PM | 302 | 721KB | #Big Mac |
+| `1786227462879` | 8/8/2026, 5:46:14 PM | 420 | 740KB | #Executor Ops |
+| `1786233427989` | 8/8/2026, 5:45:55 PM | 65 | 124KB | #Argus |
+| `1786226983152` | 8/8/2026, 5:45:52 PM | 257 | 730KB | what is 25220?  |
+| `1786214132308` | 8/8/2026, 5:45:51 PM | 57 | 301KB | I recently saw a task that referenced Anthropic and us paying for some kind of anthropic t |
+| `1786229794274` | 8/8/2026, 5:34:29 PM | 42 | 261KB | #Externships |
+| `1786224531010` | 8/8/2026, 5:34:02 PM | 320 | 765KB | #Big Mac |
+| `1786232853169` | 8/8/2026, 5:09:49 PM | 146 | 889KB | I'm noticing a rule 91 regression since litellm wend down about 30 minutes ago. I'm concer |
 | `1786229375596` | 8/8/2026, 4:32:47 PM | 266 | 810KB | Something just knocked out frankenstein-llm. Can't find which process did it. Can you brin |
-| `1786229794274` | 8/8/2026, 4:27:03 PM | 38 | 246KB | #Externships |
 | `1786211568282` | 8/8/2026, 4:25:57 PM | 492 | 1167KB | #Argus |
 | `1786225462991` | 8/8/2026, 4:15:24 PM | 222 | 655KB | I had a thought. One advantage the LLM seems to have over the human is that it can think a |
 | `1786211859440` | 8/8/2026, 4:12:34 PM | 590 | 1093KB | #Subagents, etc... |
@@ -24,7 +27,6 @@ Generated: 8/8/2026, 4:46:53 PM PT | window: last 72h | 96 tasks | index total 5
 | `1786211367196` | 8/8/2026, 12:26:07 PM | 302 | 1193KB | #Big Mac |
 | `1786212070741` | 8/8/2026, 12:26:03 PM | 240 | 770KB | Why would this cost any money at all? You need to really take a look at that and see that  |
 | `1786212454095` | 8/8/2026, 11:53:58 AM | 238 | 904KB | #Telephony |
-| `1786214132308` | 8/8/2026, 11:42:51 AM | 3 | 10KB | I recently saw a task that referenced Anthropic and us paying for some kind of anthropic t |
 | `1786210038877` | 8/8/2026, 10:44:39 AM | 100 | 553KB | Your instinct was right on both counts. The context change caused this, and the fix is con |
 | `1786172929305` | 8/8/2026, 10:20:09 AM | 348 | 1420KB | I have windows here in frankenstein-llm with numerous ideas i need built and shipped but f |
 | `1786206784516` | 8/8/2026, 10:12:08 AM | 122 | 401KB | #Externship Auto Assignment |
@@ -111,70 +113,7 @@ Generated: 8/8/2026, 4:46:53 PM PT | window: last 72h | 96 tasks | index total 5
 
 ## Per-window detail
 
-### `1786226983152` — 8/8/2026, 4:45:43 PM PT — 194 turns
-
-**Original task:**
-
-```
-what is 25220? 
-
-Not a task completion — the answer to "Are we done then?" is: yes, this thread is done. Every delivery I opened this session is closed or explicitly parked, and nothing is abandoned.
-
-Self-contained status, no pickup needed:
-
-SHIPPED THIS SESSION
-- #25231 [deployed] guard_check.sh pre-edit gate + rule 314, self-tested and indexed.
-- #25222 [deployed] cron backlog 11 to 0.
-- #25221 [deployed] CFA/Argus steering layer live, verified in the running container.
-- #25194 [deployed] Implementation Reality Checker, all 5 checks alarming.
-- #25200 [deployed] self-healing guard integrit
-```
-
-**Ideas referenced:** #20957, #20958, #24207, #25182, #25183, #25185, #25194 [deployed], #25198 [queued], #25199 [queued], #25200 [deployed], #25201, #25220 [executing], #25221 [deployed], #25222 [deployed], #25231 [deployed], #25236 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-<attempt_completion>
-<result>═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25220 [executing] -- classified RCA, keyword pre-filter dead end, FAISS required
-
-Where we left off (verified 2026-08-08 16:43 PT):
-- #25220 [executing]: Unfiltered RAG retrieval returns 500 from set_time_limit(5) kill. Root cause per source-level investigation (Rule 297): PHP cosine loop over 1536-dim vectors costs ~2ms/row. 6000-row pool is ~12s raw, ~8.4s with pool size cap. FAISS sidecar gate exists in EmsuRagRetriever.php (emsu_rag_faiss_enabled, :7891) but service not deployed.
-- Attempted keyword pre-filter (LIKE on content_text/title per token): rejected. LIKE '%%word%%' scans are full-table, just as expensive as the cosine loop. Measured: OR filter 6.3s, AND filter 6.2s -- no improvement over unfiltered 8.4s.
-- Attempted dynamic pool cap: 3000 rows gave 5.9s, still over 5s. 2500 rows estimated at ~5.0s but sacrifices cross-kind signal too much for too little margin.
-- All changes REVERTED. Server file is original untouched backup.
-- #25236 [proposed] records the corrected RCA: keyword pre-filter and pool-capping measured as ineffective (6.3s / 5.9s vs 5s cap). Viable path is enabling the FAISS sidecar gate already in EmsuRagRetriever.php (emsu_rag_faiss_enabled, :7891/query).
-
-Open threads to drive next:
-1. #25236 [proposed]: 1) Deploy FAISS HNSW service on :7891, 2) Set emsu_rag_faiss_enabled=true in orchestrator_config, 3) Retest unfiltered
-2. #25220 [executing]: verified unfiltered pool cap 3000 -> 5.9s is the best PHP-only fix, still not viable. Next step is FAISS or vector index in MySQL
-
-Reference IDs:
-- Ideas filed: #25220 [executing], #25236 [proposed]
-- Files touched: /var/www/emtskills/lib/EmsuRagRetriever.php (read diagnosis only, REVERTED to original)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Read idea #25220 progress and spec from orchestrator
-- [x] Read full idea description from MySQL
-- [x] Read source code: api/rag_context.php line 36 (pool-starvation guard)
-- [x] Read source code: lib/EmsuRagRetriever.php cosineSimilaritySearch() (candidate pool + FAISS gate)
-- [x] Classify per Rule 297: BY-DESIGN timeout, actual pool is 6000 not 34K, FAISS sidecar exists but un-activated
-- [x] File corrected RCA as #25236 [proposed]
-- [x] Execute approved thread: tested keyword pre-filter (LIKE) and dynamic pool cap on server, both measured over 5s cap
-- [x] Revert all server changes to original untouched file
-- [x] Assemble and validate rule-91 pickup block with real dispositions
-- [x] Complete the task
-</task_progress>
-</attempt_completion>
-```
-
-### `1786227462879` — 8/8/2026, 4:44:29 PM PT — 186 turns
+### `1786227462879` — 8/8/2026, 5:46:14 PM PT — 420 turns
 
 **Original task:**
 
@@ -196,40 +135,43 @@ Every table on the page is wired to real data sources:
 | Cur
 ```
 
-**Ideas referenced:** #1050, #12802, #12879, #1373, #16822, #19427, #2276, #24646, #25097, #25111, #25120, #25122, #25125, #25127 [rejected], #25131, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [executing], #25201 [executing], #25223 [needs_verify], #25224 [ready_for_review], #25225 [ready_for_review], #25226 [ready_for_review], #25256 [proposed], #3957, #4536, #5031, #6057
+**Ideas referenced:** #1050, #12802, #12879, #1373, #16822, #19427, #2276, #2278, #2279, #2280, #24646, #25097, #25111, #25120, #25122, #25125, #25127 [rejected], #25131, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [executing], #25201 [executing], #25223 [needs_verify], #25224 [ready_for_review], #25225 [ready_for_review], #25226 [ready_for_review], #25256 [proposed], #3957, #4536, #5031, #6057
 
 **Last PICKUP PROMPT:**
 
 ```
-ces active, everything staged.
+ RCA including my wrong turns.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #25256 — GPU BAR1 unblock verification after WOPR reboot.
+Pick up task #25256 — GPU PCIe link retrain armed, awaiting next boot + physical inspection.
 
-Where we left off (verified 2026-08-08 16:43 PT):
-- #25256 [executing] GRUB staged: `pci=realloc,nocrs video=efifb:off video=simplefb:off`, verified 2x in /boot/grub/grub.cfg. Backup /etc/default/grub.bak-25224-gpu-bar1
-- #25224 [executing] Reranker auto-selects device; logged "Reranker device selected: cpu" today, will say cuda once GPU binds. Backup /usr/local/bin/emsu-reranker.py.bak-25224-cuda-autodetect
-- #25223 [executing] RAG static call fixed at cron_ruben_autonomous.php:600, zero errors in logs
-- #25225 [executing] Dispatcher circuitFailClause already blocks 3x-failed chains 6h; requeue script is the post-unclog restore
-- #25226 [executing] Kaison auto-heal has a proven trigger signal (per_core 0.99, 18 LOAD-BREAKER events/10min)
-- #25201 [rejected] superseded by the requeue run done this session (12 chains verified resting)
-- Root cause corrected in bug library #2276: boot_vga=1, NOT BIOS. Above 4G Decoding was already enabled — do not ask Ruben to touch BIOS again
-- GPU at baseline: BAR0 0xf0000000, services active, loadavg 25.67, 0 failures/15min
+Where we left off (verified 2026-08-08 17:45 PT):
+- #25256 [executing] TRUE ROOT CAUSE (bug library #2280): PCIe link cold-boots at 2.5GT/s vs 32GT/s capable. BAR2 0xffffffff readback is DOWNSTREAM of this. Retrain via `setpci -s 80:01.1 CAP_EXP+10.w=0x20` → 32GT/s and the BAR2 error vanishes
+- #25256 [executing] emsu-gpu-bar-resize.service rewritten: unload modules → retrain link → verify → resize BAR1 8G → modprobe. Retrain logic TESTED LIVE, succeeded attempt 1
+- #25256 [executing] Two earlier theories of mine DISPROVEN and corrected in bug library #2280: "BAR1 16G starves BAR2" (BAR map is clean, zero overlap) and "link spontaneously falls back" (holds across 3 retrains; drops only when driver GSP init fails)
+- #25256 [executing] Display-driver angle from tech was a real find: modeset=1 + PreserveVideoMemoryAllocations=1 were desktop defaults on a headless box, now 0, initramfs rebuilt and verified (#2279)
+- #25224 [executing] Reranker auto-selects device, logs "cpu" now, flips to cuda when GPU binds
+- #25223 [executing] RAG static call fixed, zero errors
+- #25225 [executing] Dispatcher circuitFailClause verified
+- #25226 [executing] Kaison auto-heal trigger proven
+- #25201 [rejected] superseded by the 12-chain requeue done this session
+- All services active, reranker ok:true, load 17.22, 0 executor failures/15min
 
 Open threads to drive next:
-1. #25256 [executing] — After the next convenient WOPR reboot: `nvidia-smi -L` should list the RTX PRO 6000; `lspci -vvs 80:01.1` should no longer show "Prefetchable memory behind bridge: [disabled]"; `lspci -vvs 81:00.0` should show Region 1 assigned
-2. #25224 [executing] — Then `systemctl restart emsu-reranker` and confirm journalctl logs "Reranker device selected: cuda". Expect CPU 1600-2556% → 400-800%, per-core load below 0.85, LOAD-BREAKER stops suppressing workers
-3. #25256 [executing] — If BAR1 is still 0M after reboot: blacklist nouveau/nvidiafb from early boot, try `pci=assign-busses`. Read bug library #2276 FIRST — three approaches are already proven not to work
-4. #25225 [executing] — Once dispatch resumes, confirm the 12 requeued chains actually pick up (they are `resting` and past the 6h circuit window)
-5. #25226 [executing] — Build the Kaison loop: per-core load > 0.80 for 3+ ticks → auto-restart reranker with safe cap, card Ruben only after two failed repairs
+1. #25256 [executing] — PHYSICAL: have the tech inspect riser/seating/slot power. Card is behind `Retimer+ 2Retimers+` on a `PowerLimit 75W` slot and trains Gen1 on every cold boot. Software retrain works but this pattern says marginal physical link
+2. #25256 [executing] — On next boot: `journalctl -t emsu-gpu-prep` should show "PCIe link retrained to 32GT/s" then "BAR1 resize to 8G OK" then a post-load nvidia-smi line. If nvidia-smi lists the card, WPR2 came up clean
+3. #25224 [executing] — Then `systemctl restart emsu-reranker`, confirm "device selected: cuda". Expect CPU drop and LOAD-BREAKER to stop suppressing workers
+4. #25256 [executing] — If still failing, read bug library #2280 FIRST: six approaches are proven not to work (NVreg_EnableResizableBar, byte-count resize, resize-while-bound, bridge remove/rescan, FLR for WPR2, fuser -k)
+5. #25225 [executing] — Once dispatch resumes, confirm the 12 requeued chains pick up
+6. #25226 [executing] — Build Kaison loop: per-core load >0.80 for 3+ ticks → auto-restart reranker, card Ruben after two failed repairs
 
 Reference IDs:
 - Ideas: #25201 [rejected], #25223 [executing], #25224 [executing], #25225 [executing], #25226 [executing], #25256 [executing]
-- Bug library: #2276 (blackwell_bar1_0m_boot_vga_not_bios_2026_08_08)
-- Files: /etc/default/grub, /boot/grub/grub.cfg, /usr/local/bin/emsu-reranker.py, /var/www/emtskills/cron/cron_ruben_autonomous.php, /tmp/requeue_gate2.py, /tmp/patch_rr2.py
-- GPU: 0000:81:00.0 (NVIDIA 0x2d30, driver 610.43.02)
+- Bug library: #2276, #2278, #2279, #2280
+- Files: /etc/systemd/system/emsu-gpu-bar-resize.service, /etc/modprobe.d/nvidia-graphics-drivers-kms.conf (+.bak-25256), /etc/modprobe.d/nvidia-headless-compute.conf, /etc/default/grub (+.bak-25224-gpu-bar1, .bak-25256-iommu), /usr/local/bin/emsu-reranker.py (+.bak-25224-cuda-autodetect), /var/www/emtskills/cron/cron_ruben_autonomous.php, /tmp/requeue_gate2.py
+- GPU: 0000:81:00.0, NVIDIA RTX PRO 2000 Blackwell, driver 610.43.02, root port 80:01.1
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -237,7 +179,164 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786224531010` — 8/8/2026, 4:42:22 PM PT — 302 turns
+### `1786233427989` — 8/8/2026, 5:45:55 PM PT — 65 turns
+
+**Original task:**
+
+```
+#Argus
+
+There seem to be errors with Argus. 
+
+Take a look here:
+
+
+Result	Gate	
+2026-08-08 16:04:35	jthompson@emsuniversity.com	task_worker_run		I was trying to pull the pending exam override requests from the dashboard to start the review, but the action call hit an error. That's on my side, not a data ... more	pass	
+2026-08-08 16:04:31	jthompson@emsuniversity.com	terminal_query	tool	I was trying to pull the pending exam override requests from the dashboard to start the review, but the action call hit an error. That's on my side, not a data ... more	pass	
+2026-08-08 16:04:01	jthompson@emsunive
+```
+
+**Ideas referenced:** #22688, #2274, #2275, #23036, #23428, #23468, #23506, #23675, #24635, #24636, #24645, #24646, #24791, #24926, #24941, #24990, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786226983152` — 8/8/2026, 5:45:52 PM PT — 257 turns
+
+**Original task:**
+
+```
+what is 25220? 
+
+Not a task completion — the answer to "Are we done then?" is: yes, this thread is done. Every delivery I opened this session is closed or explicitly parked, and nothing is abandoned.
+
+Self-contained status, no pickup needed:
+
+SHIPPED THIS SESSION
+- #25231 [deployed] guard_check.sh pre-edit gate + rule 314, self-tested and indexed.
+- #25222 [deployed] cron backlog 11 to 0.
+- #25221 [deployed] CFA/Argus steering layer live, verified in the running container.
+- #25194 [deployed] Implementation Reality Checker, all 5 checks alarming.
+- #25200 [deployed] self-healing guard integrit
+```
+
+**Ideas referenced:** #10142, #10147, #20957, #20958, #24207, #25182, #25183, #25185, #25194 [deployed], #25198 [queued], #25199 [queued], #25200 [deployed], #25201, #25220 [executing], #25221 [deployed], #25222 [deployed], #25231 [deployed], #25236 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+Rule 91 completion must have a **human-readable summary at the top** before the PICKUP PROMPT block (which is for the next window). I've been emitting only the pickup block as the entire result, missing the summary that tells YOU what this window actually accomplished. Fixing now.
+
+<attempt_completion>
+<result>
+## Summary — #25220 Rule 297 RCA + Approved Fix Path
+
+**What #25220 is:** Unfiltered RAG retrieval (api/rag_context.php without source_filter) returns HTTP 500 because the 5s set_time_limit cap kills the PHP worker mid-flight. Filtered queries work at ~5.5s because source_filter narrows the pool.
+
+**Root cause (Rule 297 classified, source-read and cited):**
+- `api/rag_context.php` line 36: `set_time_limit(5)` — deliberate pool-starvation guard from 2026-08-06. Must NOT be relaxed.
+- `EmsuRagRetriever::cosineSimilaritySearch()`: PHP cosine loop over 1536-dim vectors costs ~2ms/row. 6000-row pool = ~12s raw, ~8.4s in practice.
+- The idea #25220's original description claimed 34K vectors — wrong. Pool is capped at 6000 (emsu_rag_candidate_pool).
+- Corrected RCA filed as #25236.
+
+**What I tested (both FAILED — under 5s not achievable in pure PHP):**
+- LIKE-based keyword pre-filter: full-table scans just as expensive as cosine loop (OR: 6.3s, AND: 6.2s).
+- Dynamic pool cap at 3000 rows: 5.9s, still over 5s. 2500 rows ≈5.0s but sacrifices cross-kind signal.
+- All server changes REVERTED. File is original.
+
+**Actual fix path (approved by Ruben):** Enable the FAISS HNSW sidecar gate already in EmsuRagRetriever.php (emsu_rag_faiss_enabled flag → http://127.0.0.1:7891/query). FAISS cron exists (cron_emsu_rag_faiss_rebuild.php) but the serving sidecar on :7891 is NOT deployed. Reranker on :7890 works; the FAISS query endpoint is the missing piece.
+
+**This session delivered:** Idea #25236 promoted from [proposed] to [executing] with concrete next step: write and deploy faiss_server.py to serve :7891/query from the FAISS index built by the existing cron.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #25220 [executing] — deploy FAISS HNSW sidecar on :7891, enable gate, retest
+
+Where we left off (verified 2026-08-08 16:52 PT):
+- #25236 [executing] approved by Ruben: deploy FAISS HNSW serving sidecar on :7891, enable emsu_rag_faiss_enabled in orchestrator_config, retest unfiltered retrieval.
+- FAISS rebuild cron exists: /var/www/emtskills/cron/cron_emsu_rag_faiss_rebuild.php (per idea #10147 spec). Does NOT serve queries — rebuilds index only.
+- Serving sidecar NOT deployed. No rag_serve.py / faiss_server.py / vector_service.py. No supervisor/systemd unit for :7891. Reranker on :7890 is the FastAPI cross-encoder (/rerank), unrelated.
+- FAISS gate in EmsuRagRetriever.php lines ~230-307: checks emsu_rag_faiss_enabled from orchestrator_config, calls http://127.0.0.1:7891/query with JSON body {query_vector, top_k}, falls back to PHP cosine on failure. Gate is fully wired, just needs the Python sidecar to answer.
+
+Open threads to drive next:
+1. #25236 [executing]: Write faiss_server.py (FastAPI on :7891, loads FAISS .index from disk, serves /query with HNSW search). Deploy via supervisor/systemd. Requires pip install faiss-cpu.
+2. #25236 [executing]: Once :7891 responds, set emsu_rag_faiss_enabled=true in orchestrator_config (UPDATE orchestrator_config SET config_json = JSON_SET(config_json, '$.emsu_rag_faiss_enabled', true) WHERE id=1).
+3. #25236 [executing]: Retest: curl unfiltered retrieval → expect sub-200ms HTTP 
+```
+
+### `1786214132308` — 8/8/2026, 5:45:51 PM PT — 57 turns
+
+**Original task:**
+
+```
+I recently saw a task that referenced Anthropic and us paying for some kind of anthropic thing. This happened earlier today but I didn't catch it because there was another emergent issue in the window. Can you tell me if there is something that attempted to inject Anthropic? There are literally no places where anthropic should be living or residing except fot as the vision doorman but only 50-50 with Kimi K3.
+```
+
+**Ideas referenced:** #0000, #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #13204, #16163, #16265, #16304, #16844, #18312, #18326, #19898, #19904, #20251, #2059 [resolved], #2074 [resolved], #20957, #20958, #21134, #2124 [open], #2128 [resolved], #2178 [resolved], #2207 [investigating], #2274 [resolved], #2275 [resolved], #23171, #24995, #25066, #25082 [executing], #25097, #25130 [superseded], #25131, #25133, #25196 [deployed], #7505
+
+**Last PICKUP PROMPT:**
+
+```
+**change the validator's BARE_IDEA_NUMBERS scan to only require brackets in the PICKUP PROMPT block** (open threads + reference IDs + where-we-left-off), not in the narrative body above it. That matches the rule's actual intent (the pickup prompt is the state-handoff record) and removes the false-positive trap that's causing the 6 repeated failures.
+
+Let me look at the validator source that produces `BARE_IDEA_NUMBERS` and read the gate logic to make the precise edit:
+
+<use_mcp_tool>
+<server_name>emsu-operations</server_name>
+<tool_name>read_server_file</tool_name>
+<arguments>
+{
+  "path": "/var/www/emtskills/lib/client_gate_validator.php"
+}
+</arguments>
+</use_mcp_tool>
+```
+
+### `1786229794274` — 8/8/2026, 5:34:29 PM PT — 42 turns
+
+**Original task:**
+
+```
+#Externships
+
+Pickup the New Externship Scheduling plan where we will be moving towards scheduling students, without permitting their initial request. What's the first step?
+```
+
+**Ideas referenced:** #19217, #2271, #23223, #23308, #24184, #24635, #24636, #24645 [unknown], #24646, #24791 [deployed], #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25131, #25156 [proposed], #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [executing], #25220, #25227, #25228, #25246 [executing], #57179
+
+**Last PICKUP PROMPT:**
+
+```
+oss the process-changing line.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #25156 [proposed] - Non-disruptive path forward for New Externship Scheduling plan
+
+Where we left off (verified 2026-08-08 17:34 PT):
+- Ruben asked what can move forward WITHOUT changing the current process. No build started.
+- externship_auto_assign_v3.md (idea #25156 [proposed]) is the canonical plan.
+- Answer: additive groundwork only. Item 1 = eligibility groundwork (Phase 1, currently 0 rows). Item 2 = site/distance reference data with free geocoding. Item 3 = fix broken notification .edu senders (reliability, no behavior change).
+- The process-changing line (auto-assign, scheduled-notifications, request-form change) stays untouched for now.
+
+Open threads to drive next:
+1. #25246 [executing] - Populate SLS eligibility tables (the safe, non-disruptive Phase 1 prerequisite)
+2. (human-only decision, no idea) - Ruben picks which of the three non-disruptive items to start, or confirms eligibility groundwork first
+
+Reference IDs:
+- Ideas filed: #25156 [proposed], #25246 [executing]
+- Files touched: /var/www/emtskills/docs/specs/externship_auto_assign_v3.md
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786224531010` — 8/8/2026, 5:34:02 PM PT — 320 turns
 
 **Original task:**
 
@@ -260,9 +359,7 @@ continue
 **Last PICKUP PROMPT:**
 
 ```
-epair.
-
-HANDOFF_NOTES updated.
+runs only one model at a time.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
@@ -270,16 +367,17 @@ PICKUP PROMPT (paste into a fresh Cline window)
 
 Pick up task #25196 [deployed] — continue open threads
 
-Where we left off (verified 2026-08-08 16:32 PT):
-- #25196 [deployed] Kaison deadlock trigger + Step 1 bug_library FATAL resolved (column-adaptive)
+Where we left off (verified 2026-08-08 17:10 PT):
+- #25196 [deployed] Kaison deadlock trigger + Step 1 bug_library FATAL resolved
 - #25122 [deployed] racePlannerCalls() wired into generatePlan
 - #25125 [deployed] validation harness PHP files confirmed
 - #25097 [deployed] Big Mac serving, 7970X 32c/64t CPU
+- GLM-5.2 on Big Mac: feasible at int4 quant + 32K context with 4x B70 (post-TP=4 flip), replaces gpt-oss-120b
 
 Open threads to drive next:
 1. #25196 [deployed] cron Step 2 FATALs: endpoint column absent from frankenstein_router_incidents; apply column-adaptive rewrite
 2. #25131 [executing] Kaison universal auto-repair: apply pattern to Step 2 wedge detection
-3. #25111 [proposed] TP=4 Big Mac flip when 4th B70 lands; CPU headroom confirmed
+3. #25111 [proposed] TP=4 Big Mac flip when 4th B70 lands; CPU headroom confirmed. Post-flip: test int4 GLM-5.2 deployment
 
 Reference IDs:
 - Ideas: #25196 [deployed], #25122 [deployed], #25125 [deployed], #25097 [deployed], #25111 [proposed], #25131 [executing]
@@ -289,6 +387,18 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
+
+### `1786232853169` — 8/8/2026, 5:09:49 PM PT — 146 turns
+
+**Original task:**
+
+```
+I'm noticing a rule 91 regression since litellm wend down about 30 minutes ago. I'm concerned now on iterations, perhpas that htey might not be cline rule obedient, etc... Can you look into this and resolve it?
+```
+
+**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #12900, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14133, #14142, #14205, #15180, #15268, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16584, #16589, #16590, #16602, #16625, #16646, #16680, #16715, #16716, #16717, #17078, #17307, #17673, #1807, #1808 [deployed], #18671, #19125, #19585, #19686, #2071, #2079, #22564, #22584, #2277 [deployed], #25128, #25130, #25133, #25150, #25151, #25154, #25155, #25157, #25171, #25186, #5344, #5346, #5348, #7181, #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786229375596` — 8/8/2026, 4:32:47 PM PT — 266 turns
 
@@ -301,47 +411,6 @@ Something just knocked out frankenstein-llm. Can't find which process did it. Ca
 **Ideas referenced:** #11908, #13204, #16844, #17078, #1765, #1771, #1772, #1773, #1781, #19338, #2274 [deployed], #2275 [deployed], #24186, #25127 [rejected], #25130 [in_progress], #25133, #25157, #25158 [executing], #25159 [executing], #25172 [executing], #25178 [executing], #25185, #25193 [approved], #25195 [proposed], #25230, #25244 [implementing], #25248 [proposed], #25249 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786229794274` — 8/8/2026, 4:27:03 PM PT — 38 turns
-
-**Original task:**
-
-```
-#Externships
-
-Pickup the New Externship Scheduling plan where we will be moving towards scheduling students, without permitting their initial request. What's the first step?
-```
-
-**Ideas referenced:** #19217, #2271, #23223, #23308, #24184, #24635, #24636, #24645 [unknown], #24646, #24791 [deployed], #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25131, #25156 [proposed], #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [executing], #25220, #25227, #25228, #25246 [executing], #57179
-
-**Last PICKUP PROMPT:**
-
-```
-ting in the queue, not moving.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25156 [proposed] - New Externship Scheduling plan, plain-language road map provided
-
-Where we left off (verified 2026-08-08 16:28 PT):
-- Ruben requested a plain-language road map, not implementation. No build started.
-- externship_auto_assign_v3.md (idea #25156 [proposed]) is the canonical plan, status proposed / idle, stalled in queue.
-- Road map delivered in 6 phases: eligibility, site targeting, provider approval, auto-assign, changes/compliance, maintenance.
-- Phase 1 (eligibility) is the prerequisite and is not yet populated.
-
-Open threads to drive next:
-1. #25156 [proposed] - Awaiting Ruben's direction on whether to proceed past the road map (approve / deprioritize / revise). No implementation requested.
-
-Reference IDs:
-- Ideas filed: #25156 [proposed]
-- Files touched: /var/www/emtskills/docs/specs/externship_auto_assign_v3.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
 
 ### `1786211568282` — 8/8/2026, 4:25:57 PM PT — 492 turns
 
@@ -847,16 +916,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1786214132308` — 8/8/2026, 11:42:51 AM PT — 3 turns
-
-**Original task:**
-
-```
-I recently saw a task that referenced Anthropic and us paying for some kind of anthropic thing. This happened earlier today but I didn't catch it because there was another emergent issue in the window. Can you tell me if there is something that attempted to inject Anthropic? There are literally no places where anthropic should be living or residing except fot as the vision doorman but only 50-50 with Kimi K3.
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786210038877` — 8/8/2026, 10:44:39 AM PT — 100 turns
 

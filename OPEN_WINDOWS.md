@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/9/2026, 5:04:51 PM PT | window: last 72h | 96 tasks | index total 595 (parsed 8, cached 587)
+Generated: 8/9/2026, 6:04:52 PM PT | window: last 72h | 94 tasks | index total 595 (parsed 1, cached 594)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786318471535` | 8/9/2026, 5:04:40 PM | 143 | 483KB | I got a report of executor stalling. Play frankenstein doctor of executor and resolve and  |
-| `1786285332678` | 8/9/2026, 5:04:09 PM | 469 | 4526KB | #Callbacks |
+| `1786285332678` | 8/9/2026, 5:35:19 PM | 556 | 5140KB | #Callbacks |
+| `1786318471535` | 8/9/2026, 5:24:05 PM | 218 | 628KB | I got a report of executor stalling. Play frankenstein doctor of executor and resolve and  |
 | `1786319043926` | 8/9/2026, 4:52:10 PM | 42 | 189KB | #TDSHS |
 | `1786245923063` | 8/9/2026, 4:48:41 PM | 588 | 5843KB | #Argus |
 | `1786285065842` | 8/9/2026, 4:45:05 PM | 214 | 403KB | #WOPR GPU |
@@ -104,26 +104,12 @@ Generated: 8/9/2026, 5:04:51 PM PT | window: last 72h | 96 tasks | index total 5
 | `1786068815556` | 8/6/2026, 7:16:56 PM | 6 | 8KB | test to first iteration |
 | `1785953794202` | 8/6/2026, 6:19:29 PM | 584 | 1604KB | COPY_WINDOW_0_DATA_ACCURACY_AUDIT |
 | `1785953476892` | 8/6/2026, 6:08:42 PM | 520 | 1115KB | build and ship this |
-| `1785954595787` | 8/6/2026, 5:51:13 PM | 252 | 1102KB | #KAISON |
-| `1786058811201` | 8/6/2026, 5:19:23 PM | 202 | 821KB | #TDSHS |
 
 ---
 
 ## Per-window detail
 
-### `1786318471535` — 8/9/2026, 5:04:40 PM PT — 143 turns
-
-**Original task:**
-
-```
-I got a report of executor stalling. Play frankenstein doctor of executor and resolve and send back failed ideas since the stall ater making sure they work. Watch it for the nex t60 minutes. Kaizon needs the recipies and we need durable solutions
-```
-
-**Ideas referenced:** #12184, #13191, #13196, #13199, #13976, #18291, #18781, #18786, #18787, #18794, #18796, #18800, #18801, #18802, #18803, #18804, #18805, #18806, #18807, #18813, #18814, #18817, #18818, #18819, #19792, #20050, #20340, #20517, #20581, #20582, #20612, #20903, #21011, #21504, #2247, #22565, #2271, #2274, #2275, #22816, #2292, #2293, #23276, #23483, #23658, #23852, #23868, #23913, #23920, #23931, #24036, #24214, #24227, #24229, #24233, #24635, #24636, #24645, #24646, #24791, #24963, #25039, #25042, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25129, #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25208, #25220, #25227, #25313, #25318, #25364 [executing], #25365 [deployed], #25366 [proposed], #25376, #25426, #3957, #3996
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786285332678` — 8/9/2026, 5:04:09 PM PT — 469 turns
+### `1786285332678` — 8/9/2026, 5:35:19 PM PT — 556 turns
 
 **Original task:**
 
@@ -141,30 +127,79 @@ Answering your question: "Voice call follow-up needed" tickets are not o
 **Last PICKUP PROMPT:**
 
 ```
-p` — new, 15-min policing cron
+lot, we didn't call them back)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up — Voice follow-up callback system deployed with visibility + accountability layers.
+Pick up — Callback system post-fix. All auto-booking paths removed. Only caller-scheduled callbacks remain.
 
-Where we left off (verified 2026-08-09 15:19 PT):
-- `cron/cron_post_call_summary.php`: AUTO-CALLBACK block has dedup guard + own-number skip (lines 227-268). Runs clean.
-- `crons/policing/cron_callback_policing.php`: runs every 15 min via `/etc/cron.d/emsu-callback-policing`. Checks overdue + upcoming callbacks, emails Vicky.
-- 19 clean callbacks today (post-cleanup). 118 available slots.
-- Both crons verified running as www-data, exit 0.
+Where we left off (verified 2026-08-09 ~17:35 PT):
+- `cron/cron_post_call_summary.php`: auto-booking removed, log-only. 0 `bookCallbackSlot` refs. Backed up.
+- `api/voice/vapi_server_webhook.php`: end-of-call block reverted to log-only. `handleScheduleCallback` uses `bookCallbackSlot()` with 1-per-person-per-day dedup. Backed up `.bak-20260809-1705`.
+- `lib/callback_intent_detector.php`: Vicky email hook still active.
+- `routes/telephony_hub.php`: gold alert banner still active.
+- `crons/policing/cron_callback_policing.php`: every 15 min overdue/upcoming alerts to Vicky.
+- Database: 1 remaining callback (#6, Dominic Felix — the 48h outstanding ticket conversion). 0 auto-bookings.
 
 Open threads to drive next:
 1. None — all work completed this session.
 
 Reference IDs:
-- Ideas: #25365 [deployed] — callback system core fix + consumer integration
-- Files: `/var/www/emtskills/cron/cron_post_call_summary.php`, `/var/www/emtskills/api/voice/vapi_server_webhook.php`, `/var/www/emtskills/lib/callback_intent_detector.php`, `/var/www/emtskills/routes/telephony_hub.php`, `/var/www/emtskills/crons/policing/cron_callback_policing.php`
+- Ideas: #25365 [deployed] — callback system core fix
+- Files touched: `cron/cron_post_call_summary.php`, `api/voice/vapi_server_webhook.php`, `lib/callback_intent_detector.php`, `routes/telephony_hub.php`, `crons/policing/cron_callback_policing.php`
 - Cron: `/etc/cron.d/emsu-callback-policing`
-- Archive: `/var/www/emtskills/archive/callback_digest_deprecated_20260809/`
+- Backups: `.bak-20260809-callback-alerts`, `.bak-20260809-notify`, `.bak-20260809-1705`, `.bak-20260809-dedup`
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786318471535` — 8/9/2026, 5:24:05 PM PT — 218 turns
+
+**Original task:**
+
+```
+I got a report of executor stalling. Play frankenstein doctor of executor and resolve and send back failed ideas since the stall ater making sure they work. Watch it for the nex t60 minutes. Kaizon needs the recipies and we need durable solutions
+```
+
+**Ideas referenced:** #12184, #13191, #13196, #13199, #13976, #16778, #18291, #18483, #18496, #18781, #18786, #18787, #18794, #18796, #18800, #18801, #18802, #18803, #18804, #18805, #18806, #18807, #18813, #18814, #18817, #18818, #18819, #19509, #19792, #20050, #20340, #2043, #20517, #20581, #20582, #20612, #20903, #21011, #21504, #2247, #22565, #2271, #2274, #2275, #22816, #2292, #2293, #23276, #23483, #23658, #23852, #23868, #23913, #23920, #23931, #24036, #24214, #24227, #24229, #24233, #24635, #24636, #24645, #24646, #24791, #24963, #25039, #25042, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25129, #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25208, #25220, #25227, #25313, #25318, #25319, #25364 [executing], #25365 [deployed], #25366 [proposed], #25376, #25389, #25426, #3957, #3996
+
+**Last PICKUP PROMPT:**
+
+```
+ definitions before deploying.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up Frankenstein Doctor executor watch — 60-minute monitoring window in progress.
+
+Where we left off (verified 2026-08-09 17:23 PT):
+- Executor fully recovered: timeout 1200, floor 3, pool 2000, FAISS off, __acceptReasoningAsText() defined
+- 3 workers live at 17:23 (#16778, #18483, #25319) — all under timeout 1200
+- 122 completions since fixes deployed, zero post-fix OOMs
+- #18291 completed 17:16 (13.4 min, definitively past old 600s kill cliff)
+- #18496 completed 17:18 (auto-deployed)
+- Session doc: /tmp/emsu-doctor-session-fixes.md (on server)
+- Kaizen: kaizen_failure_recipes row `executor_timeout_600_kill`
+- Ideas #20517, #23276, #24036 requeued to idle
+
+Open threads to drive next:
+1. Continue 60-min watch until ~17:54 PT (started 16:54). Checkpoints: 17:30 (completions count), 17:45 (completion count + rule 158 deep analysis), 17:54 (final deep analysis + confirm sustained throughput).
+2. Monitor #16778 completion — it's on file 2/3 (cron_fabric_poll.php) at 17:22, should complete ~17:30-17:35. If it dies, check if cause is new or timeout-regression.
+3. After 60-min watch concludes, update handoff notes via MCP (read_handoff_notes → write_handoff_notes) with final throughput stats.
+
+Reference IDs:
+- Files touched: /var/www/emtskills/cron/cron_ruben_implement.php (timeout 1200 + function added), /usr/local/bin/fleet_admission.py (floor 3), kaizen_failure_recipes (new row), orchestrator_config (pool + FAISS + workers)
+- Ideas recovered: #20517, #23276, #24036
+- Kaizen recipe: executor_timeout_600_kill
+- Session doc: /tmp/emsu-doctor-session-fixes.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
 </attempt_completion>
 ```
 
@@ -3797,76 +3832,5 @@ Four causes, and the first one is the biggest:
 ```
 
 **Ideas referenced:** #10119 [rejected], #1026, #1233, #17300, #18329 [queued], #18800, #18868, #19304, #19309, #19313, #1934, #2225 [deployed], #2237 [rejected], #2256, #22598, #22601, #22832, #23117, #23122 [in_progress], #23135 [executing], #23172 [approved], #23178 [approved], #23179 [approved], #23182 [proposed], #23183 [proposed], #23217, #23234 [proposed], #23290, #23291, #23325 [in_progress], #4505 [rejected], #52758, #52773, #52775, #52782, #52784, #52799, #52801, #56925, #56938
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785954595787` — 8/6/2026, 5:51:13 PM PT — 252 turns
-
-**Original task:**
-
-```
-#KAISON
-
-
-═══════════════════════════════════════════════
-PICKUP PROMPT: KAIZEN CLOSED-LOOP OWNER
-═══════════════════════════════════════════════
-Pick up KAIZEN closed-loop ownership. KAIZEN = the continuous improvement / recipe loop across the EMSU systems. It is a pure-SQL + local-LLM system by design.
-
-GROUND TRUTH (verified from ledger + handoff, 2026-08-05):
-- KAIZEN MCP server makes NO LLM calls itself (pure SQL + paid-model-blocking guard). Verified 2026-07-18, idea #18347 [rejected] closed with evidence: nothing to wire.
-- Executor consumes KAIZEN proposals via local glm-5.2 (free-loca
-```
-
-**Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12477, #13084, #13575, #152615, #17166, #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #1802, #1803, #1806, #1811, #18133 [approved], #1815, #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [rejected], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1934, #1935 [rejected], #1936 [resolved], #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20495, #20555, #20565, #20569, #20627, #20628, #20629, #20630, #20662, #20663, #20672, #20674, #20676, #20677, #20806 [proposed], #2101, #2105, #2126, #2127, #2128, #2221, #2232, #2238, #22897 [executing], #23190 [rejected], #23191 [executing], #23192 [rejected], #23198 [proposed], #23204 [proposed], #23205 [rejected], #23307 [rejected], #23315 [proposed], #23339 [executing], #23467 [executing], #389249, #7223
-
-**Last PICKUP PROMPT:**
-
-```
-is in a stable shipping state.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — KAIZEN closed-loop health follow-up.
-
-Where we left off (verified 2026-08-06 17:50 PT):
-- Gloves: tunnels 2207/2208/2209 live, cron 6/6, zero new medic rows (18h clean)
-- KAIZEN: glm52 100% classified, ruben_executor 0 failures, 273 recipes all active, guard intact
-- #23315 [deployed]: infrastructure fix complete, no code change needed
-- #23204 [rejected]: original stale finding
-
-Open threads to drive next:
-1. #23315 [deployed] — no further action; tunnels proven stable for 18h+
-
-Reference IDs:
-- Ideas: #23315 [deployed], #23204 [rejected], #18347 [rejected]
-- Files: WOPR ports 2207/2208/2209, glm52-tunnel-*.service (3 boxes), cline_task_ledger.md row 448
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786058811201` — 8/6/2026, 5:19:23 PM PT — 202 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-
-put those documents on the compliance page/s for later use if needed.
-
-I'm thiniking we are finaly good, now i need your opinion on how this is internally digested, the likely next steps here and what we have in front of us. 
-
-Additionally, I'd like for you to comb this final polished response for anything that could be used to update the gold standard response as well as that for TX in these cases. 
-
-There are futher nuances as well as my tone, what i like and don't. I'd like to save time on the next complaint responses.
-
-To that end i need you also to inject such updates to those ot
-```
-
-**Ideas referenced:** #0000, #178596, #19338, #19458, #19491, #19599 [deployed], #23666 [proposed], #23667 [executing], #24086 [proposed], #24098 [proposed], #24103 [proposed], #24108 [proposed], #24133 [proposed], #24143 [proposed], #24153 [proposed], #250984, #251236, #5196
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

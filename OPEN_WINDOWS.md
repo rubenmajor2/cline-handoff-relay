@@ -6,18 +6,20 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/10/2026, 10:56:11 AM PT | window: last 72h | 85 tasks | index total 602 (parsed 8, cached 594)
+Generated: 8/10/2026, 11:56:11 AM PT | window: last 72h | 87 tasks | index total 604 (parsed 5, cached 599)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786342434047` | 8/10/2026, 10:56:06 AM | 259 | 1379KB | #Big Mac Claimed Down?? |
-| `1786384439089` | 8/10/2026, 10:56:06 AM | 3 | 718KB | Why am i just receiving these chat transcripts now? That's not very helpful |
-| `1786285332678` | 8/10/2026, 10:55:42 AM | 869 | 7102KB | #Callbacks |
-| `1786381856309` | 8/10/2026, 10:55:37 AM | 65 | 183KB | If you take a look at all the CPR class websites, it seems that traffic on those is very l |
-| `1786319043926` | 8/10/2026, 10:55:21 AM | 221 | 1216KB | #TDSHS |
+| `1786340503930` | 8/10/2026, 11:56:00 AM | 335 | 1723KB | #Argus |
+| `1786381856309` | 8/10/2026, 11:45:12 AM | 124 | 403KB | If you take a look at all the CPR class websites, it seems that traffic on those is very l |
+| `1786384439089` | 8/10/2026, 11:43:03 AM | 74 | 906KB | Why am i just receiving these chat transcripts now? That's not very helpful |
+| `1786386328622` | 8/10/2026, 11:42:37 AM | 89 | 200KB | /emtskills wedged yet again. Please check handoffs over the last few days. What's going on |
+| `1786384771407` | 8/10/2026, 11:31:47 AM | 196 | 440KB | #AI Directed Meditation |
+| `1786342434047` | 8/10/2026, 11:14:38 AM | 284 | 1441KB | #Big Mac Claimed Down?? |
+| `1786319043926` | 8/10/2026, 11:12:58 AM | 270 | 1889KB | #TDSHS |
+| `1786285332678` | 8/10/2026, 11:10:37 AM | 882 | 7148KB | #Callbacks |
 | `1786086916545` | 8/10/2026, 10:43:19 AM | 278 | 1364KB | Tell me how the student council is doing. Is it healthy? It actually generating ideas and  |
 | `1786379859145` | 8/10/2026, 10:42:53 AM | 318 | 1547KB | #AI Directed Meditation |
-| `1786340503930` | 8/10/2026, 10:41:57 AM | 248 | 1146KB | #Argus |
 | `1786318471535` | 8/9/2026, 11:16:54 PM | 304 | 791KB | I got a report of executor stalling. Play frankenstein doctor of executor and resolve and  |
 | `1786337811635` | 8/9/2026, 11:13:06 PM | 253 | 524KB | why is frankenstein-llm appearing to be sluggish. Can you take a look? |
 | `1786339173079` | 8/9/2026, 11:12:19 PM | 182 | 1299KB | I keep having to say over and over again that open threads need idea numbers and statuses  |
@@ -100,7 +102,174 @@ Generated: 8/10/2026, 10:56:11 AM PT | window: last 72h | 85 tasks | index total
 
 ## Per-window detail
 
-### `1786342434047` — 8/10/2026, 10:56:06 AM PT — 259 turns
+### `1786340503930` — 8/10/2026, 11:56:00 AM PT — 335 turns
+
+**Original task:**
+
+```
+#Argus
+
+**Argus 12-task backup: RESOLVED + durable fix deployed. Jon notified in Argus.**
+
+## Root cause (verified live)
+`cron_argus_task_worker.php` crashed on EVERY 2-minute cycle at line 441:
+```php
+require_once __DIR__ . '/../lib/argus_reclaim.php';   // file does not exist
+```
+The orphan-reclaim logic already lives inline at lines 210-230 in the same file. The `require_once` introduced in the 2026-08-09 deployment was a duplicate with a nonexistent path, so every cycle claimed tasks → DISPATCH → `require_once` fatal → process died before `curl_multi_exec` ran → tasks never completed, and 
+```
+
+**Ideas referenced:** #10141, #12619, #1356, #18378, #18530, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20547, #21125, #21126, #22511, #22583, #22688, #23036, #23039, #23053, #23428, #23468, #23489, #23506, #23592, #23675, #23852, #23913, #23920, #23941, #23952, #23982, #24766, #24897, #24900, #24926, #24941, #24990, #25047, #25058, #25131, #25142, #25193, #25196, #25269, #25313, #25464 [ready_for_review], #25465 [approved], #25466 [approved], #25547, #25552, #25563, #25564, #25768, #2606, #2620, #2862, #2911, #2912, #334155, #4338, #4421, #5700, #64748, #7137, #8892
+
+**Last PICKUP PROMPT:**
+
+```
+detector (now column-adaptive)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task Argus context enrichment + kaison argus wedge — both ideas deployed and verified.
+
+Where we left off (verified 2026-08-10 10:41 AM PT):
+- #25464 [deployed] — argus_task_queue context enrichment: worker now falls back to user_email session lookup when session_key is NULL or pruned. All 6 legacy failed tasks requeued and passed. File: /var/www/emtskills/routes/cron_argus_task_worker.php (33115 bytes, backup .bak-25464-20260810-1015)
+- #25466 [deployed] — Kaison argus stuck-task wedge detection: kaison_detect_argus_stuck() scans for 5+ running >15min, files P1 idea + ops_alert. MAIN restructured so argus+deadlock checks run EVERY cycle. File: /var/www/emtskills/cron/cron_kaison_wedge_detection.php (654 lines, backup .bak-25466-20260809-2249)
+- Queue state: 351 done / 51 offloaded / 19 canceled archived / 6 recovered passed / 0 stuck
+
+Open threads to drive next:
+1. #25464 [deployed] — Monitor next 24h of argus cycles for new failed-task classifications; if fail-fast hits reappear, check whether _ctxText=_conv recovery covers attachment_json AND memory-bank contexts
+2. #25466 [deployed] — Optional follow-up: lower ARGUS_STUCK_THRESHOLD 5→3 and add a Telegram/iMessage alert route so Ruben gets push notification on wedge (currently only ops_alerts + orchestrator_ideas P1 card)
+
+Reference IDs:
+- Ideas deployed: #25464, #25466
+- Files touched: /var/www/emtskills/routes/cron_argus_task_worker.php, /var/www/emtskills/cron/cron_kaison_wedge_detection.php
+- Backups: both .bak-20260810-1015 / .bak-25466-20260809-2249
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786381856309` — 8/10/2026, 11:45:12 AM PT — 124 turns
+
+**Original task:**
+
+```
+If you take a look at all the CPR class websites, it seems that traffic on those is very low and so are registrations. How do we improve that? Are those forms working right? Are payments being received? What's going on? What about scheduiling, etc...?
+```
+
+**Ideas referenced:** #000000, #202608, #2271, #2274, #2275, #2292, #23223, #23308, #24184, #24635, #24636, #24645, #24646, #24791, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25538 [draft], #25539 [draft], #25540 [draft], #25541 [draft], #25542 [draft], #25543 [draft], #25544 [draft], #25545 [draft], #25549 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+,500 per quarter between them.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #25549 - CPR class website audit, 8 fixes filed
+
+Where we left off (confirmed 2026-08-10 11:27 PT):
+- Full audit done on all 16 CPR domains on WOPR (Plesk vhosts), all classified healthy/broken/vestigial
+- 5 sites healthy (Tucson, SF, San Antonio, San Diego, Dallas): WPForms QB payments flowing, 311 payments in 90d
+- 6 sites broken: phoenixcpr.org #25539 [proposed] payment cliff (7/900), cprclass.org #25542 [proposed] QBMS stalls at processing, LA/Portland/Houston #25540 [proposed] forms void, cprinstructor.co #25538 [proposed] HTTP 500
+- 4 sites vestigial: phoenixcpr.com redirect, cprguidelines redirect, baltimore, boston, freecprclasses dead
+- 9 ideas filed: #25538 [proposed] through #25545 [proposed], #25549 [proposed]
+
+Open threads to drive next:
+1. #25540 [proposed] P0: Address LA/Portland/Houston no wpforms tables + LA /classschedule/ 404
+2. #25539 [proposed] P1: Investigate phoenixcpr.org 900 to 7 payment cliff
+3. #25542 [proposed] P1: Investigate cprclass.org WooCommerce QBMS stalls at wc-processing
+4. #25538 [proposed] P1: Apply Drupal 7 PHP 8 compat patch to cprinstructor.co
+5. #25541 [proposed] P2: Add SEO plugins to all 9 active CPR sites
+6. #25543 [proposed] P2: Add chat_widget to top 5 CPR sites
+7. #25545 [proposed] P2: Build CPA cross-tracking CPR to EMT enrollment
+8. #25544 [proposed] P3: Consolidate 4 zombie CPR domains
+
+Reference IDs:
+- Ideas filed: #25538 [proposed], #25539 [proposed], #25540 [proposed], #25541 [proposed], #25542 [proposed], #25543 [proposed], #25544 [proposed], #25545 [proposed], #25549 [proposed]
+- Files touched: /var/www/vhosts/cprinstructor.co/httpdocs (error log), /var/www/vhosts/cprclass.org/httpdocs/wp-config.php, wp_q31ow (sanfranciscocpr), wp_id7ic (tucsoncpr), wp_yjqlq (dallascpr), wp_uiabm (cprsandiego), wp_g79da (sanantoniocpr), wp_bv0te (phoenixcpr), wp_9skw8 (cprclass.org)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786384439089` — 8/10/2026, 11:43:03 AM PT — 74 turns
+
+**Original task:**
+
+```
+Why am i just receiving these chat transcripts now? That's not very helpful
+```
+
+**Ideas referenced:** #19837, #2271, #2274, #2275, #2292, #24635, #24636, #24645, #24646, #24791, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25550 [proposed], #25551 [proposed], #6526
+
+**Last PICKUP PROMPT:**
+
+```
+ but that is config not a bug.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Chat transcript delay and DSML leak (\#25550, \#25551 verdict + optional fix)
+
+Where we left off (verified 2026-08-10 11:41 PT):
+- Root cause confirmed: `cron/cron_chat_transcript_autosend.php` PER_RUN_CAP=5/site/15min causes weeks-long backlog; oldest-first drain reached Jul 12-13 chats on Aug 9-10. Emma Chicco conv 6526 closed Jul 13 06:30, emailed Aug 10 10:00.
+- Second issue: conv 6526 message 44899 has raw DSML tool-call envelope stored as assistant message, visible in transcript emails.
+- Ideas filed: #25550 [proposed] DSML leak, #25551 [proposed] transcript backlog cap/real-time send.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #25551 — Decide: raise cap vs real-time send on close. If raising, edit cron PER_RUN_CAP and check drain rate on next run; if real-time, wire sendChatTranscriptEmail into the close path in api/chat_portal_api.php.
+2. #25550 — Add DSML-tag strip (regex for <｜DSML｜...> blocks) at message-save point for assistant messages, then backfill-clean existing rows with a one-off UPDATE.
+
+Reference IDs:
+- Ideas filed: #25550 [proposed], #25551 [proposed]
+- Files touched: none written this session (read-only investigation: cron_chat_transcript_autosend.php, lib/chat_transcript_mailer.php, api/chat_portal_api.php, chat_transcript_sent_log)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786386328622` — 8/10/2026, 11:42:37 AM PT — 89 turns
+
+**Original task:**
+
+```
+/emtskills wedged yet again. Please check handoffs over the last few days. What's going on now????
+```
+
+**Ideas referenced:** #16523, #2274, #2275, #2292, #2301 [deployed], #23378, #24635, #24636, #24645, #24646, #24791, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25525, #25534, #25535, #25537, #25548 [executing]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786384771407` — 8/10/2026, 11:31:47 AM PT — 196 turns
+
+**Original task:**
+
+```
+#AI Directed Meditation
+
+
+Arent these Kaison level issues to resovle properly? Are these rule 29 fixes -> So that column is writer-__omission__, not corruption. The alarming 776,773 figure is mostly one field nobody populates. Where no sibling exists, the INSERT statement answers it statically: column absent from the INSERT means omission.
+
+Recommend retiring the "CLASS 2" label, since it reads as "maybe corrupt" and invites the exact overclaim the split was meant to prevent. Better: __2a omission__ (cosmetic) vs __2b coercion__ (real bug), because they need opposite work.
+
+Bonus defect found 
+```
+
+**Ideas referenced:** #13757, #1584, #178629, #18786, #2274, #2275, #2292, #23920, #23922, #23923, #23932, #23952, #24646, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25229 [deployed], #25238 [executing], #25240 [executing], #25241 [executing], #25313, #25364 [executing], #25365 [deployed], #25366 [deployed], #25373, #25375, #25385, #25401, #25425, #25525 [executing], #25528 [deployed], #25530 [executing], #25531 [executing], #25532 [deployed], #25534 [deployed], #25535 [executing], #25537 [executing]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786342434047` — 8/10/2026, 11:14:38 AM PT — 284 turns
 
 **Original task:**
 
@@ -115,31 +284,77 @@ approved -> - #25468 [proposed] : make the canary quarantine a connection-RESET 
 confused on why this is beneficial? Se
 ```
 
-**Ideas referenced:** #0078, #10234, #12335, #12459, #12657, #12672, #127891, #128274, #13121, #1378, #13832, #13840, #1557, #16120, #1802, #1803, #1806, #1811, #18159, #18163, #18178, #18179, #18180, #18189, #18212, #18213, #18214, #18720, #18868, #19125, #19163, #19903, #19907, #19925, #20247, #20264, #20272, #2050, #20536, #2092, #20957, #20958, #2096, #21045, #22583, #22588, #2298, #23171, #24144, #24145, #24165, #24173, #24183, #24220, #24368, #25097, #25112, #25150, #25151, #25188, #25468 [proposed], #25469 [rejected], #25470 [deployed], #25471 [proposed], #30363, #334155, #4932, #64748, #6785, #6825, #6842, #8984, #9019, #9070
+**Ideas referenced:** #0078, #10234, #12335, #12459, #12657, #12672, #127891, #128274, #13121, #1378, #13832, #13840, #1557, #16120, #1802, #1803, #1806, #1811, #18159, #18163, #18178, #18179, #18180, #18189, #18212, #18213, #18214, #18720, #18868, #19125, #19163, #19903, #19907, #19925, #20247, #20264, #20272, #2050, #20536, #2092, #20957, #20958, #2096, #21045, #22583, #22588, #2298, #23171, #24144, #24145, #24165, #24173, #24183, #24220, #24368, #25097, #25112, #25150, #25151, #25188, #25468 [proposed], #25469 [rejected], #25470 [deployed], #25471 [proposed], #25515 [proposed], #25536 [proposed], #30363, #334155, #4932, #64748, #6785, #6825, #6842, #8984, #9019, #9070
 
 **Last PICKUP PROMPT:**
 
 ```
-stence
-- [ ] Reframe ExecStartPost with verified evidence
-- [ ] Ledger append + PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
+ed via julia_full_relaunch.sh.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Big Mac wedge RCA + MDM enrollment + SSH tunnel + fleet fixes (idea #25536 pending human decision).
+
+Where we left off (verified 2026-08-10 11:13 PT):
+- Big Mac wedge: VERIFIED TRUE from primary evidence (journalctl 2026-08-09 12:34:40→22:46:37 PT = 5 log lines, 0 startup-complete, 0 requests, placement-group hang; restart fixed in 90s; no reboot). Credential confusion resolved — documented SSH line is `emsu-big-mac@10.100.0.19`, works.
+- MDM: Big Mac in `rustdesk_devices` (rustdesk_id=`bigmac-10.100.0.19`) and `mdm_devices` (id=1, enrolled) via mdm_register.php / app PDO.
+- Reverse SSH tunnel LIVE: WOPR 127.0.0.1:50000 → Big Mac:22 (certified, no shell — emsu-tunnel restrictions). Ruben's key installed on Big Mac `emsu-big-mac` account. @reboot crontab set. Command for Ruben: `ssh -J emsuserver@emsuniversity.com:2222 emsu-big-mac@127.0.0.1 -p 50000`.
+- Rule 315 (verify-before-declaring-host-down) is hardfloor + reindexed; #25468 and #25471 deployed and fleet verified 4/4 decode_live.
+
+Open threads to drive next:
+1. #25536 [proposed] — Big Mac ExecStartPost HTTP readiness gate (`curl /v1/models` until 200, fail unit on timeout; catches the verified 10h mid-init wedge class). HUMAN-POLICY: per-box unit names/ports/container paths — do NOT apply fleet-wide without approval.
+2. (optional) #25468 [deployed] — verify the ConnectionReset→LOAD_UNREACHABLE patch against a real reset with a single live adversary test if Ruben approves; otherwise confirmed by code + syntax + restart.
+
+Reference IDs:
+- Ideas filed: #25536 [proposed], #25468 [deployed], #25471 [deployed]
+- Rule: 315 [deployed]
+- Files touched: /usr/local/bin/frankenstein_tools_adapter.py (WOPR), /etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzz-cline-priority-over-batch.conf + argus-qos.conf + glm-executor-cap-fix.conf (annotated), /Users/rubenmajor/Documents/Cline/Rules/315-verify-before-declaring-host-down.md, _RULE_TREE.md, .hardfloor-manifest, cline_task_ledger.md
+
+When done, append to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
-### `1786384439089` — 8/10/2026, 10:56:06 AM PT — 3 turns
+### `1786319043926` — 8/10/2026, 11:12:58 AM PT — 270 turns
 
 **Original task:**
 
 ```
-Why am i just receiving these chat transcripts now? That's not very helpful
+#TDSHS
+
+https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
+
+Please provide to me links to the  3 or 4  unfiled TPIA requests as well as the sunset review email (do i send this monday or wait)? nadn then the instructions for cori to setup meetings for us to meet the 3 politiicians the first week of September
 ```
 
-**Ideas referenced:** #2271, #2274, #2275, #2292, #24635, #24636, #24645, #24646, #24791, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed]
+**Ideas referenced:** #18676, #19587, #19595 [executing], #19599, #19600, #19601, #1976, #2274, #2275, #2292, #24790, #24805, #24836, #24842, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25374, #25400, #600179, #623992
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1786285332678` — 8/10/2026, 10:55:42 AM PT — 869 turns
+```
+". No hyperlinks per rule 302.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — TDSHS: mail blindness fixed, 7 acks recovered, Sunset PDF v3 rebuilt on the paid-fee facts.
+
+Where we left off (verified 2026-08-10 11:12 PT):
+- MAJOR CORRECTION. The earlier finding that DSHS never acknowledged any records request was FALSE. Ruben produced a screenshot; investigation confirmed SEVEN acknowledgements. Retraction logged to inv 16 in the same investigation as the error.
+- ROOT CAUSE: /var/qmail/mailnames/emsuniversity.com/<user>/Maildir is mode 0750 popuser:popuser. Non-sudo grep returns EMPTY WITH EXIT 0, byte-identical to no-such-email, and prints no permission error when the parent blocks traversal. Compounding: email_inbound_log ingests info@ ONLY (positive control: 123,682 rows, ZERO with rmajor in to_email).
+- THIS WAS A REPEAT of idea #18676, already flagged in inv rows 151 and 154 on 2026-08-05. Row 154 states verbatim that zero open-records messages are visible server-side and correctly blamed the mailbox gap. The agent hit the same wall on 8/10 and drew the wrong conclusion anyway.
+- FIX DEPLOYED: /usr/local/bin/emsu_mail_search.sh on WOPR, mode 755, verified working. Searches all ~271 mailboxes or one; folders cur, new, .Sent, .Archive; --cold extends to /data/cold_storage, /data/cold-archives, /data/cold_misc, /backup; header extraction; --since filter; --limit.
+- RULE 316 WRITTEN at Rules-archive/316-mail-full-visibility-search-maildirs-with-sudo.md. Mandates a three-source check before any no-email-exists claim (DB logs which are info@ only, Maildirs via the tool, cold storage) plus a positive-control requirement. NOT YET REINDEXED into the clinerules MCP.
+- VERIFIED SENDS from rmajor .Sent, PT: 001 7/30 03:18:28, 002 7/30 03:24:50, 003 7/30 03:27:24, 004 7/30 03:39:09, 005 7/30 03:49:50, 007 7/30 04:12:27, 006 8/9 21:30:00, 010 8/10 09:53:23, 011 8/10 10:51:06.
+- VERIFIED ACKS from DSHS OpenRecords, UTC: 001 8/4 15:10:26 ORR A08042026.0450009; 002 8/4 15:16:16 .0450010; 003 8/4 16:28:24 .0450011; 004 8/4 16:41:07 .0450012; 005 8/4 17:07:11 .0450013; 007 8/4 17:19:05 .0450014; plus 7/29 14:15:54 Cost Estimate for ORR A07152025.0450008. All loaded into tpia_request_tracking. 006, 010, 011 REMAIN UNACKNOWLEDGED.
+- ARGUMENT INVERTED AND STRENGTHENED. Six requests sent 7/30 were all acked 8/4 within a two-hour window at uniform five-day latency, proving the intake process works. Against that control group, the legacy request is damning: inv row 172 records from CLARIFICATION_PLAYBOOK_TPIA_2026.md line 75 that THE FEE ON ORR A07152025.0450008 WAS PAID IN FULL AND THE REQUEST WAS NEVER PROCESSED. Jon Thompson emailed DSHS about that same ORR on 2026-03-20; DSHS answered 2026-07-29 with a cost estimate, two days after the 7/27 renewal, still no production.
+- OPEN QUESTION: the ORR prefix A0715-2025 reads as a July 2025 assignment, about 13 months, NOT 3 years. Either the 3-year request is a separate earlier one that never received an ORR number, or the duration needs revising. Every "roughly three years" claim was REMOVED from the PDF and replaced with the verified paid-fee facts.
+- SUNSET PDF v3 REBUILT: /Users/rubenmajor/Desktop/sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-10.pdf, 11 pages, 412.8 KB. Item 3 rewritten as a full address-misdirection treatment; item 4 rewritten around the acknowledged-in-days versus paid-and-unperformed contrast with a new pull quote; exec summary first bullet an
+```
+
+### `1786285332678` — 8/10/2026, 11:10:37 AM PT — 882 turns
 
 **Original task:**
 
@@ -157,88 +372,35 @@ Answering your question: "Voice call follow-up needed" tickets are not o
 **Last PICKUP PROMPT:**
 
 ```
-_id instead of "Denham Brown".
+on first ran also get flagged.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #current — Callbacks: fix phone number resolution and Vicky email for detectAndBookCallback path.
+Pick up task #1 — Callback system: escalate all overdue callbacks including pre-existing ones, fix visibility.
 
-Where we left off (verified 2026-08-10 10:17 PT):
-- Booking #76 (Denham Brown) is real production usage — flow is live via detectAndBookCallback at line 6207
-- BUT: caller_phone shows trunk number +19412943388, not caller's real number
-- BUT: Vicky email notification failed (sendEmail unavailable)
-- BUT: requestor_name stores call UUID instead of caller name
-- Agent gate removed (0 agentCount in file), handleScheduleCallback path open
-- Cron auto-booking removed (log-only)
-- Library dedup guard active in bookCallbackSlot
-- Policing cron active every 15 min
+Where we left off (verified 2026-08-10 11:08 PT):
+- Booking #76 (Denham Brown) overdue 1h 8min, 0 call attempts, phone is trunk number (can't call)
+- Booking #6 (Dominic Felix) overdue 26h, 0 call attempts, real phone 520-423-7315
+- Policing cron running but missed Dominic because it only catches 60+ min overdue from cron start
+- Vicky may not be seeing the escalation emails
+- Telephony Hub banner shows gold alert with badge count (2 pending)
 
 Open threads to drive next:
-1. #25486 [awaiting_review] — Fix detectAndBookCallback phone resolution: extract caller's real number from voice_call_log, not the trunk number passed as $callerPhoneV
-2. #25486 — Fix detectAndBookCallback Vicky email: require mailer.php before calling notifyVickyOfNewCallback, or log and allow policing cron to handle notifications
-3. #25486 — Fix requestor_name: pass caller_name from voice_call_log, not the call UUID
+1. #25486 [approved] — Fix policing cron: catch callbacks already overdue at startup (not just newly overdue)
+2. #25486 [approved] — Add SMS alert to Vicky (via Jon) for severely overdue callbacks (CC her on Ruben's phone via iMessage)
+3. #25486 [approved] — Fix booking #6: add overdue flag to callback_notes for Dominic Felix (26h overdue, real phone 520-423-7315)
+4. #25486 [approved] — Fix booking #76: resolve real caller phone from voice_call_log (trunk number is wrong)
 
 Reference IDs:
-- Ticket: none (callback system work)
-- Ideas filed: #25486 (Monitor caller-scheduled callback bookings after agent gate removal)
-- Files touched: /var/www/emtskills/api/voice/vapi_server_webhook.php, /var/www/emtskills/lib/callback_intent_detector.php, /var/www/emtskills/cron/cron_post_call_summary.php, /var/www/emtskills/crons/policing/cron_callback_policing.php
-- Booking: #76 (Denham Brown, Aug 10 10:00 AM slot)
+- Ideas: #25365 [deployed], #25486 [approved]
+- Files: /var/www/emtskills/crons/policing/cron_callback_policing.php
+- Bookings: 76 [pending], 6 [pending]
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1786381856309` — 8/10/2026, 10:55:37 AM PT — 65 turns
-
-**Original task:**
-
-```
-If you take a look at all the CPR class websites, it seems that traffic on those is very low and so are registrations. How do we improve that? Are those forms working right? Are payments being received? What's going on? What about scheduiling, etc...?
-```
-
-**Ideas referenced:** #000000, #2271, #2274, #2275, #2292, #23223, #23308, #24184, #24635, #24636, #24645, #24646, #24791, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786319043926` — 8/10/2026, 10:55:21 AM PT — 221 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
-
-Please provide to me links to the  3 or 4  unfiled TPIA requests as well as the sunset review email (do i send this monday or wait)? nadn then the instructions for cori to setup meetings for us to meet the 3 politiicians the first week of September
-```
-
-**Ideas referenced:** #19587, #19595 [executing], #19599, #19600, #19601, #1976, #2274, #2275, #2292, #24790, #24805, #24836, #24842, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25374, #25400, #600179, #623992
-
-**Last PICKUP PROMPT:**
-
-```
- Street, Austin TX 78756-3101.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — TDSHS: 011 delivered clean and complete, Paxton counsel identified, Sunset PDF v2 done.
-
-Where we left off (verified 2026-08-10 10:46 PT):
-- EMSU-TPIA-2026-011 DELIVERED IN FULL, plain text, no bold and no markdown emphasis markers anywhere in the body, per Ruben's formatting instruction. Ready to send as-is.
-- Period carve-outs now lead their paragraphs per Ruben's own rewrite: item 1 opens "For this paragraph only, the period covered is January 1, 2013..."; item 2 uses the identical shape at Jan 1 2013; item 10 uses it at fiscal year 2019 through current. All other items run on the Jan 1 2023 floor set by the opening "Unless a different period is stated for a specific item" line.
-- DATE QUESTION STILL OPEN FOR RUBEN: he kept Jan 1 2013 for items 1 and 2. A prior turn recommended Jan 1 2011 because trial court cause D-1-GN-12-002322 is a 2012 filing, placing the Paxton-era OIG investigation around 2011-2012, which a 2013 floor will not reach. Options are keep 2013 for recent practice, move to 2011 to capture that investigation, or keep 2013 and let the retention-gap sentence absorb it since 2011 records may be destroyed anyway. Text left exactly as Ruben wrote it.
-- PAXTON COUNSEL IDENTIFIED from the briefs themselves (downloaded from the docket, PDF streams decompressed, signature blocks read). For Paxton, the winning side arguing FOR disclosure: Matthew R. Entsminger, State Bar No. 24059723, Assistant AG, Open Records Litigation, Administrative Law Division, (512) 475-4151, matthew.entsminger@texasattorneygeneral.gov, supervised by Kimberly L. Fuchs, David A. Talbot Jr., Brantley Starr, Charles E. Roy. For the agency, the losing side: Ann Hartley, State Bar No. 09157700, Assistant AG, Financial Litigation, Tax and Charitable Trusts Division. Every lawyer in the case is an Assistant Attorney General; there is no private attorney in it.
-- REQUESTORS HAD NO ATTORNEYS. "Iris" and "Angel" were individual DSHS employees who filed their own requests, the AG Open Records Division ruled for them in the ordinary course, DSHS then sued the AG, and the employees were never parties to the appeal.
-- NEW FACT FROM THE AG REPLY BRIEF: "The Department of Aging and Disability Services chose not to appeal that prior ruling and instead sought a different ruling by filing the instant suit." A sister HHS agency lost the same 531.1021(g) argument, declined to appeal, and DSHS refiled the identical theory for a second bite. Documented forum-shopping inside the HHS system on the exact statute item 1 targets, in the Attorney General's own words.
-- BRIEFS SAVED LOCALLY at /tmp/brief1.pdf (AG reply brief, 13 pages) and /tmp/appellee.pdf (1.3 MB), pulled from search.txcourts.gov SearchMedia links on docket 03-14-00594-CV. Move them somewhere durable before /tmp clears.
-- 010 unchanged and FINAL at a Jan 1 2020 floor.
-- SUNSET PDF v2 at /Users/rubenmajor/Desktop/sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-10.pdf, 410.7 KB, 11 pages, logo embedded, CEO in metadata. Builder at sunset_pdf/build_sunset_pdf.py. Open items: no Houston street address in the DB so the cover lists Houston by city only; signature is typed and rule 301 names signature2small.jpg as canonical.
-- TPIA SERIES CLOSED AT TWELVE. 006 FILED 2026-08-09; 008 dropped; 009 folded in; 010 and 011 are the last two.
-- SCHMIDER REPLY delivered inline earlier, unchanged, ready to send; 
 ```
 
 ### `1786086916545` — 8/10/2026, 10:43:19 AM PT — 278 turns
@@ -312,55 +474,6 @@ The mechanism (#25442 [depl
 **Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12477, #13084, #152615, #16437, #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #178593, #178629, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18380, #18381, #18382, #18383, #1839, #18434, #18438, #18440, #18441, #18442, #1845, #18470, #18471, #18472, #18473, #18474, #18475, #18476, #18492, #18493, #18494, #18495, #1850, #18536, #18544, #18547, #18548, #18549, #18550, #18551, #18559, #18579, #18586, #18599, #18601, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #18757, #1876, #18765, #1877, #18771, #18775, #18777, #18781, #18789, #18792, #18795 [queued], #18797, #18798, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18830, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18898, #18899, #18906, #18908, #18910, #18915 [proposed], #18916 [queued], #18917, #18918 [proposed], #18929 [rejected], #18934, #18935, #18937, #18938, #18939, #1894, #18940, #18941, #18942, #18944, #18945, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #18966 [rejected], #1897, #18973, #19080 [executing], #19081 [proposed], #19082 [proposed], #19098, #19099, #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1935, #1936, #19386, #19387 [executing], #19403, #19419, #1942, #19424, #1944, #19448 [queued], #19458 [rejected], #19470, #19471, #19478, #1948, #19487, #19489, #1949, #19490, #19491 [deployed], #19499, #19518, #1952, #1955, #19593, #1961, #19624, #1963, #1964, #19641, #19642, #19644, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #19731, #1975, #1976, #19776, #19782, #19784, #1986 [resolved], #1987 [resolved], #19871, #1988 [resolved], #19888, #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #19970, #19971, #19975, #19978, #19995, #20004, #20005, #20008, #20014, #20022, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20197, #20233, #20384, #20417, #20555, #20565, #20569, #20572, #20627, #20628, #20629, #20630, #20662, #20663, #20672, #20674, #20675, #20676, #20677, #20806 [proposed], #2101, #2105, #21138, #21185, #21230, #21231, #2126, #2127, #2128, #2221, #2232, #2238, #2242, #22583, #22897 [executing], #23190 [rejected], #23191 [executing], #23192 [rejected], #23204, #23205 [rejected], #23307 [rejected], #23315 [deployed], #23339 [executing], #23428 [deployed], #23429 [deployed], #23467 [executing], #23468, #23489 [executing], #23505 [deployed], #23511 [deployed], #23513 [deployed], #23520 [deployed], #23530 [deployed], #23592, #23920, #23922, #23923, #23949, #23951, #24184, #24400, #24895, #24897, #24898, #24900, #24901, #24902, #24904, #24905, #24913, #24946, #25039, #25185, #25227, #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25268 [deployed], #25313 [deployed], #25364 [deployed], #25366 [deployed], #25383 [deployed], #25384 [deployed], #25385 [deployed], #25401, #25421 [deployed], #25422 [deployed], #25423 [deployed], #25424 [deployed], #25442 [deployed], #25525 [proposed], #25528 [proposed], #25530 [proposed], #25531 [proposed], #25532 [proposed], #25534 [executing], #25535 [executing], #389249, #7223
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786340503930` — 8/10/2026, 10:41:57 AM PT — 248 turns
-
-**Original task:**
-
-```
-#Argus
-
-**Argus 12-task backup: RESOLVED + durable fix deployed. Jon notified in Argus.**
-
-## Root cause (verified live)
-`cron_argus_task_worker.php` crashed on EVERY 2-minute cycle at line 441:
-```php
-require_once __DIR__ . '/../lib/argus_reclaim.php';   // file does not exist
-```
-The orphan-reclaim logic already lives inline at lines 210-230 in the same file. The `require_once` introduced in the 2026-08-09 deployment was a duplicate with a nonexistent path, so every cycle claimed tasks → DISPATCH → `require_once` fatal → process died before `curl_multi_exec` ran → tasks never completed, and 
-```
-
-**Ideas referenced:** #10141, #12619, #1356, #18530, #22688, #23036, #23428, #23468, #23506, #23592, #23675, #23913, #23941, #23982, #24926, #24941, #24990, #25131, #25142, #25193, #25196, #25464 [ready_for_review], #25465 [approved], #25466 [approved], #25768, #2606, #2620, #2862, #2911, #2912, #4421, #5700, #7137, #8892
-
-**Last PICKUP PROMPT:**
-
-```
-detector (now column-adaptive)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task Argus context enrichment + kaison argus wedge — both ideas deployed and verified.
-
-Where we left off (verified 2026-08-10 10:41 AM PT):
-- #25464 [deployed] — argus_task_queue context enrichment: worker now falls back to user_email session lookup when session_key is NULL or pruned. All 6 legacy failed tasks requeued and passed. File: /var/www/emtskills/routes/cron_argus_task_worker.php (33115 bytes, backup .bak-25464-20260810-1015)
-- #25466 [deployed] — Kaison argus stuck-task wedge detection: kaison_detect_argus_stuck() scans for 5+ running >15min, files P1 idea + ops_alert. MAIN restructured so argus+deadlock checks run EVERY cycle. File: /var/www/emtskills/cron/cron_kaison_wedge_detection.php (654 lines, backup .bak-25466-20260809-2249)
-- Queue state: 351 done / 51 offloaded / 19 canceled archived / 6 recovered passed / 0 stuck
-
-Open threads to drive next:
-1. #25464 [deployed] — Monitor next 24h of argus cycles for new failed-task classifications; if fail-fast hits reappear, check whether _ctxText=_conv recovery covers attachment_json AND memory-bank contexts
-2. #25466 [deployed] — Optional follow-up: lower ARGUS_STUCK_THRESHOLD 5→3 and add a Telegram/iMessage alert route so Ruben gets push notification on wedge (currently only ops_alerts + orchestrator_ideas P1 card)
-
-Reference IDs:
-- Ideas deployed: #25464, #25466
-- Files touched: /var/www/emtskills/routes/cron_argus_task_worker.php, /var/www/emtskills/cron/cron_kaison_wedge_detection.php
-- Backups: both .bak-20260810-1015 / .bak-25466-20260809-2249
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
 
 ### `1786318471535` — 8/9/2026, 11:16:54 PM PT — 304 turns
 

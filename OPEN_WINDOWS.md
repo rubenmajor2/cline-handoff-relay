@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/9/2026, 11:35:47 PM PT | window: last 72h | 91 tasks | index total 599 (parsed 7, cached 592)
+Generated: 8/10/2026, 1:01:02 AM PT | window: last 72h | 88 tasks | index total 599 (parsed 2, cached 597)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786285332678` | 8/9/2026, 11:34:44 PM | 661 | 6620KB | #Callbacks |
-| `1786342434047` | 8/9/2026, 11:34:16 PM | 51 | 278KB | #Big Mac Claimed Down?? |
-| `1786319043926` | 8/9/2026, 11:31:04 PM | 80 | 453KB | #TDSHS |
+| `1786319043926` | 8/10/2026, 12:27:16 AM | 148 | 997KB | #TDSHS |
+| `1786285332678` | 8/10/2026, 12:12:50 AM | 736 | 6783KB | #Callbacks |
+| `1786342434047` | 8/9/2026, 11:56:26 PM | 118 | 440KB | #Big Mac Claimed Down?? |
 | `1786340503930` | 8/9/2026, 11:22:00 PM | 140 | 468KB | #Argus |
 | `1786318471535` | 8/9/2026, 11:16:54 PM | 304 | 791KB | I got a report of executor stalling. Play frankenstein doctor of executor and resolve and  |
 | `1786337811635` | 8/9/2026, 11:13:06 PM | 253 | 524KB | why is frankenstein-llm appearing to be sluggish. Can you take a look? |
@@ -98,84 +98,12 @@ Generated: 8/9/2026, 11:35:47 PM PT | window: last 72h | 91 tasks | index total 
 | `1786059773410` | 8/7/2026, 10:03:34 AM | 98 | 323KB | #Baseline Tempe Loan |
 | `1785954707277` | 8/7/2026, 9:56:34 AM | 358 | 1814KB | #EA PIPELINE |
 | `1786088921071` | 8/7/2026, 9:55:59 AM | 122 | 566KB | I don't really understand what's going on here. This task was about email for the being se |
-| `1786081573518` | 8/7/2026, 12:46:20 AM | 274 | 992KB | Whiy is this task 502, we need to stop with the 502s: |
-| `1786066201493` | 8/7/2026, 12:28:21 AM | 474 | 1841KB | All three done. The wrapper wiring turned up another silent-blindness bug, and the deadman |
-| `1786010979248` | 8/7/2026, 12:13:35 AM | 1076 | 1963KB | Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to |
 
 ---
 
 ## Per-window detail
 
-### `1786285332678` — 8/9/2026, 11:34:44 PM PT — 661 turns
-
-**Original task:**
-
-```
-#Callbacks
-
-that should go into the call back system, not a ticket. Those tickets are noise and need to be converted to callbacks GOING FORWARD. Offer callbacks to those outstanding in the last 48 hours like that and depreciate old process. -> Answering your question: "Voice call follow-up needed" tickets are not offers, they are internal support tickets. When the Voice AI cannot fully resolve a caller and the caller agrees to a follow-up, the AI creates one of these tickets so a human can call or email the person back.
-
-
-Answering your question: "Voice call follow-up needed" tickets are not o
-```
-
-**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #1745, #18316, #2274, #2275, #23133, #23989, #24645, #24646, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25364 [executing], #25365 [deployed], #3133, #475569, #6172, #6579, #9042, #9159, #9222, #9501
-
-**Last PICKUP PROMPT:**
-
-```
- a live agent at booking time.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up topic — Callback system: real-path untested, zero real usage. Agent gate blocks all offers.
-
-Where we left off (verified 2026-08-09 18:22 PT):
-- `api/voice/vapi_server_webhook.php` line ~5870: `handleScheduleCallback` has agent-availability gate (needs is_available=1 + heartbeat < 2min). 18 agents, only 2 fresh → gate blocks 100% of callback offers, redirects to live chat.
-- Line ~5905: my patch adds `bookCallbackSlot()` path AFTER the gate — never reached by real callers. 5,014 schedule_callback tool calls, 0 caller-initiated bookings.
-
-Open threads to drive next:
-1. #25365 [executing] — Decide + implement: relax/remove agent gate so caller-scheduled callbacks actually book into callback_bookings for Vicky's queue.
-
-Reference IDs:
-- Ideas: #25365 [executing]
-- Files: `/var/www/emtskills/api/voice/vapi_server_webhook.php` (gate at 5870, booking at 5905)
-- Data: voice_tool_metrics 5,014 calls; voice_callback_queue 0; callback_bookings 1 (manual #6)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786342434047` — 8/9/2026, 11:34:16 PM PT — 51 turns
-
-**Original task:**
-
-```
-#Big Mac Claimed Down??
-
-approved -> - #25468 [proposed] : make the canary quarantine a connection-RESET upstream instead of ranking it least-loaded. Both boxes are back but the ranker inversion that let a dead socket win first pick is still in the code, so the next tunnel with no engine behind it repeats the incident.
-
-- #25471 [proposed] : reconcile the frankenstein-tools drop-ins, now 34 files. Three set FRANK_EXECUTOR_CAP and one contradicts its own comment. Every Environment= line in the main unit file is dead because drop-ins override all of them.
-
-
-confused on why this is beneficial? Se
-```
-
-**Ideas referenced:** #12459, #12657, #1378, #13840, #18720, #19125, #19903, #19907, #19925, #20247, #20264, #20272, #2050, #20536, #2092, #20957, #20958, #2096, #22588, #2298, #23171, #24145, #24165, #24173, #24183, #24220, #24368, #25097, #25112, #25150, #25151, #25188, #25468 [proposed], #25469 [rejected], #25470 [deployed], #25471 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
- + verify healthy
-- [ ] Log to cline_task_ledger + handoff notes, complete with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
-```
-
-### `1786319043926` — 8/9/2026, 11:31:04 PM PT — 80 turns
+### `1786319043926` — 8/10/2026, 12:27:16 AM PT — 148 turns
 
 **Original task:**
 
@@ -192,20 +120,135 @@ Please provide to me links to the  3 or 4  unfiled TPIA requests as well as the 
 **Last PICKUP PROMPT:**
 
 ```
-chosen rather than accidental.
+ Richardson letter being sent.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — TDSHS: 008 named version, new 010 and 011, Schmider reply, sunset timing, Cori September meetings.
+Pick up task — TDSHS: Sunset PDF v2 built (logo/CEO/3 sites/persuasive), 010 and 011 final, Schmider reply ready.
 
-Where we left off (verified 2026-08-09 23:28 PT):
-- CORRECTED READ ON SCHMIDER. Prior two turns advised routing around the State EMS Director to preserve him as a neutral. That was wrong and Ruben caught it. Record proof: response row 47 investigation 7 shows Richardson's 7/20 10:13 PT emergency-suspension email was CC'd to Joseph Schmider on day one, and the Sunset draft has stated since 7/29 that "the Department Director has already signed off on the current enforcement posture." He is the authority behind Richardson, not a bystander. His 8/7 conduct is the only place in the file where a named senior official acted personally on his own channel and left a written record: personal texting with a complainant's father, FERPA-backwards direction to call a parent about an adult student, relaying an unverified assertion 90 minutes after a recorded voicemail, real-time verification used against the licensee and never with the student, then a written self-reversal and a closure concession.
-- Ruben confirmed EMSU-TPIA-2026-006 was FILED this evening. Open numbers are now 008, 009, 010, 011.
-- EMSU-TPIA-2026-008 rewritten and delivered in full this turn as the NAMED, BROADENED version: Director electronic messages and call logs, emails including any assigned or copied investigator, communications with complainants and their family members, the Aug 6-8 intake window with a state-in-writing-if-none clause, verification practice, 34 CFR 99.33 redisclosure practice, and new item 8 asking for records of the Director's authorization of the emergency-suspension posture plus item 9 on aggregate concurrent-matter review. Period floor moved to June 1 2026 to capture the July emergency-suspension authorization.
-- NEW EMSU-TPIA-2026-010 delivered in full: comparative complaint, inspection, and enforcement register data for ALL Texas EMS education programs, 2018 to present, anonymized by consistent program code, machine-readable export requested. Assessed as the highest-value request in the series because every available objection costs them, and item 7 forces them to either name the rule behind "timely externship scheduling" and "adequate student support" or state in writing that none exists.
-- NEW EMSU-TPIA-2026-011 delivered in full: Internal Affairs and OIG records concerning Office of EMS personnel, conflict-of-interest and recusal filings, outside-compensation approvals, retaliation policy, site-entry standards, and the Department's own TPIA compliance metrics. Built on the Paxton v. Texas Department of State Health Services precedent from Ruben's research, in which the AG Open Records Division rejected DSHS's attempt to withhold OIG employee-misconduct material and DSHS litigated rather than produce. CAVEAT RECORDED: the opinion itself has not been read, only Ruben's summary. Counsel must verify the holding and its current status before it is cited anywhere. The request does not depend on the holding.
-- Schmider reply draft unchanged in text, changed in rationale: send it because he is the authority and paragraph 2 extracts a written admission, not to preserve goodwill. Do not add warmth. Send before 008 lands and never connect the two per the standing rule at inv 7 row 159. Master note row 176 confirms nothing sent to Schmider as of 8/7 8:20 
+Where we left off (verified 2026-08-10 00:26 PT):
+- SUNSET PDF v2 REBUILT AND VERIFIED. /Users/rubenmajor/Desktop/sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-10.pdf, 410.7 KB, 11 pages confirmed via PDF page tree, logo embedded confirmed, CEO in metadata confirmed. Builder at /Users/rubenmajor/Desktop/sunset_pdf/build_sunset_pdf.py (reportlab).
+- THREE RUBEN CORRECTIONS APPLIED: (1) title changed from President to CHIEF EXECUTIVE OFFICER on cover, signature block, and PDF metadata author. (2) EMSU LOGO added centered above the title at 1.15in. The local file Desktop/argus-webstore/emsu-logo.png was a 146-byte HTML STUB, not an image; the real logo was pulled from the server at /var/www/emtskills/emsulogo5_web_2x.png (400x400 RGBA, 267KB) via scp and saved as sunset_pdf/emsu_logo.png. (3) THREE TEXAS SITES now stated on the cover, in the executive summary in bold, and in Who We Are: San Antonio HQ at 1730 SW Military Dr, Grapevine, and HOUSTON.
+- OPEN DATA GAP: the DB has Houston present in Course_Schedules.location but NO street address stored for the Houston site. Cover currently lists Houston by city only while San Antonio carries a street address. If Ruben supplies the Houston street address it is a one-line edit in build_sunset_pdf.py.
+- PERSUASIVE REWRITE for a semi-political body: two navy pull-quote boxes ("In seven weeks, one investigator opened eleven complaint matters against a program with no prior violation... Not once in any of it was there a phone call first" and "We are held to hours. The Department has taken years."); invitations to verify ("Read Chapter 773. Read Chapter 157. Neither phrase is there."); the self-defeating loop made explicit (enforcement about placement delay is itself causing placement delay); the silence problem named and preempted (why the Commission never hears this); the Commission handed a lever rather than a grievance; agency incentives aligned ("Nobody wins here, including the agency"); and a NEW closing section on the twelve-year Sunset cycle ending on "reviews this agency again in 2038 with the same gaps still in place". All factual claims unchanged, nothing added beyond what the file documents, privileged NOTES FOR RUBEN still excluded.
+- OPEN QUESTION FOR RUBEN: signature is still TYPED. Rule 301 names signature2small.jpg as canonical. Assessment offered: typed is right for a legislative submission, graphic belongs on agency correspondence. Ruben decides; if graphic, place the image above the name block and rebuild.
+- SEND: transmittal email delivered earlier this session, to sunset@sunset.texas.gov, subject containing "DSHS Review", this PDF attached. No hyperlinks per rule 302. Backups: sunset.texas.gov input form, or mail to Sunset Advisory Commission Attn DSHS P.O. Box 13066 Austin TX 78711. Phone (512) 463-1300, project manager Katherina Wierschke, call only AFTER the submission is in. Gated on the 8/6 responses being out and the Richardson letter being sent.
+- RESPONSE EXPECTATIONS: acknowledgement and project-file logging likely, substantive reply never (staff do not adjudicate). Silence on merits is normal. High-value outcome is an analyst calling for documentation. Result appears unattributed in the staff report if a recommendation addresses citation of authority, 
+```
+
+### `1786285332678` — 8/10/2026, 12:12:50 AM PT — 736 turns
+
+**Original task:**
+
+```
+#Callbacks
+
+that should go into the call back system, not a ticket. Those tickets are noise and need to be converted to callbacks GOING FORWARD. Offer callbacks to those outstanding in the last 48 hours like that and depreciate old process. -> Answering your question: "Voice call follow-up needed" tickets are not offers, they are internal support tickets. When the Voice AI cannot fully resolve a caller and the caller agrees to a follow-up, the AI creates one of these tickets so a human can call or email the person back.
+
+
+Answering your question: "Voice call follow-up needed" tickets are not o
+```
+
+**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #1745, #18316, #2274, #2275, #23133, #23989, #24645, #24646, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25364 [executing], #25365 [deployed], #25486 [executing], #3133, #475569, #6172, #6579, #9042, #9159, #9222, #9501
+
+**Last PICKUP PROMPT:**
+
+```
+kings` conversion.
+
+═══════════════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════════════
+Pick up task — Callback system: caller-scheduled only, verified E2E.
+(voice follow-up conversions from tickets to callback_bookings)
+
+Where we left off (verified 2026-08-10 12:12 AM PT):
+- Webhook agent gate removed from handleScheduleCallback (was blocking 100% of caller callback requests)
+- bookCallbackSlot patched with 1-per-person-per-day dedup guard (library level)
+- E2E test PASSED: booking #75 created, Vicky notified, duplicate blocked, cleanup done
+- Cron auto-booking removed (log-only), 19 auto-booked callbacks deleted, 62 slots restored
+- Live callbacks in table: 1 (booking #6, Dominic Felix 5204237315)
+- Files: /var/www/emtskills/api/voice/vapi_server_webhook.php, /var/www/emtskills/lib/callback_intent_detector.php, /var/www/emtskills/cron/cron_post_call_summary.php
+
+Open threads to drive next:
+1. #25486 [executing] — Monitor voice_tool_metrics.schedule_callback→callback_bookings conversion over next 24h; if calls happen but no bookings, check voice AI tool definitions / dispatcher fall-through
+2. #25365 [deployed] — Callback policing cron (runs every 15 min, escalates overdue to Vicky, pre-reminders 1h ahead) — verify it stays healthy as real callbacks arrive
+
+Reference IDs:
+- Ticket: none (callbacks no longer create tickets)
+- Ideas filed: #25486, #25365
+- Files touched: vapi_server_webhook.php, callback_intent_detector.php, cron_post_call_summary.php, telephony_hub.php, cron_callback_policing.php, /etc/cron.d/emsu-callback-policing
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786342434047` — 8/9/2026, 11:56:26 PM PT — 118 turns
+
+**Original task:**
+
+```
+#Big Mac Claimed Down??
+
+approved -> - #25468 [proposed] : make the canary quarantine a connection-RESET upstream instead of ranking it least-loaded. Both boxes are back but the ranker inversion that let a dead socket win first pick is still in the code, so the next tunnel with no engine behind it repeats the incident.
+
+- #25471 [proposed] : reconcile the frankenstein-tools drop-ins, now 34 files. Three set FRANK_EXECUTOR_CAP and one contradicts its own comment. Every Environment= line in the main unit file is dead because drop-ins override all of them.
+
+
+confused on why this is beneficial? Se
+```
+
+**Ideas referenced:** #12335, #12459, #12657, #12672, #13121, #1378, #13832, #13840, #16120, #1802, #1803, #1806, #1811, #18159, #18163, #18178, #18179, #18180, #18189, #18212, #18213, #18214, #18720, #19125, #19903, #19907, #19925, #20247, #20264, #20272, #2050, #20536, #2092, #20957, #20958, #2096, #21045, #22583, #22588, #2298, #23171, #24144, #24145, #24165, #24173, #24183, #24220, #24368, #25097, #25112, #25150, #25151, #25188, #25468 [proposed], #25469 [rejected], #25470 [deployed], #25471 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+e prior session (as stated in the pickup prompt). Now completing with the final PICKUP PROMPT:
+
+<attempt_completion>
+<result>
+═══════════════════════════════════════════
+DONE — RULE 315 RCA COMPLETE + #25468 / #25471 DEPLOYED
+═══════════════════════════════════════════
+
+Fleet live-verified healthy 2026-08-09 23:54 PT: all four upstreams decode_live=True (Big Mac 32.0, Artemis 32.4, Julia 19.7, GLM ring 15.8 tok/s). Adapter serving at http://localhost:11510/v1/models 200.
+
+DELIVERABLES THIS SESSION:
+
+**Rule 315 — Verify before declaring a host down** (RCA 297 per Ruben's steer)
+- Created `/Users/rubenmajor/Documents/Cline/Rules/315-verify-before-declaring-host-down.md` (6,558 bytes, hardfloor, indexed across 319 rules)
+- Search-the-record-first ladder: read the box's onboarding idea / registry.yaml / HANDOFF_NOTES / ledger BEFORE touching the network
+- 4-state classification: HOST-DOWN (SSH+ping unreachable) | PROCESS-DOWN (unit failed/exited) | ENGINE-WEDGED/NEVER-BOUND (0 startup-complete, port never served) | SERVING (curl /v1/models 200)
+- systemd active / docker Up / Ray alive is NOT serving — only `/v1/models` 200 or a decode probe proves serving
+- Bare "X is down" without a state class is a violation (also violates rule 297)
+- Detector: `grep -c "startup complete" <log>` on a container with long uptime; count=0 → wedged
+- Updated `_RULE_TREE.md` (two locations: Fleet serving constraints + Live-probe fleet state), hardfloor manifest regenerated (18 hardfloor + 5 meta)
+
+**#25471 [deployed] — FrankenstEIn-tools drop-in reconciliation**
+- Audited all 34+ drop-in files under `/etc/systemd/system/frankenstein-tools.service.d/`
+- Fixed `zzzzzzzzzz-cline-priority-over-batch.conf`: `FRANK_EXECUTOR_CAP=64` → `6` (now matches its own prose comment prescribing 6)
+- Annotated stale `zzzz-argus-qos.conf` and `zzzzzzzzzzzzzzzzzzzz-glm-executor-cap-fix.conf` with override warnings (both carry EXECUTOR_CAP=64 but the 40-z sluggish-fix drop-in sorts last and sets it to 6)
+- Live systemctl confirms `FRANK_EXECUTOR_CAP=6` is the winner
+
+**#25468 [deployed] — Connection-RESET quarantine in adapter ranker**
+- Root cause: `_upstream_load()` except-path trusted cached last-known load (or inflight count) on a connection-RESET dead socket. The canary reset-tolerance keeps healthy=true, so `_least_loaded_order()` picked the dead socket first (observed :11513 incident — 35.7s penalty per turn)
+- Fix applied to `/usr/local/bin/frankenstein_tools_adapter.py` (line ~1660): ConnectionReset/RemoteDisconnected exceptions in the `/metrics` scrape → immediate `LOAD_UNREACHABLE` return + log warning, regardless of cache
+- Adapter restarted (`sudo systemctl restart frankenstein-tools`), verified serving + all four upstreams healthy
+
+**Julia restored** — host-UP/engine-DOWN (Ray IDLE, no api_server) → `julia_full_relaunch.sh` launched → /v1/models 200 at gpt-oss-120b 131072 ctx, serving 19.7 tok/s decode_live=True
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #25470 [deployed] — Rule 315 RCA + #25468/#25471 frankenstein-tools fixes.
+
+Where we left off (verified 2026-08-09 23:54 PT):
+- Rule 315 created (search-record-first, 4-state classification, status-is-not-serving), indexed, hardfloor manifest regenerated (18+5). Rule tree updated. Reindexed: 319 rules across MCP.
+- #25471 [deployed]: audited 34 drop-ins, fixed cline-priority-over-batch.conf EXECUTOR_CAP 64→6 (matches its own prose), annotated argus-qos.conf + glm-executor-cap-fix.c
 ```
 
 ### `1786340503930` — 8/9/2026, 11:22:00 PM PT — 140 turns
@@ -3652,149 +3695,6 @@ Reference IDs:
 - Ledger: cline_task_ledger.md line 481
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786081573518` — 8/7/2026, 12:46:20 AM PT — 274 turns
-
-**Original task:**
-
-```
-Whiy is this task 502, we need to stop with the 502s:
-
-https://www.emsuniversity.com/emtskills/routes/argus_task_status.php?task=300
-```
-
-**Ideas referenced:** #16213, #19370, #22850, #23027, #23429, #23506, #23945, #24026, #24334 [proposed], #24336 [proposed], #24337 [proposed], #24338 [proposed], #24342 [proposed], #718096
-
-**Last PICKUP PROMPT:**
-
-```
- via the new lightweight poll.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #24336 [deployed] — argus 502 fix verification complete, monitoring next.
-
-Where we left off (verified 2026-08-07 00:27 PT):
-- All three approved fixes deployed and verified: 5x page + 5x poll all HTTP 200 with real MasterAdmin session.
-- #24336 [deployed]: argus pool routing active in nginx -T.
-- #24337 [deployed]: request_terminate_timeout=120, php8.3-fpm reloaded.
-- #24338 [deployed]: ?poll=1 JSON endpoint returns status/position/eta/progressPct/attempts/timestamps; JS poll replaces 20s meta-refresh.
-- Test session cookie and login_code tokens marked used. Cleanup complete.
-- Task #300 status=offloaded, offloaded to idea #24334 [proposed].
-
-Open threads to drive next (every item carries a real idea number):
-1. #24342 [proposed] — After 24h uptime, check nginx error log for argus_task_status.php 502s and confirm argus pool never saturates at 40/40 under load.
-
-Reference IDs:
-- Tickets: none.
-- Ideas filed: #24336 [deployed], #24337 [deployed], #24338 [deployed], #24342 [proposed].
-- Files touched: /etc/nginx/sites-enabled/emtskills (backup .bak-20260807-001004-argusstatus-fix), /etc/php/8.3/fpm/pool.d/argus.conf (backup .bak-20260807-001112), /var/www/emtskills/routes/argus_task_status.php.
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786066201493` — 8/7/2026, 12:28:21 AM PT — 474 turns
-
-**Original task:**
-
-```
-All three done. The wrapper wiring turned up another silent-blindness bug, and the deadman question has a clean answer.
-
-THE TWO WRAPPERS ARE WIRED, BUT ONE WAS LYING
-
-cleanup ran perfectly on the first try and just needed scheduling.
-
-block was the interesting one. It ran, exited 0, and reported "regressions=0" while reading absolutely nothing. Its table map named a column that does not exist on email_outbound_log (it wanted "body", the real column is "body_preview") and a table that does not exist at all (sms_outbound_log). Both failures were caught and logged as one-line notices, so the cro
-```
-
-**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16695 [awaiting_review], #16732, #1745, #17777, #178593, #1793, #18316, #18535, #19370, #23133, #23185, #23277 [executing], #23285 [executing], #23291, #23341 [executing], #23506 [proposed], #23710, #23711, #23920 [in_progress], #23945, #23952, #23954, #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed], #24176 [proposed], #24179, #24181 [proposed], #24191 [proposed], #24192, #24241, #24248 [proposed], #24253 [proposed], #24256, #24369 [proposed], #56975, #6172, #7048, #9042, #9159, #9222, #9501
-
-**Last PICKUP PROMPT:**
-
-```
-4369). Ledger row 10 appended.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #23277/#23285 sweep — orphan-cron triage + VAPI transcript investigation.
-
-Where we left off (verified 2026-08-07 00:26 PT):
-- **All 6 guardrail crons pass four-cause triage** (scheduled? loads? runs? target table exists?).
-  - `ai_reasoning_leak_presend` **fails criterion 4** (7 phantom columns on `ai_reasoning_leak_presend_log`) — filed as #24369 [proposed]. Reg.-retry path is dead.
-  - Everything else is healthy.
-- **Broken-require orphan crons:** tested all 9.
-  - 7 run clean.
-  - `cron_planner_truncation_decomposer` fixed (`api/db.php` → `lib/db.php`) — runs clean.
-  - `cron_vilt_pre_class_validator` partially fixed: `lib/ZoomAPI.php` created (wraps procedural `zoom_api.php`), 3 phantom `require_once`s guarded with `file_exists()`, `db.php` added. Survives all requires, now fails on cross-DB join `mdl_course` in admin_portal query. Still fatal — needs Moodle DB connection or schema-redress.
-- **#24248 [investigated]:** VAPI end-of-call-report payload thinned Aug 2 — `transcript`, `recording_url`, `summary`, enriched `outcome`, `name`/`phone_number`/`email` keys all missing. Deadman scanner correctly skips empty transcripts. Root cause is VAPI-side payload change; not fixable in vitro.
-- **#23341 [in_progress]:** Drive backfill — no further progress this round.
-- **Drive backfill audit table:** `emsu_backfill_tracking` (table exists; `drive_file_uploads` was phantom).
-- **`zoom_api.php`** patched: `require_once env.php` → `require_once lib/env.php`.
-
-Open threads to drive next:
-1. #24369 [proposed] — Fix `cron_ai_reasoning_leak_presend.php`: map 7 phantom columns to real `ai_reasoning_leak_presend_log` schema. Required: `original_response`→`original_excerpt`, `regen_attempts`→`regen_attempted`, `created_by`→`source_incident`, `source_correction_id`→`fallback_used`, `scanned_at`→`created_at`. Also need to sync UPDATE/cleanup clauses.
-2. #23277 [executing] — Tackle vilt cron cross-DB: either join `mdl_course` via Moodle DB connection, OR replace joins with `vilt_moodle_groups.course_name` if non-normalized. 3 remaining phantom libs (`OrchestratorEventLog`, `iMessage`, `TicketAPI`) still guarded but unused — full rewrite vs retire decision.
-3. #23341 [in_progress] — Drive backfill: verify throughput post-fix, check `emsu_backfill_tracking` row count.
-4. #23285 [executing] — Guardrail consumer wiring: after fixing leak_presend, verify 4 consumer views see real data.
-5. #23506 [proposed] guided_json — LOW priority, deferred.
-6. #24248 [investigated] — Monitor VAPI transcript resumption; no code action needed (VAPI-side).
-7. #24253 [proposed] — (superseded by #24369) Leak presend cron was initially misidentified as single-column fix; now correctly classified as full schema-blind rewrite.
-
-Reference IDs:
-- Ideas filed this session: #24369, #24248 (updated to investigated)
-- Ideas status-changed this session: #23277→executing, #23285→executing, #24191→deployed, #24176→deployed, #24248→investigated
-- Ledger rows appended: 8, 9, 10
-- Files created: `lib/ZoomAPI.php`, `/etc/cron.d/emsu-agent-deadman-scanner`
-- Files patched: `cron/cron_fleet_dynamic_rebalancer.php` (line 13), `cron/cron_planner_truncation_decomposer.php` (line 17), `cron/cron_vilt_pre_class_validator.php` (6 patches), `zoom_api.php` (env require), `cron/cron_agent_deadman_scanner.php` (3 bugs fixed)
-- Clean temp scripts: `sudo rm -f /var/www/emtskills/admin/*.py` (all *
-```
-
-### `1786010979248` — 8/7/2026, 12:13:35 AM PT — 1076 turns
-
-**Original task:**
-
-```
-Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to be expanded to make better.
-```
-
-**Ideas referenced:** #000000, #0693, #12206, #128260, #16069, #162324, #16474, #16732, #16817, #17446, #177914, #1881, #1882, #18944, #18951, #19173, #19437, #19866, #22086, #2224, #2225, #23184, #23276, #23585, #23710 [proposed], #23711 [proposed], #23955 [deployed], #23989 [proposed], #2457, #2458, #2459, #251236, #2563, #2603, #2703, #32373, #334155, #33689, #3572, #374459 [executing], #374460 [executing], #4480, #4481, #4991, #6064, #7207, #7317, #7907, #8103, #819596, #8211, #9084, #9222, #9583, #9584, #9589, #9590, #9591, #9592, #9593, #9594, #9595, #9597, #9598
-
-**Last PICKUP PROMPT:**
-
-```
-ks for a callback gets booked.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #current — Verify callback pipeline end.
-
-Where we left off (verified 2026-08-07 00:13 PT):
-- callback_intent_detector.php deployed (lib/), functions load
-- Chat wiring live at chat_widget_api.php:497, email at cron_email_responder.php:1702, voice at vapi_server_webhook.php:6070
-- 2 proactive-offer rules (#374459, #374460) in ai_compiled_rules, status=active
-- callback_bookings table: 0 rows ever
-- Verified live via /tmp/chat_debug.log: chat AI processing conversations through 22:52 tonight, but no student asked for a callback tonight
-
-Open threads to drive next:
-1. Verify widgetGuardrailPrompt() actually loads callback_offer category rules (compiler category whitelist check) — if not, register the category or add explicit handling
-2. Add a cron to watch callback_bookings and notify Vicky when a booking lands
-3. Monitor for first student callback ask in live chat/voice to confirm end-to-end
-
-Reference IDs:
-- Ticket: (none)
-- Ideas filed: #23710 [deployed], #23711 [deployed], #23989 [deployed]
-- Files touched: lib/callback_intent_detector.php, api/chat_widget_api.php, cron/cron_email_responder.php, api/voice/vapi_server_webhook.php, ai_compiled_rules (#374459, #374460)
-
-When done, append row to cline_task_ledger.md and run order 66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>

@@ -6,20 +6,20 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/9/2026, 6:04:52 PM PT | window: last 72h | 94 tasks | index total 595 (parsed 1, cached 594)
+Generated: 8/9/2026, 7:04:52 PM PT | window: last 72h | 92 tasks | index total 595 (parsed 1, cached 594)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786285332678` | 8/9/2026, 5:35:19 PM | 556 | 5140KB | #Callbacks |
+| `1786319043926` | 8/9/2026, 6:51:44 PM | 70 | 346KB | #TDSHS |
+| `1786285332678` | 8/9/2026, 6:23:01 PM | 592 | 5306KB | #Callbacks |
+| `1786313131031` | 8/9/2026, 6:13:23 PM | 134 | 471KB | #AI Directed Meditation |
 | `1786318471535` | 8/9/2026, 5:24:05 PM | 218 | 628KB | I got a report of executor stalling. Play frankenstein doctor of executor and resolve and  |
-| `1786319043926` | 8/9/2026, 4:52:10 PM | 42 | 189KB | #TDSHS |
 | `1786245923063` | 8/9/2026, 4:48:41 PM | 588 | 5843KB | #Argus |
 | `1786285065842` | 8/9/2026, 4:45:05 PM | 214 | 403KB | #WOPR GPU |
 | `1786288392773` | 8/9/2026, 4:44:59 PM | 230 | 729KB | #Make GLM / frankenstein-llm smarter |
 | `1786185877066` | 8/9/2026, 4:36:43 PM | 120 | 446KB | continue |
 | `1786224531010` | 8/9/2026, 4:36:42 PM | 384 | 903KB | #Big Mac |
 | `1786065775388` | 8/9/2026, 4:34:07 PM | 152 | 342KB | can you investigate and resolve this?  |
-| `1786313131031` | 8/9/2026, 3:23:51 PM | 108 | 396KB | #AI Directed Meditation |
 | `1786286915134` | 8/9/2026, 2:58:34 PM | 92 | 350KB | #Argus Cluster Idea  |
 | `1786288212188` | 8/9/2026, 8:38:13 AM | 140 | 437KB | #AI Directed Meditation |
 | `1786286876279` | 8/9/2026, 8:12:08 AM | 72 | 397KB | #GLM Local/frankenstein-llm Improvements / Make Smarter |
@@ -102,14 +102,58 @@ Generated: 8/9/2026, 6:04:52 PM PT | window: last 72h | 94 tasks | index total 5
 | `1786069048387` | 8/6/2026, 7:18:39 PM | 3 | 19KB | 3 iterations going, which one will be faster |
 | `1786068904025` | 8/6/2026, 7:18:37 PM | 5 | 7KB | 2nd window arbitrary test |
 | `1786068815556` | 8/6/2026, 7:16:56 PM | 6 | 8KB | test to first iteration |
-| `1785953794202` | 8/6/2026, 6:19:29 PM | 584 | 1604KB | COPY_WINDOW_0_DATA_ACCURACY_AUDIT |
-| `1785953476892` | 8/6/2026, 6:08:42 PM | 520 | 1115KB | build and ship this |
 
 ---
 
 ## Per-window detail
 
-### `1786285332678` — 8/9/2026, 5:35:19 PM PT — 556 turns
+### `1786319043926` — 8/9/2026, 6:51:44 PM PT — 70 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
+
+Please provide to me links to the  3 or 4  unfiled TPIA requests as well as the sunset review email (do i send this monday or wait)? nadn then the instructions for cori to setup meetings for us to meet the 3 politiicians the first week of September
+```
+
+**Ideas referenced:** #19587, #19595 [executing], #19599, #19600, #19601, #1976, #2274, #2275, #2292, #24790, #24805, #24836, #24842, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25374, #25400, #600179, #623992
+
+**Last PICKUP PROMPT:**
+
+```
+ks. 006 and 009 are unchanged.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — TDSHS: TPIA 006/008/009 ready to file, Schmider reply, sunset timing, Cori September meetings.
+
+Where we left off (verified 2026-08-09 18:50 PT):
+- Series audit: EMSU-TPIA-2026-000 through -007 exist on server. -008 and -009 assigned this session as the next free numbers.
+- EMSU-TPIA-2026-008 = State EMS Director communications, August 2026 episode (formerly "Request A"). EMSU-TPIA-2026-009 = Office of EMS handling of constituent communications, 12-month pattern (formerly "Request B"). Both under Ruben as requestor, full canonical block set matching filed 005/007.
+- Separate-requestor plan DROPPED: only the requestor has 552.321 mandamus standing, fragmenting the series destroys the one-requestor non-response exhibit, and attribution is trivial regardless. Both carry a series cross-reference stating each request is independent and does not modify or restart any other.
+- 008 items 3 and 4 REVISED this turn per Ruben: item 4 no longer defines the responsive set by reference to a single email (which invited a "no record is referenced in that correspondence" non-production). It now covers any constituent/third-party contact received Aug 6 through Aug 8, 2026 concerning EMSU, with the Aug 7 3:36 p.m. contact expressly included without limitation, plus a state-in-writing-if-none clause. Item 3 broadened from "the investigator copied on his Aug 7 correspondence" to any assigned or copied investigator plus any personnel in receipt of that correspondence. 006 and 009 unchanged — 009 has no single-document reference and does not carry this defect.
+- 006 was corrected earlier this session (supplemental-to-005 framing and the clarify/narrow invite both removed).
+- Schmider round-3 reply drafted inline earlier this session. Master note row 176 confirms nothing sent to Schmider as of 8/7 8:20 PM PT.
+- 403 on all uploads links is nginx deny-all by design (/etc/nginx/sites-enabled/emtskills), not a permissions bug. All text delivered inline.
+
+Open threads to drive next:
+1. Deploy corrected 006 plus new 008 (with the revised items 3 and 4) and 009 to /var/www/emtskills/uploads/tdshs/records-requests/ so server copies match (human-only decision on final wording — no idea).
+2. Send 006, 008, 009 to openrecords@dshs.texas.gov plus certified mail to MC-1919, 1100 West 49th Street, Austin TX 78756-3101; file 008 and 009 same day as separate emails; diary three separate 10-business-day clocks (human-only decision — no idea).
+3. Counsel issues the preservation letter first or alongside 008 and 009 (human-only decision — no idea).
+4. Send the Schmider reply and log kind=sent on investigation 19 (human-only decision — no idea).
+5. Verify the 8/6 complaint responses (Smith 1080261869, Sheets 1080261887, Johnson 1080261890, Kanthack 1080261891, Dictson 1080261915) are transmitted and the Richardson letter is out — both gate the Monday sunset submission to sunset@sunset.texas.gov subject "DSHS Review" (human-only decision — no idea).
+6. Cori edits the three draft emails in /var/www/emtskills/routes/texas_outreach.php from "week of August 9-12" to first-week-September dates and sends to Rep. Liz Campos, Sen. Lois Kolkhorst, Sen. Donna Campbell (human-only decision — no idea).
+
+Reference IDs:
+- Investigations: #16 TPIA tracking [open], #18 sunset outreach [open], #15 legislative contacts [open], #19 Schmider episode [open]
+- Response rows: 176 master note [i
+```
+
+### `1786285332678` — 8/9/2026, 6:23:01 PM PT — 592 turns
 
 **Original task:**
 
@@ -122,39 +166,55 @@ that should go into the call back system, not a ticket. Those tickets are noise 
 Answering your question: "Voice call follow-up needed" tickets are not o
 ```
 
-**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #1745, #18316, #2274, #2275, #23133, #23989, #24645, #24646, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25364 [executing], #25365 [deployed], #3133, #475569, #6172, #9042, #9159, #9222, #9501
+**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #1745, #18316, #2274, #2275, #23133, #23989, #24645, #24646, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25364 [executing], #25365 [deployed], #3133, #475569, #6172, #6579, #9042, #9159, #9222, #9501
 
 **Last PICKUP PROMPT:**
 
 ```
-lot, we didn't call them back)
+ a live agent at booking time.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up — Callback system post-fix. All auto-booking paths removed. Only caller-scheduled callbacks remain.
+Pick up topic — Callback system: real-path untested, zero real usage. Agent gate blocks all offers.
 
-Where we left off (verified 2026-08-09 ~17:35 PT):
-- `cron/cron_post_call_summary.php`: auto-booking removed, log-only. 0 `bookCallbackSlot` refs. Backed up.
-- `api/voice/vapi_server_webhook.php`: end-of-call block reverted to log-only. `handleScheduleCallback` uses `bookCallbackSlot()` with 1-per-person-per-day dedup. Backed up `.bak-20260809-1705`.
-- `lib/callback_intent_detector.php`: Vicky email hook still active.
-- `routes/telephony_hub.php`: gold alert banner still active.
-- `crons/policing/cron_callback_policing.php`: every 15 min overdue/upcoming alerts to Vicky.
-- Database: 1 remaining callback (#6, Dominic Felix — the 48h outstanding ticket conversion). 0 auto-bookings.
+Where we left off (verified 2026-08-09 18:22 PT):
+- `api/voice/vapi_server_webhook.php` line ~5870: `handleScheduleCallback` has agent-availability gate (needs is_available=1 + heartbeat < 2min). 18 agents, only 2 fresh → gate blocks 100% of callback offers, redirects to live chat.
+- Line ~5905: my patch adds `bookCallbackSlot()` path AFTER the gate — never reached by real callers. 5,014 schedule_callback tool calls, 0 caller-initiated bookings.
 
 Open threads to drive next:
-1. None — all work completed this session.
+1. #25365 [executing] — Decide + implement: relax/remove agent gate so caller-scheduled callbacks actually book into callback_bookings for Vicky's queue.
 
 Reference IDs:
-- Ideas: #25365 [deployed] — callback system core fix
-- Files touched: `cron/cron_post_call_summary.php`, `api/voice/vapi_server_webhook.php`, `lib/callback_intent_detector.php`, `routes/telephony_hub.php`, `crons/policing/cron_callback_policing.php`
-- Cron: `/etc/cron.d/emsu-callback-policing`
-- Backups: `.bak-20260809-callback-alerts`, `.bak-20260809-notify`, `.bak-20260809-1705`, `.bak-20260809-dedup`
+- Ideas: #25365 [executing]
+- Files: `/var/www/emtskills/api/voice/vapi_server_webhook.php` (gate at 5870, booking at 5905)
+- Data: voice_tool_metrics 5,014 calls; voice_callback_queue 0; callback_bookings 1 (manual #6)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
+═══════════════════════════════════════════════
+</result>
 </attempt_completion>
 ```
+
+### `1786313131031` — 8/9/2026, 6:13:23 PM PT — 134 turns
+
+**Original task:**
+
+```
+#AI Directed Meditation
+
+For clarification on the idea, it is the idea of holding an idea in the mind that begets another idea. The subject idea is difficult to hold in the mind at the same time as holdingthe object idea as the subject idea is executed at that exact insance. Just for arguments sake. Your point remains valid on 25229 however. 
+
+How are the scans going? 
+
+Resole this -> The real gap was that __nothing tested whether the mechanical claims were true__.
+
+How is this going? Did we execute everythign? which venues are using AI Directed Meditation. Which others acan be used or should 
+```
+
+**Ideas referenced:** #14100, #178629, #23924, #23932, #23935, #25185, #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25242, #25268 [deployed], #25313 [deployed], #25364 [deployed], #25366 [deployed], #25374, #25375, #25383 [deployed], #25384 [deployed], #25385 [deployed], #25421 [proposed], #25422 [proposed], #25423 [proposed], #25424 [proposed], #25442 [deployed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786318471535` — 8/9/2026, 5:24:05 PM PT — 218 turns
 
@@ -200,65 +260,6 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1786319043926` — 8/9/2026, 4:52:10 PM PT — 42 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
-
-Please provide to me links to the  3 or 4  unfiled TPIA requests as well as the sunset review email (do i send this monday or wait)? nadn then the instructions for cori to setup meetings for us to meet the 3 politiicians the first week of September
-```
-
-**Ideas referenced:** #19587, #19595 [executing], #19599, #1976, #2274, #2275, #2292, #24790, #24805, #24836, #24842, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25374, #25400, #600179, #623992
-
-**Last PICKUP PROMPT:**
-
-```
-ab=investigations&entity=tdshs
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — TDSHS TPIA requests + sunset submission + Cori September meeting scheduling.
-
-Where we left off (verified 2026-08-09 16:51 PT):
-- Investigation row #16 [open]: TPIA/FOIA request inventory — 3 items logged (1 never filled years ago, 1 pending deadline 8/10, 1 v5 unclear submission status). Two NEW requests A+B [ready-to-transmit] in tpia-2026 dir, not yet sent.
-- Sunset submission: DRAFT_sunset_commission_input_EMSU.md v6 on server, timing note says submit once 8/6 responses + Richardson letter sent. Not yet submitted to sunset@sunset.texas.gov.
-- Cori September meetings: texas_outreach.php has draft emails to Campos/Kolkhorst/Campbell. Dates need updating from Aug 9-12 to first week September. Cori_Meeting_Scheduling_Texas_Aug9-12.pdf on Desktop (corrupted, unreadable by tool).
-- Schmidermaster note: 5 artifacts ready — Schmider reply draft, Vicky-to-Emma email draft, TPIA A, TPIA B, preservation letter. None transmitted yet.
-
-Open threads to drive next:
-1. Determine exact submission status of the v5 TPIA master request (was PDF sent or not?) and the 8/6 complaint responses (Smith/Sheets/Johnson/Kanthack/Dictson) — these gate the sunset submission timing.
-2. File the Schmider reply + 2 new TPIA requests (A + B) + preservation letter if Ruben approves.
-3. Update Cori's meeting emails to September dates and send.
-
-Reference IDs:
-- Investigation: #16 (TPIA tracking), #18 (sunset outreach), #15 (legislative contacts)
-- Files touched: /var/www/emtskills/uploads/tdshs/tpia-2026/TPIA_Request_{A,B}*.txt, /var/www/emtskills/uploads/tdshs/tpia-2026/SCHMIDER_EPISODE_2026-08-07_MASTER_NOTE.md, /var/www/emtskills/uploads/tdshs/inspection-5196-2026/DRAFT_sunset_commission_input_EMSU.md, /var/www/emtskills/routes/texas_outreach.php, /Users/rubenmajor/Desktop/Cori_Meeting_Scheduling_Texas_Aug9-12.pdf
-- Sunset email recipient: sunset@sunset.texas.gov (subject: "DSHS Review")
-- TPIA send channel: openrecords@dshs.texas.gov + certified to PO Box 149347, Austin TX 78714-9347
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Explore tdshs-inspection-5196 folder and Desktop for TPIA/sunset docs
-- [x] Found Cori_Meeting_Scheduling_Texas_Aug9-12.pdf
-- [x] DB schema described — TDSHS investigations identified (TPIA tracking, sunset outreach, contacts)
-- [x] Read requests A/B + master note — classified as ready-to-transmit
-- [x] Read sunset commission input draft (v6, timing note)
-- [x] Read texas_outreach.php for Cori meeting-setup instructions
-- [x] Check DB for filed vs unfiled status of TPIA requests + sunset email
-- [x] Confirm links for the 3-4 unfiled TPIA requests
-- [x] Determine Monday vs wait for sunset email (send Monday IF 8/6 responses + Richardson letter are out)
-- [x] Deliver summary with links and instructions
-</task_progress>
 </attempt_completion>
 ```
 
@@ -530,26 +531,6 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [x] Validate completion (gates all passed)</task_progress>
 </attempt_completion>
 ```
-
-### `1786313131031` — 8/9/2026, 3:23:51 PM PT — 108 turns
-
-**Original task:**
-
-```
-#AI Directed Meditation
-
-For clarification on the idea, it is the idea of holding an idea in the mind that begets another idea. The subject idea is difficult to hold in the mind at the same time as holdingthe object idea as the subject idea is executed at that exact insance. Just for arguments sake. Your point remains valid on 25229 however. 
-
-How are the scans going? 
-
-Resole this -> The real gap was that __nothing tested whether the mechanical claims were true__.
-
-How is this going? Did we execute everythign? which venues are using AI Directed Meditation. Which others acan be used or should 
-```
-
-**Ideas referenced:** #14100, #178629, #23932, #23935, #25185, #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25242, #25268 [deployed], #25313 [deployed], #25364 [deployed], #25366 [deployed], #25374, #25375, #25383 [deployed], #25384 [deployed], #25385 [deployed], #25421 [proposed], #25422 [proposed], #25423 [proposed], #25424 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786286915134` — 8/9/2026, 2:58:34 PM PT — 92 turns
 
@@ -3801,36 +3782,3 @@ Reference IDs:
 </result>
 </attempt_completion>
 ```
-
-### `1785953794202` — 8/6/2026, 6:19:29 PM PT — 584 turns
-
-**Original task:**
-
-```
-COPY_WINDOW_0_DATA_ACCURACY_AUDIT
-
-Work on that
-```
-
-**Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12477, #13084, #152615, #1681, #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #178593, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1935, #1936, #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20503, #20540, #20541, #20555, #20565, #20569, #20627, #20628, #20629, #20630, #20662, #20663, #20672, #20674, #20676, #20677, #20806 [proposed], #2101, #2105, #2126, #2127, #2128, #2226, #2234, #2257, #22808 [proposed], #23027, #23036, #23037, #23038, #23039, #23050 [executing], #23054 [executing], #23056 [executing], #23061 [executing], #23062 [executing], #23146 [proposed], #23150 [proposed], #23152 [proposed], #23160 [proposed], #23163 [proposed], #23164 [proposed], #23165 [proposed], #23171, #23174, #23175, #23180 [proposed], #23181, #23182, #23183, #23184, #23276 [proposed], #23277 [proposed], #23285 [proposed], #23318 [proposed], #23471 [proposed], #23506 [proposed], #24176 [proposed], #24181 [proposed], #24191 [proposed], #389249, #7223, #7925, #8639, #9048
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1785953476892` — 8/6/2026, 6:08:42 PM PT — 520 turns
-
-**Original task:**
-
-```
-build and ship this
-
-__3. The RCA on why frankenstein-llm could not do this work — filed as #23135 [executing], promoted.__
-
-Four causes, and the first one is the biggest:
-
-- __Tool calling was broken all morning.__ A model that cannot call tools cannot investigate, so it answers from priors. That is a large part of "why not" and it is now fixed (#23122).
-- __No project registry.__ 216 tables match escalation/urgent/frustration patterns. 55 match callback. An agent pattern-matching table names against a keyword lands on the wrong one nearly every time, and lands confidently, because the wrong 
-```
-
-**Ideas referenced:** #10119 [rejected], #1026, #1233, #17300, #18329 [queued], #18800, #18868, #19304, #19309, #19313, #1934, #2225 [deployed], #2237 [rejected], #2256, #22598, #22601, #22832, #23117, #23122 [in_progress], #23135 [executing], #23172 [approved], #23178 [approved], #23179 [approved], #23182 [proposed], #23183 [proposed], #23217, #23234 [proposed], #23290, #23291, #23325 [in_progress], #4505 [rejected], #52758, #52773, #52775, #52782, #52784, #52799, #52801, #56925, #56938
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

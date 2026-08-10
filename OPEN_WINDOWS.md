@@ -6,16 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/10/2026, 1:56:12 PM PT | window: last 72h | 90 tasks | index total 607 (parsed 8, cached 599)
+Generated: 8/10/2026, 2:56:12 PM PT | window: last 72h | 91 tasks | index total 608 (parsed 4, cached 604)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786342434047` | 8/10/2026, 1:56:10 PM | 1695 | 2955KB | #Big Mac Claimed Down?? |
-| `1786391277181` | 8/10/2026, 1:56:04 PM | 121 | 320KB | Why is frankenstein-llm iterating at 50% of its normal speed? |
-| `1786384439089` | 8/10/2026, 1:55:35 PM | 207 | 1671KB | Why am i just receiving these chat transcripts now? That's not very helpful |
-| `1786395180489` | 8/10/2026, 1:53:00 PM | 1 | 3KB | #San Mateo County Complaint/Inspection chenry@smcgov.org send a complaint on July 31 to me |
-| `1786340503930` | 8/10/2026, 1:52:52 PM | 565 | 2537KB | #Argus |
-| `1786285332678` | 8/10/2026, 1:44:53 PM | 978 | 14850KB | #Callbacks |
+| `1786342434047` | 8/10/2026, 2:55:59 PM | 2529 | 3859KB | #Big Mac Claimed Down?? |
+| `1786395180489` | 8/10/2026, 2:53:05 PM | 143 | 544KB | #San Mateo County Complaint/Inspection chenry@smcgov.org send a complaint on July 31 to me |
+| `1786285332678` | 8/10/2026, 2:43:09 PM | 1135 | 15212KB | #Callbacks |
+| `1786396687700` | 8/10/2026, 2:41:04 PM | 66 | 153KB | info@emsuniversity.com is getting way too many emails. About 3-5 a second and mostly says  |
+| `1786340503930` | 8/10/2026, 2:16:06 PM | 670 | 2638KB | #Argus |
+| `1786391277181` | 8/10/2026, 2:14:28 PM | 205 | 592KB | Why is frankenstein-llm iterating at 50% of its normal speed? |
+| `1786384439089` | 8/10/2026, 2:12:51 PM | 246 | 2110KB | Why am i just receiving these chat transcripts now? That's not very helpful |
 | `1786229794274` | 8/10/2026, 1:42:07 PM | 70 | 385KB | #Externships |
 | `1786086916545` | 8/10/2026, 1:40:55 PM | 284 | 1378KB | Tell me how the student council is doing. Is it healthy? It actually generating ideas and  |
 | `1786392003768` | 8/10/2026, 1:14:42 PM | 72 | 193KB | #AI Direct Meditation |
@@ -105,7 +106,7 @@ Generated: 8/10/2026, 1:56:12 PM PT | window: last 72h | 90 tasks | index total 
 
 ## Per-window detail
 
-### `1786342434047` — 8/10/2026, 1:56:10 PM PT — 1695 turns
+### `1786342434047` — 8/10/2026, 2:55:59 PM PT — 2529 turns
 
 **Original task:**
 
@@ -132,65 +133,7 @@ stdesk_devices + reverse tunnels
 </use_mcp_tool>
 ```
 
-### `1786391277181` — 8/10/2026, 1:56:04 PM PT — 121 turns
-
-**Original task:**
-
-```
-Why is frankenstein-llm iterating at 50% of its normal speed?
-
-do not inject anthropic
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11953, #12314, #12365, #12366, #12368, #12459, #12477, #12618, #12657, #12672, #12689, #12824, #12872, #12878, #13108, #13121, #13202, #13832, #13874, #16120, #16163, #16265, #16304, #16674, #16676, #16844, #17202, #1754, #1755, #1781, #18312, #18326, #19338, #1989, #20495, #21045, #2254, #2258, #22583, #2299, #2302, #23169, #23171, #24144, #24172, #24186, #24217, #25097, #25112, #25468, #25471, #25565 [proposed], #25567 [proposed], #25571 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786384439089` — 8/10/2026, 1:55:35 PM PT — 207 turns
-
-**Original task:**
-
-```
-Why am i just receiving these chat transcripts now? That's not very helpful
-```
-
-**Ideas referenced:** #18335, #19837, #2271, #2274, #2275, #2292, #2423, #24635, #24636, #24645, #24646, #24791, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25550 [proposed], #25551 [proposed], #6366, #6526, #6548, #9152
-
-**Last PICKUP PROMPT:**
-
-```
-Backups: `.bak-rtx3-20260810`.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Verify chat transcript real-time delivery overnight, close ideas 25550 and 25551
-
-Where we left off (verified 2026-08-10 13:09 PT):
-- All four changes live on WOPR, lint-clean, FPM reloaded:
-  1. Real-time transcripts fire on chat close (handleUpdateStatus + handleBulkClose)
-  2. DSML tool-call envelopes stripped from assistant messages before save (widgetStripEmoji, 3 regexes)
-  3. closed_at DATETIME column on every conversation table, set in all close paths
-  4. Default recipient changed rmajor@ to info@emsuniversity.com
-  5. Cron cap raised 5 to 200 to drain the remaining backlog
-- Backups: .bak-rtx3-20260810 on all four files
-
-Open threads to drive next:
-1. #25550 [deployed] — Confirm no new DSML leaks appear in new transcripts over 48h. If backfill-clean of existing rows is desired, run a one-off UPDATE message_text with REGEXP_REPLACE on the DSML patterns.
-2. #25551 [deployed] — Confirm new transcripts land at info@ within minutes of chat close. Verify backlog drains fully by tomorrow morning.
-3. Mark both ideas as complete in orchestrator DB once confirmed.
-
-Reference IDs:
-- Ideas filed: #25550 [deployed], #25551 [deployed]
-- Files touched: api/chat_widget_api.php, api/chat_portal_api.php, cron/cron_chat_transcript_autosend.php, lib/chat_transcript_mailer.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786395180489` — 8/10/2026, 1:53:00 PM PT — 1 turns
+### `1786395180489` — 8/10/2026, 2:53:05 PM PT — 143 turns
 
 **Original task:**
 
@@ -198,9 +141,124 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 #San Mateo County Complaint/Inspection chenry@smcgov.org send a complaint on July 31 to me rmajor@emsuniversity.com. I did not get it until today when I received his email just now after he called me and I picked up. He said he sent it to matt rios, program director also. I told him we didn't get it until today. He agreed to give us until 8/19. I told him that we were unexpectedly busy this summer and there was a lot of demand without looking at the complaint and not sure if that's what it was about or not. The 3 attachments are in the email. He wants to do an inspection also but didn't set a 
 ```
 
+**Ideas referenced:** #0369, #0891, #1368, #1565, #15803, #166534, #20581, #2292, #2301, #25313, #25365 [deployed], #25366 [proposed], #25525, #25534, #25535, #25537, #25548 [executing], #25562, #2563, #334155, #475569, #6366, #64748, #92400
+
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786340503930` — 8/10/2026, 1:52:52 PM PT — 565 turns
+### `1786285332678` — 8/10/2026, 2:43:09 PM PT — 1135 turns
+
+**Original task:**
+
+```
+#Callbacks
+
+that should go into the call back system, not a ticket. Those tickets are noise and need to be converted to callbacks GOING FORWARD. Offer callbacks to those outstanding in the last 48 hours like that and depreciate old process. -> Answering your question: "Voice call follow-up needed" tickets are not offers, they are internal support tickets. When the Voice AI cannot fully resolve a caller and the caller agrees to a follow-up, the AI creates one of these tickets so a human can call or email the person back.
+
+
+Answering your question: "Voice call follow-up needed" tickets are not o
+```
+
+**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #1745, #18316, #19338, #19458, #19491, #2274, #2275, #23133, #23989, #24645, #24646, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25364 [executing], #25365 [deployed], #25486 [executing], #25593 [executing], #3133, #334155, #475569, #6172, #6579, #9042, #9159, #9222, #9501
+
+**Last PICKUP PROMPT:**
+
+```
+ule 91 (EMSU clinerules)**: every `attempt_completion` must end with a specific PICKUP PROMPT block (47 `═` U+2550 divider characters, no placeholder tokens, no bare `#NNNN` idea references without a `[status]` bracket, no em-dashes in ops-facing text).
+- **Rule 297 (EMSU clinerules)**: classify before diagnosing — do not declare a root cause from a probe/grep alone without confirming the actual runtime value; this was explicitly invoked when my `$base` variable theory was found to be a misdiagnosis.
+- **Rule 315 (EMSU clinerules)**: verify before declaring done — do not report a fix as "working" without live confirmation.
+- **Policing cron** (`/var/www/emtskills/crons/policing/cron_callback_policing.php`, scheduled via `/etc/cron.d/emsu-callback-policing`, runs every 15 minutes, deployed 2026-08-09 08:45): escalates callbacks more than 60 minutes overdue to `vicky@emsuniversity.com` and sends 30-minute-ahead pre-reminders. **Known gap**: does not retroactively scan for bookings that were already overdue before the cron itself first started running.
+
+## 3. Files and Code Sections
+
+### `/var/www/emtskills/lib/callback_intent_detector.php` — **5 CONFIRMED-SHIPPED FIXES**
+
+This file was completely rewritten in one pass (avoiding fragile incremental `str_replace` patches after earlier attempts failed to match exact strings). Backup of the pre-fix version exists at `/var/www/emtskills/lib/callback_intent_detector.php.bak-20260810-1045-pre-ship`.
+
+Key functions and their current (fixed) behavior:
+
+```php
+function callbackOwnTrunkNumbers(): array {
+    return ['8007280209', '9412943388', '9412545009', '8062304280', '9412349746'];
+}
+
+function bookCallbackSlot(PDO $pdo, string $name, string $phone, string $reason, string $cfaSource, string $studentId = null): ?int {
+    try {
+        // 1-per-person-per-day guard (2026-08-09): reject if this caller already
+        // has a live (pending/confirmed/in_progress) callback booked.
+        try {
+            $guardDigits = preg_replace('/[^0-9]/', '', (string)$phone);
+            $guardLast10 = substr($guardDigits, -10);
+            if ($guardLast10 !== '') {
+                $guardStmt = $pdo->prepare(
+                    'SELECT cb.id FROM callback_bookings cb '
+                    . 'JOIN callback_slots cs ON cb.slot_id = cs.id '
+                    . "WHERE REPLACE(REPLACE(REPLACE(REPLACE(cb.caller_phone, '+', ''), '-', ''), '(', ''), ')', '') LIKE :digits "
+                    . "AND cb.status IN ('pending','confirmed','in_progress') "
+                    . 'AND cs.slot_date >= CURDATE() LIMIT 1'
+                );
+                $guardStmt->execute([':digits' => '%' . $guardLast10]);
+                if ($guardStmt->fetch()) {
+                    error_log('[callback_intent_detector] bookCallbackSlot BLOCKED duplicate for phone=' . $phone);
+                    return null;
+                }
+            }
+        } catch (\Throwable $guardErr) {
+            error_log('[callback_intent_detector] dedup check failed (non-fatal): ' . $guardErr->getMessage());
+        }
+
+        $slotId = null;
+        // Slot window: NEXT DAY through +5 days (Ruben directive 2026-08-10: no same-day callbacks).
+        $slotSql = "SELECT id FROM callback_slots "
+            . "WHERE status = 'available' "
+            . "AND slot_date >= CURDATE() + INTERVAL 1 DAY "
+            . "AND slot_date <= CURDATE() + INTERVAL 5 DAY "
+            . "ORDER BY slot_date ASC, slot_time ASC LIMIT 1";
+        for ($attempt = 0; $attempt < 3; $attempt++) {
+            $slot = $pdo->prepare($slotSql);
+            $
+```
+
+### `1786396687700` — 8/10/2026, 2:41:04 PM PT — 66 turns
+
+**Original task:**
+
+```
+info@emsuniversity.com is getting way too many emails. About 3-5 a second and mostly says ideas or something. Anyway, it's chosing out sthe server.
+```
+
+**Ideas referenced:** #16523, #18944, #18951, #20581, #2292, #2301, #25313, #25365 [deployed], #25366 [proposed], #25525, #25534, #25535, #25537, #25548 [executing], #25562, #25591 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+u'll want to bulk-delete these
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — idea_delivery_watchdog email flood aftermath.
+
+Where we left off (verified 2026-08-10 14:35 PT):
+- Flood stopped, root cause fixed, script deployed with hard cap
+- #25591 [proposed] — mailer-level per-source rate limiter to prevent future per-row email floods from any cron/agent
+- 25,061 emails in rmajor's inbox that may need bulk cleanup
+
+Open threads to drive next:
+1. #25591 [proposed] — Implement per-send_source rate limiter in lib/mailer.php sendEmail(). Track send_source + to_email in a 5-min window, deny if >N (default 50). Configurable per source. The fix prevents any cron with a per-row email pattern from flooding.
+2. (human-only decision, no idea) — 25,061 watchdog emails in Ruben's inbox. Bulk-delete or mark-as-read approach per Ruben's preference. No script needed unless he wants one.
+
+Reference IDs:
+- Ideas filed: #25591 [proposed]
+- Files touched: /var/www/emtskills/routes/cron_idea_delivery_watchdog.php, /etc/cron.d/idea-delivery-watchdog, /etc/cron.d/emsu-idea-watchdog (deleted)
+- Backup: auto-backed up by write_server_file
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786340503930` — 8/10/2026, 2:16:06 PM PT — 670 turns
 
 **Original task:**
 
@@ -217,7 +275,7 @@ require_once __DIR__ . '/../lib/argus_reclaim.php';   // file does not exist
 The orphan-reclaim logic already lives inline at lines 210-230 in the same file. The `require_once` introduced in the 2026-08-09 deployment was a duplicate with a nonexistent path, so every cycle claimed tasks → DISPATCH → `require_once` fatal → process died before `curl_multi_exec` ran → tasks never completed, and 
 ```
 
-**Ideas referenced:** #10141, #11944, #12463, #12568, #12619, #1356, #15306, #16213, #17483, #18378, #18530, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20547, #21125, #21126, #22511, #22583, #22688, #22850, #23027, #23036, #23039, #23053, #23428, #23429, #23468, #23489, #23506, #23592, #23675, #23852, #23913, #23920, #23941, #23952, #23982, #24200, #24766, #24897, #24900, #24926, #24941, #24990, #25047, #25058, #25131, #25142, #25193, #25196, #25269, #25313, #25464 [ready_for_review], #25465 [approved], #25466 [approved], #25547 [proposed], #25552 [proposed], #25553, #25554 [proposed], #25555, #25563 [proposed], #25564, #25571 [proposed], #25572, #25573, #25574 [deployed], #25768, #2606, #2620, #2862, #2911, #2912, #334155, #4338, #4421, #5700, #57343, #57351, #57357, #57362, #64748, #7137, #8892
+**Ideas referenced:** #10141, #11944, #12463, #12568, #12619, #1356, #15306, #16213, #17483, #18378, #18530, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20547, #21125, #21126, #22511, #22583, #22688, #22850, #23027, #23036, #23039, #23053, #23428, #23429, #23468, #23489, #23506, #23592, #23675, #23852, #23913, #23920, #23941, #23952, #23982, #24200, #24766, #24897, #24900, #24926, #24941, #24990, #25047, #25058, #25131, #25142, #25193, #25196, #25269, #25313, #25385, #25464 [ready_for_review], #25465 [approved], #25466 [approved], #25525, #25530, #25531, #25547 [proposed], #25552 [proposed], #25553, #25554 [proposed], #25555, #25563 [proposed], #25564, #25571 [proposed], #25572, #25573, #25574 [deployed], #25582, #25586, #25587, #25768, #2606, #2620, #2862, #2911, #2912, #334155, #4338, #4421, #5700, #57343, #57351, #57357, #57362, #64748, #7137, #8892
 
 **Last PICKUP PROMPT:**
 
@@ -248,48 +306,54 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786285332678` — 8/10/2026, 1:44:53 PM PT — 978 turns
+### `1786391277181` — 8/10/2026, 2:14:28 PM PT — 205 turns
 
 **Original task:**
 
 ```
-#Callbacks
+Why is frankenstein-llm iterating at 50% of its normal speed?
 
-that should go into the call back system, not a ticket. Those tickets are noise and need to be converted to callbacks GOING FORWARD. Offer callbacks to those outstanding in the last 48 hours like that and depreciate old process. -> Answering your question: "Voice call follow-up needed" tickets are not offers, they are internal support tickets. When the Voice AI cannot fully resolve a caller and the caller agrees to a follow-up, the AI creates one of these tickets so a human can call or email the person back.
-
-
-Answering your question: "Voice call follow-up needed" tickets are not o
+do not inject anthropic
 ```
 
-**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #1745, #18316, #19338, #19458, #19491, #2274, #2275, #23133, #23989, #24645, #24646, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25364 [executing], #25365 [deployed], #25486 [executing], #3133, #334155, #475569, #6172, #6579, #9042, #9159, #9222, #9501
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11953, #12314, #12365, #12366, #12368, #12459, #12477, #12618, #12657, #12672, #12689, #12824, #12872, #12878, #13108, #13121, #13202, #13832, #13874, #16120, #16163, #16265, #16304, #16674, #16676, #16844, #17202, #1754, #1755, #1781, #18312, #18326, #19338, #1989, #20042, #20495, #21045, #2114, #2254, #2258, #22583, #2299, #2302, #2303, #23169, #23171, #24144, #24172, #24186, #24217, #25097, #25112, #25172, #25185, #25468, #25471, #25565 [proposed], #25567 [proposed], #25571 [proposed], #25580 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786384439089` — 8/10/2026, 2:12:51 PM PT — 246 turns
+
+**Original task:**
+
+```
+Why am i just receiving these chat transcripts now? That's not very helpful
+```
+
+**Ideas referenced:** #18335, #19837, #2271, #2274, #2275, #2292, #2423, #24635, #24636, #24645, #24646, #24791, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25550 [proposed], #25551 [proposed], #6366, #6526, #6548, #9152
 
 **Last PICKUP PROMPT:**
 
 ```
-on first ran also get flagged.
+us fix), same as manual close.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #1 — Callback system: escalate all overdue callbacks including pre-existing ones, fix visibility.
+Pick up task — Optional: add "chat ended" UX to widget frontend on auto-close
 
-Where we left off (verified 2026-08-10 11:08 PT):
-- Booking #76 (Denham Brown) overdue 1h 8min, 0 call attempts, phone is trunk number (can't call)
-- Booking #6 (Dominic Felix) overdue 26h, 0 call attempts, real phone 520-423-7315
-- Policing cron running but missed Dominic because it only catches 60+ min overdue from cron start
-- Vicky may not be seeing the escalation emails
-- Telephony Hub banner shows gold alert with badge count (2 pending)
+Where we left off (verified 2026-08-10 14:11 PT):
+- All 34 sites auto_close_minutes=60. Cron runs every 15 min, auto-closes idle 60+ min conversations. Manually verified working.
+- bugfix: closed_at column was missing on 28 tables (ALTER used system='emsu_chat' filter, missed sites with per-site DB creds). Backfilled to all 34 sites via per-site credentials. Cron now runs zero FAILs.
+- Transcripts fire on auto-close (wired in previous session).
+- widget_poll returns status='closed' to the frontend. Frontend widget JS already receives it.
 
 Open threads to drive next:
-1. #25486 [approved] — Fix policing cron: catch callbacks already overdue at startup (not just newly overdue)
-2. #25486 [approved] — Add SMS alert to Vicky (via Jon) for severely overdue callbacks (CC her on Ruben's phone via iMessage)
-3. #25486 [approved] — Fix booking #6: add overdue flag to callback_notes for Dominic Felix (26h overdue, real phone 520-423-7315)
-4. #25486 [approved] — Fix booking #76: resolve real caller phone from voice_call_log (trunk number is wrong)
+1. #25550 [deployed] — Monitor 48h for DSML leaks. Backfill-clean existing rows if desired.
+2. #25551 [deployed] — Monitor 24h for real-time transcript delivery. Verify backlog drains.
+3. (no idea) — If desired, enhance widget frontend JS to show "This chat has ended" banner when poll returns status='closed', with an input-disabled state. The frontend widget JS is the WordPress embed; location TBD (not in the WOPR PHP API files, likely in each site's WordPress theme/plugin).
 
 Reference IDs:
-- Ideas: #25365 [deployed], #25486 [approved]
-- Files: /var/www/emtskills/crons/policing/cron_callback_policing.php
-- Bookings: 76 [pending], 6 [pending]
+- Ideas filed: #25550 [deployed], #25551 [deployed]
+- Files touched this session: all 28 site DBs (ALTER TABLE ADD closed_at)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════

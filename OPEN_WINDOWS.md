@@ -6,18 +6,19 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/10/2026, 11:56:11 AM PT | window: last 72h | 87 tasks | index total 604 (parsed 5, cached 599)
+Generated: 8/10/2026, 12:56:12 PM PT | window: last 72h | 88 tasks | index total 605 (parsed 8, cached 597)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786340503930` | 8/10/2026, 11:56:00 AM | 335 | 1723KB | #Argus |
-| `1786381856309` | 8/10/2026, 11:45:12 AM | 124 | 403KB | If you take a look at all the CPR class websites, it seems that traffic on those is very l |
-| `1786384439089` | 8/10/2026, 11:43:03 AM | 74 | 906KB | Why am i just receiving these chat transcripts now? That's not very helpful |
-| `1786386328622` | 8/10/2026, 11:42:37 AM | 89 | 200KB | /emtskills wedged yet again. Please check handoffs over the last few days. What's going on |
-| `1786384771407` | 8/10/2026, 11:31:47 AM | 196 | 440KB | #AI Directed Meditation |
-| `1786342434047` | 8/10/2026, 11:14:38 AM | 284 | 1441KB | #Big Mac Claimed Down?? |
+| `1786285332678` | 8/10/2026, 12:56:09 PM | 965 | 14760KB | #Callbacks |
+| `1786342434047` | 8/10/2026, 12:56:04 PM | 739 | 1920KB | #Big Mac Claimed Down?? |
+| `1786340503930` | 8/10/2026, 12:56:02 PM | 463 | 2336KB | #Argus |
+| `1786391277181` | 8/10/2026, 12:56:01 PM | 58 | 177KB | Why is frankenstein-llm iterating at 50% of its normal speed? |
+| `1786381856309` | 8/10/2026, 12:55:46 PM | 181 | 505KB | If you take a look at all the CPR class websites, it seems that traffic on those is very l |
+| `1786384439089` | 8/10/2026, 12:55:37 PM | 151 | 1558KB | Why am i just receiving these chat transcripts now? That's not very helpful |
+| `1786386328622` | 8/10/2026, 12:48:13 PM | 163 | 335KB | /emtskills wedged yet again. Please check handoffs over the last few days. What's going on |
+| `1786384771407` | 8/10/2026, 12:47:55 PM | 254 | 580KB | #AI Directed Meditation |
 | `1786319043926` | 8/10/2026, 11:12:58 AM | 270 | 1889KB | #TDSHS |
-| `1786285332678` | 8/10/2026, 11:10:37 AM | 882 | 7148KB | #Callbacks |
 | `1786086916545` | 8/10/2026, 10:43:19 AM | 278 | 1364KB | Tell me how the student council is doing. Is it healthy? It actually generating ideas and  |
 | `1786379859145` | 8/10/2026, 10:42:53 AM | 318 | 1547KB | #AI Directed Meditation |
 | `1786318471535` | 8/9/2026, 11:16:54 PM | 304 | 791KB | I got a report of executor stalling. Play frankenstein doctor of executor and resolve and  |
@@ -102,48 +103,48 @@ Generated: 8/10/2026, 11:56:11 AM PT | window: last 72h | 87 tasks | index total
 
 ## Per-window detail
 
-### `1786340503930` — 8/10/2026, 11:56:00 AM PT — 335 turns
+### `1786285332678` — 8/10/2026, 12:56:09 PM PT — 965 turns
 
 **Original task:**
 
 ```
-#Argus
+#Callbacks
 
-**Argus 12-task backup: RESOLVED + durable fix deployed. Jon notified in Argus.**
+that should go into the call back system, not a ticket. Those tickets are noise and need to be converted to callbacks GOING FORWARD. Offer callbacks to those outstanding in the last 48 hours like that and depreciate old process. -> Answering your question: "Voice call follow-up needed" tickets are not offers, they are internal support tickets. When the Voice AI cannot fully resolve a caller and the caller agrees to a follow-up, the AI creates one of these tickets so a human can call or email the person back.
 
-## Root cause (verified live)
-`cron_argus_task_worker.php` crashed on EVERY 2-minute cycle at line 441:
-```php
-require_once __DIR__ . '/../lib/argus_reclaim.php';   // file does not exist
-```
-The orphan-reclaim logic already lives inline at lines 210-230 in the same file. The `require_once` introduced in the 2026-08-09 deployment was a duplicate with a nonexistent path, so every cycle claimed tasks → DISPATCH → `require_once` fatal → process died before `curl_multi_exec` ran → tasks never completed, and 
+
+Answering your question: "Voice call follow-up needed" tickets are not o
 ```
 
-**Ideas referenced:** #10141, #12619, #1356, #18378, #18530, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20547, #21125, #21126, #22511, #22583, #22688, #23036, #23039, #23053, #23428, #23468, #23489, #23506, #23592, #23675, #23852, #23913, #23920, #23941, #23952, #23982, #24766, #24897, #24900, #24926, #24941, #24990, #25047, #25058, #25131, #25142, #25193, #25196, #25269, #25313, #25464 [ready_for_review], #25465 [approved], #25466 [approved], #25547, #25552, #25563, #25564, #25768, #2606, #2620, #2862, #2911, #2912, #334155, #4338, #4421, #5700, #64748, #7137, #8892
+**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #1745, #18316, #19338, #19458, #19491, #2274, #2275, #23133, #23989, #24645, #24646, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25364 [executing], #25365 [deployed], #25486 [executing], #3133, #334155, #475569, #6172, #6579, #9042, #9159, #9222, #9501
 
 **Last PICKUP PROMPT:**
 
 ```
-detector (now column-adaptive)
+on first ran also get flagged.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task Argus context enrichment + kaison argus wedge — both ideas deployed and verified.
+Pick up task #1 — Callback system: escalate all overdue callbacks including pre-existing ones, fix visibility.
 
-Where we left off (verified 2026-08-10 10:41 AM PT):
-- #25464 [deployed] — argus_task_queue context enrichment: worker now falls back to user_email session lookup when session_key is NULL or pruned. All 6 legacy failed tasks requeued and passed. File: /var/www/emtskills/routes/cron_argus_task_worker.php (33115 bytes, backup .bak-25464-20260810-1015)
-- #25466 [deployed] — Kaison argus stuck-task wedge detection: kaison_detect_argus_stuck() scans for 5+ running >15min, files P1 idea + ops_alert. MAIN restructured so argus+deadlock checks run EVERY cycle. File: /var/www/emtskills/cron/cron_kaison_wedge_detection.php (654 lines, backup .bak-25466-20260809-2249)
-- Queue state: 351 done / 51 offloaded / 19 canceled archived / 6 recovered passed / 0 stuck
+Where we left off (verified 2026-08-10 11:08 PT):
+- Booking #76 (Denham Brown) overdue 1h 8min, 0 call attempts, phone is trunk number (can't call)
+- Booking #6 (Dominic Felix) overdue 26h, 0 call attempts, real phone 520-423-7315
+- Policing cron running but missed Dominic because it only catches 60+ min overdue from cron start
+- Vicky may not be seeing the escalation emails
+- Telephony Hub banner shows gold alert with badge count (2 pending)
 
 Open threads to drive next:
-1. #25464 [deployed] — Monitor next 24h of argus cycles for new failed-task classifications; if fail-fast hits reappear, check whether _ctxText=_conv recovery covers attachment_json AND memory-bank contexts
-2. #25466 [deployed] — Optional follow-up: lower ARGUS_STUCK_THRESHOLD 5→3 and add a Telegram/iMessage alert route so Ruben gets push notification on wedge (currently only ops_alerts + orchestrator_ideas P1 card)
+1. #25486 [approved] — Fix policing cron: catch callbacks already overdue at startup (not just newly overdue)
+2. #25486 [approved] — Add SMS alert to Vicky (via Jon) for severely overdue callbacks (CC her on Ruben's phone via iMessage)
+3. #25486 [approved] — Fix booking #6: add overdue flag to callback_notes for Dominic Felix (26h overdue, real phone 520-423-7315)
+4. #25486 [approved] — Fix booking #76: resolve real caller phone from voice_call_log (trunk number is wrong)
 
 Reference IDs:
-- Ideas deployed: #25464, #25466
-- Files touched: /var/www/emtskills/routes/cron_argus_task_worker.php, /var/www/emtskills/cron/cron_kaison_wedge_detection.php
-- Backups: both .bak-20260810-1015 / .bak-25466-20260809-2249
+- Ideas: #25365 [deployed], #25486 [approved]
+- Files: /var/www/emtskills/crons/policing/cron_callback_policing.php
+- Bookings: 76 [pending], 6 [pending]
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -151,125 +152,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786381856309` — 8/10/2026, 11:45:12 AM PT — 124 turns
-
-**Original task:**
-
-```
-If you take a look at all the CPR class websites, it seems that traffic on those is very low and so are registrations. How do we improve that? Are those forms working right? Are payments being received? What's going on? What about scheduiling, etc...?
-```
-
-**Ideas referenced:** #000000, #202608, #2271, #2274, #2275, #2292, #23223, #23308, #24184, #24635, #24636, #24645, #24646, #24791, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25538 [draft], #25539 [draft], #25540 [draft], #25541 [draft], #25542 [draft], #25543 [draft], #25544 [draft], #25545 [draft], #25549 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-,500 per quarter between them.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25549 - CPR class website audit, 8 fixes filed
-
-Where we left off (confirmed 2026-08-10 11:27 PT):
-- Full audit done on all 16 CPR domains on WOPR (Plesk vhosts), all classified healthy/broken/vestigial
-- 5 sites healthy (Tucson, SF, San Antonio, San Diego, Dallas): WPForms QB payments flowing, 311 payments in 90d
-- 6 sites broken: phoenixcpr.org #25539 [proposed] payment cliff (7/900), cprclass.org #25542 [proposed] QBMS stalls at processing, LA/Portland/Houston #25540 [proposed] forms void, cprinstructor.co #25538 [proposed] HTTP 500
-- 4 sites vestigial: phoenixcpr.com redirect, cprguidelines redirect, baltimore, boston, freecprclasses dead
-- 9 ideas filed: #25538 [proposed] through #25545 [proposed], #25549 [proposed]
-
-Open threads to drive next:
-1. #25540 [proposed] P0: Address LA/Portland/Houston no wpforms tables + LA /classschedule/ 404
-2. #25539 [proposed] P1: Investigate phoenixcpr.org 900 to 7 payment cliff
-3. #25542 [proposed] P1: Investigate cprclass.org WooCommerce QBMS stalls at wc-processing
-4. #25538 [proposed] P1: Apply Drupal 7 PHP 8 compat patch to cprinstructor.co
-5. #25541 [proposed] P2: Add SEO plugins to all 9 active CPR sites
-6. #25543 [proposed] P2: Add chat_widget to top 5 CPR sites
-7. #25545 [proposed] P2: Build CPA cross-tracking CPR to EMT enrollment
-8. #25544 [proposed] P3: Consolidate 4 zombie CPR domains
-
-Reference IDs:
-- Ideas filed: #25538 [proposed], #25539 [proposed], #25540 [proposed], #25541 [proposed], #25542 [proposed], #25543 [proposed], #25544 [proposed], #25545 [proposed], #25549 [proposed]
-- Files touched: /var/www/vhosts/cprinstructor.co/httpdocs (error log), /var/www/vhosts/cprclass.org/httpdocs/wp-config.php, wp_q31ow (sanfranciscocpr), wp_id7ic (tucsoncpr), wp_yjqlq (dallascpr), wp_uiabm (cprsandiego), wp_g79da (sanantoniocpr), wp_bv0te (phoenixcpr), wp_9skw8 (cprclass.org)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786384439089` — 8/10/2026, 11:43:03 AM PT — 74 turns
-
-**Original task:**
-
-```
-Why am i just receiving these chat transcripts now? That's not very helpful
-```
-
-**Ideas referenced:** #19837, #2271, #2274, #2275, #2292, #24635, #24636, #24645, #24646, #24791, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25550 [proposed], #25551 [proposed], #6526
-
-**Last PICKUP PROMPT:**
-
-```
- but that is config not a bug.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Chat transcript delay and DSML leak (\#25550, \#25551 verdict + optional fix)
-
-Where we left off (verified 2026-08-10 11:41 PT):
-- Root cause confirmed: `cron/cron_chat_transcript_autosend.php` PER_RUN_CAP=5/site/15min causes weeks-long backlog; oldest-first drain reached Jul 12-13 chats on Aug 9-10. Emma Chicco conv 6526 closed Jul 13 06:30, emailed Aug 10 10:00.
-- Second issue: conv 6526 message 44899 has raw DSML tool-call envelope stored as assistant message, visible in transcript emails.
-- Ideas filed: #25550 [proposed] DSML leak, #25551 [proposed] transcript backlog cap/real-time send.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #25551 — Decide: raise cap vs real-time send on close. If raising, edit cron PER_RUN_CAP and check drain rate on next run; if real-time, wire sendChatTranscriptEmail into the close path in api/chat_portal_api.php.
-2. #25550 — Add DSML-tag strip (regex for <｜DSML｜...> blocks) at message-save point for assistant messages, then backfill-clean existing rows with a one-off UPDATE.
-
-Reference IDs:
-- Ideas filed: #25550 [proposed], #25551 [proposed]
-- Files touched: none written this session (read-only investigation: cron_chat_transcript_autosend.php, lib/chat_transcript_mailer.php, api/chat_portal_api.php, chat_transcript_sent_log)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786386328622` — 8/10/2026, 11:42:37 AM PT — 89 turns
-
-**Original task:**
-
-```
-/emtskills wedged yet again. Please check handoffs over the last few days. What's going on now????
-```
-
-**Ideas referenced:** #16523, #2274, #2275, #2292, #2301 [deployed], #23378, #24635, #24636, #24645, #24646, #24791, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25525, #25534, #25535, #25537, #25548 [executing]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786384771407` — 8/10/2026, 11:31:47 AM PT — 196 turns
-
-**Original task:**
-
-```
-#AI Directed Meditation
-
-
-Arent these Kaison level issues to resovle properly? Are these rule 29 fixes -> So that column is writer-__omission__, not corruption. The alarming 776,773 figure is mostly one field nobody populates. Where no sibling exists, the INSERT statement answers it statically: column absent from the INSERT means omission.
-
-Recommend retiring the "CLASS 2" label, since it reads as "maybe corrupt" and invites the exact overclaim the split was meant to prevent. Better: __2a omission__ (cosmetic) vs __2b coercion__ (real bug), because they need opposite work.
-
-Bonus defect found 
-```
-
-**Ideas referenced:** #13757, #1584, #178629, #18786, #2274, #2275, #2292, #23920, #23922, #23923, #23932, #23952, #24646, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25229 [deployed], #25238 [executing], #25240 [executing], #25241 [executing], #25313, #25364 [executing], #25365 [deployed], #25366 [deployed], #25373, #25375, #25385, #25401, #25425, #25525 [executing], #25528 [deployed], #25530 [executing], #25531 [executing], #25532 [deployed], #25534 [deployed], #25535 [executing], #25537 [executing]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786342434047` — 8/10/2026, 11:14:38 AM PT — 284 turns
+### `1786342434047` — 8/10/2026, 12:56:04 PM PT — 739 turns
 
 **Original task:**
 
@@ -289,33 +172,205 @@ confused on why this is beneficial? Se
 **Last PICKUP PROMPT:**
 
 ```
-ed via julia_full_relaunch.sh.
+stdesk_devices + reverse tunnels
+- [ ] Verify all SSH via portal
+- [ ] Ledger + PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1786340503930` — 8/10/2026, 12:56:02 PM PT — 463 turns
+
+**Original task:**
+
+```
+#Argus
+
+**Argus 12-task backup: RESOLVED + durable fix deployed. Jon notified in Argus.**
+
+## Root cause (verified live)
+`cron_argus_task_worker.php` crashed on EVERY 2-minute cycle at line 441:
+```php
+require_once __DIR__ . '/../lib/argus_reclaim.php';   // file does not exist
+```
+The orphan-reclaim logic already lives inline at lines 210-230 in the same file. The `require_once` introduced in the 2026-08-09 deployment was a duplicate with a nonexistent path, so every cycle claimed tasks → DISPATCH → `require_once` fatal → process died before `curl_multi_exec` ran → tasks never completed, and 
+```
+
+**Ideas referenced:** #10141, #12619, #1356, #18378, #18530, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20547, #21125, #21126, #22511, #22583, #22688, #23036, #23039, #23053, #23428, #23468, #23489, #23506, #23592, #23675, #23852, #23913, #23920, #23941, #23952, #23982, #24766, #24897, #24900, #24926, #24941, #24990, #25047, #25058, #25131, #25142, #25193, #25196, #25269, #25313, #25464 [ready_for_review], #25465 [approved], #25466 [approved], #25547 [proposed], #25552 [proposed], #25563, #25564, #25571 [proposed], #25572, #25573, #25574, #25768, #2606, #2620, #2862, #2911, #2912, #334155, #4338, #4421, #5700, #64748, #7137, #8892
+
+**Last PICKUP PROMPT:**
+
+```
+ed. Healthy drain pattern.
+
+═══════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════
+Pick up the 10-task argus test analysis — corrections shipped, enhancements filed.
+
+Where we left off (verified 2026-08-10 12:00 PT):
+- 10/10 test tasks (ids 431-440) completed and analyzed
+- 2 test tasks offloaded due to infra wedge (T7 #25547, T10 #25552)
+- Kaison wedge detection cron entry installed: `/etc/cron.d/emsu-kaison-wedge-detection` (every 2 min)
+- Fran-tools adapter wedge (11:28 PT) resolved via manual restart; detector now watching
+- Enhancement filed: #25571 SATURATION count panic switch (P1, infra)
+
+Open threads to drive next:
+1. #25571 [proposed] — Implement SATURATION panic switch in `cron_argus_task_worker.php`: if COUNT(queued+running) >= 8, dispatch ONE task instead of all. Prevents the concurrent-dispatch wedge we hit.
+2. #25547 [proposed] — T7 offloaded: "TEST-10-SUITE-7 long text stress" — review the offloaded idea and close as test artifact or investigate why 3x timeout.
+3. #25552 [proposed] — T10 offloaded: "TEST-10-SUITE-10 2+2 blank role" — review, close as test artifact.
+
+Reference IDs:
+- Ideas filed: #25571, #25547, #25552, #25464 [deployed], #25466 [deployed]
+- Files touched: `/var/www/emtskills/routes/cron_argus_task_worker.php`, `/var/www/emtskills/cron/cron_kaison_wedge_detection.php`, `/etc/cron.d/emsu-kaison-wedge-detection`
+- Tasks: 431-440
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786391277181` — 8/10/2026, 12:56:01 PM PT — 58 turns
+
+**Original task:**
+
+```
+Why is frankenstein-llm iterating at 50% of its normal speed?
+
+do not inject anthropic
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12314, #12365, #12366, #12368, #12459, #12477, #12618, #12657, #12672, #12824, #12872, #12878, #13108, #13121, #13202, #13832, #13874, #16120, #16163, #16265, #16304, #16844, #17202, #18312, #18326, #19338, #20495, #21045, #22583, #2299, #23171, #24144, #25097, #25468
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786381856309` — 8/10/2026, 12:55:46 PM PT — 181 turns
+
+**Original task:**
+
+```
+If you take a look at all the CPR class websites, it seems that traffic on those is very low and so are registrations. How do we improve that? Are those forms working right? Are payments being received? What's going on? What about scheduiling, etc...?
+```
+
+**Ideas referenced:** #000000, #202608, #2271, #2274, #2275, #2292, #23223, #23308, #24184, #24635, #24636, #24645, #24646, #24791, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25538 [draft], #25539 [draft], #25540 [draft], #25541 [draft], #25542 [draft], #25543 [draft], #25544 [draft], #25545 [draft], #25549 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ng from the P1 recovery fixes.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Big Mac wedge RCA + MDM enrollment + SSH tunnel + fleet fixes (idea #25536 pending human decision).
 
-Where we left off (verified 2026-08-10 11:13 PT):
-- Big Mac wedge: VERIFIED TRUE from primary evidence (journalctl 2026-08-09 12:34:40→22:46:37 PT = 5 log lines, 0 startup-complete, 0 requests, placement-group hang; restart fixed in 90s; no reboot). Credential confusion resolved — documented SSH line is `emsu-big-mac@10.100.0.19`, works.
-- MDM: Big Mac in `rustdesk_devices` (rustdesk_id=`bigmac-10.100.0.19`) and `mdm_devices` (id=1, enrolled) via mdm_register.php / app PDO.
-- Reverse SSH tunnel LIVE: WOPR 127.0.0.1:50000 → Big Mac:22 (certified, no shell — emsu-tunnel restrictions). Ruben's key installed on Big Mac `emsu-big-mac` account. @reboot crontab set. Command for Ruben: `ssh -J emsuserver@emsuniversity.com:2222 emsu-big-mac@127.0.0.1 -p 50000`.
-- Rule 315 (verify-before-declaring-host-down) is hardfloor + reindexed; #25468 and #25471 deployed and fleet verified 4/4 decode_live.
+Pick up task #25549 — CPR class website audit, all fixes approved except #25540
+
+Where we left off (confirmed 2026-08-10 12:42 PT):
+- Full audit of 16 CPR domains completed, 9 ideas filed: #25538 through #25545, #25549
+- Ruben approved ALL active fixes 2026-08-10. Verified in orchestrator_ideas:
+  - #25538 [approved] — Redirect cprinstructor.co to emsuniversity.com (currently HTTP 500)
+  - #25539 [approved] — Investigate phoenixcpr.org payment cliff (900 lifetime to 7 in 90d)
+  - #25542 [approved] — Investigate cprclass.org QBMS stalls at wc-processing (12 orders w/ real txn IDs)
+  - #25541 [approved] — Add SEO plugins to all 9 active CPR sites
+  - #25543 [approved] — Add chat_widget to top 5 CPR sites
+  - #25545 [approved] — Build CPA cross-tracking CPR to EMT enrollment
+  - #25544 [approved] — Consolidate 4 zombie CPR domains
+- #25540 [blocked] — LA/Portland/Houston forms void, sites not staffed yet, WAIT
+- Expected impact communicated: $3,000-3,400/quarter stranded revenue recovery + organic growth multiplier
 
 Open threads to drive next:
-1. #25536 [proposed] — Big Mac ExecStartPost HTTP readiness gate (`curl /v1/models` until 200, fail unit on timeout; catches the verified 10h mid-init wedge class). HUMAN-POLICY: per-box unit names/ports/container paths — do NOT apply fleet-wide without approval.
-2. (optional) #25468 [deployed] — verify the ConnectionReset→LOAD_UNREACHABLE patch against a real reset with a single live adversary test if Ruben approves; otherwise confirmed by code + syntax + restart.
+1. #25538 [approved] P1 — Implement 301 redirect cprinstructor.co to emsuniversity.com in Plesk vhost config (nginx/PHP 8.4)
+2. #25539 [approved] P1 — Diagnose phoenixcpr.org wpforms QB webhook/token, restore payment processing
+3. #25542 [approved] P1 — Diagnose cprclass.org WooCommerce QBMS order-completion hook; 12 orders stuck in wc-processing
+4. #25541 [approved] P2 — Install and configure Yoast SEO on 9 active CPR sites
+5. #25543 [approved] P2 — Add EMSU chat widget to tucsoncpr, sanfranciscocpr, sanantoniocpr, cprsandiego, dallascpr
+6. #25545 [approved] P2 — Build CPR-to-EMT UTM attribution in admin_portal
+7. #25544 [approved] P3 — 301-redirect baltimorecpr, bostoncprtraining, freecprclasses, cprguidelines to nearest active city site
+8. #25540 [blocked] — WAIT until LA/Portland/Houston are staffed
 
 Reference IDs:
-- Ideas filed: #25536 [proposed], #25468 [deployed], #25471 [deployed]
-- Rule: 315 [deployed]
-- Files touched: /usr/local/bin/frankenstein_tools_adapter.py (WOPR), /etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzz-cline-priority-over-batch.conf + argus-qos.conf + glm-executor-cap-fix.conf (annotated), /Users/rubenmajor/Documents/Cline/Rules/315-verify-before-declaring-host-down.md, _RULE_TREE.md, .hardfloor-manifest, cline_task_ledger.md
+- Ideas: #25538 [approved], #25539 [approved], #25540 [blocked], #25541 [approved], #25542 [approved], #25543 [approved], #25544 [approved], #25545 [approved], #25549 [proposed]
+- Files touched: /var/www/vhosts/cprinstructor.co/httpdocs (error log), /var/www/vhosts/cprclass.org/httpdocs/wp-config.php, wp_q31ow (sanfranciscocpr), wp_id7ic (tucsoncpr), wp_yjqlq (dallascpr), wp_uiabm (cprsandiego), wp_g79da (sanantoniocpr), wp_bv0te (phoenixcpr), wp_9skw8 (cprclass.org)
 
-When done, append to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
+
+### `1786384439089` — 8/10/2026, 12:55:37 PM PT — 151 turns
+
+**Original task:**
+
+```
+Why am i just receiving these chat transcripts now? That's not very helpful
+```
+
+**Ideas referenced:** #18335, #19837, #2271, #2274, #2275, #2292, #2423, #24635, #24636, #24645, #24646, #24791, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25550 [proposed], #25551 [proposed], #6366, #6526, #6548, #9152
+
+**Last PICKUP PROMPT:**
+
+```
+0` on all three files touched.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Chat transcript real-time delivery deployed, verify overnight drain
+
+Where we left off (verified 2026-08-10 12:53 PT):
+- Chat transcript delay root cause fixed: `handleUpdateStatus`/`handleBulkClose` now fire `sendChatTranscriptEmail()` immediately on close (chat_portal_api.php lines 870-890, 997-1020). DSML envelopes stripped from assistant messages before save (widgetStripEmoji, lines 1027-1033).
+- Cron cap raised 5→200 in cron_chat_transcript_autosend.php to drain the current backlog.
+- Live-verified: test transcript sent for conv 6548, email delivered, sent-log row inserted.
+- Ideas #25550 and #25551 fixed in this same session; can be closed.
+- VAPI telephony transcripts already real-time inline; no changes needed.
+
+Open threads to drive next:
+1. #25550 [fixed-in-flux] — Close idea once Ruben confirms no more DSML leaks appear in new transcripts (widgetStripEmoji now strips them before save).
+2. #25551 [fixed-in-flux] — Close idea once Ruben confirms new transcripts arrive within minutes of chat close (real-time send is wired into both close paths).
+3. Monitor the sent_log over the next 24h to confirm the backlog drain works at the 200-cap rate and no new transcripts are stuck.
+
+Reference IDs:
+- Ideas filed: #25550 [fixed-in-flux], #25551 [fixed-in-flux]
+- Files touched: api/chat_widget_api.php, api/chat_portal_api.php, cron/cron_chat_transcript_autosend.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786386328622` — 8/10/2026, 12:48:13 PM PT — 163 turns
+
+**Original task:**
+
+```
+/emtskills wedged yet again. Please check handoffs over the last few days. What's going on now????
+```
+
+**Ideas referenced:** #16523, #20581 [executing], #21763, #2274, #2275, #2292, #2301 [deployed], #23378, #24635, #24636, #24645, #24646, #24791, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25525, #25534, #25535, #25537, #25548 [executing], #25562 [executing], #8563, #8598
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786384771407` — 8/10/2026, 12:47:55 PM PT — 254 turns
+
+**Original task:**
+
+```
+#AI Directed Meditation
+
+
+Arent these Kaison level issues to resovle properly? Are these rule 29 fixes -> So that column is writer-__omission__, not corruption. The alarming 776,773 figure is mostly one field nobody populates. Where no sibling exists, the INSERT statement answers it statically: column absent from the INSERT means omission.
+
+Recommend retiring the "CLASS 2" label, since it reads as "maybe corrupt" and invites the exact overclaim the split was meant to prevent. Better: __2a omission__ (cosmetic) vs __2b coercion__ (real bug), because they need opposite work.
+
+Bonus defect found 
+```
+
+**Ideas referenced:** #13757, #1584, #178629, #18786, #2274, #2275, #2292, #23920, #23922, #23923, #23932, #23952, #24646, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25229 [deployed], #25238 [executing], #25240 [executing], #25241 [executing], #25313, #25364 [executing], #25365 [deployed], #25366 [deployed], #25373, #25375, #25385, #25401, #25425, #25525 [executing], #25528 [deployed], #25530 [executing], #25531 [executing], #25532 [deployed], #25534 [deployed], #25535 [executing], #25537 [executing], #25555 [executing], #25560 [in_progress], #25561 [in_progress]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786319043926` — 8/10/2026, 11:12:58 AM PT — 270 turns
 
@@ -352,55 +407,6 @@ Where we left off (verified 2026-08-10 11:12 PT):
 - ARGUMENT INVERTED AND STRENGTHENED. Six requests sent 7/30 were all acked 8/4 within a two-hour window at uniform five-day latency, proving the intake process works. Against that control group, the legacy request is damning: inv row 172 records from CLARIFICATION_PLAYBOOK_TPIA_2026.md line 75 that THE FEE ON ORR A07152025.0450008 WAS PAID IN FULL AND THE REQUEST WAS NEVER PROCESSED. Jon Thompson emailed DSHS about that same ORR on 2026-03-20; DSHS answered 2026-07-29 with a cost estimate, two days after the 7/27 renewal, still no production.
 - OPEN QUESTION: the ORR prefix A0715-2025 reads as a July 2025 assignment, about 13 months, NOT 3 years. Either the 3-year request is a separate earlier one that never received an ORR number, or the duration needs revising. Every "roughly three years" claim was REMOVED from the PDF and replaced with the verified paid-fee facts.
 - SUNSET PDF v3 REBUILT: /Users/rubenmajor/Desktop/sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-10.pdf, 11 pages, 412.8 KB. Item 3 rewritten as a full address-misdirection treatment; item 4 rewritten around the acknowledged-in-days versus paid-and-unperformed contrast with a new pull quote; exec summary first bullet an
-```
-
-### `1786285332678` — 8/10/2026, 11:10:37 AM PT — 882 turns
-
-**Original task:**
-
-```
-#Callbacks
-
-that should go into the call back system, not a ticket. Those tickets are noise and need to be converted to callbacks GOING FORWARD. Offer callbacks to those outstanding in the last 48 hours like that and depreciate old process. -> Answering your question: "Voice call follow-up needed" tickets are not offers, they are internal support tickets. When the Voice AI cannot fully resolve a caller and the caller agrees to a follow-up, the AI creates one of these tickets so a human can call or email the person back.
-
-
-Answering your question: "Voice call follow-up needed" tickets are not o
-```
-
-**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #1745, #18316, #19338, #19458, #19491, #2274, #2275, #23133, #23989, #24645, #24646, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25364 [executing], #25365 [deployed], #25486 [executing], #3133, #475569, #6172, #6579, #9042, #9159, #9222, #9501
-
-**Last PICKUP PROMPT:**
-
-```
-on first ran also get flagged.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1 — Callback system: escalate all overdue callbacks including pre-existing ones, fix visibility.
-
-Where we left off (verified 2026-08-10 11:08 PT):
-- Booking #76 (Denham Brown) overdue 1h 8min, 0 call attempts, phone is trunk number (can't call)
-- Booking #6 (Dominic Felix) overdue 26h, 0 call attempts, real phone 520-423-7315
-- Policing cron running but missed Dominic because it only catches 60+ min overdue from cron start
-- Vicky may not be seeing the escalation emails
-- Telephony Hub banner shows gold alert with badge count (2 pending)
-
-Open threads to drive next:
-1. #25486 [approved] — Fix policing cron: catch callbacks already overdue at startup (not just newly overdue)
-2. #25486 [approved] — Add SMS alert to Vicky (via Jon) for severely overdue callbacks (CC her on Ruben's phone via iMessage)
-3. #25486 [approved] — Fix booking #6: add overdue flag to callback_notes for Dominic Felix (26h overdue, real phone 520-423-7315)
-4. #25486 [approved] — Fix booking #76: resolve real caller phone from voice_call_log (trunk number is wrong)
-
-Reference IDs:
-- Ideas: #25365 [deployed], #25486 [approved]
-- Files: /var/www/emtskills/crons/policing/cron_callback_policing.php
-- Bookings: 76 [pending], 6 [pending]
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```
 
 ### `1786086916545` — 8/10/2026, 10:43:19 AM PT — 278 turns

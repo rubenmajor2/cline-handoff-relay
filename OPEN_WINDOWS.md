@@ -6,15 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/9/2026, 9:00:48 PM PT | window: last 72h | 88 tasks | index total 595 (parsed 0, cached 595)
+Generated: 8/9/2026, 10:35:46 PM PT | window: last 72h | 89 tasks | index total 597 (parsed 4, cached 593)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1786337811635` | 8/9/2026, 10:35:22 PM | 162 | 380KB | why is frankenstein-llm appearing to be sluggish. Can you take a look? |
+| `1786339173079` | 8/9/2026, 10:34:49 PM | 62 | 152KB | I keep having to say over and over again that open threads need idea numbers and statuses  |
+| `1786245923063` | 8/9/2026, 10:33:43 PM | 681 | 6106KB | #Argus |
+| `1786318471535` | 8/9/2026, 10:29:11 PM | 284 | 768KB | I got a report of executor stalling. Play frankenstein doctor of executor and resolve and  |
 | `1786319043926` | 8/9/2026, 6:51:44 PM | 70 | 346KB | #TDSHS |
 | `1786285332678` | 8/9/2026, 6:23:01 PM | 592 | 5306KB | #Callbacks |
 | `1786313131031` | 8/9/2026, 6:13:23 PM | 134 | 471KB | #AI Directed Meditation |
-| `1786318471535` | 8/9/2026, 5:24:05 PM | 218 | 628KB | I got a report of executor stalling. Play frankenstein doctor of executor and resolve and  |
-| `1786245923063` | 8/9/2026, 4:48:41 PM | 588 | 5843KB | #Argus |
 | `1786285065842` | 8/9/2026, 4:45:05 PM | 214 | 403KB | #WOPR GPU |
 | `1786288392773` | 8/9/2026, 4:44:59 PM | 230 | 729KB | #Make GLM / frankenstein-llm smarter |
 | `1786185877066` | 8/9/2026, 4:36:43 PM | 120 | 446KB | continue |
@@ -97,11 +99,156 @@ Generated: 8/9/2026, 9:00:48 PM PT | window: last 72h | 88 tasks | index total 5
 | `1786081573518` | 8/7/2026, 12:46:20 AM | 274 | 992KB | Whiy is this task 502, we need to stop with the 502s: |
 | `1786066201493` | 8/7/2026, 12:28:21 AM | 474 | 1841KB | All three done. The wrapper wiring turned up another silent-blindness bug, and the deadman |
 | `1786010979248` | 8/7/2026, 12:13:35 AM | 1076 | 1963KB | Read the CFA responses in the last 24 hours and recommend improvements and capabiltiies to |
-| `1786079281756` | 8/6/2026, 10:08:24 PM | 3 | 16KB | how long has the GLM been up |
 
 ---
 
 ## Per-window detail
+
+### `1786337811635` — 8/9/2026, 10:35:22 PM PT — 162 turns
+
+**Original task:**
+
+```
+why is frankenstein-llm appearing to be sluggish. Can you take a look?
+```
+
+**Ideas referenced:** #12314, #12363, #12365, #12672, #13108, #13121, #13202, #13832, #13874, #16163, #16673, #16844, #16849, #17166, #19903, #19925, #2050, #2092, #2297 [deployed], #2298, #23171, #23528, #24241, #25097, #25112, #25185, #25313, #25468 [proposed], #25469 [rejected], #25470 [proposed], #25471 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786339173079` — 8/9/2026, 10:34:49 PM PT — 62 turns
+
+**Original task:**
+
+```
+I keep having to say over and over again that open threads need idea numbers and statuses like approved and proposed, etc... and i keep still getting rule 91 violations here on this. Can you look at cline obedience on desktop and resolve this issue.
+```
+
+**Ideas referenced:** #0000, #16224, #1880 [deployed], #19173, #1967 [deployed], #19898, #19899 [proposed], #19904, #19919 [proposed], #1993 [deployed], #19957 [proposed], #19958 [proposed], #19962 [proposed], #20251, #24995, #25066, #25185
+
+**Last PICKUP PROMPT:**
+
+```
+[ ] Verify fix (validator tests + steering reload)
+- [ ] Report completion with PICKUP PROMPT
+</task_progress>
+</execute_command>
+```
+
+### `1786245923063` — 8/9/2026, 10:33:43 PM PT — 681 turns
+
+**Original task:**
+
+```
+#Argus
+---
+
+
+ I was thinking also that if a student issues identified in Argus and there are similar issues with other students in Argos that are found it's the same general type of issue that you want cluster. 
+
+But again you're gonna have to be certain on those ones. Like for example you see some sort of bug or something it needs to be identified to see if there's extensions beyond just the ones too.
+
+Approved
+- #25269 [proposed] - Fix the Kaizon blind spot: wrap argusBuildRevertInfo() in try/catch at both call sites, add the missing error_message column to the INSERT at line 3947, and add a
+```
+
+**Ideas referenced:** #152615, #16523, #176616, #178424, #178455, #17926, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #18745, #1876, #18765, #1877, #18771, #18781, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #1894, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #1912, #1927, #1928, #1929, #1930, #1931, #1932, #1933, #19348, #19415, #19416, #2006, #20547, #20555, #21074, #21125, #21126, #22511, #22583, #22688, #2271, #2274, #2275, #2292, #23036, #23428, #23468, #23489, #23506, #23675, #23852, #23920, #23941, #23952, #24635, #24636, #24645, #24646 [proposed], #24766, #24791, #24897, #24900, #24926, #24941, #24990, #25039, #25047, #25058 [deployed], #25064, #25081, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25142, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [executing], #25196 [deployed], #25224, #25238, #25240, #25241, #25242, #25262 [executing], #25263 [executing], #25264 [executing], #25269 [proposed], #25270 [proposed], #25271 [deployed], #25292, #25293 [proposed], #25304, #25310, #25313 [approved], #25314 [approved], #25315 [approved], #25316 [proposing], #25364 [executing], #25365 [deployed], #25366 [proposed], #25409, #25464 [executing], #25465 [executing], #25466 [executing], #25768, #334155, #4338, #64748, #7215, #7683, #8596, #8597, #8783, #9069, #9070, #9071, #9176, #9191
+
+**Last PICKUP PROMPT:**
+
+```
+ear‑zero.
+
+### Ledger appended
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — context enrichment and fast-model shard for argus_task_queue worker.
+
+Where we left off (verified 2026-08-09 22:08 PT):
+- Worker crash FIXED: removed broken require argus_reclaim.php (L441), replaced undefined function call (L443). Inline reclaim at L210-230 was already correct.
+- BATCH bumped 6→10. Queue draining: 27→15 queued, 5 completed in 380s batch. Exec speed 168s/task avg (was 82.6 min — 29× improvement).
+- 7 failed tasks are "no student named" — context_notes empty on 352/368. session_key populated but worker prompt may not expand it.
+- WOPR: load 3.82, GPU idle, 36-core CPUQuota, adapter health 200 OK.
+- Backups: cron_argus_task_worker.php.bak-25768-20260809-2152, .bak-25768-20260809-2152-2, .bak-25768-20260809-2155, .bak-25768-20260809-2206.
+- Ledger row appended.
+
+Open threads (all prior, none silently dropped):
+1. #25313 [deployed] — argusClusterScan live, verified.
+2. #25293 [executing] — Argus terminal "X other students" banner. Unblocked now that cluster scan is live. Wire banner when idea_clusters member_count ≥ 2 for the current error_message pattern.
+3. #25314 [executing] — Jon verify payment_status on 26215W-02 in Argus terminal. Confirm real invoice data and error_message classifier output.
+4. #25270 [executing] — WOPR GPU rebalancing. CPUQuota done (36 cores). uvicorn workers BLOCKED on #25315 — do NOT raise RERANK_WORKERS until per-worker VRAM solved.
+5. #25315 [executing] — CrossEncoder lifespan/load crash. Deferred (zero 500s overnight). Investigate when throughput demand arrives.
+6. #25316 [deployed] — Gate D3 cross-session thread preservation in Rule 91 Gate D.
+7. NEW — argus_task_queue context enrichment: tasks queued from a conversation should inherit the last N conversation turns from argus_sessions. Fix the 7 "no student named" failures per cycle. File this as idea. Implementation: worker L280 area where prompt is assembled — add a session_key lookup that appends last 4-5 conversation turns to the task prompt.
+8. NEW — argus_task_queue fast-model shard: add optional model_key parameter to queue_task catalog entry. Simple tasks (status lookups, confirmations) route through faster model. Worker curl dispatch already parallel; model selection is per-ch request.
+9. #25269 [deployed] — qb_invoices payment_status fix + error_message wiring (verified 26215W-02 via SQL).
+
+Speed recommendations (revisit when bottlenecks reappear):
+- BATCH further to 12-16 (WOPR has headroom)
+- Fast-model shard (3B-7B for simple tasks, 10-15s vs 170s)
+- Context enrichment (session lookup in pre-prompt, fixes the "no student named" failures)
+
+Reference IDs:
+- #25313 [deployed], #25316 [deployed], #25269 [deployed]
+- #25293 [executing], #25314 [executing], #25270 [executing], #25315 [executing]
+- Files: /var/www/emtskills/routes/cron_argus_task_worker.php (fixed), /var/www/emtskills/lib/argus_action_catalog.php (permissions granted)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786318471535` — 8/9/2026, 10:29:11 PM PT — 284 turns
+
+**Original task:**
+
+```
+I got a report of executor stalling. Play frankenstein doctor of executor and resolve and send back failed ideas since the stall ater making sure they work. Watch it for the nex t60 minutes. Kaizon needs the recipies and we need durable solutions
+```
+
+**Ideas referenced:** #12184, #13191, #13196, #13199, #13976, #143824, #16778, #18291 [deployed], #18483, #18496, #18781, #18786, #18787, #18794, #18796, #18800, #18801, #18802, #18803, #18804, #18805, #18806, #18807, #18813, #18814, #18817, #18818, #18819, #19509, #19792, #20005, #20024, #20025, #20026, #20050, #20340, #2043, #20517 [deployed], #20529, #20581, #20582, #20612, #20903, #21011, #21045, #21504, #22054, #22056, #2247, #22565, #2271, #2274, #2275, #22816, #2292, #2293, #23276 [blocked], #23483, #23658, #23852, #23868, #23913, #23920, #23931, #24036 [deployed], #24214, #24227, #24229, #24233, #24635, #24636, #24645, #24646, #24791, #24963, #25039, #25042, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25129, #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25208, #25220, #25227, #25313, #25318, #25319, #25364 [executing], #25365 [deployed], #25366 [proposed], #25376, #25389, #25426, #25475 [proposed], #3957, #3996
+
+**Last PICKUP PROMPT:**
+
+```
+ on next silent-death incident
+
+═══════════════════════════════════════════════
+PICKUP PROMPT  
+═══════════════════════════════════════════════
+Pick up task executor-doctor-closeout — confirm #23276 retry succeeds + route Ruben on any leftover.
+
+Where we left off (verified 2026-08-09 22:28 PT):
+- Executor fully recovered: timeout 1200, floor 3, pool 2000, FAISS off, __acceptReasoningAsText() defined, fleet floor 3
+- 3 workers live, 169 completions post-fix, zero OOMs since 16:48 PT, stable 5+ hours
+- #23276 [deployed] unblocked 22:24 PT: watchdog auto-block cleared (root causes FIXED). Now in_progress/idle — executor picks up on next tick around 22:30–22:33 PT
+- Idea #25475 [proposed] filed for kaizen recipe verification
+- #20517 [deployed] ready_for_review, #24036 [deployed] ready_for_review
+- Handoff persisted: emsu_preference_corpus row 143824
+- Session doc: /tmp/emsu-doctor-session-fixes.md
+- Fleet backup: /usr/local/bin/fleet_admission.py.bak-20260809-doctor
+
+Open threads:
+1. #25475 [proposed] — Verify kaizen_failure_recipes row executor_timeout_600_kill auto-applies on next worker_silent_death. Check kaizen_failure_repair_recipes for link, then confirm via kaizen_recipe_audit_log.
+2. #23276 [deployed] — Check executor picks up retry on next tick (~22:30–22:33 PT). The fatal root cause (undefined __acceptReasoningAsText) is FIXED — this P0 cross-email-body-leak idea should complete cleanly.
+
+Reference IDs:
+- Kaizen recipe: kaizen_failure_recipes.executor_timeout_600_kill
+- Handoff entry: emsu_preference_corpus #143824
+- Idea filed: #25475 [proposed]
+- Recovered: #20517 [deployed], #23276 [deployed], #24036 [deployed]
+- Proof worker: #18291 [deployed]
+- Files: cron_ruben_implement.php, fleet_admission.py, orchestrator_config
+- Session doc: /tmp/emsu-doctor-session-fixes.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1786319043926` — 8/9/2026, 6:51:44 PM PT — 70 turns
 
@@ -211,110 +358,6 @@ How is this going? Did we execute everythign? which venues are using AI Directed
 **Ideas referenced:** #14100, #178629, #23924, #23932, #23935, #25185, #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25242, #25268 [deployed], #25313 [deployed], #25364 [deployed], #25366 [deployed], #25374, #25375, #25383 [deployed], #25384 [deployed], #25385 [deployed], #25421 [proposed], #25422 [proposed], #25423 [proposed], #25424 [proposed], #25442 [deployed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786318471535` — 8/9/2026, 5:24:05 PM PT — 218 turns
-
-**Original task:**
-
-```
-I got a report of executor stalling. Play frankenstein doctor of executor and resolve and send back failed ideas since the stall ater making sure they work. Watch it for the nex t60 minutes. Kaizon needs the recipies and we need durable solutions
-```
-
-**Ideas referenced:** #12184, #13191, #13196, #13199, #13976, #16778, #18291, #18483, #18496, #18781, #18786, #18787, #18794, #18796, #18800, #18801, #18802, #18803, #18804, #18805, #18806, #18807, #18813, #18814, #18817, #18818, #18819, #19509, #19792, #20050, #20340, #2043, #20517, #20581, #20582, #20612, #20903, #21011, #21504, #2247, #22565, #2271, #2274, #2275, #22816, #2292, #2293, #23276, #23483, #23658, #23852, #23868, #23913, #23920, #23931, #24036, #24214, #24227, #24229, #24233, #24635, #24636, #24645, #24646, #24791, #24963, #25039, #25042, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25129, #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25208, #25220, #25227, #25313, #25318, #25319, #25364 [executing], #25365 [deployed], #25366 [proposed], #25376, #25389, #25426, #3957, #3996
-
-**Last PICKUP PROMPT:**
-
-```
- definitions before deploying.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up Frankenstein Doctor executor watch — 60-minute monitoring window in progress.
-
-Where we left off (verified 2026-08-09 17:23 PT):
-- Executor fully recovered: timeout 1200, floor 3, pool 2000, FAISS off, __acceptReasoningAsText() defined
-- 3 workers live at 17:23 (#16778, #18483, #25319) — all under timeout 1200
-- 122 completions since fixes deployed, zero post-fix OOMs
-- #18291 completed 17:16 (13.4 min, definitively past old 600s kill cliff)
-- #18496 completed 17:18 (auto-deployed)
-- Session doc: /tmp/emsu-doctor-session-fixes.md (on server)
-- Kaizen: kaizen_failure_recipes row `executor_timeout_600_kill`
-- Ideas #20517, #23276, #24036 requeued to idle
-
-Open threads to drive next:
-1. Continue 60-min watch until ~17:54 PT (started 16:54). Checkpoints: 17:30 (completions count), 17:45 (completion count + rule 158 deep analysis), 17:54 (final deep analysis + confirm sustained throughput).
-2. Monitor #16778 completion — it's on file 2/3 (cron_fabric_poll.php) at 17:22, should complete ~17:30-17:35. If it dies, check if cause is new or timeout-regression.
-3. After 60-min watch concludes, update handoff notes via MCP (read_handoff_notes → write_handoff_notes) with final throughput stats.
-
-Reference IDs:
-- Files touched: /var/www/emtskills/cron/cron_ruben_implement.php (timeout 1200 + function added), /usr/local/bin/fleet_admission.py (floor 3), kaizen_failure_recipes (new row), orchestrator_config (pool + FAISS + workers)
-- Ideas recovered: #20517, #23276, #24036
-- Kaizen recipe: executor_timeout_600_kill
-- Session doc: /tmp/emsu-doctor-session-fixes.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786245923063` — 8/9/2026, 4:48:41 PM PT — 588 turns
-
-**Original task:**
-
-```
-#Argus
----
-
-
- I was thinking also that if a student issues identified in Argus and there are similar issues with other students in Argos that are found it's the same general type of issue that you want cluster. 
-
-But again you're gonna have to be certain on those ones. Like for example you see some sort of bug or something it needs to be identified to see if there's extensions beyond just the ones too.
-
-Approved
-- #25269 [proposed] - Fix the Kaizon blind spot: wrap argusBuildRevertInfo() in try/catch at both call sites, add the missing error_message column to the INSERT at line 3947, and add a
-```
-
-**Ideas referenced:** #152615, #176616, #178424, #178455, #17926, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #18745, #1876, #18765, #1877, #18771, #18781, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #1894, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #1912, #1927, #1928, #1929, #1930, #1931, #1932, #1933, #19348, #19415, #19416, #2006, #20547, #20555, #21074, #21125, #21126, #22511, #22583, #2271, #2274, #2275, #2292, #23489, #23852, #23920, #23952, #24635, #24636, #24645, #24646 [proposed], #24766, #24791, #24897, #24900, #25039, #25047, #25058 [deployed], #25064, #25081, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [executing], #25196 [deployed], #25224, #25238, #25240, #25241, #25242, #25262 [executing], #25263 [executing], #25264 [executing], #25269 [proposed], #25270 [proposed], #25271 [deployed], #25293 [proposed], #25304, #25310, #25313 [approved], #25314 [approved], #25315 [approved], #25316 [proposing], #25364 [executing], #25365 [deployed], #25366 [proposed], #25409, #334155, #4338, #64748, #7215, #7683, #8596, #8597, #8783, #9069, #9070, #9071, #9176, #9191
-
-**Last PICKUP PROMPT:**
-
-```
-500s. Argus clean since 08:41.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up Argus task — verify qb_invoices live (#25314) + Argus banner (#25293).
-
-Where we left off (verified 2026-08-09 16:51 PT):
-- CS permissions GRANTED for exam_overrides + extend_exam_deadline in argus_action_permissions (ruben_directive_20260809, 16:40 PT). Catalog workflow encoded: bug-ref required, +7d cap; non-bug overrides escalate to Admin/ExecAdmin.
-- request_feature, request_repair, queue_task: CS already has access (2026-07-29 Ruben directive + sidebar whitelist).
-- express_grant: Admin+ by design (CS entitlement = 0 slots/day).
-- #25313 [deployed] — argusClusterScan live at lib/argus_cluster_scan.php, wired into alltastic_api.php. php -l clean.
-- #25316 [deployed] — Gate D3 cross-session thread preservation patched into Rule 91 Gate D. php -l clean, grep count 3.
-- Fuzzy close-match: $findMiss returns "Did you mean: student_id first last, ...?" on lookup miss. grep -c = 1, php -l clean.
-- WOPR: load 7.27, GPU idle, zero reranker 500s. RERANK_WORKERS=1 correct.
-- Ledger row appended 08:35 PT. Ledger row for this session's permission grant pending.
-
-Open threads to drive next:
-1. #25314 [executing] — Jon runs payment_status on 26215W-02 in Argus terminal. Confirm real invoice data renders and error_message classifier output captured. Close when verified.
-2. #25293 [executing] — Argus terminal banner "X other students may have the same issue." Unblocked: argusClusterScan is live. Read alltastic_api.php to check whether banner is already wired (3 argusClusterScan hits exist) or needs a new annotation.
-3. #25270 [executing] — WOPR GPU rebalancing. CPUQuota done. uvicorn workers blocked on #25315.
-4. #25315 [executing] — CrossEncoder lifespan/load crash path. Deferred (zero 500s in over 12h).
-5. Append cline_task_ledger.md row for the 16:40 PT CS permission grant (ruben_directive_20260809).
-6. EXECUTE_ORDER_66 — file absent on WOPR.
-
-Reference IDs:
-- #25313 [deployed], #25316 [deployed], #25293 [executing], #25314 [executing], #25270 [executing], #25315 [executing], #25269 [deployed]
-- Files: /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/lib/argus_cluster_scan.php, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/clinerules/Rules/91-attempt-completion-gate-d.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
 
 ### `1786285065842` — 8/9/2026, 4:45:05 PM PT — 214 turns
 
@@ -3669,15 +3712,3 @@ When done, append row to cline_task_ledger.md and run order 66.
 </result>
 </attempt_completion>
 ```
-
-### `1786079281756` — 8/6/2026, 10:08:24 PM PT — 3 turns
-
-**Original task:**
-
-```
-how long has the GLM been up
-```
-
-**Ideas referenced:** #12299, #16588
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

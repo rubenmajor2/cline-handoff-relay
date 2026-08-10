@@ -115,20 +115,15 @@ The subagent never touches a tool it doesn't have. It receives the MCP's *output
 
 ### Banned subagent-dispatch phrases (self-check BEFORE every `use_subagents` call)
 
-Scan each subagent prompt. If it contains any of these, the dispatch is doomed — STOP, fetch the data inline in the main window, then re-dispatch with the data pasted in (or just do the work inline):
+Self-check: *"Does this prompt tell the subagent to FETCH something (MCP/web/server), or to REASON over something I'm pasting in?"* If FETCH → wrong; fetch it myself first. If REASON-over-pasted-text or local-file-read/grep → correct.
 
-- "Use emsu-operations" / "use the MCP" / "call use_mcp_tool" / "use ruben-orchestrator" / "use fleet-state" / "use the mysql MCP" / "query the database"
-- "Use web search" / "search the web" / "curl https://" / "google it" / "look online"
-- "ssh into" / "ssh wopr" / "ssh root@" / "on the server, run" / "check the server logs"
-- Any instruction that requires a tool a subagent does not have (MCP / network / server shell)
+**MECHANICAL SCAN (do this, don't just intend it).** That self-check is judgment; this is a string test. Before EVERY `use_subagents` call, scan each prompt for these literals — case-insensitive, substring match:
 
-Self-check: *"Does this subagent prompt tell it to FETCH something (MCP/web/server), or to REASON over something I'm pasting in?"* If FETCH → wrong; fetch it myself first. If REASON-over-pasted-text or local-file-read/grep → correct.
+`curl` · `http://` · `https://` · `web search` · `search the web` · `ssh ` · `mcp` · `from server` · `call the tool` · `query the database` · `check the server`
 
-**MECHANICAL SCAN (do this, don't just intend it).** The prose above is judgment; this is a string test. Before EVERY `use_subagents` call, scan each prompt for these literals — case-insensitive, substring match:
+ANY hit = doomed dispatch. Fetch that data inline first, paste it in, then dispatch. Measured 2026-08-06 (idea #24241): ALL 27 subagent runs at 50+ tool calls were this violation. Worst burned **177 tool calls** looping on fetches it cannot perform, holding its fan-out ~41 min (wall-clock = slowest member).
 
-`curl` · `http://` · `https://` · `web search` · `search the web` · `ssh ` · `use the mcp` · `use_mcp_tool` · `emsu-operations` · `ruben-orchestrator` · `fleet-state` · `query the database` · `check the server`
-
-ANY hit = doomed dispatch. Fetch that data inline first, paste it in, then dispatch. Measured 2026-08-06 (idea #24241): ALL 27 subagent runs at 50+ tool calls were this violation. Worst burned **177 tool calls** looping on `curl`/arxiv fetches it cannot perform, holding its fan-out ~41 min (wall-clock = slowest member). Runaway tasks carried 37-140 banned-fetch signals each. The 75-call extension cap bounds the damage; it does not prevent the waste.
+**Bare `mcp` is deliberate, and so is `from server`.** 2026-08-09: a dispatch worded "Call the MCP tool `X` from server `Y`" hit ZERO literals on the older list (which named only `use the mcp` / `use_mcp_tool` / specific server names) and hung 5 subagents for 11 minutes. Match the CAPABILITY, not one phrasing of it. If a new wording slips through, widen this list in the same session.
 
 ### Exploratory research is inline-only, never subagent-dispatched
 

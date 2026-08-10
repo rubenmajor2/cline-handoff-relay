@@ -6,14 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/10/2026, 8:56:09 AM PT | window: last 72h | 88 tasks | index total 599 (parsed 0, cached 599)
+Generated: 8/10/2026, 9:56:10 AM PT | window: last 72h | 88 tasks | index total 600 (parsed 5, cached 595)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1786379859145` | 8/10/2026, 9:56:09 AM | 117 | 316KB | #AI Directed Meditation |
+| `1786086916545` | 8/10/2026, 9:55:58 AM | 243 | 1256KB | Tell me how the student council is doing. Is it healthy? It actually generating ideas and  |
+| `1786285332678` | 8/10/2026, 9:55:34 AM | 765 | 6835KB | #Callbacks |
+| `1786342434047` | 8/10/2026, 9:36:39 AM | 122 | 456KB | #Big Mac Claimed Down?? |
+| `1786340503930` | 8/10/2026, 9:34:57 AM | 146 | 485KB | #Argus |
 | `1786319043926` | 8/10/2026, 12:27:16 AM | 148 | 997KB | #TDSHS |
-| `1786285332678` | 8/10/2026, 12:12:50 AM | 736 | 6783KB | #Callbacks |
-| `1786342434047` | 8/9/2026, 11:56:26 PM | 118 | 440KB | #Big Mac Claimed Down?? |
-| `1786340503930` | 8/9/2026, 11:22:00 PM | 140 | 468KB | #Argus |
 | `1786318471535` | 8/9/2026, 11:16:54 PM | 304 | 791KB | I got a report of executor stalling. Play frankenstein doctor of executor and resolve and  |
 | `1786337811635` | 8/9/2026, 11:13:06 PM | 253 | 524KB | why is frankenstein-llm appearing to be sluggish. Can you take a look? |
 | `1786339173079` | 8/9/2026, 11:12:19 PM | 182 | 1299KB | I keep having to say over and over again that open threads need idea numbers and statuses  |
@@ -87,7 +89,6 @@ Generated: 8/10/2026, 8:56:09 AM PT | window: last 72h | 88 tasks | index total 
 | `1786162207330` | 8/7/2026, 11:13:36 PM | 454 | 1608KB | Why does frankenstein LLM iterate this to me? I'm hitting the token limit. I need to quick |
 | `1786036273485` | 8/7/2026, 10:47:51 PM | 1506 | 4670KB | #Argus  |
 | `1786166732768` | 8/7/2026, 10:35:33 PM | 90 | 923KB | Diagnose why cron_argus_task_worker.php stalls when the upstream LLM exceeds 120s. Read th |
-| `1786086916545` | 8/7/2026, 8:39:15 PM | 190 | 1084KB | Tell me how the student council is doing. Is it healthy? It actually generating ideas and  |
 | `1786144700222` | 8/7/2026, 8:25:22 PM | 368 | 730KB | #TDSHS |
 | `1786088761151` | 8/7/2026, 5:08:08 PM | 206 | 719KB | Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversit |
 | `1786135150364` | 8/7/2026, 5:03:39 PM | 264 | 411KB | emsuniversity.com is laggy, slow and needs to go faster. Something is bogiging it down |
@@ -97,47 +98,92 @@ Generated: 8/10/2026, 8:56:09 AM PT | window: last 72h | 88 tasks | index total 
 | `1785954856277` | 8/7/2026, 10:07:26 AM | 680 | 2681KB | #CFA |
 | `1786059773410` | 8/7/2026, 10:03:34 AM | 98 | 323KB | #Baseline Tempe Loan |
 | `1785954707277` | 8/7/2026, 9:56:34 AM | 358 | 1814KB | #EA PIPELINE |
-| `1786088921071` | 8/7/2026, 9:55:59 AM | 122 | 566KB | I don't really understand what's going on here. This task was about email for the being se |
 
 ---
 
 ## Per-window detail
 
-### `1786319043926` — 8/10/2026, 12:27:16 AM PT — 148 turns
+### `1786379859145` — 8/10/2026, 9:56:09 AM PT — 117 turns
 
 **Original task:**
 
 ```
-#TDSHS
+#AI Directed Meditation
 
-https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
+Any room for improvements or any bugs to fix. Any way to extend this idea? 
 
-Please provide to me links to the  3 or 4  unfiled TPIA requests as well as the sunset review email (do i send this monday or wait)? nadn then the instructions for cori to setup meetings for us to meet the 3 politiicians the first week of September
+--
+Going well, and the interesting part happened while you were away: the harness caught its first real defect on its own, without me looking for it.
+
+## It ran unattended and it went red on something true
+
+Installed at 15:12. First scheduled run fired by itself at 16:05, 14/14. Then at 18:09 it asserted "cohort_sweeper last wrote 9.6h ago (limit 8h)" and went red.
+
+syslog confirmed cron DID invoke the sweeper at 12:15:02. The log gained no 12:15 entry of any kind.
+
+The mechanism (#25442 [depl
 ```
 
-**Ideas referenced:** #19587, #19595 [executing], #19599, #19600, #19601, #1976, #2274, #2275, #2292, #24790, #24805, #24836, #24842, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25374, #25400, #600179, #623992
+**Ideas referenced:** #16437, #178629, #23949, #23951, #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25268 [deployed], #25313 [deployed], #25364 [deployed], #25366 [deployed], #25383 [deployed], #25384 [deployed], #25385 [deployed], #25401, #25421 [deployed], #25422 [deployed], #25423 [deployed], #25424 [deployed], #25442 [deployed], #25525
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786086916545` — 8/10/2026, 9:55:58 AM PT — 243 turns
+
+**Original task:**
+
+```
+Tell me how the student council is doing. Is it healthy? It actually generating ideas and tasks and acting on them? Or is a block? If it's blocked can you fix it?
+```
+
+**Ideas referenced:** #10108, #1050, #10740, #11741, #11781, #12345, #12477, #12618, #12802, #12824, #12872, #12878, #12879, #13202, #1373, #16163, #16265, #16304, #16695 [awaiting_review], #16822, #16844, #18312, #18326, #19171, #19370, #19427, #22258, #22294, #23117, #23171, #23185, #23223, #23308, #23341, #23945, #24026, #24054 [deployed], #24055 [proposed], #24056 [proposed], #24239, #24539 [deployed], #24540 [proposed], #24541 [proposed], #24556 [proposed], #24557 [proposed], #24558 [proposed], #24559 [approved], #25129 [ready_for_review], #25156, #25157 [ready_for_review], #25376, #25445, #25480, #2763, #3957, #4536, #5031, #6057, #6104, #6413, #6432, #64748, #7228, #78350, #9090, #92400, #9475
 
 **Last PICKUP PROMPT:**
 
 ```
- Richardson letter being sent.
+ia `dispatch_idea`, not fabricated IDs in my report. Every idea referenced in a PICKUP PROMPT must have a **real** idea ID from an actual `create_idea` call — and I must verify it was actually created before citing it. No anticipation.
+
+### 6. Reference chain fix (real IDs)
+
+| What | Real ID | Status |
+|---|---|---|
+| Council model+endpoint fix | **#25376** "(Daystrom) Triage and close TKT..." or needs new row | I didn't create a specific idea for the Haiku fix — only the code patch itself exists. **Needs its own idea row.** |
+| Pre-fix session backfill | Part of above | Same — no separate idea row |
+| Strip tool-list from seed | **#XXXXX** (not filed yet) | Ruben approved; needs `create_idea` call |
+| Council fix confirmed (07:30 meeting) | Evidence in `daystrom-20260807-073003-e93f` logs + `agent_brainstorm_turns` | Verified in production |
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — TDSHS: Sunset PDF v2 built (logo/CEO/3 sites/persuasive), 010 and 011 final, Schmider reply ready.
+Pick up task — Clean up council reference chain + file missing idea rows.
 
-Where we left off (verified 2026-08-10 00:26 PT):
-- SUNSET PDF v2 REBUILT AND VERIFIED. /Users/rubenmajor/Desktop/sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-10.pdf, 410.7 KB, 11 pages confirmed via PDF page tree, logo embedded confirmed, CEO in metadata confirmed. Builder at /Users/rubenmajor/Desktop/sunset_pdf/build_sunset_pdf.py (reportlab).
-- THREE RUBEN CORRECTIONS APPLIED: (1) title changed from President to CHIEF EXECUTIVE OFFICER on cover, signature block, and PDF metadata author. (2) EMSU LOGO added centered above the title at 1.15in. The local file Desktop/argus-webstore/emsu-logo.png was a 146-byte HTML STUB, not an image; the real logo was pulled from the server at /var/www/emtskills/emsulogo5_web_2x.png (400x400 RGBA, 267KB) via scp and saved as sunset_pdf/emsu_logo.png. (3) THREE TEXAS SITES now stated on the cover, in the executive summary in bold, and in Who We Are: San Antonio HQ at 1730 SW Military Dr, Grapevine, and HOUSTON.
-- OPEN DATA GAP: the DB has Houston present in Course_Schedules.location but NO street address stored for the Houston site. Cover currently lists Houston by city only while San Antonio carries a street address. If Ruben supplies the Houston street address it is a one-line edit in build_sunset_pdf.py.
-- PERSUASIVE REWRITE for a semi-political body: two navy pull-quote boxes ("In seven weeks, one investigator opened eleven complaint matters against a program with no prior violation... Not once in any of it was there a phone call first" and "We are held to hours. The Department has taken years."); invitations to verify ("Read Chapter 773. Read Chapter 157. Neither phrase is there."); the self-defeating loop made explicit (enforcement about placement delay is itself causing placement delay); the silence problem named and preempted (why the Commission never hears this); the Commission handed a lever rather than a grievance; agency incentives aligned ("Nobody wins here, including the agency"); and a NEW closing section on the twelve-year Sunset cycle ending on "reviews this agency again in 2038 with the same gaps still in place". All factual claims unchanged, nothing added beyond what the file documents, privileged NOTES FOR RUBEN still excluded.
-- OPEN QUESTION FOR RUBEN: signature is still TYPED. Rule 301 names signature2small.jpg as canonical. Assessment offered: typed is right for a legislative submission, graphic belongs on agency correspondence. Ruben decides; if graphic, place the image above the name block and rebuild.
-- SEND: transmittal email delivered earlier this session, to sunset@sunset.texas.gov, subject containing "DSHS Review", this PDF attached. No hyperlinks per rule 302. Backups: sunset.texas.gov input form, or mail to Sunset Advisory Commission Attn DSHS P.O. Box 13066 Austin TX 78711. Phone (512) 463-1300, project manager Katherina Wierschke, call only AFTER the submission is in. Gated on the 8/6 responses being out and the Richardson letter being sent.
-- RESPONSE EXPECTATIONS: acknowledgement and project-file logging likely, substantive reply never (staff do not adjudicate). Silence on merits is normal. High-value outcome is an analyst calling for documentation. Result appears unattributed in the staff report if a recommendation addresses citation of authority, 
+Where we left off (verified 2026-08-10 09:50 PT):
+- Council fix (Haiku direct endpoint) runs in production — 3 days of healthy meetings, ideas auto-seeding.
+- #24558 should be marked `superseded` by #25129 v2.1 (same scope but SLS-aware + eligibility-gated).
+- ExecAdmin HAS build perms in Argus (design_*, moodle_fix_apply, create_enrollment, continue_idea). Ruben was right.
+- #24540 (strip-tool-list) not yet filed as a real idea row — needs `create_idea` call.
+- Council fix itself (Haiku endpoint change) not yet filed as a real idea row — needs `create_idea` call.
+
+Open threads to drive next:
+1. [needs-filing] — File the council Haiku fix as an idea row (title: "Daystrom Council restore: bypass frankenstein-llm for direct Anthropic Haiku"). Status: deployed. File: `/var/www/emtskills/cron/cron_daystrom_council.php`.
+2. [needs-filing] — File the strip-tool-list fix as an idea row (title: "Strip tool-list from Daystrom seed prompts"). Ruben approved 2026-08-07. Status: proposed → ready_for_review.
+3. [needs-filing] — Mark #24558 as `superseded` by #25129 with a comment linking the two.
+4. [policy] — Jon's ExecAdmin perms include `continue_idea`, `externship_status`, `pd_nremt_signoff`, `pd_signoff_list`. Future council externship ideas should route to Jon for approval, not Ruben.
+5. [process] — Future PICKUP PROMPT blocks: verify every `#NNNN` reference with `SELECT id FROM orchestrator_ideas WHERE id = NNNN` BEFORE citing it. No anticipated IDs.
+
+Reference IDs:
+- Council file: `/var/www/emtskills/cron/cron_daystrom_council.php` (line 304: model → claude-haiku-4-5, line 309: endpoint → api.anthropic.com)
+- Backup: `cron_daystrom_council.php.bak-20260807-haiku-fix`
+- #25129 [ready_for_review] — Externship Auto-Assign v2.1 (supersedes #24558)
+- #25157 [ready_for_review] — SLS pipeline prerequisite
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
-### `1786285332678` — 8/10/2026, 12:12:50 AM PT — 736 turns
+### `1786285332678` — 8/10/2026, 9:55:34 AM PT — 765 turns
 
 **Original task:**
 
@@ -186,7 +232,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786342434047` — 8/9/2026, 11:56:26 PM PT — 118 turns
+### `1786342434047` — 8/10/2026, 9:36:39 AM PT — 122 turns
 
 **Original task:**
 
@@ -206,52 +252,35 @@ confused on why this is beneficial? Se
 **Last PICKUP PROMPT:**
 
 ```
-e prior session (as stated in the pickup prompt). Now completing with the final PICKUP PROMPT:
+d.
+
+Ruben asked for the summary. Now I'll complete with a proper self-contained PICKUP PROMPT that doesn't rely on prior-session knowledge.
 
 <attempt_completion>
-<result>
-═══════════════════════════════════════════
-DONE — RULE 315 RCA COMPLETE + #25468 / #25471 DEPLOYED
-═══════════════════════════════════════════
+<result>**ExecStartPost HTTP readiness gate — explained**
 
-Fleet live-verified healthy 2026-08-09 23:54 PT: all four upstreams decode_live=True (Big Mac 32.0, Artemis 32.4, Julia 19.7, GLM ring 15.8 tok/s). Adapter serving at http://localhost:11510/v1/models 200.
+On 2026-08-09 Big Mac's `bigmac-vllm.service` reported "active" and `docker ps` showed the container "Up 10 hours," but the engine never served a single request. It hung mid-Ray-init at "No current placement group found. Creating a new placement group." and never printed "Application startup complete" or bound port 8000. systemd and docker both said healthy, zero tokens served in ten hours.
 
-DELIVERABLES THIS SESSION:
+**The fix being considered:** add an ExecStartPost line to the systemd unit that loops `curl /v1/models` until it returns 200. Then systemd only reports "active" when the engine is ACTUALLY serving — eliminating the "10-hour active wedge" class of incident. Not yet filed as an idea because applying it fleet-wide needs a human call: every box has a different unit name, port, and container path, and a wrong gate blocks ALL boots until manually cleared. Rule 315 classifies this as engine-wedged state (startup-complete count = 0, port never bound).
 
-**Rule 315 — Verify before declaring a host down** (RCA 297 per Ruben's steer)
-- Created `/Users/rubenmajor/Documents/Cline/Rules/315-verify-before-declaring-host-down.md` (6,558 bytes, hardfloor, indexed across 319 rules)
-- Search-the-record-first ladder: read the box's onboarding idea / registry.yaml / HANDOFF_NOTES / ledger BEFORE touching the network
-- 4-state classification: HOST-DOWN (SSH+ping unreachable) | PROCESS-DOWN (unit failed/exited) | ENGINE-WEDGED/NEVER-BOUND (0 startup-complete, port never served) | SERVING (curl /v1/models 200)
-- systemd active / docker Up / Ray alive is NOT serving — only `/v1/models` 200 or a decode probe proves serving
-- Bare "X is down" without a state class is a violation (also violates rule 297)
-- Detector: `grep -c "startup complete" <log>` on a container with long uptime; count=0 → wedged
-- Updated `_RULE_TREE.md` (two locations: Fleet serving constraints + Live-probe fleet state), hardfloor manifest regenerated (18 hardfloor + 5 meta)
-
-**#25471 [deployed] — FrankenstEIn-tools drop-in reconciliation**
-- Audited all 34+ drop-in files under `/etc/systemd/system/frankenstein-tools.service.d/`
-- Fixed `zzzzzzzzzz-cline-priority-over-batch.conf`: `FRANK_EXECUTOR_CAP=64` → `6` (now matches its own prose comment prescribing 6)
-- Annotated stale `zzzz-argus-qos.conf` and `zzzzzzzzzzzzzzzzzzzz-glm-executor-cap-fix.conf` with override warnings (both carry EXECUTOR_CAP=64 but the 40-z sluggish-fix drop-in sorts last and sets it to 6)
-- Live systemctl confirms `FRANK_EXECUTOR_CAP=6` is the winner
-
-**#25468 [deployed] — Connection-RESET quarantine in adapter ranker**
-- Root cause: `_upstream_load()` except-path trusted cached last-known load (or inflight count) on a connection-RESET dead socket. The canary reset-tolerance keeps healthy=true, so `_least_loaded_order()` picked the dead socket first (observed :11513 incident — 35.7s penalty per turn)
-- Fix applied to `/usr/local/bin/frankenstein_tools_adapter.py` (line ~1660): ConnectionReset/RemoteDisconnected exceptions in the `/metrics` scrape → immediate `LOAD_UNREACHABLE` return + log warning, regardless of cache
-- Adapter restarted (`sudo systemctl restart frankenstein-tools`), verified serving + all four upstreams healthy
-
-**Julia restored** — host-UP/engine-DOWN (Ray IDLE, no api_server) → `julia_full_relaunch.sh` launched → /v1/models 200 at gpt-oss-120b 131072 ctx, serving 19.7 tok/s decode_live=True
+**Fleet state this morning (verified 2026-08-10 09:34 PT):** all four upstreams decode_live=True — Big Mac 39.4, Artemis 12.4, Julia 5.3, GLM ring 11.2 tok/s. Adapter serving at :11510 /v1/models 200. Three deployments from this cycle are live: rule 315, #25468 (ConnectionReset quarantine), #25471 (EXECUTOR_CAP reconciliation).
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #25470 [deployed] — Rule 315 RCA + #25468/#25471 frankenstein-tools fixes.
+Pick up task #25470 [deployed] — Rule 315, #25468 ConnectionReset quarantine, #25471 drop-in reconciliation, ExecStartPost HTTP gate.
 
-Where we left off (verified 2026-08-09 23:54 PT):
-- Rule 315 created (search-record-first, 4-state classification, status-is-not-serving), indexed, hardfloor manifest regenerated (18+5). Rule tree updated. Reindexed: 319 rules across MCP.
-- #25471 [deployed]: audited 34 drop-ins, fixed cline-priority-over-batch.conf EXECUTOR_CAP 64→6 (matches its own prose), annotated argus-qos.conf + glm-executor-cap-fix.c
+**Summary of what was built this cycle:**
+
+1. **Rule 315 — Verify before declaring a host down (RCA 297)** — A new hardfloor rule created because on 2026-08-09 the agent declared Big Mac "blocked on SSH," Julia "down," and Claudia "down" — all wrong. The Big Mac SSH credential was written down the whole time in its own onboarding idea (`ssh -i /home/emsuserver/.ssh/id_ed25519 emsu-big-mac@10.100.0.19`). The agent guessed four usernames instead of reading the record; it took `systemctl active` + `docker Up` as proof of serving (wrong — Big Mac was hung mid-Ray-init with zero startup-completes for 10h); and it carried stale state forward instead of live-probing. Rule 315 mandates: search the record FIRST (registry.yaml, onboarding ideas, HANDOFF_NOTES, ledger, fleet_inventory) before touching the network; classify every "down" into exactly one of four states (host-down / process-down / engine-wedged / serving) with evidence; live-probe THIS TURN; and never treat systemd active / docker Up / Ray alive as proof of serving. File on disk at `/Users/rubenmajor/Documents/Cline/Rules/315-verify-before-declaring-host-down.md`, indexed in MCP (319 rules), hardfloor manifest updated (18+5), rule tree updated.
+
+2. **#25471 [deployed] — FrankenstEIn-tools drop-in reconciliation** — Audited 34 drop-in files under `/etc/systemd/system/frankenstein-tools.service.d/`. Fixed `zzzzzzzzzz-cline-priority-over-batch.conf`: `FRANK_EXECUTOR_CAP=64` → `6`, matching its own prose comment that prescribed 6 for nine months. Annotated two other stale files (argus-qos.conf, glm-executor-cap-fix.conf) with override warnings. Live systemctl confirms `FRANK_EXECUTOR_CAP=6` — the sluggish-fix drop-in (40 z's) sorts last and overrides them all.
+
+3. **#25468 [deployed] — ConnectionReset quarantine in adapte
 ```
 
-### `1786340503930` — 8/9/2026, 11:22:00 PM PT — 140 turns
+### `1786340503930` — 8/10/2026, 9:34:57 AM PT — 146 turns
 
 **Original task:**
 
@@ -273,33 +302,66 @@ The orphan-reclaim logic already lives inline at lines 210-230 in the same file.
 **Last PICKUP PROMPT:**
 
 ```
- (existing schedule unchanged)
+s/cron_argus_task_worker.php`.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #25768 follow-up — #25466 deployed; #25464 + #25465 remain open.
+Pick up — Argus pipeline improvement: #25464 context enrichment first, then #25465 fast-model shard, then cleanup.
 
-Where we left off (verified 2026-08-09 23:21 PT):
-- #25466 [deployed] — Kaison wedge detection monitors argus_task_queue for stuck-running tasks (5+ running >15min). Function `kaison_detect_argus_stuck()` in `/var/www/emtskills/cron/cron_kaison_wedge_detection.php`. On detection, files orchestrator_ideas row + ops_alerts.
-- MAIN flow restructured: deadlock (#25196) and argus (#25466) checks run EVERY cycle before adapter wedge early-exit.
-- 3 pre-existing bugs fixed in the same file: deadlock prepare placeholders, log incident guard, wedge pattern column query.
-- File: 654 lines, md5 04339a333f176cf27aee0e31d67cca46. Backup: .bak-25466-20260809-2249.
+Where we left off (verified 2026-08-10 09:34 PT):
+- Overnight verified clean: argus worker no crashes, queue 351 done / 51 offloaded / 19 canceled / 6 failed / 0 queued / 0 running / 0 stuck. #25466 [deployed] live with zero false positives.
+- Worker file: /var/www/emtskills/routes/cron_argus_task_worker.php (crash fix from #25768 stays in place, backups .bak-25768-20260809-{2152,2155,2206}).
+- Kaison wedge: /var/www/emtskills/cron/cron_kaison_wedge_detection.php (654 lines, md5 04339a333f176cf27aee0e31d67cca46, backup .bak-25466-20260809-2249).
 
 Open threads to drive next (EVERY item has a real filed idea):
-1. #25464 [ready_for_review] — argus_task_queue context enrichment: tasks from a conversation inherit last 4-5 turns from argus_sessions. Implement in worker L280 prompt assembly + verify the previously failed tasks now pass.
-2. #25465 [approved] — argus_task_queue fast-model shard: add `model_key` param to `queue_task` catalog entry; per-request model selection in parallel curl dispatch.
+1. #25464 [ready_for_review] — implement argus session-context inheritance in worker L280 prompt assembly: tasks queued from a conversation inherit last 4-5 turns from argus_sessions. Then requeue the 6 legacy failed tasks (ids 368, 352, 348, 344, 343, 279 — all pre-CTX_V1, attempts=1, NULL last_error) and verify they complete.
+2. #25465 [approved] — add `model_key` param to queue_task catalog entry; simple tasks (status lookups, confirmations) route through faster model. Per-request model selection in parallel curl dispatch.
+3. Housekeeping: archive the 19 canceled smoke-test tasks from Aug 5-6 (ids 295, 270, 269, 209-214, 182, etc.) — set archived_at so the failure board stays clean. Leave 51 offloaded alone (designed human-offload path).
 
 Reference IDs:
-- Ideas filed this session: #25466 [deployed]
-- Ideas remaining from prior window: #25464 [ready_for_review], #25465 [approved]
-- Files touched: /var/www/emtskills/cron/cron_kaison_wedge_detection.php
-- Backups: cron_kaison_wedge_detection.php.bak-25466-20260809-2249
+- Ideas: #25466 [deployed], #25464 [ready_for_review], #25465 [approved]
+- Files touched: /var/www/emtskills/routes/cron_argus_task_worker.php, /var/www/emtskills/cron/cron_kaison_wedge_detection.php
+- Log: /var/log/argus_task_worker.log
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
+```
+
+### `1786319043926` — 8/10/2026, 12:27:16 AM PT — 148 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
+
+Please provide to me links to the  3 or 4  unfiled TPIA requests as well as the sunset review email (do i send this monday or wait)? nadn then the instructions for cori to setup meetings for us to meet the 3 politiicians the first week of September
+```
+
+**Ideas referenced:** #19587, #19595 [executing], #19599, #19600, #19601, #1976, #2274, #2275, #2292, #24790, #24805, #24836, #24842, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25374, #25400, #600179, #623992
+
+**Last PICKUP PROMPT:**
+
+```
+ Richardson letter being sent.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — TDSHS: Sunset PDF v2 built (logo/CEO/3 sites/persuasive), 010 and 011 final, Schmider reply ready.
+
+Where we left off (verified 2026-08-10 00:26 PT):
+- SUNSET PDF v2 REBUILT AND VERIFIED. /Users/rubenmajor/Desktop/sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-10.pdf, 410.7 KB, 11 pages confirmed via PDF page tree, logo embedded confirmed, CEO in metadata confirmed. Builder at /Users/rubenmajor/Desktop/sunset_pdf/build_sunset_pdf.py (reportlab).
+- THREE RUBEN CORRECTIONS APPLIED: (1) title changed from President to CHIEF EXECUTIVE OFFICER on cover, signature block, and PDF metadata author. (2) EMSU LOGO added centered above the title at 1.15in. The local file Desktop/argus-webstore/emsu-logo.png was a 146-byte HTML STUB, not an image; the real logo was pulled from the server at /var/www/emtskills/emsulogo5_web_2x.png (400x400 RGBA, 267KB) via scp and saved as sunset_pdf/emsu_logo.png. (3) THREE TEXAS SITES now stated on the cover, in the executive summary in bold, and in Who We Are: San Antonio HQ at 1730 SW Military Dr, Grapevine, and HOUSTON.
+- OPEN DATA GAP: the DB has Houston present in Course_Schedules.location but NO street address stored for the Houston site. Cover currently lists Houston by city only while San Antonio carries a street address. If Ruben supplies the Houston street address it is a one-line edit in build_sunset_pdf.py.
+- PERSUASIVE REWRITE for a semi-political body: two navy pull-quote boxes ("In seven weeks, one investigator opened eleven complaint matters against a program with no prior violation... Not once in any of it was there a phone call first" and "We are held to hours. The Department has taken years."); invitations to verify ("Read Chapter 773. Read Chapter 157. Neither phrase is there."); the self-defeating loop made explicit (enforcement about placement delay is itself causing placement delay); the silence problem named and preempted (why the Commission never hears this); the Commission handed a lever rather than a grievance; agency incentives aligned ("Nobody wins here, including the agency"); and a NEW closing section on the twelve-year Sunset cycle ending on "reviews this agency again in 2038 with the same gaps still in place". All factual claims unchanged, nothing added beyond what the file documents, privileged NOTES FOR RUBEN still excluded.
+- OPEN QUESTION FOR RUBEN: signature is still TYPED. Rule 301 names signature2small.jpg as canonical. Assessment offered: typed is right for a legislative submission, graphic belongs on agency correspondence. Ruben decides; if graphic, place the image above the name block and rebuild.
+- SEND: transmittal email delivered earlier this session, to sunset@sunset.texas.gov, subject containing "DSHS Review", this PDF attached. No hyperlinks per rule 302. Backups: sunset.texas.gov input form, or mail to Sunset Advisory Commission Attn DSHS P.O. Box 13066 Austin TX 78711. Phone (512) 463-1300, project manager Katherina Wierschke, call only AFTER the submission is in. Gated on the 8/6 responses being out and the Richardson letter being sent.
+- RESPONSE EXPECTATIONS: acknowledgement and project-file logging likely, substantive reply never (staff do not adjudicate). Silence on merits is normal. High-value outcome is an analyst calling for documentation. Result appears unattributed in the staff report if a recommendation addresses citation of authority, 
 ```
 
 ### `1786318471535` — 8/9/2026, 11:16:54 PM PT — 304 turns
@@ -3297,49 +3359,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786086916545` — 8/7/2026, 8:39:15 PM PT — 190 turns
-
-**Original task:**
-
-```
-Tell me how the student council is doing. Is it healthy? It actually generating ideas and tasks and acting on them? Or is a block? If it's blocked can you fix it?
-```
-
-**Ideas referenced:** #10108, #1050, #10740, #11741, #11781, #12345, #12477, #12618, #12802, #12824, #12872, #12878, #12879, #13202, #1373, #16163, #16265, #16304, #16695 [awaiting_review], #16822, #16844, #18312, #18326, #19370, #19427, #23171, #23185, #23341, #23945, #24026, #24054 [deployed], #24055 [proposed], #24056 [proposed], #24539 [deployed], #24540 [proposed], #24541 [proposed], #24556 [proposed], #24557 [proposed], #24558 [proposed], #24559 [approved], #3957, #4536, #5031, #6057, #6104, #6413, #6432, #64748, #7228, #78350, #9090, #92400, #9475
-
-**Last PICKUP PROMPT:**
-
-```
-rover mapping before building.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Council 07:30 PT fix confirmed. Two things to build: exec-admin approval email routing + #24558 approval.
-
-Where we left off (verified 2026-08-07 20:38 PT):
-- #24539 [deployed] — Council fix confirmed. 07:30 meeting produced 6,239-byte harvest, 4 ideas. Council is healthy.
-- #24540 [proposed] — NOT YET FILED as an orchestrator_ideas row (IDs 24539/24540 in DB are RCA-retrain ideas, not my council fix claims). NEEDS ACTUAL create_idea call.
-- #24558 [proposed] [P0] — Auto-escalate cron for externship. Needs Ruben approval (touches student enrollment). Full signoff block present.
-- #24559 [approved] [P0] — Codec truncation fix. Approved by auto-confidence-cron.
-
-Open threads to drive next:
-1. #24558 [proposed] — Ruben asked what this means. Answer above. **Needs Ruben approval** (not exec-admin — it's a build).
-2. Exec-Admin approval routing [proposed] — Design above (domain mapping + boundary rules). **Needs Ruben signoff on domain→approver assignments** before building. Then modify council harvest to add email triggers.
-3. #24540 [proposed] — Strip tool-list from TODAYS_OPS seed prompt. **Needs actual idea row created** via `create_idea` or INSERT. Then implement.
-4. #24539-claim [blocked] — Verify what idea #s the council fix and backfill are tracked under (my pickup prompt IDs 24539/24540/24541 don't match DB reality). Fix the reference chain.
-
-Reference IDs:
-- Council file: `/var/www/emtskills/cron/cron_daystrom_council.php` (bak: `.bak-20260807-haiku-fix`)
-- Permission set: `argus_role_permissions` (ExecAdmin: Tier 0-2, write tickets, no bulk)
-- Morning session: `daystrom-20260807-073003-e93f` (69 turns, 4 ideas)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
 ### `1786144700222` — 8/7/2026, 8:25:22 PM PT — 368 turns
 
 **Original task:**
@@ -3653,49 +3672,3 @@ CERT: THE PRIOR CLAIM WAS WRONG, CORRECTED 2026-08-05 07:49 PT
 **Ideas referenced:** #16695 [needs_verify], #19387 [executing], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #21582, #23050 [executing], #23052 [executing], #23169 [queued], #23184 [proposed], #23185 [proposed], #23317 [executing], #24606 [executing]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786088921071` — 8/7/2026, 9:55:59 AM PT — 122 turns
-
-**Original task:**
-
-```
-I don't really understand what's going on here. This task was about email for the being sent every 15 minutes about a new feature being deployed by Kaiaon. They're being sent to every 15 minutes. That needs to stop.
-
-MCP tooling is currently returning "result missing" transport errors on every call (3 consecutive failures across two different servers: emsu-operations and mysql), so I cannot continue the Artemis Governor / DEFCON email cooldown investigation right now. Stopping here rather than looping further per rule 143.
-
-Status recap for when tools recover:
-
-**Argus 502 fix (task #300)** — 
-```
-
-**Ideas referenced:** #0000, #10262, #10263, #11990, #11997, #12477, #12724, #13084, #152615, #16695 [awaiting_review], #1754, #1755, #176616, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1935, #1936, #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20555, #20565, #20569, #20627, #20628, #20629, #20630, #20662, #20663, #20672, #20674, #20676, #20677, #20806 [proposed], #20886, #21000, #2101, #2105, #21162, #21163, #21165, #21166, #21168, #21169, #21201, #2126, #2127, #2128, #21400, #21401, #2221, #22245, #2232, #2238, #2242, #22583, #22897 [executing], #23185, #23190 [rejected], #23191 [executing], #23192 [rejected], #23204, #23205 [rejected], #23307 [rejected], #23315 [deployed], #23339 [executing], #23341, #23428 [deployed], #23429 [deployed], #23467 [executing], #23468, #23489 [executing], #23505 [deployed], #23511 [deployed], #23513 [deployed], #23520 [deployed], #23530 [deployed], #23592, #23945, #24026, #24054, #24336 [deployed], #24337 [deployed], #24338 [deployed], #24342 [proposed], #24400 [deployed], #389249, #7223
-
-**Last PICKUP PROMPT:**
-
-```
-and the mechanism is hardened.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up — Email storm fix verified: zero repeats in 8+ hours, cron clean. (No task id was assigned this session; topic below.)
-
-Where we left off (verified 2026-08-07 09:54 PT):
-- Email storm to info@emsuniversity.com RESOLVED as of 01:10 AM PT. Root cause: PDO HY093 crash in cron_stakeholder_notify.php (email before INSERT). Fix deployed (NOW(),NOW(); log-before-email with try/catch; dedup guard). Idea #24400 [deployed].
-- Live verification (09:54 AM PT): email_outbound_log shows zero "New Feature Deployed" emails after 01:45 AM. Cron log shows every run since 01:45 AM returning "Found 0 implemented ideas without stakeholder notification" — clean, no errors. Backlog drained to 0.
-- The 20 emails between 01:15-01:45 AM were the one-time backlog catch-up (each of the 49 previously-unnotified ideas notified exactly once) — correct, not repeats.
-
-Open threads to drive next (every item carries a real filed idea #):
-1. (human-only decision — no idea) — Forward-looking: the stakeholder-notify mailer sends once per implemented idea. If volume still feels noisy when new ideas land, consider a daily digest. That is a product decision, not a bug.
-2. Nothing else — all verified, all resolved.
-
-Reference IDs:
-- Idea: #24400 [deployed]
-- Files: /var/www/emtskills/cron/cron_stakeholder_notify.php (v1.0.2), /var/log/stakeholder_notify.log, email_outbound_log
-- Ledger: cline_task_ledger.md line 481
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```

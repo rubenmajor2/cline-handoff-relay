@@ -6,15 +6,20 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/9/2026, 4:04:51 PM PT | window: last 72h | 95 tasks | index total 593 (parsed 0, cached 593)
+Generated: 8/9/2026, 5:04:51 PM PT | window: last 72h | 96 tasks | index total 595 (parsed 8, cached 587)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1786318471535` | 8/9/2026, 5:04:40 PM | 143 | 483KB | I got a report of executor stalling. Play frankenstein doctor of executor and resolve and  |
+| `1786285332678` | 8/9/2026, 5:04:09 PM | 469 | 4526KB | #Callbacks |
+| `1786319043926` | 8/9/2026, 4:52:10 PM | 42 | 189KB | #TDSHS |
+| `1786245923063` | 8/9/2026, 4:48:41 PM | 588 | 5843KB | #Argus |
+| `1786285065842` | 8/9/2026, 4:45:05 PM | 214 | 403KB | #WOPR GPU |
+| `1786288392773` | 8/9/2026, 4:44:59 PM | 230 | 729KB | #Make GLM / frankenstein-llm smarter |
+| `1786185877066` | 8/9/2026, 4:36:43 PM | 120 | 446KB | continue |
+| `1786224531010` | 8/9/2026, 4:36:42 PM | 384 | 903KB | #Big Mac |
+| `1786065775388` | 8/9/2026, 4:34:07 PM | 152 | 342KB | can you investigate and resolve this?  |
 | `1786313131031` | 8/9/2026, 3:23:51 PM | 108 | 396KB | #AI Directed Meditation |
-| `1786245923063` | 8/9/2026, 3:21:36 PM | 552 | 5710KB | #Argus |
-| `1786285332678` | 8/9/2026, 3:20:40 PM | 398 | 1508KB | #Callbacks |
-| `1786285065842` | 8/9/2026, 3:17:49 PM | 154 | 292KB | #WOPR GPU |
-| `1786288392773` | 8/9/2026, 3:14:57 PM | 198 | 663KB | #Make GLM / frankenstein-llm smarter |
 | `1786286915134` | 8/9/2026, 2:58:34 PM | 92 | 350KB | #Argus Cluster Idea  |
 | `1786288212188` | 8/9/2026, 8:38:13 AM | 140 | 437KB | #AI Directed Meditation |
 | `1786286876279` | 8/9/2026, 8:12:08 AM | 72 | 397KB | #GLM Local/frankenstein-llm Improvements / Make Smarter |
@@ -28,7 +33,6 @@ Generated: 8/9/2026, 4:04:51 PM PT | window: last 72h | 95 tasks | index total 5
 | `1786249226096` | 8/9/2026, 12:25:03 AM | 106 | 548KB | #AI Directed Meditation |
 | `1786256930636` | 8/8/2026, 11:50:27 PM | 117 | 294KB | #Subagents |
 | `1786214132308` | 8/8/2026, 11:27:32 PM | 450 | 1674KB | I recently saw a task that referenced Anthropic and us paying for some kind of anthropic t |
-| `1786224531010` | 8/8/2026, 11:11:05 PM | 376 | 887KB | #Big Mac |
 | `1786229125708` | 8/8/2026, 11:08:51 PM | 96 | 413KB | Do a deep dive and give your thoughts on the 85% confidence gate of rule 29 and whether it |
 | `1786248426374` | 8/8/2026, 9:17:39 PM | 5 | 33KB | #AI Directed Meditation |
 | `1786225462991` | 8/8/2026, 9:05:57 PM | 403 | 1102KB | I had a thought. One advantage the LLM seems to have over the human is that it can think a |
@@ -58,7 +62,6 @@ Generated: 8/9/2026, 4:04:51 PM PT | window: last 72h | 95 tasks | index total 5
 | `1786146213022` | 8/8/2026, 9:30:09 AM | 94 | 589KB | Tokens from admin_profile.php page are not working. Can you fix this: https://emsuniversit |
 | `1786200908875` | 8/8/2026, 8:46:47 AM | 150 | 254KB | #big mac  |
 | `1786172805164` | 8/8/2026, 6:27:54 AM | 650 | 19969KB | We have brought up a new LLM for 120B usage, the name is Big Mac, it lives on the same net |
-| `1786185877066` | 8/8/2026, 6:07:30 AM | 104 | 400KB | continue |
 | `1786185141628` | 8/8/2026, 6:06:52 AM | 96 | 276KB | Pick up idea 25076, the idea-delivery watchdog. First run get_idea_progress(25076); if bui |
 | `1786184812790` | 8/8/2026, 5:58:29 AM | 124 | 2065KB | Rule 297 was strengthened today (scope gate for failure counts + "a 297 request includes f |
 | `1786184799256` | 8/8/2026, 4:03:17 AM | 74 | 1392KB | Pick up idea 25073, the Argus failed-action cleanup + per-user summary emails. First run g |
@@ -99,96 +102,28 @@ Generated: 8/9/2026, 4:04:51 PM PT | window: last 72h | 95 tasks | index total 5
 | `1786069048387` | 8/6/2026, 7:18:39 PM | 3 | 19KB | 3 iterations going, which one will be faster |
 | `1786068904025` | 8/6/2026, 7:18:37 PM | 5 | 7KB | 2nd window arbitrary test |
 | `1786068815556` | 8/6/2026, 7:16:56 PM | 6 | 8KB | test to first iteration |
-| `1786065775388` | 8/6/2026, 6:47:30 PM | 82 | 149KB | can you investigate and resolve this?  |
 | `1785953794202` | 8/6/2026, 6:19:29 PM | 584 | 1604KB | COPY_WINDOW_0_DATA_ACCURACY_AUDIT |
 | `1785953476892` | 8/6/2026, 6:08:42 PM | 520 | 1115KB | build and ship this |
 | `1785954595787` | 8/6/2026, 5:51:13 PM | 252 | 1102KB | #KAISON |
 | `1786058811201` | 8/6/2026, 5:19:23 PM | 202 | 821KB | #TDSHS |
-| `1786008133029` | 8/6/2026, 4:18:36 PM | 498 | 1518KB | There seems to be something that is submitting courses or something to TDSHS. Can you tell |
 
 ---
 
 ## Per-window detail
 
-### `1786313131031` — 8/9/2026, 3:23:51 PM PT — 108 turns
+### `1786318471535` — 8/9/2026, 5:04:40 PM PT — 143 turns
 
 **Original task:**
 
 ```
-#AI Directed Meditation
-
-For clarification on the idea, it is the idea of holding an idea in the mind that begets another idea. The subject idea is difficult to hold in the mind at the same time as holdingthe object idea as the subject idea is executed at that exact insance. Just for arguments sake. Your point remains valid on 25229 however. 
-
-How are the scans going? 
-
-Resole this -> The real gap was that __nothing tested whether the mechanical claims were true__.
-
-How is this going? Did we execute everythign? which venues are using AI Directed Meditation. Which others acan be used or should 
+I got a report of executor stalling. Play frankenstein doctor of executor and resolve and send back failed ideas since the stall ater making sure they work. Watch it for the nex t60 minutes. Kaizon needs the recipies and we need durable solutions
 ```
 
-**Ideas referenced:** #14100, #178629, #23932, #23935, #25185, #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25242, #25268 [deployed], #25313 [deployed], #25364 [deployed], #25366 [deployed], #25374, #25375, #25383 [deployed], #25384 [deployed], #25385 [deployed], #25421 [proposed], #25422 [proposed], #25423 [proposed], #25424 [proposed]
+**Ideas referenced:** #12184, #13191, #13196, #13199, #13976, #18291, #18781, #18786, #18787, #18794, #18796, #18800, #18801, #18802, #18803, #18804, #18805, #18806, #18807, #18813, #18814, #18817, #18818, #18819, #19792, #20050, #20340, #20517, #20581, #20582, #20612, #20903, #21011, #21504, #2247, #22565, #2271, #2274, #2275, #22816, #2292, #2293, #23276, #23483, #23658, #23852, #23868, #23913, #23920, #23931, #24036, #24214, #24227, #24229, #24233, #24635, #24636, #24645, #24646, #24791, #24963, #25039, #25042, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25129, #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25208, #25220, #25227, #25313, #25318, #25364 [executing], #25365 [deployed], #25366 [proposed], #25376, #25426, #3957, #3996
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786245923063` — 8/9/2026, 3:21:36 PM PT — 552 turns
-
-**Original task:**
-
-```
-#Argus
----
-
-
- I was thinking also that if a student issues identified in Argus and there are similar issues with other students in Argos that are found it's the same general type of issue that you want cluster. 
-
-But again you're gonna have to be certain on those ones. Like for example you see some sort of bug or something it needs to be identified to see if there's extensions beyond just the ones too.
-
-Approved
-- #25269 [proposed] - Fix the Kaizon blind spot: wrap argusBuildRevertInfo() in try/catch at both call sites, add the missing error_message column to the INSERT at line 3947, and add a
-```
-
-**Ideas referenced:** #152615, #176616, #178424, #178455, #17926, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #18745, #1876, #18765, #1877, #18771, #18781, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #1894, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #1912, #1927, #1928, #1929, #1930, #1931, #1932, #1933, #19348, #19415, #19416, #2006, #20547, #20555, #21074, #21125, #21126, #22511, #22583, #2271, #2274, #2275, #2292, #23489, #23852, #23920, #23952, #24635, #24636, #24645, #24646 [proposed], #24766, #24791, #24897, #24900, #25039, #25047, #25058 [deployed], #25064, #25081, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [executing], #25196 [deployed], #25224, #25238, #25240, #25241, #25242, #25262 [executing], #25263 [executing], #25264 [executing], #25269 [proposed], #25270 [proposed], #25271 [deployed], #25293 [proposed], #25304, #25310, #25313 [approved], #25314 [approved], #25315 [approved], #25316 [proposing], #25364 [executing], #25365 [deployed], #25366 [proposed], #25409, #334155, #4338, #64748, #7215, #7683, #8596, #8597, #8783, #9069, #9070, #9071, #9176, #9191
-
-**Last PICKUP PROMPT:**
-
-```
-er data) — all three addressed
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus banner wiring (#25293) and jangeles role review.
-
-Where we left off (verified 2026-08-09 08:45 PT):
-- PERMISSIONS AUDITED: Jon = Admin (full access). CS team active and effective: jangeles (386, 94.6%), squiroz (311, 96.6%), nguisadio (105, 98.1%), nbeltran (76, 100%). CS has 21 actions covering full student diagnostic surface. 23 Admin-only actions are gated above CS.
-- PERMISSION DENIALS: jangeles had 6 (exam_overrides/extend_exam_deadline/task_worker_run). CFrench resolved (bumped Admin 8/06). vyu had 3. Jon had 0.
-- RECOMMENDATION: Consider bumping jangeles to Admin — he's the third-highest Argus user, handles exam overrides, and the CS role blocks them. No changes recommended for nguisadio/nbeltran/squiroz.
-- #25313 [deployed]: argusClusterScan live at lib/argus_cluster_scan.php, wired into alltastic_api.php. php -l clean.
-- #25316 [deployed]: Gate D3 cross-session thread preservation patched into Rule 91 Gate D. php -l clean, grep count 3.
-- Fuzzy close-match: $findMiss returns "Did you mean: student_id first last, ...?" on lookup miss.
-- WOPR: load 7.27, GPU idle, zero reranker 500s. RERANK_WORKERS=1 correct.
-- Ledger row appended 08:35 PT.
-
-Open threads to drive next:
-1. #25293 [executing] — Argus terminal banner "X other students may have the same issue." Unblocked: argusClusterScan is live. Check whether alltastic_api.php already includes this banner (3 argusClusterScan hits exist in route file — verify what the 3rd does). If not yet wired, read argus_cluster_scan.php function signature and add the terminal-response annotation.
-2. #25314 [executing] — Jon runs payment_status on 26215W-02 in Argus terminal. Confirm real invoice data renders and error_message classifier output captured. Close when verified.
-3. #25270 [executing] — WOPR GPU rebalancing. CPUQuota done. uvicorn workers blocked on #25315.
-4. #25315 [executing] — CrossEncoder lifespan/load crash path. Deferred (zero 500s in over 12h).
-5. HIT BY JANGELES: exam_overrides, extend_exam_deadline, task_worker_run (unarchive) — review whether jangeles needs Admin elevation for exam deadline workflows. Talk to Ruben.
-6. #25316 [deployed] — Gate D3 cross-session preservation. No further action.
-7. #25313 [deployed] — argusClusterScan. No further action (verified, deployed by parallel window).
-
-Reference IDs:
-- #25313 [deployed], #25316 [deployed], #25293 [executing], #25314 [executing], #25270 [executing], #25315 [executing], #25269 [deployed]
-- Files touched: /var/www/emtskills/clinerules/Rules/91-attempt-completion-gate-d.md, /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/lib/argus_cluster_scan.php, /var/www/emtskills/routes/alltastic_api.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66 (file verified absent on WOPR — create it or report gap).
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786285332678` — 8/9/2026, 3:20:40 PM PT — 398 turns
+### `1786285332678` — 8/9/2026, 5:04:09 PM PT — 469 turns
 
 **Original task:**
 
@@ -233,7 +168,123 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786285065842` — 8/9/2026, 3:17:49 PM PT — 154 turns
+### `1786319043926` — 8/9/2026, 4:52:10 PM PT — 42 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
+
+Please provide to me links to the  3 or 4  unfiled TPIA requests as well as the sunset review email (do i send this monday or wait)? nadn then the instructions for cori to setup meetings for us to meet the 3 politiicians the first week of September
+```
+
+**Ideas referenced:** #19587, #19595 [executing], #19599, #1976, #2274, #2275, #2292, #24790, #24805, #24836, #24842, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25374, #25400, #600179, #623992
+
+**Last PICKUP PROMPT:**
+
+```
+ab=investigations&entity=tdshs
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — TDSHS TPIA requests + sunset submission + Cori September meeting scheduling.
+
+Where we left off (verified 2026-08-09 16:51 PT):
+- Investigation row #16 [open]: TPIA/FOIA request inventory — 3 items logged (1 never filled years ago, 1 pending deadline 8/10, 1 v5 unclear submission status). Two NEW requests A+B [ready-to-transmit] in tpia-2026 dir, not yet sent.
+- Sunset submission: DRAFT_sunset_commission_input_EMSU.md v6 on server, timing note says submit once 8/6 responses + Richardson letter sent. Not yet submitted to sunset@sunset.texas.gov.
+- Cori September meetings: texas_outreach.php has draft emails to Campos/Kolkhorst/Campbell. Dates need updating from Aug 9-12 to first week September. Cori_Meeting_Scheduling_Texas_Aug9-12.pdf on Desktop (corrupted, unreadable by tool).
+- Schmidermaster note: 5 artifacts ready — Schmider reply draft, Vicky-to-Emma email draft, TPIA A, TPIA B, preservation letter. None transmitted yet.
+
+Open threads to drive next:
+1. Determine exact submission status of the v5 TPIA master request (was PDF sent or not?) and the 8/6 complaint responses (Smith/Sheets/Johnson/Kanthack/Dictson) — these gate the sunset submission timing.
+2. File the Schmider reply + 2 new TPIA requests (A + B) + preservation letter if Ruben approves.
+3. Update Cori's meeting emails to September dates and send.
+
+Reference IDs:
+- Investigation: #16 (TPIA tracking), #18 (sunset outreach), #15 (legislative contacts)
+- Files touched: /var/www/emtskills/uploads/tdshs/tpia-2026/TPIA_Request_{A,B}*.txt, /var/www/emtskills/uploads/tdshs/tpia-2026/SCHMIDER_EPISODE_2026-08-07_MASTER_NOTE.md, /var/www/emtskills/uploads/tdshs/inspection-5196-2026/DRAFT_sunset_commission_input_EMSU.md, /var/www/emtskills/routes/texas_outreach.php, /Users/rubenmajor/Desktop/Cori_Meeting_Scheduling_Texas_Aug9-12.pdf
+- Sunset email recipient: sunset@sunset.texas.gov (subject: "DSHS Review")
+- TPIA send channel: openrecords@dshs.texas.gov + certified to PO Box 149347, Austin TX 78714-9347
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Explore tdshs-inspection-5196 folder and Desktop for TPIA/sunset docs
+- [x] Found Cori_Meeting_Scheduling_Texas_Aug9-12.pdf
+- [x] DB schema described — TDSHS investigations identified (TPIA tracking, sunset outreach, contacts)
+- [x] Read requests A/B + master note — classified as ready-to-transmit
+- [x] Read sunset commission input draft (v6, timing note)
+- [x] Read texas_outreach.php for Cori meeting-setup instructions
+- [x] Check DB for filed vs unfiled status of TPIA requests + sunset email
+- [x] Confirm links for the 3-4 unfiled TPIA requests
+- [x] Determine Monday vs wait for sunset email (send Monday IF 8/6 responses + Richardson letter are out)
+- [x] Deliver summary with links and instructions
+</task_progress>
+</attempt_completion>
+```
+
+### `1786245923063` — 8/9/2026, 4:48:41 PM PT — 588 turns
+
+**Original task:**
+
+```
+#Argus
+---
+
+
+ I was thinking also that if a student issues identified in Argus and there are similar issues with other students in Argos that are found it's the same general type of issue that you want cluster. 
+
+But again you're gonna have to be certain on those ones. Like for example you see some sort of bug or something it needs to be identified to see if there's extensions beyond just the ones too.
+
+Approved
+- #25269 [proposed] - Fix the Kaizon blind spot: wrap argusBuildRevertInfo() in try/catch at both call sites, add the missing error_message column to the INSERT at line 3947, and add a
+```
+
+**Ideas referenced:** #152615, #176616, #178424, #178455, #17926, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #18745, #1876, #18765, #1877, #18771, #18781, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #1894, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #1912, #1927, #1928, #1929, #1930, #1931, #1932, #1933, #19348, #19415, #19416, #2006, #20547, #20555, #21074, #21125, #21126, #22511, #22583, #2271, #2274, #2275, #2292, #23489, #23852, #23920, #23952, #24635, #24636, #24645, #24646 [proposed], #24766, #24791, #24897, #24900, #25039, #25047, #25058 [deployed], #25064, #25081, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [executing], #25196 [deployed], #25224, #25238, #25240, #25241, #25242, #25262 [executing], #25263 [executing], #25264 [executing], #25269 [proposed], #25270 [proposed], #25271 [deployed], #25293 [proposed], #25304, #25310, #25313 [approved], #25314 [approved], #25315 [approved], #25316 [proposing], #25364 [executing], #25365 [deployed], #25366 [proposed], #25409, #334155, #4338, #64748, #7215, #7683, #8596, #8597, #8783, #9069, #9070, #9071, #9176, #9191
+
+**Last PICKUP PROMPT:**
+
+```
+500s. Argus clean since 08:41.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up Argus task — verify qb_invoices live (#25314) + Argus banner (#25293).
+
+Where we left off (verified 2026-08-09 16:51 PT):
+- CS permissions GRANTED for exam_overrides + extend_exam_deadline in argus_action_permissions (ruben_directive_20260809, 16:40 PT). Catalog workflow encoded: bug-ref required, +7d cap; non-bug overrides escalate to Admin/ExecAdmin.
+- request_feature, request_repair, queue_task: CS already has access (2026-07-29 Ruben directive + sidebar whitelist).
+- express_grant: Admin+ by design (CS entitlement = 0 slots/day).
+- #25313 [deployed] — argusClusterScan live at lib/argus_cluster_scan.php, wired into alltastic_api.php. php -l clean.
+- #25316 [deployed] — Gate D3 cross-session thread preservation patched into Rule 91 Gate D. php -l clean, grep count 3.
+- Fuzzy close-match: $findMiss returns "Did you mean: student_id first last, ...?" on lookup miss. grep -c = 1, php -l clean.
+- WOPR: load 7.27, GPU idle, zero reranker 500s. RERANK_WORKERS=1 correct.
+- Ledger row appended 08:35 PT. Ledger row for this session's permission grant pending.
+
+Open threads to drive next:
+1. #25314 [executing] — Jon runs payment_status on 26215W-02 in Argus terminal. Confirm real invoice data renders and error_message classifier output captured. Close when verified.
+2. #25293 [executing] — Argus terminal banner "X other students may have the same issue." Unblocked: argusClusterScan is live. Read alltastic_api.php to check whether banner is already wired (3 argusClusterScan hits exist) or needs a new annotation.
+3. #25270 [executing] — WOPR GPU rebalancing. CPUQuota done. uvicorn workers blocked on #25315.
+4. #25315 [executing] — CrossEncoder lifespan/load crash path. Deferred (zero 500s in over 12h).
+5. Append cline_task_ledger.md row for the 16:40 PT CS permission grant (ruben_directive_20260809).
+6. EXECUTE_ORDER_66 — file absent on WOPR.
+
+Reference IDs:
+- #25313 [deployed], #25316 [deployed], #25293 [executing], #25314 [executing], #25270 [executing], #25315 [executing], #25269 [deployed]
+- Files: /var/www/emtskills/lib/argus_action_catalog.php, /var/www/emtskills/lib/argus_cluster_scan.php, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/clinerules/Rules/91-attempt-completion-gate-d.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786285065842` — 8/9/2026, 4:45:05 PM PT — 214 turns
 
 **Original task:**
 
@@ -243,11 +294,11 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 what is the GPU actually doing? Can we get it to run more efficintly? -> __The GPU headroom you reserved is gone.__ End-of-session check found the reranker had grown from 5.2GB to 13.4GB, leaving 19 MiB free instead of ~8GB. The embeddings service is stable (2.3GB), so it's the reranker. Both are healthy right now (`/health` 200 on each), so I did not restart anything on a live box at 11pm. Filed as #25311 [proposed]. I deliberately did not call it a leak: PyTorch's caching allocator never returns memory to the driver, so a burst of large batches looks identical from outside. Tellin
 ```
 
-**Ideas referenced:** #14206, #14207, #190957, #2290, #25127, #25158, #25171, #25172, #25185, #25193, #25195, #25201 [rejected], #25223 [executing], #25224 [deployed], #25225 [executing], #25226 [executing], #25256 [deployed], #25279 [rejected], #25280 [deployed], #25282 [rejected], #25283 [deployed], #25294 [blocked], #25295 [blocked], #25311 [proposed], #25312, #25368 [deployed], #25369, #25425 [proposed], #25426 [deployed], #25427 [deployed]
+**Ideas referenced:** #14206, #14207, #190957, #2290, #2295, #25127, #25158, #25171, #25172, #25185, #25193, #25195, #25201 [rejected], #25223 [executing], #25224 [deployed], #25225 [executing], #25226 [executing], #25256 [deployed], #25279 [rejected], #25280 [deployed], #25281, #25282 [rejected], #25283 [deployed], #25294 [blocked], #25295 [blocked], #25311 [proposed], #25312, #25368 [deployed], #25369, #25425 [proposed], #25426 [deployed], #25427 [deployed], #25435 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786288392773` — 8/9/2026, 3:14:57 PM PT — 198 turns
+### `1786288392773` — 8/9/2026, 4:44:59 PM PT — 230 turns
 
 **Original task:**
 
@@ -270,7 +321,198 @@ Investigation only. Five improvement ideas filed. No code changed this session.
 ### T
 ```
 
-**Ideas referenced:** #10740, #11397, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12459, #12657, #12672, #12673, #12689, #12716, #13108, #13121, #13831, #13832, #13874, #13964, #14000 [deployed], #14848, #16120, #16718, #18781, #18786, #19338, #19653, #1967, #19903, #2050, #20536, #21045 [in_progress], #22583 [ready_for_review], #22588, #2293 [deployed], #2294 [deployed], #23206, #23490, #24144, #24183, #24368, #25112 [in_progress], #25120, #25159 [in_progress], #25178 [in_progress], #25185, #25378 [proposed], #25379 [proposed], #25380 [proposed], #25381 [proposed], #25382 [proposed], #25389 [proposed], #25390 [proposed], #25420 [proposed]
+**Ideas referenced:** #10740, #11397, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12459, #12657, #12672, #12673, #12689, #12716, #13108, #13121, #13831, #13832, #13874, #13964, #14000 [deployed], #14848, #16120, #16718, #18781, #18786, #19338, #19653, #1967, #19903, #2050, #20536, #21045 [in_progress], #22583 [ready_for_review], #22588, #2293 [deployed], #2294 [deployed], #2296, #23206, #23490, #24144, #24183, #24368, #25112 [in_progress], #25120, #25159 [in_progress], #25178 [in_progress], #25185, #25378 [proposed], #25379 [proposed], #25380 [proposed], #25381 [proposed], #25382 [proposed], #25389 [proposed], #25390 [proposed], #25420 [proposed], #25436 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786185877066` — 8/9/2026, 4:36:43 PM PT — 120 turns
+
+**Original task:**
+
+```
+continue
+
+## Final Status Report — Completed
+
+### ✅ FIXED (verified on disk, tested):
+
+| File | Issue | Fix |
+|------|-------|-----|
+| `cron_ruben_autonomous.php` (line 2284) | `$retryPendingMaxMin` and `$pendingMaxMin` were referenced but never defined — every SQL bind got NULL (=0), causing the stuck-run reaper to auto-abort healthy fresh pending rows | Defined from config with defaults: `ruben_stuck_run_reaper_retry_pending_min=30`, `ruben_stuck_run_reaper_pending_min=15`. PHP lint pass. |
+| `cron_executor_health_alert.php` (line 13) | `require_once ../lib/sendSMSAuto.php` — file never exis
+```
+
+**Ideas referenced:** #003366, #11764, #16262, #16390, #19429, #22304, #24230 [implemented], #25062 [implemented], #25063 [implemented], #25064 [detected], #25432 [proposed], #25433 [proposed], #25434 [proposed], #2563, #4517, #5451, #78350, #856404
+
+**Last PICKUP PROMPT:**
+
+```
+ation options in handoff file)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — RUBEN backlog emitter (#25064) + verify 3 prior cron fixes.
+
+Where we left off (verified 2026-08-09 16:36 PT):
+- ✅ #25062 [implemented]: cron_ruben_autonomous.php reaper vars defined from config; count=2 on disk.
+- ✅ #25063 [implemented]: cron_executor_health_alert.php uses sms_helper (count=7); broken require/namespace removed.
+- ✅ #24230 [implemented]: RubenExecutor.php classifyFailure KAIZEN fallback at lines 4833-37 reading failure_repair_recipes.detection_pattern; return 'unclassified' at 4874 after fallback.
+- 🔍 #25064 [detected]: ROOT CAUSE FOUND — 76 = needs_review count >12h old (exact DB match). Emitter is RUBEN's own autonomous LLM loop. Full diagnosis at /Users/rubenmajor/Desktop/HANDOFF_NOTES_backlog_emitter.md.
+
+Open threads to drive next (ALL filed as real ideas):
+1. #25064 [detected] — Suppress RUBEN backlog reminder: pick ONE of (a) change RUBEN's backlog-reminder behavior/prompt, (b) work the 76 needs_review backlog down, (c) extend cron_imessage_issues_hygiene.php auto-archiver to dismiss stale ops/critical needs_review items. File: /Users/rubenmajor/Desktop/HANDOFF_NOTES_backlog_emitter.md has full detail.
+2. #25432 [proposed] — Watch orchestrator_recipe_fires unclassified rate over 7d to confirm #24230 KAIZEN fallback drops rate below 50%.
+3. #25433 [proposed] — Confirm cron_ruben_autonomous.php stuck-run reaper runs clean with real config values (no NULL=0 auto-abort) over next 2-3 cycles.
+4. #25434 [proposed] — Confirm cron_executor_health_alert.php sendSMSAuto path fires on a real outage (forced heartbeat-stale or next incident).
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: #25432, #25433, #25434 (all 2026-08-09), #25064 [detected], #25062 [implemented], #25063 [implemented], #24230 [implemented]
+- Files touched: `/var/www/emtskills/cron/cron_ruben_autonomous.php`, `/var/www/emtskills/cron/cron_executor_health_alert.php`, `/var/www/emtskills/lib/RubenExecutor.php`, `/Users/rubenmajor/Desktop/HANDOFF_NOTES_backlog_emitter.md`
+
+When done, update cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786224531010` — 8/9/2026, 4:36:42 PM PT — 384 turns
+
+**Original task:**
+
+```
+#Big Mac
+
+continue
+
+**Everything working. Here's the complete status as of 12:25 PT:**
+
+**#25120 [shipped]** — CORRECTIVE_RETRY_ENABLED live, zero errors since 11:18 restart.
+
+**#25122 [shipped]** — Option B: `executor_plan_race.php` (93 lines) + `executor_parallel_calls_enabled` gate at RubenExecutor:2402. Both `php -l` clean. Awaiting next executor planner tick to exercise curl_multi race.
+
+**#25131 [shipped]** — Rule 147 48h gate REMOVED. `FRESHNESS_HOURS=0` in cron_kaison_wedge_detection.php means `kaison_freshness_gate()` always returns true — Kaison now repairs any classifiable incident 
+```
+
+**Ideas referenced:** #10666, #12060, #12184, #12550, #12609, #12611, #12619, #12900, #202608, #2182, #22770, #24635, #24636, #24645, #24646, #24791, #25097 [executing], #25111 [proposed], #25112 [shipped], #25120 [shipped], #25122 [shipped], #25125 [executing], #25127 [rejected], #25131 [shipped], #25158, #25159, #25172, #25173 [approved], #25176 [rejected], #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [proposed], #25197 [deployed], #6978, #9070, #9999
+
+**Last PICKUP PROMPT:**
+
+```
+eneck)
+
+HANDOFF_NOTES current.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #25196 [deployed] — continue open threads
+
+Where we left off (verified 2026-08-09 16:36 PT):
+- #25196 [deployed] Kaison deadlock trigger + Step 1 bug_library FATAL resolved
+- #25122 [deployed] racePlannerCalls() wired into generatePlan
+- #25125 [deployed] validation harness PHP files confirmed
+- #25097 [deployed] Big Mac serving, 7970X 32c/64t CPU
+- Executor stall emerged ~18:30 on 8/8 (advanced=0 alarms), Ruben working on it in another window
+
+Open threads to drive next:
+1. #25196 [deployed] cron Step 2 FATALs: endpoint column absent from frankenstein_router_incidents; apply #25131 column-adaptive rewrite
+2. #25131 [executing] Kaison universal auto-repair: apply pattern from Step 1 fix to Step 2 wedge detection
+3. #25111 [proposed] TP=4 Big Mac flip when 4th B70 lands; CPU headroom confirmed, not bottleneck
+
+Reference IDs:
+- Ideas: #25196 [deployed], #25122 [deployed], #25125 [deployed], #25097 [deployed], #25111 [proposed], #25131 [executing]
+- Files: RubenExecutor.php, cron_kaison_wedge_detection.php, cron_fleet_validation.php
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786065775388` — 8/9/2026, 4:34:07 PM PT — 152 turns
+
+**Original task:**
+
+```
+can you investigate and resolve this? 
+
+Jonathan Thompson:
+	This never ending Moodle bs Matrix exam button thing is nuts to figure out. Do you have a cheat fix for it?
+
+Ruben Major:
+	No clean cheat for it. Gotta go in and fix it by hand each time.
+- Robo Ruben thanks you for your service
+
+Jonathan Thompson:
+	I don't know how to do that
+
+Ruben Major:
+	Cheat, I mean it’s usually them leaving an exam open (starting one and not finishing it) then lying about it and saying its a bug (which is hard to prove) or they didn’t meet the requirements. 
+
+Jonathan Thompson:
+	It's the Aaron Perez final exam 
+```
+
+**Ideas referenced:** #11735, #12059, #12060, #12615, #12619, #13082, #21667, #2260 [resolved], #24226 [deployed], #25431 [deployed]
+
+**Last PICKUP PROMPT:**
+
+```
+ow written, ops chat notified.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #25431 [deployed] - Kaison student-ops detector for moodle-exam recipe carding
+
+Where we left off (verified 2026-08-09 16:31 PT):
+- Aaron Perez (26815W-47, Moodle UID 52417) took Final Exam 8/6, PASSED 87.3% (attempt 1, finished). Original fix confirmed effective end-to-end.
+- Kaison student-ops detector deployed: lib/kaison_student_ops_detector.php + cron step 6; cards resolved moodle-exam recipes every 30 min. First card posted for incident 2260 (bug library).
+
+Open threads to drive next:
+1. #25431 [deployed] - Watch logs/kaison_student_ops_cards.log for repeat moodle-exam incidents; surface next card to Ruben if another Matrix exam button case appears.
+
+Reference IDs:
+- Ideas filed: #25431 [deployed]
+- Files touched: /var/www/emtskills/lib/kaison_student_ops_detector.php, /var/www/emtskills/cron/cron_kaison_bug_library_organizer.php, /var/www/emtskills/logs/kaison_student_ops_cards.log
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>- [x] Rebase: Aaron Perez PASSED 87.3% on 8/6 — fix verified effective
+- [x] Kaison rules: TIER_3 human-only for Moodle student-ops
+- [x] Bug library incident 2260: full resolution + status resolved + correctly classified
+- [x] Author kaison_student_ops_detector.php
+- [x] Wire step 6 STUDENT-OPS CARD into organizer cron
+- [x] Run organizer cron — student_ops_cards=1
+- [x] Verify card log — Kaison carded incident 2260 with full recipe
+- [x] Verify tracking row in kaison_student_ops_cards
+- [x] Clean up temp files
+- [x] File idea #25431
+- [x] Notify ops chat
+- [x] Validate completion (gates all passed)</task_progress>
+</attempt_completion>
+```
+
+### `1786313131031` — 8/9/2026, 3:23:51 PM PT — 108 turns
+
+**Original task:**
+
+```
+#AI Directed Meditation
+
+For clarification on the idea, it is the idea of holding an idea in the mind that begets another idea. The subject idea is difficult to hold in the mind at the same time as holdingthe object idea as the subject idea is executed at that exact insance. Just for arguments sake. Your point remains valid on 25229 however. 
+
+How are the scans going? 
+
+Resole this -> The real gap was that __nothing tested whether the mechanical claims were true__.
+
+How is this going? Did we execute everythign? which venues are using AI Directed Meditation. Which others acan be used or should 
+```
+
+**Ideas referenced:** #14100, #178629, #23932, #23935, #25185, #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25242, #25268 [deployed], #25313 [deployed], #25364 [deployed], #25366 [deployed], #25374, #25375, #25383 [deployed], #25384 [deployed], #25385 [deployed], #25421 [proposed], #25422 [proposed], #25423 [proposed], #25424 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -735,61 +977,6 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1786224531010` — 8/8/2026, 11:11:05 PM PT — 376 turns
-
-**Original task:**
-
-```
-#Big Mac
-
-continue
-
-**Everything working. Here's the complete status as of 12:25 PT:**
-
-**#25120 [shipped]** — CORRECTIVE_RETRY_ENABLED live, zero errors since 11:18 restart.
-
-**#25122 [shipped]** — Option B: `executor_plan_race.php` (93 lines) + `executor_parallel_calls_enabled` gate at RubenExecutor:2402. Both `php -l` clean. Awaiting next executor planner tick to exercise curl_multi race.
-
-**#25131 [shipped]** — Rule 147 48h gate REMOVED. `FRESHNESS_HOURS=0` in cron_kaison_wedge_detection.php means `kaison_freshness_gate()` always returns true — Kaison now repairs any classifiable incident 
-```
-
-**Ideas referenced:** #10666, #12060, #12184, #12550, #12609, #12611, #12619, #12900, #202608, #2182, #22770, #24635, #24636, #24645, #24646, #24791, #25097 [executing], #25111 [proposed], #25112 [shipped], #25120 [shipped], #25122 [shipped], #25125 [executing], #25127 [rejected], #25131 [shipped], #25158, #25159, #25172, #25173 [approved], #25176 [rejected], #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [proposed], #25197 [deployed], #6978, #9070, #9999
-
-**Last PICKUP PROMPT:**
-
-```
-d.
-
-**HANDOFF_NOTES updated.**
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25122 [deployed] — executor stall since 18:30 (alert 5517756 at 23:00, advanced=0, 327 stuck ideas)
-
-Where we left off (verified 2026-08-08 23:09 PT):
-- #25122 [deployed] racePlannerCalls() wired at RubenExecutor:2420, config gate ON, 45s timeout
-- #25196 [deployed] deadlock trigger + Step 1 bug_library FATAL resolved
-- #25097 [deployed] Big Mac serving HTTP 200, CPU 7970X
-- 2 alerts fired: 18:30 (id=5478531) and 23:00 (id=5517756), both advanced=0, implementer_runs=7-9
-- 327 approved ideas stuck with updated_at 19:30-23:02
-
-Open threads to drive next:
-1. #25122 [deployed] verify race path — read executor log, curl target, confirm race doesn't hang the planner fallback
-2. #25196 [deployed] cron Step 2 kaison_detect_wedge_pattern still FATAL on 'endpoint' column absent in frankenstein_router_incidents — apply column-adaptive rewrite per #25131 [executing]
-3. #25111 [proposed] Big Mac TP=4 when 4th B70 lands
-
-Reference IDs:
-- Ideas: #25122 [deployed], #25196 [deployed], #25125 [deployed], #25097 [deployed], #25111 [proposed], #25131 [executing]
-- Alert IDs: 5478531 (18:30), 5517756 (23:00)
-- Files: RubenExecutor.php, executor_plan_race.php, cron_kaison_wedge_detection.php
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
 
@@ -2000,58 +2187,6 @@ Reference IDs:
 - Artemis runbook pattern followed: Docker intel XPU image + systemd unit + WireGuard mesh mirrors artemis-gpt-oss-120b (10.100.0.5:8000).
 
 When done, append to cline_task_ledger.md (ru
-```
-
-### `1786185877066` — 8/8/2026, 6:07:30 AM PT — 104 turns
-
-**Original task:**
-
-```
-continue
-
-## Final Status Report — Completed
-
-### ✅ FIXED (verified on disk, tested):
-
-| File | Issue | Fix |
-|------|-------|-----|
-| `cron_ruben_autonomous.php` (line 2284) | `$retryPendingMaxMin` and `$pendingMaxMin` were referenced but never defined — every SQL bind got NULL (=0), causing the stuck-run reaper to auto-abort healthy fresh pending rows | Defined from config with defaults: `ruben_stuck_run_reaper_retry_pending_min=30`, `ruben_stuck_run_reaper_pending_min=15`. PHP lint pass. |
-| `cron_executor_health_alert.php` (line 13) | `require_once ../lib/sendSMSAuto.php` — file never exis
-```
-
-**Ideas referenced:** #003366, #11764, #16262, #16390, #19429, #22304, #24230 [implemented], #25062 [implemented], #25063 [implemented], #25064 [detected], #2563, #4517, #5451, #78350, #856404
-
-**Last PICKUP PROMPT:**
-
-```
-FF_NOTES_backlog_emitter.md`
-
-
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — RUBEN backlog emitter suppression + watch ongoing fixes.
-
-Where we left off (verified 2026-08-08 06:07 PT):
-- ✅ #25062, #25063, #24230: all three fixes confirmed on disk. No action needed — watch cron outputs over next 48h.
-- 🔍 #25064: ROOT CAUSE IDENTIFIED. 76 = exact needs_review count >12h old. Emitter is RUBEN's own autonomous LLM loop (not killable via file edit). Diagnosis + 3 remediation options in `/Users/rubenmajor/Desktop/HANDOFF_NOTES_backlog_emitter.md`.
-
-Open threads to drive next:
-1. #25064 [detected] — Pick one of three options from handoff: (a) change RUBEN's backlog-reminder prompt to suppress the 2h nag, (b) work the 76 needs_review backlog down, (c) extend cron_imessage_issues_hygiene.php auto-archiver to dismiss stale ops needs_review items.
-2. Monitor `orchestrator_recipe_fires` unclassified rate over next 7d to confirm #24230 KAIZEN fallback drops rate below 50%.
-3. Confirm `cron_ruben_autonomous.php` stuck-run reaper runs with real config values (not NULL=0) and stops auto-aborting healthy rows.
-4. Confirm `cron_executor_health_alert.php` sends SMS on an actual health outage (test or wait for next incident).
-
-Reference IDs:
-- Ticket: none
-- Ideas filed: #24230 [implemented], #25062 [implemented], #25063 [implemented], #25064 [detected]
-- Files touched: `/var/www/emtskills/cron/cron_ruben_autonomous.php`, `/var/www/emtskills/cron/cron_executor_health_alert.php`, `/var/www/emtskills/lib/RubenExecutor.php`, `/Users/rubenmajor/Desktop/HANDOFF_NOTES_backlog_emitter.md`
-
-When done, update cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```
 
 ### `1786185141628` — 8/8/2026, 6:06:52 AM PT — 96 turns
@@ -3632,74 +3767,6 @@ Reference IDs:
 </attempt_completion>
 ```
 
-### `1786065775388` — 8/6/2026, 6:47:30 PM PT — 82 turns
-
-**Original task:**
-
-```
-can you investigate and resolve this? 
-
-Jonathan Thompson:
-	This never ending Moodle bs Matrix exam button thing is nuts to figure out. Do you have a cheat fix for it?
-
-Ruben Major:
-	No clean cheat for it. Gotta go in and fix it by hand each time.
-- Robo Ruben thanks you for your service
-
-Jonathan Thompson:
-	I don't know how to do that
-
-Ruben Major:
-	Cheat, I mean it’s usually them leaving an exam open (starting one and not finishing it) then lying about it and saying its a bug (which is hard to prove) or they didn’t meet the requirements. 
-
-Jonathan Thompson:
-	It's the Aaron Perez final exam 
-```
-
-**Ideas referenced:** #2260, #24226 [deployed]
-
-**Last PICKUP PROMPT:**
-
-```
- proctored session per policy.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #24226 [executing] - Aaron Perez Final Exam zombie attempts, cache purge + policy unblock
-
-Where we left off (verified 2026-08-06 18:46 PT):
-- Confirmed Aaron Perez (26815W-47, Moodle UID 52417) had 3 epoch-0 zombie Final Exam attempts (704287/703695/703694, sumgrades=0). Those were already deleted by Jonathan T. override ~4 days ago.
-- Root cause: Moodle course cache (c41) still served stale attempt count AND enforcement cron re-failed on 8/3 (policy row 10591, action_taken=1).
-
-Open threads to drive next:
-1. #24226 [executing] - Notify Vicky to retry proctored Zoom session; verify Start button renders.
-
-Reference IDs:
-- Ideas filed: #24226 [executing]
-- Files touched: /tmp/aaron_perez_fix.php, /tmp/aaron_perez_fix_policy.php, /tmp/aaron_perez_check.php
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>- [x] Look up Aaron Perez student record (active: 26815W-47, Moodle UID 52417)
-- [x] Check Moodle enrollment + exam state (attempts 2 & 3 still finish, 0%)
-- [x] Find Final Exam quiz ID in course 41 (quiz_id=854)
-- [x] Find actual Moodle table prefix (empty)
-- [x] Inspect raw quiz_attempts state — 3 epoch-0 zombie attempts confirmed
-- [x] Get canonical repair recipe
-- [x] Inspect Moodle config variable format
-- [x] Write + run fix script — attempts already deleted by prior override
-- [x] Re-verify: quiz_attempts = 0, question_attempts = 0, override intact
-- [x] Reset exam_policy_track block (10591) in moodle_c_live
-- [x] Purge Moodle cache for course 41
-- [x] File idea #24226
-- [x] Final verification — Final Exam attempts gone from recent quizzes
-- [x] Record bug library entry #2260
-- [x] Send ops message to Jonathan</task_progress>
-</attempt_completion>
-```
-
 ### `1785953794202` — 8/6/2026, 6:19:29 PM PT — 584 turns
 
 **Original task:**
@@ -3801,17 +3868,5 @@ To that end i need you also to inject such updates to those ot
 ```
 
 **Ideas referenced:** #0000, #178596, #19338, #19458, #19491, #19599 [deployed], #23666 [proposed], #23667 [executing], #24086 [proposed], #24098 [proposed], #24103 [proposed], #24108 [proposed], #24133 [proposed], #24143 [proposed], #24153 [proposed], #250984, #251236, #5196
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786008133029` — 8/6/2026, 4:18:36 PM PT — 498 turns
-
-**Original task:**
-
-```
-There seems to be something that is submitting courses or something to TDSHS. Can you tell me what is going on with that? I thought we already did a bunch of those semi-automatically before and I just saw a couple fire in the last week or 2 and those submissions need to pause temporarily.
-```
-
-**Ideas referenced:** #13437, #18676, #2187, #2363, #23666 [proposed], #23667 [proposed], #24086 [proposed], #24098 [proposed], #24103 [proposed], #24108 [proposed], #2611, #2703, #600179
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

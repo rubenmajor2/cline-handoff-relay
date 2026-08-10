@@ -6,20 +6,22 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/10/2026, 2:56:12 PM PT | window: last 72h | 91 tasks | index total 608 (parsed 4, cached 604)
+Generated: 8/10/2026, 3:56:13 PM PT | window: last 72h | 92 tasks | index total 610 (parsed 8, cached 602)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786342434047` | 8/10/2026, 2:55:59 PM | 2529 | 3859KB | #Big Mac Claimed Down?? |
-| `1786395180489` | 8/10/2026, 2:53:05 PM | 143 | 544KB | #San Mateo County Complaint/Inspection chenry@smcgov.org send a complaint on July 31 to me |
-| `1786285332678` | 8/10/2026, 2:43:09 PM | 1135 | 15212KB | #Callbacks |
-| `1786396687700` | 8/10/2026, 2:41:04 PM | 66 | 153KB | info@emsuniversity.com is getting way too many emails. About 3-5 a second and mostly says  |
-| `1786340503930` | 8/10/2026, 2:16:06 PM | 670 | 2638KB | #Argus |
+| `1786342434047` | 8/10/2026, 3:56:07 PM | 2975 | 4342KB | #Big Mac Claimed Down?? |
+| `1786402206620` | 8/10/2026, 3:56:05 PM | 48 | 130KB | #LLM Fleet |
+| `1786401898030` | 8/10/2026, 3:56:00 PM | 79 | 2186KB | Corrected the Customer Service role visibility issue in the Telephony Hub Callbacks tab, p |
+| `1786395180489` | 8/10/2026, 3:55:57 PM | 173 | 616KB | #San Mateo County Complaint/Inspection chenry@smcgov.org send a complaint on July 31 to me |
+| `1786396687700` | 8/10/2026, 3:55:29 PM | 109 | 248KB | info@emsuniversity.com is getting way too many emails. About 3-5 a second and mostly says  |
+| `1786392003768` | 8/10/2026, 3:50:36 PM | 90 | 244KB | #AI Direct Meditation |
+| `1786285332678` | 8/10/2026, 3:42:46 PM | 1136 | 15874KB | #Callbacks |
+| `1786340503930` | 8/10/2026, 3:28:55 PM | 792 | 2994KB | #Argus |
 | `1786391277181` | 8/10/2026, 2:14:28 PM | 205 | 592KB | Why is frankenstein-llm iterating at 50% of its normal speed? |
 | `1786384439089` | 8/10/2026, 2:12:51 PM | 246 | 2110KB | Why am i just receiving these chat transcripts now? That's not very helpful |
 | `1786229794274` | 8/10/2026, 1:42:07 PM | 70 | 385KB | #Externships |
 | `1786086916545` | 8/10/2026, 1:40:55 PM | 284 | 1378KB | Tell me how the student council is doing. Is it healthy? It actually generating ideas and  |
-| `1786392003768` | 8/10/2026, 1:14:42 PM | 72 | 193KB | #AI Direct Meditation |
 | `1786381856309` | 8/10/2026, 1:09:23 PM | 218 | 606KB | If you take a look at all the CPR class websites, it seems that traffic on those is very l |
 | `1786386328622` | 8/10/2026, 12:48:13 PM | 163 | 335KB | /emtskills wedged yet again. Please check handoffs over the last few days. What's going on |
 | `1786384771407` | 8/10/2026, 12:47:55 PM | 254 | 580KB | #AI Directed Meditation |
@@ -100,13 +102,12 @@ Generated: 8/10/2026, 2:56:12 PM PT | window: last 72h | 91 tasks | index total 
 | `1786144700222` | 8/7/2026, 8:25:22 PM | 368 | 730KB | #TDSHS |
 | `1786088761151` | 8/7/2026, 5:08:08 PM | 206 | 719KB | Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversit |
 | `1786135150364` | 8/7/2026, 5:03:39 PM | 264 | 411KB | emsuniversity.com is laggy, slow and needs to go faster. Something is bogiging it down |
-| `1786135267277` | 8/7/2026, 3:41:47 PM | 32 | 173KB | I would like to start having a system where we auto-assign externships based on location/d |
 
 ---
 
 ## Per-window detail
 
-### `1786342434047` — 8/10/2026, 2:55:59 PM PT — 2529 turns
+### `1786342434047` — 8/10/2026, 3:56:07 PM PT — 2975 turns
 
 **Original task:**
 
@@ -133,7 +134,37 @@ stdesk_devices + reverse tunnels
 </use_mcp_tool>
 ```
 
-### `1786395180489` — 8/10/2026, 2:53:05 PM PT — 143 turns
+### `1786402206620` — 8/10/2026, 3:56:05 PM PT — 48 turns
+
+**Original task:**
+
+```
+#LLM Fleet
+
+Still can't see all the Spark boxes or other romans here for SSH access under Server Terminal Access at: https://www.emsuniversity.com/emtskills/routes/mdm_portal.php 
+
+approved -> - #25580 [proposed] the CORRECT engine-reaper design, replacing the one that broke julia: reap the previous generation INSIDE the relaunch cleanup in julia_unified_tp2.sh and claudia_unified_worker.sh, where "everything currently alive is the old generation" is true by construction. Read-only audit first on cesar (ssh -p 2203), cato (2204), claudia (2206), augustus, tiberius, pompey, marcus, artemis (10.
+```
+
+**Ideas referenced:** #16844, #178639, #2299, #23171, #25097, #25565 [executing], #25567 [executing], #25571 [rejected], #25580 [proposed], #64748, #8984
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786401898030` — 8/10/2026, 3:56:00 PM PT — 79 turns
+
+**Original task:**
+
+```
+Corrected the Customer Service role visibility issue in the Telephony Hub Callbacks tab, plus 3 related callback-system issues found during the investigation.
+
+Root cause: /var/www/emtskills/routes/telephony_hub.php line 2520 wrapped the entire Callbacks tab button in if ($isTelephonyAdmin) only (MasterAdmin/ExecAdmin/ITAdmin/Admin), excluding Customer Service role staff even though $isCSUser = !empty($user['is_cs']) already existed in the same file for other telephony features. Changed to if ($isTelephonyAdmin || $isCSUser). Lint check passed, backup taken first. The tab-panel content div its
+```
+
+**Ideas referenced:** #25593 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786395180489` — 8/10/2026, 3:55:57 PM PT — 173 turns
 
 **Original task:**
 
@@ -141,11 +172,105 @@ stdesk_devices + reverse tunnels
 #San Mateo County Complaint/Inspection chenry@smcgov.org send a complaint on July 31 to me rmajor@emsuniversity.com. I did not get it until today when I received his email just now after he called me and I picked up. He said he sent it to matt rios, program director also. I told him we didn't get it until today. He agreed to give us until 8/19. I told him that we were unexpectedly busy this summer and there was a lot of demand without looking at the complaint and not sure if that's what it was about or not. The 3 attachments are in the email. He wants to do an inspection also but didn't set a 
 ```
 
-**Ideas referenced:** #0369, #0891, #1368, #1565, #15803, #166534, #20581, #2292, #2301, #25313, #25365 [deployed], #25366 [proposed], #25525, #25534, #25535, #25537, #25548 [executing], #25562, #2563, #334155, #475569, #6366, #64748, #92400
+**Ideas referenced:** #0369, #047857, #0891, #111827, #1368, #1565, #15803, #166534, #20581, #2292, #2301, #25313, #25365 [deployed], #25366 [proposed], #25525, #25534, #25535, #25537, #25548 [executing], #25562, #2563, #25659 [proposed], #25660 [proposed], #25661 [proposed], #25662 [proposed], #25663 [proposed], #25664 [proposed], #334155, #475569, #6366, #64748, #78350, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+ledgment email draft to Chad).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — San Mateo County EMSA audit investigation response assembly.
+
+Where we left off (verified 2026-08-10 15:48 PT):
+- compliance_investigations id=24 [awaiting_review] — entity san_mateo_emsa, dossier at /personnel/investigations/san-mateo-2026/DOSSIER_COMPLAINT_SUMMARY.md
+- compliance_investigation_responses id=181 [awaiting_review] — Round 1 draft acknowledgment + proposed response plan
+- 6 files on disk at /var/www/emtskills/personnel/investigations/san-mateo-2026/
+- PROPOSED_RESPONSE.md covers all 10 complaint items with evidence requirements and action owners
+- ACK_EMAIL_REPLY_DRAFT.md is a draft email back to Chad confirming receipt and the 8/19 12:00 p.m. PT deadline
+- Ruben steer applied: Agency document request may be overly broad — written response to the 10 items is the priority, not full production of all 9 categories. Inspection is deferred (Chad has not set a date — do not push). Matt Rios email will be determined by Jon. Box upload folder access TBD.
+
+Open threads to drive next:
+1. #25659 [proposed] — Ruben review and send acknowledgment email to Chad (draft in ACK_EMAIL_REPLY_DRAFT.md)
+2. #25664 [proposed] — Refine PROPOSED_RESPONSE.md for narrower scope per Ruben steer: focus on written response to 10 complaint items with targeted supporting evidence, not full 9-category production
+
+Reference IDs:
+- Investigation: compliance_investigations id=24 [awaiting_review]
+- Response draft: compliance_investigation_responses id=181 [awaiting_review]
+- Ideas filed: #25659, #25664 [proposed]
+- Files on disk: /var/www/emtskills/personnel/investigations/san-mateo-2026/ (6 files: 3 PDFs, ACK_EMAIL_REPLY_DRAFT.md, PROPOSED_RESPONSE.md, DOSSIER_COMPLAINT_SUMMARY.md)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786396687700` — 8/10/2026, 3:55:29 PM PT — 109 turns
+
+**Original task:**
+
+```
+info@emsuniversity.com is getting way too many emails. About 3-5 a second and mostly says ideas or something. Anyway, it's chosing out sthe server.
+```
+
+**Ideas referenced:** #16523, #18944, #18951, #202608, #20581, #2292, #2301, #25313, #25365 [deployed], #25366 [proposed], #25525, #25534, #25535, #25537, #25548 [executing], #25562, #25591 [proposed], #25602 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ows, each a unique idea alert.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #20260810 - idea_delivery_watchdog email flood: stopped + fixed + duplicates purged
+
+Where we left off (verified 2026-08-10 15:50 PT):
+- Flood: 143,364 watchdog emails over 3 days (Aug 8: 50,942 / Aug 9: 67,355 / Aug 10: 25,067) — ~1,300 unique idle ideas x ~25 copies (30-min cron x 2 duplicate crons double-firing). All to rmajor@ with Reply-To info@.
+- Stopped: both crons disabled 14:24 PT, duplicate /etc/cron.d/emsu-idea-watchdog deleted, single www-data cron re-enabled.
+- Fixed: /var/www/emtskills/routes/cron_idea_delivery_watchdog.php rewritten — [a]+[b] now ONE consolidated email per run, MAX_EMAILS_PER_RUN=2. Live-verified 2 emails vs 1,122.
+- DB cleanup: 140,615 duplicate rows deleted from email_outbound_log. Kept 2,749 (one per idea per day). Final: Aug 8: 876 / Aug 9: 872 / Aug 10: 1,001.
+- #25591 [approved] — mailer-level per-source rate limiter to prevent per-row email loops.
+- #25602 [proposed] — cron lock so duplicate cron entries cannot double-fire same script.
+
+Open threads to drive next:
+1. (human-only decision, no idea) — Ruben's inbox cleanup: Postmark already delivered the emails; DB rows are deduplicated but the 143,364 inbox copies remain available to bulk-delete in the mail client.
+2. #25591 [approved] — Implement per-send_source rate limiter in lib/mailer.php: track send_source+to_email in 5-min window, deny if >N, configurable per source.
+3. #25602 [proposed] — Add flock/pid lock to cron_idea_delivery_watchdog.php so only one instance can run at a time (prevents duplicate-cron double-fire).
+
+Reference IDs:
+- Ideas filed: #25591 [approved], #25602 [proposed]
+- Files touched: /var/www/emtskills/routes/cron_idea_delivery_watchdog.php (rewritten, consolidated email logic), /etc/cron.d/idea-delivery-watchdog (re-enabled, single www-data entry), /etc/cron.d/emsu-idea-watchdog (deleted)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786392003768` — 8/10/2026, 3:50:36 PM PT — 90 turns
+
+**Original task:**
+
+```
+#AI Direct Meditation
+
+Antyhign else? 
+
+Good catch, updated. The promise-keeping sweep's refund evidence now covers every payment rail we actually use, not just Authorize.net.
+
+The spec of #25561 [executing] was amended in the orchestrator record at 12:46 PT: money-promise fulfillment evidence = QuickBooks (invoice status, credit memos, payments), Authorize.net (refundTransaction rows), Stripe (refund/charge objects), Klarna (refund status), and Affirm (loan status via the existing lookup tools). The checker first resolves WHICH rail the student's original charge used (the verify_payment_state
+```
+
+**Ideas referenced:** #178638, #23920, #23922, #23923, #25185, #25229, #25238 [executing], #25240 [executing], #25241 [executing], #25385, #25401, #25422, #25424, #25525 [executing], #25530 [executing], #25531 [executing], #25534 [deployed], #25535 [deployed], #25537 [executing], #25555 [executing], #25560 [executing], #25561 [executing]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786285332678` — 8/10/2026, 2:43:09 PM PT — 1135 turns
+### `1786285332678` — 8/10/2026, 3:42:46 PM PT — 1136 turns
 
 **Original task:**
 
@@ -218,47 +343,7 @@ function bookCallbackSlot(PDO $pdo, string $name, string $phone, string $reason,
             $
 ```
 
-### `1786396687700` — 8/10/2026, 2:41:04 PM PT — 66 turns
-
-**Original task:**
-
-```
-info@emsuniversity.com is getting way too many emails. About 3-5 a second and mostly says ideas or something. Anyway, it's chosing out sthe server.
-```
-
-**Ideas referenced:** #16523, #18944, #18951, #20581, #2292, #2301, #25313, #25365 [deployed], #25366 [proposed], #25525, #25534, #25535, #25537, #25548 [executing], #25562, #25591 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-u'll want to bulk-delete these
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — idea_delivery_watchdog email flood aftermath.
-
-Where we left off (verified 2026-08-10 14:35 PT):
-- Flood stopped, root cause fixed, script deployed with hard cap
-- #25591 [proposed] — mailer-level per-source rate limiter to prevent future per-row email floods from any cron/agent
-- 25,061 emails in rmajor's inbox that may need bulk cleanup
-
-Open threads to drive next:
-1. #25591 [proposed] — Implement per-send_source rate limiter in lib/mailer.php sendEmail(). Track send_source + to_email in a 5-min window, deny if >N (default 50). Configurable per source. The fix prevents any cron with a per-row email pattern from flooding.
-2. (human-only decision, no idea) — 25,061 watchdog emails in Ruben's inbox. Bulk-delete or mark-as-read approach per Ruben's preference. No script needed unless he wants one.
-
-Reference IDs:
-- Ideas filed: #25591 [proposed]
-- Files touched: /var/www/emtskills/routes/cron_idea_delivery_watchdog.php, /etc/cron.d/idea-delivery-watchdog, /etc/cron.d/emsu-idea-watchdog (deleted)
-- Backup: auto-backed up by write_server_file
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786340503930` — 8/10/2026, 2:16:06 PM PT — 670 turns
+### `1786340503930` — 8/10/2026, 3:28:55 PM PT — 792 turns
 
 **Original task:**
 
@@ -275,7 +360,7 @@ require_once __DIR__ . '/../lib/argus_reclaim.php';   // file does not exist
 The orphan-reclaim logic already lives inline at lines 210-230 in the same file. The `require_once` introduced in the 2026-08-09 deployment was a duplicate with a nonexistent path, so every cycle claimed tasks → DISPATCH → `require_once` fatal → process died before `curl_multi_exec` ran → tasks never completed, and 
 ```
 
-**Ideas referenced:** #10141, #11944, #12463, #12568, #12619, #1356, #15306, #16213, #17483, #18378, #18530, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20547, #21125, #21126, #22511, #22583, #22688, #22850, #23027, #23036, #23039, #23053, #23428, #23429, #23468, #23489, #23506, #23592, #23675, #23852, #23913, #23920, #23941, #23952, #23982, #24200, #24766, #24897, #24900, #24926, #24941, #24990, #25047, #25058, #25131, #25142, #25193, #25196, #25269, #25313, #25385, #25464 [ready_for_review], #25465 [approved], #25466 [approved], #25525, #25530, #25531, #25547 [proposed], #25552 [proposed], #25553, #25554 [proposed], #25555, #25563 [proposed], #25564, #25571 [proposed], #25572, #25573, #25574 [deployed], #25582, #25586, #25587, #25768, #2606, #2620, #2862, #2911, #2912, #334155, #4338, #4421, #5700, #57343, #57351, #57357, #57362, #64748, #7137, #8892
+**Ideas referenced:** #10003, #10005, #10141, #10182, #11944, #12301, #12463, #12568, #12619, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #1356, #15306, #16213, #16263, #17483, #18378, #18530, #18745, #18770, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19370, #2006, #20547, #21125, #21126, #21140, #21262, #22511, #22583, #22688, #22850, #23027, #23036, #23039, #23053, #23428, #23429, #23468, #23489, #23506, #23592, #23675, #23852, #23913, #23920, #23941, #23952, #23982, #24200, #24766, #24897, #24900, #24926, #24941, #24990, #25047, #25058, #25131, #25142, #25193, #25196, #25269, #25313, #25385, #25464 [ready_for_review], #25465 [approved], #25466 [approved], #25525, #25530, #25531, #25547 [proposed], #25552 [proposed], #25553, #25554 [proposed], #25555, #25563 [proposed], #25564, #25571 [proposed], #25572, #25573, #25574 [deployed], #25582, #25586, #25587, #25595 [proposed], #25768, #2606, #2620, #274160, #2862, #2911, #2912, #30363, #334155, #4338, #4421, #5700, #57343, #57351, #57357, #57362, #64748, #69707, #7137, #8645, #8892, #8942, #9650, #9654, #9660, #9733, #9889
 
 **Last PICKUP PROMPT:**
 
@@ -446,24 +531,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1786392003768` — 8/10/2026, 1:14:42 PM PT — 72 turns
-
-**Original task:**
-
-```
-#AI Direct Meditation
-
-Antyhign else? 
-
-Good catch, updated. The promise-keeping sweep's refund evidence now covers every payment rail we actually use, not just Authorize.net.
-
-The spec of #25561 [executing] was amended in the orchestrator record at 12:46 PT: money-promise fulfillment evidence = QuickBooks (invoice status, credit memos, payments), Authorize.net (refundTransaction rows), Stripe (refund/charge objects), Klarna (refund status), and Affirm (loan status via the existing lookup tools). The checker first resolves WHICH rail the student's original charge used (the verify_payment_state
-```
-
-**Ideas referenced:** #178638, #23920, #23922, #23923, #25185, #25229, #25238 [executing], #25240 [executing], #25241 [executing], #25385, #25401, #25422, #25424, #25525 [executing], #25530 [executing], #25531 [executing], #25534 [deployed], #25535 [deployed], #25537 [executing], #25555 [executing], #25560 [executing], #25561 [executing]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786381856309` — 8/10/2026, 1:09:23 PM PT — 218 turns
 
@@ -3627,49 +3694,3 @@ emsuniversity.com is laggy, slow and needs to go faster. Something is bogiging i
 **Ideas referenced:** #24714 [proposed], #24715 [proposed], #24772 [proposed], #24773 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786135267277` — 8/7/2026, 3:41:47 PM PT — 32 turns
-
-**Original task:**
-
-```
-I would like to start having a system where we auto-assign externships based on location/distance from the location of the student within a 150 mile radius for externships. I need to spec this: https://emsuniversity.com/emtskills/externship/dashboard.php
-```
-
-**Ideas referenced:** #24757 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
- the existing Google Maps key.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Externship auto-assignment by 150-mile distance radius spec delivery.
-(No numeric task ID available; topic: externship distance-based auto-assign spec)
-
-Where we left off (verified 2026-08-07 ~15:40 PT):
-- Spec written to /var/www/emtskills/docs/specs/externship_auto_assign_distance.md
-- Idea #24757 [proposed] filed in orchestrator_ideas
-- All tables audited live: NO lat/lng columns anywhere, NO existing matching code, 204 pending requests, 55 active sites
-- ExternshipRegions, ExternshipAssignments, ExternshipMatchAudit all empty/unused
-
-Open threads to drive next:
-1. #24757 [proposed] — Approve idea, then run Phase 1 migrations: ALTER TABLE Students + ExternshipSite to add latitude/longitude/geocode_quality/geocoded_at/service_radius_miles columns (SQL in /var/www/emtskills/docs/specs/externship_auto_assign_distance.md)
-2. #24757 [proposed] — Create scripts/geocode_sites.php + scripts/geocode_students.php to batch-geocode using Google Geocoding API with city-centroid fallback
-3. #24757 [proposed] — Create lib/geocode.php with haversineDistance() PHP helper + run MySQL haversine_miles stored function creation
-4. #24757 [proposed] — Create lib/match_engine.php with ExternshipMatchEngine class
-5. #24757 [proposed] — Add Auto-Assign panel to dashboard.php above Pending Requests grid + create api/auto_match.php + api/auto_assign.php
-
-Reference IDs:
-- Idea: #24757 [proposed]
-- Dashboard: https://emsuniversity.com/emtskills/externship/dashboard.php
-- Spec file: /var/www/emtskills/docs/specs/externship_auto_assign_distance.md
-- Database: admin_portal (MySQL)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```

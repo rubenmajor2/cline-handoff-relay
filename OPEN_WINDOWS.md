@@ -6,20 +6,23 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/10/2026, 12:56:12 PM PT | window: last 72h | 88 tasks | index total 605 (parsed 8, cached 597)
+Generated: 8/10/2026, 1:56:12 PM PT | window: last 72h | 90 tasks | index total 607 (parsed 8, cached 599)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786285332678` | 8/10/2026, 12:56:09 PM | 965 | 14760KB | #Callbacks |
-| `1786342434047` | 8/10/2026, 12:56:04 PM | 739 | 1920KB | #Big Mac Claimed Down?? |
-| `1786340503930` | 8/10/2026, 12:56:02 PM | 463 | 2336KB | #Argus |
-| `1786391277181` | 8/10/2026, 12:56:01 PM | 58 | 177KB | Why is frankenstein-llm iterating at 50% of its normal speed? |
-| `1786381856309` | 8/10/2026, 12:55:46 PM | 181 | 505KB | If you take a look at all the CPR class websites, it seems that traffic on those is very l |
-| `1786384439089` | 8/10/2026, 12:55:37 PM | 151 | 1558KB | Why am i just receiving these chat transcripts now? That's not very helpful |
+| `1786342434047` | 8/10/2026, 1:56:10 PM | 1695 | 2955KB | #Big Mac Claimed Down?? |
+| `1786391277181` | 8/10/2026, 1:56:04 PM | 121 | 320KB | Why is frankenstein-llm iterating at 50% of its normal speed? |
+| `1786384439089` | 8/10/2026, 1:55:35 PM | 207 | 1671KB | Why am i just receiving these chat transcripts now? That's not very helpful |
+| `1786395180489` | 8/10/2026, 1:53:00 PM | 1 | 3KB | #San Mateo County Complaint/Inspection chenry@smcgov.org send a complaint on July 31 to me |
+| `1786340503930` | 8/10/2026, 1:52:52 PM | 565 | 2537KB | #Argus |
+| `1786285332678` | 8/10/2026, 1:44:53 PM | 978 | 14850KB | #Callbacks |
+| `1786229794274` | 8/10/2026, 1:42:07 PM | 70 | 385KB | #Externships |
+| `1786086916545` | 8/10/2026, 1:40:55 PM | 284 | 1378KB | Tell me how the student council is doing. Is it healthy? It actually generating ideas and  |
+| `1786392003768` | 8/10/2026, 1:14:42 PM | 72 | 193KB | #AI Direct Meditation |
+| `1786381856309` | 8/10/2026, 1:09:23 PM | 218 | 606KB | If you take a look at all the CPR class websites, it seems that traffic on those is very l |
 | `1786386328622` | 8/10/2026, 12:48:13 PM | 163 | 335KB | /emtskills wedged yet again. Please check handoffs over the last few days. What's going on |
 | `1786384771407` | 8/10/2026, 12:47:55 PM | 254 | 580KB | #AI Directed Meditation |
 | `1786319043926` | 8/10/2026, 11:12:58 AM | 270 | 1889KB | #TDSHS |
-| `1786086916545` | 8/10/2026, 10:43:19 AM | 278 | 1364KB | Tell me how the student council is doing. Is it healthy? It actually generating ideas and  |
 | `1786379859145` | 8/10/2026, 10:42:53 AM | 318 | 1547KB | #AI Directed Meditation |
 | `1786318471535` | 8/9/2026, 11:16:54 PM | 304 | 791KB | I got a report of executor stalling. Play frankenstein doctor of executor and resolve and  |
 | `1786337811635` | 8/9/2026, 11:13:06 PM | 253 | 524KB | why is frankenstein-llm appearing to be sluggish. Can you take a look? |
@@ -52,7 +55,6 @@ Generated: 8/10/2026, 12:56:12 PM PT | window: last 72h | 88 tasks | index total
 | `1786227462879` | 8/8/2026, 7:14:55 PM | 501 | 843KB | #Executor Ops |
 | `1786226983152` | 8/8/2026, 6:49:37 PM | 418 | 1013KB | what is 25220?  |
 | `1786233427989` | 8/8/2026, 6:25:54 PM | 208 | 707KB | #Argus |
-| `1786229794274` | 8/8/2026, 5:34:29 PM | 42 | 261KB | #Externships |
 | `1786232853169` | 8/8/2026, 5:09:49 PM | 146 | 889KB | I'm noticing a rule 91 regression since litellm wend down about 30 minutes ago. I'm concer |
 | `1786229375596` | 8/8/2026, 4:32:47 PM | 266 | 810KB | Something just knocked out frankenstein-llm. Can't find which process did it. Can you brin |
 | `1786211568282` | 8/8/2026, 4:25:57 PM | 492 | 1167KB | #Argus |
@@ -103,7 +105,150 @@ Generated: 8/10/2026, 12:56:12 PM PT | window: last 72h | 88 tasks | index total
 
 ## Per-window detail
 
-### `1786285332678` — 8/10/2026, 12:56:09 PM PT — 965 turns
+### `1786342434047` — 8/10/2026, 1:56:10 PM PT — 1695 turns
+
+**Original task:**
+
+```
+#Big Mac Claimed Down??
+
+approved -> - #25468 [proposed] : make the canary quarantine a connection-RESET upstream instead of ranking it least-loaded. Both boxes are back but the ranker inversion that let a dead socket win first pick is still in the code, so the next tunnel with no engine behind it repeats the incident.
+
+- #25471 [proposed] : reconcile the frankenstein-tools drop-ins, now 34 files. Three set FRANK_EXECUTOR_CAP and one contradicts its own comment. Every Environment= line in the main unit file is dead because drop-ins override all of them.
+
+
+confused on why this is beneficial? Se
+```
+
+**Ideas referenced:** #0078, #10234, #12335, #12459, #12657, #12672, #127891, #128274, #13121, #1378, #13832, #13840, #1557, #16120, #1802, #1803, #1806, #1811, #18159, #18163, #18178, #18179, #18180, #18189, #18212, #18213, #18214, #18720, #18868, #19125, #19163, #19903, #19907, #19925, #20247, #20264, #20272, #2050, #20536, #2092, #20957, #20958, #2096, #21045, #22583, #22588, #2298, #23171, #24144, #24145, #24165, #24173, #24183, #24220, #24368, #25097, #25112, #25150, #25151, #25188, #25468 [proposed], #25469 [rejected], #25470 [deployed], #25471 [proposed], #25515 [proposed], #25536 [proposed], #30363, #334155, #4932, #64748, #6785, #6825, #6842, #8984, #9019, #9070
+
+**Last PICKUP PROMPT:**
+
+```
+stdesk_devices + reverse tunnels
+- [ ] Verify all SSH via portal
+- [ ] Ledger + PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1786391277181` — 8/10/2026, 1:56:04 PM PT — 121 turns
+
+**Original task:**
+
+```
+Why is frankenstein-llm iterating at 50% of its normal speed?
+
+do not inject anthropic
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11953, #12314, #12365, #12366, #12368, #12459, #12477, #12618, #12657, #12672, #12689, #12824, #12872, #12878, #13108, #13121, #13202, #13832, #13874, #16120, #16163, #16265, #16304, #16674, #16676, #16844, #17202, #1754, #1755, #1781, #18312, #18326, #19338, #1989, #20495, #21045, #2254, #2258, #22583, #2299, #2302, #23169, #23171, #24144, #24172, #24186, #24217, #25097, #25112, #25468, #25471, #25565 [proposed], #25567 [proposed], #25571 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786384439089` — 8/10/2026, 1:55:35 PM PT — 207 turns
+
+**Original task:**
+
+```
+Why am i just receiving these chat transcripts now? That's not very helpful
+```
+
+**Ideas referenced:** #18335, #19837, #2271, #2274, #2275, #2292, #2423, #24635, #24636, #24645, #24646, #24791, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25550 [proposed], #25551 [proposed], #6366, #6526, #6548, #9152
+
+**Last PICKUP PROMPT:**
+
+```
+Backups: `.bak-rtx3-20260810`.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Verify chat transcript real-time delivery overnight, close ideas 25550 and 25551
+
+Where we left off (verified 2026-08-10 13:09 PT):
+- All four changes live on WOPR, lint-clean, FPM reloaded:
+  1. Real-time transcripts fire on chat close (handleUpdateStatus + handleBulkClose)
+  2. DSML tool-call envelopes stripped from assistant messages before save (widgetStripEmoji, 3 regexes)
+  3. closed_at DATETIME column on every conversation table, set in all close paths
+  4. Default recipient changed rmajor@ to info@emsuniversity.com
+  5. Cron cap raised 5 to 200 to drain the remaining backlog
+- Backups: .bak-rtx3-20260810 on all four files
+
+Open threads to drive next:
+1. #25550 [deployed] — Confirm no new DSML leaks appear in new transcripts over 48h. If backfill-clean of existing rows is desired, run a one-off UPDATE message_text with REGEXP_REPLACE on the DSML patterns.
+2. #25551 [deployed] — Confirm new transcripts land at info@ within minutes of chat close. Verify backlog drains fully by tomorrow morning.
+3. Mark both ideas as complete in orchestrator DB once confirmed.
+
+Reference IDs:
+- Ideas filed: #25550 [deployed], #25551 [deployed]
+- Files touched: api/chat_widget_api.php, api/chat_portal_api.php, cron/cron_chat_transcript_autosend.php, lib/chat_transcript_mailer.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786395180489` — 8/10/2026, 1:53:00 PM PT — 1 turns
+
+**Original task:**
+
+```
+#San Mateo County Complaint/Inspection chenry@smcgov.org send a complaint on July 31 to me rmajor@emsuniversity.com. I did not get it until today when I received his email just now after he called me and I picked up. He said he sent it to matt rios, program director also. I told him we didn't get it until today. He agreed to give us until 8/19. I told him that we were unexpectedly busy this summer and there was a lot of demand without looking at the complaint and not sure if that's what it was about or not. The 3 attachments are in the email. He wants to do an inspection also but didn't set a 
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786340503930` — 8/10/2026, 1:52:52 PM PT — 565 turns
+
+**Original task:**
+
+```
+#Argus
+
+**Argus 12-task backup: RESOLVED + durable fix deployed. Jon notified in Argus.**
+
+## Root cause (verified live)
+`cron_argus_task_worker.php` crashed on EVERY 2-minute cycle at line 441:
+```php
+require_once __DIR__ . '/../lib/argus_reclaim.php';   // file does not exist
+```
+The orphan-reclaim logic already lives inline at lines 210-230 in the same file. The `require_once` introduced in the 2026-08-09 deployment was a duplicate with a nonexistent path, so every cycle claimed tasks → DISPATCH → `require_once` fatal → process died before `curl_multi_exec` ran → tasks never completed, and 
+```
+
+**Ideas referenced:** #10141, #11944, #12463, #12568, #12619, #1356, #15306, #16213, #17483, #18378, #18530, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20547, #21125, #21126, #22511, #22583, #22688, #22850, #23027, #23036, #23039, #23053, #23428, #23429, #23468, #23489, #23506, #23592, #23675, #23852, #23913, #23920, #23941, #23952, #23982, #24200, #24766, #24897, #24900, #24926, #24941, #24990, #25047, #25058, #25131, #25142, #25193, #25196, #25269, #25313, #25464 [ready_for_review], #25465 [approved], #25466 [approved], #25547 [proposed], #25552 [proposed], #25553, #25554 [proposed], #25555, #25563 [proposed], #25564, #25571 [proposed], #25572, #25573, #25574 [deployed], #25768, #2606, #2620, #2862, #2911, #2912, #334155, #4338, #4421, #5700, #57343, #57351, #57357, #57362, #64748, #7137, #8892
+
+**Last PICKUP PROMPT:**
+
+```
+═══════════════════════════════════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════════════════════════════════
+Pick up task — Argus/Kaison reliability hardening: SATURATION gate, SQL wildcard filter, role whitelist, cron watchdog.
+
+Where we left off (verified 2026-08-10 13:33 PT):
+- All 4 approved ideas deployed + lint-clean + crons registered (2-min wedge detector: /etc/cron.d/emsu-kaison-wedge-detection; 5-min self-test: /etc/cron.d/emsu-kaison-self-test)
+- Files touched: cron_argus_task_worker.php (SATURATION at L231-234), alltastic_api.php (wildcard filter + role whitelist + $insertRole), cron_kaison_self_test.php (new)
+- Idea statuses: #25553 deployed, #25572 deployed, #25573 deployed, #25574 deployed [deployed]
+- 10-task test portfolio (431-440) closed: blank-role + wildcard-edge findings resolved
+
+Open threads to drive next:
+1. #25563 [proposed] — verify wedge-detector cron actually fires + self-test log grows (re-check after 5 min of uptime)
+2. #25554 [proposed] — real user-facing test of role whitelist: queue as blank role, confirm 400 rejection response
+
+Reference IDs:
+- Ideas filed: #25553, #25572, #25573, #25574 [deployed]
+- Ideas open: #25563 [proposed], #25554 [proposed]
+- Files touched: /var/www/emtskills/routes/cron_argus_task_worker.php, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/cron/cron_kaison_self_test.php, /etc/cron.d/emsu-kaison-wedge-detection, /etc/cron.d/emsu-kaison-self-test
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786285332678` — 8/10/2026, 1:44:53 PM PT — 978 turns
 
 **Original task:**
 
@@ -152,100 +297,111 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786342434047` — 8/10/2026, 12:56:04 PM PT — 739 turns
+### `1786229794274` — 8/10/2026, 1:42:07 PM PT — 70 turns
 
 **Original task:**
 
 ```
-#Big Mac Claimed Down??
+#Externships
 
-approved -> - #25468 [proposed] : make the canary quarantine a connection-RESET upstream instead of ranking it least-loaded. Both boxes are back but the ranker inversion that let a dead socket win first pick is still in the code, so the next tunnel with no engine behind it repeats the incident.
-
-- #25471 [proposed] : reconcile the frankenstein-tools drop-ins, now 34 files. Three set FRANK_EXECUTOR_CAP and one contradicts its own comment. Every Environment= line in the main unit file is dead because drop-ins override all of them.
-
-
-confused on why this is beneficial? Se
+Pickup the New Externship Scheduling plan where we will be moving towards scheduling students, without permitting their initial request. What's the first step?
 ```
 
-**Ideas referenced:** #0078, #10234, #12335, #12459, #12657, #12672, #127891, #128274, #13121, #1378, #13832, #13840, #1557, #16120, #1802, #1803, #1806, #1811, #18159, #18163, #18178, #18179, #18180, #18189, #18212, #18213, #18214, #18720, #18868, #19125, #19163, #19903, #19907, #19925, #20247, #20264, #20272, #2050, #20536, #2092, #20957, #20958, #2096, #21045, #22583, #22588, #2298, #23171, #24144, #24145, #24165, #24173, #24183, #24220, #24368, #25097, #25112, #25150, #25151, #25188, #25468 [proposed], #25469 [rejected], #25470 [deployed], #25471 [proposed], #25515 [proposed], #25536 [proposed], #30363, #334155, #4932, #64748, #6785, #6825, #6842, #8984, #9019, #9070
+**Ideas referenced:** #19217, #19438 [ready_for_review], #20757 [approved], #2271, #23223, #23308, #23382 [open], #24184, #24556 [proposed], #24557 [proposed], #24558 [superseded], #24635, #24636, #24645 [unknown], #24646, #24791 [deployed], #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25129 [ready_for_review], #25131, #25156 [proposed], #25157 [approved], #25158, #25159, #25172, #25173, #25175 [proposed], #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [executing], #25220, #25227, #25228, #25246 [executing], #25445 [approved], #25526 [deployed], #25529 [approved], #57179
 
 **Last PICKUP PROMPT:**
 
 ```
-stdesk_devices + reverse tunnels
-- [ ] Verify all SSH via portal
-- [ ] Ledger + PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
-```
+n it. That is the right order.
 
-### `1786340503930` — 8/10/2026, 12:56:02 PM PT — 463 turns
-
-**Original task:**
-
-```
-#Argus
-
-**Argus 12-task backup: RESOLVED + durable fix deployed. Jon notified in Argus.**
-
-## Root cause (verified live)
-`cron_argus_task_worker.php` crashed on EVERY 2-minute cycle at line 441:
-```php
-require_once __DIR__ . '/../lib/argus_reclaim.php';   // file does not exist
-```
-The orphan-reclaim logic already lives inline at lines 210-230 in the same file. The `require_once` introduced in the 2026-08-09 deployment was a duplicate with a nonexistent path, so every cycle claimed tasks → DISPATCH → `require_once` fatal → process died before `curl_multi_exec` ran → tasks never completed, and 
-```
-
-**Ideas referenced:** #10141, #12619, #1356, #18378, #18530, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20547, #21125, #21126, #22511, #22583, #22688, #23036, #23039, #23053, #23428, #23468, #23489, #23506, #23592, #23675, #23852, #23913, #23920, #23941, #23952, #23982, #24766, #24897, #24900, #24926, #24941, #24990, #25047, #25058, #25131, #25142, #25193, #25196, #25269, #25313, #25464 [ready_for_review], #25465 [approved], #25466 [approved], #25547 [proposed], #25552 [proposed], #25563, #25564, #25571 [proposed], #25572, #25573, #25574, #25768, #2606, #2620, #2862, #2911, #2912, #334155, #4338, #4421, #5700, #64748, #7137, #8892
-
-**Last PICKUP PROMPT:**
-
-```
-ed. Healthy drain pattern.
-
-═══════════════════════════════════════════════════
+═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up the 10-task argus test analysis — corrections shipped, enhancements filed.
+═══════════════════════════════════════════════
 
-Where we left off (verified 2026-08-10 12:00 PT):
-- 10/10 test tasks (ids 431-440) completed and analyzed
-- 2 test tasks offloaded due to infra wedge (T7 #25547, T10 #25552)
-- Kaison wedge detection cron entry installed: `/etc/cron.d/emsu-kaison-wedge-detection` (every 2 min)
-- Fran-tools adapter wedge (11:28 PT) resolved via manual restart; detector now watching
-- Enhancement filed: #25571 SATURATION count panic switch (P1, infra)
+Pick up task #25156 -- Externship scheduling road map session recap with v2.1 integration opinion
+
+Where we left off (verified 2026-08-10 13:38 PT):
+- Full session recap delivered (road map, plain-language, non-disruptive path, v2.1 opinion).
 
 Open threads to drive next:
-1. #25571 [proposed] — Implement SATURATION panic switch in `cron_argus_task_worker.php`: if COUNT(queued+running) >= 8, dispatch ONE task instead of all. Prevents the concurrent-dispatch wedge we hit.
-2. #25547 [proposed] — T7 offloaded: "TEST-10-SUITE-7 long text stress" — review the offloaded idea and close as test artifact or investigate why 3x timeout.
-3. #25552 [proposed] — T10 offloaded: "TEST-10-SUITE-10 2+2 blank role" — review, close as test artifact.
+1. #25129 [ready_for_review] -- Deploy the v2.1 dashboard card (safe, non-disruptive, visibility-only gateway)
+2. #25157 [ready_for_review] OR #25246 [ready_for_review] -- Deploy the SLS prerequisite (both ready; pick one or consolidate)
+3. #25156 [proposed] -- Approve v3 when ready to flip the switch to the full auto-assign model
 
 Reference IDs:
-- Ideas filed: #25571, #25547, #25552, #25464 [deployed], #25466 [deployed]
-- Files touched: `/var/www/emtskills/routes/cron_argus_task_worker.php`, `/var/www/emtskills/cron/cron_kaison_wedge_detection.php`, `/etc/cron.d/emsu-kaison-wedge-detection`
-- Tasks: 431-440
+- Ideas filed: #25156 [proposed], #25246 [ready_for_review]
+- External verified: #25129 [ready_for_review], #25157 [ready_for_review], #25529 [approved]
+- Files touched: /var/www/emtskills/docs/specs/externship_auto_assign_v3.md, /var/www/emtskills/docs/EXTERNSHIP_PROCESS.md, /var/www/emtskills/docs/specs/externship_auto_assign_v21_eligibility_gated.md, /var/www/emtskills/lib/externship_auto_assign_v2.php, /var/www/emtskills/routes/_view_externship_auto_assign_v2.php
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786086916545` — 8/10/2026, 1:40:55 PM PT — 284 turns
+
+**Original task:**
+
+```
+Tell me how the student council is doing. Is it healthy? It actually generating ideas and tasks and acting on them? Or is a block? If it's blocked can you fix it?
+```
+
+**Ideas referenced:** #10108, #1050, #10740, #11741, #11781, #12345, #12477, #12618, #12802, #12824, #12872, #12878, #12879, #13202, #1373, #16163, #16265, #16304, #16695 [awaiting_review], #16822, #16844, #18312, #18326, #19171, #19370, #19427, #19438 [ready_for_review], #19573, #20757 [approved], #22258, #22294, #23117, #23171, #23185, #23223, #23308, #23341, #23382 [open], #23945, #24026, #24054 [deployed], #24055 [proposed], #24056 [proposed], #24239, #24539 [deployed], #24540 [proposed], #24541 [proposed], #24556 [proposed], #24557 [proposed], #24558 [proposed], #24559 [approved], #25129 [ready_for_review], #25156, #25157 [ready_for_review], #25175 [proposed], #25246 [ready_for_review], #25376, #25445 [approved], #25480, #25526 [proposed], #25527 [deployed], #25529 [proposed], #2763, #3957, #4536, #5031, #6057, #6104, #6413, #6432, #64748, #7228, #78350, #9090, #92400, #9475
+
+**Last PICKUP PROMPT:**
+
+```
+n top of the existing minutes.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — #25529 build: exec-admin approval email routing for council ideas.
+
+Where we left off (verified 2026-08-10 13:40 PT):
+- #25529 [approved] — Design complete. Ruben needs to sign off on domain→approver map before any email code fires.
+- Existing council emails: post-session minutes to rmajor + jthompson. This is UNCHANGED.
+- NEW email: approval request to domain-matching exec-admin with SIGN_OFF_BLOCK + vote tally.
+- Recipients verified: jthompson@emsuniversity.com, vthompson@emsuniversity.com in daystrom_minutes_recipients.
+- #25526 [deployed] — Council seed tool-list stripped.
+- #25527 [rejected] — Bypass fix rejected. Fleet-compliant alternative needed if Haiku not in LiteLLM.
+
+Open threads to drive next:
+1. #25529 [approved] — Ruben approves domain map → build email trigger in council harvest OR DB trigger ON INSERT.
+2. #25527-replacement — If council model still needs fleet-compliant routing, register real Anthropic Haiku in LiteLLM config rather than hardcoded bypass.
+
+Reference IDs:
+- #25529 [approved] — Council exec-admin approval routing
+- #25526 [deployed] — Tool-list stripped from seed
+- #25129 [ready_for_review] — Externship auto-assign v2.1 (in externship window)
+- #25157 [approved] — SLS data prerequisite
+- Council file: /var/www/emtskills/cron/cron_daystrom_council.php
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════
+═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
 
-### `1786391277181` — 8/10/2026, 12:56:01 PM PT — 58 turns
+### `1786392003768` — 8/10/2026, 1:14:42 PM PT — 72 turns
 
 **Original task:**
 
 ```
-Why is frankenstein-llm iterating at 50% of its normal speed?
+#AI Direct Meditation
 
-do not inject anthropic
+Antyhign else? 
+
+Good catch, updated. The promise-keeping sweep's refund evidence now covers every payment rail we actually use, not just Authorize.net.
+
+The spec of #25561 [executing] was amended in the orchestrator record at 12:46 PT: money-promise fulfillment evidence = QuickBooks (invoice status, credit memos, payments), Authorize.net (refundTransaction rows), Stripe (refund/charge objects), Klarna (refund status), and Affirm (loan status via the existing lookup tools). The checker first resolves WHICH rail the student's original charge used (the verify_payment_state
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12314, #12365, #12366, #12368, #12459, #12477, #12618, #12657, #12672, #12824, #12872, #12878, #13108, #13121, #13202, #13832, #13874, #16120, #16163, #16265, #16304, #16844, #17202, #18312, #18326, #19338, #20495, #21045, #22583, #2299, #23171, #24144, #25097, #25468
+**Ideas referenced:** #178638, #23920, #23922, #23923, #25185, #25229, #25238 [executing], #25240 [executing], #25241 [executing], #25385, #25401, #25422, #25424, #25525 [executing], #25530 [executing], #25531 [executing], #25534 [deployed], #25535 [deployed], #25537 [executing], #25555 [executing], #25560 [executing], #25561 [executing]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786381856309` — 8/10/2026, 12:55:46 PM PT — 181 turns
+### `1786381856309` — 8/10/2026, 1:09:23 PM PT — 218 turns
 
 **Original task:**
 
@@ -258,82 +414,33 @@ If you take a look at all the CPR class websites, it seems that traffic on those
 **Last PICKUP PROMPT:**
 
 ```
-ng from the P1 recovery fixes.
+ | Same Plesk CLI limitation |
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #25549 — CPR class website audit, all fixes approved except #25540
+Pick up task #25549 — CPR fixes execution session
 
-Where we left off (confirmed 2026-08-10 12:42 PT):
-- Full audit of 16 CPR domains completed, 9 ideas filed: #25538 through #25545, #25549
-- Ruben approved ALL active fixes 2026-08-10. Verified in orchestrator_ideas:
-  - #25538 [approved] — Redirect cprinstructor.co to emsuniversity.com (currently HTTP 500)
-  - #25539 [approved] — Investigate phoenixcpr.org payment cliff (900 lifetime to 7 in 90d)
-  - #25542 [approved] — Investigate cprclass.org QBMS stalls at wc-processing (12 orders w/ real txn IDs)
-  - #25541 [approved] — Add SEO plugins to all 9 active CPR sites
-  - #25543 [approved] — Add chat_widget to top 5 CPR sites
-  - #25545 [approved] — Build CPA cross-tracking CPR to EMT enrollment
-  - #25544 [approved] — Consolidate 4 zombie CPR domains
-- #25540 [blocked] — LA/Portland/Houston forms void, sites not staffed yet, WAIT
-- Expected impact communicated: $3,000-3,400/quarter stranded revenue recovery + organic growth multiplier
+Where we left off (confirmed 2026-08-10 13:10 PT):
+- 7 approved fixes ready to execute: #25538-#25539-#25541-#25542-#25543-#25544-#25545
+- #25538 (cprinstructor.co redirect) attempted 6 ways; Plesk CLI cannot do external 301. Needs Plesk web UI: Hosting Settings → Permanent redirect to https://emsuniversity.com
+- nginx.conf.custom placed at /var/www/vhosts/system/cprinstructor.co/conf/nginx.conf.custom but not auto-included by Plesk template
+- #25540 blocked (LA/Portland/Houston not staffed)
 
 Open threads to drive next:
-1. #25538 [approved] P1 — Implement 301 redirect cprinstructor.co to emsuniversity.com in Plesk vhost config (nginx/PHP 8.4)
-2. #25539 [approved] P1 — Diagnose phoenixcpr.org wpforms QB webhook/token, restore payment processing
-3. #25542 [approved] P1 — Diagnose cprclass.org WooCommerce QBMS order-completion hook; 12 orders stuck in wc-processing
-4. #25541 [approved] P2 — Install and configure Yoast SEO on 9 active CPR sites
-5. #25543 [approved] P2 — Add EMSU chat widget to tucsoncpr, sanfranciscocpr, sanantoniocpr, cprsandiego, dallascpr
-6. #25545 [approved] P2 — Build CPR-to-EMT UTM attribution in admin_portal
-7. #25544 [approved] P3 — 301-redirect baltimorecpr, bostoncprtraining, freecprclasses, cprguidelines to nearest active city site
-8. #25540 [blocked] — WAIT until LA/Portland/Houston are staffed
+1. #25539 [approved] P1 — Diagnose phoenixcpr.org payment cliff: check wpforms-qb webhook URL, QB token validity, recent wpforms_logs entries in wp_bv0te DB
+2. #25542 [approved] P1 — Diagnose cprclass.org QBMS: check WooCommerce webhook delivery, MyWorks QB Sync log, manually advance stuck order 1186 to wc-completed
+3. #25538 [approved] P1 — Complete cprinstructor.co redirect via Plesk web UI (not CLI-doable)
+4. #25541 [approved] P2 — Install Yoast SEO on 9 active CPR WP sites via WP-CLI or direct file deploy
+5. #25543 [approved] P2 — Deploy EMSU chat widget to tucsoncpr, sanfranciscocpr, sanantoniocpr, cprsandiego, dallascpr
+6. #25545 [approved] P2 — Build CPR-to-EMT UTM attribution table in admin_portal
+7. #25544 [approved] P3 — 301-redirect zombie domains (baltimorecpr, bostoncprtraining, freecprclasses, cprguidelines) — same Plesk CLI limitation as #25538, may need Plesk UI
 
 Reference IDs:
 - Ideas: #25538 [approved], #25539 [approved], #25540 [blocked], #25541 [approved], #25542 [approved], #25543 [approved], #25544 [approved], #25545 [approved], #25549 [proposed]
-- Files touched: /var/www/vhosts/cprinstructor.co/httpdocs (error log), /var/www/vhosts/cprclass.org/httpdocs/wp-config.php, wp_q31ow (sanfranciscocpr), wp_id7ic (tucsoncpr), wp_yjqlq (dallascpr), wp_uiabm (cprsandiego), wp_g79da (sanantoniocpr), wp_bv0te (phoenixcpr), wp_9skw8 (cprclass.org)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786384439089` — 8/10/2026, 12:55:37 PM PT — 151 turns
-
-**Original task:**
-
-```
-Why am i just receiving these chat transcripts now? That's not very helpful
-```
-
-**Ideas referenced:** #18335, #19837, #2271, #2274, #2275, #2292, #2423, #24635, #24636, #24645, #24646, #24791, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25550 [proposed], #25551 [proposed], #6366, #6526, #6548, #9152
-
-**Last PICKUP PROMPT:**
-
-```
-0` on all three files touched.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Chat transcript real-time delivery deployed, verify overnight drain
-
-Where we left off (verified 2026-08-10 12:53 PT):
-- Chat transcript delay root cause fixed: `handleUpdateStatus`/`handleBulkClose` now fire `sendChatTranscriptEmail()` immediately on close (chat_portal_api.php lines 870-890, 997-1020). DSML envelopes stripped from assistant messages before save (widgetStripEmoji, lines 1027-1033).
-- Cron cap raised 5→200 in cron_chat_transcript_autosend.php to drain the current backlog.
-- Live-verified: test transcript sent for conv 6548, email delivered, sent-log row inserted.
-- Ideas #25550 and #25551 fixed in this same session; can be closed.
-- VAPI telephony transcripts already real-time inline; no changes needed.
-
-Open threads to drive next:
-1. #25550 [fixed-in-flux] — Close idea once Ruben confirms no more DSML leaks appear in new transcripts (widgetStripEmoji now strips them before save).
-2. #25551 [fixed-in-flux] — Close idea once Ruben confirms new transcripts arrive within minutes of chat close (real-time send is wired into both close paths).
-3. Monitor the sent_log over the next 24h to confirm the backlog drain works at the 200-cap rate and no new transcripts are stuck.
-
-Reference IDs:
-- Ideas filed: #25550 [fixed-in-flux], #25551 [fixed-in-flux]
-- Files touched: api/chat_widget_api.php, api/chat_portal_api.php, cron/cron_chat_transcript_autosend.php
+- Files touched: /var/www/vhosts/system/cprinstructor.co/conf/nginx.conf (edited+restored), /var/www/vhosts/system/cprinstructor.co/conf/vhost.conf (created), /var/www/vhosts/system/cprinstructor.co/conf/nginx.conf.custom (created)
+- DBs: wp_bv0te (phoenixcpr), wp_9skw8 (cprclass.org), wp_q31ow (sf), wp_id7ic (tucson), wp_yjqlq (dallas), wp_uiabm (sandiego), wp_g79da (sa)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -407,53 +514,6 @@ Where we left off (verified 2026-08-10 11:12 PT):
 - ARGUMENT INVERTED AND STRENGTHENED. Six requests sent 7/30 were all acked 8/4 within a two-hour window at uniform five-day latency, proving the intake process works. Against that control group, the legacy request is damning: inv row 172 records from CLARIFICATION_PLAYBOOK_TPIA_2026.md line 75 that THE FEE ON ORR A07152025.0450008 WAS PAID IN FULL AND THE REQUEST WAS NEVER PROCESSED. Jon Thompson emailed DSHS about that same ORR on 2026-03-20; DSHS answered 2026-07-29 with a cost estimate, two days after the 7/27 renewal, still no production.
 - OPEN QUESTION: the ORR prefix A0715-2025 reads as a July 2025 assignment, about 13 months, NOT 3 years. Either the 3-year request is a separate earlier one that never received an ORR number, or the duration needs revising. Every "roughly three years" claim was REMOVED from the PDF and replaced with the verified paid-fee facts.
 - SUNSET PDF v3 REBUILT: /Users/rubenmajor/Desktop/sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-10.pdf, 11 pages, 412.8 KB. Item 3 rewritten as a full address-misdirection treatment; item 4 rewritten around the acknowledged-in-days versus paid-and-unperformed contrast with a new pull quote; exec summary first bullet an
-```
-
-### `1786086916545` — 8/10/2026, 10:43:19 AM PT — 278 turns
-
-**Original task:**
-
-```
-Tell me how the student council is doing. Is it healthy? It actually generating ideas and tasks and acting on them? Or is a block? If it's blocked can you fix it?
-```
-
-**Ideas referenced:** #10108, #1050, #10740, #11741, #11781, #12345, #12477, #12618, #12802, #12824, #12872, #12878, #12879, #13202, #1373, #16163, #16265, #16304, #16695 [awaiting_review], #16822, #16844, #18312, #18326, #19171, #19370, #19427, #19438 [ready_for_review], #19573, #20757 [approved], #22258, #22294, #23117, #23171, #23185, #23223, #23308, #23341, #23382 [open], #23945, #24026, #24054 [deployed], #24055 [proposed], #24056 [proposed], #24239, #24539 [deployed], #24540 [proposed], #24541 [proposed], #24556 [proposed], #24557 [proposed], #24558 [proposed], #24559 [approved], #25129 [ready_for_review], #25156, #25157 [ready_for_review], #25175 [proposed], #25246 [ready_for_review], #25376, #25445 [approved], #25480, #25526 [proposed], #25527 [deployed], #25529 [proposed], #2763, #3957, #4536, #5031, #6057, #6104, #6413, #6432, #64748, #7228, #78350, #9090, #92400, #9475
-
-**Last PICKUP PROMPT:**
-
-```
- fit frankenstein-tools ctx]...
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Externship Auto-Assign v2.1 idea integration: merge/bridge/supersede council + orphan externship ideas into #25129.
-
-Where we left off (verified 2026-08-10 10:42 PT):
-- #25129 [ready_for_review] — Externship Auto-Assign v2.1 (eligibility-gated, 8-check gate, 4-6 day fast-track).
-- #25526 [deployed] — Council tool-list stripped from seed prompt.
-- #20757 [approved] — Original tool-trigger removal idea (parent of #25526).
-- #25157 [approved] — SLS data prerequisite (student_lifecycle_states + externship_eligibility_status).
-
-Open threads to drive next (externship ideas to integrate):
-1. #24556 [proposed] — Supersede. 60-day flag is subsumed by v2.1's eligibility engine.
-2. #24557 [proposed] — Bridge as prerequisite. Mentor cap gate before routing is v2.1's gate #2.
-3. #24558 [superseded] — Supersede. Council crisis cron replaced by v2.1.
-4. #25445 [approved] [P1] — Bridge as monitoring layer. Daystrom R6 flag for incomplete placements.
-5. #25157 [approved] — Bridge as THE SLS prerequisite. Populate tables, then v2.1 eligibility engine runs.
-6. #25246 [ready_for_review] [P0] — Populate SLS prerequisite for auto-assign (Week 1 Part C.1).
-7. #25175 [proposed] — Evaluate. Provider-first is different philosophy; decide keep/merge.
-8. #23382 [open] [critical] — Bridge as scope + acceptance test. 505 open requests is the backlog v2.1 must reduce.
-9. #19438 [ready_for_review] [P1] — Bridge. Specific cohort (Aahana Chakravartti + cohort) as first test group.
-
-Reference IDs:
-- Plan: #25129 [ready_for_review]
-- SLS prerequisite: #25157 [approved]
-- Council seed fixed: #25526 [deployed]
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```
 
 ### `1786379859145` — 8/10/2026, 10:42:53 AM PT — 318 turns
@@ -1712,48 +1772,6 @@ Reference IDs:
 - Argus: task 381, argus_task_messages notification to Jon
 
 When done, append to cline_task_ledg
-```
-
-### `1786229794274` — 8/8/2026, 5:34:29 PM PT — 42 turns
-
-**Original task:**
-
-```
-#Externships
-
-Pickup the New Externship Scheduling plan where we will be moving towards scheduling students, without permitting their initial request. What's the first step?
-```
-
-**Ideas referenced:** #19217, #2271, #23223, #23308, #24184, #24635, #24636, #24645 [unknown], #24646, #24791 [deployed], #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25131, #25156 [proposed], #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [executing], #25220, #25227, #25228, #25246 [executing], #57179
-
-**Last PICKUP PROMPT:**
-
-```
-oss the process-changing line.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25156 [proposed] - Non-disruptive path forward for New Externship Scheduling plan
-
-Where we left off (verified 2026-08-08 17:34 PT):
-- Ruben asked what can move forward WITHOUT changing the current process. No build started.
-- externship_auto_assign_v3.md (idea #25156 [proposed]) is the canonical plan.
-- Answer: additive groundwork only. Item 1 = eligibility groundwork (Phase 1, currently 0 rows). Item 2 = site/distance reference data with free geocoding. Item 3 = fix broken notification .edu senders (reliability, no behavior change).
-- The process-changing line (auto-assign, scheduled-notifications, request-form change) stays untouched for now.
-
-Open threads to drive next:
-1. #25246 [executing] - Populate SLS eligibility tables (the safe, non-disruptive Phase 1 prerequisite)
-2. (human-only decision, no idea) - Ruben picks which of the three non-disruptive items to start, or confirms eligibility groundwork first
-
-Reference IDs:
-- Ideas filed: #25156 [proposed], #25246 [executing]
-- Files touched: /var/www/emtskills/docs/specs/externship_auto_assign_v3.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
 ```
 
 ### `1786232853169` — 8/8/2026, 5:09:49 PM PT — 146 turns

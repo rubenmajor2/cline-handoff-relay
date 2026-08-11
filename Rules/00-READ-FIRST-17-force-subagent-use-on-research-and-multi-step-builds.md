@@ -1,11 +1,14 @@
 # Force subagent use + first-tool-call tripwire (default-on, not judgment)
 
+## ⛔ SUBAGENT BAN — frankenstein-llm windows (2026-08-11 Ruben directive)
+
+**Running on `frankenstein-llm`? Subagents are BANNED. Do NOT call `use_subagents`.** Too slow, stall out easily. Run all multi-step work inline in the main window — use parallel MCP tool calls in a single response block when you need speed. This OVERRIDES the default-ON policy below until Ruben explicitly lifts the ban.
 
 ## The default (FLIPPED 2026-06-21 — subagents are default-ON)
 
 **Default first move on every new Cline task that needs research or multi-step work = subagents.**
 
-**Where subagents actually run (corrected 2026-08-05, live-verified):** they land on the local 120B pool via the `frankenstein-tools` adapter, NOT on `deepseek-v4-pro`. Two measured reasons: (1) `EMSU_SUBAGENT_DS=0` in the live litellm container, and (2) even at `=1` the DS reroute in `_router_core.py` requires `not _has_tools_rc`, but 95.7% of `frankenstein-llm` turns carry tools (1177 of 1230 in an 8000-row audit sample), so the flag would move only the 4.3% non-tool remainder. Tool turns are deliberately kept off DeepSeek (it leaks `reasoning_content` on tool calls, FED-DOCTOR fix 2026-07-07). Cost is still effectively $0 because the pool is local. Practical consequence for you: subagent dispatch CONSUMES the same 120B capacity as the main window, so a wide fan-out can slow your own interactive turns. Prior text claimed DeepSeek routing was "enforced server-side" — that was false in production. See idea #23528.
+**Where subagents actually run:** the local 120B pool via `frankenstein-tools` adapter (NOT `deepseek-v4-pro`; see idea #23528). Cost is ~$0 but dispatch CONSUMES the same 120B capacity as the main window, so a wide fan-out can slow your interactive turns. Full routing analysis: `Rules-archive/00-case-law.md`.
 
 The main window uses inline MCP tools for single-step operations (one server read, one DB query, one status check). Multi-step research, multi-file analysis, or anything needing parallel investigation → dispatch subagents per the fetch-then-paste pattern below.
 
@@ -16,6 +19,7 @@ Use inline MCP tools (no dispatch) when the entire task is:
 - A direct response to a simple question with no investigation needed
 - Work that requires MCP tools the subagent doesn't have (server reads, DB writes, iMessage sends)
 - Ruben explicitly says "no subagents" / "inline" / "just do it directly"
+- **frankenstein-llm window** — subagents BANNED (2026-08-11 Ruben directive: too slow, stall out). Run inline. See BAN block at top.
 
 ## The tripwire (mandatory — applies to EVERY tool call, not just the first)
 
@@ -137,10 +141,6 @@ If the task is "figure out what I even need to look at", the shape is iterative:
 
 
 Before any non-`use_subagents` tool early in a task: is this task single-step (one lookup, one check)? If no → dispatch subagents. If halfway through `attempt_completion` on a multi-step task I never dispatched a subagent for → abandon, dispatch.
-
-## Reversal
-
-Revert this section. cline-handoff-relay syncs to Artemis hourly.
 
 ## Source incidents
 

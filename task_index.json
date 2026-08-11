@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-11T20:49:48.462Z",
+ "generated_at": "2026-08-11T21:49:48.832Z",
  "counts": {
-  "parsed": 3,
-  "reused": 639,
+  "parsed": 6,
+  "reused": 638,
   "failed": 0,
-  "total": 642
+  "total": 644
  },
  "tasks": {
   "1784522296714": {
@@ -123007,13 +123007,13 @@
   },
   "1786467822115": {
    "task_id": "1786467822115",
-   "mtime": 1786477308696,
+   "mtime": 1786482572504,
    "created_at": "2026-08-11T17:03:42.115Z",
-   "last_modified": "2026-08-11T19:41:48.696Z",
-   "size_kb": 736,
-   "turn_count": 310,
+   "last_modified": "2026-08-11T21:09:32.504Z",
+   "size_kb": 772,
+   "turn_count": 328,
    "title": "frankenstein-llm is stalling this morning. Why? \n\n\nPompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  \n\n\nBoth answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.\n\n## Where 671 came from, and it is now durable\n\nWritten to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.\n\nTwo counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, divided by elapsed wall seconds:\n\n```javascript\ndecode=12.65 prefill=658.82 TOTAL_TOKENS_PER_S=671.47\n```\n\nSee Also: https://www.emsuniversity.c",
-   "pickup_prompt": "e GLM, not just the chat path.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #25765 [approved] - fleet capacity projection, remove UPSTREAMS_VLLM exclusion of :8210\n\nWhere we left off (verified 2026-08-11 12:41 PT):\n- #25765 approved: capacity projection + remove UPSTREAMS_VLLM exclusion of :8210\n- All classifier work filed: v3 hybrid (#25764 [executing]) with 30% floor\n- GLM capacity fix applied (8210=8), GLM-first on all lanes, 4 upstreams restored\n- Tracking doc at /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md\n\nOpen threads to drive next:\n1. #25765 [approved] - remove UPSTREAMS_VLLM exclusion of :8210, capacity projection planning\n2. #25764 [executing] - build v3 hybrid classifier in router_hook.py\n3. #25755 [executing] - increase max_num_seqs 15 to 32 (requires watchdog #23169 [approved] first)\n4. #25759 [executing] - monitor GLM utilization percentage to verify 30-70% target\n5. #25747 [executing] - add :8210 to adapter canary monitoring (addressed via upstream restoration)\n6. #25757 [executing] - v1 keyword-only classifier (will be superseded by #25764 [executing])\n\nReference IDs:\n- Ideas filed: #25747 [executing], #25755 [executing], #25757 [executing], #25759 [executing], #25764 [executing], #25765 [approved]\n- Ideas rejected: #25754 [rejected] (had classifier backwards)\n- Files touched: /etc/systemd/system/frankenstein-tools.service.d/85-glm-capacity.conf, /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md\n- Bug library: 2314 (agent false zombie), 2307 (sci-notation parse), 2294 (STREAK fix)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result><task_progress>- [x] Classifier v1 filed and rejected (wrong direction)\n- [x] Classifier v2 filed (keywords only, superseded)\n- [x] Classifier v3 filed and approved (hybrid keyword + 7B-LoRA + 30% floor)\n- [x] Answer Ruben's question about what we did for classifying\n- [x] Approve #25765 (fleet capacity projection + UPSTREAMS_VLLM exclusion removal)</task_progress></attempt_completion>",
+   "pickup_prompt": "ld idle ideas from months ago)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #25765 [approved] - ideas stuck in executing, queue backlog identified\n\nWhere we left off (verified 2026-08-11 14:09 PT):\n- All 6 ideas are in_progress but dev_stage is empty, approved_at is NULL\n- 15+ P0 ideas are ahead of ours in the executor queue\n- Executor is running (heartbeats every 4 min) but working through P0 backlog\n- ETA: P1 in 1-2h, P2 in 2-4h, P3 in 4-6h\n- Options: promote to P0, fix approved_at, hand-ship, or clean P0 backlog\n\nOpen threads to drive next:\n1. #25755 [executing] - max_num_seqs 32, stuck behind P0 queue (P1 priority)\n2. #25764 [executing] - v3 hybrid classifier, stuck behind P0 queue (P2 priority)\n3. #25765 [approved] - capacity projection, stuck behind P0 queue (P2 priority)\n4. #25747 [executing] - canary monitoring, stuck behind P0 queue (P2 priority)\n5. #25759 [executing] - monitor 30% floor, stuck behind P0 queue (P3 priority)\n6. #25757 [executing] - v1 keyword classifier, stuck behind P0 queue (P2 priority)\n\nReference IDs:\n- Ideas filed: #25747 [executing], #25755 [executing], #25757 [executing], #25759 [executing], #25764 [executing], #25765 [approved]\n- Ideas rejected: #25754 [rejected] (had classifier backwards)\n- Files touched: /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md\n- Bug library: 2314 (agent false zombie), 2307 (sci-notation parse), 2294 (STREAK fix)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result><task_progress>- [x] All session work complete\n- [x] Update tracking document with final session state\n- [x] Check executor status on all executing ideas\n- [x] Report ETA to Ruben</task_progress></attempt_completion>",
    "ideas": {
     "1754": null,
     "1755": null,
@@ -123154,6 +123154,8 @@
     "24172": null,
     "24217": "approved",
     "25097": null,
+    "25137": null,
+    "25141": null,
     "25185": null,
     "25646": null,
     "25747": "proposed",
@@ -123171,13 +123173,13 @@
   },
   "1786467898078": {
    "task_id": "1786467898078",
-   "mtime": 1786478354156,
+   "mtime": 1786483958709,
    "created_at": "2026-08-11T17:04:58.078Z",
-   "last_modified": "2026-08-11T19:59:14.156Z",
-   "size_kb": 1658,
-   "turn_count": 240,
+   "last_modified": "2026-08-11T21:32:38.709Z",
+   "size_kb": 1811,
+   "turn_count": 274,
    "title": "#MDM\n\nRebase and continue / add to MDM if not already added\n\n**Your ExecStartPost question, answered:** your instinct is right, that shape is probably bad. `ExecStartPost=curl /v1/models` holds the unit in `activating` until the probe passes, which does kill the lie where `systemctl is-active` reports healthy for an engine that never bound its port. But Big Mac takes minutes to load 15 weight shards, so any `TimeoutStartSec` shorter than real load time makes systemd kill a perfectly healthy slow start — and with `Restart=always` that becomes a restart loop on a box that would have come up fine on its own. That trades a silent wedge for a noisy self-inflicted outage that fires on every cold s",
-   "pickup_prompt": "H tunnel (box physically down)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #1786342434047 — Complete Cicero, Nero & Maximus MDM enrollment.\n\nWhere we left off (verified 2026-08-11 12:54 PT):\n- **NERO**: Verified working. WOPR→127.0.0.1:2223 SSH works (rubenmajor@EMSU-SMS-Mac.localdomain).\n- **MAXIMUS**: Tunnel 2224 alive, WOPR key NOT installed on that Mac. Desktop SSH timed out — need current LAN IP.\n- **CICERO**: Keys installed multiple times. Box appears physically down (Cisco Mac IP .252 ARP-resolves, SSH times out).\n- Portal config files all updated on WOPR (web_terminal_token.php, ws_ssh_proxy.py, mdm_portal.php).\n\nOpen threads to drive next:\n1. #25758 [proposed] — Install WOPR pubkey on Maximus, verify WOPR→2224 SSH works\n2. #25760 [proposed] — Power on Cicero + revive M5→WOPR reverse tunnel, verify SSH\n\nReference IDs:\n- Ticket: #MDM\n- Ideas filed: #25744 [approved], #25758 [proposed], #25760 [proposed]\n- Files touched: /var/www/emtskills/scripts/ws_ssh_proxy.py, /var/www/emtskills/routes/web_terminal_token.php\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "ey gives immediate SSH access.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #1786342434047 — finish #MDM: install WOPR key on Maximus + revive Cicero tunnel.\n\nWhere we left off (verified 2026-08-11 14:31 PT):\n- **Portal configs** (web_terminal_token.php, ws_ssh_proxy.py, mdm_portal.php): all three hosts enrolled, verified on disk.\n- **NERO**: FULLY working. WOPR tunnel 2223 verified. Key installed. ✅\n- **MAXIMUS**: Tunnel 2224 alive. WOPR key NOT installed on the M4. Key install pending.\n- **CICERO**: Box ON (.252:22 OPEN). Keys installed. Reverse M5 tunnel to WOPR is DEAD — blocking all WOPR access.\n\nOpen threads to drive next:\n1. #25758 [proposed] — Install WOPR pubkey on Maximus. Find its LAN IP (try maximus.local, m4mac.local, or ARP .74 8e:de:a3:a8:58:35), SSH from Ruben's desktop, append WOPR key, verify `ssh -i /home/emsuserver/.ssh/id_ed25519 rubenmajor@127.0.0.1 -p 2224 hostname` from WOPR.\n2. #25760 [proposed] — Revive Cicero M5→WOPR reverse tunnel. From Ruben's desktop: `ssh rubenmajor@192.168.1.252` and restart the autossh LaunchAgent or power-cycle the box. Then verify the tunnel port appears on WOPR.\n\nReference IDs:\n- Ticket: #MDM\n- Ideas filed: #25744 [approved], #25758 [proposed], #25760 [proposed]\n- Files touched: ws_ssh_proxy.py, web_terminal_token.php\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1130": null,
     "1131": null,
@@ -123373,19 +123375,24 @@
   },
   "1786469157683": {
    "task_id": "1786469157683",
-   "mtime": 1786481289514,
+   "mtime": 1786484988534,
    "created_at": "2026-08-11T17:25:57.683Z",
-   "last_modified": "2026-08-11T20:48:09.514Z",
-   "size_kb": 539,
-   "turn_count": 171,
+   "last_modified": "2026-08-11T21:49:48.534Z",
+   "size_kb": 805,
+   "turn_count": 303,
    "title": "How many tokens have our FREE LLMs used in the last 30 days",
-   "pickup_prompt": "nvestigate why p90 is so high.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task: Free LLM 30-day token usage report + gpt-5.2 reroute fix\n\nWhere we left off (verified 2026-08-11 12:48 PT):\n- FIX DEPLOYED: EmailAIResponder.php + SMSAIResponder.php no longer fall back to gpt-5.2\n- Both now route ALL fallbacks through deepseek-v4-pro via LiteLLM (frankenstein)\n- Timeout raised 60s→120s in both files (CURLOPT_TIMEOUT + class property)\n- Backups: EmailAIResponder.php.bak-gpt52-reroute, SMSAIResponder.php.bak-gpt52-reroute (may not exist — cp failed; file before edit is what you have)\n- No gpt-5 references remain in active paths\n- 30-day token totals: our hardware ~222.7M, +DeepSeek = ~731.9M, +all $0 = ~1.30B\n\nOpen threads to drive next:\n1. #25753 [proposed] — claude-haiku-4-5 zero-cost tracking gap in llm_call_log (33K calls untracked)\n2. (human-only decision, no idea) — Monitor frankenstein-llm p90 latencies for email responder: why 60%+ exceed 60s even at 120s timeout? Consider prompt trimming or streaming.\n3. (human-only decision, no idea) — Reload FPM/restart agent pools to pick up EmailAIResponder + SMSAIResponder changes\n\nReference IDs:\n- Ideas filed: #25753 [proposed]\n- Files changed: /var/www/emtskills/lib/EmailAIResponder.php, /var/www/emtskills/lib/SMSAIResponder.php\n- Timestamp of changes: 2026-08-11 12:48 PT\n\nWhen done, append a row to cline_task_ledger.md and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] Query 30-day token usage for free LLMs\n- [x] Confirm gpt-5.2-2025-12-11 = Email/SMS fallback (24/7, 59.3M tokens)\n- [x] Root cause: 60s timeout kills LiteLLM frankenstein call → falls to hardcoded gpt-5.2\n- [x] Apply fix: timeout 60→120, fallback→deepseek-v4-pro, endpoint→LiteLLM, auth→anthropicApiKey\n- [x] Fix modelUsed metadata labels (gpt-5.2→deepseek-v4-pro)\n- [x] php -l verify both files\n- [x] Ship completion\n</task_progress>\n</attempt_completion>",
+   "pickup_prompt": "*stop** from email/sms surface\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task: Email/SMS responder routing deployed — monitor + cleanup\n\nWhere we left off (verified 2026-08-11 14:09 PT):\n- EmailAIResponder + SMSAIResponder: 60s→300s timeout, gpt-5.2→deepseek-v4-pro, +direct-DeepSeek survival\n- callDeepSeekDirect() inserted in both files (line 658 EmailAIResponder, 376 SMSAIResponder)\n- DEEPSEEK_API_KEY defined in config.local.php (sk-13eb…)\n- #25753 [executing] — claude-haiku-4-5 cost tracking gap approved\n- FPM reloaded (USR2 to master 2242), masters confirmed alive\n- No email_ai/sms_ai rows in llm_call_log in last 2h (quiet period)\n\nOpen threads to drive next:\n1. #25753 [executing] — Fix claude-haiku-4-5 zero-cost tracking in llm_call_log (33K calls untracked)\n2. (human-only decision, no idea) — Monitor error_log for \"trying direct DeepSeek\" — if it fires, LiteLLM is unhealthy\n3. (human-only decision, no idea) — Verify gpt-5.2-2025-12-11 rows from email/sms surfaces stop within 24h\n4. (human-only decision, no idea) — If frankenstein-llm p90 still exceeds 300s at peak, consider prompt trimming (~40K input is heavy) or streaming the first token\n\nReference IDs:\n- Ideas: #25753 [executing]\n- Files deployed: /var/www/emtskills/lib/EmailAIResponder.php, /var/www/emtskills/lib/SMSAIResponder.php, /var/www/emtskills/config/config.local.php\n- Backups: .bak-gpt52-reroute in lib/\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
+    "1452": null,
+    "2275": null,
     "2299": null,
+    "2316": null,
+    "5892": null,
     "7174": null,
     "9215": null,
     "9320": null,
     "10108": null,
+    "10739": null,
     "10740": null,
     "11741": null,
     "11781": null,
@@ -123404,25 +123411,32 @@
     "16844": null,
     "18312": null,
     "18326": null,
+    "22060": null,
+    "22386": null,
     "23171": null,
+    "25045": null,
     "25097": null,
     "25185": "deployed",
     "25186": null,
     "25194": null,
     "25753": "proposed",
-    "272822": null
+    "272822": null,
+    "711855": null
    }
   },
   "1786472732313": {
    "task_id": "1786472732313",
-   "mtime": 1786481217381,
+   "mtime": 1786484482194,
    "created_at": "2026-08-11T18:25:32.313Z",
-   "last_modified": "2026-08-11T20:46:57.381Z",
-   "size_kb": 783,
-   "turn_count": 256,
+   "last_modified": "2026-08-11T21:41:22.194Z",
+   "size_kb": 1251,
+   "turn_count": 406,
    "title": "#TDSHS\n\nI will read the Sunset report and get back to you on that For MANDAMUS NOW -> I need info on that mandamus to give to the attorney to file. I need an email summary, synopsis, the PDFs of every email sent to Open Records with dates/times listed as well as archived emails searched. YOu need to look also at other employees such as Jennifer Copeland (will need to search through email archives / there may be an MCP or process for this to be easier / those arechives are on WOPR cold storage I believe). Check rmajor@emsuniversity.com. Also jthompson@emsuniversity.com also sent requests for updates. Also need the receipt that was sent for payment too which should be in those requests. \n\nMake",
-   "pickup_prompt": "6WVOD4yE4sgXCwFMTtMQv70g8CQCKE\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1786433544814 - TDSHS mandamus: attorney email drafted (no em dashes), Drive organized\n\nWhere we left off (verified 2026-08-11 13:46 PT):\n- Attorney email ready in Ruben voice (no em dashes, no semicolons, short sentences)\n- Drive folder fully populated: 42 PDFs in 4 subfolders, verified by list_folder\n- #25777 [executing] (verified: get_idea_progress in_progress/drafting/stalled)\n- #25771 [executing] (verified: prior session batch upload idea, superseded)\n- Sunset threads from prior session still pending\n\nOpen threads to drive next:\n1. #25777 [executing] — close/reject since work hand-shipped\n2. #25771 [executing] — close/reject as superseded\n3. Send the attorney email (human-only decision, Ruben pastes into email client)\n\nReference IDs:\n- Ideas: #25777 [executing], #25771 [executing]\n- Drive: 1Od6WVOD4yE4sgXCwFMTtMQv70g8CQCKE (11+24+3+4 verified)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
+   "pickup_prompt": "ur same-day answer both times.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1786433544814 - TDSHS mandamus package + 2026-08-11 clarification demand reply\n\nWhere we left off (verified 2026-08-11 14:40 PT):\n- REPLY DRAFTED AND READY TO SEND, revised to defeat the clock stall. Send same-day on the existing thread to OpenRecords@dshs.texas.gov, cc jthompson. Key sentences: \"Responding same day so that no request for clarification remains outstanding\", \"The request is not unclear\", redaction concession on personal identifiers, refusal to amend with routing to the 552.301 AG procedure, and \"Please proceed with processing it.\"\n- CHANGED FROM THE EARLIER DRAFT: removed the sentence inviting a new cost estimate. Reason: HHSC took $1,404.00 on the 2025 estimate and produced nothing, so volunteering an invitation hands them a second fee gate. Do not reintroduce it.\n- STATUTORY BASIS VERIFIED LIVE (texas.public.law, full text read this session):\n  - 552.222(b): clarification is available only \"if what information is requested is unclear\"; narrowing DISCUSSION is available if a large amount is requested; may not inquire into purpose.\n  - 552.222(d): if no written response by the 61st day after a written clarification request, the underlying request is deemed WITHDRAWN.\n  - 552.222(e): the clarification request MUST include a statement as to the consequences of failing to respond.\n  - 552.222(g): email-sent requests can be deemed withdrawn if the clarification goes to the same address and no response arrives in the (d) period.\n  - 552.301(b): the governmental body must ask the AG and state the exceptions not later than the 10th business day after receiving the request. (d) requires notice to the requestor in the same 10 business days. (e) 15th business day for submissions to the AG. (e-1) copy of comments to the requestor by the 15th business day.\n- DEFECT HELD IN RESERVE, DO NOT RAISE: their 2026-08-11 email contains NO statement of consequences, so it fails 552.222(e). Full body dumped and confirmed, it is four sentences. Raising it invites a corrected letter that properly arms the 61-day withdrawal trap. Keep it for counsel and for the mandamus record only.\n- THE CHARACTERIZATION ARGUMENT: their letter never says the request is unclear, it says it is \"likely to encompass\" excepted information. That is an exceptions question governed by 552.301, not a clarification question under 552.222(b), so it does not stop their clock. Their own 2026-07-29 ack promised notice within 10 business days, landing on or about 2026-08-12.\n- INBOUND LOGGED EARLIER THIS SESSION: admin_portal.tpia_request_tracking row id 14, tracking_no ORR-A07292026.0450006, status CLARIFICATION DEMANDED, ack 2026-07-29 07:15:54, deadline_10bd 2026-08-12 (verified by SELECT). Email archived at /opt/tdshs_transfer/inbound/IN_008_2026-08-11_CLARIFICATION_DEMAND_A07292026.0450006.eml. Inbound was 2026-08-11 21:16:08 UTC, to rmajor, cc jthompson, Message-ID BY3PR05MB80522323ED4476F241E47D6499DD2@BY3PR05MB8052.namprd05.prod.outlook.com.\n- PRIOR-PERIOD REBUTTAL VERIFIED: Copeland 2025-07-22 suggested narrowing on VOLUME grounds only (time frame, search terms, program area or specified employees, exclude rmajor own email), raised NO exception and never cited 552.11765. HHSC then priced the request AS WRITTEN at $1,404.00 / 78 labor hours with 100% deposit. Same message also states only 8 people handle PIA for DSHS and HHSC and it \"may take up to 24 month[s]",
    "ideas": {
+    "1379": null,
+    "2315": "deployed",
+    "2563": null,
     "5090": null,
     "17130": "superseded",
     "17537": "rejected",
@@ -123433,7 +123447,10 @@
     "25777": "executing",
     "96607": null,
     "178643": null,
+    "444444": null,
     "467886": null,
+    "600179": null,
+    "623778": null,
     "002060": null
    }
   },
@@ -123552,17 +123569,24 @@
   },
   "1786476815310": {
    "task_id": "1786476815310",
-   "mtime": 1786478591874,
+   "mtime": 1786484235801,
    "created_at": "2026-08-11T19:33:35.310Z",
-   "last_modified": "2026-08-11T20:03:11.874Z",
-   "size_kb": 468,
-   "turn_count": 62,
+   "last_modified": "2026-08-11T21:37:15.801Z",
+   "size_kb": 647,
+   "turn_count": 132,
    "title": "#Postmark API\n\nStrike-ceiling bail (Rule 143) — task in progress, state saved below.\n\n**Completed this session:**\n- `config/secrets.php` created, gitignored (`config/secrets.php` added to `.gitignore`)\n- `config.local.php` now requires `secrets.php` and all raw token refs replaced with `POSTMARK_ACCOUNT_TOKEN` constant\n- Sweep ran across all 63 PHP files containing the raw token — all replaced with `POSTMARK_ACCOUNT_TOKEN`\n- `write_server_file` auto-linted the secrets file and reloaded FPM on creation\n\n**Still pending (next window):**\n- PHP lint pass on all 63 swept files + FPM reload\n- Final grep to verify zero raw `fff724b9-...` tokens remain in non-secrets files\n- The ~119.5K spam queue p",
-   "pickup_prompt": "ort reply required from Ruben.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #25772 [proposed]: Postmark token hardening, complete and verified.\n\nWhere we left off (verified 2026-08-11 13:00 PT):\n- All live PHP files clean: zero raw tokens outside config/secrets.php\n- Postmark server green, outbound stream sending normally (7,763 today)\n- Token rotation verified: grep fff724b9 hits ONLY secrets.php\n- PHP lint clean, FPM reloaded\n- Idea #25772 [proposed] filed for hardfloor rule: no credentials in git-tracked config\n- No paused streams, no pending Postmark support reply needed\n\nOpen threads to drive next:\n1. #25772 [proposed]: Adopt the hardfloor rule, no credentials in git-tracked config (causal fix for this incident class)\n\nReference IDs:\n- Ideas filed: #25772 [proposed]\n- Files touched: /var/www/emtskills/config/secrets.php, /var/www/emtskills/config/config.local.php, /var/www/emtskills/.gitignore, plus 11 .php files with .bak-token-sweep-20260811 backups\n- Postmark server ID: 18327494\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n<task_progress>\n- [x] Postmark token sweep complete + verified\n- [x] Postmark server green, outbound stream flowing (7,763 today)\n- [x] No paused streams — no ticket needed\n- [x] Idea #25772 [proposed] filed\n- [x] attempt_completion with pickup block\n</task_progress>\n</attempt_completion>",
+   "pickup_prompt": "ady committed to git history).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #25772 [executing] — credential migration: move 9+ live credentials from git-tracked config.local.php into gitignored secrets.php.\n\nWhere we left off (verified 2026-08-11 14:35 PT):\n- Rule 302 [deployed] on WOPR and local Mac — forbids credentials in git-tracked config\n- Hardfloor manifest updated with 302-no-credentials-in-git-tracked-config\n- config/config.local.php still contains 9+ live bare credentials in a git-tracked file (violates rule 302, pre-existing)\n- config/secrets.php already exists and is gitignored, currently holds only POSTMARK_ACCOUNT_TOKEN\n- Postmark token hardening is complete (zero raw tokens in non-secrets live files)\n\nOpen threads to drive next:\n1. #25772 [executing]: Migrate all credentials from config.local.php into secrets.php — each as a `define()` with the constant name. Replace config.local.php references with the constant name. For credentials already in git history (committed), rotate at the provider and place the NEW value in secrets.php.\n2. #25793 [proposed]: Post-302 full credential audit — grep all git-tracked files for bare credentials, migrate every hit to secrets.php, rotate anything in git history.\n\nReference IDs:\n- Ideas: #25772 [executing] (this task), #25793 [proposed] (post-migration audit sweep)\n- Rule 302 deployed: WOPR /var/www/emtskills/clinerules/Rules/302-no-credentials-in-git-tracked-config.md, local Mac ~/Documents/Cline/Rules/302-no-credentials-in-git-tracked-config.md\n- Files: config/secrets.php (gitignored, has POSTMARK_ACCOUNT_TOKEN), config/config.local.php (git-tracked, 464 lines, 9+ bare credentials)\n- Credentials requiring rotation at provider (already in git history): OPENAI_API_KEY, ANTHROPIC_API_KEY, DEEPSEEK_API_KEY, OPENROUTER_API_KEY, LITELLM_MASTER_KEY, DISCORD_BOT_TOKEN, TWILIO_AUTH_TOKEN, AFFIRM_API_KEY, AUTHNET credentials, GOOGLE client_secret/refresh_token, EMAILOCTOPUS_API_KEY, RAG_SHARED_SECRET, GRIEVANCE_CORRECTION_SECRET\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n<task_progress>\n- [x] Audit git-tracked config: config.local.php holds 9+ live credentials\n- [x] Studied rule format and deployment mechanism\n- [x] Write rule 302 to WOPR Rules/\n- [x] Write rule 302 to local Mac store (~/Documents/Cline/Rules/)\n- [x] Append 302 to hardfloor manifest via sed (verified)\n- [x] Verify all three artifacts deployed\n- [x] File idea #25772 [executing] for credential migration sweep\n- [x] File idea #25793 [proposed] for post-302 full credential audit\n- [x] PICKUP PROMPT block\n</task_progress>\n</attempt_completion>",
    "ideas": {
     "2306": null,
     "2311": null,
+    "4932": null,
+    "6825": null,
+    "6842": null,
+    "9019": null,
+    "9070": null,
+    "10234": null,
     "16863": null,
+    "25151": null,
     "25537": null,
     "25560": null,
     "25608": null,
@@ -123583,7 +123607,41 @@
     "25729": null,
     "25730": null,
     "25731": null,
-    "25772": "proposed"
+    "25772": "proposed",
+    "25793": "proposed"
+   }
+  },
+  "1786481696854": {
+   "task_id": "1786481696854",
+   "mtime": 1786484976643,
+   "created_at": "2026-08-11T20:54:56.854Z",
+   "last_modified": "2026-08-11T21:49:36.643Z",
+   "size_kb": 480,
+   "turn_count": 182,
+   "title": "#TDSHS Sunset Report\n\nSee\n\nPlease make the following corrections/updates for the TDSHS Sunset report and give back updated PDF:\n\nFalse:   They also included records from courses this Department does not regulate, and\npaperwork belonging to other divisions of our company that fall entirely outside its authority.   Were we not told or were we told something ambiguous back -> No transmittal states the measure by which compliance would be\ndetermined. We asked, in writing, for the provision and the measure. We were not told.  For this, that original request was YEARS ago with much back and forth with TDSHS staff. You need to spell that out better and highlight the Years it has been -> First, the ",
+   "pickup_prompt": "09, rmajor@emsuniversity.com.\"\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1786481696, TDSHS Sunset report corrections.\n\nWhere we left off (verified 2026-08-11 14:43 PT):\n- Rebuilt PDF at sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-11.pdf, 24 pages, 466,404 bytes.\n- Company name updated throughout to \"EMS University, LLC d.b.a. EMS Universal Education\" (signature + cover).\n- #25783 [proposed] filed on the $1,248 and ORR chronology conflict.\n- #25784 [rejected] duplicate row from an MCP timeout that had already written.\n\nOpen threads to drive next:\n1. #25783 [proposed]. Pull the DSHS payment receipt and confirm which ORR the $1,248 was applied to.\n2. Send the PDF to sunset@sunset.texas.gov or hold for the third-party statement (human-only decision, no idea).\n\nReference IDs:\n- Ideas filed: #25783 [proposed], #25784 [rejected]\n- Files touched: sunset_pdf/patch_v8.py, sunset_pdf/build_sunset_pdf.py, WOPR /tmp/scan_dshs2.py\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "ideas": {
+    "18676": null,
+    "18690": null,
+    "25783": "proposed",
+    "25784": "rejected",
+    "178648": null,
+    "600179": null,
+    "623992": null
+   }
+  },
+  "1786483060620": {
+   "task_id": "1786483060620",
+   "mtime": 1786484979796,
+   "created_at": "2026-08-11T21:17:40.620Z",
+   "last_modified": "2026-08-11T21:49:39.796Z",
+   "size_kb": 458,
+   "turn_count": 95,
+   "title": "Closing on a new property in Tempe 1250 East Baseline. Please analyze the 139 page inspection document emailed to me by jthompson@emsuniversity.com within the last few days and take into consideration the following that Chat GPT saw. You can do more/better:\n\nNegotiation and closing-protection items\nSeek fixed, documented protection rather than informal promises:\n    •    HVAC credit or escrow: Base it on the specialist’s suite-by-suite replacement plan, especially all R-22 and pre-2010 systems.\n    •    Life-safety/ADA contingency: Preserve the right to terminate or renegotiate if the current or intended occupancy requires sprinklers, major accessibility work, elevator modernization, or othe",
+   "pickup_prompt": "m closing readiness checklist.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — 1250 Baseline Tempe property inspection analysis.\n\nWhere we left off (verified 2026-08-11 2:47 PM PT):\n- Comprehensive analysis written to /Users/rubenmajor/Desktop/1250_Baseline_Inspection_Analysis.md\n- Inspection_Report_081020260900-C.pdf extracted (139 pages, 4162 lines), located at /Users/rubenmajor/Downloads/Inspection_Report_081020260900-C.pdf\n- Key findings: 11 HVAC units (some R-22, pre-2010), bonding clamp disconnected, GFCI deficiencies, rafter tail deterioration all 4 sides, pavement replacement needed, no sprinkler/elevator inspection in report, missing permits/documentation\n\nOpen threads to drive next:\n1. #<idea_number_for_property_analysis> [awaiting_review] — Review the analysis with Ruben, incorporate feedback, and if directed, export to email or document format for John Hart/realtor delivery\n2. #<idea_number_for_sprinkler_elevator> [proposed] — Determine fire sprinkler requirement for EMSU's intended occupancy at 1250 Baseline and confirm elevator existence/condition\n3. #<idea_number_for_specialist_bids> [proposed] — If closing proceeds, coordinate HVAC specialist, licensed electrician, sewer camera, roofer, and paving contractor inspections/bids\n\nReference IDs:\n- Report: EPIC Inspection #081020260900-C (Mike Elsberry #38984, 480-390-8180)\n- Property: 1250 E. Baseline Rd., Tempe, AZ 85283\n- Broker: John Hart, Commercial Properties, Inc.\n- Files: /Users/rubenmajor/Desktop/1250_Baseline_Inspection_Analysis.md, /Users/rubenmajor/Downloads/Inspection_Report_081020260900-C.pdf\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
+   "ideas": {
+    "38984": null,
+    "081020": null
    }
   }
  }

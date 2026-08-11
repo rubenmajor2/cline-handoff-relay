@@ -6,16 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/10/2026, 6:56:14 PM PT | window: last 72h | 99 tasks | index total 616 (parsed 8, cached 608)
+Generated: 8/10/2026, 7:56:15 PM PT | window: last 72h | 101 tasks | index total 618 (parsed 1, cached 617)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786413177098` | 8/10/2026, 6:56:14 PM | 26 | 57KB | #Make GLM Faster |
-| `1786401898030` | 8/10/2026, 6:56:13 PM | 913 | 8731KB | Corrected the Customer Service role visibility issue in the Telephony Hub Callbacks tab, p |
-| `1786339173079` | 8/10/2026, 6:55:59 PM | 212 | 1360KB | I keep having to say over and over again that open threads need idea numbers and statuses  |
-| `1786409942954` | 8/10/2026, 6:55:57 PM | 151 | 472KB | #LLM Fleet |
-| `1786318471535` | 8/10/2026, 6:54:28 PM | 308 | 797KB | I got a report of executor stalling. Play frankenstein doctor of executor and resolve and  |
-| `1786384439089` | 8/10/2026, 6:51:30 PM | 291 | 2193KB | Why am i just receiving these chat transcripts now? That's not very helpful |
+| `1786413781782` | 8/10/2026, 7:48:35 PM | 86 | 114KB | #Julia/Claudia TP=2 |
+| `1786409942954` | 8/10/2026, 7:20:48 PM | 270 | 755KB | #LLM Fleet |
+| `1786413177098` | 8/10/2026, 7:15:42 PM | 133 | 280KB | #Make GLM Faster |
+| `1786401898030` | 8/10/2026, 7:06:14 PM | 986 | 8958KB | Corrected the Customer Service role visibility issue in the Telephony Hub Callbacks tab, p |
+| `1786339173079` | 8/10/2026, 7:02:40 PM | 214 | 1369KB | I keep having to say over and over again that open threads need idea numbers and statuses  |
+| `1786318471535` | 8/10/2026, 7:02:33 PM | 310 | 802KB | I got a report of executor stalling. Play frankenstein doctor of executor and resolve and  |
+| `1786413553188` | 8/10/2026, 7:01:09 PM | 20 | 54KB | #San Mateo County EMSA Complaint |
+| `1786384439089` | 8/10/2026, 6:58:05 PM | 294 | 2210KB | Why am i just receiving these chat transcripts now? That's not very helpful |
 | `1786395180489` | 8/10/2026, 6:49:11 PM | 280 | 1374KB | #San Mateo County Complaint/Inspection chenry@smcgov.org send a complaint on July 31 to me |
 | `1786409606290` | 8/10/2026, 6:39:12 PM | 154 | 393KB | #AI Directed Meditation |
 | `1786229794274` | 8/10/2026, 6:21:18 PM | 92 | 458KB | #Externships |
@@ -114,7 +116,74 @@ Generated: 8/10/2026, 6:56:14 PM PT | window: last 72h | 99 tasks | index total 
 
 ## Per-window detail
 
-### `1786413177098` — 8/10/2026, 6:56:14 PM PT — 26 turns
+### `1786413781782` — 8/10/2026, 7:48:35 PM PT — 86 turns
+
+**Original task:**
+
+```
+#Julia/Claudia TP=2
+
+
+
+——[COPY]——
+Julia/Claudia TP=2 crash RCA — idea #25631 [executing], bug library incident 2306. Julia (gpt-oss-120b TP=2 across julia spark-6ae6 + claudia spark-6d51) crashed 5x on 2026-08-10 (14:50, 15:38, 17:54, 18:15, ~18:55) and is stuck in a crash-relaunch loop. Fix it end to end.
+
+Access (all from WOPR via emsu-operations ssh_command):
+- julia:  ssh -p 2205 -i /home/emsuserver/.ssh/id_ed25519 rubenmajor@127.0.0.1  (spark-6ae6, 192.168.1.190)
+- claudia: ssh -p 2206 -i /home/emsuserver/.ssh/id_ed25519 rubenmajor@127.0.0.1 (spark-6d51, 192.168.1.194)
+- Serving endpoint 
+```
+
+**Ideas referenced:** #25571 [rejected], #25580 [executing], #25631 [executing]
+
+**Last PICKUP PROMPT:**
+
+```
+eout, and restart the service.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Fix Julia/Claudia TP=2 crash loop.
+
+Where we left off (verified 2026-08-10 19:47 PT):
+- Unable to access Julia host via SSH; key missing and port refused.
+
+Open threads to drive next (NONE — all work pending on SSH access).
+
+Reference IDs:
+- Ideas filed: #25631 [executing]
+</result>
+</attempt_completion>
+```
+
+### `1786409942954` — 8/10/2026, 7:20:48 PM PT — 270 turns
+
+**Original task:**
+
+```
+#LLM Fleet
+
+Stopping. Here is the full state, including the part that is still open.
+
+## What was actually wrong, and it was routing
+
+All three 120Bs are fast. None was broken. Solo 200-token benches, each box idle, 17:37-17:39 PT:
+
+    bigmac  10.100.0.19:8000   33.79 tok/s
+    artemis 10.100.0.5:8000    33.66 tok/s
+    julia   127.0.0.1:11513    32.49 tok/s
+
+Julia read 0.00 tok/s over 12 seconds at 17:22 only because it was holding 15 queued requests. Drained, it benches 32.49.
+
+**The mis-route:** `FRANK_BOX_CAPACITY` was `8000=18,11513=12,10.100.0.19:8000=6`. `_seed_capacity` matches longes
+```
+
+**Ideas referenced:** #12247, #12262, #12314, #12363 [deployed], #12365, #12657, #12672, #12689, #12716, #13121, #13874 [deployed], #16718, #1765, #178639, #2096, #2097, #2247 [deployed], #2306, #23206, #24144, #25112, #25185, #25468, #25565 [executing], #25567 [executing], #25571 [rejected], #25580 [executing], #25604 [proposed], #25605 [proposed], #25616 [deployed], #25617 [deployed], #25620 [deployed], #25621 [deployed], #25622 [deployed], #25626 [deployed], #25627 [proposed], #25630 [proposed], #25631 [executing], #25647 [deployed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786413177098` — 8/10/2026, 7:15:42 PM PT — 133 turns
 
 **Original task:**
 
@@ -136,11 +205,11 @@ Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md
 Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, divided by elapsed wall seconds
 ```
 
-**Ideas referenced:** #16265, #17202, #19338, #20495, #25378 [executing], #25379 [rejected], #25380 [executing], #25381 [rejected], #25382 [rejected], #25389 [executing], #25390 [executing], #25420 [executing], #25436 [proposed]
+**Ideas referenced:** #11945, #16265, #17202, #19338, #1986, #1993, #20495, #20536, #2116, #2138, #2157, #2179, #2210, #2254, #2258, #2307 [rejected], #23169, #24172, #24217, #25112, #25185, #25378 [executing], #25379 [rejected], #25380 [executing], #25381 [rejected], #25382 [rejected], #25389 [executing], #25390 [executing], #25420 [executing], #25436 [proposed], #25567, #25606 [proposed], #25607 [proposed], #25627, #25628 [proposed], #25630 [deployed], #25631 [blocked], #25646 [executing], #6826
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786401898030` — 8/10/2026, 6:56:13 PM PT — 913 turns
+### `1786401898030` — 8/10/2026, 7:06:14 PM PT — 986 turns
 
 **Original task:**
 
@@ -196,7 +265,7 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </attempt_completion>
 ```
 
-### `1786339173079` — 8/10/2026, 6:55:59 PM PT — 212 turns
+### `1786339173079` — 8/10/2026, 7:02:40 PM PT — 214 turns
 
 **Original task:**
 
@@ -209,59 +278,32 @@ I keep having to say over and over again that open threads need idea numbers and
 **Last PICKUP PROMPT:**
 
 ```
-oved and ready to be executed.
+cond time and is in execution.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #25178 — rule‑91 bracket‑mandate fix status report.
+Pick up task #obeyance‑status — rule‑91 bracket‑mandate compliance report.
 
-Where we left off (verified 2026‑08‑10 06:54 PT):
-- Root‑cause resolved: `[queued]` bracket list in EMSU‑RULE91‑TAIL‑v1 conflicted with Rule 91’s ban.
-- Fixes applied: patched `/etc/litellm/_router_core.py`, `_RULE_TREE.md.new`, `CLINERULES_MIRROR.md`, and `91-attempt-completion-gate-d.md`; restarted Litellm container.
-- Compliance: No new Rule 91 violations logged since restart.
-- Monitoring: Idea #25178 [proposed] set for daily audit automation.
+Where we left off (verified 2026‑08‑10 19:00 PT):
+- Fixed the contradictory `[queued]` bracket list in the EMSU‑RULE91‑TAIL injection and all related docs.
+- Restarted the Litellm container; compliance rate for Rule 91 is 100 % today.
+- Daily‑monitoring idea #25178 [executing] approved and now in progress.
 
 Open threads to drive next:
-1. #25178 [proposed] — Implement daily monitoring automation for Rule 91 compliance.
-2. (human‑only decision — no idea) — Review daily audit report each morning; if any violations appear, investigate promptly.
+1. #25178 [executing] — Implement daily monitoring automation for Rule 91 compliance.
+2. (human‑only decision — no idea) — Review the daily audit report each morning; if any violations appear, investigate promptly.
 
 Reference IDs:
-- Ideas filed: #25178 [proposed]
+- Idea filed: #25178 [executing]
 - Files touched: /etc/litellm/_router_core.py, /var/www/emtskills/docs/_RULE_TREE.md.new, /var/www/emtskills/docs/CLINERULES_MIRROR.md, /var/www/emtskills/clinerules/Rules/91-attempt-completion-gate-d.md
-- Backup: /etc/litellm/_router_core.py.bak-remove-queued-20260809-2306
+- Backup of router core: /etc/litellm/_router_core.py.bak-remove-queued-20260809-2306
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
 
-### `1786409942954` — 8/10/2026, 6:55:57 PM PT — 151 turns
-
-**Original task:**
-
-```
-#LLM Fleet
-
-Stopping. Here is the full state, including the part that is still open.
-
-## What was actually wrong, and it was routing
-
-All three 120Bs are fast. None was broken. Solo 200-token benches, each box idle, 17:37-17:39 PT:
-
-    bigmac  10.100.0.19:8000   33.79 tok/s
-    artemis 10.100.0.5:8000    33.66 tok/s
-    julia   127.0.0.1:11513    32.49 tok/s
-
-Julia read 0.00 tok/s over 12 seconds at 17:22 only because it was holding 15 queued requests. Drained, it benches 32.49.
-
-**The mis-route:** `FRANK_BOX_CAPACITY` was `8000=18,11513=12,10.100.0.19:8000=6`. `_seed_capacity` matches longes
-```
-
-**Ideas referenced:** #12247, #12262, #12314, #12365, #12657, #12689, #1765, #178639, #2306, #24144, #25112, #25185, #25468, #25565 [executing], #25567 [executing], #25571 [rejected], #25580 [executing], #25604 [proposed], #25605 [proposed], #25616 [deployed], #25617 [deployed], #25620 [deployed], #25621 [deployed], #25622 [deployed], #25626 [deployed], #25627 [proposed], #25630 [proposed], #25631 [executing]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786318471535` — 8/10/2026, 6:54:28 PM PT — 308 turns
+### `1786318471535` — 8/10/2026, 7:02:33 PM PT — 310 turns
 
 **Original task:**
 
@@ -274,41 +316,59 @@ I got a report of executor stalling. Play frankenstein doctor of executor and re
 **Last PICKUP PROMPT:**
 
 ```
-te_blocked` #4) remain active.
+audit log entry will be noted.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT
 ═══════════════════════════════════════════════
-Pick up task executor‑health‑status‑2026‑08‑10 — monitor executor for any regression and keep the floor‑3, timeout‑1200 configuration.
+Pick up task executor‑silent‑death‑monitor — continue watching for any new silent‑death incidents and verify the kaizen repair recipe auto‑applies.
 
-Where we left off (verified 2026‑08‑10 18:51 PT):
-- Executor stable: load ≈ 9.5, uptime ≈ 2 days, 169 completions post‑fix, zero OOMs.
+Where we left off (verified 2026‑08‑10 19:00 PT):
+- Executor load ≈ 9.5, uptime ≈ 2 days, 169 completions post‑fix, zero OOMs since 22:40 PT.
 - Three workers live (#20024, #20025, #20026) under timeout 1200 s and floor 3.
-- Kaizen recipe `executor_timeout_600_kill` (id 2) installed; repair recipe (id 4) linked.
-- Recent ideas #20517, #24036, #23276 all at ready_for_review / auto‑deployed.
-- No open threads remain; all pending work completed.
+- Kaizen failure recipe `executor_timeout_600_kill` (id 2) installed; repair recipe (id 4) linked.
+- No new silent‑death events detected as of 19:00 PT.
+- Open thread #25475 [proposed] – monitor for next silent‑death and confirm auto‑apply of repair recipe.
 
 Open threads to drive next:
-1. #25475 [proposed] — Verify the kaizen repair recipe auto‑applies on the next silent‑death incident (monitor; update status once triggered). 
-2. #20024 [executing] — Continue processing current idea; ensure it completes without hitting the old 600 s limit. 
-3. #20025 [executing] — Same as above for its payload. 
+1. #25475 [proposed] — Verify kaizen repair recipe auto‑applies on next silent‑death incident (monitor logs, update status, record audit entry).  
+2. #20024 [executing] — Continue processing current idea; ensure it completes without hitting the old 600 s limit.  
+3. #20025 [executing] — Same as above.  
 4. #20026 [executing] — Same as above.
 
 Reference IDs:
-- Kaizen failure recipe: kaizen_failure_recipes #2 [executing]
-- Kaizen repair recipe: kaizen_failure_repair_recipes #4 [executing]
-- Handoff entry: emsu_preference_corpus #143824 [executing]
-- Session doc: /tmp/emsu-doctor-session-fixes.md [executing]
-- Ideas: #20517 [deployed], #24036 [deployed], #23276 [deployed], #25475 [proposed]
-- Workers: #20024 [executing], #20025 [executing], #20026 [executing]
+- Kaizen failure recipe: `kaizen_failure_recipes` #2
+- Kaizen repair recipe: `kaizen_failure_repair_recipes` #4
+- Handoff entry: `emsu_preference_corpus` #143824
+- Session doc: `/tmp/emsu-doctor-session-fixes.md`
+- Worker logs: `/tmp/ruben-impl-worker-*.log`
+- PHP‑FPM error log: `/var/log/php8.3-fpm-errors.log`
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+When done, append a row to `cline_task_ledger.md` per rule 07 and run order 66 per `.clinerules/EXECUTE_ORDER_66`.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
 
-### `1786384439089` — 8/10/2026, 6:51:30 PM PT — 291 turns
+### `1786413553188` — 8/10/2026, 7:01:09 PM PT — 20 turns
+
+**Original task:**
+
+```
+#San Mateo County EMSA Complaint
+
+# San Mateo audit: response rewritten to gold standard, instructor interview handled, 403 fixed
+
+## Answering your questions directly
+
+**"Is this San Mateo response in gold standard format?"** No, it was not. That is the most important thing in this update. I drafted v1 before consulting rule 302, then reported it to you as complete. You caught it by asking. A mechanical audit against the doctrine found twelve violations in what I had already called finished. Several were the kind a plaintiff attorney or an accreditor quotes back at you: a written apology, nam
+```
+
+**Ideas referenced:** #25636 [proposed], #25637 [proposed], #25638 [proposed], #25639 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786384439089` — 8/10/2026, 6:58:05 PM PT — 294 turns
 
 **Original task:**
 
@@ -316,39 +376,37 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66
 Why am i just receiving these chat transcripts now? That's not very helpful
 ```
 
-**Ideas referenced:** #18335, #19837, #2271, #2274, #2275, #2292, #2423, #24635, #24636, #24645, #24646, #24791, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25550 [proposed], #25551 [proposed], #26000 [awaiting_review], #6366, #6526, #6548, #9152
+**Ideas referenced:** #18335, #19837, #2271, #2274, #2275, #2292, #2423, #24635, #24636, #24645, #24646, #24791, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25550 [proposed], #25551 [proposed], #25552 [awaiting_review], #26000 [awaiting_review], #6366, #6526, #6548, #9152
 
 **Last PICKUP PROMPT:**
 
 ```
-atches the current theme or add a CSS class to hide the send button).
+.clinerules/EXECUTE_ORDER_66`.
 
----
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Monitor auto‑close UI banner and related ideas
 
-### PICKUP PROMPT (paste into a fresh Cline window)
-════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
-Pick up task — Verify auto‑close UI banner on chat widget
-
-Where we left off (verified 2026‑08‑10 17:58 PT):
-- `showClosedBanner()` added to `api/chat_widget_embed.js` and called on auto‑close status.
-- Backup created: `chat_widget_embed.js.bak-closed-20260810`.
-- Lint passed; no syntax errors.
-- All 34 sites have `auto_close_minutes=60`; cron auto‑closes idle chats and now sets `closed_at`.
-- Real‑time transcript emails fire on manual and auto‑close.
-- Widget polling already returns `status: "closed"` when chat is closed.
+Where we left off (verified 2026-08-10 18:51 PT):
+- `showClosedBanner()` added to `chat_widget_embed.js` with backup.
+- Call inserted in poll loop for `status='closed'`.
+- Lint clean, Node syntax clean.
+- Manual poll test confirmed `status='closed'` triggers function without errors.
+- All sites have `auto_close_minutes=60` and `closed_at` column; auto‑close cron runs clean.
+- Ideas #25550 and #25551 are [deployed]; new idea #25552 created for live UI verification ([awaiting_review]).
 
 Open threads to drive next:
-1. #25550 [deployed] — Monitor DSML leaks for 48 h; back‑fill existing messages if required.
-2. #25551 [deployed] — Monitor transcript delivery latency for 24 h; ensure backlog drains.
-3. (new) #26000 [awaiting_review] — Manually test the auto‑close UI banner: create a test conversation, let it idle > 60 min or set `status='closed'` in DB, then reload the widget and confirm banner appears and input is disabled. Adjust `showClosedBanner()` if needed.
+1. #25550 [deployed] — Continue monitoring DSML leaks.
+2. #25551 [deployed] — Continue monitoring real‑time transcript delivery.
+3. #25552 [awaiting_review] — Perform live UI test on a chat widget, confirm banner appears and input disabled after idle auto‑close; adjust code if needed.
 
 Reference IDs:
-- Files touched: `api/chat_widget_embed.js`
-- Backup: `api/chat_widget_embed.js.bak-closed-20260810`
-- Ideas filed: #25550 [deployed], #25551 [deployed]
+- Ideas filed: #25550 [deployed], #25551 [deployed], #25552 [awaiting_review]
+- Files touched: api/chat_widget_embed.js (backup .bak‑closed‑20260810)
 
-When done, append a row to `cline_task_ledger.md` per rule 07 and run order 66 per `.clinerules/EXECUTE_ORDER_66`.
-════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+When completed, append to `cline_task_ledger.md` per rule 07 and execute order 66.
+═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```

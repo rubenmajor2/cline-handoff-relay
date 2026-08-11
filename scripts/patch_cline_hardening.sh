@@ -6,9 +6,10 @@
 # Applies 6 patches to the LATEST saoudrizwan.claude-dev-*/dist/extension.js:
 #
 #   P0  maxConsecutiveMistakes default:3 -> default:10   (rule 143 v4)
-#   P1  "result missing" sanitizer marker -> instructive transient-retry guidance
-#       (turns lost parallel tool_results into a self-healing retry instruction;
-#        rule 261 Mode D guidance delivered at the exact failure point)
+#   P1  "result missing" sanitizer marker -> NEUTRAL pairing placeholder
+#       (this string is injected on EVERY tool_use of EVERY request build, because
+#        Cline delivers results as text blocks; it must never read as an
+#        instruction. See the inline note on the P1 entry below, 2026-08-10.)
 #   P2  missingToolParameterError template -> instructive re-emit guidance
 #       (tells the model to re-emit the SAME tool with ALL params, no prose)
 #   P3  noToolsUsed template -> instructive no-prose guidance
@@ -73,9 +74,20 @@ PATCHES = [
     ("P0-yolo-ceiling",
      b"maxConsecutiveMistakes:{default:3}",
      b"maxConsecutiveMistakes:{default:10}"),
+    # P1-result-missing-marker — REWRITTEN 2026-08-10 after live regression.
+    # ensureToolResultsFollowToolUse() injects this placeholder for EVERY assistant
+    # tool_use on EVERY request build, because Cline delivers tool results as plain
+    # TEXT blocks, never as real tool_result blocks (measured 2026-08-10: 8525 text
+    # results vs 0 tool_result blocks across 60 tasks). The string is therefore
+    # load-bearing pairing filler seen on 100% of turns, NOT a rare-orphan marker.
+    # The previous imperative wording ("result lost in transit ... Retry the SAME
+    # tool ONCE with identical args") was read as an instruction and obeyed:
+    # 117 exact consecutive duplicate tool calls in 2942 turns (3.98%), which is
+    # what the "sshpass/host-guessing retry loop" windows actually were.
+    # Keep this wording NON-IMPERATIVE. Never tell the model a result was lost here.
     ("P1-result-missing-marker",
      b'content:"result missing"',
-     b'content:"result missing (tool result lost in transit - transient, rule 261 Mode D). Retry the SAME tool ONCE with identical args. Do NOT declare a wedge."'),
+     b'content:"(pairing placeholder - the real tool result is delivered as text in this same user message; read it below. This is NOT an error and NOT a lost result: do not re-emit the same tool call because of this line.)"'),
     ("P2-missing-param-instructive",
      b"missingToolParameterError:t=>`Missing value for required parameter '${t}'. Please retry with complete response.",
      b"missingToolParameterError:t=>`Missing value for required parameter '${t}'. Re-emit the SAME tool call NOW with ALL required parameters (execute_command ALWAYS needs requires_approval). No prose, no apology - emit the complete tool block silently. Please retry with complete response."),

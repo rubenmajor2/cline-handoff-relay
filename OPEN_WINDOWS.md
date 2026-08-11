@@ -6,18 +6,20 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/10/2026, 10:56:16 PM PT | window: last 72h | 98 tasks | index total 618 (parsed 0, cached 618)
+Generated: 8/10/2026, 11:56:16 PM PT | window: last 72h | 98 tasks | index total 619 (parsed 6, cached 613)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786413781782` | 8/10/2026, 7:48:35 PM | 86 | 114KB | #Julia/Claudia TP=2 |
+| `1786319043926` | 8/10/2026, 11:56:09 PM | 287 | 1967KB | #TDSHS |
+| `1786430680103` | 8/10/2026, 11:56:03 PM | 64 | 175KB | #LLM Fleet |
+| `1786401898030` | 8/10/2026, 11:55:59 PM | 1137 | 13612KB | Corrected the Customer Service role visibility issue in the Telephony Hub Callbacks tab, p |
+| `1786413781782` | 8/10/2026, 11:55:45 PM | 111 | 147KB | #Julia/Claudia TP=2 |
+| `1786384439089` | 8/10/2026, 11:52:14 PM | 315 | 2261KB | Why am i just receiving these chat transcripts now? That's not very helpful |
+| `1786413553188` | 8/10/2026, 11:50:21 PM | 192 | 536KB | #San Mateo County EMSA Complaint |
 | `1786409942954` | 8/10/2026, 7:20:48 PM | 270 | 755KB | #LLM Fleet |
 | `1786413177098` | 8/10/2026, 7:15:42 PM | 133 | 280KB | #Make GLM Faster |
-| `1786401898030` | 8/10/2026, 7:06:14 PM | 986 | 8958KB | Corrected the Customer Service role visibility issue in the Telephony Hub Callbacks tab, p |
 | `1786339173079` | 8/10/2026, 7:02:40 PM | 214 | 1369KB | I keep having to say over and over again that open threads need idea numbers and statuses  |
 | `1786318471535` | 8/10/2026, 7:02:33 PM | 310 | 802KB | I got a report of executor stalling. Play frankenstein doctor of executor and resolve and  |
-| `1786413553188` | 8/10/2026, 7:01:09 PM | 20 | 54KB | #San Mateo County EMSA Complaint |
-| `1786384439089` | 8/10/2026, 6:58:05 PM | 294 | 2210KB | Why am i just receiving these chat transcripts now? That's not very helpful |
 | `1786395180489` | 8/10/2026, 6:49:11 PM | 280 | 1374KB | #San Mateo County Complaint/Inspection chenry@smcgov.org send a complaint on July 31 to me |
 | `1786409606290` | 8/10/2026, 6:39:12 PM | 154 | 393KB | #AI Directed Meditation |
 | `1786229794274` | 8/10/2026, 6:21:18 PM | 92 | 458KB | #Externships |
@@ -40,7 +42,6 @@ Generated: 8/10/2026, 10:56:16 PM PT | window: last 72h | 98 tasks | index total
 | `1786381856309` | 8/10/2026, 1:09:23 PM | 218 | 606KB | If you take a look at all the CPR class websites, it seems that traffic on those is very l |
 | `1786386328622` | 8/10/2026, 12:48:13 PM | 163 | 335KB | /emtskills wedged yet again. Please check handoffs over the last few days. What's going on |
 | `1786384771407` | 8/10/2026, 12:47:55 PM | 254 | 580KB | #AI Directed Meditation |
-| `1786319043926` | 8/10/2026, 11:12:58 AM | 270 | 1889KB | #TDSHS |
 | `1786379859145` | 8/10/2026, 10:42:53 AM | 318 | 1547KB | #AI Directed Meditation |
 | `1786337811635` | 8/9/2026, 11:13:06 PM | 253 | 524KB | why is frankenstein-llm appearing to be sluggish. Can you take a look? |
 | `1786245923063` | 8/9/2026, 10:37:34 PM | 684 | 6123KB | #Argus |
@@ -107,13 +108,132 @@ Generated: 8/10/2026, 10:56:16 PM PT | window: last 72h | 98 tasks | index total
 | `1786169603912` | 8/8/2026, 1:59:03 AM | 500 | 1745KB | Play frankenstein doctor of executor. Lots of failed ideas impl blocked, etc.. need resolu |
 | `1786133997460` | 8/8/2026, 1:19:30 AM | 551 | 970KB | Take a lookat Jon's argus, a lot of 502 and SQL debris. Need to fix these 502s from now on |
 | `1786167712060` | 8/8/2026, 1:15:34 AM | 482 | 1117KB | ## Comprehensive PICKUP PROMPT — all 7 context-memory ideas, server-authoritative tags |
-| `1786162207330` | 8/7/2026, 11:13:36 PM | 454 | 1608KB | Why does frankenstein LLM iterate this to me? I'm hitting the token limit. I need to quick |
 
 ---
 
 ## Per-window detail
 
-### `1786413781782` — 8/10/2026, 7:48:35 PM PT — 86 turns
+### `1786319043926` — 8/10/2026, 11:56:09 PM PT — 287 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
+
+Please provide to me links to the  3 or 4  unfiled TPIA requests as well as the sunset review email (do i send this monday or wait)? nadn then the instructions for cori to setup meetings for us to meet the 3 politiicians the first week of September
+```
+
+**Ideas referenced:** #18676, #19587, #19595 [executing], #19599, #19600, #19601, #1976, #2274, #2275, #2292, #24790, #24805, #24836, #24842, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25374, #25400, #600179, #623992
+
+**Last PICKUP PROMPT:**
+
+```
+". No hyperlinks per rule 302.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — TDSHS: mail blindness fixed, 7 acks recovered, Sunset PDF v3 rebuilt on the paid-fee facts.
+
+Where we left off (verified 2026-08-10 11:12 PT):
+- MAJOR CORRECTION. The earlier finding that DSHS never acknowledged any records request was FALSE. Ruben produced a screenshot; investigation confirmed SEVEN acknowledgements. Retraction logged to inv 16 in the same investigation as the error.
+- ROOT CAUSE: /var/qmail/mailnames/emsuniversity.com/<user>/Maildir is mode 0750 popuser:popuser. Non-sudo grep returns EMPTY WITH EXIT 0, byte-identical to no-such-email, and prints no permission error when the parent blocks traversal. Compounding: email_inbound_log ingests info@ ONLY (positive control: 123,682 rows, ZERO with rmajor in to_email).
+- THIS WAS A REPEAT of idea #18676, already flagged in inv rows 151 and 154 on 2026-08-05. Row 154 states verbatim that zero open-records messages are visible server-side and correctly blamed the mailbox gap. The agent hit the same wall on 8/10 and drew the wrong conclusion anyway.
+- FIX DEPLOYED: /usr/local/bin/emsu_mail_search.sh on WOPR, mode 755, verified working. Searches all ~271 mailboxes or one; folders cur, new, .Sent, .Archive; --cold extends to /data/cold_storage, /data/cold-archives, /data/cold_misc, /backup; header extraction; --since filter; --limit.
+- RULE 316 WRITTEN at Rules-archive/316-mail-full-visibility-search-maildirs-with-sudo.md. Mandates a three-source check before any no-email-exists claim (DB logs which are info@ only, Maildirs via the tool, cold storage) plus a positive-control requirement. NOT YET REINDEXED into the clinerules MCP.
+- VERIFIED SENDS from rmajor .Sent, PT: 001 7/30 03:18:28, 002 7/30 03:24:50, 003 7/30 03:27:24, 004 7/30 03:39:09, 005 7/30 03:49:50, 007 7/30 04:12:27, 006 8/9 21:30:00, 010 8/10 09:53:23, 011 8/10 10:51:06.
+- VERIFIED ACKS from DSHS OpenRecords, UTC: 001 8/4 15:10:26 ORR A08042026.0450009; 002 8/4 15:16:16 .0450010; 003 8/4 16:28:24 .0450011; 004 8/4 16:41:07 .0450012; 005 8/4 17:07:11 .0450013; 007 8/4 17:19:05 .0450014; plus 7/29 14:15:54 Cost Estimate for ORR A07152025.0450008. All loaded into tpia_request_tracking. 006, 010, 011 REMAIN UNACKNOWLEDGED.
+- ARGUMENT INVERTED AND STRENGTHENED. Six requests sent 7/30 were all acked 8/4 within a two-hour window at uniform five-day latency, proving the intake process works. Against that control group, the legacy request is damning: inv row 172 records from CLARIFICATION_PLAYBOOK_TPIA_2026.md line 75 that THE FEE ON ORR A07152025.0450008 WAS PAID IN FULL AND THE REQUEST WAS NEVER PROCESSED. Jon Thompson emailed DSHS about that same ORR on 2026-03-20; DSHS answered 2026-07-29 with a cost estimate, two days after the 7/27 renewal, still no production.
+- OPEN QUESTION: the ORR prefix A0715-2025 reads as a July 2025 assignment, about 13 months, NOT 3 years. Either the 3-year request is a separate earlier one that never received an ORR number, or the duration needs revising. Every "roughly three years" claim was REMOVED from the PDF and replaced with the verified paid-fee facts.
+- SUNSET PDF v3 REBUILT: /Users/rubenmajor/Desktop/sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-10.pdf, 11 pages, 412.8 KB. Item 3 rewritten as a full address-misdirection treatment; item 4 rewritten around the acknowledged-in-days versus paid-and-unperformed contrast with a new pull quote; exec summary first bullet an
+```
+
+### `1786430680103` — 8/10/2026, 11:56:03 PM PT — 64 turns
+
+**Original task:**
+
+```
+#LLM Fleet
+
+
+Frankenstein-llm seeing this type of iteration in another window. Something is slightly off still. 
+
+<ssh_command> <command>ssh -p 2205 rubenmajor@192.168.1.190 "ls -1 /tmp/vllm_serve_unified.*.crash.log"</command> <timeout_ms>60000</timeout_ms> <task_progress>
+
+ List crash log files on Julia host
+ Identify first stall details
+ Increase RAY_CGRAPH_get_timeout in julia_unified_tp2.sh
+ Relaunch Julia service and monitor stability
+ Verify 2+ hours of stable traffic
+ Update bug library incident 2306 to resolved </task_progress> </ssh_command>
+
+
+<ssh_command> <command>sshpass -p 'qefru
+```
+
+**Ideas referenced:** #11953, #12363, #12689, #13108, #13874, #16117, #17202, #178639, #18321, #19338, #20495, #2050, #25112, #25565 [executing], #25567 [executing], #25571 [rejected], #25580 [executing], #25604 [deployed], #25605 [executing], #25621 [deployed], #25627 [executing], #25630 [deployed], #25631 [blocked], #25647 [deployed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786401898030` — 8/10/2026, 11:55:59 PM PT — 1137 turns
+
+**Original task:**
+
+```
+Corrected the Customer Service role visibility issue in the Telephony Hub Callbacks tab, plus 3 related callback-system issues found during the investigation.
+
+Root cause: /var/www/emtskills/routes/telephony_hub.php line 2520 wrapped the entire Callbacks tab button in if ($isTelephonyAdmin) only (MasterAdmin/ExecAdmin/ITAdmin/Admin), excluding Customer Service role staff even though $isCSUser = !empty($user['is_cs']) already existed in the same file for other telephony features. Changed to if ($isTelephonyAdmin || $isCSUser). Lint check passed, backup taken first. The tab-panel content div its
+```
+
+**Ideas referenced:** #10003, #25185, #252532, #25593 [proposed], #25606 [proposed], #25666 [proposed], #25667 [proposed], #25668 [deployed], #25669 [proposed], #32324, #334155, #475569, #64748
+
+**Last PICKUP PROMPT:**
+
+```
+only captured the EMSU trunk).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task on callback CS visibility — remaining follow-ups under #25593 [proposed].
+
+Where we left off (verified 2026-08-10 17:45 PT):
+- Callbacks tab + queue panel + booking_detail + booking_action all verified working in real CS context (session fabricated for users.id=17 Jehan De Los Angeles, CustomerService, is_cs=1; renders 200/full panel, actions 302, no gates tripped).
+- Debug line removed from callback/admin/_panel_callback.php; lint clean; final render re-verified; fabricated session + temp files deleted; post-cleanup unauthenticated fetch = 401.
+- Prior fixes still live: telephony_hub.php tab button + panel gates (isTelephonyAdmin || isCSUser), booking_detail.php is_cs gate, cron_callback_policing.php COALESCE fix (booking id 6 escalated to Vicky), booking id 76 name corrected to Denham Brown.
+- HANDOFF_NOTES.md updated with full verification trail incl. session-store location gotcha (/var/www/vhosts/emsuniversity.com/sessions).
+
+Open threads to drive next:
+1. #25593 [proposed] — have a real CS staffer (Jehan/Apple/Rachel) open Telephony Hub > Callbacks in their own browser and confirm; close the loop with Ruben after.
+2. #25593 [proposed] — Argus dropped-call investigation for Vicky's CS team (Ruben directive, not started).
+3. #25593 [proposed] — find a real callback number for booking id 76 (Denham Brown); only EMSU trunk was captured.
+
+Reference IDs:
+- Ideas filed: #25593 [proposed]
+- Files touched this session: callback/admin/_panel_callback.php (debug line removed), HANDOFF_NOTES.md (verification entry)
+- Files from earlier sessions still in effect: routes/telephony_hub.php, callback/admin/booking_detail.php, callback/admin/_panel_callback.php, callback/admin/booking_action.php (new), crons/policing/cron_callback_policing.php
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] CFA jargon removed, panel rewritten, booking_detail rewritten, action endpoint created
+- [x] Fixed phantom callback_queue columns; CLI render OK
+- [x] h() undefined → top-level guarded def in panel + booking_detail
+- [x] Hub panel renders FULLY; booking_detail 200; action POST 302 — all as real CS context (Jehan, is_cs=1)
+- [x] Debug line removed, lint clean; final render re-verified post-removal
+- [x] Auth enforcement confirmed (401 no-cookie/bogus)
+- [x] Cleanup: fabricated session + temp files deleted, post-cleanup 401
+- [x] Handoff notes updated
+- [x] attempt_completion with pickup prompt
+</task_progress>
+</attempt_completion>
+```
+
+### `1786413781782` — 8/10/2026, 11:55:45 PM PT — 111 turns
 
 **Original task:**
 
@@ -153,6 +273,55 @@ Reference IDs:
 </result>
 </attempt_completion>
 ```
+
+### `1786384439089` — 8/10/2026, 11:52:14 PM PT — 315 turns
+
+**Original task:**
+
+```
+Why am i just receiving these chat transcripts now? That's not very helpful
+```
+
+**Ideas referenced:** #18335, #19837, #2271, #2274, #2275, #2292, #2423, #24635, #24636, #24645, #24646, #24791, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25550 [proposed], #25551 [proposed], #25552 [awaiting_review], #25642, #26000 [awaiting_review], #6366, #6526, #6548, #9152
+
+**Last PICKUP PROMPT:**
+
+```
+owClosedBanner()` accordingly.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #25642 — Verify chat widget auto‑close UI banner
+
+Where we left off (verified 2026‑08‑10 23:46 PT):
+- `showClosedBanner()` added and called on closed status.
+- Mock‑DOM test confirms banner creation and input disabling.
+- All sites have `auto_close_minutes=60` and `closed_at` column; cron auto‑close runs without errors.
+- Real‑time transcript delivery on auto‑close is operational.
+- Live widget UI still needs final verification.
+
+Open threads to drive next:
+1. #25550 [deployed] — Continue monitoring DS
+```
+
+### `1786413553188` — 8/10/2026, 11:50:21 PM PT — 192 turns
+
+**Original task:**
+
+```
+#San Mateo County EMSA Complaint
+
+# San Mateo audit: response rewritten to gold standard, instructor interview handled, 403 fixed
+
+## Answering your questions directly
+
+**"Is this San Mateo response in gold standard format?"** No, it was not. That is the most important thing in this update. I drafted v1 before consulting rule 302, then reported it to you as complete. You caught it by asking. A mechanical audit against the doctrine found twelve violations in what I had already called finished. Several were the kind a plaintiff attorney or an accreditor quotes back at you: a written apology, nam
+```
+
+**Ideas referenced:** #25185, #25636 [proposed], #25637 [proposed], #25638 [proposed], #25639 [proposed], #25663 [executing], #92400
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786409942954` — 8/10/2026, 7:20:48 PM PT — 270 turns
 
@@ -205,62 +374,6 @@ Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, d
 **Ideas referenced:** #11945, #16265, #17202, #19338, #1986, #1993, #20495, #20536, #2116, #2138, #2157, #2179, #2210, #2254, #2258, #2307 [rejected], #23169, #24172, #24217, #25112, #25185, #25378 [executing], #25379 [rejected], #25380 [executing], #25381 [rejected], #25382 [rejected], #25389 [executing], #25390 [executing], #25420 [executing], #25436 [proposed], #25567, #25606 [proposed], #25607 [proposed], #25627, #25628 [proposed], #25630 [deployed], #25631 [blocked], #25646 [executing], #6826
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786401898030` — 8/10/2026, 7:06:14 PM PT — 986 turns
-
-**Original task:**
-
-```
-Corrected the Customer Service role visibility issue in the Telephony Hub Callbacks tab, plus 3 related callback-system issues found during the investigation.
-
-Root cause: /var/www/emtskills/routes/telephony_hub.php line 2520 wrapped the entire Callbacks tab button in if ($isTelephonyAdmin) only (MasterAdmin/ExecAdmin/ITAdmin/Admin), excluding Customer Service role staff even though $isCSUser = !empty($user['is_cs']) already existed in the same file for other telephony features. Changed to if ($isTelephonyAdmin || $isCSUser). Lint check passed, backup taken first. The tab-panel content div its
-```
-
-**Ideas referenced:** #10003, #25185, #25593 [proposed], #25606 [proposed], #334155, #475569, #64748
-
-**Last PICKUP PROMPT:**
-
-```
-only captured the EMSU trunk).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task on callback CS visibility — remaining follow-ups under #25593 [proposed].
-
-Where we left off (verified 2026-08-10 17:45 PT):
-- Callbacks tab + queue panel + booking_detail + booking_action all verified working in real CS context (session fabricated for users.id=17 Jehan De Los Angeles, CustomerService, is_cs=1; renders 200/full panel, actions 302, no gates tripped).
-- Debug line removed from callback/admin/_panel_callback.php; lint clean; final render re-verified; fabricated session + temp files deleted; post-cleanup unauthenticated fetch = 401.
-- Prior fixes still live: telephony_hub.php tab button + panel gates (isTelephonyAdmin || isCSUser), booking_detail.php is_cs gate, cron_callback_policing.php COALESCE fix (booking id 6 escalated to Vicky), booking id 76 name corrected to Denham Brown.
-- HANDOFF_NOTES.md updated with full verification trail incl. session-store location gotcha (/var/www/vhosts/emsuniversity.com/sessions).
-
-Open threads to drive next:
-1. #25593 [proposed] — have a real CS staffer (Jehan/Apple/Rachel) open Telephony Hub > Callbacks in their own browser and confirm; close the loop with Ruben after.
-2. #25593 [proposed] — Argus dropped-call investigation for Vicky's CS team (Ruben directive, not started).
-3. #25593 [proposed] — find a real callback number for booking id 76 (Denham Brown); only EMSU trunk was captured.
-
-Reference IDs:
-- Ideas filed: #25593 [proposed]
-- Files touched this session: callback/admin/_panel_callback.php (debug line removed), HANDOFF_NOTES.md (verification entry)
-- Files from earlier sessions still in effect: routes/telephony_hub.php, callback/admin/booking_detail.php, callback/admin/_panel_callback.php, callback/admin/booking_action.php (new), crons/policing/cron_callback_policing.php
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] CFA jargon removed, panel rewritten, booking_detail rewritten, action endpoint created
-- [x] Fixed phantom callback_queue columns; CLI render OK
-- [x] h() undefined → top-level guarded def in panel + booking_detail
-- [x] Hub panel renders FULLY; booking_detail 200; action POST 302 — all as real CS context (Jehan, is_cs=1)
-- [x] Debug line removed, lint clean; final render re-verified post-removal
-- [x] Auth enforcement confirmed (401 no-cookie/bogus)
-- [x] Cleanup: fabricated session + temp files deleted, post-cleanup 401
-- [x] Handoff notes updated
-- [x] attempt_completion with pickup prompt
-</task_progress>
-</attempt_completion>
-```
 
 ### `1786339173079` — 8/10/2026, 7:02:40 PM PT — 214 turns
 
@@ -342,67 +455,6 @@ Reference IDs:
 - PHP‑FPM error log: `/var/log/php8.3-fpm-errors.log`
 
 When done, append a row to `cline_task_ledger.md` per rule 07 and run order 66 per `.clinerules/EXECUTE_ORDER_66`.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786413553188` — 8/10/2026, 7:01:09 PM PT — 20 turns
-
-**Original task:**
-
-```
-#San Mateo County EMSA Complaint
-
-# San Mateo audit: response rewritten to gold standard, instructor interview handled, 403 fixed
-
-## Answering your questions directly
-
-**"Is this San Mateo response in gold standard format?"** No, it was not. That is the most important thing in this update. I drafted v1 before consulting rule 302, then reported it to you as complete. You caught it by asking. A mechanical audit against the doctrine found twelve violations in what I had already called finished. Several were the kind a plaintiff attorney or an accreditor quotes back at you: a written apology, nam
-```
-
-**Ideas referenced:** #25636 [proposed], #25637 [proposed], #25638 [proposed], #25639 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786384439089` — 8/10/2026, 6:58:05 PM PT — 294 turns
-
-**Original task:**
-
-```
-Why am i just receiving these chat transcripts now? That's not very helpful
-```
-
-**Ideas referenced:** #18335, #19837, #2271, #2274, #2275, #2292, #2423, #24635, #24636, #24645, #24646, #24791, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25550 [proposed], #25551 [proposed], #25552 [awaiting_review], #26000 [awaiting_review], #6366, #6526, #6548, #9152
-
-**Last PICKUP PROMPT:**
-
-```
-.clinerules/EXECUTE_ORDER_66`.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Monitor auto‑close UI banner and related ideas
-
-Where we left off (verified 2026-08-10 18:51 PT):
-- `showClosedBanner()` added to `chat_widget_embed.js` with backup.
-- Call inserted in poll loop for `status='closed'`.
-- Lint clean, Node syntax clean.
-- Manual poll test confirmed `status='closed'` triggers function without errors.
-- All sites have `auto_close_minutes=60` and `closed_at` column; auto‑close cron runs clean.
-- Ideas #25550 and #25551 are [deployed]; new idea #25552 created for live UI verification ([awaiting_review]).
-
-Open threads to drive next:
-1. #25550 [deployed] — Continue monitoring DSML leaks.
-2. #25551 [deployed] — Continue monitoring real‑time transcript delivery.
-3. #25552 [awaiting_review] — Perform live UI test on a chat widget, confirm banner appears and input disabled after idle auto‑close; adjust code if needed.
-
-Reference IDs:
-- Ideas filed: #25550 [deployed], #25551 [deployed], #25552 [awaiting_review]
-- Files touched: api/chat_widget_embed.js (backup .bak‑closed‑20260810)
-
-When completed, append to `cline_task_ledger.md` per rule 07 and execute order 66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
@@ -1156,43 +1208,6 @@ Bonus defect found
 **Ideas referenced:** #13757, #1584, #178629, #18786, #2274, #2275, #2292, #23920, #23922, #23923, #23932, #23952, #24646, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25229 [deployed], #25238 [executing], #25240 [executing], #25241 [executing], #25313, #25364 [executing], #25365 [deployed], #25366 [deployed], #25373, #25375, #25385, #25401, #25425, #25525 [executing], #25528 [deployed], #25530 [executing], #25531 [executing], #25532 [deployed], #25534 [deployed], #25535 [executing], #25537 [executing], #25555 [executing], #25560 [in_progress], #25561 [in_progress]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786319043926` — 8/10/2026, 11:12:58 AM PT — 270 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
-
-Please provide to me links to the  3 or 4  unfiled TPIA requests as well as the sunset review email (do i send this monday or wait)? nadn then the instructions for cori to setup meetings for us to meet the 3 politiicians the first week of September
-```
-
-**Ideas referenced:** #18676, #19587, #19595 [executing], #19599, #19600, #19601, #1976, #2274, #2275, #2292, #24790, #24805, #24836, #24842, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25374, #25400, #600179, #623992
-
-**Last PICKUP PROMPT:**
-
-```
-". No hyperlinks per rule 302.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — TDSHS: mail blindness fixed, 7 acks recovered, Sunset PDF v3 rebuilt on the paid-fee facts.
-
-Where we left off (verified 2026-08-10 11:12 PT):
-- MAJOR CORRECTION. The earlier finding that DSHS never acknowledged any records request was FALSE. Ruben produced a screenshot; investigation confirmed SEVEN acknowledgements. Retraction logged to inv 16 in the same investigation as the error.
-- ROOT CAUSE: /var/qmail/mailnames/emsuniversity.com/<user>/Maildir is mode 0750 popuser:popuser. Non-sudo grep returns EMPTY WITH EXIT 0, byte-identical to no-such-email, and prints no permission error when the parent blocks traversal. Compounding: email_inbound_log ingests info@ ONLY (positive control: 123,682 rows, ZERO with rmajor in to_email).
-- THIS WAS A REPEAT of idea #18676, already flagged in inv rows 151 and 154 on 2026-08-05. Row 154 states verbatim that zero open-records messages are visible server-side and correctly blamed the mailbox gap. The agent hit the same wall on 8/10 and drew the wrong conclusion anyway.
-- FIX DEPLOYED: /usr/local/bin/emsu_mail_search.sh on WOPR, mode 755, verified working. Searches all ~271 mailboxes or one; folders cur, new, .Sent, .Archive; --cold extends to /data/cold_storage, /data/cold-archives, /data/cold_misc, /backup; header extraction; --since filter; --limit.
-- RULE 316 WRITTEN at Rules-archive/316-mail-full-visibility-search-maildirs-with-sudo.md. Mandates a three-source check before any no-email-exists claim (DB logs which are info@ only, Maildirs via the tool, cold storage) plus a positive-control requirement. NOT YET REINDEXED into the clinerules MCP.
-- VERIFIED SENDS from rmajor .Sent, PT: 001 7/30 03:18:28, 002 7/30 03:24:50, 003 7/30 03:27:24, 004 7/30 03:39:09, 005 7/30 03:49:50, 007 7/30 04:12:27, 006 8/9 21:30:00, 010 8/10 09:53:23, 011 8/10 10:51:06.
-- VERIFIED ACKS from DSHS OpenRecords, UTC: 001 8/4 15:10:26 ORR A08042026.0450009; 002 8/4 15:16:16 .0450010; 003 8/4 16:28:24 .0450011; 004 8/4 16:41:07 .0450012; 005 8/4 17:07:11 .0450013; 007 8/4 17:19:05 .0450014; plus 7/29 14:15:54 Cost Estimate for ORR A07152025.0450008. All loaded into tpia_request_tracking. 006, 010, 011 REMAIN UNACKNOWLEDGED.
-- ARGUMENT INVERTED AND STRENGTHENED. Six requests sent 7/30 were all acked 8/4 within a two-hour window at uniform five-day latency, proving the intake process works. Against that control group, the legacy request is damning: inv row 172 records from CLARIFICATION_PLAYBOOK_TPIA_2026.md line 75 that THE FEE ON ORR A07152025.0450008 WAS PAID IN FULL AND THE REQUEST WAS NEVER PROCESSED. Jon Thompson emailed DSHS about that same ORR on 2026-03-20; DSHS answered 2026-07-29 with a cost estimate, two days after the 7/27 renewal, still no production.
-- OPEN QUESTION: the ORR prefix A0715-2025 reads as a July 2025 assignment, about 13 months, NOT 3 years. Either the 3-year request is a separate earlier one that never received an ORR number, or the duration needs revising. Every "roughly three years" claim was REMOVED from the PDF and replaced with the verified paid-fee facts.
-- SUNSET PDF v3 REBUILT: /Users/rubenmajor/Desktop/sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-10.pdf, 11 pages, 412.8 KB. Item 3 rewritten as a full address-misdirection treatment; item 4 rewritten around the acknowledged-in-days versus paid-and-unperformed contrast with a new pull quote; exec summary first bullet an
-```
 
 ### `1786379859145` — 8/10/2026, 10:42:53 AM PT — 318 turns
 
@@ -3821,52 +3836,4 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 (already appended) and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
-```
-
-### `1786162207330` — 8/7/2026, 11:13:36 PM PT — 454 turns
-
-**Original task:**
-
-```
-Why does frankenstein LLM iterate this to me? I'm hitting the token limit. I need to quickly capture the remaining 10 improvements into flat DB ideas using the simple INSERT pattern that works (no embedded double quotes, single-line), tag them all to parent #24518, then push a PICKUP PROMPT.
-
-I'll file them as compact single-row INSERTs, then summarize.
-
-I'm hitting the token limit. I need to quickly capture the remaining 10 improvements into flat DB ideas using the simple INSERT pattern that works (no embedded double quotes, single-line), tag them all to parent #24518, then push a PICKUP PROM
-```
-
-**Ideas referenced:** #11741, #12430, #12597, #1281, #1309, #1314, #13202, #15333, #15367, #15652, #16154, #16163, #16304, #16523, #16648, #1673, #17130 [superseded], #17202, #17203, #17205, #17537 [rejected], #178603, #17913, #18132 [deployed], #18135, #1820, #18357, #18395, #18442, #1850, #18868, #19079, #19125, #19162, #19173, #19325, #19338, #19370, #19423, #19435, #19458, #19490, #19491, #19494, #19503, #19504, #19509, #19592, #19629, #19643, #19661, #19670, #19684, #20350, #20408, #2043, #20517, #20569, #2076, #20903, #2113, #21667, #22282, #22601, #2265, #2266, #2267, #22680, #22770, #23171, #24026, #24207 [executing], #24214, #24218, #24239, #24518, #24635 [deployed], #24636 [deployed], #24645 [unknown], #24646 [proposed], #24704, #24714, #24715 [deployed], #24772 [deployed], #24773, #24791 [deployed], #24805, #24914 [executing], #24924 [proposed], #24925 [proposed], #24926 [proposed], #24927 [proposed], #24941 [proposed], #24942, #24947 [executing], #2763, #2868, #3541, #3953, #3957, #4436, #4536, #5029, #5034, #5351, #5354, #7195, #7377, #7442, #7925, #8281, #8321, #8370, #8563, #8598, #9222, #9235, #9501, #9634
-
-**Last PICKUP PROMPT:**
-
-```
- implementation cron" forever.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1786036273485 — executor backlog after durable fix + Kaizen registration + cron restore
-
-Where we left off (verified 2026-08-07 23:13 PT):
-- Root cause fixed: `crontab` now has `*/5 * * * * sudo -u www-data /usr/bin/php /var/www/emtskills/cron/cron_ruben_implement.php` (was missing entirely) — executor engine now actually runs.
-- Durable fix deployed to `/var/www/emtskills/cron/cron_ruben_implement.php` line 3069: file-already-exists normalization now sets `dev_stage='impl_failed'` with a logged reason (was `ready_for_review`, silent) — PHP lint OK.
-- Kaizen recipe #102 inserted into `kaizen_recipes` (`target_slug='idea_executor'`, `failure_category='silent_impl_failed'`, detection = impl_failed/ready_for_review with NULL failure reason) — Kaizen now "takes care of bugs."
-- All 46 impl_failed ideas reset to `idle` (retry_count incremented). impl_failed is now 0 in the dev_stage distribution.
-- Admission gate re-checked: `fleet_admission.py --class executor` now returns `allowed_concurrent=1` (was 0) — executor CAN run.
-- Context-memory stack live + verified (#24926 store/recall round-trip, #24927 compress archives old turns, #24924 watchdog W=131072 signal file, #24941 Argus wiring approved) — 530s window confirmed ~2x faster.
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #24941 [executing] — Wire Argus to memory bank: edit `cron_argus_task_worker.php` to call store_memory/recall_memory for cross-run task state. Concrete next: add the two HTTP calls after each successful LLM tool call, additive fallback to queue_notes.
-2. #24925 [executing] — Fix fleet RAG so retrieval wins (delta +0.0pp currently): inspect `rag_backtest_complete` harness + corpus ingestion, prove retrieval quality, fix scoring, rerun backtest until delta > +5pp.
-3. #24207 [executing] — Deduplicate RAG corpus injection in Cline system prompt: shrink the 9MB HANDOFF_NOTES.md / CLINERULES_MIRROR bloat that 3 LLM consumers read.
-4. #24914 [executing] — Context-memory test task: open a fresh window, paste the complex task (diagnose `cron_argus_task_worker.php` across 5 phases), confirm no premature condense + sub-10min completion.
-5. #24924 [executing] — Verify the watchdog config change (W=131072) propagates: confirm next `cline_compress_signal_TASK*` file shows `compress_threshold=98304` not `96000`.
-6. #24927 [executing] — Wire `context_compressor.php` into `router_hook.py` so old tool turns are auto-archived server-side (currently a standalone API, verified via curl).
-7. #24926 [executing] — Add `recall_memory`/`store_memory` MCP tools to Cline so the model can self-serve the bank (endpoints verified; Cline tool wiring pending).
-
-Reference IDs:
-- Ideas filed: #24207, #24914, #24924, #24925, #24926, #24927, #24941, #24942 (Kaizen recipe = kaizen_recipes.id 102 [deployed])
-- Ide
-aries (status,dev_stage): #24207 [executing], #24914 [executing], #24924 [executing], #24925 [executing], #24926 [executing], #24927 [executing], #24941 [executing]
-- Files touched: /etc/litellm/router_hook.py (read only), /var/www/emtskills/cron/cron_ruben_implement.php (fix), /usr/local/bin/fleet_admission.py (read only), /var/www/emtskills/api/store_memory.php, /var/www/emtskills/api/recall_memory.php, /var/www/emtskills/api/compress_context.php, /var/www/emtskills/lib/context_compressor.php, /Users/rubenmajor/bin/cline_budget_watchdog.py + /Users/rubenmajor/.conf
 ```

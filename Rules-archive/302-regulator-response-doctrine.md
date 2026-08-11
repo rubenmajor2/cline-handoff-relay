@@ -107,6 +107,16 @@ The disclaimer is what makes the observation sayable. Without it the sentence is
 
 Related: quote their admission flat and stop. "The Department response stated that its request for information is not dependent upon the respondent ability to independently verify the Department complaint-intake process. The program records that response verbatim." No rebuttal added.
 
+### Match the amplitude to the documented pattern
+
+The disclaimed observation scales. A full aggregate-burden paragraph is earned by a documented pattern across many matters over months (TDSHS 8/6). One call and one notice earns two sentences of fact, a disclaimer, and an availability line, and nothing more. Overstating a real observation converts a credible record into a grievance, and a filing that reads as aggrieved invites the agency to answer in kind. Understating one is recoverable in a later round. Overstating one is not.
+
+**The refused-particulars fact.** Where the agency declines to describe the particulars on a call and refers you to the notice, that is recordable and worth recording, because it establishes that the notice is the only source of particulars available to the program. State it, disclaim purpose, then convert it into the affirmative point: the program's answer can be no more specific than the particulars the notice supplies. Always pair it with an availability line ("the program is available to discuss any matter raised in the Notice"), which is what keeps the paragraph from reading as a complaint. Never ask the agency why the particulars were withheld.
+
+**The first-contact fact.** "No inquiry concerning any matter the Notice raises was directed to the program's chief executive before [date]" is sayable as fact, and pairs naturally with "the program would have answered an inquiry had one been made." That second clause is what makes it constructive rather than accusatory. Do not characterise the absence of an inquiry as a failure by the agency.
+
+**Renumber when you add one.** A reservations block that says "records two reservations" and then lists three is a self-contradiction on page one of a filing. Grep the count word whenever you insert a reservation.
+
 ## CONCEDE THE REASONABLE POINT, THEN NARROW IT
 
 The most disarming move available. Grant what is obviously true, immediately, then state the narrower thing you are actually asserting:
@@ -221,11 +231,57 @@ pdfimages -list <file>.pdf | grep -c '256    76'               # must be >= 1 (r
 ```
 Plus: correct page count, 644 www-data, HTTP 200.
 
+**Also grep for the internal DRAFT BANNER.** The section-level sweep cannot catch it, because a status banner is a single line and belongs to no section:
+
+```
+grep -ciE 'STATUS: DRAFT|must not be sent|superseded and must|INTERNAL ONLY'  /tmp/v.txt   # must be 0
+```
+
+Source incident 2026-08-10 (San Mateo): the response draft carried `**STATUS: DRAFT v2, rewritten to rule 302 gold standard. v1 is superseded and must not be sent.**` on line 3. The renderer stripped every internal H2 section correctly and passed that line straight into the filing PDF, where it supplied BOTH an internal note about our own defects AND the document's only em dash. Two gate failures from one line. `compliance_response_pdf.py` now strips internal banner LINES as well as sections, but keep the grep: a renderer fix protects the renderer's output, and the grep protects the filing.
+
+**The general lesson:** a stripper that operates on one structural unit (sections) is blind to content in a different unit (lines, front matter, table cells, footers). When you add a stripping rule, ask what unit it operates on and what units it therefore cannot see.
+
 ## CATALOG THE TRANSMISSION
 
 After sending, insert a `kind='sent'` row in `compliance_investigation_responses` with recipients, timestamp, every attachment named, and a `posture_notes` entry. If filed late, record the mitigating posture but **never volunteer the lateness to the agency**.
 
 **Round labels live in `compliance_investigation_responses.title`, NOT `summary`.**
+
+## WHEN THE REGULATOR CONTACTS OUR EMPLOYEE DIRECTLY (witness handling)
+
+Agencies routinely email an instructor, preceptor, or staff member directly and ask for a "voluntary" interview. Everything the program writes to that person is discoverable and is read as evidence of what the program told a witness. Two separate risks, and the second one is the one that gets missed.
+
+**Risk 1, obstruction.** Never tell the employee to decline, delay, route it through the program, submit answers for approval, or report the questions before answering. Any instruction that reads as discouraging contact is characterised as interference and converts a records audit into a conduct matter, which is worse than anything in the underlying complaint.
+
+**Risk 2, the signalled preference.** Subtler, and it survives the obstruction check. A sentence offering the program's *opinion on whether the interview is worthwhile* is nearly as damaging as an instruction, because it invites the reading that the program hinted. A disclaimer bolted onto the same sentence does not cure it, it reads as a hint with a disclaimer attached.
+
+Banned shapes in any message to a witness, even when followed by "but it's your call":
+
+| Banned | Why it gets quoted back at you |
+|---|---|
+| "I'm hard pressed to say whether it will be beneficial to either of us" | States the program's view on the value of the interview |
+| "I'm not sure it helps you" / "I don't see what they'd get out of it" | Same, less deniable |
+| "up to you, but" / "your call, though" | The "but" is the signal |
+| "we'd prefer" / "ideally" / "it would be cleaner if" | Preference is instruction in a soft voice |
+| "let us know before you respond" | Reads as approval gating |
+
+Say instead, with no second clause: "I can't tell you what to do either way, that one is yours to call."
+
+**What a compliant message contains, in this order:** thanks for forwarding it (first, and sincerely); the invitation is optional (restating the agency's own characterisation is safe); the decision is theirs and the program will not direct it; someone is available if they have questions; and the consistency ask framed as *helpful to us*, never as a condition on them.
+
+The consistency ask is legitimate and should not be dropped out of caution. "It might be helpful for us to know whatever is said, so we can make sure our statements are consistent" is fine. "Send us a summary before you talk to them" is not.
+
+**Offer counsel, and attach the offer to participation.** Ruben's wording, use this: *"If you do choose to speak with them, we can have our counsel present or available for you if you'd like."* Three properties make it safe and all three are load-bearing:
+
+1. **Conditioned on speaking, not on declining.** "If you do choose to speak with them" attaches counsel to participation. An offer attached to non-participation is a lever.
+2. **"Present or available" gives both options with neither as default.** In the room, or just someone to call beforehand, or neither.
+3. **"If you'd like" makes it his election,** with no view expressed on whether he should take it.
+
+Breaks it: "we should have counsel present," "we would want counsel there," "let us know so we can arrange counsel before you respond," or anything making counsel a precondition to the interview happening. Those convert a support offer into a control mechanism, and the agency reads them as the program inserting itself between it and a witness. Also never assert that program counsel *represents* the employee. That is a separate question with its own conflict analysis, and the offer does not need to resolve it.
+
+**Do not mention the interview in the written Response.** The agency knows. Raising it volunteers a subject. Do not contact the agency to ask why they went to the employee directly; record the fact internally and move on.
+
+**Channel is evidence.** If the agency reached the employee at a personal consumer mail address, record it. It is the same delivery pattern that produces missed-notice gaps, and it is stated neutrally in support of designating a compliance correspondence address, never as a complaint.
 
 ## Cross-references
 

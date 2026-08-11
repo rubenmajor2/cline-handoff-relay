@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/11/2026, 3:56:18 AM PT | window: last 72h | 88 tasks | index total 622 (parsed 1, cached 621)
+Generated: 8/11/2026, 4:56:18 AM PT | window: last 72h | 85 tasks | index total 622 (parsed 0, cached 622)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -95,9 +95,6 @@ Generated: 8/11/2026, 3:56:18 AM PT | window: last 72h | 88 tasks | index total 
 | `1786172805164` | 8/8/2026, 6:27:54 AM | 650 | 19969KB | We have brought up a new LLM for 120B usage, the name is Big Mac, it lives on the same net |
 | `1786185141628` | 8/8/2026, 6:06:52 AM | 96 | 276KB | Pick up idea 25076, the idea-delivery watchdog. First run get_idea_progress(25076); if bui |
 | `1786184812790` | 8/8/2026, 5:58:29 AM | 124 | 2065KB | Rule 297 was strengthened today (scope gate for failure counts + "a 297 request includes f |
-| `1786184799256` | 8/8/2026, 4:03:17 AM | 74 | 1392KB | Pick up idea 25073, the Argus failed-action cleanup + per-user summary emails. First run g |
-| `1786182696040` | 8/8/2026, 3:59:39 AM | 194 | 523KB | Pick up ideas 24990 and 24991 (both blocked, executor impl_failed twice, hand-ship per rul |
-| `1786182735891` | 8/8/2026, 3:57:45 AM | 230 | 1842KB | Pick up idea 25058, Argus rule-29 act-first mode. First run get_idea_progress(25058). Rube |
 
 ---
 
@@ -3352,139 +3349,5 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1786184799256` — 8/8/2026, 4:03:17 AM PT — 74 turns
-
-**Original task:**
-
-```
-Pick up idea 25073, the Argus failed-action cleanup + per-user summary emails. First run get_idea_progress(25073); if built, verify and stop. Otherwise hand-ship per rule 267 GATE C. (1) Pull samples: mysql SELECT user_email, action_name, error_message, LEFT(args,120), created_at FROM argus_audit_log WHERE success=0 AND created_at > NOW()-INTERVAL 7 DAY ORDER BY id DESC LIMIT 60; classify per rule 297 buckets: bad-input, permission_denied, backend-timeout, real bug, and apply the SCOPE GATE (all users, 7d, all failure states). (2) For each affected user (jthompson 56, rmajor 52, jangeles 21, C
-```
-
-**Ideas referenced:** #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20547, #21125, #21126, #22511, #22583, #23489, #23852, #23920, #23952, #24766, #24897, #24900, #25047, #25058, #25073, #25087 [deployed], #25088 [deployed], #25089 [deployed], #334155, #4338, #64748
-
-**Last PICKUP PROMPT:**
-
-```
-iation note (rule 267 GATE B).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #25073 — Argus failed-action cleanup + per-user summary emails (DONE — hand-shipped).
-
-Where we left off (verified 2026-08-08 4:02 AM PT):
-- Idea #25073 marked deployed; reconciliation note appended.
-- Audit fix deployed: alltastic_api.php lines 999-1000 now write error_message on failure (verified on disk + php -l clean).
-- 11 per-user summary emails SENT via EMSU Mailer.
-- 3 KAIZEN recipes filed: #25087 (student_lookup), #25088 (payment_match), #25089 (ticket_comment).
-
-Open threads to drive next:
-1. #25087 [deployed] — student_lookup identifier-resolution hardening is filed; next concrete step: apply argusResolveStudentContact() phone/name/SID fallback per the recipe when a build worker picks it up.
-2. #25088 [deployed] — payment_match batch + QuickBooks hardening filed; next: implement per-ID partial-match resolution.
-3. #25089 [deployed] — ticket_comment pre-validation filed; next: add SELECT 1 FROM tickets before INSERT in argus_action_catalog.php ~line 12167.
-
-Reference IDs:
-- Idea reconciled: #25073
-- KAIZEN ideas filed: #25087, #25088, #25089
-- Files touched: /var/www/emtskills/routes/alltastic_api.php (bak-25073-final), /tmp/alltastic_api_v2.php, /tmp/argus_25073_emails.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786182696040` — 8/8/2026, 3:59:39 AM PT — 194 turns
-
-**Original task:**
-
-```
-Pick up ideas 24990 and 24991 (both blocked, executor impl_failed twice, hand-ship per rule 267 GATE C). Email Agent is stranding legit student emails: 75 of 126 legit inbound unanswered in 48h, Sebastian Garcia case (26723BC-07) logged-but-ignored. Do the rule-297 RCA FIRST: (1) read_server_file("routes/cron_email_responder.php") lines 2260-2290, the ON DUPLICATE force-zero path at 2275; (2) mysql: SHOW INDEX FROM admin_portal.email_inbound_log WHERE Non_unique=0; (3) ssh_command: grep -n aiResponseSent /var/www/emtskills/routes/cron_email_responder.php for the success-path set-to-1; known fa
-```
-
-**Ideas referenced:** #14132, #16732, #23184, #24990 [deployed], #24991 [deployed], #6106, #6751, #7207, #7317, #7907, #8103
-
-**Last PICKUP PROMPT:**
-
-```
-s the pickup-block correction.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #24991 — Email Agent stranding legit inbound emails (ideas 24990 + 24991).
-
-Where we left off (verified 3:59 AM PT 2026-08-08):
-- Root cause per rule 297: 3 independent stranding bugs in /var/www/emtskills/cron/cron_email_responder.php (actual path, NOT routes/cron_email_responder.php).
-- All fixes deployed, php -l clean, PHP-FPM reloaded (graceful, zero downtime). Backup: /var/www/emtskills/cron/cron_email_responder.php.bak-2026-08-08-idea24991 (md5 b150ee27cbf810d42a24bbfb5b483fbf).
-- Backfill complete: 13 silent-strand tickets + 5 already-open = all 18 silent rows covered in last 48h. Sebastian Garcia (26723BC-07, scelestino.garcia@gmail.com) has ticket TKT-20260808-800CD997.
-
-RCA + Fixes (rule 297 classification, verified on disk):
-1. [Bug A, code_log 399-454] llm_retry_attempted dead-end: line 401 retry-gate hard-skipped ANY row with non-empty skip_reason, so rows marked 'llm_retry_attempted' (line 413) were permanently stranded. FIX A1+A3+A5+A6: gate now reprocesses 'llm_retry_attempted' once more, escalates to '_2' on second pass, and '_2' rows create a human ticket (email_stranded_retry, intake_source) before continue.
-2. [Bug B, config/logic 2318] ON DUPLICATE force-zero: ACK-SKIP path set ai_response_sent=0 on duplicate. FIX B: removed the force-zero (now only ai_skip_reason + processed_at).
-3. [Bug C, data_loss 2886] Main ON DUPLICATE only wrote ai_finish_reason. FIX C: now writes ai_response_sent/text/model too.
-4. [Bug D, process_gap 2927] Ticket (#6106) only created when ai_response_sent=1, so 79 policy-skipped + 18 silent rows got NO staff follow-up. FIX D + D2: ticket created for EVERY legit external inbound regardless of reply; description says "AI FAILED to reply; human follow-up required" when no reply.
-
-Verified on disk (grep + php -l):
-- Line 401: `(empty($__prevRow['ai_skip_reason']) || $__prevRow['ai_skip_reason'] === 'llm_retry_attempted')`
-- Line 2318: `ON DUPLICATE KEY UPDATE ai_skip_reason=VALUES(ai_skip_reason), processed_at=NOW()` (no ai_response_sent=0)
-- Line 2886: `... ai_response_sent=VALUES(ai_response_sent), ai_response_text=VALUES(ai_response_text), ai_model=VALUES(ai_model)`
-- Line 2927: `if ($__isExternal && $__isLegit)` (aiResponseSent gate removed)
-- Lines 403-454: stranded-ticket block with elog("[IDEA24990] Created ticket...")
-- php -l: "No syntax errors detected"
-
-Open threads to drive next (all have real filed idea #s):
-1. #24990 [deployed] — Confirm the next cron cycle (every 5 min, /etc/cron.d/emsu-email-responder) reprocesses the 5 pending llm_retry_attempted/failed rows (FIX A1). tail -f /var/log/emsu_email_responder.log and watch for "[LLM-RETRY]" + "[IDEA24990]". NO action needed unless they STILL strand 2+ cycles.
-2. #24991 [deployed] — Post-deploy soak: after 24h, re-run the 48h stranded-count query to confirm unanswered legit inbound now gets a reply OR a ticket (zero silent strands). Expected: intake_source in ('email_stranded_retry','email_backfill_silent_strand','email_ai_replied') covers all ai_response_sent=0 legit rows.
-
-Reference IDs:
-- Ticket: TKT-20260808-800CD997 (Sebastian Garcia, 26723BC-07)
-- Ideas filed/reconciled: #24990 [deployed], #24991 [deployed]
-- Files touched: /var/www/emtskills/cron/cron_email_responder.php (backup .bak-2026-08-08-idea24991)
-- Backfill tickets: TKT-20260808-800C76BD, 800C8640, 800C8D8F, 800C9D62, 800CA48E, 800CABA4, 800CB300, 800CB9D3, 80
-```
-
-### `1786182735891` — 8/8/2026, 3:57:45 AM PT — 230 turns
-
-**Original task:**
-
-```
-Pick up idea 25058, Argus rule-29 act-first mode. First run get_idea_progress(25058). Ruben directive: mutating fixes execute automatically with undo, approval only needed to REVERSE. In /var/www/emtskills/routes/alltastic_api.php (run_argus_action) and routes/cron_argus_task_worker.php: (1) flip reversible actions (draft email, create ticket, regrade, cert regen, enrollment fix) from propose-then-wait to execute-then-log; (2) every auto-executed action writes argus_action_history with a reversal command and renders an Undo button in terminal + task window for 24h (revert_action backend alread
-```
-
-**Ideas referenced:** #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19415, #19416, #2006, #20547, #20555, #21074, #21125, #21126, #22511, #22583, #22688, #23036, #23428, #23468, #23489, #23506, #23675, #23852, #23920, #23941, #23952, #23982, #24766, #24897, #24900, #24926, #24941, #24990, #25047, #25058 [implemented], #334155, #4338, #45538, #64748, #9099
-
-**Last PICKUP PROMPT:**
-
-```
-s reversal) UI in Requests tab
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #45538fc2-3d0d-4ed2-9db1-145d6755dfab — Argus rule-29 act-first mode, implemented.
-
-Where we left off (verified 2026-08-08 03:58 AM PT):
-- Idea #25058 [implemented] — status='implemented', dev_stage='done' in orchestrator_ideas
-- Confirm-guard: `argus_confirm_guard.php` auto-passes reversible actions; human-gate for refund>=$300, regulator, irreversible deletes
-- Revert-helper: `argus_revert_helper.php` captures revert_command for 10 action types, sets `gate=auto_executed_revertible`
-- Dispatcher patches: `alltastic_api.php` line ~3925 (run_action), ~990 (executeArgusChatTool), ~4231 (revert_action new case)
-- Backups: `*.bak-25058` in routes/
-
-Open threads to drive next:
-1. #25058 [implemented] — follow-up: front-end Undo button auto-render in Requests tab for revertible rows (NEXT: patch admin portal JS to call revert_action endpoint with history_id)
-2. (human-only decision - no idea) — Ruben to test live via terminal_query: "draft an email to student 123" should proceed without confirm; "refund $500" should still ask for re-send confirm
-3. (human-only decision - no idea) — smoke-test revert via `curl -X POST https://emsuniversity.com/emtskills/routes/alltastic_api.php -H 'Content-Type: application/json' -d '{"action":"revert_action","history_id":<latest revertible row>}'` with valid session
-
-Reference IDs:
-- Ticket: none (direct Ruben directive)
-- Ideas filed: #25058 [implemented]
-- Files touched: `/var/www/emtskills/routes/argus_confirm_guard.php`, `/var/www/emtskills/routes/argus_revert_helper.php`, `/var/www/emtskills/routes/alltastic_api.php`
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```

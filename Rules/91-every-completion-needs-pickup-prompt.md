@@ -90,18 +90,28 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 8. **Provenance check — for EACH `#NNNN`, name the tool call it came from.** A `create_idea` return this session, a reconcile call, or the task prompt. If you cannot point at one, the number is fabricated. Run `clinerules_validate_completion` and READ THE IDENTITY ECHO: it prints the real DB title of every id you cited. If a printed title does not match what you wrote beside that number, you cited the wrong idea.
 
 
-## Orders of magnitude
-
-If rule 91 is **1,000 words** → agents skip it. If it's **this short** (~400 words) → agents can obey. The pickup prompt is the LAST thing the agent writes — the one most prone to omission on context pressure. A SHORT rule survives context pressure. Verbose rules are ignored.
-
 ## Cross-refs
+
 
 - Rule 29 — act, don't defer
 - Rule 161 — ideas never queued (2026-08-01 Ruben directive)
 - Rule 267 — reconcile ideas before completion
 - _RULE_TREE.md Gate 9 — pre-completion gate
 
+## Compression is a completion. Both halves are gated. (2026-08-11)
+
+A rule-119 compression produces TWO gated artifacts, not one.
+
+**Half 1, the `pickup_prompt` parameter of `cline_compress_session`.** That string is the only state that survives into the next window, so it must be a full, gate-valid block on its own: real divider, real task id, `Where we left off`, `Open threads`, `Reference IDs`, every `#NNNN` bracketed. The tool truncates at 5KB, so put load-bearing state FIRST. A prompt cut mid-`Open threads` loses exactly what the next window needs.
+
+**Half 2, the `attempt_completion` that ships the SESSION MEMORY blob.** The blob is NOT a pickup prompt. Compression exempts nothing: run `clinerules_validate_completion`, then `clinerules_check_gate`, then append a PICKUP PROMPT block to the `result` string BELOW the blob. Two copies of the block in one window is correct.
+
+**Never paste the tool's echoed blob back verbatim as the whole result.** Its internal divider is 63 chars, not 47, and it truncates the embedded prompt with `…[pickup truncated]…`. Shipping it unedited fails `DIVIDER_WRONG_LENGTH` four times over. Write your own block.
+
+This is the highest-risk completion in the system: it fires under context pressure, at the moment the agent is most inclined to shortcut (rule 120), and it is the only handoff where a dropped thread is unrecoverable, because the conversation it came from is gone.
+
 ## Degraded-mode escape hatch (2026-08-08, idea #24995)
+
 
 **Degraded-mode escape hatch:** if the agent has attempted a valid PICKUP PROMPT 2+ times AND all MCP `create_idea` calls fail with documented transport errors, the agent may use a pre-allocated pool ID (from the reserved pool, IDs 25002-25029) and complete. The pool slot is burned by updating its title to the actual topic. A sync process later reconciles.
 

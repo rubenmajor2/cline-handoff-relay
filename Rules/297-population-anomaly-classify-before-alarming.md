@@ -1,138 +1,92 @@
-# Rule 297 — Classify the Code Before You Diagnose (strengthened 2026-08-01)
+# Rule 297 — Classify the Code Before You Diagnose
 
-## Original Text (2026-06)
-> A COUNT(*) of "impossible" rows is a hypothesis, not a bug. Classify the population before you alarm.
+Original text (2026-06): *a COUNT(\*) of "impossible" rows is a hypothesis, not a bug.
+Classify the population before you alarm.* Extended 2026-08-01 to DIAGNOSIS generally.
+Case law, the three wrong Argus claims, the worked example, and the 298 relationship:
+`Rules-archive/297-case-law.md`.
 
-**2026-08-01 STRENGTHENING — this rule now covers DIAGNOSIS, not just SQL anomalies. What went wrong during the Argus-slow investigation:**
 
-## The Failure Pattern (Argus investigation, 2026-08-01)
-
-```
-Cline probe → symptom → Cline announces ROOT CAUSE from probe alone
-         ↑                      ↑
-      (useful)             (destructive — unverified inference)
-```
-
-Specifically:
-
-| Claim Made | Actual Code Fact | Cost of Wrong Claim |
-|---|---|---|
-| "Canary tok_s=999.0 is a hardcoded override" | `_canary_init()` line 648: `"tok_s": 999.0` is the INITIALIZATION SENTINEL for every upstream before first probe | Wasted ~4 turns writing idea #20958 to "remove" a non-existent override |
-| "Only 2/3 boxes in pool, federation missing" | Adapter UPSTREAMS has 4 members; `_least_loaded_order()` correctly ranks all of them | Wrote idea #20957 to "restore full pool width" — pool was never narrow |
-| "Canary is blind, not detecting dead ring" | Canary measured `tok_s=0.0 decode_live=false` correctly. The ring WAS genuinely not decoding at that moment (mid-warmup after boot at 11:23) | Blamed the canary for correctly reporting a transient boot state |
-
-**Root cause**: every claim was derived from PROBES (curl, canary JSON, systemctl) and NONE from reading the adapter source code. A probe tells you WHAT happened once. Code tells you WHY, and whether the symptom is transient, by-design, or a real bug.
-
-## The FIX — MANDATORY before any diagnostic claim
+## The gate
 
 ```
 SYMPTOM → READ SOURCE → CLASSIFY → CLAIM (or silence)
 ```
 
-### When investigating ANY system behavior (performance, routing, errors, unexpected state):
+When investigating ANY system behavior (performance, routing, errors, unexpected state):
 
-1. **RUN the probe** — establish the symptom
-2. **READ the relevant source code** — the adapter/router/hook that PRODUCED that symptom
-3. **CLASSIFY the finding into exactly one bucket before stating it:**
-   - **By-design** — code does this intentionally. State the line number that proves it
-   - **Transient boot/warmup state** — normal during startup. State what the code will do when it finishes
-   - **Real bug** — code intends X but does Y. Cite the line that proves the mismatch
-   - **Unknown** — you ran out of context/time to read the code. Say "unverified" and file an idea for later
+1. **Run the probe.** Establish the symptom.
+2. **Read the source that PRODUCED the symptom** — the adapter, router, hook, or query.
+   Grep for the function that handles the behavior; read that function and its callers.
+3. **Classify into exactly one bucket before stating anything:**
+   - **By-design** — the code does this intentionally. Cite the line that proves it.
+   - **Transient boot/warmup** — normal during startup. State what the code will do when it finishes.
+   - **Real bug** — the code intends X but does Y. Cite the line that proves the mismatch.
+   - **Unknown** — you ran out of context or time. Say "unverified" and file an idea.
+4. **Only then make the claim**, with the citation that proves it.
 
-4. **Only THEN make the diagnostic claim**, WITH the code citation that proves it
+**Hard stop: if you cannot cite a specific line number in a specific file that produced
+the symptom you are describing, you do not yet understand WHY. Say so. Do not guess.**
 
-### Hard stop: if you cannot cite a specific line number in a specific file that produced the symptom you are describing, you do not yet understand WHY. Say so. Do not guess.
+A probe tells you WHAT happened once. Code tells you WHY, and whether the symptom is
+transient, by-design, or real. A curl against an endpoint is a symptom-gathering tool,
+not a verification tool for a claim about why the endpoint behaves that way.
 
-## REAL EXAMPLE (applied correctly)
+## Jump to rule 298 when evidence CONFLICTS
 
-```
-Symptom: canary health JSON shows tok_s=0.0 on :8210
-Step 2: read /usr/local/bin/frankenstein_tools_adapter.py, search for "tok_s"
-Step 3: find line 648 — _canary_init sets tok_s=999.0 as sentinel
-         find line 931-932 — _canary_probe_upstream sets tok_s from real measurement
-         CLASSIFY: the canary IS measuring; 0.0 means the probe completed with 0 tokens
-Step 4: CLAIM with citation — "Canary line 931 measures tok_s from comp_tokens/elapsed. 
-         0.0 means the ring returned a completion with 0 tokens. This is decode-dead, 
-         not canary failure."
-```
+297 and 298 cover opposite failure modes. **Too little** evidence → 297 (go read the
+source). **Conflicting** evidence → 298 (build a confound table, rank the instruments,
+never discard a reading until you can name the specific defect in it). More gathering
+cannot resolve a disagreement; it just adds a fourth number to argue about.
 
-## If the source file is too large for context
+**Trigger:** the moment a new measurement disagrees with one you already have, or you
+notice you have stated the same quantity two different ways in one session. 298 also
+carries the threshold-sanity gate — always backtest a threshold against the system's
+own observed distribution before shipping it.
 
-Read the RELEVANT SECTION only. Grep for the function/method name that handles the behavior you're investigating. Read that function and its callers. Do not read the whole file. Do not claim to know the whole file.
+## The SCOPE GATE (mandatory before quantifying any failure population)
 
-## Relation to Rule 263 (verify-before-claim)
+Undercounting is the same failure as miscounting. Before reporting ANY count of
+failures, errors, or anomalies:
 
-Rule 263 says: verify facts with tools before stating them. Rule 297 extends this: for DIAGNOSIS (not just factual claims), the verification tool is `read_server_file` on the source code that produces the behavior. A curl against an endpoint is a symptom-gathering tool, not a verification tool for a claim about WHY the endpoint behaves that way.
-
-## Relation to Rule 298 (novelty is not authority) — READ 298 WHEN YOU HAVE *CONFLICTING* EVIDENCE
-
-**297 and 298 cover opposite failure modes and you need to know which one you are in.**
-
-| you have | rule | failure it prevents |
-|---|---|---|
-| **too little** evidence | **297** (this rule) | claiming a root cause from a probe alone, without reading the code |
-| **conflicting** evidence | **298** | serially adopting whichever reading arrived most recently |
-
-297's fix is *go get more evidence, specifically the source*. **That fix does not work when the
-problem is that you already have several readings and they disagree.** More gathering will not
-resolve a disagreement; it just adds a fourth number to argue about. 298 supplies the missing
-procedure: build a **confound table**, rank instruments by what is in the measurement path and
-what is actually being counted, and never discard a reading until you can *name the specific
-defect in it*.
-
-**Trigger to jump to 298:** the moment a new measurement disagrees with one you already have,
-or you notice you have stated the same quantity two different ways in one session.
-
-Source incident for 298: 2026-08-04, one session reported GLM per-stream throughput as
-`2.65 → 2.96 → 36.44 → 1.71 → 36.44 → 1.96 → 1.88` tok/s in an hour. Every flip was
-individually justified with real data, which is exactly why it evaded self-correction. 297
-alone would not have caught it, because the agent *was* gathering evidence the whole time.
-
-**298 also carries the threshold-sanity gate**, which is where this class does real damage: a
-number derived this way becomes a threshold, and the threshold gates availability. Backtested
-2026-08-04 against 755,800 real inter-token observations, a plausible-sounding "below 5 tok/s
-= down" rule would have flagged **99.15% of healthy production traffic**. A threshold derived
-from the system's own baseline flagged **1.03%**. Always backtest a threshold against the
-system's own observed distribution before shipping it.
-
-## 2026-08-08 STRENGTHENING #1 — the SCOPE GATE (undercounting is the same failure as miscounting)
-
-### Source incident (Argus failure scan, 2026-08-08)
-
-Ruben asked for a scan of Argus errors. The agent queried `argus_task_queue WHERE status='failed'` over 12 hours and reported **6 failures**. Ruben pushed back: "between myself and all users there are many more, closer to 50 to 100." The corrected scan found **85** no-answer tasks in 7 days. The first number was wrong by 14x, not because the query was buggy, but because the QUESTION was scoped wrong on three axes at once:
-
-| Axis | First scan | Reality |
-|---|---|---|
-| Outcome states | `status='failed'` only | The enum has 6 states; `offloaded` (59) and `canceled` (19) are ALSO no-answer outcomes from the user's perspective |
-| Time window | 12 hours | The complaint spanned days; 7d was the honest window |
-| Population | implicit single-user framing | 7 distinct users had failures |
-
-**The trap**: a technically-correct COUNT of a too-narrow population is presented as THE answer. The user's mental model of "failure" (I asked, I got no answer) is wider than the system's `failed` enum value. The agent measured the enum, not the experience.
-
-### The SCOPE GATE (mandatory before quantifying any failure/anomaly population)
-
-Before reporting ANY count of failures, errors, or anomalies:
-
-1. **Enumerate the outcome space first.** `DESCRIBE` the table / read the enum / list the log's event types. Ask: which of these states does the USER experience as failure? Include all of them or state explicitly which are excluded and why.
-2. **State the window and justify it.** If the user's complaint references "always" / "every time" / multiple days, a 12h window is wrong by construction.
+1. **Enumerate the outcome space first.** `DESCRIBE` the table, read the enum, list the
+   log's event types. Ask which of those states the USER experiences as failure.
+   Include all of them, or state explicitly which are excluded and why.
+2. **State the window and justify it.** If the complaint references "always" / "every
+   time" / multiple days, a 12h window is wrong by construction.
 3. **State the population.** All users unless the question names one.
-4. **Report the count WITH its scope inline**: "85 no-answer tasks (failed+canceled+offloaded), 7 days, all users" — never a bare number.
-5. **Sanity-check against the user's estimate.** If the user says 50-100 and you measured 6, your scope is the prime suspect, not the user's memory. Re-scope BEFORE arguing.
+4. **Report the count WITH its scope inline**: "85 no-answer tasks (failed + canceled +
+   offloaded), 7 days, all users." Never a bare number.
+5. **Sanity-check against the user's estimate.** If the user says 50-100 and you
+   measured 6, your scope is the prime suspect, not the user's memory. Re-scope BEFORE
+   arguing.
 
-## 2026-08-08 STRENGTHENING #2 — "do a 297" means FIX THE CAUSAL RULE, not just write the RCA
+The trap is a technically-correct COUNT of a too-narrow population, presented as THE
+answer. The user's mental model of "failure" is almost always wider than the system's
+`failed` enum value.
 
-Ruben directive, verbatim: "Whenever I ask you to do a 297 that means that you probably need to update the original rule or process that caused you to do that in the first place. I'm thinking that should be part of rule 297."
+## "Do a 297" means FIX THE CAUSAL RULE, not just write the RCA
 
-It is now. A rule-297 request has THREE deliverables, not one:
+Ruben directive 2026-08-08: *"Whenever I ask you to do a 297 that means that you
+probably need to update the original rule or process that caused you to do that in the
+first place."*
 
-1. **The RCA itself** — symptom, source read, classification bucket, citation (the original rule body above).
-2. **The causal-rule fix** — identify WHICH rule, process, prompt, or code path let the mistake happen, and UPDATE IT in the same session (edit the .md rule, patch the script, fix the query template). If the causal surface is a hardfloor rule needing Ruben review, draft the edit and flag it. An RCA that leaves the trap armed for the next agent is an incomplete 297.
-3. **The reindex/propagation step** — after editing any rule, run the clinerules MCP reindex so future windows see the fix immediately.
+A rule-297 request has THREE deliverables:
 
-Self-check before closing a 297 task: "If a fresh agent got the same request tomorrow, would it fall into the same trap?" If yes, the 297 is not done.
+1. **The RCA** — symptom, source read, classification bucket, citation.
+2. **The causal-rule fix** — identify WHICH rule, process, prompt, or code path let the
+   mistake happen, and UPDATE IT in the same session. If the causal surface is a
+   hardfloor rule needing Ruben review, draft the edit and flag it. An RCA that leaves
+   the trap armed for the next agent is an incomplete 297.
+3. **The reindex** — after editing any rule, run the clinerules MCP reindex so future
+   windows see the fix immediately.
+
+Self-check before closing: *if a fresh agent got the same request tomorrow, would it
+fall into the same trap?* If yes, the 297 is not done.
 
 ---
 
 **Hardfloor: NO** (can be overridden by a higher-priority operational directive)
-**Source incidents: Argus-slow investigation 2026-08-01 (3 wrong diagnostic claims from probes alone); Argus failure-scan undercount 2026-08-08 (reported 6, reality 85 — scope gate added)**
-**Last strengthened: 2026-08-08 by Cline (Ruben directives: scope gate + "a 297 request includes fixing the causal rule")**
+**Full case law + source incidents:** `Rules-archive/297-case-law.md`
+**Source incidents:** Argus-slow investigation 2026-08-01 (3 wrong diagnostic claims
+from probes alone); Argus failure-scan undercount 2026-08-08 (reported 6, reality 85).
+**Last updated:** 2026-08-11 (trim-then-archive for G8 floor-cap compliance)

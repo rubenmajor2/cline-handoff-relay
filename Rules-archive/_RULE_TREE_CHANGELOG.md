@@ -153,3 +153,24 @@ per-rule prose elaboration moved here (it duplicates clinerules_lookup output).
 
 
 ```
+
+## 2026-08-08 (idea #25188) — collision cleanup: full was/now mapping
+
+Moved out of `Rules/_RULE_TREE.md` on 2026-08-11 for G8 floor-cap compliance.
+Eleven numbers each held TWO different rules. A rule number is only a filename
+prefix and nothing enforced uniqueness, so `clinerules_lookup(N)` returned
+whichever file sorted first: a coin flip. The tree-cited rule KEPT its number;
+its twin was renumbered. One (296) was a true duplicate and was retired.
+
+| was | now | rule |
+|---|---|---|
+| 255 | **306** | cx7-tp2-cluster-operations-runbook |
+| 273 | **307** | student-certificate-issued-means-done |
+| 274 | **308** | parallel-distributed-file-transfer |
+| 275 | **309** | cicero-ssh-access-and-wireguard |
+| 278 | **310** | afk-mode-needs-verify-auto-deploys |
+| 281 | **311** | regulator-response-playbook |
+| 298 | **312** | router-reporting-must-resolve-adapter-names |
+| 91  | **313** | refund-offer-not-act |
+| 296 dup | ret| 296 dup | ret| 296 dup | ret| 296 dup | ret| 296 dup | ret| 296 dup | ret| 296 dm- var| 296 dup | ret| 296 dup | ret| 296 dup | ret| 296 dup | ret| 296 dup ntionally share
+their parent's number: they are companion files to a hardfloor rutheir parent's number: they are companion files to a hardfloo, not a collision.

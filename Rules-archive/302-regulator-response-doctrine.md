@@ -200,6 +200,55 @@ Cite form names and actual dates. Do **not** state the grace period itself, and 
 
 **Signature.** Canonical file only, per rule 301. Verify with `pdfimages -list`.
 
+## READ THE ATTACHMENTS FIRST, AND ANSWER THE PRODUCTION LIST
+
+A notice usually has TWO halves: the allegations, and a numbered list of records to produce. **The production list is the half that carries the deadline.** A response that argues the allegations beautifully and never addresses the numbered items is non-responsive on its face, and the agency's next letter will say so.
+
+**Structure every response in three parts:**
+
+- **Part I, threshold reservations.** Response period, scope, particulars available, source of the allegations.
+- **Part II, the matters raised.** In the agency's order, answered without restating them.
+- **Part III, production, item by item in the agency's numbering.** For each: what is furnished, or a statement that a requested field does not exist in the system of record. **Never leave a requested column blank without saying why.** "Furnished" against every number is what lets the agency close the item.
+
+**Read the enclosed regulations before drafting, not after.** Agencies enclose the chapter because the chapter is the standard. Reading it converts a weak "no provision is identified" into a citation from the agency's own rules. Measured on the 2026-08-10 San Mateo draft: reading Chapter 2 produced six defenses the earlier draft lacked entirely, including one that reversed an item.
+
+**The four questions to ask of the enclosed regulations for every allegation:**
+
+1. **Does the chapter address this subject at all?** If not, say so and answer for completeness without conceding scope. Two of ten San Mateo items (background screening, tuition and refunds) are governed by neither the chapter nor the agency.
+2. **Does the chapter fix a different interval than the notice asserts?** The San Mateo notice demanded ten calendar days; the chapter fixes fifteen WORKING days for a program's written response to a noncompliance notification. Citing the agency's own interval is far stronger than "no provision is cited."
+3. **Does the chapter assign the approval or duty to US rather than to THEM?** The single highest-value pattern. The San Mateo notice complained it had no record of an instructor; the chapter approves teaching assistants through the program director in coordination with the clinical coordinator, NOT through the agency. Where that is the role, the absence of an agency record is EXPECTED and is not evidence of anything. Never concede a records gap before checking who owns the approval.
+4. **Is there a grace window?** Thirty calendar days to notify of a change in principal instructor means a gap is not instantaneous noncompliance.
+
+**State the adverse provision yourself.** Where the chapter does impose a duty on us that bears on an allegation, cite it and answer on the records. A filing that omits the adverse provision loses credibility the moment the reader finds it, and they will.
+
+**FERPA is a defense, not just a caveat.** Where an allegation is that a parent could not get answers, adult-student privacy means a call the program could not discuss on the merits is not an unanswered call. That converts part of an allegation into an obligation the program was honoring.
+
+**Name the source of the allegations.** They are complainant assertions relayed by the agency, not agency findings. Where no underlying complaint, date, cohort, or complainant has been furnished, say what the records show for the period and campus and state that you cannot narrow further.
+
+Source incident 2026-08-10 (San Mateo): a draft was called finished at 3 pages answering only the 10 allegation items. It had no Part III, so all 9 numbered production demands were unanswered. Ruben: "Is that intentional? Did you read all the attachments?" The attachments were the Notice (10 allegations plus 9 production items plus the response period), the prior agency email, and the full enclosed chapter. Rebuilt to 4 pages with a full production index and seven regulation citations.
+
+## HOUSE STYLE: every regulator filing is a LETTER on letterhead, never a memo
+
+**Canonical artifact:** `/var/www/emtskills/uploads/tdshs/inspection-5196-2026/Consolidated_Response_and_Reservation_of_Rights_TDSHS_2026-08-06.html`. That is the look. Everything below is agency-neutral; nothing state-specific belongs in the template.
+
+**Canonical renderer:** `/var/www/emtskills/personnel/scripts/compliance_letterhead_pdf.py`. It reads the markdown draft's bold front-matter keys and builds the letter. Do NOT hand-roll a new HTML shell per agency, and do NOT ship a plain markdown-to-PDF render at a regulator.
+
+Required elements, in order:
+
+1. **Letterhead.** Logo left (`/var/www/emtskills/emsulogo5.png`, 1.00in), company block centered right: EMS UNIVERSITY, LLC / d.b.a. EMS Universal Education / street address / email, phone, web / the tagline in italics. Rule under it.
+2. **Meta block.** Date. Delivery method in caps (VIA EMAIL, VIA CERTIFIED MAIL AND ELECTRONIC MAIL). Recipient name and title, agency, street, city/state/zip, one line each.
+3. **RE line, bold.** Entity name, program, what the document is, and "and reservation of rights" where reservations are stated. Where several matters are consolidated, list every control number in the RE line.
+4. **Salutation.** "Dear <name>:" A regulator filing is addressed to a person.
+5. **Body.** `h2` small-caps for numbered items. No TO/FROM/DATE memo header inside the body; that content is the meta block.
+6. **Signature block.** "Best, &c" then the canonical signature image (rule 301, `ruben_major_signature_canonical.jpg`, verifies as 256x76 in `pdfimages -list`), then "--", name with credentials (Ruben Major, EMT-Paramedic, J.D., M.A.), title, tagline, web, phone.
+7. **Footer.** Thin centered rule: company, email, phone. A state license number appears ONLY in a filing to that state's regulator. Never carry another state's license number into an unrelated agency's filing.
+
+**Front-matter keys the renderer consumes:** `DATE`, `VIA` (or `DELIVERY`), `ATTN` (or `TO`), `RE`, `SALUTATION`. **Pipe-delimit the recipient block**, not comma: `ATTN: Name, Title | Agency | Street, Suite | City, ST ZIP`. Comma-splitting shreds "South San Francisco, CA 94080" into two address lines, which is how the 2026-08-10 first render failed.
+
+**Retire the closing from the markdown.** The renderer stops the body at "Respectfully," / "Sincerely," / "Best, &c" and substitutes the canonical signature block, so a hand-typed name in the draft never competes with the real signature.
+
+Source incident 2026-08-10 (San Mateo): the response was rendered as plain markdown-to-PDF. No logo, no letterhead, no signature image, no footer, and a TO/FROM/DATE memo header instead of a letter. Ruben: "That response does not have our logo on it. It does not look like the other responses like for TDSHS." Two filings from the same company that look nothing alike is a credibility problem before a reader reaches a sentence. Rebuilt on this template the same session.
+
 ## ENCLOSURE PATTERN
 
 | Enclosure | Content | Responds to |
@@ -234,8 +283,10 @@ Plus: correct page count, 644 www-data, HTTP 200.
 **Also grep for the internal DRAFT BANNER.** The section-level sweep cannot catch it, because a status banner is a single line and belongs to no section:
 
 ```
-grep -ciE 'STATUS: DRAFT|must not be sent|superseded and must|INTERNAL ONLY'  /tmp/v.txt   # must be 0
+grep -ciE 'STATUS: DRAFT|must not be sent|superseded and must|INTERNAL ONLY|^INTERNAL:|INTERNAL NOTE:'  /tmp/v.txt   # must be 0
 ```
+
+**Do not grep bare `INTERNAL`.** It false-positives on legitimate body text: "the program has adopted a standing internal practice of confirming examination dates in writing" is a real sentence in a real filing and must survive. Match the BANNER FORMS (`INTERNAL:`, `INTERNAL NOTE:`, `INTERNAL ONLY`), not the word. A gate that cries wolf on good text gets ignored, which is worse than no gate.
 
 Source incident 2026-08-10 (San Mateo): the response draft carried `**STATUS: DRAFT v2, rewritten to rule 302 gold standard. v1 is superseded and must not be sent.**` on line 3. The renderer stripped every internal H2 section correctly and passed that line straight into the filing PDF, where it supplied BOTH an internal note about our own defects AND the document's only em dash. Two gate failures from one line. `compliance_response_pdf.py` now strips internal banner LINES as well as sections, but keep the grep: a renderer fix protects the renderer's output, and the grep protects the filing.
 

@@ -200,15 +200,40 @@ Cite form names and actual dates. Do **not** state the grace period itself, and 
 
 **Signature.** Canonical file only, per rule 301. Verify with `pdfimages -list`.
 
+## PART 0 IS MANDATORY: every filing OPENS on the program, its mission, and its standards
+
+Ruben directive 2026-08-11: *"In all of our responses, we are supposed to have a beginning section discussing our goals, mission, what we are trying to do and have done that's positive and helpful for the community. This is our chance to showcase things. This is important because it becomes a part of the record."*
+
+**Canonical block, with all six required elements and the drafting rules:** `/var/www/emtskills/personnel/investigations/_templates/PART_0_PROGRAM_MISSION_AND_STANDARDS.md`. Copy it, swap the bracketed citations for that agency's chapter, delete the internal notes.
+
+**Why it is not optional.** Regulators, accreditors, opposing counsel, and other agencies read each other's files. A reader who arrives cold forms their view of the institution from whatever the filing puts first. Open on the allegation and the allegation IS the institution. Open on what the program is, what it requires above the minimum, and what it built unprompted, and every allegation after that is read against it. One page, and it travels into every file the document ever reaches.
+
+**Ordering: Part 0 goes AHEAD of the threshold reservations.** Reservations are procedural and read as defensive; leading with one says the program's first instinct is to object. The reservations lose nothing by sitting second because they are still contemporaneous. So the structure is now FOUR parts, not three: Part 0 mission and standards, Part I reservations, Part II the matters raised, Part III production.
+
+**The six elements, in order:** (1) purpose in two sentences; (2) the alignment-of-interest paragraph as a callout; (3) hands-on training above the standard, citing THEIR minimum first from the enclosed chapter; (4) the operational consequence of the above-minimum design; (5) the supervision ratios; (6) what the program built on its own initiative, closing with the no-duty tag.
+
+**Element 2 is the highest-value paragraph in any filing.** It converts "did the program care" from a credibility contest into an incentive question with one answer: the state has no surplus of certified EMS personnel, a student who does not finish is a student the program failed to deliver on, and the cost falls on the program. An indifference allegation is answered structurally, before it is ever mentioned.
+
+**Element 4 is the load-bearing one for latency allegations.** A thirty-six hour live-site requirement is bounded by affiliated-site capacity, and a program credentialing on simulated contacts carries no such constraint. That makes the constraint a product of the higher standard rather than a defect, without conceding anything.
+
+**Element 6 needs the no-duty tag or it backfires.** An unqualified list of good works reads as a list of standards the agency can hold you to next time. Close it: "The program describes these measures as its own standards. It offers them here as context and as continuous improvement, not as an acknowledgment of any deficiency, and not as a concession that any of them is required."
+
+**Part 0 never mentions the complaint.** It describes the institution. Everything in the DO-NOT-RESTATE-THE-ALLEGATION section applies with double force here.
+
+Source incident 2026-08-11: the San Mateo v5 response opened directly on the threshold reservations, and the transmitted TDSHS 8/6 consolidated response had no mission or standards section at all. The AZDHS 7/31 filing DID carry this shape as its sections A through C, so the pattern existed and was simply not carried forward. Ruben: *"you should be looking at the last several docs submitted as responses to see. That is how the gold standard works as well. It's very important."* Fixed as San Mateo v6 Part I and TDSHS master v2 Part 0.
+
 ## READ THE ATTACHMENTS FIRST, AND ANSWER THE PRODUCTION LIST
+
 
 A notice usually has TWO halves: the allegations, and a numbered list of records to produce. **The production list is the half that carries the deadline.** A response that argues the allegations beautifully and never addresses the numbered items is non-responsive on its face, and the agency's next letter will say so.
 
-**Structure every response in three parts:**
+**Structure every response in four parts:**
 
+- **Part 0, the program, its mission, and its standards of record.** Mandatory, and it goes FIRST. See the Part 0 section above.
 - **Part I, threshold reservations.** Response period, scope, particulars available, source of the allegations.
 - **Part II, the matters raised.** In the agency's order, answered without restating them.
 - **Part III, production, item by item in the agency's numbering.** For each: what is furnished, or a statement that a requested field does not exist in the system of record. **Never leave a requested column blank without saying why.** "Furnished" against every number is what lets the agency close the item.
+
 
 **Read the enclosed regulations before drafting, not after.** Agencies enclose the chapter because the chapter is the standard. Reading it converts a weak "no provision is identified" into a citation from the agency's own rules. Measured on the 2026-08-10 San Mateo draft: reading Chapter 2 produced six defenses the earlier draft lacked entirely, including one that reversed an item.
 
@@ -265,14 +290,47 @@ Check the chapter for a state-law hook before conceding. In Title 22 Chapter 2 t
 
 **Draw the line at contact information, not at names.** Produce student names and cohort dates. Withholding names reads as obstruction and the chapter contemplates names. The privacy interest bites on contact information, which is what enables direct approach to the student.
 
-**Do NOT argue whether the exception applies. Ask them to invoke it.** For an audit the agency's path is 34 C.F.R. 99.31(a)(3), authorized representative of a State educational authority, with the 99.35 undertakings (use limited to the audit, destruction when no longer needed). Whether a county agency qualifies is genuinely uncertain and arguing it is a fight with no upside. Name the exception, ask them to confirm in writing that they are invoking it with those undertakings, and commit to producing immediately on confirmation. If they confirm, we produce and their confirmation is in the record. If they cannot confirm, they have told us the exception does not apply, which is better than winning an argument.
+**Do NOT argue whether the exception applies. Ask them to invoke it.** For an audit the agency's path is 34 C.F.R. 99.31(a)(3), authorized representative of a State educational authority, with the 99.35 undertakings. Name the exception, ask them to confirm in writing that they are invoking it, and commit to producing immediately on confirmation. If they confirm, we produce and their confirmation is in the record. If they cannot confirm, they have told us the exception does not apply, which is better than winning an argument.
 
-**Offer a ladder, ascending in what it costs us:**
+#### Why the exception is doubtful for a COUNTY agency, and why we still do not argue it
 
-1. Their written 99.31(a)(3) confirmation plus the 99.35 undertakings.
-2. Student consents, which we will solicit on request and transmit as they arrive.
-3. A narrowed per-student request in place of a blanket one.
-4. **We transmit THEIR message to the students ourselves and confirm the date and the recipient count.** Lead on this one under pressure. It delivers the thing the agency actually wants, contact with students, with zero disclosure, and it is very hard to characterise as obstruction.
+The doubt is real and it is worth understanding, because it tells you how hard to hold the line. Read 99.31(a)(3) with 99.3 and 99.35 and it resolves into three elements, ALL of which must hold:
+
+1. **The recipient must be a "State or local educational authority,"** or an entity a State or local educational authority has designated as its authorized representative. 99.3 defines "authorized representative" as an entity designated **by** such an authority. A county EMS agency is a public-health and EMS-system regulator created under the Health and Safety Code. It is not an educational authority, and nothing in the EMT training chapter designates it as the representative of one. Its approval power over training programs makes it an approving authority for EMT courses; that is a different thing from an authority over education in the sense Part 99 uses.
+2. **The audit must be of a "Federal- or State-supported education program,"** or a compliance activity connected to Federal legal requirements relating to such a program (99.35(a)(1)). A privately funded, tuition-financed EMT course at a private company is not obviously State-supported merely because the State approves it. "Approved by" and "supported by" are not synonyms.
+3. **Where the recipient is not an employee of the designating authority, the designation must be by WRITTEN AGREEMENT** carrying the five elements 99.35(a)(3) lists: the specific PII, the purpose, a description of the activity specific enough to show it falls within 99.31(a)(3), a destruction requirement, and a destruction time period. Almost no county agency has such an agreement with a State educational authority for this purpose.
+
+So the honest read is that the exception probably does NOT reach a county EMS agency auditing a private EMT program. **That conclusion is exactly why we must not assert it.** Three reasons:
+
+- **It is a jurisdictional attack, and jurisdictional attacks escalate.** Telling a regulator "you are not the kind of body this applies to" invites them to prove they are, usually by involving someone who is, or by shifting from a records question to a program-approval question where our exposure is far larger. We would be trading a paperwork dispute for an authority dispute.
+- **We do not need to win it to get the protection.** Withholding rests on the Act, not on any characterisation of the agency. The Act's default is no disclosure without consent. Every exception is theirs to invoke, not ours to disprove. Silence on the question leaves the burden where it already sits.
+- **Asking is strictly better than arguing, in both branches.** If they confirm in writing, we produce and the record now holds THEIR representation that they are a 99.31(a)(3) authorized representative with the 99.35 undertakings. If our doubt was well founded, that confirmation is their problem and their liability, made on their own signature, while our production is protected by good-faith reliance on it. If they cannot confirm, they have conceded the exception does not apply and the withholding is settled without a fight. There is no branch in which arguing element 1 improves our position.
+
+**So: name the elements as QUESTIONS FOR THEM, never as assertions ABOUT them.** Write "the exception carries elements the program cannot supply for the Agency and cannot presume," then list the three. That puts the whole analysis in the record, preserves it for later if we ever need it, and asserts nothing. If they invoke a different exception, ask them to name it and act on the same basis.
+
+**Offer a ladder, ascending in what it costs us. Scope every rung so no rung concedes a duty we do not have:**
+
+1. Their written 99.31(a)(3) confirmation. We produce promptly on it.
+2. **Student-elected consent, made available ONCE, never solicited.** See the scoping rule below.
+3. A narrowed per-student request in place of a blanket one. Say this is the course we prefer.
+4. **We transmit THEIR message to the students, once and verbatim, and confirm the date and the recipient count.** Lead on this one under pressure. It delivers the thing the agency actually wants, contact with students, with zero disclosure, and it is very hard to characterise as obstruction. Scope it: one transmission of a message they supply, no undertaking to obtain replies, chase non-responders, run a continuing channel, or disclose who responded, and reserve the right to decline content that would itself disclose an education record or that is not the agency's own communication.
+
+#### SCOPE EVERY ACCOMMODATION. We have no affirmative duty to any of them.
+
+An accommodation offered in open terms becomes an obligation the agency measures us against, and the next letter asks why we did not do more of it. Each rung must state that it is voluntary, and each must have an edge.
+
+**Rung 2 is the dangerous one, and it was drafted wrong on 2026-08-11.** "Student consents, which we will solicit on request and transmit as they arrive" is defective three times over:
+
+- **It invents a duty.** Nothing in FERPA, and nothing in an EMT training chapter, obliges a program to obtain consent for a third party. 99.30 makes consent the student's voluntary act. We have no duty to seek it.
+- **"Solicit" is the wrong verb and it cuts against the student.** The privacy interest we are protecting is the STUDENT'S. A program that campaigns for consents is applying institutional pressure to get a student to surrender the very right we invoked on their behalf. That is the opposite of protecting it, and a student who felt pressured has a complaint against us with better facts than the one we are answering.
+- **"As they arrive" is an open-ended undertaking with no end.** It implies follow-up, a duty to chase, and a rolling obligation with no completion condition. Now non-response looks like our non-performance.
+
+Correct form:
+
+> The program will make a consent form available on one occasion to the students in the cohorts at issue, and will transmit to the Agency each consent a student elects to return, together with the date the form was made available and the number of consents received. The program does not solicit, encourage, or follow up on consents, and it makes no representation as to how many students will return one. Consent under 34 C.F.R. 99.30 is the student's decision alone, and a program that pressed for it would be doing the opposite of protecting the interest the Act assigns to the student. The program will not do that, and it records that it has no duty to obtain any consent.
+
+**The general test, before ANY offer of assistance in any filing:** name the duty. If no provision imposes it, the offer must say so, must be bounded to a single defined act, and must disclaim any result. "We will help" without an edge is a standard they will hold us to.
+
 
 **Say why you are raising it:** "The program raises this to comply with the Act, not to withhold from the Agency." And flag the category explicitly in the threshold reservation so the no-withhold sentence is not read as covering it: where a record is subject to a privacy restriction existing for the benefit of a third party, the program cannot produce it merely because it is willing to.
 
@@ -305,6 +363,32 @@ Required elements, in order:
 **Front-matter keys the renderer consumes:** `DATE`, `VIA` (or `DELIVERY`), `ATTN` (or `TO`), `RE`, `SALUTATION`. **Pipe-delimit the recipient block**, not comma: `ATTN: Name, Title | Agency | Street, Suite | City, ST ZIP`. Comma-splitting shreds "South San Francisco, CA 94080" into two address lines, which is how the 2026-08-10 first render failed.
 
 **Retire the closing from the markdown.** The renderer stops the body at "Respectfully," / "Sincerely," / "Best, &c" and substitutes the canonical signature block, so a hand-typed name in the draft never competes with the real signature.
+
+### PAGE GEOMETRY AND TYPOGRAPHY (verify on the OUTPUT, never in the CSS)
+
+House page specification, and every filing must measure to it:
+
+| Property | Value | How to verify |
+|---|---|---|
+| Page size | **US Letter, 612x792 pts** | `pdfinfo F.pdf \| grep 'Page size'` |
+| Side margins | 1.00in left and right, equal | render page to PNG, measure the ink bounding box |
+| Top margin | ~0.95in | same |
+| Bottom margin | ~0.90in, footer inside it | same |
+| Body measure | ~6.5in | same |
+| Body copy | justified, 11.5pt serif, 1.52 leading, orphans and widows 3 | visual |
+| Running footer | on EVERY page: company / email / phone left, "Page N of M" right, hairline above | `pdftotext -f 3 -l 3 F.pdf - \| grep 'Page 3 of'` |
+
+**wkhtmltopdf 0.12.6 lies twice, and both lies are silent. This is the general lesson: verify the ARTIFACT, never the source that was supposed to produce it.**
+
+1. **It ignores the CSS `@page` rule** unless `--print-media-type` is set. Every `@page{size:letter;margin:1.15in 1.2in}` declaration in our renderers was dead text. Measured 2026-08-11: the TDSHS 8/6 per-complaint letters, the TDSHS 8/6 consolidated response, and the San Mateo 8/10 response all rendered **A4 (595x842)** with wkhtmltopdf's default 10mm margins, while the AZDHS 7/31 filing happened to render Letter. Two filings from the same company on two different paper sizes, and the CSS said Letter in both. Page geometry must be passed on the **command line** (`--page-size Letter --margin-top --margin-bottom --margin-left --margin-right`), which is the only place it is read.
+2. **It silently ignores EVERY `--footer-*` and `--header-*` switch** because this build is unpatched qt. It prints "not support using unpatched qt, and will be ignored" to stderr and **exits 0**. A footer passed that way never appears and nothing fails. The footer is therefore drawn with reportlab and merged with pypdf inside the renderer, then asserted by extracting page-1 text.
+
+Related trap in the fix: **pypdf re-serialises content streams uncompressed.** The first stamped render inflated a 120KB filing to 1.09MB. `page.compress_content_streams()` before writing restores it (121KB).
+
+**The gate, on the OUTPUT file, every time:** page size is 612x792; ink bounding box shows equal 1.00in side margins; a "Page N of M" string extracts from a middle page. `--margin-*` values must all use the same unit or wkhtmltopdf fails with "all margin units must be the same."
+
+Source incident 2026-08-11: Ruben, on the San Mateo v5 PDF: *"your formatting is off again and your margins are bad and the style is again ugly."* Both defects above were live, and both had been invisible because the CSS looked correct. The renderer now asserts geometry after render and returns exit 4 if the rendered page does not match the requested size, so a silently-ignored flag fails loudly instead of shipping.
+
 
 Source incident 2026-08-10 (San Mateo): the response was rendered as plain markdown-to-PDF. No logo, no letterhead, no signature image, no footer, and a TO/FROM/DATE memo header instead of a letter. Ruben: "That response does not have our logo on it. It does not look like the other responses like for TDSHS." Two filings from the same company that look nothing alike is a credibility problem before a reader reaches a sentence. Rebuilt on this template the same session.
 
@@ -409,7 +493,10 @@ Breaks it: "we should have counsel present," "we would want counsel there," "let
 
 2026-08-06 — TDSHS Inspection 5196 consolidated response, 3 matters, 31 revision rounds. Added: the consolidate-and-keep-consolidating rule, the accompanying-document consistency gate, the never-volunteer-an-interval table, the do-not-adopt-their-premise rule, the disclaimed observation, concede-then-narrow, contemporaneous-record framing, third-party attestation, and the no-links / flattened-extraction verification. The Texas-specific build sheet is rule 304.
 
+2026-08-11 — San Mateo County EMSA audit response, v4 through v6. Added: the mandatory Part 0 mission and standards section (four-part structure now), the county-authorized-representative analysis under 99.31(a)(3) with the ask-do-not-argue posture, the scope-every-accommodation rule with the corrected consent rung, and the page-geometry gates after two silent wkhtmltopdf defects put filings on A4 with no running footer.
+
 ## Last updated
 
-2026-08-06 — expanded with the TDSHS 8/6 deltas. Rule 304 added as the Texas playbook.
+2026-08-11 — Part 0 mandate, FERPA county-authority analysis, accommodation-scoping rule, page-geometry gates. Canonical Part 0 block at `/var/www/emtskills/personnel/investigations/_templates/PART_0_PROGRAM_MISSION_AND_STANDARDS.md`.
+
 

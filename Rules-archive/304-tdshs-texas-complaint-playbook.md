@@ -51,21 +51,23 @@ The per-matter letter is thin by design. It carries: the control number, the tra
 1. Cover letter block, RE line with every control number, salutation by full name
 2. Opening: what is being submitted, how many matters, why answered together
 3. Names disclaimer + records-maintained-per-Chapter-157 line
-4. **Public-interest context** (see below, this is a Ruben signature move)
-5. **Matters the Program Places Before the Department at the Outset** (the bullet ledger)
-6. Threshold Matter: every student's present status, one line per control number
-7. A. The Program Record
-8. B. The Live-Site Standard and What Follows From It
-9. C. Common Origin of These Matters
-10. D. Effect of the Current Volume on Student Processing (with the dated arrival record)
-11. E. Personnel Matters
-12. F. Reservation of Rights and No Admission
-13. G. Continuing Cooperation
-14. Threshold Objection: the standards invoked are not defined by any cited authority
-15. Section I: per-matter responses
-16. Operational Review
-17. Procedural Note (numbered, 7 items)
-18. Signature block
+4. **PART 0, the program, its mission, and its standards of record** (mandatory as of 2026-08-11, rule 302). The public-interest context in item 5 is element 2 OF this part, not a standalone paragraph. The full six-element block is at `/var/www/emtskills/personnel/investigations/_templates/PART_0_PROGRAM_MISSION_AND_STANDARDS.md`. The transmitted 8/6 filing had the public-interest paragraph but NOT the surrounding mission, above-the-minimum, ratio, and own-initiative elements, which is the gap this closed. Updated master with Part 0: `/var/www/emtskills/uploads/tdshs/inspection-5196-2026/MASTER_Consolidated_Response_v2_2026-08-11.md`.
+5. **Public-interest context** (see below, this is a Ruben signature move, and it is element 2 of Part 0)
+6. **Matters the Program Places Before the Department at the Outset** (the bullet ledger)
+7. Threshold Matter: every student's present status, one line per control number
+8. A. The Program Record
+9. B. The Live-Site Standard and What Follows From It
+10. C. Common Origin of These Matters
+11. D. Effect of the Current Volume on Student Processing (with the dated arrival record)
+12. E. Personnel Matters
+13. F. Reservation of Rights and No Admission
+14. G. Continuing Cooperation
+15. Threshold Objection: the standards invoked are not defined by any cited authority
+16. Section I: per-matter responses
+17. Operational Review
+18. Procedural Note (numbered, 7 items)
+19. Signature block
+
 
 ## THE PUBLIC-INTEREST OPENING (Texas-specific, use it)
 

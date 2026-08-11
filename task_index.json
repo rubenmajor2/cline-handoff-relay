@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-11T08:56:17.442Z",
+ "generated_at": "2026-08-11T09:56:17.814Z",
  "counts": {
-  "parsed": 5,
-  "reused": 617,
+  "parsed": 1,
+  "reused": 621,
   "failed": 0,
   "total": 622
  },
@@ -122657,11 +122657,11 @@
   },
   "1786435974712": {
    "task_id": "1786435974712",
-   "mtime": 1786438208024,
+   "mtime": 1786441027818,
    "created_at": "2026-08-11T08:12:54.712Z",
-   "last_modified": "2026-08-11T08:50:08.024Z",
-   "size_kb": 3541,
-   "turn_count": 104,
+   "last_modified": "2026-08-11T09:37:07.818Z",
+   "size_kb": 3637,
+   "turn_count": 118,
    "title": "#Julia/Claudia TP=2\n\nGet Julia/Claudia TP=2 working properly\n\nSSH access to both Julia (port 2205) and Claudia (port 2206) is confirmed using the existing network key. The next actionable step is to list the crash‑log files on the Julia host to identify the first stall details.\n\nCurrent task progress:\n- [x] Verify correct SSH key location for Julia host\n- [x] Verify SSH port 2205 is reachable\n- [ ] List crash log files on Julia host\n- [ ] Identify first stall details\n- [ ] Increase RAY_CGRAPH_get_timeout in julia_unified_tp2.sh\n- [ ] Relaunch Julia service and monitor stability\n- [ ] Verify 2+ hours of stable traffic\n- [ ] Update bug library incident 2306 to resolved\n\nPlanned command to exec",
    "pickup_prompt": null,
    "ideas": {

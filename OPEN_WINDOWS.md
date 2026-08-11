@@ -6,14 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/11/2026, 2:49:48 PM PT | window: last 72h | 91 tasks | index total 644 (parsed 6, cached 638)
+Generated: 8/11/2026, 3:49:49 PM PT | window: last 72h | 90 tasks | index total 645 (parsed 4, cached 641)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786469157683` | 8/11/2026, 2:49:48 PM | 303 | 805KB | How many tokens have our FREE LLMs used in the last 30 days |
-| `1786483060620` | 8/11/2026, 2:49:39 PM | 95 | 458KB | Closing on a new property in Tempe 1250 East Baseline. Please analyze the 139 page inspect |
-| `1786481696854` | 8/11/2026, 2:49:36 PM | 182 | 480KB | #TDSHS Sunset Report |
-| `1786472732313` | 8/11/2026, 2:41:22 PM | 406 | 1251KB | #TDSHS |
+| `1786487328625` | 8/11/2026, 3:49:26 PM | 156 | 499KB | See this form - i think it's california skills verification form on wp forms at emsunivers |
+| `1786481696854` | 8/11/2026, 3:45:31 PM | 280 | 720KB | #TDSHS Sunset Report |
+| `1786483060620` | 8/11/2026, 3:25:40 PM | 152 | 734KB | Closing on a new property in Tempe 1250 East Baseline. Please analyze the 139 page inspect |
+| `1786469157683` | 8/11/2026, 3:25:27 PM | 436 | 1143KB | How many tokens have our FREE LLMs used in the last 30 days |
+| `1786472732313` | 8/11/2026, 3:08:58 PM | 434 | 1326KB | #TDSHS |
 | `1786476815310` | 8/11/2026, 2:37:15 PM | 132 | 647KB | #Postmark API |
 | `1786467898078` | 8/11/2026, 2:32:38 PM | 274 | 1811KB | #MDM |
 | `1786467822115` | 8/11/2026, 2:09:32 PM | 328 | 772KB | frankenstein-llm is stalling this morning. Why?  |
@@ -99,105 +100,25 @@ Generated: 8/11/2026, 2:49:48 PM PT | window: last 72h | 91 tasks | index total 
 | `1786229375596` | 8/8/2026, 4:32:47 PM | 266 | 810KB | Something just knocked out frankenstein-llm. Can't find which process did it. Can you brin |
 | `1786211568282` | 8/8/2026, 4:25:57 PM | 492 | 1167KB | #Argus |
 | `1786211859440` | 8/8/2026, 4:12:34 PM | 590 | 1093KB | #Subagents, etc... |
-| `1786214054947` | 8/8/2026, 3:15:32 PM | 476 | 1066KB | Can you play doctor of ruben executor and take a look at this page: https://emsuniversity. |
-| `1786211264211` | 8/8/2026, 3:09:34 PM | 784 | 1911KB | #Context |
 
 ---
 
 ## Per-window detail
 
-### `1786469157683` — 8/11/2026, 2:49:48 PM PT — 303 turns
+### `1786487328625` — 8/11/2026, 3:49:26 PM PT — 156 turns
 
 **Original task:**
 
 ```
-How many tokens have our FREE LLMs used in the last 30 days
+See this form - i think it's california skills verification form on wp forms at emsuniversity.com and/or at https://emsuniversity.com/emsu-skill-form/?form_id=2835&auth_token=eyJ1c2VyX2lkIjoxLCJmb3JtX2lkIjoyODM1LCJ1c2VyX25hbWUiOiJSdWJlbiBNYWpvciIsInVzZXJfZW1haWwiOiJybWFqb3JAZW1zdW5pdmVyc2l0eS5jb20iLCJ1c2VyX3JvbGUiOiJNYXN0ZXJBZG1pbiIsImV4cGlyZXNfYXQiOjE3ODY0OTA4OTMsIm5vbmNlIjoiZWE5Yzc4ZjEwNjI1MmZiNjViYjM4YTZjMjk0NGE2NTMifQ%3D%3D.46909d1c5645ab930b171bcd3332d17b6ef694cfafd1d151c9da66b2d1d6f0d4 
+etc...
 ```
 
-**Ideas referenced:** #10108, #10739, #10740, #11741, #11781, #12299, #12477, #12584, #12618, #12824, #12872, #12878, #13202, #1452, #16163, #16265, #16304, #16588, #16844, #18312, #18326, #22060, #22386, #2275, #2299, #2316, #23171, #25045, #25097, #25185 [deployed], #25186, #25194, #25753 [proposed], #272822, #5892, #711855, #7174, #9215, #9320
+**Ideas referenced:** #19918, #2318, #25185, #25803 [proposed], #25804 [executing], #3109, #8211
 
-**Last PICKUP PROMPT:**
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-```
-*stop** from email/sms surface
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task: Email/SMS responder routing deployed — monitor + cleanup
-
-Where we left off (verified 2026-08-11 14:09 PT):
-- EmailAIResponder + SMSAIResponder: 60s→300s timeout, gpt-5.2→deepseek-v4-pro, +direct-DeepSeek survival
-- callDeepSeekDirect() inserted in both files (line 658 EmailAIResponder, 376 SMSAIResponder)
-- DEEPSEEK_API_KEY defined in config.local.php (sk-13eb…)
-- #25753 [executing] — claude-haiku-4-5 cost tracking gap approved
-- FPM reloaded (USR2 to master 2242), masters confirmed alive
-- No email_ai/sms_ai rows in llm_call_log in last 2h (quiet period)
-
-Open threads to drive next:
-1. #25753 [executing] — Fix claude-haiku-4-5 zero-cost tracking in llm_call_log (33K calls untracked)
-2. (human-only decision, no idea) — Monitor error_log for "trying direct DeepSeek" — if it fires, LiteLLM is unhealthy
-3. (human-only decision, no idea) — Verify gpt-5.2-2025-12-11 rows from email/sms surfaces stop within 24h
-4. (human-only decision, no idea) — If frankenstein-llm p90 still exceeds 300s at peak, consider prompt trimming (~40K input is heavy) or streaming the first token
-
-Reference IDs:
-- Ideas: #25753 [executing]
-- Files deployed: /var/www/emtskills/lib/EmailAIResponder.php, /var/www/emtskills/lib/SMSAIResponder.php, /var/www/emtskills/config/config.local.php
-- Backups: .bak-gpt52-reroute in lib/
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786483060620` — 8/11/2026, 2:49:39 PM PT — 95 turns
-
-**Original task:**
-
-```
-Closing on a new property in Tempe 1250 East Baseline. Please analyze the 139 page inspection document emailed to me by jthompson@emsuniversity.com within the last few days and take into consideration the following that Chat GPT saw. You can do more/better:
-
-Negotiation and closing-protection items
-Seek fixed, documented protection rather than informal promises:
-    •    HVAC credit or escrow: Base it on the specialist’s suite-by-suite replacement plan, especially all R-22 and pre-2010 systems.
-    •    Life-safety/ADA contingency: Preserve the right to terminate or renegotiate if the current 
-```
-
-**Ideas referenced:** #081020, #38984
-
-**Last PICKUP PROMPT:**
-
-```
-m closing readiness checklist.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — 1250 Baseline Tempe property inspection analysis.
-
-Where we left off (verified 2026-08-11 2:47 PM PT):
-- Comprehensive analysis written to /Users/rubenmajor/Desktop/1250_Baseline_Inspection_Analysis.md
-- Inspection_Report_081020260900-C.pdf extracted (139 pages, 4162 lines), located at /Users/rubenmajor/Downloads/Inspection_Report_081020260900-C.pdf
-- Key findings: 11 HVAC units (some R-22, pre-2010), bonding clamp disconnected, GFCI deficiencies, rafter tail deterioration all 4 sides, pavement replacement needed, no sprinkler/elevator inspection in report, missing permits/documentation
-
-Open threads to drive next:
-1. #<idea_number_for_property_analysis> [awaiting_review] — Review the analysis with Ruben, incorporate feedback, and if directed, export to email or document format for John Hart/realtor delivery
-2. #<idea_number_for_sprinkler_elevator> [proposed] — Determine fire sprinkler requirement for EMSU's intended occupancy at 1250 Baseline and confirm elevator existence/condition
-3. #<idea_number_for_specialist_bids> [proposed] — If closing proceeds, coordinate HVAC specialist, licensed electrician, sewer camera, roofer, and paving contractor inspections/bids
-
-Reference IDs:
-- Report: EPIC Inspection #081020260900-C (Mike Elsberry #38984, 480-390-8180)
-- Property: 1250 E. Baseline Rd., Tempe, AZ 85283
-- Broker: John Hart, Commercial Properties, Inc.
-- Files: /Users/rubenmajor/Desktop/1250_Baseline_Inspection_Analysis.md, /Users/rubenmajor/Downloads/Inspection_Report_081020260900-C.pdf
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786481696854` — 8/11/2026, 2:49:36 PM PT — 182 turns
+### `1786481696854` — 8/11/2026, 3:45:31 PM PT — 280 turns
 
 **Original task:**
 
@@ -213,7 +134,7 @@ paperwork belonging to other divisions of our company that fall entirely outside
 determined. We asked, in writing, for the provision and the measure. We were not told.  For this, that original request was YEARS ago with much back and forth wi
 ```
 
-**Ideas referenced:** #178648, #18676, #18690, #25783 [proposed], #25784 [rejected], #600179, #623992
+**Ideas referenced:** #178648, #18676, #18690, #25783 [proposed], #25784 [rejected], #25799 [proposed], #600179, #623992
 
 **Last PICKUP PROMPT:**
 
@@ -246,7 +167,114 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </attempt_completion>
 ```
 
-### `1786472732313` — 8/11/2026, 2:41:22 PM PT — 406 turns
+### `1786483060620` — 8/11/2026, 3:25:40 PM PT — 152 turns
+
+**Original task:**
+
+```
+Closing on a new property in Tempe 1250 East Baseline. Please analyze the 139 page inspection document emailed to me by jthompson@emsuniversity.com within the last few days and take into consideration the following that Chat GPT saw. You can do more/better:
+
+Negotiation and closing-protection items
+Seek fixed, documented protection rather than informal promises:
+    •    HVAC credit or escrow: Base it on the specialist’s suite-by-suite replacement plan, especially all R-22 and pre-2010 systems.
+    •    Life-safety/ADA contingency: Preserve the right to terminate or renegotiate if the current 
+```
+
+**Ideas referenced:** #081020, #111111, #25796 [awaiting_review], #25797 [proposed], #25798 [proposed], #333333, #38984, #555555, #666666
+
+**Last PICKUP PROMPT:**
+
+```
+==============================
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #25796 — 1250 E. Baseline Rd. Tempe escrow due diligence.
+
+Where we left off (verified 2026-08-11 15:24 PT):
+- Escrow-grade PDF on Desktop: /Users/rubenmajor/Desktop/1250_Baseline_Due_Diligence.pdf (6 pages, sections A-J, every finding page-cited, verified opens and content-checked). Earlier 2-page draft deleted so there is one clean file.
+- Full plain-text bullet summary delivered inline to Ruben, markdown artifacts stripped per his correction, ready to paste into an email to John Hart.
+- Validation corrected TWO errors from the first draft: elevator IS inspected and its certificate is dated/expired (p.125), and fire sprinklers ARE addressed with the finding that NONE exist (p.80, p.115).
+- New findings from the comprehensive pass: heating mode never tested on any of the 11 HVAC units (p.104), no roof/attic ventilation plus evidence of a past attic water problem (p.108), no AFCI anywhere (p.93), multiple dead lights (p.92), no main water shut-off besides the meter (p.81), no anti-siphon on hose bibs (p.82), guardrail gaps over 4 inches (p.124), shared 600A electrical service (p.89).
+- Source PDF /Users/rubenmajor/Downloads/Inspection_Report_081020260900-C.pdf; extracted text /tmp/inspection_report.txt; builder /tmp/build_full.py
+
+Open threads to drive next:
+1. #25797 [executing] — Call Tempe Fire on whether EMSU occupancy and headcount trigger a sprinkler retrofit on 10,000 sq ft over two stories (report confirms zero sprinkler protection, p.80/115). Pull the Arizona elevator inspection record against the dated certificate (p.125).
+2. #25798 [executing] — Specialist bids: HVAC (11 units, R-22, SEER-15, heating never tested), licensed electrician (bonding p.90, GFCI p.93, dead lights p.92, no AFCI p.93), sewer camera (no cleanouts, cast iron and galvanized p.82), roofer (rafter tails p.51, caps p.75, untested internal drains p.76, parking canopy p.74), paving (p.41), structural engineer (anchor bolts p.37), elevator company. Consider Phase I ESA and asbestos survey (1980 build, p.30).
+3. #25796 [awaiting_review] — Ruben reviews the PDF, then decides whether it goes to John Hart as-is or through counsel first.
+
+Reference IDs:
+- Ideas: #25796 [awaiting_review], #25797 [executing], #25798 [executing]
+- Report: EPIC Inspection #081020260900-C, Mike Elsberry AZ #38984, 480-390-8180
+- Property: 1250 E. Baseline Rd., Tempe, AZ 85283. Broker: John Hart, Commercial Properties, Inc.
+- Files touched: /Users/rubenmajor/Desktop/1250_Baseline_Due_Diligence.pdf, /tmp/build_full.py, /tmp/full_extract.py, /tmp/inspection_report.txt
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</parameter>
+</invoke>
+```
+
+### `1786469157683` — 8/11/2026, 3:25:27 PM PT — 436 turns
+
+**Original task:**
+
+```
+How many tokens have our FREE LLMs used in the last 30 days
+```
+
+**Ideas referenced:** #10108, #10739, #10740, #11741, #11781, #12299, #12477, #12584, #12618, #12824, #12872, #12878, #13202, #1452, #16163, #16265, #16304, #16588, #16844, #18312, #18326, #22060, #22386, #2275 [deployed], #2299, #2316 [deployed], #2317, #23171, #25045, #25097, #25185 [deployed], #25186, #25194, #25753 [proposed], #25800 [proposed], #25802 [proposed], #272822, #5892, #711855, #711856, #7174, #9215, #9306, #9320
+
+**Last PICKUP PROMPT:**
+
+```
+s the highest-value follow-up.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #25802 [proposed] Responder reliability follow-ups
+
+Where we left off (verified 2026-08-11 15:22 PT):
+- 12/12 live tests passed (3x per platform per mode), all routed deepseek-v4-pro, ZERO hit gpt-5.2
+- Failover verified: frankenstein-llm is a 4-box pool (julia/bigmac/artemis/glm-local) all decode-live, then deepseek L2, glm-5.2 L3, kimi-k3 L5, plus a NEW direct api.deepseek.com survival rung that bypasses LiteLLM entirely
+- Rule compliance holds on every rung because guards are on the request (prompt) and reply (scrubber + OutboundQualityValidator + AIActionClaimGuard), not on the model
+- DETECTION GAP repaired: watchdog_exec_floor.php gained sse_stall/php_fatal/offfleet fingerprints (positive-controlled); cron_responder_log_watchdog.php now runs every 10 min
+- Watchdog first run surfaced 7 real findings, ids 6036469-6036475, including the previously unknown fireChat issue
+- logLlmCall duplicate-key row-drop repaired via INSERT IGNORE, so usage numbers are trustworthy going forward
+- Latency remains variable 4.7s-68s on identical inputs; 300s timeout absorbs it (CLI max_execution_time=0 confirmed)
+
+Open threads to drive next:
+1. #25802 [proposed] Add fireChat() to the LlmRouter class in lib/llm_router.php (there is NO lib/LlmRouter.php) or repoint EmailAITierClassifier.php:226. Its catch returns TIER_COMPLEX so every email routes COMPLEX today. Also replace the hardcoded claude-haiku-4-5 per rule 146. Verify by watching tier distribution return to SIMPLE/FAQ
+2. #25800 [proposed] voice_scrubber leaves orphaned sentence fragments after apology removal; needs an isolated positive-control suite before deploy since it is a live student-facing filter
+3. #25753 [executing] claude-haiku-4-5 zero-cost tracking gap in llm_call_log
+4. (human-only decision, no idea) Triage all_models_failed x132 sms_ai + x45 email_ai. These are replies that never went out. Now visible via the new watchdog; decide whether to backfill responses to affected students
+5. (human-only decision, no idea) Trim the ~40K-token responder system prompt (RAG + site contact + peer brief); it is the latency driver behind the 68s outliers
+
+Reference IDs:
+- Ideas: #25802 [proposed], #25800 [proposed], #25753 [executing]
+- Bug library incidents (separate ID space, not idea numbers): 2317 detection-gap RCA, 2316 SSE stall
+- Files changed today: lib/EmailAIResponder.php, lib/SMSAIResponder.php, lib/PromptRuleCompiler.php, lib/llm_call_logger.php, cron/watchdog_exec_floor.php, config/config.local.php
+- Files created: cron/cron_responder_log_watchdog.php, /etc/cron.d/responder_log_watchdog
+- Retired: lib/PromptRuleCompiler_fix.php.retired-20260811-dup-class
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>- [x] Failover plan documented (4-box pool + 4-rung ladder incl. off-frankenstein survival)
+- [x] Rule enforcement on backups explained (guards on request + reply, not on the model)
+- [x] 12 live tests run, 3x per platform per mode: 12/12 ok, zero exceptions, zero gpt-5.2 hits
+- [x] BUG 6 repaired: logLlmCall duplicate-key row drop (INSERT IGNORE)
+- [x] BUG 8 found by new watchdog + filed #25802 (P1)
+- [x] Scrubber grammar defect filed #25800
+- [x] Detection Gap 1 repaired: 3 new watchdog fingerprints + playbooks, positive-controlled
+- [x] Detec
+```
+
+### `1786472732313` — 8/11/2026, 3:08:58 PM PT — 434 turns
 
 **Original task:**
 
@@ -261,27 +289,30 @@ I will read the Sunset report and get back to you on that For MANDAMUS NOW -> I 
 **Last PICKUP PROMPT:**
 
 ```
-ur same-day answer both times.
+ry than "they kept the money."
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1786433544814 - TDSHS mandamus package + 2026-08-11 clarification demand reply
+Pick up task #1786433544814 - TDSHS TPIA series, Sunset filing, mandamus package, forward strategy
 
-Where we left off (verified 2026-08-11 14:40 PT):
-- REPLY DRAFTED AND READY TO SEND, revised to defeat the clock stall. Send same-day on the existing thread to OpenRecords@dshs.texas.gov, cc jthompson. Key sentences: "Responding same day so that no request for clarification remains outstanding", "The request is not unclear", redaction concession on personal identifiers, refusal to amend with routing to the 552.301 AG procedure, and "Please proceed with processing it."
-- CHANGED FROM THE EARLIER DRAFT: removed the sentence inviting a new cost estimate. Reason: HHSC took $1,404.00 on the 2025 estimate and produced nothing, so volunteering an invitation hands them a second fee gate. Do not reintroduce it.
-- STATUTORY BASIS VERIFIED LIVE (texas.public.law, full text read this session):
-  - 552.222(b): clarification is available only "if what information is requested is unclear"; narrowing DISCUSSION is available if a large amount is requested; may not inquire into purpose.
-  - 552.222(d): if no written response by the 61st day after a written clarification request, the underlying request is deemed WITHDRAWN.
-  - 552.222(e): the clarification request MUST include a statement as to the consequences of failing to respond.
-  - 552.222(g): email-sent requests can be deemed withdrawn if the clarification goes to the same address and no response arrives in the (d) period.
-  - 552.301(b): the governmental body must ask the AG and state the exceptions not later than the 10th business day after receiving the request. (d) requires notice to the requestor in the same 10 business days. (e) 15th business day for submissions to the AG. (e-1) copy of comments to the requestor by the 15th business day.
-- DEFECT HELD IN RESERVE, DO NOT RAISE: their 2026-08-11 email contains NO statement of consequences, so it fails 552.222(e). Full body dumped and confirmed, it is four sentences. Raising it invites a corrected letter that properly arms the 61-day withdrawal trap. Keep it for counsel and for the mandamus record only.
-- THE CHARACTERIZATION ARGUMENT: their letter never says the request is unclear, it says it is "likely to encompass" excepted information. That is an exceptions question governed by 552.301, not a clarification question under 552.222(b), so it does not stop their clock. Their own 2026-07-29 ack promised notice within 10 business days, landing on or about 2026-08-12.
-- INBOUND LOGGED EARLIER THIS SESSION: admin_portal.tpia_request_tracking row id 14, tracking_no ORR-A07292026.0450006, status CLARIFICATION DEMANDED, ack 2026-07-29 07:15:54, deadline_10bd 2026-08-12 (verified by SELECT). Email archived at /opt/tdshs_transfer/inbound/IN_008_2026-08-11_CLARIFICATION_DEMAND_A07292026.0450006.eml. Inbound was 2026-08-11 21:16:08 UTC, to rmajor, cc jthompson, Message-ID BY3PR05MB80522323ED4476F241E47D6499DD2@BY3PR05MB8052.namprd05.prod.outlook.com.
-- PRIOR-PERIOD REBUTTAL VERIFIED: Copeland 2025-07-22 suggested narrowing on VOLUME grounds only (time frame, search terms, program area or specified employees, exclude rmajor own email), raised NO exception and never cited 552.11765. HHSC then priced the request AS WRITTEN at $1,404.00 / 78 labor hours with 100% deposit. Same message also states only 8 people handle PIA for DSHS and HHSC and it "may take up to 24 month[s]
+Where we left off (verified 2026-08-11 15:08 PT):
+- ALL THREE 8/11 SENDS ARE OUT AND CATALOGED. TPIA clarification reply 14:59:30 PT to OpenRecords cc jthompson (Message-ID f48870ec-90f5-4cd9-baf4-5c5c5f942aec@Spark, 43 min after their 21:16:08 UTC demand). Sunset public input 14:53:14 PT to sunset@sunset.texas.gov with a 639159-byte attachment. Attorney background email 14:23:11 PT to harry@nwslawfirm.com.
+- DB: tpia_request_tracking row 14 status CLARIFICATION ANSWERED SAME DAY (notes 3165 chars, read-back verified). Row 15 SUNSET-PUBLIC-INPUT-2026 status SUBMITTED (verified by SELECT).
+- ARCHIVED WOPR /opt/tdshs_transfer/inbound/: IN_001-IN_007 (DSHS acks), IN_008 (their 8/11 clarification demand), OUT_009 (reply), OUT_010 (Sunset), OUT_011 (attorney).
+- FORWARD-LOOKING ANALYSIS DELIVERED for 1, 3 and 6 months. Core judgments: (a) a cost estimate on A07292026.0450006 is the most likely next move and the pay-or-lapse decision should be made NOW rather than inside a 10-business-day window; (b) the mandamus outcome turns almost entirely on whether check 1379 was cashed, which nobody has checked; (c) the eleven enforcement matters are the real exposure, the records fight is instrumental; (d) Copeland's 2025 statement that 8 people cover PIA for DSHS and HHSC with up to 24-month timelines suggests capacity, not targeted stonewalling, which affects how a court reads intent; (e) an open strategic question for Ruben and Harry on whether the mandamus is worth counsel hours or is better as a documented grievance supporting the enforcement defense.
+- NEWLY IDENTIFIED GAP: no written demand for refund of the $1,404.00 appears anywhere in what was compiled. If none was ever sent, that is worth closing regardless of the suit.
+- CLOCK POSTURE: their 2026-07-29 ack promised notice within 10 business days, due on or about 2026-08-12. Same-day reply means no clarification is outstanding when it comes due. Their demand carried NO 552.222(e) statement of consequences, so the 61-day deemed-withdrawal mechanism in 552.222(d) was never armed. DO NOT raise that with the agency; counsel and mandamus record only.
+- Keep the matters separate: A07152025.0450008 is paid (check 1379, $1,404.00, mailed 2025-07-21), closed 2025-09-26 on claimed non-receipt, mandamus candidate. A07292026.0450006 is a NEW request, same subject matter, period July 15 2025 through July 27 2026, live.
+- Drive mandamus package verified: https://drive.google.com/drive/folders/1ef4hOLSE7imV92o-fkhKiudxBLn5BffW 45 PDFs, 6 nested subfolders (1/11/19/2/5/7). Does NOT yet include IN_008 or OUT_009.
+- STATUTES VERIFIED LIVE: 552.222(b)(d)(e)(g), 552.301(b)(d)(e)(e-1), 552.11765(a)-(e).
+
+Open threads to drive next:
+1. Pull the bank record for check 1379 to establish whether it was presented or cashed (human-only decision, no idea). Highest priority, determines the shape of the whole records strategy.
+2. Decide the pay-or-lapse answer in advance for the expected cost estimate on A07292026.0450006 (human-only decision, no idea). Ruben and Harry.
+3. Confirm whether a written refund demand for the $1,404.00 was ever sent, and send one if not (human-only decision, no idea).
+4. Watch 2026-08-12: if no substantive response on A07292026.0450006 and no 552.301(d) notice, record the failure (human-only decision,
 ```
 
 ### `1786476815310` — 8/11/2026, 2:37:15 PM PT — 132 turns
@@ -3487,70 +3518,3 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1786214054947` — 8/8/2026, 3:15:32 PM PT — 476 turns
-
-**Original task:**
-
-```
-Can you play doctor of ruben executor and take a look at this page: https://emsuniversity.com/emtskills/routes/ruben_executor_live.php 
-
-Make sure that every single table that is on this page is wired in properly to reality. I need to be able to take a look at the page and make sure that this statistics that fit fax the figures all of that stuff is properly wired in so that I could see what's going on. This may require some extensive work but it's very important for you to do all of this into end. Again you're going to probably have to use a browser window with a token so that you can access a
-```
-
-**Ideas referenced:** #059669, #1050, #127891, #12802, #128274, #12836, #12879, #13418, #1373, #16822, #16881, #17560, #19427, #23986, #24297, #24774, #25009, #25011, #25042, #25043, #25127, #25172, #25201 [queued], #25202 [proposed], #25203 [proposed], #25204 [proposed], #25205 [proposed], #25223 [needs_verify], #25224 [ready_for_review], #25225 [ready_for_review], #25226 [x], #2563, #341492, #341493, #341497, #341501, #341503, #341504, #341505, #341507, #341547, #341562, #341565, #341576, #341577, #3957, #4536, #4775, #5031, #5578, #6057, #6285, #6300, #6366, #64748, #7048, #78350, #7903, #8200, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-hardware exists (idea #25224).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #current — ruben_executor_live.php doctor: execute gated re-queue + fix RAG call site.
-
-Where we left off (verified 2026-08-08 15:15 PT):
-- Reranker fixed: CPU 2547%→490%, load 57→19, dispatcher spawning 4 workers/tick
-- 0 failures in last hour — fix holding
-- Gated re-queue script at /tmp/requeue_with_gate.php — dry-run passes, stale gate works on 25 failed chains
-- RAG static method to add: injectRagContextForTriage() already appended to RagSurfaceEnforcer.php
-- Cron call site at cron_ruben_autonomous.php (line ~600-ish) still calls old instance method statically
-
-Open threads to drive next:
-1. #25201 [executing] — Execute LIVE re-queue: add `--live` flag to /tmp/requeue_with_gate.php, run `sudo php /tmp/requeue_with_gate.php --live`, verify failed chains reset to 'resting' status
-2. #25223 [needs_verify] — Fix RAG static method: edit cron_ruben_autonomous.php to call `RagSurfaceEnforcer::injectRagContextForTriage()` instead of the instance `injectRagIntoPrompt()` — currently fires "Non-static method cannot be called statically" on every dispatcher tick
-3. #25224 [ready_for_review] — GPU verification: check if WOPR truly has GPU hardware (NVML says no), if yes install CUDA toolkit + move reranker to device='cuda'
-4. #25225 [ready_for_review] — Integrate stale-idea gate into cron_ruben_autonomous.php so it auto-filters on every dispatch tick
-5. #25226 [ready_for_review] — Build Kaison loop: monitor load_avg per-core, when >0.80 for 3+ ticks, auto-restart reranker with safe concurrency cap, card Ruben only if repair fails twice
-
-Reference IDs:
-- Ideas filed: #25201 [executing], #25223 [needs_verify], #25224 [ready_for_review], #25225 [ready_for_review], #25226 [ready_for_review]
-- Files: /tmp/requeue_with_gate.php, /tmp/requeue_live.php, /var/www/emtskills/lib/RagSurfaceEnforcer.php, /var/www/emtskills/cron/cron_ruben_autonomous.php, /etc/systemd/system/emsu-reranker.service.d/override.conf
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786211264211` — 8/8/2026, 3:09:34 PM PT — 784 turns
-
-**Original task:**
-
-```
-#Context
-
-Let's talk also about the contextual improvements that we made and whether they are having an impact and whether we need to make any others where we are using disc space to leverage limited context. Also because we are using executor I would think this is something I'm not sure exactly where this is living this context but should it not be on WOPR? Or is it already? Where does this live?
-
---
-Fixed forward, config only. No rollback of the context increase.
-
-WHAT THE PRIOR WINDOW GOT RIGHT AND WHAT IT MISSED
-
-Your RCA was correct: the hardfloor set was duplicated and the trim updated o
-```
-
-**Ideas referenced:** #0000, #11417, #11847, #12249, #12251, #12266, #12269, #12285, #12588, #12589, #12590, #12688, #12689, #13204, #13470, #14133, #14142, #14205, #15268, #15776 [deployed], #16032, #16224, #16448, #16449, #16461, #16463, #16464, #16525, #16715, #17078, #19125, #19173, #19175 [executing], #19176 [queued], #19686, #19898, #19899 [proposed], #19904, #20251, #20569, #24207, #24971 [rejected], #24972 [rejected], #24973 [rejected], #24985 [rejected], #24988 [executing], #25128 [executing], #25150 [executing], #25151 [executing], #25153 [proposed], #25154 [proposed], #25155 [proposed], #25156, #25157, #25158, #25168 [proposed], #25169 [proposed], #25170 [proposed], #25171 [proposed], #25182 [proposed], #25183 [proposed], #25184 [proposed], #25185 [executing], #25186 [proposed], #25187 [proposed], #25188 [deployed], #25190 [deployed], #25194 [deployed], #25198 [deployed], #25199 [deployed], #25200 [deployed], #25220 [proposed], #25221 [deployed], #25222 [deployed], #25231 [deployed], #27116, #29373, #36237, #40899, #40969, #5344, #5346, #5348, #6729
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

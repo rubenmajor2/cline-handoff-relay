@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/10/2026, 7:56:15 PM PT | window: last 72h | 101 tasks | index total 618 (parsed 1, cached 617)
+Generated: 8/10/2026, 8:56:15 PM PT | window: last 72h | 100 tasks | index total 618 (parsed 0, cached 618)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -110,7 +110,6 @@ Generated: 8/10/2026, 7:56:15 PM PT | window: last 72h | 101 tasks | index total
 | `1786162207330` | 8/7/2026, 11:13:36 PM | 454 | 1608KB | Why does frankenstein LLM iterate this to me? I'm hitting the token limit. I need to quick |
 | `1786036273485` | 8/7/2026, 10:47:51 PM | 1506 | 4670KB | #Argus  |
 | `1786166732768` | 8/7/2026, 10:35:33 PM | 90 | 923KB | Diagnose why cron_argus_task_worker.php stalls when the upstream LLM exceeds 120s. Read th |
-| `1786144700222` | 8/7/2026, 8:25:22 PM | 368 | 730KB | #TDSHS |
 
 ---
 
@@ -3967,22 +3966,3 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1786144700222` — 8/7/2026, 8:25:22 PM PT — 368 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-See: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
-
--- 
-See latest email from TDSHS State EMS Director, 1-2PM appx today asking us to contact a parent. Why is he asking us to contact a parent? This needs a reminder that we can't talk to parent about a student's account due to FERPA in a very nice way. 
-
-We did reach out to discuss general policies, but he never replied. We reached out to the dat with no answer
-```
-
-**Ideas referenced:** #111827, #16957, #23834, #24790 [in_progress], #24805 [in_progress], #24836 [in_progress], #24842 [in_progress], #251038, #251211, #251264, #251382, #2763 [deployed], #3616, #3617, #3622, #3624, #450438, #4929, #6106
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

@@ -6,17 +6,19 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/11/2026, 11:49:47 AM PT | window: last 72h | 90 tasks | index total 640 (parsed 8, cached 632)
+Generated: 8/11/2026, 12:49:48 PM PT | window: last 72h | 89 tasks | index total 642 (parsed 7, cached 635)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786467822115` | 8/11/2026, 11:49:44 AM | 249 | 617KB | frankenstein-llm is stalling this morning. Why?  |
-| `1786467898078` | 8/11/2026, 11:49:43 AM | 146 | 912KB | #MDM |
+| `1786467898078` | 8/11/2026, 12:49:44 PM | 227 | 1586KB | #MDM |
+| `1786473380730` | 8/11/2026, 12:49:36 PM | 91 | 481KB | #CFA  |
+| `1786474429480` | 8/11/2026, 12:49:27 PM | 136 | 633KB | https://emsuniversity.com/emtskills and other pages are all down / 500 Can you bring them  |
+| `1786472732313` | 8/11/2026, 12:49:27 PM | 143 | 507KB | #TDSHS |
+| `1786469157683` | 8/11/2026, 12:48:54 PM | 163 | 510KB | How many tokens have our FREE LLMs used in the last 30 days |
+| `1786476815310` | 8/11/2026, 12:46:14 PM | 46 | 128KB | #Postmark API |
+| `1786467822115` | 8/11/2026, 12:41:48 PM | 310 | 736KB | frankenstein-llm is stalling this morning. Why?  |
+| `1786468127695` | 8/11/2026, 12:03:51 PM | 228 | 552KB | #Postmark API Issues |
 | `1786473852203` | 8/11/2026, 11:47:30 AM | 30 | 82KB | #Subagents |
-| `1786468127695` | 8/11/2026, 11:45:41 AM | 194 | 482KB | #Postmark API Issues |
-| `1786469157683` | 8/11/2026, 11:39:22 AM | 120 | 368KB | How many tokens have our FREE LLMs used in the last 30 days |
-| `1786473380730` | 8/11/2026, 11:38:17 AM | 8 | 44KB | #CFA  |
-| `1786472732313` | 8/11/2026, 11:37:24 AM | 30 | 135KB | #TDSHS |
 | `1786473149612` | 8/11/2026, 11:34:30 AM | 8 | 41KB | #Julia/Claudia TP=2 |
 | `1786468711968` | 8/11/2026, 10:34:44 AM | 58 | 692KB | #Hacking Attempts |
 | `1786468286906` | 8/11/2026, 10:19:25 AM | 22 | 73KB | #Grok  |
@@ -97,15 +99,312 @@ Generated: 8/11/2026, 11:49:47 AM PT | window: last 72h | 90 tasks | index total
 | `1786211859440` | 8/8/2026, 4:12:34 PM | 590 | 1093KB | #Subagents, etc... |
 | `1786214054947` | 8/8/2026, 3:15:32 PM | 476 | 1066KB | Can you play doctor of ruben executor and take a look at this page: https://emsuniversity. |
 | `1786211264211` | 8/8/2026, 3:09:34 PM | 784 | 1911KB | #Context |
-| `1786211367196` | 8/8/2026, 12:26:07 PM | 302 | 1193KB | #Big Mac |
-| `1786212070741` | 8/8/2026, 12:26:03 PM | 240 | 770KB | Why would this cost any money at all? You need to really take a look at that and see that  |
-| `1786212454095` | 8/8/2026, 11:53:58 AM | 238 | 904KB | #Telephony |
 
 ---
 
 ## Per-window detail
 
-### `1786467822115` — 8/11/2026, 11:49:44 AM PT — 249 turns
+### `1786467898078` — 8/11/2026, 12:49:44 PM PT — 227 turns
+
+**Original task:**
+
+```
+#MDM
+
+Rebase and continue / add to MDM if not already added
+
+**Your ExecStartPost question, answered:** your instinct is right, that shape is probably bad. `ExecStartPost=curl /v1/models` holds the unit in `activating` until the probe passes, which does kill the lie where `systemctl is-active` reports healthy for an engine that never bound its port. But Big Mac takes minutes to load 15 weight shards, so any `TimeoutStartSec` shorter than real load time makes systemd kill a perfectly healthy slow start — and with `Restart=always` that becomes a restart loop on a box that would have come up fine
+```
+
+**Ideas referenced:** #0078, #10108, #10740, #1130, #1131, #11741, #11781, #12034, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #1557, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1779, #178634, #1798, #1828, #18312, #18326, #19567, #20042, #20495, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #23171, #25097, #25378, #25381, #25468 [executing], #25469 [rejected], #25470 [deployed], #25471 [executing], #25744 [proposed], #25758 [proposed], #25759, #25760 [proposed], #30363, #334155, #64748, #7142, #7149, #8984
+
+**Last PICKUP PROMPT:**
+
+```
+imus and are verified on disk.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1786342434047 — continue SSH key installation for Maximus + Cicero tunnel revival.
+
+Where we left off (verified 2026-08-11 12:17 PT):
+- NERO: Fully operational. WOPR pubkey installed, ssh works via port 2223.
+- MAXIMUS: Tunnel alive (2224), key missing. `Permission denied (publickey)` from WOPR.
+- CICERO: Tunnel dead (no process on 11520). `m5mac-remote-access-tunnel` unit exists but not running. Need to restart tunnel + install WOPR pubkey.
+- Config files: All updated and verified on disk.
+
+Open threads:
+1. Install WOPR pubkey on Maximus (via console or direct desktop access). Verify WOPR→2224 tunnel works.
+2. Restart Cicero tunnel (systemctl start m5mac-remote-access-tunnel). Verify process on 11520.
+3. Install WOPR pubkey on Cicero. Verify SSH access.
+4. Update ws_ssh_proxy.py comments to reflect final state of all three hosts.
+
+Reference IDs:
+- Idea #25760 [proposed] — Repair Cicero tunnel
+- Idea #25758 [proposed] — Nero/Maximus SSH unblock
+- Idea #25744 [approved] — MCP circuit breaker
+- Files edited: web_terminal_token.php, ws_ssh_proxy.py, mdm_portal.php (already had entries)
+</result>
+</attempt_completion>
+```
+
+### `1786473380730` — 8/11/2026, 12:49:36 PM PT — 91 turns
+
+**Original task:**
+
+```
+#CFA 
+Completed scan of CFA system logs for the past 24 hours.
+
+go ahead and look at below and correct it. Bad iterations. Just reanalyze and do again
+
+**Key metrics (last 24 h)**
+- Sweep runs                                                                                                                                                                                  ✅
+- Dispatch runs                         ✅
+- Quality‑audit entries       ✅
+- LLM‑health alerts                          ✅
+- Struct‑gate logs                     ✅
+
+**Findings**
+1. **Sweep & Dispatch** – Both logs show normal acti
+```
+
+**Ideas referenced:** #16863, #2306, #2310, #2311, #23316 [proposed], #24339 [deployed], #24340 [deployed], #24341 [awaiting_review], #24500 [proposed], #25537, #25560, #25593 [proposed], #25608, #25623, #25632, #25633, #25635, #25666, #25667, #25669, #25679, #25688, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25768 [deployed], #25769, #25770, #25773
+
+**Last PICKUP PROMPT:**
+
+```
+posed.
+
+═══════════════════════════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════════════════════════
+Pick up task — CFA 24h scan corrected report: reanalyze, correct bad iterations.
+
+Where we left off (verified 2026-08-11 12:13 PT):
+- Corrected CFA report filed as idea #25768 [deployed] (ruben-orchestrator create_idea)
+- All metrics live-verified against admin_portal: sweep 96 runs/24h, dispatch 0 rows all time, quality audit 96/24h applied, LLM heartbeat 84.7% failure rate (cURL 28 timeouts since Aug 5), struct-gate 0 rows (compliance log, not a bug), NULL intake 76 tickets, closure-pending table nonexistent
+- Ideas reconciled live: #24500 [proposed], #24339 [deployed], #24340 [deployed], #24341 [awaiting_review], #23316 [proposed]
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #25768 — Corrected CFA report is filed; next action: open a new window, read this report, and action the 4 recommendations (LLM heartbeat triage is highest priority)
+2. #25769 (file in next session) — Triage LLM heartbeat: identify what endpoint cfa_llm_heartbeat pings, why it times out, and restore health monitoring
+3. #25770 (file in next session) — Decide dispatch path for 990 pending cfa_sweep_draft rows; wire dispatch or confirm alternate consumption
+
+Reference IDs:
+- Ticket: N/A
+- Ideas filed: #25768 (this session)
+- Ideas reconciled: #24500, #24339, #24340, #24341, #23316
+- Files touched: none (DB queries only)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786474429480` — 8/11/2026, 12:49:27 PM PT — 136 turns
+
+**Original task:**
+
+```
+https://emsuniversity.com/emtskills and other pages are all down / 500 Can you bring them back up?
+```
+
+**Ideas referenced:** #10234, #178504, #23922, #23923, #23974 [executing], #24574 [resolved], #25525, #4932, #6106, #6825, #6842, #9019, #9070
+
+**Last PICKUP PROMPT:**
+
+```
+message students via Team Hub.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1785046185980 - site down + student ticket #24574 resolved
+
+Where we left off (verified 2026-08-11 12:47 PT):
+- Site 500 root cause: config/config.local.php define-ordering bug (POSTMARK_BROADCAST_TOKEN referenced POSTMARK_ACCOUNT_TOKEN before defined); fixed by reordering, FPM reloaded, site verified 200/302
+- Ticket #24574 [resolved] Gabriella Hill (26520FT-18): no instructor at 9 AM, class is ONLINE ONLY today. Uncovered shift confirmed on Team Hub [ID:138388] 2026-08-11 09:00-17:30 TX San Antonio EMT 26520FT.
+- Emailed student Zoom link https://zoom.us/j/83290491745 (draft #23974 [executing], tier 1 autosend attempted; php mail() fired) and resolved ticket #24574
+
+Open threads to drive next:
+1. Follow up on the instructor no-show for 26520FT today: uncover shift ID 138388, escalate to staff or find coverage on Team Hub (human-only decision on instructor availability)
+
+Reference IDs:
+- Ideas filed: none
+- Files touched: /var/www/emtskills/config/config.local.php
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786472732313` — 8/11/2026, 12:49:27 PM PT — 143 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+I will read the Sunset report and get back to you on that For MANDAMUS NOW -> I need info on that mandamus to give to the attorney to file. I need an email summary, synopsis, the PDFs of every email sent to Open Records with dates/times listed as well as archived emails searched. YOu need to look also at other employees such as Jennifer Copeland (will need to search through email archives / there may be an MCP or process for this to be easier / those arechives are on WOPR cold storage I believe). Check rmajor@emsuniversity.com. Also jthompson@emsuniversity.com also sent requests for up
+```
+
+**Ideas referenced:** #002060, #178643, #25771 [awaiting_review], #467886, #5090, #96607
+
+**Last PICKUP PROMPT:**
+
+```
+ent receipt as standalone PDF.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786433544814 - TDSHS mandamus documentation package (Open Records TPIA emails, Jennifer Copeland archive, payment receipt, Drive folder)
+
+Where we left off (verified 2026-08-11 12:31 PT):
+- All 37 emails from rmajor + jthompson .Sent archives staged at /var/www/emtskills/staging/tdshs_emails/ on WOPR and pulled locally to /Users/rubenmajor/Desktop/tdshs_tpia/emails/
+- Drive folder created with 4 subfolders: 01_TPIA_Requests_2026, 02_ORR_Responses_Copeland, 03_Payment_Receipt, 04_Status_Inquiries
+- TDSHS_TPIA_EMAIL_BUNDLE_2026-08-11.pdf (345,766 bytes) built locally and uploaded to Drive
+- TDSHS_TPIA_SYNOPSIS_2026-08-11.txt (9,721 bytes) uploaded to Drive
+- MANDAMUS_SUMMARY_2026-08-11.txt uploaded to Drive
+- Payment receipt verified: $1,248.00 VISA *3638 paid 2025-04-07 to DSHS
+
+Open threads to drive next:
+1. #25771 [awaiting_review] - Upload all 37 categorized .eml files from WOPR staging into the 4 Drive subfolders; extract payment receipt as standalone PDF
+
+Reference IDs:
+- Ideas filed: #25771 [awaiting_review]
+- Files touched: /Users/rubenmajor/Desktop/tdshs_tpia/MANDAMUS_SUMMARY_2026-08-11.txt, /Users/rubenmajor/Desktop/tdshs_tpia/TDSHS_TPIA_SYNOPSIS_2026-08-11.txt, /Users/rubenmajor/Desktop/tdshs_tpia/TDSHS_TPIA_EMAIL_BUNDLE_2026-08-11.pdf, /Users/rubenmajor/Desktop/tdshs_tpia/emails/*.eml (37 files), /tmp/tdshs_build_pdf.py
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786469157683` — 8/11/2026, 12:48:54 PM PT — 163 turns
+
+**Original task:**
+
+```
+How many tokens have our FREE LLMs used in the last 30 days
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12299, #12477, #12584, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16588, #16844, #18312, #18326, #2299, #23171, #25097, #25185 [deployed], #25186, #25194, #25753 [proposed], #272822, #7174, #9215, #9320
+
+**Last PICKUP PROMPT:**
+
+```
+-open-weight: ~731.9M tokens**
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task: Free LLM 30-day token usage report + gpt-5.2 reroute recommendation
+
+Where we left off (verified 2026-08-11 11:37 PT):
+- FREE LLMs used ~222.7M tokens (our hardware) to ~731.9M (hardware + DeepSeek) in 30 days
+- gpt-5.2-2025-12-11 (59.3M tokens) traced to EmailAIResponder.php:469 + SMSAIResponder.php:345 fallback paths
+- Anthropic primary fails 100% for these paths — gpt-5.2 IS the effective primary
+- gpt-5-mini (0.09M tokens) at EmailAIResponder.php:473 — tertiary fallback
+- Rollback script exists: docs/specs/retire_gpt_5_2_from_routing_rollback.sh (2026-06-27)
+
+Open threads to drive next:
+1. #25753 [proposed] — claude-haiku-4-5 zero-cost tracking gap in llm_call_log (33K calls untracked)
+2. (human-only decision, no idea) — Replace gpt-5.2 fallback with deepseek-v4-pro in EmailAIResponder.php:469 and SMSAIResponder.php:345
+3. (human-only decision, no idea) — Replace gpt-5-mini fallback with deepseek-v4-flash at EmailAIResponder.php:473
+4. (human-only decision, no idea) — Debug why Anthropic primary fails 100% for responder paths (only fallback hits recorded)
+
+Reference IDs:
+- Ideas filed: #25753 [proposed]
+- Files touched: none (read-only investigation)
+- Key files to edit: /var/www/emtskills/lib/EmailAIResponder.php (lines 469, 473), /var/www/emtskills/lib/SMSAIResponder.php (line 345)
+
+When done, append a row to cline_task_ledger.md and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Query 30-day token usage for free LLMs
+- [x] Classify gpt-5.2-2025-12-11 (Email/SMS AI Responder fallback, 24/7)
+- [x] Classify gpt-5-mini (tertiary fallback, same responder paths)
+- [x] Trace call origin to EmailAIResponder.php:469 + SMSAIResponder.php:345
+- [x] Recommend replacing gpt-5.2 with deepseek-v4-pro
+- [x] Ship completion
+</task_progress>
+</attempt_completion>
+```
+
+### `1786476815310` — 8/11/2026, 12:46:14 PM PT — 46 turns
+
+**Original task:**
+
+```
+#Postmark API
+
+Strike-ceiling bail (Rule 143) — task in progress, state saved below.
+
+**Completed this session:**
+- `config/secrets.php` created, gitignored (`config/secrets.php` added to `.gitignore`)
+- `config.local.php` now requires `secrets.php` and all raw token refs replaced with `POSTMARK_ACCOUNT_TOKEN` constant
+- Sweep ran across all 63 PHP files containing the raw token — all replaced with `POSTMARK_ACCOUNT_TOKEN`
+- `write_server_file` auto-linted the secrets file and reloaded FPM on creation
+
+**Still pending (next window):**
+- PHP lint pass on all 63 swept files + FPM reload
+- Final 
+```
+
+**Ideas referenced:** #16863, #2306, #2311, #25537, #25560, #25608, #25623, #25632, #25633, #25635, #25667, #25669, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25772 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ Ruben needs to reply to them.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #25772 [proposed]: Postmark token hardening, gitignored secrets finalized, all live files verified clean.
+
+Where we left off (verified 2026-08-11 12:40 PT):
+- config/secrets.php exists with POSTMARK_ACCOUNT_TOKEN define, gitignored, loaded by config.local.php
+- 11 live PHP files edited: raw X-Postmark-Server-Token header strings replaced with POSTMARK_ACCOUNT_TOKEN constant (backups at .bak-token-sweep-20260811)
+- Final grep: fff724b9 appears ONLY in config/secrets.php across all live PHP files
+- PHP lint clean on all edited files
+- reload_php_fpm: graceful reload complete
+- Idea #25772 [proposed] filed for the hardfloor rule preventing credential leakage
+- Postmark stream still paused, ~119.5K spam messages in queue, waiting on Postmark support reply (ref YMK0GD-6DEE2)
+
+Open threads to drive next:
+1. #25772 [proposed]: Adopt the hardfloor rule, no credentials in git-tracked config (causal fix for this incident class)
+2. (human-only decision, no idea): Postmark spam queue purge and stream reactivation pending Postmark support reply YMK0GD-6DEE2
+
+Reference IDs:
+- Ideas filed: #25772 [proposed]
+- Files touched: /var/www/emtskills/config/secrets.php, /var/www/emtskills/config/config.local.php, /var/www/emtskills/.gitignore, /var/www/emtskills/api/voice/vapi_server_webhook.php, /var/www/emtskills/api/voice/vapi_cost_classifier.php, /var/www/emtskills/api/livechat/webhook.php, /var/www/emtskills/api/livechat/chatbot_tools.php, /var/www/emtskills/externship/agent/inbound_handler.php, /var/www/emtskills/externship/agent/weekly_report.php, /var/www/emtskills/lib/voice_recap_sender.php, /var/www/emtskills/cron/cron_voice_cost_report.php, /var/www/emtskills/cron/payment_warning_emails.php, /var/www/emtskills/cron/cron_auto_payment_plan.php, /var/www/emtskills/cron/cron_post_due_reminders.php, plus .bak-token-sweep-20260811 backups
+- Support ref: YMK0GD-6DEE2
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Verify secrets.php + gitignore + config.local.php
+- [x] PHP lint — all POSTMARK_ACCOUNT_TOKEN files clean
+- [x] 11 live files: sed replaced raw token with POSTMARK_ACCOUNT_TOKEN, lint clean
+- [x] Final grep: only config/secrets.php contains the raw token
+- [x] reload_php_fpm
+- [x] Pre-completion gate validation ALL PASSED
+- [x] Gate file CLEAR
+- [x] PICKUP PROMPT block in attempt_completion
+</task_progress>
+</attempt_completion>
+```
+
+### `1786467822115` — 8/11/2026, 12:41:48 PM PT — 310 turns
 
 **Original task:**
 
@@ -127,94 +426,108 @@ Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, d
 ```javascr
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11945, #12247, #12262, #12299, #12314, #12364, #12365, #12459, #12477, #12618, #12672, #12824, #12872, #12878, #13082, #13108, #13202, #13874, #15158, #16163, #16265, #16304, #16588, #16648, #16844, #17202, #17203, #17205, #17300, #1754, #1755, #178424, #178455, #178652, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18312, #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690, #1871, #1876, #1877, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #1883, #1894, #1896, #1897, #1912, #19653 [queued], #1967, #19671 [rejected], #19686 [queued], #19689 [queued], #19776 [executing], #19777 [proposed], #19778, #19785 [deployed], #19788 [proposed], #19789 [proposed], #1989, #19903, #202608, #2050, #2102 [resolved], #21045, #2190 [resolved], #2210 [resolved], #2221 [investigating], #2254, #2258, #22820, #22897, #2293 [resolved], #2294 [resolved], #2299, #2307 [rejected], #2312, #2314 [deployed], #23169 [approved], #23171, #24172, #24217 [approved], #25097, #25185, #25646, #25747 [proposed], #25754 [proposed], #25755 [approved], #25757 [proposed], #25759 [proposed], #6826
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11945, #11953, #12247, #12262, #12299, #12314, #12364, #12365, #12459, #12477, #12618, #12672, #12824, #12872, #12878, #13082, #13108, #13202, #13874, #15158, #16163, #16265, #16304, #16588, #16648, #16844, #17202, #17203, #17205, #17300, #1754, #1755, #178424, #178455, #178652, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18312, #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690, #1871, #1876, #1877, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #1883, #1894, #1896, #1897, #1912, #19653 [queued], #1967, #19671 [rejected], #19686 [queued], #19689 [queued], #19776 [executing], #19777 [proposed], #19778, #19785 [deployed], #19788 [proposed], #19789 [proposed], #1989, #19903, #202608, #2050, #2102 [resolved], #21045, #2190 [resolved], #2210 [resolved], #2221 [investigating], #2254, #2258, #22820, #22897, #2293 [resolved], #2294 [resolved], #2299, #2307 [rejected], #2312, #2314 [deployed], #23169 [approved], #23171, #24172, #24217 [approved], #25097, #25185, #25646, #25747 [proposed], #25754 [proposed], #25755 [approved], #25757 [proposed], #25759 [proposed], #25764 [approved], #25765 [proposed], #6826
 
 **Last PICKUP PROMPT:**
 
 ```
-ked in. Executor picked it up.
+e GLM, not just the chat path.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #25757 [executing] - GLM content classifier design finalized, executor building
+Pick up task #25765 [approved] - fleet capacity projection, remove UPSTREAMS_VLLM exclusion of :8210
 
-Where we left off (verified 2026-08-11 11:42 PT):
-- Classifier design finalized: content-based, context-driven, 30% GLM floor, lives in router_hook.py
-- router_hook.py chosen over adapter because router failure is non-fatal, adapter failure breaks everything
-- 30% floor is a non-negotiable guardrail to prevent classifier from routing everything to 120B
-- Extends existing _REASONING_KEYWORDS + _estimate_input_tokens infrastructure
-- Kill-switch: EMSU_GLM_CLASSIFIER_OFF=1
+Where we left off (verified 2026-08-11 12:41 PT):
+- #25765 approved: capacity projection + remove UPSTREAMS_VLLM exclusion of :8210
+- All classifier work filed: v3 hybrid (#25764 [executing]) with 30% floor
+- GLM capacity fix applied (8210=8), GLM-first on all lanes, 4 upstreams restored
+- Tracking doc at /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md
 
 Open threads to drive next:
-1. #25757 [executing] - build the content classifier in router_hook.py (executor picked up)
-2. #25755 [executing] - increase max_num_seqs 15 to 32 (requires watchdog #23169 [approved] first)
-3. #25759 [proposed] - monitor GLM utilization percentage over next 30 min to verify 30-70% target
-4. #25747 [executing] - add :8210 to adapter canary monitoring (addressed via upstream restoration)
+1. #25765 [approved] - remove UPSTREAMS_VLLM exclusion of :8210, capacity projection planning
+2. #25764 [executing] - build v3 hybrid classifier in router_hook.py
+3. #25755 [executing] - increase max_num_seqs 15 to 32 (requires watchdog #23169 [approved] first)
+4. #25759 [executing] - monitor GLM utilization percentage to verify 30-70% target
+5. #25747 [executing] - add :8210 to adapter canary monitoring (addressed via upstream restoration)
+6. #25757 [executing] - v1 keyword-only classifier (will be superseded by #25764 [executing])
 
 Reference IDs:
-- Ideas filed: #25747 [executing], #25755 [executing], #25757 [executing], #25759 [proposed]
+- Ideas filed: #25747 [executing], #25755 [executing], #25757 [executing], #25759 [executing], #25764 [executing], #25765 [approved]
 - Ideas rejected: #25754 [rejected] (had classifier backwards)
-- Files touched: /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md
+- Files touched: /etc/systemd/system/frankenstein-tools.service.d/85-glm-capacity.conf, /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md
 - Bug library: 2314 (agent false zombie), 2307 (sci-notation parse), 2294 (STREAK fix)
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result><task_progress>- [x] Update GLM52_RING_STATE_TRACKER.md with federation principle
-- [x] Discuss classifier design with Ruben
-- [x] Get Ruben design decisions (content-based, context not chars, 30% floor, router_hook.py)
-- [x] Approve #25757 with design decisions
-- [x] Present final design</task_progress></attempt_completion>
+═══════════════════════════════════════════════</result><task_progress>- [x] Classifier v1 filed and rejected (wrong direction)
+- [x] Classifier v2 filed (keywords only, superseded)
+- [x] Classifier v3 filed and approved (hybrid keyword + 7B-LoRA + 30% floor)
+- [x] Answer Ruben's question about what we did for classifying
+- [x] Approve #25765 (fleet capacity projection + UPSTREAMS_VLLM exclusion removal)</task_progress></attempt_completion>
 ```
 
-### `1786467898078` — 8/11/2026, 11:49:43 AM PT — 146 turns
+### `1786468127695` — 8/11/2026, 12:03:51 PM PT — 228 turns
 
 **Original task:**
 
 ```
-#MDM
+#Postmark API Issues
 
-Rebase and continue / add to MDM if not already added
+Can you investigate and resolve this? 
 
-**Your ExecStartPost question, answered:** your instinct is right, that shape is probably bad. `ExecStartPost=curl /v1/models` holds the unit in `activating` until the probe passes, which does kill the lie where `systemctl is-active` reports healthy for an engine that never bound its port. But Big Mac takes minutes to load 15 weight shards, so any `TimeoutStartSec` shorter than real load time makes systemd kill a perfectly healthy slow start — and with `Restart=always` that becomes a restart loop on a box that would have come up fine
+Ruben Major
+
+Aug 11, 2026, 10:50 AM CDT
+
+Hi there,
+
+We received a notification about unusual sending activity in your EMSU Production - Default Transactional Stream and we HAVE temporarily paused your stream's sending while we get in touch with you. We are queuing all emails being sent from the stream.
+
+Please review your stream's Activity and Statistic pages. Such sending is typically an indicator that your Server API Token has been exposed and is being used to send spam. We ask that you please go to your Server's API Token tab wit
 ```
 
-**Ideas referenced:** #0078, #10108, #10740, #1130, #1131, #11741, #11781, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #1557, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1779, #178634, #1798, #1828, #18312, #18326, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #23171, #25097, #25378, #25381, #25468 [executing], #25469 [rejected], #25470 [deployed], #25471 [executing], #25744 [proposed], #25758 [proposed], #25759, #25760 [proposed], #30363, #334155, #64748, #7142, #7149, #8984
+**Ideas referenced:** #10234, #15905, #178424, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #202608, #25722, #25723, #25724, #25725, #333333, #4932, #6825, #6842, #888888, #9019, #9070
 
 **Last PICKUP PROMPT:**
 
 ```
-2026-08-10 window identically.
+FPM reload, final grep verify.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #1786342434047 — frankenstein-llm fleet hardening + web-terminal/MDM host enrollment.
 
-Where we left off (verified 2026-08-11 11:25 PT):
-- MDM PORTAL: cicero/nero/maximus now in web_terminal_token.php $staticIds AND ws_ssh_proxy.py SERVERS (plus already-present mdm_portal.php). emsu-web-terminal.service restarted + active. 18 static ids total.
-- CICERO SSH: NO path. Tunnel 127.0.0.1:11520 not listening; 192.168.1.252:22 closed; fleet_inventory ssh_path NULL. 127.0.0.1:2225 is an Ubuntu box, NOT Cicero (banner verified). #25760 filed to revive the tunnel + provision terminal access.
-- NERO/MAXIMUS SSH: tunnels alive (2223/2224 LISTEN, OpenSSH_9.9 macOS banner) but SSH auth impossible until (1) Mac shortnames obtained from the Macs themselves and (2) WOPR id_ed25519.pub installed on each Mac. #25758 filed.
-- BIG MAC: still healthy per prior window (#25470 [deployed]); NOT re-probed this window.
+Pick up task — Postmark token hardening: finalize gitignored secrets.
+
+Where we left off (verified 2026-08-11 12:02 PT):
+- config/secrets.php created (gitignored) with POSTMARK_ACCOUNT_TOKEN
+- config.local.php requires secrets.php, all refs use constant
+- 63 PHP files swept: raw fff724b9 literal replaced with POSTMARK_ACCOUNT_TOKEN
+- PHP-FPM NOT yet reloaded post-sweep; lint NOT yet run on modified files
+- Postmark stream still paused; ~119.5K spam in queue; Ruben awaiting support reply
 
 Open threads to drive next:
-1. #25760 [proposed] — Repair Cicero reverse tunnel: trace HEAL4/service, revive 11520, provision terminal SSH tunnel; confirm what 127.0.0.1:2225 actually is before touching it.
-2. #25758 [proposed] — Nero/Maximus SSH unblock: get Mac shortnames (Ruben or physical access), install WOPR key, update user fields in ws_ssh_proxy.py from placeholder rubenmajor to real shortnames.
-3. #25744 [proposed] — Circuit-break repeated-empty MCP results per rule 261 (classify, cap retries, alternate probe). Both MDM windows burned ~80 calls on this condition.
-4. #25468 [executing] — canary quarantine as connection-RESET upstream (reconcile executor state first).
-5. #25471 [executing] — frankenstein-tools drop-in reconcile, 34 files (reconcile executor state first).
-6. (human-only decision, no idea) — Big Mac vllm readiness watchdog: independent timer + cold-start grace + N-failures; fleet-wide vs Big-Mac-only scope.
+1. (agent-doable, no idea — needs idea filed first) — PHP lint all 63 swept files then reload_php_fpm
+2. (agent-doable, no idea — needs idea filed first) — grep verify zero raw fff724b9 outside config/secrets.php
+3. (human-only decision, no idea) — Postmark queue purge + stream reactivation pending support reply YMK0GD-6DEE2
 
 Reference IDs:
-- Ideas filed this window: #25744 [proposed], #25758 [proposed], #25760 [proposed]
-- Ideas carried: #25468 [executing], #25470 [deployed], #25471 [executing]
-- Files edited: /var/www/emtskills/routes/web_terminal_token.php, /var/www/emtskills/scripts/ws_ssh_proxy.py
-- Service restarted: emsu-web-terminal.service (active, verified)
-- Bug library: 2299 (Big Mac silent Ray hang), 2298 (host-vs-engine ladder), 2297 (sluggishness)
+- Files: config/secrets.php (new, gitignored), config/config.local.php, .gitignore, 63 swept PHP files
+- Postmark server: 18327494, support ref: YMK0GD-6DEE2
 
-When done, append to cline_task_ledger.md (rule 07), run order 66.
+When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════
 </result>
+<task_progress>
+- [x] Created gitignored config/secrets.php
+- [x] Updated .gitignore
+- [x] Patched config.local.php (require secrets, constant refs)
+- [x] Swept 63 PHP files raw token -> POSTMARK_ACCOUNT_TOKEN
+- [ ] PHP lint + FPM reload on swept files
+- [ ] Final grep verify zero raw tokens outside secrets.php
+- [ ] Postmark stream reactivation (pending support)
+</task_progress>
 </attempt_completion>
 ```
 
@@ -268,164 +581,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </task_progress>
 </attempt_completion>
 ```
-
-### `1786468127695` — 8/11/2026, 11:45:41 AM PT — 194 turns
-
-**Original task:**
-
-```
-#Postmark API Issues
-
-Can you investigate and resolve this? 
-
-Ruben Major
-
-Aug 11, 2026, 10:50 AM CDT
-
-Hi there,
-
-We received a notification about unusual sending activity in your EMSU Production - Default Transactional Stream and we HAVE temporarily paused your stream's sending while we get in touch with you. We are queuing all emails being sent from the stream.
-
-Please review your stream's Activity and Statistic pages. Such sending is typically an indicator that your Server API Token has been exposed and is being used to send spam. We ask that you please go to your Server's API Token tab wit
-```
-
-**Ideas referenced:** #10234, #15905, #178424, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #202608, #25722, #25723, #25724, #25725, #333333, #4932, #6825, #6842, #888888, #9019, #9070
-
-**Last PICKUP PROMPT:**
-
-```
-fig.local.php, then FPM reload
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up — Postmark token hardening: move token into gitignored secrets (in progress).
-
-Where we left off (verified 2026-08-11 11:45 PT):
-- `config/secrets.php` created with `define('POSTMARK_ACCOUNT_TOKEN', 'fff724b9-6ec8-45f5-9b1f-81e663b5d7d8');` — PHP lint passed, FPM reloaded
-- `.gitignore` now include `config/secrets.php`
-- `config/local.php` raw token strings replaced with `POSTMARK_ACCOUNT_TOKEN` constant references
-- BUT: `config.local.php` still needs a `require_once __DIR__ . '/secrets.php';` line to actually load the constant
-- 116 raw-token references across ~64 other PHP files still need to be swept
-
-Open threads to drive next:
-1. Add `require_once __DIR__ . '/secrets.php';` to config.local.php (near top, after the env.php include)
-2. Sweep all 116 raw-token references in ~64 files: `grep -rln fff724b9 /var/www/emtskills --include='*.php' | grep -v config/secrets.php | grep -v config/config.local.php | sudo xargs sed -i "s/'fff724b9-6ec8-45f5-9b1f-81e663b5d7d8'/POSTMARK_ACCOUNT_TOKEN/g"`
-3. PHP lint on all modified files, then `reload_php_fpm`
-4. Final grep to verify zero raw tokens left in non-secrets files
-
-Reference IDs:
-- Files touched: /var/www/emtskills/config/secrets.php (new, gitignored), /var/www/emtskills/config/config.local.php (patched), /var/www/emtskills/.gitignore (updated)
-- Postmark server 18327494, support ref YMK0GD-6DEE2
-- Token: POSTMARK_ACCOUNT_TOKEN
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Created gitignored config/secrets.php
-- [x] Added secrets.php to .gitignore
-- [x] Patched config.local.php raw token refs -> constant
-- [ ] Add require_once for secrets.php in config.local.php
-- [ ] Sweep ~116 raw-token refs in ~64 other files
-- [ ] PHP lint + reload FPM
-- [ ] Verify zero raw tokens in non-secrets files
-- [ ] Postmark purges queue + resumes stream (pending support reply)
-</task_progress>
-</attempt_completion>
-```
-
-### `1786469157683` — 8/11/2026, 11:39:22 AM PT — 120 turns
-
-**Original task:**
-
-```
-How many tokens have our FREE LLMs used in the last 30 days
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12299, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16588, #16844, #18312, #18326, #2299, #23171, #25097, #25185 [deployed], #25186, #25194, #25753 [proposed], #272822, #7174, #9215, #9320
-
-**Last PICKUP PROMPT:**
-
-```
--open-weight: ~731.9M tokens**
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task: Free LLM 30-day token usage report + gpt-5.2 reroute recommendation
-
-Where we left off (verified 2026-08-11 11:37 PT):
-- FREE LLMs used ~222.7M tokens (our hardware) to ~731.9M (hardware + DeepSeek) in 30 days
-- gpt-5.2-2025-12-11 (59.3M tokens) traced to EmailAIResponder.php:469 + SMSAIResponder.php:345 fallback paths
-- Anthropic primary fails 100% for these paths — gpt-5.2 IS the effective primary
-- gpt-5-mini (0.09M tokens) at EmailAIResponder.php:473 — tertiary fallback
-- Rollback script exists: docs/specs/retire_gpt_5_2_from_routing_rollback.sh (2026-06-27)
-
-Open threads to drive next:
-1. #25753 [proposed] — claude-haiku-4-5 zero-cost tracking gap in llm_call_log (33K calls untracked)
-2. (human-only decision, no idea) — Replace gpt-5.2 fallback with deepseek-v4-pro in EmailAIResponder.php:469 and SMSAIResponder.php:345
-3. (human-only decision, no idea) — Replace gpt-5-mini fallback with deepseek-v4-flash at EmailAIResponder.php:473
-4. (human-only decision, no idea) — Debug why Anthropic primary fails 100% for responder paths (only fallback hits recorded)
-
-Reference IDs:
-- Ideas filed: #25753 [proposed]
-- Files touched: none (read-only investigation)
-- Key files to edit: /var/www/emtskills/lib/EmailAIResponder.php (lines 469, 473), /var/www/emtskills/lib/SMSAIResponder.php (line 345)
-
-When done, append a row to cline_task_ledger.md and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Query 30-day token usage for free LLMs
-- [x] Classify gpt-5.2-2025-12-11 (Email/SMS AI Responder fallback, 24/7)
-- [x] Classify gpt-5-mini (tertiary fallback, same responder paths)
-- [x] Trace call origin to EmailAIResponder.php:469 + SMSAIResponder.php:345
-- [x] Recommend replacing gpt-5.2 with deepseek-v4-pro
-- [x] Ship completion
-</task_progress>
-</attempt_completion>
-```
-
-### `1786473380730` — 8/11/2026, 11:38:17 AM PT — 8 turns
-
-**Original task:**
-
-```
-#CFA 
-Completed scan of CFA system logs for the past 24 hours.
-
-go ahead and look at below and correct it. Bad iterations. Just reanalyze and do again
-
-**Key metrics (last 24 h)**
-- Sweep runs                                                                                                                                                                                  ✅
-- Dispatch runs                         ✅
-- Quality‑audit entries       ✅
-- LLM‑health alerts                          ✅
-- Struct‑gate logs                     ✅
-
-**Findings**
-1. **Sweep & Dispatch** – Both logs show normal acti
-```
-
-**Ideas referenced:** #16863, #2306, #2310, #2311, #23316, #24339, #24340, #24341, #24500, #25537, #25560, #25593 [proposed], #25608, #25623, #25632, #25633, #25635, #25666, #25667, #25669, #25679, #25688, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786472732313` — 8/11/2026, 11:37:24 AM PT — 30 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-I will read the Sunset report and get back to you on that For MANDAMUS NOW -> I need info on that mandamus to give to the attorney to file. I need an email summary, synopsis, the PDFs of every email sent to Open Records with dates/times listed as well as archived emails searched. YOu need to look also at other employees such as Jennifer Copeland (will need to search through email archives / there may be an MCP or process for this to be easier / those arechives are on WOPR cold storage I believe). Check rmajor@emsuniversity.com. Also jthompson@emsuniversity.com also sent requests for up
-```
-
-**Ideas referenced:** #002060, #178643, #467886, #5090, #96607
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786473149612` — 8/11/2026, 11:34:30 AM PT — 8 turns
 
@@ -3310,201 +3465,3 @@ Your RCA was correct: the hardfloor set was duplicated and the trim updated o
 **Ideas referenced:** #0000, #11417, #11847, #12249, #12251, #12266, #12269, #12285, #12588, #12589, #12590, #12688, #12689, #13204, #13470, #14133, #14142, #14205, #15268, #15776 [deployed], #16032, #16224, #16448, #16449, #16461, #16463, #16464, #16525, #16715, #17078, #19125, #19173, #19175 [executing], #19176 [queued], #19686, #19898, #19899 [proposed], #19904, #20251, #20569, #24207, #24971 [rejected], #24972 [rejected], #24973 [rejected], #24985 [rejected], #24988 [executing], #25128 [executing], #25150 [executing], #25151 [executing], #25153 [proposed], #25154 [proposed], #25155 [proposed], #25156, #25157, #25158, #25168 [proposed], #25169 [proposed], #25170 [proposed], #25171 [proposed], #25182 [proposed], #25183 [proposed], #25184 [proposed], #25185 [executing], #25186 [proposed], #25187 [proposed], #25188 [deployed], #25190 [deployed], #25194 [deployed], #25198 [deployed], #25199 [deployed], #25200 [deployed], #25220 [proposed], #25221 [deployed], #25222 [deployed], #25231 [deployed], #27116, #29373, #36237, #40899, #40969, #5344, #5346, #5348, #6729
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786211367196` — 8/8/2026, 12:26:07 PM PT — 302 turns
-
-**Original task:**
-
-```
-#Big Mac
-
-How is option be doing right now? 
-
-What about Kaizon's universal auto fix?
-
-continue
-
-## Session Summary: Big Mac fleet analysis + Executor RCA + Approval-bug fix
-
-### What was done
-
-1. **Big Mac analysis**: 89 turns in 5min (08:53-08:58 PT), all via adapter path. Zero router picks — two-surface reality from #25112 [in_progress]. Big Mac is serving through the frankenstein-tools adapter at capacity cap 6.
-
-2. **CORRECTIVE_RETRY_ENABLED bug fixed** (#25120 [in_progress]): variable was undefined at line 3049, causing FAILOVER dead-on-dead_conn 1% of Big Mac turns. Fix: added definitio
-```
-
-**Ideas referenced:** #10108, #10666, #10740, #11741, #11781, #11944, #11953, #12060, #12231, #12247, #12262, #12314, #12364, #12365, #12366, #12368, #1239, #12477, #12503, #12576, #12591, #12609, #12611, #12615, #12617, #12618, #12619, #12657, #12672, #12714, #1280, #12824, #12872, #12878, #12894, #12900, #13108, #13121, #13202, #13418, #13832, #13874, #14748, #16063, #16163, #16265, #16304, #16834, #16844, #17566, #17567, #177862, #177914, #1784, #18093, #18312, #18326, #18360, #19653, #21755, #2182, #2212, #23171, #24230, #24646, #25097 [in_progress], #25111 [proposed], #25112 [in_progress], #25120 [in_progress], #25122 [in_progress], #25124 [proposed], #25125 [in_progress], #25131 [in_progress], #25173 [proposed], #25176 [proposed], #25196 [proposed], #3093, #3378, #3822, #6978, #7126
-
-**Last PICKUP PROMPT:**
-
-```
- — pipeline delivery deadlock.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — continue open threads (verified 2026-08-08 12:25 PT)
-
-Where we left off:
-- #25120, #25122, #25131 shipped. #25112 registry flipped.
-- Deadlock N-cycle trigger pending #25196 [proposed] — JSON quoting blocked server-side write.
-- Option B race not yet exercised by executor planner tick.
-
-Open threads:
-1. #25196 [proposed] — write deadlock trigger PHP to /tmp then sed into cron_kaison_wedge_detection.php (uses $pdo in global scope). File at backup .bak-25131-universal.
-2. #25125 [executing] — verify executor P2 admission stable.
-3. #25111 [proposed] — TP=4 Big Mac flip when 4th B70 lands.
-4. #25097 [executing] — Big Mac wire into frankenstein-llm pool.
-5. Watch executor log for executor_plan_race on next generatePlan tick.
-6. DB cleanup: all 15 ideas stuck idle >2h (from broken validation harness window) — manually advance or auto-timeout.
-
-Reference IDs:
-- Shipped: #25120 [testing/ready], #25122 [testing/ready], #25131 [in_progress], #25112 [registry flipped]
-- Pending: #25196 [proposed], #25125 [executing], #25111 [proposed], #25097 [executing], #25173 [approved]
-- Rejected: #25176 [rejected]
-- Files: executor_plan_race.php, RubenExecutor.php, frankenstein_tools_adapter.py, frankenstein_registry.yaml, cron_kaison_wedge_detection.php
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] #25120 shipped: CORRECTIVE_RETRY_ENABLED live, zero errors
-- [x] #25122 shipped: Option B executor_plan_race.php + gate
-- [x] #25131 shipped: Rule 147 48h gate removed (FRESHNESS_HOURS=0)
-- [x] #25112 shipped: Big Mac supports_tools=true in registry
-- [x] #25196 filed: deadlock N-cycle trigger pending (JSON quoting blocked write)
-- [x] DB statuses updated: all three ideas reflect shipped state
-- [x] Why-blocked explanation delivered
-</task_progress>
-</attempt_completion>
-```
-
-### `1786212070741` — 8/8/2026, 12:26:03 PM PT — 240 turns
-
-**Original task:**
-
-```
-Why would this cost any money at all? You need to really take a look at that and see that makes no sense. Anyways go ahead and see what you can do to expand these features and scope. Again we are still planning. Make sure that you are updating the documents accordingly. 
-
-Give me an idea on how this would run as well we'll see if we just implemented it tomorrow give me a play-by-play on how that would look from the student standpoint step-by-step.
-
-Direct answers to both questions:
-
-**1. STUDENT LIFECYCLE SLS — What needs to be integrated:**
-
-The SLS tables already exist in `admin_portal` but 
-```
-
-**Ideas referenced:** #1565, #15669, #15803, #1976, #2021, #24757 [rejected], #25126 [rejected], #25129 [proposed], #25156 [proposed], #25157 [proposed], #25160 [proposed], #25161 [proposed], #25162 [proposed], #25163 [proposed], #25164 [proposed], #25174 [proposed], #25175 [proposed], #25191 [proposed], #25192 [proposed], #30363, #334155, #4518, #475569, #64748, #8209, #9660
-
-**Last PICKUP PROMPT:**
-
-```
-4K (560 lines, 10 Parts A-J) |
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Externship auto-assign implementation: fix email/SMS config first, then provider-first rework + CFA integration.
-
-Where we left off (verified 2026-08-08 12:25 PT):
-- All 4 PDFs delivered and opened on Ruben's desktop: externship_flowchart.pdf (71K, opened), externship_student_journey.pdf (142K, opened), externship_cs_flowchart.pdf (56K, opened), externship_transitions.pdf (50K, opened)
-- Full spec v3 at /Users/rubenmajor/Desktop/externship_auto_assign_v3.md (560 lines, 10 Parts A-J): cost answer, no-request walkthrough, provider-availability-first rework, email/SMS audit, expanded scope, implementation schedule, acceptance criteria, file map, compliance packet gate (Jon's gap), CFA recommendations
-- 11 ideas filed: #25156, #25157, #25160, #25161, #25162, #25163, #25164, #25174, #25175, #25191, #25192
-- SLS tables still EMPTY: externship_eligibility_status (0 rows), student_lifecycle_states (0 rows)
-- externship_safety_gates.auto_assign_enabled=1 — kill-switch configured
-- Census Geocoder free + unlimited — geocoding cost $0.00
-- 0 auto-assignments have occurred — confirmed
-
-Email/SMS config broken items to fix FIRST (#25174, 2-3 hrs):
-1. cron_externship_auto_notify.php — From: noreply@emsuniversity.edu → info@emsuniversity.com
-2. lib/email.php — 4 functions: noreply@ems-university.edu → info@emsuniversity.com
-3. lib/email.php — appeal URLs: ems-university.edu → emsuniversity.com
-4. cron_externship_auto_notify.php — replace SMS stub with sendSMSAuto() call via Twilio
-5. lib/ea_auto_send_helper.php — verify TWILIO_SID/TOKEN/FROM env not placeholder defaults
-
-Open threads:
-1. #25174 [proposed] — Fix 4 broken email/SMS sender addresses + SMS stub (2-3 hrs, P0 — DO FIRST)
-2. #25157 [proposed] — Populate student_lifecycle_states + externship_eligibility_status from Students + moodle_c_live
-3. #25175 [proposed] — Provider-availability-first rework: named roster for approval, availability pool, assignment engine
-4. #25191 [proposed] — Compliance packet gate: per-placement checklist, student portal upload/sign, placement_gates enforcement
-5. #25192 [proposed] — CFA proactive placement notifications: landing, compliance chaser, change response, pre-placement instructions
-6. #25160 [proposed] — geocode_sites.php + geocode_students.php via Census Geocoder; ALTER TABLEs
-7. #25161 [proposed] — ProvisionalScheduler for no-request model (fire on SLS eligibility, not student request)
-8. #25162 [proposed] — Haversine MySQL function + distance re-rank + multi-site backup
-9. #25163 [proposed] — Student self-service portal + audit trail export
-10. #25164 [proposed] — Auto-reassignment on decline + capacity management
-
-Reference IDs:
-- Master spec: #25156 [proposed]
-- Email/SMS fix: #25174 [proposed]
-- Provider-first rework: #25175 [proposed]
-- Compliance packet: #25191 [proposed]
-- CFA integration: #25192 [proposed] (NEW)
-- Prior ideas: #25157, #25160, #25161, #25162, #25163, #25164 [all proposed]
-- Desktop files: externship_flowchart.pdf, externship_student_journey.pdf, externship_cs_flowchart.pdf, externship_transitions.pdf, externship_auto_assign_v3.md
-- Server files: /var/www/emtskills/docs/specs/externship_*.{html,pdf,md}
-- Dashboard: https://emsuniversity.com/emtskills/externship/dashboard.php
-- Contact: info@emsuniversity.com, (800) 728-0209
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE
-```
-
-### `1786212454095` — 8/8/2026, 11:53:58 AM PT — 238 turns
-
-**Original task:**
-
-```
-#Telephony
-
-Phones are genuinely healthy. One alert did fire overnight and it hit your phone, but that was my monitor being wrong, not a real outage. Details below.
-
-## Yes, it's actually working
-
-Full day today, and this is the number that matters most:
-
-| check | today |
-|---|---|
-| invalid-assistant kills (the thing that killed 92 calls Friday) | **0** |
-| contract test | 10 pass, 0 fail, running hourly on its own |
-| outage monitor | 122 autonomous runs |
-| personas exercised | **both** Eric and Bella now, not just Eric |
-
-The strongest evidence isn't a counter though. An inbound AI call a
-```
-
-**Ideas referenced:** #13137, #15903, #16732, #178612, #19454, #19814, #2271, #24635 [deployed], #24636 [deployed], #24645 [deployed], #24646 [deployed], #24791 [deployed], #25039, #25097, #25112, #25120, #25122, #25131, #25144 [proposed], #25173, #4802, #6520, #6646, #7907, #9086, #9168
-
-**Last PICKUP PROMPT:**
-
-```
-un today. Passive observation.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1786123588626 (post-outage voice verification, #25144 deployed and verified live).
-
-Where we left off (verified 2026-08-08 11:53 PT):
-- #25144 [deployed] deployed and verified: check_telephony_health section 3 now uses voice_call_log (not telephony_call_log), transcript-length heuristic (>50 chars = healthy conversation), and VOICE OUTAGE MONITOR tail for zero-leg alarm context.
-- Service restarted: mcp-emsu-operations.service reloaded with new build/index.js. Live re-run confirmed: 23 legs, 18 transcript_helped, outage monitor shows 4x OK, all agents heartbeating.
-- VOICE AI HEALTHY: 0 invalid-assistant kills full day; contract test 10 PASS/0 FAIL; both personas exercised; 143s/16-msg inbound Vapi conversation.
-- False alarm (07:05): Detector C fixed — NULL startedAt fallback to createdAt, trigger loosened (>=6 dials AND <=25% answered). Positive control confirmed.
-- Canary: Scheduled 13:25 PT — hasn't run yet today (it's 11:53 PT). Log at /var/www/emtskills/logs/vapi_first_message_canary.log.
-- HANDOFF_NOTES.md updated: full #25144 deploy summary appended.
-
-Open threads to drive next:
-1. (none active — #25144 deployed. Voice guard #6 status: awaiting 13:25 canary run before declaring all post-outage tasks complete.)
-
-Reference IDs:
-- Ideas deployed: #24645 [deployed], #24635 [deployed], #24636 [deployed], #24646 [deployed], #24791 [deployed], #25144 [deployed]
-- Files touched: /var/www/emtskills/mcp-servers/emsu-operations/src/index.ts (lines 3436-3462), /var/www/emtskills/mcp-servers/emsu-operations/build/index.js
-- Backups: index.ts.bak-25144-20260808-112107
-- Service: mcp-emsu-operations.service (restarted 11:52 PT, new code loaded)
-- HANDOFF_NOTES.md last updated 2026-08-08 18:40 PT
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```

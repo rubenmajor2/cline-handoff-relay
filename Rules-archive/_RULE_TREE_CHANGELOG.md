@@ -154,7 +154,7 @@ per-rule prose elaboration moved here (it duplicates clinerules_lookup output).
 
 ```
 
-## 2026-08-08 (idea #25188) — collision cleanup: full was/now mapping
+## 2026-08-08 (idea #25188) - collision cleanup: full was/now mapping
 
 Moved out of `Rules/_RULE_TREE.md` on 2026-08-11 for G8 floor-cap compliance.
 Eleven numbers each held TWO different rules. A rule number is only a filename
@@ -171,6 +171,9 @@ its twin was renumbered. One (296) was a true duplicate and was retired.
 | 278 | **310** | afk-mode-needs-verify-auto-deploys |
 | 281 | **311** | regulator-response-playbook |
 | 298 | **312** | router-reporting-must-resolve-adapter-names |
-| 91  | **313** | refund-offer-not-act |
-| 296 dup | ret| 296 dup | ret| 296 dup | ret| 296 dup | ret| 296 dup | ret| 296 dup | ret| 296 dm- var| 296 dup | ret| 296 dup | ret| 296 dup | ret| 296 dup | ret| 296 dup ntionally share
-their parent's number: they are companion files to a hardfloor rutheir parent's number: they are companion files to a hardfloo, not a collision.
+| 91 | **313** | refund-offer-not-act |
+| 296 duplicate | retired to Rules-backups/ | never-declare-llm-dead-from-cached-probe (kept the -an-llm- variant) |
+
+`29-case-law.md`, `41-addenda.md`, and `297-case-law.md` intentionally share
+their parent's number: they are companion files to a hardfloor rule, not
+separate rules. That is the trim-then-archive pattern, not a collision.

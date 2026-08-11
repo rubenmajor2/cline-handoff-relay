@@ -227,6 +227,65 @@ A notice usually has TWO halves: the allegations, and a numbered list of records
 
 Source incident 2026-08-10 (San Mateo): a draft was called finished at 3 pages answering only the 10 allegation items. It had no Part III, so all 9 numbered production demands were unanswered. Ruben: "Is that intentional? Did you read all the attachments?" The attachments were the Notice (10 allegations plus 9 production items plus the response period), the prior agency email, and the full enclosed chapter. Rebuilt to 4 pages with a full production index and seven regulation citations.
 
+## SCOPE-OBJECT THE PRODUCTION LIST, THEN PRODUCE ANYWAY
+
+A records demand is drafted by the agency, not by the chapter. Read every numbered item against the agency's actual records-access authority and score it before answering.
+
+**Find the authority sentence.** In Title 22 Chapter 2 it is section 100067.07(a): "all program materials specified in this Chapter" are subject to periodic review, plus (b) on-site evaluation. **That phrase is a defined set, not a general power.** A record the chapter nowhere requires a program to create, maintain, or disclose is outside it. Every regulatory scheme has an equivalent sentence. Find it first.
+
+**Retention is not disclosure.** A rule requiring records be kept for N years (100067.07(d) for student records) creates a retention obligation. It does not direct production. Never let a retention citation stand as the basis for a disclosure demand.
+
+**Score every item into one of four buckets:**
+
+| Bucket | Answer shape |
+|---|---|
+| Within scope | "Within scope and furnished." Cite the provision that makes it reviewable. Concede these fast; it buys credibility for the objections. |
+| Overbroad as to population | Object as to breadth (all cohorts / all campuses / a period wider than the matters raised), then produce the full period anyway. |
+| Outside the chapter entirely | Say no provision requires the program to create, maintain, or disclose it, and that none is identified in the notice. Then furnish it voluntarily. |
+| Duplicative | Say the items overlap, produce once, cross-reference. Never produce the same exhibit twice under two numbers. |
+
+**The posture is OBJECT AND PRODUCE. Never refuse.** Four reasons, and they hold in every jurisdiction:
+
+1. **Refusal changes the subject.** A records audit becomes a cooperation matter, and the noncompliance track (100067.08 here) reaches probation, suspension, or revocation. The cost of producing a chat log is zero. The cost of a refusal fight is the program's approval.
+2. **The objection is free if it is contemporaneous.** Stated in this response it cannot later be called an afterthought. Withholding buys nothing the objection does not already buy.
+3. **Producing enables the strongest argument.** Where a log is built to measure a response interval and no provision fixes one, the log proves what the program DID, not what it OWED. That reframe requires the log to exist in the record.
+4. **It is the only posture consistent with the rest of the doctrine.** We answer, then narrow.
+
+**Required sentence in the reservation:** "The program does not withhold any responsive record on the ground stated." Without it, an objection reads as a partial refusal and the agency will treat it as one.
+
+**Say the production is voluntary, once, per objected item:** "Production is voluntary, is made under the reservation in Part I, and is not a concession that the record was subject to production or that the Agency's authority extends to it."
+
+### THE ONE CARVE-OUT: a third-party privacy right is NOT ours to waive
+
+Object-and-produce works because a scope objection belongs to us. We can waive it, so producing costs nothing and buys credibility. **A privacy restriction that exists for the benefit of a third party is categorically different, and object-and-produce is the WRONG answer to it.**
+
+**Student electronic mail addresses and telephone numbers are the canonical case.** They are personally identifiable information in an education record under 20 U.S.C. 1232g and 34 C.F.R. Part 99. Where students are adults the rights are theirs. Disclosure without written consent or an applicable exception is OUR violation of the Act, committed against the student. **You cannot waive a right you do not hold.** Producing "in the interest of cooperation" is not generosity here, it is an independent violation.
+
+Check the chapter for a state-law hook before conceding. In Title 22 Chapter 2 the ONLY student-identifying reporting contemplated is 100067.13(d), "the name and address of each person receiving a course completion record." Nothing requires a program to collect, keep, or report student email or phone at all.
+
+**Draw the line at contact information, not at names.** Produce student names and cohort dates. Withholding names reads as obstruction and the chapter contemplates names. The privacy interest bites on contact information, which is what enables direct approach to the student.
+
+**Do NOT argue whether the exception applies. Ask them to invoke it.** For an audit the agency's path is 34 C.F.R. 99.31(a)(3), authorized representative of a State educational authority, with the 99.35 undertakings (use limited to the audit, destruction when no longer needed). Whether a county agency qualifies is genuinely uncertain and arguing it is a fight with no upside. Name the exception, ask them to confirm in writing that they are invoking it with those undertakings, and commit to producing immediately on confirmation. If they confirm, we produce and their confirmation is in the record. If they cannot confirm, they have told us the exception does not apply, which is better than winning an argument.
+
+**Offer a ladder, ascending in what it costs us:**
+
+1. Their written 99.31(a)(3) confirmation plus the 99.35 undertakings.
+2. Student consents, which we will solicit on request and transmit as they arrive.
+3. A narrowed per-student request in place of a blanket one.
+4. **We transmit THEIR message to the students ourselves and confirm the date and the recipient count.** Lead on this one under pressure. It delivers the thing the agency actually wants, contact with students, with zero disclosure, and it is very hard to characterise as obstruction.
+
+**Say why you are raising it:** "The program raises this to comply with the Act, not to withhold from the Agency." And flag the category explicitly in the threshold reservation so the no-withhold sentence is not read as covering it: where a record is subject to a privacy restriction existing for the benefit of a third party, the program cannot produce it merely because it is willing to.
+
+**Also note, once and neutrally,** that an agency disclosure of student contact information to the complainant is the agency's exposure. Shield, not accusation, and never more than one sentence.
+
+Source incident 2026-08-11 (San Mateo): the v4 draft applied object-and-produce to student email and phone, marking them as education records and asking the Agency to handle them carefully. Ruben: "Are we obligated to give their email and phone numbers? I can see the names, but emails and phone numbers, seems a bit intrusive." He was right, and the error was mine: I had generalized a posture that is correct for our own objections onto a right belonging to the students. Rewritten as names-furnished, contact-information-conditional, with the four-course ladder.
+
+**Never do these:** refuse outright; demand the agency justify its authority; ask the agency to narrow its own list; write "we reserve the right to withhold." Each invites escalation and none improves the position.
+
+**The harder posture exists and it is a human decision.** Producing the in-scope items and offering the out-of-scope items on written confirmation of the provision relied on is legitimate and is a bigger fight. Draft the object-and-produce version, name the escalation as an open decision for Ruben and counsel, and do not choose it unilaterally.
+
+Source incident 2026-08-11 (San Mateo): Ruben flagged the nine-item production demand as overbroad and outside the audit's scope. Scoring it produced four within scope, two overbroad as to cohorts and campuses (rosters and outbound email swept every cohort from January 1), one duplicative, and two entirely outside the chapter (an AI phone-system message log and a website chat log, neither of which any provision requires a program to operate or log). Item 2 additionally demanded student email and phone. Answered as object-and-produce with a fifth threshold reservation.
+
 ## HOUSE STYLE: every regulator filing is a LETTER on letterhead, never a memo
 
 **Canonical artifact:** `/var/www/emtskills/uploads/tdshs/inspection-5196-2026/Consolidated_Response_and_Reservation_of_Rights_TDSHS_2026-08-06.html`. That is the look. Everything below is agency-neutral; nothing state-specific belongs in the template.

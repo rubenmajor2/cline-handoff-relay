@@ -6,18 +6,19 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/11/2026, 12:56:17 AM PT | window: last 72h | 100 tasks | index total 621 (parsed 5, cached 616)
+Generated: 8/11/2026, 1:56:17 AM PT | window: last 72h | 99 tasks | index total 622 (parsed 5, cached 617)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786430680103` | 8/11/2026, 12:56:00 AM | 340 | 727KB | #LLM Fleet |
-| `1786319043926` | 8/11/2026, 12:55:58 AM | 387 | 3168KB | #TDSHS |
-| `1786413553188` | 8/11/2026, 12:55:23 AM | 284 | 887KB | #San Mateo County EMSA Complaint |
-| `1786432541079` | 8/11/2026, 12:53:33 AM | 39 | 67KB | #Julia/Claudia TP=2 |
+| `1786435974712` | 8/11/2026, 1:50:08 AM | 104 | 3541KB | #Julia/Claudia TP=2 |
+| `1786401898030` | 8/11/2026, 1:46:54 AM | 1275 | 14238KB | Corrected the Customer Service role visibility issue in the Telephony Hub Callbacks tab, p |
+| `1786413553188` | 8/11/2026, 1:43:02 AM | 338 | 1100KB | #San Mateo County EMSA Complaint |
+| `1786319043926` | 8/11/2026, 1:41:06 AM | 444 | 3331KB | #TDSHS |
+| `1786430680103` | 8/11/2026, 1:39:22 AM | 449 | 1660KB | #LLM Fleet |
+| `1786432541079` | 8/11/2026, 1:12:16 AM | 71 | 112KB | #Julia/Claudia TP=2 |
 | `1786433544814` | 8/11/2026, 12:48:19 AM | 92 | 237KB | /emtskills folder is slow as hell again. This has been a very stubborn issue over the past |
 | `1786413781782` | 8/11/2026, 12:13:18 AM | 137 | 177KB | #Julia/Claudia TP=2 |
 | `1786384439089` | 8/10/2026, 11:56:18 PM | 316 | 2268KB | Why am i just receiving these chat transcripts now? That's not very helpful |
-| `1786401898030` | 8/10/2026, 11:55:59 PM | 1137 | 13612KB | Corrected the Customer Service role visibility issue in the Telephony Hub Callbacks tab, p |
 | `1786409942954` | 8/10/2026, 7:20:48 PM | 270 | 755KB | #LLM Fleet |
 | `1786413177098` | 8/10/2026, 7:15:42 PM | 133 | 280KB | #Make GLM Faster |
 | `1786339173079` | 8/10/2026, 7:02:40 PM | 214 | 1369KB | I keep having to say over and over again that open threads need idea numbers and statuses  |
@@ -108,41 +109,111 @@ Generated: 8/11/2026, 12:56:17 AM PT | window: last 72h | 100 tasks | index tota
 | `1786057314451` | 8/8/2026, 2:12:00 AM | 688 | 4176KB | I keep getting this message every 15 minutes and is it fixed or not? |
 | `1785954733601` | 8/8/2026, 2:00:19 AM | 544 | 1051KB | #SLS MEGA |
 | `1786169603912` | 8/8/2026, 1:59:03 AM | 500 | 1745KB | Play frankenstein doctor of executor. Lots of failed ideas impl blocked, etc.. need resolu |
-| `1786133997460` | 8/8/2026, 1:19:30 AM | 551 | 970KB | Take a lookat Jon's argus, a lot of 502 and SQL debris. Need to fix these 502s from now on |
-| `1786167712060` | 8/8/2026, 1:15:34 AM | 482 | 1117KB | ## Comprehensive PICKUP PROMPT — all 7 context-memory ideas, server-authoritative tags |
 
 ---
 
 ## Per-window detail
 
-### `1786430680103` — 8/11/2026, 12:56:00 AM PT — 340 turns
+### `1786435974712` — 8/11/2026, 1:50:08 AM PT — 104 turns
 
 **Original task:**
 
 ```
-#LLM Fleet
+#Julia/Claudia TP=2
 
+Get Julia/Claudia TP=2 working properly
 
-Frankenstein-llm seeing this type of iteration in another window. Something is slightly off still. 
+SSH access to both Julia (port 2205) and Claudia (port 2206) is confirmed using the existing network key. The next actionable step is to list the crash‑log files on the Julia host to identify the first stall details.
 
-<ssh_command> <command>ssh -p 2205 rubenmajor@192.168.1.190 "ls -1 /tmp/vllm_serve_unified.*.crash.log"</command> <timeout_ms>60000</timeout_ms> <task_progress>
-
- List crash log files on Julia host
- Identify first stall details
- Increase RAY_CGRAPH_get_timeout in julia_unified_tp2.sh
- Relaunch Julia service and monitor stability
- Verify 2+ hours of stable traffic
- Update bug library incident 2306 to resolved </task_progress> </ssh_command>
-
-
-<ssh_command> <command>sshpass -p 'qefru
+Current task progress:
+- [x] Verify correct SSH key location for Julia host
+- [x] Verify SSH port 2205 is reachable
+- [ ] List crash log files on Julia host
+- [ ] Identify first stall details
+- [ ] Increase RAY_CGRAPH_get_timeout in julia_unified_tp2.sh
+- [ ] Relaunch Julia service and monitor stability
+- [ ] Verify 2+
 ```
 
-**Ideas referenced:** #11383, #11936, #11953, #12335, #12363, #12584, #12672, #12689, #13108, #13121, #13874, #14000, #16063, #16117, #16120, #16718, #17202, #178639, #18321, #18786, #19338, #20495, #2050, #2247, #2308, #2309, #25112, #25133, #25185, #25565 [executing], #25567 [executing], #25571 [rejected], #25580 [executing], #25604 [deployed], #25605 [executing], #25621 [deployed], #25625, #25627 [executing], #25630 [deployed], #25631 [blocked], #25647 [deployed], #25654 [executing], #25673 [proposed], #25674 [proposed], #25676 [proposed], #25677 [proposed], #25678 [proposed]
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16674, #16676, #16778, #16802, #16803, #16839, #16851, #16863, #17246, #1744, #1779, #1781, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2306, #2311, #25378, #25381, #25631 [executing], #7142, #7149
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786319043926` — 8/11/2026, 12:55:58 AM PT — 387 turns
+### `1786401898030` — 8/11/2026, 1:46:54 AM PT — 1275 turns
+
+**Original task:**
+
+```
+Corrected the Customer Service role visibility issue in the Telephony Hub Callbacks tab, plus 3 related callback-system issues found during the investigation.
+
+Root cause: /var/www/emtskills/routes/telephony_hub.php line 2520 wrapped the entire Callbacks tab button in if ($isTelephonyAdmin) only (MasterAdmin/ExecAdmin/ITAdmin/Admin), excluding Customer Service role staff even though $isCSUser = !empty($user['is_cs']) already existed in the same file for other telephony features. Changed to if ($isTelephonyAdmin || $isCSUser). Lint check passed, backup taken first. The tab-panel content div its
+```
+
+**Ideas referenced:** #10003, #25185, #252532, #25593 [proposed], #25606 [proposed], #25666 [proposed], #25667 [proposed], #25668 [deployed], #25669 [proposed], #25688 [deployed], #25689 [proposed], #32324, #334155, #475569, #64748
+
+**Last PICKUP PROMPT:**
+
+```
+only captured the EMSU trunk).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task on callback CS visibility — remaining follow-ups under #25593 [proposed].
+
+Where we left off (verified 2026-08-10 17:45 PT):
+- Callbacks tab + queue panel + booking_detail + booking_action all verified working in real CS context (session fabricated for users.id=17 Jehan De Los Angeles, CustomerService, is_cs=1; renders 200/full panel, actions 302, no gates tripped).
+- Debug line removed from callback/admin/_panel_callback.php; lint clean; final render re-verified; fabricated session + temp files deleted; post-cleanup unauthenticated fetch = 401.
+- Prior fixes still live: telephony_hub.php tab button + panel gates (isTelephonyAdmin || isCSUser), booking_detail.php is_cs gate, cron_callback_policing.php COALESCE fix (booking id 6 escalated to Vicky), booking id 76 name corrected to Denham Brown.
+- HANDOFF_NOTES.md updated with full verification trail incl. session-store location gotcha (/var/www/vhosts/emsuniversity.com/sessions).
+
+Open threads to drive next:
+1. #25593 [proposed] — have a real CS staffer (Jehan/Apple/Rachel) open Telephony Hub > Callbacks in their own browser and confirm; close the loop with Ruben after.
+2. #25593 [proposed] — Argus dropped-call investigation for Vicky's CS team (Ruben directive, not started).
+3. #25593 [proposed] — find a real callback number for booking id 76 (Denham Brown); only EMSU trunk was captured.
+
+Reference IDs:
+- Ideas filed: #25593 [proposed]
+- Files touched this session: callback/admin/_panel_callback.php (debug line removed), HANDOFF_NOTES.md (verification entry)
+- Files from earlier sessions still in effect: routes/telephony_hub.php, callback/admin/booking_detail.php, callback/admin/_panel_callback.php, callback/admin/booking_action.php (new), crons/policing/cron_callback_policing.php
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] CFA jargon removed, panel rewritten, booking_detail rewritten, action endpoint created
+- [x] Fixed phantom callback_queue columns; CLI render OK
+- [x] h() undefined → top-level guarded def in panel + booking_detail
+- [x] Hub panel renders FULLY; booking_detail 200; action POST 302 — all as real CS context (Jehan, is_cs=1)
+- [x] Debug line removed, lint clean; final render re-verified post-removal
+- [x] Auth enforcement confirmed (401 no-cookie/bogus)
+- [x] Cleanup: fabricated session + temp files deleted, post-cleanup 401
+- [x] Handoff notes updated
+- [x] attempt_completion with pickup prompt
+</task_progress>
+</attempt_completion>
+```
+
+### `1786413553188` — 8/11/2026, 1:43:02 AM PT — 338 turns
+
+**Original task:**
+
+```
+#San Mateo County EMSA Complaint
+
+# San Mateo audit: response rewritten to gold standard, instructor interview handled, 403 fixed
+
+## Answering your questions directly
+
+**"Is this San Mateo response in gold standard format?"** No, it was not. That is the most important thing in this update. I drafted v1 before consulting rule 302, then reported it to you as complete. You caught it by asking. A mechanical audit against the doctrine found twelve violations in what I had already called finished. Several were the kind a plaintiff attorney or an accreditor quotes back at you: a written apology, nam
+```
+
+**Ideas referenced:** #1370, #25185, #25636 [proposed], #25637 [proposed], #25638 [proposed], #25639 [proposed], #25663 [executing], #25672 [executing], #25680 [executing], #25686 [executing], #25687 [executing], #92400
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786319043926` — 8/11/2026, 1:41:06 AM PT — 444 turns
 
 **Original task:**
 
@@ -154,7 +225,7 @@ https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=i
 Please provide to me links to the  3 or 4  unfiled TPIA requests as well as the sunset review email (do i send this monday or wait)? nadn then the instructions for cori to setup meetings for us to meet the 3 politiicians the first week of September
 ```
 
-**Ideas referenced:** #0000, #1786, #18676, #19587, #19595 [executing], #19599, #19600, #19601, #1976, #19898, #19904, #20251, #20957, #20958, #2274, #2275, #2292, #24790, #24805, #24836, #24842, #24995, #25066, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25374, #25400, #600179, #623992
+**Ideas referenced:** #0000, #1786, #18676, #19587, #19595 [executing], #19599, #19600, #19601, #1976, #19898, #19904, #20251, #20957, #20958, #2274, #2275, #2292, #24790, #24805, #24836, #24842, #24995, #25066, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25150, #25158, #25159, #25172, #25173, #25178, #25188, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25374, #25400, #600179, #623992
 
 **Last PICKUP PROMPT:**
 
@@ -201,25 +272,74 @@ Where we left off (verified 2026-08-11 00:32 PT):
 - ALL NINE v6 EDITS APPLIED in three replace_in_file batches: Houston address on the cover (1900 Saint James Place Ste B-6, Houston TX 77056); signature2small.jpg placed above the name block, copied from /Users/rubenmajor/Downloads to sunset_pdf; emergency suspension now reads "that has since been tabled"; "We asked on numerous occasions" restored in item 3 and the exec-summary gaps paragraph; the "None of those three belong to the course under inspection" sentence REMOVED; item 3 reframed to lead with "how is a licensee supposed to respond to a document the Department never delivered"; a new front-loaded four-point section tit
 ```
 
-### `1786413553188` — 8/11/2026, 12:55:23 AM PT — 284 turns
+### `1786430680103` — 8/11/2026, 1:39:22 AM PT — 449 turns
 
 **Original task:**
 
 ```
-#San Mateo County EMSA Complaint
+#LLM Fleet
 
-# San Mateo audit: response rewritten to gold standard, instructor interview handled, 403 fixed
 
-## Answering your questions directly
+Frankenstein-llm seeing this type of iteration in another window. Something is slightly off still. 
 
-**"Is this San Mateo response in gold standard format?"** No, it was not. That is the most important thing in this update. I drafted v1 before consulting rule 302, then reported it to you as complete. You caught it by asking. A mechanical audit against the doctrine found twelve violations in what I had already called finished. Several were the kind a plaintiff attorney or an accreditor quotes back at you: a written apology, nam
+<ssh_command> <command>ssh -p 2205 rubenmajor@192.168.1.190 "ls -1 /tmp/vllm_serve_unified.*.crash.log"</command> <timeout_ms>60000</timeout_ms> <task_progress>
+
+ List crash log files on Julia host
+ Identify first stall details
+ Increase RAY_CGRAPH_get_timeout in julia_unified_tp2.sh
+ Relaunch Julia service and monitor stability
+ Verify 2+ hours of stable traffic
+ Update bug library incident 2306 to resolved </task_progress> </ssh_command>
+
+
+<ssh_command> <command>sshpass -p 'qefru
 ```
 
-**Ideas referenced:** #1370, #25185, #25636 [proposed], #25637 [proposed], #25638 [proposed], #25639 [proposed], #25663 [executing], #25672 [executing], #25680 [executing], #92400
+**Ideas referenced:** #11383, #11936, #11953, #12335, #12363, #12584, #12672, #12689, #13108, #13121, #13874, #14000, #16063, #16117, #16120, #16718, #17202, #178639, #178643, #18321, #18786, #19338, #20495, #2050, #2247, #2308, #2309, #25112, #25133, #25185, #25565 [executing], #25567 [executing], #25571 [rejected], #25580 [executing], #25604 [deployed], #25605 [executing], #25621 [deployed], #25625, #25627 [executing], #25630 [deployed], #25631 [blocked], #25647 [deployed], #25654 [executing], #25673 [proposed], #25674 [proposed], #25676 [proposed], #25677 [proposed], #25678 [proposed], #25683 [proposed]
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1786432541079` — 8/11/2026, 12:53:33 AM PT — 39 turns
+```
+ree lane, 671 tok/s aggregate.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786430680103. GLM restored to interactive ladder per Ruben directive; frankenstein-llm serving with content populated.
+
+Where we left off (checked 2026-08-11 01:35 PT):
+- GLM INTERACTIVE RESTORED: another window reverted router_hook.py (00:47) and config.yaml, so the GLM-first preempt and the fallback entries are back. My carve-out is fully gone (grep count 0). Re-probed 01:31 PT: streaming frankenstein-llm with Cline markers, HTTP 200 in 8s, content populated with the tool call, reasoning empty. Probe landed on 11510 because the ring free-lane gate declined, which is the designed split.
+- GLM DIRECT STREAM SHAPE (measured 01:27 PT): :8210 streams delta.content (tool call) plus delta.reasoning (thinking) as separate keys, 22 content chunks / 24 reasoning chunks of 47. The 00:24 empty-content measurement was taken during the ring crash-loop window. If LiteLLM ever shows content empty with the answer in reasoning again, fix with merge_reasoning_content_in_choices on the GLM deployments, not demotion. Noted in bug library 2309.
+- 671 tok/s is aggregate ring throughput (cato :8210/metrics, 60s counter delta, per GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md). Per-stream decode on a PP=6 ring is single-digit tok/s under load. Do not demote on single-stream numbers (the router_hook guard says the same).
+- #25673 [deployed] extension placeholder fix confirmed on disk (0 lost-in-transit, 1 pairing-placeholder, SYNTAX_OK). Reload done.
+- #25676 [deployed] my GLM demotion was reverted per Ruben at 00:47 by another window; a future session should mark the idea record superseded so the DB matches reality.
+- #25674 [deployed] serving-evidence liveness disabled via FRANK_DIRECT_LIVENESS=0 pending the async rewrite idea.
+- FRANK_EXECUTOR_CAP=4 restored, julia removed from FRANK_TOOLS_UPSTREAMS. Both serving boxes healthy.
+
+Open threads to drive next:
+1. #25631 [executing] — julia TP=2 crash loop. Getting the third 120B box back is the biggest speed lever. Crash logs on box; SSH line in registry :114.
+2. #25683 [proposed] — serving-evidence probe needs an async rewrite; re-enable FRANK_DIRECT_LIVENESS=1 after.
+3. #25677 [executing] — gpt-oss analysis preamble in content; sampling pass before any stripper.
+4. #25678 [executing] — config.yaml duplicated fallback keys; second block of each pair is dead config. Next step: merge pairs plus preflight assertion.
+5. #25627 [executing] — prefill-ladder work. Next step: lower priority.
+6. #25605 [executing] — portal drift tripwire. Next step: leave with the executor.
+
+Reference IDs:
+- Filed this session: #25673 [deployed] / #25674 [deployed] / #25676 [deployed]
+- Filed this session, in motion: #25677 [executing] / #25678 [executing]
+- Filed this session, awaiting build: #25683 [proposed]
+- Carried from earlier rounds: #25647 [deployed] / #25630 [deployed]
+- Carried from earlier rounds, in motion: #25631 [executing] / #25627 [executing] / #25605 [executing]
+- Bug library: 2308, 2309, 2306 (julia crash loop), 2247 (empty-200 bridge)
+- Files touched this session: extension.js, patch_cline_hardening.sh, frankenstein_tools_adapter.py, 3 systemd drop-ins (router_hook.py and config.yaml edits were reverted by the 00:47 window)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786432541079` — 8/11/2026, 1:12:16 AM PT — 71 turns
 
 **Original task:**
 
@@ -245,18 +365,20 @@ Current progress:
 **Last PICKUP PROMPT:**
 
 ```
-s filed: #25631 [executing]
+service, and verify stability.
 
 ═══════════════════════════════════════════════
-══ PICKUP PROMPT ══
+PICKUP PROMPT (paste into a fresh Cline window)
+════════════════════════════════════════───────
 Pick up task #25631 — Fix Julia/Claudia TP=2 crash loop.
-Where we left off (verified 2026-08-11 00:53 PT):
+Where we left off (verified 2026-08-11 01:07 PT):
 - SSH access confirmed; next step is to list and analyze crash logs.
 
 Open threads to drive next (NONE — all work pending on crash‑log inspection).
 
 Reference IDs:
 - Ideas filed: #25631 [executing]
+═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
@@ -374,62 +496,6 @@ Where we left off (verified 2026‑08‑10 23:49 PT):
 
 Open threads to drive next:
 1. #25550 [deployed] — Continue monitoring DS
-```
-
-### `1786401898030` — 8/10/2026, 11:55:59 PM PT — 1137 turns
-
-**Original task:**
-
-```
-Corrected the Customer Service role visibility issue in the Telephony Hub Callbacks tab, plus 3 related callback-system issues found during the investigation.
-
-Root cause: /var/www/emtskills/routes/telephony_hub.php line 2520 wrapped the entire Callbacks tab button in if ($isTelephonyAdmin) only (MasterAdmin/ExecAdmin/ITAdmin/Admin), excluding Customer Service role staff even though $isCSUser = !empty($user['is_cs']) already existed in the same file for other telephony features. Changed to if ($isTelephonyAdmin || $isCSUser). Lint check passed, backup taken first. The tab-panel content div its
-```
-
-**Ideas referenced:** #10003, #25185, #252532, #25593 [proposed], #25606 [proposed], #25666 [proposed], #25667 [proposed], #25668 [deployed], #25669 [proposed], #32324, #334155, #475569, #64748
-
-**Last PICKUP PROMPT:**
-
-```
-only captured the EMSU trunk).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task on callback CS visibility — remaining follow-ups under #25593 [proposed].
-
-Where we left off (verified 2026-08-10 17:45 PT):
-- Callbacks tab + queue panel + booking_detail + booking_action all verified working in real CS context (session fabricated for users.id=17 Jehan De Los Angeles, CustomerService, is_cs=1; renders 200/full panel, actions 302, no gates tripped).
-- Debug line removed from callback/admin/_panel_callback.php; lint clean; final render re-verified; fabricated session + temp files deleted; post-cleanup unauthenticated fetch = 401.
-- Prior fixes still live: telephony_hub.php tab button + panel gates (isTelephonyAdmin || isCSUser), booking_detail.php is_cs gate, cron_callback_policing.php COALESCE fix (booking id 6 escalated to Vicky), booking id 76 name corrected to Denham Brown.
-- HANDOFF_NOTES.md updated with full verification trail incl. session-store location gotcha (/var/www/vhosts/emsuniversity.com/sessions).
-
-Open threads to drive next:
-1. #25593 [proposed] — have a real CS staffer (Jehan/Apple/Rachel) open Telephony Hub > Callbacks in their own browser and confirm; close the loop with Ruben after.
-2. #25593 [proposed] — Argus dropped-call investigation for Vicky's CS team (Ruben directive, not started).
-3. #25593 [proposed] — find a real callback number for booking id 76 (Denham Brown); only EMSU trunk was captured.
-
-Reference IDs:
-- Ideas filed: #25593 [proposed]
-- Files touched this session: callback/admin/_panel_callback.php (debug line removed), HANDOFF_NOTES.md (verification entry)
-- Files from earlier sessions still in effect: routes/telephony_hub.php, callback/admin/booking_detail.php, callback/admin/_panel_callback.php, callback/admin/booking_action.php (new), crons/policing/cron_callback_policing.php
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] CFA jargon removed, panel rewritten, booking_detail rewritten, action endpoint created
-- [x] Fixed phantom callback_queue columns; CLI render OK
-- [x] h() undefined → top-level guarded def in panel + booking_detail
-- [x] Hub panel renders FULLY; booking_detail 200; action POST 302 — all as real CS context (Jehan, is_cs=1)
-- [x] Debug line removed, lint clean; final render re-verified post-removal
-- [x] Auth enforcement confirmed (401 no-cookie/bogus)
-- [x] Cleanup: fabricated session + temp files deleted, post-cleanup 401
-- [x] Handoff notes updated
-- [x] attempt_completion with pickup prompt
-</task_progress>
-</attempt_completion>
 ```
 
 ### `1786409942954` — 8/10/2026, 7:20:48 PM PT — 270 turns
@@ -3857,92 +3923,5 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1786133997460` — 8/8/2026, 1:19:30 AM PT — 551 turns
-
-**Original task:**
-
-```
-Take a lookat Jon's argus, a lot of 502 and SQL debris. Need to fix these 502s from now on. Fix it.
-```
-
-**Ideas referenced:** #19348, #19370, #2006, #22511, #2265 [deployed], #2266 [deployed], #2267, #22688, #23036, #23428, #23468, #23880, #23920, #23945, #24012 [rejected], #24025 [superseded], #24026, #24029 [superseded], #24044 [superseded], #24182 [superseded], #24334 [superseded], #24428, #24450, #24451, #24452, #24466 [superseded], #24467, #24586 [superseded], #24667, #24672 [superseded], #24682 [superseded], #24702 [superseded], #24704 [approved], #24717 [superseded], #24718 [superseded], #24719 [superseded], #24720 [superseded], #24721 [superseded], #24722 [rejected], #24732 [superseded], #24733 [superseded], #24734 [superseded], #24744 [superseded], #24765, #24766 [approved], #24767, #24774, #24775, #24776
-
-**Last PICKUP PROMPT:**
-
-```
-ebase or revert. Issue closed.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task "Argus 502" — retire confirmation done; no follow-up unless a fresh 502 appears.
-
-Where we left off (verified 2026-08-08 01:19 PT):
-- nginx access.log 502 count = 0.
-- nginx error.log = 0 lines total (clean; no "upstream prematurely closed", no worker_connections).
-- Prior 8/7 ~4:18 PM PT graceful php8.3-fpm reload succeeded (zero-downtime) — the durable fix for the worker-exhaustion class.
-- Classified RETIRED. No code/config changes ever shipped; nothing to rebase/revert.
-
-Open threads to drive next:
-1. No action unless a fresh 502 appears. If one does, diagnose FPM worker exhaustion vs application code BEFORE any patch (rule 297).
-2. Optionally noop_store the retired check (rule 143) on next window to prevent re-investigation.
-
-Reference IDs:
-- Ticket: none
-- Ideas filed: none this window (no new work created)
-- Files touched: none this window
-
-When done, append to cline_task_ledger.md per rule 07.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786167712060` — 8/8/2026, 1:15:34 AM PT — 482 turns
-
-**Original task:**
-
-```
-## Comprehensive PICKUP PROMPT — all 7 context-memory ideas, server-authoritative tags
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — context-memory window: verify hand-shipped #24924/#24926/#24927, investigate executor failures on #24925/#24926/#24927/#24924, monitor #24207/#24941.
-
-Where we left off (verified 2026-08-07 22:40 PT):
-- Ruben ran complex test task. Result: 2x faster than pre-fix window (530s total). Fresh signal file 1786036273485 shows W=131072 holding, ctx 93,777 (p
-```
-
-**Ideas referenced:** #12184, #13967, #18985 [rejected], #19006 [blocked], #22282, #22688, #23036, #23428, #23468, #23506, #23675, #23941, #23982, #24207 [executing], #24910, #24911, #24914 [executing], #24924 [blocked], #24925 [blocked], #24926 [blocked], #24927 [blocked], #24928, #24941 [executing], #24989 [filed], #5010
-
-**Last PICKUP PROMPT:**
-
-```
-All work shipped and verified.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — context-memory hand-ship window: verified, complete, no follow-on.
-
-Where we left off (verified 2026-08-08 01:15 PT):
-- All 7 ideas confirmed `completed` in orchestrator_ideas: #24207, #24914, #24924, #24925, #24926, #24927, #24941
-- #24989 was cancelled as unnecessary backtesting busywork
-- n=100 backtest processes killed (0 running); n=30 delta printed in ledger
-- Ledger rows appended to ~/Desktop/cline_task_ledger.md (23:20, 23:03, 00:53, 00:56, 01:13 PT)
-
-Open threads to drive next (none — all closed):
-- No open implementation threads. #24989 [cancelled] — RAG win-conversion backtest, rejected as busywork.
-
-Reference IDs:
-- Ideas closed: #24207, #24924, #24925, #24926, #24927, #24941 [#completed]; #24989 [#cancelled]
-- Files touched: cron_argus_task_worker.php (4 memory-bank wires), EmsuRagRetriever.php (sha1 dedup), audit_backtest_runner.php (Anthropic removed → local 11510), orchestrator_ideas (status updates)
-- Backups: .bak-clean-*-24941, .bak-dedup-*-24207, .bak-opus (backtest)
-
-When done, append a row to cline_task_ledger.md per rule 07 (already appended) and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```

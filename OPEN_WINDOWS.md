@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/10/2026, 9:56:15 PM PT | window: last 72h | 100 tasks | index total 618 (parsed 0, cached 618)
+Generated: 8/10/2026, 10:56:16 PM PT | window: last 72h | 98 tasks | index total 618 (parsed 0, cached 618)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -108,8 +108,6 @@ Generated: 8/10/2026, 9:56:15 PM PT | window: last 72h | 100 tasks | index total
 | `1786133997460` | 8/8/2026, 1:19:30 AM | 551 | 970KB | Take a lookat Jon's argus, a lot of 502 and SQL debris. Need to fix these 502s from now on |
 | `1786167712060` | 8/8/2026, 1:15:34 AM | 482 | 1117KB | ## Comprehensive PICKUP PROMPT — all 7 context-memory ideas, server-authoritative tags |
 | `1786162207330` | 8/7/2026, 11:13:36 PM | 454 | 1608KB | Why does frankenstein LLM iterate this to me? I'm hitting the token limit. I need to quick |
-| `1786036273485` | 8/7/2026, 10:47:51 PM | 1506 | 4670KB | #Argus  |
-| `1786166732768` | 8/7/2026, 10:35:33 PM | 90 | 923KB | Diagnose why cron_argus_task_worker.php stalls when the upstream LLM exceeds 120s. Read th |
 
 ---
 
@@ -3871,98 +3869,4 @@ Reference IDs:
 - Ide
 aries (status,dev_stage): #24207 [executing], #24914 [executing], #24924 [executing], #24925 [executing], #24926 [executing], #24927 [executing], #24941 [executing]
 - Files touched: /etc/litellm/router_hook.py (read only), /var/www/emtskills/cron/cron_ruben_implement.php (fix), /usr/local/bin/fleet_admission.py (read only), /var/www/emtskills/api/store_memory.php, /var/www/emtskills/api/recall_memory.php, /var/www/emtskills/api/compress_context.php, /var/www/emtskills/lib/context_compressor.php, /Users/rubenmajor/bin/cline_budget_watchdog.py + /Users/rubenmajor/.conf
-```
-
-### `1786036273485` — 8/7/2026, 10:47:51 PM PT — 1506 turns
-
-**Original task:**
-
-```
-#Argus 
-
-Found the actual reason Argus over-texts the server. It was not the timeouts. Three separate defects, all fixed and verified live.
-
-EXCLUDED: #2250 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)
-EXCLUDED: #2251 [superseded] (bug-library incident row, not an orchestrator idea; diagnosis superseded)
-
-## The timeout work was right but it was treating a symptom
-
-Raising curl 240->600 and pool max_execution_time 120->600 was correct and necessary. But a longer timeout on an amplifying loop just means MORE concurrent long-held connections. Here is wh
-```
-
-**Ideas referenced:** #0000, #047857, #059669, #10038, #111827, #11782, #15306, #16213, #16312, #16523, #166534, #177851, #178601, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #18977, #19348, #19370, #19873, #2006, #20547, #21125, #21126, #21262, #2185, #2250 [superseded], #2251 [superseded], #22511, #2252, #2253, #22583, #22688, #22850, #23027, #23036, #23428, #23429, #23468, #23489, #23506, #23585, #23623, #23630 [executing], #23636, #23637, #23674, #23675, #23710, #23711, #23729, #23739, #23740, #23747, #23748, #23749, #23750, #23751, #23764, #23769, #23851 [rejected], #23852 [proposed], #23854, #23867, #23868 [executing], #23878 [proposed], #23879 [proposed], #23881, #23885, #23897, #23898, #23899, #23900, #23908, #23910, #23911, #23913 [executing], #23920 [executing], #23934 [executing], #23941 [executing], #23944 [executing], #23952 [proposed], #23953, #23973 [proposed], #23974 [proposed], #23975 [deployed], #23982 [proposed], #24012, #24025, #24029, #24036, #24043, #24044, #24097 [proposed], #24182, #24207, #24225 [proposed], #24377 [executing], #24378, #24379 [superseded], #24381 [proposed], #24382 [proposed], #24383, #24384, #24464, #24466, #24518 [proposed], #24581 [deployed], #24586, #24706 [blocked], #24766, #24808 [proposed], #24877, #24890, #24891, #24892, #24893, #24894 [proposed], #24895 [proposed], #24897 [proposed], #24898 [proposed], #24899 [proposed], #24900 [deployed], #24901 [proposed], #24902 [proposed], #24903 [proposed], #24904 [proposed], #24905 [proposed], #24906 [proposed], #24907 [proposed], #24908 [proposed], #24909 [proposed], #24910 [proposed], #24911 [proposed], #24912 [proposed], #24913 [proposed], #24914 [proposed], #24915, #24916, #24917, #24918, #24919, #24920, #24921 [proposed], #24922 [proposed], #24923, #2563, #334155, #3730, #374151, #3938, #4338, #5271, #64748, #92400, #9263, #9706, #9743
-
-**Last PICKUP PROMPT:**
-
-```
-
-<attempt_completion>
-<result>
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #259 — Comprehensive Rule 91 upgrade and Argus chat improvement rollout.
-
-Where we left off (verified 2026-08-07 22:47 PT):
-- **Conversation memory (#24898/#24900) DEPLOYED** — session argus_hist tracks last 30 messages, $histStr appended to $extSys system prompt. Lint OK, 4 refs in file.
-- **Confirm-before-mutating (#24897) wiring** — argus_confirm_guard.php written (lint OK), require_once injected at alltastic_api.php line 12971, file lints clean. BUT the actual argus_mutation_check() CALL is NOT yet wired into the terminal_query flow — requires decision on exact interception point.
-- **Rule 91 comprehensive version** — WROTE NEW /Users/rubenmajor/Documents/Cline/.clinerules/91.md (6 sections: no cross-window bleeding, persistent DB file, #-linked threads, timestamp/status discipline, exception framing, verification gate).
-- **16 Argus chat improvements** — ALL filed in DB under parent idea; each has own id.
-
-Open threads to drive next (EVERY item MUST have a real filed id):
-1. #24897 [executing] — Wire argus_mutation_check() call into terminal_query flow. CHOICE NEEDED: intercept at query parse (early) vs tool-dispatch (late). Recommend EARLY: after `$query = trim(...)`, check flag words; if match, return JSON asking for confirm without calling LLM.
-2. #24898 [deployed] — Conversation memory DONE. Verify $histStr reaches model via extSys (confirm line 5506+ append actually landed).
-3. #24900 [deployed] — Same-session memory DONE.
-
-Reference IDs:
-- Ticket: none filed (live edit session)
-- Ideas filed: #24897 [executing], #24898/#24900 [deployed], 13 others [proposed]
-- Backlog parent: #24894 [queued]
-- Files touched: /Users/rubenmajor/Documents/Cline/.clinerules/91.md (NEW Rule 91), /var/www/emtskills/routes/argus_confirm_guard.php, /var/www/emtskills/routes/alltastic_api.php (memory + require)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786166732768` — 8/7/2026, 10:35:33 PM PT — 90 turns
-
-**Original task:**
-
-```
-Diagnose why cron_argus_task_worker.php stalls when the upstream LLM exceeds 120s. Read the source, trace every exit path, find the timeout clamp, write a patch as a diff, verify the diff compiles — without condensing.
-```
-
-**Ideas referenced:** #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20547, #21125, #21126, #21134, #22511, #22583, #22688, #23036, #23428, #23468, #23489, #23506, #23675, #23852, #23920, #23941, #23952, #23982, #24766, #24900, #24947 [executing], #334155, #4338, #64748
-
-**Last PICKUP PROMPT:**
-
-```
-ading after the salvage retry.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Deploy the ARGUS_FINAL_ANSWER_RETRY_V1 timeout clamp fix for background task worker stalls.
-
-Where we left off (verified 2026-08-07 22:34 PT):
-- Root cause: line 5960 of /var/www/emtskills/routes/alltastic_api.php hard-clamps salvage-retry timeout to min(120, modelConfig.timeout), stalling worker tasks under pool load (>120s). The 2026-08-07 ARGUS_LATENCY_V1 fix (lines 330-346) covered the primary path but missed this one.
-- Patch written to /tmp/argus_task_worker_far_timeout_fix.diff (local Mac). Server-side test copy /tmp/alltastic_api.php.patched applies the edit and lints clean (php -l, zero errors).
-- Idea filed: #24947 [executing] — P0, domain operations.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #24947 — Deploy: apply /tmp/argus_task_worker_far_timeout_fix.diff to /var/www/emtskills/routes/alltastic_api.php via patch (backup first), then php -l the production file. Do NOT rely on the local Mac /tmp path — copy the diff to the server or re-apply via sed. This is a live deploy on Ruben's signed-off deployment; confirm in-the-moment approval per rule 157/274 before applying.
-2. #24947 — After deploy, monitor argus_task_queue for 2-3 cron cycles (worker runs every 2 min) to confirm tasks that previously stalled on deliberation-only 200s now complete instead of offloading; check argus_round_latency for the 120s-boundary clustering.
-
-Reference IDs:
-- Idea filed: #24947
-- Files touched (read): /var/www/emtskills/routes/cron_argus_task_worker.php (also cron/cron_argus_task_worker.php), /var/www/emtskills/lib/argus_thread_postback.php, /var/www/emtskills/routes/alltastic_api.php (lines 152, 294-346, 5312-5620, 5940-5990, 12650-13101)
-- Patch artifact (local): /tmp/argus_task_worker_far_timeout_fix.diff
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```

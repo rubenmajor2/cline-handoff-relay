@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-11T15:56:19.886Z",
+ "generated_at": "2026-08-11T16:49:47.110Z",
  "counts": {
-  "parsed": 10,
-  "reused": 619,
+  "parsed": 0,
+  "reused": 629,
   "failed": 0,
   "total": 629
  },
@@ -122672,13 +122672,13 @@
   },
   "1786435974712": {
    "task_id": "1786435974712",
-   "mtime": 1786463697106,
+   "mtime": 1786464296770,
    "created_at": "2026-08-11T08:12:54.712Z",
-   "last_modified": "2026-08-11T15:54:57.106Z",
-   "size_kb": 5783,
-   "turn_count": 251,
+   "last_modified": "2026-08-11T16:04:56.770Z",
+   "size_kb": 6136,
+   "turn_count": 260,
    "title": "#Julia/Claudia TP=2\n\nGet Julia/Claudia TP=2 working properly\n\nSSH access to both Julia (port 2205) and Claudia (port 2206) is confirmed using the existing network key. The next actionable step is to list the crash‑log files on the Julia host to identify the first stall details.\n\nCurrent task progress:\n- [x] Verify correct SSH key location for Julia host\n- [x] Verify SSH port 2205 is reachable\n- [ ] List crash log files on Julia host\n- [ ] Identify first stall details\n- [ ] Increase RAY_CGRAPH_get_timeout in julia_unified_tp2.sh\n- [ ] Relaunch Julia service and monitor stability\n- [ ] Verify 2+ hours of stable traffic\n- [ ] Update bug library incident 2306 to resolved\n\nPlanned command to exec",
-   "pickup_prompt": "in_progress dev_stage=idle)\\n\\n═══════════════════════════════════════════════\\nPICKUP PROMPT (paste into a fresh Cline window)\\n═══════════════════════════════════════════════\\n\\nPick up task #25631 [deployed] - Julia/Claudia TP=2 crash loop fix, monitor fratricide RCA + fleet stability synthesis\\n\\nWhere we left off (verified 2026-08-11 08:49 PT):\\n- Julia/Claudia TP=2 serving and stable: 6h29m uptime, /v1/models probe HTTP 200 in 1.2ms, 150/150 clean watchdog probes, zero ray-stops since the fix\\n- Root cause was NOT RAY_CGRAPH_get_timeout, it was monitor fratricide: cg_health_monitor.sh (wired into julia_cx7_watchdog.sh on Julia) probed for a model the TP=2 serve never hosted (emsu_distill vs base qwen3-30b), false-positived, and ray-stopped a HEALTHY engine 3x in 20 min (23:20-23:41); crash-log stalls were downstream of those kills\\n- Fix: fratricidal monitor disabled on Julia, confirmed inert on Claudia (zero references; claudia_cx7_watchdog.sh is a benign IP-drift fixer), TP=2 relaunched, 2h+ stability confirmed (117/117 then 150/150 clean)\\n- Bug-library incident 2306 marked resolved with the RCA\\n- #25631 [deployed] (reconcile_ideas returned status=deployed dev_stage=ready_for_review)\\n- #25715 [executing] fleet-wide watchdog fratricide audit + alert-path checks (reconcile_ideas returned status=in_progress dev_stage=idle)\\n\\nOpen threads to drive next:\\n1. #25715 [executing] - fleet watchdog fratricide audit + alert-path checks: grep every fleet box for destructive watchdog actions on health-check paths, confirm probe expectations match live serve config, canary-test alert paths (Julia's Postmark 422 + MySQL access-denied made tonight's killer silent). Read-only + low-risk; executor owns it.\\n\\nReference IDs:\\n- Ideas filed: #25715 [executing]\\n- Ideas closed: #25631 [deployed]\\n- Bug library: incident 2306 resolved\\n- Files touched: Julia: /home/rubenmajor/julia_cx7_watchdog.sh (cg_health_monitor.sh call disabled), Julia: /home/rubenmajor/julia_unified_tp2.sh (TP=2 serve relaunched)\\n\\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\\n═══════════════════════════════════════════════\",\n  \"task_id\": \"25631\",\n  \"task_prompt\": \"#Julia/Claudia TP=2 — Get Julia/Claudia TP=2 working properly. List crash log files on Julia host, identify first stall details, increase RAY_CGRAPH_get_timeout in julia_unified_tp2.sh, relaunch Julia service and monitor stability, verify 2+ hours of stable traffic, update bug library incident 2306 to resolved. Pick up task #25631.\"\n}\n</arguments>\n<task_progress>\n- [x] Fix deployed + 2h stability verified (117/117 clean, incident 2306 resolved)\n- [x] Live status check: 6h29m uptime, probe 200 in 1.2ms, 150/150 clean, zero kills since fix\n- [x] Bug library: monitor-induced-outage class found (incidents 2195 P0, 2293, 1899 + tonight's 2311)\n- [x] Community research: vLLM TP stability + watchdog best practices (GitHub MCP, Brave quota dead)\n- [x] Claudia watchdog audit: cg_health_monitor inert, claudia_cx7_watchdog benign (IP-drift fixer)\n- [x] File durability idea #25715 + reconcile (rule 267 GATE B): #25631 [deployed], #25715 [executing]\n- [ ] Re-validate, check_gate, attempt_completion\n</task_progress>\n</use_mcp_tool>",
+   "pickup_prompt": "us=in_progress dev_stage=idle)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #25631 [deployed] - Julia/Claudia TP=2 crash loop fix, monitor fratricide RCA + fleet stability synthesis\n\nWhere we left off (verified 2026-08-11 08:56 PT):\n- Julia/Claudia TP=2 serving and stable: 6h29m uptime, /v1/models probe HTTP 200 in 1.2ms, 150/150 clean watchdog probes, zero ray-stops since the change\n- Root cause was NOT RAY_CGRAPH_get_timeout, it was monitor fratricide: cg_health_monitor.sh (wired into julia_cx7_watchdog.sh on Julia) probed for a model the TP=2 serve never hosted (emsu_distill vs base qwen3-30b), false-positived, and ray-stopped a HEALTHY engine 3x in 20 min (23:20-23:41); crash-log stalls were downstream of those kills\n- Change: fratricidal monitor disabled on Julia, confirmed inert on Claudia (zero references; claudia_cx7_watchdog.sh is a benign IP-drift checker), TP=2 relaunched, 2h+ stability confirmed (117/117 then 150/150 clean)\n- Bug-library incident 2306 marked resolved with the RCA\n- #25631 [deployed] (reconcile_ideas returned dev_stage=ready_for_review)\n- #25715 [executing] fleet-wide watchdog fratricide audit + alert-path checks (reconcile_ideas returned status=in_progress dev_stage=idle)\n\nOpen threads to drive next:\n1. #25715 [executing] - fleet watchdog fratricide audit + alert-path checks: grep every fleet box for destructive watchdog actions on health-check paths, confirm probe expectations match live serve config, canary-test alert paths (Julia's Postmark 422 + MySQL access-denied made tonight's killer silent). Read-only + low-risk; executor owns it.\n\nReference IDs:\n- Ideas filed: #25715 [executing]\n- Ideas closed: #25631 [deployed]\n- Bug library: incident 2306 resolved\n- Files touched: Julia: /home/rubenmajor/julia_cx7_watchdog.sh (cg_health_monitor.sh call disabled), Julia: /home/rubenmajor/julia_unified_tp2.sh (TP=2 serve relaunched)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n<task_progress>\n- [x] Fix deployed + 2h stability verified (117/117 clean, incident 2306 resolved)\n- [x] Live status check: 6h29m uptime, probe 200 in 1.2ms, 150/150 clean, zero kills since fix\n- [x] Bug library + community research synthesized\n- [x] Claudia watchdog audit: cg_health_monitor inert\n- [x] Idea #25715 filed, approved, reconciled [executing]; #25631 [deployed]\n- [x] Validator gates ALL PASSED, gate CLEAR\n- [x] attempt_completion shipped\n</task_progress>\n</attempt_completion>",
    "ideas": {
     "1130": null,
     "1131": null,
@@ -122887,15 +122887,16 @@
   },
   "1786461236390": {
    "task_id": "1786461236390",
-   "mtime": 1786463759388,
+   "mtime": 1786463872720,
    "created_at": "2026-08-11T15:13:56.390Z",
-   "last_modified": "2026-08-11T15:55:59.388Z",
-   "size_kb": 93,
-   "turn_count": 65,
+   "last_modified": "2026-08-11T15:57:52.720Z",
+   "size_kb": 97,
+   "turn_count": 68,
    "title": "#Argus\n\nDo a sweep from overnight on Argus/scan ofr improvments and bugs and any tasks not finished that are per rule 29 do them. Any that are not, let's discuss here and whether I need to increase permissions or what we're doing there so there'no bottlenecks.",
    "pickup_prompt": "────────────────────────────────────────────────────────────────────────────\n══ PICKUP PROMPT ═══\nPick up task #112345 — Argus overnight scan.\nWhere we left off (verified 2024‑08‑08 PT : 202\nOpen threads:\n1. #112350 [proposed] — Deploy the missing missing worker script for Argus.\n2. #112351 [proposed] — Review permissions and potential bottlenecks for Argus‑operations (e.g. increase permissions or disable tasks for future workflows.\nReference IDs:\n- Ticket: none\n- Ideas filed: none\n- Files touched: \n  • /System/Volumes/Data/private/tmp/argus_confirm_guard_25058_v2.php\n  • /System/Volumes/Data/private/tmp/argus_persist_fix.php\n────────────────────────────────────────────────────────────────────────────────\n",
    "ideas": {
     "24897": null,
+    "24926": null,
     "24941": null,
     "25058": null,
     "112345": null,
@@ -122944,11 +122945,11 @@
   },
   "1786461870707": {
    "task_id": "1786461870707",
-   "mtime": 1786463743412,
+   "mtime": 1786463894296,
    "created_at": "2026-08-11T15:24:30.707Z",
-   "last_modified": "2026-08-11T15:55:43.412Z",
-   "size_kb": 850,
-   "turn_count": 162,
+   "last_modified": "2026-08-11T15:58:14.296Z",
+   "size_kb": 889,
+   "turn_count": 167,
    "title": "#San Mateo EMSA\n\nSo another thing i noticed is that your formatting is off again and your margins are bad and the style is again ugly. The gold standard response may also likely need imrpvmeents here too. \n\nIn all of our responses, we are supposed to have a beginning section discussing our goals, mission, what we are tyring to do and have done that's positive and helpful for the community. This is our chance to showcase things. This is important because it becaomes a part of the record. So I've done this in almost every document submitted to the various governmental bodies in case of it having to go elsewhere and simply reading this complaint and that complaint. This is our chance to showcas",
    "pickup_prompt": null,
    "ideas": {
@@ -122972,11 +122973,11 @@
   },
   "1786462531101": {
    "task_id": "1786462531101",
-   "mtime": 1786463766106,
+   "mtime": 1786465343253,
    "created_at": "2026-08-11T15:35:31.101Z",
-   "last_modified": "2026-08-11T15:56:06.106Z",
-   "size_kb": 76,
-   "turn_count": 41,
+   "last_modified": "2026-08-11T16:22:23.253Z",
+   "size_kb": 120,
+   "turn_count": 67,
    "title": "#CFA \n\nDo a scan from the last 24 horus for improvements and bugs not addressed in CFAs. Also see below, rebase it's information and make additional recommendations on how to proceed from here\n\n--\n═══════════════════════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════════════════════\nPick up task #CFA — CFA health update & next steps\n\nWhere we left off (verified 2026‑08‑11 08:20 PT):\n- **CFA Sweep** – runs every 15 min. The last five runs processed ~125 k raw candidates each, deduped to ≈ 988 and created ≈ 988 email drafts per run. `cfa_sweep_log` now contains **416** rows (continuous growth). No errors r",
    "pickup_prompt": null,
    "ideas": {

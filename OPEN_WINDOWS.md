@@ -6,14 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/11/2026, 8:56:19 AM PT | window: last 72h | 88 tasks | index total 629 (parsed 10, cached 619)
+Generated: 8/11/2026, 9:49:47 AM PT | window: last 72h | 87 tasks | index total 629 (parsed 0, cached 629)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786462531101` | 8/11/2026, 8:56:06 AM | 41 | 76KB | #CFA  |
-| `1786461236390` | 8/11/2026, 8:55:59 AM | 65 | 93KB | #Argus |
-| `1786461870707` | 8/11/2026, 8:55:43 AM | 162 | 850KB | #San Mateo EMSA |
-| `1786435974712` | 8/11/2026, 8:54:57 AM | 251 | 5783KB | #Julia/Claudia TP=2 |
+| `1786462531101` | 8/11/2026, 9:22:23 AM | 67 | 120KB | #CFA  |
+| `1786435974712` | 8/11/2026, 9:04:56 AM | 260 | 6136KB | #Julia/Claudia TP=2 |
+| `1786461870707` | 8/11/2026, 8:58:14 AM | 167 | 889KB | #San Mateo EMSA |
+| `1786461236390` | 8/11/2026, 8:57:52 AM | 68 | 97KB | #Argus |
 | `1786461547593` | 8/11/2026, 8:46:46 AM | 242 | 402KB | #EA Pipeline |
 | `1786461056324` | 8/11/2026, 8:45:16 AM | 278 | 641KB | #Telephony/VAPI Customer Service |
 | `1786430680103` | 8/11/2026, 8:37:01 AM | 511 | 2307KB | #LLM Fleet |
@@ -97,13 +97,12 @@ Generated: 8/11/2026, 8:56:19 AM PT | window: last 72h | 88 tasks | index total 
 | `1786123588626` | 8/8/2026, 10:10:19 AM | 446 | 943KB | telephony is not working for incoming calls - it's telling people a debug message. Please  |
 | `1786185341999` | 8/8/2026, 10:09:02 AM | 303 | 549KB | frankenstein-llm appears to have stalled. Can you explain to me what's going on with it? I |
 | `1786204633633` | 8/8/2026, 10:07:03 AM | 226 | 975KB | #Big Mac |
-| `1786146213022` | 8/8/2026, 9:30:09 AM | 94 | 589KB | Tokens from admin_profile.php page are not working. Can you fix this: https://emsuniversit |
 
 ---
 
 ## Per-window detail
 
-### `1786462531101` — 8/11/2026, 8:56:06 AM PT — 41 turns
+### `1786462531101` — 8/11/2026, 9:22:23 AM PT — 67 turns
 
 **Original task:**
 
@@ -126,55 +125,7 @@ Where we left off (verified 2026‑08‑11 08:20 PT):
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786461236390` — 8/11/2026, 8:55:59 AM PT — 65 turns
-
-**Original task:**
-
-```
-#Argus
-
-Do a sweep from overnight on Argus/scan ofr improvments and bugs and any tasks not finished that are per rule 29 do them. Any that are not, let's discuss here and whether I need to increase permissions or what we're doing there so there'no bottlenecks.
-```
-
-**Ideas referenced:** #112345, #112350 [proposed], #112351 [proposed], #24897, #24941, #25058
-
-**Last PICKUP PROMPT:**
-
-```
-────────────────────────────────────────────────────────────────────────────
-══ PICKUP PROMPT ═══
-Pick up task #112345 — Argus overnight scan.
-Where we left off (verified 2024‑08‑08 PT : 202
-Open threads:
-1. #112350 [proposed] — Deploy the missing missing worker script for Argus.
-2. #112351 [proposed] — Review permissions and potential bottlenecks for Argus‑operations (e.g. increase permissions or disable tasks for future workflows.
-Reference IDs:
-- Ticket: none
-- Ideas filed: none
-- Files touched: 
-  • /System/Volumes/Data/private/tmp/argus_confirm_guard_25058_v2.php
-  • /System/Volumes/Data/private/tmp/argus_persist_fix.php
-────────────────────────────────────────────────────────────────────────────────
-
-```
-
-### `1786461870707` — 8/11/2026, 8:55:43 AM PT — 162 turns
-
-**Original task:**
-
-```
-#San Mateo EMSA
-
-So another thing i noticed is that your formatting is off again and your margins are bad and the style is again ugly. The gold standard response may also likely need imrpvmeents here too. 
-
-In all of our responses, we are supposed to have a beginning section discussing our goals, mission, what we are tyring to do and have done that's positive and helpful for the community. This is our chance to showcase things. This is important because it becaomes a part of the record. So I've done this in almost every document submitted to the various governmental bodies in case of it having
-```
-
-**Ideas referenced:** #1370, #25636 [executing], #25637 [executing], #25638 [executing], #25639 [executing], #25663 [executing], #25672 [executing], #25680 [executing], #25686 [executing], #25687 [executing], #25737 [proposed], #25738 [proposed], #25739 [proposed], #25740 [proposed], #450438, #600179
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786435974712` — 8/11/2026, 8:54:57 AM PT — 251 turns
+### `1786435974712` — 8/11/2026, 9:04:56 AM PT — 260 turns
 
 **Original task:**
 
@@ -200,21 +151,91 @@ Current task progress:
 **Last PICKUP PROMPT:**
 
 ```
-in_progress dev_stage=idle)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #25631 [deployed] - Julia/Claudia TP=2 crash loop fix, monitor fratricide RCA + fleet stability synthesis\n\nWhere we left off (verified 2026-08-11 08:49 PT):\n- Julia/Claudia TP=2 serving and stable: 6h29m uptime, /v1/models probe HTTP 200 in 1.2ms, 150/150 clean watchdog probes, zero ray-stops since the fix\n- Root cause was NOT RAY_CGRAPH_get_timeout, it was monitor fratricide: cg_health_monitor.sh (wired into julia_cx7_watchdog.sh on Julia) probed for a model the TP=2 serve never hosted (emsu_distill vs base qwen3-30b), false-positived, and ray-stopped a HEALTHY engine 3x in 20 min (23:20-23:41); crash-log stalls were downstream of those kills\n- Fix: fratricidal monitor disabled on Julia, confirmed inert on Claudia (zero references; claudia_cx7_watchdog.sh is a benign IP-drift fixer), TP=2 relaunched, 2h+ stability confirmed (117/117 then 150/150 clean)\n- Bug-library incident 2306 marked resolved with the RCA\n- #25631 [deployed] (reconcile_ideas returned status=deployed dev_stage=ready_for_review)\n- #25715 [executing] fleet-wide watchdog fratricide audit + alert-path checks (reconcile_ideas returned status=in_progress dev_stage=idle)\n\nOpen threads to drive next:\n1. #25715 [executing] - fleet watchdog fratricide audit + alert-path checks: grep every fleet box for destructive watchdog actions on health-check paths, confirm probe expectations match live serve config, canary-test alert paths (Julia's Postmark 422 + MySQL access-denied made tonight's killer silent). Read-only + low-risk; executor owns it.\n\nReference IDs:\n- Ideas filed: #25715 [executing]\n- Ideas closed: #25631 [deployed]\n- Bug library: incident 2306 resolved\n- Files touched: Julia: /home/rubenmajor/julia_cx7_watchdog.sh (cg_health_monitor.sh call disabled), Julia: /home/rubenmajor/julia_unified_tp2.sh (TP=2 serve relaunched)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════",
-  "task_id": "25631",
-  "task_prompt": "#Julia/Claudia TP=2 — Get Julia/Claudia TP=2 working properly. List crash log files on Julia host, identify first stall details, increase RAY_CGRAPH_get_timeout in julia_unified_tp2.sh, relaunch Julia service and monitor stability, verify 2+ hours of stable traffic, update bug library incident 2306 to resolved. Pick up task #25631."
-}
-</arguments>
+us=in_progress dev_stage=idle)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #25631 [deployed] - Julia/Claudia TP=2 crash loop fix, monitor fratricide RCA + fleet stability synthesis
+
+Where we left off (verified 2026-08-11 08:56 PT):
+- Julia/Claudia TP=2 serving and stable: 6h29m uptime, /v1/models probe HTTP 200 in 1.2ms, 150/150 clean watchdog probes, zero ray-stops since the change
+- Root cause was NOT RAY_CGRAPH_get_timeout, it was monitor fratricide: cg_health_monitor.sh (wired into julia_cx7_watchdog.sh on Julia) probed for a model the TP=2 serve never hosted (emsu_distill vs base qwen3-30b), false-positived, and ray-stopped a HEALTHY engine 3x in 20 min (23:20-23:41); crash-log stalls were downstream of those kills
+- Change: fratricidal monitor disabled on Julia, confirmed inert on Claudia (zero references; claudia_cx7_watchdog.sh is a benign IP-drift checker), TP=2 relaunched, 2h+ stability confirmed (117/117 then 150/150 clean)
+- Bug-library incident 2306 marked resolved with the RCA
+- #25631 [deployed] (reconcile_ideas returned dev_stage=ready_for_review)
+- #25715 [executing] fleet-wide watchdog fratricide audit + alert-path checks (reconcile_ideas returned status=in_progress dev_stage=idle)
+
+Open threads to drive next:
+1. #25715 [executing] - fleet watchdog fratricide audit + alert-path checks: grep every fleet box for destructive watchdog actions on health-check paths, confirm probe expectations match live serve config, canary-test alert paths (Julia's Postmark 422 + MySQL access-denied made tonight's killer silent). Read-only + low-risk; executor owns it.
+
+Reference IDs:
+- Ideas filed: #25715 [executing]
+- Ideas closed: #25631 [deployed]
+- Bug library: incident 2306 resolved
+- Files touched: Julia: /home/rubenmajor/julia_cx7_watchdog.sh (cg_health_monitor.sh call disabled), Julia: /home/rubenmajor/julia_unified_tp2.sh (TP=2 serve relaunched)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
 <task_progress>
 - [x] Fix deployed + 2h stability verified (117/117 clean, incident 2306 resolved)
 - [x] Live status check: 6h29m uptime, probe 200 in 1.2ms, 150/150 clean, zero kills since fix
-- [x] Bug library: monitor-induced-outage class found (incidents 2195 P0, 2293, 1899 + tonight's 2311)
-- [x] Community research: vLLM TP stability + watchdog best practices (GitHub MCP, Brave quota dead)
-- [x] Claudia watchdog audit: cg_health_monitor inert, claudia_cx7_watchdog benign (IP-drift fixer)
-- [x] File durability idea #25715 + reconcile (rule 267 GATE B): #25631 [deployed], #25715 [executing]
-- [ ] Re-validate, check_gate, attempt_completion
+- [x] Bug library + community research synthesized
+- [x] Claudia watchdog audit: cg_health_monitor inert
+- [x] Idea #25715 filed, approved, reconciled [executing]; #25631 [deployed]
+- [x] Validator gates ALL PASSED, gate CLEAR
+- [x] attempt_completion shipped
 </task_progress>
-</use_mcp_tool>
+</attempt_completion>
+```
+
+### `1786461870707` — 8/11/2026, 8:58:14 AM PT — 167 turns
+
+**Original task:**
+
+```
+#San Mateo EMSA
+
+So another thing i noticed is that your formatting is off again and your margins are bad and the style is again ugly. The gold standard response may also likely need imrpvmeents here too. 
+
+In all of our responses, we are supposed to have a beginning section discussing our goals, mission, what we are tyring to do and have done that's positive and helpful for the community. This is our chance to showcase things. This is important because it becaomes a part of the record. So I've done this in almost every document submitted to the various governmental bodies in case of it having
+```
+
+**Ideas referenced:** #1370, #25636 [executing], #25637 [executing], #25638 [executing], #25639 [executing], #25663 [executing], #25672 [executing], #25680 [executing], #25686 [executing], #25687 [executing], #25737 [proposed], #25738 [proposed], #25739 [proposed], #25740 [proposed], #450438, #600179
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786461236390` — 8/11/2026, 8:57:52 AM PT — 68 turns
+
+**Original task:**
+
+```
+#Argus
+
+Do a sweep from overnight on Argus/scan ofr improvments and bugs and any tasks not finished that are per rule 29 do them. Any that are not, let's discuss here and whether I need to increase permissions or what we're doing there so there'no bottlenecks.
+```
+
+**Ideas referenced:** #112345, #112350 [proposed], #112351 [proposed], #24897, #24926, #24941, #25058
+
+**Last PICKUP PROMPT:**
+
+```
+────────────────────────────────────────────────────────────────────────────
+══ PICKUP PROMPT ═══
+Pick up task #112345 — Argus overnight scan.
+Where we left off (verified 2024‑08‑08 PT : 202
+Open threads:
+1. #112350 [proposed] — Deploy the missing missing worker script for Argus.
+2. #112351 [proposed] — Review permissions and potential bottlenecks for Argus‑operations (e.g. increase permissions or disable tasks for future workflows.
+Reference IDs:
+- Ticket: none
+- Ideas filed: none
+- Files touched: 
+  • /System/Volumes/Data/private/tmp/argus_confirm_guard_25058_v2.php
+  • /System/Volumes/Data/private/tmp/argus_persist_fix.php
+────────────────────────────────────────────────────────────────────────────────
+
 ```
 
 ### `1786461547593` — 8/11/2026, 8:46:46 AM PT — 242 turns
@@ -3368,43 +3389,5 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [x] Explain approval-bug root cause + fix applied
 - [x] Final completion with pickup prompt
 </task_progress>
-</attempt_completion>
-```
-
-### `1786146213022` — 8/8/2026, 9:30:09 AM PT — 94 turns
-
-**Original task:**
-
-```
-Tokens from admin_profile.php page are not working. Can you fix this: https://emsuniversity.com/emtskills/externship/student_portal.php?view_token=c28bcd871e99e4e2cb62243fd4fe2bf92b0602f88b3b20599757147ef096907b
-```
-
-**Ideas referenced:** #004085, #0056, #047857, #059669, #155724, #24635, #24636, #24645, #24794 [approved], #24797 [executing], #24798 [deployed], #2563, #374151, #475569, #495057, #6366, #64748, #78350, #856404, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-test. Everything else is done.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #24798 [deployed] - admin view_token validation fix
-
-Where we left off (verified 2026-08-07 16:56 PT):
-- Admin view_token URL showed login form instead of student portal; token for student 26913FT-33 was valid and unexpired
-- Root cause: SELECT admin_user_id FROM admin_view_tokens failed because that column did not exist on the table; the PDOException was silently swallowed by the catch block
-
-Open threads to drive next:
-1. #24797 [executing] Monitor admin_view_token validation post-fix in browser; verify new tokens store admin_user_id
-
-Reference IDs:
-- Ideas filed: #24797 [executing], #24798 [deployed]
-- Files touched: /var/www/emtskills/externship/student_portal.php.bak-20260807-164558, /var/www/emtskills/actions/login_as_student.php.bak-20260807-164558
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```

@@ -6,26 +6,28 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/10/2026, 4:56:13 PM PT | window: last 72h | 96 tasks | index total 612 (parsed 12, cached 600)
+Generated: 8/10/2026, 5:56:14 PM PT | window: last 72h | 97 tasks | index total 614 (parsed 14, cached 600)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786402206620` | 8/10/2026, 4:56:09 PM | 180 | 407KB | #LLM Fleet |
+| `1786409606290` | 8/10/2026, 5:56:14 PM | 18 | 40KB | #AI Directed Meditation |
+| `1786401898030` | 8/10/2026, 5:56:00 PM | 579 | 7647KB | Corrected the Customer Service role visibility issue in the Telephony Hub Callbacks tab, p |
+| `1786402206620` | 8/10/2026, 5:55:39 PM | 451 | 1211KB | #LLM Fleet |
+| `1786339173079` | 8/10/2026, 5:55:38 PM | 197 | 1328KB | I keep having to say over and over again that open threads need idea numbers and statuses  |
+| `1786396687700` | 8/10/2026, 5:54:59 PM | 134 | 307KB | info@emsuniversity.com is getting way too many emails. About 3-5 a second and mostly says  |
+| `1786384439089` | 8/10/2026, 5:54:15 PM | 283 | 2178KB | Why am i just receiving these chat transcripts now? That's not very helpful |
+| `1786409584008` | 8/10/2026, 5:53:04 PM | 1 | 8KB | Hmm, you found errors on those then what about all the other AI directed meditation projec |
+| `1786395180489` | 8/10/2026, 5:52:28 PM | 201 | 676KB | #San Mateo County Complaint/Inspection chenry@smcgov.org send a complaint on July 31 to me |
+| `1785954856277` | 8/10/2026, 5:51:01 PM | 699 | 2708KB | #CFA |
+| `1786066201493` | 8/10/2026, 5:47:43 PM | 491 | 1875KB | All three done. The wrapper wiring turned up another silent-blindness bug, and the deadman |
+| `1786088761151` | 8/10/2026, 5:47:43 PM | 219 | 740KB | Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversit |
+| `1786229794274` | 8/10/2026, 5:47:43 PM | 83 | 442KB | #Externships |
+| `1786224531010` | 8/10/2026, 5:43:16 PM | 406 | 940KB | #Big Mac |
+| `1786086916545` | 8/10/2026, 5:33:50 PM | 297 | 1391KB | Tell me how the student council is doing. Is it healthy? It actually generating ideas and  |
+| `1786402632203` | 8/10/2026, 5:18:13 PM | 154 | 370KB | #AI directed meditation |
 | `1786405169832` | 8/10/2026, 4:55:51 PM | 102 | 230KB | #Payment Issues |
-| `1786229794274` | 8/10/2026, 4:53:49 PM | 73 | 392KB | #Externships |
-| `1786224531010` | 8/10/2026, 4:52:06 PM | 389 | 913KB | #Big Mac |
-| `1786384439089` | 8/10/2026, 4:50:43 PM | 273 | 2149KB | Why am i just receiving these chat transcripts now? That's not very helpful |
-| `1785954856277` | 8/10/2026, 4:49:49 PM | 685 | 2692KB | #CFA |
-| `1786088761151` | 8/10/2026, 4:47:55 PM | 209 | 721KB | Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversit |
 | `1786185877066` | 8/10/2026, 4:47:55 PM | 122 | 452KB | continue |
-| `1786066201493` | 8/10/2026, 4:45:13 PM | 477 | 1847KB | All three done. The wrapper wiring turned up another silent-blindness bug, and the deadman |
-| `1786086916545` | 8/10/2026, 4:41:47 PM | 285 | 1378KB | Tell me how the student council is doing. Is it healthy? It actually generating ideas and  |
-| `1786339173079` | 8/10/2026, 4:33:29 PM | 191 | 1318KB | I keep having to say over and over again that open threads need idea numbers and statuses  |
 | `1786342434047` | 8/10/2026, 4:32:13 PM | 3296 | 5692KB | #Big Mac Claimed Down?? |
-| `1786396687700` | 8/10/2026, 4:24:03 PM | 124 | 293KB | info@emsuniversity.com is getting way too many emails. About 3-5 a second and mostly says  |
-| `1786402632203` | 8/10/2026, 4:17:17 PM | 86 | 253KB | #AI directed meditation |
-| `1786395180489` | 8/10/2026, 4:15:55 PM | 190 | 650KB | #San Mateo County Complaint/Inspection chenry@smcgov.org send a complaint on July 31 to me |
-| `1786401898030` | 8/10/2026, 4:11:06 PM | 192 | 3453KB | Corrected the Customer Service role visibility issue in the Telephony Hub Callbacks tab, p |
 | `1786392003768` | 8/10/2026, 3:50:36 PM | 90 | 244KB | #AI Direct Meditation |
 | `1786285332678` | 8/10/2026, 3:42:46 PM | 1136 | 15874KB | #Callbacks |
 | `1786340503930` | 8/10/2026, 3:28:55 PM | 792 | 2994KB | #Argus |
@@ -105,13 +107,86 @@ Generated: 8/10/2026, 4:56:13 PM PT | window: last 72h | 96 tasks | index total 
 | `1786036273485` | 8/7/2026, 10:47:51 PM | 1506 | 4670KB | #Argus  |
 | `1786166732768` | 8/7/2026, 10:35:33 PM | 90 | 923KB | Diagnose why cron_argus_task_worker.php stalls when the upstream LLM exceeds 120s. Read th |
 | `1786144700222` | 8/7/2026, 8:25:22 PM | 368 | 730KB | #TDSHS |
-| `1786135150364` | 8/7/2026, 5:03:39 PM | 264 | 411KB | emsuniversity.com is laggy, slow and needs to go faster. Something is bogiging it down |
 
 ---
 
 ## Per-window detail
 
-### `1786402206620` — 8/10/2026, 4:56:09 PM PT — 180 turns
+### `1786409606290` — 8/10/2026, 5:56:14 PM PT — 18 turns
+
+**Original task:**
+
+```
+#AI Directed Meditation
+
+Hmm, you found errors on those then what about all the other AI directed meditation projects? 
+
+I feel like I'm pulling teeth here to get this to work better. You seem to be not coming up wiht enough new ideas. Look at the need, the bottleneck and how this can be leveraged. Are we really that close to done? It must be actually hlepful
+
+Answer to "is this wired properly to Kaison, and how is it all going?" Short version: the wire to Kaison existed but was being cut by a one-character-class bug in the orchestrator triage cron. I found it, patched it this session, and pro
+```
+
+**Ideas referenced:** #178638, #178640, #25229 [deployed], #25313 [deployed], #25383 [deployed], #25384 [deployed], #25385, #25421 [deployed], #25422 [deployed], #25423 [deployed], #25424 [deployed], #25523 [executing], #25524 [executing], #25525 [executing], #25528 [deployed], #25532 [deployed], #25534 [deployed], #25537 [executing], #25555 [deployed], #25560 [executing], #25561 [executing], #25608 [executing], #25609 [executing], #25610 [executing], #25611 [executing], #25623 [executing]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786401898030` — 8/10/2026, 5:56:00 PM PT — 579 turns
+
+**Original task:**
+
+```
+Corrected the Customer Service role visibility issue in the Telephony Hub Callbacks tab, plus 3 related callback-system issues found during the investigation.
+
+Root cause: /var/www/emtskills/routes/telephony_hub.php line 2520 wrapped the entire Callbacks tab button in if ($isTelephonyAdmin) only (MasterAdmin/ExecAdmin/ITAdmin/Admin), excluding Customer Service role staff even though $isCSUser = !empty($user['is_cs']) already existed in the same file for other telephony features. Changed to if ($isTelephonyAdmin || $isCSUser). Lint check passed, backup taken first. The tab-panel content div its
+```
+
+**Ideas referenced:** #10003, #25185, #25593 [proposed], #25606 [proposed], #334155, #475569, #64748
+
+**Last PICKUP PROMPT:**
+
+```
+only captured the EMSU trunk).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task on callback CS visibility — remaining follow-ups under #25593 [proposed].
+
+Where we left off (verified 2026-08-10 17:45 PT):
+- Callbacks tab + queue panel + booking_detail + booking_action all verified working in real CS context (session fabricated for users.id=17 Jehan De Los Angeles, CustomerService, is_cs=1; renders 200/full panel, actions 302, no gates tripped).
+- Debug line removed from callback/admin/_panel_callback.php; lint clean; final render re-verified; fabricated session + temp files deleted; post-cleanup unauthenticated fetch = 401.
+- Prior fixes still live: telephony_hub.php tab button + panel gates (isTelephonyAdmin || isCSUser), booking_detail.php is_cs gate, cron_callback_policing.php COALESCE fix (booking id 6 escalated to Vicky), booking id 76 name corrected to Denham Brown.
+- HANDOFF_NOTES.md updated with full verification trail incl. session-store location gotcha (/var/www/vhosts/emsuniversity.com/sessions).
+
+Open threads to drive next:
+1. #25593 [proposed] — have a real CS staffer (Jehan/Apple/Rachel) open Telephony Hub > Callbacks in their own browser and confirm; close the loop with Ruben after.
+2. #25593 [proposed] — Argus dropped-call investigation for Vicky's CS team (Ruben directive, not started).
+3. #25593 [proposed] — find a real callback number for booking id 76 (Denham Brown); only EMSU trunk was captured.
+
+Reference IDs:
+- Ideas filed: #25593 [proposed]
+- Files touched this session: callback/admin/_panel_callback.php (debug line removed), HANDOFF_NOTES.md (verification entry)
+- Files from earlier sessions still in effect: routes/telephony_hub.php, callback/admin/booking_detail.php, callback/admin/_panel_callback.php, callback/admin/booking_action.php (new), crons/policing/cron_callback_policing.php
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] CFA jargon removed, panel rewritten, booking_detail rewritten, action endpoint created
+- [x] Fixed phantom callback_queue columns; CLI render OK
+- [x] h() undefined → top-level guarded def in panel + booking_detail
+- [x] Hub panel renders FULLY; booking_detail 200; action POST 302 — all as real CS context (Jehan, is_cs=1)
+- [x] Debug line removed, lint clean; final render re-verified post-removal
+- [x] Auth enforcement confirmed (401 no-cookie/bogus)
+- [x] Cleanup: fabricated session + temp files deleted, post-cleanup 401
+- [x] Handoff notes updated
+- [x] attempt_completion with pickup prompt
+</task_progress>
+</attempt_completion>
+```
+
+### `1786402206620` — 8/10/2026, 5:55:39 PM PT — 451 turns
 
 **Original task:**
 
@@ -123,393 +198,11 @@ Still can't see all the Spark boxes or other romans here for SSH access under Se
 approved -> - #25580 [proposed] the CORRECT engine-reaper design, replacing the one that broke julia: reap the previous generation INSIDE the relaunch cleanup in julia_unified_tp2.sh and claudia_unified_worker.sh, where "everything currently alive is the old generation" is true by construction. Read-only audit first on cesar (ssh -p 2203), cato (2204), claudia (2206), augustus, tiberius, pompey, marcus, artemis (10.
 ```
 
-**Ideas referenced:** #16844, #178639, #2299, #23171, #24144, #25097, #25185, #25468, #25565 [executing], #25567 [executing], #25571 [rejected], #25580 [proposed], #25604 [proposed], #25605 [proposed], #64748, #8984
+**Ideas referenced:** #10740, #11397, #11912, #11936, #11942, #11944, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12584, #12646, #12657, #12672, #12673, #12689, #12716, #13108, #13121, #13831, #13832, #13874, #13964, #14000, #14848, #16120, #16718, #16844, #178639, #18781, #18786, #19653, #1967, #19903, #1998, #2050, #21045, #22583, #2299, #2305, #23171, #23206, #24144, #25097, #25112, #25120, #25159, #25178, #25185, #25468, #25565 [executing], #25567 [executing], #25571 [rejected], #25580 [proposed], #25604 [proposed], #25605 [proposed], #25616 [proposed], #25617 [deployed], #25620 [deployed], #25621 [deployed], #25622 [deployed], #25626 [deployed], #25627 [proposed], #25630, #64748, #8984
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786405169832` — 8/10/2026, 4:55:51 PM PT — 102 turns
-
-**Original task:**
-
-```
-#Payment Issues
-
-How is this going
-
-Backed up first as you asked, then traced it. **The website is not the problem, and I changed nothing in the payment code.**
-
-## BACKUP TAKEN BEFORE ANYTHING ELSE
-
-`/var/www/emtskills/backups/qb-comment-fix-20260808-025141`, 1.3M, containing all 64 plugin files (Api.php + Process.php across 32 sites), quickbooks_helper.php, both payment crons, and a full qb_charge_attempts dump.
-
-## THE BLANK ONES NEVER TOUCHED THE WEBSITE
-
-I looked up all five blank-comment transaction IDs from your screenshot in our database. **All five return zero rows.** Meanwhile every 
-```
-
-**Ideas referenced:** #19387 [deployed], #20613 [executing], #23062 [executing], #23268 [executing], #23279 [executing], #23280 [executing], #23281 [executing], #23282 [executing], #23304 [executing], #23391, #23394, #24158 [deployed], #24701 [executing], #25065 [executing], #25185, #25613 [executing], #4929
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786229794274` — 8/10/2026, 4:53:49 PM PT — 73 turns
-
-**Original task:**
-
-```
-#Externships
-
-Pickup the New Externship Scheduling plan where we will be moving towards scheduling students, without permitting their initial request. What's the first step?
-```
-
-**Ideas referenced:** #19217, #19438 [ready_for_review], #20757 [approved], #2271, #23223, #23308, #23382 [open], #24184, #24556 [proposed], #24557 [proposed], #24558 [superseded], #24635, #24636, #24645 [unknown], #24646, #24791 [deployed], #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25129 [ready_for_review], #25131, #25156 [proposed], #25157 [approved], #25158, #25159, #25172, #25173, #25175 [proposed], #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [executing], #25220, #25227, #25228, #25246 [executing], #25445 [approved], #25526 [deployed], #25529 [approved], #57179
-
-**Last PICKUP PROMPT:**
-
-```
-n it. That is the right order.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25156 -- Externship scheduling road map session recap with v2.1 integration opinion
-
-Where we left off (verified 2026-08-10 13:38 PT):
-- Full session recap delivered (road map, plain-language, non-disruptive path, v2.1 opinion).
-
-Open threads to drive next:
-1. #25129 [ready_for_review] -- Deploy the v2.1 dashboard card (safe, non-disruptive, visibility-only gateway)
-2. #25157 [ready_for_review] OR #25246 [ready_for_review] -- Deploy the SLS prerequisite (both ready; pick one or consolidate)
-3. #25156 [proposed] -- Approve v3 when ready to flip the switch to the full auto-assign model
-
-Reference IDs:
-- Ideas filed: #25156 [proposed], #25246 [ready_for_review]
-- External verified: #25129 [ready_for_review], #25157 [ready_for_review], #25529 [approved]
-- Files touched: /var/www/emtskills/docs/specs/externship_auto_assign_v3.md, /var/www/emtskills/docs/EXTERNSHIP_PROCESS.md, /var/www/emtskills/docs/specs/externship_auto_assign_v21_eligibility_gated.md, /var/www/emtskills/lib/externship_auto_assign_v2.php, /var/www/emtskills/routes/_view_externship_auto_assign_v2.php
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786224531010` — 8/10/2026, 4:52:06 PM PT — 389 turns
-
-**Original task:**
-
-```
-#Big Mac
-
-continue
-
-**Everything working. Here's the complete status as of 12:25 PT:**
-
-**#25120 [shipped]** — CORRECTIVE_RETRY_ENABLED live, zero errors since 11:18 restart.
-
-**#25122 [shipped]** — Option B: `executor_plan_race.php` (93 lines) + `executor_parallel_calls_enabled` gate at RubenExecutor:2402. Both `php -l` clean. Awaiting next executor planner tick to exercise curl_multi race.
-
-**#25131 [shipped]** — Rule 147 48h gate REMOVED. `FRESHNESS_HOURS=0` in cron_kaison_wedge_detection.php means `kaison_freshness_gate()` always returns true — Kaison now repairs any classifiable incident 
-```
-
-**Ideas referenced:** #10666, #12060, #12184, #12550, #12609, #12611, #12619, #12900, #202608, #2182, #22770, #24635, #24636, #24645, #24646, #24791, #25097 [executing], #25111 [proposed], #25112 [shipped], #25120 [shipped], #25122 [shipped], #25125 [executing], #25127 [rejected], #25131 [shipped], #25158, #25159, #25172, #25173 [approved], #25176 [rejected], #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [proposed], #25197 [deployed], #6978, #9070, #9999
-
-**Last PICKUP PROMPT:**
-
-```
-eneck)
-
-HANDOFF_NOTES current.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25196 [deployed] — continue open threads
-
-Where we left off (verified 2026-08-09 16:36 PT):
-- #25196 [deployed] Kaison deadlock trigger + Step 1 bug_library FATAL resolved
-- #25122 [deployed] racePlannerCalls() wired into generatePlan
-- #25125 [deployed] validation harness PHP files confirmed
-- #25097 [deployed] Big Mac serving, 7970X 32c/64t CPU
-- Executor stall emerged ~18:30 on 8/8 (advanced=0 alarms), Ruben working on it in another window
-
-Open threads to drive next:
-1. #25196 [deployed] cron Step 2 FATALs: endpoint column absent from frankenstein_router_incidents; apply #25131 column-adaptive rewrite
-2. #25131 [executing] Kaison universal auto-repair: apply pattern from Step 1 fix to Step 2 wedge detection
-3. #25111 [proposed] TP=4 Big Mac flip when 4th B70 lands; CPU headroom confirmed, not bottleneck
-
-Reference IDs:
-- Ideas: #25196 [deployed], #25122 [deployed], #25125 [deployed], #25097 [deployed], #25111 [proposed], #25131 [executing]
-- Files: RubenExecutor.php, cron_kaison_wedge_detection.php, cron_fleet_validation.php
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786384439089` — 8/10/2026, 4:50:43 PM PT — 273 turns
-
-**Original task:**
-
-```
-Why am i just receiving these chat transcripts now? That's not very helpful
-```
-
-**Ideas referenced:** #18335, #19837, #2271, #2274, #2275, #2292, #2423, #24635, #24636, #24645, #24646, #24791, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25550 [proposed], #25551 [proposed], #6366, #6526, #6548, #9152
-
-**Last PICKUP PROMPT:**
-
-```
-us fix), same as manual close.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Optional: add "chat ended" UX to widget frontend on auto-close
-
-Where we left off (verified 2026-08-10 14:11 PT):
-- All 34 sites auto_close_minutes=60. Cron runs every 15 min, auto-closes idle 60+ min conversations. Manually verified working.
-- bugfix: closed_at column was missing on 28 tables (ALTER used system='emsu_chat' filter, missed sites with per-site DB creds). Backfilled to all 34 sites via per-site credentials. Cron now runs zero FAILs.
-- Transcripts fire on auto-close (wired in previous session).
-- widget_poll returns status='closed' to the frontend. Frontend widget JS already receives it.
-
-Open threads to drive next:
-1. #25550 [deployed] — Monitor 48h for DSML leaks. Backfill-clean existing rows if desired.
-2. #25551 [deployed] — Monitor 24h for real-time transcript delivery. Verify backlog drains.
-3. (no idea) — If desired, enhance widget frontend JS to show "This chat has ended" banner when poll returns status='closed', with an input-disabled state. The frontend widget JS is the WordPress embed; location TBD (not in the WOPR PHP API files, likely in each site's WordPress theme/plugin).
-
-Reference IDs:
-- Ideas filed: #25550 [deployed], #25551 [deployed]
-- Files touched this session: all 28 site DBs (ALTER TABLE ADD closed_at)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1785954856277` — 8/10/2026, 4:49:49 PM PT — 685 turns
-
-**Original task:**
-
-```
-#CFA
-
-
-═══════════════════════════════════════════════
-PICKUP PROMPT: CFA HEALTH VALIDATION OWNER
-═══════════════════════════════════════════════
-Pick up CFA validation. Ruben's read is that the CFAs ARE working, so this is a VALIDATION task, not a restart task. Do NOT restart or reconfigure anything until the instrumentation question below is answered.
-
-MAJOR CONTEXT ADDED 2026-08-05 10:50 PT — A ROUTER BUG WAS BREAKING TOOL CALLS FLEET-WIDE:
-For most of this morning every tool-bearing request through LiteLLM returned HTTP 400 (53 validation errors: ('body','tools',N,'function') Field require
-```
-
-**Ideas referenced:** #12206, #1255, #128260, #14132, #15204, #16152, #16153, #16154, #16473, #16732, #16817, #17150, #17446, #177914, #18796 [deployed], #18848 [deployed], #18944, #18951, #19437, #19682, #20925, #21064, #21070 [ready_for_review], #22060, #22294 [deployed], #23050 [executing], #23054 [executing], #23122 [executing], #23184, #23207 [deployed], #23208 [proposed], #23209, #23225 [proposed], #23309 [proposed], #23316 [proposed], #23317 [deployed], #23466 [executing], #23493 [proposed], #23710 [deployed], #23711 [deployed], #23989 [deployed], #24227 [proposed], #24339 [proposed], #24340 [proposed], #24341 [proposed], #24345, #24500 [executing], #2563, #2782, #3237, #32584, #3572, #374459, #374460, #4470, #4991, #5298, #5447, #5459, #5608, #5646, #6064, #6106, #6228, #6751, #7206, #7207, #7317, #7356, #7907, #8060, #8103
-
-**Last PICKUP PROMPT:**
-
-```
-etion>
-<result>
-═══════════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════════
-Pick up task #CFA — CFA sweep/<attempt_completion>
-<result>
-════════════════════════════════════════════════════════════
-```
-
-### `1786088761151` — 8/10/2026, 4:47:55 PM PT — 209 turns
-
-**Original task:**
-
-```
-Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversity.com/emtskills/routes/ruben_executor_live.php
-```
-
-**Ideas referenced:** #059669, #0891, #10003, #10007, #10060, #12059, #12065, #12184, #1239, #12503, #127922, #128157, #128190, #128640, #13418, #1373, #14532, #1658, #166534, #17560, #1786, #22031 [fix-needed], #22032 [fix-needed], #24624 [deployed], #24625 [proposed], #24626, #24634 [deployed], #24695 [proposed], #2563, #334155, #3730, #374151, #4338, #4536, #475569, #5031, #6366, #64748, #65039, #6978, #78350, #8594, #92400, #9654, #9888, #9989
-
-**Last PICKUP PROMPT:**
-
-```
-in‑tools. No restart required.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Verify chain backlog draining faster now (planner model set to claude-opus-real)
-
-Where we left off (verified 2026-08-07 17:08 PT):
-- Backlog ~11,179, draining at ~4 executed/hour (was 0 pre-fix)
-- Planner primary model defaulted to frankenstein-tools (hung → 180s timeout) — changed to claude-opus-real
-- Spill models: claude-opus-real,deepseek-v4-pro,ollama-7b-lora,frankenstein-tools
-- NEEDS VERIFICATION: is the config change actually speeding up the executor? Check in 15-30 min.
-
-Open threads to drive next:
-None currently — fixes are deployed. Next check: confirm backlog drain rate increase, update idea #24695 to [deployed] if confirmed.
-
-Reference IDs:
-- Ideas: #24624 [deployed], #24625 [proposed], #24634 [deployed], #24695 [deployed]
-- Files: /var/www/emtskills/cron/cron_ruben_autonomous.php (+logWorkerStart/logWorkerEnd), /var/www/emtskills/lib/ruben_recurrence_idempotency_hash.php (outcome filter), orchestrator_config (JSON update)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786185877066` — 8/10/2026, 4:47:55 PM PT — 122 turns
-
-**Original task:**
-
-```
-continue
-
-## Final Status Report — Completed
-
-### ✅ FIXED (verified on disk, tested):
-
-| File | Issue | Fix |
-|------|-------|-----|
-| `cron_ruben_autonomous.php` (line 2284) | `$retryPendingMaxMin` and `$pendingMaxMin` were referenced but never defined — every SQL bind got NULL (=0), causing the stuck-run reaper to auto-abort healthy fresh pending rows | Defined from config with defaults: `ruben_stuck_run_reaper_retry_pending_min=30`, `ruben_stuck_run_reaper_pending_min=15`. PHP lint pass. |
-| `cron_executor_health_alert.php` (line 13) | `require_once ../lib/sendSMSAuto.php` — file never exis
-```
-
-**Ideas referenced:** #003366, #11764, #16262, #16390, #19429, #22304, #24230 [implemented], #25062 [implemented], #25063 [implemented], #25064 [detected], #25432 [proposed], #25433 [proposed], #25434 [proposed], #2563, #4517, #5451, #78350, #856404
-
-**Last PICKUP PROMPT:**
-
-```
-S_backlog_emitter.md`
-
-═══════════════════════════════════════════════
-════════ PICKUP PROMPT ════════
-═══════════════════════════════════════════════
-Pick up task — Follow‑up ideas for RUBEN fixes and backlog‑emitter suppression.
-
-Where we left off (verified 2026‑08‑10 04:42 PT):
-- ✅ #25432, #25433, #25434 approved and ready to be executed.
-- 🔍 #25064 still open: suppression of the autonomous “RUBEN backlog” reminder (see handoff file).
-
-Open threads (all real ideas):
-1. #25432 [proposed] — Monitor unclassified rate 7 days post‑KAIZEN fallback.
-2. #25433 [proposed] — Confirm stuck‑run reaper runs clean with proper config.
-3. #25434 [proposed] — Test `cron_executor_health_alert.php` SMS path on real outage.
-4. #25064 [detected] — Suppress RUBEN backlog reminder (choose option a, b, or c).
-
-Reference IDs:
-- Ideas: #25432, #25433, #25434, #25064, #25062, #25063, #24230
-- Files: `/var/www/emtskills/cron/cron_ruben_autonomous.php`, `/var/www/emtskills/cron/cron_executor_health_alert.php`, `/var/www/emtskills/lib/RubenExecutor.php`, `/Users/rubenmajor/Desktop/HANDOFF_NOTES_backlog_emitter.md`
-
-When done, append a row to `cline_task_ledger.md` per rule 07 and run order 66 per `.clinerules/EXECUTE_ORDER_66`.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786066201493` — 8/10/2026, 4:45:13 PM PT — 477 turns
-
-**Original task:**
-
-```
-All three done. The wrapper wiring turned up another silent-blindness bug, and the deadman question has a clean answer.
-
-THE TWO WRAPPERS ARE WIRED, BUT ONE WAS LYING
-
-cleanup ran perfectly on the first try and just needed scheduling.
-
-block was the interesting one. It ran, exited 0, and reported "regressions=0" while reading absolutely nothing. Its table map named a column that does not exist on email_outbound_log (it wanted "body", the real column is "body_preview") and a table that does not exist at all (sms_outbound_log). Both failures were caught and logged as one-line notices, so the cro
-```
-
-**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16695 [awaiting_review], #16732, #1745, #17777, #178593, #1793, #18316, #18535, #19370, #23133, #23185, #23277 [executing], #23285 [executing], #23291, #23341 [executing], #23506 [proposed], #23710, #23711, #23920 [in_progress], #23945, #23952, #23954, #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed], #24176 [proposed], #24179, #24181 [proposed], #24191 [proposed], #24192, #24241, #24248 [proposed], #24253 [proposed], #24256, #24369 [proposed], #56975, #6172, #7048, #9042, #9159, #9222, #9501
-
-**Last PICKUP PROMPT:**
-
-```
-4369). Ledger row 10 appended.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #23277/#23285 sweep — orphan-cron triage + VAPI transcript investigation.
-
-Where we left off (verified 2026-08-07 00:26 PT):
-- **All 6 guardrail crons pass four-cause triage** (scheduled? loads? runs? target table exists?).
-  - `ai_reasoning_leak_presend` **fails criterion 4** (7 phantom columns on `ai_reasoning_leak_presend_log`) — filed as #24369 [proposed]. Reg.-retry path is dead.
-  - Everything else is healthy.
-- **Broken-require orphan crons:** tested all 9.
-  - 7 run clean.
-  - `cron_planner_truncation_decomposer` fixed (`api/db.php` → `lib/db.php`) — runs clean.
-  - `cron_vilt_pre_class_validator` partially fixed: `lib/ZoomAPI.php` created (wraps procedural `zoom_api.php`), 3 phantom `require_once`s guarded with `file_exists()`, `db.php` added. Survives all requires, now fails on cross-DB join `mdl_course` in admin_portal query. Still fatal — needs Moodle DB connection or schema-redress.
-- **#24248 [investigated]:** VAPI end-of-call-report payload thinned Aug 2 — `transcript`, `recording_url`, `summary`, enriched `outcome`, `name`/`phone_number`/`email` keys all missing. Deadman scanner correctly skips empty transcripts. Root cause is VAPI-side payload change; not fixable in vitro.
-- **#23341 [in_progress]:** Drive backfill — no further progress this round.
-- **Drive backfill audit table:** `emsu_backfill_tracking` (table exists; `drive_file_uploads` was phantom).
-- **`zoom_api.php`** patched: `require_once env.php` → `require_once lib/env.php`.
-
-Open threads to drive next:
-1. #24369 [proposed] — Fix `cron_ai_reasoning_leak_presend.php`: map 7 phantom columns to real `ai_reasoning_leak_presend_log` schema. Required: `original_response`→`original_excerpt`, `regen_attempts`→`regen_attempted`, `created_by`→`source_incident`, `source_correction_id`→`fallback_used`, `scanned_at`→`created_at`. Also need to sync UPDATE/cleanup clauses.
-2. #23277 [executing] — Tackle vilt cron cross-DB: either join `mdl_course` via Moodle DB connection, OR replace joins with `vilt_moodle_groups.course_name` if non-normalized. 3 remaining phantom libs (`OrchestratorEventLog`, `iMessage`, `TicketAPI`) still guarded but unused — full rewrite vs retire decision.
-3. #23341 [in_progress] — Drive backfill: verify throughput post-fix, check `emsu_backfill_tracking` row count.
-4. #23285 [executing] — Guardrail consumer wiring: after fixing leak_presend, verify 4 consumer views see real data.
-5. #23506 [proposed] guided_json — LOW priority, deferred.
-6. #24248 [investigated] — Monitor VAPI transcript resumption; no code action needed (VAPI-side).
-7. #24253 [proposed] — (superseded by #24369) Leak presend cron was initially misidentified as single-column fix; now correctly classified as full schema-blind rewrite.
-
-Reference IDs:
-- Ideas filed this session: #24369, #24248 (updated to investigated)
-- Ideas status-changed this session: #23277→executing, #23285→executing, #24191→deployed, #24176→deployed, #24248→investigated
-- Ledger rows appended: 8, 9, 10
-- Files created: `lib/ZoomAPI.php`, `/etc/cron.d/emsu-agent-deadman-scanner`
-- Files patched: `cron/cron_fleet_dynamic_rebalancer.php` (line 13), `cron/cron_planner_truncation_decomposer.php` (line 17), `cron/cron_vilt_pre_class_validator.php` (6 patches), `zoom_api.php` (env require), `cron/cron_agent_deadman_scanner.php` (3 bugs fixed)
-- Clean temp scripts: `sudo rm -f /var/www/emtskills/admin/*.py` (all *
-```
-
-### `1786086916545` — 8/10/2026, 4:41:47 PM PT — 285 turns
-
-**Original task:**
-
-```
-Tell me how the student council is doing. Is it healthy? It actually generating ideas and tasks and acting on them? Or is a block? If it's blocked can you fix it?
-```
-
-**Ideas referenced:** #10108, #1050, #10740, #11741, #11781, #12345, #12477, #12618, #12802, #12824, #12872, #12878, #12879, #13202, #1373, #16163, #16265, #16304, #16695 [awaiting_review], #16822, #16844, #18312, #18326, #19171, #19370, #19427, #19438 [ready_for_review], #19573, #20757 [approved], #22258, #22294, #23117, #23171, #23185, #23223, #23308, #23341, #23382 [open], #23945, #24026, #24054 [deployed], #24055 [proposed], #24056 [proposed], #24239, #24539 [deployed], #24540 [proposed], #24541 [proposed], #24556 [proposed], #24557 [proposed], #24558 [proposed], #24559 [approved], #25129 [ready_for_review], #25156, #25157 [ready_for_review], #25175 [proposed], #25246 [ready_for_review], #25376, #25445 [approved], #25480, #25526 [proposed], #25527 [deployed], #25529 [proposed], #2763, #3957, #4536, #5031, #6057, #6104, #6413, #6432, #64748, #7228, #78350, #9090, #92400, #9475
-
-**Last PICKUP PROMPT:**
-
-```
-n top of the existing minutes.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — #25529 build: exec-admin approval email routing for council ideas.
-
-Where we left off (verified 2026-08-10 13:40 PT):
-- #25529 [approved] — Design complete. Ruben needs to sign off on domain→approver map before any email code fires.
-- Existing council emails: post-session minutes to rmajor + jthompson. This is UNCHANGED.
-- NEW email: approval request to domain-matching exec-admin with SIGN_OFF_BLOCK + vote tally.
-- Recipients verified: jthompson@emsuniversity.com, vthompson@emsuniversity.com in daystrom_minutes_recipients.
-- #25526 [deployed] — Council seed tool-list stripped.
-- #25527 [rejected] — Bypass fix rejected. Fleet-compliant alternative needed if Haiku not in LiteLLM.
-
-Open threads to drive next:
-1. #25529 [approved] — Ruben approves domain map → build email trigger in council harvest OR DB trigger ON INSERT.
-2. #25527-replacement — If council model still needs fleet-compliant routing, register real Anthropic Haiku in LiteLLM config rather than hardcoded bypass.
-
-Reference IDs:
-- #25529 [approved] — Council exec-admin approval routing
-- #25526 [deployed] — Tool-list stripped from seed
-- #25129 [ready_for_review] — Externship auto-assign v2.1 (in externship window)
-- #25157 [approved] — SLS data prerequisite
-- Council file: /var/www/emtskills/cron/cron_daystrom_council.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786339173079` — 8/10/2026, 4:33:29 PM PT — 191 turns
+### `1786339173079` — 8/10/2026, 5:55:38 PM PT — 197 turns
 
 **Original task:**
 
@@ -522,47 +215,21 @@ I keep having to say over and over again that open threads need idea numbers and
 **Last PICKUP PROMPT:**
 
 ```
- gate for any residual issues.
+deas for any fresh violations.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #obedience-sweep — rule‑91 bracket‑mandate fix status report.
+Pick up task #25178 — rule‑91 bracket‑mandate fix status report.
 
-Where we left off (verified 2026‑08‑10 04:19 PT):
-- Root‑cause: `[queued]` bracket list in steering tail contradicted
+Where we left off (verified 2026‑08‑10 05:05 PT):
+- Root cause: `[queued]` bracket list in steering tail conflicted with Rule 91’s ban.
+
 
 [Response interrupted by API Error]
 ```
 
-### `1786342434047` — 8/10/2026, 4:32:13 PM PT — 3296 turns
-
-**Original task:**
-
-```
-#Big Mac Claimed Down??
-
-approved -> - #25468 [proposed] : make the canary quarantine a connection-RESET upstream instead of ranking it least-loaded. Both boxes are back but the ranker inversion that let a dead socket win first pick is still in the code, so the next tunnel with no engine behind it repeats the incident.
-
-- #25471 [proposed] : reconcile the frankenstein-tools drop-ins, now 34 files. Three set FRANK_EXECUTOR_CAP and one contradicts its own comment. Every Environment= line in the main unit file is dead because drop-ins override all of them.
-
-
-confused on why this is beneficial? Se
-```
-
-**Ideas referenced:** #0078, #10234, #12335, #12459, #12657, #12672, #127891, #128274, #13121, #1378, #13832, #13840, #1557, #16120, #1802, #1803, #1806, #1811, #18159, #18163, #18178, #18179, #18180, #18189, #18212, #18213, #18214, #18720, #18868, #19125, #19163, #19903, #19907, #19925, #20247, #20264, #20272, #2050, #20536, #2092, #20957, #20958, #2096, #21045, #22583, #22588, #2298, #23171, #24144, #24145, #24165, #24173, #24183, #24220, #24368, #25097, #25112, #25150, #25151, #25188, #25468 [proposed], #25469 [rejected], #25470 [deployed], #25471 [proposed], #25515 [proposed], #25536 [proposed], #30363, #334155, #4932, #64748, #6785, #6825, #6842, #8984, #9019, #9070
-
-**Last PICKUP PROMPT:**
-
-```
-stdesk_devices + reverse tunnels
-- [ ] Verify all SSH via portal
-- [ ] Ledger + PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
-```
-
-### `1786396687700` — 8/10/2026, 4:24:03 PM PT — 124 turns
+### `1786396687700` — 8/10/2026, 5:54:59 PM PT — 134 turns
 
 **Original task:**
 
@@ -570,7 +237,7 @@ stdesk_devices + reverse tunnels
 info@emsuniversity.com is getting way too many emails. About 3-5 a second and mostly says ideas or something. Anyway, it's chosing out sthe server.
 ```
 
-**Ideas referenced:** #16523, #18944, #18951, #202608, #20581, #2292, #2301, #25313, #25365 [deployed], #25366 [proposed], #25525, #25534, #25535, #25537, #25548 [executing], #25562, #25591 [proposed], #25602 [proposed]
+**Ideas referenced:** #16523, #18944, #18951, #202608, #20581, #2292, #2301, #25313, #25365 [deployed], #25366 [proposed], #25525, #25534, #25535, #25537, #25548 [executing], #25562, #25591 [proposed], #25602 [proposed], #25672 [proposed], #25673 [proposed]
 
 **Last PICKUP PROMPT:**
 
@@ -601,28 +268,75 @@ When done, append to `cline_task_ledger.md` per rule 07, run order 66.
 </attempt_completion>
 ```
 
-### `1786402632203` — 8/10/2026, 4:17:17 PM PT — 86 turns
+### `1786384439089` — 8/10/2026, 5:54:15 PM PT — 283 turns
 
 **Original task:**
 
 ```
-#AI directed meditation
-
-
-So that begs the question how do we make it net positive for customer service? What are we supposed to do to make that whole concept of AI directed notation a net positive for customer service? How are we going to do that I don't see any ideas in here about how we're gonna do that. 
-
-This seems like a revolutionary concept that is going to die. Did you take a look at all CFA areas to see how we could leverage AI directed meditation in order to improve all these areas? What about Argus? What about here in cline?
-
---
-
-Honest answer: not yet on the student-facing side. N
+Why am i just receiving these chat transcripts now? That's not very helpful
 ```
 
-**Ideas referenced:** #14100, #178638, #25185, #25229, #25238 [executing], #25240 [executing], #25241 [executing], #25374, #25385, #25400, #25401, #25424, #25525 [executing], #25530 [executing], #25531 [executing], #25534 [deployed], #25535 [deployed], #25537 [executing], #25555 [deployed], #25560 [executing], #25561 [executing], #25608 [executing], #25609 [executing], #25610 [executing], #25611 [executing]
+**Ideas referenced:** #18335, #19837, #2271, #2274, #2275, #2292, #2423, #24635, #24636, #24645, #24646, #24791, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25550 [proposed], #25551 [proposed], #6366, #6526, #6548, #9152
+
+**Last PICKUP PROMPT:**
+
+```
+We must produce a proper PICKUP PROMPT block after finishing the task: adding auto-close UI banner to widget. The latest tool use didn't succeed; we need to actually apply the patch correctly.
+
+Let's reapply patch robustly: Write helper function at end of file, then call it. We'll simplify: Append the function at end of file, and modify the status check block to call it.
+
+We'll edit file with replace_in_file tool (but we need to be careful). Use write_to_file to rewrite? We can use replace_in_file with start_line/end_line? Maybe simpler: use write_to_file to replace entire file with new content after modifications. But that's huge.
+
+Better: Use replace_in_file to insert after specific line. The tool supports diff format, but we can use a simplified approach: create a backup, then rewrite. We'll do a Python script to modify properly.
+
+We need to ensure lint passes. We'll just insert after the line that checks status closed.
+
+Let's locate the line number from earlier: In chat_widget_embed.js, the block:
+
+```
+if (r.data.status === 'closed' && !chatEnded && !hasRated) {
+    chatEnded = true;
+    showRatingPrompt();
+}
+```
+
+We can add `showClosedBanner();` after `showRatingPrompt();`.
+
+Let's implement patch via python.
+
+We'll create script that reads file, finds that pattern, inserts line, and also append the function at end (or after renderMessages function). Simpler: Append function at end of file, after a comment.
+
+We'll create script and run.
+
+We'll then lint with node -c.
+
+Then final step: Provide pickup prompt.
+
+Let's do.<use_mcp_tool>
+<server_name>emsu-operations</server_name>
+<tool_name>ssh_command</tool_name>
+<arguments>
+{
+  "command": "cat > /tmp/patch_widget_closed.py << 'PYEOF'\nimport sys, shutil, subprocess\nfile_path = '/var/www/emtskills/api/chat_widget_embed.js'\nbackup = file_path + '.bak-closed-20260810'\nshutil.copy(file_path, backup)\nwith open(file_path, 'r', encoding='utf-8') as f:\n    lines = f.readlines()\n# Insert showClosedBanner call after showRatingPrompt()\nfor i, line in enumerate(lines):\n    if \"if (r.data.status === 'closed' && !chatEnded && !hasRated)\" in line:\n        # find the closing brace of this block\n        j = i\n        while j < len(lines) and not lines[j].strip().endswith('}'): j += 1\n        # inside block, find line with showRatingPrompt()\n        for k in range(i, j+1):\n            if 'showRatingPrompt();' in lines[k]:\n                insert_line = k+1\n                lines.insert(insert_line, '        showClosedBanner(); // RTX 2026-08-10: UI banner for auto-close\\n')\n                break\n        break\n# Append helper function after renderMessages definition (approx line 570)\nfunc_insert = None\nfor i, line in enumerate(lines):\n    if line.strip().startswith('function renderMessages'):\n        # find closing brace of renderMessages\n        j = i\n        while j < len(lines) and not (lines[j].strip() == '}' and j>i):\n            j += 1\n        func_insert = j+1\n        break\nif func_insert is None:\n    sys.exit('renderMessages not found')\nhelper = '''\\n// UI banner for auto‑close – show when chat status = closed\\nfunction showClosedBanner() {\\n    const area = document.getElementById('emsu-messages');\\n    if (!area) return;\\n    if (document.getElementById('emsu-closed-banner')) return;\\n    const banner = document.createElement('div');\\n    banner.id = 'emsu-closed-banner';\\n    banner.style.cssText = 'background:#eef; color:#333; padding:12px; margin:8px 0; border-radius:6px; text-
+```
+
+### `1786409584008` — 8/10/2026, 5:53:04 PM PT — 1 turns
+
+**Original task:**
+
+```
+Hmm, you found errors on those then what about all the other AI directed meditation projects? 
+
+I feel like I'm pulling teeth here to get this to work better. You seem to be not coming up wiht enough new ideas. Look at the need, the bottleneck and how this can be leveraged. Are we really that close to done? It must be actually hlepful
+
+Answer to "is this wired properly to Kaison, and how is it all going?" Short version: the wire to Kaison existed but was being cut by a one-character-class bug in the orchestrator triage cron. I found it, patched it this session, and proved the wire live end to 
+```
+
+**Ideas referenced:** #178638, #25537 [executing], #25608 [executing], #25609 [executing], #25610 [executing], #25611 [executing], #25623 [executing]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786395180489` — 8/10/2026, 4:15:55 PM PT — 190 turns
+### `1786395180489` — 8/10/2026, 5:52:28 PM PT — 201 turns
 
 **Original task:**
 
@@ -674,57 +388,382 @@ When ready, append a row to `cline_task_ledger.md` per rule 07 and run order�
 </attempt_completion>
 ```
 
-### `1786401898030` — 8/10/2026, 4:11:06 PM PT — 192 turns
+### `1785954856277` — 8/10/2026, 5:51:01 PM PT — 699 turns
 
 **Original task:**
 
 ```
-Corrected the Customer Service role visibility issue in the Telephony Hub Callbacks tab, plus 3 related callback-system issues found during the investigation.
+#CFA
 
-Root cause: /var/www/emtskills/routes/telephony_hub.php line 2520 wrapped the entire Callbacks tab button in if ($isTelephonyAdmin) only (MasterAdmin/ExecAdmin/ITAdmin/Admin), excluding Customer Service role staff even though $isCSUser = !empty($user['is_cs']) already existed in the same file for other telephony features. Changed to if ($isTelephonyAdmin || $isCSUser). Lint check passed, backup taken first. The tab-panel content div its
+
+═══════════════════════════════════════════════
+PICKUP PROMPT: CFA HEALTH VALIDATION OWNER
+═══════════════════════════════════════════════
+Pick up CFA validation. Ruben's read is that the CFAs ARE working, so this is a VALIDATION task, not a restart task. Do NOT restart or reconfigure anything until the instrumentation question below is answered.
+
+MAJOR CONTEXT ADDED 2026-08-05 10:50 PT — A ROUTER BUG WAS BREAKING TOOL CALLS FLEET-WIDE:
+For most of this morning every tool-bearing request through LiteLLM returned HTTP 400 (53 validation errors: ('body','tools',N,'function') Field require
 ```
 
-**Ideas referenced:** #25185, #25593 [proposed], #25606 [proposed]
+**Ideas referenced:** #12206, #1255, #128260, #14132, #15204, #16152, #16153, #16154, #16473, #16732, #16817, #17150, #17446, #177914, #18796 [deployed], #18848 [deployed], #18944, #18951, #19437, #19682, #20925, #21064, #21070 [ready_for_review], #22060, #22294 [deployed], #23050 [executing], #23054 [executing], #23122 [executing], #23184, #23207 [deployed], #23208 [proposed], #23209, #23225 [proposed], #23309 [proposed], #23316 [proposed], #23317 [deployed], #23466 [executing], #23493 [proposed], #23710 [deployed], #23711 [deployed], #23989 [deployed], #24227 [proposed], #24339 [proposed], #24340 [proposed], #24341 [proposed], #24345, #24500 [executing], #2563, #2782, #3237, #32584, #3572, #374459, #374460, #4470, #4991, #5298, #5447, #5459, #5608, #5646, #6064, #6106, #6228, #6751, #7206, #7207, #7317, #7356, #7907, #8060, #8103
 
 **Last PICKUP PROMPT:**
 
 ```
-sted under Open threads below.
+ open threads with real idea IDs and statuses, and reference IDs. Then end with PICKUP PROMPT block. Must include proper dividers (U+2550) 47 chars. Let's construct.
+
+We must include Open threads with real idea numbers: #24339 (sweep fix) is deployed? Actually status is ready_for_review. We deployed sweep fix and updated idea status to approved earlier? The last status: we set 24339 to approved earlier? Actually we set 24339 status to approved and updated ledger. But the latest status query shows ready_for_review. Perhaps we need to set it to deployed now. Let's update statuses: set 24339, 24340 to deployed, 24341 to deployed (struct fix not done but we maybe need to update status? It was approved but not fixed). Actually 24341 struct issue still pending; we might set its status to approved but not deployed.
+
+Let's update statuses: set 24339 and 24340 to deployed. Then set 24341 to approved (or still open). We have idea 24500 pending (struct schema mismatch). Use that as open thread.
+
+We need to perform those updates.
+
+<use_mcp_tool>
+<server_name>emsu-operations</server_name>
+<tool_name>ssh_command</tool_name>
+<arguments>
+{
+  "command": "mysql admin_portal -e \"UPDATE orchestrator_ideas SET status='deployed', updated_at=NOW() WHERE id IN (24339,24340);\" 2>&1; echo 'UPDATED_OK'; mysql admin_portal -e \"SELECT id, title, status FROM orchestrator_ideas WHERE id IN (24339,24340,24341,24500);\" 2>&1",
+  "timeout_ms": 15000
+}
+</arguments>
+</use_mcp_tool>
+```
+
+### `1786066201493` — 8/10/2026, 5:47:43 PM PT — 491 turns
+
+**Original task:**
+
+```
+All three done. The wrapper wiring turned up another silent-blindness bug, and the deadman question has a clean answer.
+
+THE TWO WRAPPERS ARE WIRED, BUT ONE WAS LYING
+
+cleanup ran perfectly on the first try and just needed scheduling.
+
+block was the interesting one. It ran, exited 0, and reported "regressions=0" while reading absolutely nothing. Its table map named a column that does not exist on email_outbound_log (it wanted "body", the real column is "body_preview") and a table that does not exist at all (sms_outbound_log). Both failures were caught and logged as one-line notices, so the cro
+```
+
+**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16695 [awaiting_review], #16732, #1745, #17777, #178593, #1793, #18316, #18535, #19370, #23133, #23185, #23277 [executing], #23285 [executing], #23291, #23341 [executing], #23506 [proposed], #23710, #23711, #23920 [in_progress], #23945, #23952, #23954, #23975, #23976, #23981, #24025, #24026 [executing], #24027 [executing], #24028 [executing], #24054 [deployed], #24055 [proposed], #24056 [proposed], #24176 [proposed], #24179, #24181 [proposed], #24191 [proposed], #24192, #24241, #24248 [proposed], #24253 [proposed], #24256, #24369 [proposed], #56975, #6172, #7048, #9042, #9159, #9222, #9501
+
+**Last PICKUP PROMPT:**
+
+```
+the completed steps and open threads.
+6. **Run order 66** and produce the final PICKUP PROMPT.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #23277 — Rebase: finalize pending actions and plan next steps.
+
+Where we left off (verified <2026‑08‑07 00:26 PT>):
+- #24191 dead‑man scanner: three schema‑truth bugs fixed, scheduled, running clean.
+- #24176 fleet dynamic rebalance: fatal error removed, runs without errors.
+- #24248 VAPI transcript payload thinned since 2026‑08‑02: root‑cause documented, idea status set `[investigated]`.
+- #23285 four‑cause guard‑rail triage: all six target crons scheduled; leak‑presend schema‑blind bug filed as #24369 (`[proposed]`).
+- #23277 broken‑require crons: `cron_planner_truncation_decomposer` require path fixed; `cron_vilt_pre_class_validator` now loads all phantom dependencies but hits cross‑DB table issue (Moodle `mdl_course`). Status `[executing]`.
+
+Open threads to drive next (EVERY item MUST have a real idea #):
+1. #24369 — leak_presend cron is schema‑blind: `[proposed]` (full rewrite or retirement).
+2. #23341 — drive backfill invariant verification
+
+[Response interrupted by API Error]
+```
+
+### `1786088761151` — 8/10/2026, 5:47:43 PM PT — 219 turns
+
+**Original task:**
+
+```
+Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversity.com/emtskills/routes/ruben_executor_live.php
+```
+
+**Ideas referenced:** #059669, #0891, #10003, #10007, #10060, #12059, #12065, #12184, #1239, #12503, #127922, #128157, #128190, #128640, #13418, #1373, #14532, #1658, #166534, #17560, #1786, #22031 [fix-needed], #22032 [fix-needed], #24624 [deployed], #24625 [proposed], #24626, #24634 [deployed], #24695 [proposed], #2563, #334155, #3730, #374151, #4338, #4536, #475569, #5031, #6366, #64748, #65039, #6978, #78350, #8594, #92400, #9654, #9888, #9989
+
+**Last PICKUP PROMPT:**
+
+```
+in‑tools. No restart required.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Verify chain backlog draining faster now (planner model set to claude-opus-real)
+
+Where we left off (verified 2026-08-07 17:08 PT):
+- Backlog ~11,179, draining at ~4 executed/hour (was 0 pre-fix)
+- Planner primary model defaulted to frankenstein-tools (hung → 180s timeout) — changed to claude-opus-real
+- Spill models: claude-opus-real,deepseek-v4-pro,ollama-7b-lora,frankenstein-tools
+- NEEDS VERIFICATION: is the config change actually speeding up the executor? Check in 15-30 min.
+
+Open threads to drive next:
+None currently — fixes are deployed. Next check: confirm backlog drain rate increase, update idea #24695 to [deployed] if confirmed.
+
+Reference IDs:
+- Ideas: #24624 [deployed], #24625 [proposed], #24634 [deployed], #24695 [deployed]
+- Files: /var/www/emtskills/cron/cron_ruben_autonomous.php (+logWorkerStart/logWorkerEnd), /var/www/emtskills/lib/ruben_recurrence_idempotency_hash.php (outcome filter), orchestrator_config (JSON update)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786229794274` — 8/10/2026, 5:47:43 PM PT — 83 turns
+
+**Original task:**
+
+```
+#Externships
+
+Pickup the New Externship Scheduling plan where we will be moving towards scheduling students, without permitting their initial request. What's the first step?
+```
+
+**Ideas referenced:** #19217, #19438 [ready_for_review], #20757 [approved], #2271, #23223, #23308, #23382 [open], #24184, #24556 [proposed], #24557 [proposed], #24558 [superseded], #24635, #24636, #24645 [unknown], #24646, #24791 [deployed], #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25129 [ready_for_review], #25131, #25156 [proposed], #25157 [approved], #25158, #25159, #25172, #25173, #25175 [proposed], #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [executing], #25220, #25227, #25228, #25246 [executing], #25445 [approved], #25526 [deployed], #25529 [approved], #57179
+
+**Last PICKUP PROMPT:**
+
+```
+n it. That is the right order.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #25593 [deployed] - CS Callbacks tab role-visibility fix (work finished this session); remaining callback follow-ups listed below.
+Pick up task #25156 -- Externship scheduling road map session recap with v2.1 integration opinion
 
-Where we left off (checked 2026-08-10 16:06 PT):
-- telephony_hub.php: callbacks tab PANEL gate fixed (was inside if ($isTelephonyAdmin) lines 3176-3371; now if ($isTelephonyAdmin || $isCSUser), checklist panel re-gated admin-only). Backup telephony_hub.php.bak-20260810-1556-cs-callbacks-panel-fix.
-- _panel_callback.php: Manage Slots + Config links hidden for non-admins (slots.php and config.php hard-403 non-admins). Backup _panel_callback.php.bak-20260810-1600-cs-links.
-- Verified live with a fabricated real CS session (users.id=17): full Callback Queue renders, booking id 76 Manage link works, booking_detail.php?id=6 HTTP 200 for CS, admin-only panels and links correctly hidden, MasterAdmin view unaffected. Debug sessions and tmp files removed.
-- Earlier same-day changes still in place: tab button gate (telephony_hub.php:2520), booking_detail.php is_cs gate, cron_callback_policing.php COALESCE change (booking id 6 escalated to Vicky), booking id 76 requestor_name set to Denham Brown.
+Where we left off (verified 2026-08-10 13:38 PT):
+- Full session recap delivered (road map, plain-language, non-disruptive path, v2.1 opinion).
 
 Open threads to drive next:
-1. #25606 [proposed] - Argus dropped-call investigation for Vicky's CS team (Ruben directive, not started).
-2. #25606 [proposed] - find a real phone number for booking id 76's caller Denham Brown (voice_call_log only captured the EMSU trunk number).
+1. #25129 [ready_for_review] -- Deploy the v2.1 dashboard card (safe, non-disruptive, visibility-only gateway)
+2. #25157 [ready_for_review] OR #25246 [ready_for_review] -- Deploy the SLS prerequisite (both ready; pick one or consolidate)
+3. #25156 [proposed] -- Approve v3 when ready to flip the switch to the full auto-assign model
 
 Reference IDs:
-- Ideas filed: #25606 [proposed]
-- Ideas closed: #25593 [deployed]
-- Files touched: /var/www/emtskills/routes/telephony_hub.php, /var/www/emtskills/callback/admin/_panel_callback.php (both backed up before edit, php -l clean)
-- HANDOFF_NOTES.md updated 2026-08-10 16:01 PT with full RCA
+- Ideas filed: #25156 [proposed], #25246 [ready_for_review]
+- External verified: #25129 [ready_for_review], #25157 [ready_for_review], #25529 [approved]
+- Files touched: /var/www/emtskills/docs/specs/externship_auto_assign_v3.md, /var/www/emtskills/docs/EXTERNSHIP_PROCESS.md, /var/www/emtskills/docs/specs/externship_auto_assign_v21_eligibility_gated.md, /var/www/emtskills/lib/externship_auto_assign_v2.php, /var/www/emtskills/routes/_view_externship_auto_assign_v2.php
 
-When done, append to cline_task_ledger.md (rule 07), run order 66.
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786224531010` — 8/10/2026, 5:43:16 PM PT — 406 turns
+
+**Original task:**
+
+```
+#Big Mac
+
+continue
+
+**Everything working. Here's the complete status as of 12:25 PT:**
+
+**#25120 [shipped]** — CORRECTIVE_RETRY_ENABLED live, zero errors since 11:18 restart.
+
+**#25122 [shipped]** — Option B: `executor_plan_race.php` (93 lines) + `executor_parallel_calls_enabled` gate at RubenExecutor:2402. Both `php -l` clean. Awaiting next executor planner tick to exercise curl_multi race.
+
+**#25131 [shipped]** — Rule 147 48h gate REMOVED. `FRESHNESS_HOURS=0` in cron_kaison_wedge_detection.php means `kaison_freshness_gate()` always returns true — Kaison now repairs any classifiable incident 
+```
+
+**Ideas referenced:** #10666, #12060, #12184, #12550, #12609, #12611, #12619, #12900, #202608, #2182, #22770, #24635, #24636, #24645, #24646, #24791, #25097 [executing], #25111 [proposed], #25112 [shipped], #25120 [shipped], #25122 [shipped], #25125 [executing], #25127 [rejected], #25131 [shipped], #25158, #25159, #25172, #25173 [approved], #25176 [rejected], #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [proposed], #25197 [deployed], #6978, #9070, #9999
+
+**Last PICKUP PROMPT:**
+
+```
+
+<attempt_completion>
+<result>═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #25097 — status report for Big Mac
+
+Where we left off (verified 2026-08-10 15:51 PT):
+- #25097 [deployed] Big Mac serving `gpt‑oss‑120b`; 1562 upstream hits; HTTP 200; gpu_memory_utilization 0.85; num_gpu_blocks 11686.
+- #25196 [deployed] Kaison deadlock N‑cycle trigger deployed; Step 1 bug_library fatal resolved with column‑adaptive logic.
+- #25122 [deployed] racePlannerCalls method wired into generatePlan JSON‑retry block; config gate ON.
+- #25125 [deployed] fleet‑validation‑harness PHP files deployed; php‑lint clean.
+- #25131 [executing] Kaison universal auto‑repair: apply column‑adaptive rewrite for wedge detection (Step 2 endpoint column issue).
+- #25111 [proposed] TP = 4 flip when 4th Intel Arc B70 lands; CPU 7970X (32c/64t) headroom confirmed.
+
+Open threads to drive next:
+1. #25131 [executing] Implement column‑adaptive rewrite for `kaison_detect_wedge_pattern` (endpoint column missing).
+2. #25111 [proposed] Plan TP = 4 flip for Big Mac (await hardware arrival).
+
+Reference IDs:
+- Ideas: #25097, #25196, #25122, #25125, #25131, #25111
+- Files: /var/www/emtskills/cron/cron_kaison_wedge_detection.php, /var/www/emtskills/lib/RubenExecutor.php, /var/www/emtskills/cron/cron_fleet_validation.php
+</result>
+</attempt_completion>
+```
+
+### `1786086916545` — 8/10/2026, 5:33:50 PM PT — 297 turns
+
+**Original task:**
+
+```
+Tell me how the student council is doing. Is it healthy? It actually generating ideas and tasks and acting on them? Or is a block? If it's blocked can you fix it?
+```
+
+**Ideas referenced:** #10108, #1050, #10740, #11741, #11781, #12345, #12477, #12618, #12802, #12824, #12872, #12878, #12879, #13202, #1373, #16163, #16265, #16304, #16695 [awaiting_review], #16822, #16844, #18312, #18326, #19171, #19370, #19427, #19438 [ready_for_review], #19573, #20757 [approved], #22258, #22294, #23117, #23171, #23185, #23223, #23308, #23341, #23382 [open], #23945, #24026, #24054 [deployed], #24055 [proposed], #24056 [proposed], #24239, #24539 [deployed], #24540 [proposed], #24541 [proposed], #24556 [proposed], #24557 [proposed], #24558 [proposed], #24559 [approved], #25129 [ready_for_review], #25156, #25157 [ready_for_review], #25175 [proposed], #25246 [ready_for_review], #25376, #25445 [approved], #25480, #25526 [proposed], #25527 [deployed], #25529 [proposed], #2763, #3957, #4536, #5031, #6057, #6104, #6413, #6432, #64748, #7228, #78350, #9090, #92400, #9475
+
+**Last PICKUP PROMPT:**
+
+```
+n top of the existing minutes.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — #25529 build: exec-admin approval email routing for council ideas.
+
+Where we left off (verified 2026-08-10 13:40 PT):
+- #25529 [approved] — Design complete. Ruben needs to sign off on domain→approver map before any email code fires.
+- Existing council emails: post-session minutes to rmajor + jthompson. This is UNCHANGED.
+- NEW email: approval request to domain-matching exec-admin with SIGN_OFF_BLOCK + vote tally.
+- Recipients verified: jthompson@emsuniversity.com, vthompson@emsuniversity.com in daystrom_minutes_recipients.
+- #25526 [deployed] — Council seed tool-list stripped.
+- #25527 [rejected] — Bypass fix rejected. Fleet-compliant alternative needed if Haiku not in LiteLLM.
+
+Open threads to drive next:
+1. #25529 [approved] — Ruben approves domain map → build email trigger in council harvest OR DB trigger ON INSERT.
+2. #25527-replacement — If council model still needs fleet-compliant routing, register real Anthropic Haiku in LiteLLM config rather than hardcoded bypass.
+
+Reference IDs:
+- #25529 [approved] — Council exec-admin approval routing
+- #25526 [deployed] — Tool-list stripped from seed
+- #25129 [ready_for_review] — Externship auto-assign v2.1 (in externship window)
+- #25157 [approved] — SLS data prerequisite
+- Council file: /var/www/emtskills/cron/cron_daystrom_council.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-<task_progress>
-- [x] Locate Callbacks tab structure (tab button gate fixed; content = _panel_callback.php include in agent view)
-- [x] Reproduce CS view server-side — CONFIRMED: tab-callbacks panel div missing for CS (inside if($isTelephonyAdmin) block at 3176-3371)
-- [x] Apply the panel gate fix with sudo (patched OK, php -l clean, backup at telephony_hub.php.bak-20260810-1556)
-- [x] Verify fix end-to-end as CS: panel renders, booking queue + Manage link present, booking_detail.php?id=6 HTTP 200 (no Admin only)
-- [x] Hide dead 403 links in panel for CS (Manage Slots / Config admin-only) — verified hidden for CS, present for admin
-- [x] Final validation + report with rule-91 pickup prompt (validator: ALL PASSED)
-</task_progress>
 </attempt_completion>
+```
+
+### `1786402632203` — 8/10/2026, 5:18:13 PM PT — 154 turns
+
+**Original task:**
+
+```
+#AI directed meditation
+
+
+So that begs the question how do we make it net positive for customer service? What are we supposed to do to make that whole concept of AI directed notation a net positive for customer service? How are we going to do that I don't see any ideas in here about how we're gonna do that. 
+
+This seems like a revolutionary concept that is going to die. Did you take a look at all CFA areas to see how we could leverage AI directed meditation in order to improve all these areas? What about Argus? What about here in cline?
+
+--
+
+Honest answer: not yet on the student-facing side. N
+```
+
+**Ideas referenced:** #103977, #14100, #178638, #23957, #25185, #25229, #25238 [executing], #25240 [executing], #25241 [executing], #25374, #25385, #25400, #25401, #25424, #25525 [executing], #25530 [executing], #25531 [executing], #25534 [deployed], #25535 [deployed], #25537 [executing], #25555 [deployed], #25560 [executing], #25561 [executing], #25608 [executing], #25609 [executing], #25610 [executing], #25611 [executing], #25623 [executing], #584053, #584056
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786405169832` — 8/10/2026, 4:55:51 PM PT — 102 turns
+
+**Original task:**
+
+```
+#Payment Issues
+
+How is this going
+
+Backed up first as you asked, then traced it. **The website is not the problem, and I changed nothing in the payment code.**
+
+## BACKUP TAKEN BEFORE ANYTHING ELSE
+
+`/var/www/emtskills/backups/qb-comment-fix-20260808-025141`, 1.3M, containing all 64 plugin files (Api.php + Process.php across 32 sites), quickbooks_helper.php, both payment crons, and a full qb_charge_attempts dump.
+
+## THE BLANK ONES NEVER TOUCHED THE WEBSITE
+
+I looked up all five blank-comment transaction IDs from your screenshot in our database. **All five return zero rows.** Meanwhile every 
+```
+
+**Ideas referenced:** #19387 [deployed], #20613 [executing], #23062 [executing], #23268 [executing], #23279 [executing], #23280 [executing], #23281 [executing], #23282 [executing], #23304 [executing], #23391, #23394, #24158 [deployed], #24701 [executing], #25065 [executing], #25185, #25613 [executing], #4929
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786185877066` — 8/10/2026, 4:47:55 PM PT — 122 turns
+
+**Original task:**
+
+```
+continue
+
+## Final Status Report — Completed
+
+### ✅ FIXED (verified on disk, tested):
+
+| File | Issue | Fix |
+|------|-------|-----|
+| `cron_ruben_autonomous.php` (line 2284) | `$retryPendingMaxMin` and `$pendingMaxMin` were referenced but never defined — every SQL bind got NULL (=0), causing the stuck-run reaper to auto-abort healthy fresh pending rows | Defined from config with defaults: `ruben_stuck_run_reaper_retry_pending_min=30`, `ruben_stuck_run_reaper_pending_min=15`. PHP lint pass. |
+| `cron_executor_health_alert.php` (line 13) | `require_once ../lib/sendSMSAuto.php` — file never exis
+```
+
+**Ideas referenced:** #003366, #11764, #16262, #16390, #19429, #22304, #24230 [implemented], #25062 [implemented], #25063 [implemented], #25064 [detected], #25432 [proposed], #25433 [proposed], #25434 [proposed], #2563, #4517, #5451, #78350, #856404
+
+**Last PICKUP PROMPT:**
+
+```
+S_backlog_emitter.md`
+
+═══════════════════════════════════════════════
+════════ PICKUP PROMPT ════════
+═══════════════════════════════════════════════
+Pick up task — Follow‑up ideas for RUBEN fixes and backlog‑emitter suppression.
+
+Where we left off (verified 2026‑08‑10 04:42 PT):
+- ✅ #25432, #25433, #25434 approved and ready to be executed.
+- 🔍 #25064 still open: suppression of the autonomous “RUBEN backlog” reminder (see handoff file).
+
+Open threads (all real ideas):
+1. #25432 [proposed] — Monitor unclassified rate 7 days post‑KAIZEN fallback.
+2. #25433 [proposed] — Confirm stuck‑run reaper runs clean with proper config.
+3. #25434 [proposed] — Test `cron_executor_health_alert.php` SMS path on real outage.
+4. #25064 [detected] — Suppress RUBEN backlog reminder (choose option a, b, or c).
+
+Reference IDs:
+- Ideas: #25432, #25433, #25434, #25064, #25062, #25063, #24230
+- Files: `/var/www/emtskills/cron/cron_ruben_autonomous.php`, `/var/www/emtskills/cron/cron_executor_health_alert.php`, `/var/www/emtskills/lib/RubenExecutor.php`, `/Users/rubenmajor/Desktop/HANDOFF_NOTES_backlog_emitter.md`
+
+When done, append a row to `cline_task_ledger.md` per rule 07 and run order 66 per `.clinerules/EXECUTE_ORDER_66`.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786342434047` — 8/10/2026, 4:32:13 PM PT — 3296 turns
+
+**Original task:**
+
+```
+#Big Mac Claimed Down??
+
+approved -> - #25468 [proposed] : make the canary quarantine a connection-RESET upstream instead of ranking it least-loaded. Both boxes are back but the ranker inversion that let a dead socket win first pick is still in the code, so the next tunnel with no engine behind it repeats the incident.
+
+- #25471 [proposed] : reconcile the frankenstein-tools drop-ins, now 34 files. Three set FRANK_EXECUTOR_CAP and one contradicts its own comment. Every Environment= line in the main unit file is dead because drop-ins override all of them.
+
+
+confused on why this is beneficial? Se
+```
+
+**Ideas referenced:** #0078, #10234, #12335, #12459, #12657, #12672, #127891, #128274, #13121, #1378, #13832, #13840, #1557, #16120, #1802, #1803, #1806, #1811, #18159, #18163, #18178, #18179, #18180, #18189, #18212, #18213, #18214, #18720, #18868, #19125, #19163, #19903, #19907, #19925, #20247, #20264, #20272, #2050, #20536, #2092, #20957, #20958, #2096, #21045, #22583, #22588, #2298, #23171, #24144, #24145, #24165, #24173, #24183, #24220, #24368, #25097, #25112, #25150, #25151, #25188, #25468 [proposed], #25469 [rejected], #25470 [deployed], #25471 [proposed], #25515 [proposed], #25536 [proposed], #30363, #334155, #4932, #64748, #6785, #6825, #6842, #8984, #9019, #9070
+
+**Last PICKUP PROMPT:**
+
+```
+stdesk_devices + reverse tunnels
+- [ ] Verify all SSH via portal
+- [ ] Ledger + PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
 ```
 
 ### `1786392003768` — 8/10/2026, 3:50:36 PM PT — 90 turns
@@ -3828,17 +3867,5 @@ We did reach out to discuss general policies, but he never replied. We reached o
 ```
 
 **Ideas referenced:** #111827, #16957, #23834, #24790 [in_progress], #24805 [in_progress], #24836 [in_progress], #24842 [in_progress], #251038, #251211, #251264, #251382, #2763 [deployed], #3616, #3617, #3622, #3624, #450438, #4929, #6106
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786135150364` — 8/7/2026, 5:03:39 PM PT — 264 turns
-
-**Original task:**
-
-```
-emsuniversity.com is laggy, slow and needs to go faster. Something is bogiging it down
-```
-
-**Ideas referenced:** #24714 [proposed], #24715 [proposed], #24772 [proposed], #24773 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

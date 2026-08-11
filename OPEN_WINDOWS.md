@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/11/2026, 5:56:18 AM PT | window: last 72h | 85 tasks | index total 622 (parsed 0, cached 622)
+Generated: 8/11/2026, 6:56:19 AM PT | window: last 72h | 82 tasks | index total 622 (parsed 0, cached 622)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -92,9 +92,6 @@ Generated: 8/11/2026, 5:56:18 AM PT | window: last 72h | 85 tasks | index total 
 | `1786204633633` | 8/8/2026, 10:07:03 AM | 226 | 975KB | #Big Mac |
 | `1786146213022` | 8/8/2026, 9:30:09 AM | 94 | 589KB | Tokens from admin_profile.php page are not working. Can you fix this: https://emsuniversit |
 | `1786200908875` | 8/8/2026, 8:46:47 AM | 150 | 254KB | #big mac  |
-| `1786172805164` | 8/8/2026, 6:27:54 AM | 650 | 19969KB | We have brought up a new LLM for 120B usage, the name is Big Mac, it lives on the same net |
-| `1786185141628` | 8/8/2026, 6:06:52 AM | 96 | 276KB | Pick up idea 25076, the idea-delivery watchdog. First run get_idea_progress(25076); if bui |
-| `1786184812790` | 8/8/2026, 5:58:29 AM | 124 | 2065KB | Rule 297 was strengthened today (scope gate for failure counts + "a 297 request includes f |
 
 ---
 
@@ -3217,137 +3214,3 @@ Big Mac 120B LLM onboarding: SSH access established, vLLM PP=3 gpt-oss-120b SERV
 **Ideas referenced:** #12247, #12262, #12477, #13108, #16120, #16844, #2271 [deployed], #2272, #25097 [executing], #25111 [proposed], #25112 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786172805164` — 8/8/2026, 6:27:54 AM PT — 650 turns
-
-**Original task:**
-
-```
-We have brought up a new LLM for 120B usage, the name is Big Mac, it lives on the same network as WOPR in San Diego. Here is the AnyDesk informaiton for it. password is qefru3-cocnyf-xuxnoP. I need you to get SSH access to it and then begin running commands to get it setup. It has 3 ARC B70s right now (similar to artemis build less 1), it will hold another ARC B70 tomororw, but we need to put it in the LLM ppol now. Can you get this going, consult the Artemis Runbook, look at Intel as needed and the Runbook we created for Artemis to help move this along?
-```
-
-**Ideas referenced:** #0000, #10108, #10740, #1130, #1131, #11741, #11781, #11850, #12299, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12615, #12618, #12619, #12824, #12872, #12878, #13202, #1379 [resolved], #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16588, #16771, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1731, #1732, #1734, #1737, #1739, #1744, #1746, #1747, #177891, #1779, #1798, #1828, #18312, #18320, #18326, #1833, #1836, #1837, #1839, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21004, #21038, #2123 [resolved], #2127, #2139 [investigating], #2150 [investigating], #2151 [investigating], #2168, #23171, #2333, #24975 [executing], #24978 [proposed], #25075 [executing], #25097 [executing], #3587, #37030, #46641, #4671, #4672, #4673, #5920, #7142, #7149, #8902
-
-**Last PICKUP PROMPT:**
-
-```
-match, DB status in_progress).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25097 [executing] — Big Mac 120B LLM-pool wiring + verification (Cline window compressed 2026-08-08 06:14 PT at the rule-119 threshold).
-
-Where we left off (verified 2026-08-08 06:23 PT):
-- Big Mac is UP and GENERATING gpt-oss-120b. Verified live 06:11 PT: systemctl bigmac-vllm = active, /v1/models returns gpt-oss-120b, load ~0.1 idle-healthy.
-- Access: from WOPR ssh -i /home/emsuserver/.ssh/id_ed25519 emsu-big-mac@192.168.1.208 (LAN, same Dream Machine SE as WOPR) or emsu-big-mac@10.100.0.19 (WireGuard). sudo password qefru3-cocnyf-xuxnoP. AnyDesk 1 313 098 325.
-- Stack: Docker intel/llm-scaler-vllm:0.21.0-b1, 3x Arc B70 32GB, PP=3 + Ray (TP=3 invalid — 64 attn heads; TP=2 OOM), ZE_AFFINITY_MASK=0,1,2, mxfp4, max_model_len 32768, KV 595,531 tokens, 18.17x concurrency, 8.57 tok/s probe (short probe undercounts ~2x). Start script /opt/bigmac-vllm-start.sh, unit bigmac-vllm.service.
-- TWO fixes already applied on-box (do NOT redo): (1) tiktoken vocab /opt/bigmac/tiktoken_cache mounted /tc + TIKTOKEN_RS_CACHE_DIR=/tc (harmony crash fix); (2) CCL_ZE_IPC_EXCHANGE=pidfd + --cap-add SYS_PTRACE (PP pt2pt oneCCL fix).
-- Registry serving_endpoints[] entry bigmac-gpt-oss-120b (serves_via 10.100.0.19:8000) ALREADY in /etc/litellm/frankenstein_registry.yaml.
-- frankenstein-llm pool_members = [glm-5.2-local, artemis-gpt-oss-120b, julia-120b]; Big Mac NOT yet routable.
-- #25097 [executing] filed + approved 06:22 PT with the full recipe in its description (identity-echo verified).
-
-Open threads to drive next (IN ORDER, ~5 tool calls):
-1. #25097 [executing] — Wire Big Mac into the pool: text-anchored patch of /etc/litellm/frankenstein_registry.yaml (backup first; insert bigmac-120b models[] block endpoint 10.100.0.19:8000 probe vllm role body served_ctx 131072 supports_tools false BEFORE the served_ctx_default line; add '  - bigmac-120b' to frankenstein-llm pool_members after '  - julia-120b'), yaml-validate, restart ONLY via sudo /usr/local/bin/litellm-safe-restart.sh (rule 280). Full patch recipe in the #25097 [executing] description.
-2. #25097 [executing] — Verify _120b_members includes bigmac-120b [10.100.0.19, 8000] (grep /tmp/emsu_router_registry_state.json, NOT the huge registry dump) + curl 10.100.0.19:8000/v1/models from WOPR.
-3. #25097 [executing] — Bug library record (rule 305 keyword-rich): oneCCL PP pt2pt sockets unsupported → CCL_ZE_IPC_EXCHANGE=pidfd + docker --cap-add SYS_PTRACE; plus tiktoken vocab pre-stage harmony fix.
-4. #25097 [executing] — Update HANDOFF_NOTES.md (Big Mac specs, fixes, pool wiring, TP=4 plan).
-5. (human-only decision, no idea) — 2026-08-09 when 4th B70 lands: flip /opt/bigmac-vllm-start.sh to ZE_AFFINITY_MASK=0,1,2,3 + --tensor-parallel-size 4, drop --pipeline-parallel-size, restart, re-verify, update registry notes (recipe also in #25097 [executing] step 5).
-
-Reference IDs:
-- Ideas filed: #25097 [executing] (Big Mac pool wiring + TP=4 flip tracking; approved this session, identity-echo verified)
-- Files touched: /opt/bigmac-vllm-start.sh + /etc/systemd/system/bigmac-vllm.service (Big Mac), /etc/litellm/frankenstein_registry.yaml serving_endpoints (WOPR), /tmp/bigmac-vllm-start.sh + /tmp/fix_bigmac_ptrace2.sh (WOPR staging)
-- Artemis runbook pattern followed: Docker intel XPU image + systemd unit + WireGuard mesh mirrors artemis-gpt-oss-120b (10.100.0.5:8000).
-
-When done, append to cline_task_ledger.md (ru
-```
-
-### `1786185141628` — 8/8/2026, 6:06:52 AM PT — 96 turns
-
-**Original task:**
-
-```
-Pick up idea 25076, the idea-delivery watchdog. First run get_idea_progress(25076); if built, verify and stop. Otherwise hand-ship per rule 267 GATE C: (1) Create /var/www/emtskills/routes/cron_idea_delivery_watchdog.php: scan orchestrator_ideas for [a] status=in_progress AND dev_stage=impl_failed (requeue the build ONCE by resetting dev_stage, track retry count in a new column or notes field; second failure = mark blocked + alert), [b] approved/in_progress AND dev_stage=idle for >2h (nudge, alert at 6h), [c] proposed AND created_at older than 24h (digest entry). (2) Digest output: insert one 
-```
-
-**Ideas referenced:** #14532, #16168, #166534, #18944, #18951, #25076 [completed], #25094 [queued], #3988, #5918, #6104, #78350, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-` and reconciled as completed.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25076 [deployed] - Idea-delivery watchdog: no idea can silently die
-
-Where we left off (verified 2026-08-08 06:05 PT):
-- /var/www/emtskills/routes/cron_idea_delivery_watchdog.php deployed, php -l clean, backed up
-- /etc/cron.d/emsu-idea-watchdog active, every 30 min, using /opt/plesk/php/8.3/bin/php
-- Idea #25076 [deployed] reconciled: status=completed, dev_stage=ready_for_review, complete=true (verified via get_idea_progress)
-- Manual test run at 2026-08-08 04:03:41 PT produced idea_delivery_digest rows 5352083-5352084 (severity=high) + watchdog log entries in orchestrator_event_log
-
-Scope of what shipped (all verified on disk <2026-08-08):
-- [a] impl_failed auto-retry ONCE: reset dev_stage, bump impl_failed_count, log. Second failure: mark blocked + email rmajor.
-- [b] approved/in_progress AND dev_stage=idle: nudge >2h, alert >6h via email + log.
-- [c] proposed older than 24h: digest entries into orchestrator_event_log (severity=high) + one email to rmajor@emsuniversity.com, each stuck idea rendered as a copy-prompt (id, title, first 300 chars, hand-ship per rule 267 GATE C).
-- Weekly ideas_delivered_pct KPI (7-day window) appended to digest.
-
-Open threads to drive next:
-1. #25094 [deployed] - cron PHP path fix: /usr/bin/php to /opt/plesk/php/8.3/bin/php. Applied and verified via cat /etc/cron.d/emsu-idea-watchdog; idea #25094 [deployed] reconciled as completed.
-
-Reference IDs:
-- Ideas filed: #25094 [deployed]
-- Files touched: /var/www/emtskills/routes/cron_idea_delivery_watchdog.php, /etc/cron.d/emsu-idea-watchdog
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-<command>ssh -p 2222 emsuserver@127.0.0.1 "cat /etc/cron.d/emsu-idea-watchdog && echo '---' && /opt/plesk/php/8.3/bin/php -l /var/www/emtskills/routes/cron_idea_delivery_watchdog.php"</command>
-</attempt_completion>
-```
-
-### `1786184812790` — 8/8/2026, 5:58:29 AM PT — 124 turns
-
-**Original task:**
-
-```
-Rule 297 was strengthened today (scope gate for failure counts + "a 297 request includes fixing the causal rule"), see ~/Documents/Cline/Rules/297-population-anomaly-classify-before-alarming.md via clinerules_lookup(297). That file only reaches Cline windows. Propagate the SCOPE GATE to the server-side agent surfaces that also report failure counts: (1) grep -rn "success=0\|status='failed'" /var/www/emtskills/routes/cron_argus_task_worker.php /var/www/emtskills/routes/alltastic_api.php and any Argus reporting/digest code; wherever a failure count is computed for a human, widen it to all no-ans
-```
-
-**Ideas referenced:** #0891, #111827, #13553, #16178, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19682, #2006, #20346, #20547, #20957, #20958, #21125, #21126, #21262, #22511, #22583, #23468, #23477, #23483, #23489, #23506, #23852, #23920, #23952, #24766, #24897, #24900, #25047, #25058, #25092 [proposed], #25093 [proposed], #334155, #374151, #4338, #6112, #6172, #64748, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-in_portal.orchestrator_ideas`.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Rule 297 propagation to server-side surfaces.
-
-Where we left off (verified 2026-08-08T04:03:57 PT):
-- Rule 297 strengthened text applied to 3 PHP files + docs/specs mirror
-- alltastic_api.php: `failure_count` + backward-compat `error_count` alias + `failure_scope_note` [deployed, php -l passed]
-- argus_terminal.php: header "Failures (7d)" with tooltip [deployed, php -l passed]
-- chatbot_tools.php: `denominator_scope_note` to prevent LLM quoting bare X-out-of-Y [deployed, php -l passed]
-- docs/specs/297-population-anomaly-classify-before-alarming.md: 9961 bytes [deployed]
-
-Open threads to drive next:
-1. #25092 [proposed] — Live-test rule 297 scope labels via CFA/FrankenDoctor: Trigger a live Argus terminal + team_usage endpoint call through a CFA agent window to confirm `failure_scope_note` and `denominator_scope_note` surface fields reach the caller and appear correctly in human-facing output
-2. #25093 [proposed] — Audit all remaining argus_audit_log.success=0 bare-count surfacing: grep entire codebase for any remaining queries/code paths presenting bare counts without scope labels, widen using same pattern
-
-Reference IDs:
-- Files touched: `/var/www/emtskills/routes/alltastic_api.php`, `/var/www/emtskills/routes/argus_terminal.php`, `/var/www/emtskills/api/livechat/chatbot_tools.php`, `/var/www/emtskills/docs/specs/297-population-anomaly-classify-before-alarming.md`
-- Ideas filed: #25092, #25093
-- Source rule: `~/Documents/Cline/Rules/297-population-anomaly-classify-before-alarming.md`
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```

@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-11T22:49:49.170Z",
+ "generated_at": "2026-08-11T23:49:49.533Z",
  "counts": {
   "parsed": 4,
-  "reused": 641,
+  "reused": 642,
   "failed": 0,
-  "total": 645
+  "total": 646
  },
  "tasks": {
   "1784522296714": {
@@ -123618,19 +123618,23 @@
   },
   "1786481696854": {
    "task_id": "1786481696854",
-   "mtime": 1786488331203,
+   "mtime": 1786491660908,
    "created_at": "2026-08-11T20:54:56.854Z",
-   "last_modified": "2026-08-11T22:45:31.203Z",
-   "size_kb": 720,
-   "turn_count": 280,
+   "last_modified": "2026-08-11T23:41:00.908Z",
+   "size_kb": 821,
+   "turn_count": 334,
    "title": "#TDSHS Sunset Report\n\nSee\n\nPlease make the following corrections/updates for the TDSHS Sunset report and give back updated PDF:\n\nFalse:   They also included records from courses this Department does not regulate, and\npaperwork belonging to other divisions of our company that fall entirely outside its authority.   Were we not told or were we told something ambiguous back -> No transmittal states the measure by which compliance would be\ndetermined. We asked, in writing, for the provision and the measure. We were not told.  For this, that original request was YEARS ago with much back and forth with TDSHS staff. You need to spell that out better and highlight the Years it has been -> First, the ",
    "pickup_prompt": "09, rmajor@emsuniversity.com.\"\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1786481696, TDSHS Sunset report corrections.\n\nWhere we left off (verified 2026-08-11 14:43 PT):\n- Rebuilt PDF at sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-11.pdf, 24 pages, 466,404 bytes.\n- Company name updated throughout to \"EMS University, LLC d.b.a. EMS Universal Education\" (signature + cover).\n- #25783 [proposed] filed on the $1,248 and ORR chronology conflict.\n- #25784 [rejected] duplicate row from an MCP timeout that had already written.\n\nOpen threads to drive next:\n1. #25783 [proposed]. Pull the DSHS payment receipt and confirm which ORR the $1,248 was applied to.\n2. Send the PDF to sunset@sunset.texas.gov or hold for the third-party statement (human-only decision, no idea).\n\nReference IDs:\n- Ideas filed: #25783 [proposed], #25784 [rejected]\n- Files touched: sunset_pdf/patch_v8.py, sunset_pdf/build_sunset_pdf.py, WOPR /tmp/scan_dshs2.py\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "18676": null,
     "18690": null,
+    "25185": null,
+    "25772": "executing",
     "25783": "proposed",
     "25784": "rejected",
+    "25793": "proposed",
     "25799": "proposed",
+    "25806": "proposed",
     "178648": null,
     "600179": null,
     "623992": null
@@ -123638,19 +123642,24 @@
   },
   "1786483060620": {
    "task_id": "1786483060620",
-   "mtime": 1786487140806,
+   "mtime": 1786491101904,
    "created_at": "2026-08-11T21:17:40.620Z",
-   "last_modified": "2026-08-11T22:25:40.806Z",
-   "size_kb": 734,
-   "turn_count": 152,
+   "last_modified": "2026-08-11T23:31:41.904Z",
+   "size_kb": 754,
+   "turn_count": 162,
    "title": "Closing on a new property in Tempe 1250 East Baseline. Please analyze the 139 page inspection document emailed to me by jthompson@emsuniversity.com within the last few days and take into consideration the following that Chat GPT saw. You can do more/better:\n\nNegotiation and closing-protection items\nSeek fixed, documented protection rather than informal promises:\n    •    HVAC credit or escrow: Base it on the specialist’s suite-by-suite replacement plan, especially all R-22 and pre-2010 systems.\n    •    Life-safety/ADA contingency: Preserve the right to terminate or renegotiate if the current or intended occupancy requires sprinklers, major accessibility work, elevator modernization, or othe",
-   "pickup_prompt": "==============================\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #25796 — 1250 E. Baseline Rd. Tempe escrow due diligence.\n\nWhere we left off (verified 2026-08-11 15:24 PT):\n- Escrow-grade PDF on Desktop: /Users/rubenmajor/Desktop/1250_Baseline_Due_Diligence.pdf (6 pages, sections A-J, every finding page-cited, verified opens and content-checked). Earlier 2-page draft deleted so there is one clean file.\n- Full plain-text bullet summary delivered inline to Ruben, markdown artifacts stripped per his correction, ready to paste into an email to John Hart.\n- Validation corrected TWO errors from the first draft: elevator IS inspected and its certificate is dated/expired (p.125), and fire sprinklers ARE addressed with the finding that NONE exist (p.80, p.115).\n- New findings from the comprehensive pass: heating mode never tested on any of the 11 HVAC units (p.104), no roof/attic ventilation plus evidence of a past attic water problem (p.108), no AFCI anywhere (p.93), multiple dead lights (p.92), no main water shut-off besides the meter (p.81), no anti-siphon on hose bibs (p.82), guardrail gaps over 4 inches (p.124), shared 600A electrical service (p.89).\n- Source PDF /Users/rubenmajor/Downloads/Inspection_Report_081020260900-C.pdf; extracted text /tmp/inspection_report.txt; builder /tmp/build_full.py\n\nOpen threads to drive next:\n1. #25797 [executing] — Call Tempe Fire on whether EMSU occupancy and headcount trigger a sprinkler retrofit on 10,000 sq ft over two stories (report confirms zero sprinkler protection, p.80/115). Pull the Arizona elevator inspection record against the dated certificate (p.125).\n2. #25798 [executing] — Specialist bids: HVAC (11 units, R-22, SEER-15, heating never tested), licensed electrician (bonding p.90, GFCI p.93, dead lights p.92, no AFCI p.93), sewer camera (no cleanouts, cast iron and galvanized p.82), roofer (rafter tails p.51, caps p.75, untested internal drains p.76, parking canopy p.74), paving (p.41), structural engineer (anchor bolts p.37), elevator company. Consider Phase I ESA and asbestos survey (1980 build, p.30).\n3. #25796 [awaiting_review] — Ruben reviews the PDF, then decides whether it goes to John Hart as-is or through counsel first.\n\nReference IDs:\n- Ideas: #25796 [awaiting_review], #25797 [executing], #25798 [executing]\n- Report: EPIC Inspection #081020260900-C, Mike Elsberry AZ #38984, 480-390-8180\n- Property: 1250 E. Baseline Rd., Tempe, AZ 85283. Broker: John Hart, Commercial Properties, Inc.\n- Files touched: /Users/rubenmajor/Desktop/1250_Baseline_Due_Diligence.pdf, /tmp/build_full.py, /tmp/full_extract.py, /tmp/inspection_report.txt\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n</parameter>\n</invoke>",
+   "pickup_prompt": "ew before sending to John Hart\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #25796 — 1250 E. Baseline Rd. Tempe escrow due diligence.\n\nWhere we left off (verified 2026-08-11 16:31 PT):\n- All logging complete: HANDOFF_NOTES.md on WOPR (section: 2026-08-11 — 1250 E. Baseline Rd., Tempe AZ — escrow due diligence) + cline_task_ledger.md row appended (both verified on disk)\n- Escrow-grade PDF on Desktop: /Users/rubenmajor/Desktop/1250_Baseline_Due_Diligence.pdf (6 pages, sections A-J, every finding page-cited to EPIC report #081020260900-C)\n- Full plain-text bullet summary delivered inline to Ruben (markdown artifacts stripped)\n- Validation corrected two first-draft errors: elevator IS inspected with expired/dated certificate (p.125), and sprinklers ARE addressed — NONE exist in the building (p.80, p.115)\n- Source: /Users/rubenmajor/Downloads/Inspection_Report_081020260900-C.pdf; extracted text /tmp/inspection_report.txt\n\nOpen threads to drive next:\n1. #25797 [executing] — Call Tempe Fire: does EMSU occupancy/headcount trigger a sprinkler retrofit on 10,000 sq ft / 2 stories? Pull AZ elevator inspection record (dated certificate, p.125).\n2. #25798 [executing] — Specialist bids: HVAC (11 units, R-22, SEER-15, heating never tested), electrician (bonding p.90, GFCI p.93, dead lights p.92), sewer camera (no cleanouts p.82), roofer (rafter tails p.51, caps p.75, drains p.76, canopy p.74), paving (p.41), structural (anchors p.37), elevator co. Phase I ESA + asbestos survey (1980 build, p.30).\n3. #25796 [awaiting_review] — Ruben reviews the PDF, then decides whether it goes to John Hart as-is or through counsel first.\n\nReference IDs:\n- Ideas: #25796 [awaiting_review], #25797 [executing], #25798 [executing]\n- Report: EPIC Inspection #081020260900-C, Mike Elsberry AZ #38984, 480-390-8180\n- Property: 1250 E. Baseline Rd., Tempe, AZ 85283. Broker: John Hart, Commercial Properties, Inc.\n- Files touched: /Users/rubenmajor/Desktop/1250_Baseline_Due_Diligence.pdf, HANDOFF_NOTES.md, /Users/rubenmajor/Documents/Cline/cline_task_ledger.md, /tmp/build_full.py, /tmp/inspection_report.txt\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
+    "24989": null,
+    "25515": "proposed",
     "25796": "awaiting_review",
     "25797": "proposed",
     "25798": "proposed",
     "38984": null,
     "111111": null,
+    "178634": null,
+    "178640": null,
+    "178671": null,
     "333333": null,
     "555555": null,
     "666666": null,
@@ -123659,11 +123668,11 @@
   },
   "1786487328625": {
    "task_id": "1786487328625",
-   "mtime": 1786488566025,
+   "mtime": 1786491211271,
    "created_at": "2026-08-11T22:28:48.625Z",
-   "last_modified": "2026-08-11T22:49:26.025Z",
-   "size_kb": 499,
-   "turn_count": 156,
+   "last_modified": "2026-08-11T23:33:31.271Z",
+   "size_kb": 623,
+   "turn_count": 230,
    "title": "See this form - i think it's california skills verification form on wp forms at emsuniversity.com and/or at https://emsuniversity.com/emsu-skill-form/?form_id=2835&auth_token=eyJ1c2VyX2lkIjoxLCJmb3JtX2lkIjoyODM1LCJ1c2VyX25hbWUiOiJSdWJlbiBNYWpvciIsInVzZXJfZW1haWwiOiJybWFqb3JAZW1zdW5pdmVyc2l0eS5jb20iLCJ1c2VyX3JvbGUiOiJNYXN0ZXJBZG1pbiIsImV4cGlyZXNfYXQiOjE3ODY0OTA4OTMsIm5vbmNlIjoiZWE5Yzc4ZjEwNjI1MmZiNjViYjM4YTZjMjk0NGE2NTMifQ%3D%3D.46909d1c5645ab930b171bcd3332d17b6ef694cfafd1d151c9da66b2d1d6f0d4 \netc...",
    "pickup_prompt": null,
    "ideas": {
@@ -123674,6 +123683,29 @@
     "25185": null,
     "25803": "proposed",
     "25804": "executing"
+   }
+  },
+  "1786491116649": {
+   "task_id": "1786491116649",
+   "mtime": 1786491910462,
+   "created_at": "2026-08-11T23:31:56.649Z",
+   "last_modified": "2026-08-11T23:45:10.462Z",
+   "size_kb": 281,
+   "turn_count": 126,
+   "title": "#Externships\n\nI am getting tired of seeing emails about students expecting that their requested dates are going to actually happen. \n\nTell me if there is language on that form about those dates being requests and they are not a guarangee. Also, put a disclaimer on that form that's more obvious about the dates to start. \n\nIs there any email sent to them on this? \n\nThen let's work on below:\n\nCFAs should be responding back that in order to complete externships they need to make sure they have the pre-requisitte requirments, etc... \n\n--\n#Externships\n## Non‑Harmful Baby‑Step Actions to Start Right Now\n\nWe can begin with three additive, zero‑risk steps. Each step can be run, its effect verified, a",
+   "pickup_prompt": null,
+   "ideas": {
+    "2196": null,
+    "25129": "ready_for_review",
+    "25156": "proposed",
+    "25157": "ready_for_review",
+    "25185": null,
+    "25246": "ready_for_review",
+    "25529": "approved",
+    "25807": "proposed",
+    "25808": "proposed",
+    "25809": "proposed",
+    "856404": null
    }
   }
  }

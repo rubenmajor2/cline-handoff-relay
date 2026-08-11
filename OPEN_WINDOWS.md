@@ -6,13 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/11/2026, 3:49:49 PM PT | window: last 72h | 90 tasks | index total 645 (parsed 4, cached 641)
+Generated: 8/11/2026, 4:49:49 PM PT | window: last 72h | 88 tasks | index total 646 (parsed 4, cached 642)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786487328625` | 8/11/2026, 3:49:26 PM | 156 | 499KB | See this form - i think it's california skills verification form on wp forms at emsunivers |
-| `1786481696854` | 8/11/2026, 3:45:31 PM | 280 | 720KB | #TDSHS Sunset Report |
-| `1786483060620` | 8/11/2026, 3:25:40 PM | 152 | 734KB | Closing on a new property in Tempe 1250 East Baseline. Please analyze the 139 page inspect |
+| `1786491116649` | 8/11/2026, 4:45:10 PM | 126 | 281KB | #Externships |
+| `1786481696854` | 8/11/2026, 4:41:00 PM | 334 | 821KB | #TDSHS Sunset Report |
+| `1786487328625` | 8/11/2026, 4:33:31 PM | 230 | 623KB | See this form - i think it's california skills verification form on wp forms at emsunivers |
+| `1786483060620` | 8/11/2026, 4:31:41 PM | 162 | 754KB | Closing on a new property in Tempe 1250 East Baseline. Please analyze the 139 page inspect |
 | `1786469157683` | 8/11/2026, 3:25:27 PM | 436 | 1143KB | How many tokens have our FREE LLMs used in the last 30 days |
 | `1786472732313` | 8/11/2026, 3:08:58 PM | 434 | 1326KB | #TDSHS |
 | `1786476815310` | 8/11/2026, 2:37:15 PM | 132 | 647KB | #Postmark API |
@@ -97,28 +98,38 @@ Generated: 8/11/2026, 3:49:49 PM PT | window: last 72h | 90 tasks | index total 
 | `1786226983152` | 8/8/2026, 6:49:37 PM | 418 | 1013KB | what is 25220?  |
 | `1786233427989` | 8/8/2026, 6:25:54 PM | 208 | 707KB | #Argus |
 | `1786232853169` | 8/8/2026, 5:09:49 PM | 146 | 889KB | I'm noticing a rule 91 regression since litellm wend down about 30 minutes ago. I'm concer |
-| `1786229375596` | 8/8/2026, 4:32:47 PM | 266 | 810KB | Something just knocked out frankenstein-llm. Can't find which process did it. Can you brin |
-| `1786211568282` | 8/8/2026, 4:25:57 PM | 492 | 1167KB | #Argus |
-| `1786211859440` | 8/8/2026, 4:12:34 PM | 590 | 1093KB | #Subagents, etc... |
 
 ---
 
 ## Per-window detail
 
-### `1786487328625` — 8/11/2026, 3:49:26 PM PT — 156 turns
+### `1786491116649` — 8/11/2026, 4:45:10 PM PT — 126 turns
 
 **Original task:**
 
 ```
-See this form - i think it's california skills verification form on wp forms at emsuniversity.com and/or at https://emsuniversity.com/emsu-skill-form/?form_id=2835&auth_token=eyJ1c2VyX2lkIjoxLCJmb3JtX2lkIjoyODM1LCJ1c2VyX25hbWUiOiJSdWJlbiBNYWpvciIsInVzZXJfZW1haWwiOiJybWFqb3JAZW1zdW5pdmVyc2l0eS5jb20iLCJ1c2VyX3JvbGUiOiJNYXN0ZXJBZG1pbiIsImV4cGlyZXNfYXQiOjE3ODY0OTA4OTMsIm5vbmNlIjoiZWE5Yzc4ZjEwNjI1MmZiNjViYjM4YTZjMjk0NGE2NTMifQ%3D%3D.46909d1c5645ab930b171bcd3332d17b6ef694cfafd1d151c9da66b2d1d6f0d4 
-etc...
+#Externships
+
+I am getting tired of seeing emails about students expecting that their requested dates are going to actually happen. 
+
+Tell me if there is language on that form about those dates being requests and they are not a guarangee. Also, put a disclaimer on that form that's more obvious about the dates to start. 
+
+Is there any email sent to them on this? 
+
+Then let's work on below:
+
+CFAs should be responding back that in order to complete externships they need to make sure they have the pre-requisitte requirments, etc... 
+
+--
+#Externships
+## Non‑Harmful Baby‑Step Actions to Start Right 
 ```
 
-**Ideas referenced:** #19918, #2318, #25185, #25803 [proposed], #25804 [executing], #3109, #8211
+**Ideas referenced:** #2196, #25129 [ready_for_review], #25156 [proposed], #25157 [ready_for_review], #25185, #25246 [ready_for_review], #25529 [approved], #25807 [proposed], #25808 [proposed], #25809 [proposed], #856404
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786481696854` — 8/11/2026, 3:45:31 PM PT — 280 turns
+### `1786481696854` — 8/11/2026, 4:41:00 PM PT — 334 turns
 
 **Original task:**
 
@@ -134,7 +145,7 @@ paperwork belonging to other divisions of our company that fall entirely outside
 determined. We asked, in writing, for the provision and the measure. We were not told.  For this, that original request was YEARS ago with much back and forth wi
 ```
 
-**Ideas referenced:** #178648, #18676, #18690, #25783 [proposed], #25784 [rejected], #25799 [proposed], #600179, #623992
+**Ideas referenced:** #178648, #18676, #18690, #25185, #25772 [executing], #25783 [proposed], #25784 [rejected], #25793 [proposed], #25799 [proposed], #25806 [proposed], #600179, #623992
 
 **Last PICKUP PROMPT:**
 
@@ -167,7 +178,20 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </attempt_completion>
 ```
 
-### `1786483060620` — 8/11/2026, 3:25:40 PM PT — 152 turns
+### `1786487328625` — 8/11/2026, 4:33:31 PM PT — 230 turns
+
+**Original task:**
+
+```
+See this form - i think it's california skills verification form on wp forms at emsuniversity.com and/or at https://emsuniversity.com/emsu-skill-form/?form_id=2835&auth_token=eyJ1c2VyX2lkIjoxLCJmb3JtX2lkIjoyODM1LCJ1c2VyX25hbWUiOiJSdWJlbiBNYWpvciIsInVzZXJfZW1haWwiOiJybWFqb3JAZW1zdW5pdmVyc2l0eS5jb20iLCJ1c2VyX3JvbGUiOiJNYXN0ZXJBZG1pbiIsImV4cGlyZXNfYXQiOjE3ODY0OTA4OTMsIm5vbmNlIjoiZWE5Yzc4ZjEwNjI1MmZiNjViYjM4YTZjMjk0NGE2NTMifQ%3D%3D.46909d1c5645ab930b171bcd3332d17b6ef694cfafd1d151c9da66b2d1d6f0d4 
+etc...
+```
+
+**Ideas referenced:** #19918, #2318, #25185, #25803 [proposed], #25804 [executing], #3109, #8211
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786483060620` — 8/11/2026, 4:31:41 PM PT — 162 turns
 
 **Original task:**
 
@@ -180,42 +204,40 @@ Seek fixed, documented protection rather than informal promises:
     •    Life-safety/ADA contingency: Preserve the right to terminate or renegotiate if the current 
 ```
 
-**Ideas referenced:** #081020, #111111, #25796 [awaiting_review], #25797 [proposed], #25798 [proposed], #333333, #38984, #555555, #666666
+**Ideas referenced:** #081020, #111111, #178634, #178640, #178671, #24989, #25515 [proposed], #25796 [awaiting_review], #25797 [proposed], #25798 [proposed], #333333, #38984, #555555, #666666
 
 **Last PICKUP PROMPT:**
 
 ```
-==============================
+ew before sending to John Hart
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-
 Pick up task #25796 — 1250 E. Baseline Rd. Tempe escrow due diligence.
 
-Where we left off (verified 2026-08-11 15:24 PT):
-- Escrow-grade PDF on Desktop: /Users/rubenmajor/Desktop/1250_Baseline_Due_Diligence.pdf (6 pages, sections A-J, every finding page-cited, verified opens and content-checked). Earlier 2-page draft deleted so there is one clean file.
-- Full plain-text bullet summary delivered inline to Ruben, markdown artifacts stripped per his correction, ready to paste into an email to John Hart.
-- Validation corrected TWO errors from the first draft: elevator IS inspected and its certificate is dated/expired (p.125), and fire sprinklers ARE addressed with the finding that NONE exist (p.80, p.115).
-- New findings from the comprehensive pass: heating mode never tested on any of the 11 HVAC units (p.104), no roof/attic ventilation plus evidence of a past attic water problem (p.108), no AFCI anywhere (p.93), multiple dead lights (p.92), no main water shut-off besides the meter (p.81), no anti-siphon on hose bibs (p.82), guardrail gaps over 4 inches (p.124), shared 600A electrical service (p.89).
-- Source PDF /Users/rubenmajor/Downloads/Inspection_Report_081020260900-C.pdf; extracted text /tmp/inspection_report.txt; builder /tmp/build_full.py
+Where we left off (verified 2026-08-11 16:31 PT):
+- All logging complete: HANDOFF_NOTES.md on WOPR (section: 2026-08-11 — 1250 E. Baseline Rd., Tempe AZ — escrow due diligence) + cline_task_ledger.md row appended (both verified on disk)
+- Escrow-grade PDF on Desktop: /Users/rubenmajor/Desktop/1250_Baseline_Due_Diligence.pdf (6 pages, sections A-J, every finding page-cited to EPIC report #081020260900-C)
+- Full plain-text bullet summary delivered inline to Ruben (markdown artifacts stripped)
+- Validation corrected two first-draft errors: elevator IS inspected with expired/dated certificate (p.125), and sprinklers ARE addressed — NONE exist in the building (p.80, p.115)
+- Source: /Users/rubenmajor/Downloads/Inspection_Report_081020260900-C.pdf; extracted text /tmp/inspection_report.txt
 
 Open threads to drive next:
-1. #25797 [executing] — Call Tempe Fire on whether EMSU occupancy and headcount trigger a sprinkler retrofit on 10,000 sq ft over two stories (report confirms zero sprinkler protection, p.80/115). Pull the Arizona elevator inspection record against the dated certificate (p.125).
-2. #25798 [executing] — Specialist bids: HVAC (11 units, R-22, SEER-15, heating never tested), licensed electrician (bonding p.90, GFCI p.93, dead lights p.92, no AFCI p.93), sewer camera (no cleanouts, cast iron and galvanized p.82), roofer (rafter tails p.51, caps p.75, untested internal drains p.76, parking canopy p.74), paving (p.41), structural engineer (anchor bolts p.37), elevator company. Consider Phase I ESA and asbestos survey (1980 build, p.30).
+1. #25797 [executing] — Call Tempe Fire: does EMSU occupancy/headcount trigger a sprinkler retrofit on 10,000 sq ft / 2 stories? Pull AZ elevator inspection record (dated certificate, p.125).
+2. #25798 [executing] — Specialist bids: HVAC (11 units, R-22, SEER-15, heating never tested), electrician (bonding p.90, GFCI p.93, dead lights p.92), sewer camera (no cleanouts p.82), roofer (rafter tails p.51, caps p.75, drains p.76, canopy p.74), paving (p.41), structural (anchors p.37), elevator co. Phase I ESA + asbestos survey (1980 build, p.30).
 3. #25796 [awaiting_review] — Ruben reviews the PDF, then decides whether it goes to John Hart as-is or through counsel first.
 
 Reference IDs:
 - Ideas: #25796 [awaiting_review], #25797 [executing], #25798 [executing]
 - Report: EPIC Inspection #081020260900-C, Mike Elsberry AZ #38984, 480-390-8180
 - Property: 1250 E. Baseline Rd., Tempe, AZ 85283. Broker: John Hart, Commercial Properties, Inc.
-- Files touched: /Users/rubenmajor/Desktop/1250_Baseline_Due_Diligence.pdf, /tmp/build_full.py, /tmp/full_extract.py, /tmp/inspection_report.txt
+- Files touched: /Users/rubenmajor/Desktop/1250_Baseline_Due_Diligence.pdf, HANDOFF_NOTES.md, /Users/rubenmajor/Documents/Cline/cline_task_ledger.md, /tmp/build_full.py, /tmp/inspection_report.txt
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
-</parameter>
-</invoke>
+</attempt_completion>
 ```
 
 ### `1786469157683` — 8/11/2026, 3:25:27 PM PT — 436 turns
@@ -3401,120 +3423,3 @@ I'm noticing a rule 91 regression since litellm wend down about 30 minutes ago. 
 **Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #12900, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14133, #14142, #14205, #15180, #15268, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16584, #16589, #16590, #16602, #16625, #16646, #16680, #16715, #16716, #16717, #17078, #17307, #17673, #1807, #1808 [deployed], #18671, #19125, #19585, #19686, #2071, #2079, #22564, #22584, #2277 [deployed], #25128, #25130, #25133, #25150, #25151, #25154, #25155, #25157, #25171, #25186, #5344, #5346, #5348, #7181, #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786229375596` — 8/8/2026, 4:32:47 PM PT — 266 turns
-
-**Original task:**
-
-```
-Something just knocked out frankenstein-llm. Can't find which process did it. Can you bring it back online? Maybe it was a tiny config issue or miscode. Just happened
-```
-
-**Ideas referenced:** #11908, #13204, #16844, #17078, #1765, #1771, #1772, #1773, #1781, #19338, #2274 [deployed], #2275 [deployed], #24186, #25127 [rejected], #25130 [in_progress], #25133, #25157, #25158 [executing], #25159 [executing], #25172 [executing], #25178 [executing], #25185, #25193 [approved], #25195 [proposed], #25230, #25244 [implementing], #25248 [proposed], #25249 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786211568282` — 8/8/2026, 4:25:57 PM PT — 492 turns
-
-**Original task:**
-
-```
-#Argus
-
-Can you confirm for me that all of the ideas below were actually implemented? I know that we took some of these ideas a little bit further but I just wanna see if they were implemented and I don't wanna revert really good changes that we made cell you do need to be careful with this
-
-For my last Argus Chat, I noticed we need to make a great number of improvements. I do NOT want you to forget any of these. I want you to execute them all as well as answer ALL of my questions in the original chat. We need to give Argus more power
-
---
-Argus
-New chat started. Saves automatically after your 
-```
-
-**Ideas referenced:** #0000, #1281, #128275, #16213, #16224, #20251, #20517, #21262, #22850, #23027, #23429, #23506, #24877, #24897, #24926, #24990 [deployed], #24991 [deployed], #25036 [approved], #25037 [approved], #25044 [approved], #25047 [approved], #25049 [proposed], #25057 [in_progress], #25058 [implemented], #25059 [live], #25060 [in_progress], #25077 [approved], #25152 [pending], #25155, #25165 [proposed], #25166 [proposed], #25167 [proposed], #25171 [proposed], #25181 [proposed], #25189 [pending], #25191, #26002 [deployed], #26003 [proposed], #274160, #30363, #4536, #5344, #7137, #7925, #8281, #8321, #8563, #8598, #8645, #8942, #9654, #9660, #9733
-
-**Last PICKUP PROMPT:**
-
-```
-ut weren't built this session.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up #25059 — Argus Terminal IA remaining items.
-
-Where we left off (verified 2026-08-08 16:25 PT):
-- Two bugs (a + b) deployed: cnum color #6e7681 at download.php:554/580, search_sessions LOWER() at alltastic_api.php:3755
-- Remaining items NOT built: conversation search results rendering, Tasks/Requests tab reorg, folder drag-to-move
-- All 10 ideas from the batch accounted for (see Reference IDs)
-
-Open threads:
-1. #25059 [in_progress] — Build the remaining Terminal IA items
-
-Reference IDs:
-- Ideas deployed: #25047, #25165, #25167, #25166, #25189
-- Ideas resolved: #25152
-- Ideas superseded: #25060, #25171, #25181
-- Ideas in_progress: #25059
-- Ideas filed: #25181 (phantom gate), #25189 (Kaison recipe), #25165 (JS guard)
-- Files touched: argus_download.php, alltastic_api.php, argus_task_status.php, cron_ruben_implement.php, lib/kaison_js_syntax_guard.php, failure_repair_recipes recipe #437, /etc/cron.d/emsu-implementation-reality-check
-- Kaison recipe deployed: #437 (phantom_idea_claim, ghost_detection)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786211859440` — 8/8/2026, 4:12:34 PM PT — 590 turns
-
-**Original task:**
-
-```
-#Subagents, etc...
-
-So right now I have two Frankenstein LLM windows open and they are both seeming to be stuck on the sub agent it looks like I have seven or eight sub agents open and I have zero tokens and zero tool calls on these in the last two minutes. So this is a bug that needs to be resolved as well
-
-Taking the DeepSeek question first, because the answer changes the other one.
-
-## The leak is already fixed. I was quoting a stale comment at you.
-
-You were right to say there is another solution. There is, and it shipped a month ago. I tested both transports live just now.
-
-**Non-streamin
-```
-
-**Ideas referenced:** #10740, #11953, #12363, #12365, #12584, #12589, #12590, #12657, #12689, #13199, #13204, #13490, #13874, #13964 [needs_verify], #14000, #15776, #17078, #178618, #19338 [rejected], #21038, #2273 [approved], #25082 [executing], #25083 [executing], #25084 [executing], #25112 [proposed], #25120, #25122, #25127 [executing], #25130 [executing], #25133 [executing], #25135 [executing], #25157, #25158 [proposed], #25159 [proposed], #25171, #25172 [proposed], #25178 [proposed], #25179 [proposed], #25193 [proposed], #25195 [proposed], #25230, #25244 [implementing]
-
-**Last PICKUP PROMPT:**
-
-```
-t peak. The box is recovering.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #25130 — Frankenstein fleet health + reranker hardening continued.
-
-Where we left off (verified 2026-08-08 16:11 PT):
-- Reranker fixed with async+anyio.run_sync (#25244), survives 20-concurrent stress test
-- Adapter backlog=128 + ThreadPoolExecutor (#25159/#25178), bind-order fix live
-- Canary rolling-window (#25193) verified, eliminates false ALERTs
-- Subagent-DS offload (#25130) shipped + verified with live DS tool-schema test
-- Ring vLLM still returns empty under concurrent load — occasional empty-response spills
-
-Open threads to drive next:
-1. #25244 [implementing] — Reranker thread leak fixed. Monitor 30+ min under load to confirm no re-wedge. The fix is verified under stress but production hours will tell.
-2. #25130 [executing] — Subagent-DS gate live with EMSU_SUBAGENT_DS_TOOLS=1. 8 routes so far. Needs a full production window (hours) to show whether it meaningfully reduces ring congestion.
-3. #25195 [proposed] — Ring vLLM empty-response under concurrent load. 120B pool returns empty content when saturated even with fast direct probes. Possible fixes: vLLM max-waiting-sequences tuning, ring topology change (swap-in/anti-affinity), or adding more pool members (RunPod GPU).
-
-Reference IDs:
-- Ideas filed: #25158 [executing], #25159 [executing], #25172 [executing], #25178 [executing], #25193 [approved], #25130 [approved], #25127 [rejected], #25244 [implementing], #25195 [approved]
-- Files touched: `/usr/local/bin/emsu-reranker.py`, `/usr/local/bin/frankenstein_tools_adapter.py`, `/etc/litellm/_router_core.py`, `/etc/systemd/system/litellm.service.d/10-frugal.conf`
-- Backups: `.bak-25178-20260808-115727`, `.bak-25244-20260808-160252`, `.bak-25195-20260808-124725`, `.bak-25130-20260808-152450`
-- Configs: `CPUQuota=3600%`, `RERANK_WORKERS=1`, `RERANK_CONCURRENCY=24`, `adapter backlog=128`
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```

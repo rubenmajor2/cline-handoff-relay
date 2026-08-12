@@ -6,20 +6,21 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/12/2026, 8:04:59 AM PT | window: last 72h | 71 tasks | index total 647 (parsed 2, cached 645)
+Generated: 8/12/2026, 9:04:59 AM PT | window: last 72h | 69 tasks | index total 648 (parsed 4, cached 644)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786492782871` | 8/12/2026, 8:04:55 AM | 73 | 1068KB | Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look |
-| `1786481696854` | 8/12/2026, 8:04:06 AM | 558 | 1172KB | #TDSHS Sunset Report |
+| `1786492782871` | 8/12/2026, 9:04:57 AM | 391 | 1559KB | Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look |
+| `1786547336372` | 8/12/2026, 8:47:14 AM | 52 | 207KB | Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cl |
+| `1786467898078` | 8/12/2026, 8:45:57 AM | 304 | 1944KB | #MDM |
+| `1786467822115` | 8/12/2026, 8:45:41 AM | 498 | 1070KB | frankenstein-llm is stalling this morning. Why?  |
+| `1786481696854` | 8/12/2026, 8:21:05 AM | 597 | 1826KB | #TDSHS Sunset Report |
 | `1786491116649` | 8/12/2026, 12:52:58 AM | 486 | 2563KB | #Externships |
-| `1786467822115` | 8/11/2026, 5:09:38 PM | 388 | 876KB | frankenstein-llm is stalling this morning. Why?  |
 | `1786487328625` | 8/11/2026, 4:33:31 PM | 230 | 623KB | See this form - i think it's california skills verification form on wp forms at emsunivers |
 | `1786483060620` | 8/11/2026, 4:31:41 PM | 162 | 754KB | Closing on a new property in Tempe 1250 East Baseline. Please analyze the 139 page inspect |
 | `1786469157683` | 8/11/2026, 3:25:27 PM | 436 | 1143KB | How many tokens have our FREE LLMs used in the last 30 days |
 | `1786472732313` | 8/11/2026, 3:08:58 PM | 434 | 1326KB | #TDSHS |
 | `1786476815310` | 8/11/2026, 2:37:15 PM | 132 | 647KB | #Postmark API |
-| `1786467898078` | 8/11/2026, 2:32:38 PM | 274 | 1811KB | #MDM |
 | `1786473380730` | 8/11/2026, 1:47:51 PM | 216 | 747KB | #CFA  |
 | `1786474429480` | 8/11/2026, 12:49:27 PM | 136 | 633KB | https://emsuniversity.com/emtskills and other pages are all down / 500 Can you bring them  |
 | `1786468127695` | 8/11/2026, 12:03:51 PM | 228 | 552KB | #Postmark API Issues |
@@ -78,15 +79,12 @@ Generated: 8/12/2026, 8:04:59 AM PT | window: last 72h | 71 tasks | index total 
 | `1786288392773` | 8/9/2026, 4:44:59 PM | 230 | 729KB | #Make GLM / frankenstein-llm smarter |
 | `1786065775388` | 8/9/2026, 4:34:07 PM | 152 | 342KB | can you investigate and resolve this?  |
 | `1786286915134` | 8/9/2026, 2:58:34 PM | 92 | 350KB | #Argus Cluster Idea  |
-| `1786288212188` | 8/9/2026, 8:38:13 AM | 140 | 437KB | #AI Directed Meditation |
-| `1786286876279` | 8/9/2026, 8:12:08 AM | 72 | 397KB | #GLM Local/frankenstein-llm Improvements / Make Smarter |
-| `1786284214295` | 8/9/2026, 8:06:32 AM | 178 | 1101KB | #AI DIRECTED MEDITATION |
 
 ---
 
 ## Per-window detail
 
-### `1786492782871` — 8/12/2026, 8:04:55 AM PT — 73 turns
+### `1786492782871` — 8/12/2026, 9:04:57 AM PT — 391 turns
 
 **Original task:**
 
@@ -94,7 +92,7 @@ Generated: 8/12/2026, 8:04:59 AM PT | window: last 72h | 71 tasks | index total 
 Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look and see?
 ```
 
-**Ideas referenced:** #0051, #0071, #22148, #22156, #22242, #22243, #23344, #23415, #25824 [proposed], #8060, #9202
+**Ideas referenced:** #0051, #0071, #16523, #16613, #17685, #17723, #19492, #19511 [rejected], #19859 [deployed], #2036, #20565, #20630 [awaiting_review], #22148, #22156, #22242, #22243, #2320 [deployed], #23285, #23291, #23344, #23415, #24635, #24645, #25185, #252532, #25824 [proposed], #25869 [proposed], #25870 [proposed], #25871 [proposed], #25872 [proposed], #25873 [proposed], #26002, #26003 [deployed], #32324, #374151, #4016, #4802, #5387, #6646, #787890, #8060, #856404, #9086, #9202
 
 **Last PICKUP PROMPT:**
 
@@ -128,7 +126,163 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786481696854` — 8/12/2026, 8:04:06 AM PT — 558 turns
+### `1786547336372` — 8/12/2026, 8:47:14 AM PT — 52 turns
+
+**Original task:**
+
+```
+Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cline rules when a subsequent iteration identifies a substantial reversal of the initial iteration within that window. The idea is that the agent catches this and makes itself smarter. This is to be done immediately. Give the rule nubmer. If it needs refinement, let me know.
+```
+
+**Ideas referenced:** #13840, #14205, #15268, #19125, #2277, #25150, #25151, #25154, #25155, #25188, #5344, #5346, #5348
+
+**Last PICKUP PROMPT:**
+
+```
+loaded, promote to hardfloor."
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Cline rule 317 (substantial-reversal triggers 297 RCA + causal-rule update).
+
+Where we left off (verified 2026-08-12 08:44 PT):
+- Rule 317 written to `Rules-archive/317-substantial-reversal-triggers-297-and-rule-update.md` [deployed]
+- Corpus reindexed twice: 323 rules, 19 hardfloor; `clinerules_lookup(rule_id=317)` returns full body [deployed]
+- `_RULE_TREE.md` updated: 317 added to "Self-supervision & repair" and "Agent-found-wrong / iteration-reversed" lines [deployed]
+- `.clinerule_counter` corrected from stale 314 → 317 (next rule claims 318, no collision) [deployed]
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. (human-only decision, no idea) — Ruben to decide whether rule 317 should be promoted to hardfloor (auto-load every window) vs stay on-demand in the archive. No default exists, so no idea was filed; this is a prompt-block flagged decision only.
+
+Reference IDs:
+- Ideas filed: none (no open work requires an idea; the only open item is a human-policy decision)
+- Files touched: `Rules-archive/317-substantial-reversal-triggers-297-and-rule-update.md`, `Rules/_RULE_TREE.md`, `Rules/.clinerule_counter`
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786467898078` — 8/12/2026, 8:45:57 AM PT — 304 turns
+
+**Original task:**
+
+```
+#MDM
+
+Rebase and continue / add to MDM if not already added
+
+**Your ExecStartPost question, answered:** your instinct is right, that shape is probably bad. `ExecStartPost=curl /v1/models` holds the unit in `activating` until the probe passes, which does kill the lie where `systemctl is-active` reports healthy for an engine that never bound its port. But Big Mac takes minutes to load 15 weight shards, so any `TimeoutStartSec` shorter than real load time makes systemd kill a perfectly healthy slow start — and with `Restart=always` that becomes a restart loop on a box that would have come up fine
+```
+
+**Ideas referenced:** #0078, #10108, #10740, #1130, #1131, #11741, #11781, #12028, #12034, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #1557, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1779, #178634, #1798, #1828, #18312, #18326, #19567, #20042, #20495, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #23171, #25097, #25378, #25381, #25468 [executing], #25469 [rejected], #25470 [deployed], #25471 [executing], #25744 [proposed], #25758 [proposed], #25759, #25760 [proposed], #30363, #334155, #64748, #7142, #7149, #8984
+
+**Last PICKUP PROMPT:**
+
+```
+n rebuilt since deploy.sh ran.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1786342434047 — finish MDM SSH access for Cicero + Maximus (Nero already verified working).
+
+Where we left off (verified 2026-08-12 08:44 PT):
+- NERO ✅: WOPR→127.0.0.1:2223 SSH verified as rubenmajor@EMSU-SMS-Mac.localdomain. Fix = appended the unchanged WOPR pubkey to the Mac's authorized_keys from the desktop.
+- CICERO: .252 is UP (port 22 open, host key matches known_hosts) but M5 key gets Permission denied. Suspect: wrong local account OR authorized_keys drift. Need the account name that the tunnel uses.
+- MAXIMUS: M4 LAN IP not found (sweeps timeout). 2224 tunnel LISTEN on WOPR but WOPR key denied — same drift symptom as Nero pre-fix.
+- PROVEN: keys were never lost. WOPR id_ed25519 mtime 2026-02-19; desktop id_ed25519.pub fingerprint SHA256:MOfOlfY... ruben-macbook-m5 matches deploy.sh line 44 exactly.
+- Portal files: web_terminal_token.php + ws_ssh_proxy.py SERVERS already carry cicero/nero/maximus; syntax OK; emsu-web-terminal.service active.
+- Known recipe that works: `ssh rubenmajor@<mac_ip> "echo '<WOPR_PUBKEY>' >> ~/.ssh/authorized_keys"` from this desktop.
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #25758 [executing] — Maximus: find live LAN IP (ask Ruben or UDM DHCP lease), append WOPR pubkey to its authorized_keys, verify WOPR→2224 SSH with `-i /home/emsuserver/.ssh/id_ed25519 rubenmajor@127.0.0.1 -p 2224`.
+2. #25760 [executing] — Cicero: confirm the reachable local account at .252 (try `whoami` via desktop key against candidate accounts if M5 key still denied), re-sync WOPR pubkey into that account, then bring up the M5→WOPR reverse tunnel (port 11520 for the MLX API lane is stale; terminal SSH should ride a 222x tunnel like Nero/Maximus), verify WOPR-side port LISTEN.
+
+Reference IDs:
+- Ideas filed: #25744 [approved], #25758 [executing], #25760 [executing]
+- Files touched: /var/www/emtskills/routes/web_terminal_token.php, /var/www/emtskills/scripts/ws_ssh_proxy.py
+- Deploy reference: /Users/rubenmajor/Desktop/mac-tunnel-deploy/deploy.sh (lines 43-45)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786467822115` — 8/12/2026, 8:45:41 AM PT — 498 turns
+
+**Original task:**
+
+```
+frankenstein-llm is stalling this morning. Why? 
+
+
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
+
+
+Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
+
+## Where 671 came from, and it is now durable
+
+Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.
+
+Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, divided by elapsed wall seconds:
+
+```javascr
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11945, #11953, #12247, #12262, #12299, #12314, #12363, #12364, #12365, #12459, #12477, #12618, #12672, #12824, #12872, #12878, #13082, #13108, #13202, #13874, #15158, #16163, #16265, #16304, #16588, #16648, #16844, #17202, #17203, #17205, #17300, #1754, #1755, #178424, #178455, #178652, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18312, #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690, #1871, #1876, #1877, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #1883, #1894, #1896, #1897, #1912, #19653 [queued], #1967, #19671 [rejected], #19686 [queued], #19689 [queued], #19776 [executing], #19777 [proposed], #19778, #19785 [deployed], #19788 [proposed], #19789 [proposed], #1989, #19903, #202608, #2050, #20549, #2102 [resolved], #21045, #2190 [resolved], #2210 [resolved], #2221 [investigating], #2247, #2254, #2258, #22820, #22897, #2293 [resolved], #2294 [resolved], #2299, #2307 [rejected], #23071, #2312, #2314 [deployed], #23169 [approved], #23171, #24172, #24217 [approved], #25097, #25137, #25141, #25185, #25646, #25747 [proposed], #25754 [proposed], #25755 [approved], #25757 [proposed], #25759 [proposed], #25764 [approved], #25765 [proposed], #25812 [approved], #25859, #25868, #6826
+
+**Last PICKUP PROMPT:**
+
+```
+session summary with all fixes
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #25812 [approved] - executor working, 3 ideas being built, docs updated
+
+Where we left off (verified 2026-08-12 08:45 PT):
+- dev_stage=idle means "in queue, ready" not "doing nothing"
+- 3 ideas actively being built: #25747 auditing, #25755 auditing, #25764 drafting
+- 4 ideas waiting in queue: #25757, #25759, #25765, #25812
+- All 6 durable repairs documented in GLM52_RING_STATE_TRACKER.md
+- HANDOFF_NOTES.md updated with session summary
+- model=None fix working: 0 errors since 08:21
+- GLM-first working: 7 running, 3 adapter picks
+
+Open threads to drive next:
+1. #25764 [approved] - v3 hybrid classifier (drafting, code generation in progress)
+2. #25747 [approved] - canary monitoring (auditing, spec generation in progress)
+3. #25755 [approved] - max_num_seqs 32 (auditing, spec generation in progress)
+4. #25812 [approved] - vision doorman fix (idle, waiting in queue)
+5. #25765 [approved] - fleet capacity projection (idle, waiting in queue)
+6. #25759 [approved] - GLM monitoring (idle, waiting in queue)
+7. #25757 [approved] - v1 keyword classifier (idle, superseded by #25764)
+
+Reference IDs:
+- Ideas filed: #25747 [approved], #25755 [approved], #25757 [approved], #25759 [approved], #25764 [approved], #25765 [approved], #25812 [approved]
+- Ideas rejected: #25754 [rejected] (had classifier backwards)
+- Files touched: /etc/litellm/router_hook.py, /usr/local/bin/frankenstein_tools_adapter.py, /etc/systemd/system/frankenstein-tools.service.d/*.conf, /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md, HANDOFF_NOTES.md
+- Bug library: 2314 (agent false zombie), 2307 (sci-notation parse), 2294 (STREAK fix)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result><task_progress>- [x] Update GLM52_RING_STATE_TRACKER.md with all durable repairs
+- [x] Add model=None RCA section
+- [x] Add doctor fixes durability section
+- [x] Add executor reliability notes
+- [x] Update HANDOFF_NOTES.md
+- [x] Verify executor is picking up ideas (3 being built, 4 in queue)
+- [x] Explain dev_stage=idle means "in queue" not "doing nothing"
+- [x] Present results</task_progress></attempt_completion>
+```
+
+### `1786481696854` — 8/12/2026, 8:21:05 AM PT — 597 turns
 
 **Original task:**
 
@@ -144,7 +298,7 @@ paperwork belonging to other divisions of our company that fall entirely outside
 determined. We asked, in writing, for the provision and the measure. We were not told.  For this, that original request was YEARS ago with much back and forth wi
 ```
 
-**Ideas referenced:** #081020, #16863, #178648, #18676, #18690, #2306, #2311, #23483, #25185, #25537, #25560, #25608, #25623, #25632, #25633, #25635, #25667, #25669, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25772 [executing], #25783 [proposed], #25784 [rejected], #25793 [proposed], #25796, #25797, #25798, #25799 [proposed], #25803 [proposed], #25804 [deployed], #25806 [proposed], #25810 [proposed], #25834 [awaiting_review], #25838 [proposed], #25859 [executing], #25860 [executing], #38984, #600179, #623992
+**Ideas referenced:** #081020, #16863, #178648, #18676, #18690, #2306, #2311, #23483, #25185, #25537, #25560, #25608, #25623, #25632, #25633, #25635, #25667, #25669, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25772 [executing], #25783 [proposed], #25784 [rejected], #25793 [proposed], #25796, #25797, #25798, #25799 [proposed], #25803 [proposed], #25804 [deployed], #25806 [proposed], #25810 [proposed], #25834 [awaiting_review], #25838 [proposed], #25859 [executing], #25860 [executing], #25861 [executing], #25868 [in_progress], #38984, #600179, #616207, #623992
 
 **Last PICKUP PROMPT:**
 
@@ -248,74 +402,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Validate + complete
 </task_progress>
 </attempt_completion>
-```
-
-### `1786467822115` — 8/11/2026, 5:09:38 PM PT — 388 turns
-
-**Original task:**
-
-```
-frankenstein-llm is stalling this morning. Why? 
-
-
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
-
-## Where 671 came from, and it is now durable
-
-Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.
-
-Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, divided by elapsed wall seconds:
-
-```javascr
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11945, #11953, #12247, #12262, #12299, #12314, #12363, #12364, #12365, #12459, #12477, #12618, #12672, #12824, #12872, #12878, #13082, #13108, #13202, #13874, #15158, #16163, #16265, #16304, #16588, #16648, #16844, #17202, #17203, #17205, #17300, #1754, #1755, #178424, #178455, #178652, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18312, #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690, #1871, #1876, #1877, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #1883, #1894, #1896, #1897, #1912, #19653 [queued], #1967, #19671 [rejected], #19686 [queued], #19689 [queued], #19776 [executing], #19777 [proposed], #19778, #19785 [deployed], #19788 [proposed], #19789 [proposed], #1989, #19903, #202608, #2050, #20549, #2102 [resolved], #21045, #2190 [resolved], #2210 [resolved], #2221 [investigating], #2254, #2258, #22820, #22897, #2293 [resolved], #2294 [resolved], #2299, #2307 [rejected], #2312, #2314 [deployed], #23169 [approved], #23171, #24172, #24217 [approved], #25097, #25137, #25141, #25185, #25646, #25747 [proposed], #25754 [proposed], #25755 [approved], #25757 [proposed], #25759 [proposed], #25764 [approved], #25765 [proposed], #25812 [approved], #6826
-
-**Last PICKUP PROMPT:**
-
-```
- (STREAK fix, already in code)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25812 [executing] - vision doorman fix shipped, frankenstein-llm healthy
-
-Where we left off (verified 2026-08-11 17:08 PT):
-- Vision doorman patched: falls through to 120B pool instead of 503 dead-end
-- Tested: minicpm-v works, fallthrough code in place for failures
-- frankenstein-llm healthy: all 4 upstreams up, GLM ring has 7 running requests
-- GLM-first working: traffic distributing across GLM + 120B pool
-- Backup at /usr/local/bin/frankenstein_tools_adapter.py.bak-vision-spill-20260811
-
-Open threads to drive next:
-1. #25812 [executing] - vision doorman fix (shipped, monitor for issues)
-2. #25765 [executing] - fleet capacity projection, remove UPSTREAMS_VLLM exclusion of :8210
-3. #25764 [executing] - build v3 hybrid classifier in router_hook.py
-4. #25755 [executing] - increase max_num_seqs 15 to 32 (requires watchdog #23169 [approved])
-5. #25759 [executing] - monitor GLM utilization percentage to verify 30-70% target
-6. #25747 [executing] - canary monitoring for GLM
-7. #25757 [executing] - v1 keyword classifier (superseded by #25764 [executing])
-
-Reference IDs:
-- Ideas filed: #25747 [executing], #25755 [executing], #25757 [executing], #25759 [executing], #25764 [executing], #25765 [executing], #25812 [executing]
-- Ideas rejected: #25754 [rejected] (had classifier backwards)
-- Files touched: /usr/local/bin/frankenstein_tools_adapter.py, /etc/systemd/system/frankenstein-tools.service.d/70-glm-first-all-lanes.conf, /etc/systemd/system/frankenstein-tools.service.d/85-glm-capacity.conf, /etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-remove-dead-julia-rung.conf, /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md
-- Bug library: 2314 (agent false zombie), 2307 (sci-notation parse), 2294 (STREAK fix)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result><task_progress>- [x] Read current vision doorman code
-- [x] Patch adapter to spill to 120B pool instead of returning 503
-- [x] Restart adapter
-- [x] Test with a vision request (minicpm-v works)
-- [x] Test fallthrough (code in place)
-- [x] Clean up test override
-- [x] Check frankenstein-llm current state (all 4 healthy, GLM 7 running)
-- [x] Present results</task_progress></attempt_completion>
 ```
 
 ### `1786487328625` — 8/11/2026, 4:33:31 PM PT — 230 turns
@@ -540,51 +626,6 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [x] File idea #25793 [proposed] for post-302 full credential audit
 - [x] PICKUP PROMPT block
 </task_progress>
-</attempt_completion>
-```
-
-### `1786467898078` — 8/11/2026, 2:32:38 PM PT — 274 turns
-
-**Original task:**
-
-```
-#MDM
-
-Rebase and continue / add to MDM if not already added
-
-**Your ExecStartPost question, answered:** your instinct is right, that shape is probably bad. `ExecStartPost=curl /v1/models` holds the unit in `activating` until the probe passes, which does kill the lie where `systemctl is-active` reports healthy for an engine that never bound its port. But Big Mac takes minutes to load 15 weight shards, so any `TimeoutStartSec` shorter than real load time makes systemd kill a perfectly healthy slow start — and with `Restart=always` that becomes a restart loop on a box that would have come up fine
-```
-
-**Ideas referenced:** #0078, #10108, #10740, #1130, #1131, #11741, #11781, #12034, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #1557, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1779, #178634, #1798, #1828, #18312, #18326, #19567, #20042, #20495, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #23171, #25097, #25378, #25381, #25468 [executing], #25469 [rejected], #25470 [deployed], #25471 [executing], #25744 [proposed], #25758 [proposed], #25759, #25760 [proposed], #30363, #334155, #64748, #7142, #7149, #8984
-
-**Last PICKUP PROMPT:**
-
-```
-ey gives immediate SSH access.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1786342434047 — finish #MDM: install WOPR key on Maximus + revive Cicero tunnel.
-
-Where we left off (verified 2026-08-11 14:31 PT):
-- **Portal configs** (web_terminal_token.php, ws_ssh_proxy.py, mdm_portal.php): all three hosts enrolled, verified on disk.
-- **NERO**: FULLY working. WOPR tunnel 2223 verified. Key installed. ✅
-- **MAXIMUS**: Tunnel 2224 alive. WOPR key NOT installed on the M4. Key install pending.
-- **CICERO**: Box ON (.252:22 OPEN). Keys installed. Reverse M5 tunnel to WOPR is DEAD — blocking all WOPR access.
-
-Open threads to drive next:
-1. #25758 [proposed] — Install WOPR pubkey on Maximus. Find its LAN IP (try maximus.local, m4mac.local, or ARP .74 8e:de:a3:a8:58:35), SSH from Ruben's desktop, append WOPR key, verify `ssh -i /home/emsuserver/.ssh/id_ed25519 rubenmajor@127.0.0.1 -p 2224 hostname` from WOPR.
-2. #25760 [proposed] — Revive Cicero M5→WOPR reverse tunnel. From Ruben's desktop: `ssh rubenmajor@192.168.1.252` and restart the autossh LaunchAgent or power-cycle the box. Then verify the tunnel port appears on WOPR.
-
-Reference IDs:
-- Ticket: #MDM
-- Ideas filed: #25744 [approved], #25758 [proposed], #25760 [proposed]
-- Files touched: ws_ssh_proxy.py, web_terminal_token.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 
@@ -2706,106 +2747,4 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1786288212188` — 8/9/2026, 8:38:13 AM PT — 140 turns
-
-**Original task:**
-
-```
-#AI Directed Meditation
-
-What else is there to do here? It seems like we could use so much more??
-
-What is 25229 anyways? I don't understand that one
-
-## What I did with your rule-29 push
-
-You asked me to spec these better and use rule 267 to get them moving faster. Here's what actually happened, not just what I filed.
-
-**1. Two of the three "spec better" items were broken in ways that would have failed silently in production.**
-
-- **#25313 [deployed] (Argus cluster scan)** had a genuinely wrong schema. The auto-build pipeline guessed at columns that don't exist: `argus_audit_log.user_id` (rea
-```
-
-**Ideas referenced:** #13757, #14100, #1568, #1573, #178629, #18786, #20315, #23930 [rejected], #23931 [in_progress], #23932 [rejected], #23935 [proposed], #25130, #25156, #25185, #25220, #25227 [in_progress], #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25245, #25246, #25247, #25268 [deployed], #25313 [deployed], #25364 [deployed], #25366 [deployed], #25374, #25383 [proposed], #25384 [proposed], #25385 [proposed], #57179
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786286876279` — 8/9/2026, 8:12:08 AM PT — 72 turns
-
-**Original task:**
-
-```
-#GLM Local/frankenstein-llm Improvements / Make Smarter
-
-What can we do to make our instance of  GLM 5.2 Local smarter? What about frankenstein-llm? I'm still seeing some minor issues popping up every now and then. Not severe, but I think we can do better. What can we do?
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11944, #11953, #12247, #12262, #12299, #12314, #12365, #12366, #12368, #12477, #12618, #12657, #12672, #12673, #12824, #12872, #12878, #13108, #13121, #13202, #13874, #14000, #16120, #16163, #16265, #16304, #16588, #16844, #18312, #18326, #18786, #1993, #20005, #20040, #20054, #20068, #20069, #20082, #20245, #20247, #20264, #20272, #20291, #20297, #20302, #20311, #20662, #20722, #2094, #2095, #2122, #2126, #2130, #2135, #2168, #2169, #2175, #2177, #2208, #2216, #2243, #2247 [resolved], #2267, #2274, #2275, #2278, #2283, #2284, #2287, #2288, #23171, #24635, #24636, #24645, #24646, #24791, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25364 [executing], #25365 [deployed], #25366 [proposed], #25378 [proposed], #25379 [proposed], #25380 [proposed], #25381 [proposed], #25382 [proposed], #25383
-
-**Last PICKUP PROMPT:**
-
-```
-ens step 5 (the 180s SLO wait)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25382 [proposed] - GLM/frankenstein-llm smartness improvements
-
-Where we left off (confirmed 2026-08-09 08:07 PT):
-- GLM ring healthy: :8210 serving, 11 running, 0 waiting, prefix cache 72.5% (122M hits / 168M queries)
-- Canary false-positive quarantining GLM 97x, the pipelined-ring measurement artifact is mapped to adapter lines 1173-1214 (canary quarantine), 750-775 (wedge), 700-775 (_upstream_is_busy)
-- Julia+Claudia 120B TP=2 DOWN since Aug 6 (~2.6 days), designed GLM overflow absorber offline
-- 7 fleet hosts have stale heartbeats (3-22 days), Cesar down, ring member health unmonitored
-- Quality canary garbage detection works but enforcement bridge not built
-- SLO_TTFB 180/180 are hand-picked constants, per-upstream derivation proposed
-- Adapter code locations: canary quarantine 1173-1214, wedge detect 750-775, _adaptive_floor 1318, _upstream_is_busy 700-775
-
-Open threads to drive next:
-1. #25382 [proposed] - Apply pipelined-ring canary change: edit /usr/local/bin/frankenstein_tools_adapter.py, add PIPELINED_UPSTREAMS set, bypass tok/s floor for :8210, use running>0 OR /v1/models check. ~15 lines.
-2. #25378 [proposed] - Add per-node hex ring health probes (6 nodes via SSH/WG) to adapter, cache 120s, auto-demote when 1+ node down.
-3. #25380 [proposed] - Wire quality canary parseable=false result into fast 3-strike quarantine with 5min auto-rejoin.
-4. #25381 [proposed] - SSH Julia :2205, restart vLLM with --enforce-eager MXFP4, rejoin Claudia Ray worker :2206.
-5. #25379 [proposed] - Compute per-upstream SLO from canary tok_s: SLO = max(30, ctx_est / canary_tok_s * 2.0).
-
-Reference IDs:
-- Ideas filed: #25382 [proposed], #25378 [proposed], #25380 [proposed], #25381 [proposed], #25379 [proposed]
-- Files touched: none, investigation only, no code changed this session
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786284214295` — 8/9/2026, 8:06:32 AM PT — 178 turns
-
-**Original task:**
-
-```
-#AI DIRECTED MEDITATION
-
-if this happened just send a message of what was needed for those actual students -> SLS's detection is sound. Its delivery was mailing internal machine text to real students. That is now corrected, proven with numbers, and class-guarded so no cron can repeat it.
-
-##
-also fix whateve is wrong with frankenstein-llm to have done that in the first place. perhaps validation layers? not sure, but the model should be more dependable
-
-What other meditations are qw making?
-
-## Short answer
-
-It was not helping. It was actively hurting, and this audit is what caught it.
-
-SLS's d
-```
-
-**Ideas referenced:** #13757, #14100, #15367, #1568, #1573, #1584, #16069, #16523, #16817, #178628, #18378, #18693, #18743, #18745, #18786, #18944, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20547, #21125, #21126, #22511, #22583, #2274, #2275, #23483, #23489, #23852, #23920, #23932, #23952, #24635, #24636, #24645, #24646, #24766, #24791, #24897, #24900, #25047, #25058, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25228 [executing], #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25242 [executing], #25245, #25246, #25247, #25268 [awaiting_review], #25269, #25284 [proposed], #25313 [awaiting_review], #25364 [deployed], #25365 [deployed], #25366 [deployed], #3098, #334155, #4338, #64748, #78350, #9202, #92400, #9306
-
-**Last PICKUP PROMPT:**
-
-```
-I dropped the PICKUP PROMPT block again. Must include it verbatim in the result this time.
-
 ```

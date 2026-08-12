@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/12/2026, 1:40:29 AM PT | window: last 72h | 76 tasks | index total 647 (parsed 2, cached 645)
+Generated: 8/12/2026, 7:04:59 AM PT | window: last 72h | 75 tasks | index total 647 (parsed 1, cached 646)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1786481696854` | 8/12/2026, 6:54:03 AM | 446 | 1024KB | #TDSHS Sunset Report |
 | `1786491116649` | 8/12/2026, 12:52:58 AM | 486 | 2563KB | #Externships |
-| `1786481696854` | 8/12/2026, 12:40:46 AM | 414 | 969KB | #TDSHS Sunset Report |
 | `1786492782871` | 8/11/2026, 6:43:11 PM | 52 | 1024KB | Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look |
 | `1786467822115` | 8/11/2026, 5:09:38 PM | 388 | 876KB | frankenstein-llm is stalling this morning. Why?  |
 | `1786487328625` | 8/11/2026, 4:33:31 PM | 230 | 623KB | See this form - i think it's california skills verification form on wp forms at emsunivers |
@@ -85,11 +85,59 @@ Generated: 8/12/2026, 1:40:29 AM PT | window: last 72h | 76 tasks | index total 
 | `1786286830612` | 8/9/2026, 7:47:11 AM | 1 | 2KB | What can we do to make our instance of  GLM 5.2 Local smarter? What about frankenstein-llm |
 | `1786244179890` | 8/9/2026, 7:16:55 AM | 453 | 917KB | #WOPR GPU |
 | `1786281941469` | 8/9/2026, 7:16:27 AM | 140 | 1271KB | #CALL BACKS  |
-| `1786281595275` | 8/9/2026, 6:39:54 AM | 146 | 302KB | #AI DIRECTED MEDITATION |
 
 ---
 
 ## Per-window detail
+
+### `1786481696854` — 8/12/2026, 6:54:03 AM PT — 446 turns
+
+**Original task:**
+
+```
+#TDSHS Sunset Report
+
+See
+
+Please make the following corrections/updates for the TDSHS Sunset report and give back updated PDF:
+
+False:   They also included records from courses this Department does not regulate, and
+paperwork belonging to other divisions of our company that fall entirely outside its authority.   Were we not told or were we told something ambiguous back -> No transmittal states the measure by which compliance would be
+determined. We asked, in writing, for the provision and the measure. We were not told.  For this, that original request was YEARS ago with much back and forth wi
+```
+
+**Ideas referenced:** #081020, #16863, #178648, #18676, #18690, #2306, #2311, #25185, #25537, #25560, #25608, #25623, #25632, #25633, #25635, #25667, #25669, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25772 [executing], #25783 [proposed], #25784 [rejected], #25793 [proposed], #25796, #25797, #25798, #25799 [proposed], #25803 [proposed], #25804 [deployed], #25806 [proposed], #25810 [proposed], #25834 [awaiting_review], #25838 [proposed], #25859 [executing], #25860 [executing], #38984, #600179, #623992
+
+**Last PICKUP PROMPT:**
+
+```
+09, rmajor@emsuniversity.com."
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786481696, TDSHS Sunset report corrections.
+
+Where we left off (verified 2026-08-11 14:43 PT):
+- Rebuilt PDF at sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-11.pdf, 24 pages, 466,404 bytes.
+- Company name updated throughout to "EMS University, LLC d.b.a. EMS Universal Education" (signature + cover).
+- #25783 [proposed] filed on the $1,248 and ORR chronology conflict.
+- #25784 [rejected] duplicate row from an MCP timeout that had already written.
+
+Open threads to drive next:
+1. #25783 [proposed]. Pull the DSHS payment receipt and confirm which ORR the $1,248 was applied to.
+2. Send the PDF to sunset@sunset.texas.gov or hold for the third-party statement (human-only decision, no idea).
+
+Reference IDs:
+- Ideas filed: #25783 [proposed], #25784 [rejected]
+- Files touched: sunset_pdf/patch_v8.py, sunset_pdf/build_sunset_pdf.py, WOPR /tmp/scan_dshs2.py
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1786491116649` — 8/12/2026, 12:52:58 AM PT — 486 turns
 
@@ -161,55 +209,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Establish standing practice doc for before/after evidence
 - [x] Validate + complete
 </task_progress>
-</attempt_completion>
-```
-
-### `1786481696854` — 8/12/2026, 12:40:46 AM PT — 414 turns
-
-**Original task:**
-
-```
-#TDSHS Sunset Report
-
-See
-
-Please make the following corrections/updates for the TDSHS Sunset report and give back updated PDF:
-
-False:   They also included records from courses this Department does not regulate, and
-paperwork belonging to other divisions of our company that fall entirely outside its authority.   Were we not told or were we told something ambiguous back -> No transmittal states the measure by which compliance would be
-determined. We asked, in writing, for the provision and the measure. We were not told.  For this, that original request was YEARS ago with much back and forth wi
-```
-
-**Ideas referenced:** #081020, #16863, #178648, #18676, #18690, #2306, #2311, #25185, #25537, #25560, #25608, #25623, #25632, #25633, #25635, #25667, #25669, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25772 [executing], #25783 [proposed], #25784 [rejected], #25793 [proposed], #25796, #25797, #25798, #25799 [proposed], #25803 [proposed], #25804 [deployed], #25806 [proposed], #25810 [proposed], #38984, #600179, #623992
-
-**Last PICKUP PROMPT:**
-
-```
-09, rmajor@emsuniversity.com."
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786481696, TDSHS Sunset report corrections.
-
-Where we left off (verified 2026-08-11 14:43 PT):
-- Rebuilt PDF at sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-11.pdf, 24 pages, 466,404 bytes.
-- Company name updated throughout to "EMS University, LLC d.b.a. EMS Universal Education" (signature + cover).
-- #25783 [proposed] filed on the $1,248 and ORR chronology conflict.
-- #25784 [rejected] duplicate row from an MCP timeout that had already written.
-
-Open threads to drive next:
-1. #25783 [proposed]. Pull the DSHS payment receipt and confirm which ORR the $1,248 was applied to.
-2. Send the PDF to sunset@sunset.texas.gov or hold for the third-party statement (human-only decision, no idea).
-
-Reference IDs:
-- Ideas filed: #25783 [proposed], #25784 [rejected]
-- Files touched: sunset_pdf/patch_v8.py, sunset_pdf/build_sunset_pdf.py, WOPR /tmp/scan_dshs2.py
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 
@@ -2897,32 +2896,5 @@ THIS SYSTEM IS STILL NOT WORKING PROPERLY AND IT SI NOT INTEGRATED PROPERLY WITH
 ```
 
 **Ideas referenced:** #12018, #12206, #12364, #12605, #12606, #128260, #13553, #14132, #15404, #15405, #15406, #16152, #16153, #16154, #16473, #16474, #16475, #16523, #16732, #17446, #1745, #177914, #18316, #18335, #19437, #19682, #21775, #22060, #2271, #2274, #2275, #23133, #23184, #23276, #23710, #23989, #24635, #24636, #24645, #24646, #24791, #24990, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25365 [deployed], #2563, #2916, #3237, #32584, #334155, #33689, #3572, #4929, #4991, #5298, #5447, #5459, #5608, #5646, #6064, #6106, #6172, #6228, #6366, #64748, #6579, #6751, #7206, #7207, #7317, #7356, #7907, #8103, #9042, #9084, #9112, #9132, #9152, #9159, #9222, #9501
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786281595275` — 8/9/2026, 6:39:54 AM PT — 146 turns
-
-**Original task:**
-
-```
-#AI DIRECTED MEDITATION
-
-HOW IS THIS GOING? IS THIS HELPING? WHAT ELSE can we do here?  I want to make sure SLS is being obeyed properly. 
-
-How is it looking? Is it helping? Will it help? How do w eget it to help more?
-
-continue
-
-# TASK — AI Directed Meditation Dashboard + Live Supercluster Activation
-
-## WHAT WE WERE DOING
-Splice the AI Directed Meditation dashboard panel into `llm_router_live.php`, trigger live supercluster activation, and verify Kaison reads cohort sweeper events — all three open threads from the prior window's pickup prompt.
-
-## WHAT WE ACTUALLY DID
-
-### 1. Dashboard Panel
-```
-
-**Ideas referenced:** #14100, #1584, #17580, #18786, #23924, #23932, #25185, #25228 [executing], #25238 [approved], #25240 [approved], #25241 [approved], #25242 [executing], #25269, #25284 [proposed], #25313, #25314, #25315, #25364 [proposed], #9086, #9087, #9168, #9339, #9343
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

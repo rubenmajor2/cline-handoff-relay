@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-12T08:40:29.890Z",
+ "generated_at": "2026-08-12T14:04:59.160Z",
  "counts": {
-  "parsed": 2,
-  "reused": 645,
+  "parsed": 1,
+  "reused": 646,
   "failed": 0,
   "total": 647
  },
@@ -123621,11 +123621,11 @@
   },
   "1786481696854": {
    "task_id": "1786481696854",
-   "mtime": 1786520446440,
+   "mtime": 1786542843343,
    "created_at": "2026-08-11T20:54:56.854Z",
-   "last_modified": "2026-08-12T07:40:46.440Z",
-   "size_kb": 969,
-   "turn_count": 414,
+   "last_modified": "2026-08-12T13:54:03.343Z",
+   "size_kb": 1024,
+   "turn_count": 446,
    "title": "#TDSHS Sunset Report\n\nSee\n\nPlease make the following corrections/updates for the TDSHS Sunset report and give back updated PDF:\n\nFalse:   They also included records from courses this Department does not regulate, and\npaperwork belonging to other divisions of our company that fall entirely outside its authority.   Were we not told or were we told something ambiguous back -> No transmittal states the measure by which compliance would be\ndetermined. We asked, in writing, for the provision and the measure. We were not told.  For this, that original request was YEARS ago with much back and forth with TDSHS staff. You need to spell that out better and highlight the Years it has been -> First, the ",
    "pickup_prompt": "09, rmajor@emsuniversity.com.\"\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1786481696, TDSHS Sunset report corrections.\n\nWhere we left off (verified 2026-08-11 14:43 PT):\n- Rebuilt PDF at sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-11.pdf, 24 pages, 466,404 bytes.\n- Company name updated throughout to \"EMS University, LLC d.b.a. EMS Universal Education\" (signature + cover).\n- #25783 [proposed] filed on the $1,248 and ORR chronology conflict.\n- #25784 [rejected] duplicate row from an MCP timeout that had already written.\n\nOpen threads to drive next:\n1. #25783 [proposed]. Pull the DSHS payment receipt and confirm which ORR the $1,248 was applied to.\n2. Send the PDF to sunset@sunset.texas.gov or hold for the third-party statement (human-only decision, no idea).\n\nReference IDs:\n- Ideas filed: #25783 [proposed], #25784 [rejected]\n- Files touched: sunset_pdf/patch_v8.py, sunset_pdf/build_sunset_pdf.py, WOPR /tmp/scan_dshs2.py\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
@@ -123667,6 +123667,10 @@
     "25804": "deployed",
     "25806": "proposed",
     "25810": "proposed",
+    "25834": "awaiting_review",
+    "25838": "proposed",
+    "25859": "executing",
+    "25860": "executing",
     "38984": null,
     "178648": null,
     "600179": null,

@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/12/2026, 7:04:59 AM PT | window: last 72h | 75 tasks | index total 647 (parsed 1, cached 646)
+Generated: 8/12/2026, 8:04:59 AM PT | window: last 72h | 71 tasks | index total 647 (parsed 2, cached 645)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786481696854` | 8/12/2026, 6:54:03 AM | 446 | 1024KB | #TDSHS Sunset Report |
+| `1786492782871` | 8/12/2026, 8:04:55 AM | 73 | 1068KB | Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look |
+| `1786481696854` | 8/12/2026, 8:04:06 AM | 558 | 1172KB | #TDSHS Sunset Report |
 | `1786491116649` | 8/12/2026, 12:52:58 AM | 486 | 2563KB | #Externships |
-| `1786492782871` | 8/11/2026, 6:43:11 PM | 52 | 1024KB | Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look |
 | `1786467822115` | 8/11/2026, 5:09:38 PM | 388 | 876KB | frankenstein-llm is stalling this morning. Why?  |
 | `1786487328625` | 8/11/2026, 4:33:31 PM | 230 | 623KB | See this form - i think it's california skills verification form on wp forms at emsunivers |
 | `1786483060620` | 8/11/2026, 4:31:41 PM | 162 | 754KB | Closing on a new property in Tempe 1250 East Baseline. Please analyze the 139 page inspect |
@@ -81,16 +81,54 @@ Generated: 8/12/2026, 7:04:59 AM PT | window: last 72h | 75 tasks | index total 
 | `1786288212188` | 8/9/2026, 8:38:13 AM | 140 | 437KB | #AI Directed Meditation |
 | `1786286876279` | 8/9/2026, 8:12:08 AM | 72 | 397KB | #GLM Local/frankenstein-llm Improvements / Make Smarter |
 | `1786284214295` | 8/9/2026, 8:06:32 AM | 178 | 1101KB | #AI DIRECTED MEDITATION |
-| `1786182934055` | 8/9/2026, 8:02:41 AM | 386 | 1002KB | Please tell me which individual LLM's have been running in the last 30 minutes. I need to  |
-| `1786286830612` | 8/9/2026, 7:47:11 AM | 1 | 2KB | What can we do to make our instance of  GLM 5.2 Local smarter? What about frankenstein-llm |
-| `1786244179890` | 8/9/2026, 7:16:55 AM | 453 | 917KB | #WOPR GPU |
-| `1786281941469` | 8/9/2026, 7:16:27 AM | 140 | 1271KB | #CALL BACKS  |
 
 ---
 
 ## Per-window detail
 
-### `1786481696854` — 8/12/2026, 6:54:03 AM PT — 446 turns
+### `1786492782871` — 8/12/2026, 8:04:55 AM PT — 73 turns
+
+**Original task:**
+
+```
+Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look and see?
+```
+
+**Ideas referenced:** #0051, #0071, #22148, #22156, #22242, #22243, #23344, #23415, #25824 [proposed], #8060, #9202
+
+**Last PICKUP PROMPT:**
+
+```
+sync gap" (P1, revenue domain)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #25824 [proposed] -- Fix systemic QB invoice sync gap (Jon's discovery from chat 84 thread)
+
+Where we left off (verified 2026-08-11 18:11 PT):
+- Jon flagged in chat 84 that student 26720FT-02 Alec Burnell has a QB invoice 166048 with no doc number, no recorded flag, and a settled Authnet payment that never synced back
+- Scope confirmed: 4,781 invoices with empty qb_doc_number (1,192 with balance, 3,589 paid but unnumbered)
+- QB sync last ran May 17, 2026; sync button is permission-gated for Jon/Cori
+- Ticket TKT-20260803-33C93582 (id 23415) is closed as duplicate, root cause unresolved
+- Idea #25824 [proposed] filed for the systemic fix
+
+Open threads to drive next:
+1. #25824 [proposed] -- Fix systemic QB invoice sync gap: run QB sync, restore sync-button permissions, verify Authnet payment mirroring, reopen investigation on the invoice-undefined pattern
+2. (human-only decision, no idea) -- Ruben to decide whether to un-gate the QB Sync button for ops staff (Jon/Cori/Vicky)
+
+Reference IDs:
+- Ticket: TKT-20260803-33C93582 (id 23415)
+- Ideas filed: #25824 [proposed]
+- Files touched: none
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786481696854` — 8/12/2026, 8:04:06 AM PT — 558 turns
 
 **Original task:**
 
@@ -106,7 +144,7 @@ paperwork belonging to other divisions of our company that fall entirely outside
 determined. We asked, in writing, for the provision and the measure. We were not told.  For this, that original request was YEARS ago with much back and forth wi
 ```
 
-**Ideas referenced:** #081020, #16863, #178648, #18676, #18690, #2306, #2311, #25185, #25537, #25560, #25608, #25623, #25632, #25633, #25635, #25667, #25669, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25772 [executing], #25783 [proposed], #25784 [rejected], #25793 [proposed], #25796, #25797, #25798, #25799 [proposed], #25803 [proposed], #25804 [deployed], #25806 [proposed], #25810 [proposed], #25834 [awaiting_review], #25838 [proposed], #25859 [executing], #25860 [executing], #38984, #600179, #623992
+**Ideas referenced:** #081020, #16863, #178648, #18676, #18690, #2306, #2311, #23483, #25185, #25537, #25560, #25608, #25623, #25632, #25633, #25635, #25667, #25669, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25772 [executing], #25783 [proposed], #25784 [rejected], #25793 [proposed], #25796, #25797, #25798, #25799 [proposed], #25803 [proposed], #25804 [deployed], #25806 [proposed], #25810 [proposed], #25834 [awaiting_review], #25838 [proposed], #25859 [executing], #25860 [executing], #38984, #600179, #623992
 
 **Last PICKUP PROMPT:**
 
@@ -209,48 +247,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Establish standing practice doc for before/after evidence
 - [x] Validate + complete
 </task_progress>
-</attempt_completion>
-```
-
-### `1786492782871` — 8/11/2026, 6:43:11 PM PT — 52 turns
-
-**Original task:**
-
-```
-Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look and see?
-```
-
-**Ideas referenced:** #22148, #22156, #22242, #22243, #23344, #23415, #25824 [proposed], #8060
-
-**Last PICKUP PROMPT:**
-
-```
-sync gap" (P1, revenue domain)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #25824 [proposed] -- Fix systemic QB invoice sync gap (Jon's discovery from chat 84 thread)
-
-Where we left off (verified 2026-08-11 18:11 PT):
-- Jon flagged in chat 84 that student 26720FT-02 Alec Burnell has a QB invoice 166048 with no doc number, no recorded flag, and a settled Authnet payment that never synced back
-- Scope confirmed: 4,781 invoices with empty qb_doc_number (1,192 with balance, 3,589 paid but unnumbered)
-- QB sync last ran May 17, 2026; sync button is permission-gated for Jon/Cori
-- Ticket TKT-20260803-33C93582 (id 23415) is closed as duplicate, root cause unresolved
-- Idea #25824 [proposed] filed for the systemic fix
-
-Open threads to drive next:
-1. #25824 [proposed] -- Fix systemic QB invoice sync gap: run QB sync, restore sync-button permissions, verify Authnet payment mirroring, reopen investigation on the invoice-undefined pattern
-2. (human-only decision, no idea) -- Ruben to decide whether to un-gate the QB Sync button for ops staff (Jon/Cori/Vicky)
-
-Reference IDs:
-- Ticket: TKT-20260803-33C93582 (id 23415)
-- Ideas filed: #25824 [proposed]
-- Files touched: none
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 
@@ -2813,88 +2809,3 @@ SLS's d
 I dropped the PICKUP PROMPT block again. Must include it verbatim in the result this time.
 
 ```
-
-### `1786182934055` — 8/9/2026, 8:02:41 AM PT — 386 turns
-
-**Original task:**
-
-```
-Please tell me which individual LLM's have been running in the last 30 minutes. I need to know which ones have the most number of turns. What I'm looking for is individual LLM's. I want you to look inside of Frankenstein tools and inside of Frankenstein LLM and add those to the individual tool LLM total. I do not need to see accumulative Frankenstein LLM or accumulative Frankenstein tools number. I don't care. I wanna see the numbers for the underlying LLMs
-```
-
-**Ideas referenced:** #10108, #10740, #11316, #1151, #11741, #11781, #11944, #11953, #12184, #12366, #12368, #12477, #12588, #12618, #12688, #12689, #12824, #12872, #12878, #13155, #13157, #13202, #13439, #13874, #14133, #14142, #16163, #16265, #16304, #16625, #16680, #16715, #16844, #18312, #18326, #19585, #1998, #20864, #20947, #2139, #2150, #2151, #23171, #25069 [proposed], #25097, #7505, #8365
-
-**Last PICKUP PROMPT:**
-
-```
-emis moved to the newer image.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #25069 — per-model turn decomposition (table live + cron) and registry fix for artemis-gpt-oss-120b stale vLLM image.
-
-Where we left off (verified 2026-08-09 08:02 PT):
-- `admin_portal.per_model_turn_counts` live (cron every 5 min via `/var/www/emtskills/scripts/ingest_per_model_turn_counts.py`) — decomposes frankenstein-tools/llm into underlying LLMs (bigmac/artemis/julia/glm-local) + router picks
-- `/etc/litellm/frankenstein_registry.yaml` line 64 fixed: artemis entry now `Docker intel/llm-scaler-vllm:0.21.0-b1` (verified live `/version` 0.21.1.dev0 on 10.100.0.5:8000)
-- claude-opus-real removed from `_SURFACE_MAP` in `/etc/litellm/_router_core.py` (line ~3520); hardblock revert applied; 2 autonomous RCA retrain chains (idea 20864/20947) still send opus-real via explicit L4 picks — needs source removal if Ruben wants zero opus traffic
-
-Open threads to drive next (EVERY item has real filed idea #):
-1. #25069 [executing] — Monitor `per_model_turn_counts` first overnight window (it populated ~110 windows already; confirm totals sane vs what_served when asked)
-2. #25069 [executing] — Optionally journal the registry fix as proof-of-stale documentation (RCA notes above) so the "CANONICAL" claim stays trustworthy
-
-Reference IDs:
-- Ticket: none
-- Ideas filed: #25069 [executing]
-- Files touched: `/etc/litellm/frankenstein_registry.yaml`, `/etc/litellm/_router_core.py`, `/var/www/emtskills/scripts/ingest_per_model_turn_counts.py`, `/tmp/fix_registry_line64.py`
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per `.clinerules/EXECUTE_ORDER_66`.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786286830612` — 8/9/2026, 7:47:11 AM PT — 1 turns
-
-**Original task:**
-
-```
-What can we do to make our instance of  GLM 5.2 Local smarter? What about frankenstein-llm? I'm still seeing some minor issues popping up every now and then. Not severe, but I think we can do better. What can we do?
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786244179890` — 8/9/2026, 7:16:55 AM PT — 453 turns
-
-**Original task:**
-
-```
-#WOPR GPU
-
-So what now on resolving WOPR's CPU load spikes in excess of 400-2500%
-
-also, continue
-
-curious, what exactly causes CPU to go above 400% are there other solutions besides WOPR GPU, or is WOPR GPU best equipped. I mean WOPR is doing the work already, but wondering honestly
-
-## GPU IS UP. It was never hardware. Two stacked software bugs, both found and fixed.
-
-nvidia-smi is working right now: RTX PRO 2000 Blackwell, 16GB, driver 610.43.02. The reranker restarted itself on CUDA ("Reranker device selected: cuda") and is already holding 2.3GB VRAM. All prod services healthy (nginx/fpm/m
-```
-
-**Ideas referenced:** #2285, #2286, #2287, #2288, #25185, #25201 [rejected], #25223 [executing], #25224 [executing], #25225 [executing], #25226 [executing], #25256 [executing], #25279 [proposed], #25280 [proposed], #25281 [proposed], #25282 [proposed], #25283 [deployed], #25294 [proposed], #25295 [proposed], #25311 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786281941469` — 8/9/2026, 7:16:27 AM PT — 140 turns
-
-**Original task:**
-
-```
-#CALL BACKS 
-
-THIS SYSTEM IS STILL NOT WORKING PROPERLY AND IT SI NOT INTEGRATED PROPERLY WITH CFAS. PLEASE FIX THAT. https://www.emsuniversity.com/emtskills/routes/telephony_hub.php?view=agent#callbacks
-```
-
-**Ideas referenced:** #12018, #12206, #12364, #12605, #12606, #128260, #13553, #14132, #15404, #15405, #15406, #16152, #16153, #16154, #16473, #16474, #16475, #16523, #16732, #17446, #1745, #177914, #18316, #18335, #19437, #19682, #21775, #22060, #2271, #2274, #2275, #23133, #23184, #23276, #23710, #23989, #24635, #24636, #24645, #24646, #24791, #24990, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25365 [deployed], #2563, #2916, #3237, #32584, #334155, #33689, #3572, #4929, #4991, #5298, #5447, #5459, #5608, #5646, #6064, #6106, #6172, #6228, #6366, #64748, #6579, #6751, #7206, #7207, #7317, #7356, #7907, #8103, #9042, #9084, #9112, #9132, #9152, #9159, #9222, #9501
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

@@ -64,6 +64,7 @@
 - **TDSHS / TEXAS COMPLAINTS specifically** — R: 304 (the 8/6 gold standard: section order skeleton, public-interest opening, the outset ledger, Ruben's regulator tone register, the 7-point Texas externship design defense, the Texas citation set incl. 157.32(p)(21)(F) and (u)(1)(A)/(u)(3), threshold-objection form, arrival record, per-matter letters incorporate-never-duplicate). Read 304 BEFORE drafting any TDSHS response. + `ComplianceRefs.php`
 
 - **CS-agent response-quality bug library** — R: 270 (consult before recycling wrong replies across Email/Chat/SMS/Ticket/Voice/To AI agents; 2-strike tripwire)
+- **CLOSE THE LOOP after Cline-initiated student contact** — R: 318 (MANDATORY whenever a Cline window emails/SMSes/replies to a student: record verified ground truth + `do_not_say` into `cline_followup_context` in the SAME session so the Email Agent answers the reply from facts, not from the student's claim. Prevents a CFA confirming a false "my invoice is paid" on a live debt. Additive only, never touches payment/SLS logic. Impl: `lib/ClineFollowupContext.php`)
 
 ---
 

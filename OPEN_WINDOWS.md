@@ -6,14 +6,19 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/12/2026, 10:10:40 AM PT | window: last 72h | 71 tasks | index total 650 (parsed 5, cached 645)
+Generated: 8/12/2026, 11:10:40 AM PT | window: last 72h | 76 tasks | index total 655 (parsed 8, cached 647)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786554076003` | 8/12/2026, 10:10:27 AM | 37 | 82KB | ## Executor IS Working - Ideas Being Built Right Now |
-| `1786547336372` | 8/12/2026, 10:10:22 AM | 143 | 818KB | Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cl |
-| `1786553732663` | 8/12/2026, 10:10:20 AM | 47 | 1045KB | When I get emails like this I would like to actually see the students original email below |
-| `1786492782871` | 8/12/2026, 10:09:48 AM | 613 | 2012KB | Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look |
+| `1786556875491` | 8/12/2026, 11:10:33 AM | 51 | 209KB | #Argus |
+| `1786553732663` | 8/12/2026, 11:10:33 AM | 123 | 1235KB | When I get emails like this I would like to actually see the students original email below |
+| `1786556136912` | 8/12/2026, 11:10:30 AM | 67 | 303KB | #Frankenstein-LLM Improvements |
+| `1786492782871` | 8/12/2026, 11:10:28 AM | 712 | 2278KB | Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look |
+| `1786557939632` | 8/12/2026, 11:10:21 AM | 11 | 40KB | #CFA |
+| `1786555167629` | 8/12/2026, 11:09:44 AM | 99 | 910KB | #Externships |
+| `1786554076003` | 8/12/2026, 11:08:50 AM | 145 | 833KB | ## Executor IS Working - Ideas Being Built Right Now |
+| `1786547336372` | 8/12/2026, 11:08:42 AM | 181 | 1041KB | Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cl |
+| `1786556115138` | 8/12/2026, 10:35:15 AM | 1 | 3KB | I would like you to run a series of tests to benchmark Frankenstein LLM versus Claude Opus |
 | `1786491116649` | 8/12/2026, 10:03:55 AM | 496 | 2583KB | #Externships |
 | `1786481696854` | 8/12/2026, 9:11:19 AM | 611 | 2391KB | #TDSHS Sunset Report |
 | `1786467898078` | 8/12/2026, 8:45:57 AM | 304 | 1944KB | #MDM |
@@ -86,123 +91,28 @@ Generated: 8/12/2026, 10:10:40 AM PT | window: last 72h | 71 tasks | index total
 
 ## Per-window detail
 
-### `1786554076003` — 8/12/2026, 10:10:27 AM PT — 37 turns
+### `1786556875491` — 8/12/2026, 11:10:33 AM PT — 51 turns
 
 **Original task:**
 
 ```
-## Executor IS Working - Ideas Being Built Right Now
+#Argus
 
-While you are in there, is executor running efficiently? ### dev_stage=idle means "in queue, ready to be picked up" - NOT "doing nothing"
-
-The executor pipeline stages:
-1. `idle` = waiting in queue, ready to be picked up
-2. `auditing` = executor picked it up, generating spec
-3. `drafting` = spec done, generating code
-4. `coding` = code generated, writing files
-5. `testing` = running tests
-6. `ready_for_review` = done, waiting for review
-
-### Current Status (08:45 PT)
-
-| Idea | dev_stage | What's Happening |
-|---|---|---|
-| #25747 | auditing
+How it has Argus been doing over the last 12 hours? What improvements do we need to make? What capabilities do we need to increase? Act according to rule 29 and leverage rule 267. Let me know what other permissions I may need to increase. Also I personally head tried to do a couple of things in Argus yesterday and they failed. One of them had to do with RUBEN computer VAPI and getting that back online. I felt like Argus was way off base and not really helpful at all. And that is not how I want that agent to be. Just take a look for yourself and you'll see exactly what I mean. We need t
 ```
 
-**Ideas referenced:** #12597, #16523, #20903, #24635, #24645, #25125, #25747 [approved], #25754 [rejected], #25755 [approved], #25757 [approved], #25759 [approved], #25764 [approved], #25765 [approved], #25812 [approved]
+**Ideas referenced:** #081020, #17130 [superseded], #17537 [rejected], #177821, #18132 [deployed], #19125, #19173, #24635, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25796, #25797, #25798, #25803 [proposed], #25804 [deployed], #25812, #25834, #38984
 
 **Last PICKUP PROMPT:**
 
 ```
-lth (ideas actively building vs stalled)
-- [ ] Produce verified status report + PICKUP PROMPT
+deas/decisions per rule 267
+- [ ] Pre-validate and ship attempt_completion with PICKUP PROMPT
 </task_progress>
 </use_mcp_tool>
 ```
 
-### `1786547336372` — 8/12/2026, 10:10:22 AM PT — 143 turns
-
-**Original task:**
-
-```
-Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cline rules when a subsequent iteration identifies a substantial reversal of the initial iteration within that window. The idea is that the agent catches this and makes itself smarter. This is to be done immediately. Give the rule nubmer. If it needs refinement, let me know.
-```
-
-**Ideas referenced:** #0000, #13840, #14205, #15268, #16224, #17130 [superseded], #17537 [rejected], #18132 [deployed], #19125, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #20251, #2277, #24995, #25066, #25150, #25151, #25154, #25155, #25185, #25188, #5344, #5346, #5348
-
-**Last PICKUP PROMPT:**
-
-```
-ds a restart.",
-      "═══════════════════════════════════════════════",
-      "PICKUP PROMPT (paste into a fresh Cline window)",
-      "═══════════════════════════════════════════════",
-      "Pick up task #123 — fleet status.",
-      "Where we left off (verified 2026-08-12 10:00 PT): WOPR down.",
-      "Open threads to drive next:",
-      "1. None — completed.",
-      "Reference IDs:",
-      "- Ideas filed: none",
-      "- Files touched: none",
-      "When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.",
-      "═══════════════════════════════════════════════",
-    ].join("\n");
-    const t1 = textOf(await validate(r1txt));
-    console.log(t1.split("\n").slice(0, 8).join("\n"));
-    console.log("R317_UNVERIFIED_STATE present:", /R317_UNVERIFIED_STATE/.test(t1));
-
-    console.log("\n=== TEST 2: fleet claim WITH live-probe evidence ===");
-    const r2txt = [
-      "Done. WOPR is down (verified: httpx probe returned ECONNREFUSED at 09:58 PT).",
-      "═══════════════════════════════════════════════",
-      "PICKUP PROMPT (paste into a fresh Cline window)",
-      "═══════════════════════════════════════════════",
-      "Pick up task #123 — fleet status.",
-      "Where we left off (verified 2026-08-12 10:00 PT): WOPR down (verified: ECONNREFUSED).",
-      "Open threads to drive next:",
-      "1. None — completed.",
-      "Reference IDs:",
-      "- Ideas filed: none",
-      "- Files touched: none",
-      "When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.",
-      "═══════════════════════════════════════════════",
-    ].join("\n");
-    const t2 = textOf(await validate(r2txt));
-    console.log(t2.split("\n").slice(0, 8).join("\n"));
-    console.log("R317_UNVERIFIED_STATE present:", /R317_UNVERIFIED_STATE/.test(t2));
-
-    console.log("\n=== TEST 3: 'idle' claim with (verified: gpu-util returned 5%) ===");
-    const r3txt = [
-      "Done. frankenstein is idle (verified: gpu-util returned 5% at 09:59).",
-      "═══════════════════════════════════════════════",
-      "PICKUP PROMPT (paste into a fresh Cline window)",
-      "═══════════════════════════════════════════════",
-      "Pick up task #123 — fleet status.",
-      "Where we left off (verified 2026-08-12 10:00 PT): idle gpu (verified 5%).",
-      "Open threads to drive next:",
-      "1. None — completed.",
-      "Reference IDs:",
-      "- Ideas filed: none",
-      "- Files touched: none",
-      "When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.",
-      "═══════════════════════════════════════════════",
-    ].join("\n");
-    const t3 = textOf(await validate(r3txt));
-    console.log(t3.split("\n").slice(0, 8).join("\n"));
-    console.log("R317_UNVERIFIED_STATE present:", /R317_UNVERIFIED_STATE/.test(t3));
-  } catch (e) {
-    console.error("TEST HARNESS ERROR:", e.message);
-    process.exitCode = 1;
-  } finally {
-    server.kill();
-  }
-})();
-</content>
-</write_to_file>
-```
-
-### `1786553732663` — 8/12/2026, 10:10:20 AM PT — 47 turns
+### `1786553732663` — 8/12/2026, 11:10:33 AM PT — 123 turns
 
 **Original task:**
 
@@ -214,9 +124,58 @@ When I get emails like this I would like to actually see the students original e
 
 **Ideas referenced:** #5298, #6228
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1786492782871` — 8/12/2026, 10:09:48 AM PT — 613 turns
+```
+e is the correct patched file.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Email Agent: quote the student's original email below every AI reply.
+
+Where we left off (verified 2026-08-12 10:29 PT):
+- Deployed patch v2 to /var/www/emtskills/cron/cron_email_responder.php: appends a quoted-original block ("Original message from <sender>" + escaped pre-wrap blockquote, 8000-char cap) after the AI reply when $bodyText is non-empty.
+- php -l passes; backup at cron_email_responder.php.bak-20260812-quote; file verified on disk (grep "Quoted original student email" = 1, no stub content).
+- PHP-FPM reloaded via USR2 to master PID 2242; HANDOFF_NOTES.md updated (2026-08-12 entry).
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+- None — all work completed this session. If you want a follow-up improvement (e.g., include quoted original on the staff-forward path too, or add the original subject line above the quote), file it as a new idea and it can be built the same way.
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: none
+- Files touched: /var/www/emtskills/cron/cron_email_responder.php, /var/www/emtskills/cron/cron_email_responder.php.bak-20260812-quote, HANDOFF_NOTES.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786556136912` — 8/12/2026, 11:10:30 AM PT — 67 turns
+
+**Original task:**
+
+```
+#Frankenstein-LLM Improvements
+
+I would like you to run a series of tests to benchmark Frankenstein LLM versus Claude Opus 5. From this benchmarking, I would like for you to derive away for us to get Frankenstein LLM to behave in a manner that is better than Opus 5. I believe that this is possible if you take a look at our previous interactions here incline. It may require some configuration changes, such as better rules, better mcp, context on disk settings router settings, mcp additions, cline setting changes, anything else you can think of that could be used to get us where we would like to
+```
+
+**Ideas referenced:** #081020, #10108, #10740, #11735, #11741, #11781, #12059, #12060, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #16863, #18312, #18326, #18868, #1934, #20581, #2299, #2301, #2306, #2310, #2311, #23171, #25097, #25195, #25269, #25270, #25293, #25537, #25548 [executing], #25560, #25562, #25593 [proposed], #25608, #25623, #25632, #25633, #25635, #25666, #25667, #25669, #25679, #25688, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25796, #25797, #25798, #25803 [proposed], #25804 [deployed], #25812, #38984, #6522, #6711, #6719
+
+**Last PICKUP PROMPT:**
+
+```
+ Transmute into Argus ideas (#NNNN)
+- [ ] Update HANDOFF_NOTES.md
+- [ ] Rule-91 PICKUP PROMPT completion
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1786492782871` — 8/12/2026, 11:10:28 AM PT — 712 turns
 
 **Original task:**
 
@@ -224,7 +183,7 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look and see?
 ```
 
-**Ideas referenced:** #0051, #0071, #16523, #16613, #17685 [needs_verify], #17723, #18944, #18951, #19492, #19511 [rejected], #19859 [deployed], #2036, #20565, #20630 [awaiting_review], #22148, #22156, #22242, #22243, #2320 [deployed], #23285, #23291, #23344, #23415, #24635, #24645, #25185, #252532, #25824 [proposed], #25869 [proposed], #25870 [proposed], #25871 [proposed], #25872 [proposed], #25873 [proposed], #25876 [proposed], #25885 [deployed], #25886 [proposed], #26002, #26003 [deployed], #32324, #374151, #4016, #4802, #5387, #5892, #6646, #787890, #8060, #856404, #9086, #9202
+**Ideas referenced:** #0051, #0071, #16523, #16613, #17685 [needs_verify], #17723, #18944, #18951, #19492, #19511 [rejected], #19859 [deployed], #2036, #20565, #20630 [awaiting_review], #22148, #22156, #22242, #22243, #2320 [deployed], #23285, #23291, #23344, #23415, #24635, #24645, #25150, #25185, #25188, #252532, #25824 [proposed], #25869 [proposed], #25870 [proposed], #25871 [proposed], #25872 [proposed], #25873 [proposed], #25876 [proposed], #25885 [deployed], #25886 [proposed], #25891 [proposed], #25892 [deployed], #25896, #26002, #26003 [deployed], #32324, #374151, #4016, #4802, #5387, #5892, #6646, #787890, #8060, #856404, #9086, #9202
 
 **Last PICKUP PROMPT:**
 
@@ -257,6 +216,138 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
+
+### `1786557939632` — 8/12/2026, 11:10:21 AM PT — 11 turns
+
+**Original task:**
+
+```
+#CFA
+
+Do another scan for the last 24 hours
+
+--
+## CFA 24h Scan — CORRECTED REPORT (reanalyzed against live DB, 2026-08-11 13:46 PT)
+
+The prior report contained multiple fabricated metrics, invented table names, and false claims. Everything below was verified by live SQL queries against `admin_portal` this session. Corrected report filed as **#25768**.
+
+---
+
+### KEY METRICS (verified, last 24h)
+
+| Metric | Actual | Prior Report | Status |
+|---|---|---|---|
+| Sweep runs | 96 runs, last 13:40 PT | ✅ correct | HEALTHY |
+| Sweep candidates per run | ~125,818 → 990 deduped → 990 drafts | ✅ ~988 dra
+```
+
+**Ideas referenced:** #23316 [proposed], #24339 [deployed], #24340 [deployed], #24341 [awaiting_review], #24500 [proposed], #25768 [deployed], #25773, #25774, #25779 [deployed], #25780 [deployed], #25781 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786555167629` — 8/12/2026, 11:09:44 AM PT — 99 turns
+
+**Original task:**
+
+```
+#Externships
+
+Let's use tags to organize these: https://emsuniversity.com/emtskills/notifications/jobs.php 
+
+Also, I'm sure there's many more than just the ones that you have listed here. I need to see a timeline with regard to the student lifecycle of how that's gonna work out per student. For example the email fires off X amount of days before enrollment amount of days after enrollment, etc. X amount days after the course ends, etc. etc. The idea is that I can see them and track them throughout the entire SLS. You can do me a little arrow going back-and-forth that I can just basically slide 
+```
+
+**Ideas referenced:** #075985, #081020, #166534, #16863, #178649, #2306, #2311, #25156, #25157 [awaiting_review], #25246 [awaiting_review], #25529 [awaiting_review], #25537, #25560, #25608, #25623, #25632, #25633, #25635, #25667, #25669, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25796, #25797, #25798, #25803 [proposed], #25804 [deployed], #25812, #25848 [executing], #334155, #38984, #4338, #475569, #64748, #92400
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786554076003` — 8/12/2026, 11:08:50 AM PT — 145 turns
+
+**Original task:**
+
+```
+## Executor IS Working - Ideas Being Built Right Now
+
+While you are in there, is executor running efficiently? ### dev_stage=idle means "in queue, ready to be picked up" - NOT "doing nothing"
+
+The executor pipeline stages:
+1. `idle` = waiting in queue, ready to be picked up
+2. `auditing` = executor picked it up, generating spec
+3. `drafting` = spec done, generating code
+4. `coding` = code generated, writing files
+5. `testing` = running tests
+6. `ready_for_review` = done, waiting for review
+
+### Current Status (08:45 PT)
+
+| Idea | dev_stage | What's Happening |
+|---|---|---|
+| #25747 | auditing
+```
+
+**Ideas referenced:** #12430, #12597, #1281, #1309, #1314, #14752, #15333, #15367, #15652, #16523, #17913, #18135, #18357, #18395, #18442, #1850, #19079, #19325, #19338, #19435, #19458, #19490, #19491, #19494, #19503, #19504, #19509, #19629, #19643, #19661, #19670, #19684, #20350, #20408, #2043, #20517, #2076, #20903, #2113, #22680, #22770, #22840 [approved], #2301, #23281, #23484 [executing], #24635, #24645, #24963, #25125 [awaiting_review], #25165, #25185, #25612 [executing], #25634 [executing], #25746 [awaiting_review], #25747 [approved], #25754 [rejected], #25755 [approved], #25757 [approved], #25759 [approved], #25764 [approved], #25765 [approved], #25811 [executing], #25812 [approved], #25887 [proposed], #25890 [proposed], #3541, #3953, #3957, #4536, #5029, #5034, #57382, #7925, #8281, #8321, #8563, #8598, #9222, #9235
+
+**Last PICKUP PROMPT:**
+
+```
+r the next 3-minute cycles.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #25812 [awaiting_review] - executor efficiency: orphan-requeue PASS 2 present, clamp path proposed, rule 317 answer\n\nWhere we left off (verified 2026-08-12 11:05 PT):\n- Rule 317 answer: first completion did not use it; this one did (acquisition gate live re-probes, stick test). No reversal fired because the first completion asserted no fleet state.\n- #25887 [deployed]: PASS 2 orphan requeue present in cron_executor_starvation_demote.php, PHP lint clean, live runs requeued 33 orphaned ideas to idle with stall_warning set. Backup at cron_executor_starvation_demote.php.bak-25887-20260812-104839. DB stamped status=deployed at 10:54:59.\n- Clamp: worker cap 3 stays for now; the ring is the binding constraint. #25890 [proposed] (pending) has the staged path (ceiling step then config-driven floor), to start only after #25755 [awaiting_review] is reviewed.\n- All 7 prompt ideas sit at ready_for_review: #25747 [awaiting_review], #25755 [awaiting_review], #25757 [awaiting_review], #25759 [awaiting_review], #25764 [awaiting_review], #25765 [awaiting_review], #25812 [awaiting_review].\n\nOpen threads to drive next:\n1. #25890 [proposed]: pending, start its staged steps only after #25755 [awaiting_review] is reviewed\n2. #25755 [awaiting_review]: GLM max_num_seqs 15 to 32, pending review, prerequisite for step (b) in #25890 [proposed]\n3. (human-only decision, no idea): review and sign off the 7 ready_for_review GLM ideas\n4. #25887 [deployed]: watch PASS 2 requeue for 24h, look for stale-loop (same idea requeued 3+ times)\n\nReference IDs:\n- Ideas filed: #25887 [deployed], #25890 [proposed]\n- Files touched: /var/www/emtskills/cron/cron_executor_starvation_demote.php\n- Backup: /var/www/emtskills/cron/cron_executor_starvation_demote.php.bak-25887-20260812-104839\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════",
+  "task_prompt": "While you are in there, is executor running efficiently?\n\ndev_stage=idle means 'in queue, ready to be picked up' - NOT 'doing nothing'. The executor pipeline stages: idle, auditing, drafting, coding, testing, ready_for_review. Current status (08:45 PT): #25747 auditing, #25755 auditing, #25764 drafting (furthest along), #25757 idle, #25759 idle, #25765 idle, #25812 idle. 3 ideas are actively being built. The executor processes one at a time, so the remaining 4 will get picked up in subsequent cycles (every 3 min)."
+}
+</arguments>
+</use_mcp_tool>
+```
+
+### `1786547336372` — 8/12/2026, 11:08:42 AM PT — 181 turns
+
+**Original task:**
+
+```
+Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cline rules when a subsequent iteration identifies a substantial reversal of the initial iteration within that window. The idea is that the agent catches this and makes itself smarter. This is to be done immediately. Give the rule nubmer. If it needs refinement, let me know.
+```
+
+**Ideas referenced:** #0000, #13840, #14205, #15268, #16224, #17130 [superseded], #17537 [rejected], #18132 [deployed], #18806, #19125, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #20251, #20957, #20958, #2277, #24906, #24909, #24910, #24912, #24913, #24995, #25066, #25150, #25151, #25154, #25155, #25185, #25188, #25888 [proposed], #5344, #5346, #5348
+
+**Last PICKUP PROMPT:**
+
+```
+ule-update|1|4361` [deployed].
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Rule 317 completion-confidence gate: acquisition + reversal + stick test, with R317 validator enforcement.
+
+Where we left off (verified 2026-08-12 10:39 PT):
+- 317 is HARDFLOOR: Acquisition Gate (probe every material claim; LLM/fleet FIRST) + Reversal MUTEX + Stick Test [deployed]
+- `R317_UNVERIFIED_STATE` added to `clinerules_validate_completion`; tsc clean; 3 functional tests passed (unverified "down" blocked; verified markers pass) [deployed]
+- Rule 91 quick-check step 9 + cross-ref from 317 to the validator [deployed]
+- `.g8-floor-cap` = 196608; audit A3 now reads the override (no more hardcoded 153600) [deployed]
+- `_RULE_TREE.md` 20,372 bytes (under 20KB meta cap); reindex 323 rules / 20 hardfloor; SQLite: 317 body 4361, is_hardfloor=1 [deployed]
+- Idea #25888 [proposed] — Conclusions Ledger for the reversal half (first-vs-last MUTEX check + kills magic-word "verified")
+
+Open threads to drive next:
+1. #25888 [proposed] — Approve/reject the Conclusions Ledger build (added to clinerules_validate_completion: snapshot material conclusions, first-vs-last MUTEX check → mechanical R317_REVERSAL on flips). This is the piece that makes the reversal half fire; without it Obligation 2 stays prose-only.
+
+Reference IDs:
+- Ideas filed: #25888 [proposed]
+- Ideas closed: none
+- Files touched: `Rules/317-reversal-triggers-297-and-rule-update.md`, `Rules/91-every-completion-needs-pickup-prompt.md`, `Rules/_RULE_TREE.md`, `Rules/_INDEX.md`, `Rules/.g8-floor-cap`, `Rules/.hardfloor-manifest`, `Rules/.clinerule_counter`, `scripts/cline_rules_audit.sh`, `mcp-servers/clinerules-mcp/src/index.ts`, `mcp-servers/clinerules-mcp/build/index.js`, `/tmp/test_r317.js`
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786556115138` — 8/12/2026, 10:35:15 AM PT — 1 turns
+
+**Original task:**
+
+```
+I would like you to run a series of tests to benchmark Frankenstein LLM versus Claude Opus 5. From this benchmarking, I would like for you to derive away for us to get Frankenstein LLM to behave in a manner that is better than Opus 5. I believe that this is possible if you take a look at our previous interactions here incline. It may require some configuration changes, such as better rules, better mcp, context on disk settings router settings, mcp additions, cline setting changes, anything else you can think of that could be used to get us where we would like to go. I believe this is achievabl
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786491116649` — 8/12/2026, 10:03:55 AM PT — 496 turns
 

@@ -123,3 +123,17 @@ Don't fire more offloaded ideas than you can reconcile. If you fire 40 ideas, yo
 ## Last updated
 
 2026-07-25 — trimmed for G7 12KB hardfloor cap (idea #19125). Full dated changelog + case law: `Rules-archive/267-case-law.md`.
+
+## GATE C — Approved-idea auto-promotion (TO THE VERY TOP of Executor/Orchestrator)
+
+**Permanent hardfloor. Added 2026-08-12 Ruben steer: "approved, autonomous and promote TO THE VERY TOP of executor/orchestrator so that the in-task window is supported properly and leveraged ... support Cline 1st and Argus 2nd."**
+
+**When:** This window filed or approved ANY idea (#NNNN) that is buildable in another window (executor/orchestrator).
+
+**Mandatory action (do NOT skip):**
+1. Promote EVERY approved/filed idea from THIS task to the very top by setting `efficiency_priority = 1` (tinyint) — via `POST /api/efficiency_priority_flag.php` OR direct SQL `UPDATE orchestrator_ideas SET efficiency_priority = 1 WHERE id = #NNNN` — BEFORE calling attempt_completion.
+2. Priority philosophy: ideas that directly support/continue THIS window's deliverable come FIRST (Cline 1st); fleet/infra/Argus ideas come SECOND (Argus 2nd). Argus = monitoring/audit/observability improvements. Cline = anything that makes Cline windows faster/better (rules, MCP, context, router, executor offload).
+3. Do NOT file-then-forget: after promoting, if the work is buildable in THIS window with available tools, still BUILD it here per rule 300. The promotion exists to keep the executor/orchestrator in sync, not to defer.
+4. Reconcile in GATE B: any idea you promoted must still be in an actionable status (`approved` + `idle`/`drafting`) or marked `superseded`/`impl_failed` with a reason — never left `proposed` if you approved it.
+
+**Violations:** filing ideas for a task without promoting them to the very top = the in-task window is NOT supported by executor/orchestrator per this rule.

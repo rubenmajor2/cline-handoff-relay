@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-12T01:20:59.874Z",
+ "generated_at": "2026-08-12T08:40:29.890Z",
  "counts": {
   "parsed": 2,
   "reused": 645,
@@ -123621,27 +123621,57 @@
   },
   "1786481696854": {
    "task_id": "1786481696854",
-   "mtime": 1786492526775,
+   "mtime": 1786520446440,
    "created_at": "2026-08-11T20:54:56.854Z",
-   "last_modified": "2026-08-11T23:55:26.775Z",
-   "size_kb": 892,
-   "turn_count": 378,
+   "last_modified": "2026-08-12T07:40:46.440Z",
+   "size_kb": 969,
+   "turn_count": 414,
    "title": "#TDSHS Sunset Report\n\nSee\n\nPlease make the following corrections/updates for the TDSHS Sunset report and give back updated PDF:\n\nFalse:   They also included records from courses this Department does not regulate, and\npaperwork belonging to other divisions of our company that fall entirely outside its authority.   Were we not told or were we told something ambiguous back -> No transmittal states the measure by which compliance would be\ndetermined. We asked, in writing, for the provision and the measure. We were not told.  For this, that original request was YEARS ago with much back and forth with TDSHS staff. You need to spell that out better and highlight the Years it has been -> First, the ",
    "pickup_prompt": "09, rmajor@emsuniversity.com.\"\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1786481696, TDSHS Sunset report corrections.\n\nWhere we left off (verified 2026-08-11 14:43 PT):\n- Rebuilt PDF at sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-11.pdf, 24 pages, 466,404 bytes.\n- Company name updated throughout to \"EMS University, LLC d.b.a. EMS Universal Education\" (signature + cover).\n- #25783 [proposed] filed on the $1,248 and ORR chronology conflict.\n- #25784 [rejected] duplicate row from an MCP timeout that had already written.\n\nOpen threads to drive next:\n1. #25783 [proposed]. Pull the DSHS payment receipt and confirm which ORR the $1,248 was applied to.\n2. Send the PDF to sunset@sunset.texas.gov or hold for the third-party statement (human-only decision, no idea).\n\nReference IDs:\n- Ideas filed: #25783 [proposed], #25784 [rejected]\n- Files touched: sunset_pdf/patch_v8.py, sunset_pdf/build_sunset_pdf.py, WOPR /tmp/scan_dshs2.py\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
+    "2306": null,
+    "2311": null,
+    "16863": null,
     "18676": null,
     "18690": null,
     "25185": null,
+    "25537": null,
+    "25560": null,
+    "25608": null,
+    "25623": null,
+    "25632": null,
+    "25633": null,
+    "25635": null,
+    "25667": null,
+    "25669": null,
+    "25689": null,
+    "25722": null,
+    "25723": null,
+    "25724": null,
+    "25725": null,
+    "25726": null,
+    "25727": null,
+    "25728": null,
+    "25729": null,
+    "25730": null,
+    "25731": null,
     "25772": "executing",
     "25783": "proposed",
     "25784": "rejected",
     "25793": "proposed",
+    "25796": null,
+    "25797": null,
+    "25798": null,
     "25799": "proposed",
+    "25803": "proposed",
+    "25804": "deployed",
     "25806": "proposed",
     "25810": "proposed",
+    "38984": null,
     "178648": null,
     "600179": null,
-    "623992": null
+    "623992": null,
+    "081020": null
    }
   },
   "1786483060620": {
@@ -123691,13 +123721,13 @@
   },
   "1786491116649": {
    "task_id": "1786491116649",
-   "mtime": 1786497445589,
+   "mtime": 1786521178024,
    "created_at": "2026-08-11T23:31:56.649Z",
-   "last_modified": "2026-08-12T01:17:25.589Z",
-   "size_kb": 1277,
-   "turn_count": 361,
+   "last_modified": "2026-08-12T07:52:58.024Z",
+   "size_kb": 2563,
+   "turn_count": 486,
    "title": "#Externships\n\nI am getting tired of seeing emails about students expecting that their requested dates are going to actually happen. \n\nTell me if there is language on that form about those dates being requests and they are not a guarangee. Also, put a disclaimer on that form that's more obvious about the dates to start. \n\nIs there any email sent to them on this? \n\nThen let's work on below:\n\nCFAs should be responding back that in order to complete externships they need to make sure they have the pre-requisitte requirments, etc... \n\n--\n#Externships\n## Non‑Harmful Baby‑Step Actions to Start Right Now\n\nWe can begin with three additive, zero‑risk steps. Each step can be run, its effect verified, a",
-   "pickup_prompt": null,
+   "pickup_prompt": "arlier task-list association).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1786491116649, externship requested-date expectation setting: evidence packet, compliance filing, deadline-comms inventory.\n\nWhere we left off (verified 2026-08-12 00:47 PT):\n- All 11 checklist items complete. Form disclaimer + ack checkbox live, 9/1/2026 auto-assign notice live (self-expiring), confirmation email hardened, CFA knowledge pack rules 12/13/14 shipped, sender domain work item done.\n- Evidence packet complete at /var/www/emtskills/docs/compliance-evidence/20260811-externship-date-expectations/ incl. 3 re-captured PNG screenshots.\n- internal_note filed on compliance investigation #10 pointing at the packet.\n- Standing practice doc live at /var/www/emtskills/docs/STUDENT_FACING_CHANGE_EVIDENCE_PRACTICE.md.\n- #25848 [proposed] filed for the comms_killswitch table.\n\nOpen threads to drive next:\n1. (human-only decision, no idea) Ruben decides which deadline-comms tiers to suspend; inventory + recommendation await him in DEADLINE_COMMS_INVENTORY.md.\n2. #25848 [proposed], comms_killswitch config table; approve/implement when Ruben green-lights the suspension plan.\n3. #25157 [awaiting_review] (verified: ready_for_review 2026-08-12 00:43 PT), SLS pipeline tables, auto-assign prerequisite.\n4. #25246 [awaiting_review] (verified: ready_for_review 2026-08-12 00:43 PT), SLS pipeline prerequisite for externship auto-assign.\n5. #25529 [awaiting_review] (verified: ready_for_review 2026-08-12 00:43 PT), Council idea approval routing.\n\nReference IDs:\n- Ideas filed: #25848 [proposed]\n- Ideas reconciled: #25157 [awaiting_review], #25246 [awaiting_review], #25529 [awaiting_review]\n- Files touched: /var/www/emtskills/docs/compliance-evidence/20260811-externship-date-expectations/screenshots/ (3 PNGs + README.txt), /var/www/emtskills/docs/STUDENT_FACING_CHANGE_EVIDENCE_PRACTICE.md, admin_portal.compliance_investigation_responses (1 insert, investigation #10)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════</result>\n<task_progress>\n- [x] Stage 1: form disclaimer + ack checkbox deployed\n- [x] Stage 2: 9/1/2026 auto-assign notice (self-expiring) deployed + verified\n- [x] Confirmation email hardened + auto-assign note (date-gated)\n- [x] CFA knowledge pack rules 12/13/14\n- [x] Sender domain fix\n- [x] BEFORE + AFTER screenshots captured\n- [x] Change-record written\n- [x] Push change record + screenshots to server evidence dir\n- [x] Add note to institutional_compliance investigations tab\n- [x] Inventory ALL externship/NREMT deadline emails+SMS for Ruben review\n- [x] Establish standing practice doc for before/after evidence\n- [x] Validate + complete\n</task_progress>\n</attempt_completion>",
    "ideas": {
     "1405": null,
     "2182": null,
@@ -123717,21 +123747,23 @@
     "25818": "rejected",
     "25820": "rejected",
     "25821": "proposed",
+    "25848": "proposed",
     "64748": null,
     "78350": null,
     "92400": null,
+    "178649": null,
     "856404": null
    }
   },
   "1786492782871": {
    "task_id": "1786492782871",
-   "mtime": 1786497448810,
+   "mtime": 1786498991238,
    "created_at": "2026-08-11T23:59:42.871Z",
-   "last_modified": "2026-08-12T01:17:28.810Z",
-   "size_kb": 1001,
-   "turn_count": 45,
+   "last_modified": "2026-08-12T01:43:11.238Z",
+   "size_kb": 1024,
+   "turn_count": 52,
    "title": "Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look and see?",
-   "pickup_prompt": " gap\\\" (P1, revenue domain)\\n\\n═══════════════════════════════════════════════\\nPICKUP PROMPT (paste into a fresh Cline window)\\n═══════════════════════════════════════════════\\nPick up task -- Fix systemic QB invoice sync gap (Jon's discovery from chat 84 thread)\\n\\nWhere we left off (verified 2026-08-11 18:11 PT):\\n- Jon flagged in chat 84 that student 26720FT-02 Alec Burnell has a QB invoice 166048 with no doc number, no recorded flag, and a settled Authnet payment that never synced back\\n- Scope confirmed: 4,781 invoices with empty qb_doc_number (1,192 with balance, 3,589 paid but unnumbered)\\n- QB sync last ran May 17, 2026; sync button is permission-gated for Jon/Cori\\n- Ticket TKT-20260803-33C93582 (id 23415) is closed as duplicate, root cause unresolved\\n- Idea #25824 [proposed] filed for the systemic fix\\n\\nOpen threads to drive next:\\n1. #25824 [proposed] -- Fix systemic QB invoice sync gap: run QB sync, restore sync-button permissions, verify Authnet payment mirroring, reopen investigation on the invoice-undefined pattern\\n2. (human-only decision, no idea) -- Ruben to decide whether to un-gate the QB Sync button for ops staff (Jon/Cori/Vicky)\\n\\nReference IDs:\\n- Ticket: TKT-20260803-33C93582 (id 23415)\\n- Ideas filed: #25824 [proposed]\\n- Files touched: none\\n\\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\\n═══════════════════════════════════════════════\"\n}\n</arguments>\n</use_mcp_tool>",
+   "pickup_prompt": "sync gap\" (P1, revenue domain)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #25824 [proposed] -- Fix systemic QB invoice sync gap (Jon's discovery from chat 84 thread)\n\nWhere we left off (verified 2026-08-11 18:11 PT):\n- Jon flagged in chat 84 that student 26720FT-02 Alec Burnell has a QB invoice 166048 with no doc number, no recorded flag, and a settled Authnet payment that never synced back\n- Scope confirmed: 4,781 invoices with empty qb_doc_number (1,192 with balance, 3,589 paid but unnumbered)\n- QB sync last ran May 17, 2026; sync button is permission-gated for Jon/Cori\n- Ticket TKT-20260803-33C93582 (id 23415) is closed as duplicate, root cause unresolved\n- Idea #25824 [proposed] filed for the systemic fix\n\nOpen threads to drive next:\n1. #25824 [proposed] -- Fix systemic QB invoice sync gap: run QB sync, restore sync-button permissions, verify Authnet payment mirroring, reopen investigation on the invoice-undefined pattern\n2. (human-only decision, no idea) -- Ruben to decide whether to un-gate the QB Sync button for ops staff (Jon/Cori/Vicky)\n\nReference IDs:\n- Ticket: TKT-20260803-33C93582 (id 23415)\n- Ideas filed: #25824 [proposed]\n- Files touched: none\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "8060": null,
     "22148": null,

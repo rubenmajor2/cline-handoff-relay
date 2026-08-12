@@ -6,14 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/11/2026, 6:20:59 PM PT | window: last 72h | 88 tasks | index total 647 (parsed 2, cached 645)
+Generated: 8/12/2026, 1:40:29 AM PT | window: last 72h | 76 tasks | index total 647 (parsed 2, cached 645)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786492782871` | 8/11/2026, 6:17:28 PM | 45 | 1001KB | Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look |
-| `1786491116649` | 8/11/2026, 6:17:25 PM | 361 | 1277KB | #Externships |
+| `1786491116649` | 8/12/2026, 12:52:58 AM | 486 | 2563KB | #Externships |
+| `1786481696854` | 8/12/2026, 12:40:46 AM | 414 | 969KB | #TDSHS Sunset Report |
+| `1786492782871` | 8/11/2026, 6:43:11 PM | 52 | 1024KB | Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look |
 | `1786467822115` | 8/11/2026, 5:09:38 PM | 388 | 876KB | frankenstein-llm is stalling this morning. Why?  |
-| `1786481696854` | 8/11/2026, 4:55:26 PM | 378 | 892KB | #TDSHS Sunset Report |
 | `1786487328625` | 8/11/2026, 4:33:31 PM | 230 | 623KB | See this form - i think it's california skills verification form on wp forms at emsunivers |
 | `1786483060620` | 8/11/2026, 4:31:41 PM | 162 | 754KB | Closing on a new property in Tempe 1250 East Baseline. Please analyze the 139 page inspect |
 | `1786469157683` | 8/11/2026, 3:25:27 PM | 436 | 1143KB | How many tokens have our FREE LLMs used in the last 30 days |
@@ -86,43 +86,12 @@ Generated: 8/11/2026, 6:20:59 PM PT | window: last 72h | 88 tasks | index total 
 | `1786244179890` | 8/9/2026, 7:16:55 AM | 453 | 917KB | #WOPR GPU |
 | `1786281941469` | 8/9/2026, 7:16:27 AM | 140 | 1271KB | #CALL BACKS  |
 | `1786281595275` | 8/9/2026, 6:39:54 AM | 146 | 302KB | #AI DIRECTED MEDITATION |
-| `1786260412872` | 8/9/2026, 1:10:51 AM | 120 | 421KB | #AI Directed Meditation |
-| `1786249226096` | 8/9/2026, 12:25:03 AM | 106 | 548KB | #AI Directed Meditation |
-| `1786256930636` | 8/8/2026, 11:50:27 PM | 117 | 294KB | #Subagents |
-| `1786214132308` | 8/8/2026, 11:27:32 PM | 450 | 1674KB | I recently saw a task that referenced Anthropic and us paying for some kind of anthropic t |
-| `1786229125708` | 8/8/2026, 11:08:51 PM | 96 | 413KB | Do a deep dive and give your thoughts on the 85% confidence gate of rule 29 and whether it |
-| `1786248426374` | 8/8/2026, 9:17:39 PM | 5 | 33KB | #AI Directed Meditation |
-| `1786225462991` | 8/8/2026, 9:05:57 PM | 403 | 1102KB | I had a thought. One advantage the LLM seems to have over the human is that it can think a |
-| `1786244855784` | 8/8/2026, 8:08:15 PM | 3 | 4KB | iteration test |
-| `1786241775257` | 8/8/2026, 7:47:31 PM | 126 | 637KB | #WOPR GPU |
-| `1786227462879` | 8/8/2026, 7:14:55 PM | 501 | 843KB | #Executor Ops |
-| `1786226983152` | 8/8/2026, 6:49:37 PM | 418 | 1013KB | what is 25220?  |
-| `1786233427989` | 8/8/2026, 6:25:54 PM | 208 | 707KB | #Argus |
 
 ---
 
 ## Per-window detail
 
-### `1786492782871` — 8/11/2026, 6:17:28 PM PT — 45 turns
-
-**Original task:**
-
-```
-Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look and see?
-```
-
-**Ideas referenced:** #22148, #22156, #22242, #22243, #23344, #23415, #25824 [proposed], #8060
-
-**Last PICKUP PROMPT:**
-
-```
- gap\" (P1, revenue domain)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task -- Fix systemic QB invoice sync gap (Jon's discovery from chat 84 thread)\n\nWhere we left off (verified 2026-08-11 18:11 PT):\n- Jon flagged in chat 84 that student 26720FT-02 Alec Burnell has a QB invoice 166048 with no doc number, no recorded flag, and a settled Authnet payment that never synced back\n- Scope confirmed: 4,781 invoices with empty qb_doc_number (1,192 with balance, 3,589 paid but unnumbered)\n- QB sync last ran May 17, 2026; sync button is permission-gated for Jon/Cori\n- Ticket TKT-20260803-33C93582 (id 23415) is closed as duplicate, root cause unresolved\n- Idea #25824 [proposed] filed for the systemic fix\n\nOpen threads to drive next:\n1. #25824 [proposed] -- Fix systemic QB invoice sync gap: run QB sync, restore sync-button permissions, verify Authnet payment mirroring, reopen investigation on the invoice-undefined pattern\n2. (human-only decision, no idea) -- Ruben to decide whether to un-gate the QB Sync button for ops staff (Jon/Cori/Vicky)\n\nReference IDs:\n- Ticket: TKT-20260803-33C93582 (id 23415)\n- Ideas filed: #25824 [proposed]\n- Files touched: none\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════"
-}
-</arguments>
-</use_mcp_tool>
-```
-
-### `1786491116649` — 8/11/2026, 6:17:25 PM PT — 361 turns
+### `1786491116649` — 8/12/2026, 12:52:58 AM PT — 486 turns
 
 **Original task:**
 
@@ -144,9 +113,147 @@ CFAs should be responding back that in order to complete externships they need t
 ## Non‑Harmful Baby‑Step Actions to Start Right 
 ```
 
-**Ideas referenced:** #1405, #2182, #2196, #25129 [ready_for_review], #25156 [proposed], #25157 [ready_for_review], #25185, #25246 [ready_for_review], #25529 [approved], #25807 [proposed], #25808 [proposed], #25809 [proposed], #25814 [proposed], #25816 [rejected], #25818 [rejected], #25820 [rejected], #25821 [proposed], #64748, #78350, #856404, #92400, #9797
+**Ideas referenced:** #1405, #178649, #2182, #2196, #25129 [ready_for_review], #25156 [proposed], #25157 [ready_for_review], #25185, #25246 [ready_for_review], #25529 [approved], #25807 [proposed], #25808 [proposed], #25809 [proposed], #25814 [proposed], #25816 [rejected], #25818 [rejected], #25820 [rejected], #25821 [proposed], #25848 [proposed], #64748, #78350, #856404, #92400, #9797
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+arlier task-list association).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786491116649, externship requested-date expectation setting: evidence packet, compliance filing, deadline-comms inventory.
+
+Where we left off (verified 2026-08-12 00:47 PT):
+- All 11 checklist items complete. Form disclaimer + ack checkbox live, 9/1/2026 auto-assign notice live (self-expiring), confirmation email hardened, CFA knowledge pack rules 12/13/14 shipped, sender domain work item done.
+- Evidence packet complete at /var/www/emtskills/docs/compliance-evidence/20260811-externship-date-expectations/ incl. 3 re-captured PNG screenshots.
+- internal_note filed on compliance investigation #10 pointing at the packet.
+- Standing practice doc live at /var/www/emtskills/docs/STUDENT_FACING_CHANGE_EVIDENCE_PRACTICE.md.
+- #25848 [proposed] filed for the comms_killswitch table.
+
+Open threads to drive next:
+1. (human-only decision, no idea) Ruben decides which deadline-comms tiers to suspend; inventory + recommendation await him in DEADLINE_COMMS_INVENTORY.md.
+2. #25848 [proposed], comms_killswitch config table; approve/implement when Ruben green-lights the suspension plan.
+3. #25157 [awaiting_review] (verified: ready_for_review 2026-08-12 00:43 PT), SLS pipeline tables, auto-assign prerequisite.
+4. #25246 [awaiting_review] (verified: ready_for_review 2026-08-12 00:43 PT), SLS pipeline prerequisite for externship auto-assign.
+5. #25529 [awaiting_review] (verified: ready_for_review 2026-08-12 00:43 PT), Council idea approval routing.
+
+Reference IDs:
+- Ideas filed: #25848 [proposed]
+- Ideas reconciled: #25157 [awaiting_review], #25246 [awaiting_review], #25529 [awaiting_review]
+- Files touched: /var/www/emtskills/docs/compliance-evidence/20260811-externship-date-expectations/screenshots/ (3 PNGs + README.txt), /var/www/emtskills/docs/STUDENT_FACING_CHANGE_EVIDENCE_PRACTICE.md, admin_portal.compliance_investigation_responses (1 insert, investigation #10)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Stage 1: form disclaimer + ack checkbox deployed
+- [x] Stage 2: 9/1/2026 auto-assign notice (self-expiring) deployed + verified
+- [x] Confirmation email hardened + auto-assign note (date-gated)
+- [x] CFA knowledge pack rules 12/13/14
+- [x] Sender domain fix
+- [x] BEFORE + AFTER screenshots captured
+- [x] Change-record written
+- [x] Push change record + screenshots to server evidence dir
+- [x] Add note to institutional_compliance investigations tab
+- [x] Inventory ALL externship/NREMT deadline emails+SMS for Ruben review
+- [x] Establish standing practice doc for before/after evidence
+- [x] Validate + complete
+</task_progress>
+</attempt_completion>
+```
+
+### `1786481696854` — 8/12/2026, 12:40:46 AM PT — 414 turns
+
+**Original task:**
+
+```
+#TDSHS Sunset Report
+
+See
+
+Please make the following corrections/updates for the TDSHS Sunset report and give back updated PDF:
+
+False:   They also included records from courses this Department does not regulate, and
+paperwork belonging to other divisions of our company that fall entirely outside its authority.   Were we not told or were we told something ambiguous back -> No transmittal states the measure by which compliance would be
+determined. We asked, in writing, for the provision and the measure. We were not told.  For this, that original request was YEARS ago with much back and forth wi
+```
+
+**Ideas referenced:** #081020, #16863, #178648, #18676, #18690, #2306, #2311, #25185, #25537, #25560, #25608, #25623, #25632, #25633, #25635, #25667, #25669, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25772 [executing], #25783 [proposed], #25784 [rejected], #25793 [proposed], #25796, #25797, #25798, #25799 [proposed], #25803 [proposed], #25804 [deployed], #25806 [proposed], #25810 [proposed], #38984, #600179, #623992
+
+**Last PICKUP PROMPT:**
+
+```
+09, rmajor@emsuniversity.com."
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786481696, TDSHS Sunset report corrections.
+
+Where we left off (verified 2026-08-11 14:43 PT):
+- Rebuilt PDF at sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-11.pdf, 24 pages, 466,404 bytes.
+- Company name updated throughout to "EMS University, LLC d.b.a. EMS Universal Education" (signature + cover).
+- #25783 [proposed] filed on the $1,248 and ORR chronology conflict.
+- #25784 [rejected] duplicate row from an MCP timeout that had already written.
+
+Open threads to drive next:
+1. #25783 [proposed]. Pull the DSHS payment receipt and confirm which ORR the $1,248 was applied to.
+2. Send the PDF to sunset@sunset.texas.gov or hold for the third-party statement (human-only decision, no idea).
+
+Reference IDs:
+- Ideas filed: #25783 [proposed], #25784 [rejected]
+- Files touched: sunset_pdf/patch_v8.py, sunset_pdf/build_sunset_pdf.py, WOPR /tmp/scan_dshs2.py
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786492782871` — 8/11/2026, 6:43:11 PM PT — 52 turns
+
+**Original task:**
+
+```
+Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look and see?
+```
+
+**Ideas referenced:** #22148, #22156, #22242, #22243, #23344, #23415, #25824 [proposed], #8060
+
+**Last PICKUP PROMPT:**
+
+```
+sync gap" (P1, revenue domain)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #25824 [proposed] -- Fix systemic QB invoice sync gap (Jon's discovery from chat 84 thread)
+
+Where we left off (verified 2026-08-11 18:11 PT):
+- Jon flagged in chat 84 that student 26720FT-02 Alec Burnell has a QB invoice 166048 with no doc number, no recorded flag, and a settled Authnet payment that never synced back
+- Scope confirmed: 4,781 invoices with empty qb_doc_number (1,192 with balance, 3,589 paid but unnumbered)
+- QB sync last ran May 17, 2026; sync button is permission-gated for Jon/Cori
+- Ticket TKT-20260803-33C93582 (id 23415) is closed as duplicate, root cause unresolved
+- Idea #25824 [proposed] filed for the systemic fix
+
+Open threads to drive next:
+1. #25824 [proposed] -- Fix systemic QB invoice sync gap: run QB sync, restore sync-button permissions, verify Authnet payment mirroring, reopen investigation on the invoice-undefined pattern
+2. (human-only decision, no idea) -- Ruben to decide whether to un-gate the QB Sync button for ops staff (Jon/Cori/Vicky)
+
+Reference IDs:
+- Ticket: TKT-20260803-33C93582 (id 23415)
+- Ideas filed: #25824 [proposed]
+- Files touched: none
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1786467822115` — 8/11/2026, 5:09:38 PM PT — 388 turns
 
@@ -214,55 +321,6 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [x] Clean up test override
 - [x] Check frankenstein-llm current state (all 4 healthy, GLM 7 running)
 - [x] Present results</task_progress></attempt_completion>
-```
-
-### `1786481696854` — 8/11/2026, 4:55:26 PM PT — 378 turns
-
-**Original task:**
-
-```
-#TDSHS Sunset Report
-
-See
-
-Please make the following corrections/updates for the TDSHS Sunset report and give back updated PDF:
-
-False:   They also included records from courses this Department does not regulate, and
-paperwork belonging to other divisions of our company that fall entirely outside its authority.   Were we not told or were we told something ambiguous back -> No transmittal states the measure by which compliance would be
-determined. We asked, in writing, for the provision and the measure. We were not told.  For this, that original request was YEARS ago with much back and forth wi
-```
-
-**Ideas referenced:** #178648, #18676, #18690, #25185, #25772 [executing], #25783 [proposed], #25784 [rejected], #25793 [proposed], #25799 [proposed], #25806 [proposed], #25810 [proposed], #600179, #623992
-
-**Last PICKUP PROMPT:**
-
-```
-09, rmajor@emsuniversity.com."
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786481696, TDSHS Sunset report corrections.
-
-Where we left off (verified 2026-08-11 14:43 PT):
-- Rebuilt PDF at sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-11.pdf, 24 pages, 466,404 bytes.
-- Company name updated throughout to "EMS University, LLC d.b.a. EMS Universal Education" (signature + cover).
-- #25783 [proposed] filed on the $1,248 and ORR chronology conflict.
-- #25784 [rejected] duplicate row from an MCP timeout that had already written.
-
-Open threads to drive next:
-1. #25783 [proposed]. Pull the DSHS payment receipt and confirm which ORR the $1,248 was applied to.
-2. Send the PDF to sunset@sunset.texas.gov or hold for the third-party statement (human-only decision, no idea).
-
-Reference IDs:
-- Ideas filed: #25783 [proposed], #25784 [rejected]
-- Files touched: sunset_pdf/patch_v8.py, sunset_pdf/build_sunset_pdf.py, WOPR /tmp/scan_dshs2.py
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```
 
 ### `1786487328625` — 8/11/2026, 4:33:31 PM PT — 230 turns
@@ -2868,570 +2926,3 @@ Splice the AI Directed Meditation dashboard panel into `llm_router_live.php`, tr
 **Ideas referenced:** #14100, #1584, #17580, #18786, #23924, #23932, #25185, #25228 [executing], #25238 [approved], #25240 [approved], #25241 [approved], #25242 [executing], #25269, #25284 [proposed], #25313, #25314, #25315, #25364 [proposed], #9086, #9087, #9168, #9339, #9343
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786260412872` — 8/9/2026, 1:10:51 AM PT — 120 turns
-
-**Original task:**
-
-```
-#AI Directed Meditation
-
-Ruben — two deliverables shipped tonight.
-
----
-
-## 1. Kaison Wired to Cohort Gate Sweeper
-
-The sweeper now writes to `orchestrator_event_log` on every student dispatch and every systemic cluster alert. Kaison's query loop (`WHERE kaizen_processed=0 AND event_type IN ('cohort_sweeper_scan', ...)`) will pick these up automatically.
-
-**Two INSERT points added:**
-
-| Function | Event | Severity | Kaison sees |
-|---|---|---|---|
-| `writeCfaDraft()` | `event_type='cohort_sweeper_scan'`, `event_category='student_blocked'`, `event_subtype=<gate>` | `high` if systemic cluster, `
-```
-
-**Ideas referenced:** #06222, #071410, #0891, #10003, #10017, #10107, #11160, #11798, #11812, #11942, #11943, #12184, #12245, #127760, #128225, #128269, #14100, #14141, #141414, #14261, #14532, #15803, #16233, #166534, #181820, #19653, #23264, #23831, #23924, #25228 [executing], #25238 [approved], #25240 [approved], #25241 [approved], #25242 [executing], #25269, #25284 [proposed], #25313, #25314, #25315, #2563, #334155, #3730, #4338, #475569, #566042, #6366, #64748, #8212, #92400, #9675, #9679, #9888, #9889
-
-**Last PICKUP PROMPT:**
-
-```
-was deleted after verification
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up AI Directed Meditation — verify dashboard renders on live page and Kaison processed the 94 pending events.
-
-Where we left off (verified 2026-08-09 01:10 PT):
-- **Dashboard panel deployed** — `/var/www/emtskills/lib/emsu_ai_meditation_panel.php` (10KB PHP), spliced at line 254 of `/var/www/emtskills/routes/llm_router_live.php` between ruben_nav_render and <h1>LLM Router — Live</h1>. Reads /tmp/ems_cohort_sweeper.log and /tmp/ems_supercluster.log
-- **Supercluster Engine: 47 ideas approved LIVE** (39 P1, 8 P0). ACTIVATION_CONF=0.80. 3 engine bugs fixed: JSON constraint on cluster_evidence, missing bulk_approved_count column, event_log INSERT nonexistent columns. Backup: `routes/llm_router_live.php.bak-20260809-0041-panel-splice`
-- **Cohort Sweeper: 94 Kaison events pending** — 93 cohort (student_blocked + systemic_cluster) + 1 supercluster_activate. All with kaizen_processed=0. Kaison poll query verified to match. Last live sweep 00:57 PT: 362 scanned, 92 dispatched, 0 errors
-- **47 ideas confirmed** via `SELECT COUNT(*) FROM orchestrator_ideas WHERE approved_by LIKE '%supercluster%' AND status_changed_at > '2026-08-09 00:47:00'`
-
-Open threads to drive next:
-1. #25242 [executing] — Supercluster Engine: verify next cron cycle activates any new clusters. Manual trigger: `sudo -u emsumain php /var/www/emtskills/crons/cron_idea_supercluster_engine.php`
-2. #25228 [executing] — Cohort Sweeper: verify Kaison processed the 94 pending events (check `kaizen_processed=1`): `SELECT event_type, COUNT(*) FROM orchestrator_event_log WHERE kaizen_processed=0 AND event_type IN ('cohort_sweeper_scan','supercluster_activate') GROUP BY event_type`
-3. #25238 [approved], #25240 [approved], #25241 [approved] — Roadmap builds: SLS+QuickBooks scope
-4. #25284 [proposed] — Instructor scheduling optimizer
-
-Reference IDs:
-- Supercluster engine: #25242 [executing]
-- Cohort sweeper: #25228 [executing]
-- Roadmap builds: #25238 [approved], #25240 [approved], #25241 [approved]
-- Instructor scheduling: #25284 [proposed]
-- Files touched: /var/www/emtskills/routes/llm_router_live.php, /var/www/emtskills/lib/emsu_ai_meditation_panel.php, /var/www/emtskills/crons/cron_idea_supercluster_engine.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786249226096` — 8/9/2026, 12:25:03 AM PT — 106 turns
-
-**Original task:**
-
-```
-#AI Directed Meditation
-
----
-
-What is this all called Multi-Threading, whatever? Can we just call it AI Directed Medication? Or do you have a different situation/solution? 
-
-Shouldn't we put this on this page: https://emsuniversity.com/emtskills/routes/llm_router_live.php 
-
-Is every 6 hours enough? -> - A student like `26422FT-08` is blocked on payment. A human might notice days later when the student emails frustrated. The sweeper catches it automatically, every 6 hours.
-
-But also Kazon of course woudl need to know
-
-Approved, but Make sure ideas are SLS compliant and plus more to it then this
-```
-
-**Ideas referenced:** #06222, #071410, #0891, #10003, #10017, #10107, #11160, #11798, #11812, #11942, #11943, #12184, #12245, #127760, #128225, #128269, #14141, #141414, #14261, #14532, #15803, #16233, #166534, #181820, #19653, #2274, #2275, #23264, #23831, #24635, #24636, #24645, #24646, #24791, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25227 [executing], #25228 [executing], #25229 [proposed], #25238 [proposed], #25240 [proposed], #25241 [proposed], #25242 [in_progress], #25268 [executing], #25284 [proposed], #2563, #334155, #3730, #4338, #475569, #566042, #6366, #64748, #8212, #92400, #9675, #9679, #9888, #9889
-
-**Last PICKUP PROMPT:**
-
-```
-nt_type='cohort_sweeper_scan')
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task: Add AI Directed Meditation dashboard to llm_router_live.php, then trigger live supercluster activation.
-
-Where we left off (verified 2026-08-09 00:24 PT):
-- **Supercluster Engine v2 DEPLOYED** — ACTIVATION_CONF=0.80, all 7 Rule-29 gates, dry-run 46 would approve
-  - File: /var/www/emtskills/crons/cron_idea_supercluster_engine.php
-  - Backup: /var/www/emtskills/crons/cron_idea_supercluster_engine.php.bak-20260809-000007
-  - Cron: 45 */6 * * * — dry-run flag removed, ready for next cycle
-- **Cohort Gate Sweeper Kaison-wired DEPLOYED** — writes orchestrator_event_log on every student_blocked + systemic_cluster
-  - File: /var/www/emtskills/crons/cron_cohort_gate_sweeper.php
-  - Events: event_type='cohort_sweeper_scan', event_category='student_blocked' (severity=high/medium) + 'systemic_cluster' (severity=critical)
-  - Dry-run verified: 12 scanned, 1 systemic cluster, all functions execute clean
-  - Log file permissions: /tmp/ems_cohort_sweeper.log owned emsumain:psaserv
-- **Ideas #25238/#25240/#25241 APPROVED** — SLS + QuickBooks scope
-- **Rule 97 RCA filed** — base64 cat blobs caused context bloat; mitigation: use write_server_file MCP, never cat>1KB to stdout
-- **AI Directed Meditation dashboard** PHP/HTML block designed (subagent 4) — dark KDR military styling, reads /tmp/ems_cohort_sweeper.log and /tmp/ems_supercluster.log, ready to splice into llm_router_live.php after `ruben_nav_render('llm_router')` and before `<h1>LLM Router — Live</h1>`
-
-Open threads to drive next:
-1. Splice AI Directed Meditation dashboard block into /var/www/emtskills/routes/llm_router_live.php — after `ruben_nav_render('llm_router')` and before `<h1>LLM Router — Live</h1>`
-2. Trigger live supercluster activation: `sudo -u emsumain php /var/www/emtskills/crons/cron_idea_supercluster_engine.php` — verify ~46 ideas mass-approved in orchestrator_event_log
-3. Verify Kaison reads cohort events: `SELECT * FROM orchestrator_event_log WHERE event_type='cohort_sweeper_scan' AND created_at > NOW() - INTERVAL 1 HOUR`
-
-Reference IDs:
-- Supercluster engine: #25242 [executing]
-- Cohort sweeper: #25228 [executing]
-- Roadmap builds: #25238 [approved], #25240 [approved], #25241 [approved], #25284 [proposed]
-- Rule 97 RCA: context bloat from base64 cat → stdout
-- Files touched: /var/www/emtskills/crons/cron_idea_supercluster_engine.php, /var/www/emtskills/crons/cron_cohort_gate_sweeper.php, /var/www/emtskills/routes/llm_router_live.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786256930636` — 8/8/2026, 11:50:27 PM PT — 117 turns
-
-**Original task:**
-
-```
-#Subagents
-
-Subagents still painfully slow. I hae one window that's been open 30 minutes for example with subagents. Fix needed
-
-## Session stopped — subagent DS-routing change is live, latency root cause still open
-
-Ruben directed to stop here rather than continue debugging via a broken repeated grep chain that ate context.
-
-### What is confirmed working
-The three-line change to /etc/litellm/_router_core.py (subagent DS-routing) is live:
-- Line 5365: entrypoint check now includes emsu-executor-auto
-- Line 5375: removed the not-has-tools disjunct from the eligibility check
-- Line 5327: added n
-```
-
-**Ideas referenced:** #11397, #11847, #12231, #12246, #12335, #12463, #12584, #12589, #12590, #13155, #13157, #13199, #13204, #13490, #16063, #16844, #1754, #1755, #18671, #1989, #2254, #2258, #2289 [deployed], #23169, #23171, #24157, #24172, #24183, #24217, #25082 [executing], #25130 [executing], #25133, #25155, #25157, #25266 [proposed], #25267 [proposed], #25296 [proposed], #25316 [proposed], #25317 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786214132308` — 8/8/2026, 11:27:32 PM PT — 450 turns
-
-**Original task:**
-
-```
-I recently saw a task that referenced Anthropic and us paying for some kind of anthropic thing. This happened earlier today but I didn't catch it because there was another emergent issue in the window. Can you tell me if there is something that attempted to inject Anthropic? There are literally no places where anthropic should be living or residing except fot as the vision doorman but only 50-50 with Kimi K3.
-```
-
-**Ideas referenced:** #0000, #10108, #10740, #11741, #11781, #1234 [outdated], #12477, #12584, #12618, #12824, #12872, #12878, #13202, #13204 [executing], #16163, #16265, #16304, #16844, #17130 [superseded], #17537 [rejected], #18132 [deployed], #18312, #18326, #19125, #19173, #19898, #19904, #1998, #20251 [deployed], #2059 [resolved], #2074 [resolved], #20957, #20958, #21134, #2124 [open], #2128 [resolved], #2178 [resolved], #2207 [investigating], #2274 [resolved], #2275 [resolved], #23171, #24995, #25066 [deployed], #25082 [executing], #25097, #25130 [superseded], #25131, #25133, #25157 [executing], #25185, #25196 [deployed], #25266 [proposed], #25267 [proposed], #25296 [proposed], #25316 [proposed], #25317 [proposed], #7505
-
-**Last PICKUP PROMPT:**
-
-```
-window has the full 120B pool.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — close out the subagent-DS routing ideas and verify ongoing performance.
-
-Where we left off (verified 2026-08-08 22:12 PT):
-- Three-line fix deployed to `/etc/litellm/_router_core.py`: (1) `emsu-executor-auto` added to gate entrypoint, (2) `not _has_tools_rc` disjunct removed, (3) `_is_subagent_turn` detection patched for non-tool subagents.
-- Litellm restarted at 21:37:25 PT. Audit log confirms four subagent dispatches routed to `deepseek-v4-pro` (Sub-agent Executor surface).
-- Anthropic injection investigation complete. No billing/keys involved.
-- Rule 297 RCA complete. Rule-91 BRACKET SCOPE deployed and reindexed.
-- HANDOFF_NOTES.md updated 16:51 PT.
-
-Open threads to drive next:
-1. Close #25267 [proposed] as deployed (fix shipped + verified).
-2. Close #25130 [executing] as deployed (corrective spec executed).
-3. Close #25082 [executing] as superseded.
-4. Close #25266 [proposed] as deployed (litellm restarts at 19:45 and 21:37 both verified).
-5. Close #25157 [executing] as deployed (the revert idea referenced in the code comments).
-6. Close #13204 [executing] if the no-tool-use corrective retry is no longer needed.
-
-Reference IDs:
-- Ideas filed this session: #25266 [proposed], #25267 [proposed]
-- Ideas carried: #25130 [executing], #25082 [executing]
-- Bug-library incidents: 2274 [deployed], 2275 [deployed]
-- Files touched: /etc/litellm/_router_core.py, /etc/systemd/system/litellm.service.d/10-frugal.conf, /var/www/emtskills/clinerules/Rules/91-every-completion-needs-pickup-prompt.md, /var/www/emtskills/docs/HANDOFF_NOTES.md
-- Rule 297 all three deliverables completed this session
-- Rule-91 BRACKET SCOPE deployed and reindexed
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786229125708` — 8/8/2026, 11:08:51 PM PT — 96 turns
-
-**Original task:**
-
-```
-Do a deep dive and give your thoughts on the 85% confidence gate of rule 29 and whether it's the sweet spot of innovation and progress without too much fallback and if so why, if not why not and recommendations if any? 
-
-When do we end up with rollbacks or reversions or don't like the 85% gate. Give good data
-```
-
-**Ideas referenced:** #12059, #17537, #17619 [deployed], #18806, #20041, #2035, #2037 [in_progress], #2040, #2067, #2069, #2070, #2074, #2075, #2077, #2086, #2088, #2091, #20914, #2104, #2105 [deployed], #2110, #2112, #2113, #2115, #2117, #2119, #2137, #2181, #2203, #2238 [deployed], #2240 [deployed], #2242 [deployed], #2246, #2249 [needs_verify], #2268, #2273, #25247 [deployed], #2782
-
-**Last PICKUP PROMPT:**
-
-```
-pleted`, `dev_stage=deployed`.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up the acknowledge_and_log handler wiring task (the 85% confidence gate deep-dive follow-up, #25247 [deployed]).
-
-Where we left off (verified 2026-08-08 23:08 PT):
-- Shipped one-line fix: `case 'acknowledge_and_log':` added at `/var/www/emtskills/cron/cron_orchestrator_executor.php` line 950, above `case 'monitor_only':`.
-- Verified: `php -l` clean, FPM reloaded, executor ticked clean, 15 historical failed ack rows confirmed in `orchestrator_decisions`.
-- Idea #25247 [deployed] updated: title, description, `status=completed`, `dev_stage=deployed`.
-- Note to self: `write_server_file` with empty content truncates the target file. Use `sed` one-liners or restore from backup for server-side surgical patches. Backup restored from `.bak-ruben-impl-20260808-141016`.
-
-Open threads to drive next:
-None, all work completed this session.
-
-Reference IDs:
-- Idea: #25247 [deployed]
-- File: /var/www/emtskills/cron/cron_orchestrator_executor.php (line 950)
-- Restore point: /var/www/emtskills/cron/cron_orchestrator_executor.php.bak-ruben-impl-20260808-141016
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786248426374` — 8/8/2026, 9:17:39 PM PT — 5 turns
-
-**Original task:**
-
-```
-#AI Directed Meditation
-
----
-
-What is this all called Multi-Threading, whatever? Can we just call it AI Directed Medication? Or do you have a different situation/solution? 
-
-Shouldn't we put this on this page: https://emsuniversity.com/emtskills/routes/llm_router_live.php 
-
-Is every 6 hours enough? -> - A student like `26422FT-08` is blocked on payment. A human might notice days later when the student emails frustrated. The sweeper catches it automatically, every 6 hours.
-
-But also Kazon of course woudl need to know
-
-Approved, but Make sure ideas are SLS compliant and plus more to it then this
-```
-
-**Ideas referenced:** #25227 [executing], #25228 [executing], #25229 [proposed], #25238 [proposed], #25240 [proposed], #25241 [proposed], #25242 [in_progress], #25268 [executing], #25284 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786225462991` — 8/8/2026, 9:05:57 PM PT — 403 turns
-
-**Original task:**
-
-```
-I had a thought. One advantage the LLM seems to have over the human is that it can think a thought which has an idea to be executed, while humans have a dificult time doing that withough spacial interdimensional thining. How can this be leveraged?
-```
-
-**Ideas referenced:** #14847, #15637, #16613, #17580, #23642 [superseded], #24635, #24636, #24645, #24646, #24791, #25097, #25111, #25112, #25120, #25122, #25125, #25127 [rejected], #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [executing], #25227 [executing], #25228 [proposed], #25229 [proposed], #25238 [proposed], #25240 [proposed], #25241 [proposed], #25242 [proposed], #25268 [executing], #25269 [proposed], #25281 [proposed], #25284 [proposed], #7551, #9086, #9831
-
-**Last PICKUP PROMPT:**
-
-```
-s the largest student blocker.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task: Continue the mechanical multi-threading build — apply Rule-29 hardgate to Supercluster Engine v2, then build the Payment Cluster Sweeper (#25238).
-
-Where we left off (verified 2026-08-08 20:43 PT):
-- Cohort Gate Sweeper (#25228) DEPLOYED, LIVE, CRON-REGISTERED (15 */6 * * *)
-  - 30d scan detected 27 students blocked, 3 systemic clusters, 27 agent_drafts dispatched
-  - File: /var/www/emtskills/crons/cron_cohort_gate_sweeper.php
-  - Cron: 15 */6 * * * /usr/bin/php /var/www/emtskills/crons/cron_cohort_gate_sweeper.php >> /tmp/ems_cohort_sweeper.log 2>&1
-- Supercluster Engine v2 (#25242) DEPLOYED but needs Rule-29 WHERE-clause patch
-  - IDEA_MIN_CONF already 0.80 (line 42)
-  - ACTIVATION_CONF still 0.70 (needs → 0.80)
-  - Missing WHERE gates: denied_reason IS NULL, age>=3d, priority IN (P0,P1), noise exclusion
-  - Engine already cron-registered: 45 */6 * * * (runs offset from sweeper)
-  - File: /var/www/emtskills/crons/cron_idea_supercluster_engine.php
-  - Complete v2 file (all patches applied) at: /Users/rubenmajor/Desktop/cron_idea_supercluster_engine_v2.php
-- Dry-run validated: 908 ideas, 94 chains, 6 superclusters, 259 would mass-approve
-
-Open threads to drive next:
-1. Apply Rule-29 hardgate WHERE-clause patch to engine (conf>=0.80, age>=3d, P0/P1, noise exclusion) — push local v2 file at /Users/rubenmajor/Desktop/cron_idea_supercluster_engine_v2.php or apply one-line insert after line 69 in the WHERE clause
-2. Re-test dry-run with rule-29-compliant pool, verify activation fires correctly
-3. #25238 [proposed] Build Payment Cluster Sweeper — payment-specific auto-repair using Stripe intent-match (foundation: 100% of SLS first-failures are payment, fixing payment heals the universal blocker)
-4. #25240 [proposed] Build Exam Enforcement Cluster Sweeper — same pattern on exam integrity with proctoring-outage detection
-5. #25241 [proposed] Build Communications Theme Cluster Sweeper — support-question clustering
-
-Reference IDs:
-- Engine deployed: #25228 [executing]
-- Supercluster engine: #25242 [executing]
-- Rule-29 audit: #25268 [executing]
-- Roadmap builds: #25238, #25240, #25241, #25284 [proposed]
-- Framework: #25227 [executing], #25229 [proposed]
-- Files touched: /var/www/emtskills/crons/cron_cohort_gate_sweeper.php, /var/www/emtskills/crons/cron_idea_supercluster_engine.php, /Users/rubenmajor/Desktop/cron_idea_supercluster_engine_v2.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-
-[attempt_completion] Result: DoneThe user has provided feedback on the results. Consider their input to continue the task, and then attempt completion again.
-<feedback>
-Wait the question is what else can we do? There is a lot more and that should be able to maintain itself long term. We need more efficiency now though so focus on the what else. Use the thesis to think of other things that would benefit us the most right now other than staff that we don't have
-</feedback><environment_details>
-# Visual Studio Code Visible Files
-(No visible files)
-
-# Visual Studio Code Open Tabs
-(No open tabs)
-
-# Current Time
-8/8/2026, 8:57:49 PM (America/Los_Angeles, UTC-7:00)
-
-# Context Window Usage
-87,431 / 128K tokens used (68%)
-
-# Current Mode
-ACT MODE
-</environment_details>
-```
-
-### `1786244855784` — 8/8/2026, 8:08:15 PM PT — 3 turns
-
-**Original task:**
-
-```
-iteration test
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786241775257` — 8/8/2026, 7:47:31 PM PT — 126 turns
-
-**Original task:**
-
-```
-#WOPR GPU
-
-Research with the community whether or not what you were saying is correct and then validate your claims. If so, let me know, if not try the other thing or things that you need to try to get it working
-
-## The reboot gave us the answer: it's the hardware. Your tech should look at the card.
-
-My service ran **flawlessly** this boot — exactly the sequence I said was needed:
-
-```
-18:58:31  PCIe link retrained to 32GT/s on attempt 1
-18:58:31  link now: Speed 32GT/s, Width x8
-18:58:31  BAR1 resize to 8G OK on attempt 1
-18:58:38  post-load nvidia-smi: No devices found.  link: Speed 32GT/s,
-```
-
-**Ideas referenced:** #1045, #1057, #1080 [needs_verify], #1104 [deployed], #1130 [resolved], #1448 [resolved], #1449 [resolved], #1457 [resolved], #15144, #1537 [resolved], #1543 [investigating], #16448, #16803, #1717 [resolved], #1795 [resolved], #1817 [investigating], #1826 [resolved], #18605, #1896, #1897 [investigating], #1960 [investigating], #1988 [resolved], #2168, #2179 [resolved], #2180, #2185, #2210, #2213, #2216, #2228, #2235, #2236, #2237, #2239, #2241, #2245, #2248, #2251, #2263, #2264, #2270, #2276 [investigating], #2278 [investigating], #2279 [investigating], #2280 [investigating], #2281 [resolved], #2282 [investigating], #2283 [deployed], #2284, #23290, #23291, #25185, #25201 [rejected], #25223 [executing], #25224 [executing], #25225 [executing], #25226 [executing], #25256 [executing], #25279 [proposed], #35313, #4494 [deployed], #48242, #48243
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786227462879` — 8/8/2026, 7:14:55 PM PT — 501 turns
-
-**Original task:**
-
-```
-#Executor Ops
-
-First off the claim of no GPU is wrong -> Blackwell 6000 pro or something, 16gb card find it and use it if it helps reduce the 2500 CPU load spike
-
-## ruben_executor_live.php — Full Table Wiring Audit + Pipeline Doctor Report
-
-### Page Wiring: VERIFIED ✅
-
-Every table on the page is wired to real data sources:
-
-| Section | Query Source | Status |
-|---------|-------------|--------|
-| Quick Stats banner | SELECT COUNT() GROUP BY outcome | ✅ Verified — 25 failed, 48 executed in 24h |
-| Eligible Pool Drain | session_handoffs.status counts | ✅ Verified — 18,007 eligible chains |
-| Cur
-```
-
-**Ideas referenced:** #1050, #12802, #12879, #1373, #16822, #19427, #2276, #2278, #2279, #2280, #2281, #24646, #25097, #25111, #25120, #25122, #25125, #25127 [rejected], #25131, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [executing], #25201 [executing], #25223 [needs_verify], #25224 [ready_for_review], #25225 [ready_for_review], #25226 [ready_for_review], #25256 [proposed], #25279, #3957, #4536, #5031, #6057
-
-**Last PICKUP PROMPT:**
-
-```
-ith crons firing — it settles.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #25256 — GPU is a HARDWARE fault; software path exhausted and verified.
-
-Where we left off (verified 2026-08-08 19:01 PT):
-- #25256 [executing] HARDWARE PROVEN (bug library #2281): all 64-bit BAR reads fail via /dev/mem (BAR1/2/3 above 4G return nothing) while BAR0 below 4G returns a100601b repeatably. PCI config space intact (10de:2d30). Driver not in the path — this is electrical/physical
-- #25256 [executing] Link-timing theory ELIMINATED: emsu-gpu-bar-resize.service logged retrain to 32GT/s + BAR1 8G BEFORE modprobe, link verified 32GT/s at load, same kbusVerifyBar2 error still fired
-- #25256 [executing] Four software layers verified correct: bridge 64-bit window 12G assigned, iommu=pt Passthrough, BARs zero-overlap, modeset=0 + initramfs rebuilt
-- #25279 → see #2279: display-driver angle from tech was a real misconfig (desktop modeset=1 + PreserveVideoMemoryAllocations=1 on headless box), fixed
-- #25224 [executing] Reranker auto-detects cuda/cpu — will pick up GPU with no code change once hardware fixed
-- #25223 [executing] RAG static call fixed, zero errors
-- #25225 [executing] Dispatcher circuitFailClause verified
-- #25226 [executing] Kaison auto-heal trigger proven
-- #25201 [rejected] superseded by the 12-chain requeue completed earlier
-- Health: 8/8 services active, reranker ok:true, 0 executor failures/20min
-
-Open threads to drive next:
-1. #25256 [executing] — HANDS-ON (human required, no idea can fix this): reseat card + riser, verify 75W slot/supplemental power, bypass the 2 retimers, try a different slot, then test card in another machine. Board Gigabyte TRX50 AERO D, BIOS FE 05/06/2025
-2. #25256 [executing] — Re-test after ANY physical change: `sudo dd if=/dev/mem bs=4 count=1 skip=$((0x2100000000/4)) 2>/dev/null | xxd -p`. Data returned = fixed. Control: same command with 0xf0000000 returns a100601b
-3. #25224 [executing] — Once BAR2 reads succeed: `systemctl restart emsu-reranker`, confirm "device selected: cuda", expect CPU drop and LOAD-BREAKER to stop suppressing dispatch
-4. #25256 [executing] — Do NOT retry software fixes. Bug library #2276/#2278/#2279/#2280/#2281 list seven proven-dead approaches and three of my own disproven theories
-5. #25225 [executing] — Confirm the 12 requeued chains pick up once load settles
-6. #25226 [executing] — Build Kaison loop: per-core load >0.80 for 3+ ticks → auto-restart reranker, card Ruben after two failed repairs
-
-Reference IDs:
-- Ideas: #25201 [rejected], #25223 [executing], #25224 [executing], #25225 [executing], #25226 [executing], #25256 [executing]
-- Bug library: #2276, #2278, #2279, #2280, #2281 (#2281 = the hardware conclusion)
-- Files: /etc/systemd/system/emsu-gpu-bar-resize.service, /etc/modprobe.d/nvidia-graphics-drivers-kms.conf (+.bak-25256), /etc/modprobe.d/nvidia-headless-compute.conf, /etc/default/grub (+.bak-25224-gpu-bar1, .bak-25256-iommu), /usr/local/bin/emsu-reranker.py (+.bak-25224-cuda-autodetect), /var/www/emtskills/cron/cron_ruben_autonomous.php, /tmp/requeue_gate2.py
-- GPU: 0000:81:00.0, NVIDIA RTX PRO 2000 Blackwell, driver 610.43.02, root port 80:01.1
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</parameter>
-</invoke>
-```
-
-### `1786226983152` — 8/8/2026, 6:49:37 PM PT — 418 turns
-
-**Original task:**
-
-```
-what is 25220? 
-
-Not a task completion — the answer to "Are we done then?" is: yes, this thread is done. Every delivery I opened this session is closed or explicitly parked, and nothing is abandoned.
-
-Self-contained status, no pickup needed:
-
-SHIPPED THIS SESSION
-- #25231 [deployed] guard_check.sh pre-edit gate + rule 314, self-tested and indexed.
-- #25222 [deployed] cron backlog 11 to 0.
-- #25221 [deployed] CFA/Argus steering layer live, verified in the running container.
-- #25194 [deployed] Implementation Reality Checker, all 5 checks alarming.
-- #25200 [deployed] self-healing guard integrit
-```
-
-**Ideas referenced:** #10142, #10147, #20957, #20958, #24207, #25182, #25183, #25185, #25194 [deployed], #25198 [queued], #25199 [queued], #25200 [deployed], #25201, #25220 [executing], #25221 [deployed], #25222 [deployed], #25231 [deployed], #25236 [proposed], #6842
-
-**Last PICKUP PROMPT:**
-
-```
-rver restarted, then retested.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25236 [executing] — FAISS sidecar index loader needs MySQL, server starts but returns 400
-
-Where we left off (verified 2026-08-08 18:48 PT):
-- #25236 [executing]: FAISS venv ready (/var/www/emtskills/services/faiss/venv) with faiss 1.15.0, numpy 2.5.1, pymysql 2.2.8. Server running on :7891 but load_or_build_index() uses non-existent /data/emsu/sql/emsu_preference.db. Fixed version at /tmp/faiss_server_fixed.py (local Mac) uses pymysql.connect(host='localhost', db='admin_portal', user='adminportal', password='iV84o80^y'). FIXED VERIFIED locally but not deployed — write_server_file MCP choked on the 116-line source.
-- emsu_rag_faiss_enabled = true in orchestrator_config (already set).
-- FAISS gate in EmsuRagRetriever fires (HTTP 400 → fallback to PHP, logged). The only bug is the index loader path.
-- #25220 [executing]: The 5s set_time_limit cap in api/rag_context.php must not be relaxed. Keyword pre-filter and pool-capping both tried and failed. FAISS is the only viable path.
-
-Open threads to drive next:
-1. #25236 [executing]: Deploy fixed faiss_server.py (with PyMySQL loader), restart on :7891, verify no `name 'index' is not defined` errors
-2. #25236 [executing]: Retest: curl unfiltered retrieval via EmsuRagRetriever::retrieve() — expect sub-200ms HTTP 200
-3. #25220 [executing]: Once FAISS works, set the 5s cap back to enforce it (it was temporarily relaxed for testing — verify it was never actually removed)
-
-Reference IDs:
-- Ideas filed: #25220 [executing], #25236 [executing]
-- Files touched: /var/www/emtskills/services/faiss/faiss_server.py (deployed, needs fix), /var/www/emtskills/lib/EmsuRagRetriever.php (reverted to original, 453 lines), /tmp/faiss_server_fixed.py (local Mac, the fixed version)
-- admin_portal.orchestrator_config: JSON_SET config_json '$.emsu_rag_faiss_enabled' = true (already done)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Read idea #25220 progress and spec from orchestrator
-- [x] Read full idea description from MySQL
-- [x] Read source code: api/rag_context.php line 36 (pool-starvation guard)
-- [x] Read source code: lib/EmsuRagRetriever.php cosineSimilaritySearch() (candidate pool + FAISS gate)
-- [x] Classify per Rule 297: BY-DESIGN timeout, PHP cosine loop is bottleneck, FAISS is only viable path
-- [x] File corrected RCA as #25236 [proposed] → now [executing]
-- [x] Deploy FAISS venv (faiss 1.15.0 + numpy 2.5.1 + pymysql 2.2.8)
-- [x] Write and deploy faiss_server.py (running on :7891, needs index loader fix)
-- [x] Test keyword pre-filter (OR-match: 5909 matches, AND-match: 388 candidates, still 6.2s — failed)
-- [x] Test pool-capping (3000 rows → 5.9s — failed, still over cap)
-- [x] Confirm FAISS gate in EmsuRagRetriever fires but gets HTTP 400 from broken index loader
-- [x] Set emsu_rag_faiss_enabled=true in orchestrator_config
-- [ ] Deploy fixed faiss_server.py with PyMySQL loader from /tmp/faiss_server_fixed.py
-- [ ] Restart FAISS server and verify no `name 'index' is not defined`
-- [ ] Retest unfiltered retrieval — expect sub-200ms
-- [ ] Complete the task
-</task_progress>
-</attempt_completion>
-```
-
-### `1786233427989` — 8/8/2026, 6:25:54 PM PT — 208 turns
-
-**Original task:**
-
-```
-#Argus
-
-There seem to be errors with Argus. 
-
-Take a look here:
-
-
-Result	Gate	
-2026-08-08 16:04:35	jthompson@emsuniversity.com	task_worker_run		I was trying to pull the pending exam override requests from the dashboard to start the review, but the action call hit an error. That's on my side, not a data ... more	pass	
-2026-08-08 16:04:31	jthompson@emsuniversity.com	terminal_query	tool	I was trying to pull the pending exam override requests from the dashboard to start the review, but the action call hit an error. That's on my side, not a data ... more	pass	
-2026-08-08 16:04:01	jthompson@emsunive
-```
-
-**Ideas referenced:** #059669, #10060, #1523, #1525, #1526, #1527, #1530, #1531, #1532, #1533, #1534, #1535, #1538, #1540, #1566, #1567, #1568, #1570, #1573, #18946, #18947, #18948, #18973, #22688, #2274, #2275 [deployed], #23036, #23428, #23468, #23506, #23675, #24635, #24636, #24645, #24646, #24791, #24897, #24926, #24941, #24990, #25058 [implemented], #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130 [deployed], #25131, #25156, #25158, #25159, #25171, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25245 [proposed], #25246 [proposed], #25247 [proposed], #25248, #25249, #25262 [proposed], #25263 [proposed], #25264 [proposed], #25269 [executing], #25270 [executing], #25271 [deployed], #2563, #374151, #64748, #92400, #9320
-
-**Last PICKUP PROMPT:**
-
-```
-e capacity split is your call.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25269 [proposed] - Kaizon blind spot, WOPR CPU starvation, and the exam-override safety gate
-
-Where we left off (verified 2026-08-08 18:25 PT):
-- #25271 [deployed] - Jon's blocker is resolved. routes/argus_revert_helper.php was created today under #25058 [deployed] but never required anywhere, so argusBuildRevertInfo() threw Call to undefined function at alltastic_api.php lines 1000 and 3938. Added require_once at file scope (line 53). Both files php -l clean, function resolves, opcache validate_timestamps=On freq=60 so it went live with no FPM reload. Backup at alltastic_api.php.bak-revertfix-20260808-182034.
-- Jon notified inside Argus via argus_task_messages on his still-queued task 381, with the root cause and instructions to re-run the 26215W roster and financial check.
-- Why Kaizon missed it: all 4 of Jon's failing calls logged success=1 with error_message=NULL, so there was no failure for Kaizon to classify. Two mechanisms: argusBuildRevertInfo() sits OUTSIDE the try/catch at both call sites, and the audit INSERT at line 3947 has no error_message column at all.
-- MCP wedge disproven: all 11 mcp-*.service units active, NRestarts=0 on every one. No flapping, no session loss. The slow windows are CPU starvation instead, load average 51.94 on 48 cores, emsu-reranker.py PID 7291 holding about 20 cores for 39 minutes with mariadbd at 107% behind it.
-- Correction I recorded rather than hid: the reranker base unit declares CPUQuota=400% but override.conf raises it to 3600%, and live cgroup cpu.max confirms 36 cores. The process is WITHIN quota. Reading the base unit alone produces a false 5x-violation alarm.
-- I did not touch reranker tuning. The guard comment states concurrency below 16 caused live production timeouts, so lowering it is the wrong lever (rule 314).
-
-Open threads to drive next:
-1. #25269 [proposed] - Fix the Kaizon blind spot: wrap argusBuildRevertInfo() in try/catch at both call sites, add the missing error_message column to the INSERT at line 3947, and add a text-signal classifier so responses containing system-error tells count as failures even when success=1.
-2. #25270 [proposed] - WOPR capacity split, needs Ruben's call: lower reranker CPUQuota from 3600% to about 2400%, raise CPUWeight for php-fpm pools, and ship the uvicorn workers fix.
-3. #25195 [executing] - Reranker saturates at 59 threads under concurrent load. Same signature seen live today.
-4. #25262 [executing] - Kaizon protect Argus watchdog. Blocked in practice until #25269 [proposed] lands, since it reads a table where these failures do not currently appear.
-5. #25263 [executing] - Notify the Argus user when a background task hits an actionable error.
-6. #25264 [executing] - Exam override review. Rule engine already classified all 21 pending. Ruben's standing instruction: verify each against SLS, payment state, academic-integrity suspension, and admin_profile.php suspension notes BEFORE any approval, and let bug-caused cases auto-grant rather than requiring an exec-admin override.
-
-Reference IDs:
-- Ideas filed: #25269 [proposed], #25270 [proposed], #25271 [deployed]
-- Ideas carried: #25262 [executing], #25263 [executing], #25264 [executing], #25195 [executing], #25058 [deployed]
-- Files touched: routes/alltastic_api.php, routes/argus_revert_helper.php
-- Argus: task 381, argus_task_messages notification to Jon
-
-When done, append to cline_task_ledg
-```

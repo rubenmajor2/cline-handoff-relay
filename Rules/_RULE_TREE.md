@@ -32,6 +32,8 @@
 | Task says "end to end" | 300 | No handoff when the tools to finish are present. A filed idea is not a deliverable. |
 | Any new steer | 301 | The newest steer IS the task. Re-anchor in one line, then act on it. |
 | Subagent reports a write | 99 | Unverified until the parent re-reads the file back |
+| Before attempt_completion | 317 | ACQUISITION GATE: re-probe claims live (LLM/fleet FIRST — never memory); re-read writes; scope counts. STICK TEST: true AND finished tomorrow? |
+| Conclusion flips in-window | 317 | MUTEX: both can't be true → 297 RCA + update causal rule, same session. No magnitude filter. |
 
 ### ⛔ Archived-rule gates (bodies NOT loaded — full text kept here on purpose)
 
@@ -69,9 +71,9 @@
 → Trigger: deciding whether to act or escalate, filing ideas, agent self-supervision, capability gaps, Q-cards, confidence tiers
 → Fetch all: `clinerules_list_by_topic("agent")`
 - **Act vs escalate gate** — R: 12,22,23,29,36,37,38,67,68,78,80,90,93,117,124,125,167,183,193,206,208,213,238,267,279,282,283,295 (295=ship lane-clearing/regression fixes inline never queue; 267=async offload+reconcile; 279=tool-grant IS a mandate to act; 282=CFAs must resolve, not triage; 283=no human-only-research deferrals)
-- **Self-supervision & repair** — R: 46,49,53,54,55,56,64,65,66,73,81,82,85,92,94,99,110,112,129,130,131,133,134,162,163,166,168,169,176,180,194,209,214,225,240,244,258,261,263,281,297,299,317 (263=verify-before-claim; 99=subagent writes unverified until parent re-reads; 281=execute-the-real-function schema-truth gate; 297=a COUNT(*) of impossible rows is a hypothesis, classify the population before alarming; 299=a NEGATIVE/zero result proves your query ran, not that the thing is absent — positive-control the instrument before any "none/not found/0/clean" claim; 317=a substantial reversal within the window = mandatory rule-297 RCA + update the causal rule in the same session)
+- **Self-supervision & repair** — R: 46,49,53,54,55,56,64,65,66,73,81,82,85,92,94,99,110,112,129,130,131,133,134,162,163,166,168,169,176,180,194,209,214,225,240,244,258,261,263,281,297,299,317 (263=verify-before-claim; 99=subagent writes unverified until parent re-reads; 281=execute-the-real-function schema-truth gate; 297=a COUNT(*) of impossible rows is a hypothesis, classify the population before alarming; 299=a NEGATIVE/zero result proves your query ran, not that the thing is absent — positive-control the instrument before any "none/not found/0/clean" claim; 317=MUTEX flip: initial + corrected conclusions can't both be true → mandatory rule-297 RCA on the initial mistake + update the causal rule, same session. No magnitude filter.)
 - **Routing to humans** — R: 68,69 (Jon=policy only, Vicky=CS only)
-- **Agent-found-wrong / iteration-reversed** — R: 266,317 (266=fix the instrument that misled the agent, same session; 317=subsequent iteration flips the initial finding = mandatory 297 RCA on the INITIAL mistake + update the causal rule so the next window doesn't repeat it)
+- **Agent-found-wrong / iteration-reversed** — R: 266,317 (266=fix the instrument that misled the agent, same session; 317=a later iteration's conclusion is mutually exclusive with the initial one = mandatory 297 RCA on the INITIAL mistake + update the causal rule so the next window doesn't repeat it)
 - **Pre-EDIT guard-comment gate** — R: 314 (before changing ANY existing constant/timeout/threshold/flag, read the 20 lines ABOVE it and run `guard_check.sh <file> <line>`; exit 2 = STOP. KAIZEN structurally cannot cover this class because the code is still CORRECT at the moment of the mistake. Measured 2026-08-08: 5 guard signals + 3 dated incident refs sat above the line that was changed anyway)
 
 - **Cline noop idempotency gate** — R: 274 (noop_check BEFORE any possibly-repeat task; store after)

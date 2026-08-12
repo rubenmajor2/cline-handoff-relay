@@ -88,6 +88,7 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 6. Open-threads section present? Reference IDs present?
 7. Does EVERY open-thread item have a filed idea `#NNNN [tag]` or `(human-only decision — no idea)` marker? If any item has neither → STOP, call `create_idea` first
 8. **Provenance check — for EACH `#NNNN`, name the tool call it came from.** A `create_idea` return this session, a reconcile call, or the task prompt. If you cannot point at one, the number is fabricated. Run `clinerules_validate_completion` and READ THE IDENTITY ECHO: it prints the real DB title of every id you cited. If a printed title does not match what you wrote beside that number, you cited the wrong idea.
+9. **Rule 317 state-claim check.** ANY LLM/fleet/host state claim in the result (down/up/idle/offline/serving/degraded/saturated...) MUST carry a `(verified: ...)` marker quoting the live probe that produced it (registry call, response headers, curl result). If the validator returns `R317_UNVERIFIED_STATE`, the completion is BLOCKED — re-probe the claim, add the marker, re-validate. Never recite fleet/LLM status from memory (rule 317 Acquisition Gate; the #1 recurring wrong-claim domain per Ruben 2026-08-12).
 
 
 ## Cross-refs

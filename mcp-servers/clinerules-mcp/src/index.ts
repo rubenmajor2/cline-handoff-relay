@@ -850,6 +850,36 @@ server.tool(
       }
     }
 
+    // ── RULE 317 (completion-confidence / acquisition gate) ─────────────────
+    // Ruben 2026-08-12: the #1 recurring wrong-claim is LLM/fleet/routing state
+    // recited from memory. Rule 317's Acquisition Gate requires every material
+    // state claim to be re-probed live and carry the evidence marker. This
+    // detects unverified fleet/LLM/host state claims in the result.
+    {
+      const stateWords = /\b(down|offline|dead|unhealthy|degraded|saturated|idle|up|online|alive|healthy|serving|crashed|unresponsive|wedged|stall(?:ed|ing)?)\b/i;
+      const fleetCtx = /\b(fleet|frankenstein|litellm|router|host|pod|box|model|120b|405b|free[- ]local|wopr|cesar|cato|backend|serving)\b/i;
+      const evidenceMarker = /\b(verified|probed|probe|live\s+(?:call|request|probe)|response\s+header|registry|curl|returned|audit\s+log|measured|confirmed|checked|reconciled|hypervisor|gpu-?util|httpx?)\b/i;
+      const unverifiedClaims: string[] = [];
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        if (!fleetCtx.test(line) || !stateWords.test(line)) continue;
+        // evidence may live on the line or its immediate neighbours
+        const ctx = (lines[i - 1] || "") + "\n" + line + "\n" + (lines[i + 1] || "");
+        if (!evidenceMarker.test(ctx)) {
+          const clipped = line.trim().slice(0, 96);
+          if (!unverifiedClaims.includes(clipped)) unverifiedClaims.push(clipped);
+        }
+      }
+      if (unverifiedClaims.length > 0) {
+        failures.push(
+          `R317_UNVERIFIED_STATE: ${unverifiedClaims.length} line(s) assert LLM/fleet/host state with no live-probe evidence: ` +
+          unverifiedClaims.map((s: string) => `"${s}"`).join("; ") + `. ` +
+          `Rule 317 Acquisition Gate: re-probe each material state claim (frankenstein_registry / verify_routing / response headers) ` +
+          `and add a '(verified: ...)' marker quoting what the probe returned. Never recite fleet/LLM status from memory.`
+        );
+      }
+    }
+
     // ── FIX 5 of #19173: COVERAGE GATE ──────────────────────────────────────
     // Source incident 2026-07-25: a catch-all window prompt enumerated 39 explicit
     // idea ids. The first attempt_completion accounted for 7 of them and shipped.

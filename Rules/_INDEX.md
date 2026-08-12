@@ -47,6 +47,8 @@ These rules govern pre-first-tool-call behavior and on-every-turn safety. Rules 
 | 99 ★ | subagent-verify-before-claim | 3K | Subagent writes unverified until parent re-reads |
 | 300 ★ | end-to-end-delivery-compliance | 2K | Finish the task; no handoff when tools exist |
 | 301 ★ | steering-compliance | 2K | Newest steer IS the task; re-anchor every message |
+| 315 ★ | verify-before-declaring-host-down | 6K | Record-first, live-probe, classify state before "down" |
+| 317 ★ | completion-confidence | 4K | Acquisition gate + reversal MUTEX + stick test before done |
 
 All other rules (including voice/persona, deploy safety, LLM routing, Frankenstein Doctor, payment handling, etc.) live in the archive and are reachable via the `_RULE_TREE.md` tripwire system — one `clinerules_lookup(rule_id=N)` or `clinerules_list_by_topic(topic="...")` call away.
 

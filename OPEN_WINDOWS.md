@@ -6,16 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/12/2026, 9:04:59 AM PT | window: last 72h | 69 tasks | index total 648 (parsed 4, cached 644)
+Generated: 8/12/2026, 10:10:40 AM PT | window: last 72h | 71 tasks | index total 650 (parsed 5, cached 645)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786492782871` | 8/12/2026, 9:04:57 AM | 391 | 1559KB | Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look |
-| `1786547336372` | 8/12/2026, 8:47:14 AM | 52 | 207KB | Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cl |
+| `1786554076003` | 8/12/2026, 10:10:27 AM | 37 | 82KB | ## Executor IS Working - Ideas Being Built Right Now |
+| `1786547336372` | 8/12/2026, 10:10:22 AM | 143 | 818KB | Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cl |
+| `1786553732663` | 8/12/2026, 10:10:20 AM | 47 | 1045KB | When I get emails like this I would like to actually see the students original email below |
+| `1786492782871` | 8/12/2026, 10:09:48 AM | 613 | 2012KB | Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look |
+| `1786491116649` | 8/12/2026, 10:03:55 AM | 496 | 2583KB | #Externships |
+| `1786481696854` | 8/12/2026, 9:11:19 AM | 611 | 2391KB | #TDSHS Sunset Report |
 | `1786467898078` | 8/12/2026, 8:45:57 AM | 304 | 1944KB | #MDM |
 | `1786467822115` | 8/12/2026, 8:45:41 AM | 498 | 1070KB | frankenstein-llm is stalling this morning. Why?  |
-| `1786481696854` | 8/12/2026, 8:21:05 AM | 597 | 1826KB | #TDSHS Sunset Report |
-| `1786491116649` | 8/12/2026, 12:52:58 AM | 486 | 2563KB | #Externships |
 | `1786487328625` | 8/11/2026, 4:33:31 PM | 230 | 623KB | See this form - i think it's california skills verification form on wp forms at emsunivers |
 | `1786483060620` | 8/11/2026, 4:31:41 PM | 162 | 754KB | Closing on a new property in Tempe 1250 East Baseline. Please analyze the 139 page inspect |
 | `1786469157683` | 8/11/2026, 3:25:27 PM | 436 | 1143KB | How many tokens have our FREE LLMs used in the last 30 days |
@@ -84,7 +86,137 @@ Generated: 8/12/2026, 9:04:59 AM PT | window: last 72h | 69 tasks | index total 
 
 ## Per-window detail
 
-### `1786492782871` — 8/12/2026, 9:04:57 AM PT — 391 turns
+### `1786554076003` — 8/12/2026, 10:10:27 AM PT — 37 turns
+
+**Original task:**
+
+```
+## Executor IS Working - Ideas Being Built Right Now
+
+While you are in there, is executor running efficiently? ### dev_stage=idle means "in queue, ready to be picked up" - NOT "doing nothing"
+
+The executor pipeline stages:
+1. `idle` = waiting in queue, ready to be picked up
+2. `auditing` = executor picked it up, generating spec
+3. `drafting` = spec done, generating code
+4. `coding` = code generated, writing files
+5. `testing` = running tests
+6. `ready_for_review` = done, waiting for review
+
+### Current Status (08:45 PT)
+
+| Idea | dev_stage | What's Happening |
+|---|---|---|
+| #25747 | auditing
+```
+
+**Ideas referenced:** #12597, #16523, #20903, #24635, #24645, #25125, #25747 [approved], #25754 [rejected], #25755 [approved], #25757 [approved], #25759 [approved], #25764 [approved], #25765 [approved], #25812 [approved]
+
+**Last PICKUP PROMPT:**
+
+```
+lth (ideas actively building vs stalled)
+- [ ] Produce verified status report + PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1786547336372` — 8/12/2026, 10:10:22 AM PT — 143 turns
+
+**Original task:**
+
+```
+Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cline rules when a subsequent iteration identifies a substantial reversal of the initial iteration within that window. The idea is that the agent catches this and makes itself smarter. This is to be done immediately. Give the rule nubmer. If it needs refinement, let me know.
+```
+
+**Ideas referenced:** #0000, #13840, #14205, #15268, #16224, #17130 [superseded], #17537 [rejected], #18132 [deployed], #19125, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #20251, #2277, #24995, #25066, #25150, #25151, #25154, #25155, #25185, #25188, #5344, #5346, #5348
+
+**Last PICKUP PROMPT:**
+
+```
+ds a restart.",
+      "═══════════════════════════════════════════════",
+      "PICKUP PROMPT (paste into a fresh Cline window)",
+      "═══════════════════════════════════════════════",
+      "Pick up task #123 — fleet status.",
+      "Where we left off (verified 2026-08-12 10:00 PT): WOPR down.",
+      "Open threads to drive next:",
+      "1. None — completed.",
+      "Reference IDs:",
+      "- Ideas filed: none",
+      "- Files touched: none",
+      "When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.",
+      "═══════════════════════════════════════════════",
+    ].join("\n");
+    const t1 = textOf(await validate(r1txt));
+    console.log(t1.split("\n").slice(0, 8).join("\n"));
+    console.log("R317_UNVERIFIED_STATE present:", /R317_UNVERIFIED_STATE/.test(t1));
+
+    console.log("\n=== TEST 2: fleet claim WITH live-probe evidence ===");
+    const r2txt = [
+      "Done. WOPR is down (verified: httpx probe returned ECONNREFUSED at 09:58 PT).",
+      "═══════════════════════════════════════════════",
+      "PICKUP PROMPT (paste into a fresh Cline window)",
+      "═══════════════════════════════════════════════",
+      "Pick up task #123 — fleet status.",
+      "Where we left off (verified 2026-08-12 10:00 PT): WOPR down (verified: ECONNREFUSED).",
+      "Open threads to drive next:",
+      "1. None — completed.",
+      "Reference IDs:",
+      "- Ideas filed: none",
+      "- Files touched: none",
+      "When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.",
+      "═══════════════════════════════════════════════",
+    ].join("\n");
+    const t2 = textOf(await validate(r2txt));
+    console.log(t2.split("\n").slice(0, 8).join("\n"));
+    console.log("R317_UNVERIFIED_STATE present:", /R317_UNVERIFIED_STATE/.test(t2));
+
+    console.log("\n=== TEST 3: 'idle' claim with (verified: gpu-util returned 5%) ===");
+    const r3txt = [
+      "Done. frankenstein is idle (verified: gpu-util returned 5% at 09:59).",
+      "═══════════════════════════════════════════════",
+      "PICKUP PROMPT (paste into a fresh Cline window)",
+      "═══════════════════════════════════════════════",
+      "Pick up task #123 — fleet status.",
+      "Where we left off (verified 2026-08-12 10:00 PT): idle gpu (verified 5%).",
+      "Open threads to drive next:",
+      "1. None — completed.",
+      "Reference IDs:",
+      "- Ideas filed: none",
+      "- Files touched: none",
+      "When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.",
+      "═══════════════════════════════════════════════",
+    ].join("\n");
+    const t3 = textOf(await validate(r3txt));
+    console.log(t3.split("\n").slice(0, 8).join("\n"));
+    console.log("R317_UNVERIFIED_STATE present:", /R317_UNVERIFIED_STATE/.test(t3));
+  } catch (e) {
+    console.error("TEST HARNESS ERROR:", e.message);
+    process.exitCode = 1;
+  } finally {
+    server.kill();
+  }
+})();
+</content>
+</write_to_file>
+```
+
+### `1786553732663` — 8/12/2026, 10:10:20 AM PT — 47 turns
+
+**Original task:**
+
+```
+When I get emails like this I would like to actually see the students original email below so that I know what was said from the student to prompt the email. Can you do that for email agent? 
+
+--
+```
+
+**Ideas referenced:** #5298, #6228
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786492782871` — 8/12/2026, 10:09:48 AM PT — 613 turns
 
 **Original task:**
 
@@ -92,7 +224,7 @@ Generated: 8/12/2026, 9:04:59 AM PT | window: last 72h | 69 tasks | index total 
 Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look and see?
 ```
 
-**Ideas referenced:** #0051, #0071, #16523, #16613, #17685, #17723, #19492, #19511 [rejected], #19859 [deployed], #2036, #20565, #20630 [awaiting_review], #22148, #22156, #22242, #22243, #2320 [deployed], #23285, #23291, #23344, #23415, #24635, #24645, #25185, #252532, #25824 [proposed], #25869 [proposed], #25870 [proposed], #25871 [proposed], #25872 [proposed], #25873 [proposed], #26002, #26003 [deployed], #32324, #374151, #4016, #4802, #5387, #6646, #787890, #8060, #856404, #9086, #9202
+**Ideas referenced:** #0051, #0071, #16523, #16613, #17685 [needs_verify], #17723, #18944, #18951, #19492, #19511 [rejected], #19859 [deployed], #2036, #20565, #20630 [awaiting_review], #22148, #22156, #22242, #22243, #2320 [deployed], #23285, #23291, #23344, #23415, #24635, #24645, #25185, #252532, #25824 [proposed], #25869 [proposed], #25870 [proposed], #25871 [proposed], #25872 [proposed], #25873 [proposed], #25876 [proposed], #25885 [deployed], #25886 [proposed], #26002, #26003 [deployed], #32324, #374151, #4016, #4802, #5387, #5892, #6646, #787890, #8060, #856404, #9086, #9202
 
 **Last PICKUP PROMPT:**
 
@@ -126,40 +258,123 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786547336372` — 8/12/2026, 8:47:14 AM PT — 52 turns
+### `1786491116649` — 8/12/2026, 10:03:55 AM PT — 496 turns
 
 **Original task:**
 
 ```
-Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cline rules when a subsequent iteration identifies a substantial reversal of the initial iteration within that window. The idea is that the agent catches this and makes itself smarter. This is to be done immediately. Give the rule nubmer. If it needs refinement, let me know.
+#Externships
+
+I am getting tired of seeing emails about students expecting that their requested dates are going to actually happen. 
+
+Tell me if there is language on that form about those dates being requests and they are not a guarangee. Also, put a disclaimer on that form that's more obvious about the dates to start. 
+
+Is there any email sent to them on this? 
+
+Then let's work on below:
+
+CFAs should be responding back that in order to complete externships they need to make sure they have the pre-requisitte requirments, etc... 
+
+--
+#Externships
+## Non‑Harmful Baby‑Step Actions to Start Right 
 ```
 
-**Ideas referenced:** #13840, #14205, #15268, #19125, #2277, #25150, #25151, #25154, #25155, #25188, #5344, #5346, #5348
+**Ideas referenced:** #1405, #178649, #2182, #2196, #25129 [ready_for_review], #25156 [proposed], #25157 [ready_for_review], #25185, #25246 [ready_for_review], #25529 [approved], #25807 [proposed], #25808 [proposed], #25809 [proposed], #25814 [proposed], #25816 [rejected], #25818 [rejected], #25820 [rejected], #25821 [proposed], #25848 [proposed], #64748, #78350, #856404, #92400, #9797
 
 **Last PICKUP PROMPT:**
 
 ```
-loaded, promote to hardfloor."
+arlier task-list association).
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Cline rule 317 (substantial-reversal triggers 297 RCA + causal-rule update).
 
-Where we left off (verified 2026-08-12 08:44 PT):
-- Rule 317 written to `Rules-archive/317-substantial-reversal-triggers-297-and-rule-update.md` [deployed]
-- Corpus reindexed twice: 323 rules, 19 hardfloor; `clinerules_lookup(rule_id=317)` returns full body [deployed]
-- `_RULE_TREE.md` updated: 317 added to "Self-supervision & repair" and "Agent-found-wrong / iteration-reversed" lines [deployed]
-- `.clinerule_counter` corrected from stale 314 → 317 (next rule claims 318, no collision) [deployed]
+Pick up task #1786491116649, externship requested-date expectation setting: evidence packet, compliance filing, deadline-comms inventory.
 
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. (human-only decision, no idea) — Ruben to decide whether rule 317 should be promoted to hardfloor (auto-load every window) vs stay on-demand in the archive. No default exists, so no idea was filed; this is a prompt-block flagged decision only.
+Where we left off (verified 2026-08-12 00:47 PT):
+- All 11 checklist items complete. Form disclaimer + ack checkbox live, 9/1/2026 auto-assign notice live (self-expiring), confirmation email hardened, CFA knowledge pack rules 12/13/14 shipped, sender domain work item done.
+- Evidence packet complete at /var/www/emtskills/docs/compliance-evidence/20260811-externship-date-expectations/ incl. 3 re-captured PNG screenshots.
+- internal_note filed on compliance investigation #10 pointing at the packet.
+- Standing practice doc live at /var/www/emtskills/docs/STUDENT_FACING_CHANGE_EVIDENCE_PRACTICE.md.
+- #25848 [proposed] filed for the comms_killswitch table.
+
+Open threads to drive next:
+1. (human-only decision, no idea) Ruben decides which deadline-comms tiers to suspend; inventory + recommendation await him in DEADLINE_COMMS_INVENTORY.md.
+2. #25848 [proposed], comms_killswitch config table; approve/implement when Ruben green-lights the suspension plan.
+3. #25157 [awaiting_review] (verified: ready_for_review 2026-08-12 00:43 PT), SLS pipeline tables, auto-assign prerequisite.
+4. #25246 [awaiting_review] (verified: ready_for_review 2026-08-12 00:43 PT), SLS pipeline prerequisite for externship auto-assign.
+5. #25529 [awaiting_review] (verified: ready_for_review 2026-08-12 00:43 PT), Council idea approval routing.
 
 Reference IDs:
-- Ideas filed: none (no open work requires an idea; the only open item is a human-policy decision)
-- Files touched: `Rules-archive/317-substantial-reversal-triggers-297-and-rule-update.md`, `Rules/_RULE_TREE.md`, `Rules/.clinerule_counter`
+- Ideas filed: #25848 [proposed]
+- Ideas reconciled: #25157 [awaiting_review], #25246 [awaiting_review], #25529 [awaiting_review]
+- Files touched: /var/www/emtskills/docs/compliance-evidence/20260811-externship-date-expectations/screenshots/ (3 PNGs + README.txt), /var/www/emtskills/docs/STUDENT_FACING_CHANGE_EVIDENCE_PRACTICE.md, admin_portal.compliance_investigation_responses (1 insert, investigation #10)
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Stage 1: form disclaimer + ack checkbox deployed
+- [x] Stage 2: 9/1/2026 auto-assign notice (self-expiring) deployed + verified
+- [x] Confirmation email hardened + auto-assign note (date-gated)
+- [x] CFA knowledge pack rules 12/13/14
+- [x] Sender domain fix
+- [x] BEFORE + AFTER screenshots captured
+- [x] Change-record written
+- [x] Push change record + screenshots to server evidence dir
+- [x] Add note to institutional_compliance investigations tab
+- [x] Inventory ALL externship/NREMT deadline emails+SMS for Ruben review
+- [x] Establish standing practice doc for before/after evidence
+- [x] Validate + complete
+</task_progress>
+</attempt_completion>
+```
+
+### `1786481696854` — 8/12/2026, 9:11:19 AM PT — 611 turns
+
+**Original task:**
+
+```
+#TDSHS Sunset Report
+
+See
+
+Please make the following corrections/updates for the TDSHS Sunset report and give back updated PDF:
+
+False:   They also included records from courses this Department does not regulate, and
+paperwork belonging to other divisions of our company that fall entirely outside its authority.   Were we not told or were we told something ambiguous back -> No transmittal states the measure by which compliance would be
+determined. We asked, in writing, for the provision and the measure. We were not told.  For this, that original request was YEARS ago with much back and forth wi
+```
+
+**Ideas referenced:** #081020, #16863, #178648, #18676, #18690, #2306, #2311, #23483, #25185, #25537, #25560, #25608, #25623, #25632, #25633, #25635, #25667, #25669, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25772 [executing], #25783 [proposed], #25784 [rejected], #25793 [proposed], #25796, #25797, #25798, #25799 [proposed], #25803 [proposed], #25804 [deployed], #25806 [proposed], #25810 [proposed], #25834 [awaiting_review], #25838 [proposed], #25859 [executing], #25860 [executing], #25861 [executing], #25868 [in_progress], #38984, #600179, #616207, #623992
+
+**Last PICKUP PROMPT:**
+
+```
+09, rmajor@emsuniversity.com."
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786481696, TDSHS Sunset report corrections.
+
+Where we left off (verified 2026-08-11 14:43 PT):
+- Rebuilt PDF at sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-11.pdf, 24 pages, 466,404 bytes.
+- Company name updated throughout to "EMS University, LLC d.b.a. EMS Universal Education" (signature + cover).
+- #25783 [proposed] filed on the $1,248 and ORR chronology conflict.
+- #25784 [rejected] duplicate row from an MCP timeout that had already written.
+
+Open threads to drive next:
+1. #25783 [proposed]. Pull the DSHS payment receipt and confirm which ORR the $1,248 was applied to.
+2. Send the PDF to sunset@sunset.texas.gov or hold for the third-party statement (human-only decision, no idea).
+
+Reference IDs:
+- Ideas filed: #25783 [proposed], #25784 [rejected]
+- Files touched: sunset_pdf/patch_v8.py, sunset_pdf/build_sunset_pdf.py, WOPR /tmp/scan_dshs2.py
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
@@ -280,128 +495,6 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [x] Verify executor is picking up ideas (3 being built, 4 in queue)
 - [x] Explain dev_stage=idle means "in queue" not "doing nothing"
 - [x] Present results</task_progress></attempt_completion>
-```
-
-### `1786481696854` — 8/12/2026, 8:21:05 AM PT — 597 turns
-
-**Original task:**
-
-```
-#TDSHS Sunset Report
-
-See
-
-Please make the following corrections/updates for the TDSHS Sunset report and give back updated PDF:
-
-False:   They also included records from courses this Department does not regulate, and
-paperwork belonging to other divisions of our company that fall entirely outside its authority.   Were we not told or were we told something ambiguous back -> No transmittal states the measure by which compliance would be
-determined. We asked, in writing, for the provision and the measure. We were not told.  For this, that original request was YEARS ago with much back and forth wi
-```
-
-**Ideas referenced:** #081020, #16863, #178648, #18676, #18690, #2306, #2311, #23483, #25185, #25537, #25560, #25608, #25623, #25632, #25633, #25635, #25667, #25669, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25772 [executing], #25783 [proposed], #25784 [rejected], #25793 [proposed], #25796, #25797, #25798, #25799 [proposed], #25803 [proposed], #25804 [deployed], #25806 [proposed], #25810 [proposed], #25834 [awaiting_review], #25838 [proposed], #25859 [executing], #25860 [executing], #25861 [executing], #25868 [in_progress], #38984, #600179, #616207, #623992
-
-**Last PICKUP PROMPT:**
-
-```
-09, rmajor@emsuniversity.com."
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786481696, TDSHS Sunset report corrections.
-
-Where we left off (verified 2026-08-11 14:43 PT):
-- Rebuilt PDF at sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-11.pdf, 24 pages, 466,404 bytes.
-- Company name updated throughout to "EMS University, LLC d.b.a. EMS Universal Education" (signature + cover).
-- #25783 [proposed] filed on the $1,248 and ORR chronology conflict.
-- #25784 [rejected] duplicate row from an MCP timeout that had already written.
-
-Open threads to drive next:
-1. #25783 [proposed]. Pull the DSHS payment receipt and confirm which ORR the $1,248 was applied to.
-2. Send the PDF to sunset@sunset.texas.gov or hold for the third-party statement (human-only decision, no idea).
-
-Reference IDs:
-- Ideas filed: #25783 [proposed], #25784 [rejected]
-- Files touched: sunset_pdf/patch_v8.py, sunset_pdf/build_sunset_pdf.py, WOPR /tmp/scan_dshs2.py
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786491116649` — 8/12/2026, 12:52:58 AM PT — 486 turns
-
-**Original task:**
-
-```
-#Externships
-
-I am getting tired of seeing emails about students expecting that their requested dates are going to actually happen. 
-
-Tell me if there is language on that form about those dates being requests and they are not a guarangee. Also, put a disclaimer on that form that's more obvious about the dates to start. 
-
-Is there any email sent to them on this? 
-
-Then let's work on below:
-
-CFAs should be responding back that in order to complete externships they need to make sure they have the pre-requisitte requirments, etc... 
-
---
-#Externships
-## Non‑Harmful Baby‑Step Actions to Start Right 
-```
-
-**Ideas referenced:** #1405, #178649, #2182, #2196, #25129 [ready_for_review], #25156 [proposed], #25157 [ready_for_review], #25185, #25246 [ready_for_review], #25529 [approved], #25807 [proposed], #25808 [proposed], #25809 [proposed], #25814 [proposed], #25816 [rejected], #25818 [rejected], #25820 [rejected], #25821 [proposed], #25848 [proposed], #64748, #78350, #856404, #92400, #9797
-
-**Last PICKUP PROMPT:**
-
-```
-arlier task-list association).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786491116649, externship requested-date expectation setting: evidence packet, compliance filing, deadline-comms inventory.
-
-Where we left off (verified 2026-08-12 00:47 PT):
-- All 11 checklist items complete. Form disclaimer + ack checkbox live, 9/1/2026 auto-assign notice live (self-expiring), confirmation email hardened, CFA knowledge pack rules 12/13/14 shipped, sender domain work item done.
-- Evidence packet complete at /var/www/emtskills/docs/compliance-evidence/20260811-externship-date-expectations/ incl. 3 re-captured PNG screenshots.
-- internal_note filed on compliance investigation #10 pointing at the packet.
-- Standing practice doc live at /var/www/emtskills/docs/STUDENT_FACING_CHANGE_EVIDENCE_PRACTICE.md.
-- #25848 [proposed] filed for the comms_killswitch table.
-
-Open threads to drive next:
-1. (human-only decision, no idea) Ruben decides which deadline-comms tiers to suspend; inventory + recommendation await him in DEADLINE_COMMS_INVENTORY.md.
-2. #25848 [proposed], comms_killswitch config table; approve/implement when Ruben green-lights the suspension plan.
-3. #25157 [awaiting_review] (verified: ready_for_review 2026-08-12 00:43 PT), SLS pipeline tables, auto-assign prerequisite.
-4. #25246 [awaiting_review] (verified: ready_for_review 2026-08-12 00:43 PT), SLS pipeline prerequisite for externship auto-assign.
-5. #25529 [awaiting_review] (verified: ready_for_review 2026-08-12 00:43 PT), Council idea approval routing.
-
-Reference IDs:
-- Ideas filed: #25848 [proposed]
-- Ideas reconciled: #25157 [awaiting_review], #25246 [awaiting_review], #25529 [awaiting_review]
-- Files touched: /var/www/emtskills/docs/compliance-evidence/20260811-externship-date-expectations/screenshots/ (3 PNGs + README.txt), /var/www/emtskills/docs/STUDENT_FACING_CHANGE_EVIDENCE_PRACTICE.md, admin_portal.compliance_investigation_responses (1 insert, investigation #10)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Stage 1: form disclaimer + ack checkbox deployed
-- [x] Stage 2: 9/1/2026 auto-assign notice (self-expiring) deployed + verified
-- [x] Confirmation email hardened + auto-assign note (date-gated)
-- [x] CFA knowledge pack rules 12/13/14
-- [x] Sender domain fix
-- [x] BEFORE + AFTER screenshots captured
-- [x] Change-record written
-- [x] Push change record + screenshots to server evidence dir
-- [x] Add note to institutional_compliance investigations tab
-- [x] Inventory ALL externship/NREMT deadline emails+SMS for Ruben review
-- [x] Establish standing practice doc for before/after evidence
-- [x] Validate + complete
-</task_progress>
-</attempt_completion>
 ```
 
 ### `1786487328625` — 8/11/2026, 4:33:31 PM PT — 230 turns

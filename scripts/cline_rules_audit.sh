@@ -109,11 +109,17 @@ done < <(ls "$RULES_DIR"/*.md 2>/dev/null)
 # reports "clean" while writes are being rejected. These now match exactly.
 TOTAL_KB=$(du -sk "$RULES_DIR" 2>/dev/null | cut -f1)
 FLOOR_BYTES=$(find "$RULES_DIR" -maxdepth 1 -type f ! -name '.*' -exec cat {} \; | wc -c | tr -d ' ')
-note "A3 floor-total: ${FLOOR_BYTES} bytes always-loaded (G8 warn 131072, block 153600)"
-if [ "${FLOOR_BYTES:-0}" -gt 153600 ]; then
-    ALERTS+=("A3 floor-total: Rules/ is ${FLOOR_BYTES} bytes, PAST the G8 hard block of 153600. Rules/ writes are being REJECTED right now.")
-elif [ "${FLOOR_BYTES:-0}" -gt 131072 ]; then
-    ALERTS+=("A3 floor-total: Rules/ is ${FLOOR_BYTES} bytes (>128KB warn). Trim before it hits the 150KB block.")
+# 2026-08-12: the audit previously hardcoded 153600, diverging from .pre-write-lint.sh
+# which reads the .g8-floor-cap override (default 160000). An auditor that ignores the
+# override false-alerts every night after Ruben raises the cap. Match the lint gate.
+G8_CAP=160000
+[ -f "$RULES_DIR/.g8-floor-cap" ] && G8_CAP=$(tr -dc '0-9' < "$RULES_DIR/.g8-floor-cap")
+G8_WARN=$(( G8_CAP * 85 / 100 ))
+note "A3 floor-total: ${FLOOR_BYTES} bytes always-loaded (G8 warn ${G8_WARN}, block ${G8_CAP})"
+if [ "${FLOOR_BYTES:-0}" -gt "${G8_CAP}" ]; then
+    ALERTS+=("A3 floor-total: Rules/ is ${FLOOR_BYTES} bytes, PAST the G8 hard block of ${G8_CAP}. Rules/ writes are being REJECTED right now.")
+elif [ "${FLOOR_BYTES:-0}" -gt "${G8_WARN}" ]; then
+    ALERTS+=("A3 floor-total: Rules/ is ${FLOOR_BYTES} bytes (G8 warn ${G8_WARN}). Trim soon.")
 fi
 STRAY=$(find "$RULES_DIR" -maxdepth 1 -type f ! -name '.*' \( -name '*.bak*' -o -name '*~' \) 2>/dev/null | wc -l | tr -d ' ')
 if [ "${STRAY:-0}" -gt 0 ]; then

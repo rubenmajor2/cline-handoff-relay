@@ -10,9 +10,38 @@ The specific harm Ruben named: a student replies *"my invoice is paid because yo
 
 Sending the email is not the finish line. The reply is.
 
-## The gate (fires whenever Cline causes an outbound student message)
+## Use the wrapper. It makes the loop impossible to leave open.
 
-**If a Cline window sends, drafts, or triggers ANY message to a student — email, SMS, ticket reply — it MUST record the verified ground truth into `admin_portal.cline_followup_context` in the SAME session.** No exceptions for "it was just an FYI."
+**`ClineStudentContact::send()` is the sanctioned path for Cline-initiated student contact.** It sends the message and registers the ground truth in the same call, and it **refuses to send** if `ground_truth` or `do_not_say` is missing. You cannot forget the follow-up context, because there is no code path that sends without it.
+
+```php
+require_once '/var/www/emtskills/lib/ClineStudentContact.php';
+ClineStudentContact::send([
+  'email' => 'student@x.com', 'student_code' => '26720FT-02',
+  'subject' => '...', 'body' => '...',
+  'topic' => 'phantom_card_decline_balance_owed',
+  'ground_truth' => 'VERIFIED 2026-08-12: owes $1,495.00 on invoice 166048 ...',
+  'do_not_say'   => 'Do NOT tell him his invoice is paid. Do NOT say balance is $0. ...',
+  'anticipated_replies' => 'If he says "I already paid": ...',
+  'escalate_to' => 'vyu@emsuniversity.com',
+  'source_task' => 'cline-25869-phantom-payment-repair',
+]);
+```
+
+It registers **before** it sends, deliberately. A delivery failure then degrades to "facts recorded, message not sent" (safe to retry) rather than "message sent, facts lost", which is the direction that produced the source incident.
+
+Ruben asked for this explicitly: *"i'm looking at a smarter more efficient approach."* A rule that asks an agent to remember a second step gets skipped under pressure. Making the two steps one call removes the choice.
+
+### Back-and-forth, not just the first reply
+
+A closed loop is a conversation, not a single answer:
+
+- `ClineStudentContact::registerTurn($email, $topic, $whatHappened)` appends each exchange to the loop, so turn 3 is answered with knowledge of turns 1 and 2 instead of cold. It appends, never overwrites, so history is not lost.
+- `ClineStudentContact::shouldEscalate($email, $topic)` returns `escalate=true` once the loop has gone around `ESCALATE_AFTER_TURNS` (3) times, with the owning human. A CFA restating the same facts to a student who keeps disputing is worse than an escalation.
+
+### The gate (fires whenever Cline causes an outbound student message)
+
+**If a Cline window sends, drafts, or triggers ANY message to a student — email, SMS, ticket reply — the verified ground truth MUST exist in `admin_portal.cline_followup_context` in the SAME session.** Using the wrapper satisfies this automatically. Writing the row by hand is acceptable only when the message went out through a path the wrapper does not cover yet.
 
 Write, per student:
 
@@ -67,6 +96,7 @@ Any no → fix it before shipping. A sent email with no recorded ground truth is
 - Rule 33 — payment verification aggregator, the source for any money-related ground truth
 - Rule 91 — pickup prompts; an open loop with no context row is undone work
 - Idea #25892 — implementation (table, reader, EmailAIResponder wire)
+- Idea #25893 — ClineStudentContact wrapper (atomic send+register, multi-turn, auto-escalation)
 
 ## Source incident
 

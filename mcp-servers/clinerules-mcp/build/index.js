@@ -808,7 +808,7 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
     // state claim to be re-probed live and carry the evidence marker. This
     // detects unverified fleet/LLM/host state claims in the result.
     {
-        const stateWords = /\b(down|offline|dead|unhealthy|degraded|saturated|idle|up|online|alive|healthy|serving|crashed|unresponsive|wedged|stall(?:ed|ing)?)\b/i;
+        const stateWords = /\b(down|offline|dead|unhealthy|degraded|saturated|idle|up|online|alive|healthy|green|recovered|restored|serving|crashed|unresponsive|wedged|stall(?:ed|ing)?)\b/i;
         const fleetCtx = /\b(fleet|frankenstein|litellm|router|host|pod|box|model|120b|405b|free[- ]local|wopr|cesar|cato|backend|serving)\b/i;
         const evidenceMarker = /\b(verified|probed|probe|live\s+(?:call|request|probe)|response\s+header|registry|curl|returned|audit\s+log|measured|confirmed|checked|reconciled|hypervisor|gpu-?util|httpx?)\b/i;
         const unverifiedClaims = [];
@@ -829,6 +829,37 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
                 unverifiedClaims.map((s) => `"${s}"`).join("; ") + `. ` +
                 `Rule 317 Acquisition Gate: re-probe each material state claim (frankenstein_registry / verify_routing / response headers) ` +
                 `and add a '(verified: ...)' marker quoting what the probe returned. Never recite fleet/LLM status from memory.`);
+        }
+    }
+    // ── RULE 317 / idea #25888: REVERSAL LOG (completion-time, zero per-turn overhead) ──
+    // Ruben 2026-08-12 "Approved 25888" + steering "how do we deal with this potential
+    // defect" (per-turn capture cost). Design: NO ledger written turn-by-turn. The
+    // check is one structural scan of the completion text itself: rule 317 Obligation 2
+    // requires the completion to contain a Reversal Log section (or state "No reversals").
+    // The agent fills it ONCE at completion time — the last thing it writes before
+    // shipping. A flip detected while re-probing (Obligation 1) MUST be listed here with
+    // its RCA bucket and causal-rule update. This catches the self-reported reversal the
+    // model would otherwise silently drop, at the only moment we cannot be skipped:
+    // the completion gate.
+    {
+        const reversalHeader = /reversal\s*log|conclusion\s*flips?\s*:\s*$/im;
+        if (!reversalHeader.test(result_text)) {
+            failures.push(`R317_REVERSAL_LOG: completion has no Reversal Log section. Rule 317 Obligation 2 (idea #25888): ` +
+                `write a "# Reversal Log" section that either states "No reversals this window" or lists EVERY within-window flip as ` +
+                `"- initial conclusion → corrected conclusion | RCA bucket (wrong premise|stale assumption|unread source|insufficient probe|scope error) | causal rule updated (file/slug) or filed idea #NNNN". ` +
+                `If a probe during the acquisition gate contradicted an earlier statement, that flip MUST appear here with its causal-rule fix.`);
+        }
+        else {
+            // Section present: every listed flip must carry an RCA bucket; any flip citing a
+            // rule update must reference a real file/slug, or a filed idea number with a disposition.
+            const reversalSection = result_text.split(/│+\s*PICKUP PROMPT/i)[0];
+            const flipLines = reversalSection.split("\n").filter((l) => /→|=>|becomes?/i.test(l) && /RCA\s*(bucket)?\s*[:=]|wrong premise|stale assumption|unread source|insufficient probe|scope error/i.test(l));
+            const flipsWithoutRca = reversalSection.split("\n").filter((l) => /→|=>/i.test(l) && /^-/i.test(l.trim()) && !/wrong premise|stale assumption|unread source|insufficient probe|scope error/i.test(l));
+            if (flipsWithoutRca.length > 0) {
+                failures.push(`R317_REVERSAL_LOG: reversal log line(s) lack an RCA bucket: ` +
+                    flipsWithoutRca.map((s) => `"${s.trim().slice(0, 80)}"`).join("; ") +
+                    `. Each flip needs one of: wrong premise | stale assumption | unread source | insufficient probe | scope error.`);
+            }
         }
     }
     // ── FIX 5 of #19173: COVERAGE GATE ──────────────────────────────────────

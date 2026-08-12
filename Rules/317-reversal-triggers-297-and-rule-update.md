@@ -39,6 +39,16 @@ insufficient probe / scope error; (3) update the causal rule so the next window 
 not repeat it. A hardfloor edit needing Ruben's `--override`: file the exact fix text
 as an idea — that filed idea IS the deliverable (rules 161 + 300 drive execution).
 
+**The Reversal Log (mechanical, idea #25888 — Ruben approved 2026-08-12).** Every
+completion MUST contain a `# Reversal Log` section. It either says "No reversals this
+window" or lists every within-window flip as
+`- initial conclusion → corrected conclusion | RCA bucket | causal rule updated (file/slug) or filed idea #NNNN`.
+The validator (`clinerules_validate_completion`) BLOCKS a completion with no section
+(R317_REVERSAL_LOG) and BLOCKS a flip line missing its RCA bucket. Cost: written ONCE
+at completion time — zero per-turn capture, zero ledger file, zero compression risk.
+This is the completion-time-only design that closes the per-turn-overhead defect
+Ruben flagged in the #25888 approval.
+
 ## Termination guarantee (it cannot loop or stall)
 
 - **One flip per state question.** Recording conclusion B ends the question; re-verifying

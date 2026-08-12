@@ -194,6 +194,38 @@ else
     ALERTS+=("A6 counter-missing: $COUNTER_FILE does not exist")
 fi
 
+# --- A7 gate telemetry (idea #25906, Ruben approved 2026-08-12) ---
+# Reads the clinerules MCP violations table (~/.clinerules-mcp/index.sqlite) so the
+# rule-91 gate's fire-rate is visible nightly WITHOUT manual queries. Every call to
+# clinerules_validate_completion logs a row (evidence contains R317_UNVERIFIED_STATE /
+# R317_REVERSAL_LOG / SELF_CONTRADICTING_DISPOSITION / MISSING_PICKUP_PROMPT, etc).
+# This makes the 24h win/loss and the top failure codes part of the routine audit.
+MCP_DB="$HOME/.clinerules-mcp/index.sqlite"
+GATE_24H=""
+GATE_PASS=""
+if [ -f "$MCP_DB" ] && command -v sqlite3 >/dev/null 2>&1; then
+    GATE_24H=$(sqlite3 "$MCP_DB" "SELECT COUNT(*) FROM violations WHERE recorded_at >= datetime('now','-1 day');" 2>/dev/null | tr -d ' ')
+    GATE_PASS=$(sqlite3 "$MCP_DB" "SELECT COUNT(*) FROM violations WHERE recorded_at >= datetime('now','-1 day') AND evidence LIKE 'VALIDATION_PASS%';" 2>/dev/null | tr -d ' ')
+    [ -z "$GATE_24H" ] && GATE_24H=0
+    [ -z "$GATE_PASS" ] && GATE_PASS=0
+    GATE_FAIL=$(( GATE_24H - GATE_PASS ))
+    note "A7 gate-telemetry: ${GATE_24H} completion validations in 24h - ${GATE_PASS} passed, ${GATE_FAIL} failed"
+    if [ "$GATE_24H" -gt 0 ] && [ "$GATE_FAIL" -gt 0 ]; then
+        sqlite3 "$MCP_DB" "SELECT evidence FROM violations WHERE recorded_at >= datetime('now','-1 day') AND evidence NOT LIKE 'VALIDATION_PASS%';" 2>/dev/null \
+        | while IFS= read -r ev; do
+            echo "$ev" | grep -oE '[A-Z][A-Z0-9_]+:' | sed 's/:$//'
+        done | sort | uniq -c | sort -rn | head -8 \
+        | while read -r cnt code; do
+            note "A7   failure-code ${code} x ${cnt}"
+        done
+    fi
+    if [ "$GATE_24H" -eq 0 ]; then
+        note "A7   (no validations in the last 24h)"
+    fi
+else
+    note "A7 gate-telemetry: skipped (sqlite3 or MCP db unavailable)"
+fi
+
 # --- Report ---
 ALERT_COUNT=${#ALERTS[@]}
 if [ "$ALERT_COUNT" -gt 0 ]; then

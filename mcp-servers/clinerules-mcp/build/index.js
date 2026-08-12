@@ -938,32 +938,36 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
         const contradictions = [];
         const claimWord = /\b(FIXED|DEPLOYED|SHIPPED|LIVE IN PRODUCTION|DONE|COMPLETED|VERIFIED LIVE|HAND-SHIPPED)\b/i;
         const notYetTag = /#(\d{3,8})\s*\[(proposed|executing|awaiting_review)\]/gi;
+        // 2026-08-12 false-positive fix #3 (idea #25935): pre-strip disposition
+        // brackets, rule-91 boilerplate, and neighbouring "#NNNN [tag]" tokens from
+        // the FULL text FIRST, then slice the window from the STRIPPED text using a
+        // position map. The prior order (slice-then-strip) truncated neighbouring
+        // "[deployed]" brackets mid-token at the 220-char window boundary (e.g. the
+        // slice ends at "...#25926 [deplo"), so the strip regex could not match the
+        // partial bracket and the surviving bare "deplo(yed)" fragment or a cut
+        // "Ideas filed this session: #25925 [deployed" line tripped claimWord for an
+        // innocent [executing] item 200 chars away. Stripping the whole text first
+        // makes truncation harmless: whatever survives in the window is already
+        // bracket-free prose.
+        // Position-preserving strip: replace each stripped region with SPACES of
+        // equal length so cm.index from result_text remains valid in strippedFull.
+        // (2026-08-08 fixes #1+#2 folded in: disposition brackets contain the
+        // literal word DEPLOYED, and rule 91's own boilerplate contains DONE.)
+        const padSpaces = (m) => " ".repeat(m.length);
+        const strippedFull = result_text
+            .replace(/\[(deployed|executing|blocked|proposed|rejected|superseded|awaiting_review)\]/gi, padSpaces)
+            .replace(/When done,[^\n]*/gi, padSpaces)
+            .replace(/At wrap-up,[^\n]*/gi, padSpaces)
+            .replace(/run order 66/gi, padSpaces);
         let cm;
         while ((cm = notYetTag.exec(result_text)) !== null) {
             const id = cm[1];
             const tag = cm[2].toLowerCase();
-            // look at the surrounding sentence window on BOTH sides of the tag
+            // Window is sliced from the ALREADY-STRIPPED text, so a slice boundary
+            // can never cut a bracket mid-token and resurrect its inner word.
             const from = Math.max(0, cm.index - 220);
-            const to = Math.min(result_text.length, cm.index + cm[0].length + 220);
-            // 2026-08-08 false-positive fix (found by the gate firing on its own author's
-            // completion): a NEIGHBOURING "#NNNN [deployed]" tag contains the literal word
-            // DEPLOYED, which matched claimWord and flagged an innocent [proposed] item
-            // sitting next to it in a list. Strip ALL disposition brackets from the window
-            // before testing, so only genuine PROSE claims count. Without this the gate is
-            // unusable in any completion that lists deployed and proposed ideas together,
-            // which is nearly every real completion.
-            // 2026-08-08 false-positive fix #2: strip (a) neighbouring disposition tags,
-            // whose literal text contains DEPLOYED, and (b) rule 91's OWN mandatory
-            // closing boilerplate "When done, append to cline_task_ledger.md ...", which
-            // contains the word DONE and sits within 220 chars of the Reference IDs list
-            // in EVERY correctly-formatted pickup prompt. Without this the gate fires on
-            // the very template rule 91 requires, which makes a compliant completion
-            // unshippable. A gate that punishes the mandated format is worse than no gate.
-            const window = result_text
-                .slice(from, to)
-                .replace(/\[(deployed|executing|blocked|proposed|rejected|superseded|awaiting_review)\]/gi, "")
-                .replace(/When done,[^\n]*/gi, "")
-                .replace(/run order 66/gi, "");
+            const to = Math.min(strippedFull.length, cm.index + cm[0].length + 220);
+            const window = strippedFull.slice(from, to);
             if (claimWord.test(window)) {
                 const key = `#${id} [${tag}]`;
                 if (!contradictions.includes(key))

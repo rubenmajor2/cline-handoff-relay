@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-11T23:49:49.533Z",
+ "generated_at": "2026-08-12T01:20:59.874Z",
  "counts": {
-  "parsed": 4,
-  "reused": 642,
+  "parsed": 2,
+  "reused": 645,
   "failed": 0,
-  "total": 646
+  "total": 647
  },
  "tasks": {
   "1784522296714": {
@@ -123007,13 +123007,13 @@
   },
   "1786467822115": {
    "task_id": "1786467822115",
-   "mtime": 1786482572504,
+   "mtime": 1786493378661,
    "created_at": "2026-08-11T17:03:42.115Z",
-   "last_modified": "2026-08-11T21:09:32.504Z",
-   "size_kb": 772,
-   "turn_count": 328,
+   "last_modified": "2026-08-12T00:09:38.661Z",
+   "size_kb": 876,
+   "turn_count": 388,
    "title": "frankenstein-llm is stalling this morning. Why? \n\n\nPompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  \n\n\nBoth answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.\n\n## Where 671 came from, and it is now durable\n\nWritten to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.\n\nTwo counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, divided by elapsed wall seconds:\n\n```javascript\ndecode=12.65 prefill=658.82 TOTAL_TOKENS_PER_S=671.47\n```\n\nSee Also: https://www.emsuniversity.c",
-   "pickup_prompt": "ld idle ideas from months ago)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #25765 [approved] - ideas stuck in executing, queue backlog identified\n\nWhere we left off (verified 2026-08-11 14:09 PT):\n- All 6 ideas are in_progress but dev_stage is empty, approved_at is NULL\n- 15+ P0 ideas are ahead of ours in the executor queue\n- Executor is running (heartbeats every 4 min) but working through P0 backlog\n- ETA: P1 in 1-2h, P2 in 2-4h, P3 in 4-6h\n- Options: promote to P0, fix approved_at, hand-ship, or clean P0 backlog\n\nOpen threads to drive next:\n1. #25755 [executing] - max_num_seqs 32, stuck behind P0 queue (P1 priority)\n2. #25764 [executing] - v3 hybrid classifier, stuck behind P0 queue (P2 priority)\n3. #25765 [approved] - capacity projection, stuck behind P0 queue (P2 priority)\n4. #25747 [executing] - canary monitoring, stuck behind P0 queue (P2 priority)\n5. #25759 [executing] - monitor 30% floor, stuck behind P0 queue (P3 priority)\n6. #25757 [executing] - v1 keyword classifier, stuck behind P0 queue (P2 priority)\n\nReference IDs:\n- Ideas filed: #25747 [executing], #25755 [executing], #25757 [executing], #25759 [executing], #25764 [executing], #25765 [approved]\n- Ideas rejected: #25754 [rejected] (had classifier backwards)\n- Files touched: /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md\n- Bug library: 2314 (agent false zombie), 2307 (sci-notation parse), 2294 (STREAK fix)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result><task_progress>- [x] All session work complete\n- [x] Update tracking document with final session state\n- [x] Check executor status on all executing ideas\n- [x] Report ETA to Ruben</task_progress></attempt_completion>",
+   "pickup_prompt": " (STREAK fix, already in code)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #25812 [executing] - vision doorman fix shipped, frankenstein-llm healthy\n\nWhere we left off (verified 2026-08-11 17:08 PT):\n- Vision doorman patched: falls through to 120B pool instead of 503 dead-end\n- Tested: minicpm-v works, fallthrough code in place for failures\n- frankenstein-llm healthy: all 4 upstreams up, GLM ring has 7 running requests\n- GLM-first working: traffic distributing across GLM + 120B pool\n- Backup at /usr/local/bin/frankenstein_tools_adapter.py.bak-vision-spill-20260811\n\nOpen threads to drive next:\n1. #25812 [executing] - vision doorman fix (shipped, monitor for issues)\n2. #25765 [executing] - fleet capacity projection, remove UPSTREAMS_VLLM exclusion of :8210\n3. #25764 [executing] - build v3 hybrid classifier in router_hook.py\n4. #25755 [executing] - increase max_num_seqs 15 to 32 (requires watchdog #23169 [approved])\n5. #25759 [executing] - monitor GLM utilization percentage to verify 30-70% target\n6. #25747 [executing] - canary monitoring for GLM\n7. #25757 [executing] - v1 keyword classifier (superseded by #25764 [executing])\n\nReference IDs:\n- Ideas filed: #25747 [executing], #25755 [executing], #25757 [executing], #25759 [executing], #25764 [executing], #25765 [executing], #25812 [executing]\n- Ideas rejected: #25754 [rejected] (had classifier backwards)\n- Files touched: /usr/local/bin/frankenstein_tools_adapter.py, /etc/systemd/system/frankenstein-tools.service.d/70-glm-first-all-lanes.conf, /etc/systemd/system/frankenstein-tools.service.d/85-glm-capacity.conf, /etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-remove-dead-julia-rung.conf, /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md\n- Bug library: 2314 (agent false zombie), 2307 (sci-notation parse), 2294 (STREAK fix)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result><task_progress>- [x] Read current vision doorman code\n- [x] Patch adapter to spill to 120B pool instead of returning 503\n- [x] Restart adapter\n- [x] Test with a vision request (minicpm-v works)\n- [x] Test fallthrough (code in place)\n- [x] Clean up test override\n- [x] Check frankenstein-llm current state (all 4 healthy, GLM 7 running)\n- [x] Present results</task_progress></attempt_completion>",
    "ideas": {
     "1754": null,
     "1755": null,
@@ -123060,6 +123060,7 @@
     "12262": null,
     "12299": null,
     "12314": null,
+    "12363": null,
     "12364": null,
     "12365": null,
     "12459": null,
@@ -123146,6 +123147,7 @@
     "19788": "proposed",
     "19789": "proposed",
     "19903": null,
+    "20549": null,
     "21045": null,
     "22820": null,
     "22897": null,
@@ -123165,6 +123167,7 @@
     "25759": "proposed",
     "25764": "approved",
     "25765": "proposed",
+    "25812": "approved",
     "178424": null,
     "178455": null,
     "178652": null,
@@ -123618,11 +123621,11 @@
   },
   "1786481696854": {
    "task_id": "1786481696854",
-   "mtime": 1786491660908,
+   "mtime": 1786492526775,
    "created_at": "2026-08-11T20:54:56.854Z",
-   "last_modified": "2026-08-11T23:41:00.908Z",
-   "size_kb": 821,
-   "turn_count": 334,
+   "last_modified": "2026-08-11T23:55:26.775Z",
+   "size_kb": 892,
+   "turn_count": 378,
    "title": "#TDSHS Sunset Report\n\nSee\n\nPlease make the following corrections/updates for the TDSHS Sunset report and give back updated PDF:\n\nFalse:   They also included records from courses this Department does not regulate, and\npaperwork belonging to other divisions of our company that fall entirely outside its authority.   Were we not told or were we told something ambiguous back -> No transmittal states the measure by which compliance would be\ndetermined. We asked, in writing, for the provision and the measure. We were not told.  For this, that original request was YEARS ago with much back and forth with TDSHS staff. You need to spell that out better and highlight the Years it has been -> First, the ",
    "pickup_prompt": "09, rmajor@emsuniversity.com.\"\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1786481696, TDSHS Sunset report corrections.\n\nWhere we left off (verified 2026-08-11 14:43 PT):\n- Rebuilt PDF at sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-11.pdf, 24 pages, 466,404 bytes.\n- Company name updated throughout to \"EMS University, LLC d.b.a. EMS Universal Education\" (signature + cover).\n- #25783 [proposed] filed on the $1,248 and ORR chronology conflict.\n- #25784 [rejected] duplicate row from an MCP timeout that had already written.\n\nOpen threads to drive next:\n1. #25783 [proposed]. Pull the DSHS payment receipt and confirm which ORR the $1,248 was applied to.\n2. Send the PDF to sunset@sunset.texas.gov or hold for the third-party statement (human-only decision, no idea).\n\nReference IDs:\n- Ideas filed: #25783 [proposed], #25784 [rejected]\n- Files touched: sunset_pdf/patch_v8.py, sunset_pdf/build_sunset_pdf.py, WOPR /tmp/scan_dshs2.py\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
@@ -123635,6 +123638,7 @@
     "25793": "proposed",
     "25799": "proposed",
     "25806": "proposed",
+    "25810": "proposed",
     "178648": null,
     "600179": null,
     "623992": null
@@ -123687,15 +123691,18 @@
   },
   "1786491116649": {
    "task_id": "1786491116649",
-   "mtime": 1786491910462,
+   "mtime": 1786497445589,
    "created_at": "2026-08-11T23:31:56.649Z",
-   "last_modified": "2026-08-11T23:45:10.462Z",
-   "size_kb": 281,
-   "turn_count": 126,
+   "last_modified": "2026-08-12T01:17:25.589Z",
+   "size_kb": 1277,
+   "turn_count": 361,
    "title": "#Externships\n\nI am getting tired of seeing emails about students expecting that their requested dates are going to actually happen. \n\nTell me if there is language on that form about those dates being requests and they are not a guarangee. Also, put a disclaimer on that form that's more obvious about the dates to start. \n\nIs there any email sent to them on this? \n\nThen let's work on below:\n\nCFAs should be responding back that in order to complete externships they need to make sure they have the pre-requisitte requirments, etc... \n\n--\n#Externships\n## Non‑Harmful Baby‑Step Actions to Start Right Now\n\nWe can begin with three additive, zero‑risk steps. Each step can be run, its effect verified, a",
    "pickup_prompt": null,
    "ideas": {
+    "1405": null,
+    "2182": null,
     "2196": null,
+    "9797": null,
     "25129": "ready_for_review",
     "25156": "proposed",
     "25157": "ready_for_review",
@@ -123705,7 +123712,35 @@
     "25807": "proposed",
     "25808": "proposed",
     "25809": "proposed",
+    "25814": "proposed",
+    "25816": "rejected",
+    "25818": "rejected",
+    "25820": "rejected",
+    "25821": "proposed",
+    "64748": null,
+    "78350": null,
+    "92400": null,
     "856404": null
+   }
+  },
+  "1786492782871": {
+   "task_id": "1786492782871",
+   "mtime": 1786497448810,
+   "created_at": "2026-08-11T23:59:42.871Z",
+   "last_modified": "2026-08-12T01:17:28.810Z",
+   "size_kb": 1001,
+   "turn_count": 45,
+   "title": "Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look and see?",
+   "pickup_prompt": " gap\\\" (P1, revenue domain)\\n\\n═══════════════════════════════════════════════\\nPICKUP PROMPT (paste into a fresh Cline window)\\n═══════════════════════════════════════════════\\nPick up task -- Fix systemic QB invoice sync gap (Jon's discovery from chat 84 thread)\\n\\nWhere we left off (verified 2026-08-11 18:11 PT):\\n- Jon flagged in chat 84 that student 26720FT-02 Alec Burnell has a QB invoice 166048 with no doc number, no recorded flag, and a settled Authnet payment that never synced back\\n- Scope confirmed: 4,781 invoices with empty qb_doc_number (1,192 with balance, 3,589 paid but unnumbered)\\n- QB sync last ran May 17, 2026; sync button is permission-gated for Jon/Cori\\n- Ticket TKT-20260803-33C93582 (id 23415) is closed as duplicate, root cause unresolved\\n- Idea #25824 [proposed] filed for the systemic fix\\n\\nOpen threads to drive next:\\n1. #25824 [proposed] -- Fix systemic QB invoice sync gap: run QB sync, restore sync-button permissions, verify Authnet payment mirroring, reopen investigation on the invoice-undefined pattern\\n2. (human-only decision, no idea) -- Ruben to decide whether to un-gate the QB Sync button for ops staff (Jon/Cori/Vicky)\\n\\nReference IDs:\\n- Ticket: TKT-20260803-33C93582 (id 23415)\\n- Ideas filed: #25824 [proposed]\\n- Files touched: none\\n\\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\\n═══════════════════════════════════════════════\"\n}\n</arguments>\n</use_mcp_tool>",
+   "ideas": {
+    "8060": null,
+    "22148": null,
+    "22156": null,
+    "22242": null,
+    "22243": null,
+    "23344": null,
+    "23415": null,
+    "25824": "proposed"
    }
   }
  }

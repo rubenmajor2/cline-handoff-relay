@@ -6,19 +6,20 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/11/2026, 4:49:49 PM PT | window: last 72h | 88 tasks | index total 646 (parsed 4, cached 642)
+Generated: 8/11/2026, 6:20:59 PM PT | window: last 72h | 88 tasks | index total 647 (parsed 2, cached 645)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786491116649` | 8/11/2026, 4:45:10 PM | 126 | 281KB | #Externships |
-| `1786481696854` | 8/11/2026, 4:41:00 PM | 334 | 821KB | #TDSHS Sunset Report |
+| `1786492782871` | 8/11/2026, 6:17:28 PM | 45 | 1001KB | Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look |
+| `1786491116649` | 8/11/2026, 6:17:25 PM | 361 | 1277KB | #Externships |
+| `1786467822115` | 8/11/2026, 5:09:38 PM | 388 | 876KB | frankenstein-llm is stalling this morning. Why?  |
+| `1786481696854` | 8/11/2026, 4:55:26 PM | 378 | 892KB | #TDSHS Sunset Report |
 | `1786487328625` | 8/11/2026, 4:33:31 PM | 230 | 623KB | See this form - i think it's california skills verification form on wp forms at emsunivers |
 | `1786483060620` | 8/11/2026, 4:31:41 PM | 162 | 754KB | Closing on a new property in Tempe 1250 East Baseline. Please analyze the 139 page inspect |
 | `1786469157683` | 8/11/2026, 3:25:27 PM | 436 | 1143KB | How many tokens have our FREE LLMs used in the last 30 days |
 | `1786472732313` | 8/11/2026, 3:08:58 PM | 434 | 1326KB | #TDSHS |
 | `1786476815310` | 8/11/2026, 2:37:15 PM | 132 | 647KB | #Postmark API |
 | `1786467898078` | 8/11/2026, 2:32:38 PM | 274 | 1811KB | #MDM |
-| `1786467822115` | 8/11/2026, 2:09:32 PM | 328 | 772KB | frankenstein-llm is stalling this morning. Why?  |
 | `1786473380730` | 8/11/2026, 1:47:51 PM | 216 | 747KB | #CFA  |
 | `1786474429480` | 8/11/2026, 12:49:27 PM | 136 | 633KB | https://emsuniversity.com/emtskills and other pages are all down / 500 Can you bring them  |
 | `1786468127695` | 8/11/2026, 12:03:51 PM | 228 | 552KB | #Postmark API Issues |
@@ -97,13 +98,31 @@ Generated: 8/11/2026, 4:49:49 PM PT | window: last 72h | 88 tasks | index total 
 | `1786227462879` | 8/8/2026, 7:14:55 PM | 501 | 843KB | #Executor Ops |
 | `1786226983152` | 8/8/2026, 6:49:37 PM | 418 | 1013KB | what is 25220?  |
 | `1786233427989` | 8/8/2026, 6:25:54 PM | 208 | 707KB | #Argus |
-| `1786232853169` | 8/8/2026, 5:09:49 PM | 146 | 889KB | I'm noticing a rule 91 regression since litellm wend down about 30 minutes ago. I'm concer |
 
 ---
 
 ## Per-window detail
 
-### `1786491116649` — 8/11/2026, 4:45:10 PM PT — 126 turns
+### `1786492782871` — 8/11/2026, 6:17:28 PM PT — 45 turns
+
+**Original task:**
+
+```
+Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look and see?
+```
+
+**Ideas referenced:** #22148, #22156, #22242, #22243, #23344, #23415, #25824 [proposed], #8060
+
+**Last PICKUP PROMPT:**
+
+```
+ gap\" (P1, revenue domain)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task -- Fix systemic QB invoice sync gap (Jon's discovery from chat 84 thread)\n\nWhere we left off (verified 2026-08-11 18:11 PT):\n- Jon flagged in chat 84 that student 26720FT-02 Alec Burnell has a QB invoice 166048 with no doc number, no recorded flag, and a settled Authnet payment that never synced back\n- Scope confirmed: 4,781 invoices with empty qb_doc_number (1,192 with balance, 3,589 paid but unnumbered)\n- QB sync last ran May 17, 2026; sync button is permission-gated for Jon/Cori\n- Ticket TKT-20260803-33C93582 (id 23415) is closed as duplicate, root cause unresolved\n- Idea #25824 [proposed] filed for the systemic fix\n\nOpen threads to drive next:\n1. #25824 [proposed] -- Fix systemic QB invoice sync gap: run QB sync, restore sync-button permissions, verify Authnet payment mirroring, reopen investigation on the invoice-undefined pattern\n2. (human-only decision, no idea) -- Ruben to decide whether to un-gate the QB Sync button for ops staff (Jon/Cori/Vicky)\n\nReference IDs:\n- Ticket: TKT-20260803-33C93582 (id 23415)\n- Ideas filed: #25824 [proposed]\n- Files touched: none\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════"
+}
+</arguments>
+</use_mcp_tool>
+```
+
+### `1786491116649` — 8/11/2026, 6:17:25 PM PT — 361 turns
 
 **Original task:**
 
@@ -125,11 +144,79 @@ CFAs should be responding back that in order to complete externships they need t
 ## Non‑Harmful Baby‑Step Actions to Start Right 
 ```
 
-**Ideas referenced:** #2196, #25129 [ready_for_review], #25156 [proposed], #25157 [ready_for_review], #25185, #25246 [ready_for_review], #25529 [approved], #25807 [proposed], #25808 [proposed], #25809 [proposed], #856404
+**Ideas referenced:** #1405, #2182, #2196, #25129 [ready_for_review], #25156 [proposed], #25157 [ready_for_review], #25185, #25246 [ready_for_review], #25529 [approved], #25807 [proposed], #25808 [proposed], #25809 [proposed], #25814 [proposed], #25816 [rejected], #25818 [rejected], #25820 [rejected], #25821 [proposed], #64748, #78350, #856404, #92400, #9797
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786481696854` — 8/11/2026, 4:41:00 PM PT — 334 turns
+### `1786467822115` — 8/11/2026, 5:09:38 PM PT — 388 turns
+
+**Original task:**
+
+```
+frankenstein-llm is stalling this morning. Why? 
+
+
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
+
+
+Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
+
+## Where 671 came from, and it is now durable
+
+Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.
+
+Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, divided by elapsed wall seconds:
+
+```javascr
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11945, #11953, #12247, #12262, #12299, #12314, #12363, #12364, #12365, #12459, #12477, #12618, #12672, #12824, #12872, #12878, #13082, #13108, #13202, #13874, #15158, #16163, #16265, #16304, #16588, #16648, #16844, #17202, #17203, #17205, #17300, #1754, #1755, #178424, #178455, #178652, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18312, #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690, #1871, #1876, #1877, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #1883, #1894, #1896, #1897, #1912, #19653 [queued], #1967, #19671 [rejected], #19686 [queued], #19689 [queued], #19776 [executing], #19777 [proposed], #19778, #19785 [deployed], #19788 [proposed], #19789 [proposed], #1989, #19903, #202608, #2050, #20549, #2102 [resolved], #21045, #2190 [resolved], #2210 [resolved], #2221 [investigating], #2254, #2258, #22820, #22897, #2293 [resolved], #2294 [resolved], #2299, #2307 [rejected], #2312, #2314 [deployed], #23169 [approved], #23171, #24172, #24217 [approved], #25097, #25137, #25141, #25185, #25646, #25747 [proposed], #25754 [proposed], #25755 [approved], #25757 [proposed], #25759 [proposed], #25764 [approved], #25765 [proposed], #25812 [approved], #6826
+
+**Last PICKUP PROMPT:**
+
+```
+ (STREAK fix, already in code)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #25812 [executing] - vision doorman fix shipped, frankenstein-llm healthy
+
+Where we left off (verified 2026-08-11 17:08 PT):
+- Vision doorman patched: falls through to 120B pool instead of 503 dead-end
+- Tested: minicpm-v works, fallthrough code in place for failures
+- frankenstein-llm healthy: all 4 upstreams up, GLM ring has 7 running requests
+- GLM-first working: traffic distributing across GLM + 120B pool
+- Backup at /usr/local/bin/frankenstein_tools_adapter.py.bak-vision-spill-20260811
+
+Open threads to drive next:
+1. #25812 [executing] - vision doorman fix (shipped, monitor for issues)
+2. #25765 [executing] - fleet capacity projection, remove UPSTREAMS_VLLM exclusion of :8210
+3. #25764 [executing] - build v3 hybrid classifier in router_hook.py
+4. #25755 [executing] - increase max_num_seqs 15 to 32 (requires watchdog #23169 [approved])
+5. #25759 [executing] - monitor GLM utilization percentage to verify 30-70% target
+6. #25747 [executing] - canary monitoring for GLM
+7. #25757 [executing] - v1 keyword classifier (superseded by #25764 [executing])
+
+Reference IDs:
+- Ideas filed: #25747 [executing], #25755 [executing], #25757 [executing], #25759 [executing], #25764 [executing], #25765 [executing], #25812 [executing]
+- Ideas rejected: #25754 [rejected] (had classifier backwards)
+- Files touched: /usr/local/bin/frankenstein_tools_adapter.py, /etc/systemd/system/frankenstein-tools.service.d/70-glm-first-all-lanes.conf, /etc/systemd/system/frankenstein-tools.service.d/85-glm-capacity.conf, /etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-remove-dead-julia-rung.conf, /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md
+- Bug library: 2314 (agent false zombie), 2307 (sci-notation parse), 2294 (STREAK fix)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result><task_progress>- [x] Read current vision doorman code
+- [x] Patch adapter to spill to 120B pool instead of returning 503
+- [x] Restart adapter
+- [x] Test with a vision request (minicpm-v works)
+- [x] Test fallthrough (code in place)
+- [x] Clean up test override
+- [x] Check frankenstein-llm current state (all 4 healthy, GLM 7 running)
+- [x] Present results</task_progress></attempt_completion>
+```
+
+### `1786481696854` — 8/11/2026, 4:55:26 PM PT — 378 turns
 
 **Original task:**
 
@@ -145,7 +232,7 @@ paperwork belonging to other divisions of our company that fall entirely outside
 determined. We asked, in writing, for the provision and the measure. We were not told.  For this, that original request was YEARS ago with much back and forth wi
 ```
 
-**Ideas referenced:** #178648, #18676, #18690, #25185, #25772 [executing], #25783 [proposed], #25784 [rejected], #25793 [proposed], #25799 [proposed], #25806 [proposed], #600179, #623992
+**Ideas referenced:** #178648, #18676, #18690, #25185, #25772 [executing], #25783 [proposed], #25784 [rejected], #25793 [proposed], #25799 [proposed], #25806 [proposed], #25810 [proposed], #600179, #623992
 
 **Last PICKUP PROMPT:**
 
@@ -446,69 +533,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1786467822115` — 8/11/2026, 2:09:32 PM PT — 328 turns
-
-**Original task:**
-
-```
-frankenstein-llm is stalling this morning. Why? 
-
-
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
-
-## Where 671 came from, and it is now durable
-
-Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.
-
-Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, divided by elapsed wall seconds:
-
-```javascr
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11945, #11953, #12247, #12262, #12299, #12314, #12364, #12365, #12459, #12477, #12618, #12672, #12824, #12872, #12878, #13082, #13108, #13202, #13874, #15158, #16163, #16265, #16304, #16588, #16648, #16844, #17202, #17203, #17205, #17300, #1754, #1755, #178424, #178455, #178652, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18312, #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690, #1871, #1876, #1877, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #1883, #1894, #1896, #1897, #1912, #19653 [queued], #1967, #19671 [rejected], #19686 [queued], #19689 [queued], #19776 [executing], #19777 [proposed], #19778, #19785 [deployed], #19788 [proposed], #19789 [proposed], #1989, #19903, #202608, #2050, #2102 [resolved], #21045, #2190 [resolved], #2210 [resolved], #2221 [investigating], #2254, #2258, #22820, #22897, #2293 [resolved], #2294 [resolved], #2299, #2307 [rejected], #2312, #2314 [deployed], #23169 [approved], #23171, #24172, #24217 [approved], #25097, #25137, #25141, #25185, #25646, #25747 [proposed], #25754 [proposed], #25755 [approved], #25757 [proposed], #25759 [proposed], #25764 [approved], #25765 [proposed], #6826
-
-**Last PICKUP PROMPT:**
-
-```
-ld idle ideas from months ago)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25765 [approved] - ideas stuck in executing, queue backlog identified
-
-Where we left off (verified 2026-08-11 14:09 PT):
-- All 6 ideas are in_progress but dev_stage is empty, approved_at is NULL
-- 15+ P0 ideas are ahead of ours in the executor queue
-- Executor is running (heartbeats every 4 min) but working through P0 backlog
-- ETA: P1 in 1-2h, P2 in 2-4h, P3 in 4-6h
-- Options: promote to P0, fix approved_at, hand-ship, or clean P0 backlog
-
-Open threads to drive next:
-1. #25755 [executing] - max_num_seqs 32, stuck behind P0 queue (P1 priority)
-2. #25764 [executing] - v3 hybrid classifier, stuck behind P0 queue (P2 priority)
-3. #25765 [approved] - capacity projection, stuck behind P0 queue (P2 priority)
-4. #25747 [executing] - canary monitoring, stuck behind P0 queue (P2 priority)
-5. #25759 [executing] - monitor 30% floor, stuck behind P0 queue (P3 priority)
-6. #25757 [executing] - v1 keyword classifier, stuck behind P0 queue (P2 priority)
-
-Reference IDs:
-- Ideas filed: #25747 [executing], #25755 [executing], #25757 [executing], #25759 [executing], #25764 [executing], #25765 [approved]
-- Ideas rejected: #25754 [rejected] (had classifier backwards)
-- Files touched: /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md
-- Bug library: 2314 (agent false zombie), 2307 (sci-notation parse), 2294 (STREAK fix)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result><task_progress>- [x] All session work complete
-- [x] Update tracking document with final session state
-- [x] Check executor status on all executing ideas
-- [x] Report ETA to Ruben</task_progress></attempt_completion>
 ```
 
 ### `1786473380730` — 8/11/2026, 1:47:51 PM PT — 216 turns
@@ -3411,15 +3435,3 @@ Reference IDs:
 
 When done, append to cline_task_ledg
 ```
-
-### `1786232853169` — 8/8/2026, 5:09:49 PM PT — 146 turns
-
-**Original task:**
-
-```
-I'm noticing a rule 91 regression since litellm wend down about 30 minutes ago. I'm concerned now on iterations, perhpas that htey might not be cline rule obedient, etc... Can you look into this and resolve it?
-```
-
-**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #12900, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14133, #14142, #14205, #15180, #15268, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16584, #16589, #16590, #16602, #16625, #16646, #16680, #16715, #16716, #16717, #17078, #17307, #17673, #1807, #1808 [deployed], #18671, #19125, #19585, #19686, #2071, #2079, #22564, #22584, #2277 [deployed], #25128, #25130, #25133, #25150, #25151, #25154, #25155, #25157, #25171, #25186, #5344, #5346, #5348, #7181, #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

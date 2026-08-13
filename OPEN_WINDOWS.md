@@ -6,14 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/12/2026, 9:48:24 PM PT | window: last 72h | 102 tasks | index total 685 (parsed 1, cached 684)
+Generated: 8/12/2026, 10:48:25 PM PT | window: last 72h | 102 tasks | index total 686 (parsed 3, cached 683)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786592555268` | 8/12/2026, 9:46:22 PM | 145 | 610KB | #Argus |
+| `1786592555268` | 8/12/2026, 10:47:21 PM | 241 | 1092KB | #Argus |
+| `1786599361465` | 8/12/2026, 10:47:02 PM | 81 | 185KB | #Chat Widget |
+| `1786591402307` | 8/12/2026, 10:35:47 PM | 87 | 301KB | #Externship |
 | `1786585764315` | 8/12/2026, 8:49:32 PM | 638 | 1603KB | A lot of the links on these pages and tabs appear to be nonfunctioning: https://emsunivers |
 | `1786581699007` | 8/12/2026, 8:41:34 PM | 196 | 809KB | #Argus Learning |
-| `1786591402307` | 8/12/2026, 8:31:01 PM | 46 | 179KB | #Externship |
 | `1786555167629` | 8/12/2026, 8:19:29 PM | 766 | 2987KB | #Externships |
 | `1786581608927` | 8/12/2026, 8:01:37 PM | 294 | 1169KB | #CFA Learning |
 | `1786553732663` | 8/12/2026, 7:53:48 PM | 604 | 3183KB | When I get emails like this I would like to actually see the students original email below |
@@ -111,13 +112,12 @@ Generated: 8/12/2026, 9:48:24 PM PT | window: last 72h | 102 tasks | index total
 | `1786384771407` | 8/10/2026, 12:47:55 PM | 254 | 580KB | #AI Directed Meditation |
 | `1786379859145` | 8/10/2026, 10:42:53 AM | 318 | 1547KB | #AI Directed Meditation |
 | `1786337811635` | 8/9/2026, 11:13:06 PM | 253 | 524KB | why is frankenstein-llm appearing to be sluggish. Can you take a look? |
-| `1786245923063` | 8/9/2026, 10:37:34 PM | 684 | 6123KB | #Argus |
 
 ---
 
 ## Per-window detail
 
-### `1786592555268` — 8/12/2026, 9:46:22 PM PT — 145 turns
+### `1786592555268` — 8/12/2026, 10:47:21 PM PT — 241 turns
 
 **Original task:**
 
@@ -127,7 +127,81 @@ Generated: 8/12/2026, 9:48:24 PM PT | window: last 72h | 102 tasks | index total
 Would like to be able to click on any row and read the actual task itself: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=activity
 ```
 
-**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #16213, #16263, #18745, #18770, #19370, #21140, #21262, #22310, #25047, #25573, #26005, #26044, #26045, #26048, #26049, #26050, #274160, #30363, #69707, #8645, #8942, #9650, #9654, #9660, #9733, #9889
+**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #16213, #16263, #18745, #18770, #19370, #20547, #21140, #21262, #22310, #23506, #24897, #25047, #25573, #26005, #26044, #26045, #26048, #26049, #26050, #274160, #30363, #69707, #8645, #8942, #9650, #9654, #9660, #9733, #9889
+
+**Last PICKUP PROMPT:**
+
+```
+the one remaining human check.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus Activity tab: click any row to read the actual task.
+
+Where we left off (verified 2026-08-12 9:58 PM PT):
+- Feature is deployed and lint-clean on emsuniversity.com.
+- routes/alltastic_api.php (activity_log + agent_activity_log) now returns detail_id + detail_json (backup: /var/www/emtskills/routes/.alltastic_api.php.bak-argusdetail-20260812).
+- routes/argus_download.php has clickable rows + detail modal (openActDetail/__actRows/prettyDetail), folder/chat context menus restored (backup: argus_download.php.bak-ruben-impl-20260811-165051 for menu baseline).
+- API payload verified at SQL level: args/revert_info flow into modal.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+- None — all work completed this session. Remaining step is a human visual pass: log in as MasterAdmin, open ?tab=activity, click any row, confirm the modal shows the real task text.
+
+Reference IDs:
+- Ticket: none (Ruben's chat request)
+- Ideas filed: none
+- Files touched: /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/routes/argus_download.php
+- Backups: .alltastic_api.php.bak-argusdetail-20260812, argus_download.php.bak-ruben-impl-20260811-165051
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786599361465` — 8/12/2026, 10:47:02 PM PT — 81 turns
+
+**Original task:**
+
+```
+#Chat Widget
+
+Are you actusally reading these responses? "I"m sorry i can't help with that" and ignoring chats? Terrble responses. Are you actually looking at the conversations? The chat widget deflects at every turn.
+
+You asked why KAIZEN did not catch this. I have the answer, and it is measurable.
+
+# Why every monitor missed it
+
+`kaizen_coverage_report(hours=24)` returns `total_failures: 0, classified: NULL` (verified: called live this session). On the same day the chat AI was failing on essentially every student message for 20+ hours, KAIZEN reported a clean bill of health.
+
+It is not that 
+```
+
+**Ideas referenced:** #10740, #11397, #12249, #12266, #12285, #12588, #12589, #12590, #12618, #12688, #12689, #13453, #13459, #13470, #14133, #14142, #15776, #16715, #17078, #17174, #1911, #19686, #23133 [executing], #25128, #25155, #25171, #25186, #26038 [executing], #26039 [executing], #26040 [executing], #26041 [executing], #26045 [executing], #26048 [executing], #26049 [rejected], #26050 [executing]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786591402307` — 8/12/2026, 10:35:47 PM PT — 87 turns
+
+**Original task:**
+
+```
+#Externship
+
+Still need 5 links to profiles to view that you say meet requirements
+
+Did you update this:  /var/www/emtskills/docs/CFA_CERT_READINESS_RCA_20260812.md
+
+
+You were right, and my earlier claim that no dates-remaining source existed was flat wrong.
+
+=== WHY 26904FT-03 SLIPPED THROUGH ===
+
+NREMT Testing Dates Remaining is a DERIVED value, not a stored column. admin_profile.php line 691 calls StatusCalculator::compute($row)['days'] from src/Status.php, which returns max(0, 60 minus days since scheduled didactic completion). John Erisman's didactic date was 2026-03-12, five months ago, 
+```
+
+**Ideas referenced:** #166534, #178649, #19419, #2323, #23477, #24526, #24765, #25185, #25822 [deployed], #25889 [awaiting_review], #25914, #25916 [awaiting_review], #25932 [deployed], #25950 [awaiting_review], #25971, #25973 [awaiting_review], #25974, #25975, #25976, #25984, #25985, #25986, #25990, #25995, #26001 [deployed], #26002 [awaiting_review], #26003, #26027 [awaiting_review], #26028 [deployed], #26034 [deployed], #26053 [approved], #92400
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -192,29 +266,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1786591402307` — 8/12/2026, 8:31:01 PM PT — 46 turns
-
-**Original task:**
-
-```
-#Externship
-
-Still need 5 links to profiles to view that you say meet requirements
-
-Did you update this:  /var/www/emtskills/docs/CFA_CERT_READINESS_RCA_20260812.md
-
-
-You were right, and my earlier claim that no dates-remaining source existed was flat wrong.
-
-=== WHY 26904FT-03 SLIPPED THROUGH ===
-
-NREMT Testing Dates Remaining is a DERIVED value, not a stored column. admin_profile.php line 691 calls StatusCalculator::compute($row)['days'] from src/Status.php, which returns max(0, 60 minus days since scheduled didactic completion). John Erisman's didactic date was 2026-03-12, five months ago, 
-```
-
-**Ideas referenced:** #178649, #19419, #2323, #23477, #24526, #24765, #25822 [deployed], #25889 [awaiting_review], #25914, #25916 [awaiting_review], #25932 [deployed], #25950 [awaiting_review], #25971, #25973 [awaiting_review], #25974, #25975, #25976, #25984, #25985, #25986, #25990, #25995, #26001 [deployed], #26002 [awaiting_review], #26003, #26027 [awaiting_review], #26028 [deployed], #26034 [deployed], #26053 [approved]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786555167629` — 8/12/2026, 8:19:29 PM PT — 766 turns
 
@@ -3824,57 +3875,3 @@ why is frankenstein-llm appearing to be sluggish. Can you take a look?
 **Ideas referenced:** #12314, #12363, #12365, #12672, #13108, #13121, #13202, #13832, #13874, #16163, #16673, #16844, #16849, #17166, #19903, #19925, #2050, #2092, #2297 [deployed], #2298, #2299, #23171, #23528, #24241, #25097, #25112, #25185, #25313, #25468 [proposed], #25469 [rejected], #25470 [proposed], #25471 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786245923063` — 8/9/2026, 10:37:34 PM PT — 684 turns
-
-**Original task:**
-
-```
-#Argus
----
-
-
- I was thinking also that if a student issues identified in Argus and there are similar issues with other students in Argos that are found it's the same general type of issue that you want cluster. 
-
-But again you're gonna have to be certain on those ones. Like for example you see some sort of bug or something it needs to be identified to see if there's extensions beyond just the ones too.
-
-Approved
-- #25269 [proposed] - Fix the Kaizon blind spot: wrap argusBuildRevertInfo() in try/catch at both call sites, add the missing error_message column to the INSERT at line 3947, and add a
-```
-
-**Ideas referenced:** #152615, #16523, #176616, #178424, #178455, #17926, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #18745, #1876, #18765, #1877, #18771, #18781, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #1894, #18946, #18947, #18948, #18949, #18950, #18951, #1896, #1897, #18973, #1912, #1927, #1928, #1929, #1930, #1931, #1932, #1933, #19348, #19415, #19416, #2006, #20547, #20555, #21074, #21125, #21126, #22511, #22583, #22688, #2271, #2274, #2275, #2292, #23036, #23428, #23468, #23489, #23506, #23675, #23852, #23920, #23941, #23952, #24635, #24636, #24645, #24646 [proposed], #24766, #24791, #24897, #24900, #24926, #24941, #24990, #25039, #25047, #25058 [deployed], #25064, #25081, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25142, #25158, #25159, #25171, #25172, #25173, #25178, #25193 [approved], #25195 [executing], #25196 [deployed], #25224, #25238, #25240, #25241, #25242, #25262 [executing], #25263 [executing], #25264 [executing], #25269 [proposed], #25270 [proposed], #25271 [deployed], #25292, #25293 [proposed], #25304, #25310, #25313 [approved], #25314 [approved], #25315 [approved], #25316 [proposing], #25364 [executing], #25365 [deployed], #25366 [proposed], #25409, #25464 [executing], #25465 [executing], #25466 [executing], #25768, #334155, #4338, #64748, #7215, #7683, #8596, #8597, #8783, #9069, #9070, #9071, #9176, #9191
-
-**Last PICKUP PROMPT:**
-
-```
-lready recovered on their own.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25768 — Argus task-queue worker crash loop plus capacity/error-reduction pass.
-
-Where we left off (verified 2026-08-09 22:33 PT):
-- Worker crash root cause fixed: removed nonexistent `require_once /../lib/argus_reclaim.php` (L441) and neutralized undefined `argusReclaimOrphanedTasks()` call (L443) in `/var/www/emtskills/routes/cron_argus_task_worker.php`. Backups: `.bak-25768-20260809-2152`, `-2155`, `-2206`. php -l clean.
-- BATCH widened 6→10; queue drained from 27 stuck to 107 done / 5 queued / 1 running.
-- Jon notified via `argus_task_messages` id 54 (task #406).
-- 5 legacy failed tasks re-queued (attempts=0) for retry under fixed worker.
-- Ideas filed: #25464 [ready_for_review], #25465 [approved], #25466 [approved].
-
-Open threads to drive next (EVERY item has a real filed idea):
-1. #25464 [ready_for_review] — argus_task_queue context enrichment: tasks queued from a conversation inherit last 4-5 turns from argus_sessions. Implement in worker L280 prompt assembly + verify the 5 requeued failed tasks now pass.
-2. #25465 [approved] — argus_task_queue fast-model shard: add `model_key` param to `queue_task` catalog entry; simple tasks (status lookups, confirmations) route through faster model. Worker curl dispatch is already parallel; per-request model selection only.
-3. #25466 [approved] — Extend Kaison wedge detection (`cron_kaison_wedge_detection.php`) to monitor `argus_task_queue`: >5 tasks running >15min → file idea + alert Ruben.
-
-Reference IDs:
-- Ideas filed this session: #25464, #25465, #25466
-- Backups: /var/www/emtskills/routes/cron_argus_task_worker.php.bak-25768-20260809-{2152,2155,2206}
-- Log: /var/log/argus_task_worker.log (tail since 21:54 shows DISPATCH + DONE cycles)
-- File touched: /var/www/emtskills/routes/cron_argus_task_worker.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```

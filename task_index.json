@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-13T04:48:24.618Z",
+ "generated_at": "2026-08-13T05:48:25.115Z",
  "counts": {
-  "parsed": 1,
-  "reused": 684,
+  "parsed": 3,
+  "reused": 683,
   "failed": 0,
-  "total": 685
+  "total": 686
  },
  "tasks": {
   "1784522296714": {
@@ -125670,11 +125670,11 @@
   },
   "1786591402307": {
    "task_id": "1786591402307",
-   "mtime": 1786591861202,
+   "mtime": 1786599347673,
    "created_at": "2026-08-13T03:23:22.307Z",
-   "last_modified": "2026-08-13T03:31:01.202Z",
-   "size_kb": 179,
-   "turn_count": 46,
+   "last_modified": "2026-08-13T05:35:47.673Z",
+   "size_kb": 301,
+   "turn_count": 87,
    "title": "#Externship\n\nStill need 5 links to profiles to view that you say meet requirements\n\nDid you update this:  /var/www/emtskills/docs/CFA_CERT_READINESS_RCA_20260812.md\n\n\nYou were right, and my earlier claim that no dates-remaining source existed was flat wrong.\n\n=== WHY 26904FT-03 SLIPPED THROUGH ===\n\nNREMT Testing Dates Remaining is a DERIVED value, not a stored column. admin_profile.php line 691 calls StatusCalculator::compute($row)['days'] from src/Status.php, which returns max(0, 60 minus days since scheduled didactic completion). John Erisman's didactic date was 2026-03-12, five months ago, so his window closed and the page correctly shows 0.\n\nI had swept information_schema for any column ",
    "pickup_prompt": null,
    "ideas": {
@@ -125683,6 +125683,7 @@
     "23477": null,
     "24526": null,
     "24765": null,
+    "25185": null,
     "25822": "deployed",
     "25889": "awaiting_review",
     "25914": null,
@@ -125706,18 +125707,20 @@
     "26028": "deployed",
     "26034": "deployed",
     "26053": "approved",
+    "92400": null,
+    "166534": null,
     "178649": null
    }
   },
   "1786592555268": {
    "task_id": "1786592555268",
-   "mtime": 1786596382826,
+   "mtime": 1786600041732,
    "created_at": "2026-08-13T03:42:35.268Z",
-   "last_modified": "2026-08-13T04:46:22.826Z",
-   "size_kb": 610,
-   "turn_count": 145,
+   "last_modified": "2026-08-13T05:47:21.732Z",
+   "size_kb": 1092,
+   "turn_count": 241,
    "title": "#Argus\n\nWould like to be able to click on any row and read the actual task itself: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=activity",
-   "pickup_prompt": null,
+   "pickup_prompt": "the one remaining human check.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Argus Activity tab: click any row to read the actual task.\n\nWhere we left off (verified 2026-08-12 9:58 PM PT):\n- Feature is deployed and lint-clean on emsuniversity.com.\n- routes/alltastic_api.php (activity_log + agent_activity_log) now returns detail_id + detail_json (backup: /var/www/emtskills/routes/.alltastic_api.php.bak-argusdetail-20260812).\n- routes/argus_download.php has clickable rows + detail modal (openActDetail/__actRows/prettyDetail), folder/chat context menus restored (backup: argus_download.php.bak-ruben-impl-20260811-165051 for menu baseline).\n- API payload verified at SQL level: args/revert_info flow into modal.\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n- None — all work completed this session. Remaining step is a human visual pass: log in as MasterAdmin, open ?tab=activity, click any row, confirm the modal shows the real task text.\n\nReference IDs:\n- Ticket: none (Ruben's chat request)\n- Ideas filed: none\n- Files touched: /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/routes/argus_download.php\n- Backups: .alltastic_api.php.bak-argusdetail-20260812, argus_download.php.bak-ruben-impl-20260811-165051\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "8645": null,
     "8942": null,
@@ -125735,9 +125738,12 @@
     "18745": null,
     "18770": null,
     "19370": null,
+    "20547": null,
     "21140": null,
     "21262": null,
     "22310": null,
+    "23506": null,
+    "24897": null,
     "25047": null,
     "25573": null,
     "26005": null,
@@ -125756,6 +125762,53 @@
     "128266": null,
     "128275": null,
     "274160": null
+   }
+  },
+  "1786599361465": {
+   "task_id": "1786599361465",
+   "mtime": 1786600022842,
+   "created_at": "2026-08-13T05:36:01.465Z",
+   "last_modified": "2026-08-13T05:47:02.842Z",
+   "size_kb": 185,
+   "turn_count": 81,
+   "title": "#Chat Widget\n\nAre you actusally reading these responses? \"I\"m sorry i can't help with that\" and ignoring chats? Terrble responses. Are you actually looking at the conversations? The chat widget deflects at every turn.\n\nYou asked why KAIZEN did not catch this. I have the answer, and it is measurable.\n\n# Why every monitor missed it\n\n`kaizen_coverage_report(hours=24)` returns `total_failures: 0, classified: NULL` (verified: called live this session). On the same day the chat AI was failing on essentially every student message for 20+ hours, KAIZEN reported a clean bill of health.\n\nIt is not that KAIZEN was misconfigured. It is that **nothing failed**, in the sense any of our monitors understand",
+   "pickup_prompt": null,
+   "ideas": {
+    "1911": null,
+    "10740": null,
+    "11397": null,
+    "12249": null,
+    "12266": null,
+    "12285": null,
+    "12588": null,
+    "12589": null,
+    "12590": null,
+    "12618": null,
+    "12688": null,
+    "12689": null,
+    "13453": null,
+    "13459": null,
+    "13470": null,
+    "14133": null,
+    "14142": null,
+    "15776": null,
+    "16715": null,
+    "17078": null,
+    "17174": null,
+    "19686": null,
+    "23133": "executing",
+    "25128": null,
+    "25155": null,
+    "25171": null,
+    "25186": null,
+    "26038": "executing",
+    "26039": "executing",
+    "26040": "executing",
+    "26041": "executing",
+    "26045": "executing",
+    "26048": "executing",
+    "26049": "rejected",
+    "26050": "executing"
    }
   }
  }

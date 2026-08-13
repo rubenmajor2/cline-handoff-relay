@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/13/2026, 1:41:54 PM PT | window: last 72h | 104 tasks | index total 693 (parsed 3, cached 690)
+Generated: 8/13/2026, 2:41:54 PM PT | window: last 72h | 103 tasks | index total 693 (parsed 2, cached 691)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786651267227` | 8/13/2026, 1:41:33 PM | 87 | 340KB | check the security certificate for onlineemd.com and fix it - the SSL |
-| `1786652849668` | 8/13/2026, 1:35:00 PM | 62 | 154KB | #TDSHS |
+| `1786651267227` | 8/13/2026, 2:41:31 PM | 175 | 675KB | check the security certificate for onlineemd.com and fix it - the SSL |
+| `1786652849668` | 8/13/2026, 2:39:42 PM | 306 | 873KB | #TDSHS |
 | `1786602908972` | 8/13/2026, 1:22:41 PM | 342 | 4032KB | #TDSHS/AZDHS 8/13 - Compliance |
 | `1786607400519` | 8/13/2026, 7:27:01 AM | 200 | 1606KB | Hi Declined???? REALLY, is Email Agent really that ???? |
 | `1786581608927` | 8/13/2026, 4:29:51 AM | 428 | 1528KB | #CFA Learning |
@@ -113,13 +113,12 @@ Generated: 8/13/2026, 1:41:54 PM PT | window: last 72h | 104 tasks | index total
 | `1786392003768` | 8/10/2026, 3:50:36 PM | 90 | 244KB | #AI Direct Meditation |
 | `1786285332678` | 8/10/2026, 3:42:46 PM | 1136 | 15874KB | #Callbacks |
 | `1786340503930` | 8/10/2026, 3:28:55 PM | 792 | 2994KB | #Argus |
-| `1786391277181` | 8/10/2026, 2:14:28 PM | 205 | 592KB | Why is frankenstein-llm iterating at 50% of its normal speed? |
 
 ---
 
 ## Per-window detail
 
-### `1786651267227` — 8/13/2026, 1:41:33 PM PT — 87 turns
+### `1786651267227` — 8/13/2026, 2:41:31 PM PT — 175 turns
 
 **Original task:**
 
@@ -127,11 +126,11 @@ Generated: 8/13/2026, 1:41:54 PM PT | window: last 72h | 104 tasks | index total
 check the security certificate for onlineemd.com and fix it - the SSL
 ```
 
-**Ideas referenced:** #23585, #25990, #26007, #26017, #26019, #26077
+**Ideas referenced:** #12645, #15918, #2147, #2148, #2151, #2286, #23585, #25990, #26007, #26017, #26019, #26077
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786652849668` — 8/13/2026, 1:35:00 PM PT — 62 turns
+### `1786652849668` — 8/13/2026, 2:39:42 PM PT — 306 turns
 
 **Original task:**
 
@@ -151,7 +150,7 @@ Pick up task #26154 — TDSHS/AZDHS/LEMSA compliance surface + Ward escalation +
 Where we left off (v
 ```
 
-**Ideas referenced:** #26092 [proposed], #26096 [proposed], #26154 [proposed], #26155 [proposed], #26156 [proposed], #26157 [proposed], #26163 [executing], #26164 [executing], #58230, #600179
+**Ideas referenced:** #14662, #14710, #250984, #251038, #251211, #251236, #251264, #251382, #251428, #26092 [proposed], #26096 [proposed], #26154 [proposed], #26155 [proposed], #26156 [proposed], #26157 [proposed], #26163 [executing], #26164 [executing], #26167 [executing], #26168 [approved], #26169 [approved], #26170 [approved], #26171 [approved], #26172 [approved], #58230, #600179
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -3959,17 +3958,3 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1786391277181` — 8/10/2026, 2:14:28 PM PT — 205 turns
-
-**Original task:**
-
-```
-Why is frankenstein-llm iterating at 50% of its normal speed?
-
-do not inject anthropic
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11953, #12314, #12365, #12366, #12368, #12459, #12477, #12618, #12657, #12672, #12689, #12824, #12872, #12878, #13108, #13121, #13202, #13832, #13874, #16120, #16163, #16265, #16304, #16674, #16676, #16844, #17202, #1754, #1755, #1781, #18312, #18326, #19338, #1989, #20042, #20495, #21045, #2114, #2254, #2258, #22583, #2299, #2302, #2303, #23169, #23171, #24144, #24172, #24186, #24217, #25097, #25112, #25172, #25185, #25468, #25471, #25565 [proposed], #25567 [proposed], #25571 [proposed], #25580 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

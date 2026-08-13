@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/13/2026, 6:36:31 AM PT | window: last 72h | 106 tasks | index total 691 (parsed 1, cached 690)
+Generated: 8/13/2026, 7:37:51 AM PT | window: last 72h | 106 tasks | index total 691 (parsed 1, cached 690)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786607400519` | 8/13/2026, 6:36:15 AM | 133 | 1451KB | Hi Declined???? REALLY, is Email Agent really that ???? |
+| `1786607400519` | 8/13/2026, 7:27:01 AM | 200 | 1606KB | Hi Declined???? REALLY, is Email Agent really that ???? |
 | `1786581608927` | 8/13/2026, 4:29:51 AM | 428 | 1528KB | #CFA Learning |
 | `1786602908972` | 8/13/2026, 4:29:47 AM | 234 | 1685KB | #TDSHS/AZDHS 8/13 - Compliance |
 | `1786592555268` | 8/13/2026, 3:28:58 AM | 440 | 1956KB | #Argus |
@@ -121,7 +121,7 @@ Generated: 8/13/2026, 6:36:31 AM PT | window: last 72h | 106 tasks | index total
 
 ## Per-window detail
 
-### `1786607400519` — 8/13/2026, 6:36:15 AM PT — 133 turns
+### `1786607400519` — 8/13/2026, 7:27:01 AM PT — 200 turns
 
 **Original task:**
 
@@ -129,9 +129,39 @@ Generated: 8/13/2026, 6:36:31 AM PT | window: last 72h | 106 tasks | index total
 Hi Declined???? REALLY, is Email Agent really that ????
 ```
 
-**Ideas referenced:** #15670, #16673, #16849, #17166, #177851, #23528, #24241, #7207
+**Ideas referenced:** #15670, #16673, #16849, #17166, #177851, #23528, #24241, #26126 [deployed], #504621, #7207
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+kets” in `orchestrator_ideas`.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #504621 — Resolve the “Hi Declined” greeting bug in the Email Agent.
+
+Where we left off (verified 2026-08-13 07:26 AM PT):
+- Root cause: `lib/ai_ticket_agent_first_touch.php` used `ticket.created_by_name` (“Declined Payment Monitor”) as the greeting name → “Hi Declined” on ticket TKT-20260811-F2307B2D.
+- Fix deployed: added `'declined payment monitor'` to `$systemActorNames` at line 315 of `lib/ai_ticket_agent_first_touch.php`.
+- Verified: `php -l` passed; live sim of ticket 24596 now resolves greeting to “Hi there”.
+- Idea #26126 [deployed] recorded.
+
+Open threads to drive next (every item HAS a filed idea #):
+1. #26126 [deployed] — Monitor outbound replies for any remaining tickets created by declined-payment monitors; the fix requires no further action unless a new bot actor name appears in `email_outbound_log.body_preview` starting with “Hi Declined”.
+
+Reference IDs:
+- Ticket that exposed the bug: TKT-20260811-F2307B2D (id 24596)
+- Outbound email evidence: `email_outbound_log` id 360948
+- Ideas filed: #26126 [deployed]
+- Files touched: `/var/www/emtskills/lib/ai_ticket_agent_first_touch.php`
+- Source that writes the bad actor name: `/var/www/emtskills/cron/cron_declined_payment_escalation.php` line 463
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1786581608927` — 8/13/2026, 4:29:51 AM PT — 428 turns
 

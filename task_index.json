@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-13T18:41:53.307Z",
+ "generated_at": "2026-08-13T19:41:53.722Z",
  "counts": {
   "parsed": 1,
   "reused": 690,
@@ -125969,13 +125969,13 @@
   },
   "1786602908972": {
    "task_id": "1786602908972",
-   "mtime": 1786646426745,
+   "mtime": 1786649705698,
    "created_at": "2026-08-13T06:35:08.972Z",
-   "last_modified": "2026-08-13T18:40:26.745Z",
-   "size_kb": 3729,
-   "turn_count": 253,
+   "last_modified": "2026-08-13T19:35:05.698Z",
+   "size_kb": 3979,
+   "turn_count": 330,
    "title": "#TDSHS/AZDHS 8/13 - Compliance\n\nhttps://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=list \n\nThis page seems to show past deadlines which is kind of odd. I'm showing something from 8/6. \n\nIf I go to the main compliance page, I see this link button that says next to TDSHS AUG 6 which is not accurate because August 6 is already passed and we already met that deadline. So the stuff needs to update properly. Also I thought for sure there was something that was due today from AZDHS. Can you take a look at that and see? Also you need to check my email for the AZDHS stuff as well as the TDSHS stuff to see if there's anything else let's do and the LEMSAs. \n\nI need you to prepar",
-   "pickup_prompt": "response_1080261915_Dictson.md\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — TDSHS/AZDHS 8/13 compliance follow-through (mailbox retrieval + response final review).\n\nWhere we left off (verified 8/13/2026 4:12 AM PT):\n- Emma Johnson 1080261890 + Kylie Dictson 1080261915 drafts deployed, rows 7/9 `drafted`.\n- TPIA-004 (row 27) follow-up letter deployed, row 27 `drafted`.\n- Rows 1/2/3 marked `sent`; stale TDSHS AUG 6 dashboard label resolved.\n- LEMSA San Mateo audit deadline added as row id=31, due 8/19 12:00 PT.\n- AZDHS: nothing due 8/12; round-2 NOI response already transmitted 7/31.\n\nOpen threads to drive next:\n1. #26092 [proposed] — Pull the external mailbox for 8/6-8/13 to retrieve Sabrina Lee Richardson's 8/7 and 8/10 DSHS emails, identify new/updated control numbers, and populate compliance_deadlines rows.\n2. #26096 [proposed] — Final review + PDF regeneration + signature block for the San Mateo LEMSA audit response (Richella Trujillo / Oscar Trujillo IV 26114T-05) before the 8/19 12:00 PT deadline.\n\nReference IDs:\n- Ideas filed: #26092, #26096\n- Compliance deadline rows: 1,2,3 (sent), 7, 9, 27, 31 (drafted)\n- Files touched: /var/www/emtskills/uploads/tdshs/DRAFT_response_1080261890_Johnson.md, /var/www/emtskills/uploads/tdshs/DRAFT_response_1080261915_Dictson.md, /var/www/emtskills/uploads/tdshs/DRAFT_TPIA004_FollowUp_2026-08-13.md\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "cted in idea #26154 [proposed]\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #26154 — Grant Johnson (26617FT-23) disposition + McKenzie Ward reply.\n\nWhere we left off (verified 2026-08-13 12:34 PT):\n- #26154 [proposed] — CORRECTED to class-day math: 13 of 18 class days = 72.2%, past the 60% ceiling in 5 CCR §71750. No pro rata refund owed. Grievance policy is the correct exception door. Ruben's original framing was right.\n- \"Refund currently in process\" (squiroz, on or before 7/27) is an acknowledgment, not a commitment to any amount. The exposure is service-side: no disposition in six weeks, four unanswered chats 8/10.\n- Money: one settled charge $2,195.00, Authnet 81599734258, 5/6/2026, Visa 4582. QB inv 166352 paid, balance $0.00. No refund executed. Alleged 7/2 second charge not present in the Authnet cache.\n- Instructor-induced-withdrawal allegation stands (mother 7/2 chat, student 7/27 email), on an age ground our under-18 policy contradicts. DOB 9/14/2008, turns 18 on 9/14/2026.\n- Letter + guidance at /Users/rubenmajor/Desktop/REPLY_McKenzie_Ward_Grant_Johnson.md, awaiting Ruben's send.\n- Prior session state standing: rows 1/2/3 [sent]; rows 7 + 9 [drafted]; row 27 [drafted] TPIA-004 follow-up; row 31 LEMSA San Mateo audit due 8/19 12:00 PT.\n\nOpen threads to drive next:\n1. #26154 [proposed] — Send the reply and record the disposition (free seat, or grievance file opened). The money call is Ruben's; giving the family an answer is not optional.\n2. #26096 [proposed] — San Mateo LEMSA audit response final review + PDF + signature before 8/19 12:00 PT. Must match whatever is said to the Ward family; chenry@smcgov.org is copied on both.\n3. #26092 [proposed] — Pull the external mailbox 8/6-8/13 for Sabrina Richardson's 8/7 and 8/10 DSHS emails; populate any new control numbers.\n4. Verify the 18-class-day denominator against the filed schedule of record before citing it to San Mateo (emsu_shifts shows only 9 in-window rows plus a duplicate) — (human-only decision, no idea).\n5. Gold Standard PDF responses for Emma Johnson (1080261890) and Kylie Dictson (1080261915) at the 8/13 packet link — (human-only decision, no idea).\n6. Compliance page: default the list to we_owe, add an \"Agency is Overdue\" tab for they_owe rows — (human-only decision, no idea).\n\nReference IDs:\n- Ideas filed: #26154 [proposed], #26092 [proposed], #26096 [proposed]\n- Student: Grant Johnson, Students.id 8153570, slug 26617FT-23\n- Compliance rows: 1, 2, 3 [sent]; 7, 9, 27, 31 [drafted]\n- Files touched: /Users/rubenmajor/Desktop/REPLY_McKenzie_Ward_Grant_Johnson.md\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1370": null,
     "1899": null,
@@ -126021,6 +126021,7 @@
     "26067": null,
     "26092": "proposed",
     "26096": "proposed",
+    "26154": "proposed",
     "64748": null,
     "92400": null,
     "111827": null,
@@ -126041,6 +126042,7 @@
     "374151": null,
     "450438": null,
     "475569": null,
+    "600179": null,
     "047857": null,
     "059669": null
    }

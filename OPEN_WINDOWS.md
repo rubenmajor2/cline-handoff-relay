@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/13/2026, 11:41:53 AM PT | window: last 72h | 105 tasks | index total 691 (parsed 1, cached 690)
+Generated: 8/13/2026, 12:41:53 PM PT | window: last 72h | 105 tasks | index total 691 (parsed 1, cached 690)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786602908972` | 8/13/2026, 11:40:26 AM | 253 | 3729KB | #TDSHS/AZDHS 8/13 - Compliance |
+| `1786602908972` | 8/13/2026, 12:35:05 PM | 330 | 3979KB | #TDSHS/AZDHS 8/13 - Compliance |
 | `1786607400519` | 8/13/2026, 7:27:01 AM | 200 | 1606KB | Hi Declined???? REALLY, is Email Agent really that ???? |
 | `1786581608927` | 8/13/2026, 4:29:51 AM | 428 | 1528KB | #CFA Learning |
 | `1786592555268` | 8/13/2026, 3:28:58 AM | 440 | 1956KB | #Argus |
@@ -120,7 +120,7 @@ Generated: 8/13/2026, 11:41:53 AM PT | window: last 72h | 105 tasks | index tota
 
 ## Per-window detail
 
-### `1786602908972` — 8/13/2026, 11:40:26 AM PT — 253 turns
+### `1786602908972` — 8/13/2026, 12:35:05 PM PT — 330 turns
 
 **Original task:**
 
@@ -134,35 +134,42 @@ This page seems to show past deadlines which is kind of odd. I'm showing somethi
 If I go to the main compliance page, I see this link button that says next to TDSHS AUG 6 which is not accurate because August 6 is already passed and we already met that deadline. So the stuff needs to update properly. Also I thought for sure there was something that was due today from AZDHS. Can you take a look at that and see? Also you need to check my email for the AZDHS stuff as wel
 ```
 
-**Ideas referenced:** #047857, #059669, #111827, #1370, #13967, #166211, #16957, #171083, #173898, #18676, #18717, #18718, #18719, #18720, #18733, #18743, #18744, #18746, #18827, #18895 [deployed], #18916, #18985 [rejected], #1899, #19006 [blocked], #1907, #1949, #19599, #19600, #19601, #23361, #24153, #24207, #24914, #24924, #24925, #24926, #24927, #249290, #249325, #24941, #24989, #250541, #251044, #251128, #251233, #251444, #251447, #251450, #251485, #251498, #25480, #2563, #26048, #26050, #26054, #26067, #26092 [proposed], #26096 [proposed], #2763, #2813, #3730, #374151, #450438, #475569, #64748, #92400
+**Ideas referenced:** #047857, #059669, #111827, #1370, #13967, #166211, #16957, #171083, #173898, #18676, #18717, #18718, #18719, #18720, #18733, #18743, #18744, #18746, #18827, #18895 [deployed], #18916, #18985 [rejected], #1899, #19006 [blocked], #1907, #1949, #19599, #19600, #19601, #23361, #24153, #24207, #24914, #24924, #24925, #24926, #24927, #249290, #249325, #24941, #24989, #250541, #251044, #251128, #251233, #251444, #251447, #251450, #251485, #251498, #25480, #2563, #26048, #26050, #26054, #26067, #26092 [proposed], #26096 [proposed], #26154 [proposed], #2763, #2813, #3730, #374151, #450438, #475569, #600179, #64748, #92400
 
 **Last PICKUP PROMPT:**
 
 ```
-response_1080261915_Dictson.md
+cted in idea #26154 [proposed]
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — TDSHS/AZDHS 8/13 compliance follow-through (mailbox retrieval + response final review).
 
-Where we left off (verified 8/13/2026 4:12 AM PT):
-- Emma Johnson 1080261890 + Kylie Dictson 1080261915 drafts deployed, rows 7/9 `drafted`.
-- TPIA-004 (row 27) follow-up letter deployed, row 27 `drafted`.
-- Rows 1/2/3 marked `sent`; stale TDSHS AUG 6 dashboard label resolved.
-- LEMSA San Mateo audit deadline added as row id=31, due 8/19 12:00 PT.
-- AZDHS: nothing due 8/12; round-2 NOI response already transmitted 7/31.
+Pick up task #26154 — Grant Johnson (26617FT-23) disposition + McKenzie Ward reply.
+
+Where we left off (verified 2026-08-13 12:34 PT):
+- #26154 [proposed] — CORRECTED to class-day math: 13 of 18 class days = 72.2%, past the 60% ceiling in 5 CCR §71750. No pro rata refund owed. Grievance policy is the correct exception door. Ruben's original framing was right.
+- "Refund currently in process" (squiroz, on or before 7/27) is an acknowledgment, not a commitment to any amount. The exposure is service-side: no disposition in six weeks, four unanswered chats 8/10.
+- Money: one settled charge $2,195.00, Authnet 81599734258, 5/6/2026, Visa 4582. QB inv 166352 paid, balance $0.00. No refund executed. Alleged 7/2 second charge not present in the Authnet cache.
+- Instructor-induced-withdrawal allegation stands (mother 7/2 chat, student 7/27 email), on an age ground our under-18 policy contradicts. DOB 9/14/2008, turns 18 on 9/14/2026.
+- Letter + guidance at /Users/rubenmajor/Desktop/REPLY_McKenzie_Ward_Grant_Johnson.md, awaiting Ruben's send.
+- Prior session state standing: rows 1/2/3 [sent]; rows 7 + 9 [drafted]; row 27 [drafted] TPIA-004 follow-up; row 31 LEMSA San Mateo audit due 8/19 12:00 PT.
 
 Open threads to drive next:
-1. #26092 [proposed] — Pull the external mailbox for 8/6-8/13 to retrieve Sabrina Lee Richardson's 8/7 and 8/10 DSHS emails, identify new/updated control numbers, and populate compliance_deadlines rows.
-2. #26096 [proposed] — Final review + PDF regeneration + signature block for the San Mateo LEMSA audit response (Richella Trujillo / Oscar Trujillo IV 26114T-05) before the 8/19 12:00 PT deadline.
+1. #26154 [proposed] — Send the reply and record the disposition (free seat, or grievance file opened). The money call is Ruben's; giving the family an answer is not optional.
+2. #26096 [proposed] — San Mateo LEMSA audit response final review + PDF + signature before 8/19 12:00 PT. Must match whatever is said to the Ward family; chenry@smcgov.org is copied on both.
+3. #26092 [proposed] — Pull the external mailbox 8/6-8/13 for Sabrina Richardson's 8/7 and 8/10 DSHS emails; populate any new control numbers.
+4. Verify the 18-class-day denominator against the filed schedule of record before citing it to San Mateo (emsu_shifts shows only 9 in-window rows plus a duplicate) — (human-only decision, no idea).
+5. Gold Standard PDF responses for Emma Johnson (1080261890) and Kylie Dictson (1080261915) at the 8/13 packet link — (human-only decision, no idea).
+6. Compliance page: default the list to we_owe, add an "Agency is Overdue" tab for they_owe rows — (human-only decision, no idea).
 
 Reference IDs:
-- Ideas filed: #26092, #26096
-- Compliance deadline rows: 1,2,3 (sent), 7, 9, 27, 31 (drafted)
-- Files touched: /var/www/emtskills/uploads/tdshs/DRAFT_response_1080261890_Johnson.md, /var/www/emtskills/uploads/tdshs/DRAFT_response_1080261915_Dictson.md, /var/www/emtskills/uploads/tdshs/DRAFT_TPIA004_FollowUp_2026-08-13.md
+- Ideas filed: #26154 [proposed], #26092 [proposed], #26096 [proposed]
+- Student: Grant Johnson, Students.id 8153570, slug 26617FT-23
+- Compliance rows: 1, 2, 3 [sent]; 7, 9, 27, 31 [drafted]
+- Files touched: /Users/rubenmajor/Desktop/REPLY_McKenzie_Ward_Grant_Johnson.md
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>

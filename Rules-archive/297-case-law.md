@@ -106,3 +106,36 @@ the system's `failed` enum value. The agent measured the enum, not the experienc
 
 **Parent rule:** `Rules/297-population-anomaly-classify-before-alarming.md`
 **Split date:** 2026-08-11 (G8 floor-cap compliance)
+
+## DELEGATION GATE (added 2026-08-13, idea #26177)
+
+**Applies to any service validated from OUTSIDE: ACME/Let's Encrypt, inbound SMTP,
+public HTTPS, authoritative DNS.**
+
+Before classifying the CLIENT as the defect, read the PARENT. Local health is not
+evidence about a path you never traversed.
+
+1. **Probe from an external vantage, not the LAN.** For DNS:
+   `curl 'https://dns.google/resolve?name=<domain>&type=A'` and READ THE `Comment`
+   FIELD. A latency warning there is a hard signal and it is free.
+2. **Read the delegation directly:**
+   `dig @a.gtld-servers.net <domain> NS +noall +authority +additional`.
+   Compare every glue A record to the CURRENT IP of that host. A glue record is a
+   COPY of an IP frozen at the registry. When the ISP changes your WAN IP, that copy
+   silently becomes a black hole and nothing on your box reports it.
+3. **Only after the parent path is proven clean** may you classify the client
+   (ACME, MTA, browser) as the defect.
+
+### The tell that you are in this class
+
+**Swapping c**Swapping c**Swapping c**Swapping c**Swapping E, a **Swapping c**Swapping c**Swapping c**Swapping c**Swapping E, a **Swap all fail identically, that is not a
+client bug. Identical failure across independent implementations means the defect is
+UPSTREAM UPSTREAM UPSTREAM UPSTRErating on the client the moment the SECOND independent
+method reproduces the samemethod reproduces the samemethod reproduces the samemethod reproduces the samemetnemethod reproduces the samemethod reproduces the samemethod reprodn:method reproduces the samemethod remsmethod reproduces the samemethod reproduces the samemethod reproduhe sitmethod reproduces the samemethod reproduces the samemethod reproduces the sameme 7method reproduces the samemethod reproduces the samemethod reproduces the samemethohemethod reproduces the samemethod reproduces the samemetup at that boundary.
+`dns.google` exposed it in one call: *"Response from 172.116.115.101; 2031ms resolution
+time exceeds 2 seconds; some clients may time out."*
+
+Two reissues were attempted before the parent was ever read. The second was attempted
+AFTER the disproving evidence was already in hand. RCA bucket: **insufficient probe**.
+
+Repair Repair Repair Repair Repair Repair Repair Repair Repair Repair Repair Repair RepantagRepair Repair Repair Repair Repair Repair Repair Repair Repair Repair Repair Reue still open), #26176 (silent-reverter class).

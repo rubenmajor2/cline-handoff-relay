@@ -6,12 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/13/2026, 2:41:54 PM PT | window: last 72h | 103 tasks | index total 693 (parsed 2, cached 691)
+Generated: 8/13/2026, 3:41:54 PM PT | window: last 72h | 104 tasks | index total 695 (parsed 4, cached 691)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786651267227` | 8/13/2026, 2:41:31 PM | 175 | 675KB | check the security certificate for onlineemd.com and fix it - the SSL |
-| `1786652849668` | 8/13/2026, 2:39:42 PM | 306 | 873KB | #TDSHS |
+| `1786651267227` | 8/13/2026, 3:41:45 PM | 329 | 1000KB | check the security certificate for onlineemd.com and fix it - the SSL |
+| `1786652849668` | 8/13/2026, 3:41:17 PM | 399 | 2266KB | #TDSHS |
+| `1786660376952` | 8/13/2026, 3:41:04 PM | 25 | 103KB | help me file with Florida Board of Education application yet? Need that approval before we |
+| `1786660346877` | 8/13/2026, 3:32:27 PM | 1 | 2KB | help me file with Florida Board of Education application yet? Need that approval before we |
 | `1786602908972` | 8/13/2026, 1:22:41 PM | 342 | 4032KB | #TDSHS/AZDHS 8/13 - Compliance |
 | `1786607400519` | 8/13/2026, 7:27:01 AM | 200 | 1606KB | Hi Declined???? REALLY, is Email Agent really that ???? |
 | `1786581608927` | 8/13/2026, 4:29:51 AM | 428 | 1528KB | #CFA Learning |
@@ -112,13 +114,12 @@ Generated: 8/13/2026, 2:41:54 PM PT | window: last 72h | 103 tasks | index total
 | `1786405169832` | 8/10/2026, 4:55:51 PM | 102 | 230KB | #Payment Issues |
 | `1786392003768` | 8/10/2026, 3:50:36 PM | 90 | 244KB | #AI Direct Meditation |
 | `1786285332678` | 8/10/2026, 3:42:46 PM | 1136 | 15874KB | #Callbacks |
-| `1786340503930` | 8/10/2026, 3:28:55 PM | 792 | 2994KB | #Argus |
 
 ---
 
 ## Per-window detail
 
-### `1786651267227` — 8/13/2026, 2:41:31 PM PT — 175 turns
+### `1786651267227` — 8/13/2026, 3:41:45 PM PT — 329 turns
 
 **Original task:**
 
@@ -126,11 +127,16 @@ Generated: 8/13/2026, 2:41:54 PM PT | window: last 72h | 103 tasks | index total
 check the security certificate for onlineemd.com and fix it - the SSL
 ```
 
-**Ideas referenced:** #12645, #15918, #2147, #2148, #2151, #2286, #23585, #25990, #26007, #26017, #26019, #26077
+**Ideas referenced:** #12645, #15918, #18491, #18587 [approved], #19387, #2147, #2148, #2151, #2268, #2286, #23184, #23185, #2336, #23585, #25185, #25990, #26007, #26017 [awaiting_review], #26019 [awaiting_review], #26023, #26077 [awaiting_review], #26090, #26175 [executing], #26176 [executing], #26177 [executing], #8902, #8903
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1786652849668` — 8/13/2026, 2:39:42 PM PT — 306 turns
+```
+thing asserted from memory.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #26175 — EMSU registrar glue + DNS redundancy follow-through.\n\nWhere we left off (verified 2026-08-13 15:40 PT):\n- onlineemd.com SSL FIXED. Multi-SAN LE cert (apex + www), notAfter Nov 11 2026, apex 200/verify=0, www 301/verify=0 (verified: openssl s_client + curl from Mac).\n- Root cause was stale .com glue 76.176.157.123 (WOPR's pre-2026-06-29 WAN IP, dead), not the ACME client. Recorded as bug library #2336.\n- #26019 [deployed] ns2 → 98.172.111.42 now actually live (verified: dig @1.1.1.1 = 98.172.111.42, survives the 2-min cron).\n- #26017 [deployed] onlineemd resolved; the other 3 domains in that P0 batch still need checking.\n- Rule 297 DELEGATION GATE shipped to Rules-archive/297-case-law.md, MCP reindexed (verified: 325 rules, 20 hardfloor).\n\nOpen threads to drive next:\n1. #26175 [executing] — RUBEN UI ACTION: GoDaddy → emsuniversity.com → Domain Settings → Manage DNS → Host names. ns1 → 172.116.115.101, ns2 → 98.172.111.42. Verify with: dig @a.gtld-servers.net emsuniversity.com NS +additional.\n2. #26017 [deployed] — re-check the other 3 domains from the expired-cert batch (onlyambos, houstonemtrefresher, rubenmajor). Use the NS-migration workaround if the glue is still unfixed.\n3. #26176 [executing] — ownership assertion in emsu-cf-wan-sync.sh + 24h deploy-verify loop for infra ideas. Note the remaining RECORDS entries (mail/mx/webmail/apex/ipv4/testing) have the same silent-revert exposure.\n4. #26177 [executing] — 3-line DELEGATION GATE pointer into the hardfloor rule 297 body; needs Ruben's --override on .pre-write-lint.sh.\n5. #26077 [executing] — ns1 UDP:53 packet loss (~1 in 3, 407-431ms) is still unfixed; suspect the edge router NAT UDP path.\n\nReference IDs:\n- Ideas filed: #26175 [executing], #26176 [executing], #26177 [executing]\n- Ideas closed: #26017 [deployed], #26019 [deployed]\n- Bug library: #2336 (acme_dns_timeout_stale_registry_glue_dead_old_wan_ip_2026_08_13)\n- Files touched: /usr/local/bin/emsu-cf-wan-sync.sh, /etc/nginx/plesk.conf.d/vhosts/onlineemd.com.conf, /etc/letsencrypt/live/onlineemd-multi/, /Users/rubenmajor/Documents/Cline/Rules-archive/297-case-law.md, HANDOFF_NOTES.md\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════"}</arguments>
+</invoke>
+```
+
+### `1786652849668` — 8/13/2026, 3:41:17 PM PT — 399 turns
 
 **Original task:**
 
@@ -150,7 +156,29 @@ Pick up task #26154 — TDSHS/AZDHS/LEMSA compliance surface + Ward escalation +
 Where we left off (v
 ```
 
-**Ideas referenced:** #14662, #14710, #250984, #251038, #251211, #251236, #251264, #251382, #251428, #26092 [proposed], #26096 [proposed], #26154 [proposed], #26155 [proposed], #26156 [proposed], #26157 [proposed], #26163 [executing], #26164 [executing], #26167 [executing], #26168 [approved], #26169 [approved], #26170 [approved], #26171 [approved], #26172 [approved], #58230, #600179
+**Ideas referenced:** #14662, #14710, #250984, #251038, #251211, #251236, #251264, #251382, #251428, #26092 [proposed], #26096 [proposed], #26154 [proposed], #26155 [proposed], #26156 [proposed], #26157 [proposed], #26163 [executing], #26164 [executing], #26167 [executing], #26168 [approved], #26169 [approved], #26170 [approved], #26171 [approved], #26172 [approved], #26173 [executing], #26174 [executing], #26178, #58230, #600179
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786660376952` — 8/13/2026, 3:41:04 PM PT — 25 turns
+
+**Original task:**
+
+```
+help me file with Florida Board of Education application yet? Need that approval before we the FL DHS application. We want also to be a CE and EMT provider there. So may also need to do an application for EMT CE with the EMS Authority in Florida
+```
+
+**Ideas referenced:** #2335 [deployed], #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #3310
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786660346877` — 8/13/2026, 3:32:27 PM PT — 1 turns
+
+**Original task:**
+
+```
+help me file with Florida Board of Education application yet? Need that approval before we the FL DHS application. We want also to be a CE and EMT provider there.
+```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -3909,52 +3937,4 @@ function bookCallbackSlot(PDO $pdo, string $name, string $phone, string $reason,
         for ($attempt = 0; $attempt < 3; $attempt++) {
             $slot = $pdo->prepare($slotSql);
             $
-```
-
-### `1786340503930` — 8/10/2026, 3:28:55 PM PT — 792 turns
-
-**Original task:**
-
-```
-#Argus
-
-**Argus 12-task backup: RESOLVED + durable fix deployed. Jon notified in Argus.**
-
-## Root cause (verified live)
-`cron_argus_task_worker.php` crashed on EVERY 2-minute cycle at line 441:
-```php
-require_once __DIR__ . '/../lib/argus_reclaim.php';   // file does not exist
-```
-The orphan-reclaim logic already lives inline at lines 210-230 in the same file. The `require_once` introduced in the 2026-08-09 deployment was a duplicate with a nonexistent path, so every cycle claimed tasks → DISPATCH → `require_once` fatal → process died before `curl_multi_exec` ran → tasks never completed, and 
-```
-
-**Ideas referenced:** #10003, #10005, #10141, #10182, #11944, #12301, #12463, #12568, #12619, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #1356, #15306, #16213, #16263, #17483, #18378, #18530, #18745, #18770, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #19370, #2006, #20547, #21125, #21126, #21140, #21262, #22511, #22583, #22688, #22850, #23027, #23036, #23039, #23053, #23428, #23429, #23468, #23489, #23506, #23592, #23675, #23852, #23913, #23920, #23941, #23952, #23982, #24200, #24766, #24897, #24900, #24926, #24941, #24990, #25047, #25058, #25131, #25142, #25193, #25196, #25269, #25313, #25385, #25464 [ready_for_review], #25465 [approved], #25466 [approved], #25525, #25530, #25531, #25547 [proposed], #25552 [proposed], #25553, #25554 [proposed], #25555, #25563 [proposed], #25564, #25571 [proposed], #25572, #25573, #25574 [deployed], #25582, #25586, #25587, #25595 [proposed], #25768, #2606, #2620, #274160, #2862, #2911, #2912, #30363, #334155, #4338, #4421, #5700, #57343, #57351, #57357, #57362, #64748, #69707, #7137, #8645, #8892, #8942, #9650, #9654, #9660, #9733, #9889
-
-**Last PICKUP PROMPT:**
-
-```
-═══════════════════════════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════════════════════════
-Pick up task — Argus/Kaison reliability hardening: SATURATION gate, SQL wildcard filter, role whitelist, cron watchdog.
-
-Where we left off (verified 2026-08-10 13:33 PT):
-- All 4 approved ideas deployed + lint-clean + crons registered (2-min wedge detector: /etc/cron.d/emsu-kaison-wedge-detection; 5-min self-test: /etc/cron.d/emsu-kaison-self-test)
-- Files touched: cron_argus_task_worker.php (SATURATION at L231-234), alltastic_api.php (wildcard filter + role whitelist + $insertRole), cron_kaison_self_test.php (new)
-- Idea statuses: #25553 deployed, #25572 deployed, #25573 deployed, #25574 deployed [deployed]
-- 10-task test portfolio (431-440) closed: blank-role + wildcard-edge findings resolved
-
-Open threads to drive next:
-1. #25563 [proposed] — verify wedge-detector cron actually fires + self-test log grows (re-check after 5 min of uptime)
-2. #25554 [proposed] — real user-facing test of role whitelist: queue as blank role, confirm 400 rejection response
-
-Reference IDs:
-- Ideas filed: #25553, #25572, #25573, #25574 [deployed]
-- Ideas open: #25563 [proposed], #25554 [proposed]
-- Files touched: /var/www/emtskills/routes/cron_argus_task_worker.php, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/cron/cron_kaison_self_test.php, /etc/cron.d/emsu-kaison-wedge-detection, /etc/cron.d/emsu-kaison-self-test
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```

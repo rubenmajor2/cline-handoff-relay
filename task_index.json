@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-13T21:41:54.564Z",
+ "generated_at": "2026-08-13T22:41:54.972Z",
  "counts": {
-  "parsed": 2,
+  "parsed": 4,
   "reused": 691,
   "failed": 0,
-  "total": 693
+  "total": 695
  },
  "tasks": {
   "1784522296714": {
@@ -126107,35 +126107,50 @@
   },
   "1786651267227": {
    "task_id": "1786651267227",
-   "mtime": 1786657291467,
+   "mtime": 1786660905201,
    "created_at": "2026-08-13T20:01:07.227Z",
-   "last_modified": "2026-08-13T21:41:31.467Z",
-   "size_kb": 675,
-   "turn_count": 175,
+   "last_modified": "2026-08-13T22:41:45.201Z",
+   "size_kb": 1000,
+   "turn_count": 329,
    "title": "check the security certificate for onlineemd.com and fix it - the SSL",
-   "pickup_prompt": null,
+   "pickup_prompt": "thing asserted from memory.\\n\\n═══════════════════════════════════════════════\\nPICKUP PROMPT (paste into a fresh Cline window)\\n═══════════════════════════════════════════════\\n\\nPick up task #26175 — EMSU registrar glue + DNS redundancy follow-through.\\n\\nWhere we left off (verified 2026-08-13 15:40 PT):\\n- onlineemd.com SSL FIXED. Multi-SAN LE cert (apex + www), notAfter Nov 11 2026, apex 200/verify=0, www 301/verify=0 (verified: openssl s_client + curl from Mac).\\n- Root cause was stale .com glue 76.176.157.123 (WOPR's pre-2026-06-29 WAN IP, dead), not the ACME client. Recorded as bug library #2336.\\n- #26019 [deployed] ns2 → 98.172.111.42 now actually live (verified: dig @1.1.1.1 = 98.172.111.42, survives the 2-min cron).\\n- #26017 [deployed] onlineemd resolved; the other 3 domains in that P0 batch still need checking.\\n- Rule 297 DELEGATION GATE shipped to Rules-archive/297-case-law.md, MCP reindexed (verified: 325 rules, 20 hardfloor).\\n\\nOpen threads to drive next:\\n1. #26175 [executing] — RUBEN UI ACTION: GoDaddy → emsuniversity.com → Domain Settings → Manage DNS → Host names. ns1 → 172.116.115.101, ns2 → 98.172.111.42. Verify with: dig @a.gtld-servers.net emsuniversity.com NS +additional.\\n2. #26017 [deployed] — re-check the other 3 domains from the expired-cert batch (onlyambos, houstonemtrefresher, rubenmajor). Use the NS-migration workaround if the glue is still unfixed.\\n3. #26176 [executing] — ownership assertion in emsu-cf-wan-sync.sh + 24h deploy-verify loop for infra ideas. Note the remaining RECORDS entries (mail/mx/webmail/apex/ipv4/testing) have the same silent-revert exposure.\\n4. #26177 [executing] — 3-line DELEGATION GATE pointer into the hardfloor rule 297 body; needs Ruben's --override on .pre-write-lint.sh.\\n5. #26077 [executing] — ns1 UDP:53 packet loss (~1 in 3, 407-431ms) is still unfixed; suspect the edge router NAT UDP path.\\n\\nReference IDs:\\n- Ideas filed: #26175 [executing], #26176 [executing], #26177 [executing]\\n- Ideas closed: #26017 [deployed], #26019 [deployed]\\n- Bug library: #2336 (acme_dns_timeout_stale_registry_glue_dead_old_wan_ip_2026_08_13)\\n- Files touched: /usr/local/bin/emsu-cf-wan-sync.sh, /etc/nginx/plesk.conf.d/vhosts/onlineemd.com.conf, /etc/letsencrypt/live/onlineemd-multi/, /Users/rubenmajor/Documents/Cline/Rules-archive/297-case-law.md, HANDOFF_NOTES.md\\n\\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\\n═══════════════════════════════════════════════\"}</arguments>\n</invoke>",
    "ideas": {
     "2147": null,
     "2148": null,
     "2151": null,
+    "2268": null,
     "2286": null,
+    "2336": null,
+    "8902": null,
+    "8903": null,
     "12645": null,
     "15918": null,
+    "18491": null,
+    "18587": "approved",
+    "19387": null,
+    "23184": null,
+    "23185": null,
     "23585": null,
+    "25185": null,
     "25990": null,
     "26007": null,
-    "26017": null,
-    "26019": null,
-    "26077": null
+    "26017": "awaiting_review",
+    "26019": "awaiting_review",
+    "26023": null,
+    "26077": "awaiting_review",
+    "26090": null,
+    "26175": "executing",
+    "26176": "executing",
+    "26177": "executing"
    }
   },
   "1786652849668": {
    "task_id": "1786652849668",
-   "mtime": 1786657182351,
+   "mtime": 1786660877099,
    "created_at": "2026-08-13T20:27:29.668Z",
-   "last_modified": "2026-08-13T21:39:42.351Z",
-   "size_kb": 873,
-   "turn_count": 306,
+   "last_modified": "2026-08-13T22:41:17.099Z",
+   "size_kb": 2266,
+   "turn_count": 399,
    "title": "#TDSHS\n\nPlease give a copy of the PDF proposal to be submitted today to Sabrina first. \n\nFull pickup prompt below, covering every thread from this window: the Ward letter, the compliance page tabs, the gold-standard PDFs for Emma and Kylie, the packet-composer defect, the CAPCE timing question, and the Richardson 8/7 and 8/10 emails.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #26154 — TDSHS/AZDHS/LEMSA compliance surface + Ward escalation + 8/13 packet PDFs.\n\nWhere we left off (verified 2026-08-13 13:21 PT):\n\nWARD / GRANT JOHNSON (26617FT-23)\n- Final CEO-voice email drafted and",
    "pickup_prompt": null,
    "ideas": {
@@ -126155,6 +126170,9 @@
     "26170": "approved",
     "26171": "approved",
     "26172": "approved",
+    "26173": "executing",
+    "26174": "executing",
+    "26178": null,
     "58230": null,
     "250984": null,
     "251038": null,
@@ -126164,6 +126182,42 @@
     "251382": null,
     "251428": null,
     "600179": null
+   }
+  },
+  "1786660346877": {
+   "task_id": "1786660346877",
+   "mtime": 1786660347203,
+   "created_at": "2026-08-13T22:32:26.877Z",
+   "last_modified": "2026-08-13T22:32:27.203Z",
+   "size_kb": 2,
+   "turn_count": 1,
+   "title": "help me file with Florida Board of Education application yet? Need that approval before we the FL DHS application. We want also to be a CE and EMT provider there.",
+   "pickup_prompt": null,
+   "ideas": {}
+  },
+  "1786660376952": {
+   "task_id": "1786660376952",
+   "mtime": 1786660864583,
+   "created_at": "2026-08-13T22:32:56.952Z",
+   "last_modified": "2026-08-13T22:41:04.583Z",
+   "size_kb": 103,
+   "turn_count": 25,
+   "title": "help me file with Florida Board of Education application yet? Need that approval before we the FL DHS application. We want also to be a CE and EMT provider there. So may also need to do an application for EMT CE with the EMS Authority in Florida",
+   "pickup_prompt": null,
+   "ideas": {
+    "2335": "deployed",
+    "3310": null,
+    "26019": null,
+    "26044": null,
+    "26045": null,
+    "26048": null,
+    "26049": null,
+    "26050": null,
+    "26054": null,
+    "26068": null,
+    "26076": null,
+    "26077": null,
+    "26080": "completed"
    }
   }
  }

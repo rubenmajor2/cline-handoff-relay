@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-13T03:48:24.274Z",
+ "generated_at": "2026-08-13T04:48:24.618Z",
  "counts": {
-  "parsed": 5,
-  "reused": 680,
+  "parsed": 1,
+  "reused": 684,
   "failed": 0,
   "total": 685
  },
@@ -125628,11 +125628,11 @@
   },
   "1786585764315": {
    "task_id": "1786585764315",
-   "mtime": 1786592893617,
+   "mtime": 1786592972565,
    "created_at": "2026-08-13T01:49:24.315Z",
-   "last_modified": "2026-08-13T03:48:13.617Z",
-   "size_kb": 1581,
-   "turn_count": 633,
+   "last_modified": "2026-08-13T03:49:32.565Z",
+   "size_kb": 1603,
+   "turn_count": 638,
    "title": "A lot of the links on these pages and tabs appear to be nonfunctioning: https://emsuniversity.com/emtskills/routes/chat_portal.php?conv=10021&site=14 \n\nClicking on stuff and nothing is happening it's just locking up. Can you fix that?\n\nMaybe it needs an overhaul? Or just some deep testing? It just seems really buggy",
    "pickup_prompt": null,
    "ideas": {
@@ -125711,11 +125711,11 @@
   },
   "1786592555268": {
    "task_id": "1786592555268",
-   "mtime": 1786592817272,
+   "mtime": 1786596382826,
    "created_at": "2026-08-13T03:42:35.268Z",
-   "last_modified": "2026-08-13T03:46:57.272Z",
-   "size_kb": 151,
-   "turn_count": 15,
+   "last_modified": "2026-08-13T04:46:22.826Z",
+   "size_kb": 610,
+   "turn_count": 145,
    "title": "#Argus\n\nWould like to be able to click on any row and read the actual task itself: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=activity",
    "pickup_prompt": null,
    "ideas": {
@@ -125738,7 +125738,9 @@
     "21140": null,
     "21262": null,
     "22310": null,
+    "25047": null,
     "25573": null,
+    "26005": null,
     "26044": null,
     "26045": null,
     "26048": null,

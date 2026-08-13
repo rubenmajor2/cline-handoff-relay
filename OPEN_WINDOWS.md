@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/12/2026, 8:48:24 PM PT | window: last 72h | 102 tasks | index total 685 (parsed 5, cached 680)
+Generated: 8/12/2026, 9:48:24 PM PT | window: last 72h | 102 tasks | index total 685 (parsed 1, cached 684)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786585764315` | 8/12/2026, 8:48:13 PM | 633 | 1581KB | A lot of the links on these pages and tabs appear to be nonfunctioning: https://emsunivers |
-| `1786592555268` | 8/12/2026, 8:46:57 PM | 15 | 151KB | #Argus |
+| `1786592555268` | 8/12/2026, 9:46:22 PM | 145 | 610KB | #Argus |
+| `1786585764315` | 8/12/2026, 8:49:32 PM | 638 | 1603KB | A lot of the links on these pages and tabs appear to be nonfunctioning: https://emsunivers |
 | `1786581699007` | 8/12/2026, 8:41:34 PM | 196 | 809KB | #Argus Learning |
 | `1786591402307` | 8/12/2026, 8:31:01 PM | 46 | 179KB | #Externship |
 | `1786555167629` | 8/12/2026, 8:19:29 PM | 766 | 2987KB | #Externships |
@@ -117,7 +117,21 @@ Generated: 8/12/2026, 8:48:24 PM PT | window: last 72h | 102 tasks | index total
 
 ## Per-window detail
 
-### `1786585764315` — 8/12/2026, 8:48:13 PM PT — 633 turns
+### `1786592555268` — 8/12/2026, 9:46:22 PM PT — 145 turns
+
+**Original task:**
+
+```
+#Argus
+
+Would like to be able to click on any row and read the actual task itself: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=activity
+```
+
+**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #16213, #16263, #18745, #18770, #19370, #21140, #21262, #22310, #25047, #25573, #26005, #26044, #26045, #26048, #26049, #26050, #274160, #30363, #69707, #8645, #8942, #9650, #9654, #9660, #9733, #9889
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786585764315` — 8/12/2026, 8:49:32 PM PT — 638 turns
 
 **Original task:**
 
@@ -130,20 +144,6 @@ Maybe it needs an overhaul? Or just some deep testing? It just seems really bugg
 ```
 
 **Ideas referenced:** #059669, #10027, #1119, #16732, #18335, #19837, #23133 [approved], #2332 [needs_verify], #23989, #25185, #25962, #25965, #26038 [executing], #26039 [executing], #26040 [executing], #26041 [executing], #26045 [executing], #26048 [executing], #26049 [rejected], #26050 [executing], #26054 [executing], #2916, #6111, #6366, #7907, #9086, #9152, #9168, #9222, #9339
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786592555268` — 8/12/2026, 8:46:57 PM PT — 15 turns
-
-**Original task:**
-
-```
-#Argus
-
-Would like to be able to click on any row and read the actual task itself: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=activity
-```
-
-**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #16213, #16263, #18745, #18770, #19370, #21140, #21262, #22310, #25573, #26044, #26045, #26048, #26049, #26050, #274160, #30363, #69707, #8645, #8942, #9650, #9654, #9660, #9733, #9889
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 

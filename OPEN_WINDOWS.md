@@ -6,20 +6,22 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/12/2026, 6:32:28 PM PT | window: last 72h | 98 tasks | index total 681 (parsed 11, cached 670)
+Generated: 8/12/2026, 7:48:23 PM PT | window: last 72h | 100 tasks | index total 683 (parsed 4, cached 679)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786555167629` | 8/12/2026, 6:32:21 PM | 664 | 2761KB | #Externships |
-| `1786570575332` | 8/12/2026, 6:32:19 PM | 263 | 1729KB | These emails are choking down my inbox still. Can you just put them on a webpage instead a |
-| `1786547336372` | 8/12/2026, 6:32:08 PM | 515 | 2670KB | Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cl |
-| `1786581699007` | 8/12/2026, 6:32:06 PM | 119 | 542KB | #Argus Learning |
-| `1786558646083` | 8/12/2026, 6:32:03 PM | 305 | 1233KB | #Moodle Required |
-| `1786553732663` | 8/12/2026, 6:31:55 PM | 487 | 2837KB | When I get emails like this I would like to actually see the students original email below |
-| `1786581608927` | 8/12/2026, 6:30:54 PM | 124 | 626KB | #CFA Learning |
+| `1786585764315` | 8/12/2026, 7:48:04 PM | 394 | 1178KB | A lot of the links on these pages and tabs appear to be nonfunctioning: https://emsunivers |
+| `1786553732663` | 8/12/2026, 7:47:56 PM | 589 | 3141KB | When I get emails like this I would like to actually see the students original email below |
+| `1786581608927` | 8/12/2026, 7:47:36 PM | 253 | 1084KB | #CFA Learning |
+| `1786585633124` | 8/12/2026, 7:03:48 PM | 46 | 122KB | Remove the note about EMS university being state approved accredited since 2003. You can j |
+| `1786558292672` | 8/12/2026, 6:58:31 PM | 302 | 1153KB | #Touch ID |
+| `1786556136912` | 8/12/2026, 6:56:25 PM | 719 | 1884KB | #Frankenstein-LLM Improvements |
+| `1786558646083` | 8/12/2026, 6:51:30 PM | 358 | 1340KB | #Moodle Required |
+| `1786547336372` | 8/12/2026, 6:50:21 PM | 542 | 2735KB | Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cl |
+| `1786581699007` | 8/12/2026, 6:47:33 PM | 158 | 650KB | #Argus Learning |
+| `1786555167629` | 8/12/2026, 6:47:19 PM | 740 | 2928KB | #Externships |
+| `1786570575332` | 8/12/2026, 6:39:15 PM | 284 | 1766KB | These emails are choking down my inbox still. Can you just put them on a webpage instead a |
 | `1786582217282` | 8/12/2026, 6:27:39 PM | 261 | 443KB | I'm getting reports that all websites are down can you take a look and let me know? |
-| `1786558292672` | 8/12/2026, 6:16:50 PM | 280 | 1077KB | #Touch ID |
-| `1786556136912` | 8/12/2026, 6:10:09 PM | 672 | 1748KB | #Frankenstein-LLM Improvements |
 | `1786582351264` | 8/12/2026, 6:03:32 PM | 44 | 189KB | I'm getting reports that all websites are down can you take a look and let me know? |
 | `1786554076003` | 8/12/2026, 5:57:54 PM | 238 | 1270KB | ## Executor IS Working - Ideas Being Built Right Now |
 | `1786581594386` | 8/12/2026, 5:40:26 PM | 2 | 2KB | Tell me about the CFA learning system. It does not seem like it's doing very much. How do  |
@@ -113,229 +115,23 @@ Generated: 8/12/2026, 6:32:28 PM PT | window: last 72h | 98 tasks | index total 
 
 ## Per-window detail
 
-### `1786555167629` — 8/12/2026, 6:32:21 PM PT — 664 turns
+### `1786585764315` — 8/12/2026, 7:48:04 PM PT — 394 turns
 
 **Original task:**
 
 ```
-#Externships
+A lot of the links on these pages and tabs appear to be nonfunctioning: https://emsuniversity.com/emtskills/routes/chat_portal.php?conv=10021&site=14 
 
-Let's use tags to organize these: https://emsuniversity.com/emtskills/notifications/jobs.php 
+Clicking on stuff and nothing is happening it's just locking up. Can you fix that?
 
-Also, I'm sure there's many more than just the ones that you have listed here. I need to see a timeline with regard to the student lifecycle of how that's gonna work out per student. For example the email fires off X amount of days before enrollment amount of days after enrollment, etc. X amount days after the course ends, etc. etc. The idea is that I can see them and track them throughout the entire SLS. You can do me a little arrow going back-and-forth that I can just basically slide 
+Maybe it needs an overhaul? Or just some deep testing? It just seems really buggy
 ```
 
-**Ideas referenced:** #075985, #081020, #10004, #128126, #131967, #16156, #166534, #16863, #178649, #2196, #2306, #2311, #2323, #24526, #24765, #25156, #25157 [awaiting_review], #25185, #25246 [awaiting_review], #25529 [awaiting_review], #25537, #25560, #25608, #25623, #2563, #25632, #25633, #25635, #25667, #25669, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25796, #25797, #25798, #25803 [proposed], #25804 [deployed], #25812, #25821 [proposed], #25822 [deployed], #25848 [executing], #25889 [ready_for_review], #25916 [awaiting_review], #25932 [deployed], #25950 [awaiting_review], #25971, #25973 [ready_for_review], #25974, #25975, #25976, #25984, #25985, #25986, #25990, #25995, #26001 [ready_for_review], #26002 [ready_for_review], #26003, #334155, #348529, #3498, #38984, #4338, #475569, #6366, #64748, #9222, #92400, #9679
+**Ideas referenced:** #059669, #10027, #1119, #16732, #18335, #19837, #23133 [approved], #23989, #25185, #25962, #25965, #26038 [executing], #26039 [executing], #26040 [executing], #26041 [executing], #2916, #6111, #6366, #7907, #9152, #9222
 
-**Last PICKUP PROMPT:**
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-```
- rather than working around it
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786491116649 (Cline task id, not an idea) - externship trigger 4 plus a live MySQL P0.
-
-Where we left off (verified 2026-08-12 5:48 PM PT):
-- P0 UNRESOLVED, ACT FIRST: MySQL wedged. 1,253 queries stalled over 60s, 433 over 2,000s, climbing. Processes 6413894 (ALTER review_outreach_queue) and 6414119 (ALTER email_inbound_log ADD INDEX idx_rate_guard_drain) frozen at 2,871s in Writing to binlog; process 6439207 queued behind a metadata lock and re-firing from a cron. Root cause: log_bin=1 and mysql-bin.index lists files through mysql-bin.003420 but the binlog files are DELETED from /var/log/mysql. Disk fine at 30 percent, semi-sync OFF. DDL kill NOT performed, it is Ruben's call. DB will not accept writes, so no idea could be filed for this.
-- Gate v3 DEPLOYED and lint clean at lib/externship_eligibility_gate.php (v2 at .bak-v2-20260812): trigger 4 plus course-level override bypass. New table externship_eligibility_overrides created. Override honors exam_override_requests force_approved (1,585 rows, 505 students), which is the course-level override Jon already issues.
-- Trigger 4 is NON-BLOCKING by design: no dates_remaining data exists anywhere. nremt_dates table absent (categorical_denial_gate.php is dead code on that path), no matching column in admin_portal (positive control passed with 26 rows on a known table), all other nremt_* tables empty, exam_attempt_number populated on zero rows.
-- Gate v3 functional test NOT completed, blocked by the DB wedge. Test script ready at /tmp/test_v3.php.
-- Census under 3 triggers (pre-wedge): 3,381 active, 1,301 eligible, 2,080 not eligible.
-
-Open threads to drive next:
-1. (human-only decision, no idea) - Ruben decides whether to kill processes 6413894 and 6414119, stop the cron re-issuing the idx_rate_guard_drain ALTER, and repair binlog state. File the P0 idea once the DB accepts writes again.
-2. #26002 [awaiting_review] - Real answered/unanswered email signal, route substantive externship questions to the CFA instead of the ack handler, reply to Andrew Sanchez.
-3. #25973 [awaiting_review] - Remaining auto-assign build: distance matching needs geocoding, the 60-day and 0-percent-progress blocker needs an anchor and a progress source, plus the confirm-or-auto-place timeout for Vicky.
-4. #25950 [awaiting_review] - Close the last bypass: import_wpforms_simple.php inserts ExternshipRequest rows with no cutoff and no eligibility gate.
-5. #25916 [awaiting_review] - Schedule-change disclaimer on remaining touchpoints, pending wording approval.
-6. #25822 [deployed] - Staff assignment queue UI for Vicky plus cron scheduling.
-7. #26001 [deployed] - Final-exam source wired and RCA closed; re-run the census under v3 once MySQL is healthy to confirm the eligible count holds at 1,301.
-
-Reference IDs:
-- Ideas: #26001 [deployed], #26002 [awaiting_review], #25822 [deployed], #25932 [deployed], #25973 [awaiting_review], #25950 [awaiting_review], #25916 [awaiting_review], #25889 [awaiting_review]
-- Stalled MySQL process ids (not ideas): 6413894, 6414119, 6439207
-- Files touched: /var/www/emtskills/lib/externship_eligibility_gate.php (v3), /var/www/emtskills/externship/my_eligibility.php (v2), /var/www/emtskills/externship/student_request_form.php, /var/www/emtskills/externship/student_request_form_old.php, /var/www/emtskills/lib/ExternshipKnowledgePack.php, /var/www/emtskills/docs/EXTERNSHIP_FINAL_EXAM_GA
-```
-
-### `1786570575332` — 8/12/2026, 6:32:19 PM PT — 263 turns
-
-**Original task:**
-
-```
-These emails are choking down my inbox still. Can you just put them on a webpage instead as a card link on the reports.php page with typical search, pagination, etc... 
-
-Please do that and remove them all from my inbox so i can actually see the improtant messages coming through that I may be missing. 
-
-A summary of ideas daily in the morning is fine, but this is ridiculous. I have a crap ton of spam in the inboxes and I can't sort though and I need to be able to do that asap
-```
-
-**Ideas referenced:** #059669, #0891, #1100, #1233, #127881, #1368, #13757, #14572, #15965, #15969, #15996, #16069, #16817, #16828, #177851, #18178, #18180, #186576, #18944, #18951, #23133, #2321, #23378, #23477, #23483, #23945, #23954, #25042, #25194, #25551, #25602, #2563, #25871, #25889 [ready_for_review], #25909, #25914, #25931, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [deployed], #25944 [deployed], #25988 [proposed], #3098, #3176, #334155, #360135, #360152, #374151, #4458, #4747, #4962, #5451, #6053, #64748, #6979, #7175, #7189, #8798, #9889
-
-**Last PICKUP PROMPT:**
-
-```
-disk in the inbox after 15:00.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — email digest flood to webpage + stop 30-min idea emails (Automated Digests card)
-(No numeric task id available in this session; topic named explicitly.)
-
-Where we left off (verified 2026-08-12 5:44 PM PT):
-- `internal_digest_log` table live with 34+ rows; watchdog captures verified at 15:30/16:00/16:30/17:00 (ids 3-34). ZERO watchdog emails delivered after 15:00:04 (email_outbound_log proof)
-- Interceptor: `lib/mailer.php` CLI sends to rmajor/rubenmajorjr/ruben/rubenmajor/info @emsuniversity.com captured unless source = cron_daily_ideas_digest.php (morning exemption). Backup: lib/mailer.php.bak-digestcapture-20260812
-- Cron: `/etc/cron.d/idea-delivery-watchdog` now `0 8 * * *` daily (old */30 saved at `.bak-30min-20260812`); `/etc/cron.d/emsu-idea-watchdog` already DISABLED-20260810
-- Files: lib/internal_digest_capture.php, routes/internal_digest_log.php, routes/reports.php (📬 card) all live, linted, PHP-FPM reloaded
-- Inbox: rmajor 275,427 → 82,112; 193,358 archived to Maildir/.Automated-Digests (Apple Mail shows "Automated-Digests" folder)
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #25988 [proposed] — Build the morning summary cron that consolidates prior-day `internal_digest_log` rows into Ruben's ONE morning digest (around cron_daily_ideas_digest 08:00) so web-only captures also get a daily summary line.
-2. #25988 [proposed] — Apply the same mailbox sweep (repeat /tmp/archive_pass3.py pattern) to rubenmajorjr@ and info@ Maildirs; only rmajor was cleaned this session.
-
-Reference IDs:
-- Ideas filed: #25988 [proposed]
-- Files touched: /var/www/emtskills/lib/mailer.php, /var/www/emtskills/lib/internal_digest_capture.php, /var/www/emtskills/routes/internal_digest_log.php, /var/www/emtskills/routes/reports.php, /etc/cron.d/idea-delivery-watchdog
-- Cron backup: /etc/cron.d/idea-delivery-watchdog.bak-30min-20260812
-- Mailer backup: /var/www/emtskills/lib/mailer.php.bak-digestcapture-20260812
-- Table: admin_portal.internal_digest_log
-
-Verify before claiming done: (1) open https://emsuniversity.com/emtskills/reports.php → 📬 Automated Digests card → confirms all captured digests + search/pagination; (2) confirm no "Idea Watchdog"/"Idea Delivery Digest" email in Apple Mail after 15:00 PT; (3) at 18:00 PT no watchdog cron runs (daily now). When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786547336372` — 8/12/2026, 6:32:08 PM PT — 515 turns
-
-**Original task:**
-
-```
-Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cline rules when a subsequent iteration identifies a substantial reversal of the initial iteration within that window. The idea is that the agent catches this and makes itself smarter. This is to be done immediately. Give the rule nubmer. If it needs refinement, let me know.
-```
-
-**Ideas referenced:** #0000, #11415, #13840, #14205, #15268, #16224, #17130 [superseded], #17537 [rejected], #17685 [awaiting_review], #18132 [deployed], #18806, #18946, #18947, #18948, #18973, #19125, #19173, #19175 [executing], #19176 [queued], #19511, #19898, #19899 [proposed], #19904, #20251, #20630 [executing], #20957, #20958, #21125, #21126, #2277, #22840, #2320, #24900, #24906, #24909, #24910, #24912, #24913, #24995, #25058, #25066, #25150, #25151, #25154, #25155, #25156, #25157, #25185, #25188, #25313, #25551, #25747 [awaiting_review], #25755 [awaiting_review], #25757 [awaiting_review], #25759 [awaiting_review], #25764 [awaiting_review], #25765 [awaiting_review], #25812 [awaiting_review], #25848, #25859 [executing], #25860 [executing], #25861 [executing], #25869 [proposed], #25870 [proposed], #25871 [proposed], #25872 [executing], #25873 [proposed], #25876 [proposed], #25885, #25886 [executing], #25887, #25888 [proposed], #25890 [proposed], #25891 [proposed], #25892, #25893, #25894, #25897, #25906 [proposed], #25907 [proposed], #25909 [proposed], #25912 [proposed], #25925 [proposed], #25926 [proposed], #25981 [proposed], #5344, #5346, #5348, #616207
-
-**Last PICKUP PROMPT:**
-
-```
-(b) and I will execute it now.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up the rule 317 / Argus completion-confidence work — Argus 317 block form decision.
-
-Where we left off (verified 5:45 PM PT, 2026-08-12):
-- Rule 317 is hardfloor and indexed (324 rules, 20 hardfloor); acquisition gate (R317_UNVERIFIED_STATE) + Reversal Log (R317_REVERSAL_LOG) live in clinerules_validate_completion, functional-tested 3/3 and 4/4.
-- A7 gate-telemetry shipped in cline_rules_audit.sh; first run showed 307 validations / 88 passed / 219 failed.
-- Argus 317 substance deployed to /var/www/emtskills/routes/alltastic_api.php lines 12954-12956 (plain voice); php -l clean; ownership preserved; backup bak-argus317-20260812174559 exists.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #25981 — Ruben's form pick: keep plain-voice (recommended) OR restore literal 10-line [ARGUS-317] labeled block. Awaiting Ruben's (a)/(b) answer, then execute + re-verify php -l.
-2. #25907 — After ~7 days of A7 telemetry, evaluate relaxing R317_REVERSAL_LOG for completions with zero material/dynamic claims (proposed, data-driven tuning).
-
-Reference IDs:
-- Ideas filed: #25888 [approved], #25906 [approved], #25907 [proposed], #25981 [approved]
-- Files touched: ~/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md, Rules/91-every-completion-needs-pickup-prompt.md, Rules/_RULE_TREE.md, Rules/_INDEX.md, mcp-servers/clinerules-mcp/src/index.ts, scripts/cline_rules_audit.sh, /var/www/emtskills/routes/alltastic_api.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786581699007` — 8/12/2026, 6:32:06 PM PT — 119 turns
-
-**Original task:**
-
-```
-#Argus Learning
-
-Tell me how Argus automatic learning is going. I would like for it to start making itself smarter. I mean what I usually do is you know I'm coming in here on a daily basis and I'm trying to do sweeps to see what tasks were unfinished as well as whether there were bugs that were showing that needed to be resolved or permission issues that were not in a accordance with rule 29 or missing tools, things of that nature. I would like to see Argus learning doing those sorts of things on its own. How can we make that happen?
-```
-
-**Ideas referenced:** #10182, #128126, #16213, #18806, #19434, #20025, #20036 [awaiting_review], #20890, #21582, #21667, #22310, #2323, #2324, #25822, #25833, #25932, #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25975, #25985, #25986, #26001, #26002, #26003 [deployed], #26018 [proposed], #26020 [deployed], #26025 [proposed], #7326, #7377, #7428, #7784, #7785, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-s queued as #26025 [proposed].
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus automatic learning: status + autonomous daily sweep built.
-(topic = Argus learning/sweeps)
-
-Where we left off (verified 2026-08-12 18:27 PT):
-- Built + deployed /var/www/emtskills/cron_argus_daily_sweep.php (4 lanes: unfinished, bugs, permissions, missing tools) on crontab `0 */4 * * *`, heartbeat green, log argus_daily_sweep.log, backing table argus_sweep_findings created.
-- First run verified: 200 stale ideas surfaced, idea #26018 filed [proposed].
-- Known broken/queued: #26025 [proposed] repair the 5-min self-heal cron (spec #20036 [awaiting_review]) whose code queries non-existent columns (argus_agent_audit.event_type, argus_doctor_health.bug_pattern/fix_type/fix_payload, argus_doctor_repair_log.bug_pattern, argus_recurring_issues.bug_signature); both doctor tables are empty; rewrite against real schemas then install */5.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26025 — rewrite cron/cron_argus_self_heal.php against the real schemas (argus_agent_audit: tool_name/result_summary/created_at; doctor tables: run_at/probe_name/status/diagnostics), seed known bug patterns, then install on the */5 schedule from spec #20036.
-2. #26018 — triage the 200 stale approved ideas (rule 161: execute or explicitly defer/reject); oldest are from 2026-05-27.
-3. #26020 [deployed] — monitor cron_kaizen_classifier lock-wait timeouts; add innodb_lock_wait_timeout handling or batch the INSERT IGNORE.
-4. Consider surfacing argus_sweep_findings on the Argus reports dashboard (new card) so staff see today's automatic findings.
-
-Reference IDs:
-- Ideas filed: #26018, #26025
-- Spec referenced: #19434 (kaizen_learn_v2), #20036 (self-heal)
-- Files touched: /var/www/emtskills/cron_argus_daily_sweep.php, /var/www/emtskills/logs/argus_daily_sweep.log, crontab (emsu ops user)
-- DB objects: argus_sweep_findings (new tables + indexes)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786558646083` — 8/12/2026, 6:32:03 PM PT — 305 turns
-
-**Original task:**
-
-```
-#Moodle Required
-
-Maybe we should show a screenshot of the student's actual ssignments remaining within that particualr assignment / the actual traceback. So in this case (I'm only guessing). I assume Avni has to do the Midterm Examination, but it's blocked by the Midterm Evaluation which also requires a series of requirements. I screenshotted what I would like to see screenshot (different form Anvi), but I think tht might be helpful. I mean if tha'ts not posisble or too difficult to build. But idea is to track back until they see how it all works. so again, there may be a few of these "Restri
-```
-
-**Ideas referenced:** #081020, #18868, #19163, #2323, #23477 [proposed], #24526, #24765, #25155 [proposed], #25537, #25560, #25608, #25623, #25632, #25633, #25635, #25667, #25669, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25796, #25797, #25798, #25803 [proposed], #25804 [deployed], #25812, #25887, #25889 [ready_for_review], #25914 [proposed], #25971, #25974, #25975, #25976, #25984, #25985, #25986, #25990, #25995, #26003, #38984, #6785, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-s lost or offline.
-
-═══════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════
-Pick up task — Moodle recursive Restrict Access traceback: rebase/status.
-
-Where we left off (verified 2026-08-12 14:15 PT):
-- Deployed (mtimes 12:49–13:02, all php -l clean): lib/moodle_restrict_traceback_engine.php, lib/moodle_prereq_lookup.php, tools/ai_tool_exam_lock_diagnostic.php, tools/moodle_restrict_traceback.php.
-- Live HTTP verified: Midterm 725 ACCESSIBLE (37 leaves), Final 854 BLOCKED (Examination 6 ≥40% no attempt; Ch 36 81.5% < 95%). Log ids 1,2 in admin_portal.moodle_exam_lock_diagnostic_log.
-- Orchestrator: #25914 in_progress/idle (starvation-demoted 13:45, worker untouched), #23477 in_progress/drafting (spec generated 13:56). Implementation cron appears starved independently of my builds.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #25914 [in_progress] — Worker is queued to re-implement over my files; if it lands, re-run smoke tests (quiz_id 725 → is_blocked:false; 854 → is_blocked:true) before trusting.
-2. #23477 [in_progress] — Worker writing the forensic traceback rule spec; once deployed, verify it references tools/moodle_restrict_traceback.php and not a stale path.
-3. #25155 [proposed] — (if queue starvation recurs) investigate build-cron health; both ideas got flagged "no live worker" in under 15 min.
-
-Reference IDs:
-- Ideas: #25914 [in_progress], #23477 [in_progress]
-- Files touched: /var/www/emtskills/lib/moodle_restrict_traceback_engine.php, /var/www/emtskills/lib/moodle_prereq_lookup.php, /var/www/emtskills/tools/ai_tool_exam_lock_diagnostic.php, /var/www/emtskills/tools/moodle_restrict_traceback.php, /var/www/emtskills/docs/compliance-evidence/20260812-moodle-restrict-traceback/traceback_avni_midterm_and_cert.txt, /var/www/emtskills/docs/HANDOFF_NOTES.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-</result>
-</attempt_completion>
-```
-
-### `1786553732663` — 8/12/2026, 6:31:55 PM PT — 487 turns
+### `1786553732663` — 8/12/2026, 7:47:56 PM PT — 589 turns
 
 **Original task:**
 
@@ -345,7 +141,7 @@ When I get emails like this I would like to actually see the students original e
 --
 ```
 
-**Ideas referenced:** #14132, #16732, #22060, #23184, #2323, #23276, #24526, #24765, #24990, #25942 [deployed], #25944, #25957 [approved], #25958 [approved], #25971, #25974, #25975, #25976, #25984, #25985, #25986, #25990, #25995, #26003, #32584, #5298, #6106, #6228, #7207, #9222
+**Ideas referenced:** #14132, #16473, #16732, #174062, #19492, #2036, #22060, #23184, #2323, #23276, #24526, #24765, #24885, #24990, #25942 [deployed], #25944, #25957 [approved], #25958 [approved], #25971, #25974, #25975, #25976, #25984, #25985, #25986, #25990, #25995, #26003, #32584, #3354, #5298, #6106, #6228, #7207, #9083, #9222
 
 **Last PICKUP PROMPT:**
 
@@ -376,7 +172,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786581608927` — 8/12/2026, 6:30:54 PM PT — 124 turns
+### `1786581608927` — 8/12/2026, 7:47:36 PM PT — 253 turns
 
 **Original task:**
 
@@ -386,7 +182,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 Tell me about the CFA learning system. It does not seem like it's doing very much. How do we make it do things continually and get smarter on its own? It seems to be like it's stagnating and then I see these other things it appears as though it's even going backwards which is highly problematic. These things should be advancing not falling behind.
 ```
 
-**Ideas referenced:** #12184, #128126, #12816, #13202, #186576, #19821, #23133, #2321, #2323, #2324, #23477, #23945, #23954, #25042, #25426, #25551, #25822, #25914, #25931, #25932, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25975, #25985, #25986, #26001, #26002, #26003 [deployed], #26011 [proposed], #26012 [proposed], #360135, #360152, #622333, #622384, #622385, #622824, #622825, #622875, #8200, #9222, #9999
+**Ideas referenced:** #11945, #12184, #128126, #12816, #13063, #13202, #186576, #19821, #19903, #2294, #2307, #23133, #2314, #23169, #2321, #2323, #2324, #23477, #23945, #23954, #24145, #24165, #24217, #24526, #24765, #25042, #25426, #25551, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25822, #25888, #25914, #25931, #25932, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25971, #25974, #25975, #25976, #25984, #25985, #25986, #25990, #25995, #26001, #26002, #26003 [deployed], #26011 [proposed], #26012 [proposed], #360135, #360152, #622333, #622384, #622385, #622824, #622825, #622875, #6826, #8200, #9070, #9222, #9999
 
 **Last PICKUP PROMPT:**
 
@@ -418,19 +214,55 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786582217282` — 8/12/2026, 6:27:39 PM PT — 261 turns
+### `1786585633124` — 8/12/2026, 7:03:48 PM PT — 46 turns
 
 **Original task:**
 
 ```
-I'm getting reports that all websites are down can you take a look and let me know?
+Remove the note about EMS university being state approved accredited since 2003. You can just say established in 2003. It is state approved. But at the very top of the page it says state approved accredited. This is emsuniversity.com
 ```
 
-**Ideas referenced:** #15919, #178679, #2331 [deployed], #25185, #25999, #26007 [executing], #26008 [executing], #26009 [executing], #26015 [rejected], #26016 [rejected], #26017 [executing], #26019 [executing], #26023 [executing], #26024 [executing], #5574
+**Ideas referenced:** #10084, #25990, #26037 [deployed], #65039, #9733
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1786558292672` — 8/12/2026, 6:16:50 PM PT — 280 turns
+```
+ idea #26037 [deployed] filed.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Remove "State Approved accredited since 2003" claim from emsuniversity.com homepage.
+
+Where we left off (verified 2026-08-12 19:03 PT):
+- Deployed: emsuniversity.com homepage now reads "State-Approved · Established in 2003"; all "accredited" claims removed (hero badge, meta description, about, stats, accreditation section, footer)
+- File edited: /var/www/vhosts/emsuniversity.com/httpdocs/wp-content/mu-plugins/emsu-modern-design.php
+- Backup: /var/www/backups/emsu-modern-design.php.bak-20260812-185456-accred-cleanup
+- Live verified via curl: 0 "accredited" matches on https://emsuniversity.com/
+
+Open threads to drive next:
+None — all work completed this session.
+
+Reference IDs:
+- Ideas filed: #26037 [deployed]
+- Files touched: /var/www/vhosts/emsuniversity.com/httpdocs/wp-content/mu-plugins/emsu-modern-design.php, /var/www/backups/emsu-modern-design.php.bak-20260812-185456-accred-cleanup
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Locate the homepage source file for emsuniversity.com
+- [x] Identify all "accredited" / "since 2003" occurrences
+- [x] Replace "accredited" claims with "State Approved" + "Established in 2003"
+- [x] Reload PHP-FPM / clear page cache
+- [x] Verify live homepage no longer shows "accredited"
+- [x] Update HANDOFF_NOTES.md
+- [x] File audit idea + complete
+</task_progress>
+</attempt_completion>
+```
+
+### `1786558292672` — 8/12/2026, 6:58:31 PM PT — 302 turns
 
 **Original task:**
 
@@ -445,27 +277,28 @@ I would like to use Touch ID/Pass key for Moodle Sign In. Can we set this up?
 **Last PICKUP PROMPT:**
 
 ```
-e, and tracked in idea #25956.
+o try it once on the device.**
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 Pick up task — Optional Passkey/Touch ID sign-in for the /emtskills portal (custom PHP, magic-link auth).
 
-Where we left off (verified 2026-08-12 6:15 PM PT):
-- Built + deployed optional discoverable passkey login (no email required) for https://emsuniversity.com/emtskills/routes/login.php.
-- Files live: lib/passkey.php, api/passkey.php, assets/js/passkey.js, includes/passkey_login_box.php, includes/passkey_profile_card.php, vendor/webauthn/*. DB table passkey_credentials (credential_id VARBINARY(1023)).
-- E2E PASSED via headless Chrome + CDP virtual authenticator: enroll SUCCESS, no-email login SUCCESS → skills_report.php. DB row verified (sign_count=2 = real crypto). All test artifacts cleaned.
-- Idea #25956 [approved] records the deploy + E2E result.
+Where we left off (verified 2026-08-12 6:55 PM PT):
+- Feature deployed and E2E-testected live. Headless Chrome + CDP virtual platform authenticator (CTAP2, resident-key, user-verified) enrolled a passkey on throwaway user id=184 and signed in with NO email/NO password, redirecting to /emtskills/skills_report.php. DB row verified (32-byte binary credential_id, PEM public key, sign_count=2). Test data cleaned (0 rows left).
+- Deployed files (all lint-verified, present on disk): /var/www/emtskills/lib/passkey.php, api/passkey.php, assets/js/passkey.js, includes/passkey_login_box.php, includes/passkey_profile_card.php, vendor/webauthn/ (MIT lib copied from Moodle + autoload.php), table passkey_credentials (admin_portal) with credential_id VARBINARY(1023).
+- Public-facing surfaces: login.php has "Sign in with Passkey (Touch ID / Face ID / Windows Hello)" button (no email required, discoverable). my_profile.php has "Passkeys / Touch ID" enrollment card.
+- Discoverability metadata: /.well-known/passkey-endpoints returns 200 at domain root and /emtskills (W3C "change passkeys" well-known for Apple/Safari).
 
 Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #25956 [approved] — Ruben performs the 30-second physical Safari/Touch ID sanity check: /emtskills/my_profile.php → Add Passkey → Touch ID → sign out → Sign in with Passkey. If it fails on real Safari, capture the browser console + PHP error log and iterate.
-2. #25956 [approved] — (Optional) Announce the feature to users once Ruben confirms the physical-device check; the login page already shows the "no email or password needed" button.
+1. #25956 [executing] — Real-device Apple Safari + Touch ID manual test by Ruben (enroll on my_profile.php, then sign in from login.php with no email). If it fails, capture the exact on-screen/console error and fix. This is the only remaining acceptance gate.
+2. #25956 [executing] — Optional polish: decide whether to keep or revert the passkey feature per Ruben's "abandon if it causes issues" steer. Revert = delete api/passkey.php + includes/* + JS + table; login flow is untouched by design (passkey is additive only).
 
 Reference IDs:
-- Ticket: n/a (direct request)
-- Ideas filed: #25956 [approved] (also #25896 [approved] for the parallel Moodle MFA enablement)
-- Files touched: /var/www/emtskills/{lib/passkey.php, api/passkey.php, assets/js/passkey.js, includes/passkey_login_box.php, includes/passkey_profile_card.php, vendor/webauthn/*, my_profile.php, routes/login.php}
+- Ticket: n/a (iMessage-initiated request)
+- Ideas filed: #25896 (Moodle-side WebAuthn, approved/deployed), #25956 (portal passkey, approved + E2E-verified)
+- Files touched: /var/www/emtskills/lib/passkey.php, api/passkey.php, assets/js/passkey.js, includes/passkey_login_box.php, includes/passkey_profile_card.php, vendor/webauthn/, routes/login.php, my_profile.php (restored after truncation), .well-known/passkey-endpoints (domain root + /emtskills)
+- DB: admin_portal.passkey_credentials (new table, credential_id VARBINARY(1023))
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -473,7 +306,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786556136912` — 8/12/2026, 6:10:09 PM PT — 672 turns
+### `1786556136912` — 8/12/2026, 6:56:25 PM PT — 719 turns
 
 **Original task:**
 
@@ -516,6 +349,253 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
+
+### `1786558646083` — 8/12/2026, 6:51:30 PM PT — 358 turns
+
+**Original task:**
+
+```
+#Moodle Required
+
+Maybe we should show a screenshot of the student's actual ssignments remaining within that particualr assignment / the actual traceback. So in this case (I'm only guessing). I assume Avni has to do the Midterm Examination, but it's blocked by the Midterm Evaluation which also requires a series of requirements. I screenshotted what I would like to see screenshot (different form Anvi), but I think tht might be helpful. I mean if tha'ts not posisble or too difficult to build. But idea is to track back until they see how it all works. so again, there may be a few of these "Restri
+```
+
+**Ideas referenced:** #081020, #18868, #19163, #2323, #23477 [proposed], #24526, #24765, #25155 [proposed], #25537, #25560, #25608, #25623, #25632, #25633, #25635, #25667, #25669, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25796, #25797, #25798, #25803 [proposed], #25804 [deployed], #25812, #25887, #25889 [ready_for_review], #25914 [proposed], #25971, #25974, #25975, #25976, #25984, #25985, #25986, #25990 [executing], #25995, #26003, #26035 [proposed], #38984, #6785, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+ which are `emsumain:psaserv`.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Moodle recursive Restrict Access traceback: consolidation onto the canonical walker is done; drive the remaining data-correctness + durability follow-ups.
+
+Where we left off (verified 2026-08-12 6:47 PM PT):
+- lib/CertificateAvailabilityWalker.php: canonical engine, extended with grouping branch + emsuCertReadinessTraceback() (21280 bytes, root-root, lint clean).
+- lib/moodle_prereq_lookup.php (4397 bytes), tools/moodle_restrict_traceback.php (3935 bytes, www-data:www-data), tools/ai_tool_exam_lock_diagnostic.php (8246 bytes) all delegate to the canonical walker. Fork lib/moodle_restrict_traceback_engine.php deleted.
+- docs/CFA_CERT_READINESS_RCA_20260812.md (15102 bytes) — #25990 marked DONE.
+- VERIFIED: Avni Midterm 4190 satisfied=YES / 37 leaves; cert 3092 satisfied=NO / 143 leaves; HTTP both branches correct.
+
+Open threads to drive next:
+1. #26035 [proposed] — Resolve section-to-county grouping mapping with academic ops, then backfill groupings_groups (Avni 26820FT orphaned from Alameda County grouping 3). Do NOT auto-insert membership.
+2. #25990 [executing] — Mark fully complete in orchestrator now that the consolidation is done and verified (the orchestrator worker was stalled in drafting/idle and repeatedly demoted by the starvation pass; the actual code merge is now done inline).
+3. #23477 [in_progress] — Promote the "recursive traceback is mandatory before any student-facing blocker claim" hook into the permanent rule set / CFA guard so every future agent window uses emsuCertReadinessTraceback, not a hand-rolled resolver.
+4. #25971 — Student-facing reply template naming the missing prereqs; internal diagnosis is live, the template is the remaining surface.
+
+Reference IDs:
+- Ticket cases: #24526 (Avni Madhu), #24765 (Sarim Rizvi)
+- Ideas filed/touched: #26035 (new), #25990 (consolidation), #23477 (traceback rule), #25971 (reply template)
+- Files touched: lib/CertificateAvailabilityWalker.php, lib/moodle_prereq_lookup.php, tools/moodle_restrict_traceback.php, tools/ai_tool_exam_lock_diagnostic.php, docs/CFA_CERT_READINESS_RCA_20260812.md
+- Deleted: lib/moodle_restrict_traceback_engine.php (fork)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786547336372` — 8/12/2026, 6:50:21 PM PT — 542 turns
+
+**Original task:**
+
+```
+Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cline rules when a subsequent iteration identifies a substantial reversal of the initial iteration within that window. The idea is that the agent catches this and makes itself smarter. This is to be done immediately. Give the rule nubmer. If it needs refinement, let me know.
+```
+
+**Ideas referenced:** #0000, #11415, #13840, #14205, #15268, #16224, #17130 [superseded], #17537 [rejected], #17685 [awaiting_review], #18132 [deployed], #18806, #18946, #18947, #18948, #18973, #19125, #19173, #19175 [executing], #19176 [queued], #19511, #19898, #19899 [proposed], #19904, #20251, #20630 [executing], #20957, #20958, #21125, #21126, #22282, #2277, #22840, #2320, #24900, #24906, #24909, #24910, #24912, #24913, #24924, #24995, #25058, #25066, #25150, #25151, #25154, #25155, #25156, #25157, #25185, #25188, #25313, #25551, #25747 [awaiting_review], #25755 [awaiting_review], #25757 [awaiting_review], #25759 [awaiting_review], #25764 [awaiting_review], #25765 [awaiting_review], #25812 [awaiting_review], #25848, #25859 [executing], #25860 [executing], #25861 [executing], #25869 [proposed], #25870 [proposed], #25871 [proposed], #25872 [executing], #25873 [proposed], #25876 [proposed], #25885, #25886 [executing], #25887, #25888 [proposed], #25890 [proposed], #25891 [proposed], #25892, #25893, #25894, #25897, #25906 [proposed], #25907 [proposed], #25909 [proposed], #25912 [proposed], #25925 [proposed], #25926 [proposed], #25981 [proposed], #5344, #5346, #5348, #616207
+
+**Last PICKUP PROMPT:**
+
+```
+rors) and ownership preserved.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus 317 block (probe-before-claim + flip-correction) follow-through.
+
+Where we left off (verified 2026-08-12 ~17:50 PT):
+- Argus 317 block deployed live at /var/www/emtskills/routes/alltastic_api.php:12954 inside buildSystemPrompt(). php -l clean, ownership emsumain:psaserv 644 preserved, backup made.
+- Argus confirmed routed through frankenstein-llm (alltastic_api.php line 234 comment + $CLAUDE_MODEL + upstream router line 355).
+- Idea #25981 approved with live-deploy evidence via idea_action.
+- Cline-side rule 317 hardfloor live (Rules/317-reversal-triggers-297-and-rule-update.md), validator changes live (R317_UNVERIFIED_STATE + R317_REVERSAL_LOG), telemetry live: 12 total R317 fires (8 reversal-log, 1 unverified-state) and 158 validations in 24h.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #25907 [proposed] — After 7 days of A7 telemetry, decide whether to relax R317_REVERSAL_LOG for claim-less completions (it already fired 8x; likely some are Q&A/status that made no state claim).
+2. #25906 [approved] — A7 gate-telemetry section in cline_rules_audit.sh is live; keep the nightly run green (current: 5 pre-existing alerts — 3 intentional case-law collisions + A3 floor 85% warn of the raised 196608 cap + counter at 318).
+3. #25888 [approved] — Reversal Log in clinerules_validate_completion is live; confirm the mechanical first-vs-last conclusion MUTEX (not just the static section presence) is what fires, or upgrade it per the original idea if the static check proves too weak.
+
+Reference IDs:
+- Ticket: (none — this was a direct Ruben steering thread on Cline rules)
+- Ideas filed: #25888, #25906, #25907, #25981
+- Files touched: Rules/317-reversal-triggers-297-and-rule-update.md, Rules/91-every-completion-needs-pickup-prompt.md, scripts/cline_rules_audit.sh, mcp-servers/clinerules-mcp/src/index.ts, /var/www/emtskills/routes/alltastic_api.php (via ssh_command), Desktop/argus-deploy/argus_mcp_tools.php (stale local artifact)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786581699007` — 8/12/2026, 6:47:33 PM PT — 158 turns
+
+**Original task:**
+
+```
+#Argus Learning
+
+Tell me how Argus automatic learning is going. I would like for it to start making itself smarter. I mean what I usually do is you know I'm coming in here on a daily basis and I'm trying to do sweeps to see what tasks were unfinished as well as whether there were bugs that were showing that needed to be resolved or permission issues that were not in a accordance with rule 29 or missing tools, things of that nature. I would like to see Argus learning doing those sorts of things on its own. How can we make that happen?
+```
+
+**Ideas referenced:** #10182, #128126, #16213, #18806, #19434, #20025, #20036 [awaiting_review], #20890, #21582, #21667, #22310, #22850, #23027, #2323, #2324, #23429, #23506, #25547, #25572 [approved], #25574 [proposed], #25578 [approved], #25624 [proposed], #25625 [ready_for_review], #25822, #25833, #25932, #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25975, #25985, #25986, #26001, #26002, #26003 [deployed], #26018 [proposed], #26020 [deployed], #26025 [proposed], #26031 [proposed], #26032 [proposed], #26033 [proposed], #7326, #7377, #7428, #7784, #7785, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+ea #26018 marked [superseded].
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus automatic learning: corrected sweep targets the NEW Argus system's own unfinished work (not the legacy backlog).
+
+Where we left off (verified 2026-08-12 18:47 PT):
+- Ruben correction: "unfinished work" = Argus terminal's own task queue (routes/argus_download.php + argus_task_status.php), NOT the old orchestrator_ideas mining backlog.
+- Real state: argus_task_queue = 447 done / 58 offloaded / 19 canceled / 0 stuck. 41 of 58 offloaded tasks still have non-terminal builder ideas (33 proposed, 6 approved, 2 ready_for_review).
+- Deployed cron_argus_daily_sweep.php v2 (Lane 1 = offloaded tasks + linked idea status; Lane 2 = bug clusters by action_name+failure_category; Lane 3 = permissions; Lane 4 = real tool-error signatures). Cron `0 */4 * * *`, heartbeat argus_daily_sweep green, log argus_daily_sweep.log, table argus_sweep_findings.
+- Re-run verified: 41 unfinished + 4 bug clusters, 0 false positives. #26018 [superseded]; new #26031 [proposed].
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26031 — triage the 41 offloaded Argus tasks with unfinished builder ideas; oldest first (task 459/458 William Lee exam-2 fix via ideas #25624/#25625; 448/445/443 telephony dashboard 'Callbacks' tab via #25578/#25574/#25572).
+2. #26032 — investigate cert_gate + enrollment_lookup 2x/24h failures; add sample capture to lane 2 (currently "no sample").
+3. #26033 — investigate student_360 / student_lookup failures (same note).
+4. #26025 — repair the unscheduled schema-mismatched 5-min self-heal cron (argus_doctor_health / argus_doctor_repair_log empty, columns wrong vs live tables).
+5. Seed argus_sweep_findings into the Argus terminal UI (Activity/Requests tab) so staff see automatic findings.
+
+Reference IDs:
+- Ideas filed: #26031 [proposed], #26032 [proposed], #26033 [proposed], #26025 [proposed], #26018 [superseded]
+- Files touched: /var/www/emtskills/cron_argus_daily_sweep.php (v2), /var/www/emtskills/logs/argus_daily_sweep.log, crontab (emsu ops user)
+- DB objects: argus_sweep_findings (new table + indexes), argus_kaizen_learnings rows (source argus-daily-sweep@emtskills.local)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786555167629` — 8/12/2026, 6:47:19 PM PT — 740 turns
+
+**Original task:**
+
+```
+#Externships
+
+Let's use tags to organize these: https://emsuniversity.com/emtskills/notifications/jobs.php 
+
+Also, I'm sure there's many more than just the ones that you have listed here. I need to see a timeline with regard to the student lifecycle of how that's gonna work out per student. For example the email fires off X amount of days before enrollment amount of days after enrollment, etc. X amount days after the course ends, etc. etc. The idea is that I can see them and track them throughout the entire SLS. You can do me a little arrow going back-and-forth that I can just basically slide 
+```
+
+**Ideas referenced:** #075985, #081020, #10004, #128126, #131967, #16156, #166534, #16863, #178649, #2196, #2306, #2311, #2323, #24526, #24765, #25156, #25157 [awaiting_review], #25185, #25246 [awaiting_review], #25529 [awaiting_review], #25537, #25560, #25608, #25623, #2563, #25632, #25633, #25635, #25667, #25669, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25796, #25797, #25798, #25803 [proposed], #25804 [deployed], #25812, #25821 [proposed], #25822 [deployed], #25848 [executing], #25889 [ready_for_review], #25916 [awaiting_review], #25932 [deployed], #25950 [awaiting_review], #25971, #25973 [ready_for_review], #25974, #25975, #25976, #25984, #25985, #25986, #25990, #25995, #26001 [ready_for_review], #26002 [ready_for_review], #26003, #26027 [awaiting_review], #26028 [awaiting_review], #26034 [deployed], #334155, #348529, #3498, #38984, #4338, #475569, #6366, #64748, #9222, #92400, #9679
+
+**Last PICKUP PROMPT:**
+
+```
+s), filed as #26034 [deployed]
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786491116649 (Cline task id, not an idea) - externship eligibility gate, now 5 triggers.
+
+Where we left off (verified 2026-08-12 6:45 PM PT):
+- Gate v4 LIVE at lib/externship_eligibility_gate.php (v3 at .bak-v3-20260812), php -l clean. Five triggers: progress >= 80 percent, Final Exam (Chapters 1-41) >= 80 percent from Moodle, NREMT or CA psychomotor complete, didactic completion date passed, NREMT testing dates remaining not zero.
+- Trigger 5 delegates to ProgressCalculator::compute() in src/Progress.php, the same class admin_profile.php line 577 calls. One source of truth with the profile page.
+- Override reads externship_eligibility_overrides (new table) and exam_override_requests force_approved (1,585 rows, 505 students). Scopes: all, final_exam, psychomotor, didactic, nremt_dates, progress.
+- Trigger 4 (NREMT dates) remains NON-BLOCKING, no data source exists, confirmed with a positive control.
+- CENSUS v4: population 3,383, ELIGIBLE 788, NOT ELIGIBLE 2,595. Blockers overlapping: progress 2,462, final exam 1,887, psychomotor 1,951, didactic 1,246. Among eligible: 636 at 100 percent, 212 certified, 27 placed, 174 already requested. REAL QUEUE 484.
+- Verified blocked at 60 percent or less: 26817FT-53, 26617FT-30, 26904FT-03 (0 percent), 26417FT-15, 26513FT-35, plus 26915W-30 and 26515W-01 which I had previously mis-reported as eligible.
+
+Open threads to drive next:
+1. #25822 [deployed] - Extend the staff assignment queue to exclude already-certified, already-placed, and already-requested students so Vicky sees the 484 who need a ride-along, not all 788 who meet criteria.
+2. #26028 [awaiting_review] - Pick and populate the authoritative NREMT dates-remaining source, then flip trigger 4 to blocking.
+3. #26027 [awaiting_review] - Build the watchdog for queries stuck in Writing-to-binlog plus a guard against duplicate stacked ALTERs.
+4. #26002 [awaiting_review] - Real answered/unanswered email signal, route substantive externship questions to the CFA, reply to Andrew Sanchez.
+5. #25973 [awaiting_review] - Remaining auto-assign build: geocoding for distance, the 60-day and 0-percent-progress blocker, confirm-or-auto-place timeout.
+6. #25950 [awaiting_review] - Close the last bypass: import_wpforms_simple.php.
+7. #25916 [awaiting_review] - Schedule-change disclaimer on remaining touchpoints.
+8. #26034 [deployed] - Trigger 5 progress gate, this session.
+9. #26001 [deployed] - Final-exam source wired, RCA closed.
+
+Reference IDs:
+- Ideas: #26034 [deployed], #26001 [deployed], #25822 [deployed], #25932 [deployed], #26002 [awaiting_review], #26027 [awaiting_review], #26028 [awaiting_review], #25973 [awaiting_review], #25950 [awaiting_review], #25916 [awaiting_review], #25889 [awaiting_review]
+- Student slugs sampled (not ideas): 26817FT-53, 26617FT-30, 26904FT-03, 26417FT-15, 26513FT-35
+- Files touched: /var/www/emtskills/lib/externship_eligibility_gate.php (v4), /var/www/emtskills/externship/my_eligibility.php, /var/www/emtskills/externship/student_request_form.php, /var/www/emtskills/externship/student_request_form_old.php, /var/www/emtskills/lib/ExternshipKnowledgePack.php, /var/www/emtskills/docs/EXTERNSHIP_FINAL_EXAM_GATE_RCA_20260812.md, table externship_eligibility_overrides, ai_knowledge_packs id=1
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</at
+```
+
+### `1786570575332` — 8/12/2026, 6:39:15 PM PT — 284 turns
+
+**Original task:**
+
+```
+These emails are choking down my inbox still. Can you just put them on a webpage instead as a card link on the reports.php page with typical search, pagination, etc... 
+
+Please do that and remove them all from my inbox so i can actually see the improtant messages coming through that I may be missing. 
+
+A summary of ideas daily in the morning is fine, but this is ridiculous. I have a crap ton of spam in the inboxes and I can't sort though and I need to be able to do that asap
+```
+
+**Ideas referenced:** #059669, #0891, #1100, #1233, #127881, #1368, #13757, #14572, #15965, #15969, #15996, #16069, #16817, #16828, #177851, #18178, #18180, #186576, #18944, #18951, #23133, #2321, #23378, #23477, #23483, #23945, #23954, #25042, #25194, #25551, #25602, #2563, #25871, #25889 [ready_for_review], #25909, #25914, #25931, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [deployed], #25944 [deployed], #25988 [proposed], #3098, #3176, #334155, #360135, #360152, #374151, #4458, #4747, #4962, #5451, #6053, #64748, #6979, #7175, #7189, #8798, #9889
+
+**Last PICKUP PROMPT:**
+
+```
+s.id=25988` marked `deployed`.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — EMSU inbox-spam kill: route cron digests to reports.php webpage (task #25988 follow-on).
+
+Where we left off (verified 2026-08-12 18:38 PT):
+- `internal_digest_log` captures CLI sendEmail() to rmajor/ruben/info@ — 85 rows/24h across 10 sources.
+- `routes/internal_digest_log.php` live (search/pagination/read-toggle); "📬 Automated Digests" card registered in reports.php.
+- idea-delivery-watchdog cron switched `*/30` → `0 8 * * *`; new `emsu-internal-digest-summary` at `5 8 * * *` (idea #25988 deployed).
+- 193,358 inbox messages archived to `INBOX.Automated-Digests`; inbox 275,427 → 82,137.
+
+Open threads to drive next:
+1. #25988 [deployed] — Tomorrow 08:05 confirm exactly ONE summary email arrives (check `/var/log/emsu-internal-digest-summary.log` and `email_outbound_log` rows), and confirm zero "Idea Watchdog" / "Idea Delivery Digest" / "AI Watchdog" / "EA Watchdog" / "Artemis Governor" emails hit the inbox.
+2. #25988 [deployed] — Re-archive any backlog that still slips through classification (e.g. WOPR Bot Attack, Moodle Duplicate Name) into the existing `.Automated-Digests` folder using subject patterns, if Ruben wants inbox further down.
+3. (human-only decision — no idea) — Whether to widen capture to ALL CLI mail (not just Ruben/info@ inboxes) so no internal cron digest ever reaches ANY staff inbox; currently outbound student-facing transactional mail is deliberately excluded.
+
+Reference IDs:
+- Ideas filed: #25988 (deployed)
+- Files touched: lib/internal_digest_capture.php, routes/internal_digest_log.php, routes/reports.php, lib/mailer.php, cron/cron_daily_internal_digest_summary.php, /etc/cron.d/idea-delivery-watchdog, /etc/cron.d/emsu-internal-digest-summary
+- DB: internal_digest_log table; orchestrator_ideas.id=25988 → deployed
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786582217282` — 8/12/2026, 6:27:39 PM PT — 261 turns
+
+**Original task:**
+
+```
+I'm getting reports that all websites are down can you take a look and let me know?
+```
+
+**Ideas referenced:** #15919, #178679, #2331 [deployed], #25185, #25999, #26007 [executing], #26008 [executing], #26009 [executing], #26015 [rejected], #26016 [rejected], #26017 [executing], #26019 [executing], #26023 [executing], #26024 [executing], #5574
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786582351264` — 8/12/2026, 6:03:32 PM PT — 44 turns
 

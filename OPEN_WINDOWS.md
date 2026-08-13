@@ -6,19 +6,20 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/12/2026, 11:48:25 PM PT | window: last 72h | 104 tasks | index total 689 (parsed 7, cached 682)
+Generated: 8/13/2026, 12:48:26 AM PT | window: last 72h | 105 tasks | index total 690 (parsed 8, cached 682)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786602203659` | 8/12/2026, 11:48:22 PM | 65 | 333KB | There appear to be some minor issues going on with Frankenstein LLM. It seems like I'm get |
-| `1786601835097` | 8/12/2026, 11:48:18 PM | 246 | 407KB | #Server Was Down |
-| `1786581608927` | 8/12/2026, 11:48:17 PM | 309 | 1208KB | #CFA Learning |
-| `1786602908972` | 8/12/2026, 11:48:07 PM | 39 | 748KB | #TDSHS/AZDHS 8/13 - Compliance |
-| `1786581699007` | 8/12/2026, 11:47:34 PM | 273 | 1215KB | #Argus Learning |
-| `1786592555268` | 8/12/2026, 11:46:07 PM | 315 | 1392KB | #Argus |
+| `1786592555268` | 8/13/2026, 12:48:21 AM | 409 | 1841KB | #Argus |
+| `1786581608927` | 8/13/2026, 12:48:16 AM | 387 | 1421KB | #CFA Learning |
+| `1786602908972` | 8/13/2026, 12:48:10 AM | 193 | 1421KB | #TDSHS/AZDHS 8/13 - Compliance |
+| `1786602203659` | 8/13/2026, 12:41:31 AM | 142 | 708KB | There appear to be some minor issues going on with Frankenstein LLM. It seems like I'm get |
+| `1786585764315` | 8/13/2026, 12:40:33 AM | 787 | 1879KB | A lot of the links on these pages and tabs appear to be nonfunctioning: https://emsunivers |
+| `1786591402307` | 8/13/2026, 12:36:48 AM | 191 | 569KB | #Externship |
+| `1786605000052` | 8/13/2026, 12:34:09 AM | 186 | 1102KB | #Chat Widget |
+| `1786581699007` | 8/13/2026, 12:24:54 AM | 378 | 1477KB | #Argus Learning |
+| `1786601835097` | 8/12/2026, 11:55:16 PM | 269 | 502KB | #Server Was Down |
 | `1786599361465` | 8/12/2026, 11:21:11 PM | 243 | 427KB | #Chat Widget |
-| `1786591402307` | 8/12/2026, 11:17:38 PM | 155 | 488KB | #Externship |
-| `1786585764315` | 8/12/2026, 11:17:31 PM | 718 | 1751KB | A lot of the links on these pages and tabs appear to be nonfunctioning: https://emsunivers |
 | `1786582217282` | 8/12/2026, 11:10:19 PM | 307 | 570KB | I'm getting reports that all websites are down can you take a look and let me know? |
 | `1786555167629` | 8/12/2026, 8:19:29 PM | 766 | 2987KB | #Externships |
 | `1786553732663` | 8/12/2026, 7:53:48 PM | 604 | 3183KB | When I get emails like this I would like to actually see the students original email below |
@@ -119,148 +120,7 @@ Generated: 8/12/2026, 11:48:25 PM PT | window: last 72h | 104 tasks | index tota
 
 ## Per-window detail
 
-### `1786602203659` — 8/12/2026, 11:48:22 PM PT — 65 turns
-
-**Original task:**
-
-```
-There appear to be some minor issues going on with Frankenstein LLM. It seems like I'm getting some invalid API responses and I'm not sure where those are coming from. I think that we are spilling over for some reason I don't know what's exactly happening we are spilling over for some reason I don't know what's exactly happening
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11953, #12251, #12335, #12407, #12459, #12477, #12618, #12824, #12872, #12878, #13121, #13202, #16163, #16265, #16304, #16844, #18312, #18326, #1967, #20722, #2299, #23171, #25097, #25471
-
-**Last PICKUP PROMPT:**
-
-```
-ingle listener
-- [ ] Update bug library + handoff
-- [ ] Present completion with PICKUP PROMPT block
-</task_progress>
-</use_mcp_tool>
-```
-
-### `1786601835097` — 8/12/2026, 11:48:18 PM PT — 246 turns
-
-**Original task:**
-
-```
-#Server Was Down
-
-Turn it off, it does nothign for us now -> __What I need from you__ is the business call, tracked as #26068 [executing]. Should this pipeline run at all? If the corpus work replaced it, turning off the 9 LoRA crons stops 22GB/hr of writes, frees GPU time, and removes the outage vector entirely. If you want the adapters, someone has to wire the eval gate and the promotion path, because right now it trains and discards. My recommendation is to turn it off unless there is a specific adapter someone is waiting on. A pipeline producing zero promotions in 6.5 weeks while consuming 
-```
-
-**Ideas referenced:** #12676, #13487, #15928, #19338, #25256, #26007 [deployed], #26008 [executing], #26009 [deployed], #26017 [awaiting_review], #26019 [awaiting_review], #26023 [executing], #26024 [deployed], #26068 [executing], #26069 [deployed], #26070 [deployed], #6800
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786581608927` — 8/12/2026, 11:48:17 PM PT — 309 turns
-
-**Original task:**
-
-```
-#CFA Learning
-
-Tell me about the CFA learning system. It does not seem like it's doing very much. How do we make it do things continually and get smarter on its own? It seems to be like it's stagnating and then I see these other things it appears as though it's even going backwards which is highly problematic. These things should be advancing not falling behind.
-```
-
-**Ideas referenced:** #11945, #12184, #128126, #12816, #13063, #13202, #186576, #19821, #19903, #2294, #2307, #23133, #2314, #23169, #2321, #2323, #2324, #23477, #23945, #23954, #24145, #24165, #24217, #24526, #24765, #25042, #25426, #25551, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25822, #25888, #25914, #25931, #25932, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25971, #25974, #25975, #25976, #25984, #25985, #25986, #25990, #25995, #26001, #26002, #26003 [deployed], #26011 [proposed], #26012 [proposed], #26046 [proposed], #360135, #360152, #622333, #622384, #622385, #622824, #622825, #622875, #6826, #8200, #9070, #9222, #9999
-
-**Last PICKUP PROMPT:**
-
-```
-cking is the gate.
-
-═══════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════
-Pick up task: CFA learning system stagnation fix confirmation and ongoing learning health.
-
-Where we left off (verified 8/12/2026 8:00 PM PT):
-- Event flood killed: watchdog change-alerting live, 541K flood rows processed, 0 unprocessed integrity rows.
-- Triage AI restored: key via FleetTierHealth + base localhost:4000, real decisions flowing (escalate 0.95/0.92, propose 0.68).
-- #26011 kaison schema drift fixed: triage dry-run 0 SQL errors, writer writes canonical run_id + JSON details, run complete via completed_at.
-- #26012 corrected: Artemis confirmed healthy federation member (canary pass_streak=18), stale warm-set JSON refreshed.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26046 [proposed] Kaison MCP probe writer targets mcp.emsu.edu which does not resolve. Determine correct internal endpoint (hosts entry, 10.100.x.x, or localhost:11510), update probe URL config, re-run writer, confirm real pass/fail lands in ruben_bug_hunter_results.
-2. #26011 [deployed] Confirm the kaison triage cron next scheduled run (crontab) executes without SQL errors in live mode, not just --dry-run.
-
-Reference IDs:
-- Tickets: none
-- Ideas filed: #26011 [deployed], #26012 [deployed], #26046 [proposed]
-- Files touched: /var/www/emtskills/cron/cron_integrity_watchdog.php, /var/www/emtskills/cron/cron_orchestrator_triage.php, /var/www/emtskills/cron/cron_kaison_bug_hunter_triage.php, /var/www/emtskills/cron/cron_kaison_mcp_tool_probes.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786602908972` — 8/12/2026, 11:48:07 PM PT — 39 turns
-
-**Original task:**
-
-```
-#TDSHS/AZDHS 8/13 - Compliance
-
-https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=list 
-
-This page seems to show past deadlines which is kind of odd. I'm showing something from 8/6. 
-
-If I go to the main compliance page, I see this link button that says next to TDSHS AUG 6 which is not accurate because August 6 is already passed and we already met that deadline. So the stuff needs to update properly. Also I thought for sure there was something that was due today from AZDHS. Can you take a look at that and see? Also you need to check my email for the AZDHS stuff as wel
-```
-
-**Ideas referenced:** #047857, #059669, #111827, #166211, #16957, #171083, #173898, #23361, #249290, #249325, #250541, #251044, #251128, #251233, #251444, #251447, #251450, #251485, #251498, #2563, #26048, #26050, #26054, #2813, #3730, #374151, #475569, #64748, #92400
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786581699007` — 8/12/2026, 11:47:34 PM PT — 273 turns
-
-**Original task:**
-
-```
-#Argus Learning
-
-Tell me how Argus automatic learning is going. I would like for it to start making itself smarter. I mean what I usually do is you know I'm coming in here on a daily basis and I'm trying to do sweeps to see what tasks were unfinished as well as whether there were bugs that were showing that needed to be resolved or permission issues that were not in a accordance with rule 29 or missing tools, things of that nature. I would like to see Argus learning doing those sorts of things on its own. How can we make that happen?
-```
-
-**Ideas referenced:** #10182, #128126, #14749, #16213, #18806, #19415, #19434, #20025, #20036 [awaiting_review], #20884, #20890, #21582, #21667, #22310, #22850, #23027, #2323, #2324, #23429, #23506, #24977 [proposed], #24987 [proposed], #25151, #25547, #25572 [approved], #25574 [proposed], #25578 [approved], #25624 [proposed], #25625 [ready_for_review], #25822, #25833, #25888, #25932, #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25975, #25985, #25986, #26001, #26002, #26003 [deployed], #26018 [proposed], #26020 [deployed], #26025 [proposed], #26031 [proposed], #26032 [proposed], #26033 [proposed], #26047 [approved], #26075, #7326, #7377, #7428, #7784, #7785, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-d 2026-08-12 and MCP reindexed
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus automatic learning: corrected autonomous daily sweep is live, plus RCA-297 open-thread format fix.
-
-Where we left off (verified 2026-08-12 20:40 PT):
-- cron_argus_daily_sweep.php deployed on WOPR under /var/www/emtskills/, crontab every 4 hours, heartbeat argus_daily_sweep ok (20:00:04 PT, 45 rows), argus_sweep_findings holds 41 unfinished + 4 bug rows.
-- Sweep lanes: offloaded Argus tasks plus linked builder-idea terminality, bug clusters by action_name and failure_category, denied permissions, real missing-tool signatures; findings feed argus_kaizen_learnings.
-- RCA 297: Desktop 297 rule file amended and clinerules MCP reindexed.
-
-Open threads to drive next (every item has a real idea number plus disposition):
-1. #26047 [awaiting_review] — execute triage of the 41 offloaded Argus tasks with unfinished builder ideas; oldest first (task 459 and 458 William Lee exam-2 fix via ideas #25624 [proposed] and #25625 [awaiting_review]; tasks 448, 445, 443 telephony dashboard Callbacks tab via #25578 [awaiting_review], #25574 [proposed], #25572 [awaiting_review]). DB status approved, not yet executing.
-2. #26025 [awaiting_review] — execute repair of the 5-min self-heal cron: rewrite against the real schemas (argus_agent_audit fields tool_name, result_summary, created_at; doctor tables run_at, probe_name, status, diagnostics), seed argus_doctor_health patterns, then install on the 5-minute schedule. DB status approved, not yet executing.
-3. #26032 [proposed] — investigate and fix cert_gate failures seen 2x in 24h; add sample capture to sweep lane 2.
-4. #26033 [proposed] — investigate and fix enrollment_lookup failures seen 2x in 24h; add sample capture to sweep lane 2.
-5. #26031 [proposed] — mark superseded once the approved triage idea is executing (duplicate title from the sweep auto-file).
-
-Reference IDs:
-- Ideas filed this session: #26047 [awaiting_review], #26031 [proposed], #26032 [proposed], #26033 [proposed], #26025 [awaiting_review], #26018 [superseded]
-- Linked builder ideas surfaced: #25624 [proposed], #25625 [awaiting_review], #25578 [awaiting_review], #25574 [proposed], #25572 [awaiting_review], #24987 [proposed], #24977 [proposed]
-- Files touched: /var/www/emtskills/cron_argus_daily_sweep.php, /var/www/emtskills/logs/argus_daily_sweep.log, /Users/rubenmajor/Desktop/.clinerules/297-kaizen-open-threads-dispositions.md, crontab (emsu ops user)
-- DB objects: argus_sweep_findings (new table plus indexes), argus_kaizen_learnings rows (source argus-daily-sweep@emtskills.local)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786592555268` — 8/12/2026, 11:46:07 PM PT — 315 turns
+### `1786592555268` — 8/13/2026, 12:48:21 AM PT — 409 turns
 
 **Original task:**
 
@@ -303,6 +163,239 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
+### `1786581608927` — 8/13/2026, 12:48:16 AM PT — 387 turns
+
+**Original task:**
+
+```
+#CFA Learning
+
+Tell me about the CFA learning system. It does not seem like it's doing very much. How do we make it do things continually and get smarter on its own? It seems to be like it's stagnating and then I see these other things it appears as though it's even going backwards which is highly problematic. These things should be advancing not falling behind.
+```
+
+**Ideas referenced:** #11945, #12184, #128126, #12816, #13063, #13202, #186576, #19821, #19903, #2294, #2307, #23133, #2314, #23169, #2321, #2323, #2324, #23477, #23945, #23954, #24145, #24165, #24217, #24526, #24765, #25042, #25426, #25551, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25822, #25888, #25914, #25931, #25932, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25971, #25974, #25975, #25976, #25984, #25985, #25986, #25990, #25995, #26001, #26002, #26003 [deployed], #26011 [proposed], #26012 [proposed], #26046 [proposed], #360135, #360152, #622333, #622384, #622385, #622824, #622825, #622875, #6826, #8200, #9070, #9112, #9222, #9999
+
+**Last PICKUP PROMPT:**
+
+```
+cked as #26046 [approved].
+
+═══════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════
+Pick up task — CFA Learning System diagnosis and repair.
+
+Where we left off (verified 2026-08-13 12:05 AM PT):
+- Root cause: cron_integrity_watchdog.php logged 541K cron_integrity_failure rows/7d with no dedup → InnoDB pressure → 1205 timeouts → kaizen classifier/consumer + orchestrator triage wedged (learning stalled/regressed).
+- Deployed change-based alerting (state file logs/cron_integrity_watchdog_state.json): rerun alerts 275→0.
+- Marked all 541K flood rows processed=1; remaining=0.
+- Triage AI restored: key via FleetTierHealth::fth_get_litellm_key() + base http://localhost:4000; log shows real decisions (conf 0.95/0.92).
+- Kaison crons patched to real schema; reconciliation_log ALTERed (+table_target, rows_backfilled, status); triage dry-run 0 SQL errors.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26046 [approved] — Re-point 7 MCP probe URLs in cron_kaison_mcp_tool_probes.php off phantom host mcp.emsu.edu (verified: appears in only 1 file, zero configs; our site is emsuniversity.com). Candidate serving paths: 127.0.0.1:8082 orchestrator dispatcher or chat_widget_api action routes; otherwise disable probes until a real HTTP MCP gateway exists.
+2. #26011 [executing] — After #26046: run writer, confirm real mcp_bridge rows land in ruben_bug_hunter_results linked by run_id; then confirm kaizen_failure_log gets fresh categories (last classification 2026-07-10).
+3. #26012 [executing] — Replace/disable FleetWarmSetManager (idea #12184) so fleet_warm_set_map_json never misleads agents again; assess artemis_freshness pattern id 70764 (cron_cline_pipeline_canary.php uses a different ingest meaning than LLM serving).
+
+Reference IDs:
+- Ideas filed/updated: #26011 [executing] kaison schema drift, #26012 [executing] stale warm-set JSON, #26046 [approved] phantom MCP host.
+- Ideas superseded: original #26012 "decommission Artemis" premise (reversed — Artemis healthy, never decommission).
+- Files touched: /var/www/emtskills/cron/cron_integrity_watchdog.php, cron/cron_orchestrator_triage.php, cron/cron_kaison_bug_hunter_triage.php, cron/cron_kaison_mcp_tool_probes.php.
+- DB: orchestrator_event_log (541K rows processed=1), reconciliation_log (ALTER), orchestrator_config (fleet_warm_set_map_json refreshed), orchestrator_ideas (#26011/#26012/#26046).
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786602908972` — 8/13/2026, 12:48:10 AM PT — 193 turns
+
+**Original task:**
+
+```
+#TDSHS/AZDHS 8/13 - Compliance
+
+https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=list 
+
+This page seems to show past deadlines which is kind of odd. I'm showing something from 8/6. 
+
+If I go to the main compliance page, I see this link button that says next to TDSHS AUG 6 which is not accurate because August 6 is already passed and we already met that deadline. So the stuff needs to update properly. Also I thought for sure there was something that was due today from AZDHS. Can you take a look at that and see? Also you need to check my email for the AZDHS stuff as wel
+```
+
+**Ideas referenced:** #047857, #059669, #111827, #166211, #16957, #171083, #173898, #23361, #249290, #249325, #250541, #251044, #251128, #251233, #251444, #251447, #251450, #251485, #251498, #25480, #2563, #26048, #26050, #26054, #26067, #2763, #2813, #3730, #374151, #450438, #475569, #64748, #92400
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786602203659` — 8/13/2026, 12:41:31 AM PT — 142 turns
+
+**Original task:**
+
+```
+There appear to be some minor issues going on with Frankenstein LLM. It seems like I'm getting some invalid API responses and I'm not sure where those are coming from. I think that we are spilling over for some reason I don't know what's exactly happening we are spilling over for some reason I don't know what's exactly happening
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11936, #11942, #11953, #12251, #12314, #12335, #12363, #12365, #12368, #12407, #12459, #12477, #12618, #12824, #12872, #12878, #13108, #13121, #13202, #13874, #16163, #16265, #16304, #16718, #16844, #18312, #18326, #1967, #19903, #2050, #20722, #2299, #23171, #2335 [deployed], #24145 [proposed], #25097, #25471, #25630, #25888, #26019, #26068, #26080 [awaiting_review]
+
+**Last PICKUP PROMPT:**
+
+```
+tranking saturation, not GLM).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #26080 [completed] - Frankenstein invalid-response fix shipped: affinity pin yields at capacity so in-pool GLM spill works (verified: adapter line 210 on disk, restart smoke HTTP 200 0.81s, canary pass_streak 177).
+
+Where we left off (verified 2026-08-13 00:40 PT):
+- RCA: prefix-affinity pin held a batch conv on artemis :8000 until load 44 vs cap 10. gpt-oss-120b returned empty 200s at saturation, EMPTY_PASSTHROUGH_GATE_v2 raised 503, LiteLLM spilled to cloud. GLM ring :8210 healthy the whole time.
+- FIX SHIPPED: frankenstein_tools_adapter.py line 210 now yields pin at load >= cap (was 1.6x). Backup .bak-affyield-20260813-0036. Restarted frankenstein-tools.service. Single adapter PID 1885485. Smoke HTTP 200 0.81s. Canary healthy pass_streak 177. Live affinity traffic flowing.
+- Idea #26080 [completed]. Incident #2335 [deployed] resolution merged. HANDOFF_NOTES.md updated.
+
+Open threads to drive next:
+1. Observe the fix over the next shift: watch /var/log/emsu-adapter-upstream.log and adapter log for EMPTY_PASSTHROUGH_GATE_v2 counts and AFFINITY_BREAK_OVERLOAD lines. Confirm the batch pins yield to GLM :8210 at cap instead of empty-200ing to cloud.
+2. #24145 [proposed] revisit if artemis/bigmac empty-200s still appear before AFFINITY_BREAK fires during load spikes within a single probe window: consider lowering the sweep caps or tuning FRANK_BOX_CAPACITY.
+
+Reference IDs:
+- Ideas: #26080 [completed], #24145 [proposed]
+- Incident: #2335 [deployed]
+- Files touched: /usr/local/bin/frankenstein_tools_adapter.py (patched), /usr/local/bin/frankenstein_tools_adapter.py.bak-affyield-20260813-0036 (backup)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786585764315` — 8/13/2026, 12:40:33 AM PT — 787 turns
+
+**Original task:**
+
+```
+A lot of the links on these pages and tabs appear to be nonfunctioning: https://emsuniversity.com/emtskills/routes/chat_portal.php?conv=10021&site=14 
+
+Clicking on stuff and nothing is happening it's just locking up. Can you fix that?
+
+Maybe it needs an overhaul? Or just some deep testing? It just seems really buggy
+```
+
+**Ideas referenced:** #059669, #10027, #1119, #16732, #16817, #17446, #18335, #19437, #19837, #23133 [approved], #2332 [needs_verify], #23989, #25185, #25962, #25965, #26038 [executing], #26039 [executing], #26040 [executing], #26041 [executing], #26045 [executing], #26048 [executing], #26049 [rejected], #26050 [executing], #26054 [executing], #26090 [deployed], #2916, #6111, #6366, #7907, #9086, #9152, #9168, #9222, #9339
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786591402307` — 8/13/2026, 12:36:48 AM PT — 191 turns
+
+**Original task:**
+
+```
+#Externship
+
+Still need 5 links to profiles to view that you say meet requirements
+
+Did you update this:  /var/www/emtskills/docs/CFA_CERT_READINESS_RCA_20260812.md
+
+
+You were right, and my earlier claim that no dates-remaining source existed was flat wrong.
+
+=== WHY 26904FT-03 SLIPPED THROUGH ===
+
+NREMT Testing Dates Remaining is a DERIVED value, not a stored column. admin_profile.php line 691 calls StatusCalculator::compute($row)['days'] from src/Status.php, which returns max(0, 60 minus days since scheduled didactic completion). John Erisman's didactic date was 2026-03-12, five months ago, 
+```
+
+**Ideas referenced:** #166534, #178649, #19419, #2323, #23477, #24526, #24765, #25185, #25822 [deployed], #25889 [awaiting_review], #25914, #25916 [awaiting_review], #25932 [deployed], #25950 [awaiting_review], #25971, #25973 [awaiting_review], #25974, #25975, #25976, #25984, #25985, #25986, #25990, #25995, #26001 [deployed], #26002 [awaiting_review], #26003, #26027 [awaiting_review], #26028 [deployed], #26034 [deployed], #26053 [approved], #26066 [approved], #26067 [deployed], #26071 [executing], #26089 [deployed], #92400
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786605000052` — 8/13/2026, 12:34:09 AM PT — 186 turns
+
+**Original task:**
+
+```
+#Chat Widget
+
+Let's get back also to chat widged. Run a live test on it using a web broser of 10 different chat types/situations and correct errors as you go. 
+
+Approved, but donn't we have DNC lists too? Are those being obeyed? What about obvious webform spams? -> Emma were originally scheduled but didnt attend the scheduled dates
+Emma Johnson
+12 hr 6a-6p
+August 7 - M55 In-charge Will Phillips, Supervisor Brian Davis
+Station 5 @ 19900 Telge Rd, Tomball, TX 77377
+24hr 6a - 6a
+August 10 - M55 In-charge Cindy Kmiec, Supervisor Jessica Baker
+Station 5 @ 19900 Telge Rd, Tomball, TX 77377
+She was a
+```
+
+**Ideas referenced:** #11585, #12364, #23133 [approved], #25962, #26038 [approved], #26039 [deployed], #26040 [approved], #26041 [approved], #26045 [approved], #26048 [awaiting_review], #26050 [executing], #26054 [executing], #26084 [executing], #26085 [executing], #26086 [proposed], #26087 [proposed], #26088 [approved], #2763, #6366, #8211, #9112
+
+**Last PICKUP PROMPT:**
+
+```
+I forgot to include the actual PICKUP PROMPT block in the attempt_completion result. Let me re-emit with it included.
+
+```
+
+### `1786581699007` — 8/13/2026, 12:24:54 AM PT — 378 turns
+
+**Original task:**
+
+```
+#Argus Learning
+
+Tell me how Argus automatic learning is going. I would like for it to start making itself smarter. I mean what I usually do is you know I'm coming in here on a daily basis and I'm trying to do sweeps to see what tasks were unfinished as well as whether there were bugs that were showing that needed to be resolved or permission issues that were not in a accordance with rule 29 or missing tools, things of that nature. I would like to see Argus learning doing those sorts of things on its own. How can we make that happen?
+```
+
+**Ideas referenced:** #10182, #128126, #14749, #16213, #18806, #19415, #19434, #20025, #20036 [awaiting_review], #20884, #20890, #21582, #21667, #22310, #22850, #22887, #22939 [approved], #23027, #23094, #23132, #23136, #23144, #23166, #23170, #2323, #23231, #2324, #23241, #23247, #23286, #23292, #23328, #23387, #23429, #23506, #23556, #23561, #23582, #23623 [proposed], #23636 [proposed], #23637 [proposed], #23729, #23764, #23769, #23885 [proposed], #23899 [proposed], #23900 [ready_for_review], #23908 [proposed], #23910 [proposed], #23911 [proposed], #24789 [proposed], #24977 [proposed], #24987 [proposed], #25072, #25074 [proposed], #25151, #25547, #25552, #25572 [approved], #25574 [proposed], #25578 [approved], #25624 [proposed], #25625 [ready_for_review], #25822, #25833, #25888, #25932, #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25975, #25985, #25986, #26001, #26002, #26003 [deployed], #26018 [proposed], #26020 [deployed], #26025 [proposed], #26031 [proposed], #26032 [proposed], #26033 [proposed], #26047 [approved], #26075 [executing], #26083 [awaiting_review], #7326, #7377, #7428, #7784, #7785, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+s correctly tracked as #26083.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up Argus learning execution — apply the 403-tab fix (#26083) and finish evaluating the remaining offloaded Argus tasks.
+
+Where we left off (verified 2026-08-13 00:24 PT):
+- Sweep cron `cron_argus_daily_sweep.php` running every 4h (38 findings), lane 2 falsy-zero filter fixed, class-wide repair recipe baked in (#26075).
+- Self-heal cron v2 `cron/cron_argus_self_heal.php` running root `*/5`, schema-correct, heartbeat green.
+- WSOD fix applied to `routes/argus_task_status.php` (SESSION-LOCK RELEASE), 751 lines, lint clean; WSOD ideas 23899/23900/23908/23910/23911 marked deployed.
+- Callbacks ideas 25572/25574/25578 marked deployed (goToCallbacks verified in telephony_hub.php).
+- Two file-corruption events fully recovered (argus_task_status.php + the two 403-tab views); both restored from backups and lint-clean.
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #26083 [awaiting_review] — apply the 403 fix surgically via replace_in_file (NOT write_server_file full-overwrite): normalize role to lowercase stripped of _/space via currentUserRole(), then compare case-insensitively in BOTH `_view_argus_student_tools.php` (~line 17) and `_view_argus_cs_comms_suite.php` (~line 14). Verify with php -l + manual load as a CustomerService role before marking anything deployed.
+2. #26047 [executing] — finish evaluating the remaining 30+ offloaded tasks: hr@ hiring-forwarding cluster (tasks 122/123/124/126), student-account unarchive cluster (190/191/198), William Lee retake (458/459). Confirm each is already built (like Callbacks) before flipping status; do NOT assume idea status = feature absence.
+3. #26075 [executing] — verify the class-wide repair directive is enforced in the Argus repair path itself (not just the sweep recipe): confirm `argus_sls_doctor.php` / `canonical_repair` applies fixes to ALL affected students sharing the root cause, never a single student.
+
+Reference IDs:
+- Ticket: none (Argus offload stream)
+- Ideas filed this session: #26018 [superseded], #26025 [executing→deployed], #26031 [superseded], #26032 [superseded], #26033 [superseded], #26047 [executing], #26075 [executing], #26083 [awaiting_review]
+- Files touched: cron_argus_daily_sweep.php, cron/cron_argus_self_heal.php, routes/argus_task_status.php, routes/_view_argus_student_tools.php (restored), routes/_view_argus_cs_comms_suite.php (restored)
+- Ledger row appended: cline_task_ledger id 11
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786601835097` — 8/12/2026, 11:55:16 PM PT — 269 turns
+
+**Original task:**
+
+```
+#Server Was Down
+
+Turn it off, it does nothign for us now -> __What I need from you__ is the business call, tracked as #26068 [executing]. Should this pipeline run at all? If the corpus work replaced it, turning off the 9 LoRA crons stops 22GB/hr of writes, frees GPU time, and removes the outage vector entirely. If you want the adapters, someone has to wire the eval gate and the promotion path, because right now it trains and discards. My recommendation is to turn it off unless there is a specific adapter someone is waiting on. A pipeline producing zero promotions in 6.5 weeks while consuming 
+```
+
+**Ideas referenced:** #12676, #13487, #15928, #19338, #25185, #25256, #26007 [deployed], #26008 [executing], #26009 [deployed], #26017 [awaiting_review], #26019 [awaiting_review], #26023 [executing], #26024 [deployed], #26068 [executing], #26069 [deployed], #26070 [deployed], #26076 [executing], #26077 [executing], #6800
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
 ### `1786599361465` — 8/12/2026, 11:21:11 PM PT — 243 turns
 
 **Original task:**
@@ -322,45 +415,6 @@ It is not that
 ```
 
 **Ideas referenced:** #10740, #11397, #12249, #12266, #12285, #12588, #12589, #12590, #12618, #12688, #12689, #13453, #13459, #13470, #14133, #14142, #15776, #16715, #17078, #17174, #18335, #1911, #19686, #23133 [executing], #2334 [deployed], #25128, #25155, #25171, #25185, #25186, #25986, #26038 [executing], #26039 [executing], #26040 [executing], #26041 [executing], #26045 [executing], #26048 [executing], #26049 [rejected], #26050 [executing], #26065 [executing], #9222
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786591402307` — 8/12/2026, 11:17:38 PM PT — 155 turns
-
-**Original task:**
-
-```
-#Externship
-
-Still need 5 links to profiles to view that you say meet requirements
-
-Did you update this:  /var/www/emtskills/docs/CFA_CERT_READINESS_RCA_20260812.md
-
-
-You were right, and my earlier claim that no dates-remaining source existed was flat wrong.
-
-=== WHY 26904FT-03 SLIPPED THROUGH ===
-
-NREMT Testing Dates Remaining is a DERIVED value, not a stored column. admin_profile.php line 691 calls StatusCalculator::compute($row)['days'] from src/Status.php, which returns max(0, 60 minus days since scheduled didactic completion). John Erisman's didactic date was 2026-03-12, five months ago, 
-```
-
-**Ideas referenced:** #166534, #178649, #19419, #2323, #23477, #24526, #24765, #25185, #25822 [deployed], #25889 [awaiting_review], #25914, #25916 [awaiting_review], #25932 [deployed], #25950 [awaiting_review], #25971, #25973 [awaiting_review], #25974, #25975, #25976, #25984, #25985, #25986, #25990, #25995, #26001 [deployed], #26002 [awaiting_review], #26003, #26027 [awaiting_review], #26028 [deployed], #26034 [deployed], #26053 [approved], #26066 [approved], #26067 [deployed], #26071 [executing], #92400
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786585764315` — 8/12/2026, 11:17:31 PM PT — 718 turns
-
-**Original task:**
-
-```
-A lot of the links on these pages and tabs appear to be nonfunctioning: https://emsuniversity.com/emtskills/routes/chat_portal.php?conv=10021&site=14 
-
-Clicking on stuff and nothing is happening it's just locking up. Can you fix that?
-
-Maybe it needs an overhaul? Or just some deep testing? It just seems really buggy
-```
-
-**Ideas referenced:** #059669, #10027, #1119, #16732, #18335, #19837, #23133 [approved], #2332 [needs_verify], #23989, #25185, #25962, #25965, #26038 [executing], #26039 [executing], #26040 [executing], #26041 [executing], #26045 [executing], #26048 [executing], #26049 [rejected], #26050 [executing], #26054 [executing], #2916, #6111, #6366, #7907, #9086, #9152, #9168, #9222, #9339
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 

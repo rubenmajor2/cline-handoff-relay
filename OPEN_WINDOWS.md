@@ -6,11 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/13/2026, 12:41:53 PM PT | window: last 72h | 105 tasks | index total 691 (parsed 1, cached 690)
+Generated: 8/13/2026, 1:41:54 PM PT | window: last 72h | 104 tasks | index total 693 (parsed 3, cached 690)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786602908972` | 8/13/2026, 12:35:05 PM | 330 | 3979KB | #TDSHS/AZDHS 8/13 - Compliance |
+| `1786651267227` | 8/13/2026, 1:41:33 PM | 87 | 340KB | check the security certificate for onlineemd.com and fix it - the SSL |
+| `1786652849668` | 8/13/2026, 1:35:00 PM | 62 | 154KB | #TDSHS |
+| `1786602908972` | 8/13/2026, 1:22:41 PM | 342 | 4032KB | #TDSHS/AZDHS 8/13 - Compliance |
 | `1786607400519` | 8/13/2026, 7:27:01 AM | 200 | 1606KB | Hi Declined???? REALLY, is Email Agent really that ???? |
 | `1786581608927` | 8/13/2026, 4:29:51 AM | 428 | 1528KB | #CFA Learning |
 | `1786592555268` | 8/13/2026, 3:28:58 AM | 440 | 1956KB | #Argus |
@@ -112,15 +114,48 @@ Generated: 8/13/2026, 12:41:53 PM PT | window: last 72h | 105 tasks | index tota
 | `1786285332678` | 8/10/2026, 3:42:46 PM | 1136 | 15874KB | #Callbacks |
 | `1786340503930` | 8/10/2026, 3:28:55 PM | 792 | 2994KB | #Argus |
 | `1786391277181` | 8/10/2026, 2:14:28 PM | 205 | 592KB | Why is frankenstein-llm iterating at 50% of its normal speed? |
-| `1786381856309` | 8/10/2026, 1:09:23 PM | 218 | 606KB | If you take a look at all the CPR class websites, it seems that traffic on those is very l |
-| `1786386328622` | 8/10/2026, 12:48:13 PM | 163 | 335KB | /emtskills wedged yet again. Please check handoffs over the last few days. What's going on |
-| `1786384771407` | 8/10/2026, 12:47:55 PM | 254 | 580KB | #AI Directed Meditation |
 
 ---
 
 ## Per-window detail
 
-### `1786602908972` — 8/13/2026, 12:35:05 PM PT — 330 turns
+### `1786651267227` — 8/13/2026, 1:41:33 PM PT — 87 turns
+
+**Original task:**
+
+```
+check the security certificate for onlineemd.com and fix it - the SSL
+```
+
+**Ideas referenced:** #23585, #25990, #26007, #26017, #26019, #26077
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786652849668` — 8/13/2026, 1:35:00 PM PT — 62 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+Please give a copy of the PDF proposal to be submitted today to Sabrina first. 
+
+Full pickup prompt below, covering every thread from this window: the Ward letter, the compliance page tabs, the gold-standard PDFs for Emma and Kylie, the packet-composer defect, the CAPCE timing question, and the Richardson 8/7 and 8/10 emails.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #26154 — TDSHS/AZDHS/LEMSA compliance surface + Ward escalation + 8/13 packet PDFs.
+
+Where we left off (v
+```
+
+**Ideas referenced:** #26092 [proposed], #26096 [proposed], #26154 [proposed], #26155 [proposed], #26156 [proposed], #26157 [proposed], #26163 [executing], #26164 [executing], #58230, #600179
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786602908972` — 8/13/2026, 1:22:41 PM PT — 342 turns
 
 **Original task:**
 
@@ -134,45 +169,41 @@ This page seems to show past deadlines which is kind of odd. I'm showing somethi
 If I go to the main compliance page, I see this link button that says next to TDSHS AUG 6 which is not accurate because August 6 is already passed and we already met that deadline. So the stuff needs to update properly. Also I thought for sure there was something that was due today from AZDHS. Can you take a look at that and see? Also you need to check my email for the AZDHS stuff as wel
 ```
 
-**Ideas referenced:** #047857, #059669, #111827, #1370, #13967, #166211, #16957, #171083, #173898, #18676, #18717, #18718, #18719, #18720, #18733, #18743, #18744, #18746, #18827, #18895 [deployed], #18916, #18985 [rejected], #1899, #19006 [blocked], #1907, #1949, #19599, #19600, #19601, #23361, #24153, #24207, #24914, #24924, #24925, #24926, #24927, #249290, #249325, #24941, #24989, #250541, #251044, #251128, #251233, #251444, #251447, #251450, #251485, #251498, #25480, #2563, #26048, #26050, #26054, #26067, #26092 [proposed], #26096 [proposed], #26154 [proposed], #2763, #2813, #3730, #374151, #450438, #475569, #600179, #64748, #92400
+**Ideas referenced:** #047857, #059669, #111827, #1370, #13967, #166211, #16957, #171083, #173898, #18676, #18717, #18718, #18719, #18720, #18733, #18743, #18744, #18746, #18827, #18895 [deployed], #18916, #18985 [rejected], #1899, #19006 [blocked], #1907, #1949, #19599, #19600, #19601, #23361, #24153, #24207, #24914, #24924, #24925, #24926, #24927, #249290, #249325, #24941, #24989, #250541, #251044, #251128, #251233, #251444, #251447, #251450, #251485, #251498, #25480, #2563, #26048, #26050, #26054, #26067, #26092 [proposed], #26096 [proposed], #26154 [proposed], #26155 [proposed], #26156 [proposed], #26157 [proposed], #2763, #2813, #3730, #374151, #450438, #475569, #600179, #64748, #92400
 
 **Last PICKUP PROMPT:**
 
 ```
-cted in idea #26154 [proposed]
+ichardson 8/7 and 8/10 emails.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #26154 — Grant Johnson (26617FT-23) disposition + McKenzie Ward reply.
+Pick up task #26154 — TDSHS/AZDHS/LEMSA compliance surface + Ward escalation + 8/13 packet PDFs.
 
-Where we left off (verified 2026-08-13 12:34 PT):
-- #26154 [proposed] — CORRECTED to class-day math: 13 of 18 class days = 72.2%, past the 60% ceiling in 5 CCR §71750. No pro rata refund owed. Grievance policy is the correct exception door. Ruben's original framing was right.
-- "Refund currently in process" (squiroz, on or before 7/27) is an acknowledgment, not a commitment to any amount. The exposure is service-side: no disposition in six weeks, four unanswered chats 8/10.
-- Money: one settled charge $2,195.00, Authnet 81599734258, 5/6/2026, Visa 4582. QB inv 166352 paid, balance $0.00. No refund executed. Alleged 7/2 second charge not present in the Authnet cache.
-- Instructor-induced-withdrawal allegation stands (mother 7/2 chat, student 7/27 email), on an age ground our under-18 policy contradicts. DOB 9/14/2008, turns 18 on 9/14/2026.
-- Letter + guidance at /Users/rubenmajor/Desktop/REPLY_McKenzie_Ward_Grant_Johnson.md, awaiting Ruben's send.
-- Prior session state standing: rows 1/2/3 [sent]; rows 7 + 9 [drafted]; row 27 [drafted] TPIA-004 follow-up; row 31 LEMSA San Mateo audit due 8/19 12:00 PT.
+Where we left off (verified 2026-08-13 13:21 PT):
+
+WARD / GRANT JOHNSON (26617FT-23)
+- Final CEO-voice email drafted and approved in-window, NOT yet sent. One email, group reply-all (McKenzie Ward; cc Scott Johnson, gj907344@gmail.com, chenry@smcgov.org, Victoria Yu). Zero student-specific facts in the body. Leads with the substantive under-18 answer, routes case specifics to Victoria Yu, Ruben stays on the thread. Text is in the window above and in /Users/rubenmajor/Desktop/REPLY_McKenzie_Ward_Grant_Johnson.md (file still holds the earlier two-email version, needs updating to the final single-email text).
+- Refund position: instruction ran 6/22 to 7/12 = 18 class days; withdrawal 7/8 = class day 13 = 72.2%, PAST the 60% ceiling in 5 CCR §71750, so no pro rata refund is owed and the grievance process is the exception door. Ruben's original framing was right; an earlier calendar-day calculation (29%) was wrong and is retracted.
+- Under-18 policy, corrected: a student under 18 may complete ride-along hours, may test with the National Registry AFTER turning 18, and receives 30 additional days after the 18th birthday where an affiliated agency will not host a minor. Canonical source emsu://reference/nremt-under18-policy.
+- Money (verified): one settled charge $2,195.00, Authnet 81599734258, 5/6/2026, Visa 4582, billing gj907344@gmail.com. QB invoice 166352 paid, balance $0.00. No refundTransaction, no credit memo. The alleged 7/2 second charge does not appear in the Authnet cache.
+- "Refund currently in process" (squiroz, on or before 7/27) is an acknowledgment of a request in handling, NOT a commitment to any amount. The exposure is service-side: no disposition in six weeks, four unanswered chat follow-ups 8/10.
+- Both the mother (7/2 chat) and the student (7/27 email, email_inbound_log id 91318) independently state the instructor told him to drop because he was 17. Grant's DOB is 9/14/2008.
+
+COMPLIANCE DEADLINE CENTER (personnel/compliance_deadlines.php)
+- Rows 1, 2, 3 flipped to `sent` this window, which cleared the stale "TDSHS AUG 6" next-up label.
+- Rows 7 (Emma Johnson 1080261890) and 9 (Kylie Dictson 1080261915) are `drafted` with markdown drafts deployed to /var/www/emtskills/uploads/tdshs/.
+- Row 27 (EMSU-TPIA-2026-004) is `drafted`; follow-up letter deployed to /var/www/emtskills/uploads/tdshs/DRAFT_TPIA004_FollowUp_2026-08-13.md.
+- Row 31 added this window: LEMSA / San Mateo County EMS Agency EMT Training Program Audit response, due 8/19 12:00 PT.
+- Code read but NOT yet modified: the direction filter lives at line 212 of compliance_deadlines.php (`$where` build); the tab strip is at lines 797-812; the packet composer block is at lines 557-573.
 
 Open threads to drive next:
-1. #26154 [proposed] — Send the reply and record the disposition (free seat, or grievance file opened). The money call is Ruben's; giving the family an answer is not optional.
-2. #26096 [proposed] — San Mateo LEMSA audit response final review + PDF + signature before 8/19 12:00 PT. Must match whatever is said to the Ward family; chenry@smcgov.org is copied on both.
-3. #26092 [proposed] — Pull the external mailbox 8/6-8/13 for Sabrina Richardson's 8/7 and 8/10 DSHS emails; populate any new control numbers.
-4. Verify the 18-class-day denominator against the filed schedule of record before citing it to San Mateo (emsu_shifts shows only 9 in-window rows plus a duplicate) — (human-only decision, no idea).
-5. Gold Standard PDF responses for Emma Johnson (1080261890) and Kylie Dictson (1080261915) at the 8/13 packet link — (human-only decision, no idea).
-6. Compliance page: default the list to we_owe, add an "Agency is Overdue" tab for they_owe rows — (human-only decision, no idea).
 
-Reference IDs:
-- Ideas filed: #26154 [proposed], #26092 [proposed], #26096 [proposed]
-- Student: Grant Johnson, Students.id 8153570, slug 26617FT-23
-- Compliance rows: 1, 2, 3 [sent]; 7, 9, 27, 31 [drafted]
-- Files touched: /Users/rubenmajor/Desktop/REPLY_McKenzie_Ward_Grant_Johnson.md
+1. #26154 [proposed] — Send the Ward email, brief Vicky, record the disposition (free seat accepted, or grievance file opened). Vicky's briefing: refund under the formula is no, lead with the free seat, open the grievance file on request, and ask Ms. Ward for the statement line on the alleged 7/2 second charge rather than denying it. Update REPLY_McKenzie_Ward_Grant_Johnson.md to the final single-email text.
 
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
+2. #26155 [proposed] — Compliance page direction tabs. Ruben directive: default the list to what WE owe. Add a separate tab labeled "Agency is Overdue" for `dire
 ```
 
 ### `1786607400519` — 8/13/2026, 7:27:01 AM PT — 200 turns
@@ -3940,83 +3971,5 @@ do not inject anthropic
 ```
 
 **Ideas referenced:** #10108, #10740, #11741, #11781, #11953, #12314, #12365, #12366, #12368, #12459, #12477, #12618, #12657, #12672, #12689, #12824, #12872, #12878, #13108, #13121, #13202, #13832, #13874, #16120, #16163, #16265, #16304, #16674, #16676, #16844, #17202, #1754, #1755, #1781, #18312, #18326, #19338, #1989, #20042, #20495, #21045, #2114, #2254, #2258, #22583, #2299, #2302, #2303, #23169, #23171, #24144, #24172, #24186, #24217, #25097, #25112, #25172, #25185, #25468, #25471, #25565 [proposed], #25567 [proposed], #25571 [proposed], #25580 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786381856309` — 8/10/2026, 1:09:23 PM PT — 218 turns
-
-**Original task:**
-
-```
-If you take a look at all the CPR class websites, it seems that traffic on those is very low and so are registrations. How do we improve that? Are those forms working right? Are payments being received? What's going on? What about scheduiling, etc...?
-```
-
-**Ideas referenced:** #000000, #202608, #2271, #2274, #2275, #2292, #23223, #23308, #24184, #24635, #24636, #24645, #24646, #24791, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25538 [draft], #25539 [draft], #25540 [draft], #25541 [draft], #25542 [draft], #25543 [draft], #25544 [draft], #25545 [draft], #25549 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
- | Same Plesk CLI limitation |
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25549 — CPR fixes execution session
-
-Where we left off (confirmed 2026-08-10 13:10 PT):
-- 7 approved fixes ready to execute: #25538-#25539-#25541-#25542-#25543-#25544-#25545
-- #25538 (cprinstructor.co redirect) attempted 6 ways; Plesk CLI cannot do external 301. Needs Plesk web UI: Hosting Settings → Permanent redirect to https://emsuniversity.com
-- nginx.conf.custom placed at /var/www/vhosts/system/cprinstructor.co/conf/nginx.conf.custom but not auto-included by Plesk template
-- #25540 blocked (LA/Portland/Houston not staffed)
-
-Open threads to drive next:
-1. #25539 [approved] P1 — Diagnose phoenixcpr.org payment cliff: check wpforms-qb webhook URL, QB token validity, recent wpforms_logs entries in wp_bv0te DB
-2. #25542 [approved] P1 — Diagnose cprclass.org QBMS: check WooCommerce webhook delivery, MyWorks QB Sync log, manually advance stuck order 1186 to wc-completed
-3. #25538 [approved] P1 — Complete cprinstructor.co redirect via Plesk web UI (not CLI-doable)
-4. #25541 [approved] P2 — Install Yoast SEO on 9 active CPR WP sites via WP-CLI or direct file deploy
-5. #25543 [approved] P2 — Deploy EMSU chat widget to tucsoncpr, sanfranciscocpr, sanantoniocpr, cprsandiego, dallascpr
-6. #25545 [approved] P2 — Build CPR-to-EMT UTM attribution table in admin_portal
-7. #25544 [approved] P3 — 301-redirect zombie domains (baltimorecpr, bostoncprtraining, freecprclasses, cprguidelines) — same Plesk CLI limitation as #25538, may need Plesk UI
-
-Reference IDs:
-- Ideas: #25538 [approved], #25539 [approved], #25540 [blocked], #25541 [approved], #25542 [approved], #25543 [approved], #25544 [approved], #25545 [approved], #25549 [proposed]
-- Files touched: /var/www/vhosts/system/cprinstructor.co/conf/nginx.conf (edited+restored), /var/www/vhosts/system/cprinstructor.co/conf/vhost.conf (created), /var/www/vhosts/system/cprinstructor.co/conf/nginx.conf.custom (created)
-- DBs: wp_bv0te (phoenixcpr), wp_9skw8 (cprclass.org), wp_q31ow (sf), wp_id7ic (tucson), wp_yjqlq (dallas), wp_uiabm (sandiego), wp_g79da (sa)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786386328622` — 8/10/2026, 12:48:13 PM PT — 163 turns
-
-**Original task:**
-
-```
-/emtskills wedged yet again. Please check handoffs over the last few days. What's going on now????
-```
-
-**Ideas referenced:** #16523, #20581 [executing], #21763, #2274, #2275, #2292, #2301 [deployed], #23378, #24635, #24636, #24645, #24646, #24791, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25525, #25534, #25535, #25537, #25548 [executing], #25562 [executing], #8563, #8598
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786384771407` — 8/10/2026, 12:47:55 PM PT — 254 turns
-
-**Original task:**
-
-```
-#AI Directed Meditation
-
-
-Arent these Kaison level issues to resovle properly? Are these rule 29 fixes -> So that column is writer-__omission__, not corruption. The alarming 776,773 figure is mostly one field nobody populates. Where no sibling exists, the INSERT statement answers it statically: column absent from the INSERT means omission.
-
-Recommend retiring the "CLASS 2" label, since it reads as "maybe corrupt" and invites the exact overclaim the split was meant to prevent. Better: __2a omission__ (cosmetic) vs __2b coercion__ (real bug), because they need opposite work.
-
-Bonus defect found 
-```
-
-**Ideas referenced:** #13757, #1584, #178629, #18786, #2274, #2275, #2292, #23920, #23922, #23923, #23932, #23952, #24646, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25229 [deployed], #25238 [executing], #25240 [executing], #25241 [executing], #25313, #25364 [executing], #25365 [deployed], #25366 [deployed], #25373, #25375, #25385, #25401, #25425, #25525 [executing], #25528 [deployed], #25530 [executing], #25531 [executing], #25532 [deployed], #25534 [deployed], #25535 [executing], #25537 [executing], #25555 [executing], #25560 [in_progress], #25561 [in_progress]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

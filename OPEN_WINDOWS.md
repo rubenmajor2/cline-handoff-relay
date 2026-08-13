@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/13/2026, 3:41:54 PM PT | window: last 72h | 104 tasks | index total 695 (parsed 4, cached 691)
+Generated: 8/13/2026, 4:41:55 PM PT | window: last 72h | 102 tasks | index total 695 (parsed 2, cached 693)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786651267227` | 8/13/2026, 3:41:45 PM | 329 | 1000KB | check the security certificate for onlineemd.com and fix it - the SSL |
-| `1786652849668` | 8/13/2026, 3:41:17 PM | 399 | 2266KB | #TDSHS |
-| `1786660376952` | 8/13/2026, 3:41:04 PM | 25 | 103KB | help me file with Florida Board of Education application yet? Need that approval before we |
+| `1786652849668` | 8/13/2026, 4:41:29 PM | 501 | 2722KB | #TDSHS |
+| `1786660376952` | 8/13/2026, 4:29:25 PM | 102 | 378KB | help me file with Florida Board of Education application yet? Need that approval before we |
+| `1786651267227` | 8/13/2026, 4:05:11 PM | 360 | 1051KB | check the security certificate for onlineemd.com and fix it - the SSL |
 | `1786660346877` | 8/13/2026, 3:32:27 PM | 1 | 2KB | help me file with Florida Board of Education application yet? Need that approval before we |
 | `1786602908972` | 8/13/2026, 1:22:41 PM | 342 | 4032KB | #TDSHS/AZDHS 8/13 - Compliance |
 | `1786607400519` | 8/13/2026, 7:27:01 AM | 200 | 1606KB | Hi Declined???? REALLY, is Email Agent really that ???? |
@@ -112,31 +112,12 @@ Generated: 8/13/2026, 3:41:54 PM PT | window: last 72h | 104 tasks | index total
 | `1786224531010` | 8/10/2026, 5:43:16 PM | 406 | 940KB | #Big Mac |
 | `1786402632203` | 8/10/2026, 5:18:13 PM | 154 | 370KB | #AI directed meditation |
 | `1786405169832` | 8/10/2026, 4:55:51 PM | 102 | 230KB | #Payment Issues |
-| `1786392003768` | 8/10/2026, 3:50:36 PM | 90 | 244KB | #AI Direct Meditation |
-| `1786285332678` | 8/10/2026, 3:42:46 PM | 1136 | 15874KB | #Callbacks |
 
 ---
 
 ## Per-window detail
 
-### `1786651267227` — 8/13/2026, 3:41:45 PM PT — 329 turns
-
-**Original task:**
-
-```
-check the security certificate for onlineemd.com and fix it - the SSL
-```
-
-**Ideas referenced:** #12645, #15918, #18491, #18587 [approved], #19387, #2147, #2148, #2151, #2268, #2286, #23184, #23185, #2336, #23585, #25185, #25990, #26007, #26017 [awaiting_review], #26019 [awaiting_review], #26023, #26077 [awaiting_review], #26090, #26175 [executing], #26176 [executing], #26177 [executing], #8902, #8903
-
-**Last PICKUP PROMPT:**
-
-```
-thing asserted from memory.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #26175 — EMSU registrar glue + DNS redundancy follow-through.\n\nWhere we left off (verified 2026-08-13 15:40 PT):\n- onlineemd.com SSL FIXED. Multi-SAN LE cert (apex + www), notAfter Nov 11 2026, apex 200/verify=0, www 301/verify=0 (verified: openssl s_client + curl from Mac).\n- Root cause was stale .com glue 76.176.157.123 (WOPR's pre-2026-06-29 WAN IP, dead), not the ACME client. Recorded as bug library #2336.\n- #26019 [deployed] ns2 → 98.172.111.42 now actually live (verified: dig @1.1.1.1 = 98.172.111.42, survives the 2-min cron).\n- #26017 [deployed] onlineemd resolved; the other 3 domains in that P0 batch still need checking.\n- Rule 297 DELEGATION GATE shipped to Rules-archive/297-case-law.md, MCP reindexed (verified: 325 rules, 20 hardfloor).\n\nOpen threads to drive next:\n1. #26175 [executing] — RUBEN UI ACTION: GoDaddy → emsuniversity.com → Domain Settings → Manage DNS → Host names. ns1 → 172.116.115.101, ns2 → 98.172.111.42. Verify with: dig @a.gtld-servers.net emsuniversity.com NS +additional.\n2. #26017 [deployed] — re-check the other 3 domains from the expired-cert batch (onlyambos, houstonemtrefresher, rubenmajor). Use the NS-migration workaround if the glue is still unfixed.\n3. #26176 [executing] — ownership assertion in emsu-cf-wan-sync.sh + 24h deploy-verify loop for infra ideas. Note the remaining RECORDS entries (mail/mx/webmail/apex/ipv4/testing) have the same silent-revert exposure.\n4. #26177 [executing] — 3-line DELEGATION GATE pointer into the hardfloor rule 297 body; needs Ruben's --override on .pre-write-lint.sh.\n5. #26077 [executing] — ns1 UDP:53 packet loss (~1 in 3, 407-431ms) is still unfixed; suspect the edge router NAT UDP path.\n\nReference IDs:\n- Ideas filed: #26175 [executing], #26176 [executing], #26177 [executing]\n- Ideas closed: #26017 [deployed], #26019 [deployed]\n- Bug library: #2336 (acme_dns_timeout_stale_registry_glue_dead_old_wan_ip_2026_08_13)\n- Files touched: /usr/local/bin/emsu-cf-wan-sync.sh, /etc/nginx/plesk.conf.d/vhosts/onlineemd.com.conf, /etc/letsencrypt/live/onlineemd-multi/, /Users/rubenmajor/Documents/Cline/Rules-archive/297-case-law.md, HANDOFF_NOTES.md\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════"}</arguments>
-</invoke>
-```
-
-### `1786652849668` — 8/13/2026, 3:41:17 PM PT — 399 turns
+### `1786652849668` — 8/13/2026, 4:41:29 PM PT — 501 turns
 
 **Original task:**
 
@@ -156,11 +137,11 @@ Pick up task #26154 — TDSHS/AZDHS/LEMSA compliance surface + Ward escalation +
 Where we left off (v
 ```
 
-**Ideas referenced:** #14662, #14710, #250984, #251038, #251211, #251236, #251264, #251382, #251428, #26092 [proposed], #26096 [proposed], #26154 [proposed], #26155 [proposed], #26156 [proposed], #26157 [proposed], #26163 [executing], #26164 [executing], #26167 [executing], #26168 [approved], #26169 [approved], #26170 [approved], #26171 [approved], #26172 [approved], #26173 [executing], #26174 [executing], #26178, #58230, #600179
+**Ideas referenced:** #14662, #14710, #250984, #251038, #251211, #251236, #251264, #251382, #251428, #25185, #26092 [proposed], #26096 [proposed], #26154 [proposed], #26155 [proposed], #26156 [proposed], #26157 [proposed], #26163 [executing], #26164 [executing], #26167 [executing], #26168 [approved], #26169 [approved], #26170 [approved], #26171 [approved], #26172 [approved], #26173 [executing], #26174 [executing], #26178 [approved], #26180 [executing], #26182 [approved], #26184 [approved], #58230, #600179
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786660376952` — 8/13/2026, 3:41:04 PM PT — 25 turns
+### `1786660376952` — 8/13/2026, 4:29:25 PM PT — 102 turns
 
 **Original task:**
 
@@ -168,9 +149,87 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 help me file with Florida Board of Education application yet? Need that approval before we the FL DHS application. We want also to be a CE and EMT provider there. So may also need to do an application for EMT CE with the EMS Authority in Florida
 ```
 
-**Ideas referenced:** #2335 [deployed], #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #3310
+**Ideas referenced:** #17130 [superseded], #17537 [rejected], #18132 [deployed], #19125, #19173, #2335 [deployed], #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26183 [proposed], #3310
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+onths, contact (850) 245-4440.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #26183, Florida EMS state approval: confirm no CIE/private-postsecondary gate for EMT plus CE, and file the FL DOH Bureau of EMS Training Center application.
+
+Where we left off (verified 2026-08-13 4:28 PT):
+- Confirmed no Florida private-postsecondary (CA BPPE equivalent) approval is required for an EMT training program plus CE. FL chapter 401 routes all EMS education through FL Dept of Health Bureau of EMS: 401.27(4)(a) ([deployed] statute) for initial EMT program approval, 401.2715(2) ([deployed] statute) for CE/recertification training.
+- CIE (FL DOE postsecondary board) is affirmatively excluded for DOH-regulated EMS programs via 1005.06(1)(g) ([deployed] statute) and (1)(b) ([deployed] statute). Tracker rows 11 and 12 corrected accordingly.
+- Skills sign-offs come from DOH Training Center approval plus medical director via DH Form 1583 / FL Admin Code 64J-1.008, medical direction 64J-1.004 ([deployed]). CAPCE is not involved.
+- CAPCE not certified; tracker row 1 corrected to not_applied/new application ([deployed]).
+- Tracker rows 1, 11, 12 updated in admin_portal.accreditation_renewal_tracker; HANDOFF_NOTES.md updated.
+
+Open threads to drive next:
+1. #26183 [queued] (verified: idea_action approve returned new_status=approved, then get_idea_progress returned status="" auto-queued for implementation, ETA ~16:40 PT) — Executor is assembling the FL DOH Bureau of EMS Training Center application packet (DH 681-018). Confirm the packet includes the medical director agreement, a curriculum mapping to National EMS Education Standards, FL clinical site letters, and a distance learning plan, then submit to FL DOH Bureau of EMS, phone (850) 245-4440.
+
+Reference IDs:
+- Ideas filed: #26183 [queued] (verified: approved + auto-queued)
+- Files touched: admin_portal.accreditation_renewal_tracker rows 1, 11, 12; HANDOFF_NOTES.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786651267227` — 8/13/2026, 4:05:11 PM PT — 360 turns
+
+**Original task:**
+
+```
+check the security certificate for onlineemd.com and fix it - the SSL
+```
+
+**Ideas referenced:** #12645, #15918, #18491, #18587 [approved], #19387, #2147, #2148, #2151, #2268, #2286, #23184, #23185, #2336 [deployed], #23585, #25185, #25990, #26007, #26017 [awaiting_review], #26019 [awaiting_review], #26023, #26077 [awaiting_review], #26090, #26175 [executing], #26176 [executing], #26177 [executing], #8902, #8903
+
+**Last PICKUP PROMPT:**
+
+```
+Log
+
+No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #26175 [executing], EMSU registrar glue and DNS redundancy follow-through.
+
+Where we left off (verified 2026-08-13 16:04 PT):
+- onlineemd.com serves a valid multi-SAN LE cert (apex plus www), notAfter Nov 11 2026, apex HTTP/2 200 (verified: curl -sI after completion).
+- Root cause was stale .com glue 76.176.157.123 (WOPR pre-2026-06-29 WAN IP, dead), not the ACME client. Recorded as bug library incident 2336, status resolved.
+- Bug library incident 2286 closed this session: it was still `investigating` and named the edge router NAT UDP path as prime suspect, which the evidence disproved. Now linked to 2336.
+- Clarified for Ruben: NOTHING in this window touched frankenstein-llm. The `frankenstein_router_incidents` table name is general-purpose, not LLM-routing-only.
+- #26177 [deployed] rule 297 DELEGATION GATE is in Rules-archive/297-case-law.md, MCP reindexed (325 rules, 20 hardfloor).
+
+Open threads to drive next:
+1. #26175 [executing], RUBEN UI ACTION: GoDaddy, emsuniversity.com, Domain Settings, Manage DNS, Host names. Set ns1 to 172.116.115.101 and ns2 to 98.172.111.42. Check with: dig @a.gtld-servers.net emsuniversity.com NS +additional.
+2. #26017 [deployed], re-check the other 3 domains from the expired-cert batch (onlyambos, houstonemtrefresher, rubenmajor). Use the NS-migration workaround if the glue is still in place.
+3. #26176 [executing], ownership assertion in emsu-cf-wan-sync.sh plus a 24h deploy-verify loop for infra ideas. The remaining RECORDS entries (mail, mx, webmail, apex, ipv4, testing) carry the same silent-revert exposure.
+4. #26077 [executing], ns1 UDP:53 packet loss (roughly 1 in 3, 407-431ms) remains open as the smaller second problem. Suspect the edge router NAT UDP path.
+5. #26177 [deployed], remaining piece is a 3-line DELEGATION GATE pointer into the hardfloor rule 297 body, which needs Ruben's --override on .pre-write-lint.sh.
+
+Reference IDs:
+- Ideas filed: #26175 [executing], #26176 [executing], #26177 [deployed]
+- Ideas closed: #26017 [deployed], #26019 [deployed]
+- Bug library: incidents 2336 (resolved, new) and 2286 (resolved, superseded this session)
+- Files touched: /usr/local/bin/emsu-cf-wan-sync.sh, /etc/nginx/plesk.conf.d/vhosts/onlineemd.com.conf, /etc/letsencrypt/live/onlineemd-multi/, /Users/rubenmajor/Documents/Cline/Rules-archive/297-case-law.md, HANDOFF_NOTES.md
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1786660346877` — 8/13/2026, 3:32:27 PM PT — 1 turns
 
@@ -3847,94 +3906,3 @@ I looked up all five blank-comment transaction IDs from your screenshot in our d
 **Ideas referenced:** #19387 [deployed], #20613 [executing], #23062 [executing], #23268 [executing], #23279 [executing], #23280 [executing], #23281 [executing], #23282 [executing], #23304 [executing], #23391, #23394, #24158 [deployed], #24701 [executing], #25065 [executing], #25185, #25613 [executing], #4929
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786392003768` — 8/10/2026, 3:50:36 PM PT — 90 turns
-
-**Original task:**
-
-```
-#AI Direct Meditation
-
-Antyhign else? 
-
-Good catch, updated. The promise-keeping sweep's refund evidence now covers every payment rail we actually use, not just Authorize.net.
-
-The spec of #25561 [executing] was amended in the orchestrator record at 12:46 PT: money-promise fulfillment evidence = QuickBooks (invoice status, credit memos, payments), Authorize.net (refundTransaction rows), Stripe (refund/charge objects), Klarna (refund status), and Affirm (loan status via the existing lookup tools). The checker first resolves WHICH rail the student's original charge used (the verify_payment_state
-```
-
-**Ideas referenced:** #178638, #23920, #23922, #23923, #25185, #25229, #25238 [executing], #25240 [executing], #25241 [executing], #25385, #25401, #25422, #25424, #25525 [executing], #25530 [executing], #25531 [executing], #25534 [deployed], #25535 [deployed], #25537 [executing], #25555 [executing], #25560 [executing], #25561 [executing]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786285332678` — 8/10/2026, 3:42:46 PM PT — 1136 turns
-
-**Original task:**
-
-```
-#Callbacks
-
-that should go into the call back system, not a ticket. Those tickets are noise and need to be converted to callbacks GOING FORWARD. Offer callbacks to those outstanding in the last 48 hours like that and depreciate old process. -> Answering your question: "Voice call follow-up needed" tickets are not offers, they are internal support tickets. When the Voice AI cannot fully resolve a caller and the caller agrees to a follow-up, the AI creates one of these tickets so a human can call or email the person back.
-
-
-Answering your question: "Voice call follow-up needed" tickets are not o
-```
-
-**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #1745, #18316, #19338, #19458, #19491, #2274, #2275, #23133, #23989, #24645, #24646, #25097 [implemented], #25111, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25364 [executing], #25365 [deployed], #25486 [executing], #25593 [executing], #3133, #334155, #475569, #6172, #6579, #9042, #9159, #9222, #9501
-
-**Last PICKUP PROMPT:**
-
-```
-ule 91 (EMSU clinerules)**: every `attempt_completion` must end with a specific PICKUP PROMPT block (47 `═` U+2550 divider characters, no placeholder tokens, no bare `#NNNN` idea references without a `[status]` bracket, no em-dashes in ops-facing text).
-- **Rule 297 (EMSU clinerules)**: classify before diagnosing — do not declare a root cause from a probe/grep alone without confirming the actual runtime value; this was explicitly invoked when my `$base` variable theory was found to be a misdiagnosis.
-- **Rule 315 (EMSU clinerules)**: verify before declaring done — do not report a fix as "working" without live confirmation.
-- **Policing cron** (`/var/www/emtskills/crons/policing/cron_callback_policing.php`, scheduled via `/etc/cron.d/emsu-callback-policing`, runs every 15 minutes, deployed 2026-08-09 08:45): escalates callbacks more than 60 minutes overdue to `vicky@emsuniversity.com` and sends 30-minute-ahead pre-reminders. **Known gap**: does not retroactively scan for bookings that were already overdue before the cron itself first started running.
-
-## 3. Files and Code Sections
-
-### `/var/www/emtskills/lib/callback_intent_detector.php` — **5 CONFIRMED-SHIPPED FIXES**
-
-This file was completely rewritten in one pass (avoiding fragile incremental `str_replace` patches after earlier attempts failed to match exact strings). Backup of the pre-fix version exists at `/var/www/emtskills/lib/callback_intent_detector.php.bak-20260810-1045-pre-ship`.
-
-Key functions and their current (fixed) behavior:
-
-```php
-function callbackOwnTrunkNumbers(): array {
-    return ['8007280209', '9412943388', '9412545009', '8062304280', '9412349746'];
-}
-
-function bookCallbackSlot(PDO $pdo, string $name, string $phone, string $reason, string $cfaSource, string $studentId = null): ?int {
-    try {
-        // 1-per-person-per-day guard (2026-08-09): reject if this caller already
-        // has a live (pending/confirmed/in_progress) callback booked.
-        try {
-            $guardDigits = preg_replace('/[^0-9]/', '', (string)$phone);
-            $guardLast10 = substr($guardDigits, -10);
-            if ($guardLast10 !== '') {
-                $guardStmt = $pdo->prepare(
-                    'SELECT cb.id FROM callback_bookings cb '
-                    . 'JOIN callback_slots cs ON cb.slot_id = cs.id '
-                    . "WHERE REPLACE(REPLACE(REPLACE(REPLACE(cb.caller_phone, '+', ''), '-', ''), '(', ''), ')', '') LIKE :digits "
-                    . "AND cb.status IN ('pending','confirmed','in_progress') "
-                    . 'AND cs.slot_date >= CURDATE() LIMIT 1'
-                );
-                $guardStmt->execute([':digits' => '%' . $guardLast10]);
-                if ($guardStmt->fetch()) {
-                    error_log('[callback_intent_detector] bookCallbackSlot BLOCKED duplicate for phone=' . $phone);
-                    return null;
-                }
-            }
-        } catch (\Throwable $guardErr) {
-            error_log('[callback_intent_detector] dedup check failed (non-fatal): ' . $guardErr->getMessage());
-        }
-
-        $slotId = null;
-        // Slot window: NEXT DAY through +5 days (Ruben directive 2026-08-10: no same-day callbacks).
-        $slotSql = "SELECT id FROM callback_slots "
-            . "WHERE status = 'available' "
-            . "AND slot_date >= CURDATE() + INTERVAL 1 DAY "
-            . "AND slot_date <= CURDATE() + INTERVAL 5 DAY "
-            . "ORDER BY slot_date ASC, slot_time ASC LIMIT 1";
-        for ($attempt = 0; $attempt < 3; $attempt++) {
-            $slot = $pdo->prepare($slotSql);
-            $
-```

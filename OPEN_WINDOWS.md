@@ -6,13 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/13/2026, 12:48:26 AM PT | window: last 72h | 105 tasks | index total 690 (parsed 8, cached 682)
+Generated: 8/13/2026, 6:36:31 AM PT | window: last 72h | 106 tasks | index total 691 (parsed 1, cached 690)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786592555268` | 8/13/2026, 12:48:21 AM | 409 | 1841KB | #Argus |
-| `1786581608927` | 8/13/2026, 12:48:16 AM | 387 | 1421KB | #CFA Learning |
-| `1786602908972` | 8/13/2026, 12:48:10 AM | 193 | 1421KB | #TDSHS/AZDHS 8/13 - Compliance |
+| `1786607400519` | 8/13/2026, 6:36:15 AM | 133 | 1451KB | Hi Declined???? REALLY, is Email Agent really that ???? |
+| `1786581608927` | 8/13/2026, 4:29:51 AM | 428 | 1528KB | #CFA Learning |
+| `1786602908972` | 8/13/2026, 4:29:47 AM | 234 | 1685KB | #TDSHS/AZDHS 8/13 - Compliance |
+| `1786592555268` | 8/13/2026, 3:28:58 AM | 440 | 1956KB | #Argus |
 | `1786602203659` | 8/13/2026, 12:41:31 AM | 142 | 708KB | There appear to be some minor issues going on with Frankenstein LLM. It seems like I'm get |
 | `1786585764315` | 8/13/2026, 12:40:33 AM | 787 | 1879KB | A lot of the links on these pages and tabs appear to be nonfunctioning: https://emsunivers |
 | `1786591402307` | 8/13/2026, 12:36:48 AM | 191 | 569KB | #Externship |
@@ -120,50 +121,19 @@ Generated: 8/13/2026, 12:48:26 AM PT | window: last 72h | 105 tasks | index tota
 
 ## Per-window detail
 
-### `1786592555268` — 8/13/2026, 12:48:21 AM PT — 409 turns
+### `1786607400519` — 8/13/2026, 6:36:15 AM PT — 133 turns
 
 **Original task:**
 
 ```
-#Argus
-
-Would like to be able to click on any row and read the actual task itself: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=activity
+Hi Declined???? REALLY, is Email Agent really that ????
 ```
 
-**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #16213, #16263, #18745, #18770, #19370, #20547, #21140, #21262, #22310, #22511, #23506, #23852, #24897, #24900, #25047, #25573, #26005, #26044, #26045, #26048, #26049, #26050, #26062, #274160, #30363, #69707, #8645, #8942, #9650, #9654, #9660, #9733, #9889
+**Ideas referenced:** #15670, #16673, #16849, #17166, #177851, #23528, #24241, #7207
 
-**Last PICKUP PROMPT:**
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-```
-the one remaining human check.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus Activity tab: click any row to read the actual task.
-
-Where we left off (verified 2026-08-12 9:58 PM PT):
-- Feature is deployed and lint-clean on emsuniversity.com.
-- routes/alltastic_api.php (activity_log + agent_activity_log) now returns detail_id + detail_json (backup: /var/www/emtskills/routes/.alltastic_api.php.bak-argusdetail-20260812).
-- routes/argus_download.php has clickable rows + detail modal (openActDetail/__actRows/prettyDetail), folder/chat context menus restored (backup: argus_download.php.bak-ruben-impl-20260811-165051 for menu baseline).
-- API payload verified at SQL level: args/revert_info flow into modal.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-- None — all work completed this session. Remaining step is a human visual pass: log in as MasterAdmin, open ?tab=activity, click any row, confirm the modal shows the real task text.
-
-Reference IDs:
-- Ticket: none (Ruben's chat request)
-- Ideas filed: none
-- Files touched: /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/routes/argus_download.php
-- Backups: .alltastic_api.php.bak-argusdetail-20260812, argus_download.php.bak-ruben-impl-20260811-165051
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786581608927` — 8/13/2026, 12:48:16 AM PT — 387 turns
+### `1786581608927` — 8/13/2026, 4:29:51 AM PT — 428 turns
 
 **Original task:**
 
@@ -173,43 +143,39 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 Tell me about the CFA learning system. It does not seem like it's doing very much. How do we make it do things continually and get smarter on its own? It seems to be like it's stagnating and then I see these other things it appears as though it's even going backwards which is highly problematic. These things should be advancing not falling behind.
 ```
 
-**Ideas referenced:** #11945, #12184, #128126, #12816, #13063, #13202, #186576, #19821, #19903, #2294, #2307, #23133, #2314, #23169, #2321, #2323, #2324, #23477, #23945, #23954, #24145, #24165, #24217, #24526, #24765, #25042, #25426, #25551, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25822, #25888, #25914, #25931, #25932, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25971, #25974, #25975, #25976, #25984, #25985, #25986, #25990, #25995, #26001, #26002, #26003 [deployed], #26011 [proposed], #26012 [proposed], #26046 [proposed], #360135, #360152, #622333, #622384, #622385, #622824, #622825, #622875, #6826, #8200, #9070, #9112, #9222, #9999
+**Ideas referenced:** #11945, #12184, #128126, #12816, #13063, #13202, #186576, #19821, #19903, #22887, #22939, #2294, #2307, #23133, #23136, #2314, #23169, #2321, #2323, #2324, #23477, #23945, #23954, #24145, #24165, #24217, #24526, #24765, #25042, #25426, #25551, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25822, #25888, #25914, #25931, #25932, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25971, #25974, #25975, #25976, #25984, #25985, #25986, #25990, #25995, #26001, #26002, #26003 [deployed], #26011 [proposed], #26012 [proposed], #26046 [proposed], #26103 [proposed], #360135, #360152, #622333, #622384, #622385, #622824, #622825, #622875, #6826, #8200, #9070, #9112, #9222, #9999
 
 **Last PICKUP PROMPT:**
 
 ```
-cked as #26046 [approved].
-
-═══════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task — CFA Learning System diagnosis and repair.
+═════════════════════════════════════════════════════════════════════════════════════════
+Pick up task #26103 — repair the CFA learning-generation loop (producers write to non-existent columns / are unscheduled, so no new learnings in 71 days).
 
-Where we left off (verified 2026-08-13 12:05 AM PT):
-- Root cause: cron_integrity_watchdog.php logged 541K cron_integrity_failure rows/7d with no dedup → InnoDB pressure → 1205 timeouts → kaizen classifier/consumer + orchestrator triage wedged (learning stalled/regressed).
-- Deployed change-based alerting (state file logs/cron_integrity_watchdog_state.json): rerun alerts 275→0.
-- Marked all 541K flood rows processed=1; remaining=0.
-- Triage AI restored: key via FleetTierHealth::fth_get_litellm_key() + base http://localhost:4000; log shows real decisions (conf 0.95/0.92).
-- Kaison crons patched to real schema; reconciliation_log ALTERed (+table_target, rows_backfilled, status); triage dry-run 0 SQL errors.
+Where we left off (verified 2026-08-13 03:29 PT):
+- Flood fixed: the 541K `cron_integrity_failure` wedge cleared; queue draining (104,842 → 1,327 daily inflow).
+- Triage AI alive: 85% AI decisions on log tail, `decisions_24h=1,458`.
+- Kaison MCP probe writer patched to canonical schema (varchar run ID + JSON details + hidden columns).
+- Dead loop: `ai_learned_corrections` `promo` newest = 2026-06-02; `cron_silent_ghost_investigation.php` INSERTs into `source_type/source_id/correction_data` (never existed); 7 producer crons unscheduled; `kaizen_v2_enabled` flag missing.
 
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26046 [approved] — Re-point 7 MCP probe URLs in cron_kaison_mcp_tool_probes.php off phantom host mcp.emsu.edu (verified: appears in only 1 file, zero configs; our site is emsuniversity.com). Candidate serving paths: 127.0.0.1:8082 orchestrator dispatcher or chat_widget_api action routes; otherwise disable probes until a real HTTP MCP gateway exists.
-2. #26011 [executing] — After #26046: run writer, confirm real mcp_bridge rows land in ruben_bug_hunter_results linked by run_id; then confirm kaizen_failure_log gets fresh categories (last classification 2026-07-10).
-3. #26012 [executing] — Replace/disable FleetWarmSetManager (idea #12184) so fleet_warm_set_map_json never misleads agents again; assess artemis_freshness pattern id 70764 (cron_cline_pipeline_canary.php uses a different ingest meaning than LLM serving).
+Open threads to drive next (EVERY item must have a real filed idea #):
+1. #26103 [executing] — fix `cron_silent_ghost_investigation.php` INSERT to the real `ai_learned_corrections` schema (use meta_trainer's canonical column list) and run it once to verify a new `pending_review` row appears.
+2. #26103 [executing] — wire the 7 unscheduled producers into `/etc/cron.d` (silent_ghost_investigation, meta_agent_trainer, self_service_proctored_checkin, ruben_preference_compile_loop, confession_kaizen_bridge, kaizen_confession_feed, human_to_automation_bridge).
+3. #26103 [executing] — set `kaizen_v2_enabled` flag true in `ai_compiled_rules` and verify `argus_kaizen_learn_v2` compiles into `ai_compiled_rules` that CFAs read.
 
 Reference IDs:
-- Ideas filed/updated: #26011 [executing] kaison schema drift, #26012 [executing] stale warm-set JSON, #26046 [approved] phantom MCP host.
-- Ideas superseded: original #26012 "decommission Artemis" premise (reversed — Artemis healthy, never decommission).
-- Files touched: /var/www/emtskills/cron/cron_integrity_watchdog.php, cron/cron_orchestrator_triage.php, cron/cron_kaison_bug_hunter_triage.php, cron/cron_kaison_mcp_tool_probes.php.
-- DB: orchestrator_event_log (541K rows processed=1), reconciliation_log (ALTER), orchestrator_config (fleet_warm_set_map_json refreshed), orchestrator_ideas (#26011/#26012/#26046).
+- Ideas: #26103 [executing], #26046 [proposed→approved], #26012 [executing], #26011 [executing], #26011 [approved]
+- Files touched: `cron/cron_integrity_watchdog.php`, `cron/cron_orchestrator_triage.php`, `cron/cron_kaison_mcp_tool_probes.php`, `cron/cron_kaison_bug_hunter_triage.php`
+- Ticket: (none this session)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════
+═════════════════════════════════════════════════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
 
-### `1786602908972` — 8/13/2026, 12:48:10 AM PT — 193 turns
+### `1786602908972` — 8/13/2026, 4:29:47 AM PT — 234 turns
 
 **Original task:**
 
@@ -223,9 +189,81 @@ This page seems to show past deadlines which is kind of odd. I'm showing somethi
 If I go to the main compliance page, I see this link button that says next to TDSHS AUG 6 which is not accurate because August 6 is already passed and we already met that deadline. So the stuff needs to update properly. Also I thought for sure there was something that was due today from AZDHS. Can you take a look at that and see? Also you need to check my email for the AZDHS stuff as wel
 ```
 
-**Ideas referenced:** #047857, #059669, #111827, #166211, #16957, #171083, #173898, #23361, #249290, #249325, #250541, #251044, #251128, #251233, #251444, #251447, #251450, #251485, #251498, #25480, #2563, #26048, #26050, #26054, #26067, #2763, #2813, #3730, #374151, #450438, #475569, #64748, #92400
+**Ideas referenced:** #047857, #059669, #111827, #1370, #13967, #166211, #16957, #171083, #173898, #18676, #18717, #18718, #18719, #18720, #18733, #18743, #18744, #18746, #18827, #18895 [deployed], #18916, #18985 [rejected], #1899, #19006 [blocked], #1907, #1949, #19599, #19600, #19601, #23361, #24153, #24207, #24914, #24924, #24925, #24926, #24927, #249290, #249325, #24941, #24989, #250541, #251044, #251128, #251233, #251444, #251447, #251450, #251485, #251498, #25480, #2563, #26048, #26050, #26054, #26067, #26092 [proposed], #26096 [proposed], #2763, #2813, #3730, #374151, #450438, #475569, #64748, #92400
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+response_1080261915_Dictson.md
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — TDSHS/AZDHS 8/13 compliance follow-through (mailbox retrieval + response final review).
+
+Where we left off (verified 8/13/2026 4:12 AM PT):
+- Emma Johnson 1080261890 + Kylie Dictson 1080261915 drafts deployed, rows 7/9 `drafted`.
+- TPIA-004 (row 27) follow-up letter deployed, row 27 `drafted`.
+- Rows 1/2/3 marked `sent`; stale TDSHS AUG 6 dashboard label resolved.
+- LEMSA San Mateo audit deadline added as row id=31, due 8/19 12:00 PT.
+- AZDHS: nothing due 8/12; round-2 NOI response already transmitted 7/31.
+
+Open threads to drive next:
+1. #26092 [proposed] — Pull the external mailbox for 8/6-8/13 to retrieve Sabrina Lee Richardson's 8/7 and 8/10 DSHS emails, identify new/updated control numbers, and populate compliance_deadlines rows.
+2. #26096 [proposed] — Final review + PDF regeneration + signature block for the San Mateo LEMSA audit response (Richella Trujillo / Oscar Trujillo IV 26114T-05) before the 8/19 12:00 PT deadline.
+
+Reference IDs:
+- Ideas filed: #26092, #26096
+- Compliance deadline rows: 1,2,3 (sent), 7, 9, 27, 31 (drafted)
+- Files touched: /var/www/emtskills/uploads/tdshs/DRAFT_response_1080261890_Johnson.md, /var/www/emtskills/uploads/tdshs/DRAFT_response_1080261915_Dictson.md, /var/www/emtskills/uploads/tdshs/DRAFT_TPIA004_FollowUp_2026-08-13.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786592555268` — 8/13/2026, 3:28:58 AM PT — 440 turns
+
+**Original task:**
+
+```
+#Argus
+
+Would like to be able to click on any row and read the actual task itself: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=activity
+```
+
+**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #16213, #16263, #18745, #18770, #19370, #20547, #21140, #21262, #22310, #22511, #23506, #23852, #23952, #24897, #24900, #25047, #25573, #26005, #26044, #26045, #26048, #26049, #26050, #26062 [awaiting_review], #26107 [deployed], #274160, #30363, #69707, #8645, #8942, #9650, #9654, #9660, #9733, #9889
+
+**Last PICKUP PROMPT:**
+
+```
+h scripts removed from server.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus Activity tab: row-click detail modal + own/below-role visibility & revert interaction.
+
+Where we left off (verified 2026-08-13 03:12 PT):
+- routes/argus_download.php: Activity tab visible to all roles (line 27), row-click modal live (openAct/openActDetail/__actRows, CSS .act-modal-backdrop at line 234).
+- routes/alltastic_api.php: activity feed scoped via argusVisibleEmails/argusVisibleRoles (own + below-role + all non-Argus roles), gates lowered to CustomerService+, can_revert + revert_action re-scoped (lines 196-212, 4157, 4200, 4213, 4255, 4405).
+- Idea filed: #26107 [deployed].
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26107 [deployed] — Argus-scoped activity+revert (done this session); verify visually in browser as an Instructor/PD/CustomerService user: log in, open Activity tab, click a row, confirm modal shows full task JSON, confirm Revert button interacts without MasterAdmin.
+2. #26062 [awaiting_review] — separate pre-existing bug (placeholder skill instructor "TeExameiner" + 3 missing skill PDFs); triage and fix the data in admin_portal.skills records for student 26415W-08.
+
+Reference IDs:
+- Idea #26107 [deployed], #26062 [awaiting_review]
+- Files touched: /var/www/emtskills/routes/argus_download.php, /var/www/emtskills/routes/alltastic_api.php
+- Backups: routes/.alltastic_api.php.bak-argusdetail-20260812
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1786602203659` — 8/13/2026, 12:41:31 AM PT — 142 turns
 

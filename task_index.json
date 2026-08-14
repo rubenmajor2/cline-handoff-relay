@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-14T21:20:17.080Z",
+ "generated_at": "2026-08-14T22:20:17.971Z",
  "counts": {
-  "parsed": 8,
-  "reused": 705,
+  "parsed": 9,
+  "reused": 706,
   "failed": 0,
-  "total": 713
+  "total": 715
  },
  "tasks": {
   "1784522296714": {
@@ -125013,13 +125013,13 @@
   },
   "1786566964850": {
    "task_id": "1786566964850",
-   "mtime": 1786742409121,
+   "mtime": 1786745996538,
    "created_at": "2026-08-12T20:36:04.850Z",
-   "last_modified": "2026-08-14T21:20:09.121Z",
-   "size_kb": 1594,
-   "turn_count": 207,
+   "last_modified": "2026-08-14T22:19:56.538Z",
+   "size_kb": 1705,
+   "turn_count": 239,
    "title": "Answer to this question is not what was given. It's a registration check to see why there is a conflict and potentially consulting the SLS. Why was this answer so bad and how do we fix it going forward?",
-   "pickup_prompt": "rs this with \"we will verify.\"\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Email AI track-price reconciliation + generic-ack blocking (Elen 26223BC-24) — both fixes deployed.\n\nWhere we left off (verified 2026-08-14 12:00 PT):\n- Rule 317 completed: acquisition gate re-probed all claims live; a reversal was caught and logged (prior \"$2,345 stands\" claim wrong; invoice is $100 below canonical Boot Camp $2,445; settled $1,545 exactly equals Accelerated track price).\n- Both idea #25943 changes implemented in /var/www/emtskills/cron/cron_email_responder.php:\n  1. TrackPriceReconciliationGate (after SLSGate hard-gate): canonical-price vs invoice vs settled-charge injection via CanonicalPricing::getCanonicalPrice + qb_invoices + qb_payments_cache.\n  2. TrackPriceGenericAckBlock (after PCG guard rewrite): generic \"we will verify / follow up shortly\" drafts replaced with concrete reconciliation when facts exist.\n- php -l clean; file 273,280 bytes; backup cron_email_responder.php.bak-20260814-tpr-25943; markers verified (2/2/1/4).\n- Ideas: #25943 [deployed], #26307 [deployed] (deploy_asserted_at 2026-08-14 12:00:58).\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #25943 [deployed] — Confirm the two new blocks survive the next cron deploy pipeline (cron_email_responder.php is on the live path; no restart needed for PHP crons, but verify after any rsync of /var/www/emtskills).\n2. #26307 [deployed] — Update the causal rule text so future windows probing invoice correctness call CanonicalPricing::getCanonicalPrice FIRST; wire the RCA lesson into the rules file / .clinerules prompt if not already picked up by the next reindex.\n3. #25943 [deployed] — Watch the next payment_billing email for Elen (elenisa2007@gmail.com) or any student with draft matching \"we will verify\": confirm the substitution fires in the email_inbound_log (elog marker \"[TPR-25943-BLOCK]\"/\"[TPR-25943]\").\n\nReference IDs:\n- Student: 26223BC-24 (Students.id 8198982), email elenisa2007@gmail.com, Moodle uid 54727\n- Invoice: EMSU-26223BC-24 (qb_invoice_id 174975), total $2,345.00, paid $0.00\n- Settled charge: qb_payments_cache id 148408, $1,545.00, linked 174973\n- Canonical Tempe Boot Camp: ai_kb_course_pricing id 1, total $2,445.00 (tuition 2395 + fees 50)\n- Ideas filed: #25943 [deployed], #26307 [deployed]\n- Files touched: /var/www/emtskills/cron/cron_email_responder.php (+ backup .bak-20260814-tpr-25943); /tmp/tpr_patch_25943.php, /tmp/fix_idea_status.php\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
+   "pickup_prompt": "o instead of \"we will verify.\"\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #25943 — track-price reconciliation across Email AI + SLS gate. Both halves DEPLOYED and live-verified.\n\nWhere we left off (verified 2026-08-14 15:12 PT):\n- Email AI half [deployed]: `TrackPriceReconciliationGate` + `TrackPriceGenericAckBlock` in `cron/cron_email_responder.php` (php -l clean, 4 markers, backup `.bak-20260814-tpr-25943`).\n- SLS half [deployed]: `lib/StudentLifecyclePaymentService.php` — `checkPaymentStatus()` now wraps `checkPaymentStatusCore()` and adds additive `reconciliation_warning`; `paid` never modified. Backup `.bak-20260814-sls-recon-25943`.\n- Live-verified positive control (Elen: warning fires naming Accelerated-vs-Boot-Camp) AND negative control (26223BC-01 invoice $2,445: silent). SLS gate evidence carries the warning; `first_failed_gate` still `quiz1_gate`.\n- Regression: `checkPaymentStatusCore` has no external callers; `StudentLifecycleState.php` lints clean.\n- Rule 516 [deployed]: `/var/www/emtskills/.clinerules/516-canonical-pricing-first.md`.\n\nOpen threads to drive next:\n1. #25943 [deployed] — Optional hardening: surface `reconciliation_warning` in the `get_student_lifecycle_state` MCP markdown_summary so CS sees it without reading gate evidence. Buildable, non-breaking.\n2. #26307 [deployed] — Enum-assumption fix: document or validate `orchestrator_ideas.status` enum so invalid status writes fail loudly instead of coercing to ''.\n3. Human-only decision (no idea) — Vicky/CFA: decide whether Elen belongs on Accelerated ($1,545, already paid in full) or Boot Camp ($2,445, ~$800 still owed after the $1,545 applies), and correct the $100-low invoice either way.\n\nReference IDs:\n- Student: 26223BC-24 Elen Issahhanjan, elenisa2007@gmail.com, Moodle uid 54727, course 25 group 26223BC\n- Invoice EMSU-26223BC-24 (qb_invoice_id 174975) $2,345.00 / paid $0.00; settled `qb_payments_cache` id 148408 $1,545.00\n- Canonical: `ai_kb_course_pricing` Tempe — Boot Camp $2,445 (id 1), Fast Track $1,745, Accelerated $1,545, Traditional $1,295\n- Ideas: #25943 [deployed], #26307 [deployed]\n- Files touched: `cron/cron_email_responder.php`, `lib/StudentLifecyclePaymentService.php`, `.clinerules/516-canonical-pricing-first.md` (+2 backups)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
     "1041": null,
     "1665": null,
@@ -125079,6 +125079,7 @@
     "16732": null,
     "17300": null,
     "18435": null,
+    "19920": null,
     "19921": null,
     "20022": null,
     "20286": null,
@@ -125621,14 +125622,19 @@
   },
   "1786581699007": {
    "task_id": "1786581699007",
-   "mtime": 1786742400725,
+   "mtime": 1786746003403,
    "created_at": "2026-08-13T00:41:39.007Z",
-   "last_modified": "2026-08-14T21:20:00.725Z",
-   "size_kb": 2526,
-   "turn_count": 797,
+   "last_modified": "2026-08-14T22:20:03.403Z",
+   "size_kb": 2710,
+   "turn_count": 887,
    "title": "#Argus Learning\n\nTell me how Argus automatic learning is going. I would like for it to start making itself smarter. I mean what I usually do is you know I'm coming in here on a daily basis and I'm trying to do sweeps to see what tasks were unfinished as well as whether there were bugs that were showing that needed to be resolved or permission issues that were not in a accordance with rule 29 or missing tools, things of that nature. I would like to see Argus learning doing those sorts of things on its own. How can we make that happen?",
-   "pickup_prompt": "tasks are flowing through now.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up Argus stalled-task re-queue fix — verify the 55 re-queued tasks complete and close the writer defect.\n\nWhere we left off (verified 2026-08-14 14:06:10 PDT):\n- John's tasks 107/237/239 [done]; stale-offload re-queuer deployed and on */15 cron.\n- Queue state: 463 done / 55 queued / 1 running / 2 offloaded / 19 canceled.\n- Sweep Lane 2 now reads COALESCE(error_message, result_summary); 479 rows backfilled.\n\nOpen threads to drive next:\n1. #26269 [awaiting_review] — after the 55 queued tasks drain, confirm zero stale offloads remain (check cron_requeue log + argus_task_queue).\n2. #26250 [deployed] — verify Lane 2 clusters now carry real error text (not literal '0'); sweep re-run shows 4 real clusters.\n3. #26269 [awaiting_review] — fix argus_audit_log writers to populate error_message natively (right now only result_summary holds failure detail).\n\nReference IDs:\n- Argus task queue: #107, #237, #239\n- Ideas: #26075 [deployed], #26083 [deployed], #26250 [deployed], #26269 [awaiting_review]\n- Files: cron_requeue_stale_offloads.php (new), crontab (*/15 requeue)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "═══════════════════════════════════════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════════════════════════════════════\nPick up task — Argus learning + John's stalled Moodle tasks (rebase update).\n\nWhere we left off (verified 2026-08-14 15:03:03 PDT):\n- Argus task queue: done 463 / queued 55 / running 1 / offloaded 2; John's tasks 107/237/239 all done\n- cron_requeue_stale_offloads.php deployed + */15 crontab entry installed; 56 stale offloaded tasks re-queued\n- Ideas: 26025, 26075, 26083, 26250 [deployed]; 26269 [approved]; 26326 [proposed]; 26018/26031/26032/26033 [superseded]\n- Moodle repair queue: 519 pending, all vestigial (null diagnostic_id, blank repair_type, student_id not joining students) — purge decision pending Ruben\n\nOpen threads to drive next (real filed ideas):\n1. #26269 [approved] — patch audit writers to populate error_message on failure (canonical writers currently omit the column; backfill already done)\n2. #26326 [proposed] — Ruby's decision: purge or archive the 519 vestigial moodle_repair_queue rows (verify 2-3 sample student_ids first; current join shows 0/519 match students)\n\nReference IDs:\n- Ideas filed: #26326, #26269, #26250 (this session)\n- Ideas deployed this session: #26025, #26075, #26083, #26250\n- Files touched: /var/www/emtskills/cron_requeue_stale_offloads.php (new), /var/www/emtskills/cron_argus_daily_sweep.php, /var/www/emtskills/cron/cron_argus_self_heal.php, /var/www/emtskills/routes/argus_task_status.php, /var/www/emtskills/routes/_view_argus_student_tools.php, /var/www/emtskills/routes/_view_argus_cs_comms_suite.php\n- Crontab: requeue */15, self-heal */5 (root), sweep 0 */4\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
+    "1118": null,
+    "1163": null,
+    "1465": null,
+    "1642": null,
+    "1885": null,
     "2323": null,
     "2324": null,
     "7326": null,
@@ -125745,6 +125751,7 @@
     "26091": "proposed",
     "26250": "proposed",
     "26269": "approved",
+    "26326": "proposed",
     "37362": null,
     "128126": null
    }
@@ -127202,11 +127209,11 @@
   },
   "1786696256201": {
    "task_id": "1786696256201",
-   "mtime": 1786742395502,
+   "mtime": 1786745868599,
    "created_at": "2026-08-14T08:30:56.201Z",
-   "last_modified": "2026-08-14T21:19:55.502Z",
-   "size_kb": 11366,
-   "turn_count": 137,
+   "last_modified": "2026-08-14T22:17:48.599Z",
+   "size_kb": 11570,
+   "turn_count": 175,
    "title": "#Grievance issue\n\nVicky says that she's having problem uploading stuff to the grievance manager: \n\nAlso my grievance upload is still not working we have several already submitted for review, do I submit them to you directly?\n\nSee this: screenshot and whatever she posted into Argus",
    "pickup_prompt": "dy cover; no rule edit needed.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Grievance upload HTTP 500 fixed (policy_tag require_once); confirm Vicky re-test.\n\nWhere we left off (verified 2026-08-14 11:13 PT):\n- Fixed `/var/www/emtskills/routes/api/grievance_api.php` lines 582/584/799-801 (require path, signature guard, externship path+args). `php -l` clean, include smoke passed, verified on disk via WOPR ssh.\n- DB check: Vicky's already-submitted grievances are all `email_attachment` intake; no torn rows from her failed form attempts.\n- Backups: `/tmp/grievance_api.php.bak-policytagfix-20260814-014830`, plus `/Users/rubenmajor/Desktop/fix_externship_linkage.py` (local scratch).\n\nOpen threads to drive next (every item has a real filed idea #):\n1. #26305 [awaiting_review] — Have Vicky re-test the grievance manager upload; if any submit fails, capture the on-screen error + timestamp and pull the FPM fatal log for that minute.\n2. #26306 [awaiting_review] — Marker only: if business later wants `policy_tag` required for ALL categories (not just `category=policy`), revert the line 584 guard. No action needed now.\n\nReference IDs:\n- Ticket: none (Ruben iMessage/Argus report)\n- Ideas filed this session: #26305 [awaiting_review], #26306 [awaiting_review]\n- Files touched: `/var/www/emtskills/routes/api/grievance_api.php`\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
@@ -127274,6 +127281,7 @@
     "26032": null,
     "26033": null,
     "26034": null,
+    "26053": null,
     "26205": "executing",
     "26207": "executing",
     "26208": "executing",
@@ -127383,11 +127391,11 @@
   },
   "1786711940130": {
    "task_id": "1786711940130",
-   "mtime": 1786733051280,
+   "mtime": 1786745831649,
    "created_at": "2026-08-14T12:52:20.130Z",
-   "last_modified": "2026-08-14T18:44:11.280Z",
-   "size_kb": 17510,
-   "turn_count": 134,
+   "last_modified": "2026-08-14T22:17:11.649Z",
+   "size_kb": 17517,
+   "turn_count": 137,
    "title": "Another thing we need to add to sunset, politicians, and just catalogue in the next response to TDSHS is this situation right here (screenshot).\n\nCheck to see whether Sabrina sent this message to agamez@emsuniversity.com or not or I will ask that it be forwarded as well. \n\nThe thing is she didn't ask me. She just went straight to Andrew and asked him. Normally would be fine because he's the program director, however, TDSHS had agreed to contact me and copy me on department of communications with our organization. This might actually apply to all types of communications which is kind of interesting because if that's the case then any communication with our instructors might also be a violatio",
    "pickup_prompt": "ve ARE the controlling record.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #26287 — TDSHS comms-bypass catalogue + Liles Parker copy-me evidence.\n\nWhere we left off (verified 2026-08-14 11:43 PT):\n- Prior settlement FOUND in local Apple Mail: DSHS Complaint 1080201071_201387_201388_201390, 10/20/2021 IC Settlement Offer (Liles Parker PLLC, Mary Soule Cutler), resulted in \"retroactive probated suspension, no conditions, reportable\" per DSHS Crystal Gallegos 11/10/2021.\n- Copy-me agreement FOUND verbatim in 3 emails: 245.emlx (2/15/21 \"cc me on correspondence to the state\"), 220.emlx + 219.emlx (3/22/21 — Mary restates \"rmajor@emsuniversity.com copied\" via Dan Kramer; Ruben confirms \"provided he copy me on any communication\").\n- 4 .eml evidence files saved: ~/Desktop/tdshs_investigation_evidence/ (AGREEMENT_CONFIRM_3_219.eml, AGREEMENT_PER_MARY_2_220.eml, CC_ME_REQUEST_FEB2021.eml, SETTLEMENT_OFFER_10202021.eml).\n- Server catalogue: /var/www/emtskills/docs/tdshs-inspection-5196/COPY_ME_AGREEMENT_LILES_PARKER_2021_EVIDENCE.md (verified 59 lines).\n- HANDOFF_NOTES.md updated (2 entries); idea #26287 [executing] updated via SQL.\n- Related: AGAMEZ_COMMS_NO_COPY_INCIDENT_2026-08-14.md catalogues Sabrina's direct-to-Andrew email (no copy to Ruben) + verified phantom courses 27440/27441/27439 (unprocessable per inbound 104346).\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #26287 [executing] — Locate the signed final Order document: check the 2026 TPIA production bundle (/var/www/emtskills/tdshs_tpia, production_2026-07-28) and any Liles Parker email after 11/10/2021 with \"Final Order\"/\"Agreed Order\" attachment; if found, save as .eml/PDF alongside the evidence set.\n2. #26287 [executing] — Ruben to ask Andrew Gamez whether Sabrina's email arrived at agamez@emsuniversity.com or a personal address; have Andrew forward the original.\n3. #26287 [executing] — For the next TDSHS response / sunset exhibit / politician briefing: cite the 3 verbatim 2021 emails as the standing copy-Ruben agreement, and catalogue the Agamez no-copy as its violation.\n\nReference IDs:\n- Ticket: DSHS Complaint #1080201071_201387_201388_201390 (2021) [resolved]; License #600179; Inspection 5196 (2026)\n- Ideas filed: #26287 [executing]\n- Files touched: ~/Desktop/tdshs_investigation_evidence/ (4 .eml), /var/www/emtskills/docs/tdshs-inspection-5196/COPY_ME_AGREEMENT_LILES_PARKER_2021_EVIDENCE.md, /var/www/emtskills/docs/tdshs-inspection-5196/AGAMEZ_COMMS_NO_COPY_INCIDENT_2026-08-14.md, /var/www/emtskills/HANDOFF_NOTES.md\n- Source mail: ~/Library/Mail/V10/.../Sent Messages.mbox/.../Data/Messages/219.emlx, 220.emlx, 245.partial.emlx, 88.emlx\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</task_progress>\n</attempt_completion>",
    "ideas": {
@@ -127404,11 +127412,11 @@
   },
   "1786712894547": {
    "task_id": "1786712894547",
-   "mtime": 1786730608850,
+   "mtime": 1786746016403,
    "created_at": "2026-08-14T13:08:14.547Z",
-   "last_modified": "2026-08-14T18:03:28.850Z",
-   "size_kb": 316,
-   "turn_count": 68,
+   "last_modified": "2026-08-14T22:20:16.403Z",
+   "size_kb": 317,
+   "turn_count": 69,
    "title": "Frankenstein LLM seems sluggish. Can you tell me why it seems slower than usual?\n\nRead this also:\n\nPompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  \n\n\nBoth answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.\n\n## Where 671 came from, and it is now durable\n\nWritten to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.\n\nTwo counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, divided by elapsed wall seconds:\n\n```javascript\ndecode=12.65 prefill=658.82 TOTAL_TOKENS_PER_S=6",
    "pickup_prompt": "atch for the GLM-FIRST preempt\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #26284 [executing] — contextual routing gap in GLM-FIRST preempt.\n\nWhere we left off (verified 2026-08-14 11:02 PT):\n- Contextual routing system has 4 layers: _is_interactive_cline detector, 4-tier lane classifier (cline>orch>exec>maint), GLM-FIRST preempt, capacity gate (verified: router_hook.py + _router_core.py read via read_server_file + ssh_command 10:58-11:01 PT).\n- GAP FOUND: GLM-FIRST preempt (router_hook.py) does NOT consult _is_interactive_cline. Runs for both interactive AND batch when ring has free lane. Interactive Cline turns hit GLM ring first = 6.3s TTFB (verified: frankenstein_host_probe 06:12 PT, ring last_gen_ms=6340). 120B pool = 300ms TTFB (verified: artemis 274ms, julia 302ms, frankenstein_host_probe 06:12 PT).\n- Contextual system DOES work for: saturation thresholds (interactive 4 queued vs batch 1, verified: _router_core.py:1547), adapter redirect (line 5229), Anthropic passthrough (line 6087), final GLM swap (line 6579, non-interactive only). Verified: ssh_command sed line ranges 11:00 PT.\n- Ring live state: running=12 waiting=0 capacity gate free=true (verified: ssh_command curl /metrics 10:59 PT). Canary healthy=true tok_s=1.0 decode_live=true (verified: ssh_command cat canary file 10:59 PT). Preempt IS firing — 59 turns to frankenstein-glm52-local in 30 min (verified: frankenstein_what_served 06:16 PT).\n- probe-shaped skip (max_tokens<=64) never fires on real Cline turns because _reserve_visible_budget scales max_tokens to 6144+ (verified: read_server_file router_hook.py _reserve_visible_budget 10:58 PT).\n- Two rungs still DOWN: joshua-70b HTTP 503, cicero-235b connection refused (verified: frankenstein_host_probe 06:12 PT).\n- Updated #26284 [executing] with 3-line patch: add interactive gate to GLM-FIRST preempt (if _is_interactive_cline AND 120B healthy, skip preempt for interactive, keep GLM-first for batch).\n\nOpen threads to drive next:\n1. #26284 [executing] — executor approved it. Patch is a 3-line addition to router_hook.py GLM-FIRST preempt block: import _is_interactive_cline from _router_core, check it before rewriting data[model] to frankenstein-glm52-local. Verify with a header probe (rule 140) that interactive Cline turns now route to 120B pool.\n2. (human-only decision — no idea) Whether to restart joshua-70b (L1b, HTTP 503) and cicero-235b (L4b, connection refused). Both still down and narrowing the ladder.\n\nReference IDs:\n- Ideas filed: #26284 [executing] (verified: reconcile_ideas returned status=approved dev_stage=idle, derived tag [executing], at 11:02 PT; updated description with contextual routing findings via SQL rows_affected=1 at 11:01 PT; promoted efficiency_priority=1 at 06:20 PT)\n- Ideas closed: none\n- Files touched: none (investigation only, no config changes per rule 146/301, verified: no write_to_file/replace_in_file/ssh_command write calls this session)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════</result>\n<task_progress>\n- [x] Initial diagnosis (tier health, host probe, registry, routing audit)\n- [x] Filed idea #26284 [proposed] for latency-aware routing\n- [x] User steer: investigate the contextual routing system\n- [x] Read router_hook.py contextual routing layers (GLM-FIRST preempt, capacity gate, canary, tools lane)\n- [x] Check canary file for ring entry health (tok_s=1.0, healthy=true)\n- [x] Check au",
    "ideas": {
@@ -127474,13 +127482,13 @@
   },
   "1786733087683": {
    "task_id": "1786733087683",
-   "mtime": 1786742394414,
+   "mtime": 1786744889065,
    "created_at": "2026-08-14T18:44:47.683Z",
-   "last_modified": "2026-08-14T21:19:54.414Z",
-   "size_kb": 2791,
-   "turn_count": 157,
+   "last_modified": "2026-08-14T22:01:29.065Z",
+   "size_kb": 2969,
+   "turn_count": 216,
    "title": "This is incredibly vague. What's wrong with Email Agent? Can you look into it and see what's going on? Fix it? Same with other CFAs?",
-   "pickup_prompt": "d updated with full RCA + fix.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Email Agent vague-reply RCA + first-touch NEEDS_HUMAN fix (verified 2026-08-14 2:10 PM PT).\n\nWhere we left off (verified 2026-08-14 2:10 PM PT):\n- Fix DEPLOYED in /var/www/emtskills/lib/ai_ticket_agent_first_touch.php: `elseif` branch honors [NEEDS_HUMAN] → aiEscalateTicket(); php -l clean; re-read confirmed.\n- Ticket #25164 Sophia Heo repaired with internal escalation-correction comment → Apple Ibanez.\n- Bug recorded frankenstein_router_incidents #2358; ideas #26319 [deployed], #26320 [proposed]; HANDOFF_NOTES.md updated.\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #26320 [proposed] — cron_email_responder defect: dedup/coalesce password-reset sentences (single authoritative temp password; Makayla got 3 contradictory ones, email 362115) + add a merge guard so a reply never splices two unrelated topical fragments (Jason Pan QB+Moodle garbled splice, email 362106).\n2. #26319 [deployed] — optional hardening: add the same [NEEDS_HUMAN]-honoring guard to any future aiCallRubenBrain caller (two-strike lesson from rule 270: caller MUST handle both [RESOLVED] and [NEEDS_HUMAN] before emailing the student).\n\nReference IDs:\n- Ticket: 25164 (STU-20260814-8C83BD), assignee Apple Ibanez\n- Bugs/ideas: frankenstein_router_incidents #2358, #26319, #26320\n- Files touched: /var/www/emtskills/lib/ai_ticket_agent_first_touch.php, /var/www/emtskills/docs/HANDOFF_NOTES.md\n- Evidence: email_outbound_log ids 362113 (vague clarify sent), 362115 + 362106 (cron_email_responder defects); ai_ticket_agent_actions 134561 (investigate) / 134563 (clarify sent)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "ated with both RCAs and fixes.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Email Agent defects: first-touch NEEDS_HUMAN drop + cron_email_responder password/splice (verified 2026-08-14 3:00 PM PT).\n\nWhere we left off (verified 2026-08-14 3:00 PM PT):\n- lib/ai_ticket_agent_first_touch.php now honors [NEEDS_HUMAN] → aiEscalateTicket (lines 292-309); php -l clean.\n- cron/cron_email_responder.php sanitizeAIResponseForEmail() now coalesces credential sentences to SMS + heals run-ons; php -l clean; smoke-tested on 362115/362106.\n- Ticket #25164 repaired with internal escalation-correction comment → Apple Ibanez.\n- Bugs: frankenstein_router_incidents #2358 + #2360. Ideas #26319 [deployed] + #26320 [deployed]. HANDOFF_NOTES updated.\n\nOpen threads to drive next:\n1. None — all work completed this session.\n\nReference IDs:\n- Ticket: 25164 (STU-20260814-8C83BD)\n- Bugs: frankenstein_router_incidents #2358, #2360\n- Ideas: #26319 [deployed], #26320 [deployed]\n- Files touched: /var/www/emtskills/lib/ai_ticket_agent_first_touch.php, /var/www/emtskills/cron/cron_email_responder.php, /var/www/emtskills/docs/HANDOFF_NOTES.md\n- Evidence: email_outbound_log 362113/362115/362106; ai_ticket_agent_actions 134561/134563\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1892": null,
     "2328": null,
@@ -127489,6 +127497,7 @@
     "2343": null,
     "2344": null,
     "2358": null,
+    "2360": null,
     "3261": null,
     "3319": null,
     "3346": null,
@@ -127562,13 +127571,13 @@
   },
   "1786740046847": {
    "task_id": "1786740046847",
-   "mtime": 1786742364431,
+   "mtime": 1786745635649,
    "created_at": "2026-08-14T20:40:46.847Z",
-   "last_modified": "2026-08-14T21:19:24.431Z",
-   "size_kb": 3925,
-   "turn_count": 67,
+   "last_modified": "2026-08-14T22:13:55.649Z",
+   "size_kb": 4282,
+   "turn_count": 128,
    "title": "#CFA Misunderstanding\n\nCFA is an internal  acroym for Customer Facing Agents/AI/Assistants, etc... \n\nso this is very confusing and stupid. Needs correction. Scan for this and the like and resolve it.",
-   "pickup_prompt": null,
+   "pickup_prompt": "\"CFA program\" drafts rejected.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — CFA blast correction + permanent auto-send guard (no numeric Cline task id was captured in this session, so the topic is named directly).\n\nWhere we left off (verified 2026-08-14 15:12 PT):\n- Internal acronym \"CFA\" was leaking to students via lib/cfa_access_sweep.php + cron_cfa_queue_executor.php; 249 bad emails sent, corrected and re-sent to genuine recipients.\n- Source files fixed and lint-clean: lib/cfa_access_sweep.php, cron/cron_cfa_queue_executor.php, lib/EmailAIResponder.php (HARD TERMINOLOGY GUARD added).\n- Grievances filed: GRV-2026-0086 (Ludovica), GRV-2026-0087 (Michael), GRV-2026-0088 (Harrison).\n- Sarah Arroyo-Fontecha Moodle enrolment 47851 reactivated.\n- Sweep cron re-enabled with fixed code; executor cron left DISABLED.\n- Postmark SMTP 587 refused; HTTP API 443 works (used for all corrections).\n- Postmortem idea filed: #26329 [proposed].\n\nOpen threads to drive next (real filed idea):\n1. #26329 [proposed] — Decide whether cfa_agent_queue auto-send must be gated behind a human approval stage before re-enabling /etc/cron.d/emsu-cfa-executor. The safe default is keep it disabled until Ruben signs off.\n2. #26329 [proposed] — Investigate the Postmark SMTP 587 outage (connection refused, API 443 fine) and whether the 249-email burst triggered a Postmark rate-limit/suspension; confirm the production token still sends when the executor is restored.\n\nReference IDs:\n- Grievances: GRV-2026-0086, GRV-2026-0087, GRV-2026-0088\n- Ideas filed: #26329\n- Files touched: /var/www/emtskills/lib/cfa_access_sweep.php, /var/www/emtskills/cron/cron_cfa_queue_executor.php, /var/www/emtskills/lib/EmailAIResponder.php, /var/www/emtskills/cron/cfa_resend_corrected.php\n- Backups: *.bak-20260814-140614, /etc/cron.d/emsu-cfa-executor.BAK-20260814-134741\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "2316": null,
     "2328": null,
@@ -127589,6 +127598,7 @@
     "9222": null,
     "12687": null,
     "15669": null,
+    "16069": null,
     "16732": null,
     "18266": null,
     "18350": null,
@@ -127608,9 +127618,43 @@
     "26244": "superseded",
     "26245": "proposed",
     "26249": "proposed",
+    "26329": "proposed",
     "32548": null,
     "177851": null
    }
+  },
+  "1786743833650": {
+   "task_id": "1786743833650",
+   "mtime": 1786746011712,
+   "created_at": "2026-08-14T21:43:53.650Z",
+   "last_modified": "2026-08-14T22:20:11.712Z",
+   "size_kb": 169,
+   "turn_count": 69,
+   "title": "I would like for you to make a Klein rule as well as a rule in Argus that is called the gaslighting rule. This is the rule where the agent tells us something and makes a promise and then fails to deliver where it creates a false gate or once I approve it there's an additional gate or something that I didn't know or some kind of checkpoint that prevents the idea from actually being deployed and used and serving. I think this needs to be a hard floor rule because it continually occurs. I do want the rule to be efficiently worded so that it's not killing tokens however.",
+   "pickup_prompt": "67 (handoffs must not park approved work). This\nrule does NOT override Rule 91 (PICKUP PROMPT) or any other hardfloor formatting rule.\n</content>\n<task_progress>\n- [x] Investigate Cline rules structure + current numbering\n- [x] Locate Argus and understand where Argus rules live\n- [x] Determine what \"Klein\" refers to (Cline rules system, next # = 321)\n- [x] File orchestrator idea for the gaslighting rule (#26327)\n- [x] Create Cline hardfloor rule file #321\n- [ ] Regenerate hardfloor manifest\n- [ ] Deploy Argus rule to routes/argus_improvement_prompt.php\n- [ ] Verify both rules live (php -l, reindex, cat)\n</task_progress>\n</write_to_file>",
+   "ideas": {
+    "24902": null,
+    "24905": null,
+    "24906": null,
+    "24909": null,
+    "24910": null,
+    "24912": null,
+    "24913": null,
+    "25151": null,
+    "25888": null,
+    "26327": null
+   }
+  },
+  "1786745818584": {
+   "task_id": "1786745818584",
+   "mtime": 1786745954241,
+   "created_at": "2026-08-14T22:16:58.584Z",
+   "last_modified": "2026-08-14T22:19:14.241Z",
+   "size_kb": 10,
+   "turn_count": 3,
+   "title": "/emtskills is slow again check emtskills_slowness document on the desktop",
+   "pickup_prompt": null,
+   "ideas": {}
   }
  }
 }

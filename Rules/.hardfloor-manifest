@@ -4,7 +4,7 @@
 # the .md file in Rules/ and re-run this script. Consumers read THIS file:
 #   - clinerules-mcp/src/index.ts (loadHardfloorManifest)
 #   - Rules/.pre-write-lint.sh    (G5 hardfloor gate, G6 non-hardfloor gate)
-# Regenerated: 2026-08-12T09:18:50-0700
+# Regenerated: 2026-08-14T15:10:21-0700
 [hardfloor]
 00-READ-FIRST-17-force-subagent-use-on-research-and-multi-step-builds
 01-voice-and-persona
@@ -23,6 +23,7 @@
 302-no-credentials-in-git-tracked-config
 315-verify-before-declaring-host-down
 317-reversal-triggers-297-and-rule-update
+321-gaslighting-rule
 41-post-deploy-call-the-tool-do-not-narrate
 91-every-completion-needs-pickup-prompt
 99-subagent-verify-before-claim

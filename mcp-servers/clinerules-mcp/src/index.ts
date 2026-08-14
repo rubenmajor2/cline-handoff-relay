@@ -36,8 +36,8 @@ const RULES_DIR = path.join(HOME, "Documents/Cline/Rules");
 // so Cline's hardcoded recursive walk of RULES_DIR no longer injects them.
 // MCP still indexes both directories so clinerules_lookup/search work unchanged.
 const ARCHIVE_DIR = path.join(HOME, "Documents/Cline/Rules-archive");
-const DB_DIR = path.join(HOME, ".clinerules-mcp");
-const DB_PATH = path.join(DB_DIR, "index.sqlite");
+const DB_DIR = process.env.CLINERULES_DB_DIR || path.join(HOME, ".clinerules-mcp");
+const DB_PATH = process.env.CLINERULES_DB_PATH || path.join(DB_DIR, "index.sqlite");
 const VERSION = "0.1.0";
 
 if (!fs.existsSync(DB_DIR)) fs.mkdirSync(DB_DIR, { recursive: true });
@@ -902,9 +902,28 @@ server.tool(
       } else {
         // Section present: every listed flip must carry an RCA bucket; any flip citing a
         // rule update must reference a real file/slug, or a filed idea number with a disposition.
-        const reversalSection = result_text.split(/│+\s*PICKUP PROMPT/i)[0];
-        const flipLines = reversalSection.split("\n").filter((l: string) => /→|=>|becomes?/i.test(l) && /RCA\s*(bucket)?\s*[:=]|wrong premise|stale assumption|unread source|insufficient probe|scope error/i.test(l));
-        const flipsWithoutRca = reversalSection.split("\n").filter((l: string) => /→|=>/i.test(l) && /^-/i.test(l.trim()) && !/wrong premise|stale assumption|unread source|insufficient probe|scope error/i.test(l));
+        // SECTION SPLIT FIX (2026-08-14, positive-control C). This split on U+2502
+        // BOX DRAWINGS LIGHT VERTICAL. The rule-91 divider is U+2550, so the split
+        // never matched and the reversal section was the ENTIRE result including the
+        // pickup prompt. Split on the real divider, literal header as fallback.
+        const reversalSection = result_text
+          .split(/\u2550{5,}[\s\S]{0,60}?PICKUP PROMPT/i)[0]
+          .split(/PICKUP PROMPT \(paste into a fresh Cline window\)/i)[0];
+        // FLIP-PHRASING FIX (2026-08-14, positive-control C). The unbucketed-flip
+        // filter matched ONLY the arrow glyphs. Rule 317's own body writes flips with
+        // the word 'became', and agents copy that phrasing, so unbucketed flips in that
+        // form passed the gate untouched. A gate that misses the phrasing its own rule
+        // text uses is decorative. Detect arrow AND verbal forms.
+        const FLIP_FORM = /\u2192|=>|->|\bbecame\b|\bbecomes\b|\bturned out to be\b|\bwas actually\b|\bcorrected to\b/i;
+        const RCA_BUCKET = /wrong premise|stale assumption|unread source|insufficient probe|scope error/i;
+        const flipLines = reversalSection.split("\n").filter((l: string) => FLIP_FORM.test(l) && RCA_BUCKET.test(l));
+        const flipsWithoutRca = reversalSection.split("\n").filter((l: string) => {
+          const t = l.trim();
+          if (!/^[-*]\s/.test(t)) return false;
+          if (!FLIP_FORM.test(t)) return false;
+          if (/no reversals/i.test(t)) return false;
+          return !RCA_BUCKET.test(t);
+        });
         if (flipsWithoutRca.length > 0) {
           failures.push(
             `R317_REVERSAL_LOG: reversal log line(s) lack an RCA bucket: ` +

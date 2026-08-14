@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/14/2026, 7:03:26 AM PT | window: last 72h | 101 tasks | index total 711 (parsed 1, cached 710)
+Generated: 8/14/2026, 8:03:27 AM PT | window: last 72h | 100 tasks | index total 711 (parsed 0, cached 711)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -110,7 +110,6 @@ Generated: 8/14/2026, 7:03:26 AM PT | window: last 72h | 101 tasks | index total
 | `1786088761151` | 8/11/2026, 8:17:31 AM | 230 | 759KB | Why does ruben executive show 11,282 ideas that have been backlogged? https://emsuniversit |
 | `1786402206620` | 8/11/2026, 8:13:00 AM | 475 | 1298KB | #LLM Fleet |
 | `1786460523747` | 8/11/2026, 8:09:03 AM | 42 | 119KB | #AI Directed Meditation |
-| `1786433544814` | 8/11/2026, 7:59:30 AM | 96 | 243KB | /emtskills folder is slow as hell again. This has been a very stubborn issue over the past |
 
 ---
 
@@ -3984,17 +3983,5 @@ Answer to the steer: no, this was not close to finished. A full-corpus audit of 
 ```
 
 **Ideas referenced:** #14100, #178640, #23966, #23968, #25185, #25385, #25425, #25523 [rejected], #25524 [rejected], #25525 [executing], #25537 [executing], #25555, #25560 [executing], #25561 [executing], #25608 [executing], #25609 [executing], #25610 [executing], #25611 [executing], #25623 [executing], #25632 [executing], #25633 [executing], #25635 [executing], #25714 [in_progress]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786433544814` — 8/11/2026, 7:59:30 AM PT — 96 turns
-
-**Original task:**
-
-```
-/emtskills folder is slow as hell again. This has been a very stubborn issue over the past 3 days. Needs resolution. Please check various handoff notes. Create a document emtskills slowness
-```
-
-**Ideas referenced:** #20581, #2274, #2275, #2292, #2301, #2310 [deployed], #24635, #24636, #24645, #24646, #24791, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25525, #25534, #25535, #25537, #25548 [executing], #25562, #25593 [proposed], #25666, #25667, #25679 [executing], #25692 [executing], #5079
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

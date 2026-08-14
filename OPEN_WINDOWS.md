@@ -6,16 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/14/2026, 11:20:14 AM PT | window: last 72h | 79 tasks | index total 711 (parsed 8, cached 703)
+Generated: 8/14/2026, 12:20:15 PM PT | window: last 72h | 77 tasks | index total 712 (parsed 4, cached 708)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786566964850` | 8/14/2026, 11:19:17 AM | 119 | 1280KB | Answer to this question is not what was given. It's a registration check to see why there  |
-| `1786696835373` | 8/14/2026, 11:19:15 AM | 59 | 295KB | #CFA |
-| `1786711940130` | 8/14/2026, 11:18:19 AM | 115 | 17442KB | Another thing we need to add to sunset, politicians, and just catalogue in the next respon |
+| `1786581699007` | 8/14/2026, 12:20:10 PM | 695 | 2363KB | #Argus Learning |
+| `1786696835373` | 8/14/2026, 12:20:08 PM | 171 | 944KB | #CFA |
+| `1786733087683` | 8/14/2026, 12:19:53 PM | 82 | 2495KB | This is incredibly vague. What's wrong with Email Agent? Can you look into it and see what |
+| `1786566964850` | 8/14/2026, 12:01:41 PM | 188 | 1524KB | Answer to this question is not what was given. It's a registration check to see why there  |
+| `1786711940130` | 8/14/2026, 11:44:11 AM | 134 | 17510KB | Another thing we need to add to sunset, politicians, and just catalogue in the next respon |
 | `1786689127799` | 8/14/2026, 11:17:03 AM | 296 | 1321KB | #Artemis |
 | `1786696256201` | 8/14/2026, 11:15:03 AM | 114 | 11240KB | #Grievance issue |
-| `1786581699007` | 8/14/2026, 11:05:24 AM | 586 | 2052KB | #Argus Learning |
 | `1786712894547` | 8/14/2026, 11:03:28 AM | 68 | 316KB | Frankenstein LLM seems sluggish. Can you tell me why it seems slower than usual? |
 | `1786686261739` | 8/14/2026, 11:01:53 AM | 353 | 1321KB | #What am I Missing/ Students |
 | `1786695610761` | 8/14/2026, 6:08:41 AM | 204 | 802KB | #Big Mac 4th Card |
@@ -86,34 +87,55 @@ Generated: 8/14/2026, 11:20:14 AM PT | window: last 72h | 79 tasks | index total
 | `1786476815310` | 8/11/2026, 2:37:15 PM | 132 | 647KB | #Postmark API |
 | `1786473380730` | 8/11/2026, 1:47:51 PM | 216 | 747KB | #CFA  |
 | `1786474429480` | 8/11/2026, 12:49:27 PM | 136 | 633KB | https://emsuniversity.com/emtskills and other pages are all down / 500 Can you bring them  |
-| `1786468127695` | 8/11/2026, 12:03:51 PM | 228 | 552KB | #Postmark API Issues |
-| `1786473852203` | 8/11/2026, 11:47:30 AM | 30 | 82KB | #Subagents |
-| `1786473149612` | 8/11/2026, 11:34:30 AM | 8 | 41KB | #Julia/Claudia TP=2 |
 
 ---
 
 ## Per-window detail
 
-### `1786566964850` — 8/14/2026, 11:19:17 AM PT — 119 turns
+### `1786581699007` — 8/14/2026, 12:20:10 PM PT — 695 turns
 
 **Original task:**
 
 ```
-Answer to this question is not what was given. It's a registration check to see why there is a conflict and potentially consulting the SLS. Why was this answer so bad and how do we fix it going forward?
+#Argus Learning
+
+Tell me how Argus automatic learning is going. I would like for it to start making itself smarter. I mean what I usually do is you know I'm coming in here on a daily basis and I'm trying to do sweeps to see what tasks were unfinished as well as whether there were bugs that were showing that needed to be resolved or permission issues that were not in a accordance with rule 29 or missing tools, things of that nature. I would like to see Argus learning doing those sorts of things on its own. How can we make that happen?
 ```
 
-**Ideas referenced:** #10157, #10223, #10243, #10291, #10320, #1041, #10440, #10756, #10868, #10869, #10870, #10872, #10873, #10875, #10880, #10881, #11977, #11991, #11992, #11993, #11996, #11999, #13048, #13051, #13080, #13081, #14132, #14978, #15827, #15911, #16152, #16153, #16154, #16473, #16610, #16613, #1665, #166501, #16732, #1680, #17300, #18435, #186576, #20022, #20286, #20292, #23184, #23477, #25551, #25888, #25889 [ready_for_review], #25914, #25938 [deployed], #25943 [proposed], #3237, #32584, #3402, #360135, #5646, #5700, #6228, #6751, #7907, #9086, #9158, #9168, #9269, #9271, #9274, #9277, #9339
+**Ideas referenced:** #10182, #128126, #14749, #16213, #16523, #18806, #19415, #19416, #19434, #20025, #20036 [awaiting_review], #20884, #20890, #21582, #21667, #22310, #22688, #22850, #22887, #22939 [approved], #23027, #23036, #23094, #23132, #23136, #23144, #23166, #23170, #2323, #23231, #2324, #23241, #23247, #23286, #23292, #23328, #23387, #23428, #23429, #23468, #23506, #23556, #23561, #23582, #23623 [proposed], #23636 [proposed], #23637 [proposed], #23675, #23729, #23764, #23769, #23885 [proposed], #23899 [proposed], #23900 [ready_for_review], #23908 [proposed], #23910 [proposed], #23911 [proposed], #23941, #23982, #24635, #24645, #24789 [proposed], #24941, #24977 [proposed], #24987 [proposed], #24990, #25072, #25074 [proposed], #25142, #25151, #25547, #25552, #25571, #25572 [approved], #25574 [proposed], #25578 [approved], #25624 [proposed], #25625 [ready_for_review], #25768, #25822, #25833, #25888, #25932, #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25975, #25985, #25986, #26001, #26002, #26003 [deployed], #26018 [proposed], #26020 [deployed], #26025 [proposed], #26031 [proposed], #26032 [proposed], #26033 [proposed], #26047 [approved], #26075 [executing], #26083 [awaiting_review], #26091 [proposed], #26250 [proposed], #26269 [approved], #7326, #7377, #7428, #7784, #7785, #9222
 
 **Last PICKUP PROMPT:**
 
 ```
-th in cron_email_responder.php + SLS gate
-- [ ] Verify deploy and complete with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
+hat succeeded before the drop.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus learning loop: fill the remaining gaps (writer error_message fix + offloaded-task evaluation + rule promotion).
+
+Where we left off (verified 2026-08-14 02:00 PDT):
+- Sweep cron `cron_argus_daily_sweep.php` running `0 */4`, 44 findings (4 bug clusters, 40 unfinished offloaded).
+- Self-heal cron `cron/cron_argus_self_heal.php` rewritten against real schemas and installed `*/5` in root crontab.
+- 479 `argus_audit_log` rows backfilled with real `error_message` from `result_summary`; lane-2 filter reads the fallback.
+
+Open threads to drive next:
+1. #26269 [approved] — patch the audit writers (`lib/argus_action_catalog.php` ~1863, `routes/cron_argus_task_worker.php` ~536) to set `error_message = result_summary` on `success=0`, so no backfill is ever needed again.
+2. #26047 [approved] — finish evaluating the 40 remaining offloaded Argus tasks; Callbacks, WSOD, and 403 clusters are already [deployed], the rest need the same live-deployed-state check.
+3. #26075 [deployed] — re-verify the class-wide repair recipe text actually landed in `cron/cron_argus_self_heal.php` (the Lane-2 grep is confirmed, the self-heal file's copy is not yet independently re-read).
+
+Reference IDs:
+- Ideas: #26018 [superseded], #26025 [deployed], #26031 [superseded], #26032 [superseded], #26033 [superseded], #26047 [approved], #26075 [deployed], #26083 [deployed], #26250 [deployed], #26269 [approved]
+- Files touched: `cron_argus_daily_sweep.php`, `cron/cron_argus_self_heal.php`, `routes/argus_task_status.php`, `routes/_view_argus_student_tools.php`, `routes/_view_argus_cs_comms_suite.php`, `argus_sweep_findings` (table), `argus_audit_log` (backfill)
+- MCP state: emsu-operations was "Not connected" at last probe after 2 reconnect attempts.
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
-### `1786696835373` — 8/14/2026, 11:19:15 AM PT — 59 turns
+### `1786696835373` — 8/14/2026, 12:20:08 PM PT — 171 turns
 
 **Original task:**
 
@@ -134,18 +156,76 @@ I was NOT proposing GLM before frankenstein-llm. There are two surfaces:
 | Interactive/Cline (Ruben's new routing) | `127.0.0.1:11510` frankenstein-tools adapter | `frankenstein_verify_routing('glm-5.2-15pct')` → `x-litellm-model-api-base: http://127.0.
 ```
 
-**Ideas referenced:** #1130, #1131, #12299, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16588, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #23316 [deployed], #25378, #25381, #25773, #25779 [deployed], #25780 [deployed], #25781 [deployed], #25917 [approved], #25918 [approved], #25920 [approved], #25921 [approved], #7142, #7149, #7925
+**Ideas referenced:** #1130, #1131, #12299, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16588, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18944, #18951, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #23316 [deployed], #25378, #25381, #25773, #25774, #25779 [deployed], #25780 [deployed], #25781 [deployed], #25909, #25917 [approved], #25918 [approved], #25920 [approved], #25921 [approved], #7142, #7149, #7925
 
 **Last PICKUP PROMPT:**
 
 ```
-ucer identified + durable fix (backfill if mapping clear)
-- [ ] Completion with PICKUP PROMPT block
+r so no future producer writes NULL
+- [ ] Update dispositions + completion with PICKUP PROMPT
 </task_progress>
-</execute_command>
+</use_mcp_tool>
 ```
 
-### `1786711940130` — 8/14/2026, 11:18:19 AM PT — 115 turns
+### `1786733087683` — 8/14/2026, 12:19:53 PM PT — 82 turns
+
+**Original task:**
+
+```
+This is incredibly vague. What's wrong with Email Agent? Can you look into it and see what's going on? Fix it? Same with other CFAs?
+```
+
+**Ideas referenced:** #0066, #12405, #13047, #13442, #13965, #14741, #14742, #14743, #14749, #16445, #173178, #18132, #18176, #18309, #18313, #18853, #1892, #19830, #22261, #2328, #2340, #2341, #2343, #2344, #25164, #25989, #26207, #26209, #26211, #26214 [executing], #26215 [executing], #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #3261, #3319, #3346, #3587, #4686, #4689, #4929, #4930, #4931, #4957, #4958, #5095, #5391, #5431, #5574, #5638, #5768, #5770, #5779, #5787, #5792, #5793, #5794, #5795, #5819, #6039, #6064, #7126, #7368, #7381, #7548, #7550, #9132, #9222
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786566964850` — 8/14/2026, 12:01:41 PM PT — 188 turns
+
+**Original task:**
+
+```
+Answer to this question is not what was given. It's a registration check to see why there is a conflict and potentially consulting the SLS. Why was this answer so bad and how do we fix it going forward?
+```
+
+**Ideas referenced:** #10157, #10223, #10243, #10291, #10320, #1041, #10440, #10756, #10868, #10869, #10870, #10872, #10873, #10875, #10880, #10881, #11977, #11991, #11992, #11993, #11996, #11999, #13048, #13051, #13080, #13081, #14132, #14978, #15827, #15911, #16152, #16153, #16154, #16473, #16610, #16613, #1665, #166501, #16732, #1680, #17300, #18435, #186576, #20022, #20286, #20292, #23184, #23477, #25551, #25888, #25889 [ready_for_review], #25914, #25938 [deployed], #25943 [proposed], #26307 [proposed], #3237, #32584, #3402, #360135, #5646, #5700, #5926, #6228, #6751, #6846, #7907, #9086, #9158, #9168, #9269, #9271, #9274, #9277, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+rs this with "we will verify."
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Email AI track-price reconciliation + generic-ack blocking (Elen 26223BC-24) — both fixes deployed.
+
+Where we left off (verified 2026-08-14 12:00 PT):
+- Rule 317 completed: acquisition gate re-probed all claims live; a reversal was caught and logged (prior "$2,345 stands" claim wrong; invoice is $100 below canonical Boot Camp $2,445; settled $1,545 exactly equals Accelerated track price).
+- Both idea #25943 changes implemented in /var/www/emtskills/cron/cron_email_responder.php:
+  1. TrackPriceReconciliationGate (after SLSGate hard-gate): canonical-price vs invoice vs settled-charge injection via CanonicalPricing::getCanonicalPrice + qb_invoices + qb_payments_cache.
+  2. TrackPriceGenericAckBlock (after PCG guard rewrite): generic "we will verify / follow up shortly" drafts replaced with concrete reconciliation when facts exist.
+- php -l clean; file 273,280 bytes; backup cron_email_responder.php.bak-20260814-tpr-25943; markers verified (2/2/1/4).
+- Ideas: #25943 [deployed], #26307 [deployed] (deploy_asserted_at 2026-08-14 12:00:58).
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #25943 [deployed] — Confirm the two new blocks survive the next cron deploy pipeline (cron_email_responder.php is on the live path; no restart needed for PHP crons, but verify after any rsync of /var/www/emtskills).
+2. #26307 [deployed] — Update the causal rule text so future windows probing invoice correctness call CanonicalPricing::getCanonicalPrice FIRST; wire the RCA lesson into the rules file / .clinerules prompt if not already picked up by the next reindex.
+3. #25943 [deployed] — Watch the next payment_billing email for Elen (elenisa2007@gmail.com) or any student with draft matching "we will verify": confirm the substitution fires in the email_inbound_log (elog marker "[TPR-25943-BLOCK]"/"[TPR-25943]").
+
+Reference IDs:
+- Student: 26223BC-24 (Students.id 8198982), email elenisa2007@gmail.com, Moodle uid 54727
+- Invoice: EMSU-26223BC-24 (qb_invoice_id 174975), total $2,345.00, paid $0.00
+- Settled charge: qb_payments_cache id 148408, $1,545.00, linked 174973
+- Canonical Tempe Boot Camp: ai_kb_course_pricing id 1, total $2,445.00 (tuition 2395 + fees 50)
+- Ideas filed: #25943 [deployed], #26307 [deployed]
+- Files touched: /var/www/emtskills/cron/cron_email_responder.php (+ backup .bak-20260814-tpr-25943); /tmp/tpr_patch_25943.php, /tmp/fix_idea_status.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786711940130` — 8/14/2026, 11:44:11 AM PT — 134 turns
 
 **Original task:**
 
@@ -157,35 +237,36 @@ Check to see whether Sabrina sent this message to agamez@emsuniversity.com or no
 The thing is she didn't ask me. She just went straight to Andrew and asked him. Normally would be fine because he's the program director, however, TDSHS had agreed to contact me and copy me on department of communications with our organization. This might actually apply to all types of communications which is kind of interes
 ```
 
-**Ideas referenced:** #108026, #171083, #23269, #258525, #25989, #26287 [executing], #600179, #623992
+**Ideas referenced:** #108020, #108026, #171083, #23269, #258525, #25989, #26287 [executing], #600179, #623992
 
 **Last PICKUP PROMPT:**
 
 ```
-ichardson to anyone but Ruben"
+ve ARE the controlling record.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #26287 — TDSHS comms-bypass catalogue (Agamez no-copy incident).
+Pick up task #26287 — TDSHS comms-bypass catalogue + Liles Parker copy-me evidence.
 
-Where we left off (verified 2026-08-14 06:42 PT):
-- Catalogue entry written to /var/www/emtskills/docs/tdshs-inspection-5196/AGAMEZ_COMMS_NO_COPY_INCIDENT_2026-08-14.md (48 lines, verified on disk).
-- Verified: no EMSU-mailbox record of the Richardson→Andrew message (inbound/inbound_log/outbound/maildirs all clean). Only agamez hit = outbound id 129060 (6/26 portal login).
-- Verified: Richardson's CAPCE email (inbound id 104569) copies rmajor+jthompson+agamez+info — proving dropping Ruben here is a deviation from her own pattern.
-- Verified: the 3 courses = DSHS initial apps 27440/27441/27439, unprocessable per inbound id 104346 (missing docs/fees), never approved — phantom entries, no class held.
-- HANDOFF_NOTES.md updated.
+Where we left off (verified 2026-08-14 11:43 PT):
+- Prior settlement FOUND in local Apple Mail: DSHS Complaint 1080201071_201387_201388_201390, 10/20/2021 IC Settlement Offer (Liles Parker PLLC, Mary Soule Cutler), resulted in "retroactive probated suspension, no conditions, reportable" per DSHS Crystal Gallegos 11/10/2021.
+- Copy-me agreement FOUND verbatim in 3 emails: 245.emlx (2/15/21 "cc me on correspondence to the state"), 220.emlx + 219.emlx (3/22/21 — Mary restates "rmajor@emsuniversity.com copied" via Dan Kramer; Ruben confirms "provided he copy me on any communication").
+- 4 .eml evidence files saved: ~/Desktop/tdshs_investigation_evidence/ (AGREEMENT_CONFIRM_3_219.eml, AGREEMENT_PER_MARY_2_220.eml, CC_ME_REQUEST_FEB2021.eml, SETTLEMENT_OFFER_10202021.eml).
+- Server catalogue: /var/www/emtskills/docs/tdshs-inspection-5196/COPY_ME_AGREEMENT_LILES_PARKER_2021_EVIDENCE.md (verified 59 lines).
+- HANDOFF_NOTES.md updated (2 entries); idea #26287 [executing] updated via SQL.
+- Related: AGAMEZ_COMMS_NO_COPY_INCIDENT_2026-08-14.md catalogues Sabrina's direct-to-Andrew email (no copy to Ruben) + verified phantom courses 27440/27441/27439 (unprocessable per inbound 104346).
 
 Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26287 [executing] — Ruben to ask Andrew Gamez: was this sent to agamez@emsuniversity.com or a personal address? Have Andrew forward the original email; record the destination + timestamp in the catalogue file.
-2. #26287 [executing] — If personal email confirmed, mark it a secondary bypass indicator and fold into the next TDSHS response / sunset exhibit / politician briefing under the "communication bypass" theme.
-3. #26287 [executing] — Wire the no-copy agreements (copy-Ruben + "may apply to all communications / instructors") into the standing violation catalogue; review whether the agreement text extends beyond department comms to instructor communications.
+1. #26287 [executing] — Locate the signed final Order document: check the 2026 TPIA production bundle (/var/www/emtskills/tdshs_tpia, production_2026-07-28) and any Liles Parker email after 11/10/2021 with "Final Order"/"Agreed Order" attachment; if found, save as .eml/PDF alongside the evidence set.
+2. #26287 [executing] — Ruben to ask Andrew Gamez whether Sabrina's email arrived at agamez@emsuniversity.com or a personal address; have Andrew forward the original.
+3. #26287 [executing] — For the next TDSHS response / sunset exhibit / politician briefing: cite the 3 verbatim 2021 emails as the standing copy-Ruben agreement, and catalogue the Agamez no-copy as its violation.
 
 Reference IDs:
-- License #600179; Inspection 5196
+- Ticket: DSHS Complaint #1080201071_201387_201388_201390 (2021) [resolved]; License #600179; Inspection 5196 (2026)
 - Ideas filed: #26287 [executing]
-- Files touched: /var/www/emtskills/docs/tdshs-inspection-5196/AGAMEZ_COMMS_NO_COPY_INCIDENT_2026-08-14.md, /var/www/emtskills/HANDOFF_NOTES.md
-- Key evidence rows: email_inbound_log ids 104346, 104369, 104357; email_outbound_log id 129060
+- Files touched: ~/Desktop/tdshs_investigation_evidence/ (4 .eml), /var/www/emtskills/docs/tdshs-inspection-5196/COPY_ME_AGREEMENT_LILES_PARKER_2021_EVIDENCE.md, /var/www/emtskills/docs/tdshs-inspection-5196/AGAMEZ_COMMS_NO_COPY_INCIDENT_2026-08-14.md, /var/www/emtskills/HANDOFF_NOTES.md
+- Source mail: ~/Library/Mail/V10/.../Sent Messages.mbox/.../Data/Messages/219.emlx, 220.emlx, 245.partial.emlx, 88.emlx
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -289,49 +370,6 @@ Reference IDs:
 - Ticket: none (Ruben iMessage/Argus report)
 - Ideas filed this session: #26305 [awaiting_review], #26306 [awaiting_review]
 - Files touched: `/var/www/emtskills/routes/api/grievance_api.php`
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786581699007` — 8/14/2026, 11:05:24 AM PT — 586 turns
-
-**Original task:**
-
-```
-#Argus Learning
-
-Tell me how Argus automatic learning is going. I would like for it to start making itself smarter. I mean what I usually do is you know I'm coming in here on a daily basis and I'm trying to do sweeps to see what tasks were unfinished as well as whether there were bugs that were showing that needed to be resolved or permission issues that were not in a accordance with rule 29 or missing tools, things of that nature. I would like to see Argus learning doing those sorts of things on its own. How can we make that happen?
-```
-
-**Ideas referenced:** #10182, #128126, #14749, #16213, #18806, #19415, #19416, #19434, #20025, #20036 [awaiting_review], #20884, #20890, #21582, #21667, #22310, #22850, #22887, #22939 [approved], #23027, #23094, #23132, #23136, #23144, #23166, #23170, #2323, #23231, #2324, #23241, #23247, #23286, #23292, #23328, #23387, #23429, #23506, #23556, #23561, #23582, #23623 [proposed], #23636 [proposed], #23637 [proposed], #23729, #23764, #23769, #23885 [proposed], #23899 [proposed], #23900 [ready_for_review], #23908 [proposed], #23910 [proposed], #23911 [proposed], #23941, #23982, #24789 [proposed], #24941, #24977 [proposed], #24987 [proposed], #25072, #25074 [proposed], #25151, #25547, #25552, #25572 [approved], #25574 [proposed], #25578 [approved], #25624 [proposed], #25625 [ready_for_review], #25822, #25833, #25888, #25932, #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25975, #25985, #25986, #26001, #26002, #26003 [deployed], #26018 [proposed], #26020 [deployed], #26025 [proposed], #26031 [proposed], #26032 [proposed], #26033 [proposed], #26047 [approved], #26075 [executing], #26083 [awaiting_review], #26091 [proposed], #26250 [proposed], #26269 [approved], #7326, #7377, #7428, #7784, #7785, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-hat succeeded before the drop.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus learning loop: fill the remaining gaps (writer error_message fix + offloaded-task evaluation + rule promotion).
-
-Where we left off (verified 2026-08-14 02:00 PDT):
-- Sweep cron `cron_argus_daily_sweep.php` running `0 */4`, 44 findings (4 bug clusters, 40 unfinished offloaded).
-- Self-heal cron `cron/cron_argus_self_heal.php` rewritten against real schemas and installed `*/5` in root crontab.
-- 479 `argus_audit_log` rows backfilled with real `error_message` from `result_summary`; lane-2 filter reads the fallback.
-
-Open threads to drive next:
-1. #26269 [approved] — patch the audit writers (`lib/argus_action_catalog.php` ~1863, `routes/cron_argus_task_worker.php` ~536) to set `error_message = result_summary` on `success=0`, so no backfill is ever needed again.
-2. #26047 [approved] — finish evaluating the 40 remaining offloaded Argus tasks; Callbacks, WSOD, and 403 clusters are already [deployed], the rest need the same live-deployed-state check.
-3. #26075 [deployed] — re-verify the class-wide repair recipe text actually landed in `cron/cron_argus_self_heal.php` (the Lane-2 grep is confirmed, the self-heal file's copy is not yet independently re-read).
-
-Reference IDs:
-- Ideas: #26018 [superseded], #26025 [deployed], #26031 [superseded], #26032 [superseded], #26033 [superseded], #26047 [approved], #26075 [deployed], #26083 [deployed], #26250 [deployed], #26269 [approved]
-- Files touched: `cron_argus_daily_sweep.php`, `cron/cron_argus_self_heal.php`, `routes/argus_task_status.php`, `routes/_view_argus_student_tools.php`, `routes/_view_argus_cs_comms_suite.php`, `argus_sweep_findings` (table), `argus_audit_log` (backfill)
-- MCP state: emsu-operations was "Not connected" at last probe after 2 reconnect attempts.
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -3014,171 +3052,6 @@ Open threads to drive next:
 Reference IDs:
 - Ideas filed: none
 - Files touched: /var/www/emtskills/config/config.local.php
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786468127695` — 8/11/2026, 12:03:51 PM PT — 228 turns
-
-**Original task:**
-
-```
-#Postmark API Issues
-
-Can you investigate and resolve this? 
-
-Ruben Major
-
-Aug 11, 2026, 10:50 AM CDT
-
-Hi there,
-
-We received a notification about unusual sending activity in your EMSU Production - Default Transactional Stream and we HAVE temporarily paused your stream's sending while we get in touch with you. We are queuing all emails being sent from the stream.
-
-Please review your stream's Activity and Statistic pages. Such sending is typically an indicator that your Server API Token has been exposed and is being used to send spam. We ask that you please go to your Server's API Token tab wit
-```
-
-**Ideas referenced:** #10234, #15905, #178424, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #202608, #25722, #25723, #25724, #25725, #333333, #4932, #6825, #6842, #888888, #9019, #9070
-
-**Last PICKUP PROMPT:**
-
-```
-FPM reload, final grep verify.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — Postmark token hardening: finalize gitignored secrets.
-
-Where we left off (verified 2026-08-11 12:02 PT):
-- config/secrets.php created (gitignored) with POSTMARK_ACCOUNT_TOKEN
-- config.local.php requires secrets.php, all refs use constant
-- 63 PHP files swept: raw fff724b9 literal replaced with POSTMARK_ACCOUNT_TOKEN
-- PHP-FPM NOT yet reloaded post-sweep; lint NOT yet run on modified files
-- Postmark stream still paused; ~119.5K spam in queue; Ruben awaiting support reply
-
-Open threads to drive next:
-1. (agent-doable, no idea — needs idea filed first) — PHP lint all 63 swept files then reload_php_fpm
-2. (agent-doable, no idea — needs idea filed first) — grep verify zero raw fff724b9 outside config/secrets.php
-3. (human-only decision, no idea) — Postmark queue purge + stream reactivation pending support reply YMK0GD-6DEE2
-
-Reference IDs:
-- Files: config/secrets.php (new, gitignored), config/config.local.php, .gitignore, 63 swept PHP files
-- Postmark server: 18327494, support ref: YMK0GD-6DEE2
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Created gitignored config/secrets.php
-- [x] Updated .gitignore
-- [x] Patched config.local.php (require secrets, constant refs)
-- [x] Swept 63 PHP files raw token -> POSTMARK_ACCOUNT_TOKEN
-- [ ] PHP lint + FPM reload on swept files
-- [ ] Final grep verify zero raw tokens outside secrets.php
-- [ ] Postmark stream reactivation (pending support)
-</task_progress>
-</attempt_completion>
-```
-
-### `1786473852203` — 8/11/2026, 11:47:30 AM PT — 30 turns
-
-**Original task:**
-
-```
-#Subagents
-
-I do not want to use subagents anymore for frankenstein-llm. Can you just ban their usage? They are too slow and stall out easily. I'm done with it untl later maybe.
-```
-
-**Ideas referenced:** #16673, #16849, #17166, #178647, #23528, #24241
-
-**Last PICKUP PROMPT:**
-
-```
-ve the BAN block + the bullet.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786473380730 — ban subagents for frankenstein-llm windows.
-
-Where we left off (verified 2026-08-11 11:47 PT):
-- Rule 00 (00-READ-FIRST-17) now has a BAN block at the top: frankenstein-llm windows MUST NOT call use_subagents. Run inline with parallel MCP tool calls instead.
-- BAN is scoped to frankenstein-llm only; other models keep default-ON policy.
-- File passes G7 (11,580 bytes < 12,288) and G8 (floor 159,724 < 160,000).
-- MCP reindexed and verified live via clinerules_lookup.
-
-Open threads to drive next:
-None — ban is in place and verified. (human-only decision — no idea: Ruben lifts the ban when ready)
-
-Reference IDs:
-- Ideas filed: none
-- Ideas closed: none
-- Files touched: /Users/rubenmajor/Documents/Cline/Rules/00-READ-FIRST-17-force-subagent-use-on-research-and-multi-step-builds.md
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Explore current subagent rules (rule 00 + related)
-- [x] Locate where subagent ban should be added
-- [x] Add ban directive for frankenstein-llm context
-- [x] Verify file passes G7 size cap (12KB) + G8 floor cap (160KB)
-- [x] Reindex clinerules MCP
-- [x] Verify ban is in place
-</task_progress>
-</attempt_completion>
-```
-
-### `1786473149612` — 8/11/2026, 11:34:30 AM PT — 8 turns
-
-**Original task:**
-
-```
-#Julia/Claudia TP=2
-## Julia/Claudia TP=2: working properly, verified stable
-
-Anything else to do here? 
-
-
-**Live state (verified 2026-08-11 08:05 PT):** TP=2 serve up 6h29m, /v1/models probe HTTP 200 in 1.2ms, 150/150 clean watchdog probes, zero ray-stops since the fix. Both decode probes green.
-
-**Root cause (rule 297/315 classification: real bug, but not the one in the plan):** the planned fix was increasing RAY_CGRAPH_get_timeout in julia_unified_tp2.sh. The crash logs told a different story. cg_health_monitor.sh, wired into julia_cx7_watchdog.sh on Julia, probed the serve for a model it n
-```
-
-**Ideas referenced:** #12459, #25631 [deployed], #25715 [executing]
-
-**Last PICKUP PROMPT:**
-
-```
-iled and the executor owns it.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25715 - Fleet watchdog fratricide audit + alert-path end-to-end verification
-
-Where we left off (verified 2026-08-11 11:34 PT):
-- Julia/Claudia TP=2 gpt-oss-120b at WOPR:11513: serving HTTP 200 (65ms), decode_live=true tok_per_s=26.27, 0 requests waiting, 6h29m uptime stable, 150/150 clean watchdog probes
-- #25631 [deployed] closed: monitor fratricide RCA (cg_health_monitor.sh emsu_distill vs qwen3-30b mismatch, ray-stop x3 23:20-23:41); killer disabled on Julia, inert on Claudia
-- Bug-library incident 2306 resolved with full RCA
-- #25715 [executing] is the only open thread: fleet-wide audit of watchdogs/crons for destructive actions on health-check paths + alert-path canaries
-
-Open threads to drive next:
-1. #25715 [executing] - Fleet fratricide audit: SSH every fleet box, grep watchdog and cron scripts for destructive actions (ray stop, service restart, kill, pkill, systemctl stop) on health-check/probe paths; verify probe model expectations match the live serve config (the emsu_distill vs qwen3-30b mismatch class); canary-test alert paths end-to-end (Julia Postmark 422 + MySQL access-denied made the killer silent); single recovery owner per engine; N-consecutive-failure + cooldown before any destructive action. Requires fleet-box SSH, not available in the prior window; executor owns it.
-
-Reference IDs:
-- Ideas filed: #25715 [executing]
-- Ideas closed: #25631 [deployed]
-- Bug library: incident 2306 resolved
-- Files touched (prior session, unchanged this window): Julia /home/rubenmajor/julia_cx7_watchdog.sh (cg_health_monitor.sh call disabled), Julia /home/rubenmajor/julia_unified_tp2.sh (TP=2 relaunched)
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════

@@ -6,18 +6,19 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/13/2026, 7:41:57 PM PT | window: last 72h | 96 tasks | index total 700 (parsed 4, cached 696)
+Generated: 8/13/2026, 8:41:57 PM PT | window: last 72h | 97 tasks | index total 701 (parsed 5, cached 696)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786673589882` | 8/13/2026, 7:41:53 PM | 47 | 289KB | Big Mac has 4 GPUs now. Can you make sure that other card is part of service?  |
-| `1786566698066` | 8/13/2026, 7:41:52 PM | 300 | 586KB | #Call Backs  |
-| `1786666814323` | 8/13/2026, 7:41:37 PM | 359 | 888KB | Jon had a request in Argus, https://emsuniversity.com/emtskills/routes/argus_download.php? |
-| `1786674811485` | 8/13/2026, 7:41:15 PM | 11 | 17KB | Can you tell me how we can see if anyone is using a bot to chat to us or not? |
-| `1786666915889` | 8/13/2026, 7:08:32 PM | 210 | 632KB | Can you email a copy of any externship agreements / affiliation agreement whatever from ag |
+| `1786673589882` | 8/13/2026, 8:41:56 PM | 303 | 1082KB | Big Mac has 4 GPUs now. Can you make sure that other card is part of service?  |
+| `1786666915889` | 8/13/2026, 8:41:22 PM | 303 | 986KB | Can you email a copy of any externship agreements / affiliation agreement whatever from ag |
+| `1786677303463` | 8/13/2026, 8:40:07 PM | 57 | 225KB | /emtskills is slow again. Please fix it. Check emtskills-slowness and fix it |
+| `1786666814323` | 8/13/2026, 8:37:09 PM | 820 | 1504KB | Jon had a request in Argus, https://emsuniversity.com/emtskills/routes/argus_download.php? |
+| `1786660376952` | 8/13/2026, 8:30:04 PM | 136 | 561KB | help me file with Florida Board of Education application yet? Need that approval before we |
+| `1786674811485` | 8/13/2026, 7:54:35 PM | 42 | 149KB | Can you tell me how we can see if anyone is using a bot to chat to us or not? |
+| `1786566698066` | 8/13/2026, 7:45:30 PM | 331 | 635KB | #Call Backs  |
 | `1786666883409` | 8/13/2026, 5:21:23 PM | 1 | 2KB | Can you email a copy of any externship agreements / affiliation agreement whatever from ag |
 | `1786652849668` | 8/13/2026, 4:44:11 PM | 512 | 2763KB | #TDSHS |
-| `1786660376952` | 8/13/2026, 4:29:25 PM | 102 | 378KB | help me file with Florida Board of Education application yet? Need that approval before we |
 | `1786651267227` | 8/13/2026, 4:05:11 PM | 360 | 1051KB | check the security certificate for onlineemd.com and fix it - the SSL |
 | `1786660346877` | 8/13/2026, 3:32:27 PM | 1 | 2KB | help me file with Florida Board of Education application yet? Need that approval before we |
 | `1786602908972` | 8/13/2026, 1:22:41 PM | 342 | 4032KB | #TDSHS/AZDHS 8/13 - Compliance |
@@ -111,7 +112,7 @@ Generated: 8/13/2026, 7:41:57 PM PT | window: last 72h | 96 tasks | index total 
 
 ## Per-window detail
 
-### `1786673589882` — 8/13/2026, 7:41:53 PM PT — 47 turns
+### `1786673589882` — 8/13/2026, 8:41:56 PM PT — 303 turns
 
 **Original task:**
 
@@ -132,25 +133,79 @@ Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md
 Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted
 ```
 
-**Ideas referenced:** #1130, #1131, #11945, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2307, #2314, #2335 [deployed], #25378, #25381, #25765, #26019, #26044, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #6826, #7142, #7149
+**Ideas referenced:** #1130, #1131, #11945, #1241, #12425, #12459, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178667, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2294, #2307, #2314, #23169, #2335 [deployed], #2337, #2338, #2339, #23885, #24217, #24789, #24987, #25072, #25074, #25097, #25111, #25125, #25185, #25196 [executing], #25378, #25381, #25470, #25547, #25552, #25624, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25946, #26019, #26044, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26156, #26199, #26205 [executing], #26207 [executing], #26208 [executing], #26209 [proposed], #26210 [executing], #26211 [proposed], #2763, #58343, #6826, #7142, #7149
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1786566698066` — 8/13/2026, 7:41:52 PM PT — 300 turns
+```
+ilure, not slot type mismatch)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786673589882 - Big Mac 4th GPU PCIe link training failure + service restoration
+
+Where we left off (checked 2026-08-13 20:20 PT):
+- Big Mac restored to service on 3 GPUs (bigmac-vllm.service re-enabled, :8000 HTTP 200, PP=3, adapter routing live traffic) (checked: SSH + curl + journalctl)
+- 4th GPU PCIe link training fails at 2.5GT/s. Card has power (fan on) but can't complete endpoint discovery. All software approaches exhausted (pci=realloc, pci=assign-busses, setpci, rescan). Filed as #26211 [proposed] (checked: reconcile_ideas returned status=proposed)
+- GRUB set to pci=realloc pcie_aspm=off (best config). Auto-detect launch script ready: TP=4 engages when 4th GPU enumerates after BIOS fix.
+
+Open threads to drive next:
+1. #26211 [proposed] - Ruben's tech needs to check BIOS M.2 slot #2 config: PCIe mode (not NVMe), bifurcation, link speed (try Gen3/Gen4), and riser cable. This is physical/BIOS only, software is ready. (human-only decision - no idea, physical access required)
+2. #26209 [proposed] - Initial investigation, superseded by the PCIe link training finding above
+
+Reference IDs:
+- Ideas filed: #26209 [proposed], #26211 [proposed]
+- Files touched: /opt/bigmac-vllm-start.sh (Big Mac, rewritten with auto-detect), /etc/default/grub (pci=realloc pcie_aspm=off), /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md (updated), HANDOFF_NOTES.md (updated)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Big Mac service restored (3 GPUs, PP=3)
+- [x] Auto-detect launch script deployed
+- [x] All software approaches exhausted for 4th GPU
+- [x] Final reboot with clean config (pci=realloc pcie_aspm=off)
+- [x] Verify Big Mac serving on 3 GPUs (HTTP 200)
+- [x] Reconcile ideas
+- [x] Validate completion + ship
+</task_progress>
+</attempt_completion>
+```
+
+### `1786666915889` — 8/13/2026, 8:41:22 PM PT — 303 turns
 
 **Original task:**
 
 ```
-#Call Backs 
-
-Check Chat 55 for Call Back bug on Telephony as well as some issue with "View As" supposedly not showing actual "View As" in role. Can't really confirm this, but that's what CS roles are saying. This is Chat 55 from today / the last few hours regarding Call Backs
+Can you email a copy of any externship agreements / affiliation agreement whatever from agencies that might be signed by both parties - would be in vyu@emsunivesity.com's email inbox, etc...
 ```
 
-**Ideas referenced:** #111827, #21753, #23989, #24645, #25185, #2563, #25701, #25702, #25703, #25704, #25946 [proposed], #25947 [proposed], #25948 [proposed], #25951 [deployed], #334155, #3672, #3673, #3677, #3679, #3684, #3685, #3688, #3689, #3691, #3694, #3695, #3696, #3708, #3713, #3714, #3715, #3716, #3717, #3721, #64748
+**Ideas referenced:** #15669, #19163, #2144, #2158, #2304, #2316, #2335 [deployed], #2336, #2350, #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26196 [executing], #6785
+
+**Last PICKUP PROMPT:**
+
+```
+nction in Argus to pull all agreement data for Jon
+- [ ] Report with findings + PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1786677303463` — 8/13/2026, 8:40:07 PM PT — 57 turns
+
+**Original task:**
+
+```
+/emtskills is slow again. Please fix it. Check emtskills-slowness and fix it
+```
+
+**Ideas referenced:** #2310 [resolved], #2335 [deployed], #2337, #2338, #2339, #25548 [executing], #25679 [executing], #26019, #26054, #26068, #26076, #26077, #26080 [completed], #26205 [executing], #26207 [executing], #26208 [executing], #26209 [proposed], #26210 [executing], #26211 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786666814323` — 8/13/2026, 7:41:37 PM PT — 359 turns
+### `1786666814323` — 8/13/2026, 8:37:09 PM PT — 820 turns
 
 **Original task:**
 
@@ -166,7 +221,7 @@ for example where is blake brandon's request.
 That might have been in the system and not populated or maybe it was emailed to vyu@emsuniversity.com or other CS? Can you check on those. Seems like this process is not working properly.
 ```
 
-**Ideas referenced:** #047857, #059669, #10003, #10005, #10182, #11111, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #128681, #129302, #16213, #16263, #181825, #18745, #18770, #19370, #19583, #19592, #21140, #21262, #22310, #2563, #26192 [proposed], #26197 [executing], #26198 [executing], #26200 [executing], #26201 [executing], #26202 [executing], #274160, #30363, #313244, #334155, #3730, #374151, #4338, #45475, #475569, #6366, #64748, #65039, #69707, #78350, #8645, #8942, #9019, #9191, #9203, #92400, #9650, #9654, #9660, #9733, #9888, #9889
+**Ideas referenced:** #047857, #059669, #10003, #10005, #10182, #11111, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #128681, #129302, #16213, #16263, #1807, #181825, #18745, #18770, #19370, #19583, #19592, #20292, #20295, #21140, #21262, #22310, #2337 [deployed], #2338 [deployed], #2339 [deployed], #2340, #25097, #25150, #25188, #2563, #26192 [proposed], #26197 [executing], #26198 [executing], #26200 [executing], #26201 [executing], #26202 [executing], #26205 [proposed], #26207 [proposed], #26208 [proposed], #26210 [unknown], #26214 [executing], #26215 [executing], #274160, #30363, #313244, #334155, #3730, #374151, #4338, #45475, #475569, #6366, #64748, #65039, #69707, #78350, #8645, #8942, #9019, #9191, #9203, #92400, #9650, #9654, #9660, #9733, #9888, #9889
 
 **Last PICKUP PROMPT:**
 
@@ -206,7 +261,43 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </attempt_completion>
 ```
 
-### `1786674811485` — 8/13/2026, 7:41:15 PM PT — 11 turns
+### `1786660376952` — 8/13/2026, 8:30:04 PM PT — 136 turns
+
+**Original task:**
+
+```
+help me file with Florida Board of Education application yet? Need that approval before we the FL DHS application. We want also to be a CE and EMT provider there. So may also need to do an application for EMT CE with the EMS Authority in Florida
+```
+
+**Ideas referenced:** #121212, #16213, #17130 [superseded], #17537 [rejected], #18132 [deployed], #19125, #19173, #2335 [deployed], #252525, #252545, #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26183 [proposed], #313131, #3310, #6518
+
+**Last PICKUP PROMPT:**
+
+```
+g as defined in Idea #26183.  
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #26183, Florida EMS state approval: finalize DOH BEMS training‑center applications and confirm exemption from CIE licensing.
+
+Where we left off (verified 2026‑08‑13 20:25 PT):
+- Medical‑director contract required for both EMT (Form 1698) and CE (Form 1698 C) programs [deployed].
+- CIE provisional‑license required unless exemption via DOH approval (1005.06 (1)(b)/(g)) is demonstrated [deployed].
+- All tracker rows updated; HANDOFF_NOTES.md updated; Idea #26183 approved & promoted to priority 1 [deployed].
+
+Open threads to drive next:
+1. #26183 [proposed] — Assemble and submit the DH 1698 & DH 1698 C application packages (including medical‑director contract, curriculum mapping, affiliation letters, fee schedule) and, if needed, prepare the CIE provisional‑license package with exemption justification.
+
+Reference IDs:
+- Ideas filed: #26183 [proposed]
+- Files touched: admin_portal.accreditation_renewal_tracker (rows 1, 11, 12); HANDOFF_NOTES.md; /tmp/FL_Application_Assets/
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786674811485` — 8/13/2026, 7:54:35 PM PT — 42 turns
 
 **Original task:**
 
@@ -214,59 +305,54 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 Can you tell me how we can see if anyone is using a bot to chat to us or not?
 ```
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786666915889` — 8/13/2026, 7:08:32 PM PT — 210 turns
-
-**Original task:**
-
-```
-Can you email a copy of any externship agreements / affiliation agreement whatever from agencies that might be signed by both parties - would be in vyu@emsunivesity.com's email inbox, etc...
-```
-
-**Ideas referenced:** #15669, #19163, #2144, #2335 [deployed], #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26196 [executing], #6785
+**Ideas referenced:** #059669, #20251 [proposed], #25962, #25964, #6366, #9131
 
 **Last PICKUP PROMPT:**
 
 ```
-Idea #26196 filed. All work is complete. Let me finalize with the PICKUP PROMPT.
-
-<attempt_completion>
-<result>
-Done. I found and emailed you copies of the signed externship/affiliation agreements on file, including the specific one sitting in the inbound pipeline.
-
-**What I found (signed by both parties):**
-
-1. **MWFD Affiliation Agreement** (the one you were looking for, it was in the inbound email pipeline, not in the compliance store) — student Kamdyn Sheets (knsheets@smu.edu) emailed it in 2026-07-29 with the message: "This agreement is signed by myself and by MWFD. Please get it signed and filed as soon as possible so I can start my externship." 8-page scanned PDF, 5.1MB, extracted from the mailstore and emailed to you as batch 3.
-2. **5 fire/EMS site affiliations** (all active, signed): Phoenix Fire Station 41, Dallas Fire Rescue, Eloy Fire, Sonoma County Fire, Calaveras Consolidated Fire.
-3. **AA-2026-0002 and AA-2026-0004** auto-countersigned affiliation agreements (Freddy's Firehouse).
-4. **Karnes EMS** signed affiliation.
-5. **Medical Director agreements** — MD-2026-0001 contract and MDC-2026-0001 compensation, both for Gabe Rodriguez (signed 2026-07-22).
-6. **Eagle Ambulance** signed affiliation agreement.
-
-**3 emails sent to rmajor@emsuniversity.com** (from info@emsuniversity.com via local Postfix relay, all verified delivered to INBOX in /var/log/maillog):
-- Batch 1: 8 site agreement PDFs (subject: Signed Affiliation / Externship Agreements - Site Agreements)
-- Batch 2: MD + Eagle Ambulance PDFs (subject: ...- MD + Eagle Ambulance)
-- Batch 3: MWFD signed agreement (subject: Signed Affiliation Agreement - MWFD)
-
-**Also found in Vicky's inbox but NOT signed agreements** (no binaries saved to disk, only metadata): GMR (Global Medical Response) has an inbound-process request from Justin Reyna for a clinical affiliation and a UTHealth East Texas request flagging issues with a Dallas EMT affiliation — these are pending requests/concerns, not executed agreements.
-
-**Key gap noted:** the two July agreements (MWFD by Kamdyn Sheets, and the UTHealth Dallas EMT one highlighted by Vicky LaMay) were meta-logged in `email_inbound_log` with attachment metadata but the binaries were never persisted to the compliance store. I extracted the MWFD one from the mailstore raw email and sent it to you. Agenda logged as idea #26196 for the EMSU countersignature + filing follow-up (the MWFD one still needs EMSU's signature and copies to Kamdyn + Hive Benthall).
+t + rate cap on the send path.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Signed externship/affiliation agreements emailed to Ruben (done this session).
+Pick up task - Chat widget bot detection signals.
 
-Where we left off (verified 2026-08-13 19:07 PT):
-- 3 emails sent to rmajor@emsuniversity.com via local Postfix (all verified "stored mail into INBOX" in /var/log/maillog):
-  - Batch 1 (18:30 PT): 8 site agreement PDFs — Phoenix FPD41, Dallas Fire Rescue, Eloy Fire, Sonoma County, Calaveras Fire, AA-2026-0002, AA-2026-0004, Karnes EMS
-  - Batch 2 (18:31 PT): MD-2026-0001 + MDC-2026-0001 (Gabe Rodriguez) + Eagle Ambulance signed
-  - Batch 3 (19:04 PT): "EMSU agreement signed by MWFD.pdf" (Kamdyn Sheets, both parties, 8-page 5.1MB)
-- MWFD PDF extracted from /var/qmail/mailnames/emsuniversity.com/rmajor/Maildir/cur/1785363706... to /tmp/EMSU_agreement_signed_by_MWFD.pdf (temp, may be cleaned)
-- email_outbound_log rows: 361705 (batch 3), 361690 (batch 2); batch 1 delivered but DB log row failed on PDO (verified in maillog)
+Where we left off (verified 2026-08-13 19:53 PT):
+- Confirmed the EMSU chat widget already captures per-session: ip_address, user_agent, browser, os, device_type, referrer, current_page, pages_viewed, time_on_site, is_returning, visitor_uuid (file: /var/www/emtskills/api/chat_widget_api.php lines 907-975, table chat_portal_visitor_sessions)
+- Confirmed no CAPTCHA / honeypot / rate cap exists on the send path
+- Existing abuse tables ready to use: chat_portal_banned_visitors (checked on every widget_send, line 183) and chat_visitor_cooldown
+- Live query showed 2,157 sessions/24h; top offender IP 143.44.240.214 with 1,626 page views (same IP from the 52k-401 retry-storm incident)
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #20251 [proposed] - File an idea: add hidden honeypot field to chat_widget_embed.js pre-chat form + server-side reject in widget_send (tables exist, ~15 lines of code)
+2. #20251 [proposed] - File an idea: per-IP rate cap in widget_send using chat_portal_messages.visitor_ip + chat_visitor_cooldown offense counter
+3. #20251 [proposed] - File an idea: Harden by populating country/city via a GeoIP lookup in widget_track (columns already exist in chat_portal_visitor_sessions)
+4. Human-policy decision - whether to ban 143.44.240.214 and other pathological IPs via chat_portal_banned_visitors (no idea - Ruben/team call on who is genuinely malicious vs a misconfigured employee browser)
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: none this session - items 1-3 above need create_idea before pickup
+- Files touched: none (read-only investigation; files read: /var/www/emtskills/api/chat_widget_api.php, /var/www/emtskills/api/chat_widget_embed.js)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786566698066` — 8/13/2026, 7:45:30 PM PT — 331 turns
+
+**Original task:**
 
 ```
+#Call Backs 
+
+Check Chat 55 for Call Back bug on Telephony as well as some issue with "View As" supposedly not showing actual "View As" in role. Can't really confirm this, but that's what CS roles are saying. This is Chat 55 from today / the last few hours regarding Call Backs
+```
+
+**Ideas referenced:** #111827, #21753, #23989, #24645, #25185, #2563, #25701, #25702, #25703, #25704, #25946 [proposed], #25947 [proposed], #25948 [proposed], #25951 [deployed], #26203 [deployed], #26206 [deployed], #334155, #3672, #3673, #3677, #3679, #3684, #3685, #3688, #3689, #3691, #3694, #3695, #3696, #3708, #3713, #3714, #3715, #3716, #3717, #3721, #64748
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786666883409` — 8/13/2026, 5:21:23 PM PT — 1 turns
 
@@ -301,47 +387,6 @@ Where we left off (v
 **Ideas referenced:** #14662, #14710, #250984, #251038, #251211, #251236, #251264, #251382, #251428, #25185, #26092 [proposed], #26096 [proposed], #26154 [proposed], #26155 [proposed], #26156 [proposed], #26157 [proposed], #26163 [executing], #26164 [executing], #26167 [executing], #26168 [approved], #26169 [approved], #26170 [approved], #26171 [approved], #26172 [approved], #26173 [executing], #26174 [executing], #26178 [approved], #26180 [executing], #26182 [approved], #26184 [approved], #26186 [approved], #58230, #600179
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786660376952` — 8/13/2026, 4:29:25 PM PT — 102 turns
-
-**Original task:**
-
-```
-help me file with Florida Board of Education application yet? Need that approval before we the FL DHS application. We want also to be a CE and EMT provider there. So may also need to do an application for EMT CE with the EMS Authority in Florida
-```
-
-**Ideas referenced:** #17130 [superseded], #17537 [rejected], #18132 [deployed], #19125, #19173, #2335 [deployed], #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26183 [proposed], #3310
-
-**Last PICKUP PROMPT:**
-
-```
-onths, contact (850) 245-4440.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #26183, Florida EMS state approval: confirm no CIE/private-postsecondary gate for EMT plus CE, and file the FL DOH Bureau of EMS Training Center application.
-
-Where we left off (verified 2026-08-13 4:28 PT):
-- Confirmed no Florida private-postsecondary (CA BPPE equivalent) approval is required for an EMT training program plus CE. FL chapter 401 routes all EMS education through FL Dept of Health Bureau of EMS: 401.27(4)(a) ([deployed] statute) for initial EMT program approval, 401.2715(2) ([deployed] statute) for CE/recertification training.
-- CIE (FL DOE postsecondary board) is affirmatively excluded for DOH-regulated EMS programs via 1005.06(1)(g) ([deployed] statute) and (1)(b) ([deployed] statute). Tracker rows 11 and 12 corrected accordingly.
-- Skills sign-offs come from DOH Training Center approval plus medical director via DH Form 1583 / FL Admin Code 64J-1.008, medical direction 64J-1.004 ([deployed]). CAPCE is not involved.
-- CAPCE not certified; tracker row 1 corrected to not_applied/new application ([deployed]).
-- Tracker rows 1, 11, 12 updated in admin_portal.accreditation_renewal_tracker; HANDOFF_NOTES.md updated.
-
-Open threads to drive next:
-1. #26183 [queued] (verified: idea_action approve returned new_status=approved, then get_idea_progress returned status="" auto-queued for implementation, ETA ~16:40 PT) — Executor is assembling the FL DOH Bureau of EMS Training Center application packet (DH 681-018). Confirm the packet includes the medical director agreement, a curriculum mapping to National EMS Education Standards, FL clinical site letters, and a distance learning plan, then submit to FL DOH Bureau of EMS, phone (850) 245-4440.
-
-Reference IDs:
-- Ideas filed: #26183 [queued] (verified: approved + auto-queued)
-- Files touched: admin_portal.accreditation_renewal_tracker rows 1, 11, 12; HANDOFF_NOTES.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
 
 ### `1786651267227` — 8/13/2026, 4:05:11 PM PT — 360 turns
 

@@ -6,26 +6,27 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/14/2026, 1:20:15 PM PT | window: last 72h | 76 tasks | index total 712 (parsed 0, cached 712)
+Generated: 8/14/2026, 2:20:17 PM PT | window: last 72h | 76 tasks | index total 713 (parsed 8, cached 705)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786581699007` | 8/14/2026, 12:29:45 PM | 727 | 2407KB | #Argus Learning |
-| `1786696835373` | 8/14/2026, 12:29:26 PM | 185 | 1021KB | #CFA |
-| `1786733087683` | 8/14/2026, 12:19:53 PM | 82 | 2495KB | This is incredibly vague. What's wrong with Email Agent? Can you look into it and see what |
-| `1786566964850` | 8/14/2026, 12:01:41 PM | 188 | 1524KB | Answer to this question is not what was given. It's a registration check to see why there  |
+| `1786566964850` | 8/14/2026, 2:20:09 PM | 207 | 1594KB | Answer to this question is not what was given. It's a registration check to see why there  |
+| `1786581699007` | 8/14/2026, 2:20:00 PM | 797 | 2526KB | #Argus Learning |
+| `1786696256201` | 8/14/2026, 2:19:55 PM | 137 | 11366KB | #Grievance issue |
+| `1786733087683` | 8/14/2026, 2:19:54 PM | 157 | 2791KB | This is incredibly vague. What's wrong with Email Agent? Can you look into it and see what |
+| `1786740046847` | 8/14/2026, 2:19:24 PM | 67 | 3925KB | #CFA Misunderstanding |
+| `1786696835373` | 8/14/2026, 2:14:56 PM | 256 | 1453KB | #CFA |
+| `1786695610761` | 8/14/2026, 2:14:47 PM | 280 | 1362KB | #Big Mac 4th Card |
+| `1786567464418` | 8/14/2026, 2:02:34 PM | 424 | 3608KB | #Argus |
 | `1786711940130` | 8/14/2026, 11:44:11 AM | 134 | 17510KB | Another thing we need to add to sunset, politicians, and just catalogue in the next respon |
 | `1786689127799` | 8/14/2026, 11:17:03 AM | 296 | 1321KB | #Artemis |
-| `1786696256201` | 8/14/2026, 11:15:03 AM | 114 | 11240KB | #Grievance issue |
 | `1786712894547` | 8/14/2026, 11:03:28 AM | 68 | 316KB | Frankenstein LLM seems sluggish. Can you tell me why it seems slower than usual? |
 | `1786686261739` | 8/14/2026, 11:01:53 AM | 353 | 1321KB | #What am I Missing/ Students |
-| `1786695610761` | 8/14/2026, 6:08:41 AM | 204 | 802KB | #Big Mac 4th Card |
 | `1786696386569` | 8/14/2026, 5:44:49 AM | 90 | 327KB | #Unknown |
 | `1786560740700` | 8/14/2026, 5:15:16 AM | 252 | 972KB | Why am i still getting OLD chat transcripts? Are new ones being sent to me right after the |
 | `1786674811485` | 8/14/2026, 5:06:40 AM | 248 | 1033KB | Can you tell me how we can see if anyone is using a bot to chat to us or not? |
 | `1786569178009` | 8/14/2026, 3:32:54 AM | 295 | 1369KB | #/emtskills / wordpress |
 | `1786660376952` | 8/14/2026, 3:01:07 AM | 346 | 1205KB | help me file with Florida Board of Education application yet? Need that approval before we |
-| `1786567464418` | 8/14/2026, 2:46:32 AM | 354 | 3481KB | #Argus |
 | `1786547336372` | 8/14/2026, 2:07:44 AM | 660 | 3109KB | Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cl |
 | `1786566698066` | 8/14/2026, 2:00:56 AM | 509 | 971KB | #Call Backs  |
 | `1786592555268` | 8/14/2026, 1:51:15 AM | 660 | 2554KB | #Argus |
@@ -85,100 +86,12 @@ Generated: 8/14/2026, 1:20:15 PM PT | window: last 72h | 76 tasks | index total 
 | `1786483060620` | 8/11/2026, 4:31:41 PM | 162 | 754KB | Closing on a new property in Tempe 1250 East Baseline. Please analyze the 139 page inspect |
 | `1786469157683` | 8/11/2026, 3:25:27 PM | 436 | 1143KB | How many tokens have our FREE LLMs used in the last 30 days |
 | `1786476815310` | 8/11/2026, 2:37:15 PM | 132 | 647KB | #Postmark API |
-| `1786473380730` | 8/11/2026, 1:47:51 PM | 216 | 747KB | #CFA  |
 
 ---
 
 ## Per-window detail
 
-### `1786581699007` — 8/14/2026, 12:29:45 PM PT — 727 turns
-
-**Original task:**
-
-```
-#Argus Learning
-
-Tell me how Argus automatic learning is going. I would like for it to start making itself smarter. I mean what I usually do is you know I'm coming in here on a daily basis and I'm trying to do sweeps to see what tasks were unfinished as well as whether there were bugs that were showing that needed to be resolved or permission issues that were not in a accordance with rule 29 or missing tools, things of that nature. I would like to see Argus learning doing those sorts of things on its own. How can we make that happen?
-```
-
-**Ideas referenced:** #10182, #128126, #14749, #16213, #16523, #18806, #19415, #19416, #19434, #20025, #20036 [awaiting_review], #20884, #20890, #21125, #21582, #21667, #22310, #22688, #22850, #22887, #22939 [approved], #23027, #23036, #23094, #23132, #23136, #23144, #23166, #23170, #2323, #23231, #2324, #23241, #23247, #23286, #23292, #23328, #23387, #23428, #23429, #23468, #23506, #23556, #23561, #23582, #23623 [proposed], #23636 [proposed], #23637 [proposed], #23675, #23729, #23764, #23769, #23885 [proposed], #23899 [proposed], #23900 [ready_for_review], #23908 [proposed], #23910 [proposed], #23911 [proposed], #23941, #23982, #24635, #24645, #24789 [proposed], #24941, #24977 [proposed], #24987 [proposed], #24990, #25072, #25074 [proposed], #25142, #25151, #25547, #25552, #25571, #25572 [approved], #25574 [proposed], #25578 [approved], #25624 [proposed], #25625 [ready_for_review], #25768, #25822, #25833, #25888, #25932, #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25975, #25985, #25986, #26001, #26002, #26003 [deployed], #26018 [proposed], #26020 [deployed], #26025 [proposed], #26031 [proposed], #26032 [proposed], #26033 [proposed], #26047 [approved], #26075 [executing], #26083 [awaiting_review], #26091 [proposed], #26250 [proposed], #26269 [approved], #7326, #7377, #7428, #7784, #7785, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-hat succeeded before the drop.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus learning loop: fill the remaining gaps (writer error_message fix + offloaded-task evaluation + rule promotion).
-
-Where we left off (verified 2026-08-14 02:00 PDT):
-- Sweep cron `cron_argus_daily_sweep.php` running `0 */4`, 44 findings (4 bug clusters, 40 unfinished offloaded).
-- Self-heal cron `cron/cron_argus_self_heal.php` rewritten against real schemas and installed `*/5` in root crontab.
-- 479 `argus_audit_log` rows backfilled with real `error_message` from `result_summary`; lane-2 filter reads the fallback.
-
-Open threads to drive next:
-1. #26269 [approved] — patch the audit writers (`lib/argus_action_catalog.php` ~1863, `routes/cron_argus_task_worker.php` ~536) to set `error_message = result_summary` on `success=0`, so no backfill is ever needed again.
-2. #26047 [approved] — finish evaluating the 40 remaining offloaded Argus tasks; Callbacks, WSOD, and 403 clusters are already [deployed], the rest need the same live-deployed-state check.
-3. #26075 [deployed] — re-verify the class-wide repair recipe text actually landed in `cron/cron_argus_self_heal.php` (the Lane-2 grep is confirmed, the self-heal file's copy is not yet independently re-read).
-
-Reference IDs:
-- Ideas: #26018 [superseded], #26025 [deployed], #26031 [superseded], #26032 [superseded], #26033 [superseded], #26047 [approved], #26075 [deployed], #26083 [deployed], #26250 [deployed], #26269 [approved]
-- Files touched: `cron_argus_daily_sweep.php`, `cron/cron_argus_self_heal.php`, `routes/argus_task_status.php`, `routes/_view_argus_student_tools.php`, `routes/_view_argus_cs_comms_suite.php`, `argus_sweep_findings` (table), `argus_audit_log` (backfill)
-- MCP state: emsu-operations was "Not connected" at last probe after 2 reconnect attempts.
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786696835373` — 8/14/2026, 12:29:26 PM PT — 185 turns
-
-**Original task:**
-
-```
-#CFA
-
-Re-base and tell me where this is at now
-
-# CFA 24h Scan — CORRECTED REPORT (live-verified, 2026-08-12 14:28 PT)
-
-Every metric below was re-verified against live `admin_portal` DB and live cron/probe runs THIS session. Nothing recited from memory.
-
-## 1. Routing confusion resolved
-I was NOT proposing GLM before frankenstein-llm. There are two surfaces:
-
-| Surface | Target | Live proof this turn |
-|---|---|---|
-| Interactive/Cline (Ruben's new routing) | `127.0.0.1:11510` frankenstein-tools adapter | `frankenstein_verify_routing('glm-5.2-15pct')` → `x-litellm-model-api-base: http://127.0.
-```
-
-**Ideas referenced:** #1130, #1131, #12299, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16588, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18944, #18951, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #23316 [deployed], #25378, #25381, #25773, #25774, #25779 [deployed], #25780 [deployed], #25781 [deployed], #25909, #25917 [approved], #25918 [approved], #25920 [approved], #25921 [approved], #7142, #7149, #7925
-
-**Last PICKUP PROMPT:**
-
-```
-pdate idea dispositions (#25918/#25920/#25921 → deployed)
-- [ ] Completion with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
-```
-
-### `1786733087683` — 8/14/2026, 12:19:53 PM PT — 82 turns
-
-**Original task:**
-
-```
-This is incredibly vague. What's wrong with Email Agent? Can you look into it and see what's going on? Fix it? Same with other CFAs?
-```
-
-**Ideas referenced:** #0066, #12405, #13047, #13442, #13965, #14741, #14742, #14743, #14749, #16445, #173178, #18132, #18176, #18309, #18313, #18853, #1892, #19830, #22261, #2328, #2340, #2341, #2343, #2344, #25164, #25989, #26207, #26209, #26211, #26214 [executing], #26215 [executing], #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #3261, #3319, #3346, #3587, #4686, #4689, #4929, #4930, #4931, #4957, #4958, #5095, #5391, #5431, #5574, #5638, #5768, #5770, #5779, #5787, #5792, #5793, #5794, #5795, #5819, #6039, #6064, #7126, #7368, #7381, #7548, #7550, #9132, #9222
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786566964850` — 8/14/2026, 12:01:41 PM PT — 188 turns
+### `1786566964850` — 8/14/2026, 2:20:09 PM PT — 207 turns
 
 **Original task:**
 
@@ -186,7 +99,7 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 Answer to this question is not what was given. It's a registration check to see why there is a conflict and potentially consulting the SLS. Why was this answer so bad and how do we fix it going forward?
 ```
 
-**Ideas referenced:** #10157, #10223, #10243, #10291, #10320, #1041, #10440, #10756, #10868, #10869, #10870, #10872, #10873, #10875, #10880, #10881, #11977, #11991, #11992, #11993, #11996, #11999, #13048, #13051, #13080, #13081, #14132, #14978, #15827, #15911, #16152, #16153, #16154, #16473, #16610, #16613, #1665, #166501, #16732, #1680, #17300, #18435, #186576, #20022, #20286, #20292, #23184, #23477, #25551, #25888, #25889 [ready_for_review], #25914, #25938 [deployed], #25943 [proposed], #26307 [proposed], #3237, #32584, #3402, #360135, #5646, #5700, #5926, #6228, #6751, #6846, #7907, #9086, #9158, #9168, #9269, #9271, #9274, #9277, #9339
+**Ideas referenced:** #10157, #10223, #10243, #10291, #10320, #1041, #10440, #10756, #10868, #10869, #10870, #10872, #10873, #10875, #10880, #10881, #11977, #11991, #11992, #11993, #11996, #11999, #13048, #13051, #13080, #13081, #14132, #14978, #15827, #15911, #16152, #16153, #16154, #16473, #16610, #16613, #1665, #166501, #16732, #1680, #17300, #18435, #186576, #19921, #20022, #20286, #20292, #23184, #23477, #25551, #25888, #25889 [ready_for_review], #25914, #25938 [deployed], #25943 [proposed], #26307 [proposed], #3237, #32584, #3402, #360135, #5646, #5700, #5926, #6228, #6751, #6846, #7907, #9086, #9158, #9168, #9269, #9271, #9274, #9277, #9339
 
 **Last PICKUP PROMPT:**
 
@@ -221,6 +134,279 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786581699007` — 8/14/2026, 2:20:00 PM PT — 797 turns
+
+**Original task:**
+
+```
+#Argus Learning
+
+Tell me how Argus automatic learning is going. I would like for it to start making itself smarter. I mean what I usually do is you know I'm coming in here on a daily basis and I'm trying to do sweeps to see what tasks were unfinished as well as whether there were bugs that were showing that needed to be resolved or permission issues that were not in a accordance with rule 29 or missing tools, things of that nature. I would like to see Argus learning doing those sorts of things on its own. How can we make that happen?
+```
+
+**Ideas referenced:** #10182, #128126, #14749, #16213, #16523, #18806, #19415, #19416, #19434, #20025, #20036 [awaiting_review], #20884, #20890, #21125, #21582, #21667, #22310, #22688, #22850, #22887, #22939 [approved], #23027, #23036, #23094, #23132, #23136, #23144, #23166, #23170, #2323, #23231, #2324, #23241, #23247, #23286, #23292, #23328, #23387, #23428, #23429, #23468, #23506, #23556, #23561, #23582, #23623 [proposed], #23636 [proposed], #23637 [proposed], #23675, #23729, #23764, #23769, #23885 [proposed], #23899 [proposed], #23900 [ready_for_review], #23908 [proposed], #23910 [proposed], #23911 [proposed], #23941, #23982, #24635, #24645, #24789 [proposed], #24941, #24977 [proposed], #24987 [proposed], #24990, #25072, #25074 [proposed], #25142, #25151, #25547, #25552, #25571, #25572 [approved], #25574 [proposed], #25578 [approved], #25624 [proposed], #25625 [ready_for_review], #25768, #25822, #25833, #25888, #25932, #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25975, #25985, #25986, #26001, #26002, #26003 [deployed], #26018 [proposed], #26020 [deployed], #26025 [proposed], #26031 [proposed], #26032 [proposed], #26033 [proposed], #26047 [approved], #26075 [executing], #26083 [awaiting_review], #26091 [proposed], #26250 [proposed], #26269 [approved], #37362, #7326, #7377, #7428, #7784, #7785, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+tasks are flowing through now.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up Argus stalled-task re-queue fix — verify the 55 re-queued tasks complete and close the writer defect.
+
+Where we left off (verified 2026-08-14 14:06:10 PDT):
+- John's tasks 107/237/239 [done]; stale-offload re-queuer deployed and on */15 cron.
+- Queue state: 463 done / 55 queued / 1 running / 2 offloaded / 19 canceled.
+- Sweep Lane 2 now reads COALESCE(error_message, result_summary); 479 rows backfilled.
+
+Open threads to drive next:
+1. #26269 [awaiting_review] — after the 55 queued tasks drain, confirm zero stale offloads remain (check cron_requeue log + argus_task_queue).
+2. #26250 [deployed] — verify Lane 2 clusters now carry real error text (not literal '0'); sweep re-run shows 4 real clusters.
+3. #26269 [awaiting_review] — fix argus_audit_log writers to populate error_message natively (right now only result_summary holds failure detail).
+
+Reference IDs:
+- Argus task queue: #107, #237, #239
+- Ideas: #26075 [deployed], #26083 [deployed], #26250 [deployed], #26269 [awaiting_review]
+- Files: cron_requeue_stale_offloads.php (new), crontab (*/15 requeue)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786696256201` — 8/14/2026, 2:19:55 PM PT — 137 turns
+
+**Original task:**
+
+```
+#Grievance issue
+
+Vicky says that she's having problem uploading stuff to the grievance manager: 
+
+Also my grievance upload is still not working we have several already submitted for review, do I submit them to you directly?
+
+See this: screenshot and whatever she posted into Argus
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #19470, #19499 [awaiting_review], #19567, #20042, #2063, #2065, #20662, #2073, #20884, #20985, #21038, #2127, #2168, #2328, #2337, #2338, #2339, #2340, #2341, #2343, #2344, #25378, #25381, #25888, #26025, #26031, #26032, #26033, #26034, #26205 [executing], #26207 [executing], #26208 [executing], #26209 [proposed], #26210 [executing], #26211 [proposed], #26214 [executing], #26215 [executing], #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26305 [awaiting_review], #26306 [awaiting_review], #3261, #3319, #3346, #58044, #58045, #58380, #6230, #6231, #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+dy cover; no rule edit needed.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Grievance upload HTTP 500 fixed (policy_tag require_once); confirm Vicky re-test.
+
+Where we left off (verified 2026-08-14 11:13 PT):
+- Fixed `/var/www/emtskills/routes/api/grievance_api.php` lines 582/584/799-801 (require path, signature guard, externship path+args). `php -l` clean, include smoke passed, verified on disk via WOPR ssh.
+- DB check: Vicky's already-submitted grievances are all `email_attachment` intake; no torn rows from her failed form attempts.
+- Backups: `/tmp/grievance_api.php.bak-policytagfix-20260814-014830`, plus `/Users/rubenmajor/Desktop/fix_externship_linkage.py` (local scratch).
+
+Open threads to drive next (every item has a real filed idea #):
+1. #26305 [awaiting_review] — Have Vicky re-test the grievance manager upload; if any submit fails, capture the on-screen error + timestamp and pull the FPM fatal log for that minute.
+2. #26306 [awaiting_review] — Marker only: if business later wants `policy_tag` required for ALL categories (not just `category=policy`), revert the line 584 guard. No action needed now.
+
+Reference IDs:
+- Ticket: none (Ruben iMessage/Argus report)
+- Ideas filed this session: #26305 [awaiting_review], #26306 [awaiting_review]
+- Files touched: `/var/www/emtskills/routes/api/grievance_api.php`
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786733087683` — 8/14/2026, 2:19:54 PM PT — 157 turns
+
+**Original task:**
+
+```
+This is incredibly vague. What's wrong with Email Agent? Can you look into it and see what's going on? Fix it? Same with other CFAs?
+```
+
+**Ideas referenced:** #0066, #12405, #13047, #13442, #13965, #14741, #14742, #14743, #14749, #16445, #173178, #18132, #18176, #18309, #18313, #18853, #1892, #19830, #22261, #23184, #2328, #2340, #2341, #2343, #2344, #2358, #25164 [awaiting_review], #25989, #26207, #26209, #26211, #26214 [executing], #26215 [executing], #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26319 [deployed], #26320 [proposed], #3261, #3319, #3346, #3587, #4686, #4689, #4929, #4930, #4931, #4957, #4958, #5095, #5391, #5431, #5574, #5638, #5768, #5770, #5779, #5787, #5792, #5793, #5794, #5795, #5819, #6039, #6064, #7126, #7368, #7381, #7548, #7550, #9132, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+d updated with full RCA + fix.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Email Agent vague-reply RCA + first-touch NEEDS_HUMAN fix (verified 2026-08-14 2:10 PM PT).
+
+Where we left off (verified 2026-08-14 2:10 PM PT):
+- Fix DEPLOYED in /var/www/emtskills/lib/ai_ticket_agent_first_touch.php: `elseif` branch honors [NEEDS_HUMAN] → aiEscalateTicket(); php -l clean; re-read confirmed.
+- Ticket #25164 Sophia Heo repaired with internal escalation-correction comment → Apple Ibanez.
+- Bug recorded frankenstein_router_incidents #2358; ideas #26319 [deployed], #26320 [proposed]; HANDOFF_NOTES.md updated.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26320 [proposed] — cron_email_responder defect: dedup/coalesce password-reset sentences (single authoritative temp password; Makayla got 3 contradictory ones, email 362115) + add a merge guard so a reply never splices two unrelated topical fragments (Jason Pan QB+Moodle garbled splice, email 362106).
+2. #26319 [deployed] — optional hardening: add the same [NEEDS_HUMAN]-honoring guard to any future aiCallRubenBrain caller (two-strike lesson from rule 270: caller MUST handle both [RESOLVED] and [NEEDS_HUMAN] before emailing the student).
+
+Reference IDs:
+- Ticket: 25164 (STU-20260814-8C83BD), assignee Apple Ibanez
+- Bugs/ideas: frankenstein_router_incidents #2358, #26319, #26320
+- Files touched: /var/www/emtskills/lib/ai_ticket_agent_first_touch.php, /var/www/emtskills/docs/HANDOFF_NOTES.md
+- Evidence: email_outbound_log ids 362113 (vague clarify sent), 362115 + 362106 (cron_email_responder defects); ai_ticket_agent_actions 134561 (investigate) / 134563 (clarify sent)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786740046847` — 8/14/2026, 2:19:24 PM PT — 67 turns
+
+**Original task:**
+
+```
+#CFA Misunderstanding
+
+CFA is an internal  acroym for Customer Facing Agents/AI/Assistants, etc... 
+
+so this is very confusing and stupid. Needs correction. Scan for this and the like and resolve it.
+```
+
+**Ideas referenced:** #12687, #15669, #16732, #177851, #18266, #18350, #18353, #18355, #18363, #2316, #2328, #2341, #2343, #2344, #25774, #25895, #25896, #25920, #25989, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #32548, #3261, #3319, #3346, #6168, #6723, #7174, #7872, #7906, #7907, #7925, #9132, #9222
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786696835373` — 8/14/2026, 2:14:56 PM PT — 256 turns
+
+**Original task:**
+
+```
+#CFA
+
+Re-base and tell me where this is at now
+
+# CFA 24h Scan — CORRECTED REPORT (live-verified, 2026-08-12 14:28 PT)
+
+Every metric below was re-verified against live `admin_portal` DB and live cron/probe runs THIS session. Nothing recited from memory.
+
+## 1. Routing confusion resolved
+I was NOT proposing GLM before frankenstein-llm. There are two surfaces:
+
+| Surface | Target | Live proof this turn |
+|---|---|---|
+| Interactive/Cline (Ruben's new routing) | `127.0.0.1:11510` frankenstein-tools adapter | `frankenstein_verify_routing('glm-5.2-15pct')` → `x-litellm-model-api-base: http://127.0.
+```
+
+**Ideas referenced:** #1130, #1131, #12299, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16588, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18944, #18951, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #23316 [deployed], #25378, #25381, #25773, #25774, #25779 [deployed], #25780 [deployed], #25781 [deployed], #25888, #25909, #25917 [approved], #25918 [approved], #25920 [approved], #25921 [approved], #7142, #7149, #7925
+
+**Last PICKUP PROMPT:**
+
+```
+ifact still lint-clean → done.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up Rule 317 close-out for the CFA heartbeat reversal — the causal-rule update is now recorded and lint-verified (verified 2026-08-14 12:20 PM PT).
+
+Where we left off (verified 2026-08-14 12:20 PM PT):
+- REVERSAL-LEARNED comment appended to /var/www/emtskills/cron/cron_cfa_llm_health.php (line 167). php -l clean. No closing ?>, so no stdout leak.
+- The reversal it records: initial "repoint to :11510" (wrong) → live-probe-reversed to "keep :8210, raise TIMEOUT_SEC to 120" (right).
+- All four CFA ideas shipped this session: #25920 executor + cron */5 (verified), #25918 heartbeat :8210 + timeout 120 (verified), #25921 19,155 backfill + BEFORE INSERT guard trigger (verified), plus the 317 causal note.
+
+Open threads to drive next:
+None — Rule 317 close-out complete; all causal-rule artifacts verified on disk this turn.
+
+Reference IDs:
+- Ideas: #25918 [deployed], #25920 [deployed], #25921 [deployed], #23316 [deployed], #25779 [deployed], #25780 [deployed], #25781 [deployed], #25917 [approved]
+- Files touched: /var/www/emtskills/cron/cron_cfa_llm_health.php (REVERSAL-LEARNED note), /var/www/emtskills/cron/cron_cfa_queue_executor.php, /etc/cron.d/emsu-cfa-executor
+- DB: admin_portal — tickets (guard trigger + backup table), cfa_agent_queue, orchestrator_ideas
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786695610761` — 8/14/2026, 2:14:47 PM PT — 280 turns
+
+**Original task:**
+
+```
+#Big Mac 4th Card
+
+I still believe you can get this running. So do it!  Get the 4th Card working!!!
+
+Document written and the theories are in the bug library. One thing in your prompts corrects me, and it is worth flagging because it weakens my own top theory.
+
+## Your Prompt 1 caught a real flaw in my reasoning
+
+Two points in it undercut the evidence I leaned on hardest:
+
+1. **M.2 M-key DOES carry REFCLK.** The 100MHz differential pair is part of the M-key pinout. So "the M.2 slot has no reference clock" is false as a blanket claim. The narrower question is whether this specific cheap adapter
+```
+
+**Ideas referenced:** #111827, #11782, #1195, #12262, #12661, #13873, #13977, #14153, #14154, #14847, #15635, #15636, #15638, #15903, #16437, #1644, #1647, #16581, #16608, #16613, #16731, #16732, #16733, #1731, #1732 [resolved], #1734 [resolved], #1737, #1739, #1746, #1747, #17546, #17580, #17685, #17723, #178667, #178668, #178669, #18693, #18694, #18700, #18743, #18936, #1914 [deployed], #19173, #19439, #19465, #19492, #19495, #19921, #2026, #2033, #20346, #20357, #2036, #21753, #2299, #23133 [executing], #2322 [deployed], #2323, #2341 [resolved], #2343, #2346 [investigating], #2347 [investigating], #23477 [in_progress], #2348, #2349 [deployed], #2351 [deployed], #2352, #2354, #2356 [deployed], #2357 [deployed], #2359, #23945 [proposed], #23952 [awaiting_review], #23954 [awaiting_review], #23989, #24526 [superseded], #24645, #24765, #25042 [deployed], #25097, #25156, #25185, #2563, #25701, #25702, #25703, #25704, #25871, #25888, #25914 [in_progress], #25940 [executing], #25946 [proposed], #25947 [proposed], #25948 [proposed], #25951 [deployed], #25952 [executing], #25953 [executing], #25971, #25974, #25975, #25976, #25984 [the canonical walker], #25985, #25986, #25990 [proposed], #25995, #26003, #26035 [proposed], #26203 [deployed], #26206 [deployed], #26209 [proposed], #26211 [proposed], #26230 [proposed], #26231 [proposed], #26233 [rejected], #26237 [rejected], #26238 [proposed], #26256 [deployed], #26257 [deployed], #26258 [proposed], #26259 [proposed], #26260 [proposed], #26261 [proposed], #323348, #334155, #3672, #3673, #3677, #3679, #3684, #3685, #3688, #3689, #3691, #3694, #3695, #3696, #37030, #3708, #3713, #3714, #3715, #3716, #3717, #3721, #46641, #64748, #664985, #71121, #9083, #9086, #9168, #9192, #9202, #9306, #9311, #9339, #9343, #9420, #9421, #9422, #9423, #9458, #9549, #9831
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786567464418` — 8/14/2026, 2:02:34 PM PT — 424 turns
+
+**Original task:**
+
+```
+#Argus
+
+This task failed for being over context. Can you continue it? 
+
+
+
+#Argus
+
+How it has Argus been doing over the last 12 hours? What improvements do we need to make? What capabilities do we need to increase? Act according to rule 29 and leverage rule 267. Let me know what other permissions I may need to increase. Also I personally head tried to do a couple of things in Argus yesterday and they failed. One of them had to do with RUBEN computer VAPI and getting that back online. I felt like Argus was way off base and not really helpful at all. And that is not how I want that agent to be. J
+```
+
+**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #17130 [superseded], #1745, #17537 [rejected], #177821, #18132 [deployed], #18316, #18579, #186576, #18777, #19098, #19099, #19125, #19173, #19624, #19641, #19731, #19970, #19971, #19975, #19995, #20023, #20024, #20025, #20026, #20028, #20029, #20030, #23133, #2321, #23378, #23477, #2350 [deployed], #2355, #23934, #23945, #23954, #24635, #24645, #25042, #25185, #25551, #25706, #25707, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25803 [proposed], #25812, #25889 [ready_for_review], #25914, #25931, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [proposed], #25944 [proposed], #25946, #25959 [proposed], #25968 [proposed], #25969 [proposed], #25970 [proposed], #26000 [proposed], #26253 [executing], #26270 [proposed], #26318 [proposed], #360135, #360152, #3957, #5792, #6172, #9042, #9159, #9222, #9501, #9771, #9772, #9773, #9774, #9775
+
+**Last PICKUP PROMPT:**
+
+```
+ment recorded in the idea body
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #26000 [deployed], Argus role-tier validation is shipped and the voice queue is clear.
+
+Where we left off (verified 2026-08-14 14:01 PT):
+- Argus role-tier harness scripts/argus_role_tier_validate.php passes 11 of 11 assertions, three consecutive clean runs confirmed twice, installed at /etc/cron.d/emsu-argus-role-tier-validate every 6 hours.
+- Two real bugs fixed: enrollment_lookup and argus_doctor_self_heal were granted but unwired, both now routed to real implementations, argusUnwiredActions() returns 0 of 74.
+- Live tier measurement: CustomerService=31 Admin=54 ITAdmin=66 ExecAdmin=73 MasterAdmin=74, monotonic as designed.
+- TNG canary has three consecutive passes with ids 13 and 14 from cron, so unattended runs work.
+- Argus undisturbed: 16 audited actions in the last hour, zero catalog errors in the PHP log, ghost-tool count still 0.
+- Bug library incidents 2350 and 2355 hold the full diagnoses.
+
+Open threads to drive next:
+1. #26318 [proposed], confirm the first unattended 6-hourly cron run of the Argus harness lands in /var/log/emsu/argus_role_tier_validate.log with clean=true, passed=11, failed=0. Cron runs as www-data with a minimal environment, the same class of gap #26270 [deployed] caught on the canary.
+2. Whether to delete the two orphaned VAPI records 626b41e8-c77d-4c1b-a805-57af1ab27338 and 70c2bb0c-f447-4477-908d-de1b3b2863a4, which both have number null and are unreachable by any caller (human-only decision, no idea).
+3. Whether to reduce the TNG system prompt further, a content judgment on a live voice surface rather than a mechanical dedupe (human-only decision, no idea).
+
+Reference IDs:
+- Ideas: #25959 [rejected], #25968 [deployed], #25969 [deployed], #26000 [deployed], #26253 [deployed], #26270 [deployed], #26318 [proposed], #25970 [superseded].
+- Bug library: incident 2350 vapi_canary_caller_side_assertion_mismatch_2026_08_14, incident 2355 argus_role_tier_unwired_actions_and_false_write_leak_2026_08_14.
+- Files touched: lib/argus_action_catalog.php, scripts/argus_role_tier_validate.php, /etc/cron.d/emsu-argus-role-tier-validate, /etc/cron.d/emsu-ruben-tng-canary, lib/ruben_tng_voice_canary.php, api/voice/ruben_voice_webhook.php, cron/cron_voice_agent_health.php, DB rows voice_agent_whitelist id 3 and ruben_tng_canary_config.
+
+When done, append to cline_task_ledger.md per rule 07 and run order 66.
+═══════════════════════════════════════════════
+</result>
 </attempt_completion>
 ```
 
@@ -330,52 +516,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786696256201` — 8/14/2026, 11:15:03 AM PT — 114 turns
-
-**Original task:**
-
-```
-#Grievance issue
-
-Vicky says that she's having problem uploading stuff to the grievance manager: 
-
-Also my grievance upload is still not working we have several already submitted for review, do I submit them to you directly?
-
-See this: screenshot and whatever she posted into Argus
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #19470, #19499 [awaiting_review], #19567, #20042, #2063, #2065, #20662, #2073, #20884, #20985, #21038, #2127, #2168, #2328, #2337, #2338, #2339, #2340, #2341, #2343, #2344, #25378, #25381, #25888, #26025, #26031, #26032, #26033, #26205 [executing], #26207 [executing], #26208 [executing], #26209 [proposed], #26210 [executing], #26211 [proposed], #26214 [executing], #26215 [executing], #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26305 [awaiting_review], #26306 [awaiting_review], #3261, #3319, #3346, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-dy cover; no rule edit needed.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Grievance upload HTTP 500 fixed (policy_tag require_once); confirm Vicky re-test.
-
-Where we left off (verified 2026-08-14 11:13 PT):
-- Fixed `/var/www/emtskills/routes/api/grievance_api.php` lines 582/584/799-801 (require path, signature guard, externship path+args). `php -l` clean, include smoke passed, verified on disk via WOPR ssh.
-- DB check: Vicky's already-submitted grievances are all `email_attachment` intake; no torn rows from her failed form attempts.
-- Backups: `/tmp/grievance_api.php.bak-policytagfix-20260814-014830`, plus `/Users/rubenmajor/Desktop/fix_externship_linkage.py` (local scratch).
-
-Open threads to drive next (every item has a real filed idea #):
-1. #26305 [awaiting_review] — Have Vicky re-test the grievance manager upload; if any submit fails, capture the on-screen error + timestamp and pull the FPM fatal log for that minute.
-2. #26306 [awaiting_review] — Marker only: if business later wants `policy_tag` required for ALL categories (not just `category=policy`), revert the line 584 guard. No action needed now.
-
-Reference IDs:
-- Ticket: none (Ruben iMessage/Argus report)
-- Ideas filed this session: #26305 [awaiting_review], #26306 [awaiting_review]
-- Files touched: `/var/www/emtskills/routes/api/grievance_api.php`
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
 ### `1786712894547` — 8/14/2026, 11:03:28 AM PT — 68 turns
 
 **Original task:**
@@ -459,28 +599,6 @@ The business problem: students keep emailing/chatting "what am I missing?" / "wh
 ```
 
 **Ideas referenced:** #11782, #12661, #13440, #13873, #13977, #14153, #14154, #14847, #15635, #15636, #15638, #15903, #16437, #16581, #16608, #16613, #16731, #16732, #16733, #17546, #17580, #17685, #17723, #18693, #18743, #18936, #19173, #19439, #19465, #19492, #19495, #19921, #2026, #2033, #20346, #20357, #2036, #2323, #23477 [in_progress], #24526 [superseded], #24765, #25156, #25185, #25871, #25888, #25914 [in_progress], #25971, #25974, #25975, #25976, #25984 [the canonical walker], #25985, #25986 [deployed], #25990 [proposed], #25995, #26003, #26035 [proposed], #26230 [proposed], #26231 [proposed], #26256 [deployed], #26257 [deployed], #26265 [deployed], #26285 [deployed], #26286 [deployed], #71121, #9083, #9086, #9109, #9132, #9168, #9192, #9202, #9222, #9306, #9339, #9343, #9549, #9831
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786695610761` — 8/14/2026, 6:08:41 AM PT — 204 turns
-
-**Original task:**
-
-```
-#Big Mac 4th Card
-
-I still believe you can get this running. So do it!  Get the 4th Card working!!!
-
-Document written and the theories are in the bug library. One thing in your prompts corrects me, and it is worth flagging because it weakens my own top theory.
-
-## Your Prompt 1 caught a real flaw in my reasoning
-
-Two points in it undercut the evidence I leaned on hardest:
-
-1. **M.2 M-key DOES carry REFCLK.** The 100MHz differential pair is part of the M-key pinout. So "the M.2 slot has no reference clock" is false as a blanket claim. The narrower question is whether this specific cheap adapter
-```
-
-**Ideas referenced:** #111827, #11782, #1195, #12262, #12661, #13873, #13977, #14153, #14154, #14847, #15635, #15636, #15638, #15903, #16437, #1644, #1647, #16581, #16608, #16613, #16731, #16732, #16733, #1731, #1732 [resolved], #1734 [resolved], #1737, #1739, #1746, #1747, #17546, #17580, #17685, #17723, #178667, #178668, #178669, #18693, #18694, #18700, #18743, #18936, #1914 [deployed], #19173, #19439, #19465, #19492, #19495, #19921, #2026, #2033, #20346, #20357, #2036, #21753, #2299, #23133 [executing], #2322 [deployed], #2323, #2341 [resolved], #2343, #2346 [investigating], #2347 [investigating], #23477 [in_progress], #2348, #2349 [deployed], #2351, #2352, #23945 [proposed], #23952 [awaiting_review], #23954 [awaiting_review], #23989, #24526 [superseded], #24645, #24765, #25042 [deployed], #25097, #25156, #25185, #2563, #25701, #25702, #25703, #25704, #25871, #25888, #25914 [in_progress], #25940 [executing], #25946 [proposed], #25947 [proposed], #25948 [proposed], #25951 [deployed], #25952 [executing], #25953 [executing], #25971, #25974, #25975, #25976, #25984 [the canonical walker], #25985, #25986, #25990 [proposed], #25995, #26003, #26035 [proposed], #26203 [deployed], #26206 [deployed], #26209 [proposed], #26211 [proposed], #26230 [proposed], #26231 [proposed], #26233 [rejected], #26237 [rejected], #26238 [proposed], #26256 [deployed], #26257 [deployed], #26258 [proposed], #26259 [proposed], #26260 [proposed], #26261 [proposed], #334155, #3672, #3673, #3677, #3679, #3684, #3685, #3688, #3689, #3691, #3694, #3695, #3696, #37030, #3708, #3713, #3714, #3715, #3716, #3717, #3721, #46641, #64748, #664985, #71121, #9083, #9086, #9168, #9192, #9202, #9306, #9311, #9339, #9343, #9420, #9421, #9422, #9423, #9458, #9549, #9831
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -677,59 +795,6 @@ Reference IDs:
 - Google Drive: Florida folder 1_mu38aqooAcxVUAAy3fNH2zQch_sZtfq, Oregon folder 1jJsCoYWS_nRK_KvPfAhXReiQbdRAb-ob
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786567464418` — 8/14/2026, 2:46:32 AM PT — 354 turns
-
-**Original task:**
-
-```
-#Argus
-
-This task failed for being over context. Can you continue it? 
-
-
-
-#Argus
-
-How it has Argus been doing over the last 12 hours? What improvements do we need to make? What capabilities do we need to increase? Act according to rule 29 and leverage rule 267. Let me know what other permissions I may need to increase. Also I personally head tried to do a couple of things in Argus yesterday and they failed. One of them had to do with RUBEN computer VAPI and getting that back online. I felt like Argus was way off base and not really helpful at all. And that is not how I want that agent to be. J
-```
-
-**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #17130 [superseded], #1745, #17537 [rejected], #177821, #18132 [deployed], #18316, #18579, #186576, #18777, #19098, #19099, #19125, #19173, #19624, #19641, #19731, #19970, #19971, #19975, #19995, #20023, #20024, #20025, #20026, #20028, #20029, #20030, #23133, #2321, #23378, #23477, #2350 [deployed], #23934, #23945, #23954, #24635, #24645, #25042, #25185, #25551, #25706, #25707, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25803 [proposed], #25812, #25889 [ready_for_review], #25914, #25931, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [proposed], #25944 [proposed], #25946, #25959 [proposed], #25968 [proposed], #25969 [proposed], #25970 [proposed], #26000 [proposed], #26253 [executing], #26270 [proposed], #360135, #360152, #3957, #5792, #6172, #9042, #9159, #9222, #9501, #9771, #9772, #9773, #9774, #9775
-
-**Last PICKUP PROMPT:**
-
-```
-plus bug library incident 2350
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #26253 [executing], RUBEN TNG canary is live, next is Argus role-tiering.
-
-Where we left off (verified 2026-08-14 02:09 PT):
-- Canary #25969 [deployed] passes end to end: ruben_tng_canary_runs id 12 status=pass, duration 11s, greeting_matched 1, tool_count 7. Cron at /etc/cron.d/emsu-ruben-tng-canary every 15 min with env vars scoped to that file only.
-- Three defects fixed to get there: missing env credentials, TNG whitelist plus INTERNAL_QA_CALLERS auth bypass for +19412349741, and rtng_canary_probe_tng_side() so assertions read the TNG side instead of the caller side. Bug library incident 2350 holds the full diagnosis.
-- TNG line healthy: assistant-request answers in 43ms with 7 tools, model deepseek-v4-pro, phone +17602807886.
-- Zero disruption confirmed: 0 errored calls in the window, ghost-tool count still 0 so #25968 [deployed] holds, remaining warnings pre-existing.
-- The two orphaned VAPI records 626b41e8-c77d-4c1b-a805-57af1ab27338 and 70c2bb0c-f447-4477-908d-de1b3b2863a4 both have number null, created 9 seconds apart on 2026-04-14, unreachable by any caller. Ruben decides whether to delete them (human-only decision, no idea).
-
-Open threads to drive next:
-1. #26000 [awaiting_review], build the Argus role-tiered toolset: same MCP capability as Cline, resolved through the canonical registry with a per-role permission gate rather than per-file lists, so the #25968 [deployed] defect class cannot recur. Ruben approved this as long as Argus keeps running without errors.
-2. #25959 [awaiting_review], slim the TNG systemPrompt: 11 repeats of the progress-word protocol and 2 duplicate filler-ban blocks inside 40,499 chars. No longer urgent since the endpoint answers in 43ms, and the canary can now catch any regression the edit introduces.
-3. #26253 [executing], make the rule-91 and rule-317 validator gate un-skippable before attempt_completion.
-4. #26270 [proposed], watch the first unattended cron canary run and confirm a row lands with trigger_source=cron and status=pass. Cron parses env assignments differently than a shell, so if it errors with Missing Vapi credentials, move the exports into a wrapper script the cron line invokes.
-
-Reference IDs:
-- Ideas: #25959 [awaiting_review], #25968 [deployed], #25969 [deployed], #26000 [awaiting_review], #26253 [executing], #26270 [proposed], #25970 [superseded].
-- Bug library: incident 2350, key vapi_canary_caller_side_assertion_mismatch_2026_08_14.
-- Files touched: /etc/cron.d/emsu-ruben-tng-canary with backup .bak-20260814, lib/ruben_tng_voice_canary.php, api/voice/ruben_voice_webhook.php with backups .bak-opusban-20260814 and .bak-canaryqa-20260814, DB rows voice_agent_whitelist id 3 and ruben_tng_canary_config.
-
-When done, append to cline_task_ledger.md per rule 07 and run order 66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
@@ -2957,64 +3022,5 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [x] File idea #25793 [proposed] for post-302 full credential audit
 - [x] PICKUP PROMPT block
 </task_progress>
-</attempt_completion>
-```
-
-### `1786473380730` — 8/11/2026, 1:47:51 PM PT — 216 turns
-
-**Original task:**
-
-```
-#CFA 
-Completed scan of CFA system logs for the past 24 hours.
-
-go ahead and look at below and correct it. Bad iterations. Just reanalyze and do again
-
-**Key metrics (last 24 h)**
-- Sweep runs                                                                                                                                                                                  ✅
-- Dispatch runs                         ✅
-- Quality‑audit entries       ✅
-- LLM‑health alerts                          ✅
-- Struct‑gate logs                     ✅
-
-**Findings**
-1. **Sweep & Dispatch** – Both logs show normal acti
-```
-
-**Ideas referenced:** #16863, #17150, #20092, #2306, #2310, #2311, #23316 [proposed], #24339 [deployed], #24340 [deployed], #24341 [awaiting_review], #24500 [proposed], #25537, #25560, #25593 [proposed], #25608, #25623, #25632, #25633, #25635, #25666, #25667, #25669, #25679, #25688, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25768 [deployed], #25769, #25770, #25773, #25774, #25779 [deployed], #25780 [deployed], #25781 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-sheet.
-
-═══════════════════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════════════════
-Pick up task — CFA 24h scan corrected report: fixes deployed, remaining actions tracked.
-
-Where we left off (verified 2026-08-11 13:46 PT):
-- Corrected CFA report filed as #25768 [deployed]
-- #25773 → #25779 [deployed] heartbeat fix: endpoint changed to /v1/chat/completions, timeout 5s→30s
-- #25774 → #25780 [deployed] dispatch bridge: cfa_access_sweep step 5 feeds cfa_agent_queue; triggered → 990 rows enqueued
-- #24500 → #25781 [proposed] struct gate: confirmed livechat table nonexistent, full rewrite needed
-- Files modified: cron/cron_cfa_llm_health.php (backup .bak-20260811-heartbeat-fix), lib/cfa_access_sweep.php (backup auto-created by MCP)
-- Files touched: none (deployed via SSH on WOPR)
-
-Open threads to drive next:
-1. #25779 [deployed] — GLM-5.2 still times out at 30s: investigate vLLM babysitter/GPU on the Mac mini serving port 8210. Model serves /v1/chat/completions at ~15.5s but intermittently spikes >30s.
-2. #25780 [deployed] — 990 drafts now in cfa_agent_queue: run parallel_cfa_dispatch.php or deploy a cron trigger to consume them.
-3. #25781 [proposed] — Struct gate rewrite: map chat_portal_messages + chat_portal_visitor_sessions schema to struct enforcer columns. Requires Ruben's email tracker review first.
-4. #23316 [proposed] — NULL intake backlog: 76 tickets remain, re-run backfill.
-
-Reference IDs:
-- Ticket: N/A
-- Ideas filed: #25768, #25779, #25780, #25781 (this session)
-- Ideas reconciled: #24500 [proposed], #24339 [deployed], #24340 [deployed], #24341 [awaiting_review], #23316 [proposed]
-- Files modified: /var/www/emtskills/cron/cron_cfa_llm_health.php, /var/www/emtskills/lib/cfa_access_sweep.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```

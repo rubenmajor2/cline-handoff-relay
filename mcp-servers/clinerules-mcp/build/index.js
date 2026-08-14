@@ -856,7 +856,18 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
             // BOX DRAWINGS LIGHT VERTICAL. The rule-91 divider is U+2550, so the split
             // never matched and the reversal section was the ENTIRE result including the
             // pickup prompt. Split on the real divider, literal header as fallback.
-            const reversalSection = result_text
+            // REVERSAL SCAN WINDOW (2026-08-14). Previously this bounded only the END
+            // ("everything before the PICKUP PROMPT") and never the START, so EVERY bullet
+            // in the whole result was eligible to be read as a flip line. A completion that
+            // listed guard-test results as bullets with arrows got flagged for a missing RCA
+            // bucket even though its actual Reversal Log was correctly bucketed. That false
+            // positive punishes detailed completions, the opposite of what rule 317 wants.
+            // Bound BOTH ends: start at the Reversal Log header, stop at the pickup prompt.
+            // No true positive is lost, because rule 317 requires flips to be listed under
+            // that header in the first place.
+            const _revStart = result_text.search(/^#{0,3}\s*reversal\s*log/im);
+            const _revBody = _revStart >= 0 ? result_text.slice(_revStart) : result_text;
+            const reversalSection = _revBody
                 .split(/\u2550{5,}[\s\S]{0,60}?PICKUP PROMPT/i)[0]
                 .split(/PICKUP PROMPT \(paste into a fresh Cline window\)/i)[0];
             // FLIP-PHRASING FIX (2026-08-14, positive-control C). The unbucketed-flip

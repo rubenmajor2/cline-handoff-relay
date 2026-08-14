@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-14T19:20:15.332Z",
+ "generated_at": "2026-08-14T20:20:15.700Z",
  "counts": {
-  "parsed": 4,
-  "reused": 708,
+  "parsed": 0,
+  "reused": 712,
   "failed": 0,
   "total": 712
  },
@@ -125618,11 +125618,11 @@
   },
   "1786581699007": {
    "task_id": "1786581699007",
-   "mtime": 1786735210198,
+   "mtime": 1786735785606,
    "created_at": "2026-08-13T00:41:39.007Z",
-   "last_modified": "2026-08-14T19:20:10.198Z",
-   "size_kb": 2363,
-   "turn_count": 695,
+   "last_modified": "2026-08-14T19:29:45.606Z",
+   "size_kb": 2407,
+   "turn_count": 727,
    "title": "#Argus Learning\n\nTell me how Argus automatic learning is going. I would like for it to start making itself smarter. I mean what I usually do is you know I'm coming in here on a daily basis and I'm trying to do sweeps to see what tasks were unfinished as well as whether there were bugs that were showing that needed to be resolved or permission issues that were not in a accordance with rule 29 or missing tools, things of that nature. I would like to see Argus learning doing those sorts of things on its own. How can we make that happen?",
    "pickup_prompt": "hat succeeded before the drop.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Argus learning loop: fill the remaining gaps (writer error_message fix + offloaded-task evaluation + rule promotion).\n\nWhere we left off (verified 2026-08-14 02:00 PDT):\n- Sweep cron `cron_argus_daily_sweep.php` running `0 */4`, 44 findings (4 bug clusters, 40 unfinished offloaded).\n- Self-heal cron `cron/cron_argus_self_heal.php` rewritten against real schemas and installed `*/5` in root crontab.\n- 479 `argus_audit_log` rows backfilled with real `error_message` from `result_summary`; lane-2 filter reads the fallback.\n\nOpen threads to drive next:\n1. #26269 [approved] — patch the audit writers (`lib/argus_action_catalog.php` ~1863, `routes/cron_argus_task_worker.php` ~536) to set `error_message = result_summary` on `success=0`, so no backfill is ever needed again.\n2. #26047 [approved] — finish evaluating the 40 remaining offloaded Argus tasks; Callbacks, WSOD, and 403 clusters are already [deployed], the rest need the same live-deployed-state check.\n3. #26075 [deployed] — re-verify the class-wide repair recipe text actually landed in `cron/cron_argus_self_heal.php` (the Lane-2 grep is confirmed, the self-heal file's copy is not yet independently re-read).\n\nReference IDs:\n- Ideas: #26018 [superseded], #26025 [deployed], #26031 [superseded], #26032 [superseded], #26033 [superseded], #26047 [approved], #26075 [deployed], #26083 [deployed], #26250 [deployed], #26269 [approved]\n- Files touched: `cron_argus_daily_sweep.php`, `cron/cron_argus_self_heal.php`, `routes/argus_task_status.php`, `routes/_view_argus_student_tools.php`, `routes/_view_argus_cs_comms_suite.php`, `argus_sweep_findings` (table), `argus_audit_log` (backfill)\n- MCP state: emsu-operations was \"Not connected\" at last probe after 2 reconnect attempts.\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
@@ -125646,6 +125646,7 @@
     "20036": "awaiting_review",
     "20884": null,
     "20890": null,
+    "21125": null,
     "21582": null,
     "21667": null,
     "22310": null,
@@ -127296,13 +127297,13 @@
   },
   "1786696835373": {
    "task_id": "1786696835373",
-   "mtime": 1786735208284,
+   "mtime": 1786735766053,
    "created_at": "2026-08-14T08:40:35.373Z",
-   "last_modified": "2026-08-14T19:20:08.284Z",
-   "size_kb": 944,
-   "turn_count": 171,
+   "last_modified": "2026-08-14T19:29:26.053Z",
+   "size_kb": 1021,
+   "turn_count": 185,
    "title": "#CFA\n\nRe-base and tell me where this is at now\n\n# CFA 24h Scan — CORRECTED REPORT (live-verified, 2026-08-12 14:28 PT)\n\nEvery metric below was re-verified against live `admin_portal` DB and live cron/probe runs THIS session. Nothing recited from memory.\n\n## 1. Routing confusion resolved\nI was NOT proposing GLM before frankenstein-llm. There are two surfaces:\n\n| Surface | Target | Live proof this turn |\n|---|---|---|\n| Interactive/Cline (Ruben's new routing) | `127.0.0.1:11510` frankenstein-tools adapter | `frankenstein_verify_routing('glm-5.2-15pct')` → `x-litellm-model-api-base: http://127.0.0.1:11510/v1`, model group `frankenstein-tools`, LiteLLM 1.91.1 |\n| CFA heartbeat cron ONLY (`cron_c",
-   "pickup_prompt": "r so no future producer writes NULL\n- [ ] Update dispositions + completion with PICKUP PROMPT\n</task_progress>\n</use_mcp_tool>",
+   "pickup_prompt": "pdate idea dispositions (#25918/#25920/#25921 → deployed)\n- [ ] Completion with PICKUP PROMPT\n</task_progress>\n</use_mcp_tool>",
    "ideas": {
     "1130": null,
     "1131": null,

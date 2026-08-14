@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/14/2026, 12:20:15 PM PT | window: last 72h | 77 tasks | index total 712 (parsed 4, cached 708)
+Generated: 8/14/2026, 1:20:15 PM PT | window: last 72h | 76 tasks | index total 712 (parsed 0, cached 712)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786581699007` | 8/14/2026, 12:20:10 PM | 695 | 2363KB | #Argus Learning |
-| `1786696835373` | 8/14/2026, 12:20:08 PM | 171 | 944KB | #CFA |
+| `1786581699007` | 8/14/2026, 12:29:45 PM | 727 | 2407KB | #Argus Learning |
+| `1786696835373` | 8/14/2026, 12:29:26 PM | 185 | 1021KB | #CFA |
 | `1786733087683` | 8/14/2026, 12:19:53 PM | 82 | 2495KB | This is incredibly vague. What's wrong with Email Agent? Can you look into it and see what |
 | `1786566964850` | 8/14/2026, 12:01:41 PM | 188 | 1524KB | Answer to this question is not what was given. It's a registration check to see why there  |
 | `1786711940130` | 8/14/2026, 11:44:11 AM | 134 | 17510KB | Another thing we need to add to sunset, politicians, and just catalogue in the next respon |
@@ -86,13 +86,12 @@ Generated: 8/14/2026, 12:20:15 PM PT | window: last 72h | 77 tasks | index total
 | `1786469157683` | 8/11/2026, 3:25:27 PM | 436 | 1143KB | How many tokens have our FREE LLMs used in the last 30 days |
 | `1786476815310` | 8/11/2026, 2:37:15 PM | 132 | 647KB | #Postmark API |
 | `1786473380730` | 8/11/2026, 1:47:51 PM | 216 | 747KB | #CFA  |
-| `1786474429480` | 8/11/2026, 12:49:27 PM | 136 | 633KB | https://emsuniversity.com/emtskills and other pages are all down / 500 Can you bring them  |
 
 ---
 
 ## Per-window detail
 
-### `1786581699007` — 8/14/2026, 12:20:10 PM PT — 695 turns
+### `1786581699007` — 8/14/2026, 12:29:45 PM PT — 727 turns
 
 **Original task:**
 
@@ -102,7 +101,7 @@ Generated: 8/14/2026, 12:20:15 PM PT | window: last 72h | 77 tasks | index total
 Tell me how Argus automatic learning is going. I would like for it to start making itself smarter. I mean what I usually do is you know I'm coming in here on a daily basis and I'm trying to do sweeps to see what tasks were unfinished as well as whether there were bugs that were showing that needed to be resolved or permission issues that were not in a accordance with rule 29 or missing tools, things of that nature. I would like to see Argus learning doing those sorts of things on its own. How can we make that happen?
 ```
 
-**Ideas referenced:** #10182, #128126, #14749, #16213, #16523, #18806, #19415, #19416, #19434, #20025, #20036 [awaiting_review], #20884, #20890, #21582, #21667, #22310, #22688, #22850, #22887, #22939 [approved], #23027, #23036, #23094, #23132, #23136, #23144, #23166, #23170, #2323, #23231, #2324, #23241, #23247, #23286, #23292, #23328, #23387, #23428, #23429, #23468, #23506, #23556, #23561, #23582, #23623 [proposed], #23636 [proposed], #23637 [proposed], #23675, #23729, #23764, #23769, #23885 [proposed], #23899 [proposed], #23900 [ready_for_review], #23908 [proposed], #23910 [proposed], #23911 [proposed], #23941, #23982, #24635, #24645, #24789 [proposed], #24941, #24977 [proposed], #24987 [proposed], #24990, #25072, #25074 [proposed], #25142, #25151, #25547, #25552, #25571, #25572 [approved], #25574 [proposed], #25578 [approved], #25624 [proposed], #25625 [ready_for_review], #25768, #25822, #25833, #25888, #25932, #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25975, #25985, #25986, #26001, #26002, #26003 [deployed], #26018 [proposed], #26020 [deployed], #26025 [proposed], #26031 [proposed], #26032 [proposed], #26033 [proposed], #26047 [approved], #26075 [executing], #26083 [awaiting_review], #26091 [proposed], #26250 [proposed], #26269 [approved], #7326, #7377, #7428, #7784, #7785, #9222
+**Ideas referenced:** #10182, #128126, #14749, #16213, #16523, #18806, #19415, #19416, #19434, #20025, #20036 [awaiting_review], #20884, #20890, #21125, #21582, #21667, #22310, #22688, #22850, #22887, #22939 [approved], #23027, #23036, #23094, #23132, #23136, #23144, #23166, #23170, #2323, #23231, #2324, #23241, #23247, #23286, #23292, #23328, #23387, #23428, #23429, #23468, #23506, #23556, #23561, #23582, #23623 [proposed], #23636 [proposed], #23637 [proposed], #23675, #23729, #23764, #23769, #23885 [proposed], #23899 [proposed], #23900 [ready_for_review], #23908 [proposed], #23910 [proposed], #23911 [proposed], #23941, #23982, #24635, #24645, #24789 [proposed], #24941, #24977 [proposed], #24987 [proposed], #24990, #25072, #25074 [proposed], #25142, #25151, #25547, #25552, #25571, #25572 [approved], #25574 [proposed], #25578 [approved], #25624 [proposed], #25625 [ready_for_review], #25768, #25822, #25833, #25888, #25932, #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25975, #25985, #25986, #26001, #26002, #26003 [deployed], #26018 [proposed], #26020 [deployed], #26025 [proposed], #26031 [proposed], #26032 [proposed], #26033 [proposed], #26047 [approved], #26075 [executing], #26083 [awaiting_review], #26091 [proposed], #26250 [proposed], #26269 [approved], #7326, #7377, #7428, #7784, #7785, #9222
 
 **Last PICKUP PROMPT:**
 
@@ -135,7 +134,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786696835373` — 8/14/2026, 12:20:08 PM PT — 171 turns
+### `1786696835373` — 8/14/2026, 12:29:26 PM PT — 185 turns
 
 **Original task:**
 
@@ -161,8 +160,8 @@ I was NOT proposing GLM before frankenstein-llm. There are two surfaces:
 **Last PICKUP PROMPT:**
 
 ```
-r so no future producer writes NULL
-- [ ] Update dispositions + completion with PICKUP PROMPT
+pdate idea dispositions (#25918/#25920/#25921 → deployed)
+- [ ] Completion with PICKUP PROMPT
 </task_progress>
 </use_mcp_tool>
 ```
@@ -3015,45 +3014,6 @@ Reference IDs:
 - Files modified: /var/www/emtskills/cron/cron_cfa_llm_health.php, /var/www/emtskills/lib/cfa_access_sweep.php
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786474429480` — 8/11/2026, 12:49:27 PM PT — 136 turns
-
-**Original task:**
-
-```
-https://emsuniversity.com/emtskills and other pages are all down / 500 Can you bring them back up?
-```
-
-**Ideas referenced:** #10234, #178504, #23922, #23923, #23974 [executing], #24574 [resolved], #25525, #4932, #6106, #6825, #6842, #9019, #9070
-
-**Last PICKUP PROMPT:**
-
-```
-message students via Team Hub.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1785046185980 - site down + student ticket #24574 resolved
-
-Where we left off (verified 2026-08-11 12:47 PT):
-- Site 500 root cause: config/config.local.php define-ordering bug (POSTMARK_BROADCAST_TOKEN referenced POSTMARK_ACCOUNT_TOKEN before defined); fixed by reordering, FPM reloaded, site verified 200/302
-- Ticket #24574 [resolved] Gabriella Hill (26520FT-18): no instructor at 9 AM, class is ONLINE ONLY today. Uncovered shift confirmed on Team Hub [ID:138388] 2026-08-11 09:00-17:30 TX San Antonio EMT 26520FT.
-- Emailed student Zoom link https://zoom.us/j/83290491745 (draft #23974 [executing], tier 1 autosend attempted; php mail() fired) and resolved ticket #24574
-
-Open threads to drive next:
-1. Follow up on the instructor no-show for 26520FT today: uncover shift ID 138388, escalate to staff or find coverage on Team Hub (human-only decision on instructor availability)
-
-Reference IDs:
-- Ideas filed: none
-- Files touched: /var/www/emtskills/config/config.local.php
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>

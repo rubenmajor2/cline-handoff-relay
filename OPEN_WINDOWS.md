@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/13/2026, 8:41:57 PM PT | window: last 72h | 97 tasks | index total 701 (parsed 5, cached 696)
+Generated: 8/13/2026, 9:41:57 PM PT | window: last 72h | 97 tasks | index total 701 (parsed 2, cached 699)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786673589882` | 8/13/2026, 8:41:56 PM | 303 | 1082KB | Big Mac has 4 GPUs now. Can you make sure that other card is part of service?  |
-| `1786666915889` | 8/13/2026, 8:41:22 PM | 303 | 986KB | Can you email a copy of any externship agreements / affiliation agreement whatever from ag |
-| `1786677303463` | 8/13/2026, 8:40:07 PM | 57 | 225KB | /emtskills is slow again. Please fix it. Check emtskills-slowness and fix it |
+| `1786666915889` | 8/13/2026, 9:41:25 PM | 425 | 1355KB | Can you email a copy of any externship agreements / affiliation agreement whatever from ag |
+| `1786677303463` | 8/13/2026, 9:28:14 PM | 134 | 469KB | /emtskills is slow again. Please fix it. Check emtskills-slowness and fix it |
+| `1786673589882` | 8/13/2026, 9:00:55 PM | 409 | 1257KB | Big Mac has 4 GPUs now. Can you make sure that other card is part of service?  |
 | `1786666814323` | 8/13/2026, 8:37:09 PM | 820 | 1504KB | Jon had a request in Argus, https://emsuniversity.com/emtskills/routes/argus_download.php? |
 | `1786660376952` | 8/13/2026, 8:30:04 PM | 136 | 561KB | help me file with Florida Board of Education application yet? Need that approval before we |
 | `1786674811485` | 8/13/2026, 7:54:35 PM | 42 | 149KB | Can you tell me how we can see if anyone is using a bot to chat to us or not? |
@@ -112,7 +112,69 @@ Generated: 8/13/2026, 8:41:57 PM PT | window: last 72h | 97 tasks | index total 
 
 ## Per-window detail
 
-### `1786673589882` — 8/13/2026, 8:41:56 PM PT — 303 turns
+### `1786666915889` — 8/13/2026, 9:41:25 PM PT — 425 turns
+
+**Original task:**
+
+```
+Can you email a copy of any externship agreements / affiliation agreement whatever from agencies that might be signed by both parties - would be in vyu@emsunivesity.com's email inbox, etc...
+```
+
+**Ideas referenced:** #15669, #19163, #2144, #2158, #2304, #2316, #2335 [deployed], #2336, #2350, #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26196 [executing], #6785
+
+**Last PICKUP PROMPT:**
+
+```
+end Jon's 18-month agreement digest (44 tracked emails)
+- [ ] Report findings + PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1786677303463` — 8/13/2026, 9:28:14 PM PT — 134 turns
+
+**Original task:**
+
+```
+/emtskills is slow again. Please fix it. Check emtskills-slowness and fix it
+```
+
+**Ideas referenced:** #11812, #13453, #2310 [resolved], #2335 [deployed], #2337, #2338, #2339, #2342, #25548 [executing], #25679 [executing], #26019, #26054, #26068, #26076, #26077, #26080 [completed], #26205 [executing], #26207 [executing], #26208 [executing], #26209 [proposed], #26210 [executing], #26211 [proposed], #26218, #26219
+
+**Last PICKUP PROMPT:**
+
+```
+dea #25548, not this incident.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — `/emtskills` slowness incident follow-through (swap-flush + dead LoRA sync loop, resolved 2026-08-13).
+
+Where we left off (verified 2026-08-13 21:27 PT):
+- Two stacked root causes fixed and verified live: memory-guardian swap-flush storm + emsu-fleet-finisher/vault-sync rsync loop against unreachable Artemis.
+- nvme0n1 util 95%→3%, public latency 14ms, 0 new www slowlog stalls, swap 8130MB→135MB.
+- Bug lib incident #2342, ideas #26218 + #26219, handoff note appended to `/var/www/emtskills/docs/HANDOFF_NOTES.md`.
+
+Open threads to drive next:
+1. #26218 — [awaiting_review] Confirm FPM auto-tuner restored `pm.max_children` 140→300 after its 1800s cooldown (check `grep pm.max_children /etc/php/8.3/fpm/pool.d/www.conf` and `/var/log/emsu-memory-guardian.log` TUNE-HOLD lines). If still 140, investigate the tuner cooldown.
+2. #26219 — [deployed] If Artemis (10.100.0.5) is restored later, re-enable vault-sync for a single clean run: `chattr -i /etc/cron.d/emsu-vault-sync` then restore schedule, and only re-enable fleet-finisher after one clean sync succeeds.
+3. #25548 — [executing] Pre-existing: move the 180s `api/ticket_autospec.php` Claude curls (last remaining slowlog entries) off the www pool / add per-request timeout budget.
+
+Reference IDs:
+- Ideas filed: #26218, #26219
+- Bug-library incident: #2342
+- Backups: emsu-memory-guardian.sh.bak-20260813-flushstorm, /etc/cron.d/emsu-fleet-finisher.bak-20260813-loarartemis-off, /etc/cron.d/emsu-vault-sync.bak-20260813-loarartemis-off
+- Files touched: /var/www/emtskills/scripts/emsu-memory-guardian.sh (patched), /etc/cron.d/emsu-fleet-finisher (disabled+immutable), /etc/cron.d/emsu-vault-sync (disabled+immutable), /var/www/emtskills/docs/HANDOFF_NOTES.md (appended)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+</invoke>
+```
+
+### `1786673589882` — 8/13/2026, 9:00:55 PM PT — 409 turns
 
 **Original task:**
 
@@ -133,7 +195,7 @@ Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md
 Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted
 ```
 
-**Ideas referenced:** #1130, #1131, #11945, #1241, #12425, #12459, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178667, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2294, #2307, #2314, #23169, #2335 [deployed], #2337, #2338, #2339, #23885, #24217, #24789, #24987, #25072, #25074, #25097, #25111, #25125, #25185, #25196 [executing], #25378, #25381, #25470, #25547, #25552, #25624, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25946, #26019, #26044, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26156, #26199, #26205 [executing], #26207 [executing], #26208 [executing], #26209 [proposed], #26210 [executing], #26211 [proposed], #2763, #58343, #6826, #7142, #7149
+**Ideas referenced:** #1130, #1131, #11945, #1241, #12425, #12459, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178667, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2294, #2307, #2314, #23169, #2335 [deployed], #2337, #2338, #2339, #2341 [rejected], #23885, #24217, #24789, #24987, #25072, #25074, #25097, #25111, #25125, #25185, #25196 [executing], #25378, #25381, #25470, #25547, #25552, #25624, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25946, #26019, #26044, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26156, #26199, #26205 [executing], #26207 [executing], #26208 [executing], #26209 [proposed], #26210 [executing], #26211 [proposed], #2763, #58343, #6826, #7142, #7149
 
 **Last PICKUP PROMPT:**
 
@@ -173,37 +235,6 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 </task_progress>
 </attempt_completion>
 ```
-
-### `1786666915889` — 8/13/2026, 8:41:22 PM PT — 303 turns
-
-**Original task:**
-
-```
-Can you email a copy of any externship agreements / affiliation agreement whatever from agencies that might be signed by both parties - would be in vyu@emsunivesity.com's email inbox, etc...
-```
-
-**Ideas referenced:** #15669, #19163, #2144, #2158, #2304, #2316, #2335 [deployed], #2336, #2350, #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26196 [executing], #6785
-
-**Last PICKUP PROMPT:**
-
-```
-nction in Argus to pull all agreement data for Jon
-- [ ] Report with findings + PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
-```
-
-### `1786677303463` — 8/13/2026, 8:40:07 PM PT — 57 turns
-
-**Original task:**
-
-```
-/emtskills is slow again. Please fix it. Check emtskills-slowness and fix it
-```
-
-**Ideas referenced:** #2310 [resolved], #2335 [deployed], #2337, #2338, #2339, #25548 [executing], #25679 [executing], #26019, #26054, #26068, #26076, #26077, #26080 [completed], #26205 [executing], #26207 [executing], #26208 [executing], #26209 [proposed], #26210 [executing], #26211 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786666814323` — 8/13/2026, 8:37:09 PM PT — 820 turns
 

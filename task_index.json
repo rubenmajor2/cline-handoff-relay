@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-14T03:41:57.368Z",
+ "generated_at": "2026-08-14T04:41:57.687Z",
  "counts": {
-  "parsed": 5,
-  "reused": 696,
+  "parsed": 2,
+  "reused": 699,
   "failed": 0,
   "total": 701
  },
@@ -126340,13 +126340,13 @@
   },
   "1786666915889": {
    "task_id": "1786666915889",
-   "mtime": 1786678882978,
+   "mtime": 1786682485112,
    "created_at": "2026-08-14T00:21:55.889Z",
-   "last_modified": "2026-08-14T03:41:22.978Z",
-   "size_kb": 986,
-   "turn_count": 303,
+   "last_modified": "2026-08-14T04:41:25.112Z",
+   "size_kb": 1355,
+   "turn_count": 425,
    "title": "Can you email a copy of any externship agreements / affiliation agreement whatever from agencies that might be signed by both parties - would be in vyu@emsunivesity.com's email inbox, etc...",
-   "pickup_prompt": "nction in Argus to pull all agreement data for Jon\n- [ ] Report with findings + PICKUP PROMPT\n</task_progress>\n</use_mcp_tool>",
+   "pickup_prompt": "end Jon's 18-month agreement digest (44 tracked emails)\n- [ ] Report findings + PICKUP PROMPT\n</task_progress>\n</use_mcp_tool>",
    "ideas": {
     "2144": null,
     "2158": null,
@@ -126374,11 +126374,11 @@
   },
   "1786673589882": {
    "task_id": "1786673589882",
-   "mtime": 1786678916566,
+   "mtime": 1786680055914,
    "created_at": "2026-08-14T02:13:09.882Z",
-   "last_modified": "2026-08-14T03:41:56.566Z",
-   "size_kb": 1082,
-   "turn_count": 303,
+   "last_modified": "2026-08-14T04:00:55.914Z",
+   "size_kb": 1257,
+   "turn_count": 409,
    "title": "Big Mac has 4 GPUs now. Can you make sure that other card is part of service? \n\nRead also this:\n\nPompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  \n\n\nBoth answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.\n\n## Where 671 came from, and it is now durable\n\nWritten to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.\n\nTwo counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, divided by elapsed wall seconds:\n\n```javascript\ndecode=12.65 prefill=658.82 TOTAL_TOKENS_PER_S=671",
    "pickup_prompt": "ilure, not slot type mismatch)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1786673589882 - Big Mac 4th GPU PCIe link training failure + service restoration\n\nWhere we left off (checked 2026-08-13 20:20 PT):\n- Big Mac restored to service on 3 GPUs (bigmac-vllm.service re-enabled, :8000 HTTP 200, PP=3, adapter routing live traffic) (checked: SSH + curl + journalctl)\n- 4th GPU PCIe link training fails at 2.5GT/s. Card has power (fan on) but can't complete endpoint discovery. All software approaches exhausted (pci=realloc, pci=assign-busses, setpci, rescan). Filed as #26211 [proposed] (checked: reconcile_ideas returned status=proposed)\n- GRUB set to pci=realloc pcie_aspm=off (best config). Auto-detect launch script ready: TP=4 engages when 4th GPU enumerates after BIOS fix.\n\nOpen threads to drive next:\n1. #26211 [proposed] - Ruben's tech needs to check BIOS M.2 slot #2 config: PCIe mode (not NVMe), bifurcation, link speed (try Gen3/Gen4), and riser cable. This is physical/BIOS only, software is ready. (human-only decision - no idea, physical access required)\n2. #26209 [proposed] - Initial investigation, superseded by the PCIe link training finding above\n\nReference IDs:\n- Ideas filed: #26209 [proposed], #26211 [proposed]\n- Files touched: /opt/bigmac-vllm-start.sh (Big Mac, rewritten with auto-detect), /etc/default/grub (pci=realloc pcie_aspm=off), /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md (updated), HANDOFF_NOTES.md (updated)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] Big Mac service restored (3 GPUs, PP=3)\n- [x] Auto-detect launch script deployed\n- [x] All software approaches exhausted for 4th GPU\n- [x] Final reboot with clean config (pci=realloc pcie_aspm=off)\n- [x] Verify Big Mac serving on 3 GPUs (HTTP 200)\n- [x] Reconcile ideas\n- [x] Validate completion + ship\n</task_progress>\n</attempt_completion>",
    "ideas": {
@@ -126405,6 +126405,7 @@
     "2337": null,
     "2338": null,
     "2339": null,
+    "2341": "rejected",
     "2763": null,
     "6826": null,
     "7142": null,
@@ -126502,19 +126503,22 @@
   },
   "1786677303463": {
    "task_id": "1786677303463",
-   "mtime": 1786678807253,
+   "mtime": 1786681694890,
    "created_at": "2026-08-14T03:15:03.463Z",
-   "last_modified": "2026-08-14T03:40:07.253Z",
-   "size_kb": 225,
-   "turn_count": 57,
+   "last_modified": "2026-08-14T04:28:14.890Z",
+   "size_kb": 469,
+   "turn_count": 134,
    "title": "/emtskills is slow again. Please fix it. Check emtskills-slowness and fix it",
-   "pickup_prompt": null,
+   "pickup_prompt": "dea #25548, not this incident.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — `/emtskills` slowness incident follow-through (swap-flush + dead LoRA sync loop, resolved 2026-08-13).\n\nWhere we left off (verified 2026-08-13 21:27 PT):\n- Two stacked root causes fixed and verified live: memory-guardian swap-flush storm + emsu-fleet-finisher/vault-sync rsync loop against unreachable Artemis.\n- nvme0n1 util 95%→3%, public latency 14ms, 0 new www slowlog stalls, swap 8130MB→135MB.\n- Bug lib incident #2342, ideas #26218 + #26219, handoff note appended to `/var/www/emtskills/docs/HANDOFF_NOTES.md`.\n\nOpen threads to drive next:\n1. #26218 — [awaiting_review] Confirm FPM auto-tuner restored `pm.max_children` 140→300 after its 1800s cooldown (check `grep pm.max_children /etc/php/8.3/fpm/pool.d/www.conf` and `/var/log/emsu-memory-guardian.log` TUNE-HOLD lines). If still 140, investigate the tuner cooldown.\n2. #26219 — [deployed] If Artemis (10.100.0.5) is restored later, re-enable vault-sync for a single clean run: `chattr -i /etc/cron.d/emsu-vault-sync` then restore schedule, and only re-enable fleet-finisher after one clean sync succeeds.\n3. #25548 — [executing] Pre-existing: move the 180s `api/ticket_autospec.php` Claude curls (last remaining slowlog entries) off the www pool / add per-request timeout budget.\n\nReference IDs:\n- Ideas filed: #26218, #26219\n- Bug-library incident: #2342\n- Backups: emsu-memory-guardian.sh.bak-20260813-flushstorm, /etc/cron.d/emsu-fleet-finisher.bak-20260813-loarartemis-off, /etc/cron.d/emsu-vault-sync.bak-20260813-loarartemis-off\n- Files touched: /var/www/emtskills/scripts/emsu-memory-guardian.sh (patched), /etc/cron.d/emsu-fleet-finisher (disabled+immutable), /etc/cron.d/emsu-vault-sync (disabled+immutable), /var/www/emtskills/docs/HANDOFF_NOTES.md (appended)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>\n</invoke>",
    "ideas": {
     "2310": "resolved",
     "2335": "deployed",
     "2337": null,
     "2338": null,
     "2339": null,
+    "2342": null,
+    "11812": null,
+    "13453": null,
     "25548": "executing",
     "25679": "executing",
     "26019": null,
@@ -126528,7 +126532,9 @@
     "26208": "executing",
     "26209": "proposed",
     "26210": "executing",
-    "26211": "proposed"
+    "26211": "proposed",
+    "26218": null,
+    "26219": null
    }
   }
  }

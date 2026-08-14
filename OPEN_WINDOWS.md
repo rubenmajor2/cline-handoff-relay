@@ -6,13 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/14/2026, 5:54:45 AM PT | window: last 72h | 100 tasks | index total 710 (parsed 9, cached 701)
+Generated: 8/14/2026, 7:03:26 AM PT | window: last 72h | 101 tasks | index total 711 (parsed 1, cached 710)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786711940130` | 8/14/2026, 5:52:21 AM | 1 | 17068KB | Another thing we need to add to sunset, politicians, and just catalogue in the next respon |
-| `1786695610761` | 8/14/2026, 5:52:09 AM | 158 | 635KB | #Big Mac 4th Card |
-| `1786696256201` | 8/14/2026, 5:51:12 AM | 69 | 11019KB | #Grievance issue |
+| `1786711940130` | 8/14/2026, 6:43:24 AM | 68 | 17309KB | Another thing we need to add to sunset, politicians, and just catalogue in the next respon |
+| `1786686261739` | 8/14/2026, 6:31:21 AM | 333 | 1282KB | #What am I Missing/ Students |
+| `1786712894547` | 8/14/2026, 6:30:47 AM | 36 | 158KB | Frankenstein LLM seems sluggish. Can you tell me why it seems slower than usual? |
+| `1786696256201` | 8/14/2026, 6:23:21 AM | 88 | 11155KB | #Grievance issue |
+| `1786695610761` | 8/14/2026, 6:08:41 AM | 204 | 802KB | #Big Mac 4th Card |
 | `1786696386569` | 8/14/2026, 5:44:49 AM | 90 | 327KB | #Unknown |
 | `1786560740700` | 8/14/2026, 5:15:16 AM | 252 | 972KB | Why am i still getting OLD chat transcripts? Are new ones being sent to me right after the |
 | `1786674811485` | 8/14/2026, 5:06:40 AM | 248 | 1033KB | Can you tell me how we can see if anyone is using a bot to chat to us or not? |
@@ -23,7 +25,6 @@ Generated: 8/14/2026, 5:54:45 AM PT | window: last 72h | 100 tasks | index total
 | `1786547336372` | 8/14/2026, 2:07:44 AM | 660 | 3109KB | Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cl |
 | `1786581699007` | 8/14/2026, 2:04:46 AM | 578 | 2019KB | #Argus Learning |
 | `1786566698066` | 8/14/2026, 2:00:56 AM | 509 | 971KB | #Call Backs  |
-| `1786686261739` | 8/14/2026, 1:58:58 AM | 248 | 1083KB | #What am I Missing/ Students |
 | `1786696835373` | 8/14/2026, 1:51:18 AM | 30 | 75KB | #CFA |
 | `1786592555268` | 8/14/2026, 1:51:15 AM | 660 | 2554KB | #Argus |
 | `1786558292672` | 8/14/2026, 1:50:07 AM | 422 | 1434KB | #Touch ID |
@@ -115,7 +116,7 @@ Generated: 8/14/2026, 5:54:45 AM PT | window: last 72h | 100 tasks | index total
 
 ## Per-window detail
 
-### `1786711940130` — 8/14/2026, 5:52:21 AM PT — 1 turns
+### `1786711940130` — 8/14/2026, 6:43:24 AM PT — 68 turns
 
 **Original task:**
 
@@ -127,9 +128,182 @@ Check to see whether Sabrina sent this message to agamez@emsuniversity.com or no
 The thing is she didn't ask me. She just went straight to Andrew and asked him. Normally would be fine because he's the program director, however, TDSHS had agreed to contact me and copy me on department of communications with our organization. This might actually apply to all types of communications which is kind of interes
 ```
 
+**Ideas referenced:** #171083, #23269, #25989, #26287 [executing], #600179, #623992
+
+**Last PICKUP PROMPT:**
+
+```
+ichardson to anyone but Ruben"
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #26287 — TDSHS comms-bypass catalogue (Agamez no-copy incident).
+
+Where we left off (verified 2026-08-14 06:42 PT):
+- Catalogue entry written to /var/www/emtskills/docs/tdshs-inspection-5196/AGAMEZ_COMMS_NO_COPY_INCIDENT_2026-08-14.md (48 lines, verified on disk).
+- Verified: no EMSU-mailbox record of the Richardson→Andrew message (inbound/inbound_log/outbound/maildirs all clean). Only agamez hit = outbound id 129060 (6/26 portal login).
+- Verified: Richardson's CAPCE email (inbound id 104569) copies rmajor+jthompson+agamez+info — proving dropping Ruben here is a deviation from her own pattern.
+- Verified: the 3 courses = DSHS initial apps 27440/27441/27439, unprocessable per inbound id 104346 (missing docs/fees), never approved — phantom entries, no class held.
+- HANDOFF_NOTES.md updated.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26287 [executing] — Ruben to ask Andrew Gamez: was this sent to agamez@emsuniversity.com or a personal address? Have Andrew forward the original email; record the destination + timestamp in the catalogue file.
+2. #26287 [executing] — If personal email confirmed, mark it a secondary bypass indicator and fold into the next TDSHS response / sunset exhibit / politician briefing under the "communication bypass" theme.
+3. #26287 [executing] — Wire the no-copy agreements (copy-Ruben + "may apply to all communications / instructors") into the standing violation catalogue; review whether the agreement text extends beyond department comms to instructor communications.
+
+Reference IDs:
+- License #600179; Inspection 5196
+- Ideas filed: #26287 [executing]
+- Files touched: /var/www/emtskills/docs/tdshs-inspection-5196/AGAMEZ_COMMS_NO_COPY_INCIDENT_2026-08-14.md, /var/www/emtskills/HANDOFF_NOTES.md
+- Key evidence rows: email_inbound_log ids 104346, 104369, 104357; email_outbound_log id 129060
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</task_progress>
+</attempt_completion>
+```
+
+### `1786686261739` — 8/14/2026, 6:31:21 AM PT — 333 turns
+
+**Original task:**
+
+```
+#What am I Missing/ Students
+
+Check the SLS and integrate properly as well
+
+--
+Here is the comprehensive Rule 91 handoff for a fresh window. This is a state-handoff record, so it assumes zero context; everything needed to continue is below.
+
+---
+
+WHAT WE ARE DOING HERE (big picture, for a fresh window)
+
+The business problem: students keep emailing/chatting "what am I missing?" / "why can't I open X?" and CFAs (and earlier agent windows) kept answering WRONG — they guessed from flat quiz lists, hardcoded attendance ratios, or the admin_portal `auto_passed` stub field. Those wrong answers are wh
+```
+
+**Ideas referenced:** #11782, #12661, #13440, #13873, #13977, #14153, #14154, #14847, #15635, #15636, #15638, #15903, #16437, #16581, #16608, #16613, #16731, #16732, #16733, #17546, #17580, #17685, #17723, #18693, #18743, #18936, #19173, #19439, #19465, #19492, #19495, #19921, #2026, #2033, #20346, #20357, #2036, #2323, #23477 [in_progress], #24526 [superseded], #24765, #25156, #25185, #25871, #25888, #25914 [in_progress], #25971, #25974, #25975, #25976, #25984 [the canonical walker], #25985, #25986 [deployed], #25990 [proposed], #25995, #26003, #26035 [proposed], #26230 [proposed], #26231 [proposed], #26256 [deployed], #26257 [deployed], #26265 [deployed], #26285 [deployed], #26286 [deployed], #71121, #9083, #9086, #9109, #9132, #9168, #9192, #9202, #9222, #9306, #9339, #9343, #9549, #9831
+
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786695610761` — 8/14/2026, 5:52:09 AM PT — 158 turns
+### `1786712894547` — 8/14/2026, 6:30:47 AM PT — 36 turns
+
+**Original task:**
+
+```
+Frankenstein LLM seems sluggish. Can you tell me why it seems slower than usual?
+
+Read this also:
+
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
+
+
+Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
+
+## Where 671 came from, and it is now durable
+
+Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.
+
+Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtract
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326, #2299, #23171, #25097, #26284 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+are routing as the durable fix
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #26284 [proposed] — routing tier order latency investigation.
+
+Where we left off (verified 2026-08-14 06:20 PT):
+- Root cause confirmed: GLM-5.2 PP=6 Hex ring (L4g) sits BEFORE 120B pool (L4f) in Cline spill ladder per 2026-07-11 Ruben quality directive (verified: frankenstein_registry 06:13 PT). Ring = 6.3s TTFB on 8-token probe (verified: host_probe 06:12 PT, adapter canary tok_s=1). 120B pool = ~300ms TTFB (verified: artemis 274ms, julia 302ms, bigmac 33.8 tok/s, host_probe 06:12 PT). 20x gap on interactive turns.
+- Two ladder rungs DOWN: joshua-70b HTTP 503, cicero-235b connection refused (verified: host_probe 06:12 PT). Narrows ladder, concentrates traffic on ring.
+- Registry tier_fallthrough order confirmed L4g BEFORE L4f (verified: frankenstein_registry 06:13 PT, router_derived_state loaded_at 2026-08-13T05:51Z).
+- Routing audit last 30min: 480 turns, ring took 59 at ~6s each (verified: frankenstein_what_served 06:16 PT).
+- verify_routing MCP tool itself timed out (verified: MCP error -32001 at 06:13 PT) = router under load.
+
+Open threads to drive next:
+1. #26284 [proposed] — approve to implement per-surface latency-aware routing (120B-first for Cline interactive, ring-first for batch/executor). Reversible one-line tier order patch in router_hook.py. OR tell me to flip Cline lane to 120B-first now for instant relief.
+2. (human-only decision — no idea) Whether to restart joshua-70b (L1b, HTTP 503) and cicero-235b (L4b, connection refused) to restore the two down rungs. Both are narrowing the ladder.
+
+Reference IDs:
+- Ideas filed: #26284 [proposed] (verified: reconcile_ideas returned status=proposed dev_stage=idle at 06:17 PT; promoted efficiency_priority=1 via SQL rows_affected=1 at 06:20 PT)
+- Ideas closed: none
+- Files touched: none (diagnosis only, no config changes per rule 146/301, verified: no write_to_file/replace_in_file/ssh_command calls this session)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Bug library check for known sluggishness patterns
+- [x] Live fleet/tier health probe (tier_health + host_probe)
+- [x] Registry + routing audit log analysis (registry + what_served)
+- [x] Verify live routing headers (verify_routing TIMED OUT - itself evidence of sluggishness)
+- [x] Measure per-host generation speed (host_probe complete)
+- [x] Identify root cause and report
+- [x] Reconcile filed ideas (rule 267 GATE B)
+- [x] Promote idea to efficiency_priority=1 (rule 267 GATE C)
+- [x] Validate completion (rule 91 gate)
+- [x] Check gate (rule 91 gate)
+- [x] Ship completion
+</task_progress>
+</attempt_completion>
+```
+
+### `1786696256201` — 8/14/2026, 6:23:21 AM PT — 88 turns
+
+**Original task:**
+
+```
+#Grievance issue
+
+Vicky says that she's having problem uploading stuff to the grievance manager: 
+
+Also my grievance upload is still not working we have several already submitted for review, do I submit them to you directly?
+
+See this: screenshot and whatever she posted into Argus
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #19470, #19499 [awaiting_review], #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2328, #2337, #2338, #2339, #2340, #2341, #2343, #2344, #25378, #25381, #26205 [executing], #26207 [executing], #26208 [executing], #26209 [proposed], #26210 [executing], #26211 [proposed], #26214 [executing], #26215 [executing], #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #3261, #3319, #3346, #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+from her failed form attempts.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Grievance upload HTTP 500: policy_tag require_once fatal (fixed) + Vicky needs confirmation.
+
+Where we left off (verified 2026-08-14 06:22 PT):
+- Fixed: `/var/www/emtskills/routes/api/grievance_api.php` line 582 require path `lib/policy_tag_validator.php` (was missing `grievance_policy_tag.php`), line 584 signature `isPolicyTagRequired($_POST['category'] ?? 'other')`, lines 799-801 externship lib path + call args.
+- php -l clean, include smoke OK, fix confirmed on disk via WOPR ssh.
+- DB check: Vicky's "already submitted" grievances are all `email_attachment` intake (Lindsey Barnes #86, Bella DiMartino #83, Oliver Sheriff #81); no torn rows from her failed form uploads.
+- Backups: `/tmp/grievance_api.php.bak-policytagfix-20260814-014830`.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26214 — Have Vicky re-try the grievance manager upload now; pull FPM fatal log for timestamp if any upload still fails (then confirm with Ruben).
+2. #19499 — If a future session wants `policy_tag` required for ALL categories, revert line 584 guard; current behavior matches spec (only category=policy requires it).
+
+Reference IDs:
+- Ticket: none (Ruben's iMessage/Argus report)
+- Ideas filed: #26214 [executing], #19499 [awaiting_review]
+- Files touched: `/var/www/emtskills/routes/api/grievance_api.php`, `/tmp/grievance_api.php.bak-policytagfix-20260814-014830`
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786695610761` — 8/14/2026, 6:08:41 AM PT — 204 turns
 
 **Original task:**
 
@@ -147,25 +321,7 @@ Two points in it undercut the evidence I leaned on hardest:
 1. **M.2 M-key DOES carry REFCLK.** The 100MHz differential pair is part of the M-key pinout. So "the M.2 slot has no reference clock" is false as a blanket claim. The narrower question is whether this specific cheap adapter
 ```
 
-**Ideas referenced:** #111827, #11782, #1195, #12262, #12661, #13873, #13977, #14153, #14154, #14847, #15635, #15636, #15638, #15903, #16437, #1644, #1647, #16581, #16608, #16613, #16731, #16732, #16733, #1731, #1732 [resolved], #1734 [resolved], #1737, #1739, #1746, #1747, #17546, #17580, #17685, #17723, #178667, #178668, #18693, #18694, #18700, #18743, #18936, #1914 [deployed], #19173, #19439, #19465, #19492, #19495, #19921, #2026, #2033, #20346, #20357, #2036, #21753, #2299, #23133 [executing], #2322 [deployed], #2323, #2341 [resolved], #2343, #2346 [investigating], #2347 [investigating], #23477 [in_progress], #2348, #2349 [deployed], #2351, #23945 [proposed], #23952 [awaiting_review], #23954 [awaiting_review], #23989, #24526 [superseded], #24645, #24765, #25042 [deployed], #25097, #25156, #25185, #2563, #25701, #25702, #25703, #25704, #25871, #25888, #25914 [in_progress], #25940 [executing], #25946 [proposed], #25947 [proposed], #25948 [proposed], #25951 [deployed], #25952 [executing], #25953 [executing], #25971, #25974, #25975, #25976, #25984 [the canonical walker], #25985, #25986, #25990 [proposed], #25995, #26003, #26035 [proposed], #26203 [deployed], #26206 [deployed], #26209 [proposed], #26211 [proposed], #26230 [proposed], #26231 [proposed], #26233 [rejected], #26237 [rejected], #26238 [proposed], #26256 [deployed], #26257 [deployed], #26258 [proposed], #26259 [proposed], #26260 [proposed], #26261 [proposed], #334155, #3672, #3673, #3677, #3679, #3684, #3685, #3688, #3689, #3691, #3694, #3695, #3696, #37030, #3708, #3713, #3714, #3715, #3716, #3717, #3721, #46641, #64748, #664985, #71121, #9083, #9086, #9168, #9192, #9202, #9306, #9311, #9339, #9343, #9420, #9421, #9422, #9423, #9458, #9549, #9831
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786696256201` — 8/14/2026, 5:51:12 AM PT — 69 turns
-
-**Original task:**
-
-```
-#Grievance issue
-
-Vicky says that she's having problem uploading stuff to the grievance manager: 
-
-Also my grievance upload is still not working we have several already submitted for review, do I submit them to you directly?
-
-See this: screenshot and whatever she posted into Argus
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #19470, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2328, #2337, #2338, #2339, #2340, #2341, #2343, #2344, #25378, #25381, #26205 [executing], #26207 [executing], #26208 [executing], #26209 [proposed], #26210 [executing], #26211 [proposed], #26214 [executing], #26215 [executing], #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #3261, #3319, #3346, #7142, #7149
+**Ideas referenced:** #111827, #11782, #1195, #12262, #12661, #13873, #13977, #14153, #14154, #14847, #15635, #15636, #15638, #15903, #16437, #1644, #1647, #16581, #16608, #16613, #16731, #16732, #16733, #1731, #1732 [resolved], #1734 [resolved], #1737, #1739, #1746, #1747, #17546, #17580, #17685, #17723, #178667, #178668, #178669, #18693, #18694, #18700, #18743, #18936, #1914 [deployed], #19173, #19439, #19465, #19492, #19495, #19921, #2026, #2033, #20346, #20357, #2036, #21753, #2299, #23133 [executing], #2322 [deployed], #2323, #2341 [resolved], #2343, #2346 [investigating], #2347 [investigating], #23477 [in_progress], #2348, #2349 [deployed], #2351, #2352, #23945 [proposed], #23952 [awaiting_review], #23954 [awaiting_review], #23989, #24526 [superseded], #24645, #24765, #25042 [deployed], #25097, #25156, #25185, #2563, #25701, #25702, #25703, #25704, #25871, #25888, #25914 [in_progress], #25940 [executing], #25946 [proposed], #25947 [proposed], #25948 [proposed], #25951 [deployed], #25952 [executing], #25953 [executing], #25971, #25974, #25975, #25976, #25984 [the canonical walker], #25985, #25986, #25990 [proposed], #25995, #26003, #26035 [proposed], #26203 [deployed], #26206 [deployed], #26209 [proposed], #26211 [proposed], #26230 [proposed], #26231 [proposed], #26233 [rejected], #26237 [rejected], #26238 [proposed], #26256 [deployed], #26257 [deployed], #26258 [proposed], #26259 [proposed], #26260 [proposed], #26261 [proposed], #334155, #3672, #3673, #3677, #3679, #3684, #3685, #3688, #3689, #3691, #3694, #3695, #3696, #37030, #3708, #3713, #3714, #3715, #3716, #3717, #3721, #46641, #64748, #664985, #71121, #9083, #9086, #9168, #9192, #9202, #9306, #9311, #9339, #9343, #9420, #9421, #9422, #9423, #9458, #9549, #9831
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -570,29 +726,6 @@ Check Chat 55 for Call Back bug on Telephony as well as some issue with "View As
 ```
 
 **Ideas referenced:** #10003, #111827, #21753, #23989, #24645, #25185, #2563, #25701, #25702, #25703, #25704, #25946 [proposed], #25947 [proposed], #25948 [proposed], #25951 [deployed], #26203 [deployed], #26206 [deployed], #26259 [proposed], #26260 [proposed], #26261 [proposed], #26266 [proposed], #26267 [proposed], #334155, #3672, #3673, #3677, #3679, #3684, #3685, #3688, #3689, #3691, #3694, #3695, #3696, #3708, #3713, #3714, #3715, #3716, #3717, #3721, #475569, #64748, #664985
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786686261739` — 8/14/2026, 1:58:58 AM PT — 248 turns
-
-**Original task:**
-
-```
-#What am I Missing/ Students
-
-Check the SLS and integrate properly as well
-
---
-Here is the comprehensive Rule 91 handoff for a fresh window. This is a state-handoff record, so it assumes zero context; everything needed to continue is below.
-
----
-
-WHAT WE ARE DOING HERE (big picture, for a fresh window)
-
-The business problem: students keep emailing/chatting "what am I missing?" / "why can't I open X?" and CFAs (and earlier agent windows) kept answering WRONG — they guessed from flat quiz lists, hardcoded attendance ratios, or the admin_portal `auto_passed` stub field. Those wrong answers are wh
-```
-
-**Ideas referenced:** #11782, #12661, #13440, #13873, #13977, #14153, #14154, #14847, #15635, #15636, #15638, #15903, #16437, #16581, #16608, #16613, #16731, #16732, #16733, #17546, #17580, #17685, #17723, #18693, #18743, #18936, #19173, #19439, #19465, #19492, #19495, #19921, #2026, #2033, #20346, #20357, #2036, #2323, #23477 [in_progress], #24526 [superseded], #24765, #25156, #25185, #25871, #25888, #25914 [in_progress], #25971, #25974, #25975, #25976, #25984 [the canonical walker], #25985, #25986, #25990 [proposed], #25995, #26003, #26035 [proposed], #26230 [proposed], #26231 [proposed], #26256 [deployed], #26257 [deployed], #26265 [deployed], #71121, #9083, #9086, #9109, #9132, #9168, #9192, #9202, #9222, #9306, #9339, #9343, #9549, #9831
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 

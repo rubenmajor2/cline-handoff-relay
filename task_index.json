@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-14T12:54:45.245Z",
+ "generated_at": "2026-08-14T14:03:26.714Z",
  "counts": {
-  "parsed": 9,
-  "reused": 701,
+  "parsed": 1,
+  "reused": 710,
   "failed": 0,
-  "total": 710
+  "total": 711
  },
  "tasks": {
   "1784522296714": {
@@ -126735,11 +126735,11 @@
   },
   "1786686261739": {
    "task_id": "1786686261739",
-   "mtime": 1786697938767,
+   "mtime": 1786714281407,
    "created_at": "2026-08-14T05:44:21.739Z",
-   "last_modified": "2026-08-14T08:58:58.767Z",
-   "size_kb": 1083,
-   "turn_count": 248,
+   "last_modified": "2026-08-14T13:31:21.407Z",
+   "size_kb": 1282,
+   "turn_count": 333,
    "title": "#What am I Missing/ Students\n\nCheck the SLS and integrate properly as well\n\n--\nHere is the comprehensive Rule 91 handoff for a fresh window. This is a state-handoff record, so it assumes zero context; everything needed to continue is below.\n\n---\n\nWHAT WE ARE DOING HERE (big picture, for a fresh window)\n\nThe business problem: students keep emailing/chatting \"what am I missing?\" / \"why can't I open X?\" and CFAs (and earlier agent windows) kept answering WRONG — they guessed from flat quiz lists, hardcoded attendance ratios, or the admin_portal `auto_passed` stub field. Those wrong answers are what generated the student complaints.\n\nThe root cause (documented in RCA + bug library #2323): there ",
    "pickup_prompt": null,
    "ideas": {
@@ -126808,7 +126808,7 @@
     "25976": null,
     "25984": "the canonical walker",
     "25985": null,
-    "25986": null,
+    "25986": "deployed",
     "25990": "proposed",
     "25995": null,
     "26003": null,
@@ -126818,6 +126818,8 @@
     "26256": "deployed",
     "26257": "deployed",
     "26265": "deployed",
+    "26285": "deployed",
+    "26286": "deployed",
     "71121": null
    }
   },
@@ -126953,11 +126955,11 @@
   },
   "1786695610761": {
    "task_id": "1786695610761",
-   "mtime": 1786711929811,
+   "mtime": 1786712921721,
    "created_at": "2026-08-14T08:20:10.761Z",
-   "last_modified": "2026-08-14T12:52:09.811Z",
-   "size_kb": 635,
-   "turn_count": 158,
+   "last_modified": "2026-08-14T13:08:41.721Z",
+   "size_kb": 802,
+   "turn_count": 204,
    "title": "#Big Mac 4th Card\n\nI still believe you can get this running. So do it!  Get the 4th Card working!!!\n\nDocument written and the theories are in the bug library. One thing in your prompts corrects me, and it is worth flagging because it weakens my own top theory.\n\n## Your Prompt 1 caught a real flaw in my reasoning\n\nTwo points in it undercut the evidence I leaned on hardest:\n\n1. **M.2 M-key DOES carry REFCLK.** The 100MHz differential pair is part of the M-key pinout. So \"the M.2 slot has no reference clock\" is false as a blanket claim. The narrower question is whether this specific cheap adapter routes that pair correctly and whether it survives the cable run.\n\n2. **CommClk- is probably a RED ",
    "pickup_prompt": null,
    "ideas": {
@@ -126985,6 +126987,7 @@
     "2348": null,
     "2349": "deployed",
     "2351": null,
+    "2352": null,
     "2563": null,
     "3672": null,
     "3673": null,
@@ -127118,19 +127121,20 @@
     "111827": null,
     "178667": null,
     "178668": null,
+    "178669": null,
     "334155": null,
     "664985": null
    }
   },
   "1786696256201": {
    "task_id": "1786696256201",
-   "mtime": 1786711872366,
+   "mtime": 1786713801290,
    "created_at": "2026-08-14T08:30:56.201Z",
-   "last_modified": "2026-08-14T12:51:12.366Z",
-   "size_kb": 11019,
-   "turn_count": 69,
+   "last_modified": "2026-08-14T13:23:21.290Z",
+   "size_kb": 11155,
+   "turn_count": 88,
    "title": "#Grievance issue\n\nVicky says that she's having problem uploading stuff to the grievance manager: \n\nAlso my grievance upload is still not working we have several already submitted for review, do I submit them to you directly?\n\nSee this: screenshot and whatever she posted into Argus",
-   "pickup_prompt": null,
+   "pickup_prompt": "from her failed form attempts.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Grievance upload HTTP 500: policy_tag require_once fatal (fixed) + Vicky needs confirmation.\n\nWhere we left off (verified 2026-08-14 06:22 PT):\n- Fixed: `/var/www/emtskills/routes/api/grievance_api.php` line 582 require path `lib/policy_tag_validator.php` (was missing `grievance_policy_tag.php`), line 584 signature `isPolicyTagRequired($_POST['category'] ?? 'other')`, lines 799-801 externship lib path + call args.\n- php -l clean, include smoke OK, fix confirmed on disk via WOPR ssh.\n- DB check: Vicky's \"already submitted\" grievances are all `email_attachment` intake (Lindsey Barnes #86, Bella DiMartino #83, Oliver Sheriff #81); no torn rows from her failed form uploads.\n- Backups: `/tmp/grievance_api.php.bak-policytagfix-20260814-014830`.\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #26214 — Have Vicky re-try the grievance manager upload now; pull FPM fatal log for timestamp if any upload still fails (then confirm with Ruben).\n2. #19499 — If a future session wants `policy_tag` required for ALL categories, revert line 584 guard; current behavior matches spec (only category=policy requires it).\n\nReference IDs:\n- Ticket: none (Ruben's iMessage/Argus report)\n- Ideas filed: #26214 [executing], #19499 [awaiting_review]\n- Files touched: `/var/www/emtskills/routes/api/grievance_api.php`, `/tmp/grievance_api.php.bak-policytagfix-20260814-014830`\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1130": null,
     "1131": null,
@@ -127179,6 +127183,7 @@
     "16851": null,
     "17246": null,
     "19470": null,
+    "19499": "awaiting_review",
     "19567": null,
     "20042": null,
     "20662": null,
@@ -127239,14 +127244,54 @@
   },
   "1786711940130": {
    "task_id": "1786711940130",
-   "mtime": 1786711941501,
+   "mtime": 1786715004762,
    "created_at": "2026-08-14T12:52:20.130Z",
-   "last_modified": "2026-08-14T12:52:21.501Z",
-   "size_kb": 17068,
-   "turn_count": 1,
+   "last_modified": "2026-08-14T13:43:24.762Z",
+   "size_kb": 17309,
+   "turn_count": 68,
    "title": "Another thing we need to add to sunset, politicians, and just catalogue in the next response to TDSHS is this situation right here (screenshot).\n\nCheck to see whether Sabrina sent this message to agamez@emsuniversity.com or not or I will ask that it be forwarded as well. \n\nThe thing is she didn't ask me. She just went straight to Andrew and asked him. Normally would be fine because he's the program director, however, TDSHS had agreed to contact me and copy me on department of communications with our organization. This might actually apply to all types of communications which is kind of interesting because if that's the case then any communication with our instructors might also be a violatio",
-   "pickup_prompt": null,
-   "ideas": {}
+   "pickup_prompt": "ichardson to anyone but Ruben\"\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #26287 — TDSHS comms-bypass catalogue (Agamez no-copy incident).\n\nWhere we left off (verified 2026-08-14 06:42 PT):\n- Catalogue entry written to /var/www/emtskills/docs/tdshs-inspection-5196/AGAMEZ_COMMS_NO_COPY_INCIDENT_2026-08-14.md (48 lines, verified on disk).\n- Verified: no EMSU-mailbox record of the Richardson→Andrew message (inbound/inbound_log/outbound/maildirs all clean). Only agamez hit = outbound id 129060 (6/26 portal login).\n- Verified: Richardson's CAPCE email (inbound id 104569) copies rmajor+jthompson+agamez+info — proving dropping Ruben here is a deviation from her own pattern.\n- Verified: the 3 courses = DSHS initial apps 27440/27441/27439, unprocessable per inbound id 104346 (missing docs/fees), never approved — phantom entries, no class held.\n- HANDOFF_NOTES.md updated.\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #26287 [executing] — Ruben to ask Andrew Gamez: was this sent to agamez@emsuniversity.com or a personal address? Have Andrew forward the original email; record the destination + timestamp in the catalogue file.\n2. #26287 [executing] — If personal email confirmed, mark it a secondary bypass indicator and fold into the next TDSHS response / sunset exhibit / politician briefing under the \"communication bypass\" theme.\n3. #26287 [executing] — Wire the no-copy agreements (copy-Ruben + \"may apply to all communications / instructors\") into the standing violation catalogue; review whether the agreement text extends beyond department comms to instructor communications.\n\nReference IDs:\n- License #600179; Inspection 5196\n- Ideas filed: #26287 [executing]\n- Files touched: /var/www/emtskills/docs/tdshs-inspection-5196/AGAMEZ_COMMS_NO_COPY_INCIDENT_2026-08-14.md, /var/www/emtskills/HANDOFF_NOTES.md\n- Key evidence rows: email_inbound_log ids 104346, 104369, 104357; email_outbound_log id 129060\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</task_progress>\n</attempt_completion>",
+   "ideas": {
+    "23269": null,
+    "25989": null,
+    "26287": "executing",
+    "171083": null,
+    "600179": null,
+    "623992": null
+   }
+  },
+  "1786712894547": {
+   "task_id": "1786712894547",
+   "mtime": 1786714247424,
+   "created_at": "2026-08-14T13:08:14.547Z",
+   "last_modified": "2026-08-14T13:30:47.424Z",
+   "size_kb": 158,
+   "turn_count": 36,
+   "title": "Frankenstein LLM seems sluggish. Can you tell me why it seems slower than usual?\n\nRead this also:\n\nPompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  \n\n\nBoth answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.\n\n## Where 671 came from, and it is now durable\n\nWritten to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.\n\nTwo counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, divided by elapsed wall seconds:\n\n```javascript\ndecode=12.65 prefill=658.82 TOTAL_TOKENS_PER_S=6",
+   "pickup_prompt": "are routing as the durable fix\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #26284 [proposed] — routing tier order latency investigation.\n\nWhere we left off (verified 2026-08-14 06:20 PT):\n- Root cause confirmed: GLM-5.2 PP=6 Hex ring (L4g) sits BEFORE 120B pool (L4f) in Cline spill ladder per 2026-07-11 Ruben quality directive (verified: frankenstein_registry 06:13 PT). Ring = 6.3s TTFB on 8-token probe (verified: host_probe 06:12 PT, adapter canary tok_s=1). 120B pool = ~300ms TTFB (verified: artemis 274ms, julia 302ms, bigmac 33.8 tok/s, host_probe 06:12 PT). 20x gap on interactive turns.\n- Two ladder rungs DOWN: joshua-70b HTTP 503, cicero-235b connection refused (verified: host_probe 06:12 PT). Narrows ladder, concentrates traffic on ring.\n- Registry tier_fallthrough order confirmed L4g BEFORE L4f (verified: frankenstein_registry 06:13 PT, router_derived_state loaded_at 2026-08-13T05:51Z).\n- Routing audit last 30min: 480 turns, ring took 59 at ~6s each (verified: frankenstein_what_served 06:16 PT).\n- verify_routing MCP tool itself timed out (verified: MCP error -32001 at 06:13 PT) = router under load.\n\nOpen threads to drive next:\n1. #26284 [proposed] — approve to implement per-surface latency-aware routing (120B-first for Cline interactive, ring-first for batch/executor). Reversible one-line tier order patch in router_hook.py. OR tell me to flip Cline lane to 120B-first now for instant relief.\n2. (human-only decision — no idea) Whether to restart joshua-70b (L1b, HTTP 503) and cicero-235b (L4b, connection refused) to restore the two down rungs. Both are narrowing the ladder.\n\nReference IDs:\n- Ideas filed: #26284 [proposed] (verified: reconcile_ideas returned status=proposed dev_stage=idle at 06:17 PT; promoted efficiency_priority=1 via SQL rows_affected=1 at 06:20 PT)\n- Ideas closed: none\n- Files touched: none (diagnosis only, no config changes per rule 146/301, verified: no write_to_file/replace_in_file/ssh_command calls this session)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════</result>\n<task_progress>\n- [x] Bug library check for known sluggishness patterns\n- [x] Live fleet/tier health probe (tier_health + host_probe)\n- [x] Registry + routing audit log analysis (registry + what_served)\n- [x] Verify live routing headers (verify_routing TIMED OUT - itself evidence of sluggishness)\n- [x] Measure per-host generation speed (host_probe complete)\n- [x] Identify root cause and report\n- [x] Reconcile filed ideas (rule 267 GATE B)\n- [x] Promote idea to efficiency_priority=1 (rule 267 GATE C)\n- [x] Validate completion (rule 91 gate)\n- [x] Check gate (rule 91 gate)\n- [x] Ship completion\n</task_progress>\n</attempt_completion>",
+   "ideas": {
+    "2299": null,
+    "10108": null,
+    "10740": null,
+    "11741": null,
+    "11781": null,
+    "12459": null,
+    "12477": null,
+    "12618": null,
+    "12824": null,
+    "12872": null,
+    "12878": null,
+    "13202": null,
+    "16163": null,
+    "16265": null,
+    "16304": null,
+    "16844": null,
+    "18312": null,
+    "18326": null,
+    "23171": null,
+    "25097": null,
+    "26284": "proposed"
+   }
   }
  }
 }

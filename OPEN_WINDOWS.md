@@ -6,19 +6,23 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/13/2026, 11:41:58 PM PT | window: last 72h | 101 tasks | index total 705 (parsed 11, cached 694)
+Generated: 8/14/2026, 12:41:59 AM PT | window: last 72h | 99 tasks | index total 705 (parsed 8, cached 697)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786688208090` | 8/13/2026, 11:41:55 PM | 77 | 190KB | #SBA Questions |
-| `1786689127799` | 8/13/2026, 11:41:51 PM | 20 | 144KB | #Artemis |
-| `1786660376952` | 8/13/2026, 11:41:50 PM | 275 | 1018KB | help me file with Florida Board of Education application yet? Need that approval before we |
+| `1786547336372` | 8/14/2026, 12:41:55 AM | 585 | 2835KB | Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cl |
+| `1786689127799` | 8/14/2026, 12:41:44 AM | 102 | 570KB | #Artemis |
+| `1786688208090` | 8/14/2026, 12:41:41 AM | 200 | 611KB | #SBA Questions |
+| `1786567464418` | 8/14/2026, 12:41:37 AM | 209 | 2677KB | #Argus |
+| `1786581699007` | 8/14/2026, 12:41:23 AM | 427 | 1622KB | #Argus Learning |
+| `1786592555268` | 8/14/2026, 12:40:22 AM | 521 | 2143KB | #Argus |
+| `1786674811485` | 8/14/2026, 12:31:27 AM | 136 | 428KB | Can you tell me how we can see if anyone is using a bot to chat to us or not? |
+| `1786666915889` | 8/14/2026, 12:23:31 AM | 724 | 1937KB | Can you email a copy of any externship agreements / affiliation agreement whatever from ag |
+| `1786666814323` | 8/13/2026, 11:54:00 PM | 970 | 1993KB | Jon had a request in Argus, https://emsuniversity.com/emtskills/routes/argus_download.php? |
+| `1786660376952` | 8/13/2026, 11:47:40 PM | 292 | 1049KB | help me file with Florida Board of Education application yet? Need that approval before we |
+| `1786677303463` | 8/13/2026, 11:47:17 PM | 220 | 1145KB | /emtskills is slow again. Please fix it. Check emtskills-slowness and fix it |
+| `1786683447557` | 8/13/2026, 11:47:17 PM | 272 | 7386KB | #Big Mac |
 | `1786558292672` | 8/13/2026, 11:41:46 PM | 404 | 1378KB | #Touch ID |
-| `1786666814323` | 8/13/2026, 11:41:36 PM | 943 | 1905KB | Jon had a request in Argus, https://emsuniversity.com/emtskills/routes/argus_download.php? |
-| `1786666915889` | 8/13/2026, 11:41:19 PM | 637 | 1751KB | Can you email a copy of any externship agreements / affiliation agreement whatever from ag |
-| `1786674811485` | 8/13/2026, 11:40:24 PM | 122 | 388KB | Can you tell me how we can see if anyone is using a bot to chat to us or not? |
-| `1786683447557` | 8/13/2026, 11:39:48 PM | 264 | 7352KB | #Big Mac |
-| `1786677303463` | 8/13/2026, 11:37:09 PM | 216 | 1117KB | /emtskills is slow again. Please fix it. Check emtskills-slowness and fix it |
 | `1786558646083` | 8/13/2026, 11:25:12 PM | 396 | 1462KB | #Moodle Required |
 | `1786686261739` | 8/13/2026, 11:23:52 PM | 112 | 747KB | #What am I Missing/ Students |
 | `1786673589882` | 8/13/2026, 9:00:55 PM | 409 | 1257KB | Big Mac has 4 GPUs now. Can you make sure that other card is part of service?  |
@@ -30,12 +34,10 @@ Generated: 8/13/2026, 11:41:58 PM PT | window: last 72h | 101 tasks | index tota
 | `1786602908972` | 8/13/2026, 1:22:41 PM | 342 | 4032KB | #TDSHS/AZDHS 8/13 - Compliance |
 | `1786607400519` | 8/13/2026, 7:27:01 AM | 200 | 1606KB | Hi Declined???? REALLY, is Email Agent really that ???? |
 | `1786581608927` | 8/13/2026, 4:29:51 AM | 428 | 1528KB | #CFA Learning |
-| `1786592555268` | 8/13/2026, 3:28:58 AM | 440 | 1956KB | #Argus |
 | `1786602203659` | 8/13/2026, 12:41:31 AM | 142 | 708KB | There appear to be some minor issues going on with Frankenstein LLM. It seems like I'm get |
 | `1786585764315` | 8/13/2026, 12:40:33 AM | 787 | 1879KB | A lot of the links on these pages and tabs appear to be nonfunctioning: https://emsunivers |
 | `1786591402307` | 8/13/2026, 12:36:48 AM | 191 | 569KB | #Externship |
 | `1786605000052` | 8/13/2026, 12:34:09 AM | 186 | 1102KB | #Chat Widget |
-| `1786581699007` | 8/13/2026, 12:24:54 AM | 378 | 1477KB | #Argus Learning |
 | `1786601835097` | 8/12/2026, 11:55:16 PM | 269 | 502KB | #Server Was Down |
 | `1786599361465` | 8/12/2026, 11:21:11 PM | 243 | 427KB | #Chat Widget |
 | `1786582217282` | 8/12/2026, 11:10:19 PM | 307 | 570KB | I'm getting reports that all websites are down can you take a look and let me know? |
@@ -43,14 +45,12 @@ Generated: 8/13/2026, 11:41:58 PM PT | window: last 72h | 101 tasks | index tota
 | `1786553732663` | 8/12/2026, 7:53:48 PM | 604 | 3183KB | When I get emails like this I would like to actually see the students original email below |
 | `1786585633124` | 8/12/2026, 7:03:48 PM | 46 | 122KB | Remove the note about EMS university being state approved accredited since 2003. You can j |
 | `1786556136912` | 8/12/2026, 6:56:25 PM | 719 | 1884KB | #Frankenstein-LLM Improvements |
-| `1786547336372` | 8/12/2026, 6:50:21 PM | 542 | 2735KB | Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cl |
 | `1786570575332` | 8/12/2026, 6:39:15 PM | 284 | 1766KB | These emails are choking down my inbox still. Can you just put them on a webpage instead a |
 | `1786582351264` | 8/12/2026, 6:03:32 PM | 44 | 189KB | I'm getting reports that all websites are down can you take a look and let me know? |
 | `1786554076003` | 8/12/2026, 5:57:54 PM | 238 | 1270KB | ## Executor IS Working - Ideas Being Built Right Now |
 | `1786581594386` | 8/12/2026, 5:40:26 PM | 2 | 2KB | Tell me about the CFA learning system. It does not seem like it's doing very much. How do  |
 | `1786571428672` | 8/12/2026, 4:54:06 PM | 375 | 579KB | Can you tell me if chat widget is functioning properly now. Just read the last 10 chats an |
 | `1786573125988` | 8/12/2026, 4:46:28 PM | 355 | 3271KB | Please tell me if this is wrong? And if so why and what is going on? |
-| `1786567464418` | 8/12/2026, 4:42:30 PM | 204 | 2658KB | #Argus |
 | `1786566874767` | 8/12/2026, 4:08:22 PM | 310 | 2014KB | Curious on this chat. How does a student pass the final exam and then LATER have to schedu |
 | `1786559840071` | 8/12/2026, 3:39:55 PM | 308 | 2808KB | #Externship Email CFA |
 | `1786569674119` | 8/12/2026, 3:37:54 PM | 148 | 2188KB | Why is there no CFA logic/tools for this? Check -> https://emsuniversity.com/emtskills/rou |
@@ -109,37 +109,53 @@ Generated: 8/13/2026, 11:41:58 PM PT | window: last 72h | 101 tasks | index tota
 | `1786413553188` | 8/11/2026, 1:43:02 AM | 338 | 1100KB | #San Mateo County EMSA Complaint |
 | `1786319043926` | 8/11/2026, 1:41:06 AM | 444 | 3331KB | #TDSHS |
 | `1786432541079` | 8/11/2026, 1:12:16 AM | 71 | 112KB | #Julia/Claudia TP=2 |
-| `1786413781782` | 8/11/2026, 12:13:18 AM | 137 | 177KB | #Julia/Claudia TP=2 |
-| `1786384439089` | 8/10/2026, 11:56:18 PM | 316 | 2268KB | Why am i just receiving these chat transcripts now? That's not very helpful |
 
 ---
 
 ## Per-window detail
 
-### `1786688208090` — 8/13/2026, 11:41:55 PM PT — 77 turns
+### `1786547336372` — 8/14/2026, 12:41:55 AM PT — 585 turns
 
 **Original task:**
 
 ```
-#SBA Questions
-
-For the SBA loan we are going for, I need the follwoing inforemation. Search my google drive for the leases. Need signed and executed agremeents for them for the others answer based on what you know about us from SLS, VEC, MCP, etc...: 
-
-Could we get more details surrounding the company?
-How long are the classes that they offer?
-When do they collect tuition?
-What is the enrollment capacity of the schools?
-What is the company's current enrollment in relation to capacity?
-Does the company receive any government or grant money? If so, how much?
-
-I am missing the following OFFICE L
+Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cline rules when a subsequent iteration identifies a substantial reversal of the initial iteration within that window. The idea is that the agent catches this and makes itself smarter. This is to be done immediately. Give the rule nubmer. If it needs refinement, let me know.
 ```
 
-**Ideas referenced:** #2341, #2343, #2344, #2586, #26209, #26211, #26214, #26229, #26233
+**Ideas referenced:** #0000, #11415, #13840, #14205, #15268, #16224, #17130 [superseded], #17537 [rejected], #17685 [awaiting_review], #18132 [deployed], #18806, #18946, #18947, #18948, #18973, #19125, #19173, #19175 [executing], #19176 [queued], #19511, #19898, #19899 [proposed], #19904, #20251, #20630 [executing], #20957, #20958, #21125, #21126, #22282, #2277, #22840, #2320, #24900, #24906, #24909, #24910, #24912, #24913, #24924, #24995, #25058, #25066, #25150, #25151, #25154, #25155, #25156, #25157, #25185, #25188, #25313, #25551, #25747 [awaiting_review], #25755 [awaiting_review], #25757 [awaiting_review], #25759 [awaiting_review], #25764 [awaiting_review], #25765 [awaiting_review], #25812 [awaiting_review], #25848, #25859 [executing], #25860 [executing], #25861 [executing], #25869 [proposed], #25870 [proposed], #25871 [proposed], #25872 [executing], #25873 [proposed], #25876 [proposed], #25885, #25886 [executing], #25887, #25888 [proposed], #25890 [proposed], #25891 [proposed], #25892, #25893, #25894, #25897, #25906 [proposed], #25907 [proposed], #25909 [proposed], #25912 [proposed], #25925 [proposed], #25926 [proposed], #25981 [proposed], #26076 [executing], #5344, #5346, #5348, #616207
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1786689127799` — 8/13/2026, 11:41:51 PM PT — 20 turns
+```
+r until A7 has 7 days of data.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — monitor rule 317 fire-rate and tune after telemetry accumulates.
+
+Where we left off (verified 2026-08-12 5:45 PM PT):
+- Rule 317 hardfloor live: validator R317_UNVERIFIED_STATE + R317_REVERSAL_LOG firing; 28 total fires, 18+18 with 8 overlap
+- Argus 317 block deployed at /var/www/emtskills/routes/alltastic_api.php:12954 (idea #25981 approved)
+- A7 gate-telemetry shipped in scripts/cline_rules_audit.sh (idea #25906 approved)
+- Service restarted serving 324 rules / 20 hardfloor
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #25907 [proposed] — after 7 days of A7 data, relax R317_REVERSAL_LOG for completions with zero material state/count claims if it proves noisy
+2. #25906 [approved] — let A7 run nightly and review the failure-code breakdown (SELF_CONTRADICTING_DISPOSITION x136 was the top code at first run)
+
+Reference IDs:
+- Ticket: none (Ruben directive chain)
+- Ideas filed: #25888 [deployed], #25906 [approved], #25907 [proposed], #25981 [approved]
+- Files touched: Rules/317-reversal-triggers-297-and-rule-update.md, Rules/91-every-completion-needs-pickup-prompt.md, Rules/_RULE_TREE.md, Rules/_INDEX.md, Rules/.hardfloor-manifest, Rules/.clinerule_counter, Rules/.g8-floor-cap, scripts/cline_rules_audit.sh, mcp-servers/clinerules-mcp/src/index.ts, server /var/www/emtskills/routes/alltastic_api.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786689127799` — 8/14/2026, 12:41:44 AM PT — 102 turns
 
 **Original task:**
 
@@ -161,85 +177,34 @@ Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md
 Two counters
 ```
 
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #25378, #25381, #7142, #7149
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786660376952` — 8/13/2026, 11:41:50 PM PT — 275 turns
-
-**Original task:**
-
-```
-help me file with Florida Board of Education application yet? Need that approval before we the FL DHS application. We want also to be a CE and EMT provider there. So may also need to do an application for EMT CE with the EMS Authority in Florida
-```
-
-**Ideas referenced:** #004890, #121212, #16213, #17130 [superseded], #17537 [rejected], #18132 [deployed], #19125, #19173, #2335 [deployed], #252525, #252545, #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26183 [proposed], #26238, #313131, #3310, #6518
+**Ideas referenced:** #1006, #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #1442, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1746, #1779, #1798, #1828, #19567, #1996, #20042, #2008, #2014, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2255, #2328, #2440, #25378, #25381, #26241 [proposed], #26244 [proposed], #26245 [proposed], #3261, #3319, #3325, #3346, #3522, #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
-T) and DH 1698C (CE) packages.
+4 PT, re-verified at 00:08 PT.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
+Pick up task — Artemis 08-13 power-cut RCA (corrected) + WOPR heartbeat-gap alarm deployed.
 
-Pick up task #26183, Florida EMS state approval: recruit a Florida-licensed medical director and assemble DH 1698 and 1698C application packages.
-
-Where we left off (verified 2026-08-13 10:14 PT):
-- Medical director must be a Florida-licensed M.D. or D.O. per FL Admin Code 64J-1.004(2)(a) [deployed]. 64J-1.004(4) governs training-program medical directors. An out-of-state physician does not qualify for either program.
-- Initial EMT program = DH Form 1698 [deployed]; requires medical director (401.2701(1)(a)4.a), hospital ED affiliation, FL-licensed EMS provider affiliation, site visit, and DOE/CIE compliance evidence (401.2701(1)(a)1) [deployed].
-- CE/recertification program = DH Form 1698C [deployed]; requires physician contract (64J-1.0202(1)(c)4), $300 per 2-year cycle, no full training center needed [deployed].
-- CAPCE not certified, separate track for CE hour endorsement [deployed].
-- Tracker row 11 corrected; HANDOFF_NOTES.md updated [deployed].
-
-Open threads to drive next:
-1. #26183 [queued] (verified: approved + auto-queued for implementation) — Recruit a Florida-licensed M.D. or D.O. medical director, assemble DH Form 1698 (initial EMT) and DH Form 1698C (CE), and confirm DOE/CIE compliance evidence for the 1698 filing per 401.2701(1)(a)1.
-
-Reference IDs:
-- Ideas filed: #26183 [queued]
-- Files touched: admin_portal.accreditation_renewal_tracker row 11; HANDOFF_NOTES.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786558292672` — 8/13/2026, 11:41:46 PM PT — 404 turns
-
-**Original task:**
-
-```
-#Touch ID
-
-I would like to use Touch ID/Pass key for Moodle Sign In. Can we set this up?
-```
-
-**Ideas referenced:** #000000, #10234, #111111, #128231, #128241, #128268, #18868, #19163, #25896 [proposed], #25956 [proposed], #334155, #3742, #475569, #666666, #6785, #842029, #856404, #9200
-
-**Last PICKUP PROMPT:**
-
-```
-sanity check whenever you are.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — EMSU /emtskills portal optional passkey/Touch ID login (follow-up after E2E).
-
-Where we left off (verified 8/13/2026 11:41 PM PT):
-- Full WebAuthn ceremony re-run and PASSED tonight: enroll + fully anonymomous no-email login, redirect to skills_report.php, sign_count=2, last_used_at set. All test artifacts cleaned (0 rows left).
-- Feature is LIVE: /emtskills/routes/login.php has "Sign in with Passkey" button; /emtskills/my_profile.php has "Add Passkey" enrollment card; api/passkey.php + lib/passkey.php + assets/js/passkey.js all deployed and verified; passkey_credentials.credential_id is VARBINARY(1023).
-- Open item: Ruben's REAL Apple/iCloud Keychain Touch ID has never completed a login (his real credential user_id=1 has sign_count=0, last_used_at=NULL). Protocol path is proven, but physical Safari/Touch ID is unproven.
+Where we left off (verified 2026-08-14 00:20 PT):
+- Artemis UP and serving gpt-oss-120b on :8000 (HTTP 200 at 00:08 PT). Recovery path: Wyse power-cycle + BIOS restore-on-AC-loss=ON (tech-confirmed).
+- RCA corrected after community research: NOT a wedge, NOT graceful shutdown, NOT UPS battery fault. Hard power cut 05:50:16-21 PT. 0 poweroff lines, no shutdown marker, last_shutdown_reason absent, SP5100 TCO armed but useless without power.
+- UPS quirk ruled out via NUT GitHub (#3346, #3261, #3319, #2328): OL+LB at 100% charge is a known CyberPower HID reporting artifact. 132/300 recent heartbeats = OL LB (flapping for weeks). Zero OB events ever logged. Battery voltage 27.3V/24V nominal = healthy.
+- Open physical question: AC path failure between wall/UPS/PDU/PSU. Filed #26245 [proposed].
+- DEPLOYED + force-tested: /usr/local/bin/emsu-artemis-heartbeat-gap.sh + /etc/cron.d/emsu-artemis-heartbeat-gap (*/2). ALERT + WARN branches proven in /var/log/emsu-artemis-heartbeat-gap.log.
 
 Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #25956 [executing] — Request Ruben do a 30-second manual Safari/Touch ID sign-in on his real device; if it fails, capture the exact browser console + network error and fix. His credential (user_id=1, created Aug 12 16:53 PT, sign_count=0) is a ready-made reproduction.
+1. #26245 [proposed] — Physical inspection at Tempe rack needed (human + hands-on): breaker/PDU state, UPS event log + test.battery.start, concurrent-outage check of 192.168.0.10/.209/.124/.191, wall input voltage.
+2. #26241 [deployed] — Monitor the new alarm for 24-48h for false positives; WARN path (stale but pingable) covers writer-only issues separately.
+3. #26244 [superseded] — UPS battery-fault theory; keep in file only as the corrected dead end, do not act on it.
 
 Reference IDs:
-- Ideas filed: #25956 (portal passkey rollout), #25896 (Moodle MFA passkey, completed earlier)
-- Files touched: /var/www/emtskills/lib/passkey.php, /var/www/emtskills/api/passkey.php, /var/www/emtskills/assets/js/passkey.js, /var/www/emtskills/includes/passkey_login_box.php, /var/www/emtskills/includes/passkey_profile_card.php, /var/www/emtskills/routes/login.php, /var/www/emtskills/my_profile.php, /var/www/emtskills/vendor/webauthn/*
-- DB: admin_portal.passkey_credentials (credential_id VARBINARY(1023))
+- Ticket: none
+- Ideas filed: #26241 [deployed], #26244 [superseded], #26245 [proposed]
+- Files touched: /usr/local/bin/emsu-artemis-heartbeat-gap.sh, /etc/cron.d/emsu-artemis-heartbeat-gap, /var/log/emsu-artemis-heartbeat-gap.log (all WOPR), HANDOFF_NOTES.md (corrected entry 2026-08-14 00:20 PT)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -247,7 +212,282 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786666814323` — 8/13/2026, 11:41:36 PM PT — 943 turns
+### `1786688208090` — 8/14/2026, 12:41:41 AM PT — 200 turns
+
+**Original task:**
+
+```
+#SBA Questions
+
+For the SBA loan we are going for, I need the follwoing inforemation. Search my google drive for the leases. Need signed and executed agremeents for them for the others answer based on what you know about us from SLS, VEC, MCP, etc...: 
+
+Could we get more details surrounding the company?
+How long are the classes that they offer?
+When do they collect tuition?
+What is the enrollment capacity of the schools?
+What is the company's current enrollment in relation to capacity?
+Does the company receive any government or grant money? If so, how much?
+
+I am missing the following OFFICE L
+```
+
+**Ideas referenced:** #1515, #1558, #1559, #177931, #2341, #2343, #2344, #2586, #26209, #26211, #26214, #26229, #26233, #26240 [proposed], #26246 [proposed], #2985, #3217, #3313, #3643, #4516, #4850, #5139, #5291, #5358, #5375, #5530, #5688, #5756, #5944, #6295, #6452, #6512, #6567, #6641, #6992, #7874, #7892
+
+**Last PICKUP PROMPT:**
+
+```
+A_Loan_Underwriter_Package.md.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task SBA loan underwriter package, leases + business answers
+
+Where we left off (verified 2026-08-14 12:39 AM PT):
+- Deliverable on disk: /Users/rubenmajor/Desktop/SBA_Loan_Underwriter_Package.md, 6 answers in Ruben's voice, CAPCE claim corrected to "lapsed about a month or two ago" [deployed]
+- San Antonio lease: 2.28.20 Lease San Antonio TX EMS University Resonance Group.pdf, ID 1U_AAvauRl2Z7IQuEJJZML0rD-p-76cah [deployed]
+- Union City lease: 1go8RT4S2C-dGe1UaFZ9IO7TXUN7YKpXc [deployed]
+- San Francisco lease: 1UEWp0tVKX47VL_abF5QXnZ0zgjVQcRcG [deployed]
+- Tempe lease still missing: 1DGKNCX74PwfGi is actually Peoria Thunderbird; real Tempe lease expected in Drive folder 1xPMOtuRAB8APRAxCEdTakbOZWNfrOoIT [awaiting_review]
+
+Open threads to drive next:
+1. #26246 [proposed] - Enumerate Drive folder 1xPMOtuRAB8APRAxCEdTakbOZWNfrOoIT via google-drive folder-list API, pull the signed Tempe lease for 501 S 48th St Suite 105, add the link to the SBA package, then send all 4 lease links plus answers to the underwriter
+2. #26240 [proposed] - Human eye-check on the 4 lease PDFs (address page 1 for Tempe and San Antonio, executed signature page for San Francisco) before final send
+
+Reference IDs:
+- Ideas filed: #26246 [proposed], #26240 [proposed]
+- Files touched: /Users/rubenmajor/Desktop/SBA_Loan_Underwriter_Package.md
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786567464418` — 8/14/2026, 12:41:37 AM PT — 209 turns
+
+**Original task:**
+
+```
+#Argus
+
+This task failed for being over context. Can you continue it? 
+
+
+
+#Argus
+
+How it has Argus been doing over the last 12 hours? What improvements do we need to make? What capabilities do we need to increase? Act according to rule 29 and leverage rule 267. Let me know what other permissions I may need to increase. Also I personally head tried to do a couple of things in Argus yesterday and they failed. One of them had to do with RUBEN computer VAPI and getting that back online. I felt like Argus was way off base and not really helpful at all. And that is not how I want that agent to be. J
+```
+
+**Ideas referenced:** #16475, #17130 [superseded], #17537 [rejected], #177821, #18132 [deployed], #18579, #186576, #18777, #19098, #19099, #19125, #19173, #19624, #19641, #19731, #19970, #19971, #19975, #19995, #20023, #20024, #20025, #20026, #20028, #20029, #20030, #23133, #2321, #23378, #23477, #23934, #23945, #23954, #24635, #25042, #25551, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25803 [proposed], #25812, #25889 [ready_for_review], #25914, #25931, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [proposed], #25944 [proposed], #25959 [proposed], #25968 [proposed], #25969 [proposed], #25970 [proposed], #26000 [proposed], #360135, #360152, #3957, #5792, #9501, #9771, #9772, #9773, #9774, #9775
+
+**Last PICKUP PROMPT:**
+
+```
+ility gap you flagged hardest.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — RUBEN TNG voice line deepseek fix is DONE; finish the 3 buildable Argus/voice items.
+
+Where we left off (verified 2026-08-14 00:13 PT):
+- TNG line recovered: timeout 15→60 live-confirmed, model deepseek-v4-pro live-verified (anthropic/deepseek-v4-pro/0.3/7 tools/HTTP 200).
+- Canary cron registered + wrapper array bug fixed.
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #25959 [proposed] — Slim TNG systemPrompt in ruben_voice_webhook.php (40,499 chars, dedupe LCARS blocks).
+2. #25968 [proposed] — Fix validateToolDispatchCoverage() in cron_voice_agent_health.php to follow require_once'd libs (not just webhook file) so 41 ghost-tool warnings stop.
+3. #26000 [proposed] — Argus gets Cline-equivalent MCP toolset (emsu-operations, ruben-orchestrator, frankenstein-tools, VAPI key), tiered by role: Ruben=full, Jon/Vicky=scoped, students=read-only.
+4. #25969 [proposed] — BLOCKED on Ruben: designate synthetic caller assistant + from-phone for the canary (RTNG_CANARY_TEST_ASSISTANT_ID / RTNG_CANARY_FROM_PHONE_ID), then confirm a pass row in ruben_tng_canary_runs.
+
+Reference IDs:
+- Ideas: #25959, #25968, #25969, #26000; #25970 [superseded].
+- Files touched: api/voice/ruben_voice_webhook.php, cron/cron_ruben_tng_voice_canary.php, /etc/cron.d/emsu-ruben-tng-canary, DB ruben_voice_settings.voice_model.
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786581699007` — 8/14/2026, 12:41:23 AM PT — 427 turns
+
+**Original task:**
+
+```
+#Argus Learning
+
+Tell me how Argus automatic learning is going. I would like for it to start making itself smarter. I mean what I usually do is you know I'm coming in here on a daily basis and I'm trying to do sweeps to see what tasks were unfinished as well as whether there were bugs that were showing that needed to be resolved or permission issues that were not in a accordance with rule 29 or missing tools, things of that nature. I would like to see Argus learning doing those sorts of things on its own. How can we make that happen?
+```
+
+**Ideas referenced:** #10182, #128126, #14749, #16213, #18806, #19415, #19434, #20025, #20036 [awaiting_review], #20884, #20890, #21582, #21667, #22310, #22850, #22887, #22939 [approved], #23027, #23094, #23132, #23136, #23144, #23166, #23170, #2323, #23231, #2324, #23241, #23247, #23286, #23292, #23328, #23387, #23429, #23506, #23556, #23561, #23582, #23623 [proposed], #23636 [proposed], #23637 [proposed], #23729, #23764, #23769, #23885 [proposed], #23899 [proposed], #23900 [ready_for_review], #23908 [proposed], #23910 [proposed], #23911 [proposed], #24789 [proposed], #24977 [proposed], #24987 [proposed], #25072, #25074 [proposed], #25151, #25547, #25552, #25572 [approved], #25574 [proposed], #25578 [approved], #25624 [proposed], #25625 [ready_for_review], #25822, #25833, #25888, #25932, #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25975, #25985, #25986, #26001, #26002, #26003 [deployed], #26018 [proposed], #26020 [deployed], #26025 [proposed], #26031 [proposed], #26032 [proposed], #26033 [proposed], #26047 [approved], #26075 [executing], #26083 [awaiting_review], #7326, #7377, #7428, #7784, #7785, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+s correctly tracked as #26083.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up Argus learning execution — apply the 403-tab fix (#26083) and finish evaluating the remaining offloaded Argus tasks.
+
+Where we left off (verified 2026-08-13 00:24 PT):
+- Sweep cron `cron_argus_daily_sweep.php` running every 4h (38 findings), lane 2 falsy-zero filter fixed, class-wide repair recipe baked in (#26075).
+- Self-heal cron v2 `cron/cron_argus_self_heal.php` running root `*/5`, schema-correct, heartbeat green.
+- WSOD fix applied to `routes/argus_task_status.php` (SESSION-LOCK RELEASE), 751 lines, lint clean; WSOD ideas 23899/23900/23908/23910/23911 marked deployed.
+- Callbacks ideas 25572/25574/25578 marked deployed (goToCallbacks verified in telephony_hub.php).
+- Two file-corruption events fully recovered (argus_task_status.php + the two 403-tab views); both restored from backups and lint-clean.
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #26083 [awaiting_review] — apply the 403 fix surgically via replace_in_file (NOT write_server_file full-overwrite): normalize role to lowercase stripped of _/space via currentUserRole(), then compare case-insensitively in BOTH `_view_argus_student_tools.php` (~line 17) and `_view_argus_cs_comms_suite.php` (~line 14). Verify with php -l + manual load as a CustomerService role before marking anything deployed.
+2. #26047 [executing] — finish evaluating the remaining 30+ offloaded tasks: hr@ hiring-forwarding cluster (tasks 122/123/124/126), student-account unarchive cluster (190/191/198), William Lee retake (458/459). Confirm each is already built (like Callbacks) before flipping status; do NOT assume idea status = feature absence.
+3. #26075 [executing] — verify the class-wide repair directive is enforced in the Argus repair path itself (not just the sweep recipe): confirm `argus_sls_doctor.php` / `canonical_repair` applies fixes to ALL affected students sharing the root cause, never a single student.
+
+Reference IDs:
+- Ticket: none (Argus offload stream)
+- Ideas filed this session: #26018 [superseded], #26025 [executing→deployed], #26031 [superseded], #26032 [superseded], #26033 [superseded], #26047 [executing], #26075 [executing], #26083 [awaiting_review]
+- Files touched: cron_argus_daily_sweep.php, cron/cron_argus_self_heal.php, routes/argus_task_status.php, routes/_view_argus_student_tools.php (restored), routes/_view_argus_cs_comms_suite.php (restored)
+- Ledger row appended: cline_task_ledger id 11
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786592555268` — 8/14/2026, 12:40:22 AM PT — 521 turns
+
+**Original task:**
+
+```
+#Argus
+
+Would like to be able to click on any row and read the actual task itself: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=activity
+```
+
+**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #16213, #16263, #18745, #18770, #19370, #20547, #21140, #21262, #22310, #22511, #23506, #23852, #23952, #24897, #24900, #25047, #25573, #26005, #26044, #26045, #26048, #26049, #26050, #26062 [awaiting_review], #26107 [deployed], #274160, #30363, #69707, #8645, #8942, #9650, #9654, #9660, #9733, #9889
+
+**Last PICKUP PROMPT:**
+
+```
+h scripts removed from server.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus Activity tab: row-click detail modal + own/below-role visibility & revert interaction.
+
+Where we left off (verified 2026-08-13 03:12 PT):
+- routes/argus_download.php: Activity tab visible to all roles (line 27), row-click modal live (openAct/openActDetail/__actRows, CSS .act-modal-backdrop at line 234).
+- routes/alltastic_api.php: activity feed scoped via argusVisibleEmails/argusVisibleRoles (own + below-role + all non-Argus roles), gates lowered to CustomerService+, can_revert + revert_action re-scoped (lines 196-212, 4157, 4200, 4213, 4255, 4405).
+- Idea filed: #26107 [deployed].
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26107 [deployed] — Argus-scoped activity+revert (done this session); verify visually in browser as an Instructor/PD/CustomerService user: log in, open Activity tab, click a row, confirm modal shows full task JSON, confirm Revert button interacts without MasterAdmin.
+2. #26062 [awaiting_review] — separate pre-existing bug (placeholder skill instructor "TeExameiner" + 3 missing skill PDFs); triage and fix the data in admin_portal.skills records for student 26415W-08.
+
+Reference IDs:
+- Idea #26107 [deployed], #26062 [awaiting_review]
+- Files touched: /var/www/emtskills/routes/argus_download.php, /var/www/emtskills/routes/alltastic_api.php
+- Backups: routes/.alltastic_api.php.bak-argusdetail-20260812
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786674811485` — 8/14/2026, 12:31:27 AM PT — 136 turns
+
+**Original task:**
+
+```
+Can you tell me how we can see if anyone is using a bot to chat to us or not?
+```
+
+**Ideas referenced:** #059669, #20251 [proposed], #2341, #25550, #25962, #25964, #26211, #26229 [proposed], #2657, #2780, #6366, #9131, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+ pivot, or keep it high-level?
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #26229 [approved, reframing] - Chat widget demand management (queue confidence + repeat-ask dedup + tool-gap closure) instead of bot-escalation.
+
+Where we left off (verified 2026-08-14 00:29 PT):
+- Ruben reframed: this is customer-impatience critical mass, not bot abuse. Can't escalate everyone to human - no capacity
+- 30-day data quantified: 11,510 visitor msgs / 3,165 convs; 298 convs (9.4%) with 10+ msgs = 5,110 msgs (44% of all traffic); 1,068 pure impatience pings
+- Top loops: Kareem Gharaybeh 55x identical paste (AI couldn't sync exam-5 grade = tool-gap), Abdul 16x identical, Caroline 47x punctuation
+- Widget already has typing indicator + heartbeat; MISSING queue/ETA confidence signal + repeat-ask dedup
+- Widget has resolving tools (get_student_courses, swap_section_and_match_payment) but AI doesn't always fix
+- #26229 status=approved (Ruben 2026-08-13 23:36 PT)
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26229 [approved] - Pivot direction: add queue-confidence/ETA signal to widget (fetch visitor's queue position + ETA on widget_bootstrap, display "you're #N, ~M min") - cuts re-pings 50-70% with zero human
+2. #26229 [approved] - Repeat-ask dedup: in widget_send, hash/normalize visitor message_text per conversation; if near-identical already answered this session, reply with ack "we have your request, you're still in queue" instead of a fresh AI turn - collapses 55x paste loops
+3. #26229 [approved] - AI tool-gap closure: list questions where AI answered but didn't resolve (the loops), wire missing resolving tools so AI FIXES (Kareem exam-5 grade sync = the canonical gap)
+4. #26229 [approved] - Throttle only pathological: identical-paste 10x+ OR sub-2s cadence -> chat_visitor_cooldown soft (never ban anxious students)
+5. Human decision (Ruben): keep escalation-to-human rare + triaged by urgency (payment/exam/account-locked = high) vs first-come-first-served
+
+Reference IDs:
+- Ideas filed: #26229 [approved]
+- Ticket: #2780 (Kareem exam-5 grade sync, the canonical tool-gap loop)
+- Source data: wordpress_2.LzDe7pTO_support_chat_messages (70,494 msgs volume, 11,510 visitor msgs in 30d)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786666915889` — 8/14/2026, 12:23:31 AM PT — 724 turns
+
+**Original task:**
+
+```
+Can you email a copy of any externship agreements / affiliation agreement whatever from agencies that might be signed by both parties - would be in vyu@emsunivesity.com's email inbox, etc...
+```
+
+**Ideas referenced:** #15669, #19163, #19338, #19458, #19491, #2144, #2158, #2187, #2304, #2316, #2335 [deployed], #2336, #2350, #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26196 [executing], #26197, #26198, #26224, #26225 [executing], #26226 [awaiting_review], #361709, #6785, #97703
+
+**Last PICKUP PROMPT:**
+
+```
+man-policy/signature decision.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up MWFD affiliation agreement EMSU countersignature.
+
+Where we left off (verified 2026-08-14 00:12 PT):
+- 6 signed agreements linked into manage_sites.php (sites 58, 75–79 ↔ docs 118–123), files verified on disk
+- MWFD signed PDF delivered to Ruben's Downloads (queue 6D5B628874D, INBOX)
+- Argus ExecAdmin endpoint live at /var/www/emtskills/api/argus_exec_agreements.php
+
+Open threads to drive next:
+1. #26196 [awaiting_review] — EMSU countersignature on MWFD agreement: needs Ruben's signature decision, then countersign + file
+2. #26225 [executing] — Jon Thompson 18-month digest: 44 agreements inventoried and emailed; next is confirming which Jon wants re-sent as PDFs
+
+Reference IDs:
+- Tickets: none (direct steering)
+- Ideas filed: #26196, #26224, #26225, #26226
+- Files touched: /var/www/emtskills/api/argus_exec_agreements.php, compliance_documents rows 118–123, ExternshipSite rows 58/75–79
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786666814323` — 8/13/2026, 11:54:00 PM PT — 970 turns
 
 **Original task:**
 
@@ -263,123 +503,70 @@ for example where is blake brandon's request.
 That might have been in the system and not populated or maybe it was emailed to vyu@emsuniversity.com or other CS? Can you check on those. Seems like this process is not working properly.
 ```
 
-**Ideas referenced:** #047857, #059669, #10003, #10005, #10182, #11111, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #128337, #128681, #129302, #16213, #16263, #1807, #181825, #18745, #18770, #19370, #19583, #19592, #20292, #20295, #21140, #21262, #22310, #2337 [deployed], #2338 [deployed], #2339 [deployed], #2340, #25097, #25150, #25188, #2563, #26192 [proposed], #26197 [executing], #26198 [executing], #26200 [executing], #26201 [executing], #26202 [executing], #26205 [proposed], #26207 [proposed], #26208 [proposed], #26210 [unknown], #26214 [executing], #26215 [executing], #274160, #30363, #313244, #334155, #3730, #374151, #4338, #45475, #475569, #6366, #64748, #65039, #69707, #78350, #8645, #8942, #9019, #9191, #9203, #92400, #9650, #9654, #9660, #9733, #9888, #9889
+**Ideas referenced:** #047857, #059669, #10003, #10005, #10182, #11111, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #128337, #128681, #129302, #16213, #16263, #1807, #181825, #18745, #18770, #19370, #19583, #19592, #20292, #20295, #21140, #21262, #22310, #2337 [deployed], #2338 [deployed], #2339 [deployed], #2340, #25097, #25150, #25188, #2563, #25888, #26192 [proposed], #26197 [executing], #26198 [executing], #26200 [executing], #26201 [executing], #26202 [executing], #26205 [proposed], #26207 [proposed], #26208 [proposed], #26210 [unknown], #26214 [executing], #26215 [executing], #274160, #30363, #313244, #334155, #3730, #374151, #4338, #45475, #475569, #6366, #64748, #65039, #69707, #78350, #8645, #8942, #9019, #9191, #9203, #92400, #9650, #9654, #9660, #9733, #9888, #9889
 
 **Last PICKUP PROMPT:**
 
 ```
-s are read-only verifications.
+rrecting a contradicted claim.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
+Pick up task - Grievance Manager "Overdue (Active)" stat card fix.
 
-Pick up task #26198 [executing] - Blake Brannen GRV-2026-0072 missing grievance document + dead attachment recovery paths.
-
-Where we left off (verified 2026-08-13 19:12 PT):
-- Blake did NOT use the student grievance link. Zero rows in grievance_intake_tokens and grievance_intake_request_log for Blake/Brannen/bbrannen8@gmail.com/8130634. He emailed photos directly.
-- Grievance record EXISTS: GRV-2026-0072 / id 73, admin_review, filed 2026-07-14, intake_source email_attachment. The DOCUMENT does not exist.
-- The 4 JPEGs (IMG_8495/8497/8498/8499, ~14.5MB) from inbound email 85479 were never persisted. storage/inbound_attachments stops at email id 42422 (2026-05-28); Blake's are 84966 and 85479. No copy under uploads/grievances either.
-- Both recovery paths are structurally dead: #26197 [executing] postmark_grievance_backfill joins grievances.email_log_id + filters email_inbound_log.intake_source, NEITHER column exists (query returns SQL 1054, verified by running it); grievance_postmark_attachment_fetch joins inbound_id + postmark_message_id, both NULL on 83/83 rows, postmark_fetch_status pending on 83/83.
-- Nobody was ever told: grievance_staff_review_tasks, grievance_review_queue, grievance_notification_log all have ZERO rows for id 73, while cron_grievance_disposition_clock has logged confidence 0.000 below the 0.750 floor to grievance_status_history every 15 min since 2026-08-03.
-- Scope: 3 of 83 grievances have no document; only Blake's is open (others: 74 Olivia Alvarez resolved, 35 Cecil Renollet approved).
+Where we left off (verified 2026-08-13 23:52 PT):
+- Fixed and verified. The "Overdue (Active)" card showed a dash because handleStats() in routes/api/grievance_api.php never emitted overdue_non_terminal and grvLoadStats() in assets/js/grievance_manager.js never set grvStatOverdueNonTerminal.
+- Real-handler proof: handleStats() returns stats.overdue_non_terminal = 2; handleList(summary_bucket=overdue_non_terminal) returns total 2 (GRV-2026-0066, GRV-2026-0065, pending_admin_complete, eff_due 2026-08-05). php -l clean, PHP-FPM reloaded, public JS served equals disk (35b9b7ad / 193399 bytes).
 
 Open threads to drive next:
-1. #26198 [executing] - Email Blake (bbrannen8@gmail.com) to resend the 4 photos; his originals are the only surviving copy. Rule 02: no apology language. Needs Ruben's go before sending to a student.
-2. #26197 [executing] - Repair both attachment recovery paths and populate inbound_id + postmark_message_id at intake time.
-3. #26200 [executing] - Watchdog: open a staff task when the clock blocks repeatedly, and alert on any non-terminal grievance with file_path NULL AND extracted_text empty.
-4. #26192 [executing] - Original grievance-73 OCR item; approach superseded by #26198 [executing] (no bytes to OCR until he resends).
-5. #26201 [executing] - Rule-317 causal fix: execute a repair path's own selector query before proposing it as the fix.
+None. All work completed this session.
 
 Reference IDs:
-- Ideas filed: #26192 [executing], #26197 [executing], #26198 [executing], #26200 [executing], #26201 [executing]
-- Student: Blake Brannen, 8130634, 26807FT-01, bbrannen8@gmail.com
-- Emails: inbound 85479 (2026-07-14 Grievance, 4 att), 84966 (2026-07-06 Ride along grievance, 4 att)
-- Files touched: NONE (read-only diagnosis)
+- Ticket: none (user-reported UI issue)
+- Ideas filed: none (no idea filed this session)
+- Files touched: /var/www/emtskills/routes/api/grievance_api.php, /var/www/emtskills/assets/js/grievance_manager.js
 
-When done, append to cline_task_ledger.md (rule 07), run order 66.
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
 
-### `1786666915889` — 8/13/2026, 11:41:19 PM PT — 637 turns
+### `1786660376952` — 8/13/2026, 11:47:40 PM PT — 292 turns
 
 **Original task:**
 
 ```
-Can you email a copy of any externship agreements / affiliation agreement whatever from agencies that might be signed by both parties - would be in vyu@emsunivesity.com's email inbox, etc...
+help me file with Florida Board of Education application yet? Need that approval before we the FL DHS application. We want also to be a CE and EMT provider there. So may also need to do an application for EMT CE with the EMS Authority in Florida
 ```
 
-**Ideas referenced:** #15669, #19163, #2144, #2158, #2304, #2316, #2335 [deployed], #2336, #2350, #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26196 [executing], #26197, #26198, #26225 [executing], #26226 [awaiting_review], #361709, #6785, #97703
+**Ideas referenced:** #004890, #121212, #16213, #17130 [superseded], #17537 [rejected], #18132 [deployed], #19125, #19173, #2335 [deployed], #252525, #252545, #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26183 [proposed], #26238, #26239 [executing], #313131, #3310, #6518
 
 **Last PICKUP PROMPT:**
 
 ```
-gned PDF → queue 6D5B628874D ✓
+ion (flagged, not fabricated).
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — signed externship/affiliation agreement consolidation (place-all + Exec Argus function follow-through).
+Pick up task #26183 - Florida and Oregon state-approval: Drive folders, prep docs, website updates, statutory answers.
 
-Where we left off (verified 2026-08-13 11:03 PM PT):
-- 5 agreement emails delivered to rmajor@emsuniversity.com INBOX (queue IDs 8AFFC288AE7, 393F0288AE7, 6D5B628874D, D66A4288764, 914CF288761).
-- Argus Exec endpoint deployed at /var/www/emtskills/api/argus_exec_agreements.php (syntax clean, auth-gated) plus argus_action_permissions rows for ExecAdmin/MasterAdmin.
-- Jon Thompson 44-email digest sent; raw scan at /tmp/agreement_mail_scan.txt and clean digest at /tmp/jon_digest.txt on wopr.
+Where we left off (verified 2026-08-13 11:45 PT):
+- Created 8 Google Drive folders (FL + OR roots with EMT/CE/DOE subfolders) under Ruben Major (rmajoremsu@gmail.com), all anyone-reader.
+- Uploaded FLORIDA_PREP.md (id 154NbjmR45tEX3tK_8nYSK8dPBpC2f6WT) and OREGON_PREP.md (id 1h56YCL-n1M0UaDh9OWeDbe_J8jZAQHyr).
+- Corrected site_setup_data.js (Miami FL + Portland OR entries): removed false "CAPCE accredited" claim, fixed forms to DH 1698 / DH 1698C, added Drive links. Both JS files node --check valid, serve HTTP 200.
+- Answered: EMT needs no separate CIE license (401.2701(1)(a)1 satisfied by 1005.06(1)(b)+(1)(g)); CE-only exemption 1005.06(1)(d) applies with no EMT program; FL medical director must be FL-licensed MD/DO (64J-1.004(2)(a)).
+- Updated accreditation_renewal_tracker rows 1, 11, 12; HANDOFF_NOTES.md; ideas #26183 and #26239 promoted to priority 1.
 
 Open threads to drive next (EVERY item has a real filed idea #):
-1. #26226 [awaiting_review] — Link the 5 discord-affiliation PDFs + MWFD signed agreement into manage_sites.php: insert/update ExternshipSite rows for Phoenix Fire Station 41, Dallas Fire Rescue, Sonoma County, Calaveras, Eloy Fire, MWFD, then create compliance_documents rows pointing at the on-disk PDFs (compliance/2026/04/discord-affiliations/*.pdf and the MWFD PDF at /tmp/EMSU_agreement_signed_by_MWFD.pdf).
-2. #26196 [awaiting_review] — MWFD both-parties agreement: EMSU countersignature + file to compliance store + notify Kamdyn Sheets and agency (rule 13 escalation path, Vicky high priority + Jon CC).
-3. #26225 [executing] — Jon Thompson 18-month agreement digest: verify Ruben received and decide which of the 44 emails need their original PDFs extracted and re-filed into compliance_documents (extraction script pattern already proven: /var/qmail/mailnames/emsuniversity.com/{jthompson,rmajor,vyu}/Maildir + email.message_from_bytes).
+1. #26183 [executing] — File FL DOH Bureau of EMS initial EMT (DH Form 1698) + CE (DH Form 1698C) applications. Next concrete action: download both forms from FL DOH, then recruit a Florida-licensed MD/DO medical director (out-of-state does not qualify).
+2. #26239 [executing] — File OR OHA-EMS initial EMT course approval + OR CE path. Next: verify OAR 333-265 medical director requirement and HECC CE-only exemption (ORS 348.597), then obtain CAPCE or OHA CE approval.
 
 Reference IDs:
-- Ticket: none
-- Ideas filed: #26196, #26225, #26226
-- Files touched: /var/www/emtskills/api/argus_exec_agreements.php (new), /tmp/agreement_mail_scan.txt, /tmp/jon_digest.txt, /tmp/EMSU_agreement_signed_by_MWFD.pdf, /tmp/Affiliation Agreement Texas - Dallas EMT.pdf
-- DB rows: argus_action_permissions (ExecAdmin/MasterAdmin agreements_pull_all), email_outbound_log rows (send_signed_agreements ×2, send_uthealth_fwd)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786674811485` — 8/13/2026, 11:40:24 PM PT — 122 turns
-
-**Original task:**
-
-```
-Can you tell me how we can see if anyone is using a bot to chat to us or not?
-```
-
-**Ideas referenced:** #059669, #20251 [proposed], #2341, #25550, #25962, #25964, #26211, #26229 [proposed], #2657, #2780, #6366, #9131, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-nd 3 concurrent conversations.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #26229 [approved] - Wire live agentic-persistence detection into the chat widget.
-
-Where we left off (verified 2026-08-13 23:39 PT):
-- 30-day persistence analysis DONE over wordpress_2.LzDe7pTO_support_chat_messages (70,494 msgs). Top offenders: Kareem Gharaybeh (conv 7683 = 55x identical paste, conv 9952/9961 = template spam, 437 msgs/160 convs, 3 IPs with 49+ sub-2s rapid gaps), Abdul Azeem Munshi (conv 7452 = "how do i unlock the midterm evaluation" x16 in 1 minute), Caroline Reidy (conv 7929 = 47-msg punctuation loop "Hello?????"/HELLLOOOOOOOO)
-- Rapid-cadence scan SQL proved: sub-2s gaps per visitor_ip over 30d found 26 IPs (top: 174.160.80.29=57, 172.3.136.67=49, 72.194.233.114=22, 12.220.209.130=19, 159.26.99.222=14)
-- #26229 marked status=approved by Ruben 2026-08-13 23:36 PT
-- Schema verified: user IPs all in visitor_ip column (shared 12.220.209.130 between Abdul and Caroline = same household/VPN)
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26229 [approved] - Wire live persistence detection into chat_widget_api.php widget_send: normalize+hash visitor message_text per conversation; 3+ near-identical repeats after a canned/refusal reply -> INSERT chatbot_loop_escalation_log (canned_count, escalated_to_agent) + bump chat_visitor_cooldown.offense_count
-2. #26229 [approved] - Wire per-IP/visitor_uuid rate cap in widget_send: 5 msgs/min + 30/hr using chat_portal_messages.visitor_ip + LzDe7pTO_support_chat_messages.visitor_ip; soft cooldown first, permanent after repeated offenses via chat_visitor_cooldown (cooldown_level=permanent)
-3. #26229 [approved] - Backfill scan as cron: nightly 30-day persistence report (identical-text repeats, sub-2s cadence per IP, loop conversations) writing hits to chat_ai_policy_violations with violation_type=agentic_persistence
-4. Human-policy decision (Ruben) - how to handle Kareem Gharaybeh's active loop: cooldown enforcement vs the open #2780 ticket. Healthiest move: since the module is now approved, let the live cap apply and have a human (Vicky/Jon) respond to #2780 so the loop has a real resolution. (human-only decision, no idea)
-
-Reference IDs:
-- Ideas filed: #26229 [approved]
-- Files read: wordpress_2.LzDe7pTO_support_chat_messages/conversations schema, /var/www/emtskills/api/chat_widget_api.php (widget_send paths), chat_visitor_cooldown + chatbot_loop_escalation_log columns verified
-- Source data: wordpress_2.LzDe7pTO_support_chat_messages (70,494 rows), conversations (7,273 rows)
+- Ideas filed: #26183 [executing], #26239 [executing]
+- Files touched: sites/docs/compliance review_log, assets/js/site_setup_data.js, assets/js/site_setup_data_extended.js, HANDOFF_NOTES.md, admin_portal.accreditation_renewal_tracker (rows 1/11/12)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -387,7 +574,49 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786683447557` — 8/13/2026, 11:39:48 PM PT — 264 turns
+### `1786677303463` — 8/13/2026, 11:47:17 PM PT — 220 turns
+
+**Original task:**
+
+```
+/emtskills is slow again. Please fix it. Check emtskills-slowness and fix it
+```
+
+**Ideas referenced:** #11812, #13453, #2310 [resolved], #2335 [deployed], #2337, #2338, #2339, #2342 [open], #25548 [executing], #25679 [executing], #26019, #26054, #26068, #26076, #26077, #26080 [completed], #26205 [executing], #26207 [executing], #26208 [executing], #26209 [proposed], #26210 [executing], #26211 [proposed], #26218 [approved], #26219 [deployed], #26234 [deployed]
+
+**Last PICKUP PROMPT:**
+
+```
+slowness is ever "felt" again.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #234 — /emtskills slow again: swap-flush storm + dead LoRA rsync loop fixed, durable Portal Health Guard deployed.
+
+Where we left off (verified 2026-08-13 23:45 PT):
+- WOPR: 3 stacked root causes fixed (memory-guardian swapoff/swapon flush storm every ~60s throttled to 1/900s; emsu-fleet-finisher + emsu-vault-sync crons killed + chattr +i because Artemis 10.100.0.5 unreachable; 5 stuck /tmp/send_uthealth*.php clones killed).
+- Durable guard installed: /usr/local/bin/emsu-portal-health-guard.sh via /etc/cron.d/emsu-portal-health-guard every 2 min (latency canary DEFCON1/2/5, runaway autokill cap 3/hr with evidence snapshot to /var/log/emsu-portal-health-guard-kills.log, swap-flush storm detector via authoritative loop file). Alerts reuse infra_alert.php.
+- Files touched: /usr/local/bin/emsu-portal-health-guard.sh, /etc/cron.d/emsu-portal-health-guard, /etc/cron.d/emsu-fleet-finisher(.bak-20260813-loarartemis-off), /etc/cron.d/emsu-vault-sync(.bak-20260813-loarartemis-off), /var/www/emtskills/scripts/emsu-memory-guardian.sh(.bak-20260813-flushstorm), /Users/rubenmajor/Desktop/emtskills-slowness.md, /var/www/emtskills/docs/HANDOFF_NOTES.md.
+- Live state: latency 0.4-0.7ms local, nvme0n1 util <5%, load 11.6, swap 0MB used, pm.max_children 300, 0 new slowlog stalls.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26234 [deployed] — Verify Portal Health Guard produces a clean log line + state file after >1h of normal operation (no false alerts). If the canary ever fires, run `sudo tail -30 /var/log/emsu-portal-health-guard.log` and `sudo jq . /var/www/emtskills/.state/portal_health_guard.json` before the next window.
+2. #26219 [deployed] — Confirm memory-guardian thresholds/write-free flushes hold overnight: `sudo grep -c 'REMEDIATED: Swap flushed' /var/log/emsu-memory-guardian.log | tail` should stay near 0; swap may sit high (stale, harmless) with RAM ample.
+3. #26218 [awaiting_review] — Watch Artemis 10.100.0.5 reachability. When SSH `emsuserver@10.100.0.5` starts answering, re-enable vault sync: `chattr -i /etc/cron.d/emsu-vault-sync /etc/cron.d/emsu-fleet-finisher` then restore schedules from the `.bak-20260813-loarartemis-off` backups and run one manual `emsu-vault-sync.sh` to confirm rc=0 before enabling auto.
+
+Reference IDs:
+- Ticket: <none — direct request from Ruben>
+- Ideas filed: #26218, #26219, #26234 | Bug-lib incident: #2342
+- Files touched: /usr/local/bin/emsu-portal-health-guard.sh, /etc/cron.d/emsu-portal-health-guard, /etc/cron.d/emsu-fleet-finisher, /etc/cron.d/emsu-vault-sync, /var/www/emtskills/scripts/emsu-memory-guardian.sh, /Users/rubenmajor/Desktop/emtskills-slowness.md, /var/www/emtskills/docs/HANDOFF_NOTES.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786683447557` — 8/13/2026, 11:47:17 PM PT — 272 turns
 
 **Original task:**
 
@@ -403,7 +632,7 @@ RESULT: Software avenues are now genuinely exhausted with hard register-level pr
 Key finding this session: raw ssh sudo on Big Mac is walled off (non-interactive TTY required), but I found a working bypass, the command `docker run --rm --privileged --pid=
 ```
 
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15158, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1731, #1732 [rejected], #1744, #1779, #178667, #178668, #1798, #1828, #1836, #19567, #19653 [queued], #19671 [rejected], #19686 [queued], #19689 [queued], #19776 [executing], #19777 [proposed], #19778, #19785 [deployed], #19788 [proposed], #19789 [proposed], #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2341 [rejected], #2343 [deployed], #2344 [deployed], #2345, #25185, #25378, #25381, #26209 [proposed], #26211 [proposed], #26229, #26233 [proposed], #26237 [rejected], #26238 [proposed], #7142, #7149
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15158, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1731, #1732 [rejected], #1744, #1779, #178667, #178668, #1798, #1828, #1836, #19567, #19653 [queued], #19671 [rejected], #19686 [queued], #19689 [queued], #19776 [executing], #19777 [proposed], #19778, #19785 [deployed], #19788 [proposed], #19789 [proposed], #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2341 [rejected], #2343 [deployed], #2344 [deployed], #2345, #2346, #25185, #25378, #25381, #26209 [proposed], #26211 [proposed], #26229, #26233 [proposed], #26237 [rejected], #26238 [proposed], #7142, #7149
 
 **Last PICKUP PROMPT:**
 
@@ -446,53 +675,45 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [x] Reconcile #26209/#26211 ([proposed], ve
 ```
 
-### `1786677303463` — 8/13/2026, 11:37:09 PM PT — 216 turns
+### `1786558292672` — 8/13/2026, 11:41:46 PM PT — 404 turns
 
 **Original task:**
 
 ```
-/emtskills is slow again. Please fix it. Check emtskills-slowness and fix it
+#Touch ID
+
+I would like to use Touch ID/Pass key for Moodle Sign In. Can we set this up?
 ```
 
-**Ideas referenced:** #11812, #13453, #2310 [resolved], #2335 [deployed], #2337, #2338, #2339, #2342 [open], #25548 [executing], #25679 [executing], #26019, #26054, #26068, #26076, #26077, #26080 [completed], #26205 [executing], #26207 [executing], #26208 [executing], #26209 [proposed], #26210 [executing], #26211 [proposed], #26218 [approved], #26219 [deployed], #26234 [deployed]
+**Ideas referenced:** #000000, #10234, #111111, #128231, #128241, #128268, #18868, #19163, #25896 [proposed], #25956 [proposed], #334155, #3742, #475569, #666666, #6785, #842029, #856404, #9200
 
 **Last PICKUP PROMPT:**
 
 ```
-erative completion gate my window enforces is the Rule 91 binary gate: the `═══ PICKUP PROMPT ═══` string must appear in every attempt_completion, with real idea numbers and no placeholder tokens. I validated the prior completion against that gate; this completion satisfies it with the block below.
-
-**Durable solution (why this kept recurring + what I built):** all of this week's slowness incidents shared one root cause pattern — a background job degraded user-facing latency and we only learned about it when you felt it. There was no automated canary. I installed one:
-
-- `/usr/local/bin/emsu-portal-health-guard.sh` (cron `/etc/cron.d/emsu-portal-health-guard`, every 2 min):
-  - Latency canary probing `stats_api.php` — DEFCON1 at ≥4000ms, DEFCON2 at ≥1500ms ×3 ticks, DEFCON5 recovery.
-  - Runaway sentinel — auto-kills php-cli/rsync procs ≥50% CPU and ≥10min old (cap 3/hr) with a pre-kill evidence snapshot. It would have caught this session's 5 stuck `send_uthealth` PHP clones (44–57% CPU, 28–47 min old) automatically.
-  - Swap-flush storm detection via the authoritative loop file (≥3 real flushes/30min).
-- Also fixed same session: `record_flush()` was logging 1300+ fake "REMEDIATED" flushes on throttle-holds (it recorded even when `flush_swap()` held). Now it records only real swapoff/swapon, and the storm detector reads the loop file. Corrective DEFCON5 sent to you at 23:25 PT.
-
-Verified state right now: /emtskills ttfb 0.4–0.7ms local, public ~14ms; nvme0n1 disk util <5% (was 95%); load 11.6 (was 24); swap 0MB used; 0 FPM slowlog stalls post-fix; no vault/rsync/fleet-finisher procs running.
+sanity check whenever you are.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — /emtskills slowness fix plus durable portal-health guard (swap flush storm, dead LoRA rsync loop, runaway php-cli sentinel).
+Pick up task — EMSU /emtskills portal optional passkey/Touch ID login (follow-up after E2E).
 
-Where we left off (verified 2026-08-13 23:27 PT):
-- /emtskills fully healthy: ttfb 0.4–0.7ms local, public ~14ms, nvme0n1 util <5% (was 95%), load 11.6 (was 24), swap 0MB, 0 FPM slowlog stalls post-fix.
-- Bug-lib incident #2342 recorded for the swap-flush-storm + dead-LoRA-rsync-loop outage.
-- Durable guard installed at /usr/local/bin/emsu-portal-health-guard.sh, cron /etc/cron.d/emsu-portal-health-guard every 2 min, self-test exit 0.
+Where we left off (verified 8/13/2026 11:41 PM PT):
+- Full WebAuthn ceremony re-run and PASSED tonight: enroll + fully anonymomous no-email login, redirect to skills_report.php, sign_count=2, last_used_at set. All test artifacts cleaned (0 rows left).
+- Feature is LIVE: /emtskills/routes/login.php has "Sign in with Passkey" button; /emtskills/my_profile.php has "Add Passkey" enrollment card; api/passkey.php + lib/passkey.php + assets/js/passkey.js all deployed and verified; passkey_credentials.credential_id is VARBINARY(1023).
+- Open item: Ruben's REAL Apple/iCloud Keychain Touch ID has never completed a login (his real credential user_id=1 has sign_count=0, last_used_at=NULL). Protocol path is proven, but physical Safari/Touch ID is unproven.
 
-Open threads to drive next (all real filed ideas):
-1. #26234 [deployed] — Monitor EMSU Portal Health Guard canary fires over the next 48h; confirm DEFCON alerts land and runaway-kill cap (3/hr) behaves. Watch /var/log/emsu-portal-health-guard.log and /var/log/emsu-portal-health-guard-kills.log.
-2. #26218 [executing] — Decide re-enable path for emsu-fleet-finisher + emsu-vault-sync only after Artemis 10.100.0.5 is reachable and one clean 32GB rsync succeeds; both /etc/cron.d files currently chattr +i disabled.
-3. #26219 [deployed] — Verify memory-guardian record_flush() now emits zero fake "REMEDIATED" entries on FLUSH-HOLD (loop-file record count should stay flat unless a real swapoff runs).
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #25956 [executing] — Request Ruben do a 30-second manual Safari/Touch ID sign-in on his real device; if it fails, capture the exact browser console + network error and fix. His credential (user_id=1, created Aug 12 16:53 PT, sign_count=0) is a ready-made reproduction.
 
 Reference IDs:
-- Bug-lib incident: #2342 (frankenstein_router_incidents, verified on WOPR)
-- Ideas filed: #26218, #26219, #26234
-- Files touched: /usr/local/bin/emsu-portal-health-guard.sh, /var/www/emtskills/scripts/emsu-memory-guardian.sh, /etc/cron.d/emsu-portal-health-guard, /etc/cron.d/emsu-fleet-finisher, /etc/cron.d/emsu-vault-sync, /var/www/emtskills/docs/HANDOFF_NOTES.md
+- Ideas filed: #25956 (portal passkey rollout), #25896 (Moodle MFA passkey, completed earlier)
+- Files touched: /var/www/emtskills/lib/passkey.php, /var/www/emtskills/api/passkey.php, /var/www/emtskills/assets/js/passkey.js, /var/www/emtskills/includes/passkey_login_box.php, /var/www/emtskills/includes/passkey_profile_card.php, /var/www/emtskills/routes/login.php, /var/www/emtskills/my_profile.php, /var/www/emtskills/vendor/webauthn/*
+- DB: admin_portal.passkey_credentials (credential_id VARBINARY(1023))
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-══════════════════════════════════════
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
 ### `1786558646083` — 8/13/2026, 11:25:12 PM PT — 396 turns
@@ -868,48 +1089,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786592555268` — 8/13/2026, 3:28:58 AM PT — 440 turns
-
-**Original task:**
-
-```
-#Argus
-
-Would like to be able to click on any row and read the actual task itself: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=activity
-```
-
-**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #16213, #16263, #18745, #18770, #19370, #20547, #21140, #21262, #22310, #22511, #23506, #23852, #23952, #24897, #24900, #25047, #25573, #26005, #26044, #26045, #26048, #26049, #26050, #26062 [awaiting_review], #26107 [deployed], #274160, #30363, #69707, #8645, #8942, #9650, #9654, #9660, #9733, #9889
-
-**Last PICKUP PROMPT:**
-
-```
-h scripts removed from server.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus Activity tab: row-click detail modal + own/below-role visibility & revert interaction.
-
-Where we left off (verified 2026-08-13 03:12 PT):
-- routes/argus_download.php: Activity tab visible to all roles (line 27), row-click modal live (openAct/openActDetail/__actRows, CSS .act-modal-backdrop at line 234).
-- routes/alltastic_api.php: activity feed scoped via argusVisibleEmails/argusVisibleRoles (own + below-role + all non-Argus roles), gates lowered to CustomerService+, can_revert + revert_action re-scoped (lines 196-212, 4157, 4200, 4213, 4255, 4405).
-- Idea filed: #26107 [deployed].
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26107 [deployed] — Argus-scoped activity+revert (done this session); verify visually in browser as an Instructor/PD/CustomerService user: log in, open Activity tab, click a row, confirm modal shows full task JSON, confirm Revert button interacts without MasterAdmin.
-2. #26062 [awaiting_review] — separate pre-existing bug (placeholder skill instructor "TeExameiner" + 3 missing skill PDFs); triage and fix the data in admin_portal.skills records for student 26415W-08.
-
-Reference IDs:
-- Idea #26107 [deployed], #26062 [awaiting_review]
-- Files touched: /var/www/emtskills/routes/argus_download.php, /var/www/emtskills/routes/alltastic_api.php
-- Backups: routes/.alltastic_api.php.bak-argusdetail-20260812
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
 ### `1786602203659` — 8/13/2026, 12:41:31 AM PT — 142 turns
 
 **Original task:**
@@ -1017,52 +1196,6 @@ She was a
 ```
 I forgot to include the actual PICKUP PROMPT block in the attempt_completion result. Let me re-emit with it included.
 
-```
-
-### `1786581699007` — 8/13/2026, 12:24:54 AM PT — 378 turns
-
-**Original task:**
-
-```
-#Argus Learning
-
-Tell me how Argus automatic learning is going. I would like for it to start making itself smarter. I mean what I usually do is you know I'm coming in here on a daily basis and I'm trying to do sweeps to see what tasks were unfinished as well as whether there were bugs that were showing that needed to be resolved or permission issues that were not in a accordance with rule 29 or missing tools, things of that nature. I would like to see Argus learning doing those sorts of things on its own. How can we make that happen?
-```
-
-**Ideas referenced:** #10182, #128126, #14749, #16213, #18806, #19415, #19434, #20025, #20036 [awaiting_review], #20884, #20890, #21582, #21667, #22310, #22850, #22887, #22939 [approved], #23027, #23094, #23132, #23136, #23144, #23166, #23170, #2323, #23231, #2324, #23241, #23247, #23286, #23292, #23328, #23387, #23429, #23506, #23556, #23561, #23582, #23623 [proposed], #23636 [proposed], #23637 [proposed], #23729, #23764, #23769, #23885 [proposed], #23899 [proposed], #23900 [ready_for_review], #23908 [proposed], #23910 [proposed], #23911 [proposed], #24789 [proposed], #24977 [proposed], #24987 [proposed], #25072, #25074 [proposed], #25151, #25547, #25552, #25572 [approved], #25574 [proposed], #25578 [approved], #25624 [proposed], #25625 [ready_for_review], #25822, #25833, #25888, #25932, #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25975, #25985, #25986, #26001, #26002, #26003 [deployed], #26018 [proposed], #26020 [deployed], #26025 [proposed], #26031 [proposed], #26032 [proposed], #26033 [proposed], #26047 [approved], #26075 [executing], #26083 [awaiting_review], #7326, #7377, #7428, #7784, #7785, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-s correctly tracked as #26083.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up Argus learning execution — apply the 403-tab fix (#26083) and finish evaluating the remaining offloaded Argus tasks.
-
-Where we left off (verified 2026-08-13 00:24 PT):
-- Sweep cron `cron_argus_daily_sweep.php` running every 4h (38 findings), lane 2 falsy-zero filter fixed, class-wide repair recipe baked in (#26075).
-- Self-heal cron v2 `cron/cron_argus_self_heal.php` running root `*/5`, schema-correct, heartbeat green.
-- WSOD fix applied to `routes/argus_task_status.php` (SESSION-LOCK RELEASE), 751 lines, lint clean; WSOD ideas 23899/23900/23908/23910/23911 marked deployed.
-- Callbacks ideas 25572/25574/25578 marked deployed (goToCallbacks verified in telephony_hub.php).
-- Two file-corruption events fully recovered (argus_task_status.php + the two 403-tab views); both restored from backups and lint-clean.
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #26083 [awaiting_review] — apply the 403 fix surgically via replace_in_file (NOT write_server_file full-overwrite): normalize role to lowercase stripped of _/space via currentUserRole(), then compare case-insensitively in BOTH `_view_argus_student_tools.php` (~line 17) and `_view_argus_cs_comms_suite.php` (~line 14). Verify with php -l + manual load as a CustomerService role before marking anything deployed.
-2. #26047 [executing] — finish evaluating the remaining 30+ offloaded tasks: hr@ hiring-forwarding cluster (tasks 122/123/124/126), student-account unarchive cluster (190/191/198), William Lee retake (458/459). Confirm each is already built (like Callbacks) before flipping status; do NOT assume idea status = feature absence.
-3. #26075 [executing] — verify the class-wide repair directive is enforced in the Argus repair path itself (not just the sweep recipe): confirm `argus_sls_doctor.php` / `canonical_repair` applies fixes to ALL affected students sharing the root cause, never a single student.
-
-Reference IDs:
-- Ticket: none (Argus offload stream)
-- Ideas filed this session: #26018 [superseded], #26025 [executing→deployed], #26031 [superseded], #26032 [superseded], #26033 [superseded], #26047 [executing], #26075 [executing], #26083 [awaiting_review]
-- Files touched: cron_argus_daily_sweep.php, cron/cron_argus_self_heal.php, routes/argus_task_status.php, routes/_view_argus_student_tools.php (restored), routes/_view_argus_cs_comms_suite.php (restored)
-- Ledger row appended: cline_task_ledger id 11
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```
 
 ### `1786601835097` — 8/12/2026, 11:55:16 PM PT — 269 turns
@@ -1299,48 +1432,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786547336372` — 8/12/2026, 6:50:21 PM PT — 542 turns
-
-**Original task:**
-
-```
-Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cline rules when a subsequent iteration identifies a substantial reversal of the initial iteration within that window. The idea is that the agent catches this and makes itself smarter. This is to be done immediately. Give the rule nubmer. If it needs refinement, let me know.
-```
-
-**Ideas referenced:** #0000, #11415, #13840, #14205, #15268, #16224, #17130 [superseded], #17537 [rejected], #17685 [awaiting_review], #18132 [deployed], #18806, #18946, #18947, #18948, #18973, #19125, #19173, #19175 [executing], #19176 [queued], #19511, #19898, #19899 [proposed], #19904, #20251, #20630 [executing], #20957, #20958, #21125, #21126, #22282, #2277, #22840, #2320, #24900, #24906, #24909, #24910, #24912, #24913, #24924, #24995, #25058, #25066, #25150, #25151, #25154, #25155, #25156, #25157, #25185, #25188, #25313, #25551, #25747 [awaiting_review], #25755 [awaiting_review], #25757 [awaiting_review], #25759 [awaiting_review], #25764 [awaiting_review], #25765 [awaiting_review], #25812 [awaiting_review], #25848, #25859 [executing], #25860 [executing], #25861 [executing], #25869 [proposed], #25870 [proposed], #25871 [proposed], #25872 [executing], #25873 [proposed], #25876 [proposed], #25885, #25886 [executing], #25887, #25888 [proposed], #25890 [proposed], #25891 [proposed], #25892, #25893, #25894, #25897, #25906 [proposed], #25907 [proposed], #25909 [proposed], #25912 [proposed], #25925 [proposed], #25926 [proposed], #25981 [proposed], #5344, #5346, #5348, #616207
-
-**Last PICKUP PROMPT:**
-
-```
-rors) and ownership preserved.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus 317 block (probe-before-claim + flip-correction) follow-through.
-
-Where we left off (verified 2026-08-12 ~17:50 PT):
-- Argus 317 block deployed live at /var/www/emtskills/routes/alltastic_api.php:12954 inside buildSystemPrompt(). php -l clean, ownership emsumain:psaserv 644 preserved, backup made.
-- Argus confirmed routed through frankenstein-llm (alltastic_api.php line 234 comment + $CLAUDE_MODEL + upstream router line 355).
-- Idea #25981 approved with live-deploy evidence via idea_action.
-- Cline-side rule 317 hardfloor live (Rules/317-reversal-triggers-297-and-rule-update.md), validator changes live (R317_UNVERIFIED_STATE + R317_REVERSAL_LOG), telemetry live: 12 total R317 fires (8 reversal-log, 1 unverified-state) and 158 validations in 24h.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #25907 [proposed] — After 7 days of A7 telemetry, decide whether to relax R317_REVERSAL_LOG for claim-less completions (it already fired 8x; likely some are Q&A/status that made no state claim).
-2. #25906 [approved] — A7 gate-telemetry section in cline_rules_audit.sh is live; keep the nightly run green (current: 5 pre-existing alerts — 3 intentional case-law collisions + A3 floor 85% warn of the raised 196608 cap + counter at 318).
-3. #25888 [approved] — Reversal Log in clinerules_validate_completion is live; confirm the mechanical first-vs-last conclusion MUTEX (not just the static section presence) is what fires, or upgrade it per the original idea if the static check proves too weak.
-
-Reference IDs:
-- Ticket: (none — this was a direct Ruben steering thread on Cline rules)
-- Ideas filed: #25888, #25906, #25907, #25981
-- Files touched: Rules/317-reversal-triggers-297-and-rule-update.md, Rules/91-every-completion-needs-pickup-prompt.md, scripts/cline_rules_audit.sh, mcp-servers/clinerules-mcp/src/index.ts, /var/www/emtskills/routes/alltastic_api.php (via ssh_command), Desktop/argus-deploy/argus_mcp_tools.php (stale local artifact)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
 ### `1786570575332` — 8/12/2026, 6:39:15 PM PT — 284 turns
 
 **Original task:**
@@ -1491,55 +1582,6 @@ Please tell me if this is wrong? And if so why and what is going on?
 **Ideas referenced:** #15635, #16439, #16440, #16444, #1758, #17580, #18936, #20346, #23184, #2323 [deployed], #23477, #23483, #24526, #24765, #25185, #2519, #25971 [proposed], #25974 [executing], #25975 [executing], #25976 [executing], #25984 [executing], #25985 [executing], #25986 [executing], #25990 [approved], #25995 [executing], #32584, #5646, #6106, #6751, #7907, #9086
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786567464418` — 8/12/2026, 4:42:30 PM PT — 204 turns
-
-**Original task:**
-
-```
-#Argus
-
-This task failed for being over context. Can you continue it? 
-
-
-
-#Argus
-
-How it has Argus been doing over the last 12 hours? What improvements do we need to make? What capabilities do we need to increase? Act according to rule 29 and leverage rule 267. Let me know what other permissions I may need to increase. Also I personally head tried to do a couple of things in Argus yesterday and they failed. One of them had to do with RUBEN computer VAPI and getting that back online. I felt like Argus was way off base and not really helpful at all. And that is not how I want that agent to be. J
-```
-
-**Ideas referenced:** #17130 [superseded], #17537 [rejected], #177821, #18132 [deployed], #18579, #186576, #18777, #19098, #19099, #19125, #19173, #19624, #19641, #19731, #19970, #19971, #19975, #19995, #20023, #20024, #20025, #20026, #20028, #20029, #20030, #23133, #2321, #23378, #23477, #23934, #23945, #23954, #24635, #25042, #25551, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25803 [proposed], #25812, #25889 [ready_for_review], #25914, #25931, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [proposed], #25944 [proposed], #25959 [proposed], #25968 [proposed], #25969 [proposed], #25970 [proposed], #26000 [proposed], #360135, #360152, #3957, #5792, #9501, #9771, #9772, #9773, #9774, #9775
-
-**Last PICKUP PROMPT:**
-
-```
-ead-only. That is idea #26000.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task - RUBEN TNG voice line deepseek-v4-pro fix + Argus role-tiering follow-up.
-
-Where we left off (verified 2026-08-12 16:40 PT):
-- TNG VAPI phone 0d147d75-70d9-42b2-8809-a47d88ec3598 timeoutSeconds=60 (live-confirmed PATCH response).
-- ruben_voice_webhook.php now deepseek-v4-pro on both model references (761 + 458), no claude left; DB ruben_voice_settings.voice_model=deepseek-v4-pro. Live POST verified: provider=anthropic/model=deepseek-v4-pro/temp=0.3/7 tools/HTTP 200.
-- Canary cron /etc/cron.d/emsu-ruben-tng-canary registered (every 15 min); wrapper bug fixed (line 146 passes 'ruben_tng','cron').
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #25959 [proposed] - Slim the TNG systemPrompt (40,499 chars today, duplicated LCARS blocks) so timeout pressure stays low even at 60s.
-2. #25969 [proposed] - Designate/create the VAPI synthetic caller assistant + from-phone for the canary (human decision, no default exists). Set RTNG_CANARY_TEST_ASSISTANT_ID / RTNG_CANARY_FROM_PHONE_ID, then run php /var/www/emtskills/cron/cron_ruben_tng_voice_canary.php and confirm a pass row in ruben_tng_canary_runs.
-3. #25968 [proposed] - Fix validateToolDispatchCoverage() in cron_voice_agent_health.php to resolve dispatch through require_once'd libs (or live probe) so the 41 ghost-tool warnings stop.
-4. #26000 [proposed] - Argus gets Cline-equivalent MCP toolset (emsu-operations, ruben-orchestrator, frankenstein-tools, VAPI key), tiered by user role: Ruben=full, Jon/Vicky=scoped, students=read-only.
-
-Reference IDs:
-- Ideas filed this session: #25959, #25968, #25969, #26000; #25970 [superseded] (old Argus framing replaced by #26000).
-- Files touched: api/voice/ruben_voice_webhook.php (+.bak-deepseek-fallback-20260812), cron/cron_ruben_tng_voice_canary.php (+.bak-20260812-array), /etc/cron.d/emsu-ruben-tng-canary, DB ruben_voice_settings.voice_model.
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
 
 ### `1786566874767` — 8/12/2026, 4:08:22 PM PT — 310 turns
 
@@ -3836,107 +3878,4 @@ Reference IDs:
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1786413781782` — 8/11/2026, 12:13:18 AM PT — 137 turns
-
-**Original task:**
-
-```
-#Julia/Claudia TP=2
-
-
-
-——[COPY]——
-Julia/Claudia TP=2 crash RCA — idea #25631 [executing], bug library incident 2306. Julia (gpt-oss-120b TP=2 across julia spark-6ae6 + claudia spark-6d51) crashed 5x on 2026-08-10 (14:50, 15:38, 17:54, 18:15, ~18:55) and is stuck in a crash-relaunch loop. Fix it end to end.
-
-Access (all from WOPR via emsu-operations ssh_command):
-- julia:  ssh -p 2205 -i /home/emsuserver/.ssh/id_ed25519 rubenmajor@127.0.0.1  (spark-6ae6, 192.168.1.190)
-- claudia: ssh -p 2206 -i /home/emsuserver/.ssh/id_ed25519 rubenmajor@127.0.0.1 (spark-6d51, 192.168.1.194)
-- Serving endpoint 
-```
-
-**Ideas referenced:** #25571 [rejected], #25580 [executing], #25631 [executing]
-
-**Last PICKUP PROMPT:**
-
-```
-eout, and restart the service.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Fix Julia/Claudia TP=2 crash loop.
-
-Where we left off (verified 2026-08-10 19:47 PT):
-- Unable to access Julia host via SSH; key missing and port refused.
-
-Open threads to drive next (NONE — all work pending on SSH access).
-
-Reference IDs:
-- Ideas filed: #25631 [executing]
-</result>
-</attempt_completion>
-```
-
-### `1786384439089` — 8/10/2026, 11:56:18 PM PT — 316 turns
-
-**Original task:**
-
-```
-Why am i just receiving these chat transcripts now? That's not very helpful
-```
-
-**Ideas referenced:** #18335, #19837, #2271, #2274, #2275, #2292, #2423, #24635, #24636, #24645, #24646, #24791, #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25130, #25131, #25158, #25159, #25172, #25173, #25178, #25193 [approved], #25195 [proposed], #25196 [deployed], #25313, #25364 [executing], #25365 [deployed], #25366 [proposed], #25550 [proposed], #25551 [proposed], #25552 [awaiting_review], #25642, #26000 [awaiting_review], #6366, #6526, #6548, #9152
-
-**Last PICKUP PROMPT:**
-
-```
-. So the task is done.
-
-We need to produce final attempt_completion with proper PICKUP PROMPT.
-
-Let's assemble block. Need divider: 47 double horizontal lines. Use Unicode U+2550 repeated 47 times. Generate string.
-
-We'll include task id maybe #25642 from previous. Provide open threads with real idea numbers: #25550, #25551, #25642. Provide reference IDs: files edited: chat_widget_embed.js, test script, etc.
-
-Now produce attempt_completion with block.<attempt_completion>
-<result>
-## Auto‑close UI banner – implementation, testing, and verification
-
-**What was done**
-- Added `showClosedBanner()` to `api/chat_widget_embed.js` (lines ≈ 598‑673) and invoked it when the poll response contains `"status":"closed"`. The function creates a banner element (`#emsu‑closed‑banner`) and disables the chat input field (`#emsu‑input`).
-- Created a minimal mock‑DOM test script (`/tmp/test_widget_banner_nojsdom.js`) that loads the widget script, defines a simple `document`/`window` mock, calls `showClosedBanner()`, and verifies:
-  - Banner element exists.
-  - Input field is disabled.
-- Executed the test script with `node /tmp/test_widget_banner_nojsdom.js`; output:
-  ```
-  banner exists: true
-  input disabled: true
-  ```
-  No errors were reported, confirming the UI logic works in a head‑less environment and will behave correctly in the live widget.
-- Lint (`php -l`) and Node syntax checks passed; a backup `chat_widget_embed.js.bak-closed-20260810` was created.
-- Server‑side auto‑close is active on all 34 chat‑enabled sites (`auto_close_minutes=60`) and the `closed_at` column now exists on every conversation table, eliminating previous `AUTO‑CLOSE FAIL` logs.
-- Real‑time transcript email is sent on auto‑close (handled in earlier fixes).
-
-**Next verification step**
-Perform a live end‑to‑end test on any site (e.g., EMS University):
-1. Open a chat via the widget.
-2. Allow the chat to sit idle for > 60 minutes **or** manually set the conversation’s `status='closed'` in the DB.
-3. Reload the widget page. The “Chat ended” banner should appear and the input should be disabled.
-4. If any UI issues arise, adjust `showClosedBanner()` accordingly.
-
-═══════════════════════════════════════════════
-═══════════════════════════════════════════════
-Pick up task #25642 — Verify chat widget auto‑close UI banner
-═══════════════════════════════════════════════
-Where we left off (verified 2026‑08‑10 23:49 PT):
-- `showClosedBanner()` added and called on closed status.
-- Mock‑DOM test confirms banner creation and input disabling.
-- All sites have `auto_close_minutes=60`; `closed_at` column present; cron auto‑close runs without errors.
-- Real‑time transcript delivery on auto‑close operational.
-- Live UI still needs final verification (step 1 above).
-
-Open threads to drive next:
-1. #25550 [deployed] — Continue monitoring DS
 ```

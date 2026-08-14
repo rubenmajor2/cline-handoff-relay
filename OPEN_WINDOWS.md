@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/14/2026, 9:03:27 AM PT | window: last 72h | 84 tasks | index total 711 (parsed 0, cached 711)
+Generated: 8/14/2026, 10:03:27 AM PT | window: last 72h | 81 tasks | index total 711 (parsed 0, cached 711)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -91,9 +91,6 @@ Generated: 8/14/2026, 9:03:27 AM PT | window: last 72h | 84 tasks | index total 
 | `1786473149612` | 8/11/2026, 11:34:30 AM | 8 | 41KB | #Julia/Claudia TP=2 |
 | `1786468711968` | 8/11/2026, 10:34:44 AM | 58 | 692KB | #Hacking Attempts |
 | `1786468286906` | 8/11/2026, 10:19:25 AM | 22 | 73KB | #Grok  |
-| `1786467624656` | 8/11/2026, 10:03:25 AM | 5 | 14KB | #MDM |
-| `1786462531101` | 8/11/2026, 9:22:23 AM | 67 | 120KB | #CFA  |
-| `1786435974712` | 8/11/2026, 9:04:56 AM | 260 | 6136KB | #Julia/Claudia TP=2 |
 
 ---
 
@@ -3277,107 +3274,3 @@ Can you take a look at grok Cursor LLM and tell me how it compares to deepseek v
 **Ideas referenced:** #0000, #178424, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786467624656` — 8/11/2026, 10:03:25 AM PT — 5 turns
-
-**Original task:**
-
-```
-#MDM
-
-Rebase and continue / add to MDM if not already added
-
-**Your ExecStartPost question, answered:** your instinct is right, that shape is probably bad. `ExecStartPost=curl /v1/models` holds the unit in `activating` until the probe passes, which does kill the lie where `systemctl is-active` reports healthy for an engine that never bound its port. But Big Mac takes minutes to load 15 weight shards, so any `TimeoutStartSec` shorter than real load time makes systemd kill a perfectly healthy slow start — and with `Restart=always` that becomes a restart loop on a box that would have come up fine
-```
-
-**Ideas referenced:** #178634, #25468 [executing], #25469 [rejected], #25470 [deployed], #25471 [executing]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786462531101` — 8/11/2026, 9:22:23 AM PT — 67 turns
-
-**Original task:**
-
-```
-#CFA 
-
-Do a scan from the last 24 horus for improvements and bugs not addressed in CFAs. Also see below, rebase it's information and make additional recommendations on how to proceed from here
-
---
-═══════════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════════
-Pick up task #CFA — CFA health update & next steps
-
-Where we left off (verified 2026‑08‑11 08:20 PT):
-- **CFA Sweep** – runs every 15 min. The last five runs processed ~125 k raw candidates each, deduped to ≈ 988 and created ≈ 
-```
-
-**Ideas referenced:** #23316, #24339, #24340, #24341, #24500
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786435974712` — 8/11/2026, 9:04:56 AM PT — 260 turns
-
-**Original task:**
-
-```
-#Julia/Claudia TP=2
-
-Get Julia/Claudia TP=2 working properly
-
-SSH access to both Julia (port 2205) and Claudia (port 2206) is confirmed using the existing network key. The next actionable step is to list the crash‑log files on the Julia host to identify the first stall details.
-
-Current task progress:
-- [x] Verify correct SSH key location for Julia host
-- [x] Verify SSH port 2205 is reachable
-- [ ] List crash log files on Julia host
-- [ ] Identify first stall details
-- [ ] Increase RAY_CGRAPH_get_timeout in julia_unified_tp2.sh
-- [ ] Relaunch Julia service and monitor stability
-- [ ] Verify 2+
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16674, #16676, #16778, #16802, #16803, #16839, #16851, #16863 [superseded], #17246, #1744, #1779, #1781, #1798, #1828, #1897, #1899 [resolved], #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #21045, #2121, #2127, #2141, #2153, #2168, #2170, #2195 [resolved], #2200, #2202, #2204, #2206, #2218, #2232, #2243, #2258, #2274, #2293 [resolved], #2306 [resolved], #2311 [resolved], #25185, #25378, #25381, #25631 [executing], #25715 [proposed], #29373, #35848, #36237, #37001, #38602, #40860, #40923, #4194, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-us=in_progress dev_stage=idle)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25631 [deployed] - Julia/Claudia TP=2 crash loop fix, monitor fratricide RCA + fleet stability synthesis
-
-Where we left off (verified 2026-08-11 08:56 PT):
-- Julia/Claudia TP=2 serving and stable: 6h29m uptime, /v1/models probe HTTP 200 in 1.2ms, 150/150 clean watchdog probes, zero ray-stops since the change
-- Root cause was NOT RAY_CGRAPH_get_timeout, it was monitor fratricide: cg_health_monitor.sh (wired into julia_cx7_watchdog.sh on Julia) probed for a model the TP=2 serve never hosted (emsu_distill vs base qwen3-30b), false-positived, and ray-stopped a HEALTHY engine 3x in 20 min (23:20-23:41); crash-log stalls were downstream of those kills
-- Change: fratricidal monitor disabled on Julia, confirmed inert on Claudia (zero references; claudia_cx7_watchdog.sh is a benign IP-drift checker), TP=2 relaunched, 2h+ stability confirmed (117/117 then 150/150 clean)
-- Bug-library incident 2306 marked resolved with the RCA
-- #25631 [deployed] (reconcile_ideas returned dev_stage=ready_for_review)
-- #25715 [executing] fleet-wide watchdog fratricide audit + alert-path checks (reconcile_ideas returned status=in_progress dev_stage=idle)
-
-Open threads to drive next:
-1. #25715 [executing] - fleet watchdog fratricide audit + alert-path checks: grep every fleet box for destructive watchdog actions on health-check paths, confirm probe expectations match live serve config, canary-test alert paths (Julia's Postmark 422 + MySQL access-denied made tonight's killer silent). Read-only + low-risk; executor owns it.
-
-Reference IDs:
-- Ideas filed: #25715 [executing]
-- Ideas closed: #25631 [deployed]
-- Bug library: incident 2306 resolved
-- Files touched: Julia: /home/rubenmajor/julia_cx7_watchdog.sh (cg_health_monitor.sh call disabled), Julia: /home/rubenmajor/julia_unified_tp2.sh (TP=2 serve relaunched)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Fix deployed + 2h stability verified (117/117 clean, incident 2306 resolved)
-- [x] Live status check: 6h29m uptime, probe 200 in 1.2ms, 150/150 clean, zero kills since fix
-- [x] Bug library + community research synthesized
-- [x] Claudia watchdog audit: cg_health_monitor inert
-- [x] Idea #25715 filed, approved, reconciled [executing]; #25631 [deployed]
-- [x] Validator gates ALL PASSED, gate CLEAR
-- [x] attempt_completion shipped
-</task_progress>
-</attempt_completion>
-```

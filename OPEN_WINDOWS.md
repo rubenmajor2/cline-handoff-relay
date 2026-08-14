@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/13/2026, 5:41:56 PM PT | window: last 72h | 103 tasks | index total 698 (parsed 3, cached 695)
+Generated: 8/13/2026, 6:41:56 PM PT | window: last 72h | 98 tasks | index total 698 (parsed 2, cached 696)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786666915889` | 8/13/2026, 5:41:47 PM | 45 | 139KB | Can you email a copy of any externship agreements / affiliation agreement whatever from ag |
-| `1786666814323` | 8/13/2026, 5:41:43 PM | 47 | 288KB | Jon had a request in Argus, https://emsuniversity.com/emtskills/routes/argus_download.php? |
+| `1786666915889` | 8/13/2026, 6:41:46 PM | 169 | 517KB | Can you email a copy of any externship agreements / affiliation agreement whatever from ag |
+| `1786666814323` | 8/13/2026, 6:24:22 PM | 132 | 510KB | Jon had a request in Argus, https://emsuniversity.com/emtskills/routes/argus_download.php? |
 | `1786666883409` | 8/13/2026, 5:21:23 PM | 1 | 2KB | Can you email a copy of any externship agreements / affiliation agreement whatever from ag |
 | `1786652849668` | 8/13/2026, 4:44:11 PM | 512 | 2763KB | #TDSHS |
 | `1786660376952` | 8/13/2026, 4:29:25 PM | 102 | 378KB | help me file with Florida Board of Education application yet? Need that approval before we |
@@ -108,17 +108,12 @@ Generated: 8/13/2026, 5:41:56 PM PT | window: last 72h | 103 tasks | index total
 | `1786413177098` | 8/10/2026, 7:15:42 PM | 133 | 280KB | #Make GLM Faster |
 | `1786339173079` | 8/10/2026, 7:02:40 PM | 214 | 1369KB | I keep having to say over and over again that open threads need idea numbers and statuses  |
 | `1786395180489` | 8/10/2026, 6:49:11 PM | 280 | 1374KB | #San Mateo County Complaint/Inspection chenry@smcgov.org send a complaint on July 31 to me |
-| `1786409606290` | 8/10/2026, 6:39:12 PM | 154 | 393KB | #AI Directed Meditation |
-| `1786229794274` | 8/10/2026, 6:21:18 PM | 92 | 458KB | #Externships |
-| `1786396687700` | 8/10/2026, 6:10:45 PM | 136 | 313KB | info@emsuniversity.com is getting way too many emails. About 3-5 a second and mostly says  |
-| `1786409584008` | 8/10/2026, 5:53:04 PM | 1 | 8KB | Hmm, you found errors on those then what about all the other AI directed meditation projec |
-| `1786224531010` | 8/10/2026, 5:43:16 PM | 406 | 940KB | #Big Mac |
 
 ---
 
 ## Per-window detail
 
-### `1786666915889` — 8/13/2026, 5:41:47 PM PT — 45 turns
+### `1786666915889` — 8/13/2026, 6:41:46 PM PT — 169 turns
 
 **Original task:**
 
@@ -126,19 +121,18 @@ Generated: 8/13/2026, 5:41:56 PM PT | window: last 72h | 103 tasks | index total
 Can you email a copy of any externship agreements / affiliation agreement whatever from agencies that might be signed by both parties - would be in vyu@emsunivesity.com's email inbox, etc...
 ```
 
-**Ideas referenced:** #2335 [deployed], #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed]
+**Ideas referenced:** #15669, #19163, #2144, #2335 [deployed], #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #6785
 
 **Last PICKUP PROMPT:**
 
 ```
-s/attachments
-- [ ] Email copies to Ruben
-- [ ] Verify delivery and report with PICKUP PROMPT
+only MWFD/Dallas EMT PDFs can be fetched via full-message API
+- [ ] Report with PICKUP PROMPT
 </task_progress>
 </use_mcp_tool>
 ```
 
-### `1786666814323` — 8/13/2026, 5:41:43 PM PT — 47 turns
+### `1786666814323` — 8/13/2026, 6:24:22 PM PT — 132 turns
 
 **Original task:**
 
@@ -154,9 +148,37 @@ for example where is blake brandon's request.
 That might have been in the system and not populated or maybe it was emailed to vyu@emsuniversity.com or other CS? Can you check on those. Seems like this process is not working properly.
 ```
 
-**Ideas referenced:** #047857, #059669, #10003, #10005, #10182, #11111, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #128681, #129302, #16213, #16263, #181825, #18745, #18770, #19370, #21140, #21262, #22310, #2563, #274160, #30363, #313244, #334155, #3730, #374151, #4338, #45475, #475569, #6366, #64748, #65039, #69707, #78350, #8645, #8942, #9019, #9203, #92400, #9650, #9654, #9660, #9733, #9888, #9889
+**Ideas referenced:** #047857, #059669, #10003, #10005, #10182, #11111, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #128681, #129302, #16213, #16263, #181825, #18745, #18770, #19370, #21140, #21262, #22310, #2563, #26192 [proposed], #274160, #30363, #313244, #334155, #3730, #374151, #4338, #45475, #475569, #6366, #64748, #65039, #69707, #78350, #8645, #8942, #9019, #9191, #9203, #92400, #9650, #9654, #9660, #9733, #9888, #9889
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+without its attachments again.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Fix grievance #73 (GRV-2026-0072, Blake Brannen) orphaned from attachments so it appears in Argus terminal.
+
+Where we left off (verified 2026-08-13 ~18:23 PT):
+- Grievance #73 exists: student "Blake Brannen" (ID 8130634), status admin_review, filed 2026-07-14 via email_attachment. Argus terminal tab doesn't list it; Grievance Manager does.
+- Root cause verified: row has inbound_id=NULL, postmark_message_id=NULL, postmark_fetch_status='pending', extracted_text empty (0 chars). Source inbound email is id 85479 (bbrannen8@gmail.com, subject "Grievance", 4 JPEG photos). Attachment fetch cron joins on inbound_id, never selects #73; auto_analyze needs 20+ chars and skips it; disposition clock loops "confidence 0.000 below floor" since 2026-08-03; no human task/notification was ever created.
+- Not emailed to vyu@; went through info@emsuniversity.com CS pipeline. Existing "HIGH PRIORITY GRIEVANCE" emails were sent but no action followed.
+
+Open threads to drive next (EVERY item has a real filed idea):
+1. #26192 [proposed] — Minimal fix: UPDATE grievances SET inbound_id=85479, postmark_message_id='<CAMOyA33rTtx4rAF4MOn9UPOPLBV9T=38mqvvgATf0=hYLFtDuA@mail.gmail.com>', postmark_fetch_status='pending' WHERE id=73; then let fetch cron + vision OCR + auto_analyze + disposition clock complete the row. Needs Ruben's explicit go (mutates production SLA data). Email bbrannen8@gmail.com from info@ to say the grievance was received and is being processed.
+2. #26192 [proposed] — Permanent fix: make email_attachment intake always set inbound_id + postmark_message_id atomically so no grievance can be orphaned again; add a watchdog that flags postmark_fetch_status='pending' with inbound_id NULL (currently invisible to every cron).
+
+Reference IDs:
+- Ticket: none (Ruben's request, no ticket number)
+- Ideas filed: #26192
+- Files touched: none on disk (read-only diagnosis; DB row changes not yet applied)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1786666883409` — 8/13/2026, 5:21:23 PM PT — 1 turns
 
@@ -3741,174 +3763,6 @@ Reference IDs:
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786409606290` — 8/10/2026, 6:39:12 PM PT — 154 turns
-
-**Original task:**
-
-```
-#AI Directed Meditation
-
-Hmm, you found errors on those then what about all the other AI directed meditation projects? 
-
-I feel like I'm pulling teeth here to get this to work better. You seem to be not coming up wiht enough new ideas. Look at the need, the bottleneck and how this can be leveraged. Are we really that close to done? It must be actually hlepful
-
-Answer to "is this wired properly to Kaison, and how is it all going?" Short version: the wire to Kaison existed but was being cut by a one-character-class bug in the orchestrator triage cron. I found it, patched it this session, and pro
-```
-
-**Ideas referenced:** #12184, #14100, #14847, #16613, #178638, #178640, #23963, #25185, #25229 [deployed], #25240, #25313 [deployed], #25374, #25383 [deployed], #25384 [deployed], #25385, #25400, #25421 [deployed], #25422 [deployed], #25423 [deployed], #25424 [deployed], #25426, #25523 [executing], #25524 [executing], #25525 [executing], #25528 [deployed], #25532 [deployed], #25534 [deployed], #25537 [executing], #25555 [deployed], #25560 [executing], #25561 [executing], #25608 [executing], #25609 [executing], #25610 [executing], #25611 [executing], #25623 [executing], #25632 [executing], #25633 [executing], #25635 [in_progress], #9070, #9083, #9549, #9831
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786229794274` — 8/10/2026, 6:21:18 PM PT — 92 turns
-
-**Original task:**
-
-```
-#Externships
-
-Pickup the New Externship Scheduling plan where we will be moving towards scheduling students, without permitting their initial request. What's the first step?
-```
-
-**Ideas referenced:** #19217, #19438 [ready_for_review], #20757 [approved], #2271, #23223, #23308, #23382 [open], #24184, #24556 [proposed], #24557 [proposed], #24558 [superseded], #24635, #24636, #24645 [unknown], #24646, #24791 [deployed], #25039, #25097 [implemented], #25111, #25112, #25120, #25122 [implemented], #25125 [implemented], #25127 [rejected], #25129 [ready_for_review], #25131, #25156 [proposed], #25157 [approved], #25158, #25159, #25172, #25173, #25175 [proposed], #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [executing], #25220, #25227, #25228, #25246 [executing], #25445 [approved], #25526 [deployed], #25529 [approved], #57179
-
-**Last PICKUP PROMPT:**
-
-```
- correct From address.”).
-
----
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25156 [proposed] - Non‑harmful baby‑step actions for externship scheduling
-
-Where we left off (verified 2026‑08‑10 18:19 PT):
-- Identified three safe starter actions: SLS population (#25246 [ready_for_review]), free‑geocode batch (related to #25157 [ready_for_review]), and email‑sender fix (related to #25529 [approved]).
-- No process‑changing work has been executed yet.
-- All steps are additive and can be verified with simple queries or a test email.
-
-Open threads to drive next:
-1. #25246 [ready_for_review] – Run the SLS population script and report row counts.
-2. #25157 [ready_for_review] – Run the Census geocode batch and report a sample cache entry.
-3. #25529 [approved] – Apply the email‑sender fix and report the test‑email header.
-
-Reference IDs:
-- Ideas filed: #25156 [proposed], #25246 [ready_for_review]
-- External verified: #25129 [ready_for_review] (dashboard card), #25157 [ready_for_review] (SLS data layer), #25529 [approved] (email config)
-- Files touched (once edited): /var/www/emtskills/config/email_config.php
-- Scripts to run: /var/www/emtskills/cron/cron_populate_sls_pipeline_tables.php, /var/www/emtskills/census/geocoder.php (batch runner)
-
-When done, append a row to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786396687700` — 8/10/2026, 6:10:45 PM PT — 136 turns
-
-**Original task:**
-
-```
-info@emsuniversity.com is getting way too many emails. About 3-5 a second and mostly says ideas or something. Anyway, it's chosing out sthe server.
-```
-
-**Ideas referenced:** #16523, #18944, #18951, #202608, #20581, #2292, #2301, #25313, #25365 [deployed], #25366 [proposed], #25525, #25534, #25535, #25537, #25548 [executing], #25562, #25591 [proposed], #25602 [proposed], #25672 [proposed], #25673 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-ce the path issue is resolved.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-════════════════════════════════════════───────
-Pick up task #20260810 — daily complaint‑scan system and San Mateo PDF issue
-
-Where we left off (verified 2026‑08‑10 15:57 PT):
-- Email flood fully stopped, duplicates removed, #25602 [deployed].
-- Updated `FORMAL_RESPONSE_DRAFT.md` with gold‑standard sections.
-- Idea #25673 [proposed] created for daily complaint‑scan, response generation, PDF draft, and SMS/email alerts to Ruben & Jon.
-- San Mateo PDF path error identified (outside permitted compliance directories) – needs relocation to allowed directory.
-- Open threads:
-  1. (human‑only decision, no idea) – Resolve the San Mateo path error: move `DOSSIER_COMPLAINT_SUMMARY.md` into the proper compliance directory and generate the PDF using the updated draft.
-  2. #25673 [proposed] – Implement the daily complaint‑scan job, response drafting, PDF generation, and alert notifications.
-
-Reference IDs:
-- Ideas filed: #25673 [proposed], #25602 [deployed]
-- Files touched: /var/www/emtskills/docs/FORMAL_RESPONSE_DRAFT.md (updated), /var/www/emtskills/docs/FORMAL_RESPONSE_DRAFT.md (placeholder update), /var/www/emtskills/docs/FORMAL_RESPONSE_DRAFT.md (PDF placeholder), /var/www/emtskills/docs/FORMAL_RESPONSE_DRAFT.md (gold‑standard template)
-
-When done, append to `cline_task_ledger.md` per rule 07, run order 66.
-════════════════════════════════════════───────
-</result>
-</attempt_completion>
-```
-
-### `1786409584008` — 8/10/2026, 5:53:04 PM PT — 1 turns
-
-**Original task:**
-
-```
-Hmm, you found errors on those then what about all the other AI directed meditation projects? 
-
-I feel like I'm pulling teeth here to get this to work better. You seem to be not coming up wiht enough new ideas. Look at the need, the bottleneck and how this can be leveraged. Are we really that close to done? It must be actually hlepful
-
-Answer to "is this wired properly to Kaison, and how is it all going?" Short version: the wire to Kaison existed but was being cut by a one-character-class bug in the orchestrator triage cron. I found it, patched it this session, and proved the wire live end to 
-```
-
-**Ideas referenced:** #178638, #25537 [executing], #25608 [executing], #25609 [executing], #25610 [executing], #25611 [executing], #25623 [executing]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786224531010` — 8/10/2026, 5:43:16 PM PT — 406 turns
-
-**Original task:**
-
-```
-#Big Mac
-
-continue
-
-**Everything working. Here's the complete status as of 12:25 PT:**
-
-**#25120 [shipped]** — CORRECTIVE_RETRY_ENABLED live, zero errors since 11:18 restart.
-
-**#25122 [shipped]** — Option B: `executor_plan_race.php` (93 lines) + `executor_parallel_calls_enabled` gate at RubenExecutor:2402. Both `php -l` clean. Awaiting next executor planner tick to exercise curl_multi race.
-
-**#25131 [shipped]** — Rule 147 48h gate REMOVED. `FRESHNESS_HOURS=0` in cron_kaison_wedge_detection.php means `kaison_freshness_gate()` always returns true — Kaison now repairs any classifiable incident 
-```
-
-**Ideas referenced:** #10666, #12060, #12184, #12550, #12609, #12611, #12619, #12900, #202608, #2182, #22770, #24635, #24636, #24645, #24646, #24791, #25097 [executing], #25111 [proposed], #25112 [shipped], #25120 [shipped], #25122 [shipped], #25125 [executing], #25127 [rejected], #25131 [shipped], #25158, #25159, #25172, #25173 [approved], #25176 [rejected], #25178, #25185, #25193 [approved], #25195 [proposed], #25196 [proposed], #25197 [deployed], #6978, #9070, #9999
-
-**Last PICKUP PROMPT:**
-
-```
-
-<attempt_completion>
-<result>═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #25097 — status report for Big Mac
-
-Where we left off (verified 2026-08-10 15:51 PT):
-- #25097 [deployed] Big Mac serving `gpt‑oss‑120b`; 1562 upstream hits; HTTP 200; gpu_memory_utilization 0.85; num_gpu_blocks 11686.
-- #25196 [deployed] Kaison deadlock N‑cycle trigger deployed; Step 1 bug_library fatal resolved with column‑adaptive logic.
-- #25122 [deployed] racePlannerCalls method wired into generatePlan JSON‑retry block; config gate ON.
-- #25125 [deployed] fleet‑validation‑harness PHP files deployed; php‑lint clean.
-- #25131 [executing] Kaison universal auto‑repair: apply column‑adaptive rewrite for wedge detection (Step 2 endpoint column issue).
-- #25111 [proposed] TP = 4 flip when 4th Intel Arc B70 lands; CPU 7970X (32c/64t) headroom confirmed.
-
-Open threads to drive next:
-1. #25131 [executing] Implement column‑adaptive rewrite for `kaison_detect_wedge_pattern` (endpoint column missing).
-2. #25111 [proposed] Plan TP = 4 flip for Big Mac (await hardware arrival).
-
-Reference IDs:
-- Ideas: #25097, #25196, #25122, #25125, #25131, #25111
-- Files: /var/www/emtskills/cron/cron_kaison_wedge_detection.php, /var/www/emtskills/lib/RubenExecutor.php, /var/www/emtskills/cron/cron_fleet_validation.php
 </result>
 </attempt_completion>
 ```

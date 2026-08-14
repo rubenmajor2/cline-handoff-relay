@@ -6,11 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/13/2026, 4:41:55 PM PT | window: last 72h | 102 tasks | index total 695 (parsed 2, cached 693)
+Generated: 8/13/2026, 5:41:56 PM PT | window: last 72h | 103 tasks | index total 698 (parsed 3, cached 695)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786652849668` | 8/13/2026, 4:41:29 PM | 501 | 2722KB | #TDSHS |
+| `1786666915889` | 8/13/2026, 5:41:47 PM | 45 | 139KB | Can you email a copy of any externship agreements / affiliation agreement whatever from ag |
+| `1786666814323` | 8/13/2026, 5:41:43 PM | 47 | 288KB | Jon had a request in Argus, https://emsuniversity.com/emtskills/routes/argus_download.php? |
+| `1786666883409` | 8/13/2026, 5:21:23 PM | 1 | 2KB | Can you email a copy of any externship agreements / affiliation agreement whatever from ag |
+| `1786652849668` | 8/13/2026, 4:44:11 PM | 512 | 2763KB | #TDSHS |
 | `1786660376952` | 8/13/2026, 4:29:25 PM | 102 | 378KB | help me file with Florida Board of Education application yet? Need that approval before we |
 | `1786651267227` | 8/13/2026, 4:05:11 PM | 360 | 1051KB | check the security certificate for onlineemd.com and fix it - the SSL |
 | `1786660346877` | 8/13/2026, 3:32:27 PM | 1 | 2KB | help me file with Florida Board of Education application yet? Need that approval before we |
@@ -110,14 +113,62 @@ Generated: 8/13/2026, 4:41:55 PM PT | window: last 72h | 102 tasks | index total
 | `1786396687700` | 8/10/2026, 6:10:45 PM | 136 | 313KB | info@emsuniversity.com is getting way too many emails. About 3-5 a second and mostly says  |
 | `1786409584008` | 8/10/2026, 5:53:04 PM | 1 | 8KB | Hmm, you found errors on those then what about all the other AI directed meditation projec |
 | `1786224531010` | 8/10/2026, 5:43:16 PM | 406 | 940KB | #Big Mac |
-| `1786402632203` | 8/10/2026, 5:18:13 PM | 154 | 370KB | #AI directed meditation |
-| `1786405169832` | 8/10/2026, 4:55:51 PM | 102 | 230KB | #Payment Issues |
 
 ---
 
 ## Per-window detail
 
-### `1786652849668` — 8/13/2026, 4:41:29 PM PT — 501 turns
+### `1786666915889` — 8/13/2026, 5:41:47 PM PT — 45 turns
+
+**Original task:**
+
+```
+Can you email a copy of any externship agreements / affiliation agreement whatever from agencies that might be signed by both parties - would be in vyu@emsunivesity.com's email inbox, etc...
+```
+
+**Ideas referenced:** #2335 [deployed], #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed]
+
+**Last PICKUP PROMPT:**
+
+```
+s/attachments
+- [ ] Email copies to Ruben
+- [ ] Verify delivery and report with PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1786666814323` — 8/13/2026, 5:41:43 PM PT — 47 turns
+
+**Original task:**
+
+```
+Jon had a request in Argus, https://emsuniversity.com/emtskills/routes/argus_download.php?tab=terminal (is that what you think when i say argus)? 
+
+This page does not have grievances submitted I htink using the student grievance link: 
+
+https://emsuniversity.com/emtskills/routes/grievance_manager.php 
+
+for example where is blake brandon's request. 
+
+That might have been in the system and not populated or maybe it was emailed to vyu@emsuniversity.com or other CS? Can you check on those. Seems like this process is not working properly.
+```
+
+**Ideas referenced:** #047857, #059669, #10003, #10005, #10182, #11111, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #128681, #129302, #16213, #16263, #181825, #18745, #18770, #19370, #21140, #21262, #22310, #2563, #274160, #30363, #313244, #334155, #3730, #374151, #4338, #45475, #475569, #6366, #64748, #65039, #69707, #78350, #8645, #8942, #9019, #9203, #92400, #9650, #9654, #9660, #9733, #9888, #9889
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786666883409` — 8/13/2026, 5:21:23 PM PT — 1 turns
+
+**Original task:**
+
+```
+Can you email a copy of any externship agreements / affiliation agreement whatever from agencies that might be signed by both parties
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786652849668` — 8/13/2026, 4:44:11 PM PT — 512 turns
 
 **Original task:**
 
@@ -137,7 +188,7 @@ Pick up task #26154 — TDSHS/AZDHS/LEMSA compliance surface + Ward escalation +
 Where we left off (v
 ```
 
-**Ideas referenced:** #14662, #14710, #250984, #251038, #251211, #251236, #251264, #251382, #251428, #25185, #26092 [proposed], #26096 [proposed], #26154 [proposed], #26155 [proposed], #26156 [proposed], #26157 [proposed], #26163 [executing], #26164 [executing], #26167 [executing], #26168 [approved], #26169 [approved], #26170 [approved], #26171 [approved], #26172 [approved], #26173 [executing], #26174 [executing], #26178 [approved], #26180 [executing], #26182 [approved], #26184 [approved], #58230, #600179
+**Ideas referenced:** #14662, #14710, #250984, #251038, #251211, #251236, #251264, #251382, #251428, #25185, #26092 [proposed], #26096 [proposed], #26154 [proposed], #26155 [proposed], #26156 [proposed], #26157 [proposed], #26163 [executing], #26164 [executing], #26167 [executing], #26168 [approved], #26169 [approved], #26170 [approved], #26171 [approved], #26172 [approved], #26173 [executing], #26174 [executing], #26178 [approved], #26180 [executing], #26182 [approved], #26184 [approved], #26186 [approved], #58230, #600179
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -3861,48 +3912,3 @@ Reference IDs:
 </result>
 </attempt_completion>
 ```
-
-### `1786402632203` — 8/10/2026, 5:18:13 PM PT — 154 turns
-
-**Original task:**
-
-```
-#AI directed meditation
-
-
-So that begs the question how do we make it net positive for customer service? What are we supposed to do to make that whole concept of AI directed notation a net positive for customer service? How are we going to do that I don't see any ideas in here about how we're gonna do that. 
-
-This seems like a revolutionary concept that is going to die. Did you take a look at all CFA areas to see how we could leverage AI directed meditation in order to improve all these areas? What about Argus? What about here in cline?
-
---
-
-Honest answer: not yet on the student-facing side. N
-```
-
-**Ideas referenced:** #103977, #14100, #178638, #23957, #25185, #25229, #25238 [executing], #25240 [executing], #25241 [executing], #25374, #25385, #25400, #25401, #25424, #25525 [executing], #25530 [executing], #25531 [executing], #25534 [deployed], #25535 [deployed], #25537 [executing], #25555 [deployed], #25560 [executing], #25561 [executing], #25608 [executing], #25609 [executing], #25610 [executing], #25611 [executing], #25623 [executing], #584053, #584056
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786405169832` — 8/10/2026, 4:55:51 PM PT — 102 turns
-
-**Original task:**
-
-```
-#Payment Issues
-
-How is this going
-
-Backed up first as you asked, then traced it. **The website is not the problem, and I changed nothing in the payment code.**
-
-## BACKUP TAKEN BEFORE ANYTHING ELSE
-
-`/var/www/emtskills/backups/qb-comment-fix-20260808-025141`, 1.3M, containing all 64 plugin files (Api.php + Process.php across 32 sites), quickbooks_helper.php, both payment crons, and a full qb_charge_attempts dump.
-
-## THE BLANK ONES NEVER TOUCHED THE WEBSITE
-
-I looked up all five blank-comment transaction IDs from your screenshot in our database. **All five return zero rows.** Meanwhile every 
-```
-
-**Ideas referenced:** #19387 [deployed], #20613 [executing], #23062 [executing], #23268 [executing], #23279 [executing], #23280 [executing], #23281 [executing], #23282 [executing], #23304 [executing], #23391, #23394, #24158 [deployed], #24701 [executing], #25065 [executing], #25185, #25613 [executing], #4929
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

@@ -6,12 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/13/2026, 6:41:56 PM PT | window: last 72h | 98 tasks | index total 698 (parsed 2, cached 696)
+Generated: 8/13/2026, 7:41:57 PM PT | window: last 72h | 96 tasks | index total 700 (parsed 4, cached 696)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786666915889` | 8/13/2026, 6:41:46 PM | 169 | 517KB | Can you email a copy of any externship agreements / affiliation agreement whatever from ag |
-| `1786666814323` | 8/13/2026, 6:24:22 PM | 132 | 510KB | Jon had a request in Argus, https://emsuniversity.com/emtskills/routes/argus_download.php? |
+| `1786673589882` | 8/13/2026, 7:41:53 PM | 47 | 289KB | Big Mac has 4 GPUs now. Can you make sure that other card is part of service?  |
+| `1786566698066` | 8/13/2026, 7:41:52 PM | 300 | 586KB | #Call Backs  |
+| `1786666814323` | 8/13/2026, 7:41:37 PM | 359 | 888KB | Jon had a request in Argus, https://emsuniversity.com/emtskills/routes/argus_download.php? |
+| `1786674811485` | 8/13/2026, 7:41:15 PM | 11 | 17KB | Can you tell me how we can see if anyone is using a bot to chat to us or not? |
+| `1786666915889` | 8/13/2026, 7:08:32 PM | 210 | 632KB | Can you email a copy of any externship agreements / affiliation agreement whatever from ag |
 | `1786666883409` | 8/13/2026, 5:21:23 PM | 1 | 2KB | Can you email a copy of any externship agreements / affiliation agreement whatever from ag |
 | `1786652849668` | 8/13/2026, 4:44:11 PM | 512 | 2763KB | #TDSHS |
 | `1786660376952` | 8/13/2026, 4:29:25 PM | 102 | 378KB | help me file with Florida Board of Education application yet? Need that approval before we |
@@ -54,7 +57,6 @@ Generated: 8/13/2026, 6:41:56 PM PT | window: last 72h | 98 tasks | index total 
 | `1786566964850` | 8/12/2026, 2:27:06 PM | 62 | 1066KB | Answer to this question is not what was given. It's a registration check to see why there  |
 | `1786569631366` | 8/12/2026, 2:20:31 PM | 1 | 710KB | Why is there no CFA logic/tools for this? Check -> https://emsuniversity.com/emtskills/rou |
 | `1786562018471` | 8/12/2026, 2:18:45 PM | 286 | 1301KB | Can you look into this and resolve if necessary, if a bug and email the student back. Be s |
-| `1786566698066` | 8/12/2026, 2:18:43 PM | 257 | 524KB | #Call Backs  |
 | `1786560740700` | 8/12/2026, 2:17:10 PM | 188 | 730KB | Why am i still getting OLD chat transcripts? Are new ones being sent to me right after the |
 | `1786565771551` | 8/12/2026, 2:12:03 PM | 205 | 452KB | /emtskills is yet again sluggish. We hae an extensive history on this page choking out. Pl |
 | `1786564341143` | 8/12/2026, 2:06:28 PM | 208 | 787KB | #CFA |
@@ -104,35 +106,51 @@ Generated: 8/13/2026, 6:41:56 PM PT | window: last 72h | 98 tasks | index total 
 | `1786432541079` | 8/11/2026, 1:12:16 AM | 71 | 112KB | #Julia/Claudia TP=2 |
 | `1786413781782` | 8/11/2026, 12:13:18 AM | 137 | 177KB | #Julia/Claudia TP=2 |
 | `1786384439089` | 8/10/2026, 11:56:18 PM | 316 | 2268KB | Why am i just receiving these chat transcripts now? That's not very helpful |
-| `1786409942954` | 8/10/2026, 7:20:48 PM | 270 | 755KB | #LLM Fleet |
-| `1786413177098` | 8/10/2026, 7:15:42 PM | 133 | 280KB | #Make GLM Faster |
-| `1786339173079` | 8/10/2026, 7:02:40 PM | 214 | 1369KB | I keep having to say over and over again that open threads need idea numbers and statuses  |
-| `1786395180489` | 8/10/2026, 6:49:11 PM | 280 | 1374KB | #San Mateo County Complaint/Inspection chenry@smcgov.org send a complaint on July 31 to me |
 
 ---
 
 ## Per-window detail
 
-### `1786666915889` — 8/13/2026, 6:41:46 PM PT — 169 turns
+### `1786673589882` — 8/13/2026, 7:41:53 PM PT — 47 turns
 
 **Original task:**
 
 ```
-Can you email a copy of any externship agreements / affiliation agreement whatever from agencies that might be signed by both parties - would be in vyu@emsunivesity.com's email inbox, etc...
+Big Mac has 4 GPUs now. Can you make sure that other card is part of service? 
+
+Read also this:
+
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
+
+
+Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
+
+## Where 671 came from, and it is now durable
+
+Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.
+
+Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted
 ```
 
-**Ideas referenced:** #15669, #19163, #2144, #2335 [deployed], #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #6785
+**Ideas referenced:** #1130, #1131, #11945, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2307, #2314, #2335 [deployed], #25378, #25381, #25765, #26019, #26044, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #6826, #7142, #7149
 
-**Last PICKUP PROMPT:**
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786566698066` — 8/13/2026, 7:41:52 PM PT — 300 turns
+
+**Original task:**
 
 ```
-only MWFD/Dallas EMT PDFs can be fetched via full-message API
-- [ ] Report with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
+#Call Backs 
+
+Check Chat 55 for Call Back bug on Telephony as well as some issue with "View As" supposedly not showing actual "View As" in role. Can't really confirm this, but that's what CS roles are saying. This is Chat 55 from today / the last few hours regarding Call Backs
 ```
 
-### `1786666814323` — 8/13/2026, 6:24:22 PM PT — 132 turns
+**Ideas referenced:** #111827, #21753, #23989, #24645, #25185, #2563, #25701, #25702, #25703, #25704, #25946 [proposed], #25947 [proposed], #25948 [proposed], #25951 [deployed], #334155, #3672, #3673, #3677, #3679, #3684, #3685, #3688, #3689, #3691, #3694, #3695, #3696, #3708, #3713, #3714, #3715, #3716, #3717, #3721, #64748
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786666814323` — 8/13/2026, 7:41:37 PM PT — 359 turns
 
 **Original task:**
 
@@ -148,36 +166,106 @@ for example where is blake brandon's request.
 That might have been in the system and not populated or maybe it was emailed to vyu@emsuniversity.com or other CS? Can you check on those. Seems like this process is not working properly.
 ```
 
-**Ideas referenced:** #047857, #059669, #10003, #10005, #10182, #11111, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #128681, #129302, #16213, #16263, #181825, #18745, #18770, #19370, #21140, #21262, #22310, #2563, #26192 [proposed], #274160, #30363, #313244, #334155, #3730, #374151, #4338, #45475, #475569, #6366, #64748, #65039, #69707, #78350, #8645, #8942, #9019, #9191, #9203, #92400, #9650, #9654, #9660, #9733, #9888, #9889
+**Ideas referenced:** #047857, #059669, #10003, #10005, #10182, #11111, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #128681, #129302, #16213, #16263, #181825, #18745, #18770, #19370, #19583, #19592, #21140, #21262, #22310, #2563, #26192 [proposed], #26197 [executing], #26198 [executing], #26200 [executing], #26201 [executing], #26202 [executing], #274160, #30363, #313244, #334155, #3730, #374151, #4338, #45475, #475569, #6366, #64748, #65039, #69707, #78350, #8645, #8942, #9019, #9191, #9203, #92400, #9650, #9654, #9660, #9733, #9888, #9889
 
 **Last PICKUP PROMPT:**
 
 ```
-without its attachments again.
+s are read-only verifications.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Fix grievance #73 (GRV-2026-0072, Blake Brannen) orphaned from attachments so it appears in Argus terminal.
 
-Where we left off (verified 2026-08-13 ~18:23 PT):
-- Grievance #73 exists: student "Blake Brannen" (ID 8130634), status admin_review, filed 2026-07-14 via email_attachment. Argus terminal tab doesn't list it; Grievance Manager does.
-- Root cause verified: row has inbound_id=NULL, postmark_message_id=NULL, postmark_fetch_status='pending', extracted_text empty (0 chars). Source inbound email is id 85479 (bbrannen8@gmail.com, subject "Grievance", 4 JPEG photos). Attachment fetch cron joins on inbound_id, never selects #73; auto_analyze needs 20+ chars and skips it; disposition clock loops "confidence 0.000 below floor" since 2026-08-03; no human task/notification was ever created.
-- Not emailed to vyu@; went through info@emsuniversity.com CS pipeline. Existing "HIGH PRIORITY GRIEVANCE" emails were sent but no action followed.
+Pick up task #26198 [executing] - Blake Brannen GRV-2026-0072 missing grievance document + dead attachment recovery paths.
 
-Open threads to drive next (EVERY item has a real filed idea):
-1. #26192 [proposed] — Minimal fix: UPDATE grievances SET inbound_id=85479, postmark_message_id='<CAMOyA33rTtx4rAF4MOn9UPOPLBV9T=38mqvvgATf0=hYLFtDuA@mail.gmail.com>', postmark_fetch_status='pending' WHERE id=73; then let fetch cron + vision OCR + auto_analyze + disposition clock complete the row. Needs Ruben's explicit go (mutates production SLA data). Email bbrannen8@gmail.com from info@ to say the grievance was received and is being processed.
-2. #26192 [proposed] — Permanent fix: make email_attachment intake always set inbound_id + postmark_message_id atomically so no grievance can be orphaned again; add a watchdog that flags postmark_fetch_status='pending' with inbound_id NULL (currently invisible to every cron).
+Where we left off (verified 2026-08-13 19:12 PT):
+- Blake did NOT use the student grievance link. Zero rows in grievance_intake_tokens and grievance_intake_request_log for Blake/Brannen/bbrannen8@gmail.com/8130634. He emailed photos directly.
+- Grievance record EXISTS: GRV-2026-0072 / id 73, admin_review, filed 2026-07-14, intake_source email_attachment. The DOCUMENT does not exist.
+- The 4 JPEGs (IMG_8495/8497/8498/8499, ~14.5MB) from inbound email 85479 were never persisted. storage/inbound_attachments stops at email id 42422 (2026-05-28); Blake's are 84966 and 85479. No copy under uploads/grievances either.
+- Both recovery paths are structurally dead: #26197 [executing] postmark_grievance_backfill joins grievances.email_log_id + filters email_inbound_log.intake_source, NEITHER column exists (query returns SQL 1054, verified by running it); grievance_postmark_attachment_fetch joins inbound_id + postmark_message_id, both NULL on 83/83 rows, postmark_fetch_status pending on 83/83.
+- Nobody was ever told: grievance_staff_review_tasks, grievance_review_queue, grievance_notification_log all have ZERO rows for id 73, while cron_grievance_disposition_clock has logged confidence 0.000 below the 0.750 floor to grievance_status_history every 15 min since 2026-08-03.
+- Scope: 3 of 83 grievances have no document; only Blake's is open (others: 74 Olivia Alvarez resolved, 35 Cecil Renollet approved).
+
+Open threads to drive next:
+1. #26198 [executing] - Email Blake (bbrannen8@gmail.com) to resend the 4 photos; his originals are the only surviving copy. Rule 02: no apology language. Needs Ruben's go before sending to a student.
+2. #26197 [executing] - Repair both attachment recovery paths and populate inbound_id + postmark_message_id at intake time.
+3. #26200 [executing] - Watchdog: open a staff task when the clock blocks repeatedly, and alert on any non-terminal grievance with file_path NULL AND extracted_text empty.
+4. #26192 [executing] - Original grievance-73 OCR item; approach superseded by #26198 [executing] (no bytes to OCR until he resends).
+5. #26201 [executing] - Rule-317 causal fix: execute a repair path's own selector query before proposing it as the fix.
 
 Reference IDs:
-- Ticket: none (Ruben's request, no ticket number)
-- Ideas filed: #26192
-- Files touched: none on disk (read-only diagnosis; DB row changes not yet applied)
+- Ideas filed: #26192 [executing], #26197 [executing], #26198 [executing], #26200 [executing], #26201 [executing]
+- Student: Blake Brannen, 8130634, 26807FT-01, bbrannen8@gmail.com
+- Emails: inbound 85479 (2026-07-14 Grievance, 4 att), 84966 (2026-07-06 Ride along grievance, 4 att)
+- Files touched: NONE (read-only diagnosis)
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
+```
+
+### `1786674811485` — 8/13/2026, 7:41:15 PM PT — 11 turns
+
+**Original task:**
+
+```
+Can you tell me how we can see if anyone is using a bot to chat to us or not?
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786666915889` — 8/13/2026, 7:08:32 PM PT — 210 turns
+
+**Original task:**
+
+```
+Can you email a copy of any externship agreements / affiliation agreement whatever from agencies that might be signed by both parties - would be in vyu@emsunivesity.com's email inbox, etc...
+```
+
+**Ideas referenced:** #15669, #19163, #2144, #2335 [deployed], #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26196 [executing], #6785
+
+**Last PICKUP PROMPT:**
+
+```
+Idea #26196 filed. All work is complete. Let me finalize with the PICKUP PROMPT.
+
+<attempt_completion>
+<result>
+Done. I found and emailed you copies of the signed externship/affiliation agreements on file, including the specific one sitting in the inbound pipeline.
+
+**What I found (signed by both parties):**
+
+1. **MWFD Affiliation Agreement** (the one you were looking for, it was in the inbound email pipeline, not in the compliance store) — student Kamdyn Sheets (knsheets@smu.edu) emailed it in 2026-07-29 with the message: "This agreement is signed by myself and by MWFD. Please get it signed and filed as soon as possible so I can start my externship." 8-page scanned PDF, 5.1MB, extracted from the mailstore and emailed to you as batch 3.
+2. **5 fire/EMS site affiliations** (all active, signed): Phoenix Fire Station 41, Dallas Fire Rescue, Eloy Fire, Sonoma County Fire, Calaveras Consolidated Fire.
+3. **AA-2026-0002 and AA-2026-0004** auto-countersigned affiliation agreements (Freddy's Firehouse).
+4. **Karnes EMS** signed affiliation.
+5. **Medical Director agreements** — MD-2026-0001 contract and MDC-2026-0001 compensation, both for Gabe Rodriguez (signed 2026-07-22).
+6. **Eagle Ambulance** signed affiliation agreement.
+
+**3 emails sent to rmajor@emsuniversity.com** (from info@emsuniversity.com via local Postfix relay, all verified delivered to INBOX in /var/log/maillog):
+- Batch 1: 8 site agreement PDFs (subject: Signed Affiliation / Externship Agreements - Site Agreements)
+- Batch 2: MD + Eagle Ambulance PDFs (subject: ...- MD + Eagle Ambulance)
+- Batch 3: MWFD signed agreement (subject: Signed Affiliation Agreement - MWFD)
+
+**Also found in Vicky's inbox but NOT signed agreements** (no binaries saved to disk, only metadata): GMR (Global Medical Response) has an inbound-process request from Justin Reyna for a clinical affiliation and a UTHealth East Texas request flagging issues with a Dallas EMT affiliation — these are pending requests/concerns, not executed agreements.
+
+**Key gap noted:** the two July agreements (MWFD by Kamdyn Sheets, and the UTHealth Dallas EMT one highlighted by Vicky LaMay) were meta-logged in `email_inbound_log` with attachment metadata but the binaries were never persisted to the compliance store. I extracted the MWFD one from the mailstore raw email and sent it to you. Agenda logged as idea #26196 for the EMSU countersignature + filing follow-up (the MWFD one still needs EMSU's signature and copies to Kamdyn + Hive Benthall).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Signed externship/affiliation agreements emailed to Ruben (done this session).
+
+Where we left off (verified 2026-08-13 19:07 PT):
+- 3 emails sent to rmajor@emsuniversity.com via local Postfix (all verified "stored mail into INBOX" in /var/log/maillog):
+  - Batch 1 (18:30 PT): 8 site agreement PDFs — Phoenix FPD41, Dallas Fire Rescue, Eloy Fire, Sonoma County, Calaveras Fire, AA-2026-0002, AA-2026-0004, Karnes EMS
+  - Batch 2 (18:31 PT): MD-2026-0001 + MDC-2026-0001 (Gabe Rodriguez) + Eagle Ambulance signed
+  - Batch 3 (19:04 PT): "EMSU agreement signed by MWFD.pdf" (Kamdyn Sheets, both parties, 8-page 5.1MB)
+- MWFD PDF extracted from /var/qmail/mailnames/emsuniversity.com/rmajor/Maildir/cur/1785363706... to /tmp/EMSU_agreement_signed_by_MWFD.pdf (temp, may be cleaned)
+- email_outbound_log rows: 361705 (batch 3), 361690 (batch 2); batch 1 delivered but DB log row failed on PDO (verified in maillog)
+
 ```
 
 ### `1786666883409` — 8/13/2026, 5:21:23 PM PT — 1 turns
@@ -1656,20 +1744,6 @@ Reference IDs:
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════
 ```
-
-### `1786566698066` — 8/12/2026, 2:18:43 PM PT — 257 turns
-
-**Original task:**
-
-```
-#Call Backs 
-
-Check Chat 55 for Call Back bug on Telephony as well as some issue with "View As" supposedly not showing actual "View As" in role. Can't really confirm this, but that's what CS roles are saying. This is Chat 55 from today / the last few hours regarding Call Backs
-```
-
-**Ideas referenced:** #111827, #21753, #23989, #24645, #25185, #2563, #25701, #25702, #25703, #25704, #25946 [proposed], #25947 [proposed], #25948 [proposed], #25951 [deployed], #334155, #3672, #3673, #3677, #3679, #3684, #3685, #3688, #3689, #3691, #3694, #3695, #3696, #3708, #3713, #3714, #3715, #3716, #3717, #3721, #64748
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786560740700` — 8/12/2026, 2:17:10 PM PT — 188 turns
 
@@ -3624,145 +3698,4 @@ Where we left off (verified 2026‑08‑10 23:49 PT):
 
 Open threads to drive next:
 1. #25550 [deployed] — Continue monitoring DS
-```
-
-### `1786409942954` — 8/10/2026, 7:20:48 PM PT — 270 turns
-
-**Original task:**
-
-```
-#LLM Fleet
-
-Stopping. Here is the full state, including the part that is still open.
-
-## What was actually wrong, and it was routing
-
-All three 120Bs are fast. None was broken. Solo 200-token benches, each box idle, 17:37-17:39 PT:
-
-    bigmac  10.100.0.19:8000   33.79 tok/s
-    artemis 10.100.0.5:8000    33.66 tok/s
-    julia   127.0.0.1:11513    32.49 tok/s
-
-Julia read 0.00 tok/s over 12 seconds at 17:22 only because it was holding 15 queued requests. Drained, it benches 32.49.
-
-**The mis-route:** `FRANK_BOX_CAPACITY` was `8000=18,11513=12,10.100.0.19:8000=6`. `_seed_capacity` matches longes
-```
-
-**Ideas referenced:** #12247, #12262, #12314, #12363 [deployed], #12365, #12657, #12672, #12689, #12716, #13121, #13874 [deployed], #16718, #1765, #178639, #2096, #2097, #2247 [deployed], #2306, #23206, #24144, #25112, #25185, #25468, #25565 [executing], #25567 [executing], #25571 [rejected], #25580 [executing], #25604 [proposed], #25605 [proposed], #25616 [deployed], #25617 [deployed], #25620 [deployed], #25621 [deployed], #25622 [deployed], #25626 [deployed], #25627 [proposed], #25630 [proposed], #25631 [executing], #25647 [deployed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786413177098` — 8/10/2026, 7:15:42 PM PT — 133 turns
-
-**Original task:**
-
-```
-#Make GLM Faster
-
-Rebase, what else is needed here? 
-
-see also:
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
-
-## Where 671 came from, and it is now durable
-
-Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.
-
-Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, divided by elapsed wall seconds
-```
-
-**Ideas referenced:** #11945, #16265, #17202, #19338, #1986, #1993, #20495, #20536, #2116, #2138, #2157, #2179, #2210, #2254, #2258, #2307 [rejected], #23169, #24172, #24217, #25112, #25185, #25378 [executing], #25379 [rejected], #25380 [executing], #25381 [rejected], #25382 [rejected], #25389 [executing], #25390 [executing], #25420 [executing], #25436 [proposed], #25567, #25606 [proposed], #25607 [proposed], #25627, #25628 [proposed], #25630 [deployed], #25631 [blocked], #25646 [executing], #6826
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786339173079` — 8/10/2026, 7:02:40 PM PT — 214 turns
-
-**Original task:**
-
-```
-I keep having to say over and over again that open threads need idea numbers and statuses like approved and proposed, etc... and i keep still getting rule 91 violations here on this. Can you look at cline obedience on desktop and resolve this issue.
-```
-
-**Ideas referenced:** #0000, #10108, #10740, #10756, #10868, #10869, #10880, #11261, #11316, #11319, #11373, #11383, #11397, #1151, #11741, #11849, #11908, #11912, #11936, #11991, #12046, #12059, #12231, #12246, #12249, #12251, #12266, #12269, #12285, #12314, #12335, #12403, #12459, #12463, #12477, #12506, #12588, #12589, #12590, #12614, #12618, #12643, #12645, #12680, #12688, #12689, #12708, #12710, #12900, #13095, #13155, #13157, #13191, #13199, #13202, #13204, #13325, #13329, #13412, #13439, #13453, #13459, #13470, #13475, #13490, #13575, #13703, #13842, #13874, #13962, #14133, #14142, #15180, #15369, #15370, #15776, #15823, #16063, #16065, #16084, #16117, #16224, #16584, #16589, #16590, #16602, #16625, #16646, #16680, #16715, #16716, #16717, #17078, #17307, #17673 [proposed], #1807, #18671, #1880 [deployed], #19173, #19585, #1967 [deployed], #19686, #19898, #19899 [proposed], #19904, #19919 [proposed], #1993 [deployed], #19957 [proposed], #19958 [proposed], #19962 [proposed], #20251, #2071, #2079, #22564, #22584, #24995, #25066, #25128, #25130, #25133, #25151, #25155, #25157, #25171, #25176 [executing], #25178 [proposed], #25185, #25186, #7490, #7505, #7513, #7554, #8365, #9689, #9706, #9910, #9934
-
-**Last PICKUP PROMPT:**
-
-```
-cond time and is in execution.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #obeyance‑status — rule‑91 bracket‑mandate compliance report.
-
-Where we left off (verified 2026‑08‑10 19:00 PT):
-- Fixed the contradictory `[queued]` bracket list in the EMSU‑RULE91‑TAIL injection and all related docs.
-- Restarted the Litellm container; compliance rate for Rule 91 is 100 % today.
-- Daily‑monitoring idea #25178 [executing] approved and now in progress.
-
-Open threads to drive next:
-1. #25178 [executing] — Implement daily monitoring automation for Rule 91 compliance.
-2. (human‑only decision — no idea) — Review the daily audit report each morning; if any violations appear, investigate promptly.
-
-Reference IDs:
-- Idea filed: #25178 [executing]
-- Files touched: /etc/litellm/_router_core.py, /var/www/emtskills/docs/_RULE_TREE.md.new, /var/www/emtskills/docs/CLINERULES_MIRROR.md, /var/www/emtskills/clinerules/Rules/91-attempt-completion-gate-d.md
-- Backup of router core: /etc/litellm/_router_core.py.bak-remove-queued-20260809-2306
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786395180489` — 8/10/2026, 6:49:11 PM PT — 280 turns
-
-**Original task:**
-
-```
-#San Mateo County Complaint/Inspection chenry@smcgov.org send a complaint on July 31 to me rmajor@emsuniversity.com. I did not get it until today when I received his email just now after he called me and I picked up. He said he sent it to matt rios, program director also. I told him we didn't get it until today. He agreed to give us until 8/19. I told him that we were unexpectedly busy this summer and there was a lot of demand without looking at the complaint and not sure if that's what it was about or not. The 3 attachments are in the email. He wants to do an inspection also but didn't set a 
-```
-
-**Ideas referenced:** #0369, #047857, #0891, #111827, #1368, #1565, #15803, #166534, #202608, #20581, #2292, #2301, #25313, #25365 [deployed], #25366 [proposed], #25525, #25534, #25535, #25537, #25548 [executing], #25562, #25602 [deployed], #2563, #25636 [proposed], #25637 [proposed], #25638 [proposed], #25639 [proposed], #25659 [proposed], #25660 [proposed], #25661 [proposed], #25662 [proposed], #25663 [proposed], #25664 [proposed], #25671 [proposed], #25672 [proposed], #25673 [proposed], #25674 [proposed], #25675 [proposed], #334155, #475569, #6366, #64748, #78350, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-irector address gates item 10.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #24, San Mateo County EMSA audit, response due 2026-08-19 12:00 PT.
-
-Where we left off (verified 2026-08-10 18:47 PT):
-- FORMAL_RESPONSE_DRAFT.md rewritten to rule 302 gold standard (v2). v1 had 12 doctrine violations and is superseded, must not be sent.
-- EMSU_RESPONSE_SAN_MATEO_AUDIT_DRAFT.pdf generated, 3 pages, gates pass (0 links, 0 apologies, 0 names, 0 em dashes). Registered as compliance_source_documents id 76.
-- INSTRUCTOR_INTERVIEW_REQUEST.md written: Agency emailed a principal instructor directly 2026-08-10 16:14 PT requesting a voluntary interview; he forwarded without replying. Guidance plus draft replies for Jon and for the instructor. Registered as doc id 77, response round 2 kind=received (id 182).
-- 403 root-caused and fixed in compliance_ref.php: leading-slash paths were treated as filesystem-absolute and never resolved. Now tries literal then app-root fallback; investigations dir added to allow list. All surfaces return 401 auth-gate, not 403. FPM reloaded.
-- Stale ghost doc row (id 75, pointed at a PDF that never existed) deleted.
-- Dossier updated with the v1 defect record and the second Agency contact.
-
-Open threads to drive next:
-1. #25636 [proposed] Daily regulator-complaint scanner with gold-standard auto-draft, PDF, SMS/email alert to Ruben and Jon. Precision gate required: regulator domain AND complaint language AND response obligation, all three.
-2. #25637 [proposed] Regulator reply auto-updates the open draft and advances the workflow round, with a diff of what changed.
-3. #25638 [proposed] Rule 302 mechanical gate on every regulator draft before it can be marked ready. This is the fix for the v1 failure.
-4. #25639 [proposed] Standing staff instruction to forward regulator contact, plus designated compliance correspondence address.
-5. (human-only decision, no idea) Jon to confirm the Program Director email address; gates item 10 of the response.
-6. (human-only decision, no idea) Ruben to decide whether Jon sends the drafted note to the instructor tonight.
-7. (human-only decision, no idea) Evidence assembly for the nine open placeholders in v2. Executed affiliation agreements are the highest-value item.
-
-Reference IDs:
-- Investigation: compliance_investigations id 24 [awaiting_review]
-- Response rounds: id 181 (round 1 draft), id 182 (round 2 received, instructor interview), id 183 (round 2 draft, gold-standard response)
-- Source documents: id 72 notice, 73 regulations, 74 prior email, 76 response PDF, 77 interview guidance
-- Ideas filed: #25636 [proposed], #25637 [proposed], #25638 [proposed], #25639 [proposed]
-- Files touched: /var/www/emtskills/personnel/compliance_ref.php (path resolution fix + allow list), /var/www/emtskills/personnel/investigations/san-mateo-2026/ (FORMAL_RESPONSE_DRAFT.md, EMSU_RESPONSE_SAN_MATEO_AUDIT_DRAFT.pdf, INSTRUCTOR_INTERVIEW_REQUEST.md, DOSSIER_COMPLAINT_SUMMARY.md)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```

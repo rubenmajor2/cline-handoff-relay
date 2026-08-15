@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/15/2026, 2:28:13 AM PT | window: last 72h | 90 tasks | index total 731 (parsed 0, cached 731)
+Generated: 8/15/2026, 9:45:03 AM PT | window: last 72h | 87 tasks | index total 731 (parsed 0, cached 731)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -97,9 +97,6 @@ Generated: 8/15/2026, 2:28:13 AM PT | window: last 72h | 90 tasks | index total 
 | `1786492782871` | 8/12/2026, 11:38:12 AM | 804 | 2527KB | Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look |
 | `1786556115138` | 8/12/2026, 10:35:15 AM | 1 | 3KB | I would like you to run a series of tests to benchmark Frankenstein LLM versus Claude Opus |
 | `1786491116649` | 8/12/2026, 10:03:55 AM | 496 | 2583KB | #Externships |
-| `1786481696854` | 8/12/2026, 9:11:19 AM | 611 | 2391KB | #TDSHS Sunset Report |
-| `1786467898078` | 8/12/2026, 8:45:57 AM | 304 | 1944KB | #MDM |
-| `1786467822115` | 8/12/2026, 8:45:41 AM | 498 | 1070KB | frankenstein-llm is stalling this morning. Why?  |
 
 ---
 
@@ -3471,170 +3468,4 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Validate + complete
 </task_progress>
 </attempt_completion>
-```
-
-### `1786481696854` — 8/12/2026, 9:11:19 AM PT — 611 turns
-
-**Original task:**
-
-```
-#TDSHS Sunset Report
-
-See
-
-Please make the following corrections/updates for the TDSHS Sunset report and give back updated PDF:
-
-False:   They also included records from courses this Department does not regulate, and
-paperwork belonging to other divisions of our company that fall entirely outside its authority.   Were we not told or were we told something ambiguous back -> No transmittal states the measure by which compliance would be
-determined. We asked, in writing, for the provision and the measure. We were not told.  For this, that original request was YEARS ago with much back and forth wi
-```
-
-**Ideas referenced:** #081020, #16863, #178648, #18676, #18690, #2306, #2311, #23483, #25185, #25537, #25560, #25608, #25623, #25632, #25633, #25635, #25667, #25669, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25772 [executing], #25783 [proposed], #25784 [rejected], #25793 [proposed], #25796, #25797, #25798, #25799 [proposed], #25803 [proposed], #25804 [deployed], #25806 [proposed], #25810 [proposed], #25834 [awaiting_review], #25838 [proposed], #25859 [executing], #25860 [executing], #25861 [executing], #25868 [in_progress], #38984, #600179, #616207, #623992
-
-**Last PICKUP PROMPT:**
-
-```
-09, rmajor@emsuniversity.com."
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786481696, TDSHS Sunset report corrections.
-
-Where we left off (verified 2026-08-11 14:43 PT):
-- Rebuilt PDF at sunset_pdf/EMSU_Public_Input_DSHS_Sunset_Review_2026-08-11.pdf, 24 pages, 466,404 bytes.
-- Company name updated throughout to "EMS University, LLC d.b.a. EMS Universal Education" (signature + cover).
-- #25783 [proposed] filed on the $1,248 and ORR chronology conflict.
-- #25784 [rejected] duplicate row from an MCP timeout that had already written.
-
-Open threads to drive next:
-1. #25783 [proposed]. Pull the DSHS payment receipt and confirm which ORR the $1,248 was applied to.
-2. Send the PDF to sunset@sunset.texas.gov or hold for the third-party statement (human-only decision, no idea).
-
-Reference IDs:
-- Ideas filed: #25783 [proposed], #25784 [rejected]
-- Files touched: sunset_pdf/patch_v8.py, sunset_pdf/build_sunset_pdf.py, WOPR /tmp/scan_dshs2.py
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786467898078` — 8/12/2026, 8:45:57 AM PT — 304 turns
-
-**Original task:**
-
-```
-#MDM
-
-Rebase and continue / add to MDM if not already added
-
-**Your ExecStartPost question, answered:** your instinct is right, that shape is probably bad. `ExecStartPost=curl /v1/models` holds the unit in `activating` until the probe passes, which does kill the lie where `systemctl is-active` reports healthy for an engine that never bound its port. But Big Mac takes minutes to load 15 weight shards, so any `TimeoutStartSec` shorter than real load time makes systemd kill a perfectly healthy slow start — and with `Restart=always` that becomes a restart loop on a box that would have come up fine
-```
-
-**Ideas referenced:** #0078, #10108, #10740, #1130, #1131, #11741, #11781, #12028, #12034, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #1557, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1779, #178634, #1798, #1828, #18312, #18326, #19567, #20042, #20495, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #23171, #25097, #25378, #25381, #25468 [executing], #25469 [rejected], #25470 [deployed], #25471 [executing], #25744 [proposed], #25758 [proposed], #25759, #25760 [proposed], #30363, #334155, #64748, #7142, #7149, #8984
-
-**Last PICKUP PROMPT:**
-
-```
-n rebuilt since deploy.sh ran.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1786342434047 — finish MDM SSH access for Cicero + Maximus (Nero already verified working).
-
-Where we left off (verified 2026-08-12 08:44 PT):
-- NERO ✅: WOPR→127.0.0.1:2223 SSH verified as rubenmajor@EMSU-SMS-Mac.localdomain. Fix = appended the unchanged WOPR pubkey to the Mac's authorized_keys from the desktop.
-- CICERO: .252 is UP (port 22 open, host key matches known_hosts) but M5 key gets Permission denied. Suspect: wrong local account OR authorized_keys drift. Need the account name that the tunnel uses.
-- MAXIMUS: M4 LAN IP not found (sweeps timeout). 2224 tunnel LISTEN on WOPR but WOPR key denied — same drift symptom as Nero pre-fix.
-- PROVEN: keys were never lost. WOPR id_ed25519 mtime 2026-02-19; desktop id_ed25519.pub fingerprint SHA256:MOfOlfY... ruben-macbook-m5 matches deploy.sh line 44 exactly.
-- Portal files: web_terminal_token.php + ws_ssh_proxy.py SERVERS already carry cicero/nero/maximus; syntax OK; emsu-web-terminal.service active.
-- Known recipe that works: `ssh rubenmajor@<mac_ip> "echo '<WOPR_PUBKEY>' >> ~/.ssh/authorized_keys"` from this desktop.
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #25758 [executing] — Maximus: find live LAN IP (ask Ruben or UDM DHCP lease), append WOPR pubkey to its authorized_keys, verify WOPR→2224 SSH with `-i /home/emsuserver/.ssh/id_ed25519 rubenmajor@127.0.0.1 -p 2224`.
-2. #25760 [executing] — Cicero: confirm the reachable local account at .252 (try `whoami` via desktop key against candidate accounts if M5 key still denied), re-sync WOPR pubkey into that account, then bring up the M5→WOPR reverse tunnel (port 11520 for the MLX API lane is stale; terminal SSH should ride a 222x tunnel like Nero/Maximus), verify WOPR-side port LISTEN.
-
-Reference IDs:
-- Ideas filed: #25744 [approved], #25758 [executing], #25760 [executing]
-- Files touched: /var/www/emtskills/routes/web_terminal_token.php, /var/www/emtskills/scripts/ws_ssh_proxy.py
-- Deploy reference: /Users/rubenmajor/Desktop/mac-tunnel-deploy/deploy.sh (lines 43-45)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786467822115` — 8/12/2026, 8:45:41 AM PT — 498 turns
-
-**Original task:**
-
-```
-frankenstein-llm is stalling this morning. Why? 
-
-
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
-
-## Where 671 came from, and it is now durable
-
-Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.
-
-Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, divided by elapsed wall seconds:
-
-```javascr
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11945, #11953, #12247, #12262, #12299, #12314, #12363, #12364, #12365, #12459, #12477, #12618, #12672, #12824, #12872, #12878, #13082, #13108, #13202, #13874, #15158, #16163, #16265, #16304, #16588, #16648, #16844, #17202, #17203, #17205, #17300, #1754, #1755, #178424, #178455, #178652, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18312, #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690, #1871, #1876, #1877, #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #1883, #1894, #1896, #1897, #1912, #19653 [queued], #1967, #19671 [rejected], #19686 [queued], #19689 [queued], #19776 [executing], #19777 [proposed], #19778, #19785 [deployed], #19788 [proposed], #19789 [proposed], #1989, #19903, #202608, #2050, #20549, #2102 [resolved], #21045, #2190 [resolved], #2210 [resolved], #2221 [investigating], #2247, #2254, #2258, #22820, #22897, #2293 [resolved], #2294 [resolved], #2299, #2307 [rejected], #23071, #2312, #2314 [deployed], #23169 [approved], #23171, #24172, #24217 [approved], #25097, #25137, #25141, #25185, #25646, #25747 [proposed], #25754 [proposed], #25755 [approved], #25757 [proposed], #25759 [proposed], #25764 [approved], #25765 [proposed], #25812 [approved], #25859, #25868, #6826
-
-**Last PICKUP PROMPT:**
-
-```
-session summary with all fixes
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25812 [approved] - executor working, 3 ideas being built, docs updated
-
-Where we left off (verified 2026-08-12 08:45 PT):
-- dev_stage=idle means "in queue, ready" not "doing nothing"
-- 3 ideas actively being built: #25747 auditing, #25755 auditing, #25764 drafting
-- 4 ideas waiting in queue: #25757, #25759, #25765, #25812
-- All 6 durable repairs documented in GLM52_RING_STATE_TRACKER.md
-- HANDOFF_NOTES.md updated with session summary
-- model=None fix working: 0 errors since 08:21
-- GLM-first working: 7 running, 3 adapter picks
-
-Open threads to drive next:
-1. #25764 [approved] - v3 hybrid classifier (drafting, code generation in progress)
-2. #25747 [approved] - canary monitoring (auditing, spec generation in progress)
-3. #25755 [approved] - max_num_seqs 32 (auditing, spec generation in progress)
-4. #25812 [approved] - vision doorman fix (idle, waiting in queue)
-5. #25765 [approved] - fleet capacity projection (idle, waiting in queue)
-6. #25759 [approved] - GLM monitoring (idle, waiting in queue)
-7. #25757 [approved] - v1 keyword classifier (idle, superseded by #25764)
-
-Reference IDs:
-- Ideas filed: #25747 [approved], #25755 [approved], #25757 [approved], #25759 [approved], #25764 [approved], #25765 [approved], #25812 [approved]
-- Ideas rejected: #25754 [rejected] (had classifier backwards)
-- Files touched: /etc/litellm/router_hook.py, /usr/local/bin/frankenstein_tools_adapter.py, /etc/systemd/system/frankenstein-tools.service.d/*.conf, /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md, HANDOFF_NOTES.md
-- Bug library: 2314 (agent false zombie), 2307 (sci-notation parse), 2294 (STREAK fix)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result><task_progress>- [x] Update GLM52_RING_STATE_TRACKER.md with all durable repairs
-- [x] Add model=None RCA section
-- [x] Add doctor fixes durability section
-- [x] Add executor reliability notes
-- [x] Update HANDOFF_NOTES.md
-- [x] Verify executor is picking up ideas (3 being built, 4 in queue)
-- [x] Explain dev_stage=idle means "in queue" not "doing nothing"
-- [x] Present results</task_progress></attempt_completion>
 ```

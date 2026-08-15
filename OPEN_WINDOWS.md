@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/15/2026, 1:28:13 AM PT | window: last 72h | 90 tasks | index total 731 (parsed 7, cached 724)
+Generated: 8/15/2026, 2:28:13 AM PT | window: last 72h | 90 tasks | index total 731 (parsed 0, cached 731)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786782096117` | 8/15/2026, 1:28:10 AM | 33 | 1234KB | #Email Agent |
+| `1786782096117` | 8/15/2026, 1:53:02 AM | 124 | 1654KB | #Email Agent |
 | `1786778761449` | 8/15/2026, 1:23:18 AM | 392 | 588KB | #SSS |
 | `1786778041170` | 8/15/2026, 1:18:15 AM | 318 | 1705KB | #CFA  |
 | `1786764883780` | 8/15/2026, 1:18:05 AM | 130 | 453KB | #Abandoned Cart Recovery |
@@ -105,7 +105,7 @@ Generated: 8/15/2026, 1:28:13 AM PT | window: last 72h | 90 tasks | index total 
 
 ## Per-window detail
 
-### `1786782096117` — 8/15/2026, 1:28:10 AM PT — 33 turns
+### `1786782096117` — 8/15/2026, 1:53:02 AM PT — 124 turns
 
 **Original task:**
 
@@ -127,9 +127,37 @@ This is an automated response which can sometimes make mistakes. A member of our
 that should be resolved.
 ```
 
-**Ideas referenced:** #16732, #2328, #2341, #2343, #2344, #23710, #2511, #25989, #26068, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26320, #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #3261, #3319, #3346, #4991, #6106
+**Ideas referenced:** #16732, #19437, #2328, #2341, #2343, #2344, #23710, #2511, #25943, #25989, #26068, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26320, #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26525 [executing], #3261, #3319, #3346, #4958, #4991, #5095, #6106, #6228, #7907
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+xecuting] filed with full RCA.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Email Agent "Hi Duplicate," greeting + missing signature regression fix (lib/ai_ticket_agent_first_touch.php).
+
+Where we left off (verified 2026-08-15 01:51 PT):
+- Root cause proven via communication_log rows (58549/58400/56667): first-touch PHASE D used created_by_name "Duplicate Detection System" which was not blocklisted.
+- Deployed 3-chunk patch to /var/www/emtskills/lib/ai_ticket_agent_first_touch.php (php -l clean, backup .bak-20260815-hidduplicate on WOPR).
+- Live probe vs real ticket 25294 passed 7/7 (greeting "Hi Diego," + canonical signature/footer).
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26525 [executing] — Watch next cron_ai_ticket_agent.php first-touch run (log "First-touch scan: ... clarified=...") and confirm no new communication_log rows with "Hi Duplicate," after 2026-08-15 01:49 PT. If any appear, verify the cron actually reloaded the lib file (opcache) via `php -r "opcache_reset();"` or process restart.
+2. #26525 [executing] — Optionally backfill/greeting-audit existing duplicate-registration tickets still Open (25294 Diego Rivera, 25169 Lilly Schaben, 25110 Jaydon Lott) to ensure no further corrective emails needed; current fix is forward-looking only.
+
+Reference IDs:
+- Ticket: N/A (this is a recurring email-agent bug, not a single ticket)
+- Ideas filed: #26525
+- Files touched: /var/www/emtskills/lib/ai_ticket_agent_first_touch.php (+ .bak-20260815-hidduplicate)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1786778761449` — 8/15/2026, 1:23:18 AM PT — 392 turns
 

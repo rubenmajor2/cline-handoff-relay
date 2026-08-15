@@ -6,11 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/15/2026, 3:45:06 PM PT | window: last 72h | 85 tasks | index total 745 (parsed 7, cached 738)
+Generated: 8/15/2026, 4:45:06 PM PT | window: last 72h | 86 tasks | index total 747 (parsed 2, cached 745)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786817395147` | 8/15/2026, 3:44:36 PM | 377 | 2557KB | #Call Backs / VAPI |
+| `1786836908956` | 8/15/2026, 4:45:03 PM | 57 | 945KB | Is this legitimate? If so, the message should be a little more sympathetic and less techni |
+| `1786835771600` | 8/15/2026, 4:31:46 PM | 96 | 1327KB | #BLS  |
+| `1786817395147` | 8/15/2026, 3:56:47 PM | 404 | 2685KB | #Call Backs / VAPI |
 | `1786831867073` | 8/15/2026, 3:42:30 PM | 126 | 313KB | #Joshua / Denali Scenario |
 | `1786832584504` | 8/15/2026, 3:39:32 PM | 105 | 279KB | #Externship |
 | `1786832177865` | 8/15/2026, 3:36:49 PM | 160 | 352KB | #SLS ish |
@@ -94,13 +96,71 @@ Generated: 8/15/2026, 3:45:06 PM PT | window: last 72h | 85 tasks | index total 
 | `1786581594386` | 8/12/2026, 5:40:26 PM | 2 | 2KB | Tell me about the CFA learning system. It does not seem like it's doing very much. How do  |
 | `1786571428672` | 8/12/2026, 4:54:06 PM | 375 | 579KB | Can you tell me if chat widget is functioning properly now. Just read the last 10 chats an |
 | `1786573125988` | 8/12/2026, 4:46:28 PM | 355 | 3271KB | Please tell me if this is wrong? And if so why and what is going on? |
-| `1786566874767` | 8/12/2026, 4:08:22 PM | 310 | 2014KB | Curious on this chat. How does a student pass the final exam and then LATER have to schedu |
 
 ---
 
 ## Per-window detail
 
-### `1786817395147` — 8/15/2026, 3:44:36 PM PT — 377 turns
+### `1786836908956` — 8/15/2026, 4:45:03 PM PT — 57 turns
+
+**Original task:**
+
+```
+Is this legitimate? If so, the message should be a little more sympathetic and less technical. Something that cites the reason why as well as the option to repeat the class at no extra charge. Give the link to the schedule and appropriate webstie. Tell them to register again. 
+
+If they are interested, to reply to the message with the course date/they registered for and basically it would waive the fee. To be eligible for this, they must have already paid full tuition, not had any of it refunded already and they mustt have either dropped or failed in the last year. 
+
+Those who got pro-rated ref
+```
+
+**Ideas referenced:** #0056, #11998, #155724, #1565, #1976, #218838, #334155, #37474, #495057, #64748, #856404
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786835771600` — 8/15/2026, 4:31:46 PM PT — 96 turns
+
+**Original task:**
+
+```
+#BLS 
+
+why was the CFA unable to find this? Can you resolve that durably or were they just not entered peroperly or what happened?
+```
+
+**Ideas referenced:** #16732, #20527, #23133, #2328, #2341, #2343, #2344, #2511, #2513, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26638 [executing], #26639 [executing], #26642 [executing], #26678 [in_progress], #3261, #3319, #3346
+
+**Last PICKUP PROMPT:**
+
+```
+at intake) is filed as #26678.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — CFA "couldn't find BLS card" for William Youngblood (26914T-33): root cause verified, durable fix filed.
+
+Where we left off (verified 2026-08-15 16:31 PT):
+- Ticket #20527 (TKT-20260721-5C6E0B0D) is In Progress, 24-day stale loop. Comment 172908 now carries the verified root cause + next human action.
+- Root cause: first-day BLS for cohort 26914T was never entered in the BLS module. William has ZERO rows in bls_students/bls_certificates/bls_class_enrollments/bls_card_uploads/cpr_certifications. Instructor Siaam Sarker (bls_instructors id 6) has zero scheduled classes. Only 2/77 of section 26914T have bls_students rows.
+- Inserted missing_card_tracking row: student_id=26914T-33, instructor=Siaam Sarker, status=investigating, source_ref=TKT-20260721-5C6E0B0D.
+- Idea #26678 [in_progress]: wire lib/missing_cards_finder.php into a cron that populates missing_card_tracking + staff intake gate on bls_students.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26678 [in_progress] — build the durable fix: cron wrapper that runs missing_cards_finder.php and upserts into missing_card_tracking (verified: findMissingCardStudents() exists in /var/www/emtskills/lib/missing_cards_finder.php, currently only referenced by a report view, no cron); then add the staff intake gate so day-1 cohort rosters are entered at class time. Acceptance: a dry-run discovers ≥75 students in 26914T-style cohorts with CPR completion but no card.
+
+Reference IDs:
+- Ticket: 20527 (TKT-20260721-5C6E0B0D)
+- Ideas filed: #26678 [in_progress]
+- Files touched (read-only investigation): /var/www/emtskills/lib/missing_cards_finder.php, /var/www/emtskills/lib/email_ai_bls_action_tools.php
+- Tables: missing_card_tracking (1 row inserted), orchestrator_ideas (#26678), ticket_comments (172908)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786817395147` — 8/15/2026, 3:56:47 PM PT — 404 turns
 
 **Original task:**
 
@@ -114,38 +174,34 @@ You know I'm just curious if there's some improvements that have been made genet
 Also tell me what's going on with this ? And why did you offer Vicky an extension draft letter? When did I say that was OK? I know we were working on some stuff in a different window for extern chips just give me some information here -> 1. The 14 students need a placement or 
 ```
 
-**Ideas referenced:** #12018, #12584, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #16844, #16874, #17130 [superseded], #1745, #18132 [deployed], #18316, #19125, #19173, #23133, #2323, #2328, #23340, #2341, #2343, #2344, #23989, #24645, #2511, #25701, #25706, #25707, #25943, #25945, #25946, #25968, #25969, #25986, #25989, #26066, #26068, #26203 [deployed], #26206 [deployed], #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26259 [deployed], #26260 [deployed], #26261 [deployed], #26266 [executing], #26267 [executing], #26270, #26296, #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26504 [approved], #26508 [proposed], #26509 [proposed], #26511 [deployed], #26513 [deployed], #26591, #26593, #26618 [deployed], #26619 [proposed], #26621 [proposed], #26643 [proposed], #26644 [proposed], #26645 [proposed], #3261, #3319, #3346, #6172, #6978, #9042, #9159, #9222, #9501
+**Ideas referenced:** #12018, #12584, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #16844, #16874, #17130 [superseded], #1745, #18132 [deployed], #18316, #19125, #19173, #23133, #2323, #2328, #23340, #2341, #2343, #2344, #23989, #24645, #2511, #25701, #25706, #25707, #25943, #25945, #25946, #25968, #25969, #25986, #25989, #26066, #26068, #26203 [deployed], #26206 [deployed], #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26259 [deployed], #26260 [deployed], #26261 [deployed], #26266 [executing], #26267 [executing], #26270, #26296, #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26504 [approved], #26508 [proposed], #26509 [proposed], #26511 [deployed], #26513 [deployed], #26591, #26593, #26618 [deployed], #26619 [proposed], #26621 [proposed], #26643 [proposed], #26644 [proposed], #26645 [proposed], #26663, #26671 [proposed], #3261, #3319, #3346, #6172, #6978, #9042, #9159, #9222, #9501
 
 **Last PICKUP PROMPT:**
 
 ```
-ed] instead of executing blind
+le 263 (verify, don't assume).
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #26618 [deployed], Vapi upgrade + frankenstein-llm route-leak hand-off.
+Pick up task — finish the legacy-claude-string audit after the claude-sonnet-5 ban.
 
-Where we left off (verified 2026-08-15 13:33 PT):
-- Vapi CS (5 agents) + Sales upgraded to latest: 5x anthropic/claude-sonnet-5 + Vapi Voices v2, Sales openai/gpt-5.5 + vapi/Elliot/v2. Verified by GET (org 46666ee6).
-- Handoff-number guard deployed in api/voice/vapi_server_webhook.php line 536 (HANDOFF-NUMBER-GUARD), php -l clean. Bookings 165/181/185/188 annotated.
-- Verified our webhook only calls litellm model `frankenstein-llm` (line 991); Vapi brain resolves in Vapi cloud and is Vapi-billed, NOT our ANTHROPIC_API_KEY.
-- Route-leak evidence handed to recovery window: ops/frankenstein_llm_route_leak_findings_20260815.md (aliases claude-haiku-4-5/claude-opus/sonnet-5 -> paid anthropic; audit-first callers ticket_autospec.php:988/1396, PredispatchRevival, RubenExecutor, cron_ai_grading; /app vs /etc config path question).
-- This window made zero changes to litellm; config mtime 13:01:11 root belongs to the recovery window.
+Where we left off (verified 8/15/2026, 3:56:33 PM PT):
+- Killed all 4 confirmed `claude-sonnet-5` callers (now `deepseek-v4-pro`/`frankenstein-llm`), php -l clean, backups created.
+- Verified litellm routing map: `claude-sonnet-5`→`anthropic/claude-opus-5` (PAID, the real leak, now gone); bare `claude-haiku`/`claude-opus`→`deepseek-v4-pro` (free, left in place).
+- Verified Vapi brain = Vapi-cloud-resolved (`anthropic/claude-sonnet-5` on Vapi org 46666ee6, serverUrl = our webhook); our webhook internal tools use `frankenstein-llm` line 991, executor falls back `deepseek-v4-pro`.
+- Changes landed: `api/ticket_autospec.php`, `lib/backfill_idea_confidence_scorer.php`, `lib/PredispatchRevival.php`, `lib/PredispatchRevivalRouter.php`.
 
-Open threads to drive next:
-1. #26643 [proposed] — patch remaining Vapi assistants (VADER, Commander Data, Patient Interview Base, EMD Call Simulator, Riley) to latest, BUT hold for Ruben's explicit OK on Vapi Sonnet billing posture first. Enumerate full assistant list via GET /assistant first.
-2. #26645 [proposed] — confirm /app/config.yaml is a bind-mount of /etc/litellm/config.yaml BEFORE the recovery window edits; if separate files, alias map reads were against the wrong file.
-3. #26644 [proposed] — fix canary mirror INSERT (lib/ruben_tng_voice_canary.php:435 references missing `source` column in voice_call_log); map to real schema (call_id, caller_phone, vapi_assistant_id, outcome) or drop the mirror.
-4. #26621 [proposed] — record this session's reversal (Vapi/Sonnet wrongly conflated with internal Anthropic billing) in the 317 log.
-5. #26618 [deployed] — watch next 24h for +19412943388 recurrence on voice_ai bookings to confirm the guard holds.
+Open threads to drive next (grep was live-verified, idea # stored in orchestrator_ideas):
+1. #26671 [proposed] — Audit the ~20 files still carrying OLD dated claude strings (`claude-haiku-4-5-20251001`, `claude-opus-4-20250514`, `claude-sonnet-4-6`, `claude-sonnet-4-20250514`, etc.). Action: run `grep -rn "claude-" /var/www/emtskills/api /var/www/emtskills/lib /var/www/emtskills/cron --include=*.php`, then for each resolve against the litellm DB (STORE_MODEL_IN_DB=1) to find which still map to `anthropic/*`, and patch ONLY the live-invoked paid ones.
+2. #26663 (unverified — may exist) — Vapi assistant master list: enumerate all Vapi assistants to confirm which `api/voice/*` handlers the old claude strings belong to before patching.
 
 Reference IDs:
-- Filed this session: #26618 [deployed], #26619 [proposed], #26621 [proposed], #26643 [proposed], #26644 [proposed], #26645 [proposed]
-- Files touched: api/voice/vapi_server_webhook.php (guard), ops/frankenstein_llm_route_leak_findings_20260815.md (new), /tmp/sales_assistant_full.json, /tmp/sales_model_body.json
-- Recovery window owns: /etc/litellm config, litellm restart, claude-alias removal
+- Ideas filed: #26618, #26619, #26621 (prior window); #26671 this window.
+- Files touched this window: ticket_autospec.php, backfill_idea_confidence_scorer.php, PredispatchRevival.php, PredispatchRevivalRouter.php (+ .bak-r146-* backups).
+- Backup pattern: `.bak-r146-20260815-*`.
 
-Append to cline_task_ledger.md per rule 07, then run order 66.
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
@@ -3241,42 +3297,3 @@ Please tell me if this is wrong? And if so why and what is going on?
 **Ideas referenced:** #15635, #16439, #16440, #16444, #1758, #17580, #18936, #20346, #23184, #2323 [deployed], #23477, #23483, #24526, #24765, #25185, #2519, #25971 [proposed], #25974 [executing], #25975 [executing], #25976 [executing], #25984 [executing], #25985 [executing], #25986 [executing], #25990 [approved], #25995 [executing], #32584, #5646, #6106, #6751, #7907, #9086
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786566874767` — 8/12/2026, 4:08:22 PM PT — 310 turns
-
-**Original task:**
-
-```
-Curious on this chat. How does a student pass the final exam and then LATER have to schedule a retake. What happened here? Something is wrong. Also the 9999-12-31 date is wrong and needs correction
-```
-
-**Ideas referenced:** #081020, #12834, #13101, #13102, #13103, #13104, #135632, #13794, #13797, #13799, #13800, #15818, #15819, #186576, #23133, #2321, #23477, #23945, #23954, #24990, #25042, #25551, #25669, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25796, #25797, #25798, #25803 [proposed], #25804 [deployed], #25812, #25889 [ready_for_review], #25914, #25931, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [deployed], #25944 [deployed], #25989 [executing], #360135, #360152, #38984, #495057, #5298, #53856, #856404, #9019
-
-**Last PICKUP PROMPT:**
-
-```
-utofail audit) as idea #25989.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Academic-integrity false-positive autofail on passing final attempts (9999-12-31 leak already fixed).
-
-Where we left off (verified 2026-08-12 16:02 PT):
-- Root cause of "pass then retake" contradiction verified: Moodle `local_ai_violations.timecreated` equals the PASSING final-attempt finish second for at least 4 students (Arav Tyagi 854/90% #354, Anshika Sethi 854/93.3% #338, Samuel Frazier 966/96% #7, Bailey Carpenter 966/92.7% #5). Passing attempt gets autofail-voided, retake pipeline then schedules a retake.
-- 9999-12-31 date leak FIXED: `cron_email_responder.php:2637` hardcoded `'ts' => '9999-12-31 23:59:59'` replaced with `date('Y-m-d H:i:s')`. Backup `.bak_9999_20260812_155912` created, `php -l` clean, diff verified.
-- Idea filed: #25989 [executing].
-
-Open threads to drive next (real filed idea #):
-1. #25989 [executing] — Audit `local_ai_violations` ingestion for same-second false positives on PASSING attempts (score >= 80). Find the writer of this table (Cron/observer) via grep of `local_ai_violations` INSERT, and add a guard excluding finished attempts with passing score from autofail auto-void.
-2. #25989 [executing] — Re-review the 4 known voided-pass students (Arav Tyagi, Anshika Sethi, Samuel Frazier, Bailey Carpenter) and restore/heal their passing final-attempt grades or schedule proper resolution, per Rule 157 (never auto-clear without integrity review).
-
-Reference IDs:
-- Ticket: none (root-cause investigation)
-- Ideas filed: #25989
-- Files touched: /var/www/emtskills/cron/cron_email_responder.php (+ .bak_9999_20260812_155912)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```

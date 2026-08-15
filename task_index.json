@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-15T22:45:06.248Z",
+ "generated_at": "2026-08-15T23:45:06.511Z",
  "counts": {
-  "parsed": 7,
-  "reused": 738,
+  "parsed": 2,
+  "reused": 745,
   "failed": 0,
-  "total": 745
+  "total": 747
  },
  "tasks": {
   "1784522296714": {
@@ -129320,13 +129320,13 @@
   },
   "1786817395147": {
    "task_id": "1786817395147",
-   "mtime": 1786833876662,
+   "mtime": 1786834607416,
    "created_at": "2026-08-15T18:09:55.147Z",
-   "last_modified": "2026-08-15T22:44:36.662Z",
-   "size_kb": 2557,
-   "turn_count": 377,
+   "last_modified": "2026-08-15T22:56:47.416Z",
+   "size_kb": 2685,
+   "turn_count": 404,
    "title": "#Call Backs / VAPI\n\nHow are callbacks going now?\n\nYou know I'm just curious if there's some improvements that have been made genetically since we started a couple of months ago with VAPI? Seems like there should be are using the latest software or updates? Can you check with the community to see? I just wanna make sure.\n\nAlso tell me what's going on with this ? And why did you offer Vicky an extension draft letter? When did I say that was OK? I know we were working on some stuff in a different window for extern chips just give me some information here -> 1. The 14 students need a placement or a written deadline extension before 8/19. I offered Vicky a drafted extension letter and can write i",
-   "pickup_prompt": "ed] instead of executing blind\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #26618 [deployed], Vapi upgrade + frankenstein-llm route-leak hand-off.\n\nWhere we left off (verified 2026-08-15 13:33 PT):\n- Vapi CS (5 agents) + Sales upgraded to latest: 5x anthropic/claude-sonnet-5 + Vapi Voices v2, Sales openai/gpt-5.5 + vapi/Elliot/v2. Verified by GET (org 46666ee6).\n- Handoff-number guard deployed in api/voice/vapi_server_webhook.php line 536 (HANDOFF-NUMBER-GUARD), php -l clean. Bookings 165/181/185/188 annotated.\n- Verified our webhook only calls litellm model `frankenstein-llm` (line 991); Vapi brain resolves in Vapi cloud and is Vapi-billed, NOT our ANTHROPIC_API_KEY.\n- Route-leak evidence handed to recovery window: ops/frankenstein_llm_route_leak_findings_20260815.md (aliases claude-haiku-4-5/claude-opus/sonnet-5 -> paid anthropic; audit-first callers ticket_autospec.php:988/1396, PredispatchRevival, RubenExecutor, cron_ai_grading; /app vs /etc config path question).\n- This window made zero changes to litellm; config mtime 13:01:11 root belongs to the recovery window.\n\nOpen threads to drive next:\n1. #26643 [proposed] — patch remaining Vapi assistants (VADER, Commander Data, Patient Interview Base, EMD Call Simulator, Riley) to latest, BUT hold for Ruben's explicit OK on Vapi Sonnet billing posture first. Enumerate full assistant list via GET /assistant first.\n2. #26645 [proposed] — confirm /app/config.yaml is a bind-mount of /etc/litellm/config.yaml BEFORE the recovery window edits; if separate files, alias map reads were against the wrong file.\n3. #26644 [proposed] — fix canary mirror INSERT (lib/ruben_tng_voice_canary.php:435 references missing `source` column in voice_call_log); map to real schema (call_id, caller_phone, vapi_assistant_id, outcome) or drop the mirror.\n4. #26621 [proposed] — record this session's reversal (Vapi/Sonnet wrongly conflated with internal Anthropic billing) in the 317 log.\n5. #26618 [deployed] — watch next 24h for +19412943388 recurrence on voice_ai bookings to confirm the guard holds.\n\nReference IDs:\n- Filed this session: #26618 [deployed], #26619 [proposed], #26621 [proposed], #26643 [proposed], #26644 [proposed], #26645 [proposed]\n- Files touched: api/voice/vapi_server_webhook.php (guard), ops/frankenstein_llm_route_leak_findings_20260815.md (new), /tmp/sales_assistant_full.json, /tmp/sales_model_body.json\n- Recovery window owns: /etc/litellm config, litellm restart, claude-alias removal\n\nAppend to cline_task_ledger.md per rule 07, then run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "le 263 (verify, don't assume).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — finish the legacy-claude-string audit after the claude-sonnet-5 ban.\n\nWhere we left off (verified 8/15/2026, 3:56:33 PM PT):\n- Killed all 4 confirmed `claude-sonnet-5` callers (now `deepseek-v4-pro`/`frankenstein-llm`), php -l clean, backups created.\n- Verified litellm routing map: `claude-sonnet-5`→`anthropic/claude-opus-5` (PAID, the real leak, now gone); bare `claude-haiku`/`claude-opus`→`deepseek-v4-pro` (free, left in place).\n- Verified Vapi brain = Vapi-cloud-resolved (`anthropic/claude-sonnet-5` on Vapi org 46666ee6, serverUrl = our webhook); our webhook internal tools use `frankenstein-llm` line 991, executor falls back `deepseek-v4-pro`.\n- Changes landed: `api/ticket_autospec.php`, `lib/backfill_idea_confidence_scorer.php`, `lib/PredispatchRevival.php`, `lib/PredispatchRevivalRouter.php`.\n\nOpen threads to drive next (grep was live-verified, idea # stored in orchestrator_ideas):\n1. #26671 [proposed] — Audit the ~20 files still carrying OLD dated claude strings (`claude-haiku-4-5-20251001`, `claude-opus-4-20250514`, `claude-sonnet-4-6`, `claude-sonnet-4-20250514`, etc.). Action: run `grep -rn \"claude-\" /var/www/emtskills/api /var/www/emtskills/lib /var/www/emtskills/cron --include=*.php`, then for each resolve against the litellm DB (STORE_MODEL_IN_DB=1) to find which still map to `anthropic/*`, and patch ONLY the live-invoked paid ones.\n2. #26663 (unverified — may exist) — Vapi assistant master list: enumerate all Vapi assistants to confirm which `api/voice/*` handlers the old claude strings belong to before patching.\n\nReference IDs:\n- Ideas filed: #26618, #26619, #26621 (prior window); #26671 this window.\n- Files touched this window: ticket_autospec.php, backfill_idea_confidence_scorer.php, PredispatchRevival.php, PredispatchRevivalRouter.php (+ .bak-r146-* backups).\n- Backup pattern: `.bak-r146-20260815-*`.\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1745": null,
     "2323": null,
@@ -129413,7 +129413,9 @@
     "26621": "proposed",
     "26643": "proposed",
     "26644": "proposed",
-    "26645": "proposed"
+    "26645": "proposed",
+    "26663": null,
+    "26671": "proposed"
    }
   },
   "1786818491154": {
@@ -129905,6 +129907,84 @@
     "56573": null,
     "56754": null,
     "178649": null
+   }
+  },
+  "1786835771600": {
+   "task_id": "1786835771600",
+   "mtime": 1786836706504,
+   "created_at": "2026-08-15T23:16:11.600Z",
+   "last_modified": "2026-08-15T23:31:46.504Z",
+   "size_kb": 1327,
+   "turn_count": 96,
+   "title": "#BLS \n\nwhy was the CFA unable to find this? Can you resolve that durably or were they just not entered peroperly or what happened?",
+   "pickup_prompt": "at intake) is filed as #26678.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — CFA \"couldn't find BLS card\" for William Youngblood (26914T-33): root cause verified, durable fix filed.\n\nWhere we left off (verified 2026-08-15 16:31 PT):\n- Ticket #20527 (TKT-20260721-5C6E0B0D) is In Progress, 24-day stale loop. Comment 172908 now carries the verified root cause + next human action.\n- Root cause: first-day BLS for cohort 26914T was never entered in the BLS module. William has ZERO rows in bls_students/bls_certificates/bls_class_enrollments/bls_card_uploads/cpr_certifications. Instructor Siaam Sarker (bls_instructors id 6) has zero scheduled classes. Only 2/77 of section 26914T have bls_students rows.\n- Inserted missing_card_tracking row: student_id=26914T-33, instructor=Siaam Sarker, status=investigating, source_ref=TKT-20260721-5C6E0B0D.\n- Idea #26678 [in_progress]: wire lib/missing_cards_finder.php into a cron that populates missing_card_tracking + staff intake gate on bls_students.\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #26678 [in_progress] — build the durable fix: cron wrapper that runs missing_cards_finder.php and upserts into missing_card_tracking (verified: findMissingCardStudents() exists in /var/www/emtskills/lib/missing_cards_finder.php, currently only referenced by a report view, no cron); then add the staff intake gate so day-1 cohort rosters are entered at class time. Acceptance: a dry-run discovers ≥75 students in 26914T-style cohorts with CPR completion but no card.\n\nReference IDs:\n- Ticket: 20527 (TKT-20260721-5C6E0B0D)\n- Ideas filed: #26678 [in_progress]\n- Files touched (read-only investigation): /var/www/emtskills/lib/missing_cards_finder.php, /var/www/emtskills/lib/email_ai_bls_action_tools.php\n- Tables: missing_card_tracking (1 row inserted), orchestrator_ideas (#26678), ticket_comments (172908)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "ideas": {
+    "2328": null,
+    "2341": null,
+    "2343": null,
+    "2344": null,
+    "2511": null,
+    "2513": null,
+    "3261": null,
+    "3319": null,
+    "3346": null,
+    "16732": null,
+    "20527": null,
+    "23133": null,
+    "25989": null,
+    "26003": null,
+    "26038": null,
+    "26040": null,
+    "26041": null,
+    "26045": null,
+    "26050": null,
+    "26054": null,
+    "26065": null,
+    "26068": null,
+    "26090": null,
+    "26211": null,
+    "26229": null,
+    "26233": null,
+    "26238": null,
+    "26241": "proposed",
+    "26244": "superseded",
+    "26245": "proposed",
+    "26249": "proposed",
+    "26336": null,
+    "26348": null,
+    "26368": null,
+    "26495": "deployed",
+    "26496": "deployed",
+    "26508": "proposed",
+    "26509": "proposed",
+    "26613": null,
+    "26638": "executing",
+    "26639": "executing",
+    "26642": "executing",
+    "26678": "in_progress"
+   }
+  },
+  "1786836908956": {
+   "task_id": "1786836908956",
+   "mtime": 1786837503487,
+   "created_at": "2026-08-15T23:35:08.956Z",
+   "last_modified": "2026-08-15T23:45:03.487Z",
+   "size_kb": 945,
+   "turn_count": 57,
+   "title": "Is this legitimate? If so, the message should be a little more sympathetic and less technical. Something that cites the reason why as well as the option to repeat the class at no extra charge. Give the link to the schedule and appropriate webstie. Tell them to register again. \n\nIf they are interested, to reply to the message with the course date/they registered for and basically it would waive the fee. To be eligible for this, they must have already paid full tuition, not had any of it refunded already and they mustt have either dropped or failed in the last year. \n\nThose who got pro-rated refunds back would not be eligible for tuition waiver. \n\nAlso copy Vicky on the message back so she can",
+   "pickup_prompt": null,
+   "ideas": {
+    "1565": null,
+    "1976": null,
+    "11998": null,
+    "37474": null,
+    "64748": null,
+    "155724": null,
+    "218838": null,
+    "334155": null,
+    "495057": null,
+    "856404": null,
+    "0056": null
    }
   }
  }

@@ -1103,6 +1103,45 @@ server.tool(
           `completion language. A completion that says FIXED next to [proposed] is unreadable to Ruben (idea #25185).`
         );
       }
+
+      // ── RULE 317 MECHANICAL CORPUS FEED (idea #26435, 2026-08-14) ────────
+      // Ruben 2026-08-14: 317 Obligation 2 previously updated ONLY the causal
+      // clinerules file. The reversals kept recurring because the correction
+      // never reached the EMSU self-improvement loop (ai_learned_corrections ->
+      // CorpusRealtimeIngester -> emsu_preference_corpus -> RAG context + LoRA).
+      // This makes the corpus write MECHANICAL: when the validator itself detects
+      // a self-contradicting completion, it POSTs the correction to
+      // api/cline_correction_ingest.php so a future window retrieves it from RAG
+      // context BEFORE it repeats the lie. Fire-and-forget, 4s bounded, non-fatal:
+      // a corpus-write hiccup must never change the validation verdict, and the
+      // correction still lands zero-times or one-time via dedup upsert.
+      if (contradictions.length > 0) {
+        try {
+          const ctrl = new AbortController();
+          const timer = setTimeout(() => ctrl.abort(), 4000);
+          await fetch("https://www.emsuniversity.com/emtskills/api/cline_correction_ingest.php", {
+            method: "POST",
+            signal: ctrl.signal,
+            headers: {
+              "Content-Type": "application/json",
+              "X-Ledger-Key": "emsu-cline-ledger-2026-04-22-rj9k3m7q",
+            },
+            body: JSON.stringify({
+              issue_category: "self_contradicting_disposition",
+              trigger_pattern: "completion prose says FIXED/DEPLOYED/DONE next to a [proposed]/[executing] idea tag",
+              ai_approach: "hand-shipped or narrated a fix without stamping orchestrator_ideas before completing",
+              correct_approach:
+                "UPDATE orchestrator_ideas SET status='deployed' then re-run reconcile_ideas and use the [deployed] tag it returns, OR remove the completion language",
+              negative_example: contradictions.join(", ").slice(0, 500),
+              correction_type: "procedural",
+              source_task_id: task_id || "",
+            }),
+          }).catch(() => undefined);
+          clearTimeout(timer);
+        } catch {
+          /* non-fatal: corpus write is best-effort; validation verdict unchanged */
+        }
+      }
     }
 
 

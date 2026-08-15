@@ -36,8 +36,17 @@ NOT a flip: a scope refinement where both can be true ("17 rows, 2 failed" vs "1
 On a fire: (1) name the flip; (2) run a rule-297 RCA on the INITIAL mistake, classified
 into exactly one bucket — wrong premise / stale assumption / unread source /
 insufficient probe / scope error; (3) update the causal rule so the next window does
-not repeat it. A hardfloor edit needing Ruben's `--override`: file the exact fix text
-as an idea — that filed idea IS the deliverable (rules 161 + 300 drive execution).
+not repeat it; (4) **write the correction into the EMSU self-improvement loop** so the
+RAG context block (rule 139) teaches future windows AND the nightly LoRA refresh
+absorbs it — the corpus is part of the fix, not just the clinerules file:
+`POST https://emsuniversity.com/emtskills/api/cline_correction_ingest.php` with header
+`X-Ledger-Key: emsu-cline-ledger-2026-04-22-rj9k3m7q` and body
+`{"issue_category": "<bucket>", "trigger_pattern": "<the wrong claim>", "ai_approach": "<what the window wrongly did>", "correct_approach": "<the verified-correct approach>", "negative_example": "<the wrong claim text>", "correction_type": "procedural|factual|tool_usage|policy|tone"}`.
+The endpoint upserts into `ai_learned_corrections` (dedup on issue_category+trigger_pattern,
+occurrence_count increments), which `CorpusRealtimeIngester` harvests every 5 min as the
+`ruben_correction` source_kind into `emsu_preference_corpus` for RAG retrieval (idea
+#26435). A hardfloor edit needing Ruben's `--override`: file the exact fix text as an
+idea — that filed idea IS the deliverable (rules 161 + 300 drive execution).
 
 **The Reversal Log (mechanical, idea #25888 — Ruben approved 2026-08-12).** Every
 completion MUST contain a `# Reversal Log` section. It either says "No reversals this
@@ -72,13 +81,17 @@ routing), rule 297 (RCA + classify + scope gate), rule 298 (confounding-evidence
 table), rule 143 (circuit breaker / termination), rule 161 (approved ideas execute),
 rule 263 (verify before claim), rule 255 (verify then report), rule 315 (classify host
 state before "down"), rule 99 (re-read subagent writes), rule 91 (pre-completion
-validation gate).
+validation gate), rule 139 (EMSU continuous-improvement corpus / RAG loop).
 **Mechanical enforcement:** `clinerules_validate_completion` (rule 91's gate) now
 contains the `R317_UNVERIFIED_STATE` check — a completion that asserts LLM/fleet/host
 state (down/up/idle/offline/serving/degraded/saturated...) WITHOUT a `(verified: ...)`
 marker quoting the live probe is BLOCKED. The gate does not rely on the model
 remembering this rule: it is called on every completion and writes a block file on
 failure (2026-08-12 Ruben directive: include 317 in the 91 validation).
-**Last updated:** 2026-08-12 (scope expanded per Ruben: reversal detection + missed-fact
-acquisition + stick test. Original reversal-only rev:
+**Last updated:** 2026-08-14 (Obligation 2 amended per Ruben: on a reversal fire, step
+(4) now writes the correction into the EMSU self-improvement loop via
+`api/cline_correction_ingest.php` → `ai_learned_corrections` → `emsu_preference_corpus`
+RAG context, closing the gap where 317 only updated the clinerules file but never the
+corpus/MCP/context surface. Idea #26435. Prior rev 2026-08-12: reversal detection +
+missed-fact acquisition + stick test. Original reversal-only rev:
 `Rules-backups/317-substantial-reversal-triggers-297-and-rule-update.md`.)

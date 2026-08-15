@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/15/2026, 1:45:05 PM PT | window: last 72h | 91 tasks | index total 741 (parsed 4, cached 737)
+Generated: 8/15/2026, 2:45:05 PM PT | window: last 72h | 86 tasks | index total 741 (parsed 0, cached 741)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786820106387` | 8/15/2026, 1:44:49 PM | 285 | 779KB | Why does Vicky send me this? -> Making a followup on Sam Nelson’s final exam I was able to |
+| `1786820106387` | 8/15/2026, 2:07:52 PM | 360 | 935KB | Why does Vicky send me this? -> Making a followup on Sam Nelson’s final exam I was able to |
 | `1786817395147` | 8/15/2026, 1:34:17 PM | 318 | 2249KB | #Call Backs / VAPI |
 | `1786824274829` | 8/15/2026, 1:25:37 PM | 178 | 639KB | frankenstein-llm seems to be having some intermittent connectivity issues. Not sure the ca |
 | `1786782096117` | 8/15/2026, 1:16:58 PM | 510 | 5020KB | #Email Agent |
@@ -96,17 +96,12 @@ Generated: 8/15/2026, 1:45:05 PM PT | window: last 72h | 91 tasks | index total 
 | `1786571828988` | 8/12/2026, 3:33:06 PM | 86 | 518KB | For the SBA Loan we are going for. Cna you answer all the questions you can in-line? The r |
 | `1786570197616` | 8/12/2026, 3:13:54 PM | 114 | 1041KB | Thsi person keeps reaching out. What's the issue? is the CFA getting it right? |
 | `1786472732313` | 8/12/2026, 2:46:31 PM | 436 | 1339KB | #TDSHS |
-| `1786557939632` | 8/12/2026, 2:29:00 PM | 234 | 973KB | #CFA |
-| `1786569631366` | 8/12/2026, 2:20:31 PM | 1 | 710KB | Why is there no CFA logic/tools for this? Check -> https://emsuniversity.com/emtskills/rou |
-| `1786562018471` | 8/12/2026, 2:18:45 PM | 286 | 1301KB | Can you look into this and resolve if necessary, if a bug and email the student back. Be s |
-| `1786565771551` | 8/12/2026, 2:12:03 PM | 205 | 452KB | /emtskills is yet again sluggish. We hae an extensive history on this page choking out. Pl |
-| `1786564341143` | 8/12/2026, 2:06:28 PM | 208 | 787KB | #CFA |
 
 ---
 
 ## Per-window detail
 
-### `1786820106387` — 8/15/2026, 1:44:49 PM PT — 285 turns
+### `1786820106387` — 8/15/2026, 2:07:52 PM PT — 360 turns
 
 **Original task:**
 
@@ -116,15 +111,44 @@ Why does Vicky send me this? -> Making a followup on Sam Nelson’s final exam I
 // check her Argus, Jon's Argus and Jon's overrides on this. Explain if an error exists
 ```
 
-**Ideas referenced:** #059669, #1612 [awaiting_review], #2167, #2514 [rejected], #25185, #26620 [proposed], #26628 [proposed], #26640 [proposed], #26647 [executing], #374151, #6067, #639348, #703694, #703695, #8152 [deployed], #92400
+**Ideas referenced:** #059669, #1612 [awaiting_review], #20555, #2167, #2514 [rejected], #2515, #25185, #26620 [proposed], #26628 [proposed], #26640 [proposed], #26647 [executing], #374151, #6067, #639348, #703694, #703695, #8152 [deployed], #8153, #92400
 
 **Last PICKUP PROMPT:**
 
 ```
-renders the attempt button.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #26647 - Matrix two-key drift: canonical key mapping and reconciliation job still open.\n\nWhere we left off (verified 2026-08-15 13:44 PT):\n- Root cause: admin_portal.Students has TWO keys (numeric id 8152810, slug 26715W-19). vw_Student_Skills_Summary joined ONLY Skill_Attempts on numeric id, hiding slug-keyed NREMT_Skills and CA_Skills sign-offs.\n- View rewrite landed 13:37 PT under #26640 [deployed]: reconciles all three sources via GREATEST plus new passed_source column. Sam reads 15/16, previously 1/16. Cohort: 1,514 students and 10,797 rows recovered.\n- Backup /tmp/vw_Student_Skills_Summary_BACKUP_26640.sql, applied SQL /tmp/fix_skills_view_26640.sql (WOPR).\n- Sam final exam re-probed live: 0 attempts of max 3, override 3044 open to 2026-08-20 00:35:53 PT.\n- Three reversals recorded this window (2223 wrong student, NREMT 7/7 not 6/7, externship tables globally empty not key drift).\n\nOpen threads to drive next:\n1. #26628 [executing] Kaison: add void-zombie and reset-attempts control to quick_override plus a dashboard button; repair watchdog self-heal (cron_ai_watchdog_ext.php 1720-1760) to cover past-didactic students holding an open override. Producer: didactic_deadline.php lines 337-341.\n2. #26647 [executing] Build canonical student-key mapping helper, reconciliation job across skill surfaces, audit of other two-key views, drop or document the three empty externship tables, and trace the unverified PCR row-level source.\n3. #26620 [deployed] closed, nothing further.\n4. #26640 [deployed] in ready_for_review, nothing further unless review flags something.\n\nReference IDs:\n- Ideas filed: #26620 [deployed], #26628 [executing], #26640 [deployed], #26647 [executing]\n- Bug library incident: 2514 (frankenstein_router_incidents)\n- Argus kaizen rule: id 1, matrix_two_key_student_lookup\n- Correction row: 8152 (ai_learned_corrections)\n- Keys: Students.id 8152810, slug 26715W-19, moodle 51757 (2223 = Nicole Ruiz-Stevens, unrelated)\n- Files touched: /tmp/fix_skills_view_26640.sql, /tmp/vw_Student_Skills_Summary_BACKUP_26640.sql; DB view vw_Student_Skills_Summary\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════"
-}
-</arguments>
-</use_mcp_tool>
+s, which feeds the RAG corpus.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #26647 [executing] - canonical student-key mapping and reconciliation job across Matrix skill surfaces.
+
+Where we left off (verified 2026-08-15 14:05 PT):
+- Argus repair worker had NO cron. Installed /etc/cron.d/emsu-argus-repair-worker (every minute, www-data). Backlog 58 to 16. Remaining 16 are verify_payment_state (14) and match_student_payment (2), read-only, no worker branch by design.
+- extend_exam_deadline never wrote quiz_overrides. Patched to upsert the Moodle override, void phantom attempts, and say MOODLE NOT UPDATED when it cannot. Proof: Jon event 6393595 created quiz_overrides row 3045 at 14:04:07.
+- New action void_zombie_attempts wired end to end (catalog, handler, worker, permissions for MasterAdmin/ExecAdmin/ITAdmin/Admin).
+- vw_Student_Skills_Summary reconciles all three skill sources with passed_source. Sam 15/16, previously 1/16. Cohort 1,514 students, 10,797 rows.
+- Sam final exam: 0 attempts of max 3, override 3044 open to 2026-08-20 00:35:53 PT.
+
+Open threads to drive next:
+1. #26647 [executing] Remaining scope: canonical student-key mapping helper, reconciliation job across skill surfaces, audit of other two-key views, drop or document the three empty externship tables, and trace the unverified PCR row-level source.
+2. #26628 [deployed] in ready_for_review. Optional follow-on: add worker branches for verify_payment_state and match_student_payment, or mark them read-only in the catalog so they stop appearing as a backlog.
+3. #26620 [deployed] closed, nothing further.
+4. #26640 [deployed] in ready_for_review, nothing further unless review flags something.
+
+Reference IDs:
+- Ideas filed: #26620 [deployed], #26628 [deployed], #26640 [deployed], #26647 [executing]
+- Bug library incidents: 2514 (skills view key drift), 2515 (repair queue no consumer plus phantom Moodle write)
+- Argus kaizen rules: id 1 matrix_two_key_student_lookup, id 2 argus_repair_queue_verify_consumer_and_target
+- Correction rows: 8152, 8153 (ai_learned_corrections)
+- Live proof: orchestrator_event_log event 6393595 produced moodle_c_live.quiz_overrides row 3045
+- Files touched: /var/www/emtskills/cron/cron_argus_repair_worker.php, /var/www/emtskills/lib/argus_action_catalog.php, /etc/cron.d/emsu-argus-repair-worker, admin_portal.vw_Student_Skills_Summary, admin_portal.argus_action_permissions
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
 ### `1786817395147` — 8/15/2026, 1:34:17 PM PT — 318 turns
@@ -3420,173 +3444,3 @@ Where we left off (verified 2026-08-12 14:45 PT):
 Open threads to drive next:
 1. Decide whether to send the short 3-sentence version to Richardson, say it 
 ```
-
-### `1786557939632` — 8/12/2026, 2:29:00 PM PT — 234 turns
-
-**Original task:**
-
-```
-#CFA
-
-Do another scan for the last 24 hours
-
---
-## CFA 24h Scan — CORRECTED REPORT (reanalyzed against live DB, 2026-08-11 13:46 PT)
-
-The prior report contained multiple fabricated metrics, invented table names, and false claims. Everything below was verified by live SQL queries against `admin_portal` this session. Corrected report filed as **#25768**.
-
----
-
-### KEY METRICS (verified, last 24h)
-
-| Metric | Actual | Prior Report | Status |
-|---|---|---|---|
-| Sweep runs | 96 runs, last 13:40 PT | ✅ correct | HEALTHY |
-| Sweep candidates per run | ~125,818 → 990 deduped → 990 drafts | ✅ ~988 dra
-```
-
-**Ideas referenced:** #10108, #10740, #1084, #1085, #1092, #1095, #1096, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #17150, #18312, #18326, #2299, #23171, #23316 [proposed], #24339 [deployed], #24340 [deployed], #24341 [awaiting_review], #24500 [proposed], #25097, #25768 [deployed], #25773, #25774, #25779 [deployed], #25780 [deployed], #25781 [proposed], #25917 [proposed], #25918 [proposed], #25920 [proposed], #25921 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-ll write `intake_source=NULL`.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #25920 — build the CFA dispatch executor so the 1,124 queued email drafts actually send and complete.
-
-Where we left off (verified 2026-08-12 14:28 PT):
-- Dispatch cron REPAIRED this session (corrupted file restored + call signature fixed) and then PAUSED at /etc/cron.d/emsu-cfa-dispatch (no active schedule line).
-- 1,124 cfa_agent_queue rows pending, 0 dispatching, 0 completed. Payload shape verified: agent_type=email, JSON {draft_id, email, normalized_email, draft}.
-- Live mailer candidates on disk: lib/EmailAIResponder.php, lib/email_agent_review_queue.php, lib/email_notifications.php (uses PHP mail()/SMTP). Executor must reuse these, not invent a mailer.
-
-Open threads to drive next:
-1. #25920 [approved] — write cron_cfa_queue_executor.php: claim pending rows (status→dispatching), send draft via live mailer, mark completed/failed with error_message, then re-enable the dispatch cron and smoke-test one row.
-2. #25918 [approved] — get Ruben decision: leave heartbeat on raw :8210, or repoint to :11510 (frankenstein-tools adapter).
-3. #25921 [approved] — find the ticket-insert producer(s) that write intake_source=NULL and set it at write time.
-
-Reference IDs:
-- Ideas this session: #23316, #25779, #25780, #25781, #25917, #25918, #25920, #25921
-- Files touched: cron/cron_cfa_struct_enforcer.php, cron/cron_parallel_cfa_dispatch.php, lib/parallel_cfa_dispatch.php, /etc/cron.d/emsu-cfa-dispatch
-- DB: admin_portal — cfa_agent_queue, cfa_dispatch_log, cfa_struct_gate_log, tickets
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786569631366` — 8/12/2026, 2:20:31 PM PT — 1 turns
-
-**Original task:**
-
-```
-Why is there no CFA logic/tools for this? Check -> https://emsuniversity.com/emtskills/routes/nremt_verification_form.php - build them and send over the info if you have it.
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786562018471` — 8/12/2026, 2:18:45 PM PT — 286 turns
-
-**Original task:**
-
-```
-Can you look into this and resolve if necessary, if a bug and email the student back. Be sure to consult SLS, etc...
-```
-
-**Ideas referenced:** #081020, #16817, #186576, #18944, #18951, #23477, #24323, #25150, #25185, #25188, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25796, #25797, #25798, #25803 [proposed], #25804 [deployed], #25812, #25889 [ready_for_review], #25914, #25938 [deployed], #25942 [proposed], #25944 [proposed], #2790, #360135, #360152, #38984, #6106, #687732, #9086, #9168, #9339
-
-**Last PICKUP PROMPT:**
-
-```
- with 7 held for human review.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25942 [deployed] - attendance wrong-day gate and cleanup, plus rule 319, both shipped.
-
-Where we left off (verified 2026-08-12 14:17 PT):
-- #25942 [deployed] cron/cron_attendance_sessions.php now has a DOW-GATE (parseMeetingDays + sessionDateMatchesMeetingDays + getMeetingTimesRaw) that drops candidate dates contradicting Course_Schedules.meeting_times. php -l clean. Both-controls test /tmp/test_25942_dow.php 15/15 PASS. Prevents 23 wrong-day sessions across 12 sections.
-- #25942 [deployed] NEW cron/cron_attendance_wrongday_cleanup.php, 5 enforced safety rules, applied fleet-wide: 87 empty wrong-day sessions removed, 7 held for human review (real marks). Backup /var/tmp/attendance_wrongday_cleanup_20260812-141401.sql. Idempotent. Weekly cron Mon 04:23, log /var/log/emsu-attendance-wrongday-cleanup.log.
-- Pre-existing fatal fixed: "Cannot redeclare parseMeetingTimes()" (helper uses define() guard, not function_exists). Cron-local parser renamed to cronParseMeetingTimesLocal(). Confirmed pre-existing by running the untouched backup.
-- #25944 [deployed] rule 319 at Rules-archive/319-anchor-the-reported-symptom.md, registered in _RULE_TREE.md, MCP reindexed to 325 rules, read-back verified.
-- #25938 [deployed] portal isCAStudent ordering fix still in place at line 358; the bad nremt_ems_id-as-cleared patch stays reverted at line 500.
-- 26815W verified Saturday 8 / Sunday 8 / Friday 1. SLS attendance 15/30 (50%) to 15/17 (88.2%).
-
-Open threads to drive next:
-1. (human-only decision, no idea) - 7 wrong-day sessions HOLD real attendance marks and need a human call: 26815W sess 32326 (Fri 2026-06-05, 32 marks, a class really was held), 25624T sess 30684/30685/30686, 25724T sess 31087/31088/31089. Either correct the section's meeting_times to include that day or move the marks. The cleanup pass will keep reporting them and will never auto-delete them.
-2. (human-only decision, no idea) - Instructor must finish taking attendance for 26815W Sat 2026-07-18 (sess 32859, 9 of 22 marked) and Sun 2026-07-19 (sess 32860, 8 of 22 marked). Kareem's 2 missing marks are this gap, not absence.
-3. (human-only decision, no idea) - PD approval for Kareem's NREMT clearance, clearance_queue row 186576 pending since 2026-08-10, owned by Apple Ibanez.
-4. #25942 [deployed] - Optional hardening: lib/attendance_sessions_helper.php declares parseMeetingTimes() behind a define() guard rather than function_exists(), so any other file defining that name will fatal the same way. Worth converting to function_exists across that helper family.
-
-Reference IDs:
-- Ticket: 24323 (TKT-20260808-0C7E680B), comments 171255 and 171265 (correction)
-- Ideas: #25942 [deployed], #25944 [deployed], #25938 [deployed]
-- Emails: email_outbound_log 360152 (attendance correction), 360135 (NREMT status)
-- Moodle: course 41, group 2620, uid 51398, held-for-review sessions 32326 / 30684 / 30685 / 30686 / 31087 / 31088 / 31089
-- Files: cron/cron_attendance_sessions.php, cron/cron_attendance_wrongday_cleanup.php, externship/student_portal.php, Rules-archive/319-anchor-the-reported-symptom.md, Rules/_RULE_TREE.md
-- Backups: cron_attendance_sessions.php.bak-20260812-dow-gate, .bak-20260812-redeclare, /var/tmp/attendance_wrongday_cleanup_20260812-141401.sql, /tmp/attendance_26815W_bogus_20260812-134203.sql
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════
-```
-
-### `1786565771551` — 8/12/2026, 2:12:03 PM PT — 205 turns
-
-**Original task:**
-
-```
-/emtskills is yet again sluggish. We hae an extensive history on this page choking out. Please fix it durably AGAIN
-```
-
-**Ideas referenced:** #19370, #23133 [executing], #2321 [deployed], #23489, #23945 [proposed], #23952 [awaiting_review], #23954 [awaiting_review], #24026, #24249, #25042 [deployed], #25185, #25940 [executing]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786564341143` — 8/12/2026, 2:06:28 PM PT — 208 turns
-
-**Original task:**
-
-```
-#CFA
-
-
-There are 5 CFA Agents:
-Chat Widget Agent/AI
-SMS Agent/AI
-Ticket Agent/AI
-VAPI Customer Support (Phone) Agent/AI
-Email Agent/AI
-
-What about Tickets?
-
-What about Telephony transcripts? i.e. here: https://www.emsuniversity.com/emtskills/routes/telephony_hub.php?view=agent#history 
-
-Also, I noticed this subtlty that needs repair:
-
-
-Live Calls
-(4 active)
-+19412943388
-0:00
-AI Agent
-+14155553976
-0:00
-AI Agent
-+19412943388
-10:31
-AI Agent
-+19412943388
-0:02
-AI Agent
-
-That above is showing the 941 (our number) that transfers calls to our other number for pickup (Thank you for calling EMS Universi
-```
-
-**Ideas referenced:** #0000, #13441, #14748, #16224, #19173, #19175 [executing], #19176 [queued], #19511 [rejected], #19841, #19842, #19898, #19899 [proposed], #19904, #20046, #20050, #20251, #20630 [executing], #25151, #25185, #25869 [deployed], #25870 [rejected], #25871 [deployed], #25872 [executing], #25873 [deployed], #25876 [deployed], #25885 [deployed], #25886 [executing], #25888, #25891 [blocked], #25892 [deployed], #25893 [deployed], #25894 [awaiting_review], #25903 [deployed], #25904 [superseded], #25905, #25907, #25908 [deployed], #25909 [proposed], #25911 [deployed], #25912 [proposed], #25913, #25925 [proposed], #25926 [proposed], #25935 [proposed], #5344, #6230, #7359, #7907, #9168
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

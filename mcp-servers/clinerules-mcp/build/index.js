@@ -895,6 +895,37 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
             }
         }
     }
+    // ── RULE 321 (idea #26349): GASLIGHT GATE ──────────────────────────────
+    // Ruben 2026-08-14 "approved -> 26349": the gaslighting pattern is an agent
+    // proposing a deliverable, Ruben approving, and then a hidden gate (false
+    // checkpoint, undisclosed requirement) blocking deployment — or a completion
+    // claiming done while still deferring buildable work elsewhere. Same family
+    // as R317: one structural scan of the completion text, zero per-turn cost.
+    // FAR ONLY ON TEXTUAL CONTRADICTION to keep false positives off valid
+    // completions: (a) a work-done claim AND deferral-to-future-window in the
+    // same body, or (b) explicit "after approval" + additional-gate noun. The
+    // pickup block is STRIPPED first so its structural "Open threads to drive
+    // next" wording (compliant by rule 91) cannot trip the deferral scan.
+    {
+        const _gaslightBody = result_text.replace(/\u2550{5,}[\s\S]*?PICKUP PROMPT[\s\S]*$/i, "");
+        const workDoneClaim = /\b(?:task|build|work|deliverable|deploy(?:ment)?)\s+(?:is\s+)?(?:done|complete|completed|deployed|shipped|finished)\b/i;
+        const deferToFuture = /\b(?:file|filed|files|filing)\s+(?:it|this|that)?\s*(?:as)?\s*an?\s+idea\s+for\s+(?:a\s+)?(?:future|next|later)\s+(?:window|session)\b|\bnext\s+window\s+(?:should|will|can)\b|\bdefer(?:red|ring)?\s+(?:it|this|the\s+work|to\s+a\s+future)\b|\b(?:will|to\s+be)\s+handled\s+in\s+a\s+(?:future|later|next)\s+(?:window|session|round)\b/i;
+        const postApprovalGate = /(?:after\s+(?:my|your|the|Ruben's)?\s*approval|once\s+(?:you|I|it'?s|it\s+is)\s+approved|post-approval)[^\n]{0,80}\b(?:additional|another|one\s+more|separate|new|further)\s+(?:gate|checkpoint|requirement|hurdle|approval|review)\b/i;
+        const _gaslightIssues = [];
+        if (workDoneClaim.test(_gaslightBody) && deferToFuture.test(_gaslightBody)) {
+            _gaslightIssues.push("completion claims the task/build/work is done, deployed or shipped while ALSO deferring buildable work to a future window, session, or idea-for-later");
+        }
+        if (postApprovalGate.test(_gaslightBody)) {
+            _gaslightIssues.push("result introduces an additional gate, checkpoint, or requirement AFTER approval was given — every gate must be stated in the proposal BEFORE approval");
+        }
+        if (_gaslightIssues.length > 0) {
+            failures.push(`R321_GASLIGHT_GATE: ${_gaslightIssues.join("; ")}. ` +
+                `Rule 321 (idea #26349): "Approved" means DEPLOY. A post-approval gate undermines the approval; ` +
+                `if a REAL blocker surfaces instead, state it in the next tool-bearing turn with a concrete unblock path ` +
+                `and a filed idea # — never as a hidden pre-existing requirement, never as silently-pending work next to a done claim. ` +
+                `Buildable work deferred without a filed idea is a rule-29 + rule-300 violation.`);
+        }
+    }
     // ── FIX 5 of #19173: COVERAGE GATE ──────────────────────────────────────
     // Source incident 2026-07-25: a catch-all window prompt enumerated 39 explicit
     // idea ids. The first attempt_completion accounted for 7 of them and shipped.
@@ -1127,7 +1158,7 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
     // Log validation
     try {
         db.prepare("INSERT INTO violations (rule_id, task_id, evidence) VALUES (?,?,?)")
-            .run("91", task_id || "unknown", pass ? "VALIDATION_PASS: all multi-rule gates passed (R91+R29+R120+R01+R02+IDENTITY)" : "VALIDATION_FAIL: " + failures.join("; "));
+            .run("91", task_id || "unknown", pass ? "VALIDATION_PASS: all multi-rule gates passed (R91+R29+R120+R01+R02+R317+R321+IDENTITY)" : "VALIDATION_FAIL: " + failures.join("; "));
     }
     catch { /* telemetry */ }
     // ── STRUCTURAL GATE (idea #20251) ──

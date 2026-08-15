@@ -1,5 +1,9 @@
 # Rule 321 — The Gaslighting Rule: no hidden gates after approval
 
+## The rule
+
+Every gate between approval and a live, serving deliverable is stated IN THE PROPOSAL before approval; after approval, ZERO undisclosed checkpoints may be added, and claiming deployed while a step remains is forbidden.
+
 **HARDFLOOR** (Ruben directive 2026-08-14, idea #26327). Recurring failure: an agent
 proposes a deliverable, Ruben approves, then the agent introduces a FALSE GATE — an
 extra checkpoint, an undisclosed requirement, or a "wait for X first" — that blocks
@@ -37,6 +41,10 @@ are ZERO undisclosed steps.
 
 Applies to every approval Ruben or a delegate gives, on any surface (Cline, Argus,
 executor, SMS/voice agents). An approval is a commitment; a hidden gate breaches it.
+
+## Mechanical enforcement
+
+`clinerules_validate_completion` (the rule-91 pre-completion gate) now contains the `R321_GASLIGHT_GATE` check (idea #26349, built 2026-08-14). A completion is BLOCKED when it (a) claims the task/build/work is done, deployed, or shipped while ALSO deferring buildable work to a future window, session, or idea-for-later, or (b) introduces an additional gate, checkpoint, or requirement AFTER approval was given. The pickup-prompt block is stripped before the scan so its compliant rule-91 "Open threads to drive next" wording cannot false-fire. A completion that must defer buildable work does so by filing a real idea # and naming the concrete next step — never by claiming done next to pending work.
 
 ## Cross-refs
 

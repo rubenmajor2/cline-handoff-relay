@@ -2,6 +2,12 @@
 
 Permanent hardfloor rule. Workspace-scoped. Source: 2026-07-10 Ruben directive — "All Cline Agents MUST leverage/use Orchestrator/Executor to speed up processing of tasks during iteration," + "come back at the end of the task to cleanup any tasks sent to orchestrator/executor." Promoted to hardfloor + rewritten for obedience 2026-07-10.
 
+## GATE A0 — BUILD-HERE-FIRST (2026-08-15 Ruben directive, supersedes any offload instinct)
+
+**"The entire point of rule 267 was to get things in-window deployed quicker as well as to ensure executor ideas are working."** Offloading is a SPEED lever, not a deferral lever. Before ANY `create_idea`/`idea_promote_and_run` on work THIS window has the tools to finish, run the binary test: *"Can I build and verify this here in fewer tool calls than it takes to file+promote+reconcile it?"* If YES (almost always true for single-file patches, guards, crons, tests) → BUILD IT HERE, then file the idea AFTER with status='deployed' as the record. Approving-instead-of-building was called out live 3 times on 2026-08-15: filing #26591/#26593 with promote_and_run when both were buildable in-window in under 10 calls each. The executor queue runs at cap 3 workers vs 60+ eligible ideas — an in-window build beats the queue by hours. Offload (GATE A below) is ONLY for work that is genuinely parallel to your critical path AND that you could not finish faster yourself.
+
+**Executor-doctor duty (quasi Frankenstein Doctor):** every GATE B reconcile that returns `[unknown]`, a blank status, or an idea stuck idle >24h after promotion is evidence of executor pathology, not just a tagging problem. Run `php /var/www/emtskills/cron/cron_executor_doctor.php --dry-run` (repairs orphan shapes: approved+blank dev_stage; blank status+active dev_stage — the live promote_and_run status-blanking bug), fix or run it live, and record what it found. A reconcile that surfaces pathology and does not run the doctor is an incomplete reconcile.
+
 ## GATE A — Offload gate (MID-TASK, fires when you're about to do 2+ similar inline operations)
 
 **The 3-question offload test (run this EVERY TIME you're about to do 2+ similar operations inline):**
@@ -16,9 +22,9 @@ Permanent hardfloor rule. Workspace-scoped. Source: 2026-07-10 Ruben directive �
 
 This gate fires at a mechanically-detectable moment: the instant you catch yourself about to loop over N similar items inline, or about to do a second operation of the same type when the first's result isn't needed for the second. That is the trigger. Offload, don't serialize.
 
-### GATE A3 — Environment-blocker offload (Cline shell can't, executor's shell might)
+### GATE A3 — Environment-blocker offload
 
-If a sub-task fails because a binary/tool isn't on PATH in Cline's non-interactive shell (`command -v brew`/`node`/etc. → not found) — **do NOT repeatedly retry the same failing command.** This is an environment mismatch, not a logic bug, and it's a valid Gate-A trigger on its own: the executor runs its own shell context (often with a full login PATH, different user, or root) and may resolve what Cline's shell cannot. Offload the blocked sub-task via `create_idea` rather than looping on `command not found`.
+Cline-shell `command not found` on a needed binary = environment mismatch, a valid Gate-A trigger. Offload via `create_idea` instead of looping. Full text: `Rules-archive/267-case-law.md`.
 
 ### GATE A2 — Active drive-to-execution (optional, after `create_idea`)
 
@@ -35,35 +41,19 @@ Use when: the work is autonomous-tier AND immediate execution materially speeds 
 
 **Use `reconcile_ideas(idea_ids: [...])`** (ruben-orchestrator MCP, shipped 2026-07-25 per #19173). ONE call over N ids, and it derives the rule-109 tag SERVER-SIDE from (status, dev_stage) so you never hand-derive a tag and get it wrong. Output is paste-ready for the pickup prompt. Do NOT loop `get_idea_progress` per idea: state goes stale between calls, and on 2026-07-25 that produced 6 wrong dispositions out of 39, including a P0 disk-migration idea reported live when it had already been rejected.
 
-Classify each filed idea from the reconcile return, then map it VERBATIM to the rule-91 disposition tag:
-
-| Reconcile return (live executor state) | Rule-91 tag | Ruben reads this as |
-|---|---|---|
-| executed + you verified it ran in prod | `[deployed]` | Done — thread closed |
-| in_progress / dev stage / build running | `[executing]` | Executor owns it — thread closed |
-| approved but not yet picked up by cron | `[queued]` | Will run on its own — thread closed, check later |
-| failed / impl_failed / stuck | `[blocked]` — name the unblocker | ACT — fix inline (rule 29) or re-file |
-| proposed / not yet approved | `[proposed]` | ACT — approve/reject or promote |
-| rejected | `[rejected]` | Thread closed — dismissed |
-| superseded by a newer idea | `[superseded]` | Thread closed — see successor |
+Map each reconcile return VERBATIM to the rule-91 tag: deployed→`[deployed]`, building→`[executing]`, failed/stuck→`[blocked]` (name the unblocker), proposed→`[proposed]`, rejected→`[rejected]`, superseded→`[superseded]`. (`[queued]` is banned per rule 161.)
 
 **The tag in the rule-91 pickup prompt MUST match the reconcile return.** Drift between the reconcile return and the pickup-prompt tag is a GATE B violation. If you cannot run the reconcile call (tool gap below) you may NOT fall back to `[approved:autonomous]` silently — tag it `[blocked:reconcile-unavailable]` with the reason so Ruben knows the state is unverified and the thread is NOT closeable.
 
-### Reconcile evidence quoting (prevents fake tags — 2026-07-13 evening)
+### Reconcile evidence quoting (prevents fake tags)
 
-Every idea reconciled this session MUST carry a `(verified: ...)` parenthetical in the pickup prompt next to its disposition tag, quoting what the reconcile tool actually returned. Format: `#17537 [rejected] (verified: decision_action returned "superseded by manual implementation")`. The parenthetical is the proof that a reconcile call actually ran and determined this state — it prevents agents from writing `[deployed]` or `[rejected]` as a guess without verifying.
-
-**The parenthetical is REQUIRED for ideas filed or reconciled this session.** For ideas carried forward from prior sessions (where the tag was produced by a prior reconcile and you are NOT re-reconciling), the parenthetical is optional but the tag still must appear.
+Every idea reconciled this session MUST carry a `(verified: ...)` parenthetical next to its tag quoting the reconcile return. Required for session-filed/reconciled ideas; optional for carried-forward tags. Rationale + format: `Rules-archive/267-case-law.md`.
 
 ### Bare idea numbers are a self-fail
 
 If ANY field of the `result` (not just the pickup prompt block) mentions a `#NNNN` without a disposition bracket, GATE B is violated. This includes prose descriptions, "Where we left off" bullets, parentheticals, and cross-references. The rule-91 TAG-SCAN GATE is the mechanical enforcement for this. If the agent ships a bare idea number, it did not run the rule-29 pre-completion audit step 5, and the `attempt_completion` is invalid.
 
-**`[approved:autonomous]` is banned in a final pickup prompt.** It is a mid-task-only fallback (right after `idea_action(approve)`, before the build pipeline reports back). Before `attempt_completion` it MUST be replaced by one of the verified tags above. The reason: `[approved:autonomous]` is ambiguous between `[executing]` and `[queued]`, and Ruben cannot tell from the tag whether the executor is actively working or just queued — which is the exact gap this gate closes (2026-07-13 Ruben directive, idea #17537 [rejected]).
-
-**Known tool gap:** `get_idea_progress` may return `{"error": "Unknown action"}` (server-side routing bug). Use `list_decisions` or `get_activity_feed`/`list_events` instead. File an idea per rule 266.
-
-**Ruben's closeout test:** reading `#17537 [rejected] [executing]`-style verified tags lets him close the thread with zero re-verification. `[approved:autonomous]` would force another tool call. The verified tag IS the verification.
+**`[approved:autonomous]` is banned in a final pickup prompt** — replace with a verified tag before `attempt_completion`. Tool-gap workarounds + rationale: `Rules-archive/267-case-law.md`.
 
 ## GATE C — Blocked-executor hand-ship
 
@@ -71,26 +61,14 @@ If ANY field of the `result` (not just the pickup prompt block) mentions a `#NNN
 
 ## The anti-abuse gate (do NOT offload these)
 
-1. **The exact thing your `attempt_completion` needs to report as done.** If your completion says "X is [deployed]," X must be done inline or verified-executed, not just filed.
-2. **Human-only decisions** (money, regulator, student-facing comms beyond rule-29 cap) → Q-card/pending per rule 12.
-3. **Trivial work** where dispatch overhead exceeds doing it inline (one SQL update, one file read).
-4. **Exploratory/open-ended discovery** — "help me figure out what I even need to look at." See below.
-
-## Exploratory discovery is inline-only — never offloaded
-
-The discovery/scoping phase (you don't yet know the table, query shape, or pattern) is NOT an independent sub-unit — it's the thing that DEFINES the sub-units. The executor runs a fire-and-forget chain against a FIXED plan with no channel back to you mid-chain.
-
-**The test:** before offloading, ask "do I already know the boundaries of this sub-unit (table, query shape, file, exact fix), or am I still forming the question?" Forming the question → keep inline, iterate fetch→read→refetch yourself. Boundaries known → offload. This mirrors rule 00's identical carve-out for synchronous subagents.
+1. The exact thing your `attempt_completion` reports as done — must be done inline or verified-executed, not just filed.
+2. Human-only decisions (money, regulator, student comms beyond rule-29 cap) → Q-card per rule 12.
+3. Trivial work (one SQL update, one file read).
+4. Exploratory discovery — still forming the question (table/query/file unknown)? Inline. Boundaries known? Offload. Full text: `Rules-archive/267-case-law.md`.
 
 ## Distinguish from Rule 00 (subagents)
 
-| | Rule 00 subagents | This rule (Orchestrator/Executor) |
-|---|---|---|
-| Model | Synchronous, in-window, parent waits | Asynchronous, cron-driven, fire-and-continue |
-| Use when | You need the result back NOW | The sub-unit doesn't block your next step |
-| Data access | Local files/shell only (fetch-then-paste) | Full server/DB/MCP via executor's own stack |
-
-Use subagents when you need the result inline. Use Orchestrator/Executor when the sub-unit is independent of your critical path and can finish later.
+Subagents = synchronous, in-window, local-files-only, use when you need the result NOW. Orchestrator/Executor = async, cron-driven, full server/DB/MCP stack, use when the sub-unit doesn't block your next step.
 
 ## Self-checks
 
@@ -122,7 +100,7 @@ Don't fire more offloaded ideas than you can reconcile. If you fire 40 ideas, yo
 
 ## Last updated
 
-2026-07-25 — trimmed for G7 12KB hardfloor cap (idea #19125). Full dated changelog + case law: `Rules-archive/267-case-law.md`.
+2026-08-15 — GATE A0 build-here-first + executor-doctor duty added (Ruben directive); A3/reconcile-quoting/exploratory sections trimmed to archive pointers for G7 cap. Prior: 2026-07-25 trim (idea #19125). Case law: `Rules-archive/267-case-law.md`.
 
 ## GATE C — Approved-idea auto-promotion (TO THE VERY TOP of Executor/Orchestrator)
 

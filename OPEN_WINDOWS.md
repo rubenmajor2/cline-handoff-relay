@@ -6,14 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/15/2026, 2:45:05 PM PT | window: last 72h | 86 tasks | index total 741 (parsed 0, cached 741)
+Generated: 8/15/2026, 3:45:06 PM PT | window: last 72h | 85 tasks | index total 745 (parsed 7, cached 738)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1786817395147` | 8/15/2026, 3:44:36 PM | 377 | 2557KB | #Call Backs / VAPI |
+| `1786831867073` | 8/15/2026, 3:42:30 PM | 126 | 313KB | #Joshua / Denali Scenario |
+| `1786832584504` | 8/15/2026, 3:39:32 PM | 105 | 279KB | #Externship |
+| `1786832177865` | 8/15/2026, 3:36:49 PM | 160 | 352KB | #SLS ish |
+| `1786782096117` | 8/15/2026, 3:33:23 PM | 564 | 5232KB | #Email Agent |
+| `1786824274829` | 8/15/2026, 3:27:14 PM | 256 | 888KB | frankenstein-llm seems to be having some intermittent connectivity issues. Not sure the ca |
+| `1786832279730` | 8/15/2026, 3:20:11 PM | 19 | 112KB | #Externships |
 | `1786820106387` | 8/15/2026, 2:07:52 PM | 360 | 935KB | Why does Vicky send me this? -> Making a followup on Sam Nelson’s final exam I was able to |
-| `1786817395147` | 8/15/2026, 1:34:17 PM | 318 | 2249KB | #Call Backs / VAPI |
-| `1786824274829` | 8/15/2026, 1:25:37 PM | 178 | 639KB | frankenstein-llm seems to be having some intermittent connectivity issues. Not sure the ca |
-| `1786782096117` | 8/15/2026, 1:16:58 PM | 510 | 5020KB | #Email Agent |
 | `1786823554800` | 8/15/2026, 1:07:50 PM | 19 | 1208KB | #Argus |
 | `1786818491154` | 8/15/2026, 1:03:24 PM | 300 | 642KB | #Joshua Hot FAllover |
 | `1786821833685` | 8/15/2026, 12:40:19 PM | 93 | 270KB | #SSS / Virtual LoRA2 / Efficiency |
@@ -91,15 +95,263 @@ Generated: 8/15/2026, 2:45:05 PM PT | window: last 72h | 86 tasks | index total 
 | `1786571428672` | 8/12/2026, 4:54:06 PM | 375 | 579KB | Can you tell me if chat widget is functioning properly now. Just read the last 10 chats an |
 | `1786573125988` | 8/12/2026, 4:46:28 PM | 355 | 3271KB | Please tell me if this is wrong? And if so why and what is going on? |
 | `1786566874767` | 8/12/2026, 4:08:22 PM | 310 | 2014KB | Curious on this chat. How does a student pass the final exam and then LATER have to schedu |
-| `1786559840071` | 8/12/2026, 3:39:55 PM | 308 | 2808KB | #Externship Email CFA |
-| `1786569674119` | 8/12/2026, 3:37:54 PM | 148 | 2188KB | Why is there no CFA logic/tools for this? Check -> https://emsuniversity.com/emtskills/rou |
-| `1786571828988` | 8/12/2026, 3:33:06 PM | 86 | 518KB | For the SBA Loan we are going for. Cna you answer all the questions you can in-line? The r |
-| `1786570197616` | 8/12/2026, 3:13:54 PM | 114 | 1041KB | Thsi person keeps reaching out. What's the issue? is the CFA getting it right? |
-| `1786472732313` | 8/12/2026, 2:46:31 PM | 436 | 1339KB | #TDSHS |
 
 ---
 
 ## Per-window detail
+
+### `1786817395147` — 8/15/2026, 3:44:36 PM PT — 377 turns
+
+**Original task:**
+
+```
+#Call Backs / VAPI
+
+How are callbacks going now?
+
+You know I'm just curious if there's some improvements that have been made genetically since we started a couple of months ago with VAPI? Seems like there should be are using the latest software or updates? Can you check with the community to see? I just wanna make sure.
+
+Also tell me what's going on with this ? And why did you offer Vicky an extension draft letter? When did I say that was OK? I know we were working on some stuff in a different window for extern chips just give me some information here -> 1. The 14 students need a placement or 
+```
+
+**Ideas referenced:** #12018, #12584, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #16844, #16874, #17130 [superseded], #1745, #18132 [deployed], #18316, #19125, #19173, #23133, #2323, #2328, #23340, #2341, #2343, #2344, #23989, #24645, #2511, #25701, #25706, #25707, #25943, #25945, #25946, #25968, #25969, #25986, #25989, #26066, #26068, #26203 [deployed], #26206 [deployed], #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26259 [deployed], #26260 [deployed], #26261 [deployed], #26266 [executing], #26267 [executing], #26270, #26296, #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26504 [approved], #26508 [proposed], #26509 [proposed], #26511 [deployed], #26513 [deployed], #26591, #26593, #26618 [deployed], #26619 [proposed], #26621 [proposed], #26643 [proposed], #26644 [proposed], #26645 [proposed], #3261, #3319, #3346, #6172, #6978, #9042, #9159, #9222, #9501
+
+**Last PICKUP PROMPT:**
+
+```
+ed] instead of executing blind
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #26618 [deployed], Vapi upgrade + frankenstein-llm route-leak hand-off.
+
+Where we left off (verified 2026-08-15 13:33 PT):
+- Vapi CS (5 agents) + Sales upgraded to latest: 5x anthropic/claude-sonnet-5 + Vapi Voices v2, Sales openai/gpt-5.5 + vapi/Elliot/v2. Verified by GET (org 46666ee6).
+- Handoff-number guard deployed in api/voice/vapi_server_webhook.php line 536 (HANDOFF-NUMBER-GUARD), php -l clean. Bookings 165/181/185/188 annotated.
+- Verified our webhook only calls litellm model `frankenstein-llm` (line 991); Vapi brain resolves in Vapi cloud and is Vapi-billed, NOT our ANTHROPIC_API_KEY.
+- Route-leak evidence handed to recovery window: ops/frankenstein_llm_route_leak_findings_20260815.md (aliases claude-haiku-4-5/claude-opus/sonnet-5 -> paid anthropic; audit-first callers ticket_autospec.php:988/1396, PredispatchRevival, RubenExecutor, cron_ai_grading; /app vs /etc config path question).
+- This window made zero changes to litellm; config mtime 13:01:11 root belongs to the recovery window.
+
+Open threads to drive next:
+1. #26643 [proposed] — patch remaining Vapi assistants (VADER, Commander Data, Patient Interview Base, EMD Call Simulator, Riley) to latest, BUT hold for Ruben's explicit OK on Vapi Sonnet billing posture first. Enumerate full assistant list via GET /assistant first.
+2. #26645 [proposed] — confirm /app/config.yaml is a bind-mount of /etc/litellm/config.yaml BEFORE the recovery window edits; if separate files, alias map reads were against the wrong file.
+3. #26644 [proposed] — fix canary mirror INSERT (lib/ruben_tng_voice_canary.php:435 references missing `source` column in voice_call_log); map to real schema (call_id, caller_phone, vapi_assistant_id, outcome) or drop the mirror.
+4. #26621 [proposed] — record this session's reversal (Vapi/Sonnet wrongly conflated with internal Anthropic billing) in the 317 log.
+5. #26618 [deployed] — watch next 24h for +19412943388 recurrence on voice_ai bookings to confirm the guard holds.
+
+Reference IDs:
+- Filed this session: #26618 [deployed], #26619 [proposed], #26621 [proposed], #26643 [proposed], #26644 [proposed], #26645 [proposed]
+- Files touched: api/voice/vapi_server_webhook.php (guard), ops/frankenstein_llm_route_leak_findings_20260815.md (new), /tmp/sales_assistant_full.json, /tmp/sales_model_body.json
+- Recovery window owns: /etc/litellm config, litellm restart, claude-alias removal
+
+Append to cline_task_ledger.md per rule 07, then run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786831867073` — 8/15/2026, 3:42:30 PM PT — 126 turns
+
+**Original task:**
+
+```
+#Joshua / Denali Scenario
+
+So what now then? Am I good to go hiking for a week on Denali?? Besides the grizzlies and the cold of course...
+
+--
+Let me answer the confusion directly, because I gave you a worse answer than the situation deserved. Then the Denali scenario, which is now mostly built.
+
+# What I meant by "one witness away", and why I was over-cautious
+
+The classic problem with two machines: when the standby stops hearing from the writer, it cannot distinguish a dead peer from a dead link. Guess wrong, promote anyway, and you have two writers with diverging data. The textbook fix is a
+```
+
+**Ideas referenced:** #25185, #26007 [deployed], #26008 [executing], #26009 [deployed], #26017 [proposed], #26019 [deployed], #26023 [executing], #26024 [deployed], #26068 [deployed], #26069 [deployed], #26070 [deployed], #26076 [executing], #26077 [executing], #26604 [deployed], #26614 [deployed], #26631 [deployed], #26667 [deployed], #26668 [deployed], #26669 [executing]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786832584504` — 8/15/2026, 3:39:32 PM PT — 105 turns
+
+**Original task:**
+
+```
+#Externship
+
+Really irritating I just opened this externship window and it just closed out on me for no reason. Try to pick up where you left off
+
+Also, I made a note about emails that I had seen go out to students who had date selected that were past September which I found to be odd because I don't even know how that was possible considering what we are doing. There needs to be some type of mitigation and identification for the students and I'd like to know what you have to offer for those. Calendar or requests for extern chips should not go beyond September 1. I'm not sure how that happened
+```
+
+**Ideas referenced:** #178649, #19966, #23014, #23337, #23392, #24230, #24430, #24431, #25185, #25432, #25433, #25434, #25510, #25522, #25549, #25619, #25771, #25796, #25822 [deployed], #25889 [awaiting_review], #25916 [awaiting_review], #25932 [deployed], #25950 [awaiting_review], #25973 [awaiting_review], #25983, #26002 [awaiting_review], #26006, #26027 [awaiting_review], #26053 [deployed], #26066 [superseded], #26067 [deployed], #26071 [executing], #26089 [deployed], #26661 [proposed], #26663 [proposed], #28584, #54145, #5447, #56298, #56573, #56754
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786832177865` — 8/15/2026, 3:36:49 PM PT — 160 turns
+
+**Original task:**
+
+```
+#SLS ish
+
+Rebase. . What's left to do here? A lot has changed since we created this task
+
+--
+Both approved ideas are implemented and live-verified. And yes, rule 317 made real changes to the earlier iteration, not just a written apology. Evidence below.
+
+# Reversal Log
+- Root cause is "bogus sessions appeared from nowhere" -> Root cause is the generator never validates day-of-week: parseMeetingTimes() extracts clock times and DISCARDS day names, and the pre-existing smoke test checks only the start HOUR | unread source | fixed in cron_attendance_sessions.php, causal rule filed and shipped as r
+```
+
+**Ideas referenced:** #1144, #24323, #25185, #25938 [deployed], #25942 [deployed], #25944 [deployed], #26660 [deployed], #26662 [deployed], #26664 [deployed], #26665 [executing], #360135, #6106
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786782096117` — 8/15/2026, 3:33:23 PM PT — 564 turns
+
+**Original task:**
+
+```
+#Email Agent
+
+I tried correcting this issue earlier and it did not take. Pleaser resolve durably. Also I noticed there is no 
+
+Best Regards,
+
+Customer Service
+
+EMS University, LLC d.b.a. EMS Universal Education
+
+(800) 728-0209
+
+This is an automated response which can sometimes make mistakes. A member of our team may follow up if needed.
+
+that should be resolved.
+```
+
+**Ideas referenced:** #12356, #13977, #14743, #15227, #15670, #15904, #16606, #16732, #174512, #19437, #2328, #23378, #2341, #2343, #2344, #23710, #24990, #2511, #25185, #25238, #25240, #25241, #25242, #25313, #25316 [deployed], #25364 [executing], #25795, #25943, #25989, #26068, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26320, #26336, #26339, #26348, #26368, #26435, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26525 [executing], #26586 [proposed], #26597 [deployed], #26600 [proposed], #26659 [proposed], #3261, #3319, #3346, #4930, #4958, #4991, #5095, #5795, #6106, #6228, #7206, #7207, #7907, #8103, #8151 [deployed], #856404
+
+**Last PICKUP PROMPT:**
+
+```
+m dashes, direct answers only.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up Email Agent corrective work for the Aoki international-student thread and the remaining auto-ticket factory sweep.
+
+Where we left off (verified 2026-08-15 15:32 PT):
+- Duplicate Detection System ticket factory removed from StudentLifecycle::detectNameDuplicate() (lib/StudentLifecycle.php; backup .bak-20260815-dedup-ticket-removal). Idea #26586 [deployed].
+- 9 "Potential Duplicate Registration" noise tickets retired (status closed, annotated, audit kept). Open/Pending count now 0.
+- International-student answer + MIME From-name decode + circular-redirect fix all live. Ideas #26525 [deployed], #26597 [deployed].
+- Ownership audit correction: real owner column is assigned_to_user_id; assigned_owner is vestigial (NULL everywhere). Do not use assigned_owner.
+
+Open threads to drive next (every item filed with a real idea number):
+1. #26600 [proposed] — Send corrective reply to Taro Aoki (bmclub@mac.com)? Requires Ruben sign-off. If approved, reply via the externship-team-confirm path, not info@emsuniversity.com.
+2. #26659 [proposed] — General sweep of system-created ticket sources (RUBEN Orchestrator watchdog, Voice AI Repeat-Caller, Declined Payment Monitor, Promise Deadman, Moodle Quiz Scanner Bridge, EMSU Voice Gate): route CFA-solvable work to resolvers instead of tickets, retire genuine orphans. Verify assigned_to_user_id before retiring.
+
+Reference IDs:
+- Tickets retired: TKT-20260815-331FCD0E, TKT-20260814-D134242F, TKT-20260814-DD289C7A, TKT-20260814-62DCDB73, TKT-20260803-37BFE295, TKT-20260729-900D7693, TKT-20260725-A9BB6CF6, TKT-20260722-E7F375BB, TKT-20260722-5B5A35EB
+- Ideas filed: #26525 [deployed], #26586 [deployed], #26597 [deployed], #26600 [proposed], #26659 [proposed]
+- Correction record: ai_learned_corrections #8151 (completion_scope_error)
+- Files touched: lib/StudentLifecycle.php, lib/emsu_knowledge_base.php, cron/cron_email_responder.php, lib/ai_ticket_agent_first_touch.php, docs/317-reversal-corrections.md, cline_task_ledger.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786824274829` — 8/15/2026, 3:27:14 PM PT — 256 turns
+
+**Original task:**
+
+```
+frankenstein-llm seems to be having some intermittent connectivity issues. Not sure the cause. Can you take a look and resolve? 
+
+--
+{"message":"terminated","code":"UND_ERR_SOCKET","modelId":"frankenstein-llm","providerId":"litellm"}
+
+--
+read also for reference/baseline: 
+
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
+
+
+Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
+
+## Where 671 came from, and it is now durable
+
+Written to 
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16732, #16844, #17300, #178682, #18312, #18326, #22726, #22871, #2299, #23133, #23171, #2328, #2341, #2343, #2344, #25097, #2511, #2513 [deployed], #25185, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26638 [proposed], #26639 [proposed], #26640, #26642 [proposed], #3261, #3319, #3346
+
+**Last PICKUP PROMPT:**
+
+```
+ incident 2513 resolution text
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786824274829 — frankenstein-llm connectivity restored (probe: frankenstein_verify_routing HTTP 200 at 13:09 PT), PHP claude-haiku model names replaced with frankenstein-llm (probe: 0 claude refs), watchdog assembled + cron active (probe: test run TEST_OK at 15:16 PT).
+
+Where we left off (2026-08-15 15:17 PT):
+- frankenstein-llm connectivity recovered via docker restart litellm (probe: 4 workers up, 0 socket errors, HTTP 200 routing)
+- PHP agents updated: claude-haiku/sonnet/opus replaced with frankenstein-llm in 3 files (probe: 0 claude refs, php -l clean)
+- LiteLLM worker-health watchdog assembled: /usr/local/bin/emsu_litellm_worker_watchdog.sh + cron /etc/cron.d/emsu_litellm_worker_watchdog (probe: test run passed, no log entries = healthy)
+- All 3 ideas promoted + efficiency_priority=1 set (probe: UPDATE returned Rows affected: 3)
+- Bug library incident 2513 [resolved] recorded
+- #26638 [deployed] watchdog assembled in-window (reconcile: status=deployed dev_stage=ready_for_review)
+
+Open threads to drive next:
+1. #26639 [executing] — LiteLLM TypeError upstream patch (P2). In executor queue, pending assembly. (probe: reconcile_ideas returned status=in_progress dev_stage=idle)
+2. #26642 [executing] — PHP agent /v1/messages to /v1/chat/completions endpoint migration (P2). In executor queue, pending assembly. (probe: reconcile_ideas returned status=in_progress dev_stage=idle)
+
+Reference IDs:
+- Ideas filed: #26638 [deployed]
+- Bug library: incident 2513 [resolved]
+- Files touched: config/anthropic_routing.php, agents/agent_message_handler.php, cron_vapi_uncategorized_reclassifier.php (.bak-26640), /usr/local/bin/emsu_litellm_worker_watchdog.sh (new), /etc/cron.d/emsu_litellm_worker_watchdog (new)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] frankenstein-llm UND_ERR_SOCKET connectivity resolved (docker restart litellm)
+- [x] PHP agents claude-haiku replaced with frankenstein-llm (3 files, Rule 146 compliance)
+- [x] Worker-health watchdog deployed (#26638 [deployed])
+- [x] Bug library incident 2513 recorded
+- [x] All 3 ideas promoted + efficiency_priority=1 set
+- [x] Claude confirmed vision-doorman only (Rule 146 — was never the problem)
+- [x] #26639 [executing] in executor queue (TypeError upstream patch)
+- [x] #26642 [executing] in executor queue (endpoint migration)
+</task_progress>
+</attempt_completion>
+```
+
+### `1786832279730` — 8/15/2026, 3:20:11 PM PT — 19 turns
+
+**Original task:**
+
+```
+#Externships
+
+I agree with your plan. I might change it a little bit but I agree with it. It does touch a lot of systems though so I do have concerns because I wanna make sure that is implemented properly and takes in consideration everything, including CFA communication as well as SMS messages emails and other places. 
+
+--
+Went through the outboxes. Three findings, one fix shipped tonight, and the mitigation package restated with how to actually put it through.
+
+## 1. What the outboxes show about how hours get scheduled
+
+Last 60 days: 1,734 externship emails from info@emsuniversity.com plus 4
+```
+
+**Ideas referenced:** #178649, #18944, #18951, #25822 [deployed], #25889 [awaiting_review], #25916 [awaiting_review], #25932 [deployed], #25950 [awaiting_review], #25973 [awaiting_review], #26002 [awaiting_review], #26027 [awaiting_review], #26053 [deployed], #26066 [superseded], #26067 [deployed], #26071 [executing], #26089 [deployed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786820106387` — 8/15/2026, 2:07:52 PM PT — 360 turns
 
@@ -146,196 +398,6 @@ Reference IDs:
 - Files touched: /var/www/emtskills/cron/cron_argus_repair_worker.php, /var/www/emtskills/lib/argus_action_catalog.php, /etc/cron.d/emsu-argus-repair-worker, admin_portal.vw_Student_Skills_Summary, admin_portal.argus_action_permissions
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786817395147` — 8/15/2026, 1:34:17 PM PT — 318 turns
-
-**Original task:**
-
-```
-#Call Backs / VAPI
-
-How are callbacks going now?
-
-You know I'm just curious if there's some improvements that have been made genetically since we started a couple of months ago with VAPI? Seems like there should be are using the latest software or updates? Can you check with the community to see? I just wanna make sure.
-
-Also tell me what's going on with this ? And why did you offer Vicky an extension draft letter? When did I say that was OK? I know we were working on some stuff in a different window for extern chips just give me some information here -> 1. The 14 students need a placement or 
-```
-
-**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #16844, #17130 [superseded], #1745, #18132 [deployed], #18316, #19125, #19173, #23133, #2323, #2328, #23340, #2341, #2343, #2344, #23989, #24645, #2511, #25701, #25706, #25707, #25943, #25945, #25946, #25968, #25969, #25986, #25989, #26066, #26068, #26203 [deployed], #26206 [deployed], #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26259 [deployed], #26260 [deployed], #26261 [deployed], #26266 [executing], #26267 [executing], #26270, #26296, #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26504 [approved], #26508 [proposed], #26509 [proposed], #26511 [deployed], #26513 [deployed], #26591, #26593, #26618 [deployed], #26619 [proposed], #26621 [proposed], #26643 [proposed], #26644 [proposed], #26645 [proposed], #3261, #3319, #3346, #6172, #9042, #9159, #9222, #9501
-
-**Last PICKUP PROMPT:**
-
-```
-ed] instead of executing blind
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #26618 [deployed], Vapi upgrade + frankenstein-llm route-leak hand-off.
-
-Where we left off (verified 2026-08-15 13:33 PT):
-- Vapi CS (5 agents) + Sales upgraded to latest: 5x anthropic/claude-sonnet-5 + Vapi Voices v2, Sales openai/gpt-5.5 + vapi/Elliot/v2. Verified by GET (org 46666ee6).
-- Handoff-number guard deployed in api/voice/vapi_server_webhook.php line 536 (HANDOFF-NUMBER-GUARD), php -l clean. Bookings 165/181/185/188 annotated.
-- Verified our webhook only calls litellm model `frankenstein-llm` (line 991); Vapi brain resolves in Vapi cloud and is Vapi-billed, NOT our ANTHROPIC_API_KEY.
-- Route-leak evidence handed to recovery window: ops/frankenstein_llm_route_leak_findings_20260815.md (aliases claude-haiku-4-5/claude-opus/sonnet-5 -> paid anthropic; audit-first callers ticket_autospec.php:988/1396, PredispatchRevival, RubenExecutor, cron_ai_grading; /app vs /etc config path question).
-- This window made zero changes to litellm; config mtime 13:01:11 root belongs to the recovery window.
-
-Open threads to drive next:
-1. #26643 [proposed] — patch remaining Vapi assistants (VADER, Commander Data, Patient Interview Base, EMD Call Simulator, Riley) to latest, BUT hold for Ruben's explicit OK on Vapi Sonnet billing posture first. Enumerate full assistant list via GET /assistant first.
-2. #26645 [proposed] — confirm /app/config.yaml is a bind-mount of /etc/litellm/config.yaml BEFORE the recovery window edits; if separate files, alias map reads were against the wrong file.
-3. #26644 [proposed] — fix canary mirror INSERT (lib/ruben_tng_voice_canary.php:435 references missing `source` column in voice_call_log); map to real schema (call_id, caller_phone, vapi_assistant_id, outcome) or drop the mirror.
-4. #26621 [proposed] — record this session's reversal (Vapi/Sonnet wrongly conflated with internal Anthropic billing) in the 317 log.
-5. #26618 [deployed] — watch next 24h for +19412943388 recurrence on voice_ai bookings to confirm the guard holds.
-
-Reference IDs:
-- Filed this session: #26618 [deployed], #26619 [proposed], #26621 [proposed], #26643 [proposed], #26644 [proposed], #26645 [proposed]
-- Files touched: api/voice/vapi_server_webhook.php (guard), ops/frankenstein_llm_route_leak_findings_20260815.md (new), /tmp/sales_assistant_full.json, /tmp/sales_model_body.json
-- Recovery window owns: /etc/litellm config, litellm restart, claude-alias removal
-
-Append to cline_task_ledger.md per rule 07, then run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786824274829` — 8/15/2026, 1:25:37 PM PT — 178 turns
-
-**Original task:**
-
-```
-frankenstein-llm seems to be having some intermittent connectivity issues. Not sure the cause. Can you take a look and resolve? 
-
---
-{"message":"terminated","code":"UND_ERR_SOCKET","modelId":"frankenstein-llm","providerId":"litellm"}
-
---
-read also for reference/baseline: 
-
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
-
-## Where 671 came from, and it is now durable
-
-Written to 
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16732, #16844, #17300, #178682, #18312, #18326, #22726, #22871, #2299, #23133, #23171, #2328, #2341, #2343, #2344, #25097, #2511, #2513 [deployed], #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26638 [proposed], #26639 [proposed], #26640, #26642 [proposed], #3261, #3319, #3346
-
-**Last PICKUP PROMPT:**
-
-```
- incident 2513 resolution text
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786824274829 — frankenstein-llm UND_ERR_SOCKET connectivity resolved (verified: frankenstein_verify_routing HTTP 200 backend=frankenstein-tools 3.7s 0 retries at 13:09 PT), PHP agent claude-haiku model fix deployed (verified: grep -c claude = 0 in all 3 files, php -l clean).
-
-Where we left off (verified 2026-08-15 13:24 PT):
-- frankenstein-llm UND_ERR_SOCKET FIXED via docker restart litellm (verified: 4 workers up, 0 socket errors, HTTP 200 routing)
-- PHP agents fixed: claude-haiku/sonnet/opus replaced with frankenstein-llm in 3 files (verified: 0 claude refs, php -l clean)
-- FPM reload on cooldown — changes pick up on next reload
-- Bug library incident 2513 [resolved] recorded
-- #26638 [proposed] filed for PG pool auto-restart watchdog (verified: reconcile_ideas status=proposed dev_stage=idle)
-- #26639 [proposed] filed for LiteLLM TypeError upstream bug fix (verified: reconcile_ideas status=proposed dev_stage=idle)
-- #26642 [proposed] filed for /v1/messages to /v1/chat/completions endpoint migration (verified: reconcile_ideas status=proposed dev_stage=idle)
-
-Open threads to drive next:
-1. #26638 [proposed] — Build the LiteLLM worker-health auto-restart watchdog (P1, prevents future fleet-wide outages)
-2. #26639 [proposed] — Fix the LiteLLM 1.91.1 TypeError upstream bug (P2, upgrade or patch)
-3. #26642 [proposed] — Migrate PHP agents from /v1/messages to /v1/chat/completions endpoint (P2, eliminates broken Anthropic passthrough dependency)
-
-Reference IDs:
-- Ideas filed: #26638 [proposed], #26639 [proposed], #26642 [proposed]
-- Bug library: incident 2513 [resolved]
-- Files touched: config/anthropic_routing.php, agents/agent_message_handler.php, cron_vapi_uncategorized_reclassifier.php (backups .bak-26640)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Check bug library for known UND_ERR_SOCKET / terminated incidents (NOVEL_SYMPTOM)
-- [x] Read handoff notes for current system state
-- [x] Check frankenstein tier health (live probe)
-- [x] Check fleet host probe (decode liveness per box)
-- [x] Check registry (live routing config)
-- [x] Check router audit log for recent routing failures (spill-ladder thrashing confirmed)
-- [x] Check LiteLLM error logs — FOUND: crash-restart loop (TypeError + PG connection exhaustion)
-- [x] Check frankenstein-tools adapter :11510 status (healthy)
-- [x] Check LiteLLM worker count — 0 workers, now restored after restart
-- [x] Restart LiteLLM — workers now up (4 spawn_main processes, startup complete)
-- [x] Read router_hook.py — messages handling is correct (not our bug)
-- [x] Live probe frankenstein-llm — HTTP 200, routing to frankenstein-tools, 0 retries
-- [x] GLM ring stall cleared (1 running, 0 waiting) + 0 socket errors post-restart
-- [x] TypeError still firing (82/2min) but workers stable — root cause is PG exhaustion (cleared)
-- [x] Read hook registration — EmsuRouter extends LiteLLM router, correctly passes data to super()
-- [x] Record in bug library (incident 2513)
-- [x] File idea #26638 — PG pool exhaustion worker-health auto-restart watchdog
-- [x] File idea #26639 — LiteLLM TypeError upstream bug fix
-- [x] Update handoff notes
-- [x] Reconcile ideas (GATE B) — both [proposed]
-- [x] Final verification probe (HTTP 200 confirmed at 13:09 PT)
-- [x] Validate completion — ALL PASSED
-- [x] Check gate —
-```
-
-### `1786782096117` — 8/15/2026, 1:16:58 PM PT — 510 turns
-
-**Original task:**
-
-```
-#Email Agent
-
-I tried correcting this issue earlier and it did not take. Pleaser resolve durably. Also I noticed there is no 
-
-Best Regards,
-
-Customer Service
-
-EMS University, LLC d.b.a. EMS Universal Education
-
-(800) 728-0209
-
-This is an automated response which can sometimes make mistakes. A member of our team may follow up if needed.
-
-that should be resolved.
-```
-
-**Ideas referenced:** #12356, #13977, #14743, #15227, #15670, #15904, #16606, #16732, #174512, #19437, #2328, #2341, #2343, #2344, #23710, #24990, #2511, #25185, #25238, #25240, #25241, #25242, #25313, #25316 [deployed], #25364 [executing], #25795, #25943, #25989, #26068, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26320, #26336, #26339, #26348, #26368, #26435, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26525 [executing], #26586 [proposed], #26597 [deployed], #26600 [proposed], #3261, #3319, #3346, #4930, #4958, #4991, #5095, #5795, #6106, #6228, #7907, #8151 [deployed], #856404
-
-**Last PICKUP PROMPT:**
-
-```
-nd no new ones can be created.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task # — Email Agent duplicate-registration noise: verify no regressions after detectNameDuplicate() ticket removal.
-
-Where we left off (verified 2026-08-15 13:16 PT):
-- lib/StudentLifecycle.php: detectNameDuplicate() no longer creates "Potential Duplicate Registration" tickets or sends the HIGH-confidence alert mail; it logs + returns duplicate_found and hands off to the SLS resolver (cron_resolve_student_duplicate.php every 10 min). php -l clean.
-- 9 Open/Pending noise tickets retired (status Closed, closed_at set, audit trail annotated). 0 remain.
-- Ideas: #26525 [deployed] Hi Duplicate + signature fix; #26586 [deployed] dup-ticket removal; #26597 [deployed] intl-student KB + MIME decode + self-redirect guard; #26600 [proposed] optional corrective reply to Taro Aoki.
-- ai_learned_corrections #8151 (r317_self_contradicting_disposition / completion_scope_error).
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26600 [proposed] — If Ruben says send: compose the corrective reply to bmclub@mac.com using the new INTERNATIONAL STUDENTS KB section (answer YES up front, no I-20, SSN caveats) and send via sendEmail / communication_log insert.
-2. #26525 [deployed] — Spot-check the next real inbound email that hits ai_ticket_agent_first_touch to confirm no "Hi Duplicate," regression and correct first_name parsing.
-
-Reference IDs:
-- Ticket: TKT-20260815-331FCD0E (Diego Rivera, original Hi Duplicate)
-- Ideas filed: #26525 [deployed], #26586 [deployed], #26597 [deployed], #26600 [proposed]
-- Files touched: lib/StudentLifecycle.php (.bak-20260815-dedup-ticket-removal), cron/cron_email_responder.php, lib/emsu_knowledge_base.php, lib/ai_ticket_agent_first_touch.php, docs/317-reversal-corrections.md
-- ai_learned_corrections: #8151
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
@@ -3217,230 +3279,4 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
-```
-
-### `1786559840071` — 8/12/2026, 3:39:55 PM PT — 308 turns
-
-**Original task:**
-
-```
-#Externship Email CFA
-
-Same on requests like this: 
-
-Reply on these types of messages: 
-to set expectations, etc... as i put into argus. Follow also the argus iteration to ensure works properly.
-```
-
-**Ideas referenced:** #0891, #111827, #131967, #13553, #15670, #16178, #1806, #1813, #1818, #20346, #2253, #23276, #23477, #23483, #25156, #25530, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25803 [proposed], #25812, #25821 [proposed], #25822 [awaiting_review], #25889 [ready_for_review], #25932 [ready_for_review], #28584, #2911, #374151, #5447, #6112, #6172, #6230, #7317, #7872, #7906, #7925, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-l work completed this session.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Externship 9/1 email CFA expectations + staff assignment queue (verified 3:39 PM PT 2026-08-12).
-
-Where we left off (verified 3:39 PM PT 2026-08-12):
-- Email CFA fix LIVE: ai_knowledge_packs id=1 items 15 (TODAY-DATE two-regime) + 16 (no stale past-date lead); localGetExternshipInfo is the remaining tool-level cite source (raw created_at) — the knowledge-pack rules now steer it, but a follow-on could hard-block rendered dates in the tool result.
-- Hard floor LIVE: lib/ExternshipKnowledgePack.php expectationsBlock() (date-gated pre/post 9/1) — grep-verified + lint OK + FPM reloaded.
-- #25822 LIVE: lib/externship_assignment_queue.php real-schema rewrite + vw_externship_assignment_queue + cron ran OK + externship_eligibility_status now 434 eligible rows.
-- Ideas updated to deployed: #25822 (staff queue), #25932 (email CFA hard floor).
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #25822 — [deployed] Optional next: staff queue UI/route for Vicky (view + assign buttons hitting assign_externship_placement) and cron scheduling of cron_externship_assignment_queue.php. No new idea needed — extend this one.
-2. #25932 — [deployed] Optional next: patch localGetExternshipInfo (chatbot_tools.php:1528) to suppress rendering the submission date into text (return status + expectations instead). Extend this idea.
-
-Reference IDs:
-- Ticket: email_inbound_log id=131967 (Ezekiel Warren chase)
-- Ideas filed: #25822 [deployed], #25932 [deployed]. Related: #25821 [proposed], #25932
-- Files touched: /var/www/emtskills/lib/ExternshipKnowledgePack.php, /var/www/emtskills/lib/externship_assignment_queue.php, view vw_externship_assignment_queue, ai_knowledge_packs id=1
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786569674119` — 8/12/2026, 3:37:54 PM PT — 148 turns
-
-**Original task:**
-
-```
-Why is there no CFA logic/tools for this? Check -> https://emsuniversity.com/emtskills/routes/nremt_verification_form.php - build them and send over the info if you have it.
-
--- idea would be to send the PDF
-```
-
-**Ideas referenced:** #003366, #004080, #11990, #14749, #16603, #166534, #186576, #18944, #18951, #19921, #212529, #23133, #2321, #23477, #23945, #23954, #25042, #25551, #2563, #25914, #25931, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [deployed], #25944 [deployed], #25983 [deployed], #334155, #360135, #360152, #475569, #64748, #7414, #9086, #9193, #92400, #9269, #9311, #9312
-
-**Last PICKUP PROMPT:**
-
-```
-deployed] filed as the record.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — CFA NREMT verification PDF tooling (Ruben request 2026-08-12).
-
-Where we left off (verified 3:37 PM PT 2026-08-12):
-- Built `lib/NremtVerificationPdfGenerator.php` + CFA tool `send_nremt_verification_pdf` in `api/livechat/chatbot_tools.php`
-- Registered fleet-wide: webhook.php, api/tools.php, CanonicalToolRegistry.php (handlerMap+schema), SMSAIResponder.php, EmailAIResponder.php; VAPI via registry. All `php -l` clean.
-- Smoke-tested: Saya Arriaga PDF on Desktop (71KB, fields verified via pdftotext); TEST-CE-01 full email path (email_sent=true, logged `nremt_verification_pdf`).
-- Idea filed: #25983 [deployed]
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #25983 [deployed] — If Ruben okays it: point `request_nremt_verification` at `send_nremt_verification_pdf` (currently separate tools; request=notify Vicky, send=email PDF to student). Forward to Ruben to confirm intent vs keeping them separate.
-
-Reference IDs:
-- Idea filed: #25983 [deployed]
-- Files touched: lib/NremtVerificationPdfGenerator.php (new), api/livechat/chatbot_tools.php, api/livechat/webhook.php, api/tools.php, lib/CanonicalToolRegistry.php, lib/SMSAIResponder.php, lib/EmailAIResponder.php (+ .bak-20260812-nremt-pdf backups)
-- Artifacts: /Users/rubenmajor/Desktop/NREMT_Skills_Verification_Saya_Arriaga.pdf
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786571828988` — 8/12/2026, 3:33:06 PM PT — 86 turns
-
-**Original task:**
-
-```
-For the SBA Loan we are going for. Cna you answer all the questions you can in-line? The rest we can do elsewhere:
-
--It looks like 2025 year-end financials and 2026 interim financials are accrual based. Since the company’s tax returns are cash based, could we get 2025 company prepared financials and interim 2026 financials that are also cash based?
--Could we get more details surrounding the company? How long are the classes that they offer? When do they collect tuition? What is the enrollment capacity of the schools? What is the company's current enrollment in relation to capacity? Does the co
-```
-
-**Ideas referenced:** #186576, #23133, #2321, #23477, #23945, #23954, #25042, #25551, #25889 [ready_for_review], #25914, #25931, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25977 [proposed], #25978 [proposed], #25979 [proposed], #25980 [proposed], #360135, #360152
-
-**Last PICKUP PROMPT:**
-
-```
-ent/grant funding with finance
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task 26001 — SBA Loan lender Q&A package (company-details + revenue-growth answers drafted in-line).
-
-Where we left off (verified 3:32 PM PT 2026-08-12):
-- Delivered in-line drafts for both lender questions: class lengths (Boot Camp ~44d, Fast Track ~58d, Accelerated ~78d, Regular ~107d), tuition timing ($50 reg fee + QB cohort billing, heaviest May/Jun/Sep), enrollment (7,971 total records; 1,136 distinct students, 244 sections, 13 locations in 2025), government/grant (0 flags across 1,483 QB 2025 invoices), revenue growth (2024: $682,522 billed/$681,722 collected -> 2025: $2,638,905 billed/$2,254,323 collected; +287% billed, +231% collected; sections +481%; locations 6->13), 2026 YTD ~$2.04M billed.
-- Capacity is NOT tracked in DB; per-school capacity must come from Ruben/operations.
-- Ideas filed: #25977, #25978, #25979, #25980 (all [proposed], all need human/accountant input).
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #25977 — Tammy: cash-basis 2025 + interim 2026 financials, file 2025 business/personal tax returns.
-2. #25978 — Lease agreements + operating start date at each of the 11 US sites.
-3. #25979 — Per-school enrollment capacity from operations.
-4. #25980 — Confirm government/grant funding with finance.
-
-Reference IDs:
-- Ideas filed: #25977, #25978, #25979, #25980
-- Tables: Locations, Classes, Class_Enrollments, Students, CoursePricing, qb_invoices, orchestrator_ideas
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786570197616` — 8/12/2026, 3:13:54 PM PT — 114 turns
-
-**Original task:**
-
-```
-Thsi person keeps reaching out. What's the issue? is the CFA getting it right?
-```
-
-**Ideas referenced:** #24526, #25971 [proposed], #4929, #9086, #9168, #9339
-
-**Last PICKUP PROMPT:**
-
-```
-t missing upload in the reply.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #24526 - CFA issue for Avni Madhu (26820FT-05), unable to submit Midterm Eval
-
-Where we left off (verified 2026-08-12 15:00 PT):
-- Ticket #24526 (STU-20260810-7418ED) "Unable to Submit Midterm Eval": confirmed NOT a stuck quiz (SLS stuck_quiz_attempts=PASS, all quiz attempts finished).
-- Real blocker: Midterm Evaluation (feedback id 37, cmid 2926) locked until 16 prereqs complete. 4 FEMA ICS certificate uploads (cmids 2922-2925) are completionstate=NULL, the actual missing items.
-- Exam 5 (quiz 732, cmid 4238) is additionally gated on midterm-eval completion; FEMA ICS 100/200/700/800 quizzes also NO_ATTEMPT.
-- CFA misclassified this as RC-9 stuck_quiz_attempt and looped generic replies (8/11 21:00, 8/12 09:54/13:38); student emailed again on 8/12 11:50 about a lost login.
-
-Open threads to drive next:
-1. #25971 [proposed] - CFA must inspect activity availability-gate JSON and course_modules_completion before defaulting to stuck-quiz RC-9; reply should name the exact missing FEMA certificate upload.
-2. (human-only decision, no idea) - Whether to contact Avni now with the corrected root cause (needs 4 FEMA certificate uploads plus ICS quizzes before midterm eval unlocks); ticket #24526 still In Progress with no action taken.
-
-Reference IDs:
-- Ideas filed: #25971 [proposed]
-- Files touched: none
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Identify student record for avnmad1@gmail.com
-- [x] Check Moodle user state (login/access)
-- [x] Check quiz attempt state (stuck inprogress)
-- [x] Locate CFA email content table
-- [x] Confirm FEMA/Exam 5 gate status (the real blocker)
-- [x] Check midterm evaluation feedback submission state
-- [x] Check exam 5 availability rules (prereq chain)
-- [x] Identify cmid 2926 prereq identity
-- [x] Check midterm eval feedback availability (why can't submit)
-- [x] Determine exact incomplete prereq blocking midterm eval
-- [x] File CFA misdiagnosis idea
-- [x] Report issue + CFA assessment
-</task_progress>
-</attempt_completion>
-```
-
-### `1786472732313` — 8/12/2026, 2:46:31 PM PT — 436 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-I will read the Sunset report and get back to you on that For MANDAMUS NOW -> I need info on that mandamus to give to the attorney to file. I need an email summary, synopsis, the PDFs of every email sent to Open Records with dates/times listed as well as archived emails searched. YOu need to look also at other employees such as Jennifer Copeland (will need to search through email archives / there may be an MCP or process for this to be easier / those arechives are on WOPR cold storage I believe). Check rmajor@emsuniversity.com. Also jthompson@emsuniversity.com also sent requests for up
-```
-
-**Ideas referenced:** #002060, #1379, #17130 [superseded], #17537 [rejected], #178643, #18132 [deployed], #19125, #19173, #2315 [deployed], #2563, #25771 [awaiting_review], #25777 [executing], #444444, #467886, #5090, #600179, #623778, #96607
-
-**Last PICKUP PROMPT:**
-
-```
-tter is heading toward filing.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786433544814 - TDSHS TPIA series, Sunset filing, mandamus package, Richardson correspondence
-
-Where we left off (verified 2026-08-12 14:45 PT):
-- ADVISED AGAINST sending Ruben's drafted personal note to Sabrina Richardson. Reasons, in priority order: (1) the opening line "I have not had a chance to go over your recent correspondence" is a written admission to the investigator that lands in the file and would be quoted against any later late or incomplete response; (2) the workload-burden point already exists in the formal responses with proper aggregate framing and a disclaimer, and repeating it informally strips the framing and leaves an excuse pre-positioned for a future miss; (3) "harmful" is an unsupported characterization of regulator conduct made outside a filing; (4) "I put my time in already" reads on paper as a licensee claiming earned relief from scrutiny; (5) timing is bad because the Sunset filing went out 2026-08-11 and becomes visible to DSHS, so a warm private note immediately after a legislative complaint reads as inconsistent.
-- OFFERED THREE ALTERNATIVES: say it on a phone call (tone carries, nothing quotable, Schmider channel already open); put it in the mandatory Part 0 mission section of the next formal response per rule 302; or send a 3-sentence written version with no admission and no complaint. The short version was drafted and delivered to Ruben, ending with an availability-for-a-call line.
-- FLAGGED: with Harry engaged on the mandamus as of 2026-08-11, informal contact with an active investigator is worth clearing with counsel first.
-- ALL THREE 2026-08-11 SENDS ARE OUT AND CATALOGED. TPIA clarification reply 14:59:30 PT to OpenRecords cc jthompson (Message-ID f48870ec-90f5-4cd9-baf4-5c5c5f942aec@Spark, 43 minutes after their 21:16:08 UTC demand). Sunset public input 14:53:14 PT to sunset@sunset.texas.gov, 639159-byte attachment. Attorney background email 14:23:11 PT to harry@nwslawfirm.com.
-- DB: tpia_request_tracking row 14 status CLARIFICATION ANSWERED SAME DAY (notes 3165 chars, read-back verified). Row 15 SUNSET-PUBLIC-INPUT-2026 status SUBMITTED (verified by SELECT).
-- ARCHIVED WOPR /opt/tdshs_transfer/inbound/: IN_001-IN_007 (DSHS acks), IN_008 (8/11 clarification demand), OUT_009 (reply), OUT_010 (Sunset), OUT_011 (attorney).
-- CLOCK: their 2026-07-29 ack promised notice within 10 business days, due on or about 2026-08-12 (TODAY). Check whether anything arrived. Their demand carried NO 552.222(e) statement of consequences so the 61-day deemed-withdrawal mechanism in 552.222(d) was never armed. DO NOT raise that with the agency; counsel and mandamus record only.
-- Keep matters separate: A07152025.0450008 paid (check 1379, $1,404.00, mailed 2025-07-21), closed 2025-09-26 on claimed non-receipt, mandamus candidate. A07292026.0450006 is a NEW request, same subject matter, period July 15 2025 through July 27 2026, live.
-- OPEN GAP: no written demand for refund of the $1,404.00 appears anywhere in the compiled record.
-- Drive mandamus package verified: https://drive.google.com/drive/folders/1ef4hOLSE7imV92o-fkhKiudxBLn5BffW 45 PDFs, 6 nested subfolders (1/11/19/2/5/7). Does NOT yet include IN_008 or OUT_009.
-- STATUTES VERIFIED LIVE: 552.222(b)(d)(e)(g), 552.301(b)(d)(e)(e-1), 552.11765(a)-(e).
-
-Open threads to drive next:
-1. Decide whether to send the short 3-sentence version to Richardson, say it 
 ```

@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-15T04:28:11.554Z",
+ "generated_at": "2026-08-15T05:28:11.851Z",
  "counts": {
-  "parsed": 4,
-  "reused": 719,
+  "parsed": 0,
+  "reused": 723,
   "failed": 0,
   "total": 723
  },
@@ -128056,17 +128056,18 @@
   },
   "1786754594067": {
    "task_id": "1786754594067",
-   "mtime": 1786768078200,
+   "mtime": 1786769693147,
    "created_at": "2026-08-15T00:43:14.067Z",
-   "last_modified": "2026-08-15T04:27:58.200Z",
-   "size_kb": 2471,
-   "turn_count": 437,
+   "last_modified": "2026-08-15T04:54:53.147Z",
+   "size_kb": 2709,
+   "turn_count": 490,
    "title": "Please epxlain to me why the information here was asked for (student ID, etc...) AND a time of response was promised (when it probably will not be obeyed) when the student ID was already suppleid. The timeline promise was also a violation. it makes me thing the CFA will NOT do anything and will not reply back / deadman. I thought we ALREADY fixed this before. Why is it rearing it's ugly head again? What is the durable fix here? Are there other classes of the same issue? Is this a bug?",
-   "pickup_prompt": "ch cheaper than the 1.3T run).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — CFA shallow-email regression after LoRA retirement, and the chat policy-gate deploy.\n\nWhere we left off (verified 2026-08-14 21:05 PT):\n- Idea #26376 [deployed] — ChatPolicyGuard/ChatPolicyEnforcer deterministic pre-send gate wired into api/chat_widget_api.php line 780 (timeline_promise + identifier_reask + deadman via ActBeforePromiseGate), syntax-verified, unit-tested (7/7 PASS).\n- Idea #26377 [deployed] — canned safe-alternatives in ChatPolicyGuard now timeline-free (\"I am on it and will update you as soon as there is news\", \"I have everything I need\").\n- Idea #26396 [proposed] — 7-day production observation of CFA-POLICY-REWRITE / CFA-DEADMAN-TRACKED markers.\n- Idea #26424 [proposed] — email shallow replies: root cause = LoRA tier removed 17:14 PT; not the CQG gate (408 not-activated / 0 activated); CQG wiring was restored, current cron_email_responder.php = 15:59 normalize ver, syntax OK.\n- Proven route: frankenstein-llm → http://127.0.0.1:11510/v1 (x-litellm-model-api-base, 2026-08-14 20:34 PT).\n\nOpen threads to drive next (ALL need your steer):\n1. #26424 — decision: retrain email-only distil adapter / re-pin email tier / accept base model + prompt-only. No default; routing math + no before/after audit row means correlation, not proof.\n2. #26396 — observe chat gate fires in production; check logs after 48h.\n3. (new) — find surviving adapter weights (checkpoint-377 metadata only so far; search /data and local Mac for adapter_model*.safetensors).\n\nReference IDs:\n- Ideas filed: #26376, #26377 (deployed), #26396, #26424 (proposed)\n- Files touched: /var/www/emtskills/lib/ChatPolicyGuard.php, /var/www/emtskills/api/chat_widget_api.php, /var/www/emtskills/cron/cron_email_responder.php (restored)\n- Backups: ChatPolicyGuard.php.bak-20260814-nonumeric, chat_widget_api.php.bak-20260814-cfachatgate, cron_email_responder.php.bak-20260814-pre-cqg-revert\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "affic sample, now filed below.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #26447 — email agent shallow-reply RCA: prove the Aug 14 fallback-chain collapse caused thin replies, then lock the fix.\n\nWhere we left off (verified 2026-08-14 21:50 PT):\n- LoRA hypothesis withdrawn (no adapter weights exist; Ruben corrected this correctly).\n- `/etc/litellm/config.yaml` fallback chains edited 18:03–18:06 PT by window O: `glm-5.2-local` commented out (`# WINDOW_O_DOWN`) then restored by 21:34 PT. Current config has `glm-5.2-local` active.\n- Email responder serving path unchanged: `frankenstein-llm` → frankenstein-tools adapter (:11510) → glm-5.2-local Hexarchy ring.\n- CQG gate ruled out (0 activations / 408 \"not activated\" in `/var/log/emsu_email_responder.log`).\n- Claude-side fixes already shipped: chat pre-send policy gate in `api/chat_widget_api.php` + `ChatPolicyGuard` timeline/identifier detectors (ideas #26376, #26377 — deployed).\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #26447 [proposed] — Sample 20+ student emails from `/var/log/emsu_email_responder.log` before vs after 18:03 PT today; compare reply word-count and whether the reply answers the student's question. Confirm or falsify the fallback-chain-collapse hypothesis.\n2. #26447 [proposed] — If confirmed, add a permanent guard: fallback chains must never silently drop the top free rung (glm-5.2-local) without a Ruben-signed rollback marker, and alert on \"WINDOW_O_DOWN\" edits to serving config.\n3. #26396 [proposed] — 7-day production observation of the new chat pre-send policy gate (CFA-POLICY-REWRITE / CFA-DEADMAN-TRACKED markers).\n4. #26424 [proposed] — Email agent shallow-reply RCA (older thread): superseded by #26447's more precise config-collapse lead; mark superseded once #26447 confirms.\n\nReference IDs:\n- Ideas filed: #26376 [deployed], #26377 [deployed], #26396 [proposed], #26424 [proposed], #26447 [proposed]\n- Files touched: `api/chat_widget_api.php`, `lib/ChatPolicyGuard.php` (chat gate, deployed); `cron/cron_email_responder.php` (CQG restore attempted, then restored to pre-revert state — no net change)\n- Config backups: `/etc/litellm/config.yaml.bak.window-o.1786755723`, `/etc/litellm/config.yaml.bak.window-o.1786755963`\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1119": null,
     "1998": null,
     "2299": null,
+    "2316": null,
     "2328": null,
     "2341": null,
     "2343": null,
@@ -128112,6 +128113,7 @@
     "18335": null,
     "18853": null,
     "19173": null,
+    "19686": null,
     "20073": null,
     "22897": null,
     "23171": null,
@@ -128137,6 +128139,7 @@
     "26377": "proposed",
     "26396": "proposed",
     "26424": "proposed",
+    "26447": "proposed",
     "33689": null
    }
   },

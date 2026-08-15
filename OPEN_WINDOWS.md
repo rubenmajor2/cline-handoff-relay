@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/14/2026, 9:28:11 PM PT | window: last 72h | 82 tasks | index total 723 (parsed 4, cached 719)
+Generated: 8/14/2026, 10:28:11 PM PT | window: last 72h | 82 tasks | index total 723 (parsed 0, cached 723)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786754594067` | 8/14/2026, 9:27:58 PM | 437 | 2471KB | Please epxlain to me why the information here was asked for (student ID, etc...) AND a tim |
+| `1786754594067` | 8/14/2026, 9:54:53 PM | 490 | 2709KB | Please epxlain to me why the information here was asked for (student ID, etc...) AND a tim |
 | `1786765205570` | 8/14/2026, 9:18:25 PM | 196 | 712KB | I have seen enough rules 317 violations that I am quite concerned on the number of reversi |
 | `1786759729330` | 8/14/2026, 9:02:56 PM | 526 | 1159KB | #Argus Learning |
 | `1786740046847` | 8/14/2026, 8:59:13 PM | 646 | 6933KB | #CFA Misunderstanding |
@@ -97,7 +97,7 @@ Generated: 8/14/2026, 9:28:11 PM PT | window: last 72h | 82 tasks | index total 
 
 ## Per-window detail
 
-### `1786754594067` — 8/14/2026, 9:27:58 PM PT — 437 turns
+### `1786754594067` — 8/14/2026, 9:54:53 PM PT — 490 turns
 
 **Original task:**
 
@@ -105,34 +105,35 @@ Generated: 8/14/2026, 9:28:11 PM PT | window: last 72h | 82 tasks | index total 
 Please epxlain to me why the information here was asked for (student ID, etc...) AND a time of response was promised (when it probably will not be obeyed) when the student ID was already suppleid. The timeline promise was also a violation. it makes me thing the CFA will NOT do anything and will not reply back / deadman. I thought we ALREADY fixed this before. Why is it rearing it's ugly head again? What is the durable fix here? Are there other classes of the same issue? Is this a bug?
 ```
 
-**Ideas referenced:** #10108, #10740, #1119, #11741, #11781, #12364, #12477, #12584, #12618, #12824, #12872, #12878, #13202, #15002, #15783, #16163, #16265, #16304, #16474, #16732, #16844, #17202, #17203, #17205, #18312, #18326, #18335, #18853, #19173, #1998, #20073, #22897, #2299, #23171, #2328, #2341, #2343, #2344, #23989, #25097, #25943, #25986, #25989, #26068, #26209, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26334 [superseded as email cause], #26336, #26348, #26376 [proposed], #26377 [proposed], #26396 [proposed], #26424 [proposed], #3261, #3319, #3346, #33689, #6269, #6723, #6729, #7174, #7925, #9086, #9132, #9158, #9193, #9222
+**Ideas referenced:** #10108, #10740, #1119, #11741, #11781, #12364, #12477, #12584, #12618, #12824, #12872, #12878, #13202, #15002, #15783, #16163, #16265, #16304, #16474, #16732, #16844, #17202, #17203, #17205, #18312, #18326, #18335, #18853, #19173, #19686, #1998, #20073, #22897, #2299, #2316, #23171, #2328, #2341, #2343, #2344, #23989, #25097, #25943, #25986, #25989, #26068, #26209, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26334 [superseded as email cause], #26336, #26348, #26376 [proposed], #26377 [proposed], #26396 [proposed], #26424 [proposed], #26447 [proposed], #3261, #3319, #3346, #33689, #6269, #6723, #6729, #7174, #7925, #9086, #9132, #9158, #9193, #9222
 
 **Last PICKUP PROMPT:**
 
 ```
-ch cheaper than the 1.3T run).
+affic sample, now filed below.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — CFA shallow-email regression after LoRA retirement, and the chat policy-gate deploy.
+Pick up task #26447 — email agent shallow-reply RCA: prove the Aug 14 fallback-chain collapse caused thin replies, then lock the fix.
 
-Where we left off (verified 2026-08-14 21:05 PT):
-- Idea #26376 [deployed] — ChatPolicyGuard/ChatPolicyEnforcer deterministic pre-send gate wired into api/chat_widget_api.php line 780 (timeline_promise + identifier_reask + deadman via ActBeforePromiseGate), syntax-verified, unit-tested (7/7 PASS).
-- Idea #26377 [deployed] — canned safe-alternatives in ChatPolicyGuard now timeline-free ("I am on it and will update you as soon as there is news", "I have everything I need").
-- Idea #26396 [proposed] — 7-day production observation of CFA-POLICY-REWRITE / CFA-DEADMAN-TRACKED markers.
-- Idea #26424 [proposed] — email shallow replies: root cause = LoRA tier removed 17:14 PT; not the CQG gate (408 not-activated / 0 activated); CQG wiring was restored, current cron_email_responder.php = 15:59 normalize ver, syntax OK.
-- Proven route: frankenstein-llm → http://127.0.0.1:11510/v1 (x-litellm-model-api-base, 2026-08-14 20:34 PT).
+Where we left off (verified 2026-08-14 21:50 PT):
+- LoRA hypothesis withdrawn (no adapter weights exist; Ruben corrected this correctly).
+- `/etc/litellm/config.yaml` fallback chains edited 18:03–18:06 PT by window O: `glm-5.2-local` commented out (`# WINDOW_O_DOWN`) then restored by 21:34 PT. Current config has `glm-5.2-local` active.
+- Email responder serving path unchanged: `frankenstein-llm` → frankenstein-tools adapter (:11510) → glm-5.2-local Hexarchy ring.
+- CQG gate ruled out (0 activations / 408 "not activated" in `/var/log/emsu_email_responder.log`).
+- Claude-side fixes already shipped: chat pre-send policy gate in `api/chat_widget_api.php` + `ChatPolicyGuard` timeline/identifier detectors (ideas #26376, #26377 — deployed).
 
-Open threads to drive next (ALL need your steer):
-1. #26424 — decision: retrain email-only distil adapter / re-pin email tier / accept base model + prompt-only. No default; routing math + no before/after audit row means correlation, not proof.
-2. #26396 — observe chat gate fires in production; check logs after 48h.
-3. (new) — find surviving adapter weights (checkpoint-377 metadata only so far; search /data and local Mac for adapter_model*.safetensors).
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26447 [proposed] — Sample 20+ student emails from `/var/log/emsu_email_responder.log` before vs after 18:03 PT today; compare reply word-count and whether the reply answers the student's question. Confirm or falsify the fallback-chain-collapse hypothesis.
+2. #26447 [proposed] — If confirmed, add a permanent guard: fallback chains must never silently drop the top free rung (glm-5.2-local) without a Ruben-signed rollback marker, and alert on "WINDOW_O_DOWN" edits to serving config.
+3. #26396 [proposed] — 7-day production observation of the new chat pre-send policy gate (CFA-POLICY-REWRITE / CFA-DEADMAN-TRACKED markers).
+4. #26424 [proposed] — Email agent shallow-reply RCA (older thread): superseded by #26447's more precise config-collapse lead; mark superseded once #26447 confirms.
 
 Reference IDs:
-- Ideas filed: #26376, #26377 (deployed), #26396, #26424 (proposed)
-- Files touched: /var/www/emtskills/lib/ChatPolicyGuard.php, /var/www/emtskills/api/chat_widget_api.php, /var/www/emtskills/cron/cron_email_responder.php (restored)
-- Backups: ChatPolicyGuard.php.bak-20260814-nonumeric, chat_widget_api.php.bak-20260814-cfachatgate, cron_email_responder.php.bak-20260814-pre-cqg-revert
+- Ideas filed: #26376 [deployed], #26377 [deployed], #26396 [proposed], #26424 [proposed], #26447 [proposed]
+- Files touched: `api/chat_widget_api.php`, `lib/ChatPolicyGuard.php` (chat gate, deployed); `cron/cron_email_responder.php` (CQG restore attempted, then restored to pre-revert state — no net change)
+- Config backups: `/etc/litellm/config.yaml.bak.window-o.1786755723`, `/etc/litellm/config.yaml.bak.window-o.1786755963`
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════

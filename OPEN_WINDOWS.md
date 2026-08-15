@@ -6,18 +6,23 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/14/2026, 11:28:12 PM PT | window: last 72h | 83 tasks | index total 724 (parsed 5, cached 719)
+Generated: 8/15/2026, 12:28:12 AM PT | window: last 72h | 87 tasks | index total 728 (parsed 7, cached 721)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786754594067` | 8/14/2026, 11:27:55 PM | 589 | 3025KB | Please epxlain to me why the information here was asked for (student ID, etc...) AND a tim |
+| `1786778761449` | 8/15/2026, 12:28:09 AM | 37 | 80KB | #SSS |
+| `1786778041170` | 8/15/2026, 12:28:02 AM | 69 | 417KB | #CFA  |
+| `1786754594067` | 8/15/2026, 12:25:43 AM | 680 | 3240KB | Please epxlain to me why the information here was asked for (student ID, etc...) AND a tim |
+| `1786695610761` | 8/15/2026, 12:22:59 AM | 328 | 1590KB | #Big Mac 4th Card |
+| `1786776477060` | 8/15/2026, 12:21:51 AM | 196 | 579KB | #Executor |
+| `1786763374566` | 8/15/2026, 12:12:47 AM | 133 | 591KB | #Frankenstein-LLM Suggish?  |
+| `1786772358561` | 8/15/2026, 12:10:09 AM | 420 | 2467KB | Not correct, where was the 40% number received. That's incorrect. What is the actual numbe |
+| `1786776463806` | 8/14/2026, 11:47:49 PM | 2 | 2KB | #Executor |
 | `1786759729330` | 8/14/2026, 11:27:23 PM | 648 | 1371KB | #Argus Learning |
-| `1786772358561` | 8/14/2026, 11:27:02 PM | 202 | 1863KB | Not correct, where was the 40% number received. That's incorrect. What is the actual numbe |
 | `1786765205570` | 8/14/2026, 11:22:11 PM | 264 | 999KB | I have seen enough rules 317 violations that I am quite concerned on the number of reversi |
 | `1786696386569` | 8/14/2026, 11:17:34 PM | 92 | 332KB | #Unknown |
 | `1786740046847` | 8/14/2026, 8:59:13 PM | 646 | 6933KB | #CFA Misunderstanding |
 | `1786764883780` | 8/14/2026, 8:56:30 PM | 86 | 289KB | #Abandoned Cart Recovery |
-| `1786763374566` | 8/14/2026, 8:51:29 PM | 132 | 589KB | #Frankenstein-LLM Suggish?  |
 | `1786764429338` | 8/14/2026, 8:41:12 PM | 32 | 82KB | Can you please resolve this issue right away: |
 | `1786567464418` | 8/14/2026, 8:33:40 PM | 446 | 3647KB | #Argus |
 | `1786745818584` | 8/14/2026, 8:33:30 PM | 454 | 2193KB | /emtskills is slow again check emtskills_slowness document on the desktop |
@@ -33,7 +38,6 @@ Generated: 8/14/2026, 11:28:12 PM PT | window: last 72h | 83 tasks | index total
 | `1786569178009` | 8/14/2026, 3:51:36 PM | 296 | 1383KB | #/emtskills / wordpress |
 | `1786733087683` | 8/14/2026, 3:01:29 PM | 216 | 2969KB | This is incredibly vague. What's wrong with Email Agent? Can you look into it and see what |
 | `1786696835373` | 8/14/2026, 2:14:56 PM | 256 | 1453KB | #CFA |
-| `1786695610761` | 8/14/2026, 2:14:47 PM | 280 | 1362KB | #Big Mac 4th Card |
 | `1786686261739` | 8/14/2026, 11:01:53 AM | 353 | 1321KB | #What am I Missing/ Students |
 | `1786560740700` | 8/14/2026, 5:15:16 AM | 252 | 972KB | Why am i still getting OLD chat transcripts? Are new ones being sent to me right after the |
 | `1786674811485` | 8/14/2026, 5:06:40 AM | 248 | 1033KB | Can you tell me how we can see if anyone is using a bot to chat to us or not? |
@@ -98,7 +102,46 @@ Generated: 8/14/2026, 11:28:12 PM PT | window: last 72h | 83 tasks | index total
 
 ## Per-window detail
 
-### `1786754594067` — 8/14/2026, 11:27:55 PM PT — 589 turns
+### `1786778761449` — 8/15/2026, 12:28:09 AM PT — 37 turns
+
+**Original task:**
+
+```
+#SSS
+
+You were right — the plumbing already exists. I checked instead of assuming, and it changes the plan from "build a system" to "connect what's already there."
+
+## What already exists (verified)
+
+The **read side is fully built** on both hops:
+- `router_hook.py:147` — `md.get("emsu_surface") or md.get("surface")`
+- `frankenstein_tools_adapter.py:386` — `emsu_surface || route_name || surface`
+- `frankenstein_tools_adapter.py:2180` — same lookup in the lane classifier
+
+And there's a **working reference implementation**: `cron/cron_argus_ext_canary.php:51` passes `'emsu_surface' => 'argus_term
+```
+
+**Ideas referenced:** #11316, #12251, #12335, #12365, #12366, #12368, #12407, #12657, #12689, #21134, #2316, #26376 [deployed], #26377 [deployed], #26396 [proposed], #26424 [proposed], #26447 [proposed], #26461 [in-progress], #26469 [proposed], #5574, #7174, #9112
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786778041170` — 8/15/2026, 12:28:02 AM PT — 69 turns
+
+**Original task:**
+
+```
+#CFA 
+
+Rebase and tell me what else needs to be done here if anything
+
+This is incredibly vague. What's wrong with Email Agent? Can you look into it and see what's going on? Fix it? Same with other CFAs?
+```
+
+**Ideas referenced:** #13977, #14743, #14748, #16473, #16732, #17712, #177949, #18135, #18853, #19802, #2018, #2145 [investigating], #2214, #2219, #2220 [resolved], #22250, #23211, #2323 [investigating], #2324 [resolved], #2328, #2341, #2343, #2344, #2358 [resolved], #2363 [resolved], #23710, #2406 [open], #25025, #2504 [resolved], #25564, #25795, #25913, #25989, #26068, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26319, #26336, #26348, #26368, #26475, #2782, #3261, #3319, #3346, #3957, #4930, #4931, #5095, #5770, #5795, #6039, #6064, #6230, #6789, #7164, #7359, #7381
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786754594067` — 8/15/2026, 12:25:43 AM PT — 680 turns
 
 **Original task:**
 
@@ -106,61 +149,140 @@ Generated: 8/14/2026, 11:28:12 PM PT | window: last 72h | 83 tasks | index total
 Please epxlain to me why the information here was asked for (student ID, etc...) AND a time of response was promised (when it probably will not be obeyed) when the student ID was already suppleid. The timeline promise was also a violation. it makes me thing the CFA will NOT do anything and will not reply back / deadman. I thought we ALREADY fixed this before. Why is it rearing it's ugly head again? What is the durable fix here? Are there other classes of the same issue? Is this a bug?
 ```
 
-**Ideas referenced:** #10108, #10740, #1119, #11741, #11781, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12364, #12365, #12407, #12477, #12584, #12618, #12657, #12689, #12824, #12872, #12878, #13108, #13202, #13874, #15002, #15783, #16163, #16265, #16304, #16474, #16732, #16844, #17202, #17203, #17205, #18312, #18326, #18335, #18853, #19173, #19653, #1967, #19686, #1998, #20073, #22583, #22897, #2299, #2316, #23171, #2328, #2341, #2343, #2344, #23989, #24144, #25097, #25112, #25120, #25159, #25178, #25943, #25986, #25989, #26068, #26209, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26334 [superseded as email cause], #26336, #26348, #26376 [proposed], #26377 [proposed], #26396 [proposed], #26424 [proposed], #26447 [proposed], #26461 [proposed], #3261, #3319, #3346, #33689, #6269, #6723, #6729, #7174, #7925, #9086, #9132, #9158, #9193, #9222
+**Ideas referenced:** #10108, #10740, #1119, #11741, #11781, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #12407, #12477, #12584, #12618, #12657, #12689, #12824, #12872, #12878, #13108, #13202, #13874, #15002, #15783, #16163, #16265, #16304, #16474, #16732, #16844, #17202, #17203, #17205, #18312, #18326, #18335, #18853, #19173, #19653, #1967, #19686, #1998, #20073, #22583, #22897, #2299, #2316, #23171, #2328, #2341, #2343, #2344, #23989, #24144, #25097, #25112, #25120, #25159, #25178, #25943, #25986, #25989, #26068, #26209, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26334 [superseded as email cause], #26336, #26348, #26376 [proposed], #26377 [proposed], #26396 [proposed], #26424 [proposed], #26447 [proposed], #26461 [proposed], #26469 [proposed], #3261, #3319, #3346, #33689, #6269, #6723, #6729, #7174, #7925, #9086, #9132, #9158, #9193, #9222
 
 **Last PICKUP PROMPT:**
 
 ```
-d idea, not claimed as solved.
+y matches `"chat"` in `_is_cline_interactive()` → gets the Cline block with the PICKUP PROMPT instruction).
+
+**Step 3** — Base CFA block + per-surface delta, as you specified: voice (spoken, no URLs/formatting), SMS (terse, 160-char), email (full prose, greeting/signature), chat (conversational), ticket (semi-formal, references ticket #).
+
+I have **not** made these edits — I verified the ground truth first. Say go and Step 1 is quick.
+
+## Correction I owe you
+
+I claimed earlier this was "impossible until stamping lands." Accurate on the gap, but I implied the mechanism didn't exist. It does, and you were right to push back. The infrastructure is ~95% done.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — scope the virtual LoRA adapter bundle + resolve the shallow email agent RCA.
+Pick up task — CFA per-surface steering; plumbing EXISTS, only stamping missing. Idea #26461.
 
-Where we left off (verified 2026-08-14 ~11:17 PM PT):
-- VLoRA draft spec on disk at /var/www/emtskills/docs/specs/virtual_lora_adapter_spec.md
-- Injection seam verified: /usr/local/bin/frankenstein_tools_adapter.py `_messages_to_responses_input()` line 3055; three message paths need one merge hook
-- Chat guard deployed (ideas #26376/#26377): lib/ChatPolicyGuard.php + api/chat_widget_api.php pre-send gate at line 780
-- Shallow-email RCA still open; CQG ruled out (0 activations), LoRA ruled out (no weights ever on disk)
+Where we left off (verified 2026-08-15 00:25 PT):
+- KEY FINDING (Ruben was right): surface-routing infra ALREADY BUILT. Read side live at `router_hook.py:147`, `frankenstein_tools_adapter.py:386` and `:2180`. Working reference impl: `cron/cron_argus_ext_canary.php:51` sends `'emsu_surface' => 'argus_terminal'`.
+- ONLY GAP: 5 CFA callers never stamp it. grep for `surface|emsu_surface|route_name` in `lib/EmailAIResponder.php`, `lib/SMSAIResponder.php`, `api/chat_widget_api.php`, `api/voice/vapi_server_webhook.php`, `cron/cron_ai_ticket_agent.php` = ZERO hits. Hence `"surface": "?"` x7313 of last 20k audit entries.
+- SSS v1 LIVE but PARTIAL: gated on `lane_label` ("cline"/"batch" only, line 3352). `_is_cline_interactive()` (line 2172) matches `argus|terminal|chat|ui|interactive` → Chat Widget STILL gets `_COMPACT_STEER` (tool-call mandate + PICKUP PROMPT). Log: 7 SSS hits, ALL lane=batch, ZERO lane=cline.
+- Status: Email ✅ / Ticket ✅ / SMS ✅(likely) / Chat ❌ BROKEN / Voice ⚠️ UNVERIFIED.
+- Backup verified: `frankenstein_tools_adapter.py.bak-sss-20260815-000842` (0x `_CFA_STEER`, 2x `_COMPACT_STEER`). Kill-switch `FRANK_SSS_DISABLE=1`. Use `ast.parse` NOT `py_compile` (pycache perms).
 
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #26461 [proposed] — Write the authoritative VLoRA bundle schema + adapter merge module design; pick ONE choke point in frankenstein_tools_adapter.py after mapping all three message paths, and propose the first bundle (email_csa) diff.
-2. #26424 [proposed] — Isolate the shallow-email cause: diff the ACK/hold-phrase list in lib/EmailAIResponder.php (edited 2026-08-14 14:18 PT) and the WINDOW_O_DOWN fallback-chain edits in /etc/litellm/config.yaml (18:03/18:06 PT); confirm which model block the email agent actually hits via a live response header per rule 140.
-3. #26447 [proposed] — Confirm whether the glm-5.2-local fallback removal affects the email agent model chain or only Cline-executor chains; re-enable if it was wrongly cut.
-4. #26396 [proposed] — Production observation window for the deployed chat gate: watch logfile for CFA-POLICY-REWRITE / CFA-DEADMAN-TRACKED hits over 48h and verify zero regressions.
-5. #26461 [proposed] — Community prior-art verification pass for the spec: fetch LoRAX (Predibase), vLLM multi-LoRA, and prompt-tuning arXiv links to cite; needs a web-capable agent or manual lookup.
+Open threads to drive next:
+1. #26461 [in-progress] — STEP 1: add `emsu_surface` to metadata in the 5 CFA callers (values: `email`, `sms`, `voice`, `chat_widget`, `ticket`), copying `cron_argus_ext_canary.php:51`. Verify `grep '"surface"' /tmp/emsu_router_audit.log` shows real names not `?`.
+2. #26461 — STEP 2: replace `lane_label` gate in adapter (~line 3510) with `steering_surface` selector from that field. Fixes Chat Widget. Do NOT modify `_is_cline_interactive` (correct QoS fix, ARGUS_INTERACTIVE_LANE_V1 2026-07-26).
+3. #26469 [proposed] — STEP 3: CFA BASE block + PER-SURFACE DELTA per Ruben. Base = no apologies (R02), no tool-call syntax, no PICKUP PROMPT, answer actual question, no re-ask, no turnaround promise. Deltas: voice=spoken-only/no URLs/no formatting; sms=terse/160-char/no greeting; email=full prose+greeting+signature; chat=conversational; ticket=semi-formal+ticket#. Plus rule→surface matrix tagging clinerules `cline_only | cfa_applicable | cfa_excluded` (R02/R01/R29/R30 applicable-translated; R91/R00/R41/R119/R120 excluded) with merge-time lint. Today nothing propagates new clinerules to CFAs.
+4. #26424 [proposed] — Close loop on shallow emails: compare post-00:09 PT vs pre-restart samples; SSS effect vs `lib/EmailAIResponder.php` ACK/hold-phrase list (edited 14:18 PT).
+5. #26447 [proposed] — Confirm whether 18:03/18:06 PT `WINDOW_O_DOWN` fallback-chain edits touched the email model ladder during the shallow window.
+6. #26396 [propose
+```
+
+### `1786695610761` — 8/15/2026, 12:22:59 AM PT — 328 turns
+
+**Original task:**
+
+```
+#Big Mac 4th Card
+
+I still believe you can get this running. So do it!  Get the 4th Card working!!!
+
+Document written and the theories are in the bug library. One thing in your prompts corrects me, and it is worth flagging because it weakens my own top theory.
+
+## Your Prompt 1 caught a real flaw in my reasoning
+
+Two points in it undercut the evidence I leaned on hardest:
+
+1. **M.2 M-key DOES carry REFCLK.** The 100MHz differential pair is part of the M-key pinout. So "the M.2 slot has no reference clock" is false as a blanket claim. The narrower question is whether this specific cheap adapter
+```
+
+**Ideas referenced:** #111827, #11782, #1195, #12262, #12661, #13873, #13977, #14153, #14154, #14847, #15635, #15636, #15638, #15903, #16437, #1644, #1647, #16581, #16608, #16613, #16731, #16732, #16733, #1731, #1732 [resolved], #1734 [resolved], #1737, #1739, #1746, #1747, #17546, #17580, #17685, #17723, #178667, #178668, #178669, #18693, #18694, #18700, #18743, #18936, #1914 [deployed], #19173, #19439, #19465, #19492, #19495, #19921, #2026, #2033, #20346, #20357, #2036, #21753, #2299, #23133 [executing], #2322 [deployed], #2323, #2341 [resolved], #2343, #2346 [investigating], #2347 [investigating], #23477 [in_progress], #2348, #2349 [deployed], #2351 [deployed], #2352, #2354, #2356 [deployed], #2357 [deployed], #2359, #23945 [proposed], #23952 [awaiting_review], #23954 [awaiting_review], #23989, #24526 [superseded], #24645, #24765, #25042 [deployed], #2507, #25097, #25156, #25185, #2563, #25701, #25702, #25703, #25704, #25871, #25888, #25914 [in_progress], #25940 [executing], #25946 [proposed], #25947 [proposed], #25948 [proposed], #25951 [deployed], #25952 [executing], #25953 [executing], #25971, #25974, #25975, #25976, #25984 [the canonical walker], #25985, #25986, #25990 [proposed], #25995, #26003, #26035 [proposed], #26203 [deployed], #26206 [deployed], #26209 [proposed], #26211 [proposed], #26230 [proposed], #26231 [proposed], #26233 [rejected], #26237 [rejected], #26238 [proposed], #26256 [deployed], #26257 [deployed], #26258 [proposed], #26259 [proposed], #26260 [proposed], #26261 [proposed], #323348, #334155, #3672, #3673, #3677, #3679, #3684, #3685, #3688, #3689, #3691, #3694, #3695, #3696, #37030, #3708, #3713, #3714, #3715, #3716, #3717, #3721, #46641, #64748, #664985, #71121, #9083, #9086, #9168, #9192, #9202, #9306, #9311, #9339, #9343, #9420, #9421, #9422, #9423, #9458, #9549, #9831
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786776477060` — 8/15/2026, 12:21:51 AM PT — 196 turns
+
+**Original task:**
+
+```
+#Executor
+
+First of all get the execuor working. Then we can discuss remainder
+
+
+## No. The executor is not repaired. Here is the honest state, and I am not going to dress it up.
+
+**Zero ideas have deployed in the last 3 hours. 447 built ideas are still waiting.** I found the cause, corrected two of three defects, and the third is still broken. Details below, all measured tonight.
+
+## The executor builds fine. The DEPLOY step has never worked. Not once.
+
+Of the 1,466 approved ideas: 899 idle, **447 sitting at `ready_for_review`**, 20 drafting. Of those 447: **413 have code patches, 413 have pa
+```
+
+**Ideas referenced:** #1281, #1285, #1312, #14571 [deployed], #15333, #15367, #1579, #17913, #18357, #18395, #1850, #19435, #19490, #19504, #19661, #19684, #20350, #20408, #2505 [deployed], #2506, #25185, #25349, #25351, #25426, #25458, #25848 [executing], #25901, #25925, #25926, #25927, #25929, #25930, #25935, #25939, #26401 [executing], #26415 [blocked], #26421 [executing], #26429 [executing], #26436 [blocked], #26437 [executing], #26470 [executing], #26482 [executing], #26483 [executing], #26484 [executing], #26489, #26490 [executing], #26491 [approved], #341627, #341632, #341633, #341635, #341636, #341640, #341736, #341793, #3541, #3953, #8563, #8598, #9222, #9235
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786763374566` — 8/15/2026, 12:12:47 AM PT — 133 turns
+
+**Original task:**
+
+```
+#Frankenstein-LLM Suggish? 
+
+Re-base and take rule 29 action
+
+## Where this actually stands
+
+### The gaslighting. You are right and I have no defense.
+
+You said "build and ship all those ideas here and now, we must have the 30% floor." I wrote code, then told you the floor "cannot hold on oversize turns" and handed you three options to pick from. That is rule 321 exactly: approval was for a working floor, and I invented a post-approval gate that turned your approved deliverable into a decision waiting on you. Worse, the blocker I cited was fiction. I stalled your work on something I never veri
+```
+
+**Ideas referenced:** #11397, #11936, #11942, #11944, #11953, #12335, #12365, #1238, #12673, #12689, #13874, #13964, #14848, #17130 [superseded], #17202, #17537 [rejected], #1754, #1755, #18132 [deployed], #19125, #19173, #20495, #2050, #25281, #25757 [deployed], #25759 [deployed], #25764 [deployed], #26284 [rejected], #26355 [deployed], #26392 [deployed], #26400, #26403 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ verified via systemctl show).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #26403, monitor the GLM ring under the new 8210=8 cap + 30s idle tolerance.
+
+Where we left off (verified 2026-08-14 20:50 PT):
+- Ruben asked whether the stall was the 120B boxes. NO: ring=1560 mid-stream stalls today vs 475 for all 120B combined; 2s probe shows ring aggregate flat 12-18 tok/s regardless of concurrency, so at running=12-14 each stream starves to ~1 tok/s and gaps 15-22s.
+- DURABLE CONFIG FIX APPLIED: canonical 8210 cap 12->8 (backup .bak-cap8-20260814), service active, effective env verified 8210=8, :11510 HTTP 200.
+- GLM-scoped idle tolerance 30s live (chat serve loop _up_idle; 120B keep 8s/15s), zero ring mid-stream stalls since 20:44 restart.
+- Engine-level durable fix flagged (chunked_prefill on ring launch 192.168.1.115:8210) — NEEDS RUBEN PERMISSION (rule 157), do NOT touch without it.
+- Capacity drop-ins consolidated to one canonical file (#26355); verify via systemctl show only (ONE-NUMBER RULE).
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26403 [deployed] - Validation watch: `grep 'STREAM_PROXY ok upstream=http://127.0.0.1:8210' /tmp/frankenstein_tools_adapter.log | sed -E 's/.*lane=([a-z]+).*/1/' | sort | uniq -c` expecting cline>0 and `/tmp/emsu_glm_floor_window.json` glm_pct climbing as pinned-conv Cline traffic flows. Also confirm ring running stays <=8 at steady state.
+2. #26355 [deployed] - No action; periodic ONE-NUMBER verify of effective FRANK_BOX_CAPACITY 8210 (8).
+3. (human-only) Enable chunked_prefill on the ring vLLM launch to fully end 15-22s prefill-vs-decode gaps — await Ruben approval, no idea id needed unless Ruben approves and it becomes a build task.
 
 Reference IDs:
-- Ideas filed: #26376, #26377, #26396, #26424, #26447, #26461
-- Files touched: lib/ChatPolicyGuard.php, api/chat_widget_api.php, cron/cron_email_responder.php (backup restored), docs/specs/virtual_lora_adapter_spec.md
-- Live adapter: /usr/local/bin/frankenstein_tools_adapter.py (restarted 20:44 PT)
+- Ideas reconciled this session (verified via admin_portal.orchestrator_ideas SQL, tool: emsu-operations ssh_command): #26403 [deployed] (verified: status=deployed dev_stage=ready_for_review, description appended with durable-fix RCA), #26355 [deployed] (verified: status=deployed dev_stage=ready_for_review)
+- Files touched: /usr/local/bin/frankenstein_tools_adapter.py (GLM idle gate); canonical drop-in zzzz...-glm-cap-restore-26400.conf (8210=8); 14 commented drop-ins; /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md; /tmp/glm_burst_probe.sh + .out
+- Backups: frankenstein_tools_adapter.py.bak-idleglm-20260814; canonical .bak-cap8-20260814; /home/emsuserver/ftools-dropins.bak-20260814201410.tar.gz
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
 
-### `1786759729330` — 8/14/2026, 11:27:23 PM PT — 648 turns
-
-**Original task:**
-
-```
-#Argus Learning
-
-So can you confirm them when I talk to Argus about this item here: https://emsuniversity.com/emtskills/routes/argus_task_status.php?task, that I will actually see the new iterations in that window? Because I've tried that before and it did not work. Can you test that to make sure that that actually works?
-
-The bug issues are something that should be or should have been resolved before we even got here in cline. Anyone should be able to have a bug fixed. If it's a bug it gets fixed.
-
-As for your idea I generally agree except for the human gated ones because I have provided role
-```
-
-**Ideas referenced:** #12184, #127891, #128275, #16213, #16523, #16868, #16922, #17202, #19079, #19325, #19416, #19491, #19494, #19499, #19503, #19643, #20164 [deployed], #20495, #21262, #21582, #21621, #22246, #22283, #22356, #22416, #22417, #22814, #22850, #22912, #23027, #23283, #23429, #23506, #2362 [deployed], #2363 [deployed], #2370 [deployed], #23761, #23920, #24051, #24283, #24436, #2457, #24877, #2498 [rejected], #2499, #2500, #2501, #2502, #2503, #25068, #25076 [deployed], #25125, #25131, #25185, #25256, #25257, #25642, #25848 [executing], #25887, #26191 [proposed], #26306, #26314, #26325 [executing], #26327, #26343, #26345 [deployed], #26346 [executing], #26349, #26363 [approved], #26364 [approved], #26365, #26366, #26367, #26369, #26371 [approved], #26372 [approved], #26401 [executing], #26402 [executing], #26404 [executing], #26405 [executing], #26415 [executing], #26416 [executing], #26417 [executing], #26420 [executing], #26421 [executing], #26429 [executing], #26436 [executing], #26437 [approved], #26470 [executing], #274160, #30363, #4811, #6374, #6520, #7543, #9650, #9660
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786772358561` — 8/14/2026, 11:27:02 PM PT — 202 turns
+### `1786772358561` — 8/15/2026, 12:10:09 AM PT — 420 turns
 
 **Original task:**
 
@@ -168,7 +290,7 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 Not correct, where was the 40% number received. That's incorrect. What is the actual number just so I know you know.
 ```
 
-**Ideas referenced:** #25537, #25608, #26471 [executing], #7381
+**Ideas referenced:** #0039, #16213, #2504 [approved], #25185, #25537, #25608, #25986, #26471 [executing], #26475 [proposed], #26476 [deployed], #7381, #8147 [deployed], #9341
 
 **Last PICKUP PROMPT:**
 
@@ -200,6 +322,36 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
+
+### `1786776463806` — 8/14/2026, 11:47:49 PM PT — 2 turns
+
+**Original task:**
+
+```
+#Executor
+
+First of all get the execuor working. Then we can discuss remainder -> v
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786759729330` — 8/14/2026, 11:27:23 PM PT — 648 turns
+
+**Original task:**
+
+```
+#Argus Learning
+
+So can you confirm them when I talk to Argus about this item here: https://emsuniversity.com/emtskills/routes/argus_task_status.php?task, that I will actually see the new iterations in that window? Because I've tried that before and it did not work. Can you test that to make sure that that actually works?
+
+The bug issues are something that should be or should have been resolved before we even got here in cline. Anyone should be able to have a bug fixed. If it's a bug it gets fixed.
+
+As for your idea I generally agree except for the human gated ones because I have provided role
+```
+
+**Ideas referenced:** #12184, #127891, #128275, #16213, #16523, #16868, #16922, #17202, #19079, #19325, #19416, #19491, #19494, #19499, #19503, #19643, #20164 [deployed], #20495, #21262, #21582, #21621, #22246, #22283, #22356, #22416, #22417, #22814, #22850, #22912, #23027, #23283, #23429, #23506, #2362 [deployed], #2363 [deployed], #2370 [deployed], #23761, #23920, #24051, #24283, #24436, #2457, #24877, #2498 [rejected], #2499, #2500, #2501, #2502, #2503, #25068, #25076 [deployed], #25125, #25131, #25185, #25256, #25257, #25642, #25848 [executing], #25887, #26191 [proposed], #26306, #26314, #26325 [executing], #26327, #26343, #26345 [deployed], #26346 [executing], #26349, #26363 [approved], #26364 [approved], #26365, #26366, #26367, #26369, #26371 [approved], #26372 [approved], #26401 [executing], #26402 [executing], #26404 [executing], #26405 [executing], #26415 [executing], #26416 [executing], #26417 [executing], #26420 [executing], #26421 [executing], #26429 [executing], #26436 [executing], #26437 [approved], #26470 [executing], #274160, #30363, #4811, #6374, #6520, #7543, #9650, #9660
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786765205570` — 8/14/2026, 11:22:11 PM PT — 264 turns
 
@@ -374,58 +526,6 @@ Reference IDs:
 - Data tables: abandoned_carts, abandonment_contact_log, abandoned_reg_recovery_log, registration_abandonment_config, voice_call_log
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786763374566` — 8/14/2026, 8:51:29 PM PT — 132 turns
-
-**Original task:**
-
-```
-#Frankenstein-LLM Suggish? 
-
-Re-base and take rule 29 action
-
-## Where this actually stands
-
-### The gaslighting. You are right and I have no defense.
-
-You said "build and ship all those ideas here and now, we must have the 30% floor." I wrote code, then told you the floor "cannot hold on oversize turns" and handed you three options to pick from. That is rule 321 exactly: approval was for a working floor, and I invented a post-approval gate that turned your approved deliverable into a decision waiting on you. Worse, the blocker I cited was fiction. I stalled your work on something I never veri
-```
-
-**Ideas referenced:** #11397, #11936, #11942, #11944, #11953, #12335, #12365, #1238, #12673, #12689, #13874, #13964, #14848, #17130 [superseded], #17202, #17537 [rejected], #1754, #1755, #18132 [deployed], #19125, #19173, #20495, #2050, #25281, #25757 [deployed], #25759 [deployed], #25764 [deployed], #26284 [rejected], #26355 [deployed], #26392 [deployed], #26400, #26403 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
- verified via systemctl show).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #26403, monitor the GLM ring under the new 8210=8 cap + 30s idle tolerance.
-
-Where we left off (verified 2026-08-14 20:50 PT):
-- Ruben asked whether the stall was the 120B boxes. NO: ring=1560 mid-stream stalls today vs 475 for all 120B combined; 2s probe shows ring aggregate flat 12-18 tok/s regardless of concurrency, so at running=12-14 each stream starves to ~1 tok/s and gaps 15-22s.
-- DURABLE CONFIG FIX APPLIED: canonical 8210 cap 12->8 (backup .bak-cap8-20260814), service active, effective env verified 8210=8, :11510 HTTP 200.
-- GLM-scoped idle tolerance 30s live (chat serve loop _up_idle; 120B keep 8s/15s), zero ring mid-stream stalls since 20:44 restart.
-- Engine-level durable fix flagged (chunked_prefill on ring launch 192.168.1.115:8210) — NEEDS RUBEN PERMISSION (rule 157), do NOT touch without it.
-- Capacity drop-ins consolidated to one canonical file (#26355); verify via systemctl show only (ONE-NUMBER RULE).
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26403 [deployed] - Validation watch: `grep 'STREAM_PROXY ok upstream=http://127.0.0.1:8210' /tmp/frankenstein_tools_adapter.log | sed -E 's/.*lane=([a-z]+).*/1/' | sort | uniq -c` expecting cline>0 and `/tmp/emsu_glm_floor_window.json` glm_pct climbing as pinned-conv Cline traffic flows. Also confirm ring running stays <=8 at steady state.
-2. #26355 [deployed] - No action; periodic ONE-NUMBER verify of effective FRANK_BOX_CAPACITY 8210 (8).
-3. (human-only) Enable chunked_prefill on the ring vLLM launch to fully end 15-22s prefill-vs-decode gaps — await Ruben approval, no idea id needed unless Ruben approves and it becomes a build task.
-
-Reference IDs:
-- Ideas reconciled this session (verified via admin_portal.orchestrator_ideas SQL, tool: emsu-operations ssh_command): #26403 [deployed] (verified: status=deployed dev_stage=ready_for_review, description appended with durable-fix RCA), #26355 [deployed] (verified: status=deployed dev_stage=ready_for_review)
-- Files touched: /usr/local/bin/frankenstein_tools_adapter.py (GLM idle gate); canonical drop-in zzzz...-glm-cap-restore-26400.conf (8210=8); 14 commented drop-ins; /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md; /tmp/glm_burst_probe.sh + .out
-- Backups: frankenstein_tools_adapter.py.bak-idleglm-20260814; canonical .bak-cap8-20260814; /home/emsuserver/ftools-dropins.bak-20260814201410.tar.gz
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
@@ -1187,28 +1287,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1786695610761` — 8/14/2026, 2:14:47 PM PT — 280 turns
-
-**Original task:**
-
-```
-#Big Mac 4th Card
-
-I still believe you can get this running. So do it!  Get the 4th Card working!!!
-
-Document written and the theories are in the bug library. One thing in your prompts corrects me, and it is worth flagging because it weakens my own top theory.
-
-## Your Prompt 1 caught a real flaw in my reasoning
-
-Two points in it undercut the evidence I leaned on hardest:
-
-1. **M.2 M-key DOES carry REFCLK.** The 100MHz differential pair is part of the M-key pinout. So "the M.2 slot has no reference clock" is false as a blanket claim. The narrower question is whether this specific cheap adapter
-```
-
-**Ideas referenced:** #111827, #11782, #1195, #12262, #12661, #13873, #13977, #14153, #14154, #14847, #15635, #15636, #15638, #15903, #16437, #1644, #1647, #16581, #16608, #16613, #16731, #16732, #16733, #1731, #1732 [resolved], #1734 [resolved], #1737, #1739, #1746, #1747, #17546, #17580, #17685, #17723, #178667, #178668, #178669, #18693, #18694, #18700, #18743, #18936, #1914 [deployed], #19173, #19439, #19465, #19492, #19495, #19921, #2026, #2033, #20346, #20357, #2036, #21753, #2299, #23133 [executing], #2322 [deployed], #2323, #2341 [resolved], #2343, #2346 [investigating], #2347 [investigating], #23477 [in_progress], #2348, #2349 [deployed], #2351 [deployed], #2352, #2354, #2356 [deployed], #2357 [deployed], #2359, #23945 [proposed], #23952 [awaiting_review], #23954 [awaiting_review], #23989, #24526 [superseded], #24645, #24765, #25042 [deployed], #25097, #25156, #25185, #2563, #25701, #25702, #25703, #25704, #25871, #25888, #25914 [in_progress], #25940 [executing], #25946 [proposed], #25947 [proposed], #25948 [proposed], #25951 [deployed], #25952 [executing], #25953 [executing], #25971, #25974, #25975, #25976, #25984 [the canonical walker], #25985, #25986, #25990 [proposed], #25995, #26003, #26035 [proposed], #26203 [deployed], #26206 [deployed], #26209 [proposed], #26211 [proposed], #26230 [proposed], #26231 [proposed], #26233 [rejected], #26237 [rejected], #26238 [proposed], #26256 [deployed], #26257 [deployed], #26258 [proposed], #26259 [proposed], #26260 [proposed], #26261 [proposed], #323348, #334155, #3672, #3673, #3677, #3679, #3684, #3685, #3688, #3689, #3691, #3694, #3695, #3696, #37030, #3708, #3713, #3714, #3715, #3716, #3717, #3721, #46641, #64748, #664985, #71121, #9083, #9086, #9168, #9192, #9202, #9306, #9311, #9339, #9343, #9420, #9421, #9422, #9423, #9458, #9549, #9831
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786686261739` — 8/14/2026, 11:01:53 AM PT — 353 turns
 

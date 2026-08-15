@@ -6,18 +6,19 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/14/2026, 5:28:08 PM PT | window: last 72h | 76 tasks | index total 717 (parsed 8, cached 709)
+Generated: 8/14/2026, 6:28:09 PM PT | window: last 72h | 77 tasks | index total 718 (parsed 6, cached 712)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786740046847` | 8/14/2026, 5:27:55 PM | 271 | 4884KB | #CFA Misunderstanding |
-| `1786751488866` | 8/14/2026, 5:27:18 PM | 115 | 367KB | #emtskills / wordpress |
-| `1786711940130` | 8/14/2026, 5:27:17 PM | 241 | 17944KB | Another thing we need to add to sunset, politicians, and just catalogue in the next respon |
-| `1786712894547` | 8/14/2026, 5:25:23 PM | 246 | 977KB | Frankenstein LLM seems sluggish. Can you tell me why it seems slower than usual? |
+| `1786711940130` | 8/14/2026, 6:28:08 PM | 369 | 18855KB | Another thing we need to add to sunset, politicians, and just catalogue in the next respon |
+| `1786745818584` | 8/14/2026, 6:27:59 PM | 295 | 1537KB | /emtskills is slow again check emtskills_slowness document on the desktop |
+| `1786740046847` | 8/14/2026, 6:27:33 PM | 361 | 5307KB | #CFA Misunderstanding |
+| `1786751687527` | 8/14/2026, 6:23:14 PM | 82 | 427KB | #CFA Stuff |
+| `1786751488866` | 8/14/2026, 6:21:15 PM | 188 | 649KB | #emtskills / wordpress |
+| `1786754594067` | 8/14/2026, 5:59:57 PM | 72 | 1211KB | Please epxlain to me why the information here was asked for (student ID, etc...) AND a tim |
+| `1786712894547` | 8/14/2026, 5:50:50 PM | 370 | 1178KB | Frankenstein LLM seems sluggish. Can you tell me why it seems slower than usual? |
+| `1786581699007` | 8/14/2026, 5:49:23 PM | 1128 | 3229KB | #Argus Learning |
 | `1786743833650` | 8/14/2026, 5:24:44 PM | 200 | 754KB | I would like for you to make a Klein rule as well as a rule in Argus that is called the ga |
-| `1786581699007` | 8/14/2026, 5:16:32 PM | 1046 | 3066KB | #Argus Learning |
-| `1786745818584` | 8/14/2026, 5:16:09 PM | 140 | 530KB | /emtskills is slow again check emtskills_slowness document on the desktop |
-| `1786751687527` | 8/14/2026, 5:13:20 PM | 38 | 200KB | #CFA Stuff |
 | `1786566964850` | 8/14/2026, 4:51:33 PM | 342 | 2040KB | Answer to this question is not what was given. It's a registration check to see why there  |
 | `1786696256201` | 8/14/2026, 3:53:08 PM | 198 | 11668KB | #Grievance issue |
 | `1786569178009` | 8/14/2026, 3:51:36 PM | 296 | 1383KB | #/emtskills / wordpress |
@@ -91,81 +92,7 @@ Generated: 8/14/2026, 5:28:08 PM PT | window: last 72h | 76 tasks | index total 
 
 ## Per-window detail
 
-### `1786740046847` — 8/14/2026, 5:27:55 PM PT — 271 turns
-
-**Original task:**
-
-```
-#CFA Misunderstanding
-
-CFA is an internal  acroym for Customer Facing Agents/AI/Assistants, etc... 
-
-so this is very confusing and stupid. Needs correction. Scan for this and the like and resolve it.
-```
-
-**Ideas referenced:** #12285, #12687, #15669, #16069, #1615, #16732, #177851, #18266, #18350, #18353, #18355, #18363, #19927, #2316, #2328, #2341, #2343, #2344, #25774, #25895, #25896, #25920, #25989, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26329 [proposed], #32548, #3261, #3319, #3346, #6067, #6168, #6196, #6723, #7174, #7872, #7906, #7907, #7925, #9132, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-pen thread for the new window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — CFA executor: find the cron re-creator, then make the kill-switch durable.
-
-Where we left off (verified 2026-08-14 16:39 PT):
-- Internal "CFA" acronym leaked to students; 249 bad emails sent, all corrected (246 re-sends via Postmark API, error 0).
-- Source templates fixed + verified on disk: lib/cfa_access_sweep.php (student voice + isExcludedRecipient), cron_cfa_queue_executor.php (subject + 10/tick burst cap), lib/EmailAIResponder.php (HARD TERMINOLOGY GUARD).
-- Grievances GRV-2026-0086/0087/0088 filed; Sarah enrolment 47851 reactivated.
-- Postmark SMTP 587 recovered (investigation done: 85 SMTP errors + 28 bounces today, API fine).
-- Postmortem idea: #26329 [proposed].
-- DISCOVERY: /etc/cron.d/emsu-cfa-executor is re-created every ~3 min by unidentified external machinery (not in /var/www, routes, api, systemd, init.d, root crontab, or Plesk scheduler).
-- Executor is currently INERT (0 claimable rows, dispatch paused) but NOT durably disabled; my marker kill-switch patch did not persist.
-
-Open threads to drive next (real filed idea):
-1. #26329 [proposed] — Identify what re-creates /etc/cron.d/emsu-cfa-executor and the executor PHP file. Start with inotifywait on /etc/cron.d and /var/www/emtskills/cron during a self-heal window, then trace the writing PID.
-2. #26329 [proposed] — Once the writer is found, make the executor kill-switch durable: a marker file (/var/www/emtskills/.cfa_executor_enabled) the executor checks before sending, and stop the re-creator from reverting it.
-3. #26329 [proposed] — Add a human approval gate: cfa_sweep_draft pending → approved must be the only path to a send; default pending to "do not send".
-
-Reference IDs:
-- Grievances: GRV-2026-0086, GRV-2026-0087, GRV-2026-0088
-- Ideas filed: #26329
-- Files touched: /var/www/emtskills/lib/cfa_access_sweep.php, /var/www/emtskills/cron/cron_cfa_queue_executor.php, /var/www/emtskills/lib/EmailAIResponder.php, /var/www/emtskills/cron/cfa_resend_corrected.php
-- Backups: *.bak-20260814-140614, /etc/cron.d/emsu-cfa-executor.BAK-20260814-{134741,1537,155757}
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786751488866` — 8/14/2026, 5:27:18 PM PT — 115 turns
-
-**Original task:**
-
-```
-#emtskills / wordpress
-
-continue
-
-Stopping per instruction. Here is the rule 91 handoff.
-
-State at stop (verified 2026-08-14 15:50 PT):
-
-What was already done this session (carried from the running WAF/SQLi work, TODO showed 8/8 complete):
-- RE-BASE after gap: the 6-hourly guard cron and drift-guard blocks persist across the restart.
-- RECURRENCE confirmed as a coordinated campaign: 8 vhosts, 12 rotating IPs over ~36 min, including the emsuniversity.com schema.
-- Blocked all 13 campaign IPs (verified 13/13).
-- Fixed 2 detector defects (vhost=lookup-failed and missing IP identification), verifi
-```
-
-**Ideas referenced:** #19370, #22298, #22550, #23133 [executing], #2328, #2341, #2343, #2344, #23945 [proposed], #23952 [awaiting_review], #23954 [awaiting_review], #24026, #25042 [deployed], #25940 [executing], #25989, #26068, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26258 [awaiting_review], #26336, #3261, #3319, #3346, #6768
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786711940130` — 8/14/2026, 5:27:17 PM PT — 241 turns
+### `1786711940130` — 8/14/2026, 6:28:08 PM PT — 369 turns
 
 **Original task:**
 
@@ -177,7 +104,7 @@ Check to see whether Sabrina sent this message to agamez@emsuniversity.com or no
 The thing is she didn't ask me. She just went straight to Andrew and asked him. Normally would be fine because he's the program director, however, TDSHS had agreed to contact me and copy me on department of communications with our organization. This might actually apply to all types of communications which is kind of interes
 ```
 
-**Ideas referenced:** #108020, #108026, #171083, #23269, #258525, #25989 [rejected], #26068, #26287 [executing], #467886, #600179, #623992, #8211, #96607
+**Ideas referenced:** #0891, #108020, #108026, #127891, #128274, #1368, #171083, #23269, #2563, #258525, #25989 [rejected], #26068, #26287 [executing], #467886, #600179, #623992, #8211, #96607
 
 **Last PICKUP PROMPT:**
 
@@ -215,7 +142,256 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786712894547` — 8/14/2026, 5:25:23 PM PT — 246 turns
+### `1786745818584` — 8/14/2026, 6:27:59 PM PT — 295 turns
+
+**Original task:**
+
+```
+/emtskills is slow again check emtskills_slowness document on the desktop
+```
+
+**Ideas referenced:** #10740, #1080, #11397, #11564, #11936, #11942, #11944, #11945, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12477, #12657, #12672, #12673, #12689, #12716, #13075, #13078, #13082, #13084, #13085, #13108, #13121, #13831, #13832, #13874, #13964, #14000, #14848, #15919, #16120, #16265, #16718, #1754, #1755, #177963, #18781, #18786, #19143, #19653, #1967, #1968, #1989, #19903, #20264, #20297, #2050, #2073, #21045, #2247, #2254, #2258, #22583, #2294, #2307, #2314, #23169, #23206, #2342, #24144, #24172, #24217, #25112, #25120, #25159, #25178, #25468, #25625, #25627, #25630, #25646, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25999, #26009, #26068 [awaiting_review], #26209, #26218, #26219, #26234, #26284 [executing], #26336 [proposed], #26348 [proposed], #6219, #6260, #6264, #6267, #6268, #6826
+
+**Last PICKUP PROMPT:**
+
+```
+B-first and re-test TTFB live.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — /emtskills "still feels slow": disk fix confirmed holding; remaining cause is GLM-first interactive routing (~7.3s TTFB vs 120B ~0.7s).
+
+Where we left off (verified 2026-08-14 17:41 PT):
+- Disk fix STILL green: load 16.27→6.26, md0/nvme 0-2% util, swap 60MB, local canary ~0.5ms, public TTFB ~13ms.
+- LoRA retired: /data/frank_adapters_cold ARCHIVE_* 1.3T deleted, /data 71%→36%, quality preserved (0 serving refs; final weights in WOPR src + Artemis vault 1.2T). #26348 executing.
+- Walker hardening #26336 deployed (du -x durable, portal md0 self-check, nvme9100-sync -x).
+- Slow-feel root cause: GLM ring routed first on interactive lane = ~7.29s first-turn TTFB, vs gpt-oss-120b ~0.67s. This is pre-existing routing gap #26284, NOT the disk.
+- litellm fresh-started 17:36 (NRestarts=0) + frankenstein-tools 17:40 — trigger unidentified, not caused by this session's changes.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26284 [executing] — fix interactive-lane routing: demote GLM-5.2 ring off first-on-interactive (drop-in 70-glm-first-all-lanes.conf + zzz-* GLM chain), put gpt-oss-120b 120B fast rung first, re-probe :11510 TTFB to confirm 7.3s → <1.5s. Await Ruben steer before cutting over.
+2. #26348 [executing] — LoRA retirement final sweep: confirm engine close via get_idea_progress; optional full purge of 5 retired WOPR src dirs + 1.2T Artemis vault only if Ruben wants.
+3. #26336 [executing] — confirm hardening engine closes clean; code already live.
+
+Reference IDs:
+- Ideas: #26284 [executing] (GLM-first routing TTFB gap), #26348 [executing] (LoRA retirement), #26336 [executing] (walker hardening), #26068 [awaiting_review] (pipeline-dead, superseded)
+- Files touched: /usr/local/bin/emsu-disk-consumer-watch.sh, /usr/local/bin/emsu-portal-health-guard.sh, /usr/local/bin/nvme9100-sync.sh, /var/www/emtskills/docs/HANDOFF_NOTES.md, /Users/rubenmajor/Desktop/emtskills-slowness.md, /data/frank_adapters_cold (ARCHIVE_* deleted)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Find emtskills_slowness document on Desktop
+- [x] Read document for prior runbook/context
+- [x] Diagnose current /emtskills slowness
+- [x] Apply immediate fix + verify (patch du -x, load 16.27→7.73, disk 0%)
+- [x] Idea #26336 approved + deployed (du -x durable, md0 self-check, nvme-sync -x)
+- [x] STEER applied: Artemis verified UP + stale unreachable claims corrected
+- [x] STEER: 'do we even need LoRA' — probed VEC/context/training-pipeline vs serving-LoRA usage
+- [x] Ruben: 'Retire LoRA' — safety gate passed, 1.3T ARCHIVE_* deleted, /data 71%→36%
+- [x] Update server HANDOFF_NOTES + local doc
+- [x] Mark #26348 implement
+- [x] STEER: 'still feels slow' — verified disk fix holding (load 6.26, disk 0%, swap 60MB); root-caused remaining slowness to GLM-first interactive routing (7.29s vs 120B 0.67s)
+</task_progress>
+</attempt_completion>
+```
+
+### `1786740046847` — 8/14/2026, 6:27:33 PM PT — 361 turns
+
+**Original task:**
+
+```
+#CFA Misunderstanding
+
+CFA is an internal  acroym for Customer Facing Agents/AI/Assistants, etc... 
+
+so this is very confusing and stupid. Needs correction. Scan for this and the like and resolve it.
+```
+
+**Ideas referenced:** #12206, #12207, #12285, #12687, #15669, #16069, #1615, #16732, #177851, #18266, #18350, #18353, #18355, #18363, #19927, #2316, #2328, #2341, #2343, #2344, #25774, #25895, #25896, #25920, #25989, #26068, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26329 [proposed], #32548, #3261, #3319, #3346, #6067, #6168, #6196, #6723, #7174, #7872, #7906, #7907, #7925, #9132, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+ted, all returned ErrorCode 0)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — CFA leak postmortem follow-up: name the cron re-creator and decide the auto-send go/no-go.
+
+Where we left off (verified 2026-08-14 18:07 PT):
+- CFA leak fully fixed and verified (student-facing strings clean; Sarah Moodle reactivated; 246 corrections sent via Postmark API).
+- 3 grievances filed: GRV-2026-0086, GRV-2026-0087, GRV-2026-0088.
+- Executor is inert: no .cfa_executor_enabled marker; approval gate requires cfa_sweep_draft.status='approved'.
+- emsu-cron-catcher systemd service is ACTIVE as the writer trap; logs to /var/log/emsu-cron-writer-catcher.log.
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #26329 [proposed] — Read /var/log/emsu-cron-writer-catcher.log after the next /etc/cron.d/emsu-cfa-executor re-creation; extract the writer PID from the "full ps" snapshot and name the process. Then decide whether to remove the executor entry from its source manifest.
+2. #26329 [proposed] — Decide the auto-send go/no-go: keep /var/www/emtskills/.cfa_executor_enabled ABSENT (safe default) until Ruben signs off, then either leave it disabled or turn the sweep into a draft + human-approval workflow.
+
+Reference IDs:
+- Ticket: none (internal incident)
+- Ideas filed: #26329
+- Files touched: lib/cfa_access_sweep.php, cron/cron_cfa_queue_executor.php, lib/EmailAIResponder.php, cron/cfa_resend_corrected.php, tools/emsu_cron_writer_catcher.sh, tools/emsu_cron_catcher.service
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786751687527` — 8/14/2026, 6:23:14 PM PT — 82 turns
+
+**Original task:**
+
+```
+#CFA Stuff
+
+I'm really confused here. Something is weird. What are we doing? What are we doing if the student has a student ID number does that not match a class? I'm confused here.
+
+You were right — the process exists, and my "a human must do it" answer was wrong. Here is what the code actually says.
+
+## The existing CFA process (verified by reading the source)
+
+**`lib/SectionTransferExecutor.php`** — this is the track-change handler and it is fully automated:
+- `execute($studentNeedle, $toSection, $opts)` performs the whole move.
+- Line 185 does the real write: `UPDATE Students SET moodle_ur
+```
+
+**Ideas referenced:** #22726, #22871, #23184, #2328, #25943 [deployed], #25989, #26068, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26307 [deployed], #26333 [deployed], #26334 [deployed], #26336, #26348, #26368 [deployed], #3261, #3319, #3346, #7207, #7907, #9086, #9193
+
+**Last PICKUP PROMPT:**
+
+```
+xed it." That is now complete.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — SectionTransferExecutor suspended-enrolment loop fixed + deployed (#26368); all related tracing closed.
+
+Where we left off (verified 2026-08-14 18:22 PT):
+- FAILURE FOUND/FIXED: lib/SectionTransferExecutor.php re-enrol INSERT guard matched ANY enrolment row while userActiveEnrol() checks status=0 → suspended enrolment caused silent no-op, active_enrol stuck false, idempotency never fired, agent re-invoked transfers repeatedly. Patched: reactivate status=1 first, INSERT guard now AND ue.status=0 (lines 141-151). php -l clean, PHP-FPM reloaded graceful. Backup: SectionTransferExecutor.php.bak-20260814-26368.
+- Connector confirmed (already correct): cron_email_responder.php → EmailAIResponder.php → CanonicalToolRegistry::toolsFor('email') → transfer_student_section (line 369) → localTransferStudentSection() → execute().
+- Visibility (no action taken, deliberate): 30+ currently-suspended enrollments on courses 25/37/41 respected per rule 135; fix handles them when a legitimate transfer is requested.
+- Cleanup done: ledger row appended 2026-08-14 17:48 PT, HANDOFF_NOTES.md updated, staging file removed, idea #26368 set deployed.
+
+Open threads to drive next:
+1. #26368 [deployed] — Observe the next real section-transfer invocation on a suspended-enrolment student; confirm the audit row's after_state now shows active_enrol:true (the fix's live proof).
+2. #25943 [deployed] — Watch `[TPR-25943]` / `[TPR-25943-BLOCK]` on Elen's next payment_billing reply to confirm the ask-the-student ack ships.
+3. #26334 [deployed] — Monitor `[CQG-26334]` elog + ai_clarifying_gate_log on the next real vague inbound; tune cqgNormalizeOpener if live shapes differ from the 5 tested.
+4. #26333 [deployed] — Confirm the first real watchdog_restore row lands in orchestrator_event_log; follow-on is surgical hunk repair rather than wholesale rollback.
+
+Reference IDs:
+- Ideas filed this session: #26368 [deployed].
+- Files touched: lib/SectionTransferExecutor.php (patched lines 141-151); backup lib/SectionTransferExecutor.php.bak-20260814-26368; staging /tmp/patch_26368.py (removed); docs/cline_task_ledger.md (row appended); HANDOFF_NOTES.md (entry added).
+- Evidence rows (orchestrator_event_log.ids): 4071006/4071216/4071258/4071521/4071585/4072394/4076973 (26719BC-09), 3818911/4782700/4837808/4876918 (25314T-03), 5952922 (most recent real transfer 26213FT-40→26225FT 08-11).
+</result>
+</attempt_completion>
+```
+
+### `1786751488866` — 8/14/2026, 6:21:15 PM PT — 188 turns
+
+**Original task:**
+
+```
+#emtskills / wordpress
+
+continue
+
+Stopping per instruction. Here is the rule 91 handoff.
+
+State at stop (verified 2026-08-14 15:50 PT):
+
+What was already done this session (carried from the running WAF/SQLi work, TODO showed 8/8 complete):
+- RE-BASE after gap: the 6-hourly guard cron and drift-guard blocks persist across the restart.
+- RECURRENCE confirmed as a coordinated campaign: 8 vhosts, 12 rotating IPs over ~36 min, including the emsuniversity.com schema.
+- Blocked all 13 campaign IPs (verified 13/13).
+- Fixed 2 detector defects (vhost=lookup-failed and missing IP identification), verifi
+```
+
+**Ideas referenced:** #13967, #18717, #18718, #18719, #18720, #18733, #18743, #18744, #18746, #18827, #18895 [deployed], #18916, #18985 [rejected], #1899, #19006 [blocked], #1907, #19370, #1949, #22298, #22550, #23133 [executing], #2328, #2341, #2343, #2344, #23945 [proposed], #23952 [awaiting_review], #23954 [awaiting_review], #24026, #24207, #24914, #24924, #24925, #24926, #24927, #24941, #24989, #25042 [deployed], #25940 [executing], #25989, #26068, #26092, #26096, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26258 [awaiting_review], #26336, #3261, #3319, #3346, #6768
+
+**Last PICKUP PROMPT:**
+
+```
+321 trafficked, all isolated).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #25940 — pool isolation is deployed and guard-clean; the WAF idea needs its premise corrected.
+
+Where we left off (verified 2026-08-14 18:20 PT):
+- 12 LLM-heavy endpoints on the agents FPM pool in BOTH nginx configs. Verified by accepted-conn delta: agents +61 / www +1 on a 60-burst. #25940 [executing]
+- Guard rewritten (path-token match, exact relative paths, .gz, root cron). Self-test passes, live exit 0, 194 scanned / 321 trafficked all isolated.
+- WAF premise DISPROVEN this session: /var/log/modsec_audit.log is 20.7MB, written today, 1,708 entries, 62 Access denied, Engine-Mode "ENABLED", 942xxx SQLi rules firing. The 0-byte file was /var/log/apache2/modsec_audit.log — the wrong path. Imunify360 custom rules override the base SecRuleEngine DetectionOnly with runtime deny. #26258 [executing]
+- All 6 ideas reconciled live; the 5 tags shipped in the prior completion were wrong.
+
+Open threads to drive next:
+1. #26258 [executing] — rewrite the idea body: WAF IS enforcing, evidence above. Then answer the real remaining question: did the 13-IP SQLi campaign get blocked or only logged? Grep the audit log for those IPs and the 942xxx hits. Agent-actionable, no human input needed.
+2. #23954 [executing] — move LLM calls off the request path onto the background queue. The actual cure; pool isolation is containment.
+3. #23133 [executing] — chat/telephony endpoints block synchronously on ~17.9s LLM calls with timeouts below real latency.
+4. #23952 [executing] — 277 routes hold the PHP session lock for the whole request; Redis sessions or session_write_close.
+5. #23945 [rejected] — already rejected, superseded by #25940. No action.
+
+Reference IDs:
+- Ticket: n/a
+- Ideas: #25940 [executing], #26258 [executing], #23954 [executing], #23133 [executing], #23952 [executing], #23945 [rejected]
+- Files touched: /var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf, /etc/nginx/sites-enabled/emtskills, /var/www/emtskills/scripts/llm_pool_isolation_guard.py, /etc/cron.d/emsu-llm-pool-isolation-guard, /Users/rubenmajor/Desktop/cline_task_ledger.md
+- Evidence paths: /var/log/modsec_audit.log (active, 20.7MB), /var/log/apache2/modsec_audit.log (0 bytes, the misread file)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786754594067` — 8/14/2026, 5:59:57 PM PT — 72 turns
+
+**Original task:**
+
+```
+Please epxlain to me why the information here was asked for (student ID, etc...) AND a time of response was promised (when it probably will not be obeyed) when the student ID was already suppleid. The timeline promise was also a violation. it makes me thing the CFA will NOT do anything and will not reply back / deadman. I thought we ALREADY fixed this before. Why is it rearing it's ugly head again? What is the durable fix here? Are there other classes of the same issue? Is this a bug?
+```
+
+**Ideas referenced:** #1119, #12584, #15002, #16844, #17202, #17203, #17205, #18853, #1998, #20073, #22897, #2328, #2341, #2343, #2344, #23989, #25989, #26068, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26376 [proposed], #26377 [proposed], #3261, #3319, #3346, #33689, #6269, #9086, #9158, #9193, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+ CFA bug with #26376 + #26377.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — CFA chat: port deterministic pre-send policy gate + strip timeline promises from canned text.
+
+Where we left off (verified 2026-08-14 5:59 PM PT):
+- Root cause confirmed: chat outbound is prompt-only enforcement. lib/ChatPolicyGuard.php + lib/ChatPolicyEnforcer.php are NOT required/invoked by api/chat_widget_api.php, api/livechat/webhook.php, or lib/emsu_ai_brain.php; only cron/cron_chat_refund_guard.php (retroactive) references them.
+- ChatPolicyGuard.php lines 146-150 canned alternatives promise "1-3 business days", contradicting webhook.php line 1599/1731 no-timeline rule.
+- ActBeforePromiseGate.php (deadman) is wired only to EMAIL, not chat → chat follow-up promises are untracked (deadman exposure).
+- Rules already in prompt: webhook.php 1700, 1880, 1599, 1731, 1923.
+- Ideas filed: #26376 [proposed] wire ChatPolicyGuard as realtime post-AI pre-send gate on chat (mirror email AIReasoningLeakScanner::scanAndRepair); #26377 [proposed] strip numeric timelines from canned alternatives + extend ActBeforePromiseGate deadman to chat.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26376 [proposed] — Implement the chat pre-send gate: in api/chat_widget_api.php after $aiReply is produced and before persist/send, require lib/ChatPolicyGuard.php, run ChatPolicyGuard::scanMessage($aiReply), and apply redactViolatingSegment()/buildSafeAlternative() on any violation, logging to ai_conversation_quality (mirror ChatPolicyEnforcer::logViolationToConversationQuality).
+2. #26377 [proposed] — Edit lib/ChatPolicyGuard.php lines 146-150 (and buildSafeAlternative) to remove all numeric timeframes; then wire ActBeforePromiseGate (or a chat-scoped equivalent) into the chat pre-send gate so follow-up promises are ledger-tracked and deadman-escalated.
+
+Reference IDs:
+- Ideas filed: #26376, #26377
+- Files touched (read-only diagnosis, no edits yet): /var/www/emtskills/lib/ChatPolicyGuard.php, lib/ChatPolicyEnforcer.php, lib/ActBeforePromiseGate.php, api/chat_widget_api.php, api/livechat/webhook.php, lib/CanonicalAgentPolicy.php, /etc/litellm/config.yaml, /etc/litellm/router_hook.py, docs/REFERENCE_CFA_MODEL_ROUTING.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786712894547` — 8/14/2026, 5:50:50 PM PT — 370 turns
 
 **Original task:**
 
@@ -236,48 +412,94 @@ Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md
 Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtract
 ```
 
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11945, #12231, #12403, #1241, #12425, #12459, #12463, #12477, #1248, #1249, #1252, #1258, #12588, #12618, #12643, #12672, #12688, #12689, #12710, #12824, #12872, #12878, #13121, #13202, #13874, #14133, #14142, #15144, #15979, #16032, #16033, #16036, #16117, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16602, #16625, #16648, #16715 [awaiting_review], #16716, #16778, #16802, #16803, #16839, #16844, #16851, #17145, #17202, #17203, #17205, #17246, #17300, #17430, #1744, #1779, #1798, #1828, #18312, #18326, #18329, #18820, #18868, #1934, #19567, #20042, #20549, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #22598, #22601, #22815, #22820, #22856, #22897, #2294, #2299, #2307, #23071, #23135, #2314, #23169 [approved], #23171, #23172, #24217, #25097, #25185, #25378, #25381, #25747, #25754 [rejected], #25755 [approved], #25757 [awaiting_review], #25759 [awaiting_review], #25764 [awaiting_review], #25765, #25812, #26209, #26284 [proposed], #26355 [proposed], #6826, #7142, #7149, #7505
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11942, #11945, #12231, #12403, #1241, #12425, #12459, #12463, #12477, #1248, #1249, #1252, #1258, #12588, #12618, #12643, #12672, #12688, #12689, #12710, #12824, #12872, #12878, #13121, #13202, #13874, #14133, #14142, #15144, #15979, #16032, #16033, #16036, #16117, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16602, #16625, #16648, #16715 [awaiting_review], #16716, #16778, #16802, #16803, #16839, #16844, #16851, #17145, #17202, #17203, #17205, #17246, #17300, #17430, #1744, #1779, #1798, #1828, #18312, #18326, #18329, #18820, #18868, #1934, #19567, #20042, #2050, #20549, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #22598, #22601, #22815, #22820, #22856, #22897, #2294, #2299, #2307, #23071, #23135, #2314, #23169 [approved], #23171, #23172, #24217, #25097, #25185, #25378, #25381, #25747, #25754 [rejected], #25755 [approved], #25757 [awaiting_review], #25759 [awaiting_review], #25764 [awaiting_review], #25765, #25812, #26209, #26284 [proposed], #26355 [proposed], #6826, #7142, #7149, #7505
 
 **Last PICKUP PROMPT:**
 
 ```
-should be reframed as stopgaps
+in GLM52_RING_STATE_TRACKER.md
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #25764 [awaiting_review], #25757 [awaiting_review], #25759 [awaiting_review], the REAL GLM contextual routing solution that was designed but never implemented.
+Pick up task #25764 [deployed], GLM 30pct interactive floor observation window.
 
-Where we left off (verified 2026-08-14 17:22 PT):
-- Root cause of sluggishness: NO contextual query classifier exists. GLM-FIRST preempt sends ALL traffic to ring indiscriminately. No 30% floor. No 7B-LoRA classifier. No per-turn complexity evaluation (verified: router_hook.py read_server_file 10:58 PT, _router_core.py ssh_command sed 17:22 PT, grep for 7B-LoRA classifier 17:22 PT).
-- #25764 [awaiting_review]: v3 hybrid classifier with 30% GLM floor. DESIGNED but NOT IMPLEMENTED. Executor never picked it up (128 P0 ideas in queue, verified: GLM52_RING_STATE_TRACKER.md).
-- #25757 [awaiting_review]: route HARDER queries to GLM, simpler to 120B. DESIGNED but NOT IMPLEMENTED.
-- #25759 [awaiting_review]: monitor GLM utilization to verify 30-70% target. DESIGNED but NOT IMPLEMENTED.
-- v3 classifier that EXISTS (_router_core.py:3449, verified: ssh_command sed 17:22 PT): tier-based (L0-L3), does NOT have GLM floor. Only routes to GLM for L3 arch_q/research queries.
-- _classify_query_complexity (router_hook.py:204, verified: ssh_command sed 17:22 PT): keyword+length, only adjusts verbosity, does NOT route.
-- #26284 [executing] and #26355 [proposed]: band-aid stopgaps, NOT the durable solution. Should be reframed as temporary until #25764 [awaiting_review] lands.
-- Ring running=12 waiting=0 (verified: curl /metrics 16:43 PT). Adapter cap=8, vLLM max_num_seqs=15.
-- Joshua OLLAMA_NUM_PARALLEL adjusted 2 to 4 (verified: SSH 15:51 PT, 7B serving).
-- Down rungs: Cicero connection refused (verified: host_probe 15:32 PT), WOPR ollama empty (verified: curl 15:31 PT), Mac M4 eval_count=0 (verified: curl 15:31 PT).
+Where we left off (verified 2026-08-14 17:46 PT):
+- 30pct GLM interactive floor SHIPPED across two layers. Router `_glm_classifier_decide()` in /etc/litellm/router_hook.py (keyword + 7B-LoRA + floor, per-turn behind _is_interactive_cline). Adapter `_glm_floor_should_force()` in /usr/local/bin/frankenstein_tools_adapter.py (the load-bearing half).
+- ROOT CAUSE was adapter-side: `_least_loaded_order(lane_interactive=True)` speed-ranked GLM dead last because PP=6 measures ~1 tok/s per stream. Router-side fixes could never work (verified: ssh_command sed of _least_loaded_order 17:39 PT).
+- Baseline before fix: BELOW_FLOOR glm=5.4pct (5/92 cline turns/60min), bigmac 40 artemis 33 julia 14 ring 5 (verified: monitor first run 17:44 PT).
+- Live now: litellm 200, adapter :11510 200, both active, zero tracebacks (verified: curl + systemctl 17:46 PT). Floor window n=8 glm_pct=25.0 floor_pct=30.0 = ARMED (verified: cat 17:46 PT).
+- Unit tests all pass incl. T6/T7 proving `_least_loaded_order` flips GLM to position 0 when breached and back to last when satisfied (verified: /tmp/test_glm_floor.py run 17:41 PT).
+- Monitor cron every 10 min, snapshot /tmp/emsu_glm_utilization.json, history /var/log/emsu-glm-utilization.log.
+- Anthropic posture verified: Opus BANNED, L3=glm-5.2, L2a=deepseek-v4-pro, 0 Opus picks in 5000 audit rows (verified: registry grep + audit grep 17:45 PT).
+- Joshua OLLAMA_NUM_PARALLEL 2 to 4 earlier this session (verified: SSH 15:51 PT, 7B serving).
 
 Open threads to drive next:
-1. #25764 [awaiting_review], pull full spec from DB for Ruben review. This is the real solution: per-turn 7B-LoRA classifier with 30% GLM floor.
-2. #25757 [awaiting_review], pull full spec. Route harder queries to GLM, simpler to 120B.
-3. #25759 [awaiting_review], pull full spec. Monitor 30-70% GLM utilization target.
-4. #26284 [executing], reframe as stopgap until #25764 [awaiting_review] lands. Or withdraw.
-5. #26355 [proposed], reframe as stopgap. Or withdraw.
-6. (human-only decision, no idea) Address down rungs: Cicero 235B (verified: host_probe 15:32 PT connection refused), WOPR ollama (verified: curl 15:31 PT empty body), Mac M4 (verified: curl 15:31 PT eval_count=0).
+1. #25764 [deployed], observe for 24-48h. Watch /tmp/emsu_glm_utilization.json for verdict moving BELOW_FLOOR to IN_TARGET. If it stays BELOW_FLOOR with the floor armed, the free-slot guard may be starving it, tune EMSU_GLM_FLOOR_WINDOW or check ring capacity.
+2. #26355 [proposed], HELD on purpose. Raise adapter cap 8 to 12 ONLY after the floor shows steady IN_TARGET and ring waiting stays 0. Raising it now compounds latency.
+3. #26284 [rejected], withdrawn (blanket interactive to 120B makes frankenstein-llm dumber). Do not resurrect.
+4. (human-only decision, no idea) Address down rungs: Cicero 235B connection refused (verified: host_probe 15:32 PT), WOPR ollama empty body (verified: curl 15:31 PT), Mac M4 eval_count=0 (verified: curl 15:31 PT).
 
 Reference IDs:
-- Ideas filed: #26284 [executing] (verified: reconcile_ideas 17:23 PT), #26355 [proposed] (verified: reconcile_ideas 17:23 PT), #25764 [awaiting_review] (verified: reconcile_ideas 17:23 PT), #25757 [awaiting_review] (verified: reconcile_ideas 17:23 PT), #25759 [awaiting_review] (verified: reconcile_ideas 17:23 PT), #25754 [rejected] (verified: reconcile_ideas 17:23 PT), #16715 [awaiting_review] (verified: reconcile_ideas 17:23 PT)
-- Ideas closed: none
-- Files touched: /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md (fleet speed + Joshua status, verified: sudo tee -a exit 0); /etc/systemd/system/ollama.service.d/*.conf on Joshua 10.100.0.4 (OLLAMA_NUM_PARALLEL 2 to 4, verified: SSH 15:51 PT)
+- Ideas deployed: #25764 [deployed] (verified: reconcile_ideas 17:46 PT status=deployed), #25757 [deployed] (verified: same), #25759 [deployed] (verified: same)
+- Ideas closed: #26284 [rejected] (verified: reconcile_ideas 17:46 PT status=rejected), #25754 [rejected] (verified: reconcile_ideas 17:23 PT)
+- Ideas held: #26355 [proposed] (verified: reconcile_ideas 17:46 PT status=proposed)
+- Files touched: /etc/litellm/router_hook.py (classifier v3, backup .bak-glm-classifier-20260814); /usr/local/bin/frankenstein_tools_adapter.py (30pct floor, backup .bak-glmfloor-20260814); /usr/local/bin/emsu_glm_utilization_monitor.py (new); /etc/cron.d/emsu-glm-utilization (new); /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md (408 lines); /etc/systemd/system/ollama.service.d/*.conf on Joshua 10.100.0.4
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════</result>
 <task_progress>
-- [x] Initial diagnosis + context
+- [x] Rule 317 RCA (Opus unreachable: BANNED, L3=glm-5.2, 0 picks in 5000 rows)
+- [x] Pull full s
+```
+
+### `1786581699007` — 8/14/2026, 5:49:23 PM PT — 1128 turns
+
+**Original task:**
+
+```
+#Argus Learning
+
+Tell me how Argus automatic learning is going. I would like for it to start making itself smarter. I mean what I usually do is you know I'm coming in here on a daily basis and I'm trying to do sweeps to see what tasks were unfinished as well as whether there were bugs that were showing that needed to be resolved or permission issues that were not in a accordance with rule 29 or missing tools, things of that nature. I would like to see Argus learning doing those sorts of things on its own. How can we make that happen?
+```
+
+**Ideas referenced:** #10182, #1118, #1163, #128126, #128203, #1465, #14749, #16213, #1642, #16523, #18438, #18579, #18693, #18806, #1885, #19415, #19416, #19419, #19434, #20025, #20036 [awaiting_review], #20884, #20890, #21125, #21582, #21667, #22310, #22688, #22850, #22887, #22939 [approved], #23027, #23036, #23094, #23132, #23136, #23144, #23166, #23170, #2323, #23231, #2324, #23241, #23247, #23286, #23292, #23328, #23387, #23428, #23429, #23468, #23506, #23556, #23561, #23582, #23623 [proposed], #23636 [proposed], #23637 [proposed], #23675, #23729, #23764, #23769, #23885 [proposed], #23899 [proposed], #23900 [ready_for_review], #23908 [proposed], #23910 [proposed], #23911 [proposed], #23941, #23982, #24635, #24645, #24789 [proposed], #24941, #24977 [proposed], #24987 [proposed], #24990, #25072, #25074 [proposed], #25142, #25151, #25547, #25552, #25571, #25572 [approved], #25574 [proposed], #25578 [approved], #25624 [proposed], #25625 [ready_for_review], #25768, #25822, #25833, #25888, #25932, #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25975, #25985, #25986, #26001, #26002, #26003 [deployed], #26018 [proposed], #26020 [deployed], #26025 [proposed], #26031 [proposed], #26032 [proposed], #26033 [proposed], #26047 [approved], #26075 [executing], #26083 [awaiting_review], #26091 [proposed], #26250 [proposed], #26269 [approved], #26326 [proposed], #26342 [awaiting_review], #26343 [proposed], #26344 [proposed], #26345 [proposed], #26346, #37362, #58469, #7326, #7377, #7428, #7784, #7785, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+is filed as #26345 [deployed].
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus learning, backlog, and 519-reroot-cause correction.
+(No numeric task id available this session; topic named in plain language.)
+
+Where we left off (verified 2026-08-14 17:16 PDT):
+- Argus task queue: 543 total, 501 done, 19 queued, 1 running, 1 failed, 2 offloaded (post-fix). Live table: argus_task_queue.
+- Moodle repair queue RCA complete: 520 pending rows were REAL (student SMS/paid-request repairs), rooted in AccessSelfHeal.php writing repair_type='re_enrol' not in enum. Enum fixed to include re_enrol; 520 rows relabeled same day.
+- Drain blocked: moodle_repair_config has empty moodle_api_url/token — need config values to auto-enrol (idea #26342 [approved]).
+- Dry-run of cron_re_enrol_drain.php: done=0 failed=50, all "no_paid_active_enrollment" or config-missing — not a silent failure, real gate.
+- Global idea ledger was conflated with Argus tasks in my reporting; correction filed (#26345 [deployed]) and "500 old Argus ideas" retracted — those are platform-wide ideas from 2026-03-30 forward, NOT Argus.
+- EMT AI grader: self-heal cron lives at /etc/cron.d (10-min interval, log fresh) but backlog/throughput NOT yet verified — idea #26343 [proposed].
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26342 [approved] — Fill moodle_api_url/token config (human/secret), then run cron_re_enrol_drain.php again to clear the 520-row re_enrol queue. Requires API credentials that only Ruben has.
+2. #26344 [approved] — Build the executor pipeline for approved platform ideas (global ledger), OR explicitly scope Argus to argus_task_queue and mark global-idea funnel out of Argus scope.
+3. #26343 [proposed] — Verify EMT AI grader backlog: run/read cron_ai_grader_self_heal.php logs, count ungraded submissions through moodle_c_live/assign_grades bridge.
+4. #26326 [approved] — (Superseded-by-26342 detail) Reconfirm moodle_repair_queue drain design once config is present.
+
+Reference IDs:
+- Ideas filed: #26342, #26343, #26344, #26345 [all approved/propose per bracket]
+- Files touched: /var/www/emtskills/cron/cron_re_enrol_drain.php (new), /var/www/emtskills/cron_requeue_stale_offloads.php (new, 15-min cron), /var/www/emtskills/lib/AccessSelfHeal.php (read/RCA only)
+- Tables live-verified: argus_task_queue, moodle_repair_queue, orchestrator_ideas, moodle_repair_config
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
 ### `1786743833650` — 8/14/2026, 5:24:44 PM PT — 200 turns
@@ -323,158 +545,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 - [x] Telemetry + rule file (local+server) + reindex + #26349 stamped deployed
 - [x] #26350 superseded with reasoning; deliverable complete with PICKUP PROMPT
 </task_progress>
-</attempt_completion>
-```
-
-### `1786581699007` — 8/14/2026, 5:16:32 PM PT — 1046 turns
-
-**Original task:**
-
-```
-#Argus Learning
-
-Tell me how Argus automatic learning is going. I would like for it to start making itself smarter. I mean what I usually do is you know I'm coming in here on a daily basis and I'm trying to do sweeps to see what tasks were unfinished as well as whether there were bugs that were showing that needed to be resolved or permission issues that were not in a accordance with rule 29 or missing tools, things of that nature. I would like to see Argus learning doing those sorts of things on its own. How can we make that happen?
-```
-
-**Ideas referenced:** #10182, #1118, #1163, #128126, #128203, #1465, #14749, #16213, #1642, #16523, #18693, #18806, #1885, #19415, #19416, #19434, #20025, #20036 [awaiting_review], #20884, #20890, #21125, #21582, #21667, #22310, #22688, #22850, #22887, #22939 [approved], #23027, #23036, #23094, #23132, #23136, #23144, #23166, #23170, #2323, #23231, #2324, #23241, #23247, #23286, #23292, #23328, #23387, #23428, #23429, #23468, #23506, #23556, #23561, #23582, #23623 [proposed], #23636 [proposed], #23637 [proposed], #23675, #23729, #23764, #23769, #23885 [proposed], #23899 [proposed], #23900 [ready_for_review], #23908 [proposed], #23910 [proposed], #23911 [proposed], #23941, #23982, #24635, #24645, #24789 [proposed], #24941, #24977 [proposed], #24987 [proposed], #24990, #25072, #25074 [proposed], #25142, #25151, #25547, #25552, #25571, #25572 [approved], #25574 [proposed], #25578 [approved], #25624 [proposed], #25625 [ready_for_review], #25768, #25822, #25833, #25888, #25932, #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25975, #25985, #25986, #26001, #26002, #26003 [deployed], #26018 [proposed], #26020 [deployed], #26025 [proposed], #26031 [proposed], #26032 [proposed], #26033 [proposed], #26047 [approved], #26075 [executing], #26083 [awaiting_review], #26091 [proposed], #26250 [proposed], #26269 [approved], #26326 [proposed], #26342 [awaiting_review], #26343 [proposed], #26344 [proposed], #26345 [proposed], #26346, #37362, #7326, #7377, #7428, #7784, #7785, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-is filed as #26345 [deployed].
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus learning, backlog, and 519-reroot-cause correction.
-(No numeric task id available this session; topic named in plain language.)
-
-Where we left off (verified 2026-08-14 17:16 PDT):
-- Argus task queue: 543 total, 501 done, 19 queued, 1 running, 1 failed, 2 offloaded (post-fix). Live table: argus_task_queue.
-- Moodle repair queue RCA complete: 520 pending rows were REAL (student SMS/paid-request repairs), rooted in AccessSelfHeal.php writing repair_type='re_enrol' not in enum. Enum fixed to include re_enrol; 520 rows relabeled same day.
-- Drain blocked: moodle_repair_config has empty moodle_api_url/token — need config values to auto-enrol (idea #26342 [approved]).
-- Dry-run of cron_re_enrol_drain.php: done=0 failed=50, all "no_paid_active_enrollment" or config-missing — not a silent failure, real gate.
-- Global idea ledger was conflated with Argus tasks in my reporting; correction filed (#26345 [deployed]) and "500 old Argus ideas" retracted — those are platform-wide ideas from 2026-03-30 forward, NOT Argus.
-- EMT AI grader: self-heal cron lives at /etc/cron.d (10-min interval, log fresh) but backlog/throughput NOT yet verified — idea #26343 [proposed].
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26342 [approved] — Fill moodle_api_url/token config (human/secret), then run cron_re_enrol_drain.php again to clear the 520-row re_enrol queue. Requires API credentials that only Ruben has.
-2. #26344 [approved] — Build the executor pipeline for approved platform ideas (global ledger), OR explicitly scope Argus to argus_task_queue and mark global-idea funnel out of Argus scope.
-3. #26343 [proposed] — Verify EMT AI grader backlog: run/read cron_ai_grader_self_heal.php logs, count ungraded submissions through moodle_c_live/assign_grades bridge.
-4. #26326 [approved] — (Superseded-by-26342 detail) Reconfirm moodle_repair_queue drain design once config is present.
-
-Reference IDs:
-- Ideas filed: #26342, #26343, #26344, #26345 [all approved/propose per bracket]
-- Files touched: /var/www/emtskills/cron/cron_re_enrol_drain.php (new), /var/www/emtskills/cron_requeue_stale_offloads.php (new, 15-min cron), /var/www/emtskills/lib/AccessSelfHeal.php (read/RCA only)
-- Tables live-verified: argus_task_queue, moodle_repair_queue, orchestrator_ideas, moodle_repair_config
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786745818584` — 8/14/2026, 5:16:09 PM PT — 140 turns
-
-**Original task:**
-
-```
-/emtskills is slow again check emtskills_slowness document on the desktop
-```
-
-**Ideas referenced:** #11945, #15919, #2073, #2294, #2307, #2314, #23169, #2342, #24217, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25999, #26009, #26068 [awaiting_review], #26209, #26218, #26219, #26234, #26284 [executing], #26336 [proposed], #26348 [proposed], #6826
-
-**Last PICKUP PROMPT:**
-
-```
- vault has the final products.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — LoRA retired (1.3T freed); /emtskills slowness + #26336 hardening shipped this session.
-
-Where we left off (verified 2026-08-14 17:15 PT):
-- /emtskills slowness fixed (du-without-x disk hammer), load 16.27 → 6.26.
-- #26336 hardening deployed (du -x durable, portal md0 self-check, nvme9100-sync -x).
-- Artemis verified UP; stale unreachable claims corrected; fleet-finisher/vault-sync remain chattr +i disabled.
-- LoRA training pipeline retired: safety gate passed (0 serving refs), deleted /data/frank_adapters_cold/ARCHIVE_* (341 dirs, 1.3T), /data 71% → 36%. Final weights preserved in WOPR src + Artemis vault 1.2T. Serving LoRA rungs untouched. #26348 → implement.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26348 [executing] — LoRA retirement final sweep. Confirm the engine closes clean via get_idea_progress. Optional leftover: archive-or-delete the 5 retired WOPR src dirs (/var/www/frank_adapters, /var/www/emtskills/lora_adapters, /opt/emsu-lora, /var/www/emtskills/uploads/lora, /var/www/emtskills/cache/lora_checkpoints) and the 1.2T Artemis vault only if Ruben wants a full purge; otherwise leave as offline provenance.
-2. #26284 [executing] — contextual routing gap: GLM ring still first on interactive lane at ~6.2s TTFB (the 'feels sluggish' driver); route interactive turns through the 120B fast rung and move GLM to batch/background.
-3. #26336 [executing] — confirm hardening idea engine closed clean (code already live on box).
-
-Reference IDs:
-- Ideas: #26348 [executing] (LoRA retirement), #26336 [executing] (walker hardening), #26284 [executing] (routing gap), #26068 [awaiting_review] (pipeline-dead, superseded by #26348)
-- Files touched: /data/frank_adapters_cold (ARCHIVE_* deleted), /usr/local/bin/emsu-disk-consumer-watch.sh, /usr/local/bin/emsu-portal-health-guard.sh, /usr/local/bin/nvme9100-sync.sh, /var/www/emtskills/docs/HANDOFF_NOTES.md, /Users/rubenmajor/Desktop/emtskills-slowness.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Find emtskills_slowness document on Desktop
-- [x] Read document for prior runbook/context
-- [x] Diagnose current /emtskills slowness
-- [x] Apply immediate fix + verify (patch du -x, load 16.27→7.73, disk 0%)
-- [x] Idea #26336 approved + deployed (du -x durable, md0 self-check, nvme-sync -x)
-- [x] STEER applied: Artemis verified UP + stale unreachable claims corrected
-- [x] STEER: 'do we even need LoRA' — probed VEC/context/training-pipeline vs serving-LoRA usage
-- [x] Ruben: 'Retire LoRA' — safety gate passed, 1.3T ARCHIVE_* deleted, /data 71%→36%
-- [x] Update server HANDOFF_NOTES + local doc
-- [x] Mark #26348 implement + final completion
-</task_progress>
-</attempt_completion>
-```
-
-### `1786751687527` — 8/14/2026, 5:13:20 PM PT — 38 turns
-
-**Original task:**
-
-```
-#CFA Stuff
-
-I'm really confused here. Something is weird. What are we doing? What are we doing if the student has a student ID number does that not match a class? I'm confused here.
-
-You were right — the process exists, and my "a human must do it" answer was wrong. Here is what the code actually says.
-
-## The existing CFA process (verified by reading the source)
-
-**`lib/SectionTransferExecutor.php`** — this is the track-change handler and it is fully automated:
-- `execute($studentNeedle, $toSection, $opts)` performs the whole move.
-- Line 185 does the real write: `UPDATE Students SET moodle_ur
-```
-
-**Ideas referenced:** #23184, #2328, #25943 [deployed], #25989, #26068, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26307 [deployed], #26333 [deployed], #26334 [deployed], #26336, #3261, #3319, #3346, #7207, #7907, #9086, #9193
-
-**Last PICKUP PROMPT:**
-
-```
-d only as a watch-item, below.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — CFA section-transfer: verification closed, no code change needed (this session was read-only).
-
-Where we left off (verified 2026-08-14 17:11 PT):
-- PROVEN LIVE, not just coded: 15 `section_transfer_executor` audit rows in orchestrator_event_log from 2026-07-24 through 2026-08-11, most recent id 5952922 (`26213FT-40 → 26225FT`, course 25, auto_acted=1).
-- Full chain confirmed: cron_email_responder.php → EmailAIResponder.php → CanonicalToolRegistry::toolsFor('email') → transfer_student_section (line 369) → localTransferStudentSection() → SectionTransferExecutor::execute().
-- Mismatch behavior: student_not_found / target_section_group_not_found / dry-run→apply with needs_billing_review. No guess-forcing.
-- No writes this session; files untouched; no ideas filed. Answer was already correct-and-live.
-
-Open threads to drive next (all gated on live inbound or Ruben steer):
-1. (verification only, no idea needed) — If Ruben wants, watch whether same-section no-op clusters (e.g. 26719BC-09 fired 4× in 10 min on 07-27) are distinct inbound emails vs an agent re-invoke loop. File an idea only after that distinction is confirmed live; do not file on the code-read alone.
-2. #25943 [deployed] — Watch `[TPR-25943]` / `[TPR-25943-BLOCK]` on Elen's next payment_billing reply to confirm the ask-the-student ack ships.
-3. #26334 [deployed] — Monitor `[CQG-26334]` elog + ai_clarifying_gate_log on the next real vague inbound; tune cqgNormalizeOpener if live shapes differ from the 5 tested.
-4. #26333 [deployed] — Confirm the first real watchdog_restore row lands in orchestrator_event_log; follow-on is surgical hunk repair rather than wholesale rollback.
-
-Reference IDs:
-- Student context: 26223BC-24 Elen Issahhanjan, elenisa2007@gmail.com, Moodle uid 54727, course 25 group 26223BC; invoice EMSU-26223BC-24 (qb_invoice_id 174975) $2,345.00 unpaid.
-- Live proof rows (orchestrator_event_log.ids): 5952922, 5863175, 4876918, 4783316, 4076973.
-- Ideas filed this session: none (verification only).
-- Files touched this session: none (read-only trace of lib/SectionTransferExecutor.php, lib/email_agent/section_transfer_tool.php, lib/CanonicalToolRegistry.php, lib/EmailAIResponder.php, cron/cron_email_responder.php).
-</result>
 </attempt_completion>
 ```
 

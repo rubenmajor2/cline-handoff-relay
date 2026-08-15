@@ -6,15 +6,20 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/15/2026, 12:28:12 AM PT | window: last 72h | 87 tasks | index total 728 (parsed 7, cached 721)
+Generated: 8/15/2026, 1:28:13 AM PT | window: last 72h | 90 tasks | index total 731 (parsed 7, cached 724)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786778761449` | 8/15/2026, 12:28:09 AM | 37 | 80KB | #SSS |
-| `1786778041170` | 8/15/2026, 12:28:02 AM | 69 | 417KB | #CFA  |
+| `1786782096117` | 8/15/2026, 1:28:10 AM | 33 | 1234KB | #Email Agent |
+| `1786778761449` | 8/15/2026, 1:23:18 AM | 392 | 588KB | #SSS |
+| `1786778041170` | 8/15/2026, 1:18:15 AM | 318 | 1705KB | #CFA  |
+| `1786764883780` | 8/15/2026, 1:18:05 AM | 130 | 453KB | #Abandoned Cart Recovery |
+| `1786780447770` | 8/15/2026, 1:15:59 AM | 142 | 588KB | #Executor |
+| `1786779320051` | 8/15/2026, 1:14:55 AM | 226 | 1753KB | Did email agent actually fix this issue for Sarah? |
+| `1786566698066` | 8/15/2026, 1:04:01 AM | 587 | 1106KB | #Call Backs  |
+| `1786776477060` | 8/15/2026, 12:38:37 AM | 240 | 704KB | #Executor |
 | `1786754594067` | 8/15/2026, 12:25:43 AM | 680 | 3240KB | Please epxlain to me why the information here was asked for (student ID, etc...) AND a tim |
 | `1786695610761` | 8/15/2026, 12:22:59 AM | 328 | 1590KB | #Big Mac 4th Card |
-| `1786776477060` | 8/15/2026, 12:21:51 AM | 196 | 579KB | #Executor |
 | `1786763374566` | 8/15/2026, 12:12:47 AM | 133 | 591KB | #Frankenstein-LLM Suggish?  |
 | `1786772358561` | 8/15/2026, 12:10:09 AM | 420 | 2467KB | Not correct, where was the 40% number received. That's incorrect. What is the actual numbe |
 | `1786776463806` | 8/14/2026, 11:47:49 PM | 2 | 2KB | #Executor |
@@ -22,7 +27,6 @@ Generated: 8/15/2026, 12:28:12 AM PT | window: last 72h | 87 tasks | index total
 | `1786765205570` | 8/14/2026, 11:22:11 PM | 264 | 999KB | I have seen enough rules 317 violations that I am quite concerned on the number of reversi |
 | `1786696386569` | 8/14/2026, 11:17:34 PM | 92 | 332KB | #Unknown |
 | `1786740046847` | 8/14/2026, 8:59:13 PM | 646 | 6933KB | #CFA Misunderstanding |
-| `1786764883780` | 8/14/2026, 8:56:30 PM | 86 | 289KB | #Abandoned Cart Recovery |
 | `1786764429338` | 8/14/2026, 8:41:12 PM | 32 | 82KB | Can you please resolve this issue right away: |
 | `1786567464418` | 8/14/2026, 8:33:40 PM | 446 | 3647KB | #Argus |
 | `1786745818584` | 8/14/2026, 8:33:30 PM | 454 | 2193KB | /emtskills is slow again check emtskills_slowness document on the desktop |
@@ -43,7 +47,6 @@ Generated: 8/15/2026, 12:28:12 AM PT | window: last 72h | 87 tasks | index total
 | `1786674811485` | 8/14/2026, 5:06:40 AM | 248 | 1033KB | Can you tell me how we can see if anyone is using a bot to chat to us or not? |
 | `1786660376952` | 8/14/2026, 3:01:07 AM | 346 | 1205KB | help me file with Florida Board of Education application yet? Need that approval before we |
 | `1786547336372` | 8/14/2026, 2:07:44 AM | 660 | 3109KB | Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cl |
-| `1786566698066` | 8/14/2026, 2:00:56 AM | 509 | 971KB | #Call Backs  |
 | `1786592555268` | 8/14/2026, 1:51:15 AM | 660 | 2554KB | #Argus |
 | `1786558292672` | 8/14/2026, 1:50:07 AM | 422 | 1434KB | #Touch ID |
 | `1786553732663` | 8/14/2026, 1:45:33 AM | 614 | 3214KB | When I get emails like this I would like to actually see the students original email below |
@@ -102,7 +105,33 @@ Generated: 8/15/2026, 12:28:12 AM PT | window: last 72h | 87 tasks | index total
 
 ## Per-window detail
 
-### `1786778761449` — 8/15/2026, 12:28:09 AM PT — 37 turns
+### `1786782096117` — 8/15/2026, 1:28:10 AM PT — 33 turns
+
+**Original task:**
+
+```
+#Email Agent
+
+I tried correcting this issue earlier and it did not take. Pleaser resolve durably. Also I noticed there is no 
+
+Best Regards,
+
+Customer Service
+
+EMS University, LLC d.b.a. EMS Universal Education
+
+(800) 728-0209
+
+This is an automated response which can sometimes make mistakes. A member of our team may follow up if needed.
+
+that should be resolved.
+```
+
+**Ideas referenced:** #16732, #2328, #2341, #2343, #2344, #23710, #2511, #25989, #26068, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26320, #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #3261, #3319, #3346, #4991, #6106
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786778761449` — 8/15/2026, 1:23:18 AM PT — 392 turns
 
 **Original task:**
 
@@ -121,11 +150,11 @@ The **read side is fully built** on both hops:
 And there's a **working reference implementation**: `cron/cron_argus_ext_canary.php:51` passes `'emsu_surface' => 'argus_term
 ```
 
-**Ideas referenced:** #11316, #12251, #12335, #12365, #12366, #12368, #12407, #12657, #12689, #21134, #2316, #26376 [deployed], #26377 [deployed], #26396 [proposed], #26424 [proposed], #26447 [proposed], #26461 [in-progress], #26469 [proposed], #5574, #7174, #9112
+**Ideas referenced:** #10740, #1119, #11316, #11397, #12249, #12251, #12266, #12269, #12335, #12363, #12365, #12366, #12368, #12407, #12588, #12589, #12590, #12591, #12618, #12657, #12688, #12689, #13155, #13157, #13459, #13470, #13874, #14133, #14142, #15776, #16084, #16154, #16715, #16716, #16718, #17078, #17174, #21134, #23133, #2316, #25155, #25171, #25178, #25185, #25186, #25986, #26376 [deployed], #26377 [deployed], #26396 [proposed], #26424 [proposed], #26447 [proposed], #26461 [in-progress], #26469 [proposed], #26503 [executing], #26504 [executing], #26505 [executing], #26506 [proposed], #5574, #7174, #9112, #9222
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786778041170` — 8/15/2026, 12:28:02 AM PT — 69 turns
+### `1786778041170` — 8/15/2026, 1:18:15 AM PT — 318 turns
 
 **Original task:**
 
@@ -137,7 +166,191 @@ Rebase and tell me what else needs to be done here if anything
 This is incredibly vague. What's wrong with Email Agent? Can you look into it and see what's going on? Fix it? Same with other CFAs?
 ```
 
-**Ideas referenced:** #13977, #14743, #14748, #16473, #16732, #17712, #177949, #18135, #18853, #19802, #2018, #2145 [investigating], #2214, #2219, #2220 [resolved], #22250, #23211, #2323 [investigating], #2324 [resolved], #2328, #2341, #2343, #2344, #2358 [resolved], #2363 [resolved], #23710, #2406 [open], #25025, #2504 [resolved], #25564, #25795, #25913, #25989, #26068, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26319, #26336, #26348, #26368, #26475, #2782, #3261, #3319, #3346, #3957, #4930, #4931, #5095, #5770, #5795, #6039, #6064, #6230, #6789, #7164, #7359, #7381
+**Ideas referenced:** #0066, #1070, #1089, #1164, #1166, #13047, #13442, #13965, #13977, #14741, #14742, #14743, #14748, #14749, #1636, #16418, #16445, #16473, #1668, #16732, #17712, #177949, #178686, #18132, #18135, #18176, #18309, #18313, #18853, #1892, #19802, #19830, #19918, #2018, #20569, #2145 [investigating], #22060, #2214, #2219, #2220 [resolved], #22250, #22261, #23211, #2323 [investigating], #2324 [resolved], #2328, #2341, #2343, #2344, #2358 [resolved], #2363 [resolved], #23710, #2406 [open], #25025, #2504 [resolved], #2511 [open], #25185, #25564, #2563, #25795, #25913, #25989, #26068, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26319, #26336, #26348, #26368, #26475, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #2782, #3261, #3319, #3346, #3587, #3957, #4686, #4689, #4929, #4930, #4931, #4957, #4958, #5095, #5391, #5431, #5574, #5638, #5768, #5770, #5779, #5787, #5792, #5793, #5794, #5795, #5819, #6039, #605250, #6064, #620781, #6230, #6789, #7126, #7164, #7174, #7359, #7368, #7381, #7548, #7550, #9132, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+FORE grepping candidate files"
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786860000000 CFA fleet post-repair follow-through (Email Agent, Ticket Agent, Chat Widget all fixed and verified 2026-08-15 01:07 PT).
+
+Where we left off (verified 2026-08-15 01:07 PT):
+- 9 fixes deployed, php -l clean, .bak-20260815-* backups on WOPR, across: lib/session_bootstrap.php, cron/cron_email_responder.php, cron/cron_ai_ticket_agent.php, lib/ai_ticket_agent.php, lib/website_config.php
+- Email responder: 0 errors across 4 clean runs since 00:45 PT, was 77/hour (verified: awk since-00:45 grep -c 'ERROR processing email' = 0)
+- Ticket agent: 0 json_decode FATALs since the 01:02 deploy, cron now reaches 'cron complete' (verified: awk since-01:02 grep -c json_decode = 0). Residual 'ERROR, AI decision failed' is the INTENDED graceful null-return, not a crash.
+- Blast radius: 1867 error lines equalled 23 DISTINCT message-ids in a retry loop, no permanent data loss; maildir 0 new / 0 cur
+- #26495 [deployed] (verified: status=deployed dev_stage=impl_failed)
+- #26496 [deployed] (verified: status=deployed dev_stage=impl_failed)
+- Bug library router-incident record 2511 resolution merged, seen_count now 2
+- api/orchestrator_api.php is 674KB, NEVER read_file it whole, use sed/grep line ranges
+
+Open threads to drive next:
+1. #26508 [proposed] miamiemt.com /register/ returns HTTP 200 but all 14 cohort dropdown options are frozen at 'June 20, 2022', so the RegistrationSurfaceGate (SLS registration_surface_health gate) FAILs that domain on every email-responder run. Site-side stale WordPress content, not an agent bug. The gate probes /register/, not /enroll/. Action: refresh the cohort data on the miamiemt WordPress site.
+2. #26509 [proposed] clinerules repo is 2 commits ahead of origin/main with roughly 20 modified rule files dirty; routes repo has a git dubious-ownership flag; no rebase in progress anywhere; Desktop repo has no remote. Action: decide commit+push versus revert.
+
+Reference IDs:
+- Ideas filed: #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed]
+- Bug library: frankenstein_router_incidents record 2511
+- Files touched: /var/www/emtskills/lib/session_bootstrap.php, /var/www/emtskills/cron/cron_email_responder.php, /var/www/emtskills/cron/cron_ai_ticket_agent.php, /var/www/emtskills/lib/ai_ticket_agent.php, /var/www/emtskills/lib/website_config.php
+- Logs: /var/log/emsu_email_responder.log, /var/log/emsu_ai_ticket_agent_cron.log, /var/log/emsu_ai_ticket_agent.log (stack traces)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<command>ssh -p 2222 emsuserver@127.0.0.1 "tail -20 /var/log/emsu_email_responder.log"</command>
+</attempt_completion>
+```
+
+### `1786764883780` — 8/15/2026, 1:18:05 AM PT — 130 turns
+
+**Original task:**
+
+```
+#Abandoned Cart Recovery
+
+Can you tell me whether VAPI sales agent is functioning properly? How are we doing on our cart recovery and yeah how is all of that going? Abandoned Cart recovery? SMS, email as wellOn this point
+```
+
+**Ideas referenced:** #16523, #16811, #24635, #24645, #2563, #26432 [deployed], #26433 [proposed], #2980, #9019, #969959, #970704, #970924, #970985, #971236, #971384, #972203, #989118, #989474, #989862, #990105, #990299, #990703, #997203, #997313, #997395, #997587, #997812, #997972
+
+**Last PICKUP PROMPT:**
+
+```
+ed with on-disk + DB evidence.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Abandoned Cart Recovery / VAPI status + repair (completed; pickup for audit trail).
+
+Where we left off (verified 2026-08-15 01:17 PT):
+- Abandoned-cart EMAIL cron fixed and LIVE: `cron_abandoned_cart_email.php` now loads `config/secrets.php` (was fatal `Undefined constant POSTMARK_ACCOUNT_TOKEN` since Aug 11). Log redirect fixed to `/var/www/emtskills/logs/emsu-abandoned-cart-email.log`. Post-fix runs: 22:00 PT sent 11 emails, 00:00 PT sent 4; `abandonment_contact_log` = 15 rows, all matched.
+- Sandiego credential: `lib/website_config.php` db_pass corrected 00:51 tonight (bak `.bak-20260815-sandiego-pass`; diff = only that line). Cron confirmed importing sandiego carts again (2 carts at 01:00 and 01:12), zero Access-denied rows after 00:30.
+- VAPI voice: healthy. 250 legs/24h, 194 transcripts, no outages, dialer live every minute. Invoice recovery: 405 invoices (~15/day).
+- Cart funnel: 12,408 carts, 945 converted (7.6%), 11,463 open, 5,829 do_not_call, 4,534 sms_fallback, 130 pending.
+
+Open threads to drive next:
+1. None — all work completed this session and verified. Watch `abandonment_contact_log` growth over 48h and confirm no `F_t4EU3D`-type password drift returns on future WP credential rotations. Proposed: add a nightly drift check of `website_config.php` db_pass vs each store's wp-config.php (not yet filed — human-policy decision on whether it is worth a new idea).
+2. If sandiego `iNQ2KWdAll2GeWs94dPaeIVz` is ever rotated, re-sync `lib/website_config.php` the same way (one-line password swap, same pattern as `.bak-20260815-sandiego-pass`).
+
+Reference IDs:
+- Ticket: none (direct task)
+- Ideas filed: #26432 [deployed], #26433 [deployed]
+- Files touched: /var/www/emtskills/cron/cron_abandoned_cart_email.php, /var/www/emtskills/lib/website_config.php, crontab log path, /var/www/emtskills/logs/emsu-abandoned-cart-email.log
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786780447770` — 8/15/2026, 1:15:59 AM PT — 142 turns
+
+**Original task:**
+
+```
+#Executor
+
+Why don't you give me a roadmap as to how the system works and close any gaps that you can find in the process?
+
+That makes me wonder does ruben doctor of executor even work or does that rule need to be modified?
+
+Built and shipped. Both halves are positive-controlled, which matters here more than usual: the entire problem tonight was instruments that reported healthy without ever being tested against a known-bad case.
+
+## The watchdog now measures delivery, not activity
+
+`cron_orchestrator_executor_watchdog.php` had six sections. Every one checked whether something was *running*: i
+```
+
+**Ideas referenced:** #12506, #12761, #12763, #12764, #13075, #16648, #16714, #16717, #18039, #18040, #18041, #18133, #18148, #18161, #18178, #18252, #18258, #18329, #18332, #2512, #25185, #25656, #25775, #25811, #25834, #25836, #25898, #25899, #25901, #25927, #26068 [deployed], #26173, #26175, #26192, #26207, #26208, #26214, #26229, #26235, #26258, #26296, #26326, #26342, #26344, #26371, #26401 [executing], #26415 [blocked], #26421 [executing], #26429 [executing], #26436 [blocked], #26437 [executing], #26461, #26470 [deployed], #26482 [executing], #26483 [executing], #26484 [executing], #26490 [executing], #26491 [executing], #26495 [deployed], #26496, #26498 [executing], #26499 [executing], #26500 [deployed], #26502, #26513 [deployed], #26518 [executing], #26519 [executing], #26520 [deployed], #26521 [deployed], #4987
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786779320051` — 8/15/2026, 1:14:55 AM PT — 226 turns
+
+**Original task:**
+
+```
+Did email agent actually fix this issue for Sarah?
+
+If not, why not and how can we resolve this
+```
+
+**Ideas referenced:** #1163, #16613, #24924, #25185, #25241, #26501 [open], #26507 [open], #26515 [approved], #9086, #9306 [executing]
+
+**Last PICKUP PROMPT:**
+
+```
+on/cron_email_followup.php
+```
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #26515 [deployed] , TEMP-slug payment lookup no longer suspends paid students.
+
+Where we left off (verified 2026-08-15 01:14 PT):
+- #26515 [deployed] cron paid-check resolves by student_db_id plus qb_customer_id, fail-closed assertion added, dry run clean.
+- #26507 [deployed] 48 invoice rows backfilled, paid TEMP rows 26 to 6.
+- #26501 [deployed] follow-up email no longer claims Active when Moodle access is blocked.
+- Sarah 26417FT-25 readings: ue_status=0, user_susp=0, in_group=1.
+
+Open threads to drive next:
+1. #26507 [deployed] , 4 students still carry a TEMP slug on the Students row itself (db ids 8136451, 8154591, 8154607, 8154582 whose Students row is NULL). They are protected by the fail-closed path but their slugs should be issued properly.
+2. #26501 [deployed] , the deadman auto-act path still returns forbidden because smet_caller_can_modify has no system or automation role. A human owner decision on granting an automation role is required (human-only decision, no idea).
+3. #26515 [deployed] , consider extending the same student_db_id resolution to the other three payment sources in that cron, which still key on email.
+
+Reference IDs:
+- Ideas filed: #26501 [deployed], #26507 [deployed], #26515 [deployed]
+- Files touched: /var/www/emtskills/cron/cron_payment_reconciliation.php, /var/www/emtskills/cron/cron_email_followup.php
+- Correction ingested: ai_learned_corrections id 8149
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786566698066` — 8/15/2026, 1:04:01 AM PT — 587 turns
+
+**Original task:**
+
+```
+#Call Backs 
+
+Check Chat 55 for Call Back bug on Telephony as well as some issue with "View As" supposedly not showing actual "View As" in role. Can't really confirm this, but that's what CS roles are saying. This is Chat 55 from today / the last few hours regarding Call Backs
+```
+
+**Ideas referenced:** #10003, #111827, #21753, #23989, #24645, #25185, #2563, #25701, #25702, #25703, #25704, #25946 [proposed], #25947 [proposed], #25948 [proposed], #25951 [deployed], #26203 [deployed], #26206 [deployed], #26259 [proposed], #26260 [proposed], #26261 [proposed], #26266 [proposed], #26267 [proposed], #26511 [deployed], #26513 [deployed], #334155, #3672, #3673, #3677, #3679, #3684, #3685, #3688, #3689, #3691, #3694, #3695, #3696, #3708, #3713, #3714, #3715, #3716, #3717, #3721, #475569, #64748, #664985
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786776477060` — 8/15/2026, 12:38:37 AM PT — 240 turns
+
+**Original task:**
+
+```
+#Executor
+
+First of all get the execuor working. Then we can discuss remainder
+
+
+## No. The executor is not repaired. Here is the honest state, and I am not going to dress it up.
+
+**Zero ideas have deployed in the last 3 hours. 447 built ideas are still waiting.** I found the cause, corrected two of three defects, and the third is still broken. Details below, all measured tonight.
+
+## The executor builds fine. The DEPLOY step has never worked. Not once.
+
+Of the 1,466 approved ideas: 899 idle, **447 sitting at `ready_for_review`**, 20 drafting. Of those 447: **413 have code patches, 413 have pa
+```
+
+**Ideas referenced:** #12778, #1281, #1285, #1312, #14571 [deployed], #15333, #15367, #1579, #17737, #17913, #18357, #18395, #18402, #1850, #19435, #19490, #19504, #19661, #19684, #20350, #20408, #2505 [deployed], #2506, #2510, #25185, #25265, #25291, #25292, #25335, #25349, #25351, #25426, #25454, #25458, #25825, #25848 [executing], #25897, #25899, #25900, #25901, #25925, #25926, #25927, #25929, #25930, #25935, #25939, #25991, #26401 [executing], #26415 [blocked], #26421 [executing], #26429 [executing], #26436 [blocked], #26437 [executing], #26470 [executing], #26482 [executing], #26483 [executing], #26484 [executing], #26489, #26490 [executing], #26491 [approved], #26498 [approved], #26499 [approved], #26500 [deployed], #341627, #341632, #341633, #341635, #341636, #341640, #341736, #341793, #3541, #3953, #8563, #8598, #9222, #9235
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -204,29 +417,6 @@ Two points in it undercut the evidence I leaned on hardest:
 ```
 
 **Ideas referenced:** #111827, #11782, #1195, #12262, #12661, #13873, #13977, #14153, #14154, #14847, #15635, #15636, #15638, #15903, #16437, #1644, #1647, #16581, #16608, #16613, #16731, #16732, #16733, #1731, #1732 [resolved], #1734 [resolved], #1737, #1739, #1746, #1747, #17546, #17580, #17685, #17723, #178667, #178668, #178669, #18693, #18694, #18700, #18743, #18936, #1914 [deployed], #19173, #19439, #19465, #19492, #19495, #19921, #2026, #2033, #20346, #20357, #2036, #21753, #2299, #23133 [executing], #2322 [deployed], #2323, #2341 [resolved], #2343, #2346 [investigating], #2347 [investigating], #23477 [in_progress], #2348, #2349 [deployed], #2351 [deployed], #2352, #2354, #2356 [deployed], #2357 [deployed], #2359, #23945 [proposed], #23952 [awaiting_review], #23954 [awaiting_review], #23989, #24526 [superseded], #24645, #24765, #25042 [deployed], #2507, #25097, #25156, #25185, #2563, #25701, #25702, #25703, #25704, #25871, #25888, #25914 [in_progress], #25940 [executing], #25946 [proposed], #25947 [proposed], #25948 [proposed], #25951 [deployed], #25952 [executing], #25953 [executing], #25971, #25974, #25975, #25976, #25984 [the canonical walker], #25985, #25986, #25990 [proposed], #25995, #26003, #26035 [proposed], #26203 [deployed], #26206 [deployed], #26209 [proposed], #26211 [proposed], #26230 [proposed], #26231 [proposed], #26233 [rejected], #26237 [rejected], #26238 [proposed], #26256 [deployed], #26257 [deployed], #26258 [proposed], #26259 [proposed], #26260 [proposed], #26261 [proposed], #323348, #334155, #3672, #3673, #3677, #3679, #3684, #3685, #3688, #3689, #3691, #3694, #3695, #3696, #37030, #3708, #3713, #3714, #3715, #3716, #3717, #3721, #46641, #64748, #664985, #71121, #9083, #9086, #9168, #9192, #9202, #9306, #9311, #9339, #9343, #9420, #9421, #9422, #9423, #9458, #9549, #9831
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786776477060` — 8/15/2026, 12:21:51 AM PT — 196 turns
-
-**Original task:**
-
-```
-#Executor
-
-First of all get the execuor working. Then we can discuss remainder
-
-
-## No. The executor is not repaired. Here is the honest state, and I am not going to dress it up.
-
-**Zero ideas have deployed in the last 3 hours. 447 built ideas are still waiting.** I found the cause, corrected two of three defects, and the third is still broken. Details below, all measured tonight.
-
-## The executor builds fine. The DEPLOY step has never worked. Not once.
-
-Of the 1,466 approved ideas: 899 idle, **447 sitting at `ready_for_review`**, 20 drafting. Of those 447: **413 have code patches, 413 have pa
-```
-
-**Ideas referenced:** #1281, #1285, #1312, #14571 [deployed], #15333, #15367, #1579, #17913, #18357, #18395, #1850, #19435, #19490, #19504, #19661, #19684, #20350, #20408, #2505 [deployed], #2506, #25185, #25349, #25351, #25426, #25458, #25848 [executing], #25901, #25925, #25926, #25927, #25929, #25930, #25935, #25939, #26401 [executing], #26415 [blocked], #26421 [executing], #26429 [executing], #26436 [blocked], #26437 [executing], #26470 [executing], #26482 [executing], #26483 [executing], #26484 [executing], #26489, #26490 [executing], #26491 [approved], #341627, #341632, #341633, #341635, #341636, #341640, #341736, #341793, #3541, #3953, #8563, #8598, #9222, #9235
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -484,48 +674,6 @@ Reference IDs:
 - Files touched: lib/sub_emit_alert.php (existing), cron/cron_cfa_queue_executor.php, cron/cron_cfa_payment_auto_clear.php, lib/cfa_access_sweep.php
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786764883780` — 8/14/2026, 8:56:30 PM PT — 86 turns
-
-**Original task:**
-
-```
-#Abandoned Cart Recovery
-
-Can you tell me whether VAPI sales agent is functioning properly? How are we doing on our cart recovery and yeah how is all of that going? Abandoned Cart recovery? SMS, email as wellOn this point
-```
-
-**Ideas referenced:** #16523, #16811, #24635, #24645, #26432 [deployed], #26433 [proposed], #2980, #9019, #969959, #970704, #970924, #970985, #989118, #989474, #997203, #997313, #997395, #997587, #997812, #997972
-
-**Last PICKUP PROMPT:**
-
-```
-res; needs credential refresh.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Abandoned Cart Recovery / VAPI status + email-cron repair (completed this session; pickup is for the open follow-ups).
-
-Where we left off (verified 2026-08-14 20:56 PT):
-- VAPI voice line healthy: 250 legs/24h, AI talking on 194, no outages. Sales dialer live every minute, correctly window-skipping overnight.
-- Abandoned-cart EMAIL cron was fatally broken (Undefined constant POSTMARK_ACCOUNT_TOKEN, missing `config/secrets.php` require; log redirect to unwritable /var/log also swallowed output). FIXED and verified: dry run exit=0, 11 eligible carts queued (3x1h / 4x24h / 4x72h). File: /var/www/emtskills/cron/cron_abandoned_cart_email.php; crontab log now /var/www/emtskills/logs/emsu-abandoned-cart-email.log.
-- Recovery funnel: 12,408 carts, 945 converted (7.6%), 11,463 open; 4,534 sms_fallback; 405 invoices auto-created for abandoned registrations (~15/day, last 8/14 19:00 PT).
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #26433 [proposed] — Fix `sandiegoemtrefresher` WP DB creds in cron_import_abandoned_carts.php (Access denied wp_r2lsp @ every 30-min run) so that store's abandoned carts import; then confirm the store shows a nonzero import delta.
-2. #26432 [deployed] — Watch /var/www/emtskills/logs/emsu-abandoned-cart-email.log after the next 2h cron ticks to confirm LIVE emails are now sending (was dry-run verified only). Confirm abandonment_contact_log begins accumulating rows.
-
-Reference IDs:
-- Ideas filed: #26432 [deployed], #26433 [proposed]
-- Files touched: /var/www/emtskills/cron/cron_abandoned_cart_email.php (+ backup on server), crontab log path
-- Data tables: abandoned_carts, abandonment_contact_log, abandoned_reg_recovery_log, registration_abandonment_config, voice_call_log
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
@@ -1477,20 +1625,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1786566698066` — 8/14/2026, 2:00:56 AM PT — 509 turns
-
-**Original task:**
-
-```
-#Call Backs 
-
-Check Chat 55 for Call Back bug on Telephony as well as some issue with "View As" supposedly not showing actual "View As" in role. Can't really confirm this, but that's what CS roles are saying. This is Chat 55 from today / the last few hours regarding Call Backs
-```
-
-**Ideas referenced:** #10003, #111827, #21753, #23989, #24645, #25185, #2563, #25701, #25702, #25703, #25704, #25946 [proposed], #25947 [proposed], #25948 [proposed], #25951 [deployed], #26203 [deployed], #26206 [deployed], #26259 [proposed], #26260 [proposed], #26261 [proposed], #26266 [proposed], #26267 [proposed], #334155, #3672, #3673, #3677, #3679, #3684, #3685, #3688, #3689, #3691, #3694, #3695, #3696, #3708, #3713, #3714, #3715, #3716, #3717, #3721, #475569, #64748, #664985
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786592555268` — 8/14/2026, 1:51:15 AM PT — 660 turns
 

@@ -6,14 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/15/2026, 12:45:05 PM PT | window: last 72h | 91 tasks | index total 739 (parsed 5, cached 734)
+Generated: 8/15/2026, 1:45:05 PM PT | window: last 72h | 91 tasks | index total 741 (parsed 4, cached 737)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786820106387` | 8/15/2026, 12:44:43 PM | 161 | 488KB | Why does Vicky send me this? -> Making a followup on Sam Nelson’s final exam I was able to |
-| `1786818491154` | 8/15/2026, 12:44:37 PM | 201 | 446KB | #Joshua Hot FAllover |
-| `1786782096117` | 8/15/2026, 12:44:27 PM | 469 | 4914KB | #Email Agent |
-| `1786817395147` | 8/15/2026, 12:44:06 PM | 255 | 2024KB | #Call Backs / VAPI |
+| `1786820106387` | 8/15/2026, 1:44:49 PM | 285 | 779KB | Why does Vicky send me this? -> Making a followup on Sam Nelson’s final exam I was able to |
+| `1786817395147` | 8/15/2026, 1:34:17 PM | 318 | 2249KB | #Call Backs / VAPI |
+| `1786824274829` | 8/15/2026, 1:25:37 PM | 178 | 639KB | frankenstein-llm seems to be having some intermittent connectivity issues. Not sure the ca |
+| `1786782096117` | 8/15/2026, 1:16:58 PM | 510 | 5020KB | #Email Agent |
+| `1786823554800` | 8/15/2026, 1:07:50 PM | 19 | 1208KB | #Argus |
+| `1786818491154` | 8/15/2026, 1:03:24 PM | 300 | 642KB | #Joshua Hot FAllover |
 | `1786821833685` | 8/15/2026, 12:40:19 PM | 93 | 270KB | #SSS / Virtual LoRA2 / Efficiency |
 | `1786819237851` | 8/15/2026, 12:06:54 PM | 126 | 723KB | #SSS/CFA/267/ Executor |
 | `1786816732366` | 8/15/2026, 12:06:03 PM | 127 | 1556KB | Something is not working with info@emsuniversity.com. I was asked to re-authenticate this  |
@@ -99,14 +101,12 @@ Generated: 8/15/2026, 12:45:05 PM PT | window: last 72h | 91 tasks | index total
 | `1786562018471` | 8/12/2026, 2:18:45 PM | 286 | 1301KB | Can you look into this and resolve if necessary, if a bug and email the student back. Be s |
 | `1786565771551` | 8/12/2026, 2:12:03 PM | 205 | 452KB | /emtskills is yet again sluggish. We hae an extensive history on this page choking out. Pl |
 | `1786564341143` | 8/12/2026, 2:06:28 PM | 208 | 787KB | #CFA |
-| `1786556875491` | 8/12/2026, 1:28:28 PM | 127 | 4750KB | #Argus |
-| `1786559316764` | 8/12/2026, 12:47:44 PM | 94 | 452KB | #Lower Romans |
 
 ---
 
 ## Per-window detail
 
-### `1786820106387` — 8/15/2026, 12:44:43 PM PT — 161 turns
+### `1786820106387` — 8/15/2026, 1:44:49 PM PT — 285 turns
 
 **Original task:**
 
@@ -116,67 +116,152 @@ Why does Vicky send me this? -> Making a followup on Sam Nelson’s final exam I
 // check her Argus, Jon's Argus and Jon's overrides on this. Explain if an error exists
 ```
 
-**Ideas referenced:** #059669, #1612 [awaiting_review], #2167, #26620 [proposed], #26628, #374151, #6067, #639348, #703694, #703695, #92400
+**Ideas referenced:** #059669, #1612 [awaiting_review], #2167, #2514 [rejected], #25185, #26620 [proposed], #26628 [proposed], #26640 [proposed], #26647 [executing], #374151, #6067, #639348, #703694, #703695, #8152 [deployed], #92400
 
 **Last PICKUP PROMPT:**
 
 ```
-so this cannot recur silently.
+renders the attempt button.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #26647 - Matrix two-key drift: canonical key mapping and reconciliation job still open.\n\nWhere we left off (verified 2026-08-15 13:44 PT):\n- Root cause: admin_portal.Students has TWO keys (numeric id 8152810, slug 26715W-19). vw_Student_Skills_Summary joined ONLY Skill_Attempts on numeric id, hiding slug-keyed NREMT_Skills and CA_Skills sign-offs.\n- View rewrite landed 13:37 PT under #26640 [deployed]: reconciles all three sources via GREATEST plus new passed_source column. Sam reads 15/16, previously 1/16. Cohort: 1,514 students and 10,797 rows recovered.\n- Backup /tmp/vw_Student_Skills_Summary_BACKUP_26640.sql, applied SQL /tmp/fix_skills_view_26640.sql (WOPR).\n- Sam final exam re-probed live: 0 attempts of max 3, override 3044 open to 2026-08-20 00:35:53 PT.\n- Three reversals recorded this window (2223 wrong student, NREMT 7/7 not 6/7, externship tables globally empty not key drift).\n\nOpen threads to drive next:\n1. #26628 [executing] Kaison: add void-zombie and reset-attempts control to quick_override plus a dashboard button; repair watchdog self-heal (cron_ai_watchdog_ext.php 1720-1760) to cover past-didactic students holding an open override. Producer: didactic_deadline.php lines 337-341.\n2. #26647 [executing] Build canonical student-key mapping helper, reconciliation job across skill surfaces, audit of other two-key views, drop or document the three empty externship tables, and trace the unverified PCR row-level source.\n3. #26620 [deployed] closed, nothing further.\n4. #26640 [deployed] in ready_for_review, nothing further unless review flags something.\n\nReference IDs:\n- Ideas filed: #26620 [deployed], #26628 [executing], #26640 [deployed], #26647 [executing]\n- Bug library incident: 2514 (frankenstein_router_incidents)\n- Argus kaizen rule: id 1, matrix_two_key_student_lookup\n- Correction row: 8152 (ai_learned_corrections)\n- Keys: Students.id 8152810, slug 26715W-19, moodle 51757 (2223 = Nicole Ruiz-Stevens, unrelated)\n- Files touched: /tmp/fix_skills_view_26640.sql, /tmp/vw_Student_Skills_Summary_BACKUP_26640.sql; DB view vw_Student_Skills_Summary\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════"
+}
+</arguments>
+</use_mcp_tool>
+```
+
+### `1786817395147` — 8/15/2026, 1:34:17 PM PT — 318 turns
+
+**Original task:**
+
+```
+#Call Backs / VAPI
+
+How are callbacks going now?
+
+You know I'm just curious if there's some improvements that have been made genetically since we started a couple of months ago with VAPI? Seems like there should be are using the latest software or updates? Can you check with the community to see? I just wanna make sure.
+
+Also tell me what's going on with this ? And why did you offer Vicky an extension draft letter? When did I say that was OK? I know we were working on some stuff in a different window for extern chips just give me some information here -> 1. The 14 students need a placement or 
+```
+
+**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #16844, #17130 [superseded], #1745, #18132 [deployed], #18316, #19125, #19173, #23133, #2323, #2328, #23340, #2341, #2343, #2344, #23989, #24645, #2511, #25701, #25706, #25707, #25943, #25945, #25946, #25968, #25969, #25986, #25989, #26066, #26068, #26203 [deployed], #26206 [deployed], #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26259 [deployed], #26260 [deployed], #26261 [deployed], #26266 [executing], #26267 [executing], #26270, #26296, #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26504 [approved], #26508 [proposed], #26509 [proposed], #26511 [deployed], #26513 [deployed], #26591, #26593, #26618 [deployed], #26619 [proposed], #26621 [proposed], #26643 [proposed], #26644 [proposed], #26645 [proposed], #3261, #3319, #3346, #6172, #9042, #9159, #9222, #9501
+
+**Last PICKUP PROMPT:**
+
+```
+ed] instead of executing blind
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Sam Nelson (26715W-19) final-exam zombie-attempt bug: student fix DONE, cohort sweep DONE (no other active victims), Kaison durable fix in flight.
+Pick up task #26618 [deployed], Vapi upgrade + frankenstein-llm route-leak hand-off.
 
-Where we left off (verified 2026-08-15 12:29 PT):
-- Sam 26715W-19 / moodle 51757: deleted 3 zombie Final attempts (697523/700398/704281), purged course 41 cache, re-verified remaining=0, override 3044 open to 8/20 00:35 PT → attempt button renders now.
-- Cohort sweep (active `quiz_overrides.timeclose` > now): no other student blocked. Sam midterm 725 correctly no-button (passed 83/100). wallace gonzales override 2903 attempts=5 (4/5 used) OK.
-- Long tail: ~150 archived/past-cohort students have 3/3 empty zombie attempts (quiz 683 mostly, plus 676/677/678/698/716/854) — same root-cause producer, NOT touched (no active window), flagged for Kaison cleanup/reaper decision.
-- Kaison: error event #6393487 (severity high, kaison_route:true), kaizen seed in kaizon_argus_failure_bugs (filed_bug_id 26620), idea #26620 [executing] (verified: status=approved dev_stage=idle).
+Where we left off (verified 2026-08-15 13:33 PT):
+- Vapi CS (5 agents) + Sales upgraded to latest: 5x anthropic/claude-sonnet-5 + Vapi Voices v2, Sales openai/gpt-5.5 + vapi/Elliot/v2. Verified by GET (org 46666ee6).
+- Handoff-number guard deployed in api/voice/vapi_server_webhook.php line 536 (HANDOFF-NUMBER-GUARD), php -l clean. Bookings 165/181/185/188 annotated.
+- Verified our webhook only calls litellm model `frankenstein-llm` (line 991); Vapi brain resolves in Vapi cloud and is Vapi-billed, NOT our ANTHROPIC_API_KEY.
+- Route-leak evidence handed to recovery window: ops/frankenstein_llm_route_leak_findings_20260815.md (aliases claude-haiku-4-5/claude-opus/sonnet-5 -> paid anthropic; audit-first callers ticket_autospec.php:988/1396, PredispatchRevival, RubenExecutor, cron_ai_grading; /app vs /etc config path question).
+- This window made zero changes to litellm; config mtime 13:01:11 root belongs to the recovery window.
 
 Open threads to drive next:
-1. #26620 [executing] — Kaison: patch open_exam/extend_exam_deadline to reset/carry attempts when consumed attempts are empty zombies (precedent Jon's 8/2 26815W-47 reset; include the ~150-archived-student zombie long-tail cleanup/reaper in the same repair).
-2. #6393487 [executing] — Confirm Kaison triaged the event, produced classification + permanent repair recipe, and closed the loop with a regression test that prevents recurrence.
-3. exam_override_requests id 1612 [awaiting_review] — Complete CS review on Sam's pending Midterm+Final override so approved path matches the applied manual fix.
+1. #26643 [proposed] — patch remaining Vapi assistants (VADER, Commander Data, Patient Interview Base, EMD Call Simulator, Riley) to latest, BUT hold for Ruben's explicit OK on Vapi Sonnet billing posture first. Enumerate full assistant list via GET /assistant first.
+2. #26645 [proposed] — confirm /app/config.yaml is a bind-mount of /etc/litellm/config.yaml BEFORE the recovery window edits; if separate files, alias map reads were against the wrong file.
+3. #26644 [proposed] — fix canary mirror INSERT (lib/ruben_tng_voice_canary.php:435 references missing `source` column in voice_call_log); map to real schema (call_id, caller_phone, vapi_assistant_id, outcome) or drop the mirror.
+4. #26621 [proposed] — record this session's reversal (Vapi/Sonnet wrongly conflated with internal Anthropic billing) in the 317 log.
+5. #26618 [deployed] — watch next 24h for +19412943388 recurrence on voice_ai bookings to confirm the guard holds.
 
 Reference IDs:
-- Override rows: 3044 (Final 854, close 8/20 00:35 PT), 3042 (Midterm 725), 2903 (wallace gonzales, attempts=5)
-- Zombie attempts deleted: 697523, 700398, 704281
-- Kaison: event #6393487; kaizen seed filed_bug_id 26620; idea #26620 [executing]
-- Files touched: none (DB + cache only)
+- Filed this session: #26618 [deployed], #26619 [proposed], #26621 [proposed], #26643 [proposed], #26644 [proposed], #26645 [proposed]
+- Files touched: api/voice/vapi_server_webhook.php (guard), ops/frankenstein_llm_route_leak_findings_20260815.md (new), /tmp/sales_assistant_full.json, /tmp/sales_model_body.json
+- Recovery window owns: /etc/litellm config, litellm restart, claude-alias removal
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+Append to cline_task_ledger.md per rule 07, then run order 66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
 
-### `1786818491154` — 8/15/2026, 12:44:37 PM PT — 201 turns
+### `1786824274829` — 8/15/2026, 1:25:37 PM PT — 178 turns
 
 **Original task:**
 
 ```
-#Joshua Hot FAllover
-
-Re-base and give me a copy prompt to open only for the Joshua hot fallover related issues. I do not need information on the rest of anything. Just the Joshua hot fall over
+frankenstein-llm seems to be having some intermittent connectivity issues. Not sure the cause. Can you take a look and resolve? 
 
 --
+{"message":"terminated","code":"UND_ERR_SOCKET","modelId":"frankenstein-llm","providerId":"litellm"}
+
+--
+read also for reference/baseline: 
+
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
 
 
-Three answers. One of them cost money nobody was counting.
+Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
 
-# 1. LoRA: off, and it was worse than the disk
+## Where 671 came from, and it is now durable
 
-You said turn it off. It is off, and everything downstream of it is off with it. #26068 [deployed]
-
-Shutting it down surfaced something the earlier writeup missed. The 22GB/hr was a symptom, not the thing itself. The actual generator was `frank_fleet_keeper.php`, running every 3 minutes with
+Written to 
 ```
 
-**Ideas referenced:** #10866, #12824, #12872, #12878, #25185, #26007 [deployed], #26008 [executing], #26009 [deployed], #26017 [awaiting_review], #26019 [deployed], #26023 [executing], #26024 [deployed], #26068 [deployed], #26069 [deployed], #26070 [deployed], #26076 [executing], #26077 [executing], #26604 [deployed], #26614 [deployed]
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16732, #16844, #17300, #178682, #18312, #18326, #22726, #22871, #2299, #23133, #23171, #2328, #2341, #2343, #2344, #25097, #2511, #2513 [deployed], #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26638 [proposed], #26639 [proposed], #26640, #26642 [proposed], #3261, #3319, #3346
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1786782096117` — 8/15/2026, 12:44:27 PM PT — 469 turns
+```
+ incident 2513 resolution text
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786824274829 — frankenstein-llm UND_ERR_SOCKET connectivity resolved (verified: frankenstein_verify_routing HTTP 200 backend=frankenstein-tools 3.7s 0 retries at 13:09 PT), PHP agent claude-haiku model fix deployed (verified: grep -c claude = 0 in all 3 files, php -l clean).
+
+Where we left off (verified 2026-08-15 13:24 PT):
+- frankenstein-llm UND_ERR_SOCKET FIXED via docker restart litellm (verified: 4 workers up, 0 socket errors, HTTP 200 routing)
+- PHP agents fixed: claude-haiku/sonnet/opus replaced with frankenstein-llm in 3 files (verified: 0 claude refs, php -l clean)
+- FPM reload on cooldown — changes pick up on next reload
+- Bug library incident 2513 [resolved] recorded
+- #26638 [proposed] filed for PG pool auto-restart watchdog (verified: reconcile_ideas status=proposed dev_stage=idle)
+- #26639 [proposed] filed for LiteLLM TypeError upstream bug fix (verified: reconcile_ideas status=proposed dev_stage=idle)
+- #26642 [proposed] filed for /v1/messages to /v1/chat/completions endpoint migration (verified: reconcile_ideas status=proposed dev_stage=idle)
+
+Open threads to drive next:
+1. #26638 [proposed] — Build the LiteLLM worker-health auto-restart watchdog (P1, prevents future fleet-wide outages)
+2. #26639 [proposed] — Fix the LiteLLM 1.91.1 TypeError upstream bug (P2, upgrade or patch)
+3. #26642 [proposed] — Migrate PHP agents from /v1/messages to /v1/chat/completions endpoint (P2, eliminates broken Anthropic passthrough dependency)
+
+Reference IDs:
+- Ideas filed: #26638 [proposed], #26639 [proposed], #26642 [proposed]
+- Bug library: incident 2513 [resolved]
+- Files touched: config/anthropic_routing.php, agents/agent_message_handler.php, cron_vapi_uncategorized_reclassifier.php (backups .bak-26640)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Check bug library for known UND_ERR_SOCKET / terminated incidents (NOVEL_SYMPTOM)
+- [x] Read handoff notes for current system state
+- [x] Check frankenstein tier health (live probe)
+- [x] Check fleet host probe (decode liveness per box)
+- [x] Check registry (live routing config)
+- [x] Check router audit log for recent routing failures (spill-ladder thrashing confirmed)
+- [x] Check LiteLLM error logs — FOUND: crash-restart loop (TypeError + PG connection exhaustion)
+- [x] Check frankenstein-tools adapter :11510 status (healthy)
+- [x] Check LiteLLM worker count — 0 workers, now restored after restart
+- [x] Restart LiteLLM — workers now up (4 spawn_main processes, startup complete)
+- [x] Read router_hook.py — messages handling is correct (not our bug)
+- [x] Live probe frankenstein-llm — HTTP 200, routing to frankenstein-tools, 0 retries
+- [x] GLM ring stall cleared (1 running, 0 waiting) + 0 socket errors post-restart
+- [x] TypeError still firing (82/2min) but workers stable — root cause is PG exhaustion (cleared)
+- [x] Read hook registration — EmsuRouter extends LiteLLM router, correctly passes data to super()
+- [x] Record in bug library (incident 2513)
+- [x] File idea #26638 — PG pool exhaustion worker-health auto-restart watchdog
+- [x] File idea #26639 — LiteLLM TypeError upstream bug fix
+- [x] Update handoff notes
+- [x] Reconcile ideas (GATE B) — both [proposed]
+- [x] Final verification probe (HTTP 200 confirmed at 13:09 PT)
+- [x] Validate completion — ALL PASSED
+- [x] Check gate —
+```
+
+### `1786782096117` — 8/15/2026, 1:16:58 PM PT — 510 turns
 
 **Original task:**
 
@@ -203,31 +288,28 @@ that should be resolved.
 **Last PICKUP PROMPT:**
 
 ```
-/high-risk), gated on your OK?
+nd no new ones can be created.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Email Agent durables + duplicate-registration workflow decision.
+Pick up task # — Email Agent duplicate-registration noise: verify no regressions after detectNameDuplicate() ticket removal.
 
-Where we left off (verified 2026-08-15 11:48 PT):
-- Hi Duplicate fix deployed: lib/ai_ticket_agent_first_touch.php (title-parse name fallback + actor blocklist + signature/footer append). Probed PASS. Idea #26525 [deployed].
-- MIME From-name fix deployed: cron/cron_email_responder.php decodes RFC 2047 =?utf-8?B?...?= names, blanks on failure. Probed PASS (青木 太郎). Backup .bak-20260815-mimename.
-- International-student KB patch deployed: lib/emsu_knowledge_base.php (answer YES up front, no I-20, externship/NREMT SSN caveats, no dodge, no info@ redirect). Probed PASS. Backup .bak-20260815-intl. Idea #26597 [deployed].
-- Self-redirect guard verified wired (EmailAIResponder.php:462 and :1859) + live-test PASS on the exact bad sentence.
-- Rule 317 reversal logged: docs/317-reversal-corrections.md MODE 4 PREMATURE_EMAIL_QA_COMPLETION + ai_learned_corrections id 8151.
-- Ruben asked (answered, awaiting his decision): auto-generated Potential Duplicate Registration tickets are NOT being worked — 7 Pending (stale since 07-22), 2 Open, 0 assigned owners. detectNameDuplicate() (StudentLifecycle.php:1790) files a ticket instead of using the existing watchdog confirm-email + cron_duplicate_reply_monitor auto-resolve path.
+Where we left off (verified 2026-08-15 13:16 PT):
+- lib/StudentLifecycle.php: detectNameDuplicate() no longer creates "Potential Duplicate Registration" tickets or sends the HIGH-confidence alert mail; it logs + returns duplicate_found and hands off to the SLS resolver (cron_resolve_student_duplicate.php every 10 min). php -l clean.
+- 9 Open/Pending noise tickets retired (status Closed, closed_at set, audit trail annotated). 0 remain.
+- Ideas: #26525 [deployed] Hi Duplicate + signature fix; #26586 [deployed] dup-ticket removal; #26597 [deployed] intl-student KB + MIME decode + self-redirect guard; #26600 [proposed] optional corrective reply to Taro Aoki.
+- ai_learned_corrections #8151 (r317_self_contradicting_disposition / completion_scope_error).
 
 Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26586 [proposed] — awaiting Ruben sign-off: make first-touch scan-all SKIP ^Potential Duplicate Registration tickets (they are internal review tickets, not student inquiries).
-2. #26586 companion decision — if Ruben says yes, implement auto-resolve: detectNameDuplicate calls the existing watchdog confirm-email flow + reply monitor for MEDIUM confidence; ticket only as fallback for non-response/high-risk. Filed under #26586 or new idea when approved.
-3. #26600 [proposed] — awaiting Ruben sign-off: send Taro Aoki (bmclub@mac.com) a corrective reply with the real international-student answer.
+1. #26600 [proposed] — If Ruben says send: compose the corrective reply to bmclub@mac.com using the new INTERNATIONAL STUDENTS KB section (answer YES up front, no I-20, SSN caveats) and send via sendEmail / communication_log insert.
+2. #26525 [deployed] — Spot-check the next real inbound email that hits ai_ticket_agent_first_touch to confirm no "Hi Duplicate," regression and correct first_name parsing.
 
 Reference IDs:
-- Ideas filed: #26525 [deployed], #26586 [proposed], #26597 [deployed], #26600 [proposed]
-- Corrections: ai_learned_corrections #8151 [deployed]
-- Files touched: lib/ai_ticket_agent_first_touch.php, cron/cron_email_responder.php, lib/emsu_knowledge_base.php, docs/317-reversal-corrections.md, cline_task_ledger.md
-- Backups: .bak-20260815-hidduplicate, .bak-20260815-mimename, .bak-20260815-intl
+- Ticket: TKT-20260815-331FCD0E (Diego Rivera, original Hi Duplicate)
+- Ideas filed: #26525 [deployed], #26586 [deployed], #26597 [deployed], #26600 [proposed]
+- Files touched: lib/StudentLifecycle.php (.bak-20260815-dedup-ticket-removal), cron/cron_email_responder.php, lib/emsu_knowledge_base.php, lib/ai_ticket_agent_first_touch.php, docs/317-reversal-corrections.md
+- ai_learned_corrections: #8151
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -235,58 +317,50 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786817395147` — 8/15/2026, 12:44:06 PM PT — 255 turns
+### `1786823554800` — 8/15/2026, 1:07:50 PM PT — 19 turns
 
 **Original task:**
 
 ```
-#Call Backs / VAPI
+#Argus
 
-How are callbacks going now?
+Jon says for Argus:
 
-You know I'm just curious if there's some improvements that have been made genetically since we started a couple of months ago with VAPI? Seems like there should be are using the latest software or updates? Can you check with the community to see? I just wanna make sure.
+Spent many hours yesterday trying to get Argus to fix that and a couple other simple items for the same student. So that it would log the roadblocks.
+Each item has been a disconnect between the Matrix and Moodle for the last few student issues this week. So that data’s one more fine tuning point to reach eventually perfection. 
 
-Also tell me what's going on with this ? And why did you offer Vicky an extension draft letter? When did I say that was OK? I know we were working on some stuff in a different window for extern chips just give me some information here -> 1. The 14 students need a placement or 
+--
+Not sure exactly what he means but can you look into this and make the necessary improvements?
 ```
 
-**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #17130 [superseded], #1745, #18132 [deployed], #18316, #19125, #19173, #23133, #2323, #2328, #23340, #2341, #2343, #2344, #23989, #24645, #2511, #25701, #25706, #25707, #25943, #25945, #25946, #25968, #25969, #25986, #25989, #26066, #26068, #26203 [deployed], #26206 [deployed], #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26259 [deployed], #26260 [deployed], #26261 [deployed], #26266 [executing], #26267 [executing], #26270, #26296, #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26504 [approved], #26508 [proposed], #26509 [proposed], #26511 [deployed], #26513 [deployed], #26591, #26593, #26618 [deployed], #26619 [proposed], #26621 [proposed], #3261, #3319, #3346, #6172, #9042, #9159, #9222, #9501
+**Ideas referenced:** #16732, #23133, #2328, #2340, #2341, #2343, #2344, #2511, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26207, #26209, #26211, #26214 [executing], #26215 [executing], #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #3261, #3319, #3346
 
-**Last PICKUP PROMPT:**
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786818491154` — 8/15/2026, 1:03:24 PM PT — 300 turns
+
+**Original task:**
 
 ```
-5.5, voice: vapi/Elliot/v2
+#Joshua Hot FAllover
 
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task #26618 [deployed], Vapi full-fleet upgrade + Sales model fix + customer-quality verification.
+Re-base and give me a copy prompt to open only for the Joshua hot fallover related issues. I do not need information on the rest of anything. Just the Joshua hot fall over
 
-Where we left off (verified 2026-08-15 12:34 PT):
-- All production voice assistants upgraded: 5 CS agents = anthropic/claude-sonnet-5 + Vapi Voices v2; Sales Recovery = openai/gpt-5.5 + Vapi Voices v2 (vapi/Elliot/v2). Verified by live GET.
-- Client-Side fix deployed: mergeVoiceCallStateFromCall() in api/voice/vapi_server_webhook.php line 536 refuses to let own number (+19412943388) clobber a resolved non-own caller. php -l clean.
-- Bookings 165/181/185/188 back-annotated with verified identities / AMBIGUOUS leg candidates per #26511.
-- gpt-5.5-instant is an INVALID Vapi enum (verified against the API's allowed list); gpt-5.5 is the correct string.
-- Sales tools array was dropped by a naive model PATCH, then fully restored from /tmp/sales_assistant_full.json: tools=6, msgs=1 verified.
-- Pre-existing unrelated bug found in canary log: voice_call_log mirror fails with SQLSTATE[42S22] Unknown column 'source'.
-- Corrections filed: #26618 [deployed], #26619 [proposed] (VAPI ideas omitted from open threads = rule-91 violation), #26621 [proposed] (317 reversal log).
+--
 
-Open threads to drive next:
-1. #26618 [deployed] — with Ruben's approval, run a live canary against CS Main assistant (6ee87bdb) to prove claude-sonnet-5 + Vapi Voices v2 handles greeting + tool round-trip on a real call. Do NOT fire live calls without his go.
-2. #26618 [deployed] — verify the handoff-number guard in production: monitor next 24h of voice_ai callback_bookings; no new row should carry +19412943388.
-3. #26511 [deployed] — bookings 165/181/185/188 are AMBIGUOUS at the leg level. Find a real correlation key (Vapi phoneCallProviderId / Twilio child SID) to join call-to-leg exactly, then backfill or null the unreliable rows.
-4. #26504 [approved] — voice assistants still bypass the EMSU litellm router (no CFA steering floor). With the fleet moved forward, scope routing CS voice through the router.
-5. NEW bug (no idea # yet): canary mirror write fails with Unknown column 'source' in voice_call_log INSERT (cron_ruben_tng_voice_canary.php). Fix the mirror schema or column mapping.
 
-Reference IDs:
-- Deployed: #26618 [deployed]; Proposed: #26619 [proposed], #26621 [proposed]
-- Pre-existing open: #26504 [approved], #26511 [deployed], #26266 [approved], #26267 [approved]
-- Files touched: api/voice/vapi_server_webhook.php (guard line 536); backups: /tmp/vapi_server_webhook.php.bak-26591, /tmp/sales_assistant_full.json, /tmp/sales_model_body.json
+Three answers. One of them cost money nobody was counting.
 
-Append to cline_task_ledger.md per rule 07, then run order 66.
-═══════════════════════════════════════════════════
-</result>
-</attempt_completion>
+# 1. LoRA: off, and it was worse than the disk
+
+You said turn it off. It is off, and everything downstream of it is off with it. #26068 [deployed]
+
+Shutting it down surfaced something the earlier writeup missed. The 22GB/hr was a symptom, not the thing itself. The actual generator was `frank_fleet_keeper.php`, running every 3 minutes with
 ```
+
+**Ideas referenced:** #10866, #12824, #12872, #12878, #25185, #26007 [deployed], #26008 [executing], #26009 [deployed], #26017 [awaiting_review], #26019 [deployed], #26023 [executing], #26024 [deployed], #26068 [deployed], #26069 [deployed], #26070 [deployed], #26076 [executing], #26077 [executing], #26604 [deployed], #26614 [deployed], #26631 [deployed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786821833685` — 8/15/2026, 12:40:19 PM PT — 93 turns
 
@@ -3516,86 +3590,3 @@ That above is showing the 941 (our number) that transfers calls to our other num
 **Ideas referenced:** #0000, #13441, #14748, #16224, #19173, #19175 [executing], #19176 [queued], #19511 [rejected], #19841, #19842, #19898, #19899 [proposed], #19904, #20046, #20050, #20251, #20630 [executing], #25151, #25185, #25869 [deployed], #25870 [rejected], #25871 [deployed], #25872 [executing], #25873 [deployed], #25876 [deployed], #25885 [deployed], #25886 [executing], #25888, #25891 [blocked], #25892 [deployed], #25893 [deployed], #25894 [awaiting_review], #25903 [deployed], #25904 [superseded], #25905, #25907, #25908 [deployed], #25909 [proposed], #25911 [deployed], #25912 [proposed], #25913, #25925 [proposed], #25926 [proposed], #25935 [proposed], #5344, #6230, #7359, #7907, #9168
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786556875491` — 8/12/2026, 1:28:28 PM PT — 127 turns
-
-**Original task:**
-
-```
-#Argus
-
-How it has Argus been doing over the last 12 hours? What improvements do we need to make? What capabilities do we need to increase? Act according to rule 29 and leverage rule 267. Let me know what other permissions I may need to increase. Also I personally head tried to do a couple of things in Argus yesterday and they failed. One of them had to do with RUBEN computer VAPI and getting that back online. I felt like Argus was way off base and not really helpful at all. And that is not how I want that agent to be. Just take a look for yourself and you'll see exactly what I mean. We need t
-```
-
-**Ideas referenced:** #081020, #17130 [superseded], #173898, #17537 [rejected], #177821, #18132 [deployed], #19125, #19173, #19370, #24635, #25045, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25796, #25797, #25798, #25803 [proposed], #25804 [deployed], #25812, #25834, #25836, #25905, #38984
-
-**Last PICKUP PROMPT:**
-
-```
-ions per rule 267 & rule 29
-- [ ] Pre-validate and ship attempt_completion with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
-```
-
-### `1786559316764` — 8/12/2026, 12:47:44 PM PT — 94 turns
-
-**Original task:**
-
-```
-#Lower Romans
-
-Tell me then what i need to do to get SSH on the MDM for Cicero, Maximums and Nero or if it's already working. Then we can move to their LLM stuff? 
-
---
-Direct, evidence-backed answer to "why did you lose them" — I did not lose them. Here is the verified chain:
-
-**1. WOPR's key never rotated.** `stat` on `/home/emsuserver/.ssh/id_ed25519{,.pub}` shows mtime **2026-02-19 09:20 PT** — unchanged for six months. Fingerprint `SHA256:8a2f55513LYs7/7pbvaoyQB741VVUDegh5QXHLF7krI emsuserver@wopr`. That is the exact key the Macs trusted before.
-
-**2. deploy.sh installed exactly these keys
-```
-
-**Ideas referenced:** #1130, #1131, #12028, #12034, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178634, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #25378, #25381, #25744 [approved], #25758 [executing], #25760 [executing], #25910 [blocked], #25913 [blocked], #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-g] remain the same work items.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1786342434047 — lower Romans SSH on MDM: Nero done, Maximus + Cicero need one key-append each on the physical Macs.
-
-Where we left off (verified 2026-08-12 12:46 PT):
-- NERO ✅: WOPR→127.0.0.1:2223 SSH = rubenmajor@EMSU-SMS-Mac; ollama :11455 HTTP 200. Nothing to do.
-- MAXIMUS ⏸: WOPR:2224 listener live but key denied; ollama :11505 HTTP 200 (M4 up). M4 LAN IP unknown (.156 times out, .197 is a Nero-relay box NOT the M4 — verified by appending there and 2224 still denying, append reverted clean to 5 keys). Only inbound path is 2224.
-- CICERO ⏸: LAN .252 SSH up but rubenmajor + all keys denied (desktop M5 key and id_rsa both rejected); MLX :11520 HTTP 000. WOPR cannot LAN-route to .252.
-- MDM: mdm_devices has only Big Mac. Lower Romans ride the web-terminal proxy (static ids in web_terminal_token.php + ws_ssh_proxy.py entries nero=2223, maximus=2224, cicero=192.168.1.252:22).
-- Root cause everywhere: the WOPR pubkey (SHA256:8a2f55513LYs7/7pbvaoyQB741VVUDegh5QXHLF7krI) is missing from each Mac's ~/.ssh/authorized_keys. No key was lost; deploy.sh keys are still intact on this desktop.
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #25910 [blocked] — After Ruben appends WOPR pubkey on the physical M4: verify `ssh -i /home/emsuserver/.ssh/id_ed25519 rubenmajor@127.0.0.1 -p 2224`, then web-terminal max entry is already correct.
-2. #25913 [blocked] — After Ruben appends WOPR pubkey on the M5 at .252: verify `ssh rubenmajor@192.168.1.252` from desktop and WOPR key auth; restart emsu-web-terminal.service; verify cicero proxy entry; then re-check MLX :11520 lane for the LLM discussion.
-
-Reference IDs:
-- Ideas filed: #25910 [blocked], #25913 [blocked]; prior #25758 [executing], #25760 [executing]
-- Files read (no writes): /var/www/emtskills/scripts/ws_ssh_proxy.py, /var/www/emtskills/routes/web_terminal_token.php, /home/emsuserver/.ssh/{authorized_keys,config}, /home/emsuserver/mac-tunnel-deploy.DISABLED/{deploy.sh,smsmac_launchdaemon.plist,2024mac_launchdaemon.plist}, ~/Desktop/mac-tunnel-deploy/deploy.sh, admin_portal.mdm_devices + orchestrator_ideas
-- Reverts performed: LAN .197 authorized_keys restored to original 5 keys, backup file removed
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Probe WOPR listeners + pubkey + LLM lanes
-- [x] Nero: verified WORKING (SSH 2223 + ollama 11455)
-- [x] Maximus: tunnel live, key denied, M4 LAN IP unknown, :11505 up
-- [x] Cicero: .252 up, all keys denied, :11520 down
-- [x] 2225 identified as Artemis (read-only, untouched per steer)
-- [x] Reverted the one experimental append on .197 (clean, 5 keys restored)
-- [x] mdm_devices read: only Big Mac enrolled; Romans use web-terminal proxy
-- [x] Ideas filed/updated: #25910, #25913
-- [x] Final report with exact human key-append steps
-</task_progress>
-</attempt_completion>
-```

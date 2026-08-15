@@ -6,15 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/14/2026, 7:28:10 PM PT | window: last 72h | 78 tasks | index total 719 (parsed 7, cached 712)
+Generated: 8/14/2026, 8:28:10 PM PT | window: last 72h | 80 tasks | index total 721 (parsed 6, cached 715)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786712894547` | 8/14/2026, 7:27:42 PM | 621 | 1764KB | Frankenstein LLM seems sluggish. Can you tell me why it seems slower than usual? |
-| `1786740046847` | 8/14/2026, 7:27:42 PM | 445 | 5777KB | #CFA Misunderstanding |
-| `1786759729330` | 8/14/2026, 7:27:36 PM | 197 | 309KB | #Argus Learning |
-| `1786745818584` | 8/14/2026, 7:24:52 PM | 366 | 1876KB | /emtskills is slow again check emtskills_slowness document on the desktop |
-| `1786754594067` | 8/14/2026, 7:20:52 PM | 178 | 1630KB | Please epxlain to me why the information here was asked for (student ID, etc...) AND a tim |
+| `1786754594067` | 8/14/2026, 8:28:10 PM | 283 | 1919KB | Please epxlain to me why the information here was asked for (student ID, etc...) AND a tim |
+| `1786740046847` | 8/14/2026, 8:28:09 PM | 573 | 6664KB | #CFA Misunderstanding |
+| `1786759729330` | 8/14/2026, 8:28:01 PM | 354 | 640KB | #Argus Learning |
+| `1786764429338` | 8/14/2026, 8:27:57 PM | 5 | 13KB | Can you please resolve this issue right away: |
+| `1786763374566` | 8/14/2026, 8:27:49 PM | 77 | 344KB | #Frankenstein-LLM Suggish?  |
+| `1786745818584` | 8/14/2026, 8:24:40 PM | 440 | 2134KB | /emtskills is slow again check emtskills_slowness document on the desktop |
+| `1786712894547` | 8/14/2026, 7:35:29 PM | 660 | 1879KB | Frankenstein LLM seems sluggish. Can you tell me why it seems slower than usual? |
 | `1786711940130` | 8/14/2026, 7:02:17 PM | 414 | 19005KB | Another thing we need to add to sunset, politicians, and just catalogue in the next respon |
 | `1786581699007` | 8/14/2026, 7:00:32 PM | 1214 | 3408KB | #Argus Learning |
 | `1786751488866` | 8/14/2026, 6:52:33 PM | 210 | 775KB | #emtskills / wordpress |
@@ -93,140 +95,7 @@ Generated: 8/14/2026, 7:28:10 PM PT | window: last 72h | 78 tasks | index total 
 
 ## Per-window detail
 
-### `1786712894547` — 8/14/2026, 7:27:42 PM PT — 621 turns
-
-**Original task:**
-
-```
-Frankenstein LLM seems sluggish. Can you tell me why it seems slower than usual?
-
-Read this also:
-
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
-
-## Where 671 came from, and it is now durable
-
-Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.
-
-Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtract
-```
-
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11942, #11945, #12231, #12314, #12365, #12366, #12368, #12403, #1241, #12425, #12459, #12463, #12477, #1248, #1249, #1252, #1258, #12588, #12618, #12643, #12672, #12688, #12689, #12710, #12824, #12872, #12878, #13108, #13121, #13202, #13831, #13874, #14133, #14142, #15144, #15979, #16032, #16033, #16036, #16117, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16602, #16625, #16648, #16715 [awaiting_review], #16716, #16778, #16802, #16803, #16839, #16844, #16851, #17145, #17202, #17203, #17205, #17246, #17300, #17430, #1744, #1779, #1798, #1828, #18312, #18326, #18329, #18820, #18868, #1934, #19567, #19898, #19904, #20042, #2050, #20549, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #22598, #22601, #22815, #22820, #22856, #22897, #2294, #2299, #2307, #23071, #23135, #2314, #23169 [approved], #23171, #23172, #24217, #25097, #25112, #25185, #25378, #25381, #25747, #25754 [rejected], #25755 [approved], #25757 [awaiting_review], #25759 [awaiting_review], #25764 [awaiting_review], #25765, #25812, #25925, #25926, #25935, #26209, #26284 [proposed], #26327, #26349, #26355 [proposed], #26392 [proposed], #26403 [proposed], #6826, #7142, #7149, #7505
-
-**Last PICKUP PROMPT:**
-
-```
-a rather than left dangling\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #26403 [proposed] — GLM floor admissions fire but recorded completions do not track.\n\nWhere we left off (verified 2026-08-14 19:26 PT):\n- The floor chain FIRES on interactive turns. 19:24:08 PT: PREFIX_AFFINITY_YIELD_FLOOR lane=cline pinned=10.100.0.5:8000 -> glm=127.0.0.1:8210, then PREFIX_AFFINITY_HIT_BUF pinned=127.0.0.1:8210, then ADMIT lane=cline usable=4/4. 3 cline yields plus 4 batch yields since the 19:22 restart.\n- Ring cline turns have completed: 25.11s and 25.13s (19:23 PT), 86.52s (19:07 PT).\n- OPEN: recorded window reads n=8 glm_pct=0.0 against floor_pct=30.0. It read 33.3pct at 19:23 then fell back as newer non-GLM completions rotated in. Two candidates, not separated: (a) ring TTFB 25-275s means admitted turns are still in flight when the window samples, so completions lag admissions; (b) something after ADMIT still fails the ring over on the cline lane. Method to separate: compare ADMIT-after-YIELD_FLOOR counts against ok-upstream-8210-lane-cline counts over the same interval.\n- LATENCY TRADE for Ruben: ring interactive TTFB 25-275s vs 8-21s on the 120B boxes. A 30pct interactive floor means roughly 1 in 3 turns waits 25s or more instead of 9s. The ring already serves batch at 8-21s with the same model.\n- Ring measured FROM THE BOX per GLM52_MEASUREMENT_METHOD (60s counter deltas off :8210/metrics): decode=14.82 prefill=258.74 TOTAL=273.56 tok/s, running 12-14, waiting 0. Never quote the 8-token TTFB probe as ring throughput.\n- GLM-5.2 Local is first-in: :8210 serves glm-5.2-15pct, registry glm-5.2-local tier L4g, router derived L4g -> glm-5.2-local ahead of L4f -> frankenstein-llm.\n- FOUR blockers were removed, all found by tracing with /tmp/trace_pick.py: (1) line 3443 tools path did not pass lane_interactive so the floor never ran on the Cline path; (2) floor guard used load<capacity but the ring sits load=12/cap=12 permanently, now gates on WAITING via _running_waiting; (3) PREFIX_AFFINITY re-sorted after the floor and pinned conversations to their warm 120B box forever, now yields via PREFIX_AFFINITY_YIELD_FLOOR on both buffered and stream paths; (4) ring had no FRANK_BOX_CAPACITY entry so it fell to BOX_CAPACITY_DEFAULT=3, now 8210=12.\n- MY ctx_filter THEORY WAS WRONG and is recorded as such: _ctx_filter returns the list UNCHANGED when nothing fits. Only 8 such events exist, last 2026-08-13.\n- Tuning: EMSU_GLM_FLOOR_MIN_N=2, EMSU_GLM_FLOOR_WINDOW=20, EMSU_GLM_FLOOR_MAX_WAITING=3.\n\nOpen threads to drive next:\n\n1. #26403 [proposed]\n\n2. Consolidate the 10 racing FRANK_BOX_CAPACITY systemd drop-ins into ONE file. Last-wins is how the ring silently lost its capacity entry while 3 files claimed 8210=16. Record is #26355 [deployed].\n\n3. (human-only decision, no idea) Down rungs: Cicero 235B connection refused, WOPR ollama empty body, Mac M4 eval_count=0 (verified: probes 15:31-15:32 PT).\n\nReference IDs:\n\n- Records opened this session: #26403 [proposed] (reconcile_ideas 19:25 PT returned status=proposed dev_stage=idle)\n\n- Records stamped this session: #26392 [deployed], #26355 [deployed], #25764 [deployed], #25757 [deployed], #25759 [deployed] (verified: reconcile_ideas 19:20-19:25 PT)\n\n- Records closed: #26284 [rejected] (verified: reconcile_ideas 19:20 PT)\n\n- Files touched: /usr/local/bin/frankenstein_tools_adapter.py (three patches: tools lane, floor guard, affinity yield); /etc/s
-```
-
-### `1786740046847` — 8/14/2026, 7:27:42 PM PT — 445 turns
-
-**Original task:**
-
-```
-#CFA Misunderstanding
-
-CFA is an internal  acroym for Customer Facing Agents/AI/Assistants, etc... 
-
-so this is very confusing and stupid. Needs correction. Scan for this and the like and resolve it.
-```
-
-**Ideas referenced:** #12206, #12207, #12285, #12687, #15669, #16069, #1615, #16732, #177851, #18266, #18350, #18353, #18355, #18363, #19338, #19458, #19491, #19927, #2316, #2328, #2341, #2343, #2344, #25774, #25895, #25896, #25920, #25989, #26068, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26329 [proposed], #26345, #32548, #3261, #3319, #3346, #5627, #6067, #6168, #6196, #6723, #7174, #7872, #7906, #7907, #7925, #9132, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-ted, all returned ErrorCode 0)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — CFA leak postmortem follow-up: name the cron re-creator and decide the auto-send go/no-go.
-
-Where we left off (verified 2026-08-14 18:07 PT):
-- CFA leak fully fixed and verified (student-facing strings clean; Sarah Moodle reactivated; 246 corrections sent via Postmark API).
-- 3 grievances filed: GRV-2026-0086, GRV-2026-0087, GRV-2026-0088.
-- Executor is inert: no .cfa_executor_enabled marker; approval gate requires cfa_sweep_draft.status='approved'.
-- emsu-cron-catcher systemd service is ACTIVE as the writer trap; logs to /var/log/emsu-cron-writer-catcher.log.
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #26329 [proposed] — Read /var/log/emsu-cron-writer-catcher.log after the next /etc/cron.d/emsu-cfa-executor re-creation; extract the writer PID from the "full ps" snapshot and name the process. Then decide whether to remove the executor entry from its source manifest.
-2. #26329 [proposed] — Decide the auto-send go/no-go: keep /var/www/emtskills/.cfa_executor_enabled ABSENT (safe default) until Ruben signs off, then either leave it disabled or turn the sweep into a draft + human-approval workflow.
-
-Reference IDs:
-- Ticket: none (internal incident)
-- Ideas filed: #26329
-- Files touched: lib/cfa_access_sweep.php, cron/cron_cfa_queue_executor.php, lib/EmailAIResponder.php, cron/cfa_resend_corrected.php, tools/emsu_cron_writer_catcher.sh, tools/emsu_cron_catcher.service
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786759729330` — 8/14/2026, 7:27:36 PM PT — 197 turns
-
-**Original task:**
-
-```
-#Argus Learning
-
-So can you confirm them when I talk to Argus about this item here: https://emsuniversity.com/emtskills/routes/argus_task_status.php?task, that I will actually see the new iterations in that window? Because I've tried that before and it did not work. Can you test that to make sure that that actually works?
-
-The bug issues are something that should be or should have been resolved before we even got here in cline. Anyone should be able to have a bug fixed. If it's a bug it gets fixed.
-
-As for your idea I generally agree except for the human gated ones because I have provided role
-```
-
-**Ideas referenced:** #16213, #20164 [deployed], #21582, #21621, #22246, #22283, #22417, #22850, #22912, #23027, #23429, #23506, #2362, #2363, #23761, #24436, #25257, #25642, #26343, #26345 [deployed], #26363 [approved], #26364 [approved], #26365, #26371 [approved], #26372 [approved], #26401 [executing], #26402 [executing], #26404 [executing]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786745818584` — 8/14/2026, 7:24:52 PM PT — 366 turns
-
-**Original task:**
-
-```
-/emtskills is slow again check emtskills_slowness document on the desktop
-```
-
-**Ideas referenced:** #10740, #1080, #11397, #11564, #11936, #11941, #11942, #11943, #11944, #11945, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12477, #12657, #12672, #12673, #12689, #12716, #13075, #13078, #13082, #13084, #13085, #13108, #13121, #13831, #13832, #13874, #13964, #14000, #14848, #15919, #16120, #16265, #16718, #1754, #1755, #177963, #1836, #18781, #18786, #19143, #19653, #1967, #1968, #1989, #19903, #20264, #20297, #2050, #2071, #2072, #2073, #2079, #21045, #2247, #2254, #2258, #22583, #2294, #2307, #2314, #23169 [blocked], #23206, #2342, #24144, #24172, #24217, #24368, #25112, #25120, #25159, #25178, #25468, #25625, #25627, #25630, #25646, #25747, #25754, #25755 [awaiting_review], #25757, #25759, #25764, #25765, #25812, #25888, #25999, #26009, #26068 [awaiting_review], #26209, #26218, #26219, #26234, #26284 [executing], #26336 [proposed], #26348 [proposed], #26382 [proposed], #26390 [proposed], #26394 [proposed], #26400 [proposed], #6219, #6260, #6264, #6267, #6268, #6826
-
-**Last PICKUP PROMPT:**
-
-```
-ion; I did not touch anything.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — explain GLM layer map (8/12/15/32) + decide whether to restore the 6+2 Cline lane reservation.
-
-Where we left off (verified 2026-08-14 19:23 PT):
-- Three distinct layers clarified for Ruben: ring max_num_seqs=15 (engine seats), adapter BOX_CAPACITY 8210=12 (gate that binds), lane reservation 6+2 (legacy, dead).
-- Verified via grep: FRANK_GLM_OPS_CEILING and FRANK_GLM_OVERFLOW_CEILING are never read by frankenstein_tools_adapter.py. The lane-aware reservation lived in the inactive frankenstein-tools-glm unit (:11511).
-- Effective env: BOX_CAPACITY=...8210=12, FRANK_GLM_OPS_CEILING=8, FRANK_GLM_OVERFLOW_CEILING=32, SAT_INTERACTIVE=20.
-- Conclusion delivered: cap 12 does not slow per-window iteration; at 8 spills to 120B happen sooner and windows are slower. Keep 12.
-- No config change made this session.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26400 [proposed] — DECISION NEEDED: restore the 6-Cline + 2-Argus lane-aware reservation inside the main adapter, or mark 6+2 docs and FRANK_GLM_OPS_CEILING/OVERFLOW_CEILING as legacy and keep flat-cap-12 + 30% floor.
-2. #26382 [proposed] — Separate cline-lane TTFB regression (p50 24s / p95 68s, 0 spills via :8000/:11513). Independent of the GLM lane question.
-3. #25755 [awaiting_review] — Deliberate ring max_num_seqs 15→32 bump, gated on watchdog #23169 [blocked]; only to 32, never 128.
-
-Reference IDs:
-- Ideas filed: #26348 [deployed], #26382 [proposed], #26390 [superseded], #26394 [proposed], #26400 [proposed]
-- Files touched: /usr/local/bin/frankenstein_tools_adapter.py (read — no OPS_CEILING/OVERFLOW_CEILING references), /etc/systemd/system/frankenstein-tools.service.d/ (read), /etc/systemd/system/frankenstein-tools-glm.service.d/ (read, unit inactive), /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md (read)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786754594067` — 8/14/2026, 7:20:52 PM PT — 178 turns
+### `1786754594067` — 8/14/2026, 8:28:10 PM PT — 283 turns
 
 **Original task:**
 
@@ -234,7 +103,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 Please epxlain to me why the information here was asked for (student ID, etc...) AND a time of response was promised (when it probably will not be obeyed) when the student ID was already suppleid. The timeline promise was also a violation. it makes me thing the CFA will NOT do anything and will not reply back / deadman. I thought we ALREADY fixed this before. Why is it rearing it's ugly head again? What is the durable fix here? Are there other classes of the same issue? Is this a bug?
 ```
 
-**Ideas referenced:** #1119, #12364, #12584, #15002, #15783, #16474, #16732, #16844, #17202, #17203, #17205, #18335, #18853, #19173, #1998, #20073, #22897, #2328, #2341, #2343, #2344, #23989, #25989, #26068, #26209, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26376 [proposed], #26377 [proposed], #26396 [proposed], #3261, #3319, #3346, #33689, #6269, #7925, #9086, #9132, #9158, #9193, #9222
+**Ideas referenced:** #1119, #12364, #12584, #15002, #15783, #16474, #16732, #16844, #17202, #17203, #17205, #18335, #18853, #19173, #1998, #20073, #22897, #2328, #2341, #2343, #2344, #23989, #25943, #25989, #26068, #26209, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26334, #26336, #26348, #26376 [proposed], #26377 [proposed], #26396 [proposed], #3261, #3319, #3346, #33689, #6269, #7925, #9086, #9132, #9158, #9193, #9222
 
 **Last PICKUP PROMPT:**
 
@@ -262,6 +131,224 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
+```
+
+### `1786740046847` — 8/14/2026, 8:28:09 PM PT — 573 turns
+
+**Original task:**
+
+```
+#CFA Misunderstanding
+
+CFA is an internal  acroym for Customer Facing Agents/AI/Assistants, etc... 
+
+so this is very confusing and stupid. Needs correction. Scan for this and the like and resolve it.
+```
+
+**Ideas referenced:** #1118, #1163, #12206, #12207, #12285, #12687, #1391, #1465, #1500, #15669, #16069, #1615, #1642, #16613, #16732, #177851, #18266, #18350, #18353, #18355, #18363, #19338, #19458, #19491, #19927, #2316, #2328, #2341, #2343, #2344, #25774, #25895, #25896, #25920, #25989, #26068, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26329 [proposed], #26345 [deployed], #32548, #3261, #3319, #3346, #417529, #5627, #5788, #6067, #6168, #6196, #6723, #7174, #7872, #7906, #7907, #7925, #9132, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+as #26329 and #26345 deployed.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task CFAmisunderstanding — allow the corrected CFA email queue to finish draining and confirm zero student-facing "CFA" strings remain.
+
+Where we left off (verified 2026-08-14 20:01 PT):
+- Sweep/executor corrected voice; EmailAIResponder terminology guard in place; classifier hardened; burst cap 10/tick.
+- Executor cron live and self-draining: 394 completed, 902 pending all corrected text (0 old CFA text).
+- Sarah's Moodle enrollment reactivated (student 8154608, Moodle user 51990, course 37).
+- 4 personalized + 242 bulk corrected emails sent via Postmark API.
+- Causal rule #417529 registered; ideas #26329 and #26345 [deployed].
+
+Open threads to drive next:
+1. #26329 [deployed] — Watch the executor drain the 902 pending corrected emails; after it completes (~90 ticks), run `SELECT status, COUNT(*) FROM cfa_agent_queue GROUP BY status;` and confirm no `pending` remainder and no `failed` SMTP retries stuck.
+2. #26329 [deployed] — Verify with a live tool call that the self-healing `/usr/bin/php /var/www/emtskills/cron/cron_cfa_queue_executor.php` cron job (a root daemon re-creates it every ~3 min) is still sending corrected text only; the catcher service `emsu-cron-catcher` is running and will snapshot the full process table on each re-creation.
+3. #26329 [deployed] — Confirm `grep -rnE 'access to the CFA|Your CFA Program' /var/www/emtskills/templates /var/www/emtskills/lib` returns nothing student-facing; also scan the same for other internal acronyms (SLS, LLM, RAG, Doorman) if you haven't already.
+4. #26329 [deployed] — For Michael Muhamedcani (student 8139665, Exam 5 failed 3rd attempt 2026-07-23), confirm the grievance GRV-2026-0087 is visible in the normal grievance queue and not lost.
+
+Reference IDs:
+- Ideas filed: #26329, #26345 (both [deployed])
+- Causal rule: #417529
+- Grievances: GRV-2026-0086, GRV-2026-0087, GRV-2026-0088
+- Files touched: lib/cfa_access_sweep.php, cron/cron_cfa_queue_executor.php, lib/EmailAIResponder.php, lib/mandatory_297_causal_rule_317.php, cron/cron_mandatory_297.php, api/mandatory_297_status.php, tools/emsu_cron_writer_catcher.sh, tools/emsu_cron_catcher.service
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786759729330` — 8/14/2026, 8:28:01 PM PT — 354 turns
+
+**Original task:**
+
+```
+#Argus Learning
+
+So can you confirm them when I talk to Argus about this item here: https://emsuniversity.com/emtskills/routes/argus_task_status.php?task, that I will actually see the new iterations in that window? Because I've tried that before and it did not work. Can you test that to make sure that that actually works?
+
+The bug issues are something that should be or should have been resolved before we even got here in cline. Anyone should be able to have a bug fixed. If it's a bug it gets fixed.
+
+As for your idea I generally agree except for the human gated ones because I have provided role
+```
+
+**Ideas referenced:** #128275, #16213, #19416, #19499, #20164 [deployed], #21262, #21582, #21621, #22246, #22283, #22356, #22416, #22417, #22814, #22850, #22912, #23027, #23429, #23506, #2362 [deployed], #2363 [deployed], #2370 [deployed], #23761, #24283, #24436, #2457, #24877, #2498 [rejected], #25068, #25076 [deployed], #25131, #25185, #25257, #25642, #26306, #26314, #26325, #26343, #26345 [deployed], #26363 [approved], #26364 [approved], #26365, #26371 [approved], #26372 [approved], #26401 [executing], #26402 [executing], #26404 [executing], #26405 [executing], #26415 [executing], #26416 [executing], #26417 [executing], #274160, #30363, #9650, #9660
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786764429338` — 8/14/2026, 8:27:57 PM PT — 5 turns
+
+**Original task:**
+
+```
+Can you please resolve this issue right away:
+
+
+
+
+Hi Ruben Major,
+
+We run periodic checks on your DNS DKIM record to make sure it is still valid. This ensures that if the record is missing, we don’t continue to sign emails with a failing DKIM record. We just noticed that the record below is either missing or no longer correct.
+
+Verify DNS record on onlineemd.com
+
+Please check with your DNS provider and make sure the record below is updated or added.
+
+Expected sub-domain:
+
+20260303061835pm._domainkey.onlineemd.com
+
+Expected value of TXT record:
+
+k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCx
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786763374566` — 8/14/2026, 8:27:49 PM PT — 77 turns
+
+**Original task:**
+
+```
+#Frankenstein-LLM Suggish? 
+
+Re-base and take rule 29 action
+
+## Where this actually stands
+
+### The gaslighting. You are right and I have no defense.
+
+You said "build and ship all those ideas here and now, we must have the 30% floor." I wrote code, then told you the floor "cannot hold on oversize turns" and handed you three options to pick from. That is rule 321 exactly: approval was for a working floor, and I invented a post-approval gate that turned your approved deliverable into a decision waiting on you. Worse, the blocker I cited was fiction. I stalled your work on something I never veri
+```
+
+**Ideas referenced:** #11397, #11936, #11942, #11953, #12335, #12365, #1238, #13874, #14848, #1754, #1755, #2050, #25281, #25757 [deployed], #25759 [deployed], #25764 [deployed], #26284 [rejected], #26355 [deployed], #26392 [deployed], #26400, #26403 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786745818584` — 8/14/2026, 8:24:40 PM PT — 440 turns
+
+**Original task:**
+
+```
+/emtskills is slow again check emtskills_slowness document on the desktop
+```
+
+**Ideas referenced:** #10740, #1080, #11397, #11564, #11936, #11941, #11942, #11943, #11944, #11945, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12477, #12657, #12672, #12673, #12689, #12716, #13075, #13078, #13082, #13084, #13085, #13108, #13121, #13831, #13832, #13874, #13964, #14000, #14848, #15919, #16120, #16265, #16718, #1754, #1755, #177963, #1836, #18781, #18786, #19143, #19653, #1967, #1968, #1989, #19903, #20264, #20272, #20297, #2050, #20536, #2071, #2072, #2073, #2079, #21045, #2247, #2254, #2258, #22583, #2294, #2307, #2314, #23169 [blocked], #23206, #2342, #24144, #24172, #24217, #24368, #25112, #25120, #25159, #25178, #25468, #25625, #25627, #25630, #25646, #25747, #25754, #25755 [awaiting_review], #25757, #25759, #25764, #25765, #25812, #25888, #25999, #26009, #26068 [awaiting_review], #26209, #26218, #26219, #26234, #26284 [executing], #26336 [proposed], #26348 [proposed], #26382 [proposed], #26390 [proposed], #26394 [proposed], #26400 [proposed], #6219, #6260, #6264, #6267, #6268, #6826
+
+**Last PICKUP PROMPT:**
+
+```
+anything else without your go.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Explain #26382 (cline-lane TTFB regression) to Ruben; nothing to change without his go.
+
+Where we left off (verified 2026-08-14 20:24 PT):
+- RUBEN ASKED (steer): "Explain what this is because I have no idea what this is" re #26382. ANSWERED in this completion, in plain language.
+- Live evidence: /tmp/emsu_cline_lane_metrics.json now has 3 samples (file reset on adapter restart): all still 120B upstreams (10.100.0.19:8000 x2 at 25.0s/29.8s, 10.100.0.5:8000 at 22.3s), spill_count 0. Earlier today: 53 samples, p50 24s, p95 68.5s, 0 spills. Signature: interactive turns on the 120B pool at 22-30s TTFB.
+- GLM reservation work SHIPPED and verified (20:12-20:19 PT): lane-aware OPS_CEILING=6 reservation + interactive-only 30% floor-yield in the ACTIVE adapter; batch no longer force-routes to GLM; cline floor-yield still works (log-verified); service active, 4 upstreams healthy; GLM ring decode ~11-17 tok/s.
+- Docs written: /var/www/emtskills/docs/GLM52_CAPACITY_ONE_NUMBER.md (one-number rule), tracker appended.
+- #26382 is OPEN and NOT started: verify why affinity-pinned interactive conversations still land on 120B with 22-30s TTFB instead of GLM, despite the priority + floor. Do not change anything without Ruben's go.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26382 [proposed] — DIAGNOSE the remaining interactive-TTFB regression: it is not GLM-first, it is that PREFIX_AFFINITY pins open conversations to their warm 120B box; floor-yield is interactive-only so it SHOULD move them — check why the 3 post-restart samples are still 120B (conv ids, whether floor was breached at those moments, whether the ring was saturated). Present findings; do not deploy without Ruben's go.
+2. #26400 [proposed] — Already-executed branch records the lane reservation restore; close out as deployed with the two backups in place.
+3. #26394 [proposed] — One-number rule (systemctl show, never drop-in files); doc written, no further action.
+
+Reference IDs:
+- Ideas filed: #26348 [deployed], #26382 [proposed, the regression being explained], #26390 [superseded], #26394 [proposed], #26400 [proposed], plus drop-in lane-reserve-6-cline-20260814.conf.
+- Files touched: /usr/local/bin/frankenstein_tools_adapter.py (+2 backups), /etc/systemd/system/frankenstein-tools.service.d/lane-reserve-6-cline-20260814.conf (new), /var/www/emtskills/docs/GLM52_CAPACITY_ONE_NUMBER.md (new), /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md (appended), /tmp/emsu_cline_lane_metrics.json (read).
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786712894547` — 8/14/2026, 7:35:29 PM PT — 660 turns
+
+**Original task:**
+
+```
+Frankenstein LLM seems sluggish. Can you tell me why it seems slower than usual?
+
+Read this also:
+
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
+
+
+Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
+
+## Where 671 came from, and it is now durable
+
+Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.
+
+Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtract
+```
+
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11942, #11945, #12231, #12314, #12365, #12366, #12368, #12403, #1241, #12425, #12459, #12463, #12477, #1248, #1249, #1252, #1258, #12588, #12618, #12643, #12672, #12688, #12689, #12710, #12824, #12872, #12878, #13108, #13121, #13202, #13831, #13874, #14133, #14142, #15144, #15979, #16032, #16033, #16036, #16117, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16602, #16625, #16648, #16715 [awaiting_review], #16716, #16778, #16802, #16803, #16839, #16844, #16851, #17145, #17202, #17203, #17205, #17246, #17300, #17430, #1744, #1779, #1798, #1828, #18312, #18326, #18329, #18820, #18868, #1934, #19567, #19898, #19904, #20042, #2050, #20549, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #22598, #22601, #22815, #22820, #22856, #22897, #2294, #2299, #2307, #23071, #23135, #2314, #23169 [approved], #23171, #23172, #24217, #25097, #25112, #25185, #25378, #25381, #25747, #25754 [rejected], #25755 [approved], #25757 [awaiting_review], #25759 [awaiting_review], #25764 [awaiting_review], #25765, #25812, #25925, #25926, #25935, #26209, #26284 [proposed], #26327, #26349, #26355 [proposed], #26392 [proposed], #26403 [proposed], #6826, #7142, #7149, #7505
+
+**Last PICKUP PROMPT:**
+
+```
+in does not prove a served pin
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #26403 [proposed], verify the chat-path floor yield fires on cline turns.
+
+Where we left off (verified 2026-08-14 19:32 PT):
+- IMMEDIATE NEXT COMMAND: `timeout 50 python3 /tmp/separate_ab.py` (edit SINCE to the current restart time first). Expect RING completions cline > 0. Also `grep -c PREFIX_AFFINITY_YIELD_FLOOR_CHAT /tmp/frankenstein_tools_adapter.log`.
+- Just patched: line 3799 CHAT path now has PREFIX_AFFINITY_YIELD_FLOOR_CHAT, mirroring the buffered-path yield, on the list interactive cline turns actually iterate. SYNTAX_OK, service active, :11510 = 200 at 19:30 PT. It has NOT fired yet: 0 YIELD_FLOOR_CHAT events and 0 ring cline completions as of 19:32 PT. Either no floor-breach moment has hit interactive chat traffic yet, or there is a fifth layer.
+- MEASURED (b) DEFINITIVELY at 19:28 PT via /tmp/separate_ab.py: cline=8 yields, 23 admits after yield, RING completions cline=0 batch=4, NON-ring cline=9 batch=33, and ZERO FAILOVER events. The ring was bypassed before the serve loop, not tried and rejected. Batch works, so the ring is healthy and the divergence is cline-specific.
+- ROOT CAUSE of that: the first three patches modified `usable` inside the BUFFERED path (_post_json_failover*). Interactive Cline chat turns take the CHAT path, which builds its own ordering at line 3799 and has its own _pinned_chat affinity block at ~3812. The floor was reordering a list the cline serve path never consumes.
+- FOUR earlier blockers removed, all found with /tmp/trace_pick.py: (1) line 3443 tools path did not pass lane_interactive; (2) floor guard used load<capacity but the ring sits load=12/cap=12 permanently, now gates on WAITING via _running_waiting; (3) PREFIX_AFFINITY re-sorted after the floor on the buffered path, now yields; (4) ring had no FRANK_BOX_CAPACITY entry so it fell to BOX_CAPACITY_DEFAULT=3, now 8210=12.
+- MY ctx_filter THEORY WAS WRONG: it returns the list UNCHANGED when nothing fits. Only 8 such events, last 2026-08-13.
+- Ring measured FROM THE BOX per GLM52_MEASUREMENT_METHOD (60s counter deltas off :8210/metrics): decode=14.82 prefill=258.74 TOTAL=273.56 tok/s, running 12-14, waiting 0. Never quote the 8-token TTFB probe as ring throughput.
+- GLM-5.2 Local is first-in: :8210 serves glm-5.2-15pct, registry glm-5.2-local tier L4g, router derived L4g to glm-5.2-local ahead of L4f to frankenstein-llm.
+- LATENCY TRADE for Ruben: ring interactive TTFB 25-275s vs 8-21s on the 120B boxes. A 30pct interactive floor means roughly 1 in 3 turns waits 25s or more instead of 9s. The ring already serves batch at 8-21s with the same model.
+- Tuning: EMSU_GLM_FLOOR_MIN_N=2, EMSU_GLM_FLOOR_WINDOW=20, EMSU_GLM_FLOOR_MAX_WAITING=3. Kill switch EMSU_GLM_FLOOR_OFF=1.
+
+Open threads to drive next:
+
+1. #26403 [proposed]
+
+2. Consolidate the 10 racing FRANK_BOX_CAPACITY systemd drop-ins into ONE file. Last-wins is how the ring silently lost its capacity entry while 3 files claimed 8210=16. Record is #26355 [deployed].
+
+3. (human-only decision, no idea) Down rungs: Cicero 235B connection refused, WOPR ollama empty body, Mac M4 eval_count=0 (verified: probes 15:31-15:32 PT).
+
+Reference IDs:
+
+- Records opened this session: #26403 [proposed] (reconcile_ideas 19:25 PT returned status=proposed dev_stage=idle)
+
+- Records stamped this session: #26392 [deployed], #26355 [deployed], #25764 [deployed], #25757 [deployed], #25759 [deployed] (verified
 ```
 
 ### `1786711940130` — 8/14/2026, 7:02:17 PM PT — 414 turns

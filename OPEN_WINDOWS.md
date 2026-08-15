@@ -6,13 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/14/2026, 10:28:11 PM PT | window: last 72h | 82 tasks | index total 723 (parsed 0, cached 723)
+Generated: 8/14/2026, 11:28:12 PM PT | window: last 72h | 83 tasks | index total 724 (parsed 5, cached 719)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786754594067` | 8/14/2026, 9:54:53 PM | 490 | 2709KB | Please epxlain to me why the information here was asked for (student ID, etc...) AND a tim |
-| `1786765205570` | 8/14/2026, 9:18:25 PM | 196 | 712KB | I have seen enough rules 317 violations that I am quite concerned on the number of reversi |
-| `1786759729330` | 8/14/2026, 9:02:56 PM | 526 | 1159KB | #Argus Learning |
+| `1786754594067` | 8/14/2026, 11:27:55 PM | 589 | 3025KB | Please epxlain to me why the information here was asked for (student ID, etc...) AND a tim |
+| `1786759729330` | 8/14/2026, 11:27:23 PM | 648 | 1371KB | #Argus Learning |
+| `1786772358561` | 8/14/2026, 11:27:02 PM | 202 | 1863KB | Not correct, where was the 40% number received. That's incorrect. What is the actual numbe |
+| `1786765205570` | 8/14/2026, 11:22:11 PM | 264 | 999KB | I have seen enough rules 317 violations that I am quite concerned on the number of reversi |
+| `1786696386569` | 8/14/2026, 11:17:34 PM | 92 | 332KB | #Unknown |
 | `1786740046847` | 8/14/2026, 8:59:13 PM | 646 | 6933KB | #CFA Misunderstanding |
 | `1786764883780` | 8/14/2026, 8:56:30 PM | 86 | 289KB | #Abandoned Cart Recovery |
 | `1786763374566` | 8/14/2026, 8:51:29 PM | 132 | 589KB | #Frankenstein-LLM Suggish?  |
@@ -33,7 +35,6 @@ Generated: 8/14/2026, 10:28:11 PM PT | window: last 72h | 82 tasks | index total
 | `1786696835373` | 8/14/2026, 2:14:56 PM | 256 | 1453KB | #CFA |
 | `1786695610761` | 8/14/2026, 2:14:47 PM | 280 | 1362KB | #Big Mac 4th Card |
 | `1786686261739` | 8/14/2026, 11:01:53 AM | 353 | 1321KB | #What am I Missing/ Students |
-| `1786696386569` | 8/14/2026, 5:44:49 AM | 90 | 327KB | #Unknown |
 | `1786560740700` | 8/14/2026, 5:15:16 AM | 252 | 972KB | Why am i still getting OLD chat transcripts? Are new ones being sent to me right after the |
 | `1786674811485` | 8/14/2026, 5:06:40 AM | 248 | 1033KB | Can you tell me how we can see if anyone is using a bot to chat to us or not? |
 | `1786660376952` | 8/14/2026, 3:01:07 AM | 346 | 1205KB | help me file with Florida Board of Education application yet? Need that approval before we |
@@ -97,7 +98,7 @@ Generated: 8/14/2026, 10:28:11 PM PT | window: last 72h | 82 tasks | index total
 
 ## Per-window detail
 
-### `1786754594067` — 8/14/2026, 9:54:53 PM PT — 490 turns
+### `1786754594067` — 8/14/2026, 11:27:55 PM PT — 589 turns
 
 **Original task:**
 
@@ -105,35 +106,35 @@ Generated: 8/14/2026, 10:28:11 PM PT | window: last 72h | 82 tasks | index total
 Please epxlain to me why the information here was asked for (student ID, etc...) AND a time of response was promised (when it probably will not be obeyed) when the student ID was already suppleid. The timeline promise was also a violation. it makes me thing the CFA will NOT do anything and will not reply back / deadman. I thought we ALREADY fixed this before. Why is it rearing it's ugly head again? What is the durable fix here? Are there other classes of the same issue? Is this a bug?
 ```
 
-**Ideas referenced:** #10108, #10740, #1119, #11741, #11781, #12364, #12477, #12584, #12618, #12824, #12872, #12878, #13202, #15002, #15783, #16163, #16265, #16304, #16474, #16732, #16844, #17202, #17203, #17205, #18312, #18326, #18335, #18853, #19173, #19686, #1998, #20073, #22897, #2299, #2316, #23171, #2328, #2341, #2343, #2344, #23989, #25097, #25943, #25986, #25989, #26068, #26209, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26334 [superseded as email cause], #26336, #26348, #26376 [proposed], #26377 [proposed], #26396 [proposed], #26424 [proposed], #26447 [proposed], #3261, #3319, #3346, #33689, #6269, #6723, #6729, #7174, #7925, #9086, #9132, #9158, #9193, #9222
+**Ideas referenced:** #10108, #10740, #1119, #11741, #11781, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12364, #12365, #12407, #12477, #12584, #12618, #12657, #12689, #12824, #12872, #12878, #13108, #13202, #13874, #15002, #15783, #16163, #16265, #16304, #16474, #16732, #16844, #17202, #17203, #17205, #18312, #18326, #18335, #18853, #19173, #19653, #1967, #19686, #1998, #20073, #22583, #22897, #2299, #2316, #23171, #2328, #2341, #2343, #2344, #23989, #24144, #25097, #25112, #25120, #25159, #25178, #25943, #25986, #25989, #26068, #26209, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26334 [superseded as email cause], #26336, #26348, #26376 [proposed], #26377 [proposed], #26396 [proposed], #26424 [proposed], #26447 [proposed], #26461 [proposed], #3261, #3319, #3346, #33689, #6269, #6723, #6729, #7174, #7925, #9086, #9132, #9158, #9193, #9222
 
 **Last PICKUP PROMPT:**
 
 ```
-affic sample, now filed below.
+d idea, not claimed as solved.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #26447 — email agent shallow-reply RCA: prove the Aug 14 fallback-chain collapse caused thin replies, then lock the fix.
+Pick up task — scope the virtual LoRA adapter bundle + resolve the shallow email agent RCA.
 
-Where we left off (verified 2026-08-14 21:50 PT):
-- LoRA hypothesis withdrawn (no adapter weights exist; Ruben corrected this correctly).
-- `/etc/litellm/config.yaml` fallback chains edited 18:03–18:06 PT by window O: `glm-5.2-local` commented out (`# WINDOW_O_DOWN`) then restored by 21:34 PT. Current config has `glm-5.2-local` active.
-- Email responder serving path unchanged: `frankenstein-llm` → frankenstein-tools adapter (:11510) → glm-5.2-local Hexarchy ring.
-- CQG gate ruled out (0 activations / 408 "not activated" in `/var/log/emsu_email_responder.log`).
-- Claude-side fixes already shipped: chat pre-send policy gate in `api/chat_widget_api.php` + `ChatPolicyGuard` timeline/identifier detectors (ideas #26376, #26377 — deployed).
+Where we left off (verified 2026-08-14 ~11:17 PM PT):
+- VLoRA draft spec on disk at /var/www/emtskills/docs/specs/virtual_lora_adapter_spec.md
+- Injection seam verified: /usr/local/bin/frankenstein_tools_adapter.py `_messages_to_responses_input()` line 3055; three message paths need one merge hook
+- Chat guard deployed (ideas #26376/#26377): lib/ChatPolicyGuard.php + api/chat_widget_api.php pre-send gate at line 780
+- Shallow-email RCA still open; CQG ruled out (0 activations), LoRA ruled out (no weights ever on disk)
 
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26447 [proposed] — Sample 20+ student emails from `/var/log/emsu_email_responder.log` before vs after 18:03 PT today; compare reply word-count and whether the reply answers the student's question. Confirm or falsify the fallback-chain-collapse hypothesis.
-2. #26447 [proposed] — If confirmed, add a permanent guard: fallback chains must never silently drop the top free rung (glm-5.2-local) without a Ruben-signed rollback marker, and alert on "WINDOW_O_DOWN" edits to serving config.
-3. #26396 [proposed] — 7-day production observation of the new chat pre-send policy gate (CFA-POLICY-REWRITE / CFA-DEADMAN-TRACKED markers).
-4. #26424 [proposed] — Email agent shallow-reply RCA (older thread): superseded by #26447's more precise config-collapse lead; mark superseded once #26447 confirms.
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #26461 [proposed] — Write the authoritative VLoRA bundle schema + adapter merge module design; pick ONE choke point in frankenstein_tools_adapter.py after mapping all three message paths, and propose the first bundle (email_csa) diff.
+2. #26424 [proposed] — Isolate the shallow-email cause: diff the ACK/hold-phrase list in lib/EmailAIResponder.php (edited 2026-08-14 14:18 PT) and the WINDOW_O_DOWN fallback-chain edits in /etc/litellm/config.yaml (18:03/18:06 PT); confirm which model block the email agent actually hits via a live response header per rule 140.
+3. #26447 [proposed] — Confirm whether the glm-5.2-local fallback removal affects the email agent model chain or only Cline-executor chains; re-enable if it was wrongly cut.
+4. #26396 [proposed] — Production observation window for the deployed chat gate: watch logfile for CFA-POLICY-REWRITE / CFA-DEADMAN-TRACKED hits over 48h and verify zero regressions.
+5. #26461 [proposed] — Community prior-art verification pass for the spec: fetch LoRAX (Predibase), vLLM multi-LoRA, and prompt-tuning arXiv links to cite; needs a web-capable agent or manual lookup.
 
 Reference IDs:
-- Ideas filed: #26376 [deployed], #26377 [deployed], #26396 [proposed], #26424 [proposed], #26447 [proposed]
-- Files touched: `api/chat_widget_api.php`, `lib/ChatPolicyGuard.php` (chat gate, deployed); `cron/cron_email_responder.php` (CQG restore attempted, then restored to pre-revert state — no net change)
-- Config backups: `/etc/litellm/config.yaml.bak.window-o.1786755723`, `/etc/litellm/config.yaml.bak.window-o.1786755963`
+- Ideas filed: #26376, #26377, #26396, #26424, #26447, #26461
+- Files touched: lib/ChatPolicyGuard.php, api/chat_widget_api.php, cron/cron_email_responder.php (backup restored), docs/specs/virtual_lora_adapter_spec.md
+- Live adapter: /usr/local/bin/frankenstein_tools_adapter.py (restarted 20:44 PT)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -141,50 +142,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786765205570` — 8/14/2026, 9:18:25 PM PT — 196 turns
-
-**Original task:**
-
-```
-I have seen enough rules 317 violations that I am quite concerned on the number of reversions that have to be made. It does not seem to be getting much better. My thoughts would be that overtime we would have less of these but it seems like we are still having more and more of them and I'm not sure exactly if there's a way to do this more efficiently. There must be something that we are missing here. There must be something that we can do to make sure that the iterations are true sooner. Before they get hit with a 317. Again the 317 is a fail safe and it's supposed to also change the rules in 
-```
-
-**Ideas referenced:** #0000, #1080, #1104, #12363, #13874, #146084, #16224, #17685, #1899, #19173, #19175 [executing], #19176 [queued], #19511, #19898, #19899 [proposed], #19904, #20251, #202608, #20630 [executing], #21045 [executing], #2195, #2247, #2275, #2276, #2278, #2279, #2280, #2281, #2282, #2283, #2293, #2294, #2302, #2306, #2307, #2311, #2314, #23169 [awaiting_review], #2320, #2323, #24217, #25082 [executing], #25097 [executing], #25111 [proposed], #25122, #25125 [executing], #25130 [executing], #25151, #25172, #25182 [proposed], #25184, #25185 [executing], #25186 [proposed], #25187 [proposed], #25195, #25196, #25220 [proposed], #25223 [executing], #25224 [awaiting_review], #25225 [executing], #25226 [executing], #25228 [executing], #25229 [proposed], #25236 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25242 [executing], #25245 [proposed], #25246 [proposed], #25247 [proposed], #25248 [proposed], #25256 [awaiting_review], #25263 [proposed], #25264 [proposed], #25266 [proposed], #25267 [proposed], #25268 [awaiting_review], #25269 [executing], #25270, #25279 [proposed], #25280 [executing], #25281 [proposed], #25282 [proposed], #25294 [proposed], #25295 [proposed], #25311, #25313 [awaiting_review], #25316 [proposed], #25366 [proposed], #25368, #25378 [proposed], #25379 [proposed], #25380 [proposed], #25381 [proposed], #25382 [proposed], #25383, #25389 [executing], #25425 [proposed], #25468, #25525 [executing], #25530 [executing], #25531 [executing], #25537 [executing], #25538 [proposed], #25540 [proposed], #25542 [proposed], #25548 [executing], #25549, #25551 [awaiting_review], #25555 [executing], #25560 [executing], #25561 [executing], #25565 [proposed], #25567 [executing], #25571 [proposed], #25580 [executing], #25593 [proposed], #25604 [proposed], #25605 [executing], #25606 [proposed], #25616 [proposed], #25617, #25626, #25627 [executing], #25631 [executing], #25638 [executing], #25663 [executing], #25666 [proposed], #25667 [proposed], #25672 [executing], #25677 [executing], #25678 [executing], #25715 [executing], #25747 [executing], #25753 [proposed], #25755 [awaiting_review], #25757 [proposed], #25759 [proposed], #25764 [executing], #25765 [executing], #25812 [executing], #25859 [executing], #25860 [executing], #25869 [proposed], #25870 [proposed], #25871 [proposed], #25872 [executing], #25873 [proposed], #25876 [proposed], #25886 [executing], #25888, #25890 [proposed], #25891 [executing], #25904 [proposed], #25909 [proposed], #25912 [proposed], #25925, #25926, #25931, #25933, #25935, #25941 [proposed], #25942, #25944 [proposed], #25953 [executing], #25971 [executing], #25975 [executing], #25976 [executing], #25985 [executing], #25986, #25990 [executing], #26035 [proposed], #26071 [executing], #26182 [executing], #26211 [proposed], #26259 [proposed], #26260 [proposed], #26261 [proposed], #26325 [executing], #26349, #26355 [proposed], #26392 [proposed], #26401 [executing], #26415 [executing], #26417 [executing], #26435 [deployed], #4494, #5344, #616207, #8143, #8145, #9728, #9731
-
-**Last PICKUP PROMPT:**
-
-```
-ich returned `{"ok":true,...}`
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — 317 reversal corpus feedback loop (built & verified 2026-08-14).
-
-Where we left off (verified 8:17 PM PT):
-- Endpoint deployed: `/var/www/emtskills/api/cline_correction_ingest.php` (lint OK, live-tested, returns ok:true)
-- Rule 317 Obligation 2 amended with step (4) corpus write + cross-ref 139; reindexed (327 rules)
-- Mechanical feed added to `clinerules-mcp/src/index.ts` + built (`build/index.js` has it at line 1049) + MCP restarted
-- Corpus row 146084 (correction #8143) embedded and retrievable via RAG (verified top hit)
-- Idea #26435 stamped [deployed|verified] in orchestrator_ideas
-- Smoke-test artifacts 8144/8145 purged from both `ai_learned_corrections` and `emsu_preference_corpus`
-
-Open threads to drive next:
-1. #26435 [deployed] — watch the SELF_CONTRADICTING_DISP daily count in violations.sqlite for 2-3 days to confirm the fall continues below ~20/day now that corrections enter the corpus
-2. #26435 [deployed] — confirm the mechanical POST fires end-to-end by checking `ai_learning_audit` for a new `correction_updated` row with `origin=rule_317_reversal` the next time a completion is blocked on a contradiction
-
-Reference IDs:
-- Idea filed: #26435 (deployed, wiring verified)
-- Files touched: `Rules/317-reversal-triggers-297-and-rule-update.md`, `mcp-servers/clinerules-mcp/src/index.ts`, `build/index.js`, `/var/www/emtskills/api/cline_correction_ingest.php`
-- DB rows: `ai_learned_corrections` #8143 (real), `emsu_preference_corpus` #146084
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786759729330` — 8/14/2026, 9:02:56 PM PT — 526 turns
+### `1786759729330` — 8/14/2026, 11:27:23 PM PT — 648 turns
 
 **Original task:**
 
@@ -198,9 +156,142 @@ The bug issues are something that should be or should have been resolved before 
 As for your idea I generally agree except for the human gated ones because I have provided role
 ```
 
-**Ideas referenced:** #128275, #16213, #19416, #19499, #20164 [deployed], #21262, #21582, #21621, #22246, #22283, #22356, #22416, #22417, #22814, #22850, #22912, #23027, #23429, #23506, #2362 [deployed], #2363 [deployed], #2370 [deployed], #23761, #23920, #24051, #24283, #24436, #2457, #24877, #2498 [rejected], #2499, #2500, #2501, #25068, #25076 [deployed], #25131, #25185, #25257, #25642, #26191 [proposed], #26306, #26314, #26325 [executing], #26327, #26343, #26345 [deployed], #26346 [executing], #26349, #26363 [approved], #26364 [approved], #26365, #26366, #26367, #26369, #26371 [approved], #26372 [approved], #26401 [executing], #26402 [executing], #26404 [executing], #26405 [executing], #26415 [executing], #26416 [executing], #26417 [executing], #26420 [executing], #26421 [executing], #26429 [executing], #26436 [executing], #26437 [approved], #274160, #30363, #7543, #9650, #9660
+**Ideas referenced:** #12184, #127891, #128275, #16213, #16523, #16868, #16922, #17202, #19079, #19325, #19416, #19491, #19494, #19499, #19503, #19643, #20164 [deployed], #20495, #21262, #21582, #21621, #22246, #22283, #22356, #22416, #22417, #22814, #22850, #22912, #23027, #23283, #23429, #23506, #2362 [deployed], #2363 [deployed], #2370 [deployed], #23761, #23920, #24051, #24283, #24436, #2457, #24877, #2498 [rejected], #2499, #2500, #2501, #2502, #2503, #25068, #25076 [deployed], #25125, #25131, #25185, #25256, #25257, #25642, #25848 [executing], #25887, #26191 [proposed], #26306, #26314, #26325 [executing], #26327, #26343, #26345 [deployed], #26346 [executing], #26349, #26363 [approved], #26364 [approved], #26365, #26366, #26367, #26369, #26371 [approved], #26372 [approved], #26401 [executing], #26402 [executing], #26404 [executing], #26405 [executing], #26415 [executing], #26416 [executing], #26417 [executing], #26420 [executing], #26421 [executing], #26429 [executing], #26436 [executing], #26437 [approved], #26470 [executing], #274160, #30363, #4811, #6374, #6520, #7543, #9650, #9660
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786772358561` — 8/14/2026, 11:27:02 PM PT — 202 turns
+
+**Original task:**
+
+```
+Not correct, where was the 40% number received. That's incorrect. What is the actual number just so I know you know.
+```
+
+**Ideas referenced:** #25537, #25608, #26471 [executing], #7381
+
+**Last PICKUP PROMPT:**
+
+```
+ complete" progress milestone.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — CFA 40%-vs-80% NREMT sign-off conflation fix (hardening).
+
+Where we left off (verified 2026-08-14 23:26 PT):
+- Root cause: the CFA answered ticket #317 (Ulises Cook) using progress tier 40% as the NREMT sign-off/pass threshold. Correct value is 80% (PD sign-off gate = 80% progress; final exam pass = 80%; quizzes = 95%).
+- Deployed guards in both livechat (`/var/www/emtskills/api/livechat/webhook.php` line ~1662) and voice (`/var/www/emtskills/config/vapi_assistant_config.json` assistant.systemPrompt). Both lint/parse verified, live on disk.
+- Rollback copies: `webhook.php.bak-cfa-40percent-fix-20260814-2327`, `vapi_assistant_config.json.bak-cfa-40percent-fix-20260814-2327`.
+- Filed idea #26471.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26471 [executing] — Extend the "progress vs pass rate" guard to the seeded knowledge bases so the email/SMS agents also never conflate tiers with pass rates: `/var/www/emtskills/config/kb_precache_seed.php` (hybrid/accelerated pass-rate entries) and `/var/www/emtskills/config/seed_email_agent_exam_format_kb.php` (final exam entries), plus the live DB tables `email_agent_exam_format_kb` and `sms_ai_knowledge_base`.
+2. #26471 [executing] — Verify the remaining VAPI/chat runtime loads the updated voice prompt (no restart/relax needed if the config is read per-call; probe `vapi_prompt_sync_log` / `vapi_prompt_integrity_log` to confirm).
+
+Reference IDs:
+- Ticket: #317
+- Ideas filed: #26471 [executing]
+- Files touched: /var/www/emtskills/api/livechat/webhook.php, /var/www/emtskills/config/vapi_assistant_config.json (plus .bak-* rollback copies)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786765205570` — 8/14/2026, 11:22:11 PM PT — 264 turns
+
+**Original task:**
+
+```
+I have seen enough rules 317 violations that I am quite concerned on the number of reversions that have to be made. It does not seem to be getting much better. My thoughts would be that overtime we would have less of these but it seems like we are still having more and more of them and I'm not sure exactly if there's a way to do this more efficiently. There must be something that we are missing here. There must be something that we can do to make sure that the iterations are true sooner. Before they get hit with a 317. Again the 317 is a fail safe and it's supposed to also change the rules in 
+```
+
+**Ideas referenced:** #0000, #1080, #1104, #12363, #13874, #146084, #16224, #17685 [awaiting_review], #178669, #18329 [queued], #18800, #1899, #19173, #19175 [executing], #19176 [queued], #19511, #19898, #19899 [proposed], #19904, #20251, #202608, #20581 [executing], #20613 [executing], #20630 [executing], #21045 [executing], #2195, #2247, #2275, #2276, #2278, #2279, #2280, #2281, #2282, #2283, #2293, #2294, #2302, #2306, #23062 [awaiting_review], #2307, #2311, #23133 [executing], #2314, #23169 [awaiting_review], #2320, #2323, #23282 [executing], #24217, #25065 [executing], #25082 [executing], #25097 [executing], #25111 [proposed], #25122, #25125 [executing], #25130 [executing], #25131 [executing], #25151, #25172, #2518, #25182 [proposed], #25184 [proposed], #25185 [executing], #25186 [proposed], #25187 [proposed], #25195, #25196, #2522, #25220 [proposed], #25223 [executing], #25224 [awaiting_review], #25225 [executing], #25226 [executing], #25228 [executing], #25229 [proposed], #25236 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25242 [executing], #25245 [proposed], #25246 [proposed], #25247 [proposed], #25248 [proposed], #25256 [awaiting_review], #25263 [proposed], #25264 [proposed], #25266 [proposed], #25267 [proposed], #25268 [awaiting_review], #25269 [executing], #25270, #25279 [proposed], #25280 [executing], #25281 [proposed], #25282 [proposed], #25294 [proposed], #25295 [proposed], #25311, #25313 [awaiting_review], #25316 [proposed], #25366 [proposed], #25368, #25378 [proposed], #25379 [proposed], #2538, #25380 [proposed], #25381 [proposed], #25382 [proposed], #25383, #25389 [executing], #25425 [proposed], #25468, #25525 [executing], #25530 [executing], #25531 [executing], #25534 [executing], #25537 [executing], #25538 [proposed], #25540 [proposed], #25542 [proposed], #25548 [executing], #25549, #25551 [awaiting_review], #25555 [executing], #25560 [executing], #25561 [executing], #25562 [executing], #25565 [proposed], #25567 [executing], #25571 [proposed], #25580 [executing], #25593 [proposed], #2560, #25604 [proposed], #25605 [executing], #25606 [proposed], #25611 [executing], #25613 [executing], #25616 [proposed], #25617, #25626, #25627 [executing], #25631 [executing], #25638 [executing], #25639 [executing], #25646 [executing], #25663 [executing], #25666 [proposed], #25667 [proposed], #25669 [proposed], #25672 [executing], #25677 [executing], #25678 [executing], #25679 [executing], #25683 [proposed], #25715 [executing], #25747 [executing], #25753 [proposed], #25755 [awaiting_review], #25757 [proposed], #25759 [proposed], #25764 [executing], #25765 [executing], #25772 [executing], #25802 [proposed], #25806 [proposed], #25808 [proposed], #25812 [executing], #25859 [executing], #25860 [executing], #25869 [proposed], #25870 [proposed], #25871 [proposed], #25872 [executing], #25873 [proposed], #25876 [proposed], #2588, #25886 [executing], #25888, #25889 [awaiting_review], #25890 [proposed], #25891 [executing], #25904 [proposed], #25909 [proposed], #25912 [proposed], #25925, #25926, #25931 [proposed], #25933, #25935, #25941 [proposed], #25942, #25944 [proposed], #25950, #25952 [executing], #25953 [executing], #25971 [executing], #25973 [awaiting_review], #25975 [executing], #25976 [executing], #25985 [executing], #25986, #25990 [executing], #26002, #26008 [executing], #26017 [executing], #26027 [awaiting_review], #26035 [proposed], #26039 [executing], #26048 [executing], #26050 [executing], #26054 [executing], #26071 [executing], #26076 [executing], #26180 [executing], #26182 [executing], #26211 [proposed], #26259 [proposed], #2626, #26260 [proposed], #26261 [proposed], #26284 [proposed], #26325 [executing], #26349, #26355 [proposed], #26392 [proposed], #26401 [executing], #26415 [executing], #26417 [executing], #26435 [deployed], #26469 [proposed], #4494, #5344, #616207, #8143, #8145, #9728, #9731
+
+**Last PICKUP PROMPT:**
+
+```
+ at 2026-08-14 23:19-23:21 PT.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — 317 reversal loop: backfill corrections into virtual EMSU Corpus (VEC), vLoRA guard decision, 317 corpus-feed hardening.
+
+Where we left off (verified 2026-08-14 11:21 PM PT):
+- 280 catalogued rule-317 gate failures condensed into `/var/www/emtskills/docs/317-reversal-corrections.md` (3 canonical modes: SELF_CONTRADICTING_DISPOSITION 251, R317_UNVERIFIED_STATE 24, R317_REVERSAL_LOG 5)
+- VEC indexer ran (`chunks_new:12`); `vec_query.php` live-verified returning the MODE 1 correction as top hit for a reversal-shaped query
+- Rule 317 Obligation 2 amended (server `/var/www/emtskills/clinerules/Rules/317-...md` + Mac `~/Documents/Cline/Rules/317-...md` + `CLINERULES_MIRROR.md` regenerated) with mandatory step (4): POST to `api/cline_correction_ingest.php` on reversal
+- Mechanical validator feed: `clinerules-mcp` src + build now auto-POST to that endpoint when the 91 gate detects SELF_CONTRADICTING_DISPOSITION (MCP restarted, build verified)
+- Endpoint `api/cline_correction_ingest.php` deployed with JSON-valid audit details; live-tested (correction id 8143, audit row 102031)
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #26469 — [proposed] VLoRA freshness-stamp guard: when the VLoRA spec's open questions are resolved (granularity, rollout flag, token budget), implement verified_at/verified_by/source_probe in bundle YAML + merge-time validation. No 317 gate needed for bundles.
+2. #26435 — [deployed] Corpus-feed loop: consider extending `cline_correction_ingest.php` to also append to `/var/www/emtskills/docs/317-reversal-corrections.md` (or a per-mode file) so every FUTURE caught reversal lands in the VEC automatically, not just backfilled ones. Currently only ai_learned_corrections gets the write; the VEC doc was hand-written this session.
+
+Reference IDs:
+- Ideas filed: #26435 [deployed], #26469 [proposed]
+- Files touched: /var/www/emtskills/docs/317-reversal-corrections.md, /var/www/emtskills/api/cline_correction_ingest.php, /var/www/emtskills/clinerules/Rules/317-reversal-triggers-297-and-rule-update.md, ~/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md, ~/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts, ~/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js
+- DBs/endpoints verified: /var/lib/emsu_corpus/corpus.db (VEC), api/vec_query.php, api/cline_correction_ingest.php, admin_portal.ai_learning_audit
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786696386569` — 8/14/2026, 11:17:34 PM PT — 92 turns
+
+**Original task:**
+
+```
+#Unknown
+
+Reba and tell me what's going on here because I don't really understand this task.
+
+Both issues are now investigated, and the wrong 9999-12-31 date is fixed and verified.
+
+## 1. How a student passes the final exam and is later scheduled for a retake
+
+This is a false-positive academic-integrity autofail, verified at the data level. In Moodle, `local_ai_violations` rows are stamped with the exact same unix second as the PASSING final-attempt finish, so the enforcement pipeline treats a passing attempt as a flagged/voided attempt and later drives the retake pipeline.
+
+Concrete verified 
+```
+
+**Ideas referenced:** #25888, #25989 [executing]
+
+**Last PICKUP PROMPT:**
+
+```
+ed in the previous completion.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #25989 [rejected] - Academic-integrity false-positive autofail: diagnosis DISPROVEN, all 4 students passed, no code change needed.
+
+Where we left off (verified 2026-08-14 23:17 PT):
+- All 4 cited students passed and their grades were never revoked: Samuel Frazier 144/150, Bailey Carpenter 139/150, Anshika Sethi 140/150, Arav Tyagi 135/150.
+- Citation rows are timing_warning/timing_flag (logged/flagged), not autofail; no retake was ever scheduled.
+- Arav's sole penalty is a legitimate deadline_miss; his passed grade is intact.
+- 9999-12-31 email date leak already fixed and verified (cron_email_responder.php:2675).
+- Idea #25989 [rejected]: premise disproven.
+- Ruben confirmed the outcome: all passed anyway, nothing further needed.
+
+Open threads to drive next:
+None - all work completed this session.
+
+Reference IDs:
+- Ideas filed: #25989 [rejected]
+- Files touched: /var/www/emtskills/cron/cron_email_responder.php, /var/www/emtskills/docs/HANDOFF_NOTES.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
 
 ### `1786740046847` — 8/14/2026, 8:59:13 PM PT — 646 turns
 
@@ -1141,59 +1232,6 @@ The business problem: students keep emailing/chatting "what am I missing?" / "wh
 **Ideas referenced:** #11782, #12661, #13440, #13873, #13977, #14153, #14154, #14847, #15635, #15636, #15638, #15903, #16437, #16581, #16608, #16613, #16731, #16732, #16733, #17546, #17580, #17685, #17723, #18693, #18743, #18936, #19173, #19439, #19465, #19492, #19495, #19921, #2026, #2033, #20346, #20357, #2036, #2323, #23477 [in_progress], #24526 [superseded], #24765, #25156, #25185, #25871, #25888, #25914 [in_progress], #25971, #25974, #25975, #25976, #25984 [the canonical walker], #25985, #25986 [deployed], #25990 [proposed], #25995, #26003, #26035 [proposed], #26230 [proposed], #26231 [proposed], #26256 [deployed], #26257 [deployed], #26265 [deployed], #26285 [deployed], #26286 [deployed], #71121, #9083, #9086, #9109, #9132, #9168, #9192, #9202, #9222, #9306, #9339, #9343, #9549, #9831
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786696386569` — 8/14/2026, 5:44:49 AM PT — 90 turns
-
-**Original task:**
-
-```
-#Unknown
-
-Reba and tell me what's going on here because I don't really understand this task.
-
-Both issues are now investigated, and the wrong 9999-12-31 date is fixed and verified.
-
-## 1. How a student passes the final exam and is later scheduled for a retake
-
-This is a false-positive academic-integrity autofail, verified at the data level. In Moodle, `local_ai_violations` rows are stamped with the exact same unix second as the PASSING final-attempt finish, so the enforcement pipeline treats a passing attempt as a flagged/voided attempt and later drives the retake pipeline.
-
-Concrete verified 
-```
-
-**Ideas referenced:** #25888, #25989 [executing]
-
-**Last PICKUP PROMPT:**
-
-```
-n, and idea #25989 [rejected].
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #25989 [rejected] - Academic-integrity false-positive autofail: diagnosis DISPROVEN, correction logged, no code change needed.
-
-Where we left off (verified 2026-08-14 04:48 PT):
-- All 4 cited students' final grades are intact and passing: Samuel Frazier 144/150, Bailey Carpenter 139/150, Anshika Sethi 140/150, Arav Tyagi 135/150.
-- local_ai_violations ids 5/7/338/354 are timing_warning/timing_flag with action_taken logged/flagged, NOT autofail. No grade was ever voided.
-- v_enforcement_summary: Samuel/Bailey/Anshika CLEAN. Arav penalty = legitimate deadline_miss (attempt 1 auto-zeroed, attempt 2 passed on retake).
-- No proctoring_bookings or proctoring_deadlines rows exist for any of the 4. No retake was ever scheduled.
-- chatbot_tools.php localGetMoodleQuizStatus verified: score >= 80 returns 'PASSED - no retake needed'.
-- 9999-12-31 leak already fixed and verified: cron_email_responder.php:2675 now uses date('Y-m-d H:i:s'), backup .bak_9999_20260812_155912.
-- Idea #25989 [rejected]: premise disproven by live verification.
-- HANDOFF_NOTES.md updated with the full correction (2026-08-14 section).
-- Reversal log: same-second autofail diagnosis disproven, RCA bucket = wrong premise, listed in the body above.
-
-Open threads to drive next:
-None - all work completed this session.
-
-Reference IDs:
-- Ideas filed: #25989 [rejected]
-- Files touched: /var/www/emtskills/cron/cron_email_responder.php, /var/www/emtskills/docs/HANDOFF_NOTES.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
 
 ### `1786560740700` — 8/14/2026, 5:15:16 AM PT — 252 turns
 

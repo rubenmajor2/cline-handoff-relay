@@ -6,14 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/15/2026, 9:45:03 AM PT | window: last 72h | 87 tasks | index total 731 (parsed 0, cached 731)
+Generated: 8/15/2026, 10:45:04 AM PT | window: last 72h | 86 tasks | index total 732 (parsed 2, cached 730)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786782096117` | 8/15/2026, 1:53:02 AM | 124 | 1654KB | #Email Agent |
-| `1786778761449` | 8/15/2026, 1:23:18 AM | 392 | 588KB | #SSS |
-| `1786778041170` | 8/15/2026, 1:18:15 AM | 318 | 1705KB | #CFA  |
-| `1786764883780` | 8/15/2026, 1:18:05 AM | 130 | 453KB | #Abandoned Cart Recovery |
+| `1786815116178` | 8/15/2026, 10:44:46 AM | 91 | 209KB | #SSS/CFA Issues / Virtual Lora |
+| `1786782096117` | 8/15/2026, 10:44:41 AM | 227 | 3879KB | #Email Agent |
+| `1786778041170` | 8/15/2026, 10:07:03 AM | 328 | 1728KB | #CFA  |
+| `1786764883780` | 8/15/2026, 10:06:18 AM | 182 | 709KB | #Abandoned Cart Recovery |
+| `1786778761449` | 8/15/2026, 9:56:19 AM | 422 | 646KB | #SSS |
 | `1786780447770` | 8/15/2026, 1:15:59 AM | 142 | 588KB | #Executor |
 | `1786779320051` | 8/15/2026, 1:14:55 AM | 226 | 1753KB | Did email agent actually fix this issue for Sarah? |
 | `1786566698066` | 8/15/2026, 1:04:01 AM | 587 | 1106KB | #Call Backs  |
@@ -95,14 +96,32 @@ Generated: 8/15/2026, 9:45:03 AM PT | window: last 72h | 87 tasks | index total 
 | `1786559316764` | 8/12/2026, 12:47:44 PM | 94 | 452KB | #Lower Romans |
 | `1786560496749` | 8/12/2026, 12:11:44 PM | 152 | 385KB | #CFA |
 | `1786492782871` | 8/12/2026, 11:38:12 AM | 804 | 2527KB | Jon sent me these messages in 1 on 1 chat. I'm not sure what he's getting at. Can you look |
-| `1786556115138` | 8/12/2026, 10:35:15 AM | 1 | 3KB | I would like you to run a series of tests to benchmark Frankenstein LLM versus Claude Opus |
-| `1786491116649` | 8/12/2026, 10:03:55 AM | 496 | 2583KB | #Externships |
 
 ---
 
 ## Per-window detail
 
-### `1786782096117` — 8/15/2026, 1:53:02 AM PT — 124 turns
+### `1786815116178` — 8/15/2026, 10:44:46 AM PT — 91 turns
+
+**Original task:**
+
+```
+#SSS/CFA Issues / Virtual Lora
+
+continue here / we need to make some tweaks. My notes below:
+
+Everything is healthy, and yes, the new data changes my read on both #26424 [proposed] and #26447 [proposed]. Short version: the SYSFOLD finding almost certainly IS the shallow-email root cause, and the timeline lines up exactly with the 8/14 LoRA retirement.
+
+## System health since the fixes (8.5 hours of runtime)
+
+- SYSFOLD has fired 312 times since 01:20 PT with ZERO `sysfold_error` / `steering_inject_error` / `cfa_steer_error` events (verified: live grep of `/tmp/emsu_router_audit.log` this sessio
+```
+
+**Ideas referenced:** #1506, #25185, #26376 [deployed], #26377 [deployed], #26396 [proposed], #26424 [proposed], #26447 [proposed], #26461 [executing], #26469 [executing], #26501 [deployed], #26503 [deployed], #26504 [executing], #26505 [deployed], #26506 [deployed], #26507 [deployed], #26515 [deployed], #26591 [unknown], #26592 [deployed], #26593 [unknown]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786782096117` — 8/15/2026, 10:44:41 AM PT — 227 turns
 
 **Original task:**
 
@@ -124,31 +143,31 @@ This is an automated response which can sometimes make mistakes. A member of our
 that should be resolved.
 ```
 
-**Ideas referenced:** #16732, #19437, #2328, #2341, #2343, #2344, #23710, #2511, #25943, #25989, #26068, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26320, #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26525 [executing], #3261, #3319, #3346, #4958, #4991, #5095, #6106, #6228, #7907
+**Ideas referenced:** #12356, #15670, #16732, #174512, #19437, #2328, #2341, #2343, #2344, #23710, #24990, #2511, #25795, #25943, #25989, #26068, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26320, #26336, #26339, #26348, #26368, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26525 [executing], #26586 [proposed], #3261, #3319, #3346, #4958, #4991, #5095, #6106, #6228, #7907, #856404
 
 **Last PICKUP PROMPT:**
 
 ```
-xecuting] filed with full RCA.
+ in production since 01:49 PT.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Email Agent "Hi Duplicate," greeting + missing signature regression fix (lib/ai_ticket_agent_first_touch.php).
+Pick up task — Email Agent duplicate-registration follow-up: decide the first-touch cold-email suppression.
 
-Where we left off (verified 2026-08-15 01:51 PT):
-- Root cause proven via communication_log rows (58549/58400/56667): first-touch PHASE D used created_by_name "Duplicate Detection System" which was not blocklisted.
-- Deployed 3-chunk patch to /var/www/emtskills/lib/ai_ticket_agent_first_touch.php (php -l clean, backup .bak-20260815-hidduplicate on WOPR).
-- Live probe vs real ticket 25294 passed 7/7 (greeting "Hi Diego," + canonical signature/footer).
+Where we left off (verified 2026-08-15 09:56 PT):
+- "Hi Duplicate," + missing-signature bug is durably fixed and holding in prod (0 occurrences since 01:49 PT deploy).
+- Fix: lib/ai_ticket_agent_first_touch.php (backup .bak-20260815-hidduplicate) — actor blocklist, title-parse fallback, canonical signature/footer append.
+- Open duplicate-registration tickets still Open/Pending: 25294 (Diego Rivera), 25169 (Lilly Schaben), 25144 (Mahathi Rajkumar), 25110 (Jaydon Lott), etc. The first two were already emailed pre-fix and are idempotent-guarded.
 
 Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26525 [executing] — Watch next cron_ai_ticket_agent.php first-touch run (log "First-touch scan: ... clarified=...") and confirm no new communication_log rows with "Hi Duplicate," after 2026-08-15 01:49 PT. If any appear, verify the cron actually reloaded the lib file (opcache) via `php -r "opcache_reset();"` or process restart.
-2. #26525 [executing] — Optionally backfill/greeting-audit existing duplicate-registration tickets still Open (25294 Diego Rivera, 25169 Lilly Schaben, 25110 Jaydon Lott) to ensure no further corrective emails needed; current fix is forward-looking only.
+1. #26586 [proposed] — Ruben decision needed: approve ⇒ add a PHASE 1e skip in lib/ai_ticket_agent_first_touch.php for titles matching `^Potential Duplicate Registration` so those internal OPS-review tickets stop cold-emailing non-initiating students (a correct duplicate-notification flow already exists via cron_ai_watchdog_ext + cron_duplicate_reply_monitor).
+2. #26525 [deployed] — Spot-check after the next first-touch tick that any NEW clarify email carries a real first name + full EMSU signature (grep communication_log type='ai_ticket_agent' for "Hi Duplicate,"; expect zero).
 
 Reference IDs:
-- Ticket: N/A (this is a recurring email-agent bug, not a single ticket)
-- Ideas filed: #26525
-- Files touched: /var/www/emtskills/lib/ai_ticket_agent_first_touch.php (+ .bak-20260815-hidduplicate)
+- Tickets: 25294, 25169, 25144, 25110 (Potential Duplicate Registration)
+- Ideas filed: #26525 [deployed], #26586 [proposed]
+- Files touched: /var/www/emtskills/lib/ai_ticket_agent_first_touch.php
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -156,7 +175,98 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786778761449` — 8/15/2026, 1:23:18 AM PT — 392 turns
+### `1786778041170` — 8/15/2026, 10:07:03 AM PT — 328 turns
+
+**Original task:**
+
+```
+#CFA 
+
+Rebase and tell me what else needs to be done here if anything
+
+This is incredibly vague. What's wrong with Email Agent? Can you look into it and see what's going on? Fix it? Same with other CFAs?
+```
+
+**Ideas referenced:** #0066, #1070, #1089, #1164, #1166, #13047, #13442, #13965, #13977, #14741, #14742, #14743, #14748, #14749, #1636, #16418, #16445, #16473, #1668, #16732, #17712, #177949, #178686, #18132, #18135, #18176, #18309, #18313, #18853, #1892, #19802, #19830, #19918, #2018, #20569, #2145 [investigating], #22060, #2214, #2219, #2220 [resolved], #22250, #22261, #23211, #2323 [investigating], #2324 [resolved], #2328, #2341, #2343, #2344, #2358 [resolved], #2363 [resolved], #23710, #2406 [open], #25025, #2504 [resolved], #2511 [open], #25185, #25564, #2563, #25795, #25913, #25989, #26068, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26319, #26336, #26348, #26368, #26475, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #2782, #3261, #3319, #3346, #3587, #3957, #4686, #4689, #4929, #4930, #4931, #4957, #4958, #5095, #5391, #5431, #5574, #5638, #5768, #5770, #5779, #5787, #5792, #5793, #5794, #5795, #5819, #6039, #605250, #6064, #620781, #6230, #6789, #7126, #7164, #7174, #7359, #7368, #7381, #7548, #7550, #9132, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+lse alarm. Fixed and recorded.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — CFA fleet repair: 10 fixes deployed and verified 2026-08-15, RCA delivered, Miami deferral updated.
+
+Where we left off (verified 2026-08-15 10:06 PT):
+- 10 fixes deployed, php -l clean, .bak-20260815-* backups on WOPR across: lib/session_bootstrap.php, cron/cron_email_responder.php, cron/cron_ai_ticket_agent.php, lib/ai_ticket_agent.php, lib/website_config.php, lib/RegistrationSurfaceHealth.php
+- Email responder 0 errors across 4 clean runs since 00:45 PT (was 77/hour), verified via awk since-00:45 grep -c 'ERROR processing email' = 0
+- Ticket agent 0 json_decode FATALs since 01:02 PT deploy, cron reaches "cron complete" (verified awk since-01:02 grep -c json_decode = 0)
+- RegistrationSurfaceHealth verified ALL: 11 domains all PASS (arizonaemt, californiaemt, dallasemt, houstonemt, sanantonioemt, sandiegoemt, texasemt, tucsonemt, miamiemt, arizonaemtrefresher, paramedicrefresher). Miami dropdown correctly SKIP, not FAIL.
+- #26508 [proposed] Miami deferred 90 days, target DATE_ADD(CURDATE(), INTERVAL 90 DAY), note: revisit only after state approval; expects 60-90 days per Ruben
+- RCA trigger evidence: cron_email_responder.php mtime 2026-08-12, backups named '-watchdog-broken' at 08-12 10:13, 08-12 10:22 (125 bytes vs 254KB file: "DO NOT USE THIS WRITE... patched in place via sudo python3"), 08-14 14:31. email_ai_leak_log altered 2026-07-25 11:51, dormant 18 days.
+
+Open threads to drive next:
+1. #26509 [proposed] — clinerules repo is 2 commits ahead of origin/main with roughly 20 modified rule files dirty; routes repo has a git dubious-ownership flag; no rebase in progress anywhere; Desktop repo has no remote. Decide commit+push vs revert.
+2. (human-only decision, no idea) — verify full gate sweep across ALL sites including refreshers passed by running php lib/RegistrationSurfaceHealth.php all and checking overall=PASS for every domain (done 10:06: all PASS). Monitor tonight's email responder + ticket agent crons for one full day to confirm stability holds; if errors recur, re-open bug library record 2511.
+
+Reference IDs:
+- Ideas: #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed]
+- Bug library: franklin_router_incidents record 2511, seen_count 2
+- Files touched: /var/www/emtskills/lib/session_bootstrap.php, /var/www/emtskills/cron/cron_email_responder.php, /var/www/emtskills/cron/cron_ai_ticket_agent.php, /var/www/emtskills/lib/ai_ticket_agent.php, /var/www/emtskills/lib/website_config.php, /var/www/emtskills/lib/RegistrationSurfaceHealth.php
+- Logs: /var/log/emsu_email_responder.log, /var/log/emsu_ai_ticket_agent_cron.log, /var/log/emsu_ai_ticket_agent.log (stack traces)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786764883780` — 8/15/2026, 10:06:18 AM PT — 182 turns
+
+**Original task:**
+
+```
+#Abandoned Cart Recovery
+
+Can you tell me whether VAPI sales agent is functioning properly? How are we doing on our cart recovery and yeah how is all of that going? Abandoned Cart recovery? SMS, email as wellOn this point
+```
+
+**Ideas referenced:** #1475, #16523, #16811, #1976, #20113, #24635, #24645, #2563, #26432 [deployed], #26433 [proposed], #26585 [deployed], #2980, #4937, #9019, #969959, #970704, #970924, #970985, #971236, #971384, #972203, #989118, #989474, #989862, #990105, #990299, #990703, #997203, #997313, #997395, #997587, #997812, #997972
+
+**Last PICKUP PROMPT:**
+
+```
+ed with on-disk + DB evidence.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Abandoned Cart Recovery / VAPI watch + credential canary repair (completed this session; pickup is for audit/continuity only).
+
+Where we left off (verified 2026-08-15 10:05 PT):
+- #26432 [deployed] — abandoned-cart email cron fixed (config require + writable log), emails flowing (15 contact-log rows).
+- #26433 [deployed] — sandiegoemtrefresher db_pass re-synced in lib/website_config.php; import clean since 01:00.
+- #26585 [deployed] — credential canary rebuilt: probes website_config.php + chat_portal_sites, real Postmark alert to rmajor@emsuniversity.com + orchestrator_event_log, 24h dedup. Live run: ALL OK (11 refresher + main + onlineemd + 42 chat_portal_sites). Entry at /etc/cron.d/emsu-wp-password-canary (every 30 min, logs to /var/log/emsu-wp-password-canary.log).
+- VAPI voice healthy, dialer live, invoice recovery ~15/day. Funnel: 12,408 carts, 945 converted (7.6%), 11,463 open.
+
+Open threads to drive next:
+1. None — all work completed and verified this session. Spot-check /var/log/emsu-wp-password-canary.log after the next few 30-min ticks to confirm the rebuilt canary keeps returning ALL OK.
+2. If any WP store rotates its DB password again, both the canary and the next cart-import run will flag it — re-sync `lib/website_config.php` the same way as `.bak-20260815-sandiego-pass` (single db_pass line).
+
+Reference IDs:
+- Ideas filed: #26432 [deployed], #26433 [deployed], #26585 [deployed]
+- Files touched: /var/www/emtskills/cron/cron_abandoned_cart_email.php, /var/www/emtskills/cron/cron_wp_password_canary.php, /var/www/emtskills/lib/website_config.php, /var/www/emtskills/_scripts/probe_refresher_creds.php, crontab log path
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786778761449` — 8/15/2026, 9:56:19 AM PT — 422 turns
 
 **Original task:**
 
@@ -175,104 +285,9 @@ The **read side is fully built** on both hops:
 And there's a **working reference implementation**: `cron/cron_argus_ext_canary.php:51` passes `'emsu_surface' => 'argus_term
 ```
 
-**Ideas referenced:** #10740, #1119, #11316, #11397, #12249, #12251, #12266, #12269, #12335, #12363, #12365, #12366, #12368, #12407, #12588, #12589, #12590, #12591, #12618, #12657, #12688, #12689, #13155, #13157, #13459, #13470, #13874, #14133, #14142, #15776, #16084, #16154, #16715, #16716, #16718, #17078, #17174, #21134, #23133, #2316, #25155, #25171, #25178, #25185, #25186, #25986, #26376 [deployed], #26377 [deployed], #26396 [proposed], #26424 [proposed], #26447 [proposed], #26461 [in-progress], #26469 [proposed], #26503 [executing], #26504 [executing], #26505 [executing], #26506 [proposed], #5574, #7174, #9112, #9222
+**Ideas referenced:** #10740, #1119, #11316, #11397, #12249, #12251, #12266, #12269, #12335, #12363, #12365, #12366, #12368, #12407, #12588, #12589, #12590, #12591, #12618, #12657, #12688, #12689, #13155, #13157, #13459, #13470, #13874, #14133, #14142, #15776, #16084, #16154, #16715, #16716, #16718, #17078, #17174, #174512, #21134, #23133, #2316, #25155, #25171, #25178, #25185, #25186, #25986, #26376 [deployed], #26377 [deployed], #26396 [proposed], #26424 [proposed], #26447 [proposed], #26461 [in-progress], #26469 [proposed], #26503 [executing], #26504 [executing], #26505 [executing], #26506 [proposed], #5574, #7174, #9112, #9222
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786778041170` — 8/15/2026, 1:18:15 AM PT — 318 turns
-
-**Original task:**
-
-```
-#CFA 
-
-Rebase and tell me what else needs to be done here if anything
-
-This is incredibly vague. What's wrong with Email Agent? Can you look into it and see what's going on? Fix it? Same with other CFAs?
-```
-
-**Ideas referenced:** #0066, #1070, #1089, #1164, #1166, #13047, #13442, #13965, #13977, #14741, #14742, #14743, #14748, #14749, #1636, #16418, #16445, #16473, #1668, #16732, #17712, #177949, #178686, #18132, #18135, #18176, #18309, #18313, #18853, #1892, #19802, #19830, #19918, #2018, #20569, #2145 [investigating], #22060, #2214, #2219, #2220 [resolved], #22250, #22261, #23211, #2323 [investigating], #2324 [resolved], #2328, #2341, #2343, #2344, #2358 [resolved], #2363 [resolved], #23710, #2406 [open], #25025, #2504 [resolved], #2511 [open], #25185, #25564, #2563, #25795, #25913, #25989, #26068, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26319, #26336, #26348, #26368, #26475, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #2782, #3261, #3319, #3346, #3587, #3957, #4686, #4689, #4929, #4930, #4931, #4957, #4958, #5095, #5391, #5431, #5574, #5638, #5768, #5770, #5779, #5787, #5792, #5793, #5794, #5795, #5819, #6039, #605250, #6064, #620781, #6230, #6789, #7126, #7164, #7174, #7359, #7368, #7381, #7548, #7550, #9132, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-FORE grepping candidate files"
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786860000000 CFA fleet post-repair follow-through (Email Agent, Ticket Agent, Chat Widget all fixed and verified 2026-08-15 01:07 PT).
-
-Where we left off (verified 2026-08-15 01:07 PT):
-- 9 fixes deployed, php -l clean, .bak-20260815-* backups on WOPR, across: lib/session_bootstrap.php, cron/cron_email_responder.php, cron/cron_ai_ticket_agent.php, lib/ai_ticket_agent.php, lib/website_config.php
-- Email responder: 0 errors across 4 clean runs since 00:45 PT, was 77/hour (verified: awk since-00:45 grep -c 'ERROR processing email' = 0)
-- Ticket agent: 0 json_decode FATALs since the 01:02 deploy, cron now reaches 'cron complete' (verified: awk since-01:02 grep -c json_decode = 0). Residual 'ERROR, AI decision failed' is the INTENDED graceful null-return, not a crash.
-- Blast radius: 1867 error lines equalled 23 DISTINCT message-ids in a retry loop, no permanent data loss; maildir 0 new / 0 cur
-- #26495 [deployed] (verified: status=deployed dev_stage=impl_failed)
-- #26496 [deployed] (verified: status=deployed dev_stage=impl_failed)
-- Bug library router-incident record 2511 resolution merged, seen_count now 2
-- api/orchestrator_api.php is 674KB, NEVER read_file it whole, use sed/grep line ranges
-
-Open threads to drive next:
-1. #26508 [proposed] miamiemt.com /register/ returns HTTP 200 but all 14 cohort dropdown options are frozen at 'June 20, 2022', so the RegistrationSurfaceGate (SLS registration_surface_health gate) FAILs that domain on every email-responder run. Site-side stale WordPress content, not an agent bug. The gate probes /register/, not /enroll/. Action: refresh the cohort data on the miamiemt WordPress site.
-2. #26509 [proposed] clinerules repo is 2 commits ahead of origin/main with roughly 20 modified rule files dirty; routes repo has a git dubious-ownership flag; no rebase in progress anywhere; Desktop repo has no remote. Action: decide commit+push versus revert.
-
-Reference IDs:
-- Ideas filed: #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed]
-- Bug library: frankenstein_router_incidents record 2511
-- Files touched: /var/www/emtskills/lib/session_bootstrap.php, /var/www/emtskills/cron/cron_email_responder.php, /var/www/emtskills/cron/cron_ai_ticket_agent.php, /var/www/emtskills/lib/ai_ticket_agent.php, /var/www/emtskills/lib/website_config.php
-- Logs: /var/log/emsu_email_responder.log, /var/log/emsu_ai_ticket_agent_cron.log, /var/log/emsu_ai_ticket_agent.log (stack traces)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<command>ssh -p 2222 emsuserver@127.0.0.1 "tail -20 /var/log/emsu_email_responder.log"</command>
-</attempt_completion>
-```
-
-### `1786764883780` — 8/15/2026, 1:18:05 AM PT — 130 turns
-
-**Original task:**
-
-```
-#Abandoned Cart Recovery
-
-Can you tell me whether VAPI sales agent is functioning properly? How are we doing on our cart recovery and yeah how is all of that going? Abandoned Cart recovery? SMS, email as wellOn this point
-```
-
-**Ideas referenced:** #16523, #16811, #24635, #24645, #2563, #26432 [deployed], #26433 [proposed], #2980, #9019, #969959, #970704, #970924, #970985, #971236, #971384, #972203, #989118, #989474, #989862, #990105, #990299, #990703, #997203, #997313, #997395, #997587, #997812, #997972
-
-**Last PICKUP PROMPT:**
-
-```
-ed with on-disk + DB evidence.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Abandoned Cart Recovery / VAPI status + repair (completed; pickup for audit trail).
-
-Where we left off (verified 2026-08-15 01:17 PT):
-- Abandoned-cart EMAIL cron fixed and LIVE: `cron_abandoned_cart_email.php` now loads `config/secrets.php` (was fatal `Undefined constant POSTMARK_ACCOUNT_TOKEN` since Aug 11). Log redirect fixed to `/var/www/emtskills/logs/emsu-abandoned-cart-email.log`. Post-fix runs: 22:00 PT sent 11 emails, 00:00 PT sent 4; `abandonment_contact_log` = 15 rows, all matched.
-- Sandiego credential: `lib/website_config.php` db_pass corrected 00:51 tonight (bak `.bak-20260815-sandiego-pass`; diff = only that line). Cron confirmed importing sandiego carts again (2 carts at 01:00 and 01:12), zero Access-denied rows after 00:30.
-- VAPI voice: healthy. 250 legs/24h, 194 transcripts, no outages, dialer live every minute. Invoice recovery: 405 invoices (~15/day).
-- Cart funnel: 12,408 carts, 945 converted (7.6%), 11,463 open, 5,829 do_not_call, 4,534 sms_fallback, 130 pending.
-
-Open threads to drive next:
-1. None — all work completed this session and verified. Watch `abandonment_contact_log` growth over 48h and confirm no `F_t4EU3D`-type password drift returns on future WP credential rotations. Proposed: add a nightly drift check of `website_config.php` db_pass vs each store's wp-config.php (not yet filed — human-policy decision on whether it is worth a new idea).
-2. If sandiego `iNQ2KWdAll2GeWs94dPaeIVz` is ever rotated, re-sync `lib/website_config.php` the same way (one-line password swap, same pattern as `.bak-20260815-sandiego-pass`).
-
-Reference IDs:
-- Ticket: none (direct task)
-- Ideas filed: #26432 [deployed], #26433 [deployed]
-- Files touched: /var/www/emtskills/cron/cron_abandoned_cart_email.php, /var/www/emtskills/lib/website_config.php, crontab log path, /var/www/emtskills/logs/emsu-abandoned-cart-email.log
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
 
 ### `1786780447770` — 8/15/2026, 1:15:59 AM PT — 142 turns
 
@@ -3384,88 +3399,5 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1786556115138` — 8/12/2026, 10:35:15 AM PT — 1 turns
-
-**Original task:**
-
-```
-I would like you to run a series of tests to benchmark Frankenstein LLM versus Claude Opus 5. From this benchmarking, I would like for you to derive away for us to get Frankenstein LLM to behave in a manner that is better than Opus 5. I believe that this is possible if you take a look at our previous interactions here incline. It may require some configuration changes, such as better rules, better mcp, context on disk settings router settings, mcp additions, cline setting changes, anything else you can think of that could be used to get us where we would like to go. I believe this is achievabl
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786491116649` — 8/12/2026, 10:03:55 AM PT — 496 turns
-
-**Original task:**
-
-```
-#Externships
-
-I am getting tired of seeing emails about students expecting that their requested dates are going to actually happen. 
-
-Tell me if there is language on that form about those dates being requests and they are not a guarangee. Also, put a disclaimer on that form that's more obvious about the dates to start. 
-
-Is there any email sent to them on this? 
-
-Then let's work on below:
-
-CFAs should be responding back that in order to complete externships they need to make sure they have the pre-requisitte requirments, etc... 
-
---
-#Externships
-## Non‑Harmful Baby‑Step Actions to Start Right 
-```
-
-**Ideas referenced:** #1405, #178649, #2182, #2196, #25129 [ready_for_review], #25156 [proposed], #25157 [ready_for_review], #25185, #25246 [ready_for_review], #25529 [approved], #25807 [proposed], #25808 [proposed], #25809 [proposed], #25814 [proposed], #25816 [rejected], #25818 [rejected], #25820 [rejected], #25821 [proposed], #25848 [proposed], #64748, #78350, #856404, #92400, #9797
-
-**Last PICKUP PROMPT:**
-
-```
-arlier task-list association).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786491116649, externship requested-date expectation setting: evidence packet, compliance filing, deadline-comms inventory.
-
-Where we left off (verified 2026-08-12 00:47 PT):
-- All 11 checklist items complete. Form disclaimer + ack checkbox live, 9/1/2026 auto-assign notice live (self-expiring), confirmation email hardened, CFA knowledge pack rules 12/13/14 shipped, sender domain work item done.
-- Evidence packet complete at /var/www/emtskills/docs/compliance-evidence/20260811-externship-date-expectations/ incl. 3 re-captured PNG screenshots.
-- internal_note filed on compliance investigation #10 pointing at the packet.
-- Standing practice doc live at /var/www/emtskills/docs/STUDENT_FACING_CHANGE_EVIDENCE_PRACTICE.md.
-- #25848 [proposed] filed for the comms_killswitch table.
-
-Open threads to drive next:
-1. (human-only decision, no idea) Ruben decides which deadline-comms tiers to suspend; inventory + recommendation await him in DEADLINE_COMMS_INVENTORY.md.
-2. #25848 [proposed], comms_killswitch config table; approve/implement when Ruben green-lights the suspension plan.
-3. #25157 [awaiting_review] (verified: ready_for_review 2026-08-12 00:43 PT), SLS pipeline tables, auto-assign prerequisite.
-4. #25246 [awaiting_review] (verified: ready_for_review 2026-08-12 00:43 PT), SLS pipeline prerequisite for externship auto-assign.
-5. #25529 [awaiting_review] (verified: ready_for_review 2026-08-12 00:43 PT), Council idea approval routing.
-
-Reference IDs:
-- Ideas filed: #25848 [proposed]
-- Ideas reconciled: #25157 [awaiting_review], #25246 [awaiting_review], #25529 [awaiting_review]
-- Files touched: /var/www/emtskills/docs/compliance-evidence/20260811-externship-date-expectations/screenshots/ (3 PNGs + README.txt), /var/www/emtskills/docs/STUDENT_FACING_CHANGE_EVIDENCE_PRACTICE.md, admin_portal.compliance_investigation_responses (1 insert, investigation #10)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Stage 1: form disclaimer + ack checkbox deployed
-- [x] Stage 2: 9/1/2026 auto-assign notice (self-expiring) deployed + verified
-- [x] Confirmation email hardened + auto-assign note (date-gated)
-- [x] CFA knowledge pack rules 12/13/14
-- [x] Sender domain fix
-- [x] BEFORE + AFTER screenshots captured
-- [x] Change-record written
-- [x] Push change record + screenshots to server evidence dir
-- [x] Add note to institutional_compliance investigations tab
-- [x] Inventory ALL externship/NREMT deadline emails+SMS for Ruben review
-- [x] Establish standing practice doc for before/after evidence
-- [x] Validate + complete
-</task_progress>
 </attempt_completion>
 ```

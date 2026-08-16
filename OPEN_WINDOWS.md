@@ -6,14 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/15/2026, 8:45:08 PM PT | window: last 72h | 82 tasks | index total 752 (parsed 4, cached 748)
+Generated: 8/15/2026, 9:45:08 PM PT | window: last 72h | 82 tasks | index total 752 (parsed 2, cached 750)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786844918374` | 8/15/2026, 8:45:04 PM | 793 | 10850KB | Babysit Frankenstein Exeucotr for 90 minutes and resolve any issues that might come up. Do |
-| `1786842592907` | 8/15/2026, 8:44:52 PM | 513 | 2974KB | #Rule 317 |
-| `1786848590052` | 8/15/2026, 8:44:43 PM | 143 | 1999KB | Was this person's account wrongfully suspended? Can you check exam enforcement, etc... SLS |
-| `1786844173723` | 8/15/2026, 8:44:43 PM | 69 | 461KB | #Oct Ring / Hypothetical  |
+| `1786844173723` | 8/15/2026, 9:45:07 PM | 169 | 875KB | #Oct Ring / Hypothetical  |
+| `1786848590052` | 8/15/2026, 9:43:39 PM | 252 | 2407KB | Was this person's account wrongfully suspended? Can you check exam enforcement, etc... SLS |
+| `1786844918374` | 8/15/2026, 9:13:04 PM | 946 | 13140KB | Babysit Frankenstein Exeucotr for 90 minutes and resolve any issues that might come up. Do |
+| `1786842592907` | 8/15/2026, 8:46:01 PM | 516 | 2989KB | #Rule 317 |
 | `1786845607312` | 8/15/2026, 7:45:40 PM | 100 | 589KB | #GLM 5.3 Update |
 | `1786836908956` | 8/15/2026, 4:48:21 PM | 72 | 1004KB | Is this legitimate? If so, the message should be a little more sympathetic and less techni |
 | `1786835771600` | 8/15/2026, 4:31:46 PM | 96 | 1327KB | #BLS  |
@@ -97,153 +97,7 @@ Generated: 8/15/2026, 8:45:08 PM PT | window: last 72h | 82 tasks | index total 
 
 ## Per-window detail
 
-### `1786844918374` — 8/15/2026, 8:45:04 PM PT — 793 turns
-
-**Original task:**
-
-```
-Babysit Frankenstein Exeucotr for 90 minutes and resolve any issues that might come up. Do rule 317s on them and make Frankenstein LLM smarter.
-```
-
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #1189 [resolved], #12299, #1241, #12425, #12459, #12477, #1248, #1249, #1252, #1258, #12618, #127891, #1281, #12824, #12872, #12878, #1314, #13202, #14752, #15144, #1579, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16449, #16452, #16588, #166534, #1670 [resolved], #16778, #16802, #16803, #16839, #16844, #16851, #16852, #16868, #16922, #17246, #1744, #1779, #17798, #17854, #178684, #1798, #18135, #1828, #18312, #18326, #18357, #18442, #1850, #19490, #19567, #19747, #19750, #19967, #20042, #2055 [resolved], #2063, #2065, #20662, #2073, #20903, #20946, #20985, #21038, #2113, #2127, #2168, #22060, #22069, #22444, #22447, #22529, #2289, #2299, #23015, #23171, #23281, #23283, #23337, #23392, #23429, #2353 [resolved], #24430, #24431, #24526, #25042, #25082, #25097, #25125, #2517 [deployed], #2518, #25185, #2519, #2520, #25378, #25381, #25510, #25511, #25516, #25586, #25587, #25645, #25875, #25887, #25937, #25943, #25971, #26207, #26214, #26229, #26284, #26325, #26326, #26342, #26363, #26385, #26461, #26490, #26625, #26626, #26639, #26642, #26663, #26678, #26703, #26705, #26716 [executing], #26717 [proposed], #26718 [deployed], #26719 [proposed], #26720 [executing], #26721 [executing], #26722 [executing], #26723 [proposed], #26724 [executing], #26725 [proposed], #26726 [executing], #26730 [proposed], #26731 [proposed], #3957, #4536, #475569, #4906, #5034, #53462, #53483, #54119, #55522, #55961, #56044, #56298, #56568, #56754, #57287, #57824, #6106, #639503, #640503, #640750, #640977, #640979, #640981, #640982, #640995, #641019, #641020, #641022, #7142, #7149, #7561, #7925, #8157, #8162, #8281, #8318, #8321, #8563, #8598, #8764, #9086, #9168, #92400, #9306, #9339
-
-**Last PICKUP PROMPT:**
-
-```
-decision as #26731 [proposed].
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786848590052 — executor babysit wrap 2026-08-15.
-
-Where we left off (verified 20:20 PT):
-- Executor rework-loop patch, doctor extension, EMAIL_SILENCE_GUARD suppression, and triage LLM path all live-verified earlier this session (corrections 8157-8168; bug-library rows 2517-2520).
-- Escalation cron serves only live tickets now; next automated runs 20:30/21:00 drain the remaining 330.
-- 12 real AI triage decisions vs 4 defaults since 19:40 (verified: orchestrator decision log read earlier this session).
-- L4b cicero-235b remains the known degraded tier (bug-library rows 86, 2055); spill path healthy per 20:15 probe.
-
-Open threads to drive next:
-1. #26731 [proposed] — Ruben decision pending: approve = implement 317-lite spec gate + post-deploy verify in the executor build pipeline.
-2. #26722 [executing] — dev_stage blanker still unfixed; ideas re-blanking within 40 min of doctor repair.
-3. #26716 [executing] — recovery sweep follow-through.
-4. #26717 [proposed], #26719 [proposed], #26723 [proposed] — Argus background task 360 offload triplicates; dedupe.
-5. #26725 [proposed] — schedule the 15-claim r317 truth eval cron.
-6. #26726 [executing] — get_event_detail MCP column repair in flight.
-7. #26720 [executing], #26721 [executing], #26724 [executing] — GPU disk guard, canary quarantine speed, deploy-gate false-block: executor drafting.
-8. Cicero-235b permanent repair = 3bit DWQ quant pull per bug-library row 86 (human-only decision — no idea).
-
-Reference IDs:
-- Ideas filed this session: #26716 [executing], #26717 [proposed], #26718 [deployed], #26719 [proposed], #26720 [executing], #26721 [executing], #26722 [executing], #26723 [proposed], #26724 [executing], #26725 [proposed], #26726 [executing], #26730 [deployed], #26731 [proposed] (all tags verified: reconcile_ideas 20:15-20:20 PT)
-- Corrections ingested: 8157-8168
-- Bug-library rows: 2517-2520 recorded; 86, 2055 cited for cicero
-- Files touched: /var/www/emtskills/lib/ticket_auto_escalation.php (+ auto backup), cron_executor chain (Fix A), executor doctor + crontab, triage LLM path (Fixes G-I)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Baseline: executor/orchestrator status, fleet health, active idea queue
-- [x] Fix A: executor rework loop killed (park at retry cap) — PATCH_A_OK + 18 retro-parked + live-verified on #26490
-- [x] Fix B: doctor extended + crontab repaired — A=13 B=50 repaired
-- [x] Fix C: EMAIL_SILENCE_GUARD suppression — PATCH_C_OK, 9 dup decisions rejected
-- [x] Fix D+E+F: ticket auto-escalation 4-layer repair + 20:00 wrong-population catch — status filter + 13,950-row backfill + 200 live tickets escalated 20:11 (#26730 [deployed])
-- [x] Fix G+H+I: triage LLM path (timeout 45→240s, max_tokens 768, WOPR-local origin) — real AI decisions since 19:40 (12 real / 4 defaults)
-- [x] Julia-120b restored + bigmac/claudia inventory corrected; canary 4/4 decode-live (verified 20:15)
-- [x] Sam Nelson ticket 25042 verified; Adarsh event 6409825 filed
-- [x] Ideas #26716-26726 + #26730 + #26731 filed; corrections 8157-8168 ingested; bug library 2517-2520
-- [x] Rule 317 reversal RCA + ingest (8163, 8162, 8168 G7 wrong-population) — done
-- [x] Probe event 6410136 explained: empty severity below triage threshold; path proven by 12 live real decisions
-- [x] Final fleet/triage 
-```
-
-### `1786842592907` — 8/15/2026, 8:44:52 PM PT — 513 turns
-
-**Original task:**
-
-```
-#Rule 317
-
-How has rule 317 been doing since we lost checked? I think it's been about 12 to 16 hours.. Rule 317 with specifically created to make Frankenstein LLM better. The idea is that it forces truth and reversals in cases where things are untrue. So this is why I'm saying I just wanna make sure that this is being done properly incorrectly and I wanna know if there is anything else that we can do to make it even better so that we can improve Frankenstein LLM?
-```
-
-**Ideas referenced:** #0000, #081020, #10108, #10740, #11741, #11781, #12345, #12346, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16224, #16265, #16304, #16844, #17130 [superseded], #17133, #17201, #17202, #17204, #17205, #17232, #17235, #17243, #17244, #17246, #17248, #17249, #17250, #17251, #17257, #17258, #178424, #178634, #178640, #178656, #178671, #1802, #1803, #1806, #1811, #18132 [deployed], #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18312, #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #1839, #19125, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #20251, #2299, #23171, #25097, #25151, #2516 [resolved], #25185, #2521 [resolved], #25796, #25797, #25798, #25888 [deployed], #25925, #25926, #25935, #26349, #26435 [deployed], #26591, #26593, #26696 [proposed], #26697 [proposed], #26699, #26700, #26710 [proposed], #26725 [proposed], #26800, #5239, #5344, #9715, #9791
-
-**Last PICKUP PROMPT:**
-
-```
-n actually track against Opus.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task rule-317-truth-engine, finishing #26725 end to end.
-
-Where we left off (verified 2026-08-15 19:53 PT):
-- #26710 [deployed] and #26696 [deployed] are shipped and live-verified (forward exemplars, best-of-N selector, eval harness, gate scoreboard, doorman R317 gate).
-- #26725 [proposed] is partially built on WOPR at /var/www/emtskills/bin/r317_eval_harness.php: r317_run_eval() and the PHP_SAPI guard exist, ask() parser is fixed for chat-completions. php -l clean.
-- The cleanup/cron finishing steps kept hitting rule-165 "Invalid JSON argument" client-side parse rejections on ssh_command, so the remaining work is untouched.
-
-Open threads to drive next:
-1. #26725 [proposed] — clean the duplicate CLI loop (swap it for one call to r317_run_eval()), then add r317_eval_history table + --history-append persistence, create LaunchAgent com.emsu.r317-truth-eval (04:30 PT), and run the first live nightly baseline against http://127.0.0.1:11510/v1/chat/completions.
-2. After the first baseline writes a real frankenstein-llm truth score, run the same claims against Opus and record both scores so the gap is measured, not asserted.
-
-Reference IDs:
-- Ideas filed: #26696 [deployed], #26710 [deployed], #26725 [proposed]
-- Incidents: #2516 [resolved], #2521 [resolved]
-- Files touched: /var/www/emtskills/bin/r317_eval_harness.php, /var/www/emtskills/lib/r317_best_of_n_selector.php, /var/www/emtskills/lib/ai_cache_pad.php, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786848590052` — 8/15/2026, 8:44:43 PM PT — 143 turns
-
-**Original task:**
-
-```
-Was this person's account wrongfully suspended? Can you check exam enforcement, etc... SLS and see what's going on? I think we had one like this earlier from a Fernando, but not sure if it's the same thing. We were supposed to have resolved that one systematically, but again, not sure. Could be a legitimate suspension, maybe not. CFA will need updating if not and likely a message back to the student. Give also a link to their admin_profile.php page
-```
-
-**Ideas referenced:** #15637, #18626, #18693, #18713, #19814, #2072, #23304, #2371, #24977, #25455, #25456, #25534, #26727 [proposed], #26728 [proposed], #26738 [proposed], #4929, #7265, #7753, #7990, #9086, #9168, #9306, #9339
-
-**Last PICKUP PROMPT:**
-
-```
-systemic chat-handoff bug fix)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up Zane Turner reinstatement — July 19 final attempts were lost to an EMSU proctoring failure (provable), recommend re-proctor/reinstate not dismissal; CFAs implicated.
-
-Where we left off (verified 2026-08-15 8:30 PM PT):
-- Zane Turner 26815W-37 / uid 52285 / CA c41 / Union City Accelerated: failed 2026-08-03, suspended, payment settled $2,145, no integrity violations. Final = 3 synthetic 0.0 attempts (epoch 1784530799, Jul 19 23:59:59) from didactic_deadline_enforcement; all enforcement rows email_sent=0 (never notified).
-- SMOKING GUN: TKT-20260719-F55B9200 (chat #7990 full transcript). Zane showed up Jul 19 09:15 PT for his online final; Zoom email NEVER sent (0 outbound, 0 bounces), no PROCTOR_REQUEST ever logged, no host/proctor ever joined for an hour, proctoring book_session = "no sessions available". RUBEN investigation on that ticket confirmed root cause = handoff automation failed to escalate + send Zoom email. Auto-fail stamped same evening.
-- 08-04 review (TKT-20260803-D9A48421) recommended dismissal WITHOUT the above transcript. Verdict revised: first attempt loss is EMSU fault; dismissal is partly wrongful.
-- Today's requests: TKT-20260815-8A29595A (reinstatement; skills final scheduled 2026-08-16 Union City, threatens tuition recovery), TKT-20260815-FAE2343D (holding email, RC-11 tracked).
-- Admin link: https://emsuniversity.com/emtskills/admin_profile.php?id=26815W-37
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26738 [proposed] — Drive Jon's exec reinstatement decision to RE-PROCTOR/REINSTATE the final (excuse Jul 19 attempt #1 for proctoring failure). Get a working Zoom + proctor scheduled for the skills final tomorrow and send the invitation (email_sent audit). Respond to TKT-20260815-8A29595A.
-2. #26727 [proposed] — Update/close the prior "uphold dismissal, no transfer" recommendation: superseded by #26738's proctoring-failure evidence. Reconcile into the reinstatement decision.
-3. #26728 [proposed] — Sweep section 26815W + adjacent for students auto-failed by didactic_deadline synthetic-0 attempts (timestart=timefinish) who actually showed for a proctored session that EMSU failed to host.
-4. Systemic (file if not already): fix the chat-handoff proctor escalation bug — bot repeated broken Zoom link + "no passcode" 8x, falsely promised proctor 3x, logged no PROCTOR_REQUEST, never sent Zoom email. Rule-161 flagged 15 open + 111 resolved similar.
-
-Reference IDs:
-- Tickets: TKT-20260719-F55B9200, TKT-20260815-8A29595A, TKT-20260815-FAE2343D, TKT-20260803-D9A48421, TKT-20260601-519E45CC, TKT-20260603-26E6BD0F
-- Ideas filed: #26727, #26728, #26738
-- Files touched: none (read-only investigation); evidence in moodle_c_live quiz_attempts/grade_grades_history and /var/www/emtskills/lib/rc10_shared.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786844173723` — 8/15/2026, 8:44:43 PM PT — 69 turns
+### `1786844173723` — 8/15/2026, 9:45:07 PM PT — 169 turns
 
 **Original task:**
 
@@ -261,15 +115,159 @@ Read and reference below as well as the NVIDIA forums, forumns, reddit, our bug 
 Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> 
 ```
 
-**Ideas referenced:** #1130, #1131, #11945, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17130 [superseded], #17246, #1744, #1754, #1755, #1779, #1798, #18132 [deployed], #1828, #19125, #19173, #19567, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2116, #2127, #2168, #2294, #2307, #2314, #23169, #24217, #25378, #25381, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25888, #26209, #26284 [executing], #26400, #26403, #26435, #26591, #26593, #26706 [proposed], #26707 [proposed], #26709 [proposed], #50424, #6826, #7142, #7149
+**Ideas referenced:** #1130, #1131, #11945, #1241, #12425, #1248, #1249, #1252, #1258, #13108, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16338, #16448, #16452, #16674, #16676, #16778, #16802, #16803, #16839, #16844, #16851, #17130 [superseded], #17246, #1744, #1754, #1755, #1765, #1771, #1772, #1773, #1779, #1781, #1793, #1798, #18132 [deployed], #1828, #1838, #1868, #19125, #19173, #19567, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2114, #2116, #2127, #2168, #2294, #2307, #2314, #23169, #24186, #24217, #25112, #25378, #25381, #25604, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25888, #26209, #26284 [executing], #26400, #26403, #26435, #26591, #26593, #26706 [proposed], #26707 [proposed], #26709 [proposed], #26741 [proposed], #50424, #6826, #7142, #7149, #8170, #8171
 
 **Last PICKUP PROMPT:**
 
 ```
-router (context, VEMC, SSS/LoRA-v2, fallback order, lanes)
+ning" (config wiring, not model training) + whether needed
 - [ ] Final report + PICKUP PROMPT
 </task_progress>
-</execute_command>
+</use_mcp_tool>
+```
+
+### `1786848590052` — 8/15/2026, 9:43:39 PM PT — 252 turns
+
+**Original task:**
+
+```
+Was this person's account wrongfully suspended? Can you check exam enforcement, etc... SLS and see what's going on? I think we had one like this earlier from a Fernando, but not sure if it's the same thing. We were supposed to have resolved that one systematically, but again, not sure. Could be a legitimate suspension, maybe not. CFA will need updating if not and likely a message back to the student. Give also a link to their admin_profile.php page
+```
+
+**Ideas referenced:** #15637, #1661, #18626, #18693, #18713, #19814, #2072, #23304, #2371, #24977, #25455, #25456, #25534, #26727 [proposed], #26728 [proposed], #26738 [proposed], #26748 [proposed], #26750 [proposed], #4929, #7265, #7753, #7990, #9086, #9168, #9306, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+ 364433, Postmark id present).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up the didactic auto-fail cohort validation — 160 students auto-failed since Jul 1 with zero notification; classify before ANY mass override. Zane Turner already individually reinstated.
+
+Where we left off (verified 2026-08-15 9:43 PM PT):
+- Zane Turner 26815W-37 / uid 52285: DONE. SLS active, Moodle unsuspended, c41 re-enrolled, fail_date cleared, group 2620 added, override #1661 force_approved, exam enforcement clean, good-news email delivered (email_outbound_log 364433).
+- COHORT MEASURED: local_exam_policy_track since 2026-07-01 = 165 fail_final_exam rows / 160 distinct students, email_sent=0 on ALL. Plus 242 deadline_miss rows / 138 students, also all email_sent=0. 158 students carry 479 synthetic 0.0 attempts (sumgrades=0 AND timestart=timefinish); 157 have 3+ (full attempt exhaustion).
+- 2,925 tickets "Chat handoff went unanswered" created Jul 1 - Aug 5 (the class that cost Zane his 7/19 final).
+- WHY INVISIBLE: auto-fail sends no email; zero chat-55 proactive alerts (only Vicky's individual questions); load spread across CS Auto-Agent 1204 + 13 humans (Adi 192, Francis 185, Julius Fernando 169, Sheila 164, Nefemito 163, Nicole 159, Samantha 158, Seph 146, Marianne 121, Jehan 107, Rachel 101, Apple 70, Vicky 27, Jon 16).
+- Ruben directive: MORE VALIDATION REQUIRED before mass override.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26748 [proposed] — P0: build the per-student classifier over all 160 (EMSU-fault = showed for proctored session / chat / booking attempt vs genuinely-failed = went silent). Produce a reviewed list for Jon before any bulk reinstatement. Also fix email_sent=0 so future auto-fails notify the student.
+2. #26750 [proposed] — P1: chat-55 daily rollup alert (fail_final_exam fires, handoff-unanswered count, synthetic-attempt count) + immediate alert when a student waits >10 min in a proctor Zoom with no host.
+3. #26738 [proposed] — root-cause and fix the chat-handoff proctor escalation bug (Zoom email never sent, no PROCTOR_REQUEST logged, human handoff dies silently).
+4. #26728 [proposed] — 26815W + adjacent section sweep (subset of #26748's population; fold in or close as superseded).
+
+Reference IDs:
+- Tickets: TKT-20260815-8A29595A (#25455), TKT-20260719-F55B9200 (#18626), TKT-20260803-D9A48421 (#23304)
+- Ideas filed: #26748 [proposed], #26750 [proposed], #26738 [proposed], #26728 [proposed], #26727 [superseded]
+- Files touched: none local; DB: moodle_c_live (quiz_attempts, local_exam_policy_track, groups_members, backup table quiz_attempts_zane_backup_20260815), admin_portal (Students, exam_override_requests #1661, orchestrator_ideas, agent_drafts 24098)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</parameter>
+</invoke>
+</function_calls>
+```
+
+### `1786844918374` — 8/15/2026, 9:13:04 PM PT — 946 turns
+
+**Original task:**
+
+```
+Babysit Frankenstein Exeucotr for 90 minutes and resolve any issues that might come up. Do rule 317s on them and make Frankenstein LLM smarter.
+```
+
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #1189 [resolved], #12299, #1241, #12425, #12459, #12477, #1248, #1249, #1252, #1258, #12618, #127891, #1281, #12824, #12872, #12878, #1314, #13202, #14752, #15144, #1579, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16449, #16452, #16588, #166534, #1670 [resolved], #16778, #16802, #16803, #16839, #16844, #16851, #16852, #16868, #16922, #17246, #1744, #1779, #17798, #17854, #178684, #1798, #18135, #1828, #18312, #18326, #18357, #18442, #1850, #19490, #19567, #19747, #19750, #19967, #20042, #2055 [resolved], #2063, #2065, #20662, #2073, #20903, #20946, #20985, #21038, #2113, #2127, #2168, #22060, #22069, #22444, #22447, #22529, #2289, #2299, #23015, #23171, #23281, #23283, #23337, #23392, #23429, #2353 [resolved], #23941, #23982 [proposed], #24430, #24431, #24526, #24941, #25042, #25082, #25097, #25125, #2517 [deployed], #2518, #25185, #2519, #2520, #2522 [resolved], #25378, #25381, #25510, #25511, #25516, #25586, #25587, #25645, #25875, #25887, #25912 [proposed], #25937, #25943, #25971, #25986, #26207, #26214, #26229, #26284, #26325, #26326, #26342, #26363, #26385, #26461, #26490, #26625, #26626, #26639, #26642, #26663, #26667 [deployed], #26678, #26684 [rejected], #26703, #26705, #26709 [rejected], #26711 [executing], #26716 [executing], #26717 [proposed], #26718 [deployed], #26719 [proposed], #26720 [executing], #26721 [executing], #26722 [executing], #26723 [proposed], #26724 [executing], #26725 [proposed], #26726 [executing], #26730 [proposed], #26731 [proposed], #26742 [rejected], #26743 [deployed], #3957, #4536, #475569, #4906, #5034, #53462, #53483, #54119, #55522, #55961, #56044, #56298, #56568, #56754, #57287, #57824, #6106, #639503, #640503, #640750, #640977, #640979, #640981, #640982, #640995, #641019, #641020, #641022, #7142, #7149, #7561, #7925, #8157, #8162, #8281, #8318, #8321, #8563, #8598, #8764, #9086, #9168, #92400, #9306, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+ng the RCA. True and finished.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786844918374 - executor babysit wrap (2026-08-15).
+
+Where we left off (verified 2026-08-15 21:12 PT):
+- #26743 [deployed] - Argus offload dedupe + needs_confirmation not-doable guard in routes/cron_argus_task_worker.php (verified: php -l 20:52 PT; zero new filings count 20:55 PT)
+- #26719 [executing] - surviving canonical idea for Argus task 360 (status in_progress): Payment Attribution Queue dismiss-reason feature; build pending with executor. The 94 duplicate idea rows for that task were rejected during dedupe 20:53 PT
+- 11 older duplicate idea rows rejected across Argus tasks 210/211/212/214/331/440/443, one open row kept each (verified: zero open dupe groups 20:56 PT)
+- #26742 [rejected] - pre-patch offload target for task 360, rejected in dedupe; queue row 360 repointed to #26719 [executing]
+- #26730 [deployed] - ticket auto-escalation wrong-population repair (verified: 200 live tickets escalated 20:11 PT)
+- #26731 [proposed] - 317-lite gate in executor build stage, awaiting Ruben
+- Bug row 2522 [resolved]; correction 8169 ingested; HANDOFF_NOTES updated 20:59 PT; chat-55 wrap queued 21:03 PT
+
+Open threads to drive next:
+1. #26731 [proposed] - Ruben decision pending: approve = implement 317-lite spec gate + post-deploy verify in executor build pipeline
+2. #26719 [executing] - Payment Attribution Queue dismiss-reason feature; build belongs to executor
+3. #26720 [executing], #26721 [executing], #26724 [executing] - GPU disk guard, canary quarantine speed, deploy-gate false-block: executor drafting (carried from this task's earlier wrap; echo-confirmed titles)
+4. (human-only decision - no idea) - Argus task 360 needs Vicky to reword the request without sensitive/mutating verbs, or a human confirms it in Argus
+5. #26743 [deployed] - post-patch watch item: the ~21:05 PT cron_argus_task_worker run should file zero new 'Argus background task' rows; verify with SELECT COUNT(*) FROM orchestrator_ideas WHERE title LIKE 'Argus background task%' AND created_at > '2026-08-15 20:52:00'
+
+Reference IDs:
+- Ideas filed this task: #26743 [deployed], #26720 [executing], #26721 [executing], #26724 [executing], #26730 [deployed], #26731 [proposed]
+- Ideas deduped/closed: 105 rejected total (94 Argus-task-360 group + 11 older groups); #26717 [rejected] and #26684 [rejected] are example rows from that set (identity-echo confirmed)
+- Corrections ingested: 8169 (+ 8157-8168 earlier)
+- Bug library: 2522 (+ 2517-2520 earlier)
+- Files touched: /var/www/emtskills/routes/cron_argus_task_worker.php (backup .bak-offload-dedupe-*), /var/www/emtskills/lib/ticket_auto_escalation.php (+ auto backup), executor rework/doctor/crontab + triage LLM path files (earlier window), HANDOFF_NOTES.md
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Baseline: executor/orchestrator status, fleet health, active idea queue
+- [x] Fix A: executor rework loop killed (park at retry cap) — PATCH_A_OK + 18 retro-parked + live-verified on 26490
+- [x] Fix B: doctor extended + crontab repaired — A=13 B=50 repaired
+- [x] Fix C: EMAIL_SILENCE_GUARD suppression — PATCH_C_OK, 9 dup decisions rejected
+- [x] Fix D+E+F: ticket auto-escalation 4-layer repair + wrong-population catch — status filter + 13,950-row backfill + 200 live tickets escalated 20:11 (#26730 [deployed])
+- [x] Fix G+H+I: tri
+```
+
+### `1786842592907` — 8/15/2026, 8:46:01 PM PT — 516 turns
+
+**Original task:**
+
+```
+#Rule 317
+
+How has rule 317 been doing since we lost checked? I think it's been about 12 to 16 hours.. Rule 317 with specifically created to make Frankenstein LLM better. The idea is that it forces truth and reversals in cases where things are untrue. So this is why I'm saying I just wanna make sure that this is being done properly incorrectly and I wanna know if there is anything else that we can do to make it even better so that we can improve Frankenstein LLM?
+```
+
+**Ideas referenced:** #0000, #081020, #10108, #10740, #11741, #11781, #12345, #12346, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16224, #16265, #16304, #16844, #17130 [superseded], #17133, #17201, #17202, #17204, #17205, #17232, #17235, #17243, #17244, #17246, #17248, #17249, #17250, #17251, #17257, #17258, #178424, #178634, #178640, #178656, #178671, #178684, #1802, #1803, #1806, #1811, #18132 [deployed], #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18312, #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #1839, #19125, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #20251, #2299, #23171, #25097, #25151, #2516 [resolved], #25185, #2521 [resolved], #25796, #25797, #25798, #25888 [deployed], #25925, #25926, #25935, #26349, #26435 [deployed], #26591, #26593, #26696 [proposed], #26697 [proposed], #26699, #26700, #26710 [proposed], #26725 [proposed], #26800, #5239, #5344, #9715, #9791
+
+**Last PICKUP PROMPT:**
+
+```
+ainst Opus on the same claims.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1786842592907 — finish r317 truth engine, verify first nightly run.
+
+Where we left off (verified 2026-08-15 20:44 PT):
+- #26710 [deployed] truth-is-smart engine: forward exemplars (ai_cache_pad.php), best-of-N selector (lib/r317_best_of_n_selector.php), eval harness (bin/r317_eval_harness.php).
+- #26725 [deployed] nightly cron + history table + harness main guard + persistence.
+- WOPR cron lines 21-22: CRON_TZ=America/Los_Angeles, 30 4 * * * runs php bin/r317_eval_harness.php --model=frankenstein-llm.
+- r317_eval_history row id=1 was a mock smoke (truth_score_pct 0.00).
+
+Open threads to drive next:
+1. #26725 [deployed] — check WOPR /tmp/r317_eval_nightly.log after 04:30 PT and confirm a real frankenstein-llm row lands in r317_eval_history with a nonzero pass/fail split; then run the same 15 claims with --model=opus and record the comparison row so we have a measurable truth benchmark.
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: #26696 [deployed], #26710 [deployed], #26725 [deployed]
+- Files touched: /var/www/emtskills/bin/r317_eval_harness.php, /var/www/emtskills/lib/ai_cache_pad.php, /var/www/emtskills/lib/r317_best_of_n_selector.php, /var/www/emtskills/lib/doorman_output_quality_gate.php, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts
+- Incident: frankenstein_router_incidents #2516, #2521
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
 ### `1786845607312` — 8/15/2026, 7:45:40 PM PT — 100 turns

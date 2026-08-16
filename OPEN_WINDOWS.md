@@ -6,12 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/15/2026, 11:45:09 PM PT | window: last 72h | 80 tasks | index total 752 (parsed 2, cached 750)
+Generated: 8/16/2026, 12:45:09 AM PT | window: last 72h | 77 tasks | index total 754 (parsed 3, cached 751)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786844173723` | 8/15/2026, 11:44:41 PM | 463 | 1749KB | #Oct Ring / Hypothetical  |
-| `1786848590052` | 8/15/2026, 11:35:20 PM | 291 | 2473KB | Was this person's account wrongfully suspended? Can you check exam enforcement, etc... SLS |
+| `1786864599073` | 8/16/2026, 12:45:07 AM | 101 | 463KB | #Julia/Claudia 235 |
+| `1786848590052` | 8/16/2026, 12:36:24 AM | 319 | 2560KB | Was this person's account wrongfully suspended? Can you check exam enforcement, etc... SLS |
+| `1786863102700` | 8/16/2026, 12:25:15 AM | 190 | 808KB | I am trying to steer with frankenstein-llm and it's disregarding my steer. Is there a prob |
+| `1786844173723` | 8/16/2026, 12:11:05 AM | 554 | 2158KB | #Oct Ring / Hypothetical  |
 | `1786844918374` | 8/15/2026, 9:13:04 PM | 946 | 13140KB | Babysit Frankenstein Exeucotr for 90 minutes and resolve any issues that might come up. Do |
 | `1786842592907` | 8/15/2026, 8:46:01 PM | 516 | 2989KB | #Rule 317 |
 | `1786845607312` | 8/15/2026, 7:45:40 PM | 100 | 589KB | #GLM 5.3 Update |
@@ -85,17 +87,121 @@ Generated: 8/15/2026, 11:45:09 PM PT | window: last 72h | 80 tasks | index total
 | `1786602908972` | 8/13/2026, 1:22:41 PM | 342 | 4032KB | #TDSHS/AZDHS 8/13 - Compliance |
 | `1786607400519` | 8/13/2026, 7:27:01 AM | 200 | 1606KB | Hi Declined???? REALLY, is Email Agent really that ???? |
 | `1786581608927` | 8/13/2026, 4:29:51 AM | 428 | 1528KB | #CFA Learning |
-| `1786602203659` | 8/13/2026, 12:41:31 AM | 142 | 708KB | There appear to be some minor issues going on with Frankenstein LLM. It seems like I'm get |
-| `1786585764315` | 8/13/2026, 12:40:33 AM | 787 | 1879KB | A lot of the links on these pages and tabs appear to be nonfunctioning: https://emsunivers |
-| `1786591402307` | 8/13/2026, 12:36:48 AM | 191 | 569KB | #Externship |
-| `1786605000052` | 8/13/2026, 12:34:09 AM | 186 | 1102KB | #Chat Widget |
-| `1786601835097` | 8/12/2026, 11:55:16 PM | 269 | 502KB | #Server Was Down |
 
 ---
 
 ## Per-window detail
 
-### `1786844173723` — 8/15/2026, 11:44:41 PM PT — 463 turns
+### `1786864599073` — 8/16/2026, 12:45:07 AM PT — 101 turns
+
+**Original task:**
+
+```
+#Julia/Claudia 235
+
+——[COPY]——
+
+Get Qwen3-235B-A22B-NVFP4 serving on Julia + Claudia, TP=2. Take it all the way to serving in THIS window.
+
+## STANDING DIRECTIVE (do not soften, do not reinterpret)
+
+Attempt over and over again until it works. Take it all the way to serving. Do NOT take breaks to report progress. Do NOT stop to tell me a window is complete until the 235B is actually generating coherent text.
+
+**There is NO fallback plan. Do NOT revert to gpt-oss-120b. Do NOT restore the 120B "as a stopgap." Do NOT propose the 120B as a safe state.** If you catch yourself planning a rollback, th
+```
+
+**Ideas referenced:** #1241, #1264, #14253, #14560, #14848, #17084, #1744, #1765, #1781, #1793, #1826, #1838, #1858, #18678, #1868, #1903, #2071, #2072, #2073, #2114, #25604, #35313
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786848590052` — 8/16/2026, 12:36:24 AM PT — 319 turns
+
+**Original task:**
+
+```
+Was this person's account wrongfully suspended? Can you check exam enforcement, etc... SLS and see what's going on? I think we had one like this earlier from a Fernando, but not sure if it's the same thing. We were supposed to have resolved that one systematically, but again, not sure. Could be a legitimate suspension, maybe not. CFA will need updating if not and likely a message back to the student. Give also a link to their admin_profile.php page
+```
+
+**Ideas referenced:** #15637, #1661, #18626, #18693, #18713, #19814, #2072, #23304, #2371, #24977, #2523, #25455, #25456, #25534, #26176, #26727 [proposed], #26728 [proposed], #26738 [proposed], #26748 [proposed], #26750 [proposed], #26759 [proposed], #26769 [proposed], #4929, #7265, #7753, #7990, #9086, #9168, #9306, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+8173/8176, bug library #2523).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up the Zane Turner closeout — 297 corroboration-scan gate DEPLOYED; remaining threads are the proctor scheduling + three small ops fixes.
+
+Where we left off (verified 2026-08-16 12:36 AM PT):
+- #26759 [deployed] — SCOPE GATE step 6 (corroboration scan before mass-impact escalation) live in Rules/297, worked example in Rules-archive/297-case-law.md, clinerules MCP reindexed (hardfloor_count 21), idea marked deployed. Lint rc=0 with --override.
+- Zane Turner 26815W-37: reinstated (override #1661, SLS active, good-news email delivered email_outbound_log 364433, Jon+Vicky tagged on ticket #25455). REMAINING GATE: Vicky schedules + sends the proctored Zoom invitation — verify via check_proctoring_status uid 52285.
+- #26769 [rejected] (tiered-317, too broad; 317 unchanged). Cohort alarm retracted (normal wave-end enforcement since Dec 2025).
+- Learning surfaces: ai_learned_corrections 8172/8173/8176; bug library #2523.
+- Note: G8 lint warns Rules/ dir at 181,715 bytes (>85% of 196,608 cap) — pre-existing, watch on next rule edit.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26738 [proposed] — fix the chat-handoff proctor escalation bug (Zoom email never sent, no PROCTOR_REQUEST logged, silent handoff death on conversation #7990); confirm Zane's proctored session is scheduled.
+2. #26748 [proposed] — narrow follow-ups: remediation-mailer coverage check for the 67/97 not matched by subject filter; make didactic cron set email_sent; optional per-wave chat-55 rollup.
+3. #26750 [proposed] — chat-55 alert when a student waits >10 min in a proctor Zoom with no host.
+4. #26728 [proposed] — close as superseded by corrected #26748.
+
+Reference IDs:
+- Tickets: TKT-20260815-8A29595A (#25455), TKT-20260719-F55B9200 (#18626)
+- Ideas: #26759 [deployed], #26769 [rejected], #26748 [proposed], #26750 [proposed], #26738 [proposed], #26728 [proposed], #26727 [superseded]
+- Files touched: /Users/rubenmajor/Documents/Cline/Rules/297-population-anomaly-classify-before-alarming.md, /Users/rubenmajor/Documents/Cline/Rules-archive/297-case-law.md, /tmp/fix_297_caselaw.py (scratch)
+- Learning surfaces: ai_learned_corrections 8172/8173/8176; frankenstein_router_incidents #2523
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786863102700` — 8/16/2026, 12:25:15 AM PT — 190 turns
+
+**Original task:**
+
+```
+I am trying to steer with frankenstein-llm and it's disregarding my steer. Is there a problem causing this?
+```
+
+**Ideas referenced:** #0000, #10108, #10740, #11735, #11741, #11781, #11991, #12059, #12060, #12249, #12266, #12477, #12588, #12589, #12590, #12618, #12688, #12689, #12824, #12872, #12878, #13202, #13412, #13459, #13470, #14133, #14142, #15180, #16163, #16224, #16265, #16304, #16648, #16715, #16844, #17202, #17203, #17205, #17300, #17680, #18312, #18326, #18329, #18820, #19173, #19175 [executing], #19176 [queued], #19686, #19898, #19899 [proposed], #19904, #20251, #22820, #2299, #23071, #23135, #23171, #25097, #25151, #25155, #25185, #2524 [deployed], #2525 [deployed], #25757, #25759, #25764, #25888, #25925, #25926, #25935, #26349, #26435, #26503, #26505 [deployed], #26696, #26706 [proposed], #26707 [proposed], #26709 [proposed], #26741 [rejected], #26770 [proposed], #26773 [executing], #26774 [executing], #5344, #6711, #6719
+
+**Last PICKUP PROMPT:**
+
+```
+ording to Rule 301 steering compliance, must follow. However Rule 91 requires a PICKUP PROMPT block ... Also Rule 41 requires each turn must contain exactly one XML tool call."
+
+It then emitted a junk read_file on /dev/null instead of the word.
+
+AFTER (verified: identical payload replayed 00:21 PT, same file, same probe, response header x-litellm-model-api-base returned http://127.0.0.1:11510/v1): content is exactly BANANA, finish_reason stop.
+
+That is the whole bug. Your steer was never lost, trimmed, or misrouted. The model READ it, cited rule 301 by number, decided it must follow, then named the rules that beat it and obeyed those instead. Disobedience by arbitration, and your instruction kept losing the arbitration.
+
+# Why it lost
+
+The router injects the whole hardfloor corpus as a system message. Rules 00/41/91 are agent rules: every turn must be a tool call, prose-only turns are BROKEN, every completion needs a PICKUP PROMPT. When your steer asks for a direct answer those three contradict it. The one clause that was supposed to protect you, "Obey Ruben's steering above any default", sat as a single sentence at the very END, positioned AFTER the tool-shape rules it was meant to outrank. Position decides arbitration. Same shape as rule 300's own source incident.
+
+# FIX 1, the router (#26774 [deployed])
+
+Hoisted an [EMSU-STEER-PRECEDENCE-v1] block to the TOP of the steering text, above the rules body and the XML examples. Five clauses, the load-bearing ones being: your most recent instruction OUTRANKS every formatting and tool-shape rule when they directly conflict; answering directly IS the correct turn shape when you ask for it; never emit an unneeded tool call just to satisfy a turn-shape rule, because inventing a placeholder call is worse than the prose turn it avoided; and if the model catches itself reasoning "the user asked for X, however rule N requires Y", that IS the disobedience pattern, stop and do X.
+
+Verified: precedence at line 473, wired at 496, rules body at 498, so it sits above what it governs. py_compile clean. Restarted through litellm-safe-restart.sh per rule 280.
+
+# FIX 2, the validator (#26773 [deployed])
+
+The other window's two R301 gates are real but match cosmetic tells: a three-way regex needing a rollback word AND a failure word AND a done-claim, plus one literal phrase shape. A window that QUIETLY continues a superseded plan and reports partial progress trips neither. I added R301_SUPERSEDED_PLAN, which compares work done against the last instruction given, and R301_ACKNOWLEDGE_WITHOUT_CHANGE for the "you're right" then continue shape.
+
+Worth telling you: v1 of my own gate FAILED its positive controls, 2 of 4. It picked the last line containing a steer VERB, which for "stop trying to get the 120B working / let's get the 235s running" locked onto the thing to STOP instead of the thing to DO. It then stayed silent on the real violation and fired on a compliant completion, reproducing the exact defect it was written to catch. v2 takes the last substantive line per rule 301's own wording. All 5 controls pass now, including 3 negative controls.
+
+# Also fixed
+
+The steering corpus mirror was 53 files and 392,051 bytes against a 22-file, 150KB cap, carrying cline_task_ledger.md at 52,880 bytes and HANDOFF_NOTES.md at 12,842 bytes, both deliberately removed from the Mac rules directory on 2026-07-25 for exactly this reason, plus duplicate rule numbers 317 twice, 91 three times, 99 twice. Reconciled to 25 files and 170,131 bytes, zero duplicates, backup at /tmp/rules_mirror_backup_20260816.tg
+```
+
+### `1786844173723` — 8/16/2026, 12:11:05 AM PT — 554 turns
 
 **Original task:**
 
@@ -113,59 +219,43 @@ Read and reference below as well as the NVIDIA forums, forumns, reddit, our bug 
 Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> 
 ```
 
-**Ideas referenced:** #1130, #1131, #11741, #11944, #11945, #11953, #12314, #12365, #12366, #12368, #1241, #12425, #1248, #1249, #1252, #1258, #12584, #12657, #12689, #13108, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #1641, #16448, #16452, #16674, #16676, #16778, #16802, #16803, #16839, #16844, #16851, #17130 [superseded], #17246, #1744, #1754, #1755, #1765, #1771, #1772, #1773, #17788, #1779, #1780, #1781, #1793, #1798, #18132 [deployed], #1828, #1838, #1868, #19125, #19173, #19567, #19653, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2114, #2116, #2127, #2168, #2294, #2307, #2314, #23169, #24186, #24217, #25112, #25378, #25381, #25604, #25630, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25888, #26209, #26284 [executing], #26400, #26403, #26435, #26591, #26593, #26706 [proposed], #26707 [proposed], #26709 [proposed], #26741 [proposed], #50424, #6520, #6826, #7142, #7149, #8170, #8171
+**Ideas referenced:** #0000, #1130, #1131, #11741, #11944, #11945, #11953, #12314, #12365, #12366, #12368, #1241, #12425, #1248, #1249, #1252, #1258, #12584, #12657, #12689, #13108, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16224, #16265, #16304, #16338, #1641, #16448, #16452, #16674, #16676, #16778, #16802, #16803, #16839, #16844, #16851, #17130 [superseded], #17246, #1744, #1754, #1755, #1765, #1771, #1772, #1773, #17788, #1779, #1780, #1781, #1793, #1798, #18132 [deployed], #1828, #1838, #1868, #19125, #19173, #19175 [executing], #19176 [queued], #19567, #19653, #19898, #19899 [proposed], #19904, #20042, #20251, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2114, #2116, #2127, #2168, #2294, #2307, #2314, #23169, #24186, #24217, #25112, #25151, #25185, #25378, #25381, #25604, #25630, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25888, #25925, #25926, #25935, #26209, #26284 [executing], #26349, #26400, #26403, #26435, #26591, #26593, #26696, #26706 [proposed], #26707 [proposed], #26709 [proposed], #26741 [proposed], #26770 [proposed], #50424, #5344, #6520, #6826, #7142, #7149, #8170, #8171
 
 **Last PICKUP PROMPT:**
 
 ```
-rmed up)
-- [ ] Verify :8000/:11513 + end-to-end completion
-- [ ] Final report + PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
+attribute it.
+
+——[/COPY]——
 ```
-
-### `1786848590052` — 8/15/2026, 11:35:20 PM PT — 291 turns
-
-**Original task:**
-
-```
-Was this person's account wrongfully suspended? Can you check exam enforcement, etc... SLS and see what's going on? I think we had one like this earlier from a Fernando, but not sure if it's the same thing. We were supposed to have resolved that one systematically, but again, not sure. Could be a legitimate suspension, maybe not. CFA will need updating if not and likely a message back to the student. Give also a link to their admin_profile.php page
-```
-
-**Ideas referenced:** #15637, #1661, #18626, #18693, #18713, #19814, #2072, #23304, #2371, #24977, #2523, #25455, #25456, #25534, #26727 [proposed], #26728 [proposed], #26738 [proposed], #26748 [proposed], #26750 [proposed], #26759 [proposed], #26769 [proposed], #4929, #7265, #7753, #7990, #9086, #9168, #9306, #9339
-
-**Last PICKUP PROMPT:**
-
-```
-8172/8173, bug library #2523).
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up the 317/297 refinement approvals + Zane Turner closeout — two scoped rule refinements await Ruben's call; Zane fully reinstated.
 
-Where we left off (verified 2026-08-15 11:35 PM PT):
-- #26769 [proposed] NEW: blast-radius-tiered 317 — Tier A full acquisition gate fires only on student-outcome/money/multi-person/regulator/incident claims (mechanical keyword scan of the completion); Tier B light pass for everything else. Rationale: ~1 egregious case per 5-10k turns, but both of this session's flips were in the Tier-A class.
-- #26759 [proposed, narrowed]: one-sentence baseline gate in 297 SCOPE GATE (compare enforcement counts to historical distribution before calling anomalous) + worked example in 297-case-law.md.
-- Zane Turner 26815W-37: reinstated (override #1661, SLS active, good-news email delivered id 364433, Jon+Vicky tagged on #25455). Remaining gate: Vicky sends the proctored Zoom invitation.
-- Cohort alarm remains retracted; learning surfaces live (ai_learned_corrections 8172+8173, bug library #2523).
+Pick up task #26770 [proposed]. A copy-window prompt for the target build has been handed to Ruben; he is running it in a separate window. This window produced the steering RCA and its causal fix only.
 
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26769 [proposed] — Ruben approves/rejects blast-radius tiering for 317 Obligation 1; on approval apply hardfloor edit with --override + reindex.
-2. #26759 [proposed] — Ruben approves/rejects the one-sentence 297 baseline gate + case-law example; on approval apply + reindex.
-3. #26738 [proposed] — fix the chat-handoff proctor escalation bug; confirm Zane's proctored session scheduled (check_proctoring_status uid 52285).
-4. #26748 [proposed] — narrow follow-ups: remediation-mailer coverage for 67/97; didactic cron sets email_sent; optional per-wave chat-55 rollup.
-5. #26750 [proposed] — chat-55 alert for student waiting >10 min in proctor Zoom with no host.
-6. #26728 [proposed] — close as superseded by corrected #26748.
+Where we left off (verified 2026-08-16 00:09 PT):
+- Delivered the copy-window prompt with the full sequence, the boxes-must-be-empty-first diagnosis, the no-rollback constraint, the blocker research loop, watchdog and router wiring, and the Argus placement request.
+- Ruben's stated cause remains UNTESTED: leftover processes on the two boxes starve the new build and cause garbage output.
+- The competing runtime-version theory remains UNVERIFIED against bug library, upstream GitHub, or vendor forums.
+- Weights staged on both boxes: 125G, 41 files, snapshot 21cfa2c9e152032eb60647ee7b46a2bbcd8d76d2, arch Qwen3MoeForCausalLM.
+- Port 11513 (verified: curl /v1/models returned id gpt-oss-120b at 00:05 PT). Stopgap to clear before the attempt.
+- Port 8210 (verified: curl /v1/models returned id glm-5.2-15pct at 00:05 PT). Leave that ring alone.
+- Steering fix built earlier this session: R301 gates in clinerules_validate_completion, rule 301 updated, corpus correction 8174, MCP reindexed (328 rules, 21 hardfloor).
+
+Open threads to drive next:
+1. #26770 [proposed], execution now belongs to Ruben's separate window using the copy prompt. If it returns here, start at Step 1: clear both boxes, confirm empty, relaunch, and do not roll back.
+2. #26709 [proposed], after coherent output exists: bench, wire routing (config.yaml, frankenstein_registry.yaml, adapter), place after GLM and ahead of the prior pool, hook VEMC and SSS, and implement the Argus placement.
+3. #26741 [rejected], ring runtime upgrade. Rejected by Ruben, do not revisit.
 
 Reference IDs:
-- Tickets: TKT-20260815-8A29595A (#25455), TKT-20260719-F55B9200 (#18626)
-- Ideas: #26769 [proposed], #26759 [proposed], #26748 [proposed], #26750 [proposed], #26738 [proposed], #26728 [proposed], #26727 [superseded]
-- Learning surfaces: ai_learned_corrections 8172 + 8173; frankenstein_router_incidents #2523
-- Files touched: none local; orchestrator_ideas #26769 inserted, #26759 + #26748 updated
+- Ideas: #26770 [proposed], #26709 [proposed], #26741 [rejected], #26706 [proposed], #26707 [proposed]
+- Files touched this session: /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts (R301 gates), /Users/rubenmajor/Documents/Cline/Rules/301-steering-compliance.md, /tmp/r301_test.js (positive controls)
+- Corpus correction id 8174. Violation recorded against rule 301.
+- Boxes: Julia spark-6ae6 (ssh -p 2205, LAN 192.168.1.190, RoCE 192.168.100.2), Claudia spark-6d51 (ssh -p 2206, LAN 192.168.1.194, RoCE 192.168.100.1)
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
@@ -3089,126 +3179,3 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1786602203659` — 8/13/2026, 12:41:31 AM PT — 142 turns
-
-**Original task:**
-
-```
-There appear to be some minor issues going on with Frankenstein LLM. It seems like I'm getting some invalid API responses and I'm not sure where those are coming from. I think that we are spilling over for some reason I don't know what's exactly happening we are spilling over for some reason I don't know what's exactly happening
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11936, #11942, #11953, #12251, #12314, #12335, #12363, #12365, #12368, #12407, #12459, #12477, #12618, #12824, #12872, #12878, #13108, #13121, #13202, #13874, #16163, #16265, #16304, #16718, #16844, #18312, #18326, #1967, #19903, #2050, #20722, #2299, #23171, #2335 [deployed], #24145 [proposed], #25097, #25471, #25630, #25888, #26019, #26068, #26080 [awaiting_review]
-
-**Last PICKUP PROMPT:**
-
-```
-tranking saturation, not GLM).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #26080 [completed] - Frankenstein invalid-response fix shipped: affinity pin yields at capacity so in-pool GLM spill works (verified: adapter line 210 on disk, restart smoke HTTP 200 0.81s, canary pass_streak 177).
-
-Where we left off (verified 2026-08-13 00:40 PT):
-- RCA: prefix-affinity pin held a batch conv on artemis :8000 until load 44 vs cap 10. gpt-oss-120b returned empty 200s at saturation, EMPTY_PASSTHROUGH_GATE_v2 raised 503, LiteLLM spilled to cloud. GLM ring :8210 healthy the whole time.
-- FIX SHIPPED: frankenstein_tools_adapter.py line 210 now yields pin at load >= cap (was 1.6x). Backup .bak-affyield-20260813-0036. Restarted frankenstein-tools.service. Single adapter PID 1885485. Smoke HTTP 200 0.81s. Canary healthy pass_streak 177. Live affinity traffic flowing.
-- Idea #26080 [completed]. Incident #2335 [deployed] resolution merged. HANDOFF_NOTES.md updated.
-
-Open threads to drive next:
-1. Observe the fix over the next shift: watch /var/log/emsu-adapter-upstream.log and adapter log for EMPTY_PASSTHROUGH_GATE_v2 counts and AFFINITY_BREAK_OVERLOAD lines. Confirm the batch pins yield to GLM :8210 at cap instead of empty-200ing to cloud.
-2. #24145 [proposed] revisit if artemis/bigmac empty-200s still appear before AFFINITY_BREAK fires during load spikes within a single probe window: consider lowering the sweep caps or tuning FRANK_BOX_CAPACITY.
-
-Reference IDs:
-- Ideas: #26080 [completed], #24145 [proposed]
-- Incident: #2335 [deployed]
-- Files touched: /usr/local/bin/frankenstein_tools_adapter.py (patched), /usr/local/bin/frankenstein_tools_adapter.py.bak-affyield-20260813-0036 (backup)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786585764315` — 8/13/2026, 12:40:33 AM PT — 787 turns
-
-**Original task:**
-
-```
-A lot of the links on these pages and tabs appear to be nonfunctioning: https://emsuniversity.com/emtskills/routes/chat_portal.php?conv=10021&site=14 
-
-Clicking on stuff and nothing is happening it's just locking up. Can you fix that?
-
-Maybe it needs an overhaul? Or just some deep testing? It just seems really buggy
-```
-
-**Ideas referenced:** #059669, #10027, #1119, #16732, #16817, #17446, #18335, #19437, #19837, #23133 [approved], #2332 [needs_verify], #23989, #25185, #25962, #25965, #26038 [executing], #26039 [executing], #26040 [executing], #26041 [executing], #26045 [executing], #26048 [executing], #26049 [rejected], #26050 [executing], #26054 [executing], #26090 [deployed], #2916, #6111, #6366, #7907, #9086, #9152, #9168, #9222, #9339
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786591402307` — 8/13/2026, 12:36:48 AM PT — 191 turns
-
-**Original task:**
-
-```
-#Externship
-
-Still need 5 links to profiles to view that you say meet requirements
-
-Did you update this:  /var/www/emtskills/docs/CFA_CERT_READINESS_RCA_20260812.md
-
-
-You were right, and my earlier claim that no dates-remaining source existed was flat wrong.
-
-=== WHY 26904FT-03 SLIPPED THROUGH ===
-
-NREMT Testing Dates Remaining is a DERIVED value, not a stored column. admin_profile.php line 691 calls StatusCalculator::compute($row)['days'] from src/Status.php, which returns max(0, 60 minus days since scheduled didactic completion). John Erisman's didactic date was 2026-03-12, five months ago, 
-```
-
-**Ideas referenced:** #166534, #178649, #19419, #2323, #23477, #24526, #24765, #25185, #25822 [deployed], #25889 [awaiting_review], #25914, #25916 [awaiting_review], #25932 [deployed], #25950 [awaiting_review], #25971, #25973 [awaiting_review], #25974, #25975, #25976, #25984, #25985, #25986, #25990, #25995, #26001 [deployed], #26002 [awaiting_review], #26003, #26027 [awaiting_review], #26028 [deployed], #26034 [deployed], #26053 [approved], #26066 [approved], #26067 [deployed], #26071 [executing], #26089 [deployed], #92400
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786605000052` — 8/13/2026, 12:34:09 AM PT — 186 turns
-
-**Original task:**
-
-```
-#Chat Widget
-
-Let's get back also to chat widged. Run a live test on it using a web broser of 10 different chat types/situations and correct errors as you go. 
-
-Approved, but donn't we have DNC lists too? Are those being obeyed? What about obvious webform spams? -> Emma were originally scheduled but didnt attend the scheduled dates
-Emma Johnson
-12 hr 6a-6p
-August 7 - M55 In-charge Will Phillips, Supervisor Brian Davis
-Station 5 @ 19900 Telge Rd, Tomball, TX 77377
-24hr 6a - 6a
-August 10 - M55 In-charge Cindy Kmiec, Supervisor Jessica Baker
-Station 5 @ 19900 Telge Rd, Tomball, TX 77377
-She was a
-```
-
-**Ideas referenced:** #11585, #12364, #23133 [approved], #25962, #26038 [approved], #26039 [deployed], #26040 [approved], #26041 [approved], #26045 [approved], #26048 [awaiting_review], #26050 [executing], #26054 [executing], #26084 [executing], #26085 [executing], #26086 [proposed], #26087 [proposed], #26088 [approved], #2763, #6366, #8211, #9112
-
-**Last PICKUP PROMPT:**
-
-```
-I forgot to include the actual PICKUP PROMPT block in the attempt_completion result. Let me re-emit with it included.
-
-```
-
-### `1786601835097` — 8/12/2026, 11:55:16 PM PT — 269 turns
-
-**Original task:**
-
-```
-#Server Was Down
-
-Turn it off, it does nothign for us now -> __What I need from you__ is the business call, tracked as #26068 [executing]. Should this pipeline run at all? If the corpus work replaced it, turning off the 9 LoRA crons stops 22GB/hr of writes, frees GPU time, and removes the outage vector entirely. If you want the adapters, someone has to wire the eval gate and the promotion path, because right now it trains and discards. My recommendation is to turn it off unless there is a specific adapter someone is waiting on. A pipeline producing zero promotions in 6.5 weeks while consuming 
-```
-
-**Ideas referenced:** #12676, #13487, #15928, #19338, #25185, #25256, #26007 [deployed], #26008 [executing], #26009 [deployed], #26017 [awaiting_review], #26019 [awaiting_review], #26023 [executing], #26024 [deployed], #26068 [executing], #26069 [deployed], #26070 [deployed], #26076 [executing], #26077 [executing], #6800
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

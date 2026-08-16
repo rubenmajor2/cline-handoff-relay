@@ -139,3 +139,34 @@ Two reissues were attempted before the parent was ever read. The second was atte
 AFTER the disproving evidence was already in hand. RCA bucket: **insufficient probe**.
 
 Repair Repair Repair Repair Repair Repair Repair Repair Repair Repair Repair Repair RepantagRepair Repair Repair Repair Repair Repair Repair Repair Repair Repair Repair Reue still open), #26176 (silent-reverter class).
+
+## 2026-08-15 -- the false 160-student P0 (corroboration-scan source incident, idea #26759)
+
+**Symptom:** while investigating one student (Zane Turner 26815W-37, wrongly dismissed
+after an EMSU proctoring failure), the agent counted local_exam_policy_track rows
+since Jul 1: 165 fail_final_exam rows / 160 distinct students, all with
+email_sent=0. It shipped a P0 alarm ("160 students wrongly auto-failed, zero
+notification, validate before mass override").
+
+**How Ruben caught it (the agent did not):** absence of corroborating inbound signal.
+Real mass harm always produces complaints (CFA conversations, tickets, staff pings to
+leadership). Claimed N=160; actual complainants was about 1 (Zane). That 160:1 ratio
+was the tell, available before any deep forensics. This became SCOPE GATE step 6.
+
+**What the deep diagnosis then showed (secondary confirmation steps):**
+1. **Historical baseline:** monthly fail_final_exam distinct students = Dec-25 93,
+   Jan-26 444, Feb 55, Mar 83, Apr 29, May 5, Jun 11, Jul 60, Aug 102. The alarm
+   window was mid-range. A windowed count with no baseline is a hypothesis, not an
+   incident.
+2. **Same-day cluster = shared cohort date:** all 97 Aug-3 fails shared
+   scheduled_didactic_completion_date=2026-07-19, a term-wave date held by 812
+   students DB-wide. Wave-end batch by design, not a burst bug.
+3. **Status flag is not ground truth:** email_sent=0 was cron bookkeeping (the cron
+   never sets it). email_outbound_log showed 30/97 provably received exam/deadline
+   emails via the remediation-mailer pipelines.
+4. **Dormancy:** 53/97 had no Moodle login since before June; expected wave-end fails.
+
+**Outcome:** alarm retracted; no mass override; Zane individually reinstated on
+transcript evidence (TKT-20260719-F55B9200: Zoom email never sent, no host, no
+PROCTOR_REQUEST). Learning surfaces: ai_learned_corrections 8172/8173/8176; bug
+library #2523 (enforcement_count_no_baseline_false_p0_20260815).

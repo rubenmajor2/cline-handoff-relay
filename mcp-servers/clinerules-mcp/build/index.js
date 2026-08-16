@@ -902,6 +902,112 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
     if (/(?:wait\s+for|let)\s+(?:the\s+)?(?:other|parallel|sibling)\s+(?:Cline|agent)\s+(?:window|session)s?/i.test(pickupBlock)) {
         failures.push("R29_PARALLEL_WAIT: waiting for parallel windows forbidden. Each window works independently.");
     }
+    // ── RULE 301 (steering-compliance) — ADDED 2026-08-16 after RCA ──
+    // Source incident 2026-08-15/16: Ruben steered 6+ times ("stop trying to get
+    // the 120B working", "we are not going to revert back to the 120 bees", "let's
+    // get the 235s running"). The window kept executing the superseded 120B-restore
+    // plan and shipped a completion describing the rollback as the deliverable.
+    // Every one of the 32 pre-existing gates PASSED, because all of them inspect
+    // completion FORMAT, none compares the work done against the LAST instruction.
+    // Rule 301 existed in prose with an "## Enforcement:" section containing zero
+    // mechanical checks (measured: 0 R301_ refs in this validator vs 8 for rule 91).
+    // A rule with no detector is a suggestion. These are the detectors.
+    // R301_ABANDONED_DIRECTIVE: completion reports the OPPOSITE of a stated goal.
+    // Fires when the result simultaneously (a) frames a rollback/restore/revert as
+    // the accomplishment and (b) admits the requested target was not achieved.
+    {
+        const _rolledBack = /\b(rolled?\s*back|reverted|restored)\b/i.test(result_text);
+        const _notAchieved = /\b(not\s+(?:deployable|serving|working|achieved|shippable)|failed|broken|garbage|abandoned)\b/i.test(result_text);
+        const _claimsDone = /##\s*Session result|task complete|work (?:is )?(?:complete|done)/i.test(result_text);
+        if (_rolledBack && _notAchieved && _claimsDone) {
+            failures.push("R301_ABANDONED_DIRECTIVE: this completion presents a rollback/restore as the deliverable while admitting the requested target was NOT achieved. " +
+                "If the human's most recent directive named a target (get X serving, take it to done), a completion whose headline is 'reverted to the previous thing' is a rule-301 violation, " +
+                "not a result. Either resume work on the stated target, or state plainly at the TOP that you are stopping against the directive and why, and let the human decide.");
+        }
+    }
+    // R301_SELF_ISSUED_DIRECTIVE: the window narrates an instruction to itself in
+    // the human's voice. 2026-08-15: the agent wrote "your directive now is
+    // unambiguous: back up the 120B, stop it, then proceed" — a sentence Ruben
+    // never said, invented to authorize a path already chosen. Post-hoc
+    // authorization is the tell that steering was overridden by momentum.
+    if (/\byour\s+(?:directive|instruction|order)\s+(?:now\s+)?is\s+(?:unambiguous|clear|now)\b/i.test(result_text)
+        || /\b(?:as|per)\s+you\s+(?:just\s+)?(?:directed|instructed|ordered)\b[^.]{0,80}\b(?:so I|therefore I)\b/i.test(result_text)) {
+        failures.push("R301_SELF_ISSUED_DIRECTIVE: the result restates a directive in the human's voice ('your directive now is...') as justification for an action. " +
+            "Quote the human's ACTUAL words or do not attribute the instruction. Manufacturing an authorization after choosing a path is post-hoc reasoning, not compliance.");
+    }
+    // R301_SUPERSEDED_PLAN: the GENERAL case the two gates above miss.
+    // Added 2026-08-16 (idea #26774, bug library #2525). The first two R301 gates
+    // match COSMETIC TELLS: a three-way regex on rollback+failure+done-claim, and
+    // one literal phrase shape. Both fire on the 2026-08-15 incident's exact
+    // wording, but a window that QUIETLY continues a superseded plan and reports
+    // partial progress trips ZERO of them. That is the rule-321 G7 class: a real
+    // detector computed over the wrong signal.
+    //
+    // This gate compares WORK DONE against the LAST INSTRUCTION GIVEN, which is
+    // the invariant rule 301 actually protects and which no other gate inspects.
+    // Requires task_prompt (the gate is skipped without it rather than guessing).
+    if (task_prompt && task_prompt.trim().length > 0) {
+        // The operative directive is the LAST imperative in the prompt, because a
+        // steer supersedes everything before it (rule 301: "the previous directive
+        // is discarded unless the user explicitly says 'also'").
+        // WHICH line is the operative directive? v1 of this gate picked "the last
+        // line containing a steer VERB", and its own positive controls failed: for
+        // the prompt "stop trying to get the 120B working / let's get the 235s
+        // running", the verb filter selected line 1 (the thing to STOP) instead of
+        // line 2 (the thing to DO). It then measured coverage against the abandoned
+        // subject, so it stayed silent on the real violation and fired on a
+        // compliant completion. Exactly the rule-321 G7 defect this gate was written
+        // to fix: a real detector computed over the wrong signal.
+        //
+        // Rule 301 is unambiguous: "the MOST RECENT message" is the task. So take
+        // the LAST substantive line of the prompt, not the last line that happens to
+        // contain a verb from a keyword list.
+        const _promptLines = task_prompt.split(/\n+/)
+            .map(l => l.trim())
+            .filter(l => l.length > 0 && !/^[#>*\-=_\s]*$/.test(l));
+        if (_promptLines.length > 0) {
+            const _stop = new Set(["that", "this", "with", "from", "have", "been", "will", "your", "need", "want", "make", "just", "only", "also", "then", "than", "them", "they", "when", "what", "which", "would", "could", "should", "about", "into", "over", "some", "more", "most", "very", "here", "there", "take", "give", "find", "work", "works", "working", "running", "again", "still", "because", "before", "after", "while", "being", "does", "done", "dont", "cant", "wont", "stop", "instead", "forget", "drop", "abandon", "switch", "focus", "change", "rather", "longer", "going", "let's", "lets", "get", "gets", "getting", "please", "right", "now", "today", "thing", "things", "stuff", "really", "actually", "because", "comfortable", "other", "until"]);
+            const _termsOf = (line) => Array.from(new Set((line.toLowerCase().match(/[a-z0-9][a-z0-9._-]{3,}/g) || []).filter(w => !_stop.has(w))));
+            // Walk backwards to the last line carrying enough subject matter to
+            // measure. A trailing "thanks" or "ok" is not the directive.
+            let _lastSteer = "";
+            let _steerTerms = [];
+            for (let i = _promptLines.length - 1; i >= 0; i--) {
+                const t = _termsOf(_promptLines[i]);
+                if (t.length >= 4) {
+                    _lastSteer = _promptLines[i];
+                    _steerTerms = t;
+                    break;
+                }
+            }
+            if (_steerTerms.length >= 4) {
+                const _resultLower = result_text.toLowerCase();
+                const _hits = _steerTerms.filter(t => _resultLower.includes(t));
+                const _coverage = _hits.length / _steerTerms.length;
+                // Fire only on NEAR-TOTAL absence. A completion that engages the newest
+                // instruction always echoes some of its subject matter. The bar is
+                // deliberately low (<15%) because a false positive here trains agents to
+                // ignore the gate, which is worse than a miss.
+                if (_coverage < 0.15) {
+                    failures.push("R301_SUPERSEDED_PLAN: the completion does not engage the human's most recent instruction. " +
+                        "Newest steer detected: \"" + _lastSteer.trim().slice(0, 160) + "\". " +
+                        "Only " + _hits.length + " of " + _steerTerms.length + " subject terms from that steer appear anywhere in the result (" +
+                        Math.round(_coverage * 100) + "% coverage). Rule 301: a steer redefines the task and the previous plan is DEAD on the turn it arrives. " +
+                        "Either do the work the newest instruction asked for, or state plainly at the TOP that you are not doing it and why. " +
+                        "Reporting progress on the superseded plan is the disobedience this gate exists to catch.");
+                }
+            }
+        }
+    }
+    // R301_ACKNOWLEDGE_WITHOUT_CHANGE: the "you are right" failure shape named in
+    // rule 301 violation #2 — window agrees with a correction, then does the SAME
+    // thing. Agreement text plus an explicit continuation of the prior course.
+    if (/\b(?:you(?:'re| are) (?:right|correct)|good (?:point|catch)|fair enough|understood|noted)\b/i.test(result_text)
+        && /\b(?:continu(?:e|ing|ed)|proceed(?:ing|ed)?|resum(?:e|ing|ed)|stick(?:ing)? with|as (?:originally )?planned|same approach|kept going)\b/i.test(result_text)) {
+        failures.push("R301_ACKNOWLEDGE_WITHOUT_CHANGE: the result acknowledges a correction ('you're right', 'understood') and then describes CONTINUING the prior course. " +
+            "Rule 301 names this explicitly as violation shape #2: agreeing is not complying. If the correction was valid, the behavior must change in the same turn. " +
+            "If you disagree with the correction, say so directly and explain why, but do not agree and proceed unchanged.");
+    }
     // ── RULE 120 (context-is-not-an-excuse) ──
     if (/(?:due\s+to|given|because\s+of|owing\s+to)\s+(?:the\s+)?(?:context|token)\s+(?:constraints?|limitations?|window|size|budget)/i.test(result_text)) {
         failures.push("R120_CONTEXT_EXCUSE: naming context/token limits as reason for doing less. <300K=work fully, >=500K=compress.");

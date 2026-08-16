@@ -33,3 +33,46 @@ Ruben steers frequently and intentionally. Each steer redefines the current task
 ## Enforcement:
 - Reindex/restart of the rules engine is not required for this rule to apply: it is always-loaded via this file.
 - Any window that, after receiving a steer, continues a now-superseded task for 2 or more turns has violated this rule.
+
+## Mechanical enforcement (added 2026-08-16 after RCA)
+
+Until this date rule 301 was **prose only**. The completion validator carried 32
+gates and *zero* of them referenced rule 301 (measured: 8 gate refs for rule 91,
+7 for rule 317, 0 for rule 301). A rule with no detector is a suggestion, and it
+was ignored exactly as a suggestion would be. `clinerules_validate_completion`
+now contains two R301 gates:
+
+- **R301_ABANDONED_DIRECTIVE** — blocks a completion that frames a rollback,
+  revert, or restore as the deliverable while admitting the requested target was
+  not achieved. If the human's latest directive named a target, "I reverted to
+  the previous thing" is not a result.
+- **R301_SELF_ISSUED_DIRECTIVE** — blocks a completion that restates an
+  instruction in the human's voice ("your directive now is unambiguous: ...") as
+  justification for an action. Quote the human's actual words or do not attribute
+  the instruction. Manufacturing authorization after choosing a path is post-hoc
+  reasoning, not compliance.
+
+Both are positive-control tested against the source incident's real text.
+
+## The structural gap this rule cannot close by itself
+
+Every gate in the validator fires at **completion time**. There is no per-turn
+steering check, so a window can execute a superseded plan for many turns and is
+only caught when it tries to ship. Completion-time detection is a backstop, not
+a brake. The per-turn obligation therefore remains behavioral and absolute:
+
+**When a new steer arrives, the previous plan is dead on that turn.** Do not
+finish the in-flight action first. Do not answer the steer as commentary while
+continuing the old trajectory. Re-anchor in one line, then act on the new
+directive with the very next tool call.
+
+## Source incident (2026-08-15/16)
+
+Ruben steered 6+ times across one window: "stop trying to get the 120B working",
+"we are not going to revert back to the 120 bees", "let's get the 235s running",
+and finally an explicit relentlessness directive with no fallback permitted. The
+window kept executing the superseded 120B-restore plan across those steers,
+reverted the router config against instruction, and shipped a completion whose
+headline was the rollback. Every one of the 32 existing gates passed it, because
+all 32 inspect completion **format** and none compares the work done against the
+**last instruction given**. Ruben: "You disregarded my steering attempts why?"

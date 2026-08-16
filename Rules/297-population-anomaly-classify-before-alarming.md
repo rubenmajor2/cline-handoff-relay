@@ -59,6 +59,13 @@ failures, errors, or anomalies:
 5. **Sanity-check against the user's estimate.** If the user says 50-100 and you
    measured 6, your scope is the prime suspect, not the user's memory. Re-scope BEFORE
    arguing.
+6. **Corroboration scan before escalating mass impact (approved 2026-08-16, idea
+   #26759).** Before escalating any claim of mass student impact (N affected), scan the
+   inbound surfaces — tickets, CFA conversations, staff/chat-55 messages — for
+   corroborating complaints from that population; if N is large and corroborating
+   inbound is near zero, the premise is SUSPECT: do not escalate, track down the
+   discrepancy first. Worked example: `Rules-archive/297-case-law.md` (2026-08-15 false
+   160-student P0; actual complainants ≈ 1).
 
 The trap is a technically-correct COUNT of a too-narrow population, presented as THE
 answer. The user's mental model of "failure" is almost always wider than the system's

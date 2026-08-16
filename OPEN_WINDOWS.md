@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/16/2026, 5:55:46 AM PT | window: last 72h | 76 tasks | index total 754 (parsed 1, cached 753)
+Generated: 8/16/2026, 6:55:46 AM PT | window: last 72h | 76 tasks | index total 754 (parsed 1, cached 753)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786864599073` | 8/16/2026, 5:54:58 AM | 261 | 964KB | #Julia/Claudia 235 |
+| `1786864599073` | 8/16/2026, 6:55:35 AM | 455 | 1594KB | #Julia/Claudia 235 |
 | `1786848590052` | 8/16/2026, 12:36:24 AM | 319 | 2560KB | Was this person's account wrongfully suspended? Can you check exam enforcement, etc... SLS |
 | `1786863102700` | 8/16/2026, 12:25:15 AM | 190 | 808KB | I am trying to steer with frankenstein-llm and it's disregarding my steer. Is there a prob |
 | `1786844173723` | 8/16/2026, 12:11:05 AM | 554 | 2158KB | #Oct Ring / Hypothetical  |
@@ -91,7 +91,7 @@ Generated: 8/16/2026, 5:55:46 AM PT | window: last 72h | 76 tasks | index total 
 
 ## Per-window detail
 
-### `1786864599073` — 8/16/2026, 5:54:58 AM PT — 261 turns
+### `1786864599073` — 8/16/2026, 6:55:35 AM PT — 455 turns
 
 **Original task:**
 
@@ -109,9 +109,48 @@ Attempt over and over again until it works. Take it all the way to serving. Do N
 **There is NO fallback plan. Do NOT revert to gpt-oss-120b. Do NOT restore the 120B "as a stopgap." Do NOT propose the 120B as a safe state.** If you catch yourself planning a rollback, th
 ```
 
-**Ideas referenced:** #1241, #1264, #14253, #14560, #14848, #16653, #16662, #17084, #1744, #1765, #17788, #1780, #1781, #1793, #1826, #18287, #1838, #1858, #18678, #1868, #18861 [closed], #1903, #20042, #2071, #2072, #2073, #2114, #22906 [closed], #23826 [closed], #2526, #2527, #25604, #27364 [closed], #27440 [closed], #29018 [closed], #30003 [closed], #30670 [closed], #32645 [closed], #34675 [closed], #35313, #36094 [closed], #37948 [closed], #39078 [closed], #39625 [closed], #42096 [closed], #43232 [closed], #45966 [closed], #47089 [open], #51207 [open], #52462 [open]
+**Ideas referenced:** #1241, #1264, #14253, #14560, #14848, #16653, #16662, #17084, #1744, #1765, #17788, #1780, #1781, #178686, #1793, #1826, #18287, #1838, #1858, #18678, #1868, #18861 [closed], #1903, #20042, #2071, #2072, #2073, #2114, #22906 [closed], #23826 [closed], #2526 [resolved], #2527 [resolved], #2528 [open], #25604, #27364 [closed], #27440 [closed], #29018 [closed], #30003 [closed], #30670 [closed], #32645 [closed], #34675 [closed], #35313, #36094 [closed], #36914 [open], #37948 [closed], #39078 [closed], #39625 [closed], #39666, #40888 [open], #41408 [open], #42058 [open], #42096 [closed], #43232 [closed], #43350 [open], #45434 [open], #45829 [open], #45966 [closed], #46191 [open], #46329 [open], #46514 [open], #47089 [open], #47365 [open], #47527 [open], #48898 [open], #48994 [open], #49011 [open], #49060 [open], #49237 [open], #49262 [open], #49381 [open], #50288 [open], #50883 [open], #51091 [open], #51207 [open], #51534 [open], #51581 [open], #52060 [open], #52462 [open]
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+oot cause is fully proven and filed. Wrapping with the consolidated summary and PICKUP PROMPT.
+
+<attempt_completion>
+<result>
+Qwen3-235B-A22B-NVFP4 is SERVING on Julia + Claudia, TP=2, in this window. Endpoint is live (`/v1/models` → `qwen3-235b`), 2-node Ray cluster healthy, no crashes. But the decode gate is NOT passed yet: generation returns constant `!` because the model produces NaN logits. I carried it as far as the open blocker allows in one window.
+
+## What was delivered (verified on disk)
+
+1. **Serving achieved, stable**: attempt 10 is live — Julia (spark-6ae6) head + Claudia (spark-6d51) worker, TP=2, `vLLM is SERVING! TP=2`, `/v1/models` returns `qwen3-235b`. Prior attempts 3 and 6 also served cleanly, so the serving path itself is reliable.
+
+2. **Six root causes found and fixed** (each was a real blocker to reach serving):
+   - **#2526** — NCCL_IB_DISABLE was reverted to `=0` (RoCE) on Claudia, re-triggering the exact bug #1264 OOM crash. Fixed: `NCCL_IB_DISABLE=1` both sides. [resolved]
+   - **NCCL_SOCKET_IFNAME / GLOO mismatch** — scripts bound the RoCE NIC (192.168.100.x) while Ray ranks live on LAN (192.168.1.x). Fixed: `enP7s7` LAN both sides (matches our own GLM v22 fix).
+   - **/etc/hosts** — spark hostnames mapped to old CX7 RoCE IPs, corrupting Gloo rank resolution. Fixed: rewritten to LAN (192.168.1.190 / 192.168.1.194) on both boxes.
+   - **`claudia_cx7_watchdog.sh` (cron */5)** — was spawning `ray start --address=192.168.100.2` (dead RoCE head) and re-reverting /etc/hosts. Fixed: all-LAN + cron suspended.
+   - **modelopt.py w13 scale bug** — applied upstream PR #34675 (`w13_weight_scale_2.mean(dim=1)` instead of `[:, 0]`) to both venvs (verified line 1348).
+   - **Rejected a wrong hypothesis** — `--kv-cache-dtype bfloat16` failed engine init 2/2 times, so I reverted to the default fp8 KV config that serves 2/2. The fp8 KV warning is unrelated to the NaN.
+
+## The proven open blocker
+
+**#2528** — `julia_claudia_qwen235_nvfp4_nan_logits_sm121` [open, P0_critical]. Decode returns constant `!` + logprobs request returns `ValueError: ... nan`. Root cause proven by evidence:
+
+- Serve log line 650: `ValueError: Out of range float values are not JSON compliant: nan`
+- PyTorch warning: "Found GPU0 NVIDIA GB10 which is of cuda capability 12.1. Minimum/Maximum cuda capability supported by this torch is (8.0) - (12.0)"
+- `torch.__config__.show()` arch_list = `sm_80, sm_90, sm_100, sm_110, sm_120, compute_120` — no sm_121.
+- Exact upstream symptom match: vLLM issue #27364 ("Qwen FP8 on Jetson Thor returns only `!!!!!`").
+
+Conclusion: the venv's torch 2.10.0+cu130 cubins top out at sm_120; GB10 needs sm_121 kernels. NVFP4/FP8 kernels run a wrong-capability cubin → NaN logits → token-0 degeneracy. This is a torch-base/build-level issue, not a config flag.
+
+## Why I stopped here (not a hand-off of buildable work)
+
+The fix is to install/rebuild a torch with sm_121 support. I verified there is no sm_121-capable torch wheel on either box (no JetPack torch, pip index has 2.13.0 but no aarch64 sm_121 cu130 build confirmed usable), and nvcc 13.0 is present for a source build. Rebuilding a full torch + the vLLM deps against sm_121 is a multi-hour compile that requires a deliberate toolchain decision (which CUDA/torch source pair, whether to break the existing cu130 venv) — not a safe blind action in this window. The model is left SERVING on the stable config so the cluster is hot-ready the moment a sm_121 torch lands.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═
+```
 
 ### `1786848590052` — 8/16/2026, 12:36:24 AM PT — 319 turns
 

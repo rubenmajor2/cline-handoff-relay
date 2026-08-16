@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/16/2026, 8:55:47 AM PT | window: last 72h | 75 tasks | index total 754 (parsed 1, cached 753)
+Generated: 8/16/2026, 12:28:24 PM PT | window: last 72h | 75 tasks | index total 754 (parsed 1, cached 753)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786864599073` | 8/16/2026, 8:51:52 AM | 692 | 2259KB | #Julia/Claudia 235 |
+| `1786864599073` | 8/16/2026, 12:28:19 PM | 798 | 2520KB | #Julia/Claudia 235 |
 | `1786848590052` | 8/16/2026, 12:36:24 AM | 319 | 2560KB | Was this person's account wrongfully suspended? Can you check exam enforcement, etc... SLS |
 | `1786863102700` | 8/16/2026, 12:25:15 AM | 190 | 808KB | I am trying to steer with frankenstein-llm and it's disregarding my steer. Is there a prob |
 | `1786844173723` | 8/16/2026, 12:11:05 AM | 554 | 2158KB | #Oct Ring / Hypothetical  |
@@ -90,7 +90,7 @@ Generated: 8/16/2026, 8:55:47 AM PT | window: last 72h | 75 tasks | index total 
 
 ## Per-window detail
 
-### `1786864599073` — 8/16/2026, 8:51:52 AM PT — 692 turns
+### `1786864599073` — 8/16/2026, 12:28:19 PM PT — 798 turns
 
 **Original task:**
 

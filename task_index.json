@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-16T15:55:47.180Z",
+ "generated_at": "2026-08-16T19:28:24.478Z",
  "counts": {
   "parsed": 1,
   "reused": 753,
@@ -130727,11 +130727,11 @@
   },
   "1786864599073": {
    "task_id": "1786864599073",
-   "mtime": 1786895512818,
+   "mtime": 1786908499214,
    "created_at": "2026-08-16T07:16:39.073Z",
-   "last_modified": "2026-08-16T15:51:52.818Z",
-   "size_kb": 2259,
-   "turn_count": 692,
+   "last_modified": "2026-08-16T19:28:19.214Z",
+   "size_kb": 2520,
+   "turn_count": 798,
    "title": "#Julia/Claudia 235\n\n——[COPY]——\n\nGet Qwen3-235B-A22B-NVFP4 serving on Julia + Claudia, TP=2. Take it all the way to serving in THIS window.\n\n## STANDING DIRECTIVE (do not soften, do not reinterpret)\n\nAttempt over and over again until it works. Take it all the way to serving. Do NOT take breaks to report progress. Do NOT stop to tell me a window is complete until the 235B is actually generating coherent text.\n\n**There is NO fallback plan. Do NOT revert to gpt-oss-120b. Do NOT restore the 120B \"as a stopgap.\" Do NOT propose the 120B as a safe state.** If you catch yourself planning a rollback, that is the failure mode from the previous window, stop and continue on the 235B instead.\n\nOn EVERY bl",
    "pickup_prompt": "uild with real sm_121 support.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #1786864599073 — Qwen3-235B-A22B-NVFP4 on Julia+Claudia TP=2: SERVING verified, decode-blocker #2528 remains.\n\nWhere we left off (verified 2026-08-16 08:50 PT):\n- Model SERVING: Julia:8000 (`qwen3-235b`), TP=2, nodes Julia 192.168.1.190 + Claudia 192.168.1.194, serve PID 1235940, script `julia_unified_tp2_qwen235.sh`\n- ~11.8 tok/s measured (200 tok / 17s); decode = constant `!` (NaN logits; logprobs → `ValueError: nan` serve-log line 650)\n- All cluster blockers fixed: NCCL_IB_DISABLE=1 + enP7s7 socket on both scripts, /etc/hosts → LAN, watchdog de-RoCE'd (#2526 resolved); modelopt mean(dim=1) patch applied (#2527 resolved)\n- 507 zero weight_scale tensors in checkpoint shards (finite otherwise); pure torch matmul FINITE on GB10; bf16/fp16 KV both impossible in this build (flash_attn rejects bf16; fp16 not a CLI choice); fp8 KV forced by `kv_cache_quant_algo: FP8`\n- Incident #2528 (P0, open) holds the full root-cause chain\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #2528 [executing] — Bisect NVFP4 path: serve Qwen3-30B-A3B-NVFP4 on same build. Clean decode → checkpoint-load bug in 235B shard; same `!` → broken NVFP4 kernel on GB10; then switch to NVIDIA sparkcustom build with sm_121 support. SQL: mysql -u adminportal -p'iV84o80^y' admin_portal\n2. #2528 [executing] — If checkpoint-load bug: compare `hf_quant_config.json` (`group_size:16`) against vLLM expected NVFP4 scheme; test `--override-quant-config` or per-shard weight diff vs NVIDIA hash\n3. #2528 [pending] — If kernel bug: try `VLLM_DISABLE_NVFP4_FUSED_GROUPGEMM=1` or the build's envs.py knob for fused-MoE off; else track upstream #27364/#37615 resolution\n\nReference IDs:\n- Task: 1786864599073\n- Incidents filed: #2526 (resolved), #2527 (resolved), #2528 (open)\n- Files touched: /home/rubenmajor/julia_unified_tp2_qwen235.sh, /home/rubenmajor/claudia_unified_worker.sh, /home/rubenmajor/claudia_cx7_watchdog.sh, vllm/modelopt.py (both boxes), /etc/hosts (both boxes), /var/www/emtskills/docs/JC_235B_AND_RING_UPGRADE_RUNBOOK.md\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {

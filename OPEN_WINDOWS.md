@@ -6,14 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/15/2026, 7:45:07 PM PT | window: last 72h | 82 tasks | index total 751 (parsed 3, cached 748)
+Generated: 8/15/2026, 8:45:08 PM PT | window: last 72h | 82 tasks | index total 752 (parsed 4, cached 748)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786842592907` | 8/15/2026, 7:45:00 PM | 386 | 2374KB | #Rule 317 |
-| `1786844918374` | 8/15/2026, 7:44:57 PM | 489 | 6071KB | Babysit Frankenstein Exeucotr for 90 minutes and resolve any issues that might come up. Do |
-| `1786845607312` | 8/15/2026, 7:44:31 PM | 99 | 571KB | #GLM 5.3 Update |
-| `1786844173723` | 8/15/2026, 6:58:41 PM | 26 | 269KB | #Oct Ring / Hypothetical  |
+| `1786844918374` | 8/15/2026, 8:45:04 PM | 793 | 10850KB | Babysit Frankenstein Exeucotr for 90 minutes and resolve any issues that might come up. Do |
+| `1786842592907` | 8/15/2026, 8:44:52 PM | 513 | 2974KB | #Rule 317 |
+| `1786848590052` | 8/15/2026, 8:44:43 PM | 143 | 1999KB | Was this person's account wrongfully suspended? Can you check exam enforcement, etc... SLS |
+| `1786844173723` | 8/15/2026, 8:44:43 PM | 69 | 461KB | #Oct Ring / Hypothetical  |
+| `1786845607312` | 8/15/2026, 7:45:40 PM | 100 | 589KB | #GLM 5.3 Update |
 | `1786836908956` | 8/15/2026, 4:48:21 PM | 72 | 1004KB | Is this legitimate? If so, the message should be a little more sympathetic and less techni |
 | `1786835771600` | 8/15/2026, 4:31:46 PM | 96 | 1327KB | #BLS  |
 | `1786817395147` | 8/15/2026, 3:56:47 PM | 404 | 2685KB | #Call Backs / VAPI |
@@ -91,13 +92,72 @@ Generated: 8/15/2026, 7:45:07 PM PT | window: last 72h | 82 tasks | index total 
 | `1786601835097` | 8/12/2026, 11:55:16 PM | 269 | 502KB | #Server Was Down |
 | `1786599361465` | 8/12/2026, 11:21:11 PM | 243 | 427KB | #Chat Widget |
 | `1786582217282` | 8/12/2026, 11:10:19 PM | 307 | 570KB | I'm getting reports that all websites are down can you take a look and let me know? |
-| `1786555167629` | 8/12/2026, 8:19:29 PM | 766 | 2987KB | #Externships |
 
 ---
 
 ## Per-window detail
 
-### `1786842592907` — 8/15/2026, 7:45:00 PM PT — 386 turns
+### `1786844918374` — 8/15/2026, 8:45:04 PM PT — 793 turns
+
+**Original task:**
+
+```
+Babysit Frankenstein Exeucotr for 90 minutes and resolve any issues that might come up. Do rule 317s on them and make Frankenstein LLM smarter.
+```
+
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #1189 [resolved], #12299, #1241, #12425, #12459, #12477, #1248, #1249, #1252, #1258, #12618, #127891, #1281, #12824, #12872, #12878, #1314, #13202, #14752, #15144, #1579, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16449, #16452, #16588, #166534, #1670 [resolved], #16778, #16802, #16803, #16839, #16844, #16851, #16852, #16868, #16922, #17246, #1744, #1779, #17798, #17854, #178684, #1798, #18135, #1828, #18312, #18326, #18357, #18442, #1850, #19490, #19567, #19747, #19750, #19967, #20042, #2055 [resolved], #2063, #2065, #20662, #2073, #20903, #20946, #20985, #21038, #2113, #2127, #2168, #22060, #22069, #22444, #22447, #22529, #2289, #2299, #23015, #23171, #23281, #23283, #23337, #23392, #23429, #2353 [resolved], #24430, #24431, #24526, #25042, #25082, #25097, #25125, #2517 [deployed], #2518, #25185, #2519, #2520, #25378, #25381, #25510, #25511, #25516, #25586, #25587, #25645, #25875, #25887, #25937, #25943, #25971, #26207, #26214, #26229, #26284, #26325, #26326, #26342, #26363, #26385, #26461, #26490, #26625, #26626, #26639, #26642, #26663, #26678, #26703, #26705, #26716 [executing], #26717 [proposed], #26718 [deployed], #26719 [proposed], #26720 [executing], #26721 [executing], #26722 [executing], #26723 [proposed], #26724 [executing], #26725 [proposed], #26726 [executing], #26730 [proposed], #26731 [proposed], #3957, #4536, #475569, #4906, #5034, #53462, #53483, #54119, #55522, #55961, #56044, #56298, #56568, #56754, #57287, #57824, #6106, #639503, #640503, #640750, #640977, #640979, #640981, #640982, #640995, #641019, #641020, #641022, #7142, #7149, #7561, #7925, #8157, #8162, #8281, #8318, #8321, #8563, #8598, #8764, #9086, #9168, #92400, #9306, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+decision as #26731 [proposed].
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786848590052 — executor babysit wrap 2026-08-15.
+
+Where we left off (verified 20:20 PT):
+- Executor rework-loop patch, doctor extension, EMAIL_SILENCE_GUARD suppression, and triage LLM path all live-verified earlier this session (corrections 8157-8168; bug-library rows 2517-2520).
+- Escalation cron serves only live tickets now; next automated runs 20:30/21:00 drain the remaining 330.
+- 12 real AI triage decisions vs 4 defaults since 19:40 (verified: orchestrator decision log read earlier this session).
+- L4b cicero-235b remains the known degraded tier (bug-library rows 86, 2055); spill path healthy per 20:15 probe.
+
+Open threads to drive next:
+1. #26731 [proposed] — Ruben decision pending: approve = implement 317-lite spec gate + post-deploy verify in the executor build pipeline.
+2. #26722 [executing] — dev_stage blanker still unfixed; ideas re-blanking within 40 min of doctor repair.
+3. #26716 [executing] — recovery sweep follow-through.
+4. #26717 [proposed], #26719 [proposed], #26723 [proposed] — Argus background task 360 offload triplicates; dedupe.
+5. #26725 [proposed] — schedule the 15-claim r317 truth eval cron.
+6. #26726 [executing] — get_event_detail MCP column repair in flight.
+7. #26720 [executing], #26721 [executing], #26724 [executing] — GPU disk guard, canary quarantine speed, deploy-gate false-block: executor drafting.
+8. Cicero-235b permanent repair = 3bit DWQ quant pull per bug-library row 86 (human-only decision — no idea).
+
+Reference IDs:
+- Ideas filed this session: #26716 [executing], #26717 [proposed], #26718 [deployed], #26719 [proposed], #26720 [executing], #26721 [executing], #26722 [executing], #26723 [proposed], #26724 [executing], #26725 [proposed], #26726 [executing], #26730 [deployed], #26731 [proposed] (all tags verified: reconcile_ideas 20:15-20:20 PT)
+- Corrections ingested: 8157-8168
+- Bug-library rows: 2517-2520 recorded; 86, 2055 cited for cicero
+- Files touched: /var/www/emtskills/lib/ticket_auto_escalation.php (+ auto backup), cron_executor chain (Fix A), executor doctor + crontab, triage LLM path (Fixes G-I)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Baseline: executor/orchestrator status, fleet health, active idea queue
+- [x] Fix A: executor rework loop killed (park at retry cap) — PATCH_A_OK + 18 retro-parked + live-verified on #26490
+- [x] Fix B: doctor extended + crontab repaired — A=13 B=50 repaired
+- [x] Fix C: EMAIL_SILENCE_GUARD suppression — PATCH_C_OK, 9 dup decisions rejected
+- [x] Fix D+E+F: ticket auto-escalation 4-layer repair + 20:00 wrong-population catch — status filter + 13,950-row backfill + 200 live tickets escalated 20:11 (#26730 [deployed])
+- [x] Fix G+H+I: triage LLM path (timeout 45→240s, max_tokens 768, WOPR-local origin) — real AI decisions since 19:40 (12 real / 4 defaults)
+- [x] Julia-120b restored + bigmac/claudia inventory corrected; canary 4/4 decode-live (verified 20:15)
+- [x] Sam Nelson ticket 25042 verified; Adarsh event 6409825 filed
+- [x] Ideas #26716-26726 + #26730 + #26731 filed; corrections 8157-8168 ingested; bug library 2517-2520
+- [x] Rule 317 reversal RCA + ingest (8163, 8162, 8168 G7 wrong-population) — done
+- [x] Probe event 6410136 explained: empty severity below triage threshold; path proven by 12 live real decisions
+- [x] Final fleet/triage 
+```
+
+### `1786842592907` — 8/15/2026, 8:44:52 PM PT — 513 turns
 
 **Original task:**
 
@@ -107,30 +167,31 @@ Generated: 8/15/2026, 7:45:07 PM PT | window: last 72h | 82 tasks | index total 
 How has rule 317 been doing since we lost checked? I think it's been about 12 to 16 hours.. Rule 317 with specifically created to make Frankenstein LLM better. The idea is that it forces truth and reversals in cases where things are untrue. So this is why I'm saying I just wanna make sure that this is being done properly incorrectly and I wanna know if there is anything else that we can do to make it even better so that we can improve Frankenstein LLM?
 ```
 
-**Ideas referenced:** #0000, #081020, #10108, #10740, #11741, #11781, #12345, #12346, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16224, #16265, #16304, #16844, #17130 [superseded], #17133, #17201, #17202, #17204, #17205, #17232, #17235, #17243, #17244, #17246, #17248, #17249, #17250, #17251, #17257, #17258, #178424, #178634, #178640, #178656, #178671, #1802, #1803, #1806, #1811, #18132 [deployed], #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18312, #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #1839, #19125, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #20251, #2299, #23171, #25097, #25151, #2516 [resolved], #25185, #2521 [resolved], #25796, #25797, #25798, #25888 [deployed], #25925, #25926, #25935, #26349, #26435 [deployed], #26591, #26593, #26696 [proposed], #26697 [proposed], #26699, #26700, #26710 [proposed], #5239, #5344, #9715, #9791
+**Ideas referenced:** #0000, #081020, #10108, #10740, #11741, #11781, #12345, #12346, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16224, #16265, #16304, #16844, #17130 [superseded], #17133, #17201, #17202, #17204, #17205, #17232, #17235, #17243, #17244, #17246, #17248, #17249, #17250, #17251, #17257, #17258, #178424, #178634, #178640, #178656, #178671, #1802, #1803, #1806, #1811, #18132 [deployed], #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18312, #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #1839, #19125, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #20251, #2299, #23171, #25097, #25151, #2516 [resolved], #25185, #2521 [resolved], #25796, #25797, #25798, #25888 [deployed], #25925, #25926, #25935, #26349, #26435 [deployed], #26591, #26593, #26696 [proposed], #26697 [proposed], #26699, #26700, #26710 [proposed], #26725 [proposed], #26800, #5239, #5344, #9715, #9791
 
 **Last PICKUP PROMPT:**
 
 ```
--mcp src/index.ts (localhost).
+n actually track against Opus.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #26710 — truth-is-smart engine: forward exemplars + best-of-N selector + truth eval harness.
+Pick up task rule-317-truth-engine, finishing #26725 end to end.
 
-Where we left off (verified 2026-08-15 19:42 PT):
-- All three #26710 artifacts LIVE on WOPR (/var/www/emtskills). ai_cache_pad.php emits TRUTH-SEEKING EXEMPLARS block from real r317_* rows; lib/r317_best_of_n_selector.php runs candidates through the doorman R317 gate; bin/r317_eval_harness.php scores 15 verifiable claims against runtime gold probes and correctly FAILED a fabricated idea count (gold=847 vs model=3652).
+Where we left off (verified 2026-08-15 19:53 PT):
+- #26710 [deployed] and #26696 [deployed] are shipped and live-verified (forward exemplars, best-of-N selector, eval harness, gate scoreboard, doorman R317 gate).
+- #26725 [proposed] is partially built on WOPR at /var/www/emtskills/bin/r317_eval_harness.php: r317_run_eval() and the PHP_SAPI guard exist, ask() parser is fixed for chat-completions. php -l clean.
+- The cleanup/cron finishing steps kept hitting rule-165 "Invalid JSON argument" client-side parse rejections on ssh_command, so the remaining work is untouched.
 
 Open threads to drive next:
-1. #26710 — Wire the eval harness to the REAL frankenstein-llm endpoint (http://127.0.0.1:11510/v1/responses) instead of the mock proxy: run `php bin/r317_eval_harness.php --endpoint=http://127.0.0.1:11510/v1/responses --model=frankenstein-llm` and record a baseline vs a single Opus run.
-2. #26710 — Expand the gold-data claim set from 15 to 30 claims (fleet/registry state, rule text, DB facts) so the benchmark is representative before the measured vs Opus comparison.
-3. #26710 — Enable the opt-in best-of-N path on one low-risk serving route (behind a flag, not default), measure realized pass-rate lift, then roll out wider.
+1. #26725 [proposed] — clean the duplicate CLI loop (swap it for one call to r317_run_eval()), then add r317_eval_history table + --history-append persistence, create LaunchAgent com.emsu.r317-truth-eval (04:30 PT), and run the first live nightly baseline against http://127.0.0.1:11510/v1/chat/completions.
+2. After the first baseline writes a real frankenstein-llm truth score, run the same claims against Opus and record both scores so the gap is measured, not asserted.
 
 Reference IDs:
-- Ideas: #26710 [deployed], #26696 [deployed]
+- Ideas filed: #26696 [deployed], #26710 [deployed], #26725 [proposed]
 - Incidents: #2516 [resolved], #2521 [resolved]
-- Files: /var/www/emtskills/lib/ai_cache_pad.php, /var/www/emtskills/lib/r317_best_of_n_selector.php, /var/www/emtskills/bin/r317_eval_harness.php, /var/www/emtskills/api/r317_eval_proxy.php, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts
+- Files touched: /var/www/emtskills/bin/r317_eval_harness.php, /var/www/emtskills/lib/r317_best_of_n_selector.php, /var/www/emtskills/lib/ai_cache_pad.php, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -138,56 +199,43 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786844918374` — 8/15/2026, 7:44:57 PM PT — 489 turns
+### `1786848590052` — 8/15/2026, 8:44:43 PM PT — 143 turns
 
 **Original task:**
 
 ```
-Babysit Frankenstein Exeucotr for 90 minutes and resolve any issues that might come up. Do rule 317s on them and make Frankenstein LLM smarter.
+Was this person's account wrongfully suspended? Can you check exam enforcement, etc... SLS and see what's going on? I think we had one like this earlier from a Fernando, but not sure if it's the same thing. We were supposed to have resolved that one systematically, but again, not sure. Could be a legitimate suspension, maybe not. CFA will need updating if not and likely a message back to the student. Give also a link to their admin_profile.php page
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12299, #12459, #12477, #12618, #127891, #12824, #12872, #12878, #13202, #14752, #1579, #16163, #16265, #16304, #16449, #16588, #166534, #16844, #16852, #16868, #16922, #17798, #17854, #18312, #18326, #18357, #18442, #1850, #19490, #19747, #19750, #19967, #20903, #20946, #2113, #22060, #22069, #22444, #22447, #22529, #2299, #23015, #23171, #23281, #23283, #23337, #23392, #23429, #24430, #24431, #24526, #25042, #25082, #25097, #25125, #2517, #2518, #2519, #2520, #25510, #25511, #25516, #25586, #25587, #25645, #25875, #25887, #25937, #25943, #25971, #26207, #26214, #26229, #26325, #26326, #26342, #26363, #26385, #26461, #26490, #26625, #26626, #26642, #26663, #26678, #26703, #26705, #26716, #3957, #475569, #4906, #53462, #53483, #54119, #55522, #55961, #56044, #56298, #56568, #56754, #57287, #57824, #6106, #639503, #640503, #640750, #640977, #640979, #640981, #640982, #640995, #641019, #641020, #641022, #7561, #8157, #8162, #8318, #8764, #9086, #9168, #92400, #9306, #9339
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786845607312` — 8/15/2026, 7:44:31 PM PT — 99 turns
-
-**Original task:**
-
-```
-#GLM 5.3 Update
-
-How can we update our GLM 5.2 to GLM 5.3 both local and cloud?
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #15930, #16163, #16265, #16304, #16732, #16844, #18312, #18326, #19338, #1993, #20005, #20040, #20054, #20068, #20069, #20082, #20245, #20247, #20264, #20272, #20291, #20297, #20302, #20311, #2073, #2299, #23133, #23171, #2328, #2340, #2341, #2343, #2344, #25097, #2511, #2513, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26207, #26209, #26211, #26214 [executing], #26215 [executing], #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26638 [executing], #26639 [executing], #26642 [executing], #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #3261, #3319, #3346
+**Ideas referenced:** #15637, #18626, #18693, #18713, #19814, #2072, #23304, #2371, #24977, #25455, #25456, #25534, #26727 [proposed], #26728 [proposed], #26738 [proposed], #4929, #7265, #7753, #7990, #9086, #9168, #9306, #9339
 
 **Last PICKUP PROMPT:**
 
 ```
-itself (deployed and verified)
+systemic chat-handoff bug fix)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #26711 / #26712 / #26713 / #26715 — GLM 5.2 → 5.3 upgrade (cloud + local) + release tracking.
+Pick up Zane Turner reinstatement — July 19 final attempts were lost to an EMSU proctoring failure (provable), recommend re-proctor/reinstate not dismissal; CFAs implicated.
 
-Where we left off (verified 2026-08-15 19:13 PT):
-- GLM-5.3 is server-side GATED everywhere: Zhipu returns error 1220 "no permission" for our key (glm-5.2 control = 200), OpenRouter not listed, HF zai-org 401. Cloud is un-wireable until Zhipu whitelists. Local un-buildable until zai-org publishes weights.
-- Reminder/tracker DEPLOYED + verified: /usr/local/bin/emsu_glm53_release_tracker.sh, cron /etc/cron.d/emsu-glm53-release-tracker (07:05 PT daily), event 6409723 recorded, state zcloud=0 or=0 hf=0 (401). Fires high-sev on any gate-clear + 2-week card on/after 2026-08-29.
-- Full upgrade plan prepped: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md.
-- Ideas: #26711 [proposed] cloud whitelist, #26712 [proposed] local ring, #26713 [proposed] cutover, #26715 [deployed] tracker.
+Where we left off (verified 2026-08-15 8:30 PM PT):
+- Zane Turner 26815W-37 / uid 52285 / CA c41 / Union City Accelerated: failed 2026-08-03, suspended, payment settled $2,145, no integrity violations. Final = 3 synthetic 0.0 attempts (epoch 1784530799, Jul 19 23:59:59) from didactic_deadline_enforcement; all enforcement rows email_sent=0 (never notified).
+- SMOKING GUN: TKT-20260719-F55B9200 (chat #7990 full transcript). Zane showed up Jul 19 09:15 PT for his online final; Zoom email NEVER sent (0 outbound, 0 bounces), no PROCTOR_REQUEST ever logged, no host/proctor ever joined for an hour, proctoring book_session = "no sessions available". RUBEN investigation on that ticket confirmed root cause = handoff automation failed to escalate + send Zoom email. Auto-fail stamped same evening.
+- 08-04 review (TKT-20260803-D9A48421) recommended dismissal WITHOUT the above transcript. Verdict revised: first attempt loss is EMSU fault; dismissal is partly wrongful.
+- Today's requests: TKT-20260815-8A29595A (reinstatement; skills final scheduled 2026-08-16 Union City, threatens tuition recovery), TKT-20260815-FAE2343D (holding email, RC-11 tracked).
+- Admin link: https://emsuniversity.com/emtskills/admin_profile.php?id=26815W-37
 
 Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26711 — Ruben contacts Zhipu to whitelist key 802fd27e... for glm-5.3; confirm via raw curl (expect 200). Then wire LiteLLM glm-5.3 + glm-5.3-openrouter and run bake-off.
-2. #26712 — When tracker fires HF gate-clear (hf=1): download zai-org GLM-5.3/FP8, AWQ 4-bit quant, single-box vLLM validate (glm47 tool parser / glm45 reasoning), then PP=6 Hex ring relaunch via GLM52 #1993 recipe.
-3. #26713 — When bake-off + soak pass: flip registry tier L3/L4g, router_hook GLM-first target, FRANK_BOX_CAPACITY 8210; retire glm-5.2 after 48h; update trackers with gate-cleared timestamps.
-4. #26715 — Monitor: verify cron fires daily (check orchestrator_event_log source=glm53-release); if no rows in 48h, check /var/log/cron + run script manually.
+1. #26738 [proposed] — Drive Jon's exec reinstatement decision to RE-PROCTOR/REINSTATE the final (excuse Jul 19 attempt #1 for proctoring failure). Get a working Zoom + proctor scheduled for the skills final tomorrow and send the invitation (email_sent audit). Respond to TKT-20260815-8A29595A.
+2. #26727 [proposed] — Update/close the prior "uphold dismissal, no transfer" recommendation: superseded by #26738's proctoring-failure evidence. Reconcile into the reinstatement decision.
+3. #26728 [proposed] — Sweep section 26815W + adjacent for students auto-failed by didactic_deadline synthetic-0 attempts (timestart=timefinish) who actually showed for a proctored session that EMSU failed to host.
+4. Systemic (file if not already): fix the chat-handoff proctor escalation bug — bot repeated broken Zoom link + "no passcode" 8x, falsely promised proctor 3x, logged no PROCTOR_REQUEST, never sent Zoom email. Rule-161 flagged 15 open + 111 resolved similar.
 
 Reference IDs:
-- Ideas filed: #26711, #26712, #26713, #26715
-- Files touched: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md, /usr/local/bin/emsu_glm53_release_tracker.sh, /etc/cron.d/emsu-glm53-release-tracker
-- Event log: 6409723 (tracker self-test)
+- Tickets: TKT-20260719-F55B9200, TKT-20260815-8A29595A, TKT-20260815-FAE2343D, TKT-20260803-D9A48421, TKT-20260601-519E45CC, TKT-20260603-26E6BD0F
+- Ideas filed: #26727, #26728, #26738
+- Files touched: none (read-only investigation); evidence in moodle_c_live quiz_attempts/grade_grades_history and /var/www/emtskills/lib/rc10_shared.php
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -195,7 +243,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786844173723` — 8/15/2026, 6:58:41 PM PT — 26 turns
+### `1786844173723` — 8/15/2026, 8:44:43 PM PT — 69 turns
 
 **Original task:**
 
@@ -213,42 +261,58 @@ Read and reference below as well as the NVIDIA forums, forumns, reddit, our bug 
 Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> 
 ```
 
-**Ideas referenced:** #1130, #1131, #11945, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #1779, #1798, #1828, #19567, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2294, #2307, #2314, #23169, #24217, #25378, #25381, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #26209, #26284 [executing], #26400, #26403, #26706 [proposed], #26707 [proposed], #26709 [proposed], #6826, #7142, #7149
+**Ideas referenced:** #1130, #1131, #11945, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17130 [superseded], #17246, #1744, #1754, #1755, #1779, #1798, #18132 [deployed], #1828, #19125, #19173, #19567, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2116, #2127, #2168, #2294, #2307, #2314, #23169, #24217, #25378, #25381, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25888, #26209, #26284 [executing], #26400, #26403, #26435, #26591, #26593, #26706 [proposed], #26707 [proposed], #26709 [proposed], #50424, #6826, #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
-26709 to track the evaluation.
+router (context, VEMC, SSS/LoRA-v2, fallback order, lanes)
+- [ ] Final report + PICKUP PROMPT
+</task_progress>
+</execute_command>
+```
+
+### `1786845607312` — 8/15/2026, 7:45:40 PM PT — 100 turns
+
+**Original task:**
+
+```
+#GLM 5.3 Update
+
+How can we update our GLM 5.2 to GLM 5.3 both local and cloud?
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #15930, #16163, #16265, #16304, #16732, #16844, #18312, #18326, #19338, #1993, #20005, #20040, #20054, #20068, #20069, #20082, #20245, #20247, #20264, #20272, #20291, #20297, #20302, #20311, #2073, #2299, #23133, #23171, #2328, #2340, #2341, #2343, #2344, #25097, #2511, #2513, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26207, #26209, #26211, #26214 [executing], #26215 [executing], #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26638 [executing], #26639 [executing], #26642 [executing], #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #3261, #3319, #3346
+
+**Last PICKUP PROMPT:**
+
+```
+ iMessage alert automatically.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task Julia/Claudia TP=2 model candidates. Verdict: Qwen3-235B-A22B (MoE) is the one to pilot (only candidate with a chance to be faster than the current 120B while upgrading quality); Llama-3.1-405B is the proven-but-slower fallback; DeepSeek 671B does not fit on 2 boxes. Filed #26709 to track the MoE evaluation.
+Pick up task GLM 5.2 → 5.3 upgrade + release tracker (add SMS/email channels).
 
-Where we left off (verified 2026-08-15 18:57 PT):
-- Julia+Claudia = gpt-oss-120b TP=2 (2x DGX Spark GB10, 256GB unified, ~200-230GB usable after TP=2 + reserved). Current 20-37 tok/s, ~300ms TTFB.
-- Model fit math: Qwen3-235B-A22B (MoE, ~22B active, ~120-140GB at 4-bit) fits and is the only faster-or-equal candidate. Llama-3.1-405B-FP4 (~230GB) fits tight and was PROVEN on 2x DGX Spark (Augustus+Tiberius ran it) but is dense = slower decode. DeepSeek-V3/R1 671B (~350-400GB) does NOT fit.
-- Idea filed this session: #26709 [proposed] (Qwen3-235B-A22B on Julia+Claudia TP=2).
+Where we left off (verified 2026-08-15 19:45 PT):
+- Reminder tracker deployed + verified: /usr/local/bin/emsu_glm53_release_tracker.sh, cron /etc/cron.d/emsu-glm53-release-tracker (daily 07:05 PT). On gate-clear it fires iMessage to Ruben (ruben_message_queue chat_id 55) + event log. Self-test event 6409723. State: all 3 gates still closed (`zcloud=0 or=0 hf=0 (401)`).
+- GLM-5.3 is server-side GATED everywhere: Zhipu error 1220 (key not whitelisted), OpenRouter not listed, HF zai-org 401. Full plan in /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md.
+- Truth-checked the alert channels: iMessage PROVEN (6451 sent rows), SMS/Twilio NOT configured (no provider keys in system_config/config), email Postfix up but no verified Ruben address.
 
 Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26709 [proposed] - Verify vLLM block-sparse/qwen3-moe support on the Julia+Claudia vLLM TP=2 Ray stack, download 4-bit MoE weights to one box, stand up a NON-production test serve, and benchmark decode vs gpt-oss-120b. Promote to the live 120B slot ONLY if decode is measurably faster. Do not touch the working hex ring (rule 157).
-2. #26707 [proposed] - If a 405B or ring rebuild is ever considered in parallel, first reconcile the 8 physical GB10 identities; do not sacrifice the 120B fast lane for ring capacity.
+1. #26715 [deployed] — Extend tracker with SMS + email channels once Ruben supplies Twilio SID/token/from-number and/or a verified email address. Add the send calls into emsu_glm53_release_tracker.sh next to the existing queue_msg().
+2. #26711 [proposed] — Ruben contacts Zhipu to whitelist key 802fd27e... for glm-5.3; confirm via raw curl (expect 200). Tracker fires automatically on success.
+3. #26712 [proposed] — When tracker fires HF gate-clear (hf=1): download zai-org GLM-5.3/FP8, AWQ 4-bit quant, single-box vLLM validate (glm47 tool parser / glm45 reasoning), then PP=6 Hex ring relaunch via GLM52 #1993 recipe.
+4. #26713 [proposed] — When bake-off + soak pass: flip registry tier L3/L4g, router_hook GLM-first target, FRANK_BOX_CAPACITY 8210; retire glm-5.2 after 48h; update trackers with gate-cleared timestamps.
 
 Reference IDs:
-- Ideas filed: #26709 [proposed] (this session), #26706 [proposed], #26707 [proposed] (earlier this session)
-- Files touched: none (read-only analysis)
-- Docs read: /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md, GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md (referenced), fleet_inventory (live)
+- Ideas filed: #26711, #26712, #26713, #26715
+- Files touched: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md, /usr/local/bin/emsu_glm53_release_tracker.sh, /etc/cron.d/emsu-glm53-release-tracker
+- Event log: 6409723 (tracker self-test)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-<task_progress>
-- [x] Correct Julia/Claudia = TP=2 120B pair (not ring members)
-- [x] Answer 2xPP=4 tradeoff (loses fast 120B lane = not worthwhile) + success probability
-- [x] Enumerate models that fit 2x GB10 (256GB) via weight math
-- [x] Give should-we verdict + file Qwen3-235B-MoE candidate idea
-- [x] Final recommendation + PICKUP PROMPT
-</task_progress>
 </attempt_completion>
 ```
 
@@ -3185,55 +3249,3 @@ I'm getting reports that all websites are down can you take a look and let me kn
 **Ideas referenced:** #10740, #15919, #178679, #2331 [deployed], #25185, #25999, #26007 [executing], #26008 [executing], #26009 [executing], #26015 [rejected], #26016 [rejected], #26017 [executing], #26019 [executing], #26023 [executing], #26024 [executing], #26068 [executing], #26069 [deployed], #26070 [deployed], #5574
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786555167629` — 8/12/2026, 8:19:29 PM PT — 766 turns
-
-**Original task:**
-
-```
-#Externships
-
-Let's use tags to organize these: https://emsuniversity.com/emtskills/notifications/jobs.php 
-
-Also, I'm sure there's many more than just the ones that you have listed here. I need to see a timeline with regard to the student lifecycle of how that's gonna work out per student. For example the email fires off X amount of days before enrollment amount of days after enrollment, etc. X amount days after the course ends, etc. etc. The idea is that I can see them and track them throughout the entire SLS. You can do me a little arrow going back-and-forth that I can just basically slide 
-```
-
-**Ideas referenced:** #075985, #081020, #10004, #128126, #131967, #16156, #166534, #16863, #178649, #2196, #2306, #2311, #2323, #24526, #24765, #25156, #25157 [awaiting_review], #25185, #25246 [awaiting_review], #25529 [awaiting_review], #25537, #25560, #25608, #25623, #2563, #25632, #25633, #25635, #25667, #25669, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25796, #25797, #25798, #25803 [proposed], #25804 [deployed], #25812, #25821 [proposed], #25822 [deployed], #25848 [executing], #25889 [ready_for_review], #25916 [awaiting_review], #25932 [deployed], #25950 [awaiting_review], #25971, #25973 [ready_for_review], #25974, #25975, #25976, #25984, #25985, #25986, #25990, #25995, #26001 [ready_for_review], #26002 [ready_for_review], #26003, #26027 [awaiting_review], #26028 [awaiting_review], #26034 [deployed], #334155, #348529, #3498, #38984, #4338, #475569, #6366, #64748, #9222, #92400, #9679
-
-**Last PICKUP PROMPT:**
-
-```
-eployed] and #26028 [deployed]
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786491116649 (Cline task id, not an idea) - externship eligibility gate, 5 triggers all live.
-
-Where we left off (verified 2026-08-12 8:18 PM PT):
-- Gate v5 LIVE at lib/externship_eligibility_gate.php (v4 at .bak-v4-20260812), php -l clean. Five triggers: progress >= 80 via ProgressCalculator, Final Exam (Chapters 1-41) >= 80 from Moodle, NREMT or CA psychomotor recorded, didactic date passed, NREMT testing dates remaining > 0 via StatusCalculator.
-- Trigger 4 is now BLOCKING. It reads StatusCalculator::compute()['days'], the same derived value admin_profile.php line 691 renders (60 days from scheduled didactic completion). Certified short-circuit added so NREMT-cleared students are not blocked by a closed window.
-- Verified: 26904FT-03 blocked at days=0 (Ruben's test case), 26513FT-35 days=8, 26817FT-53 / 26617FT-30 / 26417FT-15 / 26915W-30 days=36 all blocked on progress, 25725FT-03 certified and eligible.
-- CENSUS v5: population 3,384, ELIGIBLE 706, NOT ELIGIBLE 2,678. Blockers overlapping: progress 2,457, final exam 1,888, psychomotor 1,952, didactic 1,247, NREMT dates zero 729. Among eligible: 88 via override, 186 certified, 27 placed, 168 already requested. REAL QUEUE 429.
-- Override scopes: all, final_exam, psychomotor, didactic, nremt_dates, progress. Jon's exam_override_requests force_approved still clears the path.
-
-Open threads to drive next:
-1. #25822 [deployed] - Extend the staff assignment queue to exclude already-certified, already-placed and already-requested students so Vicky sees the 429 who need a ride-along, not all 706 who meet criteria.
-2. #26027 [awaiting_review] - Build the watchdog for queries stuck in Writing-to-binlog plus a guard against duplicate stacked ALTERs.
-3. #26002 [awaiting_review] - Real answered/unanswered email signal, route substantive externship questions to the CFA, reply to Andrew Sanchez.
-4. #25973 [awaiting_review] - Remaining auto-assign build: geocoding for distance matching, the confirm-or-auto-place timeout for Vicky.
-5. #25950 [awaiting_review] - Close the last bypass: import_wpforms_simple.php inserts ExternshipRequest rows with no cutoff and no eligibility gate.
-6. #25916 [awaiting_review] - Schedule-change disclaimer on remaining touchpoints, pending wording approval.
-7. #26028 [deployed] - Trigger 4 blocking via StatusCalculator, this session.
-8. #26034 [deployed] - Trigger 5 progress gate via ProgressCalculator.
-9. #26001 [deployed] - Final-exam source wired, RCA closed.
-
-Reference IDs:
-- Ideas: #26028 [deployed], #26034 [deployed], #26001 [deployed], #25822 [deployed], #25932 [deployed], #26027 [awaiting_review], #26002 [awaiting_review], #25973 [awaiting_review], #25950 [awaiting_review], #25916 [awaiting_review], #25889 [awaiting_review]
-- Student slugs verified (not ideas): 26904FT-03, 26513FT-35, 26817FT-53, 26617FT-30, 26417FT-15, 26915W-30, 25725FT-03
-- Files touched: /var/www/emtskills/lib/externship_eligibility_gate.php (v5), /var/www/emtskills/externship/my_eligibility.php, /var/www/emtskills/externship/student_request_form.php, /var/www/emtskills/externship/student_request_form_old.php, /var/www/emtskills/lib/ExternshipKnowledgePack.php, /var/www/emtskills/docs/EXTERNSHIP_FINAL_EXAM_GATE_RCA_20260812.md, table externship_eligibility_overrides, ai_knowledge_packs id=1
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════
-```

@@ -6,10 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/15/2026, 5:45:06 PM PT | window: last 72h | 83 tasks | index total 747 (parsed 0, cached 747)
+Generated: 8/15/2026, 6:45:07 PM PT | window: last 72h | 82 tasks | index total 749 (parsed 2, cached 747)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1786842592907` | 8/15/2026, 6:44:56 PM | 177 | 1386KB | #Rule 317 |
+| `1786844173723` | 8/15/2026, 6:43:41 PM | 16 | 180KB | #Oct Ring / Hypothetical  |
 | `1786836908956` | 8/15/2026, 4:48:21 PM | 72 | 1004KB | Is this legitimate? If so, the message should be a little more sympathetic and less techni |
 | `1786835771600` | 8/15/2026, 4:31:46 PM | 96 | 1327KB | #BLS  |
 | `1786817395147` | 8/15/2026, 3:56:47 PM | 404 | 2685KB | #Call Backs / VAPI |
@@ -90,13 +92,83 @@ Generated: 8/15/2026, 5:45:06 PM PT | window: last 72h | 83 tasks | index total 
 | `1786555167629` | 8/12/2026, 8:19:29 PM | 766 | 2987KB | #Externships |
 | `1786585633124` | 8/12/2026, 7:03:48 PM | 46 | 122KB | Remove the note about EMS university being state approved accredited since 2003. You can j |
 | `1786556136912` | 8/12/2026, 6:56:25 PM | 719 | 1884KB | #Frankenstein-LLM Improvements |
-| `1786570575332` | 8/12/2026, 6:39:15 PM | 284 | 1766KB | These emails are choking down my inbox still. Can you just put them on a webpage instead a |
-| `1786582351264` | 8/12/2026, 6:03:32 PM | 44 | 189KB | I'm getting reports that all websites are down can you take a look and let me know? |
-| `1786554076003` | 8/12/2026, 5:57:54 PM | 238 | 1270KB | ## Executor IS Working - Ideas Being Built Right Now |
 
 ---
 
 ## Per-window detail
+
+### `1786842592907` — 8/15/2026, 6:44:56 PM PT — 177 turns
+
+**Original task:**
+
+```
+#Rule 317
+
+How has rule 317 been doing since we lost checked? I think it's been about 12 to 16 hours.. Rule 317 with specifically created to make Frankenstein LLM better. The idea is that it forces truth and reversals in cases where things are untrue. So this is why I'm saying I just wanna make sure that this is being done properly incorrectly and I wanna know if there is anything else that we can do to make it even better so that we can improve Frankenstein LLM?
+```
+
+**Ideas referenced:** #0000, #10108, #10740, #11741, #11781, #12345, #12346, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16224, #16265, #16304, #16844, #18312, #18326, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #20251, #2299, #23171, #25097, #25151, #25185, #25888 [deployed], #25925, #25926, #25935, #26349, #26435 [deployed], #26696 [proposed], #26697 [proposed], #5344
+
+**Last PICKUP PROMPT:**
+
+```
+le 140 live-header probe\"}\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #26697 - json flip test [deployed]\n\nWhere we left off (verified 2026-08-15 18:41 PT):\n- structured flip accepted.\n\nOpen threads to drive next:\nNone, all work completed this session.\n\nReference IDs:\n- Ticket: none\n- Ideas filed: #26696 [deployed]\n- Files touched: none\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════",
+  "task_id": "smoke-json-flip-accept"
+}
+</arguments>
+</use_mcp_tool>
+```
+
+### `1786844173723` — 8/15/2026, 6:43:41 PM PT — 16 turns
+
+**Original task:**
+
+```
+#Oct Ring / Hypothetical 
+
+Hypothetical only but Curious if you think it would be worthwhile to convert Julia/Claudia to combine with Hex to make Oct GLM 5.2 ring. If currently we have 671 tok/sec on 6 boxes, what can we do with 8? Give me both options: 
+
+1. 2 - 4 Ring setups
+2. 1 - 8 Ring setup
+
+Read and reference below as well as the NVIDIA forums, forumns, reddit, our bug library and below. What would be the path to get there to get the most tok/sec interactive and concurrent? 
+
+--
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> 
+```
+
+**Ideas referenced:** #1130, #1131, #11945, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #1779, #1798, #1828, #19567, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2294, #2307, #2314, #23169, #24217, #25378, #25381, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #26209, #26284 [executing], #26400, #26403, #26706 [proposed], #26707 [proposed], #6826, #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+ication item before the pilot.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task Oct-ring hypothetical - 2xPP=4 vs 1xPP=8 for GLM-5.2. Recommendation complete (#26706); the remaining work is the physical inventory reconcile that gates all of it (#26707).
+
+Where we left off (verified 2026-08-15 18:42 PT):
+- Read /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md (6-box PP=6 ring, fixed-rate ~12-18 tok/s decode, per-stream ~1-1.3 tok/s, 6.2s TTFB, 15-22s prefill gaps)
+- Read fleet_inventory (14 hosts). Key finding: julia row and augustus row resolve to the same physical box spark-6ae6, WG 10.100.0.15, LAN 192.168.1.190, contradicting the tracker's Augustus=rank-1 spark-e3b2
+- Decided: 2xPP=4 wins on interactive + concurrent; 1xPP=8 is worse than PP=6 on latency and only helps fit a bigger model
+- Filed #26706 [proposed] evaluation idea and #26707 [proposed] inventory-reconcile idea
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26707 [proposed] - Reconcile the 8 physical DGX Spark GB10s read-only over SSH (Cato :2204, Cesar :2203, Julia :2205, Claudia :2206, Tiberius/Pompeii/Marcus via jump). Confirm whether Augustus is its own box (spark-e3b2) or the Julia box (spark-6ae6), and whether 8 distinct boxes exist. Cross-ref lspci MAC. Write one authoritative 8-row mapping table.
+2. #26706 [proposed] - Paper-benchmark PP=4 vs PP=8 using the counter method, then pilot ONE PP=4 ring alongside the live Hex at a different port/master_addr. Green-light only if per-stream decode beats the PP=6 baseline ~1.5x.
+
+Reference IDs:
+- Ideas filed: #26706 [proposed], #26707 [proposed]
+- Files touched: none (read-only)
+- Docs read: /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md, fleet_inventory (live)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1786836908956` — 8/15/2026, 4:48:21 PM PT — 72 turns
 
@@ -3173,122 +3245,5 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1786570575332` — 8/12/2026, 6:39:15 PM PT — 284 turns
-
-**Original task:**
-
-```
-These emails are choking down my inbox still. Can you just put them on a webpage instead as a card link on the reports.php page with typical search, pagination, etc... 
-
-Please do that and remove them all from my inbox so i can actually see the improtant messages coming through that I may be missing. 
-
-A summary of ideas daily in the morning is fine, but this is ridiculous. I have a crap ton of spam in the inboxes and I can't sort though and I need to be able to do that asap
-```
-
-**Ideas referenced:** #059669, #0891, #1100, #1233, #127881, #1368, #13757, #14572, #15965, #15969, #15996, #16069, #16817, #16828, #177851, #18178, #18180, #186576, #18944, #18951, #23133, #2321, #23378, #23477, #23483, #23945, #23954, #25042, #25194, #25551, #25602, #2563, #25871, #25889 [ready_for_review], #25909, #25914, #25931, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [deployed], #25944 [deployed], #25988 [proposed], #3098, #3176, #334155, #360135, #360152, #374151, #4458, #4747, #4962, #5451, #6053, #64748, #6979, #7175, #7189, #8798, #9889
-
-**Last PICKUP PROMPT:**
-
-```
-s.id=25988` marked `deployed`.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — EMSU inbox-spam kill: route cron digests to reports.php webpage (task #25988 follow-on).
-
-Where we left off (verified 2026-08-12 18:38 PT):
-- `internal_digest_log` captures CLI sendEmail() to rmajor/ruben/info@ — 85 rows/24h across 10 sources.
-- `routes/internal_digest_log.php` live (search/pagination/read-toggle); "📬 Automated Digests" card registered in reports.php.
-- idea-delivery-watchdog cron switched `*/30` → `0 8 * * *`; new `emsu-internal-digest-summary` at `5 8 * * *` (idea #25988 deployed).
-- 193,358 inbox messages archived to `INBOX.Automated-Digests`; inbox 275,427 → 82,137.
-
-Open threads to drive next:
-1. #25988 [deployed] — Tomorrow 08:05 confirm exactly ONE summary email arrives (check `/var/log/emsu-internal-digest-summary.log` and `email_outbound_log` rows), and confirm zero "Idea Watchdog" / "Idea Delivery Digest" / "AI Watchdog" / "EA Watchdog" / "Artemis Governor" emails hit the inbox.
-2. #25988 [deployed] — Re-archive any backlog that still slips through classification (e.g. WOPR Bot Attack, Moodle Duplicate Name) into the existing `.Automated-Digests` folder using subject patterns, if Ruben wants inbox further down.
-3. (human-only decision — no idea) — Whether to widen capture to ALL CLI mail (not just Ruben/info@ inboxes) so no internal cron digest ever reaches ANY staff inbox; currently outbound student-facing transactional mail is deliberately excluded.
-
-Reference IDs:
-- Ideas filed: #25988 (deployed)
-- Files touched: lib/internal_digest_capture.php, routes/internal_digest_log.php, routes/reports.php, lib/mailer.php, cron/cron_daily_internal_digest_summary.php, /etc/cron.d/idea-delivery-watchdog, /etc/cron.d/emsu-internal-digest-summary
-- DB: internal_digest_log table; orchestrator_ideas.id=25988 → deployed
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786582351264` — 8/12/2026, 6:03:32 PM PT — 44 turns
-
-**Original task:**
-
-```
-I'm getting reports that all websites are down can you take a look and let me know?
-```
-
-**Ideas referenced:** #178679
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786554076003` — 8/12/2026, 5:57:54 PM PT — 238 turns
-
-**Original task:**
-
-```
-## Executor IS Working - Ideas Being Built Right Now
-
-While you are in there, is executor running efficiently? ### dev_stage=idle means "in queue, ready to be picked up" - NOT "doing nothing"
-
-The executor pipeline stages:
-1. `idle` = waiting in queue, ready to be picked up
-2. `auditing` = executor picked it up, generating spec
-3. `drafting` = spec done, generating code
-4. `coding` = code generated, writing files
-5. `testing` = running tests
-6. `ready_for_review` = done, waiting for review
-
-### Current Status (08:45 PT)
-
-| Idea | dev_stage | What's Happening |
-|---|---|---|
-| #25747 | auditing
-```
-
-**Ideas referenced:** #11945, #12430, #12597, #1281, #1309, #1314, #14752, #15333, #15367, #15652, #16523, #1754, #1755, #17913, #18135, #18357, #18395, #18442, #1850, #19079, #19325, #19338, #19435, #19458, #19490, #19491, #19494, #19503, #19504, #19509, #19629, #19643, #19661, #19670, #19684, #1989, #20350, #20408, #2043, #20517, #2076, #20903, #2113, #2254, #2258, #22680, #22770, #22840 [approved], #2294, #2301, #2307, #2314, #23169 [awaiting_review], #23281, #23484 [executing], #24172, #24217, #24635, #24645, #24963, #25125 [awaiting_review], #25165, #25185, #25612 [executing], #25634 [executing], #25646, #25746 [awaiting_review], #25747 [approved], #25754 [rejected], #25755 [approved], #25757 [approved], #25759 [approved], #25764 [approved], #25765 [approved], #25811 [executing], #25812 [approved], #25887 [proposed], #25888, #25890 [proposed], #3541, #3953, #3957, #4536, #5029, #5034, #57382, #6826, #7925, #8281, #8321, #8563, #8598, #9222, #9235
-
-**Last PICKUP PROMPT:**
-
-```
-his session without that gate.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25812 - rebase GLM ring change order and deploy watchdog #23169 first
-
-Where we left off (verified 2026-08-12 5:55 PM PT):
-- 15->32 not applied: #25755 [awaiting_review] still ready_for_review, never deployed (DB read 5:55 PM).
-- Prerequisite #23169 [awaiting_review] (un-pause watchdog) still ready_for_review, not deployed.
-- #25890 [proposed] still proposed/idle.
-- #25887 [deployed] complete (orphan-requeue pass live, DB stamped deployed 14:34).
-- Ring topology live: PP=6, nodes Cato 192.168.1.115 plus 5 peers, sources_agree=true.
-
-Open threads to drive next:
-1. #23169 [awaiting_review]: deploy the un-paused watchdog first (supervisor pause, cron, keep_warm log writability) - the prerequisite for the ring change.
-2. #25755 [awaiting_review]: only after #23169, then the max_num_seqs 15->32 change with a 6-node relaunch.
-3. #25890 [proposed]: after #25755, the admission ceiling step (EMSU_GLM_ADMISSION_CEILING 12 to 20, env-var, no restart), then the config-driven executor floor.
-
-Reference IDs:
-- Ideas filed/updated: #25887 [deployed], #23169 [awaiting_review], #25755 [awaiting_review], #25890 [proposed]
-- Files touched: /var/www/emtskills/cron/cron_executor_starvation_demote.php (backup .bak-25887-20260812-104839)
-- Docs referenced: /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md, /var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```

@@ -204,6 +204,28 @@ function initSchema(db: Database.Database): void {
       looked_up_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ','now'))
     );
 
+    CREATE TABLE IF NOT EXISTS gate_blocks (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      task_id TEXT,
+      rule_id TEXT NOT NULL,
+      violation_type TEXT NOT NULL,
+      violation_detail TEXT,
+      blocked_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ','now')),
+      resolved INTEGER DEFAULT 0
+    );
+    CREATE INDEX IF NOT EXISTS idx_gate_blocks_rule ON gate_blocks(rule_id, violation_type);
+    CREATE INDEX IF NOT EXISTS idx_gate_blocks_time ON gate_blocks(blocked_at);
+    CREATE INDEX IF NOT EXISTS idx_gate_blocks_task ON gate_blocks(task_id);
+
+    CREATE TABLE IF NOT EXISTS gate_heartbeat (
+      id INTEGER PRIMARY KEY CHECK (id = 1),
+      last_validated_at TEXT,
+      last_result TEXT,
+      last_pass INTEGER DEFAULT 0,
+      total_validations INTEGER DEFAULT 0,
+      total_blocks INTEGER DEFAULT 0
+    );
+
     CREATE TABLE IF NOT EXISTS meta (
       k TEXT PRIMARY KEY,
       v TEXT
@@ -390,6 +412,119 @@ function logLookup(rule_id: string | null, slug: string | null, query: string | 
 function violationCount(rule_id: string): number {
   const r = db.prepare(`SELECT COUNT(*) AS n FROM violations WHERE rule_id = ?`).get(rule_id) as { n: number };
   return r.n;
+}
+
+// ─── R317 / #26696: GATE SCOREBOARD (DB-backed, observable) ────────────────
+// The validator previously wrote results to (a) the local `violations` table
+// under a HARDCODED rule_id "91" and (b) an ephemeral /tmp gate file. Neither
+// surfaced WHICH gate fired or how often, so enforcement felt silent ("we lost
+// check"). These helpers write every block to a queryable table with the real
+// rule_id + violation_type, and stamp a heartbeat so "the check is on" is
+// provable at any second from one row.
+function classifyRuleId(violationType: string): string {
+  const vt = violationType.trim().toUpperCase();
+  if (/^R317/.test(vt)) return "317";
+  if (/^R321/.test(vt)) return "321";
+  if (/^R29_/.test(vt)) return "29";
+  if (/^R120_/.test(vt)) return "120";
+  if (/^R01_/.test(vt)) return "01";
+  if (/^R02_/.test(vt)) return "02";
+  if (/^R91/.test(vt)) return "91";
+  // Everything else is a rule-91 structural gate variant.
+  return "91";
+}
+
+function recordGateBlocks(task_id: string, failures: string[]): void {
+  if (failures.length === 0) return;
+  try {
+    const ins = db.prepare(
+      `INSERT INTO gate_blocks (task_id, rule_id, violation_type, violation_detail) VALUES (?,?,?,?)`
+    );
+    const tx = db.transaction((rows: [string, string, string, string][]) => {
+      for (const r of rows) ins.run(r[0], r[1], r[2], r[3]);
+    });
+    const rows: [string, string, string, string][] = [];
+    for (const f of failures) {
+      const type = (f.split(":")[0] || "UNKNOWN").trim().slice(0, 100);
+      const detail = f.slice(0, 2000);
+      rows.push([task_id || "unknown", classifyRuleId(type), type, detail]);
+    }
+    tx(rows);
+  } catch {
+    /* scoreboard write must never change the validation verdict */
+  }
+}
+
+function updateGateHeartbeat(pass: boolean): void {
+  try {
+    db.prepare(
+      `INSERT INTO gate_heartbeat (id, last_validated_at, last_result, last_pass, total_validations, total_blocks)
+       VALUES (1, strftime('%Y-%m-%dT%H:%M:%SZ','now'), ?, ?, 1, ?)
+       ON CONFLICT(id) DO UPDATE SET
+         last_validated_at = strftime('%Y-%m-%dT%H:%M:%SZ','now'),
+         last_result = excluded.last_result,
+         last_pass = excluded.last_pass,
+         total_validations = gate_heartbeat.total_validations + 1,
+         total_blocks = gate_heartbeat.total_blocks + excluded.total_blocks`
+    ).run(pass ? "PASS" : "FAIL", pass ? 1 : 0, pass ? 0 : 1);
+  } catch {
+    /* heartbeat write must never change the validation verdict */
+  }
+}
+
+// R317 block types fed back into the EMSU self-improvement loop (idea #26435).
+// Previously ONLY self_contradicting_disposition was fed to the corpus. This
+// extends the mechanical feed to R317_UNVERIFIED_STATE and R317_REVERSAL_LOG so
+// an unverified fleet claim or a missing Reversal Log enters RAG as a correction,
+// not just a local block. Fire-and-forget, 4s bounded, non-fatal.
+function feedR317Corrections(failures: string[], task_id: string): void {
+  const feed = (issue_category: string, trigger_pattern: string, ai_approach: string, correct_approach: string, negative_example: string) => {
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 4000);
+      void fetch("https://www.emsuniversity.com/emtskills/api/cline_correction_ingest.php", {
+        method: "POST",
+        signal: ctrl.signal,
+        headers: {
+          "Content-Type": "application/json",
+          "X-Ledger-Key": "emsu-cline-ledger-2026-04-22-rj9k3m7q",
+        },
+        body: JSON.stringify({
+          issue_category,
+          trigger_pattern,
+          ai_approach,
+          correct_approach,
+          negative_example,
+          correction_type: "procedural",
+          source_task_id: task_id || "",
+        }),
+      }).catch(() => undefined);
+      setTimeout(() => ctrl.abort(), 4000);
+    } catch {
+      /* non-fatal */
+    }
+  };
+
+  for (const f of failures) {
+    const vt = f.split(":")[0] || "";
+    if (/R317_UNVERIFIED_STATE/.test(vt)) {
+      feed(
+        "r317_unverified_state",
+        "completion asserts LLM/fleet/host state (up/down/serving/degraded) with no (verified: ...) probe marker",
+        "recited fleet/LLM/routing state from memory instead of re-probing live before completing",
+        "re-probe with frankenstein_registry / verify_routing / response headers and quote the result as '(verified: ...)'",
+        f.slice(0, 400)
+      );
+    } else if (/R317_REVERSAL_LOG/.test(vt)) {
+      feed(
+        "r317_missing_reversal_log",
+        "completion shipped without a # Reversal Log section listing within-window flips",
+        "omitted the mandatory Reversal Log from the completion",
+        "add a '# Reversal Log' section stating 'No reversals this window' or listing each flip with its RCA bucket",
+        f.slice(0, 400)
+      );
+    }
+  }
 }
 
 function findRule(query: string): RuleRow | null {
@@ -927,9 +1062,31 @@ server.tool(
         // text uses is decorative. Detect arrow AND verbal forms.
         const FLIP_FORM = /\u2192|=>|->|\bbecame\b|\bbecomes\b|\bturned out to be\b|\bwas actually\b|\bcorrected to\b/i;
         const RCA_BUCKET = /wrong premise|stale assumption|unread source|insufficient probe|scope error/i;
-        const flipLines = reversalSection.split("\n").filter((l: string) => FLIP_FORM.test(l) && RCA_BUCKET.test(l));
+        // 2026-08-15 (#26696): structured JSON-line flip support. The loose text
+        // flip above only proves an RCA bucket word appears somewhere; it cannot
+        // prove each flip names a REAL causal rule or filed idea. This accepts a
+        // one-JSON-object-per-line form with the exact fields rule 317 names, so
+        // the validator can require BOTH the bucket and a causal-rule reference
+        // even in the short "No reversals" case.
+        const RCA_BUCKET_JSON = /"(?:rca_bucket|bucket)"\s*:\s*"(wrong premise|stale assumption|unread source|insufficient probe|scope error)"/i;
+        const CAUSAL_RULE_JSON = /"(?:causal_rule|rule_update)"\s*:\s*"[^"]+"/i;
+        const isJsonFlip = (l: string): boolean => {
+          const t = l.trim().replace(/^[-*]\s*/, "");
+          return t.startsWith("{") && /"initial"\s*:/.test(t) && /"corrected"\s*:/.test(t);
+        };
+        const jsonFlipsMissing = reversalSection.split("\n").filter((l: string) => {
+          if (!isJsonFlip(l)) return false;
+          return !RCA_BUCKET_JSON.test(l) || !CAUSAL_RULE_JSON.test(l);
+        });
+        const flipLines = reversalSection.split("\n").filter((l: string) => {
+          if (isJsonFlip(l)) {
+            return RCA_BUCKET_JSON.test(l) && CAUSAL_RULE_JSON.test(l);
+          }
+          return FLIP_FORM.test(l) && RCA_BUCKET.test(l);
+        });
         const flipsWithoutRca = reversalSection.split("\n").filter((l: string) => {
           const t = l.trim();
+          if (isJsonFlip(l)) return false; // JSON flips handled by jsonFlipsMissing
           if (!/^[-*]\s/.test(t)) return false;
           if (!FLIP_FORM.test(t)) return false;
           if (/no reversals/i.test(t)) return false;
@@ -940,6 +1097,13 @@ server.tool(
             `R317_REVERSAL_LOG: reversal log line(s) lack an RCA bucket: ` +
             flipsWithoutRca.map((s: string) => `"${s.trim().slice(0, 80)}"`).join("; ") +
             `. Each flip needs one of: wrong premise | stale assumption | unread source | insufficient probe | scope error.`
+          );
+        }
+        if (jsonFlipsMissing.length > 0) {
+          failures.push(
+            `R317_REVERSAL_LOG: structured JSON flip line(s) are missing a required field: ` +
+            jsonFlipsMissing.map((s: string) => `"${s.trim().slice(0, 80)}"`).join("; ") +
+            `. A JSON flip must carry "initial", "corrected", "rca_bucket" (one of: wrong premise|stale assumption|unread source|insufficient probe|scope error), and "causal_rule" (file/slug or filed idea #NNNN).`
           );
         }
       }
@@ -1258,6 +1422,15 @@ server.tool(
 
     const pass = failures.length === 0;
 
+    // ── #26696: GATE SCOREBOARD + HEARTBEAT + R317 CORPUS FEED ──────────────
+    // Persist each block to gate_blocks (real rule_id + violation_type), stamp
+    // the heartbeat so the check is provably ON, and feed R317 block types back
+    // into the corpus so they enter RAG. All non-fatal: a write hiccup must
+    // never change the verdict.
+    recordGateBlocks(task_id || "unknown", failures);
+    updateGateHeartbeat(pass);
+    if (!pass) feedR317Corrections(failures, task_id || "unknown");
+
     // Log validation
     try {
       db.prepare("INSERT INTO violations (rule_id, task_id, evidence) VALUES (?,?,?)")
@@ -1346,6 +1519,56 @@ server.tool(
           text: "\u274c GATE_CHECK_ERROR: could not read gate file " + gateFile + ": " + e.message,
         }],
       };
+    }
+  }
+);
+
+server.tool(
+  "clinerules_gate_scoreboard",
+  "R317/#26696 gate observability scoreboard. Shows the validator heartbeat (is the check ON) and daily block rollups by rule + violation type. Query the local gate_blocks table -- this is the 'the check is on' proof Ruben can read at any second.",
+  {
+    days: z.number().int().min(1).max(30).default(7).describe("Rollup window in days (default 7)."),
+  },
+  async ({ days }) => {
+    try {
+      const hb = db.prepare(`SELECT * FROM gate_heartbeat WHERE id = 1`).get() as any;
+      const byRule = db.prepare(`
+        SELECT rule_id, COUNT(*) AS n
+        FROM gate_blocks
+        WHERE blocked_at >= datetime('now', ?)
+        GROUP BY rule_id ORDER BY n DESC
+      `).all(`-${days} day`) as any[];
+      const byType = db.prepare(`
+        SELECT rule_id, violation_type, COUNT(*) AS n
+        FROM gate_blocks
+        WHERE blocked_at >= datetime('now', ?)
+        GROUP BY rule_id, violation_type ORDER BY n DESC LIMIT 30
+      `).all(`-${days} day`) as any[];
+      const total = db.prepare(`
+        SELECT COUNT(*) AS n FROM gate_blocks WHERE blocked_at >= datetime('now', ?)
+      `).get(`-${days} day`) as any;
+
+      const lines: string[] = [
+        `GATE SCOREBOARD (idea #26696) — trailing ${days}d`,
+        hb
+          ? `Heartbeat: ${hb.last_validated_at} · last=${hb.last_result} · validations=${hb.total_validations} · blocks=${hb.total_blocks} — CHECK IS ${hb.last_pass ? "ON (last PASS)" : "ON (last FAIL)"}`
+          : "Heartbeat: no validation recorded yet (validator never called since this build).",
+        `Blocks last ${days}d (total ${total.n}):`,
+      ];
+      if (byRule.length) {
+        for (const r of byRule) lines.push(`  rule ${r.rule_id}: ${r.n}`);
+      } else {
+        lines.push("  (none)");
+      }
+      lines.push("By violation type:");
+      if (byType.length) {
+        for (const t of byType) lines.push(`  ${t.rule_id}/${t.violation_type}: ${t.n}`);
+      } else {
+        lines.push("  (none)");
+      }
+      return { content: [{ type: "text", text: lines.join("\n") }] };
+    } catch (e: any) {
+      return { content: [{ type: "text", text: `SCOREBOARD ERROR: ${e.message}` }] };
     }
   }
 );

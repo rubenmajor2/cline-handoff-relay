@@ -1,0 +1,6 @@
+GATE DAILY ROLLUP 2026-08-16
+Heartbeat last_validated_at=2026-08-16T01:41:01Z last=FAIL validations=2 blocks=2 marker=CHECK_IS_ON
+2026-08-16 rule 91: 3
+2026-08-16 rule 317: 2
+2026-08-16 rule 01: 1
+blocks last 24h = 6

@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/15/2026, 9:45:08 PM PT | window: last 72h | 82 tasks | index total 752 (parsed 2, cached 750)
+Generated: 8/15/2026, 10:45:08 PM PT | window: last 72h | 82 tasks | index total 752 (parsed 2, cached 750)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786844173723` | 8/15/2026, 9:45:07 PM | 169 | 875KB | #Oct Ring / Hypothetical  |
-| `1786848590052` | 8/15/2026, 9:43:39 PM | 252 | 2407KB | Was this person's account wrongfully suspended? Can you check exam enforcement, etc... SLS |
+| `1786848590052` | 8/15/2026, 10:35:26 PM | 283 | 2453KB | Was this person's account wrongfully suspended? Can you check exam enforcement, etc... SLS |
+| `1786844173723` | 8/15/2026, 10:33:23 PM | 182 | 951KB | #Oct Ring / Hypothetical  |
 | `1786844918374` | 8/15/2026, 9:13:04 PM | 946 | 13140KB | Babysit Frankenstein Exeucotr for 90 minutes and resolve any issues that might come up. Do |
 | `1786842592907` | 8/15/2026, 8:46:01 PM | 516 | 2989KB | #Rule 317 |
 | `1786845607312` | 8/15/2026, 7:45:40 PM | 100 | 589KB | #GLM 5.3 Update |
@@ -97,7 +97,51 @@ Generated: 8/15/2026, 9:45:08 PM PT | window: last 72h | 82 tasks | index total 
 
 ## Per-window detail
 
-### `1786844173723` — 8/15/2026, 9:45:07 PM PT — 169 turns
+### `1786848590052` — 8/15/2026, 10:35:26 PM PT — 283 turns
+
+**Original task:**
+
+```
+Was this person's account wrongfully suspended? Can you check exam enforcement, etc... SLS and see what's going on? I think we had one like this earlier from a Fernando, but not sure if it's the same thing. We were supposed to have resolved that one systematically, but again, not sure. Could be a legitimate suspension, maybe not. CFA will need updating if not and likely a message back to the student. Give also a link to their admin_profile.php page
+```
+
+**Ideas referenced:** #15637, #1661, #18626, #18693, #18713, #19814, #2072, #23304, #2371, #24977, #2523, #25455, #25456, #25534, #26727 [proposed], #26728 [proposed], #26738 [proposed], #26748 [proposed], #26750 [proposed], #26759 [proposed], #4929, #7265, #7753, #7990, #9086, #9168, #9306, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+ai_learned_corrections id 8172
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up the Zane Turner closeout + 317 learning-loop verification — both session reversals fully processed; narrow follow-ups remain.
+
+Where we left off (verified 2026-08-15 10:35 PM PT):
+- Zane Turner 26815W-37 / uid 52285: reinstated on individual transcript evidence. Override #1661 force_approved, SLS active, good-news email delivered (email_outbound_log 364433), Jon+Vicky tagged on ticket #25455. Remaining gate: proctored Zoom invitation sent by Vicky (verify via check_proctoring_status uid 52285).
+- Cohort alarm RETRACTED with full 317: monthly fail_final_exam Dec 93/Jan 444/Feb 55/Mar 83/Apr 29/May 5/Jun 11/Jul 60/Aug 102 = normal wave-end enforcement; Aug-3 batch shared didactic date 2026-07-19 (812 students DB-wide); email_sent=0 is bookkeeping (30/97 provably emailed); 53/97 dormant.
+- 317 artifacts written: ai_learned_corrections 8172 (scope error/baseline gate) + 8173 (read transcripts before upholding dismissals); bug library incident #2523 resolved; causal-rule addendum filed as idea #26759 (297-case-law edit, Ruben-gated because 297 chain is protected).
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26759 [proposed] — Ruben decision: approve the 297-case-law enforcement-count-baseline-gate addendum text (hardfloor-adjacent edit, needs your call), then apply + reindex clinerules MCP.
+2. #26738 [proposed] — fix the chat-handoff proctor escalation bug (Zoom email never sent, no PROCTOR_REQUEST, silent handoff death) and confirm Zane's proctored session got scheduled.
+3. #26748 [proposed] — narrow follow-ups only: verify remediation-mailer coverage for the 67/97 not matched by the subject filter; make the didactic cron set email_sent; optional per-wave chat-55 rollup.
+4. #26750 [proposed] — chat-55 alert when a student waits >10 min in a proctor Zoom with no host.
+5. #26728 [proposed] — close as superseded by corrected #26748, or trim to Zane-signature-with-proctoring-evidence check only.
+
+Reference IDs:
+- Tickets: TKT-20260815-8A29595A (#25455), TKT-20260719-F55B9200 (#18626)
+- Ideas: #26759 [proposed], #26748 [proposed, corrected], #26750 [proposed], #26738 [proposed], #26728 [proposed], #26727 [superseded]
+- Learning surfaces: ai_learned_corrections 8172 + 8173; frankenstein_router_incidents #2523
+- Files touched: none local; DB scratch /tmp/aug3_uids.txt + /tmp/aug3_emails.txt on WOPR
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786844173723` — 8/15/2026, 10:33:23 PM PT — 182 turns
 
 **Original task:**
 
@@ -115,61 +159,45 @@ Read and reference below as well as the NVIDIA forums, forumns, reddit, our bug 
 Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> 
 ```
 
-**Ideas referenced:** #1130, #1131, #11945, #1241, #12425, #1248, #1249, #1252, #1258, #13108, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16338, #16448, #16452, #16674, #16676, #16778, #16802, #16803, #16839, #16844, #16851, #17130 [superseded], #17246, #1744, #1754, #1755, #1765, #1771, #1772, #1773, #1779, #1781, #1793, #1798, #18132 [deployed], #1828, #1838, #1868, #19125, #19173, #19567, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2114, #2116, #2127, #2168, #2294, #2307, #2314, #23169, #24186, #24217, #25112, #25378, #25381, #25604, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25888, #26209, #26284 [executing], #26400, #26403, #26435, #26591, #26593, #26706 [proposed], #26707 [proposed], #26709 [proposed], #26741 [proposed], #50424, #6826, #7142, #7149, #8170, #8171
+**Ideas referenced:** #1130, #1131, #11945, #1241, #12425, #1248, #1249, #1252, #1258, #13108, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16338, #1641, #16448, #16452, #16674, #16676, #16778, #16802, #16803, #16839, #16844, #16851, #17130 [superseded], #17246, #1744, #1754, #1755, #1765, #1771, #1772, #1773, #1779, #1781, #1793, #1798, #18132 [deployed], #1828, #1838, #1868, #19125, #19173, #19567, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2114, #2116, #2127, #2168, #2294, #2307, #2314, #23169, #24186, #24217, #25112, #25378, #25381, #25604, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25888, #26209, #26284 [executing], #26400, #26403, #26435, #26591, #26593, #26706 [proposed], #26707 [proposed], #26709 [proposed], #26741 [proposed], #50424, #6826, #7142, #7149, #8170, #8171
 
 **Last PICKUP PROMPT:**
 
 ```
-ning" (config wiring, not model training) + whether needed
-- [ ] Final report + PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
-```
-
-### `1786848590052` — 8/15/2026, 9:43:39 PM PT — 252 turns
-
-**Original task:**
-
-```
-Was this person's account wrongfully suspended? Can you check exam enforcement, etc... SLS and see what's going on? I think we had one like this earlier from a Fernando, but not sure if it's the same thing. We were supposed to have resolved that one systematically, but again, not sure. Could be a legitimate suspension, maybe not. CFA will need updating if not and likely a message back to the student. Give also a link to their admin_profile.php page
-```
-
-**Ideas referenced:** #15637, #1661, #18626, #18693, #18713, #19814, #2072, #23304, #2371, #24977, #25455, #25456, #25534, #26727 [proposed], #26728 [proposed], #26738 [proposed], #26748 [proposed], #26750 [proposed], #4929, #7265, #7753, #7990, #9086, #9168, #9306, #9339
-
-**Last PICKUP PROMPT:**
-
-```
- 364433, Postmark id present).
+live lane. Ready when you are.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up the didactic auto-fail cohort validation — 160 students auto-failed since Jul 1 with zero notification; classify before ANY mass override. Zane Turner already individually reinstated.
+Pick up task Julia/Claudia 235B swap. Downloads COMPLETE on both boxes, scripts staged, backups done. Only remaining gate: Ruben's go to stop the live 120B and run the test-serve bench (TP=2 means 235B bench requires taking :11513 down ~15-20 min). Everything else is prepped.
 
-Where we left off (verified 2026-08-15 9:43 PM PT):
-- Zane Turner 26815W-37 / uid 52285: DONE. SLS active, Moodle unsuspended, c41 re-enrolled, fail_date cleared, group 2620 added, override #1661 force_approved, exam enforcement clean, good-news email delivered (email_outbound_log 364433).
-- COHORT MEASURED: local_exam_policy_track since 2026-07-01 = 165 fail_final_exam rows / 160 distinct students, email_sent=0 on ALL. Plus 242 deadline_miss rows / 138 students, also all email_sent=0. 158 students carry 479 synthetic 0.0 attempts (sumgrades=0 AND timestart=timefinish); 157 have 3+ (full attempt exhaustion).
-- 2,925 tickets "Chat handoff went unanswered" created Jul 1 - Aug 5 (the class that cost Zane his 7/19 final).
-- WHY INVISIBLE: auto-fail sends no email; zero chat-55 proactive alerts (only Vicky's individual questions); load spread across CS Auto-Agent 1204 + 13 humans (Adi 192, Francis 185, Julius Fernando 169, Sheila 164, Nefemito 163, Nicole 159, Samantha 158, Seph 146, Marianne 121, Jehan 107, Rachel 101, Apple 70, Vicky 27, Jon 16).
-- Ruben directive: MORE VALIDATION REQUIRED before mass override.
+Where we left off (verified 2026-08-15 22:32 PT):
+- Julia spark-6ae6 + Claudia spark-6d51 both have nvidia/Qwen3-235B-A22B-NVFP4 downloaded 40/40 (snapshot 21cfa2c9e152032eb60647ee7b46a2bbcd8d76d2).
+- vLLM 0.17.1+sparkcustom venv verified to support Qwen3MoeForCausalLM + modelopt_fp4/nvfp4 — no vLLM upgrade needed.
+- Test-serve script: /tmp/julia_serve_235b_test.sh (port 8001). Prod swap script: /home/rubenmajor/julia_unified_tp2_qwen235.sh (port 8000, served-name qwen3-235b, mem 0.85, max-num-seqs 16).
+- Backups on disk: ring /home/rubenmajor/glm52-upgrade-backup-20260815/ (9 files), Julia/Claudia /home/rubenmajor/jc-upgrade-backup-20260815/ (4 files).
+- Live now: gpt-oss-120b serving :11513 (healthy), glm-5.2-15pct serving :8210 (healthy, DO NOT TOUCH per Ruben).
+- Ruben REJECTED GLM ring vLLM 0.27.1 upgrade — deferred indefinitely. Do not upgrade.
+- Docs written: JC_235B_SWAP_CHECKPOINT.md, JC_235B_AND_RING_UPGRADE_RUNBOOK.md, JULIA_CLAUDIA_2SPARK_MODEL_RESEARCH.md.
+- Ideas: #26709, #26741, #26706, #26707 all efficiency_priority=1 [proposed]. #26741 ring-upgrade half is now REJECTED by Ruben; swap half still executing.
 
 Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26748 [proposed] — P0: build the per-student classifier over all 160 (EMSU-fault = showed for proctored session / chat / booking attempt vs genuinely-failed = went silent). Produce a reviewed list for Jon before any bulk reinstatement. Also fix email_sent=0 so future auto-fails notify the student.
-2. #26750 [proposed] — P1: chat-55 daily rollup alert (fail_final_exam fires, handoff-unanswered count, synthetic-attempt count) + immediate alert when a student waits >10 min in a proctor Zoom with no host.
-3. #26738 [proposed] — root-cause and fix the chat-handoff proctor escalation bug (Zoom email never sent, no PROCTOR_REQUEST logged, human handoff dies silently).
-4. #26728 [proposed] — 26815W + adjacent section sweep (subset of #26748's population; fold in or close as superseded).
+1. #26709 [executing] - On Ruben's go: bash /tmp/julia_serve_235b_test.sh (this stops the live 120B first — TP=2 requires both GPUs), bench decode tok/s + TTFB vs the 120B baseline (20-37 tok/s), confirm stability 5 min. If good, promote via /home/rubenmajor/julia_unified_tp2_qwen235.sh to the live :8000/:11513 lane.
+2. #26709 [executing] - After promote: update julia_process_watchdog.sh + tp2_watchdog.sh to MODEL_NAME qwen3-235b with the #1838 rogue-120B guard (launch cmdline must contain qwen3-235b before relaunch), then test auto-restart once.
+3. #26709 [executing] - Router integration: add qwen3-235b to /etc/litellm/config.yaml + frankenstein_registry.yaml (api_base http://127.0.0.1:11513/v1), fallback order glm-5.2 -> qwen3-235b -> 120Bs, both interactive + batch; update frankenstein_tools_adapter.py caps; restart litellm + adapter; verify a live routed turn. Reuse the cicero-235b block (config.yaml lines 49-57) as template.
+4. #26707 [proposed] - Optional: after 235B is live, revisit the 8-box reconcile for future ring growth (never sacrifice the 235B/fast lane).
 
 Reference IDs:
-- Tickets: TKT-20260815-8A29595A (#25455), TKT-20260719-F55B9200 (#18626), TKT-20260803-D9A48421 (#23304)
-- Ideas filed: #26748 [proposed], #26750 [proposed], #26738 [proposed], #26728 [proposed], #26727 [superseded]
-- Files touched: none local; DB: moodle_c_live (quiz_attempts, local_exam_policy_track, groups_members, backup table quiz_attempts_zane_backup_20260815), admin_portal (Students, exam_override_requests #1661, orchestrator_ideas, agent_drafts 24098)
+- Ideas filed: #26709 [executing], #26741 [proposed/rejected-for-ring-half], #26706 [proposed], #26707 [proposed]
+- Files touched this session: /var/www/emtskills/docs/JC_235B_SWAP_CHECKPOINT.md [deployed], /var/www/emtskills/docs/JC_235B_AND_RING_UPGRADE_RUNBOOK.md [deployed], /var/www/emtskills/docs/JULIA_CLAUDIA_2SPARK_MODEL_RESEARCH.md [deployed], /tmp/julia_serve_235b_test.sh [deployed to Julia], /home/rubenmajor/julia_unified_tp2_qwen235.sh [deployed to Julia]
+- Live endpoints verified: :11513 (120B), :8210 (GLM)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</parameter>
-</invoke>
-</function_calls>
+<task_progress>
+- [x] Julia 235B download COMPLETE (40/40)
+- [x] Claudia 235B download COMPLETE (verified same snapsh
 ```
 
 ### `1786844918374` — 8/15/2026, 9:13:04 PM PT — 946 turns

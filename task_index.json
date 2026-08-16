@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-16T04:45:08.367Z",
+ "generated_at": "2026-08-16T05:45:08.665Z",
  "counts": {
   "parsed": 2,
   "reused": 750,
@@ -130120,13 +130120,13 @@
   },
   "1786844173723": {
    "task_id": "1786844173723",
-   "mtime": 1786855507321,
+   "mtime": 1786858403424,
    "created_at": "2026-08-16T01:36:13.723Z",
-   "last_modified": "2026-08-16T04:45:07.321Z",
-   "size_kb": 875,
-   "turn_count": 169,
+   "last_modified": "2026-08-16T05:33:23.424Z",
+   "size_kb": 951,
+   "turn_count": 182,
    "title": "#Oct Ring / Hypothetical \n\nHypothetical only but Curious if you think it would be worthwhile to convert Julia/Claudia to combine with Hex to make Oct GLM 5.2 ring. If currently we have 671 tok/sec on 6 boxes, what can we do with 8? Give me both options: \n\n1. 2 - 4 Ring setups\n2. 1 - 8 Ring setup\n\nRead and reference below as well as the NVIDIA forums, forumns, reddit, our bug library and below. What would be the path to get there to get the most tok/sec interactive and concurrent? \n\n--\nPompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  \n\n\nBoth answered. The method is now written down permanently, and on the saf",
-   "pickup_prompt": "ning\" (config wiring, not model training) + whether needed\n- [ ] Final report + PICKUP PROMPT\n</task_progress>\n</use_mcp_tool>",
+   "pickup_prompt": "live lane. Ready when you are.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task Julia/Claudia 235B swap. Downloads COMPLETE on both boxes, scripts staged, backups done. Only remaining gate: Ruben's go to stop the live 120B and run the test-serve bench (TP=2 means 235B bench requires taking :11513 down ~15-20 min). Everything else is prepped.\n\nWhere we left off (verified 2026-08-15 22:32 PT):\n- Julia spark-6ae6 + Claudia spark-6d51 both have nvidia/Qwen3-235B-A22B-NVFP4 downloaded 40/40 (snapshot 21cfa2c9e152032eb60647ee7b46a2bbcd8d76d2).\n- vLLM 0.17.1+sparkcustom venv verified to support Qwen3MoeForCausalLM + modelopt_fp4/nvfp4 — no vLLM upgrade needed.\n- Test-serve script: /tmp/julia_serve_235b_test.sh (port 8001). Prod swap script: /home/rubenmajor/julia_unified_tp2_qwen235.sh (port 8000, served-name qwen3-235b, mem 0.85, max-num-seqs 16).\n- Backups on disk: ring /home/rubenmajor/glm52-upgrade-backup-20260815/ (9 files), Julia/Claudia /home/rubenmajor/jc-upgrade-backup-20260815/ (4 files).\n- Live now: gpt-oss-120b serving :11513 (healthy), glm-5.2-15pct serving :8210 (healthy, DO NOT TOUCH per Ruben).\n- Ruben REJECTED GLM ring vLLM 0.27.1 upgrade — deferred indefinitely. Do not upgrade.\n- Docs written: JC_235B_SWAP_CHECKPOINT.md, JC_235B_AND_RING_UPGRADE_RUNBOOK.md, JULIA_CLAUDIA_2SPARK_MODEL_RESEARCH.md.\n- Ideas: #26709, #26741, #26706, #26707 all efficiency_priority=1 [proposed]. #26741 ring-upgrade half is now REJECTED by Ruben; swap half still executing.\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #26709 [executing] - On Ruben's go: bash /tmp/julia_serve_235b_test.sh (this stops the live 120B first — TP=2 requires both GPUs), bench decode tok/s + TTFB vs the 120B baseline (20-37 tok/s), confirm stability 5 min. If good, promote via /home/rubenmajor/julia_unified_tp2_qwen235.sh to the live :8000/:11513 lane.\n2. #26709 [executing] - After promote: update julia_process_watchdog.sh + tp2_watchdog.sh to MODEL_NAME qwen3-235b with the #1838 rogue-120B guard (launch cmdline must contain qwen3-235b before relaunch), then test auto-restart once.\n3. #26709 [executing] - Router integration: add qwen3-235b to /etc/litellm/config.yaml + frankenstein_registry.yaml (api_base http://127.0.0.1:11513/v1), fallback order glm-5.2 -> qwen3-235b -> 120Bs, both interactive + batch; update frankenstein_tools_adapter.py caps; restart litellm + adapter; verify a live routed turn. Reuse the cicero-235b block (config.yaml lines 49-57) as template.\n4. #26707 [proposed] - Optional: after 235B is live, revisit the 8-box reconcile for future ring growth (never sacrifice the 235B/fast lane).\n\nReference IDs:\n- Ideas filed: #26709 [executing], #26741 [proposed/rejected-for-ring-half], #26706 [proposed], #26707 [proposed]\n- Files touched this session: /var/www/emtskills/docs/JC_235B_SWAP_CHECKPOINT.md [deployed], /var/www/emtskills/docs/JC_235B_AND_RING_UPGRADE_RUNBOOK.md [deployed], /var/www/emtskills/docs/JULIA_CLAUDIA_2SPARK_MODEL_RESEARCH.md [deployed], /tmp/julia_serve_235b_test.sh [deployed to Julia], /home/rubenmajor/julia_unified_tp2_qwen235.sh [deployed to Julia]\n- Live endpoints verified: :11513 (120B), :8210 (GLM)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] Julia 235B download COMPLETE (40/40)\n- [x] Claudia 235B download COMPLETE (verified same snapsh",
    "ideas": {
     "1130": null,
     "1131": null,
@@ -130135,6 +130135,7 @@
     "1249": null,
     "1252": null,
     "1258": null,
+    "1641": null,
     "1744": null,
     "1754": null,
     "1755": null,
@@ -130553,17 +130554,18 @@
   },
   "1786848590052": {
    "task_id": "1786848590052",
-   "mtime": 1786855419331,
+   "mtime": 1786858526882,
    "created_at": "2026-08-16T02:49:50.052Z",
-   "last_modified": "2026-08-16T04:43:39.331Z",
-   "size_kb": 2407,
-   "turn_count": 252,
+   "last_modified": "2026-08-16T05:35:26.882Z",
+   "size_kb": 2453,
+   "turn_count": 283,
    "title": "Was this person's account wrongfully suspended? Can you check exam enforcement, etc... SLS and see what's going on? I think we had one like this earlier from a Fernando, but not sure if it's the same thing. We were supposed to have resolved that one systematically, but again, not sure. Could be a legitimate suspension, maybe not. CFA will need updating if not and likely a message back to the student. Give also a link to their admin_profile.php page",
-   "pickup_prompt": " 364433, Postmark id present).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up the didactic auto-fail cohort validation — 160 students auto-failed since Jul 1 with zero notification; classify before ANY mass override. Zane Turner already individually reinstated.\n\nWhere we left off (verified 2026-08-15 9:43 PM PT):\n- Zane Turner 26815W-37 / uid 52285: DONE. SLS active, Moodle unsuspended, c41 re-enrolled, fail_date cleared, group 2620 added, override #1661 force_approved, exam enforcement clean, good-news email delivered (email_outbound_log 364433).\n- COHORT MEASURED: local_exam_policy_track since 2026-07-01 = 165 fail_final_exam rows / 160 distinct students, email_sent=0 on ALL. Plus 242 deadline_miss rows / 138 students, also all email_sent=0. 158 students carry 479 synthetic 0.0 attempts (sumgrades=0 AND timestart=timefinish); 157 have 3+ (full attempt exhaustion).\n- 2,925 tickets \"Chat handoff went unanswered\" created Jul 1 - Aug 5 (the class that cost Zane his 7/19 final).\n- WHY INVISIBLE: auto-fail sends no email; zero chat-55 proactive alerts (only Vicky's individual questions); load spread across CS Auto-Agent 1204 + 13 humans (Adi 192, Francis 185, Julius Fernando 169, Sheila 164, Nefemito 163, Nicole 159, Samantha 158, Seph 146, Marianne 121, Jehan 107, Rachel 101, Apple 70, Vicky 27, Jon 16).\n- Ruben directive: MORE VALIDATION REQUIRED before mass override.\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #26748 [proposed] — P0: build the per-student classifier over all 160 (EMSU-fault = showed for proctored session / chat / booking attempt vs genuinely-failed = went silent). Produce a reviewed list for Jon before any bulk reinstatement. Also fix email_sent=0 so future auto-fails notify the student.\n2. #26750 [proposed] — P1: chat-55 daily rollup alert (fail_final_exam fires, handoff-unanswered count, synthetic-attempt count) + immediate alert when a student waits >10 min in a proctor Zoom with no host.\n3. #26738 [proposed] — root-cause and fix the chat-handoff proctor escalation bug (Zoom email never sent, no PROCTOR_REQUEST logged, human handoff dies silently).\n4. #26728 [proposed] — 26815W + adjacent section sweep (subset of #26748's population; fold in or close as superseded).\n\nReference IDs:\n- Tickets: TKT-20260815-8A29595A (#25455), TKT-20260719-F55B9200 (#18626), TKT-20260803-D9A48421 (#23304)\n- Ideas filed: #26748 [proposed], #26750 [proposed], #26738 [proposed], #26728 [proposed], #26727 [superseded]\n- Files touched: none local; DB: moodle_c_live (quiz_attempts, local_exam_policy_track, groups_members, backup table quiz_attempts_zane_backup_20260815), admin_portal (Students, exam_override_requests #1661, orchestrator_ideas, agent_drafts 24098)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</parameter>\n</invoke>\n</function_calls>",
+   "pickup_prompt": "ai_learned_corrections id 8172\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up the Zane Turner closeout + 317 learning-loop verification — both session reversals fully processed; narrow follow-ups remain.\n\nWhere we left off (verified 2026-08-15 10:35 PM PT):\n- Zane Turner 26815W-37 / uid 52285: reinstated on individual transcript evidence. Override #1661 force_approved, SLS active, good-news email delivered (email_outbound_log 364433), Jon+Vicky tagged on ticket #25455. Remaining gate: proctored Zoom invitation sent by Vicky (verify via check_proctoring_status uid 52285).\n- Cohort alarm RETRACTED with full 317: monthly fail_final_exam Dec 93/Jan 444/Feb 55/Mar 83/Apr 29/May 5/Jun 11/Jul 60/Aug 102 = normal wave-end enforcement; Aug-3 batch shared didactic date 2026-07-19 (812 students DB-wide); email_sent=0 is bookkeeping (30/97 provably emailed); 53/97 dormant.\n- 317 artifacts written: ai_learned_corrections 8172 (scope error/baseline gate) + 8173 (read transcripts before upholding dismissals); bug library incident #2523 resolved; causal-rule addendum filed as idea #26759 (297-case-law edit, Ruben-gated because 297 chain is protected).\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #26759 [proposed] — Ruben decision: approve the 297-case-law enforcement-count-baseline-gate addendum text (hardfloor-adjacent edit, needs your call), then apply + reindex clinerules MCP.\n2. #26738 [proposed] — fix the chat-handoff proctor escalation bug (Zoom email never sent, no PROCTOR_REQUEST, silent handoff death) and confirm Zane's proctored session got scheduled.\n3. #26748 [proposed] — narrow follow-ups only: verify remediation-mailer coverage for the 67/97 not matched by the subject filter; make the didactic cron set email_sent; optional per-wave chat-55 rollup.\n4. #26750 [proposed] — chat-55 alert when a student waits >10 min in a proctor Zoom with no host.\n5. #26728 [proposed] — close as superseded by corrected #26748, or trim to Zane-signature-with-proctoring-evidence check only.\n\nReference IDs:\n- Tickets: TKT-20260815-8A29595A (#25455), TKT-20260719-F55B9200 (#18626)\n- Ideas: #26759 [proposed], #26748 [proposed, corrected], #26750 [proposed], #26738 [proposed], #26728 [proposed], #26727 [superseded]\n- Learning surfaces: ai_learned_corrections 8172 + 8173; frankenstein_router_incidents #2523\n- Files touched: none local; DB scratch /tmp/aug3_uids.txt + /tmp/aug3_emails.txt on WOPR\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1661": null,
     "2072": null,
     "2371": null,
+    "2523": null,
     "4929": null,
     "7265": null,
     "7753": null,
@@ -130586,7 +130588,8 @@
     "26728": "proposed",
     "26738": "proposed",
     "26748": "proposed",
-    "26750": "proposed"
+    "26750": "proposed",
+    "26759": "proposed"
    }
   }
  }

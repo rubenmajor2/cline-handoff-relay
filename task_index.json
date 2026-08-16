@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-15T23:45:06.511Z",
+ "generated_at": "2026-08-16T00:45:06.893Z",
  "counts": {
-  "parsed": 2,
-  "reused": 745,
+  "parsed": 0,
+  "reused": 747,
   "failed": 0,
   "total": 747
  },
@@ -129966,17 +129966,19 @@
   },
   "1786836908956": {
    "task_id": "1786836908956",
-   "mtime": 1786837503487,
+   "mtime": 1786837701273,
    "created_at": "2026-08-15T23:35:08.956Z",
-   "last_modified": "2026-08-15T23:45:03.487Z",
-   "size_kb": 945,
-   "turn_count": 57,
+   "last_modified": "2026-08-15T23:48:21.273Z",
+   "size_kb": 1004,
+   "turn_count": 72,
    "title": "Is this legitimate? If so, the message should be a little more sympathetic and less technical. Something that cites the reason why as well as the option to repeat the class at no extra charge. Give the link to the schedule and appropriate webstie. Tell them to register again. \n\nIf they are interested, to reply to the message with the course date/they registered for and basically it would waive the fee. To be eligible for this, they must have already paid full tuition, not had any of it refunded already and they mustt have either dropped or failed in the last year. \n\nThose who got pro-rated refunds back would not be eligible for tuition waiver. \n\nAlso copy Vicky on the message back so she can",
-   "pickup_prompt": null,
+   "pickup_prompt": "n mechanism (all human-gated).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — tuition waiver \"repeat at no extra charge\" eligibility logic and CFA message.\n\nWhere we left off (verified 2026-08-15 16:47 PT):\n- Verified case 25708W-07 Fernando Vazquez Serrano: FAILED 2025-07-04, San Diego, accelerated. QB invoice 143754 PAID $1,395.00 full; invoice 161967 VOIDED (not a refund). No Authnet refund, no Affirm, no refund email.\n- Eligibility spec written to /var/www/emtskills/docs/specs/tuition_waiver_repeat_no_charge_spec.md (rubric, template, waiver workflow, CFA plan, open decisions).\n- Idea #26681 [proposed] filed for the waiver rubric + CFA template.\n- San Diego public URLs verified HTTP 200: https://sandiegoemt.com/classschedule/ (schedule) and https://sandiegoemt.com/register/ (register).\n- Upcoming San Diego classes present in Course_Schedules (sections 26722FT, 26723BC, 26724T, 26725FT, 26726W, 26727A, 26728FT, 26729FT, 26730BC, 26731FT).\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #26681 [awaiting_review] — Ruben must resolve E1 (defines \"last year\"): rolling 12 months vs prior calendar year vs 15-month grace. This decides Fernando (13.4 months out). No waiver ships until resolved.\n2. #26681 [awaiting_review] — Resolve E4 (should no-show drops qualify?) and E6 (confirm refund detection across QB + Authnet + email log as the single gate; confirm soft-message until Vicky verifies).\n3. #26681 [awaiting_review] — Decide the waiver application mechanism: $0 invoice vs discount code vs internal fee-waiver flag, and where it lives in the DB.\n4. #26681 [awaiting_review] — After E1 is resolved, build lib/TuitionWaiverEligibility.php (shared CFA helper returning {eligible, reason, flagged_for_vicky, evidence}) and wire into chat/email/SMS/voice/ticket agents.\n\nReference IDs:\n- Student: 25708W-07 (Fernando Vazquez Serrano)\n- Ideas filed: #26681 [proposed]\n- Files touched: /var/www/emtskills/docs/specs/tuition_waiver_repeat_no_charge_spec.md\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1565": null,
     "1976": null,
+    "8211": null,
     "11998": null,
+    "26681": "proposed",
     "37474": null,
     "64748": null,
     "155724": null,

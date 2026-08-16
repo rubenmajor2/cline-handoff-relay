@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/15/2026, 4:45:06 PM PT | window: last 72h | 86 tasks | index total 747 (parsed 2, cached 745)
+Generated: 8/15/2026, 5:45:06 PM PT | window: last 72h | 83 tasks | index total 747 (parsed 0, cached 747)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786836908956` | 8/15/2026, 4:45:03 PM | 57 | 945KB | Is this legitimate? If so, the message should be a little more sympathetic and less techni |
+| `1786836908956` | 8/15/2026, 4:48:21 PM | 72 | 1004KB | Is this legitimate? If so, the message should be a little more sympathetic and less techni |
 | `1786835771600` | 8/15/2026, 4:31:46 PM | 96 | 1327KB | #BLS  |
 | `1786817395147` | 8/15/2026, 3:56:47 PM | 404 | 2685KB | #Call Backs / VAPI |
 | `1786831867073` | 8/15/2026, 3:42:30 PM | 126 | 313KB | #Joshua / Denali Scenario |
@@ -93,15 +93,12 @@ Generated: 8/15/2026, 4:45:06 PM PT | window: last 72h | 86 tasks | index total 
 | `1786570575332` | 8/12/2026, 6:39:15 PM | 284 | 1766KB | These emails are choking down my inbox still. Can you just put them on a webpage instead a |
 | `1786582351264` | 8/12/2026, 6:03:32 PM | 44 | 189KB | I'm getting reports that all websites are down can you take a look and let me know? |
 | `1786554076003` | 8/12/2026, 5:57:54 PM | 238 | 1270KB | ## Executor IS Working - Ideas Being Built Right Now |
-| `1786581594386` | 8/12/2026, 5:40:26 PM | 2 | 2KB | Tell me about the CFA learning system. It does not seem like it's doing very much. How do  |
-| `1786571428672` | 8/12/2026, 4:54:06 PM | 375 | 579KB | Can you tell me if chat widget is functioning properly now. Just read the last 10 chats an |
-| `1786573125988` | 8/12/2026, 4:46:28 PM | 355 | 3271KB | Please tell me if this is wrong? And if so why and what is going on? |
 
 ---
 
 ## Per-window detail
 
-### `1786836908956` — 8/15/2026, 4:45:03 PM PT — 57 turns
+### `1786836908956` — 8/15/2026, 4:48:21 PM PT — 72 turns
 
 **Original task:**
 
@@ -113,9 +110,41 @@ If they are interested, to reply to the message with the course date/they regist
 Those who got pro-rated ref
 ```
 
-**Ideas referenced:** #0056, #11998, #155724, #1565, #1976, #218838, #334155, #37474, #495057, #64748, #856404
+**Ideas referenced:** #0056, #11998, #155724, #1565, #1976, #218838, #26681 [proposed], #334155, #37474, #495057, #64748, #8211, #856404
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+n mechanism (all human-gated).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — tuition waiver "repeat at no extra charge" eligibility logic and CFA message.
+
+Where we left off (verified 2026-08-15 16:47 PT):
+- Verified case 25708W-07 Fernando Vazquez Serrano: FAILED 2025-07-04, San Diego, accelerated. QB invoice 143754 PAID $1,395.00 full; invoice 161967 VOIDED (not a refund). No Authnet refund, no Affirm, no refund email.
+- Eligibility spec written to /var/www/emtskills/docs/specs/tuition_waiver_repeat_no_charge_spec.md (rubric, template, waiver workflow, CFA plan, open decisions).
+- Idea #26681 [proposed] filed for the waiver rubric + CFA template.
+- San Diego public URLs verified HTTP 200: https://sandiegoemt.com/classschedule/ (schedule) and https://sandiegoemt.com/register/ (register).
+- Upcoming San Diego classes present in Course_Schedules (sections 26722FT, 26723BC, 26724T, 26725FT, 26726W, 26727A, 26728FT, 26729FT, 26730BC, 26731FT).
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26681 [awaiting_review] — Ruben must resolve E1 (defines "last year"): rolling 12 months vs prior calendar year vs 15-month grace. This decides Fernando (13.4 months out). No waiver ships until resolved.
+2. #26681 [awaiting_review] — Resolve E4 (should no-show drops qualify?) and E6 (confirm refund detection across QB + Authnet + email log as the single gate; confirm soft-message until Vicky verifies).
+3. #26681 [awaiting_review] — Decide the waiver application mechanism: $0 invoice vs discount code vs internal fee-waiver flag, and where it lives in the DB.
+4. #26681 [awaiting_review] — After E1 is resolved, build lib/TuitionWaiverEligibility.php (shared CFA helper returning {eligible, reason, flagged_for_vicky, evidence}) and wire into chat/email/SMS/voice/ticket agents.
+
+Reference IDs:
+- Student: 25708W-07 (Fernando Vazquez Serrano)
+- Ideas filed: #26681 [proposed]
+- Files touched: /var/www/emtskills/docs/specs/tuition_waiver_repeat_no_charge_spec.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1786835771600` — 8/15/2026, 4:31:46 PM PT — 96 turns
 
@@ -3263,37 +3292,3 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
-
-### `1786581594386` — 8/12/2026, 5:40:26 PM PT — 2 turns
-
-**Original task:**
-
-```
-Tell me about the CFA learning system. It does not seem like it's doing very much. How do we make it do things continually and get smarter on its own? It seems to be like it's stagnating and then I see these other things it appears as though it's even going backwards which is highly problematic. These things should be advancing not falling behind.
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786571428672` — 8/12/2026, 4:54:06 PM PT — 375 turns
-
-**Original task:**
-
-```
-Can you tell me if chat widget is functioning properly now. Just read the last 10 chats and let me know what corrections need to be made or if something is off
-```
-
-**Ideas referenced:** #059669, #12364, #13440, #2323 [deployed], #2324 [deployed], #24526, #24765, #25961 [rejected], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25971, #25974, #25975, #25976, #25984, #25985, #25986 [deployed], #25990, #25995, #26003 [deployed], #6366, #9109, #9112, #9131, #9132, #9152, #9222
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786573125988` — 8/12/2026, 4:46:28 PM PT — 355 turns
-
-**Original task:**
-
-```
-Please tell me if this is wrong? And if so why and what is going on?
-```
-
-**Ideas referenced:** #15635, #16439, #16440, #16444, #1758, #17580, #18936, #20346, #23184, #2323 [deployed], #23477, #23483, #24526, #24765, #25185, #2519, #25971 [proposed], #25974 [executing], #25975 [executing], #25976 [executing], #25984 [executing], #25985 [executing], #25986 [executing], #25990 [approved], #25995 [executing], #32584, #5646, #6106, #6751, #7907, #9086
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/16/2026, 7:55:46 AM PT | window: last 72h | 75 tasks | index total 754 (parsed 1, cached 753)
+Generated: 8/16/2026, 8:55:47 AM PT | window: last 72h | 75 tasks | index total 754 (parsed 1, cached 753)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786864599073` | 8/16/2026, 7:55:41 AM | 521 | 1832KB | #Julia/Claudia 235 |
+| `1786864599073` | 8/16/2026, 8:51:52 AM | 692 | 2259KB | #Julia/Claudia 235 |
 | `1786848590052` | 8/16/2026, 12:36:24 AM | 319 | 2560KB | Was this person's account wrongfully suspended? Can you check exam enforcement, etc... SLS |
 | `1786863102700` | 8/16/2026, 12:25:15 AM | 190 | 808KB | I am trying to steer with frankenstein-llm and it's disregarding my steer. Is there a prob |
 | `1786844173723` | 8/16/2026, 12:11:05 AM | 554 | 2158KB | #Oct Ring / Hypothetical  |
@@ -90,7 +90,7 @@ Generated: 8/16/2026, 7:55:46 AM PT | window: last 72h | 75 tasks | index total 
 
 ## Per-window detail
 
-### `1786864599073` — 8/16/2026, 7:55:41 AM PT — 521 turns
+### `1786864599073` — 8/16/2026, 8:51:52 AM PT — 692 turns
 
 **Original task:**
 
@@ -108,16 +108,39 @@ Attempt over and over again until it works. Take it all the way to serving. Do N
 **There is NO fallback plan. Do NOT revert to gpt-oss-120b. Do NOT restore the 120B "as a stopgap." Do NOT propose the 120B as a safe state.** If you catch yourself planning a rollback, th
 ```
 
-**Ideas referenced:** #1241, #1264, #14253, #14560, #14848, #16653, #16662, #17084, #1744, #1765, #17788, #1780, #1781, #178686, #1793, #1826, #18287, #1838, #1858, #18678, #1868, #18861 [closed], #1903, #20042, #2071, #2072, #2073, #2114, #22906 [closed], #23826 [closed], #2526 [resolved], #2527 [resolved], #2528 [open], #25604, #27364 [closed], #27440 [closed], #29018 [closed], #30003 [closed], #30670 [closed], #32645 [closed], #34675 [closed], #35313, #36094 [closed], #36914 [open], #37948 [closed], #39078 [closed], #39625 [closed], #39666, #40888 [open], #41408 [open], #42058 [open], #42096 [closed], #43232 [closed], #43350 [open], #45434 [open], #45829 [open], #45966 [closed], #46191 [open], #46329 [open], #46514 [open], #47089 [open], #47365 [open], #47527 [open], #48898 [open], #48994 [open], #49011 [open], #49060 [open], #49237 [open], #49262 [open], #49381 [open], #50288 [open], #50883 [open], #51091 [open], #51207 [open], #51534 [open], #51581 [open], #52060 [open], #52462 [open]
+**Ideas referenced:** #1241, #1264, #14253, #14560, #14848, #16653, #16662, #17084, #1744, #1765, #17788, #1780, #1781, #178686, #1793, #1826, #18287, #1838, #1858, #18678, #1868, #18861 [closed], #1903, #20042, #2071, #2072, #2073, #2114, #22906 [closed], #23826 [closed], #2526 [resolved], #2527 [resolved], #2528 [open], #25604, #27364 [closed], #27440 [closed], #29018 [closed], #30003 [closed], #30670 [closed], #32645 [closed], #34675 [closed], #35313, #36094 [closed], #36914 [open], #37615, #37948 [closed], #39078 [closed], #39625 [closed], #39666, #40888 [open], #41408 [open], #42058 [open], #42096 [closed], #43232 [closed], #43350 [open], #45434 [open], #45829 [open], #45966 [closed], #46191 [open], #46329 [open], #46514 [open], #47089 [open], #47365 [open], #47527 [open], #48898 [open], #48994 [open], #49011 [open], #49060 [open], #49237 [open], #49262 [open], #49381 [open], #50288 [open], #50883 [open], #51091 [open], #51207 [open], #51534 [open], #51581 [open], #52060 [open], #52462 [open]
 
 **Last PICKUP PROMPT:**
 
 ```
-ker
-- [ ] Decode test — THE GATE: coherent ? or still NaN ?
-- [ ] File result + PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
+uild with real sm_121 support.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1786864599073 — Qwen3-235B-A22B-NVFP4 on Julia+Claudia TP=2: SERVING verified, decode-blocker #2528 remains.
+
+Where we left off (verified 2026-08-16 08:50 PT):
+- Model SERVING: Julia:8000 (`qwen3-235b`), TP=2, nodes Julia 192.168.1.190 + Claudia 192.168.1.194, serve PID 1235940, script `julia_unified_tp2_qwen235.sh`
+- ~11.8 tok/s measured (200 tok / 17s); decode = constant `!` (NaN logits; logprobs → `ValueError: nan` serve-log line 650)
+- All cluster blockers fixed: NCCL_IB_DISABLE=1 + enP7s7 socket on both scripts, /etc/hosts → LAN, watchdog de-RoCE'd (#2526 resolved); modelopt mean(dim=1) patch applied (#2527 resolved)
+- 507 zero weight_scale tensors in checkpoint shards (finite otherwise); pure torch matmul FINITE on GB10; bf16/fp16 KV both impossible in this build (flash_attn rejects bf16; fp16 not a CLI choice); fp8 KV forced by `kv_cache_quant_algo: FP8`
+- Incident #2528 (P0, open) holds the full root-cause chain
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #2528 [executing] — Bisect NVFP4 path: serve Qwen3-30B-A3B-NVFP4 on same build. Clean decode → checkpoint-load bug in 235B shard; same `!` → broken NVFP4 kernel on GB10; then switch to NVIDIA sparkcustom build with sm_121 support. SQL: mysql -u adminportal -p'iV84o80^y' admin_portal
+2. #2528 [executing] — If checkpoint-load bug: compare `hf_quant_config.json` (`group_size:16`) against vLLM expected NVFP4 scheme; test `--override-quant-config` or per-shard weight diff vs NVIDIA hash
+3. #2528 [pending] — If kernel bug: try `VLLM_DISABLE_NVFP4_FUSED_GROUPGEMM=1` or the build's envs.py knob for fused-MoE off; else track upstream #27364/#37615 resolution
+
+Reference IDs:
+- Task: 1786864599073
+- Incidents filed: #2526 (resolved), #2527 (resolved), #2528 (open)
+- Files touched: /home/rubenmajor/julia_unified_tp2_qwen235.sh, /home/rubenmajor/claudia_unified_worker.sh, /home/rubenmajor/claudia_cx7_watchdog.sh, vllm/modelopt.py (both boxes), /etc/hosts (both boxes), /var/www/emtskills/docs/JC_235B_AND_RING_UPGRADE_RUNBOOK.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
 ### `1786848590052` — 8/16/2026, 12:36:24 AM PT — 319 turns

@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/16/2026, 12:45:09 AM PT | window: last 72h | 77 tasks | index total 754 (parsed 3, cached 751)
+Generated: 8/16/2026, 5:55:46 AM PT | window: last 72h | 76 tasks | index total 754 (parsed 1, cached 753)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786864599073` | 8/16/2026, 12:45:07 AM | 101 | 463KB | #Julia/Claudia 235 |
+| `1786864599073` | 8/16/2026, 5:54:58 AM | 261 | 964KB | #Julia/Claudia 235 |
 | `1786848590052` | 8/16/2026, 12:36:24 AM | 319 | 2560KB | Was this person's account wrongfully suspended? Can you check exam enforcement, etc... SLS |
 | `1786863102700` | 8/16/2026, 12:25:15 AM | 190 | 808KB | I am trying to steer with frankenstein-llm and it's disregarding my steer. Is there a prob |
 | `1786844173723` | 8/16/2026, 12:11:05 AM | 554 | 2158KB | #Oct Ring / Hypothetical  |
@@ -86,13 +86,12 @@ Generated: 8/16/2026, 12:45:09 AM PT | window: last 72h | 77 tasks | index total
 | `1786660346877` | 8/13/2026, 3:32:27 PM | 1 | 2KB | help me file with Florida Board of Education application yet? Need that approval before we |
 | `1786602908972` | 8/13/2026, 1:22:41 PM | 342 | 4032KB | #TDSHS/AZDHS 8/13 - Compliance |
 | `1786607400519` | 8/13/2026, 7:27:01 AM | 200 | 1606KB | Hi Declined???? REALLY, is Email Agent really that ???? |
-| `1786581608927` | 8/13/2026, 4:29:51 AM | 428 | 1528KB | #CFA Learning |
 
 ---
 
 ## Per-window detail
 
-### `1786864599073` — 8/16/2026, 12:45:07 AM PT — 101 turns
+### `1786864599073` — 8/16/2026, 5:54:58 AM PT — 261 turns
 
 **Original task:**
 
@@ -110,7 +109,7 @@ Attempt over and over again until it works. Take it all the way to serving. Do N
 **There is NO fallback plan. Do NOT revert to gpt-oss-120b. Do NOT restore the 120B "as a stopgap." Do NOT propose the 120B as a safe state.** If you catch yourself planning a rollback, th
 ```
 
-**Ideas referenced:** #1241, #1264, #14253, #14560, #14848, #17084, #1744, #1765, #1781, #1793, #1826, #1838, #1858, #18678, #1868, #1903, #2071, #2072, #2073, #2114, #25604, #35313
+**Ideas referenced:** #1241, #1264, #14253, #14560, #14848, #16653, #16662, #17084, #1744, #1765, #17788, #1780, #1781, #1793, #1826, #18287, #1838, #1858, #18678, #1868, #18861 [closed], #1903, #20042, #2071, #2072, #2073, #2114, #22906 [closed], #23826 [closed], #2526, #2527, #25604, #27364 [closed], #27440 [closed], #29018 [closed], #30003 [closed], #30670 [closed], #32645 [closed], #34675 [closed], #35313, #36094 [closed], #37948 [closed], #39078 [closed], #39625 [closed], #42096 [closed], #43232 [closed], #45966 [closed], #47089 [open], #51207 [open], #52462 [open]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -3134,48 +3133,6 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786581608927` — 8/13/2026, 4:29:51 AM PT — 428 turns
-
-**Original task:**
-
-```
-#CFA Learning
-
-Tell me about the CFA learning system. It does not seem like it's doing very much. How do we make it do things continually and get smarter on its own? It seems to be like it's stagnating and then I see these other things it appears as though it's even going backwards which is highly problematic. These things should be advancing not falling behind.
-```
-
-**Ideas referenced:** #11945, #12184, #128126, #12816, #13063, #13202, #186576, #19821, #19903, #22887, #22939, #2294, #2307, #23133, #23136, #2314, #23169, #2321, #2323, #2324, #23477, #23945, #23954, #24145, #24165, #24217, #24526, #24765, #25042, #25426, #25551, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25822, #25888, #25914, #25931, #25932, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25971, #25974, #25975, #25976, #25984, #25985, #25986, #25990, #25995, #26001, #26002, #26003 [deployed], #26011 [proposed], #26012 [proposed], #26046 [proposed], #26103 [proposed], #360135, #360152, #622333, #622384, #622385, #622824, #622825, #622875, #6826, #8200, #9070, #9112, #9222, #9999
-
-**Last PICKUP PROMPT:**
-
-```
-═══════════════════════════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═════════════════════════════════════════════════════════════════════════════════════════
-Pick up task #26103 — repair the CFA learning-generation loop (producers write to non-existent columns / are unscheduled, so no new learnings in 71 days).
-
-Where we left off (verified 2026-08-13 03:29 PT):
-- Flood fixed: the 541K `cron_integrity_failure` wedge cleared; queue draining (104,842 → 1,327 daily inflow).
-- Triage AI alive: 85% AI decisions on log tail, `decisions_24h=1,458`.
-- Kaison MCP probe writer patched to canonical schema (varchar run ID + JSON details + hidden columns).
-- Dead loop: `ai_learned_corrections` `promo` newest = 2026-06-02; `cron_silent_ghost_investigation.php` INSERTs into `source_type/source_id/correction_data` (never existed); 7 producer crons unscheduled; `kaizen_v2_enabled` flag missing.
-
-Open threads to drive next (EVERY item must have a real filed idea #):
-1. #26103 [executing] — fix `cron_silent_ghost_investigation.php` INSERT to the real `ai_learned_corrections` schema (use meta_trainer's canonical column list) and run it once to verify a new `pending_review` row appears.
-2. #26103 [executing] — wire the 7 unscheduled producers into `/etc/cron.d` (silent_ghost_investigation, meta_agent_trainer, self_service_proctored_checkin, ruben_preference_compile_loop, confession_kaizen_bridge, kaizen_confession_feed, human_to_automation_bridge).
-3. #26103 [executing] — set `kaizen_v2_enabled` flag true in `ai_compiled_rules` and verify `argus_kaizen_learn_v2` compiles into `ai_compiled_rules` that CFAs read.
-
-Reference IDs:
-- Ideas: #26103 [executing], #26046 [proposed→approved], #26012 [executing], #26011 [executing], #26011 [approved]
-- Files touched: `cron/cron_integrity_watchdog.php`, `cron/cron_orchestrator_triage.php`, `cron/cron_kaison_mcp_tool_probes.php`, `cron/cron_kaison_bug_hunter_triage.php`
-- Ticket: (none this session)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═════════════════════════════════════════════════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```

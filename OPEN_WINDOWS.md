@@ -6,22 +6,23 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/16/2026, 3:28:25 PM PT | window: last 72h | 81 tasks | index total 761 (parsed 5, cached 756)
+Generated: 8/16/2026, 4:28:26 PM PT | window: last 72h | 80 tasks | index total 762 (parsed 8, cached 754)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786918177124` | 8/16/2026, 3:28:25 PM | 67 | 1463KB | #Email AI |
-| `1786917304515` | 8/16/2026, 3:28:09 PM | 133 | 869KB | Tell me about this - accurate? What is their claim? Is it legit? |
-| `1786913196629` | 8/16/2026, 3:27:58 PM | 199 | 2705KB | #CFA Emails |
-| `1786864599073` | 8/16/2026, 3:26:30 PM | 1119 | 3492KB | #Julia/Claudia 235 |
-| `1786821833685` | 8/16/2026, 3:23:13 PM | 123 | 334KB | #SSS / Virtual LoRA2 / Efficiency |
+| `1786660376952` | 8/16/2026, 4:28:24 PM | 489 | 1565KB | help me file with Florida Board of Education application yet? Need that approval before we |
+| `1786921825468` | 8/16/2026, 4:28:16 PM | 105 | 447KB | #TeExameiner Examine issue |
+| `1786917304515` | 8/16/2026, 4:27:39 PM | 296 | 1524KB | Tell me about this - accurate? What is their claim? Is it legit? |
+| `1786913196629` | 8/16/2026, 4:27:12 PM | 348 | 3267KB | #CFA Emails |
+| `1786918177124` | 8/16/2026, 4:26:18 PM | 189 | 2122KB | #Email AI |
+| `1786674811485` | 8/16/2026, 4:19:20 PM | 360 | 1381KB | Can you tell me how we can see if anyone is using a bot to chat to us or not? |
+| `1786864599073` | 8/16/2026, 4:17:58 PM | 1240 | 3857KB | #Julia/Claudia 235 |
+| `1786821833685` | 8/16/2026, 4:07:33 PM | 269 | 870KB | #SSS / Virtual LoRA2 / Efficiency |
 | `1786914420694` | 8/16/2026, 2:15:25 PM | 26 | 265KB | Add these 2 also for the 17 year old and give info on additional thoughts |
 | `1786823554800` | 8/16/2026, 1:57:36 PM | 272 | 2251KB | #Argus |
 | `1786913306929` | 8/16/2026, 1:54:20 PM | 8 | 222KB | What does this all mean? or what is it indicative of? |
 | `1786910320016` | 8/16/2026, 1:35:54 PM | 134 | 564KB | Can you do another 90 minute session again |
 | `1786910687953` | 8/16/2026, 1:34:33 PM | 192 | 384KB | #Payment  |
-| `1786674811485` | 8/16/2026, 1:05:13 PM | 288 | 1142KB | Can you tell me how we can see if anyone is using a bot to chat to us or not? |
-| `1786660376952` | 8/16/2026, 1:03:58 PM | 382 | 1303KB | help me file with Florida Board of Education application yet? Need that approval before we |
 | `1786845607312` | 8/16/2026, 12:52:49 PM | 108 | 605KB | #GLM 5.3 Update |
 | `1786848590052` | 8/16/2026, 12:36:24 AM | 319 | 2560KB | Was this person's account wrongfully suspended? Can you check exam enforcement, etc... SLS |
 | `1786863102700` | 8/16/2026, 12:25:15 AM | 190 | 808KB | I am trying to steer with frankenstein-llm and it's disregarding my steer. Is there a prob |
@@ -89,28 +90,71 @@ Generated: 8/16/2026, 3:28:25 PM PT | window: last 72h | 81 tasks | index total 
 | `1786673589882` | 8/13/2026, 9:00:55 PM | 409 | 1257KB | Big Mac has 4 GPUs now. Can you make sure that other card is part of service?  |
 | `1786666883409` | 8/13/2026, 5:21:23 PM | 1 | 2KB | Can you email a copy of any externship agreements / affiliation agreement whatever from ag |
 | `1786652849668` | 8/13/2026, 4:44:11 PM | 512 | 2763KB | #TDSHS |
-| `1786651267227` | 8/13/2026, 4:05:11 PM | 360 | 1051KB | check the security certificate for onlineemd.com and fix it - the SSL |
-| `1786660346877` | 8/13/2026, 3:32:27 PM | 1 | 2KB | help me file with Florida Board of Education application yet? Need that approval before we |
 
 ---
 
 ## Per-window detail
 
-### `1786918177124` — 8/16/2026, 3:28:25 PM PT — 67 turns
+### `1786660376952` — 8/16/2026, 4:28:24 PM PT — 489 turns
 
 **Original task:**
 
 ```
-#Email AI
-
-Couple things. Seems to be missing the previous emails sent from the student in reverse date order which was there before, Also, the signature like of customer service is missine as well as the answer to this is incorrect. CFA whould be able to resolve this. Is this from teh addition fo the new 235B Julia/Claudia or what's causing this regression?
+help me file with Florida Board of Education application yet? Need that approval before we the FL DHS application. We want also to be a CE and EMT provider there. So may also need to do an application for EMT CE with the EMS Authority in Florida
 ```
 
-**Ideas referenced:** #12584, #16732, #23133, #2323, #2328, #2341, #2343, #2344, #23982, #2450, #24990, #2511, #2513, #2517, #2518, #2522, #25962, #25965, #25986, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26376, #26377, #26495 [deployed], #26496 [deployed], #26501, #26508 [proposed], #26509 [proposed], #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26663, #26678, #26711, #26719, #26743, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26834 [in_progress], #26835 [proposed], #3237, #3261, #3319, #3346, #5298, #6106, #7174, #8157, #8162
+**Ideas referenced:** #004890, #121212, #16213, #17130 [superseded], #17537 [rejected], #18132 [deployed], #19125, #19173, #2335 [deployed], #252525, #252545, #2563, #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26183 [proposed], #26238, #26239 [executing], #313131, #3310, #334155, #475569, #555555, #6518
+
+**Last PICKUP PROMPT:**
+
+```
+ remains a separate open item.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Florida + Oregon EMS state approvals: prep docs, Drive folders, website links.
+
+Where we left off (verified 2026-08-16 1:03 PM PT):
+- 6 PDF prep docs generated (reportlab) and uploaded into the 6 correct Drive subfolders; verified by listing Drive contents.
+- A "State Prep Documents" card with 14 clickable links (8 folders + 6 PDFs) was injected at the top of the Regulatory tab in new_site_setup.php; PHP lints clean.
+- Cache-busting ?v=20260814 added to site_setup_data.js and site_setup_data_extended.js script tags (they were being served 30-day immutable).
+- Tracker rows corrected: CAPCE = not_applied (NOT certified), FL DOH forms = DH 1698 / 1698C, FL CIE = exempt via 1005.06(1)(b)+(d). Medical director must be FL-licensed MD/DO (64J-1.004(2)(a)).
+- Ideas filed: #26183 (FL) and #26239 (OR), both promoted to efficiency_priority=1.
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #26183 [executing] — Drive completion of the actual FL DOH Bureau of EMS filing: fill DH Form 1698 (initial EMT) and DH Form 1698C (CE), attach the prep PDFs, and submit to the EMS Education Section (the one gate that unlocks EMT + CE + skills sign-offs in FL).
+2. #26239 [executing] — Drive completion of the OR OHA-EMS filing: submit initial EMT course approval (OAR 333-265) and OHA EMS Educator registration; CE is CAPCE-dependent so sequence CAPCE first.
+3. #26183 [awaiting_review] — Resolve the CAPCE dependency before any CE hour is marketed as approved in either state: open the CAPCE initial accreditation application with key 55053b9d-2713-4ec2-9680-3be8e75e43b0.
+4. #26239 [awaiting_review] — Confirm with Ruben which subfolder layout he wants (EMT/CE/DOE per state is current; confirm the Oregon "DOE" subfolder should really be "HECC" higher-ed coordination, content already drafted).
+
+Reference IDs:
+- Ticket: FL + OR state approval (chat task, no Jira ticket)
+- Ideas filed: #26183 (FL filing), #26239 (OR filing)
+- Files touched: /var/www/emtskills/routes/new_site_setup.php, /var/www/emtskills/assets/js/site_setup_data.js, /var/www/emtskills/assets/js/site_setup_data_extended.js, /var/www/emtskills/docs/HANDOFF_NOTES.md (via MCP), admin_portal.accreditation_renewal_tracker (rows 1, 11, 12), admin_portal.orchestrator_ideas (#26183, #26239)
+- Drive: 8 folders created + 6 PDFs uploaded (links above)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786921825468` — 8/16/2026, 4:28:16 PM PT — 105 turns
+
+**Original task:**
+
+```
+#TeExameiner Examine issue
+
+TeExameiner Examine keeps popping up under student skills for admin_profile.php page when it's actually an instructor. I've asked you about this before and we've fixed it, but it keeps recurring. Supposedly Jon spent several hours (6-7 Jon says) trying to repair this propblem with no luck. We do not have an instructor by that name. 	"TeExameiner Examine" - where is that coming from. It's been persistent for many months. Need to fix it.
+```
+
+**Ideas referenced:** #10354, #16732, #23133, #2328, #23982, #2511, #2513, #2517, #2518, #2522, #25962, #25965, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26229, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26376, #26377, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26663, #26678, #26711, #26719, #26743, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26834 [in_progress], #26835 [proposed], #3261, #3319, #3346, #8157, #8162
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786917304515` — 8/16/2026, 3:28:09 PM PT — 133 turns
+### `1786917304515` — 8/16/2026, 4:27:39 PM PT — 296 turns
 
 **Original task:**
 
@@ -120,33 +164,37 @@ Tell me about this - accurate? What is their claim? Is it legit?
 Student Grievance Form Mariah Gatlin
 ```
 
-**Ideas referenced:** #111827, #138875, #2491, #255231, #26844 [proposed], #26845 [proposed], #374151, #6366
+**Ideas referenced:** #111827, #12363, #138875, #155724, #1648, #18944, #18951, #2144, #2164, #2491, #255231, #2585, #2587, #2588, #2590, #2591, #2594, #2614, #2636, #2639, #2643, #2648, #2665, #2682, #2684, #26844 [proposed], #26845 [proposed], #26853 [deployed], #2692, #2700, #3132, #374151, #6366, #9191
 
 **Last PICKUP PROMPT:**
 
 ```
-ent (Marayah Gatlin, id 2091).
+irmed from any logged channel.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Investigate "Student Grievance Form Mariah Gatlin" (spelling mismatch + orphaned intake).
+Pick up — Mariah/Marayah Gatlin grievance: intake gate fixed + reply to Jessica Gilder sent.
+(Real Cline task id unknown — omit; topic above.)
 
-Where we left off (verified 2026-08-16 15:17 PT):
-- No "Mariah Gatlin" exists; real student is **Marayah Gatlin** (Students id 891 & 2091, 25914T-05 / 25924T-22, Dallas Fort Worth TX, marayah071805@gmail.com).
-- Source email is `email_inbound_log` id 138875 (Jessica Gilder, "Grapevine Student Grievance", 2026-08-16 14:15 PT). Body: student "sent form months ago... emailed it to Andrew and someone at customer service."
-- Attachment `Student Grievance Form Mariah Gatlin.pdf` (378,852 bytes) recorded in `attachment_info` but NEVER saved: `attachment_paths` NULL, `full_message_fetched` 0, not on disk.
-- No prior grievance/ticket/email/comms rows for Gatlin — the "months ago" claim is unverified in our records.
-- Fetch cron `cron_grievance_postmark_attachment_fetch.php` fatals: unknown col `g.grievance_code` (real col `grievance_number`), placeholder Postmark token, and only processes rows already in `grievances`.
+Where we left off (verified 2026-08-16 4:26 PM PT):
+- GATE FIX DEPLOYED: grievance_code.php + grievance_intake.php add `AND is_duplicate=0`; phone compared last-10 (10/11-digit ok). php -l clean, live-verified: email/phone10/phone11/sid all resolve to Students id 2091; misspelled "Mariah" still NULL. Backups .bak-gatefix-20260816. Idea #26853 [deployed].
+- EMAIL SENT: to jngilder@gmail.com cc vyu@emsuniversity.com, from rmajor@emsuniversity.com, "Re: Grapevine Student Grievance", body = Ruben's template (forward original email as proof of timely submission). email_outbound_log id 364780 status=sent.
+- Student: Marayah Gatlin id 2091, student_id 25924T-22, marayah071805@gmail.com, DFW TX. Duplicate 891 merged 2026-02-09 causes the ambiguity gate — now fixed.
+- Source inbound: email_inbound_log id 138875 (Jessica Gilder, subject "Grapevine Student Grievance"), attachment "Student Grievance Form Mariah Gatlin.pdf" 378,852 B — still not saved to disk.
 
-Open threads to drive next:
-1. #26844 [proposed] — Fix `cron_grievance_postmark_attachment_fetch.php`: change `grievance_code` → `grievance_number`, wire real token from `config/config.php` (`$config['postmark']['server_token']`) instead of placeholder, and handle orphaned inbound emails (process from `email_inbound_log` where `has_attachments=1` and `full_message_fetched=0`, not just from `grievances`).
-2. #26845 [proposed] — Fetch PDF for inbound id 138875 via Postmark inbound details endpoint (`/messages/inbound/{message_id}/details`, `ContentUrl`), save to disk, OCR, read the actual grievance claim, then create the grievance + ticket under Marayah Gatlin (id 2091) per policy. Do NOT repeat the DB credentials seen in source files.
+Open threads to drive next (every item has a real filed idea #):
+1. #26845 [proposed] — When the student forwards the original email (per the reply we sent), fetch the PDF via the email pipeline, OCR/extract the grievance substance, assess merit, and create the grievance row + ticket per policy. Also verify the "months ago to Andrew/customer service" claim against inbound history once the original email arrives.
+2. #26844 [proposed] — Fix cron_grievance_postmark_attachment_fetch.php (wrong column g.grievance_code vs grievance_number, placeholder Postmark token, and orphans never become grievances); this is blocking all Postmark grievance attachment ingestion and directly caused the lost PDF.
+3. #26853 [deployed] — Monitor next submission attempt using the Gatlin fix; if a student still reports failure, re-run the live matcher harness (/tmp/test_gate.php) to confirm.
 
 Reference IDs:
-- Ticket: none exists yet (no grievance/ticket created for this student)
-- Ideas filed: #26844 [proposed], #26845 [proposed]
-- Files touched: none on disk (read-only investigation). DB reads: `Students`, `grievances`, `email_inbound_log`. Read-only source: `/var/www/emtskills/cron/cron_grievance_postmark_attachment_fetch.php`, `/var/www/emtskills/cron/cron_postmark_attachment_backfill.php`, `/var/www/emtskills/lib/postmark_grievance_backfill.php`.
+- Idea filed this session: #26853 [deployed]
+- Prior ideas this session: #26845 [proposed], #26844 [proposed]
+- Files touched: /var/www/emtskills/includes/grievance_code.php, /var/www/emtskills/lib/grievance_intake.php (+ .bak-gatefix-20260816)
+- Outbound email: email_outbound_log id 364780 (sent)
+- Inbound email: email_inbound_log id 138875 (PDF not fetched)
+- Students: 891 (dup, merged) / 2091 (canonical)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -154,7 +202,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786913196629` — 8/16/2026, 3:27:58 PM PT — 199 turns
+### `1786913196629` — 8/16/2026, 4:27:12 PM PT — 348 turns
 
 **Original task:**
 
@@ -164,34 +212,34 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 These stupid CFA emails are back. This was already corrected. Needs more correction again
 ```
 
-**Ideas referenced:** #16732, #18132, #18176, #18313, #23133, #23982, #2450, #2511, #2513, #2517, #2518, #2522, #25774, #25920, #25962, #25965, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26229, #26348, #26368, #26376, #26377, #26495 [deployed], #26496 [deployed], #26501, #26508 [proposed], #26509 [proposed], #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26661, #26663, #26678, #26711, #26719, #26743, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26834 [in_progress], #26835 [proposed], #26837 [proposed], #3783, #3784, #3785, #3786, #3787, #3788, #3789, #3790, #3791, #3836, #3874, #4958, #5218, #8157, #8162, #8163, #8178 [pending_review]
+**Ideas referenced:** #16069, #16732, #16817, #18132, #18176, #18313, #18944, #18951, #23133, #23483, #23982, #2450, #2511, #2513, #2517, #2518, #2522, #25774, #25909, #25920, #25962, #25965, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26229, #26348, #26368, #26376, #26377, #26495 [deployed], #26496 [deployed], #26501, #26508 [proposed], #26509 [proposed], #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26661, #26663, #26678, #26711, #26719, #26743, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26834 [in_progress], #26835 [proposed], #26837 [proposed], #26846 [proposed], #26849, #26850 [proposed], #26851 [proposed], #26852 [proposed], #3098, #3783, #3784, #3785, #3786, #3787, #3788, #3789, #3790, #3791, #3836, #3874, #4958, #5218, #78350, #8157, #8162, #8163, #8178 [pending_review], #92400
 
 **Last PICKUP PROMPT:**
 
 ```
-urfaces get the fact injected.
+CFA answered Michael directly.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — CFA terminology emails are back: "CFA" means Customer Facing Assistant (AI), never a program/exam.
+Pick up task: CFA terminology recurrence fix + Michael Muhamedcani correction.
 
-Where we left off (verified 2026-08-16 2:32 PM PT):
-- lib/CfaTerminologyGuard.php deployed (hasCfaTerm / scrub / sanitizeSubject / safeQuestions), php -l clean
-- Guard wired into cron/cron_email_followup.php (backup .bak-cfaguard-20260816), cron/cron_email_responder.php (lines 2773/2919), lib/ai_ticket_agent.php (lines 359-360); all php -l clean
-- Poison conversation 3892 (mmuhamedcani@gmail.com, "Your CFA Program Access") resolved + sanitized; verified 0 CFA rows in conversations/queue/drafts/outbound pending
-- FPM reloaded; dry-run of followup cron healthy
+Where we left off (verified 2026-08-16 16:26 PT):
+- Guard shipped: lib/CfaTerminologyGuard.php v2 on disk (php -l clean) — handles negated phrases, Support Team, subjects, question filtering.
+- Guard wired at the single email choke point lib/mailer.php sendEmail() + 4 surfaces: cron_email_followup.php, cron_email_responder.php, lib/ai_ticket_agent.php, cron_cfa_queue_executor.php.
+- Michael answered directly: outbound id 364776 (Postmark HTTP API) replaces garbled 364775. Clean body answers his three questions.
+- Corrected blast to 11 still-owed recipients: outbound ids 364746-364756.
+- Voice/SMS/chat audit (idea #26846): clean — no CFA token outside the email path.
 
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26837 [proposed] — Enumerate email_outbound_log send_source=cron_cfa_queue_executor AND subject LIKE '%CFA Program Access%' since 2026-08-01 (~120 recipients), then send each a single correction (no CFA echo per CfaTerminologyGuard) and re-answer their original question. Michael (mmuhamedcani@gmail.com) still needs his Safe Exam Browser question answered, human-appropriate.
-2. #26834 [deployed] — Watch for any new student-facing surface that echoes stored subject_thread / pending_questions (voice, SMS, chat) and wire CfaTerminologyGuard there; the lesson is deterministic send-boundary sanitization, not prompt-side admonition.
-3. Optionally register the CfaTerminologyGuard class in the shared config bootstrap so future surfaces get it by default instead of per-file require_once.
+Open threads to drive next (EVERY item has a real filed idea):
+1. #26852 [proposed] — Add regression tests for CfaTerminologyGuard::scrub (ships at the email choke point under-tested; mangled one live sentence before caught).
+2. #26846 [deployed] — Verify Postmark delivered outbound 364776 to mmuhamedcani@gmail.com.
 
 Reference IDs:
-- Ticket: none (Ruben chat directive 2026-08-16)
-- Ideas filed: #26834 [deployed], #26837 [proposed]
-- Learned corrections: #8178 [pending_review]
-- Files touched: lib/CfaTerminologyGuard.php (new), cron/cron_email_followup.php (+.bak-cfaguard-20260816), cron/cron_email_responder.php, lib/ai_ticket_agent.php, docs/HANDOFF_NOTES.md (entry added 14:29 PT)
+- Outbound correction ids: 364775 (superseded, garbled), 364776 (clean), 364746-364756 (corrected blast)
+- Ideas filed: #26834 [deployed], #26837 [deployed], #26846 [deployed], #26852 [proposed]
+- Learned correction: ai_learned_corrections id #8178 (CFA terminology)
+- Files changed: lib/CfaTerminologyGuard.php, lib/mailer.php, cron/cron_email_followup.php, cron/cron_email_responder.php, lib/ai_ticket_agent.php, cron/cron_cfa_queue_executor.php, docs/HANDOFF_NOTES.md
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -199,7 +247,62 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786864599073` — 8/16/2026, 3:26:30 PM PT — 1119 turns
+### `1786918177124` — 8/16/2026, 4:26:18 PM PT — 189 turns
+
+**Original task:**
+
+```
+#Email AI
+
+Couple things. Seems to be missing the previous emails sent from the student in reverse date order which was there before, Also, the signature like of customer service is missine as well as the answer to this is incorrect. CFA whould be able to resolve this. Is this from teh addition fo the new 235B Julia/Claudia or what's causing this regression?
+```
+
+**Ideas referenced:** #12584, #1283, #138931, #138967, #16473, #16732, #23133, #2316, #2323, #2328, #2341, #2343, #2344, #23710, #23982, #2450, #24990, #2511, #2513, #2517, #2518, #2522, #25638, #25643, #25962, #25965, #25986, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26376, #26377, #26495 [deployed], #26496 [deployed], #26501, #26508 [proposed], #26509 [proposed], #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26663, #26678, #26711, #26719, #26743, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26834 [in_progress], #26835 [proposed], #26851, #3237, #3261, #3319, #3346, #364731, #364733, #364735, #364740, #364741, #364742, #364759, #364760, #364762, #364763, #364764, #364765, #364766, #364767, #3973, #5298, #6106, #7174, #8157, #8162
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786674811485` — 8/16/2026, 4:19:20 PM PT — 360 turns
+
+**Original task:**
+
+```
+Can you tell me how we can see if anyone is using a bot to chat to us or not?
+```
+
+**Ideas referenced:** #059669, #12364, #16152, #16474, #16732, #18335, #20251 [proposed], #2341, #23982, #23989, #2522, #25550, #25962, #25964, #25965, #25986, #26211, #26229 [proposed], #26376, #26377, #2657, #26711, #26719, #26743, #26816 [proposed], #2780, #2916, #33689, #6366, #7925, #9084, #9109, #9112, #9131, #9132, #9152, #9193, #9222, #9269
+
+**Last PICKUP PROMPT:**
+
+```
+executing], #26816 [deployed].
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Chat widget queue/ETA + repeat-ask dedup-ack (ideas #26229, #26816).
+
+Where we left off (verified 2026-08-16 23:18 PT):
+- `lib/chat_queue_confidence.php` + `api/chat_widget_api.php` + `api/chat_widget_embed.js` all deployed, lint clean, live probe 200
+- Matcher bugfix: 24h window, `conversation_id OR visitor_ip`, symmetric REGEXP_REPLACE normalization
+- embed.js `renderQueueStatus()` wired into renderMessages + poll handler
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26816 — Watch production for 48h: count ack lines inserted (`SELECT COUNT(*) FROM wordpress_2.LzDe7pTO_support_chat_messages WHERE sender_type='assistant' AND message_text LIKE '%will not move you up%'`) and confirm visitors report seeing the queue line in the header. If still 0 after fix, debug cwc_recent_similar_msgs on a known repeat pair.
+2. #26816 — Create `chat_widget_embed.js.bak-20260816-pre-render` backup from the pre-patch content (the edit was applied in place without a .bak - the only file without one).
+3. #26229 — Optional follow-up: per-IP rate cap in widget_send (max 5 msgs/min, 30/hr) using `chat_portal_messages.visitor_ip` + `chat_visitor_cooldown` offense_count, as designed in the idea.
+
+Reference IDs:
+- Ideas filed/updated: #26229 [executing], #26816 [deployed]
+- Files touched: /var/www/emtskills/lib/chat_queue_confidence.php, /var/www/emtskills/api/chat_widget_api.php, /var/www/emtskills/api/chat_widget_embed.js
+- Backups: api/chat_widget_api.php.bak-20260816-idea26229-queueeta, lib/chat_queue_confidence.php (pre-Aug-16 state recoverable via sed history in HANDOFF_NOTES.md)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786864599073` — 8/16/2026, 4:17:58 PM PT — 1240 turns
 
 **Original task:**
 
@@ -217,36 +320,32 @@ Attempt over and over again until it works. Take it all the way to serving. Do N
 **There is NO fallback plan. Do NOT revert to gpt-oss-120b. Do NOT restore the 120B "as a stopgap." Do NOT propose the 120B as a safe state.** If you catch yourself planning a rollback, th
 ```
 
-**Ideas referenced:** #1241, #1264, #14253, #14560, #14848, #16473, #16653, #16662, #17084, #1744, #1765, #17788, #1780, #1781, #178686, #1793, #1826, #18287, #18329 [deployed], #1838, #1858, #18678, #1868, #18861 [closed], #1903, #19338, #19458, #19491, #20042, #2071, #2072, #2073, #2114, #22906 [closed], #23133 [executing], #23826 [closed], #25125 [deployed], #2526 [resolved], #2527 [resolved], #2528 [open], #25604, #25869, #26003 [deployed], #26038 [executing], #26040 [executing], #26041 [executing], #26045 [executing], #26050 [executing], #26054 [awaiting_review], #26065 [deployed], #26090 [deployed], #26376, #26377, #26396, #26424, #26461 [executing], #26611 [deployed], #26613 [proposed], #26617 [executing], #26819 [proposed], #26827 [open], #26840 [open], #27364 [closed], #27440 [closed], #29018 [closed], #30003 [closed], #30670 [closed], #32645 [closed], #34675 [closed], #35313, #36094 [closed], #36914 [open], #37615, #37948 [closed], #39078 [closed], #39625 [closed], #39666, #40888 [open], #41408 [open], #42058 [open], #42096 [closed], #43232 [closed], #43350 [open], #45434 [open], #45829 [open], #45966 [closed], #46191 [open], #46329 [open], #46514 [open], #47089 [open], #47365 [open], #47527 [open], #48898 [open], #48994 [open], #49011 [open], #49060 [open], #49237 [open], #49262 [open], #49381 [open], #50288 [open], #50883 [open], #51091 [open], #51207 [open], #51534 [open], #51581 [open], #52060 [open], #52462 [open]
+**Ideas referenced:** #11397, #12251, #12335, #12365, #12405, #12407, #1241, #12577, #1264, #14253, #14560, #14848, #16473, #16653, #16662, #17084, #1744, #1765, #17788, #1780, #1781, #178686, #1793, #1826, #18287, #18329 [deployed], #1838, #1858, #18678, #1868, #18861 [closed], #1903, #19338, #19458, #19491, #20042, #2071, #2072, #2073, #2114, #22906 [closed], #23133 [executing], #23826 [closed], #25125 [deployed], #2526 [resolved], #2527 [resolved], #2528 [open], #25604, #25869, #26003 [deployed], #26038 [executing], #26040 [executing], #26041 [executing], #26045 [executing], #26050 [executing], #26054 [awaiting_review], #26065 [deployed], #26090 [deployed], #26376, #26377, #26396, #26424, #26461 [executing], #26611 [deployed], #26613 [proposed], #26617 [executing], #26819 [proposed], #26827 [open], #26840 [open], #26847 [awaiting_review], #27364 [closed], #27440 [closed], #29018 [closed], #30003 [closed], #30670 [closed], #32645 [closed], #34675 [closed], #35313, #36094 [closed], #36914 [open], #37615, #37948 [closed], #39078 [closed], #39625 [closed], #39666, #40888 [open], #41408 [open], #42058 [open], #42096 [closed], #43232 [closed], #43350 [open], #45434 [open], #45829 [open], #45966 [closed], #46191 [open], #46329 [open], #46514 [open], #47089 [open], #47365 [open], #47527 [open], #48898 [open], #48994 [open], #49011 [open], #49060 [open], #49237 [open], #49262 [open], #49381 [open], #50288 [open], #50883 [open], #51091 [open], #51207 [open], #51534 [open], #51581 [open], #52060 [open], #52462 [open], #64748
 
 **Last PICKUP PROMPT:**
 
 ```
-his running instance directly.
+cked separately and unchanged.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task 1786864599073 — Qwen3-235B TP=2 serving + NaN decode root cause.
+Pick up task — Fleet-wide Context / Virtual EMSU Corpus / SSS / Virtual LoRA2 verification (the ".clinerules/91 update required" follow-up).
 
-Where we left off (verified 2026-08-16 14:43 PT):
-- Qwen3-235B-A22B-NVFP4 SERVING on Julia+Claudia TP=2, PID 1291611, port 8000, max_model_len 24576. Verified `/v1/models` returns qwen3-235b with root nvidia/Qwen3-235B-A22B-NVFP4.
-- Decode still returns constant `!` (NaN logits, incident #2528 [open]).
-- Decisive datapoint: BOTH MoE backends (CUTLASS fused default AND `--moe-backend marlin`) produce identical `!` → kernel-backend refuted as sole cause.
-- LoRA ruled out: `LORA_ARGS=""` (bug #1765), no `--enable-lora` in live args; only adapter on disk is gpt-oss-120b-trained, incompatible with 235B.
-- `per_tensor_dequantize` MULTIPLIES (`fake_qweight * inv_scale`) → 507 partial-zero weight_scale tensors are BENIGN, not divider.
-- Attempts staged/backed up: `.bak.attempt18_marlin`, `.bak.attempt19_bf16kv` (script currently = clean auto-KV baseline, no overrides).
+Where we left off (verified 2026-08-16 16:16 PT):
+- 235B SERVING TP=2 on Julia+Claudia, PID 1264675, endpoint `http://localhost:8000/v1/models` → `qwen3-235b` (24576 ctx); decode still `!`/NaN, tracked as incident #2528 [open].
+- Verified live adapter `/usr/local/bin/frankenstein_tools_adapter.py` already implements SSS per-lane (line ~3565: cline → `[EMSU-CLINE-STEERING-v1]`, CFA → `[EMSU-CFA-STEERING-v1]`) and Virtual LoRA2 merge (line 3092 `_virtual_lora_merge`, wired at 3166, loads `/var/www/emtskills/data/virtual-lora/*.json`, 30s cache, `[EMSU-VIRTUAL-LORA]` guard).
+- Corpus grounding confirmed live in router (`[EMSU-CORPUS-v1]` present in this window's system prompt); removed redundant `emsu-corpus-v2.json` from the virtual-lora dir; kept PHP lib deploy `lib/VirtualLoraAdapters.php` (needed by the view route).
 
-Open threads to drive next (EVERY item has a real filed idea):
-1. #26819 [open] — Upgrade to sm_121-capable torch/vLLM: PyPI aarch64 wheels ship 0 sm_121 kernels; pypi.nvidia.com has no torch. Path = source rebuild with TORCH_CUDA_ARCH_LIST=12.1 or NVIDIA JetPack GB10 fork. This is the highest-confidence fix.
-2. #26827 [open] — LoRA/virtual-Laura-v2 question: Ruben asked twice; verified LoRA is unused + adapter mismatch; asked Ruben for the SSS/Virtual-LoRA2 path to verify.
-3. #26840 [open] — Control-model test (gpt-oss-120b bnb-4bit) to isolate stack-vs-checkpoint: cache is an EMPTY skeleton, must re-download before running.
+Open threads to drive next (every item has a real filed idea #):
+1. #26847 [awaiting_review] — Probe a real multi-turn routed turn and grep for `[EMSU-VIRTUAL-LORA]` + `email-answer-completely` to prove the merge fires end-to-end; then close the idea if PASS.
+2. #26819 [open] — vLLM sm_121 stack upgrade: wheel vllm-0.27.1 downloaded at `/tmp/vllmcheck`, scratch venv `.vllm027` created but blocked on stable-libtorch ABI mismatch with torch 2.10.0+cu130; decision needed: hold for the torch upgrade or patch in-place.
+3. #2528 [blocked] — 235B NaN decode: CUTLASS and Marlin backends BOTH emit `!` (proves checkpoint/loader-level issue, not kernel); pure-torch dequant finite; next candidates are the w13 requantize path or feeding tensor dumps to a Python-side matmul harness.
 
 Reference IDs:
-- Incident: #2528 (NaN logits, open)
-- Scripts: /home/rubenmajor/julia_unified_tp2_qwen235.sh (clean baseline), claudia_unified_worker.sh
-- Backups: .bak.attempt18_marlin, .bak.attempt19_bf16kv
-- Files modified: vllm/model_executor/layers/quantization/modelopt.py (w13 scale_2 mean patch — unverified against upstream), w8a8_utils.py (read-only, confirmed multiply dequant)
+- Task: 1786864599073
+- Ideas filed: #26819 [open], #26827 [proposed], #26840 [proposed], #26847 [awaiting_review]
+- Files touched: /usr/local/bin/frankenstein_tools_adapter.py (verified only), /var/www/emtskills/lib/VirtualLoraAdapters.php (deployed), /var/www/emtskills/data/virtual-lora/ (email-answer-completely.json retained, emsu-corpus-v2.json removed), /home/rubenmajor/julia_unified_tp2_qwen235.sh (restored auto KV, no backend override)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -254,7 +353,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786821833685` — 8/16/2026, 3:23:13 PM PT — 123 turns
+### `1786821833685` — 8/16/2026, 4:07:33 PM PT — 269 turns
 
 **Original task:**
 
@@ -268,9 +367,43 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 This is occurred to me a few times ab
 ```
 
-**Ideas referenced:** #10740, #12251, #12335, #12363, #12365, #12366, #12368, #12407, #13874, #16718, #18329 [deployed], #19338, #19458, #19491, #23133 [executing], #24431, #24635, #25125 [deployed], #25150, #25188, #25510, #25522, #25576, #25618, #25619, #25643, #25644, #25645, #25649, #25650, #25653, #25654, #25718, #26003 [deployed], #26038 [executing], #26040 [executing], #26041 [executing], #26045 [executing], #26050 [executing], #26054 [awaiting_review], #26065 [deployed], #26090 [deployed], #26182 [approved], #26461 [executing], #26611 [deployed], #26613 [proposed], #26617 [executing], #26624 [deployed], #26625 [executing], #26626 [executing]
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12249, #12251, #12266, #12269, #12285, #12335, #12363, #12365, #12366, #12368, #12407, #12477, #12588, #12589, #12590, #12618, #12680, #12688, #12689, #12824, #12872, #12878, #13202, #13459, #13470, #13874, #14133, #14142, #15776, #16163, #16265, #16304, #16715, #16718, #16844, #17078, #18312, #18326, #18329 [deployed], #18671, #19338, #19458, #19491, #19686, #2299, #23133 [executing], #23171, #24431, #24635, #25097, #25125 [deployed], #25128, #25150, #25155, #25171, #25186, #25188, #25510, #25522, #25576, #25618, #25619, #25643, #25644, #25645, #25649, #25650, #25653, #25654, #25718, #26003 [deployed], #26038 [executing], #26040 [executing], #26041 [executing], #26045 [executing], #26050 [executing], #26054 [awaiting_review], #26065 [deployed], #26090 [deployed], #26182 [approved], #26461 [executing], #26505, #26611 [deployed], #26613 [proposed], #26617 [executing], #26624 [deployed], #26625 [executing], #26626 [executing], #26848 [approved]
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+nes 3585-3599 (SSS/CFA guards)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #26461 [deployed] — double-injection guard verification finished, watch items open.
+
+Where we left off (verified 2026-08-16 16:06 PT):
+- Ruben concern answered: no double SSS/VEC/context. Marker guards verified live: steering marker check lines 638-653, VEC "VIRTUAL EMSU CORPUS" skip line 4836, rule91 tail idempotent marker lines 700-703, adapter SSS/CFA guards lines 3585-3599. Router + adapter share `[EMSU-CLINE-STEERING-v1]` so adapter skips when router already injected.
+- #26848 [approved] filed: onboarding audit guard proving a new pool member receives steering/corpus/rule_rag at runtime. Build scope now also includes confirming no double-fire for models in multiple groupings.
+- Virtual LoRA v2 #26461 [deployed] serving through 15:15 PT. Rule 322 #26624 [deployed]. Canary FIXED + PASS event 6465675 (#26065 [deployed]). Executor building #26182 [executing]; doctor repaired 37 orphans earlier.
+- Watch: #26625 [executing], #26626 [executing] in_progress not built; #26617 [executing] regressed idle, hand-ship armed; #26613 [executing] approved-idle; #26054 [awaiting_review].
+- Parked untouched: #26045 [executing], #26041 [executing], #26040 [executing], #26038 [executing], #23133 [executing].
+
+Open threads to drive next:
+1. #26848 [approved], build the onboarding audit guard in-window per rule 322: when autosync enrolls a new pool member, emit orchestrator_event_log row with steering_targets=[steering,corpus,rule_rag]; confirm no double-fire for multi-group models; add how_to_add_a_unit doc.
+2. #26617 [executing], if still idle hand-ship the silence-cron SQL rewrite (chat_portal_visitor_sessions.last_activity_at, chat_portal_messages.sender_type), dry-run clean, wire crontab.
+3. #26625 [executing] + #26626 [executing], verify guard fix + efficiency banner land.
+4. #26065 [deployed], confirm 05:45 canary logs PASS tomorrow.
+5. #26054 [awaiting_review], 609-unanswered-conversations P0, Ruben review.
+
+Reference IDs:
+- Ideas filed this session: #26848 [approved]
+- Ideas carried: #26461 [deployed], #26624 [deployed], #26065 [deployed], #26611 [deployed], #26625 [executing], #26626 [executing], #26617 [executing], #26613 [executing], #26050 [executing], #26054 [awaiting_review], #26045 [executing], #26041 [executing], #26040 [executing], #26038 [executing], #23133 [executing], #26182 [executing]
+- Files touched: /var/log/emsu-cfa-norule-canary.log (created + chowned), /tmp/norule_canary_manual.log
+- Evidence: marker guards verified live at _router_core.py 638-653/4836/700-703 and adapter 3585-3599; VIRTUAL_LORA log lines; canary PASS event 6465675; reconcile tallies
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+</
+```
 
 ### `1786914420694` — 8/16/2026, 2:15:25 PM PT — 26 turns
 
@@ -449,91 +582,6 @@ Payments seem like they may be having trouble comeing through again. Check the h
 **Ideas referenced:** #16155, #16695, #16732, #174968, #18743, #19387, #23050, #23133, #2328, #23323, #2341, #2343, #2344, #23982, #24055 [proposed], #2511, #2513, #2517, #2518, #25185, #2522, #2529 [deployed], #25357, #25869, #25962, #25965, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26376, #26377, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26663, #26678, #26711, #26719, #26743, #26823 [executing], #26824 [executing], #26825 [executing], #3261, #3319, #3346, #4929, #8157, #8162, #8177, #9202
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786674811485` — 8/16/2026, 1:05:13 PM PT — 288 turns
-
-**Original task:**
-
-```
-Can you tell me how we can see if anyone is using a bot to chat to us or not?
-```
-
-**Ideas referenced:** #059669, #12364, #16152, #16474, #16732, #18335, #20251 [proposed], #2341, #23982, #23989, #2522, #25550, #25962, #25964, #25965, #25986, #26211, #26229 [proposed], #26376, #26377, #2657, #26711, #26719, #26743, #26816 [proposed], #2780, #2916, #33689, #6366, #7925, #9084, #9109, #9112, #9131, #9132, #9152, #9193, #9222, #9269
-
-**Last PICKUP PROMPT:**
-
-```
-fidence + dedup-ack → shipped.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — chat widget queue/ETA + dedup-ack client render (idea #26816).
-
-Where we left off (verified 2026-08-16 13:04 PT):
-- Server half of #26229 is DEPLOYED and live: lib/chat_queue_confidence.php (new) + api/chat_widget_api.php patched (php -l clean, HTTP 200 smoke test, backup at api/chat_widget_api.php.bak-20260816-idea26229-queueeta).
-- widget_send + widget_poll now return data.queue {queue_position, eta_seconds, human_assigned}.
-- Idea #26229 status = executing; handoff notes updated.
-
-Open threads to drive next:
-1. #26816 [proposed] — Render data.queue in chat_widget_embed.js so visitors SEE their place in line (the client half that actually reduces impatient repeat-asks at the source). Read embed.js poll/send handlers, render a subtle status line when queue_position > 0.
-2. #26229 [executing] — Optional follow-up: observe 48h of prod logs to confirm the 3x-repeat AI-skip is firing on real impatient repeaters and not false-positiveing on legitimate multi-part questions.
-
-Reference IDs:
-- Ticket: none (direct Ruben request)
-- Ideas filed: #26229 [executing], #26816 [proposed]
-- Files touched: /var/www/emtskills/lib/chat_queue_confidence.php, /var/www/emtskills/api/chat_widget_api.php, /var/www/emtskills/api/chat_widget_api.php.bak-20260816-idea26229-queueeta
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786660376952` — 8/16/2026, 1:03:58 PM PT — 382 turns
-
-**Original task:**
-
-```
-help me file with Florida Board of Education application yet? Need that approval before we the FL DHS application. We want also to be a CE and EMT provider there. So may also need to do an application for EMT CE with the EMS Authority in Florida
-```
-
-**Ideas referenced:** #004890, #121212, #16213, #17130 [superseded], #17537 [rejected], #18132 [deployed], #19125, #19173, #2335 [deployed], #252525, #252545, #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26183 [proposed], #26238, #26239 [executing], #313131, #3310, #555555, #6518
-
-**Last PICKUP PROMPT:**
-
-```
- remains a separate open item.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Florida + Oregon EMS state approvals: prep docs, Drive folders, website links.
-
-Where we left off (verified 2026-08-16 1:03 PM PT):
-- 6 PDF prep docs generated (reportlab) and uploaded into the 6 correct Drive subfolders; verified by listing Drive contents.
-- A "State Prep Documents" card with 14 clickable links (8 folders + 6 PDFs) was injected at the top of the Regulatory tab in new_site_setup.php; PHP lints clean.
-- Cache-busting ?v=20260814 added to site_setup_data.js and site_setup_data_extended.js script tags (they were being served 30-day immutable).
-- Tracker rows corrected: CAPCE = not_applied (NOT certified), FL DOH forms = DH 1698 / 1698C, FL CIE = exempt via 1005.06(1)(b)+(d). Medical director must be FL-licensed MD/DO (64J-1.004(2)(a)).
-- Ideas filed: #26183 (FL) and #26239 (OR), both promoted to efficiency_priority=1.
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #26183 [executing] — Drive completion of the actual FL DOH Bureau of EMS filing: fill DH Form 1698 (initial EMT) and DH Form 1698C (CE), attach the prep PDFs, and submit to the EMS Education Section (the one gate that unlocks EMT + CE + skills sign-offs in FL).
-2. #26239 [executing] — Drive completion of the OR OHA-EMS filing: submit initial EMT course approval (OAR 333-265) and OHA EMS Educator registration; CE is CAPCE-dependent so sequence CAPCE first.
-3. #26183 [awaiting_review] — Resolve the CAPCE dependency before any CE hour is marketed as approved in either state: open the CAPCE initial accreditation application with key 55053b9d-2713-4ec2-9680-3be8e75e43b0.
-4. #26239 [awaiting_review] — Confirm with Ruben which subfolder layout he wants (EMT/CE/DOE per state is current; confirm the Oregon "DOE" subfolder should really be "HECC" higher-ed coordination, content already drafted).
-
-Reference IDs:
-- Ticket: FL + OR state approval (chat task, no Jira ticket)
-- Ideas filed: #26183 (FL filing), #26239 (OR filing)
-- Files touched: /var/www/emtskills/routes/new_site_setup.php, /var/www/emtskills/assets/js/site_setup_data.js, /var/www/emtskills/assets/js/site_setup_data_extended.js, /var/www/emtskills/docs/HANDOFF_NOTES.md (via MCP), admin_portal.accreditation_renewal_tracker (rows 1, 11, 12), admin_portal.orchestrator_ideas (#26183, #26239)
-- Drive: 8 folders created + 6 PDFs uploaded (links above)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
 
 ### `1786845607312` — 8/16/2026, 12:52:49 PM PT — 108 turns
 
@@ -3284,64 +3332,5 @@ Where we left off (v
 ```
 
 **Ideas referenced:** #14662, #14710, #250984, #251038, #251211, #251236, #251264, #251382, #251428, #25185, #26092 [proposed], #26096 [proposed], #26154 [proposed], #26155 [proposed], #26156 [proposed], #26157 [proposed], #26163 [executing], #26164 [executing], #26167 [executing], #26168 [approved], #26169 [approved], #26170 [approved], #26171 [approved], #26172 [approved], #26173 [executing], #26174 [executing], #26178 [approved], #26180 [executing], #26182 [approved], #26184 [approved], #26186 [approved], #58230, #600179
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786651267227` — 8/13/2026, 4:05:11 PM PT — 360 turns
-
-**Original task:**
-
-```
-check the security certificate for onlineemd.com and fix it - the SSL
-```
-
-**Ideas referenced:** #12645, #15918, #18491, #18587 [approved], #19387, #2147, #2148, #2151, #2268, #2286, #23184, #23185, #2336 [deployed], #23585, #25185, #25990, #26007, #26017 [awaiting_review], #26019 [awaiting_review], #26023, #26077 [awaiting_review], #26090, #26175 [executing], #26176 [executing], #26177 [executing], #8902, #8903
-
-**Last PICKUP PROMPT:**
-
-```
-Log
-
-No reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #26175 [executing], EMSU registrar glue and DNS redundancy follow-through.
-
-Where we left off (verified 2026-08-13 16:04 PT):
-- onlineemd.com serves a valid multi-SAN LE cert (apex plus www), notAfter Nov 11 2026, apex HTTP/2 200 (verified: curl -sI after completion).
-- Root cause was stale .com glue 76.176.157.123 (WOPR pre-2026-06-29 WAN IP, dead), not the ACME client. Recorded as bug library incident 2336, status resolved.
-- Bug library incident 2286 closed this session: it was still `investigating` and named the edge router NAT UDP path as prime suspect, which the evidence disproved. Now linked to 2336.
-- Clarified for Ruben: NOTHING in this window touched frankenstein-llm. The `frankenstein_router_incidents` table name is general-purpose, not LLM-routing-only.
-- #26177 [deployed] rule 297 DELEGATION GATE is in Rules-archive/297-case-law.md, MCP reindexed (325 rules, 20 hardfloor).
-
-Open threads to drive next:
-1. #26175 [executing], RUBEN UI ACTION: GoDaddy, emsuniversity.com, Domain Settings, Manage DNS, Host names. Set ns1 to 172.116.115.101 and ns2 to 98.172.111.42. Check with: dig @a.gtld-servers.net emsuniversity.com NS +additional.
-2. #26017 [deployed], re-check the other 3 domains from the expired-cert batch (onlyambos, houstonemtrefresher, rubenmajor). Use the NS-migration workaround if the glue is still in place.
-3. #26176 [executing], ownership assertion in emsu-cf-wan-sync.sh plus a 24h deploy-verify loop for infra ideas. The remaining RECORDS entries (mail, mx, webmail, apex, ipv4, testing) carry the same silent-revert exposure.
-4. #26077 [executing], ns1 UDP:53 packet loss (roughly 1 in 3, 407-431ms) remains open as the smaller second problem. Suspect the edge router NAT UDP path.
-5. #26177 [deployed], remaining piece is a 3-line DELEGATION GATE pointer into the hardfloor rule 297 body, which needs Ruben's --override on .pre-write-lint.sh.
-
-Reference IDs:
-- Ideas filed: #26175 [executing], #26176 [executing], #26177 [deployed]
-- Ideas closed: #26017 [deployed], #26019 [deployed]
-- Bug library: incidents 2336 (resolved, new) and 2286 (resolved, superseded this session)
-- Files touched: /usr/local/bin/emsu-cf-wan-sync.sh, /etc/nginx/plesk.conf.d/vhosts/onlineemd.com.conf, /etc/letsencrypt/live/onlineemd-multi/, /Users/rubenmajor/Documents/Cline/Rules-archive/297-case-law.md, HANDOFF_NOTES.md
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786660346877` — 8/13/2026, 3:32:27 PM PT — 1 turns
-
-**Original task:**
-
-```
-help me file with Florida Board of Education application yet? Need that approval before we the FL DHS application. We want also to be a CE and EMT provider there.
-```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

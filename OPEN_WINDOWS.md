@@ -6,14 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/16/2026, 1:28:24 PM PT | window: last 72h | 76 tasks | index total 756 (parsed 6, cached 750)
+Generated: 8/16/2026, 2:28:25 PM PT | window: last 72h | 79 tasks | index total 759 (parsed 3, cached 756)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786910687953` | 8/16/2026, 1:28:24 PM | 164 | 314KB | #Payment  |
-| `1786864599073` | 8/16/2026, 1:27:49 PM | 915 | 2856KB | #Julia/Claudia 235 |
-| `1786823554800` | 8/16/2026, 1:27:43 PM | 137 | 1949KB | #Argus |
-| `1786910320016` | 8/16/2026, 1:27:28 PM | 95 | 444KB | Can you do another 90 minute session again |
+| `1786913196629` | 8/16/2026, 2:28:24 PM | 139 | 2495KB | #CFA Emails |
+| `1786864599073` | 8/16/2026, 2:28:04 PM | 1011 | 3120KB | #Julia/Claudia 235 |
+| `1786914420694` | 8/16/2026, 2:15:25 PM | 26 | 265KB | Add these 2 also for the 17 year old and give info on additional thoughts |
+| `1786823554800` | 8/16/2026, 1:57:36 PM | 272 | 2251KB | #Argus |
+| `1786913306929` | 8/16/2026, 1:54:20 PM | 8 | 222KB | What does this all mean? or what is it indicative of? |
+| `1786910320016` | 8/16/2026, 1:35:54 PM | 134 | 564KB | Can you do another 90 minute session again |
+| `1786910687953` | 8/16/2026, 1:34:33 PM | 192 | 384KB | #Payment  |
 | `1786674811485` | 8/16/2026, 1:05:13 PM | 288 | 1142KB | Can you tell me how we can see if anyone is using a bot to chat to us or not? |
 | `1786660376952` | 8/16/2026, 1:03:58 PM | 382 | 1303KB | help me file with Florida Board of Education application yet? Need that approval before we |
 | `1786845607312` | 8/16/2026, 12:52:49 PM | 108 | 605KB | #GLM 5.3 Update |
@@ -91,21 +94,21 @@ Generated: 8/16/2026, 1:28:24 PM PT | window: last 72h | 76 tasks | index total 
 
 ## Per-window detail
 
-### `1786910687953` — 8/16/2026, 1:28:24 PM PT — 164 turns
+### `1786913196629` — 8/16/2026, 2:28:24 PM PT — 139 turns
 
 **Original task:**
 
 ```
-#Payment 
+#CFA Emails
 
-Payments seem like they may be having trouble comeing through again. Check the handoffs and see what's going on there.
+These stupid CFA emails are back. This was already corrected. Needs more correction again
 ```
 
-**Ideas referenced:** #16155, #16695, #16732, #174968, #18743, #19387, #23050, #23133, #2328, #23323, #2341, #2343, #2344, #23982, #24055 [proposed], #2511, #2513, #2517, #2518, #2522, #25357, #25869, #25962, #25965, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26376, #26377, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26663, #26678, #26711, #26719, #26743, #3261, #3319, #3346, #4929, #8157, #8162, #9202
+**Ideas referenced:** #16732, #18132, #18176, #18313, #23133, #23982, #2450, #2511, #2513, #2517, #2518, #2522, #25774, #25920, #25962, #25965, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26229, #26348, #26368, #26376, #26377, #26495 [deployed], #26496 [deployed], #26501, #26508 [proposed], #26509 [proposed], #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26661, #26663, #26678, #26711, #26719, #26743, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #3783, #3784, #3785, #3786, #3787, #3788, #3789, #3790, #3791, #3836, #3874, #4958, #5218, #8157, #8162, #8163
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786864599073` — 8/16/2026, 1:27:49 PM PT — 915 turns
+### `1786864599073` — 8/16/2026, 2:28:04 PM PT — 1011 turns
 
 **Original task:**
 
@@ -123,26 +126,88 @@ Attempt over and over again until it works. Take it all the way to serving. Do N
 **There is NO fallback plan. Do NOT revert to gpt-oss-120b. Do NOT restore the 120B "as a stopgap." Do NOT propose the 120B as a safe state.** If you catch yourself planning a rollback, th
 ```
 
-**Ideas referenced:** #1241, #1264, #14253, #14560, #14848, #16653, #16662, #17084, #1744, #1765, #17788, #1780, #1781, #178686, #1793, #1826, #18287, #1838, #1858, #18678, #1868, #18861 [closed], #1903, #20042, #2071, #2072, #2073, #2114, #22906 [closed], #23826 [closed], #2526 [resolved], #2527 [resolved], #2528 [open], #25604, #26819, #27364 [closed], #27440 [closed], #29018 [closed], #30003 [closed], #30670 [closed], #32645 [closed], #34675 [closed], #35313, #36094 [closed], #36914 [open], #37615, #37948 [closed], #39078 [closed], #39625 [closed], #39666, #40888 [open], #41408 [open], #42058 [open], #42096 [closed], #43232 [closed], #43350 [open], #45434 [open], #45829 [open], #45966 [closed], #46191 [open], #46329 [open], #46514 [open], #47089 [open], #47365 [open], #47527 [open], #48898 [open], #48994 [open], #49011 [open], #49060 [open], #49237 [open], #49262 [open], #49381 [open], #50288 [open], #50883 [open], #51091 [open], #51207 [open], #51534 [open], #51581 [open], #52060 [open], #52462 [open]
+**Ideas referenced:** #1241, #1264, #14253, #14560, #14848, #16653, #16662, #17084, #1744, #1765, #17788, #1780, #1781, #178686, #1793, #1826, #18287, #18329 [deployed], #1838, #1858, #18678, #1868, #18861 [closed], #1903, #20042, #2071, #2072, #2073, #2114, #22906 [closed], #23133 [executing], #23826 [closed], #25125 [deployed], #2526 [resolved], #2527 [resolved], #2528 [open], #25604, #25869, #26003 [deployed], #26038 [executing], #26040 [executing], #26041 [executing], #26045 [executing], #26050 [executing], #26054 [awaiting_review], #26065 [deployed], #26090 [deployed], #26461 [executing], #26611 [deployed], #26613 [proposed], #26617 [executing], #26819 [proposed], #26827 [open], #27364 [closed], #27440 [closed], #29018 [closed], #30003 [closed], #30670 [closed], #32645 [closed], #34675 [closed], #35313, #36094 [closed], #36914 [open], #37615, #37948 [closed], #39078 [closed], #39625 [closed], #39666, #40888 [open], #41408 [open], #42058 [open], #42096 [closed], #43232 [closed], #43350 [open], #45434 [open], #45829 [open], #45966 [closed], #46191 [open], #46329 [open], #46514 [open], #47089 [open], #47365 [open], #47527 [open], #48898 [open], #48994 [open], #49011 [open], #49060 [open], #49237 [open], #49262 [open], #49381 [open], #50288 [open], #50883 [open], #51091 [open], #51207 [open], #51534 [open], #51581 [open], #52060 [open], #52462 [open]
 
 **Last PICKUP PROMPT:**
 
 ```
- Final wrap: updating #2528 with the complete decision chain, then shipping the PICKUP PROMPT.
+live and healthy at port 8000.
 
-<use_mcp_tool>
-<server_name>emsu-operations</server_name>
-<tool_name>ssh_command</tool_name>
-<arguments>
-{
-  "command": "ssh -p 2205 rubenmajor@127.0.0.1 'date +%Y-%m-%dT%H:%M:%S%z; PID=$(lsof -ti :8000 2>/dev/null | head -1); echo SERVE_PID=$PID; curl -s --max-time 5 http://localhost:8000/v1/models 2>/dev/null | head -c 90; echo; curl -s --max-time 5 http://localhost:8000/metrics 2>/dev/null | grep -E \"^vllm:(generation_tokens_total|num_requests_running)\" | head -2'",
-  "timeout_ms": 20000
-}
-</arguments>
-</use_mcp_tool>
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up Qwen3-235B serving on Julia+Claudia (TP=2) — NaN decode blocker + LoRA/Laura-v2 decision.
+
+Where we left off (verified 2026-08-16 13:54:03 PT):
+- Qwen3-235B-A22B-NVFP4 SERVING, TP=2, PID 1264675, port 8000, `/v1/models` → qwen3-235b, max_model_len 24576.
+- Decode still returns `!` (NaN logits, token-0 sampler path) — incident #2528 [open].
+- vllm 0.27.1 wheel downloaded to /tmp/vllmcheck (aarch64 abi3); bare venv at /home/rubenmajor/.python-vllm-0271 lacks torch → needs sm_121 torch wheel.
+- LoRA finding filed #26827 [open] per Ruben: adapter is disabled (`LORA_ARGS=""`), "virtual Laura v2" not found, NO action taken.
+- Upgrade path filed #26819 [open]: source rebuild with TORCH_CUDA_ARCH_LIST=12.1 or NVIDIA GB10 torch.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26819 [open] — Obtain sm_121-capable torch (NVIDIA JetPack/GB10 wheel or source build), then install vllm 0.27.1 with deps, relaunch TP=2, test decode.
+2. #2528 [open] — If sm_121 torch is unobtainable, run the Marlin NVFP4 backend experiment (`--moe-backend marlin`, verified mapped backend that sets a13_scale=None, bypassing the `1.0/scale` inversion) on a single node first to validate decode before a full relaunch.
+3. #26827 [open] — Await Ruben's decision: keep the dormant emsu_distill_lora adapter for future use, or delete/archive it.
+
+Reference IDs:
+- Ticket/incident: #2528 [open]
+- Ideas filed this session: #26819 [open], #26827 [open]
+- Files touched: /home/rubenmajor/julia_unified_tp2_qwen235.sh (add/revert FUSED_MOE env, moe-backend flag reverted), /home/rubenmajor/.python-vllm-custom/lib/python3.12/site-packages/vllm/model_executor/layers/quantization/modelopt.py (w13_weight_scale_2 mean patch), /tmp/vllmcheck/vllm-0.27.1-cp38-abi3-manylinux_2_28_aarch64.whl (downloaded)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
-### `1786823554800` — 8/16/2026, 1:27:43 PM PT — 137 turns
+### `1786914420694` — 8/16/2026, 2:15:25 PM PT — 26 turns
+
+**Original task:**
+
+```
+Add these 2 also for the 17 year old and give info on additional thoughts
+```
+
+**Ideas referenced:** #178629, #18212, #18213, #18214, #18471, #18536, #18544, #18866 [deployed], #18936, #1894, #19100 [executing], #1965, #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25366 [deployed], #25385 [deployed], #25421, #25422, #25423, #25424, #25442, #25525 [executing], #25528 [executing], #25530 [executing], #25531 [executing], #25532 [executing], #25534 [executing], #25535 [executing], #26833 [blocked], #389249
+
+**Last PICKUP PROMPT:**
+
+```
+lanation for the correct ones.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task for Ruben — add 2 lab test entries + additional thoughts for the 17-year-old.
+
+Where we left off (verified 2026-08-16 14:15 PT):
+- Ruben asked what the lab tests mean in and of themselves; answered directly for CO2 Total, Urea Nitrogen, Bilirubin Total (the three candidates from the grep terms).
+- Screenshots from the original request are still NOT in context (window was reset; placeholder text only), so the exact two tests are unconfirmed.
+- Idea #26833 [blocked] tracks the blocked state: "Add 2 lab test entries + additional thoughts for 17-year-old".
+- Verified: no lab-results file on Desktop; ledger has no matching task; memory graph empty.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26833 [blocked] — Ruben confirms the two lab tests (or re-attaches screenshots), then write both entries plus the additional-thoughts explanation into the target file and verify on disk.
+
+Reference IDs:
+- Ideas filed: #26833 [blocked]
+- Files touched: none (explanation only, no file write yet)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Search Desktop broadly (no lab file found)
+- [x] File tracking idea #26833 [blocked]
+- [x] Answer what the candidate lab tests mean in and of themselves
+- [ ] Confirm exact 2 tests with Ruben
+- [ ] Add entries + additional thoughts to file and verify
+</task_progress>
+</attempt_completion>
+```
+
+### `1786823554800` — 8/16/2026, 1:57:36 PM PT — 272 turns
 
 **Original task:**
 
@@ -158,11 +223,55 @@ Each item has been a disconnect between the Matrix and Moodle for the last few s
 Not sure exactly what he means but can you look into this and make the necessary improvements?
 ```
 
-**Ideas referenced:** #15635, #15636, #15638, #16732, #19415, #19416, #20555, #22688, #23036, #23133, #2328, #2340, #2341, #23428, #2343, #2344, #23468, #23506, #23675, #23941, #23982, #24926, #24941, #24990, #2511, #25571, #25768, #25989, #26000, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26191, #26207, #26209, #26211, #26214 [executing], #26215 [executing], #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26620, #3261, #3319, #3346
+**Ideas referenced:** #15635, #15636, #15638, #16732, #19415, #19416, #20555, #22688, #23036, #23133, #2328, #2340, #2341, #23428, #2343, #2344, #23468, #23506, #23675, #23941, #23982, #24926, #24941, #24990, #25058, #2511, #25269, #25571, #25768, #25989, #26000, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26191, #26207, #26209, #26211, #26214 [executing], #26215 [executing], #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26620, #26830 [approved], #26831 [approved], #3261, #3319, #3346, #646156
+
+**Last PICKUP PROMPT:**
+
+```
+ed (153 by sweep, 1 backfill).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus Matrix<->Moodle disconnect: roadblock logging + completion sync (Jon's "each item has been a disconnect between the Matrix and Moodle").
+
+Where we left off (verified 2026-08-16 13:56 PT):
+- Root cause: Matrix students.moodle_completion_date (Google Sheets import) vs live Moodle course_completions — 26215W-08 had NULL in Matrix, 2026-08-14 in Moodle, so pd_nremt_signoff refused repeatedly
+- Fixed: lib/argus_roadblock.php (new), lib/argus_action_catalog.php (pd_signoff_list + pd_nremt_signoff now sync from live Moodle), routes/alltastic_api.php (central roadblock logging on every failed action)
+- New argus_roadblock_log table: 153 rows, all resolved (sweep synced 153 students from live Moodle)
+- New cron_argus_moodle_completion_sync.php registered nightly 2:15am PT; first run: 3751 checked, 153 synced
+- New api/argus_roadblock_status.php read-only JSON dashboard
+- Kenneth Jenkins signoff now QUEUES instead of refusing (event #6461569)
+- All files php -l clean; patches verified on disk
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+- None — all core work completed this session. Two improvement ideas submitted and already approved in the build pipeline:
+  - #26830 [approved] — Argus: add roadblock status dashboard card (wire api/argus_roadblock_status.php into terminal UI)
+  - #26831 [approved] — Argus: auto-requeue blocked signoff after Matrix-Moodle completion sync
+
+Reference IDs:
+- Ideas filed: #26830 [approved], #26831 [approved] (orchestrator_ideas)
+- Files touched: lib/argus_roadblock.php, lib/argus_action_catalog.php, routes/alltastic_api.php, cron_argus_moodle_completion_sync.php, api/argus_roadblock_status.php
+- DB: argus_roadblock_log (new), students rows updated (153 sweep + 1 backfill)
+- Queued signoff evidence: orchestrator_event_log id #6461569
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786913306929` — 8/16/2026, 1:54:20 PM PT — 8 turns
+
+**Original task:**
+
+```
+What does this all mean? or what is it indicative of?
+```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786910320016` — 8/16/2026, 1:27:28 PM PT — 95 turns
+### `1786910320016` — 8/16/2026, 1:35:54 PM PT — 134 turns
 
 **Original task:**
 
@@ -177,7 +286,56 @@ WHAT WAS DONE POST-STEER:
 1. Found the Argus offload dupe loop: 112 'Argus background task' idea rows in 2 days, 110 of them for ONE Argus task (task 360). Root cause: cron_argus_task_worker.php offload block (attempts>=cap) INSERTed a fresh orchestrator_idea every cron cycle with no dedupe, and the e
 ```
 
-**Ideas referenced:** #16069, #16732, #178684, #23133, #23982, #2511, #2513, #2517, #2518, #2522, #2523, #25887, #25962, #25965, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26229, #26241, #26245, #26249, #26336, #26348, #26368, #26376, #26377, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26663, #26678, #26684 [rejected], #26711, #26717 [rejected], #26719 [executing], #26720 [executing], #26721 [executing], #26724 [executing], #26730 [deployed], #26731 [proposed], #26742 [rejected], #26743 [deployed], #26820, #3133, #475569, #8157, #8162
+**Ideas referenced:** #16069, #16732, #178684, #19454, #23133, #23982, #2420 [resolved], #2511, #2513, #2517, #2518, #2522, #2523, #25887, #25962, #25965, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26229, #26241, #26245, #26249, #26336, #26348, #26368, #26376, #26377, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26663, #26678, #26684 [rejected], #26711, #26717 [rejected], #26719 [executing], #26720 [executing], #26721 [executing], #26724 [executing], #26730 [deployed], #26731 [proposed], #26742 [rejected], #26743 [deployed], #26820 [proposed], #26823 [executing], #26824 [executing], #26825 [executing], #3133, #475569, #8157, #8162
+
+**Last PICKUP PROMPT:**
+
+```
+l idea inserted + ID verified.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786844918374 — executor babysit wrap (2026-08-16, second session).
+
+Where we left off (verified 2026-08-16 13:35 PT):
+- cron_post_call_summary.php regression RESTORED: 8.7KB stub (raw Vapi summary mailed to any caller, dead violation scan, dropped sentinel) replaced with the 39KB intact version from .bak-20260809-callback; php -l clean, owner emsumain, crontab /etc/cron.d/emsu-post-call-summary verified (*/2 www-data); live run 13:13 sent 10 ops-recaps to info@ with caller_copy=no, violations=0.
+- Sentinel `NEVER say our team, a team member` confirmed present (grep count 1).
+- Argus dedupe holds: 0 new 'Argus background task%' ideas since 2026-08-15 20:52 patch.
+- Executor healthy: 3 live workers at 13:14; #26720/#26721/#26724 approved|idle (drafting queued).
+- Canary FAIL http=000 45s root-caused as transient slow-rung spikes (match EXEC FLOOR bursts; fleet healthy, 13:30 probe 200/6.2s). Not an outage.
+- Telephony healthy (88/118 transcript_helped).
+
+Open threads to drive next:
+1. #26820 [proposed] — Investigate why 3 AFL chat sites (arizonaemt.com, arizonaemtrefresher.com, bayareaemtrefresher.com) report config_fail_http_0/send_fail::http_0 despite home_http 200. Likely a per-domain config endpoint egress mismatch in the chat-widget healthcheck; verify the healthcheck's config-probe URL wiring for those domains. (Filed this session, SQL-verified ID.)
+2. Bug row #2420 [resolved] — silent-gutting RCA for cron_post_call_summary.php recorded; durable learning for future "file shrank suddenly" triage.
+3. #26720 [executing], #26721 [executing], #26724 [executing] — GPU disk guard, canary-quarantine speed, deploy-gate false-block: normal executor drafting resumed; verify they land in the next executor cycle.
+4. #26731 [proposed] — 317-lite gate in executor build stage; still awaiting Ruben's decision.
+
+Reference IDs:
+- Ticket: 6459414 (cron_sentinel_guard regression event that triggered this fix; processed=1)
+- Ideas filed this session: #26820 [proposed]
+- Bug library: #2420 [resolved], bug_id 8422
+- Files touched: /var/www/emtskills/cron/cron_post_call_summary.php (restored from .bak-20260809-callback), /var/www/emtskills/docs/HANDOFF_NOTES.md
+- Verified-but-not-touched: /etc/cron.d/emsu-post-call-summary, /usr/local/bin/emsu-frankenstein-canary.sh
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786910687953` — 8/16/2026, 1:34:33 PM PT — 192 turns
+
+**Original task:**
+
+```
+#Payment 
+
+Payments seem like they may be having trouble comeing through again. Check the handoffs and see what's going on there.
+```
+
+**Ideas referenced:** #16155, #16695, #16732, #174968, #18743, #19387, #23050, #23133, #2328, #23323, #2341, #2343, #2344, #23982, #24055 [proposed], #2511, #2513, #2517, #2518, #25185, #2522, #2529 [deployed], #25357, #25869, #25962, #25965, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26376, #26377, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26663, #26678, #26711, #26719, #26743, #26823 [executing], #26824 [executing], #26825 [executing], #3261, #3319, #3346, #4929, #8157, #8162, #8177, #9202
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 

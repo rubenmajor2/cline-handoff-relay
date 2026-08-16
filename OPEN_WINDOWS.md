@@ -6,12 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/15/2026, 6:45:07 PM PT | window: last 72h | 82 tasks | index total 749 (parsed 2, cached 747)
+Generated: 8/15/2026, 7:45:07 PM PT | window: last 72h | 82 tasks | index total 751 (parsed 3, cached 748)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786842592907` | 8/15/2026, 6:44:56 PM | 177 | 1386KB | #Rule 317 |
-| `1786844173723` | 8/15/2026, 6:43:41 PM | 16 | 180KB | #Oct Ring / Hypothetical  |
+| `1786842592907` | 8/15/2026, 7:45:00 PM | 386 | 2374KB | #Rule 317 |
+| `1786844918374` | 8/15/2026, 7:44:57 PM | 489 | 6071KB | Babysit Frankenstein Exeucotr for 90 minutes and resolve any issues that might come up. Do |
+| `1786845607312` | 8/15/2026, 7:44:31 PM | 99 | 571KB | #GLM 5.3 Update |
+| `1786844173723` | 8/15/2026, 6:58:41 PM | 26 | 269KB | #Oct Ring / Hypothetical  |
 | `1786836908956` | 8/15/2026, 4:48:21 PM | 72 | 1004KB | Is this legitimate? If so, the message should be a little more sympathetic and less techni |
 | `1786835771600` | 8/15/2026, 4:31:46 PM | 96 | 1327KB | #BLS  |
 | `1786817395147` | 8/15/2026, 3:56:47 PM | 404 | 2685KB | #Call Backs / VAPI |
@@ -90,14 +92,12 @@ Generated: 8/15/2026, 6:45:07 PM PT | window: last 72h | 82 tasks | index total 
 | `1786599361465` | 8/12/2026, 11:21:11 PM | 243 | 427KB | #Chat Widget |
 | `1786582217282` | 8/12/2026, 11:10:19 PM | 307 | 570KB | I'm getting reports that all websites are down can you take a look and let me know? |
 | `1786555167629` | 8/12/2026, 8:19:29 PM | 766 | 2987KB | #Externships |
-| `1786585633124` | 8/12/2026, 7:03:48 PM | 46 | 122KB | Remove the note about EMS university being state approved accredited since 2003. You can j |
-| `1786556136912` | 8/12/2026, 6:56:25 PM | 719 | 1884KB | #Frankenstein-LLM Improvements |
 
 ---
 
 ## Per-window detail
 
-### `1786842592907` — 8/15/2026, 6:44:56 PM PT — 177 turns
+### `1786842592907` — 8/15/2026, 7:45:00 PM PT — 386 turns
 
 **Original task:**
 
@@ -107,19 +107,95 @@ Generated: 8/15/2026, 6:45:07 PM PT | window: last 72h | 82 tasks | index total 
 How has rule 317 been doing since we lost checked? I think it's been about 12 to 16 hours.. Rule 317 with specifically created to make Frankenstein LLM better. The idea is that it forces truth and reversals in cases where things are untrue. So this is why I'm saying I just wanna make sure that this is being done properly incorrectly and I wanna know if there is anything else that we can do to make it even better so that we can improve Frankenstein LLM?
 ```
 
-**Ideas referenced:** #0000, #10108, #10740, #11741, #11781, #12345, #12346, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16224, #16265, #16304, #16844, #18312, #18326, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #20251, #2299, #23171, #25097, #25151, #25185, #25888 [deployed], #25925, #25926, #25935, #26349, #26435 [deployed], #26696 [proposed], #26697 [proposed], #5344
+**Ideas referenced:** #0000, #081020, #10108, #10740, #11741, #11781, #12345, #12346, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16224, #16265, #16304, #16844, #17130 [superseded], #17133, #17201, #17202, #17204, #17205, #17232, #17235, #17243, #17244, #17246, #17248, #17249, #17250, #17251, #17257, #17258, #178424, #178634, #178640, #178656, #178671, #1802, #1803, #1806, #1811, #18132 [deployed], #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18308 [rejected], #18312, #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #1839, #19125, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #20251, #2299, #23171, #25097, #25151, #2516 [resolved], #25185, #2521 [resolved], #25796, #25797, #25798, #25888 [deployed], #25925, #25926, #25935, #26349, #26435 [deployed], #26591, #26593, #26696 [proposed], #26697 [proposed], #26699, #26700, #26710 [proposed], #5239, #5344, #9715, #9791
 
 **Last PICKUP PROMPT:**
 
 ```
-le 140 live-header probe\"}\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #26697 - json flip test [deployed]\n\nWhere we left off (verified 2026-08-15 18:41 PT):\n- structured flip accepted.\n\nOpen threads to drive next:\nNone, all work completed this session.\n\nReference IDs:\n- Ticket: none\n- Ideas filed: #26696 [deployed]\n- Files touched: none\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════",
-  "task_id": "smoke-json-flip-accept"
-}
-</arguments>
-</use_mcp_tool>
+-mcp src/index.ts (localhost).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #26710 — truth-is-smart engine: forward exemplars + best-of-N selector + truth eval harness.
+
+Where we left off (verified 2026-08-15 19:42 PT):
+- All three #26710 artifacts LIVE on WOPR (/var/www/emtskills). ai_cache_pad.php emits TRUTH-SEEKING EXEMPLARS block from real r317_* rows; lib/r317_best_of_n_selector.php runs candidates through the doorman R317 gate; bin/r317_eval_harness.php scores 15 verifiable claims against runtime gold probes and correctly FAILED a fabricated idea count (gold=847 vs model=3652).
+
+Open threads to drive next:
+1. #26710 — Wire the eval harness to the REAL frankenstein-llm endpoint (http://127.0.0.1:11510/v1/responses) instead of the mock proxy: run `php bin/r317_eval_harness.php --endpoint=http://127.0.0.1:11510/v1/responses --model=frankenstein-llm` and record a baseline vs a single Opus run.
+2. #26710 — Expand the gold-data claim set from 15 to 30 claims (fleet/registry state, rule text, DB facts) so the benchmark is representative before the measured vs Opus comparison.
+3. #26710 — Enable the opt-in best-of-N path on one low-risk serving route (behind a flag, not default), measure realized pass-rate lift, then roll out wider.
+
+Reference IDs:
+- Ideas: #26710 [deployed], #26696 [deployed]
+- Incidents: #2516 [resolved], #2521 [resolved]
+- Files: /var/www/emtskills/lib/ai_cache_pad.php, /var/www/emtskills/lib/r317_best_of_n_selector.php, /var/www/emtskills/bin/r317_eval_harness.php, /var/www/emtskills/api/r317_eval_proxy.php, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
-### `1786844173723` — 8/15/2026, 6:43:41 PM PT — 16 turns
+### `1786844918374` — 8/15/2026, 7:44:57 PM PT — 489 turns
+
+**Original task:**
+
+```
+Babysit Frankenstein Exeucotr for 90 minutes and resolve any issues that might come up. Do rule 317s on them and make Frankenstein LLM smarter.
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12299, #12459, #12477, #12618, #127891, #12824, #12872, #12878, #13202, #14752, #1579, #16163, #16265, #16304, #16449, #16588, #166534, #16844, #16852, #16868, #16922, #17798, #17854, #18312, #18326, #18357, #18442, #1850, #19490, #19747, #19750, #19967, #20903, #20946, #2113, #22060, #22069, #22444, #22447, #22529, #2299, #23015, #23171, #23281, #23283, #23337, #23392, #23429, #24430, #24431, #24526, #25042, #25082, #25097, #25125, #2517, #2518, #2519, #2520, #25510, #25511, #25516, #25586, #25587, #25645, #25875, #25887, #25937, #25943, #25971, #26207, #26214, #26229, #26325, #26326, #26342, #26363, #26385, #26461, #26490, #26625, #26626, #26642, #26663, #26678, #26703, #26705, #26716, #3957, #475569, #4906, #53462, #53483, #54119, #55522, #55961, #56044, #56298, #56568, #56754, #57287, #57824, #6106, #639503, #640503, #640750, #640977, #640979, #640981, #640982, #640995, #641019, #641020, #641022, #7561, #8157, #8162, #8318, #8764, #9086, #9168, #92400, #9306, #9339
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786845607312` — 8/15/2026, 7:44:31 PM PT — 99 turns
+
+**Original task:**
+
+```
+#GLM 5.3 Update
+
+How can we update our GLM 5.2 to GLM 5.3 both local and cloud?
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #15930, #16163, #16265, #16304, #16732, #16844, #18312, #18326, #19338, #1993, #20005, #20040, #20054, #20068, #20069, #20082, #20245, #20247, #20264, #20272, #20291, #20297, #20302, #20311, #2073, #2299, #23133, #23171, #2328, #2340, #2341, #2343, #2344, #25097, #2511, #2513, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26207, #26209, #26211, #26214 [executing], #26215 [executing], #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26638 [executing], #26639 [executing], #26642 [executing], #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #3261, #3319, #3346
+
+**Last PICKUP PROMPT:**
+
+```
+itself (deployed and verified)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #26711 / #26712 / #26713 / #26715 — GLM 5.2 → 5.3 upgrade (cloud + local) + release tracking.
+
+Where we left off (verified 2026-08-15 19:13 PT):
+- GLM-5.3 is server-side GATED everywhere: Zhipu returns error 1220 "no permission" for our key (glm-5.2 control = 200), OpenRouter not listed, HF zai-org 401. Cloud is un-wireable until Zhipu whitelists. Local un-buildable until zai-org publishes weights.
+- Reminder/tracker DEPLOYED + verified: /usr/local/bin/emsu_glm53_release_tracker.sh, cron /etc/cron.d/emsu-glm53-release-tracker (07:05 PT daily), event 6409723 recorded, state zcloud=0 or=0 hf=0 (401). Fires high-sev on any gate-clear + 2-week card on/after 2026-08-29.
+- Full upgrade plan prepped: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md.
+- Ideas: #26711 [proposed] cloud whitelist, #26712 [proposed] local ring, #26713 [proposed] cutover, #26715 [deployed] tracker.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26711 — Ruben contacts Zhipu to whitelist key 802fd27e... for glm-5.3; confirm via raw curl (expect 200). Then wire LiteLLM glm-5.3 + glm-5.3-openrouter and run bake-off.
+2. #26712 — When tracker fires HF gate-clear (hf=1): download zai-org GLM-5.3/FP8, AWQ 4-bit quant, single-box vLLM validate (glm47 tool parser / glm45 reasoning), then PP=6 Hex ring relaunch via GLM52 #1993 recipe.
+3. #26713 — When bake-off + soak pass: flip registry tier L3/L4g, router_hook GLM-first target, FRANK_BOX_CAPACITY 8210; retire glm-5.2 after 48h; update trackers with gate-cleared timestamps.
+4. #26715 — Monitor: verify cron fires daily (check orchestrator_event_log source=glm53-release); if no rows in 48h, check /var/log/cron + run script manually.
+
+Reference IDs:
+- Ideas filed: #26711, #26712, #26713, #26715
+- Files touched: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md, /usr/local/bin/emsu_glm53_release_tracker.sh, /etc/cron.d/emsu-glm53-release-tracker
+- Event log: 6409723 (tracker self-test)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786844173723` — 8/15/2026, 6:58:41 PM PT — 26 turns
 
 **Original task:**
 
@@ -137,36 +213,42 @@ Read and reference below as well as the NVIDIA forums, forumns, reddit, our bug 
 Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> 
 ```
 
-**Ideas referenced:** #1130, #1131, #11945, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #1779, #1798, #1828, #19567, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2294, #2307, #2314, #23169, #24217, #25378, #25381, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #26209, #26284 [executing], #26400, #26403, #26706 [proposed], #26707 [proposed], #6826, #7142, #7149
+**Ideas referenced:** #1130, #1131, #11945, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #1779, #1798, #1828, #19567, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2294, #2307, #2314, #23169, #24217, #25378, #25381, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #26209, #26284 [executing], #26400, #26403, #26706 [proposed], #26707 [proposed], #26709 [proposed], #6826, #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
-ication item before the pilot.
+26709 to track the evaluation.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task Oct-ring hypothetical - 2xPP=4 vs 1xPP=8 for GLM-5.2. Recommendation complete (#26706); the remaining work is the physical inventory reconcile that gates all of it (#26707).
+Pick up task Julia/Claudia TP=2 model candidates. Verdict: Qwen3-235B-A22B (MoE) is the one to pilot (only candidate with a chance to be faster than the current 120B while upgrading quality); Llama-3.1-405B is the proven-but-slower fallback; DeepSeek 671B does not fit on 2 boxes. Filed #26709 to track the MoE evaluation.
 
-Where we left off (verified 2026-08-15 18:42 PT):
-- Read /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md (6-box PP=6 ring, fixed-rate ~12-18 tok/s decode, per-stream ~1-1.3 tok/s, 6.2s TTFB, 15-22s prefill gaps)
-- Read fleet_inventory (14 hosts). Key finding: julia row and augustus row resolve to the same physical box spark-6ae6, WG 10.100.0.15, LAN 192.168.1.190, contradicting the tracker's Augustus=rank-1 spark-e3b2
-- Decided: 2xPP=4 wins on interactive + concurrent; 1xPP=8 is worse than PP=6 on latency and only helps fit a bigger model
-- Filed #26706 [proposed] evaluation idea and #26707 [proposed] inventory-reconcile idea
+Where we left off (verified 2026-08-15 18:57 PT):
+- Julia+Claudia = gpt-oss-120b TP=2 (2x DGX Spark GB10, 256GB unified, ~200-230GB usable after TP=2 + reserved). Current 20-37 tok/s, ~300ms TTFB.
+- Model fit math: Qwen3-235B-A22B (MoE, ~22B active, ~120-140GB at 4-bit) fits and is the only faster-or-equal candidate. Llama-3.1-405B-FP4 (~230GB) fits tight and was PROVEN on 2x DGX Spark (Augustus+Tiberius ran it) but is dense = slower decode. DeepSeek-V3/R1 671B (~350-400GB) does NOT fit.
+- Idea filed this session: #26709 [proposed] (Qwen3-235B-A22B on Julia+Claudia TP=2).
 
 Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26707 [proposed] - Reconcile the 8 physical DGX Spark GB10s read-only over SSH (Cato :2204, Cesar :2203, Julia :2205, Claudia :2206, Tiberius/Pompeii/Marcus via jump). Confirm whether Augustus is its own box (spark-e3b2) or the Julia box (spark-6ae6), and whether 8 distinct boxes exist. Cross-ref lspci MAC. Write one authoritative 8-row mapping table.
-2. #26706 [proposed] - Paper-benchmark PP=4 vs PP=8 using the counter method, then pilot ONE PP=4 ring alongside the live Hex at a different port/master_addr. Green-light only if per-stream decode beats the PP=6 baseline ~1.5x.
+1. #26709 [proposed] - Verify vLLM block-sparse/qwen3-moe support on the Julia+Claudia vLLM TP=2 Ray stack, download 4-bit MoE weights to one box, stand up a NON-production test serve, and benchmark decode vs gpt-oss-120b. Promote to the live 120B slot ONLY if decode is measurably faster. Do not touch the working hex ring (rule 157).
+2. #26707 [proposed] - If a 405B or ring rebuild is ever considered in parallel, first reconcile the 8 physical GB10 identities; do not sacrifice the 120B fast lane for ring capacity.
 
 Reference IDs:
-- Ideas filed: #26706 [proposed], #26707 [proposed]
-- Files touched: none (read-only)
-- Docs read: /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md, fleet_inventory (live)
+- Ideas filed: #26709 [proposed] (this session), #26706 [proposed], #26707 [proposed] (earlier this session)
+- Files touched: none (read-only analysis)
+- Docs read: /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md, GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md (referenced), fleet_inventory (live)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
+<task_progress>
+- [x] Correct Julia/Claudia = TP=2 120B pair (not ring members)
+- [x] Answer 2xPP=4 tradeoff (loses fast 120B lane = not worthwhile) + success probability
+- [x] Enumerate models that fit 2x GB10 (256GB) via weight math
+- [x] Give should-we verdict + file Qwen3-235B-MoE candidate idea
+- [x] Final recommendation + PICKUP PROMPT
+</task_progress>
 </attempt_completion>
 ```
 
@@ -3154,96 +3236,4 @@ Reference IDs:
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════
-```
-
-### `1786585633124` — 8/12/2026, 7:03:48 PM PT — 46 turns
-
-**Original task:**
-
-```
-Remove the note about EMS university being state approved accredited since 2003. You can just say established in 2003. It is state approved. But at the very top of the page it says state approved accredited. This is emsuniversity.com
-```
-
-**Ideas referenced:** #10084, #25990, #26037 [deployed], #65039, #9733
-
-**Last PICKUP PROMPT:**
-
-```
- idea #26037 [deployed] filed.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Remove "State Approved accredited since 2003" claim from emsuniversity.com homepage.
-
-Where we left off (verified 2026-08-12 19:03 PT):
-- Deployed: emsuniversity.com homepage now reads "State-Approved · Established in 2003"; all "accredited" claims removed (hero badge, meta description, about, stats, accreditation section, footer)
-- File edited: /var/www/vhosts/emsuniversity.com/httpdocs/wp-content/mu-plugins/emsu-modern-design.php
-- Backup: /var/www/backups/emsu-modern-design.php.bak-20260812-185456-accred-cleanup
-- Live verified via curl: 0 "accredited" matches on https://emsuniversity.com/
-
-Open threads to drive next:
-None — all work completed this session.
-
-Reference IDs:
-- Ideas filed: #26037 [deployed]
-- Files touched: /var/www/vhosts/emsuniversity.com/httpdocs/wp-content/mu-plugins/emsu-modern-design.php, /var/www/backups/emsu-modern-design.php.bak-20260812-185456-accred-cleanup
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Locate the homepage source file for emsuniversity.com
-- [x] Identify all "accredited" / "since 2003" occurrences
-- [x] Replace "accredited" claims with "State Approved" + "Established in 2003"
-- [x] Reload PHP-FPM / clear page cache
-- [x] Verify live homepage no longer shows "accredited"
-- [x] Update HANDOFF_NOTES.md
-- [x] File audit idea + complete
-</task_progress>
-</attempt_completion>
-```
-
-### `1786556136912` — 8/12/2026, 6:56:25 PM PT — 719 turns
-
-**Original task:**
-
-```
-#Frankenstein-LLM Improvements
-
-I would like you to run a series of tests to benchmark Frankenstein LLM versus Claude Opus 5. From this benchmarking, I would like for you to derive away for us to get Frankenstein LLM to behave in a manner that is better than Opus 5. I believe that this is possible if you take a look at our previous interactions here incline. It may require some configuration changes, such as better rules, better mcp, context on disk settings router settings, mcp additions, cline setting changes, anything else you can think of that could be used to get us where we would like to
-```
-
-**Ideas referenced:** #081020, #10108, #10740, #11319, #11735, #11741, #11781, #12059, #12060, #12477, #12618, #12824, #12872, #12878, #13202, #1616, #16163, #16265, #16304, #16648, #16844, #16863, #17130 [superseded], #17202, #17203, #17205, #17300, #17430, #17537 [rejected], #18132 [deployed], #18312, #18326, #18329, #18670, #18671, #18820, #18868, #19125, #19173, #1934, #20581, #22598, #22601, #22815, #22897, #2299, #2301, #2306, #23071, #2310, #2311, #23135, #23171, #25097, #25195, #25269, #25270, #25293, #25537, #25548 [executing], #25560, #25562, #25593 [proposed], #25608, #25623, #25632, #25633, #25635, #25666, #25667, #25669, #25679, #25688, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25796, #25797, #25798, #25803 [proposed], #25804 [deployed], #25812, #25896 [executing], #25897 [approved], #25898 [approved], #25899 [approved], #25900 [approved], #25901 [approved], #25902, #25903, #25905, #25927 [approved], #25928 [superseded], #25929 [approved], #25930 [approved], #25984 [proposed], #25991 [executing], #25992 [executing], #25993 [executing], #25994 [executing], #25995, #25996, #25997 [executing], #25998 [executing], #25999 [executing], #26010 [approved], #38984, #57890, #6522, #6711, #6719, #6729
-
-**Last PICKUP PROMPT:**
-
-```
-ter_hook.py (not yet applied).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — frank-vs-Opus benchmark harness fix + honest re-measure post-VEC-upgrades.
-
-Where we left off (verified 6:08 PM PT 2026-08-12):
-- VEC quality levers shipped + live: #25998 (k=5/max_chars=5000 verified in container), #25999 (1,626 Rules chunks indexed, 204,454 total), #25997 (QuickBooks-first FTS-retrievable).
-- Backend healthy: :11510 adapter returns heavy prompt in 5.0s, GLM ring idle (0 queued), all pools serving.
-- Root cause of failed re-bench: harness benchmarks claude-opus-5 (Opus-OUT per directive) → hangs 240s → no results; no per-task try/except; writes JSON only at end; my own stacked runs saturated adapter lanes (cleaned).
-- Filed #26010 P0: harness fix (drop opus-5, per-task isolation, incremental writes, 120s cap, metrics sampling).
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #26010 [approved] — Rewrite/repair `frank_vs_opus5_bench.py` per the 5 fixes in the idea; use `sed -i` + verified `python3 -m py_compile`, not heredoc (rule 165 client-side arg-parser rejected it repeatedly).
-2. #25998 [deployed] — Re-run repaired harness against rubric-scored 6-task battery to capture the k=5/max_chars=5000 lift and produce the honest frank-vs-Opus %.
-3. #25991 [approved] — Implement the 50/50 sonnet-5-vision / kimi-k3 vision-doorman split (the "50/50 allowable" did not exist in code; _VISION_CAPABLE lists both but no split logic).
-4. #25984 [proposed] — Move tiered-injection trim into `/etc/litellm/router_hook.py` (not the adapter) per the corrected RCA.
-
-Reference IDs:
-- Ideas filed: #25991, #25992(rej), #25993(rej), #25994(rej), #25995, #25996, #25997, #25998, #25999, #26010
-- Files touched: /etc/litellm/frankenstein_registry.yaml (backup .bak-visiononly-20260812-1614), /etc/litellm/router_hook.py (k=5/max_chars=5000), /var/www/emtskills/scripts/frank_recovery_gate.py (multi-processor + vision-only), /var/www/emtskills/clinerules/emsu_corpus.txt, /var/lib/emsu_corpus/corpus.db (FTS rebuilt), /var/www/emtskills/docs/HANDOFF_NOTES.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```

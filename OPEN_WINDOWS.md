@@ -6,12 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/16/2026, 2:28:25 PM PT | window: last 72h | 79 tasks | index total 759 (parsed 3, cached 756)
+Generated: 8/16/2026, 3:28:25 PM PT | window: last 72h | 81 tasks | index total 761 (parsed 5, cached 756)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786913196629` | 8/16/2026, 2:28:24 PM | 139 | 2495KB | #CFA Emails |
-| `1786864599073` | 8/16/2026, 2:28:04 PM | 1011 | 3120KB | #Julia/Claudia 235 |
+| `1786918177124` | 8/16/2026, 3:28:25 PM | 67 | 1463KB | #Email AI |
+| `1786917304515` | 8/16/2026, 3:28:09 PM | 133 | 869KB | Tell me about this - accurate? What is their claim? Is it legit? |
+| `1786913196629` | 8/16/2026, 3:27:58 PM | 199 | 2705KB | #CFA Emails |
+| `1786864599073` | 8/16/2026, 3:26:30 PM | 1119 | 3492KB | #Julia/Claudia 235 |
+| `1786821833685` | 8/16/2026, 3:23:13 PM | 123 | 334KB | #SSS / Virtual LoRA2 / Efficiency |
 | `1786914420694` | 8/16/2026, 2:15:25 PM | 26 | 265KB | Add these 2 also for the 17 year old and give info on additional thoughts |
 | `1786823554800` | 8/16/2026, 1:57:36 PM | 272 | 2251KB | #Argus |
 | `1786913306929` | 8/16/2026, 1:54:20 PM | 8 | 222KB | What does this all mean? or what is it indicative of? |
@@ -36,7 +39,6 @@ Generated: 8/16/2026, 2:28:25 PM PT | window: last 72h | 79 tasks | index total 
 | `1786832279730` | 8/15/2026, 3:20:11 PM | 19 | 112KB | #Externships |
 | `1786820106387` | 8/15/2026, 2:07:52 PM | 360 | 935KB | Why does Vicky send me this? -> Making a followup on Sam Nelson’s final exam I was able to |
 | `1786818491154` | 8/15/2026, 1:03:24 PM | 300 | 642KB | #Joshua Hot FAllover |
-| `1786821833685` | 8/15/2026, 12:40:19 PM | 93 | 270KB | #SSS / Virtual LoRA2 / Efficiency |
 | `1786819237851` | 8/15/2026, 12:06:54 PM | 126 | 723KB | #SSS/CFA/267/ Executor |
 | `1786816732366` | 8/15/2026, 12:06:03 PM | 127 | 1556KB | Something is not working with info@emsuniversity.com. I was asked to re-authenticate this  |
 | `1786819650373` | 8/15/2026, 11:56:21 AM | 28 | 110KB | #Chat Widget |
@@ -94,7 +96,65 @@ Generated: 8/16/2026, 2:28:25 PM PT | window: last 72h | 79 tasks | index total 
 
 ## Per-window detail
 
-### `1786913196629` — 8/16/2026, 2:28:24 PM PT — 139 turns
+### `1786918177124` — 8/16/2026, 3:28:25 PM PT — 67 turns
+
+**Original task:**
+
+```
+#Email AI
+
+Couple things. Seems to be missing the previous emails sent from the student in reverse date order which was there before, Also, the signature like of customer service is missine as well as the answer to this is incorrect. CFA whould be able to resolve this. Is this from teh addition fo the new 235B Julia/Claudia or what's causing this regression?
+```
+
+**Ideas referenced:** #12584, #16732, #23133, #2323, #2328, #2341, #2343, #2344, #23982, #2450, #24990, #2511, #2513, #2517, #2518, #2522, #25962, #25965, #25986, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26376, #26377, #26495 [deployed], #26496 [deployed], #26501, #26508 [proposed], #26509 [proposed], #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26663, #26678, #26711, #26719, #26743, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26834 [in_progress], #26835 [proposed], #3237, #3261, #3319, #3346, #5298, #6106, #7174, #8157, #8162
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786917304515` — 8/16/2026, 3:28:09 PM PT — 133 turns
+
+**Original task:**
+
+```
+Tell me about this - accurate? What is their claim? Is it legit?
+
+Student Grievance Form Mariah Gatlin
+```
+
+**Ideas referenced:** #111827, #138875, #2491, #255231, #26844 [proposed], #26845 [proposed], #374151, #6366
+
+**Last PICKUP PROMPT:**
+
+```
+ent (Marayah Gatlin, id 2091).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Investigate "Student Grievance Form Mariah Gatlin" (spelling mismatch + orphaned intake).
+
+Where we left off (verified 2026-08-16 15:17 PT):
+- No "Mariah Gatlin" exists; real student is **Marayah Gatlin** (Students id 891 & 2091, 25914T-05 / 25924T-22, Dallas Fort Worth TX, marayah071805@gmail.com).
+- Source email is `email_inbound_log` id 138875 (Jessica Gilder, "Grapevine Student Grievance", 2026-08-16 14:15 PT). Body: student "sent form months ago... emailed it to Andrew and someone at customer service."
+- Attachment `Student Grievance Form Mariah Gatlin.pdf` (378,852 bytes) recorded in `attachment_info` but NEVER saved: `attachment_paths` NULL, `full_message_fetched` 0, not on disk.
+- No prior grievance/ticket/email/comms rows for Gatlin — the "months ago" claim is unverified in our records.
+- Fetch cron `cron_grievance_postmark_attachment_fetch.php` fatals: unknown col `g.grievance_code` (real col `grievance_number`), placeholder Postmark token, and only processes rows already in `grievances`.
+
+Open threads to drive next:
+1. #26844 [proposed] — Fix `cron_grievance_postmark_attachment_fetch.php`: change `grievance_code` → `grievance_number`, wire real token from `config/config.php` (`$config['postmark']['server_token']`) instead of placeholder, and handle orphaned inbound emails (process from `email_inbound_log` where `has_attachments=1` and `full_message_fetched=0`, not just from `grievances`).
+2. #26845 [proposed] — Fetch PDF for inbound id 138875 via Postmark inbound details endpoint (`/messages/inbound/{message_id}/details`, `ContentUrl`), save to disk, OCR, read the actual grievance claim, then create the grievance + ticket under Marayah Gatlin (id 2091) per policy. Do NOT repeat the DB credentials seen in source files.
+
+Reference IDs:
+- Ticket: none exists yet (no grievance/ticket created for this student)
+- Ideas filed: #26844 [proposed], #26845 [proposed]
+- Files touched: none on disk (read-only investigation). DB reads: `Students`, `grievances`, `email_inbound_log`. Read-only source: `/var/www/emtskills/cron/cron_grievance_postmark_attachment_fetch.php`, `/var/www/emtskills/cron/cron_postmark_attachment_backfill.php`, `/var/www/emtskills/lib/postmark_grievance_backfill.php`.
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786913196629` — 8/16/2026, 3:27:58 PM PT — 199 turns
 
 **Original task:**
 
@@ -104,11 +164,42 @@ Generated: 8/16/2026, 2:28:25 PM PT | window: last 72h | 79 tasks | index total 
 These stupid CFA emails are back. This was already corrected. Needs more correction again
 ```
 
-**Ideas referenced:** #16732, #18132, #18176, #18313, #23133, #23982, #2450, #2511, #2513, #2517, #2518, #2522, #25774, #25920, #25962, #25965, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26229, #26348, #26368, #26376, #26377, #26495 [deployed], #26496 [deployed], #26501, #26508 [proposed], #26509 [proposed], #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26661, #26663, #26678, #26711, #26719, #26743, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #3783, #3784, #3785, #3786, #3787, #3788, #3789, #3790, #3791, #3836, #3874, #4958, #5218, #8157, #8162, #8163
+**Ideas referenced:** #16732, #18132, #18176, #18313, #23133, #23982, #2450, #2511, #2513, #2517, #2518, #2522, #25774, #25920, #25962, #25965, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26229, #26348, #26368, #26376, #26377, #26495 [deployed], #26496 [deployed], #26501, #26508 [proposed], #26509 [proposed], #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26661, #26663, #26678, #26711, #26719, #26743, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26834 [in_progress], #26835 [proposed], #26837 [proposed], #3783, #3784, #3785, #3786, #3787, #3788, #3789, #3790, #3791, #3836, #3874, #4958, #5218, #8157, #8162, #8163, #8178 [pending_review]
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1786864599073` — 8/16/2026, 2:28:04 PM PT — 1011 turns
+```
+urfaces get the fact injected.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — CFA terminology emails are back: "CFA" means Customer Facing Assistant (AI), never a program/exam.
+
+Where we left off (verified 2026-08-16 2:32 PM PT):
+- lib/CfaTerminologyGuard.php deployed (hasCfaTerm / scrub / sanitizeSubject / safeQuestions), php -l clean
+- Guard wired into cron/cron_email_followup.php (backup .bak-cfaguard-20260816), cron/cron_email_responder.php (lines 2773/2919), lib/ai_ticket_agent.php (lines 359-360); all php -l clean
+- Poison conversation 3892 (mmuhamedcani@gmail.com, "Your CFA Program Access") resolved + sanitized; verified 0 CFA rows in conversations/queue/drafts/outbound pending
+- FPM reloaded; dry-run of followup cron healthy
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26837 [proposed] — Enumerate email_outbound_log send_source=cron_cfa_queue_executor AND subject LIKE '%CFA Program Access%' since 2026-08-01 (~120 recipients), then send each a single correction (no CFA echo per CfaTerminologyGuard) and re-answer their original question. Michael (mmuhamedcani@gmail.com) still needs his Safe Exam Browser question answered, human-appropriate.
+2. #26834 [deployed] — Watch for any new student-facing surface that echoes stored subject_thread / pending_questions (voice, SMS, chat) and wire CfaTerminologyGuard there; the lesson is deterministic send-boundary sanitization, not prompt-side admonition.
+3. Optionally register the CfaTerminologyGuard class in the shared config bootstrap so future surfaces get it by default instead of per-file require_once.
+
+Reference IDs:
+- Ticket: none (Ruben chat directive 2026-08-16)
+- Ideas filed: #26834 [deployed], #26837 [proposed]
+- Learned corrections: #8178 [pending_review]
+- Files touched: lib/CfaTerminologyGuard.php (new), cron/cron_email_followup.php (+.bak-cfaguard-20260816), cron/cron_email_responder.php, lib/ai_ticket_agent.php, docs/HANDOFF_NOTES.md (entry added 14:29 PT)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786864599073` — 8/16/2026, 3:26:30 PM PT — 1119 turns
 
 **Original task:**
 
@@ -126,40 +217,60 @@ Attempt over and over again until it works. Take it all the way to serving. Do N
 **There is NO fallback plan. Do NOT revert to gpt-oss-120b. Do NOT restore the 120B "as a stopgap." Do NOT propose the 120B as a safe state.** If you catch yourself planning a rollback, th
 ```
 
-**Ideas referenced:** #1241, #1264, #14253, #14560, #14848, #16653, #16662, #17084, #1744, #1765, #17788, #1780, #1781, #178686, #1793, #1826, #18287, #18329 [deployed], #1838, #1858, #18678, #1868, #18861 [closed], #1903, #20042, #2071, #2072, #2073, #2114, #22906 [closed], #23133 [executing], #23826 [closed], #25125 [deployed], #2526 [resolved], #2527 [resolved], #2528 [open], #25604, #25869, #26003 [deployed], #26038 [executing], #26040 [executing], #26041 [executing], #26045 [executing], #26050 [executing], #26054 [awaiting_review], #26065 [deployed], #26090 [deployed], #26461 [executing], #26611 [deployed], #26613 [proposed], #26617 [executing], #26819 [proposed], #26827 [open], #27364 [closed], #27440 [closed], #29018 [closed], #30003 [closed], #30670 [closed], #32645 [closed], #34675 [closed], #35313, #36094 [closed], #36914 [open], #37615, #37948 [closed], #39078 [closed], #39625 [closed], #39666, #40888 [open], #41408 [open], #42058 [open], #42096 [closed], #43232 [closed], #43350 [open], #45434 [open], #45829 [open], #45966 [closed], #46191 [open], #46329 [open], #46514 [open], #47089 [open], #47365 [open], #47527 [open], #48898 [open], #48994 [open], #49011 [open], #49060 [open], #49237 [open], #49262 [open], #49381 [open], #50288 [open], #50883 [open], #51091 [open], #51207 [open], #51534 [open], #51581 [open], #52060 [open], #52462 [open]
+**Ideas referenced:** #1241, #1264, #14253, #14560, #14848, #16473, #16653, #16662, #17084, #1744, #1765, #17788, #1780, #1781, #178686, #1793, #1826, #18287, #18329 [deployed], #1838, #1858, #18678, #1868, #18861 [closed], #1903, #19338, #19458, #19491, #20042, #2071, #2072, #2073, #2114, #22906 [closed], #23133 [executing], #23826 [closed], #25125 [deployed], #2526 [resolved], #2527 [resolved], #2528 [open], #25604, #25869, #26003 [deployed], #26038 [executing], #26040 [executing], #26041 [executing], #26045 [executing], #26050 [executing], #26054 [awaiting_review], #26065 [deployed], #26090 [deployed], #26376, #26377, #26396, #26424, #26461 [executing], #26611 [deployed], #26613 [proposed], #26617 [executing], #26819 [proposed], #26827 [open], #26840 [open], #27364 [closed], #27440 [closed], #29018 [closed], #30003 [closed], #30670 [closed], #32645 [closed], #34675 [closed], #35313, #36094 [closed], #36914 [open], #37615, #37948 [closed], #39078 [closed], #39625 [closed], #39666, #40888 [open], #41408 [open], #42058 [open], #42096 [closed], #43232 [closed], #43350 [open], #45434 [open], #45829 [open], #45966 [closed], #46191 [open], #46329 [open], #46514 [open], #47089 [open], #47365 [open], #47527 [open], #48898 [open], #48994 [open], #49011 [open], #49060 [open], #49237 [open], #49262 [open], #49381 [open], #50288 [open], #50883 [open], #51091 [open], #51207 [open], #51534 [open], #51581 [open], #52060 [open], #52462 [open]
 
 **Last PICKUP PROMPT:**
 
 ```
-live and healthy at port 8000.
+his running instance directly.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up Qwen3-235B serving on Julia+Claudia (TP=2) — NaN decode blocker + LoRA/Laura-v2 decision.
+Pick up task 1786864599073 — Qwen3-235B TP=2 serving + NaN decode root cause.
 
-Where we left off (verified 2026-08-16 13:54:03 PT):
-- Qwen3-235B-A22B-NVFP4 SERVING, TP=2, PID 1264675, port 8000, `/v1/models` → qwen3-235b, max_model_len 24576.
-- Decode still returns `!` (NaN logits, token-0 sampler path) — incident #2528 [open].
-- vllm 0.27.1 wheel downloaded to /tmp/vllmcheck (aarch64 abi3); bare venv at /home/rubenmajor/.python-vllm-0271 lacks torch → needs sm_121 torch wheel.
-- LoRA finding filed #26827 [open] per Ruben: adapter is disabled (`LORA_ARGS=""`), "virtual Laura v2" not found, NO action taken.
-- Upgrade path filed #26819 [open]: source rebuild with TORCH_CUDA_ARCH_LIST=12.1 or NVIDIA GB10 torch.
+Where we left off (verified 2026-08-16 14:43 PT):
+- Qwen3-235B-A22B-NVFP4 SERVING on Julia+Claudia TP=2, PID 1291611, port 8000, max_model_len 24576. Verified `/v1/models` returns qwen3-235b with root nvidia/Qwen3-235B-A22B-NVFP4.
+- Decode still returns constant `!` (NaN logits, incident #2528 [open]).
+- Decisive datapoint: BOTH MoE backends (CUTLASS fused default AND `--moe-backend marlin`) produce identical `!` → kernel-backend refuted as sole cause.
+- LoRA ruled out: `LORA_ARGS=""` (bug #1765), no `--enable-lora` in live args; only adapter on disk is gpt-oss-120b-trained, incompatible with 235B.
+- `per_tensor_dequantize` MULTIPLIES (`fake_qweight * inv_scale`) → 507 partial-zero weight_scale tensors are BENIGN, not divider.
+- Attempts staged/backed up: `.bak.attempt18_marlin`, `.bak.attempt19_bf16kv` (script currently = clean auto-KV baseline, no overrides).
 
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26819 [open] — Obtain sm_121-capable torch (NVIDIA JetPack/GB10 wheel or source build), then install vllm 0.27.1 with deps, relaunch TP=2, test decode.
-2. #2528 [open] — If sm_121 torch is unobtainable, run the Marlin NVFP4 backend experiment (`--moe-backend marlin`, verified mapped backend that sets a13_scale=None, bypassing the `1.0/scale` inversion) on a single node first to validate decode before a full relaunch.
-3. #26827 [open] — Await Ruben's decision: keep the dormant emsu_distill_lora adapter for future use, or delete/archive it.
+Open threads to drive next (EVERY item has a real filed idea):
+1. #26819 [open] — Upgrade to sm_121-capable torch/vLLM: PyPI aarch64 wheels ship 0 sm_121 kernels; pypi.nvidia.com has no torch. Path = source rebuild with TORCH_CUDA_ARCH_LIST=12.1 or NVIDIA JetPack GB10 fork. This is the highest-confidence fix.
+2. #26827 [open] — LoRA/virtual-Laura-v2 question: Ruben asked twice; verified LoRA is unused + adapter mismatch; asked Ruben for the SSS/Virtual-LoRA2 path to verify.
+3. #26840 [open] — Control-model test (gpt-oss-120b bnb-4bit) to isolate stack-vs-checkpoint: cache is an EMPTY skeleton, must re-download before running.
 
 Reference IDs:
-- Ticket/incident: #2528 [open]
-- Ideas filed this session: #26819 [open], #26827 [open]
-- Files touched: /home/rubenmajor/julia_unified_tp2_qwen235.sh (add/revert FUSED_MOE env, moe-backend flag reverted), /home/rubenmajor/.python-vllm-custom/lib/python3.12/site-packages/vllm/model_executor/layers/quantization/modelopt.py (w13_weight_scale_2 mean patch), /tmp/vllmcheck/vllm-0.27.1-cp38-abi3-manylinux_2_28_aarch64.whl (downloaded)
+- Incident: #2528 (NaN logits, open)
+- Scripts: /home/rubenmajor/julia_unified_tp2_qwen235.sh (clean baseline), claudia_unified_worker.sh
+- Backups: .bak.attempt18_marlin, .bak.attempt19_bf16kv
+- Files modified: vllm/model_executor/layers/quantization/modelopt.py (w13 scale_2 mean patch — unverified against upstream), w8a8_utils.py (read-only, confirmed multiply dequant)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
+
+### `1786821833685` — 8/16/2026, 3:23:13 PM PT — 123 turns
+
+**Original task:**
+
+```
+#SSS / Virtual LoRA2 / Efficiency
+
+ -I don't know what this is and I don't understand what you're asking me to do  / what do you recommend here?-> #26613 [proposed], Ruben decision: approve the codemod + lint-gate shape for the 6,332-file inline-password cleanup, or keep it scoped to the newest crons only.
+
+ -This needs to actually be executed here and now-> - #26461 [executing], watch the executor pick up Virtual LoRA v2 under the 5-worker floor; if the release guard repeats the "no_code_patches" misread, apply the 5 patches manually per rule 267 GATE C.
+
+This is occurred to me a few times ab
+```
+
+**Ideas referenced:** #10740, #12251, #12335, #12363, #12365, #12366, #12368, #12407, #13874, #16718, #18329 [deployed], #19338, #19458, #19491, #23133 [executing], #24431, #24635, #25125 [deployed], #25150, #25188, #25510, #25522, #25576, #25618, #25619, #25643, #25644, #25645, #25649, #25650, #25653, #25654, #25718, #26003 [deployed], #26038 [executing], #26040 [executing], #26041 [executing], #26045 [executing], #26050 [executing], #26054 [awaiting_review], #26065 [deployed], #26090 [deployed], #26182 [approved], #26461 [executing], #26611 [deployed], #26613 [proposed], #26617 [executing], #26624 [deployed], #26625 [executing], #26626 [executing]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786914420694` — 8/16/2026, 2:15:25 PM PT — 26 turns
 
@@ -1128,24 +1239,6 @@ Shutting it down surfaced something the earlier writeup missed. The 22GB/hr was 
 ```
 
 **Ideas referenced:** #10866, #12824, #12872, #12878, #25185, #26007 [deployed], #26008 [executing], #26009 [deployed], #26017 [awaiting_review], #26019 [deployed], #26023 [executing], #26024 [deployed], #26068 [deployed], #26069 [deployed], #26070 [deployed], #26076 [executing], #26077 [executing], #26604 [deployed], #26614 [deployed], #26631 [deployed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786821833685` — 8/15/2026, 12:40:19 PM PT — 93 turns
-
-**Original task:**
-
-```
-#SSS / Virtual LoRA2 / Efficiency
-
- -I don't know what this is and I don't understand what you're asking me to do  / what do you recommend here?-> #26613 [proposed], Ruben decision: approve the codemod + lint-gate shape for the 6,332-file inline-password cleanup, or keep it scoped to the newest crons only.
-
- -This needs to actually be executed here and now-> - #26461 [executing], watch the executor pick up Virtual LoRA v2 under the 5-worker floor; if the release guard repeats the "no_code_patches" misread, apply the 5 patches manually per rule 267 GATE C.
-
-This is occurred to me a few times ab
-```
-
-**Ideas referenced:** #10740, #12251, #12335, #12363, #12365, #12366, #12368, #12407, #13874, #16718, #18329 [deployed], #19338, #19458, #19491, #23133 [executing], #25125 [deployed], #25150, #25188, #26003 [deployed], #26038 [executing], #26040 [executing], #26041 [executing], #26045 [executing], #26050 [executing], #26054 [awaiting_review], #26065 [deployed], #26090 [deployed], #26461 [executing], #26611 [deployed], #26613 [proposed], #26617 [executing], #26624 [deployed], #26625 [executing], #26626 [executing]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 

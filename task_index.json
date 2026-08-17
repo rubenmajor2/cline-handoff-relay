@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-17T20:39:45.360Z",
+ "generated_at": "2026-08-17T21:39:45.651Z",
  "counts": {
-  "parsed": 1,
+  "parsed": 3,
   "reused": 790,
   "failed": 0,
-  "total": 791
+  "total": 793
  },
  "tasks": {
   "1784522296714": {
@@ -132940,13 +132940,13 @@
   },
   "1786980640015": {
    "task_id": "1786980640015",
-   "mtime": 1786996504284,
+   "mtime": 1787002726386,
    "created_at": "2026-08-17T15:30:40.015Z",
-   "last_modified": "2026-08-17T19:55:04.284Z",
-   "size_kb": 1920,
-   "turn_count": 224,
+   "last_modified": "2026-08-17T21:38:46.386Z",
+   "size_kb": 2341,
+   "turn_count": 305,
    "title": "#TDSHS\n\nPrepare responses for these 3 students due today for TDSHS as well as tell me which dates I have to respond to TDSHS requests for today/ check other emails sent to me that need to be replied to. I think I have an 8/7 and 8/10 email to reply back to sabrina about. Give draft replies for those and due dates. As for this: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=packet&pe=tdshs&rt=complaint_response&due=2026-08-15 \n\nI need that response. Also, I noticed you said one student was not found. Tha'ts not accurate. Nicholas Mejia (NO Students match) (26917FT) / that student is in fact in the system. He was very easy to find. \n\nAgain, prepare the draft respon",
-   "pickup_prompt": "ur review before transmission.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — TDSHS 8/15 packet consolidated response + due-date triage.\n\nWhere we left off (verified 2026-08-17 09:16 PT):\n- Draft PDF rendered on Desktop: TDSHS_Per_Matter_Responses_2026-08-17_DRAFT.pdf (287 KB, contains 1080261886/1916/1917 + Nicolas Mejia correction). Awaiting Ruben approval before transmission.\n- Compliance_deadlines row id=22 corrected: \"Nicholas Mejia\" → \"Nicolas Mejia (26917FT-05)\" with verification note appended.\n- Verified no Sabrina Richardson inbound/outbound email on 8/7 or 8/10 anywhere in email_inbound / email_inbound_log / email_outbound_log.\n- Due dates on record: 8/15 packet (3 students, overdue), 1080261810 → 8/18, 1080261811 → 8/19.\n\nOpen threads to drive next:\n1. #27073 [awaiting_review] — after Ruben approves, copy the draft to /var/www/emtskills/uploads/tdshs/inspection-5196-2026/Transmission_Copy_Per_Matter_Responses_TDSHS_2026-08-17.pdf and transmit to Sabrina Lee Richardson; mark compliance_deadlines rows 20,22,23 drafted → ready_to_send → sent.\n2. #27072 [proposed] — confirm compliance_deadlines id=22 student-name correction is reflected in the compliance_deadlines.php packet view (reload + verify \"Nicolas Mejia (26917FT-05)\" renders).\n\nReference IDs:\n- Ticket: none (compliance packet, not a support ticket)\n- Ideas filed: #27072, #27073\n- Files touched: /Users/rubenmajor/Desktop/TDSHS_Per_Matter_Responses_2026-08-17_DRAFT.pdf, /Users/rubenmajor/Desktop/TDSHS_Transmission_Copy_2026-08-17.html, compliance_deadlines row id=22\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "the word and I will re-render.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1786952400 — TDSHS 8/15 packet response, revision 3 plus link/license verification.\n\nWhere we left off (verified 2026-08-17 14:25 PT):\n- Draft on Desktop: TDSHS_Per_Matter_Responses_2026-08-17_DRAFT.pdf (322,486 bytes, rendered 14:21 PT) + source TDSHS_Transmission_Copy_2026-08-17.html. Awaiting Ruben approval.\n- Revision 3 content: June 19 entry-scope bullet in the outset list, plus a single-paragraph \"Preserved Procedural Objections\" section consolidating Sunset items 2, 3, 5, 6 and 8, reserved under APA Government Code ch. 2001 and the constitutional guarantees of notice and an opportunity to be heard. Revision 2 content intact (no student names, 1080261916 is a clarification request with the FERPA basis stated, no timeliness paragraph, three per-matter factual errors corrected).\n- LICENSE FINDING, verified by grep across every Department-originated PDF on the server (complaint letters, 5196 inspection notice, 5196 report, POC guide, 623992 approval letter): the string 600179 appears ZERO times in Department documents. It appears 94 times, exclusively in EMSU-authored documents. Attorney summary line 104 attributes it to Richardson's 7/20 email, which is not in email_inbound_log because it was addressed to rmajor/agamez/jthompson rather than info@. Decision pending from Ruben: confirm from the 7/20 email, or drop the number from the RE line and footer to match how the Department captions its own letters.\n- COMPLAINT ORIGINALS: EMSU_1080261886.pdf, EMSU_1080261916.pdf and EMSU_1080261917.pdf are NOT on disk. email_inbound_log rows 111927, 111475, 111722 list the attachments in attachment_info with byte sizes but attachment_paths is NULL on all three. Only the July batch (1080261869, 1080261887, 1080261891) is in the evidence folder.\n- #27072 [deployed] (verified: UPDATE compliance_deadlines id=22 returned \"Rows affected: 1\" at 12:52 PT).\n- Rule 297 amended on disk (verified: clinerules_amend_rule returned \"Amended rule 297 ... reindexed\", proof row in rule_amend for task 1786952400).\n\nOpen threads to drive next:\n1. #27101 [executing] — backfill the three missing complaint attachments into /var/www/emtskills/uploads/tdshs/inspection-5196-2026/ using cron_postmark_attachment_backfill.php against email_inbound_log rows 111927, 111475, 111722, then re-verify each control number's allegation text against the draft response.\n2. #27102 [executing] — resolve the 600179 license number: locate Richardson's 7/20/2026 emergency-suspension email in Ruben's mailbox, confirm the number as she stated it, and either source it to that email in the file or remove it from the RE line and footer of the 8/17 draft and re-render.\n3. #27073 [awaiting_review] — on Ruben approval, copy the PDF to /var/www/emtskills/uploads/tdshs/inspection-5196-2026/Transmission_Copy_Per_Matter_Responses_TDSHS_2026-08-17.pdf, transmit to Sabrina Lee Richardson, move compliance_deadlines rows 20, 22, 23 to sent.\n4. #27100 [executing] — draft 1080261810 (due 8/18/2026, extension email id 108034) and 1080261811 (due 8/19/2026, extension email id 111463), carrying the same constraints and the Preserved Procedural Objections paragraph, verifying terminal-outcome columns and placement-request rows per amended rule 297.\n\nReference IDs:\n- Ticket: none (regulator compliance packet)\n- Ideas filed: #27072 [deployed], #27073 [awaiting_review], #27100 [executing], #27101 [executin",
    "ideas": {
     "1370": null,
     "12345": "proposed",
@@ -132958,9 +132958,14 @@
     "27073": "awaiting_review",
     "27074": "approved",
     "27100": "approved",
+    "27101": "executing",
+    "27102": "executing",
+    "27107": "approved",
+    "27108": "approved",
     "64748": null,
     "127891": null,
     "128274": null,
+    "178695": null,
     "251038": null,
     "251044": null,
     "251128": null,
@@ -132968,9 +132973,11 @@
     "251264": null,
     "251382": null,
     "251444": null,
+    "333333": null,
     "475569": null,
     "600179": null,
-    "623992": null
+    "623992": null,
+    "666666": null
    }
   },
   "1786981142444": {
@@ -133137,13 +133144,13 @@
   },
   "1786993543586": {
    "task_id": "1786993543586",
-   "mtime": 1786998937906,
+   "mtime": 1787000513611,
    "created_at": "2026-08-17T19:05:43.586Z",
-   "last_modified": "2026-08-17T20:35:37.906Z",
-   "size_kb": 1864,
-   "turn_count": 272,
+   "last_modified": "2026-08-17T21:01:53.611Z",
+   "size_kb": 2130,
+   "turn_count": 322,
    "title": "Our Staff Keycards were all deactivated and students/staff were locked out of our building on Saturday in Houston. There is something weird going on with the landlord and the firemarchall there that doesn't make sense. Anyway It's causing a huge downstream issue with us not having building access on the Weekends or after hours. It's also a violation of the lease. See lease:\n\nhttps://drive.google.com/drive/home \n\nCheck all emails to/from blackgoldrealty.com in postmark on my email to/from jthompson@emsuniversity.com rmajor@emsuniversity.com cfrench@emsuniversity.com. \n\nI need a call list. Email list, draft breach of lease letter, steps to take, lay out financial damage, due to fallout with st",
-   "pickup_prompt": "BLACKGOLD-EMAIL-TO-L-DRAFT.md.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task BlackGold Realty Houston building-access lockout / lease breach response (Aug 2026) — email to Lafayette drafted; Anderson call logged.\n\nWhere we left off (verified 2026-08-17 13:35 PT):\n- Four deliverables on Desktop, synced and verified: blackgold-incident.html (11 sections incl. new email-to-L section, nav verified), BLACKGOLD-INCIDENT-LOG.md, blackgold-breach-package-20260817.md, BLACKGOLD-EMAIL-TO-L-DRAFT.md.\n- Anderson call facts logged: panel must be REPLACED + 24/7 programmed (not repaired); marshal required whenever occupied; LL pays 7AM–7PM weekday marshal; ~1 week lead for 7PM–10PM/weekend coverage; Anderson doubts L's \"no one after 7PM\" claim; citations if occupied after 7PM; instruction = check with L first, then call back to schedule.\n- Email draft to Lafayette created (written citation, repair timeline, authorized coverage, cost coverage, keycards; deadline Wed 8/19; lease-breach + TDSHS alternative).\n- Corporate chain: Atlas Operating (parent) → YMC Royalty (Suite 800) → BlackGold Realty (Suite 700). Broker: Doug Pack 713-818-5782.\n- Damages $130,725 at risk (75 students, 5 sections) + tail risk. Rent NOT confirmed current.\n- Idea filed: #27098 [proposed].\n\nOpen threads to drive next:\n1. #27098 [proposed] — Verify rent payment record with Jon/accounting BEFORE sending breach letter.\n2. #27098 [proposed] — Send the Lafayette email today (deadline Wed 8/19); call back Anderson (713-449-8741) to schedule coverage once L authorizes.\n3. #27098 [proposed] — Get Atlas Operating officers/registered agent + full YMC phone (281-893-xxxx) from Texas SOS/SOSDirect.\n4. #27098 [proposed] — Have Ruben set lease PDF to Anyone-with-link access, then extract quiet-enjoyment/access/cure/abatement clauses.\n5. #27098 [proposed] — If L stalls, send breach letter + loop Doug Pack; escalate to Atlas principals.\n\nReference IDs:\n- Ticket: none filed (task originated as iMessage directive)\n- Ideas filed: #27098\n- Files touched: /Users/rubenmajor/Desktop/blackgold-incident.html, /Users/rubenmajor/Desktop/BLACKGOLD-INCIDENT-LOG.md, /Users/rubenmajor/Desktop/blackgold-breach-package-20260817.md, /Users/rubenmajor/Desktop/BLACKGOLD-EMAIL-TO-L-DRAFT.md\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
+   "pickup_prompt": "BLACKGOLD-EMAIL-TO-L-DRAFT.md.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task BlackGold Realty Houston building-access lockout / lease breach response (Aug 2026) — breach confirmed, outreach escalated, files synced.\n\nWhere we left off (verified 2026-08-17 14:02 PT):\n- Four deliverables on Desktop, synced: blackgold-incident.html (32.4KB, 11 sections incl email-to-Lafayette), BLACKGOLD-INCIDENT-LOG.md (23.8KB), blackgold-breach-package-20260817.md (20.5KB, email draft section 8), BLACKGOLD-EMAIL-TO-L-DRAFT.md.\n- Breach-of-lease analysis complete: quiet enjoyment + constructive eviction + landlord maintenance duty + retaliatory conduct. Whole-building fire panel confirmed; landlord pays 7AM-7PM marshal; Anderson can schedule after-hours coverage (~1 week lead); L said \"EMSU won't be there after 7PM\" — Anderson didn't believe him.\n- Outreach: L voicemail (access demand), Moussa voicemail (immediate access), Yousef SMS (students paid, license on the line, needs help). No reply yet.\n- Corporate chain: Atlas Operating LLC (parent) → YMC Royalty LP (Suite 800) → BlackGold Realty LLC (Suite 700).\n- Idea filed: #27098 [proposed].\n\nOpen threads to drive next:\n1. #27098 [proposed] — Verify rent payment record with Jon/accounting BEFORE breach letter sends.\n2. #27098 [proposed] — SMS/call document photos + timestamped receipts of Moussa/Yousef/Lafayette outreach into the evidence appendix.\n3. #27098 [proposed] — Get Atlas Operating officers/registered agent + full YMC phone (281-893-xxxx) from Texas SOS/SOSDirect.\n4. #27098 [proposed] — Follow up with Sr. Inspector Anderson (713-449-8741) for written fire marshal order + repair timeline; schedule after-hours coverage.\n5. #27098 [proposed] — Have Ruben set lease PDF to Anyone-with-link access, then extract quiet-enjoyment/access/cure/abatement clauses.\n6. #27098 [proposed] — Send breach/access letter to tenant@/lafayette@/musa@blackgoldrealtyllc.com CC emily@ tim@ Greg jthompson@ rmajor@ cfrench@; loop Doug Pack; escalate to Atlas principals if stalled.\n\nReference IDs:\n- Ticket: none filed (task originated as iMessage directive)\n- Ideas filed: #27098\n- Files touched: /Users/rubenmajor/Desktop/blackgold-incident.html, /Users/rubenmajor/Desktop/BLACKGOLD-INCIDENT-LOG.md, /Users/rubenmajor/Desktop/blackgold-breach-package-20260817.md, /Users/rubenmajor/Desktop/BLACKGOLD-EMAIL-TO-L-DRAFT.md\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
     "2144": null,
     "2528": null,
@@ -133185,6 +133192,57 @@
    "turn_count": 38,
    "title": "please run the Fix AVP program on my computer that I can't seem to open",
    "pickup_prompt": "y restore Mac Virtual Display.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Fix AVP program that would not open.\n(No numeric Cline task id was provided for this session.)\n\nWhere we left off (verified 2026-08-17 12:39 PT):\n- Root cause: the \"Fix AVP\" applet binary was rejected by amfid (Code -423, adhoc/unknown chain) producing open error -600. Fixed by rebuilding the applet via osacompile plus clean ad-hoc codesign; codesign verify exits 0.\n- Broken bundle preserved on the Desktop with timestamp suffix 20260817123637.\n- Program launched and completed: confirmed running PID 21417 `sudo fix-avp.sh`, then exited normally (one-shot script that ends with a printed manual checklist).\n- The app now opens and runs the program; no amfid rejection remains.\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. (human-only decision, no idea) — Apply the 7 printed manual fixes before testing: clear custom DNS on Wi-Fi, quit all browsers, Bluetooth discoverable, Tailscale off, Vision Pro AirPlay Receiver ON plus AirDrop Everyone/10min, reboot the Vision Pro, then AirDrop Mac to AVP first. Physical-device actions, not buildable work.\n2. (human-only decision, no idea) — If Mac Virtual Display still will not connect after those steps, re-run the program (double-click the app — it opens correctly now) and if it still fails, open a new task with the collected evidence for deeper AWDL investigation.\n\nReference IDs:\n- Ticket: none\n- Ideas filed: none this session\n- Files touched: Desktop app bundle \"Fix AVP\" (rebuilt + resigned), Desktop backup of old bundle (20260817123637), Desktop fix-avp.command and fix-avp.sh (unchanged, verified intact)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "ideas": {}
+  },
+  "1787000192686": {
+   "task_id": "1787000192686",
+   "mtime": 1787001171923,
+   "created_at": "2026-08-17T20:56:32.686Z",
+   "last_modified": "2026-08-17T21:12:51.923Z",
+   "size_kb": 650,
+   "turn_count": 108,
+   "title": "Keep getting this upon initial iteration of frankenstein-llm: {\"message\":\"Failed to fetch LiteLLM model info: <none>\",\"modelId\":\"frankenstein-llm\",\"providerId\":\"litellm\"}\n\n-- \nthen it starts iterating, but something is tripping it initially. \n\nFlapping:\n\n[LITELLM] Failed to fetch LiteLLM model info: <none>\n{\"message\":\"Failed to fetch LiteLLM model info: <none>\",\"modelId\":\"frankenstein-llm\",\"providerId\":\"litellm\"}:\n\n\n--\nPompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  \n\n\nBoth answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.\n\n## Where ",
+   "pickup_prompt": "frankenstein_router_incidents.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787001058 — Cline LiteLLM model-info fetch flapping fix.\n\nWhere we left off (verified 2026-08-17 14:12 PT):\n- Diagnosed root cause: Cline config pointed to dead WireGuard IP (10.100.0.1) instead of Cloudflare tunnel\n- Fixed config: openAiBaseUrl and liteLlmBaseUrl now point to https://litellm.emsuniversity.com\n- Bug library incident 2551 recorded with full RCA\n- User needs to reload VS Code for changes to take effect\n\nOpen threads to drive next:\n1. (human-only decision, no idea) — verify after VS Code reload that the 'Failed to fetch LiteLLM model info' error no longer appears on initial iteration\n\nReference IDs:\n- Ideas filed: none\n- Ideas closed: none\n- Files touched: ~/Library/Application Support/Code/User/globalStorage/saoudrizwan.claude-dev/state/state.vscdb (API config updated), /tmp/fix_cline_config.py (fix script)\n- Bug library: incident 2551 (frankenstein_router_incidents)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n\n# Reversal Log\nNo reversals this window.</result>\n<command>echo \"Config fix applied. Reload VS Code (Developer: Reload Window) to take effect. Verify with: sqlite3 ~/Library/Application\\ Support/Code/User/globalStorage/saoudrizwan.claude-dev/state/state.vscdb \\\"SELECT value FROM ItemTable WHERE key='apiConfiguration';\\\" | python3 -c \\\"import sys,json; d=json.loads(sys.stdin.read()); print('openAiBaseUrl:', d.get('openAiBaseUrl')); print('liteLlmBaseUrl:', d.get('liteLlmBaseUrl'))\\\"\"</command>\n<task_progress>- [x] Check bug library (novel symptom confirmed)\n- [x] Verify frankenstein registry healthy\n- [x] Probe LiteLLM /v1/models endpoint (up, 401 without auth)\n- [x] Check router audit log (routing works fine)\n- [x] Find Cline extension source for \"Failed to fetch LiteLLM model info\" error\n- [x] Read the full LiteLLM model-info fetch function (wTn at offset 12062136)\n- [x] Reproduce the model-info fetch with auth (Cloudflare tunnel works, WireGuard dead)\n- [x] Identify root cause of initial flap (10.100.0.1 WireGuard unreachable from Mac)\n- [x] Implement fix (update config to use Cloudflare tunnel URL)\n- [x] Verify fix (config re-read confirms Cloudflare URL, endpoint returns HTTP 200)\n- [x] Record in bug library (incident 2551)</task_progress>\n</attempt_completion>",
+   "ideas": {
+    "1998": null,
+    "2299": null,
+    "2537": null,
+    "2551": "deployed",
+    "10108": null,
+    "10740": null,
+    "11741": null,
+    "11781": null,
+    "12477": null,
+    "12584": null,
+    "12618": null,
+    "12824": null,
+    "12872": null,
+    "12878": null,
+    "13202": null,
+    "16163": null,
+    "16265": null,
+    "16304": null,
+    "16844": null,
+    "18312": null,
+    "18326": null,
+    "19338": null,
+    "19686": null,
+    "23171": null,
+    "25097": null,
+    "26908": null,
+    "26923": null,
+    "178700": null
+   }
+  },
+  "1787002408232": {
+   "task_id": "1787002408232",
+   "mtime": 1787002768802,
+   "created_at": "2026-08-17T21:33:28.232Z",
+   "last_modified": "2026-08-17T21:39:28.802Z",
+   "size_kb": 89,
+   "turn_count": 49,
+   "title": "For this\n\nRuben for the 4th attempt of Sam Nelson\nwe will be able to have it today\nShe said she will be coming back to college\nShe is also been calling everyday\nThank you in advance Ruben\n\ncna you fix that so they can take their final exam?",
+   "pickup_prompt": null,
    "ideas": {}
   }
  }

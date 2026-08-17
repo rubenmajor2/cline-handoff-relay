@@ -157,3 +157,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: TDSHS 8/15 packet: a prior turn asserted the student in control 1080261916 was "verified" as Nicolas Mejia 26917FT-05 on the basis of a one-letter name resemblance to the transmittal spelling ("Nicholas"), and stated three per-matter facts that the record contradicts (called a fail_date a "didactic completion", said a student with a PASSED course-end date "remains within the completion window", and said "no placement request exists" for a student who had three requests all assigned same-day). Amendment: a name-similarity match is a HYPOTHESIS, not an identification. Before asserting that an externally-supplied identifier corresponds to a specific record, require a second independent field to agree (DOB, email, program-assigned id, or the person's own self-supplied spelling); if only the name is similar, the correct output is a clarification request, not a claim. Corollary for per-student regulator facts: read the terminal-outcome columns (fail_date/drop_date/transfer_date) and compare 
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-17 21:41 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786952400
+- RCA bucket: unread source
+- Trigger pattern: Writing "not found / cannot determine / no record exists" from a tool output whose detail rows were never read, and asserting agency-facing identifiers sourced from internal work product rather than t
+- Reversal note: TDSHS 8/17 packet, three flips in one window, one root cause: I answered from a partial read of a source I had already pulled. (1) For control 1080261916 I wrote a CLARIFICATION REQUEST saying the program could not identify the student, while the lookup_paperwork_state output already in my context showed 25 submitted forms including ELEVEN patient care reports, three preceptor-signed timesheets, three preceptor evaluations, and request 2796 status=completed with note "Approved in Carrolton FD fror Aug 11th, 13th and 15th". The student had COMPLETED his externship. I read the header block of that tool output and not the rows, and shipped a withheld answer that discarded the strongest fact in the packet. (2) I published complaint-PDF URLs under /emtskills/uploads/tdshs/ without ever requesting one; the nginx vhost has an explicit deny all/return 403 on that path with a comment naming personnel/compliance_ref.php as the authenticated route. (3) I put "License No. 600179" in the RE line an
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

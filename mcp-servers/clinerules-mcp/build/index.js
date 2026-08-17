@@ -1279,9 +1279,30 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
         // equal length so cm.index from result_text remains valid in strippedFull.
         // (2026-08-08 fixes #1+#2 folded in: disposition brackets contain the
         // literal word DEPLOYED, and rule 91's own boilerplate contains DONE.)
+        // 2026-08-16 false-positive fix #4 (idea #26916): rule 267 GATE B REQUIRES
+        // quoting the reconcile return verbatim as "(verified: status=deployed
+        // dev_stage=ready_for_review)". That evidence string contains the bare word
+        // "deployed" OUTSIDE a disposition bracket, so fix #3's bracket-strip does not
+        // remove it. When a [deployed] idea and an [executing] idea sit on adjacent
+        // lines -- the normal shape of a multi-idea Reference IDs block -- the
+        // [deployed] neighbour's OWN evidence falls inside the [executing] item's
+        // 220-char window and trips claimWord. Measured 2026-08-16: two adjacent
+        // Reference-ID lines, #26914 [deployed] + #26915 [executing], failed on the
+        // literal token "status=deployed" belonging to #26914.
+        //
+        // This is the most damaging false-positive shape in the validator, because the
+        // "obvious" agent response is to launder the PROSE until the gate goes quiet.
+        // That silences an honesty gate to pass a formatting check -- the exact
+        // inversion rule 321 exists to prevent. Two windows in a row reached for that
+        // repair before the regex was actually read (see rule 297: classify the code
+        // before you diagnose). Strip machine-readable evidence tokens instead: they
+        // are RECONCILE OUTPUT, never a human claim about the tagged idea.
         const padSpaces = (m) => " ".repeat(m.length);
         const strippedFull = result_text
             .replace(/\[(deployed|executing|blocked|proposed|rejected|superseded|awaiting_review)\]/gi, padSpaces)
+            // Reconcile-evidence tokens: status=X / dev_stage=X / new_status=X.
+            // Machine output quoted per rule 267, not a completion claim.
+            .replace(/\b(?:new_status|status|dev_stage|readiness)\s*=\s*[a-z_]+/gi, padSpaces)
             .replace(/When done,[^\n]*/gi, padSpaces)
             .replace(/At wrap-up,[^\n]*/gi, padSpaces)
             .replace(/run order 66/gi, padSpaces);

@@ -60,3 +60,12 @@ On any box that claims hours of uptime: `grep -c "startup complete" <container-l
 - Rule 263 (verify-before-claim on ALL facts, system state included)
 
 **Source incidents: 2026-08-09 Big Mac wedge + credential-guess hour; Julia host-up/engine-down mis-call; earlier Claudia false-down (all resolved same session; fleet fully restored 22:51 PT)**
+## Amendment (from reversal, 2026-08-17 17:07 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786932084
+- RCA bucket: insufficient probe
+- Trigger pattern: Declaring a multi-node GPU cluster outage 'physical / needs human power-cycle' after probing only host reachability (ping/SSH/tunnels/WG), without probing the CLUSTER FABRIC state (RoCE/IB interface I
+- Reversal note: Julia/Claudia 235B: I classified the outage as host-down requiring physical intervention because ping/SSH/WG/tunnels were all dead, and reported no remote recovery path. After the boxes returned, the real root cause was software and fully remotely fixable: Julia lost its RoCE IPv4 (192.168.100.3/24 on enp1s0f1np1) across reboot, leaving GID index 3 empty, so NCCL paired a link-local IPv6 GID against Claudia's IPv4-mapped GID and ibv_modify_qp failed EINVAL(22) INIT->RTR, surfacing only as the generic 'NCCL unhandled system error / Engine core initialization failed'. The @reboot auto-start fired every boot and failed identically, which made a working guard look absent. Amendment: for any TP/PP multi-node engine that fails to init, the host-state ladder is NOT sufficient. Before declaring physical/human-required, probe the fabric: (a) ip -4 addr on the RoCE/IB netdev on EVERY node, (b) the GID table (/sys/class/infiniband/<dev>/ports/1/gids + gid_attrs/types) and confirm all peers expose
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

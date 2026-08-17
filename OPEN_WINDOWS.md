@@ -6,16 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/17/2026, 9:39:43 AM PT | window: last 72h | 93 tasks | index total 787 (parsed 4, cached 783)
+Generated: 8/17/2026, 10:39:44 AM PT | window: last 72h | 95 tasks | index total 787 (parsed 3, cached 784)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1786559316764` | 8/17/2026, 10:39:37 AM | 103 | 498KB | #Lower Romans |
+| `1786979863145` | 8/17/2026, 10:38:13 AM | 213 | 417KB | #Executor |
+| `1786960541449` | 8/17/2026, 10:10:44 AM | 570 | 4307KB | #Julia/Claudia 235B  |
+| `1786835771600` | 8/17/2026, 10:07:11 AM | 410 | 2310KB | #BLS  |
+| `1786573125988` | 8/17/2026, 9:49:11 AM | 383 | 3324KB | Please tell me if this is wrong? And if so why and what is going on? |
 | `1786981142444` | 8/17/2026, 9:26:22 AM | 154 | 1095KB | #Conrad/Argus |
-| `1786960541449` | 8/17/2026, 9:21:12 AM | 436 | 4005KB | #Julia/Claudia 235B  |
 | `1786821833685` | 8/17/2026, 9:19:50 AM | 677 | 2520KB | #SSS / Virtual LoRA2 / Efficiency |
 | `1786980640015` | 8/17/2026, 9:17:31 AM | 194 | 1532KB | #TDSHS |
-| `1786835771600` | 8/17/2026, 8:52:45 AM | 302 | 2010KB | #BLS  |
-| `1786979863145` | 8/17/2026, 8:42:23 AM | 123 | 278KB | #Executor |
 | `1786979337785` | 8/17/2026, 8:08:58 AM | 1 | 2KB | #Executor |
 | `1786948767264` | 8/17/2026, 8:03:55 AM | 254 | 1446KB | #Unknown / Maybe 317 adjacent |
 | `1786660376952` | 8/17/2026, 8:01:40 AM | 1016 | 2862KB | help me file with Florida Board of Education application yet? Need that approval before we |
@@ -108,6 +110,213 @@ Generated: 8/17/2026, 9:39:43 AM PT | window: last 72h | 93 tasks | index total 
 
 ## Per-window detail
 
+### `1786559316764` — 8/17/2026, 10:39:37 AM PT — 103 turns
+
+**Original task:**
+
+```
+#Lower Romans
+
+Tell me then what i need to do to get SSH on the MDM for Cicero, Maximums and Nero or if it's already working. Then we can move to their LLM stuff? 
+
+--
+Direct, evidence-backed answer to "why did you lose them" — I did not lose them. Here is the verified chain:
+
+**1. WOPR's key never rotated.** `stat` on `/home/emsuserver/.ssh/id_ed25519{,.pub}` shows mtime **2026-02-19 09:20 PT** — unchanged for six months. Fingerprint `SHA256:8a2f55513LYs7/7pbvaoyQB741VVUDegh5QXHLF7krI emsuserver@wopr`. That is the exact key the Macs trusted before.
+
+**2. deploy.sh installed exactly these keys
+```
+
+**Ideas referenced:** #1130, #1131, #12028, #12034, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178634, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #25378, #25381, #25744 [approved], #25758 [executing], #25760 [executing], #25910 [blocked], #25913 [blocked], #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+g] remain the same work items.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1786342434047 — lower Romans SSH on MDM: Nero done, Maximus + Cicero need one key-append each on the physical Macs.
+
+Where we left off (verified 2026-08-12 12:46 PT):
+- NERO ✅: WOPR→127.0.0.1:2223 SSH = rubenmajor@EMSU-SMS-Mac; ollama :11455 HTTP 200. Nothing to do.
+- MAXIMUS ⏸: WOPR:2224 listener live but key denied; ollama :11505 HTTP 200 (M4 up). M4 LAN IP unknown (.156 times out, .197 is a Nero-relay box NOT the M4 — verified by appending there and 2224 still denying, append reverted clean to 5 keys). Only inbound path is 2224.
+- CICERO ⏸: LAN .252 SSH up but rubenmajor + all keys denied (desktop M5 key and id_rsa both rejected); MLX :11520 HTTP 000. WOPR cannot LAN-route to .252.
+- MDM: mdm_devices has only Big Mac. Lower Romans ride the web-terminal proxy (static ids in web_terminal_token.php + ws_ssh_proxy.py entries nero=2223, maximus=2224, cicero=192.168.1.252:22).
+- Root cause everywhere: the WOPR pubkey (SHA256:8a2f55513LYs7/7pbvaoyQB741VVUDegh5QXHLF7krI) is missing from each Mac's ~/.ssh/authorized_keys. No key was lost; deploy.sh keys are still intact on this desktop.
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #25910 [blocked] — After Ruben appends WOPR pubkey on the physical M4: verify `ssh -i /home/emsuserver/.ssh/id_ed25519 rubenmajor@127.0.0.1 -p 2224`, then web-terminal max entry is already correct.
+2. #25913 [blocked] — After Ruben appends WOPR pubkey on the M5 at .252: verify `ssh rubenmajor@192.168.1.252` from desktop and WOPR key auth; restart emsu-web-terminal.service; verify cicero proxy entry; then re-check MLX :11520 lane for the LLM discussion.
+
+Reference IDs:
+- Ideas filed: #25910 [blocked], #25913 [blocked]; prior #25758 [executing], #25760 [executing]
+- Files read (no writes): /var/www/emtskills/scripts/ws_ssh_proxy.py, /var/www/emtskills/routes/web_terminal_token.php, /home/emsuserver/.ssh/{authorized_keys,config}, /home/emsuserver/mac-tunnel-deploy.DISABLED/{deploy.sh,smsmac_launchdaemon.plist,2024mac_launchdaemon.plist}, ~/Desktop/mac-tunnel-deploy/deploy.sh, admin_portal.mdm_devices + orchestrator_ideas
+- Reverts performed: LAN .197 authorized_keys restored to original 5 keys, backup file removed
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Probe WOPR listeners + pubkey + LLM lanes
+- [x] Nero: verified WORKING (SSH 2223 + ollama 11455)
+- [x] Maximus: tunnel live, key denied, M4 LAN IP unknown, :11505 up
+- [x] Cicero: .252 up, all keys denied, :11520 down
+- [x] 2225 identified as Artemis (read-only, untouched per steer)
+- [x] Reverted the one experimental append on .197 (clean, 5 keys restored)
+- [x] mdm_devices read: only Big Mac enrolled; Romans use web-terminal proxy
+- [x] Ideas filed/updated: #25910, #25913
+- [x] Final report with exact human key-append steps
+</task_progress>
+</attempt_completion>
+```
+
+### `1786979863145` — 8/17/2026, 10:38:13 AM PT — 213 turns
+
+**Original task:**
+
+```
+#Executor
+
+Begin a brief frankenstein doctor session to ensure it is working properly.
+
+We are having a continual issue with the executor where we have ideas that are being worked on in Cline or Argus and then they get stalled out for older ideas from days or weeks before. 
+
+I think we need to make some changes in executor. 
+
+1. New ideas take prescidence over old ideas
+2. Capacity / the ability to take ideas and finish them needs to match the number of ideas coming in combination with #3
+3. Ideally, all ideas should process within 12 hours. 
+4. We may end up spilling to paid or whever, but it
+```
+
+**Ideas referenced:** #19490, #19884, #20024, #20531, #20672, #20903, #2113, #22305, #22556, #22921, #23133, #2342, #23455, #23945, #23952, #23954, #24145, #24186, #24261, #25185, #25304, #25316, #25537, #25548, #25562, #25584, #25608, #25623, #25686, #25830, #25835, #25842, #25872, #25914, #25917, #25940 [executing], #25957, #25958, #25983, #26009, #26012, #26068, #26084, #26167, #26218, #26219, #26234, #26258, #26291, #26292, #26322, #26336, #26346, #26348, #26450, #26491, #26493, #26498, #26501, #26518, #26519, #26731, #26738, #26800, #26934, #26964, #26967, #26988, #27002, #27012, #27038 [approved], #27040 [approved], #27063 [deployed], #27083 [superseded], #27084 [executing], #27085 [executing], #344223, #344225, #344226, #344228, #344229, #344230, #344233, #344234, #344236, #344238, #344241, #344243, #344245, #344246, #344247, #344249, #344251, #344252, #344254, #344255, #344258, #344259, #344261, #344263, #344265, #344266, #344267, #344268, #344270, #344272, #344274, #344275, #344278, #344279, #344280, #344282, #344284, #344285, #344286, #344288, #344289, #344292, #344294, #344296, #344298, #344299, #344305, #344307, #344308, #344310, #344318, #344320, #344322, #344324, #344326, #344327, #5034, #6366, #8911, #8919
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786960541449` — 8/17/2026, 10:10:44 AM PT — 570 turns
+
+**Original task:**
+
+```
+#Julia/Claudia 235B 
+
+What the heck? Are you sure you could not do math before but you can now is that what you are saying? Something seems wrong about this.
+
+
+Re-anchored on the two directives from the resume: fix the crash loop first, then YaRN on the 235B. Two findings, one of which changes the plan — and I'm flagging it per anti-sycophancy before doing work that would not survive contact with the hardware.
+
+## Finding 1 (hard blocker): YaRN to 131072 does not physically fit on this box
+
+Verified this session from the live serve log and /proc/meminfo, not from docs:
+
+- Julia is a GB10 with 
+```
+
+**Ideas referenced:** #1079, #1130, #1131, #11735, #1190, #11945, #1241, #12425, #1248, #1249, #1252, #1253, #1258, #1264, #1265, #1266, #12894, #13085, #13202, #15144, #15226, #15328, #15332, #15667, #15979, #16032, #16033, #16036, #16122, #16163, #16254, #16338, #16448, #16452, #16463, #16464, #1659, #16778, #16802, #16803, #16839, #16844, #16851, #16856, #17246, #17250, #17300, #17327, #17341, #17342, #17343, #17415, #17416, #17424, #17425, #17437, #17438, #1744, #1754, #1755, #1779, #178693, #1798, #1828, #19495, #19545, #19567, #1964, #1989, #19925, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2254, #2258, #2298, #2299, #2307, #23169, #24172, #24217, #24645, #25185, #2520, #2537 [deployed], #25378, #25381, #2546 [deployed], #2547, #25470, #25646, #26348, #26819 [executing], #26908, #26922 [deployed], #26923, #26925 [deployed], #26927 [deployed], #26928 [proposed], #26932 [deployed], #26938 [executing], #26954 [deployed], #26956 [executing], #26957 [deployed], #26958 [deployed], #27069 [executing], #5878, #6522, #6826, #7142, #7149, #7181, #7734
+
+**Last PICKUP PROMPT:**
+
+```
+_amend proof, task 1786932084)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786932084, Julia/Claudia 235B restored, guards armed, stale LLMs purged.
+
+Where we left off (verified 2026-08-17 10:09 PT):
+- qwen3-235b SERVING TP=2 Julia+Claudia at max_model_len 131072. On-box :8000 HTTP 200, WOPR :11513 HTTP 200. KV pool 554,656 tokens, 4.23x concurrency.
+- Measured throughput: 73.50 tok/s at 8 concurrent, 144.80 tok/s cumulative at 16 concurrent (saturated, max_num_seqs=16, 6 queued), 35.62 tok/s at 4 running on the 10:09 re-probe. Harness ~/totalrate235.sh on Julia.
+- Root cause of outage: Julia lost RoCE IPv4 on reboot, NCCL GID v6/v4 mismatch, ibv_modify_qp EINVAL. Fixed and persisted (emsu-roce-ip.service + @reboot cron).
+- Guards armed: WOL guard on WOPR (1-min, 3-strike, real MACs), Claudia head watchdog v3 (cron).
+- Purged: 3 rogue WOPR units, stale vllm_slot container, 122G of 120B model cache on Julia.
+- Bug library row 15 = resolved with full RCA. Clinerule 315 amended.
+
+Open threads to drive next:
+1. #27069 [executing] - Raise throughput ceiling: max_num_seqs=16 is the cap that queued 6 of 22 requests. Evaluate raising it now that KV headroom is proven (554,656 tokens = 4.23x at 131072), and re-measure with ~/totalrate235.sh at 8/16/32 concurrency.
+2. #27069 [executing] - Prove the guards under a real drill: cold-boot Julia and confirm (a) emsu-roce-ip.service restores 192.168.100.3 before the launcher runs, (b) @reboot launcher reaches Application startup complete unattended, (c) WOL guard log shows a clean BACK ONLINE with no magic packet needed.
+3. Decide the fate of GLM-5.2-NVFP4-REAP-504B (288G on Julia). Left in place deliberately this session. (human-only decision, no idea)
+
+Reference IDs:
+- Task: #1786932084
+- Ideas: #27069 [executing], #26938 [deployed], #26954 [deployed], #26956 [executing], #26925 [deployed]
+- Bug library row (frankenstein_bug_library, not an idea id): 15 (resolved)
+- Files touched: Julia ~/totalrate235.sh (new), /etc/systemd/system/emsu-roce-ip.service (new, enabled), Julia crontab (@reboot RoCE backup), Claudia ~/claudia_head_watchdog.sh (v3), WOPR /usr/local/bin/emsu-spark-wol-guard.sh (new) + /etc/cron.d/emsu-spark-wol-guard (new), WOPR removed gptoss-tp2-julia.service + gptoss-tp2-claudia-worker.service + autossh-11513.service, /var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md, HANDOFF_NOTES.md, clinerule 315
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Re-anchor on Ruben's asks: (1) arm auto-restart guard, (2) purge rogue/stale LLMs, (3) real throughput + lane numbers
+- [x] Claudia + Julia both back post power-cycle; MACs captured (julia 4c:bb:47:2c:6a:e6)
+- [x] WOL guard ARMED on WOPR: emsu-spark-wol-guard.sh + /etc/cron.d, 1-min poll, 3-strike
+- [x] Claudia worker head-watchdog v3 armed (cron, sha fd137e212e68)
+- [x] ROOT CAUSE: Julia lost RoCE IPv4 on reboot -> GID idx3 empty -> NCCL v6/v4 GID mismatch -> ibv_modify_qp EINVAL -> every auto-start died at init
+- [x] FIXED: restored 192.168.100.3/24; RoCE ping 1.4ms; GID idx3 now RoCE v2 IPv4
+- [x] PERSISTED: emsu-roce-ip.service enabled + @reboot cron backup
+- [x] NCCL Init COMPLETE both ranks over NET/IB
+- [x] 235B SERVING at 131072: KV 554,656 tokens, 4.23x; :8000 200; WOPR :11513 200
+- [x] MEASURED throughput: 73.50 tok/s @8 concurrent; 144.80 tok/s cumulative @16 saturated (6 queued); 3
+```
+
+### `1786835771600` — 8/17/2026, 10:07:11 AM PT — 410 turns
+
+**Original task:**
+
+```
+#BLS 
+
+why was the CFA unable to find this? Can you resolve that durably or were they just not entered peroperly or what happened?
+```
+
+**Ideas referenced:** #15404, #15405, #16732, #20527, #23133, #2328, #2341, #2343, #2344, #2511, #2513, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26638 [executing], #26639 [executing], #26642 [executing], #26678 [in_progress], #27066 [deployed], #27079 [proposed], #3261, #3319, #3346, #45596, #6112
+
+**Last PICKUP PROMPT:**
+
+```
+d rail row 1 remains resolved.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — BLS roster-card CFA lookup: finish multi-card display for standalone CPR/FA/BBP students.
+
+Where we left off (verified 2026-08-17 ~10:07 PT):
+- Root cause confirmed: CPR/FA/BBP students are a SEPARATE population from EMT students; cards live in moodle_c_live.simplecertificate_issues course 46 (certs 61 CPR/AED, 62 First Aid, 63 BLS, 64 BBP), not portal bls_certificates.
+- Deployed: lib/bls_moodle_simplecert_lookup.php + fallback in chatbot_tools.php::localLookupBlsCertificate and ruben_tools.php::rubenToolLookupBlsCertificate.
+- Verified FOUND: williamyoungblood@my.unt.edu (CPR/AED), alyviasinger@gmail.com (First Aid, no portal Student row).
+- Smoke OK, lint clean.
+
+Open threads to drive next:
+1. #27079 [proposed] — helper currently returns only most-recent card ($cards[0]); update helper + 3 caller blocks to return/display ALL course-46 cards for one user (CPR/AED + First Aid + BBP together). Files: lib/bls_moodle_simplecert_lookup.php, api/livechat/chatbot_tools.php, api/ruben_tools.php.
+2. #26678 [deployed] — regression-watch the fallback; if send_bls_certificate is used on a Moodle-roster card (pdf_url, no bls_certificates id), verify email-send path handles certificate_id from Moodle fallback correctly.
+
+Reference IDs:
+- Ticket: 20527 (TKT-20260721-5C6E0B0D)
+- Ideas filed: #26678 [deployed], #27079 [proposed]
+- Files touched: lib/bls_moodle_simplecert_lookup.php, api/livechat/chatbot_tools.php, api/ruben_tools.php, deploy/smoke_test_chatbot_tools.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786573125988` — 8/17/2026, 9:49:11 AM PT — 383 turns
+
+**Original task:**
+
+```
+Please tell me if this is wrong? And if so why and what is going on?
+```
+
+**Ideas referenced:** #15635, #16439, #16440, #16444, #1758, #17580, #18936, #20346, #23184, #2323 [deployed], #23477, #23483, #24526, #24765, #25185, #2519, #25971 [proposed], #25974 [executing], #25975 [executing], #25976 [executing], #25984 [executing], #25985 [executing], #25986 [executing], #25990 [approved], #25995 [executing], #32584, #5646, #6106, #6751, #7907, #9086
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
 ### `1786981142444` — 8/17/2026, 9:26:22 AM PT — 154 turns
 
 **Original task:**
@@ -147,60 +356,6 @@ Reference IDs:
 - Tickets: 25719 (TKT-20260816-9DE029AF), 25713 (TKT-20260816-625FAE8F), 25816 (TKT-20260817-1BCB99E0), closed 23975/24890/25405/23604/23617
 - Ideas filed: #27064 [proposed], #27065 [proposed]
 - Files: lib/EmailAIResponder.php, lib/AIIntentGuardrail.php (backups via write_server_file when patch lands)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786960541449` — 8/17/2026, 9:21:12 AM PT — 436 turns
-
-**Original task:**
-
-```
-#Julia/Claudia 235B 
-
-What the heck? Are you sure you could not do math before but you can now is that what you are saying? Something seems wrong about this.
-
-
-Re-anchored on the two directives from the resume: fix the crash loop first, then YaRN on the 235B. Two findings, one of which changes the plan — and I'm flagging it per anti-sycophancy before doing work that would not survive contact with the hardware.
-
-## Finding 1 (hard blocker): YaRN to 131072 does not physically fit on this box
-
-Verified this session from the live serve log and /proc/meminfo, not from docs:
-
-- Julia is a GB10 with 
-```
-
-**Ideas referenced:** #1079, #1130, #1131, #11735, #1190, #11945, #1241, #12425, #1248, #1249, #1252, #1253, #1258, #1264, #1265, #1266, #12894, #13085, #13202, #15144, #15226, #15328, #15332, #15667, #15979, #16032, #16033, #16036, #16122, #16163, #16254, #16338, #16448, #16452, #16463, #16464, #1659, #16778, #16802, #16803, #16839, #16844, #16851, #16856, #17246, #17250, #17300, #17327, #17341, #17342, #17343, #17415, #17416, #17424, #17425, #17437, #17438, #1744, #1754, #1755, #1779, #178693, #1798, #1828, #19495, #19545, #19567, #1964, #1989, #19925, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2254, #2258, #2298, #2299, #2307, #23169, #24172, #24217, #25185, #2520, #2537 [deployed], #25378, #25381, #2546 [deployed], #2547, #25470, #25646, #26348, #26819 [executing], #26908, #26922 [deployed], #26923, #26925 [deployed], #26927 [deployed], #26928 [proposed], #26932 [deployed], #26938 [executing], #26954 [deployed], #26956 [executing], #26957 [deployed], #26958 [deployed], #27069 [executing], #5878, #6522, #6826, #7142, #7149, #7181, #7734
-
-**Last PICKUP PROMPT:**
-
-```
-), which is a physical action.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1786932084 - Julia/Claudia 235B head restore: verification sweep after physical power-on.
-
-Where we left off (verified 2026-08-17 09:20 PT):
-- Julia head (spark-6ae6, 192.168.1.190) off the wire; no vLLM on any LAN IP (full 1-254 sweep, zero :8000).
-- Claudia worker (spark-6d51, 192.168.1.194) alive via WOPR:2206.
-- Auto-recovery live: /home/rubenmajor/claudia_head_watchdog.sh v3 on Claudia, cron each minute, sha256 fd137e212e6846f99ff2.
-- Bug filed: admin_portal.frankenstein_bug_library id=15 (fixed_partial). Idea #27069 [executing].
-- Doc: GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md 08-17 section appended.
-
-Open threads to drive next:
-1. #27069 [executing] - After physical power-on of Julia, verify self-heal end to end: WOPR:2205 and :11513 listeners, /v1/models HTTP 200 qwen3-235b max_model_len 131072, claudia_head_watchdog.log shows HEAD RETURNED, adapter log resumes 11513 traffic, then measure real tok/s via two-scrape delta per the PART 1 method in the doc.
-2. #27069 [executing] - Capture Julia ethernet MAC once reachable and write into fleet inventory plus WOL path so a future hard-off is recoverable remotely; enroll Julia in MDM.
-
-Reference IDs:
-- Ticket: #1786932084
-- Bug: frankenstein_bug_library row 15
-- Ideas filed: #27069, #26938 [deployed], #26954 [deployed], #26956 [in_progress], #26925 [deployed]
-- Files touched: Claudia /home/rubenmajor/claudia_head_watchdog.sh, /var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md, admin_portal.frankenstein_bug_library, admin_portal.orchestrator_ideas
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -300,71 +455,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1786835771600` — 8/17/2026, 8:52:45 AM PT — 302 turns
-
-**Original task:**
-
-```
-#BLS 
-
-why was the CFA unable to find this? Can you resolve that durably or were they just not entered peroperly or what happened?
-```
-
-**Ideas referenced:** #15404, #15405, #16732, #20527, #23133, #2328, #2341, #2343, #2344, #2511, #2513, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26638 [executing], #26639 [executing], #26642 [executing], #26678 [in_progress], #27066 [deployed], #3261, #3319, #3346, #45596
-
-**Last PICKUP PROMPT:**
-
-```
-corrected + status `deployed`.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — BLS/CPR card lookup Moodle simplecertificate fallback fix.
-
-Where we left off (verified 2026-08-17 08:52 PT):
-- Root cause resolved and fix deployed: CFA `lookup_bls_certificate` read only `bls_certificates`/`bls_students`; roster-issued cards live in `moodle_c_live.simplecertificate_issues` (cert 61, course 46). William Youngblood's card existed the whole time (issue #45596, issued 2026-07-29).
-- Deployed: new `lib/bls_moodle_simplecert_lookup.php`; patched `api/livechat/chatbot_tools.php` and `api/ruben_tools.php`; fixed stale `deploy/smoke_test_chatbot_tools.php` (dead `localLookupCaller`). All `php -l` clean, smoke `SMOKE_OK`, live lookup returns `FOUND_CARD_OK`.
-- Ticket 20527 corrected (comment 174020 supersedes 172908); missing_card_tracking row 1 resolved; ideas #26678 and #27066 both [deployed].
-
-Open threads to drive next (None — all work completed this session; optional follow-up below):
-1. #26678 [deployed] — Confirm with Ruben whether portal-side `bls_certificates` backfill of existing Moodle roster cards is desired (the fallback avoids it, but a one-time migration would make portal reports correct too).
-2. #27066 [deployed] — No action needed; smoke gate fixed this session. If new smoke requirements are added, re-run `deploy/safe_deploy_chatbot.sh`.
-
-Reference IDs:
-- Ticket: 20527 / TKT-20260721-5C6E0B0D
-- Ideas filed: #26678 [deployed], #27066 [deployed]
-- Files touched: lib/bls_moodle_simplecert_lookup.php (new), api/livechat/chatbot_tools.php, api/ruben_tools.php, deploy/smoke_test_chatbot_tools.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786979863145` — 8/17/2026, 8:42:23 AM PT — 123 turns
-
-**Original task:**
-
-```
-#Executor
-
-Begin a brief frankenstein doctor session to ensure it is working properly.
-
-We are having a continual issue with the executor where we have ideas that are being worked on in Cline or Argus and then they get stalled out for older ideas from days or weeks before. 
-
-I think we need to make some changes in executor. 
-
-1. New ideas take prescidence over old ideas
-2. Capacity / the ability to take ideas and finish them needs to match the number of ideas coming in combination with #3
-3. Ideally, all ideas should process within 12 hours. 
-4. We may end up spilling to paid or whever, but it
-```
-
-**Ideas referenced:** #19490, #19884, #20024, #20531, #20672, #20903, #2113, #22305, #22556, #22921, #23455, #24145, #24186, #24261, #25185, #25304, #25316, #25537, #25548, #25562, #25584, #25608, #25623, #25686, #25830, #25835, #25842, #25872, #25914, #25917, #25940, #25957, #25958, #25983, #26012, #26084, #26167, #26291, #26292, #26322, #26346, #26450, #26491, #26493, #26498, #26501, #26518, #26519, #26731, #26738, #26800, #26934, #26967, #26988, #27002, #27038 [approved], #27040 [approved], #27063 [deployed], #344223, #344225, #344226, #344228, #344229, #344230, #344233, #344234, #344236, #344238, #344241, #344243, #344245, #344246, #344247, #344249, #344251, #344252, #344254, #344255, #344258, #344259, #344261, #344263, #344265, #344266, #344267, #344268, #344270, #344272, #344274, #344275, #344278, #344279, #344280, #344282, #344284, #344285, #344286, #344288, #344289, #344292, #344294, #344296, #344298, #344299, #344305, #344307, #344308, #344310, #5034, #6366, #8911, #8919
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786979337785` — 8/17/2026, 8:08:58 AM PT — 1 turns
 

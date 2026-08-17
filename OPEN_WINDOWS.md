@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/17/2026, 3:38:02 AM PT | window: last 72h | 90 tasks | index total 783 (parsed 4, cached 779)
+Generated: 8/17/2026, 4:38:02 AM PT | window: last 72h | 90 tasks | index total 783 (parsed 0, cached 783)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786960541449` | 8/17/2026, 3:37:55 AM | 207 | 2335KB | #Julia/Claudia 235B  |
+| `1786960541449` | 8/17/2026, 3:44:28 AM | 226 | 2498KB | #Julia/Claudia 235B  |
 | `1786948767264` | 8/17/2026, 3:36:19 AM | 196 | 898KB | #Unknown / Maybe 317 adjacent |
 | `1786961118260` | 8/17/2026, 3:28:00 AM | 60 | 143KB | #Frankenstein Routing / Cleanup |
 | `1786948641882` | 8/17/2026, 3:16:00 AM | 196 | 1306KB | #Rule 317 |
@@ -105,7 +105,7 @@ Generated: 8/17/2026, 3:38:02 AM PT | window: last 72h | 90 tasks | index total 
 
 ## Per-window detail
 
-### `1786960541449` — 8/17/2026, 3:37:55 AM PT — 207 turns
+### `1786960541449` — 8/17/2026, 3:44:28 AM PT — 226 turns
 
 **Original task:**
 
@@ -124,9 +124,55 @@ Verified this session from the live serve log and /proc/meminfo, not from docs:
 - Julia is a GB10 with 
 ```
 
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178693, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #2537, #25378, #25381, #2546, #2547, #26819 [executing], #26925 [deployed], #26928 [proposed], #26938 [executing], #26954 [deployed], #26956 [executing], #26957 [deployed], #26958 [deployed], #7142, #7149
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178693, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25185, #2537 [deployed], #25378, #25381, #2546 [deployed], #2547, #26819 [executing], #26925 [deployed], #26928 [proposed], #26938 [executing], #26954 [deployed], #26956 [executing], #26957 [deployed], #26958 [deployed], #7142, #7149
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+ndoff_notes success 03:37 PT).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786932084, Julia/Claudia 235B: false-OOM reversal, crash-loop fix, YaRN 131072 live.
+
+Where we left off (verified 2026-08-17 03:37 PT):
+- qwen3-235b (nvidia/Qwen3-235B-A22B-NVFP4) SERVING TP=2 Julia+Claudia at max_model_len 131072 (YaRN 3.2 via hf-overrides), KV pool 558,128 tokens, 4.26x concurrency, fp8 KV, hermes+qwen3 parsers, NCCL NET/IB 35 channels (verified: serve log KV line 03:33 PT, decode probe 03:34 PT, WOPR tunnel :11513 HTTP 200 03:35 PT).
+- Monitor v3 live on Julia with crash-loop guards; self-detected SERVING 03:34 PT (verified: /tmp/tp2_runbook_monitor.log).
+- Bug library rows 2546 + 2547 recorded; clinerule 297 amended (pool-vs-consumption).
+
+Open threads to drive next:
+1. #26956 [executing] (per reconcile_ideas in_progress 03:36 PT), Artemis tool_calls=0 probe; unrelated to Julia, executor is on it.
+2. Rogue direct launcher ~/launch235_direct.sh on Julia still on disk with stripped flags (no tool parser); not referenced by cron or monitor v3. Delete or hard-assert cmdline flags on next maintenance pass. Related: #26954 [deployed] (per reconcile_ideas 03:36 PT).
+
+Reference IDs:
+- Task: #1786932084
+- Ideas: #26938 [deployed], #26954 [deployed], #26956 [executing], #26925 [deployed] (per reconcile_ideas 03:36 PT)
+- Bug library rows (frankenstein_router_incidents, not idea ids): 2546, 2547, 2537
+- Files touched: Julia ~/tp2_runbook_monitor.sh (v3), ~/julia_unified_tp2_qwen235.sh (131072 + hf-overrides YaRN), backups .bak-pre-v3-20260817 and .bak-pre-yarn-20260817; rule 297 amended; HANDOFF_NOTES.md entry; fleet_inventory julia note
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Rule 119 pre-turn signal check
+- [x] Search the record first (fleet_inventory)
+- [x] Live-probe Julia: engine DOWN, KV pool = 555,296 tokens (13.56x at 40960), OOM claim WRONG
+- [x] Amend causal rule 297 per rule 317 (proof recorded)
+- [x] Read monitor + both launch scripts, crash loop mechanism confirmed
+- [x] Bug library check_before_fix: NOVEL_SYMPTOM, gate open
+- [x] Community cross-check (Brave quota-dead; vLLM upstream source fetched; local log self-consistent)
+- [x] Read launch235_direct.sh vs unified (rogue stripped-flags launcher identified)
+- [x] Apply patches: monitor v3 + unified script 131072 via hf-overrides YaRN 3.2
+- [x] bug_library_record rows 2546 + 2547
+- [x] Verify 235B serving at 131072: KV pool 558,128 tokens, 4.26x concurrency, startup complete, decode probe OK, tunnel :11513 HTTP 200, NCCL IB PASS, monitor v3 self-detected SERVING
+- [x] reconcile_ideas: #26938/#26954/#26925 deployed, #26956 executing
+- [x] fleet_act julia status update
+- [x] HANDOFF_NOTES update
+- [x] Completion with reversal log + pickup prompt; validator ALL PASSED + GATE CLEAR
+</task_progress>
+</attempt_completion>
+```
 
 ### `1786948767264` — 8/17/2026, 3:36:19 AM PT — 196 turns
 

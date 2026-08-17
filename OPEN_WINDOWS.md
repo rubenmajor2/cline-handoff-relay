@@ -6,13 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/16/2026, 10:28:29 PM PT | window: last 72h | 91 tasks | index total 776 (parsed 2, cached 774)
+Generated: 8/16/2026, 11:28:29 PM PT | window: last 72h | 92 tasks | index total 778 (parsed 6, cached 772)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786941064430` | 8/16/2026, 10:27:37 PM | 392 | 717KB | #Julia/Claudia 235B |
+| `1786780447770` | 8/16/2026, 11:28:25 PM | 159 | 617KB | #Executor |
+| `1786947807234` | 8/16/2026, 11:28:25 PM | 41 | 181KB | Do a 90 minute doctor of franeknstein executor which has a bunch of impl failed which may  |
+| `1786947372694` | 8/16/2026, 11:28:15 PM | 61 | 342KB | Can you give me a model here in Cline where i can directly test the Julia/Claudia 235b llm |
+| `1786817395147` | 8/16/2026, 11:28:12 PM | 417 | 2715KB | #Call Backs / VAPI |
+| `1786941064430` | 8/16/2026, 11:28:07 PM | 535 | 1202KB | #Julia/Claudia 235B |
+| `1786935011375` | 8/16/2026, 11:27:55 PM | 465 | 1220KB | Frankensteitn-llm appears to be stalling. If it's because Deepseek needs credits, should i |
 | `1786942595504` | 8/16/2026, 10:17:53 PM | 80 | 1029KB | #Rule 317 |
-| `1786935011375` | 8/16/2026, 9:55:49 PM | 414 | 1081KB | Frankensteitn-llm appears to be stalling. If it's because Deepseek needs credits, should i |
 | `1786942152453` | 8/16/2026, 9:55:26 PM | 32 | 1174KB | I read this and the question is about the ticket closure not about the quizzes, right? So  |
 | `1786935841403` | 8/16/2026, 9:52:10 PM | 142 | 1505KB | The student seems to have submitted a plethora of documentation demonstrating that we may  |
 | `1786939999732` | 8/16/2026, 9:50:56 PM | 204 | 390KB | #Payment suspension issues? Invoicing? Uncertain if true |
@@ -45,7 +49,6 @@ Generated: 8/16/2026, 10:28:29 PM PT | window: last 72h | 91 tasks | index total
 | `1786842592907` | 8/15/2026, 8:46:01 PM | 516 | 2989KB | #Rule 317 |
 | `1786836908956` | 8/15/2026, 4:48:21 PM | 72 | 1004KB | Is this legitimate? If so, the message should be a little more sympathetic and less techni |
 | `1786835771600` | 8/15/2026, 4:31:46 PM | 96 | 1327KB | #BLS  |
-| `1786817395147` | 8/15/2026, 3:56:47 PM | 404 | 2685KB | #Call Backs / VAPI |
 | `1786831867073` | 8/15/2026, 3:42:30 PM | 126 | 313KB | #Joshua / Denali Scenario |
 | `1786832584504` | 8/15/2026, 3:39:32 PM | 105 | 279KB | #Externship |
 | `1786832177865` | 8/15/2026, 3:36:49 PM | 160 | 352KB | #SLS ish |
@@ -61,7 +64,6 @@ Generated: 8/16/2026, 10:28:29 PM PT | window: last 72h | 91 tasks | index total
 | `1786815116178` | 8/15/2026, 11:35:03 AM | 308 | 897KB | #SSS/CFA Issues / Virtual Lora |
 | `1786778041170` | 8/15/2026, 11:33:13 AM | 360 | 1836KB | #CFA  |
 | `1786778761449` | 8/15/2026, 9:56:19 AM | 422 | 646KB | #SSS |
-| `1786780447770` | 8/15/2026, 1:15:59 AM | 142 | 588KB | #Executor |
 | `1786779320051` | 8/15/2026, 1:14:55 AM | 226 | 1753KB | Did email agent actually fix this issue for Sarah? |
 | `1786566698066` | 8/15/2026, 1:04:01 AM | 587 | 1106KB | #Call Backs  |
 | `1786776477060` | 8/15/2026, 12:38:37 AM | 240 | 704KB | #Executor |
@@ -100,13 +102,112 @@ Generated: 8/16/2026, 10:28:29 PM PT | window: last 72h | 91 tasks | index total
 | `1786666915889` | 8/14/2026, 12:23:31 AM | 724 | 1937KB | Can you email a copy of any externship agreements / affiliation agreement whatever from ag |
 | `1786666814323` | 8/13/2026, 11:54:00 PM | 970 | 1993KB | Jon had a request in Argus, https://emsuniversity.com/emtskills/routes/argus_download.php? |
 | `1786677303463` | 8/13/2026, 11:47:17 PM | 220 | 1145KB | /emtskills is slow again. Please fix it. Check emtskills-slowness and fix it |
-| `1786558646083` | 8/13/2026, 11:25:12 PM | 396 | 1462KB | #Moodle Required |
 
 ---
 
 ## Per-window detail
 
-### `1786941064430` — 8/16/2026, 10:27:37 PM PT — 392 turns
+### `1786780447770` — 8/16/2026, 11:28:25 PM PT — 159 turns
+
+**Original task:**
+
+```
+#Executor
+
+Why don't you give me a roadmap as to how the system works and close any gaps that you can find in the process?
+
+That makes me wonder does ruben doctor of executor even work or does that rule need to be modified?
+
+Built and shipped. Both halves are positive-controlled, which matters here more than usual: the entire problem tonight was instruments that reported healthy without ever being tested against a known-bad case.
+
+## The watchdog now measures delivery, not activity
+
+`cron_orchestrator_executor_watchdog.php` had six sections. Every one checked whether something was *running*: i
+```
+
+**Ideas referenced:** #12506, #12761, #12763, #12764, #13075, #16648, #16714, #16717, #17313, #17672, #18039, #18040, #18041, #18133, #18148, #18161, #18178, #18252, #18258, #18329, #18332, #18402, #18716, #18901, #21477, #22526, #22753, #23869, #2512, #25185, #25656, #25775, #25811, #25834, #25836, #25898, #25899, #25900, #25901, #25927, #26068 [deployed], #26173, #26175, #26192, #26207, #26208, #26214, #26229, #26235, #26258, #26296, #26326, #26342, #26344, #26371, #26401 [executing], #26415 [blocked], #26421 [executing], #26429 [executing], #26436 [blocked], #26437 [executing], #26461, #26470 [deployed], #26482 [executing], #26483 [executing], #26484 [executing], #26490 [executing], #26491 [executing], #26495 [deployed], #26496, #26498 [executing], #26499 [executing], #26500 [deployed], #26502, #26513 [deployed], #26518 [executing], #26519 [executing], #26520 [deployed], #26521 [deployed], #4987
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786947807234` — 8/16/2026, 11:28:25 PM PT — 41 turns
+
+**Original task:**
+
+```
+Do a 90 minute doctor of franeknstein executor which has a bunch of impl failed which may need to be checke for staleness and regression and if neither and not harmful, shoudl be ran again for the last 24 hours or so. If impl failed or blocked. I obviously don't wwnat to mess up our GLM, Julia Claudia 235B and Frankenstein-llm routing, but I do want to make sure the executor is working
+```
+
+**Ideas referenced:** #12597, #19194, #20617, #21004, #22229, #2289, #23117, #25201, #2537, #25385, #2539, #25887, #26461, #26625, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26930, #26938 [deployed], #26954 [executing], #8184
+
+**Last PICKUP PROMPT:**
+
+```
+handoff + bug library + file ideas for real fixes
+- [ ] attempt_completion with PICKUP PROMPT block
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1786947372694` — 8/16/2026, 11:28:15 PM PT — 61 turns
+
+**Original task:**
+
+```
+Can you give me a model here in Cline where i can directly test the Julia/Claudia 235b llm only with no spillover or backup. Just that one locally here in Cline Settings under litellm.emsuniversity.com?
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326, #2114, #2299, #23171, #25097, #2537, #26908, #26923
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786817395147` — 8/16/2026, 11:28:12 PM PT — 417 turns
+
+**Original task:**
+
+```
+#Call Backs / VAPI
+
+How are callbacks going now?
+
+You know I'm just curious if there's some improvements that have been made genetically since we started a couple of months ago with VAPI? Seems like there should be are using the latest software or updates? Can you check with the community to see? I just wanna make sure.
+
+Also tell me what's going on with this ? And why did you offer Vicky an extension draft letter? When did I say that was OK? I know we were working on some stuff in a different window for extern chips just give me some information here -> 1. The 14 students need a placement or 
+```
+
+**Ideas referenced:** #12018, #12584, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #16844, #16874, #17130 [superseded], #1745, #18132 [deployed], #18316, #19125, #19173, #23133, #2323, #2328, #23340, #2341, #2343, #2344, #23989, #24645, #2511, #25701, #25706, #25707, #25943, #25945, #25946, #25968, #25969, #25986, #25989, #26066, #26068, #26203 [deployed], #26206 [deployed], #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26259 [deployed], #26260 [deployed], #26261 [deployed], #26266 [executing], #26267 [executing], #26270, #26296, #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26504 [approved], #26508 [proposed], #26509 [proposed], #26511 [deployed], #26513 [deployed], #26591, #26593, #26618 [deployed], #26619 [proposed], #26621 [proposed], #26643 [proposed], #26644 [proposed], #26645 [proposed], #26663, #26671 [proposed], #3261, #3319, #3346, #6172, #6978, #9042, #9159, #9222, #9501
+
+**Last PICKUP PROMPT:**
+
+```
+le 263 (verify, don't assume).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — finish the legacy-claude-string audit after the claude-sonnet-5 ban.
+
+Where we left off (verified 8/15/2026, 3:56:33 PM PT):
+- Killed all 4 confirmed `claude-sonnet-5` callers (now `deepseek-v4-pro`/`frankenstein-llm`), php -l clean, backups created.
+- Verified litellm routing map: `claude-sonnet-5`→`anthropic/claude-opus-5` (PAID, the real leak, now gone); bare `claude-haiku`/`claude-opus`→`deepseek-v4-pro` (free, left in place).
+- Verified Vapi brain = Vapi-cloud-resolved (`anthropic/claude-sonnet-5` on Vapi org 46666ee6, serverUrl = our webhook); our webhook internal tools use `frankenstein-llm` line 991, executor falls back `deepseek-v4-pro`.
+- Changes landed: `api/ticket_autospec.php`, `lib/backfill_idea_confidence_scorer.php`, `lib/PredispatchRevival.php`, `lib/PredispatchRevivalRouter.php`.
+
+Open threads to drive next (grep was live-verified, idea # stored in orchestrator_ideas):
+1. #26671 [proposed] — Audit the ~20 files still carrying OLD dated claude strings (`claude-haiku-4-5-20251001`, `claude-opus-4-20250514`, `claude-sonnet-4-6`, `claude-sonnet-4-20250514`, etc.). Action: run `grep -rn "claude-" /var/www/emtskills/api /var/www/emtskills/lib /var/www/emtskills/cron --include=*.php`, then for each resolve against the litellm DB (STORE_MODEL_IN_DB=1) to find which still map to `anthropic/*`, and patch ONLY the live-invoked paid ones.
+2. #26663 (unverified — may exist) — Vapi assistant master list: enumerate all Vapi assistants to confirm which `api/voice/*` handlers the old claude strings belong to before patching.
+
+Reference IDs:
+- Ideas filed: #26618, #26619, #26621 (prior window); #26671 this window.
+- Files touched this window: ticket_autospec.php, backfill_idea_confidence_scorer.php, PredispatchRevival.php, PredispatchRevivalRouter.php (+ .bak-r146-* backups).
+- Backup pattern: `.bak-r146-20260815-*`.
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786941064430` — 8/16/2026, 11:28:07 PM PT — 535 turns
 
 **Original task:**
 
@@ -116,9 +217,53 @@ Generated: 8/16/2026, 10:28:29 PM PT | window: last 72h | 91 tasks | index total
 How does such degredation occur and how do we avoid this going forward? Seems like an RCA is in order for that-> The pool serving the Cline lane had degraded to 2 of 4 usable upstreams with both survivors saturated, so the adapter returned empty HTTP 200s (verified: adapter log showed continuous `CANARY probe failed upstream=http://127.0.0.1:11513 err=[Errno 104] Connection reset by peer` and `DECODE_STALL http://127.0.0.1:8210 rate=0.00 tok/s streak=12 -> penalty` plus `TIMEOUT_COOLDOWN_SET`; upstream log showed `ttfb_s: 165.36, queue_depth: 106.0` and a cline-lane entry 
 ```
 
-**Ideas referenced:** #11397, #11936, #11942, #11953, #12231, #12251, #12335, #12365, #1238, #1241, #12672, #12716, #13108, #13121, #13831, #13874, #14848, #1765, #1781, #178693, #2114, #2247, #2306, #23206, #25185, #2535 [deployed], #2536 [deployed], #2537 [deployed], #2539 [deployed], #25468, #25471, #25604, #25764, #26403, #26819 [executing], #26908 [deployed], #26909 [rejected], #26910 [deployed], #26923 [deployed], #26925 [proposed], #26928 [proposed], #26938 [deployed], #26954 [executing], #26956 [executing], #26957 [deployed], #26958 [deployed], #27100
+**Ideas referenced:** #10740, #11397, #11936, #11942, #11953, #12231, #12251, #12335, #12365, #1238, #1241, #12672, #12689, #12716, #13108, #13121, #13202, #13831, #13874, #14848, #16163, #1765, #1781, #178693, #19903, #2050, #2114, #2247, #2306, #23171, #23206, #25185, #2535 [deployed], #2536 [deployed], #2537 [deployed], #2539 [deployed], #25468, #25471, #25604, #25764, #26400, #26403, #26819 [executing], #26908 [deployed], #26909 [rejected], #26910 [deployed], #26923 [deployed], #26925 [proposed], #26928 [proposed], #26938 [deployed], #26954 [executing], #26956 [executing], #26957 [deployed], #26958 [deployed], #27100
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+thropic or paid heads touched.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786932084 - Apply Ruben's ladder reorder: Julia/Claudia 235B before 120Bs
+
+Where we left off (verified 2026-08-16 23:08 PT):
+- REGISTRY DONE AND VERIFIED: `/etc/litellm/frankenstein_registry.yaml` `cline_ladder_by_health` now reads `GLM-5.2-LOCAL -> Julia/Claudia-235B(:11513) -> Cicero-235B(:11520) -> 120B(artemis) -> DeepSeek`; `tier_order` now `L0,L1,L1c,L1b,L4g,L4b,L4f,L2,L3` (235B tier before 120B pool tier). Backup: `/etc/litellm/frankenstein_registry.yaml.bak.rub20260816`. YAML_OK.
+- LITELLM RESTARTED + VERIFIED: `systemctl is-active litellm` = active, `/health/liveliness` = 200, `/tmp/emsu_router_registry_state.json` loaded_at `2026-08-17T06:06:13Z` shows `[L0,L1,L1c,L1b,L4g,L4b,L4f,L2,L3]`.
+- REMAINING GAP (why the change is NOT yet user-visible in Cline): `frankenstein_tools_adapter.py` `_least_loaded_order()` ranks interactive turns by `_speed_rank` after the GLM floor (`_glm_priority`). Julia's ~12 tok/s loses to the 120Bs' 33-44 tok/s on every Cline turn. The adapter never routes to :11513 for cline (confirmed live: last 10 cline metrics show artemis/bigmac only). Ruben's "235B before 120Bs" needs a hard julia priority tier here, not just the registry.
+- Available primitives: `_is_glm(up)` at line 479 is `"8210" in (up or "")`; `_glm_priority(u)` returns 0 = hard priority, 1 = normal speed sort; `_speed_rank` = `-_canary_tok_s(u)`. Patch shape: add `_is_julia_235b(up)` = `"11513" in (up or "")`, add `_julia_priority(u)` returning 0 for 11513 unless in-timeout-cooldown, and insert it into the sort key as `_julia_priority(u)` BEFORE `_speed_rank(u)` (so the key becomes `_in_timeout_cooldown, _glm_priority, _julia_priority, _speed_rank, load+10*inflight`). GLM stays first because `_glm_priority` returns 0 before `_julia_priority` is evaluated; julia gets hard priority over the 120B speed sort; 120Bs still serve when julia is saturated/cooldown (falls to speed sort).
+- Patch was NOT applied at 23:08 PT because the window hit rule 143 bail at strike 9. Do not re-run the registry patch — it is already applied and verified.
+- Anything written by write_server_file carries "PHP-FPM reload: OK"; ignore that line for adapter.py (it is a Python file, FPM reload is harmless no-op).
+
+Open threads to drive next:
+1. #26925 [deployed] - THE ONLY REMAINING STEP: patch `frankenstein_tools_adapter.py` as described (add `_is_julia_235b` + `_julia_priority`, insert before `_speed_rank` in `_least_loaded_order`), restart the adapter (systemctl or PM2 — check `ps aux | grep frankenstein_tools_adapter` for the supervisor), then PROVE it: send a cline-shaped payload to 127.0.0.1:11510/v1/chat/completions with model=frankenstein-tools and confirm the adapter log shows upstream=http://127.0.0.1:11513 and the lane metric `upstream` = 11513 for the cline lane. Also update the registry julia-235b notes with the adapter-priority note if not already there.
+2. #26928 [proposed] - emsu-codegen empty-200 rate 32.9% (untouched).
+3. #26956 [executing] - per-upstream tool-call capability probe asserting tool_calls>=1 + finish_reason (artemis returned tool_calls=0 where bigmac returned 1; must not pull healthy boxes out via truncation).
+
+Reference IDs:
+- Ideas referenced this session: #26925 [deployed], #26938 [deployed], #26954 [deployed], #26957 [deployed], #26958 [deployed], #26956 [executing], #26928 [proposed], #26819 [executing]
+- Bug library incid
+```
+
+### `1786935011375` — 8/16/2026, 11:27:55 PM PT — 465 turns
+
+**Original task:**
+
+```
+Frankensteitn-llm appears to be stalling. If it's because Deepseek needs credits, should it not fallback to another model?
+```
+
+**Ideas referenced:** #0000, #10108, #10740, #11735, #11741, #11781, #11847, #11945, #11991, #12059, #12060, #12459, #12477, #12618, #12672, #12824, #12825, #12872, #12878, #13202, #16163, #16224, #16265, #16304, #16844, #1754, #1755, #18312, #18326, #19173, #19175 [executing], #19176 [queued], #1989, #19898, #19899 [proposed], #19904, #20251, #2050, #2073, #22229, #2254, #2258, #2294, #2299, #2307, #2314, #23169, #23171, #24172, #24217, #25097, #25151, #25185, #2525, #2532 [approved], #2534 [rejected], #2538, #25646, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25888, #25925, #25926, #25935, #26209 [proposed], #26284 [executing], #26349, #26400, #26403, #26435, #26696, #26774, #26834 [deployed], #26837 [deployed], #26846 [deployed], #26852 [approved], #26864 [proposed], #26865 [proposed], #26866 [proposed], #26867 [deployed], #26868 [deployed], #26894, #26895, #26896, #26914 [executing], #26915 [executing], #26916, #26922 [deployed], #26927 [deployed], #26932 [proposed], #26964 [proposed], #27100, #364746, #364775, #364776, #5344, #6711, #6719, #6826
+
+**Last PICKUP PROMPT:**
+
+```
+Shipped and verified — zero divider glyphs, zero PICKUP PROMPT in the cron surface. Stamping the idea:
+
+```
 
 ### `1786942595504` — 8/16/2026, 10:17:53 PM PT — 80 turns
 
@@ -162,41 +307,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1786935011375` — 8/16/2026, 9:55:49 PM PT — 414 turns
-
-**Original task:**
-
-```
-Frankensteitn-llm appears to be stalling. If it's because Deepseek needs credits, should it not fallback to another model?
-```
-
-**Ideas referenced:** #0000, #10108, #10740, #11735, #11741, #11781, #11847, #11945, #11991, #12059, #12060, #12459, #12477, #12618, #12672, #12824, #12825, #12872, #12878, #13202, #16163, #16224, #16265, #16304, #16844, #1754, #1755, #18312, #18326, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #20251, #2050, #2073, #22229, #2294, #2299, #2307, #2314, #23169, #23171, #24217, #25097, #25151, #25185, #2525, #2532 [approved], #2534 [rejected], #2538, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25888, #25925, #25926, #25935, #26209 [proposed], #26284 [executing], #26349, #26400, #26403, #26435, #26696, #26774, #26834 [deployed], #26837 [deployed], #26846 [deployed], #26852 [approved], #26864 [proposed], #26865 [proposed], #26866 [proposed], #26867 [deployed], #26868 [deployed], #26894, #26895, #26896, #26914 [executing], #26915 [executing], #26916, #26922 [deployed], #26927 [deployed], #26932 [proposed], #364746, #364775, #364776, #5344, #6711, #6719, #6826
-
-**Last PICKUP PROMPT:**
-
-```
-drift, not from assumption.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #26914 [deployed] - GLM floor env restore + stalling diagnosis + rule-91 regression\n\nWhere we left off (verified 2026-08-16 20:24 PT):\n- GLM floor env restore deployed: FLOOR_WINDOW 20->50, OPS_CEILING 6->8 (verified: systemctl show, adapter active, ring canary 18.3 tok/s)\n- DeepSeek NOT out of credits (verified: zero credit errors, tier HTTP 200, audit log serving)\n- Fallback IS working (verified: no Sonnet/Opus in text ladder, verify_routing HTTP 200 $0)\n- Stalling cause: local fleet degradation (Julia 235B training, Cicero refused, Joshua timed out)\n- Rule-91 regression investigation: canonical validator 5 shallow checks, zero callers (verified: read file, grep confirmed)\n- #26914 [deployed] GLM floor env restore (verified: reconcile_ideas status=deployed dev_stage=ready_for_review)\n- #26915 [executing] rule-91 validator deepening (verified: reconcile_ideas status=in_progress dev_stage=drafting)\n\nOpen threads to drive next:\n1. #26915 [executing] - deepen rule91_canonical_validator.php with disposition brackets, bare idea numbers, task ID format, Reversal Log, R317 state markers; wire into RubenExecutor.php to BLOCK not just audit\n2. #26209 [proposed] - Big Mac 4th GPU would add a 4th 120B box to pool\n3. (human-only decision, no idea) - monitor GLM floor window over next 30-60 min to confirm glm_pct climbs toward 30pct with restored FLOOR_WINDOW=50 and OPS_CEILING=8\n4. (human-only decision, no idea) - Julia 235B TP=2 training completion timeline determines when Julia rejoins the 120B federation\n\nReference IDs:\n- Ideas filed: #26914 [deployed], #26915 [executing]\n- Files touched: /etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-glm-floor-restore-26914.conf\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════", "task_prompt": "Frankenstein-llm stalling diagnosis, rule-91 regression, GLM floor below target", "task_id": "26914"}
-</arguments>
-<task_progress>
-- [x] Diagnose frankenstein-llm stalling (DeepSeek not out of credits, fallback works)
-- [x] File idea #26914 for GLM floor regression
-- [x] Investigate shallow rule-91 regression, file idea #26915
-- [x] Trace live selection path — ring IS getting floor-forced traffic
-- [x] Found real blocker: ring stalls at 0.00 tok/s under load, STREAM_PROXY fails, records as glm=0
-- [x] Read current systemd drop-ins — confirmed FLOOR_WINDOW=20 (should be 50), OPS_CEILING=6 (should be 8)
-- [x] Write + deploy fix drop-in restoring FLOOR_WINDOW=50, OPS_CEILING=8
-- [x] Restart adapter + verify env resolved — active, FLOOR_WINDOW=50, OPS_CEILING=8
-- [x] Verify adapter healthy + ring canary healthy (18.3 tok/s, no stalls since restart)
-- [x] Update handoff notes
-- [x] Reconcile ideas (rule 267 GATE B)
-- [x] Stamp #26914 as deployed (env fix is live and verified)
-- [x] Re-reconcile to get [deployed] tag
-- [ ] Validate completion (removed completion language near #26915)
-- [ ] Deliver results
-</task_progress>
-</use_mcp_tool>
 ```
 
 ### `1786942152453` — 8/16/2026, 9:55:26 PM PT — 32 turns
@@ -1504,53 +1614,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786817395147` — 8/15/2026, 3:56:47 PM PT — 404 turns
-
-**Original task:**
-
-```
-#Call Backs / VAPI
-
-How are callbacks going now?
-
-You know I'm just curious if there's some improvements that have been made genetically since we started a couple of months ago with VAPI? Seems like there should be are using the latest software or updates? Can you check with the community to see? I just wanna make sure.
-
-Also tell me what's going on with this ? And why did you offer Vicky an extension draft letter? When did I say that was OK? I know we were working on some stuff in a different window for extern chips just give me some information here -> 1. The 14 students need a placement or 
-```
-
-**Ideas referenced:** #12018, #12584, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #16844, #16874, #17130 [superseded], #1745, #18132 [deployed], #18316, #19125, #19173, #23133, #2323, #2328, #23340, #2341, #2343, #2344, #23989, #24645, #2511, #25701, #25706, #25707, #25943, #25945, #25946, #25968, #25969, #25986, #25989, #26066, #26068, #26203 [deployed], #26206 [deployed], #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26259 [deployed], #26260 [deployed], #26261 [deployed], #26266 [executing], #26267 [executing], #26270, #26296, #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26504 [approved], #26508 [proposed], #26509 [proposed], #26511 [deployed], #26513 [deployed], #26591, #26593, #26618 [deployed], #26619 [proposed], #26621 [proposed], #26643 [proposed], #26644 [proposed], #26645 [proposed], #26663, #26671 [proposed], #3261, #3319, #3346, #6172, #6978, #9042, #9159, #9222, #9501
-
-**Last PICKUP PROMPT:**
-
-```
-le 263 (verify, don't assume).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — finish the legacy-claude-string audit after the claude-sonnet-5 ban.
-
-Where we left off (verified 8/15/2026, 3:56:33 PM PT):
-- Killed all 4 confirmed `claude-sonnet-5` callers (now `deepseek-v4-pro`/`frankenstein-llm`), php -l clean, backups created.
-- Verified litellm routing map: `claude-sonnet-5`→`anthropic/claude-opus-5` (PAID, the real leak, now gone); bare `claude-haiku`/`claude-opus`→`deepseek-v4-pro` (free, left in place).
-- Verified Vapi brain = Vapi-cloud-resolved (`anthropic/claude-sonnet-5` on Vapi org 46666ee6, serverUrl = our webhook); our webhook internal tools use `frankenstein-llm` line 991, executor falls back `deepseek-v4-pro`.
-- Changes landed: `api/ticket_autospec.php`, `lib/backfill_idea_confidence_scorer.php`, `lib/PredispatchRevival.php`, `lib/PredispatchRevivalRouter.php`.
-
-Open threads to drive next (grep was live-verified, idea # stored in orchestrator_ideas):
-1. #26671 [proposed] — Audit the ~20 files still carrying OLD dated claude strings (`claude-haiku-4-5-20251001`, `claude-opus-4-20250514`, `claude-sonnet-4-6`, `claude-sonnet-4-20250514`, etc.). Action: run `grep -rn "claude-" /var/www/emtskills/api /var/www/emtskills/lib /var/www/emtskills/cron --include=*.php`, then for each resolve against the litellm DB (STORE_MODEL_IN_DB=1) to find which still map to `anthropic/*`, and patch ONLY the live-invoked paid ones.
-2. #26663 (unverified — may exist) — Vapi assistant master list: enumerate all Vapi assistants to confirm which `api/voice/*` handlers the old claude strings belong to before patching.
-
-Reference IDs:
-- Ideas filed: #26618, #26619, #26621 (prior window); #26671 this window.
-- Files touched this window: ticket_autospec.php, backfill_idea_confidence_scorer.php, PredispatchRevival.php, PredispatchRevivalRouter.php (+ .bak-r146-* backups).
-- Backup pattern: `.bak-r146-20260815-*`.
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
 ### `1786831867073` — 8/15/2026, 3:42:30 PM PT — 126 turns
 
 **Original task:**
@@ -2070,28 +2133,6 @@ And there's a **working reference implementation**: `cron/cron_argus_ext_canary.
 ```
 
 **Ideas referenced:** #10740, #1119, #11316, #11397, #12249, #12251, #12266, #12269, #12335, #12363, #12365, #12366, #12368, #12407, #12588, #12589, #12590, #12591, #12618, #12657, #12688, #12689, #13155, #13157, #13459, #13470, #13874, #14133, #14142, #15776, #16084, #16154, #16715, #16716, #16718, #17078, #17174, #174512, #21134, #23133, #2316, #25155, #25171, #25178, #25185, #25186, #25986, #26376 [deployed], #26377 [deployed], #26396 [proposed], #26424 [proposed], #26447 [proposed], #26461 [in-progress], #26469 [proposed], #26503 [executing], #26504 [executing], #26505 [executing], #26506 [proposed], #5574, #7174, #9112, #9222
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786780447770` — 8/15/2026, 1:15:59 AM PT — 142 turns
-
-**Original task:**
-
-```
-#Executor
-
-Why don't you give me a roadmap as to how the system works and close any gaps that you can find in the process?
-
-That makes me wonder does ruben doctor of executor even work or does that rule need to be modified?
-
-Built and shipped. Both halves are positive-controlled, which matters here more than usual: the entire problem tonight was instruments that reported healthy without ever being tested against a known-bad case.
-
-## The watchdog now measures delivery, not activity
-
-`cron_orchestrator_executor_watchdog.php` had six sections. Every one checked whether something was *running*: i
-```
-
-**Ideas referenced:** #12506, #12761, #12763, #12764, #13075, #16648, #16714, #16717, #18039, #18040, #18041, #18133, #18148, #18161, #18178, #18252, #18258, #18329, #18332, #2512, #25185, #25656, #25775, #25811, #25834, #25836, #25898, #25899, #25901, #25927, #26068 [deployed], #26173, #26175, #26192, #26207, #26208, #26214, #26229, #26235, #26258, #26296, #26326, #26342, #26344, #26371, #26401 [executing], #26415 [blocked], #26421 [executing], #26429 [executing], #26436 [blocked], #26437 [executing], #26461, #26470 [deployed], #26482 [executing], #26483 [executing], #26484 [executing], #26490 [executing], #26491 [executing], #26495 [deployed], #26496, #26498 [executing], #26499 [executing], #26500 [deployed], #26502, #26513 [deployed], #26518 [executing], #26519 [executing], #26520 [deployed], #26521 [deployed], #4987
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -3728,51 +3769,5 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1786558646083` — 8/13/2026, 11:25:12 PM PT — 396 turns
-
-**Original task:**
-
-```
-#Moodle Required
-
-Maybe we should show a screenshot of the student's actual ssignments remaining within that particualr assignment / the actual traceback. So in this case (I'm only guessing). I assume Avni has to do the Midterm Examination, but it's blocked by the Midterm Evaluation which also requires a series of requirements. I screenshotted what I would like to see screenshot (different form Anvi), but I think tht might be helpful. I mean if tha'ts not posisble or too difficult to build. But idea is to track back until they see how it all works. so again, there may be a few of these "Restri
-```
-
-**Ideas referenced:** #081020, #18868, #19163, #2323, #23477 [proposed], #24526 [superseded], #24765, #25155 [proposed], #25185, #25537, #25560, #25608, #25623, #25632, #25633, #25635, #25667, #25669, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25796, #25797, #25798, #25803 [proposed], #25804 [deployed], #25812, #25887, #25889 [ready_for_review], #25914 [proposed], #25971, #25974, #25975, #25976, #25984 [the canonical walker], #25985, #25986, #25990 [executing], #25995, #26003, #26035 [proposed], #26066, #38984, #6785, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-y for you to close the window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #26035 [proposed], grouping-orphan data fix. This window is closing per Ruben; 317 is fully done and nothing was left unshipped.
-
-Where we left off (verified 2026-08-13 23:24 PT):
-- Rule 317 pass complete. All 7 material claims re-probed live and HOLD. Validator ALL PASSED, gate CLEAR. Two recorded reversals (blocker count 48 to 38; ticket ids vs idea ids) were audit corrections, not code changes.
-- Canonical engine lib/CertificateAvailabilityWalker.php (21,280 b, lint clean) carries grouping branch + emsuCertReadinessTraceback(). Three consumers delegate; fork deleted; all re-verified.
-- Live smoke: Midterm cm 4190 = 44 OK, zero blockers. Cert cm 3092 = 38 blockers incl. "grouping Alameda County".
-- Ruben confirmed close-out after confirming nothing 317 remains.
-
-Open threads to drive next:
-1. #26035 [proposed] (verified: status=proposed dev_stage=idle) Grouping-orphan fix. Group 2576 (26820FT, Avni, Union City) has ZERO groupings_groups rows; cert gates on grouping 3. Blast-radius query FIRST: count course-41 groups with no groupings_groups row, then get section-to-county mapping decision from academic ops. Do NOT auto-insert membership rows.
-2. #23477 [awaiting_review] (verified: status=n/a dev_stage=ready_for_review) Wire emsuCertReadinessTraceback into CFA reply templates + AgentReplyPipeline::guard gate 5.
-3. #25914 [executing] — Stamp orchestrator record deployed; code already on disk and re-verified.
-4. #25990 [executing] — Stamp orchestrator record deployed; RCA doc already records DONE.
-
-Reference IDs:
-- Ideas: #26035 [proposed], #23477 [awaiting_review], #25914 [executing], #25990 [executing]
-- Tickets (not idea ids): ticket 24526 (Avni Madhu 26820FT-05), ticket 24765 (Sarim Rizvi 26515W-01)
-- Files: lib/CertificateAvailabilityWalker.php, lib/moodle_prereq_lookup.php, tools/moodle_restrict_traceback.php, tools/ai_tool_exam_lock_diagnostic.php, docs/CFA_CERT_READINESS_RCA_20260812.md
-- Removed: lib/moodle_restrict_traceback_engine.php
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```

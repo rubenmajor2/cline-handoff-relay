@@ -6,11 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/17/2026, 12:39:45 PM PT | window: last 72h | 98 tasks | index total 791 (parsed 4, cached 787)
+Generated: 8/17/2026, 1:39:45 PM PT | window: last 72h | 98 tasks | index total 791 (parsed 1, cached 790)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786993543586` | 8/17/2026, 12:39:39 PM | 115 | 693KB | Our Staff Keycards were all deactivated and students/staff were locked out of our building |
+| `1786993543586` | 8/17/2026, 1:35:37 PM | 272 | 1864KB | Our Staff Keycards were all deactivated and students/staff were locked out of our building |
+| `1786980640015` | 8/17/2026, 12:55:04 PM | 224 | 1920KB | #TDSHS |
 | `1786994625500` | 8/17/2026, 12:39:38 PM | 38 | 180KB | please run the Fix AVP program on my computer that I can't seem to open |
 | `1786960541449` | 8/17/2026, 12:29:31 PM | 810 | 5349KB | #Julia/Claudia 235B  |
 | `1786559316764` | 8/17/2026, 12:18:17 PM | 264 | 1174KB | #Lower Romans |
@@ -21,7 +22,6 @@ Generated: 8/17/2026, 12:39:45 PM PT | window: last 72h | 98 tasks | index total
 | `1786573125988` | 8/17/2026, 9:49:11 AM | 383 | 3324KB | Please tell me if this is wrong? And if so why and what is going on? |
 | `1786981142444` | 8/17/2026, 9:26:22 AM | 154 | 1095KB | #Conrad/Argus |
 | `1786821833685` | 8/17/2026, 9:19:50 AM | 677 | 2520KB | #SSS / Virtual LoRA2 / Efficiency |
-| `1786980640015` | 8/17/2026, 9:17:31 AM | 194 | 1532KB | #TDSHS |
 | `1786979337785` | 8/17/2026, 8:08:58 AM | 1 | 2KB | #Executor |
 | `1786948767264` | 8/17/2026, 8:03:55 AM | 254 | 1446KB | #Unknown / Maybe 317 adjacent |
 | `1786660376952` | 8/17/2026, 8:01:40 AM | 1016 | 2862KB | help me file with Florida Board of Education application yet? Need that approval before we |
@@ -113,7 +113,7 @@ Generated: 8/17/2026, 12:39:45 PM PT | window: last 72h | 98 tasks | index total
 
 ## Per-window detail
 
-### `1786993543586` — 8/17/2026, 12:39:39 PM PT — 115 turns
+### `1786993543586` — 8/17/2026, 1:35:37 PM PT — 272 turns
 
 **Original task:**
 
@@ -127,52 +127,86 @@ Check all emails to/from blackgoldrealty.com in postmark on my email to/from jth
 I need a call list. Email
 ```
 
-**Ideas referenced:** #171083, #2144, #249948, #250516, #251038, #251264, #251382, #251428, #251444, #251447, #251450, #251498, #251641, #2528, #26384, #26385, #2643, #26799, #26800, #27098 [proposed]
+**Ideas referenced:** #001373, #020381, #0693, #164023, #171083, #2144, #23282, #249948, #250516, #251038, #251264, #251382, #251428, #251444, #251447, #251450, #251498, #251641, #2528, #26384, #26385, #2643, #26799, #26800, #27098 [proposed], #2874, #313131, #330968, #4721
 
 **Last PICKUP PROMPT:**
 
 ```
-e, cure period) in the letter.
+BLACKGOLD-EMAIL-TO-L-DRAFT.md.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task BlackGold Realty Houston building-access lockout / lease breach response (Aug 2026).
+Pick up task BlackGold Realty Houston building-access lockout / lease breach response (Aug 2026) — email to Lafayette drafted; Anderson call logged.
 
-Where we left off (verified 2026-08-17 12:25 PT):
-- Full package on disk: /Users/rubenmajor/Desktop/blackgold-breach-package-20260817.md (call list, email list, breach letter, steps, damages, Greg paragraph).
-- Landlord = BlackGold Realty LLC, 1900 St James Pl Suite 700, Houston TX 77056. Keypad code 1073, $325 keycard invoice on April statement, August rent confirmed paid 8/14.
-- Damages: $130,725 at risk across 75 enrolled students (26422FT=34, 26423BC=24, 26424T=8, 26425FT=5, 26426W=4).
+Where we left off (verified 2026-08-17 13:35 PT):
+- Four deliverables on Desktop, synced and verified: blackgold-incident.html (11 sections incl. new email-to-L section, nav verified), BLACKGOLD-INCIDENT-LOG.md, blackgold-breach-package-20260817.md, BLACKGOLD-EMAIL-TO-L-DRAFT.md.
+- Anderson call facts logged: panel must be REPLACED + 24/7 programmed (not repaired); marshal required whenever occupied; LL pays 7AM–7PM weekday marshal; ~1 week lead for 7PM–10PM/weekend coverage; Anderson doubts L's "no one after 7PM" claim; citations if occupied after 7PM; instruction = check with L first, then call back to schedule.
+- Email draft to Lafayette created (written citation, repair timeline, authorized coverage, cost coverage, keycards; deadline Wed 8/19; lease-breach + TDSHS alternative).
+- Corporate chain: Atlas Operating (parent) → YMC Royalty (Suite 800) → BlackGold Realty (Suite 700). Broker: Doug Pack 713-818-5782.
+- Damages $130,725 at risk (75 students, 5 sections) + tail risk. Rent NOT confirmed current.
 - Idea filed: #27098 [proposed].
 
 Open threads to drive next:
-1. #27098 [proposed] — Send the breach letter (in the package file) to lafayette@, musa@, tenant@blackgoldrealtyllc.com; CC emily@, tim@, Greg, jthompson@, rmajor@, cfrench@; call Lafayette (770-363-7199) then Musa (832-745-2312) then Yousef (713-301-9898).
-2. #27098 [proposed] — Obtain the real lease share link from Ruben (provided link was the generic Drive home page) and cite exact clause numbers; obtain the fire marshal citation in writing; secure an alternate Houston weekend training site; file the proactive TDSHS notice.
+1. #27098 [proposed] — Verify rent payment record with Jon/accounting BEFORE sending breach letter.
+2. #27098 [proposed] — Send the Lafayette email today (deadline Wed 8/19); call back Anderson (713-449-8741) to schedule coverage once L authorizes.
+3. #27098 [proposed] — Get Atlas Operating officers/registered agent + full YMC phone (281-893-xxxx) from Texas SOS/SOSDirect.
+4. #27098 [proposed] — Have Ruben set lease PDF to Anyone-with-link access, then extract quiet-enjoyment/access/cure/abatement clauses.
+5. #27098 [proposed] — If L stalls, send breach letter + loop Doug Pack; escalate to Atlas principals.
 
 Reference IDs:
 - Ticket: none filed (task originated as iMessage directive)
 - Ideas filed: #27098
-- Files touched: /Users/rubenmajor/Desktop/blackgold-breach-package-20260817.md
+- Files touched: /Users/rubenmajor/Desktop/blackgold-incident.html, /Users/rubenmajor/Desktop/BLACKGOLD-INCIDENT-LOG.md, /Users/rubenmajor/Desktop/blackgold-breach-package-20260817.md, /Users/rubenmajor/Desktop/BLACKGOLD-EMAIL-TO-L-DRAFT.md
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
 
-<attempt_completion>
-<result>Full deliverable package built, saved, and verified on disk: /Users/rubenmajor/Desktop/blackgold-breach-package-20260817.md (207 lines, 15.4 KB). Contains the call list, email list, breach-of-lease letter, prioritized steps, financial damages ($130,725 at risk across 75 enrolled students in 5 Houston sections), TDSHS fallout context, and the attorney paragraph for Greg. Key facts verified from the email record: landlord is BlackGold Realty LLC, 1900 St James Place Suite 700, Houston TX 77056; keypad code 1073 on record; $325 keycard/keypad invoice on the April 2026 statement; August rent confirmed paid 8/14/2026. One request back to you: the lease link you pasted (drive.google.com/drive/home) is the generic Drive home page, not the file link - send the real shareable lease URL and I will cite exact clause numbers in the letter.
+### `1786980640015` — 8/17/2026, 12:55:04 PM PT — 224 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+Prepare responses for these 3 students due today for TDSHS as well as tell me which dates I have to respond to TDSHS requests for today/ check other emails sent to me that need to be replied to. I think I have an 8/7 and 8/10 email to reply back to sabrina about. Give draft replies for those and due dates. As for this: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=packet&pe=tdshs&rt=complaint_response&due=2026-08-15 
+
+I need that response. Also, I noticed you said one student was not found. Tha'ts not accurate. Nicholas Mejia (NO Students match) (26917FT) 
+```
+
+**Ideas referenced:** #12345 [proposed], #12346 [proposed], #127891, #128274, #1370, #19587, #19595 [executing], #19599, #251038, #251044, #251128, #251211, #251264, #251382, #251444, #27072 [proposed], #27073 [awaiting_review], #27074 [approved], #27100 [approved], #475569, #600179, #623992, #64748
+
+**Last PICKUP PROMPT:**
+
+```
+ur review before transmission.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task BlackGold Realty Houston building-access lockout / lease breach response (Aug 2026).
+Pick up task — TDSHS 8/15 packet consolidated response + due-date triage.
 
-Where we left off (verified 2026-08-17 12:25 PT):
-- Full package on disk: /Users/rubenmajor/Desktop/blackgold-breach-package-20260817.md (call list, email list, breach letter, steps, damages, Greg paragraph).
-- Landlord = BlackGold Realty LLC, 1900 St James Pl Suite 700, Houston TX 77056. Keypad code 1073, $325 keycard invoice on April statement, August rent confirmed paid 8/14.
-- Damages: $130,725 at risk across 75 enrolled students (26422FT=34, 26423BC=24, 26424T=8, 26425FT=5, 26426W=4).
-- Idea filed: #27098 [proposed].
+Where we left off (verified 2026-08-17 09:16 PT):
+- Draft PDF rendered on Desktop: TDSHS_Per_Matter_Responses_2026-08-17_DRAFT.pdf (287 KB, contains 1080261886/1916/1917 + Nicolas Mejia correction). Awaiting Ruben approval before transmission.
+- Compliance_deadlines row id=22 corrected: "Nicholas Mejia" → "Nicolas Mejia (26917FT-05)" with verification note appended.
+- Verified no Sabrina Richardson inbound/outbound email on 8/7 or 8/10 anywhere in email_inbound / email_inbound_log / email_outbound_log.
+- Due dates on record: 8/15 packet (3 students, overdue), 1080261810 → 8/18, 1080261811 → 8/19.
 
 Open threads to drive next:
-1. #27098 [proposed] — Send the breach letter (in the package file) to lafayette@, musa@, tenant@blackgoldrealtyllc.com; CC emily@, tim@, Greg, jthompson@, rmajor@, cfrench@; call Lafayette (770-363-7199) 
+1. #27073 [awaiting_review] — after Ruben approves, copy the draft to /var/www/emtskills/uploads/tdshs/inspection-5196-2026/Transmission_Copy_Per_Matter_Responses_TDSHS_2026-08-17.pdf and transmit to Sabrina Lee Richardson; mark compliance_deadlines rows 20,22,23 drafted → ready_to_send → sent.
+2. #27072 [proposed] — confirm compliance_deadlines id=22 student-name correction is reflected in the compliance_deadlines.php packet view (reload + verify "Nicolas Mejia (26917FT-05)" renders).
+
+Reference IDs:
+- Ticket: none (compliance packet, not a support ticket)
+- Ideas filed: #27072, #27073
+- Files touched: /Users/rubenmajor/Desktop/TDSHS_Per_Matter_Responses_2026-08-17_DRAFT.pdf, /Users/rubenmajor/Desktop/TDSHS_Transmission_Copy_2026-08-17.html, compliance_deadlines row id=22
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
 ### `1786994625500` — 8/17/2026, 12:39:38 PM PT — 38 turns
@@ -548,51 +582,6 @@ Reference IDs:
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786980640015` — 8/17/2026, 9:17:31 AM PT — 194 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-Prepare responses for these 3 students due today for TDSHS as well as tell me which dates I have to respond to TDSHS requests for today/ check other emails sent to me that need to be replied to. I think I have an 8/7 and 8/10 email to reply back to sabrina about. Give draft replies for those and due dates. As for this: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=packet&pe=tdshs&rt=complaint_response&due=2026-08-15 
-
-I need that response. Also, I noticed you said one student was not found. Tha'ts not accurate. Nicholas Mejia (NO Students match) (26917FT) 
-```
-
-**Ideas referenced:** #12345 [proposed], #12346 [proposed], #127891, #128274, #1370, #19587, #19595 [executing], #19599, #251038, #251044, #251128, #251211, #251264, #251382, #251444, #27072 [proposed], #27073 [awaiting_review], #475569, #600179, #623992, #64748
-
-**Last PICKUP PROMPT:**
-
-```
-ur review before transmission.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — TDSHS 8/15 packet consolidated response + due-date triage.
-
-Where we left off (verified 2026-08-17 09:16 PT):
-- Draft PDF rendered on Desktop: TDSHS_Per_Matter_Responses_2026-08-17_DRAFT.pdf (287 KB, contains 1080261886/1916/1917 + Nicolas Mejia correction). Awaiting Ruben approval before transmission.
-- Compliance_deadlines row id=22 corrected: "Nicholas Mejia" → "Nicolas Mejia (26917FT-05)" with verification note appended.
-- Verified no Sabrina Richardson inbound/outbound email on 8/7 or 8/10 anywhere in email_inbound / email_inbound_log / email_outbound_log.
-- Due dates on record: 8/15 packet (3 students, overdue), 1080261810 → 8/18, 1080261811 → 8/19.
-
-Open threads to drive next:
-1. #27073 [awaiting_review] — after Ruben approves, copy the draft to /var/www/emtskills/uploads/tdshs/inspection-5196-2026/Transmission_Copy_Per_Matter_Responses_TDSHS_2026-08-17.pdf and transmit to Sabrina Lee Richardson; mark compliance_deadlines rows 20,22,23 drafted → ready_to_send → sent.
-2. #27072 [proposed] — confirm compliance_deadlines id=22 student-name correction is reflected in the compliance_deadlines.php packet view (reload + verify "Nicolas Mejia (26917FT-05)" renders).
-
-Reference IDs:
-- Ticket: none (compliance packet, not a support ticket)
-- Ideas filed: #27072, #27073
-- Files touched: /Users/rubenmajor/Desktop/TDSHS_Per_Matter_Responses_2026-08-17_DRAFT.pdf, /Users/rubenmajor/Desktop/TDSHS_Transmission_Copy_2026-08-17.html, compliance_deadlines row id=22
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 

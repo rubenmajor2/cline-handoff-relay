@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-17T19:39:44.986Z",
+ "generated_at": "2026-08-17T20:39:45.360Z",
  "counts": {
-  "parsed": 4,
-  "reused": 787,
+  "parsed": 1,
+  "reused": 790,
   "failed": 0,
   "total": 791
  },
@@ -132940,11 +132940,11 @@
   },
   "1786980640015": {
    "task_id": "1786980640015",
-   "mtime": 1786983451037,
+   "mtime": 1786996504284,
    "created_at": "2026-08-17T15:30:40.015Z",
-   "last_modified": "2026-08-17T16:17:31.037Z",
-   "size_kb": 1532,
-   "turn_count": 194,
+   "last_modified": "2026-08-17T19:55:04.284Z",
+   "size_kb": 1920,
+   "turn_count": 224,
    "title": "#TDSHS\n\nPrepare responses for these 3 students due today for TDSHS as well as tell me which dates I have to respond to TDSHS requests for today/ check other emails sent to me that need to be replied to. I think I have an 8/7 and 8/10 email to reply back to sabrina about. Give draft replies for those and due dates. As for this: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=packet&pe=tdshs&rt=complaint_response&due=2026-08-15 \n\nI need that response. Also, I noticed you said one student was not found. Tha'ts not accurate. Nicholas Mejia (NO Students match) (26917FT) / that student is in fact in the system. He was very easy to find. \n\nAgain, prepare the draft respon",
    "pickup_prompt": "ur review before transmission.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — TDSHS 8/15 packet consolidated response + due-date triage.\n\nWhere we left off (verified 2026-08-17 09:16 PT):\n- Draft PDF rendered on Desktop: TDSHS_Per_Matter_Responses_2026-08-17_DRAFT.pdf (287 KB, contains 1080261886/1916/1917 + Nicolas Mejia correction). Awaiting Ruben approval before transmission.\n- Compliance_deadlines row id=22 corrected: \"Nicholas Mejia\" → \"Nicolas Mejia (26917FT-05)\" with verification note appended.\n- Verified no Sabrina Richardson inbound/outbound email on 8/7 or 8/10 anywhere in email_inbound / email_inbound_log / email_outbound_log.\n- Due dates on record: 8/15 packet (3 students, overdue), 1080261810 → 8/18, 1080261811 → 8/19.\n\nOpen threads to drive next:\n1. #27073 [awaiting_review] — after Ruben approves, copy the draft to /var/www/emtskills/uploads/tdshs/inspection-5196-2026/Transmission_Copy_Per_Matter_Responses_TDSHS_2026-08-17.pdf and transmit to Sabrina Lee Richardson; mark compliance_deadlines rows 20,22,23 drafted → ready_to_send → sent.\n2. #27072 [proposed] — confirm compliance_deadlines id=22 student-name correction is reflected in the compliance_deadlines.php packet view (reload + verify \"Nicolas Mejia (26917FT-05)\" renders).\n\nReference IDs:\n- Ticket: none (compliance packet, not a support ticket)\n- Ideas filed: #27072, #27073\n- Files touched: /Users/rubenmajor/Desktop/TDSHS_Per_Matter_Responses_2026-08-17_DRAFT.pdf, /Users/rubenmajor/Desktop/TDSHS_Transmission_Copy_2026-08-17.html, compliance_deadlines row id=22\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
@@ -132956,6 +132956,8 @@
     "19599": null,
     "27072": "proposed",
     "27073": "awaiting_review",
+    "27074": "approved",
+    "27100": "approved",
     "64748": null,
     "127891": null,
     "128274": null,
@@ -133135,22 +133137,26 @@
   },
   "1786993543586": {
    "task_id": "1786993543586",
-   "mtime": 1786995579435,
+   "mtime": 1786998937906,
    "created_at": "2026-08-17T19:05:43.586Z",
-   "last_modified": "2026-08-17T19:39:39.435Z",
-   "size_kb": 693,
-   "turn_count": 115,
+   "last_modified": "2026-08-17T20:35:37.906Z",
+   "size_kb": 1864,
+   "turn_count": 272,
    "title": "Our Staff Keycards were all deactivated and students/staff were locked out of our building on Saturday in Houston. There is something weird going on with the landlord and the firemarchall there that doesn't make sense. Anyway It's causing a huge downstream issue with us not having building access on the Weekends or after hours. It's also a violation of the lease. See lease:\n\nhttps://drive.google.com/drive/home \n\nCheck all emails to/from blackgoldrealty.com in postmark on my email to/from jthompson@emsuniversity.com rmajor@emsuniversity.com cfrench@emsuniversity.com. \n\nI need a call list. Email list, draft breach of lease letter, steps to take, lay out financial damage, due to fallout with st",
-   "pickup_prompt": "e, cure period) in the letter.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task BlackGold Realty Houston building-access lockout / lease breach response (Aug 2026).\n\nWhere we left off (verified 2026-08-17 12:25 PT):\n- Full package on disk: /Users/rubenmajor/Desktop/blackgold-breach-package-20260817.md (call list, email list, breach letter, steps, damages, Greg paragraph).\n- Landlord = BlackGold Realty LLC, 1900 St James Pl Suite 700, Houston TX 77056. Keypad code 1073, $325 keycard invoice on April statement, August rent confirmed paid 8/14.\n- Damages: $130,725 at risk across 75 enrolled students (26422FT=34, 26423BC=24, 26424T=8, 26425FT=5, 26426W=4).\n- Idea filed: #27098 [proposed].\n\nOpen threads to drive next:\n1. #27098 [proposed] — Send the breach letter (in the package file) to lafayette@, musa@, tenant@blackgoldrealtyllc.com; CC emily@, tim@, Greg, jthompson@, rmajor@, cfrench@; call Lafayette (770-363-7199) then Musa (832-745-2312) then Yousef (713-301-9898).\n2. #27098 [proposed] — Obtain the real lease share link from Ruben (provided link was the generic Drive home page) and cite exact clause numbers; obtain the fire marshal citation in writing; secure an alternate Houston weekend training site; file the proactive TDSHS notice.\n\nReference IDs:\n- Ticket: none filed (task originated as iMessage directive)\n- Ideas filed: #27098\n- Files touched: /Users/rubenmajor/Desktop/blackgold-breach-package-20260817.md\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n\n<attempt_completion>\n<result>Full deliverable package built, saved, and verified on disk: /Users/rubenmajor/Desktop/blackgold-breach-package-20260817.md (207 lines, 15.4 KB). Contains the call list, email list, breach-of-lease letter, prioritized steps, financial damages ($130,725 at risk across 75 enrolled students in 5 Houston sections), TDSHS fallout context, and the attorney paragraph for Greg. Key facts verified from the email record: landlord is BlackGold Realty LLC, 1900 St James Place Suite 700, Houston TX 77056; keypad code 1073 on record; $325 keycard/keypad invoice on the April 2026 statement; August rent confirmed paid 8/14/2026. One request back to you: the lease link you pasted (drive.google.com/drive/home) is the generic Drive home page, not the file link - send the real shareable lease URL and I will cite exact clause numbers in the letter.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task BlackGold Realty Houston building-access lockout / lease breach response (Aug 2026).\n\nWhere we left off (verified 2026-08-17 12:25 PT):\n- Full package on disk: /Users/rubenmajor/Desktop/blackgold-breach-package-20260817.md (call list, email list, breach letter, steps, damages, Greg paragraph).\n- Landlord = BlackGold Realty LLC, 1900 St James Pl Suite 700, Houston TX 77056. Keypad code 1073, $325 keycard invoice on April statement, August rent confirmed paid 8/14.\n- Damages: $130,725 at risk across 75 enrolled students (26422FT=34, 26423BC=24, 26424T=8, 26425FT=5, 26426W=4).\n- Idea filed: #27098 [proposed].\n\nOpen threads to drive next:\n1. #27098 [proposed] — Send the breach letter (in the package file) to lafayette@, musa@, tenant@blackgoldrealtyllc.com; CC emily@, tim@, Greg, jthompson@, rmajor@, cfrench@; call Lafayette (770-363-7199) ",
+   "pickup_prompt": "BLACKGOLD-EMAIL-TO-L-DRAFT.md.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task BlackGold Realty Houston building-access lockout / lease breach response (Aug 2026) — email to Lafayette drafted; Anderson call logged.\n\nWhere we left off (verified 2026-08-17 13:35 PT):\n- Four deliverables on Desktop, synced and verified: blackgold-incident.html (11 sections incl. new email-to-L section, nav verified), BLACKGOLD-INCIDENT-LOG.md, blackgold-breach-package-20260817.md, BLACKGOLD-EMAIL-TO-L-DRAFT.md.\n- Anderson call facts logged: panel must be REPLACED + 24/7 programmed (not repaired); marshal required whenever occupied; LL pays 7AM–7PM weekday marshal; ~1 week lead for 7PM–10PM/weekend coverage; Anderson doubts L's \"no one after 7PM\" claim; citations if occupied after 7PM; instruction = check with L first, then call back to schedule.\n- Email draft to Lafayette created (written citation, repair timeline, authorized coverage, cost coverage, keycards; deadline Wed 8/19; lease-breach + TDSHS alternative).\n- Corporate chain: Atlas Operating (parent) → YMC Royalty (Suite 800) → BlackGold Realty (Suite 700). Broker: Doug Pack 713-818-5782.\n- Damages $130,725 at risk (75 students, 5 sections) + tail risk. Rent NOT confirmed current.\n- Idea filed: #27098 [proposed].\n\nOpen threads to drive next:\n1. #27098 [proposed] — Verify rent payment record with Jon/accounting BEFORE sending breach letter.\n2. #27098 [proposed] — Send the Lafayette email today (deadline Wed 8/19); call back Anderson (713-449-8741) to schedule coverage once L authorizes.\n3. #27098 [proposed] — Get Atlas Operating officers/registered agent + full YMC phone (281-893-xxxx) from Texas SOS/SOSDirect.\n4. #27098 [proposed] — Have Ruben set lease PDF to Anyone-with-link access, then extract quiet-enjoyment/access/cure/abatement clauses.\n5. #27098 [proposed] — If L stalls, send breach letter + loop Doug Pack; escalate to Atlas principals.\n\nReference IDs:\n- Ticket: none filed (task originated as iMessage directive)\n- Ideas filed: #27098\n- Files touched: /Users/rubenmajor/Desktop/blackgold-incident.html, /Users/rubenmajor/Desktop/BLACKGOLD-INCIDENT-LOG.md, /Users/rubenmajor/Desktop/blackgold-breach-package-20260817.md, /Users/rubenmajor/Desktop/BLACKGOLD-EMAIL-TO-L-DRAFT.md\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
     "2144": null,
     "2528": null,
     "2643": null,
+    "2874": null,
+    "4721": null,
+    "23282": null,
     "26384": null,
     "26385": null,
     "26799": null,
     "26800": null,
     "27098": "proposed",
+    "164023": null,
     "171083": null,
     "249948": null,
     "250516": null,
@@ -133162,7 +133168,12 @@
     "251447": null,
     "251450": null,
     "251498": null,
-    "251641": null
+    "251641": null,
+    "313131": null,
+    "330968": null,
+    "001373": null,
+    "0693": null,
+    "020381": null
    }
   },
   "1786994625500": {

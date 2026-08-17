@@ -147,3 +147,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Julia 235B context ceiling, SECOND occurrence in one task. At 10:02 UTC this same task (1786932084) amended rule 297 to record that the KV/OOM math was wrong: vLLM's 'KV 26.02 GiB' is the POOL sized by gpu_memory_utilization, not per-context consumption, and the adjacent 'GPU KV cache size: 555,296 tokens' + 'Maximum concurrency 13.56x at 40,960' prove 131072 fits in ~5.9 GiB of that pool. After a context compress, I re-inherited the retracted 40960/OOM premise from the carried-forward pickup prompt, re-asserted it as fact, and began editing frankenstein_registry.yaml to lower julia-235b served_ctx 1048000 -> 40960 (the sed did not land; line 285 verified still 1048000, no backup created, zero damage). Ruben corrected it live: 'It can and does run a 131K... I just ran julia 235b here in cline and it did fine.' Amendment: a rule amendment recorded under the CURRENT task id is binding evidence that outranks any claim carried forward in a pickup prompt or session-memory blob. Before re-as
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-17 19:52 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786952400
+- RCA bucket: wrong premise
+- Trigger pattern: Asserting identity from an approximate name match on an externally-supplied identifier, and writing per-student status claims from summary columns without reading terminal-outcome fields or the author
+- Reversal note: TDSHS 8/15 packet: a prior turn asserted the student in control 1080261916 was "verified" as Nicolas Mejia 26917FT-05 on the basis of a one-letter name resemblance to the transmittal spelling ("Nicholas"), and stated three per-matter facts that the record contradicts (called a fail_date a "didactic completion", said a student with a PASSED course-end date "remains within the completion window", and said "no placement request exists" for a student who had three requests all assigned same-day). Amendment: a name-similarity match is a HYPOTHESIS, not an identification. Before asserting that an externally-supplied identifier corresponds to a specific record, require a second independent field to agree (DOB, email, program-assigned id, or the person's own self-supplied spelling); if only the name is similar, the correct output is a clarification request, not a claim. Corollary for per-student regulator facts: read the terminal-outcome columns (fail_date/drop_date/transfer_date) and compare 
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

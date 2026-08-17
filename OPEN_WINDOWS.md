@@ -6,15 +6,19 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/16/2026, 9:28:28 PM PT | window: last 72h | 87 tasks | index total 772 (parsed 3, cached 769)
+Generated: 8/16/2026, 10:28:29 PM PT | window: last 72h | 91 tasks | index total 776 (parsed 2, cached 774)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786935011375` | 8/16/2026, 9:28:25 PM | 341 | 909KB | Frankensteitn-llm appears to be stalling. If it's because Deepseek needs credits, should i |
-| `1786939999732` | 8/16/2026, 9:27:30 PM | 156 | 298KB | #Payment suspension issues? Invoicing? Uncertain if true |
+| `1786941064430` | 8/16/2026, 10:27:37 PM | 392 | 717KB | #Julia/Claudia 235B |
+| `1786942595504` | 8/16/2026, 10:17:53 PM | 80 | 1029KB | #Rule 317 |
+| `1786935011375` | 8/16/2026, 9:55:49 PM | 414 | 1081KB | Frankensteitn-llm appears to be stalling. If it's because Deepseek needs credits, should i |
+| `1786942152453` | 8/16/2026, 9:55:26 PM | 32 | 1174KB | I read this and the question is about the ticket closure not about the quizzes, right? So  |
+| `1786935841403` | 8/16/2026, 9:52:10 PM | 142 | 1505KB | The student seems to have submitted a plethora of documentation demonstrating that we may  |
+| `1786939999732` | 8/16/2026, 9:50:56 PM | 204 | 390KB | #Payment suspension issues? Invoicing? Uncertain if true |
+| `1786941036813` | 8/16/2026, 9:30:41 PM | 2 | 16KB | How does such degredation occur and how do we avoid this going forward? Seems like an RCA  |
 | `1786935632758` | 8/16/2026, 9:24:01 PM | 596 | 807KB | #Julia/Claudia 235B |
 | `1786913196629` | 8/16/2026, 8:40:11 PM | 634 | 4146KB | #CFA Emails |
-| `1786935841403` | 8/16/2026, 8:34:24 PM | 122 | 1431KB | The student seems to have submitted a plethora of documentation demonstrating that we may  |
 | `1786917304515` | 8/16/2026, 8:26:20 PM | 634 | 2717KB | Tell me about this - accurate? What is their claim? Is it legit? |
 | `1786926735720` | 8/16/2026, 7:57:37 PM | 392 | 1570KB | #Julia/Claudia 235B |
 | `1786932205578` | 8/16/2026, 7:45:28 PM | 216 | 420KB | #ARGUS |
@@ -102,7 +106,65 @@ Generated: 8/16/2026, 9:28:28 PM PT | window: last 72h | 87 tasks | index total 
 
 ## Per-window detail
 
-### `1786935011375` — 8/16/2026, 9:28:25 PM PT — 341 turns
+### `1786941064430` — 8/16/2026, 10:27:37 PM PT — 392 turns
+
+**Original task:**
+
+```
+#Julia/Claudia 235B
+
+How does such degredation occur and how do we avoid this going forward? Seems like an RCA is in order for that-> The pool serving the Cline lane had degraded to 2 of 4 usable upstreams with both survivors saturated, so the adapter returned empty HTTP 200s (verified: adapter log showed continuous `CANARY probe failed upstream=http://127.0.0.1:11513 err=[Errno 104] Connection reset by peer` and `DECODE_STALL http://127.0.0.1:8210 rate=0.00 tok/s streak=12 -> penalty` plus `TIMEOUT_COOLDOWN_SET`; upstream log showed `ttfb_s: 165.36, queue_depth: 106.0` and a cline-lane entry 
+```
+
+**Ideas referenced:** #11397, #11936, #11942, #11953, #12231, #12251, #12335, #12365, #1238, #1241, #12672, #12716, #13108, #13121, #13831, #13874, #14848, #1765, #1781, #178693, #2114, #2247, #2306, #23206, #25185, #2535 [deployed], #2536 [deployed], #2537 [deployed], #2539 [deployed], #25468, #25471, #25604, #25764, #26403, #26819 [executing], #26908 [deployed], #26909 [rejected], #26910 [deployed], #26923 [deployed], #26925 [proposed], #26928 [proposed], #26938 [deployed], #26954 [executing], #26956 [executing], #26957 [deployed], #26958 [deployed], #27100
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786942595504` — 8/16/2026, 10:17:53 PM PT — 80 turns
+
+**Original task:**
+
+```
+#Rule 317
+
+This reversal log / Rule 317 does not appear to be actually repairing the underlying rule/s themselves or virtual emsu corpus, MCP, SSS or underlying process (whatever it is) rthar than just being fixed cursiorly in the window. Seems like it's purposefully not doing that to avoid the tougher work. I need truth as a source, no gaslighting. 
+
+That needs to be how the 317 works. Not just fix the window, fix
+```
+
+**Ideas referenced:** #0000, #13840, #16224, #19125, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #20251, #25150, #25151, #25185, #2525, #25888, #25925, #25926, #25935, #26349, #26435, #26617, #26696, #26774, #26914 [deployed], #26915 [executing], #26916, #26955 [deployed], #27100, #5344
+
+**Last PICKUP PROMPT:**
+
+```
+lling `clinerules_amend_rule`.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Rule 317 mechanical reversal repair (clinerules_amend_rule + hard validator gates).
+
+Where we left off (verified 2026-08-16 22:17 PT):
+- Shipped and verified: clinerules_amend_rule + clinerules_amend_history tools, rule_amend ledger table, R317_REVERSAL_NOT_REPAIRED + R317_REVERSAL_WRONG_RULE gates, corpus feed for the not-repaired failure, rule 317 obligation 6.
+- Build compiled (tsc exit 0), MCP reindexed (328 rules, 21 hardfloor), live process PID 36132 serving post-rebuild code.
+- Idea #26955 [deployed] filed in orchestrator_ideas (P0, technical).
+
+Open threads to drive next:
+1. #26955 [executing] — deploy the same clinerules-mcp build to the Artemis mirror (WireGuard, port 7860) so the gate is live on the server side, not just the Mac; then run a positive + negative control through clinerules_validate_completion (a flip logged WITH an amendment must pass, a flip logged WITHOUT must fail R317_REVERSAL_NOT_REPAIRED).
+2. #26955 [executing] — watch the nightly audit + gate_heartbeat for the first real R317_REVERSAL_NOT_REPAIRED block and confirm the corpus feed lands in ai_learned_corrections as r317_reversal_not_repaired.
+
+Reference IDs:
+- Ticket: n/a
+- Ideas filed: #26955 [deployed]
+- Files touched: /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786935011375` — 8/16/2026, 9:55:49 PM PT — 414 turns
 
 **Original task:**
 
@@ -110,7 +172,7 @@ Generated: 8/16/2026, 9:28:28 PM PT | window: last 72h | 87 tasks | index total 
 Frankensteitn-llm appears to be stalling. If it's because Deepseek needs credits, should it not fallback to another model?
 ```
 
-**Ideas referenced:** #0000, #10108, #10740, #11735, #11741, #11781, #11945, #11991, #12059, #12060, #12459, #12477, #12618, #12672, #12824, #12825, #12872, #12878, #13202, #16163, #16224, #16265, #16304, #16844, #1754, #1755, #18312, #18326, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #20251, #2050, #2073, #22229, #2294, #2299, #2307, #2314, #23169, #23171, #24217, #25097, #25151, #25185, #2525, #2532 [approved], #2534 [rejected], #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25888, #25925, #25926, #25935, #26209 [proposed], #26284 [executing], #26349, #26400, #26403, #26435, #26696, #26774, #26834 [deployed], #26837 [deployed], #26846 [deployed], #26852 [approved], #26864 [proposed], #26865 [proposed], #26866 [proposed], #26867 [deployed], #26868 [deployed], #26894, #26895, #26896, #26914 [executing], #26915 [executing], #26916, #26922 [deployed], #26927 [deployed], #26932 [proposed], #364746, #364775, #364776, #5344, #6711, #6719, #6826
+**Ideas referenced:** #0000, #10108, #10740, #11735, #11741, #11781, #11847, #11945, #11991, #12059, #12060, #12459, #12477, #12618, #12672, #12824, #12825, #12872, #12878, #13202, #16163, #16224, #16265, #16304, #16844, #1754, #1755, #18312, #18326, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #20251, #2050, #2073, #22229, #2294, #2299, #2307, #2314, #23169, #23171, #24217, #25097, #25151, #25185, #2525, #2532 [approved], #2534 [rejected], #2538, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25888, #25925, #25926, #25935, #26209 [proposed], #26284 [executing], #26349, #26400, #26403, #26435, #26696, #26774, #26834 [deployed], #26837 [deployed], #26846 [deployed], #26852 [approved], #26864 [proposed], #26865 [proposed], #26866 [proposed], #26867 [deployed], #26868 [deployed], #26894, #26895, #26896, #26914 [executing], #26915 [executing], #26916, #26922 [deployed], #26927 [deployed], #26932 [proposed], #364746, #364775, #364776, #5344, #6711, #6719, #6826
 
 **Last PICKUP PROMPT:**
 
@@ -137,7 +199,88 @@ drift, not from assumption.\n\n════════════════�
 </use_mcp_tool>
 ```
 
-### `1786939999732` — 8/16/2026, 9:27:30 PM PT — 156 turns
+### `1786942152453` — 8/16/2026, 9:55:26 PM PT — 32 turns
+
+**Original task:**
+
+```
+I read this and the question is about the ticket closure not about the quizzes, right? So what's with the idiotic reply?
+```
+
+**Ideas referenced:** #1758, #17580, #25221, #25702, #25705, #26939 [proposed], #6106, #9086
+
+**Last PICKUP PROMPT:**
+
+```
+26939 → filed, status proposed
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Email responder answered off-topic on Kendric Simmons ticket auto-close question (root cause on ticket 25705/25702).
+
+Where we left off (verified 2026-08-16 21:55 PT):
+- Student Kendric Simmons (26723BC-03) asked about 24-hour ticket auto-close; holding reply wrongly answered about chapter quizzes.
+- Correct reply posted to #25702; #25702 and #25705 both resolved.
+- Root-cause idea #26939 [proposed] filed in admin_portal.orchestrator_ideas.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26939 [proposed] — Implement email-responder topic guard: read latest student message, classify intent from that message, hold/draft-reject any reply whose topic mismatches latest inbound intent. MCP: emsu-operations ssh_command; code path under /var/www/emtskills (cron_email_responder / idea #6106 lineage).
+
+Reference IDs:
+- Tickets: 25702 (TKT-20260816-1FA1607F, Resolved), 25705 (TKT-20260816-7D2C5AB5, Resolved), 25221 (TKT-20260814-C6F463DC, still Open)
+- Ideas filed: #26939 [proposed]
+- Files touched: none (DB + tickets only via MCP)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786935841403` — 8/16/2026, 9:52:10 PM PT — 142 turns
+
+**Original task:**
+
+```
+The student seems to have submitted a plethora of documentation demonstrating that we may have an error with our system. Can you take a look at this and let me know what's going on here?
+```
+
+**Ideas referenced:** #12459, #12463, #1259, #18693, #18868, #19163, #24404, #25427, #26867, #26868 [deployed], #26916 [proposed], #26917 [proposed], #26918 [proposed], #26920 [proposed], #26921 [proposed], #5344, #6106, #6785, #9019, #9086, #9168, #9306, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+ed. No code or config changed.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Fernando Vazquez Serrano (25708W-07): verify /emtskills canonical URL and rule-317 dedup, then Ruben's admin-profile-guided reinstatement decision.
+
+Where we left off (verified 2026-08-16 21:51 PT):
+- Canonical URL confirmed: https://emsuniversity.com/emtskills/admin_profile.php?id=25708W-07 (HTTP 200). /emtskills prefix is NOT a misnomer — lib/url.php app_base_path() returns '/emtskills' for emsuniversity.com/CLI, and nginx sites-enabled/emtskills serves root /var/www/emtskills under that path. Root path 404s.
+- Rule 317 was already in place: idea #26867 (rule 317 admission-enforced) shipped 2026-08-16 17:35 PT. My #26921 is now superseded by #26867. Corpus correction note appended (21:51 PT) so RAG doesn't teach a duplicate lesson.
+- Idea #26920 [proposed] (canonical admin_profile URL doc fix) retained — real root-path 404 documentation gap.
+- Ruben "approved" the approach; his doubt was resolved by verifying both claims against live sources, not by agreeing.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26916 [awaiting_review] — Human decision (Ruben guiding from admin_profile) on Fernando: reverse fail_date 2025-07-04, reactivate Moodle (user.suspended=0; user_enrolments.status=0 for ue 38261 course 41 and ue 38508 course 46 — idea #9306), correct section/grouping (San Diego vs Alameda), re-run sudo -u www-data php /var/www/emtskills/cron/cron_class_enrollments_selfheal.php to backfill Class_Enrollments, then answer ticket 25427.
+2. #26917 [proposed] — Audit all terminal students with moodle_completion_date < 2026-03-15 for the same cert rework stranding (CPR item 2631, PSE category 1745, sims cmid 6815/6816, Alameda grouping). Query: SELECT student_id, fail_date, moodle_completion_date FROM Students WHERE fail_date IS NOT NULL AND moodle_completion_date IS NOT NULL AND moodle_completion_date < '2026-03-15'.
+3. #26918 [proposed] — Ticket 25427: cert-request + legal-threat tickets must escalate to named human owner and be blocked from auto-close; fix check_and_sync_moodle_enrollment authorization denial on terminal-state students (invocation 8216).
+4. #26920 [proposed] — Canonical admin_profile URL doc fix: replace any bare emsuniversity.com/admin_profile.php root links (which 404) with emsuniversity.com/emtskills/admin_profile.php in docs/specs/pickup prompts.
+
+Reference IDs:
+- Ticket: 25427 (open), 24404 (closed; contains the cert request + documentation)
+- Ideas filed: #26916 [awaiting_review], #26917 [proposed], #26918 [proposed], #26920 [proposed], #26921 [superseded → #26867]
+- Files touched: /var/www/emtskills/docs/HANDOFF_NOTES.md (corpus notes appended; one REDUNDANT-lesson correction appended)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786939999732` — 8/16/2026, 9:50:56 PM PT — 204 turns
 
 **Original task:**
 
@@ -155,7 +298,19 @@ not go thru and will be declined
 I already got several issues like this and they tried paying while it was suspended but didnt go thru 
 ```
 
-**Ideas referenced:** #164679, #16613, #174309, #175199, #17580, #18183, #18952, #18963, #26930 [proposed], #26931 [proposed], #3368
+**Ideas referenced:** #164679, #16613, #174309, #175199, #17580, #18183, #18952, #18963 [awaiting_review], #25185, #26515, #26930 [proposed], #26931 [proposed], #26934 [executing], #26935 [executing], #3368
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786941036813` — 8/16/2026, 9:30:41 PM PT — 2 turns
+
+**Original task:**
+
+```
+How does such degredation occur and how do we avoid this going forward? Seems like an RCA is in order for that-> The pool serving the Cline lane had degraded to 2 of 4 usable upstreams with both survivors saturated, so the adapter returned empty HTTP 200s (verified: adapter log showed continuous `CANARY probe failed upstream=http://127.0.0.1:11513 err=[Errno 104] Connection reset by peer` and `DECODE_STALL http://127.0.0.1:8210 rate=0.00 tok/s streak=12 -> penalty` plus `TIMEOUT_COOLDOWN_SET`; upstream log showed `ttfb_s: 165.36, queue_depth: 106.0` and a cline-lane entry at 262.77s). Cline se
+```
+
+**Ideas referenced:** #178693, #2535 [deployed], #2536 [deployed], #26819 [executing], #26908 [deployed], #26909 [rejected], #26910 [deployed], #26923 [deployed], #26925 [proposed], #26928 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -221,48 +376,6 @@ Reference IDs:
 - Ideas filed/deployed: #26834, #26837, #26846, #26852, #26868
 - Files touched: lib/CfaTerminologyGuard.php, lib/mailer.php, cron/cron_email_followup.php, cron/cron_email_responder.php, lib/ai_ticket_agent.php, cron/cron_cfa_queue_executor.php, api/chat_widget_api.php, lib/AutoResolveDispatcher.php, lib/rule91_canonical_validator.php, tests/CfaTerminologyGuardTest.php
 - Emails: 364746-364756 (corrected), 364775 (garbled, superseded), 364776 (Michael clean)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786935841403` — 8/16/2026, 8:34:24 PM PT — 122 turns
-
-**Original task:**
-
-```
-The student seems to have submitted a plethora of documentation demonstrating that we may have an error with our system. Can you take a look at this and let me know what's going on here?
-```
-
-**Ideas referenced:** #1259, #18693, #18868, #19163, #24404, #25427, #26868 [deployed], #26916 [proposed], #26917 [proposed], #26918 [proposed], #26920 [proposed], #26921 [proposed], #5344, #6106, #6785, #9019, #9086, #9168, #9306, #9339
-
-**Last PICKUP PROMPT:**
-
-```
-min_profile.php?id=25708W-07**
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Fernando Vazquez Serrano (25708W-07): rule-317-corrected findings, durable rule/corpus fixes filed, Ruben reviewing the verified admin_profile URL and guiding next step.
-
-Where we left off (verified 2026-08-16 20:34 PT):
-- Corrected URL (RCA'd, live-verified 200): https://emsuniversity.com/emtskills/admin_profile.php?id=25708W-07. Root-path link I previously sent 404s — root serves public/Moodle/WordPress; admin portal docroot is /var/www/emtskills under /emtskills/.
-- Re-probed facts (Rule 317): fail_date 2025-07-04 (+30d after course_end 2025-06-04); CPR grade item 2631 created 2025-07-03 17:26:27 PT with ZERO quiz_attempts and finalgrade NULL; course completion on 2026-01-27 19:01:55 PT; sims pages cmid 6815/6816 added 2026-03-15 02:30:45 PT; simplecertificate_issues has ZERO rows for EMT certs 52/54/68; end_of_course_certificate_link NULL.
-- Durable changes filed THIS session: #26921 [proposed] (rule-317 durable-change checklist — idea + corpus append required on retraction), #26920 [proposed] (canonical admin_profile URL corpus fix), both appended to docs/HANDOFF_NOTES.md (on-disk verified).
-- Ticket 25427 open, RC-11 deadman fired 2026-08-16 15:30 PT, auto-act sync returned forbidden (invocation 8216), assigned user 124. Ticket 24404 auto-closed.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26916 [awaiting_review] — Human decision (Ruben guiding from the profile page): reverse fail_date 2025-07-04, reactivate Moodle (user.suspended=0, user_enrolments.status=0 for ue 38261 course 41 and ue 38508 course 46 — idea #9306 path), correct section/grouping (San Diego vs Alameda), re-run sudo -u www-data php /var/www/emtskills/cron/cron_class_enrollments_selfheal.php to backfill Class_Enrollments, then answer ticket 25427.
-2. #26917 [proposed] — After classification, audit all terminal students with moodle_completion_date < 2026-03-15 for the same cert rework stranding (CPR item 2631, PSE category item 1745, sims 6815/6816, Alameda grouping). Candidate query: SELECT student_id, fail_date, moodle_completion_date FROM Students WHERE fail_date IS NOT NULL AND moodle_completion_date IS NOT NULL AND moodle_completion_date < '2026-03-15'.
-3. #26918 [proposed] — Ticket 25427: cert-request + legal-threat tickets must escalate to a named human owner and be blocked from auto-close; fix check_and_sync_moodle_enrollment authorization denial for terminal-state students (invocation 8216).
-
-Reference IDs:
-- Ticket: 25427 (open), 24404 (closed; contains the cert request + documentation)
-- Ideas filed: #26916 [awaiting_review], #26917 [proposed], #26918 [proposed], #26920 [proposed], #26921 [proposed]
-- Files touched: /var/www/emtskills/docs/HANDOFF_NOTES.md (corpus note appended, verified on disk); no code/config changes; only system change = self-heal cron run (healed 26526W-01, correctly skipped 25708W-07 as terminal)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════

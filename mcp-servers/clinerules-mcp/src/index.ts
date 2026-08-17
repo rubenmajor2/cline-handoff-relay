@@ -230,6 +230,25 @@ function initSchema(db: Database.Database): void {
       k TEXT PRIMARY KEY,
       v TEXT
     );
+
+    -- R317/#27100 (2026-08-16): durable proof-of-repair ledger. Reversal Log
+    -- entries must now be BACKED by an actual mechanical amendment of the causal
+    -- rule file (or a filed idea). clinerules_amend_rule writes a row here AND
+    -- rewrites the rule file on disk. The validator reads this table to verify
+    -- that every flip claiming a rule update really amended something THIS window,
+    -- so a reversal logged without a repair fails the completion gate.
+    CREATE TABLE IF NOT EXISTS rule_amend (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      rule_id TEXT NOT NULL,
+      slug TEXT NOT NULL,
+      task_id TEXT,
+      rca_bucket TEXT,
+      reversal_note TEXT,
+      amended_path TEXT,
+      created_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ','now'))
+    );
+    CREATE INDEX IF NOT EXISTS idx_rule_amend_rule ON rule_amend(rule_id);
+    CREATE INDEX IF NOT EXISTS idx_rule_amend_task ON rule_amend(task_id);
   `);
 }
 
@@ -523,6 +542,14 @@ function feedR317Corrections(failures: string[], task_id: string): void {
         "add a '# Reversal Log' section stating 'No reversals this window' or listing each flip with its RCA bucket",
         f.slice(0, 400)
       );
+    } else if (/R317_REVERSAL_NOT_REPAIRED/.test(vt)) {
+      feed(
+        "r317_reversal_not_repaired",
+        "Reversal Log listed a within-window flip claiming a causal-rule update with no mechanical amendment on disk",
+        "logged the reversal in the completion prose without editing the causal rule file / corpus / MCP",
+        "call clinerules_amend_rule for the causal rule so the rule text changes on disk, the proof is in rule_amend, and the MCP reindexes — a reversal is closed only when the underlying artifact changed",
+        f.slice(0, 400)
+      );
     }
   }
 }
@@ -702,6 +729,112 @@ server.tool(
         text: `✓ Reindexed: ${s.count} rules, ${s.total_bytes} bytes, ~${s.total_tokens} tokens, ${s.hardfloor_count} hardfloor.`,
       }],
     };
+  }
+);
+
+// ─── R317 / idea #27100: clinerules_amend_rule ──────────────────────────────
+// Ruben 2026-08-16: a reversal logged in the Reversal Log without repairing the
+// CAUSAL RULE is cursory window-fixing, not a closed loop. The reversal gate used
+// to demand only an RCA bucket + a *claim* of a causal-rule update. This tool is
+// the MECHANICAL half: it appends a dated amendment to the rule file ON DISK,
+// records the proof in the rule_amend table, and reindexes the MCP index so the
+// fix is live everywhere (file -> manifest -> MCP -> FTS) in one call.
+function amendRuleOnDisk(slugOrId: string, taskId: string, rcaBucket: string, note: string, triggerPattern: string): { ok: boolean; message: string; path?: string; rule_id?: string } {
+  const row = findRule(slugOrId);
+  if (!row) {
+    return { ok: false, message: `No rule found for '${slugOrId}'. Use clinerules_lookup or clinerules_search to find the causal rule, then retry.` };
+  }
+  // Never amend via the MCP DB copy — amend the SOURCE-OF-TRUTH file on disk.
+  const filePath = row.path;
+  if (!filePath || !fs.existsSync(filePath)) {
+    return { ok: false, message: `Rule file for '${row.slug}' not found on disk at ${filePath || "(unknown path)"}.` };
+  }
+  const body = fs.readFileSync(filePath, "utf-8");
+  const ts = new Date().toISOString().replace("T", " ").slice(0, 16) + " UTC";
+  const amendment = [
+    "",
+    "## Amendment (from reversal, " + ts + ")",
+    "",
+    "**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal",
+    `- Task: ${taskId || "(unknown)"}`,
+    `- RCA bucket: ${rcaBucket}`,
+    `- Trigger pattern: ${triggerPattern.slice(0, 200)}`,
+    `- Reversal note: ${note.slice(0, 1000)}`,
+    "",
+    "The reversal that produced this amendment is closed ONLY because the causal rule text changed.",
+    "",
+  ].join("\n");
+  fs.writeFileSync(filePath, body.replace(/\s+$/, "\n") + amendment, "utf-8");
+  // Record durable proof BEFORE reindex so a crash mid-reindex still proves repair.
+  try {
+    db.prepare(
+      `INSERT INTO rule_amend (rule_id, slug, task_id, rca_bucket, reversal_note, amended_path) VALUES (?,?,?,?,?,?)`
+    ).run(row.rule_id, row.slug, taskId || null, rcaBucket.slice(0, 60), note.slice(0, 2000), filePath);
+  } catch (e: any) {
+    return { ok: false, message: `Rule amended on disk but proof-record failed: ${e.message}. Re-run the tool.` };
+  }
+  // Live reindex so the MCP + FTS immediately serve the amended text.
+  try { reindex(db, false); } catch { /* non-fatal: background reindex will catch up */ }
+  return { ok: true, message: `Amended rule ${row.rule_id} (${row.slug}) at ${filePath}, reindexed.`, path: filePath, rule_id: row.rule_id };
+}
+
+server.tool(
+  "clinerules_amend_rule",
+  "RULE 317 MECHANICAL REPAIR (idea #27100). When a within-window reversal corrects a material claim, the CAUSAL RULE text must actually change, not just be logged. This tool APPENDS a dated amendment section to the causal rule file on disk, records the proof in the rule_amend ledger (which clinerules_validate_completion's R317_REVERSAL_NOT_REPAIRED gate reads), and reindexes the MCP so the fix is live everywhere in one call. Call this BEFORE attempt_completion for every flip in your Reversal Log that cites a causal-rule update. For a causal rule that is an IDEA rather than a rule file, file the idea first, then pass its # as rule_id; the tool will record the amendment against the idea id.",
+  {
+    rule_id: z.string().describe("Rule id, slug, or filename of the CAUSAL rule to amend (e.g. '317', '301', '315-verify-before-declaring-host-down'). If the causal fix is an idea rather than a rule file, file it first and pass the idea #."),
+    task_id: z.string().optional().describe("Cline task id where the reversal occurred."),
+    rca_bucket: z.string().describe("One of: wrong premise | stale assumption | unread source | insufficient probe | scope error."),
+    note: z.string().describe("1-3 sentences: what the reversal corrected and what the amended rule text now forbids or requires."),
+    trigger_pattern: z.string().optional().describe("The behavior that allowed the error, for the corpus feed."),
+  },
+  async ({ rule_id, task_id, rca_bucket, note, trigger_pattern }) => {
+    const validBuckets = ["wrong premise", "stale assumption", "unread source", "insufficient probe", "scope error"];
+    const bucket = (rca_bucket || "").trim().toLowerCase();
+    if (!validBuckets.includes(bucket)) {
+      return { content: [{ type: "text", text: `Invalid rca_bucket '${rca_bucket}'. Must be one of: ${validBuckets.join(" | ")}.` }] };
+    }
+    const res = amendRuleOnDisk(rule_id, task_id || "", bucket, note || "", trigger_pattern || "within-window reversal corrected a material claim");
+    if (!res.ok) {
+      return { content: [{ type: "text", text: `❌ ${res.message}` }] };
+    }
+    return {
+      content: [{
+        type: "text",
+        text: `✅ ${res.message}\nProof recorded in rule_amend (task ${task_id || "unknown"}, rule ${res.rule_id}). The validator gate now sees this as a repaired flip. If your Reversal Log lists this flip, it must name this rule ('${rule_id}') — the gate cross-checks.`,
+      }],
+    };
+  }
+);
+
+server.tool(
+  "clinerules_amend_history",
+  "RULE 317 proof-of-repair audit. Lists all mechanical rule amendments recorded by clinerules_amend_rule (rollup by rule id). Use to verify a reversal actually amended its causal rule on disk rather than just narrating a fix.",
+  {
+    days: z.number().int().min(1).max(90).default(14).describe("Rollup window in days (default 14)."),
+  },
+  async ({ days }) => {
+    try {
+      const rows = db.prepare(`
+        SELECT rule_id, COUNT(*) AS n, MAX(created_at) AS last_amended
+        FROM rule_amend
+        WHERE created_at >= datetime('now', ?)
+        GROUP BY rule_id ORDER BY last_amended DESC
+      `).all(`-${days} day`) as any[];
+      const total = db.prepare(`SELECT COUNT(*) AS n FROM rule_amend WHERE created_at >= datetime('now', ?)`)
+        .get(`-${days} day`) as any;
+      const lines = [
+        `RULE AMENDMENT LEDGER (idea #27100) — trailing ${days}d: ${total.n} mechanical repair(s)`,
+      ];
+      if (rows.length) {
+        for (const r of rows) lines.push(`  rule ${r.rule_id}: ${r.n} amendment(s), last ${r.last_amended}`);
+      } else {
+        lines.push("  (none — no rule files mechanically amended by clinerules_amend_rule in this window)");
+      }
+      return { content: [{ type: "text", text: lines.join("\n") }] };
+    } catch (e: any) {
+      return { content: [{ type: "text", text: `AMEND HISTORY ERROR: ${e.message}` }] };
+    }
   }
 );
 
@@ -1222,6 +1355,100 @@ server.tool(
             jsonFlipsMissing.map((s: string) => `"${s.trim().slice(0, 80)}"`).join("; ") +
             `. A JSON flip must carry "initial", "corrected", "rca_bucket" (one of: wrong premise|stale assumption|unread source|insufficient probe|scope error), and "causal_rule" (file/slug or filed idea #NNNN).`
           );
+        }
+      }
+    }
+
+    // ── RULE 317 / idea #27100: REVERSAL NOT REPAIRED (mechanical proof) ───
+    // Ruben 2026-08-16: a Reversal Log section that claims a causal-rule update
+    // but is backed by NO actual amendment is cursory window-fixing. Before this
+    // gate, the validator only demanded an RCA bucket + the WORD "causal rule"
+    // appear somewhere. An agent could type a plausible flip line and pass while
+    // the underlying rule file, corpus, and MCP all went untouched.
+    //
+    // This gate makes the check mechanical: if a Reversal Log section contains a
+    // listed flip (an actual correction, NOT the "No reversals this window" line,
+    // and not a flip that names an idea as its causal fix), the validator requires
+    // PROOF that the causal rule was amended THIS window. Proof = a rule_amend row
+    // written by clinerules_amend_rule for this task_id, OR the flip line carries
+    // a filed idea number (where the causal fix is an idea, not a rule file).
+    //
+    // The flips that name a real rule file/slug (or simply cite a causal-rule
+    // update) are the ones that must be backed by a mechanical amendment. A flip
+    // whose causal fix is an idea is exempt ONLY if it carries #NNNN [tag].
+    if (task_id && task_id.trim().length > 0) {
+      const _revStart = result_text.search(/^#{0,3}\s*reversal\s*log/im);
+      if (_revStart >= 0) {
+        const _revBody = result_text.slice(_revStart);
+        const _revSection = _revBody
+          .split(/\u2550{5,}[\s\S]{0,60}?PICKUP PROMPT/i)[0]
+          .split(/PICKUP PROMPT \(paste into a fresh Cline window\)/i)[0];
+        const _flipRe = /\u2192|=>|->|\bbecame\b|\bbecomes\b|\bturned out to be\b|\bwas actually\b|\bcorrected to\b|\binitial\b[^\n]*\bcorrected\b/i;
+        const _hasRealFlip = _revSection.split("\n").some((l: string) => {
+          const t = l.trim();
+          if (!t) return false;
+          if (/no reversals/i.test(t)) return false;
+          // A flip line (text or structured JSON) that evidences an actual correction.
+          return _flipRe.test(t) && (t.startsWith("-") || t.startsWith("*") || t.startsWith("{"));
+        });
+        if (_hasRealFlip) {
+          // A flip whose causal fix is an idea (real #NNNN [tag]) is exempt from
+          // the file-amendment requirement, because the causal repair there is the
+          // idea row itself, which create_idea already committed.
+          const _flipsCitingRuleFile = _revSection.split("\n").some((l: string) => {
+            const t = l.trim();
+            if (!t || !_flipRe.test(t)) return false;
+            if (/#\d{1,8}\s*\[[^\]]+\]/.test(t)) return false; // idea-cited flip — exempt
+            return true; // flip cites a causal RULE update with no idea id — must be amended on disk
+          });
+          if (_flipsCitingRuleFile) {
+            const amended = db.prepare(
+              `SELECT rule_id, slug FROM rule_amend WHERE task_id = ?`
+            ).all(task_id) as { rule_id: string; slug: string }[];
+            if (amended.length === 0) {
+              failures.push(
+                `R317_REVERSAL_NOT_REPAIRED: the Reversal Log lists a within-window flip claiming a causal-rule update, ` +
+                `but the rule_amend ledger has ZERO mechanical amendments for task ${task_id}. Rule 317 (idea #27100): ` +
+                `a reversal is closed ONLY when the causal rule TEXT actually changed on disk — not when it was merely logged. ` +
+                `Call clinerules_amend_rule(rule_id='<causal rule>', task_id='${task_id}', rca_bucket='<bucket>', note='<what changed>') ` +
+                `for EVERY flip whose causal fix is a rule file, then re-validate. ` +
+                `(A flip whose causal fix is an idea is exempt only if that flip line carries a real #NNNN [tag].)`
+              );
+            } else {
+              // Cross-check: the flip must name a rule that was actually amended.
+              // Normalize both sides to (leading digits) OR full slug so "317" and
+              // "317-reversal-triggers-297-and-rule-update" match. A window that
+              // amends an UNRELATED rule to satisfy the counter fails here.
+              const _amendedKeys = new Set<string>();
+              for (const a of amended) {
+                _amendedKeys.add(a.rule_id);
+                _amendedKeys.add(a.slug);
+                const _digits = String(a.rule_id).match(/^\d+/);
+                if (_digits) _amendedKeys.add(_digits[0]);
+              }
+              const _mismatchedFlips: string[] = [];
+              const _citedRuleRe = /(?:causal\s+rule\s+(?:updated|amended|fixed)|rule\s+(?:updated|amended|fixed))\s*[:\-]?\s*([A-Za-z0-9_.\-]+)/i;
+              for (const _l of _revSection.split("\n")) {
+                if (!_flipRe.test(_l.trim())) continue;
+                const _cm = _l.match(_citedRuleRe);
+                if (!_cm) continue;
+                const _cited = _cm[1].replace(/\.md$/, "").trim();
+                const _citedDigits = _cited.match(/^\d+/);
+                const _citedKey = _citedDigits ? _citedDigits[0] : _cited;
+                if (!_amendedKeys.has(_cited) && !_amendedKeys.has(_citedKey)) {
+                  if (!_mismatchedFlips.includes(_cited)) _mismatchedFlips.push(_cited);
+                }
+              }
+              if (_mismatchedFlips.length > 0) {
+                failures.push(
+                  `R317_REVERSAL_WRONG_RULE: the Reversal Log cites causal rule(s) ${_mismatchedFlips.map((s) => `'${s}'`).join(", ")} ` +
+                  `but NO amendment for that rule exists in the rule_amend ledger for task ${task_id}. ` +
+                  `Amended this window: ${[..._amendedKeys].join(", ")}. ` +
+                  `Rule 317 (idea #27100): amend the rule the flip actually cites, then re-validate.`
+                );
+              }
+            }
+          }
         }
       }
     }

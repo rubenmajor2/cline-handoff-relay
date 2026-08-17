@@ -6,14 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/17/2026, 3:39:46 PM PT | window: last 72h | 99 tasks | index total 794 (parsed 1, cached 793)
+Generated: 8/17/2026, 4:39:46 PM PT | window: last 72h | 98 tasks | index total 795 (parsed 3, cached 792)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787003799738` | 8/17/2026, 3:30:02 PM | 186 | 696KB | #TDSHS |
+| `1787003799738` | 8/17/2026, 4:39:40 PM | 382 | 1262KB | #TDSHS |
+| `1787009927550` | 8/17/2026, 4:39:34 PM | 9 | 172KB | Hi Julia, reports of your death are exaggerated? |
+| `1787000192686` | 8/17/2026, 4:34:35 PM | 112 | 875KB | Keep getting this upon initial iteration of frankenstein-llm: {"message":"Failed to fetch  |
 | `1786980640015` | 8/17/2026, 2:56:11 PM | 322 | 2451KB | #TDSHS |
 | `1787002408232` | 8/17/2026, 2:47:03 PM | 110 | 177KB | For this |
-| `1787000192686` | 8/17/2026, 2:12:51 PM | 108 | 650KB | Keep getting this upon initial iteration of frankenstein-llm: {"message":"Failed to fetch  |
 | `1786993543586` | 8/17/2026, 2:01:53 PM | 322 | 2130KB | Our Staff Keycards were all deactivated and students/staff were locked out of our building |
 | `1786994625500` | 8/17/2026, 12:39:38 PM | 38 | 180KB | please run the Fix AVP program on my computer that I can't seem to open |
 | `1786960541449` | 8/17/2026, 12:29:31 PM | 810 | 5349KB | #Julia/Claudia 235B  |
@@ -107,14 +108,12 @@ Generated: 8/17/2026, 3:39:46 PM PT | window: last 72h | 99 tasks | index total 
 | `1786751687527` | 8/14/2026, 6:23:14 PM | 82 | 427KB | #CFA Stuff |
 | `1786743833650` | 8/14/2026, 5:24:44 PM | 200 | 754KB | I would like for you to make a Klein rule as well as a rule in Argus that is called the ga |
 | `1786566964850` | 8/14/2026, 4:51:33 PM | 342 | 2040KB | Answer to this question is not what was given. It's a registration check to see why there  |
-| `1786696256201` | 8/14/2026, 3:53:08 PM | 198 | 11668KB | #Grievance issue |
-| `1786569178009` | 8/14/2026, 3:51:36 PM | 296 | 1383KB | #/emtskills / wordpress |
 
 ---
 
 ## Per-window detail
 
-### `1787003799738` — 8/17/2026, 3:30:02 PM PT — 186 turns
+### `1787003799738` — 8/17/2026, 4:39:40 PM PT — 382 turns
 
 **Original task:**
 
@@ -137,9 +136,94 @@ Inspection Number 5196
 Insp
 ```
 
-**Ideas referenced:** #178695, #2003, #22757, #27072 [deployed], #27073 [awaiting_review], #27100 [executing], #27107 [executing], #27108 [executing], #27112 [proposed], #27114 [proposed], #4856, #4929, #664426
+**Ideas referenced:** #178695, #2003, #22757, #25185, #27072 [deployed], #27073 [awaiting_review], #27100 [executing], #27107 [executing], #27108 [executing], #27112 [proposed], #27114 [proposed], #27116 [proposed], #27121 [proposed], #4856, #4929, #664426
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787009927550` — 8/17/2026, 4:39:34 PM PT — 9 turns
+
+**Original task:**
+
+```
+Hi Julia, reports of your death are exaggerated?
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #12459, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25378, #25381, #2546, #7142, #7149
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787000192686` — 8/17/2026, 4:34:35 PM PT — 112 turns
+
+**Original task:**
+
+```
+Keep getting this upon initial iteration of frankenstein-llm: {"message":"Failed to fetch LiteLLM model info: <none>","modelId":"frankenstein-llm","providerId":"litellm"}
+
+-- 
+then it starts iterating, but something is tripping it initially. 
+
+Flapping:
+
+[LITELLM] Failed to fetch LiteLLM model info: <none>
+{"message":"Failed to fetch LiteLLM model info: <none>","modelId":"frankenstein-llm","providerId":"litellm"}:
+
+
+--
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
+
+
+Both answered. The method is now written
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12584, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #178700, #18312, #18326, #19338, #19686, #1998, #2299, #23171, #25097, #2537, #2551 [deployed], #26908, #26923
+
+**Last PICKUP PROMPT:**
+
+```
+elated to the model-info flap.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787001058 — Cline LiteLLM model-info fetch flapping fix.
+
+Where we left off (verified 2026-08-17 16:33 PT):
+- Config fix applied: openAiBaseUrl and liteLlmBaseUrl now point to https://litellm.emsuniversity.com (Cloudflare tunnel)
+- Router audit confirms frankenstein-llm routing works (picks frankenstein-tools, surface Cline Main)
+- Requests now arrive through Cloudflare tunnel (public IP 172.116.115.101, not dead WireGuard 10.100.0.1)
+- User needs to reload VS Code for liteLlmApiKey to take effect
+- Bug library incident 2551 recorded with full RCA
+
+Open threads to drive next:
+1. (human-only decision, no idea) — verify after VS Code reload that the "Failed to fetch LiteLLM model info" error no longer appears on initial iteration
+2. (human-only decision, no idea) — the glm-5.2-local 600s timeouts and Artemis BadRequest errors in the LiteLLM logs are separate pre-existing issues, not caused by this fix
+
+Reference IDs:
+- Ideas filed: none
+- Ideas closed: none
+- Files touched: ~/Library/Application Support/Code/User/globalStorage/saoudrizwan.claude-dev/state/state.vscdb (API config updated), /tmp/fix_cline_config.py (fix script)
+- Bug library: incident 2551 (frankenstein_router_incidents)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+
+# Reversal Log
+No reversals this window.</result>
+<task_progress>- [x] Check bug library (novel symptom confirmed)
+- [x] Verify frankenstein registry healthy
+- [x] Probe LiteLLM /v1/models endpoint (up, 401 without auth)
+- [x] Check router audit log (routing works fine)
+- [x] Find Cline extension source for "Failed to fetch LiteLLM model info" error
+- [x] Read the full LiteLLM model-info fetch function (wTn at offset 12062136)
+- [x] Reproduce the model-info fetch with auth (Cloudflare tunnel works, WireGuard dead)
+- [x] Identify root cause of initial flap (10.100.0.1 WireGuard unreachable from Mac)
+- [x] Implement fix (update config to use Cloudflare tunnel URL)
+- [x] Verify fix (config re-read confirms Cloudflare URL, router audit shows successful routing, requests arriving through tunnel)
+- [x] Record in bug library (incident 2551)
+- [x] Post-fix verification (logs confirm tunnel is being used, routing works)</task_progress>
+</attempt_completion>
+```
 
 ### `1786980640015` — 8/17/2026, 2:56:11 PM PT — 322 turns
 
@@ -210,77 +294,6 @@ cna you fix that so they can take their final exam?
 **Ideas referenced:** #27109 [proposed], #27110 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787000192686` — 8/17/2026, 2:12:51 PM PT — 108 turns
-
-**Original task:**
-
-```
-Keep getting this upon initial iteration of frankenstein-llm: {"message":"Failed to fetch LiteLLM model info: <none>","modelId":"frankenstein-llm","providerId":"litellm"}
-
--- 
-then it starts iterating, but something is tripping it initially. 
-
-Flapping:
-
-[LITELLM] Failed to fetch LiteLLM model info: <none>
-{"message":"Failed to fetch LiteLLM model info: <none>","modelId":"frankenstein-llm","providerId":"litellm"}:
-
-
---
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12584, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #178700, #18312, #18326, #19338, #19686, #1998, #2299, #23171, #25097, #2537, #2551 [deployed], #26908, #26923
-
-**Last PICKUP PROMPT:**
-
-```
-frankenstein_router_incidents.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787001058 — Cline LiteLLM model-info fetch flapping fix.
-
-Where we left off (verified 2026-08-17 14:12 PT):
-- Diagnosed root cause: Cline config pointed to dead WireGuard IP (10.100.0.1) instead of Cloudflare tunnel
-- Fixed config: openAiBaseUrl and liteLlmBaseUrl now point to https://litellm.emsuniversity.com
-- Bug library incident 2551 recorded with full RCA
-- User needs to reload VS Code for changes to take effect
-
-Open threads to drive next:
-1. (human-only decision, no idea) — verify after VS Code reload that the 'Failed to fetch LiteLLM model info' error no longer appears on initial iteration
-
-Reference IDs:
-- Ideas filed: none
-- Ideas closed: none
-- Files touched: ~/Library/Application Support/Code/User/globalStorage/saoudrizwan.claude-dev/state/state.vscdb (API config updated), /tmp/fix_cline_config.py (fix script)
-- Bug library: incident 2551 (frankenstein_router_incidents)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-
-# Reversal Log
-No reversals this window.</result>
-<command>echo "Config fix applied. Reload VS Code (Developer: Reload Window) to take effect. Verify with: sqlite3 ~/Library/Application\ Support/Code/User/globalStorage/saoudrizwan.claude-dev/state/state.vscdb \"SELECT value FROM ItemTable WHERE key='apiConfiguration';\" | python3 -c \"import sys,json; d=json.loads(sys.stdin.read()); print('openAiBaseUrl:', d.get('openAiBaseUrl')); print('liteLlmBaseUrl:', d.get('liteLlmBaseUrl'))\""</command>
-<task_progress>- [x] Check bug library (novel symptom confirmed)
-- [x] Verify frankenstein registry healthy
-- [x] Probe LiteLLM /v1/models endpoint (up, 401 without auth)
-- [x] Check router audit log (routing works fine)
-- [x] Find Cline extension source for "Failed to fetch LiteLLM model info" error
-- [x] Read the full LiteLLM model-info fetch function (wTn at offset 12062136)
-- [x] Reproduce the model-info fetch with auth (Cloudflare tunnel works, WireGuard dead)
-- [x] Identify root cause of initial flap (10.100.0.1 WireGuard unreachable from Mac)
-- [x] Implement fix (update config to use Cloudflare tunnel URL)
-- [x] Verify fix (config re-read confirms Cloudflare URL, endpoint returns HTTP 200)
-- [x] Record in bug library (incident 2551)</task_progress>
-</attempt_completion>
-```
 
 ### `1786993543586` — 8/17/2026, 2:01:53 PM PT — 322 turns
 
@@ -3907,106 +3920,5 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786696256201` — 8/14/2026, 3:53:08 PM PT — 198 turns
-
-**Original task:**
-
-```
-#Grievance issue
-
-Vicky says that she's having problem uploading stuff to the grievance manager: 
-
-Also my grievance upload is still not working we have several already submitted for review, do I submit them to you directly?
-
-See this: screenshot and whatever she posted into Argus
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #19470, #19499 [awaiting_review], #19567, #20042, #2063, #2065, #20662, #2073, #20884, #20985, #21038, #2127, #2168, #2328, #2337, #2338, #2339, #2340, #2341, #2343, #2344, #25378, #25381, #25888, #26025, #26031, #26032, #26033, #26034 [superseded], #26053 [deployed], #26205 [executing], #26207 [executing], #26208 [executing], #26209 [proposed], #26210 [executing], #26211 [proposed], #26214 [executing], #26215 [executing], #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26305 [awaiting_review], #26306 [awaiting_review], #3261, #3319, #3346, #58044, #58045, #58380, #6230, #6231, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-send anything to you directly.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Grievance upload 500 fix: verified via direct handleUpload() test; optional final end-to-end HTTP test.
-
-Where we left off (verified 2026-08-14 15:46 PT):
-- `/var/www/emtskills/routes/api/grievance_api.php` fixed: line 582 `lib/policy_tag_validator.php`, line 584 `isPolicyTagRequired($_POST['category'] ?? 'other')`, lines 799-801 externship lib. `php -l` clean.
-- Direct `handleUpload()` run with `category=other` + empty policy_tag: PASS — no fatal, no policy_tag rejection, reached file-save step.
-- Full HTTP end-to-end (file-save + DB row) not completed: WAF returned 403 on the public student-token route; `move_uploaded_file()` is browser/HTTP-only.
-- #26034 `deployed` → `superseded` (#26053 `deployed` supersedes).
-
-Open threads to drive next:
-1. #26305 [awaiting_review] — Optional: complete the full file-save + DB-row test by POSTing a real multipart upload from inside the server (bypass WAF), then confirm a `grievances` row is created. Otherwise, have Vicky do one browser upload as the final sanity check.
-
-Reference IDs:
-- Ideas filed this session: #26305 [awaiting_review], #26306 [awaiting_review]
-- Ideas re-dispositioned: #26034 [superseded], #26053 [deployed]
-- Files touched: `/var/www/emtskills/routes/api/grievance_api.php`
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786569178009` — 8/14/2026, 3:51:36 PM PT — 296 turns
-
-**Original task:**
-
-```
-#/emtskills / wordpress
-
-Not sure you tell me / act according to rule 29
-#23954 [awaiting_review] (verified: reconcile returned status=ready_for_review) move LLM calls off the request path onto the background queue. This is the actual cure, since pool isolation is only containment.
-#23952 [awaiting_review] (verified: reconcile returned status=ready_for_review) 277 routes hold the PHP session lock for the whole request, causing a per-user freeze that is invisible in server metrics. Redis sessions or session_write_close.
-
-
-Approved
-- #23945 [proposed] (verified: identity echo returned "SOURCE FI
-```
-
-**Ideas referenced:** #18694, #18700, #1914 [deployed], #23133 [executing], #2322 [deployed], #2348, #23945 [proposed], #23952 [awaiting_review], #23954 [awaiting_review], #25042 [deployed], #25185, #25888, #25940 [executing], #25952 [executing], #25953 [executing], #26258 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-/emsu-llm-pool-isolation-guard
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #25940 — finish the LLM endpoint move off the shared www FPM pool (and close the WAF decision #26258).
-
-Where we left off (verified 2026-08-14 15:50 PT):
-- Pool isolation landed earlier: 10 endpoints moved to the agents pool in BOTH nginx configs, agents pool raised 20→40 children, drift guard + 6-hourly cron installed. Load 19.27→10.85, FPM queues 0, TTFB ~14ms.
-- Recurrence mechanism: nginx AGENT_POOL list is hand-maintained, so new LLM endpoints silently default back to www. The guard makes that loud.
-- CRITICAL config trap: public traffic is served by /var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf, NOT /etc/nginx/sites-enabled/emtskills (:8082 + WireGuard only). Patching the wrong one passes nginx -t and changes nothing for users.
-- WAF: SecRuleEngine DetectionOnly + 0-byte audit log since Feb is the non-enforcement root cause; #26258 awaits Ruben's enforcement decision.
-- SQLi campaign (13 IPs) fully blocked; detector defects fixed and verified on real attack.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26258 [awaiting_review] — get Ruben's WAF enforcement decision (DetectionOnly → On), then apply. Human decision first.
-2. #25940 [executing] — run the guard for the live list, then add each missing basename to AGENT_POOL regex in BOTH configs; verify via accepted-conn delta on /fpm-status-agents vs /fpm-status-www.
-3. #23954 [awaiting_review] — move LLM calls off the request path onto the background queue (the actual cure).
-4. #23133 [executing] — fix chat/telephony endpoints blocking synchronously on 17.9s LLM calls with timeouts below real latency.
-5. #23952 [awaiting_review] — 277 routes hold the PHP session lock for the whole request; Redis sessions or session_write_close.
-6. #23945 [proposed] — close/supersede the original isolation idea now that the guard enforces it.
-
-Reference IDs:
-- Ticket: n/a
-- Ideas filed: #26258 [awaiting_review]
-- Ideas referenced: #25940 [executing], #23954 [awaiting_review], #23952 [awaiting_review], #23133 [executing], #23945 [proposed], #25042 [deployed]
-- Files touched: /var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf, /etc/nginx/sites-enabled/emtskills, /etc/php/8.3/fpm/pool.d/agents.conf, /var/www/emtskills/scripts/llm_pool_isolation_guard.py, /etc/cron.d/emsu-llm-pool-isolation-guard, HANDOFF_NOTES.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```

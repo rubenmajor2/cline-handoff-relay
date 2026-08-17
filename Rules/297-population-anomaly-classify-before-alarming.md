@@ -177,3 +177,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: TDSHS packet asserted twice that externship hours were worked "at a fire department operating under an executed affiliation agreement on file." Neither claim was backed: externship_affiliation_agreements holds 0 rows total, ExternshipSite.agreement_status is a hand-set enum with compliance_doc_id NULL for the site in question, and the Carrollton site referenced for the 1080261916 student does not exist in ExternshipSite at all. The status flag was read as if it were the document. Amendment: a status enum, a boolean, or a named column is NOT evidence that the artifact it describes exists. Before asserting to any external party that a document is "on file" or "executed", query the table that would HOLD the document (row count, file path, URL) and confirm a row exists for that specific entity; if the holding table is empty or the entity is absent, the claim must be downgraded to what the record actually supports.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-17 22:52 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786952400
+- RCA bucket: unread source
+- Trigger pattern: Characterising what an external document alleges when only its cover email was read and the attachment was never captured
+- Reversal note: Every draft of the TDSHS packet stated "Each transmittal alleges that the program failed to provide timely externship scheduling and adequate student support." Nobody had read a single one of the three complaints: the transmittal email bodies contain only the student name and cohort, and all three attachments sit at compliance_source_documents status=not_obtained with file_path NULL and zero inbound_attachment_ocr rows. The allegation was inferred from the pattern of earlier matters and then asserted as fact to a regulator. Amendment: before characterising what any external document alleges, requests, or requires, confirm the document itself has been READ this session and name where it was read from. An email that says "please see attached" is not the document; if the attachment is not captured, the correct output is "the program has not been provided the substance of the matter" plus a request that the agency state it, never an inferred characterisation. Corollary: when the record for
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

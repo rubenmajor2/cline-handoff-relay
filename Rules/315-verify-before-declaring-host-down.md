@@ -79,3 +79,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Julia 235B: I reported the box as unreachable with no remote path and deferred to WOL/physical access, having probed only ping/SSH/tunnel/WireGuard. Ruben pointed out Julia is directly cabled to Claudia over CX7. Bringing all four CX7 netdevs administratively UP from the reachable peer and reading carrier gave a decisive answer the entire IP ladder could not: admin-UP with NO-CARRIER on every port (link flags <NO-CARRIER,BROADCAST,MULTICAST,UP>, IB state DOWN, phys_state 3 Disabled) is positive evidence the far-end NIC is unenergized, because a CX7 NIC in a running box asserts carrier even when the OS is wedged, has no IP, or refuses SSH. Amendment to the host-down ladder: before classifying a host as HOST DOWN / unreachable, check the record for any DIRECTLY CABLED peer that is reachable; if one exists, bring the shared link admin-UP on the peer and read /sys/class/net/<dev>/carrier plus the IB port state. Carrier=1 means the box is powered and the fault is above the PHY (OS wedge, se
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-17 23:43 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786932084
+- RCA bucket: scope error
+- Trigger pattern: Asserting a user-facing model/service availability claim from an endpoint-level probe alone, without checking whether the router rewrites the model name to a sibling before dispatch
+- Reversal note: Julia/Claudia 235B: I probed the BOX (:11513 ConnectionRefused, WG/SSH/LAN dead from two vantage points, canary healthy=False) and from that correctly-measured box state asserted a USER-FACING capability claim, that julia-235b "is not serving". Ruben was at that moment iterating on litellm:julia-235b fast and successfully. Both were true because the router REWRITES THE REQUEST: _router_core.py:5148 `data["model"] = sibling` in the admission_control_fast_fail path silently retargets model-name julia-235b to glm-5.2-local. Measured last 30 min: 18 julia-235b requests, 16 rerouted to glm-5.2-local (prompt_tokens ~70,300), 1 hard 500. Rule 315 taught that process-alive is not serving; the inverse hole was unguarded, that a model NAME can serve perfectly while its declared endpoint is dead. Amendment: a box-level probe licenses a claim about THE BOX only. Before asserting that a MODEL NAME is unavailable to callers, additionally (a) grep the router for a rewrite of data["model"] on that nam
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

@@ -69,3 +69,13 @@ On any box that claims hours of uptime: `grep -c "startup complete" <container-l
 - Reversal note: Julia/Claudia 235B: I classified the outage as host-down requiring physical intervention because ping/SSH/WG/tunnels were all dead, and reported no remote recovery path. After the boxes returned, the real root cause was software and fully remotely fixable: Julia lost its RoCE IPv4 (192.168.100.3/24 on enp1s0f1np1) across reboot, leaving GID index 3 empty, so NCCL paired a link-local IPv6 GID against Claudia's IPv4-mapped GID and ibv_modify_qp failed EINVAL(22) INIT->RTR, surfacing only as the generic 'NCCL unhandled system error / Engine core initialization failed'. The @reboot auto-start fired every boot and failed identically, which made a working guard look absent. Amendment: for any TP/PP multi-node engine that fails to init, the host-state ladder is NOT sufficient. Before declaring physical/human-required, probe the fabric: (a) ip -4 addr on the RoCE/IB netdev on EVERY node, (b) the GID table (/sys/class/infiniband/<dev>/ports/1/gids + gid_attrs/types) and confirm all peers expose
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-17 19:21 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786932084
+- RCA bucket: insufficient probe
+- Trigger pattern: Reporting a host as 'unreachable / unverifiable remotely' after exhausting only the IP-layer ladder (ping, SSH, tunnels, WG), without testing the PHY layer on a directly-cabled peer that could disting
+- Reversal note: Julia 235B: I reported the box as unreachable with no remote path and deferred to WOL/physical access, having probed only ping/SSH/tunnel/WireGuard. Ruben pointed out Julia is directly cabled to Claudia over CX7. Bringing all four CX7 netdevs administratively UP from the reachable peer and reading carrier gave a decisive answer the entire IP ladder could not: admin-UP with NO-CARRIER on every port (link flags <NO-CARRIER,BROADCAST,MULTICAST,UP>, IB state DOWN, phys_state 3 Disabled) is positive evidence the far-end NIC is unenergized, because a CX7 NIC in a running box asserts carrier even when the OS is wedged, has no IP, or refuses SSH. Amendment to the host-down ladder: before classifying a host as HOST DOWN / unreachable, check the record for any DIRECTLY CABLED peer that is reachable; if one exists, bring the shared link admin-UP on the peer and read /sys/class/net/<dev>/carrier plus the IB port state. Carrier=1 means the box is powered and the fault is above the PHY (OS wedge, se
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

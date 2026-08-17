@@ -6,13 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/17/2026, 11:39:44 AM PT | window: last 72h | 95 tasks | index total 788 (parsed 3, cached 785)
+Generated: 8/17/2026, 12:39:45 PM PT | window: last 72h | 98 tasks | index total 791 (parsed 4, cached 787)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786960541449` | 8/17/2026, 11:39:34 AM | 653 | 4632KB | #Julia/Claudia 235B  |
-| `1786989452314` | 8/17/2026, 11:26:49 AM | 172 | 460KB | frankenstein-llm keeps going down as I'm trying to put back up Cicero and Maximus, not sur |
-| `1786559316764` | 8/17/2026, 11:14:10 AM | 188 | 900KB | #Lower Romans |
+| `1786993543586` | 8/17/2026, 12:39:39 PM | 115 | 693KB | Our Staff Keycards were all deactivated and students/staff were locked out of our building |
+| `1786994625500` | 8/17/2026, 12:39:38 PM | 38 | 180KB | please run the Fix AVP program on my computer that I can't seem to open |
+| `1786960541449` | 8/17/2026, 12:29:31 PM | 810 | 5349KB | #Julia/Claudia 235B  |
+| `1786559316764` | 8/17/2026, 12:18:17 PM | 264 | 1174KB | #Lower Romans |
+| `1786989452314` | 8/17/2026, 12:05:55 PM | 279 | 730KB | frankenstein-llm keeps going down as I'm trying to put back up Cicero and Maximus, not sur |
+| `1786992321708` | 8/17/2026, 11:46:05 AM | 6 | 13KB | Testing Julia iteration |
 | `1786979863145` | 8/17/2026, 10:38:13 AM | 213 | 417KB | #Executor |
 | `1786835771600` | 8/17/2026, 10:07:11 AM | 410 | 2310KB | #BLS  |
 | `1786573125988` | 8/17/2026, 9:49:11 AM | 383 | 3324KB | Please tell me if this is wrong? And if so why and what is going on? |
@@ -110,7 +113,109 @@ Generated: 8/17/2026, 11:39:44 AM PT | window: last 72h | 95 tasks | index total
 
 ## Per-window detail
 
-### `1786960541449` — 8/17/2026, 11:39:34 AM PT — 653 turns
+### `1786993543586` — 8/17/2026, 12:39:39 PM PT — 115 turns
+
+**Original task:**
+
+```
+Our Staff Keycards were all deactivated and students/staff were locked out of our building on Saturday in Houston. There is something weird going on with the landlord and the firemarchall there that doesn't make sense. Anyway It's causing a huge downstream issue with us not having building access on the Weekends or after hours. It's also a violation of the lease. See lease:
+
+https://drive.google.com/drive/home 
+
+Check all emails to/from blackgoldrealty.com in postmark on my email to/from jthompson@emsuniversity.com rmajor@emsuniversity.com cfrench@emsuniversity.com. 
+
+I need a call list. Email
+```
+
+**Ideas referenced:** #171083, #2144, #249948, #250516, #251038, #251264, #251382, #251428, #251444, #251447, #251450, #251498, #251641, #2528, #26384, #26385, #2643, #26799, #26800, #27098 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+e, cure period) in the letter.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task BlackGold Realty Houston building-access lockout / lease breach response (Aug 2026).
+
+Where we left off (verified 2026-08-17 12:25 PT):
+- Full package on disk: /Users/rubenmajor/Desktop/blackgold-breach-package-20260817.md (call list, email list, breach letter, steps, damages, Greg paragraph).
+- Landlord = BlackGold Realty LLC, 1900 St James Pl Suite 700, Houston TX 77056. Keypad code 1073, $325 keycard invoice on April statement, August rent confirmed paid 8/14.
+- Damages: $130,725 at risk across 75 enrolled students (26422FT=34, 26423BC=24, 26424T=8, 26425FT=5, 26426W=4).
+- Idea filed: #27098 [proposed].
+
+Open threads to drive next:
+1. #27098 [proposed] — Send the breach letter (in the package file) to lafayette@, musa@, tenant@blackgoldrealtyllc.com; CC emily@, tim@, Greg, jthompson@, rmajor@, cfrench@; call Lafayette (770-363-7199) then Musa (832-745-2312) then Yousef (713-301-9898).
+2. #27098 [proposed] — Obtain the real lease share link from Ruben (provided link was the generic Drive home page) and cite exact clause numbers; obtain the fire marshal citation in writing; secure an alternate Houston weekend training site; file the proactive TDSHS notice.
+
+Reference IDs:
+- Ticket: none filed (task originated as iMessage directive)
+- Ideas filed: #27098
+- Files touched: /Users/rubenmajor/Desktop/blackgold-breach-package-20260817.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+
+<attempt_completion>
+<result>Full deliverable package built, saved, and verified on disk: /Users/rubenmajor/Desktop/blackgold-breach-package-20260817.md (207 lines, 15.4 KB). Contains the call list, email list, breach-of-lease letter, prioritized steps, financial damages ($130,725 at risk across 75 enrolled students in 5 Houston sections), TDSHS fallout context, and the attorney paragraph for Greg. Key facts verified from the email record: landlord is BlackGold Realty LLC, 1900 St James Place Suite 700, Houston TX 77056; keypad code 1073 on record; $325 keycard/keypad invoice on the April 2026 statement; August rent confirmed paid 8/14/2026. One request back to you: the lease link you pasted (drive.google.com/drive/home) is the generic Drive home page, not the file link - send the real shareable lease URL and I will cite exact clause numbers in the letter.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task BlackGold Realty Houston building-access lockout / lease breach response (Aug 2026).
+
+Where we left off (verified 2026-08-17 12:25 PT):
+- Full package on disk: /Users/rubenmajor/Desktop/blackgold-breach-package-20260817.md (call list, email list, breach letter, steps, damages, Greg paragraph).
+- Landlord = BlackGold Realty LLC, 1900 St James Pl Suite 700, Houston TX 77056. Keypad code 1073, $325 keycard invoice on April statement, August rent confirmed paid 8/14.
+- Damages: $130,725 at risk across 75 enrolled students (26422FT=34, 26423BC=24, 26424T=8, 26425FT=5, 26426W=4).
+- Idea filed: #27098 [proposed].
+
+Open threads to drive next:
+1. #27098 [proposed] — Send the breach letter (in the package file) to lafayette@, musa@, tenant@blackgoldrealtyllc.com; CC emily@, tim@, Greg, jthompson@, rmajor@, cfrench@; call Lafayette (770-363-7199) 
+```
+
+### `1786994625500` — 8/17/2026, 12:39:38 PM PT — 38 turns
+
+**Original task:**
+
+```
+please run the Fix AVP program on my computer that I can't seem to open
+```
+
+**Last PICKUP PROMPT:**
+
+```
+y restore Mac Virtual Display.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Fix AVP program that would not open.
+(No numeric Cline task id was provided for this session.)
+
+Where we left off (verified 2026-08-17 12:39 PT):
+- Root cause: the "Fix AVP" applet binary was rejected by amfid (Code -423, adhoc/unknown chain) producing open error -600. Fixed by rebuilding the applet via osacompile plus clean ad-hoc codesign; codesign verify exits 0.
+- Broken bundle preserved on the Desktop with timestamp suffix 20260817123637.
+- Program launched and completed: confirmed running PID 21417 `sudo fix-avp.sh`, then exited normally (one-shot script that ends with a printed manual checklist).
+- The app now opens and runs the program; no amfid rejection remains.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. (human-only decision, no idea) — Apply the 7 printed manual fixes before testing: clear custom DNS on Wi-Fi, quit all browsers, Bluetooth discoverable, Tailscale off, Vision Pro AirPlay Receiver ON plus AirDrop Everyone/10min, reboot the Vision Pro, then AirDrop Mac to AVP first. Physical-device actions, not buildable work.
+2. (human-only decision, no idea) — If Mac Virtual Display still will not connect after those steps, re-run the program (double-click the app — it opens correctly now) and if it still fails, open a new task with the collected evidence for deeper AWDL investigation.
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: none this session
+- Files touched: Desktop app bundle "Fix AVP" (rebuilt + resigned), Desktop backup of old bundle (20260817123637), Desktop fix-avp.command and fix-avp.sh (unchanged, verified intact)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786960541449` — 8/17/2026, 12:29:31 PM PT — 810 turns
 
 **Original task:**
 
@@ -129,76 +234,49 @@ Verified this session from the live serve log and /proc/meminfo, not from docs:
 - Julia is a GB10 with 
 ```
 
-**Ideas referenced:** #1079, #1130, #1131, #11735, #1190, #11945, #1241, #12425, #1248, #1249, #1252, #1253, #1258, #1264, #1265, #12657, #1266, #12894, #13085, #13202, #1378, #15144, #15226, #15328, #15332, #15667, #15979, #16032, #16033, #16036, #16122, #16163, #16254, #16338, #16448, #16452, #16463, #16464, #1659, #16778, #16802, #16803, #16839, #16844, #16851, #16856, #17246, #17250, #17300, #17327, #17341, #17342, #17343, #17415, #17416, #17424, #17425, #17437, #17438, #1744, #1754, #1755, #1779, #178693, #1798, #1828, #19495, #19545, #19567, #1964, #1989, #19925, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2254, #2258, #22588, #2298, #2299, #2307, #23169, #24172, #24217, #24645, #25185, #2520, #2537 [deployed], #25378, #25381, #2546 [deployed], #2547, #25470, #25646, #26348, #26819 [executing], #26908, #26922 [deployed], #26923, #26925 [deployed], #26927 [deployed], #26928 [proposed], #26932 [deployed], #26938 [executing], #26954 [deployed], #26956 [executing], #26957 [deployed], #26958 [deployed], #27069 [executing], #5878, #6522, #6826, #7142, #7149, #7181, #7734
+**Ideas referenced:** #1079, #11261, #1130, #1131, #11735, #1190, #11945, #12059, #1241, #12425, #12463, #1248, #1249, #1252, #1253, #1258, #1264, #12645, #1265, #12657, #1266, #12680, #12688, #12894, #13085, #13202, #13575, #1378, #13962, #15144, #15226, #15328, #15332, #15667, #15979, #16032, #16033, #16036, #16122, #16163, #16254, #16338, #16448, #16452, #16463, #16464, #1659, #16778, #16802, #16803, #16839, #16844, #16851, #16856, #17078, #17246, #17250, #17300, #17327, #17341, #17342, #17343, #17415, #17416, #17424, #17425, #17437, #17438, #1744, #1754, #1755, #1779, #178693, #178696, #1798, #1828, #19495, #19545, #19567, #1964, #1989, #19925, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2254, #2258, #22588, #2298, #2299, #2307, #23169, #24172, #24217, #24645, #25185, #2520, #2537 [deployed], #25378, #25381, #2546 [deployed], #2547, #25470, #2550, #25646, #26348, #26759, #26819 [executing], #26908, #26922 [deployed], #26923, #26925 [deployed], #26927 [deployed], #26928 [proposed], #26932 [deployed], #26938 [executing], #26954 [deployed], #26956 [executing], #26957 [deployed], #26958 [deployed], #27069 [executing], #27090 [proposed], #27091 [proposed], #27099 [deployed], #5878, #6522, #6826, #7142, #7149, #7181, #7734
 
 **Last PICKUP PROMPT:**
 
 ```
-_amend proof, task 1786932084)
+e, task 1786932084, reindexed)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1786932084, Julia/Claudia 235B restored, guards armed, stale LLMs purged.
+Pick up task #1786932084 — Julia 235B recovery: powered-off confirmed, watchdog v4 in place.
 
-Where we left off (verified 2026-08-17 10:09 PT):
-- qwen3-235b SERVING TP=2 Julia+Claudia at max_model_len 131072. On-box :8000 HTTP 200, WOPR :11513 HTTP 200. KV pool 554,656 tokens, 4.23x concurrency.
-- Measured throughput: 73.50 tok/s at 8 concurrent, 144.80 tok/s cumulative at 16 concurrent (saturated, max_num_seqs=16, 6 queued), 35.62 tok/s at 4 running on the 10:09 re-probe. Harness ~/totalrate235.sh on Julia.
-- Root cause of outage: Julia lost RoCE IPv4 on reboot, NCCL GID v6/v4 mismatch, ibv_modify_qp EINVAL. Fixed and persisted (emsu-roce-ip.service + @reboot cron).
-- Guards armed: WOL guard on WOPR (1-min, 3-strike, real MACs), Claudia head watchdog v3 (cron).
-- Purged: 3 rogue WOPR units, stale vllm_slot container, 122G of 120B model cache on Julia.
-- Bug library row 15 = resolved with full RCA. Clinerule 315 amended.
+Where we left off (checked 2026-08-17 12:27 PT):
+- JULIA IS POWERED OFF, not merely unreachable. From Claudia (spark-6d51, reachable via `ssh -p 2206 -i ~/.ssh/id_ed25519 rubenmajor@127.0.0.1`) all four CX7 netdevs were brought admin-UP and every one reads carrier=0 / operstate=down, IB ports state DOWN phys_state 3 Disabled, link flags <NO-CARRIER,...,UP>. ARP for 192.168.1.190 is FAILED. Admin-UP + NO-CARRIER on all ports = far-end NIC unenergized. A running box holds carrier even when wedged.
+- WOL was emitted from Claudia (correct emitter; WOPR is client-isolated) on 255.255.255.255 and 192.168.1.255, ports 9 and 7. Julia did NOT wake. Consistent with its NIC WOL flag being 'wol d'.
+- WATCHDOG v4 on Claudia: ~/claudia_head_watchdog.sh, SHA 5246b19f20e1a8ed2a03cecbeaf49883bb8d87b4a89100f953b2c44a88f2274c, v3 backup at claudia_head_watchdog.sh.bak-v3-20260817, cron every minute intact. Run log: probes 1-2 no action, probe 3 emitted WOL, probes 4-5 cooldown-suppressed.
+- The v3 it replaced auto-restarted julia_unified_tp2.sh (the 120B launcher) on a box repurposed to 235B, so every recovery would have served the WRONG MODEL on :11513 with nothing alerting.
+- UNCONFIRMED MAC: 4c:bb:47:2c:6a:e6 appears ONLY in wol.py's docstring — not in registry, bug library, or HANDOFF_NOTES. Guard logs this uncertainty on every wake and prefers /etc/emsu/julia_mac if present. Next time Julia is up run `ip neigh show 192.168.1.190` from Claudia and record it.
+- Context ceiling from earlier this task: 131072 is FINE on julia-235b (retracted OOM claim twice). registry served_ctx line 285 still 1048000 and must NOT be lowered.
 
 Open threads to drive next:
-1. #27069 [executing] - Raise throughput ceiling: max_num_seqs=16 is the cap that queued 6 of 22 requests. Evaluate raising it now that KV headroom is proven (554,656 tokens = 4.23x at 131072), and re-measure with ~/totalrate235.sh at 8/16/32 concurrency.
-2. #27069 [executing] - Prove the guards under a real drill: cold-boot Julia and confirm (a) emsu-roce-ip.service restores 192.168.100.3 before the launcher runs, (b) @reboot launcher reaches Application startup complete unattended, (c) WOL guard log shows a clean BACK ONLINE with no magic packet needed.
-3. Decide the fate of GLM-5.2-NVFP4-REAP-504B (288G on Julia). Left in place deliberately this session. (human-only decision, no idea)
+1. #27090 [proposed] — Julia needs a physical power action; while at the box, turn on WOL for the NIC. Obstruction: box is dark, no remote path exists (CX7 carrier reads).
+2. #27091 [proposed] — Make the live serving ceiling machine-readable: emit GPU KV cache size, concurrency multiplier, and resolved max_model_len to a durable WOPR file on bring-up; add a registry-vs-live drift check; mirror julia_unified_tp2_qwen235.sh off-box; correct the stale 40960 registry notes block.
+3. #27069 [executing] — Interactive lane contract (interactive 4 / batch 3 / grand 7 of 16); confirm per-stream tok/s once Julia returns.
+4. #27099 [deployed] — Follow-on audit of sibling guards (hexarchy_guard.sh, claudia_cx7_watchdog.sh, tp2_runbook_monitor.sh, glm52_watchdog_clean.sh) for the same hardcoded-stale-launcher defect; consider resolving launchers from the registry served model id instead of a filename list.
 
 Reference IDs:
 - Task: #1786932084
-- Ideas: #27069 [executing], #26938 [deployed], #26954 [deployed], #26956 [executing], #26925 [deployed]
-- Bug library row (frankenstein_bug_library, not an idea id): 15 (resolved)
-- Files touched: Julia ~/totalrate235.sh (new), /etc/systemd/system/emsu-roce-ip.service (new, enabled), Julia crontab (@reboot RoCE backup), Claudia ~/claudia_head_watchdog.sh (v3), WOPR /usr/local/bin/emsu-spark-wol-guard.sh (new) + /etc/cron.d/emsu-spark-wol-guard (new), WOPR removed gptoss-tp2-julia.service + gptoss-tp2-claudia-worker.service + autossh-11513.service, /var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md, HANDOFF_NOTES.md, clinerule 315
+- Ideas: #27099 [deployed], #27091 [proposed], #27090 [proposed], #27069 [executing]
+- Rules amended: 297 and 315 (clinerules_amend_rule, proof rows in rule_amend, MCP reindexed)
+- Files touched: /home/rubenmajor/claudia_head_watchdog.sh on Claudia (v4, backup .bak-v3-20260817); /tmp/claudia_head_watchdog_v4.sh on Mac and WOPR
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
 <task_progress>
-- [x] Re-anchor on Ruben's asks: (1) arm auto-restart guard, (2) purge rogue/stale LLMs, (3) real throughput + lane numbers
-- [x] Claudia + Julia both back post power-cycle; MACs captured (julia 4c:bb:47:2c:6a:e6)
-- [x] WOL guard ARMED on WOPR: emsu-spark-wol-guard.sh + /etc/cron.d, 1-min poll, 3-strike
-- [x] Claudia worker head-watchdog v3 armed (cron, sha fd137e212e68)
-- [x] ROOT CAUSE: Julia lost RoCE IPv4 on reboot -> GID idx3 empty -> NCCL v6/v4 GID mismatch -> ibv_modify_qp EINVAL -> every auto-start died at init
-- [x] FIXED: restored 192.168.100.3/24; RoCE ping 1.4ms; GID idx3 now RoCE v2 IPv4
-- [x] PERSISTED: emsu-roce-ip.service enabled + @reboot cron backup
-- [x] NCCL Init COMPLETE both ranks over NET/IB
-- [x] 235B SERVING at 131072: KV 554,656 tokens, 4.23x; :8000 200; WOPR :11513 200
-- [x] MEASURED throughput: 73.50 tok/s @8 concurrent; 144.80 tok/s cumulative @16 saturated (6 queued); 3
+- [x] STEER RE-ANCHOR: reach Julia over CX7 from Claudia, restore mgmt SSH, add restart guard
+- [x] Rule 263a preflight on Claudia: 0 vllm / 0 ray, safe to mutate links
+- [x] CX7 carrier test: all 4 ports admin-UP + NO-CARRIER → J
 ```
 
-### `1786989452314` — 8/17/2026, 11:26:49 AM PT — 172 turns
-
-**Original task:**
-
-```
-frankenstein-llm keeps going down as I'm trying to put back up Cicero and Maximus, not sure if that has anything to do with it, but please correct those issues. It could be the other Cline instances running on Cicero and Maximus interfering and not having the latest info. 
-
-Read this: 
-
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
-
-## Where 671 came from, and it is now durabl
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12403, #12477, #12584, #12618, #12657, #12680, #12689, #12824, #12872, #12878, #13121, #13202, #13453, #13470, #13874, #14000, #15823, #16163, #16265, #16304, #16602, #16648, #16844, #17202, #17203, #17205, #18312, #18326, #18786, #18820, #2071, #2079, #22820, #22897, #2299, #23171, #25097, #25133, #2537, #25471, #25625, #25627, #26400, #26908, #26923, #26932
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786559316764` — 8/17/2026, 11:14:10 AM PT — 188 turns
+### `1786559316764` — 8/17/2026, 12:18:17 PM PT — 264 turns
 
 **Original task:**
 
@@ -215,37 +293,88 @@ Direct, evidence-backed answer to "why did you lose them" — I did not lose the
 **2. deploy.sh installed exactly these keys
 ```
 
-**Ideas referenced:** #1130, #1131, #12028, #12034, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178634, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #25378, #25381, #25744 [approved], #25758 [executing], #25760 [executing], #25910 [blocked], #25913 [blocked], #7142, #7149
+**Ideas referenced:** #1130, #1131, #12028, #12034, #1241, #12425, #1248, #1249, #1252, #1258, #12584, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17202, #17246, #1744, #1779, #178634, #1798, #1828, #19338, #19567, #1998, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #25256, #25378, #25381, #25744 [approved], #25758 [executing], #25760 [executing], #25910 [blocked], #25913 [blocked], #6520, #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
-ck on the physical CICERO box.
+y the SSH pair is outstanding.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Lower Romans fleet recovery (Nero, Maximus, Cicero SSH + LLM access to WOPR).
+Pick up task — Cicero/Maximus/Nero SSH + LLM restoration for the MDM web terminal.
 
-Where we left off (verified 8/17/2026 11:13 PT):
-- Nero: fully working (WOPR:2223 SSH auth OK, ollama lane WOPR:11455 = HTTP 200).
-- Maximus: WOPR:2224 tunnel up, ollama lane WOPR:11505 = HTTP 200 (qwen2.5-coder family); SSH still publickey denied on 2224; fix = append WOPR pubkey to M4 ~/.ssh/authorized_keys + keep the -R 2224 tunnel alive.
-- Cicero: MLX 235B process was serving on 127.0.0.1:11520 earlier today (model `cicero-235b-qwen3`); WOPR listeners for SSH 2299 and MLX 11520 went away; current IP = 192.168.1.177 (drifted from documented .252); this VS Code window IS the Cicero box (M5 Max 128GB, Rubens-MacBook-Pro-3).
-- Fix path = on physical Cicero: start mlx_lm server on 11520 + `ssh -R 2299 -R 11520` to WOPR; on physical Maximus: append WOPR key + `ssh -R 2224 -R 11505`; ws_ssh_proxy.py cicero entry port must change 2221→2299.
-- MDM portal: router requires server_id "cicero"/"nero"/"maximus" and works off the same tunnels; rmajor is MasterAdmin so card access already granted.
+Where we left off (verified 12:17 PT):
+- Nero: fully working — WOPR:2223 SSH OK (EMSU-SMS-Mac), ollama lane :11455 HTTP 200.
+- Cicero: fully working — WOPR:11520 MLX lane HTTP 200 (cicero-235b-qwen3), served by M5 at far end of WOPR:2221. `ws_ssh_proxy.py` cicero entry confirmed `port: 2221`, `emsu-web-terminal.service` restarted and active.
+- Maximus: LLM serving — WOPR:11505 HTTP 200 (minicpm-v4.6). SSH WOPR:2224 STILL `Permission denied (publickey,password)` for every WOPR key × user. This is the only outstanding gap.
+- MDM portal access: `rmajor@emsuniversity.com` is MasterAdmin and the mdm_portal card is reachable from the admin portal.
 
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #25910 — Maximus SSH key append + tunnel (blocked on human at M4; Ollama already serving) → after append, verify WOPR:2224 with `ssh -i /home/emsuserver/.ssh/id_ed25519 rubenmajor@127.0.0.1 -p 2224 hostname`
-2. #25913 — Cicero MLX serve + tunnel (blocked on human at M5; commands above, verify `curl localhost:11520/v1/models` then WOPR:11520) → then flip ws_ssh_proxy.py cicero port 2221→2299 + restart the python proxy.
-3. Follow-up idea (not yet filed) — replace stale ws_ssh_proxy.py cicero entry + add 3 Roman rows into mdm_devices once tunnels verified.
+Open threads to drive next:
+1. #25910 [blocked] — Maximus SSH still denied. Next concrete action: from the M4 helper session, run `ls -la ~/.ssh/authorized_keys; cat ~/.ssh/authorized_keys` and confirm `emsuserver@wopr` (SHA256:8a2f55513LYs7/7pbvaoyQB741VVUDegh5QXHLF7krI) is present with mode 0600; the append command must execute on the same box whose tunnel lands on WOPR:2224 (verify far-end hostname via the M4 session: `hostname`), not a sibling Mac.
+2. #25913 [deployed] — Cicero SSH + MLX restored. No further action; mark closed if re-verification at 11520/2221 holds.
 
 Reference IDs:
-- Ideas: #25910 [blocked], #25913 [blocked]
-- Files: /var/www/emtskills/scripts/ws_ssh_proxy.py (stale port 2221 for cicero)
-- Evidence: WOPR probe 8/17 11:06 PT: 11505=200, 11520 list on WOPR without Cicero tunnel, 11455=200, 2223 OK
+- Ticket: lower-Romans SSH/LLM restoration
+- Ideas filed: #25910, #25913
+- Files touched: /var/www/emtskills/scripts/ws_ssh_proxy.py (cicero port reverted to 2221), emsu-web-terminal.service (restarted)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786989452314` — 8/17/2026, 12:05:55 PM PT — 279 turns
+
+**Original task:**
+
+```
+frankenstein-llm keeps going down as I'm trying to put back up Cicero and Maximus, not sure if that has anything to do with it, but please correct those issues. It could be the other Cline instances running on Cicero and Maximus interfering and not having the latest info. 
+
+Read this: 
+
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
+
+
+Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
+
+## Where 671 came from, and it is now durabl
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12403, #12477, #12584, #12618, #12657, #12680, #12689, #12824, #12872, #12878, #13108, #13121, #13202, #13453, #13470, #13874, #14000, #15823, #16163, #16265, #16304, #16602, #16648, #16844, #17202, #17203, #17205, #18312, #18326, #18786, #18820, #19747, #2007, #2071, #2079, #21586, #22820, #22897, #2299, #23171, #24220, #24895, #25097, #25112, #25133, #25185, #2528, #2537, #25468, #25471, #2549 [deployed], #2550 [deployed], #25567, #25625, #25627, #25877, #25878, #26123, #26132, #26133, #26134, #26135, #26137, #26138, #26139, #26140, #26145, #26146, #26196, #26225, #26400, #26908 [deployed], #26914, #26922 [deployed], #26923 [deployed], #26927 [deployed], #26932 [deployed], #26934, #27097 [executing], #53462, #57769, #57771
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786992321708` — 8/17/2026, 11:46:05 AM PT — 6 turns
+
+**Original task:**
+
+```
+Testing Julia iteration
+```
+
+**Last PICKUP PROMPT:**
+
+```
+t is functioning normally.
+
+═══════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════
+Pick up task (test) — Julia iteration liveness check
+Where we left off (verified 2026-08-17 11:45 PT):
+- Confirmed agent is responsive and iterating correctly across turns.
+- No production work was requested; nothing was changed.
+Open threads to drive next:
+- (none — this was a liveness test, no open work items)
+Reference IDs:
+- Ticket: none
+- Ideas filed: none
+- Files touched: none
+When done, append to cline_task_ledger.md per rule 07.
+═══════════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```

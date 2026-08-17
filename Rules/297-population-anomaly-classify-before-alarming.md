@@ -137,3 +137,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Prior window attributed 3 benchmark timeouts (routing_bug, payment_processors, no_apology) to "235B thinking-lane routing policy consuming the max_tokens budget" without probing the lane. Live probe this window: :11513 was DOWN (canary fail_streak 493, quarantined 01:21 PT, Julia 235B launch crash-looping), and once the canary quarantine settled, the identical bench passed 5/6 with 4.5-13s latencies. Amendment: before attributing benchmark/latency failures to routing POLICY, live-probe every pool member the router could select; a quarantining/crash-looping member mid-bench produces the exact "simple pass, complex timeout" signature and must be ruled out first.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-17 18:56 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786932084
+- RCA bucket: stale assumption
+- Trigger pattern: Re-asserting a retracted claim from an earlier turn of the SAME task after context compression, without re-reading the rule amendment that already reversed it
+- Reversal note: Julia 235B context ceiling, SECOND occurrence in one task. At 10:02 UTC this same task (1786932084) amended rule 297 to record that the KV/OOM math was wrong: vLLM's 'KV 26.02 GiB' is the POOL sized by gpu_memory_utilization, not per-context consumption, and the adjacent 'GPU KV cache size: 555,296 tokens' + 'Maximum concurrency 13.56x at 40,960' prove 131072 fits in ~5.9 GiB of that pool. After a context compress, I re-inherited the retracted 40960/OOM premise from the carried-forward pickup prompt, re-asserted it as fact, and began editing frankenstein_registry.yaml to lower julia-235b served_ctx 1048000 -> 40960 (the sed did not land; line 285 verified still 1048000, no backup created, zero damage). Ruben corrected it live: 'It can and does run a 131K... I just ran julia 235b here in cline and it did fine.' Amendment: a rule amendment recorded under the CURRENT task id is binding evidence that outranks any claim carried forward in a pickup prompt or session-memory blob. Before re-as
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

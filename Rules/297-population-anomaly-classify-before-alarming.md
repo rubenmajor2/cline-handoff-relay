@@ -167,3 +167,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: TDSHS 8/17 packet, three flips in one window, one root cause: I answered from a partial read of a source I had already pulled. (1) For control 1080261916 I wrote a CLARIFICATION REQUEST saying the program could not identify the student, while the lookup_paperwork_state output already in my context showed 25 submitted forms including ELEVEN patient care reports, three preceptor-signed timesheets, three preceptor evaluations, and request 2796 status=completed with note "Approved in Carrolton FD fror Aug 11th, 13th and 15th". The student had COMPLETED his externship. I read the header block of that tool output and not the rows, and shipped a withheld answer that discarded the strongest fact in the packet. (2) I published complaint-PDF URLs under /emtskills/uploads/tdshs/ without ever requesting one; the nginx vhost has an explicit deny all/return 403 on that path with a comment naming personnel/compliance_ref.php as the authenticated route. (3) I put "License No. 600179" in the RE line an
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-17 22:08 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786952400
+- RCA bucket: unread source
+- Trigger pattern: Asserting a document exists to a regulator on the basis of a status enum or boolean flag, without querying the table that would store the document itself
+- Reversal note: TDSHS packet asserted twice that externship hours were worked "at a fire department operating under an executed affiliation agreement on file." Neither claim was backed: externship_affiliation_agreements holds 0 rows total, ExternshipSite.agreement_status is a hand-set enum with compliance_doc_id NULL for the site in question, and the Carrollton site referenced for the 1080261916 student does not exist in ExternshipSite at all. The status flag was read as if it were the document. Amendment: a status enum, a boolean, or a named column is NOT evidence that the artifact it describes exists. Before asserting to any external party that a document is "on file" or "executed", query the table that would HOLD the document (row count, file path, URL) and confirm a row exists for that specific entity; if the holding table is empty or the entity is absent, the claim must be downgraded to what the record actually supports.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-17T21:39:45.651Z",
+ "generated_at": "2026-08-17T22:39:46.006Z",
  "counts": {
-  "parsed": 3,
-  "reused": 790,
+  "parsed": 1,
+  "reused": 793,
   "failed": 0,
-  "total": 793
+  "total": 794
  },
  "tasks": {
   "1784522296714": {
@@ -132940,13 +132940,13 @@
   },
   "1786980640015": {
    "task_id": "1786980640015",
-   "mtime": 1787002726386,
+   "mtime": 1787003771928,
    "created_at": "2026-08-17T15:30:40.015Z",
-   "last_modified": "2026-08-17T21:38:46.386Z",
-   "size_kb": 2341,
-   "turn_count": 305,
+   "last_modified": "2026-08-17T21:56:11.928Z",
+   "size_kb": 2451,
+   "turn_count": 322,
    "title": "#TDSHS\n\nPrepare responses for these 3 students due today for TDSHS as well as tell me which dates I have to respond to TDSHS requests for today/ check other emails sent to me that need to be replied to. I think I have an 8/7 and 8/10 email to reply back to sabrina about. Give draft replies for those and due dates. As for this: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=packet&pe=tdshs&rt=complaint_response&due=2026-08-15 \n\nI need that response. Also, I noticed you said one student was not found. Tha'ts not accurate. Nicholas Mejia (NO Students match) (26917FT) / that student is in fact in the system. He was very easy to find. \n\nAgain, prepare the draft respon",
-   "pickup_prompt": "the word and I will re-render.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1786952400 — TDSHS 8/15 packet response, revision 3 plus link/license verification.\n\nWhere we left off (verified 2026-08-17 14:25 PT):\n- Draft on Desktop: TDSHS_Per_Matter_Responses_2026-08-17_DRAFT.pdf (322,486 bytes, rendered 14:21 PT) + source TDSHS_Transmission_Copy_2026-08-17.html. Awaiting Ruben approval.\n- Revision 3 content: June 19 entry-scope bullet in the outset list, plus a single-paragraph \"Preserved Procedural Objections\" section consolidating Sunset items 2, 3, 5, 6 and 8, reserved under APA Government Code ch. 2001 and the constitutional guarantees of notice and an opportunity to be heard. Revision 2 content intact (no student names, 1080261916 is a clarification request with the FERPA basis stated, no timeliness paragraph, three per-matter factual errors corrected).\n- LICENSE FINDING, verified by grep across every Department-originated PDF on the server (complaint letters, 5196 inspection notice, 5196 report, POC guide, 623992 approval letter): the string 600179 appears ZERO times in Department documents. It appears 94 times, exclusively in EMSU-authored documents. Attorney summary line 104 attributes it to Richardson's 7/20 email, which is not in email_inbound_log because it was addressed to rmajor/agamez/jthompson rather than info@. Decision pending from Ruben: confirm from the 7/20 email, or drop the number from the RE line and footer to match how the Department captions its own letters.\n- COMPLAINT ORIGINALS: EMSU_1080261886.pdf, EMSU_1080261916.pdf and EMSU_1080261917.pdf are NOT on disk. email_inbound_log rows 111927, 111475, 111722 list the attachments in attachment_info with byte sizes but attachment_paths is NULL on all three. Only the July batch (1080261869, 1080261887, 1080261891) is in the evidence folder.\n- #27072 [deployed] (verified: UPDATE compliance_deadlines id=22 returned \"Rows affected: 1\" at 12:52 PT).\n- Rule 297 amended on disk (verified: clinerules_amend_rule returned \"Amended rule 297 ... reindexed\", proof row in rule_amend for task 1786952400).\n\nOpen threads to drive next:\n1. #27101 [executing] — backfill the three missing complaint attachments into /var/www/emtskills/uploads/tdshs/inspection-5196-2026/ using cron_postmark_attachment_backfill.php against email_inbound_log rows 111927, 111475, 111722, then re-verify each control number's allegation text against the draft response.\n2. #27102 [executing] — resolve the 600179 license number: locate Richardson's 7/20/2026 emergency-suspension email in Ruben's mailbox, confirm the number as she stated it, and either source it to that email in the file or remove it from the RE line and footer of the 8/17 draft and re-render.\n3. #27073 [awaiting_review] — on Ruben approval, copy the PDF to /var/www/emtskills/uploads/tdshs/inspection-5196-2026/Transmission_Copy_Per_Matter_Responses_TDSHS_2026-08-17.pdf, transmit to Sabrina Lee Richardson, move compliance_deadlines rows 20, 22, 23 to sent.\n4. #27100 [executing] — draft 1080261810 (due 8/18/2026, extension email id 108034) and 1080261811 (due 8/19/2026, extension email id 111463), carrying the same constraints and the Preserved Procedural Objections paragraph, verifying terminal-outcome columns and placement-request rows per amended rule 297.\n\nReference IDs:\n- Ticket: none (regulator compliance packet)\n- Ideas filed: #27072 [deployed], #27073 [awaiting_review], #27100 [executing], #27101 [executin",
+   "pickup_prompt": "og's cited rule against the `rule_amend` ledger for the task id)\n- **Rule 91**: PICKUP PROMPT block, 47-char U+2550 dividers, every `#NNNN` carries a `[disposition]` tag\n- **PDF rendering**: Chrome headless `--print-to-pdf`. wkhtmltopdf is NOT installed on the Mac; `cupsfilter` cannot convert HTML→PDF (returns 0 bytes)\n\n## 3. Files and Code Sections\n\n### `/Users/rubenmajor/Desktop/TDSHS_Transmission_Copy_2026-08-17.html` — the working source\n\nCurrent full structure (as last saved):\n- Letterhead: `<img src=\"https://www.emsuniversity.com/emtskills/emsulogo5.png\">`, EMS UNIVERSITY, LLC / d.b.a. EMS Universal Education / 1730 SW Military Drive, Ste 202 · San Antonio, TX 78221 / tagline\n- **RE line (corrected):** `RE: Emergency Medical Services University, LLC. EMS Course License No. 623992.<br>Complaint control numbers 1080261886, 1080261916, 1080261917.<br>Consolidated Response.`\n- Salutation: `Dear Ms. Richardson:`\n- Cover-letter paragraphs; public-interest red-bar callout (\"Texas does not have a surplus of certified EMS personnel...\")\n- **Outset bullets (5):** three transmittals in 2h02m on 8/5; permission recited but date of contact not provided; originator not stated; student-identifier near-match for 1080261916; June 19 entry scope unconfirmed\n- Threshold Objection (standards not defined by any cited authority)\n- **Section I Per-Matter Responses** — 1080261916, 1080261917, 1080261886 (details below)\n- **Preserved Procedural Objections** — single red-bar paragraph consolidating Sunset items 2/3/5/6/8, closing: \"...reserves each objection and all rights, defenses, and procedural protections available to it under Texas law, including those under the Administrative Procedure Act, Government Code Chapter 2001, and under the constitutional guarantees of notice and an opportunity to be heard.\"\n- Placement Is Subject to Availability (preferred dates are a request not a schedule; live-site capacity constraint; Chapter 157 prescribes no interval)\n- Federal Privacy Law (99.31(a)(3) basis, 99.32 recording, 99.33(a) redisclosure limitation)\n- Procedural Note (3 numbered items: identity/originator outstanding; Departmental load; reservation)\n- Reservation of Rights and No Admission\n- Continuing Cooperation\n- Signature: `Ruben Major, EMT-Paramedic, J.D., M.A. · Chief Executive Officer`\n- **Footer (corrected):** `EMS University, LLC | Texas EMS Course License No. 623992 | rmajor@emsuniversity.com`\n\n**The 1080261917 section as it currently reads (THIS IS THE PARAGRAPH THAT NOW NEEDS UPDATING):**\n```html\n<h3>Response. Control Number 1080261917</h3>\n<p>Transmittal of record. Received August 5, 2026 at 12:27 Central. The transmittal identifies a student by name and cohort and states that permission was received to share that information. It does not state that the student originated the complaint.</p>\n<p>Record of the student so identified. The student is enrolled in a boot camp cohort in the Dallas-Fort Worth market. The course began June 22, 2026, the scheduled didactic completion date was July 5, 2026, and the scheduled course end date was August 5, 2026. <strong>The program record shows the didactic requirements recorded complete on July 26, 2026.</strong> No terminal academic outcome is recorded on this student&rsquo;s record. The student is not recorded as dropped, failed, or transferred.</p>\n<p><strong>Placement requests of record, each assigned the day it was submitted.</strong> The program&rsquo;s externship system holds three placement requests for this student, submitted June 29, 2026, July 13, 2026 and July 27, 2026. <st",
    "ideas": {
     "1370": null,
     "12345": "proposed",
@@ -133236,14 +133236,42 @@
   },
   "1787002408232": {
    "task_id": "1787002408232",
-   "mtime": 1787002768802,
+   "mtime": 1787003223095,
    "created_at": "2026-08-17T21:33:28.232Z",
-   "last_modified": "2026-08-17T21:39:28.802Z",
-   "size_kb": 89,
-   "turn_count": 49,
+   "last_modified": "2026-08-17T21:47:03.095Z",
+   "size_kb": 177,
+   "turn_count": 110,
    "title": "For this\n\nRuben for the 4th attempt of Sam Nelson\nwe will be able to have it today\nShe said she will be coming back to college\nShe is also been calling everyday\nThank you in advance Ruben\n\ncna you fix that so they can take their final exam?",
    "pickup_prompt": null,
-   "ideas": {}
+   "ideas": {
+    "27109": "proposed",
+    "27110": "proposed"
+   }
+  },
+  "1787003799738": {
+   "task_id": "1787003799738",
+   "mtime": 1787005802346,
+   "created_at": "2026-08-17T21:56:39.738Z",
+   "last_modified": "2026-08-17T22:30:02.346Z",
+   "size_kb": 696,
+   "turn_count": 186,
+   "title": "#TDSHS\n\nYou were right on both. The 1080261916 response was crap and the license number was the wrong one. Both fixed, PDF re-rendered (325,475 bytes, 14:41 PT), and the 317 RCA is below.\n\n## The license number — it was not ours to use\n\n**The TDSHS number is 623992, and it is on their own paper.** The 5196 inspection report has a labeled field block:\n\n```\nName              EMERGENCY MEDICAL SERVICES UNIVERSITY LLC\nLicense Type      EMS Course\nAddress           1452 HUGHES ROAD SUITE 360, GRAPEVINE TX 76051\nLicense Number    623992\nInspection Type   Course Monitoring\nInspection Number 5196\nInspector         LYNN, ERIC HOMER\nInspection Date   06/19/2026\n```\n\nThe 623992 approval letter carries ",
+   "pickup_prompt": null,
+   "ideas": {
+    "2003": null,
+    "4856": null,
+    "4929": null,
+    "22757": null,
+    "27072": "deployed",
+    "27073": "awaiting_review",
+    "27100": "executing",
+    "27107": "executing",
+    "27108": "executing",
+    "27112": "proposed",
+    "27114": "proposed",
+    "178695": null,
+    "664426": null
+   }
   }
  }
 }

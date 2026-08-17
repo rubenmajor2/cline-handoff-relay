@@ -36,3 +36,12 @@ If a credential reference appears in a git-tracked file, it MUST be a constant n
 - Any new `define()` or config array entry containing a live credential string (not a placeholder) in a git-tracked file is a direct violation
 - Pre-deploy grep audit can flag violations; HARD-FLOOR means the deployment is blocked until cleaned
 - Reindex/restart is not required; this file is always-loaded via the hardfloor manifest
+## Amendment (from reversal, 2026-08-17 22:28 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786952400
+- RCA bucket: scope error
+- Trigger pattern: Arguing to a regulator that no standard exists, without first reading the program's own catalog/syllabus/self-study/student disclosures for a self-imposed standard the agency could substitute
+- Reversal note: TDSHS packet argued that Chapter 157 does not prescribe an externship interval and invited the Department to identify a provision that does. Ruben flagged the exposure: a filing that argues no external standard exists invites the agency to hold the licensee to its OWN published standards instead, and the program had not read its catalog, syllabus, self-study or signed student disclosures to know what timelines they state. Amendment: in any regulator filing, do NOT characterise what an authority does or does not contain, do NOT enumerate what is absent from it, and do NOT invite the agency to identify a provision. State only the notice objection: a licensee is entitled to know the provision it is measured against, and the burden of identifying it rests with the agency. A negative claim about the regulatory landscape is a claim like any other and requires reading BOTH the agency's authority and the program's own published documents first.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

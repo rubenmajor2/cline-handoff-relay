@@ -6,12 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/17/2026, 2:39:45 PM PT | window: last 72h | 99 tasks | index total 793 (parsed 3, cached 790)
+Generated: 8/17/2026, 3:39:46 PM PT | window: last 72h | 99 tasks | index total 794 (parsed 1, cached 793)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787002408232` | 8/17/2026, 2:39:28 PM | 49 | 89KB | For this |
-| `1786980640015` | 8/17/2026, 2:38:46 PM | 305 | 2341KB | #TDSHS |
+| `1787003799738` | 8/17/2026, 3:30:02 PM | 186 | 696KB | #TDSHS |
+| `1786980640015` | 8/17/2026, 2:56:11 PM | 322 | 2451KB | #TDSHS |
+| `1787002408232` | 8/17/2026, 2:47:03 PM | 110 | 177KB | For this |
 | `1787000192686` | 8/17/2026, 2:12:51 PM | 108 | 650KB | Keep getting this upon initial iteration of frankenstein-llm: {"message":"Failed to fetch  |
 | `1786993543586` | 8/17/2026, 2:01:53 PM | 322 | 2130KB | Our Staff Keycards were all deactivated and students/staff were locked out of our building |
 | `1786994625500` | 8/17/2026, 12:39:38 PM | 38 | 180KB | please run the Fix AVP program on my computer that I can't seem to open |
@@ -108,31 +109,39 @@ Generated: 8/17/2026, 2:39:45 PM PT | window: last 72h | 99 tasks | index total 
 | `1786566964850` | 8/14/2026, 4:51:33 PM | 342 | 2040KB | Answer to this question is not what was given. It's a registration check to see why there  |
 | `1786696256201` | 8/14/2026, 3:53:08 PM | 198 | 11668KB | #Grievance issue |
 | `1786569178009` | 8/14/2026, 3:51:36 PM | 296 | 1383KB | #/emtskills / wordpress |
-| `1786733087683` | 8/14/2026, 3:01:29 PM | 216 | 2969KB | This is incredibly vague. What's wrong with Email Agent? Can you look into it and see what |
 
 ---
 
 ## Per-window detail
 
-### `1787002408232` — 8/17/2026, 2:39:28 PM PT — 49 turns
+### `1787003799738` — 8/17/2026, 3:30:02 PM PT — 186 turns
 
 **Original task:**
 
 ```
-For this
+#TDSHS
 
-Ruben for the 4th attempt of Sam Nelson
-we will be able to have it today
-She said she will be coming back to college
-She is also been calling everyday
-Thank you in advance Ruben
+You were right on both. The 1080261916 response was crap and the license number was the wrong one. Both fixed, PDF re-rendered (325,475 bytes, 14:41 PT), and the 317 RCA is below.
 
-cna you fix that so they can take their final exam?
+## The license number — it was not ours to use
+
+**The TDSHS number is 623992, and it is on their own paper.** The 5196 inspection report has a labeled field block:
+
 ```
+Name              EMERGENCY MEDICAL SERVICES UNIVERSITY LLC
+License Type      EMS Course
+Address           1452 HUGHES ROAD SUITE 360, GRAPEVINE TX 76051
+License Number    623992
+Inspection Type   Course Monitoring
+Inspection Number 5196
+Insp
+```
+
+**Ideas referenced:** #178695, #2003, #22757, #27072 [deployed], #27073 [awaiting_review], #27100 [executing], #27107 [executing], #27108 [executing], #27112 [proposed], #27114 [proposed], #4856, #4929, #664426
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786980640015` — 8/17/2026, 2:38:46 PM PT — 305 turns
+### `1786980640015` — 8/17/2026, 2:56:11 PM PT — 322 turns
 
 **Original task:**
 
@@ -149,32 +158,58 @@ I need that response. Also, I noticed you said one student was not found. Tha'ts
 **Last PICKUP PROMPT:**
 
 ```
-the word and I will re-render.
+og's cited rule against the `rule_amend` ledger for the task id)
+- **Rule 91**: PICKUP PROMPT block, 47-char U+2550 dividers, every `#NNNN` carries a `[disposition]` tag
+- **PDF rendering**: Chrome headless `--print-to-pdf`. wkhtmltopdf is NOT installed on the Mac; `cupsfilter` cannot convert HTML→PDF (returns 0 bytes)
 
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
+## 3. Files and Code Sections
 
-Pick up task #1786952400 — TDSHS 8/15 packet response, revision 3 plus link/license verification.
+### `/Users/rubenmajor/Desktop/TDSHS_Transmission_Copy_2026-08-17.html` — the working source
 
-Where we left off (verified 2026-08-17 14:25 PT):
-- Draft on Desktop: TDSHS_Per_Matter_Responses_2026-08-17_DRAFT.pdf (322,486 bytes, rendered 14:21 PT) + source TDSHS_Transmission_Copy_2026-08-17.html. Awaiting Ruben approval.
-- Revision 3 content: June 19 entry-scope bullet in the outset list, plus a single-paragraph "Preserved Procedural Objections" section consolidating Sunset items 2, 3, 5, 6 and 8, reserved under APA Government Code ch. 2001 and the constitutional guarantees of notice and an opportunity to be heard. Revision 2 content intact (no student names, 1080261916 is a clarification request with the FERPA basis stated, no timeliness paragraph, three per-matter factual errors corrected).
-- LICENSE FINDING, verified by grep across every Department-originated PDF on the server (complaint letters, 5196 inspection notice, 5196 report, POC guide, 623992 approval letter): the string 600179 appears ZERO times in Department documents. It appears 94 times, exclusively in EMSU-authored documents. Attorney summary line 104 attributes it to Richardson's 7/20 email, which is not in email_inbound_log because it was addressed to rmajor/agamez/jthompson rather than info@. Decision pending from Ruben: confirm from the 7/20 email, or drop the number from the RE line and footer to match how the Department captions its own letters.
-- COMPLAINT ORIGINALS: EMSU_1080261886.pdf, EMSU_1080261916.pdf and EMSU_1080261917.pdf are NOT on disk. email_inbound_log rows 111927, 111475, 111722 list the attachments in attachment_info with byte sizes but attachment_paths is NULL on all three. Only the July batch (1080261869, 1080261887, 1080261891) is in the evidence folder.
-- #27072 [deployed] (verified: UPDATE compliance_deadlines id=22 returned "Rows affected: 1" at 12:52 PT).
-- Rule 297 amended on disk (verified: clinerules_amend_rule returned "Amended rule 297 ... reindexed", proof row in rule_amend for task 1786952400).
+Current full structure (as last saved):
+- Letterhead: `<img src="https://www.emsuniversity.com/emtskills/emsulogo5.png">`, EMS UNIVERSITY, LLC / d.b.a. EMS Universal Education / 1730 SW Military Drive, Ste 202 · San Antonio, TX 78221 / tagline
+- **RE line (corrected):** `RE: Emergency Medical Services University, LLC. EMS Course License No. 623992.<br>Complaint control numbers 1080261886, 1080261916, 1080261917.<br>Consolidated Response.`
+- Salutation: `Dear Ms. Richardson:`
+- Cover-letter paragraphs; public-interest red-bar callout ("Texas does not have a surplus of certified EMS personnel...")
+- **Outset bullets (5):** three transmittals in 2h02m on 8/5; permission recited but date of contact not provided; originator not stated; student-identifier near-match for 1080261916; June 19 entry scope unconfirmed
+- Threshold Objection (standards not defined by any cited authority)
+- **Section I Per-Matter Responses** — 1080261916, 1080261917, 1080261886 (details below)
+- **Preserved Procedural Objections** — single red-bar paragraph consolidating Sunset items 2/3/5/6/8, closing: "...reserves each objection and all rights, defenses, and procedural protections available to it under Texas law, including those under the Administrative Procedure Act, Government Code Chapter 2001, and under the constitutional guarantees of notice and an opportunity to be heard."
+- Placement Is Subject to Availability (preferred dates are a request not a schedule; live-site capacity constraint; Chapter 157 prescribes no interval)
+- Federal Privacy Law (99.31(a)(3) basis, 99.32 recording, 99.33(a) redisclosure limitation)
+- Procedural Note (3 numbered items: identity/originator outstanding; Departmental load; reservation)
+- Reservation of Rights and No Admission
+- Continuing Cooperation
+- Signature: `Ruben Major, EMT-Paramedic, J.D., M.A. · Chief Executive Officer`
+- **Footer (corrected):** `EMS University, LLC | Texas EMS Course License No. 623992 | rmajor@emsuniversity.com`
 
-Open threads to drive next:
-1. #27101 [executing] — backfill the three missing complaint attachments into /var/www/emtskills/uploads/tdshs/inspection-5196-2026/ using cron_postmark_attachment_backfill.php against email_inbound_log rows 111927, 111475, 111722, then re-verify each control number's allegation text against the draft response.
-2. #27102 [executing] — resolve the 600179 license number: locate Richardson's 7/20/2026 emergency-suspension email in Ruben's mailbox, confirm the number as she stated it, and either source it to that email in the file or remove it from the RE line and footer of the 8/17 draft and re-render.
-3. #27073 [awaiting_review] — on Ruben approval, copy the PDF to /var/www/emtskills/uploads/tdshs/inspection-5196-2026/Transmission_Copy_Per_Matter_Responses_TDSHS_2026-08-17.pdf, transmit to Sabrina Lee Richardson, move compliance_deadlines rows 20, 22, 23 to sent.
-4. #27100 [executing] — draft 1080261810 (due 8/18/2026, extension email id 108034) and 1080261811 (due 8/19/2026, extension email id 111463), carrying the same constraints and the Preserved Procedural Objections paragraph, verifying terminal-outcome columns and placement-request rows per amended rule 297.
-
-Reference IDs:
-- Ticket: none (regulator compliance packet)
-- Ideas filed: #27072 [deployed], #27073 [awaiting_review], #27100 [executing], #27101 [executin
+**The 1080261917 section as it currently reads (THIS IS THE PARAGRAPH THAT NOW NEEDS UPDATING):**
+```html
+<h3>Response. Control Number 1080261917</h3>
+<p>Transmittal of record. Received August 5, 2026 at 12:27 Central. The transmittal identifies a student by name and cohort and states that permission was received to share that information. It does not state that the student originated the complaint.</p>
+<p>Record of the student so identified. The student is enrolled in a boot camp cohort in the Dallas-Fort Worth market. The course began June 22, 2026, the scheduled didactic completion date was July 5, 2026, and the scheduled course end date was August 5, 2026. <strong>The program record shows the didactic requirements recorded complete on July 26, 2026.</strong> No terminal academic outcome is recorded on this student&rsquo;s record. The student is not recorded as dropped, failed, or transferred.</p>
+<p><strong>Placement requests of record, each assigned the day it was submitted.</strong> The program&rsquo;s externship system holds three placement requests for this student, submitted June 29, 2026, July 13, 2026 and July 27, 2026. <st
 ```
+
+### `1787002408232` — 8/17/2026, 2:47:03 PM PT — 110 turns
+
+**Original task:**
+
+```
+For this
+
+Ruben for the 4th attempt of Sam Nelson
+we will be able to have it today
+She said she will be coming back to college
+She is also been calling everyday
+Thank you in advance Ruben
+
+cna you fix that so they can take their final exam?
+```
+
+**Ideas referenced:** #27109 [proposed], #27110 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787000192686` — 8/17/2026, 2:12:51 PM PT — 108 turns
 
@@ -3969,48 +4004,6 @@ Reference IDs:
 - Ideas filed: #26258 [awaiting_review]
 - Ideas referenced: #25940 [executing], #23954 [awaiting_review], #23952 [awaiting_review], #23133 [executing], #23945 [proposed], #25042 [deployed]
 - Files touched: /var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf, /etc/nginx/sites-enabled/emtskills, /etc/php/8.3/fpm/pool.d/agents.conf, /var/www/emtskills/scripts/llm_pool_isolation_guard.py, /etc/cron.d/emsu-llm-pool-isolation-guard, HANDOFF_NOTES.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786733087683` — 8/14/2026, 3:01:29 PM PT — 216 turns
-
-**Original task:**
-
-```
-This is incredibly vague. What's wrong with Email Agent? Can you look into it and see what's going on? Fix it? Same with other CFAs?
-```
-
-**Ideas referenced:** #0066, #12405, #13047, #13442, #13965, #14741, #14742, #14743, #14749, #16445, #173178, #18132, #18176, #18309, #18313, #18853, #1892, #19830, #22261, #23184, #2328, #2340, #2341, #2343, #2344, #2358, #2360, #25164 [awaiting_review], #25989, #26207, #26209, #26211, #26214 [executing], #26215 [executing], #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26319 [deployed], #26320 [proposed], #3261, #3319, #3346, #3587, #4686, #4689, #4929, #4930, #4931, #4957, #4958, #5095, #5391, #5431, #5574, #5638, #5768, #5770, #5779, #5787, #5792, #5793, #5794, #5795, #5819, #6039, #6064, #7126, #7368, #7381, #7548, #7550, #9132, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-ated with both RCAs and fixes.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Email Agent defects: first-touch NEEDS_HUMAN drop + cron_email_responder password/splice (verified 2026-08-14 3:00 PM PT).
-
-Where we left off (verified 2026-08-14 3:00 PM PT):
-- lib/ai_ticket_agent_first_touch.php now honors [NEEDS_HUMAN] → aiEscalateTicket (lines 292-309); php -l clean.
-- cron/cron_email_responder.php sanitizeAIResponseForEmail() now coalesces credential sentences to SMS + heals run-ons; php -l clean; smoke-tested on 362115/362106.
-- Ticket #25164 repaired with internal escalation-correction comment → Apple Ibanez.
-- Bugs: frankenstein_router_incidents #2358 + #2360. Ideas #26319 [deployed] + #26320 [deployed]. HANDOFF_NOTES updated.
-
-Open threads to drive next:
-1. None — all work completed this session.
-
-Reference IDs:
-- Ticket: 25164 (STU-20260814-8C83BD)
-- Bugs: frankenstein_router_incidents #2358, #2360
-- Ideas: #26319 [deployed], #26320 [deployed]
-- Files touched: /var/www/emtskills/lib/ai_ticket_agent_first_touch.php, /var/www/emtskills/cron/cron_email_responder.php, /var/www/emtskills/docs/HANDOFF_NOTES.md
-- Evidence: email_outbound_log 362113/362115/362106; ai_ticket_agent_actions 134561/134563
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════

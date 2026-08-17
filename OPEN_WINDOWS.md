@@ -6,16 +6,22 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/16/2026, 11:28:29 PM PT | window: last 72h | 92 tasks | index total 778 (parsed 6, cached 772)
+Generated: 8/17/2026, 12:28:29 AM PT | window: last 72h | 94 tasks | index total 781 (parsed 6, cached 775)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786780447770` | 8/16/2026, 11:28:25 PM | 159 | 617KB | #Executor |
-| `1786947807234` | 8/16/2026, 11:28:25 PM | 41 | 181KB | Do a 90 minute doctor of franeknstein executor which has a bunch of impl failed which may  |
-| `1786947372694` | 8/16/2026, 11:28:15 PM | 61 | 342KB | Can you give me a model here in Cline where i can directly test the Julia/Claudia 235b llm |
-| `1786817395147` | 8/16/2026, 11:28:12 PM | 417 | 2715KB | #Call Backs / VAPI |
-| `1786941064430` | 8/16/2026, 11:28:07 PM | 535 | 1202KB | #Julia/Claudia 235B |
-| `1786935011375` | 8/16/2026, 11:27:55 PM | 465 | 1220KB | Frankensteitn-llm appears to be stalling. If it's because Deepseek needs credits, should i |
+| `1786948459253` | 8/17/2026, 12:28:18 AM | 105 | 179KB | #Big Mac 4th GPU |
+| `1786947372694` | 8/17/2026, 12:28:11 AM | 267 | 1061KB | Can you give me a model here in Cline where i can directly test the Julia/Claudia 235b llm |
+| `1786817395147` | 8/17/2026, 12:28:05 AM | 511 | 3045KB | #Call Backs / VAPI |
+| `1786941064430` | 8/17/2026, 12:27:47 AM | 619 | 1528KB | #Julia/Claudia 235B |
+| `1786556136912` | 8/17/2026, 12:27:25 AM | 865 | 3158KB | #Frankenstein-LLM Improvements |
+| `1786948767264` | 8/17/2026, 12:27:05 AM | 103 | 391KB | #Unknown / Maybe 317 adjacent |
+| `1786947807234` | 8/16/2026, 11:54:56 PM | 114 | 512KB | Do a 90 minute doctor of franeknstein executor which has a bunch of impl failed which may  |
+| `1786831867073` | 8/16/2026, 11:52:46 PM | 222 | 507KB | #Joshua / Denali Scenario |
+| `1786948641882` | 8/16/2026, 11:49:40 PM | 60 | 211KB | #Rule 317 |
+| `1786602203659` | 8/16/2026, 11:44:52 PM | 160 | 818KB | There appear to be some minor issues going on with Frankenstein LLM. It seems like I'm get |
+| `1786780447770` | 8/16/2026, 11:34:23 PM | 194 | 702KB | #Executor |
+| `1786935011375` | 8/16/2026, 11:29:11 PM | 470 | 1240KB | Frankensteitn-llm appears to be stalling. If it's because Deepseek needs credits, should i |
 | `1786942595504` | 8/16/2026, 10:17:53 PM | 80 | 1029KB | #Rule 317 |
 | `1786942152453` | 8/16/2026, 9:55:26 PM | 32 | 1174KB | I read this and the question is about the ticket closure not about the quizzes, right? So  |
 | `1786935841403` | 8/16/2026, 9:52:10 PM | 142 | 1505KB | The student seems to have submitted a plethora of documentation demonstrating that we may  |
@@ -49,7 +55,6 @@ Generated: 8/16/2026, 11:28:29 PM PT | window: last 72h | 92 tasks | index total
 | `1786842592907` | 8/15/2026, 8:46:01 PM | 516 | 2989KB | #Rule 317 |
 | `1786836908956` | 8/15/2026, 4:48:21 PM | 72 | 1004KB | Is this legitimate? If so, the message should be a little more sympathetic and less techni |
 | `1786835771600` | 8/15/2026, 4:31:46 PM | 96 | 1327KB | #BLS  |
-| `1786831867073` | 8/15/2026, 3:42:30 PM | 126 | 313KB | #Joshua / Denali Scenario |
 | `1786832584504` | 8/15/2026, 3:39:32 PM | 105 | 279KB | #Externship |
 | `1786832177865` | 8/15/2026, 3:36:49 PM | 160 | 352KB | #SLS ish |
 | `1786782096117` | 8/15/2026, 3:33:23 PM | 564 | 5232KB | #Email Agent |
@@ -99,56 +104,45 @@ Generated: 8/16/2026, 11:28:29 PM PT | window: last 72h | 92 tasks | index total
 | `1786553732663` | 8/14/2026, 1:45:33 AM | 614 | 3214KB | When I get emails like this I would like to actually see the students original email below |
 | `1786683447557` | 8/14/2026, 1:14:20 AM | 290 | 7478KB | #Big Mac |
 | `1786688208090` | 8/14/2026, 12:41:41 AM | 200 | 611KB | #SBA Questions |
-| `1786666915889` | 8/14/2026, 12:23:31 AM | 724 | 1937KB | Can you email a copy of any externship agreements / affiliation agreement whatever from ag |
-| `1786666814323` | 8/13/2026, 11:54:00 PM | 970 | 1993KB | Jon had a request in Argus, https://emsuniversity.com/emtskills/routes/argus_download.php? |
-| `1786677303463` | 8/13/2026, 11:47:17 PM | 220 | 1145KB | /emtskills is slow again. Please fix it. Check emtskills-slowness and fix it |
 
 ---
 
 ## Per-window detail
 
-### `1786780447770` — 8/16/2026, 11:28:25 PM PT — 159 turns
+### `1786948459253` — 8/17/2026, 12:28:18 AM PT — 105 turns
 
 **Original task:**
 
 ```
-#Executor
+#Big Mac 4th GPU
 
-Why don't you give me a roadmap as to how the system works and close any gaps that you can find in the process?
+Ok, let's give it another shot. See this conversastion between me and the tech:
 
-That makes me wonder does ruben doctor of executor even work or does that rule need to be modified?
+Ruben Major:
+	You put the 4th GPU on an NVME slot, right? 
+	And you already installed the dummy plug?
 
-Built and shipped. Both halves are positive-controlled, which matters here more than usual: the entire problem tonight was instruments that reported healthy without ever being tested against a known-bad case.
+Ruben Major Jr.:
+	Correct
+	On both
 
-## The watchdog now measures delivery, not activity
+Ruben Major:
+	Ok, lol, let me try from here then. 
 
-`cron_orchestrator_executor_watchdog.php` had six sections. Every one checked whether something was *running*: i
+Ruben Major Jr.:
+	See if it's an issue with the bus speed being only x4, if it's initiating okay om hardware level it has to be a software bug in the stack somewhere
+
+Ruben Major:
+	Kk
+
+# Answer: I am sure. I just tested your assumption directly, twice, with fresh boots. The plug is NOT in, and the card still 
 ```
 
-**Ideas referenced:** #12506, #12761, #12763, #12764, #13075, #16648, #16714, #16717, #17313, #17672, #18039, #18040, #18041, #18133, #18148, #18161, #18178, #18252, #18258, #18329, #18332, #18402, #18716, #18901, #21477, #22526, #22753, #23869, #2512, #25185, #25656, #25775, #25811, #25834, #25836, #25898, #25899, #25900, #25901, #25927, #26068 [deployed], #26173, #26175, #26192, #26207, #26208, #26214, #26229, #26235, #26258, #26296, #26326, #26342, #26344, #26371, #26401 [executing], #26415 [blocked], #26421 [executing], #26429 [executing], #26436 [blocked], #26437 [executing], #26461, #26470 [deployed], #26482 [executing], #26483 [executing], #26484 [executing], #26490 [executing], #26491 [executing], #26495 [deployed], #26496, #26498 [executing], #26499 [executing], #26500 [deployed], #26502, #26513 [deployed], #26518 [executing], #26519 [executing], #26520 [deployed], #26521 [deployed], #4987
+**Ideas referenced:** #178668, #178669, #2299, #2507 [investigating], #25097, #2541 [deployed], #26209 [proposed], #26211 [executing], #26233 [rejected], #26237 [rejected], #26238 [proposed], #27100
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786947807234` — 8/16/2026, 11:28:25 PM PT — 41 turns
-
-**Original task:**
-
-```
-Do a 90 minute doctor of franeknstein executor which has a bunch of impl failed which may need to be checke for staleness and regression and if neither and not harmful, shoudl be ran again for the last 24 hours or so. If impl failed or blocked. I obviously don't wwnat to mess up our GLM, Julia Claudia 235B and Frankenstein-llm routing, but I do want to make sure the executor is working
-```
-
-**Ideas referenced:** #12597, #19194, #20617, #21004, #22229, #2289, #23117, #25201, #2537, #25385, #2539, #25887, #26461, #26625, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26930, #26938 [deployed], #26954 [executing], #8184
-
-**Last PICKUP PROMPT:**
-
-```
-handoff + bug library + file ideas for real fixes
-- [ ] attempt_completion with PICKUP PROMPT block
-</task_progress>
-</use_mcp_tool>
-```
-
-### `1786947372694` — 8/16/2026, 11:28:15 PM PT — 61 turns
+### `1786947372694` — 8/17/2026, 12:28:11 AM PT — 267 turns
 
 **Original task:**
 
@@ -156,11 +150,11 @@ handoff + bug library + file ideas for real fixes
 Can you give me a model here in Cline where i can directly test the Julia/Claudia 235b llm only with no spillover or backup. Just that one locally here in Cline Settings under litellm.emsuniversity.com?
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326, #2114, #2299, #23171, #25097, #2537, #26908, #26923
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11847, #12477, #12550, #12618, #12824, #12872, #12878, #13202, #14141, #16163, #16265, #16304, #16648, #16844, #17202, #17203, #17205, #1765, #1781, #18312, #18320, #18326, #18820, #18868, #2114, #22598, #22601, #22815, #22820, #22897, #2299, #23071, #23171, #25097, #2537, #25757, #25759, #25764, #26908, #26923
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786817395147` — 8/16/2026, 11:28:12 PM PT — 417 turns
+### `1786817395147` — 8/17/2026, 12:28:05 AM PT — 511 turns
 
 **Original task:**
 
@@ -207,7 +201,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786941064430` — 8/16/2026, 11:28:07 PM PT — 535 turns
+### `1786941064430` — 8/17/2026, 12:27:47 AM PT — 619 turns
 
 **Original task:**
 
@@ -217,7 +211,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 How does such degredation occur and how do we avoid this going forward? Seems like an RCA is in order for that-> The pool serving the Cline lane had degraded to 2 of 4 usable upstreams with both survivors saturated, so the adapter returned empty HTTP 200s (verified: adapter log showed continuous `CANARY probe failed upstream=http://127.0.0.1:11513 err=[Errno 104] Connection reset by peer` and `DECODE_STALL http://127.0.0.1:8210 rate=0.00 tok/s streak=12 -> penalty` plus `TIMEOUT_COOLDOWN_SET`; upstream log showed `ttfb_s: 165.36, queue_depth: 106.0` and a cline-lane entry 
 ```
 
-**Ideas referenced:** #10740, #11397, #11936, #11942, #11953, #12231, #12251, #12335, #12365, #1238, #1241, #12672, #12689, #12716, #13108, #13121, #13202, #13831, #13874, #14848, #16163, #1765, #1781, #178693, #19903, #2050, #2114, #2247, #2306, #23171, #23206, #25185, #2535 [deployed], #2536 [deployed], #2537 [deployed], #2539 [deployed], #25468, #25471, #25604, #25764, #26400, #26403, #26819 [executing], #26908 [deployed], #26909 [rejected], #26910 [deployed], #26923 [deployed], #26925 [proposed], #26928 [proposed], #26938 [deployed], #26954 [executing], #26956 [executing], #26957 [deployed], #26958 [deployed], #27100
+**Ideas referenced:** #10740, #11397, #11936, #11942, #11953, #12231, #12251, #12335, #12365, #1238, #1241, #12672, #12689, #12716, #13108, #13121, #13202, #13831, #13874, #14848, #16163, #1765, #1781, #178693, #19686, #19903, #1998, #2050, #2114, #2247, #2306, #23171, #23206, #25185, #2535 [deployed], #2536 [deployed], #2537 [deployed], #2539 [deployed], #25468, #25471, #25604, #25764, #26400, #26403, #26819 [executing], #26908 [deployed], #26909 [rejected], #26910 [deployed], #26923 [deployed], #26925 [proposed], #26928 [proposed], #26938 [deployed], #26954 [executing], #26956 [executing], #26957 [deployed], #26958 [deployed], #27100
 
 **Last PICKUP PROMPT:**
 
@@ -228,27 +222,305 @@ thropic or paid heads touched.
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1786932084 - Apply Ruben's ladder reorder: Julia/Claudia 235B before 120Bs
+Pick up task #1786932084 - 235B YaRN tradeoff + Cline/Tools lane health + ladder position
 
-Where we left off (verified 2026-08-16 23:08 PT):
-- REGISTRY DONE AND VERIFIED: `/etc/litellm/frankenstein_registry.yaml` `cline_ladder_by_health` now reads `GLM-5.2-LOCAL -> Julia/Claudia-235B(:11513) -> Cicero-235B(:11520) -> 120B(artemis) -> DeepSeek`; `tier_order` now `L0,L1,L1c,L1b,L4g,L4b,L4f,L2,L3` (235B tier before 120B pool tier). Backup: `/etc/litellm/frankenstein_registry.yaml.bak.rub20260816`. YAML_OK.
-- LITELLM RESTARTED + VERIFIED: `systemctl is-active litellm` = active, `/health/liveliness` = 200, `/tmp/emsu_router_registry_state.json` loaded_at `2026-08-17T06:06:13Z` shows `[L0,L1,L1c,L1b,L4g,L4b,L4f,L2,L3]`.
-- REMAINING GAP (why the change is NOT yet user-visible in Cline): `frankenstein_tools_adapter.py` `_least_loaded_order()` ranks interactive turns by `_speed_rank` after the GLM floor (`_glm_priority`). Julia's ~12 tok/s loses to the 120Bs' 33-44 tok/s on every Cline turn. The adapter never routes to :11513 for cline (confirmed live: last 10 cline metrics show artemis/bigmac only). Ruben's "235B before 120Bs" needs a hard julia priority tier here, not just the registry.
-- Available primitives: `_is_glm(up)` at line 479 is `"8210" in (up or "")`; `_glm_priority(u)` returns 0 = hard priority, 1 = normal speed sort; `_speed_rank` = `-_canary_tok_s(u)`. Patch shape: add `_is_julia_235b(up)` = `"11513" in (up or "")`, add `_julia_priority(u)` returning 0 for 11513 unless in-timeout-cooldown, and insert it into the sort key as `_julia_priority(u)` BEFORE `_speed_rank(u)` (so the key becomes `_in_timeout_cooldown, _glm_priority, _julia_priority, _speed_rank, load+10*inflight`). GLM stays first because `_glm_priority` returns 0 before `_julia_priority` is evaluated; julia gets hard priority over the 120B speed sort; 120Bs still serve when julia is saturated/cooldown (falls to speed sort).
-- Patch was NOT applied at 23:08 PT because the window hit rule 143 bail at strike 9. Do not re-run the registry patch — it is already applied and verified.
-- Anything written by write_server_file carries "PHP-FPM reload: OK"; ignore that line for adapter.py (it is a Python file, FPM reload is harmless no-op).
+Where we left off (verified 2026-08-17 00:11 PT):
+- Adapter julia-priority tier applied + restarted + PROVEN while julia was up (3274 cline hits on 11513, tool_calls=1, ttfb 6-25s). Currently julia is DOWN again: CANARY Errno 104 loop since ~00:08, ADMIT usable=3/4, 120Bs carrying lane.
+- BigMac healthy 12.10 tok/s (streak 40), GLM healthy 13.83 (streak 171), Artemis healthy; fresh CTX shows 11513 max_model_len=40960, no CTX_FILTER drops at 40960.
+- Registry reorder + tier_order done (GLM -> julia-235b -> cicero -> 120B -> deepseek); litellm healthy.
+- Ruben's call: YaRN tradeoff. Analysis delivered: 40960 cannot serve 70-90K windows; YaRN->131072 gives 6x active params (~22B vs ~3.7B) at ~3x wall time (12-16 vs 29-44 tok/s) with ~5-10% needle-loss at 2x, more at 3.2x. Safety composition = VEC (grounding, not ctx), SSS/LoRA-v2 (gated by same cap), rule 317/297 (probe-first). Recommendation: fix julia serve crash loop, then YaRN 131072 with 40960-first rollback.
+- 2670-BANK-NOTE: julia's recurring Errno 104 connection-reset (did not root-cause; looks like serve reload loop).
 
 Open threads to drive next:
-1. #26925 [deployed] - THE ONLY REMAINING STEP: patch `frankenstein_tools_adapter.py` as described (add `_is_julia_235b` + `_julia_priority`, insert before `_speed_rank` in `_least_loaded_order`), restart the adapter (systemctl or PM2 — check `ps aux | grep frankenstein_tools_adapter` for the supervisor), then PROVE it: send a cline-shaped payload to 127.0.0.1:11510/v1/chat/completions with model=frankenstein-tools and confirm the adapter log shows upstream=http://127.0.0.1:11513 and the lane metric `upstream` = 11513 for the cline lane. Also update the registry julia-235b notes with the adapter-priority note if not already there.
-2. #26928 [proposed] - emsu-codegen empty-200 rate 32.9% (untouched).
-3. #26956 [executing] - per-upstream tool-call capability probe asserting tool_calls>=1 + finish_reason (artemis returned tool_calls=0 where bigmac returned 1; must not pull healthy boxes out via truncation).
+1. #26925 [deployed] - julia serve crash-loop: root-cause the recurring Errno 104. Check /tmp/vllm_serve_unified*.crash.log mtime, dmesg, GPU temp; fix relaunch (the 300s Claudia-join wait + no-process-wait may be relaunching over a live head). Re-prove cline routing lands on 11513 after stable.
+2. #26956 [executing] - per-upstream tool-call probe (tool_calls>=1 + finish_reason, max_tokens>=1500). Artemis returned tool_calls=0 at 35.11s vs bigmac 1 at 1.57s on identical requests (measured 08-16).
+3. #26928 [proposed] - emsu-codegen empty-200 rate 32.9%; log requested max_tokens + finish_reason alongside content_len.
+4. #26819 [executing] - optional sm_121 kernel upgrade for Julia/Claudia. Blocks nothing.
+5. Human-only decision (no idea) - YaRN 131072 enablement on 235B (recommend yes after crash-loop fix, with 40960-first rollback), and the same question for Cicero at 131072.
 
 Reference IDs:
-- Ideas referenced this session: #26925 [deployed], #26938 [deployed], #26954 [deployed], #26957 [deployed], #26958 [deployed], #26956 [executing], #26928 [proposed], #26819 [executing]
-- Bug library incid
+- Verified live: #26925 [deployed], #26938 [deployed], #26954 [deployed], #26957 [deployed], #26958 [deployed]
+- Carried: #26956 [executing], #26928 [proposed], #26819 [executing], #26909 [rejected]
+- Bug library incidents: 2535, 2536, 2537, 2539
+- Files: /usr/local/bin/frankenstein_tools_adapter.py (+ .bak.julia_priority), /etc/litellm/frankenstein_registry.yaml (+ .bak.rub20260816), /etc/litellm/config.yaml (read-only), /tmp/patch_adapter_julia_priority.py, /tmp/probe_cline.py
+- Access: Julia via WOPR :2205 rubenmajor@127.0.0.1; WOPR :2222 emsuserver (passwordless sudo); adapter frankenstein-tools.service.
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Re-anchor: quantify YaRN vs 120Bs mathematically + safety composition, correct stale CTX claim
+- [x] Pulled fresh live state: julia down again (Errno 104 loop, usable=3/4), bigmac/GLM/artemis healthy
+- [x] Old CTX-FILTER 24K citation superseded by fresh 40960 capability lines (no drops at 40960)
+- [x] Mathematically quantified: 6x active params (22B vs 3.7B) vs ~3x wall-time (12-16 vs 29-44 tok/s), YaRN needle-loss ~5-10% at 2x
+- [x] Safety composition named + verified: VEC=grounding, SSS/LoRA-v2=gated, rules 317/29
 ```
 
-### `1786935011375` — 8/16/2026, 11:27:55 PM PT — 465 turns
+### `1786556136912` — 8/17/2026, 12:27:25 AM PT — 865 turns
+
+**Original task:**
+
+```
+#Frankenstein-LLM Improvements
+
+I would like you to run a series of tests to benchmark Frankenstein LLM versus Claude Opus 5. From this benchmarking, I would like for you to derive away for us to get Frankenstein LLM to behave in a manner that is better than Opus 5. I believe that this is possible if you take a look at our previous interactions here incline. It may require some configuration changes, such as better rules, better mcp, context on disk settings router settings, mcp additions, cline setting changes, anything else you can think of that could be used to get us where we would like to
+```
+
+**Ideas referenced:** #081020, #10108, #10740, #11319, #11735, #11741, #11781, #12059, #12060, #12477, #12618, #12824, #12872, #12878, #13202, #1616, #16163, #16265, #16304, #16648, #16844, #16863, #17130 [superseded], #17202, #17203, #17205, #17300, #17430, #17537 [rejected], #18132 [deployed], #18312, #18326, #18329, #18670, #18671, #18820, #18868, #19125, #19173, #1934, #20581, #22598, #22601, #22815, #22897, #2299, #2301, #2306, #23071, #2310, #2311, #23135, #23171, #25097, #25195, #25269, #25270, #25293, #25537, #25548 [executing], #25560, #25562, #25593 [proposed], #25608, #25623, #25632, #25633, #25635, #25666, #25667, #25669, #25679, #25688, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25796, #25797, #25798, #25803 [proposed], #25804 [deployed], #25812, #25896 [executing], #25897 [approved], #25898 [approved], #25899 [approved], #25900 [approved], #25901 [approved], #25902, #25903, #25905, #25927 [approved], #25928 [superseded], #25929 [approved], #25930 [approved], #25984 [proposed], #25991 [executing], #25992 [executing], #25993 [executing], #25994 [executing], #25995, #25996 [proposed], #25997 [executing], #25998 [executing], #25999 [executing], #26010 [approved], #26011, #26967 [proposed], #38984, #57890, #6522, #6711, #6719, #6729
+
+**Last PICKUP PROMPT:**
+
+```
+ stacking more failing probes.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — frank-vs-Opus benchmark follow-through: fix router non-JSON bug and re-run.
+
+Where we left off (verified 2026-08-16 23:33 PT):
+- Benchmark ran clean this session: frank 4/6 = 66.7% (up from 25% this morning).
+- Results live at /tmp/frank_bench3.json; harness fixed at /tmp/bench_fixed.py (compiles, per-task try/except, incremental JSON, no Opus-OUT model).
+- 3 VEC levers live + verified: #25998 [deployed], #25999 [deployed], #25997 [deployed].
+- Vision-doorman enforcement #25991 [deployed]; payments multi-processor correction shipped in gate + corpus.
+- Prior bad ideas rejected/superseded: #25992, #25993, #25994 [rejected].
+
+Open threads to drive next:
+1. #26967 [proposed] — Router returned non-JSON on routing_bug + vision_policy tasks (both scored 0). Direct adapter probe is healthy (HTTP 200, 5.0s), so the bug is intermittent in the router/doorman layer. Diagnose via litellm logs for the exact non-JSON response body on a failing call, fix, then re-run /tmp/bench_fixed.py.
+
+Reference IDs:
+- Ticket: none (conversation task)
+- Ideas filed this session: #25991 [deployed], #25992/#25993/#25994 [rejected], #25995/#25996 [proposed], #25997/#25998/#25999 [deployed], #26010 [executing], #26967 [proposed]
+- Files touched: /etc/litellm/router_hook.py, /etc/litellm/frankenstein_registry.yaml, /var/www/emtskills/clinerules/emsu_corpus.txt, /var/www/emtskills/scripts/frank_recovery_gate.py, /tmp/bench_fixed.py, /var/lib/emsu_corpus/corpus.db
+- Harness result: /tmp/frank_bench3.json (frank 4/6)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1786948767264` — 8/17/2026, 12:27:05 AM PT — 103 turns
+
+**Original task:**
+
+```
+#Unknown / Maybe 317 adjacent
+
+Rebase and tell me where we are at now?
+
+--
+Done. #25888 is now `[approved]` — disposition flipped per your steer, confirmed by the orchestrator returning `new_status: approved`.
+
+## Session state at close
+
+Rule 317 is live on both fronts, and the telemetry hygiene fix landed this session:
+- **Cline side:** rule 317 hardfloor + enforcement wired into the completion gate. 28 real fires (18 UNVERIFIED_STATE, 18 REVERSAL_LOG, 8 overlapping rows), 1 test-noise row identified.
+- **Argus side:** 317 block live in `/var/www/emtskills/routes/alltastic_api.php:12954` insi
+```
+
+**Ideas referenced:** #178694, #18480 [deployed], #18481 [blocked], #18491 [rejected], #25185, #25888 [approved], #25906 [approved], #25907 [proposed], #25925, #25926, #25935, #25981 [approved], #26247 [awaiting_review], #26617 [approved], #26914 [deployed], #26915 [executing], #26916, #26972 [proposed], #27100
+
+**Last PICKUP PROMPT:**
+
+```
+ns no Reversal Log section.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #1786941064430 - Rule 317 rebase follow-up: approve #26972, explain #25907\n\nWhere we left off (verified 2026-08-17 12:25 AM PT):\n- #26972 [executing] - approved by Ruben this turn; corrective idea will amend #25981 title/description to match reality\n- #25907 [proposed] - explained to Ruben this turn; waits on 7 days of A7 telemetry evidence before any gate change\n- #25888 [deployed] - rule 317 hardfloor + mechanical Conclusions Ledger gates live in clinerules-mcp\n- #25906 [deployed] - A7 gate-telemetry section live in cline_rules_audit.sh L197-226 (7-day window for #25907 starts now)\n- #25981 [deployed] - Argus probe-before-claim + flip-correction language live in alltastic_api.php (~L13286-13288)\n- #26247 [deployed] - telemetry env override live; prod ledger 3,105 rows\n\nOpen threads to drive next:\n1. #26972 [executing] - execute the amendment of the #25981 title/description to match reality (no literal 317 token; block at ~13286, not 12954)\n2. #25907 [proposed] - after ~7 days of A7 telemetry from #25906 [deployed], re-evaluate with real fire-rate data; relax the Reversal Log gate only if it provably fires on claim-free completions\n3. #25906 [deployed] - confirm no telemetry regression on next A7 nightly run\n4. #25981 [deployed] - watch Argus serves to confirm probe-before-claim behavior takes effect in served answers\n\nReference IDs:\n- Ideas filed: #25888 [deployed], #25906 [deployed], #25907 [proposed], #25981 [deployed], #26247 [deployed], #26972 [executing]\n- Files touched: /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js, /Users/rubenmajor/Documents/Cline/scripts/cline_rules_audit.sh, /var/www/emtskills/routes/alltastic_api.php (server)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════", "task_id": "1786941064430"}
+</arguments>
+<task_progress>
+- [x] Approve #26972 per Ruben — approved (new_status: approved)
+- [x] Explain #25907 — full body fetched from DB, explanation drafted
+- [ ] Validate completion, then attempt_completion
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1786947807234` — 8/16/2026, 11:54:56 PM PT — 114 turns
+
+**Original task:**
+
+```
+Do a 90 minute doctor of franeknstein executor which has a bunch of impl failed which may need to be checke for staleness and regression and if neither and not harmful, shoudl be ran again for the last 24 hours or so. If impl failed or blocked. I obviously don't wwnat to mess up our GLM, Julia Claudia 235B and Frankenstein-llm routing, but I do want to make sure the executor is working
+```
+
+**Ideas referenced:** #12430, #12597, #12778, #19194, #19490, #20517, #20617, #21004, #21586, #22229, #2289, #23117, #23455, #24634, #24895, #25201, #2537, #25385, #2539, #25830, #25887, #26046, #26196, #26225, #26461, #26491, #26495, #26496, #26507, #26515, #26625 [executing], #26847, #26851, #26867, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26915, #26920 [proposed], #26921 [proposed], #26925 [deployed], #26930, #26934, #26938 [deployed], #26954 [executing], #26975 [proposed], #26976 [proposed], #7925, #8184
+
+**Last PICKUP PROMPT:**
+
+```
+iously invisible orphan class.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Doctor-of-frankenstein executor follow-up: verify 235B reachability + confirm orphan-D disposition.
+
+Where we left off (verified 2026-08-16 23:54 PT):
+- Executor verified WORKING and self-healing; no systemic failure. `ruben_executor_failures` empty. Dispatcher re-drove #25830/#23455/#26934 live during the pass.
+- `cron_executor_doctor.php` extended (orphan-C auto-clear of stale impl_failed labels on terminal rows + orphan-D report of blank-status/impl_failed invisible rows). Deployed twice, lint+symbol clean, FPM reloaded, backups at `.bak-2026-08-17T06-47-46-mcp-deploy` and `.bak-2026-08-17T06-49-07-mcp-deploy`. Cleared 8 stale labels; honest impl_failed_24h now = 1.
+- Handoff updated with full session record (verified head/tail/once-only; corrupted "undefined" line repaired).
+
+Open threads to drive next (EVERY item has a real filed idea):
+1. #26976 [proposed] — Verify julia/claudia 235B reachability (adapter :11513). Confirm WG/tunnel to julia (`ssh julia`, `ping 10.100.0.10`), then per handoff 22:10 PT gotchas re-verify NCCL transport line + `tool_calls>=1` BEFORE any relaunch. Do NOT change launch scripts or adapter config.
+2. #26975 [proposed] — Decide orphan-D disposition: 4 blank-status+impl_failed rows (#26225 human-forward-Jon-digest, #26196 MWFD-countersignature, #21586 KAIZEN-silent, #24895 Argus-messages-eaten). Sanctioned decode needed so human-only tasks reach Ruben and bug tasks get triaged.
+3. #26625 [executing] — Deploy the "no_code_patches" release-guard misread fix (root cause of false guard-holds on green builds); it sits idle in the queue.
+
+Reference IDs:
+- Ideas filed: #26975 [proposed], #26976 [proposed]
+- Files touched: /var/www/emtskills/cron/cron_executor_doctor.php (+ 2 dated .bak), /var/www/emtskills/docs/HANDOFF_NOTES.md (+ .bak-doctor-20260816)
+- Routing verified read-only (untouched): GLM :8210 (200/53ms), adapter :11510 (serving), julia :11513 (unverified — flag).
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786831867073` — 8/16/2026, 11:52:46 PM PT — 222 turns
+
+**Original task:**
+
+```
+#Joshua / Denali Scenario
+
+So what now then? Am I good to go hiking for a week on Denali?? Besides the grizzlies and the cold of course...
+
+--
+Let me answer the confusion directly, because I gave you a worse answer than the situation deserved. Then the Denali scenario, which is now mostly built.
+
+# What I meant by "one witness away", and why I was over-cautious
+
+The classic problem with two machines: when the standby stops hearing from the writer, it cannot distinguish a dead peer from a dead link. Guess wrong, promote anyway, and you have two writers with diverging data. The textbook fix is a
+```
+
+**Ideas referenced:** #25185, #26007 [deployed], #26008 [executing], #26009 [deployed], #26017 [proposed], #26019 [deployed], #26023 [executing], #26024 [deployed], #26068 [deployed], #26069 [deployed], #26070 [deployed], #26076 [executing], #26077 [executing], #26604 [deployed], #26614 [deployed], #26631 [deployed], #26667 [deployed], #26668 [deployed], #26669 [executing], #26973 [deployed], #26974 [deployed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786948641882` — 8/16/2026, 11:49:40 PM PT — 60 turns
+
+**Original task:**
+
+```
+#Rule 317
+
+I i gave it a full day and a little bit. Tel me how you feel about 317 now? Also look at this task/integrate it and tell me agian what's left/what your thoughts are on where we are at --> 
+
+You were right. Rule 317 was a prose rule: the validator demanded an RCA bucket and the word "causal rule" in a log line, but nothing made the causal rule file, corpus, or MCP index actually change. A window could type a plausible flip line and pass while the underlying artifact went untouched. That is exactly the cursory-window-fixing you flagged. It is now mechanical.
+
+What shipped (verified li
+```
+
+**Ideas referenced:** #178684, #178694, #24645, #2516, #2521, #25888, #26617, #26696 [deployed], #26710 [deployed], #26725 [deployed], #26955 [deployed], #26970 [proposed], #26971 [proposed], #27100, #6520
+
+**Last PICKUP PROMPT:**
+
+```
+on disk. Instrument that next.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786948459 - Rule 317 honest review: gate live, positive control unproven
+
+Where we left off (verified 2026-08-16 23:49 PT):
+- Gate scoreboard 23:33:42 PT: heartbeat PASS, validations=82, blocks=59/7d; rule 317 = 24 blocks (UNVERIFIED_STATE 16, REVERSAL_LOG 5, NOT_REPAIRED 4)
+- Raw ledger live DB ~/.clinerules-mcp/index.sqlite: R317_REVERSAL_NOT_REPAIRED blocks ids 112/117/119/125, tasks 1786932084/26932/26490/1786948459, latest 2026-08-17T06:45:50Z
+- Corpus feed proven: ai_learned_corrections id=8185, issue_category=r317_reversal_not_repaired, occurrence_count=4 (dedup rollup working)
+- First nightly truth eval landed: r317_eval_history id=2, frankenstein-llm, 04:31:58 PT, truth_score_pct=20.00
+
+Open threads to drive next:
+1. #26971 [proposed] — Run the positive control: a genuine rule-citing flip WITH clinerules_amend_rule must PASS and land a rule_amend row + dated amendment on disk
+2. #26971 [proposed] — Pull task detail for gate_blocks ids 112/117/119/125 and find why no blocked window ever actually amended (retry steering question)
+3. #26725 [deployed] — Run the 15-claim r317 eval with --model=opus for a paid-head benchmark row (burns real tokens, needs go-ahead)
+4. #26970 [proposed] — Deploy-target correction: server-side gate copy belongs on WOPR /var/www/emtskills/mcp-servers, not Artemis port 7860 (premise was wrong)
+
+Reference IDs:
+- Ideas filed: #26955 [deployed], #26970 [proposed], #26971 [proposed]
+- Files touched: /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md, /Users/rubenmajor/.clinerules-mcp/index.sqlite
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Verify rule_amend ledger state — 0 mechanical repairs in 7d
+- [x] Check gate scoreboard — heartbeat PASS, rule 317 = 24 blocks
+- [x] Verify rule 317 file on disk — obligation 6 + gates present
+- [x] Check r317_eval_history — nightly row id=2 (20%)
+- [x] Check corpus feed — id=8185, occurrence_count=4, dedup working
+- [x] Artemis premise corrected — WOPR bridge + Mac MCP host the gate
+- [x] Enumerated 4 NOT_REPAIRED blocks from live ledger; filed #26970 + #26971
+- [x] First validation caught 4 issues; pickup template wired in
+- [x] Honest assessment complete with reversal log + full pickup block
+</task_progress>
+</attempt_completion>
+```
+
+### `1786602203659` — 8/16/2026, 11:44:52 PM PT — 160 turns
+
+**Original task:**
+
+```
+There appear to be some minor issues going on with Frankenstein LLM. It seems like I'm getting some invalid API responses and I'm not sure where those are coming from. I think that we are spilling over for some reason I don't know what's exactly happening we are spilling over for some reason I don't know what's exactly happening
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11936, #11942, #11953, #12251, #12314, #12335, #12363, #12365, #12368, #12407, #12459, #12477, #12618, #12824, #12872, #12878, #13108, #13121, #13202, #13874, #16163, #16265, #16304, #16718, #16844, #18312, #18326, #1967, #19903, #2050, #20722, #2299, #23171, #2335 [deployed], #24145 [proposed], #25097, #2537 [deployed], #25471, #25630, #25888, #26019, #26068, #26080 [awaiting_review], #26908 [executing], #26923 [executing]
+
+**Last PICKUP PROMPT:**
+
+```
+; capacity tuning is the fix".
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #24145 [approved] - Frankenstein capacity re-tune for the new 235B-first ladder (verified live 2026-08-16 23:43 PT: :11513 = Julia+Claudia qwen3-235b TP=2 healthy pass 37, pool 4/4, GLM 8210 healthy pass 94, EMPTY_PASSTHROUGH_GATE_v2 503 spills still fire at pool_usable=4/4 due to collective saturation).
+
+Where we left off (verified 2026-08-16 23:44 PT):
+- Julia/Claudia :11513 repurposed today to qwen3-235b A22B NVFP4 TP=2 (ideas #26908 #26923, bug #2537). Registry: 235B now sits BEFORE 120B in the Cline ladder (Ruben 8/16 directive). Live decode ~10-11 tok/s vs 120B ~34.
+- Pool is 4/4 healthy (11513 pass 37, 8210 pass 94, artemis/bigmac pass 4). No restart needed.
+- 8/13 affinity fix live: adapter line 210 yields at load >= cap. Single adapter :11510 HTTP 200 0.37s.
+- Empty-200 503 spills persist: 1398 total since Aug 08 log start, 9 tonight (22:25-23:31), including at pool_usable=4/4 (22:25:06). Cause = all free-local boxes saturate together (artemis 22 vs cap 9, GLM 12 vs cap 8).
+- #24145 approved with updated scope. HANDOFF_NOTES needs a correction entry (was: "Julia quarantined, restart Julia" — WRONG, superseded).
+
+Open threads to drive next:
+1. #24145 [approved] Re-tune FRANK_BOX_CAPACITY for the 235B-first ladder: 235B needs LOWER cap than legacy 120B (throttle queue, avoid empty-200), re-verify artemis/bigmac caps against observed loads (artemis hit 22 vs cap 9), confirm GLM :8210 lane budget (8 cap = 6 Cline + 2 batch per GLM52_RING_STATE_TRACKER.md). Apply via systemd drop-in, restart, watch EMPTY_PASSTHROUGH_GATE_v2 count drop.
+2. Append a correction entry to HANDOFF_NOTES.md: "2026-08-16 23:44 PT 317 correction: :11513 is Julia+Claudia 235B TP=2 healthy, NOT quarantined; do not restart".
+
+Reference IDs:
+- Ideas: #24145 [approved], #26080 [completed], #26908 [executing], #26923 [executing]
+- Incidents: #2335 [deployed], #2537 [deployed]
+- Files touched: /usr/local/bin/frankenstein_tools_adapter.py (patched live), /etc/litellm/frankenstein_registry.yaml (read-only)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786780447770` — 8/16/2026, 11:34:23 PM PT — 194 turns
+
+**Original task:**
+
+```
+#Executor
+
+Why don't you give me a roadmap as to how the system works and close any gaps that you can find in the process?
+
+That makes me wonder does ruben doctor of executor even work or does that rule need to be modified?
+
+Built and shipped. Both halves are positive-controlled, which matters here more than usual: the entire problem tonight was instruments that reported healthy without ever being tested against a known-bad case.
+
+## The watchdog now measures delivery, not activity
+
+`cron_orchestrator_executor_watchdog.php` had six sections. Every one checked whether something was *running*: i
+```
+
+**Ideas referenced:** #12506, #12761, #12763, #12764, #13075, #15967, #16002, #16057, #16065, #16104, #16139, #16156, #16158, #16536, #16648, #16714, #16717, #16846, #17313, #17672, #18039, #18040, #18041, #18133, #18148, #18161, #18178, #18252, #18258, #18329, #18332, #18402, #18716, #18901, #21477, #22526, #22753, #23869, #2503, #2505, #2512, #25185, #2540, #25656, #25775, #25811, #25834, #25836, #25898, #25899, #25900, #25901, #25927, #26068 [deployed], #26173, #26175, #26192, #26207, #26208, #26214, #26229, #26235, #26258, #26296, #26326, #26342, #26344, #26371, #26401 [executing], #26415 [blocked], #26421 [executing], #26429 [executing], #26436 [blocked], #26437 [executing], #26461, #26470 [deployed], #26482 [executing], #26483 [executing], #26484 [executing], #26490 [executing], #26491 [executing], #26495 [deployed], #26496, #26498 [executing], #26499 [executing], #26500 [deployed], #26502, #26513 [deployed], #26518 [executing], #26519 [executing], #26520 [deployed], #26521 [deployed], #26965 [deployed], #26966 [executing], #27100, #4987
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786935011375` — 8/16/2026, 11:29:11 PM PT — 470 turns
 
 **Original task:**
 
@@ -1613,27 +1885,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1786831867073` — 8/15/2026, 3:42:30 PM PT — 126 turns
-
-**Original task:**
-
-```
-#Joshua / Denali Scenario
-
-So what now then? Am I good to go hiking for a week on Denali?? Besides the grizzlies and the cold of course...
-
---
-Let me answer the confusion directly, because I gave you a worse answer than the situation deserved. Then the Denali scenario, which is now mostly built.
-
-# What I meant by "one witness away", and why I was over-cautious
-
-The classic problem with two machines: when the standby stops hearing from the writer, it cannot distinguish a dead peer from a dead link. Guess wrong, promote anyway, and you have two writers with diverging data. The textbook fix is a
-```
-
-**Ideas referenced:** #25185, #26007 [deployed], #26008 [executing], #26009 [deployed], #26017 [proposed], #26019 [deployed], #26023 [executing], #26024 [deployed], #26068 [deployed], #26069 [deployed], #26070 [deployed], #26076 [executing], #26077 [executing], #26604 [deployed], #26614 [deployed], #26631 [deployed], #26667 [deployed], #26668 [deployed], #26669 [executing]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786832584504` — 8/15/2026, 3:39:32 PM PT — 105 turns
 
@@ -3639,134 +3890,6 @@ Reference IDs:
 - Files touched: /Users/rubenmajor/Desktop/SBA_Loan_Underwriter_Package.md
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786666915889` — 8/14/2026, 12:23:31 AM PT — 724 turns
-
-**Original task:**
-
-```
-Can you email a copy of any externship agreements / affiliation agreement whatever from agencies that might be signed by both parties - would be in vyu@emsunivesity.com's email inbox, etc...
-```
-
-**Ideas referenced:** #15669, #19163, #19338, #19458, #19491, #2144, #2158, #2187, #2304, #2316, #2335 [deployed], #2336, #2350, #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26196 [executing], #26197, #26198, #26224, #26225 [executing], #26226 [awaiting_review], #361709, #6785, #97703
-
-**Last PICKUP PROMPT:**
-
-```
-man-policy/signature decision.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up MWFD affiliation agreement EMSU countersignature.
-
-Where we left off (verified 2026-08-14 00:12 PT):
-- 6 signed agreements linked into manage_sites.php (sites 58, 75–79 ↔ docs 118–123), files verified on disk
-- MWFD signed PDF delivered to Ruben's Downloads (queue 6D5B628874D, INBOX)
-- Argus ExecAdmin endpoint live at /var/www/emtskills/api/argus_exec_agreements.php
-
-Open threads to drive next:
-1. #26196 [awaiting_review] — EMSU countersignature on MWFD agreement: needs Ruben's signature decision, then countersign + file
-2. #26225 [executing] — Jon Thompson 18-month digest: 44 agreements inventoried and emailed; next is confirming which Jon wants re-sent as PDFs
-
-Reference IDs:
-- Tickets: none (direct steering)
-- Ideas filed: #26196, #26224, #26225, #26226
-- Files touched: /var/www/emtskills/api/argus_exec_agreements.php, compliance_documents rows 118–123, ExternshipSite rows 58/75–79
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786666814323` — 8/13/2026, 11:54:00 PM PT — 970 turns
-
-**Original task:**
-
-```
-Jon had a request in Argus, https://emsuniversity.com/emtskills/routes/argus_download.php?tab=terminal (is that what you think when i say argus)? 
-
-This page does not have grievances submitted I htink using the student grievance link: 
-
-https://emsuniversity.com/emtskills/routes/grievance_manager.php 
-
-for example where is blake brandon's request. 
-
-That might have been in the system and not populated or maybe it was emailed to vyu@emsuniversity.com or other CS? Can you check on those. Seems like this process is not working properly.
-```
-
-**Ideas referenced:** #047857, #059669, #10003, #10005, #10182, #11111, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #128337, #128681, #129302, #16213, #16263, #1807, #181825, #18745, #18770, #19370, #19583, #19592, #20292, #20295, #21140, #21262, #22310, #2337 [deployed], #2338 [deployed], #2339 [deployed], #2340, #25097, #25150, #25188, #2563, #25888, #26192 [proposed], #26197 [executing], #26198 [executing], #26200 [executing], #26201 [executing], #26202 [executing], #26205 [proposed], #26207 [proposed], #26208 [proposed], #26210 [unknown], #26214 [executing], #26215 [executing], #274160, #30363, #313244, #334155, #3730, #374151, #4338, #45475, #475569, #6366, #64748, #65039, #69707, #78350, #8645, #8942, #9019, #9191, #9203, #92400, #9650, #9654, #9660, #9733, #9888, #9889
-
-**Last PICKUP PROMPT:**
-
-```
-rrecting a contradicted claim.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task - Grievance Manager "Overdue (Active)" stat card fix.
-
-Where we left off (verified 2026-08-13 23:52 PT):
-- Fixed and verified. The "Overdue (Active)" card showed a dash because handleStats() in routes/api/grievance_api.php never emitted overdue_non_terminal and grvLoadStats() in assets/js/grievance_manager.js never set grvStatOverdueNonTerminal.
-- Real-handler proof: handleStats() returns stats.overdue_non_terminal = 2; handleList(summary_bucket=overdue_non_terminal) returns total 2 (GRV-2026-0066, GRV-2026-0065, pending_admin_complete, eff_due 2026-08-05). php -l clean, PHP-FPM reloaded, public JS served equals disk (35b9b7ad / 193399 bytes).
-
-Open threads to drive next:
-None. All work completed this session.
-
-Reference IDs:
-- Ticket: none (user-reported UI issue)
-- Ideas filed: none (no idea filed this session)
-- Files touched: /var/www/emtskills/routes/api/grievance_api.php, /var/www/emtskills/assets/js/grievance_manager.js
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786677303463` — 8/13/2026, 11:47:17 PM PT — 220 turns
-
-**Original task:**
-
-```
-/emtskills is slow again. Please fix it. Check emtskills-slowness and fix it
-```
-
-**Ideas referenced:** #11812, #13453, #2310 [resolved], #2335 [deployed], #2337, #2338, #2339, #2342 [open], #25548 [executing], #25679 [executing], #26019, #26054, #26068, #26076, #26077, #26080 [completed], #26205 [executing], #26207 [executing], #26208 [executing], #26209 [proposed], #26210 [executing], #26211 [proposed], #26218 [approved], #26219 [deployed], #26234 [deployed]
-
-**Last PICKUP PROMPT:**
-
-```
-slowness is ever "felt" again.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #234 — /emtskills slow again: swap-flush storm + dead LoRA rsync loop fixed, durable Portal Health Guard deployed.
-
-Where we left off (verified 2026-08-13 23:45 PT):
-- WOPR: 3 stacked root causes fixed (memory-guardian swapoff/swapon flush storm every ~60s throttled to 1/900s; emsu-fleet-finisher + emsu-vault-sync crons killed + chattr +i because Artemis 10.100.0.5 unreachable; 5 stuck /tmp/send_uthealth*.php clones killed).
-- Durable guard installed: /usr/local/bin/emsu-portal-health-guard.sh via /etc/cron.d/emsu-portal-health-guard every 2 min (latency canary DEFCON1/2/5, runaway autokill cap 3/hr with evidence snapshot to /var/log/emsu-portal-health-guard-kills.log, swap-flush storm detector via authoritative loop file). Alerts reuse infra_alert.php.
-- Files touched: /usr/local/bin/emsu-portal-health-guard.sh, /etc/cron.d/emsu-portal-health-guard, /etc/cron.d/emsu-fleet-finisher(.bak-20260813-loarartemis-off), /etc/cron.d/emsu-vault-sync(.bak-20260813-loarartemis-off), /var/www/emtskills/scripts/emsu-memory-guardian.sh(.bak-20260813-flushstorm), /Users/rubenmajor/Desktop/emtskills-slowness.md, /var/www/emtskills/docs/HANDOFF_NOTES.md.
-- Live state: latency 0.4-0.7ms local, nvme0n1 util <5%, load 11.6, swap 0MB used, pm.max_children 300, 0 new slowlog stalls.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26234 [deployed] — Verify Portal Health Guard produces a clean log line + state file after >1h of normal operation (no false alerts). If the canary ever fires, run `sudo tail -30 /var/log/emsu-portal-health-guard.log` and `sudo jq . /var/www/emtskills/.state/portal_health_guard.json` before the next window.
-2. #26219 [deployed] — Confirm memory-guardian thresholds/write-free flushes hold overnight: `sudo grep -c 'REMEDIATED: Swap flushed' /var/log/emsu-memory-guardian.log | tail` should stay near 0; swap may sit high (stale, harmless) with RAM ample.
-3. #26218 [awaiting_review] — Watch Artemis 10.100.0.5 reachability. When SSH `emsuserver@10.100.0.5` starts answering, re-enable vault sync: `chattr -i /etc/cron.d/emsu-vault-sync /etc/cron.d/emsu-fleet-finisher` then restore schedules from the `.bak-20260813-loarartemis-off` backups and run one manual `emsu-vault-sync.sh` to confirm rc=0 before enabling auto.
-
-Reference IDs:
-- Ticket: <none — direct request from Ruben>
-- Ideas filed: #26218, #26219, #26234 | Bug-lib incident: #2342
-- Files touched: /usr/local/bin/emsu-portal-health-guard.sh, /etc/cron.d/emsu-portal-health-guard, /etc/cron.d/emsu-fleet-finisher, /etc/cron.d/emsu-vault-sync, /var/www/emtskills/scripts/emsu-memory-guardian.sh, /Users/rubenmajor/Desktop/emtskills-slowness.md, /var/www/emtskills/docs/HANDOFF_NOTES.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>

@@ -97,3 +97,23 @@ fall into the same trap?* If yes, the 297 is not done.
 **Source incidents:** Argus-slow investigation 2026-08-01 (3 wrong diagnostic claims
 from probes alone); Argus failure-scan undercount 2026-08-08 (reported 6, reality 85).
 **Last updated:** 2026-08-11 (trim-then-archive for G8 floor-cap compliance)
+
+## Amendment (from reversal, 2026-08-17 06:46 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786948459
+- RCA bucket: scope error
+- Trigger pattern: claiming physical hardware state (connector/plug/cable) from sysfs for a device that is not enumerated on the bus
+- Reversal note: Big Mac 4th GPU: a prior completion claimed "the dummy plug is NOT in" from /sys/class/drm connector status, but that probe only covers ENUMERATED cards. An un-enumerated device has no sysfs/DRM node, so its physical-attach state is unmeasurable remotely. Amendment: before claiming a physical state (plug/cable/card present or absent) from a sysfs probe, verify the device is actually enumerated; if it is not, the claim must be "unverifiable remotely", never present/absent.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-17 06:49 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786547336372
+- RCA bucket: wrong premise
+- Trigger pattern: within-window reversal corrected a material claim
+- Reversal note: Joshua failover: a health gate printed "PASS replica lag (0s)" while the replica was 30h and 10.9M transactions behind. The wrong premise was that a purpose-named metric measures the quantity its name implies -- Seconds_Behind_Master measures the AGE OF THE TRANSACTION CURRENTLY BEING APPLIED, so it reads 0 whenever the SQL thread drains its relay log, regardless of how much the IO thread has not fetched. Amendment: when a purpose-named metric conflicts with an independent measure, do NOT sample the suspect instrument harder (max-of-3 returned 0,0,0 because the artifact was SUSTAINED, not intermittent) and do NOT substitute an easier-to-read quantity (fetched-minus-applied read -3, measuring relay-log backlog rather than distance from the master). Ask what each instrument PHYSICALLY measures and whether that is the quantity the gate needs; if the needed quantity is unreadable locally, restructure so the authoritative party PUBLISHES it. Corollary: bash -n passing does not mean control 
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

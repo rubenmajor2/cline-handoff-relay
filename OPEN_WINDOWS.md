@@ -6,13 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/17/2026, 10:39:44 AM PT | window: last 72h | 95 tasks | index total 787 (parsed 3, cached 784)
+Generated: 8/17/2026, 11:39:44 AM PT | window: last 72h | 95 tasks | index total 788 (parsed 3, cached 785)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786559316764` | 8/17/2026, 10:39:37 AM | 103 | 498KB | #Lower Romans |
+| `1786960541449` | 8/17/2026, 11:39:34 AM | 653 | 4632KB | #Julia/Claudia 235B  |
+| `1786989452314` | 8/17/2026, 11:26:49 AM | 172 | 460KB | frankenstein-llm keeps going down as I'm trying to put back up Cicero and Maximus, not sur |
+| `1786559316764` | 8/17/2026, 11:14:10 AM | 188 | 900KB | #Lower Romans |
 | `1786979863145` | 8/17/2026, 10:38:13 AM | 213 | 417KB | #Executor |
-| `1786960541449` | 8/17/2026, 10:10:44 AM | 570 | 4307KB | #Julia/Claudia 235B  |
 | `1786835771600` | 8/17/2026, 10:07:11 AM | 410 | 2310KB | #BLS  |
 | `1786573125988` | 8/17/2026, 9:49:11 AM | 383 | 3324KB | Please tell me if this is wrong? And if so why and what is going on? |
 | `1786981142444` | 8/17/2026, 9:26:22 AM | 154 | 1095KB | #Conrad/Argus |
@@ -104,98 +105,12 @@ Generated: 8/17/2026, 10:39:44 AM PT | window: last 72h | 95 tasks | index total
 | `1786569178009` | 8/14/2026, 3:51:36 PM | 296 | 1383KB | #/emtskills / wordpress |
 | `1786733087683` | 8/14/2026, 3:01:29 PM | 216 | 2969KB | This is incredibly vague. What's wrong with Email Agent? Can you look into it and see what |
 | `1786696835373` | 8/14/2026, 2:14:56 PM | 256 | 1453KB | #CFA |
-| `1786686261739` | 8/14/2026, 11:01:53 AM | 353 | 1321KB | #What am I Missing/ Students |
 
 ---
 
 ## Per-window detail
 
-### `1786559316764` — 8/17/2026, 10:39:37 AM PT — 103 turns
-
-**Original task:**
-
-```
-#Lower Romans
-
-Tell me then what i need to do to get SSH on the MDM for Cicero, Maximums and Nero or if it's already working. Then we can move to their LLM stuff? 
-
---
-Direct, evidence-backed answer to "why did you lose them" — I did not lose them. Here is the verified chain:
-
-**1. WOPR's key never rotated.** `stat` on `/home/emsuserver/.ssh/id_ed25519{,.pub}` shows mtime **2026-02-19 09:20 PT** — unchanged for six months. Fingerprint `SHA256:8a2f55513LYs7/7pbvaoyQB741VVUDegh5QXHLF7krI emsuserver@wopr`. That is the exact key the Macs trusted before.
-
-**2. deploy.sh installed exactly these keys
-```
-
-**Ideas referenced:** #1130, #1131, #12028, #12034, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178634, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #25378, #25381, #25744 [approved], #25758 [executing], #25760 [executing], #25910 [blocked], #25913 [blocked], #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-g] remain the same work items.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1786342434047 — lower Romans SSH on MDM: Nero done, Maximus + Cicero need one key-append each on the physical Macs.
-
-Where we left off (verified 2026-08-12 12:46 PT):
-- NERO ✅: WOPR→127.0.0.1:2223 SSH = rubenmajor@EMSU-SMS-Mac; ollama :11455 HTTP 200. Nothing to do.
-- MAXIMUS ⏸: WOPR:2224 listener live but key denied; ollama :11505 HTTP 200 (M4 up). M4 LAN IP unknown (.156 times out, .197 is a Nero-relay box NOT the M4 — verified by appending there and 2224 still denying, append reverted clean to 5 keys). Only inbound path is 2224.
-- CICERO ⏸: LAN .252 SSH up but rubenmajor + all keys denied (desktop M5 key and id_rsa both rejected); MLX :11520 HTTP 000. WOPR cannot LAN-route to .252.
-- MDM: mdm_devices has only Big Mac. Lower Romans ride the web-terminal proxy (static ids in web_terminal_token.php + ws_ssh_proxy.py entries nero=2223, maximus=2224, cicero=192.168.1.252:22).
-- Root cause everywhere: the WOPR pubkey (SHA256:8a2f55513LYs7/7pbvaoyQB741VVUDegh5QXHLF7krI) is missing from each Mac's ~/.ssh/authorized_keys. No key was lost; deploy.sh keys are still intact on this desktop.
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #25910 [blocked] — After Ruben appends WOPR pubkey on the physical M4: verify `ssh -i /home/emsuserver/.ssh/id_ed25519 rubenmajor@127.0.0.1 -p 2224`, then web-terminal max entry is already correct.
-2. #25913 [blocked] — After Ruben appends WOPR pubkey on the M5 at .252: verify `ssh rubenmajor@192.168.1.252` from desktop and WOPR key auth; restart emsu-web-terminal.service; verify cicero proxy entry; then re-check MLX :11520 lane for the LLM discussion.
-
-Reference IDs:
-- Ideas filed: #25910 [blocked], #25913 [blocked]; prior #25758 [executing], #25760 [executing]
-- Files read (no writes): /var/www/emtskills/scripts/ws_ssh_proxy.py, /var/www/emtskills/routes/web_terminal_token.php, /home/emsuserver/.ssh/{authorized_keys,config}, /home/emsuserver/mac-tunnel-deploy.DISABLED/{deploy.sh,smsmac_launchdaemon.plist,2024mac_launchdaemon.plist}, ~/Desktop/mac-tunnel-deploy/deploy.sh, admin_portal.mdm_devices + orchestrator_ideas
-- Reverts performed: LAN .197 authorized_keys restored to original 5 keys, backup file removed
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Probe WOPR listeners + pubkey + LLM lanes
-- [x] Nero: verified WORKING (SSH 2223 + ollama 11455)
-- [x] Maximus: tunnel live, key denied, M4 LAN IP unknown, :11505 up
-- [x] Cicero: .252 up, all keys denied, :11520 down
-- [x] 2225 identified as Artemis (read-only, untouched per steer)
-- [x] Reverted the one experimental append on .197 (clean, 5 keys restored)
-- [x] mdm_devices read: only Big Mac enrolled; Romans use web-terminal proxy
-- [x] Ideas filed/updated: #25910, #25913
-- [x] Final report with exact human key-append steps
-</task_progress>
-</attempt_completion>
-```
-
-### `1786979863145` — 8/17/2026, 10:38:13 AM PT — 213 turns
-
-**Original task:**
-
-```
-#Executor
-
-Begin a brief frankenstein doctor session to ensure it is working properly.
-
-We are having a continual issue with the executor where we have ideas that are being worked on in Cline or Argus and then they get stalled out for older ideas from days or weeks before. 
-
-I think we need to make some changes in executor. 
-
-1. New ideas take prescidence over old ideas
-2. Capacity / the ability to take ideas and finish them needs to match the number of ideas coming in combination with #3
-3. Ideally, all ideas should process within 12 hours. 
-4. We may end up spilling to paid or whever, but it
-```
-
-**Ideas referenced:** #19490, #19884, #20024, #20531, #20672, #20903, #2113, #22305, #22556, #22921, #23133, #2342, #23455, #23945, #23952, #23954, #24145, #24186, #24261, #25185, #25304, #25316, #25537, #25548, #25562, #25584, #25608, #25623, #25686, #25830, #25835, #25842, #25872, #25914, #25917, #25940 [executing], #25957, #25958, #25983, #26009, #26012, #26068, #26084, #26167, #26218, #26219, #26234, #26258, #26291, #26292, #26322, #26336, #26346, #26348, #26450, #26491, #26493, #26498, #26501, #26518, #26519, #26731, #26738, #26800, #26934, #26964, #26967, #26988, #27002, #27012, #27038 [approved], #27040 [approved], #27063 [deployed], #27083 [superseded], #27084 [executing], #27085 [executing], #344223, #344225, #344226, #344228, #344229, #344230, #344233, #344234, #344236, #344238, #344241, #344243, #344245, #344246, #344247, #344249, #344251, #344252, #344254, #344255, #344258, #344259, #344261, #344263, #344265, #344266, #344267, #344268, #344270, #344272, #344274, #344275, #344278, #344279, #344280, #344282, #344284, #344285, #344286, #344288, #344289, #344292, #344294, #344296, #344298, #344299, #344305, #344307, #344308, #344310, #344318, #344320, #344322, #344324, #344326, #344327, #5034, #6366, #8911, #8919
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786960541449` — 8/17/2026, 10:10:44 AM PT — 570 turns
+### `1786960541449` — 8/17/2026, 11:39:34 AM PT — 653 turns
 
 **Original task:**
 
@@ -214,7 +129,7 @@ Verified this session from the live serve log and /proc/meminfo, not from docs:
 - Julia is a GB10 with 
 ```
 
-**Ideas referenced:** #1079, #1130, #1131, #11735, #1190, #11945, #1241, #12425, #1248, #1249, #1252, #1253, #1258, #1264, #1265, #1266, #12894, #13085, #13202, #15144, #15226, #15328, #15332, #15667, #15979, #16032, #16033, #16036, #16122, #16163, #16254, #16338, #16448, #16452, #16463, #16464, #1659, #16778, #16802, #16803, #16839, #16844, #16851, #16856, #17246, #17250, #17300, #17327, #17341, #17342, #17343, #17415, #17416, #17424, #17425, #17437, #17438, #1744, #1754, #1755, #1779, #178693, #1798, #1828, #19495, #19545, #19567, #1964, #1989, #19925, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2254, #2258, #2298, #2299, #2307, #23169, #24172, #24217, #24645, #25185, #2520, #2537 [deployed], #25378, #25381, #2546 [deployed], #2547, #25470, #25646, #26348, #26819 [executing], #26908, #26922 [deployed], #26923, #26925 [deployed], #26927 [deployed], #26928 [proposed], #26932 [deployed], #26938 [executing], #26954 [deployed], #26956 [executing], #26957 [deployed], #26958 [deployed], #27069 [executing], #5878, #6522, #6826, #7142, #7149, #7181, #7734
+**Ideas referenced:** #1079, #1130, #1131, #11735, #1190, #11945, #1241, #12425, #1248, #1249, #1252, #1253, #1258, #1264, #1265, #12657, #1266, #12894, #13085, #13202, #1378, #15144, #15226, #15328, #15332, #15667, #15979, #16032, #16033, #16036, #16122, #16163, #16254, #16338, #16448, #16452, #16463, #16464, #1659, #16778, #16802, #16803, #16839, #16844, #16851, #16856, #17246, #17250, #17300, #17327, #17341, #17342, #17343, #17415, #17416, #17424, #17425, #17437, #17438, #1744, #1754, #1755, #1779, #178693, #1798, #1828, #19495, #19545, #19567, #1964, #1989, #19925, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2254, #2258, #22588, #2298, #2299, #2307, #23169, #24172, #24217, #24645, #25185, #2520, #2537 [deployed], #25378, #25381, #2546 [deployed], #2547, #25470, #25646, #26348, #26819 [executing], #26908, #26922 [deployed], #26923, #26925 [deployed], #26927 [deployed], #26928 [proposed], #26932 [deployed], #26938 [executing], #26954 [deployed], #26956 [executing], #26957 [deployed], #26958 [deployed], #27069 [executing], #5878, #6522, #6826, #7142, #7149, #7181, #7734
 
 **Last PICKUP PROMPT:**
 
@@ -261,6 +176,102 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] 235B SERVING at 131072: KV 554,656 tokens, 4.23x; :8000 200; WOPR :11513 200
 - [x] MEASURED throughput: 73.50 tok/s @8 concurrent; 144.80 tok/s cumulative @16 saturated (6 queued); 3
 ```
+
+### `1786989452314` — 8/17/2026, 11:26:49 AM PT — 172 turns
+
+**Original task:**
+
+```
+frankenstein-llm keeps going down as I'm trying to put back up Cicero and Maximus, not sure if that has anything to do with it, but please correct those issues. It could be the other Cline instances running on Cicero and Maximus interfering and not having the latest info. 
+
+Read this: 
+
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
+
+
+Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
+
+## Where 671 came from, and it is now durabl
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12403, #12477, #12584, #12618, #12657, #12680, #12689, #12824, #12872, #12878, #13121, #13202, #13453, #13470, #13874, #14000, #15823, #16163, #16265, #16304, #16602, #16648, #16844, #17202, #17203, #17205, #18312, #18326, #18786, #18820, #2071, #2079, #22820, #22897, #2299, #23171, #25097, #25133, #2537, #25471, #25625, #25627, #26400, #26908, #26923, #26932
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786559316764` — 8/17/2026, 11:14:10 AM PT — 188 turns
+
+**Original task:**
+
+```
+#Lower Romans
+
+Tell me then what i need to do to get SSH on the MDM for Cicero, Maximums and Nero or if it's already working. Then we can move to their LLM stuff? 
+
+--
+Direct, evidence-backed answer to "why did you lose them" — I did not lose them. Here is the verified chain:
+
+**1. WOPR's key never rotated.** `stat` on `/home/emsuserver/.ssh/id_ed25519{,.pub}` shows mtime **2026-02-19 09:20 PT** — unchanged for six months. Fingerprint `SHA256:8a2f55513LYs7/7pbvaoyQB741VVUDegh5QXHLF7krI emsuserver@wopr`. That is the exact key the Macs trusted before.
+
+**2. deploy.sh installed exactly these keys
+```
+
+**Ideas referenced:** #1130, #1131, #12028, #12034, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178634, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #25378, #25381, #25744 [approved], #25758 [executing], #25760 [executing], #25910 [blocked], #25913 [blocked], #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+ck on the physical CICERO box.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Lower Romans fleet recovery (Nero, Maximus, Cicero SSH + LLM access to WOPR).
+
+Where we left off (verified 8/17/2026 11:13 PT):
+- Nero: fully working (WOPR:2223 SSH auth OK, ollama lane WOPR:11455 = HTTP 200).
+- Maximus: WOPR:2224 tunnel up, ollama lane WOPR:11505 = HTTP 200 (qwen2.5-coder family); SSH still publickey denied on 2224; fix = append WOPR pubkey to M4 ~/.ssh/authorized_keys + keep the -R 2224 tunnel alive.
+- Cicero: MLX 235B process was serving on 127.0.0.1:11520 earlier today (model `cicero-235b-qwen3`); WOPR listeners for SSH 2299 and MLX 11520 went away; current IP = 192.168.1.177 (drifted from documented .252); this VS Code window IS the Cicero box (M5 Max 128GB, Rubens-MacBook-Pro-3).
+- Fix path = on physical Cicero: start mlx_lm server on 11520 + `ssh -R 2299 -R 11520` to WOPR; on physical Maximus: append WOPR key + `ssh -R 2224 -R 11505`; ws_ssh_proxy.py cicero entry port must change 2221→2299.
+- MDM portal: router requires server_id "cicero"/"nero"/"maximus" and works off the same tunnels; rmajor is MasterAdmin so card access already granted.
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #25910 — Maximus SSH key append + tunnel (blocked on human at M4; Ollama already serving) → after append, verify WOPR:2224 with `ssh -i /home/emsuserver/.ssh/id_ed25519 rubenmajor@127.0.0.1 -p 2224 hostname`
+2. #25913 — Cicero MLX serve + tunnel (blocked on human at M5; commands above, verify `curl localhost:11520/v1/models` then WOPR:11520) → then flip ws_ssh_proxy.py cicero port 2221→2299 + restart the python proxy.
+3. Follow-up idea (not yet filed) — replace stale ws_ssh_proxy.py cicero entry + add 3 Roman rows into mdm_devices once tunnels verified.
+
+Reference IDs:
+- Ideas: #25910 [blocked], #25913 [blocked]
+- Files: /var/www/emtskills/scripts/ws_ssh_proxy.py (stale port 2221 for cicero)
+- Evidence: WOPR probe 8/17 11:06 PT: 11505=200, 11520 list on WOPR without Cicero tunnel, 11455=200, 2223 OK
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786979863145` — 8/17/2026, 10:38:13 AM PT — 213 turns
+
+**Original task:**
+
+```
+#Executor
+
+Begin a brief frankenstein doctor session to ensure it is working properly.
+
+We are having a continual issue with the executor where we have ideas that are being worked on in Cline or Argus and then they get stalled out for older ideas from days or weeks before. 
+
+I think we need to make some changes in executor. 
+
+1. New ideas take prescidence over old ideas
+2. Capacity / the ability to take ideas and finish them needs to match the number of ideas coming in combination with #3
+3. Ideally, all ideas should process within 12 hours. 
+4. We may end up spilling to paid or whever, but it
+```
+
+**Ideas referenced:** #19490, #19884, #20024, #20531, #20672, #20903, #2113, #22305, #22556, #22921, #23133, #2342, #23455, #23945, #23952, #23954, #24145, #24186, #24261, #25185, #25304, #25316, #25537, #25548, #25562, #25584, #25608, #25623, #25686, #25830, #25835, #25842, #25872, #25914, #25917, #25940 [executing], #25957, #25958, #25983, #26009, #26012, #26068, #26084, #26167, #26218, #26219, #26234, #26258, #26291, #26292, #26322, #26336, #26346, #26348, #26450, #26491, #26493, #26498, #26501, #26518, #26519, #26731, #26738, #26800, #26934, #26964, #26967, #26988, #27002, #27012, #27038 [approved], #27040 [approved], #27063 [deployed], #27083 [superseded], #27084 [executing], #27085 [executing], #344223, #344225, #344226, #344228, #344229, #344230, #344233, #344234, #344236, #344238, #344241, #344243, #344245, #344246, #344247, #344249, #344251, #344252, #344254, #344255, #344258, #344259, #344261, #344263, #344265, #344266, #344267, #344268, #344270, #344272, #344274, #344275, #344278, #344279, #344280, #344282, #344284, #344285, #344286, #344288, #344289, #344292, #344294, #344296, #344298, #344299, #344305, #344307, #344308, #344310, #344318, #344320, #344322, #344324, #344326, #344327, #5034, #6366, #8911, #8919
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786835771600` — 8/17/2026, 10:07:11 AM PT — 410 turns
 
@@ -3851,26 +3862,3 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1786686261739` — 8/14/2026, 11:01:53 AM PT — 353 turns
-
-**Original task:**
-
-```
-#What am I Missing/ Students
-
-Check the SLS and integrate properly as well
-
---
-Here is the comprehensive Rule 91 handoff for a fresh window. This is a state-handoff record, so it assumes zero context; everything needed to continue is below.
-
----
-
-WHAT WE ARE DOING HERE (big picture, for a fresh window)
-
-The business problem: students keep emailing/chatting "what am I missing?" / "why can't I open X?" and CFAs (and earlier agent windows) kept answering WRONG — they guessed from flat quiz lists, hardcoded attendance ratios, or the admin_portal `auto_passed` stub field. Those wrong answers are wh
-```
-
-**Ideas referenced:** #11782, #12661, #13440, #13873, #13977, #14153, #14154, #14847, #15635, #15636, #15638, #15903, #16437, #16581, #16608, #16613, #16731, #16732, #16733, #17546, #17580, #17685, #17723, #18693, #18743, #18936, #19173, #19439, #19465, #19492, #19495, #19921, #2026, #2033, #20346, #20357, #2036, #2323, #23477 [in_progress], #24526 [superseded], #24765, #25156, #25185, #25871, #25888, #25914 [in_progress], #25971, #25974, #25975, #25976, #25984 [the canonical walker], #25985, #25986 [deployed], #25990 [proposed], #25995, #26003, #26035 [proposed], #26230 [proposed], #26231 [proposed], #26256 [deployed], #26257 [deployed], #26265 [deployed], #26285 [deployed], #26286 [deployed], #71121, #9083, #9086, #9109, #9132, #9168, #9192, #9202, #9222, #9306, #9339, #9343, #9549, #9831
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

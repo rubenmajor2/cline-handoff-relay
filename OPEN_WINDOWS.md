@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/17/2026, 4:38:02 AM PT | window: last 72h | 90 tasks | index total 783 (parsed 0, cached 783)
+Generated: 8/17/2026, 5:38:02 AM PT | window: last 72h | 89 tasks | index total 783 (parsed 0, cached 783)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -99,7 +99,6 @@ Generated: 8/17/2026, 4:38:02 AM PT | window: last 72h | 90 tasks | index total 
 | `1786733087683` | 8/14/2026, 3:01:29 PM | 216 | 2969KB | This is incredibly vague. What's wrong with Email Agent? Can you look into it and see what |
 | `1786696835373` | 8/14/2026, 2:14:56 PM | 256 | 1453KB | #CFA |
 | `1786686261739` | 8/14/2026, 11:01:53 AM | 353 | 1321KB | #What am I Missing/ Students |
-| `1786560740700` | 8/14/2026, 5:15:16 AM | 252 | 972KB | Why am i still getting OLD chat transcripts? Are new ones being sent to me right after the |
 
 ---
 
@@ -3712,43 +3711,3 @@ The business problem: students keep emailing/chatting "what am I missing?" / "wh
 **Ideas referenced:** #11782, #12661, #13440, #13873, #13977, #14153, #14154, #14847, #15635, #15636, #15638, #15903, #16437, #16581, #16608, #16613, #16731, #16732, #16733, #17546, #17580, #17685, #17723, #18693, #18743, #18936, #19173, #19439, #19465, #19492, #19495, #19921, #2026, #2033, #20346, #20357, #2036, #2323, #23477 [in_progress], #24526 [superseded], #24765, #25156, #25185, #25871, #25888, #25914 [in_progress], #25971, #25974, #25975, #25976, #25984 [the canonical walker], #25985, #25986 [deployed], #25990 [proposed], #25995, #26003, #26035 [proposed], #26230 [proposed], #26231 [proposed], #26256 [deployed], #26257 [deployed], #26265 [deployed], #26285 [deployed], #26286 [deployed], #71121, #9083, #9086, #9109, #9132, #9168, #9192, #9202, #9222, #9306, #9339, #9343, #9549, #9831
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786560740700` — 8/14/2026, 5:15:16 AM PT — 252 turns
-
-**Original task:**
-
-```
-Why am i still getting OLD chat transcripts? Are new ones being sent to me right after they close? That's what I want. Confirm this for me. I just got this old one from July 13 now -> Transcript of Monday, July 13, 2026, 12:03:49 pm. Operator: EMSU Agent. Visitor: Tanish Mohan
-```
-
-**Ideas referenced:** #2321, #25185, #25551 [deployed], #25888, #25931 [proposed], #25933 [proposed], #25940, #25941 [proposed], #26241, #26245, #26249, #26268 [superseded], #475569, #9131
-
-**Last PICKUP PROMPT:**
-
-```
- bound to #26268 [superseded].
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25551 [deployed] - chat transcript autosend: newest-first + 7-day window, post-rebase verification and one handoff correction.
-
-Where we left off (verified 2026-08-14 04:48 PT):
-- Cron file /var/www/emtskills/cron/cron_chat_transcript_autosend.php: ORDER BY updated_at DESC, 7-day window, LIMIT 200, php -l clean, last verified run 02:08 PT sent 0 and logged DONE without FATAL.
-- Zero pre-Aug-7 transcripts sent since the Aug-12 fix. New chats email on close (manual immediate, auto-close same cron tick).
-- My failed-retry experiment re-emailed 3 old chats at 01:53 PT, then was reverted within ~20 min; restored file verified.
-- Could not query email_send_blocks (MCP disconnected at 04:31 PT), so delivery of those 3 old emails is unconfirmed.
-
-Open threads to drive next:
-1. #26268 [superseded] - first action: correct the HANDOFF_NOTES.md entry from 2026-08-14 01:58 PT that wrongly claims the failed-retry dedupe shipped; replace with the revert story. Then, when MCP returns, implement the real fix: change the cron window from updated_at to closed_at so ancient conversations cannot enter the send window, which also makes failed-row retry safe.
-2. #26268 [superseded] - decide with Ruben whether the ~124 closed chats aging out of the 7-day window should get a one-off send or be left to expire. Default is leave them.
-
-Reference IDs:
-- Ideas: #25551 [deployed], #25941 [proposed], #25931 [superseded], #25933 [superseded], #26268 [superseded]
-- Files touched: /var/www/emtskills/cron/cron_chat_transcript_autosend.php, backups .bak.1786697204 (restored) and .bak.1786564185, HANDOFF_NOTES.md (entry needs correction)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```

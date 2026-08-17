@@ -554,6 +554,38 @@ function feedR317Corrections(failures: string[], task_id: string): void {
   }
 }
 
+// RULE 317 AUTO-REPAIR FEED (2026-08-17). The reversal feed above runs only on
+// a FAILED completion, but an auto-repaired completion now PASSES — so the
+// successful self-heal would never enter the corpus. This feeds a POSITIVE
+// learning row (r317_auto_repaired) so RAG records both halves: the failure
+// (r317_reversal_not_repaired) and the machine fix that closed it.
+function feedR317AutoRepair(task_id: string, amendedRules: string[]): void {
+  try {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 4000);
+    void fetch("https://www.emsuniversity.com/emtskills/api/cline_correction_ingest.php", {
+      method: "POST",
+      signal: ctrl.signal,
+      headers: {
+        "Content-Type": "application/json",
+        "X-Ledger-Key": "emsu-cline-ledger-2026-04-22-rj9k3m7q",
+      },
+      body: JSON.stringify({
+        issue_category: "r317_auto_repaired",
+        trigger_pattern: "clinerules_validate_completion auto-amended a cited causal rule on behalf of a window that logged a reversal without repairing it",
+        ai_approach: "window logged the within-window flip but never called clinerules_amend_rule (rule_amend ledger had zero rows for the task)",
+        correct_approach: "the gate resolved each cited causal rule against the corpus and called amendRuleOnDisk itself, landing the proof row and reindexing",
+        negative_example: `auto-amended causal rule(s): ${amendedRules.join(", ") || "(none)"}`,
+        correction_type: "procedural",
+        source_task_id: task_id || "",
+      }),
+    }).catch(() => undefined);
+    setTimeout(() => ctrl.abort(), 4000);
+  } catch {
+    /* non-fatal */
+  }
+}
+
 function findRule(query: string): RuleRow | null {
   const q = query.trim();
   // Try exact slug
@@ -778,6 +810,39 @@ function amendRuleOnDisk(slugOrId: string, taskId: string, rcaBucket: string, no
   return { ok: true, message: `Amended rule ${row.rule_id} (${row.slug}) at ${filePath}, reindexed.`, path: filePath, rule_id: row.rule_id };
 }
 
+// RULE 317 AUTO-REPAIR SUPPORT (2026-08-17, Ruben: "the thing that sees the
+// correction needs the ability to actually take action and do it"). The validator's
+// NOT_REPAIRED gate used to only BLOCK when a window logged a reversal without
+// amending the causal rule — four completions in a row logged the flip and never
+// repaired, and the rule_amend ledger stayed empty. The gate now extracts every
+// causal-rule cite from the flip lines, resolves each against the corpus, and
+// amends the cited rule ON DISK on behalf of the stalled window. This helper is
+// the extraction half.
+function collectFlipCausalCites(revSection: string): { cited: string[]; buckets: string[]; notes: string[] } {
+  const cited: string[] = [];
+  const buckets: string[] = [];
+  const notes: string[] = [];
+  const flipRe = /\u2192|=>|->|\bbecame\b|\bbecomes\b|\bturned out to be\b|\bwas actually\b|\bcorrected to\b/i;
+  const citeRe = /(?:causal\s+rule|rule)\s*(?:updated|amended|fixed)\s*[:\-]?\s*([A-Za-z0-9_.\-]+)|"causal_rule"\s*:\s*"([^"]+)"/i;
+  const bucketRe = /(wrong premise|stale assumption|unread source|insufficient probe|scope error)/i;
+  const jsonFlipRe = /"initial"\s*:/;
+  for (const line of revSection.split("\n")) {
+    const t = line.trim();
+    if (!t || /no reversals/i.test(t)) continue;
+    const isFlip = flipRe.test(t) || jsonFlipRe.test(t);
+    if (!isFlip) continue;
+    const m = t.match(citeRe);
+    if (m) {
+      const c = (m[1] || m[2] || "").replace(/\.md$/, "").trim();
+      if (c && c !== "idea" && !/#\d/.test(c) && !cited.includes(c)) cited.push(c);
+    }
+    const b = t.match(bucketRe);
+    if (b && !buckets.includes(b[1].toLowerCase())) buckets.push(b[1].toLowerCase());
+    if (notes.length === 0 && t.length > 0) notes.push(t.slice(0, 180));
+  }
+  return { cited, buckets, notes };
+}
+
 server.tool(
   "clinerules_amend_rule",
   "RULE 317 MECHANICAL REPAIR (idea #27100). When a within-window reversal corrects a material claim, the CAUSAL RULE text must actually change, not just be logged. This tool APPENDS a dated amendment section to the causal rule file on disk, records the proof in the rule_amend ledger (which clinerules_validate_completion's R317_REVERSAL_NOT_REPAIRED gate reads), and reindexes the MCP so the fix is live everywhere in one call. Call this BEFORE attempt_completion for every flip in your Reversal Log that cites a causal-rule update. For a causal rule that is an IDEA rather than a rule file, file the idea first, then pass its # as rule_id; the tool will record the amendment against the idea id.",
@@ -963,6 +1028,7 @@ server.tool(
   },
   async ({ result_text, task_id, task_prompt }) => {
     const failures: string[] = [];
+    const autoRepairNotices: string[] = [];
     const DIVIDER_LEN = 47;
     const DIVIDER_GLYPH = String.fromCodePoint(0x2550);
     const lines = result_text.split("\n");
@@ -1406,14 +1472,48 @@ server.tool(
               `SELECT rule_id, slug FROM rule_amend WHERE task_id = ?`
             ).all(task_id) as { rule_id: string; slug: string }[];
             if (amended.length === 0) {
-              failures.push(
-                `R317_REVERSAL_NOT_REPAIRED: the Reversal Log lists a within-window flip claiming a causal-rule update, ` +
-                `but the rule_amend ledger has ZERO mechanical amendments for task ${task_id}. Rule 317 (idea #27100): ` +
-                `a reversal is closed ONLY when the causal rule TEXT actually changed on disk — not when it was merely logged. ` +
-                `Call clinerules_amend_rule(rule_id='<causal rule>', task_id='${task_id}', rca_bucket='<bucket>', note='<what changed>') ` +
-                `for EVERY flip whose causal fix is a rule file, then re-validate. ` +
-                `(A flip whose causal fix is an idea is exempt only if that flip line carries a real #NNNN [tag].)`
-              );
+              // RULE 317 AUTO-REPAIR (2026-08-17): the window stalled and never called
+              // clinerules_amend_rule (observed 4x in a row, rule_amend ledger stayed
+              // empty). The gate no longer just BLOCKS and waits — it resolves the causal
+              // rule the flip line names and amends it ON DISK on behalf of the window,
+              // so the underlying RCA fix actually lands. If a cited rule resolves, the
+              // completion PASSES with a notice: the artifact changed, which is exactly
+              // what 317 requires. If no cite resolves (or none exists), the gate blocks
+              // and names the unresolved lines so the window cannot miss them.
+              const _absent = collectFlipCausalCites(_revSection);
+              let _autoAmended = false;
+              const _amendedRules: string[] = [];
+              if (_absent.cited.length > 0) {
+                for (const _cite of _absent.cited) {
+                  const _target = findRule(_cite);
+                  if (!_target) continue;
+                  const _bucket = _absent.buckets[0] || "insufficient probe";
+                  const _note = _absent.notes[0] ||
+                    `within-window reversal for task ${task_id} named rule ${_target.rule_id} as its causal fix; the gate auto-repaired it because the window logged the flip without amending the rule`;
+                  const _res = amendRuleOnDisk(
+                    _target.rule_id,
+                    task_id,
+                    _bucket,
+                    _note.slice(0, 1000),
+                    "within-window reversal logged a causal-rule update without repairing it; clinerules_validate_completion auto-repaired the cited rule on behalf of the window"
+                  );
+                  if (_res.ok) { _autoAmended = true; if (!_amendedRules.includes(_target.rule_id)) _amendedRules.push(_target.rule_id); }
+                }
+              }
+              if (_autoAmended) {
+                autoRepairNotices.push(
+                  `AUTO-REPAIRED: the gate amended causal rule(s) [${_amendedRules.join(", ")}] on disk via amendRuleOnDisk, recorded proof in rule_amend, and reindexed. The completion PASSES because the reversal's underlying artifact actually changed.`
+                );
+                feedR317AutoRepair(task_id, _amendedRules);
+              } else {
+                failures.push(
+                  `R317_REVERSAL_NOT_REPAIRED: the Reversal Log lists a within-window flip claiming a causal-rule update, ` +
+                  `but no rule_amend ledger row exists for task ${task_id} and the gate could not auto-repair. ` +
+                  `Causal cites found in flip lines: ${_absent.cited.length ? _absent.cited.join(", ") : "NONE — no 'causal rule' / 'rule updated' reference named in any flip line"}. ` +
+                  `Rule 317 (idea #27100): a reversal is closed ONLY when the causal rule TEXT actually changed on disk. ` +
+                  `Fix: rewrite the offending flip line to name the causal rule explicitly (e.g. "causal rule updated: 91") OR call clinerules_amend_rule(rule_id='<causal rule>', task_id='${task_id}', rca_bucket='<bucket>', note='<what changed>') for every flip whose causal fix is a rule file, then re-validate. (A flip whose causal fix is an idea is exempt only if that flip line carries a real #NNNN [tag].)`
+                );
+              }
             } else {
               // Cross-check: the flip must name a rule that was actually amended.
               // Normalize both sides to (leading digits) OR full slug so "317" and
@@ -1826,18 +1926,21 @@ server.tool(
       if (!pass) failures.push(`GATE_FILE_WRITE_FAILED: ${e.message}`);
     }
 
+    const autoRepairText = autoRepairNotices.length > 0
+      ? "\n\n" + autoRepairNotices.join("\n")
+      : "";
     if (pass) {
       return {
         content: [{
           type: "text",
-          text: "\u2705 RULE 91 GATES: ALL PASSED\n\nDivider: 47 U+2550 chars \u2713\nPickup prompt present \u2713\nNo placeholders \u2713\nNo pickup-by-reference \u2713\nNo wait-state phrases \u2713\nCited idea IDs exist \u2713" + identityEcho + "\n\nSafe to call attempt_completion.",
+          text: "\u2705 RULE 91 GATES: ALL PASSED\n\nDivider: 47 U+2550 chars \u2713\nPickup prompt present \u2713\nNo placeholders \u2713\nNo pickup-by-reference \u2713\nNo wait-state phrases \u2713\nCited idea IDs exist \u2713" + identityEcho + autoRepairText + "\n\nSafe to call attempt_completion.",
         }],
       };
     }
     return {
       content: [{
         type: "text",
-        text: `\u274c RULE 91 GATES: ${failures.length} FAILURE(S)\n\n${failures.map((f: string, i: number) => `${i+1}. ${f}`).join("\n")}${identityEcho}\n\nFix these before calling attempt_completion. The completion is blocked until all gates pass.`,
+        text: `\u274c RULE 91 GATES: ${failures.length} FAILURE(S)\n\n${failures.map((f: string, i: number) => `${i+1}. ${f}`).join("\n")}${identityEcho}${autoRepairText}\n\nFix these before calling attempt_completion. The completion is blocked until all gates pass.`,
       }],
     };
   }

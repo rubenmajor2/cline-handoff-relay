@@ -117,3 +117,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Joshua failover: a health gate printed "PASS replica lag (0s)" while the replica was 30h and 10.9M transactions behind. The wrong premise was that a purpose-named metric measures the quantity its name implies -- Seconds_Behind_Master measures the AGE OF THE TRANSACTION CURRENTLY BEING APPLIED, so it reads 0 whenever the SQL thread drains its relay log, regardless of how much the IO thread has not fetched. Amendment: when a purpose-named metric conflicts with an independent measure, do NOT sample the suspect instrument harder (max-of-3 returned 0,0,0 because the artifact was SUSTAINED, not intermittent) and do NOT substitute an easier-to-read quantity (fetched-minus-applied read -3, measuring relay-log backlog rather than distance from the master). Ask what each instrument PHYSICALLY measures and whether that is the quantity the gate needs; if the needed quantity is unreadable locally, restructure so the authoritative party PUBLISHES it. Corollary: bash -n passing does not mean control 
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-17 10:02 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786932084
+- RCA bucket: unread source
+- Trigger pattern: deriving a memory-fit/OOM claim by linearly scaling a vLLM KV-cache GiB figure against max-model-len instead of reading the 'GPU KV cache size: N tokens' pool capacity line
+- Reversal note: A prior window retracted the approved YaRN-131072 plan by claiming OOM from a linear scaling of the vLLM log line 'KV 26.02 GiB at 40960 ctx'. Wrong premise: vLLM's KV GiB figure is the POOL sized by gpu_memory_utilization, not per-context consumption; the adjacent line 'GPU KV cache size: 555,296 tokens' IS the pool capacity, and 'Maximum concurrency for 40,960 tokens per request: 13.56x' already proves 13.56 x 40960 = 555K tokens held. 131072 needs ~5.9 GiB (fp8 KV, TP=2) of that 26 GiB pool. Amendment: when reading vLLM capacity logs, compare the 'KV cache size: N tokens' figure directly against the target context length; never scale a pool-size GiB number by a context ratio. The concurrency multiplier line is the ground truth.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-17 10:13 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786947372694
+- RCA bucket: insufficient probe
+- Trigger pattern: diagnosing benchmark timeouts as routing policy without live-probing pool member health (:port /v1/models + canary quarantine state) first
+- Reversal note: Prior window attributed 3 benchmark timeouts (routing_bug, payment_processors, no_apology) to "235B thinking-lane routing policy consuming the max_tokens budget" without probing the lane. Live probe this window: :11513 was DOWN (canary fail_streak 493, quarantined 01:21 PT, Julia 235B launch crash-looping), and once the canary quarantine settled, the identical bench passed 5/6 with 4.5-13s latencies. Amendment: before attributing benchmark/latency failures to routing POLICY, live-probe every pool member the router could select; a quarantining/crash-looping member mid-bench produces the exact "simple pass, complex timeout" signature and must be ruled out first.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

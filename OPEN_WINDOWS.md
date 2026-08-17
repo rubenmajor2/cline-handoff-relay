@@ -6,15 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/17/2026, 1:45:21 AM PT | window: last 72h | 92 tasks | index total 781 (parsed 4, cached 777)
+Generated: 8/17/2026, 3:38:02 AM PT | window: last 72h | 90 tasks | index total 783 (parsed 4, cached 779)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786948641882` | 8/17/2026, 1:37:49 AM | 87 | 337KB | #Rule 317 |
+| `1786960541449` | 8/17/2026, 3:37:55 AM | 207 | 2335KB | #Julia/Claudia 235B  |
+| `1786948767264` | 8/17/2026, 3:36:19 AM | 196 | 898KB | #Unknown / Maybe 317 adjacent |
+| `1786961118260` | 8/17/2026, 3:28:00 AM | 60 | 143KB | #Frankenstein Routing / Cleanup |
+| `1786948641882` | 8/17/2026, 3:16:00 AM | 196 | 1306KB | #Rule 317 |
+| `1786556136912` | 8/17/2026, 3:01:55 AM | 1044 | 3672KB | #Frankenstein-LLM Improvements |
+| `1786941064430` | 8/17/2026, 2:55:41 AM | 785 | 2105KB | #Julia/Claudia 235B |
 | `1786660376952` | 8/17/2026, 1:37:32 AM | 989 | 2755KB | help me file with Florida Board of Education application yet? Need that approval before we |
-| `1786941064430` | 8/17/2026, 1:37:32 AM | 743 | 2041KB | #Julia/Claudia 235B |
-| `1786556136912` | 8/17/2026, 1:36:42 AM | 1025 | 3547KB | #Frankenstein-LLM Improvements |
-| `1786948767264` | 8/17/2026, 12:50:31 AM | 134 | 555KB | #Unknown / Maybe 317 adjacent |
 | `1786947372694` | 8/17/2026, 12:47:30 AM | 366 | 1205KB | Can you give me a model here in Cline where i can directly test the Julia/Claudia 235b llm |
 | `1786817395147` | 8/17/2026, 12:42:52 AM | 546 | 3139KB | #Call Backs / VAPI |
 | `1786832584504` | 8/17/2026, 12:34:59 AM | 149 | 368KB | #Externship |
@@ -98,16 +100,123 @@ Generated: 8/17/2026, 1:45:21 AM PT | window: last 72h | 92 tasks | index total 
 | `1786696835373` | 8/14/2026, 2:14:56 PM | 256 | 1453KB | #CFA |
 | `1786686261739` | 8/14/2026, 11:01:53 AM | 353 | 1321KB | #What am I Missing/ Students |
 | `1786560740700` | 8/14/2026, 5:15:16 AM | 252 | 972KB | Why am i still getting OLD chat transcripts? Are new ones being sent to me right after the |
-| `1786547336372` | 8/14/2026, 2:07:44 AM | 660 | 3109KB | Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cl |
-| `1786592555268` | 8/14/2026, 1:51:15 AM | 660 | 2554KB | #Argus |
-| `1786558292672` | 8/14/2026, 1:50:07 AM | 422 | 1434KB | #Touch ID |
-| `1786553732663` | 8/14/2026, 1:45:33 AM | 614 | 3214KB | When I get emails like this I would like to actually see the students original email below |
 
 ---
 
 ## Per-window detail
 
-### `1786948641882` — 8/17/2026, 1:37:49 AM PT — 87 turns
+### `1786960541449` — 8/17/2026, 3:37:55 AM PT — 207 turns
+
+**Original task:**
+
+```
+#Julia/Claudia 235B 
+
+What the heck? Are you sure you could not do math before but you can now is that what you are saying? Something seems wrong about this.
+
+
+Re-anchored on the two directives from the resume: fix the crash loop first, then YaRN on the 235B. Two findings, one of which changes the plan — and I'm flagging it per anti-sycophancy before doing work that would not survive contact with the hardware.
+
+## Finding 1 (hard blocker): YaRN to 131072 does not physically fit on this box
+
+Verified this session from the live serve log and /proc/meminfo, not from docs:
+
+- Julia is a GB10 with 
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178693, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #2537, #25378, #25381, #2546, #2547, #26819 [executing], #26925 [deployed], #26928 [proposed], #26938 [executing], #26954 [deployed], #26956 [executing], #26957 [deployed], #26958 [deployed], #7142, #7149
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786948767264` — 8/17/2026, 3:36:19 AM PT — 196 turns
+
+**Original task:**
+
+```
+#Unknown / Maybe 317 adjacent
+
+Rebase and tell me where we are at now?
+
+--
+Done. #25888 is now `[approved]` — disposition flipped per your steer, confirmed by the orchestrator returning `new_status: approved`.
+
+## Session state at close
+
+Rule 317 is live on both fronts, and the telemetry hygiene fix landed this session:
+- **Cline side:** rule 317 hardfloor + enforcement wired into the completion gate. 28 real fires (18 UNVERIFIED_STATE, 18 REVERSAL_LOG, 8 overlapping rows), 1 test-noise row identified.
+- **Argus side:** 317 block live in `/var/www/emtskills/routes/alltastic_api.php:12954` insi
+```
+
+**Ideas referenced:** #0000, #178694, #18480 [deployed], #18481 [blocked], #18491 [rejected], #19173, #25185, #2525, #25888 [approved], #25906 [approved], #25907 [proposed], #25925, #25926, #25935, #25981 [approved], #26247 [awaiting_review], #26349, #26617 [approved], #26696, #26774, #26914 [deployed], #26915 [executing], #26916, #26972 [proposed], #26993 [proposed], #27100
+
+**Last PICKUP PROMPT:**
+
+```
+o and I will implement it now.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1786941064430 - Rule 317 rebase follow-up: next move is the em-dash gate ruling
+
+Where we left off (verified 2026-08-17 3:34 AM PT):
+- #26993 [executing] - em-dash gate: 202 fires, top noise source; recommendation is Option A, scope to student-facing text; your ruling decides the path
+- #25888 [deployed] - title corrected to match the shipped design (Reversal Log scan + UNVERIFIED_STATE check; per-turn mutex ledger deliberately not built per the 2026-08-12 cost steer, src/index.ts L1336)
+- #25981 [deployed] - title corrected to stop claiming a literal 317/297 block in Argus (actual artifact: PROBE BEFORE CLAIM + FLIP CORRECTION at ~L13286-13288)
+- #26972 [deployed] - both amendment actions filed this turn
+- #25907 [proposed] - on the calendar for ~1 week out, after A7 telemetry accumulates
+- #25906 [deployed] - A7 telemetry section present in cline_rules_audit.sh L197-226
+- #26247 [deployed] - telemetry env override present; prod ledger 3,105 rows
+
+Open threads to drive next:
+1. #26993 [executing] - your ruling on the em-dash gate determines next; Option A is my recommendation (two files: src/index.ts looksLikeOps block + Rules/01-voice-and-persona.md clarification)
+2. #25907 [proposed] - revisit after ~1 week with fresh fire-rate data; relax only if claim-free REVERSAL_LOG fires dominate
+3. #25906 [deployed] - confirm no telemetry regression on next A7 nightly run
+
+Reference IDs:
+- Ideas filed: #25888 [deployed], #25906 [deployed], #25907 [proposed], #25981 [deployed], #26247 [deployed], #26972 [deployed], #26993 [executing]
+- Files touched: /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts, /Users/rubenmajor/Documents/Cline/scripts/cline_rules_audit.sh, /var/www/emtskills/routes/alltastic_api.php (server), orchestrator_ideas rows 25888/25981/26972
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Park #25907 per Ruben
+- [x] Correct #25888 record (mutex not buildable as spec'd; title amended)
+- [x] Amend #25981 and #25888 titles to match reality
+- [x] Stamp #26972 deployed
+- [x] Reconcile tags (deployed=5, executing=1, proposed=1)
+- [x] Verify R01_EM_DASH fire-rate (202 real fires)
+- [x] Probe validator signature (no history input; mutex not buildable)
+- [x] Read SELF_CONTRADICTING gate logic (claimWord regex + 220-char window)
+- [x] Validate completion — ALL GATES PASSED
+- [x] Answer "what's next" with the fork on #26993
+</task_progress>
+</attempt_completion>
+```
+
+### `1786961118260` — 8/17/2026, 3:28:00 AM PT — 60 turns
+
+**Original task:**
+
+```
+#Frankenstein Routing / Cleanup
+
+Can you clean this up. I think there may have been some errors in this particular task and needs cleanup / 317, etc...
+
+
+Session halted on Ruben's directive ("stop, give a rule 91 comprehensive"). No further tool calls were made after that instruction.
+
+## What was done this session
+
+**1. Benchmark harness built and hardened**
+- Created /tmp/bench_fixed.py (+ /tmp/bench7.py variant) running 6 tasks against frankenstein-llm only (no Opus-OUT dependency): exact (PONG-42), no_apology, routing_bug (Klarna/QuickBooks), payment_processors, vec_grounding (PICKUP block
+```
+
+**Ideas referenced:** #13202, #25185, #26209, #26938 [deployed], #26967 [deployed], #27011 [executing], #27012 [executing]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786948641882` — 8/17/2026, 3:16:00 AM PT — 196 turns
 
 **Original task:**
 
@@ -121,50 +230,137 @@ You were right. Rule 317 was a prose rule: the validator demanded an RCA bucket 
 What shipped (verified li
 ```
 
-**Ideas referenced:** #178684, #178694, #20251, #24645, #2516, #2521, #25888, #26349, #26617, #26696 [deployed], #26710 [deployed], #26725 [deployed], #26955 [deployed], #26970 [proposed], #26971 [proposed], #27100, #6520
+**Ideas referenced:** #0000, #16224, #178684, #178694, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #20251, #24645, #25151, #2516, #25185, #2521, #2525, #25888, #25925, #25926, #25935, #26349, #26435, #26617, #26696 [deployed], #26710 [deployed], #26725 [deployed], #26774, #26914 [deployed], #26915 [executing], #26916, #26955 [deployed], #26965 [deployed], #26970 [proposed], #26971 [proposed], #26973, #27010 [proposed], #27100, #5344, #6520, #999999
 
 **Last PICKUP PROMPT:**
 
 ```
-on disk. Instrument that next.
+ed code is #27010 [deployed].)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1786948459 - Rule 317 honest review: gate live, positive control unproven
+Pick up task #1786948459 - R317 auto-repair: gate now heals, not just blocks.
 
-Where we left off (verified 2026-08-16 23:49 PT):
-- Gate scoreboard 23:33:42 PT: heartbeat PASS, validations=82, blocks=59/7d; rule 317 = 24 blocks (UNVERIFIED_STATE 16, REVERSAL_LOG 5, NOT_REPAIRED 4)
-- Raw ledger live DB ~/.clinerules-mcp/index.sqlite: R317_REVERSAL_NOT_REPAIRED blocks ids 112/117/119/125, tasks 1786932084/26932/26490/1786948459, latest 2026-08-17T06:45:50Z
-- Corpus feed proven: ai_learned_corrections id=8185, issue_category=r317_reversal_not_repaired, occurrence_count=4 (dedup rollup working)
-- First nightly truth eval landed: r317_eval_history id=2, frankenstein-llm, 04:31:58 PT, truth_score_pct=20.00
+Where we left off (verified 2026-08-17 03:15 PT):
+- Shipped auto-repair in clinerules_validate_completion (collectFlipCausalCites helper + amendRuleOnDisk backstop + r317_auto_repaired feed), built tsc exit 0, service restarted PID 34714
+- Positive control PASSED and negative control blocked with NONE instruction; artifacts cleaned (rule 999 deleted, 328 rules, corpus 8185 restored, synthetic rows purged)
+- Corrections recorded: rule_amend ledger now shows 3 real amendments to rule 297 from tasks 1786547336372, 1786948459, 1786932084; my earlier zero-rows claim was stale
 
 Open threads to drive next:
-1. #26971 [proposed] — Run the positive control: a genuine rule-citing flip WITH clinerules_amend_rule must PASS and land a rule_amend row + dated amendment on disk
-2. #26971 [proposed] — Pull task detail for gate_blocks ids 112/117/119/125 and find why no blocked window ever actually amended (retry steering question)
-3. #26725 [deployed] — Run the 15-claim r317 eval with --model=opus for a paid-head benchmark row (burns real tokens, needs go-ahead)
-4. #26970 [proposed] — Deploy-target correction: server-side gate copy belongs on WOPR /var/www/emtskills/mcp-servers, not Artemis port 7860 (premise was wrong)
+1. #27010 [deployed] - Watch 24h: confirm no unexpected auto-amendments hit production rule files; verify r317_auto_repaired rows stay real
+2. #26971 [deployed] - Positive control now proven; a durable smoke row can wait for a real production auto-repair event
+3. #26970 [proposed] - If a server-side gate copy is wanted, deploy to WOPR /var/www/emtskills/mcp-servers, not Artemis port 7860
 
 Reference IDs:
-- Ideas filed: #26955 [deployed], #26970 [proposed], #26971 [proposed]
-- Files touched: /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md, /Users/rubenmajor/.clinerules-mcp/index.sqlite
+- Ideas filed: #26955 [deployed], #26965 [deployed], #26970 [proposed], #26971 [deployed], #27010 [deployed]
+- Files touched: /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js, /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md
 
-When done, append to cline_task_ledger.md per rule 07, run order 66.
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 <task_progress>
-- [x] Verify rule_amend ledger state — 0 mechanical repairs in 7d
-- [x] Check gate scoreboard — heartbeat PASS, rule 317 = 24 blocks
-- [x] Verify rule 317 file on disk — obligation 6 + gates present
-- [x] Check r317_eval_history — nightly row id=2 (20%)
-- [x] Check corpus feed — id=8185, occurrence_count=4, dedup working
-- [x] Artemis premise corrected — WOPR bridge + Mac MCP host the gate
-- [x] Enumerated 4 NOT_REPAIRED blocks from live ledger; filed #26970 + #26971
-- [x] First validation caught 4 issues; pickup template wired in
-- [x] Honest assessment complete with reversal log + full pickup block
+- [x] Auto-repair shipped in clinerules_validate_completion (collectFlipCausalCites + amendRuleOnDisk backstop + r317_auto_repaired feed)
+- [x] Rule 317 hardened with obligation 7
+- [x] Build tsc exit 0, service restarted PID 34714
+- [x] Positive control PASSED (rule 999 amended on disk + ledger row + corpus row)
+- [x] Negative control BLOCKED with explicit NONE instruction
+- [x] Cleanup complete (rule 999 deleted, 328 rules, corpus 8185 restored, synthetic rows purged)
+- [x] Stale-claim correction recorded (3 real amendments to rule 297)
+- [x] Ideas #27010 and #26971 stamped deployed + reconciled
+- [x] Completion validated ALL PASSED and shipped
 </task_progress>
 </attempt_completion>
+```
+
+### `1786556136912` — 8/17/2026, 3:01:55 AM PT — 1044 turns
+
+**Original task:**
+
+```
+#Frankenstein-LLM Improvements
+
+I would like you to run a series of tests to benchmark Frankenstein LLM versus Claude Opus 5. From this benchmarking, I would like for you to derive away for us to get Frankenstein LLM to behave in a manner that is better than Opus 5. I believe that this is possible if you take a look at our previous interactions here incline. It may require some configuration changes, such as better rules, better mcp, context on disk settings router settings, mcp additions, cline setting changes, anything else you can think of that could be used to get us where we would like to
+```
+
+**Ideas referenced:** #081020, #10108, #10740, #11319, #11735, #11741, #11781, #12059, #12060, #12477, #12618, #12824, #12872, #12878, #13202, #1616, #16163, #16265, #16304, #16648, #16844, #16863, #17130 [superseded], #17202, #17203, #17205, #17300, #17430, #17537 [rejected], #18132 [deployed], #18312, #18326, #18329, #18670, #18671, #1876, #18820, #18868, #19125, #19173, #1934, #20581, #22598, #22601, #22815, #22856, #22897, #2299, #2301, #2306, #23071, #2310, #2311, #23135, #23171, #23172, #25097, #25195, #25269, #25270, #25293, #25537, #25548 [executing], #25560, #25562, #25593 [proposed], #25608, #25623, #25632, #25633, #25635, #25666, #25667, #25669, #25679, #25688, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25796, #25797, #25798, #25803 [proposed], #25804 [deployed], #25812, #25896 [executing], #25897 [approved], #25898 [approved], #25899 [approved], #25900 [approved], #25901 [approved], #25902, #25903, #25905, #25927 [approved], #25928 [superseded], #25929 [approved], #25930 [approved], #25984 [proposed], #25991 [executing], #25992 [executing], #25993 [executing], #25994 [executing], #25995, #25996 [proposed], #25997 [executing], #25998 [executing], #25999 [executing], #26010 [approved], #26011, #26967 [proposed], #38984, #57890, #6522, #6711, #6719, #6729
+
+**Last PICKUP PROMPT:**
+
+```
+(verified 2026-08-17 02:59 PT)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #26967 — Frankenstein-LLM versus Opus 5 benchmarking and gap closure.
+
+Where we left off (verified 2026-08-17 02:59 PT):
+- Bench harness at /tmp/bench7.py, results at /tmp/frank_bench7.json: 3/6 (exact PASS 8.7s, vec_grounding PASS 15.9s, vision_policy PASS 15.8s; routing_bug/payment_processors/no_apology FAIL).
+- GLM WEDGE probe fast-fail shipped and verified live: /etc/litellm/hooks/frankenstein_glm52.py default 45s to 8s (backup .bak-probefix-20260817). Verified win: exact 66.4s to 6.0s.
+- Anthropic text lanes purged per #26967 [deployed]: /etc/litellm/config.yaml, 62 models, sonnet-5-vision + kimi-k3 vision-only, safe-restart OK.
+- VEC baseline restored: k=3, _VEC_MAX_CHARS=3000 in /etc/litellm/router_hook.py, safe-restart OK.
+- Julia/Claudia changed to 235B (Ruben steer): registry may still list julia-120b/gpt-oss-120b on :11513; pool composition unverified after the swap.
+- Rule 07 ledger append and order 66 NOT run: Ruben directed an immediate stop.
+
+Open threads to drive next (EVERY item carries a real idea or the human-decision marker):
+1. (human-only decision, no idea) — Routing policy for the recently-switched Julia/Claudia 235B thinking lane: whether interactive Cline/frank traffic should route to it at all, or whether complex prompts need a longer timeout + larger max_tokens budget. Ruben's call, with live probe of :11513 /v1/models first to confirm what the lane now serves.
+2. (human-only decision, no idea) — Whether to keep GLM probe timeout at 8s permanently (recommended) or tune to 12s once the 235B lane is confirmed and load re-measured.
+3. (human-only decision, no idea) — Bench harness cadence: re-run /tmp/bench7.py after the 235B confirmation and log per-task latencies to a dated file; decide whether 70s cap and max_tokens=140 stay for frankenstein-llm or get raised.
+
+Reference IDs:
+- Ideas filed: none created this session (create_idea/SQL file not executed due to directed stop). #26967 [deployed] is the approved purge idea driving config.yaml changes.
+- Tickets: none touched.
+- Files touched: /etc/litellm/config.yaml, /etc/litellm/hooks/frankenstein_glm52.py (+ .bak-probefix-20260817), /etc/litellm/router_hook.py, /tmp/bench_fixed.py, /tmp/bench7.py, /tmp/frank_bench3.json, /tmp/frank_bench7.json, /tmp/restart_v6.log, /tmp/glm_gen_test.txt, /tmp/emsu_router_audit.log (read-only).
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786941064430` — 8/17/2026, 2:55:41 AM PT — 785 turns
+
+**Original task:**
+
+```
+#Julia/Claudia 235B
+
+How does such degredation occur and how do we avoid this going forward? Seems like an RCA is in order for that-> The pool serving the Cline lane had degraded to 2 of 4 usable upstreams with both survivors saturated, so the adapter returned empty HTTP 200s (verified: adapter log showed continuous `CANARY probe failed upstream=http://127.0.0.1:11513 err=[Errno 104] Connection reset by peer` and `DECODE_STALL http://127.0.0.1:8210 rate=0.00 tok/s streak=12 -> penalty` plus `TIMEOUT_COOLDOWN_SET`; upstream log showed `ttfb_s: 165.36, queue_depth: 106.0` and a cline-lane entry 
+```
+
+**Ideas referenced:** #10740, #11397, #11936, #11942, #11953, #12231, #12251, #12335, #12365, #1238, #1241, #12672, #12689, #12716, #13108, #13121, #13202, #13831, #13874, #14848, #16163, #1765, #1781, #178693, #19686, #19903, #1998, #2050, #2114, #2247, #2306, #23171, #23206, #25185, #2535 [deployed], #2536 [deployed], #2537 [deployed], #2539 [deployed], #25468, #25471, #25604, #25764, #26400, #26403, #26819 [executing], #26908 [deployed], #26909 [rejected], #26910 [deployed], #26923 [deployed], #26925 [proposed], #26928 [proposed], #26938 [deployed], #26954 [executing], #26956 [executing], #26957 [deployed], #26958 [deployed], #27100
+
+**Last PICKUP PROMPT:**
+
+```
+sically blocked per Finding 1.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786932084 — Julia/Claudia 235B monitoring crash loop + YaRN context ceiling decision.
+
+Where we left off (verified 2026-08-17 01:37 PT):
+- Crash loop root-caused: `tp2_runbook_monitor.sh` line 44 single `curl --max-time 5` probe → transient fail during 8-min load → bring-up branch → launch script line 38 `pkill -f 'vllm serve'` → SIGTERMs the recovering instance. Running proc PID 1459932 has STRIPPED flags vs the correct script on disk (186-199), proving it was launched by `/tmp/vllm_direct_launch.log`, not the runbook.
+- YaRN 131072 is physically blocked: GB10 121.6 GiB total (MemTotal 127,600,748 kB), 101 GiB used, 20 GiB free at 40960; serve log shows weights 62.54 GiB + KV 26.02 GiB at 40960; 131072 → ~83 GiB KV → 145.8 GiB total > 121.6 GiB → OOM. Real ceiling ~64-80K.
+- Already APPLIED + verified: registry ladder (235B after GLM-local), adapter `_julia_priority` hard tier (syntax-OK, service restarted, cline probe hit :11513), litellm state JSON shows L4b before L4f.
+- Julia re-serves when up (canary cleared and tool_calls=1 was proven end-to-end earlier at 23:33); it drops only when the monitor kills it mid-load.
+
+Open threads to drive next:
+
+1. #26938 [executing] — Monitor crash-loop guard, same file the NCCL transport gate owns. Concrete next actions: (a) change line 44 liveness check to require N consecutive failures (e.g. 3 x 30s apart) before bring-up, so an 8-minute load or a saturating batch never triggers a kill; (b) add a cooldown after any bring-up so the loop cannot pkill a freshly-started vLLM; (c) verify the runbook script is the ONLY launcher (hunt down `/tmp/vllm_direct_launch.log`'s source and disable it); (d) press-hold: confirm PID cmdline includes `--tool-call-parser hermes --reasoning-parser qwen3 --max-num-seqs 16 --max-num-batched-tokens 8192` after a monitor-triggered bring-up, not before. Also file a bug-library incident row for the reset loop (frankenstein_router_incidents).
+
+2. #26954 [deployed] — Tool-call parser presence is being silently lost on relaunch (stripped PID). Add a post-launch assertion that `--tool-call-parser` is present in the live cmdline, else re-run the correct script. This replaces the manual check I did and prevents a toolcalls=0 regression from a wrong launcher path.
+
+3. YaRN context ceiling — human-only decision, no idea filed deliberately (genuine policy fork, no default). Ruben must pick: (a) CPU-offload KV to reach 131072 and accept ~1-2 tok/s decode, (b) YaRN to ~72K to serve the 70-90K Cline windows, or (c) keep 235B at 40960 for deep sub-40K turns and leave 131072-native windows to the 120Bs. The KV math to feed the decision: 26.02 GiB at 40960 → ~83 GiB at 131072; ceiling ≈ (121.6 − 62.54 − overhead) GiB / (26.02/40960) ≈ 80K best case.
+
+Reference IDs:
+- Task: #1786932084
+- Ideas referenced this session: #26938 [executing], #26954 [deployed], #26925 [deployed], #26956 [executing], #26957 [deployed], #26958 [deployed], #26928 [proposed], #26819 [executing]
+- Bug library incidents (not idea IDs): 2537 (RoCE
 ```
 
 ### `1786660376952` — 8/17/2026, 1:37:32 AM PT — 989 turns
@@ -205,167 +401,6 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1786941064430` — 8/17/2026, 1:37:32 AM PT — 743 turns
-
-**Original task:**
-
-```
-#Julia/Claudia 235B
-
-How does such degredation occur and how do we avoid this going forward? Seems like an RCA is in order for that-> The pool serving the Cline lane had degraded to 2 of 4 usable upstreams with both survivors saturated, so the adapter returned empty HTTP 200s (verified: adapter log showed continuous `CANARY probe failed upstream=http://127.0.0.1:11513 err=[Errno 104] Connection reset by peer` and `DECODE_STALL http://127.0.0.1:8210 rate=0.00 tok/s streak=12 -> penalty` plus `TIMEOUT_COOLDOWN_SET`; upstream log showed `ttfb_s: 165.36, queue_depth: 106.0` and a cline-lane entry 
-```
-
-**Ideas referenced:** #10740, #11397, #11936, #11942, #11953, #12231, #12251, #12335, #12365, #1238, #1241, #12672, #12689, #12716, #13108, #13121, #13202, #13831, #13874, #14848, #16163, #1765, #1781, #178693, #19686, #19903, #1998, #2050, #2114, #2247, #2306, #23171, #23206, #25185, #2535 [deployed], #2536 [deployed], #2537 [deployed], #2539 [deployed], #25468, #25471, #25604, #25764, #26400, #26403, #26819 [executing], #26908 [deployed], #26909 [rejected], #26910 [deployed], #26923 [deployed], #26925 [proposed], #26928 [proposed], #26938 [deployed], #26954 [executing], #26956 [executing], #26957 [deployed], #26958 [deployed], #27100
-
-**Last PICKUP PROMPT:**
-
-```
-thropic or paid heads touched.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786932084 - 235B YaRN tradeoff + Cline/Tools lane health + ladder position
-
-Where we left off (verified 2026-08-17 00:11 PT):
-- Adapter julia-priority tier applied + restarted + PROVEN while julia was up (3274 cline hits on 11513, tool_calls=1, ttfb 6-25s). Currently julia is DOWN again: CANARY Errno 104 loop since ~00:08, ADMIT usable=3/4, 120Bs carrying lane.
-- BigMac healthy 12.10 tok/s (streak 40), GLM healthy 13.83 (streak 171), Artemis healthy; fresh CTX shows 11513 max_model_len=40960, no CTX_FILTER drops at 40960.
-- Registry reorder + tier_order done (GLM -> julia-235b -> cicero -> 120B -> deepseek); litellm healthy.
-- Ruben's call: YaRN tradeoff. Analysis delivered: 40960 cannot serve 70-90K windows; YaRN->131072 gives 6x active params (~22B vs ~3.7B) at ~3x wall time (12-16 vs 29-44 tok/s) with ~5-10% needle-loss at 2x, more at 3.2x. Safety composition = VEC (grounding, not ctx), SSS/LoRA-v2 (gated by same cap), rule 317/297 (probe-first). Recommendation: fix julia serve crash loop, then YaRN 131072 with 40960-first rollback.
-- 2670-BANK-NOTE: julia's recurring Errno 104 connection-reset (did not root-cause; looks like serve reload loop).
-
-Open threads to drive next:
-1. #26925 [deployed] - julia serve crash-loop: root-cause the recurring Errno 104. Check /tmp/vllm_serve_unified*.crash.log mtime, dmesg, GPU temp; fix relaunch (the 300s Claudia-join wait + no-process-wait may be relaunching over a live head). Re-prove cline routing lands on 11513 after stable.
-2. #26956 [executing] - per-upstream tool-call probe (tool_calls>=1 + finish_reason, max_tokens>=1500). Artemis returned tool_calls=0 at 35.11s vs bigmac 1 at 1.57s on identical requests (measured 08-16).
-3. #26928 [proposed] - emsu-codegen empty-200 rate 32.9%; log requested max_tokens + finish_reason alongside content_len.
-4. #26819 [executing] - optional sm_121 kernel upgrade for Julia/Claudia. Blocks nothing.
-5. Human-only decision (no idea) - YaRN 131072 enablement on 235B (recommend yes after crash-loop fix, with 40960-first rollback), and the same question for Cicero at 131072.
-
-Reference IDs:
-- Verified live: #26925 [deployed], #26938 [deployed], #26954 [deployed], #26957 [deployed], #26958 [deployed]
-- Carried: #26956 [executing], #26928 [proposed], #26819 [executing], #26909 [rejected]
-- Bug library incidents: 2535, 2536, 2537, 2539
-- Files: /usr/local/bin/frankenstein_tools_adapter.py (+ .bak.julia_priority), /etc/litellm/frankenstein_registry.yaml (+ .bak.rub20260816), /etc/litellm/config.yaml (read-only), /tmp/patch_adapter_julia_priority.py, /tmp/probe_cline.py
-- Access: Julia via WOPR :2205 rubenmajor@127.0.0.1; WOPR :2222 emsuserver (passwordless sudo); adapter frankenstein-tools.service.
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Re-anchor: quantify YaRN vs 120Bs mathematically + safety composition, correct stale CTX claim
-- [x] Pulled fresh live state: julia down again (Errno 104 loop, usable=3/4), bigmac/GLM/artemis healthy
-- [x] Old CTX-FILTER 24K citation superseded by fresh 40960 capability lines (no drops at 40960)
-- [x] Mathematically quantified: 6x active params (22B vs 3.7B) vs ~3x wall-time (12-16 vs 29-44 tok/s), YaRN needle-loss ~5-10% at 2x
-- [x] Safety composition named + verified: VEC=grounding, SSS/LoRA-v2=gated, rules 317/29
-```
-
-### `1786556136912` — 8/17/2026, 1:36:42 AM PT — 1025 turns
-
-**Original task:**
-
-```
-#Frankenstein-LLM Improvements
-
-I would like you to run a series of tests to benchmark Frankenstein LLM versus Claude Opus 5. From this benchmarking, I would like for you to derive away for us to get Frankenstein LLM to behave in a manner that is better than Opus 5. I believe that this is possible if you take a look at our previous interactions here incline. It may require some configuration changes, such as better rules, better mcp, context on disk settings router settings, mcp additions, cline setting changes, anything else you can think of that could be used to get us where we would like to
-```
-
-**Ideas referenced:** #081020, #10108, #10740, #11319, #11735, #11741, #11781, #12059, #12060, #12477, #12618, #12824, #12872, #12878, #13202, #1616, #16163, #16265, #16304, #16648, #16844, #16863, #17130 [superseded], #17202, #17203, #17205, #17300, #17430, #17537 [rejected], #18132 [deployed], #18312, #18326, #18329, #18670, #18671, #1876, #18820, #18868, #19125, #19173, #1934, #20581, #22598, #22601, #22815, #22856, #22897, #2299, #2301, #2306, #23071, #2310, #2311, #23135, #23171, #23172, #25097, #25195, #25269, #25270, #25293, #25537, #25548 [executing], #25560, #25562, #25593 [proposed], #25608, #25623, #25632, #25633, #25635, #25666, #25667, #25669, #25679, #25688, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25796, #25797, #25798, #25803 [proposed], #25804 [deployed], #25812, #25896 [executing], #25897 [approved], #25898 [approved], #25899 [approved], #25900 [approved], #25901 [approved], #25902, #25903, #25905, #25927 [approved], #25928 [superseded], #25929 [approved], #25930 [approved], #25984 [proposed], #25991 [executing], #25992 [executing], #25993 [executing], #25994 [executing], #25995, #25996 [proposed], #25997 [executing], #25998 [executing], #25999 [executing], #26010 [approved], #26011, #26967 [proposed], #38984, #57890, #6522, #6711, #6719, #6729
-
-**Last PICKUP PROMPT:**
-
-```
- stacking more failing probes.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — frank-vs-Opus benchmark follow-through: fix router non-JSON bug and re-run.
-
-Where we left off (verified 2026-08-16 23:33 PT):
-- Benchmark ran clean this session: frank 4/6 = 66.7% (up from 25% this morning).
-- Results live at /tmp/frank_bench3.json; harness fixed at /tmp/bench_fixed.py (compiles, per-task try/except, incremental JSON, no Opus-OUT model).
-- 3 VEC levers live + verified: #25998 [deployed], #25999 [deployed], #25997 [deployed].
-- Vision-doorman enforcement #25991 [deployed]; payments multi-processor correction shipped in gate + corpus.
-- Prior bad ideas rejected/superseded: #25992, #25993, #25994 [rejected].
-
-Open threads to drive next:
-1. #26967 [proposed] — Router returned non-JSON on routing_bug + vision_policy tasks (both scored 0). Direct adapter probe is healthy (HTTP 200, 5.0s), so the bug is intermittent in the router/doorman layer. Diagnose via litellm logs for the exact non-JSON response body on a failing call, fix, then re-run /tmp/bench_fixed.py.
-
-Reference IDs:
-- Ticket: none (conversation task)
-- Ideas filed this session: #25991 [deployed], #25992/#25993/#25994 [rejected], #25995/#25996 [proposed], #25997/#25998/#25999 [deployed], #26010 [executing], #26967 [proposed]
-- Files touched: /etc/litellm/router_hook.py, /etc/litellm/frankenstein_registry.yaml, /var/www/emtskills/clinerules/emsu_corpus.txt, /var/www/emtskills/scripts/frank_recovery_gate.py, /tmp/bench_fixed.py, /var/lib/emsu_corpus/corpus.db
-- Harness result: /tmp/frank_bench3.json (frank 4/6)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786948767264` — 8/17/2026, 12:50:31 AM PT — 134 turns
-
-**Original task:**
-
-```
-#Unknown / Maybe 317 adjacent
-
-Rebase and tell me where we are at now?
-
---
-Done. #25888 is now `[approved]` — disposition flipped per your steer, confirmed by the orchestrator returning `new_status: approved`.
-
-## Session state at close
-
-Rule 317 is live on both fronts, and the telemetry hygiene fix landed this session:
-- **Cline side:** rule 317 hardfloor + enforcement wired into the completion gate. 28 real fires (18 UNVERIFIED_STATE, 18 REVERSAL_LOG, 8 overlapping rows), 1 test-noise row identified.
-- **Argus side:** 317 block live in `/var/www/emtskills/routes/alltastic_api.php:12954` insi
-```
-
-**Ideas referenced:** #178694, #18480 [deployed], #18481 [blocked], #18491 [rejected], #19173, #25185, #25888 [approved], #25906 [approved], #25907 [proposed], #25925, #25926, #25935, #25981 [approved], #26247 [awaiting_review], #26617 [approved], #26696, #26914 [deployed], #26915 [executing], #26916, #26972 [proposed], #26993 [proposed], #27100
-
-**Last PICKUP PROMPT:**
-
-```
- fires dominate, revisit then.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1786941064430 - Rule 317 rebase follow-up: lean on idea 25907
-
-Where we left off (verified 2026-08-17 12:49 AM PT):
-- #26972 [executing] - approved by Ruben this turn; remaining action is to amend the #25981 [deployed] title/description to match reality
-- #25907 [proposed] - lean delivered: park it; UNVERIFIED_STATE out-fires REVERSAL_LOG (59 vs 33), so the keep-the-gate condition holds
-- #26993 [proposed] - filed: R01_EM_DASH is the real noise leader (202 fires); tune em-dash ban before any reversal-log relaxation
-- #25888 [deployed] - rule 317 hardfloor + mechanical Conclusions Ledger gates live
-- #25906 [deployed] - A7 gate-telemetry section live in cline_rules_audit.sh L197-226
-- #25981 [deployed] - Argus probe-before-claim + flip-correction language live in alltastic_api.php (~L13286-13288)
-- #26247 [deployed] - telemetry env override live; prod ledger 3,105 rows
-
-Open threads to drive next:
-1. #26972 [executing] - execute the amendment of the #25981 [deployed] title/description to match reality (no literal 317 token; block at ~13286, not 12954)
-2. #26993 [proposed] - decide on the R01_EM_DASH tuning pass (allow em dashes outside user-facing text, or downgrade to warn)
-3. #25907 [proposed] - revisit in ~1 week with fresh A7 fire-rate data; relax only if claim-free REVERSAL_LOG fires dominate
-4. #25906 [deployed] - confirm no telemetry regression on next A7 nightly run
-5. #25981 [deployed] - watch Argus serves to confirm probe-before-claim takes effect in served answers
-
-Reference IDs:
-- Ideas filed: #25888 [deployed], #25906 [deployed], #25907 [proposed], #25981 [deployed], #26247 [deployed], #26972 [executing], #26993 [proposed]
-- Files touched: /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js, /Users/rubenmajor/Documents/Cline/scripts/cline_rules_audit.sh, /var/www/emtskills/routes/alltastic_api.php (server)
-
-When finished, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Pullled R317 gate fire-rate breakdown — UNVERIFIED=59, REVERSAL_LOG=33, NOT_REPAIRED=4, passes=1134
-- [x] Read REVERSAL_LOG gate trigger — unconditional header-required scan (L1279-1286)
-- [x] Filed data finding #26993 (R01_EM_DASH = noise leader at 202)
-- [x] Validated completion — ALL GATES PASSED
-- [x] Delivered lean: park #25907, tune R01_EM_DASH first
-</task_progress>
 </attempt_completion>
 ```
 
@@ -3666,174 +3701,6 @@ Open threads to drive next:
 Reference IDs:
 - Ideas: #25551 [deployed], #25941 [proposed], #25931 [superseded], #25933 [superseded], #26268 [superseded]
 - Files touched: /var/www/emtskills/cron/cron_chat_transcript_autosend.php, backups .bak.1786697204 (restored) and .bak.1786564185, HANDOFF_NOTES.md (entry needs correction)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786547336372` — 8/14/2026, 2:07:44 AM PT — 660 turns
-
-**Original task:**
-
-```
-Make a Cline rule that makes it mandatory to conduct a rule 297 RCA and change / update cline rules when a subsequent iteration identifies a substantial reversal of the initial iteration within that window. The idea is that the agent catches this and makes itself smarter. This is to be done immediately. Give the rule nubmer. If it needs refinement, let me know.
-```
-
-**Ideas referenced:** #0000, #11415, #13840, #14205, #15268, #16224, #16588, #17130 [superseded], #17408, #17537 [rejected], #17685 [awaiting_review], #18132 [deployed], #18806, #18946, #18947, #18948, #18973, #19125, #19173, #19175 [executing], #19176 [queued], #19511, #19898, #19899 [proposed], #19904, #20251, #20630 [executing], #20957, #20958, #21125, #21126, #22282, #2277, #22840, #2320, #24900, #24906, #24909, #24910, #24912, #24913, #24924, #24987, #24995, #25058, #25066, #25074, #25150, #25151, #25154, #25155, #25156, #25157, #25185, #25188, #25313, #25547, #25551, #25552, #25624, #25747 [awaiting_review], #25755 [awaiting_review], #25757 [awaiting_review], #25759 [awaiting_review], #25764 [awaiting_review], #25765 [awaiting_review], #25812 [awaiting_review], #25848, #25859 [executing], #25860 [executing], #25861 [executing], #25869 [proposed], #25870 [proposed], #25871 [proposed], #25872 [executing], #25873 [proposed], #25876 [proposed], #25885, #25886 [executing], #25887, #25888 [proposed], #25890 [proposed], #25891 [proposed], #25892, #25893, #25894, #25897, #25906 [proposed], #25907 [proposed], #25909 [proposed], #25912 [proposed], #25925 [proposed], #25926 [proposed], #25935, #25952, #25953, #25981 [proposed], #26076 [executing], #26156, #26199, #26229, #26232, #26247 [proposed], #5344, #5346, #5348, #616207, #6825
-
-**Last PICKUP PROMPT:**
-
-```
-ive in `cline_rules_audit.sh`.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Rule 317 delivery + telemetry hygiene follow-through.
-
-Where we left off (verified 5:52 PM PT):
-- Rule 317 live and firing; 28 real fires in the violations ledger.
-- #25888 flipped to `[approved]` via idea_action (final action this session).
-- Option (a) telemetry sandbox env override deployed, tested, service restarted (prod ledger pinned at 2,752 rows).
-- Argus 317 block live at `/var/www/emtskills/routes/alltastic_api.php:12954`.
-
-Open threads to drive next:
-1. #26247 `[awaiting_review]` — separate validator test traffic from prod telemetry (option a shipped; confirm no regression on next A7 run).
-2. #26247 `[awaiting_review]` — purge the 10 historical test-noise rows from the prod violations table once sandbox is confirmed, so A7 counts stay clean.
-3. #25981 `[approved]` — Argus 317 block live; watch Argus completions to confirm the probe-before-claim behavior actually takes effect in served answers.
-
-Reference IDs:
-- Ideas filed: #25888 [approved], #25906 [approved], #25907 [proposed], #25981 [approved], #26247 [awaiting_review]
-- Files touched: Rules/317-reversal-triggers-297-and-rule-update.md, Rules/91-every-completion-needs-pickup-prompt.md, Rules/_RULE_TREE.md, Rules/_INDEX.md, scripts/cline_rules_audit.sh, mcp-servers/clinerules-mcp/src/index.ts, /var/www/emtskills/routes/alltastic_api.php (server)
-- Ticket: none
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786592555268` — 8/14/2026, 1:51:15 AM PT — 660 turns
-
-**Original task:**
-
-```
-#Argus
-
-Would like to be able to click on any row and read the actual task itself: https://emsuniversity.com/emtskills/routes/argus_download.php?tab=activity
-```
-
-**Ideas referenced:** #10003, #10005, #10182, #12301, #127908, #128193, #128203, #128206, #128263, #128266, #128275, #16213, #16263, #18745, #18770, #19370, #19646, #20547, #21140, #21262, #22310, #22511, #23506, #23852, #23952, #24897, #24900, #25047, #25573, #26005, #26044, #26045, #26048, #26049, #26050, #26062 [awaiting_review], #26107 [deployed], #26263 [awaiting_review], #274160, #30363, #69707, #8645, #8942, #9650, #9654, #9660, #9733, #9889
-
-**Last PICKUP PROMPT:**
-
-```
-serts ([deployed])
-
-═══════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════
-Pick up task — EMSU skills data repair: fix placeholder instructor + missing PDFs for student 26415W-08 (Approved: #26062 [deployed] via Ruben's feedback).
-
-Where we left off (verified 1:50 AM PT 2026-08-14):
-- 3 PDFs regenerated + synced into NREMT_Skills row for 26415W-08 (verified URLs on disk)
-- Instructor root cause proven: Instructors.instructor_id=1 IS the literal "TeExameiner Examine" garbage row (141 students affected), real name not in any system table
-- Human decision filed as idea #26263 [awaiting_review] — need real examiner name or replacement policy before mass instructor backfill
-- Background reprocessor (tools/reprocess_skills_pdf_queue.php --since=2026-07-30, nohup) still running, healing other students' failed PDFs; check /tmp/reprocess_26415.log when doing follow-up
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26263 [awaiting_review] — Ruben decides real instructor name/policy; DO NOT auto-fill instructor fields from any table (all sources polluted by id=1). Once decided, mass-UPDATE the ~141 affected NREMT_Skills rows + bls_scheduled_classes/bls_certificates rows referencing Instructor id=1.
-2. #26263 [awaiting_review] — verification pass: after reprocessor finishes, re-run sync_skill_attempts_to_nremt.php to catch any PDF backfills it generated for other students, then confirm argus_download.php activity tab still renders clean (two prior deploys in this window unaffected).
-
-Reference IDs:
-- Ideas filed: #26263 [awaiting_review]; prior: #26062 [deployed]
-- Files touched: /var/www/emtskills/tools/sync_skill_attempts_to_nremt.php, /var/www/emtskills/tools/reprocess_skills_pdf_queue.php (read-only usage); DB tables NREMT_Skills, skillstastic_pdf_queue, Instructors, Skill_Attempts
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786558292672` — 8/14/2026, 1:50:07 AM PT — 422 turns
-
-**Original task:**
-
-```
-#Touch ID
-
-I would like to use Touch ID/Pass key for Moodle Sign In. Can we set this up?
-```
-
-**Ideas referenced:** #000000, #10234, #111111, #128231, #128241, #128268, #1699, #18868, #19163, #25896 [proposed], #25956 [proposed], #334155, #3742, #475569, #666666, #6785, #842029, #856404, #9200
-
-**Last PICKUP PROMPT:**
-
-```
-I will fix that exact failure.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up the EMSU portal (emtskills) passkey/Touch ID login work — verify on real Safari hardware and fix the real-device login if it fails.
-
-Where we left off (verified 2026-08-14 01:49 PT):
-- Passkey login is LIVE and deployed on emtskills portal: pages render with passkey button, well-known endpoints return 200.
-- Automated E2E passed (real WebAuthn ceremony, anonymous, no email): enroll + login redirect to skills_report.php, DB showed sign_count=2, last_used_at set on the test credential before cleanup.
-- Remaining real-world signal: Ruben's own credential (user_id=1) has sign_count=0 / last_used_at=NULL — his real login has not completed through the passkey path.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #25956 [awaiting_review] — Perform the manual Safari/Touch ID login on ruben's real Mac (or iPhone) at https://emsuniversity.com/emtskills/routes/login.php using "Sign in with Passkey"; capture the exact browser/console or on-screen error if it fails, then fix it and re-verify the credential's last_used_at changes.
-2. #25896 [deployed] — Moodle MFA passkey enablement is separately live (tool_mfa + factor_webauthn); if the portal passkey works, decide whether to also surface Moodle passkey as optional convenience for students.
-
-Reference IDs:
-- Ideas filed: #25896 (Moodle MFA), #25956 (portal passkey)
-- Files touched: /var/www/emtskills/lib/passkey.php, /var/www/emtskills/api/passkey.php, /var/www/emtskills/assets/js/passkey.js, /var/www/emtskills/includes/passkey_login_box.php, /var/www/emtskills/includes/passkey_profile_card.php, /var/www/emtskills/.well-known/passkey-endpoints, /var/www/vhosts/emsuniversity.com/httpdocs/.well-known/passkey-endpoints
-- DB: admin_portal.passkey_credentials (credential_id now VARBINARY(1023))
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786553732663` — 8/14/2026, 1:45:33 AM PT — 614 turns
-
-**Original task:**
-
-```
-When I get emails like this I would like to actually see the students original email below so that I know what was said from the student to prompt the email. Can you do that for email agent? 
-
---
-```
-
-**Ideas referenced:** #1155, #14132, #16473, #16732, #174062, #19492, #2036, #22060, #23184, #2323, #23276, #24526, #24765, #24885, #24898, #24990, #25942 [deployed], #25944, #25957 [approved], #25958 [approved], #25971, #25974, #25975, #25976, #25984, #25985, #25986, #25990, #25995, #26003, #26044 [approved], #26262 [approved], #32584, #3354, #5298, #6106, #6228, #7207, #9083, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-tch-up pass in a fresh window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — email agent health follow-up + 24h catch-up build.
-(No numeric Cline task id available in this window; topic named instead.)
-
-Where we left off (verified 2026-08-14 01:44 PT):
-- Email responder healthy: Aug 12=1357 proc/46 sent, Aug 13=1357/16, Aug 14 pt=187/7; clean runs, guardrail recoveries active.
-- sjamesandrew3@gmail.com reply confirmed: email_inbound_log id=132827, ai_response_sent=1, sent 8/12 19:51:54 PT.
-- All 4 root causes fixed live: newest-first sort + limit 200 (cron/cron_email_responder.php:19,323), do_not_reply guard, internal transcript pre-filter (:315-320), ACK-ONLY action phrases (lib/EmailAIResponder.php:1998-2004).
-- Idea #26262 filed [approved]: 24h scan window can silently drop never-logged student mail.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26262 [approved] — Build the catch-up pass: when a Maildir file's mtime is older than 24h AND its Message-ID has no row in email_inbound_log, process it anyway (or at minimum INSERT a skip-row so mail is never invisible). Files: cron/cron_email_responder.php scan section, lines ~306-323.
-
-Reference IDs:
-- Ideas filed this session: #25957 [deployed], #25958 [deployed], #26044 [deployed], #26262 [approved]
-- Files touched: /var/www/emtskills/cron/cron_email_responder.php, lib/EmailAIResponder.php, lib/email_footer.php, cron/cron_email_followup.php
-- Server backups: cron_email_responder.php.bak-20260812-quote, lib/email_footer.php.bak-20260812-signature
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>

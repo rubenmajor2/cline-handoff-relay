@@ -6,19 +6,21 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/17/2026, 12:28:29 AM PT | window: last 72h | 94 tasks | index total 781 (parsed 6, cached 775)
+Generated: 8/17/2026, 1:45:21 AM PT | window: last 72h | 92 tasks | index total 781 (parsed 4, cached 777)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786948459253` | 8/17/2026, 12:28:18 AM | 105 | 179KB | #Big Mac 4th GPU |
-| `1786947372694` | 8/17/2026, 12:28:11 AM | 267 | 1061KB | Can you give me a model here in Cline where i can directly test the Julia/Claudia 235b llm |
-| `1786817395147` | 8/17/2026, 12:28:05 AM | 511 | 3045KB | #Call Backs / VAPI |
-| `1786941064430` | 8/17/2026, 12:27:47 AM | 619 | 1528KB | #Julia/Claudia 235B |
-| `1786556136912` | 8/17/2026, 12:27:25 AM | 865 | 3158KB | #Frankenstein-LLM Improvements |
-| `1786948767264` | 8/17/2026, 12:27:05 AM | 103 | 391KB | #Unknown / Maybe 317 adjacent |
+| `1786948641882` | 8/17/2026, 1:37:49 AM | 87 | 337KB | #Rule 317 |
+| `1786660376952` | 8/17/2026, 1:37:32 AM | 989 | 2755KB | help me file with Florida Board of Education application yet? Need that approval before we |
+| `1786941064430` | 8/17/2026, 1:37:32 AM | 743 | 2041KB | #Julia/Claudia 235B |
+| `1786556136912` | 8/17/2026, 1:36:42 AM | 1025 | 3547KB | #Frankenstein-LLM Improvements |
+| `1786948767264` | 8/17/2026, 12:50:31 AM | 134 | 555KB | #Unknown / Maybe 317 adjacent |
+| `1786947372694` | 8/17/2026, 12:47:30 AM | 366 | 1205KB | Can you give me a model here in Cline where i can directly test the Julia/Claudia 235b llm |
+| `1786817395147` | 8/17/2026, 12:42:52 AM | 546 | 3139KB | #Call Backs / VAPI |
+| `1786832584504` | 8/17/2026, 12:34:59 AM | 149 | 368KB | #Externship |
+| `1786948459253` | 8/17/2026, 12:34:24 AM | 126 | 223KB | #Big Mac 4th GPU |
 | `1786947807234` | 8/16/2026, 11:54:56 PM | 114 | 512KB | Do a 90 minute doctor of franeknstein executor which has a bunch of impl failed which may  |
 | `1786831867073` | 8/16/2026, 11:52:46 PM | 222 | 507KB | #Joshua / Denali Scenario |
-| `1786948641882` | 8/16/2026, 11:49:40 PM | 60 | 211KB | #Rule 317 |
 | `1786602203659` | 8/16/2026, 11:44:52 PM | 160 | 818KB | There appear to be some minor issues going on with Frankenstein LLM. It seems like I'm get |
 | `1786780447770` | 8/16/2026, 11:34:23 PM | 194 | 702KB | #Executor |
 | `1786935011375` | 8/16/2026, 11:29:11 PM | 470 | 1240KB | Frankensteitn-llm appears to be stalling. If it's because Deepseek needs credits, should i |
@@ -35,7 +37,6 @@ Generated: 8/17/2026, 12:28:29 AM PT | window: last 72h | 94 tasks | index total
 | `1786821833685` | 8/16/2026, 7:44:45 PM | 527 | 1959KB | #SSS / Virtual LoRA2 / Efficiency |
 | `1786921825468` | 8/16/2026, 7:11:22 PM | 604 | 2059KB | #TeExameiner Examine issue |
 | `1786927436741` | 8/16/2026, 6:59:39 PM | 218 | 773KB | #Student Time Sheet Issue |
-| `1786660376952` | 8/16/2026, 6:56:38 PM | 892 | 2552KB | help me file with Florida Board of Education application yet? Need that approval before we |
 | `1786926348658` | 8/16/2026, 6:55:38 PM | 318 | 886KB | #Jon Argus |
 | `1786918177124` | 8/16/2026, 6:37:53 PM | 342 | 2921KB | #Email AI |
 | `1786925537474` | 8/16/2026, 6:35:53 PM | 232 | 796KB | The rule 317 seems to not be firing as often. What do you think is hapening? |
@@ -55,7 +56,6 @@ Generated: 8/17/2026, 12:28:29 AM PT | window: last 72h | 94 tasks | index total
 | `1786842592907` | 8/15/2026, 8:46:01 PM | 516 | 2989KB | #Rule 317 |
 | `1786836908956` | 8/15/2026, 4:48:21 PM | 72 | 1004KB | Is this legitimate? If so, the message should be a little more sympathetic and less techni |
 | `1786835771600` | 8/15/2026, 4:31:46 PM | 96 | 1327KB | #BLS  |
-| `1786832584504` | 8/15/2026, 3:39:32 PM | 105 | 279KB | #Externship |
 | `1786832177865` | 8/15/2026, 3:36:49 PM | 160 | 352KB | #SLS ish |
 | `1786782096117` | 8/15/2026, 3:33:23 PM | 564 | 5232KB | #Email Agent |
 | `1786824274829` | 8/15/2026, 3:27:14 PM | 256 | 888KB | frankenstein-llm seems to be having some intermittent connectivity issues. Not sure the ca |
@@ -102,98 +102,105 @@ Generated: 8/17/2026, 12:28:29 AM PT | window: last 72h | 94 tasks | index total
 | `1786592555268` | 8/14/2026, 1:51:15 AM | 660 | 2554KB | #Argus |
 | `1786558292672` | 8/14/2026, 1:50:07 AM | 422 | 1434KB | #Touch ID |
 | `1786553732663` | 8/14/2026, 1:45:33 AM | 614 | 3214KB | When I get emails like this I would like to actually see the students original email below |
-| `1786683447557` | 8/14/2026, 1:14:20 AM | 290 | 7478KB | #Big Mac |
-| `1786688208090` | 8/14/2026, 12:41:41 AM | 200 | 611KB | #SBA Questions |
 
 ---
 
 ## Per-window detail
 
-### `1786948459253` — 8/17/2026, 12:28:18 AM PT — 105 turns
+### `1786948641882` — 8/17/2026, 1:37:49 AM PT — 87 turns
 
 **Original task:**
 
 ```
-#Big Mac 4th GPU
+#Rule 317
 
-Ok, let's give it another shot. See this conversastion between me and the tech:
+I i gave it a full day and a little bit. Tel me how you feel about 317 now? Also look at this task/integrate it and tell me agian what's left/what your thoughts are on where we are at --> 
 
-Ruben Major:
-	You put the 4th GPU on an NVME slot, right? 
-	And you already installed the dummy plug?
+You were right. Rule 317 was a prose rule: the validator demanded an RCA bucket and the word "causal rule" in a log line, but nothing made the causal rule file, corpus, or MCP index actually change. A window could type a plausible flip line and pass while the underlying artifact went untouched. That is exactly the cursory-window-fixing you flagged. It is now mechanical.
 
-Ruben Major Jr.:
-	Correct
-	On both
-
-Ruben Major:
-	Ok, lol, let me try from here then. 
-
-Ruben Major Jr.:
-	See if it's an issue with the bus speed being only x4, if it's initiating okay om hardware level it has to be a software bug in the stack somewhere
-
-Ruben Major:
-	Kk
-
-# Answer: I am sure. I just tested your assumption directly, twice, with fresh boots. The plug is NOT in, and the card still 
+What shipped (verified li
 ```
 
-**Ideas referenced:** #178668, #178669, #2299, #2507 [investigating], #25097, #2541 [deployed], #26209 [proposed], #26211 [executing], #26233 [rejected], #26237 [rejected], #26238 [proposed], #27100
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786947372694` — 8/17/2026, 12:28:11 AM PT — 267 turns
-
-**Original task:**
-
-```
-Can you give me a model here in Cline where i can directly test the Julia/Claudia 235b llm only with no spillover or backup. Just that one locally here in Cline Settings under litellm.emsuniversity.com?
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11847, #12477, #12550, #12618, #12824, #12872, #12878, #13202, #14141, #16163, #16265, #16304, #16648, #16844, #17202, #17203, #17205, #1765, #1781, #18312, #18320, #18326, #18820, #18868, #2114, #22598, #22601, #22815, #22820, #22897, #2299, #23071, #23171, #25097, #2537, #25757, #25759, #25764, #26908, #26923
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786817395147` — 8/17/2026, 12:28:05 AM PT — 511 turns
-
-**Original task:**
-
-```
-#Call Backs / VAPI
-
-How are callbacks going now?
-
-You know I'm just curious if there's some improvements that have been made genetically since we started a couple of months ago with VAPI? Seems like there should be are using the latest software or updates? Can you check with the community to see? I just wanna make sure.
-
-Also tell me what's going on with this ? And why did you offer Vicky an extension draft letter? When did I say that was OK? I know we were working on some stuff in a different window for extern chips just give me some information here -> 1. The 14 students need a placement or 
-```
-
-**Ideas referenced:** #12018, #12584, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #16844, #16874, #17130 [superseded], #1745, #18132 [deployed], #18316, #19125, #19173, #23133, #2323, #2328, #23340, #2341, #2343, #2344, #23989, #24645, #2511, #25701, #25706, #25707, #25943, #25945, #25946, #25968, #25969, #25986, #25989, #26066, #26068, #26203 [deployed], #26206 [deployed], #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26259 [deployed], #26260 [deployed], #26261 [deployed], #26266 [executing], #26267 [executing], #26270, #26296, #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26504 [approved], #26508 [proposed], #26509 [proposed], #26511 [deployed], #26513 [deployed], #26591, #26593, #26618 [deployed], #26619 [proposed], #26621 [proposed], #26643 [proposed], #26644 [proposed], #26645 [proposed], #26663, #26671 [proposed], #3261, #3319, #3346, #6172, #6978, #9042, #9159, #9222, #9501
+**Ideas referenced:** #178684, #178694, #20251, #24645, #2516, #2521, #25888, #26349, #26617, #26696 [deployed], #26710 [deployed], #26725 [deployed], #26955 [deployed], #26970 [proposed], #26971 [proposed], #27100, #6520
 
 **Last PICKUP PROMPT:**
 
 ```
-le 263 (verify, don't assume).
+on disk. Instrument that next.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — finish the legacy-claude-string audit after the claude-sonnet-5 ban.
 
-Where we left off (verified 8/15/2026, 3:56:33 PM PT):
-- Killed all 4 confirmed `claude-sonnet-5` callers (now `deepseek-v4-pro`/`frankenstein-llm`), php -l clean, backups created.
-- Verified litellm routing map: `claude-sonnet-5`→`anthropic/claude-opus-5` (PAID, the real leak, now gone); bare `claude-haiku`/`claude-opus`→`deepseek-v4-pro` (free, left in place).
-- Verified Vapi brain = Vapi-cloud-resolved (`anthropic/claude-sonnet-5` on Vapi org 46666ee6, serverUrl = our webhook); our webhook internal tools use `frankenstein-llm` line 991, executor falls back `deepseek-v4-pro`.
-- Changes landed: `api/ticket_autospec.php`, `lib/backfill_idea_confidence_scorer.php`, `lib/PredispatchRevival.php`, `lib/PredispatchRevivalRouter.php`.
+Pick up task #1786948459 - Rule 317 honest review: gate live, positive control unproven
 
-Open threads to drive next (grep was live-verified, idea # stored in orchestrator_ideas):
-1. #26671 [proposed] — Audit the ~20 files still carrying OLD dated claude strings (`claude-haiku-4-5-20251001`, `claude-opus-4-20250514`, `claude-sonnet-4-6`, `claude-sonnet-4-20250514`, etc.). Action: run `grep -rn "claude-" /var/www/emtskills/api /var/www/emtskills/lib /var/www/emtskills/cron --include=*.php`, then for each resolve against the litellm DB (STORE_MODEL_IN_DB=1) to find which still map to `anthropic/*`, and patch ONLY the live-invoked paid ones.
-2. #26663 (unverified — may exist) — Vapi assistant master list: enumerate all Vapi assistants to confirm which `api/voice/*` handlers the old claude strings belong to before patching.
+Where we left off (verified 2026-08-16 23:49 PT):
+- Gate scoreboard 23:33:42 PT: heartbeat PASS, validations=82, blocks=59/7d; rule 317 = 24 blocks (UNVERIFIED_STATE 16, REVERSAL_LOG 5, NOT_REPAIRED 4)
+- Raw ledger live DB ~/.clinerules-mcp/index.sqlite: R317_REVERSAL_NOT_REPAIRED blocks ids 112/117/119/125, tasks 1786932084/26932/26490/1786948459, latest 2026-08-17T06:45:50Z
+- Corpus feed proven: ai_learned_corrections id=8185, issue_category=r317_reversal_not_repaired, occurrence_count=4 (dedup rollup working)
+- First nightly truth eval landed: r317_eval_history id=2, frankenstein-llm, 04:31:58 PT, truth_score_pct=20.00
+
+Open threads to drive next:
+1. #26971 [proposed] — Run the positive control: a genuine rule-citing flip WITH clinerules_amend_rule must PASS and land a rule_amend row + dated amendment on disk
+2. #26971 [proposed] — Pull task detail for gate_blocks ids 112/117/119/125 and find why no blocked window ever actually amended (retry steering question)
+3. #26725 [deployed] — Run the 15-claim r317 eval with --model=opus for a paid-head benchmark row (burns real tokens, needs go-ahead)
+4. #26970 [proposed] — Deploy-target correction: server-side gate copy belongs on WOPR /var/www/emtskills/mcp-servers, not Artemis port 7860 (premise was wrong)
 
 Reference IDs:
-- Ideas filed: #26618, #26619, #26621 (prior window); #26671 this window.
-- Files touched this window: ticket_autospec.php, backfill_idea_confidence_scorer.php, PredispatchRevival.php, PredispatchRevivalRouter.php (+ .bak-r146-* backups).
-- Backup pattern: `.bak-r146-20260815-*`.
+- Ideas filed: #26955 [deployed], #26970 [proposed], #26971 [proposed]
+- Files touched: /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md, /Users/rubenmajor/.clinerules-mcp/index.sqlite
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Verify rule_amend ledger state — 0 mechanical repairs in 7d
+- [x] Check gate scoreboard — heartbeat PASS, rule 317 = 24 blocks
+- [x] Verify rule 317 file on disk — obligation 6 + gates present
+- [x] Check r317_eval_history — nightly row id=2 (20%)
+- [x] Check corpus feed — id=8185, occurrence_count=4, dedup working
+- [x] Artemis premise corrected — WOPR bridge + Mac MCP host the gate
+- [x] Enumerated 4 NOT_REPAIRED blocks from live ledger; filed #26970 + #26971
+- [x] First validation caught 4 issues; pickup template wired in
+- [x] Honest assessment complete with reversal log + full pickup block
+</task_progress>
+</attempt_completion>
+```
+
+### `1786660376952` — 8/17/2026, 1:37:32 AM PT — 989 turns
+
+**Original task:**
+
+```
+help me file with Florida Board of Education application yet? Need that approval before we the FL DHS application. We want also to be a CE and EMT provider there. So may also need to do an application for EMT CE with the EMS Authority in Florida
+```
+
+**Ideas referenced:** #004890, #121212, #16213, #17130 [superseded], #17537 [rejected], #18132 [deployed], #19125, #19173, #19338, #19458, #19491, #2335 [deployed], #252525, #252545, #2563, #25887, #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26183 [proposed], #26238, #26239 [executing], #313131, #3310, #334155, #475569, #555555, #6518
+
+**Last PICKUP PROMPT:**
+
+```
+the "Florida CE" Drive folder.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #26183 — File FL DOH Bureau of EMS CE + EMT + DOE approvals.
+
+Where we left off (verified 2026-08-16 18:55 PT):
+- Drive folders created: Florida (root), Florida EMT, Florida CE, Florida DOE, Oregon (root), Oregon CE, Oregon EMT, Oregon DOE
+- Actual applications uploaded: DH 1698 (FL EMT, 7pg), DH 1698C (FL CE, 2pg), CIE working copy, OR CBA program application, OR EMR course change
+- Page "State Prep Documents" card: 24 links (folders + PDFs + gov sources) live on new_site_setup.php; PHP lints clean
+- DH 1698C field-by-field walkthrough delivered above
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26183 — get EMSU's FL DOH EMS provider/training number from Ruben (or confirm none exists), then prepopulate DH 1698C provider field [awaiting_review]
+2. #26239 — contract a Florida-licensed M.D./D.O. as medical director (64J-1.004(2)(a)); needed for both CE and EMT applications [awaiting_review]
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: #26183 [awaiting_review], #26239 [awaiting_review]
+- Files touched: /var/www/emtskills/routes/new_site_setup.php, /var/www/emtskills/assets/js/site_setup_data.js, /var/www/emtskills/assets/js/site_setup_data_extended.js, /tmp/DH-1698C-CEApplication.pdf, /tmp/DH-1698-TrainingProgramApplication.pdf, /tmp/CIE_Provisional_Application_FILLABLE.pdf
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -201,7 +208,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786941064430` — 8/17/2026, 12:27:47 AM PT — 619 turns
+### `1786941064430` — 8/17/2026, 1:37:32 AM PT — 743 turns
 
 **Original task:**
 
@@ -256,7 +263,7 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [x] Safety composition named + verified: VEC=grounding, SSS/LoRA-v2=gated, rules 317/29
 ```
 
-### `1786556136912` — 8/17/2026, 12:27:25 AM PT — 865 turns
+### `1786556136912` — 8/17/2026, 1:36:42 AM PT — 1025 turns
 
 **Original task:**
 
@@ -266,7 +273,7 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 I would like you to run a series of tests to benchmark Frankenstein LLM versus Claude Opus 5. From this benchmarking, I would like for you to derive away for us to get Frankenstein LLM to behave in a manner that is better than Opus 5. I believe that this is possible if you take a look at our previous interactions here incline. It may require some configuration changes, such as better rules, better mcp, context on disk settings router settings, mcp additions, cline setting changes, anything else you can think of that could be used to get us where we would like to
 ```
 
-**Ideas referenced:** #081020, #10108, #10740, #11319, #11735, #11741, #11781, #12059, #12060, #12477, #12618, #12824, #12872, #12878, #13202, #1616, #16163, #16265, #16304, #16648, #16844, #16863, #17130 [superseded], #17202, #17203, #17205, #17300, #17430, #17537 [rejected], #18132 [deployed], #18312, #18326, #18329, #18670, #18671, #18820, #18868, #19125, #19173, #1934, #20581, #22598, #22601, #22815, #22897, #2299, #2301, #2306, #23071, #2310, #2311, #23135, #23171, #25097, #25195, #25269, #25270, #25293, #25537, #25548 [executing], #25560, #25562, #25593 [proposed], #25608, #25623, #25632, #25633, #25635, #25666, #25667, #25669, #25679, #25688, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25796, #25797, #25798, #25803 [proposed], #25804 [deployed], #25812, #25896 [executing], #25897 [approved], #25898 [approved], #25899 [approved], #25900 [approved], #25901 [approved], #25902, #25903, #25905, #25927 [approved], #25928 [superseded], #25929 [approved], #25930 [approved], #25984 [proposed], #25991 [executing], #25992 [executing], #25993 [executing], #25994 [executing], #25995, #25996 [proposed], #25997 [executing], #25998 [executing], #25999 [executing], #26010 [approved], #26011, #26967 [proposed], #38984, #57890, #6522, #6711, #6719, #6729
+**Ideas referenced:** #081020, #10108, #10740, #11319, #11735, #11741, #11781, #12059, #12060, #12477, #12618, #12824, #12872, #12878, #13202, #1616, #16163, #16265, #16304, #16648, #16844, #16863, #17130 [superseded], #17202, #17203, #17205, #17300, #17430, #17537 [rejected], #18132 [deployed], #18312, #18326, #18329, #18670, #18671, #1876, #18820, #18868, #19125, #19173, #1934, #20581, #22598, #22601, #22815, #22856, #22897, #2299, #2301, #2306, #23071, #2310, #2311, #23135, #23171, #23172, #25097, #25195, #25269, #25270, #25293, #25537, #25548 [executing], #25560, #25562, #25593 [proposed], #25608, #25623, #25632, #25633, #25635, #25666, #25667, #25669, #25679, #25688, #25689, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #25730, #25731, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25796, #25797, #25798, #25803 [proposed], #25804 [deployed], #25812, #25896 [executing], #25897 [approved], #25898 [approved], #25899 [approved], #25900 [approved], #25901 [approved], #25902, #25903, #25905, #25927 [approved], #25928 [superseded], #25929 [approved], #25930 [approved], #25984 [proposed], #25991 [executing], #25992 [executing], #25993 [executing], #25994 [executing], #25995, #25996 [proposed], #25997 [executing], #25998 [executing], #25999 [executing], #26010 [approved], #26011, #26967 [proposed], #38984, #57890, #6522, #6711, #6719, #6729
 
 **Last PICKUP PROMPT:**
 
@@ -299,7 +306,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1786948767264` — 8/17/2026, 12:27:05 AM PT — 103 turns
+### `1786948767264` — 8/17/2026, 12:50:31 AM PT — 134 turns
 
 **Original task:**
 
@@ -318,20 +325,187 @@ Rule 317 is live on both fronts, and the telemetry hygiene fix landed this sessi
 - **Argus side:** 317 block live in `/var/www/emtskills/routes/alltastic_api.php:12954` insi
 ```
 
-**Ideas referenced:** #178694, #18480 [deployed], #18481 [blocked], #18491 [rejected], #25185, #25888 [approved], #25906 [approved], #25907 [proposed], #25925, #25926, #25935, #25981 [approved], #26247 [awaiting_review], #26617 [approved], #26914 [deployed], #26915 [executing], #26916, #26972 [proposed], #27100
+**Ideas referenced:** #178694, #18480 [deployed], #18481 [blocked], #18491 [rejected], #19173, #25185, #25888 [approved], #25906 [approved], #25907 [proposed], #25925, #25926, #25935, #25981 [approved], #26247 [awaiting_review], #26617 [approved], #26696, #26914 [deployed], #26915 [executing], #26916, #26972 [proposed], #26993 [proposed], #27100
 
 **Last PICKUP PROMPT:**
 
 ```
-ns no Reversal Log section.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #1786941064430 - Rule 317 rebase follow-up: approve #26972, explain #25907\n\nWhere we left off (verified 2026-08-17 12:25 AM PT):\n- #26972 [executing] - approved by Ruben this turn; corrective idea will amend #25981 title/description to match reality\n- #25907 [proposed] - explained to Ruben this turn; waits on 7 days of A7 telemetry evidence before any gate change\n- #25888 [deployed] - rule 317 hardfloor + mechanical Conclusions Ledger gates live in clinerules-mcp\n- #25906 [deployed] - A7 gate-telemetry section live in cline_rules_audit.sh L197-226 (7-day window for #25907 starts now)\n- #25981 [deployed] - Argus probe-before-claim + flip-correction language live in alltastic_api.php (~L13286-13288)\n- #26247 [deployed] - telemetry env override live; prod ledger 3,105 rows\n\nOpen threads to drive next:\n1. #26972 [executing] - execute the amendment of the #25981 title/description to match reality (no literal 317 token; block at ~13286, not 12954)\n2. #25907 [proposed] - after ~7 days of A7 telemetry from #25906 [deployed], re-evaluate with real fire-rate data; relax the Reversal Log gate only if it provably fires on claim-free completions\n3. #25906 [deployed] - confirm no telemetry regression on next A7 nightly run\n4. #25981 [deployed] - watch Argus serves to confirm probe-before-claim behavior takes effect in served answers\n\nReference IDs:\n- Ideas filed: #25888 [deployed], #25906 [deployed], #25907 [proposed], #25981 [deployed], #26247 [deployed], #26972 [executing]\n- Files touched: /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js, /Users/rubenmajor/Documents/Cline/scripts/cline_rules_audit.sh, /var/www/emtskills/routes/alltastic_api.php (server)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════", "task_id": "1786941064430"}
-</arguments>
+ fires dominate, revisit then.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1786941064430 - Rule 317 rebase follow-up: lean on idea 25907
+
+Where we left off (verified 2026-08-17 12:49 AM PT):
+- #26972 [executing] - approved by Ruben this turn; remaining action is to amend the #25981 [deployed] title/description to match reality
+- #25907 [proposed] - lean delivered: park it; UNVERIFIED_STATE out-fires REVERSAL_LOG (59 vs 33), so the keep-the-gate condition holds
+- #26993 [proposed] - filed: R01_EM_DASH is the real noise leader (202 fires); tune em-dash ban before any reversal-log relaxation
+- #25888 [deployed] - rule 317 hardfloor + mechanical Conclusions Ledger gates live
+- #25906 [deployed] - A7 gate-telemetry section live in cline_rules_audit.sh L197-226
+- #25981 [deployed] - Argus probe-before-claim + flip-correction language live in alltastic_api.php (~L13286-13288)
+- #26247 [deployed] - telemetry env override live; prod ledger 3,105 rows
+
+Open threads to drive next:
+1. #26972 [executing] - execute the amendment of the #25981 [deployed] title/description to match reality (no literal 317 token; block at ~13286, not 12954)
+2. #26993 [proposed] - decide on the R01_EM_DASH tuning pass (allow em dashes outside user-facing text, or downgrade to warn)
+3. #25907 [proposed] - revisit in ~1 week with fresh A7 fire-rate data; relax only if claim-free REVERSAL_LOG fires dominate
+4. #25906 [deployed] - confirm no telemetry regression on next A7 nightly run
+5. #25981 [deployed] - watch Argus serves to confirm probe-before-claim takes effect in served answers
+
+Reference IDs:
+- Ideas filed: #25888 [deployed], #25906 [deployed], #25907 [proposed], #25981 [deployed], #26247 [deployed], #26972 [executing], #26993 [proposed]
+- Files touched: /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js, /Users/rubenmajor/Documents/Cline/scripts/cline_rules_audit.sh, /var/www/emtskills/routes/alltastic_api.php (server)
+
+When finished, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
 <task_progress>
-- [x] Approve #26972 per Ruben — approved (new_status: approved)
-- [x] Explain #25907 — full body fetched from DB, explanation drafted
-- [ ] Validate completion, then attempt_completion
+- [x] Pullled R317 gate fire-rate breakdown — UNVERIFIED=59, REVERSAL_LOG=33, NOT_REPAIRED=4, passes=1134
+- [x] Read REVERSAL_LOG gate trigger — unconditional header-required scan (L1279-1286)
+- [x] Filed data finding #26993 (R01_EM_DASH = noise leader at 202)
+- [x] Validated completion — ALL GATES PASSED
+- [x] Delivered lean: park #25907, tune R01_EM_DASH first
 </task_progress>
-</use_mcp_tool>
+</attempt_completion>
 ```
+
+### `1786947372694` — 8/17/2026, 12:47:30 AM PT — 366 turns
+
+**Original task:**
+
+```
+Can you give me a model here in Cline where i can directly test the Julia/Claudia 235b llm only with no spillover or backup. Just that one locally here in Cline Settings under litellm.emsuniversity.com?
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11847, #12477, #12550, #12618, #12824, #12872, #12878, #13202, #14141, #16163, #16265, #16304, #16648, #16844, #17202, #17203, #17205, #1765, #1781, #18312, #18320, #18326, #18820, #18868, #2114, #22598, #22601, #22815, #22820, #22897, #2299, #23071, #23171, #24184, #25097, #2537, #25757, #25759, #25764, #26908, #26923, #26992 [proposed], #3132, #6070
+
+**Last PICKUP PROMPT:**
+
+```
+gets Artemis :8000, not Julia.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Julia/Claudia 235B zero-spillover test lane (litellm.emsuniversity.com).
+
+Where we left off (verified 2026-08-17 00:47 PT):
+- Verified working in Cline: API Base `https://litellm.emsuniversity.com`, model `julia-235b`, liteLLM master key.
+- End-to-end proof: `/tmp/e2e.json` localhost + `/tmp/e2e_pub.json` public, both HTTP 200 showing `x-litellm-model-api-base: http://127.0.0.1:11513/v1`, `x-litellm-model-group: julia-235b`; real Qwen3-235B content `E2E_235B_OK`/`PUB_235B_OK`.
+- Running backend: Julia :8000 (FlashInfer, eager, RAY_CGRAPH_get_timeout=1800, Triton env disabled), reverse tunnel WOPR:11513 → Julia:8000, started via `/tmp/launch235_direct.sh`, PID 1459932.
+- Files edited: /etc/litellm/config.yaml (+.bak.1786948362), /etc/litellm/hooks/common.py (+.bak.pin-julia235b), /etc/litellm/router_hook.py (+.bak.pin-julia235b), /home/rubenmajor/julia_unified_tp2_qwen235.sh (+.bak.triton), /tmp/launch235_direct.sh.
+
+Open threads to drive next (EVERY item has a REAL filed idea #):
+1. #26992 [proposed] — Persist verified 235B launch flags (Triton disabled + RAY_CGRAPH_get_timeout=1800) into ~/julia_unified_tp2_qwen235.sh and prove a clean script-path relaunch; current process survives only via setsid/nohup.
+
+Reference IDs:
+- Task: original user request (model for direct 235B testing, no spillover/backup) — no numeric Cline task id known
+- Ideas filed: #26992 [proposed]
+- Files touched: /etc/litellm/config.yaml, /etc/litellm/hooks/common.py, /etc/litellm/router_hook.py, /home/rubenmajor/julia_unified_tp2_qwen235.sh, /tmp/launch235_direct.sh
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786817395147` — 8/17/2026, 12:42:52 AM PT — 546 turns
+
+**Original task:**
+
+```
+#Call Backs / VAPI
+
+How are callbacks going now?
+
+You know I'm just curious if there's some improvements that have been made genetically since we started a couple of months ago with VAPI? Seems like there should be are using the latest software or updates? Can you check with the community to see? I just wanna make sure.
+
+Also tell me what's going on with this ? And why did you offer Vicky an extension draft letter? When did I say that was OK? I know we were working on some stuff in a different window for extern chips just give me some information here -> 1. The 14 students need a placement or 
+```
+
+**Ideas referenced:** #12018, #12584, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #16844, #16874, #17130 [superseded], #1745, #18132 [deployed], #18316, #19125, #19173, #23133, #2323, #2328, #23340, #2341, #2343, #2344, #23989, #24645, #2511, #25701, #25706, #25707, #25943, #25945, #25946, #25968, #25969, #25986, #25989, #26066, #26068, #26203 [deployed], #26206 [deployed], #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26259 [deployed], #26260 [deployed], #26261 [deployed], #26266 [executing], #26267 [executing], #26270, #26296, #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26504 [approved], #26508 [proposed], #26509 [proposed], #26511 [deployed], #26513 [deployed], #26591, #26593, #26618 [deployed], #26619 [proposed], #26621 [proposed], #26643 [proposed], #26644 [proposed], #26645 [proposed], #26663, #26671 [proposed], #26881, #26990 [proposed], #26991 [proposed], #3261, #3319, #3346, #6172, #6978, #9042, #9159, #9222, #9501
+
+**Last PICKUP PROMPT:**
+
+```
+ router layer (verified live).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task on Vapi assistant model-object PATCH regression + litellm routing rebase.
+
+Where we left off (verified 2026-08-17 00:42 UTC-7):
+- 4 CS lanes restored (tools 108 / msgs 1, GET-verified)
+- Canary mirror fix deployed (lib/ruben_tng_voice_canary.php line 435, lint clean)
+- Litellm claude-sonnet-5 now routes to custom openai provider (free local), verified live
+- 8-assistant model.messages stripping: 7 of 8 not broken in practice (webhook-driven), Riley genuinely lost
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #26990 [proposed] - Rebuild Riley assistant system prompt (openai/gpt-5.5 + vapi/Elliot/v2), PATCH full model object with messages preserved per Rule-41 guard.
+2. #26991 [proposed] - Rule-302 CRITICAL: rotate API keys leaked into tool output (ANTHROPIC, LITELLM_MASTER_KEY, TWILIO), move to env/os.environ.
+3. #26643 [proposed] - QA pass over remaining Vapi assistants after the 08-16 STRIP event; verify tools/messages for any agent PATCHed this session using GET before/after.
+4. #26644 [deployed] - Canary mirror fix (closed, but monitor next canary run to confirm no skip log).
+
+Reference IDs:
+- Ticket: Vapi/litellm routing rebase
+- Ideas filed: #26990, #26991, #26644 (updated), earlier: #26643, #26618, #26619, #26621, #26645, #26671
+- Files touched: lib/ruben_tng_voice_canary.php, api/ticket_autospec.php, lib/backfill_idea_confidence_scorer.php, lib/PredispatchRevival.php, lib/PredispatchRevivalRouter.php
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786832584504` — 8/17/2026, 12:34:59 AM PT — 149 turns
+
+**Original task:**
+
+```
+#Externship
+
+Really irritating I just opened this externship window and it just closed out on me for no reason. Try to pick up where you left off
+
+Also, I made a note about emails that I had seen go out to students who had date selected that were past September which I found to be odd because I don't even know how that was possible considering what we are doing. There needs to be some type of mitigation and identification for the students and I'd like to know what you have to offer for those. Calendar or requests for extern chips should not go beyond September 1. I'm not sure how that happened
+```
+
+**Ideas referenced:** #178649, #19966, #2002, #2005, #23014, #23308, #23337, #23392, #24230, #24430, #24431, #25185, #25432, #25433, #25434, #25510, #25522, #25549, #25619, #25771, #25796, #25822 [deployed], #25889 [awaiting_review], #25916 [awaiting_review], #25932 [deployed], #25950 [awaiting_review], #25973 [awaiting_review], #25983, #26002 [awaiting_review], #26006, #26027 [awaiting_review], #26053 [deployed], #26066 [superseded], #26067 [deployed], #26071 [executing], #26089 [deployed], #26661 [proposed], #26663 [proposed], #26987 [proposed], #26988 [proposed], #28584, #54145, #5447, #56298, #56573, #56754
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786948459253` — 8/17/2026, 12:34:24 AM PT — 126 turns
+
+**Original task:**
+
+```
+#Big Mac 4th GPU
+
+Ok, let's give it another shot. See this conversastion between me and the tech:
+
+Ruben Major:
+	You put the 4th GPU on an NVME slot, right? 
+	And you already installed the dummy plug?
+
+Ruben Major Jr.:
+	Correct
+	On both
+
+Ruben Major:
+	Ok, lol, let me try from here then. 
+
+Ruben Major Jr.:
+	See if it's an issue with the bus speed being only x4, if it's initiating okay om hardware level it has to be a software bug in the stack somewhere
+
+Ruben Major:
+	Kk
+
+# Answer: I am sure. I just tested your assumption directly, twice, with fresh boots. The plug is NOT in, and the card still 
+```
+
+**Ideas referenced:** #178668, #178669, #2299, #2507 [investigating], #25097, #2541 [deployed], #2542, #26209 [proposed], #26211 [executing], #26233 [rejected], #26237 [rejected], #26238 [proposed], #27100
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786947807234` — 8/16/2026, 11:54:56 PM PT — 114 turns
 
@@ -394,66 +568,6 @@ The classic problem with two machines: when the standby stops hearing from the w
 **Ideas referenced:** #25185, #26007 [deployed], #26008 [executing], #26009 [deployed], #26017 [proposed], #26019 [deployed], #26023 [executing], #26024 [deployed], #26068 [deployed], #26069 [deployed], #26070 [deployed], #26076 [executing], #26077 [executing], #26604 [deployed], #26614 [deployed], #26631 [deployed], #26667 [deployed], #26668 [deployed], #26669 [executing], #26973 [deployed], #26974 [deployed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786948641882` — 8/16/2026, 11:49:40 PM PT — 60 turns
-
-**Original task:**
-
-```
-#Rule 317
-
-I i gave it a full day and a little bit. Tel me how you feel about 317 now? Also look at this task/integrate it and tell me agian what's left/what your thoughts are on where we are at --> 
-
-You were right. Rule 317 was a prose rule: the validator demanded an RCA bucket and the word "causal rule" in a log line, but nothing made the causal rule file, corpus, or MCP index actually change. A window could type a plausible flip line and pass while the underlying artifact went untouched. That is exactly the cursory-window-fixing you flagged. It is now mechanical.
-
-What shipped (verified li
-```
-
-**Ideas referenced:** #178684, #178694, #24645, #2516, #2521, #25888, #26617, #26696 [deployed], #26710 [deployed], #26725 [deployed], #26955 [deployed], #26970 [proposed], #26971 [proposed], #27100, #6520
-
-**Last PICKUP PROMPT:**
-
-```
-on disk. Instrument that next.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786948459 - Rule 317 honest review: gate live, positive control unproven
-
-Where we left off (verified 2026-08-16 23:49 PT):
-- Gate scoreboard 23:33:42 PT: heartbeat PASS, validations=82, blocks=59/7d; rule 317 = 24 blocks (UNVERIFIED_STATE 16, REVERSAL_LOG 5, NOT_REPAIRED 4)
-- Raw ledger live DB ~/.clinerules-mcp/index.sqlite: R317_REVERSAL_NOT_REPAIRED blocks ids 112/117/119/125, tasks 1786932084/26932/26490/1786948459, latest 2026-08-17T06:45:50Z
-- Corpus feed proven: ai_learned_corrections id=8185, issue_category=r317_reversal_not_repaired, occurrence_count=4 (dedup rollup working)
-- First nightly truth eval landed: r317_eval_history id=2, frankenstein-llm, 04:31:58 PT, truth_score_pct=20.00
-
-Open threads to drive next:
-1. #26971 [proposed] — Run the positive control: a genuine rule-citing flip WITH clinerules_amend_rule must PASS and land a rule_amend row + dated amendment on disk
-2. #26971 [proposed] — Pull task detail for gate_blocks ids 112/117/119/125 and find why no blocked window ever actually amended (retry steering question)
-3. #26725 [deployed] — Run the 15-claim r317 eval with --model=opus for a paid-head benchmark row (burns real tokens, needs go-ahead)
-4. #26970 [proposed] — Deploy-target correction: server-side gate copy belongs on WOPR /var/www/emtskills/mcp-servers, not Artemis port 7860 (premise was wrong)
-
-Reference IDs:
-- Ideas filed: #26955 [deployed], #26970 [proposed], #26971 [proposed]
-- Files touched: /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md, /Users/rubenmajor/.clinerules-mcp/index.sqlite
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Verify rule_amend ledger state — 0 mechanical repairs in 7d
-- [x] Check gate scoreboard — heartbeat PASS, rule 317 = 24 blocks
-- [x] Verify rule 317 file on disk — obligation 6 + gates present
-- [x] Check r317_eval_history — nightly row id=2 (20%)
-- [x] Check corpus feed — id=8185, occurrence_count=4, dedup working
-- [x] Artemis premise corrected — WOPR bridge + Mac MCP host the gate
-- [x] Enumerated 4 NOT_REPAIRED blocks from live ledger; filed #26970 + #26971
-- [x] First validation caught 4 issues; pickup template wired in
-- [x] Honest assessment complete with reversal log + full pickup block
-</task_progress>
-</attempt_completion>
-```
 
 ### `1786602203659` — 8/16/2026, 11:44:52 PM PT — 160 turns
 
@@ -1061,47 +1175,6 @@ Reference IDs:
 - Files touched: lib/ExternshipFormGrader.php, cron/cron_argus_repair_worker.php, lib/verify_payment_state_fallback.php, cline_task_ledger.md
 
 When done, append to cline_task_ledger.md per rule 07 and run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786660376952` — 8/16/2026, 6:56:38 PM PT — 892 turns
-
-**Original task:**
-
-```
-help me file with Florida Board of Education application yet? Need that approval before we the FL DHS application. We want also to be a CE and EMT provider there. So may also need to do an application for EMT CE with the EMS Authority in Florida
-```
-
-**Ideas referenced:** #004890, #121212, #16213, #17130 [superseded], #17537 [rejected], #18132 [deployed], #19125, #19173, #19338, #19458, #19491, #2335 [deployed], #252525, #252545, #2563, #25887, #26019, #26044, #26045, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26183 [proposed], #26238, #26239 [executing], #313131, #3310, #334155, #475569, #555555, #6518
-
-**Last PICKUP PROMPT:**
-
-```
-the "Florida CE" Drive folder.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #26183 — File FL DOH Bureau of EMS CE + EMT + DOE approvals.
-
-Where we left off (verified 2026-08-16 18:55 PT):
-- Drive folders created: Florida (root), Florida EMT, Florida CE, Florida DOE, Oregon (root), Oregon CE, Oregon EMT, Oregon DOE
-- Actual applications uploaded: DH 1698 (FL EMT, 7pg), DH 1698C (FL CE, 2pg), CIE working copy, OR CBA program application, OR EMR course change
-- Page "State Prep Documents" card: 24 links (folders + PDFs + gov sources) live on new_site_setup.php; PHP lints clean
-- DH 1698C field-by-field walkthrough delivered above
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26183 — get EMSU's FL DOH EMS provider/training number from Ruben (or confirm none exists), then prepopulate DH 1698C provider field [awaiting_review]
-2. #26239 — contract a Florida-licensed M.D./D.O. as medical director (64J-1.004(2)(a)); needed for both CE and EMT applications [awaiting_review]
-
-Reference IDs:
-- Ticket: none
-- Ideas filed: #26183 [awaiting_review], #26239 [awaiting_review]
-- Files touched: /var/www/emtskills/routes/new_site_setup.php, /var/www/emtskills/assets/js/site_setup_data.js, /var/www/emtskills/assets/js/site_setup_data_extended.js, /tmp/DH-1698C-CEApplication.pdf, /tmp/DH-1698-TrainingProgramApplication.pdf, /tmp/CIE_Provisional_Application_FILLABLE.pdf
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
@@ -1885,22 +1958,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1786832584504` — 8/15/2026, 3:39:32 PM PT — 105 turns
-
-**Original task:**
-
-```
-#Externship
-
-Really irritating I just opened this externship window and it just closed out on me for no reason. Try to pick up where you left off
-
-Also, I made a note about emails that I had seen go out to students who had date selected that were past September which I found to be odd because I don't even know how that was possible considering what we are doing. There needs to be some type of mitigation and identification for the students and I'd like to know what you have to offer for those. Calendar or requests for extern chips should not go beyond September 1. I'm not sure how that happened
-```
-
-**Ideas referenced:** #178649, #19966, #23014, #23337, #23392, #24230, #24430, #24431, #25185, #25432, #25433, #25434, #25510, #25522, #25549, #25619, #25771, #25796, #25822 [deployed], #25889 [awaiting_review], #25916 [awaiting_review], #25932 [deployed], #25950 [awaiting_review], #25973 [awaiting_review], #25983, #26002 [awaiting_review], #26006, #26027 [awaiting_review], #26053 [deployed], #26066 [superseded], #26067 [deployed], #26071 [executing], #26089 [deployed], #26661 [proposed], #26663 [proposed], #28584, #54145, #5447, #56298, #56573, #56754
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786832177865` — 8/15/2026, 3:36:49 PM PT — 160 turns
 
@@ -3780,117 +3837,5 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786683447557` — 8/14/2026, 1:14:20 AM PT — 290 turns
-
-**Original task:**
-
-```
-#Big Mac
-
-The last Agent could not get the 4th card online. This is obviously a software issue, not a card issue. please get it working.
-
-Task: Get Big Mac's 4th GPU working via software/kernel fixes only (Ruben rejected physical relocation twice, latest directive was "Can you see if you can get this working?").
-
-RESULT: Software avenues are now genuinely exhausted with hard register-level proof, not a "needs BIOS" punt.
-
-Key finding this session: raw ssh sudo on Big Mac is walled off (non-interactive TTY required), but I found a working bypass, the command `docker run --rm --privileged --pid=
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15158, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1731, #1732 [rejected], #1744, #1779, #178667, #178668, #1798, #1828, #1836, #19567, #19653 [queued], #19671 [rejected], #19686 [queued], #19689 [queued], #19776 [executing], #19777 [proposed], #19778, #19785 [deployed], #19788 [proposed], #19789 [proposed], #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2341 [rejected], #2343 [deployed], #2344 [deployed], #2345, #2346, #2347, #25185, #25378, #25381, #26209 [proposed], #26211 [proposed], #26229, #26233 [proposed], #26237 [rejected], #26238 [proposed], #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-[deployed] + HANDOFF_NOTES.md.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786683447557 - Big Mac 4th GPU: software levers re-exhausted with deeper register evidence (session 2). Handoff to physical action.
-
-Where we left off (state probe timestamps 2026-08-13 22:41 PT):
-- Big Mac 3-GPU production healthy all session: vLLM gpt-oss-120b HTTP 200 on :8000, bigmac-vllm.service active, GPU_COUNT=3 via lspci 8086:e223 (evidence: nested-ssh probes 22:36 PT)
-- 4th GPU slot = bridge 00:01.2 (genoa GPP 1022:14ab, bus 01, M.2 #2): LNKSTA pinned 0x1841 (Gen1 x4, LinkTraining perma-set, DLL never active) across LD-clear, Retrain bit, target-speed Gen1 (10s watch) + Gen2 (6s watch), SBR, slot power-cycle, D3hot->D0, port remove+rescan, runtime-PM pinned on (autosuspend-race theory eliminated) - evidence: gated /tmp/bm_fix4.sh md5 6f62673d7350d43fd989750e8afc1123
-- Kernel log (evidence: dmesg via nsenter): 0.639s broken-device retrain-at-2.5GT/s, 1.639s retraining failed; BIOS FA2 07/04/2025 current-gen; dmidecode: PCIE1 + PCIE3 x16 slots Available (evidence: dmidecode -t slot)
-- #26209 [proposed] + #26211 [proposed] reconciled via reconcile_ideas at 22:38 PT (returned status=proposed, dev_stage=idle for both), no drift, physical/BIOS scope still accurate
-- Bug library incident 2341 [deployed] updated with session-2 tests + transport techniques (evidence: bug_library_record DUPLICATE_FOUND merged, seen_count=2); server HANDOFF_NOTES.md updated (evidence: update_handoff_notes success, entry 2026-08-13 22:40 PT)
-
-Open threads to drive next:
-1. #26211 [proposed] - move the 4th GPU off the M.2 slot #2 riser into a free PCIe x16 slot (dmidecode shows PCIE1 and PCIE3 as Available). On-site physical action, not started; register evidence: Gen1 ordered-set exchange never finishes, so no kernel or BIOS parameter can change it
-2. #26209 [proposed] - umbrella physical/BIOS investigation; overlaps #26211 [proposed], could be marked superseded by a human
-3. (human-only decision, no idea) - optional pre-move test: authorize a true cold power cycle (arm WoL on enp73s0: supports pumbg, currently disabled; then shutdown -h + magic packet from same-L2 WOPR) or an S3 rtcwake suspend test to rule out power-sequencing. NOT run autonomously because a WoL miss or resume hang leaves the 3-GPU production box off until a physical power press
-
-Reference IDs:
-- Ideas filed: #26209 [proposed] (carried, reconciled this session), #26211 [proposed] (carried, reconciled this session)
-- Bug library: incident 2341 [deployed] (seen_count=2, merged)
-- Prior task: #1786673589882 [superseded] (continued here)
-- Files touched: server HANDOFF_NOTES.md (MCP append, 22:40 PT entry); bigmac /tmp/bm_fix2.sh /tmp/bm_fix4.sh (executed, gated) + /tmp/bm_fix4.gzb (transfer artifact); no persistent config changes, LNKCTL restored to boot baseline; mac-local /tmp/bm_fix2.sh /tmp/bm_fix4.sh /tmp/bm_fix4.gzb /tmp/bmc_* (transfer artifacts)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Rule-119 signal check + record search
-- [x] Bug library 2341 fetched
-- [x] Live-probe Big Mac PCI topology + dmesg
-- [x] bm_fix2: LD-clear + Gen1 retrain + SBR + rescan → LNKSTA pinned 1841
-- [x] bm_fix3: D3hot + port remove/rescan → still 1841; WoL identified; vLLM healthy
-- [x] bm_fix4: runtime-PM-off + 10s Gen1 watch + Gen2 → still 1841
-- [x] Reconcile #26209/#26211 ([proposed], ve
-```
-
-### `1786688208090` — 8/14/2026, 12:41:41 AM PT — 200 turns
-
-**Original task:**
-
-```
-#SBA Questions
-
-For the SBA loan we are going for, I need the follwoing inforemation. Search my google drive for the leases. Need signed and executed agremeents for them for the others answer based on what you know about us from SLS, VEC, MCP, etc...: 
-
-Could we get more details surrounding the company?
-How long are the classes that they offer?
-When do they collect tuition?
-What is the enrollment capacity of the schools?
-What is the company's current enrollment in relation to capacity?
-Does the company receive any government or grant money? If so, how much?
-
-I am missing the following OFFICE L
-```
-
-**Ideas referenced:** #1515, #1558, #1559, #177931, #2341, #2343, #2344, #2586, #26209, #26211, #26214, #26229, #26233, #26240 [proposed], #26246 [proposed], #2985, #3217, #3313, #3643, #4516, #4850, #5139, #5291, #5358, #5375, #5530, #5688, #5756, #5944, #6295, #6452, #6512, #6567, #6641, #6992, #7874, #7892
-
-**Last PICKUP PROMPT:**
-
-```
-A_Loan_Underwriter_Package.md.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task SBA loan underwriter package, leases + business answers
-
-Where we left off (verified 2026-08-14 12:39 AM PT):
-- Deliverable on disk: /Users/rubenmajor/Desktop/SBA_Loan_Underwriter_Package.md, 6 answers in Ruben's voice, CAPCE claim corrected to "lapsed about a month or two ago" [deployed]
-- San Antonio lease: 2.28.20 Lease San Antonio TX EMS University Resonance Group.pdf, ID 1U_AAvauRl2Z7IQuEJJZML0rD-p-76cah [deployed]
-- Union City lease: 1go8RT4S2C-dGe1UaFZ9IO7TXUN7YKpXc [deployed]
-- San Francisco lease: 1UEWp0tVKX47VL_abF5QXnZ0zgjVQcRcG [deployed]
-- Tempe lease still missing: 1DGKNCX74PwfGi is actually Peoria Thunderbird; real Tempe lease expected in Drive folder 1xPMOtuRAB8APRAxCEdTakbOZWNfrOoIT [awaiting_review]
-
-Open threads to drive next:
-1. #26246 [proposed] - Enumerate Drive folder 1xPMOtuRAB8APRAxCEdTakbOZWNfrOoIT via google-drive folder-list API, pull the signed Tempe lease for 501 S 48th St Suite 105, add the link to the SBA package, then send all 4 lease links plus answers to the underwriter
-2. #26240 [proposed] - Human eye-check on the 4 lease PDFs (address page 1 for Tempe and San Antonio, executed signature page for San Francisco) before final send
-
-Reference IDs:
-- Ideas filed: #26246 [proposed], #26240 [proposed]
-- Files touched: /Users/rubenmajor/Desktop/SBA_Loan_Underwriter_Package.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```

@@ -1279,11 +1279,16 @@ server.tool(
       failures.push("R120_CONTEXT_EXCUSE: 'conserving context' is never a valid reason to shortcut.");
     }
 
-    // ── RULE 01 (voice-and-persona) ──
-    const looksLikeOps = /\b(?:student|ticket|Jon|Vicky|Moodle|QB|Authnet|externship|NREMT|class|section|instructor|enrollment)\b/i.test(result_text);
-    if (looksLikeOps) {
+    // ── RULE 01 (voice-and-persona; scoped to outbound team-chat text) ──
+    // Option A (Ruben 2026-08-17, idea #26993): Rule 01 governs text written for
+    // outbound iMessage/team chat (chat 55/64/5/84/88 to Jon/Vicky/Ruben), NOT
+    // internal completion prose. The old trigger (keyword soup: student/ticket/
+    // Moodle/...) matched nearly every result in this workspace and drove 202
+    // R01_EM_DASH false fires. Match only explicit outbound-comm signals.
+    const outboundComms = /\b(?:iMessage|chat\s+55|chat\s+64|chat\s+5|chat\s+84|chat\s+88)\b|^(?:hey|hi|yo|ok(?:ay)?|tldr)[,\s]+(?:Jon|Vicky|Ruben)\b|@(?:Jon|Vicky|Ruben)\b|to\s+(?:Jon|Vicky|Ruben)\b/i.test(result_text);
+    if (outboundComms) {
       if (/\u2014|\u2015|\u2e3a|\u2e3b/.test(result_text)) {
-        failures.push("R01_EM_DASH: em dashes in ops text. Use commas, parentheses, or two sentences.");
+        failures.push("R01_EM_DASH: em dashes in outbound team-chat draft. Use commas, parentheses, or two sentences.");
       }
       if (/\b(?:the\s+)?(?:finance|tech|support|dev)\s+(?:department|team)\b/i.test(result_text)) {
         failures.push("R01_FAKE_DEPARTMENT: invoking nonexistent department. Name the person.");

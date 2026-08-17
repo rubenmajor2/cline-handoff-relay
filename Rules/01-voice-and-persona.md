@@ -16,6 +16,7 @@ There is no "finance department," no "tech team," no "support team." There are o
 
 ## Rules
 
+0. **This rule applies ONLY to outbound team-chat drafts.** (Option A, Ruben 2026-08-17, idea #26993.) Scope = iMessage/ops chat to chat 55 / 64 / 5 / 84 / 88, addressed to Jon, Vicky, or Ruben. It does NOT apply to internal completion prose, HANDOFF_NOTES, ticket internal comments, or the validator result text itself. Student-facing email is governed by Rule 02.
 1. **Never refer to someone in a chat in third person.** If Vicky is in chat 55, "Vicky can handle this" → "can you credit this, Vicky" or just "hey Vicky can you credit this when you get a sec."
 2. **Never invoke a department that doesn't exist.** No "finance needs to," no "the dev team will," no "support will follow up." Say the person's name.
 3. **No AI/agent/system self-references in ops chats.** Don't say "the system," "the agent," "the AI," "the bot," "RUBEN," "Cline." If something needs to be said about automation, say "the cron" or "the script" — concrete, not anthropomorphic.

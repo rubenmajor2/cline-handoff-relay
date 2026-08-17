@@ -6,14 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/16/2026, 8:28:28 PM PT | window: last 72h | 87 tasks | index total 771 (parsed 5, cached 766)
+Generated: 8/16/2026, 9:28:28 PM PT | window: last 72h | 87 tasks | index total 772 (parsed 3, cached 769)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1786935841403` | 8/16/2026, 8:28:13 PM | 102 | 1362KB | The student seems to have submitted a plethora of documentation demonstrating that we may  |
-| `1786935011375` | 8/16/2026, 8:28:12 PM | 201 | 485KB | Frankensteitn-llm appears to be stalling. If it's because Deepseek needs credits, should i |
-| `1786935632758` | 8/16/2026, 8:28:09 PM | 194 | 366KB | #Julia/Claudia 235B |
-| `1786913196629` | 8/16/2026, 8:27:51 PM | 609 | 4077KB | #CFA Emails |
+| `1786935011375` | 8/16/2026, 9:28:25 PM | 341 | 909KB | Frankensteitn-llm appears to be stalling. If it's because Deepseek needs credits, should i |
+| `1786939999732` | 8/16/2026, 9:27:30 PM | 156 | 298KB | #Payment suspension issues? Invoicing? Uncertain if true |
+| `1786935632758` | 8/16/2026, 9:24:01 PM | 596 | 807KB | #Julia/Claudia 235B |
+| `1786913196629` | 8/16/2026, 8:40:11 PM | 634 | 4146KB | #CFA Emails |
+| `1786935841403` | 8/16/2026, 8:34:24 PM | 122 | 1431KB | The student seems to have submitted a plethora of documentation demonstrating that we may  |
 | `1786917304515` | 8/16/2026, 8:26:20 PM | 634 | 2717KB | Tell me about this - accurate? What is their claim? Is it legit? |
 | `1786926735720` | 8/16/2026, 7:57:37 PM | 392 | 1570KB | #Julia/Claudia 235B |
 | `1786932205578` | 8/16/2026, 7:45:28 PM | 216 | 420KB | #ARGUS |
@@ -96,55 +97,12 @@ Generated: 8/16/2026, 8:28:28 PM PT | window: last 72h | 87 tasks | index total 
 | `1786666814323` | 8/13/2026, 11:54:00 PM | 970 | 1993KB | Jon had a request in Argus, https://emsuniversity.com/emtskills/routes/argus_download.php? |
 | `1786677303463` | 8/13/2026, 11:47:17 PM | 220 | 1145KB | /emtskills is slow again. Please fix it. Check emtskills-slowness and fix it |
 | `1786558646083` | 8/13/2026, 11:25:12 PM | 396 | 1462KB | #Moodle Required |
-| `1786673589882` | 8/13/2026, 9:00:55 PM | 409 | 1257KB | Big Mac has 4 GPUs now. Can you make sure that other card is part of service?  |
 
 ---
 
 ## Per-window detail
 
-### `1786935841403` — 8/16/2026, 8:28:13 PM PT — 102 turns
-
-**Original task:**
-
-```
-The student seems to have submitted a plethora of documentation demonstrating that we may have an error with our system. Can you take a look at this and let me know what's going on here?
-```
-
-**Ideas referenced:** #1259, #18693, #18868, #19163, #24404, #25427, #26916 [proposed], #26917 [proposed], #26918 [proposed], #5344, #6106, #6785, #9019, #9086, #9168, #9306, #9339
-
-**Last PICKUP PROMPT:**
-
-```
-ow your lead on the next step.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Fernando Vazquez Serrano (25708W-07): rule 317 re-verified; Ruben reviewing admin_profile.php and will guide. Deliverable is a human decision on reinstatement/cert issuance for a student who completed after being auto-failed.
-
-Where we left off (verified 2026-08-16 20:27 PT):
-- Ruben is reviewing https://emsuniversity.com/admin_profile.php?id=25708W-07 (page uses ?id=<student_id>) and will guide the next step.
-- Re-probed live (Rule 317). Corrections vs earlier claim: deleted cert was ONLY Reading Comprehension (cert 51), noise. Re-verified: simplecertificate_issues has ZERO rows for EMT certs 52 Alameda / 54 San Diego / 68 San Mateo for uid 42927.
-- Verified timeline: fail_date 2025-07-04 (+30d after course_end 2025-06-04); CPR grade item 2631 created 2025-07-03 17:26:27 PT, zero quiz_attempts, finalgrade NULL; course completion (course_completions.timecompleted) 2026-01-27 19:01:55 PT; sims pages cmid 6815/6816 added 2026-03-15 02:30:45 PT (after completion); portal end_of_course_certificate_link NULL; moodle_completion_date 2025-12-19; no drop/transfer; is_duplicate=0.
-- Ticket 24404 (cert request with legal-threat language) auto-closed 2026-08-12; ticket 25427 open — RC-11 deadman fired 2026-08-16 15:30 PT, auto-act check_and_sync_moodle_enrollment returned forbidden (invocation 8216), assigned user 124.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26916 [awaiting_review] — Human decision on Fernando: clear fail_date, set correct status, reactivate Moodle (user.suspended=0; user_enrolments.status=0 for course 41 ue 38261 and course 46 ue 38508 — idea #9306 path), fix class_section vs Alameda grouping, re-run sudo -u www-data php /var/www/emtskills/cron/cron_class_enrollments_selfheal.php to backfill Class_Enrollments, then answer ticket 25427. Ruben is guiding from admin_profile.php.
-2. #26917 [proposed] — After this student is classified, audit ALL terminal-state students: moodle_completion_date vs sims-add 2026-03-15 and cert-tree blockers (CPR item 2631, PSE category item 1745, sims cmid 6815/6816, Alameda grouping). Build grandfathering/backfill policy so pre-rework completers aren't stranded. Query: SELECT student_id, fail_date, moodle_completion_date FROM Students WHERE fail_date IS NOT NULL AND moodle_completion_date IS NOT NULL AND moodle_completion_date < '2026-03-15'.
-3. #26918 [proposed] — Ticket 25427 ownership: certificate-request + legal/litigation-threat tickets must escalate to a named human owner and be blocked from Ticket Auto-Resolver 36-hour auto-close; also fix check_and_sync_moodle_enrollment authorization denial for terminal-state students (invocation 8216).
-
-Reference IDs:
-- Ticket: 25427 (open), 24404 (closed; contains the cert request + documentation)
-- Ideas filed: #26916 [awaiting_review], #26917 [proposed], #26918 [proposed]
-- Files touched: none (read-only investigation; only system change = running the self-heal cron, which healed 26526W-01 and correctly skipped 25708W-07 as terminal)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786935011375` — 8/16/2026, 8:28:12 PM PT — 201 turns
+### `1786935011375` — 8/16/2026, 9:28:25 PM PT — 341 turns
 
 **Original task:**
 
@@ -152,7 +110,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 Frankensteitn-llm appears to be stalling. If it's because Deepseek needs credits, should it not fallback to another model?
 ```
 
-**Ideas referenced:** #10108, #10740, #11735, #11741, #11781, #11945, #12059, #12060, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #1754, #1755, #18312, #18326, #2050, #2073, #22229, #2294, #2299, #2307, #2314, #23169, #23171, #24217, #25097, #25185, #2532 [approved], #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #26209 [proposed], #26284 [executing], #26400, #26403, #26834 [deployed], #26837 [deployed], #26846 [deployed], #26852 [approved], #26867 [deployed], #26868 [deployed], #26894, #26895, #26896, #26914 [executing], #26915 [executing], #364746, #364775, #364776, #6711, #6719, #6826
+**Ideas referenced:** #0000, #10108, #10740, #11735, #11741, #11781, #11945, #11991, #12059, #12060, #12459, #12477, #12618, #12672, #12824, #12825, #12872, #12878, #13202, #16163, #16224, #16265, #16304, #16844, #1754, #1755, #18312, #18326, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #20251, #2050, #2073, #22229, #2294, #2299, #2307, #2314, #23169, #23171, #24217, #25097, #25151, #25185, #2525, #2532 [approved], #2534 [rejected], #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25888, #25925, #25926, #25935, #26209 [proposed], #26284 [executing], #26349, #26400, #26403, #26435, #26696, #26774, #26834 [deployed], #26837 [deployed], #26846 [deployed], #26852 [approved], #26864 [proposed], #26865 [proposed], #26866 [proposed], #26867 [deployed], #26868 [deployed], #26894, #26895, #26896, #26914 [executing], #26915 [executing], #26916, #26922 [deployed], #26927 [deployed], #26932 [proposed], #364746, #364775, #364776, #5344, #6711, #6719, #6826
 
 **Last PICKUP PROMPT:**
 
@@ -179,7 +137,29 @@ drift, not from assumption.\n\n════════════════�
 </use_mcp_tool>
 ```
 
-### `1786935632758` — 8/16/2026, 8:28:09 PM PT — 194 turns
+### `1786939999732` — 8/16/2026, 9:27:30 PM PT — 156 turns
+
+**Original task:**
+
+```
+#Payment suspension issues? Invoicing? Uncertain if true
+
+Vicky reports this, I'm not sure if it's true. 
+
+Upon checking the reason their payment is not going through suspended the admin portal of the student
+I already unsuspended this
+they will pay tomorrow
+they said they will need to call tomorrow
+Also Ruben I want to report I noticed if the admin portal of the students profile is suspended due to non- payment if they try to pay through their invoice it will
+not go thru and will be declined
+I already got several issues like this and they tried paying while it was suspended but didnt go thru 
+```
+
+**Ideas referenced:** #164679, #16613, #174309, #175199, #17580, #18183, #18952, #18963, #26930 [proposed], #26931 [proposed], #3368
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786935632758` — 8/16/2026, 9:24:01 PM PT — 596 turns
 
 **Original task:**
 
@@ -198,11 +178,11 @@ The Qwen3-235B-A22B-NVFP4 checkpoint LOADS and SERVES on Julia+Claudia TP=2 (vLL
 ## What was verified this session (
 ```
 
-**Ideas referenced:** #12247, #12262, #12364, #1241, #13108, #13874, #16844, #1765, #1781, #178693, #18321, #18326, #2114, #25112, #2528 [open], #25604, #26819 [open], #26908 [proposed], #26909 [proposed], #26910 [proposed]
+**Ideas referenced:** #12247, #12262, #12364, #1241, #13108, #13874, #16844, #1765, #1781, #178693, #18321, #18326, #2114, #25112, #25185, #2528 [open], #2535, #2536 [deployed], #25604, #26819 [open], #26908 [proposed], #26909 [proposed], #26910 [proposed], #26923 [proposed], #26925 [proposed], #26928 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1786913196629` — 8/16/2026, 8:27:51 PM PT — 609 turns
+### `1786913196629` — 8/16/2026, 8:40:11 PM PT — 634 turns
 
 **Original task:**
 
@@ -212,37 +192,79 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 These stupid CFA emails are back. This was already corrected. Needs more correction again
 ```
 
-**Ideas referenced:** #1234, #12364, #16069, #16732, #16817, #18132, #18176, #18313, #18944, #18951, #23133, #23483, #23982, #2450, #2511, #2513, #2517, #2518, #2522, #25774, #25909, #25920, #25962, #25965, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26229, #26348, #26368, #26376, #26377, #26495 [deployed], #26496 [deployed], #26501, #26508 [proposed], #26509 [proposed], #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26661, #26663, #26678, #26711, #26719, #26743, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26834 [in_progress], #26835 [proposed], #26837 [proposed], #26846 [proposed], #26849, #26850 [proposed], #26851 [proposed], #26852 [proposed], #26864, #26865, #26866 [proposed], #26867 [in_progress], #26868 [proposed], #3098, #364746, #364775, #364776, #3783, #3784, #3785, #3786, #3787, #3788, #3789, #3790, #3791, #3836, #3874, #4958, #5218, #5788, #6366, #78350, #8157, #8162, #8163, #8178 [pending_review], #8888, #9112, #9222, #92400, #99999
+**Ideas referenced:** #1234, #12364, #16069, #16732, #16817, #18132, #18176, #18313, #18944, #18951, #23133, #23483, #23982, #2450, #2511, #2513, #2517, #2518, #2522, #25774, #25909, #25920, #25962, #25965, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26229, #26348, #26368, #26376, #26377, #26495 [deployed], #26496 [deployed], #26501, #26508 [proposed], #26509 [proposed], #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26661, #26663, #26678, #26711, #26719, #26743, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26834 [in_progress], #26835 [proposed], #26837 [proposed], #26846 [proposed], #26849, #26850 [proposed], #26851 [proposed], #26852 [proposed], #26864 [proposed], #26865 [proposed], #26866 [proposed], #26867 [in_progress], #26868 [proposed], #3098, #364746, #364775, #364776, #3783, #3784, #3785, #3786, #3787, #3788, #3789, #3790, #3791, #3836, #3874, #4958, #5218, #5788, #6366, #78350, #8157, #8162, #8163, #8178 [pending_review], #8888, #9112, #9222, #92400, #99999
 
 **Last PICKUP PROMPT:**
 
 ```
-t-only check before I ship it.
+oyed] with duplicates deduped.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task CFA recurrence fix + rule-91 substance audit — Ruben challenged that rule-91 enforcement is shallow/form-only.
+Pick up task: CFA terminology / regression wrap confirmed complete; SMTP 587 verified recovered (2026-08-16 20:39 PT).
 
-Where we left off (verified 2026-08-16 20:26 PT):
-- CFA fix shipped and verified end-to-end (email/chat/SMS; guard + mailer choke point; sends 364746-364776, 26834/26837/26846/26866/26867/26868 [deployed]).
-- #26868 "unified validator" shipped, but audit proved it is FORM-ONLY: rule91_canonical_validator.php has zero DB access; passes fake #99999.
-- Substance-capable checker exists: lib/clinerules_validate_completion_fix.php (PDO at line 179), but is invocation-gated per #26867.
-- Duplicate idea rows found: #26864/#26865/#26866 [proposed] + #26867 [deployed], same title — hidden state a substantive gate should catch.
+Where we left off (verified 2026-08-16 20:39 PT):
+- CFA guard deployed across 7 surfaces (email mailer choke point, chat callAI, SMS sendSmsAnswer, + 4 email paths). All php -l clean; smoke PASS.
+- Regression test tests/CfaTerminologyGuardTest.php on disk, 7 cases ALL PASS standalone + phpunit.
+- SMTP 587 re-verified OPEN; 66 sends today, 0 failed last 2h.
+- 11 corrected recipients + Michael (364776) sent via Postmark HTTP API; 0 still owed.
+- Idea #26852 marked [deployed]; #26834 #26837 #26846 #26868 [deployed]; #26864/#26865/#26866 deduped.
+- Legacy validator delegation unified to Rule91CanonicalValidator (single verdict).
 
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #26866 [proposed] — Add storefront/DB verification to Rule91CanonicalValidator: extract #(...) tokens, query orchestrator_ideas, reject unverifiable idea references.
-2. #26867 [deployed] — Wire the substance-checking validator (clinerules_validate_completion_fix.php PDO) as admission-gated (always-on) instead of invocation-gated.
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26834 — [deployed] no open action; verification complete.
+2. #26852 — [deployed] regression assertions committed as tests/CfaTerminologyGuardTest.php.
+3. #26868 — [deployed] dual-gate unified to Rule91CanonicalValidator.
 
 Reference IDs:
-- Ideas: #26834, #26837, #26846, #26852, #26866, #26867, #26868, #26864, #26865
-- Files touched: lib/CfaTerminologyGuard.php, lib/mailer.php, cron/cron_email_followup.php, cron/cron_email_responder.php, lib/ai_ticket_agent.php, cron/cron_cfa_queue_executor.php, api/chat_widget_api.php, lib/AutoResolveDispatcher.php, lib/rule91_canonical_validator.php, lib/clinerules_validate_completion_fix.php
-- Ticket: none (Ruben directive)
+- Ideas filed/deployed: #26834, #26837, #26846, #26852, #26868
+- Files touched: lib/CfaTerminologyGuard.php, lib/mailer.php, cron/cron_email_followup.php, cron/cron_email_responder.php, lib/ai_ticket_agent.php, cron/cron_cfa_queue_executor.php, api/chat_widget_api.php, lib/AutoResolveDispatcher.php, lib/rule91_canonical_validator.php, tests/CfaTerminologyGuardTest.php
+- Emails: 364746-364756 (corrected), 364775 (garbled, superseded), 364776 (Michael clean)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
-Need one decision before I proceed: should the DB check be a HARD gate (reject) or an AUDIT flag (accept + warn)?
+### `1786935841403` — 8/16/2026, 8:34:24 PM PT — 122 turns
 
+**Original task:**
+
+```
+The student seems to have submitted a plethora of documentation demonstrating that we may have an error with our system. Can you take a look at this and let me know what's going on here?
+```
+
+**Ideas referenced:** #1259, #18693, #18868, #19163, #24404, #25427, #26868 [deployed], #26916 [proposed], #26917 [proposed], #26918 [proposed], #26920 [proposed], #26921 [proposed], #5344, #6106, #6785, #9019, #9086, #9168, #9306, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+min_profile.php?id=25708W-07**
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Fernando Vazquez Serrano (25708W-07): rule-317-corrected findings, durable rule/corpus fixes filed, Ruben reviewing the verified admin_profile URL and guiding next step.
+
+Where we left off (verified 2026-08-16 20:34 PT):
+- Corrected URL (RCA'd, live-verified 200): https://emsuniversity.com/emtskills/admin_profile.php?id=25708W-07. Root-path link I previously sent 404s — root serves public/Moodle/WordPress; admin portal docroot is /var/www/emtskills under /emtskills/.
+- Re-probed facts (Rule 317): fail_date 2025-07-04 (+30d after course_end 2025-06-04); CPR grade item 2631 created 2025-07-03 17:26:27 PT with ZERO quiz_attempts and finalgrade NULL; course completion on 2026-01-27 19:01:55 PT; sims pages cmid 6815/6816 added 2026-03-15 02:30:45 PT; simplecertificate_issues has ZERO rows for EMT certs 52/54/68; end_of_course_certificate_link NULL.
+- Durable changes filed THIS session: #26921 [proposed] (rule-317 durable-change checklist — idea + corpus append required on retraction), #26920 [proposed] (canonical admin_profile URL corpus fix), both appended to docs/HANDOFF_NOTES.md (on-disk verified).
+- Ticket 25427 open, RC-11 deadman fired 2026-08-16 15:30 PT, auto-act sync returned forbidden (invocation 8216), assigned user 124. Ticket 24404 auto-closed.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #26916 [awaiting_review] — Human decision (Ruben guiding from the profile page): reverse fail_date 2025-07-04, reactivate Moodle (user.suspended=0, user_enrolments.status=0 for ue 38261 course 41 and ue 38508 course 46 — idea #9306 path), correct section/grouping (San Diego vs Alameda), re-run sudo -u www-data php /var/www/emtskills/cron/cron_class_enrollments_selfheal.php to backfill Class_Enrollments, then answer ticket 25427.
+2. #26917 [proposed] — After classification, audit all terminal students with moodle_completion_date < 2026-03-15 for the same cert rework stranding (CPR item 2631, PSE category item 1745, sims 6815/6816, Alameda grouping). Candidate query: SELECT student_id, fail_date, moodle_completion_date FROM Students WHERE fail_date IS NOT NULL AND moodle_completion_date IS NOT NULL AND moodle_completion_date < '2026-03-15'.
+3. #26918 [proposed] — Ticket 25427: cert-request + legal-threat tickets must escalate to a named human owner and be blocked from auto-close; fix check_and_sync_moodle_enrollment authorization denial for terminal-state students (invocation 8216).
+
+Reference IDs:
+- Ticket: 25427 (open), 24404 (closed; contains the cert request + documentation)
+- Ideas filed: #26916 [awaiting_review], #26917 [proposed], #26918 [proposed], #26920 [proposed], #26921 [proposed]
+- Files touched: /var/www/emtskills/docs/HANDOFF_NOTES.md (corpus note appended, verified on disk); no code/config changes; only system change = self-heal cron run (healed 26526W-01, correctly skipped 25708W-07 as terminal)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
@@ -3639,67 +3661,5 @@ Reference IDs:
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786673589882` — 8/13/2026, 9:00:55 PM PT — 409 turns
-
-**Original task:**
-
-```
-Big Mac has 4 GPUs now. Can you make sure that other card is part of service? 
-
-Read also this:
-
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
-
-## Where 671 came from, and it is now durable
-
-Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.
-
-Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted
-```
-
-**Ideas referenced:** #1130, #1131, #11945, #1241, #12425, #12459, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178667, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2294, #2307, #2314, #23169, #2335 [deployed], #2337, #2338, #2339, #2341 [rejected], #23885, #24217, #24789, #24987, #25072, #25074, #25097, #25111, #25125, #25185, #25196 [executing], #25378, #25381, #25470, #25547, #25552, #25624, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25946, #26019, #26044, #26048, #26049, #26050, #26054, #26068, #26076, #26077, #26080 [completed], #26156, #26199, #26205 [executing], #26207 [executing], #26208 [executing], #26209 [proposed], #26210 [executing], #26211 [proposed], #2763, #58343, #6826, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-ilure, not slot type mismatch)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786673589882 - Big Mac 4th GPU PCIe link training failure + service restoration
-
-Where we left off (checked 2026-08-13 20:20 PT):
-- Big Mac restored to service on 3 GPUs (bigmac-vllm.service re-enabled, :8000 HTTP 200, PP=3, adapter routing live traffic) (checked: SSH + curl + journalctl)
-- 4th GPU PCIe link training fails at 2.5GT/s. Card has power (fan on) but can't complete endpoint discovery. All software approaches exhausted (pci=realloc, pci=assign-busses, setpci, rescan). Filed as #26211 [proposed] (checked: reconcile_ideas returned status=proposed)
-- GRUB set to pci=realloc pcie_aspm=off (best config). Auto-detect launch script ready: TP=4 engages when 4th GPU enumerates after BIOS fix.
-
-Open threads to drive next:
-1. #26211 [proposed] - Ruben's tech needs to check BIOS M.2 slot #2 config: PCIe mode (not NVMe), bifurcation, link speed (try Gen3/Gen4), and riser cable. This is physical/BIOS only, software is ready. (human-only decision - no idea, physical access required)
-2. #26209 [proposed] - Initial investigation, superseded by the PCIe link training finding above
-
-Reference IDs:
-- Ideas filed: #26209 [proposed], #26211 [proposed]
-- Files touched: /opt/bigmac-vllm-start.sh (Big Mac, rewritten with auto-detect), /etc/default/grub (pci=realloc pcie_aspm=off), /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md (updated), HANDOFF_NOTES.md (updated)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Big Mac service restored (3 GPUs, PP=3)
-- [x] Auto-detect launch script deployed
-- [x] All software approaches exhausted for 4th GPU
-- [x] Final reboot with clean config (pci=realloc pcie_aspm=off)
-- [x] Verify Big Mac serving on 3 GPUs (HTTP 200)
-- [x] Reconcile ideas
-- [x] Validate completion + ship
-</task_progress>
 </attempt_completion>
 ```

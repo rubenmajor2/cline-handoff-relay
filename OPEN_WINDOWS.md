@@ -6,11 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/18/2026, 12:00:48 PM PT | window: last 72h | 85 tasks | index total 810 (parsed 1, cached 809)
+Generated: 8/18/2026, 1:00:48 PM PT | window: last 72h | 86 tasks | index total 813 (parsed 4, cached 809)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787073073602` | 8/18/2026, 11:55:42 AM | 304 | 1646KB | # GLM 5.3: |
+| `1787073073602` | 8/18/2026, 1:00:32 PM | 435 | 2118KB | # GLM 5.3: |
+| `1787081272363` | 8/18/2026, 1:00:26 PM | 41 | 21602KB | Please add GLM 5.3 (Cloud) to my list of models here to choose from in cline under the API |
+| `1787083132087` | 8/18/2026, 12:58:58 PM | 2 | 2KB | Are you alive |
+| `1787081426639` | 8/18/2026, 12:47:43 PM | 24 | 176KB | What would it take to turn Big Mac into a powerhouse center for GLM 5.2? How many ARC Batt |
 | `1787015733520` | 8/18/2026, 10:52:31 AM | 112 | 1202KB | I already opened up a window on this before about the 40% score required for examinations  |
 | `1787073033366` | 8/18/2026, 10:10:33 AM | 1 | 7KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
 | `1787032087401` | 8/18/2026, 3:22:44 AM | 316 | 1132KB | #TDSHS  |
@@ -93,14 +96,12 @@ Generated: 8/18/2026, 12:00:48 PM PT | window: last 72h | 85 tasks | index total
 | `1786832279730` | 8/15/2026, 3:20:11 PM | 19 | 112KB | #Externships |
 | `1786820106387` | 8/15/2026, 2:07:52 PM | 360 | 935KB | Why does Vicky send me this? -> Making a followup on Sam Nelson’s final exam I was able to |
 | `1786818491154` | 8/15/2026, 1:03:24 PM | 300 | 642KB | #Joshua Hot FAllover |
-| `1786819237851` | 8/15/2026, 12:06:54 PM | 126 | 723KB | #SSS/CFA/267/ Executor |
-| `1786816732366` | 8/15/2026, 12:06:03 PM | 127 | 1556KB | Something is not working with info@emsuniversity.com. I was asked to re-authenticate this  |
 
 ---
 
 ## Per-window detail
 
-### `1787073073602` — 8/18/2026, 11:55:42 AM PT — 304 turns
+### `1787073073602` — 8/18/2026, 1:00:32 PM PT — 435 turns
 
 **Original task:**
 
@@ -119,50 +120,102 @@ Because **Zhipu has not granted your account access yet — it is a server-side 
 - The exact same reque
 ```
 
-**Ideas referenced:** #11847, #12584, #16265, #16844, #17202, #17203, #17205, #17300, #18312, #18868, #19338, #19686, #1993 [deployed], #1998, #22897, #25185, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #27201 [proposed], #27204 [proposed], #27205 [deployed]
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11847, #12477, #12584, #12618, #12824, #12872, #12878, #13108, #13202, #16163, #16265, #16304, #16844, #17202, #17203, #17205, #17300, #18312, #18326, #18868, #19338, #19686, #1993 [deployed], #1998, #22897, #24144, #25097, #25185, #2537, #25468, #25888, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #26908, #26923, #27201 [proposed], #27204 [proposed], #27205 [deployed], #27227 [proposed], #27232 [proposed]
 
 **Last PICKUP PROMPT:**
 
 ```
-o incorrect claim was shipped.
+es" + FORBIDDEN routing names.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #27205 [deployed]. GLM-5.3 fleet-wide repoint shipped; bake-off and cost monitoring next.
+Pick up GLM-5.3 ladder + underlying-LLM serving table + Julia-235B down recovery.
 
-Where we left off (verified 2026-08-18 11:53 PT):
-- All 12 GLM LiteLLM handles repointed to zai/glm-5.3 cloud. Handle names unchanged so fallback chains/registry/router_hook/callers work unmodified (verified: config dump showing all 12 mapped to zai/glm-5.3 at api.z.ai, 2026-08-18 11:50 PT).
-- frankenstein_registry.yaml glm-5.2 + glm-5.2-local rows repointed; glm-5.2-local flipped free/body/vllm-probe to paid/cloud/no-probe (verified: yaml.safe_load returned REGISTRY YAML OK, 2026-08-18 11:36 PT).
-- router_hook.py: glm-5.3 added to _GLM_DIRECTIVE_MODELS (verified: ast.parse returned ROUTER_HOOK SYNTAX OK, 2026-08-18 11:37 PT).
-- Single Zhipu account for all GLM lanes caused live 429s and hard errors on zero-spillover lanes. Added glm-ring-local free ring as LAST fallback on all 10 GLM lanes (verified: glm-ring-local returned real vLLM completion, system_fingerprint vllm-0.23.1rc1-pp6, 2026-08-18 11:48 PT).
-- LiteLLM restarted, liveness 200, 64 models loaded (verified: liveness probe returned 200 and restart log said litellm up in 30s, 2026-08-18 11:46 PT).
-- glm-5.3 returns HTTP 200 with real completion body model=glm-5.3 (verified: raw curl through LiteLLM, 2026-08-18 11:50 PT).
-- Local GLM-5.3 still impossible: zai-org weights HF 401-gated.
-- Backups: config.yaml.bak-glm53-repoint-20260818-1130, config.yaml.bak-glm53-prefallback-20260818-1145, router_hook.py.bak-glm53-20260818.
-- Runbook updated with full change record + rollback recipe.
+Where we left off (verified 2026-08-18 12:51 PT):
+- Rule 322 amended + reindexed (329 rules, hardfloor): serving table must be ONE table of UNDERLYING LLMs (GLM Local, gpt-oss-120B, 235B Julia, GLM Cloud, DeepSeek), never routing names. Source incident recorded (two 2026-08-18 failures).
+- Julia-235B DOWN (live-probed: :11513 HTTP 000, :2205 tunnel refused, 0 picks today). Idea #27232 [proposed] filed. Registry note "LIVE 2026-08-16" is stale.
+- Serving table (underlying LLM): GLM-Cloud-5.3 0 turns (43 tok/s measured, paid); GLM-5.2 Local 525 reqs; gpt-oss-120B 8,404 reqs (Artemis+BigMac); DeepSeek 717 turns $0.00 free cloud; qwen 14b 118; 7b-lora 124; Julia 0 (down); Cicero 0 (batch); minicpm-v 22 reqs.
+- #27227 [proposed] 530 root cause (GLM ring tools TTFB 263s vs 12s adapter timeout) still open.
 
 Open threads to drive next:
-1. #27201 [executing]. Bake-off n=20 W/T glm-5.3 vs glm-5.2 per rule 121 (double-judge, position-swap, rubric). Higher stakes now that 5.3 is live fleet-wide; if 5.3 loses, roll back via the documented recipe.
-2. #27204 [proposed]. Monitor Zhipu spend + rate-limit frequency daily for one week. If sustained 429s, flip high-volume lanes (argus-chat, frankenstein-deep, glm-5.2-smart) to glm-ring-local PRIMARY with cloud 5.3 as fallback, preserving free-local-first per rule 146.
-3. #26712 [proposed]. When the tracker reports HF gate-open (hf=1): download zai-org GLM-5.3/FP8, AWQ 4-bit quant, single-box vLLM check, then PP=6 Hex ring relaunch. That restores genuinely free local 5.3 and removes cloud cost exposure.
-4. #26713 [proposed]. Tier promotion: registry tier L3/L4g flip pending bake-off outcome.
-5. #26715 [deployed]. Monitor: confirm the release tracker cron still fires daily for the OpenRouter and HF surfaces (orchestrator_event_log source=glm53-release).
+1. #27232 [proposed] — Recover Julia-235B: on WOPR check WG peer handshake (10.100.0.15), restart autossh-11513.service, if WG dead check Julia box LAN 192.168.1.190 / power / reverse tunnel; re-verify /v1/models + decode probe, then confirm it re-enters serving.
+2. #27227 [proposed] — Execute 530 fix: (b) descope GLM ring from tools-critical path + (c) free DeepSeek for tool spill first, or (a) raise :11510 adapter timeout to 600; adapter restart drops in-flight calls (schedule).
+3. #27201 [executing] — Bake-off GLM-5.3 vs glm-5.2/DeepSeek (rule 121) before promoting paid cloud off L3.
+4. #26712 [proposed] — Local ring: on HF publish, AWQ requant + PP=6 relaunch, repoint local lanes to 5.3.
+5. #26715 [deployed] — Tracker cron: monitor HF gate-open + 530 recurrence.
 
 Reference IDs:
-- #27205 [deployed] (this session's repoint)
-- #26711 [deployed] (cloud gate cleared + initial wiring)
-- #26715 [deployed] (release tracker)
-- #27201 [executing] (bake-off)
-- #27204 [proposed] (cost + rate-limit monitoring)
-- #26712 [proposed] (local ring, pending HF weights)
-- #26713 [proposed] (tier cutover, pending bake-off)
-- Files touched: /etc/litellm/config.yaml, /etc/litellm/frankenstein_registry.yaml, /etc/litellm/router_hook.py, /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md
-- Backups: /etc/litellm/config.yaml.bak-glm53-repoint-20260818-1130, /etc/litellm/config.yaml.bak-glm53-prefallback-20260818-1145, /etc/litellm/router_hook.py.bak-glm53-20260818
+- Ideas filed: #27232 [proposed] (Julia down), #27227 [proposed] (530 fix), #27201 [executing] (bake-off), #26711 [deployed] (cloud whitelist), #26712 [proposed] (local ring), #26715 [deployed] (tracker), #27205 [rejected] (repoint, rolled back)
+- Files touched: /Users/rubenmajor/Documents/Cline/Rules/322-what-was-serving-single-table.md (rewritten)
+- Probed: Julia :11513 + :2205 (down), :8210 ring (healthy), :11510 adapter (healthy), z.ai glm-5.3 (43 tok/s), adapter upstream log, admin_portal.llm_call_log
 
-When done, append to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═════════════════════════════════════════
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787081272363` — 8/18/2026, 1:00:26 PM PT — 41 turns
+
+**Original task:**
+
+```
+Please add GLM 5.3 (Cloud) to my list of models here to choose from in cline under the API Provider Z.AI.
+```
+
+**Ideas referenced:** #0000, #000000, #0033, #0066, #0099, #11629, #16213, #3300, #3333, #333333, #3366, #3399, #6600, #6633, #666666, #9900, #9933
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787083132087` — 8/18/2026, 12:58:58 PM PT — 2 turns
+
+**Original task:**
+
+```
+Are you alive
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787081426639` — 8/18/2026, 12:47:43 PM PT — 24 turns
+
+**Original task:**
+
+```
+What would it take to turn Big Mac into a powerhouse center for GLM 5.2? How many ARC Battleimage B70s would I need to run it fast?
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25378, #25381, #2546, #27226 [proposed], #27231 [proposed], #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+ing (#27226). Filed as #27231.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Big Mac GLM 5.2 build-out + gpt-oss-120b upgrade check (two-part).
+
+Where we left off (verified 2026-08-18 12:47 PT):
+- Big Mac = TRX50-AERO-D, 3x Intel Arc B70 (G31, 31.89 GiB each), serving gpt-oss-120b. GLM 5.2 standalone needs 9-10 B70s across 2-3 linked boards (~90-110 tok/s), or 4 B70s (fill empty slot) for a strong ring slice. Idea #27226.
+- gpt-oss-120b is FROZEN at canonical sha b5c939de (lastModified 2025-08-26); no upgrade exists. Smarts = model swap, not refresh. Julia already on Qwen3-235B-A22B-NVFP4 (2026-08-17). Idea #27231.
+
+Open threads to drive next:
+1. #27226 [proposed] — physically inspect Big Mac's missing 4th B70 slot (seating/power/BIOS) to confirm max cards/board before the 9-10 card plan.
+2. #27226 [proposed] — scope 10x B70 across 2-3 TRX50-class boards (RoCE/NCCL PP-shard) + cost.
+3. #27231 [proposed] — finish Qwen3-235B rollout across the remaining 120B hosts (Artemis/Big Mac) as the fleet smarts lift.
+
+Reference IDs:
+- Ideas filed: #27226 [proposed], #27231 [proposed]
+- Files touched: none (research + idea filing only)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
 ### `1787015733520` — 8/18/2026, 10:52:31 AM PT — 112 turns
@@ -3219,58 +3272,3 @@ Shutting it down surfaced something the earlier writeup missed. The 22GB/hr was 
 **Ideas referenced:** #10866, #12824, #12872, #12878, #25185, #26007 [deployed], #26008 [executing], #26009 [deployed], #26017 [awaiting_review], #26019 [deployed], #26023 [executing], #26024 [deployed], #26068 [deployed], #26069 [deployed], #26070 [deployed], #26076 [executing], #26077 [executing], #26604 [deployed], #26614 [deployed], #26631 [deployed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786819237851` — 8/15/2026, 12:06:54 PM PT — 126 turns
-
-**Original task:**
-
-```
-#SSS/CFA/267/ Executor
-
-OK but it's not just about email quality it's also about other CFA quality as well because I believe that all CFA's may have been touched and this could be more of a systemic issue for us. This is why I had wanted you to test all CFA's to make sure that they were responding properly. This is why I had suggested utilizing rule 267 as well as making a modification to rule 267. The reason for Dr. duty on 267 was to make sure that primarily the executor is working and turning ideas while cline windows iterate. Additionally it saves time with that particular window and helps
-```
-
-**Ideas referenced:** #12345, #12346, #174512, #18326 [proposed], #18329 [deployed], #1842, #19415, #19416, #23133 [executing], #24963 [deployed], #25125 [deployed], #25185, #25925, #25926, #25935, #25962, #25966, #25986, #26003 [deployed], #26038 [executing], #26039 [deployed], #26040 [executing], #26041 [executing], #26045 [executing], #26050 [executing], #26054 [awaiting_review], #26065 [executing], #26080, #26090 [deployed], #26124, #26229, #26376 [deployed], #26377 [deployed], #26396 [proposed], #26424, #26430 [deployed], #26434 [deployed], #26435, #26447 [rejected], #26461 [executing], #26469 [executing], #26501 [deployed], #26503 [deployed], #26504 [executing], #26505 [deployed], #26506 [deployed], #26507 [deployed], #26515 [deployed], #26525 [deployed], #26586 [proposed], #26591 [deployed], #26592 [deployed], #26593 [deployed], #26595 [deployed], #26597 [deployed], #26598 [deployed], #26599 [deployed], #26600 [deployed], #26610 [rejected], #26611 [deployed], #26613 [proposed], #26617 [executing]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786816732366` — 8/15/2026, 12:06:03 PM PT — 127 turns
-
-**Original task:**
-
-```
-Something is not working with info@emsuniversity.com. I was asked to re-authenticate this account thismorning. I noticed that I have not received messages since 4AM on the dot. that might be a clue that it was 4AM on the dot this hpapened.
-```
-
-**Ideas referenced:** #10469, #12031, #16732, #2328, #2340, #2341, #2343, #2344, #2511, #25989, #26068, #26207, #26209, #26211, #26214 [executing], #26215 [executing], #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26608 [proposed], #26609 [proposed], #3261, #3319, #3346
-
-**Last PICKUP PROMPT:**
-
-```
-11:40:34 PT (delivery healthy)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — info@emsuniversity.com auth broken since 4AM (password auto-reset at 04:11:13 PT).
-
-Where we left off (verified 2026-08-15 11:47 PT):
-- Root cause: automated internal process (www-data, cwd /var/www/emtskills/api) ran `mail --update info@emsuniversity.com -passwd f*DpHVJi@K1Rjx` at 04:11:13.512 PT; psa log_actions #12031 confirms it (Password ++++++ → xxxxxx). Credential was never delivered via SMS/email.
-- Mail delivery never stopped: server received mail continuously (latest 11:40:34 PT; mailbox holds 114,925 messages). Client auth failed from ~04:05 onward so new mail appeared "stopped".
-- Current password verified working via doveadm auth test: `f*DpHVJi@K1Rjx`. Ruben should set this in his mail client to restore flow immediately.
-- Invoking agent not found in agent_tool_calls / mcp_tool_invocation_log / vapi_tool_invocations / ai_tool_log for the 04:05-04:20 window.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26608 [proposed] — Implement guard in ruben_tools.php (reset_company_email_password + macro reset_email_and_sms_password): refuse resets on shared info@emsuniversity.com unless requester is Ruben; require durable requester audit row on every reset. File is /var/www/emtskills/api/ruben_tools.php lines ~1951-2001.
-2. #26609 [proposed] — Trace the 04:11 caller: hunt PHP-FPM/Apache access logs for the ruben_tools.php request at 04:10-04:12 PT, identify API key/session/agent, then add per-call audited logging to that endpoint so resets are attributable.
-
-Reference IDs:
-- Ideas filed: #26608 [proposed], #26609 [proposed]
-- Files touched: none (server-side SQL inserts to orchestrator_ideas only)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<command>true</command>
-</attempt_completion>
-```

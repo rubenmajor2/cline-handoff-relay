@@ -19,3 +19,13 @@
 - Reversal note: I declared "the document was never saved" and "the Postmark token is invalid" after ONE failed probe: I hit /servers with an X-Postmark-Account-Token header, got ErrorCode 10, and concluded the credential was dead post-rotation. The token was fine. The live cron scripts/postmark_inbound_recovery.php uses the same constant as an X-Postmark-Server-Token header, which authenticates and returns 117,435 outbound messages. When Ruben pushed back that PDFs had already been saved in this compliance section, three further paths existed and all were untried: the corrected backfill script, the local Plesk Maildir at /var/qmail/mailnames (readable with sudo -n), and per-mailbox subject search. All five missing complaint PDFs were recovered from the Maildir in under ten minutes. Amendment: rule 317's escalation probe applies to CREDENTIAL and RETRIEVAL failures exactly as it does to EACCES. One auth error against one endpoint with one header is not a dead credential. Before declaring any artifact u
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-18 19:10 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 27205
+- RCA bucket: wrong premise
+- Trigger pattern: interpreting an upgrade directive as 'repoint handles to the new version' when the new version is not available on the local backend, instead of reporting the local-backend gap and asking how to proce
+- Reversal note: Fleet-wide GLM repoint: I assumed 'upgrade GLM 5.2 Local everywhere to GLM 5.3' meant repointing local-ring handles to cloud 5.3, because local 5.3 weights are HF 401-gated. The directive actually meant 'upgrade the local ring FROM 5.2 TO 5.3' (download 5.3 weights, requant, relaunch the ring). I converted free-local to paid-cloud, the opposite of intent. Amendment: when a directive says 'upgrade X to Y everywhere' and Y is not yet available locally, the correct response is to REPORT that Y is not available locally and ask whether to wait or proceed with cloud-only, NOT to silently convert free-local lanes to paid cloud. The local ring is a cost-bearing architectural asset; repointing it to paid cloud is a cost inversion that must be surfaced as a decision, not buried in a routing change.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

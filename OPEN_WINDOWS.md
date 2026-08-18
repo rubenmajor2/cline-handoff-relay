@@ -6,11 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/17/2026, 7:39:47 PM PT | window: last 72h | 98 tasks | index total 802 (parsed 2, cached 800)
+Generated: 8/17/2026, 8:39:48 PM PT | window: last 72h | 97 tasks | index total 804 (parsed 2, cached 802)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787019164930` | 8/17/2026, 7:39:43 PM | 147 | 853KB | #Big Mac 4th GPU |
+| `1787024184393` | 8/17/2026, 8:39:36 PM | 23 | 63KB | #Big Mac 4th GPU |
+| `1787022593417` | 8/17/2026, 8:35:20 PM | 125 | 266KB | #Big Mac 4th GPU |
+| `1787019164930` | 8/17/2026, 8:04:28 PM | 238 | 1066KB | #Big Mac 4th GPU |
 | `1787019098209` | 8/17/2026, 7:11:38 PM | 1 | 7KB | #Big Mac 4th GPU |
 | `1786948459253` | 8/17/2026, 7:04:08 PM | 142 | 258KB | #Big Mac 4th GPU |
 | `1787016619040` | 8/17/2026, 6:42:38 PM | 58 | 143KB | #Jon/Argus |
@@ -105,15 +107,52 @@ Generated: 8/17/2026, 7:39:47 PM PT | window: last 72h | 98 tasks | index total 
 | `1786696386569` | 8/14/2026, 11:17:34 PM | 92 | 332KB | #Unknown |
 | `1786740046847` | 8/14/2026, 8:59:13 PM | 646 | 6933KB | #CFA Misunderstanding |
 | `1786764429338` | 8/14/2026, 8:41:12 PM | 32 | 82KB | Can you please resolve this issue right away: |
-| `1786567464418` | 8/14/2026, 8:33:40 PM | 446 | 3647KB | #Argus |
-| `1786745818584` | 8/14/2026, 8:33:30 PM | 454 | 2193KB | /emtskills is slow again check emtskills_slowness document on the desktop |
-| `1786689127799` | 8/14/2026, 8:33:06 PM | 310 | 1433KB | #Artemis |
 
 ---
 
 ## Per-window detail
 
-### `1787019164930` — 8/17/2026, 7:39:43 PM PT — 147 turns
+### `1787024184393` — 8/17/2026, 8:39:36 PM PT — 23 turns
+
+**Original task:**
+
+```
+#Big Mac 4th GPU
+
+Tech is powercycling it now:
+
+Answering your question directly: no, the UniFi Dream Machine is not banning it, and neither is Imunify360. Both are cleared with positive evidence, and the fault is on Big Mac itself.
+
+## The MAC and IP you asked for
+
+Yes, "ubuntu 56 ca" is Big Mac. **MAC 30:56:0f:47:56:ca**, UniFi client hostname `ubuntu` (verified: fresh WOPR ARP returned `192.168.1.208 dev eno1 lladdr 30:56:0f:47:56:ca`, and the UDM's own `ip neigh` returned `192.168.1.208 dev br0 lladdr 30:56:0f:47:56:ca REACHABLE`). And you were right that the IP had not changed: **192.168.
+```
+
+**Ideas referenced:** #178669, #178694, #19082 [executing], #19524 [awaiting_review], #25097 [awaiting_review], #26209 [rejected], #26211 [rejected], #26238 [rejected], #27137 [executing], #27140 [executing], #27142 [executing]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787022593417` — 8/17/2026, 8:35:20 PM PT — 125 turns
+
+**Original task:**
+
+```
+#Big Mac 4th GPU
+
+Get the 4th GPU up and running now
+
+# You're right, and that kills my leading theory
+
+75W in through a SATA-fed 6-pin means the card was never power-starved. I reasoned from the generic M.2 form-factor power budget instead of from what is actually cabled in your machine, and aux power delivery is invisible to lspci and sysfs, so no probe I ran could have caught me. That one is on me. Causal rule 297 amended so the next window has to establish what is physically connected before blaming a supply, or say plainly that it cannot see the cabling.
+
+## I also killed the reset theory
+```
+
+**Ideas referenced:** #178669, #178694, #18977, #19082 [unknown], #19490, #19524 [approved], #232326, #25097 [awaiting_review], #25112, #2562, #26209 [rejected], #26211 [rejected], #26238 [rejected], #26923, #27137 [awaiting_review], #27140 [executing], #27142 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787019164930` — 8/17/2026, 8:04:28 PM PT — 238 turns
 
 **Original task:**
 
@@ -132,7 +171,7 @@ No that sounds asinine -> The tech also turned on the PCIe bifucation in Bios.
 - GPUs: **still 3 Battlemage** (ver
 ```
 
-**Ideas referenced:** #0000, #178669, #178694, #25097 [executing], #2541, #2542, #2557, #2558, #2559, #26209 [proposed], #26211 [executing], #26238 [proposed], #27137 [awaiting_review], #27140 [executing], #313131
+**Ideas referenced:** #0000, #178669, #178694, #25097 [executing], #25185, #2541, #2542, #2557, #2558, #2559, #2560, #26209 [proposed], #26211 [executing], #26238 [proposed], #27137 [awaiting_review], #27140 [executing], #313131
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -3638,154 +3677,6 @@ Reference IDs:
 - Ticket: none (originated from Postmark email)
 - Ideas filed: none, fully resolved, no deferred work
 - Files touched: /var/www/emtskills/docs/HANDOFF_NOTES.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786567464418` — 8/14/2026, 8:33:40 PM PT — 446 turns
-
-**Original task:**
-
-```
-#Argus
-
-This task failed for being over context. Can you continue it? 
-
-
-
-#Argus
-
-How it has Argus been doing over the last 12 hours? What improvements do we need to make? What capabilities do we need to increase? Act according to rule 29 and leverage rule 267. Let me know what other permissions I may need to increase. Also I personally head tried to do a couple of things in Argus yesterday and they failed. One of them had to do with RUBEN computer VAPI and getting that back online. I felt like Argus was way off base and not really helpful at all. And that is not how I want that agent to be. J
-```
-
-**Ideas referenced:** #12018, #12605, #12606, #13553, #15404, #15405, #15406, #16152, #16154, #16475, #16732, #17130 [superseded], #1745, #17537 [rejected], #177821, #18132 [deployed], #18316, #18579, #186576, #18777, #19098, #19099, #19125, #19173, #19624, #19641, #19731, #19970, #19971, #19975, #19995, #20023, #20024, #20025, #20026, #20028, #20029, #20030, #23133, #2321, #23378, #23477, #2350 [deployed], #2355, #23934, #23945, #23954, #24635, #24645, #25042, #25185, #25551, #25706, #25707, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25803 [proposed], #25812, #25889 [ready_for_review], #25914, #25931, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [proposed], #25944 [proposed], #25946, #25959 [proposed], #25968 [proposed], #25969 [proposed], #25970 [proposed], #26000 [proposed], #26253 [executing], #26270 [proposed], #26318 [proposed], #360135, #360152, #3957, #5792, #6172, #9042, #9159, #9222, #9501, #9771, #9772, #9773, #9774, #9775
-
-**Last PICKUP PROMPT:**
-
-```
-elf, closing #26318 [deployed]
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #26000 [deployed], everything from the Argus and TNG voice window is shipped and self-verifying.
-
-Where we left off (verified 2026-08-14 20:32 PT):
-- TNG voice line live-probed: HTTP 200 in 0.036s, provider anthropic, model deepseek-v4-pro, tools=7.
-- Argus role-tier harness ran UNATTENDED via cron at 18:17:03 and logged clean=true passed=11 failed=0, which was the last open risk. #26318 [deployed].
-- TNG canary has four consecutive cron passes, ids 13, 14, 15, 16, latest 19:00:05, all trigger_source=cron.
-- Argus live and healthy: 178 audited actions in 6 hours, 0 unwired of 74 actions.
-- Voice health degraded on three pre-existing unrelated warnings only, ghost-tool count still 0 so #25968 [deployed] holds.
-- Bug library incidents 2350 and 2355 hold the full diagnoses for the canary and the Argus wiring defects.
-
-Open threads to drive next:
-1. None for an agent. All seven ideas are closed: #25968 [deployed], #25969 [deployed], #26000 [deployed], #26253 [deployed], #26270 [deployed], #26318 [deployed], #25959 [rejected].
-2. Whether to delete the two orphaned VAPI records 626b41e8-c77d-4c1b-a805-57af1ab27338 and 70c2bb0c-f447-4477-908d-de1b3b2863a4, which both have number null and are unreachable by any caller (human-only decision, no idea).
-3. Whether to shorten the TNG system prompt, which requires deciding which instructions matter less on a live voice line rather than any mechanical dedupe, since zero duplicate blocks exist (human-only decision, no idea).
-
-Reference IDs:
-- Ideas: #25959 [rejected], #25968 [deployed], #25969 [deployed], #26000 [deployed], #26253 [deployed], #26270 [deployed], #26318 [deployed], #25970 [superseded].
-- Bug library: incident 2350 vapi_canary_caller_side_assertion_mismatch_2026_08_14, incident 2355 argus_role_tier_unwired_actions_and_false_write_leak_2026_08_14.
-- Files touched: lib/argus_action_catalog.php, scripts/argus_role_tier_validate.php, /etc/cron.d/emsu-argus-role-tier-validate, /etc/cron.d/emsu-ruben-tng-canary, lib/ruben_tng_voice_canary.php, api/voice/ruben_voice_webhook.php, cron/cron_voice_agent_health.php, DB rows voice_agent_whitelist id 3 and ruben_tng_canary_config.
-
-When done, append to cline_task_ledger.md per rule 07 and run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786745818584` — 8/14/2026, 8:33:30 PM PT — 454 turns
-
-**Original task:**
-
-```
-/emtskills is slow again check emtskills_slowness document on the desktop
-```
-
-**Ideas referenced:** #10740, #1080, #11397, #11564, #11936, #11941, #11942, #11943, #11944, #11945, #11953, #12231, #12247, #12251, #12262, #12314, #12335, #12363, #12364, #12365, #12366, #12368, #1238, #12407, #12477, #12657, #12672, #12673, #12689, #12716, #13075, #13078, #13082, #13084, #13085, #13108, #13121, #13831, #13832, #13874, #13964, #14000, #14848, #15919, #16120, #16265, #16718, #1754, #1755, #177963, #1836, #18781, #18786, #19143, #19653, #1967, #1968, #1989, #19903, #20264, #20272, #20297, #2050, #20536, #2071, #2072, #2073, #2079, #21045, #2247, #2254, #2258, #22583, #2294, #2307, #2314, #23169 [blocked], #23206, #2342, #24144, #24172, #24217, #24368, #25112, #25120, #25159, #25178, #25468, #25625, #25627, #25630, #25646, #25747, #25754, #25755 [awaiting_review], #25757, #25759, #25764, #25765, #25812, #25888, #25999, #26009, #26068 [awaiting_review], #26209, #26218, #26219, #26234, #26284 [executing], #26336 [proposed], #26348 [proposed], #26382 [proposed], #26390 [proposed], #26394 [proposed], #26400 [proposed], #26422 [proposed], #6219, #6260, #6264, #6267, #6268, #6826
-
-**Last PICKUP PROMPT:**
-
-```
-documented with a ready patch.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — #26382 interactive-TTFB root cause: floor dead under GLM-first; fix proposed in #26422, awaiting Ruben go.
-
-Where we left off (verified 2026-08-14 20:32 PT):
-- /tmp/emsu_glm_floor_window.json: `glm_pct=0.0` (20 zeros) — 0% GLM share on Cline lane since 20:18 restart.
-- Adapter log: 20:22:40 BigMac cline 25.01s / 20:23:24 Artemis cline 22.28s / 20:23:34 BigMac cline 29.82s, all `lane=cline`, queue=0, post-20:18.
-- Code (frankenstein_tools_adapter.py): `_prefer_fast` always False because `EMSU_GLM_FIRST_ALL_LANES=1` (line 2088); 30% floor lives inside `if _prefer_fast:` (2099) so never runs; flat saturation branch (2127) always returns 1 because ring holds running=12 by design. `conv_0078c233a98` cold → YIELD_FLOOR (interactive-only, patched 20:18) never applies to unpinned conversations.
-- Fix proposed as #26422 [proposed]: move floor check before the saturation gate, gated on lane_interactive + waiting < max, return 0. NOT DEPLOYED — awaiting Ruben explicit go.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26422 [proposed] — Apply the 10-line fix on Ruben go: floor-before-saturation in `_glm_priority`, independent of `_prefer_fast`; then verify next Cline turn lands GLM.
-2. #26382 [proposed] — Close as root-caused once #26422 deploys and 3+ subsequent Cline picks show GLM share up.
-
-Reference IDs:
-- Ideas filed: #26382 [proposed], #26400 [deployed], #26394 [proposed], #26422 [proposed]
-- Files touched: /usr/local/bin/frankenstein_tools_adapter.py (+2 backups .bak-laneops-20260814-2007, .bak-laneops2-20260814-2018), /var/www/emtskills/docs/GLM52_CAPACITY_ONE_NUMBER.md, /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md, /etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzzzzzzzzzzzzzzzzz-lane-reserve-6-cline-20260814.conf
-- Service: frankenstein-tools active since 20:18:56 PT
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786689127799` — 8/14/2026, 8:33:06 PM PT — 310 turns
-
-**Original task:**
-
-```
-#Artemis
-
-Is artemis down? When was the last time you had a heartbeat? Why did it go down? Is it going to start back up? It has auto restart enabled, right? 
-
---
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
-
-## Where 671 came from, and it is now durable
-
-Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.
-
-Two counters
-```
-
-**Ideas referenced:** #1006, #1130, #1131, #12299, #1241, #12425, #1248, #1249, #1252, #1258, #12849, #1442, #1514, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16588, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1746, #177687, #1779, #1798, #1828, #19567, #1996, #20042, #2008, #2014, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2255, #2328, #2440, #25378, #25381, #25888, #26241 [proposed], #26244 [proposed], #26245 [proposed], #26249 [proposed], #3261, #3319, #3325, #3346, #3350, #3522, #5875, #5878, #64748, #7142, #7149, #8883
-
-**Last PICKUP PROMPT:**
-
-```
-stent with "not the PSU core."
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #26241 (follow-up) — Artemis 08-13 outage RCA + monitoring.
-
-Where we left off (verified 8/14/2026 20:32 PT):
-- Artemis healthy on all 3 probes (fleet-state MCP, direct SSH, WOPR gap-alarm). Uptime 20h54m, vllm active serving gpt-oss-120b, 2 req running / 0 waiting, UPS OL + charge 100.
-- RCA: NOT utility outage (UDM last state-change 2026-08-06, no 08-13 reconnect → site power stayed up). Failure was in Artemis's local power path (UPS output / cable / rack PDU), not PSU core.
-- Heartbeat-gap alarm deployed live: /usr/local/bin/emsu-artemis-heartbeat-gap.sh + cron */2, healthy-pass silent, ALERT branch force-tested at 00:08 PT.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26245 [proposed] — Physical once-over of Artemis's UPS OUTPUT path: CyberPower output outlet/relay, power cable seating, rack PDU segment to server PSU.
-2. #26241 [deployed] — Heartbeat-gap alarm: confirm it alerts to a live endpoint (verified emsu-alert.sh fires, but not yet that Discord/ops receives it end-to-end).
-3. #26249 [superseded] — UniFi cred repair: NOT needed for the outage confirmation; key already worked (earlier 401s were bad key-extraction), but the "owner transfer" card is a separate pending item if Ruben still wants per-event UDM log access.
-4. #26244 [superseded] — UPS battery fault: ruled out by community research (NUT CyberPower HID quirk); battery charge 100 + voltage 27.3/24 nominal.
-
-Reference IDs:
-- Ideas filed: #26241 [deployed], #26244 [superseded], #26245 [proposed], #26249 [superseded]
-- Files touched: /usr/local/bin/emsu-artemis-heartbeat-gap.sh, /etc/cron.d/emsu-artemis-heartbeat-gap, /var/www/emtskills/docs/HANDOFF_NOTES.md (3 sections appended)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════

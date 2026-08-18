@@ -227,3 +227,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Ruben reported the CFA telling students an exam passes at 40% (real standard 80%) on 2026-08-14; it was "fixed" (ideas #26476, #26471) and the identical wrong number shipped again on 2026-08-17 in email #366377. Root cause was not the analysis, which was correct, but the SCOPE of the repair: #26476 patched four files under lib/ and never saw the independent copies of the same rendering in api/livechat/chatbot_tools.php and api/ruben_tools.php, and cron_email_responder.php calls the chatbot_tools copy, so the email lane ran entirely on unpatched code. #26471 added the policy prompt block to the chat webhook only, leaving the email lane with no floor to check a bad tool number against. Both completions truthfully described what they changed and neither could state what they had missed, because nothing enumerated the surfaces. Proof this is the mechanism and not hindsight: the coverage gate written this window immediately found THREE more unpatched renderers that two prior windows and my 
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-18 02:54 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786948459
+- RCA bucket: unread source
+- Trigger pattern: Attributing a hardware fault to insufficient power/supply based on a form factor's generic spec, without establishing what the specific installed adapter is physically connected to and without flaggin
+- Reversal note: Big Mac 4th GPU: I asserted "leading cause is slot power, an M.2 socket gives ~8-10W and a B70 is a discrete 32GB GPU" as the explanation for a trained link that never answers config reads. Ruben corrected it live: the adapter has a 6-pin aux power input fed by a SATA cable from the PSU and is delivering 75W. The card was never power-starved. I reasoned from a generic property of the M.2 FORM FACTOR (its socket power budget) without ever asking what the specific adapter in this machine was wired to, and no probe I ran could have told me, because auxiliary power delivery is invisible to lspci/sysfs. Amendment: before attributing a fault to insufficient power, delivery, cooling, or any other PHYSICAL SUPPLY to a component, establish what is actually connected to it, and state plainly that the supply path is unverifiable remotely if no probe covers it. A property of a form factor or a spec sheet is NOT a measurement of the installed instance. When the supply path cannot be probed, the cor
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

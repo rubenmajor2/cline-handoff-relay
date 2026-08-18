@@ -94,3 +94,12 @@ If the case won't be handled in time (>50 open + no human active 60min, or waiti
 ## Source
 
 2026-05-26 v2, 2026-06-25 v3 trim. Core principle unchanged: agents act on payment-verified, schema-verified evidence. The default is action.
+## Amendment (from reversal, 2026-08-18 23:02 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787014605175
+- RCA bucket: wrong premise
+- Trigger pattern: Reading an automated system's gate/hold label (deploy_human_gated, regression_risk_review, needs_guidance, HUMAN_GATED) as evidence that a human decision is outstanding, and listing the item as human-
+- Reversal note: I listed 5 impl_failed ideas as "genuine human gates, need your review" purely because the executor had labeled them deploy_human_gated / regression_risk_review. Ruben asked "what do we do per rule 29 here?" On actually running the gate: 3 of the 5 already had approved_by populated (Ruben, Jon Thompson, agent-core) and only needed the documented one-shot auto_deploy_override; 1 needed no build because the change was already on disk; 1 rested on a stale premise (the grievance it targeted was resolved 5 days earlier). Zero required a human. Amendment: a gate/hold label emitted by an automated system states what THAT SYSTEM may not do autonomously, never who owns the decision. Before calling any item human-only, the binary gate must additionally check (a) whether an approval record already exists on the row, and (b) whether the described change is already present in the target artifact. An item carrying a prior human approval is by definition NOT awaiting a human.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

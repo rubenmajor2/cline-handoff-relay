@@ -6,12 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/18/2026, 2:56:47 PM PT | window: last 72h | 84 tasks | index total 813 (parsed 3, cached 810)
+Generated: 8/18/2026, 4:10:37 PM PT | window: last 72h | 81 tasks | index total 814 (parsed 3, cached 811)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787073073602` | 8/18/2026, 2:56:46 PM | 583 | 3723KB | # GLM 5.3: |
-| `1787081272363` | 8/18/2026, 2:56:41 PM | 81 | 21730KB | Please add GLM 5.3 (Cloud) to my list of models here to choose from in cline under the API |
+| `1787073073602` | 8/18/2026, 4:03:58 PM | 628 | 5679KB | # GLM 5.3: |
+| `1787090950949` | 8/18/2026, 4:03:29 PM | 200 | 465KB | #Argus |
+| `1787081272363` | 8/18/2026, 3:36:27 PM | 100 | 21842KB | Please add GLM 5.3 (Cloud) to my list of models here to choose from in cline under the API |
 | `1786993543586` | 8/18/2026, 1:58:07 PM | 406 | 2529KB | Our Staff Keycards were all deactivated and students/staff were locked out of our building |
 | `1787083132087` | 8/18/2026, 12:58:58 PM | 2 | 2KB | Are you alive |
 | `1787081426639` | 8/18/2026, 12:47:43 PM | 24 | 176KB | What would it take to turn Big Mac into a powerhouse center for GLM 5.2? How many ARC Batt |
@@ -90,16 +91,12 @@ Generated: 8/18/2026, 2:56:47 PM PT | window: last 72h | 84 tasks | index total 
 | `1786844918374` | 8/15/2026, 9:13:04 PM | 946 | 13140KB | Babysit Frankenstein Exeucotr for 90 minutes and resolve any issues that might come up. Do |
 | `1786842592907` | 8/15/2026, 8:46:01 PM | 516 | 2989KB | #Rule 317 |
 | `1786836908956` | 8/15/2026, 4:48:21 PM | 72 | 1004KB | Is this legitimate? If so, the message should be a little more sympathetic and less techni |
-| `1786832177865` | 8/15/2026, 3:36:49 PM | 160 | 352KB | #SLS ish |
-| `1786782096117` | 8/15/2026, 3:33:23 PM | 564 | 5232KB | #Email Agent |
-| `1786824274829` | 8/15/2026, 3:27:14 PM | 256 | 888KB | frankenstein-llm seems to be having some intermittent connectivity issues. Not sure the ca |
-| `1786832279730` | 8/15/2026, 3:20:11 PM | 19 | 112KB | #Externships |
 
 ---
 
 ## Per-window detail
 
-### `1787073073602` — 8/18/2026, 2:56:46 PM PT — 583 turns
+### `1787073073602` — 8/18/2026, 4:03:58 PM PT — 628 turns
 
 **Original task:**
 
@@ -118,46 +115,68 @@ Because **Zhipu has not granted your account access yet — it is a server-side 
 - The exact same reque
 ```
 
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11847, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12824, #12872, #12878, #13108, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16717, #16778, #16802, #16803, #16839, #16844, #16851, #17202, #17203, #17205, #17246, #17300, #1744, #1779, #1798, #1828, #18312, #18326, #18868, #19338, #19567, #19686, #1993 [deployed], #1998, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #22584, #22897, #2299, #24144, #25097, #25185, #2537, #25378, #25381, #2546, #25468, #2552, #25567, #25627, #25888, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #26908, #26923, #27069, #27201 [proposed], #27204 [proposed], #27205 [deployed], #27227 [proposed], #27232 [proposed], #7142, #7149
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11847, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12824, #12872, #12878, #13108, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16717, #16778, #16802, #16803, #16839, #16844, #16851, #17202, #17203, #17205, #17246, #17300, #1744, #1779, #1798, #1828, #18312, #18326, #18868, #19338, #19567, #19686, #1993 [deployed], #1998, #20042, #2063, #2065, #20662, #2073, #20985, #21038 [proposed], #2127, #2168, #22584, #22897, #2299, #24144, #25097, #25185, #2537, #25378, #25381, #2546, #25468, #2552, #25567, #25627, #25888, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #26908, #26923, #27069 [executing], #27201 [proposed], #27204 [proposed], #27205 [deployed], #27227 [proposed], #27232 [proposed], #27236 [proposed], #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
-h dark = physical, not config)
+ Log
+No reversals this window.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up Julia-235B network recovery (physical on-site needed) + 530 fix + GLM-5.3 bake-off.
+Pick up task — Julia 235B L2-dark outage: physical recovery + lane-guard reachability patch (#27236 [proposed]).
 
-Where we left off (verified 2026-08-18 14:00 PT):
-- litellm:julia-235b is a DeepSeek alias (api_base=https://api.deepseek.com, model=deepseek/deepseek-v4-pro), NOT the Julia box at :11513. Ruben called it and it answered in 5s because it's DeepSeek cloud.
-- Julia/Claudia 235B box is NETWORK DARK on all paths: WG 10.100.0.15 no endpoint/handshake, LAN 192.168.1.190 no route to host, :11513 tunnel refused. Router falls back julia-235b → cicero-235b (same Qwen3-235B family). Ruben's 5s test was likely Cicero or DeepSeek, not Julia. Zero 235B rows in call log 24h (DB down). Cannot fix remotely — needs physical check (power, cable, DHCP, WG service) + Julia-side autossh keepalive. Idea #27232 [proposed] critical.
-- GLM-5.2 ring also WEDGED at 19:58:02 and 19:58:17 (generation probe failed, timed out). Ring timed out at 20:37:08 with NO fallback available.
-- Rule 322 amended + reindexed (329 rules, hardfloor): underlying-LLM table + tunnel-vs-model + one-probe-is-never-a-verdict.
-- #27227 [proposed] 530 fix (GLM ring tools TTFB 263s vs 12s adapter timeout) still open.
-- GLM-5.3 cloud live (43 tok/s, z.ai), 0 turns, L3 paid final rung. Bake-off #27201 pending.
+Where we left off (verified 2026-08-18 16:02 PT):
+- Julia (192.168.1.190) L2-dark; last good serve 13:15 PT (router audit 20:15:51Z "say OK"), confirmed dark 14:49-14:53 PT from 3 vantages; live re-probe 16:02 PT still refused (:11513 HTTP=000).
+- fleet_inventory: julia=down (fleet_act ok:true, 3-vantage evidence note).
+- Claudia UP; julia-235b is TP=2 over CX7 so the lane is fully down until Julia returns. No remote power path — physical power cycle is the only recovery.
+- GLM-5.3 remains gated (Zhipu 1220 / OpenRouter absent / HF 401); tracker live (#26715 [deployed]).
 
 Open threads to drive next:
-1. #27232 [proposed] CRITICAL — Someone on-site checks Julia box: power, network cable/WiFi, DHCP, WG service. Once network restored, WG handshake + :11513 tunnel resume, julia-235b gets picked (rank 20). Also add autossh keepalive on Julia side instead of one-shot reverse SSH.
-2. #27227 [proposed] — Execute 530 fix: (b) descope GLM ring from tools path + (c) free DeepSeek for tool spill first, or (a) raise :11510 adapter timeout to 600.
-3. #27201 [executing] — Bake-off GLM-5.3 vs glm-5.2/DeepSeek (rule 121) before promoting paid cloud.
-4. #26712 [proposed] — Local ring: on HF publish, AWQ requant + PP=6 relaunch. Ring is currently WEDGED (19:58 probe failed).
-5. #26715 [deployed] — Tracker cron: monitor HF gate-open + 530 recurrence.
+1. (human-only decision - no idea) Physical power cycle of Julia in Oceanside, then post-return verification (Ray head + vLLM :11513 + reverse tunnels WOPR:2205/:11513) + fleet_act julia=healthy.
+2. #27236 [proposed] — build the lane-guard reachability patch (TCP 127.0.0.1:11513 + :2205, transition-only alert via /usr/local/bin/emsu-alert.sh, dedup via /tmp/emsu_julia_lane_guard.json).
+3. #27232 [proposed] — premise superseded by the L2-dark finding (not tunnel flapping): update or close it against this window's evidence.
 
 Reference IDs:
-- Ideas: #27232 [proposed] (Julia network dark, critical), #27227 [proposed] (530 fix), #27201 [executing] (bake-off), #26711 [deployed] (cloud whitelist), #26712 [proposed] (local ring), #26715 [deployed] (tracker), #27205 [rejected] (repoint rolled back)
-- Files touched: /Users/rubenmajor/Documents/Cline/Rules/322-what-was-serving-single-table.md (amended)
-- Probed: WG peers, LAN ping, :11513 curl, :11520 cicero (200), router audit log, _router_core.py:4649, call log 24h, LiteLLM config fallbacks, LiteLLM container logs at 19:58:52Z, LiteLLM config.yaml julia-235b api_base
+- Ideas reconciled this session (verified server-side): #27236 [proposed] · #27232 [proposed] · #27069 [executing] · #21038 [executing] · #26711 [deployed] · #26712 [proposed] · #26713 [proposed] · #26715 [deployed]
+- Fleet: julia marked down (fleet_act ok:true)
+- Files touched: none modified (investigation-only)
+- Patch target: /usr/local/bin/emsu-julia-lane-guard.py + alert sink /usr/local/bin/emsu-alert.sh
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Julia L2-dark triage shipped (fleet down-marked, #27236 filed)
+- [x] Router audit bracket: last good julia-235b pick 13:15 PT; zero picks after
+- [x] Live re-probe :11513 — HTTP=000 at 16:02 PT, still dark
+- [x] Timeline answered (onset 13:15-14:49 PT; TP=2 lane fully down; Claudia up, Julia dead half)
+</task_progress>
 </attempt_completion>
 ```
 
-### `1787081272363` — 8/18/2026, 2:56:41 PM PT — 81 turns
+### `1787090950949` — 8/18/2026, 4:03:29 PM PT — 200 turns
+
+**Original task:**
+
+```
+#Argus
+
+Check Argus since this task completion window for any outstanding issues as well as anything left to do on executor. We want to make sure all is operating properly. Jon says pretty much nothing took or has been fixed. He's thinking nothing really happened. 
+
+Proceeded per rule 29: everything actionable is now DONE, including the Email-AI fix you approved, which I hand-shipped after the executor failed it three times.
+
+## 1. #27120 [deployed] — Email AI wrong-canned-reply bug, HAND-SHIPPED (rule 267 GATE C)
+The executor could not land it: two llm-gate parks, then codegen produced a sche
+```
+
+**Ideas referenced:** #12504, #178701, #19338, #19458, #19491, #19696, #19717, #20757, #20903, #2113, #23031, #23038, #24145, #24993, #25125, #25185, #25227, #25378, #25513, #25515, #25548, #25556, #25560, #25562, #25570 [executing], #25573, #25577, #25581, #25584, #25602, #25632, #25633, #25635, #25665, #25670, #25671, #25680, #25686, #25708, #25714, #25736, #25739, #25744, #25814, #2588, #25916, #25973, #26080, #26085 [executing], #26124 [blocked], #26174 [executing], #26180 [executing], #26192 [blocked], #26207, #26214, #26322 [blocked], #26357 [awaiting_review], #26424, #26482 [executing], #26498 [executing], #26504 [awaiting_review], #26519 [executing], #26760, #26827 [blocked], #26931 [blocked], #27012, #27088 [awaiting_review], #27120 [deployed], #27126 [deployed], #27136 [deployed], #27143 [awaiting_review], #27149 [deployed], #27163 [deployed], #27180 [deployed], #27195, #27207, #27223, #27237 [executing], #27238 [deployed], #9222, #9235
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787081272363` — 8/18/2026, 3:36:27 PM PT — 100 turns
 
 **Original task:**
 
@@ -167,7 +186,36 @@ Please add GLM 5.3 (Cloud) to my list of models here to choose from in cline und
 
 **Ideas referenced:** #0000, #000000, #0033, #0066, #0099, #11629, #16213, #3300, #3333, #333333, #3366, #3399, #6600, #6633, #666666, #9900, #9933
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+es correctly before `glm-5.2`.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — add GLM 5.3 (Cloud) to Cline Z.AI provider model dropdown. Work completed.
+
+Where we left off (verified 2026-08-18 15:29 PT):
+- `glm-5.3` added to webview dropdown maps `p6e` (international) + `f6e` (china) in `/Users/rubenmajor/.vscode/extensions/saoudrizwan.claude-dev-4.0.7/webview-ui/build/assets/index.js` — 2 replacements verified
+- `glm-5.3` added to extension client maps `eWr` (international) + `tWr` (china) in `/Users/rubenmajor/.vscode/extensions/saoudrizwan.claude-dev-4.0.7/dist/extension.js` — 2 replacements verified
+- Model id `glm-5.3`, contextWindow 1e6, pricing copied from glm-5.2 (unverified for 5.3)
+- Backups: `dist/extension.js.bak-glm53-20260818-152408`, `webview-ui/build/assets/index.js.bak-glm53-20260818-152408`
+- ACTION NEEDED BY USER: reload VS Code window (Cmd+Shift+P → Reload Window) for the change to take effect
+
+Open threads to drive next:
+None — all work completed this session.
+
+Reference IDs:
+- Ticket: n/a (direct user request)
+- Ideas filed: none
+- Files touched: `/Users/rubenmajor/.vscode/extensions/saoudrizwan.claude-dev-4.0.7/dist/extension.js`, `/Users/rubenmajor/.vscode/extensions/saoudrizwan.claude-dev-4.0.7/webview-ui/build/assets/index.js`
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1786993543586` — 8/18/2026, 1:58:07 PM PT — 406 turns
 
@@ -3032,168 +3080,3 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1786832177865` — 8/15/2026, 3:36:49 PM PT — 160 turns
-
-**Original task:**
-
-```
-#SLS ish
-
-Rebase. . What's left to do here? A lot has changed since we created this task
-
---
-Both approved ideas are implemented and live-verified. And yes, rule 317 made real changes to the earlier iteration, not just a written apology. Evidence below.
-
-# Reversal Log
-- Root cause is "bogus sessions appeared from nowhere" -> Root cause is the generator never validates day-of-week: parseMeetingTimes() extracts clock times and DISCARDS day names, and the pre-existing smoke test checks only the start HOUR | unread source | fixed in cron_attendance_sessions.php, causal rule filed and shipped as r
-```
-
-**Ideas referenced:** #1144, #24323, #25185, #25938 [deployed], #25942 [deployed], #25944 [deployed], #26660 [deployed], #26662 [deployed], #26664 [deployed], #26665 [executing], #360135, #6106
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786782096117` — 8/15/2026, 3:33:23 PM PT — 564 turns
-
-**Original task:**
-
-```
-#Email Agent
-
-I tried correcting this issue earlier and it did not take. Pleaser resolve durably. Also I noticed there is no 
-
-Best Regards,
-
-Customer Service
-
-EMS University, LLC d.b.a. EMS Universal Education
-
-(800) 728-0209
-
-This is an automated response which can sometimes make mistakes. A member of our team may follow up if needed.
-
-that should be resolved.
-```
-
-**Ideas referenced:** #12356, #13977, #14743, #15227, #15670, #15904, #16606, #16732, #174512, #19437, #2328, #23378, #2341, #2343, #2344, #23710, #24990, #2511, #25185, #25238, #25240, #25241, #25242, #25313, #25316 [deployed], #25364 [executing], #25795, #25943, #25989, #26068, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26320, #26336, #26339, #26348, #26368, #26435, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26525 [executing], #26586 [proposed], #26597 [deployed], #26600 [proposed], #26659 [proposed], #3261, #3319, #3346, #4930, #4958, #4991, #5095, #5795, #6106, #6228, #7206, #7207, #7907, #8103, #8151 [deployed], #856404
-
-**Last PICKUP PROMPT:**
-
-```
-m dashes, direct answers only.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up Email Agent corrective work for the Aoki international-student thread and the remaining auto-ticket factory sweep.
-
-Where we left off (verified 2026-08-15 15:32 PT):
-- Duplicate Detection System ticket factory removed from StudentLifecycle::detectNameDuplicate() (lib/StudentLifecycle.php; backup .bak-20260815-dedup-ticket-removal). Idea #26586 [deployed].
-- 9 "Potential Duplicate Registration" noise tickets retired (status closed, annotated, audit kept). Open/Pending count now 0.
-- International-student answer + MIME From-name decode + circular-redirect fix all live. Ideas #26525 [deployed], #26597 [deployed].
-- Ownership audit correction: real owner column is assigned_to_user_id; assigned_owner is vestigial (NULL everywhere). Do not use assigned_owner.
-
-Open threads to drive next (every item filed with a real idea number):
-1. #26600 [proposed] — Send corrective reply to Taro Aoki (bmclub@mac.com)? Requires Ruben sign-off. If approved, reply via the externship-team-confirm path, not info@emsuniversity.com.
-2. #26659 [proposed] — General sweep of system-created ticket sources (RUBEN Orchestrator watchdog, Voice AI Repeat-Caller, Declined Payment Monitor, Promise Deadman, Moodle Quiz Scanner Bridge, EMSU Voice Gate): route CFA-solvable work to resolvers instead of tickets, retire genuine orphans. Verify assigned_to_user_id before retiring.
-
-Reference IDs:
-- Tickets retired: TKT-20260815-331FCD0E, TKT-20260814-D134242F, TKT-20260814-DD289C7A, TKT-20260814-62DCDB73, TKT-20260803-37BFE295, TKT-20260729-900D7693, TKT-20260725-A9BB6CF6, TKT-20260722-E7F375BB, TKT-20260722-5B5A35EB
-- Ideas filed: #26525 [deployed], #26586 [deployed], #26597 [deployed], #26600 [proposed], #26659 [proposed]
-- Correction record: ai_learned_corrections #8151 (completion_scope_error)
-- Files touched: lib/StudentLifecycle.php, lib/emsu_knowledge_base.php, cron/cron_email_responder.php, lib/ai_ticket_agent_first_touch.php, docs/317-reversal-corrections.md, cline_task_ledger.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786824274829` — 8/15/2026, 3:27:14 PM PT — 256 turns
-
-**Original task:**
-
-```
-frankenstein-llm seems to be having some intermittent connectivity issues. Not sure the cause. Can you take a look and resolve? 
-
---
-{"message":"terminated","code":"UND_ERR_SOCKET","modelId":"frankenstein-llm","providerId":"litellm"}
-
---
-read also for reference/baseline: 
-
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
-
-## Where 671 came from, and it is now durable
-
-Written to 
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16732, #16844, #17300, #178682, #18312, #18326, #22726, #22871, #2299, #23133, #23171, #2328, #2341, #2343, #2344, #25097, #2511, #2513 [deployed], #25185, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26638 [proposed], #26639 [proposed], #26640, #26642 [proposed], #3261, #3319, #3346
-
-**Last PICKUP PROMPT:**
-
-```
- incident 2513 resolution text
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786824274829 — frankenstein-llm connectivity restored (probe: frankenstein_verify_routing HTTP 200 at 13:09 PT), PHP claude-haiku model names replaced with frankenstein-llm (probe: 0 claude refs), watchdog assembled + cron active (probe: test run TEST_OK at 15:16 PT).
-
-Where we left off (2026-08-15 15:17 PT):
-- frankenstein-llm connectivity recovered via docker restart litellm (probe: 4 workers up, 0 socket errors, HTTP 200 routing)
-- PHP agents updated: claude-haiku/sonnet/opus replaced with frankenstein-llm in 3 files (probe: 0 claude refs, php -l clean)
-- LiteLLM worker-health watchdog assembled: /usr/local/bin/emsu_litellm_worker_watchdog.sh + cron /etc/cron.d/emsu_litellm_worker_watchdog (probe: test run passed, no log entries = healthy)
-- All 3 ideas promoted + efficiency_priority=1 set (probe: UPDATE returned Rows affected: 3)
-- Bug library incident 2513 [resolved] recorded
-- #26638 [deployed] watchdog assembled in-window (reconcile: status=deployed dev_stage=ready_for_review)
-
-Open threads to drive next:
-1. #26639 [executing] — LiteLLM TypeError upstream patch (P2). In executor queue, pending assembly. (probe: reconcile_ideas returned status=in_progress dev_stage=idle)
-2. #26642 [executing] — PHP agent /v1/messages to /v1/chat/completions endpoint migration (P2). In executor queue, pending assembly. (probe: reconcile_ideas returned status=in_progress dev_stage=idle)
-
-Reference IDs:
-- Ideas filed: #26638 [deployed]
-- Bug library: incident 2513 [resolved]
-- Files touched: config/anthropic_routing.php, agents/agent_message_handler.php, cron_vapi_uncategorized_reclassifier.php (.bak-26640), /usr/local/bin/emsu_litellm_worker_watchdog.sh (new), /etc/cron.d/emsu_litellm_worker_watchdog (new)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] frankenstein-llm UND_ERR_SOCKET connectivity resolved (docker restart litellm)
-- [x] PHP agents claude-haiku replaced with frankenstein-llm (3 files, Rule 146 compliance)
-- [x] Worker-health watchdog deployed (#26638 [deployed])
-- [x] Bug library incident 2513 recorded
-- [x] All 3 ideas promoted + efficiency_priority=1 set
-- [x] Claude confirmed vision-doorman only (Rule 146 — was never the problem)
-- [x] #26639 [executing] in executor queue (TypeError upstream patch)
-- [x] #26642 [executing] in executor queue (endpoint migration)
-</task_progress>
-</attempt_completion>
-```
-
-### `1786832279730` — 8/15/2026, 3:20:11 PM PT — 19 turns
-
-**Original task:**
-
-```
-#Externships
-
-I agree with your plan. I might change it a little bit but I agree with it. It does touch a lot of systems though so I do have concerns because I wanna make sure that is implemented properly and takes in consideration everything, including CFA communication as well as SMS messages emails and other places. 
-
---
-Went through the outboxes. Three findings, one fix shipped tonight, and the mitigation package restated with how to actually put it through.
-
-## 1. What the outboxes show about how hours get scheduled
-
-Last 60 days: 1,734 externship emails from info@emsuniversity.com plus 4
-```
-
-**Ideas referenced:** #178649, #18944, #18951, #25822 [deployed], #25889 [awaiting_review], #25916 [awaiting_review], #25932 [deployed], #25950 [awaiting_review], #25973 [awaiting_review], #26002 [awaiting_review], #26027 [awaiting_review], #26053 [deployed], #26066 [superseded], #26067 [deployed], #26071 [executing], #26089 [deployed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

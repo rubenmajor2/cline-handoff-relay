@@ -6,11 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/17/2026, 8:39:48 PM PT | window: last 72h | 97 tasks | index total 804 (parsed 2, cached 802)
+Generated: 8/17/2026, 9:39:49 PM PT | window: last 72h | 96 tasks | index total 805 (parsed 2, cached 803)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787024184393` | 8/17/2026, 8:39:36 PM | 23 | 63KB | #Big Mac 4th GPU |
+| `1787027676077` | 8/17/2026, 9:39:45 PM | 15 | 51KB | #BigMac 4th GPU |
+| `1787024184393` | 8/17/2026, 9:11:28 PM | 206 | 453KB | #Big Mac 4th GPU |
+| `1787003799738` | 8/17/2026, 9:07:16 PM | 618 | 2250KB | #TDSHS |
 | `1787022593417` | 8/17/2026, 8:35:20 PM | 125 | 266KB | #Big Mac 4th GPU |
 | `1787019164930` | 8/17/2026, 8:04:28 PM | 238 | 1066KB | #Big Mac 4th GPU |
 | `1787019098209` | 8/17/2026, 7:11:38 PM | 1 | 7KB | #Big Mac 4th GPU |
@@ -19,7 +21,6 @@ Generated: 8/17/2026, 8:39:48 PM PT | window: last 72h | 97 tasks | index total 
 | `1787014605175` | 8/17/2026, 6:29:12 PM | 154 | 347KB | #Jon / Argus |
 | `1787015733520` | 8/17/2026, 6:28:16 PM | 104 | 1182KB | I already opened up a window on this before about the 40% score required for examinations  |
 | `1787014473253` | 8/17/2026, 6:20:07 PM | 120 | 612KB | Check /emtskills - slow as hell again check emtskills slowness document on desktop. please |
-| `1787003799738` | 8/17/2026, 6:16:31 PM | 546 | 1948KB | #TDSHS |
 | `1787012165910` | 8/17/2026, 5:34:27 PM | 124 | 955KB | #Argus needs help:  |
 | `1786989452314` | 8/17/2026, 5:09:41 PM | 357 | 936KB | frankenstein-llm keeps going down as I'm trying to put back up Cicero and Maximus, not sur |
 | `1787009927550` | 8/17/2026, 4:49:34 PM | 78 | 693KB | Hi Julia, reports of your death are exaggerated? |
@@ -105,14 +106,34 @@ Generated: 8/17/2026, 8:39:48 PM PT | window: last 72h | 97 tasks | index total 
 | `1786759729330` | 8/14/2026, 11:27:23 PM | 648 | 1371KB | #Argus Learning |
 | `1786765205570` | 8/14/2026, 11:22:11 PM | 264 | 999KB | I have seen enough rules 317 violations that I am quite concerned on the number of reversi |
 | `1786696386569` | 8/14/2026, 11:17:34 PM | 92 | 332KB | #Unknown |
-| `1786740046847` | 8/14/2026, 8:59:13 PM | 646 | 6933KB | #CFA Misunderstanding |
-| `1786764429338` | 8/14/2026, 8:41:12 PM | 32 | 82KB | Can you please resolve this issue right away: |
 
 ---
 
 ## Per-window detail
 
-### `1787024184393` — 8/17/2026, 8:39:36 PM PT — 23 turns
+### `1787027676077` — 8/17/2026, 9:39:45 PM PT — 15 turns
+
+**Original task:**
+
+```
+#BigMac 4th GPU
+
+Get the 4th GPU serving
+
+Big Mac is back and serving, and it can now recover itself remotely (verified: curl from WOPR to http://10.100.0.19:8000/v1/models returned 200; on-box battlemage=3, renderD=3, vLLM active, "startup complete" count=1; watchdog0 state=active, RuntimeWatchdogUSec=1min). The 4th GPU is still not online, and I hit a real setback on it that I reverted.
+
+## What caused the wedge
+
+Not OOM, not fork exhaustion, not a network ban. It was a total userspace freeze triggered by the PCI bus rescan I ran while probing for the 4th GPU.
+
+The evidence (verified from th
+```
+
+**Ideas referenced:** #178669, #178694, #19082 [blocked], #19524 [executing], #25097 [awaiting_review], #2558, #2559, #2563, #27137 [executing], #27140 [executing], #27142 [deployed], #27143 [executing], #27145 [executing]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787024184393` — 8/17/2026, 9:11:28 PM PT — 206 turns
 
 **Original task:**
 
@@ -128,7 +149,34 @@ Answering your question directly: no, the UniFi Dream Machine is not banning it,
 Yes, "ubuntu 56 ca" is Big Mac. **MAC 30:56:0f:47:56:ca**, UniFi client hostname `ubuntu` (verified: fresh WOPR ARP returned `192.168.1.208 dev eno1 lladdr 30:56:0f:47:56:ca`, and the UDM's own `ip neigh` returned `192.168.1.208 dev br0 lladdr 30:56:0f:47:56:ca REACHABLE`). And you were right that the IP had not changed: **192.168.
 ```
 
-**Ideas referenced:** #178669, #178694, #19082 [executing], #19524 [awaiting_review], #25097 [awaiting_review], #26209 [rejected], #26211 [rejected], #26238 [rejected], #27137 [executing], #27140 [executing], #27142 [executing]
+**Ideas referenced:** #178669, #178694, #1875, #18977, #19082 [executing], #19524 [awaiting_review], #2297, #25097 [awaiting_review], #2563 [deployed], #26209 [rejected], #26211 [rejected], #26238 [rejected], #27137 [executing], #27140 [executing], #27142 [executing], #27143 [proposed], #27144, #27145 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787003799738` — 8/17/2026, 9:07:16 PM PT — 618 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+You were right on both. The 1080261916 response was crap and the license number was the wrong one. Both fixed, PDF re-rendered (325,475 bytes, 14:41 PT), and the 317 RCA is below.
+
+## The license number — it was not ours to use
+
+**The TDSHS number is 623992, and it is on their own paper.** The 5196 inspection report has a labeled field block:
+
+```
+Name              EMERGENCY MEDICAL SERVICES UNIVERSITY LLC
+License Type      EMS Course
+Address           1452 HUGHES ROAD SUITE 360, GRAPEVINE TX 76051
+License Number    623992
+Inspection Type   Course Monitoring
+Inspection Number 5196
+Insp
+```
+
+**Ideas referenced:** #1509, #15299, #178695, #2003, #22757, #25185, #27072 [deployed], #27073 [awaiting_review], #27100 [executing], #27107 [executing], #27108 [executing], #27112 [proposed], #27114 [proposed], #27116 [proposed], #27121 [proposed], #27124 [proposed], #27125 [proposed], #27127 [proposed], #4856, #4929, #664426, #9086, #9168, #9306, #9339
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -362,33 +410,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
-
-### `1787003799738` — 8/17/2026, 6:16:31 PM PT — 546 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-You were right on both. The 1080261916 response was crap and the license number was the wrong one. Both fixed, PDF re-rendered (325,475 bytes, 14:41 PT), and the 317 RCA is below.
-
-## The license number — it was not ours to use
-
-**The TDSHS number is 623992, and it is on their own paper.** The 5196 inspection report has a labeled field block:
-
-```
-Name              EMERGENCY MEDICAL SERVICES UNIVERSITY LLC
-License Type      EMS Course
-Address           1452 HUGHES ROAD SUITE 360, GRAPEVINE TX 76051
-License Number    623992
-Inspection Type   Course Monitoring
-Inspection Number 5196
-Insp
-```
-
-**Ideas referenced:** #1509, #15299, #178695, #2003, #22757, #25185, #27072 [deployed], #27073 [awaiting_review], #27100 [executing], #27107 [executing], #27108 [executing], #27112 [proposed], #27114 [proposed], #27116 [proposed], #27121 [proposed], #27124 [proposed], #27125 [proposed], #27127 [proposed], #4856, #4929, #664426, #9086, #9168, #9306, #9339
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787012165910` — 8/17/2026, 5:34:27 PM PT — 124 turns
 
@@ -3575,111 +3596,5 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786740046847` — 8/14/2026, 8:59:13 PM PT — 646 turns
-
-**Original task:**
-
-```
-#CFA Misunderstanding
-
-CFA is an internal  acroym for Customer Facing Agents/AI/Assistants, etc... 
-
-so this is very confusing and stupid. Needs correction. Scan for this and the like and resolve it.
-```
-
-**Ideas referenced:** #1118, #1163, #12206, #12207, #12285, #12687, #1391, #1465, #1500, #15669, #16069, #1615, #1642, #16613, #16732, #177851, #18266, #18350, #18353, #18355, #18363, #19338, #19458, #19491, #19927, #2316, #2328, #2341, #2343, #2344, #25774, #25895, #25896, #25920, #25989, #26068, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26329 [proposed], #26345 [deployed], #26430 [approved], #26434 [proposed], #32548, #3261, #3319, #3346, #417529, #5627, #5788, #6067, #6168, #6196, #6723, #7174, #7872, #7906, #7907, #7925, #9132, #9168, #9222, #9339
-
-**Last PICKUP PROMPT:**
-
-```
-rify payment before unsuspend.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up: payment verification for Sarah Arroyo-Fontecha (26417FT-25) + payment-auto-clear gate defect (Postmark/CFA blast aftermath).
-
-Where we left off (verified 2026-08-14 8:58:44 PT):
-- Sarah 26417FT-25: no settled payment found for invoice 166802 in qb_invoice_payments, qb_invoice_payments_authnet_cache, qb_payments_direct_transactions, qb_payments_cache. Jun 27 auto-clear wrote "Invoice paid" with no backing record. Her Moodle user 51990 was reactivated earlier today but that action is now suspect.
-- Two ideas filed: #26430 [proposed] (human payment review for Sarah, no auto-clear), #26434 [proposed] (auto-clear writes "Invoice paid" without settled record).
-- Source fixes from CFA blast: sweep lib + executor + EmailAIResponder guard fixed/deployed. Queue drained 394/1298+; 902 corrected rows pending self-send (no gate). Executor un-gated at your direction.
-
-Open threads to drive next:
-1. #26434 [proposed] — verify whether cron_cfa_payment_auto_clear's "paid" gate ever produced a settled record for invoice 166802; if not, add a hard check that unsuspend requires a settled row in qb_invoice_payments/ qb_payments_cache/ qb_payments_direct_transactions before any auto-clear. File: cron/cron_cfa_payment_auto_clear.php.
-2. #26430 [proposed] — human review of Sarah's invoice 166802 before any further unsuspend; do NOT auto-clear her (failed the settled-payment test). Confirm with Ruben whether to keep her Moodle reactivated today.
-
-Reference IDs:
-- Ideas: #26430, #26434
-- Grievances: GRV-2026-0086 (Ludovica), GRV-2026-0087 (Michael), GRV-2026-0088 (Harrison)
-- Files touched: lib/sub_emit_alert.php (existing), cron/cron_cfa_queue_executor.php, cron/cron_cfa_payment_auto_clear.php, lib/cfa_access_sweep.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786764429338` — 8/14/2026, 8:41:12 PM PT — 32 turns
-
-**Original task:**
-
-```
-Can you please resolve this issue right away:
-
-
-
-
-Hi Ruben Major,
-
-We run periodic checks on your DNS DKIM record to make sure it is still valid. This ensures that if the record is missing, we don’t continue to sign emails with a failing DKIM record. We just noticed that the record below is either missing or no longer correct.
-
-Verify DNS record on onlineemd.com
-
-Please check with your DNS provider and make sure the record below is updated or added.
-
-Expected sub-domain:
-
-20260303061835pm._domainkey.onlineemd.com
-
-Expected value of TXT record:
-
-k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCx
-```
-
-**Ideas referenced:** #202608, #26368
-
-**Last PICKUP PROMPT:**
-
-```
-her work is open on this task.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task: Postmark DKIM record for onlineemd.com.
-
-Where we left off (verified 2026-08-14 20:39 PT):
-- Postmark reported missing DKIM record 20260303061835pm._domainkey.onlineemd.com and disabled signing.
-- Registry-level trace confirms onlineemd.com is on GoDaddy DNS (ns21/ns22.domaincontrol.com), not ns1/ns2.emsuniversity.com. emsuniversity.com is a separate domain on Cloudflare.
-- Added the exact TXT record via GoDaddy API (HTTP 200).
-- Verified byte-for-byte MATCH (225 chars) on both authoritative GoDaddy NS (ns21 + ns22), plus Cloudflare 1.1.1.1 and local resolver.
-- Google 8.8.8.8 may still show empty for up to the 3600s TTL window; harmless, Postmark checks authoritative DNS.
-- Logged resolution to HANDOFF_NOTES.md.
-
-Open threads to drive next:
-1. None: all work completed this session. Postmark re-enables DKIM signing automatically after their next periodic check; no reply to Postmark needed.
-
-Reference IDs:
-- Ticket: none (originated from Postmark email)
-- Ideas filed: none, fully resolved, no deferred work
-- Files touched: /var/www/emtskills/docs/HANDOFF_NOTES.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```

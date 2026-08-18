@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-18T03:39:48.296Z",
+ "generated_at": "2026-08-18T04:39:49.104Z",
  "counts": {
   "parsed": 2,
-  "reused": 802,
+  "reused": 803,
   "failed": 0,
-  "total": 804
+  "total": 805
  },
  "tasks": {
   "1784522296714": {
@@ -133254,11 +133254,11 @@
   },
   "1787003799738": {
    "task_id": "1787003799738",
-   "mtime": 1787015791547,
+   "mtime": 1787026036263,
    "created_at": "2026-08-17T21:56:39.738Z",
-   "last_modified": "2026-08-18T01:16:31.547Z",
-   "size_kb": 1948,
-   "turn_count": 546,
+   "last_modified": "2026-08-18T04:07:16.263Z",
+   "size_kb": 2250,
+   "turn_count": 618,
    "title": "#TDSHS\n\nYou were right on both. The 1080261916 response was crap and the license number was the wrong one. Both fixed, PDF re-rendered (325,475 bytes, 14:41 PT), and the 317 RCA is below.\n\n## The license number — it was not ours to use\n\n**The TDSHS number is 623992, and it is on their own paper.** The 5196 inspection report has a labeled field block:\n\n```\nName              EMERGENCY MEDICAL SERVICES UNIVERSITY LLC\nLicense Type      EMS Course\nAddress           1452 HUGHES ROAD SUITE 360, GRAPEVINE TX 76051\nLicense Number    623992\nInspection Type   Course Monitoring\nInspection Number 5196\nInspector         LYNN, ERIC HOMER\nInspection Date   06/19/2026\n```\n\nThe 623992 approval letter carries ",
    "pickup_prompt": null,
    "ideas": {
@@ -133605,14 +133605,18 @@
   },
   "1787024184393": {
    "task_id": "1787024184393",
-   "mtime": 1787024376688,
+   "mtime": 1787026288363,
    "created_at": "2026-08-18T03:36:24.393Z",
-   "last_modified": "2026-08-18T03:39:36.688Z",
-   "size_kb": 63,
-   "turn_count": 23,
+   "last_modified": "2026-08-18T04:11:28.363Z",
+   "size_kb": 453,
+   "turn_count": 206,
    "title": "#Big Mac 4th GPU\n\nTech is powercycling it now:\n\nAnswering your question directly: no, the UniFi Dream Machine is not banning it, and neither is Imunify360. Both are cleared with positive evidence, and the fault is on Big Mac itself.\n\n## The MAC and IP you asked for\n\nYes, \"ubuntu 56 ca\" is Big Mac. **MAC 30:56:0f:47:56:ca**, UniFi client hostname `ubuntu` (verified: fresh WOPR ARP returned `192.168.1.208 dev eno1 lladdr 30:56:0f:47:56:ca`, and the UDM's own `ip neigh` returned `192.168.1.208 dev br0 lladdr 30:56:0f:47:56:ca REACHABLE`). And you were right that the IP had not changed: **192.168.1.208** on the LAN, 10.100.0.19 on WireGuard. WOPR's live ARP and the UDM's stored `last_ip` agree o",
    "pickup_prompt": null,
    "ideas": {
+    "1875": null,
+    "2297": null,
+    "2563": "deployed",
+    "18977": null,
     "19082": "executing",
     "19524": "awaiting_review",
     "25097": "awaiting_review",
@@ -133622,6 +133626,34 @@
     "27137": "executing",
     "27140": "executing",
     "27142": "executing",
+    "27143": "proposed",
+    "27144": null,
+    "27145": "proposed",
+    "178669": null,
+    "178694": null
+   }
+  },
+  "1787027676077": {
+   "task_id": "1787027676077",
+   "mtime": 1787027985066,
+   "created_at": "2026-08-18T04:34:36.077Z",
+   "last_modified": "2026-08-18T04:39:45.066Z",
+   "size_kb": 51,
+   "turn_count": 15,
+   "title": "#BigMac 4th GPU\n\nGet the 4th GPU serving\n\nBig Mac is back and serving, and it can now recover itself remotely (verified: curl from WOPR to http://10.100.0.19:8000/v1/models returned 200; on-box battlemage=3, renderD=3, vLLM active, \"startup complete\" count=1; watchdog0 state=active, RuntimeWatchdogUSec=1min). The 4th GPU is still not online, and I hit a real setback on it that I reverted.\n\n## What caused the wedge\n\nNot OOM, not fork exhaustion, not a network ban. It was a total userspace freeze triggered by the PCI bus rescan I ran while probing for the 4th GPU.\n\nThe evidence (verified from the box's own persistent journal after it came back): the last successful login session was 19:47:31, ",
+   "pickup_prompt": null,
+   "ideas": {
+    "2558": null,
+    "2559": null,
+    "2563": null,
+    "19082": "blocked",
+    "19524": "executing",
+    "25097": "awaiting_review",
+    "27137": "executing",
+    "27140": "executing",
+    "27142": "deployed",
+    "27143": "executing",
+    "27145": "executing",
     "178669": null,
     "178694": null
    }

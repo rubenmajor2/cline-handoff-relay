@@ -99,3 +99,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Big Mac 4th GPU: two claims reversed. (1) Boot-14 concluded "a fresh reseat produced zero receiver detect, so the adapter or card-in-adapter connection is the fault"; the per-boot journal showed the port ALSO absent on boot -4 BEFORE any hands-on work and PRESENT on the three boots after the reseat, so presence alternates per boot and the reseat inference was unsupported. (2) Idea #26238 recorded REFCLK/CommClk as the primary lead because hand-setting the bits "did not train the link"; dmesg shows "Lockdown: setpci: direct PCI access is restricted" (SecureBoot enabled, lockdown=integrity), so those writes never landed, and the link later trained to 8GT/s x4 with CommClk- STILL SET. Amendment: when a probe writes to hardware registers (setpci, /sys/bus/pci writes, MSR pokes), the write MUST be read back and verified to have changed before any conclusion is drawn from its effect; a shell command that exits 0 while the kernel discards the write is indistinguishable from a successful write
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-18 04:07 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786948459
+- RCA bucket: unread source
+- Trigger pattern: Reading a multi-option sysfs file (lockdown, and similarly *_available / *_governor style files) and quoting the first token instead of the bracketed active selection; asserting a kernel cmdline flag 
+- Reversal note: Big Mac 4th GPU: I read /sys/kernel/security/lockdown, saw "none [integrity] confidentiality", and reported "LOCKDOWN=none is LIVE, PCI register writes will now land". That file is a MENU, not a value: the BRACKETED entry is the ACTIVE mode, so lockdown was still [integrity] and every setpci write continued to be discarded. dmesg carried the decisive line I had not read, "Kernel is locked down from EFI Secure Boot mode", proving that lockdown=none on the kernel cmdline is silently ignored whenever Secure Boot is enabled, even though the flag parses cleanly and appears verbatim in /proc/cmdline. Amendment: when a sysfs file presents a SET of options, the claim must quote the bracketed/selected element, never the first token; and before asserting that a kernel cmdline parameter took effect, confirm the SUBSYSTEM reports it active (dmesg/kernel log), because appearing in /proc/cmdline only proves it was passed, not honoured. Second amendment from the same window: a boot-time module load c
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

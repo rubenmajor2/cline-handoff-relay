@@ -6,13 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/17/2026, 10:39:49 PM PT | window: last 72h | 96 tasks | index total 805 (parsed 3, cached 802)
+Generated: 8/17/2026, 11:39:49 PM PT | window: last 72h | 96 tasks | index total 808 (parsed 4, cached 804)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1787027676077` | 8/17/2026, 11:39:35 PM | 273 | 667KB | #BigMac 4th GPU |
+| `1787035094427` | 8/17/2026, 11:39:26 PM | 11 | 69KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
+| `1787016619040` | 8/17/2026, 11:34:20 PM | 263 | 500KB | #Jon/Argus |
+| `1787032087401` | 8/17/2026, 11:31:36 PM | 144 | 605KB | #TDSHS  |
+| `1787032033318` | 8/17/2026, 10:47:13 PM | 1 | 16KB | #TDSHS  |
 | `1787003799738` | 8/17/2026, 10:38:27 PM | 762 | 2712KB | #TDSHS |
-| `1787027676077` | 8/17/2026, 10:28:48 PM | 146 | 448KB | #BigMac 4th GPU |
-| `1787016619040` | 8/17/2026, 10:24:14 PM | 157 | 319KB | #Jon/Argus |
 | `1787024184393` | 8/17/2026, 9:11:28 PM | 206 | 453KB | #Big Mac 4th GPU |
 | `1787022593417` | 8/17/2026, 8:35:20 PM | 125 | 266KB | #Big Mac 4th GPU |
 | `1787019164930` | 8/17/2026, 8:04:28 PM | 238 | 1066KB | #Big Mac 4th GPU |
@@ -103,13 +106,118 @@ Generated: 8/17/2026, 10:39:49 PM PT | window: last 72h | 96 tasks | index total
 | `1786763374566` | 8/15/2026, 12:12:47 AM | 133 | 591KB | #Frankenstein-LLM Suggish?  |
 | `1786772358561` | 8/15/2026, 12:10:09 AM | 420 | 2467KB | Not correct, where was the 40% number received. That's incorrect. What is the actual numbe |
 | `1786776463806` | 8/14/2026, 11:47:49 PM | 2 | 2KB | #Executor |
-| `1786759729330` | 8/14/2026, 11:27:23 PM | 648 | 1371KB | #Argus Learning |
-| `1786765205570` | 8/14/2026, 11:22:11 PM | 264 | 999KB | I have seen enough rules 317 violations that I am quite concerned on the number of reversi |
-| `1786696386569` | 8/14/2026, 11:17:34 PM | 92 | 332KB | #Unknown |
 
 ---
 
 ## Per-window detail
+
+### `1787027676077` — 8/17/2026, 11:39:35 PM PT — 273 turns
+
+**Original task:**
+
+```
+#BigMac 4th GPU
+
+Get the 4th GPU serving
+
+Big Mac is back and serving, and it can now recover itself remotely (verified: curl from WOPR to http://10.100.0.19:8000/v1/models returned 200; on-box battlemage=3, renderD=3, vLLM active, "startup complete" count=1; watchdog0 state=active, RuntimeWatchdogUSec=1min). The 4th GPU is still not online, and I hit a real setback on it that I reverted.
+
+## What caused the wedge
+
+Not OOM, not fork exhaustion, not a network ban. It was a total userspace freeze triggered by the PCI bus rescan I ran while probing for the 4th GPU.
+
+The evidence (verified from th
+```
+
+**Ideas referenced:** #178669, #178694, #18977, #19082 [blocked], #19524 [executing], #2073, #227960, #2341 [resolved], #2351, #2352 [investigating], #2354 [investigating], #25097 [awaiting_review], #25185, #2541 [investigating], #2558 [resolved], #2559, #2563, #2564 [investigating], #2565, #25888, #26211, #26233, #27137 [executing], #27140 [executing], #27142 [deployed], #27143 [executing], #27145 [executing], #27147 [unknown], #27152 [executing], #27155 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ | causal rule updated: 315\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1786948459 — Big Mac 4th B70 + remote-recovery hardening.\n\nWhere we left off (verified 2026-08-17 22:47 PT):\n- BIG MAC HEALTHY: 3x Battlemage B70 (43/83/87:00.0), renderD=3, vLLM active, models_http=200 from WOPR (verified: curl wopr_to_bigmac=200).\n- 4TH GPU REMOTE LEVERS EXHAUSTED (#27155 [proposed]): all remote attempts failed. Root port 00:01.2 shows PresDet-, Speed 2.5GT/s, EqualizationComplete-, EqualizationPhase1-, CommClk-, bus 01 has 0 devices. The port sees the card intermittently (PresDet oscillates after pcieport unbind/rebind) but cannot complete PHY equalization. setpci blocked by Secure Boot lockdown. nocrs caused SR-IOV regression (reverted). xe.max_vfs=0 no effect.\n- RECOVERY STACK LIVE (all verified this session): sp5100_tco chipset watchdog armed (watchdog0 state=active, RuntimeWatchdogUSec=1min); panic sysctls (panic=30, panic_on_oops=1, hung_task_panic=1); bigmac-session-canary.timer active; bigmac-watchdog-arm.service active.\n- WEDGE ROOT CAUSE (#27142 [deployed]): whole-userspace freeze at 19:48:25 triggered by PCI bus rescan. journald AND rsyslog stopped same instant, 0 lines each across 49-min dead window; zero ext4/nvme/OOM/fork evidence; kernel net stack alive. NOT resource exhaustion.\n- PROVEN IN PRODUCTION: detector fired real alert to #system-issues during outage (message id 1539121447526473732).\n\nOpen threads to drive next:\n1. #27155 [proposed] — 4th GPU next actions, all require hands: swap B70+adapter into known-good socket, try different M.2 adapter, disable Secure Boot in BIOS, set per-slot PCIe mode/gen limit. Physical access required.\n2. #27152 [executing] — adapter DIP switches (forced power start + long PERST). efficiency_priority=1.\n3. #27143 [awaiting_review] — SUPERSEDED BY #27147 [deployed]; the 00:01.2 PROVEN GOOD premise. Awaiting review.\n4. #27145 [awaiting_review] — WOPR alert paths silently dead. Awaiting review.\n5. #27140 [executing] — link NOW trains 8GT/s x4, remaining blockers. Executing.\n6. #27137 [executing] — bifurcation x8-from-x16 route. Executing.\n7. #25097 [awaiting_review] — Big Mac pool wiring / TP=4 flip. Awaiting review.\n8. #19082 [blocked] — slim remote power control. State unclear, needs look.\n9. #19524 [executing] — TP-Link rejected on form factor. Executing.\n\nReference IDs:\n- Ideas filed this session: #27155 [proposed]\n- Ideas carried: #27152 [executing], #27143 [awaiting_review], #27147 [deployed], #27145 [awaiting_review], #27142 [deployed], #27140 [executing], #27137 [executing], #25097 [awaiting_review], #19082 [blocked], #19524 [executing]\n- Bug library rows: incident 2563 (nocrs SR-IOV regression), 2564, 2565\n- Rules amended this session: 297 (x2), 315 (x2)\n- Files touched on Big Mac: /etc/modules-load.d/watchdog.conf, /etc/systemd/system.conf.d/10-watchdog.conf, /etc/sysctl.d/99-bigmac-recovery.conf, /usr/local/bin/bigmac_session_canary.sh, /etc/systemd/system/bigmac-session-canary.{service,timer}, /usr/local/bin/bigmac_watchdog_arm.sh, /etc/systemd/system/bigmac-watchdog-arm.service, /etc/default/grub (reverted, backup .bak-20260817-4thgpu)\n- Files touched on WOPR: /usr/local/bin/bigmac_wedge_detector.sh, /usr/local/bin/bigmac_wedge_detector_selftest.sh, /usr/local/bin/bigmac_wedge_alert.php, /etc/systemd/system/bigmac-wedge-detector.{service,timer}, /usr/local/bin/bigmac_return_watch_v2.sh\n- Prior task: #1786695610761 [supe
+```
+
+### `1787035094427` — 8/17/2026, 11:39:26 PM PT — 11 turns
+
+**Original task:**
+
+```
+# GLM 5.3: reminder set + your "why can't we use it" question answered
+
+Can we use it now? 
+
+## Direct answer: why can't we use GLM-5.3 cloud via z.ai in Cline / frankenstein-llm today?
+
+Because **Zhipu has not granted your account access yet — it is a server-side gate, not something we can configure around.** I proved this with a live request a few minutes ago, not a guess:
+
+- `POST https://api.z.ai/api/paas/v4/chat/completions` with `model=glm-5.3` using your real key returneode":"1220","message":"You do not have permission to access glm-5.3"}}`
+- The exact same request with `model=glm-5.2` 
+```
+
+**Ideas referenced:** #178693, #1993, #21586, #22229, #23455, #24895, #2537, #2539, #2546, #2547, #2554, #25830, #26046, #26196, #26225, #26471, #26475, #26476, #26495, #26496, #26507, #26515, #26625, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #366377, #8184
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787016619040` — 8/17/2026, 11:34:20 PM PT — 263 turns
+
+**Original task:**
+
+```
+#Jon/Argus
+
+Continue from YOLO window
+
+Stopped per instruction. Rule 91 comprehensive state handoff below.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787011000 — Argus process failure: Jon/Cori idea starvation + conv 2299 fabrication/siloing/CFA deflection + executor reconciliation.
+
+Where we left off (verified 2026-08-17 18:28 PT):
+- ArgusRuleProfile.php patched (4 gaps: dead DELIVERY_TRUTH_RULES restored, negative-claim evidence via rule 263, systemic-scope rule 297, act-don'
+```
+
+**Ideas referenced:** #15367, #178701, #18693, #19490, #19670, #20903, #21074, #23281, #24963, #25125, #25185, #2552, #26325 [approved], #26366 [proposed], #26367 [approved], #26369 [proposed], #26720, #26724, #26731, #26825 [executing], #26858 [blocked], #26924 [approved], #27012, #27062 [approved], #27065 [proposed], #27120 [executing], #27123 [blocked], #27124 [executing], #27125 [executing], #27126 [executing], #27136 [deployed], #27149 [deployed], #27163 [deployed], #344421, #344423, #344425, #344426, #344429, #8281, #8321
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787032087401` — 8/17/2026, 11:31:36 PM PT — 144 turns
+
+**Original task:**
+
+```
+#TDSHS 
+
+Curious here, the allegation is that ther ewas no medical director from December 2024 to July 2026, the response does not cover any period before July 2026, should it? I mean, the pink elephant is that Dr. Turner said he was not the medical director, however, the contract shows him as the Medical Director (even still technically under contract) and that Dr. Turner took over on July 22nd, but Turner still technically had a contract although repudiated later / technically a breach. Then we got another medical director anyway. So how do we address it reasonably but in a delecate way. 
+
+
+
+```
+
+**Ideas referenced:** #178695, #18676, #19572, #19576, #19578, #19581, #19599, #21278, #250541, #251044, #251128, #251428, #251444, #251447, #27073 [awaiting_review], #27100 [awaiting_review], #27108 [awaiting_review], #27112 [awaiting_review], #27114 [awaiting_review], #27127 [proposed], #27148 [awaiting_review], #27153 [executing], #27157 [proposed], #27158 [proposed], #27159 [proposed], #600179, #623992, #8212
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787032033318` — 8/17/2026, 10:47:13 PM PT — 1 turns
+
+**Original task:**
+
+```
+#TDSHS 
+
+Curious here, the allegation is that ther ewas no medical director from December 2024 to July 2026, the response does not cover any period before July 2026, should it? I mean, the pink elephant is that Dr. Turner said he was not the medical director, however, the contract shows him as the Medical Director (even still technically under contract) and that Dr. Turner took over on July 22nd, but Turner still technically had a contract although repudiated later / technically a breach. Then we got another medical director anyway. 
+
+
+--
+
+You were right on all three and I was wrong on all thr
+```
+
+**Ideas referenced:** #178695, #27073 [awaiting_review], #27100 [awaiting_review], #27108 [awaiting_review], #27112 [awaiting_review], #27114 [awaiting_review], #27127 [proposed], #27148 [awaiting_review], #27153 [executing]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787003799738` — 8/17/2026, 10:38:27 PM PT — 762 turns
 
@@ -135,53 +243,6 @@ Insp
 ```
 
 **Ideas referenced:** #1509, #15299, #178695, #19580, #19581, #2003, #22757, #23361, #24430, #25185, #25650, #25653, #25654, #25655, #2601, #27072 [deployed], #27073 [awaiting_review], #27100 [executing], #27107 [executing], #27108 [executing], #27112 [proposed], #27114 [proposed], #27116 [proposed], #27121 [proposed], #27124 [proposed], #27125 [proposed], #27127 [proposed], #27148 [unknown], #27153 [unknown], #2757, #2838, #2875, #2876, #2887, #4856, #4929, #664426, #9086, #9168, #9306, #9339
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787027676077` — 8/17/2026, 10:28:48 PM PT — 146 turns
-
-**Original task:**
-
-```
-#BigMac 4th GPU
-
-Get the 4th GPU serving
-
-Big Mac is back and serving, and it can now recover itself remotely (verified: curl from WOPR to http://10.100.0.19:8000/v1/models returned 200; on-box battlemage=3, renderD=3, vLLM active, "startup complete" count=1; watchdog0 state=active, RuntimeWatchdogUSec=1min). The 4th GPU is still not online, and I hit a real setback on it that I reverted.
-
-## What caused the wedge
-
-Not OOM, not fork exhaustion, not a network ban. It was a total userspace freeze triggered by the PCI bus rescan I ran while probing for the 4th GPU.
-
-The evidence (verified from th
-```
-
-**Ideas referenced:** #178669, #178694, #18977, #19082 [blocked], #19524 [executing], #2073, #227960, #2341 [resolved], #2351, #2352 [investigating], #2354 [investigating], #25097 [awaiting_review], #25185, #2541 [investigating], #2558 [resolved], #2559, #2563, #2564 [investigating], #2565, #26211, #26233, #27137 [executing], #27140 [executing], #27142 [deployed], #27143 [executing], #27145 [executing], #27147 [unknown], #27152 [executing]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787016619040` — 8/17/2026, 10:24:14 PM PT — 157 turns
-
-**Original task:**
-
-```
-#Jon/Argus
-
-Continue from YOLO window
-
-Stopped per instruction. Rule 91 comprehensive state handoff below.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787011000 — Argus process failure: Jon/Cori idea starvation + conv 2299 fabrication/siloing/CFA deflection + executor reconciliation.
-
-Where we left off (verified 2026-08-17 18:28 PT):
-- ArgusRuleProfile.php patched (4 gaps: dead DELIVERY_TRUTH_RULES restored, negative-claim evidence via rule 263, systemic-scope rule 297, act-don'
-```
-
-**Ideas referenced:** #15367, #178701, #18693, #19490, #19670, #21074, #25185, #2552, #26325 [approved], #26366 [proposed], #26367 [approved], #26369 [proposed], #26720, #26724, #26825 [executing], #26858 [blocked], #26924 [approved], #27012, #27062 [approved], #27065 [proposed], #27120 [executing], #27123 [blocked], #27124 [executing], #27125 [executing], #27126 [executing], #27136 [deployed], #27149 [deployed], #344421, #344423, #344425, #344426, #344429
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -3488,113 +3549,3 @@ First of all get the execuor working. Then we can discuss remainder -> v
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786759729330` — 8/14/2026, 11:27:23 PM PT — 648 turns
-
-**Original task:**
-
-```
-#Argus Learning
-
-So can you confirm them when I talk to Argus about this item here: https://emsuniversity.com/emtskills/routes/argus_task_status.php?task, that I will actually see the new iterations in that window? Because I've tried that before and it did not work. Can you test that to make sure that that actually works?
-
-The bug issues are something that should be or should have been resolved before we even got here in cline. Anyone should be able to have a bug fixed. If it's a bug it gets fixed.
-
-As for your idea I generally agree except for the human gated ones because I have provided role
-```
-
-**Ideas referenced:** #12184, #127891, #128275, #16213, #16523, #16868, #16922, #17202, #19079, #19325, #19416, #19491, #19494, #19499, #19503, #19643, #20164 [deployed], #20495, #21262, #21582, #21621, #22246, #22283, #22356, #22416, #22417, #22814, #22850, #22912, #23027, #23283, #23429, #23506, #2362 [deployed], #2363 [deployed], #2370 [deployed], #23761, #23920, #24051, #24283, #24436, #2457, #24877, #2498 [rejected], #2499, #2500, #2501, #2502, #2503, #25068, #25076 [deployed], #25125, #25131, #25185, #25256, #25257, #25642, #25848 [executing], #25887, #26191 [proposed], #26306, #26314, #26325 [executing], #26327, #26343, #26345 [deployed], #26346 [executing], #26349, #26363 [approved], #26364 [approved], #26365, #26366, #26367, #26369, #26371 [approved], #26372 [approved], #26401 [executing], #26402 [executing], #26404 [executing], #26405 [executing], #26415 [executing], #26416 [executing], #26417 [executing], #26420 [executing], #26421 [executing], #26429 [executing], #26436 [executing], #26437 [approved], #26470 [executing], #274160, #30363, #4811, #6374, #6520, #7543, #9650, #9660
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786765205570` — 8/14/2026, 11:22:11 PM PT — 264 turns
-
-**Original task:**
-
-```
-I have seen enough rules 317 violations that I am quite concerned on the number of reversions that have to be made. It does not seem to be getting much better. My thoughts would be that overtime we would have less of these but it seems like we are still having more and more of them and I'm not sure exactly if there's a way to do this more efficiently. There must be something that we are missing here. There must be something that we can do to make sure that the iterations are true sooner. Before they get hit with a 317. Again the 317 is a fail safe and it's supposed to also change the rules in 
-```
-
-**Ideas referenced:** #0000, #1080, #1104, #12363, #13874, #146084, #16224, #17685 [awaiting_review], #178669, #18329 [queued], #18800, #1899, #19173, #19175 [executing], #19176 [queued], #19511, #19898, #19899 [proposed], #19904, #20251, #202608, #20581 [executing], #20613 [executing], #20630 [executing], #21045 [executing], #2195, #2247, #2275, #2276, #2278, #2279, #2280, #2281, #2282, #2283, #2293, #2294, #2302, #2306, #23062 [awaiting_review], #2307, #2311, #23133 [executing], #2314, #23169 [awaiting_review], #2320, #2323, #23282 [executing], #24217, #25065 [executing], #25082 [executing], #25097 [executing], #25111 [proposed], #25122, #25125 [executing], #25130 [executing], #25131 [executing], #25151, #25172, #2518, #25182 [proposed], #25184 [proposed], #25185 [executing], #25186 [proposed], #25187 [proposed], #25195, #25196, #2522, #25220 [proposed], #25223 [executing], #25224 [awaiting_review], #25225 [executing], #25226 [executing], #25228 [executing], #25229 [proposed], #25236 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25242 [executing], #25245 [proposed], #25246 [proposed], #25247 [proposed], #25248 [proposed], #25256 [awaiting_review], #25263 [proposed], #25264 [proposed], #25266 [proposed], #25267 [proposed], #25268 [awaiting_review], #25269 [executing], #25270, #25279 [proposed], #25280 [executing], #25281 [proposed], #25282 [proposed], #25294 [proposed], #25295 [proposed], #25311, #25313 [awaiting_review], #25316 [proposed], #25366 [proposed], #25368, #25378 [proposed], #25379 [proposed], #2538, #25380 [proposed], #25381 [proposed], #25382 [proposed], #25383, #25389 [executing], #25425 [proposed], #25468, #25525 [executing], #25530 [executing], #25531 [executing], #25534 [executing], #25537 [executing], #25538 [proposed], #25540 [proposed], #25542 [proposed], #25548 [executing], #25549, #25551 [awaiting_review], #25555 [executing], #25560 [executing], #25561 [executing], #25562 [executing], #25565 [proposed], #25567 [executing], #25571 [proposed], #25580 [executing], #25593 [proposed], #2560, #25604 [proposed], #25605 [executing], #25606 [proposed], #25611 [executing], #25613 [executing], #25616 [proposed], #25617, #25626, #25627 [executing], #25631 [executing], #25638 [executing], #25639 [executing], #25646 [executing], #25663 [executing], #25666 [proposed], #25667 [proposed], #25669 [proposed], #25672 [executing], #25677 [executing], #25678 [executing], #25679 [executing], #25683 [proposed], #25715 [executing], #25747 [executing], #25753 [proposed], #25755 [awaiting_review], #25757 [proposed], #25759 [proposed], #25764 [executing], #25765 [executing], #25772 [executing], #25802 [proposed], #25806 [proposed], #25808 [proposed], #25812 [executing], #25859 [executing], #25860 [executing], #25869 [proposed], #25870 [proposed], #25871 [proposed], #25872 [executing], #25873 [proposed], #25876 [proposed], #2588, #25886 [executing], #25888, #25889 [awaiting_review], #25890 [proposed], #25891 [executing], #25904 [proposed], #25909 [proposed], #25912 [proposed], #25925, #25926, #25931 [proposed], #25933, #25935, #25941 [proposed], #25942, #25944 [proposed], #25950, #25952 [executing], #25953 [executing], #25971 [executing], #25973 [awaiting_review], #25975 [executing], #25976 [executing], #25985 [executing], #25986, #25990 [executing], #26002, #26008 [executing], #26017 [executing], #26027 [awaiting_review], #26035 [proposed], #26039 [executing], #26048 [executing], #26050 [executing], #26054 [executing], #26071 [executing], #26076 [executing], #26180 [executing], #26182 [executing], #26211 [proposed], #26259 [proposed], #2626, #26260 [proposed], #26261 [proposed], #26284 [proposed], #26325 [executing], #26349, #26355 [proposed], #26392 [proposed], #26401 [executing], #26415 [executing], #26417 [executing], #26435 [deployed], #26469 [proposed], #4494, #5344, #616207, #8143, #8145, #9728, #9731
-
-**Last PICKUP PROMPT:**
-
-```
- at 2026-08-14 23:19-23:21 PT.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — 317 reversal loop: backfill corrections into virtual EMSU Corpus (VEC), vLoRA guard decision, 317 corpus-feed hardening.
-
-Where we left off (verified 2026-08-14 11:21 PM PT):
-- 280 catalogued rule-317 gate failures condensed into `/var/www/emtskills/docs/317-reversal-corrections.md` (3 canonical modes: SELF_CONTRADICTING_DISPOSITION 251, R317_UNVERIFIED_STATE 24, R317_REVERSAL_LOG 5)
-- VEC indexer ran (`chunks_new:12`); `vec_query.php` live-verified returning the MODE 1 correction as top hit for a reversal-shaped query
-- Rule 317 Obligation 2 amended (server `/var/www/emtskills/clinerules/Rules/317-...md` + Mac `~/Documents/Cline/Rules/317-...md` + `CLINERULES_MIRROR.md` regenerated) with mandatory step (4): POST to `api/cline_correction_ingest.php` on reversal
-- Mechanical validator feed: `clinerules-mcp` src + build now auto-POST to that endpoint when the 91 gate detects SELF_CONTRADICTING_DISPOSITION (MCP restarted, build verified)
-- Endpoint `api/cline_correction_ingest.php` deployed with JSON-valid audit details; live-tested (correction id 8143, audit row 102031)
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #26469 — [proposed] VLoRA freshness-stamp guard: when the VLoRA spec's open questions are resolved (granularity, rollout flag, token budget), implement verified_at/verified_by/source_probe in bundle YAML + merge-time validation. No 317 gate needed for bundles.
-2. #26435 — [deployed] Corpus-feed loop: consider extending `cline_correction_ingest.php` to also append to `/var/www/emtskills/docs/317-reversal-corrections.md` (or a per-mode file) so every FUTURE caught reversal lands in the VEC automatically, not just backfilled ones. Currently only ai_learned_corrections gets the write; the VEC doc was hand-written this session.
-
-Reference IDs:
-- Ideas filed: #26435 [deployed], #26469 [proposed]
-- Files touched: /var/www/emtskills/docs/317-reversal-corrections.md, /var/www/emtskills/api/cline_correction_ingest.php, /var/www/emtskills/clinerules/Rules/317-reversal-triggers-297-and-rule-update.md, ~/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md, ~/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts, ~/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js
-- DBs/endpoints verified: /var/lib/emsu_corpus/corpus.db (VEC), api/vec_query.php, api/cline_correction_ingest.php, admin_portal.ai_learning_audit
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786696386569` — 8/14/2026, 11:17:34 PM PT — 92 turns
-
-**Original task:**
-
-```
-#Unknown
-
-Reba and tell me what's going on here because I don't really understand this task.
-
-Both issues are now investigated, and the wrong 9999-12-31 date is fixed and verified.
-
-## 1. How a student passes the final exam and is later scheduled for a retake
-
-This is a false-positive academic-integrity autofail, verified at the data level. In Moodle, `local_ai_violations` rows are stamped with the exact same unix second as the PASSING final-attempt finish, so the enforcement pipeline treats a passing attempt as a flagged/voided attempt and later drives the retake pipeline.
-
-Concrete verified 
-```
-
-**Ideas referenced:** #25888, #25989 [executing]
-
-**Last PICKUP PROMPT:**
-
-```
-ed in the previous completion.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #25989 [rejected] - Academic-integrity false-positive autofail: diagnosis DISPROVEN, all 4 students passed, no code change needed.
-
-Where we left off (verified 2026-08-14 23:17 PT):
-- All 4 cited students passed and their grades were never revoked: Samuel Frazier 144/150, Bailey Carpenter 139/150, Anshika Sethi 140/150, Arav Tyagi 135/150.
-- Citation rows are timing_warning/timing_flag (logged/flagged), not autofail; no retake was ever scheduled.
-- Arav's sole penalty is a legitimate deadline_miss; his passed grade is intact.
-- 9999-12-31 email date leak already fixed and verified (cron_email_responder.php:2675).
-- Idea #25989 [rejected]: premise disproven.
-- Ruben confirmed the outcome: all passed anyway, nothing further needed.
-
-Open threads to drive next:
-None - all work completed this session.
-
-Reference IDs:
-- Ideas filed: #25989 [rejected]
-- Files touched: /var/www/emtskills/cron/cron_email_responder.php, /var/www/emtskills/docs/HANDOFF_NOTES.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```

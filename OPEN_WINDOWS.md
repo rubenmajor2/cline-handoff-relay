@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/18/2026, 11:00:47 AM PT | window: last 72h | 89 tasks | index total 810 (parsed 2, cached 808)
+Generated: 8/18/2026, 12:00:48 PM PT | window: last 72h | 85 tasks | index total 810 (parsed 1, cached 809)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787073073602` | 8/18/2026, 11:00:19 AM | 77 | 204KB | # GLM 5.3: |
+| `1787073073602` | 8/18/2026, 11:55:42 AM | 304 | 1646KB | # GLM 5.3: |
 | `1787015733520` | 8/18/2026, 10:52:31 AM | 112 | 1202KB | I already opened up a window on this before about the 40% score required for examinations  |
 | `1787073033366` | 8/18/2026, 10:10:33 AM | 1 | 7KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
 | `1787032087401` | 8/18/2026, 3:22:44 AM | 316 | 1132KB | #TDSHS  |
@@ -95,16 +95,12 @@ Generated: 8/18/2026, 11:00:47 AM PT | window: last 72h | 89 tasks | index total
 | `1786818491154` | 8/15/2026, 1:03:24 PM | 300 | 642KB | #Joshua Hot FAllover |
 | `1786819237851` | 8/15/2026, 12:06:54 PM | 126 | 723KB | #SSS/CFA/267/ Executor |
 | `1786816732366` | 8/15/2026, 12:06:03 PM | 127 | 1556KB | Something is not working with info@emsuniversity.com. I was asked to re-authenticate this  |
-| `1786819650373` | 8/15/2026, 11:56:21 AM | 28 | 110KB | #Chat Widget |
-| `1786764883780` | 8/15/2026, 11:45:37 AM | 228 | 870KB | #Abandoned Cart Recovery |
-| `1786815116178` | 8/15/2026, 11:35:03 AM | 308 | 897KB | #SSS/CFA Issues / Virtual Lora |
-| `1786778041170` | 8/15/2026, 11:33:13 AM | 360 | 1836KB | #CFA  |
 
 ---
 
 ## Per-window detail
 
-### `1787073073602` — 8/18/2026, 11:00:19 AM PT — 77 turns
+### `1787073073602` — 8/18/2026, 11:55:42 AM PT — 304 turns
 
 **Original task:**
 
@@ -123,21 +119,50 @@ Because **Zhipu has not granted your account access yet — it is a server-side 
 - The exact same reque
 ```
 
-**Ideas referenced:** #11847, #16265, #19338, #19686, #1993 [deployed], #1998, #25185, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #27201 [proposed]
+**Ideas referenced:** #11847, #12584, #16265, #16844, #17202, #17203, #17205, #17300, #18312, #18868, #19338, #19686, #1993 [deployed], #1998, #22897, #25185, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #27201 [proposed], #27204 [proposed], #27205 [deployed]
 
 **Last PICKUP PROMPT:**
 
 ```
-ection of a mistaken claim.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up GLM-5.3 upgrade task. Cloud gate cleared + configured; bake-off next.\n\nWhere we left off (confirmed 2026-08-18 10:57 PT):\n- Zhipu cloud gate CLEARED 2026-08-18 10:13 PT (was error 1220). glm-5.3 returns HTTP 200 + choices + reasoning_content. Appears in Zhipu /api/paas/v4/models list (confirmed: raw curl + /models endpoint 2026-08-18 10:53 PT).\n- LiteLLM entry added: config.yaml:519, model zai/glm-5.3, direct Zhipu, parallel to glm-5.2 (untouched). YAML OK. Backup config.yaml.bak-glm53-20260818-105512 (confirmed: grep + yaml.safe_load 2026-08-18 10:55 PT).\n- LiteLLM reloaded via litellm-safe-restart.sh. Smoketest 63 models passed. Container Up, liveness 200 (confirmed: systemctl + docker ps + /health/liveness 2026-08-18 10:56 PT).\n- 3-way check: /v1/models has glm-5.3; direct completion returned OK; frankenstein_verify_routing HTTP 200 resolved_backend=api.z.ai 5.3s (confirmed: frankenstein_verify_routing probe 2026-08-18 10:57 PT).\n- NOT in any tier/fallback. Callable by name only. Bake-off gates promotion.\n- Still gated: OpenRouter (or=0), HuggingFace (hf=0, 401). Local ring (#26712 [proposed]) blocked on HF weights.\n- Tracker fired automatically: event 6609341, iMessage 6595 (chat 55). State zcloud=1 or=0 hf=0 (401).\n- Runbook updated: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md status CLEARED.\n\nOpen threads to drive next:\n1. #27201 [proposed]. Run bake-off: n=20 W/T glm-5.3 vs glm-5.2 (rule 121 double-judge + position-swap + rubric). Test coding, reasoning, tool-calling, EMSU policy. If wins/ties, proceed to #26713 [proposed].\n2. #26713 [proposed]. Cutover: flip registry tier L3 to glm-5.3, router_hook GLM-first target, FRANK_BOX_CAPACITY; retire glm-5.2 after 48h soak; update trackers with gate-cleared timestamps.\n3. #26712 [proposed]. When tracker fires HF gate-clear (hf=1): download zai-org GLM-5.3/FP8, AWQ 4-bit quant, single-box vLLM validate (glm47 tool parser / glm45 reasoning), then PP=6 Hex ring relaunch via the GLM52 recipe documented in #1993 [deployed].\n4. #26715 [deployed]. Monitor: check cron fires daily (check orchestrator_event_log source=glm53-release); if no rows in 48h, check /var/log/cron + run script manually.\n5. (human-only decision, no idea). Ruben decides whether to push Zhipu/OpenRouter for faster OR/HF release, or stand down on local ring until HF publishes.\n\nReference IDs:\n- Ideas filed: #27201 [proposed]\n- Ideas deployed: #26711 [deployed], #26715 [deployed], #1993 [deployed]\n- Ideas proposed: #26712 [proposed], #26713 [proposed]\n- Files touched: /etc/litellm/config.yaml (line 519 glm-5.3 entry added), /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md (status updated), /etc/litellm/config.yaml.bak-glm53-20260818-105512 (backup)\n- Event log: 6609341 (gate-clear alert), 6409723 (prior still-gated baseline 8/15)\n- iMessage: 6595 (chat 55, gate-clear notification sent)\n\nWhen done, append to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════",
-  "task_prompt": "is it ready yet? Can we use GLM 5.3 now? reminder set + your \"why can't we use it\" question answered",
-  "task_id": "26711"
-}
-</arguments>
-<server_name>clinerules</server_name>
-<tool_name>clinerules_validate_completion</tool_name>
-<task_progress>
-- [x] Live-verified Zhipu glm-5.3 200 + choices (gate CLEARED)
-- [x] Inserted parallel gl
+o incorrect claim was shipped.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #27205 [deployed]. GLM-5.3 fleet-wide repoint shipped; bake-off and cost monitoring next.
+
+Where we left off (verified 2026-08-18 11:53 PT):
+- All 12 GLM LiteLLM handles repointed to zai/glm-5.3 cloud. Handle names unchanged so fallback chains/registry/router_hook/callers work unmodified (verified: config dump showing all 12 mapped to zai/glm-5.3 at api.z.ai, 2026-08-18 11:50 PT).
+- frankenstein_registry.yaml glm-5.2 + glm-5.2-local rows repointed; glm-5.2-local flipped free/body/vllm-probe to paid/cloud/no-probe (verified: yaml.safe_load returned REGISTRY YAML OK, 2026-08-18 11:36 PT).
+- router_hook.py: glm-5.3 added to _GLM_DIRECTIVE_MODELS (verified: ast.parse returned ROUTER_HOOK SYNTAX OK, 2026-08-18 11:37 PT).
+- Single Zhipu account for all GLM lanes caused live 429s and hard errors on zero-spillover lanes. Added glm-ring-local free ring as LAST fallback on all 10 GLM lanes (verified: glm-ring-local returned real vLLM completion, system_fingerprint vllm-0.23.1rc1-pp6, 2026-08-18 11:48 PT).
+- LiteLLM restarted, liveness 200, 64 models loaded (verified: liveness probe returned 200 and restart log said litellm up in 30s, 2026-08-18 11:46 PT).
+- glm-5.3 returns HTTP 200 with real completion body model=glm-5.3 (verified: raw curl through LiteLLM, 2026-08-18 11:50 PT).
+- Local GLM-5.3 still impossible: zai-org weights HF 401-gated.
+- Backups: config.yaml.bak-glm53-repoint-20260818-1130, config.yaml.bak-glm53-prefallback-20260818-1145, router_hook.py.bak-glm53-20260818.
+- Runbook updated with full change record + rollback recipe.
+
+Open threads to drive next:
+1. #27201 [executing]. Bake-off n=20 W/T glm-5.3 vs glm-5.2 per rule 121 (double-judge, position-swap, rubric). Higher stakes now that 5.3 is live fleet-wide; if 5.3 loses, roll back via the documented recipe.
+2. #27204 [proposed]. Monitor Zhipu spend + rate-limit frequency daily for one week. If sustained 429s, flip high-volume lanes (argus-chat, frankenstein-deep, glm-5.2-smart) to glm-ring-local PRIMARY with cloud 5.3 as fallback, preserving free-local-first per rule 146.
+3. #26712 [proposed]. When the tracker reports HF gate-open (hf=1): download zai-org GLM-5.3/FP8, AWQ 4-bit quant, single-box vLLM check, then PP=6 Hex ring relaunch. That restores genuinely free local 5.3 and removes cloud cost exposure.
+4. #26713 [proposed]. Tier promotion: registry tier L3/L4g flip pending bake-off outcome.
+5. #26715 [deployed]. Monitor: confirm the release tracker cron still fires daily for the OpenRouter and HF surfaces (orchestrator_event_log source=glm53-release).
+
+Reference IDs:
+- #27205 [deployed] (this session's repoint)
+- #26711 [deployed] (cloud gate cleared + initial wiring)
+- #26715 [deployed] (release tracker)
+- #27201 [executing] (bake-off)
+- #27204 [proposed] (cost + rate-limit monitoring)
+- #26712 [proposed] (local ring, pending HF weights)
+- #26713 [proposed] (tier cutover, pending bake-off)
+- Files touched: /etc/litellm/config.yaml, /etc/litellm/frankenstein_registry.yaml, /etc/litellm/router_hook.py, /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md
+- Backups: /etc/litellm/config.yaml.bak-glm53-repoint-20260818-1130, /etc/litellm/config.yaml.bak-glm53-prefallback-20260818-1145, /etc/litellm/router_hook.py.bak-glm53-20260818
+
+When done, append to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═════════════════════════════════════════
 ```
 
 ### `1787015733520` — 8/18/2026, 10:52:31 AM PT — 112 turns
@@ -3247,172 +3272,5 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════
 </result>
 <command>true</command>
-</attempt_completion>
-```
-
-### `1786819650373` — 8/15/2026, 11:56:21 AM PT — 28 turns
-
-**Original task:**
-
-```
-#Chat Widget
-
-Rebates and tell me what remains here
-
-Yes, we have DNC lists and they are working. What was NOT working is a completely different thing: an auto-acknowledgment handler that has been silently broken since it was written, sending branded thank-you emails to spammers.
-
-# DNC: verified working as designed
-
-`lib/mailer.php`'s `sendEmail()` runs a DNC gate before every send (verified: line 523, checking `student_notification_preferences`, `postmark_suppression_cache`, and `repeat_caller_suppression`), logging every block to `email_send_blocks`. This is separate code from the bug below
-```
-
-**Ideas referenced:** #16732, #23133 [approved], #2511, #25961 [rejected], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25986 [deployed], #26003 [deployed], #26038 [approved], #26039 [deployed], #26040 [approved], #26041 [approved], #26045 [approved], #26048 [ready_for_review], #26049 [rejected], #26050 [approved], #26054 [approved], #26065 [executing], #26090 [deployed], #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-otstrap ref, not per-file. P1.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #26065 [executing], CFA steering follow-through: wire the built silence crons + build the no-rule-text canary.
-
-Where we left off (verified 2026-08-15 11:54 PT):
-- Re-based 3 old chat threads vs live state. #26090 fix confirmed firing (suppressed_spam=78). CFA markers, local-first webhook, and reqguard gate 5 all verified on disk.
-- Silence detector is NOT impl_failed anymore: cron/cron_chat_silence_rate.php and cron/cron_universal_cfa_silence_guard.php both EXIST but are UNWIRED (no crontab, tables, or kill-switch review confirmed).
-- #26065 no-rule-text daily canary still NOT built.
-
-Open threads to drive next:
-1. #26065 [executing] P1. Wire the two silence crons live: confirm/migrate dependent tables (chat_silence_rate_daily), add crontab entries, verify kill-switch path, then build the daily no-rule-text canary (probe frankenstein-llm WITH CFA marker, alert if reply contains attempt_completion/DSML/rule-00/41/91 text). Verify with a live canary run, not grep.
-2. #26613 [proposed] P1. Remove inline admin_portal DB password from both silence crons + cron_chat_widget_health_sweep.php; centralize DB creds in one shared bootstrap. Then grep cron/*.php for the literal iV84o80^y to confirm zero remain.
-3. #26050 [executing], #26054 [awaiting_review] — decide: the silence crons exist so these need review/deploy rather than ground-up build. Confirm the crons satisfy each idea's spec, then reconcile status.
-4. Parked approved-idle (human re-review, do NOT auto-approve): #26045 [executing], #26041 [executing], #26040 [executing], #26038 [executing], #23133 [executing].
-5. Msgs 73129, 73133, 74957 (human-only decision, no idea) — three students told to self-mark attendance over chat; may need correction by Vicky/Jon.
-
-Reference IDs:
-- Ideas: #26065 [executing], #26050 [executing], #26054 [awaiting_review], #26613 [proposed], #26003 [deployed], #26090 [deployed], #25962-66 [deployed], #26045/#26041/#26040/#26038/#23133 [executing]
-- Files on disk (verified): cron/cron_chat_silence_rate.php, cron/cron_universal_cfa_silence_guard.php, cron/cron_synthetic_canary_rule91.php (GeneratorExit canary, NOT the steering canary), api/livechat/webhook.php, lib/AgentReplyPipeline.php
-- HANDOFF_NOTES updated this session with the full re-base (section "2026-08-15 — Chat widget 3-thread re-base")
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Reconcile current status of all 20 idea IDs from the 3 old threads
-- [x] Verify on-disk state of key files/deployments claimed in old threads
-- [x] Produce consolidated re-based deliverable doc
-- [x] File any valuable non-stale ideas that are missing
-- [x] Update ledger/handoff notes
-</task_progress>
-</attempt_completion>
-```
-
-### `1786764883780` — 8/15/2026, 11:45:37 AM PT — 228 turns
-
-**Original task:**
-
-```
-#Abandoned Cart Recovery
-
-Can you tell me whether VAPI sales agent is functioning properly? How are we doing on our cart recovery and yeah how is all of that going? Abandoned Cart recovery? SMS, email as wellOn this point
-```
-
-**Ideas referenced:** #100340, #100353, #1475, #16523, #16811, #1976, #20113, #20957, #20958, #24370, #24372, #24611, #24613, #24635, #24645, #2563, #25888, #26432 [deployed], #26433 [proposed], #26435, #26585 [deployed], #26602 [proposed], #2980, #4937, #8150, #9019, #969959, #970704, #970924, #970985, #971236, #971384, #972203, #975374, #975654, #989118, #989474, #989862, #990105, #990299, #990703, #997203, #997313, #997395, #997587, #997812, #997972, #999750
-
-**Last PICKUP PROMPT:**
-
-```
-corpus correction id #8150
-```
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — close the loop on Abandoned Cart Recovery conversion + newly-deployed rule-317 addendum.
-
-Where we left off (verified 2026-08-15 11:45 AM PT):
-- Rule 317 addendum deployed: "resumption after interrupted attempt_completion must not re-ship a completion" appended to clinerules/Rules/317-reversal-triggers-297-and-rule-update.md at line 99. Idea #26602 [deployed]. Correction ingested as ai_learned_corrections id #8150 (stale assumption / tool_usage).
-- Recovery stack: email cron LIVE (26 emails sent, contact_log = 26), dialer healthy (weekend skip), canary #26585 ALL OK every 30 min, sandiego import clean since 00:30. Conversions since 8/14 21:00 PT = 0 (expected — weekend).
-
-Open threads to drive next:
-1. #26432 [deployed] — On/after Monday 8/17, re-check `abandoned_carts.converted_at` for rows > 2026-08-14 21:00:00 PT and attribute each to touch (1h/24h/72h email vs voice dialer). If still 0 by Wed 8/19, check Postmark deliverability + spam gate (spam_score < 3).
-2. #26585 [deployed] — Keep watching /var/log/emsu-wp-password-canary.log for ALL OK; any FAIL now auto-alerts rmajor@emsuniversity.com.
-
-Reference IDs:
-- Ideas: #26432 [deployed], #26433 [deployed], #26585 [deployed], #26602 [deployed]
-- Correction row: ai_learned_corrections #8150
-- Files touched: /var/www/emtskills/cron/cron_abandoned_cart_email.php, /var/www/emtskills/cron/cron_wp_password_canary.php, /var/www/emtskills/lib/website_config.php, /var/www/emtskills/_scripts/probe_refresher_creds.php, /var/www/emtskills/clinerules/Rules/317-reversal-triggers-297-and-rule-update.md, crontab log path
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786815116178` — 8/15/2026, 11:35:03 AM PT — 308 turns
-
-**Original task:**
-
-```
-#SSS/CFA Issues / Virtual Lora
-
-continue here / we need to make some tweaks. My notes below:
-
-Everything is healthy, and yes, the new data changes my read on both #26424 [proposed] and #26447 [proposed]. Short version: the SYSFOLD finding almost certainly IS the shallow-email root cause, and the timeline lines up exactly with the 8/14 LoRA retirement.
-
-## System health since the fixes (8.5 hours of runtime)
-
-- SYSFOLD has fired 312 times since 01:20 PT with ZERO `sysfold_error` / `steering_inject_error` / `cfa_steer_error` events (verified: live grep of `/tmp/emsu_router_audit.log` this sessio
-```
-
-**Ideas referenced:** #1506, #17130 [superseded], #17537 [rejected], #18132 [deployed], #19125, #19173, #20021, #20128, #20569, #20903, #23281, #23365, #23372, #23382, #23413, #24963, #25125, #25185, #25796, #25973, #26002, #26027, #26080, #26084, #26085, #26117, #26124, #26221, #26222, #26314, #26323, #26376 [deployed], #26377 [deployed], #26385, #26396 [proposed], #26424 [proposed], #26430 [proposed], #26434 [proposed], #26447 [proposed], #26461 [executing], #26469 [executing], #26490, #26501 [deployed], #26503 [deployed], #26504 [executing], #26505 [deployed], #26506 [deployed], #26507 [deployed], #26515 [deployed], #26525 [deployed], #26586 [proposed], #26591 [unknown], #26592 [deployed], #26593 [unknown], #26595 [deployed], #26597 [deployed], #26598 [deployed], #26599 [deployed], #26600 [proposed], #33209, #33222, #362853, #362854, #362857, #362858, #362859, #362863, #362881, #362910, #362912, #362914, #362931, #362936, #362937, #362945, #362976, #363012, #363069, #363077, #363112, #363382, #363404, #363493, #363693, #363761, #364078, #364150, #364168, #57890
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786778041170` — 8/15/2026, 11:33:13 AM PT — 360 turns
-
-**Original task:**
-
-```
-#CFA 
-
-Rebase and tell me what else needs to be done here if anything
-
-This is incredibly vague. What's wrong with Email Agent? Can you look into it and see what's going on? Fix it? Same with other CFAs?
-```
-
-**Ideas referenced:** #0066, #1070, #1089, #1164, #1166, #13047, #13442, #13965, #13977, #14741, #14742, #14743, #14748, #14749, #1636, #16418, #16445, #16473, #1668, #16732, #17712, #177949, #178686, #18132, #18135, #18176, #18309, #18313, #18853, #1892, #19802, #19830, #19918, #2018, #20569, #2145 [investigating], #22060, #2214, #2219, #2220 [resolved], #22250, #22261, #23211, #2323 [investigating], #2324 [resolved], #2328, #2341, #2343, #2344, #2358 [resolved], #2363 [resolved], #23710, #2406 [open], #25025, #2504 [resolved], #2511 [open], #25185, #25564, #2563, #25795, #25913, #25989, #26068, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26319, #26336, #26348, #26368, #26475, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #2782, #3261, #3319, #3346, #3587, #3957, #4686, #4689, #4929, #4930, #4931, #4957, #4958, #5095, #5391, #5431, #5574, #5638, #5768, #5770, #5779, #5787, #5792, #5793, #5794, #5795, #5819, #6039, #605250, #6064, #620781, #6230, #6789, #7126, #7164, #7174, #7359, #7368, #7381, #7548, #7550, #9132, #9222
-
-**Last PICKUP PROMPT:**
-
-```
- approved the location. Fixed.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786860000000 CFA fleet follow-through: 10 fixes deployed via SSH to WOPR, RCA delivered, Miami deferred 90d.
-
-Where we left off (verified 2026-08-15 11:32 PT):
-- 10 fixes deployed, php -l clean, .bak-20260815-* backups on WOPR: lib/session_bootstrap.php, cron/cron_email_responder.php, cron/cron_ai_ticket_agent.php, lib/ai_ticket_agent.php, lib/website_config.php, lib/RegistrationSurfaceHealth.php
-- Email responder 0 errors across 4 clean runs since 00:45; ticket agent 0 json_decode FATALs since 01:02, cron reaches complete
-- RegistrationSurfaceHealth verified ALL: 11 domains PASS. Miami dropdown SKIP (state not approved). Gate read-only: single SELECT MAX(course_start_date), no writes (grep verified)
-- #26508 [proposed] Miami deferred 90 days, revisit only after state approval (Ruben says 60-90 days). Gate already correct; no code change needed at go-live.
-- #26509 [proposed] (verified: status=proposed dev_stage=idle) Mac-to-WOPR rule/handoff sync relay. Both sides last synced 2026-07-12 (~33d). WOPR local 2 commits ahead + ~25 dirty files. Ruben to decide if the channel is still in use. NOT a production deploy path; production is SSH.
-
-Open threads:
-1. #26509 [proposed] Mac-to-WOPR cline-handoff-relay sync channel: is it still in use? Ruben decides. If yes: next step is pull from origin (0 divergence, fast-forward), then the local 2 commits + dirty files get sorted. If no: reject with "channel retired." No action taken without Ruben's word.
-
-Reference IDs:
-- Ideas: #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed]
-- Bug library: frankenstein_router_incidents record 2511
-- Files touched: the 6 files listed above
-- Logs: /var/log/emsu_email_responder.log, /var/log/emsu_ai_ticket_agent_cron.log, /var/log/emsu_ai_ticket_agent.log
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```

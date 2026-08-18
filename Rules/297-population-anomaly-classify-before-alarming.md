@@ -237,3 +237,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Big Mac 4th GPU: I asserted "leading cause is slot power, an M.2 socket gives ~8-10W and a B70 is a discrete 32GB GPU" as the explanation for a trained link that never answers config reads. Ruben corrected it live: the adapter has a 6-pin aux power input fed by a SATA cable from the PSU and is delivering 75W. The card was never power-starved. I reasoned from a generic property of the M.2 FORM FACTOR (its socket power budget) without ever asking what the specific adapter in this machine was wired to, and no probe I ran could have told me, because auxiliary power delivery is invisible to lspci/sysfs. Amendment: before attributing a fault to insufficient power, delivery, cooling, or any other PHYSICAL SUPPLY to a component, establish what is actually connected to it, and state plainly that the supply path is unverifiable remotely if no probe covers it. A property of a form factor or a spec sheet is NOT a measurement of the installed instance. When the supply path cannot be probed, the cor
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-18 04:49 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786948459
+- RCA bucket: unread source
+- Trigger pattern: Attributing device behavior to a port/slot on the basis of a kernel-assigned ordinal (PCI bus number, ifindex, minor number) matching across boots, without resolving which parent actually owned that o
+- Reversal note: Big Mac 4th GPU: a prior window concluded "root port 00:01.2 is NOT defective" because bus 01 enumerated on 2 of 8 boots carrying the NVMe at full function, and on that basis RETRACTED the socket-inequality lead. Both were wrong from the same defect: the claim matched on the BUS NUMBER without ever checking which PORT owned that bus. Per-port tabulation across 12 boots shows that on the 2 "working" boots port 00:01.2 did not enumerate at all and port 00:01.3 had been renumbered to secondary bus 01 -- it was 01.3 carrying the NVMe. Port 00:01.2 has never had a working device on any boot, and direct register comparison shows the two M.2 sockets ARE unequal (01.2 = Gen4 16GT/s CommClk-, 01.3 = Gen5 32GT/s CommClk+), so the retraction removed the correct lead. Amendment: PCI bus numbers, interface indices, minor numbers and any other kernel-assigned ordinal are NOT stable identifiers and must never be used to attribute a behavior to a device or port. Before claiming that a specific port/sl
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-18 05:36 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786952400
+- RCA bucket: unread source
+- Trigger pattern: Assessing a case or party's exposure and declaring a theory unsupported after reading only the citation document, without opening the case file's existing analysis and correspondence records
+- Reversal note: Asked for a strategic read on the TDSHS casefile, I declared the illegal-search theory "NOT supported by anything I have read" and characterised the 5196 deficiency as "one citation, one regulation" and simple. Both were wrong and both were disprovable from documents already on the server that I had not opened. DRAFT_email_2026-07-28_production_and_entry.md records the DEPARTMENT'S OWN WRITTEN ACCOUNT of the June 19 entry: the inspector entered through an unlocked exterior door, the administration door was shut but not locked and he opened it and then shut it, he was unaccompanied throughout with no program representative present, and he photographed rosters and sign-in sheets - two of the three photographed documents undated or illegible by the Department's own description, and NONE belonging to the course under inspection. EMSU also holds 8 preserved surveillance clips of the entry. The deficiency is likewise interpretive, not simple: the filed course notification (application 26684)
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

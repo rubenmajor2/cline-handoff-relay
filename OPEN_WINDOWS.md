@@ -6,18 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/17/2026, 9:39:49 PM PT | window: last 72h | 96 tasks | index total 805 (parsed 2, cached 803)
+Generated: 8/17/2026, 10:39:49 PM PT | window: last 72h | 96 tasks | index total 805 (parsed 3, cached 802)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787027676077` | 8/17/2026, 9:39:45 PM | 15 | 51KB | #BigMac 4th GPU |
+| `1787003799738` | 8/17/2026, 10:38:27 PM | 762 | 2712KB | #TDSHS |
+| `1787027676077` | 8/17/2026, 10:28:48 PM | 146 | 448KB | #BigMac 4th GPU |
+| `1787016619040` | 8/17/2026, 10:24:14 PM | 157 | 319KB | #Jon/Argus |
 | `1787024184393` | 8/17/2026, 9:11:28 PM | 206 | 453KB | #Big Mac 4th GPU |
-| `1787003799738` | 8/17/2026, 9:07:16 PM | 618 | 2250KB | #TDSHS |
 | `1787022593417` | 8/17/2026, 8:35:20 PM | 125 | 266KB | #Big Mac 4th GPU |
 | `1787019164930` | 8/17/2026, 8:04:28 PM | 238 | 1066KB | #Big Mac 4th GPU |
 | `1787019098209` | 8/17/2026, 7:11:38 PM | 1 | 7KB | #Big Mac 4th GPU |
 | `1786948459253` | 8/17/2026, 7:04:08 PM | 142 | 258KB | #Big Mac 4th GPU |
-| `1787016619040` | 8/17/2026, 6:42:38 PM | 58 | 143KB | #Jon/Argus |
 | `1787014605175` | 8/17/2026, 6:29:12 PM | 154 | 347KB | #Jon / Argus |
 | `1787015733520` | 8/17/2026, 6:28:16 PM | 104 | 1182KB | I already opened up a window on this before about the 40% score required for examinations  |
 | `1787014473253` | 8/17/2026, 6:20:07 PM | 120 | 612KB | Check /emtskills - slow as hell again check emtskills slowness document on desktop. please |
@@ -111,49 +111,7 @@ Generated: 8/17/2026, 9:39:49 PM PT | window: last 72h | 96 tasks | index total 
 
 ## Per-window detail
 
-### `1787027676077` — 8/17/2026, 9:39:45 PM PT — 15 turns
-
-**Original task:**
-
-```
-#BigMac 4th GPU
-
-Get the 4th GPU serving
-
-Big Mac is back and serving, and it can now recover itself remotely (verified: curl from WOPR to http://10.100.0.19:8000/v1/models returned 200; on-box battlemage=3, renderD=3, vLLM active, "startup complete" count=1; watchdog0 state=active, RuntimeWatchdogUSec=1min). The 4th GPU is still not online, and I hit a real setback on it that I reverted.
-
-## What caused the wedge
-
-Not OOM, not fork exhaustion, not a network ban. It was a total userspace freeze triggered by the PCI bus rescan I ran while probing for the 4th GPU.
-
-The evidence (verified from th
-```
-
-**Ideas referenced:** #178669, #178694, #19082 [blocked], #19524 [executing], #25097 [awaiting_review], #2558, #2559, #2563, #27137 [executing], #27140 [executing], #27142 [deployed], #27143 [executing], #27145 [executing]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787024184393` — 8/17/2026, 9:11:28 PM PT — 206 turns
-
-**Original task:**
-
-```
-#Big Mac 4th GPU
-
-Tech is powercycling it now:
-
-Answering your question directly: no, the UniFi Dream Machine is not banning it, and neither is Imunify360. Both are cleared with positive evidence, and the fault is on Big Mac itself.
-
-## The MAC and IP you asked for
-
-Yes, "ubuntu 56 ca" is Big Mac. **MAC 30:56:0f:47:56:ca**, UniFi client hostname `ubuntu` (verified: fresh WOPR ARP returned `192.168.1.208 dev eno1 lladdr 30:56:0f:47:56:ca`, and the UDM's own `ip neigh` returned `192.168.1.208 dev br0 lladdr 30:56:0f:47:56:ca REACHABLE`). And you were right that the IP had not changed: **192.168.
-```
-
-**Ideas referenced:** #178669, #178694, #1875, #18977, #19082 [executing], #19524 [awaiting_review], #2297, #25097 [awaiting_review], #2563 [deployed], #26209 [rejected], #26211 [rejected], #26238 [rejected], #27137 [executing], #27140 [executing], #27142 [executing], #27143 [proposed], #27144, #27145 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787003799738` — 8/17/2026, 9:07:16 PM PT — 618 turns
+### `1787003799738` — 8/17/2026, 10:38:27 PM PT — 762 turns
 
 **Original task:**
 
@@ -176,7 +134,74 @@ Inspection Number 5196
 Insp
 ```
 
-**Ideas referenced:** #1509, #15299, #178695, #2003, #22757, #25185, #27072 [deployed], #27073 [awaiting_review], #27100 [executing], #27107 [executing], #27108 [executing], #27112 [proposed], #27114 [proposed], #27116 [proposed], #27121 [proposed], #27124 [proposed], #27125 [proposed], #27127 [proposed], #4856, #4929, #664426, #9086, #9168, #9306, #9339
+**Ideas referenced:** #1509, #15299, #178695, #19580, #19581, #2003, #22757, #23361, #24430, #25185, #25650, #25653, #25654, #25655, #2601, #27072 [deployed], #27073 [awaiting_review], #27100 [executing], #27107 [executing], #27108 [executing], #27112 [proposed], #27114 [proposed], #27116 [proposed], #27121 [proposed], #27124 [proposed], #27125 [proposed], #27127 [proposed], #27148 [unknown], #27153 [unknown], #2757, #2838, #2875, #2876, #2887, #4856, #4929, #664426, #9086, #9168, #9306, #9339
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787027676077` — 8/17/2026, 10:28:48 PM PT — 146 turns
+
+**Original task:**
+
+```
+#BigMac 4th GPU
+
+Get the 4th GPU serving
+
+Big Mac is back and serving, and it can now recover itself remotely (verified: curl from WOPR to http://10.100.0.19:8000/v1/models returned 200; on-box battlemage=3, renderD=3, vLLM active, "startup complete" count=1; watchdog0 state=active, RuntimeWatchdogUSec=1min). The 4th GPU is still not online, and I hit a real setback on it that I reverted.
+
+## What caused the wedge
+
+Not OOM, not fork exhaustion, not a network ban. It was a total userspace freeze triggered by the PCI bus rescan I ran while probing for the 4th GPU.
+
+The evidence (verified from th
+```
+
+**Ideas referenced:** #178669, #178694, #18977, #19082 [blocked], #19524 [executing], #2073, #227960, #2341 [resolved], #2351, #2352 [investigating], #2354 [investigating], #25097 [awaiting_review], #25185, #2541 [investigating], #2558 [resolved], #2559, #2563, #2564 [investigating], #2565, #26211, #26233, #27137 [executing], #27140 [executing], #27142 [deployed], #27143 [executing], #27145 [executing], #27147 [unknown], #27152 [executing]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787016619040` — 8/17/2026, 10:24:14 PM PT — 157 turns
+
+**Original task:**
+
+```
+#Jon/Argus
+
+Continue from YOLO window
+
+Stopped per instruction. Rule 91 comprehensive state handoff below.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787011000 — Argus process failure: Jon/Cori idea starvation + conv 2299 fabrication/siloing/CFA deflection + executor reconciliation.
+
+Where we left off (verified 2026-08-17 18:28 PT):
+- ArgusRuleProfile.php patched (4 gaps: dead DELIVERY_TRUTH_RULES restored, negative-claim evidence via rule 263, systemic-scope rule 297, act-don'
+```
+
+**Ideas referenced:** #15367, #178701, #18693, #19490, #19670, #21074, #25185, #2552, #26325 [approved], #26366 [proposed], #26367 [approved], #26369 [proposed], #26720, #26724, #26825 [executing], #26858 [blocked], #26924 [approved], #27012, #27062 [approved], #27065 [proposed], #27120 [executing], #27123 [blocked], #27124 [executing], #27125 [executing], #27126 [executing], #27136 [deployed], #27149 [deployed], #344421, #344423, #344425, #344426, #344429
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787024184393` — 8/17/2026, 9:11:28 PM PT — 206 turns
+
+**Original task:**
+
+```
+#Big Mac 4th GPU
+
+Tech is powercycling it now:
+
+Answering your question directly: no, the UniFi Dream Machine is not banning it, and neither is Imunify360. Both are cleared with positive evidence, and the fault is on Big Mac itself.
+
+## The MAC and IP you asked for
+
+Yes, "ubuntu 56 ca" is Big Mac. **MAC 30:56:0f:47:56:ca**, UniFi client hostname `ubuntu` (verified: fresh WOPR ARP returned `192.168.1.208 dev eno1 lladdr 30:56:0f:47:56:ca`, and the UDM's own `ip neigh` returned `192.168.1.208 dev br0 lladdr 30:56:0f:47:56:ca REACHABLE`). And you were right that the IP had not changed: **192.168.
+```
+
+**Ideas referenced:** #178669, #178694, #1875, #18977, #19082 [executing], #19524 [awaiting_review], #2297, #25097 [awaiting_review], #2563 [deployed], #26209 [rejected], #26211 [rejected], #26238 [rejected], #27137 [executing], #27140 [executing], #27142 [executing], #27143 [proposed], #27144, #27145 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -277,31 +302,6 @@ Ruben Major:
 ```
 
 **Ideas referenced:** #178668, #178669, #2299, #2507 [investigating], #25097 [executing], #25185, #2541 [deployed], #2542, #2557, #26209 [proposed], #26211 [executing], #26233 [rejected], #26237 [rejected], #26238 [proposed], #27100
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787016619040` — 8/17/2026, 6:42:38 PM PT — 58 turns
-
-**Original task:**
-
-```
-#Jon/Argus
-
-Continue from YOLO window
-
-Stopped per instruction. Rule 91 comprehensive state handoff below.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787011000 — Argus process failure: Jon/Cori idea starvation + conv 2299 fabrication/siloing/CFA deflection + executor reconciliation.
-
-Where we left off (verified 2026-08-17 18:28 PT):
-- ArgusRuleProfile.php patched (4 gaps: dead DELIVERY_TRUTH_RULES restored, negative-claim evidence via rule 263, systemic-scope rule 297, act-don'
-```
-
-**Ideas referenced:** #15367, #178701, #19490, #19670, #25185, #2552, #26720, #26724, #26825 [executing], #26858 [blocked], #27012, #27065 [proposed], #27120 [executing], #27123 [blocked], #27124 [executing], #27125 [executing], #27126 [executing], #27136 [deployed], #344421, #344423, #344425, #344426, #344429
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 

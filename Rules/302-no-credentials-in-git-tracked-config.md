@@ -65,3 +65,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Given a two-sentence, dateless complaint alleging wrong-class enrollment and a first-week lockout, I built a 5,000-character evidentiary answer volunteering an internal activity name, a completion gap, our own imperfect sweeps, and a self-blame narrative. Ruben: "you didn't dissect the complaint properly ... it doesn't require the degree of information that you required because it was not asked for ... we need to get more information from the state in order to properly respond. That is on them to provide to us not us to even ask for." Amendment, a COMPLAINT DISSECTION method to run before drafting any regulator response: (1) quote the allegation and split it into its discrete elements; (2) for each element ask what provision it is said to violate, and if the letter does not name one, say so; (3) for each element ask what the record shows and answer ONLY that element; (4) where the allegation lacks a date, an act, or a party, state that it is not sufficiently particular to answer and id
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-18 05:20 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786952400
+- RCA bucket: unread source
+- Trigger pattern: Computing an aggregate/pattern claim about an external party's conduct from internal row-creation timestamps instead of the party's own dated artifacts
+- Reversal note: The TDSHS packet's aggregate-burden section asserted to a regulator that "the Department opened eleven separate complaint matters ... on a single day." The email_inbound_log shows four distinct transmittal dates: 7/16 (1810, 1811, 1813, 1815), 7/27 (1815, 1887, 1869), 8/3 (1915, 1890), 8/5 (1916, 1917, 1886). The claim was built from the compliance_deadlines row-creation date (all rows created 2026-08-05, the day WE catalogued them) rather than from the agency's own send timestamps. Amendment: any aggregate or pattern claim made TO an agency about that agency's conduct must be computed from the agency's own dated artifacts (email send timestamps, letter dates, docket entries), never from our internal row-creation or ingest dates. Our created_at records when we noticed a thing, not when the agency did it. A single false verifiable date in a burden argument destroys the credibility of the entire argument, because the agency holds the authoritative copy of its own send log and will check 
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

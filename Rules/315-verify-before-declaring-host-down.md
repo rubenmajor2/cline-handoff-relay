@@ -109,3 +109,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Big Mac 4th GPU: I read /sys/kernel/security/lockdown, saw "none [integrity] confidentiality", and reported "LOCKDOWN=none is LIVE, PCI register writes will now land". That file is a MENU, not a value: the BRACKETED entry is the ACTIVE mode, so lockdown was still [integrity] and every setpci write continued to be discarded. dmesg carried the decisive line I had not read, "Kernel is locked down from EFI Secure Boot mode", proving that lockdown=none on the kernel cmdline is silently ignored whenever Secure Boot is enabled, even though the flag parses cleanly and appears verbatim in /proc/cmdline. Amendment: when a sysfs file presents a SET of options, the claim must quote the bracketed/selected element, never the first token; and before asserting that a kernel cmdline parameter took effect, confirm the SUBSYSTEM reports it active (dmesg/kernel log), because appearing in /proc/cmdline only proves it was passed, not honoured. Second amendment from the same window: a boot-time module load c
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-18 04:50 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786948459
+- RCA bucket: unread source
+- Trigger pattern: Quoting a PCIe/sysfs register field by name (PresDet, DLActive, LnkSta) without naming the containing status-vs-control register, so an interrupt-enable mask bit is reported as device state
+- Reversal note: Big Mac 4th GPU: a prior window recorded "SltSta PresDet-" and built the primary fault lead (the adapter's presence-detect circuit) on it. Live reads three times two seconds apart are stable PresDet+ -- the card IS present-detected. The "-" was read off the SltCtl line ("Enable: ... PresDet-", an interrupt-ENABLE mask bit) instead of the SltSta line ("Status: ... PresDet+", the actual state). Two different registers whose lspci output contains the same substring, one register field name. Amendment: when reading a device register field by name, quote the CONTAINING register (SltSta vs SltCtl, LnkSta vs LnkCtl, DevSta vs DevCtl) in the claim itself, because status and control registers in PCIe/lspci output share field names and differ only by the enclosing line. A bare "PresDet-" or "DLActive-" with no register named is not a readable measurement. Corollary: re-read any single-sample register that a fault hypothesis rests on at least twice before building on it -- the same window also pr
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-18 05:14 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786948459
+- RCA bucket: insufficient probe
+- Trigger pattern: Treating a systemd unit's failure exit status as proof its effect did not occur, and gating on an asynchronously-settling sysfs state with a single sample instead of a bounded poll
+- Reversal note: Big Mac watchdog-arm: earlier this same session I amended rule 315 with "a unit reporting SUCCESS is not evidence its effect happened" (the cold-boot case where systemd-modules-load exited 0 while sp5100_tco was absent). The INVERSE then fired within the hour and I nearly recorded it as a real safety regression: bigmac-watchdog-arm.service reported failed/status=1 while the protection WAS fully live (watchdog0 state=active, identity="SP5100 TCO timer", timeout=60, sp5100_tco loaded, RuntimeWatchdogUSec=1min). Cause was a race, not a fault: the script sampled /sys/class/watchdog/watchdog0/state exactly once immediately after daemon-reexec, read "inactive", and exited 1 before systemd finished opening the device. Log proof: 22:11:41 "wdt_state=inactive FAIL", then after the fix 22:14:39 "armed=1min wdt_state=active timeout=60". Amendment: a unit's FAILURE status is likewise not evidence that its effect did NOT happen. Before acting on either a success or a failure report, probe the EFFEC
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

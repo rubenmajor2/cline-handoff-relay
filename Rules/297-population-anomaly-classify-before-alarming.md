@@ -217,3 +217,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: I found that a student's account was in no Moodle section group and asserted to a regulator that this was "a registration-side condition rather than an act or omission by the student." Ruben identified the actual mechanism: section membership is set by a student-completed groupselect activity, cmid 2005, titled Join Your Class Section. Querying it showed she opened the activity eight times beginning 6/24 and never completed it, with no course_modules_completion row. My claim inverted the causation and volunteered fault the record did not support. Amendment: before characterising any system state as caused by the organisation rather than the user, identify the mechanism that WRITES that state and check whether it is a user action, an automated process, or both. A missing row is evidence that something did not happen, never evidence of who failed to do it. Where a user-facing activity exists for the purpose, query its completion and view records before assigning cause. Corollary for regu
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-18 01:24 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786952400
+- RCA bucket: scope error
+- Trigger pattern: Repairing a defect on the surfaces found by one grep, then reporting it fixed, without enumerating every surface that can produce the same output and without shipping a check that measures that covera
+- Reversal note: Ruben reported the CFA telling students an exam passes at 40% (real standard 80%) on 2026-08-14; it was "fixed" (ideas #26476, #26471) and the identical wrong number shipped again on 2026-08-17 in email #366377. Root cause was not the analysis, which was correct, but the SCOPE of the repair: #26476 patched four files under lib/ and never saw the independent copies of the same rendering in api/livechat/chatbot_tools.php and api/ruben_tools.php, and cron_email_responder.php calls the chatbot_tools copy, so the email lane ran entirely on unpatched code. #26471 added the policy prompt block to the chat webhook only, leaving the email lane with no floor to check a bad tool number against. Both completions truthfully described what they changed and neither could state what they had missed, because nothing enumerated the surfaces. Proof this is the mechanism and not hindsight: the coverage gate written this window immediately found THREE more unpatched renderers that two prior windows and my 
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

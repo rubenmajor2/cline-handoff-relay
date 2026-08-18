@@ -55,3 +55,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: The TDSHS response to control 1080261886 carried a paragraph explaining that no externship placement request existed for the student, framed as being "for completeness." The complaint makes no externship allegation at all; it alleges wrong-dated-class enrollment and a first-week lockout. Ruben: "if the complaint says nothing about externships in 886 then no need to mention it." Volunteering a defense to an uncharged subject puts that subject in the agency's file, invites follow-up on it, and signals that the licensee considers it live. Amendment: a regulator filing answers the allegation actually made and nothing else. Before including any paragraph, name the sentence in the complaint document it responds to; if no such sentence exists, delete the paragraph. This applies to favorable facts as much as unfavorable ones, since a volunteered subject is a volunteered subject regardless of which way it cuts. "For completeness" and "so the Department is not left to infer" are the tells that a
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-18 01:14 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786952400
+- RCA bucket: scope error
+- Trigger pattern: Answering a vague regulator allegation with an exhaustive internal reconstruction instead of dissecting it element by element and naming what the agency must particularise
+- Reversal note: Given a two-sentence, dateless complaint alleging wrong-class enrollment and a first-week lockout, I built a 5,000-character evidentiary answer volunteering an internal activity name, a completion gap, our own imperfect sweeps, and a self-blame narrative. Ruben: "you didn't dissect the complaint properly ... it doesn't require the degree of information that you required because it was not asked for ... we need to get more information from the state in order to properly respond. That is on them to provide to us not us to even ask for." Amendment, a COMPLAINT DISSECTION method to run before drafting any regulator response: (1) quote the allegation and split it into its discrete elements; (2) for each element ask what provision it is said to violate, and if the letter does not name one, say so; (3) for each element ask what the record shows and answer ONLY that element; (4) where the allegation lacks a date, an act, or a party, state that it is not sufficiently particular to answer and id
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

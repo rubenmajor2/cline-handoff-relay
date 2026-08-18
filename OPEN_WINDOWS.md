@@ -6,12 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/17/2026, 5:39:46 PM PT | window: last 72h | 97 tasks | index total 796 (parsed 2, cached 794)
+Generated: 8/17/2026, 6:39:46 PM PT | window: last 72h | 100 tasks | index total 800 (parsed 5, cached 795)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1787016619040` | 8/17/2026, 6:39:31 PM | 49 | 107KB | #Jon/Argus |
+| `1787014605175` | 8/17/2026, 6:29:12 PM | 154 | 347KB | #Jon / Argus |
+| `1787015733520` | 8/17/2026, 6:28:16 PM | 104 | 1182KB | I already opened up a window on this before about the 40% score required for examinations  |
+| `1787014473253` | 8/17/2026, 6:20:07 PM | 120 | 612KB | Check /emtskills - slow as hell again check emtskills slowness document on desktop. please |
+| `1787003799738` | 8/17/2026, 6:16:31 PM | 546 | 1948KB | #TDSHS |
 | `1787012165910` | 8/17/2026, 5:34:27 PM | 124 | 955KB | #Argus needs help:  |
-| `1787003799738` | 8/17/2026, 5:29:04 PM | 524 | 1873KB | #TDSHS |
 | `1786989452314` | 8/17/2026, 5:09:41 PM | 357 | 936KB | frankenstein-llm keeps going down as I'm trying to put back up Cicero and Maximus, not sur |
 | `1787009927550` | 8/17/2026, 4:49:34 PM | 78 | 693KB | Hi Julia, reports of your death are exaggerated? |
 | `1787000192686` | 8/17/2026, 4:34:35 PM | 112 | 875KB | Keep getting this upon initial iteration of frankenstein-llm: {"message":"Failed to fetch  |
@@ -106,11 +110,168 @@ Generated: 8/17/2026, 5:39:46 PM PT | window: last 72h | 97 tasks | index total 
 | `1786711940130` | 8/14/2026, 7:02:17 PM | 414 | 19005KB | Another thing we need to add to sunset, politicians, and just catalogue in the next respon |
 | `1786581699007` | 8/14/2026, 7:00:32 PM | 1214 | 3408KB | #Argus Learning |
 | `1786751488866` | 8/14/2026, 6:52:33 PM | 210 | 775KB | #emtskills / wordpress |
-| `1786751687527` | 8/14/2026, 6:23:14 PM | 82 | 427KB | #CFA Stuff |
 
 ---
 
 ## Per-window detail
+
+### `1787016619040` — 8/17/2026, 6:39:31 PM PT — 49 turns
+
+**Original task:**
+
+```
+#Jon/Argus
+
+Continue from YOLO window
+
+Stopped per instruction. Rule 91 comprehensive state handoff below.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787011000 — Argus process failure: Jon/Cori idea starvation + conv 2299 fabrication/siloing/CFA deflection + executor reconciliation.
+
+Where we left off (verified 2026-08-17 18:28 PT):
+- ArgusRuleProfile.php patched (4 gaps: dead DELIVERY_TRUTH_RULES restored, negative-claim evidence via rule 263, systemic-scope rule 297, act-don'
+```
+
+**Ideas referenced:** #15367, #178701, #19490, #19670, #2552, #26720, #26724, #26825 [executing], #26858 [blocked], #27012, #27065 [proposed], #27120 [executing], #27123 [blocked], #27124 [executing], #27125 [executing], #27126 [executing], #27136 [deployed], #344421, #344423, #344425, #344426, #344429
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787014605175` — 8/17/2026, 6:29:12 PM PT — 154 turns
+
+**Original task:**
+
+```
+#Jon / Argus
+
+# What is going on: the process failure, diagnosed and partially fixed this session
+
+Did you notify John and Corey and did you update argus logs to let them know that those things have been results?
+
+Well you want my ideas in artists also to be cut priority too.
+
+What are we going to do to resolve these issues? What is the plan? I see that you've identified a lot of problems but I don't see a comprehensive plan addressing underline issues. What do you mean about partially fixed? What else is resolve
+
+Well you're supposed to act according to rule 29 and also here it's hard for me 
+```
+
+**Ideas referenced:** #12778, #16523, #178701, #19490, #21586, #24895, #26196, #26225, #26470, #26825, #26858, #26934, #27065 [proposed], #27120 [executing], #27123 [blocked], #27126 [executing], #344421, #344423, #344425, #344426, #344429
+
+**Last PICKUP PROMPT:**
+
+```
+rehensive state handoff below.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787011000 — Argus process failure: Jon/Cori idea starvation + conv 2299 fabrication/siloing/CFA deflection + executor reconciliation.
+
+Where we left off (verified 2026-08-17 18:28 PT):
+- ArgusRuleProfile.php patched (4 gaps: dead DELIVERY_TRUTH_RULES restored, negative-claim evidence via rule 263, systemic-scope rule 297, act-don't-instruct via rule 29), deployed, lint OK, FPM reloaded, cache busted, live rendering verified
+- 73 Jon/Cori ideas approved at efficiency_priority=1 (19 priority-flipped + 24 promoted from stalled proposed + existing); executor doctor repaired 31 orphan-status ideas
+- Brooklynn duplicate ticket id 25927 (TKT-20260817-FF50EAD5) resolved with internal comment; rule-318 ground truth rows 11+12 recorded for LeAnne Dorsey + Brooklynn Blocher
+- Bug library incident 2553 recorded (argus_fabricated_negative_claim_siloing_20260817) on WOPR
+- LeAnne Dorsey's real blocker confirmed: CPR for EMTs quiz (cmid 6048) is open now with no availability restriction; Quiz 1 unlocks after she passes it. No admin repair needed.
+- Ruben flagged two live issues in the final message that remain OPEN: (1) executor live page shows only ~5 recent executions, all AUTO_DEPLOY_GATE "observed/human review" holds — counters his 1,085-approved-idle claim; (2) the 550 vs 1,085 approved-idle discrepancy was NOT yet reconciled live. NO executor runs were verified in the last hour. This is the unfinished "frankenstein doctor of executor" request.
+
+Open threads to drive next (every item has a real idea # or is a human-only decision):
+1. #27120 [executing] — Email AI wrong-canned-reply bug. Re-queued top-priority after codegen failure + llm_touching_excluded deploy-gate parks. If executor fails again, hand-ship in a Cline window (rule 267 GATE C). Next action: check orchestrator_execution_log for run status, then get_idea_progress(27120).
+2. #27126 [executing] — Argus rule drift guard (sha256 alert on the 9 wired rules so ArgusRuleProfile re-derives). Next action: get_idea_progress(27126); if build failed, re-queue.
+3. #27065 [proposed] — Email Agent reply refinement. Review whether #27120 [executing] supersedes it, then approve or reject. Next action: reconcile_ideas([27065,27120,27126]).
+4. #27123 [blocked] — llm_touching_excluded deploy gate held idea #27123 (runs 344425/344423). Decide: exclude override or split into non-LLM-touching patch. Human-only decision needed on the gate policy.
+5. EXECUTOR RECONCILIATION (the unresolved doctor request) — reconcile the 550 vs 1,085 approved+idle discrepancy: SELECT COUNT(*) FROM orchestrator_ideas WHERE status='approved' AND dev_stage='idle'; then re-check executor_deploy_gates / orchestrator_execution_log to explain why zero builds ran in the last hour despite approved backlog. If the AUTO_DEPLOY_GATE holds (regression_risk_review, llm_touching_excluded) are the true bottleneck, that means the queue is NOT starving — it is gate-blocked; the fix is gate policy, not priority flags. (human-only decision on gate policy — no idea filed yet this window)
+6. Watch executor throughput on the 73 promoted Jon/Cori ideas over the next 48h (human-only decision - no idea)
+
+Reference IDs:
+- Ideas filed this window: none new; #27126 [executing] was filed + promoted in the prior window
+- Ideas touched: #27120 [executing] (requeued), #27065 [proposed], #27123 [blocked]
+- Ticket: 25927 (TKT-20260817-FF50EAD5) res
+```
+
+### `1787015733520` — 8/17/2026, 6:28:16 PM PT — 104 turns
+
+**Original task:**
+
+```
+I already opened up a window on this before about the 40% score required for examinations and it should be 80% that stated to the CFA agent and we are not modifying noodle on it. It's just something the CFA agent needs to know per exam enforcement cell this email needs to be modified properly. I already asked you to modify these emails like this and you apparently did not do that. Please resolve this durably. Do a 317 and 297 RCA on what cause this issue should not be fixed after I asked you the first time in the last cline window. If you can't find that I need you to root it out so it doesn't
+```
+
+**Ideas referenced:** #2554 [deployed], #26471 [rejected], #26475 [rejected], #26476 [deployed], #27128 [proposed], #27129 [proposed], #366377, #57840, #58401
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787014473253` — 8/17/2026, 6:20:07 PM PT — 120 turns
+
+**Original task:**
+
+```
+Check /emtskills - slow as hell again check emtskills slowness document on desktop. please durably resolve. Append rixes to the page place in bug ligrary. teach Kaizon to fix to avoid recurrence and make Kazon able to act on it.
+```
+
+**Ideas referenced:** #14777, #19370, #19522, #21667, #21712, #23133, #23378, #2342, #23945, #23952, #23954, #24026, #25045, #2521, #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #26710, #26725 [proposed], #6768, #9465
+
+**Last PICKUP PROMPT:**
+
+```
+sh -n all clean, guard exit 0.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — /emtskills slowness durable fix (agents-pool canary starvation), Aug 17 2026.
+
+Where we left off (verified 2026-08-17 18:19 PT):
+- All 5 fixes applied, reloaded, and verified: stats_api off agents pool (both nginx files), agents pool dynamic 100, ticket_autospec 75/90s, Mailer Timeout 30, guard single-curl + saturation check.
+- Canary 20/20 HTTP 200 live; agents pool dynamic/20, max children reached 0. nginx -t / php-fpm -t / php -l / bash -n all clean.
+- Records: bug #16 (frankenstein_bug_library, resolved), recipe #444 (failure_repair_recipes), kaizen_recipes row for target emsu-portal-health-guard.
+- Full writeup appended to /Users/rubenmajor/Desktop/emtskills-slowness.md (Aug 17 section); HANDOFF_NOTES.md + cline_task_ledger.md updated.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+- None — all work completed this session. If a future "slow as hell" alert says http=000, the first check is whether stats_api is back in the AGENT_POOL regex (it must stay on www) and the second is `fpm-status-agents` active vs pm.max_children; both are covered by recipe #444 + the guard's new saturation WARN.
+
+Reference IDs:
+- Bug library: frankenstein_bug_library #16 [deployed]
+- Repair recipe: failure_repair_recipes #444 [deployed]
+- kaizen_recipes: target_slug `emsu-portal-health-guard` / `agents_pool_saturation_starves_canary`
+- Files touched: /etc/nginx/sites-enabled/emtskills, /var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf, /etc/php/8.3/fpm/pool.d/agents.conf, /var/www/emtskills/api/ticket_autospec.php, /var/www/emtskills/src/Mail/Mailer.php, /usr/local/bin/emsu-portal-health-guard.sh, /Users/rubenmajor/Desktop/emtskills-slowness.md, /var/www/emtskills/docs/HANDOFF_NOTES.md, /Users/rubenmajor/Desktop/cline_task_ledger.md
+- Backups: *.bak-20260817-1806 (nginx x2, agents.conf, Mailer.php, ticket_autospec.php), emsu-portal-health-guard.sh.bak-20260817-1813
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1787003799738` — 8/17/2026, 6:16:31 PM PT — 546 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+You were right on both. The 1080261916 response was crap and the license number was the wrong one. Both fixed, PDF re-rendered (325,475 bytes, 14:41 PT), and the 317 RCA is below.
+
+## The license number — it was not ours to use
+
+**The TDSHS number is 623992, and it is on their own paper.** The 5196 inspection report has a labeled field block:
+
+```
+Name              EMERGENCY MEDICAL SERVICES UNIVERSITY LLC
+License Type      EMS Course
+Address           1452 HUGHES ROAD SUITE 360, GRAPEVINE TX 76051
+License Number    623992
+Inspection Type   Course Monitoring
+Inspection Number 5196
+Insp
+```
+
+**Ideas referenced:** #1509, #15299, #178695, #2003, #22757, #25185, #27072 [deployed], #27073 [awaiting_review], #27100 [executing], #27107 [executing], #27108 [executing], #27112 [proposed], #27114 [proposed], #27116 [proposed], #27121 [proposed], #27124 [proposed], #27125 [proposed], #27127 [proposed], #4856, #4929, #664426, #9086, #9168, #9306, #9339
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787012165910` — 8/17/2026, 5:34:27 PM PT — 124 turns
 
@@ -139,33 +300,6 @@ What is the process
 ```
 
 **Ideas referenced:** #1758, #17580, #18442, #21586, #23428, #23468, #23506, #24431, #24706, #24895, #24897, #24941, #2496, #24990, #2500 [resolved], #25058, #25313, #25510, #25522, #2553 [rejected], #25576, #25618, #25619, #25643, #25644, #25645, #25649, #25650, #25653, #25654, #25927 [deployed], #25982, #26196, #26225, #26934, #27065 [proposed], #27120 [executing], #27126 [executing], #9086
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787003799738` — 8/17/2026, 5:29:04 PM PT — 524 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-You were right on both. The 1080261916 response was crap and the license number was the wrong one. Both fixed, PDF re-rendered (325,475 bytes, 14:41 PT), and the 317 RCA is below.
-
-## The license number — it was not ours to use
-
-**The TDSHS number is 623992, and it is on their own paper.** The 5196 inspection report has a labeled field block:
-
-```
-Name              EMERGENCY MEDICAL SERVICES UNIVERSITY LLC
-License Type      EMS Course
-Address           1452 HUGHES ROAD SUITE 360, GRAPEVINE TX 76051
-License Number    623992
-Inspection Type   Course Monitoring
-Inspection Number 5196
-Insp
-```
-
-**Ideas referenced:** #178695, #2003, #22757, #25185, #27072 [deployed], #27073 [awaiting_review], #27100 [executing], #27107 [executing], #27108 [executing], #27112 [proposed], #27114 [proposed], #27116 [proposed], #27121 [proposed], #27124 [proposed], #27125 [proposed], #4856, #4929, #664426, #9086, #9168, #9306, #9339
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -3822,56 +3956,6 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786751687527` — 8/14/2026, 6:23:14 PM PT — 82 turns
-
-**Original task:**
-
-```
-#CFA Stuff
-
-I'm really confused here. Something is weird. What are we doing? What are we doing if the student has a student ID number does that not match a class? I'm confused here.
-
-You were right — the process exists, and my "a human must do it" answer was wrong. Here is what the code actually says.
-
-## The existing CFA process (verified by reading the source)
-
-**`lib/SectionTransferExecutor.php`** — this is the track-change handler and it is fully automated:
-- `execute($studentNeedle, $toSection, $opts)` performs the whole move.
-- Line 185 does the real write: `UPDATE Students SET moodle_ur
-```
-
-**Ideas referenced:** #22726, #22871, #23184, #2328, #25943 [deployed], #25989, #26068, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26307 [deployed], #26333 [deployed], #26334 [deployed], #26336, #26348, #26368 [deployed], #3261, #3319, #3346, #7207, #7907, #9086, #9193
-
-**Last PICKUP PROMPT:**
-
-```
-xed it." That is now complete.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — SectionTransferExecutor suspended-enrolment loop fixed + deployed (#26368); all related tracing closed.
-
-Where we left off (verified 2026-08-14 18:22 PT):
-- FAILURE FOUND/FIXED: lib/SectionTransferExecutor.php re-enrol INSERT guard matched ANY enrolment row while userActiveEnrol() checks status=0 → suspended enrolment caused silent no-op, active_enrol stuck false, idempotency never fired, agent re-invoked transfers repeatedly. Patched: reactivate status=1 first, INSERT guard now AND ue.status=0 (lines 141-151). php -l clean, PHP-FPM reloaded graceful. Backup: SectionTransferExecutor.php.bak-20260814-26368.
-- Connector confirmed (already correct): cron_email_responder.php → EmailAIResponder.php → CanonicalToolRegistry::toolsFor('email') → transfer_student_section (line 369) → localTransferStudentSection() → execute().
-- Visibility (no action taken, deliberate): 30+ currently-suspended enrollments on courses 25/37/41 respected per rule 135; fix handles them when a legitimate transfer is requested.
-- Cleanup done: ledger row appended 2026-08-14 17:48 PT, HANDOFF_NOTES.md updated, staging file removed, idea #26368 set deployed.
-
-Open threads to drive next:
-1. #26368 [deployed] — Observe the next real section-transfer invocation on a suspended-enrolment student; confirm the audit row's after_state now shows active_enrol:true (the fix's live proof).
-2. #25943 [deployed] — Watch `[TPR-25943]` / `[TPR-25943-BLOCK]` on Elen's next payment_billing reply to confirm the ask-the-student ack ships.
-3. #26334 [deployed] — Monitor `[CQG-26334]` elog + ai_clarifying_gate_log on the next real vague inbound; tune cqgNormalizeOpener if live shapes differ from the 5 tested.
-4. #26333 [deployed] — Confirm the first real watchdog_restore row lands in orchestrator_event_log; follow-on is surgical hunk repair rather than wholesale rollback.
-
-Reference IDs:
-- Ideas filed this session: #26368 [deployed].
-- Files touched: lib/SectionTransferExecutor.php (patched lines 141-151); backup lib/SectionTransferExecutor.php.bak-20260814-26368; staging /tmp/patch_26368.py (removed); docs/cline_task_ledger.md (row appended); HANDOFF_NOTES.md (entry added).
-- Evidence rows (orchestrator_event_log.ids): 4071006/4071216/4071258/4071521/4071585/4072394/4076973 (26719BC-09), 3818911/4782700/4837808/4876918 (25314T-03), 5952922 (most recent real transfer 26213FT-40→26225FT 08-11).
 </result>
 </attempt_completion>
 ```

@@ -6,14 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/18/2026, 1:39:50 AM PT | window: last 72h | 88 tasks | index total 808 (parsed 1, cached 807)
+Generated: 8/18/2026, 2:40:09 AM PT | window: last 72h | 88 tasks | index total 808 (parsed 1, cached 807)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787032087401` | 8/18/2026, 1:39:42 AM | 209 | 856KB | #TDSHS  |
+| `1786993543586` | 8/18/2026, 2:36:41 AM | 382 | 2446KB | Our Staff Keycards were all deactivated and students/staff were locked out of our building |
+| `1787032087401` | 8/18/2026, 1:58:17 AM | 220 | 927KB | #TDSHS  |
+| `1787016619040` | 8/18/2026, 1:49:01 AM | 323 | 602KB | #Jon/Argus |
 | `1787027676077` | 8/18/2026, 12:44:26 AM | 440 | 970KB | #BigMac 4th GPU |
 | `1787035094427` | 8/17/2026, 11:41:55 PM | 20 | 106KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
-| `1787016619040` | 8/17/2026, 11:34:20 PM | 263 | 500KB | #Jon/Argus |
 | `1787032033318` | 8/17/2026, 10:47:13 PM | 1 | 16KB | #TDSHS  |
 | `1787003799738` | 8/17/2026, 10:38:27 PM | 762 | 2712KB | #TDSHS |
 | `1787024184393` | 8/17/2026, 9:11:28 PM | 206 | 453KB | #Big Mac 4th GPU |
@@ -30,7 +31,6 @@ Generated: 8/18/2026, 1:39:50 AM PT | window: last 72h | 88 tasks | index total 
 | `1787000192686` | 8/17/2026, 4:34:35 PM | 112 | 875KB | Keep getting this upon initial iteration of frankenstein-llm: {"message":"Failed to fetch  |
 | `1786980640015` | 8/17/2026, 2:56:11 PM | 322 | 2451KB | #TDSHS |
 | `1787002408232` | 8/17/2026, 2:47:03 PM | 110 | 177KB | For this |
-| `1786993543586` | 8/17/2026, 2:01:53 PM | 322 | 2130KB | Our Staff Keycards were all deactivated and students/staff were locked out of our building |
 | `1786994625500` | 8/17/2026, 12:39:38 PM | 38 | 180KB | please run the Fix AVP program on my computer that I can't seem to open |
 | `1786960541449` | 8/17/2026, 12:29:31 PM | 810 | 5349KB | #Julia/Claudia 235B  |
 | `1786559316764` | 8/17/2026, 12:18:17 PM | 264 | 1174KB | #Lower Romans |
@@ -103,7 +103,63 @@ Generated: 8/18/2026, 1:39:50 AM PT | window: last 72h | 88 tasks | index total 
 
 ## Per-window detail
 
-### `1787032087401` — 8/18/2026, 1:39:42 AM PT — 209 turns
+### `1786993543586` — 8/18/2026, 2:36:41 AM PT — 382 turns
+
+**Original task:**
+
+```
+Our Staff Keycards were all deactivated and students/staff were locked out of our building on Saturday in Houston. There is something weird going on with the landlord and the firemarchall there that doesn't make sense. Anyway It's causing a huge downstream issue with us not having building access on the Weekends or after hours. It's also a violation of the lease. See lease:
+
+https://drive.google.com/drive/home 
+
+Check all emails to/from blackgoldrealty.com in postmark on my email to/from jthompson@emsuniversity.com rmajor@emsuniversity.com cfrench@emsuniversity.com. 
+
+I need a call list. Email
+```
+
+**Ideas referenced:** #0000, #001373, #020381, #0693, #121217, #164023, #171083, #2144, #23282, #249948, #250516, #251038, #251264, #251382, #251428, #251444, #251447, #251450, #251498, #251641, #2528, #26384, #26385, #2643, #26799, #26800, #27098 [proposed], #2874, #313131, #330968, #4721, #55556, #8211
+
+**Last PICKUP PROMPT:**
+
+```
+and the paragraph still lands.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task BlackGold Realty Houston lockout — Ruben's personal-story email edited and ready to send.
+
+Where we left off (verified 2026-08-18 02:36 PT):
+- FINAL EMAIL is Ruben's own draft, edited. Opens with his personal story of picking up Younas Chaudhary's book in the lobby and identifying with it (Ruben grew up in extreme poverty, homeless at times). This is authentic, not engineered, and is the emotional core of the email.
+- Corrections made: "Yousef" to "Yousuf" in greeting; escalation deadline set to end of day TOMORROW per Ruben's instruction; tonight's-students problem split out as separate immediate ask; Anderson booking ambiguity folded into the authorization ask; subject changed to "Need a solution today - where do we put our students tonight?"; typo fixed; trailing smiley removed as it conflicted with the escalation warning.
+- ATLAS FOUNDER: Younas Chaudhary, memoir "From Dirt Roads to Black Gold: An Oilman Follows His Dream and Finds Fortune, Wisdom, and Mansions." BlackGold Realty is named after the book. Arrived Edmonton 1973 from rural Pakistan with $30. Founded Atlas/Pioneer 1983. Runs YC Foundation.
+- Send list: To = yousuf@atlasoperating.com (sole). CC = lafayette@; musa@; tenant@blackgoldrealtyllc.com.
+- ATTORNEY: Greg Olson stays OFF the thread. Forward separately. Joins only if the deadline passes.
+- Damage: Sat 8/15 relocated to Chinatown at EMSU cost, Sun 8/16 no access, Mon 8/17 class CANCELLED. 75 students, 5 sections, ~$130,725 exposure. Regulatory exposure now explicitly includes risk to other Texas locations.
+- Anderson (713-449-8741): panel serves whole building, needs replacement + 24hr programming; LL already pays 7AM-7PM weekday marshal; can add evenings/weekends with ~1 week lead; was wishy-washy on who books it.
+- Yousuf: yousuf@atlasoperating.com, +1 (713) 301-9898. Atlas Operating: 1900 St. James Place Suite 800 Houston TX 77056, (281) 893-9400.
+- Idea filed: #27098 [proposed].
+
+Open threads to drive next:
+1. #27098 [proposed] — Send the email to Yousuf; forward a separate copy to Greg Olson for awareness only.
+2. #27098 [proposed] — Secure a venue for TONIGHT's class regardless of landlord response; this is the immediate operational need.
+3. #27098 [proposed] — If end of day tomorrow passes with no answer, escalate formally: long plain-text version to the full group with Greg CC'd, plus notice on Atlas Operating LLC and YMC Royalty Company LP at Suite 800.
+4. #27098 [proposed] — NOT YET BUILT: attorney email to Greg Olson including an opinion on likely recovery amount.
+5. #27098 [proposed] — NOT YET BUILT: portal webpage surfaced as a card link on reports.php, restricted to exec admin and master admin roles.
+6. #27098 [proposed] — Verify August rent payment record with Jon/accounting before any escalation so ownership cannot recast this as tenant default.
+7. #27098 [proposed] — Have Ruben set the lease PDF to Anyone-with-link so exact quiet-enjoyment/access/cure/abatement clause numbers can be cited.
+
+Reference IDs:
+- Ticket: none filed (task originated as iMessage directive)
+- Ideas filed: #27098
+- Files touched: /Users/rubenmajor/Desktop/BLACKGOLD-INCIDENT-LOG.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1787032087401` — 8/18/2026, 1:58:17 AM PT — 220 turns
 
 **Original task:**
 
@@ -117,6 +173,31 @@ Curious here, the allegation is that ther ewas no medical director from December
 ```
 
 **Ideas referenced:** #178695, #18676, #19572, #19576, #19578, #19581, #19599, #21278, #250541, #251044, #251128, #251428, #251444, #251447, #27073 [awaiting_review], #27100 [awaiting_review], #27108 [awaiting_review], #27112 [awaiting_review], #27114 [awaiting_review], #27127 [proposed], #27148 [awaiting_review], #27153 [executing], #27157 [proposed], #27158 [proposed], #27159 [proposed], #27160 [approved], #27179 [proposed], #600179, #623992, #8212
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787016619040` — 8/18/2026, 1:49:01 AM PT — 323 turns
+
+**Original task:**
+
+```
+#Jon/Argus
+
+Continue from YOLO window
+
+Stopped per instruction. Rule 91 comprehensive state handoff below.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787011000 — Argus process failure: Jon/Cori idea starvation + conv 2299 fabrication/siloing/CFA deflection + executor reconciliation.
+
+Where we left off (verified 2026-08-17 18:28 PT):
+- ArgusRuleProfile.php patched (4 gaps: dead DELIVERY_TRUTH_RULES restored, negative-claim evidence via rule 263, systemic-scope rule 297, act-don'
+```
+
+**Ideas referenced:** #15367, #178701, #18693, #19490, #19670, #20903, #21074, #23184, #23281, #24963, #25125, #25185, #2552, #26085 [executing], #26174 [executing], #26180 [executing], #26325 [approved], #26357 [awaiting_review], #26366 [proposed], #26367 [approved], #26369 [proposed], #26382, #26482 [executing], #26498 [executing], #26504 [awaiting_review], #26519 [executing], #26720, #26724, #26731, #26825 [executing], #26858 [blocked], #26924 [approved], #27012, #27062 [approved], #27065 [proposed], #27120 [executing], #27123 [blocked], #27124 [executing], #27125 [executing], #27126 [executing], #27136 [deployed], #27143 [awaiting_review], #27147, #27149 [deployed], #27163 [deployed], #27180 [deployed], #344421, #344423, #344425, #344426, #344429, #58371, #58380, #8281, #8321, #9235
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -232,31 +313,6 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 </result>
 </attempt_completion>
 ```
-
-### `1787016619040` — 8/17/2026, 11:34:20 PM PT — 263 turns
-
-**Original task:**
-
-```
-#Jon/Argus
-
-Continue from YOLO window
-
-Stopped per instruction. Rule 91 comprehensive state handoff below.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787011000 — Argus process failure: Jon/Cori idea starvation + conv 2299 fabrication/siloing/CFA deflection + executor reconciliation.
-
-Where we left off (verified 2026-08-17 18:28 PT):
-- ArgusRuleProfile.php patched (4 gaps: dead DELIVERY_TRUTH_RULES restored, negative-claim evidence via rule 263, systemic-scope rule 297, act-don'
-```
-
-**Ideas referenced:** #15367, #178701, #18693, #19490, #19670, #20903, #21074, #23281, #24963, #25125, #25185, #2552, #26325 [approved], #26366 [proposed], #26367 [approved], #26369 [proposed], #26720, #26724, #26731, #26825 [executing], #26858 [blocked], #26924 [approved], #27012, #27062 [approved], #27065 [proposed], #27120 [executing], #27123 [blocked], #27124 [executing], #27125 [executing], #27126 [executing], #27136 [deployed], #27149 [deployed], #27163 [deployed], #344421, #344423, #344425, #344426, #344429, #8281, #8321
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787032033318` — 8/17/2026, 10:47:13 PM PT — 1 turns
 
@@ -749,57 +805,6 @@ cna you fix that so they can take their final exam?
 **Ideas referenced:** #27109 [proposed], #27110 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786993543586` — 8/17/2026, 2:01:53 PM PT — 322 turns
-
-**Original task:**
-
-```
-Our Staff Keycards were all deactivated and students/staff were locked out of our building on Saturday in Houston. There is something weird going on with the landlord and the firemarchall there that doesn't make sense. Anyway It's causing a huge downstream issue with us not having building access on the Weekends or after hours. It's also a violation of the lease. See lease:
-
-https://drive.google.com/drive/home 
-
-Check all emails to/from blackgoldrealty.com in postmark on my email to/from jthompson@emsuniversity.com rmajor@emsuniversity.com cfrench@emsuniversity.com. 
-
-I need a call list. Email
-```
-
-**Ideas referenced:** #001373, #020381, #0693, #164023, #171083, #2144, #23282, #249948, #250516, #251038, #251264, #251382, #251428, #251444, #251447, #251450, #251498, #251641, #2528, #26384, #26385, #2643, #26799, #26800, #27098 [proposed], #2874, #313131, #330968, #4721
-
-**Last PICKUP PROMPT:**
-
-```
-BLACKGOLD-EMAIL-TO-L-DRAFT.md.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task BlackGold Realty Houston building-access lockout / lease breach response (Aug 2026) — breach confirmed, outreach escalated, files synced.
-
-Where we left off (verified 2026-08-17 14:02 PT):
-- Four deliverables on Desktop, synced: blackgold-incident.html (32.4KB, 11 sections incl email-to-Lafayette), BLACKGOLD-INCIDENT-LOG.md (23.8KB), blackgold-breach-package-20260817.md (20.5KB, email draft section 8), BLACKGOLD-EMAIL-TO-L-DRAFT.md.
-- Breach-of-lease analysis complete: quiet enjoyment + constructive eviction + landlord maintenance duty + retaliatory conduct. Whole-building fire panel confirmed; landlord pays 7AM-7PM marshal; Anderson can schedule after-hours coverage (~1 week lead); L said "EMSU won't be there after 7PM" — Anderson didn't believe him.
-- Outreach: L voicemail (access demand), Moussa voicemail (immediate access), Yousef SMS (students paid, license on the line, needs help). No reply yet.
-- Corporate chain: Atlas Operating LLC (parent) → YMC Royalty LP (Suite 800) → BlackGold Realty LLC (Suite 700).
-- Idea filed: #27098 [proposed].
-
-Open threads to drive next:
-1. #27098 [proposed] — Verify rent payment record with Jon/accounting BEFORE breach letter sends.
-2. #27098 [proposed] — SMS/call document photos + timestamped receipts of Moussa/Yousef/Lafayette outreach into the evidence appendix.
-3. #27098 [proposed] — Get Atlas Operating officers/registered agent + full YMC phone (281-893-xxxx) from Texas SOS/SOSDirect.
-4. #27098 [proposed] — Follow up with Sr. Inspector Anderson (713-449-8741) for written fire marshal order + repair timeline; schedule after-hours coverage.
-5. #27098 [proposed] — Have Ruben set lease PDF to Anyone-with-link access, then extract quiet-enjoyment/access/cure/abatement clauses.
-6. #27098 [proposed] — Send breach/access letter to tenant@/lafayette@/musa@blackgoldrealtyllc.com CC emily@ tim@ Greg jthompson@ rmajor@ cfrench@; loop Doug Pack; escalate to Atlas principals if stalled.
-
-Reference IDs:
-- Ticket: none filed (task originated as iMessage directive)
-- Ideas filed: #27098
-- Files touched: /Users/rubenmajor/Desktop/blackgold-incident.html, /Users/rubenmajor/Desktop/BLACKGOLD-INCIDENT-LOG.md, /Users/rubenmajor/Desktop/blackgold-breach-package-20260817.md, /Users/rubenmajor/Desktop/BLACKGOLD-EMAIL-TO-L-DRAFT.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
 
 ### `1786994625500` — 8/17/2026, 12:39:38 PM PT — 38 turns
 

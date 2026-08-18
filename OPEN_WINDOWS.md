@@ -6,18 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/18/2026, 1:00:48 PM PT | window: last 72h | 86 tasks | index total 813 (parsed 4, cached 809)
+Generated: 8/18/2026, 2:56:47 PM PT | window: last 72h | 84 tasks | index total 813 (parsed 3, cached 810)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787073073602` | 8/18/2026, 1:00:32 PM | 435 | 2118KB | # GLM 5.3: |
-| `1787081272363` | 8/18/2026, 1:00:26 PM | 41 | 21602KB | Please add GLM 5.3 (Cloud) to my list of models here to choose from in cline under the API |
+| `1787073073602` | 8/18/2026, 2:56:46 PM | 583 | 3723KB | # GLM 5.3: |
+| `1787081272363` | 8/18/2026, 2:56:41 PM | 81 | 21730KB | Please add GLM 5.3 (Cloud) to my list of models here to choose from in cline under the API |
+| `1786993543586` | 8/18/2026, 1:58:07 PM | 406 | 2529KB | Our Staff Keycards were all deactivated and students/staff were locked out of our building |
 | `1787083132087` | 8/18/2026, 12:58:58 PM | 2 | 2KB | Are you alive |
 | `1787081426639` | 8/18/2026, 12:47:43 PM | 24 | 176KB | What would it take to turn Big Mac into a powerhouse center for GLM 5.2? How many ARC Batt |
 | `1787015733520` | 8/18/2026, 10:52:31 AM | 112 | 1202KB | I already opened up a window on this before about the 40% score required for examinations  |
 | `1787073033366` | 8/18/2026, 10:10:33 AM | 1 | 7KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
 | `1787032087401` | 8/18/2026, 3:22:44 AM | 316 | 1132KB | #TDSHS  |
-| `1786993543586` | 8/18/2026, 3:09:10 AM | 398 | 2497KB | Our Staff Keycards were all deactivated and students/staff were locked out of our building |
 | `1787016619040` | 8/18/2026, 1:49:01 AM | 323 | 602KB | #Jon/Argus |
 | `1787027676077` | 8/18/2026, 12:44:26 AM | 440 | 970KB | #BigMac 4th GPU |
 | `1787035094427` | 8/17/2026, 11:41:55 PM | 20 | 106KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
@@ -94,14 +94,12 @@ Generated: 8/18/2026, 1:00:48 PM PT | window: last 72h | 86 tasks | index total 
 | `1786782096117` | 8/15/2026, 3:33:23 PM | 564 | 5232KB | #Email Agent |
 | `1786824274829` | 8/15/2026, 3:27:14 PM | 256 | 888KB | frankenstein-llm seems to be having some intermittent connectivity issues. Not sure the ca |
 | `1786832279730` | 8/15/2026, 3:20:11 PM | 19 | 112KB | #Externships |
-| `1786820106387` | 8/15/2026, 2:07:52 PM | 360 | 935KB | Why does Vicky send me this? -> Making a followup on Sam Nelson’s final exam I was able to |
-| `1786818491154` | 8/15/2026, 1:03:24 PM | 300 | 642KB | #Joshua Hot FAllover |
 
 ---
 
 ## Per-window detail
 
-### `1787073073602` — 8/18/2026, 1:00:32 PM PT — 435 turns
+### `1787073073602` — 8/18/2026, 2:56:46 PM PT — 583 turns
 
 **Original task:**
 
@@ -120,36 +118,38 @@ Because **Zhipu has not granted your account access yet — it is a server-side 
 - The exact same reque
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11847, #12477, #12584, #12618, #12824, #12872, #12878, #13108, #13202, #16163, #16265, #16304, #16844, #17202, #17203, #17205, #17300, #18312, #18326, #18868, #19338, #19686, #1993 [deployed], #1998, #22897, #24144, #25097, #25185, #2537, #25468, #25888, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #26908, #26923, #27201 [proposed], #27204 [proposed], #27205 [deployed], #27227 [proposed], #27232 [proposed]
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11847, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12824, #12872, #12878, #13108, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16717, #16778, #16802, #16803, #16839, #16844, #16851, #17202, #17203, #17205, #17246, #17300, #1744, #1779, #1798, #1828, #18312, #18326, #18868, #19338, #19567, #19686, #1993 [deployed], #1998, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #22584, #22897, #2299, #24144, #25097, #25185, #2537, #25378, #25381, #2546, #25468, #2552, #25567, #25627, #25888, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #26908, #26923, #27069, #27201 [proposed], #27204 [proposed], #27205 [deployed], #27227 [proposed], #27232 [proposed], #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
-es" + FORBIDDEN routing names.
+h dark = physical, not config)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up GLM-5.3 ladder + underlying-LLM serving table + Julia-235B down recovery.
+Pick up Julia-235B network recovery (physical on-site needed) + 530 fix + GLM-5.3 bake-off.
 
-Where we left off (verified 2026-08-18 12:51 PT):
-- Rule 322 amended + reindexed (329 rules, hardfloor): serving table must be ONE table of UNDERLYING LLMs (GLM Local, gpt-oss-120B, 235B Julia, GLM Cloud, DeepSeek), never routing names. Source incident recorded (two 2026-08-18 failures).
-- Julia-235B DOWN (live-probed: :11513 HTTP 000, :2205 tunnel refused, 0 picks today). Idea #27232 [proposed] filed. Registry note "LIVE 2026-08-16" is stale.
-- Serving table (underlying LLM): GLM-Cloud-5.3 0 turns (43 tok/s measured, paid); GLM-5.2 Local 525 reqs; gpt-oss-120B 8,404 reqs (Artemis+BigMac); DeepSeek 717 turns $0.00 free cloud; qwen 14b 118; 7b-lora 124; Julia 0 (down); Cicero 0 (batch); minicpm-v 22 reqs.
-- #27227 [proposed] 530 root cause (GLM ring tools TTFB 263s vs 12s adapter timeout) still open.
+Where we left off (verified 2026-08-18 14:00 PT):
+- litellm:julia-235b is a DeepSeek alias (api_base=https://api.deepseek.com, model=deepseek/deepseek-v4-pro), NOT the Julia box at :11513. Ruben called it and it answered in 5s because it's DeepSeek cloud.
+- Julia/Claudia 235B box is NETWORK DARK on all paths: WG 10.100.0.15 no endpoint/handshake, LAN 192.168.1.190 no route to host, :11513 tunnel refused. Router falls back julia-235b → cicero-235b (same Qwen3-235B family). Ruben's 5s test was likely Cicero or DeepSeek, not Julia. Zero 235B rows in call log 24h (DB down). Cannot fix remotely — needs physical check (power, cable, DHCP, WG service) + Julia-side autossh keepalive. Idea #27232 [proposed] critical.
+- GLM-5.2 ring also WEDGED at 19:58:02 and 19:58:17 (generation probe failed, timed out). Ring timed out at 20:37:08 with NO fallback available.
+- Rule 322 amended + reindexed (329 rules, hardfloor): underlying-LLM table + tunnel-vs-model + one-probe-is-never-a-verdict.
+- #27227 [proposed] 530 fix (GLM ring tools TTFB 263s vs 12s adapter timeout) still open.
+- GLM-5.3 cloud live (43 tok/s, z.ai), 0 turns, L3 paid final rung. Bake-off #27201 pending.
 
 Open threads to drive next:
-1. #27232 [proposed] — Recover Julia-235B: on WOPR check WG peer handshake (10.100.0.15), restart autossh-11513.service, if WG dead check Julia box LAN 192.168.1.190 / power / reverse tunnel; re-verify /v1/models + decode probe, then confirm it re-enters serving.
-2. #27227 [proposed] — Execute 530 fix: (b) descope GLM ring from tools-critical path + (c) free DeepSeek for tool spill first, or (a) raise :11510 adapter timeout to 600; adapter restart drops in-flight calls (schedule).
-3. #27201 [executing] — Bake-off GLM-5.3 vs glm-5.2/DeepSeek (rule 121) before promoting paid cloud off L3.
-4. #26712 [proposed] — Local ring: on HF publish, AWQ requant + PP=6 relaunch, repoint local lanes to 5.3.
+1. #27232 [proposed] CRITICAL — Someone on-site checks Julia box: power, network cable/WiFi, DHCP, WG service. Once network restored, WG handshake + :11513 tunnel resume, julia-235b gets picked (rank 20). Also add autossh keepalive on Julia side instead of one-shot reverse SSH.
+2. #27227 [proposed] — Execute 530 fix: (b) descope GLM ring from tools path + (c) free DeepSeek for tool spill first, or (a) raise :11510 adapter timeout to 600.
+3. #27201 [executing] — Bake-off GLM-5.3 vs glm-5.2/DeepSeek (rule 121) before promoting paid cloud.
+4. #26712 [proposed] — Local ring: on HF publish, AWQ requant + PP=6 relaunch. Ring is currently WEDGED (19:58 probe failed).
 5. #26715 [deployed] — Tracker cron: monitor HF gate-open + 530 recurrence.
 
 Reference IDs:
-- Ideas filed: #27232 [proposed] (Julia down), #27227 [proposed] (530 fix), #27201 [executing] (bake-off), #26711 [deployed] (cloud whitelist), #26712 [proposed] (local ring), #26715 [deployed] (tracker), #27205 [rejected] (repoint, rolled back)
-- Files touched: /Users/rubenmajor/Documents/Cline/Rules/322-what-was-serving-single-table.md (rewritten)
-- Probed: Julia :11513 + :2205 (down), :8210 ring (healthy), :11510 adapter (healthy), z.ai glm-5.3 (43 tok/s), adapter upstream log, admin_portal.llm_call_log
+- Ideas: #27232 [proposed] (Julia network dark, critical), #27227 [proposed] (530 fix), #27201 [executing] (bake-off), #26711 [deployed] (cloud whitelist), #26712 [proposed] (local ring), #26715 [deployed] (tracker), #27205 [rejected] (repoint rolled back)
+- Files touched: /Users/rubenmajor/Documents/Cline/Rules/322-what-was-serving-single-table.md (amended)
+- Probed: WG peers, LAN ping, :11513 curl, :11520 cicero (200), router audit log, _router_core.py:4649, call log 24h, LiteLLM config fallbacks, LiteLLM container logs at 19:58:52Z, LiteLLM config.yaml julia-235b api_base
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -157,7 +157,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1787081272363` — 8/18/2026, 1:00:26 PM PT — 41 turns
+### `1787081272363` — 8/18/2026, 2:56:41 PM PT — 81 turns
 
 **Original task:**
 
@@ -168,6 +168,59 @@ Please add GLM 5.3 (Cloud) to my list of models here to choose from in cline und
 **Ideas referenced:** #0000, #000000, #0033, #0066, #0099, #11629, #16213, #3300, #3333, #333333, #3366, #3399, #6600, #6633, #666666, #9900, #9933
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786993543586` — 8/18/2026, 1:58:07 PM PT — 406 turns
+
+**Original task:**
+
+```
+Our Staff Keycards were all deactivated and students/staff were locked out of our building on Saturday in Houston. There is something weird going on with the landlord and the firemarchall there that doesn't make sense. Anyway It's causing a huge downstream issue with us not having building access on the Weekends or after hours. It's also a violation of the lease. See lease:
+
+https://drive.google.com/drive/home 
+
+Check all emails to/from blackgoldrealty.com in postmark on my email to/from jthompson@emsuniversity.com rmajor@emsuniversity.com cfrench@emsuniversity.com. 
+
+I need a call list. Email
+```
+
+**Ideas referenced:** #0000, #001373, #020381, #0693, #121217, #164023, #171083, #2144, #23282, #249948, #250516, #251038, #251264, #251382, #251428, #251444, #251447, #251450, #251498, #251641, #2528, #26384, #26385, #2643, #26799, #26800, #27098 [proposed], #2874, #313131, #330968, #4721, #55556, #8211
+
+**Last PICKUP PROMPT:**
+
+```
+y the word when you want them.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task BlackGold Realty Houston lockout — alternate space agreed and confirmed in writing, awaiting logistics.
+
+Where we left off (verified 2026-08-18 13:57 PT):
+- RESOLVED FOR NOW: Lafayette verbally agreed AM 8/18 to provide a NEARBY BUILDING for after-hours classes starting Wed 8/19, with keycards, internet, and tables/chairs. Cori (Corinne French) handles logistics.
+- CONFIRMATORY EMAIL SENT ~13:56 PT (logged 9p) to lafayette@ with CC to yousuf@atlasoperating.com, musa@, tenant@blackgoldrealtyllc.com, cfrench@, jthompson@. Memorializes the four commitments, requests five logistics items, and contains silence-equals-agreement language. A/C cost expressly RESERVED, not conceded. Bill-back plan deliberately NOT telegraphed.
+- Earlier 3 AM personal email to Yousuf Chaudhary (logged 9n) appears to be what moved Lafayette. Yousuf is EVP/COO of Atlas Operating and very likely the son of founder Younas Chaudhary, whose memoir "From Dirt Roads to Black Gold" Ruben found in the building lobby and identified with personally.
+- Incident log BLACKGOLD-INCIDENT-LOG.md now 331 lines, sections 1 through 9p.
+- UNRESOLVED: original Suite 700 after-hours access, and the building fire panel replacement (4-6 weeks, whole-building system, landlord obligation). The alternate building is a workaround only.
+- Damage to date: Sat 8/15 relocated to Chinatown at EMSU cost, Sun 8/16 no access, Mon 8/17 class CANCELLED. 75 students, 5 sections, ~$130,725 exposure.
+- Anderson (713-449-8741): LL already pays 7AM-7PM weekday marshal; can add evenings/weekends with ~1 week lead; was wishy-washy on who books it.
+- Contacts: yousuf@atlasoperating.com / +1 713-301-9898. Lafayette 770-363-7199. Musa 832-745-2312. Doug Pack broker 713-818-5782. Atlas: 1900 St. James Place Suite 800 Houston TX 77056, (281) 893-9400.
+- Idea filed: #27098 [proposed].
+
+Open threads to drive next:
+1. #27098 [proposed] — Watch for Lafayette's reply with the building address. No address means the offer was a deflection; escalate to Yousuf citing the written confirmation.
+2. #27098 [proposed] — Physically verify the alternate space BEFORE scheduling students: room capacity, working internet, sufficient tables and chairs for skills instruction. Do not schedule sight unseen.
+3. #27098 [proposed] — Cori to obtain access hours, keycard count and staff-list process, on-site contact, wifi credentials.
+4. #27098 [proposed] — Track every incremental rent charge for the bill-back position; do not raise bill-back with L until invoices arrive.
+5. #27098 [proposed] — Keep pressing separately on Suite 700 after-hours access and the fire panel replacement timeline. The workaround does not cure the lease issue.
+6. #27098 [proposed] — NOT YET BUILT: attorney email to Greg Olson including an opinion on likely recovery amount.
+7. #27098 [proposed] — NOT YET BUILT: portal webpage surfaced as a card link on reports.php, restricted to exec admin and master admin roles.
+8. #27098 [proposed] — Verify August rent payment record with Jon/accounting so ownership cannot recast any of this as tenant default.
+
+Reference IDs:
+- Ticket: none filed (task originated as iMessage directive)
+- Ideas filed: #27098
+- Files touched: /Users/rubenmajor/Desktop/BLACKGOLD-INCIDENT-LOG.md, /Users/rubenmajor/Desktop/blackgold-incident.html, /Users/rubenmajor/Desktop/blackgold-breach-package-20260817.md, /Users/rubenmajor/Desktop/BLACKGOLD-
+```
 
 ### `1787083132087` — 8/18/2026, 12:58:58 PM PT — 2 turns
 
@@ -293,59 +346,6 @@ Curious here, the allegation is that ther ewas no medical director from December
 **Ideas referenced:** #178695, #18676, #19572, #19576, #19578, #19581, #19599, #21278, #250541, #251044, #251128, #251428, #251444, #251447, #25185, #27073 [awaiting_review], #27100 [awaiting_review], #27108 [awaiting_review], #27112 [awaiting_review], #27114 [awaiting_review], #27127 [proposed], #27148 [awaiting_review], #27153 [executing], #27157 [proposed], #27158 [proposed], #27159 [proposed], #27160 [approved], #27179 [proposed], #600179, #623992, #8212
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786993543586` — 8/18/2026, 3:09:10 AM PT — 398 turns
-
-**Original task:**
-
-```
-Our Staff Keycards were all deactivated and students/staff were locked out of our building on Saturday in Houston. There is something weird going on with the landlord and the firemarchall there that doesn't make sense. Anyway It's causing a huge downstream issue with us not having building access on the Weekends or after hours. It's also a violation of the lease. See lease:
-
-https://drive.google.com/drive/home 
-
-Check all emails to/from blackgoldrealty.com in postmark on my email to/from jthompson@emsuniversity.com rmajor@emsuniversity.com cfrench@emsuniversity.com. 
-
-I need a call list. Email
-```
-
-**Ideas referenced:** #0000, #001373, #020381, #0693, #121217, #164023, #171083, #2144, #23282, #249948, #250516, #251038, #251264, #251382, #251428, #251444, #251447, #251450, #251498, #251641, #2528, #26384, #26385, #2643, #26799, #26800, #27098 [proposed], #2874, #313131, #330968, #4721, #55556, #8211
-
-**Last PICKUP PROMPT:**
-
-```
-sday passes without an answer.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task BlackGold Realty Houston lockout — email SENT to Yousuf, awaiting reply.
-
-Where we left off (verified 2026-08-18 03:09 PT):
-- EMAIL SENT by Ruben ~03:00 PT / ~05:00 CT from his own mail client to yousuf@atlasoperating.com. Could NOT be retrieved from system records (email_outbound_log and jon_email_triage both empty for those domains since 8/16) because personal-client mail does not traverse the EMSU Postmark pipeline. Logged as section 9n with wording flagged UNVERIFIED. If Ruben pastes the sent text, replace 9n with the verbatim version.
-- Email content: opens with Ruben's authentic story of finding Younas Chaudhary's book in the building and identifying with it (Ruben grew up in extreme poverty, homeless at times); frames the issue as solvable without drama; then business section with $130K exposure, 75 students, Monday cancelled, Saturday relocated, regulatory risk to other Texas locations; Anderson's available fix; asks for tonight's solution plus authorization and booking clarity; escalation warning framed as bad for everyone.
-- ATLAS LEADERSHIP (logged 9m): Younas Chaudhary (Founder/CEO), Ijaz Rehman (EVP/CFO), Yousuf Chaudhary (EVP/COO, born and raised Houston, married with young son). Strong inference Yousuf is Younas's son; Musa Rehman likely relates to CFO Ijaz Rehman. Two families run the enterprise.
-- Younas's published principles: "Work hard. Be consistent. Stay positive. And never give up." Ruben's email independently echoes these. Deliberately not quoted.
-- ESCALATION TRIGGER: end of day Tuesday 8/18. Greg Olson deliberately OFF the thread, forward for awareness only, joins only if the deadline passes.
-- Damage: Sat 8/15 relocated to Chinatown at EMSU cost, Sun 8/16 no access, Mon 8/17 class CANCELLED. 75 students, 5 sections, ~$130,725 exposure.
-- Anderson (713-449-8741): panel serves whole building, needs replacement + 24hr programming; LL already pays 7AM-7PM weekday marshal; can add evenings/weekends with ~1 week lead; wishy-washy on who books it.
-- Yousuf: yousuf@atlasoperating.com, +1 (713) 301-9898. Atlas: 1900 St. James Place Suite 800 Houston TX 77056, (281) 893-9400.
-- Idea filed: #27098 [proposed].
-
-Open threads to drive next:
-1. #27098 [proposed] — Secure a venue for TONIGHT's class regardless of any landlord reply. Do not let the email outcome gate student access.
-2. #27098 [proposed] — Forward the sent email to Greg Olson for awareness only; keep him off the thread.
-3. #27098 [proposed] — Watch for Yousuf's reply. If he authorizes, act immediately on whichever booking path he names; Anderson needs ~1 week lead.
-4. #27098 [proposed] — If end of day Tuesday 8/18 passes with no answer, escalate formally to the full group with Greg CC'd plus notice on Atlas Operating LLC and YMC Royalty Company LP at Suite 800.
-5. #27098 [proposed] — NOT YET BUILT: attorney email to Greg Olson including an opinion on likely recovery amount.
-6. #27098 [proposed] — NOT YET BUILT: portal webpage surfaced as a card link on reports.php, restricted to exec admin and master admin roles.
-7. #27098 [proposed] — Verify August rent payment record with Jon/accounting before any escalation.
-8. #27098 [proposed] — Have Ruben set the lease PDF to Anyone-with-link so exact quiet-enjoyment/access/cure/abatement clause numbers can be cited.
-
-Reference IDs:
-- Ticket: none filed (task originated as iMessage directive)
-- Ideas filed: #27098
-
-```
 
 ### `1787016619040` — 8/18/2026, 1:49:01 AM PT — 323 turns
 
@@ -3195,80 +3195,5 @@ Last 60 days: 1,734 externship emails from info@emsuniversity.com plus 4
 ```
 
 **Ideas referenced:** #178649, #18944, #18951, #25822 [deployed], #25889 [awaiting_review], #25916 [awaiting_review], #25932 [deployed], #25950 [awaiting_review], #25973 [awaiting_review], #26002 [awaiting_review], #26027 [awaiting_review], #26053 [deployed], #26066 [superseded], #26067 [deployed], #26071 [executing], #26089 [deployed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786820106387` — 8/15/2026, 2:07:52 PM PT — 360 turns
-
-**Original task:**
-
-```
-Why does Vicky send me this? -> Making a followup on Sam Nelson’s final exam I was able to extend it to August 20th however theres no attempt button
-
-// check her Argus, Jon's Argus and Jon's overrides on this. Explain if an error exists
-```
-
-**Ideas referenced:** #059669, #1612 [awaiting_review], #20555, #2167, #2514 [rejected], #2515, #25185, #26620 [proposed], #26628 [proposed], #26640 [proposed], #26647 [executing], #374151, #6067, #639348, #703694, #703695, #8152 [deployed], #8153, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-s, which feeds the RAG corpus.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #26647 [executing] - canonical student-key mapping and reconciliation job across Matrix skill surfaces.
-
-Where we left off (verified 2026-08-15 14:05 PT):
-- Argus repair worker had NO cron. Installed /etc/cron.d/emsu-argus-repair-worker (every minute, www-data). Backlog 58 to 16. Remaining 16 are verify_payment_state (14) and match_student_payment (2), read-only, no worker branch by design.
-- extend_exam_deadline never wrote quiz_overrides. Patched to upsert the Moodle override, void phantom attempts, and say MOODLE NOT UPDATED when it cannot. Proof: Jon event 6393595 created quiz_overrides row 3045 at 14:04:07.
-- New action void_zombie_attempts wired end to end (catalog, handler, worker, permissions for MasterAdmin/ExecAdmin/ITAdmin/Admin).
-- vw_Student_Skills_Summary reconciles all three skill sources with passed_source. Sam 15/16, previously 1/16. Cohort 1,514 students, 10,797 rows.
-- Sam final exam: 0 attempts of max 3, override 3044 open to 2026-08-20 00:35:53 PT.
-
-Open threads to drive next:
-1. #26647 [executing] Remaining scope: canonical student-key mapping helper, reconciliation job across skill surfaces, audit of other two-key views, drop or document the three empty externship tables, and trace the unverified PCR row-level source.
-2. #26628 [deployed] in ready_for_review. Optional follow-on: add worker branches for verify_payment_state and match_student_payment, or mark them read-only in the catalog so they stop appearing as a backlog.
-3. #26620 [deployed] closed, nothing further.
-4. #26640 [deployed] in ready_for_review, nothing further unless review flags something.
-
-Reference IDs:
-- Ideas filed: #26620 [deployed], #26628 [deployed], #26640 [deployed], #26647 [executing]
-- Bug library incidents: 2514 (skills view key drift), 2515 (repair queue no consumer plus phantom Moodle write)
-- Argus kaizen rules: id 1 matrix_two_key_student_lookup, id 2 argus_repair_queue_verify_consumer_and_target
-- Correction rows: 8152, 8153 (ai_learned_corrections)
-- Live proof: orchestrator_event_log event 6393595 produced moodle_c_live.quiz_overrides row 3045
-- Files touched: /var/www/emtskills/cron/cron_argus_repair_worker.php, /var/www/emtskills/lib/argus_action_catalog.php, /etc/cron.d/emsu-argus-repair-worker, admin_portal.vw_Student_Skills_Summary, admin_portal.argus_action_permissions
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786818491154` — 8/15/2026, 1:03:24 PM PT — 300 turns
-
-**Original task:**
-
-```
-#Joshua Hot FAllover
-
-Re-base and give me a copy prompt to open only for the Joshua hot fallover related issues. I do not need information on the rest of anything. Just the Joshua hot fall over
-
---
-
-
-Three answers. One of them cost money nobody was counting.
-
-# 1. LoRA: off, and it was worse than the disk
-
-You said turn it off. It is off, and everything downstream of it is off with it. #26068 [deployed]
-
-Shutting it down surfaced something the earlier writeup missed. The 22GB/hr was a symptom, not the thing itself. The actual generator was `frank_fleet_keeper.php`, running every 3 minutes with
-```
-
-**Ideas referenced:** #10866, #12824, #12872, #12878, #25185, #26007 [deployed], #26008 [executing], #26009 [deployed], #26017 [awaiting_review], #26019 [deployed], #26023 [executing], #26024 [deployed], #26068 [deployed], #26069 [deployed], #26070 [deployed], #26076 [executing], #26077 [executing], #26604 [deployed], #26614 [deployed], #26631 [deployed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

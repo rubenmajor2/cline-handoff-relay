@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/18/2026, 4:15:56 AM PT | window: last 72h | 88 tasks | index total 808 (parsed 1, cached 807)
+Generated: 8/18/2026, 10:00:47 AM PT | window: last 72h | 87 tasks | index total 808 (parsed 0, cached 808)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -97,7 +97,6 @@ Generated: 8/18/2026, 4:15:56 AM PT | window: last 72h | 88 tasks | index total 
 | `1786764883780` | 8/15/2026, 11:45:37 AM | 228 | 870KB | #Abandoned Cart Recovery |
 | `1786815116178` | 8/15/2026, 11:35:03 AM | 308 | 897KB | #SSS/CFA Issues / Virtual Lora |
 | `1786778041170` | 8/15/2026, 11:33:13 AM | 360 | 1836KB | #CFA  |
-| `1786778761449` | 8/15/2026, 9:56:19 AM | 422 | 646KB | #SSS |
 
 ---
 
@@ -3332,26 +3331,3 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </result>
 </attempt_completion>
 ```
-
-### `1786778761449` — 8/15/2026, 9:56:19 AM PT — 422 turns
-
-**Original task:**
-
-```
-#SSS
-
-You were right — the plumbing already exists. I checked instead of assuming, and it changes the plan from "build a system" to "connect what's already there."
-
-## What already exists (verified)
-
-The **read side is fully built** on both hops:
-- `router_hook.py:147` — `md.get("emsu_surface") or md.get("surface")`
-- `frankenstein_tools_adapter.py:386` — `emsu_surface || route_name || surface`
-- `frankenstein_tools_adapter.py:2180` — same lookup in the lane classifier
-
-And there's a **working reference implementation**: `cron/cron_argus_ext_canary.php:51` passes `'emsu_surface' => 'argus_term
-```
-
-**Ideas referenced:** #10740, #1119, #11316, #11397, #12249, #12251, #12266, #12269, #12335, #12363, #12365, #12366, #12368, #12407, #12588, #12589, #12590, #12591, #12618, #12657, #12688, #12689, #13155, #13157, #13459, #13470, #13874, #14133, #14142, #15776, #16084, #16154, #16715, #16716, #16718, #17078, #17174, #174512, #21134, #23133, #2316, #25155, #25171, #25178, #25185, #25186, #25986, #26376 [deployed], #26377 [deployed], #26396 [proposed], #26424 [proposed], #26447 [proposed], #26461 [in-progress], #26469 [proposed], #26503 [executing], #26504 [executing], #26505 [executing], #26506 [proposed], #5574, #7174, #9112, #9222
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

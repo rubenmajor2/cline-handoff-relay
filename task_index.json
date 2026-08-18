@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-18T06:39:49.952Z",
+ "generated_at": "2026-08-18T07:39:50.391Z",
  "counts": {
-  "parsed": 4,
-  "reused": 804,
+  "parsed": 1,
+  "reused": 807,
   "failed": 0,
   "total": 808
  },
@@ -133668,13 +133668,13 @@
   },
   "1787027676077": {
    "task_id": "1787027676077",
-   "mtime": 1787035175310,
+   "mtime": 1787038585579,
    "created_at": "2026-08-18T04:34:36.077Z",
-   "last_modified": "2026-08-18T06:39:35.310Z",
-   "size_kb": 667,
-   "turn_count": 273,
+   "last_modified": "2026-08-18T07:36:25.579Z",
+   "size_kb": 946,
+   "turn_count": 430,
    "title": "#BigMac 4th GPU\n\nGet the 4th GPU serving\n\nBig Mac is back and serving, and it can now recover itself remotely (verified: curl from WOPR to http://10.100.0.19:8000/v1/models returned 200; on-box battlemage=3, renderD=3, vLLM active, \"startup complete\" count=1; watchdog0 state=active, RuntimeWatchdogUSec=1min). The 4th GPU is still not online, and I hit a real setback on it that I reverted.\n\n## What caused the wedge\n\nNot OOM, not fork exhaustion, not a network ban. It was a total userspace freeze triggered by the PCI bus rescan I ran while probing for the 4th GPU.\n\nThe evidence (verified from the box's own persistent journal after it came back): the last successful login session was 19:47:31, ",
-   "pickup_prompt": " | causal rule updated: 315\\n\\n═══════════════════════════════════════════════\\nPICKUP PROMPT (paste into a fresh Cline window)\\n═══════════════════════════════════════════════\\n\\nPick up task #1786948459 — Big Mac 4th B70 + remote-recovery hardening.\\n\\nWhere we left off (verified 2026-08-17 22:47 PT):\\n- BIG MAC HEALTHY: 3x Battlemage B70 (43/83/87:00.0), renderD=3, vLLM active, models_http=200 from WOPR (verified: curl wopr_to_bigmac=200).\\n- 4TH GPU REMOTE LEVERS EXHAUSTED (#27155 [proposed]): all remote attempts failed. Root port 00:01.2 shows PresDet-, Speed 2.5GT/s, EqualizationComplete-, EqualizationPhase1-, CommClk-, bus 01 has 0 devices. The port sees the card intermittently (PresDet oscillates after pcieport unbind/rebind) but cannot complete PHY equalization. setpci blocked by Secure Boot lockdown. nocrs caused SR-IOV regression (reverted). xe.max_vfs=0 no effect.\\n- RECOVERY STACK LIVE (all verified this session): sp5100_tco chipset watchdog armed (watchdog0 state=active, RuntimeWatchdogUSec=1min); panic sysctls (panic=30, panic_on_oops=1, hung_task_panic=1); bigmac-session-canary.timer active; bigmac-watchdog-arm.service active.\\n- WEDGE ROOT CAUSE (#27142 [deployed]): whole-userspace freeze at 19:48:25 triggered by PCI bus rescan. journald AND rsyslog stopped same instant, 0 lines each across 49-min dead window; zero ext4/nvme/OOM/fork evidence; kernel net stack alive. NOT resource exhaustion.\\n- PROVEN IN PRODUCTION: detector fired real alert to #system-issues during outage (message id 1539121447526473732).\\n\\nOpen threads to drive next:\\n1. #27155 [proposed] — 4th GPU next actions, all require hands: swap B70+adapter into known-good socket, try different M.2 adapter, disable Secure Boot in BIOS, set per-slot PCIe mode/gen limit. Physical access required.\\n2. #27152 [executing] — adapter DIP switches (forced power start + long PERST). efficiency_priority=1.\\n3. #27143 [awaiting_review] — SUPERSEDED BY #27147 [deployed]; the 00:01.2 PROVEN GOOD premise. Awaiting review.\\n4. #27145 [awaiting_review] — WOPR alert paths silently dead. Awaiting review.\\n5. #27140 [executing] — link NOW trains 8GT/s x4, remaining blockers. Executing.\\n6. #27137 [executing] — bifurcation x8-from-x16 route. Executing.\\n7. #25097 [awaiting_review] — Big Mac pool wiring / TP=4 flip. Awaiting review.\\n8. #19082 [blocked] — slim remote power control. State unclear, needs look.\\n9. #19524 [executing] — TP-Link rejected on form factor. Executing.\\n\\nReference IDs:\\n- Ideas filed this session: #27155 [proposed]\\n- Ideas carried: #27152 [executing], #27143 [awaiting_review], #27147 [deployed], #27145 [awaiting_review], #27142 [deployed], #27140 [executing], #27137 [executing], #25097 [awaiting_review], #19082 [blocked], #19524 [executing]\\n- Bug library rows: incident 2563 (nocrs SR-IOV regression), 2564, 2565\\n- Rules amended this session: 297 (x2), 315 (x2)\\n- Files touched on Big Mac: /etc/modules-load.d/watchdog.conf, /etc/systemd/system.conf.d/10-watchdog.conf, /etc/sysctl.d/99-bigmac-recovery.conf, /usr/local/bin/bigmac_session_canary.sh, /etc/systemd/system/bigmac-session-canary.{service,timer}, /usr/local/bin/bigmac_watchdog_arm.sh, /etc/systemd/system/bigmac-watchdog-arm.service, /etc/default/grub (reverted, backup .bak-20260817-4thgpu)\\n- Files touched on WOPR: /usr/local/bin/bigmac_wedge_detector.sh, /usr/local/bin/bigmac_wedge_detector_selftest.sh, /usr/local/bin/bigmac_wedge_alert.php, /etc/systemd/system/bigmac-wedge-detector.{service,timer}, /usr/local/bin/bigmac_return_watch_v2.sh\\n- Prior task: #1786695610761 [supe",
+   "pickup_prompt": "| filed idea #27155 [proposed]\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1786948459 — Big Mac 4th B70 + remote-recovery hardening.\n\nWhere we left off (verified 2026-08-17 23:42 PT):\n- BIG MAC HEALTHY: 3x B70, renderD=3, vLLM active, models_http=200. Clean boot, nommconf reverted.\n- 4TH GPU REMOTE LEVERS EXHAUSTED (#27155 [proposed]): 17 levers tried, all failed. Port 00:01.2 sees card intermittently but cannot complete PHY equalization. Secure Boot blocks all register writes.\n- RECOVERY STACK LIVE: watchdog active, canary active, panic sysctls set.\n- WEDGE ROOT CAUSE (#27142 [deployed]): userspace freeze from PCI rescan, not resource exhaustion.\n\nOpen threads to drive next:\n1. #27155 [proposed] — 4th GPU physical swap required.\n2. #27152 [executing] — adapter DIP switches.\n3. #27143 [awaiting_review] — superseded by #27147 [deployed].\n4. #27145 [awaiting_review] — WOPR alert paths dead.\n5. #27140 [executing] — link trains 8GT/s x4.\n6. #27137 [executing] — bifurcation route.\n7. #25097 [awaiting_review] — Big Mac pool wiring.\n8. #19082 [blocked] — slim remote power control.\n9. #19524 [executing] — TP-Link rejected.\n\nReference IDs:\n- Ideas filed: #27155 [proposed]\n- Ideas carried: #27152 [executing], #27143 [awaiting_review], #27147 [deployed], #27145 [awaiting_review], #27142 [deployed], #27140 [executing], #27137 [executing], #25097 [awaiting_review], #19082 [blocked], #19524 [executing]\n- Bug library: incident 2563, 2564, 2565\n- Rules amended: 297 (x2), 315 (x2)\n- Prior task: #1786695610761 [superseded]\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
     "2073": null,
     "2341": "resolved",
@@ -133703,6 +133703,9 @@
     "27147": "unknown",
     "27152": "executing",
     "27155": "proposed",
+    "27173": "proposed",
+    "27174": "proposed",
+    "27175": "proposed",
     "178669": null,
     "178694": null,
     "227960": null
@@ -133731,11 +133734,11 @@
   },
   "1787032087401": {
    "task_id": "1787032087401",
-   "mtime": 1787034696781,
+   "mtime": 1787035709093,
    "created_at": "2026-08-18T05:48:07.401Z",
-   "last_modified": "2026-08-18T06:31:36.781Z",
-   "size_kb": 605,
-   "turn_count": 144,
+   "last_modified": "2026-08-18T06:48:29.093Z",
+   "size_kb": 680,
+   "turn_count": 162,
    "title": "#TDSHS \n\nCurious here, the allegation is that ther ewas no medical director from December 2024 to July 2026, the response does not cover any period before July 2026, should it? I mean, the pink elephant is that Dr. Turner said he was not the medical director, however, the contract shows him as the Medical Director (even still technically under contract) and that Dr. Turner took over on July 22nd, but Turner still technically had a contract although repudiated later / technically a breach. Then we got another medical director anyway. So how do we address it reasonably but in a delecate way. \n\n\n--\n\nYou were right on all three and I was wrong on all three. The medical-director response is built",
    "pickup_prompt": null,
    "ideas": {
@@ -133771,13 +133774,13 @@
   },
   "1787035094427": {
    "task_id": "1787035094427",
-   "mtime": 1787035166818,
+   "mtime": 1787035315956,
    "created_at": "2026-08-18T06:38:14.427Z",
-   "last_modified": "2026-08-18T06:39:26.818Z",
-   "size_kb": 69,
-   "turn_count": 11,
+   "last_modified": "2026-08-18T06:41:55.956Z",
+   "size_kb": 106,
+   "turn_count": 20,
    "title": "# GLM 5.3: reminder set + your \"why can't we use it\" question answered\n\nCan we use it now? \n\n## Direct answer: why can't we use GLM-5.3 cloud via z.ai in Cline / frankenstein-llm today?\n\nBecause **Zhipu has not granted your account access yet — it is a server-side gate, not something we can configure around.** I proved this with a live request a few minutes ago, not a guess:\n\n- `POST https://api.z.ai/api/paas/v4/chat/completions` with `model=glm-5.3` using your real key returneode\":\"1220\",\"message\":\"You do not have permission to access glm-5.3\"}}`\n- The exact same request with `model=glm-5.2` returned HTTP 200 with a real completion.\n\nSo the model **exists on Zhipu's platform** — the platfor",
-   "pickup_prompt": null,
+   "pickup_prompt": "lert the instant that happens.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #26715 - GLM 5.2 → 5.3 upgrade + release tracker status checkpoint\n\nWhere we left off (verified 2026-08-17 23:40 PT):\n- Verified live: GLM-5.3 STILL fully gated on all 3 surfaces. Zhipu api.z.ai returns error 1220 \"no permission\" for glm-5.3 (glm-5.2 control = HTTP 200), OpenRouter lists only up to z-ai/glm-5.2, HF zai-org/GLM-5.3 = HTTP 401.\n- Tracker HEALTHY: cron /etc/cron.d/emsu-glm53-release-tracker fires daily 07:05 PT (syslog evidence 08-16 + 08-17), script /usr/local/bin/emsu_glm53_release_tracker.sh intact, state /var/lib/emsu/glm53_release_state = \"zcloud=0 or=0 hf=0 (401)\", dedup working (single event 6409723, no spam).\n- 2-week decision card armed: fires on/after 2026-08-29 if still gated (marker /var/lib/emsu/glm53_2wk_card_sent not yet present).\n- Full upgrade plan prepped: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md.\n\nOpen threads to drive next:\n1. #26711 [proposed] - HUMAN ACTION: Ruben asks Zhipu (support@zhipuai or account manager) to whitelist key 802fd27e... for glm-5.3. Until then cloud is un-wireable; tracker auto-alerts the moment error 1220 clears.\n2. #26712 [proposed] - When tracker fires hf=1 (zai-org weights public): download GLM-5.3/FP8, AWQ 4-bit quant, single-box vLLM validate (glm47 tool parser / glm45 reasoning), then PP=6 Hex ring relaunch per runbook.\n3. #26713 [proposed] - When bake-off + soak pass: flip registry tier L3/L4g, router_hook GLM-first target, FRANK_BOX_CAPACITY 8210; retire glm-5.2 after 48h; update tracker with gate-cleared timestamps.\n4. #26715 [deployed] - Monitor only: next expected event is a gate-clear alert OR the 08-29 2-week card. No rows in 48h beyond the daily runs = check /var/log/cron or run script manually.\n\nReference IDs:\n- Ideas filed: #26711 [proposed], #26712 [proposed], #26713 [proposed], #26715 [deployed]\n- Files touched: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md, /usr/local/bin/emsu_glm53_release_tracker.sh, /etc/cron.d/emsu-glm53-release-tracker, /var/lib/emsu/glm53_release_state, /var/www/emtskills/docs/HANDOFF_NOTES.md\n- Event log: 6409723 (tracker self-test)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1993": null,
     "2537": null,

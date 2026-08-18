@@ -45,3 +45,13 @@ If a credential reference appears in a git-tracked file, it MUST be a constant n
 - Reversal note: TDSHS packet argued that Chapter 157 does not prescribe an externship interval and invited the Department to identify a provision that does. Ruben flagged the exposure: a filing that argues no external standard exists invites the agency to hold the licensee to its OWN published standards instead, and the program had not read its catalog, syllabus, self-study or signed student disclosures to know what timelines they state. Amendment: in any regulator filing, do NOT characterise what an authority does or does not contain, do NOT enumerate what is absent from it, and do NOT invite the agency to identify a provision. State only the notice objection: a licensee is entitled to know the provision it is measured against, and the burden of identifying it rests with the agency. A negative claim about the regulatory landscape is a claim like any other and requires reading BOTH the agency's authority and the program's own published documents first.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-17 23:59 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786952400
+- RCA bucket: scope error
+- Trigger pattern: Including a defense on a subject the complaint never raised, justified as completeness or pre-emption
+- Reversal note: The TDSHS response to control 1080261886 carried a paragraph explaining that no externship placement request existed for the student, framed as being "for completeness." The complaint makes no externship allegation at all; it alleges wrong-dated-class enrollment and a first-week lockout. Ruben: "if the complaint says nothing about externships in 886 then no need to mention it." Volunteering a defense to an uncharged subject puts that subject in the agency's file, invites follow-up on it, and signals that the licensee considers it live. Amendment: a regulator filing answers the allegation actually made and nothing else. Before including any paragraph, name the sentence in the complaint document it responds to; if no such sentence exists, delete the paragraph. This applies to favorable facts as much as unfavorable ones, since a volunteered subject is a volunteered subject regardless of which way it cuts. "For completeness" and "so the Department is not left to infer" are the tells that a
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

@@ -187,3 +187,33 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Every draft of the TDSHS packet stated "Each transmittal alleges that the program failed to provide timely externship scheduling and adequate student support." Nobody had read a single one of the three complaints: the transmittal email bodies contain only the student name and cohort, and all three attachments sit at compliance_source_documents status=not_obtained with file_path NULL and zero inbound_attachment_ocr rows. The allegation was inferred from the pattern of earlier matters and then asserted as fact to a regulator. Amendment: before characterising what any external document alleges, requests, or requires, confirm the document itself has been READ this session and name where it was read from. An email that says "please see attached" is not the document; if the attachment is not captured, the correct output is "the program has not been provided the substance of the matter" plus a request that the agency state it, never an inferred characterisation. Corollary: when the record for
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-17 23:58 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786952400
+- RCA bucket: insufficient probe
+- Trigger pattern: Asserting a user had system access from provisioning records (enrolment row, unsuspended status, outbound emails) without querying the access log for an actual successful session
+- Reversal note: Answering a regulator's student-access allegation, I wrote "the program has found no record of an account lockout, no suspension, and no support matter reporting a lockout" and cited daily class emails and an active enrolment status as evidence the student had access. I had not opened the access log. When Ruben asked whether I had actually checked, logstore_standard_log showed ONE login on 5/25 that never reached a course view, then eighteen days of total silence, then on 6/12 a failed login, a credential change, and her first course view. The student's allegation had support and my draft asserted the opposite to a state agency. Amendment: an enrolment row, a mailing-list send, and an unsuspended account are records of what the PROGRAM did; none is evidence of what the USER experienced. Before asserting that a person had access to a system, query the server-side access log for that account and read the first successful use of the thing in question, not the provisioning record. The same
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-18 00:09 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786952400
+- RCA bucket: insufficient probe
+- Trigger pattern: Hand-rolling targeted queries from a working hypothesis when a standing tool that enumerates all gates for that entity exists and was never called
+- Reversal note: Investigating a wrong-class-enrollment complaint, I ran only the queries my own hypothesis suggested (access log, enrollment row, duplicate check) and concluded from an 18-day access gap that the program had a monitoring failure to own. Ruben predicted the actual cause without touching the data: a registration/section-association problem. Running get_student_lifecycle_state, the standing tool that enumerates EVERY provisioning gate, surfaced it in one call: section_intent_match WARN, the account enrolled in the course but in NO Moodle group, plus gradebook showing Chapters 1-27 at 95-100 percent, which also falsified my implied disengagement narrative. My hand-rolled queries could not have found the missing group because I never thought to ask about groups. Amendment: when a standing lifecycle/state tool exists for the entity under investigation (get_student_lifecycle_state, verify_payment_state, lookup_paperwork_state), run it BEFORE hand-rolling targeted queries, and run it even when
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-18 00:25 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786952400
+- RCA bucket: wrong premise
+- Trigger pattern: Attributing a missing system-state row to organisational fault without identifying the mechanism that writes it or checking whether a user-completed activity governs it
+- Reversal note: I found that a student's account was in no Moodle section group and asserted to a regulator that this was "a registration-side condition rather than an act or omission by the student." Ruben identified the actual mechanism: section membership is set by a student-completed groupselect activity, cmid 2005, titled Join Your Class Section. Querying it showed she opened the activity eight times beginning 6/24 and never completed it, with no course_modules_completion row. My claim inverted the causation and volunteered fault the record did not support. Amendment: before characterising any system state as caused by the organisation rather than the user, identify the mechanism that WRITES that state and check whether it is a user action, an automated process, or both. A missing row is evidence that something did not happen, never evidence of who failed to do it. Where a user-facing activity exists for the purpose, query its completion and view records before assigning cause. Corollary for regu
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

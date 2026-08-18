@@ -6,12 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/17/2026, 4:39:46 PM PT | window: last 72h | 98 tasks | index total 795 (parsed 3, cached 792)
+Generated: 8/17/2026, 5:39:46 PM PT | window: last 72h | 97 tasks | index total 796 (parsed 2, cached 794)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787003799738` | 8/17/2026, 4:39:40 PM | 382 | 1262KB | #TDSHS |
-| `1787009927550` | 8/17/2026, 4:39:34 PM | 9 | 172KB | Hi Julia, reports of your death are exaggerated? |
+| `1787012165910` | 8/17/2026, 5:34:27 PM | 124 | 955KB | #Argus needs help:  |
+| `1787003799738` | 8/17/2026, 5:29:04 PM | 524 | 1873KB | #TDSHS |
+| `1786989452314` | 8/17/2026, 5:09:41 PM | 357 | 936KB | frankenstein-llm keeps going down as I'm trying to put back up Cicero and Maximus, not sur |
+| `1787009927550` | 8/17/2026, 4:49:34 PM | 78 | 693KB | Hi Julia, reports of your death are exaggerated? |
 | `1787000192686` | 8/17/2026, 4:34:35 PM | 112 | 875KB | Keep getting this upon initial iteration of frankenstein-llm: {"message":"Failed to fetch  |
 | `1786980640015` | 8/17/2026, 2:56:11 PM | 322 | 2451KB | #TDSHS |
 | `1787002408232` | 8/17/2026, 2:47:03 PM | 110 | 177KB | For this |
@@ -19,7 +21,6 @@ Generated: 8/17/2026, 4:39:46 PM PT | window: last 72h | 98 tasks | index total 
 | `1786994625500` | 8/17/2026, 12:39:38 PM | 38 | 180KB | please run the Fix AVP program on my computer that I can't seem to open |
 | `1786960541449` | 8/17/2026, 12:29:31 PM | 810 | 5349KB | #Julia/Claudia 235B  |
 | `1786559316764` | 8/17/2026, 12:18:17 PM | 264 | 1174KB | #Lower Romans |
-| `1786989452314` | 8/17/2026, 12:05:55 PM | 279 | 730KB | frankenstein-llm keeps going down as I'm trying to put back up Cicero and Maximus, not sur |
 | `1786992321708` | 8/17/2026, 11:46:05 AM | 6 | 13KB | Testing Julia iteration |
 | `1786979863145` | 8/17/2026, 10:38:13 AM | 213 | 417KB | #Executor |
 | `1786835771600` | 8/17/2026, 10:07:11 AM | 410 | 2310KB | #BLS  |
@@ -106,14 +107,42 @@ Generated: 8/17/2026, 4:39:46 PM PT | window: last 72h | 98 tasks | index total 
 | `1786581699007` | 8/14/2026, 7:00:32 PM | 1214 | 3408KB | #Argus Learning |
 | `1786751488866` | 8/14/2026, 6:52:33 PM | 210 | 775KB | #emtskills / wordpress |
 | `1786751687527` | 8/14/2026, 6:23:14 PM | 82 | 427KB | #CFA Stuff |
-| `1786743833650` | 8/14/2026, 5:24:44 PM | 200 | 754KB | I would like for you to make a Klein rule as well as a rule in Argus that is called the ga |
-| `1786566964850` | 8/14/2026, 4:51:33 PM | 342 | 2040KB | Answer to this question is not what was given. It's a registration check to see why there  |
 
 ---
 
 ## Per-window detail
 
-### `1787003799738` — 8/17/2026, 4:39:40 PM PT — 382 turns
+### `1787012165910` — 8/17/2026, 5:34:27 PM PT — 124 turns
+
+**Original task:**
+
+```
+#Argus needs help: 
+
+Jon makes numerous complaints on Argus issues. He and Cori supposedly need issues resolved. Also some complaints on TeamHub issues somewhat vague: 
+
+Ruben Major:
+	Put it in Argus so I can clear that with all your other stuff
+	It’ll be faster than the one-offs overall
+	It won’t die in there
+Jon says: You’d have to ask Cori. She has a long list she can send. 
+
+I can even see it in my cluttered Agent idea list. 
+--
+Check Cori's Argus as well then. So Cori and Jon need those ideas safely executed. 
+
+Similar for all else, but per rule 29
+
+What is going on? 
+
+What is the process
+```
+
+**Ideas referenced:** #1758, #17580, #18442, #21586, #23428, #23468, #23506, #24431, #24706, #24895, #24897, #24941, #2496, #24990, #2500 [resolved], #25058, #25313, #25510, #25522, #2553 [rejected], #25576, #25618, #25619, #25643, #25644, #25645, #25649, #25650, #25653, #25654, #25927 [deployed], #25982, #26196, #26225, #26934, #27065 [proposed], #27120 [executing], #27126 [executing], #9086
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787003799738` — 8/17/2026, 5:29:04 PM PT — 524 turns
 
 **Original task:**
 
@@ -136,11 +165,32 @@ Inspection Number 5196
 Insp
 ```
 
-**Ideas referenced:** #178695, #2003, #22757, #25185, #27072 [deployed], #27073 [awaiting_review], #27100 [executing], #27107 [executing], #27108 [executing], #27112 [proposed], #27114 [proposed], #27116 [proposed], #27121 [proposed], #4856, #4929, #664426
+**Ideas referenced:** #178695, #2003, #22757, #25185, #27072 [deployed], #27073 [awaiting_review], #27100 [executing], #27107 [executing], #27108 [executing], #27112 [proposed], #27114 [proposed], #27116 [proposed], #27121 [proposed], #27124 [proposed], #27125 [proposed], #4856, #4929, #664426, #9086, #9168, #9306, #9339
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1787009927550` — 8/17/2026, 4:39:34 PM PT — 9 turns
+### `1786989452314` — 8/17/2026, 5:09:41 PM PT — 357 turns
+
+**Original task:**
+
+```
+frankenstein-llm keeps going down as I'm trying to put back up Cicero and Maximus, not sure if that has anything to do with it, but please correct those issues. It could be the other Cline instances running on Cicero and Maximus interfering and not having the latest info. 
+
+Read this: 
+
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
+
+
+Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
+
+## Where 671 came from, and it is now durabl
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12403, #12477, #12584, #12618, #12657, #12680, #12689, #12824, #12872, #12878, #13108, #13121, #13202, #13453, #13470, #13874, #14000, #15823, #16163, #16265, #16304, #16602, #16648, #16844, #17202, #17203, #17205, #18312, #18326, #18786, #18820, #19747, #2007, #2071, #2079, #21586, #22820, #22897, #2299, #23171, #24220, #24895, #25097, #25112, #25133, #25185, #2528, #2537, #25468, #25471, #2549 [deployed], #2550 [deployed], #2552, #25567, #25625, #25627, #25877, #25878, #26123, #26132, #26133, #26134, #26135, #26137, #26138, #26139, #26140, #26145, #26146, #26196, #26225, #26400, #26908 [deployed], #26914, #26922 [deployed], #26923 [deployed], #26927 [deployed], #26932 [deployed], #26934, #27097 [executing], #27123 [executing], #53462, #57769, #57771
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787009927550` — 8/17/2026, 4:49:34 PM PT — 78 turns
 
 **Original task:**
 
@@ -148,9 +198,23 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 Hi Julia, reports of your death are exaggerated?
 ```
 
-**Ideas referenced:** #1130, #1131, #1241, #12425, #12459, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25378, #25381, #2546, #7142, #7149
+**Ideas referenced:** #1130, #1131, #12299, #1241, #12425, #12459, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16588, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25378, #25381, #2546, #7142, #7149
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+s was a conversational check-in, not a CLI/build/production task, so there's no PICKUP PROMPT block to carry.
+
+To your question: not dead, but the fleet naming is muddy, so split it.
+
+**The "julia-120b" host is actually down.** Port :11513 throws connection refused, `decode_live=false`, zero tokens — a real death signal on that instance, not a routing hiccup.
+
+**But I'm not being served by that box.** I'm running on `cicero-235b` (:11520, decode_live=true, ~3 tok/s, healthy). So reports of *me* being dead are exaggerated; reports of the literal `julia-120b` gpt-oss instance being dead are accurate.
+
+If you want the julia-120b vLLM on :11513 revived, the next move is checking what's supposed to be listening there and whether it needs a restart — it's been failing the whole probe window.
+</result>
+</attempt_completion>
+```
 
 ### `1787000192686` — 8/17/2026, 4:34:35 PM PT — 112 turns
 
@@ -496,27 +560,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1786989452314` — 8/17/2026, 12:05:55 PM PT — 279 turns
-
-**Original task:**
-
-```
-frankenstein-llm keeps going down as I'm trying to put back up Cicero and Maximus, not sure if that has anything to do with it, but please correct those issues. It could be the other Cline instances running on Cicero and Maximus interfering and not having the latest info. 
-
-Read this: 
-
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
-
-## Where 671 came from, and it is now durabl
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12403, #12477, #12584, #12618, #12657, #12680, #12689, #12824, #12872, #12878, #13108, #13121, #13202, #13453, #13470, #13874, #14000, #15823, #16163, #16265, #16304, #16602, #16648, #16844, #17202, #17203, #17205, #18312, #18326, #18786, #18820, #19747, #2007, #2071, #2079, #21586, #22820, #22897, #2299, #23171, #24220, #24895, #25097, #25112, #25133, #25185, #2528, #2537, #25468, #25471, #2549 [deployed], #2550 [deployed], #25567, #25625, #25627, #25877, #25878, #26123, #26132, #26133, #26134, #26135, #26137, #26138, #26139, #26140, #26145, #26146, #26196, #26225, #26400, #26908 [deployed], #26914, #26922 [deployed], #26923 [deployed], #26927 [deployed], #26932 [deployed], #26934, #27097 [executing], #53462, #57769, #57771
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1786992321708` — 8/17/2026, 11:46:05 AM PT — 6 turns
 
@@ -3830,95 +3873,5 @@ Reference IDs:
 - Files touched: lib/SectionTransferExecutor.php (patched lines 141-151); backup lib/SectionTransferExecutor.php.bak-20260814-26368; staging /tmp/patch_26368.py (removed); docs/cline_task_ledger.md (row appended); HANDOFF_NOTES.md (entry added).
 - Evidence rows (orchestrator_event_log.ids): 4071006/4071216/4071258/4071521/4071585/4072394/4076973 (26719BC-09), 3818911/4782700/4837808/4876918 (25314T-03), 5952922 (most recent real transfer 26213FT-40→26225FT 08-11).
 </result>
-</attempt_completion>
-```
-
-### `1786743833650` — 8/14/2026, 5:24:44 PM PT — 200 turns
-
-**Original task:**
-
-```
-I would like for you to make a Klein rule as well as a rule in Argus that is called the gaslighting rule. This is the rule where the agent tells us something and makes a promise and then fails to deliver where it creates a false gate or once I approve it there's an additional gate or something that I didn't know or some kind of checkpoint that prevents the idea from actually being deployed and used and serving. I think this needs to be a hard floor rule because it continually occurs. I do want the rule to be efficiently worded so that it's not killing tokens however.
-```
-
-**Ideas referenced:** #0000, #12249, #12251, #12266, #12269, #12618, #16224, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #20251, #24902, #24905, #24906, #24909, #24910, #24912, #24913, #25128, #25151, #25155, #25185, #25888, #25925, #25926, #25935, #26327 [approved], #26349 [proposed], #26350 [proposed], #26351 [superseded], #5344
-
-**Last PICKUP PROMPT:**
-
-```
-at zero per-window token cost.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Gaslighting Rule: Cline #321 hardfloor + Argus guidance + mechanical R321 gate all live.
-
-Where we left off (verified 2026-08-14 17:24 PT):
-- Rule #321 hardfloor: bright-line bullet in every Cline window steering, full body in MCP corpus (21 hardfloor), Mechanical enforcement section documented in local + server copies [deployed]
-- Argus: GASLIGHTING RULE section in routes/argus_improvement_prompt.php line 18, loaded via alltastic_api.php require 52 + call 6156, opcache live [deployed]
-- R321_GASLIGHT_GATE live in clinerules_validate_completion (src/index.ts ~line 948): blocks done-claim+defer, and post-approval additional gates; negative control BLOCKED, positive control silent; MCP PID 46827 [deployed]
-- Ideas: #26327 gaslighting rule [deployed], #26349 mechanical gate [deployed], #26350 full-body injection [superseded] (recommendation recorded), #26351 duplicate [superseded]
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. None — all work completed this session. (Resurrect #26350 only if Ruben explicitly overrides the supersede note: one-line revert.)
-
-Reference IDs:
-- Ideas filed: #26327 [deployed], #26349 [deployed], #26350 [superseded], #26351 [superseded]
-- Files touched: /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts (build/index.js), /Users/rubenmajor/Documents/Cline/Rules/321-gaslighting-rule.md, /var/www/emtskills/clinerules/Rules/321-gaslighting-rule.md, /var/www/emtskills/routes/argus_improvement_prompt.php, .hardfloor-manifest, .clinerule_counter
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Answer #26350 recommendation: don't do full-body; gate is strictly stronger (recommendation + undo path recorded)
-- [x] #26349 R321_GASLIGHT_GATE implemented, built (EXIT=0), restarted (PID 46827)
-- [x] Negative control: R321 GASLIGHT_GATE BLOCKED; positive control: R321 silent
-- [x] Telemetry + rule file (local+server) + reindex + #26349 stamped deployed
-- [x] #26350 superseded with reasoning; deliverable complete with PICKUP PROMPT
-</task_progress>
-</attempt_completion>
-```
-
-### `1786566964850` — 8/14/2026, 4:51:33 PM PT — 342 turns
-
-**Original task:**
-
-```
-Answer to this question is not what was given. It's a registration check to see why there is a conflict and potentially consulting the SLS. Why was this answer so bad and how do we fix it going forward?
-```
-
-**Ideas referenced:** #10157, #10223, #10243, #10291, #10320, #1041, #10440, #10756, #10868, #10869, #10870, #10872, #10873, #10875, #10880, #10881, #11977, #11991, #11992, #11993, #11996, #11999, #13048, #13051, #13080, #13081, #14132, #14978, #15827, #15911, #16152, #16153, #16154, #16473, #16610, #16613, #1665, #166501, #16732, #1680, #17300, #18435, #186576, #19920, #19921, #20022, #20286, #20292, #23184, #23378, #23477, #25551, #25888, #25889 [ready_for_review], #25914, #25938 [deployed], #25943 [proposed], #26307 [proposed], #26320, #26333 [proposed], #26334 [proposed], #3237, #32584, #3402, #360135, #5646, #5700, #5926, #6228, #6751, #6846, #7907, #9086, #9158, #9168, #9269, #9271, #9274, #9277, #9339
-
-**Last PICKUP PROMPT:**
-
-```
-presence of the existing one."
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Elen track/invoice correction: existing automated section-change process confirmed; verify the reply actually routes into it.
-
-Where we left off (verified 2026-08-14 16:51 PT):
-- CORRECTED FINDING: the track correction IS automated. lib/SectionTransferExecutor.php::execute() writes `UPDATE Students SET moodle_url=?, class_section=?, class_method=?, transfer_date=CURDATE() ...` (line 185) plus Moodle group/enrol/role fixes and an audit trail. Wrapped by lib/automated_section_change_workflow.php (processSectionChangeRequest / validateSectionChangeEligibility / executeSectionTransfer / processWorkflowQueue / createSectionChangeTicket).
-- BY DESIGN (lines 19-21, 168): money is not moved by the executor. It emits "Track changed X->Y; if tuition differs, reprice the unpaid invoice / handle the +$150 transfer fee (Vicky). Settled money is not auto-touched." Elen's invoice is UNPAID ($0.00 applied), so it is the reprice-unpaid lane.
-- DEPLOYED earlier today and verified: #25943 (track-price gate + ask-the-student ack block), #26307 (rule 516), #26333 (watchdog WORK AT RISK + audit), #26334 (ClarifyingQuestionGate + cqgNormalizeOpener, 5/5 controls). cron_email_responder.php 282,054 bytes, markers 2/2/2/1, php -l clean, zero watchdog restores.
-
-Open threads to drive next:
-1. (verification, no idea needed) — Confirm an inbound student reply naming a track actually reaches processSectionChangeRequest(): trace whether cron_email_responder.php (or the ticket agent) invokes automated_section_change_workflow.php, or whether the section-change request is created from a different surface. If the email path does NOT feed it, that connector is the real gap — file an idea then, not before.
-2. #26334 [deployed] — Monitor `[CQG-26334]` elog + ai_clarifying_gate_log on the next real vague inbound; tune cqgNormalizeOpener if live shapes differ from the 5 tested.
-3. #25943 [deployed] — Watch `[TPR-25943]` / `[TPR-25943-BLOCK]` on the next payment_billing inbound (especially Elen's reply) to confirm the ask-the-student reply ships.
-4. #26333 [deployed] — Confirm the first real `watchdog_restore` row lands in orchestrator_event_log; follow-on candidate is surgical hunk repair instead of wholesale rollback.
-
-Reference IDs:
-- Student: 26223BC-24 Elen Issahhanjan, elenisa2007@gmail.com, Moodle uid 54727, course 25 group 26223BC
-- Invoice EMSU-26223BC-24 (qb_invoice_id 174975) $2,345.00 / paid $0.00 (UNPAID); settled qb_payments_cache id 148408 $1,545.00
-- Canonical ai_kb_course_pricing Tempe: Boot Camp $2,445 (id 1), Fast Track $1,745, Accelerated $1,545, Traditional $1,295
-- Existing process: lib/SectionTransferExecutor.php (execute ~83, UPDATE Students ~185, billing note ~168), lib/automated_section_change_workflow.php, lib/CoursePricingHelper.php, lib/RefundAndTransferPolicy.php, lib/course_change_sla.php, lib/FlagEaResignOnSectionChange.php
-- Ideas: #25943 [deployed], #26307 [deployed], #26333 [deployed], #26334 [deployed]
-- Files touched: cron/cron_email_responder.php, cron/cron_ai_watchdog.php, lib/StudentLifecyclePaymentService.php, .clinerules/516-canonical-pricing-first.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```

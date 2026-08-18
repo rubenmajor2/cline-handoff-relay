@@ -6,11 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/17/2026, 6:39:46 PM PT | window: last 72h | 100 tasks | index total 800 (parsed 5, cached 795)
+Generated: 8/17/2026, 7:39:47 PM PT | window: last 72h | 98 tasks | index total 802 (parsed 2, cached 800)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787016619040` | 8/17/2026, 6:39:31 PM | 49 | 107KB | #Jon/Argus |
+| `1787019164930` | 8/17/2026, 7:39:43 PM | 147 | 853KB | #Big Mac 4th GPU |
+| `1787019098209` | 8/17/2026, 7:11:38 PM | 1 | 7KB | #Big Mac 4th GPU |
+| `1786948459253` | 8/17/2026, 7:04:08 PM | 142 | 258KB | #Big Mac 4th GPU |
+| `1787016619040` | 8/17/2026, 6:42:38 PM | 58 | 143KB | #Jon/Argus |
 | `1787014605175` | 8/17/2026, 6:29:12 PM | 154 | 347KB | #Jon / Argus |
 | `1787015733520` | 8/17/2026, 6:28:16 PM | 104 | 1182KB | I already opened up a window on this before about the 40% score required for examinations  |
 | `1787014473253` | 8/17/2026, 6:20:07 PM | 120 | 612KB | Check /emtskills - slow as hell again check emtskills slowness document on desktop. please |
@@ -41,7 +44,6 @@ Generated: 8/17/2026, 6:39:46 PM PT | window: last 72h | 100 tasks | index total
 | `1786947372694` | 8/17/2026, 12:47:30 AM | 366 | 1205KB | Can you give me a model here in Cline where i can directly test the Julia/Claudia 235b llm |
 | `1786817395147` | 8/17/2026, 12:42:52 AM | 546 | 3139KB | #Call Backs / VAPI |
 | `1786832584504` | 8/17/2026, 12:34:59 AM | 149 | 368KB | #Externship |
-| `1786948459253` | 8/17/2026, 12:34:24 AM | 126 | 223KB | #Big Mac 4th GPU |
 | `1786947807234` | 8/16/2026, 11:54:56 PM | 114 | 512KB | Do a 90 minute doctor of franeknstein executor which has a bunch of impl failed which may  |
 | `1786831867073` | 8/16/2026, 11:52:46 PM | 222 | 507KB | #Joshua / Denali Scenario |
 | `1786602203659` | 8/16/2026, 11:44:52 PM | 160 | 818KB | There appear to be some minor issues going on with Frankenstein LLM. It seems like I'm get |
@@ -106,16 +108,92 @@ Generated: 8/17/2026, 6:39:46 PM PT | window: last 72h | 100 tasks | index total
 | `1786567464418` | 8/14/2026, 8:33:40 PM | 446 | 3647KB | #Argus |
 | `1786745818584` | 8/14/2026, 8:33:30 PM | 454 | 2193KB | /emtskills is slow again check emtskills_slowness document on the desktop |
 | `1786689127799` | 8/14/2026, 8:33:06 PM | 310 | 1433KB | #Artemis |
-| `1786712894547` | 8/14/2026, 7:35:29 PM | 660 | 1879KB | Frankenstein LLM seems sluggish. Can you tell me why it seems slower than usual? |
-| `1786711940130` | 8/14/2026, 7:02:17 PM | 414 | 19005KB | Another thing we need to add to sunset, politicians, and just catalogue in the next respon |
-| `1786581699007` | 8/14/2026, 7:00:32 PM | 1214 | 3408KB | #Argus Learning |
-| `1786751488866` | 8/14/2026, 6:52:33 PM | 210 | 775KB | #emtskills / wordpress |
 
 ---
 
 ## Per-window detail
 
-### `1787016619040` — 8/17/2026, 6:39:31 PM PT — 49 turns
+### `1787019164930` — 8/17/2026, 7:39:43 PM PT — 147 turns
+
+**Original task:**
+
+```
+#Big Mac 4th GPU
+
+I don't like the options here. Try again. Consult the bug library with dynmic seaching as well as the Intel Community. You really need to access the INtel Community to get the answers. 
+
+No that sounds asinine -> The tech also turned on the PCIe bifucation in Bios. 
+
+--
+# Boot #14 verdict: FA3h flash took, but still 3 GPUs. And the reseat result tells us something important.
+
+**Live probes 19:01-19:02 PT:**
+- BIOS: **FA3h, dated 07/09/2026** (verified: dmidecode on box). The flash worked, the year-newer AGESA (1.0.0.1a to 1.0.0.1g) is live.
+- GPUs: **still 3 Battlemage** (ver
+```
+
+**Ideas referenced:** #0000, #178669, #178694, #25097 [executing], #2541, #2542, #2557, #2558, #2559, #26209 [proposed], #26211 [executing], #26238 [proposed], #27137 [awaiting_review], #27140 [executing], #313131
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787019098209` — 8/17/2026, 7:11:38 PM PT — 1 turns
+
+**Original task:**
+
+```
+#Big Mac 4th GPU
+
+I don't like the options here. Try again. 
+
+No that sounds asinine -> The tech also turned on the PCIe bifucation in Bios. 
+
+--
+# Boot #14 verdict: FA3h flash took, but still 3 GPUs. And the reseat result tells us something important.
+
+**Live probes 19:01-19:02 PT:**
+- BIOS: **FA3h, dated 07/09/2026** (verified: dmidecode on box). The flash worked, the year-newer AGESA (1.0.0.1a to 1.0.0.1g) is live.
+- GPUs: **still 3 Battlemage** (verified: lspci count, boot #14).
+- Root port 00:01.2: **still completely absent** (verified: only 00:01.0 and 00:01.3 exist in /sys/bus/pci/devic
+```
+
+**Ideas referenced:** #178669, #178694, #25097 [executing], #26209 [proposed], #26211 [executing], #26238 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1786948459253` — 8/17/2026, 7:04:08 PM PT — 142 turns
+
+**Original task:**
+
+```
+#Big Mac 4th GPU
+
+Ok, let's give it another shot. See this conversastion between me and the tech:
+
+Ruben Major:
+	You put the 4th GPU on an NVME slot, right? 
+	And you already installed the dummy plug?
+
+Ruben Major Jr.:
+	Correct
+	On both
+
+Ruben Major:
+	Ok, lol, let me try from here then. 
+
+Ruben Major Jr.:
+	See if it's an issue with the bus speed being only x4, if it's initiating okay om hardware level it has to be a software bug in the stack somewhere
+
+Ruben Major:
+	Kk
+
+# Answer: I am sure. I just tested your assumption directly, twice, with fresh boots. The plug is NOT in, and the card still 
+```
+
+**Ideas referenced:** #178668, #178669, #2299, #2507 [investigating], #25097 [executing], #25185, #2541 [deployed], #2542, #2557, #26209 [proposed], #26211 [executing], #26233 [rejected], #26237 [rejected], #26238 [proposed], #27100
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787016619040` — 8/17/2026, 6:42:38 PM PT — 58 turns
 
 **Original task:**
 
@@ -136,7 +214,7 @@ Where we left off (verified 2026-08-17 18:28 PT):
 - ArgusRuleProfile.php patched (4 gaps: dead DELIVERY_TRUTH_RULES restored, negative-claim evidence via rule 263, systemic-scope rule 297, act-don'
 ```
 
-**Ideas referenced:** #15367, #178701, #19490, #19670, #2552, #26720, #26724, #26825 [executing], #26858 [blocked], #27012, #27065 [proposed], #27120 [executing], #27123 [blocked], #27124 [executing], #27125 [executing], #27126 [executing], #27136 [deployed], #344421, #344423, #344425, #344426, #344429
+**Ideas referenced:** #15367, #178701, #19490, #19670, #25185, #2552, #26720, #26724, #26825 [executing], #26858 [blocked], #27012, #27065 [proposed], #27120 [executing], #27123 [blocked], #27124 [executing], #27125 [executing], #27126 [executing], #27136 [deployed], #344421, #344423, #344425, #344426, #344429
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -1264,39 +1342,6 @@ Also, I made a note about emails that I had seen go out to students who had date
 ```
 
 **Ideas referenced:** #178649, #19966, #2002, #2005, #23014, #23308, #23337, #23392, #24230, #24430, #24431, #25185, #25432, #25433, #25434, #25510, #25522, #25549, #25619, #25771, #25796, #25822 [deployed], #25889 [awaiting_review], #25916 [awaiting_review], #25932 [deployed], #25950 [awaiting_review], #25973 [awaiting_review], #25983, #26002 [awaiting_review], #26006, #26027 [awaiting_review], #26053 [deployed], #26066 [superseded], #26067 [deployed], #26071 [executing], #26089 [deployed], #26661 [proposed], #26663 [proposed], #26987 [proposed], #26988 [proposed], #28584, #54145, #5447, #56298, #56573, #56754
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786948459253` — 8/17/2026, 12:34:24 AM PT — 126 turns
-
-**Original task:**
-
-```
-#Big Mac 4th GPU
-
-Ok, let's give it another shot. See this conversastion between me and the tech:
-
-Ruben Major:
-	You put the 4th GPU on an NVME slot, right? 
-	And you already installed the dummy plug?
-
-Ruben Major Jr.:
-	Correct
-	On both
-
-Ruben Major:
-	Ok, lol, let me try from here then. 
-
-Ruben Major Jr.:
-	See if it's an issue with the bus speed being only x4, if it's initiating okay om hardware level it has to be a software bug in the stack somewhere
-
-Ruben Major:
-	Kk
-
-# Answer: I am sure. I just tested your assumption directly, twice, with fresh boots. The plug is NOT in, and the card still 
-```
-
-**Ideas referenced:** #178668, #178669, #2299, #2507 [investigating], #25097, #2541 [deployed], #2542, #26209 [proposed], #26211 [executing], #26233 [rejected], #26237 [rejected], #26238 [proposed], #27100
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -3741,218 +3786,6 @@ Open threads to drive next (EVERY item MUST have a real filed idea #):
 Reference IDs:
 - Ideas filed: #26241 [deployed], #26244 [superseded], #26245 [proposed], #26249 [superseded]
 - Files touched: /usr/local/bin/emsu-artemis-heartbeat-gap.sh, /etc/cron.d/emsu-artemis-heartbeat-gap, /var/www/emtskills/docs/HANDOFF_NOTES.md (3 sections appended)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786712894547` — 8/14/2026, 7:35:29 PM PT — 660 turns
-
-**Original task:**
-
-```
-Frankenstein LLM seems sluggish. Can you tell me why it seems slower than usual?
-
-Read this also:
-
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
-
-## Where 671 came from, and it is now durable
-
-Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.
-
-Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtract
-```
-
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11942, #11945, #12231, #12314, #12365, #12366, #12368, #12403, #1241, #12425, #12459, #12463, #12477, #1248, #1249, #1252, #1258, #12588, #12618, #12643, #12672, #12688, #12689, #12710, #12824, #12872, #12878, #13108, #13121, #13202, #13831, #13874, #14133, #14142, #15144, #15979, #16032, #16033, #16036, #16117, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16602, #16625, #16648, #16715 [awaiting_review], #16716, #16778, #16802, #16803, #16839, #16844, #16851, #17145, #17202, #17203, #17205, #17246, #17300, #17430, #1744, #1779, #1798, #1828, #18312, #18326, #18329, #18820, #18868, #1934, #19567, #19898, #19904, #20042, #2050, #20549, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #22598, #22601, #22815, #22820, #22856, #22897, #2294, #2299, #2307, #23071, #23135, #2314, #23169 [approved], #23171, #23172, #24217, #25097, #25112, #25185, #25378, #25381, #25747, #25754 [rejected], #25755 [approved], #25757 [awaiting_review], #25759 [awaiting_review], #25764 [awaiting_review], #25765, #25812, #25925, #25926, #25935, #26209, #26284 [proposed], #26327, #26349, #26355 [proposed], #26392 [proposed], #26403 [proposed], #6826, #7142, #7149, #7505
-
-**Last PICKUP PROMPT:**
-
-```
-in does not prove a served pin
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #26403 [proposed], verify the chat-path floor yield fires on cline turns.
-
-Where we left off (verified 2026-08-14 19:32 PT):
-- IMMEDIATE NEXT COMMAND: `timeout 50 python3 /tmp/separate_ab.py` (edit SINCE to the current restart time first). Expect RING completions cline > 0. Also `grep -c PREFIX_AFFINITY_YIELD_FLOOR_CHAT /tmp/frankenstein_tools_adapter.log`.
-- Just patched: line 3799 CHAT path now has PREFIX_AFFINITY_YIELD_FLOOR_CHAT, mirroring the buffered-path yield, on the list interactive cline turns actually iterate. SYNTAX_OK, service active, :11510 = 200 at 19:30 PT. It has NOT fired yet: 0 YIELD_FLOOR_CHAT events and 0 ring cline completions as of 19:32 PT. Either no floor-breach moment has hit interactive chat traffic yet, or there is a fifth layer.
-- MEASURED (b) DEFINITIVELY at 19:28 PT via /tmp/separate_ab.py: cline=8 yields, 23 admits after yield, RING completions cline=0 batch=4, NON-ring cline=9 batch=33, and ZERO FAILOVER events. The ring was bypassed before the serve loop, not tried and rejected. Batch works, so the ring is healthy and the divergence is cline-specific.
-- ROOT CAUSE of that: the first three patches modified `usable` inside the BUFFERED path (_post_json_failover*). Interactive Cline chat turns take the CHAT path, which builds its own ordering at line 3799 and has its own _pinned_chat affinity block at ~3812. The floor was reordering a list the cline serve path never consumes.
-- FOUR earlier blockers removed, all found with /tmp/trace_pick.py: (1) line 3443 tools path did not pass lane_interactive; (2) floor guard used load<capacity but the ring sits load=12/cap=12 permanently, now gates on WAITING via _running_waiting; (3) PREFIX_AFFINITY re-sorted after the floor on the buffered path, now yields; (4) ring had no FRANK_BOX_CAPACITY entry so it fell to BOX_CAPACITY_DEFAULT=3, now 8210=12.
-- MY ctx_filter THEORY WAS WRONG: it returns the list UNCHANGED when nothing fits. Only 8 such events, last 2026-08-13.
-- Ring measured FROM THE BOX per GLM52_MEASUREMENT_METHOD (60s counter deltas off :8210/metrics): decode=14.82 prefill=258.74 TOTAL=273.56 tok/s, running 12-14, waiting 0. Never quote the 8-token TTFB probe as ring throughput.
-- GLM-5.2 Local is first-in: :8210 serves glm-5.2-15pct, registry glm-5.2-local tier L4g, router derived L4g to glm-5.2-local ahead of L4f to frankenstein-llm.
-- LATENCY TRADE for Ruben: ring interactive TTFB 25-275s vs 8-21s on the 120B boxes. A 30pct interactive floor means roughly 1 in 3 turns waits 25s or more instead of 9s. The ring already serves batch at 8-21s with the same model.
-- Tuning: EMSU_GLM_FLOOR_MIN_N=2, EMSU_GLM_FLOOR_WINDOW=20, EMSU_GLM_FLOOR_MAX_WAITING=3. Kill switch EMSU_GLM_FLOOR_OFF=1.
-
-Open threads to drive next:
-
-1. #26403 [proposed]
-
-2. Consolidate the 10 racing FRANK_BOX_CAPACITY systemd drop-ins into ONE file. Last-wins is how the ring silently lost its capacity entry while 3 files claimed 8210=16. Record is #26355 [deployed].
-
-3. (human-only decision, no idea) Down rungs: Cicero 235B connection refused, WOPR ollama empty body, Mac M4 eval_count=0 (verified: probes 15:31-15:32 PT).
-
-Reference IDs:
-
-- Records opened this session: #26403 [proposed] (reconcile_ideas 19:25 PT returned status=proposed dev_stage=idle)
-
-- Records stamped this session: #26392 [deployed], #26355 [deployed], #25764 [deployed], #25757 [deployed], #25759 [deployed] (verified
-```
-
-### `1786711940130` — 8/14/2026, 7:02:17 PM PT — 414 turns
-
-**Original task:**
-
-```
-Another thing we need to add to sunset, politicians, and just catalogue in the next response to TDSHS is this situation right here (screenshot).
-
-Check to see whether Sabrina sent this message to agamez@emsuniversity.com or not or I will ask that it be forwarded as well. 
-
-The thing is she didn't ask me. She just went straight to Andrew and asked him. Normally would be fine because he's the program director, however, TDSHS had agreed to contact me and copy me on department of communications with our organization. This might actually apply to all types of communications which is kind of interes
-```
-
-**Ideas referenced:** #0891, #108020, #108026, #127891, #128274, #1368, #171083, #23269, #2563, #258525, #25989 [rejected], #26068, #26287 [executing], #467886, #600179, #623992, #8211, #96607
-
-**Last PICKUP PROMPT:**
-
-```
-the one remaining open thread.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — TDSHS 2021 settlement proof: locate the signed Final Order PDF (the one artifact still missing), and wire the sunset/politician response to the now-verified copy-me agreement.
-
-Where we left off (verified 2026-08-14 18:56 PT):
-- Found + filed the Oct 2021 IC Settlement Offer email with verbatim outcome text: "retroactive probated suspension and there are no conditions, there is nothing else to comply with per the Order" and "probated suspension is a disciplinary action, therefore it is reportable."
-- Filed to server: docs/tdshs-inspection-5196/COPY_ME_AGREEMENT_LILES_PARKER_2021_EVIDENCE.md, AGAMEZ_COMMS_NO_COPY_INCIDENT_2026-08-14.md, exhibit_course_applications_27439_27440_27441_Sabrina_to_agamez_2026-08-13.eml, routes/tdshs_2021_settlement_memory.php (HTTP 200), and investigations-tab entry tdshs-2021-settlement-record (lint clean, 5 entries).
-- Verdict locked: Sabrina's gotcha email (Course Applications 27439/27440/27441, Aug 13 2026 18:19:39 UTC) arrived To: agamez@emsuniversity.com ONLY, no Cc — breach confirmed; 70 min earlier she had copied rmajor (envelope 6650628875F).
-
-Open threads to drive next (every item has a real filed idea #):
-1. #26287 [executing] — Locate the signed Final Order PDF for Complaint 1080201071_201387_201388_201390. Search the 2026 TPIA production (DSHS) and Google Drive. Drive is NOT reachable via CLI/MCP from this Mac — confirm with Ruben if he can drop the Order into ~/Desktop/tdshs_investigation_evidence/ or grant a Drive MCP/token.
-2. #26287 [executing] — Decide the no-copy response posture already recommended: let it go now, bank it, deploy on trigger. Draft the substantive reply (Andrew replies re: the 3 phantom course-notification entries, Cc rmajor@emsuniversity.com) that fixes the record without accusing Sabrina.
-
-Reference IDs:
-- Ideas filed: #26287
-- Files touched (server): routes/tdshs_2021_settlement_memory.php, personnel/institutional_compliance.php, docs/tdshs-inspection-5196/COPY_ME_AGREEMENT_LILES_PARKER_2021_EVIDENCE.md, docs/tdshs-inspection-5196/AGAMEZ_COMMS_NO_COPY_INCIDENT_2026-08-14.md, docs/tdshs-inspection-5196/exhibit_course_applications_27439_27440_27441_Sabrina_to_agamez_2026-08-13.eml, HANDOFF_NOTES.md
-- Files touched (local): ~/Desktop/tdshs_investigation_evidence/ (4 .eml)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786581699007` — 8/14/2026, 7:00:32 PM PT — 1214 turns
-
-**Original task:**
-
-```
-#Argus Learning
-
-Tell me how Argus automatic learning is going. I would like for it to start making itself smarter. I mean what I usually do is you know I'm coming in here on a daily basis and I'm trying to do sweeps to see what tasks were unfinished as well as whether there were bugs that were showing that needed to be resolved or permission issues that were not in a accordance with rule 29 or missing tools, things of that nature. I would like to see Argus learning doing those sorts of things on its own. How can we make that happen?
-```
-
-**Ideas referenced:** #10182, #1118, #1163, #128126, #128203, #1465, #14749, #16213, #1642, #16523, #18438, #18579, #18693, #18745, #18806, #1885, #18942, #19415, #19416, #19419, #19424, #19434, #19888, #20025, #20036 [awaiting_review], #20164, #20598, #20884, #20890, #21125, #21582, #21667, #22310, #22688, #22850, #22887, #22939 [approved], #23027, #23036, #23094, #23132, #23136, #23144, #23166, #23170, #2323, #23231, #2324, #23241, #23247, #23286, #23292, #23328, #23387, #23428, #23429, #23468, #23506, #23556, #23561, #23582, #23623 [proposed], #23636 [proposed], #23637 [proposed], #23675, #23729, #23764, #23769, #23885 [proposed], #23899 [proposed], #23900 [ready_for_review], #23908 [proposed], #23910 [proposed], #23911 [proposed], #23941, #23982, #24635, #24645, #24789 [proposed], #24941, #24977 [proposed], #24987 [proposed], #24990, #25072, #25074 [proposed], #25142, #25151, #25547, #25552, #25571, #25572 [approved], #25574 [proposed], #25578 [approved], #25624 [proposed], #25625 [ready_for_review], #25768, #25822, #25833, #25888, #25932, #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #25975, #25985, #25986, #26001, #26002, #26003 [deployed], #26018 [proposed], #26020 [deployed], #26025 [proposed], #26031 [proposed], #26032 [proposed], #26033 [proposed], #26047 [approved], #26075 [executing], #26083 [awaiting_review], #26091 [proposed], #26250 [proposed], #26269 [approved], #26326 [proposed], #26342 [awaiting_review], #26343 [proposed], #26344 [proposed], #26345 [proposed], #26346, #30363, #37362, #58469, #7326, #7377, #7428, #7784, #7785, #9222, #9650, #9660
-
-**Last PICKUP PROMPT:**
-
-```
-is filed as #26345 [deployed].
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus learning, backlog, and 519-reroot-cause correction.
-(No numeric task id available this session; topic named in plain language.)
-
-Where we left off (verified 2026-08-14 17:16 PDT):
-- Argus task queue: 543 total, 501 done, 19 queued, 1 running, 1 failed, 2 offloaded (post-fix). Live table: argus_task_queue.
-- Moodle repair queue RCA complete: 520 pending rows were REAL (student SMS/paid-request repairs), rooted in AccessSelfHeal.php writing repair_type='re_enrol' not in enum. Enum fixed to include re_enrol; 520 rows relabeled same day.
-- Drain blocked: moodle_repair_config has empty moodle_api_url/token — need config values to auto-enrol (idea #26342 [approved]).
-- Dry-run of cron_re_enrol_drain.php: done=0 failed=50, all "no_paid_active_enrollment" or config-missing — not a silent failure, real gate.
-- Global idea ledger was conflated with Argus tasks in my reporting; correction filed (#26345 [deployed]) and "500 old Argus ideas" retracted — those are platform-wide ideas from 2026-03-30 forward, NOT Argus.
-- EMT AI grader: self-heal cron lives at /etc/cron.d (10-min interval, log fresh) but backlog/throughput NOT yet verified — idea #26343 [proposed].
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26342 [approved] — Fill moodle_api_url/token config (human/secret), then run cron_re_enrol_drain.php again to clear the 520-row re_enrol queue. Requires API credentials that only Ruben has.
-2. #26344 [approved] — Build the executor pipeline for approved platform ideas (global ledger), OR explicitly scope Argus to argus_task_queue and mark global-idea funnel out of Argus scope.
-3. #26343 [proposed] — Verify EMT AI grader backlog: run/read cron_ai_grader_self_heal.php logs, count ungraded submissions through moodle_c_live/assign_grades bridge.
-4. #26326 [approved] — (Superseded-by-26342 detail) Reconfirm moodle_repair_queue drain design once config is present.
-
-Reference IDs:
-- Ideas filed: #26342, #26343, #26344, #26345 [all approved/propose per bracket]
-- Files touched: /var/www/emtskills/cron/cron_re_enrol_drain.php (new), /var/www/emtskills/cron_requeue_stale_offloads.php (new, 15-min cron), /var/www/emtskills/lib/AccessSelfHeal.php (read/RCA only)
-- Tables live-verified: argus_task_queue, moodle_repair_queue, orchestrator_ideas, moodle_repair_config
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786751488866` — 8/14/2026, 6:52:33 PM PT — 210 turns
-
-**Original task:**
-
-```
-#emtskills / wordpress
-
-continue
-
-Stopping per instruction. Here is the rule 91 handoff.
-
-State at stop (verified 2026-08-14 15:50 PT):
-
-What was already done this session (carried from the running WAF/SQLi work, TODO showed 8/8 complete):
-- RE-BASE after gap: the 6-hourly guard cron and drift-guard blocks persist across the restart.
-- RECURRENCE confirmed as a coordinated campaign: 8 vhosts, 12 rotating IPs over ~36 min, including the emsuniversity.com schema.
-- Blocked all 13 campaign IPs (verified 13/13).
-- Fixed 2 detector defects (vhost=lookup-failed and missing IP identification), verifi
-```
-
-**Ideas referenced:** #13967, #18717, #18718, #18719, #18720, #18733, #18743, #18744, #18746, #18827, #18895 [deployed], #18916, #18985 [rejected], #1899, #19006 [blocked], #1907, #19370, #1949, #22298, #22550, #23133 [executing], #2328, #2341, #2342, #2343, #2344, #23945 [proposed], #23952 [awaiting_review], #23954 [awaiting_review], #24026, #24207, #24914, #24924, #24925, #24926, #24927, #24941, #24989, #25042 [deployed], #25940 [executing], #25989, #26009, #26068, #26092, #26096, #26211, #26218, #26219, #26229, #26233, #26234, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26258 [awaiting_review], #26336, #26348, #3261, #3319, #3346, #6768
-
-**Last PICKUP PROMPT:**
-
-```
-ith targeted greps returning 0
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #25940 — pool isolation is deployed, guard-clean, and documented; the WAF idea needs its premise corrected.
-
-Where we left off (verified 2026-08-14 18:52 PT):
-- 12 LLM-heavy endpoints on the agents FPM pool in BOTH nginx configs. Verified by accepted-conn delta: agents +61 / www +1 on a 60-burst. #25940 [executing]
-- Guard rewritten (path-token match, exact relative paths, .gz, root cron). Self-test passes, live exit 0, 194 scanned / 321 trafficked all isolated.
-- WAF premise DISPROVEN: /var/log/modsec_audit.log is 20.7MB, written today, 1,708 entries, 62 Access denied, Engine-Mode "ENABLED", 942xxx SQLi rules firing. The 0-byte file was /var/log/apache2/modsec_audit.log — the wrong path. #26258 [executing]
-- Documented: new section appended to /Users/rubenmajor/Desktop/emtskills-slowness.md (verified clean, 6 sections, 258 lines). Ledger row appended.
-- All 6 ideas reconciled live; the 5 tags in the first completion were wrong and are corrected below.
-
-Open threads to drive next:
-1. #26258 [executing] — rewrite the idea body (WAF IS enforcing, evidence above), then answer the narrower real question: did the 13-IP SQLi campaign get blocked or only logged? Grep /var/log/modsec_audit.log for those IPs + 942xxx hits. Agent-actionable, no human input needed.
-2. #23954 [executing] — move LLM calls off the request path onto the background queue. The actual cure; pool isolation is containment.
-3. #23133 [executing] — chat/telephony endpoints block synchronously on ~17.9s LLM calls with timeouts below real latency.
-4. #23952 [executing] — 277 routes hold the PHP session lock for the whole request; Redis sessions or session_write_close.
-5. #23945 [rejected] — superseded by #25940. No action.
-
-Reference IDs:
-- Ticket: n/a
-- Ideas: #25940 [executing], #26258 [executing], #23954 [executing], #23133 [executing], #23952 [executing], #23945 [rejected]
-- Files touched: /Users/rubenmajor/Desktop/emtskills-slowness.md, /Users/rubenmajor/Desktop/cline_task_ledger.md, /var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf, /etc/nginx/sites-enabled/emtskills, /var/www/emtskills/scripts/llm_pool_isolation_guard.py, /etc/cron.d/emsu-llm-pool-isolation-guard
-- Evidence: /var/log/modsec_audit.log (active, 20.7MB), /var/log/apache2/modsec_audit.log (0 bytes, the misread file)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════

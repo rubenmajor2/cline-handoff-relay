@@ -89,3 +89,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Julia/Claudia 235B: I probed the BOX (:11513 ConnectionRefused, WG/SSH/LAN dead from two vantage points, canary healthy=False) and from that correctly-measured box state asserted a USER-FACING capability claim, that julia-235b "is not serving". Ruben was at that moment iterating on litellm:julia-235b fast and successfully. Both were true because the router REWRITES THE REQUEST: _router_core.py:5148 `data["model"] = sibling` in the admission_control_fast_fail path silently retargets model-name julia-235b to glm-5.2-local. Measured last 30 min: 18 julia-235b requests, 16 rerouted to glm-5.2-local (prompt_tokens ~70,300), 1 hard 500. Rule 315 taught that process-alive is not serving; the inverse hole was unguarded, that a model NAME can serve perfectly while its declared endpoint is dead. Amendment: a box-level probe licenses a claim about THE BOX only. Before asserting that a MODEL NAME is unavailable to callers, additionally (a) grep the router for a rewrite of data["model"] on that nam
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-18 02:38 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786948459
+- RCA bucket: insufficient probe
+- Trigger pattern: Concluding a physical-layer fault from a 2-boot comparison without tabulating all boots, and drawing conclusions from register writes that were silently discarded by Secure Boot kernel lockdown withou
+- Reversal note: Big Mac 4th GPU: two claims reversed. (1) Boot-14 concluded "a fresh reseat produced zero receiver detect, so the adapter or card-in-adapter connection is the fault"; the per-boot journal showed the port ALSO absent on boot -4 BEFORE any hands-on work and PRESENT on the three boots after the reseat, so presence alternates per boot and the reseat inference was unsupported. (2) Idea #26238 recorded REFCLK/CommClk as the primary lead because hand-setting the bits "did not train the link"; dmesg shows "Lockdown: setpci: direct PCI access is restricted" (SecureBoot enabled, lockdown=integrity), so those writes never landed, and the link later trained to 8GT/s x4 with CommClk- STILL SET. Amendment: when a probe writes to hardware registers (setpci, /sys/bus/pci writes, MSR pokes), the write MUST be read back and verified to have changed before any conclusion is drawn from its effect; a shell command that exits 0 while the kernel discards the write is indistinguishable from a successful write
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-18T07:39:50.391Z",
+ "generated_at": "2026-08-18T08:39:50.667Z",
  "counts": {
   "parsed": 1,
   "reused": 807,
@@ -133668,11 +133668,11 @@
   },
   "1787027676077": {
    "task_id": "1787027676077",
-   "mtime": 1787038585579,
+   "mtime": 1787039066252,
    "created_at": "2026-08-18T04:34:36.077Z",
-   "last_modified": "2026-08-18T07:36:25.579Z",
-   "size_kb": 946,
-   "turn_count": 430,
+   "last_modified": "2026-08-18T07:44:26.252Z",
+   "size_kb": 970,
+   "turn_count": 440,
    "title": "#BigMac 4th GPU\n\nGet the 4th GPU serving\n\nBig Mac is back and serving, and it can now recover itself remotely (verified: curl from WOPR to http://10.100.0.19:8000/v1/models returned 200; on-box battlemage=3, renderD=3, vLLM active, \"startup complete\" count=1; watchdog0 state=active, RuntimeWatchdogUSec=1min). The 4th GPU is still not online, and I hit a real setback on it that I reverted.\n\n## What caused the wedge\n\nNot OOM, not fork exhaustion, not a network ban. It was a total userspace freeze triggered by the PCI bus rescan I ran while probing for the 4th GPU.\n\nThe evidence (verified from the box's own persistent journal after it came back): the last successful login session was 19:47:31, ",
    "pickup_prompt": "| filed idea #27155 [proposed]\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1786948459 — Big Mac 4th B70 + remote-recovery hardening.\n\nWhere we left off (verified 2026-08-17 23:42 PT):\n- BIG MAC HEALTHY: 3x B70, renderD=3, vLLM active, models_http=200. Clean boot, nommconf reverted.\n- 4TH GPU REMOTE LEVERS EXHAUSTED (#27155 [proposed]): 17 levers tried, all failed. Port 00:01.2 sees card intermittently but cannot complete PHY equalization. Secure Boot blocks all register writes.\n- RECOVERY STACK LIVE: watchdog active, canary active, panic sysctls set.\n- WEDGE ROOT CAUSE (#27142 [deployed]): userspace freeze from PCI rescan, not resource exhaustion.\n\nOpen threads to drive next:\n1. #27155 [proposed] — 4th GPU physical swap required.\n2. #27152 [executing] — adapter DIP switches.\n3. #27143 [awaiting_review] — superseded by #27147 [deployed].\n4. #27145 [awaiting_review] — WOPR alert paths dead.\n5. #27140 [executing] — link trains 8GT/s x4.\n6. #27137 [executing] — bifurcation route.\n7. #25097 [awaiting_review] — Big Mac pool wiring.\n8. #19082 [blocked] — slim remote power control.\n9. #19524 [executing] — TP-Link rejected.\n\nReference IDs:\n- Ideas filed: #27155 [proposed]\n- Ideas carried: #27152 [executing], #27143 [awaiting_review], #27147 [deployed], #27145 [awaiting_review], #27142 [deployed], #27140 [executing], #27137 [executing], #25097 [awaiting_review], #19082 [blocked], #19524 [executing]\n- Bug library: incident 2563, 2564, 2565\n- Rules amended: 297 (x2), 315 (x2)\n- Prior task: #1786695610761 [superseded]\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
@@ -133734,11 +133734,11 @@
   },
   "1787032087401": {
    "task_id": "1787032087401",
-   "mtime": 1787035709093,
+   "mtime": 1787042382502,
    "created_at": "2026-08-18T05:48:07.401Z",
-   "last_modified": "2026-08-18T06:48:29.093Z",
-   "size_kb": 680,
-   "turn_count": 162,
+   "last_modified": "2026-08-18T08:39:42.502Z",
+   "size_kb": 856,
+   "turn_count": 209,
    "title": "#TDSHS \n\nCurious here, the allegation is that ther ewas no medical director from December 2024 to July 2026, the response does not cover any period before July 2026, should it? I mean, the pink elephant is that Dr. Turner said he was not the medical director, however, the contract shows him as the Medical Director (even still technically under contract) and that Dr. Turner took over on July 22nd, but Turner still technically had a contract although repudiated later / technically a breach. Then we got another medical director anyway. So how do we address it reasonably but in a delecate way. \n\n\n--\n\nYou were right on all three and I was wrong on all three. The medical-director response is built",
    "pickup_prompt": null,
    "ideas": {
@@ -133761,6 +133761,8 @@
     "27157": "proposed",
     "27158": "proposed",
     "27159": "proposed",
+    "27160": "approved",
+    "27179": "proposed",
     "178695": null,
     "250541": null,
     "251044": null,

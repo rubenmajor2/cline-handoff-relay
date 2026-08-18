@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/18/2026, 12:39:50 AM PT | window: last 72h | 90 tasks | index total 808 (parsed 1, cached 807)
+Generated: 8/18/2026, 1:39:50 AM PT | window: last 72h | 88 tasks | index total 808 (parsed 1, cached 807)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787027676077` | 8/18/2026, 12:36:25 AM | 430 | 946KB | #BigMac 4th GPU |
-| `1787032087401` | 8/17/2026, 11:48:29 PM | 162 | 680KB | #TDSHS  |
+| `1787032087401` | 8/18/2026, 1:39:42 AM | 209 | 856KB | #TDSHS  |
+| `1787027676077` | 8/18/2026, 12:44:26 AM | 440 | 970KB | #BigMac 4th GPU |
 | `1787035094427` | 8/17/2026, 11:41:55 PM | 20 | 106KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
 | `1787016619040` | 8/17/2026, 11:34:20 PM | 263 | 500KB | #Jon/Argus |
 | `1787032033318` | 8/17/2026, 10:47:13 PM | 1 | 16KB | #TDSHS  |
@@ -98,14 +98,29 @@ Generated: 8/18/2026, 12:39:50 AM PT | window: last 72h | 90 tasks | index total
 | `1786815116178` | 8/15/2026, 11:35:03 AM | 308 | 897KB | #SSS/CFA Issues / Virtual Lora |
 | `1786778041170` | 8/15/2026, 11:33:13 AM | 360 | 1836KB | #CFA  |
 | `1786778761449` | 8/15/2026, 9:56:19 AM | 422 | 646KB | #SSS |
-| `1786779320051` | 8/15/2026, 1:14:55 AM | 226 | 1753KB | Did email agent actually fix this issue for Sarah? |
-| `1786566698066` | 8/15/2026, 1:04:01 AM | 587 | 1106KB | #Call Backs  |
 
 ---
 
 ## Per-window detail
 
-### `1787027676077` — 8/18/2026, 12:36:25 AM PT — 430 turns
+### `1787032087401` — 8/18/2026, 1:39:42 AM PT — 209 turns
+
+**Original task:**
+
+```
+#TDSHS 
+
+Curious here, the allegation is that ther ewas no medical director from December 2024 to July 2026, the response does not cover any period before July 2026, should it? I mean, the pink elephant is that Dr. Turner said he was not the medical director, however, the contract shows him as the Medical Director (even still technically under contract) and that Dr. Turner took over on July 22nd, but Turner still technically had a contract although repudiated later / technically a breach. Then we got another medical director anyway. So how do we address it reasonably but in a delecate way. 
+
+
+
+```
+
+**Ideas referenced:** #178695, #18676, #19572, #19576, #19578, #19581, #19599, #21278, #250541, #251044, #251128, #251428, #251444, #251447, #27073 [awaiting_review], #27100 [awaiting_review], #27108 [awaiting_review], #27112 [awaiting_review], #27114 [awaiting_review], #27127 [proposed], #27148 [awaiting_review], #27153 [executing], #27157 [proposed], #27158 [proposed], #27159 [proposed], #27160 [approved], #27179 [proposed], #600179, #623992, #8212
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787027676077` — 8/18/2026, 12:44:26 AM PT — 440 turns
 
 **Original task:**
 
@@ -164,23 +179,6 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
-
-### `1787032087401` — 8/17/2026, 11:48:29 PM PT — 162 turns
-
-**Original task:**
-
-```
-#TDSHS 
-
-Curious here, the allegation is that ther ewas no medical director from December 2024 to July 2026, the response does not cover any period before July 2026, should it? I mean, the pink elephant is that Dr. Turner said he was not the medical director, however, the contract shows him as the Medical Director (even still technically under contract) and that Dr. Turner took over on July 22nd, but Turner still technically had a contract although repudiated later / technically a breach. Then we got another medical director anyway. So how do we address it reasonably but in a delecate way. 
-
-
-
-```
-
-**Ideas referenced:** #178695, #18676, #19572, #19576, #19578, #19581, #19599, #21278, #250541, #251044, #251128, #251428, #251444, #251447, #27073 [awaiting_review], #27100 [awaiting_review], #27108 [awaiting_review], #27112 [awaiting_review], #27114 [awaiting_review], #27127 [proposed], #27148 [awaiting_review], #27153 [executing], #27157 [proposed], #27158 [proposed], #27159 [proposed], #600179, #623992, #8212
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787035094427` — 8/17/2026, 11:41:55 PM PT — 20 turns
 
@@ -3353,65 +3351,5 @@ And there's a **working reference implementation**: `cron/cron_argus_ext_canary.
 ```
 
 **Ideas referenced:** #10740, #1119, #11316, #11397, #12249, #12251, #12266, #12269, #12335, #12363, #12365, #12366, #12368, #12407, #12588, #12589, #12590, #12591, #12618, #12657, #12688, #12689, #13155, #13157, #13459, #13470, #13874, #14133, #14142, #15776, #16084, #16154, #16715, #16716, #16718, #17078, #17174, #174512, #21134, #23133, #2316, #25155, #25171, #25178, #25185, #25186, #25986, #26376 [deployed], #26377 [deployed], #26396 [proposed], #26424 [proposed], #26447 [proposed], #26461 [in-progress], #26469 [proposed], #26503 [executing], #26504 [executing], #26505 [executing], #26506 [proposed], #5574, #7174, #9112, #9222
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786779320051` — 8/15/2026, 1:14:55 AM PT — 226 turns
-
-**Original task:**
-
-```
-Did email agent actually fix this issue for Sarah?
-
-If not, why not and how can we resolve this
-```
-
-**Ideas referenced:** #1163, #16613, #24924, #25185, #25241, #26501 [open], #26507 [open], #26515 [approved], #9086, #9306 [executing]
-
-**Last PICKUP PROMPT:**
-
-```
-on/cron_email_followup.php
-```
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #26515 [deployed] , TEMP-slug payment lookup no longer suspends paid students.
-
-Where we left off (verified 2026-08-15 01:14 PT):
-- #26515 [deployed] cron paid-check resolves by student_db_id plus qb_customer_id, fail-closed assertion added, dry run clean.
-- #26507 [deployed] 48 invoice rows backfilled, paid TEMP rows 26 to 6.
-- #26501 [deployed] follow-up email no longer claims Active when Moodle access is blocked.
-- Sarah 26417FT-25 readings: ue_status=0, user_susp=0, in_group=1.
-
-Open threads to drive next:
-1. #26507 [deployed] , 4 students still carry a TEMP slug on the Students row itself (db ids 8136451, 8154591, 8154607, 8154582 whose Students row is NULL). They are protected by the fail-closed path but their slugs should be issued properly.
-2. #26501 [deployed] , the deadman auto-act path still returns forbidden because smet_caller_can_modify has no system or automation role. A human owner decision on granting an automation role is required (human-only decision, no idea).
-3. #26515 [deployed] , consider extending the same student_db_id resolution to the other three payment sources in that cron, which still key on email.
-
-Reference IDs:
-- Ideas filed: #26501 [deployed], #26507 [deployed], #26515 [deployed]
-- Files touched: /var/www/emtskills/cron/cron_payment_reconciliation.php, /var/www/emtskills/cron/cron_email_followup.php
-- Correction ingested: ai_learned_corrections id 8149
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786566698066` — 8/15/2026, 1:04:01 AM PT — 587 turns
-
-**Original task:**
-
-```
-#Call Backs 
-
-Check Chat 55 for Call Back bug on Telephony as well as some issue with "View As" supposedly not showing actual "View As" in role. Can't really confirm this, but that's what CS roles are saying. This is Chat 55 from today / the last few hours regarding Call Backs
-```
-
-**Ideas referenced:** #10003, #111827, #21753, #23989, #24645, #25185, #2563, #25701, #25702, #25703, #25704, #25946 [proposed], #25947 [proposed], #25948 [proposed], #25951 [deployed], #26203 [deployed], #26206 [deployed], #26259 [proposed], #26260 [proposed], #26261 [proposed], #26266 [proposed], #26267 [proposed], #26511 [deployed], #26513 [deployed], #334155, #3672, #3673, #3677, #3679, #3684, #3685, #3688, #3689, #3691, #3694, #3695, #3696, #3708, #3713, #3714, #3715, #3716, #3717, #3721, #475569, #64748, #664985
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

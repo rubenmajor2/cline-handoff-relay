@@ -377,3 +377,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Investigating why Cline windows stalled, I diagnosed FIVE separate mechanisms in sequence (SLO drift, floor starvation, missing fallback, steering omission, affinity pinning) and each time treated the newest finding as the whole answer, because I only ever probed the layer my current hypothesis named. What I never did until Ruben told me to was ENUMERATE the config that governs selection: one pass over router_settings.fallbacks showed 29 of 43 chains contained a cloud rung and 27 placed it ahead of a still-untried local box, and that two model ids had DUPLICATE fallback keys making the effective chain load-order dependent. That enumeration takes one command and would have been available at minute one. Amendment: when a symptom is 'the wrong backend/target was selected', the FIRST probe is a full enumeration of the selection table (every route, every rung, in order), not a probe of whichever component the current hypothesis blames. Additionally: yaml.safe_load silently collapses duplica
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 20:38 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: (unknown)
+- RCA bucket: unread source
+- Trigger pattern: Drafting a regulator response from the matter's topic label or a prior draft's framing, without reading the transmittal's charged-allegation paragraph and the complainant's own attachment first
+- Reversal note: TDSHS 810/811: a consolidated response was drafted arguing live-site externship capacity, when the Department's charged allegations were AI-assistant misinformation, prolonged communication delays, and no ticket follow-up against the program's OWN 30-day mark. Ruben: 'Did you actually read the investigations? You are focusing on externships mainly when they are slightly different.' Three further facts were also asserted without reading the source: both matters called due 8/19 (810 is due 8/18), the student surnamed Meadows (record says Meadors), and the complaint treated as student-originated (the parent filed it, 'since I paid for it'). Amendment: before drafting any response to an external matter, read (a) the transmittal's charged-allegation paragraph verbatim and (b) the complainant's own attachment, then write the allegation elements into the draft plan BEFORE composing. A matter's topic label, a deadline-row title, or a prior draft's framing is a HYPOTHESIS about what is charged,
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 20:38 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787123639000
+- RCA bucket: unread source
+- Trigger pattern: Drafting a regulator response from the matter's topic label or a prior draft's framing, without reading the transmittal's charged-allegation paragraph and the complainant's own attachment first
+- Reversal note: TDSHS 810/811 (task 1787123639000): response drafted arguing live-site externship capacity when the charged allegations were AI-assistant misinformation, communication delays, and no ticket follow-up against the program's own 30-day mark. Also asserted without reading source: wrong due date for 810 (8/19 vs actual 8/18), wrong surname (Meadows vs Meadors), and wrong complainant role (parent filed 810, not the student). Amendment: read the transmittal's charged-allegation paragraph and the complainant's attachment BEFORE composing, and verify party identity, filer role, and per-matter due date separately for each matter.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

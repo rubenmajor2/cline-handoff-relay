@@ -6,10 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/19/2026, 12:44:00 PM PT | window: last 72h | 110 tasks | index total 849 (parsed 2, cached 847)
+Generated: 8/19/2026, 1:44:00 PM PT | window: last 72h | 112 tasks | index total 854 (parsed 3, cached 851)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1787168880963` | 8/19/2026, 1:43:40 PM | 191 | 1984KB | #GLM / Frankenstein Routing  |
+| `1787169118771` | 8/19/2026, 1:42:51 PM | 99 | 1255KB | #Organize Compliance Gold Standard Response/Dissection, etc... |
+| `1787168918854` | 8/19/2026, 1:39:43 PM | 116 | 256KB | #TDSHS |
+| `1787168789833` | 8/19/2026, 12:58:10 PM | 50 | 269KB | #Julia/Claudia 235B |
+| `1787168962221` | 8/19/2026, 12:51:48 PM | 20 | 44KB | #AZDHS |
 | `1787138864086` | 8/19/2026, 12:33:19 PM | 450 | 1864KB | #Frankenstein LLM GLM Speedup |
 | `1787159982042` | 8/19/2026, 12:32:42 PM | 228 | 9271KB | #Argus/Team Hub |
 | `1787122887382` | 8/19/2026, 11:53:23 AM | 554 | 4399KB | #San Mateo EMSA Complaint |
@@ -117,13 +122,170 @@ Generated: 8/19/2026, 12:44:00 PM PT | window: last 72h | 110 tasks | index tota
 | `1786914420694` | 8/16/2026, 2:15:25 PM | 26 | 265KB | Add these 2 also for the 17 year old and give info on additional thoughts |
 | `1786823554800` | 8/16/2026, 1:57:36 PM | 272 | 2251KB | #Argus |
 | `1786913306929` | 8/16/2026, 1:54:20 PM | 8 | 222KB | What does this all mean? or what is it indicative of? |
-| `1786910320016` | 8/16/2026, 1:35:54 PM | 134 | 564KB | Can you do another 90 minute session again |
-| `1786910687953` | 8/16/2026, 1:34:33 PM | 192 | 384KB | #Payment  |
-| `1786845607312` | 8/16/2026, 12:52:49 PM | 108 | 605KB | #GLM 5.3 Update |
 
 ---
 
 ## Per-window detail
+
+### `1787168880963` — 8/19/2026, 1:43:40 PM PT — 191 turns
+
+**Original task:**
+
+```
+#GLM / Frankenstein Routing 
+
+I am working Julia/Claudia 235 in another window. We need to get GLM 5.2 up and running properly and serving in front of the 120Bs and 235Bs in frankenstein-llm. We need to fix the decode issue and whatever is choking out GLM. We need it running in cline 4 lanes and 4 batch / Argus lanes. I’m not sure why 3 is listed on ring concurrency. Something is off with settings. See also: 
+
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
+
+
+Both answered. The method is now written down per
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11945, #12477, #12584, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #1724, #1754, #1755, #178713, #18312, #18326, #19686, #1986, #2050, #2073, #2083, #2116, #2138, #2157, #2159, #2168, #2174, #2185, #2210, #2294, #2307, #2314, #23169, #2353, #24217, #25097, #2524, #2525, #2534, #2537, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #2582, #2587, #2588, #26209, #26284 [executing], #26400, #26403, #26908, #26917, #26922 [deployed], #26923, #26927 [deployed], #26932, #27259, #27494 [executing], #27508 [executing], #27514 [blocked], #27515 [executing], #27518 [deployed], #27524 [proposed], #27531 [proposed], #27610 [executing], #27611 [executing], #6826
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787169118771` — 8/19/2026, 1:42:51 PM PT — 99 turns
+
+**Original task:**
+
+```
+#Organize Compliance Gold Standard Response/Dissection, etc...
+
+Please analyze all the responses sent to regulators around here: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
+
+and organize the Gold Standard Response properly based on the recenlty sent ones. The gold standard response is customized according to the state location, rules, regulations, issues, etc... but style, tone, strategy are relatviely similar. The Gold Standard is somewhat disjoined now and needs better organization.
+```
+
+**Ideas referenced:** #047857, #111827, #1368, #1370, #16957, #19338, #19458, #19491, #2524, #2525, #2563, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #450438, #600179, #64748, #78350
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787168918854` — 8/19/2026, 1:39:43 PM PT — 116 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+TDSHS unified PDF delivered. The two matters due tomorrow (1080261810 and 1080261811, both due 2026-08-19) are consolidated into a single PDF, now open on your Desktop.
+
+Deliverable:
+- Desktop: /Users/rubenmajor/Desktop/Consolidated_Response_1080261810_1080261811_TDSHS_2026-08-19.pdf (70,993 bytes, verified via ls)
+- Server canonical: /var/www/emtskills/uploads/tdshs/inspection-5196-2026/Consolidated_Response_1080261810_1080261811_TDSHS_2026-08-19.pdf (verified: Aug 19 00:38, 70,993 bytes)
+- Google Drive sendable copy: file id 18sI3y8y7Q10Cqzl93x37tlYI89m3000_
+
+What the consolidated re
+```
+
+**Ideas referenced:** #178712, #249506, #27100
+
+**Last PICKUP PROMPT:**
+
+```
+hanically amended this window)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787123639000 — TDSHS 1080261810 (Tucker) + 1080261811 (Meadors): REWRITE the consolidated response, it is currently wrong.
+
+Where we left off (verified 2026-08-19 13:38 PT):
+- RUBEN'S CORE STEER: the existing PDF focuses on EXTERNSHIP SCHEDULING. The charged allegations are narrower. Do not answer questions not asked. Use rule 304 Gold Standard.
+- CHARGED 1080261810 (Tucker) VERBATIM: "failed to properly communicate with students regarding completing their externship, causing them to pass the 30-day mark set forth by your program. Concerns were also made about the student's inability to reach anyone other than an 'AI robot' and no follow-up when tickets are placed."
+- CHARGED 1080261811 (Meadors) VERBATIM: "failed to provide the support and scheduling assistance necessary to complete the school's required externship hours. Student reports incorrect information received from school's 'AI assistant', prolonged communication delays, and missing the school's deadline to test for the National Registry."
+- COMPLAINANT ON 810 IS THE PARENT, not the student.
+- DUE: 810 = 2026-08-18 (row id 4, PAST DUE); 811 = 2026-08-19 (row id 5). Name is MEADORS.
+- ATTACHMENTS RECOVERED to /var/www/emtskills/uploads/tdshs/inspection-5196-2026/attachments_810_811/ (7 PDFs). Source: Plesk Maildir info@ msgs 1785851812.M447305P1162848 (8/4) and 1785936349.M61811P142338 (8/5). NOT yet registered in compliance_source_documents.
+- STILL UNREAD: the 3 Tucker grievance-support PDFs (~11MB of emails/chats). READ BEFORE DRAFTING 810 — they are the evidence for the AI/ticket-nonresponse allegation.
+- Tucker 26512BC-02 San Antonio BootCamp, course 5/11-6/24, didactic 5/24, request 2121 created 5/26 assigned same day, forwarded 6/1, follow-ups 6/8 + 6/11, status COMPLETED 6/16 "June 12-22 Gonzales". No placement row, coverage 2/7, Moodle suspended=1.
+- Meadors 26911FT-01 DFW FastTrack, course 4/27-6/24, didactic 5/24, request 2165 created 6/4 forwarded 6/8, follow-ups 6/11 + 6/16, EXPIRED; request 2312 created 6/20 auto-escalated Pattern-B after 14 days. No placement, coverage 2/7.
+- BOARD (compliance_deadlines, entity=tdshs): sent = rows 1,2,3 (8/6), 7,9 (8/13), 15. ready_to_send = 8,10,11 (8/15), 32. drafted = 4, 5, 17,19,20,27,29. not_started = 6,12,13,14,16,28.
+
+Open threads to drive next:
+1. (human-only decision — no idea) — REWRITE the consolidated PDF to answer only the charged allegations; Ruben reviews wording before transmit (regulator correspondence is Ruben-only per rule 29).
+2. (human-only decision — no idea) — Mark completed responses on compliance_deadlines list view + calendar; rows 8/10/11 (8/15) are still ready_to_send and need confirmation they were actually transmitted before flipping to sent.
+3. (human-only decision — no idea) — Resolve the Tucker start-date discrepancy (deadline row says 04/05/2026, Students says 2026-05-11) before asserting any date to TDSHS.
+
+Reference IDs:
+- Ideas filed: none this window
+- Files touched: /var/www/emtskills/uploads/tdshs/inspection-5196-2026/attachments_810_811/ (7 PDFs extracted, new dir)
+- Existing draft (WRONG FOCUS, do not transmit as-is): Consolidated_Response_1080261810_1080261811_TDSHS_2026-08-19.pdf and .html
+- Matters: 1080261810 (Tucker, due 8/18), 1080261811 (Meadors, due 8/19); deadline rows id 4 and id 5
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═════════════════════
+```
+
+### `1787168789833` — 8/19/2026, 12:58:10 PM PT — 50 turns
+
+**Original task:**
+
+```
+#Julia/Claudia 235B
+
+Julia/Claudia 235B is back online and serving. (verified: curl lane :11513 HTTP=200 + ssh_command lane-guard probe ok:true problems:[] reach vllm=true ssh=true at 03:08 PT; router audit picked=julia-235b no substitution; fleet_act julia=healthy ok:true)
+
+Recovery + verification (this window, all times PT):
+- Julia was L2-dark after the 2026-08-18 outage (last good serve 13:15 PT, confirmed dark 14:49-14:53 from 3 vantages). Physical power cycle restored it.
+- Post-return: Ray head + vLLM relaunched via @reboot. Lane :11513 HTTP=200, decode probe returns real tokens, router
+```
+
+**Ideas referenced:** #081020, #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #178634, #178640, #178656, #178671, #178701, #178709, #178712, #18312, #18326, #21038 [executing], #22584, #24645, #25097, #25229 [deployed], #25238 [executing], #25240 [executing], #25241 [executing], #25366 [deployed], #2537, #25385, #25468, #25471, #25515 [proposed], #25525 [executing], #25528 [deployed], #25530 [executing], #25531 [executing], #25532 [deployed], #25534 [executing], #25535 [executing], #2573, #25796, #25797, #25798, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26923, #26932, #27011, #27012, #27069 [deployed], #27232 [rejected], #27236 [deployed], #27259, #27271, #27287 [deployed], #27613 [proposed], #27614 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ved), no extra wrap-up to run.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787129383579 — Julia/Claudia 235B: serving restored end-to-end verified, two protection gaps filed.
+
+Where we left off (verified 2026-08-19 12:57 PT):
+- Julia 235B SERVING: lane :11513 HTTP=200 with real qwen3-235b decode (16 tok, finish_reason=length). No substitution, no artemis fallback. catch_relaunch.state=SERVING.
+- Root cause of the morning dark: vLLM crashed after the 04:29 babysit END; catch-relaunch cron restarted it at 12:40; serving restored 12:49-12:51.
+- Lane-guard runs via /etc/cron.d/emsu-julia-lane-guard (*/5), not systemd. Script at /usr/local/bin/emsu-julia-lane-guard.py, alert sink /usr/local/bin/emsu-alert.sh, wedge-watchdog */2, catch-relaunch * * * * *.
+- Julia WG 10.100.0.15 DOWN (No route to host); reverse tunnel :2205 UP and is the only fleet path (single point of failure).
+
+Open threads to drive next:
+1. #27613 [proposed] — restore Julia WireGuard link 10.100.0.15. From Julia (spark-6ae6, LAN 192.168.1.190) run wg-quick status / bring the WG interface up, then verify ping+ssh 10.100.0.15 from WOPR and confirm the vLLM lane is unaffected.
+2. #27614 [proposed] — extend /usr/local/bin/emsu-julia-lane-guard.py reachability alert to fire on a single-lane :11513 dark transition (vLLM down while ssh :2205 up), or add a permanent decode-probe cron with alert-on-wedge. This closes the exact silent-outage class from this morning.
+3. #27236 [deployed] — lane-guard reachability patch is live; no action unless it transitions, but note its single-lane blind spot is now tracked in #27614.
+4. (human-only decision, no idea) The wedge-guard reboot path (physical reboot for a PERSISTENT wedge) was not exercised; only the vLLM relaunch path fired. Confirm whether the reboot path should stay armed as-is.
+
+Reference IDs:
+- Ticket: #1787129383579
+- Ideas filed this window (live create_idea): #27613 [proposed], #27614 [proposed]
+- Ideas reconciled (server-side tags): #27236 [deployed], #27069 [deployed], #26711 [deployed], #26715 [deployed], #27232 [rejected], #21038 [executing], #26712 [proposed], #26713 [proposed]
+- Files touched: /etc/cron.d/emsu-julia-lane-guard (read), /usr/local/bin/emsu-julia-lane-guard.py (read), /usr/local/bin/emsu-alert.sh (read), /etc/cron.d/emsu-julia-wedge-watchdog (read), /etc/cron.d/emsu-julia-catch-relaunch (read), /Users/rubenmajor/Documents/Cline/cline_task_ledger.md (appended, 509->510 lines)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787168962221` — 8/19/2026, 12:51:48 PM PT — 20 turns
+
+**Original task:**
+
+```
+#AZDHS
+
+Still need the DRAFT PDF opened on my desktop
+AZDHS EMS-26-0495 (Richella Trujillo) handled: unified PDF response built and the matter scheduled properly. Both parts of your ask done.
+
+WHAT THE 8/3 EMAIL IS: Investigator Bevins identified Richella Trujillo as the complainant on EMS-26-0495 (Complaint 914) (verified: mysql fetch_data on admin_portal.compliance_investigation_responses returned rows 149 and 165 documenting the 8/3 Bevins identification email; the literal email itself was not retrievable, so this is sourced from those prior-window DB notes). She is the parent/third-party p
+```
+
+**Ideas referenced:** #178712, #27493 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787138864086` — 8/19/2026, 12:33:19 PM PT — 450 turns
 
@@ -4296,118 +4458,3 @@ What does this all mean? or what is it indicative of?
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786910320016` — 8/16/2026, 1:35:54 PM PT — 134 turns
-
-**Original task:**
-
-```
-Can you do another 90 minute session again
-
-
-
-Babysit window complete (2026-08-15, ~18:48-21:11 PT) plus Ruben's 20:35 PT chat-55 dedupe directive executed end-to-end. Compressed once (rule 119) at 151K/200K; SESSION MEMORY blob returned above. Gate: ALL PASSED + GATE CLEAR (task 1786844918374).
-
-WHAT WAS DONE POST-STEER:
-1. Found the Argus offload dupe loop: 112 'Argus background task' idea rows in 2 days, 110 of them for ONE Argus task (task 360). Root cause: cron_argus_task_worker.php offload block (attempts>=cap) INSERTed a fresh orchestrator_idea every cron cycle with no dedupe, and the e
-```
-
-**Ideas referenced:** #16069, #16732, #178684, #19454, #23133, #23982, #2420 [resolved], #2511, #2513, #2517, #2518, #2522, #2523, #25887, #25962, #25965, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26229, #26241, #26245, #26249, #26336, #26348, #26368, #26376, #26377, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26663, #26678, #26684 [rejected], #26711, #26717 [rejected], #26719 [executing], #26720 [executing], #26721 [executing], #26724 [executing], #26730 [deployed], #26731 [proposed], #26742 [rejected], #26743 [deployed], #26820 [proposed], #26823 [executing], #26824 [executing], #26825 [executing], #3133, #475569, #8157, #8162
-
-**Last PICKUP PROMPT:**
-
-```
-l idea inserted + ID verified.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786844918374 — executor babysit wrap (2026-08-16, second session).
-
-Where we left off (verified 2026-08-16 13:35 PT):
-- cron_post_call_summary.php regression RESTORED: 8.7KB stub (raw Vapi summary mailed to any caller, dead violation scan, dropped sentinel) replaced with the 39KB intact version from .bak-20260809-callback; php -l clean, owner emsumain, crontab /etc/cron.d/emsu-post-call-summary verified (*/2 www-data); live run 13:13 sent 10 ops-recaps to info@ with caller_copy=no, violations=0.
-- Sentinel `NEVER say our team, a team member` confirmed present (grep count 1).
-- Argus dedupe holds: 0 new 'Argus background task%' ideas since 2026-08-15 20:52 patch.
-- Executor healthy: 3 live workers at 13:14; #26720/#26721/#26724 approved|idle (drafting queued).
-- Canary FAIL http=000 45s root-caused as transient slow-rung spikes (match EXEC FLOOR bursts; fleet healthy, 13:30 probe 200/6.2s). Not an outage.
-- Telephony healthy (88/118 transcript_helped).
-
-Open threads to drive next:
-1. #26820 [proposed] — Investigate why 3 AFL chat sites (arizonaemt.com, arizonaemtrefresher.com, bayareaemtrefresher.com) report config_fail_http_0/send_fail::http_0 despite home_http 200. Likely a per-domain config endpoint egress mismatch in the chat-widget healthcheck; verify the healthcheck's config-probe URL wiring for those domains. (Filed this session, SQL-verified ID.)
-2. Bug row #2420 [resolved] — silent-gutting RCA for cron_post_call_summary.php recorded; durable learning for future "file shrank suddenly" triage.
-3. #26720 [executing], #26721 [executing], #26724 [executing] — GPU disk guard, canary-quarantine speed, deploy-gate false-block: normal executor drafting resumed; verify they land in the next executor cycle.
-4. #26731 [proposed] — 317-lite gate in executor build stage; still awaiting Ruben's decision.
-
-Reference IDs:
-- Ticket: 6459414 (cron_sentinel_guard regression event that triggered this fix; processed=1)
-- Ideas filed this session: #26820 [proposed]
-- Bug library: #2420 [resolved], bug_id 8422
-- Files touched: /var/www/emtskills/cron/cron_post_call_summary.php (restored from .bak-20260809-callback), /var/www/emtskills/docs/HANDOFF_NOTES.md
-- Verified-but-not-touched: /etc/cron.d/emsu-post-call-summary, /usr/local/bin/emsu-frankenstein-canary.sh
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786910687953` — 8/16/2026, 1:34:33 PM PT — 192 turns
-
-**Original task:**
-
-```
-#Payment 
-
-Payments seem like they may be having trouble comeing through again. Check the handoffs and see what's going on there.
-```
-
-**Ideas referenced:** #16155, #16695, #16732, #174968, #18743, #19387, #23050, #23133, #2328, #23323, #2341, #2343, #2344, #23982, #24055 [proposed], #2511, #2513, #2517, #2518, #25185, #2522, #2529 [deployed], #25357, #25869, #25962, #25965, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26211, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26376, #26377, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26663, #26678, #26711, #26719, #26743, #26823 [executing], #26824 [executing], #26825 [executing], #3261, #3319, #3346, #4929, #8157, #8162, #8177, #9202
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786845607312` — 8/16/2026, 12:52:49 PM PT — 108 turns
-
-**Original task:**
-
-```
-#GLM 5.3 Update
-
-How can we update our GLM 5.2 to GLM 5.3 both local and cloud?
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #15930, #16163, #16265, #16304, #16732, #16844, #18312, #18326, #19338, #1993, #20005, #20040, #20054, #20068, #20069, #20082, #20245, #20247, #20264, #20272, #20291, #20297, #20302, #20311, #2073, #2299, #23133, #23171, #2328, #2340, #2341, #2343, #2344, #25097, #2511, #2513, #25989, #26003, #26038, #26040, #26041, #26045, #26050, #26054, #26065, #26068, #26090, #26207, #26209, #26211, #26214 [executing], #26215 [executing], #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #26336, #26348, #26368, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26613, #26638 [executing], #26639 [executing], #26642 [executing], #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #3261, #3319, #3346
-
-**Last PICKUP PROMPT:**
-
-```
-th channels in under a minute.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task GLM 5.2 → 5.3 upgrade + release tracker (monitor + add SMS/email channels).
-
-Where we left off (verified 2026-08-16 12:52 PT):
-- Tracker healthy: cron fired 2026-08-16 07:05:04 PT (syslog confirmed); script /usr/local/bin/emsu_glm53_release_tracker.sh valid; cron service active; state file /var/lib/emsu/glm53_release_state = `zcloud=0 or=0 hf=0 (401)`.
-- GLM-5.3 still fully gated: Zhipu live probe → error 1220 (key not whitelisted); OpenRouter not listed; HF zai-org 401. No change since 2026-08-15.
-- Correct silence: tracker only writes on state change, so no alert spam. 2-week card armed for 2026-08-29 if still gated.
-- Upgrade plan on disk: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md.
-- PENDING Ruben input: SMS + email channels not yet wired (no Twilio creds / verified email found). iMessage path already works.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26715 [deployed] — Add SMS + email channels to emsu_glm53_release_tracker.sh once Ruben provides Twilio SID/token/from-number and/or verified email. Keep iMessage (queue_msg) as primary; add Twilio API call + mail/Postmark line.
-2. #26711 [proposed] — Ruben contacts Zhipu to whitelist key 802fd27e... for glm-5.3; confirm via raw curl (expect 200). Tracker auto-fires iMessage on success.
-3. #26712 [proposed] — When tracker fires HF gate-clear (hf=1): download zai-org GLM-5.3/FP8, AWQ 4-bit quant, single-box vLLM validate (glm47 tool parser / glm45 reasoning), then PP=6 Hex ring relaunch via GLM52 #1993 recipe.
-4. #26713 [proposed] — When bake-off + soak pass: flip registry tier L3/L4g, router_hook GLM-first target, FRANK_BOX_CAPACITY 8210; retire glm-5.2 after 48h; update trackers with gate-cleared timestamps.
-
-Reference IDs:
-- Ideas filed: #26711, #26712, #26713, #26715
-- Files touched: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md, /usr/local/bin/emsu_glm53_release_tracker.sh, /etc/cron.d/emsu-glm53-release-tracker
-- Event log: 6409723 (tracker self-test)
-- Cron proof: syslog 2026-08-16 07:05:04 CRON root CMD emsu_glm53_release_tracker.sh
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```

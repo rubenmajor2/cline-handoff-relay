@@ -59,3 +59,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Hardening a file I had just created (chmod 640) silently broke the production cron that consumed it: write_server_file had created config/db_config.php as root:root, so removing world-read locked out the PHP/cron user and re-broke the rate cron I had just repaired. Amendment: before chmod/chown/any permission change on a file that a service reads, probe (a) the file's actual owner (ls -la) and (b) the consuming process's user identity (id / PHP-FPM pool user), and after the change re-run the consumer once to confirm it still works. A security-hardening step that is not followed by a consumer re-run is an unverified write like any other.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 19:50 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787123639000
+- RCA bucket: insufficient probe
+- Trigger pattern: Publishing a Google Drive file id as 'verified' in a completion/PICKUP PROMPT without resolving it live (get_file_info) — the recorded id 18sI3y8y7Q10Cqzl93x37tlYI89m3000_ was stale and invisible unti
+- Reversal note: Within-window reversal: the consolidated TDSHS response PICKUP PROMPT recorded Drive file id 18sI3y8y7Q10Cqzl93x37tlYI89m3000_ as verified, but a live get_file_info returned 'File not found'. The actual file exists under id 1IwAPEXqYfXB-VGyVqpvB187uF_HbYeUo (found via search_drive by name). Desktop and server PDFs were byte-identical (MD5 070cb39f38eeb9341d43a376fc85a835), so only the Drive id was wrong — but the id was cited as a verified deliverable. Amendment: a Drive file id (like any external id/token) is not 'verified' until a live resolve returns it; publish the id only after an actual API resolve, not from an upload-return captured in a prior turn.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

@@ -129,3 +129,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Big Mac watchdog-arm: earlier this same session I amended rule 315 with "a unit reporting SUCCESS is not evidence its effect happened" (the cold-boot case where systemd-modules-load exited 0 while sp5100_tco was absent). The INVERSE then fired within the hour and I nearly recorded it as a real safety regression: bigmac-watchdog-arm.service reported failed/status=1 while the protection WAS fully live (watchdog0 state=active, identity="SP5100 TCO timer", timeout=60, sp5100_tco loaded, RuntimeWatchdogUSec=1min). Cause was a race, not a fault: the script sampled /sys/class/watchdog/watchdog0/state exactly once immediately after daemon-reexec, read "inactive", and exited 1 before systemd finished opening the device. Log proof: 22:11:41 "wdt_state=inactive FAIL", then after the fix 22:14:39 "armed=1min wdt_state=active timeout=60". Amendment: a unit's FAILURE status is likewise not evidence that its effect did NOT happen. Before acting on either a success or a failure report, probe the EFFEC
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 01:15 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787081272363
+- RCA bucket: insufficient probe
+- Trigger pattern: Concluding POWERED-OFF from CX7 NO-CARRIER + failed WOL, without physically checking chassis heat/power LED or reading the previous-boot journal; WOL failure + no-carrier can ALSO mean a kernel/driver
+- Reversal note: Julia L2-dark 2026-08-18: I declared Julia POWERED OFF from CX7 NO-CARRIER + 1786 failed WOL packets + multi-vantage ARP-dead. Ruben corrected: the chassis was HOT when he touched it to restart. A hung kernel (thermal/driver) can leave the NIC silent and unresponsive to WOL exactly like a powered-off box. Amendment: NO-CARRIER + WOL-exhaustion proves UNRESPONSIVE NIC, not power state. Before asserting POWERED OFF, add (a) physical heat/LED check via the human, or (b) post-recovery journal read of the previous boot to distinguish panic/hang from power loss. Default classification for a dark Spark with hot chassis: KERNEL-WEDGE-UNRESPONSIVE, requiring hardware watchdog arming, not just WOL.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

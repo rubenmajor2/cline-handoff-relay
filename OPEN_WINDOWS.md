@@ -6,11 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/18/2026, 5:20:32 PM PT | window: last 72h | 82 tasks | index total 816 (parsed 2, cached 814)
+Generated: 8/18/2026, 6:20:33 PM PT | window: last 72h | 84 tasks | index total 818 (parsed 4, cached 814)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787096297068` | 8/18/2026, 5:20:19 PM | 75 | 245KB | #Julia/Claudia |
+| `1787098931968` | 8/18/2026, 6:20:07 PM | 387 | 725KB | #Argus |
+| `1787096297068` | 8/18/2026, 6:19:40 PM | 309 | 595KB | #Julia/Claudia |
+| `1787100985272` | 8/18/2026, 6:07:41 PM | 34 | 315KB | #Frankenstein LLM Misc |
+| `1786989452314` | 8/18/2026, 5:55:33 PM | 360 | 939KB | frankenstein-llm keeps going down as I'm trying to put back up Cicero and Maximus, not sur |
 | `1787096428156` | 8/18/2026, 4:56:26 PM | 174 | 399KB | Getting {"message":"Connection error.","modelId":"glm-5.3","providerId":"zai"} |
 | `1787073073602` | 8/18/2026, 4:03:58 PM | 628 | 5679KB | # GLM 5.3: |
 | `1787090950949` | 8/18/2026, 4:03:29 PM | 200 | 465KB | #Argus |
@@ -34,7 +37,6 @@ Generated: 8/18/2026, 5:20:32 PM PT | window: last 72h | 82 tasks | index total 
 | `1787014605175` | 8/17/2026, 6:29:12 PM | 154 | 347KB | #Jon / Argus |
 | `1787014473253` | 8/17/2026, 6:20:07 PM | 120 | 612KB | Check /emtskills - slow as hell again check emtskills slowness document on desktop. please |
 | `1787012165910` | 8/17/2026, 5:34:27 PM | 124 | 955KB | #Argus needs help:  |
-| `1786989452314` | 8/17/2026, 5:09:41 PM | 357 | 936KB | frankenstein-llm keeps going down as I'm trying to put back up Cicero and Maximus, not sur |
 | `1787009927550` | 8/17/2026, 4:49:34 PM | 78 | 693KB | Hi Julia, reports of your death are exaggerated? |
 | `1787000192686` | 8/17/2026, 4:34:35 PM | 112 | 875KB | Keep getting this upon initial iteration of frankenstein-llm: {"message":"Failed to fetch  |
 | `1786980640015` | 8/17/2026, 2:56:11 PM | 322 | 2451KB | #TDSHS |
@@ -97,7 +99,36 @@ Generated: 8/18/2026, 5:20:32 PM PT | window: last 72h | 82 tasks | index total 
 
 ## Per-window detail
 
-### `1787096297068` — 8/18/2026, 5:20:19 PM PT — 75 turns
+### `1787098931968` — 8/18/2026, 6:20:07 PM PT — 387 turns
+
+**Original task:**
+
+```
+#Argus
+
+Confirm with me then that 1. The executor is still woking; 2. That the  rule 29 trap is resolved;
+
+Explain: impl_failed went __16 → 1__. A forced dispatcher tick immediately spawned a worker for one of the ideas I had released seconds earlier. The single remaining entry, #26827 [blocked], is a genuine LoRA/fleet build failure and is the only member of that set that ever needed a human.
+
+##
+
+Anything else that we need to do to improve Argus? What about Argus Rules? How are those going? Staff woudl like argus to work faster and be more reliable. What can we do on that? 
+
+--
+Per rule 29: 
+```
+
+**Ideas referenced:** #11316, #12246, #12645, #12688, #13204, #13329, #13962, #14947, #16584, #17537, #17619 [deployed], #178701, #178708, #18032, #18121, #18806, #19348, #2006, #20825, #21134, #22511, #22583, #23428, #23489, #23941, #24663, #24664, #24665, #24666, #24673, #24676, #24678, #24681, #24682, #24685, #24688, #24694, #24696, #24698, #24700, #24702, #24703, #25185, #25385, #25570 [executing], #25642, #25973, #26085 [approved], #26124 [deployed], #26192 [awaiting_review], #26322 [executing], #26719, #26827 [blocked], #26931 [executing], #27126, #27203, #27237 [deployed], #27238 [deployed], #27243 [proposed], #27244 [proposed], #27245 [proposed], #27248 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+p, not a post-hoc reversal.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787081272363 — Argus speed + reliability SHIPPED end-to-end; conv-affinity live; Argus Doctor operational.\n\nWhere we left off (verified 2026-08-18 18:19 PT):\n- All three Argus ideas live in production and stamped: #27243 [deployed] (conv-id ladder-stickiness + fast-lane timeouts), #27244 [deployed] (cache + conversation observability; beta headers correctly scoped out — wrong endpoint shape), #27245 [deployed] (Argus Doctor, 6 probes, cron every 10 min).\n- Live end-to-end proof of affinity: 3 router calls, different content, same explicit conversation id, all picked frankenstein-tools (audit log rows conv=argus_e2e_affinity_test).\n- Router restarted 18:07:58 with the explicit-conversation-id preference (backup /etc/litellm/_router_core.py.bak-argus-conv-20260818). FPM reloaded after the PHP changes. Doctor 18:10 cycle: 6/6 pass, p50 10.3s (was ~29s before).\n- Executor healthy: impl_failed 0; ghost backlog 3,457 → 2,707; healer crons clean. Rule 29 amendment live; Argus drift guard caught it.\n\nOpen threads to drive next:\n1. #27248 [proposed] — on 2026-08-20, query argus_round_latency for the 48h after the 18:07 launch: avg/p50/p95 vs the 7-day baseline, distinct backends per conversation_id, cache_read_tokens population; then remove the dead cron_argus_doctor.php once the watchdog log shows 24h clean. If p50 regresses, the next lever is routing lookup mode straight to the 120B adapter pool.\n2. Set ARGUS_DOCTOR_DISCORD_WEBHOOK in /etc/cron.d/emsu-argus-doctor-watchdog so 3rd-consecutive-failure alerts reach Discord. (human-only decision — no idea)\n3. Tell staff the speed changes are in place and to report residual slowness with the conversation_id in hand. (human-only decision — no idea)\n\nReference IDs:\n- Ideas live in production from this session: #27243 [deployed], #27244 [deployed], #27245 [deployed]\n- Follow-up measurement filed: #27248 [proposed]\n- Prior-session ideas verified: #26931 [deployed], #26322 [deployed], #26827 [deployed], #26124 [deployed], #27237 [deployed], #27238 [deployed]; #25570 [executing] (drafting); #26192 [awaiting_review] (superseded)\n- Files touched: /var/www/emtskills/routes/alltastic_api.php (conv-id, fast-lane timeouts, cache normalization, round logger), /etc/litellm/_router_core.py (explicit conversation-id preference, backup kept), /var/www/emtskills/lib/ArgusDoctor.php (new), /var/www/emtskills/cron/cron_argus_doctor_watchdog.php (rewritten), /etc/cron.d/emsu-argus-doctor-watchdog (new), admin_portal.argus_round_latency (ALTER: cache_read_tokens, conversation_id), admin_portal.argus_doctor_health (ALTER: filed_issue_id, idx), HANDOFF_NOTES.md\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════",
+  "task_id": "1787081272363",
+  "task_prompt": "#Argus\n\nConfirm with me then that 1. The executor is still woking; 2. That the  rule 29 trap is resolved;\n\nExplain: impl_failed went __16 → 1__. A forced dispatcher tick immediately spawned a worker for one of the ideas I had released seconds earlier. The single remaining entry, #26827 [blocked], is a genuine LoRA/fleet build failure and is the only member of that set that ever needed a human.\n\n##\n\nAnything else that we need to do to improve Argus? What about Argus Rules? How are those going? Staff woudl like argus to work faster and be more reliable. What can w
+```
+
+### `1787096297068` — 8/18/2026, 6:19:40 PM PT — 309 turns
 
 **Original task:**
 
@@ -114,7 +145,123 @@ Answer to "when did Julia/Claudia go dark" — bracketed by the live router audi
 - 14:49-14:53 — Julia confirmed LAYER-2 dark from 3 v
 ```
 
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #17788, #1779, #1780, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038 [executing], #2127, #2168, #2299, #25378, #25381, #2546, #2550, #2554, #26471, #26475, #26476, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #27069 [executing], #27128, #27129, #27201, #27232 [proposed], #27236 [proposed], #366377, #7142, #7149
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #17788, #1779, #1780, #178708, #1798, #1828, #18312, #18326, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038 [executing], #2127, #2168, #2299, #25097, #25185, #2537, #25378, #25381, #2546, #2550, #2554, #26471, #26475, #26476, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26923, #27069 [executing], #27128, #27129, #27201, #27232 [proposed], #27236 [proposed], #27249 [executing], #366377, #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+[rejected] with the executor.)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787081272363 - Julia/Claudia 235B L2-dark outage: recovery + auto-restart hardening
+
+Where we left off (verified 2026-08-18 17:44 PT):
+- Julia 235B lane RECOVERED and serving (WOPR :11513 HTTP 200, router pick julia-235b 00:40:46Z no substitution, decode canary real tokens, fleet_act healthy, RoCE .3 up) after Ruben power-cycled both boxes 17:28 PT
+- Root cause of the outage: Julia was POWERED OFF (L2-dark 13:15-17:28 PT; WOL sent 1786+ times from Claudia + Mac, NIC never energized; CX7 NO-CARRIER from Claudia = unenergized NIC). NOT tunnel flapping (#27232 [rejected])
+- Auto-restart hardening LIVE: Julia ~/ray_head_watchdog.sh + 1-min cron (tunnel+GCS+monitor, never-kill, 900s cooldown); Julia @reboot chain verified; Claudia head-watchdog v5 (worker-relaunch gap fixed: launches claudia_unified_worker.sh when raylet absent, 600s cooldown); Claudia tunnel = systemd user unit; zero docker on Claudia
+- #27236 [deployed]: emsu-julia-lane-guard.py reach probe (:11513+:2205) before yaml contract, transition-only alerts; fired BOTH directions live (DARK error 6629419, RECOVERED info 6629610)
+- SYSTEMIC FIX: emsu-alert.sh severity remapped to live enum (info/warning/error/critical), all prior non-critical alerts landed BLANK severity; self-tested 4 levels
+
+Open threads to drive next:
+1. (human-only decision, no idea) Optional smart PDU on the Julia/Claudia outlet, only a true power-off still needs a physical press (no BMC/WOL-from-off on DGX Sparks)
+
+Reference IDs:
+- Ideas filed: #27236 [deployed], #27232 [rejected], #27069 [executing]
+- Files touched: /usr/local/bin/emsu-julia-lane-guard.py (+ .bak-reach-20260818), /usr/local/bin/emsu-alert.sh (+ .bak-enumfix-20260818), /home/rubenmajor/claudia_head_watchdog.sh on Claudia (+ .bak-workerfix-20260818), /home/rubenmajor/ray_head_watchdog.sh on Julia (new, + cron), /tmp/emsu_julia_lane_guard.json, HANDOFF_NOTES.md, fleet_inventory julia row
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Rule 119 signal check + live re-probe (Mac, WOPR, Claudia, Cicero vantages; :11513/:2205 dead, zero julia-235b picks since 20:15Z)
+- [x] Record-first search: WOL exhausted (1786+ auto + Mac-side), CX7 NO-CARRIER → Julia powered off, physical cycle required
+- [x] Claudia worker-relaunch gap fixed (watchdog v5)
+- [x] Lane-guard reach alerts #27236 deployed + positive-controlled; systemic emsu-alert.sh enum bug fixed
+- [x] #27232 rejected, fleet_act + HANDOFF notes updated
+- [x] Pre-cycle hardening: Claudia tunnel=systemd (survives reboot), docker=none; Julia @reboot chain verified
+- [x] Julia ray_head_watchdog.sh installed + cron live
+- [x] Ruben power-cycled both; auto-recovery FIRED (Ray 2-node + worker + tunnels ~60s)
+- [x] Engine serving 200 + decode canary + fleet_act healthy + BOTH alert directions fired live
+- [x] GATE B reconciled (#27236 deployed, #27232 rejected, #27069 executing) + gates passed + shipped
+</task_progress>
+</attempt_completion>
+```
+
+### `1787100985272` — 8/18/2026, 6:07:41 PM PT — 34 turns
+
+**Original task:**
+
+```
+#Frankenstein LLM Misc
+
+Rebase and tell me what's next here. Julia/Claudia is back onlind serving
+
+--
+Fixed, deployed, and verified. `litellm:julia-235b` now always serves a REAL Qwen3-235B, on every prompt size, with the substitution visible in headers instead of silent.
+
+## What was actually off with my analysis, in one line
+
+Nothing I measured was wrong; the claim I built from it was scoped wrong twice. First flip (earlier): the julia-235b BOX is dead but the NAME serves — the router rewrites `data["model"]` to a sibling. Second flip (this round): I told you that sibling was glm-5.2-local, 
+```
+
+**Ideas referenced:** #178693, #21586 [blocked], #24895 [blocked], #2554, #2569, #26196 [blocked], #26225 [blocked], #26322, #26471, #26475, #26476, #26711, #26712, #26713 [proposed], #26715 [deployed], #26827, #26908 [deployed], #26931, #26932 [deployed], #26934 [blocked], #27097 [awaiting_review], #27109, #27110, #27123 [executing], #27128, #27129, #27201, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #366377
+
+**Last PICKUP PROMPT:**
+
+```
+that this window should build.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786932084 — julia-235b rebase: box re-dark, fallback holding, smart PDU is next.
+
+Where we left off (verified 2026-08-18 18:06 PT):
+- Julia BOX DARK AGAIN second time today (~17:58-18:06 PT). 3-vantage proof: WG 10.100.0.15 dead, LAN 192.168.1.190 dead from Mac, :11513 listener flapped then gone, :2205 refused. Lane-guard #27236 [deployed] fired DARK alert 01:00:06Z + error 01:05:05Z.
+- Recovered window confirmed real: audit 00:40:46Z + 00:57:59Z picked=julia-235b, no substitution. The 8/17 fix holds: cicero :11520 healthy, julia-235b name falls back to real 235B while box is dark.
+- Claudia healthy (192.168.1.115 ping OK, tunnel 11516 stable).
+- litellm healthy (liveness 200). No config changes this window (probe-only).
+
+Open threads to drive next:
+1. #27123 [executing] — substitution transparency headers; independent of Julia power state, executable now.
+2. #27097 [awaiting_review] — RoCE preflight + IPv4 write; gated on next Julia boot.
+3. Smart PDU on Julia/Claudia outlet is the top recovery fix and needs a human decision. (human-only decision, no idea)
+4. Julia physical power press needed now. (human-only decision, no idea)
+5. Orphan-D keep-or-kill: #26934 [blocked], #26225 [blocked], #26196 [blocked], #21586 [blocked], #24895 [blocked]
+
+Reference IDs:
+- Ideas: #27236 [deployed] (proved firing again), #27123 [executing], #27097 [awaiting_review]
+- Prior window artifacts unchanged: config.yaml fallback [cicero-235b], _router_core.py 235B sibling pick (line 4654), backups .bak-julia-fallback-20260817 / .bak-235b-sibling-20260817
+- Files touched this window: none (probe + rebase only)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1786989452314` — 8/18/2026, 5:55:33 PM PT — 360 turns
+
+**Original task:**
+
+```
+frankenstein-llm keeps going down as I'm trying to put back up Cicero and Maximus, not sure if that has anything to do with it, but please correct those issues. It could be the other Cline instances running on Cicero and Maximus interfering and not having the latest info. 
+
+Read this: 
+
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
+
+
+Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
+
+## Where 671 came from, and it is now durabl
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12403, #12477, #12584, #12618, #12657, #12680, #12689, #12824, #12872, #12878, #13108, #13121, #13202, #13453, #13470, #13874, #14000, #15823, #16163, #16265, #16304, #16602, #16648, #16844, #17202, #17203, #17205, #18312, #18326, #18786, #18820, #19747, #2007, #2071, #2079, #21586, #22820, #22897, #2299, #23171, #24220, #24895, #25097, #25112, #25133, #25185, #2528, #2537, #25468, #25471, #2549 [deployed], #2550 [deployed], #2552, #25567, #25625, #25627, #25877, #25878, #26123, #26132, #26133, #26134, #26135, #26137, #26138, #26139, #26140, #26145, #26146, #26196, #26225, #26400, #26908 [deployed], #26914, #26922 [deployed], #26923 [deployed], #26927 [deployed], #26932 [deployed], #26934, #27097 [executing], #27123 [executing], #53462, #57769, #57771
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -886,27 +1033,6 @@ What is the process
 ```
 
 **Ideas referenced:** #1758, #17580, #18442, #21586, #23428, #23468, #23506, #24431, #24706, #24895, #24897, #24941, #2496, #24990, #2500 [resolved], #25058, #25313, #25510, #25522, #2553 [rejected], #25576, #25618, #25619, #25643, #25644, #25645, #25649, #25650, #25653, #25654, #25927 [deployed], #25982, #26196, #26225, #26934, #27065 [proposed], #27120 [executing], #27126 [executing], #9086
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786989452314` — 8/17/2026, 5:09:41 PM PT — 357 turns
-
-**Original task:**
-
-```
-frankenstein-llm keeps going down as I'm trying to put back up Cicero and Maximus, not sure if that has anything to do with it, but please correct those issues. It could be the other Cline instances running on Cicero and Maximus interfering and not having the latest info. 
-
-Read this: 
-
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
-
-## Where 671 came from, and it is now durabl
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12403, #12477, #12584, #12618, #12657, #12680, #12689, #12824, #12872, #12878, #13108, #13121, #13202, #13453, #13470, #13874, #14000, #15823, #16163, #16265, #16304, #16602, #16648, #16844, #17202, #17203, #17205, #18312, #18326, #18786, #18820, #19747, #2007, #2071, #2079, #21586, #22820, #22897, #2299, #23171, #24220, #24895, #25097, #25112, #25133, #25185, #2528, #2537, #25468, #25471, #2549 [deployed], #2550 [deployed], #2552, #25567, #25625, #25627, #25877, #25878, #26123, #26132, #26133, #26134, #26135, #26137, #26138, #26139, #26140, #26145, #26146, #26196, #26225, #26400, #26908 [deployed], #26914, #26922 [deployed], #26923 [deployed], #26927 [deployed], #26932 [deployed], #26934, #27097 [executing], #27123 [executing], #53462, #57769, #57771
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 

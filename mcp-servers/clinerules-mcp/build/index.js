@@ -2035,7 +2035,12 @@ server.tool("clinerules_stats", "Quick stats on the rules corpus + recent lookup
 // never weaker than the model under test. Auth via env (rule 302: no literal
 // keys in git-tracked files; FLEET_MCP_KEY is set in the launchd plist).
 const TRUTH_JUDGE_BASE = process.env.FRANKENSTEIN_API_BASE ?? "https://www.emsuniversity.com/emtskills/routes/api_fleet_inventory.php";
-const TRUTH_JUDGE_TIMEOUT_MS = 115_000;
+// 2026-08-19: raised 115s -> 165s. Server-side judge latency is 32-74s, but the
+// stdio validator is single-threaded: queue wait behind a slow validate_completion
+// (identity-gate retries) plus judge time pushed the real wall past 115s and the
+// client aborted a call the server was about to complete (truth_judge_log rows 3-4).
+// Budget chain: tool 165s < bridge child 240s < Cline MCP client 240s.
+const TRUTH_JUDGE_TIMEOUT_MS = 165_000;
 server.tool("clinerules_truth_judge", "VERITAS L4 TRUTH JUDGE (rule 323): a model strictly stronger than the one under test reviews an answer's CONTENT for factual support. Returns PASS/FAIL with every claim classified PROVEN/INFERENCE/UNSUPPORTED/CONTRADICTED plus named required fixes. MANDATORY before shipping answers containing money, student status, regulator, or fleet claims. Pass evidence = the tool outputs/probes you actually ran. Judge ladder: glm-5.2-local -> deepseek-v4-pro -> glm-5.2. Logged to truth_judge_log. Takes 30-90s: latency is acceptable, falsehood is not.", {
     text: zod_1.z.string().describe("The answer text to judge (>= 20 chars, max ~24K chars)."),
     evidence: zod_1.z.string().optional().describe("Tool outputs / probe results the author claims to have run. Paste real artifacts (tool names + what they returned)."),

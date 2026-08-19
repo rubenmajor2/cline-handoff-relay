@@ -2142,7 +2142,12 @@ server.tool(
 // never weaker than the model under test. Auth via env (rule 302: no literal
 // keys in git-tracked files; FLEET_MCP_KEY is set in the launchd plist).
 const TRUTH_JUDGE_BASE = process.env.FRANKENSTEIN_API_BASE ?? "https://www.emsuniversity.com/emtskills/routes/api_fleet_inventory.php";
-const TRUTH_JUDGE_TIMEOUT_MS = 115_000;
+// 2026-08-19: raised 115s -> 165s. Server-side judge latency is 32-74s, but the
+// stdio validator is single-threaded: queue wait behind a slow validate_completion
+// (identity-gate retries) plus judge time pushed the real wall past 115s and the
+// client aborted a call the server was about to complete (truth_judge_log rows 3-4).
+// Budget chain: tool 165s < bridge child 240s < Cline MCP client 240s.
+const TRUTH_JUDGE_TIMEOUT_MS = 165_000;
 
 server.tool(
   "clinerules_truth_judge",

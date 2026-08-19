@@ -6,12 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/19/2026, 9:49:32 AM PT | window: last 72h | 109 tasks | index total 848 (parsed 2, cached 846)
+Generated: 8/19/2026, 10:49:32 AM PT | window: last 72h | 110 tasks | index total 849 (parsed 3, cached 846)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787122887382` | 8/19/2026, 9:28:56 AM | 466 | 4138KB | #San Mateo EMSA Complaint |
-| `1787138864086` | 8/19/2026, 9:28:07 AM | 74 | 429KB | #Frankenstein LLM GLM Speedup |
+| `1787138864086` | 8/19/2026, 10:49:24 AM | 183 | 776KB | #Frankenstein LLM GLM Speedup |
+| `1787159982042` | 8/19/2026, 10:41:00 AM | 180 | 768KB | #Argus/Team Hub |
+| `1787122887382` | 8/19/2026, 10:26:37 AM | 467 | 4139KB | #San Mateo EMSA Complaint |
 | `1787148101456` | 8/19/2026, 7:01:52 AM | 3 | 8KB | like lightning mcqueen from Cars, who is speed in frankensein-llm |
 | `1787138798545` | 8/19/2026, 4:26:38 AM | 1 | 11KB | Ok, i iidd pay the API for Deepseek and can’t tell why it’s so much faster. Was it you or  |
 | `1787132045559` | 8/19/2026, 4:23:45 AM | 104 | 526KB | Which student submitted the most tickets and what was the reason? |
@@ -124,7 +125,142 @@ Generated: 8/19/2026, 9:49:32 AM PT | window: last 72h | 109 tasks | index total
 
 ## Per-window detail
 
-### `1787122887382` — 8/19/2026, 9:28:56 AM PT — 466 turns
+### `1787138864086` — 8/19/2026, 10:49:24 AM PT — 183 turns
+
+**Original task:**
+
+```
+#Frankenstein LLM GLM Speedup
+
+Ok, i iidd pay the API for Deepseek and can’t tell why it’s so much faster. Was it you or Deepseek being paid? Did we fix something in here or no? Are we just using Deepseek now? I’m really confused on all this? Why would we even spill over to deepseek? But stall on GLM 5.2 forever. Like would’t we have gone right to th 23
+
+
+Also there is below to loook atYes, GLM-5.2 is the culprit, and no, we do not settle. Here is what the doc you keep citing says, what is live now, and what remains human-gated.
+
+## Why GLM-5.2 is slow (measured, per your doc's method)
+
+30s co
+```
+
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11944, #11945, #12314, #12365, #12366, #12368, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12824, #12872, #12878, #13108, #13202, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1754, #1755, #1779, #178712, #178714, #1798, #1828, #18312, #18326, #18471, #19567, #1986, #1989, #20042, #2063, #2065, #20662, #2073, #2083, #20985, #21038, #2116, #2127, #2138, #2157, #2159, #2168, #21684, #2174, #2185, #2254, #2258, #2298, #2299, #2307, #23169, #2353, #24172, #24217, #25097, #25185, #2537, #25378, #25381, #2546, #25470, #25646, #2583 [superseded], #26908, #26922 [deployed], #26923, #26927 [deployed], #26932 [deployed], #27236, #27249 [executing], #27250, #27259, #27494 [executing], #27508 [executing], #27514 [blocked], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524 [proposed], #27531 [proposed], #27533 [executing], #6826, #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+then 45-min monitoring begins.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787126689836 — GLM ring relaunch blocked on sudo; all prep complete.
+
+Where we left off (verified 2026-08-19 10:33 PT):
+- GLM-5.2 confirmed culprit: 0.55 tok/s/stream decode at 10-11 running (30s counter delta: PREFILL 3586 vs DECODE 6.10 tok/s)
+- Doc confirms max_num_seqs 15→32 is the sanctioned lever (step 4, page 22); safety data measured (KV 37.22 GiB headroom, ~0 capture memory, preemption = latency not crash)
+- Pause file removed (/tmp/glm52_ring_paused deleted on Cato)
+- Watchdog running (PID 184323, glm52_watchdog_worker.sh, 60s checks, 3-failure restart)
+- Launch artifact written (/home/rubenmajor/glm52_launch_20260819_maxseqs32.sh)
+- Config script in place (/tmp/glm52_launch_cfg.sh copied from glm52_launch_cfg_pp6.sh, CFG_MAX_SEQS env-overridable line 63)
+- Supervisor script is a WATCHDOG only — relaunches when API dead >600s, won't proactively restart running ring
+- BLOCKER: ring processes are root-owned (PID 1283394 on Cato), sudo requires password, cannot kill to relaunch
+- WOPR SSH connection refused during escalation probe (transient or routing issue)
+
+Open threads to drive next:
+1. GLM ring relaunch with max_num_seqs=32 — BLOCKED on sudo access to kill root-owned ring. Need Ruben to: (a) provide sudo password/NOPASSWD, (b) kill ring manually `sudo pkill -f "vllm serve.*glm-5.2-15pct"` on all 6 nodes, or (c) approve alternative. Once killed, relaunch all 6 nodes with CFG_MAX_SEQS=32, monitor decode tok/s for 45 min — #27524 [blocked]
+2. Rule-91 steering trim: move 297/315 amendments to case-law files, skeleton to recency position, 200KB tripwire; awaits Ruben review — #27531 [proposed]
+3. Canary quarantine for wedged-but-running engines + stale-healthy decay; executor queue — #27508 [executing]
+4. emsu-codegen 74% empty streams; executor attempt failed, needs manual implementation per rule 267 GATE C — #27514 [blocked]
+5. Cloudflare tunnel-abort classification + originRequest block; folds the 333KB-body 403 bisect; executor queue — #27515 [executing]
+6. Drop-in consolidation (55+ files) + SLO coherence; executor queue — #27494 [executing]
+7. DeepSeek balance top-up — account drained, free spill rung dead until topped up (human-only decision — no idea)
+8. Bug library organization: keyword tagging scan for searchability (user requested parallel work) — not yet started
+
+Reference IDs:
+- Ideas in production this window: #27518 [deployed], #27520 [deployed]
+- Ideas needing manual implementation: #27514 [blocked]
+- Bug library incidents (router-incident ids, NOT idea numbers): 2583 (DeepSeek explainer, matched this task), 1724 (GLM-first forcing interactive onto stalled ring), 2100 (bare-MCP-tag XML wedge), 2524+2525 (steering bloat/disobedience), 2571 (Julia kernel wedge), 1893 (num_workers/redis ruled out)
+- Files touched this window: /tmp/glm52_ring_paused (removed), /home/rubenmajor/glm52_launch_20260819_maxseqs32.sh (created), /tmp/glm52_launch_cfg.sh (created on Cato), HANDOFF_NOTES.md
+- Probes left on WOPR: /tmp/ringrate.sh, /tmp/sem_pc.py, /tmp/xmlmode_probe.py, /tmp/pc_test.py, /tmp/r91p.txt, /tmp/fo.txt
+
+On close, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Signal-file check (rule 119)
+- [x] Prior window: doc read, watchdog verified, launch artifact written, root-owned blocker found
+- [x] Compressed + shipped pickup p
+```
+
+### `1787159982042` — 8/19/2026, 10:41:00 AM PT — 180 turns
+
+**Original task:**
+
+```
+#Argus/Team Hub
+
+Buttons on this page: https://emsuniversity.com/emtskills/routes/team_hub.php 
+
+for weekly view/monthly view, etc... don't seem to work. The instructors also don't seem to be able to pick up shifts anymore either. I have just heard this from Cori. She said this was put into Argus and Jon tried it also but nothing has materialized. Can you fix this end to end?
+```
+
+**Ideas referenced:** #059669, #0891, #166534, #1724, #178716, #18941, #21753, #22276, #25185, #2524, #2525, #2563, #2582, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27601 [proposed], #475569, #5894, #6021, #7223, #92400, #9577
+
+**Last PICKUP PROMPT:**
+
+```
+ Log
+No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787160182000 — Team Hub fixes (weekly/monthly views, shift pickup, Peoria shifts, blank pages).
+
+Where we left off (verified 2026-08-19 10:40 PT):
+- All 6 issues from Cori's list investigated; code fixes deployed
+- Calendar library rewritten to match team_hub.php calling convention
+- Admin role check updated in shift_lifecycle.php
+- shift_migration_helper.php updated to use shift_date instead of DATE(start_time)
+- Missing CSS files created for timeclock/chat pages
+- Session checks updated in team_hub_claim_shift.php and team_hub_shell.php
+- HANDOFF_NOTES.md updated with full details
+
+Open threads to drive next:
+1. #27601 [proposed] — Browser verification of weekly/monthly views + shift pickup flow + SMS login monitoring (follow-up testing task, not code fixes)
+
+Reference IDs:
+- Ideas filed: #27601 [proposed]
+- Files touched: lib/team_hub_calendar.php, lib/shift_migration_helper.php, routes/api/shift_lifecycle.php, api/team_hub_claim_shift.php, includes/team_hub_shell.php, assets/css/cori-sidebar.css, assets/css/team_hub.css
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Read handoff notes for current system state
+- [x] Investigate team_hub.php buttons (weekly/monthly view) issue - FOUND: function signature mismatch
+- [x] Investigate shift pickup functionality issue - FOUND: admin role mismatch in shift_lifecycle.php
+- [x] Read Cori's details from chat thread - FULL LIST RECEIVED (7 issues)
+- [x] Identify root causes - multiple issues identified
+- [x] Implement fixes
+  - [x] Fix calendar library (function signatures + schema) - DEPLOYED
+  - [x] Fix admin role check in shift_lifecycle.php - DEPLOYED
+  - [x] Fix session check in team_hub_claim_shift.php - DEPLOYED
+  - [x] Investigate Peoria AZ shifts missing from daily view - FOUND: DATE(start_time) on TIME column
+  - [x] Fix shift_migration_helper.php query - DEPLOYED
+  - [x] Fix team_hub_shell.php session check - DEPLOYED
+  - [x] Investigate time clock/chat blank pages - FOUND: missing CSS files
+  - [x] Create missing CSS files - DEPLOYED
+  - [x] Investigate SMS/email magic link login issues - phone lookup works
+- [x] Update handoff notes
+- [x] File ideas for open threads - #27601 filed
+- [x] Validate completion - ALL PASSED, GATE CLEAR
+</task_progress>
+</attempt_completion>
+```
+
+### `1787122887382` — 8/19/2026, 10:26:37 AM PT — 467 turns
 
 **Original task:**
 
@@ -177,78 +313,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 ## Key references
 - IDs: #27480 [executing], task 1787123670897
 - Files: ~/Desktop/EMSU_RESPONSE_SAN_MATEO_AUDIT_FINAL_2026-08-19.pdf, /var/www/emtskills/personnel/investigations/san-mateo-202
-```
-
-### `1787138864086` — 8/19/2026, 9:28:07 AM PT — 74 turns
-
-**Original task:**
-
-```
-#Frankenstein LLM GLM Speedup
-
-Ok, i iidd pay the API for Deepseek and can’t tell why it’s so much faster. Was it you or Deepseek being paid? Did we fix something in here or no? Are we just using Deepseek now? I’m really confused on all this? Why would we even spill over to deepseek? But stall on GLM 5.2 forever. Like would’t we have gone right to th 23
-
-
-Also there is below to loook atYes, GLM-5.2 is the culprit, and no, we do not settle. Here is what the doc you keep citing says, what is live now, and what remains human-gated.
-
-## Why GLM-5.2 is slow (measured, per your doc's method)
-
-30s co
-```
-
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11944, #11945, #12314, #12365, #12366, #12368, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12824, #12872, #12878, #13108, #13202, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1754, #1755, #1779, #178712, #178714, #1798, #1828, #18312, #18326, #19567, #1989, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2254, #2258, #2298, #2299, #2307, #23169, #24172, #24217, #25097, #25185, #2537, #25378, #25381, #2546, #25470, #25646, #2583 [superseded], #26908, #26922 [deployed], #26923, #26927 [deployed], #26932 [deployed], #27236, #27249 [executing], #27250, #27259, #27494 [executing], #27508 [executing], #27514 [blocked], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524 [proposed], #27531 [proposed], #27533 [executing], #6826, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
- from the pickup prompt below.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787126689836 — GLM-5.2 ring decode speedup (max_num_seqs 15→32 relaunch).
-
-Where we left off (verified 2026-08-19 09:24 PT):
-- Ruben approved the relaunch: "yes please do it as the document says."
-- Doc = /var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md. Safety sequence: (1) watchdog un-paused FIRST, (2) reproducible launch artifact written, (3) ONE parameter change max_num_seqs 15→32, (4) controlled CONC ladder watching num_preemptions_total.
-- Step 1 in place: watchdog running (PID 1584098 on Cato since Aug 10), sci-notation-corrected awk parser confirmed; as of 09:22 /tmp/glm52_ring_paused EXISTS (verify current state before acting).
-- Step 2 in place: launch artifact /home/rubenmajor/glm52_ring_relaunch_mns32.sh on Cato (chmod +x). Exact cmdline captured from PID 1283394 (root, Aug 05): PP=6, max-num-seqs 15, max-num-batched-tokens 16384, chunked-prefill, port 8210, model GLM-5.2-NVFP4-REAP-504B, VLLM_ENGINE_READY_TIMEOUT_S=1800.
-- Ring topology: rank0 Cato :8210 head; ssh ports 2203(Cesar) 2204(Cato) 2205(Julia) 2206(Claudia) + tiberius via Cesar jump.
-- BLOCKER: vllm ROOT-owned; no passwordless sudo via jump. Use supervisor: /home/rubenmajor/bin/glm52_ring_supervisor.sh (@reboot cron) + glm52_keep_warm.sh (*/2) + /tmp/glm52_ring_supervisor.log. Read FIRST.
-- Lane guard contract: FRANK_GLM_RING_TOTAL=8, FRANK_GLM_OPS_CEILING=4, EMSU_GLM_FLOOR_OFF=1, EMSU_GLM_FIRST_ALL_LANES=0. Re-verify after relaunch.
-- Baseline: DECODE 6.10 tok/s at 10-11 running = 0.55/stream; PREFILL 3586 tok/s. Target: toward 0.99/stream at c=8, watch num_preemptions_total.
-
-Open threads to drive next:
-1. #27524 [executing] — the relaunch itself: read supervisor scripts, stop old ring (rank 0 first), relaunch 6 nodes with max_num_seqs 32, verify /v1/models 200 + decode probe, CONC ladder, lane guard env unchanged.
-2. #27531 [proposed] — rule-91 steering trim awaits Ruben review.
-3. #27508 [executing] — canary quarantine for wedged-but-running engines.
-4. #27514 [blocked] — emsu-codegen 74% empty streams, manual impl per rule 267 GATE C.
-5. #27515 [executing] — Cloudflare tunnel-abort classification.
-6. #27494 [executing] — drop-in consolidation (55+ files).
-7. DeepSeek balance top-up (human-only decision — no idea).
-
-Reference IDs:
-- Ideas filed: #27524 [executing], #27531 [proposed], #27508 [executing], #27514 [blocked], #27515 [executing], #27494 [executing]
-- Prior-window lane-cap and fallback-linter ideas are already live, no action needed
-- Files touched: /home/rubenmajor/glm52_ring_relaunch_mns32.sh (Cato); prior window: frankenstein-tools.service.d drop-ins, frankenstein_tools_adapter.py, _router_core.py, config.yaml, frank_fallback_lint.py
-- Probes on WOPR: /tmp/ringrate.sh, /tmp/sem_pc.py, /tmp/xmlmode_probe.py, /tmp/pc_test.py, /tmp/r91p.txt, /tmp/fo.txt
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-
-# Reversal Log
-No reversals this window.
-</result>
-<task_progress>
-- [x] Signal-file check (rule 119)
-- [x] Read measurement doc, verified watchdog, captured cmdline, wrote launch artifact
-- [x] Discovered root-owned blocker + supervisor mechanism + /tmp/glm52_ring_paused present
-- [x] Compressed per rule 119 at 95% context
-- [x] Validator ALL PASSED + GATE CLEAR
-- [x] attempt_completion with pickup prompt
-</task_progress>
-</attempt_completion>
 ```
 
 ### `1787148101456` — 8/19/2026, 7:01:52 AM PT — 3 turns

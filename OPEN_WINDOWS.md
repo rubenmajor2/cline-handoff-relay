@@ -6,16 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/18/2026, 7:20:33 PM PT | window: last 72h | 87 tasks | index total 821 (parsed 3, cached 818)
+Generated: 8/18/2026, 8:20:34 PM PT | window: last 72h | 87 tasks | index total 821 (parsed 4, cached 817)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787104157061` | 8/18/2026, 7:20:14 PM | 41 | 260KB | #NEW LLMs/ Improvements |
+| `1787104157061` | 8/18/2026, 8:19:36 PM | 220 | 880KB | #NEW LLMs/ Improvements |
+| `1787098931968` | 8/18/2026, 8:19:30 PM | 589 | 1078KB | #Argus |
+| `1787096297068` | 8/18/2026, 8:03:46 PM | 462 | 881KB | #Julia/Claudia |
+| `1786927436741` | 8/18/2026, 8:03:37 PM | 350 | 1019KB | #Student Time Sheet Issue |
 | `1787103874195` | 8/18/2026, 7:10:36 PM | 98 | 455KB | Deepseek v4 Pro just released a 1.6TB version. Can you look into this and tell me if / how |
-| `1787096297068` | 8/18/2026, 7:10:21 PM | 416 | 794KB | #Julia/Claudia |
 | `1787104113431` | 8/18/2026, 6:48:49 PM | 2 | 7KB | Thoughts on this?  |
-| `1787098931968` | 8/18/2026, 6:42:29 PM | 504 | 929KB | #Argus |
-| `1786927436741` | 8/18/2026, 6:28:18 PM | 282 | 917KB | #Student Time Sheet Issue |
 | `1787100985272` | 8/18/2026, 6:07:41 PM | 34 | 315KB | #Frankenstein LLM Misc |
 | `1786989452314` | 8/18/2026, 5:55:33 PM | 360 | 939KB | frankenstein-llm keeps going down as I'm trying to put back up Cicero and Maximus, not sur |
 | `1787096428156` | 8/18/2026, 4:56:26 PM | 174 | 399KB | Getting {"message":"Connection error.","modelId":"glm-5.3","providerId":"zai"} |
@@ -102,7 +102,7 @@ Generated: 8/18/2026, 7:20:33 PM PT | window: last 72h | 87 tasks | index total 
 
 ## Per-window detail
 
-### `1787104157061` — 8/18/2026, 7:20:14 PM PT — 41 turns
+### `1787104157061` — 8/18/2026, 8:19:36 PM PT — 220 turns
 
 **Original task:**
 
@@ -119,15 +119,191 @@ Bold indicates a new or corrected entry.
    1. [Muse Glimmer 30B](https://www.google.com/search?kgmid=FAIL
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326, #25097, #2537, #26908, #26923, #27260 [rejected], #27261 [proposed], #27262 [proposed], #27265 [proposed]
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #13439, #16163, #16265, #16304, #16625, #16646, #16680, #16844, #17246, #18312, #18326, #19585, #25097, #2537, #26908, #26923, #27260 [rejected], #27261 [proposed], #27262 [proposed], #27265 [proposed], #27266 [proposed], #27267 [proposed], #27268 [proposed], #27269 [proposed], #27270 [proposed], #27271 [proposed], #7513, #7554, #9706, #9910
 
 **Last PICKUP PROMPT:**
 
 ```
-ero (Artemis + WOPR untouched) per new steer
-- [ ] Deliver recommendations with PICKUP PROMPT block
+e idea statuses (27271 → executing/deployed)
+- [ ] Deliver end-to-end ship with PICKUP PROMPT block
 </task_progress>
 </use_mcp_tool>
+```
+
+### `1787098931968` — 8/18/2026, 8:19:30 PM PT — 589 turns
+
+**Original task:**
+
+```
+#Argus
+
+Confirm with me then that 1. The executor is still woking; 2. That the  rule 29 trap is resolved;
+
+Explain: impl_failed went __16 → 1__. A forced dispatcher tick immediately spawned a worker for one of the ideas I had released seconds earlier. The single remaining entry, #26827 [blocked], is a genuine LoRA/fleet build failure and is the only member of that set that ever needed a human.
+
+##
+
+Anything else that we need to do to improve Argus? What about Argus Rules? How are those going? Staff woudl like argus to work faster and be more reliable. What can we do on that? 
+
+--
+Per rule 29: 
+```
+
+**Ideas referenced:** #11316, #12246, #12463, #12645, #12688, #128206, #13204, #13329, #137333, #13962, #14947, #16584, #17300, #17537, #17619 [deployed], #178701, #178708, #18032, #18121, #18806, #19348, #2006, #20825, #21134, #22511, #22583, #23428, #23489, #23941, #24663, #24664, #24665, #24666, #24673, #24676, #24678, #24681, #24682, #24685, #24688, #24694, #24696, #24698, #24700, #24702, #24703, #24897, #25185, #25385, #25570 [executing], #25642, #25925, #25926, #25935, #25973, #26085 [approved], #26124 [deployed], #26192 [awaiting_review], #26322 [executing], #26719, #26827 [blocked], #26914 [deployed], #26915 [executing], #26916, #26931 [executing], #27126, #27203 [deployed], #27237 [deployed], #27238 [deployed], #27243 [proposed], #27244 [proposed], #27245 [proposed], #27248 [proposed], #27249, #27250, #27257 [deployed], #27258 [deployed], #27263, #27272, #27273 [deployed]
+
+**Last PICKUP PROMPT:**
+
+```
+he Argus improvement guidance.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787081272363 — Jon's clearance-repair complaint root-caused and fixed; page + cron both live-verified.
+
+Where we left off (verified 2026-08-18 19:49 PT):
+- Jon's "still not actually doing the repairs" = two defects, both fixed (#27273 [deployed]):
+  1. cron_clearance_queue.php auto-resolve blind spot: emsu_skills_query excludes is_duplicate=1, so NREMT-cleared transferred students never resolved. Fixed with a direct stuck-pending resolver (terminal outcome in Students => pending row resolved, idempotent). First run cleared Donna Trinh 26708W-17 (was stuck 6 days despite nremt_cleared_date=8/12) and Oluwadamilola Adeyemi 26509A-03 (stuck ~1 month) at 19:45:31.
+  2. nremt_80_clearance_list.php 500'd since creation (phantom clearance_percent column + numeric-id-to-slug join). Rewritten against real columns; 469 rows render; unauthenticated gets 401 not 500.
+- report_viewer pd_80_percent_students reads the same table and self-corrects.
+- Earlier this session (all at final state): #27243 [deployed] conv-affinity, #27244 [deployed] cache observability, #27245 [deployed] Argus Doctor, #27257 [deployed] lightning mode, #27258 [deployed] rules 315+322.
+
+Open threads to drive next:
+1. #27248 [proposed] — on 2026-08-20, run the 48h latency measurement (avg/p50/p95 vs baseline, distinct backends per conversation_id) and remove the dead cron_argus_doctor.php once the watchdog shows 24h clean.
+2. Confirm with Jon that Donna Trinh and Oluwadamilola Adeyemi now show cleared on his list — one line to him closes the loop on the fatigue. (human-only decision — no idea)
+3. Watch the next hourly clearance cron run: stats should now count auto_resolved when terminal outcomes appear, and no new stuck-pending rows should accumulate. (human-only decision — no idea)
+
+Reference IDs:
+- Ideas at final state this session: #27243 [deployed], #27244 [deployed], #27245 [deployed], #27257 [deployed], #27258 [deployed], #27273 [deployed]
+- Follow-up measurement filed: #27248 [proposed]
+- Prior-session ideas verified: #26931 [deployed], #26322 [deployed], #26827 [deployed], #26124 [deployed], #27237 [deployed], #27238 [deployed]; #25570 [executing] (drafting); #26192 [awaiting_review] (superseded)
+- Files touched: /var/www/emtskills/cron/cron_clearance_queue.php (stuck-pending resolver + stats init), /var/www/emtskills/routes/nremt_80_clearance_list.php (rewritten), /var/www/emtskills/routes/argus_download.php, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/lib/ArgusRuleProfile.php, /var/www/emtskills/lib/ArgusDoctor.php, /var/www/emtskills/cron/cron_argus_doctor_watchdog.php, /etc/cron.d/emsu-argus-doctor-watchdog, /etc/litellm/_router_core.py, admin_portal.argus_round_latency + argus_doctor_health (ALTERs), HANDOFF_NOTES.md
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787096297068` — 8/18/2026, 8:03:46 PM PT — 462 turns
+
+**Original task:**
+
+```
+#Julia/Claudia
+
+Get Julia Claudia 235 back online.
+
+Answer to "when did Julia/Claudia go dark" — bracketed by the live router audit log + a fresh probe, all times PT:
+
+- 12:49 — midday flap window: WOPR-side check found nothing listening on :11513/:11514 (the flap period tracked by #27232 [proposed]).
+- 12:58 — Ruben's "Are you alive" via litellm:julia-235b SERVED (audit 19:58:52Z: picked=julia-235b, no substitution).
+- 13:15 — LAST KNOWN-GOOD serve: "say OK" canary picked julia-235b (20:15:51Z). Zero julia-235b picks in the log after this.
+- 14:49-14:53 — Julia confirmed LAYER-2 dark from 3 v
+```
+
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16717, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #17788, #1779, #1780, #178708, #1798, #1828, #18312, #18326, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038 [executing], #2127, #2168, #22584, #2299, #25097, #25185, #2537, #25378, #25381, #2546, #2550, #2552, #2554, #2570 [deployed], #2571 [deployed], #26471, #26475, #26476, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26923, #27069 [executing], #27128, #27129, #27201, #27232 [proposed], #27236 [proposed], #27249 [executing], #27250 [executing], #366377, #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+t the box; sweep re-run clean)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787081272363 - Julia/Claudia 235B: serving + hardware watchdog ARMED + 667G purged
+
+Where we left off (verified 2026-08-18 20:00 PT):
+- Julia SERVING (verified: :11513 HTTP 200, router picked=julia-235b 02:58:44Z, canary real tokens, fleet healthy); HW WATCHDOG ARMED on GB10 (RuntimeWatchdogUSec=3min — kernel hangs now auto-hard-reset, no physical visit needed)
+- 667G stale GLM-5.2 ring weights purged (verified: disk 26%->7%); box clean: julia_vllm_procs=1, claudia_vllm=[], one ray session, zero docker (sweep log 20:00:19)
+- MDM portal SSH to Julia verified working (PORTAL-SSH-OK via :2205 key auth); Cicero terminal verified; Cicero autorestart set
+- Watchdog chain live: @reboot + ray_head_watchdog + emsu-julia-wedge-watchdog.sh (*/2: RCA-on-return to /var/log/emsu-julia-wedge-rca/, watchdog arm, rogue sweep — false-positive fixed and re-verified) + lane-guard reach alerts #27236 [deployed]
+- julia-235b NO_REROUTE hardpin live (bug library row 2570): by-name requests never silently substituted; cicero-235b fallback is visible-only
+- If the wedge recurs: hardware watchdog should now auto-reset it; if it still needs a cycle, RCA evidence auto-captures on return — check /var/log/emsu-julia-wedge-rca/
+
+Open threads to drive next:
+1. #27069 [executing] — Julia interactive-lane contract guard (running green: interactive=4 batch=3 grand=7/16)
+2. (human-only decision, no idea) Review /var/log/emsu-julia-wedge-rca/rca-20260818-194604.log to classify the recurring hang root cause (thermal/MCE/GPU driver) if you want it beyond the watchdog mitigation
+
+Reference IDs:
+- Ideas filed: #27249 [deployed], #27250 [deployed], #27236 [deployed], #27232 [rejected], #27069 [executing]
+- Files touched: /usr/local/bin/emsu-julia-wedge-watchdog.sh + /etc/cron.d/emsu-julia-wedge-watchdog (new), /etc/litellm/_router_core.py (+ .bak-juliareroute-20260818), /usr/local/bin/emsu-julia-lane-guard.py, /usr/local/bin/emsu-alert.sh, /home/rubenmajor/ray_head_watchdog.sh on Julia, /home/rubenmajor/claudia_head_watchdog.sh on Claudia, Cicero pmset, Julia disk cleanup (667G), HANDOFF_NOTES.md, bug library rows 2570 + 2571
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Julia back online + serving after 2nd power cycle (:11513 HTTP 200, canary real tokens, router picked=julia-235b, fleet healthy)
+- [x] MDM portal SSH to Julia verified working (PORTAL-SSH-OK via :2205 key auth; earlier failures were box-dark, not config)
+- [x] Stale-model cleanup: 667G of old GLM-5.2 ring weights purged with safety proofs (zero engine fds, no NFS, not a ring member); disk 26%→7%
+- [x] Box state clean: exactly ONE vllm serve (Qwen3-235B), claudia raylet-only, one ray session, zero docker (sweep re-verified)
+- [x] Hardware watchdog ARMED on GB10 (RuntimeWatchdogUSec=3min — kernel hangs auto-hard-reset)
+- [x] RCA evidence from prior hang auto-captured to /var/log/emsu-julia-wedge-rca/
+- [x] julia-235b NO_REROUTE hardpin live + verified (bug library 2570); substitution explained (admission fast-fail, not ladder)
+- [x] Cicero durability done (autorestart 1 via sudo -n NOPASSWD); bug library 2571 recorded; rules 315/317 amended; GATE B reconciled; gates passed</task_progress>
+</attempt_completion>
+```
+
+### `1786927436741` — 8/18/2026, 8:03:37 PM PT — 350 turns
+
+**Original task:**
+
+```
+#Student Time Sheet Issue
+
+https://emsuniversity.com/emtskills/admin_profile.php?id=26215W-08 
+
+Student showing Incomplete, 
+
+📊 Externship Hours
+Required Hours	36.0
+Completed Hours	0.0
+Remaining Hours	36.0
+Status	❌ INCOMPLETE
+--
+but has 48 hours of time showing on the Student Time Sheet. Something is wired wrong or the EMT Ai Grader is not functioning properly on these or the Student Portal form for Student Time Sheets is not wired correctly.
+
+--
+Also Jon worked this tirelessly in Argus and needs that repaired for him so he is able to actually make those kinds of repairs.
+```
+
+**Ideas referenced:** #10740, #11565, #2002, #2005, #20555, #21328, #21329, #21330, #21331, #21332, #21333, #21334, #21335, #21336, #21337, #21338, #21339, #21340, #21341, #21342, #21343, #21344, #21345, #21346, #21347, #21463, #22102, #22229, #22252, #22253, #22254, #22255, #22391, #23308, #23428, #23941, #25081, #25238, #25240, #25241, #25242, #25269, #25313, #25314, #25315, #25316 [deployed], #25364 [executing], #26229, #26525 [deployed], #26586 [deployed], #26597 [deployed], #26628, #26719, #26816, #26834 [in_progress], #26835 [proposed], #26867 [deployed], #26877 [approved], #26879 [deployed], #26882, #26898 [proposed], #26899 [proposed], #26900 [proposed], #27251 [proposed], #27252 [proposed], #27253 [proposed], #4863, #495057, #646156, #8151, #8179, #8181, #8182, #8183, #856404, #9168, #9202, #9269, #9457
+
+**Last PICKUP PROMPT:**
+
+```
+s backed up `.bak-20260818-*`.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — externship forms process hardening (verified 2026-08-18 20:02 PT).
+
+Where we left off:
+- #27251 [deployed] total_hours is read-only + auto-computed from datetime pickers, server-side authoritative recompute in studentexternships/fill_form.php. 5/5 controls PASS.
+- #27252 [deployed] ExternshipFormSubmission.shift_dedup_key generated column + UNIQUE INDEX uq_externship_shift_dedup, cutoff 2026-08-18 19:58 so 549 legacy dupes are preserved. 4/4 controls PASS. NOTE: first build failed its own negative control (future cutoff -> NULL key -> no collision); rebuilt and retested.
+- #26900 [deployed] payer-mismatch drill-down in cron_argus_repair_worker routes 3rd-party payers to payment_attribution_queue. Live proof: 26205BC-03 DeJesus $2395 payer Ian Wilson -> queue row 5985; repeat run deduped.
+- Earlier session: 7 grader/calculator defects fixed; grader + calculator share one hour parser; 36h program rule lives only in ExternshipHoursCalculator.
+
+Open threads to drive next:
+1. #27253 [proposed] — Ruben's call. Table is admin_portal.ExternshipFormSubmission: 268 students / 549 duplicate rows (26809A-16 has 50 rows for 3 shifts). Hour credit is ALREADY correct via read-time dedup; this is only about hiding redundant rows from admin views / PDF / Drive. Nothing deleted pending your decision.
+2. #26898 [proposed] — Ruben's call. cron_externship_timesheet_grader.php has never run (no cron entry, no log) and cannot run (ExternshipFormSubmission.form_type MISSING, total_hours MISSING, wrong constructor + wrong determineGrade arity). Recommend ARCHIVE, since cron_externship_autograde.php is the working scheduled grader.
+3. #26899 [proposed] — Ruben's call. cron_p0_externship_moodle_grade_reconcile.php targets db 'moodle' (real: moodle_c_live), joins assign_grades.student_uid + ExternshipFormSubmission.student_uid (both MISSING), maps form ids 134-139 (real: 1-14), and is not scheduled. moodle_grade_raw is NULL on all 22528 rows because nothing ever populated it. Recommend DEPRECATE; a real Moodle sync is a new feature, not a repair.
+
+Reference IDs:
+- Ideas deployed this session: #27251 [deployed], #27252 [deployed], #26900 [deployed]
+- Ideas awaiting Ruben decision: #27253 [proposed], #26898 [proposed], #26899 [proposed]
+- Cases: 26215W-08 (48.0/36.0 COMPLETE), 26809A-16 (600h -> 36.0h, 81 rows retained), 26205BC-03 (attribution queue row 5985)
+- Files touched: studentexternships/fill_form.php, cron/cron_argus_repair_worker.php, lib/ExternshipFormGrader.php, lib/ExternshipHoursCalculator.php, externship/lib/forms.php, externship/includes/student_forms_section.php, ExternshipFormSubmission schema (all +.bak-20260818-*)
+
+When done, append to cline_task_ledger.md per rule 07 and run order 66.
+═══════════════════════════════════════════════
+</result>
+</invoke>
+</attempt_completion>
 ```
 
 ### `1787103874195` — 8/18/2026, 7:10:36 PM PT — 98 turns
@@ -169,66 +345,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1787096297068` — 8/18/2026, 7:10:21 PM PT — 416 turns
-
-**Original task:**
-
-```
-#Julia/Claudia
-
-Get Julia Claudia 235 back online.
-
-Answer to "when did Julia/Claudia go dark" — bracketed by the live router audit log + a fresh probe, all times PT:
-
-- 12:49 — midday flap window: WOPR-side check found nothing listening on :11513/:11514 (the flap period tracked by #27232 [proposed]).
-- 12:58 — Ruben's "Are you alive" via litellm:julia-235b SERVED (audit 19:58:52Z: picked=julia-235b, no substitution).
-- 13:15 — LAST KNOWN-GOOD serve: "say OK" canary picked julia-235b (20:15:51Z). Zero julia-235b picks in the log after this.
-- 14:49-14:53 — Julia confirmed LAYER-2 dark from 3 v
-```
-
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16717, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #17788, #1779, #1780, #178708, #1798, #1828, #18312, #18326, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038 [executing], #2127, #2168, #22584, #2299, #25097, #25185, #2537, #25378, #25381, #2546, #2550, #2552, #2554, #2570 [deployed], #2571 [deployed], #26471, #26475, #26476, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26923, #27069 [executing], #27128, #27129, #27201, #27232 [proposed], #27236 [proposed], #27249 [executing], #27250 [executing], #366377, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-e the initial claim was wrong)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787081272363 - Julia/Claudia 235B: recurring wedge + watchdog chain shipped
-
-Where we left off (verified 2026-08-18 19:08 PT):
-- Julia DARK since ~18:01 PT (recurring kernel wedge, bug library row 2571) — needs another physical power cycle; recovery chain is fully automatic on return: @reboot chain + ray_head_watchdog restore head/engine/tunnels, Claudia head-watchdog v5 rejoins worker, NEW emsu-julia-wedge-watchdog.sh auto-captures prev-boot RCA + auto-arms hardware watchdog if GB10 has /dev/watchdog
-- #27249 [deployed] + #27250 [deployed] hand-shipped: /usr/local/bin/emsu-julia-wedge-watchdog.sh + cron */2 on WOPR (dark alerts fired live at 19:08, RCA-on-return, watchdog arm, rogue-model sweep: >1 vllm on Julia or ANY vllm on Claudia or missing qwen3-235b triggers alert)
-- julia-235b silent-substitution FIXED + live-verified (NO_REROUTE hardpin at _router_core.py:5114, audit admission_no_reroute_hardpin firing; visible cicero-235b fallback only) — bug library row 2570
-- Cicero: autorestart 1 set via sudo -n (NOPASSWD: ALL — no human step needed); battery Mac has no RestartAfterPowerFailure hardware support, sleep=0 + SleepDisabled=1 is the durable protection; MLX 235B serving :11520 HTTP 200
-- The 38 glm-5.2-local reroutes were admission fast-fail SILENT substitution of by-name julia-235b requests, NOT ladder spill (ladder spill is visible in audit; this rewrote data['model'] invisibly)
-- Julia serves: Cline spill rung before 120Bs; frankenstein-llm flagship pool member; frankenstein-tools tool-track rank 20; Argus reaches it only via frankenstein-llm pool health routing
-
-Open threads to drive next:
-1. #27069 [executing] — Julia interactive-lane contract guard (running green: interactive=4 batch=3 grand=7/16)
-
-Reference IDs:
-- Ideas filed: #27249 [deployed], #27250 [deployed], #27236 [deployed], #27232 [rejected], #27069 [executing]
-- Files touched: /usr/local/bin/emsu-julia-wedge-watchdog.sh + /etc/cron.d/emsu-julia-wedge-watchdog (new), /etc/litellm/_router_core.py (+ .bak-juliareroute-20260818), /usr/local/bin/emsu-julia-lane-guard.py, /usr/local/bin/emsu-alert.sh, /home/rubenmajor/ray_head_watchdog.sh on Julia, /home/rubenmajor/claudia_head_watchdog.sh on Claudia, Cicero pmset, HANDOFF_NOTES.md, bug library rows 2570 + 2571
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] MDM portal: Julia + Cicero verified wired in ws_ssh_proxy (julia→:2205, cicero→:2221 key auth live-tested)
-- [x] Cicero durability DONE: sudo -n pmset autorestart 1 set (NOPASSWD: ALL discovered); no human step needed
-- [x] Stale-info resolved: router audit = truth (last serve pre-outage 13:15 PT TODAY; not 8pm last night)
-- [x] Rule 315 amended (HOT = kernel wedge, not power-off); fleet + HANDOFF corrected
-- [x] julia-235b → DeepSeek/GLM substitution fixed + verified live (NO_REROUTE hardpin; 38 silent reroutes explained: admission fast-fail, not ladder spill)
-- [x] Bug library: row 2570 (substitution, resolved) + row 2571 (kernel-wedge pattern, investigating)
-- [x] #27249 + #27250 hand-shipped (wedge watchdog + rogue sweep LIVE, cron */2, dark alert fired live at 19:08) — both stamped deployed
-- [x] GATE B reconciled (27236/27249/27250 deployed, 27232 rejected, 27069 executing) + gates passed + shipped</task_progress>
-</attempt_completion>
-```
-
 ### `1787104113431` — 8/18/2026, 6:48:49 PM PT — 2 turns
 
 **Original task:**
@@ -246,123 +362,6 @@ Bold indicates a new or corrected entry.
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787098931968` — 8/18/2026, 6:42:29 PM PT — 504 turns
-
-**Original task:**
-
-```
-#Argus
-
-Confirm with me then that 1. The executor is still woking; 2. That the  rule 29 trap is resolved;
-
-Explain: impl_failed went __16 → 1__. A forced dispatcher tick immediately spawned a worker for one of the ideas I had released seconds earlier. The single remaining entry, #26827 [blocked], is a genuine LoRA/fleet build failure and is the only member of that set that ever needed a human.
-
-##
-
-Anything else that we need to do to improve Argus? What about Argus Rules? How are those going? Staff woudl like argus to work faster and be more reliable. What can we do on that? 
-
---
-Per rule 29: 
-```
-
-**Ideas referenced:** #11316, #12246, #12463, #12645, #12688, #128206, #13204, #13329, #13962, #14947, #16584, #17300, #17537, #17619 [deployed], #178701, #178708, #18032, #18121, #18806, #19348, #2006, #20825, #21134, #22511, #22583, #23428, #23489, #23941, #24663, #24664, #24665, #24666, #24673, #24676, #24678, #24681, #24682, #24685, #24688, #24694, #24696, #24698, #24700, #24702, #24703, #24897, #25185, #25385, #25570 [executing], #25642, #25925, #25926, #25935, #25973, #26085 [approved], #26124 [deployed], #26192 [awaiting_review], #26322 [executing], #26719, #26827 [blocked], #26914 [deployed], #26915 [executing], #26916, #26931 [executing], #27126, #27203, #27237 [deployed], #27238 [deployed], #27243 [proposed], #27244 [proposed], #27245 [proposed], #27248 [proposed], #27257 [deployed], #27258 [deployed]
-
-**Last PICKUP PROMPT:**
-
-```
-rd is now live on both agents.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787081272363 — Argus follow-ups: backlog numbers explained, rules expanded 9→11, lightning mode live with Cline precedence verified.
-
-Where we left off (verified 2026-08-18 18:41 PT):
-- Backlog numbers: 424/425 = live executor queue (approved/in_progress + idle/awaiting_script_generation + not blocked); 2,707 = ghost drain population (blank status + real patches), falling from 3,457. Both real, different populations.
-- ArgusRuleProfile now 11 rules: added 315 (verify before down) + 322 (name the underlying LLM). Profile 4,915 bytes (verified render), cache rebuilt. #27258 [deployed].
-- Lightning live: 🧠 defaults ON for MasterAdmin/ExecAdmin/ITAdmin; thinking + allowed role routes to glm-5.2-local (verified: HTTP 200 at 18:36 and 18:40 re-probe; glm-5.2-obedient is NOT a real router model — caught by probe). Cline precedence intact via _presence_adjusted_wmax. #27257 [deployed].
-- Earlier this session: conv-affinity + fast-lane + Argus Doctor all at final state — #27243 [deployed], #27244 [deployed], #27245 [deployed].
-
-Open threads to drive next:
-1. #27248 [proposed] — on 2026-08-20, measure the 48h latency effect (avg/p50/p95 vs baseline, distinct backends per conversation_id, cache_read_tokens population) and remove the dead cron_argus_doctor.php once the watchdog shows 24h clean.
-2. Have an Exec/IT Admin load the terminal and see the 🧠 toggle default-on with the GLM lane handling their queries (spot-check one thinking-mode answer shows reasoning). (human-only decision — no idea)
-3. Tell staff the speed changes are in place and to report residual slowness with the conversation_id in hand. (human-only decision — no idea)
-
-Reference IDs:
-- Ideas at final state from this session: #27243 [deployed], #27244 [deployed], #27245 [deployed], #27257 [deployed], #27258 [deployed]
-- Follow-up measurement filed: #27248 [proposed]
-- Prior-session ideas verified: #26931 [deployed], #26322 [deployed], #26827 [deployed], #26124 [deployed], #27237 [deployed], #27238 [deployed]; #25570 [executing] (drafting); #26192 [awaiting_review] (superseded)
-- Files touched: /var/www/emtskills/routes/argus_download.php (thinking default-on), /var/www/emtskills/routes/alltastic_api.php (ARGUS_LIGHTNING_V1 routing), /var/www/emtskills/lib/ArgusRuleProfile.php (rules 315 + 322), /var/www/emtskills/lib/ArgusDoctor.php, /var/www/emtskills/cron/cron_argus_doctor_watchdog.php, /etc/cron.d/emsu-argus-doctor-watchdog, /etc/litellm/_router_core.py (explicit conversation-id preference, backup kept), admin_portal.argus_round_latency + argus_doctor_health (ALTERs), HANDOFF_NOTES.md
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786927436741` — 8/18/2026, 6:28:18 PM PT — 282 turns
-
-**Original task:**
-
-```
-#Student Time Sheet Issue
-
-https://emsuniversity.com/emtskills/admin_profile.php?id=26215W-08 
-
-Student showing Incomplete, 
-
-📊 Externship Hours
-Required Hours	36.0
-Completed Hours	0.0
-Remaining Hours	36.0
-Status	❌ INCOMPLETE
---
-but has 48 hours of time showing on the Student Time Sheet. Something is wired wrong or the EMT Ai Grader is not functioning properly on these or the Student Portal form for Student Time Sheets is not wired correctly.
-
---
-Also Jon worked this tirelessly in Argus and needs that repaired for him so he is able to actually make those kinds of repairs.
-```
-
-**Ideas referenced:** #10740, #11565, #2002, #2005, #20555, #21328, #21329, #21330, #21331, #21332, #21333, #21334, #21335, #21336, #21337, #21338, #21339, #21340, #21341, #21342, #21343, #21344, #21345, #21346, #21347, #21463, #22102, #22229, #22252, #22253, #22254, #22255, #22391, #23308, #23428, #23941, #25081, #25238, #25240, #25241, #25242, #25269, #25313, #25314, #25315, #25316 [deployed], #25364 [executing], #26229, #26525 [deployed], #26586 [deployed], #26597 [deployed], #26628, #26719, #26816, #26834 [in_progress], #26835 [proposed], #26867 [deployed], #26877 [approved], #26879 [deployed], #26882, #26898 [proposed], #26899 [proposed], #26900 [proposed], #27251 [proposed], #27252 [proposed], #27253 [proposed], #4863, #495057, #646156, #8151, #8179, #8181, #8182, #8183, #856404, #9168, #9202, #9269, #9457
-
-**Last PICKUP PROMPT:**
-
-```
- and 28 with corrupted totals.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — externship forms process (student_portal.php?section=forms), verified 2026-08-18 18:27 PT.
-
-Where we left off:
-- Traced the full path: student_portal.php?section=forms -> includes/student_forms_section.php -> studentexternships/fill_form.php -> externship/lib/forms.php::submitForm() -> hourly cron -> ExternshipHoursCalculator.
-- 7 defects fixed total. Grader-side (earlier): undefined fetchMoodleGrade fatal, dead pending_moodle hard-stop, determineGrade missing $submission, unit-suffix parsing. Process-side (this session): per-sheet-vs-cumulative 36h rule, free-text hour corruption, missing submit idempotency.
-- Grader and calculator now SHARE one hour parser (datetime-derived first, H:MM / "Nhr Mmin" fallback). 36h program rule lives in exactly one place: ExternshipHoursCalculator::calculate().
-- Portal now shows credited/required hours, pending-review hours, duplicate notices, and a per-submission Status column.
-- Sweep of all 1044 students with timesheets: absurd totals 28->0, max 242h, 145 correctly INCOMPLETE.
-
-Open threads to drive next:
-1. #27251 [proposed] — Make total_hours a computed read-only field in fill_form.php, auto-derived from the two datetime pickers at submit time, so free-text hour strings stop entering the DB at the source.
-2. #27252 [proposed] — Add DB unique key (form_id, student_id, start_datetime, end_datetime) for timesheet forms so duplicate shifts are structurally impossible, not just blocked by a 5-minute window.
-3. #27253 [proposed] — Decide whether to soft-retire the duplicate submission ROWS already in the table (48 for 26809A-16). Hour credit is already protected by read-time dedup; this is cleanup for admin views/PDF/Drive.
-4. #26898 [proposed] — cron_externship_timesheet_grader.php is broken (selects non-existent ExternshipFormSubmission.form_type, wrong determineGrade signature) and is NOT scheduled. Repair or archive.
-5. #26899 [proposed] — cron_p0_externship_moodle_grade_reconcile.php maps form ids 134-139 but real ids are 1-14; moodle_grade_raw NULL on all rows. Wire a real mapping or deprecate.
-6. #26900 [proposed] — Argus: per-transaction drill-down routing 3rd-party payer mismatches to payment_attribution_queue; surface the 3 newly-wired actions in the visible catalog for Jon.
-
-Reference IDs:
-- Origin student: 26215W-08 (48.0/36.0 COMPLETE), duplicate-shift case: 26809A-16 (600h -> 36.0h)
-- Ideas filed this session: #27251 [proposed], #27252 [proposed], #27253 [proposed]
-- Ideas carried forward: #26898 [proposed], #26899 [proposed], #26900 [proposed]
-- Files touched: lib/ExternshipFormGrader.php, lib/ExternshipHoursCalculator.php, externship/lib/forms.php, externship/includes/student_forms_section.php, cron/cron_argus_repair_worker.php, lib/verify_payment_state_fallback.php, cline_task_ledger.md (all server files have .bak-20260818-* backups)
-
-When done, append to cline_task_ledger.md per rule 07 and run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
 
 ### `1787100985272` — 8/18/2026, 6:07:41 PM PT — 34 turns
 

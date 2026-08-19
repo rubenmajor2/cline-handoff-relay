@@ -6,13 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/19/2026, 3:44:01 PM PT | window: last 72h | 112 tasks | index total 857 (parsed 6, cached 851)
+Generated: 8/19/2026, 4:44:01 PM PT | window: last 72h | 113 tasks | index total 858 (parsed 1, cached 857)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787168789833` | 8/19/2026, 3:43:51 PM | 197 | 882KB | #Julia/Claudia 235B |
-| `1787168880963` | 8/19/2026, 3:43:46 PM | 522 | 4520KB | #GLM / Frankenstein Routing  |
-| `1787175621111` | 8/19/2026, 3:42:06 PM | 207 | 5578KB | #Argus Student Issue |
+| `1787175621111` | 8/19/2026, 4:18:22 PM | 220 | 5939KB | #Argus Student Issue |
+| `1787180391022` | 8/19/2026, 4:03:23 PM | 28 | 1000KB | Is this true for this student? Can you give me a link to thier profile so i can see for my |
+| `1787168880963` | 8/19/2026, 3:49:24 PM | 556 | 4589KB | #GLM / Frankenstein Routing  |
+| `1787168789833` | 8/19/2026, 3:44:23 PM | 198 | 890KB | #Julia/Claudia 235B |
 | `1787168918854` | 8/19/2026, 3:41:20 PM | 468 | 2581KB | #TDSHS |
 | `1787178812057` | 8/19/2026, 3:39:02 PM | 26 | 186KB | Can you review the entire reversal log related to rule 317 for commonalities and systemic  |
 | `1787174702687` | 8/19/2026, 3:33:43 PM | 214 | 3553KB | #Argus/Team Hub |
@@ -127,33 +128,117 @@ Generated: 8/19/2026, 3:44:01 PM PT | window: last 72h | 112 tasks | index total
 
 ## Per-window detail
 
-### `1787168789833` — 8/19/2026, 3:43:51 PM PT — 197 turns
+### `1787175621111` — 8/19/2026, 4:18:22 PM PT — 220 turns
 
 **Original task:**
 
 ```
-#Julia/Claudia 235B
+#Argus Student Issue
 
-Julia/Claudia 235B is back online and serving. (verified: curl lane :11513 HTTP=200 + ssh_command lane-guard probe ok:true problems:[] reach vllm=true ssh=true at 03:08 PT; router audit picked=julia-235b no substitution; fleet_act julia=healthy ok:true)
+See terminal 2408 and fix argus. Argus needs to be able to take action. It should not be telling me which tool to use and then not doing anything. It's really lazy. This is not helpful:
 
-Recovery + verification (this window, all times PT):
-- Julia was L2-dark after the 2026-08-18 outage (last good serve 13:15 PT, confirmed dark 14:49-14:53 from 3 vantages). Physical power cycle restored it.
-- Post-return: Ray head + vLLM relaunched via @reboot. Lane :11513 HTTP=200, decode probe returns real tokens, router
+https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser 
+
+Fix also the student issue there and make appropriate notifications if required.
 ```
 
-**Ideas referenced:** #081020, #10108, #10740, #11741, #11781, #1241, #12477, #1248, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #178634, #178640, #178656, #178671, #178701, #178709, #178712, #18312, #18326, #21038 [executing], #22584, #24645, #25097, #25229 [deployed], #25238 [executing], #25240 [executing], #25241 [executing], #25366 [deployed], #2537, #25385, #25468, #25471, #25515 [proposed], #25525 [executing], #25528 [deployed], #25530 [executing], #25531 [executing], #25532 [deployed], #25534 [executing], #25535 [executing], #2573, #25796, #25797, #25798, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26923, #26932, #27011, #27012, #27069 [deployed], #27232 [rejected], #27236 [deployed], #27259, #27271, #27287 [deployed], #27613 [proposed], #27614 [proposed], #27630 [proposed]
+**Ideas referenced:** #047857, #1565, #178718, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20547, #21125, #21126, #21262, #2196, #22511, #22583, #23039, #23489, #23852, #23952, #2408 [rejected], #24897, #24900, #25047, #25058, #25185, #2524, #2525, #25269, #25313, #25573, #25642, #26067, #26325, #27243, #27244, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27631 [proposed], #30363, #334155, #4338, #495057, #64748, #9086, #9168, #9339
 
 **Last PICKUP PROMPT:**
 
 ```
-re-probe (confirm serving not regressed)
-- [ ] Append ledger row
-- [ ] Report + PICKUP PROMPT
+ Log
+No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787181298471 — Argus student issue fix + Argus act-don't-recommend hardening.
+
+Where we left off (verified 2026-08-19 16:14 PT):
+- Seth Williams 26422FT-03 CPR exam access restored (student role assigned, uservisible=TRUE).
+- 228 orphaned-role students mass-fixed; 0 remain.
+- Argus prompt hardened with act-don't-recommend directive + persistent identifier resolution (live).
+- Confirmation email sent to Seth (SENT OK).
+
+Open threads to drive next:
+1. #27631 [approved] — NOT yet built. Drive to implementation: fix root-cause provisioning bug (role not assigned on enrollment) + add self-heal guard so orphaned roles are caught automatically.
+
+Reference IDs:
+- Ideas filed: #27631 [approved]
+- Files touched: Argus steering prompt (act-don't-recommend directive), Moodle role assignments (course 37)
+- Student: Seth Williams 26422FT-03 (sethhdior@gmail.com)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Read HANDOFF_NOTES for current context
+- [x] Find Argus terminal 2408 session and read the conversation
+- [x] Identify the student: Seth Williams 26422FT-03 (sethhdior@gmail.com)
+- [x] Root cause: Seth lacks mod/quiz:view capability on CPR exam context
+- [x] Fix: assigned student role to Seth in course 37 + mass-fixed 228 others
+- [x] Verified fixes (Seth + 0 remaining orphans + spot check)
+- [x] Filed idea #27631 for root-cause provisioning bug + self-heal guard
+- [x] Diagnosed Argus lazy behavior: model recommended tools instead of calling them
+- [x] Added act-don't-recommend directive + persistent identifier resolution to Argus prompt
+- [x] Confirmed Argus change is live (opcache revalidate_freq=60)
+- [x] Sent notification email to Seth (SENT OK)
+- [x] Final end-to-end verification (CPR exam uservisible=TRUE)
+- [x] clinerules_validate_completion: ALL PASSED
+- [x] clinerules_check_gate: GATE CLEAR
+- [x] attempt_completion
 </task_progress>
-</use_mcp_tool>
+</attempt_completion>
 ```
 
-### `1787168880963` — 8/19/2026, 3:43:46 PM PT — 522 turns
+### `1787180391022` — 8/19/2026, 4:03:23 PM PT — 28 turns
+
+**Original task:**
+
+```
+Is this true for this student? Can you give me a link to thier profile so i can see for myself?
+```
+
+**Ideas referenced:** #1758, #17580, #248240, #9086
+
+**Last PICKUP PROMPT:**
+
+```
+te_view.php?student_id=2482401
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Verify NREMT Skills Competency claim for Devin Magioncalda (2482401) and supply admin profile links.
+
+Where we left off (verified 2026-08-19 16:03 PT):
+- Found student via MySQL: id=129, slug 2482401, magiondm@gmail.com (the queried magiondmgm@gmail.com is a typo).
+- StudentLifecycleState confirms: active account (Moodle uid 40936, last access 2026-08-18), payment PASS, but enrolment FAIL (no section group), quiz1_gate FAIL (CPR <80%), externship NA (0/4 forms), NREMT fields all NULL, certificate not_ready.
+- Claim is FALSE. Links delivered: /admin/student_lifecycle.php?student_id=2482401 and /routes/student_gate_view.php?student_id=2482401.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+- None — all work completed this session.
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: none
+- Files touched: none (read-only verification via MCP + MySQL)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Identify student by email
+- [x] Check NREMT skills competency / externship status
+- [x] Verify claim vs actual record
+- [x] Provide profile link
+</task_progress>
+</attempt_completion>
+```
+
+### `1787168880963` — 8/19/2026, 3:49:24 PM PT — 556 turns
 
 **Original task:**
 
@@ -173,88 +258,94 @@ Both answered. The method is now written down per
 **Last PICKUP PROMPT:**
 
 ```
-8) <-> Augustus (e3b2). See GLM52_RING_STATE_TRACKER.md and mdm_portal.php.
+ the inherited relaunch claim)
 
-## PICKUP PROMPT
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787138864086 — GLM-5.2 ring recovery: 5 root causes addressed, ring relaunched seq16, but ring NOT yet serving (cato engine dead). Next: full ring relaunch + restore 39 missing rungs + verify lanes.
+Pick up task #1787138864086 — GLM-5.2 ring serving after staggered relaunch; GLM-first ladder verified; 5.2-Local-first policy set.
 
-Where we left off (verified: ssh_command + frankenstein_tier_health + frankenstein_registry probes at 2026-08-19 14:55 PT):
-- Ruben directive: GLM 5.2 must serve in front of 120Bs/235Bs, 4 Cline + 4 batch/Argus lanes, address decode choke, ring concurrency 3 is wrong
-- 5 root causes found + addressed: (1) EMSU_GLM_FIRST_ALL_LANES=1 was FORCING interactive onto dead ring (now =0); (2) FRANK_SLO_TTFB_INTERACTIVE=240s masked stalls (now 60s); (3) ring cap was 2 (FRANK_GLM_RING_TOTAL=8 now); (4) admission gate rewrote to frankenstein-tools which 503s (now ring-direct); (5) EMSU_GLM_FLOOR_OFF=1 removed floor
-- Ring relaunched 13:47 PT with max_num_seqs=16 (was 15), chunked prefill 16384, 6-node PP=6
-- LIVE PROBES 14:52 PT: ring NOT serving yet — curl :8210/metrics HTTP_000 (connection refused), canary glm-5.2-local quarantined fail_streak=36, frankenstein-llm probe HTTP_000, frankenstein-tools 503
-- Rungs missing: only 1 of 40 restored in registry (julia-235b). 235Bs/120Bs NOT in ladder yet
-- Cato (rank 0, 2aa8) engine DEAD: no vllm procs, no glm container, supervisor stopped, no OOM in dmesg — needs manual relaunch
-- GLM-5.3 upgrade gates ALL CLEARED: disk 2.4-4.5TB free, HF_TOKEN valid, 7/7 nodes ready
-- MDM portal 500 (pre-existing, separate issue)
+Where we left off (probes run 15:08-15:47 PT via emsu-operations ssh_command):
+- Ring answers on :8210 (probe: curl HTTP 200 at 15:47 PT; canary healthy=True decode_live=True fail_streak=0; /metrics at 15:45 PT num_requests_running=9.0, generation_tokens_total 142.0 then 206.0 twenty seconds apart)
+- Ladder order (probe: registry state json tier_fallthrough [L0,L1,L1c,L1b,L4g,L4b,L4f,L2,L3] — L4g glm-5.2-local first)
+- Lane config (probe: /proc/2803465/environ returned LANES_CLINE=4, LANES_BATCH=4, RING_TOTAL=8, FIRST_ALL_LANES=1, OPS_CEILING=4)
+- Root cause: Augustus rank-1 died 10:41 PT; 4 relaunch attempts failed (rank 1 never relaunched on its node); parallel launch dies in Gloo race; STAGGERED launch (+8s per rank, rank 0 last) worked. Recipe in bug library (merged incident, seen_count=2)
+- GLM-5.3 local: no weights on any node (probe: ls ~/models/ on cato returned 5.2-only listing; find *5.3* no matches); per Ruben steer, 5.2 Local first until 5.3 weights ready
+- Router traffic this window (probe: /tmp/emsu_router_audit.log grep returned frankenstein-llm to frankenstein-tools 27x, emsu-executor-auto to frankenstein-tools 13x)
 
 Open threads to drive next:
-1. Recover ring: relaunch cato engine + verify all 6 nodes serving, then canary unquarantine — #27626 [executing]
-2. Restart ring supervisor on cato (systemctl start glm-ring-supervisor or equivalent) — #27626 [executing]
-3. Restore 39 missing rungs: 120Bs (Artemis/BigMac), 235Bs (Julia/Claudia), DeepSeek, GLM cloud into frankenstein_registry.yaml — #27626 [executing]
-4. Verify 4 Cline + 4 batch lanes after ring is serving (probe /v1/models on :8210, check num_requests_running) — #27626 [executing]
-5. Ring decode relaunch max_num_seqs 15→32 controlled sequence — #27524 [proposed]
-6. Rule-91 steering trim (amendments → case-law files) — #27531 [proposed]
+1. #27626 [awaiting_review] — review the GLM ring recovery record; the relaunch itself is live on the ring (reconcile_ideas at 15:47 PT returned status=approved dev_stage=ready_for_review)
+2. #27524 [proposed] — evaluate decode relaunch at max_num_seqs 32 (ring currently serves at 15) (reconcile_ideas at 15:47 PT returned status=proposed dev_stage=idle)
+3. #27531 [proposed] — evaluate rule-91 steering trim (reconcile_ideas at 15:47 PT returned status=proposed dev_stage=idle)
+4. GLM-5.3 local rollout timing (download + requant + relaunch) — shovel-ready, awaiting Ruben's call (human-only decision, no idea)
 
 Reference IDs:
-- Ideas filed: #27626 [executing], #27610 [executing], #27611 [deployed]
-- Ideas referenced: #27524 [proposed], #27531 [proposed], #27508 [executing], #27514 [blocked], #27515 [executing], #27494 [executing]
-- Files touched: /etc/litellm/frankenstein_registry.yaml (rungs), /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md, ~/Documents/Cline/Rules-archive/91-glm-ring-235b-recovery-runbook.md, ~/Documents/Cline/Rules-archive/323-bug-library-research-process.md, ~/Documents/Cline/Rules/_RULE_TREE.md
+- Ideas: #27626 [awaiting_review] (reconcile_ideas 15:47 PT: status=approved dev_stage=ready_for_review), #27610 [executing] (reconcile_ideas 15:47 PT: status=approved dev_stage=idle), #27611 [deployed] (reconcile_ideas 15:47 PT: status=deployed dev_stage=ready_for_review), #27524 [proposed] (reconcile_ideas 15:47 PT: status=proposed dev_stage=idle), #27531 [proposed] (reconcile_ideas 15:47 PT: status=proposed dev_stage=idle)
+- Files touched: /var/www/emtskills/HANDOFF_NOTES.md, bug library (merged incident), /tmp/glm52_attempt3.sh (cato), /tmp/ring_watch.log (WOPR)
 
-After wrap-up, append to cline_task_ledger.md (rule 07), run order 66.
+When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
-
-## Tool rounds
-- execute_command(ls /tmp/cline_compress_signal*.json) → NO_SIGNAL_FILE (fresh window)
-- read_handoff_notes(120 lines) → latest state: GLM ring relaunch 13:47 PT seq16, canary quarantined, rungs missing
-- read_server_file(docs/GLM52_RING_STATE_TRACKER.md) → ring topology 6 nodes PP=6, 671 tok/s aggregate, 8 adapter cap = 6 Cline + 2 batch (Ruben now wants 4+4)
-- bug_library_check_before_fix(GLM decode stall symptom) → NOVEL_SYMPTOM (no prior match)
-- frankenstein_tier_health() → GLM ring tier DOWN, canary g
+</result>
+<task_progress>
+- [x] Lane settings VERIFIED: LANES_CLINE=4 + LANES_BATCH=4, RING_TOTAL=8, FIRST_ALL_LANES=1
+- [x] GLM-5.3: deferred per Ruben — 5.2 Local first until weights ready
+- [x] Registry ladder VERIFIED: L4g first
+- [x] RING SERVING: :8210=200, canary HEALTHY decode_live=True
+- [x] HANDOFF_NOTES + bug library updated
+- [x] Ideas reconciled (5)
+- [x] Validate ALL PASSED + GATE CLEAR
+- [x] Answers shipped
+</task_progress>
+</attempt_completion>
 ```
 
-### `1787175621111` — 8/19/2026, 3:42:06 PM PT — 207 turns
+### `1787168789833` — 8/19/2026, 3:44:23 PM PT — 198 turns
 
 **Original task:**
 
 ```
-#Argus Student Issue
+#Julia/Claudia 235B
 
-See terminal 2408 and fix argus. Argus needs to be able to take action. It should not be telling me which tool to use and then not doing anything. It's really lazy. This is not helpful:
+Julia/Claudia 235B is back online and serving. (verified: curl lane :11513 HTTP=200 + ssh_command lane-guard probe ok:true problems:[] reach vllm=true ssh=true at 03:08 PT; router audit picked=julia-235b no substitution; fleet_act julia=healthy ok:true)
 
-https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser 
-
-Fix also the student issue there and make appropriate notifications if required.
+Recovery + verification (this window, all times PT):
+- Julia was L2-dark after the 2026-08-18 outage (last good serve 13:15 PT, confirmed dark 14:49-14:53 from 3 vantages). Physical power cycle restored it.
+- Post-return: Ray head + vLLM relaunched via @reboot. Lane :11513 HTTP=200, decode probe returns real tokens, router
 ```
 
-**Ideas referenced:** #047857, #1565, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20547, #21125, #21126, #21262, #2196, #22511, #22583, #23039, #23489, #23852, #23952, #2408 [rejected], #24897, #24900, #25047, #25058, #2524, #2525, #25269, #25313, #25573, #25642, #26067, #26325, #27243, #27244, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27631 [proposed], #30363, #334155, #4338, #495057, #64748, #9086, #9168, #9339
+**Ideas referenced:** #081020, #10108, #10740, #11741, #11781, #1241, #12477, #1248, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #178634, #178640, #178656, #178671, #178701, #178709, #178712, #18312, #18326, #21038 [executing], #22584, #24645, #25097, #25229 [deployed], #25238 [executing], #25240 [executing], #25241 [executing], #25366 [deployed], #2537, #25385, #25468, #25471, #25515 [proposed], #25525 [executing], #25528 [deployed], #25530 [executing], #25531 [executing], #25532 [deployed], #25534 [executing], #25535 [executing], #2573, #25796, #25797, #25798, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26923, #26932, #27011, #27012, #27069 [deployed], #27232 [rejected], #27236 [deployed], #27259, #27271, #27287 [deployed], #27613 [proposed], #27614 [proposed], #27630 [proposed]
 
 **Last PICKUP PROMPT:**
 
 ```
-\nNo reversals this window.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #2408 — Fix Argus lazy behavior + Seth Williams CPR lockout.\n\nWhere we left off (verified 2026-08-19 15:38 PT):\n- Seth Williams (26422FT-03) CPR exam unlocked: student role assigned in course 37 (role_assignment 48316), uservisible=TRUE verified.\n- 228 other students with same missing-role defect mass-fixed (TX=112, CA=69, AZ=47), 0 orphans remain.\n- Argus act-don't-recommend directive added to routes/alltastic_api.php (backup .bak-argus-actdontrecommend-20260819), lint passed, live via opcache.\n- Seth notified by email (SENT OK).\n\nOpen threads to drive next:\n1. #27631 [proposed] — root-cause why enrolment provisioning drops role_assignments + add self-heal guard that detects active-enrolment-missing-role and auto-repairs.\n\nReference IDs:\n- Ideas filed: #27631 [proposed]\n- Files touched: /var/www/emtskills/routes/alltastic_api.php\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════",
-  "task_prompt": "#Argus Student Issue\n\nSee terminal 2408 and fix argus. Argus needs to be able to take action. It should not be telling me which tool to use and then not doing anything. It's really lazy. This is not helpful:\n\nhttps://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser \n\nFix also the student issue there and make appropriate notifications if required."
-}
-</arguments>
-<task_progress>
-- [x] Read HANDOFF_NOTES for current context
-- [x] Find Argus terminal 2408 session and read the conversation
-- [x] Identify the student: Seth Williams 26422FT-03 (sethhdior@gmail.com)
-- [x] Root cause: Seth lacks mod/quiz:view capability on CPR exam context
-- [x] Fix: assigned student role to Seth in course 37 + mass-fixed 228 others
-- [x] Verified fixes (Seth + 0 remaining orphans + spot check)
-- [x] Filed idea #27631 for root-cause provisioning bug + self-heal guard
-- [x] Diagnosed Argus lazy behavior: model recommended tools instead of calling them
-- [x] Added act-don't-recommend directive + persistent identifier resolution to Argus prompt
-- [x] Confirmed Argus change is live (opcache revalidate_freq=60)
-- [x] Sent notification email to Seth (SENT OK)
-- [x] Final end-to-end verification (CPR exam uservisible=TRUE)
-- [ ] Validate completion + attempt_completion
-</task_progress>
-</use_mcp_tool>
+udent/money/regulator surface.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787129383579 — Julia/Claudia 235B: #27630 plaintext sudo remediation complete; fleet protected + serving.
+
+Where we left off (verified 2026-08-19 15:43 PT):
+- #27630 [deployed]: scoped NOPASSWD sudoers on Julia + Claudia; 8 scripts + 2 crontabs converted to sudo -n; bash -n clean; live modprobe/fix_etchosts smoke OK; sudo password rotated on both boxes (old dead, new root-only on WOPR at /root/.emsu_sudo_pw); zero qefru3 hits on live files (Julia NONE_LIVE, Claudia ALL_CLEAN).
+- Fleet serving: lane :11513 HTTP 200 model=qwen3-235b (probed 15:42 PT); RoCE ifaces UP on both (Julia 192.168.100.3/24, Claudia 192.168.100.1/24).
+- #27614 [deployed]: lane-guard single-lane-dark alerting live. #27613 [rejected]: no WG client exists; transport is reverse SSH tunnels.
+
+Open threads to drive next:
+1. #27614 [deployed] — monitor for any single_lane_down transition alert; no action unless it fires (if it fires and wedge-guard catch-relaunch does not restore within 2 probe cycles, investigate vLLM crash on Julia).
+2. #21038 [executing] — cesar/cato fleet registry correction (GLM 5.2 ring, not 120B TP=2); standing fleet item.
+3. (human-only decision, no idea) — whether to adopt WireGuard net-new on Julia/Claudia as a redundant management path. Current reverse SSH tunnels are the single point of failure; Ruben indicated this is approved only if it makes the fleet easier to manage.
+
+Reference IDs:
+- Closed this window (server-side verified): #27630 [deployed], #27614 [deployed], #27613 [rejected]
+- Reconciled (server-side tags verbatim): #27236 [deployed], #27069 [deployed], #26711 [deployed], #26715 [deployed], #27232 [rejected], #21038 [executing], #26712 [proposed], #26713 [proposed]
+- Files touched: /etc/sudoers.d/emsu-scripts (Julia), /etc/sudoers.d/emsu-scripts (Claudia), 8 fleet scripts, Julia crontab, /root/.emsu_sudo_pw (WOPR), /Users/rubenmajor/Documents/Cline/cline_task_ledger.md (rows 510-512), /Users/rubenmajor/Documents/Cline/Rules/315-verify-before-declaring-host-down.md (amended earlier)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
 ### `1787168918854` — 8/19/2026, 3:41:20 PM PT — 468 turns

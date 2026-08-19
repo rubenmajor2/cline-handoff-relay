@@ -6,17 +6,19 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/19/2026, 4:21:48 AM PT | window: last 72h | 106 tasks | index total 845 (parsed 7, cached 838)
+Generated: 8/19/2026, 5:21:48 AM PT | window: last 72h | 108 tasks | index total 847 (parsed 0, cached 847)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787132045559` | 8/19/2026, 4:21:46 AM | 93 | 140KB | Which student submitted the most tickets and what was the reason? |
-| `1787136179379` | 8/19/2026, 4:21:34 AM | 29 | 88KB | if not to 120B then what? |
+| `1787138864086` | 8/19/2026, 4:35:01 AM | 40 | 201KB | #Frankenstein LLM GLM Speedup |
+| `1787138798545` | 8/19/2026, 4:26:38 AM | 1 | 11KB | Ok, i iidd pay the API for Deepseek and can’t tell why it’s so much faster. Was it you or  |
+| `1787132045559` | 8/19/2026, 4:23:45 AM | 104 | 526KB | Which student submitted the most tickets and what was the reason? |
+| `1787134526151` | 8/19/2026, 4:23:40 AM | 44 | 89KB | pelase run the fix avp progrma on my desktop |
+| `1787131087419` | 8/19/2026, 4:23:37 AM | 118 | 187KB | Which student submitted the most tickets and what was the reason? |
+| `1787136179379` | 8/19/2026, 4:23:29 AM | 32 | 109KB | if not to 120B then what? |
+| `1787136150136` | 8/19/2026, 4:23:02 AM | 26 | 51KB | so after 4 then should i spill to 120B? |
+| `1787128400456` | 8/19/2026, 4:22:39 AM | 152 | 250KB | Which student submitted the most tickets and what was the reason? |
 | `1787132220305` | 8/19/2026, 4:21:05 AM | 400 | 6979KB | #Frankenstein LLM Wedge |
-| `1787131087419` | 8/19/2026, 4:19:36 AM | 111 | 168KB | Which student submitted the most tickets and what was the reason? |
-| `1787128400456` | 8/19/2026, 4:17:47 AM | 151 | 248KB | Which student submitted the most tickets and what was the reason? |
-| `1787134526151` | 8/19/2026, 4:17:32 AM | 41 | 66KB | pelase run the fix avp progrma on my desktop |
-| `1787136150136` | 8/19/2026, 4:12:31 AM | 21 | 41KB | so after 4 then should i spill to 120B? |
 | `1787122887382` | 8/19/2026, 3:31:26 AM | 440 | 4077KB | #San Mateo EMSA Complaint |
 | `1787096297068` | 8/19/2026, 3:23:20 AM | 892 | 7996KB | #Julia/Claudia |
 | `1787129383579` | 8/19/2026, 3:20:19 AM | 69 | 212KB | Which student submitted the most tickets and what was the reason? |
@@ -121,7 +123,73 @@ Generated: 8/19/2026, 4:21:48 AM PT | window: last 72h | 106 tasks | index total
 
 ## Per-window detail
 
-### `1787132045559` — 8/19/2026, 4:21:46 AM PT — 93 turns
+### `1787138864086` — 8/19/2026, 4:35:01 AM PT — 40 turns
+
+**Original task:**
+
+```
+#Frankenstein LLM GLM Speedup
+
+Ok, i iidd pay the API for Deepseek and can’t tell why it’s so much faster. Was it you or Deepseek being paid? Did we fix something in here or no? Are we just using Deepseek now? I’m really confused on all this? Why would we even spill over to deepseek? But stall on GLM 5.2 forever. Like would’t we have gone right to th 23
+
+
+Also there is below to loook atYes, GLM-5.2 is the culprit, and no, we do not settle. Here is what the doc you keep citing says, what is live now, and what remains human-gated.
+
+## Why GLM-5.2 is slow (measured, per your doc's method)
+
+30s co
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11944, #12314, #12365, #12366, #12368, #12477, #12584, #12618, #12824, #12872, #12878, #13108, #13202, #13874, #16163, #16265, #16304, #16844, #178712, #178714, #18312, #18326, #25097, #2537, #2583 [superseded], #26908, #26923, #27259, #27494 [executing], #27508 [executing], #27514 [blocked], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524 [proposed], #27531 [proposed], #27533 [executing]
+
+**Last PICKUP PROMPT:**
+
+```
+og
+- No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787140864000 — Frankenstein LLM: why DeepSeek feels faster, GLM stall, and the idle 235B gap.
+
+Where we left off (verified 2026-08-19 04:31 PT):
+- DeepSeek speed = cloud hardware, NOT the payment; paying only made the rung reliable. Balance $498.72 topped-up, is_available=true (verified: emsu-operations ssh_command curl api.deepseek.com/user/balance returned topped_up_balance 498.72). 585 reqs / 43M input tokens yesterday 04:46-22:56 PT (verified: emsu-operations ssh_command mysql query of llm_call_log returned 585 reqs 43009942 in_tok MIN 2026-08-18 04:46:10 MAX 22:56:31); still serving now (verified: emsu-operations ssh_command grep /tmp/emsu_router_audit.log returned picked=deepseek-v4-pro at 2026-08-19T11:28:45Z)
+- Not DeepSeek-only: last 2h mix = gpt-oss-120b 36, frankenstein-tools 19, frankenstein-llm 19, haiku 18, small local 16 (verified: emsu-operations ssh_command mysql SELECT model_used COUNT(*) FROM llm_call_log WHERE ts>NOW()-INTERVAL 2 HOUR returned those counts)
+- GLM ring decode-starved by chunked-prefill: PREFILL 3586 vs DECODE 6.10 tok/s at 10-11 running = 0.55/stream (verified: emsu-operations ssh_command /tmp/ringrate.sh printed DECODE=6.10 PREFILL=3586.33); fix max_num_seqs 15->32 awaits Ruben relaunch approval (#27524 [proposed]); ring now 6 running 0 waiting (verified: emsu-operations ssh_command curl :8210/metrics returned num_requests_running 6.0 num_requests_waiting 0.0)
+- Julia 235B UP (verified: emsu-operations ssh_command curl :11513/v1/models HTTP 200 id qwen3-235b max_model_len 131072) and IN the adapter pool (verified: emsu-operations ssh_command sudo cat /proc/<adapter PID>/environ returned FRANK_TOOLS_UPSTREAMS including http://127.0.0.1:11513) but canary decode_live=false tok_s=0.0 (verified: emsu-operations ssh_command cat /tmp/frankenstein_canary_health.json returned 11513 healthy=true tok_s=0.0 decode_live=false), last hits 237-251s TTFB (verified: emsu-operations ssh_command tail /var/log/emsu-adapter-upstream.log returned ttfb_s 251.847/237.569/238.079 at 04:23 PT) -> adapter skips it, 0 picks in last 2000 audit lines
+- Cicero 235B UP (verified: emsu-operations ssh_command curl :11520/v1/models HTTP 200 cicero-235b-qwen3) but batch-tier L4b by design, not in fast adapter pool
+- Spill ladder (verified: project-frankenstein frankenstein_registry returned registry_readable=true source=registry tier_fallthrough L4g->L4b->L4f->L2->L3): GLM-local -> Cicero -> frankenstein-llm pool -> DeepSeek -> glm-5.2 cloud
+
+Open threads to drive next:
+1. #27533 [executing] — Julia 235B canary decode_live=false / 250s TTFB: diagnose canary timeout vs genuine slowness, get the free 235B serving Cline turns instead of paid DeepSeek spill (efficiency_priority=1 set)
+2. #27524 [proposed] — GLM ring decode relaunch max_num_seqs 15->32, controlled sequence; awaits Ruben approval (human-gated: bad params froze 5/6 nodes before)
+3. #27531 [proposed] — Rule-91 steering trim (297/315 amendments to case-law, skeleton recency, 200KB tripwire); awaits Ruben review (carried from prior window)
+4. #27508 [executing] — Canary quarantine for wedged-but-running engines + stale-healthy decay (carried from prior window)
+5. #27514 [blocked] — emsu-codegen 74% empty streams; executor attempt failed, needs manual impl per rule 267 GATE C (carried from prior window)
+6. #27515 [executing] — Cloudflare tunnel-abort classification + or
+```
+
+### `1787138798545` — 8/19/2026, 4:26:38 AM PT — 1 turns
+
+**Original task:**
+
+```
+Ok, i iidd pay the API for Deepseek and can’t tell why it’s so much faster. Was it you or Deepseek being paid? Did we fix something in here or no? Are we just using Deepseek now? I’m really confused on all this? Why would we even spill over to deepseek? But stall on GLM 5.2 forever. Like would’t we have gone right to th 235B and then 120Bs? I’m confused
+
+Also there is below to loook atYes, GLM-5.2 is the culprit, and no, we do not settle. Here is what the doc you keep citing says, what is live now, and what remains human-gated.
+
+## Why GLM-5.2 is slow (measured, per your doc's method)
+
+30s cou
+```
+
+**Ideas referenced:** #178712, #27494 [executing], #27508 [executing], #27514 [blocked], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524 [proposed], #27531 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787132045559` — 8/19/2026, 4:23:45 AM PT — 104 turns
 
 **Original task:**
 
@@ -129,121 +197,39 @@ Generated: 8/19/2026, 4:21:48 AM PT | window: last 72h | 106 tasks | index total
 Which student submitted the most tickets and what was the reason?
 ```
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787136179379` — 8/19/2026, 4:21:34 AM PT — 29 turns
-
-**Original task:**
-
-```
-if not to 120B then what?
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326, #25097, #2537, #26908, #26923, #27259
+**Ideas referenced:** #664566, #664773, #664958
 
 **Last PICKUP PROMPT:**
 
 ```
-l is unavailable or overloaded.
+e handoff/status-check noise).
+
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task # <task_id> — answer fallback model hierarchy.
-(If the task ID is unknown, omit the # and just name the topic.)
+Pick up task: "Which student submitted the most tickets and what was the reason?" (answered)
 
-Where we left off (verified 2026‑08‑19 03:48 PT):
-- No files created or modified.
+Where we left off (verified 2026-08-19 2:23 AM PT):
+- Answer: Alexander Wong, student_id `26617FT-19` (alexandertwong@gmail.com), 54 tickets.
+- Reason: 42 "Chat handoff went unanswered" + 6 "Chat status check" = 48 auto chat-handoff noise tickets; 3 Quiz Submission Error, 1 NREMT verification, 1 "Update my Student Portal", 1 California EMT unanswered handoff.
+- Data source: MySQL `tickets` table (probed live via INFORMATION_SCHEMA + DESCRIBE + GROUP BY queries).
 
 Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. (none)
+1. None — all work completed this session. No idea was filed because no follow-up work was requested and unblocked work was not deferred.
 
 Reference IDs:
-- Files touched: none
+- Ticket: N/A (investigation only)
+- Ideas filed: None
+- Files touched: None (read-only MySQL queries)
+- Tables probed: INFORMATION_SCHEMA.COLUMNS, tickets
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
 
-### `1787132220305` — 8/19/2026, 4:21:05 AM PT — 400 turns
-
-**Original task:**
-
-```
-#Frankenstein LLM Wedge
-
-Wedge is still occuring. I'm not sure why other window calls task completion. Numereous issues still in cline with it (See stalling windows / just opened and tool spillage, slow bad, not good). 
-
-Do NOT inject anthropic
-
---
-frankenstein-llm wedge resolved after three stacked root causes, each found and corrected in-window (01:09-02:27 PT).
-
-ROUND 1 (01:34 PT) — SLO drift: FRANK_SLO_TTFB_INTERACTIVE had drifted 30→180→240s across three competing systemd drop-ins, so interactive turns queued 169-270s behind batch 'within SLO' and never spilled. The winning drop-in was ed
-```
-
-**Ideas referenced:** #11397, #11953, #11991, #12251, #12269, #12368, #12463, #12584, #13108, #13470, #13831, #13842, #13874, #16590, #16625, #1724 [deployed], #1754, #1755, #178712, #1893 [deployed], #19338, #1989, #19903, #2050, #2100 [deployed], #2254, #2258, #2307, #23169, #24172, #24217, #25171, #25185, #2524 [deployed], #2525 [deployed], #25468, #25471, #2571 [deployed], #25755, #25764, #2579, #2582 [deployed], #26400, #26503, #26773, #26774, #26932, #27447 [deployed], #27494 [executing], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [executing], #27520 [deployed], #27524 [proposed], #27531 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787131087419` — 8/19/2026, 4:19:36 AM PT — 111 turns
-
-**Original task:**
-
-```
-Which student submitted the most tickets and what was the reason?
-```
-
-**Ideas referenced:** #100001, #123456
-
-**Last PICKUP PROMPT:**
-
-```
-nt
-</task_progress>
-═══════════════════════════════════════════════════════════
-PICKUP PROMPT
-═══════════════════════════════════════════════════════════
-Pick up task #123456 — Provide the 7th highest ticket count. (Verified 2026‑08‑19 04:08 PT)
-
-Where we left off (verified 2026‑08‑19 04:08 PT):
-- Queried tickets table to obtain the student with the 7th highest ticket total.
-- Determined the count is 38 tickets.
-
-Open threads to drive next (none):
-- None
-
-Reference IDs:
-- MySQL query: SELECT student_id, COUNT(*) AS ticket_count FROM tickets GROUP BY student_id ORDER BY ticket_count DESC LIMIT 6,1;
-- MySQL query: SELECT student_id, COUNT(*) AS ticket_count FROM tickets GROUP BY student_id ORDERNot a task completion.
-```
-
-### `1787128400456` — 8/19/2026, 4:17:47 AM PT — 151 turns
-
-**Original task:**
-
-```
-Which student submitted the most tickets and what was the reason?
-```
-
-**Last PICKUP PROMPT:**
-
-```
-progress>
-</attempt_completion>
-═══════════════════════════════════════════════
-PICKUP PROMPT
-════════════════════════════════════════───────
-Pick up task — Identify student with most tickets and reason
-Where we left off (verified 2026‑08‑19 04:14 PT):
-- Completed query to list top students
-- Completed query to find most common ticket title for student 26617FT‑19
-Open threads to drive next (none)
-Reference IDs:
-- MySQL MCP queries on the tickets table
-════════════════════════════════════════───────
-```
-
-### `1787134526151` — 8/19/2026, 4:17:32 AM PT — 41 turns
+### `1787134526151` — 8/19/2026, 4:23:40 AM PT — 44 turns
 
 **Original task:**
 
@@ -261,18 +247,102 @@ progress>
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #123456 — Run fix‑avp program on Desktop.
-Where we left off (verified 2026-08-19 04:08:25 PT):
-- Attempted to execute the fix‑avp script; it timed out awaiting sudo password.
+Pick up task — Count calls + emails and determine resolution for an as-yet-unidentified person.
+Where we left off (verified 2026-08-19 04:22:47 PT):
+- AVP fix script is written to /Users/rubenmajor/Desktop/fix-avp.sh but blocked on sudo for AWDL/service reset.
+- User asked for call count, email count, and resolution status of "the person," but no person was named. Search "AVP" only surfaced Andrea Villarreal via substring ("avprincess12"), not a confirmed subject.
 Open threads to drive next:
-- #789012 [awaiting_review] — User to provide sudo credentials or run script manually.
+1. (human-only decision, no idea) — User must name the person (name / student ID / email / ticket number) before call+email counts can be computed.
 Reference IDs:
 - Ticket: (none)
-- Ideas filed: #789012 [awaiting_review]
-- Files touched: /Users/rubenmajor/Desktop/fix-avp.sh (updated)
+- Ideas filed: (none)
+- Files touched: /Users/rubenmajor/Desktop/fix-avp.sh
+═══════════════════════════════════════════════
 ```
 
-### `1787136150136` — 8/19/2026, 4:12:31 AM PT — 21 turns
+### `1787131087419` — 8/19/2026, 4:23:37 AM PT — 118 turns
+
+**Original task:**
+
+```
+Which student submitted the most tickets and what was the reason?
+```
+
+**Ideas referenced:** #100001, #123456
+
+**Last PICKUP PROMPT:**
+
+```
+is 26617FT-19 with 54 tickets.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #123456 - ticket volume ranking
+
+Where we left off (verified 2026-08-19 04:23 PT):
+- Queried tickets table grouped by student_id ordered by count DESC (MySQL MCP).
+- Top student: 26617FT-19 with 54 tickets.
+- Next rank after top: blank student ID with 93 tickets.
+- 7th position: 26617FT-30 and 26218A-03 tied at 38 tickets.
+
+Open threads to drive next:
+1. None - all work completed this session (read-only SQL analysis, no follow-up required).
+
+Reference IDs:
+- Ideas filed: none
+- Files touched: none
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Identify student with most tickets (26617FT-19, 54)
+- [x] Determine next ticket count after top (93)
+- [x] Determine 7th highest ticket count (38)
+</task_progress>
+</attempt_completion>
+```
+
+### `1787136179379` — 8/19/2026, 4:23:29 AM PT — 32 turns
+
+**Original task:**
+
+```
+if not to 120B then what?
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326, #25097, #2537, #26908, #26923, #27259
+
+**Last PICKUP PROMPT:**
+
+```
+ and I'll build and run it now.
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — replace decorative model "ranking" with a real W/T bake-off comparison.
+
+Where we left off (verified 2026-08-19 04:22 PT):
+- Registry probe confirmed: only measured quality comparison is Cicero-235B W/T (06-15): Sonnet 95%, Opus 100%, own 70B 60%.
+- tool_rank / tool_reliability are static config, not measurements — my prior "verdict" leaned on them incorrectly.
+
+Open threads to drive next:
+1. (human-only decision, no idea) — Build and run a W/T double-judge bake-off across GLM-5.2-Local, Julia-235B, Cicero-235B, Artemis-120B on the EMSU email/SMS domain. Awaiting go-ahead from Ruben.
+
+Reference IDs:
+- Registry file probed: /etc/litellm/frankenstein_registry.yaml
+- Files touched: none
+- Ideas filed: none
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787136150136` — 8/19/2026, 4:23:02 AM PT — 26 turns
 
 **Original task:**
 
@@ -305,6 +375,60 @@ Reference IDs:
 </result>
 </attempt_completion>
 ```
+
+### `1787128400456` — 8/19/2026, 4:22:39 AM PT — 152 turns
+
+**Original task:**
+
+```
+Which student submitted the most tickets and what was the reason?
+```
+
+**Last PICKUP PROMPT:**
+
+```
+lex Wong on EMS University.”**
+
+═══════════════════════════════════════════════
+PICKUP PROMPT
+═══════════════════════════════════════════════
+Pick up task — Identify student with most tickets and reason.
+
+Where we left off (verified 2026‑08‑19 04:17 PT):
+- Queried the `tickets` table (MySQL) and counted tickets per `student_id`.
+- Identified student 26617FT‑19 as the top submitter with 54 tickets.
+- Grouped by `title` for that student; the most frequent title was "Chat handoff went unanswered: Alex Wong on EMS University".
+
+Open threads to drive next:
+- None — all work completed this session.
+
+Reference IDs:
+- MySQL `tickets` table descriptions and query results.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787132220305` — 8/19/2026, 4:21:05 AM PT — 400 turns
+
+**Original task:**
+
+```
+#Frankenstein LLM Wedge
+
+Wedge is still occuring. I'm not sure why other window calls task completion. Numereous issues still in cline with it (See stalling windows / just opened and tool spillage, slow bad, not good). 
+
+Do NOT inject anthropic
+
+--
+frankenstein-llm wedge resolved after three stacked root causes, each found and corrected in-window (01:09-02:27 PT).
+
+ROUND 1 (01:34 PT) — SLO drift: FRANK_SLO_TTFB_INTERACTIVE had drifted 30→180→240s across three competing systemd drop-ins, so interactive turns queued 169-270s behind batch 'within SLO' and never spilled. The winning drop-in was ed
+```
+
+**Ideas referenced:** #11397, #11953, #11991, #12251, #12269, #12368, #12463, #12584, #13108, #13470, #13831, #13842, #13874, #16590, #16625, #1724 [deployed], #1754, #1755, #178712, #1893 [deployed], #19338, #1989, #19903, #2050, #2100 [deployed], #2254, #2258, #2307, #23169, #24172, #24217, #25171, #25185, #2524 [deployed], #2525 [deployed], #25468, #25471, #2571 [deployed], #25755, #25764, #2579, #2582 [deployed], #26400, #26503, #26773, #26774, #26932, #27447 [deployed], #27494 [executing], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [executing], #27520 [deployed], #27524 [proposed], #27531 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787122887382` — 8/19/2026, 3:31:26 AM PT — 440 turns
 

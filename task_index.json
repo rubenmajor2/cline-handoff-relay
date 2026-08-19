@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-19T11:21:48.400Z",
+ "generated_at": "2026-08-19T12:21:48.707Z",
  "counts": {
-  "parsed": 7,
-  "reused": 838,
+  "parsed": 0,
+  "reused": 847,
   "failed": 0,
-  "total": 845
+  "total": 847
  },
  "tasks": {
   "1784522296714": {
@@ -136106,13 +136106,13 @@
   },
   "1787128400456": {
    "task_id": "1787128400456",
-   "mtime": 1787138267029,
+   "mtime": 1787138559754,
    "created_at": "2026-08-19T08:33:20.456Z",
-   "last_modified": "2026-08-19T11:17:47.029Z",
-   "size_kb": 248,
-   "turn_count": 151,
+   "last_modified": "2026-08-19T11:22:39.754Z",
+   "size_kb": 250,
+   "turn_count": 152,
    "title": "Which student submitted the most tickets and what was the reason?",
-   "pickup_prompt": "progress>\n</attempt_completion>\n═══════════════════════════════════════════════\nPICKUP PROMPT\n════════════════════════════════════════───────\nPick up task — Identify student with most tickets and reason\nWhere we left off (verified 2026‑08‑19 04:14 PT):\n- Completed query to list top students\n- Completed query to find most common ticket title for student 26617FT‑19\nOpen threads to drive next (none)\nReference IDs:\n- MySQL MCP queries on the tickets table\n════════════════════════════════════════───────",
+   "pickup_prompt": "lex Wong on EMS University.”**\n\n═══════════════════════════════════════════════\nPICKUP PROMPT\n═══════════════════════════════════════════════\nPick up task — Identify student with most tickets and reason.\n\nWhere we left off (verified 2026‑08‑19 04:17 PT):\n- Queried the `tickets` table (MySQL) and counted tickets per `student_id`.\n- Identified student 26617FT‑19 as the top submitter with 54 tickets.\n- Grouped by `title` for that student; the most frequent title was \"Chat handoff went unanswered: Alex Wong on EMS University\".\n\nOpen threads to drive next:\n- None — all work completed this session.\n\nReference IDs:\n- MySQL `tickets` table descriptions and query results.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {}
   },
   "1787129383579": {
@@ -136131,13 +136131,13 @@
   },
   "1787131087419": {
    "task_id": "1787131087419",
-   "mtime": 1787138376750,
+   "mtime": 1787138617905,
    "created_at": "2026-08-19T09:18:07.419Z",
-   "last_modified": "2026-08-19T11:19:36.750Z",
-   "size_kb": 168,
-   "turn_count": 111,
+   "last_modified": "2026-08-19T11:23:37.905Z",
+   "size_kb": 187,
+   "turn_count": 118,
    "title": "Which student submitted the most tickets and what was the reason?",
-   "pickup_prompt": "nt\n</task_progress>\n═══════════════════════════════════════════════════════════\nPICKUP PROMPT\n═══════════════════════════════════════════════════════════\nPick up task #123456 — Provide the 7th highest ticket count. (Verified 2026‑08‑19 04:08 PT)\n\nWhere we left off (verified 2026‑08‑19 04:08 PT):\n- Queried tickets table to obtain the student with the 7th highest ticket total.\n- Determined the count is 38 tickets.\n\nOpen threads to drive next (none):\n- None\n\nReference IDs:\n- MySQL query: SELECT student_id, COUNT(*) AS ticket_count FROM tickets GROUP BY student_id ORDER BY ticket_count DESC LIMIT 6,1;\n- MySQL query: SELECT student_id, COUNT(*) AS ticket_count FROM tickets GROUP BY student_id ORDERNot a task completion.",
+   "pickup_prompt": "is 26617FT-19 with 54 tickets.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #123456 - ticket volume ranking\n\nWhere we left off (verified 2026-08-19 04:23 PT):\n- Queried tickets table grouped by student_id ordered by count DESC (MySQL MCP).\n- Top student: 26617FT-19 with 54 tickets.\n- Next rank after top: blank student ID with 93 tickets.\n- 7th position: 26617FT-30 and 26218A-03 tied at 38 tickets.\n\nOpen threads to drive next:\n1. None - all work completed this session (read-only SQL analysis, no follow-up required).\n\nReference IDs:\n- Ideas filed: none\n- Files touched: none\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] Identify student with most tickets (26617FT-19, 54)\n- [x] Determine next ticket count after top (93)\n- [x] Determine 7th highest ticket count (38)\n</task_progress>\n</attempt_completion>",
    "ideas": {
     "100001": null,
     "123456": null
@@ -136145,14 +136145,18 @@
   },
   "1787132045559": {
    "task_id": "1787132045559",
-   "mtime": 1787138506000,
+   "mtime": 1787138625472,
    "created_at": "2026-08-19T09:34:05.559Z",
-   "last_modified": "2026-08-19T11:21:46.000Z",
-   "size_kb": 140,
-   "turn_count": 93,
+   "last_modified": "2026-08-19T11:23:45.472Z",
+   "size_kb": 526,
+   "turn_count": 104,
    "title": "Which student submitted the most tickets and what was the reason?",
-   "pickup_prompt": null,
-   "ideas": {}
+   "pickup_prompt": "e handoff/status-check noise).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task: \"Which student submitted the most tickets and what was the reason?\" (answered)\n\nWhere we left off (verified 2026-08-19 2:23 AM PT):\n- Answer: Alexander Wong, student_id `26617FT-19` (alexandertwong@gmail.com), 54 tickets.\n- Reason: 42 \"Chat handoff went unanswered\" + 6 \"Chat status check\" = 48 auto chat-handoff noise tickets; 3 Quiz Submission Error, 1 NREMT verification, 1 \"Update my Student Portal\", 1 California EMT unanswered handoff.\n- Data source: MySQL `tickets` table (probed live via INFORMATION_SCHEMA + DESCRIBE + GROUP BY queries).\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. None — all work completed this session. No idea was filed because no follow-up work was requested and unblocked work was not deferred.\n\nReference IDs:\n- Ticket: N/A (investigation only)\n- Ideas filed: None\n- Files touched: None (read-only MySQL queries)\n- Tables probed: INFORMATION_SCHEMA.COLUMNS, tickets\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "ideas": {
+    "664566": null,
+    "664773": null,
+    "664958": null
+   }
   },
   "1787132186331": {
    "task_id": "1787132186331",
@@ -136240,13 +136244,13 @@
   },
   "1787134526151": {
    "task_id": "1787134526151",
-   "mtime": 1787138252193,
+   "mtime": 1787138620933,
    "created_at": "2026-08-19T10:15:26.151Z",
-   "last_modified": "2026-08-19T11:17:32.193Z",
-   "size_kb": 66,
-   "turn_count": 41,
+   "last_modified": "2026-08-19T11:23:40.933Z",
+   "size_kb": 89,
+   "turn_count": 44,
    "title": "pelase run the fix avp progrma on my desktop",
-   "pickup_prompt": "progress>\n</attempt_completion>\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #123456 — Run fix‑avp program on Desktop.\nWhere we left off (verified 2026-08-19 04:08:25 PT):\n- Attempted to execute the fix‑avp script; it timed out awaiting sudo password.\nOpen threads to drive next:\n- #789012 [awaiting_review] — User to provide sudo credentials or run script manually.\nReference IDs:\n- Ticket: (none)\n- Ideas filed: #789012 [awaiting_review]\n- Files touched: /Users/rubenmajor/Desktop/fix-avp.sh (updated)",
+   "pickup_prompt": "progress>\n</attempt_completion>\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Count calls + emails and determine resolution for an as-yet-unidentified person.\nWhere we left off (verified 2026-08-19 04:22:47 PT):\n- AVP fix script is written to /Users/rubenmajor/Desktop/fix-avp.sh but blocked on sudo for AWDL/service reset.\n- User asked for call count, email count, and resolution status of \"the person,\" but no person was named. Search \"AVP\" only surfaced Andrea Villarreal via substring (\"avprincess12\"), not a confirmed subject.\nOpen threads to drive next:\n1. (human-only decision, no idea) — User must name the person (name / student ID / email / ticket number) before call+email counts can be computed.\nReference IDs:\n- Ticket: (none)\n- Ideas filed: (none)\n- Files touched: /Users/rubenmajor/Desktop/fix-avp.sh\n═══════════════════════════════════════════════",
    "ideas": {
     "27293": null,
     "27294": null,
@@ -136257,11 +136261,11 @@
   },
   "1787136150136": {
    "task_id": "1787136150136",
-   "mtime": 1787137951231,
+   "mtime": 1787138582579,
    "created_at": "2026-08-19T10:42:30.136Z",
-   "last_modified": "2026-08-19T11:12:31.231Z",
-   "size_kb": 41,
-   "turn_count": 21,
+   "last_modified": "2026-08-19T11:23:02.579Z",
+   "size_kb": 51,
+   "turn_count": 26,
    "title": "so after 4 then should i spill to 120B?",
    "pickup_prompt": "ing Tier 4 for normal traffic.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Spill ladder clarification.\nWhere we left off (verified 2026‑08‑19 03:58 PT):\n- No files touched.\n- No open tickets or ideas.\n\nOpen threads to drive next (None — all work completed this session.)\n\nReference IDs:\n- Ticket: none\n- Ideas filed: none\n- Files touched: none\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
@@ -136270,13 +136274,13 @@
   },
   "1787136179379": {
    "task_id": "1787136179379",
-   "mtime": 1787138494548,
+   "mtime": 1787138609567,
    "created_at": "2026-08-19T10:42:59.379Z",
-   "last_modified": "2026-08-19T11:21:34.548Z",
-   "size_kb": 88,
-   "turn_count": 29,
+   "last_modified": "2026-08-19T11:23:29.567Z",
+   "size_kb": 109,
+   "turn_count": 32,
    "title": "if not to 120B then what?",
-   "pickup_prompt": "l is unavailable or overloaded.\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task # <task_id> — answer fallback model hierarchy.\n(If the task ID is unknown, omit the # and just name the topic.)\n\nWhere we left off (verified 2026‑08‑19 03:48 PT):\n- No files created or modified.\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. (none)\n\nReference IDs:\n- Files touched: none\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": " and I'll build and run it now.\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — replace decorative model \"ranking\" with a real W/T bake-off comparison.\n\nWhere we left off (verified 2026-08-19 04:22 PT):\n- Registry probe confirmed: only measured quality comparison is Cicero-235B W/T (06-15): Sonnet 95%, Opus 100%, own 70B 60%.\n- tool_rank / tool_reliability are static config, not measurements — my prior \"verdict\" leaned on them incorrectly.\n\nOpen threads to drive next:\n1. (human-only decision, no idea) — Build and run a W/T double-judge bake-off across GLM-5.2-Local, Julia-235B, Cicero-235B, Artemis-120B on the EMSU email/SMS domain. Awaiting go-ahead from Ruben.\n\nReference IDs:\n- Registry file probed: /etc/litellm/frankenstein_registry.yaml\n- Files touched: none\n- Ideas filed: none\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "2537": null,
     "10108": null,
@@ -136299,6 +136303,80 @@
     "26908": null,
     "26923": null,
     "27259": null
+   }
+  },
+  "1787138798545": {
+   "task_id": "1787138798545",
+   "mtime": 1787138798819,
+   "created_at": "2026-08-19T11:26:38.545Z",
+   "last_modified": "2026-08-19T11:26:38.819Z",
+   "size_kb": 11,
+   "turn_count": 1,
+   "title": "Ok, i iidd pay the API for Deepseek and can’t tell why it’s so much faster. Was it you or Deepseek being paid? Did we fix something in here or no? Are we just using Deepseek now? I’m really confused on all this? Why would we even spill over to deepseek? But stall on GLM 5.2 forever. Like would’t we have gone right to th 235B and then 120Bs? I’m confused\n\nAlso there is below to loook atYes, GLM-5.2 is the culprit, and no, we do not settle. Here is what the doc you keep citing says, what is live now, and what remains human-gated.\n\n## Why GLM-5.2 is slow (measured, per your doc's method)\n\n30s counter delta on `:8210/metrics` at 03:39 PT: PREFILL 3586.33 tok/s, DECODE 6.10 tok/s, running 10→11, ",
+   "pickup_prompt": null,
+   "ideas": {
+    "27494": "executing",
+    "27508": "executing",
+    "27514": "blocked",
+    "27515": "executing",
+    "27518": "deployed",
+    "27520": "deployed",
+    "27524": "proposed",
+    "27531": "proposed",
+    "178712": null
+   }
+  },
+  "1787138864086": {
+   "task_id": "1787138864086",
+   "mtime": 1787139301846,
+   "created_at": "2026-08-19T11:27:44.086Z",
+   "last_modified": "2026-08-19T11:35:01.846Z",
+   "size_kb": 201,
+   "turn_count": 40,
+   "title": "#Frankenstein LLM GLM Speedup\n\nOk, i iidd pay the API for Deepseek and can’t tell why it’s so much faster. Was it you or Deepseek being paid? Did we fix something in here or no? Are we just using Deepseek now? I’m really confused on all this? Why would we even spill over to deepseek? But stall on GLM 5.2 forever. Like would’t we have gone right to th 23\n\n\nAlso there is below to loook atYes, GLM-5.2 is the culprit, and no, we do not settle. Here is what the doc you keep citing says, what is live now, and what remains human-gated.\n\n## Why GLM-5.2 is slow (measured, per your doc's method)\n\n30s counter delta on `:8210/metrics` at 03:39 PT: PREFILL 3586.33 tok/s, DECODE 6.10 tok/s, running 10→11,",
+   "pickup_prompt": "og\n- No reversals this window.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787140864000 — Frankenstein LLM: why DeepSeek feels faster, GLM stall, and the idle 235B gap.\n\nWhere we left off (verified 2026-08-19 04:31 PT):\n- DeepSeek speed = cloud hardware, NOT the payment; paying only made the rung reliable. Balance $498.72 topped-up, is_available=true (verified: emsu-operations ssh_command curl api.deepseek.com/user/balance returned topped_up_balance 498.72). 585 reqs / 43M input tokens yesterday 04:46-22:56 PT (verified: emsu-operations ssh_command mysql query of llm_call_log returned 585 reqs 43009942 in_tok MIN 2026-08-18 04:46:10 MAX 22:56:31); still serving now (verified: emsu-operations ssh_command grep /tmp/emsu_router_audit.log returned picked=deepseek-v4-pro at 2026-08-19T11:28:45Z)\n- Not DeepSeek-only: last 2h mix = gpt-oss-120b 36, frankenstein-tools 19, frankenstein-llm 19, haiku 18, small local 16 (verified: emsu-operations ssh_command mysql SELECT model_used COUNT(*) FROM llm_call_log WHERE ts>NOW()-INTERVAL 2 HOUR returned those counts)\n- GLM ring decode-starved by chunked-prefill: PREFILL 3586 vs DECODE 6.10 tok/s at 10-11 running = 0.55/stream (verified: emsu-operations ssh_command /tmp/ringrate.sh printed DECODE=6.10 PREFILL=3586.33); fix max_num_seqs 15->32 awaits Ruben relaunch approval (#27524 [proposed]); ring now 6 running 0 waiting (verified: emsu-operations ssh_command curl :8210/metrics returned num_requests_running 6.0 num_requests_waiting 0.0)\n- Julia 235B UP (verified: emsu-operations ssh_command curl :11513/v1/models HTTP 200 id qwen3-235b max_model_len 131072) and IN the adapter pool (verified: emsu-operations ssh_command sudo cat /proc/<adapter PID>/environ returned FRANK_TOOLS_UPSTREAMS including http://127.0.0.1:11513) but canary decode_live=false tok_s=0.0 (verified: emsu-operations ssh_command cat /tmp/frankenstein_canary_health.json returned 11513 healthy=true tok_s=0.0 decode_live=false), last hits 237-251s TTFB (verified: emsu-operations ssh_command tail /var/log/emsu-adapter-upstream.log returned ttfb_s 251.847/237.569/238.079 at 04:23 PT) -> adapter skips it, 0 picks in last 2000 audit lines\n- Cicero 235B UP (verified: emsu-operations ssh_command curl :11520/v1/models HTTP 200 cicero-235b-qwen3) but batch-tier L4b by design, not in fast adapter pool\n- Spill ladder (verified: project-frankenstein frankenstein_registry returned registry_readable=true source=registry tier_fallthrough L4g->L4b->L4f->L2->L3): GLM-local -> Cicero -> frankenstein-llm pool -> DeepSeek -> glm-5.2 cloud\n\nOpen threads to drive next:\n1. #27533 [executing] — Julia 235B canary decode_live=false / 250s TTFB: diagnose canary timeout vs genuine slowness, get the free 235B serving Cline turns instead of paid DeepSeek spill (efficiency_priority=1 set)\n2. #27524 [proposed] — GLM ring decode relaunch max_num_seqs 15->32, controlled sequence; awaits Ruben approval (human-gated: bad params froze 5/6 nodes before)\n3. #27531 [proposed] — Rule-91 steering trim (297/315 amendments to case-law, skeleton recency, 200KB tripwire); awaits Ruben review (carried from prior window)\n4. #27508 [executing] — Canary quarantine for wedged-but-running engines + stale-healthy decay (carried from prior window)\n5. #27514 [blocked] — emsu-codegen 74% empty streams; executor attempt failed, needs manual impl per rule 267 GATE C (carried from prior window)\n6. #27515 [executing] — Cloudflare tunnel-abort classification + or",
+   "ideas": {
+    "2537": null,
+    "2583": "superseded",
+    "10108": null,
+    "10740": null,
+    "11741": null,
+    "11781": null,
+    "11944": null,
+    "12314": null,
+    "12365": null,
+    "12366": null,
+    "12368": null,
+    "12477": null,
+    "12584": null,
+    "12618": null,
+    "12824": null,
+    "12872": null,
+    "12878": null,
+    "13108": null,
+    "13202": null,
+    "13874": null,
+    "16163": null,
+    "16265": null,
+    "16304": null,
+    "16844": null,
+    "18312": null,
+    "18326": null,
+    "25097": null,
+    "26908": null,
+    "26923": null,
+    "27259": null,
+    "27494": "executing",
+    "27508": "executing",
+    "27514": "blocked",
+    "27515": "executing",
+    "27518": "deployed",
+    "27520": "deployed",
+    "27524": "proposed",
+    "27531": "proposed",
+    "27533": "executing",
+    "178712": null,
+    "178714": null
    }
   }
  }

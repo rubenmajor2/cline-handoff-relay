@@ -397,3 +397,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: TDSHS 810/811 (task 1787123639000): response drafted arguing live-site externship capacity when the charged allegations were AI-assistant misinformation, communication delays, and no ticket follow-up against the program's own 30-day mark. Also asserted without reading source: wrong due date for 810 (8/19 vs actual 8/18), wrong surname (Meadows vs Meadors), and wrong complainant role (parent filed 810, not the student). Amendment: read the transmittal's charged-allegation paragraph and the complainant's attachment BEFORE composing, and verify party identity, filer role, and per-matter due date separately for each matter.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 21:44 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: team-hub-round3-20260819
+- RCA bucket: wrong premise
+- Trigger pattern: Building a code fix against an assumed column/schema (section2 holds second section) without first querying the column's live population
+- Reversal note: Team Hub round 3: the inherited pickup prompt's bug-2 root cause claimed combined classes store the second section in emsu_shifts.section2, and the fix plan was built on that column. One COUNT query showed section2 is empty in all 4034 rows; the real shape is a single row per combined class whose title carries both section codes. Amendment: before building a fix on an assumed column or schema, query that column's population (COUNT of non-empty) as part of the probe step; an assumed schema is a hypothesis, and the 30-second population check is the classification.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

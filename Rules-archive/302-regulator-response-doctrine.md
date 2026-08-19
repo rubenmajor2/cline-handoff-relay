@@ -499,4 +499,12 @@ Breaks it: "we should have counsel present," "we would want counsel there," "let
 
 2026-08-11 — Part 0 mandate, FERPA county-authority analysis, accommodation-scoping rule, page-geometry gates. Canonical Part 0 block at `/var/www/emtskills/personnel/investigations/_templates/PART_0_PROGRAM_MISSION_AND_STANDARDS.md`.
 
+## Amendment (from reversal, 2026-08-19 22:03 UTC)
 
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787123670897
+- RCA bucket: unread source
+- Trigger pattern: Treating a supplemental or follow-up regulator filing as exempt from the full response doctrine because it is short or incorporates a prior response by reference
+- Reversal note: A supplemental AZDHS filing (EMS-26-0495) was built and shipped to Ruben's desktop as finished without the mandatory Part 0, without the four-part structure, with zero threshold reservations, and with the San Antonio corporate masthead on an Arizona filing. The doctrine already required all four. The failure was that the rule and the canonical Part 0 template were never read before drafting, because a SUPPLEMENTAL response felt like a smaller artifact than a full consolidated response. Amendment: the doctrine applies in full to every regulator artifact regardless of size or label, including supplemental responses, one-page follow-ups, and cover letters. Before drafting any regulator filing, the window must first read rule 302 and the canonical Part 0 template, and must read the nearest prior filing to that same agency to inherit its citation set and masthead campus. A filing that incorporates a prior response by reference still carries Part 0 and the threshold reservations in its own r
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

@@ -75,3 +75,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: The TDSHS packet's aggregate-burden section asserted to a regulator that "the Department opened eleven separate complaint matters ... on a single day." The email_inbound_log shows four distinct transmittal dates: 7/16 (1810, 1811, 1813, 1815), 7/27 (1815, 1887, 1869), 8/3 (1915, 1890), 8/5 (1916, 1917, 1886). The claim was built from the compliance_deadlines row-creation date (all rows created 2026-08-05, the day WE catalogued them) rather than from the agency's own send timestamps. Amendment: any aggregate or pattern claim made TO an agency about that agency's conduct must be computed from the agency's own dated artifacts (email send timestamps, letter dates, docket entries), never from our internal row-creation or ingest dates. Our created_at records when we noticed a thing, not when the agency did it. A single false verifiable date in a burden argument destroys the credibility of the entire argument, because the agency holds the authoritative copy of its own send log and will check 
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 22:30 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787123639000
+- RCA bucket: wrong premise
+- Trigger pattern: Drafting regulator-response section headings that restate or echo the charged allegation language instead of neutral record vocabulary
+- Reversal note: TDSHS 810/811: a draft response used section headings that restated the allegations in the program's own voice ("Ability to reach a person", "Information from the automated assistant", "Follow-up on tickets"). A heading that names the allegation advertises it: the reader scans the heading list and reads the program's response outline as a catalogue of accusations. Amendment: regulator-response section headings must be NEUTRAL record-vocabulary ("The Program Record", "Present Status", "Complainant of Record") and must never quote, paraphrase, or echo the allegation language; the allegation is answered in body text that states record facts, never named in a heading.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

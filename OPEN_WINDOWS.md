@@ -6,17 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/19/2026, 2:44:01 PM PT | window: last 72h | 111 tasks | index total 856 (parsed 4, cached 852)
+Generated: 8/19/2026, 3:44:01 PM PT | window: last 72h | 112 tasks | index total 857 (parsed 6, cached 851)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787175621111` | 8/19/2026, 2:43:55 PM | 33 | 898KB | #Argus Student Issue |
-| `1787174702687` | 8/19/2026, 2:42:46 PM | 103 | 1697KB | #Argus/Team Hub |
-| `1787168918854` | 8/19/2026, 2:40:55 PM | 304 | 2052KB | #TDSHS |
+| `1787168789833` | 8/19/2026, 3:43:51 PM | 197 | 882KB | #Julia/Claudia 235B |
+| `1787168880963` | 8/19/2026, 3:43:46 PM | 522 | 4520KB | #GLM / Frankenstein Routing  |
+| `1787175621111` | 8/19/2026, 3:42:06 PM | 207 | 5578KB | #Argus Student Issue |
+| `1787168918854` | 8/19/2026, 3:41:20 PM | 468 | 2581KB | #TDSHS |
+| `1787178812057` | 8/19/2026, 3:39:02 PM | 26 | 186KB | Can you review the entire reversal log related to rule 317 for commonalities and systemic  |
+| `1787174702687` | 8/19/2026, 3:33:43 PM | 214 | 3553KB | #Argus/Team Hub |
+| `1787168962221` | 8/19/2026, 3:05:10 PM | 78 | 248KB | #AZDHS |
 | `1787169118771` | 8/19/2026, 2:27:49 PM | 144 | 2061KB | #Organize Compliance Gold Standard Response/Dissection, etc... |
-| `1787168880963` | 8/19/2026, 1:57:18 PM | 218 | 2931KB | #GLM / Frankenstein Routing  |
-| `1787168789833` | 8/19/2026, 12:58:10 PM | 50 | 269KB | #Julia/Claudia 235B |
-| `1787168962221` | 8/19/2026, 12:51:48 PM | 20 | 44KB | #AZDHS |
 | `1787138864086` | 8/19/2026, 12:33:19 PM | 450 | 1864KB | #Frankenstein LLM GLM Speedup |
 | `1787159982042` | 8/19/2026, 12:32:42 PM | 228 | 9271KB | #Argus/Team Hub |
 | `1787122887382` | 8/19/2026, 11:53:23 AM | 554 | 4399KB | #San Mateo EMSA Complaint |
@@ -126,7 +127,96 @@ Generated: 8/19/2026, 2:44:01 PM PT | window: last 72h | 111 tasks | index total
 
 ## Per-window detail
 
-### `1787175621111` — 8/19/2026, 2:43:55 PM PT — 33 turns
+### `1787168789833` — 8/19/2026, 3:43:51 PM PT — 197 turns
+
+**Original task:**
+
+```
+#Julia/Claudia 235B
+
+Julia/Claudia 235B is back online and serving. (verified: curl lane :11513 HTTP=200 + ssh_command lane-guard probe ok:true problems:[] reach vllm=true ssh=true at 03:08 PT; router audit picked=julia-235b no substitution; fleet_act julia=healthy ok:true)
+
+Recovery + verification (this window, all times PT):
+- Julia was L2-dark after the 2026-08-18 outage (last good serve 13:15 PT, confirmed dark 14:49-14:53 from 3 vantages). Physical power cycle restored it.
+- Post-return: Ray head + vLLM relaunched via @reboot. Lane :11513 HTTP=200, decode probe returns real tokens, router
+```
+
+**Ideas referenced:** #081020, #10108, #10740, #11741, #11781, #1241, #12477, #1248, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #178634, #178640, #178656, #178671, #178701, #178709, #178712, #18312, #18326, #21038 [executing], #22584, #24645, #25097, #25229 [deployed], #25238 [executing], #25240 [executing], #25241 [executing], #25366 [deployed], #2537, #25385, #25468, #25471, #25515 [proposed], #25525 [executing], #25528 [deployed], #25530 [executing], #25531 [executing], #25532 [deployed], #25534 [executing], #25535 [executing], #2573, #25796, #25797, #25798, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26923, #26932, #27011, #27012, #27069 [deployed], #27232 [rejected], #27236 [deployed], #27259, #27271, #27287 [deployed], #27613 [proposed], #27614 [proposed], #27630 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+re-probe (confirm serving not regressed)
+- [ ] Append ledger row
+- [ ] Report + PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1787168880963` — 8/19/2026, 3:43:46 PM PT — 522 turns
+
+**Original task:**
+
+```
+#GLM / Frankenstein Routing 
+
+I am working Julia/Claudia 235 in another window. We need to get GLM 5.2 up and running properly and serving in front of the 120Bs and 235Bs in frankenstein-llm. We need to fix the decode issue and whatever is choking out GLM. We need it running in cline 4 lanes and 4 batch / Argus lanes. I’m not sure why 3 is listed on ring concurrency. Something is off with settings. See also: 
+
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
+
+
+Both answered. The method is now written down per
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11945, #12477, #12584, #12618, #1264, #12824, #12872, #12878, #13202, #1602, #16163, #16265, #16304, #16449, #16527, #16844, #1724, #1754, #1755, #178713, #18312, #18326, #18471, #19686, #1986, #1993, #2050, #2073, #2083, #2116, #2138, #2157, #2159, #2168, #21684, #2174, #2185, #2210, #2294, #2307 [resolved], #2312 [resolved], #2314, #23169, #2353, #24217, #25097, #25185, #2520 [resolved], #2524, #2525, #2526 [resolved], #2534, #2537, #2546 [resolved], #2547 [resolved], #2574 [resolved], #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #2582, #2587, #2588 [investigating], #26209, #26284 [executing], #26400, #26403, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #26908, #26917, #26922 [deployed], #26923, #26927 [deployed], #26932, #27100, #27259, #27494 [executing], #27508 [executing], #27514 [blocked], #27515 [executing], #27518 [deployed], #27524 [proposed], #27531 [proposed], #27610 [executing], #27611 [executing], #27622 [executing], #27626 [executing], #6826
+
+**Last PICKUP PROMPT:**
+
+```
+8) <-> Augustus (e3b2). See GLM52_RING_STATE_TRACKER.md and mdm_portal.php.
+
+## PICKUP PROMPT
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787138864086 — GLM-5.2 ring recovery: 5 root causes addressed, ring relaunched seq16, but ring NOT yet serving (cato engine dead). Next: full ring relaunch + restore 39 missing rungs + verify lanes.
+
+Where we left off (verified: ssh_command + frankenstein_tier_health + frankenstein_registry probes at 2026-08-19 14:55 PT):
+- Ruben directive: GLM 5.2 must serve in front of 120Bs/235Bs, 4 Cline + 4 batch/Argus lanes, address decode choke, ring concurrency 3 is wrong
+- 5 root causes found + addressed: (1) EMSU_GLM_FIRST_ALL_LANES=1 was FORCING interactive onto dead ring (now =0); (2) FRANK_SLO_TTFB_INTERACTIVE=240s masked stalls (now 60s); (3) ring cap was 2 (FRANK_GLM_RING_TOTAL=8 now); (4) admission gate rewrote to frankenstein-tools which 503s (now ring-direct); (5) EMSU_GLM_FLOOR_OFF=1 removed floor
+- Ring relaunched 13:47 PT with max_num_seqs=16 (was 15), chunked prefill 16384, 6-node PP=6
+- LIVE PROBES 14:52 PT: ring NOT serving yet — curl :8210/metrics HTTP_000 (connection refused), canary glm-5.2-local quarantined fail_streak=36, frankenstein-llm probe HTTP_000, frankenstein-tools 503
+- Rungs missing: only 1 of 40 restored in registry (julia-235b). 235Bs/120Bs NOT in ladder yet
+- Cato (rank 0, 2aa8) engine DEAD: no vllm procs, no glm container, supervisor stopped, no OOM in dmesg — needs manual relaunch
+- GLM-5.3 upgrade gates ALL CLEARED: disk 2.4-4.5TB free, HF_TOKEN valid, 7/7 nodes ready
+- MDM portal 500 (pre-existing, separate issue)
+
+Open threads to drive next:
+1. Recover ring: relaunch cato engine + verify all 6 nodes serving, then canary unquarantine — #27626 [executing]
+2. Restart ring supervisor on cato (systemctl start glm-ring-supervisor or equivalent) — #27626 [executing]
+3. Restore 39 missing rungs: 120Bs (Artemis/BigMac), 235Bs (Julia/Claudia), DeepSeek, GLM cloud into frankenstein_registry.yaml — #27626 [executing]
+4. Verify 4 Cline + 4 batch lanes after ring is serving (probe /v1/models on :8210, check num_requests_running) — #27626 [executing]
+5. Ring decode relaunch max_num_seqs 15→32 controlled sequence — #27524 [proposed]
+6. Rule-91 steering trim (amendments → case-law files) — #27531 [proposed]
+
+Reference IDs:
+- Ideas filed: #27626 [executing], #27610 [executing], #27611 [deployed]
+- Ideas referenced: #27524 [proposed], #27531 [proposed], #27508 [executing], #27514 [blocked], #27515 [executing], #27494 [executing]
+- Files touched: /etc/litellm/frankenstein_registry.yaml (rungs), /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md, ~/Documents/Cline/Rules-archive/91-glm-ring-235b-recovery-runbook.md, ~/Documents/Cline/Rules-archive/323-bug-library-research-process.md, ~/Documents/Cline/Rules/_RULE_TREE.md
+
+After wrap-up, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+
+## Tool rounds
+- execute_command(ls /tmp/cline_compress_signal*.json) → NO_SIGNAL_FILE (fresh window)
+- read_handoff_notes(120 lines) → latest state: GLM ring relaunch 13:47 PT seq16, canary quarantined, rungs missing
+- read_server_file(docs/GLM52_RING_STATE_TRACKER.md) → ring topology 6 nodes PP=6, 671 tok/s aggregate, 8 adapter cap = 6 Cline + 2 batch (Ruben now wants 4+4)
+- bug_library_check_before_fix(GLM decode stall symptom) → NOVEL_SYMPTOM (no prior match)
+- frankenstein_tier_health() → GLM ring tier DOWN, canary g
+```
+
+### `1787175621111` — 8/19/2026, 3:42:06 PM PT — 207 turns
 
 **Original task:**
 
@@ -140,36 +230,34 @@ https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser
 Fix also the student issue there and make appropriate notifications if required.
 ```
 
-**Ideas referenced:** #2524, #2525, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #9086, #9168, #9339
+**Ideas referenced:** #047857, #1565, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #2006, #20547, #21125, #21126, #21262, #2196, #22511, #22583, #23039, #23489, #23852, #23952, #2408 [rejected], #24897, #24900, #25047, #25058, #2524, #2525, #25269, #25313, #25573, #25642, #26067, #26325, #27243, #27244, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27631 [proposed], #30363, #334155, #4338, #495057, #64748, #9086, #9168, #9339
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787174702687` — 8/19/2026, 2:42:46 PM PT — 103 turns
-
-**Original task:**
+**Last PICKUP PROMPT:**
 
 ```
-#Argus/Team Hub
-
-Cori says still having issues with this -> 
-
-Did it - Idea number 27603 for that. I just accelerated it to P1 status and it’s giving an estimated resolution of about seven days currently. Which is no bueno for instructors to be able to pick up shifts.
-
---
-
-#Argus/Team Hub / ONLY if Cori Needs it
-Context compression required at 95% before deploying fixes. All root causes identified; pickup prompt below carries full state to continue in a fresh window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════
+\nNo reversals this window.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #2408 — Fix Argus lazy behavior + Seth Williams CPR lockout.\n\nWhere we left off (verified 2026-08-19 15:38 PT):\n- Seth Williams (26422FT-03) CPR exam unlocked: student role assigned in course 37 (role_assignment 48316), uservisible=TRUE verified.\n- 228 other students with same missing-role defect mass-fixed (TX=112, CA=69, AZ=47), 0 orphans remain.\n- Argus act-don't-recommend directive added to routes/alltastic_api.php (backup .bak-argus-actdontrecommend-20260819), lint passed, live via opcache.\n- Seth notified by email (SENT OK).\n\nOpen threads to drive next:\n1. #27631 [proposed] — root-cause why enrolment provisioning drops role_assignments + add self-heal guard that detects active-enrolment-missing-role and auto-repairs.\n\nReference IDs:\n- Ideas filed: #27631 [proposed]\n- Files touched: /var/www/emtskills/routes/alltastic_api.php\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════",
+  "task_prompt": "#Argus Student Issue\n\nSee terminal 2408 and fix argus. Argus needs to be able to take action. It should not be telling me which tool to use and then not doing anything. It's really lazy. This is not helpful:\n\nhttps://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser \n\nFix also the student issue there and make appropriate notifications if required."
+}
+</arguments>
+<task_progress>
+- [x] Read HANDOFF_NOTES for current context
+- [x] Find Argus terminal 2408 session and read the conversation
+- [x] Identify the student: Seth Williams 26422FT-03 (sethhdior@gmail.com)
+- [x] Root cause: Seth lacks mod/quiz:view capability on CPR exam context
+- [x] Fix: assigned student role to Seth in course 37 + mass-fixed 228 others
+- [x] Verified fixes (Seth + 0 remaining orphans + spot check)
+- [x] Filed idea #27631 for root-cause provisioning bug + self-heal guard
+- [x] Diagnosed Argus lazy behavior: model recommended tools instead of calling them
+- [x] Added act-don't-recommend directive + persistent identifier resolution to Argus prompt
+- [x] Confirmed Argus change is live (opcache revalidate_freq=60)
+- [x] Sent notification email to Seth (SENT OK)
+- [x] Final end-to-end verification (CPR exam uservisible=TRUE)
+- [ ] Validate completion + attempt_completion
+</task_progress>
+</use_mcp_tool>
 ```
 
-**Ideas referenced:** #059669, #0891, #14829, #166534, #22276, #2524, #2525, #2563, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27603 [deployed], #475569, #5894, #6021, #6366, #64748, #7223, #92400, #9577
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787168918854` — 8/19/2026, 2:40:55 PM PT — 304 turns
+### `1787168918854` — 8/19/2026, 3:41:20 PM PT — 468 turns
 
 **Original task:**
 
@@ -186,7 +274,7 @@ Deliverable:
 What the consolidated re
 ```
 
-**Ideas referenced:** #118003, #118050, #118088, #118126, #118169, #118214, #118251, #118296, #118337, #118374, #166534, #167370, #1741, #178712, #249506, #27100, #32539, #4929, #600179, #6366, #89632, #9753, #97642, #97754
+**Ideas referenced:** #118003, #118050, #118088, #118126, #118169, #118214, #118251, #118296, #118337, #118374, #13202, #166534, #167370, #1741 [rejected], #178712, #19581, #2312, #249506, #25185, #27073, #27100, #27302 [executing], #27627 [executing], #32539, #4929, #600179, #6366, #89632, #9753, #97642, #97754
 
 **Last PICKUP PROMPT:**
 
@@ -241,6 +329,124 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Trashed old stale file from Google Drive
 - [x] Verif
 ```
+
+### `1787178812057` — 8/19/2026, 3:39:02 PM PT — 26 turns
+
+**Original task:**
+
+```
+Can you review the entire reversal log related to rule 317 for commonalities and systemic issues needing updates and resolutions and make those adjustments for improvement of the entire system - basically, I'm trying to get this knowledge to work better, smarter and faster on the small as well as the bigger models and the reversal log would have all that info.
+```
+
+**Ideas referenced:** #25185, #26435, #26617, #27100, #27634 [proposed], #27635 [proposed], #8151
+
+**Last PICKUP PROMPT:**
+
+```
+of reading the full 16KB tail.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up the rule-317 reversal-log systemic-improvement work.
+
+Where we left off (verified 2026-08-19 15:38 PT):
+- Reviewed the full rule-317 ledger: 8 mechanical amendments (per clinerules_amend_history, trailing 30d) + the 280-failure digest in /var/www/emtskills/docs/317-reversal-corrections.md (4 modes: SELF_CONTRADICTING_DISPOSITION 251x, R317_UNVERIFIED_STATE 24x, INSUFFICIENT PROBE, SCOPE_ERROR).
+- Edited /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md: front-loaded a GOLDEN RULE section (claim-scope-must-equal-probe-scope axiom + 4-mode taxonomy + English-only). Reindexed (clinerules_reindex: 332 rules, 22 hardfloor) and verified live via clinerules_lookup (rule now 16,860 bytes, GOLDEN RULE at top).
+- Filed idea #27634 [proposed] and #27635 [proposed].
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #27634 [proposed] — Implement dedup + distilled-table maintenance in clinerules_mcp clinerules_amend_rule (content-hash near-duplicate folding + top-of-file failure-mode table rebuild), so the amendment tail stops growing unbounded.
+2. #27635 [proposed] — Build the sync chain: cron watches rule_amend ledger -> ingest new amendments into ai_learned_corrections via api/cline_correction_ingest.php -> surface the 4-mode taxonomy as an emsu://reference doc for small-model / CFA retrieval.
+
+Reference IDs:
+- Ideas filed: #27634 [proposed], #27635 [proposed]
+- Files touched: /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md
+- Reference digest read: /var/www/emtskills/docs/317-reversal-corrections.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787174702687` — 8/19/2026, 3:33:43 PM PT — 214 turns
+
+**Original task:**
+
+```
+#Argus/Team Hub
+
+Cori says still having issues with this -> 
+
+Did it - Idea number 27603 for that. I just accelerated it to P1 status and it’s giving an estimated resolution of about seven days currently. Which is no bueno for instructors to be able to pick up shifts.
+
+--
+
+#Argus/Team Hub / ONLY if Cori Needs it
+Context compression required at 95% before deploying fixes. All root causes identified; pickup prompt below carries full state to continue in a fresh window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════
+```
+
+**Ideas referenced:** #059669, #0891, #14829, #166534, #178717, #22276, #2524, #2525, #2563, #25947, #27100, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27603 [deployed], #475569, #5894, #6021, #6366, #64748, #7223, #92400, #9577
+
+**Last PICKUP PROMPT:**
+
+```
+laim-scope-equals-probe-scope)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787174702000 — Team Hub calendar + shift pickup (rounds 3+4 done; rule 317 amended to claim-scope-equals-probe-scope; Cori retest pending).
+
+Where we left off (verified 2026-08-19 15:33 PT):
+- 5 bugs fixed + deployed + browser-verified; pickup verified end-to-end; test claim deleted.
+- Rule 317 amended (task 1787174702000): durable principle — deploy/build auto-check (php -l, lint+reload, exit 0) verifies only what it checked and is NEVER functional verification; claim scope must equal probe scope (browser console / DOM / live HTTP) before claiming user-facing behavior works.
+- #27603 [deployed] (verified: reconcile_ideas 14:42 PT, Tally deployed=1).
+- Files touched: lib/team_hub_calendar.php, routes/team_hub.php.
+
+Open threads to drive next:
+1. (human-only decision, no idea) Cori retests weekly pickup, combined sections, monthly View day, My Schedule in production; capture exact view/URL + screenshot if anything new.
+
+Reference IDs:
+- Ideas filed: none this session
+- Ideas reconciled: #27603 [deployed]
+- Files touched: lib/team_hub_calendar.php, routes/team_hub.php
+- Rule amendments: 297 (task team-hub-round3-20260819), 317 (task 1787174702000)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Rule 317 amended at durable-principle level (claim-scope-equals-probe-scope)
+- [x] Amendment verified on disk (amend_history: 7 amendments, last 22:32:39Z)
+- [x] validate ALL PASSED + gate CLEAR
+- [x] attempt_completion shipped
+</task_progress>
+</attempt_completion>
+```
+
+### `1787168962221` — 8/19/2026, 3:05:10 PM PT — 78 turns
+
+**Original task:**
+
+```
+#AZDHS
+
+Still need the DRAFT PDF opened on my desktop
+AZDHS EMS-26-0495 (Richella Trujillo) handled: unified PDF response built and the matter scheduled properly. Both parts of your ask done.
+
+WHAT THE 8/3 EMAIL IS: Investigator Bevins identified Richella Trujillo as the complainant on EMS-26-0495 (Complaint 914) (verified: mysql fetch_data on admin_portal.compliance_investigation_responses returned rows 149 and 165 documenting the 8/3 Bevins identification email; the literal email itself was not retrievable, so this is sourced from those prior-window DB notes). She is the parent/third-party p
+```
+
+**Ideas referenced:** #178712, #27100, #27493 [proposed], #450438
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787169118771` — 8/19/2026, 2:27:49 PM PT — 144 turns
 
@@ -297,124 +503,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </task_progress>
 </attempt_completion>
 ```
-
-### `1787168880963` — 8/19/2026, 1:57:18 PM PT — 218 turns
-
-**Original task:**
-
-```
-#GLM / Frankenstein Routing 
-
-I am working Julia/Claudia 235 in another window. We need to get GLM 5.2 up and running properly and serving in front of the 120Bs and 235Bs in frankenstein-llm. We need to fix the decode issue and whatever is choking out GLM. We need it running in cline 4 lanes and 4 batch / Argus lanes. I’m not sure why 3 is listed on ring concurrency. Something is off with settings. See also: 
-
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down per
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11945, #12477, #12584, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #1724, #1754, #1755, #178713, #18312, #18326, #19686, #1986, #2050, #2073, #2083, #2116, #2138, #2157, #2159, #2168, #2174, #2185, #2210, #2294, #2307, #2314, #23169, #2353, #24217, #25097, #2524, #2525, #2534, #2537, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #2582, #2587, #2588, #26209, #26284 [executing], #26400, #26403, #26908, #26917, #26922 [deployed], #26923, #26927 [deployed], #26932, #27100, #27259, #27494 [executing], #27508 [executing], #27514 [blocked], #27515 [executing], #27518 [deployed], #27524 [proposed], #27531 [proposed], #27610 [executing], #27611 [executing], #27622 [executing], #6826
-
-**Last PICKUP PROMPT:**
-
-```
-conf, /tmp/glm52_launch_cfg.sh
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787138864086 — GLM-5.2 hex ring restore: serve in front of 120B/235B on frankenstein-llm, 4 Cline + 4 batch/Argus lanes.
-
-Where we left off (verified 2026-08-19 13:53 PT):
-- Full 6-node relaunch 13:47 PT with KNOWN-GOOD config: max_num_seqs=16, TCP transport (NCCL_IB_DISABLE=1 NCCL_SOCKET_IFNAME=enP7s7), NCCL_TIMEOUT=3600, gpu_mem 0.82, image vllm-node-tf5-glm52-b12x:sm121fix2. Boot ~10-15 min. FIRST MOVE: probe curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8210/v1/models on Cato (emsu-operations ssh_command: timeout 8 ssh -p 2204 -o ConnectTimeout=5 -o StrictHostKeyChecking=no rubenmajor@127.0.0.1 '<cmd>') until 200, then frankenstein_tier_health for canary rejoin.
-- Topology: Cato=rank0 head :8210 (ssh port 2204), Augustus=rank1 (2210), Pompeii=rank2 (2207), Marcus=rank3 (2208), Tiberius=rank4 (2209), Cesar=rank5 (2203). Head binds :8210.
-- Root causes fixed this window: (1) Augustus vllm_slot died 10:41 PT = rank 1 missing, ring wedged 71 min at NCCL init; (2) launcher rewrite 08-18 silently flipped TCP to RoCE RDMA + CROSS_NIC=1 causing init hang, reverted to TCP; (3) config.yaml lane caps drifted 4/2 to 1/1, fixed to 4/2 (lane guard passes cline=4 batch=4); (4) EMSU_GLM_FIRST_ALL_LANES flipped 0 to 1 in /etc/systemd/system/frankenstein-tools.service.d/10-env.conf + daemon-reload + restart, verified live in /proc/114006/environ; (5) max_num_seqs=32 HUNG engine at 3 concurrent reqs, reverted to 16.
-- glm-5.2-local still commented out in all 40 fallback chains in /etc/litellm/config.yaml (member-rotation auto-drop during quarantine; line format '# WINDOW_O_DOWN     - glm-5.2-local'). member-rotation 90s chat probe times out on busy ring while canary 150s probe passes, so auto-restore cannot complete.
-- Batch lane WAS serving on ring pre-relaunch (verified: this-window grep /var/log/emsu-adapter-upstream.log returned 'PASSTHROUGH ok upstream=127.0.0.1:8210 lane=batch ttfb=34.79s').
-
-Open threads to drive next:
-1. #27622 [executing] — verify seq16 boot (:8210 HTTP 200 + canary decode_live + 60s counter-delta measurement >0), restore 40 rungs (sed uncomment + /usr/local/bin/litellm-safe-restart.sh), set WO_CHAT_TIMEOUT_SLOW=150 in /etc/cron.d/emsu-frank-member-rotation, file bug library record for seqs-32 hang + update resolutions 2587/2588, update GLM52_RING_STATE_TRACKER.md
-2. #27524 [proposed] — max_num_seqs 16 to 32 decode lever: ONLY via controlled CONC ladder per docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md (naive 32 hung the engine today; causal rule 91-glm amended)
-3. #27508 [executing] — watchdog still PAUSED since 08-18 23:32; unpause once ring stable + serving
-
-Reference IDs:
-- Bug library recorded: 2587 (rank-1 crash + RDMA flip), 2588 (lane cap drift); KNOWN_REPAIR consulted: 2534
-- Ideas filed: #27622 [executing] (verified: reconcile_ideas 13:53 PT status=approved dev_stage=idle)
-- Ideas carried forward (verified: reconcile_ideas 13:53 PT): #27610 [executing], #27611 [deployed], #27531 [proposed], #27514 [executing], #27515 [executing], #27494 [executing]
-- Files touched: /etc/systemd/system/frankenstein-tools.service.d/10-env.conf, /etc/litellm/config.yaml (lane caps), /tmp/glm52_launch_cfg.sh (all 6 nodes), Rules-archive/91-glm-julia-claudia-recovery.md (amendment)
-- Docs: /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md, /var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md
-
-Whe
-```
-
-### `1787168789833` — 8/19/2026, 12:58:10 PM PT — 50 turns
-
-**Original task:**
-
-```
-#Julia/Claudia 235B
-
-Julia/Claudia 235B is back online and serving. (verified: curl lane :11513 HTTP=200 + ssh_command lane-guard probe ok:true problems:[] reach vllm=true ssh=true at 03:08 PT; router audit picked=julia-235b no substitution; fleet_act julia=healthy ok:true)
-
-Recovery + verification (this window, all times PT):
-- Julia was L2-dark after the 2026-08-18 outage (last good serve 13:15 PT, confirmed dark 14:49-14:53 from 3 vantages). Physical power cycle restored it.
-- Post-return: Ray head + vLLM relaunched via @reboot. Lane :11513 HTTP=200, decode probe returns real tokens, router
-```
-
-**Ideas referenced:** #081020, #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #178634, #178640, #178656, #178671, #178701, #178709, #178712, #18312, #18326, #21038 [executing], #22584, #24645, #25097, #25229 [deployed], #25238 [executing], #25240 [executing], #25241 [executing], #25366 [deployed], #2537, #25385, #25468, #25471, #25515 [proposed], #25525 [executing], #25528 [deployed], #25530 [executing], #25531 [executing], #25532 [deployed], #25534 [executing], #25535 [executing], #2573, #25796, #25797, #25798, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26923, #26932, #27011, #27012, #27069 [deployed], #27232 [rejected], #27236 [deployed], #27259, #27271, #27287 [deployed], #27613 [proposed], #27614 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-ved), no extra wrap-up to run.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787129383579 — Julia/Claudia 235B: serving restored end-to-end verified, two protection gaps filed.
-
-Where we left off (verified 2026-08-19 12:57 PT):
-- Julia 235B SERVING: lane :11513 HTTP=200 with real qwen3-235b decode (16 tok, finish_reason=length). No substitution, no artemis fallback. catch_relaunch.state=SERVING.
-- Root cause of the morning dark: vLLM crashed after the 04:29 babysit END; catch-relaunch cron restarted it at 12:40; serving restored 12:49-12:51.
-- Lane-guard runs via /etc/cron.d/emsu-julia-lane-guard (*/5), not systemd. Script at /usr/local/bin/emsu-julia-lane-guard.py, alert sink /usr/local/bin/emsu-alert.sh, wedge-watchdog */2, catch-relaunch * * * * *.
-- Julia WG 10.100.0.15 DOWN (No route to host); reverse tunnel :2205 UP and is the only fleet path (single point of failure).
-
-Open threads to drive next:
-1. #27613 [proposed] — restore Julia WireGuard link 10.100.0.15. From Julia (spark-6ae6, LAN 192.168.1.190) run wg-quick status / bring the WG interface up, then verify ping+ssh 10.100.0.15 from WOPR and confirm the vLLM lane is unaffected.
-2. #27614 [proposed] — extend /usr/local/bin/emsu-julia-lane-guard.py reachability alert to fire on a single-lane :11513 dark transition (vLLM down while ssh :2205 up), or add a permanent decode-probe cron with alert-on-wedge. This closes the exact silent-outage class from this morning.
-3. #27236 [deployed] — lane-guard reachability patch is live; no action unless it transitions, but note its single-lane blind spot is now tracked in #27614.
-4. (human-only decision, no idea) The wedge-guard reboot path (physical reboot for a PERSISTENT wedge) was not exercised; only the vLLM relaunch path fired. Confirm whether the reboot path should stay armed as-is.
-
-Reference IDs:
-- Ticket: #1787129383579
-- Ideas filed this window (live create_idea): #27613 [proposed], #27614 [proposed]
-- Ideas reconciled (server-side tags): #27236 [deployed], #27069 [deployed], #26711 [deployed], #26715 [deployed], #27232 [rejected], #21038 [executing], #26712 [proposed], #26713 [proposed]
-- Files touched: /etc/cron.d/emsu-julia-lane-guard (read), /usr/local/bin/emsu-julia-lane-guard.py (read), /usr/local/bin/emsu-alert.sh (read), /etc/cron.d/emsu-julia-wedge-watchdog (read), /etc/cron.d/emsu-julia-catch-relaunch (read), /Users/rubenmajor/Documents/Cline/cline_task_ledger.md (appended, 509->510 lines)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1787168962221` — 8/19/2026, 12:51:48 PM PT — 20 turns
-
-**Original task:**
-
-```
-#AZDHS
-
-Still need the DRAFT PDF opened on my desktop
-AZDHS EMS-26-0495 (Richella Trujillo) handled: unified PDF response built and the matter scheduled properly. Both parts of your ask done.
-
-WHAT THE 8/3 EMAIL IS: Investigator Bevins identified Richella Trujillo as the complainant on EMS-26-0495 (Complaint 914) (verified: mysql fetch_data on admin_portal.compliance_investigation_responses returned rows 149 and 165 documenting the 8/3 Bevins identification email; the literal email itself was not retrievable, so this is sourced from those prior-window DB notes). She is the parent/third-party p
-```
-
-**Ideas referenced:** #178712, #27493 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787138864086` — 8/19/2026, 12:33:19 PM PT — 450 turns
 

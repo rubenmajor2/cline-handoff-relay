@@ -2,6 +2,21 @@
 
 **HARDFLOOR** (Ruben directive 2026-08-12). A completion window must be TRUSTWORTHY:
 
+## GOLDEN RULE (distilled from the full rule-317 reversal log; read this first)
+
+One sentence: **Claim scope must equal probe scope.** A tool's auto-success signal (php -l, write_server_file lint+reload, exit code 0, npm build, upload-return, "deployed OK") verifies ONLY what that tool checked. It is NEVER evidence that the running deliverable works, that an external id is valid, that a credential is dead, or that a permission wall exists. Any completion claim about user-facing behavior ("console clean", "page renders", "flow works", "pickup clickable", "no errors") requires a probe of THAT surface this window, never an inference from a deploy/build tool's auto-check.
+
+The reversal log collapses to FOUR recurring failure modes, in order of frequency:
+
+- **SELF_CONTRADICTING_DISPOSITION** (dominant: 251 of 280 telemetry failures). Prose says DONE/FIXED/VERIFIED next to an idea bracket that still says [proposed]/[executing]/[blocked]. Stamp the record first (UPDATE orchestrator_ideas SET status=deployed, then reconcile_ideas), THEN write the claim; or keep the honest bracket. Never write FIXED next to [proposed].
+- **R317_UNVERIFIED_STATE** (24 of 280). Asserting fleet/routing/pod/model-health or deliverable state from memory without a live probe returning proof. Probe first and quote the result, or label the claim UNVERIFIED.
+- **INSUFFICIENT PROBE** (the mechanism behind most of the append tail below). One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state.
+- **SCOPE ERROR** (completion over-scoped to DONE). Enumerate EVERY visible defect / every deliverable in the set before claiming resolved; the undone ones become open threads with real idea ids, not hidden by a "done" headline.
+
+English-only, always (narration included); domain context never justifies language switching.
+
+## NUMBERED HARDFLOOR (mechanics of the closed loop)
+
 1. **LLM / fleet / routing state — the #1 recurring error. NEVER recite status from memory.** Probe the live source first (frankenstein_registry, frankenstein_verify_routing, mysql/reconcile, ps, systemctl). Recited state is stale by definition.
 2. **Acquisition gate — what would you miss if you shipped now?** Acquire it BEFORE completion. If a claim is not backed by a tool call you ran THIS window, it is unverified — say so or run the tool.
 3. **Escalation probe before declaring any wall.** Never declare "permission denied", "not available", "cannot write", "host down", or "no access" from a single unprivileged attempt. If a command fails with EACCES/EPERM, IMMEDIATELY re-run the same operation via the escalation path that exists (sudo -n, operator role, MCP tool with different credentials). A non-sudo failure is NOT a permission wall. Declaring a wall without probing escalation is a 297 trigger. (Source: 2026-08-16 #26617 — claimed "SSH user lacks /var/www write" for hours while `sudo -n true` returned SUDO_NO_PASS_OK.)
@@ -67,5 +82,25 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - RCA bucket: insufficient probe
 - Trigger pattern: Publishing a Google Drive file id as 'verified' in a completion/PICKUP PROMPT without resolving it live (get_file_info) — the recorded id 18sI3y8y7Q10Cqzl93x37tlYI89m3000_ was stale and invisible unti
 - Reversal note: Within-window reversal: the consolidated TDSHS response PICKUP PROMPT recorded Drive file id 18sI3y8y7Q10Cqzl93x37tlYI89m3000_ as verified, but a live get_file_info returned 'File not found'. The actual file exists under id 1IwAPEXqYfXB-VGyVqpvB187uF_HbYeUo (found via search_drive by name). Desktop and server PDFs were byte-identical (MD5 070cb39f38eeb9341d43a376fc85a835), so only the Drive id was wrong — but the id was cited as a verified deliverable. Amendment: a Drive file id (like any external id/token) is not 'verified' until a live resolve returns it; publish the id only after an actual API resolve, not from an upload-return captured in a prior turn.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 22:30 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787174702000
+- RCA bucket: insufficient probe
+- Trigger pattern: Declaring a JS-emitting PHP page verified with 'PHP lint OK' after write_server_file, without a browser-console probe. php -l cannot see embedded-JS syntax errors (missing braces), load-order globals,
+- Reversal note: Rule 317 verification standard corrected: php -l / write_server_file's PHP lint only checks PHP syntax, so it cannot catch JavaScript errors embedded in heredoc/ENDJS blocks (e.g. missing closing braces that silently kill an entire tail script block), load-order globals (window.bootstrap undefined at mid-page IIFE time), or incomplete view allowlists. On 2026-08-19 Team Hub shipped 'PHP lint OK' twice while the live page threw 'SyntaxError: Unexpected end of input' on every load and the 'My Schedule' pill was dead. Amended rule 317: for any deployed PHP page that emits JavaScript, 'lint OK' is NOT a completion-confidence verification — a real browser-console probe (or JS parse) is REQUIRED before claiming 'console clean / no errors'.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 22:32 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787174702000
+- RCA bucket: scope error
+- Trigger pattern: Framing the causal fix for a verification gap at tool-chain granularity ('php -l cannot see embedded JS') when the failure class is 'deploy-tool auto-check used as functional verification'. The durabl
+- Reversal note: Raised the earlier 2026-08-19 amendment from micro (PHP lint cannot verify embedded JS) to the larger principle, per Ruben's steer that one-off/micro fixes miss the durable lesson. A deploy/build tool's automatic success signal (php -l, write_server_file lint+reload, exit code 0, npm build, 'deployed OK') verifies ONLY what that tool checked (syntax of one layer). It is NEVER functional verification of the running deliverable. Claim scope must equal probe scope: any completion claim about user-facing behavior ('console clean', 'page renders', 'flow works', 'pickup clickable', 'no errors') requires a probe of THAT surface this window (browser console, rendered DOM, live HTTP/API response) — never an inference from the deploy tool's auto-check. This supersedes and generalizes the narrower JS-emitting-PHP-page wording added earlier this task.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.

@@ -149,3 +149,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Two flips in the TDSHS PDF delivery window: (1) attempted scp from a /tmp path recalled from prior context, but the file actually lived at /var/www/emtskills/uploads/tdshs/inspection-5196-2026/ — a find on the server located it; (2) attempted scp using MCP server name 'emsu-operations' as hostname instead of searching ~/.ssh/config for the documented alias 'wopr'. Amendment: before any file transfer from WOPR, re-probe the actual file path with find/ls THIS window (never scp from a recalled path), and search ~/.ssh/config for the documented SSH alias before guessing hostnames. The MCP server name is never an SSH hostname.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 22:05 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787129383579
+- RCA bucket: wrong premise
+- Trigger pattern: Treating a handoff/record claim ('WG link 10.100.0.15 down') as a real infrastructure component without first probing the host for the component's existence (wg binary, /etc/wireguard, wg0 device), th
+- Reversal note: 2026-08-19 follow-up: I filed #27613 'Julia WG link 10.100.0.15 down' from a handoff claim without first probing that the component existed. On-site evidence (sudo -S escalation via crontab) proved Julia has NO /etc/wireguard, NO wg/wg-quick binary, NO wg0 device; Claudia has no wg0 either; WOPR wg0=10.100.0.1/24 has zero reachable peers. The WG fleet path was decommissioned (reverse SSH tunnels :2205/:2206 are canonical). Amendment: before declaring any link/component 'down' or filing a restore/repair idea, probe the target for the COMPONENT'S EXISTENCE first (binary, config dir, interface list) — a stale registry ref or record can name a path that was never installed. A 'link down' diagnosis requires the link to exist.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

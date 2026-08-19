@@ -6,12 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/19/2026, 8:36:20 AM PT | window: last 72h | 109 tasks | index total 848 (parsed 0, cached 848)
+Generated: 8/19/2026, 9:49:32 AM PT | window: last 72h | 109 tasks | index total 848 (parsed 2, cached 846)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1787122887382` | 8/19/2026, 9:28:56 AM | 466 | 4138KB | #San Mateo EMSA Complaint |
+| `1787138864086` | 8/19/2026, 9:28:07 AM | 74 | 429KB | #Frankenstein LLM GLM Speedup |
 | `1787148101456` | 8/19/2026, 7:01:52 AM | 3 | 8KB | like lightning mcqueen from Cars, who is speed in frankensein-llm |
-| `1787138864086` | 8/19/2026, 4:35:01 AM | 40 | 201KB | #Frankenstein LLM GLM Speedup |
 | `1787138798545` | 8/19/2026, 4:26:38 AM | 1 | 11KB | Ok, i iidd pay the API for Deepseek and can’t tell why it’s so much faster. Was it you or  |
 | `1787132045559` | 8/19/2026, 4:23:45 AM | 104 | 526KB | Which student submitted the most tickets and what was the reason? |
 | `1787134526151` | 8/19/2026, 4:23:40 AM | 44 | 89KB | pelase run the fix avp progrma on my desktop |
@@ -20,7 +21,6 @@ Generated: 8/19/2026, 8:36:20 AM PT | window: last 72h | 109 tasks | index total
 | `1787136150136` | 8/19/2026, 4:23:02 AM | 26 | 51KB | so after 4 then should i spill to 120B? |
 | `1787128400456` | 8/19/2026, 4:22:39 AM | 152 | 250KB | Which student submitted the most tickets and what was the reason? |
 | `1787132220305` | 8/19/2026, 4:21:05 AM | 400 | 6979KB | #Frankenstein LLM Wedge |
-| `1787122887382` | 8/19/2026, 3:31:26 AM | 440 | 4077KB | #San Mateo EMSA Complaint |
 | `1787096297068` | 8/19/2026, 3:23:20 AM | 892 | 7996KB | #Julia/Claudia |
 | `1787129383579` | 8/19/2026, 3:20:19 AM | 69 | 212KB | Which student submitted the most tickets and what was the reason? |
 | `1787132186331` | 8/19/2026, 2:36:41 AM | 2 | 13KB | #Frankenstein LLM Wedge |
@@ -124,19 +124,62 @@ Generated: 8/19/2026, 8:36:20 AM PT | window: last 72h | 109 tasks | index total
 
 ## Per-window detail
 
-### `1787148101456` — 8/19/2026, 7:01:52 AM PT — 3 turns
+### `1787122887382` — 8/19/2026, 9:28:56 AM PT — 466 turns
 
 **Original task:**
 
 ```
-like lightning mcqueen from Cars, who is speed in frankensein-llm
+#San Mateo EMSA Complaint
+
+In the spirit of the most recent TDSHS responses sent yesterday (see handoff cocuments and https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations), please provide a PDF copy in dissection method and gold standard, etc... method for requests by Chad Henry detailed in emails received requesting deadline for 8/19 at 12:00 PST. 
+
+See also: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=detail&id=31 
+
+As well as Chad Henry's email to rmajor@emsuniversity.com and attached PDF documents
 ```
 
-**Ideas referenced:** #12459
+**Ideas referenced:** #13437, #178712, #19370, #23945, #25185, #2554, #25636 [proposed], #25637 [proposed], #25638 [proposed], #25639 [proposed], #2569, #2570, #2571, #2573, #25916, #25973, #26096, #26154, #26167, #26170, #26322, #26471, #26475, #26476, #26711, #26712, #26713 [proposed], #26715 [deployed], #26827, #26931, #26993, #27069, #27100, #27109, #27110, #27128, #27129, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27287, #27353, #27354, #27355, #27480 [executing], #27481 [executing], #27500 [proposed], #27501 [proposed], #27506 [proposed], #27513 [proposed], #27516 [proposed], #27517 [proposed], #27519 [proposed], #27521 [proposed], #27588 [proposed], #366377
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1787138864086` — 8/19/2026, 4:35:01 AM PT — 40 turns
+```
+ (verbatim from .clinerules/91)
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787123670897 - San Mateo LEMSA audit response PDF (Chad Henry, deadline 8/19 12:00 PM PT). Compressed at 80% of 200K.
+
+Where we left off (verified 2026-08-19 01:06 PT):
+- FINAL PDF placed: ~/Desktop/EMSU_RESPONSE_SAN_MATEO_AUDIT_FINAL_2026-08-19.pdf (120,882 bytes, sha256 d8248704f112f3ad83f37df6870aa3851ee0752be1cc35cf2d08ab30231e6a7b, 9pp Letter, gold-standard TDSHS closing)
+- Server canonical copy: personnel/investigations/san-mateo-2026/EMSU_RESPONSE_SAN_MATEO_AUDIT_DRAFT.pdf; renderer personnel/scripts/compliance_letterhead_pdf.py patched to gold-standard closing + YAML strip (backup .bak-goldstd-closing-20260819-002703)
+- Chad's ask (decoded from Spark mail store): upload ALL requested info to the San Mateo Box folder by 12:00 PM PT today
+- Idea #27480 [executing]: exhibit assembly + Box upload, open until noon today
+- Investigations URL lockdown: deny added in /var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf + /etc/nginx/sites-enabled/emtskills; external curl 403 direct PDF, 403 notice PDF, 401 auth route
+- Idea #27481 [deployed]: the lockdown above, stamped in DB 01:03 PT (UPDATE rows affected=1); both ideas carry efficiency_priority=1
+
+Open threads to drive next:
+1. #27480 [executing] - reconcile both ideas, then finish the completion gate loop below
+
+COMPLETION GATE LOOP (exactly what remains, in order): First reconcile_ideas([27480, 27481]) and expect idea 27480 [executing] because the exhibit upload is still open. Then rewrite the attempt_completion result fixing the 5 failures clinerules_validate_completion named at 00:57 PT: zero em dashes (R01), real evidence markers (R323), an idea-tagged reversal line (R317), no bare idea numbers, and the DB-stamped tag on the lockdown idea (SELF_CONTRADICTING fix). Result body sections: PDF handoff details (path + sha256 + pages), METHOD (TDSHS gold-standard per Ruben steer, NOT TPIA; dissection Parts I-IV; rule 302 gates pass: 0 em dashes, 0 URLs, 0 apologies, 0 student names; Ward-consistency preserved), WHAT CHAD'S EMAILS REQUESTED (7/31 original to Matt Rios + 8/10 extension to Ruben, Box folder, noon deadline), an exhibit upload section under #27480 [executing] open until noon, the # Reversal Log (nginx surface flip, RCA bucket: unread source, causal idea 27481, DB-stamped), then the PICKUP PROMPT block (47-char U+2550 dividers).
+
+Then expect idea 27481 [deployed] in the same reconcile return (lockdown section with the 403/401 curl evidence). Then clinerules_validate_completion(result_text, task_prompt, task_id=1787123670897) repeating until ALL PASSED, then clinerules_check_gate(task_id=1787123670897) must return GATE CLEAR, then attempt_completion.
+
+Reference IDs:
+- Ideas filed: #27480 [executing]
+- Ideas closed: none
+- Ideas filed: #27481 [deployed]
+- Files touched: personnel/investigations/san-mateo-2026/EMSU_RESPONSE_SAN_MATEO_AUDIT_DRAFT.pdf, personnel/scripts/compliance_letterhead_pdf.py, /var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf, /etc/nginx/sites-enabled/emtskills, ~/Desktop/EMSU_RESPONSE_SAN_MATEO_AUDIT_FINAL_2026-08-19.pdf
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+
+## Key references
+- IDs: #27480 [executing], task 1787123670897
+- Files: ~/Desktop/EMSU_RESPONSE_SAN_MATEO_AUDIT_FINAL_2026-08-19.pdf, /var/www/emtskills/personnel/investigations/san-mateo-202
+```
+
+### `1787138864086` — 8/19/2026, 9:28:07 AM PT — 74 turns
 
 **Original task:**
 
@@ -153,36 +196,72 @@ Also there is below to loook atYes, GLM-5.2 is the culprit, and no, we do not se
 30s co
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11944, #12314, #12365, #12366, #12368, #12477, #12584, #12618, #12824, #12872, #12878, #13108, #13202, #13874, #16163, #16265, #16304, #16844, #178712, #178714, #18312, #18326, #25097, #2537, #2583 [superseded], #26908, #26923, #27259, #27494 [executing], #27508 [executing], #27514 [blocked], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524 [proposed], #27531 [proposed], #27533 [executing]
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11944, #11945, #12314, #12365, #12366, #12368, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12824, #12872, #12878, #13108, #13202, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1754, #1755, #1779, #178712, #178714, #1798, #1828, #18312, #18326, #19567, #1989, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2254, #2258, #2298, #2299, #2307, #23169, #24172, #24217, #25097, #25185, #2537, #25378, #25381, #2546, #25470, #25646, #2583 [superseded], #26908, #26922 [deployed], #26923, #26927 [deployed], #26932 [deployed], #27236, #27249 [executing], #27250, #27259, #27494 [executing], #27508 [executing], #27514 [blocked], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524 [proposed], #27531 [proposed], #27533 [executing], #6826, #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
-og
-- No reversals this window.
+ from the pickup prompt below.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787140864000 — Frankenstein LLM: why DeepSeek feels faster, GLM stall, and the idle 235B gap.
+Pick up task #1787126689836 — GLM-5.2 ring decode speedup (max_num_seqs 15→32 relaunch).
 
-Where we left off (verified 2026-08-19 04:31 PT):
-- DeepSeek speed = cloud hardware, NOT the payment; paying only made the rung reliable. Balance $498.72 topped-up, is_available=true (verified: emsu-operations ssh_command curl api.deepseek.com/user/balance returned topped_up_balance 498.72). 585 reqs / 43M input tokens yesterday 04:46-22:56 PT (verified: emsu-operations ssh_command mysql query of llm_call_log returned 585 reqs 43009942 in_tok MIN 2026-08-18 04:46:10 MAX 22:56:31); still serving now (verified: emsu-operations ssh_command grep /tmp/emsu_router_audit.log returned picked=deepseek-v4-pro at 2026-08-19T11:28:45Z)
-- Not DeepSeek-only: last 2h mix = gpt-oss-120b 36, frankenstein-tools 19, frankenstein-llm 19, haiku 18, small local 16 (verified: emsu-operations ssh_command mysql SELECT model_used COUNT(*) FROM llm_call_log WHERE ts>NOW()-INTERVAL 2 HOUR returned those counts)
-- GLM ring decode-starved by chunked-prefill: PREFILL 3586 vs DECODE 6.10 tok/s at 10-11 running = 0.55/stream (verified: emsu-operations ssh_command /tmp/ringrate.sh printed DECODE=6.10 PREFILL=3586.33); fix max_num_seqs 15->32 awaits Ruben relaunch approval (#27524 [proposed]); ring now 6 running 0 waiting (verified: emsu-operations ssh_command curl :8210/metrics returned num_requests_running 6.0 num_requests_waiting 0.0)
-- Julia 235B UP (verified: emsu-operations ssh_command curl :11513/v1/models HTTP 200 id qwen3-235b max_model_len 131072) and IN the adapter pool (verified: emsu-operations ssh_command sudo cat /proc/<adapter PID>/environ returned FRANK_TOOLS_UPSTREAMS including http://127.0.0.1:11513) but canary decode_live=false tok_s=0.0 (verified: emsu-operations ssh_command cat /tmp/frankenstein_canary_health.json returned 11513 healthy=true tok_s=0.0 decode_live=false), last hits 237-251s TTFB (verified: emsu-operations ssh_command tail /var/log/emsu-adapter-upstream.log returned ttfb_s 251.847/237.569/238.079 at 04:23 PT) -> adapter skips it, 0 picks in last 2000 audit lines
-- Cicero 235B UP (verified: emsu-operations ssh_command curl :11520/v1/models HTTP 200 cicero-235b-qwen3) but batch-tier L4b by design, not in fast adapter pool
-- Spill ladder (verified: project-frankenstein frankenstein_registry returned registry_readable=true source=registry tier_fallthrough L4g->L4b->L4f->L2->L3): GLM-local -> Cicero -> frankenstein-llm pool -> DeepSeek -> glm-5.2 cloud
+Where we left off (verified 2026-08-19 09:24 PT):
+- Ruben approved the relaunch: "yes please do it as the document says."
+- Doc = /var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md. Safety sequence: (1) watchdog un-paused FIRST, (2) reproducible launch artifact written, (3) ONE parameter change max_num_seqs 15→32, (4) controlled CONC ladder watching num_preemptions_total.
+- Step 1 in place: watchdog running (PID 1584098 on Cato since Aug 10), sci-notation-corrected awk parser confirmed; as of 09:22 /tmp/glm52_ring_paused EXISTS (verify current state before acting).
+- Step 2 in place: launch artifact /home/rubenmajor/glm52_ring_relaunch_mns32.sh on Cato (chmod +x). Exact cmdline captured from PID 1283394 (root, Aug 05): PP=6, max-num-seqs 15, max-num-batched-tokens 16384, chunked-prefill, port 8210, model GLM-5.2-NVFP4-REAP-504B, VLLM_ENGINE_READY_TIMEOUT_S=1800.
+- Ring topology: rank0 Cato :8210 head; ssh ports 2203(Cesar) 2204(Cato) 2205(Julia) 2206(Claudia) + tiberius via Cesar jump.
+- BLOCKER: vllm ROOT-owned; no passwordless sudo via jump. Use supervisor: /home/rubenmajor/bin/glm52_ring_supervisor.sh (@reboot cron) + glm52_keep_warm.sh (*/2) + /tmp/glm52_ring_supervisor.log. Read FIRST.
+- Lane guard contract: FRANK_GLM_RING_TOTAL=8, FRANK_GLM_OPS_CEILING=4, EMSU_GLM_FLOOR_OFF=1, EMSU_GLM_FIRST_ALL_LANES=0. Re-verify after relaunch.
+- Baseline: DECODE 6.10 tok/s at 10-11 running = 0.55/stream; PREFILL 3586 tok/s. Target: toward 0.99/stream at c=8, watch num_preemptions_total.
 
 Open threads to drive next:
-1. #27533 [executing] — Julia 235B canary decode_live=false / 250s TTFB: diagnose canary timeout vs genuine slowness, get the free 235B serving Cline turns instead of paid DeepSeek spill (efficiency_priority=1 set)
-2. #27524 [proposed] — GLM ring decode relaunch max_num_seqs 15->32, controlled sequence; awaits Ruben approval (human-gated: bad params froze 5/6 nodes before)
-3. #27531 [proposed] — Rule-91 steering trim (297/315 amendments to case-law, skeleton recency, 200KB tripwire); awaits Ruben review (carried from prior window)
-4. #27508 [executing] — Canary quarantine for wedged-but-running engines + stale-healthy decay (carried from prior window)
-5. #27514 [blocked] — emsu-codegen 74% empty streams; executor attempt failed, needs manual impl per rule 267 GATE C (carried from prior window)
-6. #27515 [executing] — Cloudflare tunnel-abort classification + or
+1. #27524 [executing] — the relaunch itself: read supervisor scripts, stop old ring (rank 0 first), relaunch 6 nodes with max_num_seqs 32, verify /v1/models 200 + decode probe, CONC ladder, lane guard env unchanged.
+2. #27531 [proposed] — rule-91 steering trim awaits Ruben review.
+3. #27508 [executing] — canary quarantine for wedged-but-running engines.
+4. #27514 [blocked] — emsu-codegen 74% empty streams, manual impl per rule 267 GATE C.
+5. #27515 [executing] — Cloudflare tunnel-abort classification.
+6. #27494 [executing] — drop-in consolidation (55+ files).
+7. DeepSeek balance top-up (human-only decision — no idea).
+
+Reference IDs:
+- Ideas filed: #27524 [executing], #27531 [proposed], #27508 [executing], #27514 [blocked], #27515 [executing], #27494 [executing]
+- Prior-window lane-cap and fallback-linter ideas are already live, no action needed
+- Files touched: /home/rubenmajor/glm52_ring_relaunch_mns32.sh (Cato); prior window: frankenstein-tools.service.d drop-ins, frankenstein_tools_adapter.py, _router_core.py, config.yaml, frank_fallback_lint.py
+- Probes on WOPR: /tmp/ringrate.sh, /tmp/sem_pc.py, /tmp/xmlmode_probe.py, /tmp/pc_test.py, /tmp/r91p.txt, /tmp/fo.txt
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+
+# Reversal Log
+No reversals this window.
+</result>
+<task_progress>
+- [x] Signal-file check (rule 119)
+- [x] Read measurement doc, verified watchdog, captured cmdline, wrote launch artifact
+- [x] Discovered root-owned blocker + supervisor mechanism + /tmp/glm52_ring_paused present
+- [x] Compressed per rule 119 at 95% context
+- [x] Validator ALL PASSED + GATE CLEAR
+- [x] attempt_completion with pickup prompt
+</task_progress>
+</attempt_completion>
 ```
+
+### `1787148101456` — 8/19/2026, 7:01:52 AM PT — 3 turns
+
+**Original task:**
+
+```
+like lightning mcqueen from Cars, who is speed in frankensein-llm
+```
+
+**Ideas referenced:** #12459
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787138798545` — 8/19/2026, 4:26:38 AM PT — 1 turns
 
@@ -442,61 +521,6 @@ ROUND 1 (01:34 PT) — SLO drift: FRANK_SLO_TTFB_INTERACTIVE had drifted 30→18
 **Ideas referenced:** #11397, #11953, #11991, #12251, #12269, #12368, #12463, #12584, #13108, #13470, #13831, #13842, #13874, #16590, #16625, #1724 [deployed], #1754, #1755, #178712, #1893 [deployed], #19338, #1989, #19903, #2050, #2100 [deployed], #2254, #2258, #2307, #23169, #24172, #24217, #25171, #25185, #2524 [deployed], #2525 [deployed], #25468, #25471, #2571 [deployed], #25755, #25764, #2579, #2582 [deployed], #26400, #26503, #26773, #26774, #26932, #27447 [deployed], #27494 [executing], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [executing], #27520 [deployed], #27524 [proposed], #27531 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787122887382` — 8/19/2026, 3:31:26 AM PT — 440 turns
-
-**Original task:**
-
-```
-#San Mateo EMSA Complaint
-
-In the spirit of the most recent TDSHS responses sent yesterday (see handoff cocuments and https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations), please provide a PDF copy in dissection method and gold standard, etc... method for requests by Chad Henry detailed in emails received requesting deadline for 8/19 at 12:00 PST. 
-
-See also: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=detail&id=31 
-
-As well as Chad Henry's email to rmajor@emsuniversity.com and attached PDF documents
-```
-
-**Ideas referenced:** #13437, #178712, #19370, #23945, #25185, #2554, #25636 [proposed], #25637 [proposed], #25638 [proposed], #25639 [proposed], #2569, #2570, #2571, #2573, #25916, #25973, #26096, #26154, #26167, #26170, #26322, #26471, #26475, #26476, #26711, #26712, #26713 [proposed], #26715 [deployed], #26827, #26931, #26993, #27069, #27100, #27109, #27110, #27128, #27129, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27287, #27353, #27354, #27355, #27480 [executing], #27481 [executing], #27500 [proposed], #27501 [proposed], #27506 [proposed], #27513 [proposed], #27516 [proposed], #27517 [proposed], #27519 [proposed], #27521 [proposed], #366377
-
-**Last PICKUP PROMPT:**
-
-```
- (verbatim from .clinerules/91)
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787123670897 - San Mateo LEMSA audit response PDF (Chad Henry, deadline 8/19 12:00 PM PT). Compressed at 80% of 200K.
-
-Where we left off (verified 2026-08-19 01:06 PT):
-- FINAL PDF placed: ~/Desktop/EMSU_RESPONSE_SAN_MATEO_AUDIT_FINAL_2026-08-19.pdf (120,882 bytes, sha256 d8248704f112f3ad83f37df6870aa3851ee0752be1cc35cf2d08ab30231e6a7b, 9pp Letter, gold-standard TDSHS closing)
-- Server canonical copy: personnel/investigations/san-mateo-2026/EMSU_RESPONSE_SAN_MATEO_AUDIT_DRAFT.pdf; renderer personnel/scripts/compliance_letterhead_pdf.py patched to gold-standard closing + YAML strip (backup .bak-goldstd-closing-20260819-002703)
-- Chad's ask (decoded from Spark mail store): upload ALL requested info to the San Mateo Box folder by 12:00 PM PT today
-- Idea #27480 [executing]: exhibit assembly + Box upload, open until noon today
-- Investigations URL lockdown: deny added in /var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf + /etc/nginx/sites-enabled/emtskills; external curl 403 direct PDF, 403 notice PDF, 401 auth route
-- Idea #27481 [deployed]: the lockdown above, stamped in DB 01:03 PT (UPDATE rows affected=1); both ideas carry efficiency_priority=1
-
-Open threads to drive next:
-1. #27480 [executing] - reconcile both ideas, then finish the completion gate loop below
-
-COMPLETION GATE LOOP (exactly what remains, in order): First reconcile_ideas([27480, 27481]) and expect idea 27480 [executing] because the exhibit upload is still open. Then rewrite the attempt_completion result fixing the 5 failures clinerules_validate_completion named at 00:57 PT: zero em dashes (R01), real evidence markers (R323), an idea-tagged reversal line (R317), no bare idea numbers, and the DB-stamped tag on the lockdown idea (SELF_CONTRADICTING fix). Result body sections: PDF handoff details (path + sha256 + pages), METHOD (TDSHS gold-standard per Ruben steer, NOT TPIA; dissection Parts I-IV; rule 302 gates pass: 0 em dashes, 0 URLs, 0 apologies, 0 student names; Ward-consistency preserved), WHAT CHAD'S EMAILS REQUESTED (7/31 original to Matt Rios + 8/10 extension to Ruben, Box folder, noon deadline), an exhibit upload section under #27480 [executing] open until noon, the # Reversal Log (nginx surface flip, RCA bucket: unread source, causal idea 27481, DB-stamped), then the PICKUP PROMPT block (47-char U+2550 dividers).
-
-Then expect idea 27481 [deployed] in the same reconcile return (lockdown section with the 403/401 curl evidence). Then clinerules_validate_completion(result_text, task_prompt, task_id=1787123670897) repeating until ALL PASSED, then clinerules_check_gate(task_id=1787123670897) must return GATE CLEAR, then attempt_completion.
-
-Reference IDs:
-- Ideas filed: #27480 [executing]
-- Ideas closed: none
-- Ideas filed: #27481 [deployed]
-- Files touched: personnel/investigations/san-mateo-2026/EMSU_RESPONSE_SAN_MATEO_AUDIT_DRAFT.pdf, personnel/scripts/compliance_letterhead_pdf.py, /var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf, /etc/nginx/sites-enabled/emtskills, ~/Desktop/EMSU_RESPONSE_SAN_MATEO_AUDIT_FINAL_2026-08-19.pdf
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-
-## Key references
-- IDs: #27480 [executing], task 1787123670897
-- Files: ~/Desktop/EMSU_RESPONSE_SAN_MATEO_AUDIT_FINAL_2026-08-19.pdf, /var/www/emtskills/personnel/investigations/san-mateo-202
-```
 
 ### `1787096297068` — 8/19/2026, 3:23:20 AM PT — 892 turns
 

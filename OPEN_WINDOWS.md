@@ -6,10 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/19/2026, 6:21:49 AM PT | window: last 72h | 108 tasks | index total 847 (parsed 0, cached 847)
+Generated: 8/19/2026, 7:36:20 AM PT | window: last 72h | 109 tasks | index total 848 (parsed 1, cached 847)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1787148101456` | 8/19/2026, 7:01:52 AM | 3 | 8KB | like lightning mcqueen from Cars, who is speed in frankensein-llm |
 | `1787138864086` | 8/19/2026, 4:35:01 AM | 40 | 201KB | #Frankenstein LLM GLM Speedup |
 | `1787138798545` | 8/19/2026, 4:26:38 AM | 1 | 11KB | Ok, i iidd pay the API for Deepseek and can’t tell why it’s so much faster. Was it you or  |
 | `1787132045559` | 8/19/2026, 4:23:45 AM | 104 | 526KB | Which student submitted the most tickets and what was the reason? |
@@ -122,6 +123,18 @@ Generated: 8/19/2026, 6:21:49 AM PT | window: last 72h | 108 tasks | index total
 ---
 
 ## Per-window detail
+
+### `1787148101456` — 8/19/2026, 7:01:52 AM PT — 3 turns
+
+**Original task:**
+
+```
+like lightning mcqueen from Cars, who is speed in frankensein-llm
+```
+
+**Ideas referenced:** #12459
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787138864086` — 8/19/2026, 4:35:01 AM PT — 40 turns
 

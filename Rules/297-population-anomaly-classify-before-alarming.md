@@ -307,3 +307,33 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: - 12s-timeout root cause -> live 180s/900s | unread source | causal rule updated: 297
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 06:24 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787120640000
+- RCA bucket: insufficient probe
+- Trigger pattern: Naming a hook/code path as the cause of an API error from timestamp correlation alone, without grepping the code or reproducing the failing request shape
+- Reversal note: Prior completion claimed the emsu pre-call hook 'mutates data and drops data[messages]' as the cause of Router.acompletion() missing-messages 500s, based only on log correlation (500s followed GLM probe WEDGE warnings). Code grep found NO pop/del of messages in any hook, and a controlled reproduction proved the 500 fires when the CALLER sends a body without a messages key (RUBEN AI health sweep anthropic-format pings). Amendment: log correlation (error A follows warning B) is NOT a causal classification. Before naming a code path as the cause of a request-shape error, reproduce the exact error with a controlled request and cite the line or the reproduced body that proves it.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 06:26 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: CFA-24h-audit-20260818
+- RCA bucket: insufficient probe
+- Trigger pattern: Attributing failure cause from an output column (ai_response empty) without reading the table's dedicated error_message column
+- Reversal note: CFA SMS failure classification: I first attributed 93 failed SMS rows to 'empty deepseek responses' based on the ai_response column alone. The error_message column (checked later) showed all 101 were quality-gate BLOCKS (criterion_4 x64, criterion_2 x25, leak x8), not LLM empties. Amendment: when classifying a failure population from a log table, enumerate the table's diagnostic columns (DESCRIBE) and read the designated error/reason column BEFORE attributing cause from an adjacent column; an empty output column describes the OUTCOME, the error column names the CAUSE.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 06:29 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787098931968
+- RCA bucket: insufficient probe
+- Trigger pattern: Attributing failure cause from an output column (ai_response empty) without reading the table's dedicated error_message column
+- Reversal note: CFA SMS failure classification: I first attributed 93 failed SMS rows to 'empty deepseek responses' based on the ai_response column alone. The error_message column (checked later) showed all 101 were quality-gate BLOCKS (criterion_4 x64, criterion_2 x25, leak x8), not LLM empties. Amendment: when classifying a failure population from a log table, enumerate the table's diagnostic columns (DESCRIBE) and read the designated error/reason column BEFORE attributing cause from an adjacent column; an empty output column describes the OUTCOME, the error column names the CAUSE.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

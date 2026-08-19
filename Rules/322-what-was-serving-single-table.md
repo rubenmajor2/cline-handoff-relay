@@ -41,3 +41,13 @@ When Ruben asks what was serving, the answer is ONE table where each ROW is an U
 1. Answer split the fleet into two tables (frankenstein-tools vs frankenstein-llm) plus paragraphs, and left DeepSeek without a cost label — read as paid GLM.
 2. After the first correction to "one table", the table still used routing names (`frankenstein-llm`, `frankenstein-tools`) as rows instead of the underlying physical LLMs. Ruben: "I want to see the underlying LLM (GLM 5.2 Local, 120Bs, 235B Julia, GLM Cloud, etc.)."
 3. Third failure: Julia-235B was marked DOWN in the table from a single refused tunnel probe at 12:48 PT, but Ruben's own live test at 12:58 PT via `litellm:julia-235b` served quickly and the router audit recorded `req: julia-235b → picked: julia-235b` (no substitution). The verdict was TUNNEL FLAPPING, not model DOWN. This is the source of the "TUNNEL vs MODEL" + "one probe is never a verdict" discipline above.
+
+## Amendment (from reversal, 2026-08-19 06:25 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787098931968
+- RCA bucket: stale assumption
+- Trigger pattern: Quoting a registry rung name (cato-120b) as the serving backend without resolving router-audit picked + live process truth; stale fleet labels treated as serving models
+- Reversal note: Completion claimed 'frankenstein-llm -> cato-120b clean tool call' but there is no Cato 120B: router audit shows req frankenstein-llm picked frankenstein-tools (federation, GLM-first on all lanes), and the underlying physical model is the GLM-5.2 hex ring PP=6 (Pompeii-50c0/Marcus-63ce/Tiberius-e9e0/Cesar-3b41/Cato-2aa8/Augustus-e3b2, Cato=rank 0, 671 tok/s aggregate off cato :8210/metrics). 'cato-120b' is a stale registry rung annotation (frankenstein_registry.yaml lines 117/244). Amendment: a registry rung name or probe-header backend label is a ROUTING NAME, never a physical model; before quoting what served, resolve via router audit picked field + federation upstream truth + live ps; Cato/Cesar claims must name the GLM ring, not 120B.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

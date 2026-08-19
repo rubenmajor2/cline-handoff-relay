@@ -6,10 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/18/2026, 4:10:37 PM PT | window: last 72h | 81 tasks | index total 814 (parsed 3, cached 811)
+Generated: 8/18/2026, 5:20:32 PM PT | window: last 72h | 82 tasks | index total 816 (parsed 2, cached 814)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1787096297068` | 8/18/2026, 5:20:19 PM | 75 | 245KB | #Julia/Claudia |
+| `1787096428156` | 8/18/2026, 4:56:26 PM | 174 | 399KB | Getting {"message":"Connection error.","modelId":"glm-5.3","providerId":"zai"} |
 | `1787073073602` | 8/18/2026, 4:03:58 PM | 628 | 5679KB | # GLM 5.3: |
 | `1787090950949` | 8/18/2026, 4:03:29 PM | 200 | 465KB | #Argus |
 | `1787081272363` | 8/18/2026, 3:36:27 PM | 100 | 21842KB | Please add GLM 5.3 (Cloud) to my list of models here to choose from in cline under the API |
@@ -90,11 +92,75 @@ Generated: 8/18/2026, 4:10:37 PM PT | window: last 72h | 81 tasks | index total 
 | `1786844173723` | 8/16/2026, 12:11:05 AM | 554 | 2158KB | #Oct Ring / Hypothetical  |
 | `1786844918374` | 8/15/2026, 9:13:04 PM | 946 | 13140KB | Babysit Frankenstein Exeucotr for 90 minutes and resolve any issues that might come up. Do |
 | `1786842592907` | 8/15/2026, 8:46:01 PM | 516 | 2989KB | #Rule 317 |
-| `1786836908956` | 8/15/2026, 4:48:21 PM | 72 | 1004KB | Is this legitimate? If so, the message should be a little more sympathetic and less techni |
 
 ---
 
 ## Per-window detail
+
+### `1787096297068` — 8/18/2026, 5:20:19 PM PT — 75 turns
+
+**Original task:**
+
+```
+#Julia/Claudia
+
+Get Julia Claudia 235 back online.
+
+Answer to "when did Julia/Claudia go dark" — bracketed by the live router audit log + a fresh probe, all times PT:
+
+- 12:49 — midday flap window: WOPR-side check found nothing listening on :11513/:11514 (the flap period tracked by #27232 [proposed]).
+- 12:58 — Ruben's "Are you alive" via litellm:julia-235b SERVED (audit 19:58:52Z: picked=julia-235b, no substitution).
+- 13:15 — LAST KNOWN-GOOD serve: "say OK" canary picked julia-235b (20:15:51Z). Zero julia-235b picks in the log after this.
+- 14:49-14:53 — Julia confirmed LAYER-2 dark from 3 v
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #17788, #1779, #1780, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038 [executing], #2127, #2168, #2299, #25378, #25381, #2546, #2550, #2554, #26471, #26475, #26476, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #27069 [executing], #27128, #27129, #27201, #27232 [proposed], #27236 [proposed], #366377, #7142, #7149
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787096428156` — 8/18/2026, 4:56:26 PM PT — 174 turns
+
+**Original task:**
+
+```
+Getting {"message":"Connection error.","modelId":"glm-5.3","providerId":"zai"}
+
+for GLM 5.3 upon initial iteration
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #178709, #18312, #18326, #25097, #25185, #2537, #2569 [resolved], #26908, #26923, #27240 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ Log
+No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787096428156 — GLM-5.3 connection error diagnosis and fix.
+
+Where we left off (verified 2026-08-18 16:55 PT):
+- glm-5.3 on ZhipuAI returns HTTP 429 (rate limit) on every call — model-specific, not account-wide (verified: curl probes from Mac+WOPR)
+- LiteLLM glm-5.2 cloud entry was repointed to zai/glm-5.3, breaking L3 tier
+- Reverted to zai/glm-5.2, fixed YAML quoting, restarted LiteLLM
+- Verified glm-5.2 routes correctly (verified: frankenstein_verify_routing HTTP 200, backend=api.z.ai)
+- Bug library incident recorded in frankenstein_router_incidents table (problem_key=glm53_rate_limited_2026_08_18, status=resolved)
+
+Open threads to drive next:
+1. #27240 [proposed] — probe glm-5.3 rate limits in 3-5 days; if 200, repoint cloud entry and run bake-off (rule 121)
+
+Reference IDs:
+- Ideas filed: #27240 [proposed]
+- Bug library: frankenstein_router_incidents row (problem_key=glm53_rate_limited_2026_08_18, status=resolved, not an orchestrator_idea)
+- Files touched: /etc/litellm/config.yaml (line 511: zai/glm-5.3 to zai/glm-5.2, line 518: notes updated, line 519: stale remnant deleted)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
 
 ### `1787073073602` — 8/18/2026, 4:03:58 PM PT — 628 turns
 
@@ -3026,54 +3092,6 @@ Reference IDs:
 - Ideas filed: #26696 [deployed], #26710 [deployed], #26725 [deployed]
 - Files touched: /var/www/emtskills/bin/r317_eval_harness.php, /var/www/emtskills/lib/ai_cache_pad.php, /var/www/emtskills/lib/r317_best_of_n_selector.php, /var/www/emtskills/lib/doorman_output_quality_gate.php, /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts
 - Incident: frankenstein_router_incidents #2516, #2521
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786836908956` — 8/15/2026, 4:48:21 PM PT — 72 turns
-
-**Original task:**
-
-```
-Is this legitimate? If so, the message should be a little more sympathetic and less technical. Something that cites the reason why as well as the option to repeat the class at no extra charge. Give the link to the schedule and appropriate webstie. Tell them to register again. 
-
-If they are interested, to reply to the message with the course date/they registered for and basically it would waive the fee. To be eligible for this, they must have already paid full tuition, not had any of it refunded already and they mustt have either dropped or failed in the last year. 
-
-Those who got pro-rated ref
-```
-
-**Ideas referenced:** #0056, #11998, #155724, #1565, #1976, #218838, #26681 [proposed], #334155, #37474, #495057, #64748, #8211, #856404
-
-**Last PICKUP PROMPT:**
-
-```
-n mechanism (all human-gated).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — tuition waiver "repeat at no extra charge" eligibility logic and CFA message.
-
-Where we left off (verified 2026-08-15 16:47 PT):
-- Verified case 25708W-07 Fernando Vazquez Serrano: FAILED 2025-07-04, San Diego, accelerated. QB invoice 143754 PAID $1,395.00 full; invoice 161967 VOIDED (not a refund). No Authnet refund, no Affirm, no refund email.
-- Eligibility spec written to /var/www/emtskills/docs/specs/tuition_waiver_repeat_no_charge_spec.md (rubric, template, waiver workflow, CFA plan, open decisions).
-- Idea #26681 [proposed] filed for the waiver rubric + CFA template.
-- San Diego public URLs verified HTTP 200: https://sandiegoemt.com/classschedule/ (schedule) and https://sandiegoemt.com/register/ (register).
-- Upcoming San Diego classes present in Course_Schedules (sections 26722FT, 26723BC, 26724T, 26725FT, 26726W, 26727A, 26728FT, 26729FT, 26730BC, 26731FT).
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26681 [awaiting_review] — Ruben must resolve E1 (defines "last year"): rolling 12 months vs prior calendar year vs 15-month grace. This decides Fernando (13.4 months out). No waiver ships until resolved.
-2. #26681 [awaiting_review] — Resolve E4 (should no-show drops qualify?) and E6 (confirm refund detection across QB + Authnet + email log as the single gate; confirm soft-message until Vicky verifies).
-3. #26681 [awaiting_review] — Decide the waiver application mechanism: $0 invoice vs discount code vs internal fee-waiver flag, and where it lives in the DB.
-4. #26681 [awaiting_review] — After E1 is resolved, build lib/TuitionWaiverEligibility.php (shared CFA helper returning {eligible, reason, flagged_for_vicky, evidence}) and wire into chat/email/SMS/voice/ticket agents.
-
-Reference IDs:
-- Student: 25708W-07 (Fernando Vazquez Serrano)
-- Ideas filed: #26681 [proposed]
-- Files touched: /var/www/emtskills/docs/specs/tuition_waiver_repeat_no_charge_spec.md
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════

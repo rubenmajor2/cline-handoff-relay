@@ -1259,6 +1259,59 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
                 `and add a '(verified: ...)' marker quoting what the probe returned. Never recite fleet/LLM status from memory.`);
         }
     }
+    // ── RULE 323 (truth protocol — VERITAS L3, 2026-08-19) ──────────────────
+    // R323_NAKED_CLAIM: high-stakes bare claims (money, deadlines, student status,
+    // production deploys) with no evidence marker, no inference label, no UNKNOWN.
+    // R323_FAKE_EVIDENCE: (verified: ...) markers containing no real artifact —
+    // verification-of-verification, so markers can't be satisfied by prose alone.
+    // Scope: scan only the BODY (before the first rule-91 divider) so the pickup
+    // block itself cannot false-fire (R01 lesson: scope the match or burn).
+    {
+        const firstDivider = lines.findIndex((l) => /^═{20,}$/.test(l.trim()));
+        const bodyLines = firstDivider >= 0 ? lines.slice(0, firstDivider) : lines;
+        const evidenceOk = /\((?:verified|probed|measured|confirmed)\s*:|\((?:inference|stale)\s*:|\b(?:HTTP\s*\d{3}|\/v1\/|curl\s|tok\/s|SELECT\s|DESCRIBE\s|returned\s+\d)\b|\bunverified\b|\b(?:I|we)\s+don.t\s+know\b|\bcannot\s+verify\b/i;
+        const highStakesShapes = [
+            /\$\s?\d[\d,]*(?:\.\d{2})?\b.{0,60}\b(?:balance|paid|owed|refund|invoice|payment|credit|due)\b|\b(?:balance|paid|owed|refund|invoice|payment|credit)\b.{0,60}\$\s?\d[\d,]*(?:\.\d{2})?\b/i,
+            /\b(?:deadline|due\s+date)\b.{0,50}\b(?:is|was|remains?)\b.{0,40}(?:\d{1,2}\/\d{1,2}|\d{4}-\d{2}-\d{2}|today|tomorrow|monday|tuesday|wednesday|thursday|friday|saturday|sunday|next\s+week)\b/i,
+            /\b(?:student|he|she|they)\b.{0,40}\b(?:is|was|remains?)\b.{0,40}\b(?:enrolled|suspended|dropped|graduated|completed|cleared|approved|denied)\b/i,
+            /\b(?:deployed\s+to\s+production|shipped\s+to\s+production|live\s+in\s+production|fixed\s+and\s+deployed|patched\s+and\s+deployed)\b/i,
+        ];
+        const naked = [];
+        for (let i = 0; i < bodyLines.length; i++) {
+            const line = bodyLines[i];
+            if (!highStakesShapes.some((re) => re.test(line)))
+                continue;
+            const ctx = (bodyLines[i - 1] || "") + "\n" + line + "\n" + (bodyLines[i + 1] || "");
+            if (!evidenceOk.test(ctx)) {
+                const clipped = line.trim().slice(0, 96);
+                if (!naked.includes(clipped))
+                    naked.push(clipped);
+            }
+        }
+        if (naked.length > 0) {
+            failures.push(`R323_NAKED_CLAIM: ${naked.length} high-stakes claim(s) with no evidence, inference label, or UNKNOWN admission: ` +
+                naked.map((s) => `"${s}"`).join("; ") + `. ` +
+                `Rule 323 Truth Protocol: every material claim must be PROVEN (cite the tool + what it returned), labeled INFERENCE (state premises), or stated UNKNOWN. Probe the canonical tool for this claim class, then re-state with a '(verified: ...)' marker.`);
+        }
+        const markerRe = /\((?:verified|probed|measured|confirmed)\s*:\s*([^)]{0,200})\)/gi;
+        const artifactShape = /\b(?:HTTP\s*\d{3}|\/v1\/|curl|grep|ssh|mysql|SELECT|DESCRIBE|php\s+-l|git\s|sha256)\b|\b\d[\d,]*\s*(?:tok\/s|ms|%|GB|GiB|MB|KB|bytes|rows?|tokens|days?|hours?|minutes?)\b|\d{4}-\d{2}-\d{2}|\d{1,2}:\d{2}\s*(?:PT|UTC|AM|PM)|\b[A-Za-z_]+\.[A-Za-z_]+\b|\bid\s*=?\s*\d+|#\d{3,}|["`]/i;
+        const knownTool = /\b(?:verify_payment_state|get_student_lifecycle_state|lookup_paperwork_state|get_student_360|check_exam_enforcement|check_proctoring_status|check_student|check_ticket|run_moodle_query|execute_query|fetch_data|ssh_command|read_server_file|check_server_logs|frankenstein_verify_routing|frankenstein_registry|frankenstein_host_probe|frankenstein_what_served|check_affirm_status|find_authnet_by_email|verify_routing|truth_judge|list_files|read_file|search_files|describe_table)\b/i;
+        const fake = [];
+        let m;
+        while ((m = markerRe.exec(result_text)) !== null) {
+            const inner = m[1];
+            if (!artifactShape.test(inner) && !knownTool.test(inner)) {
+                const clipped = m[0].slice(0, 80);
+                if (!fake.includes(clipped))
+                    fake.push(clipped);
+            }
+        }
+        if (fake.length > 0) {
+            failures.push(`R323_FAKE_EVIDENCE: ${fake.length} '(verified: ...)' marker(s) contain no real artifact (no tool name, HTTP code, number+unit, timestamp, table, or quoted output): ` +
+                fake.map((s) => `"${s}"`).join("; ") + `. ` +
+                `Rule 323 obligation 4: verification must be REAL. Name the tool you ran THIS session and what it returned. If you did not run a probe, you do not have a verification — run it now or downgrade the claim to INFERENCE/UNKNOWN.`);
+        }
+    }
     // ── RULE 317 / idea #25888: REVERSAL LOG (completion-time, zero per-turn overhead) ──
     // Ruben 2026-08-12 "Approved 25888" + steering "how do we deal with this potential
     // defect" (per-turn capture cost). Design: NO ledger written turn-by-turn. The
@@ -1975,6 +2028,77 @@ server.tool("clinerules_stats", "Quick stats on the rules corpus + recent lookup
         `Meta: ${meta.map((m) => `${m.k}=${m.v}`).join(", ")}`,
     ];
     return { content: [{ type: "text", text: lines.join("\n") }] };
+});
+// ─── clinerules_truth_judge (VERITAS L4, rule 323, 2026-08-19) ─────────────
+// Stronger-model CONTENT review. POSTs to the WOPR fleet API truth_judge action.
+// Judge ladder (server-side): glm-5.2-local -> deepseek-v4-pro -> glm-5.2 —
+// never weaker than the model under test. Auth via env (rule 302: no literal
+// keys in git-tracked files; FLEET_MCP_KEY is set in the launchd plist).
+const TRUTH_JUDGE_BASE = process.env.FRANKENSTEIN_API_BASE ?? "https://www.emsuniversity.com/emtskills/routes/api_fleet_inventory.php";
+const TRUTH_JUDGE_TIMEOUT_MS = 115_000;
+server.tool("clinerules_truth_judge", "VERITAS L4 TRUTH JUDGE (rule 323): a model strictly stronger than the one under test reviews an answer's CONTENT for factual support. Returns PASS/FAIL with every claim classified PROVEN/INFERENCE/UNSUPPORTED/CONTRADICTED plus named required fixes. MANDATORY before shipping answers containing money, student status, regulator, or fleet claims. Pass evidence = the tool outputs/probes you actually ran. Judge ladder: glm-5.2-local -> deepseek-v4-pro -> glm-5.2. Logged to truth_judge_log. Takes 30-90s: latency is acceptable, falsehood is not.", {
+    text: zod_1.z.string().describe("The answer text to judge (>= 20 chars, max ~24K chars)."),
+    evidence: zod_1.z.string().optional().describe("Tool outputs / probe results the author claims to have run. Paste real artifacts (tool names + what they returned)."),
+    surface: zod_1.z.string().optional().describe("Calling surface (cline, cfa_email, cfa_chat, executor...). Default cline."),
+    model_under_test: zod_1.z.string().optional().describe("The model that produced the text (for the measurement feed)."),
+}, async ({ text, evidence, surface, model_under_test }) => {
+    const key = process.env.FLEET_MCP_KEY ?? "";
+    if (!key) {
+        return { content: [{ type: "text", text: "TRUTH_JUDGE_UNAVAILABLE: FLEET_MCP_KEY not set in the clinerules MCP environment. Judge FAILS CLOSED (rule 320): hold this answer for human review." }] };
+    }
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), TRUTH_JUDGE_TIMEOUT_MS);
+    try {
+        const url = new URL(TRUTH_JUDGE_BASE);
+        url.searchParams.set("action", "truth_judge");
+        url.searchParams.set("key", key);
+        const r = await fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ text, evidence: evidence ?? "", surface: surface ?? "cline", model_under_test: model_under_test ?? "" }),
+            signal: ctrl.signal,
+        });
+        const body = await r.text();
+        let parsed = null;
+        try {
+            parsed = JSON.parse(body);
+        }
+        catch { /* non-json */ }
+        if (!parsed || parsed.verdict === undefined) {
+            return { content: [{ type: "text", text: `TRUTH_JUDGE_ERROR: fleet API returned HTTP ${r.status}, body: ${body.slice(0, 300)}. FAIL CLOSED (rule 320): hold for human review.` }] };
+        }
+        const out = [
+            `VERITAS TRUTH JUDGE verdict: ${parsed.verdict} (judge model: ${parsed.judge_model ?? "none"}, ${parsed.latency_ms ?? "?"} ms)`,
+        ];
+        if (parsed.verdict === "ERROR") {
+            out.push(`No judge reachable: ${parsed.error}. FAIL CLOSED (rule 320): hold this answer for human review. Never wave through without a judge.`);
+        }
+        else {
+            const claims = Array.isArray(parsed.claims) ? parsed.claims : [];
+            if (claims.length) {
+                out.push("Claims:");
+                for (const c of claims)
+                    out.push(`  [${c.status}] ${c.claim}${c.issue ? " — " + c.issue : ""}`);
+            }
+            if (Array.isArray(parsed.required_fixes) && parsed.required_fixes.length) {
+                out.push("Required fixes:");
+                for (const f of parsed.required_fixes)
+                    out.push(`  - ${f}`);
+            }
+            if (parsed.summary)
+                out.push(`Summary: ${parsed.summary}`);
+            out.push(parsed.verdict === "PASS"
+                ? "PASS: all material claims are supported. Safe to ship per rule 323."
+                : "FAIL: fix the named claims (probe the canonical tool, label INFERENCE, or downgrade to UNKNOWN), then re-judge. Do NOT ship while FAIL.");
+        }
+        return { content: [{ type: "text", text: out.join("\n") }] };
+    }
+    catch (e) {
+        return { content: [{ type: "text", text: `TRUTH_JUDGE_ERROR: ${e?.message ?? e}. FAIL CLOSED (rule 320): hold for human review.` }] };
+    }
+    finally {
+        clearTimeout(t);
+    }
 });
 // ─── Run ───────────────────────────────────────────────────────────────────
 (async () => {

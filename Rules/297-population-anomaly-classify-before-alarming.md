@@ -257,3 +257,53 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Asked for a strategic read on the TDSHS casefile, I declared the illegal-search theory "NOT supported by anything I have read" and characterised the 5196 deficiency as "one citation, one regulation" and simple. Both were wrong and both were disprovable from documents already on the server that I had not opened. DRAFT_email_2026-07-28_production_and_entry.md records the DEPARTMENT'S OWN WRITTEN ACCOUNT of the June 19 entry: the inspector entered through an unlocked exterior door, the administration door was shut but not locked and he opened it and then shut it, he was unaccompanied throughout with no program representative present, and he photographed rosters and sign-in sheets - two of the three photographed documents undated or illegible by the Department's own description, and NONE belonging to the course under inspection. EMSU also holds 8 preserved surveillance clips of the entry. The deficiency is likewise interpretive, not simple: the filed course notification (application 26684)
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 03:42 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: externship-forms-process-20260818
+- RCA bucket: unread source
+- Trigger pattern: Declaring an ID mapping 'wrong' by comparing against one table's key space without checking whether the ids belong to a DIFFERENT system's key space (Moodle assign ids vs portal form ids)
+- Reversal note: I told Ruben cron_p0_externship_moodle_grade_reconcile.php 'maps form ids 134-139 but real ExternshipForm ids are 1-14' and recommended DEPRECATE. Wrong: 134-138 are MOODLE assign-module ids for course 37 (verified: assign table shows 134=Preceptor Eval, 135=Student Eval, 136=CV, 137=Time Sheet, 138=PCR), exactly matching the cron comments. The cron is the intended Moodle-presence bridge in a dual-channel design (WPForms content + Moodle upload) that Ruben had already explained. Amendment: before declaring an ID mapping wrong, resolve WHICH system's key space the ids live in by querying that system's table; matching comments/names against the foreign table is the 30-second check that was skipped.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 03:42 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: frankenstein-llm-review-20260818
+- RCA bucket: unread source
+- Trigger pattern: Reading a code default (os.environ.get('KEY', '12')) as the LIVE runtime value without checking the actual systemd unit environment / drop-ins that override it
+- Reversal note: The frankenstein-tools 530 diagnosis read FRANK_TOOLS_TIMEOUT's in-code default of 12s and built the entire root cause on it. The LIVE value was 180s (batch) / 900s (interactive), set by ~60 systemd drop-ins in frankenstein-tools.service.d/ — a documented config layer where 'last file alphabetically wins'. A 12s-timeout explanation was impossible at runtime. Amendment: before attributing any behavior to a configurable constant, resolve the EFFECTIVE runtime value (systemctl show <unit> -p Environment, actual config layering), never the code fallback. A code default is a hypothesis about config, not config itself.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 03:44 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 26899
+- RCA bucket: unread source
+- Trigger pattern: within-window reversal logged a causal-rule update without repairing it; clinerules_validate_completion auto-repaired the cited rule on behalf of the window
+- Reversal note: - #26899 [approved] initial claim "maps form ids 134-139 but real ExternshipForm ids are 1-14, deprecate the cron" → corrected: 134-138 ARE valid MOODLE assign-module ids for cours
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 03:45 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787109
+- RCA bucket: unread source
+- Trigger pattern: Reading a code default (os.environ.get('KEY', '12')) as the LIVE runtime value without checking the actual systemd unit environment / drop-ins that override it
+- Reversal note: The frankenstein-tools 530 diagnosis read FRANK_TOOLS_TIMEOUT's in-code default of 12s and built the entire root cause on it. The LIVE value was 180s (batch) / 900s (interactive), set by ~60 systemd drop-ins in frankenstein-tools.service.d/ — a documented config layer where 'last file alphabetically wins'. A 12s-timeout explanation was impossible at runtime. Amendment: before attributing any behavior to a configurable constant, resolve the EFFECTIVE runtime value (systemctl show <unit> -p Environment, actual config layering), never the code fallback. A code default is a hypothesis about config, not config itself.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 03:47 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787115
+- RCA bucket: unread source
+- Trigger pattern: within-window reversal logged a causal-rule update without repairing it; clinerules_validate_completion auto-repaired the cited rule on behalf of the window
+- Reversal note: - 12s-timeout root cause -> live 180s/900s | unread source | causal rule updated: 297
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

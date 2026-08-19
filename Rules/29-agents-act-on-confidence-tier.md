@@ -103,3 +103,13 @@ If the case won't be handled in time (>50 open + no human active 60min, or waiti
 - Reversal note: I listed 5 impl_failed ideas as "genuine human gates, need your review" purely because the executor had labeled them deploy_human_gated / regression_risk_review. Ruben asked "what do we do per rule 29 here?" On actually running the gate: 3 of the 5 already had approved_by populated (Ruben, Jon Thompson, agent-core) and only needed the documented one-shot auto_deploy_override; 1 needed no build because the change was already on disk; 1 rested on a stale premise (the grievance it targeted was resolved 5 days earlier). Zero required a human. Amendment: a gate/hold label emitted by an automated system states what THAT SYSTEM may not do autonomously, never who owns the decision. Before calling any item human-only, the binary gate must additionally check (a) whether an approval record already exists on the row, and (b) whether the described change is already present in the target artifact. An item carrying a prior human approval is by definition NOT awaiting a human.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 04:25 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787081272363
+- RCA bucket: wrong premise
+- Trigger pattern: Listing an open-thread item as human-only when the only blocker is the agent's own not-yet-done work (e.g. 'review the RCA log' before actually reading it)
+- Reversal note: RCA review listed as human-only in a pickup prompt, then classified by the agent in the same window after reading the evidence. A not-yet-done task is NOT a human gate: the binary gate (can I do this with a tool I have?) fires BEFORE listing any open thread. Listing work as human-only because I had not yet done it is the deferral shape rule 29 exists to prevent. Amendment: before marking any open-thread item human-only, the gate must additionally ask whether the only thing missing is MY OWN not-yet-completed action — if so, do the work, then close the thread.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

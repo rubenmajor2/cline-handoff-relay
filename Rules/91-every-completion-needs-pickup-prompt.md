@@ -128,3 +128,23 @@ This is a LAST RESORT. If `create_idea` works, the agent MUST file ideas normall
 ## Source
 
 2026-05-19 Ruben directive. 2026-07-14: 3 violations in one window (no pickup block, bare #NNNN, no open threads). Root cause: steering injection's "pure Q&A exception" + bloated 151-line rule. Both fixed. 2026-07-22 violation #15 (per Cline_Obedience.md): agent shipped a structurally-correct PICKUP PROMPT block inside `task_progress` instead of `result` — added explicit ban + quick-check step 1 rewording to gate on `result` specifically. 2026-08-01: `[queued]` disposition banned by Ruben directive — queued was being used as an excuse to park ideas indefinitely instead of implementing them. reconcile_ideas no longer derives `[queued]` (approved → executing, ready_for_review → awaiting_review, default → unknown). See rule 161.
+
+## Amendment (from reversal, 2026-08-19 03:36 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: frankenstein-llm-review-20260818
+- RCA bucket: wrong premise
+- Trigger pattern: Treating a RULE 91 GATE rejection as a content problem: after attempt_completion is rejected with named missing sections, the agent re-emits FRESH prose (new answer body, still no PICKUP PROMPT block)
+- Reversal note: A completion-gate rejection is a FORMAT repair ticket, not a content request. When the validator names missing sections (dividers, PICKUP PROMPT header, Open threads, Reference IDs), the ONLY legal next emission is the SAME result content with those sections appended, then re-validated. New prose without the block is a repeat of the violation, not an attempt at the fix. Observed 2026-08-18: 5+ consecutive gate rejections in one window, each answered with rewritten prose instead of the appended block.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 03:46 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787109
+- RCA bucket: wrong premise
+- Trigger pattern: Treating a RULE 91 GATE rejection as a content problem: after attempt_completion is rejected with named missing sections, the agent re-emits FRESH prose (new answer body, still no PICKUP PROMPT block)
+- Reversal note: A completion-gate rejection is a FORMAT repair ticket, not a content request. When the validator names missing sections (dividers, PICKUP PROMPT header, Open threads, Reference IDs), the ONLY legal next emission is the SAME result content with those sections appended, then re-validated. New prose without the block is a repeat of the violation, not an attempt at the fix. Observed 2026-08-18: 5+ consecutive gate rejections in one window, each answered with rewritten prose instead of the appended block.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

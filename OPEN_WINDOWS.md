@@ -6,18 +6,22 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/19/2026, 2:21:28 AM PT | window: last 72h | 100 tasks | index total 839 (parsed 9, cached 830)
+Generated: 8/19/2026, 3:21:47 AM PT | window: last 72h | 104 tasks | index total 843 (parsed 7, cached 836)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787131087419` | 8/19/2026, 2:21:23 AM | 9 | 13KB | Which student submitted the most tickets and what was the reason? |
-| `1787126987793` | 8/19/2026, 2:21:20 AM | 179 | 2446KB | #Frankenstein LLM |
-| `1787128400456` | 8/19/2026, 2:21:11 AM | 95 | 135KB | Which student submitted the most tickets and what was the reason? |
-| `1787129383579` | 8/19/2026, 2:20:05 AM | 17 | 25KB | Which student submitted the most tickets and what was the reason? |
-| `1787122887382` | 8/19/2026, 2:16:01 AM | 272 | 3480KB | #San Mateo EMSA Complaint |
+| `1787132220305` | 8/19/2026, 3:21:46 AM | 194 | 4975KB | #Frankenstein LLM Wedge |
+| `1787131087419` | 8/19/2026, 3:21:22 AM | 83 | 123KB | Which student submitted the most tickets and what was the reason? |
+| `1787132045559` | 8/19/2026, 3:20:38 AM | 41 | 58KB | Which student submitted the most tickets and what was the reason? |
+| `1787129383579` | 8/19/2026, 3:20:19 AM | 69 | 212KB | Which student submitted the most tickets and what was the reason? |
+| `1787096297068` | 8/19/2026, 3:19:34 AM | 887 | 7768KB | #Julia/Claudia |
+| `1787134526151` | 8/19/2026, 3:15:26 AM | 1 | 2KB | pelase run the fix avp progrma on my desktop |
+| `1787122887382` | 8/19/2026, 3:14:47 AM | 414 | 4013KB | #San Mateo EMSA Complaint |
+| `1787132186331` | 8/19/2026, 2:36:41 AM | 2 | 13KB | #Frankenstein LLM Wedge |
+| `1787126987793` | 8/19/2026, 2:35:05 AM | 228 | 2562KB | #Frankenstein LLM |
+| `1787128400456` | 8/19/2026, 2:24:12 AM | 99 | 139KB | Which student submitted the most tickets and what was the reason? |
 | `1787027676077` | 8/19/2026, 2:06:13 AM | 496 | 2034KB | #BigMac 4th GPU |
 | `1787126864800` | 8/19/2026, 2:03:39 AM | 334 | 522KB | #CFA |
-| `1787096297068` | 8/19/2026, 2:02:53 AM | 800 | 4682KB | #Julia/Claudia |
 | `1787126689836` | 8/19/2026, 1:56:17 AM | 96 | 2763KB | #SSS / Virtual LoRA2 / Efficiency |
 | `1786831867073` | 8/19/2026, 1:50:59 AM | 234 | 922KB | #Joshua / Denali Scenario |
 | `1787123639438` | 8/19/2026, 1:36:02 AM | 158 | 1078KB | #TDSHS |
@@ -115,7 +119,28 @@ Generated: 8/19/2026, 2:21:28 AM PT | window: last 72h | 100 tasks | index total
 
 ## Per-window detail
 
-### `1787131087419` — 8/19/2026, 2:21:23 AM PT — 9 turns
+### `1787132220305` — 8/19/2026, 3:21:46 AM PT — 194 turns
+
+**Original task:**
+
+```
+#Frankenstein LLM Wedge
+
+Wedge is still occuring. I'm not sure why other window calls task completion. Numereous issues still in cline with it (See stalling windows / just opened and tool spillage, slow bad, not good). 
+
+Do NOT inject anthropic
+
+--
+frankenstein-llm wedge resolved after three stacked root causes, each found and corrected in-window (01:09-02:27 PT).
+
+ROUND 1 (01:34 PT) — SLO drift: FRANK_SLO_TTFB_INTERACTIVE had drifted 30→180→240s across three competing systemd drop-ins, so interactive turns queued 169-270s behind batch 'within SLO' and never spilled. The winning drop-in was ed
+```
+
+**Ideas referenced:** #11397, #11953, #11991, #12251, #12269, #12368, #12463, #12584, #13108, #13470, #13831, #13874, #16590, #16625, #178712, #1893 [deployed], #19338, #19903, #2050, #25171, #25185, #2525, #25468, #25471, #25764, #26400, #26503, #26774, #26932, #27447 [deployed], #27494 [executing], #27508 [executing], #27514 [executing], #27515 [executing]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787131087419` — 8/19/2026, 3:21:22 AM PT — 83 turns
 
 **Original task:**
 
@@ -123,56 +148,123 @@ Generated: 8/19/2026, 2:21:28 AM PT | window: last 72h | 100 tasks | index total
 Which student submitted the most tickets and what was the reason?
 ```
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787126987793` — 8/19/2026, 2:21:20 AM PT — 179 turns
-
-**Original task:**
-
-```
-#Frankenstein LLM
-
-Frankenstein LLM appears wedged again. Please see handoff notes on this issue. resolve.
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11944, #11953, #12231, #12251, #12314, #12335, #12363, #12365, #12366, #12368, #12407, #12477, #12618, #12657, #12689, #12824, #12872, #12878, #13108, #13202, #13437, #13831, #13874, #16163, #16265, #16304, #16718, #16844, #178712, #18312, #18326, #18868, #19903, #2050, #2097 [resolved], #2207 [investigating], #2247 [resolved], #25097, #25185, #2537, #25468, #2549 [resolved], #2554, #25630, #2569, #2570, #2571 [deployed], #2573 [resolved], #25764, #2578 [resolved], #2579 [deployed], #2580 [deployed], #25916, #25925, #25926, #25935, #25973, #26322, #26400, #26435, #26461, #26471, #26475, #26476, #26711, #26712, #26713 [proposed], #26715 [deployed], #26827, #26908, #26914 [deployed], #26915 [executing], #26916, #26923, #26925, #26931, #27069, #27109, #27110, #27128, #27129, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27447 [executing], #27494 [executing], #366377
+**Ideas referenced:** #123456
 
 **Last PICKUP PROMPT:**
 
 ```
-cutor as #27494 [executing]\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787126689836 — frankenstein-llm wedge resolved round 2; federation isolation holds.\n\nWhere we left off (verified 2026-08-19 02:10 PT):\n- Round-2 fix LIVE: _glm_floor_should_force() overload guard in frankenstein_tools_adapter.py (backup .bak-floorguard-20260819); Cline-shaped probe 3.4s with correct tool_call (verified: emsu-operations ssh_command 02:06 PT ran python3 /tmp/cline_shape_probe.py, returned ELAPSED_S=3.4 TOOL_CALLS=True TOOL_NAME=read_file)\n- Round-1 fix LIVE: FRANK_SLO_TTFB_INTERACTIVE 240→60 in the winning drop-in (backup .bak-wedge20260819); live process env=60 (verified: emsu-operations ssh_command 01:34 PT sudo cat /proc/PID/environ returned FRANK_SLO_TTFB_INTERACTIVE=60)\n- Post-patch cline lane: 0.3-43s TTFB, zero triple-digit, zero YIELD_FLOOR forces since 02:05:52 restart (verified: emsu-operations ssh_command 02:08 PT adapter-log grep returned count=0 for triple-digit TTFB, last YIELD_FLOOR 02:05:12 pre-restart)\n- Bug library incidents 2579 + 2580 both resolved; HANDOFF_NOTES updated 02:10 PT\n- Julia still dark since ~01:10 (wedge-watchdog armed, auto-RCA on return); Cicero verified healthy HTTP 200 4.17s (verified: frankenstein_verify_routing 01:39 PT http_status=200 duration-ms=4167)\n\nOpen threads to drive next:\n1. #27494 [executing] — drop-in consolidation + SLO coherence guard; executor build queued top; reconcile before touching\n2. #27447 [deployed] — CFA SMS quality-gate notifications; executor reports deployed; spot-verify the actual notification path end-to-end\n3. Julia physical protection — cooling/smart-PDU decision after repeated kernel wedges despite armed hw watchdog (human-only decision — no idea)\n4. Batch-lane capacity — executor backlog (2,850 ideas) saturates batch TTFB up to 153s; whether to throttle executor concurrency vs add capacity is a Ruben business-priority call (human-only decision — no idea)\n\nReference IDs:\n- Ideas filed: #27494 [executing]\n- Ideas re-driven: #27447 [deployed]\n- Bug library incidents (frankenstein_router_incidents): 2579 (resolved), 2580 (resolved), 2571 (Julia kernel wedge, investigating)\n- Files touched: /usr/local/bin/frankenstein_tools_adapter.py, /etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzzzzzzwwz-glm-slo-let-it-finish.conf, HANDOFF_NOTES.md, ~/Documents/Cline/Rules/297-population-anomaly-classify-before-alarming.md\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════"
+dent
+</task_progress>
+═════════════════════════════════════════════════════════
+PICKUP PROMPT
+═════════════════════════════════════════════════════════
+Pick up task — Identify student with most tickets and reason. (Verified 2026‑08‑19 03:19 PT)
+
+Where we left off (verified 2026‑08‑19 03:19 PT):
+- Completed query to count tickets per student.
+- Determined student 26617FT‑19 has the most tickets (54).
+- Queried ticket categories for this student; “Other” is the most frequent (50).
+
+Open threads to drive next (none):
+- None
+
+Reference IDs:
+- MySQL query: SELECT student_id, COUNT(*) AS ticket_count FROM tickets GROUP BY student_id ORDER BY ticket_count DESC LIMIT 1;
+- MySQL query: SELECT category, COUNT(*) AS cnt FROM tickets WHERE student_id = '26617FT‑19' GROUP BY category ORDER BY cnt DESC LIMIT 1;
+</attempt_completion>
+```
+
+### `1787132045559` — 8/19/2026, 3:20:38 AM PT — 41 turns
+
+**Original task:**
+
+```
+Which student submitted the most tickets and what was the reason?
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787129383579` — 8/19/2026, 3:20:19 AM PT — 69 turns
+
+**Original task:**
+
+```
+Which student submitted the most tickets and what was the reason?
+```
+
+**Ideas referenced:** #164679, #173178
+
+**Last PICKUP PROMPT:**
+
+```
+ the reasons for those tickets.
+
+══════════════════════════════════════════════
+PICKUP PROMPT
+══════════════════════════════════════════════
+Pick up task — Which student submitted the most tickets and what was the reason?
+Where we left off (verified 2026-08-19 03:02 PT):
+- No data retrieved; query attempts failed.
+Open threads to drive next (none — all work attempted in this session.)
+</result>
+</attempt_completion>
+```
+
+### `1787096297068` — 8/19/2026, 3:19:34 AM PT — 887 turns
+
+**Original task:**
+
+```
+#Julia/Claudia
+
+Get Julia Claudia 235 back online.
+
+Answer to "when did Julia/Claudia go dark" — bracketed by the live router audit log + a fresh probe, all times PT:
+
+- 12:49 — midday flap window: WOPR-side check found nothing listening on :11513/:11514 (the flap period tracked by #27232 [proposed]).
+- 12:58 — Ruben's "Are you alive" via litellm:julia-235b SERVED (audit 19:58:52Z: picked=julia-235b, no substitution).
+- 13:15 — LAST KNOWN-GOOD serve: "say OK" canary picked julia-235b (20:15:51Z). Zero julia-235b picks in the log after this.
+- 14:49-14:53 — Julia confirmed LAYER-2 dark from 3 v
+```
+
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16717, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #17788, #1779, #1780, #178708, #178712, #1798, #1828, #18312, #18326, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038 [executing], #2127, #2168, #22584, #2299, #25097, #25185, #2537, #25378, #25381, #2546, #2550, #2552, #2554, #2570 [deployed], #2571 [deployed], #2574 [deployed], #2577 [deployed], #26471, #26475, #26476, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26923, #27069 [executing], #27100, #27128, #27129, #27142, #27201, #27203, #27232 [proposed], #27236 [proposed], #27249 [executing], #27250 [executing], #27272, #27276, #27484 [proposed], #27504 [proposed], #366377, #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+t a flip of a prior claim.)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787129383579 — Julia/Claudia 235B recovered + serving; protection armed.\n\nWhere we left off (verified 2026-08-19 03:08 PT):\n- Julia 235B SERVING: lane :11513 HTTP=200, decode probe OK (real tokens), router audit picked=julia-235b no substitution. fleet_act julia=healthy.\n- One transient wedge 03:05:48 (decode fail) self-recovered 03:08:13; freeze_count=1, catch_relaunch.state=SERVING. No reboot was needed.\n- Claudia UP throughout (sourced the vantage probes); julia-235b is TP=2 over CX7 so Julia's return restores the full lane.\n- Lane-guard #27236 [deployed] live (transition-only alert on lane-dark); babysit watcher running until ~04:27 PT.\n\nOpen threads to drive next:\n1. #27236 [deployed] — lane-guard reachability patch is live; monitor for any transition alert. No action needed unless it fires.\n2. #27232 [rejected] — premise superseded (was tunnel-flapping theory; actual cause was L2-dark Julia). Closed against this window's evidence.\n3. (human-only decision - no idea) Confirm wedge-guard auto-reboot on Julia is armed for a PERSISTENT wedge (installed this window; the 03:05 wedge self-healed before reboot was needed, so the reboot path was not exercised).\n\nReference IDs:\n- Ideas reconciled this session (live reconcile_ideas return):\n  - #27236 [deployed]\n  - #27232 [rejected]\n  - #27069 [deployed]\n  - #21038 [executing]\n  - #26711 [deployed]\n  - #26712 [proposed]\n  - #26713 [proposed]\n  - #26715 [deployed]\n- Fleet: julia=healthy (fleet_act ok:true)\n- Files touched: /usr/local/bin/emsu-julia-lane-guard.py (deployed), /tmp/emsu_julia_babysit.sh (installed), wedge-guard on Julia\n- Patch target: lane-guard + alert sink /usr/local/bin/emsu-alert.sh\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════"
 }
 </arguments>
 <task_progress>
-- [x] Round-2 wedge root-caused (GLM floor starving Cline) + patched + live-verified
-- [x] Bug library #2580 + HANDOFF updated
-- [x] Final phrasing pass on #27494 mentions
-- [ ] validate → check_gate → attempt_completion
+- [x] Julia 235B recovered + verified serving (decode OK, router picks julia-235b)
+- [x] fleet_act julia=healthy
+- [x] Wedge-guard auto-reboot installed on Julia
+- [x] Babysit watcher running (90-min window, alerts on wedge, until ~04:27)
+- [x] Reconcile carried ideas (8 ids): #27236 deployed, #27232 rejected, #27069 deployed, #21038 executing, #26711/#26715 deployed, #26712/#26713 proposed
+- [x] Live re-probe: lane HTTP=200, lane-guard ok:true problems:[] reach vllm+ssh true
+- [x] Babysit log: 1 transient WEDGE 03:05:48 self-recovered 03:08:13; freeze_count=1
+- [x] Lane-guard = alerting only; babysit = alerting only
+- [x] Rule-119: should_compress_now GREEN → no compress; signal file cleared
+- [x] validate round 1: 2 fails (R317 headline, SELF_CONTRADICTING on #21038/#26712/#26713)
+- [x] validate round 2: 2 fails (R323 marker em-dash truncation, SELF_CONTRADICTING line cross-contamination)
+- [ ] validate round 3 (artifact-first marker no em-dash + one-idea-per-line Reference IDs)
+- [ ] clinerules_check_gate
+- [ ] attempt_completion with pickup prompt
 </task_progress>
 </use_mcp_tool>
 ```
 
-### `1787128400456` — 8/19/2026, 2:21:11 AM PT — 95 turns
+### `1787134526151` — 8/19/2026, 3:15:26 AM PT — 1 turns
 
 **Original task:**
 
 ```
-Which student submitted the most tickets and what was the reason?
+pelase run the fix avp progrma on my desktop
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1787129383579` — 8/19/2026, 2:20:05 AM PT — 17 turns
-
-**Original task:**
-
-```
-Which student submitted the most tickets and what was the reason?
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787122887382` — 8/19/2026, 2:16:01 AM PT — 272 turns
+### `1787122887382` — 8/19/2026, 3:14:47 AM PT — 414 turns
 
 **Original task:**
 
@@ -186,7 +278,7 @@ See also: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php
 As well as Chad Henry's email to rmajor@emsuniversity.com and attached PDF documents
 ```
 
-**Ideas referenced:** #13437, #178712, #19370, #23945, #25185, #2554, #25636 [proposed], #25637 [proposed], #25638 [proposed], #25639 [proposed], #2569, #2570, #2571, #2573, #25916, #25973, #26096, #26154, #26167, #26170, #26322, #26471, #26475, #26476, #26711, #26712, #26713 [proposed], #26715 [deployed], #26827, #26931, #27069, #27100, #27109, #27110, #27128, #27129, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27287, #27353, #27354, #27355, #27480 [executing], #27481 [executing], #27500 [proposed], #27501 [proposed], #27506 [proposed], #366377
+**Ideas referenced:** #13437, #178712, #19370, #23945, #25185, #2554, #25636 [proposed], #25637 [proposed], #25638 [proposed], #25639 [proposed], #2569, #2570, #2571, #2573, #25916, #25973, #26096, #26154, #26167, #26170, #26322, #26471, #26475, #26476, #26711, #26712, #26713 [proposed], #26715 [deployed], #26827, #26931, #26993, #27069, #27100, #27109, #27110, #27128, #27129, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27287, #27353, #27354, #27355, #27480 [executing], #27481 [executing], #27500 [proposed], #27501 [proposed], #27506 [proposed], #27513 [proposed], #27516 [proposed], #27517 [proposed], #27519 [proposed], #366377
 
 **Last PICKUP PROMPT:**
 
@@ -226,6 +318,94 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - IDs: #27480 [executing], task 1787123670897
 - Files: ~/Desktop/EMSU_RESPONSE_SAN_MATEO_AUDIT_FINAL_2026-08-19.pdf, /var/www/emtskills/personnel/investigations/san-mateo-202
 ```
+
+### `1787132186331` — 8/19/2026, 2:36:41 AM PT — 2 turns
+
+**Original task:**
+
+```
+#Frankenstein LLM Wedge
+
+Wedge is still occuring. I'm not sure why other window calls task completion. Numereous issues still in cline with it (See stalling windows / just opened and tool spillage, slow bad, not good). 
+
+Do NOT inject anthropic
+
+--
+frankenstein-llm wedge resolved after three stacked root causes, each found and corrected in-window (01:09-02:27 PT).
+
+ROUND 1 (01:34 PT) — SLO drift: FRANK_SLO_TTFB_INTERACTIVE had drifted 30→180→240s across three competing systemd drop-ins, so interactive turns queued 169-270s behind batch 'within SLO' and never spilled. The winning drop-in was ed
+```
+
+**Ideas referenced:** #178712, #27447 [deployed], #27494 [executing], #27508 [executing]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787126987793` — 8/19/2026, 2:35:05 AM PT — 228 turns
+
+**Original task:**
+
+```
+#Frankenstein LLM
+
+Frankenstein LLM appears wedged again. Please see handoff notes on this issue. resolve.
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11944, #11953, #12231, #12251, #12314, #12335, #12363, #12365, #12366, #12368, #12407, #12477, #12618, #12657, #12689, #12824, #12872, #12878, #13108, #13202, #13437, #13831, #13874, #16163, #16265, #16304, #16718, #16844, #178712, #18312, #18326, #18868, #19903, #2050, #2097 [resolved], #2207 [investigating], #2247 [resolved], #25097, #25185, #2537, #25468, #2549 [resolved], #2554, #25630, #2569, #2570, #2571 [deployed], #2573 [resolved], #25764, #2578 [resolved], #2579 [deployed], #2580 [deployed], #2581, #25916, #25925, #25926, #25935, #25973, #26322, #26400, #26435, #26461, #26471, #26475, #26476, #26711, #26712, #26713 [proposed], #26715 [deployed], #26827, #26908, #26914 [deployed], #26915 [executing], #26916, #26923, #26925, #26931, #27069, #27109, #27110, #27128, #27129, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27447 [executing], #27494 [executing], #27508 [executing], #366377
+
+**Last PICKUP PROMPT:**
+
+```
+ing] carries the canary repair
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787126689836 — frankenstein-llm triple wedge resolved; canary repair + follow-ups.
+
+Where we left off (verified 2026-08-19 02:27 PT):
+- Three config/code changes applied by this window: (1) FRANK_SLO_TTFB_INTERACTIVE 240→60 in the winning drop-in (backup .bak-wedge20260819); (2) _glm_floor_should_force() overload guard in frankenstein_tools_adapter.py (backup .bak-floorguard-20260819); (3) glm-5.2-local fallback chain [frankenstein-tools, artemis-gpt-oss-120b, glm-5.2] in /etc/litellm/config.yaml (backup .bak-glmlocal-fallback-20260819, litellm restarted 02:25 PT)
+- Probe results after the changes: Cline-shaped probe 1.2s with correct tool_call; glm-5.2-local spill test HTTP 200 content 'OK' 10.5s (verified: ssh_command probe returns ELAPSED_S=1.2 TOOL_CALLS=True; spill test HTTP:200 TTFB:10.47s)
+- Ring engine alive, not restarted; empty-200 was a max_tokens=5 artifact (finish_reason=length)
+- Bug library 2579 + 2580 + 2581 recorded resolved; HANDOFF_NOTES updated 01:42/02:10/02:29 PT
+- Julia still dark since ~01:10 (watchdogs armed, auto-RCA on return); Cicero healthy HTTP 200 4.17s at 01:39 PT
+- Executor queue carries two follow-up builds from this night: the canary-quarantine build and the drop-in-consolidation build
+
+Open threads to drive next:
+1. Canary quarantine for wedged-but-running engines + stale-healthy decay + DeepSeek 402 alert + ring ops-ceiling enforcement — this is the executor build for #27508 [executing]; reconcile before touching
+2. Drop-in consolidation + SLO coherence guard (round-1 follow-up) — this is the executor build for #27494 [executing]
+3. DeepSeek balance top-up — account is drained (402 on every call); free spill rung dead until Ruben tops it up (human-only decision — no idea)
+4. Julia physical protection — cooling/smart-PDU decision; box dark since ~01:10 despite armed hw watchdog (human-only decision — no idea)
+5. CFA SMS quality-gate notifications — the executor record reflects the deployment; spot-verify the real notification path end-to-end (the record is #27447 [deployed])
+
+Reference IDs:
+- Ideas filed: #27494 [executing], #27508 [executing]
+- Ideas re-driven: #27447 [deployed]
+- Bug library incidents (frankenstein_router_incidents): 2579 (resolved), 2580 (resolved), 2581 (resolved), 2571 (Julia kernel wedge, investigating)
+- Files touched: /usr/local/bin/frankenstein_tools_adapter.py, /etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzzzzzzwwz-glm-slo-let-it-finish.conf, /etc/litellm/config.yaml, HANDOFF_NOTES.md, ~/Documents/Cline/Rules/297-population-anomaly-classify-before-alarming.md
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Round 1: SLO drift 240→60 fixed + verified
+- [x] Round 2: GLM floor starvation fixed + verified
+- [x] Round 3: glm-5.2-local missing fallback fixed + verified (spill test 200/OK)
+- [x] Canary/quarantine defects classified + durable repair filed (#27508)
+- [x] Bug library 2579/2580/2581 recorded; HANDOFF updated; validator + gate CLEAR
+</task_progress>
+</attempt_completion>
+```
+
+### `1787128400456` — 8/19/2026, 2:24:12 AM PT — 99 turns
+
+**Original task:**
+
+```
+Which student submitted the most tickets and what was the reason?
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787027676077` — 8/19/2026, 2:06:13 AM PT — 496 turns
 
@@ -353,71 +533,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] #27400 heartbeat watchdog: fixed, runs clean exit 0
 - [x] Mark hand-shipped ideas deployed in DB (rule 267 GATE C)
 - [x] Final recon
-```
-
-### `1787096297068` — 8/19/2026, 2:02:53 AM PT — 800 turns
-
-**Original task:**
-
-```
-#Julia/Claudia
-
-Get Julia Claudia 235 back online.
-
-Answer to "when did Julia/Claudia go dark" — bracketed by the live router audit log + a fresh probe, all times PT:
-
-- 12:49 — midday flap window: WOPR-side check found nothing listening on :11513/:11514 (the flap period tracked by #27232 [proposed]).
-- 12:58 — Ruben's "Are you alive" via litellm:julia-235b SERVED (audit 19:58:52Z: picked=julia-235b, no substitution).
-- 13:15 — LAST KNOWN-GOOD serve: "say OK" canary picked julia-235b (20:15:51Z). Zero julia-235b picks in the log after this.
-- 14:49-14:53 — Julia confirmed LAYER-2 dark from 3 v
-```
-
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16717, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #17788, #1779, #1780, #178708, #1798, #1828, #18312, #18326, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038 [executing], #2127, #2168, #22584, #2299, #25097, #25185, #2537, #25378, #25381, #2546, #2550, #2552, #2554, #2570 [deployed], #2571 [deployed], #2574 [deployed], #2577 [deployed], #26471, #26475, #26476, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26923, #27069 [executing], #27100, #27128, #27129, #27142, #27201, #27203, #27232 [proposed], #27236 [proposed], #27249 [executing], #27250 [executing], #27272, #27276, #27484 [proposed], #27504 [proposed], #366377, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
- Log
-No reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #27504 [deployed] — Julia 235B L2-dark outage: physical power cycle + auto-recovery watcher now live.
-
-Where we left off (verified 2026-08-19 01:59 PT):
-- Julia (192.168.1.190) still L2-dark: kernel wedge, NIC silent mgmt+RoCE (Claudia vantage ARP FAILED, 100% loss). No WOL/PDU/BMC → physical power cycle in Oceanside is the ONLY box recovery.
-- Claudia UP. julia-235b is TP=2 over CX7, so Julia's dead half kills the lane. Nothing to fix on Claudia.
-- Gap found + FIXED: Julia flickered UP 01:09-01:16 PT but julia_vllm_procs=0 (engine did not auto-relaunch). Deployed /usr/local/bin/emsu-julia-catch-relaunch.sh + root cron (every min): when :2205 tunnel up but :11513 not serving, auto-launch ~/unified/julia_unified_tp2_qwen235.sh. Verified SYNTAX_OK, cron active, test-run DARK+waiting. = #27504 [deployed].
-
-Open threads to drive next:
-1. (human-only decision - no idea) Physical power cycle of Julia in Oceanside. After it boots, the watcher + @reboot auto-relaunch Ray head + vLLM :11513 + reverse tunnels (WOPR:2205/:11513); then confirm lane serves and fleet_act julia=healthy.
-2. #27236 [deployed] — lane-guard reachability probe; confirm it is superseded/complemented by the catch-relaunch watcher (#27504 [deployed]) and close out.
-3. #27232 [rejected] — tunnel-flapping premise superseded by the L2-dark + kernel-wedge finding; already rejected, no action.
-
-Reference IDs:
-- Ideas reconciled this session (verified server-side): #27504 [deployed] · #27236 [deployed] · #27232 [rejected]
-- Fleet: julia=down (fleet_act ok:true, 3-vantage evidence); claudia=up
-- Files touched: /usr/local/bin/emsu-julia-catch-relaunch.sh (new), /etc/cron.d/emsu-julia-catch-relaunch (new), /tmp/emsu_julia_catch_relaunch.state (runtime)
-- Launch script on Julia: ~/unified/julia_unified_tp2_qwen235.sh (SSH -p 2205 rubenmajor@127.0.0.1)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Live-probe: tunnel 11513=000 DEAD, adapter 11510=200
-- [x] WOPR ping 100% loss = INVALID test (WOPR can't route that LAN)
-- [x] Watchdog: Julia flickered UP 01:09-01:16 but julia_vllm_procs=0 → engine NOT auto-launching; dark again ~01:17
-- [x] Claudia vantage: Julia ARP FAILED + 100% loss mgmt+RoCE = NIC-silent kernel wedge; no WOL/MAC
-- [x] SSH path + launch script confirmed ON Julia
-- [x] Deployed catch-and-relaunch watcher + root cron (SYNTAX_OK, cron active)
-- [x] Live test-run: DARK state, waiting correctly; no watchdog conflict
-- [x] Filed #27504, marked deployed; reconcile #27504=[deployed] #27236=[deployed] #27232=[rejected]
-- [x] Pre-validate completion against rule-91 gate → ALL PASSED
-- [x] check_gate → CLEAR; attempt_completion shipped
-</task_progress>
-</attempt_completion>
 ```
 
 ### `1787126689836` — 8/19/2026, 1:56:17 AM PT — 96 turns

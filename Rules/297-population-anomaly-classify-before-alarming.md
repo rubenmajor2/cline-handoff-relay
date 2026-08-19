@@ -357,3 +357,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: - Suspected registry YAML re-corruption (per 8/18 handoff) → registry healthy (probe: registry_readable=true, source=registry) | RCA bucket: stale assumption | hypothesis corrected
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 09:53 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787126689836
+- RCA bucket: wrong premise
+- Trigger pattern: Attributing a malformed-model-output symptom (wrong tool syntax, unparseable block) to transport/capacity/timeout layers without reading the steering text that defines the required output shape, and w
+- Reversal note: Three prior rounds diagnosed the Cline wedge purely as an infrastructure/capacity problem (SLO drift, GLM floor starvation, missing router fallback) and each was declared the repair. All three were real defects, but none produced the symptom Ruben kept reporting. The actual cause was a STEERING TEXT OMISSION: the cline_xml_examples block listed only 5 native Cline tools and never showed use_mcp_tool, so in XML-in-prompt mode (has_tools=false) the model invented the MCP tool name as its own XML tag and Cline could not parse it. Amendment: when a symptom is 'the model emitted the wrong output SHAPE', the source to read is the PROMPT/STEERING that told it what shape to emit, not the transport, capacity, or timeout layers. Before attributing a malformed-output symptom to infrastructure, enumerate every tool/format the caller can legitimately request and verify the steering text contains a valid example for EACH one; a format the model was never shown is a format it will invent.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 10:27 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787126689836
+- RCA bucket: insufficient probe
+- Trigger pattern: Diagnosing a wrong-backend-selected symptom by probing the component the current hypothesis blames, instead of first enumerating the whole selection/fallback table in order; and checking for duplicate
+- Reversal note: Investigating why Cline windows stalled, I diagnosed FIVE separate mechanisms in sequence (SLO drift, floor starvation, missing fallback, steering omission, affinity pinning) and each time treated the newest finding as the whole answer, because I only ever probed the layer my current hypothesis named. What I never did until Ruben told me to was ENUMERATE the config that governs selection: one pass over router_settings.fallbacks showed 29 of 43 chains contained a cloud rung and 27 placed it ahead of a still-untried local box, and that two model ids had DUPLICATE fallback keys making the effective chain load-order dependent. That enumeration takes one command and would have been available at minute one. Amendment: when a symptom is 'the wrong backend/target was selected', the FIRST probe is a full enumeration of the selection table (every route, every rung, in order), not a probe of whichever component the current hypothesis blames. Additionally: yaml.safe_load silently collapses duplica
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

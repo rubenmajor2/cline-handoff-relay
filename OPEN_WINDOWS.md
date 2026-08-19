@@ -6,14 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/18/2026, 9:20:58 PM PT | window: last 72h | 88 tasks | index total 824 (parsed 6, cached 818)
+Generated: 8/18/2026, 10:20:59 PM PT | window: last 72h | 90 tasks | index total 826 (parsed 4, cached 822)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787104157061` | 8/18/2026, 9:20:56 PM | 366 | 1277KB | #NEW LLMs/ Improvements |
-| `1787113089978` | 8/18/2026, 9:20:56 PM | 42 | 77KB | Please explain why model litellm:glm52-only is not iterating GLM 5.2 Local withouth errors |
-| `1787098931968` | 8/18/2026, 9:20:32 PM | 801 | 1425KB | #Argus |
-| `1787096297068` | 8/18/2026, 9:20:22 PM | 511 | 943KB | #Julia/Claudia |
+| `1787116012553` | 8/18/2026, 10:20:53 PM | 41 | 1143KB | #Small LLM Modernization and Frankenstein LLM problems |
+| `1787114692393` | 8/18/2026, 10:20:49 PM | 149 | 322KB | Please explain why model litellm:glm52-only is not iterating GLM 5.2 Local withouth errors |
+| `1787098931968` | 8/18/2026, 10:20:48 PM | 979 | 2499KB | #Argus |
+| `1787104157061` | 8/18/2026, 10:02:29 PM | 518 | 2434KB | #NEW LLMs/ Improvements |
+| `1787113089978` | 8/18/2026, 9:44:39 PM | 207 | 333KB | Please explain why model litellm:glm52-only is not iterating GLM 5.2 Local withouth errors |
+| `1787096297068` | 8/18/2026, 9:27:31 PM | 534 | 1001KB | #Julia/Claudia |
 | `1787111283634` | 8/18/2026, 9:16:49 PM | 136 | 195KB | Please explain why model litellm:glm52-only is not iterating GLM 5.2 Local withouth errors |
 | `1786927436741` | 8/18/2026, 8:56:47 PM | 380 | 1091KB | #Student Time Sheet Issue |
 | `1787111101864` | 8/18/2026, 8:45:35 PM | 2 | 2KB | What is the fastest iteration we've ever achieved |
@@ -103,35 +105,23 @@ Generated: 8/18/2026, 9:20:58 PM PT | window: last 72h | 88 tasks | index total 
 
 ## Per-window detail
 
-### `1787104157061` — 8/18/2026, 9:20:56 PM PT — 366 turns
+### `1787116012553` — 8/18/2026, 10:20:53 PM PT — 41 turns
 
 **Original task:**
 
 ```
-#NEW LLMs/ Improvements
+#Small LLM Modernization and Frankenstein LLM problems
 
-Thoughts on this? I might need to make some changes here. I need your recommendations considering. 
+Below is a task completion window from another window which does not seem to contain all the important information on the new LLMs we just recently deployed across the system which may be contributing to frankenstein-llm routing issues. 
 
-Your "spill ladder" is mostly solid, but you are missing three critical releases from the last 30 days (July/August 2026) that significantly disrupt the hierarchy. Specifically, the "Small Local" category has completely leapfrogged the older 235B models in reasoning capability.
-Here is the corrected and updated ladder.
-## The Updated Spill Ladder (Mid-August 2026)
-Bold indicates a new or corrected entry.
-
-   1. [Muse Glimmer 30B](https://www.google.com/search?kgmid=FAIL
+Frankenstein-llm is experiencing problems here in cline with Invalid API response, stalling, choking, not being able to finish, seems to switch from one model to the next very quickly, obvious problem with the canary / quarantiening / frankenstein federation system. It's also not finishing windows becaus
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11945, #12363, #12459, #12477, #12618, #12657, #12688, #12824, #12872, #12878, #12900, #13202, #13439, #1378, #13874, #16065, #16163, #16170, #16265, #16304, #16625, #16646, #16680, #16844, #17246, #178710, #178711, #18312, #18326, #18720, #19585, #19903, #19907, #19925, #20247, #20264, #20272, #2050, #20536, #2092, #2096, #22588, #2298, #23169, #23171, #24145, #24165, #24173, #24183, #24220, #24368, #25097, #25112, #25185, #2537, #25385, #25468, #25470, #25471, #25567, #25606, #25607, #25627, #25628, #25630, #25631, #25674, #25755, #25764, #26400, #26908, #26914, #26923, #26932, #27100, #27260 [rejected], #27261 [proposed], #27262 [proposed], #27265 [proposed], #27266 [proposed], #27267 [proposed], #27268 [proposed], #27269 [proposed], #27270 [proposed], #27271 [proposed], #27274 [proposed], #663857, #6826, #7513, #7554, #9706, #9910
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #178709, #18312, #18326, #25097, #2537, #26908, #26923, #27227 [rejected], #27231 [deployed], #27240 [proposed], #27259 [deployed], #27261 [awaiting_review], #27262 [proposed], #27265 [proposed], #27266 [proposed], #27268 [awaiting_review], #27269 [deployed], #27270 [proposed], #27271 [proposed], #27274 [rejected], #27279 [proposed]
 
-**Last PICKUP PROMPT:**
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-```
-eue, missing-messages rate)
-- [ ] File RCA idea
-- [ ] Deliver final answer with PICKUP PROMPT + Reversal Log</task_progress>
-</use_mcp_tool>
-```
-
-### `1787113089978` — 8/18/2026, 9:20:56 PM PT — 42 turns
+### `1787114692393` — 8/18/2026, 10:20:49 PM PT — 149 turns
 
 **Original task:**
 
@@ -139,9 +129,11 @@ eue, missing-messages rate)
 Please explain why model litellm:glm52-only is not iterating GLM 5.2 Local withouth errors. Is GLM 5.2 serving properly?
 ```
 
+**Ideas referenced:** #16084, #16648, #16716, #17145, #19338, #1998, #22856, #22897, #26638
+
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1787098931968` — 8/18/2026, 9:20:32 PM PT — 801 turns
+### `1787098931968` — 8/18/2026, 10:20:48 PM PT — 979 turns
 
 **Original task:**
 
@@ -160,43 +152,79 @@ Anything else that we need to do to improve Argus? What about Argus Rules? How a
 Per rule 29: 
 ```
 
-**Ideas referenced:** #11316, #12246, #12463, #12645, #12688, #127891, #128206, #128274, #13204, #13329, #137333, #13962, #14947, #16584, #17300, #17537, #17619 [deployed], #178701, #178708, #18032, #18121, #18806, #19348, #2006, #20825, #21134, #22511, #22583, #23428, #23489, #2355, #23941, #24663, #24664, #24665, #24666, #24673, #24676, #24678, #24681, #24682, #24685, #24688, #24694, #24696, #24698, #24700, #24702, #24703, #24897, #25185, #25385, #25570 [executing], #25642, #25925, #25926, #25935, #25947, #25973, #26085 [approved], #26124 [deployed], #26192 [awaiting_review], #26322 [executing], #26719, #26827 [blocked], #26895, #26914 [deployed], #26915 [executing], #26916, #26931 [executing], #27126, #27203 [deployed], #27237 [deployed], #27238 [deployed], #27243 [proposed], #27244 [proposed], #27245 [proposed], #27248 [proposed], #27249, #27250, #27257 [deployed], #27258 [deployed], #27263, #27272 [deployed], #27273 [deployed], #27275, #27276 [deployed], #3229
+**Ideas referenced:** #11316, #12246, #12463, #12645, #12688, #127891, #128206, #128263, #128266, #128274, #13204, #13329, #137333, #13962, #14947, #16584, #17300, #17537, #17619 [deployed], #178701, #178708, #18032, #18121, #18806, #19348, #2006, #2014 [deployed], #20825, #21125, #21126, #21134, #22511, #22583, #23428, #23489, #2355 [deployed], #23941, #24663, #24664, #24665, #24666, #24673, #24676, #24678, #24681, #24682, #24685, #24688, #24694, #24696, #24698, #24700, #24702, #24703, #24897, #25185, #25385, #25570 [executing], #25642, #25925, #25926, #25935, #25947, #25973, #26085 [approved], #26124 [deployed], #26192 [awaiting_review], #26322 [executing], #26719, #26827 [blocked], #26895, #26914 [deployed], #26915 [executing], #26916, #26931 [executing], #27126, #27203 [deployed], #27237 [deployed], #27238 [deployed], #27243 [proposed], #27244 [proposed], #27245 [proposed], #27248 [proposed], #27249, #27250, #27257 [deployed], #27258 [deployed], #27263, #27272 [deployed], #27273 [deployed], #27275, #27276 [deployed], #27280 [deployed], #27281 [proposed], #3229
 
 **Last PICKUP PROMPT:**
 
 ```
- rules 263/315 in its profile.
+ gate) are the causal repairs.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787081272363 — Jon's Argus day dissected, four root causes fixed, 5x terminal test PASSED.
+Pick up task #1787081272363. Argus structural fixes: 4 of 7 applied per rule 29, 3 remaining queued.
 
-Where we left off (verified 2026-08-18 20:59 PT):
-- Jon's audit trail dissected: the clearance repair "deployed" to a _view_ sandbox file (real page untouched), Argus's false "should now load" claim at 17:02, the regrade cron with invented schema that could never run, and the phones-question reasoning leak.
-- Four fixes live: SSRF allowlist for EMSU domains in argus_action_catalog.php; V3+V3b leak filters in alltastic_api.php; regrade cron rewritten against real Moodle schema (first live run fixed 5+ real zero-grades, scheduled /etc/cron.d/emsu-argus-regrade-fix every 30 min); RCA filed as #27276 [deployed].
-- 5x consecutive terminal test PASSED: phones 17.6s, page-verify 10.1s, student lookup 14.5s (Donna Trinh, discrepancy flagged), fleet health 59.3s (underlying models named), ticket count (605 + oldest). Zero leaks, zero false claims.
-- Emily Mohney (26215W-01): her 5 zero-graded submissions have no recoverable higher grade — they need a human grader; the cron now handles only the recoverable class.
+Where we left off (verified 2026-08-18 22:07 PT):
+- Rule 29 applied to the structural-reliability work. Four fixes applied to server files and live: (A) identifier-type routing (section code redirects to class_roster), (B+C) fuzzy idempotency keys on mutating tools (normalized dedup from key fields, abort on first duplicate), (D) honest gate (terminal_query audit records success=0 with failure_category='deliberation_leak' when the answer matches deliberation patterns). All php -l clean, FPM reloaded.
+- Three items remain queued under the structural-reliability tracking idea: dead task-link fix (tasks 2014, 27272), Cline-rule injection path review, verify-before-report on repairs (moodle_fix_apply condition check).
+- Earlier this session, all at final state: #27243 [deployed], #27244 [deployed], #27245 [deployed], #27257 [deployed], #27258 [deployed], #27273 [deployed], #27276 [deployed], #27280 [deployed].
 
 Open threads to drive next:
-1. #27248 [proposed] — on 2026-08-20, run the 48h latency measurement and remove the dead cron_argus_doctor.php after 24h clean watchdog.
-2. Have Jon retry one real request (e.g. the clearance page link) and confirm he gets a finding-first answer — one line to him closes the fatigue loop. (human-only decision — no idea)
-3. The _view_ sandbox-deploy class: the executor wrote to routes/_view_*.php instead of the real page. Worth a guard that rejects deploy targets matching _view_* when the idea names a real user-facing path. (human-only decision — no idea)
+1. #27281 [proposed]. Three structural fixes remain: dead task-link fix, Cline-rule injection path review, verify-before-report on repairs. Highest priority: verify-before-report (prevents queueing repairs for conditions that do not exist).
+2. #27248 [proposed]. On 2026-08-20, run the 48h latency measurement and remove the dead cron_argus_doctor.php after 24h clean watchdog.
+3. Ruben is running the browser-AI test plan now. Evaluate results when they come back and fix any failures found. (human-only decision, no idea)
+4. Watch the Activity log over the next day: with the honest gate live, deliberation-leaking answers should now show success=0 with failure_category='deliberation_leak' instead of gate=pass. (human-only decision, no idea)
 
 Reference IDs:
-- Ideas at final state this session: #27243 [deployed], #27244 [deployed], #27245 [deployed], #27257 [deployed], #27258 [deployed], #27273 [deployed], #27276 [deployed]
-- Follow-up measurement filed: #27248 [proposed]
+- Ideas at final state this session: #27243 [deployed], #27244 [deployed], #27245 [deployed], #27257 [deployed], #27258 [deployed], #27273 [deployed], #27276 [deployed], #27280 [deployed]
+- Structural fixes (4 of 7 applied, 3 remaining): #27281 [proposed]
+- Follow-up measurement queued: #27248 [proposed]
 - Prior-session ideas verified: #26931 [deployed], #26322 [deployed], #26827 [deployed], #26124 [deployed], #27237 [deployed], #27238 [deployed]; #25570 [executing] (drafting); #26192 [awaiting_review] (superseded)
-- Files touched: /var/www/emtskills/lib/argus_action_catalog.php (SSRF allowlist), /var/www/emtskills/routes/alltastic_api.php (V3+V3b leak filters), /var/www/emtskills/cron/cron_fix_zero_graded_resubmissions.php (rewritten), /etc/cron.d/emsu-argus-regrade-fix (new), /var/www/emtskills/cron/cron_clearance_queue.php (stuck-pending resolver), /var/www/emtskills/routes/nremt_80_clearance_list.php (rewritten), /var/www/emtskills/routes/argus_download.php, /var/www/emtskills/lib/ArgusRuleProfile.php, /var/www/emtskills/lib/ArgusDoctor.php, /var/www/emtskills/cron/cron_argus_doctor_watchdog.php, /etc/cron.d/emsu-argus-doctor-watchdog, /etc/litellm/_router_core.py, HANDOFF_NOTES.md
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
+- Files touched: /var/www/emtskills/lib/argus_action_catalog.php (identifier-type routing for student_lookup, student_360, moodle_status), /var/www/emtskills/routes/alltastic_api.php (fuzzy idempotency keys, honest gate, lookup budget, V5/V6 leak patterns, mutating-tool dedup, history scope, tool description, session gate), /var/www/emtskills/lib/ArgusContentSanitiser.php (shared sanitiser lib, V5/V6 patterns), /var/www/emtskills/lib/ArgusExpressLane.php (express grant honesty gate), /var/www/emtskills/routes/cron_argus_task_worker.php (worker sanitiser + deliberation-ratio gate), /var/www/emtskills/routes/argus_download.php (task session gate), /var/www/emtskills/cron/cron_fix_zero_graded_resubmissions.php (rewritten), /etc/cron.d/emsu-argus-regrade-fix (new), /var/www/emtskills/cron/cron_clearance_queue.php (stuck-pending resolver), /var/www/emtskills/routes/nremt_80_clearance_list.php (rewritten), /var/www/emtskills/lib/ArgusRuleProfile.php, /var/www/emtskills/lib/ArgusDoctor.php, /var/www/emtskills/cron/cron_argus_doctor_watchdog.php, /etc/cron.d/em
 ```
 
-### `1787096297068` — 8/18/2026, 9:20:22 PM PT — 511 turns
+### `1787104157061` — 8/18/2026, 10:02:29 PM PT — 518 turns
+
+**Original task:**
+
+```
+#NEW LLMs/ Improvements
+
+Thoughts on this? I might need to make some changes here. I need your recommendations considering. 
+
+Your "spill ladder" is mostly solid, but you are missing three critical releases from the last 30 days (July/August 2026) that significantly disrupt the hierarchy. Specifically, the "Small Local" category has completely leapfrogged the older 235B models in reasoning capability.
+Here is the corrected and updated ladder.
+## The Updated Spill Ladder (Mid-August 2026)
+Bold indicates a new or corrected entry.
+
+   1. [Muse Glimmer 30B](https://www.google.com/search?kgmid=FAIL
+```
+
+**Ideas referenced:** #10108, #10740, #1147, #11735, #11741, #11781, #11945, #12059, #12060, #12363, #12459, #12477, #12506, #12618, #12643, #12657, #12688, #12761, #12763, #12764, #12824, #12872, #12878, #12900, #13075, #13191, #13196, #13199, #13202, #13439, #1378, #13874, #16065, #16163, #16170, #16265, #16304, #16625, #16646, #16648, #16680, #16714, #16717, #16844, #17246, #178709, #178710, #178711, #1808, #18312, #18326, #18720, #1884, #19585, #19903, #19907, #19925, #20247, #20264, #20272, #2050, #20536, #2092, #2096, #2100, #22588, #22815, #2298, #23071, #23169, #23171, #24145, #24165, #24173, #24183, #24220, #24368, #25097, #25112, #25185, #2537, #25385, #25468, #25470, #25471, #25567, #25606, #25607, #25611, #25627, #25628, #25630, #25631, #25674, #2569, #2570, #2571, #25755, #25764, #26322, #26400, #26471, #26476, #26711, #26712, #26713 [proposed], #26715 [deployed], #26827, #26908, #26914, #26923, #26931, #26932, #27069, #27100, #27128, #27201, #27203, #27227 [proposed], #27231 [deployed], #27232 [rejected], #27236 [deployed], #27240 [proposed], #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259 [deployed], #27260 [rejected], #27261 [proposed], #27262 [proposed], #27265 [proposed], #27266 [proposed], #27267 [proposed], #27268 [proposed], #27269 [proposed], #27270 [proposed], #27271 [proposed], #27272, #27273, #27274 [proposed], #27276, #27279 [proposed], #27280 [deployed], #27281 [proposed], #366377, #663857, #6711, #6719, #6826, #7513, #7554, #9706, #9910
+
+**Last PICKUP PROMPT:**
+
+```
+d duplicate)
+- [ ] Final stability verification
+- [ ] Deliver final answer with PICKUP PROMPT + Reversal Log</task_progress>
+</use_mcp_tool>
+```
+
+### `1787113089978` — 8/18/2026, 9:44:39 PM PT — 207 turns
+
+**Original task:**
+
+```
+Please explain why model litellm:glm52-only is not iterating GLM 5.2 Local withouth errors. Is GLM 5.2 serving properly?
+```
+
+**Ideas referenced:** #9645, #9650
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787096297068` — 8/18/2026, 9:27:31 PM PT — 534 turns
 
 **Original task:**
 
@@ -213,44 +241,43 @@ Answer to "when did Julia/Claudia go dark" — bracketed by the live router audi
 - 14:49-14:53 — Julia confirmed LAYER-2 dark from 3 v
 ```
 
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16717, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #17788, #1779, #1780, #178708, #1798, #1828, #18312, #18326, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038 [executing], #2127, #2168, #22584, #2299, #25097, #25185, #2537, #25378, #25381, #2546, #2550, #2552, #2554, #2570 [deployed], #2571 [deployed], #26471, #26475, #26476, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26923, #27069 [executing], #27128, #27129, #27201, #27203, #27232 [proposed], #27236 [proposed], #27249 [executing], #27250 [executing], #27272, #27276, #366377, #7142, #7149
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16717, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #17788, #1779, #1780, #178708, #1798, #1828, #18312, #18326, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038 [executing], #2127, #2168, #22584, #2299, #25097, #25185, #2537, #25378, #25381, #2546, #2550, #2552, #2554, #2570 [deployed], #2571 [deployed], #26471, #26475, #26476, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26923, #27069 [executing], #27100, #27128, #27129, #27201, #27203, #27232 [proposed], #27236 [proposed], #27249 [executing], #27250 [executing], #27272, #27276, #366377, #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
-t the box; sweep re-run clean)
+mend_rule, task 1787081272363)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787081272363 - Julia/Claudia 235B: serving + both failure modes have automated cures
+Pick up task #1787081272363 - Julia/Claudia 235B: root cause classified (thermal kernel hang), 3-layer defense live
 
-Where we left off (verified 2026-08-18 21:13 PT):
-- Julia 235B SERVING (verified: :11513 HTTP 200, canary DECODE-OK, router audit 04:13:40Z picked=julia-235b)
-- Engine-death failure mode self-healed live: tp2_runbook_monitor auto-relaunched at 21:02 after engine died ~20:55 (box+SSH+GCS stayed up); serving restored in 11 min, zero human action
-- Kernel-wedge failure mode cured: hardware watchdog ARMED on GB10 (RuntimeWatchdogUSec=3min)
-- Guards live: lane-guard reach alerts #27236 [deployed], rogue-model sweep (julia_vllm_procs=1), NO_REROUTE hardpin (bug library row 2570), 667G stale GLM weights purged (disk 26%->7%)
-- If :11513 ever refuses while :2205 answers = engine death, watch tp2_runbook_monitor auto-recover (~11 min). If BOTH die = kernel wedge, hardware watchdog should reset within 3 min.
+Where we left off (verified 2026-08-18 21:25 PT):
+- Bug 2571 RESOLVED with root cause: silent thermal-correlated kernel hard-hang (SoC 91.2C under 235B load; journal silent-stop, no panic/MCE/Xid)
+- 3-layer defense live: thermal alert >=88C (fired live 21:23), hardware watchdog RuntimeWatchdogSec=180 (verified armed), tp2 monitor engine auto-relaunch (proven 11-min self-heal)
+- Julia SERVING now: 35 tok/s generation under live traffic, TRANSPORT_GATE PASS RoCE 31 channels, canary DECODE-OK, router picked=julia-235b
+- All software-side prevention shipped; remaining item is PHYSICAL: cooling/airflow for the Julia/Claudia enclosure at 91C sustained
 
 Open threads to drive next:
-1. #27069 [executing] — Julia interactive-lane contract guard (running green: interactive=4 batch=3 grand=7/16)
-2. (human-only decision, no idea) Review /var/log/emsu-julia-wedge-rca/rca-20260818-194604.log to classify the recurring hang root cause (thermal/MCE/GPU driver) if you want it beyond the watchdog mitigation
+1. (physical-world item, no idea) Julia/Claudia enclosure cooling/airflow improvement — 91C sustained under load is the root-cause driver; the software mitigation available (thermal alert + load shedding) is already live
 
 Reference IDs:
-- Ideas filed: #27249 [deployed], #27250 [deployed], #27236 [deployed], #27232 [rejected], #27069 [executing]
-- Files touched: /usr/local/bin/emsu-julia-wedge-watchdog.sh + /etc/cron.d/emsu-julia-wedge-watchdog (new), /etc/litellm/_router_core.py (+ .bak-juliareroute-20260818), /usr/local/bin/emsu-julia-lane-guard.py, /usr/local/bin/emsu-alert.sh, /home/rubenmajor/ray_head_watchdog.sh on Julia, /home/rubenmajor/claudia_head_watchdog.sh on Claudia, Cicero pmset, Julia disk cleanup (667G), HANDOFF_NOTES.md, bug library rows 2570 + 2571
+- Ideas filed: #27249 [deployed], #27250 [deployed], #27236 [deployed], #27232 [rejected], #27069 [deployed]
+- Bug library: 2570 (julia-235b silent substitution, resolved), 2571 (thermal kernel hang, resolved with classification)
+- Files touched: /usr/local/bin/emsu-julia-wedge-watchdog.sh (+thermal guard), /etc/cron.d/emsu-julia-wedge-watchdog, /etc/litellm/_router_core.py, /usr/local/bin/emsu-julia-lane-guard.py, /usr/local/bin/emsu-alert.sh, Julia watchdogs, HANDOFF_NOTES.md
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════
 </result>
 <task_progress>
-- [x] Live status answered: Julia/Claudia 235B SERVING (verified :11513 HTTP 200, canary DECODE-OK, router picked=julia-235b 04:13:40Z)
-- [x] Diagnosed ~20:55 failure as ENGINE death (distinct from 18:01 kernel wedge): box+SSH+GCS stayed up, only :8000 died
-- [x] Watched tp2_runbook_monitor auto-relaunch engine at 21:02 → serving restored 21:13 (11 min, zero human action)
-- [x] Both failure modes now have automated cures: kernel wedge → hardware watchdog (RuntimeWatchdogUSec=3min); engine death → tp2 monitor auto-relaunch
-- [x] Explained other window's :11513-refused snapshot as the mid-recovery window
-- [x] Earlier today: MDM SSH verified, 667G purged, NO_REROUTE hardpin, bug library 2570/2571, rules 315/317 amended, GATE B reconciled, gates passed</task_progress>
+- [x] Bug library 2571 closed RESOLVED with root cause classified: silent thermal-correlated kernel hard-hang (journal silent-stop, SoC 91.2C under load)
+- [x] Self-heal verified twice: engine death → tp2 monitor 11-min recovery; kernel wedge → hardware watchdog armed + auto recovery chain
+- [x] Prevention shipped: thermal guard >=88C (fired live), hardware watchdog, reach/dark/RCA detection, load-shed signal
+- [x] Human-only deferral withdrawn: RCA read and classified by agent; rule 29 amended on disk
+- [x] Live status verified: serving, 35 tok/s under traffic, RoCE 31 channels, canary DECODE-OK, router picked=julia-235b
+- [x] GATE B reconciled (all 4 ideas deployed, 1 rejected) + validator + gate clear + shipped</task_progress>
 </attempt_completion>
 ```
 

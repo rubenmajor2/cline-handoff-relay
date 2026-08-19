@@ -136,3 +136,12 @@ echo "PER-STREAM = $(echo "scale=2; (($T2-$T1)/30)/$RUNNING" | bc) tok/s"
 
 ## Last updated
 2026-08-19 — initial, per Ruben directive for comprehensive GLM/Julia/Claudia recovery rule.
+## Amendment (from reversal, 2026-08-19 20:54 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787138864086
+- RCA bucket: insufficient probe
+- Trigger pattern: Applying a higher max_num_seqs decode lever to a live GLM ring without a controlled CONC ladder or a same-day revert config
+- Reversal note: max_num_seqs 16 to 32 applied naively (idea #27524) HUNG the GLM hex engine at 3 concurrent requests: KV cache ~0%, engine stats silent 7 min, zero tokens in a 90s probe. Amendment: max_num_seqs changes MUST follow the controlled CONC ladder in docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md; never apply a higher seqs value to a live ring without a same-day backup config and a 90s token-production probe; revert to last known-good value (16) on any stall.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

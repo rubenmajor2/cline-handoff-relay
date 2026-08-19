@@ -337,3 +337,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: CFA SMS failure classification: I first attributed 93 failed SMS rows to 'empty deepseek responses' based on the ai_response column alone. The error_message column (checked later) showed all 101 were quality-gate BLOCKS (criterion_4 x64, criterion_2 x25, leak x8), not LLM empties. Amendment: when classifying a failure population from a log table, enumerate the table's diagnostic columns (DESCRIBE) and read the designated error/reason column BEFORE attributing cause from an adjacent column; an empty output column describes the OUTCOME, the error column names the CAUSE.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 08:43 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: frankenstein-wedge-20260819
+- RCA bucket: wrong premise
+- Trigger pattern: Assuming systemd drop-in merge order semantics hold at deep stacking (55 files) based on cat-config output, without verifying the running process environment after reload+restart
+- Reversal note: Frankenstein adapter wedge fix: I added a NEW later-alphabetical systemd drop-in (32 z's, after the 20-z winner) setting FRANK_SLO_TTFB_INTERACTIVE=60; systemd-analyze cat-config showed it loaded LAST, daemon-reload + restart ran, yet the live process env kept 240. At 55-drop-in depth, 'last alphabetical wins' was a wrong premise. Amendment: after ANY systemd config change, the ground truth is the running process env (sudo cat /proc/PID/environ), not systemctl show, not systemd-analyze cat-config ordering; and when a new drop-in silently loses, edit the WINNING file in place (with backup) instead of stacking another layer.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 08:46 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787126689836
+- RCA bucket: stale assumption
+- Trigger pattern: within-window reversal logged a causal-rule update without repairing it; clinerules_validate_completion auto-repaired the cited rule on behalf of the window
+- Reversal note: - Suspected registry YAML re-corruption (per 8/18 handoff) → registry healthy (probe: registry_readable=true, source=registry) | RCA bucket: stale assumption | hypothesis corrected
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

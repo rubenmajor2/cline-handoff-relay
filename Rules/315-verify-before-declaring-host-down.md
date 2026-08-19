@@ -139,3 +139,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Julia L2-dark 2026-08-18: I declared Julia POWERED OFF from CX7 NO-CARRIER + 1786 failed WOL packets + multi-vantage ARP-dead. Ruben corrected: the chassis was HOT when he touched it to restart. A hung kernel (thermal/driver) can leave the NIC silent and unresponsive to WOL exactly like a powered-off box. Amendment: NO-CARRIER + WOL-exhaustion proves UNRESPONSIVE NIC, not power state. Before asserting POWERED OFF, add (a) physical heat/LED check via the human, or (b) post-recovery journal read of the previous boot to distinguish panic/hang from power loss. Default classification for a dark Spark with hot chassis: KERNEL-WEDGE-UNRESPONSIVE, requiring hardware watchdog arming, not just WOL.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 08:34 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787123639000
+- RCA bucket: stale assumption
+- Trigger pattern: scp from a recalled /tmp path without re-probing, and using an MCP server name as an SSH hostname instead of searching ~/.ssh/config
+- Reversal note: Two flips in the TDSHS PDF delivery window: (1) attempted scp from a /tmp path recalled from prior context, but the file actually lived at /var/www/emtskills/uploads/tdshs/inspection-5196-2026/ — a find on the server located it; (2) attempted scp using MCP server name 'emsu-operations' as hostname instead of searching ~/.ssh/config for the documented alias 'wopr'. Amendment: before any file transfer from WOPR, re-probe the actual file path with find/ls THIS window (never scp from a recalled path), and search ~/.ssh/config for the documented SSH alias before guessing hostnames. The MCP server name is never an SSH hostname.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

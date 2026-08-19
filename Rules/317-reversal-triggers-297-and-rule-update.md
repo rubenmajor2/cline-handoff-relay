@@ -39,3 +39,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Ruben flagged Chinese-language narration in my assistant messages 8+ times ("chinese iteration is banned... That's a cline rule", then "You have iterated chinese 8x more times. Stop doing that."). I kept emitting Chinese-language thinking-summary sentences between tool calls. The causal defect: my language selection for user-facing narration was unanchored - I pattern-matched to the task domain (a Chinese-origin LLM stack, GLM/Qwen fleet context) instead of anchoring to the ONE fixed rule: ALL output to Ruben is English, always, in every message, no exceptions for intermediate narration. Amendment: the completion-confidence acquisition gate now includes a LANGUAGE check - before shipping any assistant turn, the language of every user-visible sentence must be English; any non-English narration sentence is a rule violation regardless of technical correctness elsewhere in the turn. English-only is unconditional; domain context never justifies language switching.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 08:46 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: silence-guard-rebase-20260819
+- RCA bucket: insufficient probe
+- Trigger pattern: chmod/chown hardening applied to a freshly-created credential/config file without checking file ownership vs the consuming process's user, then declaring the hardening done without re-running the cons
+- Reversal note: Hardening a file I had just created (chmod 640) silently broke the production cron that consumed it: write_server_file had created config/db_config.php as root:root, so removing world-read locked out the PHP/cron user and re-broke the rate cron I had just repaired. Amendment: before chmod/chown/any permission change on a file that a service reads, probe (a) the file's actual owner (ls -la) and (b) the consuming process's user identity (id / PHP-FPM pool user), and after the change re-run the consumer once to confirm it still works. A security-hardening step that is not followed by a consumer re-run is an unverified write like any other.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-19 08:54 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787126689836
+- RCA bucket: insufficient probe
+- Trigger pattern: chmod/chown hardening applied to a freshly-created credential/config file without checking file ownership vs the consuming process's user, then declaring the hardening done without re-running the cons
+- Reversal note: Hardening a file I had just created (chmod 640) silently broke the production cron that consumed it: write_server_file had created config/db_config.php as root:root, so removing world-read locked out the PHP/cron user and re-broke the rate cron I had just repaired. Amendment: before chmod/chown/any permission change on a file that a service reads, probe (a) the file's actual owner (ls -la) and (b) the consuming process's user identity (id / PHP-FPM pool user), and after the change re-run the consumer once to confirm it still works. A security-hardening step that is not followed by a consumer re-run is an unverified write like any other.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

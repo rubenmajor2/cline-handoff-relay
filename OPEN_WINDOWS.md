@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/19/2026, 11:49:33 AM PT | window: last 72h | 110 tasks | index total 849 (parsed 2, cached 847)
+Generated: 8/19/2026, 12:44:00 PM PT | window: last 72h | 110 tasks | index total 849 (parsed 2, cached 847)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787138864086` | 8/19/2026, 11:49:03 AM | 359 | 1465KB | #Frankenstein LLM GLM Speedup |
-| `1787122887382` | 8/19/2026, 11:48:33 AM | 543 | 4351KB | #San Mateo EMSA Complaint |
-| `1787159982042` | 8/19/2026, 11:07:20 AM | 216 | 8821KB | #Argus/Team Hub |
+| `1787138864086` | 8/19/2026, 12:33:19 PM | 450 | 1864KB | #Frankenstein LLM GLM Speedup |
+| `1787159982042` | 8/19/2026, 12:32:42 PM | 228 | 9271KB | #Argus/Team Hub |
+| `1787122887382` | 8/19/2026, 11:53:23 AM | 554 | 4399KB | #San Mateo EMSA Complaint |
 | `1787148101456` | 8/19/2026, 7:01:52 AM | 3 | 8KB | like lightning mcqueen from Cars, who is speed in frankensein-llm |
 | `1787138798545` | 8/19/2026, 4:26:38 AM | 1 | 11KB | Ok, i iidd pay the API for Deepseek and can’t tell why it’s so much faster. Was it you or  |
 | `1787132045559` | 8/19/2026, 4:23:45 AM | 104 | 526KB | Which student submitted the most tickets and what was the reason? |
@@ -125,7 +125,7 @@ Generated: 8/19/2026, 11:49:33 AM PT | window: last 72h | 110 tasks | index tota
 
 ## Per-window detail
 
-### `1787138864086` — 8/19/2026, 11:49:03 AM PT — 359 turns
+### `1787138864086` — 8/19/2026, 12:33:19 PM PT — 450 turns
 
 **Original task:**
 
@@ -142,57 +142,111 @@ Also there is below to loook atYes, GLM-5.2 is the culprit, and no, we do not se
 30s co
 ```
 
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11944, #11945, #12314, #12365, #12366, #12368, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12824, #12872, #12878, #13108, #13202, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1754, #1755, #1779, #178712, #178714, #1798, #1828, #18312, #18326, #18471, #19567, #1986, #1989, #20042, #2063, #2065, #20662, #2073, #2083, #20985, #21038, #2116, #2127, #2138, #2157, #2159, #2168, #21684, #2174, #2185, #2254, #2258, #2298, #2299, #2307, #23169, #2353, #24172, #24217, #25097, #25185, #2537, #25378, #25381, #2546, #25470, #25646, #2583 [superseded], #26908, #26922 [deployed], #26923, #26927 [deployed], #26932 [deployed], #27236, #27249 [executing], #27250, #27259, #27494 [executing], #27508 [executing], #27514 [blocked], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524 [proposed], #27531 [proposed], #27533 [executing], #6826, #7142, #7149
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11944, #11945, #12314, #12365, #12366, #12368, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12824, #12872, #12878, #13108, #13202, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1754, #1755, #1779, #178712, #178713, #178714, #1798, #1828, #18312, #18326, #18471, #19567, #1986, #1988, #1989, #20042, #2063, #2065, #20662, #2073, #2083, #20985, #21038, #2116, #2127, #2138, #2157, #2159, #2168, #21684, #2174, #2185, #2254, #2258, #2298, #2299, #2307, #23169, #2353, #24172, #24217, #25097, #25150, #25185, #25188, #2537, #25378, #25381, #2546, #25470, #25646, #2583 [superseded], #26908, #26922 [deployed], #26923, #26927 [deployed], #26932 [deployed], #27236, #27249 [executing], #27250, #27259, #27494 [executing], #27508 [executing], #27514 [blocked], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524 [proposed], #27531 [proposed], #27533 [executing], #27610 [executing], #27611 [executing], #6826, #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
-then 45-min monitoring begins.
+ Log
+No reversals this window.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787126689836 — GLM ring relaunch blocked on sudo; all prep complete.
+Pick up task #1787138864086 — Frankenstein LLM GLM speedup questions answered; recovery runbook + research process rules filed.
 
-Where we left off (verified 2026-08-19 10:33 PT):
-- GLM-5.2 confirmed culprit: 0.55 tok/s/stream decode at 10-11 running (30s counter delta: PREFILL 3586 vs DECODE 6.10 tok/s)
-- Doc confirms max_num_seqs 15→32 is the sanctioned lever (step 4, page 22); safety data measured (KV 37.22 GiB headroom, ~0 capture memory, preemption = latency not crash)
-- Pause file removed (/tmp/glm52_ring_paused deleted on Cato)
-- Watchdog running (PID 184323, glm52_watchdog_worker.sh, 60s checks, 3-failure restart)
-- Launch artifact written (/home/rubenmajor/glm52_launch_20260819_maxseqs32.sh)
-- Config script in place (/tmp/glm52_launch_cfg.sh copied from glm52_launch_cfg_pp6.sh, CFG_MAX_SEQS env-overridable line 63)
-- Supervisor script is a WATCHDOG only — relaunches when API dead >600s, won't proactively restart running ring
-- BLOCKER: ring processes are root-owned (PID 1283394 on Cato), sudo requires password, cannot kill to relaunch
-- WOPR SSH connection refused during escalation probe (transient or routing issue)
+Where we left off (verified 2026-08-19 12:29 PT):
+- Answered Ruben's 5 questions about DeepSeek speed, paid account, spill ladder, GLM stalling, 235B routing
+- Root cause of perceived slowness: GLM ring flooded at 11 concurrent (0.55 tok/s/stream) while DeepSeek cloud responds in 2-5s; floor removal + admission gate fixed the flood (verified: emsu-operations ssh_command sudo cat /proc/857523/environ returned EMSU_GLM_FLOOR_OFF=1; ring /metrics num_requests_running=3.0 after gate)
+- Julia 235B is NOW SERVING (verified: emsu-operations ssh_command curl :11513/v1/models HTTP 200, qwen3-235b listed)
+- Created rule 91-GLM: GLM ring + Julia/Claudia 235B recovery runbook at Rules-archive/91-glm-ring-235b-recovery-runbook.md
+- Created rule 323: bug library research process (dynamic search + community search) at Rules-archive/323-bug-library-research-process.md
+- Updated _RULE_TREE.md with both rules, reindexed MCP
+- DeepSeek account was drained, Ruben topped it up; spill rung now functional
 
 Open threads to drive next:
-1. GLM ring relaunch with max_num_seqs=32 — BLOCKED on sudo access to kill root-owned ring. Need Ruben to: (a) provide sudo password/NOPASSWD, (b) kill ring manually `sudo pkill -f "vllm serve.*glm-5.2-15pct"` on all 6 nodes, or (c) approve alternative. Once killed, relaunch all 6 nodes with CFG_MAX_SEQS=32, monitor decode tok/s for 45 min — #27524 [blocked]
-2. Rule-91 steering trim: move 297/315 amendments to case-law files, skeleton to recency position, 200KB tripwire; awaits Ruben review — #27531 [proposed]
-3. Canary quarantine for wedged-but-running engines + stale-healthy decay; executor queue — #27508 [executing]
-4. emsu-codegen 74% empty streams; executor attempt failed, needs manual implementation per rule 267 GATE C — #27514 [blocked]
-5. Cloudflare tunnel-abort classification + originRequest block; folds the 333KB-body 403 bisect; executor queue — #27515 [executing]
-6. Drop-in consolidation (55+ files) + SLO coherence; executor queue — #27494 [executing]
-7. DeepSeek balance top-up — account drained, free spill rung dead until topped up (human-only decision — no idea)
-8. Bug library organization: keyword tagging scan for searchability (user requested parallel work) — not yet started
+1. #27610 [executing] — Rule 91-GLM filed as idea for executor tracking
+2. #27611 [executing] — Rule 323 filed as idea for executor tracking
+3. Ring decode relaunch: max_num_seqs 15 to 32 with controlled sequence — #27524 [proposed] (from prior window, awaits Ruben)
+4. Rule-91 steering trim: move amendments to case-law files — #27531 [proposed] (from prior window, awaits Ruben)
+5. DeepSeek balance monitoring: account was drained once; consider low-balance alert — (human-only decision, no idea)
 
 Reference IDs:
-- Ideas in production this window: #27518 [deployed], #27520 [deployed]
-- Ideas needing manual implementation: #27514 [blocked]
-- Bug library incidents (router-incident ids, NOT idea numbers): 2583 (DeepSeek explainer, matched this task), 1724 (GLM-first forcing interactive onto stalled ring), 2100 (bare-MCP-tag XML wedge), 2524+2525 (steering bloat/disobedience), 2571 (Julia kernel wedge), 1893 (num_workers/redis ruled out)
-- Files touched this window: /tmp/glm52_ring_paused (removed), /home/rubenmajor/glm52_launch_20260819_maxseqs32.sh (created), /tmp/glm52_launch_cfg.sh (created on Cato), HANDOFF_NOTES.md
-- Probes left on WOPR: /tmp/ringrate.sh, /tmp/sem_pc.py, /tmp/xmlmode_probe.py, /tmp/pc_test.py, /tmp/r91p.txt, /tmp/fo.txt
+- Ideas filed: #27610 [executing], #27611 [executing]
+- Files touched: ~/Documents/Cline/Rules-archive/91-glm-ring-235b-recovery-runbook.md, ~/Documents/Cline/Rules-archive/323-bug-library-research-process.md, ~/Documents/Cline/Rules/_RULE_TREE.md
+- Prior window ideas referenced: #27524 [proposed], #27531 [proposed], #27508 [executing], #27514 [blocked], #27515 [executing], #27494 [executing]
 
-On close, append to cline_task_ledger.md (rule 07), run order 66.
+When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
 <task_progress>
-- [x] Signal-file check (rule 119)
-- [x] Prior window: doc read, watchdog verified, launch artifact written, root-owned blocker found
-- [x] Compressed + shipped pickup p
+- [x] Answer Ruben's questions about DeepSeek speed, paid vs free, spill ladder, GLM stalling
+- [x] Verify live routing state (registry, adapter logs, DeepSeek status)
+- [x] Create rule 91-GLM: GLM ring + Julia/Claudia recovery runbook
+- [x] Create rule 323: bug library research process (dynamic + community search)
+- [x] File ideas #27610 and #27611
+- [x] Reindex MCP
+- [x] Update rule tree
+- [x] Promote ideas to executor
+- [x] Reconcile ideas (both [executing])
+- [x] Fix gate failures: probe Julia live (now serving HTTP 200), fix verification markers
+- [x] Validate completion (ALL PASSED)
+- [x] Check gate file (GATE CLEAR)
+- [x] Complete with pickup prompt
+- [x] Add summary section per Ruben feedback
+- [x] Re-validate and complete
+</task_progress>
+</attempt_completion>
 ```
 
-### `1787122887382` — 8/19/2026, 11:48:33 AM PT — 543 turns
+### `1787159982042` — 8/19/2026, 12:32:42 PM PT — 228 turns
+
+**Original task:**
+
+```
+#Argus/Team Hub
+
+Buttons on this page: https://emsuniversity.com/emtskills/routes/team_hub.php 
+
+for weekly view/monthly view, etc... don't seem to work. The instructors also don't seem to be able to pick up shifts anymore either. I have just heard this from Cori. She said this was put into Argus and Jon tried it also but nothing has materialized. Can you fix this end to end?
+```
+
+**Ideas referenced:** #059669, #0891, #14829, #166534, #1724, #178716, #18941, #21753, #22276, #25185, #2524, #2525, #2563, #2582, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27601 [proposed], #27602 [executing], #27603 [executing], #475569, #5894, #6021, #6366, #64748, #7223, #92400, #9577
+
+**Last PICKUP PROMPT:**
+
+```
+to continue in a fresh window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — Team Hub calendar buttons + shift pickup fix (end to end).
+
+Where we left off (verified 2026-08-19 12:32 PT):
+- Task: https://emsuniversity.com/emtskills/routes/team_hub.php — weekly/monthly view buttons and shift pickup broken. Cori reported, Jon tried via Argus, nothing materialized. Fix end to end.
+- Files: routes/team_hub.php (main page) + lib/team_hub_calendar.php (renderWeeklyCalendar + renderMonthlyCalendar). Both fully read this session.
+- BUG 1 ROOT CAUSE (weekly shift cards not clickable / pickup broken): renderWeeklyCalendar emits an inline <script> IIFE mid-page that does `if (!modalEl || !window.bootstrap) return;`. But bootstrap.bundle.min.js is loaded at the VERY END via HubShell::renderFoot (CDN script tag inside the ENDJS nowdoc). So window.bootstrap is undefined when the calendar IIFE runs → early return → NO click handlers attach → clicking "Open - tap to pick up" cards does nothing. FIX: rewrite the weekly modal as a SELF-CONTAINED vanilla-JS overlay (fixed-position div, no bootstrap.Modal dependency) so it works regardless of Bootstrap load order. Claim button POSTs to /emtskills/routes/api/shift_lifecycle.php?action=request_pickup with JSON {shift_id}. Keep the data-* attributes on .thc-shift cards.
+- BUG 2 ROOT CAUSE (combined classes show only one section): emsu_shifts has columns `section` AND `section2` AND `combined_shift_group` (char). Combined classes store the second section in section2. The calendar query getTeamHubCalendarShifts only SELECTs `section` and the card only renders section. FIX: add section2 to the SELECT; in the weekly card + modal, render both sections (e.g. "26912BC + 26913BC") when section2 is non-empty.
+- BUG 3 ROOT CAUSE (monthly "View day" goes to weekly not daily): renderMonthlyCalendar day-cell onclick and "View day" link both use `?view=weekly&date=...`. FIX: change to `?view=daily&date=...`. ALSO must pass date into the daily iframe: team_hub.php builds $__dailyEmbedUrl = '/emtskills/routes/connecteam_schedules.php?embed=1' — need to check connecteam_schedules.php accepts a date param (NOT yet verified) and append it; if it doesn't support date, add date support there or route to a daily rendering. VERIFY connecteam_schedules.php date handling before finalizing bug 3.
+- Deploy via write_server_file (emsu-operations MCP) which auto-lints PHP + reloads FPM. NEVER write_to_file on /var/www paths (rule 144).
+- After deploy: verify by loading team_hub.php?view=weekly and ?view=monthly, confirm cards clickable + modal opens + sections show + monthly View day → daily.
+
+Open threads to drive next:
+1. Implement bug 1 fix (self-contained modal) in lib/team_hub_calendar.php renderWeeklyCalendar — action: rewrite modal HTML+JS.
+2. Implement bug 2 fix (section2) in getTeamHubCalendarShifts SELECT + weekly card/modal render — action: edit lib/team_hub_calendar.php.
+3. Implement bug 3 fix (monthly → daily + date param) in renderMonthlyCalendar + team_hub.php $__dailyEmbedUrl; first verify connecteam_schedules.php date support — action: read connecteam_schedules.php then edit.
+4. Deploy both files + verify end to end in browser.
+
+Reference IDs:
+- Ideas filed: none yet (file if any deferral)
+- Files touched (pending): lib/team_hub_calendar.php, routes/team_hub.php, possibly routes/connecteam_schedules.php
+- Key columns: emsu_shifts.section, section2, combined_shift_group, claim_status, ins
+```
+
+### `1787122887382` — 8/19/2026, 11:53:23 AM PT — 554 turns
 
 **Original task:**
 
@@ -206,7 +260,7 @@ See also: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php
 As well as Chad Henry's email to rmajor@emsuniversity.com and attached PDF documents
 ```
 
-**Ideas referenced:** #13437, #178712, #19370, #23945, #25185, #2554, #25636 [proposed], #25637 [proposed], #25638 [proposed], #25639 [proposed], #2569, #2570, #2571, #2573, #25916, #25973, #26096, #26154, #26167, #26170, #26322, #26471, #26475, #26476, #26711, #26712, #26713 [proposed], #26715 [deployed], #26827, #26931, #26993, #27069, #27100, #27109, #27110, #27128, #27129, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27287, #27353, #27354, #27355, #27480 [executing], #27481 [executing], #27500 [proposed], #27501 [proposed], #27506 [proposed], #27513 [proposed], #27516 [proposed], #27517 [proposed], #27519 [proposed], #27521 [proposed], #27588 [proposed], #27607 [proposed], #366377
+**Ideas referenced:** #13437, #178712, #178713, #19370, #23945, #25185, #2554, #25636 [proposed], #25637 [proposed], #25638 [proposed], #25639 [proposed], #2569, #2570, #2571, #2573, #25916, #25973, #26096, #26154, #26167, #26170, #26322, #26471, #26475, #26476, #26711, #26712, #26713 [proposed], #26715 [deployed], #26827, #26931, #26993, #27069, #27100, #27109, #27110, #27128, #27129, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27287, #27353, #27354, #27355, #27480 [executing], #27481 [executing], #27500 [proposed], #27501 [proposed], #27506 [proposed], #27513 [proposed], #27516 [proposed], #27517 [proposed], #27519 [proposed], #27521 [proposed], #27588 [proposed], #27607 [proposed], #366377
 
 **Last PICKUP PROMPT:**
 
@@ -245,60 +299,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 ## Key references
 - IDs: #27480 [executing], task 1787123670897
 - Files: ~/Desktop/EMSU_RESPONSE_SAN_MATEO_AUDIT_FINAL_2026-08-19.pdf, /var/www/emtskills/personnel/investigations/san-mateo-202
-```
-
-### `1787159982042` — 8/19/2026, 11:07:20 AM PT — 216 turns
-
-**Original task:**
-
-```
-#Argus/Team Hub
-
-Buttons on this page: https://emsuniversity.com/emtskills/routes/team_hub.php 
-
-for weekly view/monthly view, etc... don't seem to work. The instructors also don't seem to be able to pick up shifts anymore either. I have just heard this from Cori. She said this was put into Argus and Jon tried it also but nothing has materialized. Can you fix this end to end?
-```
-
-**Ideas referenced:** #059669, #0891, #166534, #1724, #178716, #18941, #21753, #22276, #25185, #2524, #2525, #2563, #2582, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27601 [proposed], #27602 [executing], #27603 [executing], #475569, #5894, #6021, #7223, #92400, #9577
-
-**Last PICKUP PROMPT:**
-
-```
-te, canSeeAllSites, homeSite).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787160182000 — Team Hub round 3.
-
-Where we left off (verified 2026-08-19 11:04 PT):
-- Rounds 1+2 live on server (details in session memory above); round-3 feedback received, root-cause hypotheses recorded
-- Compressed at 11:03 PT per rule 119
-
-Open threads to drive next:
-1. #27602 [executing] — implement round-3 calendar changes: self-contained (non-Bootstrap) modal so the weekly card click opens it and pickup POST fires, show ALL sections for combined classes, monthly View-day links to ?view=daily&date=
-2. #27603 [executing] — resolve the Argus ticket(s) re Team Hub views/pickup (search_tickets 'team hub' / 'Cori', add resolution comment, close)
-3. #27601 [proposed] — browser verification of weekly/monthly views + shift pickup flow
-
-Reference IDs:
-- Ideas filed: #27601 [proposed], #27602 [executing], #27603 [executing]
-- Files touched: lib/team_hub_calendar.php, lib/shift_migration_helper.php, routes/api/shift_lifecycle.php, api/team_hub_claim_shift.php, includes/team_hub_shell.php, assets/css/cori-sidebar.css, assets/css/team_hub.css
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-
-# Reversal Log
-No reversals this window.
-</result>
-<task_progress>
-- [x] Rule 119 compress
-- [x] File round-3 ideas #27602 + #27603
-- [x] Validate (ALL PASSED)
-- [x] Gate check (CLEAR)
-- [x] attempt_completion with blob + pickup prompt
-</task_progress>
-</attempt_completion>
 ```
 
 ### `1787148101456` — 8/19/2026, 7:01:52 AM PT — 3 turns

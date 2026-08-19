@@ -106,6 +106,7 @@
 - **Hardfloor don't-destroy** — R: 145,157 (never tear down TP=2 without permission)
 - **GLM-5.2 Hexarchy PP=6 ring** — R: 273 (6 nodes: Cato/Aug/Pompey/Marcus/Tib/Cesar; PP=6 ONLY)
 - **GLM-5.2 launch UMA+JIT fix (MANDATORY)** — R: 277 (VLLM_ENGINE_READY_TIMEOUT_S=1800 + gpu_memory_utilization=0.82, do NOT lower; v20 script only)
+- **GLM ring + Julia/Claudia 235B recovery runbook** — R: 91-glm (decode vs prefill measurement, max_num_seqs lever, tunnel-vs-model distinction, verification discipline; answers "why spill to DeepSeek")
 - **Doorman output-quality gate** — R: 256 (streaming validation + XML translation), 257 (keep bad LLMs out before they reach Cline)
 - **Kaison autonomous repair** — R: 147,233
 - **Check latest software before LLM deploy** — R: 269 (NCCL/vLLM/CUDA/OFED versions + known regressions)
@@ -152,7 +153,7 @@
 → Fetch all: `clinerules_list_by_topic("yolo")`
 - **Circuit breaker** — R: 143 (v4: ceiling=10 post-reload, bail at strike 9 = ceiling-1; pre-reload ceiling=3, bail at strike 2), 162 (self-loop breaker)
 - **MCP failure classification** — R: 261 (4 modes before declaring "wedge" — server-down/session-expired/transport-error/transient-empty; 3-gate check before pivot), 258 (stale/empty data truth gate), 249 (MCP flapping: check supergateway --stateful FIRST)
-- **Bug library + community search** — R: 262 (consult bug library + GitHub/Stack Overflow before recycling debugging approaches; 2-strike tripwire)
+- **Bug library + community search** — R: 262 (consult bug library + GitHub/Stack Overflow before recycling debugging approaches; 2-strike tripwire), 323 (bug library research process: 4-angle dynamic search + 3-source community search minimum, research output format, keyword-rich recording)
 - **Per-class playbook** — R: 99 (auto-generated: no-tool-use, timeout, ssh, replace_in_file, permission denied...), 165 (invalid JSON arg), 170 (own-error → repair or RCA+file)
 - **Extension host** — R: 16,97,98
 - **Remote commands** — R: 95 (scp+nohup for long-running, timeout prevention)

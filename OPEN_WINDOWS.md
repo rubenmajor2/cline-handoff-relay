@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/20/2026, 3:05:00 AM PT | window: last 72h | 102 tasks | index total 872 (parsed 1, cached 871)
+Generated: 8/20/2026, 4:05:01 AM PT | window: last 72h | 101 tasks | index total 872 (parsed 0, cached 872)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -111,7 +111,6 @@ Generated: 8/20/2026, 3:05:00 AM PT | window: last 72h | 102 tasks | index total
 | `1786948767264` | 8/17/2026, 8:03:55 AM | 254 | 1446KB | #Unknown / Maybe 317 adjacent |
 | `1786660376952` | 8/17/2026, 8:01:40 AM | 1016 | 2862KB | help me file with Florida Board of Education application yet? Need that approval before we |
 | `1786948641882` | 8/17/2026, 7:53:31 AM | 226 | 1391KB | #Rule 317 |
-| `1786961118260` | 8/17/2026, 3:28:00 AM | 60 | 143KB | #Frankenstein Routing / Cleanup |
 
 ---
 
@@ -4400,25 +4399,3 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1786961118260` — 8/17/2026, 3:28:00 AM PT — 60 turns
-
-**Original task:**
-
-```
-#Frankenstein Routing / Cleanup
-
-Can you clean this up. I think there may have been some errors in this particular task and needs cleanup / 317, etc...
-
-
-Session halted on Ruben's directive ("stop, give a rule 91 comprehensive"). No further tool calls were made after that instruction.
-
-## What was done this session
-
-**1. Benchmark harness built and hardened**
-- Created /tmp/bench_fixed.py (+ /tmp/bench7.py variant) running 6 tasks against frankenstein-llm only (no Opus-OUT dependency): exact (PONG-42), no_apology, routing_bug (Klarna/QuickBooks), payment_processors, vec_grounding (PICKUP block
-```
-
-**Ideas referenced:** #13202, #25185, #26209, #26938 [deployed], #26967 [deployed], #27011 [executing], #27012 [executing]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

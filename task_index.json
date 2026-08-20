@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-20T13:05:01.874Z",
+ "generated_at": "2026-08-20T14:05:02.265Z",
  "counts": {
-  "parsed": 0,
-  "reused": 872,
+  "parsed": 1,
+  "reused": 871,
   "failed": 0,
   "total": 872
  },
@@ -136522,13 +136522,13 @@
   },
   "1787168789833": {
    "task_id": "1787168789833",
-   "mtime": 1787218603517,
+   "mtime": 1787234700901,
    "created_at": "2026-08-19T19:46:29.833Z",
-   "last_modified": "2026-08-20T09:36:43.517Z",
-   "size_kb": 8586,
-   "turn_count": 1198,
+   "last_modified": "2026-08-20T14:05:00.901Z",
+   "size_kb": 8590,
+   "turn_count": 1201,
    "title": "#Julia/Claudia 235B\n\nJulia/Claudia 235B is back online and serving. (verified: curl lane :11513 HTTP=200 + ssh_command lane-guard probe ok:true problems:[] reach vllm=true ssh=true at 03:08 PT; router audit picked=julia-235b no substitution; fleet_act julia=healthy ok:true)\n\nRecovery + verification (this window, all times PT):\n- Julia was L2-dark after the 2026-08-18 outage (last good serve 13:15 PT, confirmed dark 14:49-14:53 from 3 vantages). Physical power cycle restored it.\n- Post-return: Ray head + vLLM relaunched via @reboot. Lane :11513 HTTP=200, decode probe returns real tokens, router audit picks julia-235b with no substitution.\n- fleet_act julia=healthy (ok:true).\n- Live re-probe t",
-   "pickup_prompt": "air row written and reindexed.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #1787129383579 — Julia/Claudia 235B recovered, RoCE IPv4 preflight bug fixed.\n\nWhere we left off (verified 2026-08-20 02:36 PT):\n- Julia 235B TP=2 SERVING: lane :11513 HTTP=200, real decode (qwen3-235b, 25 completion tokens), catch_relaunch.state=SERVING, vllm procs=2.\n- Root cause fixed: Julia RoCE IPv4 192.168.100.2/24 restored; `bin/emsu-roce-preflight.sh` line 9 patched to `sudo -n /usr/sbin/ip addr add`.\n- NCCL now 8/8 channels NET/IB over RoCE (no ibv_modify_qp EINVAL). GID=3 confirmed on both launch scripts.\n- Rule 317 amended (INSUFFICIENT_PROBE) via clinerules_amend_rule; task 1787129383579-julia-235b-recovery.\n\nOpen threads to drive next:\n1. #27736 [proposed] — Verify Julia RoCE-preflight sudo fix survives the NEXT reboot (boot log should show \"restored .../roce OK\" instead of \"FATAL\"). Re-run the router audit and fleet_act julia=healthy wrapper (NOT re-probed in the recovery window).\n2. #27236 [deployed] — lane-guard reachability patch remains live; no action unless a transition alert fires.\n\nReference IDs:\n- Ideas filed: #27736 [proposed]\n- Carried forward: #27236 [deployed], #27232 [rejected]\n- Files touched: /home/rubenmajor/bin/emsu-roce-preflight.sh (sudo patch), /home/rubenmajor/julia_unified_tp2_qwen235.sh (GID reverted to 3), /home/rubenmajor/claudia_unified_worker.sh (GID=3)\n- Fleet: Julia lane :11513 SERVING (HTTP 200, decode verified); router audit + fleet_act not re-probed this window.\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "ed tok/s over RoCE\n- [ ] Close every gap found (week-unattended)\n- [ ] Report + PICKUP PROMPT\n</task_progress>\n</use_mcp_tool>",
    "ideas": {
     "1241": null,
     "1248": null,

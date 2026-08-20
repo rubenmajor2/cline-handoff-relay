@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/20/2026, 6:05:01 AM PT | window: last 72h | 101 tasks | index total 872 (parsed 0, cached 872)
+Generated: 8/20/2026, 7:05:02 AM PT | window: last 72h | 101 tasks | index total 872 (parsed 1, cached 871)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787168789833` | 8/20/2026, 2:36:43 AM | 1198 | 8586KB | #Julia/Claudia 235B |
+| `1787168789833` | 8/20/2026, 7:05:00 AM | 1201 | 8590KB | #Julia/Claudia 235B |
 | `1787191612298` | 8/20/2026, 2:34:53 AM | 316 | 8580KB | #Comprehensive System |
 | `1787186219913` | 8/20/2026, 2:31:43 AM | 516 | 7844KB | #Argus Improvements from browser window.  |
 | `1787183842548` | 8/20/2026, 1:54:27 AM | 448 | 4377KB | Chat Widget does not appear to be responding to inquires. Can you check, test and resolve? |
@@ -116,7 +116,7 @@ Generated: 8/20/2026, 6:05:01 AM PT | window: last 72h | 101 tasks | index total
 
 ## Per-window detail
 
-### `1787168789833` — 8/20/2026, 2:36:43 AM PT — 1198 turns
+### `1787168789833` — 8/20/2026, 7:05:00 AM PT — 1201 turns
 
 **Original task:**
 
@@ -135,33 +135,11 @@ Recovery + verification (this window, all times PT):
 **Last PICKUP PROMPT:**
 
 ```
-air row written and reindexed.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1787129383579 — Julia/Claudia 235B recovered, RoCE IPv4 preflight bug fixed.
-
-Where we left off (verified 2026-08-20 02:36 PT):
-- Julia 235B TP=2 SERVING: lane :11513 HTTP=200, real decode (qwen3-235b, 25 completion tokens), catch_relaunch.state=SERVING, vllm procs=2.
-- Root cause fixed: Julia RoCE IPv4 192.168.100.2/24 restored; `bin/emsu-roce-preflight.sh` line 9 patched to `sudo -n /usr/sbin/ip addr add`.
-- NCCL now 8/8 channels NET/IB over RoCE (no ibv_modify_qp EINVAL). GID=3 confirmed on both launch scripts.
-- Rule 317 amended (INSUFFICIENT_PROBE) via clinerules_amend_rule; task 1787129383579-julia-235b-recovery.
-
-Open threads to drive next:
-1. #27736 [proposed] — Verify Julia RoCE-preflight sudo fix survives the NEXT reboot (boot log should show "restored .../roce OK" instead of "FATAL"). Re-run the router audit and fleet_act julia=healthy wrapper (NOT re-probed in the recovery window).
-2. #27236 [deployed] — lane-guard reachability patch remains live; no action unless a transition alert fires.
-
-Reference IDs:
-- Ideas filed: #27736 [proposed]
-- Carried forward: #27236 [deployed], #27232 [rejected]
-- Files touched: /home/rubenmajor/bin/emsu-roce-preflight.sh (sudo patch), /home/rubenmajor/julia_unified_tp2_qwen235.sh (GID reverted to 3), /home/rubenmajor/claudia_unified_worker.sh (GID=3)
-- Fleet: Julia lane :11513 SERVING (HTTP 200, decode verified); router audit + fleet_act not re-probed this window.
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
+ed tok/s over RoCE
+- [ ] Close every gap found (week-unattended)
+- [ ] Report + PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
 ```
 
 ### `1787191612298` — 8/20/2026, 2:34:53 AM PT — 316 turns

@@ -10,10 +10,10 @@ One sentence: **Claim scope must equal probe scope.** A tool's auto-success sign
 
 The reversal log collapses to FOUR recurring failure modes, in order of frequency:
 
-- **SELF_CONTRADICTING_DISPOSITION** (dominant: 251 of 280 telemetry failures; the #1 gate blocker). Prose says DONE/FIXED/VERIFIED next to an idea bracket that still says [proposed]/[executing]/[blocked]. Stamp the record first (UPDATE orchestrator_ideas SET status=deployed, then reconcile_ideas), THEN write the claim; or keep the honest bracket. Never write FIXED next to [proposed]. [auto-sync: +3 since 2026-08-19 | latest: 2026-08-19 false-gate incident: agent re-presented ideas #27524/#27531 for approval AFTER ]
+- **SELF_CONTRADICTING_DISPOSITION** (dominant: 251 of 280 telemetry failures; the #1 gate blocker). Prose says DONE/FIXED/VERIFIED next to an idea bracket that still says [proposed]/[executing]/[blocked]. Stamp the record first (UPDATE orchestrator_ideas SET status=deployed, then reconcile_ideas), THEN write the claim; or keep the honest bracket. Never write FIXED next to [proposed]. [auto-sync: +4 since 2026-08-19 | latest: 2026-08-19: window todo checklist carried '#27657/#27671 approved' from filing-time memory]
 - **R317_UNVERIFIED_STATE** (24 of 280 telemetry failures). Asserting fleet/routing/pod/model-health or deliverable state from memory without a live probe returning proof. Probe first and quote the result, or label the claim UNVERIFIED. [auto-sync: +38 since 2026-08-19 | latest: - should_compress_now returned GREEN (stale 91,555-token status file) -> corrected to COMP]
-- **INSUFFICIENT_PROBE** (the mechanism behind most amendment case law). One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state. [auto-sync: +34 since 2026-08-19 | latest: 2026-08-19 within-window reversal: the lockout cluster was initially attributed to cron-vs]
-- **SCOPE_ERROR** (completion over-scoped to DONE). Enumerate EVERY visible defect / every deliverable in the set before claiming resolved; the undone ones become open threads with real idea ids, not hidden by a "done" headline. [auto-sync: +11 since 2026-08-19 | latest: The AZDHS EMS-26-0495 v2 answered the complaint as one undifferentiated program-level bloc]
+- **INSUFFICIENT_PROBE** (the mechanism behind most amendment case law). One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state. [auto-sync: +37 since 2026-08-19 | latest: 2026-08-19 deploy-claim reversal: completion claimed 3 mechanisms deployed and stamped orc]
+- **SCOPE_ERROR** (completion over-scoped to DONE). Enumerate EVERY visible defect / every deliverable in the set before claiming resolved; the undone ones become open threads with real idea ids, not hidden by a "done" headline. [auto-sync: +12 since 2026-08-19 | latest: 2026-08-19 scope reversal: the original completion said the remaining active suspensions w]
 <!-- golden-rule-table:end -->
 
 English-only, always (narration included); domain context never justifies language switching.
@@ -46,3 +46,43 @@ English-only, always (narration included); domain context never justifies langua
 ## Case law + amendment trail
 
 Amendment history (2026-08-16 through 2026-08-20 reversals) moved to `Rules-archive/317-amendments.md` per the trim-then-archive pattern (#27531).
+
+## Amendment (from reversal, 2026-08-20 03:55 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: lockout-cfa-2026-08-19-verify
+- RCA bucket: insufficient probe
+- Trigger pattern: permission/log fix declared complete without re-running the consumer AS THE PRODUCTION USER; a stale www-data-owned /tmp lock kept killing the emsuserver cron every 15min after the 'fix'
+- Reversal note: 2026-08-19 verification reversal: completion claimed the auto-clear heal path was restored (log perms fixed, patches in), but a live probe as the production user found /tmp/cfa_payment_auto_clear.lock owned www-data 664 which emsuserver's cron could not fopen (supplementary group not honored for write), so every 15-min cron run exited 'another instance running' and the heal path was STILL dead. Fixed: lock recreated root:root 666, write-verified for both users, end-to-end run as emsuserver succeeded. Amended behavior: after ANY permission/ownership/log fix on a cron, re-run the consumer AS THE PRODUCTION CRON USER (sudo -u <cronuser> php ...) and confirm real output lines in its log before declaring the path restored; where a script uses a /tmp lock, probe lock-file ownership/writability for the cron user as part of the check.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-20 03:56 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: lockout-cfa-2026-08-19-verify
+- RCA bucket: scope error
+- Trigger pattern: completion over-scoped the sweep complement: 'remaining 812 are genuinely owed' collapsed 4 distinct sweep buckets (682 owed / 94 no_settled_record / 5 orphan / 28 skipped-by-design) into one claim
+- Reversal note: 2026-08-19 scope reversal: the original completion said the remaining active suspensions were all genuinely owed. The sweep's own log buckets say otherwise: 682 SLS-confirmed unpaid, 94 no_settled_record (SLS gate PASS but zero settled ledger rows — deliberately blocked for HUMAN review per #26434, possibly wrongful), 5 orphaned rows (student_not_found), ~28 declined_checkout_followup skipped by design. Amended behavior: when a sweep/classifier produces named outcome buckets, the completion must enumerate EVERY bucket with its count; the complement of 'cleared' is never a single uniform class. Claim scope must equal probe scope.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-20 04:01 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787190192283
+- RCA bucket: insufficient probe
+- Trigger pattern: CFA lockout completion verification: three within-window reversals (dead-cron attribution, sweep-bucket scope, stale /tmp lock) all traced to probe gaps
+- Reversal note: Consolidated record of this window's three flips, all with causal rule 317: (1) 'broken since Jul 17 due to CanonicalPricing error' corrected to 'cron never ran at all since Jul 17 (log redirect permission failure); schema drift was a second latent defect' — an empty 0-byte cron log is probative evidence of a silently-dead cron; stat mtime+size and run the script manually before naming the cause. (2) 'remaining suspensions genuinely owed' corrected to the sweep's own four buckets (682 unpaid / 94 no_settled_record human-review / 5 orphaned / ~28 skipped-by-design) — enumerate every classifier bucket, the complement of cleared is never one uniform class. (3) 'heal path restored' corrected to 'still dying on a www-data-owned /tmp lock' — after any permission/log fix, re-run the consumer AS THE PRODUCTION CRON USER and probe lock-file ownership/writability before declaring the path restored. Earlier per-flip amendments exist under task ids lockout-cfa-2026-08-19 and lockout-cfa-2026-08-19
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-20 04:38 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: jose-palomares-repeat-email-rca
+- RCA bucket: stale assumption
+- Trigger pattern: todo-list disposition carried from memory into completion assembly without a live reconcile
+- Reversal note: 2026-08-19: window todo checklist carried '#27657/#27671 approved' from filing-time memory while live reconcile_ideas returned status=proposed dev_stage=idle. Caught pre-ship by the live-read mandate; completion re-tagged [proposed]. Amended behavior: internal todo/checklist idea statuses are claims too and must be refreshed by a live reconcile_ideas or direct orchestrator_ideas read before any completion is assembled, not carried across tool rounds.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

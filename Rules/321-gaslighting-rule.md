@@ -113,3 +113,13 @@ Rule 91 (PICKUP PROMPT) or any other hardfloor formatting rule.
 - Reversal note: 2026-08-19 false-gate incident: agent re-presented ideas #27524/#27531 for approval AFTER Ruben's approve actions had already landed at 17:04 PT, treating the DB 'awaiting_review' workflow stage as a re-approval queue. Amended behavior: an idea with a recorded human approve action is EXECUTED, never re-presented for approval; the reconcile 'awaiting_review' tag means the executor's written record sits at review stage, not that the human decision is pending. Executing approved work never requires asking again.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-20 04:39 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787191612298
+- RCA bucket: insufficient probe
+- Trigger pattern: Claiming deployed/shipped based on stamping the idea row status, without a separate read-back of the actual file/view/script
+- Reversal note: 2026-08-19 deploy-claim reversal: completion claimed 3 mechanisms deployed and stamped orchestrator_ideas status=deployed, but read-back verify found the drift-detector script + scoreboard view NEVER existed on disk/DB (only the truth index existed, under a different name than claimed). Amended behavior: a [deployed] tag or status=deployed stamp REQUIRES a separate read-back probe of the ACTUAL artifact (file on disk via ls/find, or DB object via information_schema) in the same window. An idea-row status stamp is NOT evidence the artifact exists. G5 premature-completion now explicitly covers 'stamped the idea deployed but never built/verified the artifact.'
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

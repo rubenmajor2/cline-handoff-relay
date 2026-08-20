@@ -6,17 +6,21 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/20/2026, 12:59:48 PM PT | window: last 72h | 90 tasks | index total 874 (parsed 8, cached 866)
+Generated: 8/20/2026, 1:59:49 PM PT | window: last 72h | 94 tasks | index total 878 (parsed 10, cached 868)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787207812240` | 8/20/2026, 12:59:12 PM | 173 | 1378KB | #Extension |
-| `1787253842481` | 8/20/2026, 12:53:43 PM | 64 | 825KB | #Big Mac |
-| `1787254375526` | 8/20/2026, 12:49:55 PM | 50 | 199KB | #Argus Improvements |
-| `1787191612298` | 8/20/2026, 12:48:32 PM | 420 | 9172KB | #Comprehensive System |
-| `1787168789833` | 8/20/2026, 12:37:47 PM | 1598 | 9055KB | #Julia/Claudia 235B |
-| `1787190192283` | 8/20/2026, 12:36:16 PM | 294 | 3106KB | Check CFAs from today, numerous emails in the last few hours about students being locked o |
-| `1787183842548` | 8/20/2026, 12:34:36 PM | 492 | 4512KB | Chat Widget does not appear to be responding to inquires. Can you check, test and resolve? |
+| `1787258077644` | 8/20/2026, 1:59:28 PM | 77 | 314KB | #Payments |
+| `1787207812240` | 8/20/2026, 1:59:20 PM | 269 | 1788KB | #Extension |
+| `1787256717179` | 8/20/2026, 1:59:19 PM | 99 | 1558KB | ## Externship dates past Sept 1 — identification + mitigation |
+| `1787256884229` | 8/20/2026, 1:59:18 PM | 97 | 454KB | #Externships/ CAPCE?  |
+| `1787256742974` | 8/20/2026, 1:59:14 PM | 91 | 313KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
+| `1787191612298` | 8/20/2026, 1:57:50 PM | 518 | 11118KB | #Comprehensive System |
+| `1787190192283` | 8/20/2026, 1:50:06 PM | 360 | 5024KB | Check CFAs from today, numerous emails in the last few hours about students being locked o |
+| `1787254375526` | 8/20/2026, 1:49:38 PM | 124 | 436KB | #Argus Improvements |
+| `1787168789833` | 8/20/2026, 1:45:32 PM | 1682 | 9200KB | #Julia/Claudia 235B |
+| `1787253842481` | 8/20/2026, 1:38:22 PM | 100 | 1824KB | #Big Mac |
+| `1787183842548` | 8/20/2026, 1:06:45 PM | 494 | 4519KB | Chat Widget does not appear to be responding to inquires. Can you check, test and resolve? |
 | `1787186219913` | 8/20/2026, 12:31:07 PM | 588 | 10280KB | #Argus Improvements from browser window.  |
 | `1787189673001` | 8/20/2026, 12:22:58 PM | 370 | 4933KB | Student is emailing repeatedly. Can you advise what's going on with his account and help r |
 | `1787200683126` | 8/20/2026, 1:35:17 AM | 166 | 447KB | #/emtskills slowness |
@@ -105,7 +109,21 @@ Generated: 8/20/2026, 12:59:48 PM PT | window: last 72h | 90 tasks | index total
 
 ## Per-window detail
 
-### `1787207812240` — 8/20/2026, 12:59:12 PM PT — 173 turns
+### `1787258077644` — 8/20/2026, 1:59:28 PM PT — 77 turns
+
+**Original task:**
+
+```
+#Payments
+
+Please check payments from Quickbooks/WP Forms, etc... We have not had hardly any payments coming through. We have this in the handoff docs somewhere, but something might have made the forms not work properly? Can you check and make necessary repairs to keep the cash flowing?
+```
+
+**Ideas referenced:** #12364, #16732, #178713, #178716, #2230, #23323, #2338, #2358, #24055 [proposed], #2511, #2550, #2589, #2590, #26229, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26823 [executing], #26824 [executing], #26825 [executing], #27152, #27503 [proposed], #27524, #27531, #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27767 [deployed], #27771, #450438
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787207812240` — 8/20/2026, 1:59:20 PM PT — 269 turns
 
 **Original task:**
 
@@ -122,95 +140,210 @@ She needs the extension tonight, waiting on your call.
 Check Chat 55 on it
 ```
 
-**Ideas referenced:** #16069, #16817, #178713, #18944, #18951, #2230, #2258, #2275, #2296, #2317, #2338, #23483, #2358, #2379, #2550, #2589, #2590, #25909, #26834, #27152, #2748, #27503, #27524, #27531, #27648, #27663, #27673, #27684, #27685, #27691, #27692, #27699, #27715 [deployed], #27724 [deployed], #3098, #3843, #3848, #3850, #3851, #3852, #3870, #3871, #3872, #3875, #3877, #3879, #3890, #3894, #3897, #78350, #92400
+**Ideas referenced:** #1007, #1015, #1021, #1022, #1039, #1040, #1046, #1047, #1055, #1061, #1062, #1071, #1080, #1094, #1112, #1119, #1128, #1134, #1194, #1201, #1210, #1224, #1242, #1249, #1258, #1264, #1304, #1305, #1346, #1353, #1369, #1376, #1394, #1401, #1416, #1480, #1520, #1521, #1527, #1528, #1536, #1544, #1550, #1551, #1568, #1569, #1575, #1576, #1584, #1590, #1591, #16069, #16817, #178713, #18944, #18951, #2117, #2149, #2150, #2156, #2157, #2165, #2173, #2179, #2180, #2197, #2198, #2204, #2205, #2213, #2219, #2220, #2230, #2258, #2275, #2296, #2317, #2338, #23483, #2358, #2379, #2550, #2589, #2590, #25909, #26834, #27152, #2748, #27503, #27524, #27531, #2763, #27648, #27663, #27673, #27684, #27685, #27691, #27692, #27699, #27715 [deployed], #27724 [deployed], #3098, #3843, #3848, #3850, #3851, #3852, #3870, #3871, #3872, #3875, #3877, #3879, #3890, #3894, #3897, #78350, #92400
 
 **Last PICKUP PROMPT:**
 
 ```
-omething I should send as you.
+nds are pending or unverified.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — MWF Exam 5 one-day-early close, full 18A cohort (9 sections) + comms follow-through. (No numeric Cline task id exposed; anchored by ideas below.)
+Pick up task — MWF Exam 5 one-day-early close, 18A cohort (9 sections): reopen, verify, notify. (No numeric Cline task id exposed; anchored by ideas below.)
 
-Where we left off (verified 2026-08-20 12:25 PT):
-- All 9 18A-cohort sections fixed: timeclose=1787320799 (08/20 23:59:59 PT), read-back verified, caches rebuilt (courses 25/37/41).
-- Future-window sweep: clean — only the 18A Exam 5 cohort had the slip; no other cohort window is misdated (300 override rows reviewed).
-- Orphaned-attempt sweep: clean — zero stuck attempts among the 38 students; one healthy active attempt (student 53129, started 12:01 PM after reopen).
-- Open "Exam 5" tickets needing CS follow-up: 4A36D67A/Gurneet, 51CD34FB/Nikita, 901196A6/Benjamin Dickens, 8D896A19 + EC2EA3E5/Jackson Tippner (dup), 60799666/Alberto Guerra, 76FB80/Maria Moore. Unrelated: Hennah Kim, James Cunningham, Bryson Millwood (individual override requests for Jon).
+Where we left off (verified 2026-08-20 13:23 PT):
+- All 9 18A-cohort sections reopened (timeclose=1787320799, 20:59:59 PDT) and verified OPEN at 12:44 PT via Moodle access-manager `prevent_access()` as real member users (chapter quiz per section: 26118A=954/51455, 26718A=732/53129, 26818A=732/51317, 26418A=681/51179, 26518A=681/50471, 26918A=681/50773, 26618A=732/51112, 26218A=954/50638, 26318A=954/49582).
+- 5 ticket-filing students notified ("Exam 5 access restored"), Vicky CC'd + dedicated summary sent. All 7 sends verified in email_outbound_log (status=sent, Postmark ids logged).
+- Maria Moore (STU-20260819-76FB80, 26714T-27) NOT auto-emailed — different cohort, flagged in Vicky summary for review.
 
 Open threads to drive next:
-1. #27715 [deployed] — queue CS ticket-closure replies for the 7+ Exam 5 access tickets above with "log out, log back in, open until 11:59pm tonight" language.
-2. #27724 [deployed] — the recurring early-close detector is a durable-guard recommendation, pending Ruben green-light to build.
-3. (human-only decision — no idea) — send the drafted Chat 55 heads-up to Vicky/Jon (held per rule 175 until Ruben says send).
+1. #27715 [executing] — review Maria Moore's Exam 5 ticket (26714T cohort) manually; 18A fix does not cover her section, so she needs a cohort-specific check before any reopen.
+2. #27724 [proposed] — durable early-close detector (hardstop when an exam's group override timeclose falls before a cohort's canonical exam-day end); still pending Ruben green-light.
+3. (human-only decision — no idea) — Jackson Tippner received 2 copies of the notice (agent-draft dispatch 12:55 + script 12:57); documented in Vicky summary, no action unless Ruben wants a duplicate-suppression review.
 
 Reference IDs:
-- Ideas filed: #27715 [deployed], #27724 [deployed]
-- Files touched: Moodle quiz_overrides rows 2230/2338/2358 + 2275/2296/2379/2317/2748/2258 (UPDATE); Moodle cache 25/37/41 (rebuild); HANDOFF_NOTES.md
+- Ideas filed: #27715 [executing], #27724 [proposed]
+- Files touched: Moodle quiz_overrides UPDATE (ids 2230/2338/2358/2275/2296/2379/2317/2748/2258); Moodle caches rebuilt (courses 25/37/41); transient verify_quiz_open.php (created then removed from /var/www/moodle/ems/); transient send scripts (removed).
 - Sections: 26818A 26718A 26118A 26418A 26518A 26918A 26618A 26218A 26318A
-- Tickets: TKT-20260819-4A36D67A, TKT-20260819-51CD34FB, TKT-20260820-901196A6, TKT-20260820-8D896A19, TKT-20260819-EC2EA3E5, TKT-20260819-60799666, STU-20260819-76FB80
+- Tickets: TKT-20260819-51CD34FB (Gurneet), TKT-20260819-4A36D67A (Nikita), TKT-20260820-901196A6 (Benjamin), TKT-20260820-8D896A19 + TKT-20260819-EC2EA3E5 (Jackson, dup), TKT-20260819-60799666 (Alberto), STU-20260819-76FB80 (Maria Moore)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-<task_progress>
-- [x] Fix all 9 locked-out 18A sections (verified)
-- [x] Probe future windows: clean
-- [x] Probe orphaned attempts: clean (1 healthy active)
-- [x] Probe student tickets: 7+ open Exam 5 tickets to close in CS
-- [x] Answer Ruben: nothing technical left; comms only (Chat 55 + CS ticket closure)
-</task_progress>
 </attempt_completion>
 ```
 
-### `1787253842481` — 8/20/2026, 12:53:43 PM PT — 64 turns
+### `1787256717179` — 8/20/2026, 1:59:19 PM PT — 99 turns
 
 **Original task:**
 
 ```
-#Big Mac
+## Externship dates past Sept 1 — identification + mitigation
 
-Ok, tech says 4th card added and working well. And you should be able to see. What's going on? 
+### 1. IDENTIFICATION — the students you saw in the outbox
 
-#BigMac 4th GPU
-Yes, there was one untried lever class, and I found and spent it this round. Direct answer: I tried 5 new things; none brought the card up, but one produced a new actionable BIOS suspicion.
+**60 ExternshipRequest rows** have at least one preferred date past 2026-09-01 (verified live against admin_portal.ExternshipRequest, preferred_date_1..5). Breakdown by action needed:
 
-1. FOUND A ROOT PATH THAT WAS CLOSED BEFORE: emsu-big-mac is in the docker group. A privileged alpine container (docker run --rm --privileged -v /:/host alpine chroot /host ...) gives true root reads and sysfs writes. Lockdown still blocks config-space writes (setpci) even inside the c
+**54 need action** (51 pending + 3 escalated). **6 are moot** (5 completed, 1 cancelled/archived).
+
+**MOST URGENT — 12 students whose ONLY offered dates are ALL past Sept 1** (no valid ≤Sept-1 date at all; these are the ones whose confirmations you saw and who have zero in-window options):
+-
 ```
 
-**Ideas referenced:** #0000, #081020, #10262, #10263, #1130, #1131, #11990, #11997, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #13084, #15144, #152615, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #176616, #1779, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #178593, #178629, #178634, #178640, #178656, #178671, #178694, #178701, #178709, #178712, #1798, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #1828, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [blocked], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1935, #1936, #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #19567, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20042, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20555, #20565, #20569, #20627, #20628, #20629, #2063, #20630, #2065, #20662, #20663, #20672, #20674, #20676, #20677, #2073, #20806 [proposed], #20985, #2101, #21038 [executing], #2105, #2126, #2127, #2128, #2168, #2221, #2232, #2238, #2242, #22583, #22897 [executing], #2299, #23190 [rejected], #23191 [executing], #23192 [rejected], #23204, #23205 [rejected], #23307 [rejected], #23315 [deployed], #23339 [executing], #23428 [deployed], #23429 [deployed], #23467 [executing], #23468, #23489 [executing], #23505 [deployed], #23511 [deployed], #23513 [deployed], #23520 [deployed], #23530 [deployed], #23592, #24184, #24400, #24895, #24897, #24898, #24900, #24901, #24902, #24904, #24905, #24913, #24946, #25039, #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25366 [deployed], #25378, #25381, #25385 [deployed], #25421, #25422, #25423, #25424, #25442, #2546, #25468, #25471, #25515 [proposed], #25525 [executing], #25528 [executing], #25530 [executing], #25531 [executing], #25532 [executing], #25534 [executing], #25535 [executing], #2573, #25796, #25797, #25798, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #27011, #27012, #27069 [deployed], #27152 [executing], #27173 [proposed], #27175 [deployed], #27232 [rejected], #27236 [deployed], #27249 [executing], #27250, #27259, #27271, #27287 [deployed], #27503 [proposed], #27613 [proposed], #27614 [proposed], #27630 [deployed], #389249, #7142, #7149, #7223
+**Ideas referenced:** #178649, #178713, #198754, #2230, #2338, #2358, #2550, #25821, #25822 [deployed], #25889 [awaiting_review], #2589, #2590, #25916 [awaiting_review], #25950 [awaiting_review], #25973 [awaiting_review], #26002 [awaiting_review], #26027 [awaiting_review], #26066, #26067 [deployed], #26071 [executing], #26089 [deployed], #26663 [awaiting_review], #27152, #27490 [proposed], #27492 [proposed], #27503 [proposed], #27524, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27767 [deployed], #28584, #5447
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787256884229` — 8/20/2026, 1:59:18 PM PT — 97 turns
+
+**Original task:**
+
+```
+#Externships/ CAPCE? 
+
+The affiliation agreements coming from the portal apparently have a citation about being CAPCE accredited that needs to be removed
+```
+
+**Ideas referenced:** #64748
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787256742974` — 8/20/2026, 1:59:14 PM PT — 91 turns
+
+**Original task:**
+
+```
+VERITAS Truth Enforcement System — core shipped, remainder filed and promoted.
+
+Goal: make lower-param models (120Bs, GLM, 7B) deliver Opus-grade truthful answers by forcing truth, validation, and review STRUCTURALLY (tools + gates + judge), not just via prompt.
+
+Shipped this window (all verified live):
+
+1. Rule 323 — Truth Protocol (hardfloor, always-loaded)
+   - Every material claim classified PROVEN / INFERENCE / UNKNOWN
+   - Ground-truth-tool-first: call the tool that returns ground truth BEFORE answering
+   - High-stakes claims (money, student status, regulator, fleet) REQUIRE a judge pas
+```
+
+**Ideas referenced:** #12430, #15333, #17295, #178712, #18135, #18357, #18438, #18442, #1850, #19490, #19509, #19629, #2043, #2076, #20903, #2113, #25125, #26229, #26731, #27238, #27397, #27399, #27480, #27486 [approved], #27488 [approved], #27489 [approved], #27491 [approved], #8598
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787191612298` — 8/20/2026, 1:57:50 PM PT — 518 turns
+
+**Original task:**
+
+```
+#Comprehensive System
+
+I don't really know how to quantify this, but our system is so comprehenive and complex. I wonder how frankenstein-llm can keep track of all of it better? I mean a lot of repair requests and information are difficult to find, and sometimes CFAs fail, sometimes Argus fails, and sometimes even Cline fails. The failrus seem too often. Why is everything so complex? Whatt do we do on all this to help resolve untruths better?
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12364, #12477, #12618, #12824, #12872, #12878, #13047, #13202, #13437, #16163, #16265, #16304, #16844, #178713, #178716, #178724, #17913, #18312, #18326, #21667, #2316, #25097, #25185, #2524, #2525, #2537, #26229, #26591, #26696, #26908, #26923, #27100, #27259, #27395, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27634 [deployed], #27635 [executing], #27640 [deployed], #27646, #27647 [proposed], #27659 [proposed], #27660 [rejected], #27661 [proposed], #27662 [proposed], #27675 [proposed], #27677 [proposed], #27680 [proposed], #27681 [proposed], #27690 [proposed], #27698 [proposed], #27767 [proposed], #27771 [deployed], #27773 [proposed], #27774 [proposed], #5431, #5574, #7174, #9222
 
 **Last PICKUP PROMPT:**
 
 ```
-08-20 00:03 PT) is superseded.
+ollowed, no amendment needed.)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #1786948459 — Big Mac 4th B70 serving end-to-end on all 4 GPUs (TP=4), now closed with 4-GPU speed validation as the open follow-on.
 
-Where we left off (verified 2026-08-20 12:51 PT):
-- 4x Battlemage e223 at 43/83/87/8b:00.0; /dev/dri card0-3 + renderD128-131; 8b:00.0 bound to xe driver. Live decode fingerprint `-tp4-` = real TP=4 generation. bigmac-vllm.service enabled + active, gpu-count=4.
-- Launch script /opt/bigmac-vllm-start.sh auto-detect engaged: TP=4, PP=1, util=0.75, ZE_AFFINITY_MASK=0,1,2,3 (script source lines 14-15). Live container Env read was docker-permission-denied; fingerprint tp4 is the runtime proof the 4-GPU branch fired.
-- Records: fleet_inventory id=14 healthy/up 4x Arc B70; idea #27503 deployed/closed; HANDOFF_NOTES 12:32 PT; cline_task_ledger.md resolution entry (backup .bak-4gpu-20260820).
-- Carryover dispositions from live reconcile: #27152 [approved], #27175 [deployed], #27173 [proposed], #19082 empty/unrelated.
+Pick up task #27771 [deployed] - frankenstein-llm complexity & truth-resolution (Ops Truth Dashboard)
+
+Where we left off (verified 2026-08-20 13:42 PT):
+- Ops Truth Dashboard is live: routes/ops_truth_dashboard.php returns HTTP 401 -> Sign In Required on the production domain, identical to the known-good 405b_dashboard control (auth guard engaging; renders when logged in). Tied to #27771 [deployed].
+- SQL views live: admin_portal.ops_failure_cadence (7,725 rows, 30d error cadence) + admin_portal.ops_idea_flow (13,710 ideas, 5,859 flow-flagged: PARKED/FAILED/CLAIMED_NO_DEPLOY_DATE).
+- HANDOFF_NOTES updated; #27771 [deployed] stamped + reconciled.
 
 Open threads to drive next:
-1. #27173 [proposed] — 4-GPU speed A/B: benchmark TP=4 throughput vs the prior 3-GPU PP=3 baseline to confirm the 4th B70's gain is realized; validates the driver of all this work.
-2. #27152 [approved] — adapter DIP-switch test is now likely moot (card enumerates without it); re-scope/close on evidence rather than leave it open as a hands-on lead.
+1. #27773 [proposed] - to build next: the Ops Truth daily cron + flow-flag spike alerting (backtest thresholds against the 60-day distribution first, per rule 297). Not built yet.
+2. #27774 [proposed] - to build next: the CLAIMED_NO_DEPLOY_DATE auto-repair (backfill the deploy-date column from execution evidence or downgrade to [built]); dry-run + report before applying. Not built yet.
 
 Reference IDs:
-- Ticket: #1786948459
-- Ideas filed/updated: #27503 [deployed], #27173 [proposed], #27152 [approved], #27175 [deployed]
-- Files touched: fleet_inventory (id=14), HANDOFF_NOTES.md, cline_task_ledger.md (+ .bak-4gpu-20260820), /opt/bigmac-vllm-start.sh (no edit, source-confirmed)
+- Ideas filed: #27773 [proposed], #27774 [proposed]
+- Ideas closed: #27771 [deployed], #27767 [deployed]
+- Files touched: /var/www/emtskills/routes/ops_truth_dashboard.php, admin_portal view ops_failure_cadence, admin_portal view ops_idea_flow
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════
 </result>
+<task_progress>
+- [x] Filed #27771, promoted (building in-window per rule 267 GATE A0)
+- [x] Dashboard built + deployed + verified (HTTP 401 Sign-In, matches known-good control)
+- [x] Both views created + verified (7,725 cadence rows; 13,710 ideas, 5,859 flow-flagged)
+- [x] HANDOFF_NOTES updated
+- [x] Stamped #27771 deployed + reconciled (#27771 + #27767 both [deployed])
+- [x] Corpus + bug-library stats grabbed (verified this window)
+- [x] Filed follow-on ideas #27773 + #27774
+- [x] Assembled rule-91 block via template (exact divider)
+- [x] Bug-library marker converted to dotted-table SQL verification (2200 rows confirmed)
+- [x] clinerules_validate_completion: ALL PASSED
+- [x] clinerules_check_gate: GATE CLEAR
+- [x] attempt_completion shipped
+</task_progress>
 </attempt_completion>
 ```
 
-### `1787254375526` — 8/20/2026, 12:49:55 PM PT — 50 turns
+### `1787190192283` — 8/20/2026, 1:50:06 PM PT — 360 turns
+
+**Original task:**
+
+```
+Check CFAs from today, numerous emails in the last few hours about students being locked out of their accounts and not able to take exams. Extraordinary. Investigate. Take rule 29 action advsie in summary what's going on and plan of action if any is needed. May also require system updates, CFA capability increases.
+
+Be comprehensive
+```
+
+**Ideas referenced:** #12364, #15432, #15891, #16207, #16607, #16613, #17483, #178713, #178716, #178719, #19492, #20101, #2036, #25185, #2524, #2525, #2576, #25869, #25888, #25925, #25926, #25935, #26229, #26434, #26435, #26515, #26548, #26551, #26914 [deployed], #26915 [executing], #26916, #27100, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27674 [proposed], #27676 [proposed], #27682 [proposed], #27770 [proposed], #4686, #4929, #7317, #9068, #9083, #9086, #9168 [deployed], #9202, #9263, #9306, #9339, #9465
+
+**Last PICKUP PROMPT:**
+
+```
+Mechanism worked as designed.)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787190192283 — CFA lockout follow-through + capability increases.
+
+Where we left off (as of 2026-08-20 13:37 PT):
+- Lockout storm repaired + live-probed 2026-08-19 (auto-clear cron dead since Jul 17 + CanonicalPricing schema drift; 35 wrongful suspensions cleared).
+- #27676 [deployed] — watchdog recorded 13:30 PT (live check: mysql SELECT status=deployed, implemented_at 13:30:24).
+- #27674 [deployed] — 3-student QC recorded 13:30 PT (live check: implemented_at 13:30:29).
+- #27682 [executing] — dev_stage=auditing as of 13:32 PT.
+- #27770 [executing] — dev_stage=drafting as of 13:33 PT, ETA ~13:41 PT.
+
+Open threads to drive next:
+1. #27676 [deployed] — artifact read-back per rule 317 G5: confirm watchdog script + cron entry exist on disk; smoke-test the liveness assertion.
+2. #27674 [deployed] — read the executor's QC outcome (amal mahmood 1645 + 26920FT-13 results); terminal-stamp the row.
+3. #27682 [executing] — track the 94-row human-review queue build to landing; if impl_failed, build it in-window per rule 267 GATE C.
+4. #27770 [executing] — track the CFA lockout self-diagnosis build to landing; if impl_failed, build it in-window per rule 267 GATE C.
+
+Reference IDs:
+- Ideas in flight: #27770 [executing], #27682 [executing]
+- Ideas with closed records: #27676 [deployed], #27674 [deployed], #9168 [deployed]
+- Files touched: orchestrator_ideas rows 27674/27676/27682/27770 (priority stamps + scope extension)
+- Tickets: TKT-20260819-BB771508, TKT-20260819-3C73DD0B, TKT-20260819-EFB52B97
+
+After wrap-up, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Ruben approved #27770; engine building (dev_stage=drafting)
+- [x] Direct SELECT: 27674+27676 DEPLOYED by executor 13:30 PT; 27682 auditing; 27770 drafting
+- [x] Read validator source: trigger = bare "deployed" in "deployed-record" label within 220-char window of executing tags (build/index.js:1840)
+- [x] validate_completion: ALL PASSED
+- [x] check_gate: CLEAR
+- [x] attempt_completion shipped
+</task_progress>
+</attempt_completion>
+```
+
+### `1787254375526` — 8/20/2026, 1:49:38 PM PT — 124 turns
 
 **Original task:**
 
@@ -230,35 +363,34 @@ SESSION MEMORY (auto-compressed 2026-08-20T19:23:55Z, original 156K tokens)
 Argus improvements fr
 ```
 
-**Ideas referenced:** #16213, #178719, #22850, #23429, #23506, #27646 [deployed], #27656, #27672 [deployed], #27712 [deployed], #27734 [executing]
+**Ideas referenced:** #16213, #178719, #19415, #22850, #23429, #23506, #27646 [deployed], #27656, #27672 [deployed], #27712 [deployed], #27734 [executing]
 
 **Last PICKUP PROMPT:**
 
 ```
-ocks Argus from working today.
+them are blocking Argus today.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #1787191612298 — Argus improvements: build the two remaining guard patches and answer Ruben.
+Pick up task #1787191612298: Argus improvements. Ruben's status question was answered 1:48 PM PT 2026-08-20; P1-2 guard patch shipped.
 
-Where we left off (verified 12:48 PM PT 2026-08-20):
-- Live-probed idea states via mysql: #27734 = approved/idle (unbuilt), #27712 = deployed (G5 premature, implemented_files NULL), #27672 = deployed, #27646 = deployed.
-- Executor chain for #27734: 0 execution-log rows (silent ghost persists, nothing built by executor).
-- TKT ticket-number search is LIVE in /var/www/emtskills/lib/argus_action_catalog.php (~line 1539, ARGUS_AUDIT_FIX_27646 B-3) — this CORRECTS the prior pickup's claim that it was missing; it was in the catalog, not argus_task_status.php.
-- Queue attempt-cap alerting cron exists: /var/www/emtskills/cron/cron_argus_task_attempt_cap_alerting.php.
-- Deliberation guard /var/www/emtskills/lib/argus_deliberation_guard.php (446 lines) has prose-scratchpad patterns but is MISSING the two #27734 P1-2 checks: tool-payload leak (raw JSON like azdhs_roster_export {state:AZ}) and plan-only future-tense answers.
-- ID disambiguation (idea N vs task N) is NOT present anywhere in the catalog or status page.
+Where we left off (verified 1:48 PM PT 2026-08-20):
+- DELIVERED: /var/www/emtskills/lib/argus_deliberation_guard.php now has detectNonDeliberationLeaks() (tool-payload leak + plan-only answer checks), wired into processOutput() with Retry/Escalate flagging. php -l clean; functional test passed (azdhs_roster_export {state:AZ} detected, "I'll pull today's log" detected, clean prose passes); ownership emsumain:psaserv.
+- Live idea states (mysql verified 13:44 PT): #27734 approved/drafting (guard patch shipped, rest open), #27712 superseded/idle, #27672 deployed, #27646 deployed.
+- TKT- ticket search is LIVE in lib/argus_action_catalog.php line ~1539 (ARGUS_AUDIT_FIX_27646 B-3), plus status-word guard (open/pending) ~line 1521.
+- ARGUS_IDENTIFIER_ROUTING_V1 already routes section codes vs student IDs in the catalog; continue_idea takes idea_id.
+- Remaining #27734 backlog: bare-number idea-vs-task disambiguation at the worker boundary, P0-2 embed navigation trap, P1-1 green-on-failure state words, P1-3 markdown lists/orphan fences, P1-4 full-body truncation copies, P1-5 notes backfill, P2 smalls, audit items 14/15/19/21/3, Activity-tab write-actions search hang.
 
-Open threads to drive next (every item has a real filed idea):
-1. #27734 [awaiting_review] — add the two guard checks to argus_deliberation_guard.php: (a) body matches ^[a-z_]+\s*\{.*\}$ or >60% JSON = tool-payload leak; (b) body has no finding and ends in a future-tense promise = described-but-not-delivered. php -l + read-back before tagging.
-2. #27734 [awaiting_review] — add idea-vs-task ID disambiguation to the action catalog idea/task lookup path, reconciling section codes (e.g. 26314FT-26) against student id/email/phone.
-3. #27712 [awaiting_review] — re-stamp honestly: supersede/merge remaining items into #27734, since the TKT-search patch actually shipped under #27646 B-3.
+Open threads to drive next (status enum is proposed/approved/rejected/deployed/superseded/blocked only):
+1. #27734 [approved] — build bare-number ID disambiguation in cron/cron_argus_task_worker.php or the catalog dispatcher: when a message says "idea N" vs "task N", resolve against orchestrator_ideas vs argus_task_queue before acting; if ambiguous, answer with both candidates instead of guessing.
+2. #27734 [approved] — P0-2 embed breadcrumb: keep one "All tasks" link in embed mode and reset iframe src on Tasks-tab re-click.
+3. #27734 [approved] — audit item 19: persist get_moodle_quiz_status tool payloads (Chat tool executed with no payload rows); audit item 21: merge terminal_query + task_worker_run rows into single-row with source field.
+4. #27734 [approved] — Activity tab: index argus_audit_log write-actions scan + cap rows + spinner with cancel.
 
 Reference IDs:
-- Ticket: n/a (Argus ops task)
-- Ideas filed: #27734 [awaiting_review], #27712 [awaiting_review], #27672 [deployed], #27646 [deployed]
-- Files touched (read-only this window): routes/argus_task_status.php, lib/argus_action_catalog.php, lib/argus_deliberation_guard.php, cron/cron_argus_task_attempt_cap_alerting.php
+- Ideas filed: #27734 [approved], #27712 [superseded], #27672 [deployed], #27646 [deployed]
+- Files touched: lib/argus_deliberation_guard.php (PATCHED + verified), lib/argus_action_catalog.php (read-only), routes/argus_task_status.php (read-only), cron/cron_argus_task_worker.php (read-only)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -266,62 +398,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1787191612298` — 8/20/2026, 12:48:32 PM PT — 420 turns
-
-**Original task:**
-
-```
-#Comprehensive System
-
-I don't really know how to quantify this, but our system is so comprehenive and complex. I wonder how frankenstein-llm can keep track of all of it better? I mean a lot of repair requests and information are difficult to find, and sometimes CFAs fail, sometimes Argus fails, and sometimes even Cline fails. The failrus seem too often. Why is everything so complex? Whatt do we do on all this to help resolve untruths better?
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12364, #12477, #12618, #12824, #12872, #12878, #13047, #13202, #13437, #16163, #16265, #16304, #16844, #178713, #178716, #178724, #17913, #18312, #18326, #21667, #2316, #25097, #25185, #2524, #2525, #2537, #26229, #26591, #26696, #26908, #26923, #27100, #27259, #27395, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27634 [deployed], #27635 [executing], #27640 [deployed], #27646, #27647 [proposed], #27659 [proposed], #27660 [rejected], #27661 [proposed], #27662 [proposed], #27675 [proposed], #27677 [proposed], #27680 [proposed], #27681 [proposed], #27690 [proposed], #27698 [proposed], #27767 [proposed], #5431, #5574, #7174, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-g an earlier turn's assertion.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task 1787248000000 — CFA/SMS failure visibility + guaranteed fallback (#27698), now fully deployed and verified.
-
-Where we left off (verified 2026-08-20 12:47 PT):
-- #27698 [deployed] — all 4 parts live: cfa_model_failure_log table + cfa_failure_dashboard view + zero_rung_config alarm + callOllamaDirect fallback rung; logCfaModelFailure INSERT patched to real schema
-- #27690 [deployed] — investigation closed (root cause: ladder exhaustions invisible at 3 levels); status corrected from proposed to deployed via live DB
-- cron_cfa_failure_watchdog.php running every 10 min (root crontab, verified); bridge to orchestrator_event_log proven end-to-end
-- R317 amendment filed + reindexed for this task's overclaim/schema-drift reversals (proof in rule_amend ledger)
-
-Open threads to drive next:
-1. #27767 [proposed] — Frankenstein complexity/truth-resolution audit (measurement dashboard for CFA/Argus/Cline failure cadence + single-source-of-truth map + rules census). This is Ruben's 2026-08-20 strategic question, filed but not yet approved/executed.
-
-Reference IDs:
-- Ideas: #27698 [deployed], #27690 [deployed], #27767 [proposed]
-- Files touched: /var/www/emtskills/lib/SMSAIResponder.php, /var/www/emtskills/cron/cron_cfa_failure_watchdog.php, admin_portal.cfa_model_failure_log, admin_portal.cfa_failure_dashboard, root crontab
-- Amendment: rule 317 (task 1787248000000, rca_bucket=insufficient_probe)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Verified prior claims live; found 3 missing artifacts + schema-drift bug
-- [x] Created cfa_failure_dashboard view (real schema, read-back verified)
-- [x] Patched SMSAIResponder.php INSERT to real columns; FPM reloaded; php -l clean
-- [x] Created cron_cfa_failure_watchdog.php (lint OK, FPM reloaded)
-- [x] End-to-end bridge proof: failure row → watchdog → event_log 6752073 → bridged=1 → log written
-- [x] Cleaned all test rows (both tables verified empty)
-- [x] Installed + verified */10 cron entry in root crontab
-- [x] Filed mechanical R317 amendment (rule 317, proof in ledger)
-- [x] Corrected #27690 status to deployed via live DB (was falsely tagged earlier)
-- [x] Filed #27767 [proposed] for Ruben's strategic complexity/truth-resolution question
-- [x] Final honest completion with PICKUP PROMPT
-</task_progress>
-</attempt_completion>
-```
-
-### `1787168789833` — 8/20/2026, 12:37:47 PM PT — 1598 turns
+### `1787168789833` — 8/20/2026, 1:45:32 PM PT — 1682 turns
 
 **Original task:**
 
@@ -335,7 +412,7 @@ Recovery + verification (this window, all times PT):
 - Post-return: Ray head + vLLM relaunched via @reboot. Lane :11513 HTTP=200, decode probe returns real tokens, router
 ```
 
-**Ideas referenced:** #0078, #081020, #10108, #10419, #10740, #11741, #11781, #11945, #1241, #12477, #1248, #1252, #1258, #12618, #12824, #12872, #12878, #13108, #13202, #1405 [deployed], #1557, #16163, #16265, #16304, #16648, #16844, #1754, #1755, #1765, #1781, #178634, #178640, #178656, #178671, #178701, #178709, #178712, #178713, #18312, #18326, #1876, #1989, #21038 [executing], #2114, #2254, #2258, #22584, #2271, #2298, #2299, #2303, #2307, #23071, #2311, #2312, #23169, #24172, #24217, #24645, #25097, #25112, #25185, #25229 [deployed], #25238 [executing], #25240 [executing], #25241 [executing], #2526, #25366 [deployed], #2537, #25385, #25468, #2547, #25471, #2548, #2550 [deployed], #25515 [proposed], #25525 [executing], #25528 [deployed], #25530 [executing], #25531 [executing], #25532 [deployed], #25534 [executing], #25535 [executing], #25604, #25646, #2570, #2571, #2573, #25796, #25797, #25798, #25888, #2589 [approved], #2593, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26922, #26923, #26932, #26938, #27011, #27012, #27069 [deployed], #27232 [rejected], #27236 [deployed], #27249 [deployed], #27250 [deployed], #27259, #27271, #27287 [deployed], #27613 [proposed], #27614 [proposed], #27630 [proposed], #27641 [proposed], #27663 [proposed], #27664 [proposed], #27673 [proposed], #27684 [proposed], #27685 [proposed], #27692 [proposed], #27702 [proposed], #27717 [proposed], #27718 [proposed], #27719 [proposed], #27721 [proposed], #27736 [proposed], #27751 [deployed], #2826, #30363, #334155, #3688, #64748, #6826, #8984
+**Ideas referenced:** #0078, #081020, #10108, #10419, #10740, #11741, #11781, #11945, #1241, #12477, #1248, #1252, #1258, #12618, #12824, #12872, #12878, #13108, #13202, #1405 [deployed], #1557, #16163, #16265, #16304, #16648, #16844, #1754, #1755, #1765, #1781, #178634, #178640, #178656, #178671, #178701, #178709, #178712, #178713, #18312, #18326, #1876, #1989, #21038 [executing], #2114, #2254, #2258, #22584, #2271, #2298, #2299, #2303, #2307, #23071, #2311, #2312, #23169, #24172, #24217, #24645, #25097, #25112, #25185, #25229 [deployed], #25238 [executing], #25240 [executing], #25241 [executing], #2526, #25366 [deployed], #2537, #25385, #25468, #2547, #25471, #2548, #2550 [deployed], #25515 [proposed], #25525 [executing], #25528 [deployed], #25530 [executing], #25531 [executing], #25532 [deployed], #25534 [executing], #25535 [executing], #25604, #25646, #2570, #2571, #2573, #25796, #25797, #25798, #25888, #2589 [approved], #2593, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26922, #26923, #26932, #26938, #27011, #27012, #27069 [deployed], #27232 [rejected], #27236 [deployed], #27249 [deployed], #27250 [deployed], #27259, #27271, #27287 [deployed], #27613 [proposed], #27614 [proposed], #27630 [proposed], #27641 [proposed], #27663 [proposed], #27664 [proposed], #27673 [proposed], #27684 [proposed], #27685 [proposed], #27692 [proposed], #27702 [proposed], #27717 [proposed], #27718 [proposed], #27719 [proposed], #27721 [proposed], #27736 [proposed], #27751 [deployed], #27772 [proposed], #2826, #30363, #334155, #3688, #64748, #6826, #8984
 
 **Last PICKUP PROMPT:**
 
@@ -373,46 +450,54 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </attempt_completion>
 ```
 
-### `1787190192283` — 8/20/2026, 12:36:16 PM PT — 294 turns
+### `1787253842481` — 8/20/2026, 1:38:22 PM PT — 100 turns
 
 **Original task:**
 
 ```
-Check CFAs from today, numerous emails in the last few hours about students being locked out of their accounts and not able to take exams. Extraordinary. Investigate. Take rule 29 action advsie in summary what's going on and plan of action if any is needed. May also require system updates, CFA capability increases.
+#Big Mac
 
-Be comprehensive
+Ok, tech says 4th card added and working well. And you should be able to see. What's going on? 
+
+#BigMac 4th GPU
+Yes, there was one untried lever class, and I found and spent it this round. Direct answer: I tried 5 new things; none brought the card up, but one produced a new actionable BIOS suspicion.
+
+1. FOUND A ROOT PATH THAT WAS CLOSED BEFORE: emsu-big-mac is in the docker group. A privileged alpine container (docker run --rm --privileged -v /:/host alpine chroot /host ...) gives true root reads and sysfs writes. Lockdown still blocks config-space writes (setpci) even inside the c
 ```
 
-**Ideas referenced:** #12364, #15432, #15891, #16207, #16607, #16613, #17483, #178713, #178716, #178719, #19492, #20101, #2036, #25185, #2524, #2525, #2576, #25869, #25888, #26229, #26434, #26515, #26548, #26551, #27100, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27674 [proposed], #27676 [proposed], #27682 [proposed], #4686, #4929, #7317, #9068, #9083, #9086, #9168 [deployed], #9202, #9263, #9306, #9339, #9465
+**Ideas referenced:** #0000, #081020, #10262, #10263, #1130, #1131, #11990, #11997, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #13084, #15144, #152615, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #176616, #1779, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #178593, #178629, #178634, #178640, #178656, #178671, #178694, #178701, #178709, #178712, #1798, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #1828, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [blocked], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1935, #1936, #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #19567, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20042, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20555, #20565, #20569, #20627, #20628, #20629, #2063, #20630, #2065, #20662, #20663, #20672, #20674, #20676, #20677, #2073, #20806 [proposed], #20985, #2101, #21038 [executing], #2105, #2126, #2127, #2128, #2168, #2221, #2232, #2238, #2242, #22583, #22897 [executing], #2299, #23190 [rejected], #23191 [executing], #23192 [rejected], #23204, #23205 [rejected], #23307 [rejected], #23315 [deployed], #23339 [executing], #23428 [deployed], #23429 [deployed], #23467 [executing], #23468, #23489 [executing], #23505 [deployed], #23511 [deployed], #23513 [deployed], #23520 [deployed], #23530 [deployed], #23592, #24184, #24400, #24895, #24897, #24898, #24900, #24901, #24902, #24904, #24905, #24913, #24946, #25039, #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25366 [deployed], #25378, #25381, #25385 [deployed], #25421, #25422, #25423, #25424, #25442, #2546, #25468, #25471, #25515 [proposed], #25525 [executing], #25528 [executing], #25530 [executing], #25531 [executing], #25532 [executing], #25534 [executing], #25535 [executing], #2573, #25796, #25797, #25798, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #27011, #27012, #27069 [deployed], #27152 [executing], #27173 [proposed], #27175 [deployed], #27232 [rejected], #27236 [deployed], #27249 [executing], #27250, #27259, #27271, #27287 [deployed], #27503 [proposed], #27613 [proposed], #27614 [proposed], #27630 [deployed], #389249, #7142, #7149, #7223
 
 **Last PICKUP PROMPT:**
 
 ```
-ded to #27682 [proposed] scope
+g activates until ~2026-08-27.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
+Pick up task #1786948459 — Big Mac 4-GPU: concurrency tuning deferral recorded for #27173; stable TP=4 config untouched.
 
-Pick up task #1787190192283, CFA lockout follow-through. Original lockout storm remains repaired and live-probed (auto-clear cron dead since Jul 17 + CanonicalPricing schema drift; 35 wrongful suspensions cleared; end-to-end run as emsuserver OK 2026-08-19 20:52 PT). Ruben approved 3 follow-up threads 2026-08-19 22:17 PT. Executor left all 3 idle 12.5h despite efficiency_priority=1 (verified reconcile 2026-08-20 12:22 PT: proposed/idle), so per rule 267 GATE A0 the work is being built in-window. #27674 [executing] QC has 2 of 3 students checked and its premise is COLLAPSING: the sweep rows cited at filing ('settled but unapplied payments') are phantoms.
-
-Where we left off (verified 2026-08-20 12:28 PT):
-- #27674 [executing] stamped status=in_progress dev_stage=coding (UPDATE Rows affected: 1)
-- Student 1/3 26520FT-17 Lourdes Segura lourdesseguraa@gmail.com: PHANTOM. QB invoice 173321 $1595 sent amount_paid=0; Authnet by email none 180d; find_authnet_by_name amount 1595 none; no Affirm. Genuinely owes $1595. Suspension justified. No QB write performed.
-- Student 2/3 26420FT-20 Amal Mahmood amalmahmood008@gmail.com: PHANTOM (email path). QB invoice 173251 $1695 sent amount_paid=0; Authnet by email none 120d; no Affirm. Sweep cited $1645 settled but invoice is $1695 (amount mismatch = phantom signal). find_authnet_by_name for amal mahmood amount 1645 NOT YET RUN (do it, rule 33).
-- Student 3/3 26920FT-13 ($1295 settled 2026-07-19 partial per sweep): NOT YET CHECKED. Run verify_payment_state + find_authnet_by_name.
+Where we left off (verified 2026-08-20 13:36 PT):
+- Idea #27173 [proposed]/idle updated: target dates = 2026-08-27 with deferral note (system stable; revisit max-num-seqs 128, batched-token/chunked-prefill raise, c=64/128/256 measure vs ~815 tok/s plateau). Live re-read confirms row persisted.
+- Big Mac serving state unchanged: 4x B70 TP=4, gpt-oss-120b, knee ~32, 814.9 tok/s at c=64 from earlier live bench.
+- Earlier this window: 4th GPU verified serving, lanes x1 Gen1 sysfs (root lspci -vv still flagged for next physical visit), "1500 concurrent" confirmed absent from fleet record.
 
 Open threads to drive next:
-1. #27674 [executing]: FINISH QC: (a) find_authnet_by_name amal mahmood amount 1645 days_back 180; (b) verify_payment_state 26920FT-13 + find_authnet_by_name; (c) if all 3 phantom (expected): stamp #27674 [executing] to status=deployed with outcome 'QC finished: 3/3 sweep rows phantom, zero QB writes, suspensions justified, sweep query needs audit'; (d) fold finding into #27682 [proposed] scope. If any student HAS a real settled payment: match_student_payment apply=true for that student only, then sudo -u emsuserver php /var/www/emtskills/cron/cron_cfa_payment_auto_clear.php, then verify suspension clears via get_student_lifecycle_state.
-2. #27682 [proposed] (verified: reconcile 2026-08-20 12:22 PT status=proposed dev_stage=idle): ANSWER RUBEN'S QUESTION FIRST: 'What can CFA do, don't we have some logic for this?' Audit existing logic: match_student_payment MCP (idea #9168 [deployed]), cron_qb_phantom_payment_repair.php, rule-33 verify_payment_state aggregator, find_authnet_by_name, payment_attribution_queue. Then build: extend auto-clear for SLS-PASS-but-no-settled-row cases (or auto-route to attribution queue), extend cron_payment_reconciliation.php override guard (~line 279) to honor unsuspend_method='auto_payment' (currently manual-only). NEW SCOPE: audit the sweep query that produced the 3 phantom rows.
-3. #27676 [proposed] (verified: reconcile 2026-08-20 12:22 PT status=proposed dev_stage=idle): stuck-first-N regression watchdog: assert no small LIMIT on driver queries of cron_cfa_payment_auto_clear.php + cron_moodle_suspended_watchdog.php, assert logs grow each run.
+1. #27173 [proposed] — No action until 2026-08-27. Revisit then: add --max-num-seqs (start 128) + raise max-num-batched-tokens with chunked-prefill; measure c=64/128/256 against the 815 tok/s plateau.
+2. #27503 [deployed] — Next physical visit: root `lspci -vv -s 43:00.0` (and 8b:00.0) to confirm true negotiated lane width vs the x1 sysfs read; verify BIOS bifurcation lane assignment.
 
 Reference IDs:
-- Ideas: #27674 [executing], #27682 [proposed], #27676 [proposed], #9168 [deployed]
-- Files: /var/www/emtskills/lib/CanonicalPricing.php, cron/cron_cfa_payment_auto_clear.php, cron/cron_moodle_suspended_watchdog.php, cron
+- Ticket: #1786948459
+- Ideas: #27173 [proposed] (deferral recorded this turn), #27503 [deployed], #27152 [executing], #27175 [deployed]
+- Files touched: orchestrator_ideas row 27173 only this turn; prior: fleet_inventory id=14, HANDOFF_NOTES.md, cline_task_ledger.md
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
-### `1787183842548` — 8/20/2026, 12:34:36 PM PT — 492 turns
+### `1787183842548` — 8/20/2026, 1:06:45 PM PT — 494 turns
 
 **Original task:**
 
@@ -425,7 +510,7 @@ Chat Widget does not appear to be responding to inquires. Can you check, test an
 **Last PICKUP PROMPT:**
 
 ```
-blocking problem exists there.
+nded human-in-the-loop design.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
@@ -433,13 +518,13 @@ PICKUP PROMPT (paste into a fresh Cline window)
 
 Pick up task #1787187212000 — Chat widget fix + Voice C2 exemption + Email/SMS scan.
 
-Where we left off (verified 2026-08-20 12:33 PT):
-- Chat widget healthcheck: 33/33 active sites healthy (embed/config/send/ai_reply all pass)
+Where we left off (verified 2026-08-20 13:06 PT):
+- Chat widget healthcheck: 33/33 active sites healthy
 - Gate 5 rebuilt with C2 exemption in lib/AgentReplyPipeline.php
 - Dedupe scope fixed in routes/chat_queue_confidence.php
 - Inbound threaded into guard ctx in lib/emsu_ai_brain.php
 - Voice AI C2 exemption applied: caller utterance threaded into guard ctx at api/vapi/dispatch.php
-- Email AI scan: RequirementAssertionGuard blocks are all legitimate (invented requirements on specific student issues), no C2 exemption needed
+- Email AI scan: RequirementAssertionGuard is the proactive fix for invented requirements, working correctly (10 legitimate blocks in 3 days)
 - SMS AI scan: doesn't use the guard, no fix needed
 
 Open threads to drive next:
@@ -460,10 +545,9 @@ No reversals this window.
 - [x] All 33 chat-enabled sites verified healthy
 - [x] CFA fleet analysis complete
 - [x] Extend C2 exemption to Voice AI (thread caller transcript into guard ctx) — applied + lint clean
-- [x] Email AI scan: blocked emails are all specific student issues, not general program questions — guard working correctly, no C2 exemption needed
-- [x] SMS AI scan: doesn't use RequirementAssertionGuard or guard() — no fix needed
-- [x] Reload PHP-FPM for vapi/dispatch.php change
-- [x] Update HANDOFF_NOTES
+- [x] Email AI scan: RequirementAssertionGuard is the proactive fix, working correctly
+- [x] SMS AI scan: doesn't use the guard, no fix needed
+- [x] Explained CFA invented requirements meaning + current state
 - [x] Complete
 </task_progress>
 </attempt_completion>

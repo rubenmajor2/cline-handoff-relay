@@ -56,3 +56,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: - 'UI patch 13/13 blocks applied OK' -> 'PHP parse error at line 638: insertion split an if/elseif chain; repaired, php -l clean' | RCA bucket: insufficient probe | causal rule upd
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-20 20:14 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787129383579-julia-flicker
+- RCA bucket: insufficient probe
+- Trigger pattern: pgrep -fc pattern self-match: verification command's own remote command line contained the search pattern, so RUNNING=1 was the probe matching itself
+- Reversal note: 2026-08-20 flicker-catcher deploy: 'RUNNING=1' was reported for a watcher that never started — the pgrep -fc julia_flicker inside the ssh verification command matched the ssh command line itself. Amended behavior: when verifying a background process by pgrep over ssh, the pattern must exclude the probe (pgrep -f 'bash /tmp/script.sh' exact-form, or bracket trick), AND liveness requires a second artifact (log file created/growing), never a bare count.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

@@ -80,3 +80,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: 2026-08-19 Big Mac post-bifurcator probe: a root port LnkSta showing Speed+Width active (2.5GT/s x16) was initially narrated as the 4th GPU training against the port. Scope error: link-state registers prove the port's own state, not what is physically cabled to it — on this platform unconnected bifurcated root ports present the same active LnkSta signature. Corrected behavior: an LnkSta read may be claimed as evidence of a specific link partner ONLY when a downstream endpoint actually enumerates behind that port; a bare LnkSta without downstream enumeration proves port state only. Physical topology claims require physical confirmation (tech/cabling), never inference from LnkSta alone.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-20 14:22 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787129383579-bigmac-297
+- RCA bucket: insufficient probe
+- Trigger pattern: empty journalctl output on a Docker-hosted engine treated as evidence of engine state instead of as a wrong-instrument read
+- Reversal note: 2026-08-20 Big Mac 297: agent probed a CONTAINERIZED vLLM workload with 'journalctl -u bigmac-vllm.service', which returns EMPTY because the engine runs inside Docker (container bigmac-vllm). The empty output was then treated as corroborating evidence for a wedge verdict. The verdict happened to be correct (docker logs later showed startup-complete=0, :8000 unbound, log dead-ended at Ray 'Creating a new placement group'), but it was reached on non-probative evidence - a wrong-instrument read that would equally have 'confirmed' a healthy box. Amended behavior: before citing ANY log as evidence of engine state, confirm the log source matches the execution substrate - systemd unit -> journalctl -u; Docker container -> docker logs <container>; bare process -> its redirect file. The registry's vllm_logs field names the correct source per host (Big Mac: 'sudo docker logs bigmac-vllm') and MUST be consulted first per the record-first ladder. An EMPTY log read is never evidence of anything unt
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

@@ -10,9 +10,9 @@ One sentence: **Claim scope must equal probe scope.** A tool's auto-success sign
 
 The reversal log collapses to FOUR recurring failure modes, in order of frequency:
 
-- **SELF_CONTRADICTING_DISPOSITION** (dominant: 251 of 280 telemetry failures; the #1 gate blocker). Prose says DONE/FIXED/VERIFIED next to an idea bracket that still says [proposed]/[executing]/[blocked]. Stamp the record first (UPDATE orchestrator_ideas SET status=deployed, then reconcile_ideas), THEN write the claim; or keep the honest bracket. Never write FIXED next to [proposed]. [auto-sync: +4 since 2026-08-19 | latest: 2026-08-19: window todo checklist carried '#27657/#27671 approved' from filing-time memory]
+- **SELF_CONTRADICTING_DISPOSITION** (dominant: 251 of 280 telemetry failures; the #1 gate blocker). Prose says DONE/FIXED/VERIFIED next to an idea bracket that still says [proposed]/[executing]/[blocked]. Stamp the record first (UPDATE orchestrator_ideas SET status=deployed, then reconcile_ideas), THEN write the claim; or keep the honest bracket. Never write FIXED next to [proposed]. [auto-sync: +5 since 2026-08-19 | latest: Within-window reversal: reconcile_ideas reported #27697 [executing] (status=in_progress) a]
 - **R317_UNVERIFIED_STATE** (24 of 280 telemetry failures). Asserting fleet/routing/pod/model-health or deliverable state from memory without a live probe returning proof. Probe first and quote the result, or label the claim UNVERIFIED. [auto-sync: +39 since 2026-08-19 | latest: 2026-08-19 watcher false-positive: a serving watcher declared SERVED at 22:07 PT on a sing]
-- **INSUFFICIENT_PROBE** (the mechanism behind most amendment case law). One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state. [auto-sync: +38 since 2026-08-19 | latest: 2026-08-19 Big Mac post-bifurcator probe: a root port LnkSta showing Speed+Width active (2]
+- **INSUFFICIENT_PROBE** (the mechanism behind most amendment case law). One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state. [auto-sync: +40 since 2026-08-19 | latest: 2026-08-20 00:17 PT within-window flip: 'catch-relaunch cron vanished from root crontab' -]
 - **SCOPE_ERROR** (completion over-scoped to DONE). Enumerate EVERY visible defect / every deliverable in the set before claiming resolved; the undone ones become open threads with real idea ids, not hidden by a "done" headline. [auto-sync: +12 since 2026-08-19 | latest: 2026-08-19 scope reversal: the original completion said the remaining active suspensions w]
 <!-- golden-rule-table:end -->
 
@@ -84,5 +84,15 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - RCA bucket: stale assumption
 - Trigger pattern: todo-list disposition carried from memory into completion assembly without a live reconcile
 - Reversal note: 2026-08-19: window todo checklist carried '#27657/#27671 approved' from filing-time memory while live reconcile_ideas returned status=proposed dev_stage=idle. Caught pre-ship by the live-read mandate; completion re-tagged [proposed]. Amended behavior: internal todo/checklist idea statuses are claims too and must be refreshed by a live reconcile_ideas or direct orchestrator_ideas read before any completion is assembled, not carried across tool rounds.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-20 07:30 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787129383579
+- RCA bucket: insufficient probe
+- Trigger pattern: single-source cron lookup (root crontab only) + dedup-quiet log read as inactivity proof
+- Reversal note: 2026-08-20 00:17 PT within-window flip: 'catch-relaunch cron vanished from root crontab' -> corrected 00:18: cron lived in /etc/cron.d/emsu-julia-catch-relaunch all along and HAD fired at 00:15:36; the silent 00:05-00:15 window was WARMING-state dedup suppressing repeat log lines, not inactivity. Amended behavior: before declaring a cron missing, check BOTH root crontab AND /etc/cron.d/ drop-ins; a dedup-quiet log window is not evidence of non-execution — run the script manually once to observe live behavior before claiming the scheduler is dead.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.

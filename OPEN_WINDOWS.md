@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/20/2026, 8:05:02 AM PT | window: last 72h | 98 tasks | index total 872 (parsed 3, cached 869)
+Generated: 8/20/2026, 9:37:56 AM PT | window: last 72h | 95 tasks | index total 872 (parsed 0, cached 872)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787168789833` | 8/20/2026, 8:04:49 AM | 1496 | 8956KB | #Julia/Claudia 235B |
+| `1787168789833` | 8/20/2026, 8:29:35 AM | 1574 | 9009KB | #Julia/Claudia 235B |
 | `1787186219913` | 8/20/2026, 7:54:04 AM | 574 | 9373KB | #Argus Improvements from browser window.  |
 | `1787191612298` | 8/20/2026, 7:42:11 AM | 332 | 9011KB | #Comprehensive System |
 | `1787183842548` | 8/20/2026, 1:54:27 AM | 448 | 4377KB | Chat Widget does not appear to be responding to inquires. Can you check, test and resolve? |
@@ -105,15 +105,12 @@ Generated: 8/20/2026, 8:05:02 AM PT | window: last 72h | 98 tasks | index total 
 | `1786979863145` | 8/17/2026, 10:38:13 AM | 213 | 417KB | #Executor |
 | `1786835771600` | 8/17/2026, 10:07:11 AM | 410 | 2310KB | #BLS  |
 | `1786573125988` | 8/17/2026, 9:49:11 AM | 383 | 3324KB | Please tell me if this is wrong? And if so why and what is going on? |
-| `1786981142444` | 8/17/2026, 9:26:22 AM | 154 | 1095KB | #Conrad/Argus |
-| `1786821833685` | 8/17/2026, 9:19:50 AM | 677 | 2520KB | #SSS / Virtual LoRA2 / Efficiency |
-| `1786979337785` | 8/17/2026, 8:08:58 AM | 1 | 2KB | #Executor |
 
 ---
 
 ## Per-window detail
 
-### `1787168789833` — 8/20/2026, 8:04:49 AM PT — 1496 turns
+### `1787168789833` — 8/20/2026, 8:29:35 AM PT — 1574 turns
 
 **Original task:**
 
@@ -132,32 +129,32 @@ Recovery + verification (this window, all times PT):
 **Last PICKUP PROMPT:**
 
 ```
- (guard patch), recorded here.
+validated by this live event.)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787129383579 — Julia/Claudia week-unattended: verify engine reached SERVING after 07:56 relaunch.
+Pick up task #1787129383579 — Julia 235B: 30-min watch complete, auto-recovery proven live; RCA the 08:16 organic crash.
 
-Where we left off (verified 2026-08-20 07:57 PT):
-- Julia HOST healthy, NO physical reboot needed. Engine relaunching (PID 39982, started 07:56:18, Claudia joined). Expect SERVING by ~08:06 (load takes ~9 min). Verify: curl http://127.0.0.1:11513/v1/models on WOPR → 200, then decode test.
-- 16 concurrent lanes verified (16/16 parallel OK); aggregate 76.81 tok/s at 12 lanes; router header-verified julia-235b → 127.0.0.1:11513.
-- ALL protection armed: Julia crons (prewedge-guard hardened to 60s/3-strike, wedge_guard, ray_head_watchdog), tp2_runbook_monitor, single tunnel supervisor; WOPR crons (catch-relaunch, return-harden proven end-to-end via Claudia LAN hop), lane-guard.
-- 07:52 event: my truncated test → false L2 → engine kill; zombie PID 6693 held single-flight lock (port dead but proc alive = deadlock). Killed, relaunched, probe hardened.
-- Background watcher logs to WOPR:/tmp/julia_watch.log every 60s until 08:09.
+Where we left off (verified 2026-08-20 08:28:56 PT):
+- Watch 07:58:46-08:28:46 complete. Julia SERVING at end: lane :11513=200, tunnel UP, guard=SERVING, decode real.
+- Lanes/throughput (live-measured): 16 lanes configured+verified (16/16 OK); warm single 16.19 tok/s; aggregate 35.48 @4, 57.73 @8, 76.06 @12. Whole-box ceiling ~76-80 tok/s.
+- AUTO-RECOVERY PROVEN LIVE: organic engine crash ~08:16 (no human present) → guard DECODE_FAIL2 (hardened 3-strike/60s probe) → auto-relaunch → SERVING 08:27:12. 11 min end-to-end, unattended.
+- All protection layers armed: Julia crons (prewedge-guard hardened, wedge_guard, ray_head_watchdog), tp2_runbook_monitor, single tunnel supervisor; WOPR crons (catch-relaunch, return-harden via Claudia LAN hop), lane-guard. Background watcher log: WOPR:/tmp/julia_watch.log (ends 08:29:30).
 
 Open threads to drive next:
-1. #27751 [deployed] — At ~08:06 verify lane :11513 = 200 + decode + watcher log clean through 08:09. If not SERVING by 08:15, check /home/rubenmajor/logs/emsu/julia_unified_start.log for a crash and tail the newest /tmp/vllm_serve_unified.*.crash.log.
-2. #27751 [deployed] — Single-flight gap found: "proc alive" check passes on a zombie whose port is dead. Patch julia_unified_tp2_qwen235.sh single-flight to ALSO require :8000 listening (or /v1/models 200) before honoring the lock; kill lock-holder if port dead >5 min.
-3. #27736 [proposed] — RoCE preflight sudo fix: verify on next reboot the log shows "restored"/"roce OK".
-4. (human-only decision — no idea) True instant L2-dark still needs hands (no BMC/plug/WoL). Networked PDU/smart plug is the only closure.
+1. #27751 [deployed] — RCA the 08:16 ORGANIC crash: read Julia:/tmp/vllm_serve_unified.20260820_081807.crash.log (grep NCCL/abort/watchdog/EngineCore). Two engine crashes in ~35 min of serving = a stability defect distinct from the recovered NCCL/RoCE issue. If crash cadence continues, consider dropping max-num-seqs 16→8 or re-testing NCCL_IB_TIMEOUT/failfast env added under #27702.
+2. #27751 [deployed] — Single-flight zombie gap (proc alive + port dead deadlocks relaunch, hit 07:54): patch julia_unified_tp2_qwen235.sh single-flight to also require :8000 listening before honoring the lock.
+3. #27736 [proposed] — Verify RoCE preflight sudo fix on Julia's next reboot ("restored"/"roce OK" in log, not "FATAL").
+4. (human-only decision - no idea) True instant L2-dark still requires hands (no BMC/plug/WoL); smart plug/PDU is the only closure.
 
 Reference IDs:
 - Ideas: #27751 [deployed], #27736 [proposed], #27236 [deployed], #27232 [rejected]
-- Bug library: #2593 (Big Mac docker-logs instrument trap), #2548 (tunnel multi-instance mutual pkill, merged)
-- Rules amended this window: 315 (wrong-instrument log reads), 317 (NCCL crash-log probe) — proofs in rule_amend
-- Files: Julia:/home/rubenmajor/emsu-julia-prewedge-guard.sh (hardened), WOPR:/usr/local/bin/emsu-julia-{return-harden,guard-install,prewedge-guard}.sh + guard-fixup.sed, /etc/cron.d/emsu-julia-return-harden, /tmp/julia_watch.{sh,log}
+- Bug library: #2593 (Big Mac docker-logs instrument), #2548 (tunnel multi-instance pkill, merged)
+- Rules amended this session: 315, 317 (proofs in rule_amend)
+- Files: Julia:/home/rubenmajor/emsu-julia-prewedge-guard.sh (hardened 60s/3-strike), WOPR:/usr/local/bin/emsu-julia-{return-harden,guard-install,prewedge-guard}.sh, guard-fixup.sed, /etc/cron.d/emsu-julia-return-harden, /tmp/julia_watch.{sh,log}
+- Crash artifact: Julia:/tmp/vllm_serve_unified.20260820_081807.crash.log
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
@@ -4186,111 +4183,5 @@ Please tell me if this is wrong? And if so why and what is going on?
 ```
 
 **Ideas referenced:** #15635, #16439, #16440, #16444, #1758, #17580, #18936, #20346, #23184, #2323 [deployed], #23477, #23483, #24526, #24765, #25185, #2519, #25971 [proposed], #25974 [executing], #25975 [executing], #25976 [executing], #25984 [executing], #25985 [executing], #25986 [executing], #25990 [approved], #25995 [executing], #32584, #5646, #6106, #6751, #7907, #9086
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786981142444` — 8/17/2026, 9:26:22 AM PT — 154 turns
-
-**Original task:**
-
-```
-#Conrad/Argus
-
-See https://www.emsuniversity.com/emtskills/routes/argus_task_status.php?task=574 
-
-So this email agent repsonse/s is a problem with the email agent itself that needs a resolution. Argus' reply to draft an email to the student does not address the underlying cause. Makes me wonder about what Argus rules are in comparison to Cline rules and which we should be applying here? Cline would be looking into the systemic issue to resolve that and then also resolving the individual issue. Argus, however, identifies the problem on a surface level, does not address the root cause and simpl
-```
-
-**Ideas referenced:** #178693, #19492, #2036, #21586, #22229, #23455, #24895, #2537, #2539, #2546, #2547, #25830, #26046, #26196, #26225, #26495, #26496, #26507, #26515, #26625, #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27064 [proposed], #27065 [proposed], #6106, #7907, #8184, #9086
-
-**Last PICKUP PROMPT:**
-
-```
-s being worked, no topic menu.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Conrad/Argus #574: deploy Email Agent reply-thread gate + Argus act-first fix, then close the student loop.
-
-Where we left off (verified 2026-08-17 09:26 PT):
-- Root cause of the "which topic do you need assistance with" reply confirmed: lib/EmailAIResponder.php ~line 2118 calls AIIntentGuardrail::maybeClarify() with no reply-thread awareness. Idea #27065 [proposed].
-- Argus task 574 diagnosed but asked for a draft instead of acting. Idea #27064 [proposed].
-- Conrad: Students.id=8197372, section 26623BC. Real issue = $50 registration-fee refund from 2026-08-05, escalated since. QB invoice 24228 open $2,445.00; no Authnet/Affirm/QB payment in 120d.
-- Raw ssh cp into lib/ is permission-denied (www-data). Use write_server_file.
-
-Open threads to drive next:
-1. #27065 [proposed] — Apply the reply-thread gate via write_server_file to lib/EmailAIResponder.php (maybeClarify only when subject lacks /^(re|fwd|aw|sv)\s*:/i and no prior 7d email row) and lib/AIIntentGuardrail.php (detectVagueOpening short-circuit on reply threads). php -l both, reload FPM, re-run Conrad's 08-17 thread through the responder, assert guardrail != vague_opening_menu.
-2. #27064 [proposed] — Argus act-first: done task with no catalog action -> execute via agent_send_or_draft instead of draft-and-ask.
-3. (human-only decision - no idea) — Refund verdict on Conrad's $50 registration fee; then send the corrected email and close tickets 25719 / 25713 / 25816.
-
-Reference IDs:
-- Tickets: 25719 (TKT-20260816-9DE029AF), 25713 (TKT-20260816-625FAE8F), 25816 (TKT-20260817-1BCB99E0), closed 23975/24890/25405/23604/23617
-- Ideas filed: #27064 [proposed], #27065 [proposed]
-- Files: lib/EmailAIResponder.php, lib/AIIntentGuardrail.php (backups via write_server_file when patch lands)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786821833685` — 8/17/2026, 9:19:50 AM PT — 677 turns
-
-**Original task:**
-
-```
-#SSS / Virtual LoRA2 / Efficiency
-
- -I don't know what this is and I don't understand what you're asking me to do  / what do you recommend here?-> #26613 [proposed], Ruben decision: approve the codemod + lint-gate shape for the 6,332-file inline-password cleanup, or keep it scoped to the newest crons only.
-
- -This needs to actually be executed here and now-> - #26461 [executing], watch the executor pick up Virtual LoRA v2 under the 5-worker floor; if the release guard repeats the "no_code_patches" misread, apply the 5 patches manually per rule 267 GATE C.
-
-This is occurred to me a few times ab
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12249, #12251, #12266, #12269, #12285, #12335, #12363, #12365, #12366, #12368, #12407, #12477, #12588, #12589, #12590, #12618, #12680, #12688, #12689, #12824, #12872, #12878, #13202, #13459, #13470, #13874, #14133, #14142, #15776, #16163, #16265, #16304, #16715, #16718, #16844, #17078, #178682, #18312, #18326, #18329 [deployed], #18671, #19338, #19458, #19491, #19686, #2299, #23133 [executing], #23171, #24431, #24635, #25097, #25125 [deployed], #25128, #25150, #25155, #25171, #25186, #25188, #25510, #25522, #25563, #25570, #25576, #25618, #25619, #25643, #25644, #25645, #25649, #25650, #25653, #25654, #25718, #25888, #26003 [deployed], #26038 [executing], #26040 [executing], #26041 [executing], #26045 [executing], #26048, #26050 [executing], #26054 [awaiting_review], #26065 [deployed], #26090 [deployed], #26182 [approved], #26435, #26461 [executing], #26470, #26491, #26505, #26611 [deployed], #26613 [proposed], #26617 [executing], #26624 [deployed], #26625 [executing], #26626 [executing], #26848 [approved], #26889 [proposed], #27100
-
-**Last PICKUP PROMPT:**
-
-```
-iles), which I never received.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — rebuild the silence-guard cron + close #26613 password-cleanup scope.
-
-Where we left off (verified 2026-08-17 09:07 PT):
-- #26617 [executing]: rate-cron half SHIPPED and live (daily row site 14 = 1/27 silent, crontab */15 wired). Auto-recovery DISABLED after it fabricated 646 production chat messages; rollback verified (0 remaining). Guard file `cron_universal_cfa_silence_guard.php` is the remaining half and is NOT yet scheduled.
-- #26889 [executing]: 297 RCA for the false permission-wall claim; rule 317 amended with the escalation-probe clause.
-- #26054 [awaiting_review]: 609 silent conversations P0 — now measurable via the shipped rate cron.
-- #26065 [deployed]: CFA no-rule canary PASSED independently at 05:45 today (event 6504958).
-
-Open threads to drive next (all have real filed idea numbers):
-1. #26617 [executing] — rewrite guard detect functions: chat→`chat_portal_visitor_sessions.last_activity_at` (join key `id`/`conversation_id`, drop broken `last_outbound_at` + tickets `related_session_id` join); SMS→`sms_ai_conversations.last_student_message`/`updated_at`; voice→`voice_call_log.caller_phone`/`created_at`/`duration_seconds`. Then php -l, then decide with Ruben whether to wire it at all (it is dormant and may be superseded by rate cron + outreach script).
-2. #26613 [executing] — get Ruben's scope decision: approve codemod + lint-gate shape for 6,332-file inline-password cleanup, or keep scoped to new files. Do NOT begin codemod without that call.
-3. #26889 [executing] — verify rule 317 is indexed so the escalation-probe clause reaches future windows.
-
-Reference IDs:
-- Ideas: #26617, #26613, #26889, #26054, #26065, #26848
-- Files touched (remote, via sudo): /var/www/emtskills/cron/cron_chat_silence_rate.php, /var/www/emtskills/lib/chat_silence_rate.php; local /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md
-- Live evidence: daily row (site 14, 2026-08-17, 1/27), 646+305 rollback verified to 0, crontab */15 entry, php -l clean both files
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1786979337785` — 8/17/2026, 8:08:58 AM PT — 1 turns
-
-**Original task:**
-
-```
-#Executor
-
-We are having a continual issue with the executor where we have ideas that are being worked on in Cline or Argus and then they get stalled out for older ideas from days or weeks before. I think we need a freshness change in executor
-```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

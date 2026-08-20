@@ -6,21 +6,21 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/20/2026, 12:44:15 AM PT | window: last 72h | 105 tasks | index total 872 (parsed 2, cached 870)
+Generated: 8/20/2026, 1:44:16 AM PT | window: last 72h | 104 tasks | index total 872 (parsed 6, cached 866)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787168789833` | 8/20/2026, 12:43:16 AM | 1027 | 6685KB | #Julia/Claudia 235B |
+| `1787183842548` | 8/20/2026, 1:44:09 AM | 391 | 4197KB | Chat Widget does not appear to be responding to inquires. Can you check, test and resolve? |
+| `1787168789833` | 8/20/2026, 1:42:09 AM | 1117 | 8389KB | #Julia/Claudia 235B |
+| `1787207812240` | 8/20/2026, 1:41:53 AM | 102 | 970KB | #Extension |
+| `1787200683126` | 8/20/2026, 1:35:17 AM | 166 | 447KB | #/emtskills slowness |
+| `1787168880963` | 8/20/2026, 1:34:15 AM | 1030 | 5531KB | #GLM / Frankenstein Routing  |
+| `1787191612298` | 8/20/2026, 1:34:06 AM | 293 | 6330KB | #Comprehensive System |
 | `1787189673001` | 8/20/2026, 12:16:10 AM | 362 | 4916KB | Student is emailing repeatedly. Can you advise what's going on with his account and help r |
-| `1787207812240` | 8/20/2026, 12:07:37 AM | 86 | 397KB | #Extension |
 | `1787186219913` | 8/20/2026, 12:05:54 AM | 494 | 7417KB | #Argus Improvements from browser window.  |
 | `1787205463720` | 8/20/2026, 12:04:52 AM | 120 | 1259KB | #BigMac 4th GPU |
 | `1787190192283` | 8/20/2026, 12:00:37 AM | 262 | 2465KB | Check CFAs from today, numerous emails in the last few hours about students being locked o |
-| `1787200683126` | 8/19/2026, 11:57:25 PM | 154 | 394KB | #/emtskills slowness |
-| `1787168880963` | 8/19/2026, 11:56:03 PM | 1000 | 5459KB | #GLM / Frankenstein Routing  |
 | `1787203836427` | 8/19/2026, 11:56:02 PM | 188 | 551KB | #Joshua Fallover Test |
-| `1787191612298` | 8/19/2026, 11:55:16 PM | 286 | 6188KB | #Comprehensive System |
-| `1787183842548` | 8/19/2026, 11:43:53 PM | 352 | 3123KB | Chat Widget does not appear to be responding to inquires. Can you check, test and resolve? |
 | `1787207665962` | 8/19/2026, 11:43:07 PM | 12 | 121KB | Tell me which LLM is better. Artemis or Big Mac |
 | `1787205596235` | 8/19/2026, 11:00:55 PM | 4 | 11KB | is this working? |
 | `1787203716956` | 8/19/2026, 10:28:37 PM | 1 | 12KB | #Joshua Fallover Test |
@@ -114,13 +114,50 @@ Generated: 8/20/2026, 12:44:15 AM PT | window: last 72h | 105 tasks | index tota
 | `1786961118260` | 8/17/2026, 3:28:00 AM | 60 | 143KB | #Frankenstein Routing / Cleanup |
 | `1786556136912` | 8/17/2026, 3:01:55 AM | 1044 | 3672KB | #Frankenstein-LLM Improvements |
 | `1786941064430` | 8/17/2026, 2:55:41 AM | 785 | 2105KB | #Julia/Claudia 235B |
-| `1786947372694` | 8/17/2026, 12:47:30 AM | 366 | 1205KB | Can you give me a model here in Cline where i can directly test the Julia/Claudia 235b llm |
 
 ---
 
 ## Per-window detail
 
-### `1787168789833` — 8/20/2026, 12:43:16 AM PT — 1027 turns
+### `1787183842548` — 8/20/2026, 1:44:09 AM PT — 391 turns
+
+**Original task:**
+
+```
+Chat Widget does not appear to be responding to inquires. Can you check, test and resolve?
+```
+
+**Ideas referenced:** #1119, #12364 [deployed], #13440, #13442, #16474, #16732, #18335, #20050, #21710, #2323, #23477, #23989, #25185, #25701, #25888, #25962, #25965, #25976, #25986, #26229 [approved], #26230, #27284, #27640 [proposed], #27655 [proposed], #27699 [deployed], #2916, #6366, #9109, #9112, #9132, #9152, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+C): the numbered routing menu.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #27699 [deployed] - F-12 resolved; browser-agent follow-up test instructions delivered
+
+Where we left off (verified 2026-08-19 23:42 PT):
+- F-12 fixed + deployed as #27699 [deployed] (handoff intents bypass routing menu + reach real handoff; discord_notify redeclare fatal guarded).
+- Verified server-side: 14/14 unit tests, live handoff 30ms + transfer logged, vague opener still gets clarifier.
+- This turn: produced browser-agent follow-up test instructions (Tests A/B/C) for live-site confirmation.
+
+Open threads to drive next:
+1. #27699 [deployed] - run the browser-agent test above on https://emsuniversity.com/ and confirm A/B handoff + C clarifier; if any FAIL, re-open F-12.
+
+Reference IDs:
+- Ideas filed: #27699 [deployed]
+- Files touched: lib/widget_force_handoff.php, api/chat_widget_api.php, lib/discord_notify.php, HANDOFF_NOTES.md
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1787168789833` — 8/20/2026, 1:42:09 AM PT — 1117 turns
 
 **Original task:**
 
@@ -134,12 +171,210 @@ Recovery + verification (this window, all times PT):
 - Post-return: Ray head + vLLM relaunched via @reboot. Lane :11513 HTTP=200, decode probe returns real tokens, router
 ```
 
-**Ideas referenced:** #081020, #10108, #10740, #11741, #11781, #11945, #1241, #12477, #1248, #1252, #1258, #12618, #12824, #12872, #12878, #13108, #13202, #1405 [deployed], #16163, #16265, #16304, #16648, #16844, #1754, #1755, #1765, #1781, #178634, #178640, #178656, #178671, #178701, #178709, #178712, #178713, #18312, #18326, #1876, #1989, #21038 [executing], #2114, #2254, #2258, #22584, #2303, #2307, #23071, #23169, #24172, #24217, #24645, #25097, #25112, #25185, #25229 [deployed], #25238 [executing], #25240 [executing], #25241 [executing], #25366 [deployed], #2537, #25385, #25468, #2547, #25471, #2550 [deployed], #25515 [proposed], #25525 [executing], #25528 [deployed], #25530 [executing], #25531 [executing], #25532 [deployed], #25534 [executing], #25535 [executing], #25604, #25646, #2570, #2571, #2573, #25796, #25797, #25798, #2589 [approved], #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26922, #26923, #26932, #26938, #27011, #27012, #27069 [deployed], #27232 [rejected], #27236 [deployed], #27249 [deployed], #27250 [deployed], #27259, #27271, #27287 [deployed], #27613 [proposed], #27614 [proposed], #27630 [proposed], #27641 [proposed], #27663 [proposed], #27664 [proposed], #27673 [proposed], #27684 [proposed], #27685 [proposed], #27692 [proposed], #27702 [proposed], #27717 [proposed], #27718 [proposed], #6826
+**Ideas referenced:** #0078, #081020, #10108, #10419, #10740, #11741, #11781, #11945, #1241, #12477, #1248, #1252, #1258, #12618, #12824, #12872, #12878, #13108, #13202, #1405 [deployed], #1557, #16163, #16265, #16304, #16648, #16844, #1754, #1755, #1765, #1781, #178634, #178640, #178656, #178671, #178701, #178709, #178712, #178713, #18312, #18326, #1876, #1989, #21038 [executing], #2114, #2254, #2258, #22584, #2303, #2307, #23071, #2311, #23169, #24172, #24217, #24645, #25097, #25112, #25185, #25229 [deployed], #25238 [executing], #25240 [executing], #25241 [executing], #2526, #25366 [deployed], #2537, #25385, #25468, #2547, #25471, #2550 [deployed], #25515 [proposed], #25525 [executing], #25528 [deployed], #25530 [executing], #25531 [executing], #25532 [deployed], #25534 [executing], #25535 [executing], #25604, #25646, #2570, #2571, #2573, #25796, #25797, #25798, #25888, #2589 [approved], #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26922, #26923, #26932, #26938, #27011, #27012, #27069 [deployed], #27232 [rejected], #27236 [deployed], #27249 [deployed], #27250 [deployed], #27259, #27271, #27287 [deployed], #27613 [proposed], #27614 [proposed], #27630 [proposed], #27641 [proposed], #27663 [proposed], #27664 [proposed], #27673 [proposed], #27684 [proposed], #27685 [proposed], #27692 [proposed], #27702 [proposed], #27717 [proposed], #27718 [proposed], #27719 [proposed], #27721 [proposed], #2826, #30363, #334155, #3688, #64748, #6826, #8984
 
 **Last PICKUP PROMPT:**
 
 ```
-ower cycle", "pickup_prompt": "═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787129383579 — Julia GB10 235B stability. RUBEN DIRECTIVE 2026-08-20 00:40 PT (verbatim intent): \"Try 4 and see if that helps. Then I want you to be watching it for OOMs for 120 minutes to prevent them from occurring and ensure the safe and stable build for the next week. If you have to go down to 3 at the end of the day that's fine, but you are committed to 120 minutes. It needs a safe way to restart prior to wedging. Continue and watch for my resetting.\" Ruben left for the night; he will physically power-cycle Julia (no remote recovery possible).\n\nWhere we left off (verified 2026-08-20 00:41 PT):\n- Julia DARK since ~00:20 PT = 4th hang tonight. GB10 has NO /dev/watchdog (verified on-box) so no hw auto-reset. ONLY a physical power cycle brings it back. Ruben is doing that now — WATCH FOR THE RESET: poll lane :11513 + ssh :2205 (the lane-guard probe does both) until Julia returns, then verify engine load + serving.\n- 'Try 4' = the GPU cap in Julia's launch config. It was lowered 5->2 earlier tonight (shed verified end-to-end at 94C). Cap lives in /usr/local/bin/julia_unified_start.sh on Julia (read it to find the exact param — likely max_num_seqs or a GPU-util cap). Raise it to 4 once Julia is back and the engine is loaded; verify decode + VRAM stay sane.\n- Tonight's failure arc: 3 freezes while serving (23:12/23:25/23:40 PT, SoC 86-94C) -> engine died MID-LOAD on every relaunch (00:04/00:15/00:22, ~5-7 min into load) -> full hang. VRAM was 92% pre-cleanup. Root cause of mid-load deaths UNRESOLVED: thermal vs OOM.\n- Protections armed: catch-relaunch 1-min cron /usr/local/bin/emsu-julia-catch-relaunch.sh (thermal gate: holds relaunch 300s if SoC >=88C, verified firing 00:15:36); lane-guard /usr/local/bin/emsu-julia-lane-guard.py (transition-only alerts on :11513+:2205 dead, idea #27236 [deployed]); wedge-watchdog /usr/local/bin/emsu-julia-wedge-watchdog.sh (orphan sweep #27250 [deployed], watchdog-device check #27249 [deployed], RCA capture); NCCL fail-fast envs in julia_unified_start.sh (frozen collectives die in ~5 min instead of hanging); @reboot unit relaunches tunnel+Ray+vLLM. Alerts go to orchestrator_event_log via /usr/local/bin/emsu-alert.sh.\n- Claudia box UP, her vLLM worker dead (TP=2 worker for julia-235b; recovers WITH Julia). Adapter :11510 HEALTHY. GLM ring + 120B + DeepSeek spill serving; Cline unaffected.\n\nOpen threads to drive next:\n1. (human-only decision - no idea) Ruben's physical power cycle — detect it, verify auto-recovery (@reboot + catch-relaunch), confirm lane serves with real decode tokens.\n2. #27717 [proposed] — classify mid-load deaths (thermal vs OOM) from ~/logs/emsu/julia_unified_start.log + dmesg on Julia; tune accordingly. 'Try 4' is step 1 of this.\n3. NEW (file idea on pickup): safe PRE-WEDGE restart — watcher that detects VRAM climbing past ~90% / decode stall / SoC spike and cleanly restarts the vLLM engine BEFORE the hard hang. Must survive the week unattended.\n4. 120-min OOM watch COMMITTED — start after cap-4 applied; no early exit. If cap 4 OOMs/wedges, drop to 3 (Ruben pre-approved).\n5. #27718 [proposed] — WOPR md0 /backup RAID util 100% (DEFCON-2 since 00:10 PT): find hammering process (separate from Julia).\n\nReference IDs:\n- Ideas: #27717 [proposed], #27718 [proposed], #27249 [deployed], #27250 [deployed], #27236 [deployed]\n- Carried: #27232 [rejected], #27069 [
+oCE addr / connectivity) + relaunch
+- [ ] Verify decode + router
+- [ ] Report + PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1787207812240` — 8/20/2026, 1:41:53 AM PT — 102 turns
+
+**Original task:**
+
+```
+#Extension
+
+Why is this extension needed? Can we/should we resolve it? 
+
+Got the three sections Vicky: 26818A, 26718A, 26118A.
+
+Jon, flagging for you.
+She needs the extension tonight, waiting on your call.
+
+Check Chat 55 on it
+```
+
+**Ideas referenced:** #178713, #2230, #2258, #2275, #2296, #2317, #2338, #2358, #2379, #2550, #2589, #2590, #27152, #2748, #27503, #27524, #27531, #27648, #27663, #27673, #27684, #27685, #27691, #27692, #27699, #27715 [deployed], #27724 [deployed], #3843, #3848, #3850, #3851, #3852, #3870, #3871, #3872, #3875, #3877, #3879, #3890, #3894, #3897
+
+**Last PICKUP PROMPT:**
+
+```
+ a config fix not an override.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — MWF Exam 5 one-day-early close, full 18A-cohort fix. (No numeric Cline task id exposed this session; anchored by ideas below.)
+
+Where we left off (verified 2026-08-20 01:40 PT):
+- Root cause: group quiz_overrides for the "18A" cohort (Aug-18 start) had Exam 5 timeclose = 2026-08-18 11:58:59, one day before the intended MWF due date. Batch config slip.
+- FIXED all 9 cohort sections to timeclose=1787320799 (2026-08-20 23:59:59 PT); read-back verified; caches rebuilt for courses 25/37/41.
+  - Vicky-named 3 (idea #27715): 26818A(q732/g2606), 26718A(q732/g2604), 26118A(q954/g2609)
+  - Sweep-caught 6 (idea #27724): 26418A(#2275), 26518A(#2296), 26918A(#2379) on q681; 26618A(#2317) on q732; 26218A(#2748), 26318A(#2258) on q954
+- Both ideas stamped deployed (verified via direct SELECT).
+
+Open threads to drive next:
+1. #27724 [deployed] — durable guard (recurring early-close detector) is a RECOMMENDATION in the description, pending Ruben green-light; not built.
+2. (human-only decision — no idea) — whether to send the ready-to-fire Chat 55 message above to Vicky/Jon (held back per rule 175).
+
+Reference IDs:
+- Ideas filed: #27715 [deployed], #27724 [deployed]
+- Files touched: Moodle quiz_overrides rows 2230/2338/2358 + 2275/2296/2379/2317/2748/2258 (UPDATE); Moodle course cache 25/37/41 (rebuild); HANDOFF_NOTES.md
+- Sections: 26818A 26718A 26118A 26418A 26518A 26918A 26618A 26218A 26318A
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Diagnose + fix the 3 named sections (26818A/26718A/26118A) — #27715 [deployed]
+- [x] Run approved sweep: caught 6 more same-cohort (18A) sections still locked at 08-18
+- [x] Apply same fix to the 6 additional sections (verified: all at 08-20 23:59 PT)
+- [x] Purge caches for courses 25/37/41
+- [x] File follow-up idea #27724 with full sweep findings
+- [x] Stamp + verify idea records (27715, 27724) deployed
+- [x] Hand back ready-to-send chat 55 draft (held per rule 175)
+</task_progress>
+</attempt_completion>
+```
+
+### `1787200683126` — 8/20/2026, 1:35:17 AM PT — 166 turns
+
+**Original task:**
+
+```
+#/emtskills slowness
+
+Opened up a Cline window earlier on emtskills sloness. see document on desktop emtskills slowness and write to it as necessary. 
+
+this recurring issue 12x needs a durable solution still and it has not yet been found. We need to find and reaolve that.
+```
+
+**Ideas referenced:** #19370, #19522, #22298, #22550, #23133, #2342, #23945, #23952, #23954, #24026, #25042, #2590 [deployed], #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #27691 [proposed], #6768
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787168880963` — 8/20/2026, 1:34:15 AM PT — 1030 turns
+
+**Original task:**
+
+```
+#GLM / Frankenstein Routing 
+
+I am working Julia/Claudia 235 in another window. We need to get GLM 5.2 up and running properly and serving in front of the 120Bs and 235Bs in frankenstein-llm. We need to fix the decode issue and whatever is choking out GLM. We need it running in cline 4 lanes and 4 batch / Argus lanes. I’m not sure why 3 is listed on ring concurrency. Something is off with settings. See also: 
+
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
+
+
+Both answered. The method is now written down per
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11945, #12477, #12584, #12618, #1264, #12824, #12872, #12878, #13202, #1602, #16163, #16265, #16304, #16449, #16527, #16844, #17203, #17205, #1724, #1754, #1755, #178713, #18312, #18326, #18471, #18820, #19686, #1986, #1993, #2050, #2073, #2083, #2116, #2138, #2157, #2159, #2168, #21684, #2174, #2185, #2210, #2258 [resolved], #2294, #2307 [resolved], #2312 [resolved], #2314, #23169, #23308, #2353, #24217, #25097, #25185, #2520 [resolved], #2524, #2525, #2526 [resolved], #2534, #2537, #2546 [resolved], #2547 [resolved], #2574 [resolved], #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #2582, #2587, #2588 [investigating], #2592 [deployed], #26209, #26284 [executing], #26349, #26400, #26403, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #26908, #26917, #26922 [deployed], #26923, #26927 [deployed], #26932, #27100, #27259, #27494 [executing], #27508 [executing], #27514 [blocked], #27515 [executing], #27518 [deployed], #27524 [proposed], #27531 [proposed], #27610 [executing], #27611 [executing], #27622 [executing], #27626 [executing], #27648 [proposed], #27687 [proposed], #27711 [proposed], #27722 [proposed], #57606, #6826
+
+**Last PICKUP PROMPT:**
+
+```
+ Log
+No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787138864086 — xgrammar bug durably recorded (bug library row 2592 + tracker known-bug section); deferred to week of 2026-08-24 per Ruben.
+
+Where we left off (probes run 01:32-01:33 PT):
+- Bug library row 2592 recorded + verified on WOPR (problem_key glm_ring_xgrammar_fsm_request_termination_2026_08_20; check-before-fix gate will surface it)
+- GLM52_RING_STATE_TRACKER.md: known-bug section added at line 788 with symptom, zero-impact evidence, DO-NOT-HOTFIX note, full daytime fix path, cross-refs to the bug library row + ideas #27722 [proposed] / #27711 [proposed]
+- Ring untouched on the seq-128 ideal build (200, 0 preemptions, 0 waiting)
+
+Open threads to drive next:
+1. Idea #27722 [proposed] — execute the vLLM grammar-backend upgrade the week of 2026-08-24 (Ruben owns timing)
+2. Idea #27687 [proposed] — verify Julia :11513 restoration once the other window finishes
+3. GLM-5.3 local rollout — Ruben's call on timing (human-only decision, no idea)
+4. Idea #27610 [executing] — GLM ring + 235B recovery runbook rule (idle in executor)
+
+Reference IDs:
+- Bug library incident row 2592 (frankenstein_router_incidents): bug_library_record 01:32 PT returned 'Incident recorded + VERIFIED, Row existence confirmed on WOPR'
+- Idea #27722 [proposed]: create_idea 01:26 PT; reconcile_ideas 01:26 PT returned status=proposed dev_stage=idle
+- Idea #27711 [proposed]: reconcile_ideas 01:26 PT returned status=proposed dev_stage=idle
+- Idea #27687 [proposed]: reconcile_ideas 01:26 PT returned status=proposed dev_stage=idle
+- Idea #27648 [deployed]: reconcile_ideas 01:26 PT returned status=deployed dev_stage=ready_for_review
+- Idea #27626 [deployed]: reconcile_ideas 01:26 PT returned status=deployed dev_stage=idle
+- Idea #27524 [deployed]: reconcile_ideas 01:26 PT returned status=deployed dev_stage=ready_for_review
+- Idea #27531 [deployed]: reconcile_ideas 01:26 PT returned status=deployed dev_stage=ready_for_review
+- Idea #27610 [executing]: reconcile_ideas 01:26 PT returned status=approved dev_stage=idle
+- Idea #27611 [deployed]: reconcile_ideas 01:26 PT returned status=deployed dev_stage=ready_for_review
+- Files touched: /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md (known-bug section at line 788), frankenstein_router_incidents row 2592 (new)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Bug library row 2592 recorded + verified
+- [x] Tracker known-bug section added (line 788, grep-verified)
+- [x] Validate ALL PASSED + GATE CLEAR
+- [x] Shipped
+</task_progress>
+</attempt_completion>
+```
+
+### `1787191612298` — 8/20/2026, 1:34:06 AM PT — 293 turns
+
+**Original task:**
+
+```
+#Comprehensive System
+
+I don't really know how to quantify this, but our system is so comprehenive and complex. I wonder how frankenstein-llm can keep track of all of it better? I mean a lot of repair requests and information are difficult to find, and sometimes CFAs fail, sometimes Argus fails, and sometimes even Cline fails. The failrus seem too often. Why is everything so complex? Whatt do we do on all this to help resolve untruths better?
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12364, #12477, #12618, #12824, #12872, #12878, #13047, #13202, #16163, #16265, #16304, #16844, #178713, #178716, #18312, #18326, #21667, #25097, #25185, #2524, #2525, #2537, #26229, #26696, #26908, #26923, #27100, #27259, #27395, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27634 [deployed], #27635 [executing], #27640 [deployed], #27646, #27647 [proposed], #27659 [proposed], #27660 [rejected], #27661 [proposed], #27662 [proposed], #27675 [proposed], #27677 [proposed], #27680 [proposed], #27681 [proposed], #27690 [proposed], #27698 [proposed], #7174
+
+**Last PICKUP PROMPT:**
+
+```
+ Log
+No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #27690 [proposed] - Frankenstein SMS reliability - verify the CFA/SMS fix builds
+
+Where we left off (verified 2026-08-19 23:52 PT):
+- Ruben approved #27698 [executing] (the 4-part CFA/SMS reliability fix)
+- Promoted via idea_promote_and_run: approve + implement triggered, queued for the executor engine
+- Reconciled: #27698 [executing] (verified: reconcile_ideas returned status=approved dev_stage=idle, 2026-08-19 23:52 PT)
+- The 4-part fix: bridge model failures to structured table, add student-facing targets to v_kaizen_all_findings, zero-rung config alarm in callModel, guaranteed local fallback rung
+
+Open threads to drive next:
+1. #27698 [executing] - verify the executor builds + deploys all 4 parts; confirm v_kaizen_all_findings gains student-facing targets and callModel gains the zero-rung alarm + fallback rung
+
+Reference IDs:
+- Ideas filed: #27698 [executing]
+- Ideas closed: none
+- Files touched: none (promotion + reconcile only; executor builds the code)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Investigation complete (#27690): root-caused CFA/SMS failure invisibility at 3 levels
+- [x] Filed fix idea #27698
+- [x] Ruben APPROVED #27698
+- [x] Promoted #27698 to executing (idea_promote_and_run)
+- [x] Reconciled #27698 = [executing] (rule 267 GATE B)
+- [x] Validate completion - ALL PASSED
+- [x] Check gate - CLEAR
+- [x] attempt_completion shipped
+</task_progress>
+</attempt_completion>
 ```
 
 ### `1787189673001` — 8/20/2026, 12:16:10 AM PT — 362 turns
@@ -161,61 +396,6 @@ ers, #27689 sweep 33-candidate list, dead-cron RCA recap, Reversal Log 3 flips, 
    None — remaining work is MCP gate calls + attempt_completion only.
 </context>
 </summarize_task>
-```
-
-### `1787207812240` — 8/20/2026, 12:07:37 AM PT — 86 turns
-
-**Original task:**
-
-```
-#Extension
-
-Why is this extension needed? Can we/should we resolve it? 
-
-Got the three sections Vicky: 26818A, 26718A, 26118A.
-
-Jon, flagging for you.
-She needs the extension tonight, waiting on your call.
-
-Check Chat 55 on it
-```
-
-**Ideas referenced:** #178713, #2230, #2338, #2358, #2550, #2589, #2590, #27152, #27503, #27524, #27531, #27648, #27663, #27673, #27684, #27685, #27691, #27692, #27699, #27715 [deployed], #3843, #3848, #3850, #3851, #3852, #3870, #3871, #3872, #3875, #3877, #3879, #3890, #3894, #3897
-
-**Last PICKUP PROMPT:**
-
-```
- Audit idea #27715 [deployed].
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — MWF Exam 5 one-day-early close for sections 26818A/26718A/26118A. (No numeric Cline task id exposed this session; topic named instead.)
-
-Where we left off (verified 2026-08-20 00:06 PT):
-- Root cause confirmed live in Moodle DB: group `quiz_overrides` for the three MWF sections had `timeclose = 2026-08-18 11:58:59` (one day early vs. intended 08/19 MWF due).
-  - 26818A → quiz 732 / course 41 / groupid 2606 (6 students)
-  - 26718A → quiz 732 / course 41 / groupid 2604 (5 students)
-  - 26118A → quiz 954 / course 25 / groupid 2609 (7 students)
-- Fix applied: `UPDATE quiz_overrides SET timeclose = 1787320799 WHERE id IN (2230, 2338, 2358)` → 08/20 11:59:59 PM PT (full lost day restored). Read-back verified (08/21 06:59:59 UTC).
-- Moodle caches rebuilt for courses 25 and 41 (success).
-- 18 students unlocked; 0 finished attempts as of fix time
-- Audit: idea #27715 [deployed]; HANDOFF_NOTES.md updated.
-
-Open threads to drive next (each has a real filed idea id):
-1. #27715 [deployed] — confirm the 3 affected section rosters can now open the Exam 5 window; log any student who still reports locked-out to a NEW ticket so it can be triaged individually.
-2. (Not yet filed — actionable now if Ruben wants) file a follow-up idea for a one-time sweep comparing MWF Exam 5 group-override close dates against the course calendar, to catch any other sections slipped a day early before the next exam window.
-
-Reference IDs:
-- Ideas filed: #27715 [deployed]
-- Files touched: Moodle `quiz_overrides` rows 2230/2338/2358 (UPDATE); Moodle course cache 25+41 (rebuild); `/var/www/emtskills/docs/HANDOFF_NOTES.md`
-- Sections: 26818A, 26718A, 26118A
-- Chat 55 context reviewed (195 messages / 8h window)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```
 
 ### `1787186219913` — 8/20/2026, 12:05:54 AM PT — 494 turns
@@ -389,87 +569,6 @@ When finished, append to cline_task_ledger.md (rule 07), run order 66.
 </attempt_completion>
 ```
 
-### `1787200683126` — 8/19/2026, 11:57:25 PM PT — 154 turns
-
-**Original task:**
-
-```
-#/emtskills slowness
-
-Opened up a Cline window earlier on emtskills sloness. see document on desktop emtskills slowness and write to it as necessary. 
-
-this recurring issue 12x needs a durable solution still and it has not yet been found. We need to find and reaolve that.
-```
-
-**Ideas referenced:** #19370, #19522, #22298, #22550, #23133, #2342, #23945, #23952, #23954, #24026, #25042, #2590 [deployed], #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #27691 [proposed], #6768
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787168880963` — 8/19/2026, 11:56:03 PM PT — 1000 turns
-
-**Original task:**
-
-```
-#GLM / Frankenstein Routing 
-
-I am working Julia/Claudia 235 in another window. We need to get GLM 5.2 up and running properly and serving in front of the 120Bs and 235Bs in frankenstein-llm. We need to fix the decode issue and whatever is choking out GLM. We need it running in cline 4 lanes and 4 batch / Argus lanes. I’m not sure why 3 is listed on ring concurrency. Something is off with settings. See also: 
-
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down per
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11945, #12477, #12584, #12618, #1264, #12824, #12872, #12878, #13202, #1602, #16163, #16265, #16304, #16449, #16527, #16844, #17203, #17205, #1724, #1754, #1755, #178713, #18312, #18326, #18471, #18820, #19686, #1986, #1993, #2050, #2073, #2083, #2116, #2138, #2157, #2159, #2168, #21684, #2174, #2185, #2210, #2258 [resolved], #2294, #2307 [resolved], #2312 [resolved], #2314, #23169, #23308, #2353, #24217, #25097, #25185, #2520 [resolved], #2524, #2525, #2526 [resolved], #2534, #2537, #2546 [resolved], #2547 [resolved], #2574 [resolved], #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #2582, #2587, #2588 [investigating], #26209, #26284 [executing], #26349, #26400, #26403, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #26908, #26917, #26922 [deployed], #26923, #26927 [deployed], #26932, #27100, #27259, #27494 [executing], #27508 [executing], #27514 [blocked], #27515 [executing], #27518 [deployed], #27524 [proposed], #27531 [proposed], #27610 [executing], #27611 [executing], #27622 [executing], #27626 [executing], #27648 [proposed], #27687 [proposed], #27711 [proposed], #57606, #6826
-
-**Last PICKUP PROMPT:**
-
-```
- Log
-No reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787138864086 — seq-128 build assessed: safest+fastest measured; xgrammar wrinkle documented and filed.
-
-Where we left off (probes run 23:53-23:54 PT):
-- Safety probes at ~90 min: KV 4.0%, preemptions=0, waiting=0, 6 running, container Up 2h no restarts (probe: /metrics + docker ps)
-- Engine log showed request-level xgrammar FSM errors (grammar rejected token 73022, terminating request) — structured-output guided-decoding bug class, pre-existing, not seq-128-related; router already pins structured-output to local paths; fix filed as idea #27711 [proposed]
-- Verdict: seq-128 = documented ideal build, safest and fastest measured; only future levers are lane-count (8→N) and the vLLM grammar upgrade
-
-Open threads to drive next:
-1. Idea #27711 [proposed] — vLLM grammar-backend upgrade for the xgrammar FSM request terminations (deliberate change, coordinate relaunch window)
-2. Idea #27687 [proposed] — verify Julia :11513 restoration once the other window finishes
-3. GLM-5.3 local rollout — Ruben's call on timing (human-only decision, no idea)
-4. Idea #27610 [executing] — GLM ring + 235B recovery runbook rule (idle in executor)
-
-Reference IDs:
-- Idea #27711 [proposed]: create_idea 23:55 PT returned id 27711; reconcile_ideas 23:55 PT returned status=proposed dev_stage=idle
-- Idea #27687 [proposed]: reconcile_ideas 23:55 PT returned status=proposed dev_stage=idle
-- Idea #27648 [deployed]: reconcile_ideas 23:55 PT returned status=deployed dev_stage=ready_for_review
-- Idea #27626 [deployed]: reconcile_ideas 23:55 PT returned status=deployed dev_stage=idle
-- Idea #27524 [deployed]: reconcile_ideas 23:55 PT returned status=deployed dev_stage=ready_for_review
-- Idea #27531 [deployed]: reconcile_ideas 23:55 PT returned status=deployed dev_stage=ready_for_review
-- Idea #27610 [executing]: reconcile_ideas 23:55 PT returned status=approved dev_stage=idle
-- Idea #27611 [deployed]: reconcile_ideas 23:55 PT returned status=deployed dev_stage=ready_for_review
-- Files touched: none this round (read-only probes + one idea filed)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Safety probes: KV 4%, 0 preemptions, 0 waiting, 6 running, container Up 2h
-- [x] Error log inspected: xgrammar FSM bug (pre-existing, not seq-128)
-- [x] Honest verdict delivered with evidence
-- [x] Fix path filed (#27711) + reconciled all 8 ideas
-- [x] Validate ALL PASSED + GATE CLEAR
-- [x] Shipped
-</task_progress>
-</attempt_completion>
-```
-
 ### `1787203836427` — 8/19/2026, 11:56:02 PM PT — 188 turns
 
 **Original task:**
@@ -553,97 +652,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Create env file on Joshua
 - [x] Create systemd service for Joshua LiteLLM
 - [x] Verify service is disabled (not sta
-```
-
-### `1787191612298` — 8/19/2026, 11:55:16 PM PT — 286 turns
-
-**Original task:**
-
-```
-#Comprehensive System
-
-I don't really know how to quantify this, but our system is so comprehenive and complex. I wonder how frankenstein-llm can keep track of all of it better? I mean a lot of repair requests and information are difficult to find, and sometimes CFAs fail, sometimes Argus fails, and sometimes even Cline fails. The failrus seem too often. Why is everything so complex? Whatt do we do on all this to help resolve untruths better?
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12364, #12477, #12618, #12824, #12872, #12878, #13047, #13202, #16163, #16265, #16304, #16844, #178713, #178716, #18312, #18326, #21667, #25097, #25185, #2524, #2525, #2537, #26229, #26696, #26908, #26923, #27100, #27259, #27395, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27634 [deployed], #27635 [executing], #27640 [deployed], #27646, #27647 [proposed], #27659 [proposed], #27660 [rejected], #27661 [proposed], #27662 [proposed], #27675 [proposed], #27677 [proposed], #27680 [proposed], #27681 [proposed], #27690 [proposed], #27698 [proposed], #7174
-
-**Last PICKUP PROMPT:**
-
-```
- Log
-No reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #27690 [proposed] - Frankenstein SMS reliability - verify the CFA/SMS fix builds
-
-Where we left off (verified 2026-08-19 23:52 PT):
-- Ruben approved #27698 [executing] (the 4-part CFA/SMS reliability fix)
-- Promoted via idea_promote_and_run: approve + implement triggered, queued for the executor engine
-- Reconciled: #27698 [executing] (verified: reconcile_ideas returned status=approved dev_stage=idle, 2026-08-19 23:52 PT)
-- The 4-part fix: bridge model failures to structured table, add student-facing targets to v_kaizen_all_findings, zero-rung config alarm in callModel, guaranteed local fallback rung
-
-Open threads to drive next:
-1. #27698 [executing] - verify the executor builds + deploys all 4 parts; confirm v_kaizen_all_findings gains student-facing targets and callModel gains the zero-rung alarm + fallback rung
-
-Reference IDs:
-- Ideas filed: #27698 [executing]
-- Ideas closed: none
-- Files touched: none (promotion + reconcile only; executor builds the code)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Investigation complete (#27690): root-caused CFA/SMS failure invisibility at 3 levels
-- [x] Filed fix idea #27698
-- [x] Ruben APPROVED #27698
-- [x] Promoted #27698 to executing (idea_promote_and_run)
-- [x] Reconciled #27698 = [executing] (rule 267 GATE B)
-- [x] Validate completion - ALL PASSED
-- [x] Check gate - CLEAR
-- [x] attempt_completion shipped
-</task_progress>
-</attempt_completion>
-```
-
-### `1787183842548` — 8/19/2026, 11:43:53 PM PT — 352 turns
-
-**Original task:**
-
-```
-Chat Widget does not appear to be responding to inquires. Can you check, test and resolve?
-```
-
-**Ideas referenced:** #1119, #12364 [deployed], #16474, #16732, #18335, #20050, #23989, #25185, #25701, #25888, #25962, #25965, #26229 [approved], #27284, #27640 [proposed], #27655 [proposed], #27699 [deployed], #2916, #9112, #9152
-
-**Last PICKUP PROMPT:**
-
-```
-C): the numbered routing menu.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #27699 [deployed] - F-12 resolved; browser-agent follow-up test instructions delivered
-
-Where we left off (verified 2026-08-19 23:42 PT):
-- F-12 fixed + deployed as #27699 [deployed] (handoff intents bypass routing menu + reach real handoff; discord_notify redeclare fatal guarded).
-- Verified server-side: 14/14 unit tests, live handoff 30ms + transfer logged, vague opener still gets clarifier.
-- This turn: produced browser-agent follow-up test instructions (Tests A/B/C) for live-site confirmation.
-
-Open threads to drive next:
-1. #27699 [deployed] - run the browser-agent test above on https://emsuniversity.com/ and confirm A/B handoff + C clarifier; if any FAIL, re-open F-12.
-
-Reference IDs:
-- Ideas filed: #27699 [deployed]
-- Files touched: lib/widget_force_handoff.php, api/chat_widget_api.php, lib/discord_notify.php, HANDOFF_NOTES.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
 ```
 
 ### `1787207665962` — 8/19/2026, 11:43:07 PM PT — 12 turns
@@ -4462,44 +4470,4 @@ Reference IDs:
 - Task: #1786932084
 - Ideas referenced this session: #26938 [executing], #26954 [deployed], #26925 [deployed], #26956 [executing], #26957 [deployed], #26958 [deployed], #26928 [proposed], #26819 [executing]
 - Bug library incidents (not idea IDs): 2537 (RoCE
-```
-
-### `1786947372694` — 8/17/2026, 12:47:30 AM PT — 366 turns
-
-**Original task:**
-
-```
-Can you give me a model here in Cline where i can directly test the Julia/Claudia 235b llm only with no spillover or backup. Just that one locally here in Cline Settings under litellm.emsuniversity.com?
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11847, #12477, #12550, #12618, #12824, #12872, #12878, #13202, #14141, #16163, #16265, #16304, #16648, #16844, #17202, #17203, #17205, #1765, #1781, #18312, #18320, #18326, #18820, #18868, #2114, #22598, #22601, #22815, #22820, #22897, #2299, #23071, #23171, #24184, #25097, #2537, #25757, #25759, #25764, #26908, #26923, #26992 [proposed], #3132, #6070
-
-**Last PICKUP PROMPT:**
-
-```
-gets Artemis :8000, not Julia.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Julia/Claudia 235B zero-spillover test lane (litellm.emsuniversity.com).
-
-Where we left off (verified 2026-08-17 00:47 PT):
-- Verified working in Cline: API Base `https://litellm.emsuniversity.com`, model `julia-235b`, liteLLM master key.
-- End-to-end proof: `/tmp/e2e.json` localhost + `/tmp/e2e_pub.json` public, both HTTP 200 showing `x-litellm-model-api-base: http://127.0.0.1:11513/v1`, `x-litellm-model-group: julia-235b`; real Qwen3-235B content `E2E_235B_OK`/`PUB_235B_OK`.
-- Running backend: Julia :8000 (FlashInfer, eager, RAY_CGRAPH_get_timeout=1800, Triton env disabled), reverse tunnel WOPR:11513 → Julia:8000, started via `/tmp/launch235_direct.sh`, PID 1459932.
-- Files edited: /etc/litellm/config.yaml (+.bak.1786948362), /etc/litellm/hooks/common.py (+.bak.pin-julia235b), /etc/litellm/router_hook.py (+.bak.pin-julia235b), /home/rubenmajor/julia_unified_tp2_qwen235.sh (+.bak.triton), /tmp/launch235_direct.sh.
-
-Open threads to drive next (EVERY item has a REAL filed idea #):
-1. #26992 [proposed] — Persist verified 235B launch flags (Triton disabled + RAY_CGRAPH_get_timeout=1800) into ~/julia_unified_tp2_qwen235.sh and prove a clean script-path relaunch; current process survives only via setsid/nohup.
-
-Reference IDs:
-- Task: original user request (model for direct 235B testing, no spillover/backup) — no numeric Cline task id known
-- Ideas filed: #26992 [proposed]
-- Files touched: /etc/litellm/config.yaml, /etc/litellm/hooks/common.py, /etc/litellm/router_hook.py, /home/rubenmajor/julia_unified_tp2_qwen235.sh, /tmp/launch235_direct.sh
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```

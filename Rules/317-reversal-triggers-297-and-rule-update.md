@@ -10,9 +10,9 @@ One sentence: **Claim scope must equal probe scope.** A tool's auto-success sign
 
 The reversal log collapses to FOUR recurring failure modes, in order of frequency:
 
-- **SELF_CONTRADICTING_DISPOSITION** (dominant: 251 of 280 telemetry failures; the #1 gate blocker). Prose says DONE/FIXED/VERIFIED next to an idea bracket that still says [proposed]/[executing]/[blocked]. Stamp the record first (UPDATE orchestrator_ideas SET status=deployed, then reconcile_ideas), THEN write the claim; or keep the honest bracket. Never write FIXED next to [proposed].
+- **SELF_CONTRADICTING_DISPOSITION** (dominant: 251 of 280 telemetry failures; the #1 gate blocker). Prose says DONE/FIXED/VERIFIED next to an idea bracket that still says [proposed]/[executing]/[blocked]. Stamp the record first (UPDATE orchestrator_ideas SET status=deployed, then reconcile_ideas), THEN write the claim; or keep the honest bracket. Never write FIXED next to [proposed]. [auto-sync: +3 since 2026-08-19 | latest: 2026-08-19 false-gate incident: agent re-presented ideas #27524/#27531 for approval AFTER ]
 - **R317_UNVERIFIED_STATE** (24 of 280 telemetry failures). Asserting fleet/routing/pod/model-health or deliverable state from memory without a live probe returning proof. Probe first and quote the result, or label the claim UNVERIFIED. [auto-sync: +38 since 2026-08-19 | latest: - should_compress_now returned GREEN (stale 91,555-token status file) -> corrected to COMP]
-- **INSUFFICIENT_PROBE** (the mechanism behind most amendment case law). One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state. [auto-sync: +29 since 2026-08-19 | latest: 2026-08-19: called execute_query on emsu-operations and got MCP error -32601 Unknown tool;]
+- **INSUFFICIENT_PROBE** (the mechanism behind most amendment case law). One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state. [auto-sync: +34 since 2026-08-19 | latest: 2026-08-19 within-window reversal: the lockout cluster was initially attributed to cron-vs]
 - **SCOPE_ERROR** (completion over-scoped to DONE). Enumerate EVERY visible defect / every deliverable in the set before claiming resolved; the undone ones become open threads with real idea ids, not hidden by a "done" headline. [auto-sync: +11 since 2026-08-19 | latest: The AZDHS EMS-26-0495 v2 answered the complaint as one undifferentiated program-level bloc]
 <!-- golden-rule-table:end -->
 
@@ -42,32 +42,7 @@ English-only, always (narration included); domain context never justifies langua
 - Rule 263 — verify-before-claim on ALL facts
 - Rule 321 — no hidden gates after approval (G5 premature completion)
 - Rule 322 — "what was serving" = one table of underlying LLMs (probe, never recite)
-## Amendment (from reversal, 2026-08-20 01:44 UTC)
 
-**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
-- Task: chat-widget-resolve-2026-08-19
-- RCA bucket: insufficient probe
-- Trigger pattern: Healthcheck green on a canned-200 ping while the real code path throws fatals
-- Reversal note: 2026-08-19: chat-widget healthcheck send_ok stayed green for 3 days while 44,521 fatal ArgumentCountErrors hit real visitors. Causal truth verified this window: the per-site ping short-circuits at chat_widget_api.php line 168 (canned ok:true) and the global catch at line 1152 logs fatals and still returns ok, so inflight-probe success is NOT evidence the widget's AI/queue path works. A returned-200 ping is a proxy, not the outcome; only a log-grep guard (idea #27640) detects fatal-class outages. Amended behavior: health checks must either exercise the real code path or grep the error log for that path's fatals; a proxy 200 is never evidence of functioning behavior.
+## Case law + amendment trail
 
-The reversal that produced this amendment is closed ONLY because the causal rule text changed.
-
-## Amendment (from reversal, 2026-08-20 02:20 UTC)
-
-**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
-- Task: 1787129383579
-- RCA bucket: insufficient probe
-- Trigger pattern: cyclic engine drops with clean dmesg concluded as external kill while thermal-shed + /dev/watchdog arm-failure evidence existed in side logs
-- Reversal note: 2026-08-19 within-window reversal: earlier in this session Julia's ~28min serve-drop cycle was attributed to an external SIGKILL (clean dmesg, no traceback, no wedge-guard reboot). Wedge-watchdog + catch-relaunch logs then proved thermal 87-92C with THERMAL-SHED (batch cap 11513 3->1) and qwen3-235b model recreation every sweep — a thermal-throttle engine-drop, not an external kill. Amended behavior: before attributing recurring engine drops to a kill signal, probe thermal shed logs, vendor/engine throttle metrics, and hardware watchdog arm state; clean kernel logs alone are NOT evidence of a non-thermal cause.
-
-The reversal that produced this amendment is closed ONLY because the causal rule text changed.
-
-## Amendment (from reversal, 2026-08-20 02:25 UTC)
-
-**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
-- Task: 1787129383579
-- RCA bucket: insufficient probe
-- Trigger pattern: protection layer reported armed from install evidence while its own log showed every ARM attempt failing on sudo
-- Reversal note: 2026-08-19 within-window reversal #2: the 03:08 PT handoff claimed 'wedge-guard auto-reboot installed on Julia' (protection armed). Verified this window: the /dev/watchdog ARM fails every 2 minutes with 'sudo: 1 incorrect password attempt' (5 consecutive sweeps 19:06-19:14 PT in emsu-julia-wedge-watchdog.log) and on-box 'sudo -n true' returns rc=1 — the auto-reboot protection is NOT armed. Amended behavior: a protection/watchdog layer claimed 'installed/deployed/armed' must be verified by reading its own recent success output (an ARM-success tick in its log), never by the existence of a script, cron entry, or prior-window install claim. Install is not armed; a failing ARM log IS evidence the protection is down even while the guarded service serves.
-
-The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+Amendment history (2026-08-16 through 2026-08-20 reversals) moved to `Rules-archive/317-amendments.md` per the trim-then-archive pattern (#27531).

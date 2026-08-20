@@ -549,6 +549,9 @@ function feedR317Corrections(failures, task_id) {
         else if (/R317_REVERSAL_NOT_REPAIRED/.test(vt)) {
             feed("r317_reversal_not_repaired", "Reversal Log listed a within-window flip claiming a causal-rule update with no mechanical amendment on disk", "logged the reversal in the completion prose without editing the causal rule file / corpus / MCP", "call clinerules_amend_rule for the causal rule so the rule text changes on disk, the proof is in rule_amend, and the MCP reindexes — a reversal is closed only when the underlying artifact changed", f.slice(0, 400));
         }
+        else if (/R317_SCOPE_ERROR/.test(vt)) {
+            feed("r317_scope_error", "completion claims done/fixed/resolved while the same body enumerates remaining defects, pending items, or known issues with no open-thread idea numbers", "over-scoped the completion to DONE and hid visible defects under a done headline", "enumerate EVERY visible defect / every deliverable in the set BEFORE claiming resolved; file ideas for the undone ones and list them with [disposition] brackets, or scope the claim to what is actually done", f.slice(0, 400));
+        }
     }
 }
 // RULE 317 AUTO-REPAIR FEED (2026-08-17). The reversal feed above runs only on
@@ -1726,6 +1729,38 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
                 `if a REAL blocker surfaces instead, state it in the next tool-bearing turn with a concrete unblock path ` +
                 `and a filed idea # — never as a hidden pre-existing requirement, never as silently-pending work next to a done claim. ` +
                 `Buildable work deferred without a filed idea is a rule-29 + rule-300 violation.`);
+        }
+    }
+    // ── RULE 317 SCOPE_ERROR gate (2026-08-19, reversal-log audit) ──────────
+    // The 4th of the four distilled failure modes had NO structural gate:
+    // completions over-scoped to DONE while the SAME body enumerates visible
+    // defects / remaining items that are not filed as open threads. R321 covers
+    // done+deferral-to-future-window; this covers done+visible-defects-remaining.
+    // Conservative textual-contradiction only (same pattern as R321): a headline
+    // done/fixed/resolved claim AND a same-body enumeration of remaining defects
+    // with no corresponding open-thread idea numbers. Pickup block stripped first
+    // so rule-91 "Open threads" wording cannot false-fire.
+    {
+        const _scopeBody = result_text.replace(/\u2550{5,}[\s\S]*?PICKUP PROMPT[\s\S]*$/i, "");
+        const headlineDone = /\b(?:all|everything|the\s+(?:task|work|issue|bug|problem))\s+(?:is\s+|are\s+)?(?:done|complete|completed|fixed|resolved|finished|deployed|shipped)\b|\b(?:task|build|work|deliverable|issue|bug|problem)\s+(?:is\s+)?(?:fully\s+)?(?:done|complete|completed|fixed|resolved|finished)\b/i;
+        // Visible-defect enumeration: bullets/lines naming remaining, pending, broken,
+        // failing, missing, not-yet, still-needs items AFTER a done headline.
+        const remainingShapes = [
+            /\b(?:remaining|left|still)\s+(?:to\s+(?:do|fix|build|deploy|resolve)|pending|broken|failing|missing|open)\b/i,
+            /\b(?:not\s+yet|hasn.t\s+yet|haven.t\s+yet|won.t\s+work\s+until|needs?\s+(?:a\s+)?(?:fix|patch|deploy|follow[- ]?up|separate|another))\b/i,
+            /\b(?:known\s+(?:issue|defect|bug|gap|limitation)|visible\s+defect|outstanding\s+(?:item|issue|defect))\b/i,
+            /^\s*[-*]\s+.{0,80}\b(?:TODO|FIXME|pending|broken|failing|missing|not\s+working)\b/im,
+        ];
+        const hasRemaining = remainingShapes.some((re) => re.test(_scopeBody));
+        // If the body names remaining items, they must be carried by real open-thread
+        // idea numbers (#NNNN with bracket) in the pickup block. Count bracketed ids.
+        const bracketedIds = (result_text.match(/#\d{3,}\s*\[(?:deployed|executing|awaiting_review|blocked|proposed|rejected|superseded)\]/g) || []).length;
+        if (headlineDone.test(_scopeBody) && hasRemaining && bracketedIds === 0) {
+            failures.push(`R317_SCOPE_ERROR: completion claims done/fixed/resolved while the same body enumerates remaining defects, pending items, or known issues, ` +
+                `and NO open-thread idea numbers (#NNNN [disposition]) carry them. ` +
+                `Rule 317 SCOPE_ERROR: enumerate EVERY visible defect / every deliverable in the set BEFORE claiming resolved; ` +
+                `the undone ones become open threads with real filed idea ids, not hidden by a "done" headline. ` +
+                `Either file ideas for the remaining items and list them with [disposition] brackets, or scope the claim to what is actually done.`);
         }
     }
     // ── FIX 5 of #19173: COVERAGE GATE ──────────────────────────────────────

@@ -37,3 +37,22 @@ Subagent hits permission denied / EACCES / timeout, swallows the error, reports 
 ## Last updated
 
 2026-07-20 — initial. Source: subagent false-success incident.
+## Amendment (from reversal, 2026-08-20 03:10 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: argus-improvements-2026-08-19
+- RCA bucket: insufficient probe
+- Trigger pattern: Patch tool per-block success treated as file validity without running the language linter before claiming applied
+- Reversal note: 2026-08-19: multi-block SEARCH/REPLACE patch on argus_task_status.php reported OK for all 13 blocks, but the insertion split an if/elseif chain producing a PHP parse error at line 638, caught only by the subsequent php -l. Amended behavior: a patch tool's per-block OK is NOT evidence the file is valid; php -l (or equivalent lint) must run and pass BEFORE any 'patch applied' claim, and multi-block insertions near if/elseif/else chains must be re-read around the seams.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-20 03:12 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787190192283
+- RCA bucket: insufficient probe
+- Trigger pattern: within-window reversal logged a causal-rule update without repairing it; clinerules_validate_completion auto-repaired the cited rule on behalf of the window
+- Reversal note: - 'UI patch 13/13 blocks applied OK' -> 'PHP parse error at line 638: insertion split an if/elseif chain; repaired, php -l clean' | RCA bucket: insufficient probe | causal rule upd
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

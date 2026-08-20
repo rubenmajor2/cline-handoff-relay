@@ -109,3 +109,13 @@ Don't fire more offloaded ideas than you can reconcile. If you fire 40 ideas, yo
 ## Last updated
 
 2026-08-19 — duplicate "GATE C" heading renamed GATE D; self-checks + hand-ship sections tightened for G8 floor compliance. Prior: 2026-08-15 GATE A0 build-here-first + executor-doctor duty (Ruben directive); 2026-07-25 trim (idea #19125). Case law: `Rules-archive/267-case-law.md`.
+
+## Amendment (from reversal, 2026-08-20 03:12 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 26422FT-18-r317b
+- RCA bucket: stale assumption
+- Trigger pattern: within-window reversal corrected a material claim
+- Reversal note: 2026-08-19 within-window reversal: completion tagged idea 27658 [proposed] from filing-time memory while the live orchestrator_ideas record had flipped to rejected (pipeline auto-reject, no reason recorded). Amended behavior: disposition tags must come from a live read of orchestrator_ideas (status, dev_stage) in the same window; when reconcile_ideas times out, a direct read of those columns is an acceptable reconcile substitute and must be cited as (verified: direct read). A rejected idea is tagged [rejected] and, if the work is still open, a replacement idea is filed and cited instead.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

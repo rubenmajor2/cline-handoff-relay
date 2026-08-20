@@ -103,3 +103,13 @@ Rule 300 (end-to-end delivery, no deferral), rule 161 (approved = executing), ru
 verdict), rule 01 (no invented departments, G3). Bug library incidents 2499 (G1+G2+G4 in
 one Argus answer) and 2500 (rules never wired into Argus). This rule does NOT override
 Rule 91 (PICKUP PROMPT) or any other hardfloor formatting rule.
+
+## Amendment (from reversal, 2026-08-20 03:35 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787138864086
+- RCA bucket: stale assumption
+- Trigger pattern: completion re-lists an already-approved idea with approval-seeking language instead of executing it
+- Reversal note: 2026-08-19 false-gate incident: agent re-presented ideas #27524/#27531 for approval AFTER Ruben's approve actions had already landed at 17:04 PT, treating the DB 'awaiting_review' workflow stage as a re-approval queue. Amended behavior: an idea with a recorded human approve action is EXECUTED, never re-presented for approval; the reconcile 'awaiting_review' tag means the executor's written record sits at review stage, not that the human decision is pending. Executing approved work never requires asking again.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

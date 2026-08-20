@@ -70,3 +70,13 @@ On any box that claims hours of uptime: `grep -c "startup complete" <container-l
 - Reversal note: 2026-08-19: tried a local mysql client against orchestrator_ideas and treated the failure as a blocker; the table lives on WOPR and was stamped via the mysql MCP execute_query (UPDATE Rows affected: 1). Amended behavior: before declaring a DB write blocked, probe the alternate path (mysql MCP server) first; a local-client failure is not a permission wall.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-20 06:31 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786948459
+- RCA bucket: wrong premise
+- Trigger pattern: link-state register read interpreted as evidence of a physical connection partner
+- Reversal note: 2026-08-19 Big Mac post-bifurcator probe: a root port LnkSta showing Speed+Width active (2.5GT/s x16) was initially narrated as the 4th GPU training against the port. Scope error: link-state registers prove the port's own state, not what is physically cabled to it — on this platform unconnected bifurcated root ports present the same active LnkSta signature. Corrected behavior: an LnkSta read may be claimed as evidence of a specific link partner ONLY when a downstream endpoint actually enumerates behind that port; a bare LnkSta without downstream enumeration proves port state only. Physical topology claims require physical confirmation (tech/cabling), never inference from LnkSta alone.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

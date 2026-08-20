@@ -42,3 +42,12 @@ When Ruben asks what was serving, the answer is ONE table where each ROW is an U
 2. After the first correction to "one table", the table still used routing names (`frankenstein-llm`, `frankenstein-tools`) as rows instead of the underlying physical LLMs. Ruben: "I want to see the underlying LLM (GLM 5.2 Local, 120Bs, 235B Julia, GLM Cloud, etc.)."
 3. Third failure: Julia-235B was marked DOWN in the table from a single refused tunnel probe at 12:48 PT, but Ruben's own live test at 12:58 PT via `litellm:julia-235b` served quickly and the router audit recorded `req: julia-235b → picked: julia-235b` (no substitution). The verdict was TUNNEL FLAPPING, not model DOWN. This is the source of the "TUNNEL vs MODEL" + "one probe is never a verdict" discipline above.
 
+## Amendment (from reversal, 2026-08-20 05:18 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787138864086
+- RCA bucket: insufficient probe
+- Trigger pattern: single HTTP 200 from a watcher during a relaunch treated as the new engine serving
+- Reversal note: 2026-08-19 watcher false-positive: a serving watcher declared SERVED at 22:07 PT on a single HTTP 200 that was actually the dying seq-32 engine's final second before relaunch, not the new seq-128 engine. Corrected in-window by requiring TWO consecutive 200s. Amended behavior: any serving/health watcher that gates a relaunch verdict must require at least two consecutive successful probes separated by an interval, because a dying engine can answer one final request during its shutdown window; a single 200 during a relaunch transition is never a verdict.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

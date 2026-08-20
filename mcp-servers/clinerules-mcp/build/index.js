@@ -266,6 +266,18 @@ function initSchema(db) {
     );
     CREATE INDEX IF NOT EXISTS idx_rule_amend_rule ON rule_amend(rule_id);
     CREATE INDEX IF NOT EXISTS idx_rule_amend_task ON rule_amend(task_id);
+
+    -- #27652 (2026-08-19): GOLDEN RULE distilled-table auto-maintenance.
+    -- Every NON-duplicate amendment is classified into one of the 4 failure
+    -- modes and counted here; the marker-bounded table block in rule 317 is
+    -- regenerated so the prevention text small models carry stays in sync
+    -- with the amendment trail automatically.
+    CREATE TABLE IF NOT EXISTS golden_rule_sync (
+      mode TEXT PRIMARY KEY,
+      count INTEGER DEFAULT 0,
+      latest_lesson TEXT,
+      updated_at TEXT
+    );
   `);
 }
 function reindex(db, verbose = false) {
@@ -749,6 +761,108 @@ function _amendJaccard(a, b) {
             inter++;
     return inter / (a.size + b.size - inter);
 }
+// ── #27652: GOLDEN RULE distilled-table auto-maintenance ──────────────────
+// Every NON-duplicate amendment is classified into one of the 4 failure modes
+// and counted in golden_rule_sync; the marker-bounded block in rule 317 is
+// then regenerated so the prevention text small models carry always reflects
+// the live amendment trail. Baselines are the 2026-08-19 distilled lessons;
+// live counts append a compact suffix only when count > 0 (floor-safe).
+const GOLDEN_MODES = ["SELF_CONTRADICTING_DISPOSITION", "R317_UNVERIFIED_STATE", "INSUFFICIENT_PROBE", "SCOPE_ERROR"];
+const GOLDEN_BASELINES = {
+    SELF_CONTRADICTING_DISPOSITION: {
+        note: "(dominant: 251 of 280 telemetry failures; the #1 gate blocker)",
+        lesson: "Prose says DONE/FIXED/VERIFIED next to an idea bracket that still says [proposed]/[executing]/[blocked]. Stamp the record first (UPDATE orchestrator_ideas SET status=deployed, then reconcile_ideas), THEN write the claim; or keep the honest bracket. Never write FIXED next to [proposed].",
+    },
+    R317_UNVERIFIED_STATE: {
+        note: "(24 of 280 telemetry failures)",
+        lesson: "Asserting fleet/routing/pod/model-health or deliverable state from memory without a live probe returning proof. Probe first and quote the result, or label the claim UNVERIFIED.",
+    },
+    INSUFFICIENT_PROBE: {
+        note: "(the mechanism behind most amendment case law)",
+        lesson: "One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state.",
+    },
+    SCOPE_ERROR: {
+        note: "(completion over-scoped to DONE)",
+        lesson: "Enumerate EVERY visible defect / every deliverable in the set before claiming resolved; the undone ones become open threads with real idea ids, not hidden by a \"done\" headline.",
+    },
+};
+function classifyAmendment(bucket, trigger, note) {
+    const text = (bucket + " " + trigger + " " + note).toLowerCase();
+    const scores = {
+        SELF_CONTRADICTING_DISPOSITION: 0,
+        R317_UNVERIFIED_STATE: 0,
+        INSUFFICIENT_PROBE: 0,
+        SCOPE_ERROR: 0,
+    };
+    const kw = [
+        ["SELF_CONTRADICTING_DISPOSITION", /\b(disposition|tag|bracket|contradict|fixed next to|proposed\b|executing\b|stamp|status claim|claim.*record|record.*claim)\b/g],
+        ["R317_UNVERIFIED_STATE", /\b(fleet|routing|host|model|serving|down\b|up\b|pod|registry|recite|from memory|state claim|litellm|adapter)\b/g],
+        ["INSUFFICIENT_PROBE", /\b(eacces|permission|credential|single probe|one auth|escalat|sudo|resolve|chmod|chown|probe|verify|artifact|php -l|lint|read-back|readback|timeout|transport)\b/g],
+        ["SCOPE_ERROR", /\b(scope|enumerate|every defect|over-scoped|missed|deliverable set|partial|incomplete set|all items)\b/g],
+    ];
+    for (const [mode, re] of kw) {
+        const m = text.match(re);
+        if (m)
+            scores[mode] += m.length;
+    }
+    let best = "INSUFFICIENT_PROBE"; // default bucket: the most common mechanism
+    let bestScore = 0;
+    for (const mode of GOLDEN_MODES) {
+        if (scores[mode] > bestScore) {
+            best = mode;
+            bestScore = scores[mode];
+        }
+    }
+    return best;
+}
+const GOLDEN_START = "<!-- golden-rule-table:start (auto-maintained by clinerules_amend_rule, #27652) -->";
+const GOLDEN_END = "<!-- golden-rule-table:end -->";
+function syncGoldenRuleTable(mode, lesson) {
+    // 1. Upsert the live count + latest lesson.
+    db.prepare(`
+    INSERT INTO golden_rule_sync (mode, count, latest_lesson, updated_at)
+    VALUES (?, 1, ?, strftime('%Y-%m-%dT%H:%M:%SZ','now'))
+    ON CONFLICT(mode) DO UPDATE SET
+      count = count + 1,
+      latest_lesson = excluded.latest_lesson,
+      updated_at = excluded.updated_at
+  `).run(mode, lesson.slice(0, 160));
+    // 2. Regenerate the marker-bounded block in rule 317.
+    const row = findRule("317");
+    if (!row || !row.path || !fs.existsSync(row.path))
+        return "count recorded; rule-317 file not found for table regen";
+    const body = fs.readFileSync(row.path, "utf-8");
+    const si = body.indexOf(GOLDEN_START);
+    const ei = body.indexOf(GOLDEN_END);
+    if (si < 0 || ei < 0 || ei <= si)
+        return "count recorded; markers missing in rule 317 (re-add golden-rule-table markers)";
+    const counts = {};
+    for (const r of db.prepare(`SELECT mode, count, latest_lesson FROM golden_rule_sync`).all()) {
+        counts[r.mode] = r;
+    }
+    const bullets = [];
+    for (const m of GOLDEN_MODES) {
+        const b = GOLDEN_BASELINES[m];
+        const c = counts[m];
+        let line = `- **${m}** ${b.note}. ${b.lesson}`;
+        if (c && c.count > 0) {
+            const latest = (c.latest_lesson || "").replace(/\s+/g, " ").trim().slice(0, 90);
+            line += ` [auto-sync: +${c.count} since 2026-08-19${latest ? " | latest: " + latest : ""}]`;
+        }
+        bullets.push(line);
+    }
+    const block = [
+        GOLDEN_START,
+        "",
+        "The reversal log collapses to FOUR recurring failure modes, in order of frequency:",
+        "",
+        ...bullets,
+        "",
+    ].join("\n");
+    const newBody = body.slice(0, si) + block + body.slice(ei);
+    fs.writeFileSync(row.path, newBody, "utf-8");
+    return `table regenerated in rule 317 (${mode} +1, now ${counts[mode]?.count ?? 1})`;
+}
 function amendRuleOnDisk(slugOrId, taskId, rcaBucket, note, triggerPattern) {
     const row = findRule(slugOrId);
     if (!row) {
@@ -804,12 +918,21 @@ function amendRuleOnDisk(slugOrId, taskId, rcaBucket, note, triggerPattern) {
     catch (e) {
         return { ok: false, message: `Rule amended on disk but proof-record failed: ${e.message}. Re-run the tool.` };
     }
+    // #27652: classify this NEW (non-duplicate) amendment into the 4-mode GOLDEN
+    // RULE table and regenerate the marker-bounded block in rule 317. Non-fatal:
+    // a sync hiccup must never fail the amendment itself.
+    let syncNote = "";
+    try {
+        const mode = classifyAmendment(rcaBucket, triggerPattern, note);
+        syncNote = " " + syncGoldenRuleTable(mode, note);
+    }
+    catch { /* non-fatal */ }
     // Live reindex so the MCP + FTS immediately serve the amended text.
     try {
         reindex(db, false);
     }
     catch { /* non-fatal: background reindex will catch up */ }
-    return { ok: true, message: `Amended rule ${row.rule_id} (${row.slug}) at ${filePath}, reindexed.`, path: filePath, rule_id: row.rule_id };
+    return { ok: true, message: `Amended rule ${row.rule_id} (${row.slug}) at ${filePath}, reindexed.${syncNote}`, path: filePath, rule_id: row.rule_id };
 }
 // RULE 317 AUTO-REPAIR SUPPORT (2026-08-17, Ruben: "the thing that sees the
 // correction needs the ability to actually take action and do it"). The validator's

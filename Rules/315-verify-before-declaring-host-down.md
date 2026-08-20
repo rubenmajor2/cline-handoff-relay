@@ -61,3 +61,12 @@ On any box that claims hours of uptime: `grep -c "startup complete" <container-l
 
 **Source incidents: 2026-08-09 Big Mac wedge + credential-guess hour; Julia host-up/engine-down mis-call; earlier Claudia false-down (all resolved same session; fleet fully restored 22:51 PT)**
 
+## Amendment (from reversal, 2026-08-20 02:34 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787187212000
+- RCA bucket: insufficient probe
+- Trigger pattern: local mysql client failure treated as a wall instead of switching to the mysql MCP execute_query path
+- Reversal note: 2026-08-19: tried a local mysql client against orchestrator_ideas and treated the failure as a blocker; the table lives on WOPR and was stamped via the mysql MCP execute_query (UPDATE Rows affected: 1). Amended behavior: before declaring a DB write blocked, probe the alternate path (mysql MCP server) first; a local-client failure is not a permission wall.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

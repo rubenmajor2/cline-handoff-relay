@@ -6,19 +6,21 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/19/2026, 4:44:01 PM PT | window: last 72h | 113 tasks | index total 858 (parsed 1, cached 857)
+Generated: 8/19/2026, 5:44:12 PM PT | window: last 72h | 112 tasks | index total 860 (parsed 6, cached 854)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1787183842548` | 8/19/2026, 5:43:55 PM | 99 | 313KB | Chat Widget does not appear to be responding to inquires. Can you check, test and resolve? |
+| `1787169118771` | 8/19/2026, 5:43:54 PM | 145 | 2064KB | #Organize Compliance Gold Standard Response/Dissection, etc... |
+| `1787180391022` | 8/19/2026, 5:43:48 PM | 43 | 1018KB | Is this true for this student? Can you give me a link to thier profile so i can see for my |
+| `1787186219913` | 8/19/2026, 5:43:45 PM | 43 | 255KB | #Argus Improvements from browser window.  |
+| `1787178812057` | 8/19/2026, 5:43:17 PM | 27 | 188KB | Can you review the entire reversal log related to rule 317 for commonalities and systemic  |
+| `1787168789833` | 8/19/2026, 5:16:22 PM | 226 | 984KB | #Julia/Claudia 235B |
+| `1787168880963` | 8/19/2026, 5:07:35 PM | 596 | 4676KB | #GLM / Frankenstein Routing  |
 | `1787175621111` | 8/19/2026, 4:18:22 PM | 220 | 5939KB | #Argus Student Issue |
-| `1787180391022` | 8/19/2026, 4:03:23 PM | 28 | 1000KB | Is this true for this student? Can you give me a link to thier profile so i can see for my |
-| `1787168880963` | 8/19/2026, 3:49:24 PM | 556 | 4589KB | #GLM / Frankenstein Routing  |
-| `1787168789833` | 8/19/2026, 3:44:23 PM | 198 | 890KB | #Julia/Claudia 235B |
 | `1787168918854` | 8/19/2026, 3:41:20 PM | 468 | 2581KB | #TDSHS |
-| `1787178812057` | 8/19/2026, 3:39:02 PM | 26 | 186KB | Can you review the entire reversal log related to rule 317 for commonalities and systemic  |
 | `1787174702687` | 8/19/2026, 3:33:43 PM | 214 | 3553KB | #Argus/Team Hub |
 | `1787168962221` | 8/19/2026, 3:05:10 PM | 78 | 248KB | #AZDHS |
-| `1787169118771` | 8/19/2026, 2:27:49 PM | 144 | 2061KB | #Organize Compliance Gold Standard Response/Dissection, etc... |
 | `1787138864086` | 8/19/2026, 12:33:19 PM | 450 | 1864KB | #Frankenstein LLM GLM Speedup |
 | `1787159982042` | 8/19/2026, 12:32:42 PM | 228 | 9271KB | #Argus/Team Hub |
 | `1787122887382` | 8/19/2026, 11:53:23 AM | 554 | 4399KB | #San Mateo EMSA Complaint |
@@ -120,13 +122,307 @@ Generated: 8/19/2026, 4:44:01 PM PT | window: last 72h | 113 tasks | index total
 | `1786926348658` | 8/16/2026, 6:55:38 PM | 318 | 886KB | #Jon Argus |
 | `1786918177124` | 8/16/2026, 6:37:53 PM | 342 | 2921KB | #Email AI |
 | `1786925537474` | 8/16/2026, 6:35:53 PM | 232 | 796KB | The rule 317 seems to not be firing as often. What do you think is hapening? |
-| `1786927388438` | 8/16/2026, 5:43:09 PM | 1 | 2KB | https://emsuniversity.com/emtskills/admin_profile.php?id=26215W-08  |
-| `1786864599073` | 8/16/2026, 5:29:45 PM | 1324 | 4098KB | #Julia/Claudia 235 |
-| `1786674811485` | 8/16/2026, 5:12:32 PM | 400 | 1449KB | Can you tell me how we can see if anyone is using a bot to chat to us or not? |
 
 ---
 
 ## Per-window detail
+
+### `1787183842548` — 8/19/2026, 5:43:55 PM PT — 99 turns
+
+**Original task:**
+
+```
+Chat Widget does not appear to be responding to inquires. Can you check, test and resolve?
+```
+
+**Ideas referenced:** #1119, #12364, #18335, #25888, #25962, #26229 [approved], #27640 [proposed], #9112
+
+**Last PICKUP PROMPT:**
+
+```
+ [ ] Verify with live probe
+- [ ] Mark #27640 deployed
+- [ ] Re-completion with PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1787169118771` — 8/19/2026, 5:43:54 PM PT — 145 turns
+
+**Original task:**
+
+```
+#Organize Compliance Gold Standard Response/Dissection, etc...
+
+Please analyze all the responses sent to regulators around here: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
+
+and organize the Gold Standard Response properly based on the recenlty sent ones. The gold standard response is customized according to the state location, rules, regulations, issues, etc... but style, tone, strategy are relatviely similar. The Gold Standard is somewhat disjoined now and needs better organization.
+```
+
+**Ideas referenced:** #0369, #047857, #0891, #111827, #1368, #1370, #15803, #166534, #16957, #19338, #19458, #19491, #25185, #2524, #2525, #2563, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27625 [executing], #334155, #450438, #475569, #600179, #6366, #64748, #78350, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+ Log
+No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #27625 [executing] — wire the Gold Standard Response Library UI into institutional_compliance.php investigations tab.
+
+Where we left off (verified 2026-08-19 14:02 PT):
+- 7 Gold Standard docs on disk at /var/www/emtskills/personnel/investigations/gold_standard/ (verified: ssh_command sudo -u www-data head returned file content WWW_DATA_READ_OK; curl direct URL returned HTTP 403 lockdown intact)
+- investigations tab starts line 1312 of personnel/institutional_compliance.php (3523 lines); two redundant doctrine cards identified (teal 'Regulator NOI Response - Doctrine + Templates' + blue 'NOI Doctrine + Builder Resources'); inv-toolbar status-pill block duplicated ~lines 1417-1445
+- compliance_ref.php accepts ?path=personnel/investigations/gold_standard/<file>.md (verified: ssh_command grep returned line 72 pass-through + line 100 allow-list 403 gate)
+
+Open threads to drive next:
+1. #27625 [executing] — replace the two redundant doctrine cards with ONE unified 'Gold Standard Response Library' panel: buttons to compliance_ref.php?path=personnel/investigations/gold_standard/<file>.md for all 7 docs grouped Core (00,01) / State (02 TX, 03 AZ, 04 CA) / Accreditors (05) / Sent-log (06); keep red Compliance Deadline Center card; dedupe inv-toolbar; edit via ssh_command patch (rule 144), php -l, reload FPM
+2. #27625 [executing] — verify all 7 links render via authenticated compliance_ref.php; if refused, add personnel/investigations/gold_standard to permitted dirs (~line 96-100)
+3. #27625 [executing] — backfill compliance_doctrine DB rows for CA/AZ (run SELECT * FROM compliance_doctrine first)
+4. #27625 [executing] — update HANDOFF_NOTES via update_handoff_notes, then attempt_completion with rule-91 pickup block
+
+Reference IDs:
+- Ideas filed: #27625 [executing]
+- Ideas closed: none
+- Files touched: personnel/investigations/gold_standard/*.md (7 on disk); pending edit: personnel/institutional_compliance.php; read-only: personnel/compliance_ref.php
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Analysis + 7 Gold Standard docs written and deployed (verified)
+- [x] SESSION MEMORY compressed
+- [x] Filed idea #27625 for remaining UI wiring
+- [x] Re-validate completion — ALL PASSED
+- [x] check_gate → CLEAR
+- [x] attempt_completion with pickup prompt
+</task_progress>
+</attempt_completion>
+```
+
+### `1787180391022` — 8/19/2026, 5:43:48 PM PT — 43 turns
+
+**Original task:**
+
+```
+Is this true for this student? Can you give me a link to thier profile so i can see for myself?
+```
+
+**Ideas referenced:** #1758, #17580, #248240, #9086
+
+**Last PICKUP PROMPT:**
+
+```
+te_view.php?student_id=2482401
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Verify NREMT Skills Competency claim for Devin Magioncalda (2482401) and supply admin profile links.
+
+Where we left off (verified 2026-08-19 16:03 PT):
+- Found student via MySQL: id=129, slug 2482401, magiondm@gmail.com (the queried magiondmgm@gmail.com is a typo).
+- StudentLifecycleState confirms: active account (Moodle uid 40936, last access 2026-08-18), payment PASS, but enrolment FAIL (no section group), quiz1_gate FAIL (CPR <80%), externship NA (0/4 forms), NREMT fields all NULL, certificate not_ready.
+- Claim is FALSE. Links delivered: /admin/student_lifecycle.php?student_id=2482401 and /routes/student_gate_view.php?student_id=2482401.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+- None — all work completed this session.
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: none
+- Files touched: none (read-only verification via MCP + MySQL)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Identify student by email
+- [x] Check NREMT skills competency / externship status
+- [x] Verify claim vs actual record
+- [x] Provide profile link
+</task_progress>
+</attempt_completion>
+```
+
+### `1787186219913` — 8/19/2026, 5:43:45 PM PT — 43 turns
+
+**Original task:**
+
+```
+#Argus Improvements from browser window. 
+
+See the following improvement recommendations made by a browser window. May not be entirely accurate so needs verification and improvements to be made. Provide a comprehensive report once finished
+
+--
+Report delivered. Everything was read-only — I didn't approve, deny, or run anything.
+
+**The four findings I'd act on first:**
+
+1. **Identifier resolution is the root cause of most wrong answers.** Task #609 ("remind me when the fix is deployed") got answered about *idea* #609 — an unrelated, superseded item from April — because task IDs and idea IDs sha
+```
+
+**Ideas referenced:** #23861, #23862, #23863, #23864, #23865, #23866, #24231, #24232, #24233, #24242, #24246, #24247, #24249, #24250, #24251, #27203, #27248, #27275, #27278, #27282, #27507, #27603, #27604, #27636
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787178812057` — 8/19/2026, 5:43:17 PM PT — 27 turns
+
+**Original task:**
+
+```
+Can you review the entire reversal log related to rule 317 for commonalities and systemic issues needing updates and resolutions and make those adjustments for improvement of the entire system - basically, I'm trying to get this knowledge to work better, smarter and faster on the small as well as the bigger models and the reversal log would have all that info.
+```
+
+**Ideas referenced:** #25185, #26435, #26617, #27100, #27634 [proposed], #27635 [proposed], #8151
+
+**Last PICKUP PROMPT:**
+
+```
+of reading the full 16KB tail.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up the rule-317 reversal-log systemic-improvement work.
+
+Where we left off (verified 2026-08-19 15:38 PT):
+- Reviewed the full rule-317 ledger: 8 mechanical amendments (per clinerules_amend_history, trailing 30d) + the 280-failure digest in /var/www/emtskills/docs/317-reversal-corrections.md (4 modes: SELF_CONTRADICTING_DISPOSITION 251x, R317_UNVERIFIED_STATE 24x, INSUFFICIENT PROBE, SCOPE_ERROR).
+- Edited /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md: front-loaded a GOLDEN RULE section (claim-scope-must-equal-probe-scope axiom + 4-mode taxonomy + English-only). Reindexed (clinerules_reindex: 332 rules, 22 hardfloor) and verified live via clinerules_lookup (rule now 16,860 bytes, GOLDEN RULE at top).
+- Filed idea #27634 [proposed] and #27635 [proposed].
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #27634 [proposed] — Implement dedup + distilled-table maintenance in clinerules_mcp clinerules_amend_rule (content-hash near-duplicate folding + top-of-file failure-mode table rebuild), so the amendment tail stops growing unbounded.
+2. #27635 [proposed] — Build the sync chain: cron watches rule_amend ledger -> ingest new amendments into ai_learned_corrections via api/cline_correction_ingest.php -> surface the 4-mode taxonomy as an emsu://reference doc for small-model / CFA retrieval.
+
+Reference IDs:
+- Ideas filed: #27634 [proposed], #27635 [proposed]
+- Files touched: /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md
+- Reference digest read: /var/www/emtskills/docs/317-reversal-corrections.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787168789833` — 8/19/2026, 5:16:22 PM PT — 226 turns
+
+**Original task:**
+
+```
+#Julia/Claudia 235B
+
+Julia/Claudia 235B is back online and serving. (verified: curl lane :11513 HTTP=200 + ssh_command lane-guard probe ok:true problems:[] reach vllm=true ssh=true at 03:08 PT; router audit picked=julia-235b no substitution; fleet_act julia=healthy ok:true)
+
+Recovery + verification (this window, all times PT):
+- Julia was L2-dark after the 2026-08-18 outage (last good serve 13:15 PT, confirmed dark 14:49-14:53 from 3 vantages). Physical power cycle restored it.
+- Post-return: Ray head + vLLM relaunched via @reboot. Lane :11513 HTTP=200, decode probe returns real tokens, router
+```
+
+**Ideas referenced:** #081020, #10108, #10740, #11741, #11781, #1241, #12477, #1248, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #178634, #178640, #178656, #178671, #178701, #178709, #178712, #18312, #18326, #21038 [executing], #22584, #24645, #25097, #25229 [deployed], #25238 [executing], #25240 [executing], #25241 [executing], #25366 [deployed], #2537, #25385, #25468, #25471, #25515 [proposed], #25525 [executing], #25528 [deployed], #25530 [executing], #25531 [executing], #25532 [deployed], #25534 [executing], #25535 [executing], #2573, #25796, #25797, #25798, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26923, #26932, #27011, #27012, #27069 [deployed], #27232 [rejected], #27236 [deployed], #27259, #27271, #27287 [deployed], #27613 [proposed], #27614 [proposed], #27630 [proposed], #27641 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ot a flip of a shipped claim.)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787129383579 — Julia/Claudia 235B serving status + 30-min babysit (17:15 PT).
+
+Where we left off (verified 2026-08-19 17:15 PT):
+- Lane :11513 UP, HTTP 200, health TTFB 57ms. Engine qwen3-235b (gpt-oss-120b co-mounted), max_model_len 131072.
+- Speed: 18.48 tok/s decode-only; 7.96 tok/s decode under 4 concurrent reqs; 1,567 tok/s prompt throughput observed.
+- Concurrency: 4 running / 0 waiting / 0 swapped live; GPU KV 554,000 tokens = 4.23x max concurrency at full 131K ctx (higher at short ctx).
+- A 17:06:04 transient reset self-recovered to 200 by 17:06:20; no manual bring-up needed.
+- Babysit watcher /tmp/emsu_julia_babysit_30min.sh running detached PID 4021434 (probe every 120s + emsu-alert.sh on wedge). Window ends ~17:45 PT. First probe 17:15:05 OK.
+
+Open threads to drive next:
+1. #27641 [proposed] — investigate Julia 235B ~27-min restart cycle (crash logs 16:30/16:57/17:06; cause not in tails). Check dmesg/OOM-killer, julia_unified_tp2.sh catch_relaunch watchdog trigger, GPU OOM on the Xeon box. P1.
+2. #27630 [deployed] — plaintext sudo remediation done; NOPASSWD sudoers + rotated pw in place. No action unless a script burn-down surfaces.
+3. #27614 [deployed] — lane-guard single-lane alerting live. Monitor for any single_lane_down transition.
+4. #21038 [executing] — cesar/cato fleet registry GLM-5.2-ring correction (standing).
+
+Reference IDs:
+- Ideas filed this steer: #27641 [proposed]
+- Closed/standing (server-side): #27630 [deployed], #27614 [deployed], #27613 [rejected], #27236 [deployed], #27069 [deployed], #26711 [deployed], #26715 [deployed], #27232 [rejected], #21038 [executing], #26712 [proposed], #26713 [proposed]
+- Files touched: /tmp/emsu_julia_babysit_30min.sh (new watcher), /tmp/emsu_julia_babysit_30min.log (probe log), /tmp/emsu_ledger_row_27630.md, cline_task_ledger.md rows 510-512, /etc/sudoers.d/emsu-scripts (Julia + Claudia), 8 fleet scripts + both crontabs (from #27630)
+- Fleet: Julia lane :11513 UP; RoCE ifaces UP (Julia 192.168.100.3/24, Claudia 192.168.100.1/24)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787168880963` — 8/19/2026, 5:07:35 PM PT — 596 turns
+
+**Original task:**
+
+```
+#GLM / Frankenstein Routing 
+
+I am working Julia/Claudia 235 in another window. We need to get GLM 5.2 up and running properly and serving in front of the 120Bs and 235Bs in frankenstein-llm. We need to fix the decode issue and whatever is choking out GLM. We need it running in cline 4 lanes and 4 batch / Argus lanes. I’m not sure why 3 is listed on ring concurrency. Something is off with settings. See also: 
+
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
+
+
+Both answered. The method is now written down per
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #11945, #12477, #12584, #12618, #1264, #12824, #12872, #12878, #13202, #1602, #16163, #16265, #16304, #16449, #16527, #16844, #1724, #1754, #1755, #178713, #18312, #18326, #18471, #19686, #1986, #1993, #2050, #2073, #2083, #2116, #2138, #2157, #2159, #2168, #21684, #2174, #2185, #2210, #2294, #2307 [resolved], #2312 [resolved], #2314, #23169, #2353, #24217, #25097, #25185, #2520 [resolved], #2524, #2525, #2526 [resolved], #2534, #2537, #2546 [resolved], #2547 [resolved], #2574 [resolved], #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #2582, #2587, #2588 [investigating], #26209, #26284 [executing], #26400, #26403, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #26908, #26917, #26922 [deployed], #26923, #26927 [deployed], #26932, #27100, #27259, #27494 [executing], #27508 [executing], #27514 [blocked], #27515 [executing], #27518 [deployed], #27524 [proposed], #27531 [proposed], #27610 [executing], #27611 [executing], #27622 [executing], #27626 [executing], #6826
+
+**Last PICKUP PROMPT:**
+
+```
+ Log
+No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787138864086 — GLM ring stable 80 min post-recovery; DeepSeek-off impact assessed; approvals recorded.
+
+Where we left off (probes run 17:02-17:04 PT via emsu-operations ssh_command):
+- Ring serving steady (probe: curl :8210 HTTP 200 at 17:02 PT; canary healthy=True decode_live=True fail_streak=0; /metrics at 17:04 PT returned num_requests_running=2.0, generation_tokens_total=27,376, up from 206 at 15:45 PT)
+- Pool split last 10 min (probe: adapter upstream log tail): Artemis 62, BigMac 51, GLM ring 7 — all-local, healthy spread
+- DeepSeek-off verdict: interactive ladder independent of DeepSeek (probe: 0 frankenstein-llm rewrites to deepseek in last 800 audit entries); ONLY by-name batch callers break (verified: mysql llm_call_log last-2h query returned 26 rows; audit user_preview shows EMSU-SYSFOLD folds + emsu_fleet_liveness_probe)
+- Julia :11513 canary unhealthy fail_streak=22 (probe: curl 000 at 17:03 PT) — separate window's Julia/Claudia 235B work
+
+Open threads to drive next:
+1. #27524 [executing] — run the max_num_seqs 32 decode relaunch with A/B measurement (approved this round; use the staggered-launch recipe from the bug library)
+2. #27531 [executing] — rule-91 steering trim: move amendments to case-law files (approved this round)
+3. #27610 [executing] — GLM ring + 235B recovery runbook rule (approved, idle in executor)
+4. GLM-5.3 local rollout timing (download + requant + relaunch) — shovel-ready, awaiting Ruben's call (human-only decision, no idea)
+
+Reference IDs:
+- Idea #27626 [deployed]: reconcile_ideas 17:04 PT returned status=deployed dev_stage=idle
+- Idea #27524 [executing]: reconcile_ideas 17:04 PT returned status=approved dev_stage=idle
+- Idea #27531 [executing]: reconcile_ideas 17:04 PT returned status=approved dev_stage=idle
+- Idea #27610 [executing]: reconcile_ideas 17:04 PT returned status=approved dev_stage=idle
+- Idea #27611 [deployed]: reconcile_ideas 17:04 PT returned status=deployed dev_stage=ready_for_review
+- Files touched: none this round (read-only probes + orchestrator approvals only)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Live ring: 200 healthy, 27,376 tokens, stable 80 min
+- [x] Router: 0 frankenstein-llm spills to deepseek; deepseek = by-name batch only (26/2h)
+- [x] Approvals processed: #27626 [deployed], #27524 [executing], #27531 [executing]
+- [x] Reconciled all 5 ideas
+- [x] Validate ALL PASSED + GATE CLEAR
+- [x] Answers shipped
+</task_progress>
+</attempt_completion>
+```
 
 ### `1787175621111` — 8/19/2026, 4:18:22 PM PT — 220 turns
 
@@ -190,161 +486,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] clinerules_check_gate: GATE CLEAR
 - [x] attempt_completion
 </task_progress>
-</attempt_completion>
-```
-
-### `1787180391022` — 8/19/2026, 4:03:23 PM PT — 28 turns
-
-**Original task:**
-
-```
-Is this true for this student? Can you give me a link to thier profile so i can see for myself?
-```
-
-**Ideas referenced:** #1758, #17580, #248240, #9086
-
-**Last PICKUP PROMPT:**
-
-```
-te_view.php?student_id=2482401
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Verify NREMT Skills Competency claim for Devin Magioncalda (2482401) and supply admin profile links.
-
-Where we left off (verified 2026-08-19 16:03 PT):
-- Found student via MySQL: id=129, slug 2482401, magiondm@gmail.com (the queried magiondmgm@gmail.com is a typo).
-- StudentLifecycleState confirms: active account (Moodle uid 40936, last access 2026-08-18), payment PASS, but enrolment FAIL (no section group), quiz1_gate FAIL (CPR <80%), externship NA (0/4 forms), NREMT fields all NULL, certificate not_ready.
-- Claim is FALSE. Links delivered: /admin/student_lifecycle.php?student_id=2482401 and /routes/student_gate_view.php?student_id=2482401.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-- None — all work completed this session.
-
-Reference IDs:
-- Ticket: none
-- Ideas filed: none
-- Files touched: none (read-only verification via MCP + MySQL)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Identify student by email
-- [x] Check NREMT skills competency / externship status
-- [x] Verify claim vs actual record
-- [x] Provide profile link
-</task_progress>
-</attempt_completion>
-```
-
-### `1787168880963` — 8/19/2026, 3:49:24 PM PT — 556 turns
-
-**Original task:**
-
-```
-#GLM / Frankenstein Routing 
-
-I am working Julia/Claudia 235 in another window. We need to get GLM 5.2 up and running properly and serving in front of the 120Bs and 235Bs in frankenstein-llm. We need to fix the decode issue and whatever is choking out GLM. We need it running in cline 4 lanes and 4 batch / Argus lanes. I’m not sure why 3 is listed on ring concurrency. Something is off with settings. See also: 
-
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down per
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11945, #12477, #12584, #12618, #1264, #12824, #12872, #12878, #13202, #1602, #16163, #16265, #16304, #16449, #16527, #16844, #1724, #1754, #1755, #178713, #18312, #18326, #18471, #19686, #1986, #1993, #2050, #2073, #2083, #2116, #2138, #2157, #2159, #2168, #21684, #2174, #2185, #2210, #2294, #2307 [resolved], #2312 [resolved], #2314, #23169, #2353, #24217, #25097, #25185, #2520 [resolved], #2524, #2525, #2526 [resolved], #2534, #2537, #2546 [resolved], #2547 [resolved], #2574 [resolved], #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #2582, #2587, #2588 [investigating], #26209, #26284 [executing], #26400, #26403, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #26908, #26917, #26922 [deployed], #26923, #26927 [deployed], #26932, #27100, #27259, #27494 [executing], #27508 [executing], #27514 [blocked], #27515 [executing], #27518 [deployed], #27524 [proposed], #27531 [proposed], #27610 [executing], #27611 [executing], #27622 [executing], #27626 [executing], #6826
-
-**Last PICKUP PROMPT:**
-
-```
- the inherited relaunch claim)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787138864086 — GLM-5.2 ring serving after staggered relaunch; GLM-first ladder verified; 5.2-Local-first policy set.
-
-Where we left off (probes run 15:08-15:47 PT via emsu-operations ssh_command):
-- Ring answers on :8210 (probe: curl HTTP 200 at 15:47 PT; canary healthy=True decode_live=True fail_streak=0; /metrics at 15:45 PT num_requests_running=9.0, generation_tokens_total 142.0 then 206.0 twenty seconds apart)
-- Ladder order (probe: registry state json tier_fallthrough [L0,L1,L1c,L1b,L4g,L4b,L4f,L2,L3] — L4g glm-5.2-local first)
-- Lane config (probe: /proc/2803465/environ returned LANES_CLINE=4, LANES_BATCH=4, RING_TOTAL=8, FIRST_ALL_LANES=1, OPS_CEILING=4)
-- Root cause: Augustus rank-1 died 10:41 PT; 4 relaunch attempts failed (rank 1 never relaunched on its node); parallel launch dies in Gloo race; STAGGERED launch (+8s per rank, rank 0 last) worked. Recipe in bug library (merged incident, seen_count=2)
-- GLM-5.3 local: no weights on any node (probe: ls ~/models/ on cato returned 5.2-only listing; find *5.3* no matches); per Ruben steer, 5.2 Local first until 5.3 weights ready
-- Router traffic this window (probe: /tmp/emsu_router_audit.log grep returned frankenstein-llm to frankenstein-tools 27x, emsu-executor-auto to frankenstein-tools 13x)
-
-Open threads to drive next:
-1. #27626 [awaiting_review] — review the GLM ring recovery record; the relaunch itself is live on the ring (reconcile_ideas at 15:47 PT returned status=approved dev_stage=ready_for_review)
-2. #27524 [proposed] — evaluate decode relaunch at max_num_seqs 32 (ring currently serves at 15) (reconcile_ideas at 15:47 PT returned status=proposed dev_stage=idle)
-3. #27531 [proposed] — evaluate rule-91 steering trim (reconcile_ideas at 15:47 PT returned status=proposed dev_stage=idle)
-4. GLM-5.3 local rollout timing (download + requant + relaunch) — shovel-ready, awaiting Ruben's call (human-only decision, no idea)
-
-Reference IDs:
-- Ideas: #27626 [awaiting_review] (reconcile_ideas 15:47 PT: status=approved dev_stage=ready_for_review), #27610 [executing] (reconcile_ideas 15:47 PT: status=approved dev_stage=idle), #27611 [deployed] (reconcile_ideas 15:47 PT: status=deployed dev_stage=ready_for_review), #27524 [proposed] (reconcile_ideas 15:47 PT: status=proposed dev_stage=idle), #27531 [proposed] (reconcile_ideas 15:47 PT: status=proposed dev_stage=idle)
-- Files touched: /var/www/emtskills/HANDOFF_NOTES.md, bug library (merged incident), /tmp/glm52_attempt3.sh (cato), /tmp/ring_watch.log (WOPR)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Lane settings VERIFIED: LANES_CLINE=4 + LANES_BATCH=4, RING_TOTAL=8, FIRST_ALL_LANES=1
-- [x] GLM-5.3: deferred per Ruben — 5.2 Local first until weights ready
-- [x] Registry ladder VERIFIED: L4g first
-- [x] RING SERVING: :8210=200, canary HEALTHY decode_live=True
-- [x] HANDOFF_NOTES + bug library updated
-- [x] Ideas reconciled (5)
-- [x] Validate ALL PASSED + GATE CLEAR
-- [x] Answers shipped
-</task_progress>
-</attempt_completion>
-```
-
-### `1787168789833` — 8/19/2026, 3:44:23 PM PT — 198 turns
-
-**Original task:**
-
-```
-#Julia/Claudia 235B
-
-Julia/Claudia 235B is back online and serving. (verified: curl lane :11513 HTTP=200 + ssh_command lane-guard probe ok:true problems:[] reach vllm=true ssh=true at 03:08 PT; router audit picked=julia-235b no substitution; fleet_act julia=healthy ok:true)
-
-Recovery + verification (this window, all times PT):
-- Julia was L2-dark after the 2026-08-18 outage (last good serve 13:15 PT, confirmed dark 14:49-14:53 from 3 vantages). Physical power cycle restored it.
-- Post-return: Ray head + vLLM relaunched via @reboot. Lane :11513 HTTP=200, decode probe returns real tokens, router
-```
-
-**Ideas referenced:** #081020, #10108, #10740, #11741, #11781, #1241, #12477, #1248, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #178634, #178640, #178656, #178671, #178701, #178709, #178712, #18312, #18326, #21038 [executing], #22584, #24645, #25097, #25229 [deployed], #25238 [executing], #25240 [executing], #25241 [executing], #25366 [deployed], #2537, #25385, #25468, #25471, #25515 [proposed], #25525 [executing], #25528 [deployed], #25530 [executing], #25531 [executing], #25532 [deployed], #25534 [executing], #25535 [executing], #2573, #25796, #25797, #25798, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26923, #26932, #27011, #27012, #27069 [deployed], #27232 [rejected], #27236 [deployed], #27259, #27271, #27287 [deployed], #27613 [proposed], #27614 [proposed], #27630 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-udent/money/regulator surface.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787129383579 — Julia/Claudia 235B: #27630 plaintext sudo remediation complete; fleet protected + serving.
-
-Where we left off (verified 2026-08-19 15:43 PT):
-- #27630 [deployed]: scoped NOPASSWD sudoers on Julia + Claudia; 8 scripts + 2 crontabs converted to sudo -n; bash -n clean; live modprobe/fix_etchosts smoke OK; sudo password rotated on both boxes (old dead, new root-only on WOPR at /root/.emsu_sudo_pw); zero qefru3 hits on live files (Julia NONE_LIVE, Claudia ALL_CLEAN).
-- Fleet serving: lane :11513 HTTP 200 model=qwen3-235b (probed 15:42 PT); RoCE ifaces UP on both (Julia 192.168.100.3/24, Claudia 192.168.100.1/24).
-- #27614 [deployed]: lane-guard single-lane-dark alerting live. #27613 [rejected]: no WG client exists; transport is reverse SSH tunnels.
-
-Open threads to drive next:
-1. #27614 [deployed] — monitor for any single_lane_down transition alert; no action unless it fires (if it fires and wedge-guard catch-relaunch does not restore within 2 probe cycles, investigate vLLM crash on Julia).
-2. #21038 [executing] — cesar/cato fleet registry correction (GLM 5.2 ring, not 120B TP=2); standing fleet item.
-3. (human-only decision, no idea) — whether to adopt WireGuard net-new on Julia/Claudia as a redundant management path. Current reverse SSH tunnels are the single point of failure; Ruben indicated this is approved only if it makes the fleet easier to manage.
-
-Reference IDs:
-- Closed this window (server-side verified): #27630 [deployed], #27614 [deployed], #27613 [rejected]
-- Reconciled (server-side tags verbatim): #27236 [deployed], #27069 [deployed], #26711 [deployed], #26715 [deployed], #27232 [rejected], #21038 [executing], #26712 [proposed], #26713 [proposed]
-- Files touched: /etc/sudoers.d/emsu-scripts (Julia), /etc/sudoers.d/emsu-scripts (Claudia), 8 fleet scripts, Julia crontab, /root/.emsu_sudo_pw (WOPR), /Users/rubenmajor/Documents/Cline/cline_task_ledger.md (rows 510-512), /Users/rubenmajor/Documents/Cline/Rules/315-verify-before-declaring-host-down.md (amended earlier)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 
@@ -419,46 +560,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Uploaded regenerated PDF to Google Drive (file id: 1XdznsO4OYFsEhl0a08n3AajP_IzAqURU)
 - [x] Trashed old stale file from Google Drive
 - [x] Verif
-```
-
-### `1787178812057` — 8/19/2026, 3:39:02 PM PT — 26 turns
-
-**Original task:**
-
-```
-Can you review the entire reversal log related to rule 317 for commonalities and systemic issues needing updates and resolutions and make those adjustments for improvement of the entire system - basically, I'm trying to get this knowledge to work better, smarter and faster on the small as well as the bigger models and the reversal log would have all that info.
-```
-
-**Ideas referenced:** #25185, #26435, #26617, #27100, #27634 [proposed], #27635 [proposed], #8151
-
-**Last PICKUP PROMPT:**
-
-```
-of reading the full 16KB tail.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up the rule-317 reversal-log systemic-improvement work.
-
-Where we left off (verified 2026-08-19 15:38 PT):
-- Reviewed the full rule-317 ledger: 8 mechanical amendments (per clinerules_amend_history, trailing 30d) + the 280-failure digest in /var/www/emtskills/docs/317-reversal-corrections.md (4 modes: SELF_CONTRADICTING_DISPOSITION 251x, R317_UNVERIFIED_STATE 24x, INSUFFICIENT PROBE, SCOPE_ERROR).
-- Edited /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md: front-loaded a GOLDEN RULE section (claim-scope-must-equal-probe-scope axiom + 4-mode taxonomy + English-only). Reindexed (clinerules_reindex: 332 rules, 22 hardfloor) and verified live via clinerules_lookup (rule now 16,860 bytes, GOLDEN RULE at top).
-- Filed idea #27634 [proposed] and #27635 [proposed].
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #27634 [proposed] — Implement dedup + distilled-table maintenance in clinerules_mcp clinerules_amend_rule (content-hash near-duplicate folding + top-of-file failure-mode table rebuild), so the amendment tail stops growing unbounded.
-2. #27635 [proposed] — Build the sync chain: cron watches rule_amend ledger -> ingest new amendments into ai_learned_corrections via api/cline_correction_ingest.php -> surface the 4-mode taxonomy as an emsu://reference doc for small-model / CFA retrieval.
-
-Reference IDs:
-- Ideas filed: #27634 [proposed], #27635 [proposed]
-- Files touched: /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md
-- Reference digest read: /var/www/emtskills/docs/317-reversal-corrections.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```
 
 ### `1787174702687` — 8/19/2026, 3:33:43 PM PT — 214 turns
@@ -538,62 +639,6 @@ WHAT THE 8/3 EMAIL IS: Investigator Bevins identified Richella Trujillo as the c
 **Ideas referenced:** #178712, #27100, #27493 [proposed], #450438
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787169118771` — 8/19/2026, 2:27:49 PM PT — 144 turns
-
-**Original task:**
-
-```
-#Organize Compliance Gold Standard Response/Dissection, etc...
-
-Please analyze all the responses sent to regulators around here: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
-
-and organize the Gold Standard Response properly based on the recenlty sent ones. The gold standard response is customized according to the state location, rules, regulations, issues, etc... but style, tone, strategy are relatviely similar. The Gold Standard is somewhat disjoined now and needs better organization.
-```
-
-**Ideas referenced:** #0369, #047857, #0891, #111827, #1368, #1370, #15803, #166534, #16957, #19338, #19458, #19491, #25185, #2524, #2525, #2563, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27625 [executing], #334155, #450438, #475569, #600179, #6366, #64748, #78350, #92400
-
-**Last PICKUP PROMPT:**
-
-```
- Log
-No reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #27625 [executing] — wire the Gold Standard Response Library UI into institutional_compliance.php investigations tab.
-
-Where we left off (verified 2026-08-19 14:02 PT):
-- 7 Gold Standard docs on disk at /var/www/emtskills/personnel/investigations/gold_standard/ (verified: ssh_command sudo -u www-data head returned file content WWW_DATA_READ_OK; curl direct URL returned HTTP 403 lockdown intact)
-- investigations tab starts line 1312 of personnel/institutional_compliance.php (3523 lines); two redundant doctrine cards identified (teal 'Regulator NOI Response - Doctrine + Templates' + blue 'NOI Doctrine + Builder Resources'); inv-toolbar status-pill block duplicated ~lines 1417-1445
-- compliance_ref.php accepts ?path=personnel/investigations/gold_standard/<file>.md (verified: ssh_command grep returned line 72 pass-through + line 100 allow-list 403 gate)
-
-Open threads to drive next:
-1. #27625 [executing] — replace the two redundant doctrine cards with ONE unified 'Gold Standard Response Library' panel: buttons to compliance_ref.php?path=personnel/investigations/gold_standard/<file>.md for all 7 docs grouped Core (00,01) / State (02 TX, 03 AZ, 04 CA) / Accreditors (05) / Sent-log (06); keep red Compliance Deadline Center card; dedupe inv-toolbar; edit via ssh_command patch (rule 144), php -l, reload FPM
-2. #27625 [executing] — verify all 7 links render via authenticated compliance_ref.php; if refused, add personnel/investigations/gold_standard to permitted dirs (~line 96-100)
-3. #27625 [executing] — backfill compliance_doctrine DB rows for CA/AZ (run SELECT * FROM compliance_doctrine first)
-4. #27625 [executing] — update HANDOFF_NOTES via update_handoff_notes, then attempt_completion with rule-91 pickup block
-
-Reference IDs:
-- Ideas filed: #27625 [executing]
-- Ideas closed: none
-- Files touched: personnel/investigations/gold_standard/*.md (7 on disk); pending edit: personnel/institutional_compliance.php; read-only: personnel/compliance_ref.php
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Analysis + 7 Gold Standard docs written and deployed (verified)
-- [x] SESSION MEMORY compressed
-- [x] Filed idea #27625 for remaining UI wiring
-- [x] Re-validate completion — ALL PASSED
-- [x] check_gate → CLEAR
-- [x] attempt_completion with pickup prompt
-</task_progress>
-</attempt_completion>
-```
 
 ### `1787138864086` — 8/19/2026, 12:33:19 PM PT — 450 turns
 
@@ -4543,116 +4588,4 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 </result>
 </attempt_completion>
-```
-
-### `1786927388438` — 8/16/2026, 5:43:09 PM PT — 1 turns
-
-**Original task:**
-
-```
-https://emsuniversity.com/emtskills/admin_profile.php?id=26215W-08 
-
-Student showing Incomplete, 
-
-📊 Externship Hours
-Required Hours	36.0
-Completed Hours	0.0
-Remaining Hours	36.0
-Status	❌ INCOMPLETE
---
-but has 48 hours of time showing on the Student Time Sheet. Something is wired wrong or the EMT Ai Grader is not functioning properly on these or the Student Portal form for Student Time Sheets is not wired correctly.
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786864599073` — 8/16/2026, 5:29:45 PM PT — 1324 turns
-
-**Original task:**
-
-```
-#Julia/Claudia 235
-
-——[COPY]——
-
-Get Qwen3-235B-A22B-NVFP4 serving on Julia + Claudia, TP=2. Take it all the way to serving in THIS window.
-
-## STANDING DIRECTIVE (do not soften, do not reinterpret)
-
-Attempt over and over again until it works. Take it all the way to serving. Do NOT take breaks to report progress. Do NOT stop to tell me a window is complete until the 235B is actually generating coherent text.
-
-**There is NO fallback plan. Do NOT revert to gpt-oss-120b. Do NOT restore the 120B "as a stopgap." Do NOT propose the 120B as a safe state.** If you catch yourself planning a rollback, th
-```
-
-**Ideas referenced:** #11397, #12251, #12335, #12365, #12405, #12407, #1241, #12577, #1264, #14253, #14560, #14848, #16262, #16304, #16473, #16653, #16662, #16844, #17084, #1744, #1765, #17788, #1780, #1781, #178686, #1793, #1826, #18287, #18329 [deployed], #1838, #1858, #18678, #1868, #18861 [closed], #1903, #19338, #19458, #19491, #20042, #2071, #2072, #2073, #2114, #22906 [closed], #23133 [executing], #23826 [closed], #25125 [deployed], #2526 [resolved], #2527 [resolved], #2528 [open], #25604, #25869, #26003 [deployed], #26038 [executing], #26040 [executing], #26041 [executing], #26045 [executing], #26050 [executing], #26054 [awaiting_review], #26065 [deployed], #26090 [deployed], #26376, #26377, #26396, #26424, #26461 [executing], #26611 [deployed], #26613 [proposed], #26617 [executing], #26819 [proposed], #26827 [open], #26840 [open], #26847 [awaiting_review], #26862 [awaiting_review], #27364 [closed], #27440 [closed], #29018 [closed], #30003 [closed], #30670 [closed], #32645 [closed], #34675 [closed], #35313, #36094 [closed], #36914 [open], #37615, #37948 [closed], #39078 [closed], #39625 [closed], #39666, #40888 [open], #41408 [open], #42058 [open], #42096 [closed], #43232 [closed], #43350 [open], #45434 [open], #45829 [open], #45966 [closed], #46191 [open], #46329 [open], #46514 [open], #47089 [open], #47365 [open], #47527 [open], #48898 [open], #48994 [open], #49011 [open], #49060 [open], #49237 [open], #49262 [open], #49381 [open], #50288 [open], #50883 [open], #51091 [open], #51207 [open], #51534 [open], #51581 [open], #52060 [open], #52462 [open], #64748
-
-**Last PICKUP PROMPT:**
-
-```
-g tracked separately in #2528.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task 1786864599073 — Qwen3-235B-A22B-NVFP4 TP=2 serving on Julia+Claudia, plus the prefill vs on-disk context architecture answer.
-
-Where we left off (verified 2026-08-16 17:26 PT):
-- 235B SERVING TP=2, PID 1304180, endpoint http://localhost:8000/v1/models returns qwen3-235b, 24576 ctx. Decode still returns ! (NaN), tracked in #2528.
-- Answered Ruben's architecture question: prefill context is the delivery path, on-disk context is the store. Disk is source of truth (corpus file, virtual-lora JSONs); prefill carries only the RAG slice and marker-matched adapter, never the full 32K corpus.
-- Verified the live adapter /usr/local/bin/frankenstein_tools_adapter.py: SSS per-lane, _virtual_lora_merge wired at line 3166, corpus injected via the router [EMSU-CORPUS-v1] block.
-
-Open threads to drive next:
-1. #2528 [blocked] — NaN decode on 235B. CUTLASS and Marlin backends both emit !, so root cause is checkpoint/loader level, not kernel. Next concrete step: dump the w13 requantize output for layer 0 and check inf/nan after scaled_fp8_quant.
-2. #26847 [awaiting_review] — E2E verify a routed multi-turn request carries the [EMSU-VIRTUAL-LORA] merge; grep the injected system message at the gateway.
-3. #26862 [proposed] — Choose the production lane for the NVFP4 235B once decode is coherent; orchestrator_llm_routes currently has zero rows for it.
-4. #26819 [open] — vllm 0.27.1 sm_121 upgrade path blocked on stable-libtorch ABI vs torch 2.10.0+cu130; needs a decision.
-
-Reference IDs:
-- Task: 1786864599073
-- Ideas filed: #26819 [open], #26827 [proposed], #26840 [proposed], #26847 [awaiting_review], #26862 [proposed]
-- Files touched: /usr/local/bin/frankenstein_tools_adapter.py, /var/www/emtskills/lib/VirtualLoraAdapters.php, /var/www/emtskills/data/virtual-lora/, /etc/litellm/router_hook.py
-- Incidents: #2528 [open]
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786674811485` — 8/16/2026, 5:12:32 PM PT — 400 turns
-
-**Original task:**
-
-```
-Can you tell me how we can see if anyone is using a bot to chat to us or not?
-```
-
-**Ideas referenced:** #059669, #12364, #16152, #16474, #16732, #18335, #20251 [proposed], #2341, #23982, #23989, #2522, #25550, #25962, #25964, #25965, #25986, #26211, #26229 [proposed], #26376, #26377, #2657, #26711, #26719, #26743, #26816 [proposed], #2780, #2916, #33689, #6366, #7925, #9084, #9109, #9112, #9131, #9132, #9152, #9193, #9222, #9269
-
-**Last PICKUP PROMPT:**
-
-```
-ls and cleaned synthetic data.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task: chat widget queue/ETA + repeat-ask dedup-ack - behavioral verification complete (idea #26229 + #26816 deployed).
-
-Where we left off (verified 2026-08-16 5:12 PM PT):
-- #26229 [deployed]: queue signal (data.queue with queue_position/eta_seconds/human_assigned) emitted in widget_send + widget_poll responses; repeat-ask dedup-ack fires at ≥2 identical normalized messages, skips pure "hello/???" pings.
-- #26816 [deployed]: renderQueueStatus() renders that queue into .emsu-header-status; wired into renderMessages + poll handler; node --check passed.
-- Matcher bugfix [deployed]: cwc_recent_similar_msgs now normalizes whitespace identically PHP-vs-SQL, 24h window, matches conversation_id OR visitor_ip; caller passes (string)$ip + 1440.
-- Behavior-verified: 2 synthetic rows inside window → count=2, ack=YES (then cleaned up). Real 4x CPR repeat exists but is 66h old (outside 24h window) - see note below.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #26229 [executing] — Monitor production acks for 48h after matcher fix; verify "I see you have asked this again" appears in LzDe7pTO_support_chat_messages for real repeaters. If acks stay 0 despite visible repeats, widen window or relax normalization and re-run the synthetic-pair probe.
-2. #26816 [executing] — Confirm queue line actually renders for a visitor mid-escalation: open a widget session that has gone to human handoff (agent_takeover=1) and confirm the header shows "A real person is reviewing your chat" instead of "Usually replies instantly".
-
-Reference IDs:
-- Ticket: (none - direct Ruben chat)
-- Ideas filed: #26229, #26816
-- Files touched: /var/www/emtskills/lib/chat_queue_confidence.php, /var/www/emtskills/api/chat_widget_api.php (backup .bak-20260816-idea26229-queueeta), /var/www/emtskills/api/chat_widget_embed.js
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
 ```

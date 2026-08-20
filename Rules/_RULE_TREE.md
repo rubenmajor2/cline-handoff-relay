@@ -60,11 +60,11 @@
 - **Staff escalation (Vicky/Jon/Ruben)** — R: 10,13,15,19,48,117
 - **CTA / link formatting** — R: 47 (full URLs, no shortcuts)
 - **Ruben's electronic signature** — R: 301 (canonical file `signature2small.jpg`, NEVER extract from another PDF)
-- **REGULATOR RESPONSES (AZDHS/TDSHS/BPPE/CAPCE/any agency)** — R: 302 (defensive posture, never volunteer admissions/intervals/commitments/remedies, never repeat their numbers, never restate the allegation, never adopt their premise, consolidate-and-keep-consolidating, accompanying-document consistency gate, disclaimed observation, concede-then-narrow, contemporaneous-record framing, third-party attestation, no links + flattened-extraction verification, courtesy framing wording, grace-period deadline math, enclosure pattern) + `NoiDefenseEvidence.php`
-- **TDSHS / TEXAS COMPLAINTS specifically** — R: 304 (the 8/6 gold standard: section order skeleton, public-interest opening, the outset ledger, Ruben's regulator tone register, the 7-point Texas externship design defense, the Texas citation set incl. 157.32(p)(21)(F) and (u)(1)(A)/(u)(3), threshold-objection form, arrival record, per-matter letters incorporate-never-duplicate). Read 304 BEFORE drafting any TDSHS response. + `ComplianceRefs.php`
+- **REGULATOR RESPONSES (AZDHS/TDSHS/BPPE/CAPCE/any agency)** — R: 302 (answer only the allegation made; dissect element-by-element; never argue negatives about the regulatory landscape; agency-dated artifacts only; neutral headings — full distilled list in rule 302) + `NoiDefenseEvidence.php`
+- **TDSHS / TEXAS COMPLAINTS specifically** — R: 304 (the 8/6 gold standard skeleton + Texas citation set). Read 304 BEFORE drafting any TDSHS response. + `ComplianceRefs.php`
 
 - **CS-agent response-quality bug library** — R: 270 (consult before recycling wrong replies across Email/Chat/SMS/Ticket/Voice/To AI agents; 2-strike tripwire)
-- **CLOSE THE LOOP after Cline-initiated student contact** — R: 318 (MANDATORY whenever a Cline window emails/SMSes/replies to a student: record verified ground truth + `do_not_say` into `cline_followup_context` in the SAME session so the Email Agent answers the reply from facts, not from the student's claim. Prevents a CFA confirming a false "my invoice is paid" on a live debt. Additive only, never touches payment/SLS logic. Impl: `lib/ClineFollowupContext.php`)
+- **CLOSE THE LOOP after Cline-initiated student contact** — R: 318 (MANDATORY: record verified ground truth + `do_not_say` into `cline_followup_context` in the SAME session so the Email Agent answers the reply from facts, not the student's claim. Impl: `lib/ClineFollowupContext.php`)
 
 ---
 
@@ -72,10 +72,10 @@
 → Trigger: deciding whether to act or escalate, filing ideas, agent self-supervision, capability gaps, Q-cards, confidence tiers
 → Fetch all: `clinerules_list_by_topic("agent")`
 - **Act vs escalate gate** — R: 12,22,23,29,36,37,38,67,68,78,80,90,93,117,124,125,167,183,193,206,208,213,238,267,279,282,283,295,322 (295=ship lane-clearing/regression fixes inline never queue; 267=async offload+reconcile; 279=tool-grant IS a mandate to act; 282=CFAs must resolve, not triage; 283=no human-only-research deferrals; 322=approved efficiency/capacity ideas BUILD IN-WINDOW, never parked in executor)
-- **Self-supervision & repair**  R: 46,49,53,54,55,56,64,65,66,73,81,82,85,92,94,99,110,112,129,130,131,133,134,162,163,166,168,169,176,180,194,209,214,225,240,244,258,261,263,281,297,299,317,320,323 (263=verify-before-claim; 99=re-read subagent writes; 281=schema-truth gate; 297=classify before alarming; 299=positive-control before "none"; 317=MUTEX flip = 297 RCA + causal-rule update. No magnitude filter.; 320=automated adjudication FAILS CLOSED: infra error is never a finding against the subject, stubs never return a plausible verdict, instrumentation never shares a try block with the work; 323=TRUTH PROTOCOL: every material claim PROVEN/INFERENCE/UNKNOWN, ground-truth-tool-first, judge pass for high-stakes — the all-model truthfulness protocol)
+- **Self-supervision & repair**  R: 46,49,53,54,55,56,64,65,66,73,81,82,85,92,94,99,110,112,129,130,131,133,134,162,163,166,168,169,176,180,194,209,214,225,240,244,258,261,263,281,297,299,317,320,323 (263=verify-before-claim; 99=re-read subagent writes; 297=classify before alarming; 317=MUTEX flip = 297 RCA + causal-rule update; 320=adjudication FAILS CLOSED; 323=TRUTH PROTOCOL)
 - **Routing to humans** — R: 68,69 (Jon=policy only, Vicky=CS only)
 - **Agent-found-wrong / iteration-reversed** — R: 266,317,319 (266=fix the misleading instrument; 317=MUTEX flip = 297 RCA on INITIAL mistake + causal-rule update; 319=anchor exact symptom FIRST, separate issues stay separate)
-- **Pre-EDIT guard-comment gate** — R: 314 (before changing ANY existing constant/timeout/threshold/flag, read the 20 lines ABOVE it and run `guard_check.sh <file> <line>`; exit 2 = STOP. KAIZEN structurally cannot cover this class because the code is still CORRECT at the moment of the mistake. Measured 2026-08-08: 5 guard signals + 3 dated incident refs sat above the line that was changed anyway)
+- **Pre-EDIT guard-comment gate** — R: 314 (before changing ANY existing constant/timeout/threshold/flag, read the 20 lines ABOVE it and run `guard_check.sh <file> <line>`; exit 2 = STOP)
 
 - **Cline noop idempotency gate** — R: 274 (noop_check BEFORE any possibly-repeat task; store after)
 - **Parallel windows protocol** — R: 29 (§"wait them out" forbidden), 137, 194, 209, 225
@@ -87,10 +87,10 @@
 → Fetch all: `clinerules_list_by_topic("infrastructure")`
 - **Safe deploy & FPM** — R: 41,42,118,144,174
 - **SSH & WOPR access** — R: 71,77,95,136,235,245,248,249 (Artemis=emsu-operations MCP never raw ssh; 245 verify host identity before declaring dead; 248 live-verify before declaring down; 249 MCP flapping → check supergateway --stateful + systemctl NRestarts FIRST)
-- **Fleet serving constraints** — R: 251 (Roman CX7 TP=2 ONLY), 252 (live-probe before declaring any host down), 253 (cite WOPR endpoint not box port), 254 (verify-before-kill on GPU boxes), 255 (live evidence for material claims), 271 (no SSH to box = no claims about box), 294 (re-probe INHERITED infra facts; read `/var/www/emtskills/docs/WOPR_STATE.json`, freshness <10min), 315 (HARD: search the record FIRST for credentials/facts, then classify host-down vs process-down vs engine-wedged vs serving — systemd active/docker Up/Ray alive is NOT serving; the only serving proof is `/v1/models` 200 or a decode probe; bare "X is down" without a state class is a violation)
+- **Fleet serving constraints** — R: 251 (Roman CX7 TP=2 ONLY), 252 (live-probe before declaring any host down), 253 (cite WOPR endpoint not box port), 254 (verify-before-kill on GPU boxes), 255 (live evidence for material claims), 271 (no SSH to box = no claims about box), 294 (re-probe INHERITED infra facts; read `/var/www/emtskills/docs/WOPR_STATE.json`, freshness <10min), 315 (HARD: record-first, live-probe, 4-state classification before "down"; status ≠ serving)
 - **Mac-side debugging** — R: 16,20,24-28,34,62,63,83,100,102,104-106,165,181,184,185,188,191,192,195,197,201,210,222,226,234
 - **Cline extension model-list patching** — R: 293 (TWO bundle files: dist/extension.js AND webview-ui/build/assets/index.js, 5 object-contexts each, Node indexOf-splice never grep/sed, Restart Extension Host)
-- **Live-probe fleet state** — R: 260 (never trust error_watchdog; read LLM_FLEET_STATE.md + probe), 296 (never declare an LLM dead from a cached probe field; confirm with live ground truth), 280 (no up/down claim without a quoted live probe; litellm restarts ONLY via /usr/local/bin/litellm-safe-restart.sh), 315 (HARD: record-first, then live-probe THIS TURN, classify into 1 of 4 states before the word DOWN — source incident 2026-08-09 Big Mac wedged 10h while systemd+docker said healthy, credential guessed for an hour while the record held it)
+- **Live-probe fleet state** — R: 260 (never trust error_watchdog; read LLM_FLEET_STATE.md + probe), 296 (never declare an LLM dead from a cached probe field; confirm with live ground truth), 280 (no up/down claim without a quoted live probe; litellm restarts ONLY via /usr/local/bin/litellm-safe-restart.sh), 315 (HARD: record-first, live-probe THIS TURN, 4-state classification before DOWN)
 - **URL→docroot mapping** — R: 159 (emsuniversity.com/ems = /var/www/moodle/ems)
 - **Connecteam is DEAD (2026-05-15)** — R: 246 (Team Hub is the replacement)
 - **Fleet SSH reference** — R: 268 (canonical SSH matrix/ports/IPs — never guess), 292 (verify IP/identity ON-BOX via hostname+MAC before trusting static tables incl. 268/273; WOPR can't route the LAN, sweep from the Mac)
@@ -186,16 +186,7 @@ Scan the trigger lines above before acting. Match = fetch that branch FIRST via
 Hardfloor rules (★) are always loaded; everything else is one lookup away.
 MCP `emsu://` resources are separate from rules — cross-reference both.
 
-**Renumbered 2026-08-08 (idea #25188) — collision cleanup.** Eleven numbers each held
-TWO different rules, so `clinerules_lookup(N)` returned whichever file sorted first: a
-coin flip. The tree-cited rule KEPT its number; its twin moved. Full was/now mapping:
-`Rules-archive/_RULE_TREE_CHANGELOG.md`. Companion files (`29-case-law.md`,
-`41-addenda.md`, `297-case-law.md`) intentionally share their parent's number: that is
-the trim-then-archive pattern, not a collision.
-
-
 **Adding a rule?** New rules go in `Rules-archive/` by default (see `_INDEX.md`
-
 "Adding a new rule" for the caps, the trim-then-archive pattern, and the 5 steps).
 You MUST add the new number to the right `R:` line above or it is invisible to
 future windows. Then reindex:

@@ -181,6 +181,13 @@ BYTES=$(wc -c < "$FILE" | tr -d ' ')
 if [ "$BYTES" -gt 8192 ]; then
     warn "G2 section-length: file is $BYTES bytes (>8 KB). Consider splitting."
 fi
+# G2b warn-early (2026-08-19, Ruben-approved): hardfloor rules >10KB get an early
+# trim warning BEFORE the 12KB G7 block, so trims happen proactively. Source: the
+# 2026-08-19 rule-317 reversal-log audit found 5 hardfloor rules between 10-16KB,
+# all failing or near-failing G7; a 10KB early warning gives a 2KB trim runway.
+if [ "$is_hardfloor" = "1" ] && [ "$BYTES" -gt 10240 ] && [ "$BYTES" -le 12288 ]; then
+    warn "G2b warn-early: hardfloor rule is $BYTES bytes (>10 KB). Trim-then-archive NOW to stay ahead of the 12KB G7 block (see _INDEX.md trim-then-archive pattern)."
+fi
 # G7 hard size cap (2026-06-25): hardfloor rules >12KB = block, meta >20KB = block
 if [ "$is_hardfloor" = "1" ] && [ "$BYTES" -gt 12288 ]; then
     fail "G7 hard-size-cap: hardfloor rule $SLUG is $BYTES bytes (>12KB). Bloat root cause (2026-06-25 Rule 91 investigation). Trim the core gate + move addenda/case law to Rules-archive/<N>-case-law.md. See Rules-archive/29-case-law.md + 41-addenda.md for the trim pattern. Re-run with --override only for Ruben-approved one-off."

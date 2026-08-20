@@ -97,6 +97,11 @@ while IFS= read -r f; do
     for mf in "${META_FILES[@]}"; do [ "$slug" = "$mf" ] && is_meta=1; done
     if [ "$is_hf" = "1" ] && [ "$bytes" -gt 12288 ]; then
         ALERTS+=("A2 G7 hard-size-cap: hardfloor rule $slug is ${bytes} bytes (>12KB)")
+    elif [ "$is_hf" = "1" ] && [ "$bytes" -gt 10240 ]; then
+        # G2b warn-early (2026-08-19, Ruben-approved): 10KB early warning gives a
+        # 2KB trim runway before the 12KB G7 block. Source: rule-317 reversal-log
+        # audit found 5 hardfloor rules between 10-16KB, all failing/near-failing G7.
+        ALERTS+=("A2b G2b warn-early: hardfloor rule $slug is ${bytes} bytes (>10KB) — trim-then-archive before it hits the 12KB G7 block")
     elif [ "$is_meta" = "1" ] && [ "$bytes" -gt 20480 ]; then
         ALERTS+=("A2 G7 hard-size-cap: meta file $slug is ${bytes} bytes (>20KB)")
     fi

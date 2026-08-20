@@ -120,3 +120,4 @@ This replaces ALL deliberation about compression. The question "should I compres
 2026-05-28 — added "do not change behavior due to context size". Source: Ruben directive.
 
 2026-05-28 — replaced percentage-based thresholds (broken due to router ceiling inflation) with absolute token counts. Source: Ruben directive — LiteLLM shows 100K+ on first call even though model capacity is 1M.
+

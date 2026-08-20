@@ -68,12 +68,7 @@ Common fetch commands:
 
 ## 2026-07-25 — floor trim (idea #19125)
 
-Measured root cause of Opus condense-thrash: Cline 4.0.7 `Xle()` sets `maxAllowedSize = contextWindow - 40000`, so a **200K model compacts at 160,000 tokens**. The measured always-loaded floor (system prompt + these rules + 20 MCP servers' tool schemas + task text, zero history) was **139K-169K tokens** — the floor ALONE exceeded the threshold on 3 of 4 live windows, arming compaction on turn 1 permanently. 33-50% of Opus spend went to writing summaries.
-
-Moved OUT of `Rules/` (207,818 -> 123,051 bytes):
-`cline_task_ledger.md` (52,880) + `HANDOFF_NOTES.md` (12,842) -> `Cline/`; rules 261, 291, 272, 273 -> `Rules-archive/`. Rule 267 trimmed 13,940 -> 11,480 (G7 pass).
-
-**Fetch the ledger/HANDOFF on demand** — they are no longer auto-loaded:
+The always-loaded floor is injected into EVERY window's system prompt. Cline's Xle() compacts a 200K model at 160,000 tokens, so an oversized floor arms auto-condense on turn 1 and can never be disarmed (33-50% of Opus spend went to writing summaries before this gate existed). The ledger and HANDOFF_NOTES are NOT auto-loaded — fetch on demand:
 `read_file /Users/rubenmajor/Documents/Cline/cline_task_ledger.md`
 `read_file /Users/rubenmajor/Documents/Cline/HANDOFF_NOTES.md` (or `emsu://docs/handoff-notes`)
 
@@ -85,12 +80,7 @@ Moved OUT of `Rules/` (207,818 -> 123,051 bytes):
 
 ### Hard caps (enforced by `.pre-write-lint.sh` + nightly audit cron)
 
-**Reconciled 2026-08-08 (idea #25150).** The numbers below were stale: the table
-claimed "12 hardfloor + 4 meta = 16 files max" while 22 files were on disk, and the
-directory-total row said 180KB/250KB while the actual enforced G8 gate blocks at
-150KB. A documented constraint that does not describe the enforced constraint is
-worse than none, because agents plan against it and then get rejected by a gate
-they were never told about. These now match `.pre-write-lint.sh` exactly.
+These match `.pre-write-lint.sh` exactly (reconciled 2026-08-08, idea #25150).
 
 | Constraint | Limit | Enforced by |
 |---|---|---|
@@ -122,12 +112,8 @@ Rules metastasize through addenda creep (source incidents, case law, per-class e
    ```
 5. **Cross-check MCP resources.** If the new rule references any `emsu://reference/` or `emsu://system/` resource, verify it's listed in the tree's Cross-Reference section.
 
-### Nightly audit cron (self-healing bloat detection)
+### Enforcement machinery (summary)
 
-`~/Documents/Cline/scripts/cline_rules_audit.sh` runs nightly at 3:15 AM PT via launchd (`com.emsu.cline-rules-audit`). It checks file count, per-rule size, total directory size, HARDFLOOR_SLUGS drift, rule-number collisions (duplicate `NNN-` prefixes), and `.clinerule_counter` vs highest-actual-rule-number drift — posting to ops chat 55 on any alert. This makes bloat + counter drift self-healing instead of requiring a Ruben-initiated investigation. Manual run: `cline_rules_audit.sh --quiet` (log only, no chat post). Created 2026-07-02 (was previously documented but missing — the self-healing detector itself had drifted away).
-
-### Pre-write lint enforcement (fswatch)
-
-`.pre-write-lint.sh` is invoked by an `fswatch` listener (`~/Library/LaunchAgents/com.emsu.cline-rules-audit.plist`, `WatchPaths` on `Rules/`) on every save under `Rules/`. This is the real-time gate that catches collisions, bloat, and counter drift the moment a file lands — before the nightly audit sees it. `fswatch` must be installed (`brew install fswatch`). The listener is loaded by the same launchd plist as the nightly audit. If `fswatch` is absent, the nightly audit still runs but real-time enforcement is lost.
-
-The MCP is the search engine. The tree is the navigation map. The lint gate is the write filter. The audit cron is the drift detector. New rules need all four.
+- **Nightly audit:** `~/Documents/Cline/scripts/cline_rules_audit.sh` (3:15 AM PT, launchd `com.emsu.cline-rules-audit`) — file count, per-rule size, total size, manifest drift, number collisions, counter drift; posts to ops chat 55 on alert.
+- **Real-time lint:** `.pre-write-lint.sh` via fswatch on every save under `Rules/` — G1-G9 gates fire the moment a file lands.
+- The MCP is the search engine. The tree is the navigation map. The lint gate is the write filter. The audit cron is the drift detector. New rules need all four.

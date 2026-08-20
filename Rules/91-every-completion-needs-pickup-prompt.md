@@ -68,15 +68,15 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 |-----|-----|
 | **NO `[queued]` tags** | Banned 2026-08-01. Approved = executing. No parking lot. |
 | **NO fake IDs** (`IDEA-001`) | Must be real `create_idea` integer |
-| **NO unfiled-but-plausible IDs** | Every `#NNNN` you cite as filed must have come back from a `create_idea` call **in THIS session**. Inventing a plausible sequential integer is the worst violation shape: the id space is dense, so a made-up number usually resolves to a REAL but UNRELATED idea, and every syntax gate passes. If you did not see the id in a `create_idea` return this session, you do not have it (2026-07-28: agent invented #19898-#19904, all seven existed, all seven were Argus/email/Artemis work, validator said ALL PASSED) |
+| **NO unfiled-but-plausible IDs** | Every `#NNNN` you cite as filed must have come back from a `create_idea` call **in THIS session**. The id space is dense, so a made-up number usually resolves to a REAL but UNRELATED idea and every syntax gate passes. If you did not see the id in a `create_idea` return this session, you do not have it |
 | **NO bare `#NNNN`** | Every idea number gets `[deployed|executing|awaiting_review|blocked|proposed|rejected|superseded]` |
-| **NO unfiled open threads** | Every open-thread item MUST cite a real filed idea `#NNNN [tag]`, OR be explicitly marked `(human-only decision — no idea)`. A thread with no idea number is undone work: file it via `create_idea` BEFORE shipping (2026-07-15 violation: 5 open threads shipped with zero filed ideas — the bare-number scan passed trivially because no numbers existed) |
-| **NO tag-without-number** | A `[tag]` written next to an open-thread item with NO `#NNNN` beside it is FAKE PROVENANCE — worse than a bare number, because it implies a filed idea that does not exist (2026-07-22 violation #14: 4 open threads shipped `[proposed]` with zero `create_idea` calls; agent pattern-matched "I have tags" instead of "I have filed IDs"). Mechanical test per item: "what integer idea ID backs this tag?" None → `create_idea` first, or mark `(human-only decision — no idea)` |
+| **NO unfiled open threads** | Every open-thread item MUST cite a real filed idea `#NNNN [tag]`, OR be explicitly marked `(human-only decision — no idea)`. A thread with no idea number is undone work: file it via `create_idea` BEFORE shipping |
+| **NO tag-without-number** | A `[tag]` next to an open-thread item with NO `#NNNN` is FAKE PROVENANCE — it implies a filed idea that does not exist. Mechanical test per item: "what integer idea ID backs this tag?" None → `create_idea` first, or mark `(human-only decision — no idea)` |
 | **NO missing open-threads** | Section mandatory — write "None — reason" if empty |
 | **NO "pure Q&A" self-exemption** | Status reports, investigations, bug analysis, diagnostics are NOT Q&A |
 | **NO `[approved:autonomous]` tags** | Ambiguous between executing/queued. Banned in final pickup prompts — must be replaced by verified live-state tag from reconcile call per rule 267 GATE B (reconcile_ideas no longer emits approved; it emits executing) |
 | **NO placeholders** | `#NNNN`, `<...>`, `#0000` are banned |
-| **NO pick-up-by-reference** | Block must be inline in the `attempt_completion` **`result`** parameter string itself — not a separate file, and not `task_progress` or any other tool parameter (2026-07-22 violation #15: agent wrote a structurally-perfect block but put it in `task_progress`; `result` had zero rule-91 structure, so from Ruben's read it was "nowhere near a rule 91") |
+| **NO pick-up-by-reference** | Block must be inline in the `attempt_completion` **`result`** parameter string itself — not a separate file, and not `task_progress` or any other tool parameter |
 
 ## Quick check before shipping
 
@@ -129,32 +129,3 @@ This is a LAST RESORT. If `create_idea` works, the agent MUST file ideas normall
 
 2026-05-19 Ruben directive. 2026-07-14: 3 violations in one window (no pickup block, bare #NNNN, no open threads). Root cause: steering injection's "pure Q&A exception" + bloated 151-line rule. Both fixed. 2026-07-22 violation #15 (per Cline_Obedience.md): agent shipped a structurally-correct PICKUP PROMPT block inside `task_progress` instead of `result` — added explicit ban + quick-check step 1 rewording to gate on `result` specifically. 2026-08-01: `[queued]` disposition banned by Ruben directive — queued was being used as an excuse to park ideas indefinitely instead of implementing them. reconcile_ideas no longer derives `[queued]` (approved → executing, ready_for_review → awaiting_review, default → unknown). See rule 161.
 
-## Amendment (from reversal, 2026-08-19 03:36 UTC)
-
-**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
-- Task: frankenstein-llm-review-20260818
-- RCA bucket: wrong premise
-- Trigger pattern: Treating a RULE 91 GATE rejection as a content problem: after attempt_completion is rejected with named missing sections, the agent re-emits FRESH prose (new answer body, still no PICKUP PROMPT block)
-- Reversal note: A completion-gate rejection is a FORMAT repair ticket, not a content request. When the validator names missing sections (dividers, PICKUP PROMPT header, Open threads, Reference IDs), the ONLY legal next emission is the SAME result content with those sections appended, then re-validated. New prose without the block is a repeat of the violation, not an attempt at the fix. Observed 2026-08-18: 5+ consecutive gate rejections in one window, each answered with rewritten prose instead of the appended block.
-
-The reversal that produced this amendment is closed ONLY because the causal rule text changed.
-
-## Amendment (from reversal, 2026-08-19 03:46 UTC)
-
-**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
-- Task: 1787109
-- RCA bucket: wrong premise
-- Trigger pattern: Treating a RULE 91 GATE rejection as a content problem: after attempt_completion is rejected with named missing sections, the agent re-emits FRESH prose (new answer body, still no PICKUP PROMPT block)
-- Reversal note: A completion-gate rejection is a FORMAT repair ticket, not a content request. When the validator names missing sections (dividers, PICKUP PROMPT header, Open threads, Reference IDs), the ONLY legal next emission is the SAME result content with those sections appended, then re-validated. New prose without the block is a repeat of the violation, not an attempt at the fix. Observed 2026-08-18: 5+ consecutive gate rejections in one window, each answered with rewritten prose instead of the appended block.
-
-The reversal that produced this amendment is closed ONLY because the causal rule text changed.
-
-## Amendment (from reversal, 2026-08-19 06:25 UTC)
-
-**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
-- Task: 1787098931968
-- RCA bucket: scope error
-- Trigger pattern: Shipping a PICKUP PROMPT that passes every mechanical gate but drops open leads and carries unverified state claims; treating validator ALL PASSED as proof the block is complete
-- Reversal note: PICKUP PROMPT passed all mechanical gates (validator ALL PASSED + GATE CLEAR) but was called out by Ruben as too simplistic: it dropped the session's open symptom list (Invalid API Response, <invoke> prose, 530/no-body, missing-messages TypeError), the conv_97c1b5230bcbe78e trace lead, the reproduction criteria, and the kaizen-worker rollback uncertainty, and it carried an unverified backend claim (cato-120b). Amendment: gate-passing is NECESSARY but NOT SUFFICIENT. Every open investigation lead, unresolved symptom, and pending verification from the session MUST be carried in Where-we-left-off or Open threads; every backend/fleet/state claim in the block MUST carry a (verified: ...) marker quoting the live probe — a claim without a marker is treated as unverified and must not be shipped as fact.
-
-The reversal that produced this amendment is closed ONLY because the causal rule text changed.

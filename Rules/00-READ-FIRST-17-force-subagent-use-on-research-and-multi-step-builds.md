@@ -100,22 +100,11 @@ Subagents have local shell + filesystem ONLY (`read_file`, `list_files`, `search
 
 A subagent can absolutely WORK with MCP/server/web data — it just cannot FETCH it. The parent fetches, the subagent reasons. The data crosses the boundary as **plain text baked into the prompt**, never as a tool the subagent calls.
 
-**WRONG (go-fetch — what causes the loop):**
-```
-use_subagents prompt: "Research the chat widget. Use emsu-operations read_server_file
-                       to read chat_widget_api.php and analyze it."
-→ subagent can't call the MCP → "not available" → falls to raw ssh → loops → dead
-```
+**WRONG:** prompt says "Use emsu-operations read_server_file to read X and analyze it" → subagent can't call the MCP → "not available" → falls to raw ssh → loops → dead.
 
-**RIGHT (fetch-then-paste):**
-```
-1. Parent calls read_server_file / mysql / web search ITSELF (MCP works in the main window).
-2. Parent dispatches: "Here is the full contents of chat_widget_api.php:
-                       <pastes the 400 lines>. Analyze it for X, Y, Z and report findings."
-→ subagent has the data inline → pure local reasoning → works
-```
+**RIGHT:** parent calls read_server_file / mysql / web search ITSELF, then dispatches "Here is the full contents of X: <pasted>. Analyze it for Y, Z." → subagent has the data inline → pure local reasoning → works.
 
-The subagent never touches a tool it doesn't have. It receives the MCP's *output* as text. That is the entire speedup model: the parent gathers (MCP, server reads, web), then fans out subagents to reason over big text blobs in parallel without burning the parent's context.
+The subagent never touches a tool it doesn't have. It receives the MCP's *output* as text. The parent gathers (MCP, server reads, web), then fans out subagents to reason over big text blobs in parallel without burning the parent's context.
 
 ### Banned subagent-dispatch phrases (self-check BEFORE every `use_subagents` call)
 
@@ -131,9 +120,7 @@ ANY hit = doomed dispatch. Fetch that data inline first, paste it in, then dispa
 
 ### Exploratory research is inline-only, never subagent-dispatched
 
-There's a phase subagents cannot help with: **when you don't yet know what you're looking for** — you're forming the question, not answering one. Bounded research (the normal case) has known sources; this does not.
-
-If the task is "figure out what I even need to look at", the shape is iterative: fetch → read → decide what to fetch next → repeat. Subagents have no fetch tools, so telling one to "go figure out what's relevant" is a fetch-then-paste violation waiting to happen.
+**When you don't yet know what you're looking for** (forming the question, not answering one), the shape is iterative: fetch → read → decide what to fetch next → repeat. Subagents have no fetch tools, so "go figure out what's relevant" is a fetch-then-paste violation waiting to happen.
 
 **The test:** do you already know the bounded, fixed set of sources? If yes → fetch them, paste in, dispatch to synthesize in parallel. If no → that discovery phase stays inline and sequential in the parent window until it converges to a concrete scope. Only THEN is dispatch legal. Same applies to the async Orchestrator/Executor lever (rule 267), for the identical reason.
 

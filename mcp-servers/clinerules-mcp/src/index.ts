@@ -771,6 +771,22 @@ server.tool(
 // the MECHANICAL half: it appends a dated amendment to the rule file ON DISK,
 // records the proof in the rule_amend table, and reindexes the MCP index so the
 // fix is live everywhere (file -> manifest -> MCP -> FTS) in one call.
+// #27634 (2026-08-19): content-hash dedup for the amendment trail. Two
+// byte-identical duplicate pairs were found in the 2026-08-19 audit (rule 317
+// chmod/chown 08:46/08:54, rule 91 03:36/03:46) — the same reversal recorded
+// under two task ids. Without dedup the append-only tail re-grows with every
+// concurrent-window repeat of the same incident. Normalize + Jaccard >= 0.85
+// against the last 12 ledger rows for the same slug = duplicate: fold to a
+// one-line marker instead of a full ~1KB block.
+function _amendNorm(s: string): Set<string> {
+  return new Set(s.toLowerCase().replace(/[^a-z0-9 ]+/g, " ").split(/\s+/).filter((w) => w.length > 2));
+}
+function _amendJaccard(a: Set<string>, b: Set<string>): number {
+  if (a.size === 0 || b.size === 0) return 0;
+  let inter = 0;
+  for (const w of a) if (b.has(w)) inter++;
+  return inter / (a.size + b.size - inter);
+}
 function amendRuleOnDisk(slugOrId: string, taskId: string, rcaBucket: string, note: string, triggerPattern: string): { ok: boolean; message: string; path?: string; rule_id?: string } {
   const row = findRule(slugOrId);
   if (!row) {
@@ -783,6 +799,28 @@ function amendRuleOnDisk(slugOrId: string, taskId: string, rcaBucket: string, no
   }
   const body = fs.readFileSync(filePath, "utf-8");
   const ts = new Date().toISOString().replace("T", " ").slice(0, 16) + " UTC";
+  // ── #27634 dedup check ─────────────────────────────────────────────────
+  const newSig = _amendNorm(rcaBucket + " " + triggerPattern + " " + note);
+  try {
+    const recent = db.prepare(
+      `SELECT rca_bucket, reversal_note FROM rule_amend WHERE slug = ? ORDER BY id DESC LIMIT 12`
+    ).all(row.slug) as Array<{ rca_bucket: string | null; reversal_note: string | null }>;
+    for (const r of recent) {
+      const oldSig = _amendNorm((r.rca_bucket || "") + " " + (r.reversal_note || ""));
+      if (_amendJaccard(newSig, oldSig) >= 0.85) {
+        // Duplicate: fold to a one-line marker (file stays bounded), keep the
+        // ledger row so the recurrence is still auditable.
+        const foldLine = `\n> Reappeared again (${ts}, task ${taskId || "(unknown)"}) — same causal content as an earlier amendment; folded by dedup (#27634).\n`;
+        fs.writeFileSync(filePath, body.replace(/\s+$/, "\n") + foldLine, "utf-8");
+        db.prepare(
+          `INSERT INTO rule_amend (rule_id, slug, task_id, rca_bucket, reversal_note, amended_path) VALUES (?,?,?,?,?,?)`
+        ).run(row.rule_id, row.slug, taskId || null, rcaBucket.slice(0, 60), ("DUP-FOLDED: " + note).slice(0, 2000), filePath);
+        try { reindex(db, false); } catch { /* non-fatal */ }
+        return { ok: true, message: `Duplicate amendment FOLDED (not re-appended) into rule ${row.rule_id} (${row.slug}) — same causal content already recorded for this rule. One-line recurrence marker added, ledger row kept.`, path: filePath, rule_id: row.rule_id };
+      }
+    }
+  } catch { /* dedup is best-effort; a failed check falls through to normal append */ }
+  // ── end dedup check ────────────────────────────────────────────────────
   const amendment = [
     "",
     "## Amendment (from reversal, " + ts + ")",

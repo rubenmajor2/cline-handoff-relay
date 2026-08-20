@@ -57,7 +57,7 @@ If ANY field of the `result` (not just the pickup prompt block) mentions a `#NNN
 
 ## GATE C — Blocked-executor hand-ship
 
-**If a GATE B reconcile finds a filed idea `impl_failed` / deploy-blocked (denylist, copycat cap, schema drift) AND the agent has the tools to do the work itself (safe deploy, SQL, ssh_command), the agent MUST ship it by hand in the same session — not re-file, not tag `[blocked]` and move on.** Re-queueing an impl_failed build is legal ONCE; a second failure or a structural blocker (agent_core_denylist, copycat_churn_cap) means the executor cannot land it and the agent is the ship path. Tag `[deployed]` with `(verified: hand-shipped, <evidence>)`. Canonical case #18132 [deployed]: `Rules-archive/267-case-law.md`.
+**If a GATE B reconcile finds a filed idea `impl_failed` / deploy-blocked AND the agent has the tools to do the work itself, the agent MUST ship it by hand in the same session — not re-file, not tag `[blocked]` and move on.** Re-queueing an impl_failed build is legal ONCE; a second failure or a structural blocker means the agent is the ship path. Tag `[deployed]` with `(verified: hand-shipped, <evidence>)`. Canonical case #18132 [deployed]: `Rules-archive/267-case-law.md`.
 
 ## The anti-abuse gate (do NOT offload these)
 
@@ -78,12 +78,11 @@ Subagents = synchronous, in-window, local-files-only, use when you need the resu
 3. Am I about to claim in `attempt_completion` that something is done that I only just filed? If yes → don't claim done.
 
 **Before `attempt_completion` (the reconcile pass — GATE B):**
-1. Did I file anything to the Orchestrator this task? If yes → did I call `list_decisions`/`get_idea_progress` for EACH (not "I filed it, it's fine")?
-2. Is every filed idea tagged with a VERIFIED live-state disposition (`[deployed]`/`[executing]`/`[queued]`/`[blocked]`/`[proposed]`/`[rejected]`/`[superseded]`) in result AND pickup prompt — NOT `[approved:autonomous]`?
-3. Does each tag match the reconcile return (no drift)?
-4. For every idea reconciled this session: is the reconcile evidence quoted in a `(verified: ...)` parenthetical next to the tag? If no → add it. If you cannot quote the return because you didn't run the reconcile call, that is itself a violation — run it now.
-5. Is anything stuck/failed left unaddressed? If yes → fix now or flag `[blocked]` with the unblocker named.
-6. **TAG-SCAN check:** does `result` contain ANY bare `#NNNN` without a disposition bracket? If yes → the reconcile pass is INVALID. Tag every bare number before shipping.
+1. Did I file anything to the Orchestrator this task? If yes → did I run a reconcile call for EACH (not "I filed it, it's fine")?
+2. Is every filed idea tagged with a VERIFIED live-state disposition in result AND pickup prompt — NOT `[approved:autonomous]`?
+3. Does each tag match the reconcile return (no drift), with a `(verified: ...)` parenthetical?
+4. Is anything stuck/failed left unaddressed? If yes → fix now or flag `[blocked]` with the unblocker named.
+5. **TAG-SCAN check:** does `result` contain ANY bare `#NNNN` without a disposition bracket? If yes → the reconcile pass is INVALID. Tag every bare number before shipping.
 
 ## Cap
 
@@ -98,20 +97,15 @@ Don't fire more offloaded ideas than you can reconcile. If you fire 40 ideas, yo
 - Rule 29 — agents act on confidence tier (governs the cleanup pass — fix stuck items, don't just list them)
 - Full case law + source incidents + addenda: `Rules-archive/267-case-law.md`
 
+## GATE D — Approved-idea auto-promotion (TO THE VERY TOP of Executor/Orchestrator)
+
+**Permanent hardfloor (2026-08-12 Ruben steer: "promote TO THE VERY TOP of executor/orchestrator ... support Cline 1st and Argus 2nd").** When this window filed or approved ANY idea buildable in another window:
+
+1. Promote EVERY approved/filed idea from THIS task to the very top: `UPDATE orchestrator_ideas SET efficiency_priority = 1 WHERE id = #NNNN` BEFORE attempt_completion.
+2. Priority philosophy: ideas supporting THIS window's deliverable come FIRST (Cline 1st); fleet/infra/Argus monitoring ideas SECOND (Argus 2nd).
+3. Do NOT file-then-forget: if the work is buildable in THIS window, still BUILD it here per rule 300.
+4. Reconcile in GATE B: any promoted idea must be in an actionable status or marked `superseded`/`impl_failed` with a reason — never left `proposed` if you approved it.
+
 ## Last updated
 
-2026-08-15 — GATE A0 build-here-first + executor-doctor duty added (Ruben directive); A3/reconcile-quoting/exploratory sections trimmed to archive pointers for G7 cap. Prior: 2026-07-25 trim (idea #19125). Case law: `Rules-archive/267-case-law.md`.
-
-## GATE C — Approved-idea auto-promotion (TO THE VERY TOP of Executor/Orchestrator)
-
-**Permanent hardfloor. Added 2026-08-12 Ruben steer: "approved, autonomous and promote TO THE VERY TOP of executor/orchestrator so that the in-task window is supported properly and leveraged ... support Cline 1st and Argus 2nd."**
-
-**When:** This window filed or approved ANY idea (#NNNN) that is buildable in another window (executor/orchestrator).
-
-**Mandatory action (do NOT skip):**
-1. Promote EVERY approved/filed idea from THIS task to the very top by setting `efficiency_priority = 1` (tinyint) — via `POST /api/efficiency_priority_flag.php` OR direct SQL `UPDATE orchestrator_ideas SET efficiency_priority = 1 WHERE id = #NNNN` — BEFORE calling attempt_completion.
-2. Priority philosophy: ideas that directly support/continue THIS window's deliverable come FIRST (Cline 1st); fleet/infra/Argus ideas come SECOND (Argus 2nd). Argus = monitoring/audit/observability improvements. Cline = anything that makes Cline windows faster/better (rules, MCP, context, router, executor offload).
-3. Do NOT file-then-forget: after promoting, if the work is buildable in THIS window with available tools, still BUILD it here per rule 300. The promotion exists to keep the executor/orchestrator in sync, not to defer.
-4. Reconcile in GATE B: any idea you promoted must still be in an actionable status (`approved` + `idle`/`drafting`) or marked `superseded`/`impl_failed` with a reason — never left `proposed` if you approved it.
-
-**Violations:** filing ideas for a task without promoting them to the very top = the in-task window is NOT supported by executor/orchestrator per this rule.
+2026-08-19 — duplicate "GATE C" heading renamed GATE D; self-checks + hand-ship sections tightened for G8 floor compliance. Prior: 2026-08-15 GATE A0 build-here-first + executor-doctor duty (Ruben directive); 2026-07-25 trim (idea #19125). Case law: `Rules-archive/267-case-law.md`.

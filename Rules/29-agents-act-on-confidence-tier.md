@@ -47,9 +47,9 @@ Before EVERY `attempt_completion` on fleet/llm/orchestrator/multi-system tasks, 
 1. Prior handoff claims checked against live state?
 2. Rule violations from this/ prior chain surfaced (not buried)?
 3. All "filed at proposed" ideas promoted to autonomous tier per rule 38?
-4. All "in flight" items verified picked up (not snoozed) — via a rule-267 GATE B reconcile call (`list_decisions` / `get_idea_progress`) returning the LIVE executor state, NOT a filing-time memory?
-5. **Every filed idea's disposition tag in the rule-91 pickup prompt reflects the verified live executor state** (deployed / executing / queued / blocked) — NOT the filing action? `[approved:autonomous]` in a final prompt = audit FAIL (ambiguous between "executing" and "queued").
-5b. **TAG-SCAN audit:** does the ENTIRE `result` (not just the pickup prompt block) contain ANY bare `#NNNN` without a disposition bracket? If yes → audit FAIL — the agent shipped a raw idea number Ruben cannot interpret. Tag every bare number before shipping. The rule-91 context-scan (primary gate — scan result text directly in context, no subprocess) catches these mechanically — run it before `attempt_completion`. A bare `#17537` in a "Where we left off" prose paragraph is exactly this violation. Python/grep/awk subprocesses are unreliable on this host and should NOT be the primary check (systemic FD issue, idea #17619 [deployed]).
+4. All "in flight" items verified picked up (not snoozed) — via a rule-267 GATE B reconcile call returning the LIVE executor state, NOT a filing-time memory?
+5. **Every filed idea's disposition tag reflects the verified live executor state** — NOT the filing action? `[approved:autonomous]` in a final prompt = audit FAIL.
+5b. **TAG-SCAN audit:** does the ENTIRE `result` contain ANY bare `#NNNN` without a disposition bracket? If yes → audit FAIL. Tag every bare number before shipping (rule-91 context-scan is the mechanical enforcer).
 6. Config changes verified to change PRODUCTION behavior (re-run failing case end-to-end, not grep)?
 7. Low-call / decorative findings traced to WHY?
 8. Dollar figures checked against ≥7-day trend?
@@ -66,9 +66,7 @@ The rule-91 PICKUP PROMPT is NOT a parking lot. If an "open thread" item is a re
 
 **A "server busy" / gateway-timeout / 502-503-504 / stream-dropped condition is infrastructure noise, not a fact the end-user needs to hear.** Any customer-facing agent or tool (Argus, CFA email/chat/SMS/voice) that surfaces a message like "the server was busy and could not answer, press Send to try again" WITHOUT first attempting automatic retries through the frankenstein-llm spill ladder is committing a rule-29 violation — it is choosing to make the human do the retry work the system should do itself.
 
-**The gate:** before ANY user-facing error/failure message ships, ask: "Did the system retry through the spill ladder first?" If no → this is not a real failure yet, it's an untried recovery path. Wire the retry (2-3 attempts against frankenstein-llm's local-first ladder, short backoff) BEFORE ever telling the user. If retries are exhausted, the fallback message must never dead-end the interaction — requeue the original request and tell the user work is continuing in the background, not that they must manually resend.
-
-**Source incident:** 2026-07-23 — Argus terminal (`argus_download.php`, `argus-chrome/sidebar.js`) showed "The server was busy reloading and could not answer right now... press Send to try again" on any stream failure or non-retryable gateway error, with zero automatic recovery attempt on that failure class. Ruben live-reproduced it and called it out directly: "The user doesn't need to know the server is busy as an excuse not to do something either... I already explained how this is supposed to work." Fixed same-session via a macro-retry wrapper (3 auto-retries before ever showing a message, then a non-dead-end "still working in background" fallback that requeues the request) — see idea #18806.
+**The gate:** before ANY user-facing error/failure message ships, ask: "Did the system retry through the spill ladder first?" If no → this is not a real failure yet, it's an untried recovery path. Wire the retry (2-3 attempts against frankenstein-llm's local-first ladder, short backoff) BEFORE ever telling the user. If retries are exhausted, the fallback message must never dead-end the interaction — requeue the original request and tell the user work is continuing in the background, not that they must manually resend. Source incident + fix: `Rules-archive/29-case-law.md` (2026-07-23 Argus, idea #18806).
 
 ## Alternative-path discipline (failed access = try next path, never ask)
 
@@ -94,22 +92,3 @@ If the case won't be handled in time (>50 open + no human active 60min, or waiti
 ## Source
 
 2026-05-26 v2, 2026-06-25 v3 trim. Core principle unchanged: agents act on payment-verified, schema-verified evidence. The default is action.
-## Amendment (from reversal, 2026-08-18 23:02 UTC)
-
-**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
-- Task: 1787014605175
-- RCA bucket: wrong premise
-- Trigger pattern: Reading an automated system's gate/hold label (deploy_human_gated, regression_risk_review, needs_guidance, HUMAN_GATED) as evidence that a human decision is outstanding, and listing the item as human-
-- Reversal note: I listed 5 impl_failed ideas as "genuine human gates, need your review" purely because the executor had labeled them deploy_human_gated / regression_risk_review. Ruben asked "what do we do per rule 29 here?" On actually running the gate: 3 of the 5 already had approved_by populated (Ruben, Jon Thompson, agent-core) and only needed the documented one-shot auto_deploy_override; 1 needed no build because the change was already on disk; 1 rested on a stale premise (the grievance it targeted was resolved 5 days earlier). Zero required a human. Amendment: a gate/hold label emitted by an automated system states what THAT SYSTEM may not do autonomously, never who owns the decision. Before calling any item human-only, the binary gate must additionally check (a) whether an approval record already exists on the row, and (b) whether the described change is already present in the target artifact. An item carrying a prior human approval is by definition NOT awaiting a human.
-
-The reversal that produced this amendment is closed ONLY because the causal rule text changed.
-
-## Amendment (from reversal, 2026-08-19 04:25 UTC)
-
-**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
-- Task: 1787081272363
-- RCA bucket: wrong premise
-- Trigger pattern: Listing an open-thread item as human-only when the only blocker is the agent's own not-yet-done work (e.g. 'review the RCA log' before actually reading it)
-- Reversal note: RCA review listed as human-only in a pickup prompt, then classified by the agent in the same window after reading the evidence. A not-yet-done task is NOT a human gate: the binary gate (can I do this with a tool I have?) fires BEFORE listing any open thread. Listing work as human-only because I had not yet done it is the deferral shape rule 29 exists to prevent. Amendment: before marking any open-thread item human-only, the gate must additionally ask whether the only thing missing is MY OWN not-yet-completed action — if so, do the work, then close the thread.
-
-The reversal that produced this amendment is closed ONLY because the causal rule text changed.

@@ -134,3 +134,22 @@ persistence, that's burning tokens on a solved problem.
 
 ## Last updated
 2026-08-19 — initial, per Ruben directive.
+## Amendment (from reversal, 2026-08-21 16:14 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787121837052
+- RCA bucket: insufficient probe
+- Trigger pattern: Two within-window veritas-harness defects: (1) scoreModel rewarded a self-asserted [PROVEN] tag with full credit even at 0 probes / 0 truth-judge passes (score 100.00 for a fantasy answer); (2) callMo
+- Reversal note: VERITAS L4 harness live-run reversal: initial run scored 100.00 while the truth judge passed 0/5 and probes were 0/5, and all five stored responses were identical (modelCache re-used question 1). Both were corrected before ship: the score is now 70% truth-judge-pass-rate + 30% probe-rate (a real answer can never score 100 without judge-passed evidence), and the response cache was removed so each benchmark question gets a fresh model call. Amended behavior: any truthfulness/quality metric that drives a published score MUST be gated on judge-passed evidence (rule 323 PROVEN requires a probe), and benchmark harnesses must never cache model responses across questions.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-21 16:23 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787121837052
+- RCA bucket: wrong premise
+- Trigger pattern: Harness lane timeout designed as CURLOPT_TIMEOUT=15s (total) to fail fast on a dead local lane; live smoke proved the real failure mode is a low-speed stall (0 bytes/90s per call in run 2), and a 15s 
+- Reversal note: VERITAS L4 timeout design reversal: the original 15s CURLOPT_TIMEOUT premise (fail fast by hard total timeout) was wrong. Live run 2 showed the dead local lane stalls at zero bytes (~90s/call x 5), but a healthy generation can legitimately take >15s. Corrected design: CURLOPT_LOW_SPEED_LIMIT=1 + CURLOPT_LOW_SPEED_TIME=20 (abort only on zero-progress stalls) with CURLOPT_TIMEOUT=120s as the ceiling. Live smoke: run 3 finished in 58.5s (2 stalls aborted at 20s each, spill to deepseek) vs run 2's ~10min. Amended behavior: when a harness gates lane health by a hard small total timeout, replace it with a low-speed abort so healthy slow generations survive; probe each lane's real stall signature before choosing the timeout shape. Also: any sudo-python file mutation must re-chown to the production owner (emsumain:psaserv) and be followed by a consumer re-run as the production user.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

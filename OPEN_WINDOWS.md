@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/20/2026, 6:12:20 PM PT | window: last 72h | 89 tasks | index total 878 (parsed 2, cached 876)
+Generated: 8/20/2026, 7:12:21 PM PT | window: last 72h | 85 tasks | index total 878 (parsed 0, cached 878)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -95,10 +95,6 @@ Generated: 8/20/2026, 6:12:20 PM PT | window: last 72h | 89 tasks | index total 
 | `1787024184393` | 8/17/2026, 9:11:28 PM | 206 | 453KB | #Big Mac 4th GPU |
 | `1787022593417` | 8/17/2026, 8:35:20 PM | 125 | 266KB | #Big Mac 4th GPU |
 | `1787019164930` | 8/17/2026, 8:04:28 PM | 238 | 1066KB | #Big Mac 4th GPU |
-| `1787019098209` | 8/17/2026, 7:11:38 PM | 1 | 7KB | #Big Mac 4th GPU |
-| `1786948459253` | 8/17/2026, 7:04:08 PM | 142 | 258KB | #Big Mac 4th GPU |
-| `1787014605175` | 8/17/2026, 6:29:12 PM | 154 | 347KB | #Jon / Argus |
-| `1787014473253` | 8/17/2026, 6:20:07 PM | 120 | 612KB | Check /emtskills - slow as hell again check emtskills slowness document on desktop. please |
 
 ---
 
@@ -3833,154 +3829,3 @@ No that sounds asinine -> The tech also turned on the PCIe bifucation in Bios.
 **Ideas referenced:** #0000, #178669, #178694, #25097 [executing], #25185, #2541, #2542, #2557, #2558, #2559, #2560, #26209 [proposed], #26211 [executing], #26238 [proposed], #27137 [awaiting_review], #27140 [executing], #313131
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787019098209` — 8/17/2026, 7:11:38 PM PT — 1 turns
-
-**Original task:**
-
-```
-#Big Mac 4th GPU
-
-I don't like the options here. Try again. 
-
-No that sounds asinine -> The tech also turned on the PCIe bifucation in Bios. 
-
---
-# Boot #14 verdict: FA3h flash took, but still 3 GPUs. And the reseat result tells us something important.
-
-**Live probes 19:01-19:02 PT:**
-- BIOS: **FA3h, dated 07/09/2026** (verified: dmidecode on box). The flash worked, the year-newer AGESA (1.0.0.1a to 1.0.0.1g) is live.
-- GPUs: **still 3 Battlemage** (verified: lspci count, boot #14).
-- Root port 00:01.2: **still completely absent** (verified: only 00:01.0 and 00:01.3 exist in /sys/bus/pci/devic
-```
-
-**Ideas referenced:** #178669, #178694, #25097 [executing], #26209 [proposed], #26211 [executing], #26238 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1786948459253` — 8/17/2026, 7:04:08 PM PT — 142 turns
-
-**Original task:**
-
-```
-#Big Mac 4th GPU
-
-Ok, let's give it another shot. See this conversastion between me and the tech:
-
-Ruben Major:
-	You put the 4th GPU on an NVME slot, right? 
-	And you already installed the dummy plug?
-
-Ruben Major Jr.:
-	Correct
-	On both
-
-Ruben Major:
-	Ok, lol, let me try from here then. 
-
-Ruben Major Jr.:
-	See if it's an issue with the bus speed being only x4, if it's initiating okay om hardware level it has to be a software bug in the stack somewhere
-
-Ruben Major:
-	Kk
-
-# Answer: I am sure. I just tested your assumption directly, twice, with fresh boots. The plug is NOT in, and the card still 
-```
-
-**Ideas referenced:** #178668, #178669, #2299, #2507 [investigating], #25097 [executing], #25185, #2541 [deployed], #2542, #2557, #26209 [proposed], #26211 [executing], #26233 [rejected], #26237 [rejected], #26238 [proposed], #27100
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787014605175` — 8/17/2026, 6:29:12 PM PT — 154 turns
-
-**Original task:**
-
-```
-#Jon / Argus
-
-# What is going on: the process failure, diagnosed and partially fixed this session
-
-Did you notify John and Corey and did you update argus logs to let them know that those things have been results?
-
-Well you want my ideas in artists also to be cut priority too.
-
-What are we going to do to resolve these issues? What is the plan? I see that you've identified a lot of problems but I don't see a comprehensive plan addressing underline issues. What do you mean about partially fixed? What else is resolve
-
-Well you're supposed to act according to rule 29 and also here it's hard for me 
-```
-
-**Ideas referenced:** #12778, #16523, #178701, #19490, #21586, #24895, #26196, #26225, #26470, #26825, #26858, #26934, #27065 [proposed], #27120 [executing], #27123 [blocked], #27126 [executing], #344421, #344423, #344425, #344426, #344429
-
-**Last PICKUP PROMPT:**
-
-```
-rehensive state handoff below.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787011000 — Argus process failure: Jon/Cori idea starvation + conv 2299 fabrication/siloing/CFA deflection + executor reconciliation.
-
-Where we left off (verified 2026-08-17 18:28 PT):
-- ArgusRuleProfile.php patched (4 gaps: dead DELIVERY_TRUTH_RULES restored, negative-claim evidence via rule 263, systemic-scope rule 297, act-don't-instruct via rule 29), deployed, lint OK, FPM reloaded, cache busted, live rendering verified
-- 73 Jon/Cori ideas approved at efficiency_priority=1 (19 priority-flipped + 24 promoted from stalled proposed + existing); executor doctor repaired 31 orphan-status ideas
-- Brooklynn duplicate ticket id 25927 (TKT-20260817-FF50EAD5) resolved with internal comment; rule-318 ground truth rows 11+12 recorded for LeAnne Dorsey + Brooklynn Blocher
-- Bug library incident 2553 recorded (argus_fabricated_negative_claim_siloing_20260817) on WOPR
-- LeAnne Dorsey's real blocker confirmed: CPR for EMTs quiz (cmid 6048) is open now with no availability restriction; Quiz 1 unlocks after she passes it. No admin repair needed.
-- Ruben flagged two live issues in the final message that remain OPEN: (1) executor live page shows only ~5 recent executions, all AUTO_DEPLOY_GATE "observed/human review" holds — counters his 1,085-approved-idle claim; (2) the 550 vs 1,085 approved-idle discrepancy was NOT yet reconciled live. NO executor runs were verified in the last hour. This is the unfinished "frankenstein doctor of executor" request.
-
-Open threads to drive next (every item has a real idea # or is a human-only decision):
-1. #27120 [executing] — Email AI wrong-canned-reply bug. Re-queued top-priority after codegen failure + llm_touching_excluded deploy-gate parks. If executor fails again, hand-ship in a Cline window (rule 267 GATE C). Next action: check orchestrator_execution_log for run status, then get_idea_progress(27120).
-2. #27126 [executing] — Argus rule drift guard (sha256 alert on the 9 wired rules so ArgusRuleProfile re-derives). Next action: get_idea_progress(27126); if build failed, re-queue.
-3. #27065 [proposed] — Email Agent reply refinement. Review whether #27120 [executing] supersedes it, then approve or reject. Next action: reconcile_ideas([27065,27120,27126]).
-4. #27123 [blocked] — llm_touching_excluded deploy gate held idea #27123 (runs 344425/344423). Decide: exclude override or split into non-LLM-touching patch. Human-only decision needed on the gate policy.
-5. EXECUTOR RECONCILIATION (the unresolved doctor request) — reconcile the 550 vs 1,085 approved+idle discrepancy: SELECT COUNT(*) FROM orchestrator_ideas WHERE status='approved' AND dev_stage='idle'; then re-check executor_deploy_gates / orchestrator_execution_log to explain why zero builds ran in the last hour despite approved backlog. If the AUTO_DEPLOY_GATE holds (regression_risk_review, llm_touching_excluded) are the true bottleneck, that means the queue is NOT starving — it is gate-blocked; the fix is gate policy, not priority flags. (human-only decision on gate policy — no idea filed yet this window)
-6. Watch executor throughput on the 73 promoted Jon/Cori ideas over the next 48h (human-only decision - no idea)
-
-Reference IDs:
-- Ideas filed this window: none new; #27126 [executing] was filed + promoted in the prior window
-- Ideas touched: #27120 [executing] (requeued), #27065 [proposed], #27123 [blocked]
-- Ticket: 25927 (TKT-20260817-FF50EAD5) res
-```
-
-### `1787014473253` — 8/17/2026, 6:20:07 PM PT — 120 turns
-
-**Original task:**
-
-```
-Check /emtskills - slow as hell again check emtskills slowness document on desktop. please durably resolve. Append rixes to the page place in bug ligrary. teach Kaizon to fix to avoid recurrence and make Kazon able to act on it.
-```
-
-**Ideas referenced:** #14777, #19370, #19522, #21667, #21712, #23133, #23378, #2342, #23945, #23952, #23954, #24026, #25045, #2521, #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #26710, #26725 [proposed], #6768, #9465
-
-**Last PICKUP PROMPT:**
-
-```
-sh -n all clean, guard exit 0.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — /emtskills slowness durable fix (agents-pool canary starvation), Aug 17 2026.
-
-Where we left off (verified 2026-08-17 18:19 PT):
-- All 5 fixes applied, reloaded, and verified: stats_api off agents pool (both nginx files), agents pool dynamic 100, ticket_autospec 75/90s, Mailer Timeout 30, guard single-curl + saturation check.
-- Canary 20/20 HTTP 200 live; agents pool dynamic/20, max children reached 0. nginx -t / php-fpm -t / php -l / bash -n all clean.
-- Records: bug #16 (frankenstein_bug_library, resolved), recipe #444 (failure_repair_recipes), kaizen_recipes row for target emsu-portal-health-guard.
-- Full writeup appended to /Users/rubenmajor/Desktop/emtskills-slowness.md (Aug 17 section); HANDOFF_NOTES.md + cline_task_ledger.md updated.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-- None — all work completed this session. If a future "slow as hell" alert says http=000, the first check is whether stats_api is back in the AGENT_POOL regex (it must stay on www) and the second is `fpm-status-agents` active vs pm.max_children; both are covered by recipe #444 + the guard's new saturation WARN.
-
-Reference IDs:
-- Bug library: frankenstein_bug_library #16 [deployed]
-- Repair recipe: failure_repair_recipes #444 [deployed]
-- kaizen_recipes: target_slug `emsu-portal-health-guard` / `agents_pool_saturation_starves_canary`
-- Files touched: /etc/nginx/sites-enabled/emtskills, /var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf, /etc/php/8.3/fpm/pool.d/agents.conf, /var/www/emtskills/api/ticket_autospec.php, /var/www/emtskills/src/Mail/Mailer.php, /usr/local/bin/emsu-portal-health-guard.sh, /Users/rubenmajor/Desktop/emtskills-slowness.md, /var/www/emtskills/docs/HANDOFF_NOTES.md, /Users/rubenmajor/Desktop/cline_task_ledger.md
-- Backups: *.bak-20260817-1806 (nginx x2, agents.conf, Mailer.php, ticket_autospec.php), emsu-portal-health-guard.sh.bak-20260817-1813
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```

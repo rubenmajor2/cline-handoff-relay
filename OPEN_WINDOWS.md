@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/20/2026, 7:12:21 PM PT | window: last 72h | 85 tasks | index total 878 (parsed 0, cached 878)
+Generated: 8/20/2026, 10:32:56 PM PT | window: last 72h | 82 tasks | index total 878 (parsed 0, cached 878)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -92,9 +92,6 @@ Generated: 8/20/2026, 7:12:21 PM PT | window: last 72h | 85 tasks | index total 
 | `1787035094427` | 8/17/2026, 11:41:55 PM | 20 | 106KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
 | `1787032033318` | 8/17/2026, 10:47:13 PM | 1 | 16KB | #TDSHS  |
 | `1787003799738` | 8/17/2026, 10:38:27 PM | 762 | 2712KB | #TDSHS |
-| `1787024184393` | 8/17/2026, 9:11:28 PM | 206 | 453KB | #Big Mac 4th GPU |
-| `1787022593417` | 8/17/2026, 8:35:20 PM | 125 | 266KB | #Big Mac 4th GPU |
-| `1787019164930` | 8/17/2026, 8:04:28 PM | 238 | 1066KB | #Big Mac 4th GPU |
 
 ---
 
@@ -3764,68 +3761,5 @@ Insp
 ```
 
 **Ideas referenced:** #1509, #15299, #178695, #19580, #19581, #2003, #22757, #23361, #24430, #25185, #25650, #25653, #25654, #25655, #2601, #27072 [deployed], #27073 [awaiting_review], #27100 [executing], #27107 [executing], #27108 [executing], #27112 [proposed], #27114 [proposed], #27116 [proposed], #27121 [proposed], #27124 [proposed], #27125 [proposed], #27127 [proposed], #27148 [unknown], #27153 [unknown], #2757, #2838, #2875, #2876, #2887, #4856, #4929, #664426, #9086, #9168, #9306, #9339
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787024184393` — 8/17/2026, 9:11:28 PM PT — 206 turns
-
-**Original task:**
-
-```
-#Big Mac 4th GPU
-
-Tech is powercycling it now:
-
-Answering your question directly: no, the UniFi Dream Machine is not banning it, and neither is Imunify360. Both are cleared with positive evidence, and the fault is on Big Mac itself.
-
-## The MAC and IP you asked for
-
-Yes, "ubuntu 56 ca" is Big Mac. **MAC 30:56:0f:47:56:ca**, UniFi client hostname `ubuntu` (verified: fresh WOPR ARP returned `192.168.1.208 dev eno1 lladdr 30:56:0f:47:56:ca`, and the UDM's own `ip neigh` returned `192.168.1.208 dev br0 lladdr 30:56:0f:47:56:ca REACHABLE`). And you were right that the IP had not changed: **192.168.
-```
-
-**Ideas referenced:** #178669, #178694, #1875, #18977, #19082 [executing], #19524 [awaiting_review], #2297, #25097 [awaiting_review], #2563 [deployed], #26209 [rejected], #26211 [rejected], #26238 [rejected], #27137 [executing], #27140 [executing], #27142 [executing], #27143 [proposed], #27144, #27145 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787022593417` — 8/17/2026, 8:35:20 PM PT — 125 turns
-
-**Original task:**
-
-```
-#Big Mac 4th GPU
-
-Get the 4th GPU up and running now
-
-# You're right, and that kills my leading theory
-
-75W in through a SATA-fed 6-pin means the card was never power-starved. I reasoned from the generic M.2 form-factor power budget instead of from what is actually cabled in your machine, and aux power delivery is invisible to lspci and sysfs, so no probe I ran could have caught me. That one is on me. Causal rule 297 amended so the next window has to establish what is physically connected before blaming a supply, or say plainly that it cannot see the cabling.
-
-## I also killed the reset theory
-```
-
-**Ideas referenced:** #178669, #178694, #18977, #19082 [unknown], #19490, #19524 [approved], #232326, #25097 [awaiting_review], #25112, #2562, #26209 [rejected], #26211 [rejected], #26238 [rejected], #26923, #27137 [awaiting_review], #27140 [executing], #27142 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787019164930` — 8/17/2026, 8:04:28 PM PT — 238 turns
-
-**Original task:**
-
-```
-#Big Mac 4th GPU
-
-I don't like the options here. Try again. Consult the bug library with dynmic seaching as well as the Intel Community. You really need to access the INtel Community to get the answers. 
-
-No that sounds asinine -> The tech also turned on the PCIe bifucation in Bios. 
-
---
-# Boot #14 verdict: FA3h flash took, but still 3 GPUs. And the reseat result tells us something important.
-
-**Live probes 19:01-19:02 PT:**
-- BIOS: **FA3h, dated 07/09/2026** (verified: dmidecode on box). The flash worked, the year-newer AGESA (1.0.0.1a to 1.0.0.1g) is live.
-- GPUs: **still 3 Battlemage** (ver
-```
-
-**Ideas referenced:** #0000, #178669, #178694, #25097 [executing], #25185, #2541, #2542, #2557, #2558, #2559, #2560, #26209 [proposed], #26211 [executing], #26238 [proposed], #27137 [awaiting_review], #27140 [executing], #313131
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

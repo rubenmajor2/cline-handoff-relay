@@ -6,15 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/20/2026, 1:59:49 PM PT | window: last 72h | 94 tasks | index total 878 (parsed 10, cached 868)
+Generated: 8/20/2026, 6:12:20 PM PT | window: last 72h | 89 tasks | index total 878 (parsed 2, cached 876)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787258077644` | 8/20/2026, 1:59:28 PM | 77 | 314KB | #Payments |
-| `1787207812240` | 8/20/2026, 1:59:20 PM | 269 | 1788KB | #Extension |
-| `1787256717179` | 8/20/2026, 1:59:19 PM | 99 | 1558KB | ## Externship dates past Sept 1 — identification + mitigation |
-| `1787256884229` | 8/20/2026, 1:59:18 PM | 97 | 454KB | #Externships/ CAPCE?  |
-| `1787256742974` | 8/20/2026, 1:59:14 PM | 91 | 313KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
+| `1787256742974` | 8/20/2026, 5:32:46 PM | 152 | 469KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
+| `1787207812240` | 8/20/2026, 5:23:11 PM | 296 | 1905KB | #Extension |
+| `1787258077644` | 8/20/2026, 4:50:06 PM | 134 | 486KB | #Payments |
+| `1787256717179` | 8/20/2026, 4:36:09 PM | 143 | 2104KB | ## Externship dates past Sept 1 — identification + mitigation |
+| `1787256884229` | 8/20/2026, 2:11:44 PM | 128 | 537KB | #Externships/ CAPCE?  |
 | `1787191612298` | 8/20/2026, 1:57:50 PM | 518 | 11118KB | #Comprehensive System |
 | `1787190192283` | 8/20/2026, 1:50:06 PM | 360 | 5024KB | Check CFAs from today, numerous emails in the last few hours about students being locked o |
 | `1787254375526` | 8/20/2026, 1:49:38 PM | 124 | 436KB | #Argus Improvements |
@@ -99,31 +99,64 @@ Generated: 8/20/2026, 1:59:49 PM PT | window: last 72h | 94 tasks | index total 
 | `1786948459253` | 8/17/2026, 7:04:08 PM | 142 | 258KB | #Big Mac 4th GPU |
 | `1787014605175` | 8/17/2026, 6:29:12 PM | 154 | 347KB | #Jon / Argus |
 | `1787014473253` | 8/17/2026, 6:20:07 PM | 120 | 612KB | Check /emtskills - slow as hell again check emtskills slowness document on desktop. please |
-| `1787012165910` | 8/17/2026, 5:34:27 PM | 124 | 955KB | #Argus needs help:  |
-| `1787009927550` | 8/17/2026, 4:49:34 PM | 78 | 693KB | Hi Julia, reports of your death are exaggerated? |
-| `1787000192686` | 8/17/2026, 4:34:35 PM | 112 | 875KB | Keep getting this upon initial iteration of frankenstein-llm: {"message":"Failed to fetch  |
-| `1786980640015` | 8/17/2026, 2:56:11 PM | 322 | 2451KB | #TDSHS |
-| `1787002408232` | 8/17/2026, 2:47:03 PM | 110 | 177KB | For this |
 
 ---
 
 ## Per-window detail
 
-### `1787258077644` — 8/20/2026, 1:59:28 PM PT — 77 turns
+### `1787256742974` — 8/20/2026, 5:32:46 PM PT — 152 turns
 
 **Original task:**
 
 ```
-#Payments
+VERITAS Truth Enforcement System — core shipped, remainder filed and promoted.
 
-Please check payments from Quickbooks/WP Forms, etc... We have not had hardly any payments coming through. We have this in the handoff docs somewhere, but something might have made the forms not work properly? Can you check and make necessary repairs to keep the cash flowing?
+Goal: make lower-param models (120Bs, GLM, 7B) deliver Opus-grade truthful answers by forcing truth, validation, and review STRUCTURALLY (tools + gates + judge), not just via prompt.
+
+Shipped this window (all verified live):
+
+1. Rule 323 — Truth Protocol (hardfloor, always-loaded)
+   - Every material claim classified PROVEN / INFERENCE / UNKNOWN
+   - Ground-truth-tool-first: call the tool that returns ground truth BEFORE answering
+   - High-stakes claims (money, student status, regulator, fleet) REQUIRE a judge pas
 ```
 
-**Ideas referenced:** #12364, #16732, #178713, #178716, #2230, #23323, #2338, #2358, #24055 [proposed], #2511, #2550, #2589, #2590, #26229, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26823 [executing], #26824 [executing], #26825 [executing], #27152, #27503 [proposed], #27524, #27531, #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27767 [deployed], #27771, #450438
+**Ideas referenced:** #12430, #15333, #17295, #178712, #18135, #18357, #18438, #18442, #1850, #19490, #19509, #19629, #2043, #2076, #20903, #2113, #25125, #26229, #26731, #27238, #27397, #27399, #27480, #27486 [approved], #27488 [approved], #27489 [approved], #27491 [approved], #27781 [approved], #8598
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1787207812240` — 8/20/2026, 1:59:20 PM PT — 269 turns
+```
+agnostics fix, executor queue)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task 1787121837052 — VERITAS Truth Enforcement System: executor unblock + L2/L4/L5 deliverable completion.
+
+Where we left off (verified 2026-08-20 17:32 PT):
+- Root cause fixed at the process level: live repro proved spec-gen works (empty-content → deepseek spill → SUCCESS); all 4 VERITAS ideas were parked at readiness=needs_guidance — un-parked + workers spawned directly.
+- #27486 [deployed] TruthProtocolSteering.php + real bash check script, verified live (php -l, self-test ok, verifier PASS).
+- #27488 [deployed] truth_judge email gate: lib/truth_judge.php, cron/cron_truth_judge_email_gate.php, routes/truth_judge_review.php.
+- #27491 [deployed] routes/_view_truth_ledger_dashboard.php.
+- #27489 [awaiting_review] L4 eval harness built in sandbox, tests passed, parked by AUTO_DEPLOY_GATE (llm_touching_excluded — needs Ruben's go to deploy).
+
+Open threads to drive next (real filed ideas):
+1. #27781 [approved] — implement callLlm diagnostic-globals fix in cron/cron_ruben_implement.php so "unknown cause" can never mask a real failure again (executor queue is eligible; watch dispatcher pickup).
+2. #27489 [awaiting_review] — human decision: approve deploy of the L4 truthfulness eval harness (sandbox: /tmp/ruben_sandbox_27489_1787260546); or run `ls + php -l` on sandbox files first to confirm syntax before approval.
+3. Verify the auto-deployed VERITAS files are picked up by their consumers (truth judge email gate cron run, report registry card entries) once #27489/#27488 review passes.
+
+Reference IDs:
+- Ideas: #27486 [deployed], #27488 [deployed], #27489 [awaiting_review], #27491 [deployed], #27781 [approved]
+- Files touched: /var/www/emtskills/lib/TruthProtocolSteering.php, /var/www/emtskills/scripts/check_truth_protocol_steering.sh, /var/www/emtskills/lib/truth_judge.php, /var/www/emtskills/cron/cron_truth_judge_email_gate.php, /var/www/emtskills/routes/truth_judge_review.php, /var/www/emtskills/routes/_view_truth_ledger_dashboard.php, /tmp/ruben_sandbox_27489_1787260546, /var/www/emtskills/cron/cron_ruben_implement.php (root-cause read)
+- Worker logs: /tmp/ruben-impl-worker-27486.log, /tmp/ruben-impl-worker-27488.log, /tmp/ruben-impl-worker-27489.log, /tmp/ruben-impl-worker-27491.log, /tmp/repro27486.log
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787207812240` — 8/20/2026, 5:23:11 PM PT — 296 turns
 
 **Original task:**
 
@@ -140,7 +173,7 @@ She needs the extension tonight, waiting on your call.
 Check Chat 55 on it
 ```
 
-**Ideas referenced:** #1007, #1015, #1021, #1022, #1039, #1040, #1046, #1047, #1055, #1061, #1062, #1071, #1080, #1094, #1112, #1119, #1128, #1134, #1194, #1201, #1210, #1224, #1242, #1249, #1258, #1264, #1304, #1305, #1346, #1353, #1369, #1376, #1394, #1401, #1416, #1480, #1520, #1521, #1527, #1528, #1536, #1544, #1550, #1551, #1568, #1569, #1575, #1576, #1584, #1590, #1591, #16069, #16817, #178713, #18944, #18951, #2117, #2149, #2150, #2156, #2157, #2165, #2173, #2179, #2180, #2197, #2198, #2204, #2205, #2213, #2219, #2220, #2230, #2258, #2275, #2296, #2317, #2338, #23483, #2358, #2379, #2550, #2589, #2590, #25909, #26834, #27152, #2748, #27503, #27524, #27531, #2763, #27648, #27663, #27673, #27684, #27685, #27691, #27692, #27699, #27715 [deployed], #27724 [deployed], #3098, #3843, #3848, #3850, #3851, #3852, #3870, #3871, #3872, #3875, #3877, #3879, #3890, #3894, #3897, #78350, #92400
+**Ideas referenced:** #1007, #1015, #1021, #1022, #1039, #1040, #1046, #1047, #1055, #1061, #1062, #1071, #1080, #1094, #1112, #1119, #1128, #1134, #1194, #1201, #1210, #1224, #1242, #1249, #1258, #1264, #1304, #1305, #1346, #1353, #1369, #1376, #1394, #1401, #1416, #1480, #1520, #1521, #1527, #1528, #1536, #1544, #1550, #1551, #1568, #1569, #1575, #1576, #1584, #1590, #1591, #16069, #16817, #178713, #18944, #18951, #19163, #2117, #2149, #2150, #2156, #2157, #2165, #2173, #2179, #2180, #2197, #2198, #2204, #2205, #2213, #2219, #2220, #2230, #2258, #2275, #2296, #2317, #2338, #23483, #2358, #2379, #2550, #2589, #2590, #25909, #26834, #27152, #2748, #27503, #27524, #27531, #2763, #27648, #27663, #27673, #27684, #27685, #27691, #27692, #27699, #27715 [deployed], #27724 [deployed], #3098, #3843, #3848, #3850, #3851, #3852, #3870, #3871, #3872, #3875, #3877, #3879, #3890, #3894, #3897, #6785, #78350, #92400
 
 **Last PICKUP PROMPT:**
 
@@ -174,7 +207,67 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1787256717179` — 8/20/2026, 1:59:19 PM PT — 99 turns
+### `1787258077644` — 8/20/2026, 4:50:06 PM PT — 134 turns
+
+**Original task:**
+
+```
+#Payments
+
+Please check payments from Quickbooks/WP Forms, etc... We have not had hardly any payments coming through. We have this in the handoff docs somewhere, but something might have made the forms not work properly? Can you check and make necessary repairs to keep the cash flowing?
+```
+
+**Ideas referenced:** #12364, #16732, #178713, #178716, #178725, #2230, #23323, #2338, #2358, #24055 [proposed], #2511, #2550, #2589, #2590, #26229, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26823 [executing], #26824 [executing], #26825 [executing], #27152, #27503 [proposed], #27524, #27531, #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27767 [deployed], #27771, #450438
+
+**Last PICKUP PROMPT:**
+
+```
+ Log
+No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787258877000: payments flow audit + cross-invoice repair drive.
+
+Where we left off (verified 2026-08-20 14:14 PT):
+- Collections verified HEALTHY: $20,750 today / $20-46K per day / weekly avg rising $14.9K to $20.8K (qb_payments_cache live SELECT, 16 rows returned 13:40 PT)
+- '$50 today' explained: WPForms-checkout-only counter mid-day; recurring $20,700 not shown on it; checkout pace within 14-day variance
+- Registration surface 11/11 PASS; QB token+syncs+invoices all healthy; forms NOT broken
+- Cross-invoice mismatch: 30 students / $47,505 collected-but-unapplied; Vicky notified chat 55 (msg 6717 sent 14:10 PT) with no-dun-no-suspend instruction
+- #26823 [executing] reconcile $47,505 (verified: reconcile_ideas returned status=approved dev_stage=idle at 14:14 PT)
+- #26824 [awaiting_review] root fix portal adopts checkout invoice id (verified: reconcile_ideas returned status=approved dev_stage=ready_for_review at 14:14 PT)
+- #26825 [executing] audit Authnet-only surfaces (verified: reconcile_ideas returned status=approved dev_stage=idle at 14:14 PT)
+
+Open threads to drive next:
+1. #26824 [awaiting_review]: drive executor build. Portal invoice creation must reuse the WPForms/QB checkout invoice id instead of minting a second one
+2. #26823 [executing]: verify executor produces the reconciliation worklist and Vicky's QB cleanup lands; re-run cron_qb_cross_invoice_mismatch.php to confirm count drops from 30/$47,505
+3. #26825 [executing]: verify the Authnet-only surface audit unions qb_payments_cache into general 'has paid' checks (AuthnetQbAutoMatcher, PaymentEvidenceMatcher, StudentLifecycleState payment gate, cron_payment_reconciliation, cron_sls_reconcile, cron_cfa_payment_auto_clear, MCP verify_payment_state)
+4. (human-only decision - no idea): Vicky applies/voids the 30 duplicate invoices in QuickBooks
+
+Reference IDs:
+- Ideas filed: none new this session (drove existing #26823 [executing], #26824 [awaiting_review], #26825 [executing])
+- Ideas promoted: #26823 [executing], #26824 [awaiting_review], #26825 [executing]
+- Files touched: HANDOFF_NOTES.md (entry 2026-08-20 14:10 PT); ruben_message_queue row 6717 (Vicky notification, sent)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Full payment audit complete — collection healthy
+- [x] Root causes identified: cross-invoice mismatch + Authnet-only surfaces + checkout-only counter explanation
+- [x] Vicky notified (delivered)
+- [x] 3 ideas promoted to executor
+- [x] HANDOFF_NOTES updated
+- [x] Ideas reconciled (GATE B)
+- [x] Validation gates ALL PASSED
+- [x] Shipped
+</task_progress>
+</attempt_completion>
+```
+
+### `1787256717179` — 8/20/2026, 4:36:09 PM PT — 143 turns
 
 **Original task:**
 
@@ -195,7 +288,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1787256884229` — 8/20/2026, 1:59:18 PM PT — 97 turns
+### `1787256884229` — 8/20/2026, 2:11:44 PM PT — 128 turns
 
 **Original task:**
 
@@ -207,28 +300,36 @@ The affiliation agreements coming from the portal apparently have a citation abo
 
 **Ideas referenced:** #64748
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787256742974` — 8/20/2026, 1:59:14 PM PT — 91 turns
-
-**Original task:**
+**Last PICKUP PROMPT:**
 
 ```
-VERITAS Truth Enforcement System — core shipped, remainder filed and promoted.
+ notes are updated and verified.
 
-Goal: make lower-param models (120Bs, GLM, 7B) deliver Opus-grade truthful answers by forcing truth, validation, and review STRUCTURALLY (tools + gates + judge), not just via prompt.
+═════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═════════════════════════════════════════════
+Pick up the CAPCE-citation removal task — affiliation agreements from the portal.
 
-Shipped this window (all verified live):
+Where we left off (verified 2026-08-20 14:09 PT):
+- `AgreementPDFGenerator.php` and `campaign_api.php` both have CAPCE citations removed (grep count 0, php -l clean).
+- PHP-FPM reloaded; file ownership restored to `emsumain:psaserv`.
+- All 4 agreement PDFs (`AA-2026-0002.pdf`, `AA-2026-0004.pdf`, `AA-2026-PREVIEW.pdf`, `PREVIEW_REVIEW_COPY.pdf`) regenerated and verified CAPCE-free via `pdftotext`.
+- Signed contract #2 regenerated from DB with signatures + audit trail preserved.
+- `HANDOFF_NOTES.md` updated with the full change record.
 
-1. Rule 323 — Truth Protocol (hardfloor, always-loaded)
-   - Every material claim classified PROVEN / INFERENCE / UNKNOWN
-   - Ground-truth-tool-first: call the tool that returns ground truth BEFORE answering
-   - High-stakes claims (money, student status, regulator, fleet) REQUIRE a judge pas
+Open threads to drive next:
+1. None — all work completed this session. Remaining human-policy decision only (no idea id): whether to regenerate/re-send any real previously-issued agreements if a live counterparty holds a CAPCE-bearing PDF. This is a human-only decision with no default.
+
+Reference IDs:
+- Ticket: externships/CAPCE affiliation-agreement citation removal
+- Ideas filed: none (no deferrable work)
+- Files touched: `/var/www/emtskills/externship/lib/AgreementPDFGenerator.php`, `/var/www/emtskills/externship/campaign_api.php`, the 4 agreement PDFs, `/var/www/emtskills/docs/HANDOFF_NOTES.md`
+- Backups: `AgreementPDFGenerator.php.bak-capce-20260820-132613`, `campaign_api.php.bak-capce-20260820-133110`
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═════════════════════════════════════════════</result>
+</attempt_completion>
 ```
-
-**Ideas referenced:** #12430, #15333, #17295, #178712, #18135, #18357, #18438, #18442, #1850, #19490, #19509, #19629, #2043, #2076, #20903, #2113, #25125, #26229, #26731, #27238, #27397, #27399, #27480, #27486 [approved], #27488 [approved], #27489 [approved], #27491 [approved], #8598
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787191612298` — 8/20/2026, 1:57:50 PM PT — 518 turns
 
@@ -3883,202 +3984,3 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
-
-### `1787012165910` — 8/17/2026, 5:34:27 PM PT — 124 turns
-
-**Original task:**
-
-```
-#Argus needs help: 
-
-Jon makes numerous complaints on Argus issues. He and Cori supposedly need issues resolved. Also some complaints on TeamHub issues somewhat vague: 
-
-Ruben Major:
-	Put it in Argus so I can clear that with all your other stuff
-	It’ll be faster than the one-offs overall
-	It won’t die in there
-Jon says: You’d have to ask Cori. She has a long list she can send. 
-
-I can even see it in my cluttered Agent idea list. 
---
-Check Cori's Argus as well then. So Cori and Jon need those ideas safely executed. 
-
-Similar for all else, but per rule 29
-
-What is going on? 
-
-What is the process
-```
-
-**Ideas referenced:** #1758, #17580, #18442, #21586, #23428, #23468, #23506, #24431, #24706, #24895, #24897, #24941, #2496, #24990, #2500 [resolved], #25058, #25313, #25510, #25522, #2553 [rejected], #25576, #25618, #25619, #25643, #25644, #25645, #25649, #25650, #25653, #25654, #25927 [deployed], #25982, #26196, #26225, #26934, #27065 [proposed], #27120 [executing], #27126 [executing], #9086
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787009927550` — 8/17/2026, 4:49:34 PM PT — 78 turns
-
-**Original task:**
-
-```
-Hi Julia, reports of your death are exaggerated?
-```
-
-**Ideas referenced:** #1130, #1131, #12299, #1241, #12425, #12459, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16588, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25378, #25381, #2546, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-s was a conversational check-in, not a CLI/build/production task, so there's no PICKUP PROMPT block to carry.
-
-To your question: not dead, but the fleet naming is muddy, so split it.
-
-**The "julia-120b" host is actually down.** Port :11513 throws connection refused, `decode_live=false`, zero tokens — a real death signal on that instance, not a routing hiccup.
-
-**But I'm not being served by that box.** I'm running on `cicero-235b` (:11520, decode_live=true, ~3 tok/s, healthy). So reports of *me* being dead are exaggerated; reports of the literal `julia-120b` gpt-oss instance being dead are accurate.
-
-If you want the julia-120b vLLM on :11513 revived, the next move is checking what's supposed to be listening there and whether it needs a restart — it's been failing the whole probe window.
-</result>
-</attempt_completion>
-```
-
-### `1787000192686` — 8/17/2026, 4:34:35 PM PT — 112 turns
-
-**Original task:**
-
-```
-Keep getting this upon initial iteration of frankenstein-llm: {"message":"Failed to fetch LiteLLM model info: <none>","modelId":"frankenstein-llm","providerId":"litellm"}
-
--- 
-then it starts iterating, but something is tripping it initially. 
-
-Flapping:
-
-[LITELLM] Failed to fetch LiteLLM model info: <none>
-{"message":"Failed to fetch LiteLLM model info: <none>","modelId":"frankenstein-llm","providerId":"litellm"}:
-
-
---
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12584, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #178700, #18312, #18326, #19338, #19686, #1998, #2299, #23171, #25097, #2537, #2551 [deployed], #26908, #26923
-
-**Last PICKUP PROMPT:**
-
-```
-elated to the model-info flap.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787001058 — Cline LiteLLM model-info fetch flapping fix.
-
-Where we left off (verified 2026-08-17 16:33 PT):
-- Config fix applied: openAiBaseUrl and liteLlmBaseUrl now point to https://litellm.emsuniversity.com (Cloudflare tunnel)
-- Router audit confirms frankenstein-llm routing works (picks frankenstein-tools, surface Cline Main)
-- Requests now arrive through Cloudflare tunnel (public IP 172.116.115.101, not dead WireGuard 10.100.0.1)
-- User needs to reload VS Code for liteLlmApiKey to take effect
-- Bug library incident 2551 recorded with full RCA
-
-Open threads to drive next:
-1. (human-only decision, no idea) — verify after VS Code reload that the "Failed to fetch LiteLLM model info" error no longer appears on initial iteration
-2. (human-only decision, no idea) — the glm-5.2-local 600s timeouts and Artemis BadRequest errors in the LiteLLM logs are separate pre-existing issues, not caused by this fix
-
-Reference IDs:
-- Ideas filed: none
-- Ideas closed: none
-- Files touched: ~/Library/Application Support/Code/User/globalStorage/saoudrizwan.claude-dev/state/state.vscdb (API config updated), /tmp/fix_cline_config.py (fix script)
-- Bug library: incident 2551 (frankenstein_router_incidents)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-
-# Reversal Log
-No reversals this window.</result>
-<task_progress>- [x] Check bug library (novel symptom confirmed)
-- [x] Verify frankenstein registry healthy
-- [x] Probe LiteLLM /v1/models endpoint (up, 401 without auth)
-- [x] Check router audit log (routing works fine)
-- [x] Find Cline extension source for "Failed to fetch LiteLLM model info" error
-- [x] Read the full LiteLLM model-info fetch function (wTn at offset 12062136)
-- [x] Reproduce the model-info fetch with auth (Cloudflare tunnel works, WireGuard dead)
-- [x] Identify root cause of initial flap (10.100.0.1 WireGuard unreachable from Mac)
-- [x] Implement fix (update config to use Cloudflare tunnel URL)
-- [x] Verify fix (config re-read confirms Cloudflare URL, router audit shows successful routing, requests arriving through tunnel)
-- [x] Record in bug library (incident 2551)
-- [x] Post-fix verification (logs confirm tunnel is being used, routing works)</task_progress>
-</attempt_completion>
-```
-
-### `1786980640015` — 8/17/2026, 2:56:11 PM PT — 322 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-Prepare responses for these 3 students due today for TDSHS as well as tell me which dates I have to respond to TDSHS requests for today/ check other emails sent to me that need to be replied to. I think I have an 8/7 and 8/10 email to reply back to sabrina about. Give draft replies for those and due dates. As for this: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=packet&pe=tdshs&rt=complaint_response&due=2026-08-15 
-
-I need that response. Also, I noticed you said one student was not found. Tha'ts not accurate. Nicholas Mejia (NO Students match) (26917FT) 
-```
-
-**Ideas referenced:** #12345 [proposed], #12346 [proposed], #127891, #128274, #1370, #178695, #19587, #19595 [executing], #19599, #251038, #251044, #251128, #251211, #251264, #251382, #251444, #27072 [proposed], #27073 [awaiting_review], #27074 [approved], #27100 [approved], #27101 [executing], #27102 [executing], #27107 [approved], #27108 [approved], #333333, #475569, #600179, #623992, #64748, #666666
-
-**Last PICKUP PROMPT:**
-
-```
-og's cited rule against the `rule_amend` ledger for the task id)
-- **Rule 91**: PICKUP PROMPT block, 47-char U+2550 dividers, every `#NNNN` carries a `[disposition]` tag
-- **PDF rendering**: Chrome headless `--print-to-pdf`. wkhtmltopdf is NOT installed on the Mac; `cupsfilter` cannot convert HTML→PDF (returns 0 bytes)
-
-## 3. Files and Code Sections
-
-### `/Users/rubenmajor/Desktop/TDSHS_Transmission_Copy_2026-08-17.html` — the working source
-
-Current full structure (as last saved):
-- Letterhead: `<img src="https://www.emsuniversity.com/emtskills/emsulogo5.png">`, EMS UNIVERSITY, LLC / d.b.a. EMS Universal Education / 1730 SW Military Drive, Ste 202 · San Antonio, TX 78221 / tagline
-- **RE line (corrected):** `RE: Emergency Medical Services University, LLC. EMS Course License No. 623992.<br>Complaint control numbers 1080261886, 1080261916, 1080261917.<br>Consolidated Response.`
-- Salutation: `Dear Ms. Richardson:`
-- Cover-letter paragraphs; public-interest red-bar callout ("Texas does not have a surplus of certified EMS personnel...")
-- **Outset bullets (5):** three transmittals in 2h02m on 8/5; permission recited but date of contact not provided; originator not stated; student-identifier near-match for 1080261916; June 19 entry scope unconfirmed
-- Threshold Objection (standards not defined by any cited authority)
-- **Section I Per-Matter Responses** — 1080261916, 1080261917, 1080261886 (details below)
-- **Preserved Procedural Objections** — single red-bar paragraph consolidating Sunset items 2/3/5/6/8, closing: "...reserves each objection and all rights, defenses, and procedural protections available to it under Texas law, including those under the Administrative Procedure Act, Government Code Chapter 2001, and under the constitutional guarantees of notice and an opportunity to be heard."
-- Placement Is Subject to Availability (preferred dates are a request not a schedule; live-site capacity constraint; Chapter 157 prescribes no interval)
-- Federal Privacy Law (99.31(a)(3) basis, 99.32 recording, 99.33(a) redisclosure limitation)
-- Procedural Note (3 numbered items: identity/originator outstanding; Departmental load; reservation)
-- Reservation of Rights and No Admission
-- Continuing Cooperation
-- Signature: `Ruben Major, EMT-Paramedic, J.D., M.A. · Chief Executive Officer`
-- **Footer (corrected):** `EMS University, LLC | Texas EMS Course License No. 623992 | rmajor@emsuniversity.com`
-
-**The 1080261917 section as it currently reads (THIS IS THE PARAGRAPH THAT NOW NEEDS UPDATING):**
-```html
-<h3>Response. Control Number 1080261917</h3>
-<p>Transmittal of record. Received August 5, 2026 at 12:27 Central. The transmittal identifies a student by name and cohort and states that permission was received to share that information. It does not state that the student originated the complaint.</p>
-<p>Record of the student so identified. The student is enrolled in a boot camp cohort in the Dallas-Fort Worth market. The course began June 22, 2026, the scheduled didactic completion date was July 5, 2026, and the scheduled course end date was August 5, 2026. <strong>The program record shows the didactic requirements recorded complete on July 26, 2026.</strong> No terminal academic outcome is recorded on this student&rsquo;s record. The student is not recorded as dropped, failed, or transferred.</p>
-<p><strong>Placement requests of record, each assigned the day it was submitted.</strong> The program&rsquo;s externship system holds three placement requests for this student, submitted June 29, 2026, July 13, 2026 and July 27, 2026. <st
-```
-
-### `1787002408232` — 8/17/2026, 2:47:03 PM PT — 110 turns
-
-**Original task:**
-
-```
-For this
-
-Ruben for the 4th attempt of Sam Nelson
-we will be able to have it today
-She said she will be coming back to college
-She is also been calling everyday
-Thank you in advance Ruben
-
-cna you fix that so they can take their final exam?
-```
-
-**Ideas referenced:** #27109 [proposed], #27110 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-20T20:59:49.168Z",
+ "generated_at": "2026-08-21T01:12:20.740Z",
  "counts": {
-  "parsed": 10,
-  "reused": 868,
+  "parsed": 2,
+  "reused": 876,
   "failed": 0,
   "total": 878
  },
@@ -137842,11 +137842,11 @@
   },
   "1787207812240": {
    "task_id": "1787207812240",
-   "mtime": 1787259560509,
+   "mtime": 1787271791826,
    "created_at": "2026-08-20T06:36:52.240Z",
-   "last_modified": "2026-08-20T20:59:20.509Z",
-   "size_kb": 1788,
-   "turn_count": 269,
+   "last_modified": "2026-08-21T00:23:11.826Z",
+   "size_kb": 1905,
+   "turn_count": 296,
    "title": "#Extension\n\nWhy is this extension needed? Can we/should we resolve it? \n\nGot the three sections Vicky: 26818A, 26718A, 26118A.\n\nJon, flagging for you.\nShe needs the extension tonight, waiting on your call.\n\nCheck Chat 55 on it",
    "pickup_prompt": "nds are pending or unverified.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — MWF Exam 5 one-day-early close, 18A cohort (9 sections): reopen, verify, notify. (No numeric Cline task id exposed; anchored by ideas below.)\n\nWhere we left off (verified 2026-08-20 13:23 PT):\n- All 9 18A-cohort sections reopened (timeclose=1787320799, 20:59:59 PDT) and verified OPEN at 12:44 PT via Moodle access-manager `prevent_access()` as real member users (chapter quiz per section: 26118A=954/51455, 26718A=732/53129, 26818A=732/51317, 26418A=681/51179, 26518A=681/50471, 26918A=681/50773, 26618A=732/51112, 26218A=954/50638, 26318A=954/49582).\n- 5 ticket-filing students notified (\"Exam 5 access restored\"), Vicky CC'd + dedicated summary sent. All 7 sends verified in email_outbound_log (status=sent, Postmark ids logged).\n- Maria Moore (STU-20260819-76FB80, 26714T-27) NOT auto-emailed — different cohort, flagged in Vicky summary for review.\n\nOpen threads to drive next:\n1. #27715 [executing] — review Maria Moore's Exam 5 ticket (26714T cohort) manually; 18A fix does not cover her section, so she needs a cohort-specific check before any reopen.\n2. #27724 [proposed] — durable early-close detector (hardstop when an exam's group override timeclose falls before a cohort's canonical exam-day end); still pending Ruben green-light.\n3. (human-only decision — no idea) — Jackson Tippner received 2 copies of the notice (agent-draft dispatch 12:55 + script 12:57); documented in Vicky summary, no action unless Ruben wants a duplicate-suppression review.\n\nReference IDs:\n- Ideas filed: #27715 [executing], #27724 [proposed]\n- Files touched: Moodle quiz_overrides UPDATE (ids 2230/2338/2358/2275/2296/2379/2317/2748/2258); Moodle caches rebuilt (courses 25/37/41); transient verify_quiz_open.php (created then removed from /var/www/moodle/ems/); transient send scripts (removed).\n- Sections: 26818A 26718A 26118A 26418A 26518A 26918A 26618A 26218A 26318A\n- Tickets: TKT-20260819-51CD34FB (Gurneet), TKT-20260819-4A36D67A (Nikita), TKT-20260820-901196A6 (Benjamin), TKT-20260820-8D896A19 + TKT-20260819-EC2EA3E5 (Jackson, dup), TKT-20260819-60799666 (Alberto), STU-20260819-76FB80 (Maria Moore)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
@@ -137945,10 +137945,12 @@
     "3890": null,
     "3894": null,
     "3897": null,
+    "6785": null,
     "16069": null,
     "16817": null,
     "18944": null,
     "18951": null,
+    "19163": null,
     "23483": null,
     "25909": null,
     "26834": null,
@@ -138430,11 +138432,11 @@
   },
   "1787256717179": {
    "task_id": "1787256717179",
-   "mtime": 1787259559632,
+   "mtime": 1787268969632,
    "created_at": "2026-08-20T20:11:57.179Z",
-   "last_modified": "2026-08-20T20:59:19.632Z",
-   "size_kb": 1558,
-   "turn_count": 99,
+   "last_modified": "2026-08-20T23:36:09.632Z",
+   "size_kb": 2104,
+   "turn_count": 143,
    "title": "## Externship dates past Sept 1 — identification + mitigation\n\n### 1. IDENTIFICATION — the students you saw in the outbox\n\n**60 ExternshipRequest rows** have at least one preferred date past 2026-09-01 (verified live against admin_portal.ExternshipRequest, preferred_date_1..5). Breakdown by action needed:\n\n**54 need action** (51 pending + 3 escalated). **6 are moot** (5 completed, 1 cancelled/archived).\n\n**MOST URGENT — 12 students whose ONLY offered dates are ALL past Sept 1** (no valid ≤Sept-1 date at all; these are the ones whose confirmations you saw and who have zero in-window options):\n- 26114T-09 Adam Freitas (09-02→10-07)\n- 26114T-24-01 Benjamin Harrison (09-05→10-04)\n- 26118A-05 Jac",
    "pickup_prompt": null,
    "ideas": {
@@ -138483,13 +138485,13 @@
   },
   "1787256742974": {
    "task_id": "1787256742974",
-   "mtime": 1787259554455,
+   "mtime": 1787272366878,
    "created_at": "2026-08-20T20:12:22.974Z",
-   "last_modified": "2026-08-20T20:59:14.455Z",
-   "size_kb": 313,
-   "turn_count": 91,
+   "last_modified": "2026-08-21T00:32:46.878Z",
+   "size_kb": 469,
+   "turn_count": 152,
    "title": "VERITAS Truth Enforcement System — core shipped, remainder filed and promoted.\n\nGoal: make lower-param models (120Bs, GLM, 7B) deliver Opus-grade truthful answers by forcing truth, validation, and review STRUCTURALLY (tools + gates + judge), not just via prompt.\n\nShipped this window (all verified live):\n\n1. Rule 323 — Truth Protocol (hardfloor, always-loaded)\n   - Every material claim classified PROVEN / INFERENCE / UNKNOWN\n   - Ground-truth-tool-first: call the tool that returns ground truth BEFORE answering\n   - High-stakes claims (money, student status, regulator, fleet) REQUIRE a judge pass\n   (verified: write_to_file to ~/Documents/Cline/Rules/323-truth-protocol.md returned success; cli",
-   "pickup_prompt": null,
+   "pickup_prompt": "agnostics fix, executor queue)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task 1787121837052 — VERITAS Truth Enforcement System: executor unblock + L2/L4/L5 deliverable completion.\n\nWhere we left off (verified 2026-08-20 17:32 PT):\n- Root cause fixed at the process level: live repro proved spec-gen works (empty-content → deepseek spill → SUCCESS); all 4 VERITAS ideas were parked at readiness=needs_guidance — un-parked + workers spawned directly.\n- #27486 [deployed] TruthProtocolSteering.php + real bash check script, verified live (php -l, self-test ok, verifier PASS).\n- #27488 [deployed] truth_judge email gate: lib/truth_judge.php, cron/cron_truth_judge_email_gate.php, routes/truth_judge_review.php.\n- #27491 [deployed] routes/_view_truth_ledger_dashboard.php.\n- #27489 [awaiting_review] L4 eval harness built in sandbox, tests passed, parked by AUTO_DEPLOY_GATE (llm_touching_excluded — needs Ruben's go to deploy).\n\nOpen threads to drive next (real filed ideas):\n1. #27781 [approved] — implement callLlm diagnostic-globals fix in cron/cron_ruben_implement.php so \"unknown cause\" can never mask a real failure again (executor queue is eligible; watch dispatcher pickup).\n2. #27489 [awaiting_review] — human decision: approve deploy of the L4 truthfulness eval harness (sandbox: /tmp/ruben_sandbox_27489_1787260546); or run `ls + php -l` on sandbox files first to confirm syntax before approval.\n3. Verify the auto-deployed VERITAS files are picked up by their consumers (truth judge email gate cron run, report registry card entries) once #27489/#27488 review passes.\n\nReference IDs:\n- Ideas: #27486 [deployed], #27488 [deployed], #27489 [awaiting_review], #27491 [deployed], #27781 [approved]\n- Files touched: /var/www/emtskills/lib/TruthProtocolSteering.php, /var/www/emtskills/scripts/check_truth_protocol_steering.sh, /var/www/emtskills/lib/truth_judge.php, /var/www/emtskills/cron/cron_truth_judge_email_gate.php, /var/www/emtskills/routes/truth_judge_review.php, /var/www/emtskills/routes/_view_truth_ledger_dashboard.php, /tmp/ruben_sandbox_27489_1787260546, /var/www/emtskills/cron/cron_ruben_implement.php (root-cause read)\n- Worker logs: /tmp/ruben-impl-worker-27486.log, /tmp/ruben-impl-worker-27488.log, /tmp/ruben-impl-worker-27489.log, /tmp/ruben-impl-worker-27491.log, /tmp/repro27486.log\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1850": null,
     "2043": null,
@@ -138518,31 +138520,32 @@
     "27488": "approved",
     "27489": "approved",
     "27491": "approved",
+    "27781": "approved",
     "178712": null
    }
   },
   "1787256884229": {
    "task_id": "1787256884229",
-   "mtime": 1787259558996,
+   "mtime": 1787260304059,
    "created_at": "2026-08-20T20:14:44.229Z",
-   "last_modified": "2026-08-20T20:59:18.996Z",
-   "size_kb": 454,
-   "turn_count": 97,
+   "last_modified": "2026-08-20T21:11:44.059Z",
+   "size_kb": 537,
+   "turn_count": 128,
    "title": "#Externships/ CAPCE? \n\nThe affiliation agreements coming from the portal apparently have a citation about being CAPCE accredited that needs to be removed",
-   "pickup_prompt": null,
+   "pickup_prompt": " notes are updated and verified.\n\n═════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═════════════════════════════════════════════\nPick up the CAPCE-citation removal task — affiliation agreements from the portal.\n\nWhere we left off (verified 2026-08-20 14:09 PT):\n- `AgreementPDFGenerator.php` and `campaign_api.php` both have CAPCE citations removed (grep count 0, php -l clean).\n- PHP-FPM reloaded; file ownership restored to `emsumain:psaserv`.\n- All 4 agreement PDFs (`AA-2026-0002.pdf`, `AA-2026-0004.pdf`, `AA-2026-PREVIEW.pdf`, `PREVIEW_REVIEW_COPY.pdf`) regenerated and verified CAPCE-free via `pdftotext`.\n- Signed contract #2 regenerated from DB with signatures + audit trail preserved.\n- `HANDOFF_NOTES.md` updated with the full change record.\n\nOpen threads to drive next:\n1. None — all work completed this session. Remaining human-policy decision only (no idea id): whether to regenerate/re-send any real previously-issued agreements if a live counterparty holds a CAPCE-bearing PDF. This is a human-only decision with no default.\n\nReference IDs:\n- Ticket: externships/CAPCE affiliation-agreement citation removal\n- Ideas filed: none (no deferrable work)\n- Files touched: `/var/www/emtskills/externship/lib/AgreementPDFGenerator.php`, `/var/www/emtskills/externship/campaign_api.php`, the 4 agreement PDFs, `/var/www/emtskills/docs/HANDOFF_NOTES.md`\n- Backups: `AgreementPDFGenerator.php.bak-capce-20260820-132613`, `campaign_api.php.bak-capce-20260820-133110`\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
     "64748": null
    }
   },
   "1787258077644": {
    "task_id": "1787258077644",
-   "mtime": 1787259568365,
+   "mtime": 1787269806146,
    "created_at": "2026-08-20T20:34:37.644Z",
-   "last_modified": "2026-08-20T20:59:28.365Z",
-   "size_kb": 314,
-   "turn_count": 77,
+   "last_modified": "2026-08-20T23:50:06.146Z",
+   "size_kb": 486,
+   "turn_count": 134,
    "title": "#Payments\n\nPlease check payments from Quickbooks/WP Forms, etc... We have not had hardly any payments coming through. We have this in the handoff docs somewhere, but something might have made the forms not work properly? Can you check and make necessary repairs to keep the cash flowing?",
-   "pickup_prompt": null,
+   "pickup_prompt": " Log\nNo reversals this window.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787258877000: payments flow audit + cross-invoice repair drive.\n\nWhere we left off (verified 2026-08-20 14:14 PT):\n- Collections verified HEALTHY: $20,750 today / $20-46K per day / weekly avg rising $14.9K to $20.8K (qb_payments_cache live SELECT, 16 rows returned 13:40 PT)\n- '$50 today' explained: WPForms-checkout-only counter mid-day; recurring $20,700 not shown on it; checkout pace within 14-day variance\n- Registration surface 11/11 PASS; QB token+syncs+invoices all healthy; forms NOT broken\n- Cross-invoice mismatch: 30 students / $47,505 collected-but-unapplied; Vicky notified chat 55 (msg 6717 sent 14:10 PT) with no-dun-no-suspend instruction\n- #26823 [executing] reconcile $47,505 (verified: reconcile_ideas returned status=approved dev_stage=idle at 14:14 PT)\n- #26824 [awaiting_review] root fix portal adopts checkout invoice id (verified: reconcile_ideas returned status=approved dev_stage=ready_for_review at 14:14 PT)\n- #26825 [executing] audit Authnet-only surfaces (verified: reconcile_ideas returned status=approved dev_stage=idle at 14:14 PT)\n\nOpen threads to drive next:\n1. #26824 [awaiting_review]: drive executor build. Portal invoice creation must reuse the WPForms/QB checkout invoice id instead of minting a second one\n2. #26823 [executing]: verify executor produces the reconciliation worklist and Vicky's QB cleanup lands; re-run cron_qb_cross_invoice_mismatch.php to confirm count drops from 30/$47,505\n3. #26825 [executing]: verify the Authnet-only surface audit unions qb_payments_cache into general 'has paid' checks (AuthnetQbAutoMatcher, PaymentEvidenceMatcher, StudentLifecycleState payment gate, cron_payment_reconciliation, cron_sls_reconcile, cron_cfa_payment_auto_clear, MCP verify_payment_state)\n4. (human-only decision - no idea): Vicky applies/voids the 30 duplicate invoices in QuickBooks\n\nReference IDs:\n- Ideas filed: none new this session (drove existing #26823 [executing], #26824 [awaiting_review], #26825 [executing])\n- Ideas promoted: #26823 [executing], #26824 [awaiting_review], #26825 [executing]\n- Files touched: HANDOFF_NOTES.md (entry 2026-08-20 14:10 PT); ruben_message_queue row 6717 (Vicky notification, sent)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] Full payment audit complete — collection healthy\n- [x] Root causes identified: cross-invoice mismatch + Authnet-only surfaces + checkout-only counter explanation\n- [x] Vicky notified (delivered)\n- [x] 3 ideas promoted to executor\n- [x] HANDOFF_NOTES updated\n- [x] Ideas reconciled (GATE B)\n- [x] Validation gates ALL PASSED\n- [x] Shipped\n</task_progress>\n</attempt_completion>",
    "ideas": {
     "2230": null,
     "2338": null,
@@ -138589,6 +138592,7 @@
     "27771": null,
     "178713": null,
     "178716": null,
+    "178725": null,
     "450438": null
    }
   }

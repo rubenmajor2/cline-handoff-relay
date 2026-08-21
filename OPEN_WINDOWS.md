@@ -6,20 +6,21 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/21/2026, 11:40:13 AM PT | window: last 72h | 77 tasks | index total 880 (parsed 5, cached 875)
+Generated: 8/21/2026, 3:46:09 PM PT | window: last 72h | 74 tasks | index total 881 (parsed 6, cached 875)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787191612298` | 8/21/2026, 11:39:48 AM | 719 | 15646KB | #Comprehensive System |
-| `1787256742974` | 8/21/2026, 11:37:49 AM | 388 | 2625KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
+| `1787256742974` | 8/21/2026, 3:46:06 PM | 425 | 3249KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
+| `1787256717179` | 8/21/2026, 3:45:55 PM | 175 | 2413KB | ## Externship dates past Sept 1 — identification + mitigation |
+| `1787349230620` | 8/21/2026, 3:45:26 PM | 71 | 174KB | #San Mateo County EMSA |
+| `1787191612298` | 8/21/2026, 3:44:22 PM | 755 | 17486KB | #Comprehensive System |
+| `1787327963594` | 8/21/2026, 3:39:04 PM | 106 | 464KB | #Julia |
+| `1787329580892` | 8/21/2026, 3:33:49 PM | 156 | 464KB | #Executor |
 | `1787258077644` | 8/21/2026, 11:29:40 AM | 288 | 3416KB | #Payments |
-| `1787329580892` | 8/21/2026, 11:28:22 AM | 146 | 440KB | #Executor |
 | `1787254375526` | 8/21/2026, 11:27:22 AM | 190 | 568KB | #Argus Improvements |
 | `1787207812240` | 8/21/2026, 9:50:40 AM | 406 | 2495KB | #Extension |
-| `1787327963594` | 8/21/2026, 9:47:53 AM | 84 | 389KB | #Julia |
 | `1787256884229` | 8/21/2026, 9:32:00 AM | 152 | 618KB | #Externships/ CAPCE?  |
 | `1787190192283` | 8/21/2026, 9:09:28 AM | 398 | 5694KB | Check CFAs from today, numerous emails in the last few hours about students being locked o |
-| `1787256717179` | 8/20/2026, 4:36:09 PM | 143 | 2104KB | ## Externship dates past Sept 1 — identification + mitigation |
 | `1787168789833` | 8/20/2026, 1:45:32 PM | 1682 | 9200KB | #Julia/Claudia 235B |
 | `1787253842481` | 8/20/2026, 1:38:22 PM | 100 | 1824KB | #Big Mac |
 | `1787183842548` | 8/20/2026, 1:06:45 PM | 494 | 4519KB | Chat Widget does not appear to be responding to inquires. Can you check, test and resolve? |
@@ -83,48 +84,12 @@ Generated: 8/21/2026, 11:40:13 AM PT | window: last 72h | 77 tasks | index total
 | `1787096428156` | 8/18/2026, 4:56:26 PM | 174 | 399KB | Getting {"message":"Connection error.","modelId":"glm-5.3","providerId":"zai"} |
 | `1787073073602` | 8/18/2026, 4:03:58 PM | 628 | 5679KB | # GLM 5.3: |
 | `1787090950949` | 8/18/2026, 4:03:29 PM | 200 | 465KB | #Argus |
-| `1787081272363` | 8/18/2026, 3:36:27 PM | 100 | 21842KB | Please add GLM 5.3 (Cloud) to my list of models here to choose from in cline under the API |
-| `1786993543586` | 8/18/2026, 1:58:07 PM | 406 | 2529KB | Our Staff Keycards were all deactivated and students/staff were locked out of our building |
-| `1787083132087` | 8/18/2026, 12:58:58 PM | 2 | 2KB | Are you alive |
-| `1787081426639` | 8/18/2026, 12:47:43 PM | 24 | 176KB | What would it take to turn Big Mac into a powerhouse center for GLM 5.2? How many ARC Batt |
 
 ---
 
 ## Per-window detail
 
-### `1787191612298` — 8/21/2026, 11:39:48 AM PT — 719 turns
-
-**Original task:**
-
-```
-#Comprehensive System
-
-I don't really know how to quantify this, but our system is so comprehenive and complex. I wonder how frankenstein-llm can keep track of all of it better? I mean a lot of repair requests and information are difficult to find, and sometimes CFAs fail, sometimes Argus fails, and sometimes even Cline fails. The failrus seem too often. Why is everything so complex? Whatt do we do on all this to help resolve untruths better?
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12364, #12477, #12618, #12824, #12872, #12878, #13047, #13202, #13437, #16163, #16265, #16304, #16844, #178713, #178716, #178724, #178725, #17913, #1793, #18312, #18326, #21667, #2316, #25097, #25185, #2524, #2525, #2537, #26229, #26591, #26696, #26908, #26923, #27100, #27259, #27395, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27634 [deployed], #27635 [executing], #27640 [deployed], #27646, #27647 [proposed], #27659 [proposed], #27660 [rejected], #27661 [proposed], #27662 [proposed], #27675 [proposed], #27677 [proposed], #27680 [proposed], #27681 [proposed], #27690 [proposed], #27698 [proposed], #27767 [proposed], #27771 [deployed], #27773 [proposed], #27774 [proposed], #277773, #5197, #5431, #5574, #7174, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-isk + reindexed, confirmed)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #27773 [deployed] — Ops Truth system: keep frankenstein-llm-scale complexity honest.\n\nWhere we left off (verified 2026-08-21 11:35 PT):\n- Ops Truth Dashboard #27771 [deployed] live at routes/ops_truth_dashboard.php (auth-gated, php -l clean)\n- Ops Truth Watchdog #27773 [deployed] runs ok:true, persists ops_truth_daily, cron daily 06:00 emsuserver\n- Auto-repair cron #27774 [deployed] at cron/cron_ops_truth_repair.php\n- Today snapshot: total_flagged=1086, claimed_no_deploy=24, parked=1062, errors_24h=9443, flagged_today=2, hist_rows=0\n- Reversal fixed + rule 317 amended (whoami before user-scoped destructive crontab edits)\n\nOpen threads to drive next:\n1. #27773 [deployed] - in ~7 days, confirm errors_24h spike alert arms (needs >=7 baseline snapshots); then investigate the 9,443 errors/24h signal\n2. #27771 [deployed] - wire the dashboard link into HANDOFF_NOTES / Argus so it is the first stop for 'what is broken' queries\n\nReference IDs:\n- Ideas filed: #27771 [deployed], #27773 [deployed], #27774 [deployed]\n- Ideas closed: none\n- Files touched: routes/ops_truth_dashboard.php, cron/cron_ops_truth_watchdog.php, cron/cron_ops_truth_repair.php, emsuserver crontab (line 62), Rules/317 (amendment)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════",
-  "task_prompt": "Our system is so comprehensive and complex. How can frankenstein-llm keep track of all of it better? Repair requests and information are difficult to find, sometimes CFAs fail, sometimes Argus fails, sometimes even Cline fails. The failures seem too often. Why is everything so complex? What do we do on all this to help resolve untruths better?"
-}</arguments>
-<task_progress>
-- [x] Shipped #27771/#27773/#27774 (all deployed + gate-clear)
-- [x] REVERSAL fixed: restored watchdog to emsuserver crontab (line 62)
-- [x] Recorded rule-317 amendment (whoami before user-scoped destructive edits)
-- [x] Re-ran watchdog: ok:true; snapshot persisted in ops_truth_daily
-- [x] Dashboard lints clean + renders (auth-gated 401, no fatal)
-- [x] Reconciled ideas = all [deployed]
-- [ ] Pre-validate completion (task-line + bracket fix)
-- [ ] check_gate CLEAR
-- [ ] Deliver attempt_completion
-</task_progress>
-</use_mcp_tool>
-```
-
-### `1787256742974` — 8/21/2026, 11:37:49 AM PT — 388 turns
+### `1787256742974` — 8/21/2026, 3:46:06 PM PT — 425 turns
 
 **Original task:**
 
@@ -141,7 +106,7 @@ Shipped this window (all verified live):
    - High-stakes claims (money, student status, regulator, fleet) REQUIRE a judge pas
 ```
 
-**Ideas referenced:** #12430, #12459, #15333, #17295, #178712, #18135, #18357, #18438, #18442, #1850, #19490, #19509, #19629, #2043, #2076, #20903, #2113, #25125, #25185, #26229, #26731, #26848, #27238, #27397, #27399, #27480, #27486 [approved], #27488 [approved], #27489 [approved], #27491 [approved], #27635, #27781 [approved], #27807 [proposed], #27808 [proposed], #27809 [deployed], #27810 [deployed], #27811 [deployed], #8598
+**Ideas referenced:** #12430, #12459, #15333, #17295, #178712, #18135, #18357, #18438, #18442, #1850, #19490, #19509, #19629, #2043, #2076, #20903, #2113, #25125, #25185, #26229, #26696, #26731, #26848, #27238, #27397, #27399, #27480, #27486 [approved], #27488 [approved], #27489 [approved], #27491 [approved], #27635, #27781 [approved], #27807 [proposed], #27808 [proposed], #27809 [deployed], #27810 [deployed], #27811 [deployed], #8598
 
 **Last PICKUP PROMPT:**
 
@@ -184,6 +149,235 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Validate: ALL PASSED (3 passes, identity echo confirmed)
 - [x] Gate file: CLEAR
 - [x] Shipped via attempt_completion
+</task_progress>
+</attempt_completion>
+```
+
+### `1787256717179` — 8/21/2026, 3:45:55 PM PT — 175 turns
+
+**Original task:**
+
+```
+## Externship dates past Sept 1 — identification + mitigation
+
+### 1. IDENTIFICATION — the students you saw in the outbox
+
+**60 ExternshipRequest rows** have at least one preferred date past 2026-09-01 (verified live against admin_portal.ExternshipRequest, preferred_date_1..5). Breakdown by action needed:
+
+**54 need action** (51 pending + 3 escalated). **6 are moot** (5 completed, 1 cancelled/archived).
+
+**MOST URGENT — 12 students whose ONLY offered dates are ALL past Sept 1** (no valid ≤Sept-1 date at all; these are the ones whose confirmations you saw and who have zero in-window options):
+-
+```
+
+**Ideas referenced:** #178649, #178713, #198754, #2230, #2338, #2358, #2550, #25821, #25822 [deployed], #25889 [awaiting_review], #2589, #2590, #25916 [awaiting_review], #25950 [awaiting_review], #25973 [awaiting_review], #26002 [awaiting_review], #26027 [awaiting_review], #26066, #26067 [deployed], #26071 [executing], #26089 [deployed], #26663 [awaiting_review], #27152, #27490 [proposed], #27492 [proposed], #27503 [proposed], #27524, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27767 [deployed], #27832, #28584, #5447
+
+**Last PICKUP PROMPT:**
+
+```
+ile all ideas + HANDOFF_NOTES + ledger
+- [ ] Order 66 + rule-91 completion with PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1787349230620` — 8/21/2026, 3:45:26 PM PT — 71 turns
+
+**Original task:**
+
+```
+#San Mateo County EMSA
+
+San Mateo EMSA sent a message to jthompson and program director matt rios demanding now an inspection of records snce January 2025. 
+
+I think the inspection is / can be objected to due to on the basis of the recency of the complaint/investigation as well as short notice of less than 3 business days notice
+
+See/Log: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
+
+See: 
+
+2:19
+2 Messages
+ヘ
+く
+CH
+From: Chad Henry >
+To: Matt Rios ›
+Cc: Jonathan Thompson > HS_EMS_Investigations_SM
+Susie Castoria ›
+Today at 12:06 PM
+ACTION REQUIRE
+```
+
+**Ideas referenced:** #25636 [proposed], #25637 [proposed], #25638 [proposed], #25639 [proposed], #27521, #27830 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787191612298` — 8/21/2026, 3:44:22 PM PT — 755 turns
+
+**Original task:**
+
+```
+#Comprehensive System
+
+I don't really know how to quantify this, but our system is so comprehenive and complex. I wonder how frankenstein-llm can keep track of all of it better? I mean a lot of repair requests and information are difficult to find, and sometimes CFAs fail, sometimes Argus fails, and sometimes even Cline fails. The failrus seem too often. Why is everything so complex? Whatt do we do on all this to help resolve untruths better?
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12364, #12477, #12618, #12824, #12872, #12878, #13047, #13202, #13437, #16163, #16265, #16304, #16844, #178713, #178716, #178724, #178725, #17913, #1793, #18312, #18326, #21667, #2316, #25097, #25185, #2524, #2525, #2537, #26229, #26591, #26696, #26908, #26923, #27100, #27259, #27395, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27634 [deployed], #27635 [executing], #27640 [deployed], #27646, #27647 [proposed], #27659 [proposed], #27660 [rejected], #27661 [proposed], #27662 [proposed], #27675 [proposed], #27677 [proposed], #27680 [proposed], #27681 [proposed], #27690 [proposed], #27698 [proposed], #27767 [proposed], #27771 [deployed], #27773 [proposed], #27774 [proposed], #277773, #27831 [executing], #5197, #5431, #5574, #7174, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+ via clinerules_amend_rule)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #27773 [deployed] - ops-truth watchdog auto-follow-up (baseline arming + errors breakdown)\n\nWhere we left off (verified 2026-08-21 15:34 PT):\n- Watchdog v1.2.0 deployed at cron/cron_ops_truth_watchdog.php (backup + PHP lint OK + FPM reload), re-ran clean ok:true\n- Baseline self-arms at >=7 daily snapshots (OTW_MIN_HIST_ROWS=7, hist_rows=0 today); flagged-creation spike uses fixed backtested threshold 264\n- Spike events now carry top-N error-source breakdown (top_errors payload + render_hint + critical-tier email to Ruben)\n- orphan_cron_audit = 6,611 of 9,443 warning+ events in 24h (70%) -> #27831 [executing] filed to investigate the real-vs-noise split\n- claimed_no_deploy drifting up (24->110 in ~4h); #27774 [deployed] auto-repair cron normalizes these daily\n\nOpen threads to drive next:\n1. #27831 [executing] - investigate the orphan_cron_audit real-vs-noise split and drive a resolution (target: it drops out of the top error source within 48h)\n2. #27774 [deployed] - monitor: confirm the auto-repair cron clears the 110-row claimed_no_deploy backlog on its next run\n3. #27771 [deployed] - Ops Truth Dashboard live; errors-spike self-arms once 7 snapshots accumulate (~2026-08-28)\n\nReference IDs:\n- Ideas filed: #27831 [executing]\n- Ideas closed: #27771 [deployed], #27773 [deployed], #27774 [deployed]\n- Files touched: cron/cron_ops_truth_watchdog.php\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════",
+  "task_prompt": "make sure the cron handles the baseline arming and the errors follow-up automatically"
+}</arguments>
+<task_progress>
+- [x] Shipped #27771/#27773/#27774 (all deployed + gate-clear)
+- [x] REVERSAL fixed: restored watchdog to emsuserver crontab (line 62)
+- [x] Rule-317 amendment recorded
+- [x] Watchdog runs ok:true; snapshot persisted
+- [x] Dashboard verified; ideas reconciled [deployed]
+- [x] Delivered completion (rule-91 gate clear)
+- [x] NEW: user wants cron to auto-handle baseline-arming + errors follow-up
+- [x] Read watchdog: baseline-arming ALREADY automatic (self-arms >=7); spike alerts but was NOT actionable
+- [x] Breakdown: 6,611 of 9,443 errors = orphan_cron_audit (one noisy source, 70%)
+- [x] Wrote v1.2.0 enhanced watchdog (top-error breakdown in spike event + email)
+- [x] Deployed: backup + lint OK + FPM reload
+- [x] Ran once: ok:true, breakdown fn loads clean; baseline self-arms (hist_rows=0)
+- [x] Filed follow-up idea #27831 for orphan_cron_audit flood
+- [x] Promoted #27831 to executor (in_progress)
+- [x] Reconciled all ideas (3 deployed, 1 executing)
+- [x] Generated rule-91 block; fixed bare #27773
+- [x] Confirmed #27831 title had "fix" stem; renamed it (1 row)
+- [ ] Re-validate (expect contradiction gate clear now)
+- [ ] Check gate + deliver
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1787327963594` — 8/21/2026, 3:39:04 PM PT — 106 turns
+
+**Original task:**
+
+```
+#Julia
+
+Did Julia/Claudia come back online? 
+
+Do not mess with other boxes. Read to be safe:
+
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
+
+
+Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
+
+## Where 671 came from, and it is now durable
+
+Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.
+
+
+Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, 
+```
+
+**Ideas referenced:** #1130, #1131, #11945, #1241, #12425, #12459, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #1779, #178732, #1798, #1828, #19567, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #22584, #2294, #2299, #2307, #2314, #23169, #24217, #25378, #25381, #2546, #2550, #2571, #2573, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #2579, #25812, #2589, #2592, #26209, #26284 [executing], #26400, #26403, #26922 [deployed], #26927 [deployed], #26932, #27236, #27249 [executing], #27250, #27259, #27271, #27447, #27494, #27503, #27508, #27514, #27515, #27524, #27531, #27663, #27673, #27684, #27685, #27692, #27702, #27711, #27722, #46862, #6826, #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+.
+
+Want me to set up Option A?
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787328000000 — Claudia model selection for serving.
+
+Where we left off (verified 2026-08-21 15:38 PT):
+- Julia L2-dark, needs physical power cycle (Ruben back in ~1 week)
+- Claudia UP, clean, 0 vLLM processes
+- 235B NVFP4 on disk (125GB) but 8K context = batch-only, not a serving lane
+- gpt-oss-120b on disk (122GB, complete) — proven model
+- No mid-size models on disk (would need download)
+- Current 120B federation: Artemis, BigMac, Julia (dark), GLM ring
+- Recommended: Option A — launch 120B on Claudia, add to federation upstreams
+- Awaiting Ruben decision on A/B/C
+
+Open threads to drive next:
+1. Ruben picks option (A: 120B lane, B: download mid-size, C: leave idle)
+2. If A: launch gpt-oss-120b on Claudia :8000, add to FRANK_TOOLS_UPSTREAMS
+3. Julia physical power cycle when Ruben returns (human-only decision — no idea)
+
+Reference IDs:
+- Ideas filed: none this session
+- Files touched: docs/CLAUDIA_235B_LAUNCH_PLAN.md (created, may need update based on decision)
+- Key config: /etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-remove-dead-julia-rung.conf
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Julia confirmed L2-dark, Claudia confirmed UP and clean
+- [x] 235B NVFP4 on Claudia but 8K context too small for real serving
+- [x] No mid-size models on Claudia's disk
+- [x] Checked 120B federation: Artemis, BigMac, Julia (dark), GLM ring
+- [x] Presented 3 options: A) 120B lane (recommended), B) download mid-size, C) leave idle
+- [ ] Await Ruben's decision
+</task_progress>
+</attempt_completion>
+```
+
+### `1787329580892` — 8/21/2026, 3:33:49 PM PT — 156 turns
+
+**Original task:**
+
+```
+#Executor
+
+Can you check the executor and make sure it's working properly. If not take appropriate action to et it working and drain the backlog ideas safely. For example see this task -> __The one thing I'd genuinely flag as "how is it doing" beyond Argus itself:__ the executor silent-ghost pattern. #27734 has been approved since 2:28 AM yesterday, but the executor chain produced zero execution rows again, and no other window touched the remaining items (grep found no new 27734 markers; argus_task_status.php and the action catalog are unchanged since yesterday). The only reason Argus has its 
+```
+
+**Ideas referenced:** #12184, #17102, #17292, #17295, #178720, #25185, #25426, #2563, #2597 [deployed], #27646 [deployed], #27672 [deployed], #27712 [deployed], #27734 [approved], #27809 [executing], #27810 [executing], #78350, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+ Log
+No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787207812240 — Executor silent-ghost pattern fix and backlog drain.
+
+Where we left off (verified 2026-08-21 15:33 PT):
+- TASK COMPLETE: Executor pipeline repaired and verified working
+- 31 executions since fix, 693 ideas eligible and draining
+- Root cause fix ideas filed and in executor queue
+
+Open threads to drive next:
+1. #27809 [executing] — Fix guidance generator: ideas stuck in needs_guidance with NULL guidance_question (root cause fix)
+2. #27810 [executing] — Auto-clear stale session_handoffs blocking idea re-promotion (root cause fix)
+
+Reference IDs:
+- Ideas filed: #27809 [executing], #27810 [executing]
+- Bug library: incident 2597 (executor_silentghost_pattern_approved_ideas_like)
+- Files touched: none (DB updates only)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Executor silent-ghost pattern diagnosed and fixed (3 blockers cleared)
+- [x] 566 ideas made eligible for promotion (now 693)
+- [x] Root cause fix ideas filed (#27809, #27810)
+- [x] Verify current executor state — autonomous mode, not paused
+- [x] Check if executions are happening since fix — 31 executions since 9:45 AM
+- [x] Check current eligible count — 693 eligible
+- [x] Answer Ruben's status question — explained 1,195 vs 566 discrepancy
+- [x] Confirm task complete
 </task_progress>
 </attempt_completion>
 ```
@@ -243,88 +437,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Completion shipped
 </task_progress>
 </attempt_completion>
-```
-
-### `1787329580892` — 8/21/2026, 11:28:22 AM PT — 146 turns
-
-**Original task:**
-
-```
-#Executor
-
-Can you check the executor and make sure it's working properly. If not take appropriate action to et it working and drain the backlog ideas safely. For example see this task -> __The one thing I'd genuinely flag as "how is it doing" beyond Argus itself:__ the executor silent-ghost pattern. #27734 has been approved since 2:28 AM yesterday, but the executor chain produced zero execution rows again, and no other window touched the remaining items (grep found no new 27734 markers; argus_task_status.php and the action catalog are unchanged since yesterday). The only reason Argus has its 
-```
-
-**Ideas referenced:** #12184, #17102, #17292, #17295, #178720, #25185, #25426, #2563, #2597 [deployed], #27646 [deployed], #27672 [deployed], #27712 [deployed], #27734 [approved], #27809 [executing], #27810 [executing], #78350, #92400
-
-**Last PICKUP PROMPT:**
-
-```
- (verbatim from .clinerules/91)
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787207812240 — Executor silent-ghost pattern fix and backlog drain.
-
-Where we left off (verified 2026-08-21 11:27 PT):
-- Executor pipeline repaired: 3 stacked blockers cleared (phantom needs_guidance 1,332, stale session_handoffs 8,513, stale draft_built_at 1,646)
-- 566 ideas eligible for promotion via promoter query filters
-- Ruben asked why dashboard shows 1,195 backlog vs my 566 - need to investigate the discrepancy
-- The dashboard 'Backlog' count likely counts ALL ideas in approvable statuses without the promoter's filters (ruben_confidence >= 0.85, draft_built_at IS NULL, session_handoffs exclusion)
-- Need to read ruben_executor_live.php to find the backlog query and explain the difference
-
-Open threads to drive next:
-1. #27809 [executing] — Fix guidance generator: ideas stuck in needs_guidance with NULL guidance_question (root cause fix)
-2. #27810 [executing] — Auto-clear stale session_handoffs blocking idea re-promotion (root cause fix)
-3. Investigate backlog count discrepancy (566 vs 1,195) - read ruben_executor_live.php backlog query
-
-Reference IDs:
-- Ideas filed: #27809 [executing], #27810 [executing]
-- Bug library: incident 2597 (executor_silentghost_pattern_approved_ideas_like)
-- Files touched: none (DB updates only)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-
-## Key references
-- Files: routes/ruben_executor_live.php
-- IDs: #27734, #27809, #27810, incident 2597
-
-## Session memory (what's already been done this window)
-- T#01 execute_command(ls /tmp/cline_compress_signal*) → no signal file, GREEN
-- T#02 orchestrator_status() → executor running, autonomous mode enabled
-- T#03 mysql SELECT #27734 → approved, dev_stage=idle, efficiency_priority=1, ruben_confidence=0.86
-- T#04 mysql SELECT eligible count → 0 eligible ideas (ROOT CAUSE FOUND)
-- T#05 mysql SELECT needs_guidance breakdown → 1,332 ideas with NULL guidance_question (phantom state)
-- T#06 mysql UPDATE readiness='ready' WHERE needs_guidance+NULL → 1,332 rows fixed
-- T#07 mysql SELECT session_handoffs blockers → 3,444 resting rows blocking ideas
-- T#08 mysql UPDATE session_handoffs SET idea_id=NULL → 8,513 rows unlinked
-- T#09 mysql SELECT eligible count → still 0 (draft_built_at blocker)
-- T#10 mysql UPDATE draft_built_at=NULL for stale → 1,646 rows reset
-- T#11 mysql SELECT eligible count → 566 ideas now eligible
-- T#12 mysql SELECT #27734 eligibility → passes all filters
-- T#13 bug_library_record() → incident 2597 recorded
-- T#14 update_handoff_notes() → HANDOFF updated
-- T#15 create_idea(27809) + create_idea(27810) → root cause fixes filed
-- T#16 idea_action approve both → approved
-- T#17 reconcile_ideas([27809,27810]) → both [executing]
-- T#18 clinerules_validate_completion → ALL PASSED
-- T#19 clinerules_check_gate → GATE CLEAR
-- T#20 attempt_completion → Done
-- T#21 Ruben feedback: dashboard shows 1,195 backlog, why different?
-- T#22 read_server_file(ruben_executor_live.php, 150 lines) → reading backlog query
-
-## Last 3 turns (verbatim)
-Ruben: I show 1195 here? Why the different wiring? [dashboard screenshot text: Backlog: 1,195 ideas] https://emsuniversity.com/emtskills/routes/ruben_executor_live.php
-
----
-
-Assistant: Context at 84%, need to compress per rule 119
-
----
-
-Tool result: read_server_file returned first 150 lines of ruben_executor_live.php - shows page structure but not the
 ```
 
 ### `1787254375526` — 8/21/2026, 11:27:22 AM PT — 190 turns
@@ -438,76 +550,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1787327963594` — 8/21/2026, 9:47:53 AM PT — 84 turns
-
-**Original task:**
-
-```
-#Julia
-
-Did Julia/Claudia come back online? 
-
-Do not mess with other boxes. Read to be safe:
-
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
-
-## Where 671 came from, and it is now durable
-
-Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.
-
-
-Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, 
-```
-
-**Ideas referenced:** #1130, #1131, #11945, #1241, #12425, #12459, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #1779, #178732, #1798, #1828, #19567, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #22584, #2294, #2299, #2307, #2314, #23169, #24217, #25378, #25381, #2546, #2550, #2571, #2573, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #2579, #25812, #2589, #2592, #26209, #26284 [executing], #26400, #26403, #26922 [deployed], #26927 [deployed], #26932, #27236, #27249 [executing], #27250, #27259, #27271, #27447, #27494, #27503, #27508, #27514, #27515, #27524, #27531, #27663, #27673, #27684, #27685, #27692, #27702, #27711, #27722, #46862, #6826, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-alone serve when she responds.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787328000000 — Julia/Claudia status + Claudia standalone attempt.
-
-Where we left off (verified 2026-08-21 09:47 PT):
-- Julia L2-dark (bug #2571 recurrence): RoCE + LAN + WG all 100% loss, needs physical power cycle
-- Claudia UP: spark-6d51, uptime 1d 2h, GPU idle, 0 vLLM processes (clean state)
-- GLM ring serving: 4 running, decode 12.46 tok/s, topology intact
-- Claudia standalone GLM serve attempted 4x, all failed (attention backend + model arch mismatch)
-- Docker image vllm-node-tf5-glm52-b12x:sm121fix2 is the proven path; needs correct weight mount
-- Custom venv deepseek_v2.py was overwritten by kernel copy (may need restore for future TP=2 work)
-
-Open threads to drive next:
-1. Julia physical power cycle (human-only decision — no idea)
-2. Claudia Docker retry: mount /home/rubenmajor/glm52-awq-15pct at /models/glm52-awq-15pct, serve from /models path (the fix is known)
-3. Restore custom venv deepseek_v2.py if TP=2 work resumes after Julia returns
-
-Reference IDs:
-- Ideas filed: none this session
-- Files touched: ~/.python-vllm-custom kernel files on Claudia (11 .py copies, deepseek_v2.py overwritten)
-- Key docs: GLM52_RING_STATE_TRACKER.md, ~/glm-5.2-gb10/launch.sh on Claudia
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Julia confirmed L2-dark, Claudia confirmed UP
-- [x] Claudia has GB10 GPU idle, 128GB RAM, vLLM 0.17.1+sparkcustom working
-- [x] GLM-5.2 AWQ weights verified: config.json + 83 safetensors at ~/glm52-awq-15pct
-- [x] Multiple launch attempts FAILED: attention backend + model architecture mismatch
-- [x] Kernel copy broke model registry (GlmMoeDsaForCausalLM inspection failed)
-- [x] Cleaned up: 0 vLLM processes on Claudia, box clean
-- [x] Reported honest status with known fix path for Docker retry
-</task_progress>
-</attempt_completion>
-```
-
 ### `1787256884229` — 8/21/2026, 9:32:00 AM PT — 152 turns
 
 **Original task:**
@@ -600,27 +642,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </task_progress>
 </attempt_completion>
 ```
-
-### `1787256717179` — 8/20/2026, 4:36:09 PM PT — 143 turns
-
-**Original task:**
-
-```
-## Externship dates past Sept 1 — identification + mitigation
-
-### 1. IDENTIFICATION — the students you saw in the outbox
-
-**60 ExternshipRequest rows** have at least one preferred date past 2026-09-01 (verified live against admin_portal.ExternshipRequest, preferred_date_1..5). Breakdown by action needed:
-
-**54 need action** (51 pending + 3 escalated). **6 are moot** (5 completed, 1 cancelled/archived).
-
-**MOST URGENT — 12 students whose ONLY offered dates are ALL past Sept 1** (no valid ≤Sept-1 date at all; these are the ones whose confirmations you saw and who have zero in-window options):
--
-```
-
-**Ideas referenced:** #178649, #178713, #198754, #2230, #2338, #2358, #2550, #25821, #25822 [deployed], #25889 [awaiting_review], #2589, #2590, #25916 [awaiting_review], #25950 [awaiting_review], #25973 [awaiting_review], #26002 [awaiting_review], #26027 [awaiting_review], #26066, #26067 [deployed], #26071 [executing], #26089 [deployed], #26663 [awaiting_review], #27152, #27490 [proposed], #27492 [proposed], #27503 [proposed], #27524, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27767 [deployed], #28584, #5447
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787168789833` — 8/20/2026, 1:45:32 PM PT — 1682 turns
 
@@ -3550,146 +3571,3 @@ The executor could not land it: two llm-gate parks, then codegen produced a sche
 **Ideas referenced:** #12504, #178701, #19338, #19458, #19491, #19696, #19717, #20757, #20903, #2113, #23031, #23038, #24145, #24993, #25125, #25185, #25227, #25378, #25513, #25515, #25548, #25556, #25560, #25562, #25570 [executing], #25573, #25577, #25581, #25584, #25602, #25632, #25633, #25635, #25665, #25670, #25671, #25680, #25686, #25708, #25714, #25736, #25739, #25744, #25814, #2588, #25916, #25973, #26080, #26085 [executing], #26124 [blocked], #26174 [executing], #26180 [executing], #26192 [blocked], #26207, #26214, #26322 [blocked], #26357 [awaiting_review], #26424, #26482 [executing], #26498 [executing], #26504 [awaiting_review], #26519 [executing], #26760, #26827 [blocked], #26931 [blocked], #27012, #27088 [awaiting_review], #27120 [deployed], #27126 [deployed], #27136 [deployed], #27143 [awaiting_review], #27149 [deployed], #27163 [deployed], #27180 [deployed], #27195, #27207, #27223, #27237 [executing], #27238 [deployed], #9222, #9235
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787081272363` — 8/18/2026, 3:36:27 PM PT — 100 turns
-
-**Original task:**
-
-```
-Please add GLM 5.3 (Cloud) to my list of models here to choose from in cline under the API Provider Z.AI.
-```
-
-**Ideas referenced:** #0000, #000000, #0033, #0066, #0099, #11629, #16213, #3300, #3333, #333333, #3366, #3399, #6600, #6633, #666666, #9900, #9933
-
-**Last PICKUP PROMPT:**
-
-```
-es correctly before `glm-5.2`.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — add GLM 5.3 (Cloud) to Cline Z.AI provider model dropdown. Work completed.
-
-Where we left off (verified 2026-08-18 15:29 PT):
-- `glm-5.3` added to webview dropdown maps `p6e` (international) + `f6e` (china) in `/Users/rubenmajor/.vscode/extensions/saoudrizwan.claude-dev-4.0.7/webview-ui/build/assets/index.js` — 2 replacements verified
-- `glm-5.3` added to extension client maps `eWr` (international) + `tWr` (china) in `/Users/rubenmajor/.vscode/extensions/saoudrizwan.claude-dev-4.0.7/dist/extension.js` — 2 replacements verified
-- Model id `glm-5.3`, contextWindow 1e6, pricing copied from glm-5.2 (unverified for 5.3)
-- Backups: `dist/extension.js.bak-glm53-20260818-152408`, `webview-ui/build/assets/index.js.bak-glm53-20260818-152408`
-- ACTION NEEDED BY USER: reload VS Code window (Cmd+Shift+P → Reload Window) for the change to take effect
-
-Open threads to drive next:
-None — all work completed this session.
-
-Reference IDs:
-- Ticket: n/a (direct user request)
-- Ideas filed: none
-- Files touched: `/Users/rubenmajor/.vscode/extensions/saoudrizwan.claude-dev-4.0.7/dist/extension.js`, `/Users/rubenmajor/.vscode/extensions/saoudrizwan.claude-dev-4.0.7/webview-ui/build/assets/index.js`
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786993543586` — 8/18/2026, 1:58:07 PM PT — 406 turns
-
-**Original task:**
-
-```
-Our Staff Keycards were all deactivated and students/staff were locked out of our building on Saturday in Houston. There is something weird going on with the landlord and the firemarchall there that doesn't make sense. Anyway It's causing a huge downstream issue with us not having building access on the Weekends or after hours. It's also a violation of the lease. See lease:
-
-https://drive.google.com/drive/home 
-
-Check all emails to/from blackgoldrealty.com in postmark on my email to/from jthompson@emsuniversity.com rmajor@emsuniversity.com cfrench@emsuniversity.com. 
-
-I need a call list. Email
-```
-
-**Ideas referenced:** #0000, #001373, #020381, #0693, #121217, #164023, #171083, #2144, #23282, #249948, #250516, #251038, #251264, #251382, #251428, #251444, #251447, #251450, #251498, #251641, #2528, #26384, #26385, #2643, #26799, #26800, #27098 [proposed], #2874, #313131, #330968, #4721, #55556, #8211
-
-**Last PICKUP PROMPT:**
-
-```
-y the word when you want them.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task BlackGold Realty Houston lockout — alternate space agreed and confirmed in writing, awaiting logistics.
-
-Where we left off (verified 2026-08-18 13:57 PT):
-- RESOLVED FOR NOW: Lafayette verbally agreed AM 8/18 to provide a NEARBY BUILDING for after-hours classes starting Wed 8/19, with keycards, internet, and tables/chairs. Cori (Corinne French) handles logistics.
-- CONFIRMATORY EMAIL SENT ~13:56 PT (logged 9p) to lafayette@ with CC to yousuf@atlasoperating.com, musa@, tenant@blackgoldrealtyllc.com, cfrench@, jthompson@. Memorializes the four commitments, requests five logistics items, and contains silence-equals-agreement language. A/C cost expressly RESERVED, not conceded. Bill-back plan deliberately NOT telegraphed.
-- Earlier 3 AM personal email to Yousuf Chaudhary (logged 9n) appears to be what moved Lafayette. Yousuf is EVP/COO of Atlas Operating and very likely the son of founder Younas Chaudhary, whose memoir "From Dirt Roads to Black Gold" Ruben found in the building lobby and identified with personally.
-- Incident log BLACKGOLD-INCIDENT-LOG.md now 331 lines, sections 1 through 9p.
-- UNRESOLVED: original Suite 700 after-hours access, and the building fire panel replacement (4-6 weeks, whole-building system, landlord obligation). The alternate building is a workaround only.
-- Damage to date: Sat 8/15 relocated to Chinatown at EMSU cost, Sun 8/16 no access, Mon 8/17 class CANCELLED. 75 students, 5 sections, ~$130,725 exposure.
-- Anderson (713-449-8741): LL already pays 7AM-7PM weekday marshal; can add evenings/weekends with ~1 week lead; was wishy-washy on who books it.
-- Contacts: yousuf@atlasoperating.com / +1 713-301-9898. Lafayette 770-363-7199. Musa 832-745-2312. Doug Pack broker 713-818-5782. Atlas: 1900 St. James Place Suite 800 Houston TX 77056, (281) 893-9400.
-- Idea filed: #27098 [proposed].
-
-Open threads to drive next:
-1. #27098 [proposed] — Watch for Lafayette's reply with the building address. No address means the offer was a deflection; escalate to Yousuf citing the written confirmation.
-2. #27098 [proposed] — Physically verify the alternate space BEFORE scheduling students: room capacity, working internet, sufficient tables and chairs for skills instruction. Do not schedule sight unseen.
-3. #27098 [proposed] — Cori to obtain access hours, keycard count and staff-list process, on-site contact, wifi credentials.
-4. #27098 [proposed] — Track every incremental rent charge for the bill-back position; do not raise bill-back with L until invoices arrive.
-5. #27098 [proposed] — Keep pressing separately on Suite 700 after-hours access and the fire panel replacement timeline. The workaround does not cure the lease issue.
-6. #27098 [proposed] — NOT YET BUILT: attorney email to Greg Olson including an opinion on likely recovery amount.
-7. #27098 [proposed] — NOT YET BUILT: portal webpage surfaced as a card link on reports.php, restricted to exec admin and master admin roles.
-8. #27098 [proposed] — Verify August rent payment record with Jon/accounting so ownership cannot recast any of this as tenant default.
-
-Reference IDs:
-- Ticket: none filed (task originated as iMessage directive)
-- Ideas filed: #27098
-- Files touched: /Users/rubenmajor/Desktop/BLACKGOLD-INCIDENT-LOG.md, /Users/rubenmajor/Desktop/blackgold-incident.html, /Users/rubenmajor/Desktop/blackgold-breach-package-20260817.md, /Users/rubenmajor/Desktop/BLACKGOLD-
-```
-
-### `1787083132087` — 8/18/2026, 12:58:58 PM PT — 2 turns
-
-**Original task:**
-
-```
-Are you alive
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787081426639` — 8/18/2026, 12:47:43 PM PT — 24 turns
-
-**Original task:**
-
-```
-What would it take to turn Big Mac into a powerhouse center for GLM 5.2? How many ARC Battleimage B70s would I need to run it fast?
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25378, #25381, #2546, #27226 [proposed], #27231 [proposed], #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-ing (#27226). Filed as #27231.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Big Mac GLM 5.2 build-out + gpt-oss-120b upgrade check (two-part).
-
-Where we left off (verified 2026-08-18 12:47 PT):
-- Big Mac = TRX50-AERO-D, 3x Intel Arc B70 (G31, 31.89 GiB each), serving gpt-oss-120b. GLM 5.2 standalone needs 9-10 B70s across 2-3 linked boards (~90-110 tok/s), or 4 B70s (fill empty slot) for a strong ring slice. Idea #27226.
-- gpt-oss-120b is FROZEN at canonical sha b5c939de (lastModified 2025-08-26); no upgrade exists. Smarts = model swap, not refresh. Julia already on Qwen3-235B-A22B-NVFP4 (2026-08-17). Idea #27231.
-
-Open threads to drive next:
-1. #27226 [proposed] — physically inspect Big Mac's missing 4th B70 slot (seating/power/BIOS) to confirm max cards/board before the 9-10 card plan.
-2. #27226 [proposed] — scope 10x B70 across 2-3 TRX50-class boards (RoCE/NCCL PP-shard) + cost.
-3. #27231 [proposed] — finish Qwen3-235B rollout across the remaining 120B hosts (Artemis/Big Mac) as the fleet smarts lift.
-
-Reference IDs:
-- Ideas filed: #27226 [proposed], #27231 [proposed]
-- Files touched: none (research + idea filing only)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```

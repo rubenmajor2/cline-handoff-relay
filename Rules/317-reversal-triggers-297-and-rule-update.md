@@ -12,7 +12,7 @@ The reversal log collapses to FOUR recurring failure modes, in order of frequenc
 
 - **SELF_CONTRADICTING_DISPOSITION** (dominant: 251 of 280 telemetry failures; the #1 gate blocker). Prose says DONE/FIXED/VERIFIED next to an idea bracket that still says [proposed]/[executing]/[blocked]. Stamp the record first (UPDATE orchestrator_ideas SET status=deployed, then reconcile_ideas), THEN write the claim; or keep the honest bracket. Never write FIXED next to [proposed]. [auto-sync: +5 since 2026-08-19 | latest: Within-window reversal: reconcile_ideas reported #27697 [executing] (status=in_progress) a]
 - **R317_UNVERIFIED_STATE** (24 of 280 telemetry failures). Asserting fleet/routing/pod/model-health or deliverable state from memory without a live probe returning proof. Probe first and quote the result, or label the claim UNVERIFIED. [auto-sync: +40 since 2026-08-19 | latest: 2026-08-20 Big Mac 297: agent probed a CONTAINERIZED vLLM workload with 'journalctl -u big]
-- **INSUFFICIENT_PROBE** (the mechanism behind most amendment case law). One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state. [auto-sync: +43 since 2026-08-19 | latest: 2026-08-20 flicker-catcher deploy: 'RUNNING=1' was reported for a watcher that never start]
+- **INSUFFICIENT_PROBE** (the mechanism behind most amendment case law). One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state. [auto-sync: +44 since 2026-08-19 | latest: Reversal: detector v1-v2 assumed same-format sections share a close date and flagged any p]
 - **SCOPE_ERROR** (completion over-scoped to DONE). Enumerate EVERY visible defect / every deliverable in the set before claiming resolved; the undone ones become open threads with real idea ids, not hidden by a "done" headline. [auto-sync: +12 since 2026-08-19 | latest: 2026-08-19 scope reversal: the original completion said the remaining active suspensions w]
 <!-- golden-rule-table:end -->
 
@@ -114,5 +114,15 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - RCA bucket: insufficient probe
 - Trigger pattern: completion overclaimed multi-part deploy + code INSERT used columns copied from an assumption rather than the live information_schema
 - Reversal note: Within-window reversal: completion claimed 'all 4 parts deployed' while Part B (cfa_failure_dashboard view), the cron_cfa_failure_watchdog.php script, and its cron entry were all missing, and the SMSAIResponder logCfaModelFailure INSERT referenced fictional columns (surface/detail/model_chain_attempted/created_at) instead of the real schema (failure_time/model_attempts/error_message/source_script). Rule now requires: before claiming a multi-part deploy is complete, verify EACH part independently (SELECT from information_schema for tables/views, grep the file for the patched SQL, ls the cron script, crontab -l for the entry) and run a live INSERT through the exact SQL the code executes to prove column names match the live schema.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-21 07:56 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: (unknown)
+- RCA bucket: wrong premise
+- Trigger pattern: Building a peer-comparison anomaly detector on an unverified schedule invariant, producing false-positive flags for legitimate per-section close-date stagger.
+- Reversal note: Reversal: detector v1-v2 assumed same-format sections share a close date and flagged any peer difference as an anomaly. Live probe of Course_Schedules showed close date is a legitimate function of meeting_times + course_start_date, and the 264-franchise (Houston/San Antonio) legitimately closes +24h, so the ~208 peer deltas were false positives, not incidents. Amended: before building any calendar-anomaly detector, probe the canonical close-date function from Course_Schedules; inter-section stagger is noise unless a section closes before its own scheduled_didactic_completion_date + margin.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.

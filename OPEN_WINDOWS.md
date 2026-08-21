@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/20/2026, 10:32:56 PM PT | window: last 72h | 82 tasks | index total 878 (parsed 0, cached 878)
+Generated: 8/21/2026, 1:26:05 AM PT | window: last 72h | 79 tasks | index total 878 (parsed 1, cached 877)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1787207812240` | 8/21/2026, 1:06:59 AM | 376 | 2384KB | #Extension |
 | `1787256742974` | 8/20/2026, 5:32:46 PM | 152 | 469KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
-| `1787207812240` | 8/20/2026, 5:23:11 PM | 296 | 1905KB | #Extension |
 | `1787258077644` | 8/20/2026, 4:50:06 PM | 134 | 486KB | #Payments |
 | `1787256717179` | 8/20/2026, 4:36:09 PM | 143 | 2104KB | ## Externship dates past Sept 1 — identification + mitigation |
 | `1787256884229` | 8/20/2026, 2:11:44 PM | 128 | 537KB | #Externships/ CAPCE?  |
@@ -89,13 +89,64 @@ Generated: 8/20/2026, 10:32:56 PM PT | window: last 72h | 82 tasks | index total
 | `1787073033366` | 8/18/2026, 10:10:33 AM | 1 | 7KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
 | `1787032087401` | 8/18/2026, 3:22:44 AM | 316 | 1132KB | #TDSHS  |
 | `1787016619040` | 8/18/2026, 1:49:01 AM | 323 | 602KB | #Jon/Argus |
-| `1787035094427` | 8/17/2026, 11:41:55 PM | 20 | 106KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
-| `1787032033318` | 8/17/2026, 10:47:13 PM | 1 | 16KB | #TDSHS  |
-| `1787003799738` | 8/17/2026, 10:38:27 PM | 762 | 2712KB | #TDSHS |
 
 ---
 
 ## Per-window detail
+
+### `1787207812240` — 8/21/2026, 1:06:59 AM PT — 376 turns
+
+**Original task:**
+
+```
+#Extension
+
+Why is this extension needed? Can we/should we resolve it? 
+
+Got the three sections Vicky: 26818A, 26718A, 26118A.
+
+Jon, flagging for you.
+She needs the extension tonight, waiting on your call.
+
+Check Chat 55 on it
+```
+
+**Ideas referenced:** #1000, #1001, #1002, #1003, #1004, #1005, #1006, #1007, #1015, #1021, #1022, #1039, #1040, #1046, #1047, #1048, #1049, #1050, #1051, #1052, #1053, #1054, #1055, #1061, #1062, #1071, #1073, #1074, #1075, #1076, #1077, #1078, #1079, #1080, #1094, #1112, #1119, #1121, #1122, #1123, #1124, #1125, #1126, #1127, #1128, #1134, #1194, #1201, #1203, #1204, #1205, #1206, #1207, #1208, #1209, #1210, #1224, #1242, #1249, #1251, #1252, #1253, #1254, #1255, #1256, #1257, #1258, #1264, #1304, #1305, #1346, #1353, #1354, #1355, #1356, #1357, #1358, #1359, #1360, #1361, #1369, #1376, #1394, #1401, #1402, #1403, #1404, #1405, #1406, #1407, #1408, #1409, #1416, #1480, #1520, #1521, #1527, #1528, #1529, #1530, #1531, #1532, #1533, #1534, #1535, #1536, #1544, #1550, #1551, #1568, #1569, #1575, #1576, #1577, #1578, #1579, #1580, #1581, #1582, #1583, #1584, #1590, #1591, #16069, #16817, #1697, #1698, #1699, #1700, #1701, #1702, #1703, #1704, #1745, #1746, #1747, #1748, #1749, #1750, #1751, #1752, #178713, #178720, #1858, #1859, #1860, #1861, #1862, #1863, #1864, #1865, #18944, #18951, #1903, #1904, #1905, #1906, #1907, #1908, #1909, #1910, #19163, #2016, #2017, #2018, #2019, #2020, #2021, #2022, #2023, #2064, #2065, #2066, #2067, #2068, #2069, #2070, #2071, #2117, #2149, #2150, #2156, #2157, #2158, #2159, #2160, #2161, #2162, #2163, #2164, #2165, #2173, #2179, #2180, #2197, #2198, #2204, #2205, #2206, #2207, #2208, #2209, #2210, #2211, #2212, #2213, #2219, #2220, #2230, #2258, #2275, #2296, #2317, #2338, #23483, #2358, #2379, #25185, #2550, #25888, #2589, #2590, #25909, #26443, #26834, #26898, #26899, #26900, #27152, #27203, #27251, #27252, #27253, #2748, #27503, #27524, #27531, #27604 [executing], #2763, #27648, #27663, #27673, #27684, #27685, #27691, #27692, #27699, #27715 [deployed], #27724 [deployed], #27793 [proposed], #27794 [proposed], #3098, #3843, #3848, #3850, #3851, #3852, #3870, #3871, #3872, #3875, #3877, #3879, #3890, #3894, #3895 [deployed], #3897, #3899 [deployed], #3901 [deployed], #3902 [deployed], #3903, #3904, #3905, #4929, #6785, #78350, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+filed idea #27794 [proposed].
+
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1787207812240 - MWF Exam 5 extension for sections 26818A/26718A/26118A/26918A.
+
+Where we left off (verified 2026-08-21 00:59 PT):
+- Extension ALREADY APPLIED: all 9 18A sections carry group-override close epoch 1787320799 = 2026-08-20 23:59:59 PT; quiz timeclose=0 (sole binding constraint = the override).
+- Chat 55 thread recovered (imessage_messages chat_id=55): Vicky rows 519895/519896/519926, Ruben ack 519976; ruben_imessage_issues chain 3895 through 3905.
+- Ticket 26443 (Gurneet Sanghera 26818A-04) left Open: root cause documented, verified state commented, awaiting fresh decision if she still needs Exam 5 after the Aug 20 window.
+- Rule 317 amended for the within-window detector wrong-premise reversal.
+
+Open threads to drive next:
+1. #27794 [proposed] - investigate WOPR DB clock lag (~6-7h behind PT wall clock) and correct any UNIX_TIMESTAMP()-gated "window open" checks it skews.
+2. #27793 [proposed] - dedup the EXAM-EXT-FLAG auto-comment (13 near-identical internal comments on 26443 in ~24h); key on ticket_id+flag_type.
+3. #27604 [rejected] - moot; superseded by the direct cohort override, no action.
+4. Ticket 26443 - decide whether Gurneet Sanghera needs a fresh Exam 5 extension now that the Aug 20 23:59:59 PT window is closed (human-only decision - no idea).
+
+Reference IDs:
+- Ticket: 26443 (TKT-20260819-51CD34FB)
+- Ruben imessage issues: 3895, 3899, 3901, 3902, 3903, 3904, 3905
+- Ideas filed: #27793 [proposed], #27794 [proposed], #27604 [rejected], #27724 [deployed]
+- Moodle quizzes: 681, 732, 954
+- Files touched: none (read-only investigation + ticket comment + issue/idea updates)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
 
 ### `1787256742974` — 8/20/2026, 5:32:46 PM PT — 152 turns
 
@@ -142,57 +193,6 @@ Reference IDs:
 - Ideas: #27486 [deployed], #27488 [deployed], #27489 [awaiting_review], #27491 [deployed], #27781 [approved]
 - Files touched: /var/www/emtskills/lib/TruthProtocolSteering.php, /var/www/emtskills/scripts/check_truth_protocol_steering.sh, /var/www/emtskills/lib/truth_judge.php, /var/www/emtskills/cron/cron_truth_judge_email_gate.php, /var/www/emtskills/routes/truth_judge_review.php, /var/www/emtskills/routes/_view_truth_ledger_dashboard.php, /tmp/ruben_sandbox_27489_1787260546, /var/www/emtskills/cron/cron_ruben_implement.php (root-cause read)
 - Worker logs: /tmp/ruben-impl-worker-27486.log, /tmp/ruben-impl-worker-27488.log, /tmp/ruben-impl-worker-27489.log, /tmp/ruben-impl-worker-27491.log, /tmp/repro27486.log
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1787207812240` — 8/20/2026, 5:23:11 PM PT — 296 turns
-
-**Original task:**
-
-```
-#Extension
-
-Why is this extension needed? Can we/should we resolve it? 
-
-Got the three sections Vicky: 26818A, 26718A, 26118A.
-
-Jon, flagging for you.
-She needs the extension tonight, waiting on your call.
-
-Check Chat 55 on it
-```
-
-**Ideas referenced:** #1007, #1015, #1021, #1022, #1039, #1040, #1046, #1047, #1055, #1061, #1062, #1071, #1080, #1094, #1112, #1119, #1128, #1134, #1194, #1201, #1210, #1224, #1242, #1249, #1258, #1264, #1304, #1305, #1346, #1353, #1369, #1376, #1394, #1401, #1416, #1480, #1520, #1521, #1527, #1528, #1536, #1544, #1550, #1551, #1568, #1569, #1575, #1576, #1584, #1590, #1591, #16069, #16817, #178713, #18944, #18951, #19163, #2117, #2149, #2150, #2156, #2157, #2165, #2173, #2179, #2180, #2197, #2198, #2204, #2205, #2213, #2219, #2220, #2230, #2258, #2275, #2296, #2317, #2338, #23483, #2358, #2379, #2550, #2589, #2590, #25909, #26834, #27152, #2748, #27503, #27524, #27531, #2763, #27648, #27663, #27673, #27684, #27685, #27691, #27692, #27699, #27715 [deployed], #27724 [deployed], #3098, #3843, #3848, #3850, #3851, #3852, #3870, #3871, #3872, #3875, #3877, #3879, #3890, #3894, #3897, #6785, #78350, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-nds are pending or unverified.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — MWF Exam 5 one-day-early close, 18A cohort (9 sections): reopen, verify, notify. (No numeric Cline task id exposed; anchored by ideas below.)
-
-Where we left off (verified 2026-08-20 13:23 PT):
-- All 9 18A-cohort sections reopened (timeclose=1787320799, 20:59:59 PDT) and verified OPEN at 12:44 PT via Moodle access-manager `prevent_access()` as real member users (chapter quiz per section: 26118A=954/51455, 26718A=732/53129, 26818A=732/51317, 26418A=681/51179, 26518A=681/50471, 26918A=681/50773, 26618A=732/51112, 26218A=954/50638, 26318A=954/49582).
-- 5 ticket-filing students notified ("Exam 5 access restored"), Vicky CC'd + dedicated summary sent. All 7 sends verified in email_outbound_log (status=sent, Postmark ids logged).
-- Maria Moore (STU-20260819-76FB80, 26714T-27) NOT auto-emailed — different cohort, flagged in Vicky summary for review.
-
-Open threads to drive next:
-1. #27715 [executing] — review Maria Moore's Exam 5 ticket (26714T cohort) manually; 18A fix does not cover her section, so she needs a cohort-specific check before any reopen.
-2. #27724 [proposed] — durable early-close detector (hardstop when an exam's group override timeclose falls before a cohort's canonical exam-day end); still pending Ruben green-light.
-3. (human-only decision — no idea) — Jackson Tippner received 2 copies of the notice (agent-draft dispatch 12:55 + script 12:57); documented in Vicky summary, no action unless Ruben wants a duplicate-suppression review.
-
-Reference IDs:
-- Ideas filed: #27715 [executing], #27724 [proposed]
-- Files touched: Moodle quiz_overrides UPDATE (ids 2230/2338/2358/2275/2296/2379/2317/2748/2258); Moodle caches rebuilt (courses 25/37/41); transient verify_quiz_open.php (created then removed from /var/www/moodle/ems/); transient send scripts (removed).
-- Sections: 26818A 26718A 26118A 26418A 26518A 26918A 26618A 26218A 26318A
-- Tickets: TKT-20260819-51CD34FB (Gurneet), TKT-20260819-4A36D67A (Nikita), TKT-20260820-901196A6 (Benjamin), TKT-20260820-8D896A19 + TKT-20260819-EC2EA3E5 (Jackson, dup), TKT-20260819-60799666 (Alberto), STU-20260819-76FB80 (Maria Moore)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -3662,104 +3662,5 @@ Where we left off (verified 2026-08-17 18:28 PT):
 ```
 
 **Ideas referenced:** #15367, #178701, #18693, #19490, #19670, #20903, #21074, #23184, #23281, #24963, #25125, #25185, #2552, #26085 [executing], #26174 [executing], #26180 [executing], #26325 [approved], #26357 [awaiting_review], #26366 [proposed], #26367 [approved], #26369 [proposed], #26382, #26482 [executing], #26498 [executing], #26504 [awaiting_review], #26519 [executing], #26720, #26724, #26731, #26825 [executing], #26858 [blocked], #26924 [approved], #27012, #27062 [approved], #27065 [proposed], #27120 [executing], #27123 [blocked], #27124 [executing], #27125 [executing], #27126 [executing], #27136 [deployed], #27143 [awaiting_review], #27147, #27149 [deployed], #27163 [deployed], #27180 [deployed], #344421, #344423, #344425, #344426, #344429, #58371, #58380, #8281, #8321, #9235
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787035094427` — 8/17/2026, 11:41:55 PM PT — 20 turns
-
-**Original task:**
-
-```
-# GLM 5.3: reminder set + your "why can't we use it" question answered
-
-Can we use it now? 
-
-## Direct answer: why can't we use GLM-5.3 cloud via z.ai in Cline / frankenstein-llm today?
-
-Because **Zhipu has not granted your account access yet — it is a server-side gate, not something we can configure around.** I proved this with a live request a few minutes ago, not a guess:
-
-- `POST https://api.z.ai/api/paas/v4/chat/completions` with `model=glm-5.3` using your real key returneode":"1220","message":"You do not have permission to access glm-5.3"}}`
-- The exact same request with `model=glm-5.2` 
-```
-
-**Ideas referenced:** #178693, #1993, #21586, #22229, #23455, #24895, #2537, #2539, #2546, #2547, #2554, #25830, #26046, #26196, #26225, #26471, #26475, #26476, #26495, #26496, #26507, #26515, #26625, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #366377, #8184
-
-**Last PICKUP PROMPT:**
-
-```
-lert the instant that happens.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #26715 - GLM 5.2 → 5.3 upgrade + release tracker status checkpoint
-
-Where we left off (verified 2026-08-17 23:40 PT):
-- Verified live: GLM-5.3 STILL fully gated on all 3 surfaces. Zhipu api.z.ai returns error 1220 "no permission" for glm-5.3 (glm-5.2 control = HTTP 200), OpenRouter lists only up to z-ai/glm-5.2, HF zai-org/GLM-5.3 = HTTP 401.
-- Tracker HEALTHY: cron /etc/cron.d/emsu-glm53-release-tracker fires daily 07:05 PT (syslog evidence 08-16 + 08-17), script /usr/local/bin/emsu_glm53_release_tracker.sh intact, state /var/lib/emsu/glm53_release_state = "zcloud=0 or=0 hf=0 (401)", dedup working (single event 6409723, no spam).
-- 2-week decision card armed: fires on/after 2026-08-29 if still gated (marker /var/lib/emsu/glm53_2wk_card_sent not yet present).
-- Full upgrade plan prepped: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md.
-
-Open threads to drive next:
-1. #26711 [proposed] - HUMAN ACTION: Ruben asks Zhipu (support@zhipuai or account manager) to whitelist key 802fd27e... for glm-5.3. Until then cloud is un-wireable; tracker auto-alerts the moment error 1220 clears.
-2. #26712 [proposed] - When tracker fires hf=1 (zai-org weights public): download GLM-5.3/FP8, AWQ 4-bit quant, single-box vLLM validate (glm47 tool parser / glm45 reasoning), then PP=6 Hex ring relaunch per runbook.
-3. #26713 [proposed] - When bake-off + soak pass: flip registry tier L3/L4g, router_hook GLM-first target, FRANK_BOX_CAPACITY 8210; retire glm-5.2 after 48h; update tracker with gate-cleared timestamps.
-4. #26715 [deployed] - Monitor only: next expected event is a gate-clear alert OR the 08-29 2-week card. No rows in 48h beyond the daily runs = check /var/log/cron or run script manually.
-
-Reference IDs:
-- Ideas filed: #26711 [proposed], #26712 [proposed], #26713 [proposed], #26715 [deployed]
-- Files touched: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md, /usr/local/bin/emsu_glm53_release_tracker.sh, /etc/cron.d/emsu-glm53-release-tracker, /var/lib/emsu/glm53_release_state, /var/www/emtskills/docs/HANDOFF_NOTES.md
-- Event log: 6409723 (tracker self-test)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1787032033318` — 8/17/2026, 10:47:13 PM PT — 1 turns
-
-**Original task:**
-
-```
-#TDSHS 
-
-Curious here, the allegation is that ther ewas no medical director from December 2024 to July 2026, the response does not cover any period before July 2026, should it? I mean, the pink elephant is that Dr. Turner said he was not the medical director, however, the contract shows him as the Medical Director (even still technically under contract) and that Dr. Turner took over on July 22nd, but Turner still technically had a contract although repudiated later / technically a breach. Then we got another medical director anyway. 
-
-
---
-
-You were right on all three and I was wrong on all thr
-```
-
-**Ideas referenced:** #178695, #27073 [awaiting_review], #27100 [awaiting_review], #27108 [awaiting_review], #27112 [awaiting_review], #27114 [awaiting_review], #27127 [proposed], #27148 [awaiting_review], #27153 [executing]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787003799738` — 8/17/2026, 10:38:27 PM PT — 762 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-You were right on both. The 1080261916 response was crap and the license number was the wrong one. Both fixed, PDF re-rendered (325,475 bytes, 14:41 PT), and the 317 RCA is below.
-
-## The license number — it was not ours to use
-
-**The TDSHS number is 623992, and it is on their own paper.** The 5196 inspection report has a labeled field block:
-
-```
-Name              EMERGENCY MEDICAL SERVICES UNIVERSITY LLC
-License Type      EMS Course
-Address           1452 HUGHES ROAD SUITE 360, GRAPEVINE TX 76051
-License Number    623992
-Inspection Type   Course Monitoring
-Inspection Number 5196
-Insp
-```
-
-**Ideas referenced:** #1509, #15299, #178695, #19580, #19581, #2003, #22757, #23361, #24430, #25185, #25650, #25653, #25654, #25655, #2601, #27072 [deployed], #27073 [awaiting_review], #27100 [executing], #27107 [executing], #27108 [executing], #27112 [proposed], #27114 [proposed], #27116 [proposed], #27121 [proposed], #27124 [proposed], #27125 [proposed], #27127 [proposed], #27148 [unknown], #27153 [unknown], #2757, #2838, #2875, #2876, #2887, #4856, #4929, #664426, #9086, #9168, #9306, #9339
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

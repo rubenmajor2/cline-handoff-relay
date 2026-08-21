@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/21/2026, 2:42:36 AM PT | window: last 72h | 78 tasks | index total 878 (parsed 0, cached 878)
+Generated: 8/21/2026, 3:42:36 AM PT | window: last 72h | 77 tasks | index total 878 (parsed 0, cached 878)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -87,7 +87,6 @@ Generated: 8/21/2026, 2:42:36 AM PT | window: last 72h | 78 tasks | index total 
 | `1787081426639` | 8/18/2026, 12:47:43 PM | 24 | 176KB | What would it take to turn Big Mac into a powerhouse center for GLM 5.2? How many ARC Batt |
 | `1787015733520` | 8/18/2026, 10:52:31 AM | 112 | 1202KB | I already opened up a window on this before about the 40% score required for examinations  |
 | `1787073033366` | 8/18/2026, 10:10:33 AM | 1 | 7KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
-| `1787032087401` | 8/18/2026, 3:22:44 AM | 316 | 1132KB | #TDSHS  |
 
 ---
 
@@ -3619,22 +3618,5 @@ Because **Zhipu has not granted your account access yet — it is a server-side 
 ```
 
 **Ideas referenced:** #1993, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26715 [deployed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787032087401` — 8/18/2026, 3:22:44 AM PT — 316 turns
-
-**Original task:**
-
-```
-#TDSHS 
-
-Curious here, the allegation is that ther ewas no medical director from December 2024 to July 2026, the response does not cover any period before July 2026, should it? I mean, the pink elephant is that Dr. Turner said he was not the medical director, however, the contract shows him as the Medical Director (even still technically under contract) and that Dr. Turner took over on July 22nd, but Turner still technically had a contract although repudiated later / technically a breach. Then we got another medical director anyway. So how do we address it reasonably but in a delecate way. 
-
-
-
-```
-
-**Ideas referenced:** #178695, #18676, #19572, #19576, #19578, #19581, #19599, #21278, #250541, #251044, #251128, #251428, #251444, #251447, #25185, #27073 [awaiting_review], #27100 [awaiting_review], #27108 [awaiting_review], #27112 [awaiting_review], #27114 [awaiting_review], #27127 [proposed], #27148 [awaiting_review], #27153 [executing], #27157 [proposed], #27158 [proposed], #27159 [proposed], #27160 [approved], #27179 [proposed], #600179, #623992, #8212
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

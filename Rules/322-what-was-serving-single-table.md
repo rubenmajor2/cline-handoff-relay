@@ -51,3 +51,13 @@ When Ruben asks what was serving, the answer is ONE table where each ROW is an U
 - Reversal note: 2026-08-19 watcher false-positive: a serving watcher declared SERVED at 22:07 PT on a single HTTP 200 that was actually the dying seq-32 engine's final second before relaunch, not the new seq-128 engine. Corrected in-window by requiring TWO consecutive 200s. Amended behavior: any serving/health watcher that gates a relaunch verdict must require at least two consecutive successful probes separated by an interval, because a dying engine can answer one final request during its shutdown window; a single 200 during a relaunch transition is never a verdict.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-21 18:26 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787121837052
+- RCA bucket: insufficient probe
+- Trigger pattern: single-window client-side abort lines generalized into a persistent fleet-health claim and surfaced as an open human decision
+- Reversal note: 2026-08-21 fleet-stall reversal: a completion reported 'local fleet lanes stalled on every generation call this session' as an open fleet-health decision, from client-side CURLOPT_LOW_SPEED abort lines alone. Re-probed 11:24-11:25 PT: frankenstein-llm HTTP 200 (8.1s), glm-5.2-local HTTP 200 (3.2s), host probe decode_live=true for artemis-120b (28.1 tok/s) and glm52-ring (11.67 tok/s), and the adapter upstream log carried ZERO error lines for the stall window while passing traffic to all three upstreams. Amended behavior: a client-side low-speed/timeout abort is NOT evidence of an upstream stall — the adapter/upstream log is the arbiter; if it shows no errors for the window, the condition is transient and must be reported as transient (no fleet action), never as a persistent fault or an open decision item.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

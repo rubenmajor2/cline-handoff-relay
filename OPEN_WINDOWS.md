@@ -6,15 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/21/2026, 3:46:09 PM PT | window: last 72h | 74 tasks | index total 881 (parsed 6, cached 875)
+Generated: 8/21/2026, 4:46:09 PM PT | window: last 72h | 72 tasks | index total 881 (parsed 5, cached 876)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787256742974` | 8/21/2026, 3:46:06 PM | 425 | 3249KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
-| `1787256717179` | 8/21/2026, 3:45:55 PM | 175 | 2413KB | ## Externship dates past Sept 1 — identification + mitigation |
-| `1787349230620` | 8/21/2026, 3:45:26 PM | 71 | 174KB | #San Mateo County EMSA |
-| `1787191612298` | 8/21/2026, 3:44:22 PM | 755 | 17486KB | #Comprehensive System |
-| `1787327963594` | 8/21/2026, 3:39:04 PM | 106 | 464KB | #Julia |
+| `1787256717179` | 8/21/2026, 4:43:21 PM | 233 | 4300KB | ## Externship dates past Sept 1 — identification + mitigation |
+| `1787349230620` | 8/21/2026, 4:43:07 PM | 109 | 314KB | #San Mateo County EMSA |
+| `1787327963594` | 8/21/2026, 4:42:50 PM | 249 | 1357KB | #Julia |
+| `1787256742974` | 8/21/2026, 4:40:41 PM | 500 | 4957KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
+| `1787191612298` | 8/21/2026, 4:29:41 PM | 798 | 19088KB | #Comprehensive System |
 | `1787329580892` | 8/21/2026, 3:33:49 PM | 156 | 464KB | #Executor |
 | `1787258077644` | 8/21/2026, 11:29:40 AM | 288 | 3416KB | #Payments |
 | `1787254375526` | 8/21/2026, 11:27:22 AM | 190 | 568KB | #Argus Improvements |
@@ -82,78 +82,12 @@ Generated: 8/21/2026, 3:46:09 PM PT | window: last 72h | 74 tasks | index total 
 | `1787100985272` | 8/18/2026, 6:07:41 PM | 34 | 315KB | #Frankenstein LLM Misc |
 | `1786989452314` | 8/18/2026, 5:55:33 PM | 360 | 939KB | frankenstein-llm keeps going down as I'm trying to put back up Cicero and Maximus, not sur |
 | `1787096428156` | 8/18/2026, 4:56:26 PM | 174 | 399KB | Getting {"message":"Connection error.","modelId":"glm-5.3","providerId":"zai"} |
-| `1787073073602` | 8/18/2026, 4:03:58 PM | 628 | 5679KB | # GLM 5.3: |
-| `1787090950949` | 8/18/2026, 4:03:29 PM | 200 | 465KB | #Argus |
 
 ---
 
 ## Per-window detail
 
-### `1787256742974` — 8/21/2026, 3:46:06 PM PT — 425 turns
-
-**Original task:**
-
-```
-VERITAS Truth Enforcement System — core shipped, remainder filed and promoted.
-
-Goal: make lower-param models (120Bs, GLM, 7B) deliver Opus-grade truthful answers by forcing truth, validation, and review STRUCTURALLY (tools + gates + judge), not just via prompt.
-
-Shipped this window (all verified live):
-
-1. Rule 323 — Truth Protocol (hardfloor, always-loaded)
-   - Every material claim classified PROVEN / INFERENCE / UNKNOWN
-   - Ground-truth-tool-first: call the tool that returns ground truth BEFORE answering
-   - High-stakes claims (money, student status, regulator, fleet) REQUIRE a judge pas
-```
-
-**Ideas referenced:** #12430, #12459, #15333, #17295, #178712, #18135, #18357, #18438, #18442, #1850, #19490, #19509, #19629, #2043, #2076, #20903, #2113, #25125, #25185, #26229, #26696, #26731, #26848, #27238, #27397, #27399, #27480, #27486 [approved], #27488 [approved], #27489 [approved], #27491 [approved], #27635, #27781 [approved], #27807 [proposed], #27808 [proposed], #27809 [deployed], #27810 [deployed], #27811 [deployed], #8598
-
-**Last PICKUP PROMPT:**
-
-```
-esigned, no further amendment)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787121837052 — VERITAS Truth Enforcement System (make low-param models Opus-truthful).
-
-Where we left off (verified 2026-08-21 11:34 PT):
-- Full VERITAS stack deployed: rule 323, truth_judge_log, fleet API truth_judge, R323 gates, MCP tool, timeout chain, architecture doc, L2 steering, CFA wiring, L4 harness, L5 dashboard
-- Benchmark battery expanded 20 → 61 questions (20 live-data + 21 adversarial); cron daily 03:00 PT; smoke runs 5-7 persisted (scores 0/0/70)
-- Fleet-stall scare resolved as transient (rule 322 amended)
-
-Open threads to drive next:
-1. #27808 [deployed] — review the first full 61-question eval run: after the 03:00 PT cron, check /var/log/veritas_l4_eval.log + veritas_l4_runs and compare per-model scores vs the Opus baseline
-2. #27809 [deployed] — spot-check the executor deploy artifact (dev_stage=ready_for_review): guidance generator fix for NULL guidance_question
-3. #27810 [deployed] — spot-check the executor deploy artifact (dev_stage=ready_for_review): session_handoffs auto-clear
-
-Reference IDs:
-- Ideas deployed: #27486 [deployed], #27488 [deployed], #27489 [deployed], #27491 [deployed], #27808 [deployed], #27809 [deployed], #27810 [deployed], #27811 [deployed]
-- Files touched: /var/www/emtskills/lib/VeritasL4Eval.php (+ .bak-27808 backup), ~/Documents/Cline/Rules/322-what-was-serving-single-table.md (amendment), ~/Documents/Cline/cline_task_ledger.md (row appended)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] RUBEN APPROVED #27808 — building now
-- [x] Fleet true-ping: TRANSIENT, no fleet action (amended rule 322)
-- [x] Battery expanded 20 → 61 questions (41 new: 20 live-data + 21 adversarial)
-- [x] php -l clean, 61 unique IDs, backup created
-- [x] Prior runs persisted (runs 5-7 today, scores 0/0/70 — Opus gap visible)
-- [x] Cron scheduled: daily 03:00 PT as emsumain
-- [x] Stamped #27808 deployed + reconciled 27808-27811 (all deployed)
-- [x] Reconciled original VERITAS ideas 27486/27488/27489/27491 (all deployed)
-- [x] Ledger row appended
-- [x] Validate: ALL PASSED (3 passes, identity echo confirmed)
-- [x] Gate file: CLEAR
-- [x] Shipped via attempt_completion
-</task_progress>
-</attempt_completion>
-```
-
-### `1787256717179` — 8/21/2026, 3:45:55 PM PT — 175 turns
+### `1787256717179` — 8/21/2026, 4:43:21 PM PT — 233 turns
 
 **Original task:**
 
@@ -170,18 +104,31 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 -
 ```
 
-**Ideas referenced:** #178649, #178713, #198754, #2230, #2338, #2358, #2550, #25821, #25822 [deployed], #25889 [awaiting_review], #2589, #2590, #25916 [awaiting_review], #25950 [awaiting_review], #25973 [awaiting_review], #26002 [awaiting_review], #26027 [awaiting_review], #26066, #26067 [deployed], #26071 [executing], #26089 [deployed], #26663 [awaiting_review], #27152, #27490 [proposed], #27492 [proposed], #27503 [proposed], #27524, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27767 [deployed], #27832, #28584, #5447
+**Ideas referenced:** #178649, #178713, #198754, #2230, #2338, #2358, #25185, #2550, #25821, #25822 [deployed], #25889 [awaiting_review], #2589, #2590, #25916 [awaiting_review], #25950 [awaiting_review], #25973 [awaiting_review], #26002 [awaiting_review], #26027 [awaiting_review], #26066, #26067 [deployed], #26071 [executing], #26089 [deployed], #26663 [awaiting_review], #27152, #27486, #27488, #27489, #27490 [proposed], #27491, #27492 [proposed], #27503 [proposed], #27524, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27767 [deployed], #27808, #27809, #27810, #27811 [deployed], #27832 [executing], #28584, #5447
 
 **Last PICKUP PROMPT:**
 
 ```
-ile all ideas + HANDOFF_NOTES + ledger
-- [ ] Order 66 + rule-91 completion with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
+ as its reconcile substitute).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1786491116649. Externship Sept-1 cutover: concrete date+location assignment plan for the affected students.
+
+Where we left off (verified 2026-08-21 4:22 PM PT):
+- STEER from Ruben (verbatim intent): 'stop filing ideas. I want to know what the reality is of assigning dates and locations to these students before sept 1 based on real capacity and their eligibility. I want to know where we can assign them and what locations and dates. Present this to me and we can adjust as needed.' Deliverable = concrete student -> date + location assignment plan grounded in REAL agency capacity + student eligibility. NOT more ideas.
+- #27492 [deployed] shipped prior window (verified: mysql execute_query on admin_portal.orchestrator_ideas at 2026-08-21 16:22 PT returned id=27492 status=deployed dev_stage=ready_for_review; prior-window live probes: validator rejects post-Sept-1 dates, cron_sept1_request_audit.php stamped 59 ExternshipRequest rows on 2026-08-20, zero post-9/1 offers in outbound since deploy): lib/ExternshipDatePolicy.php shared validator, 10 call sites (form create, reschedule, offer confirm, self-serve book, 5 CFA lanes), cron_sept1_request_audit.php (15-min admin_notes stamp), cron_sept1_cfa_audit.php (hourly outbound scan).
+- SCAN NOW re-run this window via mysql execute_query on admin_portal.ExternshipRequest at 2026-08-21 16:19 PT (any preferred_date_N > 2026-09-01, all statuses): 62 rows = 45 pending + 3 escalated OPEN, 13 completed, 1 cancelled. Staff are ALREADY hand-assigning; some completed students got post-9/1 dates (Caleb Jacobs 9/11,14,15 Allegiance; Chris Ngo 9/26,28 Allegiance Carrollton; Harrison Tran 9/12,19,20 Sugarland; Han Nguyen 9/6,12 Carrollton; Bhavna Ramesh 9/5,6,19 Mineral Wells; Krishna Kuruvadi 9/6,12,13 Care). Ruben must rule if those stand.
+- SEPT1-EXPIRED stamp on 15 rows (all-dates-past-9/1 group) from cron run 2026-08-20.
+- Staff-note eligibility reality from admin_notes: Elouan Pecson class ends 9/13; Himanshu Gupta + Carson Recht must pass final first; Thomas Barnhart missed Exam 6, class ended 7/19, UP FOR DISMISSAL (no assignment); Gianna Yang not-eligible note 7/15 (class started 7/20); Audrey Zheng has 9/26+9/27 needs one more; Hennah Kim waiting location (Cypress unavailable).
+- Location clusters of the 48 OPEN: Dallas/Justin/Carrollton TX ~11 (William Jones esc, Nickolas Mueller, Matthew Casas, Jamie Chen, Antonio Moreno, William Youngblood, Xavier Juarez-Jacinto, Chandan Modem, Audrey Zheng), Phoenix/Scottsdale/Tempe/Mesa AZ ~9 (Adam Freitas, James Gricol, Benjamin Harrison, Jackson Tippner, Eva Loyo, Giovanni Stagnaro, Calvin Snell, Jorge Olague, Andrew Wical), Bay Area CA ~13 (Adam Stacy esc, Gianna Yang esc, Thomas Klein, Elouan Pecson, Tristan Stone, Allan Mejia, Leonardo Fagundes, Ridhvi Kannan, Gurneet Sanghera, Misael Perez rojas, Vivian Chen, James Cunningham, Jason Ohta, Ariana Gamino), San Diego ~3 (Nikita Thummala, James Onaitis, Phillip Phan), Cypress TX ~2 (Christian Pierce, Thomas Barnhart-dismissal), San Antonio ~2 (Xavier Omatta, Marshall Evans), Tucson ~1 (Sofia Mendoza).
+- Known real agencies from staff notes: Allegiance Mobile Health Carrollton TX, Carrollton Fire Rescue, Mineral Wells TX, Sugarland TX stations, Care Ambulance (San Diego), Brougham (San Diego), AJO (Arizona), Falck (Bay Area).
+- NEXT MOVES (do these first): (1) DESCRIBE externship_agency_profiles + extern
 ```
 
-### `1787349230620` — 8/21/2026, 3:45:26 PM PT — 71 turns
+### `1787349230620` — 8/21/2026, 4:43:07 PM PT — 109 turns
 
 **Original task:**
 
@@ -209,53 +156,11 @@ Today at 12:06 PM
 ACTION REQUIRE
 ```
 
-**Ideas referenced:** #25636 [proposed], #25637 [proposed], #25638 [proposed], #25639 [proposed], #27521, #27830 [proposed]
+**Ideas referenced:** #18545, #18546, #18822, #18823, #25636 [proposed], #25637 [proposed], #25638 [proposed], #25639 [proposed], #27521, #27830 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1787191612298` — 8/21/2026, 3:44:22 PM PT — 755 turns
-
-**Original task:**
-
-```
-#Comprehensive System
-
-I don't really know how to quantify this, but our system is so comprehenive and complex. I wonder how frankenstein-llm can keep track of all of it better? I mean a lot of repair requests and information are difficult to find, and sometimes CFAs fail, sometimes Argus fails, and sometimes even Cline fails. The failrus seem too often. Why is everything so complex? Whatt do we do on all this to help resolve untruths better?
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12364, #12477, #12618, #12824, #12872, #12878, #13047, #13202, #13437, #16163, #16265, #16304, #16844, #178713, #178716, #178724, #178725, #17913, #1793, #18312, #18326, #21667, #2316, #25097, #25185, #2524, #2525, #2537, #26229, #26591, #26696, #26908, #26923, #27100, #27259, #27395, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27634 [deployed], #27635 [executing], #27640 [deployed], #27646, #27647 [proposed], #27659 [proposed], #27660 [rejected], #27661 [proposed], #27662 [proposed], #27675 [proposed], #27677 [proposed], #27680 [proposed], #27681 [proposed], #27690 [proposed], #27698 [proposed], #27767 [proposed], #27771 [deployed], #27773 [proposed], #27774 [proposed], #277773, #27831 [executing], #5197, #5431, #5574, #7174, #9222
-
-**Last PICKUP PROMPT:**
-
-```
- via clinerules_amend_rule)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #27773 [deployed] - ops-truth watchdog auto-follow-up (baseline arming + errors breakdown)\n\nWhere we left off (verified 2026-08-21 15:34 PT):\n- Watchdog v1.2.0 deployed at cron/cron_ops_truth_watchdog.php (backup + PHP lint OK + FPM reload), re-ran clean ok:true\n- Baseline self-arms at >=7 daily snapshots (OTW_MIN_HIST_ROWS=7, hist_rows=0 today); flagged-creation spike uses fixed backtested threshold 264\n- Spike events now carry top-N error-source breakdown (top_errors payload + render_hint + critical-tier email to Ruben)\n- orphan_cron_audit = 6,611 of 9,443 warning+ events in 24h (70%) -> #27831 [executing] filed to investigate the real-vs-noise split\n- claimed_no_deploy drifting up (24->110 in ~4h); #27774 [deployed] auto-repair cron normalizes these daily\n\nOpen threads to drive next:\n1. #27831 [executing] - investigate the orphan_cron_audit real-vs-noise split and drive a resolution (target: it drops out of the top error source within 48h)\n2. #27774 [deployed] - monitor: confirm the auto-repair cron clears the 110-row claimed_no_deploy backlog on its next run\n3. #27771 [deployed] - Ops Truth Dashboard live; errors-spike self-arms once 7 snapshots accumulate (~2026-08-28)\n\nReference IDs:\n- Ideas filed: #27831 [executing]\n- Ideas closed: #27771 [deployed], #27773 [deployed], #27774 [deployed]\n- Files touched: cron/cron_ops_truth_watchdog.php\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════",
-  "task_prompt": "make sure the cron handles the baseline arming and the errors follow-up automatically"
-}</arguments>
-<task_progress>
-- [x] Shipped #27771/#27773/#27774 (all deployed + gate-clear)
-- [x] REVERSAL fixed: restored watchdog to emsuserver crontab (line 62)
-- [x] Rule-317 amendment recorded
-- [x] Watchdog runs ok:true; snapshot persisted
-- [x] Dashboard verified; ideas reconciled [deployed]
-- [x] Delivered completion (rule-91 gate clear)
-- [x] NEW: user wants cron to auto-handle baseline-arming + errors follow-up
-- [x] Read watchdog: baseline-arming ALREADY automatic (self-arms >=7); spike alerts but was NOT actionable
-- [x] Breakdown: 6,611 of 9,443 errors = orphan_cron_audit (one noisy source, 70%)
-- [x] Wrote v1.2.0 enhanced watchdog (top-error breakdown in spike event + email)
-- [x] Deployed: backup + lint OK + FPM reload
-- [x] Ran once: ok:true, breakdown fn loads clean; baseline self-arms (hist_rows=0)
-- [x] Filed follow-up idea #27831 for orphan_cron_audit flood
-- [x] Promoted #27831 to executor (in_progress)
-- [x] Reconciled all ideas (3 deployed, 1 executing)
-- [x] Generated rule-91 block; fixed bare #27773
-- [x] Confirmed #27831 title had "fix" stem; renamed it (1 row)
-- [ ] Re-validate (expect contradiction gate clear now)
-- [ ] Check gate + deliver
-</task_progress>
-</use_mcp_tool>
-```
-
-### `1787327963594` — 8/21/2026, 3:39:04 PM PT — 106 turns
+### `1787327963594` — 8/21/2026, 4:42:50 PM PT — 249 turns
 
 **Original task:**
 
@@ -279,53 +184,197 @@ Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md
 Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, 
 ```
 
-**Ideas referenced:** #1130, #1131, #11945, #1241, #12425, #12459, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #1779, #178732, #1798, #1828, #19567, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #22584, #2294, #2299, #2307, #2314, #23169, #24217, #25378, #25381, #2546, #2550, #2571, #2573, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #2579, #25812, #2589, #2592, #26209, #26284 [executing], #26400, #26403, #26922 [deployed], #26927 [deployed], #26932, #27236, #27249 [executing], #27250, #27259, #27271, #27447, #27494, #27503, #27508, #27514, #27515, #27524, #27531, #27663, #27673, #27684, #27685, #27692, #27702, #27711, #27722, #46862, #6826, #7142, #7149
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11945, #1241, #12425, #12459, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1754, #1755, #1779, #178732, #1798, #1828, #18312, #18326, #19567, #1989, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2254, #2258, #22584, #2294, #2298, #2299, #2307, #2314, #23169, #24172, #24217, #25097, #2537, #25378, #25381, #2546, #25470, #2550, #25646, #2571, #2573, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #2579, #25812, #2589, #2592, #26209, #26284 [executing], #26400, #26403, #26908, #26922 [deployed], #26923, #26927 [deployed], #26932 [deployed], #27236, #27249 [executing], #27250, #27259, #27271, #27447, #27494, #27503, #27508, #27514, #27515, #27524, #27531, #27663, #27673, #27684, #27685, #27692, #27702, #27711, #27712 [executing], #27713 [proposed], #27714 [proposed], #27722, #30877, #39273, #40738, #40831, #40880, #41726, #4194, #42406, #43565, #43728, #45834, #46862, #49717, #50015, #50729, #50837, #51812, #52654, #52734, #52805, #52816, #52852, #52942, #53116, #53180, #53284, #53323, #6826, #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
-.
-
-Want me to set up Option A?
+try entry after GLM-5.2-local.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787328000000 — Claudia model selection for serving.
+Pick up task #27712 — Qwen3.8-27B on Claudia: spill ladder + TP=2 plan confirmed.
 
-Where we left off (verified 2026-08-21 15:38 PT):
-- Julia L2-dark, needs physical power cycle (Ruben back in ~1 week)
-- Claudia UP, clean, 0 vLLM processes
-- 235B NVFP4 on disk (125GB) but 8K context = batch-only, not a serving lane
-- gpt-oss-120b on disk (122GB, complete) — proven model
-- No mid-size models on disk (would need download)
-- Current 120B federation: Artemis, BigMac, Julia (dark), GLM ring
-- Recommended: Option A — launch 120B on Claudia, add to federation upstreams
-- Awaiting Ruben decision on A/B/C
+Where we left off (verified 2026-08-21 16:05 PT):
+- GLM ring (6 boxes) confirmed untouched, serving 671 tok/s
+- Julia DOWN (port 2205 refused), Claudia UP (spark-6d51, no vLLM yet)
+- Spill ladder: Qwen3.8-27B goes RIGHT AFTER GLM-5.2-LOCAL (Ruben directive)
+- TP=2 plan: Claudia runs Qwen3.8 TP=1 now; Julia+Claudia reform TP=2 Qwen3.8 when Julia returns
+- Stale models removed from Claudia, ready for vLLM install
 
 Open threads to drive next:
-1. Ruben picks option (A: 120B lane, B: download mid-size, C: leave idle)
-2. If A: launch gpt-oss-120b on Claudia :8000, add to FRANK_TOOLS_UPSTREAMS
-3. Julia physical power cycle when Ruben returns (human-only decision — no idea)
+1. #27712 [executing] — Install vLLM on Claudia + download Qwen3.8-27B-FP8 + launch TP=1 + verify + add registry entry after GLM-5.2-local
+2. #27713 [proposed] — When Julia returns: reform Julia+Claudia as TP=2 Qwen3.8-27B (same CX7 RoCE interconnect)
+3. #27714 [proposed] — Julia physical reboot / remote power cycle needed (WOL not viable, NIC wol d)
 
 Reference IDs:
-- Ideas filed: none this session
-- Files touched: docs/CLAUDIA_235B_LAUNCH_PLAN.md (created, may need update based on decision)
-- Key config: /etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-remove-dead-julia-rung.conf
+- Ideas filed: #27712 [executing], #27713 [proposed], #27714 [proposed]
+- Files touched: /var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md (read), /etc/litellm/frankenstein_registry.yaml (read)
+- Registry change pending: add Qwen3.8-27B model entry after glm-5.2-local in tier_order
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
 <task_progress>
-- [x] Julia confirmed L2-dark, Claudia confirmed UP and clean
-- [x] 235B NVFP4 on Claudia but 8K context too small for real serving
-- [x] No mid-size models on Claudia's disk
-- [x] Checked 120B federation: Artemis, BigMac, Julia (dark), GLM ring
-- [x] Presented 3 options: A) 120B lane (recommended), B) download mid-size, C) leave idle
-- [ ] Await Ruben's decision
+- [x] Read GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md
+- [x] Confirm: NOT touching GLM ring boxes
+- [x] Live-probe Julia (DOWN) and Claudia (UP, no vLLM)
+- [x] Answer TP2 question: Julia+Claudia reform as TP=2 Qwen3.8 when Julia returns
+- [x] Check current spill ladder / registry
+- [x] Spill ladder placement confirmed: Qwen3.8 RIGHT AFTER GLM-5.2-LOCAL (Ruben directive)
+- [x] Status: pushing to serving, stale models cleared, vLLM install next
 </task_progress>
 </attempt_completion>
+```
+
+### `1787256742974` — 8/21/2026, 4:40:41 PM PT — 500 turns
+
+**Original task:**
+
+```
+VERITAS Truth Enforcement System — core shipped, remainder filed and promoted.
+
+Goal: make lower-param models (120Bs, GLM, 7B) deliver Opus-grade truthful answers by forcing truth, validation, and review STRUCTURALLY (tools + gates + judge), not just via prompt.
+
+Shipped this window (all verified live):
+
+1. Rule 323 — Truth Protocol (hardfloor, always-loaded)
+   - Every material claim classified PROVEN / INFERENCE / UNKNOWN
+   - Ground-truth-tool-first: call the tool that returns ground truth BEFORE answering
+   - High-stakes claims (money, student status, regulator, fleet) REQUIRE a judge pas
+```
+
+**Ideas referenced:** #12430, #12459, #15333, #17295, #178712, #18135, #18357, #18438, #18442, #1850, #19490, #19509, #19629, #2043, #2076, #20903, #2113, #25125, #25185, #25888, #25925, #25926, #25935, #26229, #26435, #26696, #26731, #26848, #26914 [deployed], #26915 [executing], #26916, #27238, #27397, #27399, #27480, #27486 [approved], #27488 [approved], #27489 [approved], #27491 [approved], #27635, #27781 [approved], #27807 [proposed], #27808 [proposed], #27809 [deployed], #27810 [deployed], #27811 [deployed], #27833 [proposed], #8598
+
+**Last PICKUP PROMPT:**
+
+```
+ly per the pickup block below.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787121837052 — VERITAS: execute two Ruben-approved deliverables. DO NOT re-present for approval.
+
+Ruben approvals (2026-08-21 16:26-16:27 PT, verbal in Cline):
+- "didn't i already approve this? Why am i approving again? Approved" -> the #27833 [executing] L2 steering wiring build
+- "approved also" -> run the full eval battery NOW and publish the Opus gap per model
+Rule 321: approved means EXECUTE. Never ask again.
+
+DELIVERABLE A (#27833 [executing], L2 wiring):
+1. Promote: UPDATE orchestrator_ideas SET status='in_progress' WHERE id=27833 (if Rows affected: 0, that IS Deliverable B's anomaly; document and proceed).
+2. Wire /var/www/emtskills/lib/TruthProtocolSteering.php (grep at 15:41 PT found ZERO consumers) into:
+   (a) CFA prompt builder: grep routes/, cron/, lib/ for CFA system-prompt assembly (cron_ai_ticket_agent.php, SMSAIResponder, chat widget AI)
+   (b) router steering /etc/litellm/_router_core.py weak-model tier
+3. Confirm per surface: grep each consumer, php -l every edit, capture a rendered prompt showing the protocol text.
+
+DELIVERABLE B (status UPDATE anomaly):
+UPDATE orchestrator_ideas SET status='in_progress' WHERE id=27486 returned Rows affected: 0 via MCP AND WOPR CLI while efficiency_priority UPDATE works. Investigate: SHOW TRIGGERS LIKE 'orchestrator_ideas%', SHOW CREATE TABLE orchestrator_ideas, full row SELECT for 27486, test UPDATE on another row. Fix or document root cause.
+
+DELIVERABLE C (eval battery, approved):
+Find the VERITAS L4 harness (grep /var/www/emtskills for the veritas_l4_runs writer / harness script; table veritas_l4_runs had 6 smoke rows today 09:12-09:44 PT scoring 54/0/0/0/0/70; nightly cron 03:00 PT). Run the FULL 61-question battery against the local fleet (120Bs, GLM-5.2 local ring, 7B if wired) plus the Opus baseline. Publish a per-model table: model, score, Opus gap. That table IS the deliverable Ruben wants to see.
+
+THEN: once A+B+C are confirmed, stamp the L2-wiring idea record to its final state (DB status to the final state, dev_stage to ready_for_review, implemented_at=NOW(), implemented_files), reconcile_ideas, validate + gate, complete with the Opus-gap table in the result.
+
+Open threads to drive next:
+1. #27833 [executing] — Deliverables A+B this window
+2. #27489 [deployed] — full battery run is Deliverable C; confirm 03:00 PT cron afterward
+3. #27486 [blocked] — re-stamp once A wiring is confirmed (artifact grep found zero consumers even though the DB record claims it is live)
+4. #27488 [deployed] — spot-check CFA truth_judge fires in production during prompt-builder work
+5. #27491 [deployed] — truth ledger dashboard spot-check
+
+Reference IDs:
+- Ideas: #27833 [executing], #27486 [blocked], #27488 [deployed], #27489 [deployed], #27491 [deployed]
+- Files: /var/www/emtskills/lib/TruthProtocolSteering.php, /etc/litellm/_router_core.py, truth_judge_log, veritas_l4_runs
+
+# Reversal Log
+- '#27486 [deployed] closed per reconcile tag' -> corrected: artifact unwired, zero consumers | insufficient probe | rule 321 G5
+- Re-presented approved work for approval -> Ruben: 'why am i approving again?' | stale assumption | rule 321 amendment (execute, never re-present)
+
+When complete, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Ruben approved BOTH deliverables; never re-present
+- [x] Compressed at X=
+```
+
+### `1787191612298` — 8/21/2026, 4:29:41 PM PT — 798 turns
+
+**Original task:**
+
+```
+#Comprehensive System
+
+I don't really know how to quantify this, but our system is so comprehenive and complex. I wonder how frankenstein-llm can keep track of all of it better? I mean a lot of repair requests and information are difficult to find, and sometimes CFAs fail, sometimes Argus fails, and sometimes even Cline fails. The failrus seem too often. Why is everything so complex? Whatt do we do on all this to help resolve untruths better?
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12364, #12477, #12618, #12824, #12872, #12878, #13047, #13202, #13437, #16163, #16224, #16265, #16304, #16844, #178713, #178716, #178724, #178725, #17913, #1793, #18312, #18326, #20251, #21667, #2316, #25097, #25185, #2524, #2525, #2537, #25925, #25926, #25935, #26229, #26591, #26696, #26908, #26914 [deployed], #26915 [executing], #26916, #26923, #27100, #27259, #27395, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27634 [deployed], #27635 [executing], #27640 [deployed], #27646, #27647 [proposed], #27659 [proposed], #27660 [rejected], #27661 [proposed], #27662 [proposed], #27675 [proposed], #27677 [proposed], #27680 [proposed], #27681 [proposed], #27690 [proposed], #27698 [proposed], #27767 [proposed], #27771 [deployed], #27773 [proposed], #27774 [proposed], #277773, #27831 [executing], #5197, #5431, #5574, #7174, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+ Log
+No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #27773 [deployed] - ops-truth watchdog status check (user asked how it is going)
+
+Where we left off (verified 2026-08-21 16:20 PT):
+- Watchdog v1.2.0 first snapshot persisted (ops_truth_daily 2026-08-21): flagged=1182, cnd=110, errors_24h=9504, alert_fired=0
+- Cron on schedule (emsuserver line 62, daily 6 AM); restored after today's window so first scheduled run is tomorrow 6 AM
+- Baseline 1 of 7 snapshots (arms ~2026-08-28); flagged-creation spike works on static threshold meanwhile
+- orphan_cron_audit = 6,611 of 9,504 errors (70%), still top source; #27831 [executing] picked up (in_progress) but dev_stage=idle
+
+Open threads to drive next:
+1. #27831 [executing] - drive the orphan_cron_audit real-vs-noise split to a reduction (target: out of top error source within 48h)
+2. #27774 [deployed] - monitor the auto-repair cron clearing the claimed_no_deploy backlog (110 this window)
+3. #27771 [deployed] - Ops Truth Dashboard live; errors-spike arms once 7 snapshots accumulate (~2026-08-28)
+
+Reference IDs:
+- Ideas filed: #27831 [executing]
+- Ideas closed: #27771 [deployed], #27773 [deployed], #27774 [deployed]
+- Files touched: cron/cron_ops_truth_watchdog.php
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Shipped #27771/#27773/#27774 (all deployed + gate-clear)
+- [x] REVERSAL fixed: restored watchdog to emsuserver crontab (line 62)
+- [x] Rule-317 amendment recorded
+- [x] Watchdog runs ok:true; snapshot persisted
+- [x] Dashboard verified; ideas reconciled [deployed]
+- [x] Delivered completion (rule-91 gate clear)
+- [x] NEW: user wants cron to auto-handle baseline-arming + errors follow-up
+- [x] Read watchdog: baseline-arming ALREADY automatic (self-arms >=7); spike alerts but was NOT actionable
+- [x] Breakdown: 6,611 of 9,443 errors = orphan_cron_audit (one noisy source, 70%)
+- [x] Wrote v1.2.0 enhanced watchdog (top-error breakdown in spike event + email)
+- [x] Deployed: backup + lint OK + FPM reload
+- [x] Ran once: ok:true, breakdown fn loads clean; baseline self-arms (hist_rows=0)
+- [x] Filed follow-up idea #27831 for orphan_cron_audit flood
+- [x] Promoted #27831 to executor (in_progress)
+- [x] Reconciled all ideas (3 deployed, 1 executing)
+- [x] Generated rule-91 block; fixed bare #27773
+- [x] ROOT-CAUSED the gate: read src/index.ts:1921-1997. claimWord regex + ±220 window. "stamped deployed" was 150 chars after #27831 [executing]
+- [x] Reworded to "report delivery with no delivery date"; removed em dash
+- [x] Re-validate: ALL PASSED; identity echo matches
+- [x] check_gate: CLEAR; delivered completion
+- [x] NEW: user asks "how is this going now?" -> pulled live status
+- [x] Live breakdown: orphan_cron_audit 6,611 still #1 (70%); assignment_validator 971 #2
+- [x] Snapshot persisted 2026-08-21: flagged=1182, cnd=110, errors_24h=9504, alert_fired=0 (baseline 1/7)
+- [x] Cron restored after today's 6AM window -> first scheduled run tomorrow 6AM (log file absent = expected)
+- [x] Reconciled: #27831 [executing] (in_progress/idle), #27774/#27773/#27771 [deployed]
+- [x] Rule-119 pre-turn context check: signal action=check -> should_compress=true
+- [x] cline_compress_session called -> SESSION MEMORY blob
+- [x] First validate FAILED (blob 63-char dividers + -> arrows tripped R317)
+- [x] Re-validate clean version (no raw blob): ALL PASSED; ide
 ```
 
 ### `1787329580892` — 8/21/2026, 3:33:49 PM PT — 156 turns
@@ -3491,83 +3540,3 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
-
-### `1787073073602` — 8/18/2026, 4:03:58 PM PT — 628 turns
-
-**Original task:**
-
-```
-# GLM 5.3:
-
-is it ready yet? Can we use GLM 5.3 now? 
-
-reminder set + your "why can't we use it" question answered
-
-## Direct answer: why can't we use GLM-5.3 cloud via z.ai in Cline / frankenstein-llm today?
-
-Because **Zhipu has not granted your account access yet — it is a server-side gate, not something we can configure around.** I proved this with a live request a few minutes ago, not a guess:
-
-- `POST https://api.z.ai/api/paas/v4/chat/completions` with `model=glm-5.3` using your real key returneode":"1220","message":"You do not have permission to access glm-5.3"}}`
-- The exact same reque
-```
-
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11847, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12824, #12872, #12878, #13108, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16717, #16778, #16802, #16803, #16839, #16844, #16851, #17202, #17203, #17205, #17246, #17300, #1744, #1779, #1798, #1828, #18312, #18326, #18868, #19338, #19567, #19686, #1993 [deployed], #1998, #20042, #2063, #2065, #20662, #2073, #20985, #21038 [proposed], #2127, #2168, #22584, #22897, #2299, #24144, #25097, #25185, #2537, #25378, #25381, #2546, #25468, #2552, #25567, #25627, #25888, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #26908, #26923, #27069 [executing], #27201 [proposed], #27204 [proposed], #27205 [deployed], #27227 [proposed], #27232 [proposed], #27236 [proposed], #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
- Log
-No reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — Julia 235B L2-dark outage: physical recovery + lane-guard reachability patch (#27236 [proposed]).
-
-Where we left off (verified 2026-08-18 16:02 PT):
-- Julia (192.168.1.190) L2-dark; last good serve 13:15 PT (router audit 20:15:51Z "say OK"), confirmed dark 14:49-14:53 PT from 3 vantages; live re-probe 16:02 PT still refused (:11513 HTTP=000).
-- fleet_inventory: julia=down (fleet_act ok:true, 3-vantage evidence note).
-- Claudia UP; julia-235b is TP=2 over CX7 so the lane is fully down until Julia returns. No remote power path — physical power cycle is the only recovery.
-- GLM-5.3 remains gated (Zhipu 1220 / OpenRouter absent / HF 401); tracker live (#26715 [deployed]).
-
-Open threads to drive next:
-1. (human-only decision - no idea) Physical power cycle of Julia in Oceanside, then post-return verification (Ray head + vLLM :11513 + reverse tunnels WOPR:2205/:11513) + fleet_act julia=healthy.
-2. #27236 [proposed] — build the lane-guard reachability patch (TCP 127.0.0.1:11513 + :2205, transition-only alert via /usr/local/bin/emsu-alert.sh, dedup via /tmp/emsu_julia_lane_guard.json).
-3. #27232 [proposed] — premise superseded by the L2-dark finding (not tunnel flapping): update or close it against this window's evidence.
-
-Reference IDs:
-- Ideas reconciled this session (verified server-side): #27236 [proposed] · #27232 [proposed] · #27069 [executing] · #21038 [executing] · #26711 [deployed] · #26712 [proposed] · #26713 [proposed] · #26715 [deployed]
-- Fleet: julia marked down (fleet_act ok:true)
-- Files touched: none modified (investigation-only)
-- Patch target: /usr/local/bin/emsu-julia-lane-guard.py + alert sink /usr/local/bin/emsu-alert.sh
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Julia L2-dark triage shipped (fleet down-marked, #27236 filed)
-- [x] Router audit bracket: last good julia-235b pick 13:15 PT; zero picks after
-- [x] Live re-probe :11513 — HTTP=000 at 16:02 PT, still dark
-- [x] Timeline answered (onset 13:15-14:49 PT; TP=2 lane fully down; Claudia up, Julia dead half)
-</task_progress>
-</attempt_completion>
-```
-
-### `1787090950949` — 8/18/2026, 4:03:29 PM PT — 200 turns
-
-**Original task:**
-
-```
-#Argus
-
-Check Argus since this task completion window for any outstanding issues as well as anything left to do on executor. We want to make sure all is operating properly. Jon says pretty much nothing took or has been fixed. He's thinking nothing really happened. 
-
-Proceeded per rule 29: everything actionable is now DONE, including the Email-AI fix you approved, which I hand-shipped after the executor failed it three times.
-
-## 1. #27120 [deployed] — Email AI wrong-canned-reply bug, HAND-SHIPPED (rule 267 GATE C)
-The executor could not land it: two llm-gate parks, then codegen produced a sche
-```
-
-**Ideas referenced:** #12504, #178701, #19338, #19458, #19491, #19696, #19717, #20757, #20903, #2113, #23031, #23038, #24145, #24993, #25125, #25185, #25227, #25378, #25513, #25515, #25548, #25556, #25560, #25562, #25570 [executing], #25573, #25577, #25581, #25584, #25602, #25632, #25633, #25635, #25665, #25670, #25671, #25680, #25686, #25708, #25714, #25736, #25739, #25744, #25814, #2588, #25916, #25973, #26080, #26085 [executing], #26124 [blocked], #26174 [executing], #26180 [executing], #26192 [blocked], #26207, #26214, #26322 [blocked], #26357 [awaiting_review], #26424, #26482 [executing], #26498 [executing], #26504 [awaiting_review], #26519 [executing], #26760, #26827 [blocked], #26931 [blocked], #27012, #27088 [awaiting_review], #27120 [deployed], #27126 [deployed], #27136 [deployed], #27143 [awaiting_review], #27149 [deployed], #27163 [deployed], #27180 [deployed], #27195, #27207, #27223, #27237 [executing], #27238 [deployed], #9222, #9235
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

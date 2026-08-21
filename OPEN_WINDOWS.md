@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/21/2026, 1:26:05 AM PT | window: last 72h | 79 tasks | index total 878 (parsed 1, cached 877)
+Generated: 8/21/2026, 2:42:36 AM PT | window: last 72h | 78 tasks | index total 878 (parsed 0, cached 878)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -88,7 +88,6 @@ Generated: 8/21/2026, 1:26:05 AM PT | window: last 72h | 79 tasks | index total 
 | `1787015733520` | 8/18/2026, 10:52:31 AM | 112 | 1202KB | I already opened up a window on this before about the 40% score required for examinations  |
 | `1787073033366` | 8/18/2026, 10:10:33 AM | 1 | 7KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
 | `1787032087401` | 8/18/2026, 3:22:44 AM | 316 | 1132KB | #TDSHS  |
-| `1787016619040` | 8/18/2026, 1:49:01 AM | 323 | 602KB | #Jon/Argus |
 
 ---
 
@@ -3637,30 +3636,5 @@ Curious here, the allegation is that ther ewas no medical director from December
 ```
 
 **Ideas referenced:** #178695, #18676, #19572, #19576, #19578, #19581, #19599, #21278, #250541, #251044, #251128, #251428, #251444, #251447, #25185, #27073 [awaiting_review], #27100 [awaiting_review], #27108 [awaiting_review], #27112 [awaiting_review], #27114 [awaiting_review], #27127 [proposed], #27148 [awaiting_review], #27153 [executing], #27157 [proposed], #27158 [proposed], #27159 [proposed], #27160 [approved], #27179 [proposed], #600179, #623992, #8212
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787016619040` — 8/18/2026, 1:49:01 AM PT — 323 turns
-
-**Original task:**
-
-```
-#Jon/Argus
-
-Continue from YOLO window
-
-Stopped per instruction. Rule 91 comprehensive state handoff below.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787011000 — Argus process failure: Jon/Cori idea starvation + conv 2299 fabrication/siloing/CFA deflection + executor reconciliation.
-
-Where we left off (verified 2026-08-17 18:28 PT):
-- ArgusRuleProfile.php patched (4 gaps: dead DELIVERY_TRUTH_RULES restored, negative-claim evidence via rule 263, systemic-scope rule 297, act-don'
-```
-
-**Ideas referenced:** #15367, #178701, #18693, #19490, #19670, #20903, #21074, #23184, #23281, #24963, #25125, #25185, #2552, #26085 [executing], #26174 [executing], #26180 [executing], #26325 [approved], #26357 [awaiting_review], #26366 [proposed], #26367 [approved], #26369 [proposed], #26382, #26482 [executing], #26498 [executing], #26504 [awaiting_review], #26519 [executing], #26720, #26724, #26731, #26825 [executing], #26858 [blocked], #26924 [approved], #27012, #27062 [approved], #27065 [proposed], #27120 [executing], #27123 [blocked], #27124 [executing], #27125 [executing], #27126 [executing], #27136 [deployed], #27143 [awaiting_review], #27147, #27149 [deployed], #27163 [deployed], #27180 [deployed], #344421, #344423, #344425, #344426, #344429, #58371, #58380, #8281, #8321, #9235
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

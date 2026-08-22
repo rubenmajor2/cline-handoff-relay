@@ -106,3 +106,13 @@ from probes alone); Argus failure-scan undercount 2026-08-08 (reported 6, realit
 - Reversal note: 'UPDATE anomaly' was carried as an open bug; reading the actual source (SHOW TRIGGERS FROM admin_portal) showed orchestrator_ideas_status_audit BEFORE UPDATE trigger force-reverts any move away from status='deployed' except to deployed/rejected/superseded — deployed is sticky BY DESIGN. Classification: by-design, not a bug. Reinforces: read the source that produced the symptom and classify before claiming a bug.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-22 03:22 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787366217908
+- RCA bucket: wrong premise
+- Trigger pattern: raw COUNT of NULL-lifecycle-field rows presented as an operational-fall-through population without attendance/engagement classification
+- Reversal note: 2026-08-21 Argus/lifecycle advisory reversal: raw SQL counted 73 active Students with NULL ea_completion_date and presented them as 'fall-through students proving the gap is real'. Ruben challenged it; live SLS probe + first-day roster cross-reference showed ZERO of the 73 appear on any first-day roster — they are NO-SHOWS (registered, never attended: never logged into Moodle, 0/16 attendance, unsettled payment, unsigned EA), a normal commercial population, not an operational failure. Amended behavior: a NULL-field count over active registrations is never evidence of a processing fall-through until each row is classified against attendance/Moodle-access evidence (on first-day roster? ever logged in?); 'registered but never processed' and 'registered but never showed up' are different populations with different owners (ops bug vs admissions/no-show handling) and must be reported as separate buckets before any gap claim.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

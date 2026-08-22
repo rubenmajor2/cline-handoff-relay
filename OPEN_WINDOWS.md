@@ -6,15 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/21/2026, 8:12:54 PM PT | window: last 72h | 68 tasks | index total 882 (parsed 3, cached 879)
+Generated: 8/21/2026, 9:12:55 PM PT | window: last 72h | 68 tasks | index total 883 (parsed 4, cached 879)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787327963594` | 8/21/2026, 8:08:59 PM | 576 | 3291KB | #Julia |
-| `1787256742974` | 8/21/2026, 7:50:58 PM | 588 | 6538KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
-| `1787366217908` | 8/21/2026, 7:47:39 PM | 76 | 567KB | #Argus |
+| `1787366217908` | 8/21/2026, 9:10:47 PM | 189 | 1177KB | #Argus |
+| `1787370497651` | 8/21/2026, 9:10:18 PM | 59 | 359KB | How fast is this? |
+| `1787327963594` | 8/21/2026, 9:10:17 PM | 763 | 3557KB | #Julia |
+| `1787191612298` | 8/21/2026, 8:59:28 PM | 871 | 24227KB | #Comprehensive System |
+| `1787256742974` | 8/21/2026, 8:38:12 PM | 612 | 6720KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
 | `1787349230620` | 8/21/2026, 7:33:07 PM | 180 | 546KB | #San Mateo County EMSA |
-| `1787191612298` | 8/21/2026, 5:21:58 PM | 836 | 20924KB | #Comprehensive System |
 | `1787256717179` | 8/21/2026, 4:57:45 PM | 254 | 5161KB | ## Externship dates past Sept 1 — identification + mitigation |
 | `1787329580892` | 8/21/2026, 3:33:49 PM | 156 | 464KB | #Executor |
 | `1787258077644` | 8/21/2026, 11:29:40 AM | 288 | 3416KB | #Payments |
@@ -77,13 +78,114 @@ Generated: 8/21/2026, 8:12:54 PM PT | window: last 72h | 68 tasks | index total 
 | `1787104157061` | 8/18/2026, 10:02:29 PM | 518 | 2434KB | #NEW LLMs/ Improvements |
 | `1787113089978` | 8/18/2026, 9:44:39 PM | 207 | 333KB | Please explain why model litellm:glm52-only is not iterating GLM 5.2 Local withouth errors |
 | `1787111283634` | 8/18/2026, 9:16:49 PM | 136 | 195KB | Please explain why model litellm:glm52-only is not iterating GLM 5.2 Local withouth errors |
-| `1787111101864` | 8/18/2026, 8:45:35 PM | 2 | 2KB | What is the fastest iteration we've ever achieved |
 
 ---
 
 ## Per-window detail
 
-### `1787327963594` — 8/21/2026, 8:08:59 PM PT — 576 turns
+### `1787366217908` — 8/21/2026, 9:10:47 PM PT — 189 turns
+
+**Original task:**
+
+```
+#Argus
+
+Argus itself won't build out the workflows like Chat GPT and Claude per Jon. 
+
+Like the handoff in some imaginarey queue that can't be seen - is that getting better? 
+
+Jon conversation on some ideas below for improvement. Not sure how this is going for sure as these are Jon's random thoughts but look into them and advise. 
+
+But I wanna get into the back and stuff I don't know how easy it isThrough all the students that register right and then they end up on a roster for the first day instructor goes into that roster and starts marking him as either present or absence they keep screwing
+```
+
+**Ideas referenced:** #1715, #178713, #178736, #19492, #2036, #2230, #22688, #23036, #2338, #23428, #23468, #23506, #2358, #23675, #23941, #23982, #24926, #24941, #24990, #25142, #25185, #2550, #25571, #25768, #2589, #2590, #25916, #2597, #26663, #26823, #26824, #26825, #26895, #27152, #27492, #27503 [proposed], #27524, #27531, #27648, #27655 [deployed], #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27859 [proposed], #27860 [proposed], #27861 [proposed], #3079, #450438, #9086, #9168, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+mend_rule, task 1787366217908)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787366217908 — Argus + student lifecycle fall-through investigation (round 2, corrected).
+
+Where we left off (as of 2026-08-21 19:34 AKDT):
+- 73-student claim corrected: all NO-SHOWS (zero on any 8/17 first-day roster); rule 297 amended for NULL-field classification
+- Jon's roster->CS trigger scoped as SLS expansion within CFA design
+- Roster duplicates are real (Christina Brown 3x, Zane Franz 3x, +8 more with conflicting Present/Absent)
+- True fall-throughs: ~5 present students with payment FAIL per cohort
+- Argus CS role: 24 tools, no roster/SLS access; offloads auto-rejected with NULL reason (15 in 14d, 6 rejected, 0 made it to production)
+
+Open threads to drive next:
+1. #27859 [proposed] — build the roster day-1 trigger (SLS scan of present students -> CS task, deadline class+1d)
+2. #27860 [proposed] — build Argus offload visibility (submitter notify + rejection reason write + dashboard panel)
+3. #27861 [proposed] — build roster dedup + walk-in flow + 8/17 attendance backfill
+
+Reference IDs:
+- Ideas filed: #27859 [proposed], #27860 [proposed], #27861 [proposed] (reconcile_ideas returned status=proposed dev_stage=idle for all 3 ids at 2026-08-21 19:26 AKDT)
+- Rule amended: 297 (clinerules_amend_rule, task 1787366217908, rca_bucket=wrong premise)
+- Files touched: ~/Documents/Cline/Rules/297-population-anomaly-classify-before-alarming.md (via amend tool)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+# Argus + Student Lifecycle Fall-Through — Round 2 (Ruben feedback)
+
+## Verify the 73-student claim against SLS properly (297/317 RCA)
+- [x] Run SLS on sample NULL-slug student (Prithvi Yuvaraj = NO-SHOW)
+- [x] Confirmed roster duplicates (Jon's "replications" complaint verified)
+- [x] Classified all 73: ZERO on any first-day roster = NO-SHOWS. Ruben correct.
+- [x] True fall-throughs (attended + failed gates): payment-FAIL in 8/17 FT sections
+
+## Scope Jon's idea vs current process (CFA design)
+- [x] Check Argus tool access — CS role: 24 tools, NO roster tool, NO SLS gate view
+- [x] Idea #27859 filed: roster→CS day-1 trigger (SLS expansion)
+- [x] Idea #27860 filed: Argus offload visibility
+- [x] Idea #27861 filed: roster dedup fix
+- [x] 297 RCA + amend causal rule 297 (mechanical amendment done)
+- [x] GATE B reconcile: all three [proposed] (verified: status=proposed dev_stage=idle)
+- [x] Validate completion + gate check passed
+</task_progress>
+</attempt_completion>
+```
+
+### `1787370497651` — 8/21/2026, 9:10:18 PM PT — 59 turns
+
+**Original task:**
+
+```
+How fast is this?
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326, #25097, #2537, #26908, #26923, #27259
+
+**Last PICKUP PROMPT:**
+
+```
+real 200-token completion.
+
+═══════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════
+Pick up task #none — "How fast is this?" fleet speed check
+Where we left off (verified 2026-08-21 20:04 PT):
+- Answered fleet throughput via frankenstein_host_probe: artemis-120b ~26 tok/s probe (~44-55 sustained), glm52-ring ~9, nero-minicpm-v ~77.
+- julia/cicero/joshua/maximus/ollama-14b probe failed/timed out at this instant (not confirmed down — likely transient).
+Open threads to drive next:
+(none — informational only, no follow-up work required)
+Reference IDs:
+- Ideas filed: none
+- Files touched: none
+═══════════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787327963594` — 8/21/2026, 9:10:17 PM PT — 763 turns
 
 **Original task:**
 
@@ -107,47 +209,77 @@ Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md
 Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, 
 ```
 
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11945, #1241, #12425, #12459, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13085, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16545, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1754, #1755, #1779, #178713, #178732, #178733, #1798, #1828, #18312, #18326, #19338, #19458, #19491, #19567, #1989, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2230, #2254, #2258, #22584, #2294, #2298, #2299, #2307, #2314, #23169, #2338, #2358, #24172, #24217, #25097, #2537, #25378, #25381, #2546, #25470, #2550, #25646, #2571, #2573, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #2579, #25812, #25888, #2589, #25916, #2592, #2597, #26209, #26284 [executing], #26400, #26403, #26663, #26823, #26824, #26825, #26908, #26922 [deployed], #26923, #26927 [deployed], #26932 [deployed], #27152, #27236, #27249 [executing], #27250, #27259, #27271, #27447, #27492, #27494, #27503 [proposed], #27508, #27514, #27515, #27524, #27531, #27663, #27673, #27684, #27685, #27690 [deployed], #27692, #27698 [deployed], #27702, #27711, #27712 [executing], #27713 [proposed], #27714 [proposed], #27715 [deployed], #27722, #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27858 [proposed], #30877, #39273, #40738, #40831, #40880, #41726, #4194, #42406, #43565, #43728, #45834, #46862, #49717, #50015, #50729, #50837, #51812, #52654, #52734, #52805, #52816, #52852, #52942, #53116, #53180, #53284, #53323, #6826, #7142, #7149
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11945, #12247, #12262, #12314, #12364, #12365, #12366, #12368, #1241, #12425, #12459, #12477, #1248, #1249, #1252, #1258, #12618, #12657, #12716, #12824, #12872, #12878, #13085, #13108, #13202, #13831, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16545, #16718, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1754, #1755, #1779, #178713, #178732, #178733, #1798, #1828, #18312, #18326, #19338, #19458, #19491, #19567, #19653, #1989, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2230, #2254, #2258, #22584, #22588, #2294, #2298, #2299, #2307, #2314, #23169, #2338, #2358, #24172, #24217, #25097, #2537, #25378, #25381, #2546, #25470, #2550, #25646, #2571, #2573, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #2579, #25812, #25888, #2589, #25916, #2592, #2597, #26209, #26284 [executing], #26400, #26403, #26663, #26823, #26824, #26825, #26908, #26922 [deployed], #26923, #26927 [deployed], #26932 [deployed], #27152, #27236, #27249 [executing], #27250, #27259, #27271, #27447, #27492, #27494, #27503 [proposed], #27508, #27514, #27515, #27524, #27531, #27663, #27673, #27684, #27685, #27690 [deployed], #27692, #27698 [deployed], #27702, #27711, #27712 [executing], #27713 [proposed], #27714 [proposed], #27715 [deployed], #27722, #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27858 [proposed], #30877, #39273, #40738, #40831, #40880, #41726, #4194, #42406, #43565, #43728, #45834, #46862, #49717, #50015, #50729, #50837, #51812, #52654, #52734, #52805, #52816, #52852, #52942, #53116, #53180, #53284, #53323, #6826, #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
-scovered reasoning-leak defect
+og
+- No reversals this window.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787327963594 — Claudia Qwen3.8-27B assessment + spill ladder integration.
+Pick up task #1787327963594 — Claudia Qwen3.8-27B on interactive ladder after GLM-5.2-local.
 
-Where we left off (verified 2026-08-21 20:07 PT via ssh -p 2206 on-box probes: ps aux returned the vllm serve command for Qwen3.8-27B-FP8, /v1/models returned qwen3.8-27b, HF model card fetched live):
-- Qwen3.8-27B-FP8 serving on Claudia :8000/:11521 (qwen3_5 arch, vision-language, 131K ctx)
-- Benchmarks: beats Opus 4.6 Max on SWE-bench Pro (61.7 vs 53.4), QwenSWEBench (79.0 vs 63.8), LiveCodeBench v6 (90.3 vs 88.8)
-- Live test: correct reasoning; ~8-12 tok/s decode; reasoning leaks into content (no --reasoning-parser)
-- Registry tier L1c live (verified: /tmp/emsu_router_registry_state.json showed L1c: claudia-qwen38-27b)
+Where we left off (verified 2026-08-21 20:50 PT via /tmp/emsu_router_registry_state.json read + frankenstein-llm sanity call returning "Hi!" HTTP 200):
+- claudia-qwen38-27b moved to tier L4c, fallthrough order live: L0 → L1 → L1b → L4g (GLM-5.2-local) → L4c (Claudia 27B) → L4b → L4f → L2 → L3
+- Reasoning parser shipped earlier this session (idea #27858 [deployed])
+- Direct lane claudia-qwen38-27b verified end-to-end, no fallbacks
+- frankenstein-llm sanity call post-restart: "Hi!" HTTP 200
 
 Open threads to drive next:
-1. #27858 [proposed] — add --reasoning-parser qwen3 to Claudia vllm launch to stop thinking-token leak (verified: ruben-orchestrator MCP reconcile_ideas at 20:07:11 PT returned tally 'proposed=1' and line '- #27858 [proposed] ... (verified: status=proposed dev_stage=idle)')
+1. None — all work completed this session. #27858 [deployed] (verified: ruben-orchestrator MCP reconcile_ideas at 20:38:06 PT returned status=deployed dev_stage=n/a)
 
 Reference IDs:
-- Ideas filed: #27858 [proposed]
-- Files touched: /etc/litellm/frankenstein_registry.yaml (tier L1c for claudia-qwen38-27b)
+- Ideas closed: #27858 [deployed]
+- Files touched: /home/rubenmajor/claudia_qwen38_launch.sh (+ --reasoning-parser qwen3, backup .bak-20260821), /etc/litellm/frankenstein_registry.yaml (tier L4c + tier_order, backup .bak-20260821-l4c)
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
 <task_progress>
-- [x] SSH to Claudia directly — confirmed Qwen3.8-27B-FP8 serving (qwen3_5 arch, hybrid linear attention, multimodal, 64 layers, vocab 248K)
-- [x] Chat template check — thinking ON by default, xhigh reasoning effort; no --reasoning-parser in launch (leak explained)
-- [x] Live-test generation quality — correct math reasoning (1-0.98^50≈63.6%), but reasoning leaks into content + slow (~8-12 tok/s)
-- [x] Community lookup — Qwen3.8-27B benchmarks beat Opus 4.6 Max on SWE-bench Pro/QwenSWEBench/LiveCodeBench
-- [x] File reasoning-leak fix idea — #27858 filed + reconciled
-- [x] Report: is it smarter than the 235B? — YES (validated completion shipped)
+- [x] Read registry tier_order + interactive lane structure
+- [x] Move claudia-qwen38-27b tier L1c → L4c, inserted between L4g (GLM-5.2-local) and L4b
+- [x] Restart/reload router + verify live tier order — fallthrough shows L4g → L4c → L4b live; frankenstein-llm sanity call passed
+- [x] Final report — validated + gate clear
 </task_progress>
 </attempt_completion>
 ```
 
-### `1787256742974` — 8/21/2026, 7:50:58 PM PT — 588 turns
+### `1787191612298` — 8/21/2026, 8:59:28 PM PT — 871 turns
+
+**Original task:**
+
+```
+#Comprehensive System
+
+I don't really know how to quantify this, but our system is so comprehenive and complex. I wonder how frankenstein-llm can keep track of all of it better? I mean a lot of repair requests and information are difficult to find, and sometimes CFAs fail, sometimes Argus fails, and sometimes even Cline fails. The failrus seem too often. Why is everything so complex? Whatt do we do on all this to help resolve untruths better?
+```
+
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #12364, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13047, #13202, #13437, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16224, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1779, #178713, #178716, #178724, #178725, #17913, #1793, #1798, #1828, #18312, #18326, #19567, #20042, #20251, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #21667, #2168, #2299, #2316, #25097, #25185, #2524, #2525, #2537, #25378, #25381, #2546, #25925, #25926, #25935, #26229, #26591, #26696, #26908, #26914 [deployed], #26915 [executing], #26916, #26923, #27100, #27236, #27249 [executing], #27250, #27259, #27395, #27494, #27503, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27634 [deployed], #27635 [executing], #27640 [deployed], #27646, #27647 [proposed], #27659 [proposed], #27660 [rejected], #27661 [proposed], #27662 [proposed], #27675 [proposed], #27677 [proposed], #27680 [proposed], #27681 [proposed], #27690 [proposed], #27698 [proposed], #27767 [proposed], #27771 [deployed], #27773 [proposed], #27774 [proposed], #277773, #27831 [executing], #27843 [proposed], #27858 [proposed], #27863 [proposed], #5197, #5431, #5574, #7142, #7149, #7174, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+an assuming it was missing.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #27858 [deployed] - Claudia reasoning-parser + launch durability\n\nWhere we left off (verified 2026-08-21 20:40 PT):\n- #27858 [deployed] - --reasoning-parser qwen3 confirmed present in Claudia qwen3.8-27b launch (vLLM PID 2510760), /v1/models serving; marked deployed (1 row). (verified: emsu-operations ssh_command ps aux + curl /v1/models, 20:38 PT)\n\nOpen threads to drive next:\n1. #27863 [proposed] - build the durable launcher (systemd unit or @reboot after emsu-roce-preflight.sh) with the full flag set; then test auto-start; update fleet_inventory (role/model/status/ip) for spark-6d51.\n\nReference IDs:\n- Ideas closed: #27858 [deployed]\n- Files touched: none\n- Ideas filed: #27863 [proposed]\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════",
+  "task_prompt": "RUBEN feedback: Approved idea #27858 (Claudia Qwen3.8-27B: add reasoning parser to stop thinking-token leak). Execute it.",
+  "task_id": "27858"
+}
+</arguments>
+<task_progress>
+- [x] Prior: shipped #27771/#27773/#27774, complexity diagnosis, disabled orphan-audit noise, filed #27843
+- [x] Ruben approved #27858 — reasoning parser already live (PID 2510760), marked deployed
+- [x] Durability gap found → filed #27863 [proposed]
+- [x] Reconcile: #27858 [deployed], #27863 [proposed]
+- [x] Gate logic not in local MCP (server-side) — can't read regex
+- [ ] Minimize #27863 to open-thread+reference only, validate, check gate, deliver
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1787256742974` — 8/21/2026, 8:38:12 PM PT — 612 turns
 
 **Original task:**
 
@@ -169,7 +301,7 @@ Shipped this window (all verified live):
 **Last PICKUP PROMPT:**
 
 ```
-ix, rule 317 item 6 exemption)
+Log: No reversals this window.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
@@ -177,105 +309,29 @@ PICKUP PROMPT (paste into a fresh Cline window)
 
 Pick up task #1787121837052 — VERITAS Truth Enforcement System (make low-param models Opus-truthful).
 
-Where we left off (verified 2026-08-21 19:49 PT):
-- Ruben steer resolved: G8 cap raised 196608->280000, rule 323 restored to Mac floor, ZERO rule content trimmed
-- Rule 323 live in both places: Mac floor (hardfloor_count 23) + WOPR steering mirror (weak models)
-- Prior window: L2 steering live, CFA ticket-agent wired, L4 battery running, all 4 VERITAS ideas [deployed]
+Where we left off (verified 2026-08-21 20:36 PT):
+- In-practice testing done for Ruben: live judge test caught 2 planted fake claims (FAIL, glm-5.2-local, 60s), R323 gates fired on real completions, L4 battery shows the Opus gap (probe=54-70, memory=0)
+- All 5 VERITAS ideas deployed; G8 cap raised to 280000 with rule 323 restored to Mac floor (zero rule content trimmed)
+- Known gap: zero production CFA judge calls since ship night (5 total, all 2026-08-19 test traffic)
 
 Open threads to drive next:
-1. #27489 [deployed] — read L4 battery results from veritas_l4_runs + /tmp/veritas_l4_full_1787357527.log; quantify Opus gap per model; frankenstein lane had curl low-speed timeouts, may need off-peak re-run
-2. #27488 [deployed] — spot-check executor's email/chat/SMS CFA wiring end-to-end (ticket-agent surface already wired + php -l clean)
+1. #27488 [deployed] — spot-check CFA wiring end-to-end: no judge calls since Aug 19 means either no high-stakes CFA traffic yet or the pre-send hook is not reached; trace one real ticket/email through the hook
+2. #27489 [deployed] — expand the battery: only one 5-question run completed (rest single-question); run full multi-question batteries per model off-peak to get a real Opus-gap number
 
 Reference IDs:
 - Ideas: #27486 [deployed], #27488 [deployed], #27489 [deployed], #27491 [deployed], #27842 [deployed]
-- Files touched: ~/Documents/Cline/Rules/.g8-floor-cap, ~/Documents/Cline/Rules/323-truth-protocol.md
+- Files touched: none this window (read-only testing)
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
 <task_progress>
-- [x] Prior completion shipped (all gates passed)
-- [x] Ruben steer: no trimming — safe alternative identified
-- [x] Raised G8 cap 280000; restored rule 323 to Mac floor; lint exit 0, no warn
-- [x] Reindex MCP (hardfloor 22→23)
-- [x] Repurposed #27842 → cap-raise, stamped deployed, read-back + reconcile verified
-- [x] Validator ALL PASSED + GATE CLEAR
-- [x] Completion shipped
-</task_progress>
-</attempt_completion>
-```
-
-### `1787366217908` — 8/21/2026, 7:47:39 PM PT — 76 turns
-
-**Original task:**
-
-```
-#Argus
-
-Argus itself won't build out the workflows like Chat GPT and Claude per Jon. 
-
-Like the handoff in some imaginarey queue that can't be seen - is that getting better? 
-
-Jon conversation on some ideas below for improvement. Not sure how this is going for sure as these are Jon's random thoughts but look into them and advise. 
-
-But I wanna get into the back and stuff I don't know how easy it isThrough all the students that register right and then they end up on a roster for the first day instructor goes into that roster and starts marking him as either present or absence they keep screwing
-```
-
-**Ideas referenced:** #1715, #178713, #178736, #2230, #2338, #2358, #23982, #2550, #2589, #2590, #25916, #2597, #26663, #26823, #26824, #26825, #27152, #27492, #27503 [proposed], #27524, #27531, #27648, #27655 [deployed], #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #3079, #450438, #9086, #9168, #9339
-
-**Last PICKUP PROMPT:**
-
-```
- Log
-No reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787366217908 — Argus workflow + student lifecycle fall-through investigation (Ruben advisory).
-
-Where we left off (verified 2026-08-21 18:45 AKDT):
-- Argus offload problem CONFIRMED: 15 offloads in 14 days, 6 rejected with NULL denied_reason, 6 idle in proposed, 0 deployed
-- Jon's roster → CS trigger idea VALIDATED: first_day_roster_submissions exists (429 rows), no automated CS task trigger exists
-- 73 ACTIVE students with NULL student_id slug and NO EA — registered but never processed (8/17 cohort)
-- 41% of 8/17 cohort (91/222) did not have EA before class start
-- Registration surfaces 11/11 healthy; "Futuro" not found (voice artifact)
-
-Open threads to drive next:
-1. Build roster → CS task trigger (Jon's idea) (human-only decision — no idea)
-2. Fix Argus offload visibility — record denied_reason, notify submitter (human-only decision — no idea)
-3. Investigate WPForms import: why 73 students have NULL student_id slug (human-only decision — no idea)
-4. EA deadline enforcement: T-7/T-3/T-1 reminder emails (human-only decision — no idea)
-
-Reference IDs:
-- Ideas filed: none yet (awaiting Ruben approval to file)
-- Files touched: none (read-only investigation)
-- Tables examined: argus_task_queue, orchestrator_ideas, first_day_roster_submissions, first_day_roster_corrections, Students, Course_Schedules
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-# Argus + Student Lifecycle Fall-Through Investigation
-
-## Part A: Argus status
-- [x] Read HANDOFF_NOTES for current Argus state
-- [x] Investigate Argus workflow-building capability (vs ChatGPT/Claude)
-- [x] Check the "invisible queue / handoff" visibility — CONFIRMED PROBLEM
-
-## Part B: Jon's roster → CS task trigger idea
-- [x] Understand current roster flow
-- [x] Investigate roster dedup/scrub process
-- [x] Assess feasibility of trigger — BUILDABLE, high impact
-
-## Part C: Student lifecycle fall-through mapping
-- [x] Map full lifecycle
-- [x] Identify each fall-through point with evidence
-- [x] Investigate specific complaints
-
-## Synthesis
-- [x] Advise Ruben on Jon's ideas + prioritized fall-through fixes
+- [x] truth_judge_log stats: 5 calls, 2 PASS/3 FAIL, 16 claims, 7 unsupported, avg 53.2s
+- [x] Per-model: Opus-build 100% PASS, selftest 6/6 flagged
+- [x] L4 battery: probe=54-70, memory=0 — Opus gap measured
+- [x] Live judge test: FAIL, both fake claims caught, GLM local judged
+- [x] Validate + check_gate: ALL PASSED, GATE CLEAR
+- [x] Shipped report to Ruben
 </task_progress>
 </attempt_completion>
 ```
@@ -311,60 +367,6 @@ ACTION REQUIRE
 **Ideas referenced:** #18545, #18546, #18822, #18823, #25185, #25636 [proposed], #25637 [proposed], #25638 [proposed], #25639 [proposed], #27521, #27830 [proposed], #27834 [approved], #27841 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787191612298` — 8/21/2026, 5:21:58 PM PT — 836 turns
-
-**Original task:**
-
-```
-#Comprehensive System
-
-I don't really know how to quantify this, but our system is so comprehenive and complex. I wonder how frankenstein-llm can keep track of all of it better? I mean a lot of repair requests and information are difficult to find, and sometimes CFAs fail, sometimes Argus fails, and sometimes even Cline fails. The failrus seem too often. Why is everything so complex? Whatt do we do on all this to help resolve untruths better?
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12364, #12477, #12618, #12824, #12872, #12878, #13047, #13202, #13437, #16163, #16224, #16265, #16304, #16844, #178713, #178716, #178724, #178725, #17913, #1793, #18312, #18326, #20251, #21667, #2316, #25097, #25185, #2524, #2525, #2537, #25925, #25926, #25935, #26229, #26591, #26696, #26908, #26914 [deployed], #26915 [executing], #26916, #26923, #27100, #27259, #27395, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27634 [deployed], #27635 [executing], #27640 [deployed], #27646, #27647 [proposed], #27659 [proposed], #27660 [rejected], #27661 [proposed], #27662 [proposed], #27675 [proposed], #27677 [proposed], #27680 [proposed], #27681 [proposed], #27690 [proposed], #27698 [proposed], #27767 [proposed], #27771 [deployed], #27773 [proposed], #27774 [proposed], #277773, #27831 [executing], #27843 [proposed], #5197, #5431, #5574, #7174, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-e fix, and #27843 is the plan.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — comprehensive-system complexity/truth diagnosis + noise reduction.
-
-Where we left off (verified 2026-08-21 17:21 PT):
-- Answered Ruben's strategic question with live numbers: 7,458 cron_*.php all <90d old (564 in last 7d, ~83/day) = automation compounding faster than retirement.
-- Root cause of "repair requests hard to find": orphan_cron_audit flagged ~7,400 false-positives/day (broken premise: every cron belongs in a crontab).
-- Disabled that audit (reversible): /etc/cron.d/emsu-orphan-cron-audit.disabled-20260821-noise. Verified no longer active.
-- Filed #27843 [proposed] = the durable fix (artifact cull + retirement-aware audit + quiet-by-default gate).
-
-Open threads to drive next:
-1. #27843 [proposed] — execute the cron artifact cull: classify 7,458 scripts into {active-scheduled, one-off-done, retired}, move dead ones to cron/_archive/, then re-enable the orphan audit retirement-aware. This is the highest-leverage signal-vs-noise move.
-
-Reference IDs:
-- Ideas filed: #27843 [proposed] (cron artifact cull + retirement-aware orphan audit)
-- Files touched: /etc/cron.d/emsu-orphan-cron-audit -> renamed .disabled-20260821-noise (reversible)
-- Key evidence: /var/www/emtskills/cron has 7,458 cron_*.php, 0 older than 90d
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Shipped #27771/#27773/#27774 earlier (deployed + gate-clear)
-- [x] REVERSAL fixed: restored watchdog to emsuserver crontab
-- [x] FOUND + FIXED latent /var/log write-permission bug; verified EXIT=0
-- [x] User's strategic question: "why so complex / how keep track / resolve untruths better"
-- [x] Gathered quantified evidence: 7,458 cron scripts all <90d old (564 in last 7d)
-- [x] Diagnosed: system automates faster than it retires; monitoring became dominant noise source
-- [x] Disabled the broken-premise orphan audit (safe/reversible) to cut dominant noise
-- [x] Filed durable follow-up #27843 (artifact cull + retirement-aware audit)
-- [x] Delivered grounded answer + pickup prompt
-</task_progress>
-</attempt_completion>
-```
 
 ### `1787256717179` — 8/21/2026, 4:57:45 PM PT — 254 turns
 
@@ -3401,16 +3403,6 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ```
 Please explain why model litellm:glm52-only is not iterating GLM 5.2 Local withouth errors. Is GLM 5.2 serving properly?
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787111101864` — 8/18/2026, 8:45:35 PM PT — 2 turns
-
-**Original task:**
-
-```
-What is the fastest iteration we've ever achieved
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

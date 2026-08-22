@@ -12,7 +12,7 @@ The reversal log collapses to FOUR recurring failure modes, in order of frequenc
 
 - **SELF_CONTRADICTING_DISPOSITION** (dominant: 251 of 280 telemetry failures; the #1 gate blocker). Prose says DONE/FIXED/VERIFIED next to an idea bracket that still says [proposed]/[executing]/[blocked]. Stamp the record first (UPDATE orchestrator_ideas SET status=deployed, then reconcile_ideas), THEN write the claim; or keep the honest bracket. Never write FIXED next to [proposed]. [auto-sync: +5 since 2026-08-19 | latest: Within-window reversal: reconcile_ideas reported #27697 [executing] (status=in_progress) a]
 - **R317_UNVERIFIED_STATE** (24 of 280 telemetry failures). Asserting fleet/routing/pod/model-health or deliverable state from memory without a live probe returning proof. Probe first and quote the result, or label the claim UNVERIFIED. [auto-sync: +42 since 2026-08-19 | latest: 2026-08-21 fleet-stall reversal: a completion reported 'local fleet lanes stalled on every]
-- **INSUFFICIENT_PROBE** (the mechanism behind most amendment case law). One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state. [auto-sync: +47 since 2026-08-19 | latest: 2026-08-21 T4 verification reversal: check_externship_state.php was carried as 'deployed +]
+- **INSUFFICIENT_PROBE** (the mechanism behind most amendment case law). One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state. [auto-sync: +51 since 2026-08-19 | latest: 'UPDATE anomaly' was carried as an open bug; reading the actual source (SHOW TRIGGERS FROM]
 - **SCOPE_ERROR** (completion over-scoped to DONE). Enumerate EVERY visible defect / every deliverable in the set before claiming resolved; the undone ones become open threads with real idea ids, not hidden by a "done" headline. [auto-sync: +12 since 2026-08-19 | latest: 2026-08-19 scope reversal: the original completion said the remaining active suspensions w]
 <!-- golden-rule-table:end -->
 
@@ -144,5 +144,35 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - RCA bucket: stale assumption
 - Trigger pattern: deploy-claim carried across windows treated as a live capability without ever executing the artifact
 - Reversal note: 2026-08-21 T4 verification reversal: check_externship_state.php was carried as 'deployed + style-pin live' from the #26089 claim, but a live probe found it built on a fictional schema (lowercase fictional tables incl. two that do not exist, PARAM_INT bind against composite student slugs, fictional site_id JOIN + agency_name column) and it had never returned data since 2026-08-17. Repaired against real tables and verified live. Amended behavior: a deploy claim inherited from a prior window must be re-probed by EXECUTING the artifact (a real run with real input), not by confirming the file exists, before it is used as a verification instrument.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-21 23:51 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786491116649
+- RCA bucket: insufficient probe
+- Trigger pattern: carrying request-status 'completed' as evidence of a firm placement without probing ExternshipPlacement
+- Reversal note: 2026-08-21 reversal: carried prior-window inference 'completed = placed' and nearly shipped '6 completed students got post-Sept-1 dates as firm placements'; live probe of ExternshipPlacement (138 rows total, exact + LIKE match on all 6 slugs) returned 0 rows — their completed requests have NO placement record behind them (the #26071 placement-tracking gap). Amended behavior: a request status of 'completed' is never evidence of a firm placement; any placement claim requires an ExternshipPlacement row probe in the same window.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-22 00:06 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787327963594
+- RCA bucket: insufficient probe
+- Trigger pattern: within-window reversal logged a causal-rule update without repairing it; clinerules_validate_completion auto-repaired the cited rule on behalf of the window
+- Reversal note: - "cron on schedule, first run tomorrow 6 AM (log absent = expected)" -> "cron would have FAILED tomorrow: emsuserver cannot create /var/log/ops_truth_watchdog.log (root:syslog); p
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-22 00:16 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787121837052
+- RCA bucket: stale assumption
+- Trigger pattern: deploy-claim carryover from prior window treated as live without re-probing the artifact
+- Reversal note: VERITAS continuation window carried the prior-window claim 'rule 323 shipped and always-loaded' without re-probing; the file had been auto-archived from the Mac floor by the G8 cap and was live only via the WOPR steering mirror. Re-probe this window found the archive state. Reinforces existing 2026-08-21 amendment: a deploy claim inherited from a prior window must be re-probed by reading/executing the artifact before it is treated as live.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.

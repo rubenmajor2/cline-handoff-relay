@@ -97,3 +97,12 @@ fall into the same trap?* If yes, the 297 is not done.
 from probes alone); Argus failure-scan undercount 2026-08-08 (reported 6, reality 85).
 **Last updated:** 2026-08-11 (trim-then-archive for G8 floor-cap compliance)
 
+## Amendment (from reversal, 2026-08-22 00:16 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787121837052
+- RCA bucket: wrong premise
+- Trigger pattern: carried 'anomaly' label resolved by reading the trigger source and classifying by-design
+- Reversal note: 'UPDATE anomaly' was carried as an open bug; reading the actual source (SHOW TRIGGERS FROM admin_portal) showed orchestrator_ideas_status_audit BEFORE UPDATE trigger force-reverts any move away from status='deployed' except to deployed/rejected/superseded — deployed is sticky BY DESIGN. Classification: by-design, not a bug. Reinforces: read the source that produced the symptom and classify before claiming a bug.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

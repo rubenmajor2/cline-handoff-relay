@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/22/2026, 7:01:24 AM PT | window: last 72h | 38 tasks | index total 883 (parsed 0, cached 883)
+Generated: 8/22/2026, 8:01:25 AM PT | window: last 72h | 37 tasks | index total 883 (parsed 0, cached 883)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -47,7 +47,6 @@ Generated: 8/22/2026, 7:01:24 AM PT | window: last 72h | 38 tasks | index total 
 | `1787138864086` | 8/19/2026, 12:33:19 PM | 450 | 1864KB | #Frankenstein LLM GLM Speedup |
 | `1787159982042` | 8/19/2026, 12:32:42 PM | 228 | 9271KB | #Argus/Team Hub |
 | `1787122887382` | 8/19/2026, 11:53:23 AM | 554 | 4399KB | #San Mateo EMSA Complaint |
-| `1787148101456` | 8/19/2026, 7:01:52 AM | 3 | 8KB | like lightning mcqueen from Cars, who is speed in frankensein-llm |
 
 ---
 
@@ -1980,15 +1979,3 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - IDs: #27480 [executing], task 1787123670897
 - Files: ~/Desktop/EMSU_RESPONSE_SAN_MATEO_AUDIT_FINAL_2026-08-19.pdf, /var/www/emtskills/personnel/investigations/san-mateo-202
 ```
-
-### `1787148101456` — 8/19/2026, 7:01:52 AM PT — 3 turns
-
-**Original task:**
-
-```
-like lightning mcqueen from Cars, who is speed in frankensein-llm
-```
-
-**Ideas referenced:** #12459
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
